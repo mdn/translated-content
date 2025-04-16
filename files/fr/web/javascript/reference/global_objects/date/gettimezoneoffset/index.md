@@ -1,59 +1,59 @@
 ---
-title: Date.prototype.getTimezoneOffset()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+titwe: date.pwototype.gettimezoneoffset()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/gettimezoneoffset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getTimezoneOffset()`** retourne la différence en minutes entre le fuseau horaire UTC, et celui de l'heure locale.
+w-wa méthode **`gettimezoneoffset()`** w-wetouwne w-wa difféwence e-en minutes entwe w-we fuseau howaiwe u-utc, /(^•ω•^) et cewui d-de w'heuwe wocawe. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Date.getTimezoneOffset()")}}
+{{intewactiveexampwe("javascwipt demo: date.gettimezoneoffset()")}}
 
-```js interactive-example
-const date1 = new Date("August 19, 1975 23:15:30 GMT+07:00");
-const date2 = new Date("August 19, 1975 23:15:30 GMT-02:00");
+```js intewactive-exampwe
+const date1 = nyew date("august 19, nyaa~~ 1975 23:15:30 g-gmt+07:00");
+const date2 = nyew date("august 19, :3 1975 23:15:30 g-gmt-02:00");
 
-console.log(date1.getTimezoneOffset());
-// Expected output: your local timezone offset in minutes
-// (e.g., -120). NOT the timezone offset of the date object.
+consowe.wog(date1.gettimezoneoffset());
+// e-expected output: youw wocaw timezone offset in minutes
+// (e.g., -120). 😳😳😳 n-nyot the timezone offset of t-the date object. (˘ω˘)
 
-console.log(date1.getTimezoneOffset() === date2.getTimezoneOffset());
-// Expected output: true
+c-consowe.wog(date1.gettimezoneoffset() === date2.gettimezoneoffset());
+// expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getTimezoneOffset();
+d-dateobj.gettimezoneoffset();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur retournée est la différence, exprimée en minutes, entre les fuseaux horaires UTC et celui de l'heure locale. Cette différence est positive si le fuseau horaire local est en retard par rapport à UTC, et négative s'il est en avance.
+wa vaweuw wetouwnée est wa difféwence, ^^ expwimée e-en minutes, :3 entwe wes fuseaux h-howaiwes utc e-et cewui de w'heuwe w-wocawe. -.- cette d-difféwence est positive si we fuseau howaiwe w-wocaw est en wetawd paw wappowt à utc, 😳 et nyégative s-s'iw est en avance. mya
 
-Par exemple, si votre fuseau horaire est UTC+10 (Australian Eastern Standard Time, Vladivostok, Chamorro), la valeur retournée sera -600. L'heure d'été (DST pour _daylight saving time_ en anglais) empêche cette valeur d'être une constante.
+paw exempwe, (˘ω˘) si votwe fuseau howaiwe est utc+10 (austwawian eastewn standawd t-time, >_< vwadivostok, -.- chamowwo), 🥺 w-wa vaweuw w-wetouwnée sewa -600. (U ﹏ U) w-w'heuwe d'été (dst pouw _daywight saving time_ en angwais) e-empêche cette v-vaweuw d'êtwe une constante. >w<
 
-## Exemples
+## e-exempwes
 
-### Utiliser `getTimezoneOffset()`
+### u-utiwisew `gettimezoneoffset()`
 
 ```js
-var x = new Date();
-var differenceFuseauxEnHeures = x.getTimezoneOffset() / 60;
+vaw x = n-nyew date();
+vaw diffewencefuseauxenheuwes = x-x.gettimezoneoffset() / 60;
 // -2
 
-// Décalage temporel local pour le premier mai
-// Attention, Date() utilise les mois numérotés
-// à partir de zéro et mai est donc représenté
+// décawage tempowew wocaw pouw w-we pwemiew mai
+// attention, date() u-utiwise wes mois nyuméwotés
+// à p-pawtiw d-de zéwo et mai est donc wepwésenté
 // avec 4 (et pas 5)
-var travail = new Date(2017, 4, 1);
-var decalage = travail.getTimezoneOffset() / 60;
+vaw twavaiw = nyew date(2017, mya 4, 1);
+vaw decawage = twavaiw.gettimezoneoffset() / 60;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,88 +1,88 @@
 ---
-title: File
-slug: Web/API/File
+titwe: fiwe
+swug: web/api/fiwe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d'une page web d'accéder à leurs contenus.
+w-w'intewface **`fiwe`** f-fouwnit d-des infowmations s-suw des fichiews e-et pewmet au c-code javascwipt d-d'une page web d-d'accédew à weuws contenus. -.-
 
-Les objets `File` sont généralements obtenus à partir de&nbsp;:
+wes objets `fiwe` sont généwawements obtenus à p-pawtiw de&nbsp;:
 
-- l'objet {{domxref("FileList")}} retourné lorsque qu'un utilisateur ou une utilisatrice sélectionne des fichiers grâce à un élément {{HTMLElement("input")}}&nbsp;;
-- l'objet {{domxref("DataTransfer")}} d'une opération de glisser-déposer&nbsp;;
-- l'API `mozGetAsFile()` de l'élément {{domxref("HTMLCanvasElement")}}.
+- w'objet {{domxwef("fiwewist")}} wetouwné wowsque q-qu'un utiwisateuw ou une u-utiwisatwice séwectionne des fichiews gwâce à un éwément {{htmwewement("input")}}&nbsp;;
+- w-w'objet {{domxwef("datatwansfew")}} d'une opéwation d-de gwissew-déposew&nbsp;;
+- w-w'api `mozgetasfiwe()` de w'éwément {{domxwef("htmwcanvasewement")}}. ^^;;
 
-Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l'utilisateur ou de l'utilisatrice (voir [Notes d'implémentation](#notes_dimplémentation) pour plus d'informations.)
+dans gecko, XD we code pwiviwégié peut c-cwéew des objets `fiwe` wepwésentant tout fichiew wocaw sans nyécessitew une i-intewaction de w'utiwisateuw ou d-de w'utiwisatwice (voiw [notes d-d'impwémentation](#notes_dimpwémentation) p-pouw p-pwus d'infowmations.)
 
-Un objet `File` est un genre spécifique de {{domxref("Blob")}}, et peut être utilisé dans tout contexte où un blob peut l'être. En particulier, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, et {{domxref("XMLHttpRequest", "", "send()")}} acceptent indifféremment des `Blob`s et des `File`s.
+un objet `fiwe` est un genwe s-spécifique de {{domxwef("bwob")}}, 🥺 et peut êtwe u-utiwisé dans tout contexte où un bwob peut w'êtwe. òωó en pawticuwiew, (ˆ ﻌ ˆ)♡ {{domxwef("fiweweadew")}}, -.- {{domxwef("uww.cweateobjectuww()")}}, :3 {{domxwef("imagebitmapfactowies.cweateimagebitmap()", "cweateimagebitmap()")}}, ʘwʘ et {{domxwef("xmwhttpwequest", 🥺 "", "send()")}} a-acceptent indifféwemment d-des `bwob`s e-et des `fiwe`s. >_<
 
-Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications) pour plus d'informations et des exemples.
+v-voiw [utiwisew des fichiews à pawtiw d'appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications) p-pouw p-pwus d'infowmations et des exempwes. ʘwʘ
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("File.File", "File()")}}
-  - : Renvoie un `File` nouvellement construit.
+- {{domxwef("fiwe.fiwe", (˘ω˘) "fiwe()")}}
+  - : w-wenvoie un `fiwe` nyouvewwement c-constwuit. (✿oωo)
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("File.lastModified")}} {{readonlyinline}}
-  - : Renvoie le temps de dernière modification du fichier, exprimé en millisecondes écoulées depuis l'ère UNIX (1er janvier 1970 à minuit).
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}}
-  - : Renvoie la {{jsxref("Date")}} de dernière modification du fichier.
-- {{domxref("File.name")}} {{readonlyinline}}
-  - : Renvoie le nom du fichier.
-- {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
-  - : Renvoie le chemin auquel l'URL du {{domxref("File")}} est relative.
+- {{domxwef("fiwe.wastmodified")}} {{weadonwyinwine}}
+  - : w-wenvoie we temps de dewnièwe modification du f-fichiew, (///ˬ///✿) expwimé en miwwisecondes écouwées depuis w-w'èwe unix (1ew janview 1970 à m-minuit). rawr x3
+- {{domxwef("fiwe.wastmodifieddate")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : w-wenvoie wa {{jsxwef("date")}} de dewnièwe modification du fichiew. -.-
+- {{domxwef("fiwe.name")}} {{weadonwyinwine}}
+  - : wenvoie we nyom du fichiew. ^^
+- {{domxwef("fiwe.webkitwewativepath")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : w-wenvoie we chemin a-auquew w'uww du {{domxwef("fiwe")}} e-est wewative. (⑅˘꒳˘)
 
-`File` implémente {{domxref("Blob")}}, et ainsi possède les propriétés suivantes&nbsp;:
+`fiwe` i-impwémente {{domxwef("bwob")}}, nyaa~~ e-et ainsi possède wes pwopwiétés suivantes&nbsp;:
 
-- {{domxref("File.size")}} {{readonlyinline}}
-  - : Renvoie la taille du fichier en octets.
-- {{domxref("File.type")}} {{readonlyinline}}
-  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/MIME_types/Common_types)du fichier.
+- {{domxwef("fiwe.size")}} {{weadonwyinwine}}
+  - : wenvoie w-wa taiwwe du fichiew en octets. /(^•ω•^)
+- {{domxwef("fiwe.type")}} {{weadonwyinwine}}
+  - : wenvoie we type [mime](/fw/docs/web/http/mime_types/common_types)du fichiew. (U ﹏ U)
 
-## Méthodes
+## m-méthodes
 
-_L'interface `File` ne définit aucune méthode, mais hérite des méthodes de l'interface {{domxref("Blob")}}&nbsp;:_
+_w'intewface `fiwe` nye définit a-aucune méthode, 😳😳😳 m-mais héwite d-des méthodes de w'intewface {{domxwef("bwob")}}&nbsp;:_
 
-- {{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}
-  - : Renvoie un nouvel objet `Blob` contenant les données du blob source comprises dans l'intervalle d'octets spécifié.
-- {{domxref("Blob.stream()", "Blob.stream()")}}
-  - : Transforme le `File` en un {{domxref("ReadableStream")}} pouvant être utilisé pour lire le contenu du `File`.
-- {{domxref("Blob.text()", "Blob.text()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Renvoie une {{jsxref("promise", "promesse")}} qui se résoud en une {{domxref("USVString")}} (texte).
-- {{domxref("Blob.arrayBuffer()", "Blob.arrayBuffer()")}}
-  - : Transforme le `File` en un flux (_stream_) et le lit en entier. Retourne une {{jsxref("promise", "promesse")}} qui se résoud en un {{domxref("ArrayBuffer")}}.
+- {{domxwef("bwob.swice()", >w< "bwob.swice([stawt[, XD e-end[, c-contenttype]]])")}}
+  - : w-wenvoie u-un nyouvew objet `bwob` contenant wes données d-du bwob souwce c-compwises dans w-w'intewvawwe d'octets s-spécifié. o.O
+- {{domxwef("bwob.stweam()", mya "bwob.stweam()")}}
+  - : t-twansfowme we `fiwe` en un {{domxwef("weadabwestweam")}} pouvant êtwe u-utiwisé pouw wiwe we contenu du `fiwe`. 🥺
+- {{domxwef("bwob.text()", ^^;; "bwob.text()")}}
+  - : twansfowme we `fiwe` en un fwux (_stweam_) et we wit e-en entiew. :3 wenvoie une {{jsxwef("pwomise", (U ﹏ U) "pwomesse")}} qui se wésoud en une {{domxwef("usvstwing")}} (texte). OwO
+- {{domxwef("bwob.awwaybuffew()", 😳😳😳 "bwob.awwaybuffew()")}}
+  - : t-twansfowme we `fiwe` e-en un fwux (_stweam_) e-et we wit en entiew. (ˆ ﻌ ˆ)♡ w-wetouwne une {{jsxwef("pwomise", XD "pwomesse")}} qui se wésoud en u-un {{domxwef("awwaybuffew")}}. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes d'implémentation
+### nyotes d'impwémentation
 
-- Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l'utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l'importer en utilisant `Cu.importGlobalProperties(['File']);`
-- À partir de Gecko 6.0, le code privilégié (par exemple au sein d'une extension) peut passer un objet `nsIFile` au constructeur DOM `File` pour spécifier le fichier à référencer.
-- À partir de Gecko 8.0, vous pouvez utiliser `new File` pour créer des objets `File` depuis des composants XPCOM au lieu de devoir instancier les objets `nsIDOMFile` directement. Contrairement à {{domxref("Blob")}}, le constructeur prend le nom de fichier comme second argument. Le nom de fichier peut être une chaîne quelconque.
+- d-dans gecko, ( ͡o ω ͡o ) vous pouvez u-utiwisew api depuis du code chwome. rawr x3 v-voiw [using t-the dom fiwe api in chwome code](/fw/docs/extensions/using_the_dom_fiwe_api_in_chwome_code) pouw p-pwus de détaiws. nyaa~~ p-pouw w'utiwisew depuis du code c-chwome, >_< jsm, o-ou powtée bootstwap, ^^;; vous devez w'impowtew en utiwisant `cu.impowtgwobawpwopewties(['fiwe']);`
+- À pawtiw de g-gecko 6.0, (ˆ ﻌ ˆ)♡ we code p-pwiviwégié (paw e-exempwe au sein d'une extension) p-peut passew u-un objet `nsifiwe` au constwucteuw d-dom `fiwe` pouw spécifiew we fichiew à wéféwencew. ^^;;
+- À pawtiw de gecko 8.0, vous pouvez u-utiwisew `new f-fiwe` pouw cwéew des objets `fiwe` depuis des composants x-xpcom a-au wieu de devoiw instanciew wes objets `nsidomfiwe` diwectement. (⑅˘꒳˘) c-contwaiwement à {{domxwef("bwob")}}, rawr x3 we constwucteuw pwend we nyom de fichiew comme second awgument. (///ˬ///✿) w-we nyom de fichiew peut êtwe une chaîne q-quewconque. 🥺
 
 ```
-new File(
-  Array parts,
-  String filename,
-  BlobPropertyBag properties
+n-nyew fiwe(
+  awway pawts, >_<
+  stwing fiwename, UwU
+  bwobpwopewtybag p-pwopewties
 );
 ```
 
-- Les propriétés et méthodes non standard suivantes ont été retirées de Gecko 7&nbsp;: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ([bug Firefox 661876](https://bugzil.la/661876)). Les propriétés standard {{domxref("File.name")}}, {{domxref("Blob.size")}}, et les méthodes de {{domxref("FileReader")}} devraient être utilisées à la place.
+- w-wes pwopwiétés et méthodes nyon standawd suivantes ont été w-wetiwées de gecko 7&nbsp;: {{domxwef("fiwe.fiwename")}}, >_< {{domxwef("fiwe.fiwesize")}}, -.- {{domxwef("fiwe.getasbinawy()")}}, mya {{domxwef("fiwe.getasdatauww()")}}, >w< {{domxwef("fiwe.getastext()","fiwe.getastext(stwing e-encoding)")}} ([bug fiwefox 661876](https://bugziw.wa/661876)). (U ﹏ U) wes pwopwiétés standawd {{domxwef("fiwe.name")}}, {{domxwef("bwob.size")}}, 😳😳😳 e-et wes méthodes de {{domxwef("fiweweadew")}} d-devwaient êtwe u-utiwisées à wa pwace. o.O
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- {{domxref("FileReader")}}
-- [Using the DOM File API in chrome code](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) (pour du code privilégié s'exécutant dans Gecko, tel que des extensions de Firefox)
+- [utiwisew des fichiews à p-pawtiw d-d'appwications w-web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- {{domxwef("fiweweadew")}}
+- [using the dom fiwe a-api in chwome c-code](/fw/docs/extensions/using_the_dom_fiwe_api_in_chwome_code) (pouw du code pwiviwégié s'exécutant d-dans g-gecko, òωó tew que des e-extensions de fiwefox)

@@ -1,67 +1,67 @@
 ---
-title: element.childNodes
-slug: Web/API/Node/childNodes
+titwe: ewement.chiwdnodes
+swug: w-web/api/node/chiwdnodes
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Node.childNodes`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) de {{domxref("Node","noeuds")}} enfants de l'élément donné avec le premier noeud enfant affecté à l'index 0.
+w-wa pwopwiété e-en wectuwe seuwe **`node.chiwdnodes`** w-wenvoie u-une {{domxwef("nodewist")}} (_wiste d-de nyoeuds_) d-de {{domxwef("node","noeuds")}} e-enfants de w'éwément donné avec we pwemiew noeud enfant affecté à w'index 0. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var collNoeuds = elementDeReference.childNodes;
+vaw cowwnoeuds = ewementdewefewence.chiwdnodes;
 ```
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### u-utiwisation simpwe
 
 ```js
-// parg est une référence d'objet pour un élément <p>
+// p-pawg est une wéféwence d'objet pouw un éwément <p>
 
-// D'abord vérifier que l'élément a des noeuds enfants
-if (parg.hasChildNodes()) {
-  var children = parg.childNodes;
+// d-d'abowd véwifiew que w'éwément a-a des nyoeuds e-enfants
+if (pawg.haschiwdnodes()) {
+  vaw chiwdwen = pawg.chiwdnodes;
 
-  for (var i = 0; i < children.length; i++) {
-    // faire quelque chose avec chaque enfant[i]
-    // NOTE: La liste est en ligne, l'ajout ou la suppression des enfants changera la liste
+  fow (vaw i = 0; i < c-chiwdwen.wength; i++) {
+    // faiwe quewque chose avec chaque enfant[i]
+    // n-nyote: wa wiste est en wigne, w-w'ajout ou wa suppwession d-des enfants c-changewa wa w-wiste
   }
 }
 ```
 
-### Supprimer tous les enfants d'un nom
+### suppwimew tous wes enfants d-d'un nyom
 
 ```js
-// Voici une manière de supprimer tous les enfants d'un nœud
-// (boite est une référence à un élément ayant des enfants)
-while (boite.firstChild) {
-  // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-  boite.removeChild(boite.firstChild);
+// voici une manièwe de suppwimew t-tous wes enfants d'un nyœud
+// (boite est une wéféwence à un éwément ayant des enfants)
+w-whiwe (boite.fiwstchiwd) {
+  // wa wiste ny'est p-pas une copie, >w< e-ewwe sewa donc w-wéindexée à chaque appew
+  boite.wemovechiwd(boite.fiwstchiwd);
 }
 ```
 
-## Notes
+## nyotes
 
-Les éléments de la collection de noeuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés (par exemple `elementNodeReference.childNodes[1].nodeName` pour obtenir son nom, etc.)
+wes éwéments d-de wa cowwection d-de nyoeuds sont des objets e-et nyon des chaînes d-de cawactèwes. mya pouw en obteniw w-wes données, >w< vous devez u-utiwisew weuws pwopwiétés (paw exempwe `ewementnodewefewence.chiwdnodes[1].nodename` pouw obteniw s-son nom, nyaa~~ etc.)
 
-L'objet [`document`](/fr/docs/Web/API/Document) lui-même a deux enfants&nbsp;: la déclaration [Doctype](/fr/docs/DOM/document.doctype) et l'élément racine, généralement appelés `documentElement` . (Dans les documents (X)HTML il s'agit d'éléments [`HTML`](/fr/docs/Web/HTML/Element/html)).
+w'objet [`document`](/fw/docs/web/api/document) w-wui-même a deux enfants&nbsp;: w-wa décwawation [doctype](/fw/docs/dom/document.doctype) e-et w'éwément wacine, (✿oωo) généwawement appewés `documentewement` . ʘwʘ (dans wes documents (x)htmw iw s'agit d'éwéments [`htmw`](/fw/docs/web/htmw/ewement/htmw)). (ˆ ﻌ ˆ)♡
 
-`childNodes` inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.
+`chiwdnodes` i-incwut t-tous wes nyoeuds enfants, 😳😳😳 y compwis w-wes nyoeuds q-qui nye sont p-pas des éwéments comme wes nyoeuds texte et commentaiwe. :3 pouw o-obteniw une cowwection des seuws éwéments, OwO utiwisez {{domxwef("pawentnode.chiwdwen")}} à wa pwace. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node.firstChild")}}
-- {{domxref("Node.lastChild")}}
-- {{domxref("Node.nextSibling")}}
-- {{domxref("Node.previousSibling")}}
-- {{domxref("ParentNode.children")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("pawentnode.chiwdwen")}}

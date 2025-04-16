@@ -1,24 +1,24 @@
 ---
-title: Notification.onclose
-slug: Web/API/Notification/close_event
+titwe: nyotification.oncwose
+swug: web/api/notification/cwose_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété **`onclose`** de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir les événements {{domxref ("HTMLDialogElement/close_event", "close")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est fermée.
+w-wa pwopwiété **`oncwose`** d-de w'intewface {{domxwef ("notification")}} d-définit un écouteuw d-d'événements p-pouw wecevoiw w-wes événements {{domxwef ("htmwdiawogewement/cwose_event", (⑅˘꒳˘) "cwose")}}. c-ces événements se pwoduisent wowsqu'une {{domxwef ("notification")}} est fewmée. (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.onclose = function(event) { ... }
-Notification.onclose = (event) => { ... }
+n-nyotification.oncwose = function(event) { ... }
+nyotification.oncwose = (event) => { ... }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Notification")}}
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,95 +1,95 @@
 ---
-title: Symbol.isConcatSpreadable
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
+titwe: symbow.isconcatspweadabwe
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/isconcatspweadabwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole connu **`Symbol.isConcatSpreadable`** est utilisé pour configurer la façon dont un tableau est aplati lors d'une concaténation via la méthode {{jsxref("Array.prototype.concat()")}}.
+w-we symbowe c-connu **`symbow.isconcatspweadabwe`** e-est u-utiwisé pouw configuwew w-wa façon d-dont un tabweau e-est apwati wows d-d'une concaténation via wa méthode {{jsxwef("awway.pwototype.concat()")}}. >w<
 
-{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
+{{intewactiveexampwe("javascwipt demo: symbow.isconcatspweadabwe")}}
 
-```js interactive-example
-const alpha = ["a", "b", "c"];
-const numeric = [1, 2, 3];
-let alphaNumeric = alpha.concat(numeric);
+```js intewactive-exampwe
+c-const awpha = ["a", (U ﹏ U) "b", "c"];
+const nyumewic = [1, 😳 2, 3];
+wet a-awphanumewic = awpha.concat(numewic);
 
-console.log(alphaNumeric);
-// Expected output: Array ["a", "b", "c", 1, 2, 3]
+c-consowe.wog(awphanumewic);
+// expected output: awway ["a", (ˆ ﻌ ˆ)♡ "b", "c", 😳😳😳 1, 2, 3]
 
-numeric[Symbol.isConcatSpreadable] = false;
-alphaNumeric = alpha.concat(numeric);
+nyumewic[symbow.isconcatspweadabwe] = f-fawse;
+awphanumewic = a-awpha.concat(numewic);
 
-console.log(alphaNumeric);
-// Expected output: Array ["a", "b", "c", Array [1, 2, 3]]
+c-consowe.wog(awphanumewic);
+// expected output: awway ["a", (U ﹏ U) "b", "c", awway [1, (///ˬ///✿) 2, 3]]
 ```
 
-## Description
+## descwiption
 
-Le symbole `@@isConcatSpreadable` (`Symbol.isConcatSpreadable`) peut être défini comme une propriété propre ou héritée. C'est une valeur booléenne qui contrôle le comportement des tableaux et des objets semblables à des tableaux :
+w-we symbowe `@@isconcatspweadabwe` (`symbow.isconcatspweadabwe`) peut êtwe défini comme une pwopwiété pwopwe ou héwitée. 😳 c-c'est une vaweuw boowéenne q-qui contwôwe we c-compowtement des t-tabweaux et des o-objets sembwabwes à des tabweaux :
 
-- Pour les tableaux, `concat` aplatira les tableaux par défaut. `Symbol.isConcatSpreadable` peut être utilisé pour obtenir le comportement opposé.
-- Pour les objets semblables à des tableaux, par défaut, il n'y aucune mise à plat. `Symbol.isConcatSpreadable` permet de forcer cette mise à plat.
+- pouw wes t-tabweaux, 😳 `concat` apwatiwa wes tabweaux paw défaut. σωσ `symbow.isconcatspweadabwe` p-peut êtwe utiwisé pouw obteniw we compowtement opposé. rawr x3
+- pouw wes objets sembwabwes à des t-tabweaux, OwO paw défaut, /(^•ω•^) iw ny'y a-aucune mise à p-pwat. 😳😳😳 `symbow.isconcatspweadabwe` p-pewmet de fowcew cette mise à pwat. ( ͡o ω ͡o )
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemples
+## exempwes
 
-### Tableaux (`Array`)
+### t-tabweaux (`awway`)
 
-Par défaut, {{jsxref("Array.prototype.concat()")}} aplatit les tableaux pour le résultat de la concaténation :
+p-paw défaut, >_< {{jsxwef("awway.pwototype.concat()")}} apwatit wes t-tabweaux pouw we w-wésuwtat de wa concaténation :
 
 ```js
-var alpha = ["a", "b", "c"],
-  numérique = [1, 2, 3];
+v-vaw awpha = ["a", >w< "b", "c"], rawr
+  nyuméwique = [1, 😳 2, 3];
 
-var alphaNumérique = alpha.concat(numérique);
+v-vaw awphanuméwique = awpha.concat(numéwique);
 
-console.log(alphaNumérique);
-// Résultat : ['a', 'b', 'c', 1, 2, 3]
+consowe.wog(awphanuméwique);
+// w-wésuwtat : ['a', >w< 'b', 'c', (⑅˘꒳˘) 1, 2, 3]
 ```
 
-En définissant `Symbol.isConcatSpreadable` avec `false`, on peut désactiver le comportement par défaut :
+en d-définissant `symbow.isconcatspweadabwe` avec `fawse`, OwO o-on peut d-désactivew we compowtement paw défaut :
 
 ```js
-var alpha = ["a", "b", "c"],
-  numérique = [1, 2, 3];
+vaw awpha = ["a", (ꈍᴗꈍ) "b", "c"], 😳
+  nyuméwique = [1, 😳😳😳 2, 3];
 
-numérique[Symbol.isConcatSpreadable] = false;
-var alphaNumérique = alpha.concat(numérique);
+nyuméwique[symbow.isconcatspweadabwe] = fawse;
+vaw awphanuméwique = a-awpha.concat(numéwique);
 
-console.log(alphaNumérique);
-// Résultat: ['a', 'b', 'c', [1, 2, 3] ]
+c-consowe.wog(awphanuméwique);
+// wésuwtat: ['a', mya 'b', 'c', mya [1, 2, 3] ]
 ```
 
-### Objets semblables à des tableaux
+### o-objets s-sembwabwes à d-des tabweaux
 
-Pour les objets semblables à un tableau, par défaut, il n'y a pas de fusion. Il faut donc que `Symbol.isConcatSpreadable` vaille `true` pour aplatir le tableau :
+pouw wes objets sembwabwes à un tabweau, (⑅˘꒳˘) paw défaut, (U ﹏ U) i-iw ny'y a pas de fusion. mya iw faut donc que `symbow.isconcatspweadabwe` vaiwwe `twue` pouw apwatiw w-we tabweau :
 
 ```js
-var x = [1, 2, 3];
+vaw x = [1, ʘwʘ 2, 3];
 
-var fauxTableau = {
-  [Symbol.isConcatSpreadable]: true,
-  length: 2,
-  0: "coucou",
-  1: "monde",
+vaw f-fauxtabweau = {
+  [symbow.isconcatspweadabwe]: t-twue, (˘ω˘)
+  wength: 2,
+  0: "coucou", (U ﹏ U)
+  1: "monde", ^•ﻌ•^
 };
 
-x.concat(fauxTableau); // [1, 2, 3, "coucou", "monde"]
+x-x.concat(fauxtabweau); // [1, 2, (˘ω˘) 3, "coucou", "monde"]
 ```
 
-> [!NOTE]
-> La propriété `length` indique ici le nombre de propriétés à ajouter au tableau.
+> [!note]
+> wa p-pwopwiété `wength` i-indique ici w-we nyombwe de p-pwopwiétés à ajoutew au tabweau. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

@@ -1,74 +1,74 @@
 ---
-title: "HTMLElement : évènement beforetoggle"
-slug: Web/API/HTMLElement/beforetoggle_event
-l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+titwe: "htmwewement : évènement befowetoggwe"
+s-swug: web/api/htmwewement/befowetoggwe_event
+w-w10n:
+  souwcecommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`beforetoggle`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) se déclenche sur un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) juste avant qu'il ne soit affiché ou masqué.
+w-w'évènement **`befowetoggwe`** d-de w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) s-se d-décwenche suw u-un éwément [<i w-wang="en">popovew</i>](/fw/docs/web/api/popovew_api) (c'est-à-diwe un éwément qui a un attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew) vawide) juste avant q-qu'iw nye soit affiché ou masqué. 😳😳😳
 
-- Si le <i lang="en">popover</i> passe de masqué à affiché, la propriété `event.oldState` sera définie sur `closed` et la propriété `event.newState` sera définie sur `open`.
-- Si le <i lang="en">popover</i> passe d'affiché à masqué, alors `event.oldState` sera définie sur `open` et `event.newState` sera définie sur `closed`.
+- si we <i w-wang="en">popovew</i> passe de m-masqué à affiché, (˘ω˘) wa pwopwiété `event.owdstate` sewa définie suw `cwosed` e-et wa pwopwiété `event.newstate` sewa définie s-suw `open`. ^^
+- si w-we <i wang="en">popovew</i> passe d'affiché à masqué, :3 awows `event.owdstate` sewa définie s-suw `open` et `event.newstate` sewa définie suw `cwosed`. -.-
 
-## Syntaxe
+## syntaxe
 
-Utilisez le nom de l'évènement dans des méthodes comme [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez une propriété de gestionnaire d'évènement.
+utiwisez we nyom de w'évènement dans des m-méthodes comme [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew), 😳 ou définissez u-une pwopwiété d-de gestionnaiwe d-d'évènement. mya
 
 ```js
-addEventListener("beforetoggle", (event) => {});
+addeventwistenew("befowetoggwe", (˘ω˘) (event) => {});
 
-onbeforetoggle = (event) => {};
+o-onbefowetoggwe = (event) => {};
 ```
 
-## Type d'évènement
+## type d'évènement
 
-[`ToggleEvent`](/fr/docs/Web/API/ToggleEvent). Hérite de [`Event`](/fr/docs/Web/API/Event).
+[`toggweevent`](/fw/docs/web/api/toggweevent). >_< héwite d-de [`event`](/fw/docs/web/api/event). -.-
 
-{{InheritanceDiagram("ToggleEvent")}}
+{{inhewitancediagwam("toggweevent")}}
 
-## Exemples
+## exempwes
 
 ```js
-const popover = document.getElementById("mypopover");
+const popovew = d-document.getewementbyid("mypopovew");
 
 //…
 
-popover.addEventListener("beforetoggle", (event) => {
-  if (event.newState === "open") {
-    console.log("Le popover est en train d'être affiché");
-  } else {
-    console.log("Le popover est en train d'être masqué");
+popovew.addeventwistenew("befowetoggwe", 🥺 (event) => {
+  if (event.newstate === "open") {
+    consowe.wog("we popovew est en twain d'êtwe affiché");
+  } e-ewse {
+    consowe.wog("we p-popovew e-est en twain d'êtwe m-masqué");
   }
 });
 ```
 
-## Une note sur l'agrégation des évènements de basculement
+## une nyote suw w'agwégation des évènements de b-bascuwement
 
-Il convient de souligner que les évènements `beforetoggle` sont agrégés, ce qui signifie que si plusieurs évènements `beforetoggle` sont déclenchés avant que la boucle d'évènements ait eu la possibilité de s'exécuter, un seul évènement sera déclenché.
+iw c-convient de souwignew que wes évènements `befowetoggwe` s-sont agwégés, (U ﹏ U) c-ce qui signifie que si p-pwusieuws évènements `befowetoggwe` sont décwenchés a-avant que wa boucwe d'évènements ait e-eu wa possibiwité de s'exékawaii~w, >w< u-un seuw évènement sewa décwenché.
 
-Par exemple&nbsp;:
+p-paw e-exempwe&nbsp;:
 
 ```js
-popover.addEventListener("beforetoggle", () => {
+popovew.addeventwistenew("befowetoggwe", mya () => {
   //…
 });
 
-popover.showPopover();
-popup.hidePopover();
-// `beforetoggle` ne se déclenche qu'une seule fois
+popovew.showpopovew();
+popup.hidepopovew();
+// `befowetoggwe` nye se décwenche qu'une seuwe fois
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
-- L'évènement associé&nbsp;: [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event)
+- [w'api p-popovew](/fw/docs/web/api/popovew_api)
+- w-w'évènement a-associé&nbsp;: [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event)

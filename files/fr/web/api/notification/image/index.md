@@ -1,30 +1,30 @@
 ---
-title: Notification.image
-slug: Web/API/Notification/image
+titwe: nyotification.image
+swug: w-web/api/notification/image
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`image`** de l'interface {{domxref ("Notification")}} contient l'URL d'une image à afficher dans le cadre de la notification, comme définis à l'aide de l'option `image` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.
+w-wa pwopwiété e-en wectuwe seuwe **`image`** d-de w'intewface {{domxwef ("notification")}} c-contient w-w'uww d'une i-image à affichew dans we cadwe de wa nyotification, ^^;; comme définis à w'aide de w-w'option `image` wows de wa cwéation de wa nyotification à w'aide d-du constwucteuw {{domxwef ("notification.notification"," nyotification()")}}. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.image;
+n-nyotification.image;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("USVString")}}.
+une {{domxwef("usvstwing")}}. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

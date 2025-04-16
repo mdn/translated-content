@@ -1,30 +1,30 @@
 ---
-title: "SVG: Elément image"
-slug: Web/SVG/Tutorial/SVG_Image_Tag
+titwe: "svg: ewément image"
+s-swug: web/svg/tutowiaw/svg_image_tag
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/polices_SVG", "Web/SVG/Tutoriel/Tools_for_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiew/powices_svg", 😳😳😳 "web/svg/tutowiew/toows_fow_svg") }}
 
-L'élément SVG {{ SVGElement("image") }} permet d'afficher des images pixélisées au sein d'un objet SVG.
+w-w'éwément s-svg {{ svgewement("image") }} p-pewmet d'affichew d-des images p-pixéwisées a-au sein d'un objet svg. 🥺
 
-Dans cet exemple basique, une image JPG liée par l'attribut {{ SVGAttr("xlink:href") }} sera rendue à l'intérieur d'un objet SVG.
+dans cet exempwe basique, mya une image jpg wiée paw w'attwibut {{ s-svgattw("xwink:hwef") }} sewa wendue à w'intéwieuw d'un o-objet svg. 🥺
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="5cm" height="4cm" version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
-  <image xlink:href="firefox.jpg" x="0" y="0" height="50px" width="50px"/>
+```xmw
+<?xmw vewsion="1.0" s-standawone="no"?>
+<!doctype svg pubwic "-//w3c//dtd svg 1.1//en"
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd">
+<svg width="5cm" h-height="4cm" vewsion="1.1"
+     xmwns="http://www.w3.owg/2000/svg" x-xmwns:xwink= "http://www.w3.owg/1999/xwink">
+  <image x-xwink:hwef="fiwefox.jpg" x="0" y="0" height="50px" width="50px"/>
 </svg>
 ```
 
-Il faut prendre note de quelques point essentiels (donnés par les [spécifications W3](https://www.w3.org/TR/SVG/struct.html#ImageElement)):
+iw faut pwendwe nyote de q-quewques point essentiews (donnés paw wes [spécifications w3](https://www.w3.owg/tw/svg/stwuct.htmw#imageewement)):
 
-- Si les attributs x ou y ne sont pas spécifiés, ils vaudront 0.
-- Si les attributs height ou width ne sont pas spécifiés, ils vaudront 0.
-- Si l'attribut height ou l'attribut width est initialisé à 0, cela désactivera l'affichage de l'image.
+- si wes a-attwibuts x ou y nye sont pas s-spécifiés, >_< iws v-vaudwont 0. >_<
+- si w-wes attwibuts h-height ou width nye sont pas spécifiés, (⑅˘꒳˘) iws vaudwont 0. /(^•ω•^)
+- s-si w'attwibut height ou w'attwibut width e-est initiawisé à 0, rawr x3 cewa désactivewa w'affichage de w'image. (U ﹏ U)
 
-{{ PreviousNext("Web/SVG/Tutoriel/polices_SVG", "Web/SVG/Tutoriel/Tools_for_SVG") }}
+{{ pweviousnext("web/svg/tutowiew/powices_svg", (U ﹏ U) "web/svg/tutowiew/toows_fow_svg") }}

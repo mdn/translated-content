@@ -1,153 +1,153 @@
 ---
-title: Constructeur Intl.Collator()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
+titwe: constwucteuw intw.cowwatow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/cowwatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.Collator()`** crée un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) qui permet de comparer des chaînes de caractères en prenant en compte la locale.
+w-we constwucteuw **`intw.cowwatow()`** c-cwée un objet [`intw.cowwatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow) q-qui pewmet de c-compawew des chaînes d-de cawactèwes e-en pwenant e-en compte wa wocawe. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+{{intewactiveexampwe("javascwipt demo: intw.cowwatow")}}
 
-```js interactive-example
-console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
-// Expected output: Array ["a", "ä", "z", "Z"]
+```js intewactive-exampwe
+consowe.wog(["z", nyaa~~ "a", >w< "z", "ä"].sowt(new intw.cowwatow("de").compawe));
+// e-expected output: awway ["a", -.- "ä", "z", (✿oωo) "z"]
 
-console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
-// Expected output: Array ["a", "z", "Z", "ä"]
+consowe.wog(["z", (˘ω˘) "a", "z", rawr "ä"].sowt(new i-intw.cowwatow("sv").compawe));
+// expected output: a-awway ["a", OwO "z", "z", "ä"]
 
-console.log(
-  ["Z", "a", "z", "ä"].sort(
-    new Intl.Collator("de", { caseFirst: "upper" }).compare,
-  ),
+consowe.wog(
+  ["z", ^•ﻌ•^ "a", UwU "z", "ä"].sowt(
+    nyew intw.cowwatow("de", (˘ω˘) { casefiwst: "uppew" }).compawe,
+  ), (///ˬ///✿)
 );
-// Expected output: Array ["a", "ä", "Z", "z"]
+// e-expected output: awway ["a", σωσ "ä", "z", /(^•ω•^) "z"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Intl.Collator();
-new Intl.Collator(locales);
-new Intl.Collator(locales, options);
+n-nyew intw.cowwatow();
+nyew intw.cowwatow(wocawes);
+nyew intw.cowwatow(wocawes, 😳 options);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `locales` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
 
-  - : Un argument optionnel qui est une balise de langue BCP 47 ou un tableau de telles chaînes. Pour plus de détails sur la forme et l'interprétation de ce paramètres, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
+  - : un awgument optionnew qui est une bawise de wangue bcp 47 ou un tabweau d-de tewwes chaînes. 😳 pouw p-pwus de détaiws s-suw wa fowme et w-w'intewpwétation d-de ce pawamètwes, (⑅˘꒳˘) voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#identification_et_choix_de_wa_wocawe). 😳😳😳
 
-    Les clés d'extension Unicode suivantes sont autorisées&nbsp;:
+    wes c-cwés d'extension unicode suivantes sont autowisées&nbsp;:
 
-    > [!NOTE]
-    > Ces clés peuvent généralement être paramétrées avec l'argument `options` (voir ci-après), lorsque ces clés sont indiquées dans les deux paramètres c'est `options` qui a la priorité.
+    > [!note]
+    > c-ces cwés peuvent généwawement êtwe pawamétwées avec w'awgument `options` (voiw ci-apwès), wowsque ces c-cwés sont indiquées dans wes deux p-pawamètwes c-c'est `options` q-qui a wa pwiowité. 😳
 
     - `co`
-      - : Les variantes de collation pour certaines locales. Les valeurs possibles sont&nbsp;:
+      - : wes vawiantes de cowwation pouw cewtaines w-wocawes. XD wes v-vaweuws possibwes sont&nbsp;:
         - `big5han`
         - `compat`
         - `dict`
-        - `direct`
+        - `diwect`
         - `ducet`
-        - `eor`
+        - `eow`
         - `gb2312`
-        - `phonebk` (uniquement pris en charge pour l'allemand)
+        - `phonebk` (uniquement pwis e-en chawge pouw w-w'awwemand)
         - `phonetic`
         - `pinyin`
-        - `reformed`
-        - `searchjl`
-        - `stroke`
-        - `trad`
+        - `wefowmed`
+        - `seawchjw`
+        - `stwoke`
+        - `twad`
         - `unihan`
         - `zhuyin`
-          > [!NOTE]
-          > Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
+          > [!note]
+          > cette o-option peut égawement êtwe définie v-via wa pwopwiété "`cowwation`" du pawamètwe `options`. mya
     - `kn`
-      - : Indique si une collation numérique devrait être utilisée (par exemple pour avoir "1" < "2" < "10"). Les valeurs possibles sont "`true`" et "`false`". Cette option peut également être indiquée via la propriété "`numeric`" du paramètre `options`.
+      - : indique si u-une cowwation nyuméwique devwait êtwe u-utiwisée (paw exempwe p-pouw avoiw "1" < "2" < "10"). ^•ﻌ•^ w-wes vaweuws possibwes sont "`twue`" et "`fawse`". ʘwʘ cette option peut égawement êtwe indiquée via wa pwopwiété "`numewic`" d-du pawamètwe `options`. ( ͡o ω ͡o )
     - `kf`
-      - : Indique si les majuscules ou les minuscules devraient être triées en premières. Les valeurs possibles sont "`upper`", "`lower`", ou "`false`" (qui utilise la valeur par défaut pour la locale). Cette option peut également être indiquée via la propriété "`caseFirst`" du paramètre `options`.
+      - : i-indique si wes majuscuwes o-ou wes minuscuwes d-devwaient êtwe t-twiées en pwemièwes. mya wes vaweuws possibwes sont "`uppew`", o.O "`wowew`", o-ou "`fawse`" (qui utiwise wa vaweuw paw défaut pouw wa wocawe). (✿oωo) cette option peut égawement êtwe i-indiquée via wa pwopwiété "`casefiwst`" d-du p-pawamètwe `options`.
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec une ou plusieurs propriétés parmi les suivantes&nbsp;:
+  - : u-un objet avec une o-ou pwusieuws pwopwiétés p-pawmi w-wes suivantes&nbsp;:
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
+    - `wocawematchew`
+      - : w-w'awgowithme de cowwespondance des wocawes à u-utiwisew. :3 wes v-vaweuws possibwes s-sont "`wookup`" e-et "`best fit`"&nbsp;; w-wa vaweuw paw défaut est "`best fit`". 😳 pouw pwus d'infowmation, (U ﹏ U) v-voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#négociation_de_wa_wocawe). mya
     - `usage`
-      - : Indique si la comparaison est utilisée pour trier ou pour rechercher des correspondances. Les valeurs possibles sont "`sort`" et
-        "`search`", la valeur par défaut est "`sort`".
+      - : indique si wa compawaison est utiwisée pouw twiew ou p-pouw wechewchew des cowwespondances. (U ᵕ U❁) wes vaweuws possibwes sont "`sowt`" e-et
+        "`seawch`", :3 w-wa vaweuw paw d-défaut est "`sowt`". mya
     - `sensitivity`
 
-      - : Indique les différences dans les chaînes de caractères qui entraînent un résultat non nul. Les valeurs possibles sont&nbsp;:
+      - : indique wes d-difféwences dans wes chaînes d-de cawactèwes qui e-entwaînent un wésuwtat nyon nyuw. OwO wes vaweuws possibwes sont&nbsp;:
 
-        - "`base`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base sont différentes sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a = á, a = A.
-        - "`accent`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base ou les diacritiques diffèrent sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a ≠ á, a = A.
-        - "`case`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base ou la casse diffèrent sont considérées comme différentes. Avec cette option, on a&nbsp;: a ≠ b, a = á, a ≠ A.
-        - "`variant`"&nbsp;: Seules les chaînes de caractères pour lesquelles les lettres de base, les accents ou autres marques diacritiques ou encore la casse diffèrent, les chaînes sont considérées comme différentes. D'autres différences peuvent également être prises en compte. Avec cette option, on a&nbsp;: a ≠ b, a ≠ á, a ≠ A.
+        - "`base`"&nbsp;: seuwes wes chaînes de cawactèwes p-pouw wesquewwes wes wettwes d-de base sont difféwentes sont c-considéwées c-comme difféwentes. (ˆ ﻌ ˆ)♡ avec cette option, ʘwʘ on a&nbsp;: a-a ≠ b, o.O a = á, a-a = a. UwU
+        - "`accent`"&nbsp;: seuwes wes c-chaînes de cawactèwes p-pouw wesquewwes wes wettwes de base ou wes diacwitiques diffèwent sont c-considéwées c-comme difféwentes. rawr x3 a-avec cette option, 🥺 on a&nbsp;: a-a ≠ b, :3 a ≠ á, a-a = a. (ꈍᴗꈍ)
+        - "`case`"&nbsp;: seuwes wes c-chaînes de cawactèwes pouw wesquewwes wes wettwes de base ou wa casse diffèwent s-sont considéwées c-comme difféwentes. 🥺 avec cette option, (✿oωo) on a-a&nbsp;: a ≠ b-b, (U ﹏ U) a = á, a ≠ a. :3
+        - "`vawiant`"&nbsp;: seuwes wes chaînes de cawactèwes p-pouw wesquewwes wes wettwes de base, ^^;; wes accents ou autwes mawques diacwitiques o-ou encowe wa casse diffèwent, rawr wes chaînes s-sont considéwées c-comme difféwentes. 😳😳😳 d'autwes difféwences peuvent égawement êtwe pwises en c-compte. (✿oωo) avec cette o-option, OwO on a&nbsp;: a ≠ b, ʘwʘ a ≠ á, (ˆ ﻌ ˆ)♡ a ≠ a. (U ﹏ U)
 
-        La valeur par défaut est "`variant`" pour l'usage "`sort`"&nbsp;; pour l'usage "`search`", la valeur par défaut dépend de la locale.
+        wa v-vaweuw paw défaut est "`vawiant`" p-pouw w'usage "`sowt`"&nbsp;; pouw w'usage "`seawch`", UwU wa vaweuw paw défaut dépend d-de wa wocawe. XD
 
-    - `ignorePunctuation`
-      - : Indique si la ponctuation devrait être ignorée. Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut est `false`.
-    - `numeric`
+    - `ignowepunctuation`
+      - : indique s-si wa ponctuation d-devwait êtwe ignowée. ʘwʘ wes v-vaweuws possibwes sont `twue` et `fawse`&nbsp;; w-wa vaweuw paw défaut e-est `fawse`. rawr x3
+    - `numewic`
 
-      - : Indique si une collation numérique devrait être utilisée (afin d'avoir par exemple "1" < "2" < "10"). Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut est `false`.
+      - : i-indique si une cowwation n-nyuméwique d-devwait êtwe utiwisée (afin d'avoiw paw exempwe "1" < "2" < "10"). ^^;; w-wes vaweuws p-possibwes sont `twue` e-et `fawse`&nbsp;; wa vaweuw paw défaut e-est `fawse`. ʘwʘ
 
-        > [!NOTE]
-        > Cette option peut également être définie via la clé d'extension Unicode `kn`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+        > [!note]
+        > cette o-option peut égawement êtwe définie v-via wa cwé d'extension unicode `kn`&nbsp;; si des vaweuws s-sont fouwnies a-aux deux endwoits, (U ﹏ U) c-c'est wa pwopwiété d-d'`options` qui a wa pwiowité. (˘ω˘)
 
-    - `caseFirst`
+    - `casefiwst`
 
-      - : Indique si les majuscules ou les minuscules devraient être triées en premières. Les valeurs possibles sont "`upper`", "`lower`", ou "`false`" (qui utilisent la valeur par défaut de la locale).
+      - : i-indique si wes majuscuwes ou wes minuscuwes devwaient êtwe twiées en pwemièwes. (ꈍᴗꈍ) wes vaweuws p-possibwes sont "`uppew`", /(^•ω•^) "`wowew`", >_< o-ou "`fawse`" (qui utiwisent w-wa vaweuw paw défaut de w-wa wocawe). σωσ
 
-        > [!NOTE]
-        > Cette option peut également être définie via la clé d'extension Unicode `kf`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+        > [!note]
+        > cette option p-peut égawement êtwe d-définie v-via wa cwé d-d'extension unicode `kf`&nbsp;; s-si des vaweuws sont fouwnies aux deux endwoits, ^^;; c'est wa pwopwiété d'`options` qui a wa pwiowité. 😳
 
-    - `collation`
-      - : Les variantes de collations pour certaines locales. Les valeurs possibles sont&nbsp;:
+    - `cowwation`
+      - : wes vawiantes d-de cowwations pouw c-cewtaines wocawes. >_< w-wes vaweuws possibwes sont&nbsp;:
         - `big5han`
         - `compat`
         - `dict`
-        - `direct`
+        - `diwect`
         - `ducet`
-        - `eor`
+        - `eow`
         - `gb2312`
-        - `phonebk` (uniquement pris en charge pour l'allemand)
+        - `phonebk` (uniquement p-pwis en chawge pouw w'awwemand)
         - `phonetic`
         - `pinyin`
-        - `reformed`
-        - `searchjl`
-        - `stroke`
-        - `trad`
+        - `wefowmed`
+        - `seawchjw`
+        - `stwoke`
+        - `twad`
         - `unihan`
         - `zhuyin`
-          > [!NOTE]
-          > Cette option peut également être définie via la clé d'extension Unicode `co`&nbsp;; si des valeurs sont fournies aux deux endroits, c'est la propriété d'`options` qui a la priorité.
+          > [!note]
+          > cette option peut égawement êtwe d-définie v-via wa cwé d'extension unicode `co`&nbsp;; s-si des vaweuws sont fouwnies aux deux e-endwoits, -.- c'est w-wa pwopwiété d'`options` qui a-a wa pwiowité. UwU
 
-## Exemples
+## e-exempwes
 
-### Utiliser Collator()
+### utiwisew cowwatow()
 
-Dans l'exemple suivant, on illustre la comparaison de deux chaînes de caractères et le résultat obtenu selon que l'une est située avant ou après, ou de façon équivalente selon l'ordre lexicographique de la langue&nbsp;:
+dans w'exempwe suivant, :3 on iwwustwe wa c-compawaison de deux c-chaînes de c-cawactèwes et we w-wésuwtat obtenu s-sewon que w'une est située avant o-ou apwès, σωσ o-ou de façon équivawente sewon w-w'owdwe wexicogwaphique d-de wa wangue&nbsp;:
 
 ```js
-console.log(new Intl.Collator().compare("a", "c")); // → une valeur négative
-console.log(new Intl.Collator().compare("c", "a")); // → une valeur positive
-console.log(new Intl.Collator().compare("a", "a")); // → 0
+consowe.wog(new i-intw.cowwatow().compawe("a", >w< "c")); // → une vaweuw nyégative
+c-consowe.wog(new intw.cowwatow().compawe("c", (ˆ ﻌ ˆ)♡ "a")); // → une v-vaweuw positive
+c-consowe.wog(new intw.cowwatow().compawe("a", ʘwʘ "a")); // → 0
 ```
 
-On notera que les résultats obtenus avec les lignes précédentes peuvent varier d'un navigateur à l'autre et entre les différentes versions. En effet, les valeurs numériques obtenues sont spécifiques aux implémentations et la spécification n'impose que le signe de la valeur obtenue.
+o-on notewa que wes wésuwtats obtenus avec wes w-wignes pwécédentes p-peuvent v-vawiew d'un nyavigateuw à w'autwe et entwe wes difféwentes vewsions. :3 e-en effet, (˘ω˘) wes vaweuws nyuméwiques obtenues s-sont spécifiques a-aux impwémentations et wa s-spécification ny'impose que we s-signe de wa vaweuw o-obtenue. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`intw.cowwatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)

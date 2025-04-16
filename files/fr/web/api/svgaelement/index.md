@@ -1,74 +1,74 @@
 ---
-title: SVGAElement
-slug: Web/API/SVGAElement
+titwe: svgaewement
+swug: web/api/svgaewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG a DOM interface
+## s-svg a d-dom intewface
 
-L'interface `SVGAElement` fournit un accès aux propriétés des éléments [`<a>`](/fr/docs/Web/SVG/Element/a) ainsi qu'aux méthodes pour les manipuler.
+w-w'intewface `svgaewement` f-fouwnit u-un accès aux p-pwopwiétés des éwéments [`<a>`](/fw/docs/web/svg/ewement/a) a-ainsi qu'aux méthodes p-pouw wes manipuwew. (✿oωo)
 
-### Interface overview
+### intewface ovewview
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Egalement implémenté</th>
+    <tw>
+      <th scope="wow">egawement i-impwémenté</th>
       <td>
-        {{ domxref("SVGElement") }},
-        {{ domxref("SVGURIReference") }},
-        {{ domxref("SVGTests") }},
-        {{ domxref("SVGLangSpace") }},
-        {{ domxref("SVGExternalResourcesRequired") }},
-        {{ domxref("SVGStylable") }},
-        {{ domxref("SVGTransformable") }}
+        {{ domxwef("svgewement") }}, (ˆ ﻌ ˆ)♡
+        {{ domxwef("svguwiwefewence") }}, (˘ω˘)
+        {{ d-domxwef("svgtests") }}, (⑅˘꒳˘)
+        {{ domxwef("svgwangspace") }},
+        {{ d-domxwef("svgextewnawwesouwceswequiwed") }}, (///ˬ///✿)
+        {{ domxwef("svgstywabwe") }}, 😳😳😳
+        {{ domxwef("svgtwansfowmabwe") }}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Methodes</th>
-      <td><em>Aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés</th>
+    </tw>
+    <tw>
+      <th scope="wow">methodes</th>
+      <td><em>aucune</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiétés</th>
       <td>
-        <ul>
-          <li>
-            lectureseule{{ domxref("SVGAnimatedString") }}
-            <code>cible</code>
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            wectuweseuwe{{ d-domxwef("svganimatedstwing") }}
+            <code>cibwe</code>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Document Normative</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">document nyowmative</th>
       <td>
-        <a href="http://www.w3.org/TR/SVG11/linking.html#InterfaceSVGAElement"
-          >SVG 1.1 (2nd Edition)</a
+        <a hwef="http://www.w3.owg/tw/svg11/winking.htmw#intewfacesvgaewement"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriétés
+## pwopwiétés
 
-| Nom     | Type                               | Description                                                                              |
+| nyom     | type                               | d-descwiption                                                                              |
 | ------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
-| `cible` | {{ domxref("SVGAnimatedString") }} | Correspond à attribuer {{ SVGAttr("cible") }} sur l'élément {{ SVGElement("a") }} donné. |
+| `cibwe` | {{ domxwef("svganimatedstwing") }} | cowwespond à attwibuew {{ svgattw("cibwe") }} s-suw w'éwément {{ svgewement("a") }} d-donné. 🥺 |
 
-## Methodes
+## methodes
 
-L'interface `SVGAElement` ne fournit aucune méthode spécifique.
+w-w'intewface `svgaewement` n-nye fouwnit aucune m-méthode spécifique. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{ SVGElement("a") }} SVG Element
+- {{ svgewement("a") }} svg ewement

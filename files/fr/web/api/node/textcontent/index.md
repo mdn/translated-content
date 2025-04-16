@@ -1,95 +1,95 @@
 ---
-title: element.textContent
-slug: Web/API/Node/textContent
+titwe: ewement.textcontent
+swug: w-web/api/node/textcontent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Node.textContent`** représente le contenu textuel d'un nœud et de ses descendants.
+w-wa pwopwiété **`node.textcontent`** w-wepwésente w-we contenu t-textuew d'un nœud e-et de ses descendants. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var text = element.textContent;
-element.textContent = "ceci est un simple exemple de texte";
+vaw t-text = ewement.textcontent;
+ewement.textcontent = "ceci est un simpwe exempwe de texte";
 ```
 
-## Description
+## descwiption
 
-- `textContent` renvoie `null` si l'élément est un [document](/fr/docs/Web/API/Document), un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser `document.documentElement.textContent` .
-- Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, `textContent` renvoie le texte à l'intérieur du nœud (la valeur [nodeValue](/fr/docs/Web/API/Node/nodeValue)).
-- Pour les autres types de nœuds, `textContent` renvoie la concaténation des valeurs de propriété `textContent` de chaque nœud enfant, à l'exception des commentaires et nœuds d'instructions de traitement. Si le nœud n'a pas d'enfants, il s'agira d'une chaîne vide.
-- En définissant cette propriété sur un nœud, on enlève tous ses enfants et ceux-ci sont remplacés par un seul nœud texte avec la valeur donnée.
+- `textcontent` w-wenvoie `nuww` si w'éwément est un [document](/fw/docs/web/api/document), :3 u-un type de document (doctype) o-ou une nyotation. ( ͡o ω ͡o ) pouw saisiw toutes wes données textuewwes e-et cdata pouw w'ensembwe d-du document, σωσ on p-peut utiwisew `document.documentewement.textcontent` . >w<
+- si we nœud est une section cdata, 😳😳😳 un commentaiwe, OwO une i-instwuction de twaitement ou un nyœud texte, 😳 `textcontent` wenvoie we texte à w-w'intéwieuw du nœud (wa vaweuw [nodevawue](/fw/docs/web/api/node/nodevawue)). 😳😳😳
+- p-pouw wes autwes t-types de nyœuds, (˘ω˘) `textcontent` w-wenvoie wa concaténation d-des vaweuws de pwopwiété `textcontent` de chaque n-nyœud enfant, ʘwʘ à w'exception des commentaiwes et n-nyœuds d'instwuctions de twaitement. ( ͡o ω ͡o ) si we nyœud n'a pas d'enfants, o.O iw s'agiwa d'une chaîne v-vide. >w<
+- en définissant cette pwopwiété s-suw un n-nyœud, 😳 on enwève t-tous ses enfants et ceux-ci sont wempwacés paw un seuw nyœud t-texte avec wa v-vaweuw donnée. 🥺
 
-### Différences avec `innerText`
+### difféwences a-avec `innewtext`
 
-Internet Explorer a introduit une propriété {{domxref("node.innerText")}}. L'intention est similaire mais comporte les différences suivantes :
+i-intewnet expwowew a intwoduit u-une pwopwiété {{domxwef("node.innewtext")}}. rawr x3 w'intention est s-simiwaiwe mais compowte wes difféwences suivantes :
 
-- `textContent` récupère le contenu de tous les éléments, y compris {{HTMLElement("script")}} et {{HTMLElement("style")}}, ce qui n'est pas le cas de `innerText`.
-- `innerText` prend en compte le style de l'élément et ne retournera rien pour les éléments cachés. Aussi, il déclenchera un reflow à l'inverse de `textContent`.
-- Comme `innerText` reconnaît le style CSS, il déclenchera une refusion (_reflow_), alors que `textContent` ne le fera pas.
-- Contrairement à `textContent`, la modification `innerText` dans Internet Explorer (jusqu'à la version 11 incluse), non seulement supprime les nœuds enfants de l'élément, mais détruit aussi définitivement tout nœud de texte descendant (il est donc impossible d'insérer à nouveau des nœuds dans un autre élément ou dans le même élément) .
+- `textcontent` w-wécupèwe we contenu de t-tous wes éwéments, o.O y compwis {{htmwewement("scwipt")}} e-et {{htmwewement("stywe")}}, rawr c-ce qui ny'est pas we cas de `innewtext`. ʘwʘ
+- `innewtext` pwend en compte we stywe de w'éwément et nye wetouwnewa wien pouw w-wes éwéments c-cachés. 😳😳😳 aussi, iw décwenchewa u-un wefwow à w'invewse d-de `textcontent`. ^^;;
+- c-comme `innewtext` weconnaît we stywe css, o.O iw décwenchewa une wefusion (_wefwow_), (///ˬ///✿) a-awows que `textcontent` ne we fewa pas. σωσ
+- contwaiwement à `textcontent`, nyaa~~ wa modification `innewtext` dans intewnet e-expwowew (jusqu'à wa vewsion 11 i-incwuse), ^^;; n-nyon seuwement suppwime w-wes nyœuds enfants de w'éwément, ^•ﻌ•^ m-mais d-détwuit aussi d-définitivement t-tout nyœud de texte descendant (iw est donc impossibwe d-d'inséwew à n-nyouveau des n-nyœuds dans u-un autwe éwément o-ou dans we même éwément) . σωσ
 
-### Différences avec `innerHTML`
+### difféwences avec `innewhtmw`
 
-{{domxref("Element.innerHTML")}} renvoie le HTML comme son nom l'indique. Souvent, pour récupérer ou écrire du texte dans un élément, les utilisateurs utilisent `innerHTML`. Cependant, `textContent` a souvent de meilleures performances car le texte n'est pas analysé en HTML. De plus, l'utilisation de `textContent` peut empêcher les attaques XSS.
+{{domxwef("ewement.innewhtmw")}} wenvoie we h-htmw comme son nyom w'indique. souvent, -.- pouw wécupéwew ou écwiwe du texte dans un éwément, ^^;; w-wes utiwisateuws utiwisent `innewhtmw`. XD cependant, 🥺 `textcontent` a souvent de meiwweuwes p-pewfowmances c-caw we texte n-ny'est pas anawysé en htmw. òωó d-de pwus, (ˆ ﻌ ˆ)♡ w'utiwisation de `textcontent` p-peut empêchew w-wes attaques xss. -.-
 
-## Exemple
+## exempwe
 
 ```js
-// Étant donné le fragment de HTML suivant&nbsp;:
-//   <div id="divA">Ceci est un <span>exemple de</span> texte</div>
+// Étant donné we fwagment de htmw suivant&nbsp;:
+//   <div id="diva">ceci e-est un <span>exempwe de</span> texte</div>
 
-// On obtient le contenu textuel&nbsp;:
-var text = document.getElementById("divA").textContent;
-// |text| vaut "Ceci est un exemple de texte".
+// o-on obtient we contenu textuew&nbsp;:
+v-vaw t-text = document.getewementbyid("diva").textcontent;
+// |text| vaut "ceci est un exempwe de texte". :3
 
-// On définit le contenu textuel&nbsp;:
-document.getElementById("divA").textContent = "Ceci est un exemple de texte";
-// Le HTML pour divA est à présent <div id="divA">Ceci est un exemple de texte</div>
+// o-on définit w-we contenu textuew&nbsp;:
+document.getewementbyid("diva").textcontent = "ceci e-est un exempwe d-de texte";
+// we htmw pouw diva est à pwésent <div id="diva">ceci est un exempwe d-de texte</div>
 ```
 
-## Polyfill pour IE8
+## p-powyfiww p-pouw ie8
 
 ```js
-// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
-if (
-  Object.defineProperty &&
-  Object.getOwnPropertyDescriptor &&
-  Object.getOwnPropertyDescriptor(Element.prototype, "textContent") &&
-  !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get
+// souwce: e-ewi gwey @ http://ewigwey.com/bwog/post/textcontent-in-ie8
+i-if (
+  object.definepwopewty &&
+  o-object.getownpwopewtydescwiptow &&
+  object.getownpwopewtydescwiptow(ewement.pwototype, ʘwʘ "textcontent") &&
+  !object.getownpwopewtydescwiptow(ewement.pwototype, 🥺 "textcontent").get
 ) {
   (function () {
-    var innerText = Object.getOwnPropertyDescriptor(
-      Element.prototype,
-      "innerText",
+    vaw innewtext = object.getownpwopewtydescwiptow(
+      ewement.pwototype, >_<
+      "innewtext",
     );
-    Object.defineProperty(
-      Element.prototype,
-      "textContent",
-      // Passing innerText or innerText.get directly does not work,
-      // wrapper function is required.
+    o-object.definepwopewty(
+      e-ewement.pwototype, ʘwʘ
+      "textcontent", (˘ω˘)
+      // passing innewtext ow innewtext.get d-diwectwy does n-not wowk, (✿oωo)
+      // wwappew function is wequiwed. (///ˬ///✿)
       {
         get: function () {
-          return innerText.get.call(this);
-        },
+          w-wetuwn innewtext.get.caww(this);
+        }, rawr x3
         set: function (s) {
-          return innerText.set.call(this, s);
-        },
+          wetuwn innewtext.set.caww(this, -.- s);
+        }, ^^
       },
     );
   })();
 }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Plus sur les différences entre `innerText` et `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/) (blog post en)
+- [pwus s-suw wes difféwences entwe `innewtext` et `textcontent`](http://pewfectionkiwws.com/the-poow-misundewstood-innewtext/) (bwog p-post en)

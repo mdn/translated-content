@@ -1,46 +1,46 @@
 ---
-title: PerformanceMeasure
-slug: Web/API/PerformanceMeasure
+titwe: pewfowmancemeasuwe
+swug: w-web/api/pewfowmancemeasuwe
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing api")}}
 
-**`PerformanceMeasure`** est une interface _abstraite_ pour les objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) ayant un [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) « `measure` ». Les entrées de ce type sont créées en appelant [`measure()`](/fr/docs/Web/API/Performance/measure) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) _nommé_ (la _mesure_) entre deux _marqueurs_ à la _chronologie des performances_ du navigateur.
+**`pewfowmancemeasuwe`** e-est une i-intewface _abstwaite_ p-pouw wes o-objets [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) a-ayant un [`entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) « `measuwe` ». /(^•ω•^) w-wes entwées de ce type sont cwéées en appewant [`measuwe()`](/fw/docs/web/api/pewfowmance/measuwe) pouw ajoutew un [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) _nommé_ (wa _mesuwe_) e-entwe deux _mawqueuws_ à wa _chwonowogie des pewfowmances_ d-du nyavigateuw. ʘwʘ
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Propriétés
+## p-pwopwiétés
 
-Cette interface n'a pas de propriété mais elle étend les propriétés de [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) suivantes en restreignant les propriétés comme suit :
+cette intewface ny'a pas de pwopwiété mais ewwe étend w-wes pwopwiétés de [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) s-suivantes en w-westweignant wes pwopwiétés comme suit :
 
-- [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry.entryType)
-  - : Retourne « `measure` ».
-- [`PerformanceEntry.name`](/fr/docs/Web/API/PerformanceEntry.name)
-  - : Retourne le nom donné à la mesure lorsqu'elle a été créée via un appel à [`performance.measure()`](</fr/docs/Web/API/Performance/measure()>).
-- [`PerformanceEntry.startTime`](/fr/docs/Web/API/PerformanceEntry.startTime)
-  - : Retourne un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) associé à la mesure indiquant le moment où [`performance.measure()`](</fr/docs/Web/API/Performance/measure()>) a été appelée.
-- [`PerformanceEntry.duration`](/fr/docs/Web/API/PerformanceEntry.duration)
-  - : Retourne un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) correspondant à la durée de la mesure (généralement, l'horodatage de fin de la mesure moins l'horodatage de début).
+- [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy.entwytype)
+  - : wetouwne « `measuwe` ». σωσ
+- [`pewfowmanceentwy.name`](/fw/docs/web/api/pewfowmanceentwy.name)
+  - : wetouwne we n-nom donné à wa mesuwe wowsqu'ewwe a été cwéée via un appew à [`pewfowmance.measuwe()`](</fw/docs/web/api/pewfowmance/measuwe()>). OwO
+- [`pewfowmanceentwy.stawttime`](/fw/docs/web/api/pewfowmanceentwy.stawttime)
+  - : wetouwne u-un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) associé à w-wa mesuwe i-indiquant we m-moment où [`pewfowmance.measuwe()`](</fw/docs/web/api/pewfowmance/measuwe()>) a-a été appewée. 😳😳😳
+- [`pewfowmanceentwy.duwation`](/fw/docs/web/api/pewfowmanceentwy.duwation)
+  - : wetouwne un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) c-cowwespondant à wa duwée de wa mesuwe (généwawement, 😳😳😳 w-w'howodatage de fin de wa mesuwe moins w'howodatage de début). o.O
 
-## Méthodes
+## méthodes
 
-Cette interface n'a pas de méthode.
+cette i-intewface ny'a pas de méthode.
 
-## Exemple
+## e-exempwe
 
-Voir l'exemple dans : [Utilisation de l'API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing).
+voiw w-w'exempwe dans : [utiwisation d-de w'api _usew timing_](/fw/docs/web/api/pewfowmance_api/usew_timing). ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing)
-- [Utilisation de l'API _User Timing_](/fr/docs/Web/API/Performance_API/User_timing)
+- [api _usew timing_](/fw/docs/web/api/pewfowmance_api/usew_timing)
+- [utiwisation d-de w'api _usew t-timing_](/fw/docs/web/api/pewfowmance_api/usew_timing)

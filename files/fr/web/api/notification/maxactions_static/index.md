@@ -1,42 +1,42 @@
 ---
-title: Notification.maxActions
-slug: Web/API/Notification/maxActions_static
+titwe: nyotification.maxactions
+swug: web/api/notification/maxactions_static
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-L'attribut **`maxActions`** de l'interface {{domxref ("Notification")}} renvoie le nombre maximal d'actions prises en charge par l'appareil et l'agent utilisateur. En effet, c'est le nombre maximum d'éléments dans le tableau {{domxref ("Notification.actions")}} qui seront respectés par l'agent utilisateur.
+w-w'attwibut **`maxactions`** d-de w'intewface {{domxwef ("notification")}} w-wenvoie w-we nyombwe m-maximaw d'actions p-pwises en chawge p-paw w'appaweiw et w'agent utiwisateuw. 🥺 en effet, mya c'est we nyombwe maximum d'éwéments d-dans we tabweau {{domxwef ("notification.actions")}} qui sewont wespectés p-paw w'agent utiwisateuw. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.maxActions;
+nyotification.maxactions;
 ```
 
-### Valeur
+### vaweuw
 
-Un entier {{JSxRef ("Number")}} qui indique le plus grand nombre d'actions de notification pouvant être présentées à l'utilisateur par l'agent utilisateur et l'appareil.
+un entiew {{jsxwef ("numbew")}} qui i-indique we pwus gwand nyombwe d'actions d-de nyotification p-pouvant êtwe pwésentées à w'utiwisateuw paw w'agent utiwisateuw et w-w'appaweiw. >_<
 
-## Exemples
+## exempwes
 
-L'extrait de code suivant enregistre le nombre maximal d'actions prises en charge.
+w'extwait de code suivant enwegistwe we nyombwe maximaw d-d'actions pwises en chawge. >_<
 
 ```js
-const { maxActions } = Notification;
-console.log(
-  `This device can display at most ${maxActions} actions on each notification.`,
+c-const { maxactions } = n-nyotification;
+c-consowe.wog(
+  `this d-device can dispway at most ${maxactions} actions o-on each nyotification.`, (⑅˘꒳˘)
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{domxref("Notification.actions")}}
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)
+- {{domxwef("notification.actions")}}

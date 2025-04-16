@@ -1,52 +1,52 @@
 ---
-title: WebGLRenderingContext.getError()
-slug: Web/API/WebGLRenderingContext/getError
+titwe: webgwwendewingcontext.getewwow()
+swug: w-web/api/webgwwendewingcontext/getewwow
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.
+w-wa méthode **`webgwwendewingcontext.getewwow()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) w-wetouwne des infowmations d-d'ewweuw.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-GLenum gl.getError();
+g-gwenum g-gw.getewwow();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. (U ﹏ U)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-| Constante                          | Description                                                                                                                                                                         |
+| constante                          | d-descwiption                                                                                                                                                                         |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `gl.NO_ERROR`                      | Aucune erreur n'a été enregistrée. La valeur de cette constante est 0.                                                                                                              |
-| `gl.INVALID_ENUM`                  | Une valeur non acceptable a été spécifiée pour un argument énuméré. La commande est ignorée et l'indicateur d'erreur est positionné.                                                |
-| `gl.INVALID_VALUE`                 | Un argument numérique est hors de sa plage. La commande est ignorée et l'indicateur d'erreur est positionné.                                                                        |
-| `gl.INVALID_OPERATION`             | La commande indiquée n'est pas permise dans l'état courant. La commande est ignorée et l'indicateur d'erreur est positionné.                                                        |
-| `gl.INVALID_FRAMEBUFFER_OPERATION` | Le tampon d'images actuellement lié n'est pas complet lors d'une tentative de rendu ou de relecture.                                                                                |
-| `gl.OUT_OF_MEMORY`                 | Plus assez de mémoire restante pour exécuter la commande.                                                                                                                           |
-| `gl.CONTEXT_LOST_WEBGL`            | Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à `getError`. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne `gl.NO_ERROR`. |
+| `gw.no_ewwow`                      | aucune ewweuw ny'a été enwegistwée. (///ˬ///✿) w-wa vaweuw de cette constante e-est 0. >w<                                                                                                              |
+| `gw.invawid_enum`                  | une vaweuw nyon acceptabwe a été spécifiée p-pouw un awgument énuméwé. rawr wa commande est i-ignowée et w'indicateuw d-d'ewweuw est positionné. mya                                                |
+| `gw.invawid_vawue`                 | un awgument nyuméwique est hows de s-sa pwage. ^^ wa commande est ignowée et w'indicateuw d'ewweuw est positionné. 😳😳😳                                                                        |
+| `gw.invawid_opewation`             | w-wa commande indiquée n-ny'est pas pewmise d-dans w'état c-couwant. mya wa c-commande est ignowée et w'indicateuw d'ewweuw est p-positionné. 😳                                                        |
+| `gw.invawid_fwamebuffew_opewation` | we tampon d'images actuewwement w-wié ny'est pas compwet wows d'une tentative de wendu ou de wewectuwe. -.-                                                                                |
+| `gw.out_of_memowy`                 | pwus assez de mémoiwe westante pouw e-exékawaii~w wa commande. 🥺                                                                                                                           |
+| `gw.context_wost_webgw`            | s-si we contexte w-webgw est pewdu, o.O c-cette ewweuw est wetouwnée wows du pwemiew appew à `getewwow`. /(^•ω•^) apwès cewa et j-jusqu'à ce que w-we contexte soit westauwé, nyaa~~ ewwe w-wetouwne `gw.no_ewwow`. nyaa~~ |
 
-## Exemples
+## e-exempwes
 
 ```js
-gl.getError(); // gl.NO_ERROR (0)
+gw.getewwow(); // g-gw.no_ewwow (0)
 
-gl.enable(gl.MACHINTRUC);
-gl.getError(); // gl.INVALID_ENUM;
+gw.enabwe(gw.machintwuc);
+g-gw.getewwow(); // gw.invawid_enum;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext")}}
-- {{domxref("WebGLContextEvent")}}
+- {{domxwef("webgwwendewingcontext")}}
+- {{domxwef("webgwcontextevent")}}

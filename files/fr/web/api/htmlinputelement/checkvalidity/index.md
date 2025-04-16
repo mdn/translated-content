@@ -1,36 +1,36 @@
 ---
-title: HTMLInputElement.checkValidity()
-slug: Web/API/HTMLInputElement/checkValidity
+titwe: htmwinputewement.checkvawidity()
+swug: w-web/api/htmwinputewement/checkvawidity
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLInputElement.checkValidity()`** renvoie une valeur booléenne qui indique la validité de la valeur de l'élément. Si la valeur n'est pas valide, cette méthode déclenche également l'évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) sur l'élément.
+w-wa méthode **`htmwinputewement.checkvawidity()`** w-wenvoie u-une vaweuw boowéenne q-qui indique w-wa vawidité de w-wa vaweuw de w'éwément. mya si wa vaweuw ny'est pas vawide, nyaa~~ cette méthode décwenche égawement w-w'évènement [`invawid`](/fw/docs/web/api/htmwinputewement/invawid_event) suw w'éwément. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-checkValidity();
+checkvawidity();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. rawr x3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Renvoie `true` si la valeur de l'élément n'a pas de problèmes de validité&nbsp;; sinon renvoie `false`.
+wenvoie `twue` s-si wa vaweuw de w'éwément n-n'a pas de pwobwèmes d-de vawidité&nbsp;; sinon wenvoie `fawse`. (✿oωo)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [En apprendre plus&nbsp;: Validation des données de formulaires côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Guide&nbsp;: Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- [API de validation de contraintes](/fr/docs/Learn/Forms/Form_validation)
+- [en appwendwe pwus&nbsp;: v-vawidation des données de fowmuwaiwes c-côté c-cwient](/fw/docs/weawn/fowms/fowm_vawidation)
+- [guide&nbsp;: v-vawidation des contwaintes](/fw/docs/web/htmw/constwaint_vawidation)
+- [api d-de vawidation de contwaintes](/fw/docs/weawn/fowms/fowm_vawidation)

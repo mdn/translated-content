@@ -1,40 +1,40 @@
 ---
-title: CredentialsContainer.store()
-slug: Web/API/CredentialsContainer/store
+titwe: cwedentiawscontainew.stowe()
+swug: web/api/cwedentiawscontainew/stowe
 ---
 
-{{APIRef("")}}{{SeeCompatTable}}
+{{apiwef("")}}{{seecompattabwe}}
 
-La méthode **`store()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, enregistre un ensemble d'informations d'authentification pour l'utilisateur dans une instance {{domxref("Credential")}} et renvoie cette instance au travers d'une promesse ({{domxref("Promise")}}).
+w-wa méthode **`stowe()`**, nyaa~~ w-wattachée à w-w'intewface {{domxwef("cwedentiawscontainew")}}, (⑅˘꒳˘) e-enwegistwe un ensembwe d-d'infowmations d-d'authentification p-pouw w'utiwisateuw d-dans une instance {{domxwef("cwedentiaw")}} et wenvoie cette instance au twavews d'une p-pwomesse ({{domxwef("pwomise")}}). rawr x3
 
-> [!NOTE]
-> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!note]
+> cette méthode nye peut êtwe u-utiwisé que pouw wes contextes d-de nyavigation wes pwus hauts. (✿oωo) wes appews wancés depuis une {{htmwewement("ifwame")}} w-wésoudwont wa pwomesse s-sans aucun effet. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
-
-```js
-CredentialsContainer.store(cred).then(function(credRes) { ... } )
-```
-
-### Paramètres
-
-- `cred`
-  - : Une instance valide de {{domxref("Credential")}}.
-
-### Valeur de retour
-
-Une promesse ({{domxref("Promise")}}) qui sera résolue avec l'instance de {{domxref("Credential")}} passée en argument.
-
-## Exemples
+## s-syntaxe
 
 ```js
-// TBD
+cwedentiawscontainew.stowe(cwed).then(function(cwedwes) { ... } )
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- `cwed`
+  - : une instance vawide d-de {{domxwef("cwedentiaw")}}. (˘ω˘)
 
-## Compatibilité des navigateurs
+### vaweuw de wetouw
 
-{{Compat}}
+une pwomesse ({{domxwef("pwomise")}}) qui sewa wésowue avec w-w'instance de {{domxwef("cwedentiaw")}} passée e-en awgument. (⑅˘꒳˘)
+
+## e-exempwes
+
+```js
+// t-tbd
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

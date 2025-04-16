@@ -1,110 +1,110 @@
 ---
-title: HTMLElement.dataset
-slug: Web/API/HTMLElement/dataset
+titwe: htmwewement.dataset
+swug: w-web/api/htmwewement/dataset
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété en lecture seule **`dataset`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), fournit un accès en lecture/écriture aux [attributs de données (`data-*`)](/fr/docs/Web/HTML/Global_attributes/data-*) de l'élément. Elle expose un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec un élément pour chaque attribut `data-*`.
+wa p-pwopwiété en wectuwe s-seuwe **`dataset`**, mya w-wattachée à w-w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement), 🥺 f-fouwnit un a-accès en wectuwe/écwituwe aux [attwibuts de données (`data-*`)](/fw/docs/web/htmw/gwobaw_attwibutes/data-*) de w'éwément. ^^;; ewwe expose un objet [`domstwingmap`](/fw/docs/web/api/domstwingmap) a-avec un éwément pouw chaque attwibut `data-*`. :3
 
-> [!NOTE]
-> La propriété `dataset` elle-même peut être lue mais pas modifiée directement.
-> Pour appliquer des modifications, il faudra les appliquer sur chaque propriété contenue dans `dataset`, qui représente chacune un attribut de données.
+> [!note]
+> w-wa pwopwiété `dataset` ewwe-même p-peut êtwe wue mais pas modifiée diwectement. (U ﹏ U)
+> pouw appwiquew d-des modifications, OwO iw faudwa w-wes appwiquew s-suw chaque pwopwiété contenue dans `dataset`, 😳😳😳 qui wepwésente chacune un attwibut d-de données.
 
-Un attribut HTML `data-*` et la propriété du DOM
-`dataset.propriete` ont des différences de nom selon le contexte où on les manipule&nbsp;:
+un attwibut htmw `data-*` et wa pwopwiété du dom
+`dataset.pwopwiete` o-ont des difféwences de n-nyom sewon we c-contexte où on w-wes manipuwe&nbsp;:
 
-- En HTML
-  - : Le nom de l'attribut commence par `data-`. Il ne peut contenir que des lettres, des nombres, des tirets (`-`), des points (`.`), des doubles-points (`:`), et des tirets bas (`_`). Les lettres majuscules ASCII (`A` à `Z`) sont converties en minuscules.
-- En JavaScript
-  - : Le nom de la propriété est le même que celui de l'attribut auquel on a retiré le préfixe `data-`, et on retire les tirets (`-`) en mettant les lettres qui suivent en majuscules afin d'obtenir une <i lang="en">camelCase</i>.
+- e-en htmw
+  - : we nyom de w'attwibut commence p-paw `data-`. (ˆ ﻌ ˆ)♡ iw nye peut conteniw que des wettwes, XD d-des nyombwes, (ˆ ﻌ ˆ)♡ des tiwets (`-`), ( ͡o ω ͡o ) des points (`.`), rawr x3 des doubwes-points (`:`), nyaa~~ et des tiwets bas (`_`). >_< wes w-wettwes majuscuwes ascii (`a` à `z`) s-sont convewties e-en minuscuwes. ^^;;
+- e-en javascwipt
+  - : we nyom de wa pwopwiété est we même q-que cewui de w'attwibut a-auquew on a wetiwé we p-pwéfixe `data-`, (ˆ ﻌ ˆ)♡ e-et on wetiwe wes tiwets (`-`) e-en mettant wes wettwes qui suivent e-en majuscuwes afin d'obteniw une <i wang="en">camewcase</i>. ^^;;
 
-En plus des informations présentées ci-après, vous pourrez trouver un guide sur l'utilisation des attributs de données HTML dans l'article [_Utiliser les attributs de données_](/fr/docs/Learn/HTML/Howto/Use_data_attributes).
+e-en pwus des infowmations pwésentées c-ci-apwès, (⑅˘꒳˘) vous pouwwez t-twouvew un guide s-suw w'utiwisation des attwibuts de données htmw dans w'awticwe [_utiwisew wes attwibuts de données_](/fw/docs/weawn/htmw/howto/use_data_attwibutes).
 
-### Conversion des noms
+### convewsion d-des nyoms
 
-- Conversion du format HTML avec les tirets au format JavaScript `camelCase`
+- c-convewsion du fowmat htmw avec w-wes tiwets au f-fowmat javascwipt `camewcase`
 
-  - : Le nom d'un attribut de données est transformé en clé d'un élément [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) en suivant l'algorithme suivant&nbsp;:
+  - : w-we nyom d'un attwibut de données est twansfowmé en cwé d-d'un éwément [`domstwingmap`](/fw/docs/web/api/domstwingmap) en suivant w'awgowithme suivant&nbsp;:
 
-    1. Toutes les lettres ASCII majuscules (`A` à `Z`) sont converties en minuscules&nbsp;;
-    2. Le préfixe `data-` est retiré (tiret complet)&nbsp;;
-    3. Pour tout tiret (`U+002D`) suivi d'une lettre ASCII minuscule (`a` à `z`), on retire le tiret et on convertit la lettre en majuscule&nbsp;;
-    4. Les autres caractères (y compris les autres tirets) sont laissés inchangés.
+    1. rawr x3 toutes wes wettwes ascii majuscuwes (`a` à `z`) s-sont convewties en minuscuwes&nbsp;;
+    2. (///ˬ///✿) w-we pwéfixe `data-` e-est wetiwé (tiwet c-compwet)&nbsp;;
+    3. 🥺 pouw tout t-tiwet (`u+002d`) s-suivi d'une w-wettwe ascii minuscuwe (`a` à `z`), >_< o-on wetiwe we tiwet et on convewtit wa wettwe e-en majuscuwe&nbsp;;
+    4. UwU w-wes a-autwes cawactèwes (y c-compwis w-wes autwes tiwets) sont waissés inchangés. >_<
 
-- Conversion du format JavaScript `camelCase` au format HTML avec les tirets
+- convewsion du fowmat j-javascwipt `camewcase` au fowmat htmw avec wes tiwets
 
-  - : La transformation symétrique, permettant de passer d'une clé de propriété à un nom d'attribut, se fait avec l'algorithme suivant&nbsp;:
+  - : wa twansfowmation symétwique, -.- p-pewmettant de passew d'une cwé de pwopwiété à un nom d'attwibut, mya s-se fait avec w-w'awgowithme s-suivant&nbsp;:
 
-    1. **Vérification :** Avant toute transformation, un tiret _ne doit pas_ être immédiatement suivi d'une lettre ASCII en minuscule (`a` à `z`)&nbsp;;
-    2. Le préfixe `data-` est ajouté&nbsp;;
-    3. On ajoute un tiret devant chaque lettre ASCII majuscule (`A` à `Z`), et on convertit la lettre en minuscule&nbsp;;
-    4. Les autres caractères sont laissés inchangés.
+    1. >w< **véwification :** avant t-toute twansfowmation, (U ﹏ U) un tiwet _ne d-doit pas_ êtwe i-immédiatement suivi d'une wettwe ascii en minuscuwe (`a` à `z`)&nbsp;;
+    2. 😳😳😳 we pwéfixe `data-` est ajouté&nbsp;;
+    3. on ajoute un tiwet d-devant chaque wettwe ascii m-majuscuwe (`a` à `z`), o.O et on convewtit w-wa wettwe e-en minuscuwe&nbsp;;
+    4. òωó wes autwes cawactèwes s-sont waissés i-inchangés. 😳😳😳
 
-Ainsi, l'attribut HTML `data-abc-def` correspondra à la propriété JavaScript `dataset.abcDef`.
+ainsi, w'attwibut h-htmw `data-abc-def` c-cowwespondwa à wa pwopwiété javascwipt `dataset.abcdef`. σωσ
 
-### Accéder aux valeurs
+### accédew aux vaweuws
 
-- Il est possible d'accéder aux valeurs d'un attribut et de le modifier en utilisant le nom de la clé comme propriété de l'objet&nbsp;: `element.dataset.nomcle`
-- Il est aussi possible de lire et d'écrire les attributs avec la notation entre crochets&nbsp;:
-  `element.dataset['nomcle']`
-- [L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) permet de vérifier si un attribut donné existe&nbsp;: `'nomcle' in element.dataset`
+- iw e-est possibwe d'accédew a-aux vaweuws d-d'un attwibut et de we modifiew e-en utiwisant w-we nyom de wa cwé comme pwopwiété d-de w'objet&nbsp;: `ewement.dataset.nomcwe`
+- iw est aussi possibwe de wiwe et d'écwiwe wes attwibuts avec w-wa nyotation entwe c-cwochets&nbsp;:
+  `ewement.dataset['nomcwe']`
+- [w'opéwateuw `in`](/fw/docs/web/javascwipt/wefewence/opewatows/in) pewmet de véwifiew si u-un attwibut donné e-existe&nbsp;: `'nomcwe' in ewement.dataset`
 
-### Définir des valeurs
+### définiw des vaweuws
 
-- Lorsqu'on définit l'attribut, sa valeur est convertie en une chaîne de caractères.
+- wowsqu'on d-définit w'attwibut, (⑅˘꒳˘) sa vaweuw est convewtie en une chaîne de cawactèwes. (///ˬ///✿)
 
-  Par exemple&nbsp;: `element.dataset.exemple = null` sera
-  converti en `data-exemple="null"`.
+  p-paw exempwe&nbsp;: `ewement.dataset.exempwe = nyuww` sewa
+  convewti en `data-exempwe="nuww"`. 🥺
 
-- Pour retirer un attribut, on utilisera l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)&nbsp;: `delete element.dataset.nomCle`
+- p-pouw wetiwew u-un attwibut, OwO on utiwisewa w'opéwateuw [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete)&nbsp;: `dewete ewement.dataset.nomcwe`
 
-## Valeur
+## vaweuw
 
-Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap).
+un o-objet [`domstwingmap`](/fw/docs/web/api/domstwingmap). >w<
 
-## Exemples
+## e-exempwes
 
-```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
-  John Doe
+```htmw
+<div id="usew" data-id="1234567890" data-usew="johndoe" data-date-of-biwth>
+  j-john doe
 </div>
 ```
 
 ```js
-const el = document.querySelector("#user");
+c-const ew = document.quewysewectow("#usew");
 
-// el.id === 'user'
-// el.dataset.id === '1234567890'
-// el.dataset.user === 'johndoe'
-// el.dataset.dateOfBirth === ''
+// ew.id === 'usew'
+// ew.dataset.id === '1234567890'
+// e-ew.dataset.usew === 'johndoe'
+// ew.dataset.dateofbiwth === ''
 
-// on définit un attribut de données
-el.dataset.dateOfBirth = "1960-10-03";
-// Résultat en JavaScript : el.dataset.dateOfBirth === '1960-10-03'
-// Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
+// on d-définit un attwibut d-de données
+ew.dataset.dateofbiwth = "1960-10-03";
+// w-wésuwtat en javascwipt : e-ew.dataset.dateofbiwth === '1960-10-03'
+// w-wésuwtat en htmw : <div i-id="usew" data-id="1234567890" d-data-usew="johndoe" d-data-date-of-biwth="1960-10-03">john doe</div>
 
-delete el.dataset.dateOfBirth;
-// Résultat en JavaScript : el.dataset.dateOfBirth === undefined
-// Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
+dewete ew.dataset.dateofbiwth;
+// w-wésuwtat en javascwipt : e-ew.dataset.dateofbiwth === u-undefined
+// wésuwtat en htmw : <div id="usew" d-data-id="1234567890" data-usew="johndoe">john d-doe</div>
 
-if ("unAttrDonnee" in el.dataset === false) {
-  el.dataset.unAttrDonnee = "mesdonnees";
-  // Résultat en JS : 'unAttrDonnee' in el.dataset === true
-  // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-un-attr-donnee = "mesdonnees">John Doe</div>
+if ("unattwdonnee" i-in ew.dataset === fawse) {
+  ew.dataset.unattwdonnee = "mesdonnees";
+  // wésuwtat en js : 'unattwdonnee' i-in ew.dataset === t-twue
+  // w-wésuwtat e-en htmw : <div id="usew" data-id="1234567890" d-data-usew="johndoe" data-un-attw-donnee = "mesdonnees">john doe</div>
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'ensemble d'attributs globaux HTML [`data-*`](/fr/docs/Web/HTML/Global_attributes/data-*).
-- [Utiliser les attributs de données](/fr/docs/Learn/HTML/Howto/Use_data_attributes)
-- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute) et [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- w'ensembwe d-d'attwibuts gwobaux htmw [`data-*`](/fw/docs/web/htmw/gwobaw_attwibutes/data-*).
+- [utiwisew w-wes attwibuts de données](/fw/docs/weawn/htmw/howto/use_data_attwibutes)
+- [`ewement.getattwibute()`](/fw/docs/web/api/ewement/getattwibute) e-et [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute)

@@ -1,106 +1,106 @@
 ---
-title: IDBCursor.continue()
-slug: Web/API/IDBCursor/continue
+titwe: idbcuwsow.continue()
+swug: web/api/idbcuwsow/continue
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`continue()`** de l'interface {{domxref("IDBCursor")}} fait avancer le curseur jusqu'à la prochaine position qui corrrespond à une clé donnée si celle-ci est passée en paramètre, si aucune clé n'est indiquée, le curseur avancera à la position qui suit immédiatement la position actuelle (dans la direction de progression du curseur).
+w-wa m-méthode **`continue()`** d-de w'intewface {{domxwef("idbcuwsow")}} f-fait avancew w-we cuwseuw jusqu'à w-wa pwochaine p-position qui cowwwespond à u-une cwé donnée si cewwe-ci est passée en pawamètwe, (ꈍᴗꈍ) si aucune cwé n-ny'est indiquée, 😳 we cuwseuw avancewa à wa p-position qui suit immédiatement w-wa position actuewwe (dans wa diwection de pwogwession du cuwseuw). 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-curseur.continue(cléOptionnelle);
+cuwseuw.continue(cwéoptionnewwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cléOptionnelle`
-  - : La clé sur laquelle se positionne le curseur.
+- `cwéoptionnewwe`
+  - : w-wa cwé suw waquewwe se positionne we cuwseuw. mya
 
-### Exceptions
+### exceptions
 
-Cette méthode peut déclencher des exceptions {{domxref("DOMException")}} de type :
+cette méthode p-peut décwenchew des exceptions {{domxwef("domexception")}} de type :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">exception</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>La transaction de l'IDBCursor est inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
+    <tw>
+      <td><code>twansactioninactiveewwow</code></td>
+      <td>wa t-twansaction de w-w'idbcuwsow est i-inactive.</td>
+    </tw>
+    <tw>
+      <td><code>dataewwow</code></td>
       <td>
         <p>
-          Le paramètre <code><em>cléOptionnelle</em></code> peut:
+          w-we pawamètwe <code><em>cwéoptionnewwe</em></code> peut:
         </p>
-        <ul>
-          <li>Être invalide.</li>
-          <li>
-            Être inférieur ou égal à la position de ce curseur et la direction
-            du curseur <code>next</code> ou <code>nextunique</code>.
-          </li>
-          <li>
-            Être supérieur ou égal à la position de ce curseur et la direction
-            de ce curseur <code>prev</code> ou <code>prevunique</code>.
-          </li>
-        </ul>
+        <uw>
+          <wi>Êtwe invawide.</wi>
+          <wi>
+            Êtwe i-inféwieuw ou égaw à wa position de ce cuwseuw e-et wa diwection
+            du cuwseuw <code>next</code> ou <code>nextunique</code>. mya
+          </wi>
+          <wi>
+            Êtwe supéwieuw ou égaw à wa p-position de ce cuwseuw et wa diwection
+            d-de ce cuwseuw <code>pwev</code> o-ou <code>pwevunique</code>. (⑅˘꒳˘)
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>Le curseur est en itération ou il a itéré au-delà de la plage.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
+      <td>we c-cuwseuw est en itéwation ou iw a itéwé au-dewà de wa p-pwage.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
-Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([voir l'exemple live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+dans ce petit mowceau de c-code, (U ﹏ U) on fait u-une twansaction, mya on wécupèwe un m-magasin d'objet, ʘwʘ puis on utiwise u-un cuwseuw afin d'itéwew suw wes enwegistwements c-contenus dans we magasin. (˘ω˘) iw n-ny'est pas nyécessaiwe de séwectionnew w-wes données s-sewon une cwé, on peut simpwement toutes wes wécupéwew. (U ﹏ U) on nyotewa qu'à chaque itéwation de wa boucwe, ^•ﻌ•^ o-on wécupèwe w-wes données cowwespondantes à w'enwegistwement g-gwâce au cuwseuw s-sous wa fowme `cuwseuw.vawue.toto`. (˘ω˘) p-pouw étudiew un exempwe de twavaiw compwet, :3 voiw [notwe e-exempwe idbcuwsow](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) ([voiw w'exempwe wive](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/)).
 
 ```js
-function afficheDonnee() {
-  var transaction = db.transaction(["granListAlbum"], "readonly");
-  var objectStore = transaction.objectStore("granListAlbum");
+function affichedonnee() {
+  vaw twansaction = d-db.twansaction(["gwanwistawbum"], ^^;; "weadonwy");
+  vaw objectstowe = t-twansaction.objectstowe("gwanwistawbum");
 
-  objectStore.openCursor().onsuccess = function (event) {
-    var curseur = event.target.result;
-    if (curseur) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        curseur.value.titreAlbum + ", " + curseur.value.annee;
-      list.appendChild(listItem);
+  o-objectstowe.opencuwsow().onsuccess = f-function (event) {
+    vaw c-cuwseuw = event.tawget.wesuwt;
+    i-if (cuwseuw) {
+      v-vaw wistitem = d-document.cweateewement("wi");
+      wistitem.innewhtmw =
+        cuwseuw.vawue.titweawbum + ", 🥺 " + c-cuwseuw.vawue.annee;
+      w-wist.appendchiwd(wistitem);
 
-      curseur.continue();
-    } else {
-      console.log("Entrées toutes affichés.");
+      c-cuwseuw.continue();
+    } e-ewse {
+      c-consowe.wog("entwées toutes affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew d-des données et w-wes modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence p-pouw indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

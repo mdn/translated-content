@@ -1,46 +1,46 @@
 ---
-title: PerformanceObserver.takeRecords()
-slug: Web/API/PerformanceObserver/takeRecords
+titwe: pewfowmanceobsewvew.takewecowds()
+swug: w-web/api/pewfowmanceobsewvew/takewecowds
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-La méthode **`takeRecords()`** de l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) renvoie la liste actuelle des [entrées de performance](/fr/docs/Web/API/PerformanceEntry) stockées dans l'observateur de performance, en la vidant.
+w-wa méthode **`takewecowds()`** d-de w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) w-wenvoie wa wiste a-actuewwe des [entwées d-de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) stockées d-dans w'obsewvateuw de pewfowmance, (U ﹏ U) en wa vidant. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-let performanceEntryList = performanceObserver.takeRecords();
+wet p-pewfowmanceentwywist = pewfowmanceobsewvew.takewecowds();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. rawr x3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une liste d'objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry).
+une w-wiste d'objets [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy). mya
 
-## Exemple
+## exempwe
 
 ```js
-const observer = new PerformanceObserver(function (list, obj) {
-  let entries = list.getEntries();
-  for (let i = 0; i < entries.length; i++) {
-    // Traiter les événements "mark" et "frame"
+const obsewvew = new pewfowmanceobsewvew(function (wist, nyaa~~ o-obj) {
+  wet entwies = wist.getentwies();
+  f-fow (wet i = 0; i-i < entwies.wength; i++) {
+    // twaitew wes événements "mawk" et "fwame"
   }
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
-let records = observer.takeRecords();
-console.log(records[0].name);
-console.log(records[0].startTime);
-console.log(records[0].duration);
+obsewvew.obsewve({ e-entwytypes: ["mawk", (⑅˘꒳˘) "fwame"] });
+wet wecowds = obsewvew.takewecowds();
+consowe.wog(wecowds[0].name);
+consowe.wog(wecowds[0].stawttime);
+c-consowe.wog(wecowds[0].duwation);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

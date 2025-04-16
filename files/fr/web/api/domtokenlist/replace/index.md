@@ -1,60 +1,60 @@
 ---
-title: DOMTokenList.replace()
-slug: Web/API/DOMTokenList/replace
+titwe: domtokenwist.wepwace()
+swug: web/api/domtokenwist/wepwace
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace une marque _(token)_ existante par une nouvelle marque.
+w-wa méthode **`wepwace()`** d-de w'intewface {{domxwef("domtokenwist")}} w-wempwace une m-mawque _(token)_ e-existante paw une n-nyouvewwe mawque. /(^•ω•^)
 
-## Syntaxe
-
-```js
-tokenList.replace(oldToken, newToken);
-```
-
-### Paramètres
-
-- oldToken
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque que vous voulez remplacer.
-- newToken
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque avec laquelle vous voulez remplacer l'ancienne.
-
-### Valeur retournée
-
-Vide.
-
-## Exemples
-
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous remplaçons alors la marque dans la liste et écrivons la liste dans le {{domxref("Node.textContent")}} du `<span>`.
-
-D'abord, le HTML :
-
-```html
-<span class="a b c"></span>
-```
-
-Maintenant le JavaScript :
+## s-syntaxe
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-try {
-  classes.replace("c", "z");
-  span.textContent = classes;
-} catch (e) {
-  span.textContent = e;
+t-tokenwist.wepwace(owdtoken, ʘwʘ nyewtoken);
+```
+
+### pawamètwes
+
+- owdtoken
+  - : une {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) wepwésentant wa m-mawque que vous vouwez wempwacew. σωσ
+- n-nyewtoken
+  - : une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) wepwésentant w-wa mawque avec waquewwe v-vous vouwez wempwacew w-w'ancienne.
+
+### vaweuw wetouwnée
+
+vide. OwO
+
+## exempwes
+
+dans w'exempwe suivant, 😳😳😳 n-nyous wécupéwons wa wiste des cwasses définies dans un éwément {{htmwewement("span")}} en tant que `domtokenwist` en u-utiwisant {{domxwef("ewement.cwasswist")}}. 😳😳😳 nyous w-wempwaçons a-awows wa mawque d-dans wa wiste et écwivons w-wa wiste dans we {{domxwef("node.textcontent")}} du `<span>`. o.O
+
+d-d'abowd, we htmw :
+
+```htmw
+<span cwass="a b-b c"></span>
+```
+
+maintenant we javascwipt :
+
+```js
+vaw span = document.quewysewectow("span");
+vaw cwasses = s-span.cwasswist;
+twy {
+  cwasses.wepwace("c", ( ͡o ω ͡o ) "z");
+  s-span.textcontent = c-cwasses;
+} c-catch (e) {
+  span.textcontent = e;
 }
 ```
 
-La sortie ressemble à ceci :
+wa sowtie wessembwe à c-ceci :
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+{{ e-embedwivesampwe('exempwes', (U ﹏ U) '100%', 60) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,49 +1,49 @@
 ---
-title: HTMLInputElement.labels
-slug: Web/API/HTMLInputElement/labels
+titwe: htmwinputewement.wabews
+swug: web/api/htmwinputewement/wabews
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("input")}} (_entrée_).
+w-wa pwopwiété en w-wectuwe seuwe **`htmwinputewement.wabews`** w-wenvoie u-une {{domxwef("nodewist")}} (_wiste d-de nyoeuds_) d-des éwéments {{htmwewement("wabew")}} (_étiquette_) a-associés a-avec w'éwément {{htmwewement("input")}} (_entwée_). OwO
 
-## Syntaxe
-
-```js
-var labelElements = input.labels;
-```
-
-### Valeur retournée
-
-Une {{domxref("NodeList")}} contenant les éléments `<label>` associés avec l'élément `<input>`.
-
-## Exemple
-
-### HTML
-
-```html
-<label id="label1" for="test">Label 1</label>
-<input id="test" />
-<label id="label2" for="test">Label 2</label>
-```
-
-### JavaScript
+## syntaxe
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("test");
-  for (var i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" et "Label 2"
+vaw wabewewements = input.wabews;
+```
+
+### vaweuw w-wetouwnée
+
+une {{domxwef("nodewist")}} contenant w-wes éwéments `<wabew>` associés avec w'éwément `<input>`. (U ﹏ U)
+
+## e-exempwe
+
+### htmw
+
+```htmw
+<wabew id="wabew1" fow="test">wabew 1</wabew>
+<input i-id="test" />
+<wabew id="wabew2" f-fow="test">wabew 2</wabew>
+```
+
+### j-javascwipt
+
+```js
+window.addeventwistenew("domcontentwoaded", >_< function () {
+  const input = document.getewementbyid("test");
+  fow (vaw i-i = 0; i < input.wabews.wength; i++) {
+    consowe.wog(input.wabews[i].textcontent); // "wabew 1" et "wabew 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Exemple", "100%", 30)}}
+{{embedwivesampwe("exempwe", rawr x3 "100%", mya 30)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,1171 +1,1171 @@
 ---
-title: x
-slug: Web/SVG/Attribute/x
+titwe: x
+swug: web/svg/attwibute/x
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`x`** définit une coordonnée en abscisse dans le système de coordonnées de l'utilisatrice ou l'utilisateur.
+w-w'attwibut **`x`** d-définit u-une coowdonnée e-en abscisse dans w-we système d-de coowdonnées d-de w'utiwisatwice o-ou w'utiwisateuw. o.O
 
-Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+cet attwibut peut êtwe utiwisé avec wes éwéments svg suivants&nbsp;:
 
-- [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<cursor>`](/fr/docs/Web/SVG/Element/cursor)
-- [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend)
-- [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix)
-- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer)
-- [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite)
-- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix)
-- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting)
-- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap)
-- [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow)
-- [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood)
-- [`<feFuncA>`](/fr/docs/Web/SVG/Element/feFuncA)
-- [`<feFuncB>`](/fr/docs/Web/SVG/Element/feFuncB)
-- [`<feFuncG>`](/fr/docs/Web/SVG/Element/feFuncG)
-- [`<feFuncR>`](/fr/docs/Web/SVG/Element/feFuncR)
-- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur)
-- [`<feImage>`](/fr/docs/Web/SVG/Element/feImage)
-- [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge)
-- [`<feMergeNode>`](/fr/docs/Web/SVG/Element/feMergeNode)
-- [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology)
-- [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset)
-- [`<fePointLight>`](/fr/docs/Web/SVG/Element/fePointLight)
-- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting)
-- [`<feSpotLight>`](/fr/docs/Web/SVG/Element/feSpotLight)
-- [`<feTile>`](/fr/docs/Web/SVG/Element/feTile)
-- [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence)
-- [`<filter>`](/fr/docs/Web/SVG/Element/filter)
-- [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject)
-- [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef)
-- [`<image>`](/fr/docs/Web/SVG/Element/image)
-- [`<mask>`](/fr/docs/Web/SVG/Element/mask)
-- [`<pattern>`](/fr/docs/Web/SVG/Element/pattern)
-- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
-- [`<svg>`](/fr/docs/Web/SVG/Element/svg)
-- [`<symbol>`](/fr/docs/Web/SVG/Element/symbol)
-- [`<text>`](/fr/docs/Web/SVG/Element/text)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
-- [`<tspan>`](/fr/docs/Web/SVG/Element/tspan)
-- [`<use>`](/fr/docs/Web/SVG/Element/use)
+- [`<awtgwyph>`](/fw/docs/web/svg/ewement/awtgwyph)
+- [`<cuwsow>`](/fw/docs/web/svg/ewement/cuwsow)
+- [`<febwend>`](/fw/docs/web/svg/ewement/febwend)
+- [`<fecowowmatwix>`](/fw/docs/web/svg/ewement/fecowowmatwix)
+- [`<fecomponenttwansfew>`](/fw/docs/web/svg/ewement/fecomponenttwansfew)
+- [`<fecomposite>`](/fw/docs/web/svg/ewement/fecomposite)
+- [`<feconvowvematwix>`](/fw/docs/web/svg/ewement/feconvowvematwix)
+- [`<fediffusewighting>`](/fw/docs/web/svg/ewement/fediffusewighting)
+- [`<fedispwacementmap>`](/fw/docs/web/svg/ewement/fedispwacementmap)
+- [`<fedwopshadow>`](/fw/docs/web/svg/ewement/fedwopshadow)
+- [`<fefwood>`](/fw/docs/web/svg/ewement/fefwood)
+- [`<fefunca>`](/fw/docs/web/svg/ewement/fefunca)
+- [`<fefuncb>`](/fw/docs/web/svg/ewement/fefuncb)
+- [`<fefuncg>`](/fw/docs/web/svg/ewement/fefuncg)
+- [`<fefuncw>`](/fw/docs/web/svg/ewement/fefuncw)
+- [`<fegaussianbwuw>`](/fw/docs/web/svg/ewement/fegaussianbwuw)
+- [`<feimage>`](/fw/docs/web/svg/ewement/feimage)
+- [`<femewge>`](/fw/docs/web/svg/ewement/femewge)
+- [`<femewgenode>`](/fw/docs/web/svg/ewement/femewgenode)
+- [`<femowphowogy>`](/fw/docs/web/svg/ewement/femowphowogy)
+- [`<feoffset>`](/fw/docs/web/svg/ewement/feoffset)
+- [`<fepointwight>`](/fw/docs/web/svg/ewement/fepointwight)
+- [`<fespecuwawwighting>`](/fw/docs/web/svg/ewement/fespecuwawwighting)
+- [`<fespotwight>`](/fw/docs/web/svg/ewement/fespotwight)
+- [`<fetiwe>`](/fw/docs/web/svg/ewement/fetiwe)
+- [`<fetuwbuwence>`](/fw/docs/web/svg/ewement/fetuwbuwence)
+- [`<fiwtew>`](/fw/docs/web/svg/ewement/fiwtew)
+- [`<foweignobject>`](/fw/docs/web/svg/ewement/foweignobject)
+- [`<gwyphwef>`](/fw/docs/web/svg/ewement/gwyphwef)
+- [`<image>`](/fw/docs/web/svg/ewement/image)
+- [`<mask>`](/fw/docs/web/svg/ewement/mask)
+- [`<pattewn>`](/fw/docs/web/svg/ewement/pattewn)
+- [`<wect>`](/fw/docs/web/svg/ewement/wect)
+- [`<svg>`](/fw/docs/web/svg/ewement/svg)
+- [`<symbow>`](/fw/docs/web/svg/ewement/symbow)
+- [`<text>`](/fw/docs/web/svg/ewement/text)
+- [`<twef>`](/fw/docs/web/svg/ewement/twef)
+- [`<tspan>`](/fw/docs/web/svg/ewement/tspan)
+- [`<use>`](/fw/docs/web/svg/ewement/use)
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
-body,
-svg {
+htmw, ^•ﻌ•^
+body, (U ᵕ U❁)
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="60" height="60" />
-  <rect x="120" y="20" width="60" height="60" />
-  <rect x="220" y="20" width="60" height="60" />
+```htmw
+<svg viewbox="0 0 300 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x="20" y="20" width="60" height="60" />
+  <wect x-x="120" y="20" width="60" h-height="60" />
+  <wect x-x="220" y="20" width="60" height="60" />
 </svg>
 ```
 
-{{EmbedLiveSample("", '100%', 200)}}
+{{embedwivesampwe("", :3 '100%', 200)}}
 
-## `<altGlyph>`
+## `<awtgwyph>`
 
-> [!WARNING]
-> Avec SVG2, [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) est déprécié et ne devrait pas être utilisé.
+> [!wawning]
+> avec svg2, (///ˬ///✿) [`<awtgwyph>`](/fw/docs/web/svg/ewement/awtgwyph) est dépwécié e-et nye devwait pas êtwe utiwisé. (///ˬ///✿)
 
-Pour [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph), `x` définit l'abscisse du glyphe alternatif.
+pouw [`<awtgwyph>`](/fw/docs/web/svg/ewement/awtgwyph), 🥺 `x` définit w'abscisse du gwyphe a-awtewnatif. -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        Une liste de valeurs <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>
+        u-une wiste de v-vaweuws <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><em>Aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
+      <td><em>aucune</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feBlend>`
+## `<febwend>`
 
-Pour [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<febwend>`](/fw/docs/web/svg/ewement/febwend), nyaa~~ `x` d-définit w'abscisse minimawe de wa zone de wendu de wa pwimitive. (///ˬ///✿)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feColorMatrix>`
+## `<fecowowmatwix>`
 
-Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fecowowmatwix>`](/fw/docs/web/svg/ewement/fecowowmatwix), 🥺 `x` définit w'abscisse m-minimawe de w-wa zone de wendu de wa pwimitive. >w<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feComponentTransfer>`
+## `<fecomponenttwansfew>`
 
-Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fecomponenttwansfew>`](/fw/docs/web/svg/ewement/fecomponenttwansfew), rawr x3 `x` d-définit w'abscisse minimawe de w-wa zone de wendu de wa pwimitive. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feComposite>`
+## `<fecomposite>`
 
-Pour [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fecomposite>`](/fw/docs/web/svg/ewement/fecomposite), σωσ `x` d-définit w'abscisse minimawe d-de wa zone d-de wendu de wa p-pwimitive. XD
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feConvolveMatrix>`
+## `<feconvowvematwix>`
 
-Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<feconvowvematwix>`](/fw/docs/web/svg/ewement/feconvowvematwix), -.- `x` définit w'abscisse m-minimawe de w-wa zone de wendu d-de wa pwimitive. >_<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feDiffuseLighting>`
+## `<fediffusewighting>`
 
-Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fediffusewighting>`](/fw/docs/web/svg/ewement/fediffusewighting), rawr `x` d-définit w-w'abscisse minimawe d-de wa zone de wendu de wa pwimitive. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feDisplacementMap>`
+## `<fedispwacementmap>`
 
-Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fedispwacementmap>`](/fw/docs/web/svg/ewement/fedispwacementmap), UwU `x` définit w'abscisse minimawe d-de wa zone de wendu d-de wa pwimitive. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feDropShadow>`
+## `<fedwopshadow>`
 
-Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fedwopshadow>`](/fw/docs/web/svg/ewement/fedwopshadow), (˘ω˘) `x` définit w'abscisse minimawe de wa zone de wendu d-de wa pwimitive. /(^•ω•^)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feFlood>`
+## `<fefwood>`
 
-Pour [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fefwood>`](/fw/docs/web/svg/ewement/fefwood), (U ﹏ U) `x` définit w-w'abscisse minimawe d-de wa zone de wendu de wa pwimitive. ^•ﻌ•^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feFuncA>`
+## `<fefunca>`
 
-Pour [`<feFuncA>`](/fr/docs/Web/SVG/Element/feFuncA), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fefunca>`](/fw/docs/web/svg/ewement/fefunca), >w< `x` d-définit w'abscisse minimawe d-de wa zone de wendu de wa pwimitive. ʘwʘ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feFuncB>`
+## `<fefuncb>`
 
-Pour [`<feFuncB>`](/fr/docs/Web/SVG/Element/feFuncB), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fefuncb>`](/fw/docs/web/svg/ewement/fefuncb), òωó `x` définit w'abscisse minimawe de wa zone de wendu d-de wa pwimitive. o.O
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feFuncG>`
+## `<fefuncg>`
 
-Pour [`<feFuncG>`](/fr/docs/Web/SVG/Element/feFuncG), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fefuncg>`](/fw/docs/web/svg/ewement/fefuncg), ( ͡o ω ͡o ) `x` définit w'abscisse minimawe de wa zone de wendu d-de wa pwimitive. mya
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feFuncR>`
+## `<fefuncw>`
 
-Pour [`<feFuncR>`](/fr/docs/Web/SVG/Element/feFuncR), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fefuncw>`](/fw/docs/web/svg/ewement/fefuncw), >_< `x` définit w-w'abscisse minimawe de wa zone d-de wendu de wa p-pwimitive. rawr
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feGaussianBlur>`
+## `<fegaussianbwuw>`
 
-Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fegaussianbwuw>`](/fw/docs/web/svg/ewement/fegaussianbwuw), >_< `x` d-définit w-w'abscisse minimawe de wa zone de wendu de w-wa pwimitive. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw d-défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feImage>`
+## `<feimage>`
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<feimage>`](/fw/docs/web/svg/ewement/feimage), rawr `x` définit w-w'abscisse minimawe d-de wa zone d-de wendu de wa pwimitive.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feMerge>`
+## `<femewge>`
 
-Pour [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<femewge>`](/fw/docs/web/svg/ewement/femewge), (U ᵕ U❁) `x` définit w'abscisse m-minimawe de wa zone de wendu d-de wa pwimitive. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feMergeNode>`
+## `<femewgenode>`
 
-Pour [`<feMergeNode>`](/fr/docs/Web/SVG/Element/feMergeNode), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<femewgenode>`](/fw/docs/web/svg/ewement/femewgenode), >_< `x` définit w'abscisse minimawe de wa zone de wendu de wa pwimitive. ^^;;
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feMorphology>`
+## `<femowphowogy>`
 
-Pour [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<femowphowogy>`](/fw/docs/web/svg/ewement/femowphowogy), ʘwʘ `x` d-définit w'abscisse minimawe d-de wa zone de wendu de wa pwimitive. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feOffset>`
+## `<feoffset>`
 
-Pour [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<feoffset>`](/fw/docs/web/svg/ewement/feoffset), UwU `x` définit w'abscisse m-minimawe d-de wa zone de w-wendu de wa pwimitive.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<fePointLight>`
+## `<fepointwight>`
 
-Pour [`<fePointLight>`](/fr/docs/Web/SVG/Element/fePointLight), `x` définit l'emplacement horizontal de la source de lumière dans le système de coordonnées définit par l'attribut [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits) de l'élément [`<filter>`](/fr/docs/Web/SVG/Element/filter).
+pouw [`<fepointwight>`](/fw/docs/web/svg/ewement/fepointwight), OwO `x` d-définit w'empwacement howizontaw de wa souwce d-de wumièwe dans we système de c-coowdonnées définit p-paw w'attwibut [`pwimitiveunits`](/fw/docs/web/svg/attwibute/pwimitiveunits) de w'éwément [`<fiwtew>`](/fw/docs/web/svg/ewement/fiwtew). :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#numbew">&wt;numbew&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feSpecularLighting>`
+## `<fespecuwawwighting>`
 
-Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fespecuwawwighting>`](/fw/docs/web/svg/ewement/fespecuwawwighting), `x` définit w'abscisse m-minimawe de wa zone de wendu de wa pwimitive. -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feSpotLight>`
+## `<fespotwight>`
 
-Pour [`<feSpotLight>`](/fr/docs/Web/SVG/Element/feSpotLight), `x` définit l'emplacement horizontal de la source de lumière dans le système de coordonnées définit par l'attribut [`primitiveUnits`](/fr/docs/Web/SVG/Attribute/primitiveUnits) de l'élément [`<filter>`](/fr/docs/Web/SVG/Element/filter).
+pouw [`<fespotwight>`](/fw/docs/web/svg/ewement/fespotwight), 🥺 `x` d-définit w'empwacement howizontaw de wa s-souwce de wumièwe d-dans we système de coowdonnées d-définit paw w'attwibut [`pwimitiveunits`](/fw/docs/web/svg/attwibute/pwimitiveunits) d-de w'éwément [`<fiwtew>`](/fw/docs/web/svg/ewement/fiwtew). -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#numbew">&wt;numbew&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feTile>`
+## `<fetiwe>`
 
-Pour [`<feTile>`](/fr/docs/Web/SVG/Element/feTile), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+pouw [`<fetiwe>`](/fw/docs/web/svg/ewement/fetiwe), -.- `x` définit w'abscisse minimawe de wa zone de wendu de wa pwimitive. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feTurbulence>`
+## `<fetuwbuwence>`
 
-Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence), `x` définit l'abscisse minimale de la zone de rendu de la primitive.
+p-pouw [`<fetuwbuwence>`](/fw/docs/web/svg/ewement/fetuwbuwence), rawr `x` définit w-w'abscisse minimawe de wa z-zone de wendu de w-wa pwimitive. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<filter>`
+## `<fiwtew>`
 
-Pour [`<filter>`](/fr/docs/Web/SVG/Element/filter), `x` définit l'abscisse du coin supérieur gauche de la zone de rendu du filtre.
+pouw [`<fiwtew>`](/fw/docs/web/svg/ewement/fiwtew), ( ͡o ω ͡o ) `x` d-définit w-w'abscisse du coin s-supéwieuw gauche d-de wa zone d-de wendu du fiwtwe. /(^•ω•^)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>-10%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<foreignObject>`
+## `<foweignobject>`
 
-Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `x` définit l'abscisse du coin supérieur gauche de sa zone d'affichage (<i lang="en">viewport</i>).
+pouw [`<foweignobject>`](/fw/docs/web/svg/ewement/foweignobject), >_< `x` d-définit w'abscisse du coin supéwieuw gauche d-de sa zone d'affichage (<i wang="en">viewpowt</i>). (✿oωo)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<foreignObject>`.
+> [!note]
+> À pawtiw de svg2, 😳😳😳 `x` e-est une pwopwiété _géométwique_, (ꈍᴗꈍ) ce qui s-signifie qu'iw peut êtwe utiwisé comme pwopwiété css pouw `<foweignobject>`. 🥺
 
-## `<glyphRef>`
+## `<gwyphwef>`
 
-> [!WARNING]
-> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef) est déprécié et ne devrait pas être utilisé.
+> [!wawning]
+> À pawtiw de s-svg2, mya [`<gwyphwef>`](/fw/docs/web/svg/ewement/gwyphwef) est dépwécié e-et nye d-devwait pas êtwe utiwisé.
 
-Pour [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef), `x` définit l'abscisse du glyphe.
+pouw [`<gwyphwef>`](/fw/docs/web/svg/ewement/gwyphwef), (ˆ ﻌ ˆ)♡ `x` définit w'abscisse du g-gwyphe. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#numbew">&wt;numbew&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td>
-        <code>0</code> pour le premier <code>&lt;glyphRef&gt;</code>, et l'abscisse de fin du <code>&lt;glyphRef&gt;</code> précédent pour ceux qui suivent.
+        <code>0</code> pouw w-we pwemiew <code>&wt;gwyphwef&gt;</code>, òωó e-et w'abscisse de fin d-du <code>&wt;gwyphwef&gt;</code> pwécédent pouw ceux qui suivent. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## `<image>`
 
-Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `x` définit l'abscisse du coin supérieur gauche de l'image.
+pouw [`<image>`](/fw/docs/web/svg/ewement/image), XD `x` d-définit w-w'abscisse du coin s-supéwieuw gauche de w'image. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les images.
+> [!note]
+> À p-pawtiw de svg2, (ꈍᴗꈍ) `x` e-est une pwopwiété _géométwique_, >w< c-ce qui s-signifie qu'iw peut êtwe u-utiwisé comme pwopwiété c-css pouw wes images. XD
 
 ## `<mask>`
 
-Pour [`<mask>`](/fr/docs/Web/SVG/Element/mask), `x` définit l'abscisse du coin supérieur gauche de sa zone d'effet. L'effet exact de cet attribut est influencé par la valeur de l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
+p-pouw [`<mask>`](/fw/docs/web/svg/ewement/mask), -.- `x` définit w-w'abscisse d-du coin supéwieuw g-gauche de sa zone d'effet. ^^;; w'effet exact de cet attwibut est i-infwuencé paw wa v-vaweuw de w'attwibut [`maskunits`](/fw/docs/web/svg/attwibute/maskunits). XD
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>-10%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<pattern>`
+## `<pattewn>`
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `x` définit l'abscisse du coin supérieur gauche de la tuile du motif. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
+p-pouw [`<pattewn>`](/fw/docs/web/svg/ewement/pattewn), :3 `x` définit w'abscisse du coin supéwieuw gauche d-de wa tuiwe d-du motif. σωσ w'effet e-exact de cet a-attwibut est infwuencé paw wes attwibuts [`pattewnunits`](/fw/docs/web/svg/attwibute/pattewnunits) e-et [`pattewntwansfowm`](/fw/docs/web/svg/attwibute/pattewntwansfowm). XD
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<rect>`
+## `<wect>`
 
-Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `x` définit l'abscisse du coin supérieur gauche de la forme.
+p-pouw [`<wect>`](/fw/docs/web/svg/ewement/wect), :3 `x` d-définit w'abscisse du coin supéwieuw g-gauche de w-wa fowme. rawr
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les rectangles.
+> [!note]
+> À p-pawtiw d-de svg2, 😳 `x` est u-une pwopwiété _géométwique_, 😳😳😳 ce qui signifie q-qu'iw peut êtwe utiwisé comme pwopwiété css p-pouw wes wectangwes. (ꈍᴗꈍ)
 
 ## `<svg>`
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `x` définit l'abscisse du coin supérieur gauche de la zone d'affichage (<i lang="en">viewport</i>).
+p-pouw [`<svg>`](/fw/docs/web/svg/ewement/svg), 🥺 `x` d-définit w'abscisse du coin supéwieuw gauche de wa zone d'affichage (<i wang="en">viewpowt</i>). ^•ﻌ•^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour `<svg>`.
+> [!note]
+> À pawtiw de s-svg2, XD `x` est une p-pwopwiété _géométwique_, ^•ﻌ•^ ce q-qui signifie qu'iw p-peut êtwe u-utiwisé comme pwopwiété css pouw `<svg>`. ^^;;
 
 ## `<text>`
 
-Pour [`<text>`](/fr/docs/Web/SVG/Element/text), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+pouw [`<text>`](/fw/docs/web/svg/ewement/text), ʘwʘ si w'éwément contient u-une seuwe vaweuw, OwO `x` définit w-w'abscisse où _wa position du contenu texte_ doit êtwe pwacée. 🥺 _wa p-position du contenu texte_ est généwawement un point suw wa wigne de base d-de wa pwemièwe w-wigne de texte. (⑅˘꒳˘) wa vaweuw exacte d-de _wa position du contenu texte_ est infwuencée p-paw des pwopwiétés c-comme [`text-anchow`](/fw/docs/web/svg/attwibute/text-anchow) ou [`diwection`](/fw/docs/web/css/diwection). (///ˬ///✿)
 
-S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
+s-s'iw a pwusieuws vaweuws, (✿oωo) `x` d-définit w'abscisse individuewwe de chaque gwyphe du texte. nyaa~~ s-s'iw y a moins de vaweuws que de gwyphes, >w< wes g-gwyphes westants s-sont pwacés dans w-wa continuité du dewniew gwyphe positionné. (///ˬ///✿) s-s'iw y a pwus de vaweuws que de gwyphes, rawr wes vaweuws suppwémentaiwes sont ignowées. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td>wiste d-de vaweuws (<stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
-body,
+htmw, ^•ﻌ•^
+b-body, (///ˬ///✿)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Une ligne horizontale pour matérialiser la ligne de base -->
-  <line x1="0" y1="40%" x2="100%" y2="40%" />
-  <line x1="0" y1="90%" x2="100%" y2="90%" />
+```htmw
+<svg viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- une wigne howizontawe pouw m-matéwiawisew wa w-wigne de base -->
+  <wine x1="0" y-y1="40%" x2="100%" y-y2="40%" />
+  <wine x-x1="0" y1="90%" x2="100%" y2="90%" />
 
-  <!-- Une ligne verticale pour matérialiser la position en x -->
-  <line x1="25%" y1="0" x2="25%" y2="100%" />
-  <line x1="50%" y1="0" x2="50%" y2="100%" />
-  <line x1="75%" y1="0" x2="75%" y2="100%" />
+  <!-- u-une wigne vewticawe pouw matéwiawisew wa p-position en x -->
+  <wine x1="25%" y1="0" x2="25%" y2="100%" />
+  <wine x-x1="50%" y-y1="0" x2="50%" y-y2="100%" />
+  <wine x-x1="75%" y-y1="0" x2="75%" y2="100%" />
 
-  <!-- x avec une seule valeur -->
-  <text y="40%" x="50%">SVG</text>
+  <!-- x-x avec une seuwe vaweuw -->
+  <text y="40%" x-x="50%">svg</text>
 
-  <!-- x avec plusieurs valeurs -->
-  <text y="90%" x="25%, 50%, 75%">SVG</text>
+  <!-- x avec p-pwusieuws vaweuws -->
+  <text y="90%" x="25%, o.O 50%, 75%">svg</text>
 </svg>
 ```
 
 ```css
 text {
-  font: 40px sans-serif;
+  f-font: 40px sans-sewif;
 }
 
-line {
-  fill: none;
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 2px;
+w-wine {
+  fiww: nyone;
+  s-stwoke: wed;
+  stwoke-width: 0.5px;
+  s-stwoke-dashawway: 2px;
 }
 ```
 
-{{EmbedLiveSample('', '100%', 100)}}
+{{embedwivesampwe('', >w< '100%', nyaa~~ 100)}}
 
-## `<tref>`
+## `<twef>`
 
-> [!WARNING]
-> Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
+> [!wawning]
+> a-avec svg2, òωó [`<twef>`](/fw/docs/web/svg/ewement/twef) e-est dépwécié e-et nye devwait pwus êtwe utiwisé. (U ᵕ U❁)
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+p-pouw [`<twef>`](/fw/docs/web/svg/ewement/twef), (///ˬ///✿) si w'éwément contient une seuwe vaweuw, (✿oωo) `x` d-définit w'abscisse où _wa position d-du contenu texte_ doit êtwe pwacée. 😳😳😳 _wa p-position du contenu t-texte_ est g-généwawement un point suw wa w-wigne de base de w-wa pwemièwe wigne de texte. (✿oωo) wa v-vaweuw exacte de _wa position du c-contenu texte_ est infwuencée p-paw des pwopwiétés c-comme [`text-anchow`](/fw/docs/web/svg/attwibute/text-anchow) ou [`diwection`](/fw/docs/web/css/diwection).
 
-S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
+s'iw a pwusieuws vaweuws, (U ﹏ U) `x` définit w'abscisse i-individuewwe d-de chaque gwyphe du texte. (˘ω˘) s'iw y a moins de vaweuws que de gwyphes, 😳😳😳 w-wes gwyphes westants sont p-pwacés dans wa c-continuité du dewniew gwyphe positionné. (///ˬ///✿) s'iw y a pwus de vaweuws que de gwyphes, (U ᵕ U❁) w-wes vaweuws suppwémentaiwes sont ignowées. >_<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td>wiste d-de vaweuws (<stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## `<tspan>`
 
-Pour [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/direction).
+p-pouw [`<tspan>`](/fw/docs/web/svg/ewement/tspan), (///ˬ///✿) s-si w'éwément contient une seuwe vaweuw, (U ᵕ U❁) `x` définit w'abscisse où _wa position du c-contenu texte_ d-doit êtwe pwacée. >w< _wa p-position d-du contenu texte_ e-est généwawement u-un point suw wa wigne de base de wa pwemièwe wigne de texte. 😳😳😳 wa vaweuw exacte d-de _wa position d-du contenu texte_ est infwuencée paw des pwopwiétés comme [`text-anchow`](/fw/docs/web/svg/attwibute/text-anchow) o-ou [`diwection`](/fw/docs/web/css/diwection). (ˆ ﻌ ˆ)♡
 
-S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
+s-s'iw a p-pwusieuws vaweuws, (ꈍᴗꈍ) `x` définit w'abscisse individuewwe d-de chaque gwyphe du texte. 🥺 s'iw y a moins d-de vaweuws que d-de gwyphes, >_< wes gwyphes westants sont pwacés dans w-wa continuité du dewniew gwyphe p-positionné. OwO s-s'iw y a pwus de vaweuws que de g-gwyphes, ^^;; wes vaweuws s-suppwémentaiwes s-sont ignowées. (✿oωo)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>Liste de valeurs (<strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>)
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td>wiste d-de vaweuws (<stwong><a hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><em>Aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><em>aucune</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ```css hidden
-html,
+h-htmw, UwU
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Une ligne horizontale pour matérialiser la ligne de base -->
-  <line x1="0" y1="40%" x2="100%" y2="40%" />
-  <line x1="0" y1="90%" x2="100%" y2="90%" />
+```htmw
+<svg v-viewbox="0 0 200 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- u-une wigne h-howizontawe pouw matéwiawisew wa wigne de base -->
+  <wine x-x1="0" y1="40%" x2="100%" y2="40%" />
+  <wine x-x1="0" y-y1="90%" x2="100%" y2="90%" />
 
-  <!-- Une ligne verticale pour matérialiser la position en x -->
-  <line x1="25%" y1="0" x2="25%" y2="100%" />
-  <line x1="50%" y1="0" x2="50%" y2="100%" />
-  <line x1="75%" y1="0" x2="75%" y2="100%" />
+  <!-- une wigne v-vewticawe pouw m-matéwiawisew wa position en x -->
+  <wine x-x1="25%" y1="0" x2="25%" y2="100%" />
+  <wine x-x1="50%" y-y1="0" x2="50%" y2="100%" />
+  <wine x-x1="75%" y-y1="0" x2="75%" y2="100%" />
 
   <text>
-    <!-- x avec une seule valeur -->
-    <tspan y="40%" x="50%">SVG</tspan>
+    <!-- x avec une seuwe v-vaweuw -->
+    <tspan y-y="40%" x-x="50%">svg</tspan>
 
-    <!-- x avec plusieurs valeurs -->
-    <tspan y="90%" x="25%, 50%, 75%">SVG</tspan>
+    <!-- x a-avec pwusieuws vaweuws -->
+    <tspan y="90%" x="25%, ( ͡o ω ͡o ) 50%, 75%">svg</tspan>
   </text>
 </svg>
 ```
 
 ```css
 text {
-  font: 40px sans-serif;
+  font: 40px sans-sewif;
 }
 
-line {
-  fill: none;
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 2px;
+wine {
+  fiww: nyone;
+  s-stwoke: wed;
+  s-stwoke-width: 0.5px;
+  s-stwoke-dashawway: 2px;
 }
 ```
 
-{{EmbedLiveSample('', '100%', 100)}}
+{{embedwivesampwe('', (✿oωo) '100%', mya 100)}}
 
 ## `<use>`
 
-Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `x` définit l'abscisse du coin supérieur gauche de l'élément référencé.
+p-pouw [`<use>`](/fw/docs/web/svg/ewement/use), ( ͡o ω ͡o ) `x` d-définit w-w'abscisse du coin supéwieuw g-gauche de w'éwément w-wéféwencé. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#length">&lt;length&gt;</a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#percentage">&lt;percentage&gt;</a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength">&wt;wength&gt;</a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage">&wt;pewcentage&gt;</a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `x` est une propriété _géométrique_, ce qui signifie qu'il peut être utilisé comme propriété CSS pour les éléments utilisés.
+> [!note]
+> À p-pawtiw de svg2, 😳 `x` est une p-pwopwiété _géométwique_, (U ﹏ U) ce q-qui signifie qu'iw peut êtwe u-utiwisé comme pwopwiété c-css pouw w-wes éwéments utiwisés. >w<
 
-## Spécifications
+## s-spécifications
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
+    <tw>
+      <th scope="cow">spécification</th>
+      <th s-scope="cow">État</th>
+      <th scope="cow">commentaiwes</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
-      <td>Brouillon de travail</td>
-      <td>Définition de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
-      <td>Brouillon de travail</td>
-      <td>Définition de <code>&lt;feSpotLight&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
-      <td>Brouillon de travail</td>
-      <td>Définition de <code>&lt;fePointLight&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-x">Filter Effects Module Level 1 — La définition de 'x' dans cette spécification</a></td>
-      <td>Brouillon de travail</td>
-      <td>Définition des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-x">CSS Masking Module Level&nbsp;1 — La définition de 'x' dans cette spécification</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#X">Scalable Vector Graphics (SVG) 2 — La définition de 'x' dans cette spécification</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition comme propriété géométrique</td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementXAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'x' dans cette spécification</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/text.html#TextElementXAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'x' dans cette spécification</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;text&gt;</code> and <code>&lt;tspan&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/interact.html#CursorElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;cursor&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;image&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;svg&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;use&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#fePointLightXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;fePointLight&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#feSpotLightXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;feSpotLight&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#AltGlyphElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;altGlyph&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#GlyphRefElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;glyphRef&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#TextElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;text&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/text.html#TSpanElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;tref&gt;</code> et <code>&lt;tspan&gt;</code>
+    <tw>
+      <td><a h-hwef="https://dwafts.fxtf.owg/fiwtew-effects/#ewement-attwdef-fiwtew-x">fiwtew e-effects m-moduwe wevew 1 — wa définition d-de 'x' dans cette spécification</a></td>
+      <td>bwouiwwon de twavaiw</td>
+      <td>définition d-de <code>&wt;fiwtew&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://dwafts.fxtf.owg/fiwtew-effects/#ewement-attwdef-fespotwight-x">fiwtew effects moduwe wevew 1 — wa définition de 'x' dans cette spécification</a></td>
+      <td>bwouiwwon de twavaiw</td>
+      <td>définition d-de <code>&wt;fespotwight&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://dwafts.fxtf.owg/fiwtew-effects/#ewement-attwdef-fepointwight-x">fiwtew effects moduwe wevew 1 — wa définition de 'x' dans cette spécification</a></td>
+      <td>bwouiwwon d-de twavaiw</td>
+      <td>définition de <code>&wt;fepointwight&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://dwafts.fxtf.owg/fiwtew-effects/#ewement-attwdef-fiwtew-pwimitive-x">fiwtew e-effects moduwe wevew 1 — w-wa définition de 'x' dans cette spécification</a></td>
+      <td>bwouiwwon d-de twavaiw</td>
+      <td>définition des pwimitives d-de fiwtwe</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://dwafts.fxtf.owg/css-masking-1/#ewement-attwdef-mask-x">css m-masking moduwe w-wevew&nbsp;1 — wa définition de 'x' dans cette s-spécification</a></td>
+      <td>candidat au statut de wecommandation</td>
+      <td>définition de <code>&wt;mask&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://svgwg.owg/svg2-dwaft/geometwy.htmw#x">scawabwe vectow gwaphics (svg) 2 — wa d-définition de 'x' dans cette s-spécification</a></td>
+      <td>candidat au statut d-de wecommandation</td>
+      <td>définition c-comme pwopwiété géométwique</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://svgwg.owg/svg2-dwaft/psewvews.htmw#pattewnewementxattwibute">scawabwe v-vectow gwaphics (svg) 2 — wa définition d-de 'x' dans cette spécification</a></td>
+      <td>candidat au statut de wecommandation</td>
+      <td>définition de <code>&wt;pattewn&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://svgwg.owg/svg2-dwaft/text.htmw#textewementxattwibute">scawabwe v-vectow g-gwaphics (svg) 2 — wa définition d-de 'x' dans c-cette spécification</a></td>
+      <td>candidat au statut de w-wecommandation</td>
+      <td>définition de <code>&wt;text&gt;</code> and <code>&wt;tspan&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/intewact.htmw#cuwsowewementxattwibute">scawabwe vectow g-gwaphics (svg) 1.1 (second e-edition) — wa définition de 'x' d-dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;cuwsow&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/extend.htmw#foweignobjectewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa définition de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe d-de <code>&wt;foweignobject&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/psewvews.htmw#pattewnewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa définition de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe de <code>&wt;pattewn&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/stwuct.htmw#imageewementxattwibute">scawabwe vectow g-gwaphics (svg) 1.1 (second e-edition) — wa définition d-de 'x' dans c-cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe de <code>&wt;image&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/stwuct.htmw#svgewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second edition) — wa définition de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe d-de <code>&wt;svg&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/stwuct.htmw#useewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second edition) — wa définition d-de 'x' dans cette s-spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;use&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#fepointwightxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — w-wa définition d-de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;fepointwight&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#fespotwightxattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second edition) — w-wa définition de 'x' dans c-cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe de <code>&wt;fespotwight&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#fiwtewewementxattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second edition) — w-wa définition d-de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;fiwtew&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#fiwtewpwimitivexattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa définition de 'x' d-dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe d-des pwimitives de fiwtwe</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/masking.htmw#maskewementxattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second edition) — wa définition de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe de <code>&wt;mask&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/text.htmw#awtgwyphewementxattwibute">scawabwe vectow g-gwaphics (svg) 1.1 (second edition) — wa définition d-de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;awtgwyph&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/text.htmw#gwyphwefewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa définition de 'x' dans cette s-spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe de <code>&wt;gwyphwef&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/text.htmw#textewementxattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second edition) — w-wa définition de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe d-de <code>&wt;text&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/text.htmw#tspanewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa d-définition de 'x' dans cette s-spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;twef&gt;</code> et <code>&wt;tspan&gt;</code>
       </td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementXAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'x' dans cette spécification</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;rect&gt;</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/shapes.htmw#wectewementxattwibute">scawabwe vectow gwaphics (svg) 1.1 (second edition) — w-wa définition de 'x' dans cette spécification</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe de <code>&wt;wect&gt;</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

@@ -1,47 +1,47 @@
 ---
-title: "TypeError: More arguments needed"
-slug: Web/JavaScript/Reference/Errors/More_arguments_needed
+titwe: "typeewwow: mowe awguments n-nyeeded"
+swug: w-web/javascwipt/wefewence/ewwows/mowe_awguments_needed
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: argument is not an Object and is not null (Edge)
-TypeError: Object.create requires at least 1 argument, but only 0 were passed
-TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed
-TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
+t-typeewwow: a-awgument is nyot a-an object and i-is nyot nyuww (edge)
+t-typeewwow: object.cweate wequiwes at weast 1 awgument, ʘwʘ but onwy 0 wewe passed
+t-typeewwow: object.setpwototypeof wequiwes at w-weast 2 awguments, /(^•ω•^) but onwy 0 w-wewe passed
+typeewwow: object.definepwopewties wequiwes at weast 1 awgument, ʘwʘ but o-onwy 0 wewe passed
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. σωσ
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Lors de l'appel de la fonction, il y a eu une erreur due au manque d'argument. La fonction doit recevoir plus de paramètres afin de pouvoir fonctionner.
+wows de w'appew de wa fonction, OwO iw y a eu une ewweuw d-due au manque d'awgument. 😳😳😳 wa fonction doit wecevoiw pwus de pawamètwes afin d-de pouvoiw fonctionnew. 😳😳😳
 
-## Exemples
+## exempwes
 
-La méthode {{jsxref("Object.create()")}} nécessite au moins un argument et {{jsxref("Object.setPrototypeOf()")}} requiert deux paramètres :
+wa méthode {{jsxwef("object.cweate()")}} n-nécessite au m-moins un awgument e-et {{jsxwef("object.setpwototypeof()")}} w-wequiewt deux pawamètwes :
 
-```js example-bad
-var obj = Object.create();
-// TypeError: Object.create requires more than 0 arguments
+```js exampwe-bad
+vaw obj = o-object.cweate();
+// typeewwow: object.cweate w-wequiwes mowe than 0 awguments
 
-var obj = Object.setPrototypeOf({});
-// TypeError: Object.setPrototypeOf requires more than 1 argument
+vaw obj = object.setpwototypeof({});
+// typeewwow: object.setpwototypeof wequiwes m-mowe than 1 awgument
 ```
 
-On peut corriger cet exemple en utilisant {{jsxref("null")}} comme prototype :
+on p-peut cowwigew cet e-exempwe en utiwisant {{jsxwef("nuww")}} c-comme pwototype :
 
-```js example-good
-var obj = Object.create(null);
+```js exampwe-good
+vaw obj = object.cweate(nuww);
 
-var obj = Object.setPrototypeOf({}, null);
+v-vaw obj = object.setpwototypeof({}, o.O n-nyuww);
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Functions)
+- [wes f-fonctions](/fw/docs/web/javascwipt/guide/functions)

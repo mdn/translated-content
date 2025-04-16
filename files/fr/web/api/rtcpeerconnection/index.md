@@ -1,185 +1,185 @@
 ---
-title: RTCPeerConnection
-slug: Web/API/RTCPeerConnection
+titwe: wtcpeewconnection
+swug: w-web/api/wtcpeewconnection
 ---
 
-{{APIRef('WebRTC')}}
+{{apiwef('webwtc')}}
 
-L'interface **`RTCPeerConnection`** représente une connexion WebRTC entre un ordinateur local et un pair distant. Elle fournit des méthodes pour se connecter à un pair distant, entretenir et surveiller la connexion et fermer la connexion dès qu'elle n'est plus nécessaire.
+w-w'intewface **`wtcpeewconnection`** w-wepwésente u-une connexion w-webwtc entwe u-un owdinateuw w-wocaw et un paiw d-distant. (ˆ ﻌ ˆ)♡ ewwe fouwnit des méthodes pouw se connectew à un paiw distant, nyaa~~ entweteniw e-et suwveiwwew wa connexion et fewmew wa connexion d-dès qu'ewwe ny'est pwus n-nyécessaiwe. ʘwʘ
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## constwucteuw
 
-- [`RTCPeerConnection()`](/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection)
-  - : Renvoie un nouvel objet `RTCPeerConnection` qui représente la connexion entre l'appareil local et le pair distant.
+- [`wtcpeewconnection()`](/fw/docs/web/api/wtcpeewconnection/wtcpeewconnection)
+  - : wenvoie un nyouvew objet `wtcpeewconnection` q-qui wepwésente wa connexion e-entwe w'appaweiw w-wocaw et we paiw distant.
 
-## Méthodes statiques
+## méthodes statiques
 
-- [`generateCertificate()`](/fr/docs/Web/API/RTCPeerConnection/generateCertificate_static)
-  - : Crée un certificat X.509 et la clé privée correspondante. Cette méthode renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera le nouvel objet [`RTCCertificate`](/fr/docs/Web/API/RTCCertificate) une fois généré.
+- [`genewatecewtificate()`](/fw/docs/web/api/wtcpeewconnection/genewatecewtificate_static)
+  - : cwée u-un cewtificat x.509 et wa cwé pwivée cowwespondante. :3 cette méthode wenvoie u-une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont w-wa vaweuw de wésowution s-sewa we n-nyouvew objet [`wtccewtificate`](/fw/docs/web/api/wtccewtificate) u-une fois généwé. (U ᵕ U❁)
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite également des propriétés de [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_cette intewface héwite égawement d-des pwopwiétés de [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`canTrickleIceCandidates`](/fr/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates) {{ReadOnlyInline}}
-  - : Renvoie un booléen qui indique si un pair distant peut accepter ou non [les candidats ICE au goutte-à-goutte (<i lang="en">trickled ICE candidates</i>)](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice).
-- [`connectionState`](/fr/docs/Web/API/RTCPeerConnection/connectionState) {{ReadOnlyInline}}
-  - : Indique l'état actuel de la connexion au pair en renvoyant une de ces chaînes de caractères `new`, `connecting`, `connected`, `disconnected`, `failed` ou `closed`.
-- [`currentLocalDescription`](/fr/docs/Web/API/RTCPeerConnection/currentLocalDescription) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSessionDescription`](/fr/docs/Web/API/RTCSessionDescription) qui décrit la partie locale de la connexion qui a été négociée avec succès le plus récemment depuis la dernière fois où cette connexion `RTCPeerConnection` a terminé de négocier et s'est connectée à un pair distant. Cet objet inclut également une liste des candidats ICE qui peuvent avoir déjà été générés par l'agent ICE depuis que l'offre ou la réponse représentée par la description a été instanciée en premier lieu.
-- [`currentRemoteDescription`](/fr/docs/Web/API/RTCPeerConnection/currentRemoteDescription) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSessionDescription`](/fr/docs/Web/API/RTCSessionDescription) qui décrit la connexion pour le pair distant pour la connexion qui a été négociée avec succès le plus récemment depuis la dernière fois où cette connexion `RTCPeerConnection` a terminé de négocier et s'est connectée à un pair distant. Cet objet inclut également une liste des candidats ICE qui peuvent avoir déjà été générés par l'agent ICE depuis que l'offre ou la réponse représentée par la description a été instanciée en premier lieu.
-- [`iceConnectionState`](/fr/docs/Web/API/RTCPeerConnection/iceConnectionState) {{ReadOnlyInline}}
-  - : Renvoie une chaîne de caractères qui indique l'état de l'agent ICE associée à cette connexion `RTCPeerConnection`. La chaîne de caractères peut être l'une de celles-ci : `new`, `checking`, `connected`, `completed`, `failed`, `disconnected` ou `closed`.
-- [`iceGatheringState`](/fr/docs/Web/API/RTCPeerConnection/iceGatheringState) {{ReadOnlyInline}}
-  - : Renvoie une chaîne de caractères qui décrit l'état de collection ICE de la connexion. Cela permet de détecter par exemple lorsque la collecte des candidats ICE a terminé. Les valeurs possibles pour cette chaîne sont `new`, `gathering` ou `complete`.
-- [`localDescription`](/fr/docs/Web/API/RTCPeerConnection/localDescription) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSessionDescription`](/fr/docs/Web/API/RTCSessionDescription) qui décrit la session pour la partie locale de la connexion. Si la session n'a pas encore été initialisée, renvoie `null`.
-- [`peerIdentity`](/fr/docs/Web/API/RTCPeerConnection/peerIdentity) {{ReadOnlyInline}}
-  - : Renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`RTCIdentityAssertion`](/fr/docs/Web/API/RTCIdentityAssertion) contenant une chaîne de caractères identifiant le pair distant. Une fois que la promesse a été résolue avec succès, l'identité obtenue est celle du pair cible et ne changera pas pour la durée de la connexion.
-- [`pendingLocalDescription`](/fr/docs/Web/API/RTCPeerConnection/pendingLocalDescription) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSessionDescription`](/fr/docs/Web/API/RTCSessionDescription) qui décrit un changement de configuration en attente pour la partie locale de la connexion. Cela ne décrit pas la connexion dans son état actuel mais telle qu'elle pourrait être dans un futur proche.
-- [`pendingRemoteDescription`](/fr/docs/Web/API/RTCPeerConnection/pendingRemoteDescription) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSessionDescription`](/fr/docs/Web/API/RTCSessionDescription) qui décrit un changement de configuration en attente pour la partie distante de la connexion. Cela ne décrit pas la connexion dans son état actuel mais telle qu'elle pourrait être dans un futur proche.
-- [`remoteDescription`](/fr/docs/Web/API/RTCPeerConnection/remoteDescription) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSessionDescription`](/fr/docs/Web/API/RTCSessionDescription) qui décrit la session, y compris la configuration, les informations sur le média pour la partie distante de la connexion. Si la session n'est pas encore initialisée, renvoie `null`.
-- [`sctp`](/fr/docs/Web/API/RTCPeerConnection/sctp) {{ReadOnlyInline}}
-  - : Renvoie un objet [`RTCSctpTransport`](/fr/docs/Web/API/RTCSctpTransport) qui décrit la couche de transport [SCTP](/fr/docs/Glossary/SCTP) sur laquelle les données SCTP sont envoyées et reçues. Si SCTP n'a pas été négocié, renvoie `null`.
-- [`signalingState`](/fr/docs/Web/API/RTCPeerConnection/signalingState) {{ReadOnlyInline}}
-  - : Renvoie une chaîne de caractères qui décrit l'état du processus de signal pour la partie locale de la connexion lors de la connexion ou de la reconnexion à un autre pair. Cette chaîne peut avoir l'une des valeurs suivantes : `stable`, `have-local-offer`, `have-remote-offer`, `have-local-pranswer` ou `have-remote-pranswer`.
+- [`cantwickweicecandidates`](/fw/docs/web/api/wtcpeewconnection/cantwickweicecandidates) {{weadonwyinwine}}
+  - : wenvoie un b-boowéen qui indique si un paiw distant peut acceptew ou nyon [wes candidats ice au goutte-à-goutte (<i w-wang="en">twickwed ice c-candidates</i>)](https://datatwackew.ietf.owg/doc/htmw/dwaft-ietf-mmusic-twickwe-ice). (U ﹏ U)
+- [`connectionstate`](/fw/docs/web/api/wtcpeewconnection/connectionstate) {{weadonwyinwine}}
+  - : i-indique w-w'état actuew de wa connexion au paiw en wenvoyant une de ces c-chaînes de cawactèwes `new`, ^^ `connecting`, òωó `connected`, /(^•ω•^) `disconnected`, 😳😳😳 `faiwed` o-ou `cwosed`. :3
+- [`cuwwentwocawdescwiption`](/fw/docs/web/api/wtcpeewconnection/cuwwentwocawdescwiption) {{weadonwyinwine}}
+  - : wenvoie un objet [`wtcsessiondescwiption`](/fw/docs/web/api/wtcsessiondescwiption) q-qui décwit w-wa pawtie wocawe de wa connexion q-qui a été nyégociée avec s-succès we pwus wécemment depuis wa dewnièwe f-fois où cette connexion `wtcpeewconnection` a tewminé d-de nyégociew et s'est connectée à u-un p-paiw distant. (///ˬ///✿) cet objet incwut égawement une wiste des candidats ice qui peuvent avoiw déjà été généwés p-paw w'agent ice d-depuis que w'offwe ou wa wéponse w-wepwésentée p-paw wa descwiption a-a été instanciée en pwemiew wieu. rawr x3
+- [`cuwwentwemotedescwiption`](/fw/docs/web/api/wtcpeewconnection/cuwwentwemotedescwiption) {{weadonwyinwine}}
+  - : wenvoie u-un objet [`wtcsessiondescwiption`](/fw/docs/web/api/wtcsessiondescwiption) qui décwit wa connexion pouw we paiw distant pouw wa connexion q-qui a été nyégociée avec succès w-we pwus wécemment d-depuis wa d-dewnièwe fois où cette connexion `wtcpeewconnection` a-a tewminé d-de négociew e-et s'est connectée à u-un paiw distant. (U ᵕ U❁) cet objet incwut égawement u-une wiste des c-candidats ice q-qui peuvent avoiw d-déjà été g-généwés paw w'agent ice depuis que w'offwe ou wa wéponse wepwésentée p-paw wa descwiption a été instanciée en pwemiew wieu. (⑅˘꒳˘)
+- [`iceconnectionstate`](/fw/docs/web/api/wtcpeewconnection/iceconnectionstate) {{weadonwyinwine}}
+  - : wenvoie une chaîne d-de cawactèwes qui indique w'état de w'agent ice associée à cette c-connexion `wtcpeewconnection`. (˘ω˘) w-wa chaîne de c-cawactèwes peut êtwe w'une de c-cewwes-ci : `new`, :3 `checking`, XD `connected`, >_< `compweted`, (✿oωo) `faiwed`, `disconnected` ou `cwosed`. (ꈍᴗꈍ)
+- [`icegathewingstate`](/fw/docs/web/api/wtcpeewconnection/icegathewingstate) {{weadonwyinwine}}
+  - : w-wenvoie u-une chaîne de cawactèwes qui décwit w'état de cowwection ice de wa connexion. cewa pewmet de d-détectew paw exempwe wowsque wa c-cowwecte des candidats ice a tewminé. XD w-wes vaweuws p-possibwes pouw cette chaîne sont `new`, :3 `gathewing` o-ou `compwete`. mya
+- [`wocawdescwiption`](/fw/docs/web/api/wtcpeewconnection/wocawdescwiption) {{weadonwyinwine}}
+  - : w-wenvoie un objet [`wtcsessiondescwiption`](/fw/docs/web/api/wtcsessiondescwiption) q-qui décwit wa s-session pouw wa pawtie wocawe de wa connexion. òωó si wa session ny'a pas encowe été i-initiawisée, nyaa~~ w-wenvoie `nuww`. 🥺
+- [`peewidentity`](/fw/docs/web/api/wtcpeewconnection/peewidentity) {{weadonwyinwine}}
+  - : w-wenvoie une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont w-wa vaweuw de w-wésowution sewa un objet [`wtcidentityassewtion`](/fw/docs/web/api/wtcidentityassewtion) c-contenant une chaîne de cawactèwes identifiant we paiw distant. -.- une f-fois que wa pwomesse a-a été wésowue avec succès, 🥺 w'identité o-obtenue est cewwe d-du paiw cibwe et nye changewa pas pouw wa duwée de wa connexion. (˘ω˘)
+- [`pendingwocawdescwiption`](/fw/docs/web/api/wtcpeewconnection/pendingwocawdescwiption) {{weadonwyinwine}}
+  - : w-wenvoie un objet [`wtcsessiondescwiption`](/fw/docs/web/api/wtcsessiondescwiption) qui décwit un changement de configuwation e-en attente pouw wa pawtie wocawe de wa connexion. òωó c-cewa nye d-décwit pas wa connexion dans son état actuew mais tewwe qu'ewwe p-pouwwait êtwe d-dans un futuw pwoche. UwU
+- [`pendingwemotedescwiption`](/fw/docs/web/api/wtcpeewconnection/pendingwemotedescwiption) {{weadonwyinwine}}
+  - : wenvoie un objet [`wtcsessiondescwiption`](/fw/docs/web/api/wtcsessiondescwiption) q-qui décwit un changement de configuwation e-en attente pouw wa pawtie distante de wa connexion. ^•ﻌ•^ cewa n-nye décwit pas wa connexion d-dans son état a-actuew mais tewwe qu'ewwe pouwwait êtwe d-dans un futuw pwoche. mya
+- [`wemotedescwiption`](/fw/docs/web/api/wtcpeewconnection/wemotedescwiption) {{weadonwyinwine}}
+  - : w-wenvoie un o-objet [`wtcsessiondescwiption`](/fw/docs/web/api/wtcsessiondescwiption) q-qui décwit wa session, (✿oωo) y-y compwis wa configuwation, XD w-wes infowmations suw we média pouw w-wa pawtie distante d-de wa connexion. :3 s-si wa session ny'est pas encowe initiawisée, (U ﹏ U) w-wenvoie `nuww`. UwU
+- [`sctp`](/fw/docs/web/api/wtcpeewconnection/sctp) {{weadonwyinwine}}
+  - : wenvoie un objet [`wtcsctptwanspowt`](/fw/docs/web/api/wtcsctptwanspowt) q-qui décwit w-wa couche de twanspowt [sctp](/fw/docs/gwossawy/sctp) suw waquewwe wes données s-sctp sont envoyées e-et weçues. ʘwʘ s-si sctp ny'a p-pas été nyégocié, wenvoie `nuww`.
+- [`signawingstate`](/fw/docs/web/api/wtcpeewconnection/signawingstate) {{weadonwyinwine}}
+  - : w-wenvoie une chaîne de cawactèwes qui décwit w'état du pwocessus de signaw pouw wa pawtie w-wocawe de wa connexion wows d-de wa connexion ou de wa weconnexion à u-un autwe paiw. >w< cette chaîne p-peut avoiw w'une des vaweuws s-suivantes : `stabwe`, 😳😳😳 `have-wocaw-offew`, rawr `have-wemote-offew`, ^•ﻌ•^ `have-wocaw-pwanswew` o-ou `have-wemote-pwanswew`. σωσ
 
-### Gestionnaires d'évènements
+### g-gestionnaiwes d-d'évènements
 
-_Cette interface hérite des gestionnaires d'évènements de [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_cette i-intewface héwite des gestionnaiwes d'évènements de [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`onconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) appelé pour gérer l'évènement {{DOMxRef("RTCPeerConnection/connectionstatechange_event", "connectionstatechange")}}. Cet évènement se produit lorsque l'état aggrégé de la connexion évolue. L'état aggrégé correspond à la combinaison des états de l'ensemble des transports de réseau individuel utilisés par la connexion
-- [`ondatachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/datachannel_event", "datachannel")}}. Cet évènement de type [`RTCDataChannelEvent`](/fr/docs/Web/API/RTCDataChannelEvent) est envoyé lorsqu'un canal [`RTCDataChannel`](/fr/docs/Web/API/RTCDataChannel) est ajouté à la connexion par le pair distant qui a appelé [`createDataChannel()`](/fr/docs/Web/API/RTCPeerConnection/createDataChannel).
-- [`onicecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/icecandidate_event", "icecandidate")}}. Cela se produit lorsque l'agent [ICE](/fr/docs/Glossary/ICE) local a besoin de délivrer un message à l'autre pair via le serveur de signal.
-- [`onicecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}}. Cet évènement est déclenché lorsqu'une erreur se produit lors du processus de collecte des candidats [ICE](/fr/docs/Glossary/ICE).
-- [`oniceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/iceconnectionstatechange_event", "iceconnectionstatechange")}}. Cela se produit lorsque l'agent [ICE](/fr/docs/Glossary/ICE) local a besoin de délivrer un message à l'autre pair via le serveur de signal.
-- [`onicegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}. Cela se produit lorsque l'état de collecte [ICE](/fr/docs/Glossary/ICE) évolue.
-- [`onnegotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}}. Cet évènement est déclenché lorsqu'un changement a eu lieu et qui nécessite une négociation de session. La négociation devrait être menée par le requêtant, car certaines modifications de sessions ne peuvent pas être négociés par le répondant.
-- [`onsignalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/signalingstatechange_event", "signalingstatechange")}}. La fonction reçoit en entrée un évènement qui est celui envoyé lorsque l'état [`signalingState`](/fr/docs/Web/API/RTCPeerConnection/signalingState) du pair de la connexion change. Cela peut avoir lieu suite à un appel à [`setLocalDescription()`](/fr/docs/Web/API/RTCPeerConnection/setLocalDescription) ou à [`setRemoteDescription()`](/fr/docs/Web/API/RTCPeerConnection/setRemoteDescription).
-- [`ontrack`](/fr/docs/Web/API/RTCPeerConnection/track_event)
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement {{DOMxRef("RTCPeerConnection/track_event", "track")}}. L'évènement reçu en argument de la fonction est de type [`RTCTrackEvent`](/fr/docs/Web/API/RTCTrackEvent). Cet évènement est envoyé lorsqu'un nouvel objet entrant [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) a été créé et associé avec un objet [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver) ajouté à l'ensemble des destinataires de la connexion.
+- [`onconnectionstatechange`](/fw/docs/web/api/wtcpeewconnection/connectionstatechange_event)
+  - : un [gestionnaiwe d'évènements](/fw/docs/web/events/event_handwews) a-appewé p-pouw géwew w-w'évènement {{domxwef("wtcpeewconnection/connectionstatechange_event", :3 "connectionstatechange")}}. rawr x3 cet évènement s-se pwoduit wowsque w'état aggwégé de wa connexion évowue. nyaa~~ w-w'état aggwégé c-cowwespond à wa combinaison d-des états de w'ensembwe des twanspowts de wéseau i-individuew u-utiwisés paw wa connexion
+- [`ondatachannew`](/fw/docs/web/api/wtcpeewconnection/datachannew_event)
+  - : u-un [gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) qui définit une fonction appewée pouw géwew w'évènement {{domxwef("wtcpeewconnection/datachannew_event", :3 "datachannew")}}. >w< c-cet évènement d-de type [`wtcdatachannewevent`](/fw/docs/web/api/wtcdatachannewevent) e-est envoyé w-wowsqu'un canaw [`wtcdatachannew`](/fw/docs/web/api/wtcdatachannew) e-est ajouté à wa connexion p-paw we paiw d-distant qui a appewé [`cweatedatachannew()`](/fw/docs/web/api/wtcpeewconnection/cweatedatachannew). rawr
+- [`onicecandidate`](/fw/docs/web/api/wtcpeewconnection/icecandidate_event)
+  - : un [gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui définit une fonction a-appewée pouw géwew w'évènement {{domxwef("wtcpeewconnection/icecandidate_event", 😳 "icecandidate")}}. 😳 cewa s-se pwoduit wowsque w'agent [ice](/fw/docs/gwossawy/ice) w-wocaw a-a besoin de déwivwew un message à w-w'autwe paiw via we sewveuw de signaw. 🥺
+- [`onicecandidateewwow`](/fw/docs/web/api/wtcpeewconnection/icecandidateewwow_event)
+  - : u-un [gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui définit une fonction appewée pouw géwew w'évènement {{domxwef("wtcpeewconnection/icecandidateewwow_event", rawr x3 "icecandidateewwow")}}. ^^ c-cet évènement est décwenché wowsqu'une e-ewweuw se pwoduit w-wows du pwocessus de cowwecte d-des candidats [ice](/fw/docs/gwossawy/ice). ( ͡o ω ͡o )
+- [`oniceconnectionstatechange`](/fw/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event)
+  - : un [gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) qui d-définit une fonction appewée pouw géwew w'évènement {{domxwef("wtcpeewconnection/iceconnectionstatechange_event", XD "iceconnectionstatechange")}}. ^^ c-cewa se pwoduit wowsque w'agent [ice](/fw/docs/gwossawy/ice) w-wocaw a besoin d-de déwivwew un message à w-w'autwe paiw via we sewveuw de signaw. (⑅˘꒳˘)
+- [`onicegathewingstatechange`](/fw/docs/web/api/wtcpeewconnection/icegathewingstatechange_event)
+  - : un [gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) q-qui définit u-une fonction appewée pouw géwew w'évènement {{domxwef("wtcpeewconnection/icegathewingstatechange_event", (⑅˘꒳˘) "icegathewingstatechange")}}. ^•ﻌ•^ cewa se pwoduit wowsque w'état de cowwecte [ice](/fw/docs/gwossawy/ice) évowue. ( ͡o ω ͡o )
+- [`onnegotiationneeded`](/fw/docs/web/api/wtcpeewconnection/negotiationneeded_event)
+  - : un [gestionnaiwe d'évènements](/fw/docs/web/events/event_handwews) qui définit une fonction appewée pouw géwew w'évènement {{domxwef("wtcpeewconnection/negotiationneeded_event", ( ͡o ω ͡o ) "negotiationneeded")}}. (✿oωo) cet évènement est décwenché w-wowsqu'un c-changement a eu wieu et qui nyécessite une n-nyégociation de s-session. 😳😳😳 wa nyégociation d-devwait êtwe menée p-paw we wequêtant, OwO caw cewtaines m-modifications d-de sessions nye peuvent pas êtwe n-négociés paw we wépondant.
+- [`onsignawingstatechange`](/fw/docs/web/api/wtcpeewconnection/signawingstatechange_event)
+  - : u-un [gestionnaiwe d-d'évènements](/fw/docs/web/events/event_handwews) qui définit une fonction a-appewée pouw géwew w-w'évènement {{domxwef("wtcpeewconnection/signawingstatechange_event", ^^ "signawingstatechange")}}. rawr x3 w-wa fonction w-weçoit en e-entwée un évènement q-qui est cewui e-envoyé wowsque w-w'état [`signawingstate`](/fw/docs/web/api/wtcpeewconnection/signawingstate) d-du paiw de wa connexion change. 🥺 c-cewa peut avoiw w-wieu suite à u-un appew à [`setwocawdescwiption()`](/fw/docs/web/api/wtcpeewconnection/setwocawdescwiption) ou à [`setwemotedescwiption()`](/fw/docs/web/api/wtcpeewconnection/setwemotedescwiption). (ˆ ﻌ ˆ)♡
+- [`ontwack`](/fw/docs/web/api/wtcpeewconnection/twack_event)
+  - : un [gestionnaiwe d'évènements](/fw/docs/web/events/event_handwews) q-qui définit une fonction appewée pouw géwew w-w'évènement {{domxwef("wtcpeewconnection/twack_event", ( ͡o ω ͡o ) "twack")}}. >w< w'évènement w-weçu en awgument d-de wa fonction e-est de type [`wtctwackevent`](/fw/docs/web/api/wtctwackevent). /(^•ω•^) cet évènement e-est envoyé wowsqu'un nyouvew o-objet entwant [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) a été c-cwéé et associé avec un objet [`wtcwtpweceivew`](/fw/docs/web/api/wtcwtpweceivew) a-ajouté à w'ensembwe des destinataiwes de wa connexion. 😳😳😳
 
-### Propriétés obsolètes
+### pwopwiétés o-obsowètes
 
-- [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) {{deprecated_inline}}
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement obsolète {{DOMxRef("RTCPeerConnection/addstream_event", "addstream")}}.
-- [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event) {{deprecated_inline}}
-  - : Un [gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui définit une fonction appelée pour gérer l'évènement obsolète {{DOMxRef("RTCPeerConnection/removestream_event", "removestream")}}.
+- [`onaddstweam`](/fw/docs/web/api/wtcpeewconnection/addstweam_event) {{depwecated_inwine}}
+  - : un [gestionnaiwe d'évènements](/fw/docs/web/events/event_handwews) q-qui définit u-une fonction appewée pouw géwew w'évènement obsowète {{domxwef("wtcpeewconnection/addstweam_event", (U ᵕ U❁) "addstweam")}}. (˘ω˘)
+- [`onwemovestweam`](/fw/docs/web/api/wtcpeewconnection/wemovestweam_event) {{depwecated_inwine}}
+  - : u-un [gestionnaiwe d'évènements](/fw/docs/web/events/event_handwews) q-qui définit u-une fonction a-appewée pouw géwew w'évènement obsowète {{domxwef("wtcpeewconnection/wemovestweam_event", 😳 "wemovestweam")}}. (ꈍᴗꈍ)
 
-## Méthodes
+## m-méthodes
 
-_Cette interface hérite également des méthodes de [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_cette i-intewface héwite égawement d-des méthodes de [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- [`addIceCandidate()`](/fr/docs/Web/API/RTCPeerConnection/addIceCandidate)
-  - : Ajoute un nouveau candidat distant à la description distante de `RTCPeerConnection` qui décrit l'état à l'extrémité distante de la connexion
-- [`addTrack()`](/fr/docs/Web/API/RTCPeerConnection/addTrack)
-  - : Ajoute un nouvel objet [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) à l'ensemble des pistes qui seront transmises au pair distant.
-- [`addTransceiver()`](/fr/docs/Web/API/RTCPeerConnection/addTransceiver)
-  - : Crée un nouvel objet [`RTCRtpTransceiver`](/fr/docs/Web/API/RTCRtpTransceiver) et l'ajoute à l'ensemble des émetteurs-récepteurs associés à la connexion. Chaque émetteur-récepteur représente un flux bidirectionnel associé à un récepteur [`RTCRtpSender`](/fr/docs/Web/API/RTCRtpSender) et à un émetteur [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver).
-- [`close()`](/fr/docs/Web/API/RTCPeerConnection/close)
-  - : Ferme la connexion courante vers le pair.
-- [`createAnswer()`](/fr/docs/Web/API/RTCPeerConnection/createAnswer)
-  - : Initie la création d'une réponse [SDP](/fr/docs/Glossary/SDP) à une offre reçue par un pair distant pendant la négociation offre/réponse d'une connexion WebRTC. La réponse contient des informations sur les médias déjà attachés à la session, les codecs et options pris en charge par le navigateur ainsi que sur les éventuels candidats [ICE](/fr/docs/Glossary/ICE) déjà collectés.
-- [`createDataChannel()`](/fr/docs/Web/API/RTCPeerConnection/createDataChannel)
-  - : Initie la création d'un nouveau canal relié au pair distant qui permettra de transmettre tout type de données. Cela peut être utile pour le transfert de contenu en arrière-plan comme des images, fichiers, discussions, paquets pour l'état d'un jeu multijoueur, etc.
-- [`createOffer()`](/fr/docs/Web/API/RTCPeerConnection/createOffer)
-  - : Initie la création d'une offre [SDP](/fr/docs/Glossary/SDP) afin de démarrer une nouvelle connexion WebRTC avec un pair distant. L'offre SDP inclut des informations à propos des éventuels objets [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) déjà attachés à la session WebRTC, des codecs, des options prises en charge par le navigateur ainsi que sur les éventuels candidats déjà collectés par l'agent [ICE](/fr/docs/Glossary/ICE) afin de pouvoir envoyer ces informations via le canal de signalement à un pair potentiel pour demander une connexion ou mettre à jour la configuration d'une connexion existante.
-- [`getConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/getConfiguration)
-  - : Renvoie un objet [`RTCConfiguration`](/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection) qui indique la configuration courante de la connexion.
-- [`getIdentityAssertion()`](/fr/docs/Web/API/RTCPeerConnection/getIdentityAssertion)
-  - : Initie la collecte d'une assertion d'identité et renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue en l'assertion d'identité encodée dans une chaîne de caractères. Cette méthode aura un effet uniquement si [`signalingState`](/fr/docs/Web/API/RTCPeerConnection/signalingState) ne vaut pas `closed`.
-- [`getReceivers()`](/fr/docs/Web/API/RTCPeerConnection/getReceivers)
-  - : Renvoie un tableu d'objets [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver) dont chacun représente un récepteur [RTP](/fr/docs/Glossary/RTP).
-- [`getSenders()`](/fr/docs/Web/API/RTCPeerConnection/getSenders)
-  - : Renvoie un tableau d'objets [`RTCRtpSender`](/fr/docs/Web/API/RTCRtpSender) dont chacun représente un émetteur [RTP](/fr/docs/Glossary/RTP) dont le rôle est de transmettre les données d'une piste.
-- [`getStats()`](/fr/docs/Web/API/RTCPeerConnection/getStats)
-  - : Renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sont des statistiques quant à la connexion globale ou à la piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) indiquée.
-- [`getTransceivers()`](/fr/docs/Web/API/RTCPeerConnection/getTransceivers)
-  - : Renvoie une liste de l'ensemble des objets [`RTCRtpTransceiver`](/fr/docs/Web/API/RTCRtpTransceiver) utilisés afin d'envoyer et de recevoir des données sur la connexion.
-- [`removeTrack()`](/fr/docs/Web/API/RTCPeerConnection/removeTrack)
-  - : Indique à la partie locale de la connexion d'arrêter d'envoyer des médias sur la piste indiquée sans pour autant retirer l'objet [`RTCRtpSender`](/fr/docs/Web/API/RTCRtpSender) correspondant de la liste des récepteurs telle que fournie par [`getSenders()`](/fr/docs/Web/API/RTCPeerConnection/getSenders). Si la piste est déjà arrêtée ou si elle n'est pas dans la liste des émetteurs de la connexion, cette méthode n'a pas d'effet.
-- [`restartIce()`](/fr/docs/Web/API/RTCPeerConnection/restartIce)
-  - : Permet de demander facilement une nouvelle collecte de candidats ICE à chaque extrémité de la connexion. Cela simplifie le processus en permettant à l'appelant ou au recevant d'utiliser la même méthode pour déclencher un redémarrage [ICE](/fr/docs/Glossary/ICE).
-- [`setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration)
-  - : Définit la configuration courante de la connexion en fonction des valeurs incluses dans l'objet [`RTCConfiguration`](/fr/docs/Web/API/RTCPeerConnection/RTCPeerConnection) passé en argument. Cela permet de modifier les serveurs [ICE](/fr/docs/Glossary/ICE) utilisés par la connexion ainsi que les règles de transport utilisées.
-- [`setIdentityProvider()`](/fr/docs/Web/API/RTCPeerConnection/setIdentityProvider)
+- [`addicecandidate()`](/fw/docs/web/api/wtcpeewconnection/addicecandidate)
+  - : ajoute u-un nyouveau candidat distant à w-wa descwiption d-distante de `wtcpeewconnection` q-qui décwit w'état à w'extwémité d-distante de w-wa connexion
+- [`addtwack()`](/fw/docs/web/api/wtcpeewconnection/addtwack)
+  - : a-ajoute un nyouvew o-objet [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) à w'ensembwe d-des pistes qui sewont t-twansmises a-au paiw distant. :3
+- [`addtwansceivew()`](/fw/docs/web/api/wtcpeewconnection/addtwansceivew)
+  - : c-cwée un nyouvew o-objet [`wtcwtptwansceivew`](/fw/docs/web/api/wtcwtptwansceivew) e-et w'ajoute à w-w'ensembwe des émetteuws-wécepteuws a-associés à wa connexion. /(^•ω•^) c-chaque émetteuw-wécepteuw wepwésente un fwux b-bidiwectionnew associé à un w-wécepteuw [`wtcwtpsendew`](/fw/docs/web/api/wtcwtpsendew) e-et à u-un émetteuw [`wtcwtpweceivew`](/fw/docs/web/api/wtcwtpweceivew).
+- [`cwose()`](/fw/docs/web/api/wtcpeewconnection/cwose)
+  - : fewme wa connexion couwante vews we paiw. ^^;;
+- [`cweateanswew()`](/fw/docs/web/api/wtcpeewconnection/cweateanswew)
+  - : i-initie wa c-cwéation d'une w-wéponse [sdp](/fw/docs/gwossawy/sdp) à une offwe weçue paw un paiw distant p-pendant wa nyégociation o-offwe/wéponse d'une connexion w-webwtc. o.O w-wa wéponse contient des infowmations suw wes médias déjà attachés à w-wa session, 😳 w-wes codecs e-et options pwis e-en chawge paw we nyavigateuw ainsi que suw wes éventuews c-candidats [ice](/fw/docs/gwossawy/ice) d-déjà cowwectés. UwU
+- [`cweatedatachannew()`](/fw/docs/web/api/wtcpeewconnection/cweatedatachannew)
+  - : initie wa cwéation d'un n-nyouveau canaw wewié au paiw distant qui pewmettwa d-de twansmettwe tout type d-de données. >w< cewa p-peut êtwe utiwe pouw we twansfewt d-de contenu e-en awwièwe-pwan comme des images, o.O f-fichiews, (˘ω˘) discussions, paquets p-pouw w'état d-d'un jeu muwtijoueuw, òωó e-etc. nyaa~~
+- [`cweateoffew()`](/fw/docs/web/api/wtcpeewconnection/cweateoffew)
+  - : i-initie wa cwéation d'une offwe [sdp](/fw/docs/gwossawy/sdp) a-afin de démawwew u-une nyouvewwe c-connexion webwtc avec un paiw d-distant. ( ͡o ω ͡o ) w'offwe sdp incwut des infowmations à p-pwopos des éventuews o-objets [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) d-déjà attachés à wa session webwtc, 😳😳😳 des codecs, ^•ﻌ•^ des options pwises en chawge p-paw we nyavigateuw ainsi que s-suw wes éventuews c-candidats déjà cowwectés paw w'agent [ice](/fw/docs/gwossawy/ice) a-afin de pouvoiw envoyew c-ces infowmations v-via we canaw d-de signawement à u-un paiw potentiew p-pouw demandew une connexion ou mettwe à jouw wa configuwation d'une connexion e-existante. (˘ω˘)
+- [`getconfiguwation()`](/fw/docs/web/api/wtcpeewconnection/getconfiguwation)
+  - : wenvoie un objet [`wtcconfiguwation`](/fw/docs/web/api/wtcpeewconnection/wtcpeewconnection) q-qui indique wa configuwation couwante de wa connexion. (˘ω˘)
+- [`getidentityassewtion()`](/fw/docs/web/api/wtcpeewconnection/getidentityassewtion)
+  - : i-initie wa cowwecte d'une assewtion d'identité et wenvoie une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wésowue e-en w'assewtion d-d'identité encodée dans une c-chaîne de cawactèwes. -.- cette méthode auwa un e-effet uniquement s-si [`signawingstate`](/fw/docs/web/api/wtcpeewconnection/signawingstate) ne vaut p-pas `cwosed`. ^•ﻌ•^
+- [`getweceivews()`](/fw/docs/web/api/wtcpeewconnection/getweceivews)
+  - : wenvoie u-un tabweu d'objets [`wtcwtpweceivew`](/fw/docs/web/api/wtcwtpweceivew) dont chacun wepwésente un wécepteuw [wtp](/fw/docs/gwossawy/wtp).
+- [`getsendews()`](/fw/docs/web/api/wtcpeewconnection/getsendews)
+  - : w-wenvoie un tabweau d'objets [`wtcwtpsendew`](/fw/docs/web/api/wtcwtpsendew) dont chacun w-wepwésente un émetteuw [wtp](/fw/docs/gwossawy/wtp) d-dont we wôwe e-est de twansmettwe wes données d'une piste. /(^•ω•^)
+- [`getstats()`](/fw/docs/web/api/wtcpeewconnection/getstats)
+  - : w-wenvoie une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont wa vaweuw de wésowution sont des statistiques quant à w-wa connexion g-gwobawe ou à wa p-piste [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) indiquée. (///ˬ///✿)
+- [`gettwansceivews()`](/fw/docs/web/api/wtcpeewconnection/gettwansceivews)
+  - : w-wenvoie une wiste de w'ensembwe des o-objets [`wtcwtptwansceivew`](/fw/docs/web/api/wtcwtptwansceivew) u-utiwisés afin d'envoyew et de wecevoiw des données s-suw wa connexion.
+- [`wemovetwack()`](/fw/docs/web/api/wtcpeewconnection/wemovetwack)
+  - : indique à wa pawtie wocawe de w-wa connexion d'awwêtew d'envoyew des médias suw w-wa piste indiquée s-sans pouw autant wetiwew w'objet [`wtcwtpsendew`](/fw/docs/web/api/wtcwtpsendew) c-cowwespondant d-de wa wiste d-des wécepteuws tewwe que fouwnie paw [`getsendews()`](/fw/docs/web/api/wtcpeewconnection/getsendews). mya s-si wa piste est déjà awwêtée ou si ewwe n-ny'est pas dans wa wiste des émetteuws de wa connexion, o.O cette m-méthode n'a p-pas d'effet. ^•ﻌ•^
+- [`westawtice()`](/fw/docs/web/api/wtcpeewconnection/westawtice)
+  - : p-pewmet de demandew f-faciwement u-une nyouvewwe cowwecte de candidats i-ice à chaque extwémité de wa connexion. (U ᵕ U❁) c-cewa simpwifie we pwocessus en p-pewmettant à w'appewant ou au wecevant d'utiwisew w-wa même méthode p-pouw décwenchew un wedémawwage [ice](/fw/docs/gwossawy/ice). :3
+- [`setconfiguwation()`](/fw/docs/web/api/wtcpeewconnection/setconfiguwation)
+  - : d-définit wa configuwation c-couwante de wa c-connexion en fonction des vaweuws i-incwuses dans w-w'objet [`wtcconfiguwation`](/fw/docs/web/api/wtcpeewconnection/wtcpeewconnection) passé en awgument. (///ˬ///✿) c-cewa pewmet de modifiew wes sewveuws [ice](/fw/docs/gwossawy/ice) utiwisés p-paw wa connexion ainsi que w-wes wègwes de twanspowt utiwisées. (///ˬ///✿)
+- [`setidentitypwovidew()`](/fw/docs/web/api/wtcpeewconnection/setidentitypwovidew)
 
-  - : Définit le fournisseur d'identité (
+  - : définit we fouwnisseuw d-d'identité (
 
-    <i lang="en">Identity Provider</i>
+    <i w-wang="en">identity p-pwovidew</i>
 
-    ou IdP) par le triplet fourni en paramètres : le nom, le protocole de communication et le nom d'utilisateur. Le protocole et le nom d'utilisateur sont optionnels.
+    ou idp) paw we t-twipwet fouwni e-en pawamètwes : we nyom, 🥺 we pwotocowe d-de communication et we nyom d-d'utiwisateuw. -.- we pwotocowe e-et we nyom d'utiwisateuw s-sont optionnews. nyaa~~
 
-- [`setLocalDescription()`](/fr/docs/Web/API/RTCPeerConnection/setLocalDescription)
-  - : Modifie la description locale associée à la connexion. Cette description définit les propriétés de l'extrémité locale de la connexion, y compris le format de média. Cette méthode renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue de façon asynchrone lorsque la description a été modifiée.
-- [`setRemoteDescription()`](/fr/docs/Web/API/RTCPeerConnection/setRemoteDescription)
-  - : Définit la description de la connexion pour l'extrémité distante pour l'offre ou la réponse courante. Cette description définit les propriétés de l'extrémité distante de la connexion, y compris le format de média. Cette méthode renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue de façon asynchrone lorsque la description a été modifiée.
+- [`setwocawdescwiption()`](/fw/docs/web/api/wtcpeewconnection/setwocawdescwiption)
+  - : modifie wa descwiption wocawe associée à wa connexion. (///ˬ///✿) cette d-descwiption d-définit wes pwopwiétés de w'extwémité wocawe de wa connexion, 🥺 y-y compwis we fowmat de média. >w< c-cette méthode w-wenvoie une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wésowue de façon asynchwone wowsque wa descwiption a été m-modifiée. rawr x3
+- [`setwemotedescwiption()`](/fw/docs/web/api/wtcpeewconnection/setwemotedescwiption)
+  - : définit wa descwiption d-de wa connexion pouw w'extwémité d-distante p-pouw w'offwe ou wa wéponse couwante. (⑅˘꒳˘) c-cette descwiption d-définit w-wes pwopwiétés d-de w'extwémité d-distante de w-wa connexion, σωσ y compwis we fowmat de média. XD cette méthode wenvoie une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui e-est wésowue de f-façon asynchwone w-wowsque wa descwiption a-a été m-modifiée. -.-
 
-### Méthodes obsolètes
+### m-méthodes obsowètes
 
-- [`addStream()`](/fr/docs/Web/API/RTCPeerConnection/addStream) {{deprecated_inline}}
-  - : Ajoute un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) comme source audio ou vidéo locale. La méthode [`addTrack()`](/fr/docs/Web/API/RTCPeerConnection/addTrack) devrait être utilisée à la place pour chaque piste qu'on souhaite envoyer au pair distant.
-- [`createDTMFSender()`](/fr/docs/Web/API/RTCPeerConnection/createDTMFSender) {{deprecated_inline}}
-  - : Crée un nouvel émetteur [`RTCDTMFSender`](/fr/docs/Web/API/RTCDTMFSender) associé à une piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) spécifique et qui est capable d'envoyer des signaux téléphoniques [DTMF](/fr/docs/Glossary/DTMF) via la connexion.
-- [`getStreamById()`](/fr/docs/Web/API/RTCPeerConnection) {{deprecated_inline}}
-  - : Renvoie l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) ayant l'identifiant indiqué qui est associé à l'extrémité locale ou distante de la connexion. Cette propriété a été remplacée par les méthodes [`getSenders()`](/fr/docs/Web/API/RTCPeerConnection/getSenders) et [`getReceivers()`](/fr/docs/Web/API/RTCPeerConnection/getReceivers).
-- [`removeStream()`](/fr/docs/Web/API/RTCPeerConnection/removeStream) {{deprecated_inline}}
-  - : Supprime un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) qui est une source audio ou vidéo locale. Cette méthode est obsolète, on doit privilégier [`removeTrack()`](/fr/docs/Web/API/RTCPeerConnection/removeTrack) à la place.
+- [`addstweam()`](/fw/docs/web/api/wtcpeewconnection/addstweam) {{depwecated_inwine}}
+  - : ajoute un objet [`mediastweam`](/fw/docs/web/api/mediastweam) comme souwce audio ou vidéo wocawe. wa méthode [`addtwack()`](/fw/docs/web/api/wtcpeewconnection/addtwack) d-devwait êtwe utiwisée à w-wa pwace pouw chaque piste qu'on souhaite envoyew au p-paiw distant. >_<
+- [`cweatedtmfsendew()`](/fw/docs/web/api/wtcpeewconnection/cweatedtmfsendew) {{depwecated_inwine}}
+  - : c-cwée un n-nyouvew émetteuw [`wtcdtmfsendew`](/fw/docs/web/api/wtcdtmfsendew) associé à une piste [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) s-spécifique et qui est capabwe d'envoyew des s-signaux téwéphoniques [dtmf](/fw/docs/gwossawy/dtmf) v-via wa connexion. rawr
+- [`getstweambyid()`](/fw/docs/web/api/wtcpeewconnection) {{depwecated_inwine}}
+  - : wenvoie w'objet [`mediastweam`](/fw/docs/web/api/mediastweam) ayant w-w'identifiant indiqué qui est a-associé à w'extwémité w-wocawe ou distante de w-wa connexion. c-cette pwopwiété a-a été wempwacée p-paw wes méthodes [`getsendews()`](/fw/docs/web/api/wtcpeewconnection/getsendews) e-et [`getweceivews()`](/fw/docs/web/api/wtcpeewconnection/getweceivews). 😳😳😳
+- [`wemovestweam()`](/fw/docs/web/api/wtcpeewconnection/wemovestweam) {{depwecated_inwine}}
+  - : s-suppwime un fwux [`mediastweam`](/fw/docs/web/api/mediastweam) qui est une souwce a-audio ou vidéo w-wocawe. UwU cette méthode est obsowète, (U ﹏ U) o-on doit pwiviwégiew [`wemovetwack()`](/fw/docs/web/api/wtcpeewconnection/wemovetwack) à wa pwace. (˘ω˘)
 
 ## Évènements
 
-On pourra intercepter ces évènements grâce à [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en affectant un gestionnaire d'évènement sur la propriété `onnomEvenement` de cette interface.
+on p-pouwwa intewceptew ces évènements g-gwâce à [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) ou en affectant u-un gestionnaiwe d-d'évènement suw wa pwopwiété `onnomevenement` de cette i-intewface. /(^•ω•^)
 
-- [`connectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
-  - : Envoyé lorsque l'état de connectivité global de la connexion `RTCPeerConnection` évolue. Également disponible via la propriété de gestion d'évènement [`onconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event).
-- [`datachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
-  - : Envoyé lorsque le pair distant ajoute un canal [`RTCDataChannel`](/fr/docs/Web/API/RTCDataChannel) à la connexion. Également disponible via la propriété de gestion d'évènement [`ondatachannel`](/fr/docs/Web/API/RTCPeerConnection/datachannel_event).
-- [`icecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event)
-  - : Envoyé afin de demander à ce que le candidat indiqué soit transmis au pair distant. Également disponible via la propriété de gestion d'évènement [`onicecandidate`](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event).
-- [`icecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event)
-  - : Envoyé à la connexion si une erreur se produit lors de la collecte des candidats [ICE](/fr/docs/Glossary/ICE). L'évènement décrit l'erreur. Également disponible via la propriété de gestion d'évènement [`onicecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event).
-- [`iceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event)
-  - : Envoyé lorsque l'état de la connexion [ICE](/fr/docs/Glossary/ICE) change (par exemple lorsqu'elle se déconnecte). Également disponible via la propriété de gestion d'évènement [`oniceconnectionstatechange`](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event).
-- [`icegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)
-  - : Envoyé lorsque l'état de collecte des couches [ICE](/fr/docs/Glossary/ICE), tel que reflété par [`iceGatheringState`](/fr/docs/Web/API/RTCPeerConnection/iceGatheringState), évolue. Cela indique si la négociation ICE n'a pas encore commencé (`new`), a commencé la collecte des candidats (`gathering`) ou si elle est terminée (`complete`). Également disponible via la propriété de gestion d'évènement [`onicegatheringstatechange`](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event).
-- [`negotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
-  - : Envoyé lorsqu'une négociation ou de la renégociation de la connexion [ICE](/fr/docs/Glossary/ICE) doit être réalisée. Cela peut se produire à l'ouverture d'une connexion mais aussi lorsqu'il est nécessaire de s'adapter à des conditions réseau changeantes. Le récepteur devrait répondre en créant une offre et en l'envoyant à l'autre pair. Également disponible via la propriété de gestion d'évènement [`onnegotiationneeded`](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event).
-- [`signalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event)
-  - : Envoyé lorsque l'état de signal [ICE](/fr/docs/Glossary/ICE) de la connexion change. Également disponible via la propriété de gestion d'évènement [`onsignalingstatechange`](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event).
-- [`track`](/fr/docs/Web/API/RTCPeerConnection/track_event)
-  - : Envoyé après qu'une nouvelle piste ait été ajoutée à une des instances [`RTCRtpReceiver`](/fr/docs/Web/API/RTCRtpReceiver) faisant partie de la connexion. Également disponible via la propriété de gestion d'évènement [`ontrack`](/fr/docs/Web/API/RTCPeerConnection/track_event).
+- [`connectionstatechange`](/fw/docs/web/api/wtcpeewconnection/connectionstatechange_event)
+  - : envoyé wowsque w'état de connectivité g-gwobaw de w-wa connexion `wtcpeewconnection` évowue. (U ﹏ U) Égawement disponibwe via wa pwopwiété d-de gestion d-d'évènement [`onconnectionstatechange`](/fw/docs/web/api/wtcpeewconnection/connectionstatechange_event). ^•ﻌ•^
+- [`datachannew`](/fw/docs/web/api/wtcpeewconnection/datachannew_event)
+  - : envoyé w-wowsque we paiw distant ajoute un canaw [`wtcdatachannew`](/fw/docs/web/api/wtcdatachannew) à w-wa connexion. >w< Égawement d-disponibwe via wa pwopwiété d-de gestion d-d'évènement [`ondatachannew`](/fw/docs/web/api/wtcpeewconnection/datachannew_event). ʘwʘ
+- [`icecandidate`](/fw/docs/web/api/wtcpeewconnection/icecandidate_event)
+  - : envoyé afin de demandew à c-ce que we candidat i-indiqué s-soit twansmis au p-paiw distant. òωó Égawement disponibwe via wa pwopwiété de gestion d'évènement [`onicecandidate`](/fw/docs/web/api/wtcpeewconnection/icecandidate_event). o.O
+- [`icecandidateewwow`](/fw/docs/web/api/wtcpeewconnection/icecandidateewwow_event)
+  - : envoyé à wa connexion si u-une ewweuw se p-pwoduit wows de w-wa cowwecte des c-candidats [ice](/fw/docs/gwossawy/ice). ( ͡o ω ͡o ) w-w'évènement d-décwit w'ewweuw. mya Égawement disponibwe via w-wa pwopwiété d-de gestion d'évènement [`onicecandidateewwow`](/fw/docs/web/api/wtcpeewconnection/icecandidateewwow_event). >_<
+- [`iceconnectionstatechange`](/fw/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event)
+  - : envoyé wowsque w-w'état de w-wa connexion [ice](/fw/docs/gwossawy/ice) change (paw exempwe w-wowsqu'ewwe se déconnecte). rawr Égawement disponibwe via wa pwopwiété d-de gestion d'évènement [`oniceconnectionstatechange`](/fw/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event). >_<
+- [`icegathewingstatechange`](/fw/docs/web/api/wtcpeewconnection/icegathewingstatechange_event)
+  - : e-envoyé w-wowsque w'état de cowwecte des c-couches [ice](/fw/docs/gwossawy/ice), (U ﹏ U) t-tew que wefwété p-paw [`icegathewingstate`](/fw/docs/web/api/wtcpeewconnection/icegathewingstate), rawr évowue. (U ᵕ U❁) cewa indique si w-wa nyégociation i-ice ny'a pas encowe commencé (`new`), (ˆ ﻌ ˆ)♡ a-a commencé wa cowwecte d-des candidats (`gathewing`) o-ou s-si ewwe est tewminée (`compwete`). >_< Égawement disponibwe via wa p-pwopwiété de gestion d'évènement [`onicegathewingstatechange`](/fw/docs/web/api/wtcpeewconnection/icegathewingstatechange_event). ^^;;
+- [`negotiationneeded`](/fw/docs/web/api/wtcpeewconnection/negotiationneeded_event)
+  - : envoyé wowsqu'une n-nyégociation ou de wa wenégociation de wa connexion [ice](/fw/docs/gwossawy/ice) doit êtwe wéawisée. ʘwʘ cewa peut se pwoduiwe à w-w'ouvewtuwe d'une connexion mais aussi wowsqu'iw est nyécessaiwe de s'adaptew à des conditions wéseau c-changeantes. 😳😳😳 we wécepteuw devwait wépondwe en c-cwéant une offwe et en w'envoyant à w-w'autwe paiw. UwU Égawement disponibwe via wa pwopwiété de g-gestion d'évènement [`onnegotiationneeded`](/fw/docs/web/api/wtcpeewconnection/negotiationneeded_event). OwO
+- [`signawingstatechange`](/fw/docs/web/api/wtcpeewconnection/signawingstatechange_event)
+  - : envoyé w-wowsque w'état de signaw [ice](/fw/docs/gwossawy/ice) d-de wa c-connexion change. :3 Égawement disponibwe via wa p-pwopwiété de gestion d'évènement [`onsignawingstatechange`](/fw/docs/web/api/wtcpeewconnection/signawingstatechange_event). -.-
+- [`twack`](/fw/docs/web/api/wtcpeewconnection/twack_event)
+  - : envoyé apwès qu'une nyouvewwe p-piste ait été ajoutée à une d-des instances [`wtcwtpweceivew`](/fw/docs/web/api/wtcwtpweceivew) faisant pawtie d-de wa connexion. 🥺 Égawement disponibwe via wa p-pwopwiété de g-gestion d'évènement [`ontwack`](/fw/docs/web/api/wtcpeewconnection/twack_event). -.-
 
-### Évènements obsolètes
+### Évènements obsowètes
 
-- [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) {{deprecated_inline}}
-  - : Envoyé lorsqu'un nouveau flux [`MediaStream`](/fr/docs/Web/API/MediaStream) a été ajouté à la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`track`](/fr/docs/Web/API/RTCPeerConnection/track_event). Un tel évènement est envoyé pour chaque piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) ajoutée à la connexion. Également disponible via la propriété [`onaddstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event).
-- [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event) {{deprecated_inline}}
-  - : Envoyé lorsqu'un flux [`MediaStream`](/fr/docs/Web/API/MediaStream) est retiré de la connexion. Plutôt que d'écouter cet évènement obsolète, on privilégiera les évènements [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) pour chaque flux. Également disponible via la propriété [`onremovestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event).
+- [`addstweam`](/fw/docs/web/api/wtcpeewconnection/addstweam_event) {{depwecated_inwine}}
+  - : envoyé wowsqu'un n-nyouveau fwux [`mediastweam`](/fw/docs/web/api/mediastweam) a été ajouté à wa connexion. -.- p-pwutôt que d'écoutew cet évènement obsowète, (U ﹏ U) on pwiviwégiewa wes évènements [`twack`](/fw/docs/web/api/wtcpeewconnection/twack_event). rawr un t-tew évènement e-est envoyé pouw chaque piste [`mediastweamtwack`](/fw/docs/web/api/mediastweamtwack) a-ajoutée à w-wa connexion. Égawement disponibwe v-via wa pwopwiété [`onaddstweam`](/fw/docs/web/api/wtcpeewconnection/addstweam_event).
+- [`wemovestweam`](/fw/docs/web/api/wtcpeewconnection/wemovestweam_event) {{depwecated_inwine}}
+  - : envoyé wowsqu'un fwux [`mediastweam`](/fw/docs/web/api/mediastweam) est wetiwé de wa connexion. mya p-pwutôt q-que d'écoutew cet évènement obsowète, ( ͡o ω ͡o ) on pwiviwégiewa w-wes évènements [`wemovetwack`](/fw/docs/web/api/mediastweam/wemovetwack_event) p-pouw chaque fwux. /(^•ω•^) Égawement d-disponibwe via wa pwopwiété [`onwemovestweam`](/fw/docs/web/api/wtcpeewconnection/wemovestweam_event). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- [http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple](https://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple)
-- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom) : Une application de capture vidéo, de vidéo en pair à pair et de partage de fichiers en Node.js HTML5 ([code source sur GitHub](https://github.com/chrisjohndigital/TutorRoom))
+- <https://github.com/jesup/nightwy-gupshup/bwob/mastew/static/js/chat.js>
+- [http://www.htmw5wocks.com/en/tutowiaws/webwtc/basics/#toc-simpwe](https://www.htmw5wocks.com/en/tutowiaws/webwtc/basics/#toc-simpwe)
+- [tutowwoom](https://github.com/chwisjohndigitaw/tutowwoom) : une appwication de captuwe v-vidéo, (✿oωo) de vidéo en paiw à paiw et de pawtage de fichiews en nyode.js htmw5 ([code souwce suw github](https://github.com/chwisjohndigitaw/tutowwoom))

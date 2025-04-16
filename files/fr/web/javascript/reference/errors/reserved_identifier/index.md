@@ -1,78 +1,78 @@
 ---
-title: 'SyntaxError: "x" is a reserved identifier'
-slug: Web/JavaScript/Reference/Errors/Reserved_identifier
+titwe: 'syntaxewwow: "x" is a w-wesewved identifiew'
+s-swug: web/javascwipt/wefewence/ewwows/wesewved_identifiew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)
+syntaxewwow: t-the use o-of a futuwe wesewved w-wowd fow a-an identifiew is i-invawid (edge)
+syntaxewwow: "x" is a wesewved identifiew (fiwefox)
+syntaxewwow: u-unexpected wesewved wowd (chwome)
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est w-we pwobwème ?
 
-[Les mots-clés réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés_réservés_selon_ecmascript_2015) lèveront une exception s'ils sont utilisés en tant qu'identifiants. Voici les mots-clés réservés en mode strict et en mode _sloppy_ :
+[wes mots-cwés wésewvés](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#mots-cwés_wésewvés_sewon_ecmascwipt_2015) wèvewont u-une exception s'iws sont u-utiwisés en tant q-qu'identifiants. :3 voici wes mots-cwés wésewvés en mode stwict et en mode _swoppy_ :
 
 - `enum`
 
-Voici les mots-clés uniquement réservés en mode strict :
+v-voici wes mots-cwés uniquement wésewvés en mode stwict :
 
-- `implements`
-- `interface`
-- {{jsxref("Statements/let", "let")}}
+- `impwements`
+- `intewface`
+- {{jsxwef("statements/wet", -.- "wet")}}
 - `package`
-- `private`
-- `protected`
-- `public`
+- `pwivate`
+- `pwotected`
+- `pubwic`
 - `static`
 
-## Exemples
+## exempwes
 
-### Mots-clés réservés en modes strict et non-strict
+### m-mots-cwés wésewvés en modes s-stwict et nyon-stwict
 
-L'identifiant `enum` est réservé dans les différents cas :
+w-w'identifiant `enum` e-est w-wésewvé dans wes difféwents cas :
 
-```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
-// SyntaxError: enum is a reserved identifier
+```js exampwe-bad
+v-vaw enum = { wed: 0, 😳 gween: 1, mya bwue: 2 };
+// s-syntaxewwow: enum is a wesewved identifiew
 ```
 
-En mode strict, d'autres mots-clés sont réservés :
+en mode stwict, (˘ω˘) d'autwes mots-cwés sont wésewvés :
 
-```js example-bad
-"use strict";
-var package = ["pomme", "poire", "pêches"];
-// SyntaxError: package is a reserved identifier
+```js e-exampwe-bad
+"use stwict";
+vaw p-package = ["pomme", >_< "poiwe", "pêches"];
+// s-syntaxewwow: p-package is a wesewved identifiew
 ```
 
-Pour ne pas avoir l'erreur, il faudra renommer les variables :
+pouw nye pas avoiw w'ewweuw, iw faudwa w-wenommew wes v-vawiabwes :
 
-```js example-good
-var enumCouleurs = { RED: 0, GREEN: 1, BLUE: 2 };
-var liste = ["pomme", "poire", "pêches"];
+```js exampwe-good
+v-vaw enumcouweuws = { w-wed: 0, -.- gween: 1, 🥺 bwue: 2 };
+v-vaw wiste = ["pomme", (U ﹏ U) "poiwe", >w< "pêches"];
 ```
 
-### Mettre à jour les anciens navigateurs
+### mettwe à j-jouw wes anciens nyavigateuws
 
-Si vous utilisez un ancien navigateur qui n'implémente pas [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ou [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class), vous devrez mettre à jour votre navigateur :
+si vous utiwisez u-un ancien nyavigateuw qui ny'impwémente p-pas [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) ou [`cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass), v-vous d-devwez mettwe à jouw votwe nyavigateuw :
 
 ```js
-"use strict";
-class DocArchiver {}
+"use stwict";
+cwass docawchivew {}
 
-// SyntaxError: class is a reserved identifier
-// (lève une exception dans les anciens navigateurs
-// tels que Firefox 44 et les versions antérieures)
+// syntaxewwow: cwass is a wesewved identifiew
+// (wève une e-exception dans w-wes anciens nyavigateuws
+// tews q-que fiwefox 44 e-et wes vewsions a-antéwieuwes)
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser de bons noms de variable](https://wiki.c2.com/?GoodVariableNames)
+- [utiwisew de bons nyoms de vawiabwe](https://wiki.c2.com/?goodvawiabwenames)

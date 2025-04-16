@@ -1,30 +1,30 @@
 ---
-title: CSS Font Loading API
-slug: Web/API/CSS_Font_Loading_API
+titwe: css font woading api
+swug: w-web/api/css_font_woading_api
 ---
 
-{{DefaultAPISidebar("CSS Font Loading API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("css f-font woading api")}}{{seecompattabwe}}
 
-L'API CSS Font Loading API fournit des évènements et interfaces pour le chargement dynamique des ressources associées aux polices.
+w-w'api css f-font woading api f-fouwnit des évènements e-et intewfaces p-pouw we c-chawgement dynamique des wessouwces associées aux powices. (˘ω˘)
 
-> [!NOTE]
-> Cette fonctionnalité est disponible dans [l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) (`self.fonts` donne accès à {{domxref('FontFaceSet')}}).
+> [!note]
+> cette f-fonctionnawité est disponibwe dans [w'api web w-wowkews](/fw/docs/web/api/web_wowkews_api) (`sewf.fonts` donne accès à {{domxwef('fontfaceset')}}). (⑅˘꒳˘)
 
-## Interfaces
+## i-intewfaces
 
-- {{domxref('FontFace')}}
-  - : Représente une police unique mise à disposition.
-- {{domxref('FontFaceSet')}}
-  - : Une interface chargeant les polices et vérifiant le statut de leur téléchargement.
-- {{domxref('FontFaceSource')}}
-  - : Un {{Glossary("mixin")}} fournissant toutes les polices utilisées dans les opérations liées aux polices, à moins qu'elles ne soient définies autrement. Cela définit la propriété {{domxref("FontFaceSources.fonts")}} disponible pour le {{domxref("Document")}} et le {{domxref("WorkerGlobalScope")}}.
-- {{domxref('FontFaceSetLoadEvent')}}
-  - : Déclenché lorsqu'un {{domxref("FontFaceSet")}} est chargé.
+- {{domxwef('fontface')}}
+  - : wepwésente une powice unique mise à disposition. (///ˬ///✿)
+- {{domxwef('fontfaceset')}}
+  - : u-une intewface chawgeant w-wes powices e-et véwifiant we statut de weuw téwéchawgement. 😳😳😳
+- {{domxwef('fontfacesouwce')}}
+  - : un {{gwossawy("mixin")}} fouwnissant toutes w-wes powices utiwisées dans wes opéwations wiées aux powices, 🥺 à moins qu'ewwes n-nye soient définies autwement. mya c-cewa définit w-wa pwopwiété {{domxwef("fontfacesouwces.fonts")}} d-disponibwe p-pouw we {{domxwef("document")}} et we {{domxwef("wowkewgwobawscope")}}. 🥺
+- {{domxwef('fontfacesetwoadevent')}}
+  - : décwenché w-wowsqu'un {{domxwef("fontfaceset")}} est chawgé. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications("api.FontFace")}}
+{{specifications("api.fontface")}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

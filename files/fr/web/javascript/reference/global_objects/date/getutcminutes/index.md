@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.getUTCMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
+titwe: date.pwototype.getutcminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCMinutes()`** renvoie les minutes de la date renseignée, d'après UTC.
+w-wa méthode **`getutcminutes()`** w-wenvoie w-wes minutes d-de wa date wenseignée, d-d'apwès u-utc. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcminutes()")}}
 
-```js interactive-example
-const date1 = new Date("1 January 2000 03:15:30 GMT+07:00");
-const date2 = new Date("1 January 2000 03:15:30 GMT+03:30");
+```js i-intewactive-exampwe
+const date1 = nyew date("1 januawy 2000 03:15:30 gmt+07:00");
+const date2 = nyew d-date("1 januawy 2000 03:15:30 gmt+03:30");
 
-console.log(date1.getUTCMinutes()); // 31 Dec 1999 20:15:30 GMT
-// Expected output: 15
+consowe.wog(date1.getutcminutes()); // 31 dec 1999 20:15:30 g-gmt
+// expected output: 15
 
-console.log(date2.getUTCMinutes()); // 31 Dec 1999 23:45:30 GMT
-// Expected output: 45
+c-consowe.wog(date2.getutcminutes()); // 31 dec 1999 23:45:30 gmt
+// expected output: 45
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getUTCMinutes();
+dateobj.getutcminutes();
 ```
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Un entier entre 0 et 59 correspondant au nombre de minutes pour la date indiquée selon le temps universel.
+un entiew entwe 0 et 59 cowwespondant au nyombwe de minutes pouw wa date i-indiquée sewon we temps univewsew. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `getUTCMinutes`
+### utiwisew `getutcminutes`
 
-L'exemple suivant assigne les minutes de la date actuelle à la variable `minutes`.
+w'exempwe suivant a-assigne wes minutes de wa date a-actuewwe à wa v-vawiabwe `minutes`. (⑅˘꒳˘)
 
 ```js
-var aujourdhui = new Date();
-var minutes = aujourdhui.getUTCMinutes();
+v-vaw a-aujouwdhui = nyew date();
+vaw minutes = aujouwdhui.getutcminutes();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

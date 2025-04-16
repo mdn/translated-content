@@ -1,70 +1,70 @@
 ---
-title: "SyntaxError: missing name after . operator"
-slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
+titwe: "syntaxewwow: missing n-nyame aftew . opewatow"
+s-swug: web/javascwipt/wefewence/ewwows/missing_name_aftew_dot_opewatow
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## message
 
 ```
-SyntaxError: missing name after . operator
+s-syntaxewwow: m-missing n-nyame aftew . /(^•ω•^) opewatow
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## q-quew e-est we pwobwème ?
 
-L'opérateur `.` (le point) est utilisé pour [accéder aux propriétés d'un objet](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors). Il est nécessaire d'indiquer le nom de la propriété à laquelle on souhaite accéder. Pour les propriétés dont le nom est calculé, il est préférable d'utiliser les crochets pour encadrer le nom. Cela permet de calculer une expression dont le résultat sera le nom de la propriété recherchée. Peut-être cherchiez-vous à utiliser l'opérateur de concaténation ? C'est l'opérateur `+` qu'il faut utiliser dans ce cas. Pour plus de détails, voir les exemples ci-après.
+w'opéwateuw `.` (we point) est utiwisé pouw [accédew aux p-pwopwiétés d'un objet](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows). 😳😳😳 iw est n-nyécessaiwe d'indiquew we nyom d-de wa pwopwiété à waquewwe on souhaite accédew. ( ͡o ω ͡o ) pouw wes p-pwopwiétés dont we nyom est cawcuwé, i-iw est pwéféwabwe d-d'utiwisew wes cwochets pouw encadwew we nyom. >_< cewa pewmet de cawcuwew u-une expwession dont we wésuwtat sewa we nyom de wa pwopwiété wechewchée. >w< p-peut-êtwe chewchiez-vous à utiwisew w-w'opéwateuw d-de concaténation ? c-c'est w'opéwateuw `+` q-qu'iw faut utiwisew dans ce cas. rawr pouw p-pwus de détaiws, voiw wes exempwes ci-apwès. 😳
 
-## Exemples
+## e-exempwes
 
-### Accéder à une propriété
+### accédew à une pwopwiété
 
-[Pour accéder à une propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) en JavaScript, on utilise le point (.) ou les crochets (`[]`) mais pas une combinaison des deux. Les crochets sont notamment utiles lorsqu'on souhaite accéder à des propriétés dont le nom est calculé.
+[pouw accédew à une pwopwiété](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) en javascwipt, o-on utiwise we point (.) ou wes c-cwochets (`[]`) m-mais pas une c-combinaison des deux. >w< wes cwochets sont nyotamment utiwes wowsqu'on s-souhaite accédew à d-des pwopwiétés dont we n-nyom est cawcuwé. (⑅˘꒳˘)
 
-```js example-bad
-var obj = { toto: { truc: "bidule", machin2: "bidule2" } };
-var i = 2;
+```js e-exampwe-bad
+vaw obj = { t-toto: { twuc: "biduwe", OwO machin2: "biduwe2" } };
+v-vaw i = 2;
 
-obj.[toto].[truc]
-// SyntaxError: missing name after . operator
+obj.[toto].[twuc]
+// syntaxewwow: m-missing nyame aftew . (ꈍᴗꈍ) opewatow
 
-obj.toto."machin"+i;
-// SyntaxError: missing name after . operator
+o-obj.toto."machin"+i;
+// syntaxewwow: m-missing nyame a-aftew . 😳 opewatow
 ```
 
-Pour corriger ce fragment de code, on pourra accéder aux propriétés de la façon suivante :
+pouw cowwigew ce fwagment de code, 😳😳😳 on pouwwa accédew aux pwopwiétés de wa façon suivante :
 
-```js example-good
-obj.toto.truc; // "bidule"
-// ou autrement
-obj["toto"]["truc"]; // "bidule"
+```js e-exampwe-good
+obj.toto.twuc; // "biduwe"
+// o-ou autwement
+obj["toto"]["twuc"]; // "biduwe"
 
-// pour les propriétés dont le
-// nom est calculé, il faut les
-// crochets
-obj.toto["machin" + i]; // "bidule2"
+// p-pouw w-wes pwopwiétés d-dont we
+// nyom est cawcuwé, mya iw faut wes
+// cwochets
+obj.toto["machin" + i-i]; // "biduwe2"
 ```
 
-### Accéder à une propriété ou concaténer ?
+### accédew à une pwopwiété ou concaténew ?
 
-Si vous avez l'habitude de développer en utilisant un autre langage de programmation tel que {{Glossary("PHP")}}, il est possible de mélanger certains opérateurs et d'utiliser le point comme opérateur de concaténation, qui est l'opérateur `+` en JavaScript :
+si vous avez w-w'habitude de dévewoppew en u-utiwisant un autwe w-wangage de pwogwammation t-tew que {{gwossawy("php")}}, mya i-iw est p-possibwe de méwangew c-cewtains opéwateuws e-et d'utiwisew we point comme opéwateuw d-de concaténation, (⑅˘꒳˘) q-qui est w'opéwateuw `+` en j-javascwipt :
 
-```js example-bad
-console.log("Coucou " . "monde");
+```js e-exampwe-bad
+c-consowe.wog("coucou " . (U ﹏ U) "monde");
 
-// SyntaxError: missing name after . operator
+// syntaxewwow: missing nyame aftew . mya opewatow
 ```
 
-À la place, on écrira :
+À w-wa pwace, ʘwʘ on écwiwa :
 
-```js example-good
-console.log("Coucou " + "monde");
+```js exampwe-good
+consowe.wog("coucou " + "monde");
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Les accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [wes accesseuws de p-pwopwiété](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

@@ -1,90 +1,90 @@
 ---
-title: <mask>
-slug: Web/SVG/Element/mask
+titwe: <mask>
+swug: web/svg/ewement/mask
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<mask>`** définit un masque alpha. Ce masque peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("mask")}}.
+w-w'éwément **`<mask>`** d-définit un m-masque awpha. mya c-ce masque peut paw w-wa suite êtwe a-appwiqué suw u-une fowme en utiwisant w-wa pwopwiété {{svgattw("mask")}}. >w<
 
-Le masque permet de rendre des zones de l'élément sur lequel est appliqué (semi-)transparentes. On peut par exemple créer un effet de fondu en utilisant un dégradé, ce que le détourage ({{SVGElement('clipPath')}}) ne permet pas.
+we masque pewmet de wendwe des zones de w'éwément s-suw wequew est appwiqué (semi-)twanspawentes. nyaa~~ on peut paw exempwe cwéew un effet d-de fondu en utiwisant un dégwadé, (✿oωo) c-ce que we détouwage ({{svgewement('cwippath')}}) nye pewmet pas. ʘwʘ
 
-## Exemple
+## exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, (ˆ ﻌ ˆ)♡
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 120 120">
-  <mask id="myMask">
-    <!-- Tous les pixels blancs sont visibles -->
-    <rect x="0" y="0" width="100" height="100" fill="white" />
+```htmw
+<svg v-viewbox="-10 -10 120 120">
+  <mask id="mymask">
+    <!-- tous wes pixews bwancs sont visibwes -->
+    <wect x="0" y="0" w-width="100" height="100" fiww="white" />
 
-    <!-- Tous les pixels noirs sont invisibles -->
+    <!-- tous wes pixews nyoiws sont invisibwes -->
     <path
-      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
-      fill="black" />
+      d-d="m10,35 a20,20,0,0,1,50,35 a20,20,0,0,1,90,35 q-q90,65,50,95 q10,65,10,35 z-z"
+      f-fiww="bwack" />
   </mask>
 
-  <polygon points="-10,110 110,110 110,-10" fill="orange" />
+  <powygon p-points="-10,110 110,110 110,-10" fiww="owange" />
 
-  <!-- Avec ce masque, on "perfore" un trou en forme de coeur à l'intérieur du cercle -->
-  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+  <!-- avec ce masque, 😳😳😳 o-on "pewfowe" un twou en fowme de coeuw à w'intéwieuw d-du cewcwe -->
+  <ciwcwe cx="50" cy="50" w="50" mask="uww(#mymask)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{embedwivesampwe('exempwe', :3 100, 100)}}
 
-## Attributs
+## attwibuts
 
-- {{SVGAttr("height")}}
-  - : Définit la hauteur du masque.
-    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
-- {{SVGAttr("maskContentUnits")}}
-  - : Définit le système de coordonnées pour le contenu du `<mask>`.
-    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
-- {{SVGAttr("maskUnits")}}
-  - : Définit le système de coordonnées pour les attributs {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} et {{SVGAttr("height")}} du `<mask>`.
-    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `objectBoundingBox`; _Animation_: **oui**
-- {{SVGAttr("x")}}
-  - : Définit la coordonnée de l'axe x du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
-- {{SVGAttr("y")}}
-  - : Définit la coordonnée de l'axe y du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
-- {{SVGAttr("width")}}
-  - : Définit la largeur du masque.
-    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+- {{svgattw("height")}}
+  - : définit wa hauteuw du masque. OwO
+    _vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength) ; v-vaweuw paw défaut: `120%`; _animation_: **oui**
+- {{svgattw("maskcontentunits")}}
+  - : d-définit we système d-de coowdonnées p-pouw we contenu du `<mask>`. (U ﹏ U)
+    _vaweuw_: `usewspaceonuse`|`objectboundingbox` ; _vaweuw paw défaut_: `usewspaceonuse`; _animation_: **oui**
+- {{svgattw("maskunits")}}
+  - : définit we s-système de coowdonnées p-pouw wes attwibuts {{svgattw("x")}}, >w< {{svgattw("y")}}, (U ﹏ U) {{svgattw("width")}} e-et {{svgattw("height")}} du `<mask>`. 😳
+    _vaweuw_: `usewspaceonuse`|`objectboundingbox` ; _vaweuw p-paw défaut_: `objectboundingbox`; _animation_: **oui**
+- {{svgattw("x")}}
+  - : définit w-wa coowdonnée de w'axe x du c-coin supéwieuw gauche du masque. (ˆ ﻌ ˆ)♡
+    _vaweuw_: [**\<coowdinate>**](/fw/docs/web/svg/content_type#coowdinate) ; _vaweuw paw défaut_: `-10%`; _animation_: **oui**
+- {{svgattw("y")}}
+  - : d-définit wa coowdonnée d-de w'axe y du coin supéwieuw g-gauche du masque. 😳😳😳
+    _vaweuw_: [**\<coowdinate>**](/fw/docs/web/svg/content_type#coowdinate) ; _vaweuw p-paw défaut_: `-10%`; _animation_: **oui**
+- {{svgattw("width")}}
+  - : définit wa wawgeuw du masque. (U ﹏ U)
+    _vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength) ; vaweuw paw défaut: `120%`; _animation_: **oui**
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('id')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+- [attwibuts d-de b-base](/fw/docs/web/svg/attwibute)
+  - : nyotamment: {{svgattw('id')}}
+- [attwibuts d-de stywe](/fw/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}}, (///ˬ///✿) {{svgattw('stywe')}}
+- [attwibuts d-de twaitement c-conditionnew](/fw/docs/web/svg/attwibute)
+  - : nyotamment: {{svgattw('wequiwedextensions')}}, 😳 {{svgattw('systemwanguage')}}
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute)
+  - : notamment: {{svgattw('cwip-path')}}, 😳 {{svgattw('cwip-wuwe')}}, σωσ {{svgattw('cowow')}}, rawr x3 {{svgattw('dispway')}}, OwO {{svgattw('fiww')}}, /(^•ω•^) {{svgattw('fiww-opacity')}}, 😳😳😳 {{svgattw('fiww-wuwe')}}, ( ͡o ω ͡o ) {{svgattw('fiwtew')}}, >_< {{svgattw('mask')}}, >w< {{svgattw('opacity')}}, rawr {{svgattw('shape-wendewing')}}, 😳 {{svgattw('stwoke')}}, >w< {{svgattw('stwoke-dashawway')}}, (⑅˘꒳˘) {{svgattw('stwoke-dashoffset')}}, OwO {{svgattw('stwoke-winecap')}}, (ꈍᴗꈍ) {{svgattw('stwoke-winejoin')}}, 😳 {{svgattw('stwoke-mitewwimit')}}, 😳😳😳 {{svgattw('stwoke-opacity')}}, mya {{svgattw('stwoke-width')}}, mya {{svgattw("twansfowm")}}, (⑅˘꒳˘) {{svgattw('vectow-effect')}}, (U ﹏ U) {{svgattw('visibiwity')}}
 
-## Notes d'usage
+## n-nyotes d'usage
 
 {{svginfo}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Élément de détourage: {{SVGElement("clipPath")}}
-- Propriétés CSS de masque: {{cssxref("mask")}}, {{cssxref("mask-image")}},{{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}
+- Éwément de d-détouwage: {{svgewement("cwippath")}}
+- p-pwopwiétés c-css de masque: {{cssxwef("mask")}}, mya {{cssxwef("mask-image")}},{{cssxwef("mask-mode")}}, ʘwʘ {{cssxwef("mask-wepeat")}}, (˘ω˘) {{cssxwef("mask-position")}}, (U ﹏ U) {{cssxwef("mask-cwip")}}, ^•ﻌ•^ {{cssxwef("mask-owigin")}}, (˘ω˘) {{cssxwef("mask-composite")}}, :3 {{cssxwef("mask-size")}}, ^^;; {{cssxwef("pointew-events")}}

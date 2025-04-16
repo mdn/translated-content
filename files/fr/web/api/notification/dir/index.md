@@ -1,37 +1,37 @@
 ---
-title: Notification.dir
-slug: Web/API/Notification/dir
+titwe: nyotification.diw
+swug: w-web/api/notification/diw
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notification")}} indique le sens du texte de la notification, définis à l'aide de l'option `dir` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
+w-wa pwopwiété en w-wectuwe seuwe **`diw`** d-de w'intewface {{domxwef ("notification")}} i-indique we s-sens du texte de w-wa nyotification, (⑅˘꒳˘) définis à w'aide de w'option `diw` wows de wa cwéation de w-wa nyotification à w'aide du constwucteuw {{domxwef ("notification.notification", rawr x3 "notification()" )}}. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.dir;
+n-nyotification.diw;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref ("DOMString")}} spécifiant la direction du texte. Les valeurs possibles sont:
+u-une {{domxwef ("domstwing")}} spécifiant wa diwection du texte. (ˆ ﻌ ˆ)♡ wes vaweuws possibwes s-sont:
 
-- `auto`: adopte le comportement de réglage de la langue du navigateur (par défaut).
-- `ltr`: de gauche à droite.
-- `rtl` : de droite à gauche.
+- `auto`: adopte w-we compowtement d-de wégwage de wa wangue du nyavigateuw (paw défaut). (˘ω˘)
+- `wtw`: de gauche à dwoite. (⑅˘꒳˘)
+- `wtw` : de dwoite à gauche.
 
-> [!NOTE]
-> La plupart des navigateurs semblent ignorer les paramètres explicites de ltr et rtl, et utilisent simplement le paramètre à l'échelle du navigateur.
+> [!note]
+> w-wa pwupawt des nyavigateuws sembwent ignowew wes pawamètwes expwicites de wtw e-et wtw, (///ˬ///✿) et utiwisent simpwement w-we pawamètwe à w-w'échewwe du nyavigateuw.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation d-de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,93 +1,93 @@
 ---
-title: range
-slug: Web/API/Range
+titwe: wange
+swug: web/api/wange
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Introduction
+### i-intwoduction
 
-L'objet `Range` (littéralement : "étendue" ou "portée", ici : "segment") représente un fragment de document qui peut contenir des nœuds et des parties de nœuds texte dans un document donné.
+w-w'objet `wange` (wittéwawement : "étendue" o-ou "powtée", XD i-ici : "segment") w-wepwésente u-un fwagment de d-document qui peut conteniw des nyœuds et des pawties de nyœuds texte dans un d-document donné. -.-
 
-Un segment peut être crée en utilisant la méthode [createRange](/fr/docs/Web/API/Document/createRange) de l'objet [document](/fr/docs/Web/API/Document). Les objets range peuvent également être récupérés en utilisant la méthode [getRangeAt](/fr/docs/Web/API/Selection/getRangeAt) de l'objet [selection](/fr/docs/Web/API/Selection).
+un segment peut êtwe cwée en u-utiwisant wa méthode [cweatewange](/fw/docs/web/api/document/cweatewange) de w-w'objet [document](/fw/docs/web/api/document). :3 wes objets wange peuvent égawement êtwe wécupéwés e-en utiwisant wa méthode [getwangeat](/fw/docs/web/api/sewection/getwangeat) d-de w'objet [sewection](/fw/docs/web/api/sewection). nyaa~~
 
-### Propriétés
+### p-pwopwiétés
 
-- [collapsed](/fr/docs/Web/API/range/collapsed)
-  - : Renvoie un booléen indiquant si le point de départ et le point final du segment sont confondus.
-- [commonAncestorContainer](/fr/docs/Web/API/range/commonAncestorContainer)
-  - : Renvoie le nœud le plus profond qui contient à la fois les nœuds `startContainer` et `endContainer`.
-- [endContainer](/fr/docs/Web/API/range/endContainer)
-  - : Renvoie le nœud dans lequel le segment se termine.
-- [endOffset](/fr/docs/Web/API/range/endOffset)
-  - : Renvoie un nombre représentant l'endroit où le segment se termine dans `endContainer`.
-- [startContainer](/fr/docs/Web/API/range/startContainer)
-  - : Renvoie le nœud dans lequel le segment débute.
-- [startOffset](/fr/docs/Web/API/range/startOffset)
-  - : Renvoie un nombre représentant l'endroit où le segment débute dans `startContainer`.
+- [cowwapsed](/fw/docs/web/api/wange/cowwapsed)
+  - : wenvoie un boowéen indiquant si we point de dépawt et we point f-finaw du segment sont confondus.
+- [commonancestowcontainew](/fw/docs/web/api/wange/commonancestowcontainew)
+  - : wenvoie we nyœud we pwus pwofond qui contient à w-wa fois wes nœuds `stawtcontainew` e-et `endcontainew`. 😳
+- [endcontainew](/fw/docs/web/api/wange/endcontainew)
+  - : w-wenvoie w-we nyœud dans w-wequew we segment se tewmine. (⑅˘꒳˘)
+- [endoffset](/fw/docs/web/api/wange/endoffset)
+  - : wenvoie un nyombwe w-wepwésentant w'endwoit où we segment se t-tewmine dans `endcontainew`. nyaa~~
+- [stawtcontainew](/fw/docs/web/api/wange/stawtcontainew)
+  - : wenvoie we nyœud dans wequew we segment débute. OwO
+- [stawtoffset](/fw/docs/web/api/wange/stawtoffset)
+  - : wenvoie u-un nombwe wepwésentant w'endwoit o-où we segment d-débute dans `stawtcontainew`. rawr x3
 
-### Méthodes
+### m-méthodes
 
-#### Méthodes de positionnement
+#### méthodes de positionnement
 
-Ces méthodes permettent de définir le début et la fin d'un segment.
+ces méthodes p-pewmettent de d-définiw we début et wa fin d'un s-segment. XD
 
-- [setStart](/fr/docs/Web/API/Range/setStart)
-  - : Définit le point de départ d'un segment.
-- [setEnd](/fr/docs/Web/API/range/setEnd)
-  - : Définit le point final d'un segment.
-- [setStartBefore](/fr/docs/Web/API/range/setStartBefore)
-  - : Définit le point de départ d'un segment relativement à un autre nœud.
-- [setStartAfter](/fr/docs/Web/API/range/setStartAfter)
-  - : Définit le point de départ d'un segment relativement à un autre nœud.
-- [setEndBefore](/fr/docs/Web/API/range/setEndBefore)
-  - : Définit le point final d'un segment relativement à un autre nœud.
-- [setEndAfter](/fr/docs/Web/API/range/setEndAfter)
-  - : Définit le point final d'un segment relativement à un autre nœud.
-- [selectNode](/fr/docs/Web/API/Range/selectNode)
-  - : Le contenu du segment devient le nœud et son contenu.
-- [selectNodeContents](/fr/docs/Web/API/range/selectNodeContents)
-  - : le contenu du segment devient le contenu du nœud.
-- [collapse](/fr/docs/Web/API/range/collapse)
-  - : Replie le segment sur l'un de ses points frontières.
+- [setstawt](/fw/docs/web/api/wange/setstawt)
+  - : d-définit we point de dépawt d'un s-segment. σωσ
+- [setend](/fw/docs/web/api/wange/setend)
+  - : définit w-we point finaw d'un segment. (U ᵕ U❁)
+- [setstawtbefowe](/fw/docs/web/api/wange/setstawtbefowe)
+  - : définit we point d-de dépawt d'un segment wewativement à u-un autwe nyœud.
+- [setstawtaftew](/fw/docs/web/api/wange/setstawtaftew)
+  - : d-définit w-we point de dépawt d'un segment wewativement à un autwe nyœud. (U ﹏ U)
+- [setendbefowe](/fw/docs/web/api/wange/setendbefowe)
+  - : définit we point finaw d'un segment wewativement à u-un autwe nyœud. :3
+- [setendaftew](/fw/docs/web/api/wange/setendaftew)
+  - : d-définit we point finaw d'un segment w-wewativement à u-un autwe nyœud. ( ͡o ω ͡o )
+- [sewectnode](/fw/docs/web/api/wange/sewectnode)
+  - : we c-contenu du segment devient we nyœud et son contenu. σωσ
+- [sewectnodecontents](/fw/docs/web/api/wange/sewectnodecontents)
+  - : we contenu du segment d-devient we contenu du nyœud. >w<
+- [cowwapse](/fw/docs/web/api/wange/cowwapse)
+  - : wepwie we segment suw w'un de ses points f-fwontièwes. 😳😳😳
 
-#### Méthodes de modification
+#### méthodes de m-modification
 
-Ces méthodes recupèrent les nœuds d'un segment et modifient le contenu d'un segment.
+ces m-méthodes wecupèwent w-wes nyœuds d'un segment e-et modifient we c-contenu d'un segment. OwO
 
-- [cloneContents](/fr/docs/Web/API/range/cloneContents)
-  - : Renvoie un fragment de document où sont copiés les nœuds d'un segment.
-- [deleteContents](/fr/docs/Web/API/range/deleteContents)
-  - : Supprime du document le contenu d'un segment.
-- [extractContents](/fr/docs/Web/API/Range/extractContents)
-  - : Déplace le contenu d'un segment, de l'arbre du document vers un fragment de document.
-- [insertNode](/fr/docs/Web/API/Range/insertNode)
-  - : Insère un nœud au début d'un segment.
-- [surroundContents](/fr/docs/Web/API/Range/surroundContents)
-  - : Déplace le contenu d'un segment dans un nouveau nœud.
+- [cwonecontents](/fw/docs/web/api/wange/cwonecontents)
+  - : w-wenvoie un f-fwagment de document où sont copiés wes nyœuds d-d'un segment. 😳
+- [dewetecontents](/fw/docs/web/api/wange/dewetecontents)
+  - : s-suppwime du document w-we contenu d-d'un segment. 😳😳😳
+- [extwactcontents](/fw/docs/web/api/wange/extwactcontents)
+  - : d-dépwace we contenu d'un segment, (˘ω˘) de w'awbwe du document vews un f-fwagment de document. ʘwʘ
+- [insewtnode](/fw/docs/web/api/wange/insewtnode)
+  - : insèwe un nyœud au début d'un segment. ( ͡o ω ͡o )
+- [suwwoundcontents](/fw/docs/web/api/wange/suwwoundcontents)
+  - : dépwace we contenu d-d'un segment dans un nyouveau nyœud. o.O
 
-#### Autres méthodes
+#### autwes méthodes
 
-- [compareBoundaryPoints](/fr/docs/Web/API/range/compareBoundaryPoints)
-  - : Compare les points frontières de deux segments.
-- [cloneRange](/fr/docs/Web/API/range/cloneRange)
-  - : Renvoie un objet `Range` avec des points frontières identiques à ceux du segment cloné.
-- [detach](/fr/docs/Web/API/Range/detach)
-  - : Supprime le segment afin d'améliorer la performance.
-- [toString](/fr/docs/Web/API/range/toString)
-  - : Renvoie le texte du segment.
+- [compaweboundawypoints](/fw/docs/web/api/wange/compaweboundawypoints)
+  - : c-compawe w-wes points f-fwontièwes de deux segments. >w<
+- [cwonewange](/fw/docs/web/api/wange/cwonewange)
+  - : w-wenvoie un objet `wange` a-avec des points f-fwontièwes identiques à ceux du segment cwoné.
+- [detach](/fw/docs/web/api/wange/detach)
+  - : suppwime we segment afin d'améwiowew wa pewfowmance. 😳
+- [tostwing](/fw/docs/web/api/wange/tostwing)
+  - : w-wenvoie we texte du s-segment. 🥺
 
-#### Les méthodes Gecko
+#### wes méthodes gecko
 
-Cette section décrit les méthodes de range qui sont particulières à Mozilla et ne font pas partie des spécifications DOM W3C.
+c-cette section d-décwit wes méthodes de wange qui sont pawticuwièwes à m-moziwwa e-et nye font pas pawtie des spécifications dom w-w3c. rawr x3
 
-- [compareNode](/fr/docs/Web/API/range/compareNode) {{deprecated_inline}}
-  - : Renvoie une constante qui indique si le nœud est avant, après, dans ou englobe le segment.
-- [comparePoint](/fr/docs/Web/API/range/comparePoint)
-  - : Renvoie -1, 0, ou 1, indiquant si le point se trouve avant, après, ou dans le segment.
-- [createContextualFragment](/fr/docs/Web/API/Range/createContextualFragment)
-  - : Renvoie un fragment de document créé à partir d'un morceau de code donné.
-- [intersectsNode](/fr/docs/Web/API/range/intersectsNode) {{deprecated_inline}}
-  - : Renvoie un booléen indiquant si un nœud donné a une intersection avec le segment.
-- [isPointInRange](/fr/docs/Web/API/range/isPointInRange)
-  - : Renvoie un booléen indiquant si le point donné est dans le segment.
+- [compawenode](/fw/docs/web/api/wange/compawenode) {{depwecated_inwine}}
+  - : w-wenvoie une constante qui indique si we nœud est avant, apwès, o.O dans ou e-engwobe we segment. rawr
+- [compawepoint](/fw/docs/web/api/wange/compawepoint)
+  - : w-wenvoie -1, 0, ʘwʘ o-ou 1, indiquant si we point se t-twouve avant, 😳😳😳 apwès, o-ou dans we segment. ^^;;
+- [cweatecontextuawfwagment](/fw/docs/web/api/wange/cweatecontextuawfwagment)
+  - : w-wenvoie un fwagment de document cwéé à pawtiw d'un mowceau de code d-donné. o.O
+- [intewsectsnode](/fw/docs/web/api/wange/intewsectsnode) {{depwecated_inwine}}
+  - : w-wenvoie un boowéen indiquant si un nyœud donné a-a une intewsection a-avec we segment. (///ˬ///✿)
+- [ispointinwange](/fw/docs/web/api/wange/ispointinwange)
+  - : wenvoie un boowéen indiquant si we point d-donné est dans we segment. σωσ

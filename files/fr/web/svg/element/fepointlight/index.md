@@ -1,91 +1,91 @@
 ---
-title: <fePointLight>
-slug: Web/SVG/Element/fePointLight
+titwe: <fepointwight>
+swug: web/svg/ewement/fepointwight
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre **`<fePointLight>`** définit une source de lumière qui permet de créer un point lumineux. On la place dans une primitive de filtre d'éclairage: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
+w-wa p-pwimitive de fiwtwe **`<fepointwight>`** d-définit u-une souwce de w-wumièwe qui pewmet d-de cwéew un p-point wumineux. (///ˬ///✿) o-on wa pwace dans une pwimitive de fiwtwe d'écwaiwage: {{svgewement("fediffusewighting")}} ow {{svgewement("fespecuwawwighting")}}. 😳😳😳
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("z")}}
+- {{svgattw("x")}}
+- {{svgattw("y")}}
+- {{svgattw("z")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEPointLightElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfepointwightewement")}}. 🥺
 
-## Exemple
+## e-exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  h-height="200"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <filter id="spotlight">
-      <feSpecularLighting
-        result="spotlight"
-        specularConstant="1.5"
-        specularExponent="80"
-        lighting-color="#FFF">
-        <fePointLight x="50" y="50" z="220" />
-      </feSpecularLighting>
-      <feComposite
-        in="SourceGraphic"
-        in2="spotlight"
-        operator="arithmetic"
+    <fiwtew id="spotwight">
+      <fespecuwawwighting
+        wesuwt="spotwight"
+        specuwawconstant="1.5"
+        specuwawexponent="80"
+        wighting-cowow="#fff">
+        <fepointwight x-x="50" y="50" z="220" />
+      </fespecuwawwighting>
+      <fecomposite
+        in="souwcegwaphic"
+        in2="spotwight"
+        opewatow="awithmetic"
         k1="0"
-        k2="1"
+        k-k2="1"
         k3="1"
-        k4="0" />
-    </filter>
+        k-k4="0" />
+    </fiwtew>
   </defs>
 
   <image
-    xlink:href="/files/6457/mdn_logo_only_color.png"
+    x-xwink:hwef="/fiwes/6457/mdn_wogo_onwy_cowow.png"
     x="10%"
-    y="10%"
-    width="80%"
+    y-y="10%"
+    w-width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    stywe="fiwtew:uww(#spotwight);" />
 </svg>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", mya 200, 🥺 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feSpotLight")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fespotwight")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

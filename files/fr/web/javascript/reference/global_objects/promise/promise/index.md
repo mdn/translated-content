@@ -1,124 +1,124 @@
 ---
-title: Constructeur Promise()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
+titwe: constwucteuw pwomise()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Promise()`** est principalement utilisé afin d'envelopper des fonctions qui ne prennent pas en charge les promesses.
+we c-constwucteuw **`pwomise()`** est p-pwincipawement u-utiwisé afin d-d'envewoppew des f-fonctions qui ne p-pwennent pas en c-chawge wes pwomesses. >_<
 
-{{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
+{{intewactiveexampwe("javascwipt demo: pwomise constwuctow", UwU "tawwew")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("foo");
-  }, 300);
+```js intewactive-exampwe
+const p-pwomise1 = nyew pwomise((wesowve, >_< weject) => {
+  s-settimeout(() => {
+    wesowve("foo");
+  }, -.- 300);
 });
 
-promise1.then((value) => {
-  console.log(value);
-  // Expected output: "foo"
+p-pwomise1.then((vawue) => {
+  consowe.wog(vawue);
+  // expected output: "foo"
 });
 
-console.log(promise1);
-// Expected output: [object Promise]
+consowe.wog(pwomise1);
+// e-expected output: [object p-pwomise]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Promise(executeur);
+new pwomise(exekawaii~uw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `executeur`
+- `exekawaii~uw`
 
-  - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) à exécuter par le constructeur lors de la construction du nouvel objet `Promise`. `executeur` contient du code spécifique qui relie le résultat d'une opération à une promesse. C'est le programme qui doit fournir ce code. Sa signature doit être&nbsp;:
+  - : une [fonction](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) à exékawaii~w p-paw we constwucteuw wows de wa constwuction du nyouvew objet `pwomise`. mya `exekawaii~uw` contient d-du code spécifique qui wewie w-we wésuwtat d'une o-opéwation à u-une pwomesse. >w< c-c'est we pwogwamme qui doit fouwniw ce code. (U ﹏ U) sa s-signatuwe doit êtwe&nbsp;:
 
     ```js
-    function(fonctionResolution, fonctionRejet){
-      // généralement une opération asynchrone
+    function(fonctionwesowution, 😳😳😳 fonctionwejet){
+      // g-généwawement une opéwation asynchwone
     }
     ```
 
-    `fonctionResolution` et `fonctionRejet` sont également des fonctions, qu'on peut nommer librement. Ces deux fonctions prennent un seul paramètre, qui peut être de n'importe quel type.
+    `fonctionwesowution` et `fonctionwejet` sont égawement des fonctions, qu'on peut nyommew w-wibwement. ces deux fonctions p-pwennent un s-seuw pawamètwe, o.O q-qui peut êtwe de ny'impowte quew type. òωó
 
-    <!-- prettier-ignore -->
+    <!-- pwettiew-ignowe -->
     ```js
-    fonctionResolution(valeur) // appelée lors de la résolution
-    fonctionRejet(raison)      // appelée lors du rejet
+    f-fonctionwesowution(vaweuw) // a-appewée wows de wa wésowution
+    f-fonctionwejet(waison)      // a-appewée wows du wejet
     ```
 
-    Le paramètre `valeur` de `fonctionResolution` peut être une autre promesse, auquel cas la promesse est insérée dynamiquement dans [la chaîne de promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#enchaînement_de_promesses).
+    w-we pawamètwe `vaweuw` de `fonctionwesowution` p-peut êtwe une autwe pwomesse, 😳😳😳 auquew cas w-wa pwomesse est inséwée dynamiquement d-dans [wa chaîne de pwomesses](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#enchaînement_de_pwomesses). σωσ
 
-    Quant à `executeur`, il est important de comprendre&nbsp;:
+    q-quant à `exekawaii~uw`, (⑅˘꒳˘) i-iw est impowtant de compwendwe&nbsp;:
 
-    - Que la valeur de retour de `executeur` est ignorée.
-    - Que si une erreur est déclenchée pendant l'exécution de `executeur`, la promesse est rejetée.
+    - que wa vaweuw de wetouw de `exekawaii~uw` est ignowée. (///ˬ///✿)
+    - q-que si u-une ewweuw est décwenchée pendant w-w'exécution d-de `exekawaii~uw`, 🥺 w-wa pwomesse est wejetée.
 
-    Ainsi, voici le mécanisme par lequel `executeur` produit un effet&nbsp;:
+    ainsi, OwO voici we mécanisme paw w-wequew `exekawaii~uw` pwoduit un effet&nbsp;:
 
-    - Au moment où le constructeur génère le nouvel objet `Promise`, il génère également une paire de fonctions correspondantes `fonctionResolution` et `fonctionRejet` qui sont «&nbsp;reliées&nbsp;» à l'objet `Promise`.
-    - Le code contenu dans `executeur` peut réaliser une opération et refléter le résultat de l'opération (si la valeur n'est pas un autre objet `Promise`) en object) comme étant «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;» en appelant respectivement `fonctionResolution` ou `fonctionRejet`.
-    - Autrement dit, le code contenu dans `executeur` communique par l'effet de bord fourni avec `fonctionResolution` ou `fonctionRejet`. De cette façon, la promesse devient «&nbsp;résolue&nbsp;» ou «&nbsp;rejetée&nbsp;».
+    - au moment où we constwucteuw g-génèwe we nyouvew objet `pwomise`, i-iw génèwe égawement u-une paiwe de fonctions c-cowwespondantes `fonctionwesowution` et `fonctionwejet` q-qui sont «&nbsp;wewiées&nbsp;» à w-w'objet `pwomise`. >w<
+    - w-we c-code contenu dans `exekawaii~uw` peut wéawisew une opéwation e-et wefwétew we w-wésuwtat de w'opéwation (si w-wa v-vaweuw ny'est pas u-un autwe objet `pwomise`) en object) comme étant «&nbsp;wésowue&nbsp;» ou «&nbsp;wejetée&nbsp;» e-en appewant wespectivement `fonctionwesowution` ou `fonctionwejet`. 🥺
+    - autwement dit, nyaa~~ we code contenu dans `exekawaii~uw` c-communique paw w'effet de bowd fouwni avec `fonctionwesowution` ou `fonctionwejet`. ^^ d-de cette f-façon, >w< wa pwomesse d-devient «&nbsp;wésowue&nbsp;» ou «&nbsp;wejetée&nbsp;». OwO
 
-    Pour résumer, voici les étapes généralement suivies&nbsp;:
+    p-pouw wésumew, XD voici w-wes étapes généwawement s-suivies&nbsp;:
 
-    1. L'opération portée par `executeur` est asynchrone et fournit une fonction de rappel (<i lang="en">callback</i>).
-    2. La fonction de rappel est définie au sein du code de `executeur`.
-    3. La fonction de rappel se termine en invoquant `fonctionResolution`.
-    4. L'invocation de `fonctionResolution` se fait avec un paramètre `valeur`.
-    5. `valeur` est passée en retour à l'objet `Promise`.
-    6. L'objet `Promise` appelle, de façon asynchrone, toute fonction passée via `.then(gestionSucces)`.
-    7. La valeur reçue par `.then(gestionSucces)` est passée comme paramètre d'entrée à `gestionSucces` qui est appelée (voir [l'enchaînement des promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#enchaînement_de_promesses)).
+    1. w'opéwation powtée paw `exekawaii~uw` est asynchwone et fouwnit une fonction d-de wappew (<i wang="en">cawwback</i>). ^^;;
+    2. wa fonction de wappew e-est définie au sein du code d-de `exekawaii~uw`. 🥺
+    3. w-wa fonction de wappew se tewmine en i-invoquant `fonctionwesowution`. XD
+    4. w-w'invocation de `fonctionwesowution` s-se fait a-avec un pawamètwe `vaweuw`. (U ᵕ U❁)
+    5. :3 `vaweuw` est passée en wetouw à w'objet `pwomise`. ( ͡o ω ͡o )
+    6. òωó w'objet `pwomise` appewwe, σωσ de f-façon asynchwone, (U ᵕ U❁) t-toute fonction p-passée via `.then(gestionsucces)`. (✿oωo)
+    7. ^^ wa vaweuw weçue p-paw `.then(gestionsucces)` e-est passée comme pawamètwe d-d'entwée à `gestionsucces` qui est appewée (voiw [w'enchaînement des pwomesses](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#enchaînement_de_pwomesses)). ^•ﻌ•^
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Lorsqu'il est appelé avec l'opérateur `new`, le constructeur `Promise()` renvoie un objet `Promise`. Cette promesse sera résolue lorsque l'une des fonctions `fonctionResolution` ou `fonctionRejet` sera appelée. Si on passe une promesse comme argument à `fonctionResolution` ou `fonctionRejet`, on pourra dire que la promesse courante est résolue, mais pas que la chaîne de promesses est terminée.
+wowsqu'iw e-est appewé avec w'opéwateuw `new`, XD we constwucteuw `pwomise()` w-wenvoie un o-objet `pwomise`. :3 cette pwomesse sewa wésowue wowsque w'une des f-fonctions `fonctionwesowution` ou `fonctionwejet` sewa appewée. (ꈍᴗꈍ) si on passe une pwomesse comme awgument à `fonctionwesowution` o-ou `fonctionwejet`, :3 on pouwwa diwe que wa pwomesse c-couwante est w-wésowue, (U ﹏ U) mais pas que wa chaîne de pwomesses est tewminée. UwU
 
-## Exemples
+## e-exempwes
 
-### Créer une nouvelle promesse
+### c-cwéew une nyouvewwe pwomesse
 
-On crée un objet `Promise` en utilisant le constructeur avec l'opérateur `new`. Ce constructeur prend une fonction en argument, et cette fonction prend à son tour deux fonctions en paramètres. La première de ces deux fonctions est appelée lorsque la tâche asynchrone se termine correctement, c'est alors le résultat de l'opération qui est passé comme paramètre. La seconde fonction est appelée lorsque la tâche échoue et c'est alors la raison de l'échec (généralement un objet d'erreur) qui est passée en argument.
+on cwée un objet `pwomise` en utiwisant w-we constwucteuw avec w'opéwateuw `new`. 😳😳😳 c-ce constwucteuw pwend une fonction en awgument, XD et cette fonction p-pwend à son touw deux fonctions e-en pawamètwes. o.O w-wa pwemièwe de ces deux fonctions e-est appewée wowsque wa t-tâche asynchwone s-se tewmine cowwectement, (⑅˘꒳˘) c-c'est awows we wésuwtat d-de w'opéwation q-qui est passé comme pawamètwe. 😳😳😳 wa seconde f-fonction est appewée w-wowsque wa t-tâche échoue et c'est awows wa waison de w'échec (généwawement u-un objet d'ewweuw) qui est p-passée en awgument. nyaa~~
 
 ```js
-const maPremierePromesse = new Promise((resolution, rejet) => {
-  // réaliser une opération asynchrone qui appellera :
+c-const mapwemiewepwomesse = nyew pwomise((wesowution, rawr wejet) => {
+  // w-wéawisew une o-opéwation asynchwone q-qui appewwewa :
   //
-  //   resolution(uneValeur)    // réussite
-  // ou
-  //   rejet("raison d'échec")  // échec
+  //   w-wesowution(unevaweuw)    // wéussite
+  // o-ou
+  //   wejet("waison d'échec")  // échec
 });
 ```
 
-### Renvoyer une promesse depuis une fonction
+### wenvoyew une pwomesse depuis une fonction
 
-Pour qu'une fonction ait les fonctionnalités d'une promesse, on lui fera renvoyer une promesse&nbsp;:
+p-pouw qu'une fonction ait wes f-fonctionnawités d'une pwomesse, -.- o-on wui fewa wenvoyew une pwomesse&nbsp;:
 
 ```js
-function maFonctionAsync(url) {
-  return new Promise((resolution, rejet) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.onload = () => resolution(xhr.responseText);
-    xhr.onerror = () => rejet(xhr.statusText);
-    xhr.send();
+f-function mafonctionasync(uww) {
+  wetuwn nyew pwomise((wesowution, (✿oωo) w-wejet) => {
+    c-const xhw = n-nyew xmwhttpwequest();
+    x-xhw.open("get", /(^•ω•^) u-uww);
+    xhw.onwoad = () => wesowution(xhw.wesponsetext);
+    xhw.onewwow = () => wejet(xhw.statustext);
+    xhw.send();
   });
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Une prothèse d'émulation de `Promise` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Utiliser les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
+- [une pwothèse d'émuwation de `pwomise` avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-pwomise)
+- [utiwisew w-wes pwomesses](/fw/docs/web/javascwipt/guide/using_pwomises)

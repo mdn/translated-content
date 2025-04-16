@@ -1,68 +1,68 @@
 ---
-title: WebGLRenderingContext.enable()
-slug: Web/API/WebGLRenderingContext/enable
+titwe: webgwwendewingcontext.enabwe()
+swug: web/api/webgwwendewingcontext/enabwe
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode `WebGLRenderingContext.enable()` de l'API WebGL active des fonctionnalités WebGL particulières pour ce contexte.
+w-wa m-méthode `webgwwendewingcontext.enabwe()` d-de w'api w-webgw active d-des fonctionnawités w-webgw pawticuwièwes p-pouw c-ce contexte. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gl.enable(fon);
+void gw.enabwe(fon);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `fon`
 
-  - : Un {{domxref("GLenum")}} indiquant quelle fonctionnalité WebGL activer. Valeurs possibles :
+  - : un {{domxwef("gwenum")}} i-indiquant quewwe fonctionnawité webgw activew. ʘwʘ v-vaweuws possibwes :
 
-    | Constante                     | Description                                                                                                                                                  |
+    | constante                     | d-descwiption                                                                                                                                                  |
     | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `gl.BLEND`                    | Active le mélange des valeurs de couleur de fragment calculées. Voir {{domxref("WebGLRenderingContext.blendFunc()")}}.                                       |
-    | `gl.CULL_FACE`                | Active le masquage des polygones. Voir {{domxref("WebGLRenderingContext.cullFace()")}}.                                                                      |
-    | `gl.DEPTH_TEST`               | Active les comparaisons et les mises à jour dans le tampon de profondeur. Voir {{domxref("WebGLRenderingContext.depthFunc()")}}.                             |
-    | `gl.DITHER`                   | Active le tramage des composantes de couleur avant qu'elles ne soient écrites dans le tampon de couleur.                                                     |
-    | `gl.POLYGON_OFFSET_FILL`      | Active l'ajout d'un décalage aux valeurs de profondeur des fragments de polygone. Voir {{domxref("WebGLRenderingContext.polygonOffset()")}}.                 |
-    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Active le calcul d'une valeur de couverture temporaire déterminée par la valeur alpha.                                                                       |
-    | `gl.SAMPLE_COVERAGE`          | Active le ET de la couverture des fragments avec la valeur de couverture temporaire. Voir {{domxref("WebGLRenderingContext.sampleCoverage()")}}.             |
-    | `gl.SCISSOR_TEST`             | Active le test de détourage qui supprime les fragments se trouvant en dehors du rectangle de détourage. Voir {{domxref("WebGLRenderingContext.scissor()")}}. |
-    | `gl.STENCIL_TEST`             | Active le test et les mises à jour stencil dans le stencil buffer. Voir {{domxref("WebGLRenderingContext.stencilFunc()")}}.                                  |
+    | `gw.bwend`                    | active we méwange des vaweuws de couweuw d-de fwagment cawcuwées. (ˆ ﻌ ˆ)♡ voiw {{domxwef("webgwwendewingcontext.bwendfunc()")}}. 😳😳😳                                       |
+    | `gw.cuww_face`                | active w-we masquage d-des powygones. :3 voiw {{domxwef("webgwwendewingcontext.cuwwface()")}}. OwO                                                                      |
+    | `gw.depth_test`               | active wes compawaisons et wes mises à jouw d-dans we tampon de pwofondeuw. (U ﹏ U) voiw {{domxwef("webgwwendewingcontext.depthfunc()")}}. >w<                             |
+    | `gw.dithew`                   | active we twamage des composantes de couweuw a-avant qu'ewwes nye soient écwites d-dans we t-tampon de couweuw. (U ﹏ U)                                                     |
+    | `gw.powygon_offset_fiww`      | a-active w'ajout d-d'un décawage aux vaweuws de pwofondeuw des fwagments d-de powygone. 😳 voiw {{domxwef("webgwwendewingcontext.powygonoffset()")}}. (ˆ ﻌ ˆ)♡                 |
+    | `gw.sampwe_awpha_to_covewage` | active we c-cawcuw d'une vaweuw de couvewtuwe tempowaiwe détewminée paw wa vaweuw awpha. 😳😳😳                                                                       |
+    | `gw.sampwe_covewage`          | active w-we et de wa couvewtuwe des f-fwagments avec wa v-vaweuw de couvewtuwe t-tempowaiwe. (U ﹏ U) voiw {{domxwef("webgwwendewingcontext.sampwecovewage()")}}. (///ˬ///✿)             |
+    | `gw.scissow_test`             | active we test de détouwage q-qui suppwime wes f-fwagments se twouvant en dehows d-du wectangwe de d-détouwage. 😳 voiw {{domxwef("webgwwendewingcontext.scissow()")}}. 😳 |
+    | `gw.stenciw_test`             | active w-we test et wes mises à jouw stenciw d-dans we stenciw buffew. σωσ voiw {{domxwef("webgwwendewingcontext.stenciwfunc()")}}. rawr x3                                  |
 
-    Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
+    wows de w'utiwisation d-d'un {{domxwef("webgw2wendewingcontext", "webgw 2 context", OwO "", 1)}}, w-wes vaweuws suivantes s-sont en outwe disponibwes :
 
-    | Constante               | Description                                                                                                                                                                        |
+    | c-constante               | descwiption                                                                                                                                                                        |
     | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.RASTERIZER_DISCARD` | Les primitives sont supprimées immédiatement après l'étape de rastérisation, mais après l'étape de renvoi de transformation optionnelle. Les commandes `gl.clear()` sont ignorées. |
+    | `gw.wastewizew_discawd` | wes pwimitives sont suppwimées immédiatement apwès w'étape de wastéwisation, /(^•ω•^) m-mais apwès w-w'étape de wenvoi de twansfowmation o-optionnewwe. 😳😳😳 w-wes commandes `gw.cweaw()` s-sont ignowées. ( ͡o ω ͡o ) |
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+aucune. >_<
 
-## Exemples
-
-```js
-gl.enable(gl.DITHER);
-```
-
-Pour vérifier que cette fonctionnalité est activée, utilisez la méthode {{domxref("WebGLRenderingContext.isEnabled()")}} :
+## exempwes
 
 ```js
-gl.isEnabled(gl.DITHER);
-// true
+g-gw.enabwe(gw.dithew);
 ```
 
-## Spécifications
+pouw véwifiew que cette fonctionnawité est activée, >w< utiwisez w-wa méthode {{domxwef("webgwwendewingcontext.isenabwed()")}} :
 
-{{Specifications}}
+```js
+gw.isenabwed(gw.dithew);
+// t-twue
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- {{domxref("WebGLRenderingContext.disable()")}}
-- {{domxref("WebGLRenderingContext.isEnabled()")}}
+{{compat}}
+
+## v-voiw a-aussi
+
+- {{domxwef("webgwwendewingcontext.disabwe()")}}
+- {{domxwef("webgwwendewingcontext.isenabwed()")}}

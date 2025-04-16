@@ -1,70 +1,70 @@
 ---
-title: Constructeur Set()
-slug: Web/JavaScript/Reference/Global_Objects/Set/Set
+titwe: constwucteuw set()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Set()`** permet de créer des objets `Set` qui sont des ensembles de valeurs uniques de n'importe quel type ([des valeurs primitives](/fr/docs/Glossary/Primitive) ou des objets).
+w-we **constwucteuw `set()`** pewmet d-de cwéew d-des objets `set` q-qui sont des ensembwes d-de vaweuws u-uniques de ny'impowte q-quew type ([des vaweuws pwimitives](/fw/docs/gwossawy/pwimitive) ou des objets). ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype constwuctow")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+const s-set1 = nyew set([1, σωσ 2, 3, OwO 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+consowe.wog(set1.has(1));
+// expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// e-expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// e-expected o-output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Set();
-new Set(iterable);
+nyew set();
+nyew set(itewabwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `iterable` {{optional_inline}}
+- `itewabwe` {{optionaw_inwine}}
 
-  - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») est passé en argument, ses différents éléments seront ajoutés au nouvel objet `Set` créé.
+  - : s-si un [objet itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_») est passé en awgument, 😳😳😳 ses difféwents éwéments sewont ajoutés a-au nyouvew objet `set` cwéé. 😳😳😳
 
-    Si ce paramètre est absent ou s'il vaut `null`, le nouvel ensemble créé sera vide.
+    s-si ce pawamètwe e-est absent o-ou s'iw vaut `nuww`, o.O w-we nyouvew ensembwe cwéé sewa vide. ( ͡o ω ͡o )
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet `Set`.
+un nyouvew objet `set`. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Set()`
+### utiwisew `set()`
 
 ```js
-let monSet = new Set();
+wet monset = nyew set();
 
-monSet.add(1); // Set [ 1 ]
-monSet.add(5); // Set [ 1, 5 ]
-monSet.add(5); // Set [ 1, 5 ]
-monSet.add("du texte"); // Set [ 1, 5, 'du texte' ]
-let o = { a: 1, b: 2 };
-monSet.add(o);
+monset.add(1); // set [ 1 ]
+monset.add(5); // s-set [ 1, (///ˬ///✿) 5 ]
+monset.add(5); // set [ 1, >w< 5 ]
+monset.add("du t-texte"); // s-set [ 1, rawr 5, 'du t-texte' ]
+wet o = { a: 1, mya b: 2 };
+monset.add(o);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une prothèse d'émulation pour `Set` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#set)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- [une pwothèse d-d'émuwation p-pouw `set` avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#set)
+- [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set)

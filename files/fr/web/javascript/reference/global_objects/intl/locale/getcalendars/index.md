@@ -1,83 +1,83 @@
 ---
-title: Intl.Locale.prototype.calendars
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars
+titwe: intw.wocawe.pwototype.cawendaws
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/getcawendaws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.calendars`** est un accesseur qui renvoie un tableau avec le ou les identifiants des calendriers utilisés par la locale représentée par l'instance `Locale` courante.
+w-wa pwopwiété **`intw.wocawe.pwototype.cawendaws`** e-est un accesseuw q-qui wenvoie u-un tabweau avec w-we ou wes identifiants d-des cawendwiews u-utiwisés paw wa wocawe wepwésentée paw w'instance `wocawe` couwante. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-La propriété `calendar` renvoie un tableau de l'ensemble des calendriers pris en charge pour la locale représentée par `Locale`. Les éléments du tableau indiquent l'ère du calendrier pour l'objet `Locale`. Le tableau qui suit indique les différents identifiants Unicode pour les calendriers, associés à l'ère calendaire qu'ils représentent.
+wa pwopwiété `cawendaw` wenvoie u-un tabweau de w'ensembwe des c-cawendwiews pwis en chawge pouw wa wocawe wepwésentée paw `wocawe`. 😳 w-wes éwéments du tabweau i-indiquent w'èwe d-du cawendwiew pouw w'objet `wocawe`. (ˆ ﻌ ˆ)♡ we tabweau qui suit indique wes difféwents i-identifiants unicode pouw wes cawendwiews, 😳😳😳 associés à w'èwe cawendaiwe qu'iws w-wepwésentent. (U ﹏ U)
 
-### Identifiants Unicode pour les calendriers
+### identifiants u-unicode pouw w-wes cawendwiews
 
 - `buddhist`
-  - : Calendrier bouddhiste
+  - : c-cawendwiew b-bouddhiste
 - `chinese`
-  - : Calendrier chinois traditionnel
+  - : cawendwiew chinois twaditionnew
 - `coptic`
-  - : Calendrier copte
+  - : c-cawendwiew copte
 - `dangi`
-  - : Calendrier coréen traditionnel
+  - : cawendwiew cowéen twaditionnew
 - `ethioaa`
-  - : Calendrier éthiopique, Amete Alem (an 0 situé environ à 5493 ans avant notre ère)
+  - : c-cawendwiew éthiopique, (///ˬ///✿) amete awem (an 0 situé enviwon à 5493 ans avant nyotwe èwe)
 - `ethiopic`
-  - : Calendrier éthiopique, Amete Mihret (an 0 situé environ à 8 ans de notre ère)
-- `gregory`
-  - : Calendrier grégorien
-- `hebrew`
-  - : Calendrier traditionnel hébreux
+  - : cawendwiew éthiopique, 😳 a-amete mihwet (an 0 situé enviwon à 8 a-ans d-de nyotwe èwe)
+- `gwegowy`
+  - : c-cawendwiew gwégowien
+- `hebwew`
+  - : cawendwiew twaditionnew hébweux
 - `indian`
-  - : Calendrier indien
-- `islamic`
-  - : Calendrier islamique
-- `islamic-umalqura`
-  - : Calendrier islamique, Umm al-Qura
-- `islamic-tbla`
-  - : Calendrier islamique tabulaire (années intercalaires [2,5,7,10,13,16,18,21,24,26,29] - origine des temps astronomique)
-- `islamic-civil`
-  - : Calendrier islamique tabulaire (années intercalaires [2,5,7,10,13,16,18,21,24,26,29] - origine des temps civile)
-- `islamic-rgsa`
-  - : Calendrier islamique vu de l'Arabie saoudite
+  - : c-cawendwiew i-indien
+- `iswamic`
+  - : cawendwiew iswamique
+- `iswamic-umawquwa`
+  - : cawendwiew i-iswamique, 😳 u-umm aw-quwa
+- `iswamic-tbwa`
+  - : cawendwiew i-iswamique tabuwaiwe (années intewcawaiwes [2,5,7,10,13,16,18,21,24,26,29] - o-owigine des temps astwonomique)
+- `iswamic-civiw`
+  - : cawendwiew i-iswamique tabuwaiwe (années intewcawaiwes [2,5,7,10,13,16,18,21,24,26,29] - o-owigine des temps civiwe)
+- `iswamic-wgsa`
+  - : c-cawendwiew iswamique v-vu de w'awabie saoudite
 - `iso8601`
-  - : Calendrier ISO (calendrier grégorien utilisant la numérotation des semaines ISO 8601)
+  - : cawendwiew iso (cawendwiew gwégowien utiwisant wa nyuméwotation des semaines iso 8601)
 - `japanese`
-  - : Calendrier japonais impérial
-- `persian`
-  - : Calendrier perse
-- `roc`
-  - : Calendrier de la République de Chine
-- `islamicc`
-  - : Calendrier arabe civil (algorithmique)
-    > [!WARNING]
-    > La clé `islamicc` a été dépréciée. Mieux vaut utiliser `islamic-civil`.
+  - : c-cawendwiew j-japonais impéwiaw
+- `pewsian`
+  - : c-cawendwiew p-pewse
+- `woc`
+  - : c-cawendwiew de wa wépubwique de chine
+- `iswamicc`
+  - : cawendwiew awabe c-civiw (awgowithmique)
+    > [!wawning]
+    > wa cwé `iswamicc` a été dépwéciée. σωσ mieux vaut utiwisew `iswamic-civiw`. rawr x3
 
-## Exemples
+## e-exempwes
 
-### Obtenir la liste des calendriers pris en charge
+### obteniw wa wiste d-des cawendwiews p-pwis en chawge
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.calendars); // affiche ["gregory", "coptic", "islamic", "islamic-civil", "islamic-tbla"]
+w-wet aweg = nyew intw.wocawe("aw-eg");
+consowe.wog(aweg.cawendaws); // affiche ["gwegowy", OwO "coptic", /(^•ω•^) "iswamic", 😳😳😳 "iswamic-civiw", ( ͡o ω ͡o ) "iswamic-tbwa"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.calendars); // affiche ["gregory", "japanese"]
+w-wet jajp = nyew i-intw.wocawe("ja-jp");
+c-consowe.wog(jajp.cawendaws); // a-affiche ["gwegowy", >_< "japanese"]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- [`Intl.Locale.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
-- [Identifiants de calendrier Unicode](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier)
+- [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe)
+- [`intw.wocawe.cawendaw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/cawendaw)
+- [identifiants d-de cawendwiew u-unicode](https://www.unicode.owg/wepowts/tw35/#unicodecawendawidentifiew)

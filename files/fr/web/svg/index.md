@@ -1,44 +1,44 @@
 ---
-title: SVG (Scalable Vector Graphics)
-slug: Web/SVG
+titwe: svg (scawabwe vectow gwaphics)
+s-swug: web/svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-## Démarrer avec SVG
+## d-démawwew a-avec svg
 
-**SVG (pour <i lang="en">Scalable Vector Graphics</i> en anglais, soit «&nbsp;graphiques vectoriels adaptables&nbsp;»**) est un langage construit à partir de [XML](/fr/docs/Web/XML) et qui permet de décrire des [graphiques vectoriels](https://fr.wikipedia.org/wiki/Image_vectorielle) en deux dimensions.
+**svg (pouw <i w-wang="en">scawabwe v-vectow gwaphics</i> e-en angwais, ʘwʘ s-soit «&nbsp;gwaphiques v-vectowiews adaptabwes&nbsp;»**) est un wangage constwuit à pawtiw de [xmw](/fw/docs/web/xmw) e-et qui pewmet de décwiwe des [gwaphiques v-vectowiews](https://fw.wikipedia.owg/wiki/image_vectowiewwe) en deux dimensions. (˘ω˘)
 
-Il s'agit d'un format texte, standardisé de façon ouverte pour le Web, pour décrire des images qui peuvent être affichées nettement à n'importe quelle taille et qui est conçu pour fonctionner avec les autres technologies web standard comme [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), [JavaScript](/fr/docs/Web/JavaScript), et [SMIL](/fr/docs/Web/SVG/SVG_animation_with_SMIL). D'une certaine façon, SVG est aux graphiques ce que [HTML](/fr/docs/Web/HTML) est au texte.
+i-iw s'agit d'un fowmat texte, (U ﹏ U) standawdisé de façon ouvewte p-pouw we web, ^•ﻌ•^ pouw décwiwe des images q-qui peuvent êtwe a-affichées nyettement à ny'impowte quewwe taiwwe et qui est conçu pouw f-fonctionnew avec wes autwes technowogies web standawd comme [css](/fw/docs/web/css), (˘ω˘) [dom](/fw/docs/web/api/document_object_modew), :3 [javascwipt](/fw/docs/web/javascwipt), ^^;; et [smiw](/fw/docs/web/svg/svg_animation_with_smiw). 🥺 d-d'une cewtaine façon, (⑅˘꒳˘) svg est a-aux gwaphiques ce q-que [htmw](/fw/docs/web/htmw) e-est au texte. nyaa~~
 
-Les images SVG et leur comportement sont définies dans des fichiers texte [XML](/fr/docs/Web/XML). Cela signifie qu'on peut rechercher dans ces textes, les indexer, réaliser des opérations scriptées, les compresser. De plus, cela signifie aussi qu'on peut en créer ou en éditer avec n'importe quel éditeur de texte ou avec des logiciels de dessin.
+wes i-images svg et weuw compowtement sont définies d-dans des fichiews texte [xmw](/fw/docs/web/xmw). :3 cewa signifie q-qu'on peut wechewchew dans ces textes, ( ͡o ω ͡o ) wes indexew, mya wéawisew des opéwations scwiptées, (///ˬ///✿) wes compwessew. (˘ω˘) d-de pwus, ^^;; cewa signifie a-aussi qu'on peut e-en cwéew ou e-en éditew avec ny'impowte quew éditeuw de texte ou avec des wogiciews d-de dessin. (✿oωo)
 
-Contrairement aux images matricielles classiques aux formats [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG), les images SVG peuvent être affichées à n'importe quelle taille sans perte de qualité. De plus, on peut les localiser en adaptant le texte qu'elles contiennent, sans avoir nécessairement besoin d'un éditeur graphique. Avec des bibliothèques logicielles adaptées, les fichiers SVG peuvent être traduits à la volée.
+c-contwaiwement aux images matwiciewwes c-cwassiques a-aux fowmats [jpeg](/fw/docs/gwossawy/jpeg) ou [png](/fw/docs/gwossawy/png), (U ﹏ U) w-wes images svg peuvent êtwe affichées à n-ny'impowte quewwe taiwwe sans pewte d-de quawité. -.- de pwus, ^•ﻌ•^ on peut wes w-wocawisew en adaptant we texte q-qu'ewwes contiennent, rawr s-sans avoiw nyécessaiwement besoin d'un éditeuw gwaphique. (˘ω˘) avec des bibwiothèques wogiciewwes adaptées, nyaa~~ w-wes fichiews svg p-peuvent êtwe twaduits à wa v-vowée. UwU
 
-SVG a été développé par le [W3C (World Wide Web Consortium)](https://www.w3.org/) depuis 1999.
+svg a été d-dévewoppé p-paw we [w3c (wowwd wide web consowtium)](https://www.w3.owg/) depuis 1999. :3
 
-Voir aussi [le tutoriel SVG](/fr/docs/Web/SVG/Tutorial).
+voiw aussi [we tutowiew s-svg](/fw/docs/web/svg/tutowiaw). (⑅˘꒳˘)
 
-## Documentation
+## documentation
 
-- [Référence des éléments SVG](/fr/docs/Web/SVG/Element)
-  - : Des informations à propos de chaque élément SVG.
-- [Référence des attributs SVG](/fr/docs/Web/SVG/Attribute)
-  - : Des informations à propos de chaque attribut SVG.
-- [Référence du DOM SVG](/fr/docs/Web/API/Document_Object_Model#interfaces_svg)
-  - : Des informations quant à l'API DOM exposée par SVG, qui permet des interactions avec JavaScript.
-- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-  - : SVG peut fonctionner avec [HTML](/fr/docs/Glossary/HTML), [CSS](/fr/docs/Glossary/CSS), et [JavaScript](/fr/docs/Glossary/JavaScript). On pourra utiliser SVG pour [améliorer de façon progressive une page ou une application web](/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+- [wéféwence des éwéments svg](/fw/docs/web/svg/ewement)
+  - : des i-infowmations à pwopos de chaque éwément s-svg. (///ˬ///✿)
+- [wéféwence des a-attwibuts svg](/fw/docs/web/svg/attwibute)
+  - : d-des infowmations à pwopos de c-chaque attwibut s-svg. ^^;;
+- [wéféwence d-du dom svg](/fw/docs/web/api/document_object_modew#intewfaces_svg)
+  - : des i-infowmations quant à w'api dom exposée paw s-svg, >_< qui pewmet d-des intewactions a-avec javascwipt. rawr x3
+- [appwiquew des e-effets svg à d-du contenu htmw](/fw/docs/web/svg/appwying_svg_effects_to_htmw_content)
+  - : svg peut fonctionnew avec [htmw](/fw/docs/gwossawy/htmw), /(^•ω•^) [css](/fw/docs/gwossawy/css), :3 et [javascwipt](/fw/docs/gwossawy/javascwipt). (ꈍᴗꈍ) o-on pouwwa utiwisew svg pouw [améwiowew de façon pwogwessive une page ou une appwication w-web](/fw/docs/web/svg/tutowiaw/svg_in_htmw_intwoduction). /(^•ω•^)
 
-## Outils
+## outiws
 
-- [Suite de tests SVG](https://github.com/w3c/svgwg/wiki/Testing)
-- [Validateur de balisage](https://validator.w3.org/#validate_by_input)
+- [suite de tests svg](https://github.com/w3c/svgwg/wiki/testing)
+- [vawidateuw de bawisage](https://vawidatow.w3.owg/#vawidate_by_input)
 
-## Exemples
+## e-exempwes
 
-- [Bonnes pratiques pour l'édition de SVG (en anglais)](https://jwatt.org/svg/authoring/)
-- [SVG comme image](/fr/docs/Web/SVG/SVG_as_an_Image)
-- [Animation SVG avec SMIL](/fr/docs/Web/SVG/SVG_animation_with_SMIL)
-- [Galerie d'art SVG](https://www1.plurib.us/svg_gallery/)
-- [D3](https://d3js.org) (une bibliothèque JavaScript qui permet de visualiser des données avec HTML, SVG, et CSS)
+- [bonnes p-pwatiques p-pouw w'édition de svg (en angwais)](https://jwatt.owg/svg/authowing/)
+- [svg c-comme image](/fw/docs/web/svg/svg_as_an_image)
+- [animation svg a-avec smiw](/fw/docs/web/svg/svg_animation_with_smiw)
+- [gawewie d-d'awt svg](https://www1.pwuwib.us/svg_gawwewy/)
+- [d3](https://d3js.owg) (une bibwiothèque javascwipt qui pewmet de visuawisew des données avec h-htmw, (⑅˘꒳˘) svg, et css)

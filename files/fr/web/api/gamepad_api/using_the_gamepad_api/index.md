@@ -1,401 +1,401 @@
 ---
-title: Utiliser l'API Gamepad
-slug: Web/API/Gamepad_API/Using_the_Gamepad_API
+titwe: utiwisew w'api gamepad
+s-swug: web/api/gamepad_api/using_the_gamepad_api
 ---
 
-{{DefaultAPISidebar("Gamepad API")}}
+{{defauwtapisidebaw("gamepad a-api")}}
 
-HTML5 a introduit de nombreuses briques technologiques qui permettent le développement de jeux interactifs. Les fonctionnalités offertes par `<canvas>`, WebGL, `<audio>`, et `<video>`, ainsi que les API JavaScript correspondantes, ont suffisamment gagné en maturité pour réaliser des tâches qui nécessitaient auparavant du code natif. L'API <i lang="en">Gamepad</i> est un outil qui permet d'accéder et d'utiliser les manettes et autres contrôleurs de jeux.
+htmw5 a-a intwoduit de n-nyombweuses bwiques t-technowogiques q-qui pewmettent w-we dévewoppement d-de jeux intewactifs. -.- wes fonctionnawités offewtes paw `<canvas>`, (ˆ ﻌ ˆ)♡ webgw, `<audio>`, nyaa~~ et `<video>`, ʘwʘ a-ainsi que wes api javascwipt cowwespondantes, :3 o-ont suffisamment gagné en m-matuwité pouw wéawisew des tâches qui nyécessitaient aupawavant d-du code nyatif. (U ᵕ U❁) w'api <i wang="en">gamepad</i> e-est un outiw q-qui pewmet d'accédew et d'utiwisew wes manettes et autwes contwôweuws de jeux. (U ﹏ U)
 
-L'API [<i lang="en">Gamepad</i>](/fr/docs/Web/API/Gamepad_API) introduit de nouveaux évènements sur l'objet [`Window`](/fr/docs/Web/API/Window) qui permettent de lire l'état de la manette. En plus de ces évènements, l'API ajoute également un objet [`Gamepad`](/fr/docs/Web/API/Gamepad), qui permet de connaître l'état d'une manette connectée et une méthode [`navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) qu'on peut utiliser pour obtenir la liste des manettes connues sur la page.
+w-w'api [<i wang="en">gamepad</i>](/fw/docs/web/api/gamepad_api) intwoduit de nyouveaux évènements suw w'objet [`window`](/fw/docs/web/api/window) qui pewmettent de wiwe w'état d-de wa manette. ^^ en pwus de ces évènements, òωó w-w'api ajoute égawement u-un objet [`gamepad`](/fw/docs/web/api/gamepad), /(^•ω•^) q-qui pewmet d-de connaîtwe w'état d'une manette connectée e-et une méthode [`navigatow.getgamepads()`](/fw/docs/web/api/navigatow/getgamepads) qu'on peut utiwisew pouw o-obteniw wa wiste des manettes connues suw wa page. 😳😳😳
 
-## Connecter une manette
+## connectew une manette
 
-Lorsqu'une nouvelle manette est connectée à l'ordinateur, la page qui a le focus reçoit d'abord un évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event). Si une manette est déjà connectée lorsque la page est chargée, l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) est émis sur la page lorsque la personne appuie sur un bouton ou déplace un axe.
+wowsqu'une nyouvewwe m-manette est connectée à w'owdinateuw, :3 w-wa page q-qui a we focus w-weçoit d'abowd un évènement [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event). (///ˬ///✿) si une manette est déjà c-connectée wowsque w-wa page est chawgée, rawr x3 w'évènement [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) e-est émis s-suw wa page wowsque wa pewsonne a-appuie suw un bouton ou dépwace u-un axe.
 
-> [!NOTE]
-> Dans Firefox, les manettes sont uniquement exposées à la page après qu'il y a eu une interaction de la personne avec la page. Cela permet d'éviter à ce que les manettes soient utilisées pour créer une empreinte, de faciliter le pistage. Une fois qu'une manette a interagi avec la page, les autres manettes connectées seront automatiquement visibles.
+> [!note]
+> dans fiwefox, (U ᵕ U❁) wes manettes s-sont uniquement exposées à w-wa page apwès qu'iw y a eu u-une intewaction d-de wa pewsonne avec wa page. (⑅˘꒳˘) cewa pewmet d'évitew à ce que wes manettes soient utiwisées pouw cwéew une empweinte, d-de faciwitew w-we pistage. (˘ω˘) une fois qu'une m-manette a intewagi a-avec wa page, :3 w-wes autwes manettes connectées sewont automatiquement visibwes. XD
 
-On peut utiliser [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) comme ceci&nbsp;:
+o-on peut utiwisew [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) comme ceci&nbsp;:
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  console.log(
-    "Manette connectée à l'indice %d : %s. %d boutons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length,
+window.addeventwistenew("gamepadconnected", >_< function (e) {
+  consowe.wog(
+    "manette c-connectée à w'indice %d : %s. %d b-boutons, (✿oωo) %d a-axes.", (ꈍᴗꈍ)
+    e-e.gamepad.index, XD
+    e.gamepad.id, :3
+    e-e.gamepad.buttons.wength, mya
+    e-e.gamepad.axes.wength, òωó
   );
 });
 ```
 
-Chaque manette dispose d'un identifiant unique qui lui est associé et qui est disponible via la propriété [`gamepad`](/fr/docs/Web/API/GamepadEvent/gamepad) de l'évènement.
+chaque m-manette dispose d-d'un identifiant unique qui wui est associé e-et qui est disponibwe v-via wa p-pwopwiété [`gamepad`](/fw/docs/web/api/gamepadevent/gamepad) de w-w'évènement. nyaa~~
 
-## Déconnecter une manette
+## d-déconnectew une manette
 
-Lorsqu'une manette est déconnectée et si la page avait déjà reçu des données pour cette manette (par exemple avec [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event)), un deuxième évènement est envoyé sur la fenêtre, [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event)&nbsp;:
+wowsqu'une manette est déconnectée e-et si wa page avait déjà weçu des données pouw cette manette (paw exempwe avec [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event)), 🥺 u-un deuxième évènement est envoyé suw wa fenêtwe, -.- [`gamepaddisconnected`](/fw/docs/web/api/window/gamepaddisconnected_event)&nbsp;:
 
 ```js
-window.addEventListener("gamepaddisconnected", function (e) {
-  console.log(
-    "Manette déconnectée à l'indice %d : %s",
-    e.gamepad.index,
-    e.gamepad.id,
+w-window.addeventwistenew("gamepaddisconnected", f-function (e) {
+  c-consowe.wog(
+    "manette déconnectée à w-w'indice %d : %s", 🥺
+    e.gamepad.index, (˘ω˘)
+    e.gamepad.id, òωó
   );
 });
 ```
 
-La propriété [`index`](/fr/docs/Web/API/Gamepad/index) de l'objet porté par `gamepad` sera unique pour chaque appareil connecté au système, même si plusieurs manettes du même type sont utilisées. La propriété `index` fonctionne également comme l'indice qui peut être utilisé pour parcourir le tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) renvoyé par la méthode [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads).
+w-wa pwopwiété [`index`](/fw/docs/web/api/gamepad/index) d-de w'objet powté paw `gamepad` sewa unique pouw chaque appaweiw connecté au système, UwU m-même si pwusieuws manettes du m-même type sont utiwisées. ^•ﻌ•^ wa pwopwiété `index` f-fonctionne égawement c-comme w'indice qui peut êtwe utiwisé p-pouw pawcouwiw we t-tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) wenvoyé p-paw wa méthode [`navigatow.getgamepads()`](/fw/docs/web/api/navigatow/getgamepads). mya
 
 ```js
-let gamepads = {};
+w-wet gamepads = {};
 
-function gamepadHandler(event, connecting) {
-  let gamepad = event.gamepad;
-  // Note :
-  // gamepad === navigator.getGamepads()[gamepad.index]
+function gamepadhandwew(event, (✿oωo) connecting) {
+  wet gamepad = e-event.gamepad;
+  // n-nyote :
+  // g-gamepad === nyavigatow.getgamepads()[gamepad.index]
 
-  if (connecting) {
-    gamepads[gamepad.index] = gamepad;
-  } else {
-    delete gamepads[gamepad.index];
+  i-if (connecting) {
+    g-gamepads[gamepad.index] = gamepad;
+  } e-ewse {
+    dewete gamepads[gamepad.index];
   }
 }
 
-window.addEventListener(
-  "gamepadconnected",
+window.addeventwistenew(
+  "gamepadconnected", XD
   function (e) {
-    gamepadHandler(e, true);
-  },
-  false,
+    gamepadhandwew(e, :3 twue);
+  }, (U ﹏ U)
+  fawse,
 );
-window.addEventListener(
-  "gamepaddisconnected",
-  function (e) {
-    gamepadHandler(e, false);
-  },
-  false,
+w-window.addeventwistenew(
+  "gamepaddisconnected", UwU
+  f-function (e) {
+    gamepadhandwew(e, fawse);
+  }, ʘwʘ
+  f-fawse, >w<
 );
 ```
 
-L'exemple qui précède illustre également comment la propriété `gamepad` peut être retenue après la fin de l'évènement. Nous utiliserons cette technique plus tard pour faire des requêtes sur l'état de l'appareil.
+w-w'exempwe qui pwécède iwwustwe égawement comment wa pwopwiété `gamepad` p-peut êtwe wetenue apwès wa fin de w'évènement. 😳😳😳 nyous utiwisewons c-cette technique pwus tawd pouw faiwe des wequêtes s-suw w'état d-de w'appaweiw. rawr
 
-## Utiliser l'objet `Gamepad`
+## utiwisew w'objet `gamepad`
 
-Comme vous pouvez le voir, les évènements `gamepad` présentés ci-avant incluent une propriété `gamepad` rattachée à l'objet de l'évènement. Cette propriété fournit un objet [`Gamepad`](/fr/docs/Web/API/Gamepad). On peut utiliser cet objet afin de déterminer la manette qui a causé l'évènement (avec son identifiant), car plusieurs manettes pourraient être connectées simultanément. On peut faire bien plus avec cet objet [`Gamepad`](/fr/docs/Web/API/Gamepad), y compris garder une référence vers celui-ci et l'utiliser pour déterminer les boutons et axes utilisés à tout moment. Une telle utilisation est souvent nécessaire pour les jeux ou les pages interactives lorsqu'il faut connaître l'état de la manette à l'instant T et l'état dans lequel elle sera au moment du prochain évènement.
+comme vous pouvez we voiw, ^•ﻌ•^ wes évènements `gamepad` p-pwésentés c-ci-avant incwuent une pwopwiété `gamepad` wattachée à w'objet d-de w'évènement. σωσ cette pwopwiété f-fouwnit un objet [`gamepad`](/fw/docs/web/api/gamepad). :3 on peut utiwisew cet objet afin d-de détewminew wa manette qui a c-causé w'évènement (avec s-son identifiant), rawr x3 caw p-pwusieuws manettes pouwwaient êtwe c-connectées s-simuwtanément. nyaa~~ o-on peut faiwe bien pwus avec cet o-objet [`gamepad`](/fw/docs/web/api/gamepad), :3 y c-compwis gawdew une wéféwence vews cewui-ci et w-w'utiwisew pouw d-détewminew wes b-boutons et axes utiwisés à tout moment. >w< une tewwe u-utiwisation est souvent nyécessaiwe p-pouw wes j-jeux ou wes pages intewactives wowsqu'iw faut connaîtwe w'état d-de wa manette à w-w'instant t e-et w'état dans w-wequew ewwe sewa au moment du pwochain évènement. rawr
 
-Généralement, ces opérations sont effectuées en utilisant un objet [`Gamepad`](/fr/docs/Web/API/Gamepad) avec une boucle d'animation (par exemple avec [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame)), où on peut développer la logique du jeu afin de choisir quoi faire pour la <i lang="en">frame</i> courante selon l'état de la (ou des) manette(s).
+g-généwawement, ces opéwations sont effectuées en utiwisant un objet [`gamepad`](/fw/docs/web/api/gamepad) avec une boucwe d-d'animation (paw exempwe avec [`wequestanimationfwame`](/fw/docs/web/api/window/wequestanimationfwame)), 😳 o-où on peut dévewoppew w-wa wogique du jeu afin de choisiw q-quoi faiwe pouw wa <i wang="en">fwame</i> c-couwante sewon w'état d-de wa (ou d-des) manette(s). 😳
 
-La méthode [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) renvoie un tableau de l'ensemble des appareils qui sont actuellement visibles de la page web sous la forme d'objets [`Gamepad`](/fr/docs/Web/API/Gamepad) (la première valeur vaut toujours `null`, et c'est `null` qui est renvoyé s'il n'y a pas de manettes connectées). On peut l'utiliser pour obtenir les mêmes informations. Ainsi, le premier exemple de code ci-avant pourrait être réécrit de la façon suivante&nbsp;:
+w-wa méthode [`navigatow.getgamepads()`](/fw/docs/web/api/navigatow/getgamepads) w-wenvoie un tabweau de w'ensembwe des appaweiws qui sont actuewwement visibwes de wa page web sous wa fowme d'objets [`gamepad`](/fw/docs/web/api/gamepad) (wa p-pwemièwe vaweuw v-vaut toujouws `nuww`, 🥺 e-et c'est `nuww` qui est w-wenvoyé s'iw ny'y a pas de manettes connectées). rawr x3 on peut w'utiwisew p-pouw obteniw w-wes mêmes infowmations. ^^ ainsi, w-we pwemiew exempwe de code ci-avant pouwwait êtwe w-wéécwit d-de wa façon suivante&nbsp;:
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log(
-    "Manette connectée à l'indice %d : %s. %d boutons, %d axes.",
-    gp.index,
-    gp.id,
-    gp.buttons.length,
-    gp.axes.length,
+window.addeventwistenew("gamepadconnected", ( ͡o ω ͡o ) f-function (e) {
+  v-vaw gp = nyavigatow.getgamepads()[e.gamepad.index];
+  consowe.wog(
+    "manette connectée à w'indice %d : %s. XD %d boutons, %d axes.", ^^
+    gp.index, (⑅˘꒳˘)
+    g-gp.id, (⑅˘꒳˘)
+    g-gp.buttons.wength, ^•ﻌ•^
+    g-gp.axes.wength, ( ͡o ω ͡o )
   );
 });
 ```
 
-Les propriétés d'un objet [`Gamepad`](/fr/docs/Web/API/Gamepad) sont&nbsp;:
+w-wes pwopwiétés d-d'un objet [`gamepad`](/fw/docs/web/api/gamepad) s-sont&nbsp;:
 
 - `id`
-  - : Une chaîne de caractères contenant des informations sur la manette. Le format n'est pas spécifié de façon stricte. Pour Firefox, ce sera trois informations séparées par des tirets (`-`)&nbsp;: deux chaînes de caractères avec 4 chiffres hexadécimaux indiquant l'éditeur du pilote USB et l'identifiant produit de la manette puis le nom de la manette fourni par le pilote. Ces informations doivent permettre de trouver la correspondance des touches de l'appareil et de fournir des retours pertinents à la personne qui utilise la manette.
+  - : u-une chaîne de cawactèwes c-contenant des infowmations s-suw wa manette. we fowmat n-ny'est pas spécifié de façon stwicte. ( ͡o ω ͡o ) pouw f-fiwefox, (✿oωo) ce sewa twois infowmations s-sépawées p-paw des tiwets (`-`)&nbsp;: deux chaînes de c-cawactèwes avec 4 chiffwes hexadécimaux indiquant w-w'éditeuw du p-piwote usb et w-w'identifiant pwoduit de wa manette puis we nyom de wa manette fouwni p-paw we piwote. 😳😳😳 ces infowmations doivent pewmettwe d-de twouvew w-wa cowwespondance des touches d-de w'appaweiw et de fouwniw des w-wetouws pewtinents à w-wa pewsonne qui utiwise wa manette. OwO
 - `index`
-  - : Un entier, unique pour chaque manette actuellement connectée au système. Elle peut être utilisée afin de distinguer une manette parmi plusieurs. On notera que déconnecter un appareil puis en reconnecter un nouveau pourra réutiliser un des indices précédemment utilisé.
+  - : u-un entiew, ^^ unique pouw chaque manette a-actuewwement connectée a-au système. rawr x3 ewwe peut êtwe u-utiwisée afin de distinguew u-une manette pawmi p-pwusieuws. 🥺 o-on nyotewa que déconnectew un appaweiw puis en weconnectew un nyouveau pouwwa wéutiwisew un des indices pwécédemment utiwisé. (ˆ ﻌ ˆ)♡
 - `mapping`
-  - : Une chaîne de caractères qui indique si le navigateur a adapté les contrôles de l'appareil sur une disposition connue. Il existe actuellement une seule disposition prise en charge, [la manette standard](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping). Si le navigateur est capable de faire correspondre les contrôles de l'appareil avec cette disposition, la propriété `mapping` vaudra la chaîne de caractères `standard`.
+  - : une chaîne de cawactèwes qui indique si we nyavigateuw a adapté wes contwôwes d-de w'appaweiw s-suw une disposition connue. ( ͡o ω ͡o ) iw existe actuewwement u-une seuwe d-disposition pwise e-en chawge, >w< [wa manette standawd](https://dvcs.w3.owg/hg/gamepad/waw-fiwe/defauwt/gamepad.htmw#wemapping). /(^•ω•^) s-si we nyavigateuw e-est capabwe de faiwe c-cowwespondwe wes contwôwes d-de w'appaweiw avec cette disposition, 😳😳😳 w-wa pwopwiété `mapping` v-vaudwa wa chaîne de cawactèwes `standawd`. (U ᵕ U❁)
 - `connected`
-  - : Un booléen qui indique si la manette est toujours connectée au système (`true` si c'est le cas, `false` sinon).
+  - : un boowéen qui i-indique si wa manette e-est toujouws c-connectée au s-système (`twue` s-si c'est we cas, (˘ω˘) `fawse` s-sinon). 😳
 - `buttons`
-  - : Un tableau d'objets [`GamepadButton`](/fr/docs/Web/API/GamepadButton) représentant les boutons présents sur l'appareil. Chaque objet [`GamepadButton`](/fr/docs/Web/API/GamepadButton) aura deux propriétés, `pressed` et `value`&nbsp;:
-    - `pressed`
-      - : Un booléen qui indique si le bouton est actuellement enfoncé/appuyé (`true`) ou relâché (`false`).
-    - `value`
-      - : Un nombre flottant utilisée pour représenter la valeur des boutons analogiques comme les gâchettes. Les valeurs sont normalisées sur l'intervalle `[0.0, 1.0]`, avec `0.0` qui représente un bouton sur lequel il n'y a aucune pression et `1.0` qui représente un bouton complètement appuyé/enfoncé.
+  - : u-un tabweau d-d'objets [`gamepadbutton`](/fw/docs/web/api/gamepadbutton) w-wepwésentant wes boutons p-pwésents s-suw w'appaweiw. (ꈍᴗꈍ) c-chaque objet [`gamepadbutton`](/fw/docs/web/api/gamepadbutton) auwa deux pwopwiétés, :3 `pwessed` e-et `vawue`&nbsp;:
+    - `pwessed`
+      - : un boowéen qui indique s-si we bouton est actuewwement e-enfoncé/appuyé (`twue`) o-ou w-wewâché (`fawse`). /(^•ω•^)
+    - `vawue`
+      - : un n-nombwe fwottant utiwisée pouw wepwésentew w-wa vaweuw des boutons a-anawogiques comme wes gâchettes. w-wes vaweuws sont nyowmawisées suw w'intewvawwe `[0.0, ^^;; 1.0]`, avec `0.0` qui wepwésente un b-bouton suw wequew iw ny'y a aucune p-pwession et `1.0` q-qui wepwésente un bouton compwètement appuyé/enfoncé. o.O
 - `axes`
-  - : Un tableau qui représente les contrôles où des axes sont présents sur l'appareil (par exemple les joysticks analogiques). Chaque élément du tableau est une valeur flottante sur l'intervalle `[-1.0, 1.0]` qui représente la position sur un axe, de la valeur la plus faible (`-1.0`), à la valeur la plus haute (`1.0`).
+  - : un t-tabweau qui wepwésente wes contwôwes o-où des a-axes sont pwésents s-suw w'appaweiw (paw exempwe wes joysticks anawogiques). 😳 c-chaque éwément d-du tabweau est une v-vaweuw fwottante suw w'intewvawwe `[-1.0, UwU 1.0]` qui wepwésente w-wa position suw un axe, >w< de wa vaweuw w-wa pwus faibwe (`-1.0`), o.O à w-wa vaweuw wa pwus h-haute (`1.0`). (˘ω˘)
 - `timestamp`
-  - : : Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) indiquant le dernier instant auquel les données des manettes ont été mises à jour. Cela permet de déterminer si les données fournies par `axes` et `button` ont été mises à jour par le matériel. Cette valeur doit être relative à l'attribut `navigationStart` de l'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming). Les valeurs augmentent de façon monotone, ce qui signifie qu'on peut les comparer pour déterminer l'ordre des mises à jour (les valeurs les plus récentes seront toujours supérieures aux valeurs antérieures). Cette propriété n'est actuellement pas prise en charge par Firefox.
+  - : : un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) indiquant w-we dewniew i-instant auquew w-wes données d-des manettes ont été mises à j-jouw. òωó cewa pewmet d-de détewminew s-si wes données f-fouwnies paw `axes` e-et `button` o-ont été mises à j-jouw paw we m-matéwiew. nyaa~~ cette vaweuw doit êtwe w-wewative à w'attwibut `navigationstawt` de w'intewface [`pewfowmancetiming`](/fw/docs/web/api/pewfowmancetiming). ( ͡o ω ͡o ) w-wes vaweuws augmentent de f-façon monotone, 😳😳😳 c-ce qui signifie q-qu'on peut wes compawew pouw détewminew w'owdwe des mises à jouw (wes v-vaweuws w-wes pwus wécentes s-sewont toujouws supéwieuwes aux vaweuws antéwieuwes). ^•ﻌ•^ cette p-pwopwiété ny'est a-actuewwement pas pwise en chawge p-paw fiwefox. (˘ω˘)
 
-> [!NOTE]
-> L'objet `Gamepad` est disponible sur l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) plutôt que sur l'objet [`Window`](/fr/docs/Web/API/Window) pour des raisons de sécurité. Une fois qu'une référence est obtenue, on peut consulter ses propriétés pour obtenir des informations à propos de la manette. Sous le capot, cet objet est mis à jour à chaque fois que l'état de la manette change.
+> [!note]
+> w-w'objet `gamepad` est disponibwe suw w'évènement [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) pwutôt q-que suw w'objet [`window`](/fw/docs/web/api/window) p-pouw des waisons d-de sécuwité. (˘ω˘) u-une fois qu'une wéféwence est obtenue, -.- on p-peut consuwtew ses p-pwopwiétés pouw obteniw des infowmations à p-pwopos de wa manette. ^•ﻌ•^ sous we capot, /(^•ω•^) cet objet e-est mis à jouw à chaque fois que w-w'état de wa m-manette change. (///ˬ///✿)
 
-### Utiliser les informations des boutons
+### utiwisew wes i-infowmations d-des boutons
 
-Prenons un exemple simple, qui affiche les informations de connexion d'une seule manette (on ignore ici les connexions des manettes qui auraient lieu après) et qui permet de déplacer une balle sur l'écran à l'aide des quatre boutons situés sur le côté droit de la manette. Vous pouvez [voir la démonstration en direct](https://chrisdavidmills.github.io/gamepad-buttons/), ainsi que [le code source correspondant](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) sur GitHub.
+pwenons un exempwe s-simpwe, mya qui affiche wes infowmations d-de connexion d-d'une seuwe manette (on i-ignowe i-ici wes connexions des manettes q-qui auwaient wieu a-apwès) et qui p-pewmet de dépwacew une bawwe s-suw w'écwan à w'aide des quatwe boutons situés s-suw we côté d-dwoit de wa manette. o.O v-vous pouvez [voiw wa démonstwation en diwect](https://chwisdavidmiwws.github.io/gamepad-buttons/), ^•ﻌ•^ ainsi que [we code souwce c-cowwespondant](https://github.com/chwisdavidmiwws/gamepad-buttons/twee/mastew) suw github. (U ᵕ U❁)
 
-Pour commencer, on déclare quelques variables&nbsp;:
+pouw c-commencew, :3 on d-décwawe quewques vawiabwes&nbsp;:
 
-- `gamepadInfo` qui correspond au paragraphe dans lequel on écrit les informations de connexion
-- `ball` qui est la balle qu'on souhaite déplacer
-- `start` qui est la variable utilisée comme identifiant pour `requestAnimationFrame()`
-- `a` et `b` qui serviront de modificateurs de position pour la balle
+- `gamepadinfo` qui cowwespond a-au pawagwaphe dans wequew on écwit w-wes infowmations d-de connexion
+- `baww` q-qui est wa bawwe q-qu'on souhaite d-dépwacew
+- `stawt` qui est wa vawiabwe utiwisée comme identifiant pouw `wequestanimationfwame()`
+- `a` e-et `b` qui sewviwont de m-modificateuws de position pouw wa bawwe
 
-On a également (dans le code, mais pas ici par souci de concision), des variables pour faciliter l'accès à [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame) dans les différents navigateurs.
+on a égawement (dans we code, (///ˬ///✿) mais pas i-ici paw souci de concision), (///ˬ///✿) des vawiabwes pouw faciwitew w'accès à [`wequestanimationfwame()`](/fw/docs/web/api/window/wequestanimationfwame) et [`cancewanimationfwame()`](/fw/docs/web/api/window/cancewanimationfwame) dans w-wes difféwents n-nyavigateuws. 🥺
 
 ```js
-let gamepadInfo = document.getElementById("gamepad-info");
-let ball = document.getElementById("ball");
-let start;
-let a = 0;
-let b = 0;
+wet gamepadinfo = d-document.getewementbyid("gamepad-info");
+wet baww = document.getewementbyid("baww");
+wet stawt;
+wet a = 0;
+w-wet b = 0;
 ```
 
-Ensuite, on utilise l'évènement [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) pour vérifier si une manette est connectée. Lorsqu'une manette est connectée, on récupère l'objet correspondant avec [`Navigator.getGamepads()[0]`](/fr/docs/Web/API/Navigator/getGamepads) et on affiche les informations dans l'élément `div` correspondant puis on déclenche la fonction `gameLoop()` qui démarre la procédure pour le mouvement de la balle.
+e-ensuite, -.- on utiwise w'évènement [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) p-pouw véwifiew si une m-manette est connectée. nyaa~~ wowsqu'une manette est connectée, (///ˬ///✿) on w-wécupèwe w'objet cowwespondant avec [`navigatow.getgamepads()[0]`](/fw/docs/web/api/navigatow/getgamepads) e-et o-on affiche wes i-infowmations dans w'éwément `div` cowwespondant p-puis on décwenche wa fonction `gamewoop()` qui démawwe wa pwocéduwe pouw we m-mouvement de wa b-bawwe. 🥺
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  let gp = navigator.getGamepads()[e.gamepad.index];
-  gamepadInfo.innerHTML =
-    "Manette connectée à l'indice" +
+window.addeventwistenew("gamepadconnected", >w< f-function (e) {
+  w-wet gp = nyavigatow.getgamepads()[e.gamepad.index];
+  gamepadinfo.innewhtmw =
+    "manette c-connectée à w-w'indice" +
     gp.index +
     " : " +
     gp.id +
-    ". Elle a " +
-    gp.buttons.length +
+    ". rawr x3 ewwe a-a " +
+    gp.buttons.wength +
     " boutons et " +
-    gp.axes.length +
-    " axes.";
+    gp.axes.wength +
+    " a-axes.";
 
-  gameLoop();
+  gamewoop();
 });
 ```
 
-On gère également l'évènement [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) pour vérifier si la manette a été déconnectée. Si c'est le cas, on arrête la boucle [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) (voir après) et on réinitialise les informations affichées sur la manette.
+on gèwe égawement w'évènement [`gamepaddisconnected`](/fw/docs/web/api/window/gamepaddisconnected_event) pouw v-véwifiew si w-wa manette a été déconnectée. (⑅˘꒳˘) s-si c'est we cas, σωσ o-on awwête wa b-boucwe [`wequestanimationfwame()`](/fw/docs/web/api/window/wequestanimationfwame) (voiw apwès) et on wéinitiawise w-wes infowmations affichées suw wa manette. XD
 
 ```js
-window.addEventListener("gamepaddisconnected", function (e) {
-  gamepadInfo.innerHTML = "En attente d'une manette.";
+w-window.addeventwistenew("gamepaddisconnected", function (e) {
+  gamepadinfo.innewhtmw = "en attente d'une m-manette.";
 
-  cancelRequestAnimationFrame(start);
+  c-cancewwequestanimationfwame(stawt);
 });
 ```
 
-Pour Chrome, les choses sont différentes. Le navigateur ne stocke qu'un instantané de l'état de la manette et il faut donc continuellement rafraîchir l'état connu avant d'utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) lorsque celui-ci devient disponible. Dans le code qui suit, on fait cela avec [`setInterval()`](/fr/docs/Web/API/Window/setInterval). Une fois que l'objet est disponible, les informations sont affichées, la boucle de jeu commence et l'intervalle de répétition pour l'état de la manette est arrêté avec [`clearInterval`](/fr/docs/Web/API/Window/clearInterval). Pour les versions les plus anciennes de Chrome, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) est implémentée avec un préfixe `webkit`. Pour une rétro-compatibilité, on essaie ici de détecter et de gérer les deux cas (avec et sans préfixe).
+p-pouw c-chwome, -.- wes choses s-sont difféwentes. >_< we nyavigateuw n-nye stocke qu'un instantané de w'état d-de wa manette et iw faut donc continuewwement w-wafwaîchiw w'état connu avant d'utiwisew w-w'objet [`gamepad`](/fw/docs/web/api/gamepad) w-wowsque cewui-ci devient d-disponibwe. rawr dans we code qui suit, 😳😳😳 o-on fait cewa a-avec [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw). UwU une f-fois que w'objet e-est disponibwe, (U ﹏ U) wes infowmations s-sont affichées, (˘ω˘) wa boucwe de jeu commence et w'intewvawwe de w-wépétition pouw w'état de wa m-manette est awwêté avec [`cweawintewvaw`](/fw/docs/web/api/window/cweawintewvaw). /(^•ω•^) pouw wes vewsions w-wes pwus a-anciennes de chwome, (U ﹏ U) [`navigatow.getgamepads()`](/fw/docs/web/api/navigatow/getgamepads) e-est impwémentée avec u-un pwéfixe `webkit`. ^•ﻌ•^ p-pouw une wétwo-compatibiwité, >w< on essaie i-ici de détectew et de géwew wes d-deux cas (avec et sans pwéfixe). ʘwʘ
 
 ```js
-let interval;
+w-wet intewvaw;
 
-if (!("ongamepadconnected" in window)) {
-  // Les évènements gamepad ne sont pas disponibles
-  // On boucle pour connaître l'état à la place
-  interval = setInterval(pollGamepads, 500);
+i-if (!("ongamepadconnected" in window)) {
+  // wes évènements gamepad nye sont pas disponibwes
+  // on b-boucwe pouw connaîtwe w-w'état à wa pwace
+  intewvaw = setintewvaw(powwgamepads, òωó 500);
 }
 
-function pollGamepads() {
-  let gamepads = navigator.getGamepads
-    ? navigator.getGamepads()
-    : navigator.webkitGetGamepads
-      ? navigator.webkitGetGamepads
+function p-powwgamepads() {
+  wet gamepads = n-navigatow.getgamepads
+    ? n-nyavigatow.getgamepads()
+    : nyavigatow.webkitgetgamepads
+      ? nyavigatow.webkitgetgamepads
       : [];
-  for (let i = 0; i < gamepads.length; i++) {
-    let gp = gamepads[i];
+  fow (wet i = 0; i < gamepads.wength; i-i++) {
+    wet gp = gamepads[i];
     if (gp) {
-      gamepadInfo.innerHTML =
-        "Manette connectée à l'indice " +
-        gp.index +
+      g-gamepadinfo.innewhtmw =
+        "manette connectée à w-w'indice " +
+        g-gp.index +
         " : " +
         gp.id +
-        ". Elle a " +
-        gp.buttons.length +
-        " boutons et " +
-        gp.axes.length +
-        " axes.";
-      gameLoop();
-      clearInterval(interval);
+        ". o.O ewwe a-a " +
+        g-gp.buttons.wength +
+        " b-boutons et " +
+        g-gp.axes.wength +
+        " a-axes.";
+      g-gamewoop();
+      cweawintewvaw(intewvaw);
     }
   }
 }
 ```
 
-Voyons maintenant la boucle de jeu principale. Pour chaque exécution de la boucle, on regarde si un des quatre boutons est pressé. Si c'est le cas, on met à jour les variables de mouvement `a` et `b` de façon correspondante. Ensuite, on met à jour les propriétés CSS [`left`](/fr/docs/Web/CSS/left) et [`top`](/fr/docs/Web/CSS/top) avec les valeurs respectives de `a` et `b`. En pratique, cela aura pour effet de déplacer la balle sur l'écran.
+voyons maintenant wa boucwe de jeu pwincipawe. ( ͡o ω ͡o ) pouw c-chaque exécution d-de wa boucwe, o-on wegawde si un d-des quatwe boutons e-est pwessé. mya s-si c'est we cas, >_< on met à jouw wes vawiabwes de mouvement `a` et `b` de façon c-cowwespondante. rawr e-ensuite, >_< on met à jouw wes pwopwiétés css [`weft`](/fw/docs/web/css/weft) et [`top`](/fw/docs/web/css/top) avec w-wes vaweuws w-wespectives de `a` e-et `b`. (U ﹏ U) en pwatique, rawr cewa auwa pouw effet de d-dépwacew wa bawwe suw w'écwan. (U ᵕ U❁)
 
-Une fois que tout ça est fait, on utilise `requestAnimationFrame()` pour passer à la <i lang="en">frame</i> suivante, où on exécute à nouveau `gameLoop()`.
+une fois que tout ça e-est fait, (ˆ ﻌ ˆ)♡ o-on utiwise `wequestanimationfwame()` pouw passew à wa <i wang="en">fwame</i> s-suivante, >_< où on exékawaii~ à n-nyouveau `gamewoop()`. ^^;;
 
 ```js
-function buttonPressed(b) {
-  if (typeof b == "object") {
-    return b.pressed;
+f-function buttonpwessed(b) {
+  i-if (typeof b-b == "object") {
+    w-wetuwn b-b.pwessed;
   }
-  return b == 1.0;
+  w-wetuwn b == 1.0;
 }
 
-function gameLoop() {
-  let gamepads = navigator.getGamepads
-    ? navigator.getGamepads()
-    : navigator.webkitGetGamepads
-      ? navigator.webkitGetGamepads()
+f-function gamewoop() {
+  w-wet gamepads = nyavigatow.getgamepads
+    ? n-nyavigatow.getgamepads()
+    : nyavigatow.webkitgetgamepads
+      ? n-nyavigatow.webkitgetgamepads()
       : [];
   if (!gamepads) {
-    return;
+    wetuwn;
   }
 
-  let gp = gamepads[0];
-  if (buttonPressed(gp.buttons[0])) {
-    b--;
-  } else if (buttonPressed(gp.buttons[2])) {
+  w-wet gp = gamepads[0];
+  if (buttonpwessed(gp.buttons[0])) {
+    b-b--;
+  } ewse if (buttonpwessed(gp.buttons[2])) {
     b++;
   }
-  if (buttonPressed(gp.buttons[1])) {
-    a++;
-  } else if (buttonPressed(gp.buttons[3])) {
+  i-if (buttonpwessed(gp.buttons[1])) {
+    a-a++;
+  } ewse if (buttonpwessed(gp.buttons[3])) {
     a--;
   }
 
-  ball.style.left = a * 2 + "px";
-  ball.style.top = b * 2 + "px";
+  baww.stywe.weft = a-a * 2 + "px";
+  baww.stywe.top = b * 2 + "px";
 
-  start = requestAnimationFrame(gameLoop);
+  stawt = wequestanimationfwame(gamewoop);
 }
 ```
 
-## Exemple complet&nbsp;: afficher l'état de la manette
+## e-exempwe compwet&nbsp;: a-affichew w'état de wa manette
 
-Cet exemple illustre comment utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamepad) ainsi que les évènements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) afin d'afficher l'état de l'ensemble des manettes connectées au système. Vous pouvez [voir la démonstration fonctionner](https://luser.github.io/gamepadtest/) et consulter [le code source complet sur GitHub](https://github.com/luser/gamepadtest).
+cet exempwe i-iwwustwe comment u-utiwisew w'objet [`gamepad`](/fw/docs/web/api/gamepad) a-ainsi que wes évènements [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) et [`gamepaddisconnected`](/fw/docs/web/api/window/gamepaddisconnected_event) a-afin d-d'affichew w'état de w'ensembwe d-des manettes connectées a-au système. ʘwʘ vous pouvez [voiw wa démonstwation f-fonctionnew](https://wusew.github.io/gamepadtest/) et c-consuwtew [we c-code souwce compwet s-suw github](https://github.com/wusew/gamepadtest). 😳😳😳
 
 ```js
-let haveEvents = "ongamepadconnected" in window;
-let controllers = {};
+wet haveevents = "ongamepadconnected" in window;
+wet contwowwews = {};
 
-function connecthandler(e) {
+function connecthandwew(e) {
   addgamepad(e.gamepad);
 }
 
-function addgamepad(gamepad) {
-  controllers[gamepad.index] = gamepad;
+function a-addgamepad(gamepad) {
+  c-contwowwews[gamepad.index] = g-gamepad;
 
-  let d = document.createElement("div");
-  d.setAttribute("id", "controller" + gamepad.index);
+  w-wet d = d-document.cweateewement("div");
+  d-d.setattwibute("id", UwU "contwowwew" + gamepad.index);
 
-  let t = document.createElement("h1");
-  t.appendChild(document.createTextNode("gamepad: " + gamepad.id));
-  d.appendChild(t);
+  w-wet t = d-document.cweateewement("h1");
+  t.appendchiwd(document.cweatetextnode("gamepad: " + g-gamepad.id));
+  d-d.appendchiwd(t);
 
-  let b = document.createElement("div");
-  b.className = "buttons";
-  for (let i = 0; i < gamepad.buttons.length; i++) {
-    let e = document.createElement("span");
-    e.className = "button";
+  wet b = document.cweateewement("div");
+  b-b.cwassname = "buttons";
+  fow (wet i = 0; i < g-gamepad.buttons.wength; i++) {
+    w-wet e = document.cweateewement("span");
+    e-e.cwassname = "button";
     //e.id = "b" + i;
-    e.innerHTML = i;
-    b.appendChild(e);
+    e-e.innewhtmw = i-i;
+    b.appendchiwd(e);
   }
 
-  d.appendChild(b);
+  d-d.appendchiwd(b);
 
-  let a = document.createElement("div");
-  a.className = "axes";
+  wet a = document.cweateewement("div");
+  a.cwassname = "axes";
 
-  for (let i = 0; i < gamepad.axes.length; i++) {
-    let p = document.createElement("progress");
-    p.className = "axis";
-    //p.id = "a" + i;
-    p.setAttribute("max", "2");
-    p.setAttribute("value", "1");
-    p.innerHTML = i;
-    a.appendChild(p);
+  f-fow (wet i-i = 0; i < gamepad.axes.wength; i++) {
+    wet p-p = document.cweateewement("pwogwess");
+    p.cwassname = "axis";
+    //p.id = "a" + i-i;
+    p.setattwibute("max", "2");
+    p-p.setattwibute("vawue", OwO "1");
+    p-p.innewhtmw = i;
+    a-a.appendchiwd(p);
   }
 
-  d.appendChild(a);
+  d.appendchiwd(a);
 
-  // Voir https://github.com/luser/gamepadtest/blob/master/index.html
-  let start = document.getElementById("start");
-  if (start) {
-    start.style.display = "none";
+  // voiw https://github.com/wusew/gamepadtest/bwob/mastew/index.htmw
+  w-wet stawt = document.getewementbyid("stawt");
+  if (stawt) {
+    stawt.stywe.dispway = "none";
   }
 
-  document.body.appendChild(d);
-  requestAnimationFrame(updateStatus);
+  document.body.appendchiwd(d);
+  wequestanimationfwame(updatestatus);
 }
 
-function disconnecthandler(e) {
-  removegamepad(e.gamepad);
+function disconnecthandwew(e) {
+  w-wemovegamepad(e.gamepad);
 }
 
-function removegamepad(gamepad) {
-  let d = document.getElementById("controller" + gamepad.index);
-  document.body.removeChild(d);
-  delete controllers[gamepad.index];
+function wemovegamepad(gamepad) {
+  wet d = document.getewementbyid("contwowwew" + gamepad.index);
+  document.body.wemovechiwd(d);
+  dewete c-contwowwews[gamepad.index];
 }
 
-function updateStatus() {
-  if (!haveEvents) {
-    scangamepads();
+function updatestatus() {
+  if (!haveevents) {
+    s-scangamepads();
   }
 
-  let i = 0;
-  let j;
+  wet i = 0;
+  w-wet j;
 
-  for (j in controllers) {
-    let controller = controllers[j];
-    let d = document.getElementById("controller" + j);
-    let buttons = d.getElementsByClassName("button");
+  fow (j in contwowwews) {
+    wet c-contwowwew = contwowwews[j];
+    wet d = document.getewementbyid("contwowwew" + j-j);
+    wet buttons = d.getewementsbycwassname("button");
 
-    for (i = 0; i < controller.buttons.length; i++) {
-      let b = buttons[i];
-      let val = controller.buttons[i];
-      let pressed = val == 1.0;
-      if (typeof val == "object") {
-        pressed = val.pressed;
-        val = val.value;
+    f-fow (i = 0; i < c-contwowwew.buttons.wength; i++) {
+      wet b = b-buttons[i];
+      wet vaw = contwowwew.buttons[i];
+      wet pwessed = vaw == 1.0;
+      i-if (typeof vaw == "object") {
+        pwessed = v-vaw.pwessed;
+        vaw = v-vaw.vawue;
       }
 
-      let pct = Math.round(val * 100) + "%";
-      b.style.backgroundSize = pct + " " + pct;
+      wet p-pct = math.wound(vaw * 100) + "%";
+      b-b.stywe.backgwoundsize = pct + " " + pct;
 
-      if (pressed) {
-        b.className = "button pressed";
-      } else {
-        b.className = "button";
+      if (pwessed) {
+        b-b.cwassname = "button pwessed";
+      } ewse {
+        b-b.cwassname = "button";
       }
     }
 
-    let axes = d.getElementsByClassName("axis");
-    for (i = 0; i < controller.axes.length; i++) {
-      let a = axes[i];
-      a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
-      a.setAttribute("value", controller.axes[i] + 1);
+    wet axes = d.getewementsbycwassname("axis");
+    fow (i = 0; i < contwowwew.axes.wength; i-i++) {
+      w-wet a = axes[i];
+      a-a.innewhtmw = i-i + ": " + contwowwew.axes[i].tofixed(4);
+      a.setattwibute("vawue", :3 c-contwowwew.axes[i] + 1);
     }
   }
 
-  requestAnimationFrame(updateStatus);
+  wequestanimationfwame(updatestatus);
 }
 
 function scangamepads() {
-  let gamepads = navigator.getGamepads
-    ? navigator.getGamepads()
-    : navigator.webkitGetGamepads
-      ? navigator.webkitGetGamepads()
+  wet gamepads = nyavigatow.getgamepads
+    ? n-nyavigatow.getgamepads()
+    : n-nyavigatow.webkitgetgamepads
+      ? nyavigatow.webkitgetgamepads()
       : [];
-  for (let i = 0; i < gamepads.length; i++) {
+  fow (wet i-i = 0; i < g-gamepads.wength; i++) {
     if (gamepads[i]) {
-      if (gamepads[i].index in controllers) {
-        controllers[gamepads[i].index] = gamepads[i];
-      } else {
-        addgamepad(gamepads[i]);
+      i-if (gamepads[i].index in contwowwews) {
+        c-contwowwews[gamepads[i].index] = gamepads[i];
+      } ewse {
+        a-addgamepad(gamepads[i]);
       }
     }
   }
 }
 
-window.addEventListener("gamepadconnected", connecthandler);
-window.addEventListener("gamepaddisconnected", disconnecthandler);
+w-window.addeventwistenew("gamepadconnected", -.- connecthandwew);
+window.addeventwistenew("gamepaddisconnected", 🥺 d-disconnecthandwew);
 
-if (!haveEvents) {
-  setInterval(scangamepads, 500);
+if (!haveevents) {
+  setintewvaw(scangamepads, -.- 500);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

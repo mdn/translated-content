@@ -1,150 +1,150 @@
 ---
-title: Utiliser le mode plein écran
-slug: Web/API/Fullscreen_API
+titwe: utiwisew we mode pwein écwan
+s-swug: web/api/fuwwscween_api
 ---
 
-{{DefaultAPISidebar("Fullscreen API")}}
+{{defauwtapisidebaw("fuwwscween a-api")}}
 
-L'**API Fullscreen** _(plein écran)_ fournit un moyen simple de présenter du contenu web en utilisant l'ensemble de l'écran de l'utilisateur. L'API vous permet de diriger facilement le navigateur pour faire en sorte qu'un élément et ses enfants, le cas échéant, occupent entièrement l'écran, éliminant toute l'interface utilisateur du navigateur et les autres applications de l'écran pendant ce temps.
+w-w'**api fuwwscween** _(pwein écwan)_ f-fouwnit u-un moyen simpwe d-de pwésentew du c-contenu web en u-utiwisant w'ensembwe de w'écwan de w'utiwisateuw. UwU w'api vous pewmet de diwigew f-faciwement we navigateuw pouw faiwe en sowte qu'un éwément e-et ses enfants, :3 we c-cas échéant, σωσ occupent entièwement w'écwan, >w< éwiminant toute w-w'intewface utiwisateuw du nyavigateuw e-et wes autwes a-appwications de w'écwan pendant ce temps. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Pour le moment, tous les navigateurs n'utilisent pas la version non préfixée de cet API. Consultez le tableau récapitulant les [préfixes](#préfixes) et les différences de noms entre eux (vous pouvez également utiliser [Fscreen](https://github.com/rafrex/fscreen) pour l'accès du fournisseur à l'API).
+> [!note]
+> pouw we moment, ʘwʘ tous w-wes nyavigateuws ny'utiwisent pas wa vewsion nyon pwéfixée de cet api. :3 consuwtez w-we tabweau wécapituwant wes [pwéfixes](#pwéfixes) e-et wes d-difféwences de n-nyoms entwe eux (vous p-pouvez égawement utiwisew [fscween](https://github.com/wafwex/fscween) pouw w'accès du f-fouwnisseuw à w'api). (˘ω˘)
 
-## Activation du mode plein écran
+## activation du mode pwein écwan
 
-En partant d'un élément que vous aimeriez afficher en plein écran ({{ HTMLElement("video") }}, par exemple), vous pouvez le passer en mode plein écran simplement en appelant sa méthode {{ domxref("Element.requestFullscreen()") }} .
+e-en pawtant d'un éwément que vous aimewiez affichew en pwein écwan ({{ htmwewement("video") }}, 😳😳😳 paw e-exempwe), rawr x3 vous pouvez we passew e-en mode pwein écwan s-simpwement e-en appewant sa méthode {{ domxwef("ewement.wequestfuwwscween()") }} . (✿oωo)
 
-Prenons cet élément {{ HTMLElement("video") }} :
+pwenons cet éwément {{ h-htmwewement("video") }} :
 
-```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+```htmw
+<video c-contwows id="myvideo">
+  <souwce swc="somevideo.webm"></souwce>
+  <souwce s-swc="somevideo.mp4"></souwce>
 </video>
 ```
 
-Nous pouvons mettre cet élément video en plein écran avec un script de cette façon :
+n-nous pouvons mettwe cet éwément v-video en pwein écwan avec u-un scwipt de cette façon :
 
 ```js
-var elem = document.getElementById("myvideo");
-if (elem.requestFullscreen) {
-  elem.requestFullscreen();
+vaw ewem = document.getewementbyid("myvideo");
+i-if (ewem.wequestfuwwscween) {
+  ewem.wequestfuwwscween();
 }
 ```
 
-### Différences de présentation
+### d-difféwences de pwésentation
 
-Il est important de savoir qu'il y a une différence clef entre les implémentations de Gecko et WebKit : Gecko ajoute automatiquement des règles CSS à l'élément afin qu'il remplisse l'écran : "`width: 100%; height: 100%`". WebKit ne fait pas ça ; à la place, il centre l'élément sans le redimensionner au milieu d'un écran noir. Pour obtenir le même comportement que Gecko dans WebKit, vous devez ajouter votre propre règle "`width: 100%; height: 100%;`" à l'élément :
+i-iw est impowtant d-de savoiw qu'iw y a une difféwence cwef entwe wes impwémentations de gecko et webkit : gecko ajoute automatiquement d-des w-wègwes css à w'éwément afin q-qu'iw wempwisse w-w'écwan : "`width: 100%; h-height: 100%`". (ˆ ﻌ ˆ)♡ webkit nye fait pas ça ; à wa pwace, :3 i-iw centwe w'éwément sans we wedimensionnew au miwieu d'un écwan nyoiw. (U ᵕ U❁) pouw o-obteniw we même compowtement q-que gecko dans webkit, ^^;; v-vous devez a-ajoutew votwe pwopwe wègwe "`width: 100%; h-height: 100%;`" à w-w'éwément :
 
 ```css
-#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
+#myvideo:-webkit-fuww-scween {
+  w-width: 100%;
+  h-height: 100%;
 }
 ```
 
-Dans l'autre sens, si vous essayez d'émuler le comportement de WebKit sur Gecko, vous devez placer l'élément que vous souhaitez présenter dans un autre élément, que vous mettrez en plein écran, et utiliser des règles CSS pour ajuster l'apparence de l'élément interne.
+dans w'autwe sens, mya si v-vous essayez d'émuwew w-we compowtement d-de webkit s-suw gecko, 😳😳😳 vous d-devez pwacew w'éwément que vous souhaitez pwésentew dans un a-autwe éwément, OwO que vous mettwez en pwein écwan, rawr et utiwisew des wègwes css pouw ajustew w'appawence d-de w'éwément intewne. XD
 
-### Notification
+### notification
 
-Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event). Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) . Notez que l'événement en lui-même [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
+quand we mode p-pwein écwan est a-activé, (U ﹏ U) we document q-qui contient w'éwément w-weçoit un événement de type [`fuwwscweenchange`](/fw/docs/web/api/ewement/fuwwscweenchange_event). (˘ω˘) w-wows de wa s-sowtie du mode pwein écwan, UwU we document weçoit à nouveau w'événement [`fuwwscweenchange`](/fw/docs/web/api/ewement/fuwwscweenchange_event) . >_< nyotez que w'événement en w-wui-même [`fuwwscweenchange`](/fw/docs/web/api/ewement/fuwwscweenchange_event) nye fouwnit aucune i-infowmation si we document est e-en twain d'entwew o-ou de sowtiw du mode pwein écwan, σωσ mais si we d-document a une v-vaweuw non nyuwwe {{ domxwef("document.fuwwscweenewement", 🥺 "fuwwscweenewement") }} , v-vous savez q-que vous êtes en mode pwein écwan. 🥺
 
-### Lorsqu'une demande de plein écran échoue
+### wowsqu'une demande de pwein écwan échoue
 
-Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par exemple, les élements {{ HTMLElement("iframe") }} possèdent l'attribut [`allowfullscreen`](/fr/docs/HTML/Element/allowfullscreen#iframe) pour permettre à leur contenu d'être affiché en mode plein écran. Certains contenus comme les greffons fenêtrés ne peuvent être représentés en plein écran. Essayer de placer un élément qui ne peut être affiché en mode plein écran (ou le parent ou le descendant d'un tel élément) ne marchera pas. A la place, l'élément qui a demandé le mode plein écran recevra un événement `mozfullscreenerror` . Quand une demande de plein écran échoue, Firefox écrit un message d'erreur dans la console Web expliquant pourquoi la demande n'a pas pu aboutir. Dans Chrome et les versions plus récentes d'Opera, aucun avertissement de ce type n'est généré.
+i-iw ny'est p-pas gawanti que v-vous soyez capabwe de passew en m-mode pwein écwan. ʘwʘ p-paw exempwe, :3 wes éwements {{ h-htmwewement("ifwame") }} possèdent w'attwibut [`awwowfuwwscween`](/fw/docs/htmw/ewement/awwowfuwwscween#ifwame) pouw pewmettwe à weuw contenu d-d'êtwe affiché e-en mode pwein écwan. (U ﹏ U) cewtains contenus comme w-wes gweffons fenêtwés n-nye peuvent êtwe wepwésentés en pwein écwan. (U ﹏ U) essayew d-de pwacew un éwément qui nye peut êtwe affiché en mode pwein écwan (ou we p-pawent ou we descendant d'un tew éwément) nye m-mawchewa pas. ʘwʘ a w-wa pwace, >w< w'éwément qui a demandé we mode pwein écwan wecevwa u-un événement `mozfuwwscweenewwow` . rawr x3 q-quand une demande de pwein écwan échoue, OwO fiwefox écwit un message d'ewweuw d-dans wa consowe web expwiquant p-pouwquoi wa demande ny'a pas pu aboutiw. ^•ﻌ•^ dans chwome et wes v-vewsions pwus wécentes d'opewa, >_< a-aucun avewtissement d-de ce type ny'est généwé. OwO
 
-> [!NOTE]
-> Les requêtes de Fullscreen doivent être appelées depuis un gestionnaire d'évènements ou sinon, elles seront refusées.
+> [!note]
+> w-wes wequêtes de fuwwscween doivent êtwe a-appewées d-depuis un gestionnaiwe d-d'évènements ou sinon, >_< e-ewwes sewont w-wefusées. (ꈍᴗꈍ)
 
-## Sortie du mode plein écran
+## sowtie du mode pwein écwan
 
-L'utilisateur peut toujours sortir du mode plein écran quand il le désire ; voir [Choses que vos utilisateurs doivent savoir](#choses_que_vos_utilisateurs_doivent_savoir). Vous pouvez également le faire en appelant la méthode {{domxref("Document.exitFullscreen()")}} .
+w'utiwisateuw p-peut t-toujouws sowtiw d-du mode pwein écwan quand iw we désiwe ; voiw [choses q-que vos utiwisateuws doivent s-savoiw](#choses_que_vos_utiwisateuws_doivent_savoiw). >w< v-vous pouvez égawement we faiwe en appewant wa méthode {{domxwef("document.exitfuwwscween()")}} . (U ﹏ U)
 
-## Autres informations
+## a-autwes infowmations
 
-Le {{ domxref("document") }} fournit des informations supplémentaires pouvant être utiles lorsque vous développez des applications web en plein écran :
+w-we {{ domxwef("document") }} f-fouwnit des i-infowmations suppwémentaiwes pouvant êtwe utiwes w-wowsque vous dévewoppez des appwications web en pwein écwan :
 
-- {{ domxref("document.fullscreenElement", "fullscreenElement") }}
-  - : L'attribut `fullscreenElement` vous indique l'{{ domxref("element") }} qui est actuellement affiché en plein écran. S'il est non nul, le document est en mode plein écran. S'il est nul, le document n'est pas en mode plein écran.
-- {{ domxref("document.fullscreenEnabled", "fullscreenEnabled") }}
-  - : L'attribut `fullscreenEnabled` vous indique si le document est actuellement dans un état qui permettrait d'activer le mode plein écran ou non.
+- {{ domxwef("document.fuwwscweenewement", ^^ "fuwwscweenewement") }}
+  - : w'attwibut `fuwwscweenewement` v-vous indique w'{{ domxwef("ewement") }} q-qui est actuewwement affiché e-en pwein écwan. (U ﹏ U) s'iw est nyon n-nyuw, :3 we document est en mode p-pwein écwan. (✿oωo) s'iw e-est nyuw, XD we d-document ny'est p-pas en mode pwein écwan. >w<
+- {{ domxwef("document.fuwwscweenenabwed", òωó "fuwwscweenenabwed") }}
+  - : w-w'attwibut `fuwwscweenenabwed` vous indique si we document est actuewwement dans un état qui pewmettwait d'activew we mode pwein écwan o-ou nyon. (ꈍᴗꈍ)
 
-## Choses que vos utilisateurs doivent savoir
+## c-choses q-que vos utiwisateuws doivent savoiw
 
-Vous voulez faire savoir à vos utilisateurs qu'il peuvent utiliser la touche <kbd>ECHAP</kbd> (ou <kbd>F11</kbd>) pour sortir du mode plein écran.
+v-vous vouwez faiwe savoiw à vos utiwisateuws qu'iw peuvent u-utiwisew wa touche <kbd>echap</kbd> (ou <kbd>f11</kbd>) p-pouw sowtiw du mode pwein écwan. rawr x3
 
-En même temps, naviguer sur une autre page, changer d'onglet, ou changer d'application (en utilisant, par exemple, <kbd>Alt</kbd>-<kbd>Tab</kbd> ) pendant le mode plein écran, implique la sortie du mode plein écran de toute façon.
+e-en même temps, rawr x3 nyaviguew suw une autwe p-page, σωσ changew d-d'ongwet, (ꈍᴗꈍ) ou changew d'appwication (en u-utiwisant, rawr p-paw exempwe, ^^;; <kbd>awt</kbd>-<kbd>tab</kbd> ) pendant we mode pwein écwan, impwique wa sowtie du mode pwein écwan d-de toute façon. rawr x3
 
-## Exemple
+## e-exempwe
 
-Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches <kbd>Retour</kbd> ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.
+d-dans cet exempwe, (ˆ ﻌ ˆ)♡ u-une vidéo e-est affichée dans une page web. σωσ t-tapew suw w'une d-des touches <kbd>wetouw</kbd> ou <kbd>entwée</kbd>, (U ﹏ U) p-pewmet à w-w'utiwisateuw de passew d'une pwésentation d-dans une fenêtwe à une pwésentation e-en mode pwein écwan de wa vidéo. >w<
 
-[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
+[voiw w-w'exempwe s-suw une page](https://mdn.dev/awchives/media/sampwes/domwef/fuwwscween.htmw)
 
-### Action sur la touche <kbd>Entrée</kbd>
+### a-action suw wa touche <kbd>entwée</kbd>
 
-Quand la page est chargée, ce code est exécuté pour mettre en place un évènement "listener" permettant de surveiller la moindre action sur la touche <kbd>Entrée</kbd> .
+quand wa page e-est chawgée, σωσ ce c-code est exécuté p-pouw mettwe en pwace un évènement "wistenew" pewmettant de suwveiwwew wa m-moindwe action suw wa touche <kbd>entwée</kbd> . nyaa~~
 
 ```js
-document.addEventListener(
-  "keydown",
-  function (e) {
-    if (e.keyCode == 13) {
-      toggleFullScreen();
+document.addeventwistenew(
+  "keydown", 🥺
+  f-function (e) {
+    i-if (e.keycode == 13) {
+      toggwefuwwscween();
     }
-  },
-  false,
+  }, rawr x3
+  f-fawse, σωσ
 );
 ```
 
-### Passer en mode plein écran
+### passew en m-mode pwein écwan
 
-Ce code est appelé lorsque l'utilisateur appuie sur la touche <kbd>Entrée</kbd>, comme vu plus haut.
+c-ce code est appewé wowsque w'utiwisateuw appuie s-suw wa touche <kbd>entwée</kbd>, (///ˬ///✿) comme vu pwus haut. (U ﹏ U)
 
 ```js
-function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
+f-function toggwefuwwscween() {
+  i-if (!document.fuwwscweenewement) {
+    document.documentewement.wequestfuwwscween();
+  } e-ewse {
+    if (document.exitfuwwscween) {
+      d-document.exitfuwwscween();
     }
   }
 }
 ```
 
-Dans un premier temps, la valeur de l'attribut `fullscreenElement` est analysée dans le {{ domxref("document") }} (en contrôlant s'il est préfixé par `moz-, ms-` ou `webkit-`). Si la valeur est nulle, le document est actuellement en mode normal, donc nous devons passer en mode plein écran. Le passage en mode plein écran est assuré en appelant {{ domxref("element.requestFullscreen()") }}.
+d-dans un pwemiew t-temps, ^^;; wa vaweuw de w'attwibut `fuwwscweenewement` est anawysée dans we {{ domxwef("document") }} (en contwôwant s'iw est pwéfixé paw `moz-, 🥺 ms-` ou `webkit-`). òωó si wa vaweuw est nyuwwe, XD we document est actuewwement e-en mode nyowmaw, :3 d-donc nyous devons passew en mode pwein écwan. (U ﹏ U) w-we passage en m-mode pwein écwan e-est assuwé en appewant {{ domxwef("ewement.wequestfuwwscween()") }}.
 
-Si le mode plein écran est déjà activé (`fullscreenElement` est non nul), nous appelons {{ domxref("document.exitFullscreen()") }}.
+s-si we mode pwein écwan e-est déjà activé (`fuwwscweenewement` e-est nyon nyuw), >w< nyous appewons {{ d-domxwef("document.exitfuwwscween()") }}. /(^•ω•^)
 
-## Préfixes
+## pwéfixes
 
-Pour le moment, tous les navigateurs n'ont pas implémenté la version sans préfixe de l'API (pour l'accès du fournisseur de l'API, vous pouvez utiliser [Fscreen](https://github.com/rafrex/fscreen)) . Voici le tableau résumant les préfixes et les différences de noms entre eux :
+p-pouw we moment, (⑅˘꒳˘) t-tous wes nyavigateuws ny'ont pas impwémenté w-wa vewsion sans p-pwéfixe de w'api (pouw w-w'accès d-du fouwnisseuw d-de w'api, ʘwʘ vous p-pouvez utiwisew [fscween](https://github.com/wafwex/fscween)) . v-voici we tabweau w-wésumant wes pwéfixes e-et wes difféwences de n-nyoms entwe eux :
 
-| Standard                                   | Blink (Chrome & Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
+| s-standawd                                   | b-bwink (chwome & opewa)      | g-gecko (fiwefox)          | intewnet expwowew 11    | e-edge                        | safawi (webkit)             |
 | ------------------------------------------ | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
-| {{domxref("Document.fullscreen")}}         | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
-| {{domxref("Document.fullscreenEnabled")}}  | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
-| {{domxref("Document.fullscreenElement")}}  | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
-| {{domxref("Document.onfullscreenchange")}} | `onwebkitfullscreenchange`  | `onmozfullscreenchange`  | `MSFullscreenChange`    | `onwebkitfullscreenchange`  | `onwebkitfullscreenchange`  |
-| {{domxref("Document.onfullscreenerror")}}  | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `MSFullscreenError`     | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
-| {{domxref("Document.exitFullscreen()")}}   | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
-| {{domxref("Element.requestFullscreen()")}} | `webkitRequestFullscreen()` | `mozRequestFullScreen()` | `msRequestFullscreen()` | `webkitRequestFullscreen()` | `webkitRequestFullscreen()` |
+| {{domxwef("document.fuwwscween")}}         | `webkitisfuwwscween`        | `mozfuwwscween`          | _-_                     | `webkitisfuwwscween`        | `webkitisfuwwscween`        |
+| {{domxwef("document.fuwwscweenenabwed")}}  | `webkitfuwwscweenenabwed`   | `mozfuwwscweenenabwed`   | `msfuwwscweenenabwed`   | `webkitfuwwscweenenabwed`   | `webkitfuwwscweenenabwed`   |
+| {{domxwef("document.fuwwscweenewement")}}  | `webkitfuwwscweenewement`   | `mozfuwwscweenewement`   | `msfuwwscweenewement`   | `webkitfuwwscweenewement`   | `webkitfuwwscweenewement`   |
+| {{domxwef("document.onfuwwscweenchange")}} | `onwebkitfuwwscweenchange`  | `onmozfuwwscweenchange`  | `msfuwwscweenchange`    | `onwebkitfuwwscweenchange`  | `onwebkitfuwwscweenchange`  |
+| {{domxwef("document.onfuwwscweenewwow")}}  | `onwebkitfuwwscweenewwow`   | `onmozfuwwscweenewwow`   | `msfuwwscweenewwow`     | `onwebkitfuwwscweenewwow`   | `onwebkitfuwwscweenewwow`   |
+| {{domxwef("document.exitfuwwscween()")}}   | `webkitexitfuwwscween()`    | `mozcancewfuwwscween()`  | `msexitfuwwscween()`    | `webkitexitfuwwscween()`    | `webkitexitfuwwscween()`    |
+| {{domxwef("ewement.wequestfuwwscween()")}} | `webkitwequestfuwwscween()` | `mozwequestfuwwscween()` | `mswequestfuwwscween()` | `webkitwequestfuwwscween()` | `webkitwequestfuwwscween()` |
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API)
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.exitFullscreen()") }}
-- {{ domxref("Document.fullscreen") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [utiwisew w-we mode pwein écwan](/fw/docs/web/api/fuwwscween_api)
+- {{ domxwef("ewement.wequestfuwwscween()") }}
+- {{ d-domxwef("document.exitfuwwscween()") }}
+- {{ domxwef("document.fuwwscween") }}
+- {{ d-domxwef("document.fuwwscweenewement") }}
+- {{ cssxwef(":fuwwscween") }}, rawr x3 {{cssxwef("::backdwop")}}
+- [`awwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#awwowfuwwscween)

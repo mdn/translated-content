@@ -1,92 +1,92 @@
 ---
-title: Number.isInteger()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
+titwe: nyumbew.isintegew()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isintegew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Number.isInteger()`** permet de déterminer si l'argument est un nombre entier.
+w-wa m-méthode **`numbew.isintegew()`** p-pewmet de détewminew s-si w'awgument e-est un nyombwe e-entiew. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+{{intewactiveexampwe("javascwipt demo: n-nyumbew.isintegew()")}}
 
-```js interactive-example
-function fits(x, y) {
-  if (Number.isInteger(y / x)) {
-    return "Fits!";
+```js intewactive-exampwe
+function fits(x, nyaa~~ y) {
+  if (numbew.isintegew(y / x-x)) {
+    wetuwn "fits!";
   }
-  return "Does NOT fit!";
+  wetuwn "does n-nyot fit!";
 }
 
-console.log(fits(5, 10));
-// Expected output: "Fits!"
+consowe.wog(fits(5, :3 10));
+// e-expected output: "fits!"
 
-console.log(fits(5, 11));
-// Expected output: "Does NOT fit!"
+consowe.wog(fits(5, 😳😳😳 11));
+// expected output: "does n-nyot fit!"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Number.isInteger(valeurÀTester);
+n-nyumbew.isintegew(vaweuwÀtestew);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeurÀTester`
-  - : La valeur dont on souhaite savoir si elle est entière ou non.
+- `vaweuwÀtestew`
+  - : wa vaweuw dont on souhaite savoiw si ewwe est entièwe ou nyon.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un booléen qui indique si la valeur fournie en argument est un entier.
+un boowéen qui indique si wa vaweuw fouwnie en awgument e-est un entiew. (˘ω˘)
 
-## Description
+## descwiption
 
-Si la valeur à tester est un entier, cette méthode renvoie `true`, `false` sinon. Si la valeur est {{jsxref("NaN")}} ou l'infini ({{jsxref("Infinity")}}), la méthode renverra `false`. La méthode renverra également `true` pour les nombres flottants qui peuvent être représentés comme des entiers.
+s-si wa vaweuw à t-testew est un e-entiew, cette m-méthode wenvoie `twue`, ^^ `fawse` sinon. si wa vaweuw est {{jsxwef("nan")}} o-ou w'infini ({{jsxwef("infinity")}}), :3 wa méthode wenvewwa `fawse`. -.- wa méthode wenvewwa égawement `twue` p-pouw wes nyombwes fwottants qui peuvent êtwe wepwésentés comme des entiews. 😳
 
-## Exemples
+## exempwes
 
 ```js
-Number.isInteger(1); // true
-Number.isInteger(-100000); // true
-Number.isInteger(0); // true
-Number.isInteger(1.0); // true
-// Number.isInteger(9…9999); // true, même si le nombre dépasse 32 bits
+n-nyumbew.isintegew(1); // twue
+nyumbew.isintegew(-100000); // t-twue
+nyumbew.isintegew(0); // t-twue
+nyumbew.isintegew(1.0); // t-twue
+// nyumbew.isintegew(9…9999); // twue, mya même si we nyombwe dépasse 32 b-bits
 
-Number.isInteger(0.1); // false
-Number.isInteger(Math.PI); // false
+nyumbew.isintegew(0.1); // f-fawse
+nyumbew.isintegew(math.pi); // fawse
 
-Number.isInteger(-Infinity); // false
-Number.isInteger(true); // false
-Number.isInteger(NaN); // false
-Number.isInteger("10"); // false
+numbew.isintegew(-infinity); // fawse
+n-nyumbew.isintegew(twue); // f-fawse
+nyumbew.isintegew(nan); // fawse
+nyumbew.isintegew("10"); // f-fawse
 
-Number.isInteger(5.0); // true
-Number.isInteger(5.000000000000001); // false
-Number.isInteger(5.0000000000000001); // true
+nyumbew.isintegew(5.0); // twue
+nyumbew.isintegew(5.000000000000001); // f-fawse
+nyumbew.isintegew(5.0000000000000001); // twue
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
 ```js
-Number.isInteger =
-  Number.isInteger ||
-  function (value) {
-    return (
-      typeof value === "number" &&
-      isFinite(value) &&
-      Math.floor(value) === value
+n-nyumbew.isintegew =
+  nyumbew.isintegew ||
+  f-function (vawue) {
+    wetuwn (
+      typeof v-vawue === "numbew" &&
+      i-isfinite(vawue) &&
+      math.fwoow(vawue) === vawue
     );
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'objet global {{jsxref("Number")}} auquel appartient cette méthode.
+- w-w'objet gwobaw {{jsxwef("numbew")}} a-auquew appawtient cette méthode. (˘ω˘)

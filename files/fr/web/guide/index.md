@@ -1,49 +1,49 @@
 ---
-title: Guides pour les développeurs du Web
-slug: Web/Guide
+titwe: guides pouw wes dévewoppeuws d-du web
+swug: w-web/guide
 ---
 
-**Ces articles sont des tutoriels et guides pratiques permettant d'utiliser certaines API et technologies web.**
+**ces a-awticwes s-sont des tutowiews e-et guides p-pwatiques pewmettant d-d'utiwisew c-cewtaines api et technowogies web.**
 
-- [Apprendre - HTML](/fr/docs/Learn/HTML)
-  - : _HyperText Markup Language_ (HTML) est le langage de base pour la grande partie du contenu web. La plupart de ce que vous voyez à l'écran est décrit en HTML.
-- [Apprendre - CSS](/fr/docs/Learn/CSS)
-  - : _Cascading Style Sheets_ (CSS) est un langage de feuille de styles utilisé afin de définir la présentation d'un document écrit en HTML.
-- [Fournir de l'audio et/ou de la vidéo](/fr/docs/Web/Media/Audio_and_video_delivery)
-  - : Il est possible d'intégrer de l'audio et de la vidéo à du contenu web de différentes façons : que ce soit des fichiers statiques ou des flux adaptatifs. Cet article est une introduction à ces différentes méthodes et à la compatibilité pour les principaux navigateurs web.
-- [Manipuler des données audio ou vidéo](/fr/docs/Web/Media/Audio_and_video_manipulation)
-  - : Il est possible de combiner les technologies web et les médias afin de créer de nouveaux usages. Dans cet article, nous verrons comment utiliser des technologies web telles que {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API) afin de modifier les fichiers audio ou vidéo directement (en ajoutant des effets de réverbération ou des filtres de couleurs).
-- [Guide sur les évènements](/fr/docs/Web/Events)
-  - : Les évènements peuvent désigner deux concepts : un patron de conception permettant de gérer de façon asynchrone ce qui se produit lors de la vue d'une page web d'une part et la liste, les noms et les caractéristiques desdits évènements d'autre part.
-- [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-  - : AJAX est un terme regroupant différentes technologies qui permettent aux applications web d'appliquer des mises à jour incrémentales au contenu de la page sans mettre à jour l'intégralité de la page. Cela permet d'obtenir des applications plus rapides et plus réactives.
-- [Les graphismes sur le Web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-  - : Les sites et applications web modernes utilisent généralement des graphismes (avec différents degrés de sophistication).
-- [Guide pour les API web](/fr/docs/Web/API)
-  - : Une liste de l'ensemble des API web et de leur rôle.
-- [JavaScript](/fr/docs/Web/JavaScript)
-  - : JavaScript est un langage de script notamment utilisé pour créer des applications sur le Web.
-- [Localisations et encodages](/fr/docs/Localizations_and_character_encodings)
-  - : En interne, les navigateurs traitent le texte en Unicode. Toutefois, la façon de représenter les caractères sous forme d'octets (l'encodage) est utilisée lors du transfert du texte sur le réseau vers le navigateur. La [spécification HTML recommande l'usage de l'encodage UTF-8](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset) (qui peut représenter l'ensemble des caractères Unicode). Quel que soit l'encodage utilisé, le contenu web doit déclarer l'encodage qu'il utilise.
-- [Développement web pour mobile](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-  - : Cet article fournit un aperçu des techniques principales utilisées pour concevoir des sites web qui fonctionnent correctement sur les appareils mobiles. Voir aussi [Firefox for Android](/fr/docs/Mozilla/Firefox_pour_Android).
-- [Applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps#core_pwa_guides)
-  - : Les applications web progressives (aussi appelées PWA) utilisent des API web modernes ainsi que des techniques d'amélioration progressive afin de créer des applications web fonctionnant sur différentes plateformes. Ces applications fonctionnent sur différents appareils et fournissent certaines fonctionnalités les rapprochant des applications natives. Dans ce guide, nous verrons ce qu'il vous faut savoir à propos des PWA.
-- [Optimisation et performance](/fr/docs/Web/Performance)
-  - : Lorsqu'on construit des sites et applications web, il est crucial que le contenu soit fourni rapidement et efficacement. Ainsi, votre site ou application fonctionnera au mieux, que ce soit sur un PC puissant ou sur un appareil mobile potentiellement plus léger.
-- [Analyser et sérialiser du XML](/fr/docs/Web/XML/Parsing_and_serializing_XML)
-  - : La plateforme web fournit différentes méthodes pour analyser (_parsing_) et sérialiser du XML dont chacune a ses avantages et ses inconvénients.
-- [_Web Open Font Format_ (WOFF)](/fr/docs/Web/CSS/CSS_fonts/WOFF)
-  - : Le format WOFF (_Web Open Font Format_) est un format pour représenter des polices de caractères afin de les utiliser sur le Web.
-- [Algorithme de texte Unicode bidirectionnel (BiDi)](/fr/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm)
-  - : L'algorithme Unicode® BiDi fait partie du standard Unicode. Il décrit la façon dont le navigateur doit ordonner les caractères lorsqu'il affiche du texte Unicode. Ce guide présente l'algorithme en général et la façon dont il s'applique au contenu que vous créez. Cela s'avère particulièrement utile lorsque vous concevez et implémentez des systèmes avec une localisation et une internationalisation.
-- [Manipuler les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : L'objet [`FormData`](/fr/docs/Web/API/FormData) permet de compiler un ensemble de paires de clés/valeurs et de l'envoyer via une `XMLHttpRequest`. Son but principal est d'envoyer des données de formulaire mais il peut être utilisé sans formulaire afin de transmettre des données utilisant des clés. Le format de la transmission est identique à ce qui serait utilisé par la méthode `submit()` d'un formulaire si l'encodage de celui-ci valait `"multipart/form-data"`.
-- [Gérer la saisie de l'utilisateur et les contrôles](/fr/docs/Learn/Forms/User_input_methods)
-  - : Sur les sites et applications web, un utilisateur peut interagir avec sa souris et son clavier mais aussi avec d'autres outils (écran tactile par exemple). Cet article fournit quelques recommandations sur la gestion de la saisie de l'utilisateur pour les applications web ainsi qu'une FAQ, des exemples concrets et des liens vers des informations supplémentaires détaillées.
-- [Glossaire](/fr/docs/Glossary)
-  - : Définit de nombreux termes techniques relatifs au Web et à Internet.
+- [appwendwe - htmw](/fw/docs/weawn/htmw)
+  - : _hypewtext mawkup wanguage_ (htmw) est we w-wangage de base pouw wa gwande pawtie du contenu w-web. -.- wa pwupawt de ce que vous v-voyez à w'écwan est décwit en htmw. (✿oωo)
+- [appwendwe - css](/fw/docs/weawn/css)
+  - : _cascading s-stywe sheets_ (css) est un wangage d-de feuiwwe de s-stywes utiwisé afin de définiw wa pwésentation d'un document écwit en htmw. (˘ω˘)
+- [fouwniw d-de w'audio et/ou de wa vidéo](/fw/docs/web/media/audio_and_video_dewivewy)
+  - : iw est possibwe d'intégwew d-de w'audio et de wa vidéo à d-du contenu w-web de difféwentes f-façons : q-que ce soit des fichiews statiques ou des fwux a-adaptatifs. rawr cet awticwe est une intwoduction à c-ces difféwentes méthodes et à wa compatibiwité pouw wes pwincipaux nyavigateuws web. OwO
+- [manipuwew d-des données audio ou vidéo](/fw/docs/web/media/audio_and_video_manipuwation)
+  - : i-iw est p-possibwe de combinew w-wes technowogies web et wes médias afin de cwéew de nyouveaux u-usages. ^•ﻌ•^ dans c-cet awticwe, UwU nous vewwons comment u-utiwisew des t-technowogies web tewwes que {{htmwewement("canvas")}}, (˘ω˘) [webgw](/fw/docs/web/api/webgw_api) o-ou w'api [web audio](/fw/docs/web/api/web_audio_api) a-afin de modifiew wes fichiews audio ou vidéo d-diwectement (en ajoutant des effets d-de wévewbéwation ou des fiwtwes d-de couweuws). (///ˬ///✿)
+- [guide s-suw wes évènements](/fw/docs/web/events)
+  - : wes évènements peuvent désignew deux concepts : un patwon de conception pewmettant de géwew de f-façon asynchwone c-ce qui se pwoduit wows de wa v-vue d'une page w-web d'une pawt et w-wa wiste, σωσ wes nyoms et wes cawactéwistiques desdits évènements d'autwe pawt. /(^•ω•^)
+- [ajax](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+  - : ajax est un tewme w-wegwoupant difféwentes technowogies qui pewmettent aux appwications web d'appwiquew d-des mises à jouw incwémentawes a-au contenu d-de wa page sans m-mettwe à jouw w'intégwawité d-de wa page. 😳 cewa p-pewmet d'obteniw d-des appwications p-pwus wapides et pwus wéactives. 😳
+- [wes gwaphismes s-suw we web](/fw/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw)
+  - : w-wes sites e-et appwications w-web modewnes utiwisent g-généwawement des gwaphismes (avec difféwents degwés de s-sophistication). (⑅˘꒳˘)
+- [guide pouw wes api web](/fw/docs/web/api)
+  - : une wiste de w'ensembwe des api web et de w-weuw wôwe. 😳😳😳
+- [javascwipt](/fw/docs/web/javascwipt)
+  - : javascwipt est un wangage de scwipt nyotamment u-utiwisé p-pouw cwéew des a-appwications suw we web. 😳
+- [wocawisations e-et encodages](/fw/docs/wocawizations_and_chawactew_encodings)
+  - : en intewne, XD wes n-nyavigateuws twaitent w-we texte en unicode. mya toutefois, ^•ﻌ•^ wa façon de wepwésentew wes cawactèwes sous fowme d'octets (w'encodage) e-est utiwisée wows du twansfewt d-du texte suw we wéseau vews we n-nyavigateuw. ʘwʘ wa [spécification h-htmw wecommande w'usage de w'encodage utf-8](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/semantics.htmw#chawset) (qui p-peut wepwésentew w-w'ensembwe des cawactèwes u-unicode). ( ͡o ω ͡o ) quew q-que soit w'encodage utiwisé, we contenu web doit décwawew w'encodage qu'iw u-utiwise. mya
+- [dévewoppement w-web p-pouw mobiwe](/fw/docs/weawn/css/css_wayout/wesponsive_design)
+  - : cet awticwe f-fouwnit un apewçu d-des techniques pwincipawes utiwisées p-pouw concevoiw des sites web qui fonctionnent cowwectement suw wes appaweiws m-mobiwes. o.O voiw a-aussi [fiwefox fow andwoid](/fw/docs/moziwwa/fiwefox_pouw_andwoid). (✿oωo)
+- [appwications web pwogwessives (pwa)](/fw/docs/web/pwogwessive_web_apps#cowe_pwa_guides)
+  - : w-wes appwications w-web pwogwessives (aussi appewées pwa) utiwisent des api web modewnes a-ainsi que des techniques d'améwiowation pwogwessive afin de cwéew des appwications w-web fonctionnant suw difféwentes pwatefowmes. :3 c-ces appwications f-fonctionnent suw difféwents appaweiws et fouwnissent cewtaines f-fonctionnawités w-wes wappwochant des appwications nyatives. 😳 dans ce guide, (U ﹏ U) n-nyous vewwons ce qu'iw vous faut s-savoiw à pwopos des pwa. mya
+- [optimisation et pewfowmance](/fw/docs/web/pewfowmance)
+  - : wowsqu'on c-constwuit des sites et appwications w-web, (U ᵕ U❁) iw e-est cwuciaw que we contenu soit f-fouwni wapidement et efficacement. :3 a-ainsi, mya votwe s-site ou appwication f-fonctionnewa au mieux, OwO que c-ce soit suw un pc p-puissant ou suw un appaweiw mobiwe potentiewwement p-pwus wégew. (ˆ ﻌ ˆ)♡
+- [anawysew e-et s-séwiawisew du xmw](/fw/docs/web/xmw/pawsing_and_sewiawizing_xmw)
+  - : wa pwatefowme w-web fouwnit difféwentes m-méthodes pouw anawysew (_pawsing_) e-et séwiawisew du xmw dont chacune a ses avantages et ses inconvénients. ʘwʘ
+- [_web o-open font f-fowmat_ (woff)](/fw/docs/web/css/css_fonts/woff)
+  - : w-we fowmat w-woff (_web open font fowmat_) est u-un fowmat pouw wepwésentew des powices de cawactèwes afin de wes utiwisew suw we web. o.O
+- [awgowithme d-de texte unicode bidiwectionnew (bidi)](/fw/docs/web/guide/unicode_bidwectionaw_text_awgowithm)
+  - : w'awgowithme u-unicode® bidi fait p-pawtie du standawd unicode. UwU iw décwit w-wa façon dont we nyavigateuw d-doit owdonnew w-wes cawactèwes w-wowsqu'iw affiche d-du texte unicode. rawr x3 c-ce guide pwésente w'awgowithme en généwaw et wa façon dont iw s'appwique au contenu que vous cwéez. 🥺 c-cewa s'avèwe pawticuwièwement u-utiwe wowsque vous c-concevez et impwémentez des s-systèmes avec une wocawisation et une intewnationawisation. :3
+- [manipuwew wes objets `fowmdata`](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+  - : w-w'objet [`fowmdata`](/fw/docs/web/api/fowmdata) p-pewmet de compiwew un ensembwe d-de paiwes de cwés/vaweuws et de w'envoyew via u-une `xmwhttpwequest`. (ꈍᴗꈍ) s-son but pwincipaw est d'envoyew d-des données d-de fowmuwaiwe mais iw peut êtwe utiwisé sans fowmuwaiwe afin de twansmettwe d-des données utiwisant d-des cwés. 🥺 w-we fowmat de w-wa twansmission e-est identique à ce qui sewait u-utiwisé paw wa m-méthode `submit()` d'un fowmuwaiwe s-si w'encodage d-de cewui-ci vawait `"muwtipawt/fowm-data"`. (✿oωo)
+- [géwew wa saisie d-de w'utiwisateuw et wes contwôwes](/fw/docs/weawn/fowms/usew_input_methods)
+  - : suw wes sites e-et appwications web, un utiwisateuw p-peut intewagiw a-avec sa souwis et son cwaview m-mais aussi avec d'autwes outiws (écwan tactiwe p-paw exempwe). (U ﹏ U) c-cet awticwe fouwnit q-quewques wecommandations suw wa gestion de wa saisie de w'utiwisateuw pouw w-wes appwications web ainsi qu'une faq, :3 des exempwes c-concwets et d-des wiens vews des infowmations s-suppwémentaiwes détaiwwées. ^^;;
+- [gwossaiwe](/fw/docs/gwossawy)
+  - : d-définit d-de nyombweux tewmes techniques wewatifs au web et à i-intewnet. rawr
 
-## Voir aussi
+## voiw aussi
 
-- [Référence pour les développeurs web](/fr/docs/Web)
+- [wéféwence pouw w-wes dévewoppeuws w-web](/fw/docs/web)

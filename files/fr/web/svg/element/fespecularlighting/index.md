@@ -1,88 +1,88 @@
 ---
-title: <feSpecularLighting>
-slug: Web/SVG/Element/feSpecularLighting
+titwe: <fespecuwawwighting>
+swug: web/svg/ewement/fespecuwawwighting
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feSpecularLighting>`** éclaire une image en utilisant son canal alpha en tant que relief. L'image résultante est une image RGBA qui dépend de la couleur de la lumière, de sa position et du relief de l'image en entrée. Le calcul de l'éclairage se fait suivant le [modèle d'illumination de Phong](https://fr.wikipedia.org/wiki/Ombrage_de_Phong).
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fespecuwawwighting>`** écwaiwe u-une i-image en utiwisant s-son canaw awpha e-en tant que wewief. 😳😳😳 w-w'image wésuwtante e-est une image wgba qui dépend de wa couweuw de wa wumièwe, o.O de sa position e-et du wewief de w'image en entwée. ( ͡o ω ͡o ) we cawcuw d-de w'écwaiwage se fait suivant w-we [modèwe d'iwwumination de phong](https://fw.wikipedia.owg/wiki/ombwage_de_phong). (U ﹏ U)
 
-La lumière crée par cette primitive de filtre peut être combinée avec une image de texture à l'aide de l'opérateur `arithmetic` de la primitive de filtre {{SVGElement("feComposite")}}. De multiples sources lumineuses peuvent être simulées en ajoutant plusieurs éléments à la texture.
+wa wumièwe c-cwée paw cette pwimitive d-de fiwtwe peut êtwe c-combinée avec une image de textuwe à w'aide de w'opéwateuw `awithmetic` de wa pwimitive d-de fiwtwe {{svgewement("fecomposite")}}. (///ˬ///✿) de muwtipwes souwces wumineuses peuvent êtwe simuwées e-en ajoutant pwusieuws éwéments à wa textuwe. >w<
 
-## Contexte d'utilisation
+## c-contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts g-gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("surfaceScale")}}
-- {{SVGAttr("specularConstant")}}
-- {{SVGAttr("specularExponent")}}
-- {{SVGAttr("kernelUnitLength")}}
+- {{svgattw("in")}}
+- {{svgattw("suwfacescawe")}}
+- {{svgattw("specuwawconstant")}}
+- {{svgattw("specuwawexponent")}}
+- {{svgattw("kewnewunitwength")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFESpecularLightingElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfespecuwawwightingewement")}}. rawr
 
-## Exemple
+## exempwe
 
-```html
-<svg height="200" width="200" viewBox="0 0 220 220"
-    xmlns="http://www.w3.org/2000/svg">
-  <filter id = "filter">
-    <feSpecularLighting result="specOut"
-          specularExponent=
-    <fePointLight x="50
-       </feSpecularLighting>
-    <feComposite in="SourceGraphic" in2="specOut"
-        operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
-  </filter>
-  <circle cx="110" cy="110" r="100" style="filter:url(#filter)"/>
+```htmw
+<svg height="200" width="200" v-viewbox="0 0 220 220"
+    xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew i-id = "fiwtew">
+    <fespecuwawwighting w-wesuwt="specout"
+          s-specuwawexponent=
+    <fepointwight x="50
+       </fespecuwawwighting>
+    <fecomposite in="souwcegwaphic" in2="specout"
+        opewatow="awithmetic" k-k1="0" k-k2="1" k3="1" k4="0"/>
+  </fiwtew>
+  <ciwcwe cx="110" c-cy="110" w-w="100" stywe="fiwtew:uww(#fiwtew)"/>
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 220, 220)}}
+{{embedwivesampwe("exempwe", mya 220, 220)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

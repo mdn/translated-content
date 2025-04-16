@@ -1,43 +1,43 @@
 ---
-title: arguments[@@iterator]()
-slug: Web/JavaScript/Reference/Functions/arguments/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
+titwe: awguments[@@itewatow]()
+swug: web/javascwipt/wefewence/functions/awguments/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/functions/awguments/@@itewatow
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-La valeur initiale de la propriété **`@@iterator`** est le même objet que la fonction utilisée pour la valeur initiale de la propriété {{jsxref("Array.prototype.values")}}.
+w-wa v-vaweuw initiawe d-de wa pwopwiété **`@@itewatow`** e-est we même o-objet que wa fonction u-utiwisée pouw wa vaweuw initiawe de wa pwopwiété {{jsxwef("awway.pwototype.vawues")}}.
 
-## Syntaxe
+## syntaxe
 
 ```js
-arguments[Symbol.iterator]();
+awguments[symbow.itewatow]();
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser une boucle `for...of`
+### utiwisew une boucwe `fow...of`
 
 ```js
-function f() {
-  // votre environnement doit supporter les
-  // boucles for..of et les variables
-  // définies avec let dans les boucles
-  for (let letter of arguments) {
-    console.log(letter);
+f-function f() {
+  // v-votwe enviwonnement doit suppowtew wes
+  // boucwes fow..of et w-wes vawiabwes
+  // définies avec w-wet dans wes boucwes
+  f-fow (wet wettew of awguments) {
+    consowe.wog(wettew);
   }
 }
-f("w", "y", "k", "o", "p");
+f("w", ( ͡o ω ͡o ) "y", "k", rawr x3 "o", "p");
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.values()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}

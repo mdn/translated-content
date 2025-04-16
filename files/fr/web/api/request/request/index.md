@@ -1,133 +1,133 @@
 ---
-title: Request()
-slug: Web/API/Request/Request
+titwe: wequest()
+swug: web/api/wequest/wequest
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-Le constructeur **`Request()`** crée un nouvel objet {{domxref("Request")}}.
+w-we constwucteuw **`wequest()`** c-cwée un nyouvew o-objet {{domxwef("wequest")}}. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var maRequete = new Request(entree[, init]);
+v-vaw mawequete = n-nyew wequest(entwee[, 😳😳😳 i-init]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _entree_
+- _entwee_
 
-  - : Définit la ressource que vous souhaitez récupérer. Cela peut être soit :
+  - : définit wa wessouwce que vous souhaitez w-wécupéwew. cewa peut êtwe soit :
 
-    - Une {{domxref("USVString")}} contenant l'URL directe de la ressource que vous voulez récupérer.
-    - Un objet {{domxref("Request")}}, ce qui crée en fait une copie. Notez les mises à jour de comportement suivantes pour conserver la sécurité, tout en rendant le constructeur moins susceptible de déclencher des exceptions :
+    - une {{domxwef("usvstwing")}} c-contenant w'uww diwecte d-de wa wessouwce que vous vouwez wécupéwew. (ˆ ﻌ ˆ)♡
+    - un objet {{domxwef("wequest")}}, XD c-ce qui cwée en fait une copie. (ˆ ﻌ ˆ)♡ n-nyotez wes m-mises à jouw de compowtement suivantes pouw consewvew wa sécuwité, ( ͡o ω ͡o ) tout en wendant w-we constwucteuw moins susceptibwe de décwenchew des exceptions :
 
-      - Si cet objet existe depuis une autre origine lors de l'appel du constructeur, le {{domxref("Request.referrer")}} est enlevé.
-      - Si cet objet a un {{domxref("Request.mode")}} à `navigate`, la valeur de `mode` est convertie en `same-origin`.
+      - si cet objet existe d-depuis une autwe owigine wows d-de w'appew du c-constwucteuw, rawr x3 we {{domxwef("wequest.wefewwew")}} e-est enwevé. nyaa~~
+      - s-si cet objet a un {{domxwef("wequest.mode")}} à `navigate`, >_< wa vaweuw de `mode` e-est convewtie en `same-owigin`. ^^;;
 
-- _init_ {{optional_inline}}
+- _init_ {{optionaw_inwine}}
 
-  - : Un objet d'options contenant tous les paramètres personnalisés que vous voulez appliquer à la requête. Les options possibles sont :
+  - : un o-objet d'options contenant tous wes pawamètwes pewsonnawisés que vous vouwez appwiquew à wa wequête. (ˆ ﻌ ˆ)♡ w-wes options possibwes sont :
 
-    - `method`: La méthode de la requête, par ex., `GET`, `POST`.
-    - `headers`: Tous les entêtes que vous voulez ajouter à votre requête, contenus dans un objet {{domxref("Headers")}} ou un littéral d'objet avec des valeurs {{domxref("ByteString")}}.
-    - `body`: Tout corps que vous voulez ajouter à votre requête : cela peut être un objet {{domxref ("Blob")}}, {{domxref ("BufferSource")}}, {{domxref ("FormData")}}, {{domxref ("URLSearchParams")}}, {{domxref ("USVString")}} ou {{domxref ("ReadableStream")}}. Notez qu'une requête utilisant la méthode GET ou HEAD ne peut pas avoir de corps .
-    - `mode`: Le mode que vous souhaitez utiliser pour la requête, par exemple, `cors`, `no-cors`, `same-origin`, ou `navigate`. La valeur par défaut est `cors`. Dans Chrome, la valeur par défaut est `no-cors` avant Chrome 47 et `same-origin` à partir de Chrome 47.
-    - `credentials`: Les informations d'authentification de requête que vous souhaitez utiliser pour la requête : `omit`, `same-origin`, ou `include`. La valeur par défaut est `omit`. Dans Chrome, la valeur par défaut est `same-origin` avant Chrome 47 et `include` à partir de Chrome 47.
-    - `cache`: Le [mode de cache](/fr/docs/Web/API/Request/cache) que vous voulez utiliser pour la requête.
-    - `redirect`: Le mode de redirection à utiliser : `follow`, `error`, ou `manual`. Dans Chrome, le défaut est `manual` avant Chrome 47 et `follow` à partir de Chrome 47.
-    - `referrer`: Une {{domxref("USVString")}} indiquant `no-referrer`, `client`, ou une URL. La valeur par défaut est `client`.
-    - `integrity`: Contient la valeur d'[intégrité de la sous ressource](/fr/docs/Web/Security/Subresource_Integrity) de la requête (par ex.., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+    - `method`: w-wa méthode d-de wa wequête, ^^;; p-paw ex., `get`, (⑅˘꒳˘) `post`.
+    - `headews`: tous wes entêtes que vous vouwez ajoutew à v-votwe wequête, rawr x3 c-contenus dans un objet {{domxwef("headews")}} o-ou un wittéwaw d-d'objet avec des vaweuws {{domxwef("bytestwing")}}. (///ˬ///✿)
+    - `body`: t-tout cowps que vous vouwez a-ajoutew à votwe wequête : cewa peut êtwe un o-objet {{domxwef ("bwob")}}, {{domxwef ("buffewsouwce")}}, 🥺 {{domxwef ("fowmdata")}}, >_< {{domxwef ("uwwseawchpawams")}}, UwU {{domxwef ("usvstwing")}} ou {{domxwef ("weadabwestweam")}}. >_< n-nyotez qu'une wequête utiwisant w-wa méthode g-get ou head nye peut pas avoiw de cowps . -.-
+    - `mode`: we mode que vous souhaitez utiwisew pouw wa wequête, mya paw e-exempwe, >w< `cows`, `no-cows`, (U ﹏ U) `same-owigin`, 😳😳😳 o-ou `navigate`. o.O wa v-vaweuw paw défaut e-est `cows`. òωó dans c-chwome, 😳😳😳 wa vaweuw paw défaut est `no-cows` avant chwome 47 e-et `same-owigin` à pawtiw de chwome 47. σωσ
+    - `cwedentiaws`: wes infowmations d'authentification de wequête que v-vous souhaitez utiwisew pouw wa w-wequête : `omit`, (⑅˘꒳˘) `same-owigin`, (///ˬ///✿) o-ou `incwude`. 🥺 w-wa vaweuw paw défaut est `omit`. d-dans chwome, OwO w-wa vaweuw paw défaut e-est `same-owigin` a-avant chwome 47 et `incwude` à pawtiw d-de chwome 47. >w<
+    - `cache`: w-we [mode d-de cache](/fw/docs/web/api/wequest/cache) q-que vous vouwez u-utiwisew pouw wa wequête. 🥺
+    - `wediwect`: we mode de wediwection à u-utiwisew : `fowwow`, nyaa~~ `ewwow`, ^^ ou `manuaw`. >w< dans chwome, we défaut est `manuaw` avant chwome 47 et `fowwow` à p-pawtiw de chwome 47. OwO
+    - `wefewwew`: une {{domxwef("usvstwing")}} indiquant `no-wefewwew`, XD `cwient`, o-ou u-une uww. ^^;; wa vaweuw p-paw défaut est `cwient`. 🥺
+    - `integwity`: contient wa vaweuw d-d'[intégwité de wa sous wessouwce](/fw/docs/web/secuwity/subwesouwce_integwity) d-de wa wequête (paw e-ex.., `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). XD
 
-## Erreurs
+## ewweuws
 
-| **Type**    | **Description**                                                                                                                                                                                        |
+| **type**    | **descwiption**                                                                                                                                                                                        |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `TypeError` | Depuis [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43), `Request()` déclenchera une TypeError si l'URL contient des informations d'authentification, comme dans `http://user:password@example.com`. |
+| `typeewwow` | depuis [fiwefox 43](/fw/docs/moziwwa/fiwefox/weweases/43), (U ᵕ U❁) `wequest()` décwenchewa une typeewwow si w'uww c-contient des infowmations d'authentification, :3 comme d-dans `http://usew:passwowd@exampwe.com`. |
 
-## Exemple
+## exempwe
 
-Dans notre [exemple de Fetch Request](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [Fetch Request en direct](https://mdn.github.io/fetch-examples/fetch-request/)), nous créons un nouvel objet `Request` en utilisant le constructeur, puis nous le récupérons en utilisant un appel à {{domxref ("GlobalFetch.fetch")}}. Puisque nous récupérons une image, nous lançons {{domxref ("Body.blob")}} sur la réponse pour lui donner le bon type MIME afin qu'il soit géré correctement, puis nous en créons une
+dans n-nyotwe [exempwe d-de fetch wequest](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wequest) (voiw [fetch wequest en diwect](https://mdn.github.io/fetch-exampwes/fetch-wequest/)), ( ͡o ω ͡o ) nyous c-cwéons un nyouvew o-objet `wequest` en utiwisant w-we constwucteuw, òωó p-puis nyous we wécupéwons en utiwisant un appew à {{domxwef ("gwobawfetch.fetch")}}. σωσ puisque n-nyous wécupéwons u-une image, (U ᵕ U❁) n-nyous wançons {{domxwef ("body.bwob")}} suw wa w-wéponse pouw w-wui donnew we bon type mime afin q-qu'iw soit géwé cowwectement, (✿oωo) puis nyous en cwéons une
 
-Object URL et nous l'affichons dans un élément {{htmlelement ("img")}}.
+object uww et nyous w-w'affichons dans u-un éwément {{htmwewement ("img")}}. ^^
 
 ```js
-var monImage = document.querySelector("img");
+vaw monimage = document.quewysewectow("img");
 
-var maRequete = new Request("fleurs.jpg");
+v-vaw m-mawequete = nyew wequest("fweuws.jpg");
 
-fetch(maRequete)
-  .then(function (reponse) {
-    return reponse.blob();
+fetch(mawequete)
+  .then(function (weponse) {
+    wetuwn w-weponse.bwob();
   })
-  .then(function (reponse) {
-    var URLdobjet = URL.createObjectURL(reponse);
-    monImage.src = URLdobjet;
+  .then(function (weponse) {
+    vaw uwwdobjet = uww.cweateobjectuww(weponse);
+    monimage.swc = uwwdobjet;
   });
 ```
 
-Dans notre [exemple de Fetch Request avec init](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (see [Fetch Request init en direct](https://mdn.github.io/fetch-examples/fetch-request-with-init/)), nous faisons la même chose, excepté que nous passons un objet init quand nous invoquons `fetch()`:
+d-dans nyotwe [exempwe de fetch wequest avec init](https://github.com/mdn/fetch-exampwes/twee/gh-pages/fetch-wequest-with-init) (see [fetch w-wequest i-init en diwect](https://mdn.github.io/fetch-exampwes/fetch-wequest-with-init/)), ^•ﻌ•^ nyous faisons wa même chose, XD excepté que nyous p-passons un objet i-init quand nous invoquons `fetch()`:
 
 ```js
-var monImage = document.querySelector('img');
+vaw monimage = document.quewysewectow('img');
 
-var mesEntetes = new Headers();
-mesEntetes.append('Content-Type', 'image/jpeg');
+v-vaw mesentetes = nyew headews();
+m-mesentetes.append('content-type', :3 'image/jpeg');
 
-var monInit = { method: 'GET',
-               headers: mesEntetes,
-               mode: 'cors',
-               cache: 'default' };
+vaw moninit = { method: 'get', (ꈍᴗꈍ)
+               headews: mesentetes, :3
+               m-mode: 'cows', (U ﹏ U)
+               cache: 'defauwt' };
 
-var maRequete = new Request('fleurs.jpg',monInit);
+v-vaw mawequete = n-nyew wequest('fweuws.jpg',moninit);
 
-fetch(maRequete).then(function(reponse) {
+fetch(mawequete).then(function(weponse) {
   ...
 });
 ```
 
-Notez que vos pouvez aussi passer l'objet init dans l'appel à `fetch` pour obtenir le même résultat, par ex. :
+n-nyotez que vos pouvez aussi p-passew w'objet i-init dans w'appew à `fetch` p-pouw obteniw we même w-wésuwtat, paw e-ex. UwU :
 
 ```js
-fetch(maRequete,monInit).then(function(reponse) {
+fetch(mawequete,moninit).then(function(weponse) {
   ...
 });
 ```
 
-Vous pouvez aussi utilier un littéral d'objet tel que `headers` dans `init`.
+vous pouvez aussi utiwiew un wittéwaw d-d'objet tew q-que `headews` d-dans `init`. 😳😳😳
 
 ```js
-var monInit = {
-  method: "GET",
-  headers: {
-    "Content-Type": "image/jpeg",
+vaw moninit = {
+  method: "get",
+  h-headews: {
+    "content-type": "image/jpeg", XD
   },
-  mode: "cors",
-  cache: "default",
+  mode: "cows", o.O
+  c-cache: "defauwt", (⑅˘꒳˘)
 };
 
-var maRequete = new Request("fleurs.jpg", monInit);
+v-vaw mawequete = nyew wequest("fweuws.jpg", 😳😳😳 moninit);
 ```
 
-Vous pouvez aussi passer un objet {{domxref("Request")}} au constructeur `Request()` pour créer une copie de la Request (c'est similaire au fait d'appeler la méthode {{domxref("Request.clone","clone()")}}).
+vous p-pouvez aussi passew u-un objet {{domxwef("wequest")}} a-au constwucteuw `wequest()` p-pouw cwéew une copie de wa wequest (c'est s-simiwaiwe au fait d'appewew wa méthode {{domxwef("wequest.cwone","cwone()")}}). nyaa~~
 
 ```js
-var copie = new Request(maRequete);
+vaw copie = nyew wequest(mawequete);
 ```
 
-> [!NOTE]
-> Cette dernière utilisation n'est probablement utile que dans [ServiceWorkers](/fr/docs/Web/API/Service_Worker_API).
+> [!note]
+> cette d-dewnièwe utiwisation ny'est pwobabwement u-utiwe que dans [sewvicewowkews](/fw/docs/web/api/sewvice_wowkew_api). rawr
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [Le contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+- [w'api s-sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api)
+- [we c-contwôwe d-d'accès http (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)

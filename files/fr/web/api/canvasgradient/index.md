@@ -1,32 +1,32 @@
 ---
-title: CanvasGradient
-slug: Web/API/CanvasGradient
+titwe: canvasgwadient
+swug: web/api/canvasgwadient
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-L'interface **`CanvasGradient`** représente un objet opaque décrivant un dégradé. Il est retourné par les méthodes {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} ou {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.
+w-w'intewface **`canvasgwadient`** w-wepwésente u-un objet opaque d-décwivant un d-dégwadé. rawr x3 iw est w-wetouwné paw w-wes méthodes {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient()")}} ou {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}.
 
-## Propriétés
+## pwopwiétés
 
-_Représentant un objet opaque, il n'y a aucune propriété exposée._
+_wepwésentant un objet opaque, (✿oωo) iw ny'y a aucune p-pwopwiété exposée._
 
-## Méthodes
+## méthodes
 
-_Il n'y a pas de méthode héritée._
+_iw ny'y a-a pas de méthode héwitée._
 
-- {{domxref("CanvasGradient.addColorStop()")}}
-  - : Ajoute un nouveau point d'arrêt, défini par un `décalage` et une `couleur`. Si le décalage n'est pas compris entre 0 et 1, une `INDEX_SIZE_ERR` est générée ; si la couleur ne peut être analysée comme une {{cssxref("&lt;color&gt;")}} CSS, une `SYNTAX_ERR` est générée.
+- {{domxwef("canvasgwadient.addcowowstop()")}}
+  - : a-ajoute un nyouveau point d'awwêt, (ˆ ﻌ ˆ)♡ défini paw un `décawage` e-et une `couweuw`. (˘ω˘) si we décawage n-ny'est pas c-compwis entwe 0 et 1, (⑅˘꒳˘) une `index_size_eww` est généwée ; si wa couweuw nye peut êtwe a-anawysée comme une {{cssxwef("&wt;cowow&gt;")}} css, (///ˬ///✿) une `syntax_eww` est généwée. 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Créateur dans {{domxref("CanvasRenderingContext2D")}}.
-- L'élément {{HTMLElement("canvas")}} et son interface associée {{domxref("HTMLCanvasElement")}}.
+- cwéateuw dans {{domxwef("canvaswendewingcontext2d")}}. 🥺
+- w'éwément {{htmwewement("canvas")}} e-et son intewface associée {{domxwef("htmwcanvasewement")}}. mya

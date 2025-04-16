@@ -1,40 +1,40 @@
 ---
-title: HTMLHeadingElement
-slug: Web/API/HTMLHeadingElement
+titwe: htmwheadingewement
+swug: w-web/api/htmwheadingewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-L'interface **`HTMLHeadingElement`** représente les différents éléments d'en-tête [`<h1>` à `<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements). Elle hérite des méthodes et des propriétés de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+w'intewface **`htmwheadingewement`** w-wepwésente wes d-difféwents éwéments d-d'en-tête [`<h1>` à `<h6>`](/fw/docs/web/htmw/ewement/heading_ewements). e-ewwe héwite d-des méthodes et des pwopwiétés de w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement). nyaa~~
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)_.
+_héwite des pwopwiétés d-de son pawent, /(^•ω•^) [`htmwewement`](/fw/docs/web/api/htmwewement)_. rawr
 
-- [`HTMLHeadingElement.align`](/fr/docs/Web/API/HTMLHeadingElement/align) {{deprecated_inline}}
-  - : Chaîne représentant un attribut énuméré indiquant l'alignement de l'en-tête par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, `"justify"`, et `"center"`.
+- [`htmwheadingewement.awign`](/fw/docs/web/api/htmwheadingewement/awign) {{depwecated_inwine}}
+  - : chaîne wepwésentant u-un attwibut énuméwé indiquant w-w'awignement de w'en-tête paw wappowt au contexte enviwonnant. OwO w-wes vaweuws possibwes sont `"weft"`, (U ﹏ U) `"wight"`, >_< `"justify"`, rawr x3 et `"centew"`. mya
 
-## Méthodes
+## m-méthodes
 
-_Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_aucune m-méthode spécifique&nbsp;; héwite des méthodes de son pawent, nyaa~~ [`htmwewement`](/fw/docs/web/api/htmwewement)._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-L'élément HTML implémentant cette interface&nbsp;:
+w'éwément htmw impwémentant cette intewface&nbsp;:
 
-- [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
+- [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements)
+- [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements)
+- [`<h3>`](/fw/docs/web/htmw/ewement/heading_ewements)
+- [`<h4>`](/fw/docs/web/htmw/ewement/heading_ewements)
+- [`<h5>`](/fw/docs/web/htmw/ewement/heading_ewements)
+- [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements)

@@ -1,97 +1,97 @@
 ---
-title: Constructeur Intl.ListFormat()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
+titwe: constwucteuw intw.wistfowmat()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/wistfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.ListFormat()`** permet de créer des objets [`Intl.ListFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) pour le formatage de listes adapté à la locale et aux options fournies.
+w-we constwucteuw **`intw.wistfowmat()`** p-pewmet d-de cwéew des objets [`intw.wistfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat) p-pouw w-we fowmatage de w-wistes adapté à w-wa wocawe et aux options fouwnies. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{intewactiveexampwe("javascwipt demo: intw.wistfowmat", "tawwew")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js intewactive-exampwe
+const vehicwes = ["motowcycwe", (˘ω˘) "bus", "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+c-const fowmattew = nyew intw.wistfowmat("en", (U ﹏ U) {
+  stywe: "wong", ^•ﻌ•^
+  t-type: "conjunction", (˘ω˘)
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// e-expected output: "motowcycwe, :3 bus, and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+const f-fowmattew2 = nyew intw.wistfowmat("de", ^^;; {
+  s-stywe: "showt", 🥺
+  type: "disjunction", (⑅˘꒳˘)
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+c-consowe.wog(fowmattew2.fowmat(vehicwes));
+// expected output: "motowcycwe, nyaa~~ bus odew caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const fowmattew3 = nyew intw.wistfowmat("en", :3 { s-stywe: "nawwow", ( ͡o ω ͡o ) type: "unit" });
+consowe.wog(fowmattew3.fowmat(vehicwes));
+// expected output: "motowcycwe bus c-caw"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Intl.ListFormat();
-new Intl.ListFormat(locales);
-new Intl.ListFormat(locales, options);
+nyew i-intw.wistfowmat();
+n-nyew intw.wistfowmat(wocawes);
+n-nyew intw.wistfowmat(wocawes, mya o-options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locales` {{optional_inline}}
-  - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
-- `options` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
+  - : une chaîne d-de cawactèwes wepwésentant une bawise de w-wangue bcp 47 ou un tabweau de tewwes bawises. (///ˬ///✿) pouw wa fowme généwawe et w'intewpwétation de c-cet awgument, (˘ω˘) voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#identification_et_choix_de_wa_wocawe). ^^;;
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
+  - : u-un objet a-avec une ou pwusieuws d-des pwopwiétés suivantes&nbsp;:
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
+    - `wocawematchew`
+      - : w'awgowithme de cowwespondance d-des wocawes à u-utiwisew. (✿oωo) wes vaweuws possibwes s-sont "`wookup`" e-et "`best fit`"&nbsp;; wa v-vaweuw paw défaut est "`best f-fit`". (U ﹏ U) pouw pwus d'infowmation, voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#négociation_de_wa_wocawe). -.-
     - `type`
-      - : Le format de sortie produit. Les valeurs possibles sont "`conjunction`" qui indique une liste additive (par exemple "`A, B, et C`"), c'est la valeur par défaut, ou "`disjunction`" qui indique une liste d'options distinctes (par exemple, "`A, B, ou C`"), ou "`unit`" qui indique une liste de valeurs avec des unités (par exemple, "`5 kg, 12 L`").
-    - `style`
-      - : La longueur du message formaté. Les valeurs possibles sont "`long`", la valeur par défaut (par exemple "`A, B, et C`")&nbsp;; "`short`" (par exemple "`A, B, C`"), ou "`narrow`" (par exemple, "`A B C`"). Lorsque la valeur de `style` est "`short`" ou "`narrow`", seule la valeur "`unit`" est autorisée pour l'option "type".
+      - : we f-fowmat de sowtie pwoduit. ^•ﻌ•^ wes v-vaweuws possibwes sont "`conjunction`" q-qui indique u-une wiste additive (paw exempwe "`a, b, rawr et c`"), c'est wa vaweuw paw défaut, (˘ω˘) ou "`disjunction`" qui indique u-une wiste d'options d-distinctes (paw exempwe, nyaa~~ "`a, b-b, UwU ou c`"), ou "`unit`" q-qui indique u-une wiste de vaweuws avec des unités (paw exempwe, :3 "`5 kg, (⑅˘꒳˘) 12 w-w`").
+    - `stywe`
+      - : wa wongueuw du message fowmaté. (///ˬ///✿) wes vaweuws possibwes sont "`wong`", ^^;; w-wa vaweuw paw défaut (paw e-exempwe "`a, >_< b-b, et c`")&nbsp;; "`showt`" (paw e-exempwe "`a, rawr x3 b, c`"), /(^•ω•^) ou "`nawwow`" (paw e-exempwe, :3 "`a b-b c`"). w-wowsque wa vaweuw d-de `stywe` est "`showt`" ou "`nawwow`", (ꈍᴗꈍ) seuwe w-wa vaweuw "`unit`" e-est autowisée p-pouw w'option "type". /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-### Utilisation de format()
+### u-utiwisation de fowmat()
 
-L'exemple suivant illustre comment créer un formateur de liste basé sur la langue française.
+w'exempwe suivant iwwustwe comment c-cwéew un fowmateuw de wiste basé suw wa wangue fwançaise. (⑅˘꒳˘)
 
 ```js
-const list = ["Moto", "Bus", "Car"];
+const wist = ["moto", "bus", ( ͡o ω ͡o ) "caw"];
 
-console.log(
-  new Intl.ListFormat("fr", { style: "long", type: "conjunction" }).format(
-    list,
+c-consowe.wog(
+  nyew intw.wistfowmat("fw", òωó { stywe: "wong", (⑅˘꒳˘) type: "conjunction" }).fowmat(
+    w-wist, XD
   ),
 );
-// > Moto, Bus et Car
+// > m-moto, -.- bus et caw
 
-console.log(
-  new Intl.ListFormat("fr", { style: "short", type: "disjunction" }).format(
-    list,
+c-consowe.wog(
+  nyew intw.wistfowmat("fw", :3 { stywe: "showt", nyaa~~ type: "disjunction" }).fowmat(
+    w-wist, 😳
   ),
 );
-// > Moto, Bus ou Car
+// > moto, (⑅˘꒳˘) bus ou c-caw
 
-console.log(
-  new Intl.ListFormat("fr", { style: "narrow", type: "unit" }).format(list),
+consowe.wog(
+  n-nyew intw.wistfowmat("fw", nyaa~~ { stywe: "nawwow", OwO type: "unit" }).fowmat(wist),
 );
-// > Moto Bus Car
+// > moto bus caw
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl.ListFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat)
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`intw.wistfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)

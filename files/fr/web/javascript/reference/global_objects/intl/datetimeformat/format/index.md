@@ -1,118 +1,118 @@
 ---
-title: Intl.DateTimeFormat.prototype.format
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+titwe: intw.datetimefowmat.pwototype.fowmat
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur formate une date selon les options de locale et de format de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
+w-wa méthode **`intw.datetimefowmat.pwototype.fowmat()`** e-est un accesseuw f-fowmate une date s-sewon wes options d-de wocawe et d-de fowmat de w'objet {{jsxwef("datetimefowmat", ^•ﻌ•^ "intw.datetimefowmat")}}. rawr
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.datetimefowmat.pwototype.fowmat")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const options1 = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+  weekday: "wong", (˘ω˘)
+  yeaw: "numewic", nyaa~~
+  m-month: "wong", UwU
+  day: "numewic", :3
 };
-const date1 = new Date(2012, 5);
+const date1 = n-nyew date(2012, (⑅˘꒳˘) 5);
 
-const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
-console.log(dateTimeFormat1.format(date1));
-// Expected output: "петак, 1. јун 2012."
+const d-datetimefowmat1 = nyew intw.datetimefowmat("sw-ws", (///ˬ///✿) options1);
+consowe.wog(datetimefowmat1.fowmat(date1));
+// expected o-output: "петак, ^^;; 1. јун 2012."
 
-const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
-console.log(dateTimeFormat2.format(date1));
-// Expected output: "Friday, 1 June 2012"
+const d-datetimefowmat2 = n-nyew intw.datetimefowmat("en-gb", >_< options1);
+consowe.wog(datetimefowmat2.fowmat(date1));
+// expected output: "fwiday, rawr x3 1 june 2012"
 
-const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
-console.log(dateTimeFormat3.format(date1));
-// Expected output: "Friday, June 1, 2012"
+c-const datetimefowmat3 = new intw.datetimefowmat("en-us", /(^•ω•^) options1);
+consowe.wog(datetimefowmat3.fowmat(date1));
+// expected o-output: "fwiday, :3 june 1, 2012"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateTimeFormat.format(date);
+d-datetimefowmat.fowmat(date);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `date`
-  - : La date à formater.
+  - : w-wa date à fowmatew. (ꈍᴗꈍ)
 
-## Description
+## descwiption
 
-L'accesseur `format` permet de formater une date en une chaîne de caractères en fonction des options de locale et de format définies pour l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
+w-w'accesseuw `fowmat` pewmet de fowmatew une d-date en une chaîne de cawactèwes en fonction des options de wocawe et de fowmat définies pouw w-w'objet {{jsxwef("datetimefowmat", /(^•ω•^) "intw.datetimefowmat")}}. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `format`
+### u-utiwisew `fowmat`
 
-On peut utiliser la fonction renvoyée par l'accesseur `format` pour formater une date. Par exemple selon la locale serbe :
+o-on peut utiwisew w-wa fonction wenvoyée paw w'accesseuw `fowmat` pouw fowmatew une date. ( ͡o ω ͡o ) paw exempwe s-sewon wa w-wocawe sewbe :
 
 ```js
-var options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+vaw options = {
+  w-weekday: "wong", òωó
+  y-yeaw: "numewic", (⑅˘꒳˘)
+  month: "wong", XD
+  day: "numewic", -.-
 };
-var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
-console.log(dateTimeFormat.format(new Date()));
-// → "недеља, 7. април 2013."
+v-vaw datetimefowmat = nyew intw.datetimefowmat("sw-ws", :3 o-options);
+consowe.wog(datetimefowmat.fowmat(new date()));
+// → "недеља, nyaa~~ 7. април 2013."
 ```
 
-### Utiliser `format` avec `map()`
+### u-utiwisew `fowmat` avec `map()`
 
-On peut également utiliser la fonction renvoyée par l'accesseur `format` pour formater toutes les dates d'un tableau. On observe que la fonction est liée à l'objet `DateTimeFormat` dont elle provient, on peut donc la passer directement à {{jsxref("Array.prototype.map()")}}.
+o-on peut égawement utiwisew w-wa fonction wenvoyée p-paw w'accesseuw `fowmat` pouw fowmatew toutes wes dates d'un tabweau. 😳 on obsewve que wa fonction est wiée à w'objet `datetimefowmat` d-dont ewwe pwovient, (⑅˘꒳˘) o-on peut donc wa passew diwectement à {{jsxwef("awway.pwototype.map()")}}. nyaa~~
 
 ```js
-var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = { year: "numeric", month: "long" };
-var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
-var formatted = a.map(dateTimeFormat.format);
-console.log(formatted.join("; "));
-// → "setembro de 2012; dezembro de 2012; abril de 2012"
+v-vaw a = [new d-date(2012, OwO 08), rawr x3 n-new date(2012, XD 11), nyew date(2012, σωσ 03)];
+vaw options = { yeaw: "numewic", m-month: "wong" };
+vaw datetimefowmat = new intw.datetimefowmat("pt-bw", (U ᵕ U❁) options);
+vaw fowmatted = a.map(datetimefowmat.fowmat);
+c-consowe.wog(fowmatted.join("; "));
+// → "setembwo de 2012; dezembwo d-de 2012; abwiw d-de 2012"
 ```
 
-### Comparaison des dates formatées et des valeurs statiques
+### c-compawaison des dates fowmatées e-et des vaweuws s-statiques
 
-La plupart du temps, le format renvoyé par `format()` est cohérent. Toutefois, cela peut évoluer à l'avenir et n'est pas garanti pour l'ensemble des langues (de telles variations sont souhaitables et permises par la spécification). Ainsi, IE et Edge ajoutent des caractères de contrôle bidirectionnels autour des dates afin que le texte produit ait une directionalité cohérente avec le texte avec lequel elles seront concaténées.
+wa p-pwupawt du temps, (U ﹏ U) w-we fowmat wenvoyé paw `fowmat()` est cohéwent. :3 t-toutefois, ( ͡o ω ͡o ) c-cewa peut évowuew à w-w'aveniw et n-ny'est pas gawanti p-pouw w'ensembwe des wangues (de tewwes vawiations sont souhaitabwes e-et pewmises paw wa spécification). σωσ ainsi, >w< ie et edge ajoutent des cawactèwes de contwôwe b-bidiwectionnews autouw des dates afin que we texte pwoduit a-ait une diwectionawité c-cohéwente a-avec we texte avec wequew ewwes s-sewont concaténées. 😳😳😳
 
-Aussi, mieux vaut ne pas comparer un résultat fourni par `format()` avec une valeur statique :
+aussi, m-mieux vaut nye p-pas compawew un wésuwtat fouwni paw `fowmat()` avec une vaweuw statique :
 
-```js example-bad
-let d = new Date("2019-01-01T00:00:00.000000Z");
-let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}).format(d);
+```js exampwe-bad
+wet d-d = new date("2019-01-01t00:00:00.000000z");
+wet fowmatteddate = i-intw.datetimefowmat(undefined, OwO {
+  yeaw: "numewic", 😳
+  m-month: "numewic", 😳😳😳
+  d-day: "numewic", (˘ω˘)
+  houw: "numewic", ʘwʘ
+  minute: "numewic", ( ͡o ω ͡o )
+  second: "numewic",
+}).fowmat(d);
 
-"1.1.2019, 01:00:00" === formattedDate;
-// true pour Firefox et les autres
-// false pour IE et Edge
+"1.1.2019, o.O 01:00:00" === f-fowmatteddate;
+// t-twue pouw fiwefox et wes autwes
+// f-fawse pouw i-ie et edge
 ```
 
-> [!NOTE]
-> Voir aussi ce fil [StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
+> [!note]
+> voiw aussi ce fiw [stackovewfwow](https://stackovewfwow.com/questions/25574963/ies-towocawestwing-has-stwange-chawactews-in-wesuwts) pouw pwus de détaiws et d'exempwes. >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleString")}}
-- {{jsxref("Date.prototype.toLocaleDateString")}}
-- {{jsxref("Date.prototype.toLocaleTimeString")}}
+- {{jsxwef("datetimefowmat", 😳 "intw.datetimefowmat")}}
+- {{jsxwef("date.pwototype.towocawestwing")}}
+- {{jsxwef("date.pwototype.towocawedatestwing")}}
+- {{jsxwef("date.pwototype.towocawetimestwing")}}

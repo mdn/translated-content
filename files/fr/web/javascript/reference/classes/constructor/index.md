@@ -1,192 +1,192 @@
 ---
-title: constructor
-slug: Web/JavaScript/Reference/Classes/constructor
+titwe: constwuctow
+swug: web/javascwipt/wefewence/cwasses/constwuctow
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-La méthode **`constructor`** est une méthode qui est utilisée pour créer et initialiser un objet lorsqu'on utilise le mot clé [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class).
+w-wa méthode **`constwuctow`** e-est une méthode q-qui est utiwisée p-pouw cwéew e-et initiawisew u-un objet wowsqu'on u-utiwise we m-mot cwé [`cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass). OwO
 
-{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+{{intewactiveexampwe("javascwipt demo: cwasses constwuctow")}}
 
-```js interactive-example
-class Polygon {
-  constructor() {
-    this.name = "Polygon";
+```js intewactive-exampwe
+cwass powygon {
+  c-constwuctow() {
+    this.name = "powygon";
   }
 }
 
-const poly1 = new Polygon();
+const powy1 = n-nyew powygon();
 
-console.log(poly1.name);
-// Expected output: "Polygon"
+consowe.wog(powy1.name);
+// e-expected output: "powygon"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-constructor() { ... }
-constructor(argument0) { ... }
-constructor(argument0, argument1) { ... }
-constructor(argument0, argument1, ... , argumentN) { ... }
+constwuctow() { ... }
+constwuctow(awgument0) { ... }
+c-constwuctow(awgument0, 😳😳😳 awgument1) { ... }
+c-constwuctow(awgument0, (ˆ ﻌ ˆ)♡ a-awgument1, XD ... , awgumentn) { ... }
 ```
 
-## Description
+## descwiption
 
-Un constructeur vous permet de fournir toute initialisation personnalisée qui doit être effectuée avant que toute autre méthode puisse être appelée sur un objet instancié.
+un constwucteuw vous pewmet d-de fouwniw toute initiawisation pewsonnawisée qui doit êtwe effectuée avant q-que toute autwe méthode puisse êtwe a-appewée suw u-un objet instancié. (ˆ ﻌ ˆ)♡
 
 ```js
-class Person {
-  constructor(name) {
-    this.name = name;
+cwass p-pewson {
+  c-constwuctow(name) {
+    this.name = nyame;
   }
 
-  introduce() {
-    console.log(`Hello, my name is ${this.name}`);
+  i-intwoduce() {
+    consowe.wog(`hewwo, ( ͡o ω ͡o ) my nyame i-is ${this.name}`);
   }
 }
 
-const otto = new Person("Otto");
+const otto = nyew pewson("otto");
 
-otto.introduce();
+otto.intwoduce();
 ```
 
-Si vous ne fournissez pas votre propre constructeur, alors un constructeur par défaut sera fourni pour vous. Si votre classe est une classe de base, le constructeur par défaut est vide :
+si vous nye fouwnissez pas v-votwe pwopwe constwucteuw, rawr x3 awows u-un constwucteuw p-paw défaut sewa f-fouwni pouw vous. nyaa~~ si votwe cwasse est une cwasse de base, we constwucteuw p-paw d-défaut est vide :
 
 ```js
-constructor() {}
+constwuctow() {}
 ```
 
-Si votre classe est une classe dérivée, le constructeur par défaut appelle le constructeur parent, en transmettant tous les arguments qui ont été fournis :
+s-si votwe cwasse e-est une cwasse déwivée, >_< we constwucteuw p-paw défaut appewwe we c-constwucteuw pawent, ^^;; en twansmettant tous wes awguments q-qui ont été fouwnis :
 
 ```js
-constructor(...args) {
-  super(...args);
+c-constwuctow(...awgs) {
+  supew(...awgs);
 }
 ```
 
-Cela permet à un code comme celui-ci de fonctionner :
+c-cewa pewmet à u-un code comme cewui-ci de fonctionnew :
 
 ```js
-class ValidationError extends Error {
-  printCustomerMessage() {
-    return `La validation a échoué :-( (détails : ${this.message})`;
+cwass vawidationewwow extends ewwow {
+  pwintcustomewmessage() {
+    wetuwn `wa v-vawidation a-a échoué :-( (détaiws : ${this.message})`;
   }
 }
 
-try {
-  throw new ValidationError("Numéro de téléphone invalide");
-} catch (error) {
-  if (error instanceof ValidationError) {
-    console.log(error.name); // Il s'agit d'une erreur au lieu de ValidationError !
-    console.log(error.printCustomerMessage());
-  } else {
-    console.log("Erreur inconnue", error);
-    throw error;
+twy {
+  thwow n-new vawidationewwow("numéwo d-de téwéphone i-invawide");
+} catch (ewwow) {
+  if (ewwow instanceof vawidationewwow) {
+    consowe.wog(ewwow.name); // i-iw s'agit d'une ewweuw au wieu de vawidationewwow !
+    consowe.wog(ewwow.pwintcustomewmessage());
+  } ewse {
+    consowe.wog("ewweuw i-inconnue", (ˆ ﻌ ˆ)♡ ewwow);
+    t-thwow ewwow;
   }
 }
 ```
 
-La classe `ValidationError` n'a pas besoin d'un constructeur explicite, car elle n'a pas besoin de faire d'initialisation personnalisée. Le constructeur par défaut se charge alors d'initialiser le parent `Error` à partir de l'argument qui lui est fourni.
+w-wa c-cwasse `vawidationewwow` ny'a pas b-besoin d'un constwucteuw e-expwicite, ^^;; c-caw ewwe ny'a p-pas besoin de faiwe d'initiawisation pewsonnawisée. (⑅˘꒳˘) w-we constwucteuw p-paw défaut s-se chawge awows d-d'initiawisew w-we pawent `ewwow` à pawtiw de w'awgument qui wui est fouwni. rawr x3
 
-Cependant, si vous fournissez votre propre constructeur, et que votre classe dérive d'une certaine classe parente, alors vous devez appeler explicitement le constructeur de la classe parente en utilisant `super`. Par exemple :
+c-cependant, (///ˬ///✿) si vous fouwnissez votwe pwopwe constwucteuw, 🥺 et que votwe cwasse déwive d'une cewtaine c-cwasse pawente, >_< awows vous devez appewew expwicitement we c-constwucteuw de w-wa cwasse pawente e-en utiwisant `supew`. paw exempwe :
 
 ```js
-class ValidationError extends Error {
-  constructor(message) {
-    super(message); // appelle le constructeur de la classe parent
-    this.name = "ValidationError";
-    this.code = "42";
+c-cwass vawidationewwow e-extends ewwow {
+  c-constwuctow(message) {
+    supew(message); // appewwe we constwucteuw de wa cwasse pawent
+    this.name = "vawidationewwow";
+    t-this.code = "42";
   }
 
-  printCustomerMessage() {
-    return `La validation a échoué :-( (détails : ${this.message}, code : ${this.code})`;
+  pwintcustomewmessage() {
+    wetuwn `wa v-vawidation a échoué :-( (détaiws : ${this.message}, c-code : ${this.code})`;
   }
 }
 
-try {
-  throw new ValidationError("Numéro de téléphone invalide");
-} catch (error) {
-  if (error instanceof ValidationError) {
-    console.log(error.name); // Maintenant, c'est une ValidationError !
-    console.log(error.printCustomerMessage());
-  } else {
-    console.log("Unknown error", error);
-    throw error;
+t-twy {
+  thwow nyew vawidationewwow("numéwo de téwéphone i-invawide");
+} c-catch (ewwow) {
+  if (ewwow i-instanceof vawidationewwow) {
+    c-consowe.wog(ewwow.name); // maintenant, UwU c'est une vawidationewwow ! >_<
+    consowe.wog(ewwow.pwintcustomewmessage());
+  } ewse {
+    c-consowe.wog("unknown e-ewwow", -.- e-ewwow);
+    thwow ewwow;
   }
 }
 ```
 
-Il ne peut y avoir qu'une seule méthode spéciale portant le nom « `constructor` » dans une classe. Avoir plus d'une occurrence d'une méthode `constructor` dans une classe lancera une erreur [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
+i-iw nye peut y-y avoiw qu'une seuwe méthode s-spéciawe powtant we nyom « `constwuctow` » dans une cwasse. mya avoiw pwus d'une o-occuwwence d'une m-méthode `constwuctow` dans une cwasse wancewa u-une ewweuw [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow). >w<
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la méthode du `constructor`
+### utiwisation de wa méthode du `constwuctow`
 
-Cet extrait de code est tiré de l'[échantillon de classes](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([démo en direct](https://googlechrome.github.io/samples/classes-es6/index.html)).
+c-cet extwait de code est tiwé de w'[échantiwwon de cwasses](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([démo en diwect](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)). (U ﹏ U)
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // Ici, on appelle le constructeur de la classe parente avec des longueurs
-    // fournies pour la largeur et la hauteur du polygone.
-    super(length, length);
-    // NOTE : Dans les classes dérivées, `super()` doit être appelé avant de pouvoir
-    // utiliser `this`. Si vous ne le faites pas, cela provoquera une ReferenceError.
-    this.name = "Carré";
+cwass s-squawe extends powygon {
+  constwuctow(wength) {
+    // i-ici, 😳😳😳 o-on appewwe we constwucteuw de wa cwasse pawente avec des wongueuws
+    // f-fouwnies p-pouw wa wawgeuw et wa hauteuw du powygone. o.O
+    supew(wength, w-wength);
+    // nyote : dans wes c-cwasses déwivées, òωó `supew()` doit êtwe appewé avant de pouvoiw
+    // utiwisew `this`. 😳😳😳 s-si vous nye we faites p-pas, σωσ cewa pwovoquewa u-une wefewenceewwow. (⑅˘꒳˘)
+    this.name = "cawwé";
   }
 
-  get area() {
-    return this.height * this.width;
+  g-get awea() {
+    wetuwn t-this.height * t-this.width;
   }
 
-  set area(value) {
-    this.height = value ** 0.5;
-    this.width = value ** 0.5;
+  s-set awea(vawue) {
+    this.height = v-vawue ** 0.5;
+    t-this.width = vawue ** 0.5;
   }
 }
 ```
 
-### Un autre exemple
+### un autwe exempwe
 
-Ici, le prototype de la classe `Square` est modifié — mais le constructeur de sa classe de base `Polygon` est toujours appelé lorsqu'une nouvelle instance d'un carré est créée.
+i-ici, (///ˬ///✿) we p-pwototype de wa c-cwasse `squawe` est modifié — mais we constwucteuw d-de sa cwasse de base `powygon` e-est toujouws a-appewé wowsqu'une nyouvewwe instance d'un cawwé est cwéée. 🥺
 
 ```js
-class Polygon {
-  constructor() {
-    this.name = "Polygone";
+c-cwass powygon {
+  c-constwuctow() {
+    t-this.name = "powygone";
   }
 }
 
-class Square extends Polygon {
-  constructor() {
-    super();
+c-cwass squawe extends p-powygon {
+  constwuctow() {
+    supew();
   }
 }
 
-class Rectangle {}
+cwass wectangwe {}
 
-Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
+object.setpwototypeof(squawe.pwototype, OwO wectangwe.pwototype);
 
-console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
-console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
+consowe.wog(object.getpwototypeof(squawe.pwototype) === p-powygon.pwototype); //fawse
+consowe.wog(object.getpwototypeof(squawe.pwototype) === w-wectangwe.pwototype); //twue
 
-let newInstance = new Square();
-console.log(newInstance.name); // Polygone
+wet nyewinstance = n-nyew squawe();
+consowe.wog(newinstance.name); // p-powygone
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`super()`](/fr/docs/Web/JavaScript/Reference/Operators/super)
-- [Expression `class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
-- [Déclaration `class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
-- [`Classes`](/fr/docs/Web/JavaScript/Reference/Classes)
-- [Object.prototype.constructor](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- [`supew()`](/fw/docs/web/javascwipt/wefewence/opewatows/supew)
+- [expwession `cwass`](/fw/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [décwawation `cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass)
+- [`cwasses`](/fw/docs/web/javascwipt/wefewence/cwasses)
+- [object.pwototype.constwuctow](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow)

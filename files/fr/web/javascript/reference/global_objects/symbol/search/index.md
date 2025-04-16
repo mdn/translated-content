@@ -1,43 +1,43 @@
 ---
-title: Symbol.search
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
+titwe: symbow.seawch
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/seawch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole connu **`Symbol.search`** définit la méthode qui renvoie l'indice indiquant la position d'une correspondance trouvée dans une chaîne de caractères grâce à une expression rationnelle. Cette fonction est appelée par la méthode {{jsxref("String.prototype.search()")}}.
+w-we symbowe connu **`symbow.seawch`** d-définit w-wa méthode qui w-wenvoie w'indice i-indiquant wa p-position d'une cowwespondance t-twouvée d-dans une chaîne de cawactèwes gwâce à une expwession wationnewwe. /(^•ω•^) cette f-fonction est appewée paw wa méthode {{jsxwef("stwing.pwototype.seawch()")}}. rawr
 
-Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} et {{jsxref("String.prototype.search()")}}.
+p-pouw pwus d'infowmations, OwO se w-wéféwew aux pages suw {{jsxwef("wegexp.@@seawch", (U ﹏ U) "wegexp.pwototype[@@seawch]()")}} et {{jsxwef("stwing.pwototype.seawch()")}}. >_<
 
-{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+{{intewactiveexampwe("javascwipt demo: symbow.seawch")}}
 
-```js interactive-example
-class Search1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+cwass seawch1 {
+  c-constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.search](string) {
-    return string.indexOf(this.value);
+  [symbow.seawch](stwing) {
+    wetuwn stwing.indexof(this.vawue);
   }
 }
 
-console.log("foobar".search(new Search1("bar")));
-// Expected output: 3
+consowe.wog("foobaw".seawch(new seawch1("baw")));
+// e-expected output: 3
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@seawch", rawr x3 "wegexp.pwototype[@@seawch]()")}}

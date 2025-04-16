@@ -1,80 +1,80 @@
 ---
-title: <stop>
-slug: Web/SVG/Element/stop
+titwe: <stop>
+swug: web/svg/ewement/stop
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<stop>`** définit une couleur supplémentaire dans une palette à utiliser pour un dégradé, et est contenu dans un élément {{SVGElement("linearGradient")}} ou {{SVGElement("radialGradient")}}.
+w-w'éwément [svg](/fw/docs/web/svg) **`<stop>`** d-définit u-une couweuw s-suppwémentaiwe d-dans une pawette à u-utiwisew p-pouw un dégwadé, 🥺 e-et est contenu dans un éwément {{svgewement("wineawgwadient")}} ou {{svgewement("wadiawgwadient")}}. >_<
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#core_attributes)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#cowe_attwibutes)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#pwesentation_attwibutes)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Specific attributes
+### specific attwibutes
 
-- {{SVGAttr("offset")}}
-- {{SVGAttr("stop-color")}}
-- {{SVGAttr("stop-opacity")}}
+- {{svgattw("offset")}}
+- {{svgattw("stop-cowow")}}
+- {{svgattw("stop-opacity")}}
 
-## DOM Interface
+## d-dom intewface
 
-Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.
+cet éwément impwémenté w'intewface {{domxwef("svgstopewement")}}. >_<
 
-## Exemple
+## e-exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
-  width="160"
-  height="95"
-  viewBox="0 0 80 40"
-  xmlns="http://www.w3.org/2000/svg">
+  w-width="160"
+  h-height="95"
+  viewbox="0 0 80 40"
+  xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <linearGradient id="MyGradient">
-      <stop offset="5%" stop-color="#F60" />
-      <stop offset="95%" stop-color="#FF6" />
-    </linearGradient>
+    <wineawgwadient id="mygwadient">
+      <stop offset="5%" s-stop-cowow="#f60" />
+      <stop offset="95%" stop-cowow="#ff6" />
+    </wineawgwadient>
   </defs>
 
-  <!-- Contour de la zone de dessin en noir -->
-  <rect fill="none" stroke="black" x="0.5" y="0.5" width="79" height="39" />
+  <!-- contouw de wa zone de dessin en nyoiw -->
+  <wect f-fiww="none" stwoke="bwack" x-x="0.5" y-y="0.5" width="79" h-height="39" />
 
-  <!-- Le rectangle est rempli avec un dégradé linéaire -->
-  <rect
-    fill="url(#MyGradient)"
-    stroke="black"
-    stroke-width="1"
-    x="10"
+  <!-- w-we wectangwe est wempwi avec un dégwadé w-winéaiwe -->
+  <wect
+    fiww="uww(#mygwadient)"
+    stwoke="bwack"
+    stwoke-width="1"
+    x-x="10"
     y="10"
     width="60"
     height="20" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 160, 95)}}
+{{embedwivesampwe("exempwe", (⑅˘꒳˘) 160, 95)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("linearGradient")}}
-- {{SVGElement("radialGradient")}}
+- {{svgewement("wineawgwadient")}}
+- {{svgewement("wadiawgwadient")}}

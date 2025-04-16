@@ -1,99 +1,99 @@
 ---
-title: Introduction à SVG dans HTML
-slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
+titwe: intwoduction à svg dans h-htmw
+swug: web/svg/tutowiaw/svg_in_htmw_intwoduction
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-### Aperçu
+### a-apewçu
 
-Cet article et son exemple associé montrent comment utiliser du [SVG](/fr/docs/Web/SVG) en ligne pour fournir une image de fond à un formulaire. Il montre comment [JavaScript](/fr/docs/Web/JavaScript) et [CSS](/fr/docs/Web/CSS) peuvent servir à manipuler l'image comme vous le feriez avec le XHTML dans un script. Notez que l'exemple ne fonctionnera que dans des navigateurs supportant XHTML (pas HTML) et l'intégration SVG.
+c-cet awticwe e-et son exempwe a-associé montwent c-comment utiwisew d-du [svg](/fw/docs/web/svg) en w-wigne pouw fouwniw une image de fond à un fowmuwaiwe. rawr x3 iw montwe comment [javascwipt](/fw/docs/web/javascwipt) e-et [css](/fw/docs/web/css) peuvent sewviw à manipuwew w-w'image comme vous we fewiez a-avec we xhtmw dans un scwipt. o.O nyotez que w'exempwe nye fonctionnewa q-que dans des nyavigateuws s-suppowtant xhtmw (pas h-htmw) et w'intégwation svg. rawr
 
-### Source
+### souwce
 
-Voici le code source de cet exemple :
+voici we code souwce de cet exempwe :
 
-```html
-<html xmlns="http://www.w3.org/1999/xhtml">
+```htmw
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw">
   <head>
-    <title>XTech SVG Demo</title>
-    <style>
+    <titwe>xtech svg demo</titwe>
+    <stywe>
       stop.begin {
-        stop-color: yellow;
+        stop-cowow: yewwow;
       }
       stop.end {
-        stop-color: green;
+        s-stop-cowow: gween;
       }
-      body.invalid stop.end {
-        stop-color: red;
+      b-body.invawid s-stop.end {
+        s-stop-cowow: w-wed;
       }
-      #err {
-        display: none;
+      #eww {
+        dispway: nyone;
       }
-      body.invalid #err {
-        display: inline;
+      body.invawid #eww {
+        d-dispway: inwine;
       }
-    </style>
-    <script>
-      function signalError() {
-        document.getElementById("body").setAttribute("class", "invalid");
+    </stywe>
+    <scwipt>
+      function s-signawewwow() {
+        document.getewementbyid("body").setattwibute("cwass", ʘwʘ "invawid");
       }
-    </script>
+    </scwipt>
   </head>
   <body
     id="body"
-    style="position:absolute; z-index:0; border:1px solid black; left:5%; top:5%; width:90%; height:90%;">
-    <form>
-      <fieldset>
-        <legend>HTML Form</legend>
+    stywe="position:absowute; z-index:0; bowdew:1px s-sowid bwack; weft:5%; top:5%; w-width:90%; height:90%;">
+    <fowm>
+      <fiewdset>
+        <wegend>htmw f-fowm</wegend>
         <p>
-          <label>Enter something:</label>
+          <wabew>entew s-something:</wabew>
           <input type="text" />
-          <span id="err">Incorrect value!</span>
+          <span id="eww">incowwect vawue!</span>
         </p>
-        <p><button onclick="signalError();">Activate!</button></p>
-      </fieldset>
-    </form>
+        <p><button o-oncwick="signawewwow();">activate!</button></p>
+      </fiewdset>
+    </fowm>
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="xMidYMid slice"
-      style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:-1;">
-      <linearGradient id="gradient">
-        <stop class="begin" offset="0%" />
-        <stop class="end" offset="100%" />
-      </linearGradient>
-      <rect x="0" y="0" width="100" height="100" style="fill:url(#gradient)" />
-      <circle cx="50" cy="50" r="30" style="fill:url(#gradient)" />
+      x-xmwns="http://www.w3.owg/2000/svg"
+      vewsion="1.1"
+      v-viewbox="0 0 100 100"
+      p-pwesewveaspectwatio="xmidymid swice"
+      s-stywe="width:100%; height:100%; p-position:absowute; top:0; weft:0; z-index:-1;">
+      <wineawgwadient i-id="gwadient">
+        <stop cwass="begin" o-offset="0%" />
+        <stop cwass="end" offset="100%" />
+      </wineawgwadient>
+      <wect x-x="0" y="0" width="100" h-height="100" stywe="fiww:uww(#gwadient)" />
+      <ciwcwe cx="50" cy="50" w="30" stywe="fiww:uww(#gwadient)" />
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
-### Discussion
+### discussion
 
-La page est principalement formée de XHTML, CSS et JavaScript classiques. La seule partie intéressante est le contenu de l'élément \<svg>. Cet élément et ses fils sont déclarés comme étant dans l'espace de nommage SVG. L'élément contient un gradient et deux formes remplies avec le gradient. Les bornes de couleurs du gradient sont définies par une classe CSS. Lorsque l'utilisateur saisit quelque chose d'incorrect dans le formulaire, le script affecte l'attribut `invalid` à la balise \<body> et une règle de style modifie la couleur `end-stop` du gradient en rouge en lui donnant la valeur «&nbsp;red&nbsp;» (Une autre règle de style sert à faire apparaître un message d'erreur).
+wa page est pwincipawement fowmée de x-xhtmw, 😳😳😳 css et javascwipt c-cwassiques. ^^;; wa seuwe pawtie i-intéwessante e-est we contenu d-de w'éwément \<svg>. o.O cet éwément et ses fiws sont décwawés c-comme étant dans w'espace de nyommage svg. (///ˬ///✿) w'éwément contient un gwadient e-et deux fowmes wempwies avec we g-gwadient. σωσ wes bownes d-de couweuws d-du gwadient sont définies paw u-une cwasse css. nyaa~~ w-wowsque w'utiwisateuw s-saisit quewque c-chose d'incowwect dans we fowmuwaiwe, we scwipt a-affecte w'attwibut `invawid` à w-wa bawise \<body> e-et une wègwe d-de stywe modifie w-wa couweuw `end-stop` du gwadient en wouge en wui donnant w-wa vaweuw «&nbsp;wed&nbsp;» (une autwe wègwe de stywe sewt à faiwe appawaîtwe un message d'ewweuw). ^^;;
 
-Cette approche bénéficie des points suivants en sa faveur&nbsp;:
+cette a-appwoche bénéficie des points suivants en sa faveuw&nbsp;:
 
-- Nous avons choisi un formulaire XHTML classique qui pourrait faire partie d'un site Web existant, et lui avons ajouté un fond attractif et interactif
-- L'approche assure une rétro-compatibilité pour les navigateurs qui ne supportent pas SVG&nbsp;; simplement, aucun fond n'apparaîtra pour eux
-- Elle est très simple et remplit sa fonction parfaitement
-- L'image se redimensionne automatiquement à la taille requise de manière intelligente
-- Nous pouvons avoir des déclarations de styles appliquées à la fois sur le HTML et le SVG
-- Le même script manipule à la fois le HTML et le SVG
-- Le document est entièrement basé sur les standards
+- n-nyous avons choisi u-un fowmuwaiwe x-xhtmw cwassique qui pouwwait faiwe p-pawtie d'un site web existant, ^•ﻌ•^ e-et wui avons a-ajouté un fond attwactif et intewactif
+- w'appwoche assuwe une wétwo-compatibiwité pouw wes n-nyavigateuws qui nye suppowtent p-pas svg&nbsp;; simpwement, σωσ aucun f-fond ny'appawaîtwa p-pouw eux
+- ewwe est twès simpwe et wempwit s-sa fonction pawfaitement
+- w-w'image se wedimensionne a-automatiquement à w-wa taiwwe wequise de manièwe intewwigente
+- nyous pouvons avoiw des décwawations d-de stywes a-appwiquées à w-wa fois suw we htmw et we svg
+- w-we même scwipt m-manipuwe à wa fois we htmw e-et we svg
+- we document est entièwement basé suw wes standawds
 
-### Détails
+### détaiws
 
-L'attribut `viewBox` établit un système de coordonnées logiques sur lequel les coordonnées de l'image SVG s'appuient de façon relative. Dans ce cas, notre image s'étend dans un cadre de visualisation de 100 sur 100.
+w-w'attwibut `viewbox` étabwit u-un système de coowdonnées wogiques s-suw wequew wes c-coowdonnées de w'image svg s'appuient de façon wewative. -.- dans c-ce cas, ^^;; nyotwe image s'étend dans un cadwe de visuawisation de 100 suw 100. XD
 
-L'attribut `preserveAspectRatio` spécifie que le ratio de rendu doit être préservé en centrant l'image dans l'espace disponible, en augmentant la largeur ou la hauteur à leur maximum et en tronquant les débordements.
+w-w'attwibut `pwesewveaspectwatio` spécifie que we watio de wendu d-doit êtwe pwésewvé e-en centwant w'image dans w'espace disponibwe, 🥺 en augmentant w-wa wawgeuw ou w-wa hauteuw à weuw maximum et en twonquant wes débowdements. òωó
 
-L'attribut `style` ancre l'élément SVG en arrière plan du formulaire.
+w-w'attwibut `stywe` ancwe w'éwément s-svg en awwièwe pwan du fowmuwaiwe. (ˆ ﻌ ˆ)♡
 
-### Liens sur le sujet
+### wiens suw we sujet
 
-- L'article Wikipédia sur le format [SVG](http://fr.wikipedia.org/wiki/Scalable_Vector_Graphics)
-- La page [Inline SVG](http://svg-whiz.com/wiki/index.php?title=Inline_SVG) sur le wiki SVG
+- w-w'awticwe wikipédia suw we f-fowmat [svg](http://fw.wikipedia.owg/wiki/scawabwe_vectow_gwaphics)
+- w-wa page [inwine svg](http://svg-whiz.com/wiki/index.php?titwe=inwine_svg) s-suw we wiki svg

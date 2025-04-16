@@ -1,130 +1,130 @@
 ---
-title: L'opérateur set
-slug: Web/JavaScript/Reference/Functions/set
+titwe: w'opéwateuw set
+swug: w-web/javascwipt/wefewence/functions/set
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
+w-wa syntaxe **`set`** p-pewmet d-de wiew une p-pwopwiété d'un o-objet à une fonction q-qui sewa a-appewée à chaque tentative de modification de cette pwopwiété. -.-
 
-{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+{{intewactiveexampwe("javascwipt demo: functions s-settew")}}
 
-```js interactive-example
-const language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+```js intewactive-exampwe
+const w-wanguage = {
+  set cuwwent(name) {
+    t-this.wog.push(name);
+  }, :3
+  wog: [], nyaa~~
 };
 
-language.current = "EN";
-language.current = "FA";
+wanguage.cuwwent = "en";
+wanguage.cuwwent = "fa";
 
-console.log(language.log);
-// Expected output: Array ["EN", "FA"]
+c-consowe.wog(wanguage.wog);
+// expected output: a-awway ["en", 😳 "fa"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-{set prop(val) { . . .}}
-{set [expression](val) { . . .}}
+{set p-pwop(vaw) { . (⑅˘꒳˘) . .}}
+{set [expwession](vaw) { . nyaa~~ . .}}
 ```
 
-### Paramètres
+### pawamètwes
 
-- `prop`
-  - : Le nom de la propriété à lier à la fonction.
-- `val`
-  - : Un alias pour la variable qui contient la valeur qu'on souhaiterait affecter à `prop.`
-- `expression`
-  - : Avec ECMAScript 2015, il est également possible d'utiliser des expressions pour utiliser un nom de propriété calculé à lier à la fonction.
+- `pwop`
+  - : we nyom de wa pwopwiété à wiew à w-wa fonction. OwO
+- `vaw`
+  - : un awias pouw wa vawiabwe qui contient wa vaweuw qu'on s-souhaitewait affectew à `pwop.`
+- `expwession`
+  - : a-avec ecmascwipt 2015, rawr x3 i-iw est égawement p-possibwe d'utiwisew d-des expwessions pouw utiwisew un nyom de pwopwiété c-cawcuwé à wiew à wa fonction. XD
 
-## Description
+## d-descwiption
 
-En JavaScript, un mutateur (ou _setter_ en anglais) peut être utiisé afin d'exécuter une fonction à chaque fois qu'on souhaite modifier la valeur d'une propriété donnée. La plupart du temps, les mutateurs sont utilisés avec les accesseurs (_getters_) afin de créer une pseudo-propriété. Il n'est pas possible d'avoir à la fois un mutateur et une valeur donnée pour une même propriété.
+en javascwipt, σωσ un mutateuw (ou _settew_ en angwais) peut êtwe utiisé afin d'exékawaii~w une fonction à c-chaque fois qu'on souhaite m-modifiew wa vaweuw d-d'une pwopwiété d-donnée. (U ᵕ U❁) wa pwupawt du temps, (U ﹏ U) wes mutateuws sont utiwisés a-avec wes accesseuws (_gettews_) a-afin de cwéew une pseudo-pwopwiété. :3 i-iw ny'est p-pas possibwe d'avoiw à wa fois u-un mutateuw et une vaweuw donnée p-pouw une même pwopwiété. ( ͡o ω ͡o )
 
-On notera que `set` :
+on nyotewa que `set` :
 
-- peut avoir un identifiant qui est soit un nombre soit une chaîne de caractères
-- doit avoir exactement un paramètre (voir l'article « [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) » (en anglais) pour plus d'informations)
-- ne doit pas apparaître dans un littéral objet qui possède un autre `set` ou une autre propriété avec la même clé :
-  ( `{ set x(v) { }, set x(v) { } }` et `{ x: ..., set x(v) { } }` seront interdits)
+- p-peut avoiw un identifiant q-qui est soit un nyombwe soit u-une chaîne d-de cawactèwes
+- doit avoiw exactement un pawamètwe (voiw w'awticwe « [incompatibwe es5 change: witewaw gettew and settew functions m-must nyow h-have exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) » (en a-angwais) p-pouw pwus d'infowmations)
+- n-nye doit pas appawaîtwe dans un wittéwaw objet qui p-possède un autwe `set` ou une autwe pwopwiété avec wa même cwé :
+  ( `{ s-set x(v) { }, σωσ set x(v) { } }` et `{ x-x: ..., set x-x(v) { } }` sewont i-intewdits)
 
-On peut retirer un mutateur d'un objet grâce à l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}}.
+on peut wetiwew un m-mutateuw d'un o-objet gwâce à w-w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_dewete","dewete")}}. >w<
 
-## Exemples
+## e-exempwes
 
-### Définir un mutateur sur de nouveaux objets avec un littéral objet
+### définiw un mutateuw suw d-de nyouveaux objets a-avec un wittéwaw o-objet
 
-Dans l'exemple qui suit, on définit une pseudo-propriété `courant` pour un objet `o` qui, lorsqu'elle recevra une valeur, mettra à jour la propriété `log` avec la valeur reçue :
+dans w-w'exempwe qui s-suit, 😳😳😳 on définit une pseudo-pwopwiété `couwant` pouw un objet `o` qui, OwO wowsqu'ewwe w-wecevwa une vaweuw, 😳 mettwa à jouw wa pwopwiété `wog` avec wa vaweuw weçue :
 
 ```js
-var o = {
-  set courant(str) {
-    this.log[this.log.length] = str;
-  },
-  log: [],
+vaw o-o = {
+  set couwant(stw) {
+    this.wog[this.wog.wength] = stw;
+  }, 😳😳😳
+  wog: [], (˘ω˘)
 };
 ```
 
-On notera que `courant` n'est pas défini. Toute tentative pour y accéder renverra `undefined`.
+o-on nyotewa q-que `couwant` n-ny'est pas défini. ʘwʘ toute tentative p-pouw y accédew wenvewwa `undefined`. ( ͡o ω ͡o )
 
-### Supprimer un mutateur grâce à l'opérateur `delete`
+### s-suppwimew un mutateuw g-gwâce à w'opéwateuw `dewete`
 
-Si on souhaite retirer un mutateur, on peut simplement utiliser l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}} :
+si on souhaite wetiwew un mutateuw, o.O on peut simpwement utiwisew w-w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_dewete","dewete")}} :
 
 ```js
-delete o.courant;
+dewete o.couwant;
 ```
 
-### Définir un mutateur sur un objet existant avec `defineProperty`
+### d-définiw un mutateuw suw un objet e-existant avec `definepwopewty`
 
-On peut également ajouter un mutateur sur un objet d'ores et déjà créé. Pour cela, on utilisera la méthode {{jsxref("Object.defineProperty()")}}.
+o-on peut égawement ajoutew un mutateuw suw un o-objet d'owes et d-déjà cwéé. >w< pouw cewa, 😳 on utiwisewa w-wa méthode {{jsxwef("object.definepwopewty()")}}. 🥺
 
 ```js
-var o = { a: 0 };
+v-vaw o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, rawr x3 "b", {
   set: function (x) {
     this.a = x / 2;
-  },
+  }, o.O
 });
 
-o.b = 10; // On utilise le setter, qui affecte 10 / 2 (5) à 'a'
-console.log(o.a); // 5
+o-o.b = 10; // o-on utiwise w-we settew, rawr qui affecte 10 / 2 (5) à 'a'
+consowe.wog(o.a); // 5
 ```
 
-### Utiliser un nom de propriété calculé
+### u-utiwisew u-un nyom de pwopwiété cawcuwé
 
 ```js
-var expr = "toto";
+v-vaw expw = "toto";
 
-var obj = {
-  bidule: "truc",
-  set [expr](v) {
-    this.bidule = v;
-  },
+vaw obj = {
+  biduwe: "twuc", ʘwʘ
+  set [expw](v) {
+    this.biduwe = v;
+  }, 😳😳😳
 };
 
-console.log(obj.bidule); // "truc"
-obj.toto = "bidule"; // le mutateur est utilisé
-console.log(obj.bidule); // "bidule"
+c-consowe.wog(obj.biduwe); // "twuc"
+o-obj.toto = "biduwe"; // we mutateuw est utiwisé
+consowe.wog(obj.biduwe); // "biduwe"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Fonctions/get","get")}}
-- {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters), dans le Guide JavaScript
+- {{jsxwef("fonctions/get","get")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_dewete","dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [définiw des accesseuws e-et des mutateuws](/fw/docs/web/javascwipt/guide/wowking_with_objects#d.c3.a9finiw_des_gettews_et_settews), ^^;; dans we guide javascwipt

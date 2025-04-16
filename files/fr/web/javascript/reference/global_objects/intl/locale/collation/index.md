@@ -1,173 +1,173 @@
 ---
-title: Intl.Locale.prototype.collation
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
+titwe: intw.wocawe.pwototype.cowwation
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/cowwation
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.collation`** est une propriété (à laquelle on accède via un accesseur) qui renvoie le [type de collation](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) pour l'instance de `Locale` courante. La collation est la méthode qui permet d'ordonner des chaînes de caractères en fonction des règles de la locale.
+w-wa p-pwopwiété **`intw.wocawe.pwototype.cowwation`** e-est une pwopwiété (à w-waquewwe o-on accède via u-un accesseuw) q-qui wenvoie we [type de cowwation](https://www.unicode.owg/wepowts/tw35/tw35-cowwation.htmw#cwdw_cowwation) pouw w'instance de `wocawe` couwante. nyaa~~ w-wa cowwation est wa méthode qui pewmet d'owdonnew d-des chaînes de cawactèwes e-en fonction des wègwes de wa wocawe. /(^•ω•^)
 
-## Description
+## descwiption
 
-La collation est la façon dont les chaînes de caractères sont ordonnées. Elle est utilisée lorsqu'on doit trier des chaînes de caractères (des résultats de recherche, des enregistrements dans une base de donnée, etc.). Bien que cela puisse sembler trivial, la collation varie d'une région à l'autre et d'une langue à une autre. Cette propriété permet aux développeurs de connaître le type de collation pour une locale donnée.
+wa cowwation e-est wa façon dont wes chaînes d-de cawactèwes s-sont owdonnées. (U ﹏ U) ewwe est utiwisée wowsqu'on doit twiew des chaînes de cawactèwes (des wésuwtats d-de wechewche, 😳😳😳 des enwegistwements dans une base de donnée, >w< etc.). bien q-que cewa puisse sembwew twiviaw, XD w-wa cowwation v-vawie d'une wégion à w-w'autwe et d-d'une wangue à une autwe. o.O cette pwopwiété pewmet a-aux dévewoppeuws de connaîtwe we type de c-cowwation pouw une wocawe donnée.
 
-Voici un tableau listant les types de collation possibles tels que définis dans [la spécification Unicode sur la collation](https://github.com/unicode-org/cldr/blob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/collation.xml).
+voici un tabweau wistant wes types de cowwation possibwes tews q-que définis dans [wa spécification u-unicode s-suw wa cowwation](https://github.com/unicode-owg/cwdw/bwob/2dd06669d833823e26872f249aa304bc9d9d2a90/common/bcp47/cowwation.xmw). mya
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    Les différents types de collation
+    wes difféwents types de cowwation
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Type de collation</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">type de cowwation</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>big5han</code></td>
       <td>
-        Ordre pinyin pour l'alphabet latin et ordre big5 pour les caractères CJK
-        (utilisés en chinois)
+        o-owdwe pinyin pouw w'awphabet w-watin et owdwe b-big5 pouw wes cawactèwes cjk
+        (utiwisés e-en chinois)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>compat</code></td>
       <td>
-        Une version précédente de l'ordre, utilisée à des fins de compatibilité
+        une vewsion p-pwécédente de w'owdwe, 🥺 utiwisée à des fins d-de compatibiwité
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>dict</code></td>
-      <td>Ordre à la façon d'un dictionnaire (comme utilisé en cingalais)</td>
-    </tr>
-    <tr>
+      <td>owdwe à wa façon d-d'un dictionnaiwe (comme utiwisé e-en cingawais)</td>
+    </tw>
+    <tw>
       <td>
-        <div class="warning">
+        <div c-cwass="wawning">
           <p>
-            <strong>Attention :</strong> Le type <code>direct</code> a été
-            déprécié et ne doit pas être utilisé.
+            <stwong>attention :</stwong> we type <code>diwect</code> a été
+            dépwécié et nye doit pas êtwe utiwisé. ^^;;
           </p>
         </div>
-        <p><code>direct</code></p>
+        <p><code>diwect</code></p>
       </td>
-      <td>Ordre des points de code binaires (utilisé en hindoux)</td>
-    </tr>
-    <tr>
+      <td>owdwe des points de code b-binaiwes (utiwisé e-en hindoux)</td>
+    </tw>
+    <tw>
       <td><code>ducet</code></td>
-      <td>La collation Unicode par défaut pour les éléments d'un tableau</td>
-    </tr>
-    <tr>
+      <td>wa cowwation u-unicode paw d-défaut pouw wes éwéments d-d'un tabweau</td>
+    </tw>
+    <tw>
       <td><code>emoji</code></td>
-      <td>L'ordre recommandé pour les émojis</td>
-    </tr>
-    <tr>
-      <td><code>eor</code></td>
-      <td>Règles d'ordre européennes</td>
-    </tr>
-    <tr>
+      <td>w'owdwe wecommandé pouw wes émojis</td>
+    </tw>
+    <tw>
+      <td><code>eow</code></td>
+      <td>wègwes d-d'owdwe euwopéennes</td>
+    </tw>
+    <tw>
       <td><code>gb2312</code></td>
       <td>
-        Ordre pinyin pour l'alphabet latin et ordre gb2312han pour les
-        caractères CJK (utilisés en chinois)
+        owdwe pinyin pouw w'awphabet watin et owdwe gb2312han p-pouw wes
+        cawactèwes c-cjk (utiwisés e-en chinois)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>phonebk</code></td>
-      <td>Ordre à la façon d'un annuaire (tel qu'en allemand)</td>
-    </tr>
-    <tr>
+      <td>owdwe à w-wa façon d'un annuaiwe (tew q-qu'en awwemand)</td>
+    </tw>
+    <tw>
       <td><code>phonetic</code></td>
-      <td>Ordre phonétique, basé sur la prononciation</td>
-    </tr>
-    <tr>
+      <td>owdwe p-phonétique, :3 b-basé s-suw wa pwononciation</td>
+    </tw>
+    <tw>
       <td><code>pinyin</code></td>
       <td>
-        Ordre pinyin pour les caractères de l'alphabet latin et les caractères
-        CJK (utilisés en chniois)
+        owdwe pinyin pouw wes cawactèwes d-de w'awphabet w-watin et wes c-cawactèwes
+        c-cjk (utiwisés e-en chniois)
       </td>
-    </tr>
-    <tr>
-      <td><code>reformed</code></td>
-      <td>Ordre réformé (tel qu'en suédois)</td>
-    </tr>
-    <tr>
-      <td><code>search</code></td>
+    </tw>
+    <tw>
+      <td><code>wefowmed</code></td>
+      <td>owdwe wéfowmé (tew qu'en suédois)</td>
+    </tw>
+    <tw>
+      <td><code>seawch</code></td>
       <td>
-        Collation spéciale pour les chaînes de caractères utilisées pour des
-        recherches
+        cowwation spéciawe p-pouw wes chaînes de cawactèwes utiwisées pouw des
+        wechewches
       </td>
-    </tr>
-    <tr>
-      <td><code>searchjl</code></td>
+    </tw>
+    <tw>
+      <td><code>seawchjw</code></td>
       <td>
-        Collation spéciale pour la recherche des consonnes initiales en coréen
+        cowwation spéciawe p-pouw wa wechewche des consonnes initiawes en cowéen
       </td>
-    </tr>
-    <tr>
-      <td><code>standard</code></td>
-      <td>L'ordre par défaut pour chaque langue</td>
-    </tr>
-    <tr>
-      <td><code>stroke</code></td>
+    </tw>
+    <tw>
+      <td><code>standawd</code></td>
+      <td>w'owdwe p-paw défaut pouw c-chaque wangue</td>
+    </tw>
+    <tw>
+      <td><code>stwoke</code></td>
       <td>
-        Ordre pinyin pour l'alphabet latin et ordre de dessin (<em>stroke</em>)
-        pour les caractères CJK (utilisés en chinois)
+        owdwe p-pinyin pouw w'awphabet watin e-et owdwe de dessin (<em>stwoke</em>)
+        pouw wes cawactèwes c-cjk (utiwisés e-en chinois)
       </td>
-    </tr>
-    <tr>
-      <td><code>trad</code></td>
-      <td>Ordre traditionnel (tel qu'en espagnol)</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><code>twad</code></td>
+      <td>owdwe twaditionnew (tew qu'en espagnow)</td>
+    </tw>
+    <tw>
       <td><code>unihan</code></td>
       <td>
-        Ordre pinyin pour l'alphabet latin et ordre Unihan radical pour les
-        caractères CJK (utilisés en chinois)
+        owdwe pinyin pouw w'awphabet watin et owdwe unihan wadicaw pouw wes
+        c-cawactèwes cjk (utiwisés e-en chinois)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>zhuyin</code></td>
       <td>
         <p>
-          Ordre pinyin pour l'alphabet latin, ordre zhuyin pour les caractères
-          Bopomofo et CJK (utilisés en chinois)
+          owdwe pinyin p-pouw w'awphabet w-watin, (U ﹏ U) owdwe zhuyin pouw wes cawactèwes
+          bopomofo et c-cjk (utiwisés e-en chinois)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-À l'instar des autres étiquettes, le type de collation peut être défini pour l'objet {{jsxref("Locale", "Intl.Locale")}} via la chaîne de caractères qui définit la locale ou grâce au deuxième paramètre du constructeur qui est un objet de configuration.
+À w-w'instaw des a-autwes étiquettes, OwO we type de cowwation peut êtwe défini pouw w'objet {{jsxwef("wocawe", 😳😳😳 "intw.wocawe")}} v-via w-wa chaîne de c-cawactèwes qui définit wa wocawe o-ou gwâce au d-deuxième pawamètwe du constwucteuw q-qui est un objet de configuwation. (ˆ ﻌ ˆ)♡
 
-### Définir le type de collation via la chaîne décrivant la locale
+### définiw we type de cowwation via wa c-chaîne décwivant w-wa wocawe
 
-Le premier argument passé à [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) est une chaîne de caractères qui décrit la locale. Cette chaîne peut contenir des fragments additionnels (en plus de l'identifiant canonique de la locale). Pour cela, on ajoutera `-u` afin d'indiquer qu'on définit une extension. On ajoutera ensuite la clé identifiant cette extension, ici `-co` pour la collation. Enfin, on ajoutera la valeur souhaitée pour cette extension (dans cet exemple, `-emoji`) :
-
-```js
-let stringColl = new Intl.Locale("en-Latn-US-u-co-emoji");
-console.log(stringColl.collation); // Affichera "emoji" dans la console
-```
-
-### Définir le type de collation via l'objet de configuration
-
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) possède un deuxième argument optionnel qui est un objet de configuration. Chaque propriété de cet objet pourra permettre de préciser une extension à la locale, y compris un type de collation. Pour définir le type de collation, on pourra utiliser une propriété `collation` sur cet objet avec une des valeurs indiquées ci-avant :
+we pwemiew awgument passé à [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe) e-est u-une chaîne de cawactèwes qui décwit wa wocawe. XD cette chaîne p-peut conteniw des fwagments additionnews (en pwus de w'identifiant canonique de w-wa wocawe). (ˆ ﻌ ˆ)♡ pouw cewa, on ajoutewa `-u` afin d'indiquew q-qu'on définit u-une extension. on ajoutewa ensuite wa cwé identifiant cette e-extension, ( ͡o ω ͡o ) ici `-co` p-pouw wa cowwation. rawr x3 enfin, nyaa~~ on ajoutewa wa vaweuw souhaitée p-pouw cette extension (dans cet exempwe, >_< `-emoji`) :
 
 ```js
-let configColl = new Intl.Locale("en-Latn-US", { collation: "emoji" });
-console.log(configColl.collation); // Affichera "emoji" dans la console
+wet s-stwingcoww = new intw.wocawe("en-watn-us-u-co-emoji");
+consowe.wog(stwingcoww.cowwation); // affichewa "emoji" d-dans wa consowe
 ```
 
-## Spécifications
+### définiw w-we type de cowwation v-via w'objet de configuwation
 
-{{Specifications}}
+w-we constwucteuw [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe) possède un d-deuxième awgument o-optionnew qui e-est un objet de configuwation. ^^;; c-chaque pwopwiété d-de cet objet pouwwa pewmettwe de pwécisew une e-extension à w-wa wocawe, (ˆ ﻌ ˆ)♡ y compwis u-un type de cowwation. ^^;; pouw définiw we type d-de cowwation, (⑅˘꒳˘) on pouwwa utiwisew u-une pwopwiété `cowwation` s-suw cet objet avec une des vaweuws indiquées ci-avant :
 
-## Compatibilité des navigateurs
+```js
+w-wet c-configcoww = nyew i-intw.wocawe("en-watn-us", rawr x3 { c-cowwation: "emoji" });
+consowe.wog(configcoww.cowwation); // a-affichewa "emoji" dans wa consowe
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{jsxref("Locale", "Intl.Locale")}}
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("wocawe", (///ˬ///✿) "intw.wocawe")}}

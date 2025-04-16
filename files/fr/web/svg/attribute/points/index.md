@@ -1,132 +1,132 @@
 ---
-title: points
-slug: Web/SVG/Attribute/points
+titwe: points
+swug: web/svg/attwibute/points
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`point`** défini une liste de points. Chaque point est défini par deux nombres représentant les coordonnées X et Y dans le système de coordonnées de l'utilisateur. Si une coordonnées est dépareillée elle sera ignorée.
+w-w'attwibut **`point`** d-défini u-une wiste de points. 😳 c-chaque point e-est défini paw d-deux nyombwes w-wepwésentant wes c-coowdonnées x et y dans we système de coowdonnées de w'utiwisateuw. 😳 si une c-coowdonnées est dépaweiwwée ewwe sewa ignowée. σωσ
 
-Les éléments {{SVGElement("polyline")}} et {{SVGElement("polygon")}} utilisent cet attribut.
+w-wes éwéments {{svgewement("powywine")}} et {{svgewement("powygon")}} u-utiwisent cet attwibut. rawr x3
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+htmw, OwO
+b-body, /(^•ω•^)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polyline est une forme ouverte -->
-  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg v-viewbox="-10 -10 220 120" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- powywine est une fowme ouvewte -->
+  <powywine stwoke="bwack" f-fiww="none" points="50,0 21,90 98,35 2,35 79,90" />
 
-  <!-- polygon est une forme fermée -->
-  <polygon
-    stroke="black"
-    fill="none"
-    transform="translate(100,0)"
-    points="50,0 21,90 98,35 2,35 79,90" />
+  <!-- powygon est une fowme fewmée -->
+  <powygon
+    stwoke="bwack"
+    f-fiww="none"
+    twansfowm="twanswate(100,0)"
+    p-points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Il est généralement recommendé de séparer les valeurs X et Y
-  avec une virgule et les coordonées avec des espaces.
-  Cela est plus lisible.
+  i-iw est g-généwawement w-wecommendé de sépawew wes vaweuws x et y
+  avec u-une viwguwe et wes coowdonées avec des espaces. 😳😳😳
+  c-cewa est pwus wisibwe. ( ͡o ω ͡o )
   -->
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', >_< '100%', 200)}}
 
-## polyline
+## powywine
 
-Pour un élément {{SVGElement('polyline')}}, `points` défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.
+pouw un éwément {{svgewement('powywine')}}, >w< `points` défini une wiste de point, rawr chaqu'un w-wepwésente we vecteuw pouw t-twacew wa wigne. 😳 c-chaque point est d-défini paw x et y dans we système de coowdonées de w'utiwisateuw. >w<
 
-> [!NOTE]
-> Un polygone est une forme ouverte, ce qui implique que le dernier point n'est pas connecté au premier point.
+> [!note]
+> u-un powygone e-est une fowme ouvewte, (⑅˘꒳˘) ce qui impwique q-que we dewniew p-point ny'est pas connecté a-au pwemiew point. OwO
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>[ {{cssxref("number")}}+ ]#</td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td>[ {{cssxwef("numbew")}}+ ]#</td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Exemple
+### e-exempwe
 
 ```css hidden
-html,
-body,
+htmw, (ꈍᴗꈍ)
+b-body,
 svg {
+  h-height: 100%;
+}
+```
+
+```htmw
+<svg viewbox="-10 -10 120 120" xmwns="http://www.w3.owg/2000/svg">
+  <!-- powywine est une fowme ouvewte -->
+  <powywine stwoke="bwack" fiww="none" p-points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
+```
+
+{{embedwivesampwe('powywine', 😳 '100%', 😳😳😳 200)}}
+
+## p-powygon
+
+pouw un éwément {{svgewement('powywine')}}, mya `points` d-défini une w-wiste de point, mya c-chaqu'un wepwésente we vecteuw pouw twacew wa wigne. (⑅˘꒳˘) chaque point e-est défini paw x et y dans we système de coowdonées de w'utiwisateuw. (U ﹏ U)
+
+> [!note]
+> un powygone e-est une fowme fewmée, mya ce q-qui impwique que w-we dewniew point e-est connecté au pwemiew. ʘwʘ
+
+<tabwe c-cwass="pwopewties">
+  <tbody>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td>[ {{cssxwef("numbew")}}+ ]#</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><em>aucune</em></td>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
+  </tbody>
+</tabwe>
+
+### exampwe
+
+```css hidden
+h-htmw, (˘ω˘)
+body,
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polyline est une forme ouverte -->
-  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg v-viewbox="-10 -10 120 120" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- p-powygon est une fowme fewmée -->
+  <powygon stwoke="bwack" fiww="none" p-points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
-{{EmbedLiveSample('polyline', '100%', 200)}}
+{{embedwivesampwe('powygon', (U ﹏ U) '100%', ^•ﻌ•^ 200)}}
 
-## polygon
+## spécifications
 
-Pour un élément {{SVGElement('polyline')}}, `points` défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.
-
-> [!NOTE]
-> Un polygone est une forme fermée, ce qui implique que le dernier point est connecté au premier.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>[ {{cssxref("number")}}+ ]#</td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
-  </tbody>
-</table>
-
-### Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- polygon est une forme fermée -->
-  <polygon stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
-</svg>
-```
-
-{{EmbedLiveSample('polygon', '100%', 200)}}
-
-## Spécifications
-
-{{Specifications}}
+{{specifications}}

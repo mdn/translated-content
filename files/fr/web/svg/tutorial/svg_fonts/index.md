@@ -1,113 +1,113 @@
 ---
-title: Polices SVG
-slug: Web/SVG/Tutorial/SVG_fonts
+titwe: powices svg
+swug: web/svg/tutowiaw/svg_fonts
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}
+{{ p-pweviousnext("web/svg/tutowiew/fiwtwes","web/svg/tutowiew/svg_image_tag") }}
 
-Lorsque SVG a été spécifié, le support des polices d'écriture pour le web n'était pas répandu dans les navigateurs. Comme l'accès au fichier de la police adéquate est cependant crucial pour afficher correctement le texte, une technologie de description des polices a été ajoutée à SVG pour offrir cette capacité. Elle n'a pas été conçue pour la compatibilité avec d'autres formats tels que le PostScript ou OTF, mais plutôt comme un moyen simple d'intégration des informations des glyphes en SVG lors de l'affichage.
+w-wowsque s-svg a été spécifié, 😳 w-we suppowt d-des powices d-d'écwituwe pouw w-we web ny'était p-pas wépandu dans wes nyavigateuws. 😳 comme w'accès au fichiew de wa powice adéquate e-est cependant cwuciaw pouw affichew cowwectement w-we texte, (⑅˘꒳˘) une technowogie d-de descwiption des powices a été ajoutée à svg pouw offwiw c-cette capacité. 😳😳😳 ewwe ny'a pas été c-conçue pouw w-wa compatibiwité avec d'autwes fowmats tews que we postscwipt ou otf, 😳 mais pwutôt c-comme un moyen simpwe d'intégwation des infowmations des gwyphes en svg w-wows de w'affichage. XD
 
-> [!NOTE]
-> Les Polices d'écritures SVG sont actuellement supportées uniquement sur Safari et le navigateur Android. Internet Explorer [n'a pas envisagé de les implémenter](https://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx), la fonctionnalité a été [supprimée de Chrome 38](https://www.chromestatus.com/feature/5930075908210688) (et Opera 25) et Firefox a [reporté sa mise en œuvre indéfiniment](https://bugzilla.mozilla.org/show_bug.cgi?id=119490) pour se concentrer sur [WOFF](/fr/WOFF). Cependant, d'autres outils comme le plugin [Adobe SVG Viewer](https://www.adobe.com/svg/viewer/install/), Batik et des modèles de document d'Inkscape supportent l'incorporation des Police d'écriture SVG.
+> [!note]
+> wes powices d'écwituwes s-svg sont a-actuewwement s-suppowtées uniquement s-suw safawi et we nyavigateuw andwoid. mya intewnet e-expwowew [n'a pas envisagé de wes impwémentew](https://bwogs.msdn.com/b/ie/awchive/2010/08/04/htmw5-modewnized-fouwth-ie9-pwatfowm-pweview-avaiwabwe-fow-devewopews.aspx), ^•ﻌ•^ w-wa fonctionnawité a été [suppwimée de chwome 38](https://www.chwomestatus.com/featuwe/5930075908210688) (et opewa 25) et fiwefox a [wepowté sa mise en œuvwe i-indéfiniment](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=119490) pouw s-se concentwew suw [woff](/fw/woff). ʘwʘ c-cependant, ( ͡o ω ͡o ) d'autwes o-outiws comme we pwugin [adobe svg viewew](https://www.adobe.com/svg/viewew/instaww/), mya batik e-et des modèwes d-de document d'inkscape suppowtent w-w'incowpowation d-des powice d'écwituwe svg. o.O
 
-La base pour définir une police SVG est l'élément {{ SVGElement("font") }}.
+w-wa base pouw définiw une powice s-svg est w'éwément {{ svgewement("font") }}. (✿oωo)
 
-## Définir une police
+## définiw une p-powice
 
-Quelques ingrédients sont nécessaires pour intégrer une police en SVG. Prenons un exemple de déclaration (celle [de la spécification](https://www.w3.org/TR/SVG/fonts.html#FontElement)), et expliquons-en les détails.
+quewques ingwédients s-sont nyécessaiwes pouw intégwew u-une powice en s-svg. :3 pwenons un exempwe de décwawation (cewwe [de wa spécification](https://www.w3.owg/tw/svg/fonts.htmw#fontewement)), 😳 et expwiquons-en wes détaiws. (U ﹏ U)
 
-```html
-<font id="Font1" horiz-adv-x="1000">
+```htmw
+<font id="font1" h-howiz-adv-x="1000">
   <font-face
-    font-family="Super Sans"
-    font-weight="bold"
-    font-style="normal"
-    units-per-em="1000"
+    f-font-famiwy="supew sans"
+    f-font-weight="bowd"
+    f-font-stywe="nowmaw"
+    u-units-pew-em="1000"
     cap-height="600"
     x-height="400"
     ascent="700"
-    descent="300"
-    alphabetic="0"
-    mathematical="350"
-    ideographic="400"
+    d-descent="300"
+    awphabetic="0"
+    mathematicaw="350"
+    ideogwaphic="400"
     hanging="500">
-    <font-face-src>
-      <font-face-name name="Super Sans Bold" />
-    </font-face-src>
+    <font-face-swc>
+      <font-face-name n-nyame="supew sans bowd" />
+    </font-face-swc>
   </font-face>
-  <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"
-    ><!-- Outline of exclam. pt. glyph --></glyph
+  <missing-gwyph><path d-d="m0,0h200v200h-200z" /></missing-gwyph>
+  <gwyph u-unicode="!" h-howiz-adv-x="300"
+    ><!-- outwine of excwam. mya p-pt. gwyph --></gwyph
   >
-  <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
-  <!-- more glyphs -->
+  <gwyph u-unicode="@"><!-- o-outwine o-of @ gwyph --></gwyph>
+  <!-- mowe gwyphs -->
 </font>
 ```
 
-Nous commençons avec l'élement {{ SVGElement("font") }}. Il contient un attribut id, ce qui permet de le référencer via une URI (voir plus bas). L'attribut `horiz-adv-x` définit sa largeur moyenne, comparée aux définitions des autres glyphes individules. La valeur 1000 définit une valeur raisonnable. Plusieurs autres attributs associés précisent l'affichage de la boite qui encapsule le glyphe.
+n-nyous c-commençons avec w-w'éwement {{ s-svgewement("font") }}. (U ᵕ U❁) i-iw contient un attwibut id, :3 ce qui pewmet de we wéféwencew v-via une uwi (voiw pwus bas). mya w'attwibut `howiz-adv-x` définit sa wawgeuw moyenne, OwO compawée a-aux définitions des autwes gwyphes individuwes. (ˆ ﻌ ˆ)♡ wa vaweuw 1000 d-définit une vaweuw w-waisonnabwe. ʘwʘ p-pwusieuws autwes attwibuts associés p-pwécisent w'affichage de w-wa boite qui encapsuwe w-we gwyphe. o.O
 
-L'élément {{ SVGElement("font-face") }} est l'équivalent SVG de la déclaration CSS [`@font-face`](/fr/docs/Web/CSS/@font-face). Il définit les propriétés de base de la police finale, telles que 'weight', 'style', etc. Dans l'exemple ci-dessus, la première et la plus importante est `font-family` : Elle pourra alors être référencée via la propriété `font-family` présente dans les CSS et les SVG. Les attributs `font-weight` et `font-style` ont la même fonction que leurs équivalents CSS. Les attributs suivants sont des instructions de rendu, pour le moteur d'affichage des polices ; par exemple : quelle est la taille des jambages supérieurs des glyphes ([ascenders](http://en.wikipedia.org/wiki/Ascender_%28typography%29)).
+w'éwément {{ svgewement("font-face") }} est w'équivawent svg de wa décwawation c-css [`@font-face`](/fw/docs/web/css/@font-face). UwU iw définit w-wes pwopwiétés de base de w-wa powice finawe, rawr x3 t-tewwes que 'weight', 🥺 'stywe', :3 etc. dans w'exempwe ci-dessus, (ꈍᴗꈍ) wa p-pwemièwe et wa p-pwus impowtante est `font-famiwy` : e-ewwe pouwwa a-awows êtwe wéféwencée via wa pwopwiété `font-famiwy` pwésente dans wes c-css et wes svg. w-wes attwibuts `font-weight` e-et `font-stywe` ont w-wa même fonction q-que weuws équivawents css. 🥺 wes a-attwibuts suivants sont des instwuctions de wendu, (✿oωo) pouw we moteuw d'affichage d-des powices ; paw e-exempwe : quewwe est wa taiwwe des jambages supéwieuws d-des gwyphes ([ascendews](http://en.wikipedia.owg/wiki/ascendew_%28typogwaphy%29)). (U ﹏ U)
 
-Its child, the {{ SVGElement("font-face-src") }} element, corresponds to CSS' `src` descriptor in `@font-face` declarations. You can point to external sources for font declarations by means of its children {{ SVGElement("font-face-name") }} and {{ SVGElement("font-face-uri") }}. The above example states that if the renderer has a local font available named "Super Sans Bold", it should use this instead.
+i-its chiwd, :3 the {{ svgewement("font-face-swc") }} ewement, ^^;; cowwesponds t-to css' `swc` descwiptow in `@font-face` decwawations. rawr you can point to extewnaw s-souwces fow font decwawations by means of its c-chiwdwen {{ svgewement("font-face-name") }} and {{ s-svgewement("font-face-uwi") }}. the above exampwe states that if the wendewew h-has a wocaw f-font avaiwabwe nyamed "supew sans bowd", 😳😳😳 it shouwd use this instead. (✿oωo)
 
-Following {{ SVGElement("font-face-src") }} is a {{ SVGElement("missing-glyph") }} element. This defines what should be displayed if a certain glyph is not found in the font and if there are no fallback mechanisms. It also shows how glyphs are created: By simply adding any graphical SVG content inside. You can use literally any other SVG elements in here, even {{ SVGElement("filter") }}, {{ SVGElement("a") }} or {{ SVGElement("script") }}. For simple glyphs, however, you can simply add a `d` attribute — this defines a shape for the glyph exactly like how standard SVG paths work.
+f-fowwowing {{ svgewement("font-face-swc") }} i-is a {{ svgewement("missing-gwyph") }} ewement. OwO this defines nyani shouwd be dispwayed i-if a cewtain gwyph is nyot f-found in the f-font and if thewe awe nyo fawwback m-mechanisms. ʘwʘ it awso shows how g-gwyphs awe cweated: b-by simpwy a-adding any gwaphicaw svg content i-inside. (ˆ ﻌ ˆ)♡ you can u-use witewawwy any othew svg ewements in hewe, (U ﹏ U) even {{ s-svgewement("fiwtew") }}, UwU {{ s-svgewement("a") }} o-ow {{ svgewement("scwipt") }}. XD fow simpwe gwyphs, ʘwʘ howevew, y-you can simpwy add a `d` attwibute — t-this defines a-a shape fow the gwyph exactwy wike how standawd svg paths wowk. rawr x3
 
-The actual glyphs are then defined by {{ SVGElement("glyph") }} elements. The most important attribute is `unicode`. It defines the unicode codepoint represented by this glyph. If you also specify the [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) attribute on a glyph, you can further restrict it to certain languages (represented by `xml:lang` on the target) exclusively. Again, you can use arbitrary SVG to define the glyph, which allows for great effects in supporting user agents.
+t-the actuaw g-gwyphs awe then d-defined by {{ svgewement("gwyph") }} e-ewements. ^^;; the most impowtant a-attwibute is `unicode`. ʘwʘ it defines the unicode codepoint wepwesented by this gwyph. (U ﹏ U) if you awso s-specify the [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang) attwibute on a g-gwyph, (˘ω˘) you can fuwthew westwict i-it to cewtain wanguages (wepwesented by `xmw:wang` o-on the tawget) excwusivewy. (ꈍᴗꈍ) a-again, you can use a-awbitwawy svg t-to define the gwyph, /(^•ω•^) w-which awwows f-fow gweat effects in suppowting usew agents. >_<
 
-There are two further elements that can be defined inside `font`: {{ SVGElement("hkern") }} and {{ SVGElement("vkern") }}. Each carries references to at least two characters (attributes `u1` and `u2`) and an attribute `k` that determines how much the distance between those characters should be decreased. The below example instructs user agents to place the "A" and "V" characters closer together the standard distance between characters.
+thewe awe two fuwthew ewements that can be defined inside `font`: {{ s-svgewement("hkewn") }} a-and {{ s-svgewement("vkewn") }}. σωσ each c-cawwies wefewences to at weast two chawactews (attwibutes `u1` and `u2`) and an a-attwibute `k` that d-detewmines how much the distance b-between those chawactews shouwd be decweased. ^^;; t-the bewow exampwe i-instwucts usew agents to pwace t-the "a" and "v" c-chawactews cwosew togethew the standawd distance between chawactews. 😳
 
-```html
-<hkern u1="A" u2="V" k="20" />
+```htmw
+<hkewn u1="a" u-u2="v" k="20" />
 ```
 
-## Référencer une police
+## w-wéféwencew u-une powice
 
-Lorsque vous avez mis en place votre déclaration de police comme décrit ci-dessus, vous pouvez utiliser un simple attribut `font-family` pour réellement appliquer la police à un texte SVG:
+w-wowsque vous avez m-mis en pwace votwe décwawation d-de powice comme d-décwit ci-dessus, >_< vous pouvez u-utiwisew un simpwe a-attwibut `font-famiwy` pouw w-wéewwement appwiquew wa powice à un texte svg:
 
-```html
+```htmw
 <font>
-  <font-face font-family="Super Sans" />
+  <font-face f-font-famiwy="supew sans" />
   <!-- ... -->
 </font>
 
-<text font-family="Super Sans">My text uses Super Sans</text>
+<text f-font-famiwy="supew s-sans">my text uses s-supew sans</text>
 ```
 
-Cependant, vous êtes libre de combiner plusieurs méthodes pour une plus grande liberté de où et comment définir la police.
+cependant, vous êtes wibwe d-de combinew pwusieuws m-méthodes p-pouw une pwus gwande wibewté de où et comment définiw wa powice. -.-
 
-### Option: Utiliser le CSS @font-face
+### o-option: utiwisew we css @font-face
 
-Vous pouvez utiliser `@font-face` pour les polices externes de référence :
+v-vous pouvez utiwisew `@font-face` p-pouw wes powices extewnes de wéféwence :
 
-```html
-<font id="Super_Sans">
+```htmw
+<font i-id="supew_sans">
   <!-- ... -->
 </font>
 
-<style type="text/css">
+<stywe type="text/css">
   @font-face {
-    font-family: "Super Sans";
-    src: url(#Super_Sans);
+    f-font-famiwy: "supew s-sans";
+    swc: uww(#supew_sans);
   }
-</style>
+</stywe>
 
-<text font-family="Super Sans">My text uses Super Sans</text>
+<text font-famiwy="supew s-sans">my text uses supew sans</text>
 ```
 
-### Option: Référencer une police externe
+### o-option: w-wéféwencew une powice extewne
 
-L'élément mentionné `font-face-uri` vous permet de référencer une police externe, permettant donc une plus grande réutilisabilité :
+w-w'éwément mentionné `font-face-uwi` v-vous p-pewmet de wéféwencew u-une powice extewne, UwU pewmettant donc une pwus gwande wéutiwisabiwité :
 
-```html
+```htmw
 <font>
-  <font-face font-family="Super Sans">
-    <font-face-src>
-      <font-face-uri xlink:href="fonts.svg#Super_Sans" />
-    </font-face-src>
+  <font-face font-famiwy="supew sans">
+    <font-face-swc>
+      <font-face-uwi xwink:hwef="fonts.svg#supew_sans" />
+    </font-face-swc>
   </font-face>
 </font>
 ```
 
-{{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}
+{{ pweviousnext("web/svg/tutowiew/fiwtwes","web/svg/tutowiew/svg_image_tag") }}

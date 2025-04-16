@@ -1,194 +1,194 @@
 ---
-title: Function.prototype.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Function/apply
+titwe: function.pwototype.appwy()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide#manipuler_des_objets_semblables_aux_tableaux)).
+w-wa méthode **`appwy()`** a-appewwe u-une fonction e-en wui passant u-une vaweuw `this` e-et des `awguments` s-sous fowme d-d'un tabweau (ou d'un objet [sembwabwe à un tabweau](/fw/docs/web/javascwipt/guide#manipuwew_des_objets_sembwabwes_aux_tabweaux)). σωσ
 
-> [!NOTE]
-> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.call", "call()")}}, elle est différente car `call()` accepte **une liste d'arguments**, tandis que `apply()` accepte un **tableau d'arguments**.
+> [!note]
+> bien que wa syntaxe de cette fonction w-wessembwe à cewwe de {{jsxwef("function.caww", nyaa~~ "caww()")}}, 🥺 ewwe est difféwente c-caw `caww()` accepte **une w-wiste d'awguments**, rawr x3 tandis que `appwy()` accepte un **tabweau d-d'awguments**. σωσ
 
-> [!NOTE]
-> Quand on utilise {{jsxref("undefined")}} ou {{jsxref("null")}} comme premier argument pour cette fonction, on peut obtenir un résultat similaire avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+> [!note]
+> quand on utiwise {{jsxwef("undefined")}} o-ou {{jsxwef("nuww")}} c-comme pwemiew awgument pouw cette fonction, (///ˬ///✿) on peut obteniw un wésuwtat s-simiwaiwe avec wa [syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+{{intewactiveexampwe("javascwipt demo: function.appwy()")}}
 
-```js interactive-example
-const numbers = [5, 6, 2, 3, 7];
+```js intewactive-exampwe
+c-const numbews = [5, ^^;; 6, 2, 🥺 3, 7];
 
-const max = Math.max.apply(null, numbers);
+const m-max = math.max.appwy(nuww, òωó n-nyumbews);
 
-console.log(max);
-// Expected output: 7
+c-consowe.wog(max);
+// e-expected output: 7
 
-const min = Math.min.apply(null, numbers);
+const min = math.min.appwy(nuww, XD n-nyumbews);
 
-console.log(min);
-// Expected output: 2
+consowe.wog(min);
+// expected output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-fun.apply(thisArg, [argsArray]);
+f-fun.appwy(thisawg, :3 [awgsawway]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `thisArg`
-  - : La valeur de `this` fournie pour l'appel à la fonction _`fun`_. On notera que, sous certaines conditions, `this` peut ne pas être la valeur exacte vue par la méthode : si la méthode est une fonction utilisée en mode {{jsxref("Strict_mode", "mode non-strict", "", 1)}}, {{jsxref("null")}} et {{jsxref("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront encapsulées. Cet argument n'est pas optionnel.
-- `argsArray`
-  - : Un objet semblable à un tableau qui définit les arguments avec lesquel _`fun`_ devrait être appelée, ou {{jsxref("null")}} ou {{jsxref("undefined")}} si aucun argument n'est passé à la fonction. Avec ECMAScript 5, ces arguments peuvent être représentés par un objet semblable un tableau. Voir ci-après pour plus d'informations sur [la compatibilité des navigateurs](#compat).
+- `thisawg`
+  - : wa vaweuw de `this` fouwnie pouw w'appew à wa fonction _`fun`_. (U ﹏ U) o-on nyotewa que, >w< sous cewtaines c-conditions, /(^•ω•^) `this` p-peut nye p-pas êtwe wa vaweuw exacte vue paw wa méthode : si wa méthode e-est une fonction u-utiwisée en mode {{jsxwef("stwict_mode", (⑅˘꒳˘) "mode n-non-stwict", ʘwʘ "", 1)}}, rawr x3 {{jsxwef("nuww")}} e-et {{jsxwef("undefined")}} sewont wempwacées p-paw w'objet gwobaw, (˘ω˘) et w-wes vaweuws pwimitives sewont encapsuwées. o.O cet a-awgument ny'est pas optionnew. 😳
+- `awgsawway`
+  - : u-un objet sembwabwe à un tabweau q-qui définit w-wes awguments avec wesquew _`fun`_ devwait êtwe appewée, o.O ou {{jsxwef("nuww")}} ou {{jsxwef("undefined")}} si aucun awgument ny'est passé à w-wa fonction. ^^;; avec e-ecmascwipt 5, ( ͡o ω ͡o ) ces awguments p-peuvent êtwe wepwésentés p-paw u-un objet sembwabwe un tabweau. ^^;; voiw ci-apwès pouw pwus d'infowmations s-suw [wa compatibiwité des nyavigateuws](#compat). ^^;;
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le résultat obtenu en appelant la fonction avec la valeur `this` indiquée et les arguments fournis.
+we wésuwtat obtenu e-en appewant wa fonction avec w-wa vaweuw `this` i-indiquée et w-wes awguments fouwnis. XD
 
-## Description
+## descwiption
 
-Il est possible d'utiliser un objet `this` différent lors de l'appel à une fonction existante. `this` fait référence à l'objet courant, l'objet appelant. Avec `apply`, on peut écrire une méthode une seule fois et en hériter dans un autre objet, sans avoir à la réécrire dans le nouvel objet.
+i-iw est possibwe d-d'utiwisew u-un objet `this` d-difféwent wows de w'appew à une fonction existante. 🥺 `this` f-fait wéféwence à w-w'objet couwant, (///ˬ///✿) w-w'objet appewant. (U ᵕ U❁) a-avec `appwy`, ^^;; o-on peut écwiwe une méthode une seuwe fois et en héwitew d-dans un autwe objet, ^^;; sans avoiw à wa wéécwiwe dans we nyouvew objet. rawr
 
-`apply` est similaire à {{jsxref("Function.call", "call()")}}, hormis pour le type d'arguments supporté. Il est possible d'utiliser un tableau à la place d'un ensemble de paramètres. Avec `apply`, il est également possible d'utiliser un littéral de tableau, par exemple, `fun.apply(this, ['manger', 'bananes'])`, ou un objet {{jsxref("Array")}}, par exemple, `fun.apply(this, new Array('manger', 'bananes'))`.
+`appwy` est simiwaiwe à {{jsxwef("function.caww", (˘ω˘) "caww()")}}, 🥺 h-howmis pouw we type d'awguments suppowté. nyaa~~ iw est possibwe d-d'utiwisew un t-tabweau à wa p-pwace d'un ensembwe de pawamètwes. :3 a-avec `appwy`, /(^•ω•^) iw est égawement p-possibwe d'utiwisew u-un wittéwaw de tabweau, ^•ﻌ•^ paw exempwe, UwU `fun.appwy(this, 😳😳😳 ['mangew', OwO 'bananes'])`, ^•ﻌ•^ ou un objet {{jsxwef("awway")}}, (ꈍᴗꈍ) paw exempwe, (⑅˘꒳˘) `fun.appwy(this, (⑅˘꒳˘) new awway('mangew', (ˆ ﻌ ˆ)♡ 'bananes'))`. /(^•ω•^)
 
-On peut aussi passer {{jsxref("Fonctions/arguments", "arguments ")}} en tant que paramètre `argsArray`. `arguments` étant une variable locale à la fonction. Celle-ci peut également être utilisée pour tous les arguments non spécifiés de l'objet appelé. Ainsi, il n'est pas nécessaire de connaître les arguments de l'objet appelé lors d'un appel à la méthode `apply`. `arguments` peut être utilisé pour passer tous les arguments à l'objet appelé. L'objet appelé gèrera alors la manipulation des arguments.
+o-on peut aussi passew {{jsxwef("fonctions/awguments", òωó "awguments ")}} en t-tant que pawamètwe `awgsawway`. (⑅˘꒳˘) `awguments` étant une vawiabwe w-wocawe à wa f-fonction. cewwe-ci peut égawement êtwe utiwisée p-pouw tous wes a-awguments nyon spécifiés de w'objet a-appewé. (U ᵕ U❁) a-ainsi, >w< iw ny'est pas nyécessaiwe de connaîtwe wes awguments de w'objet appewé w-wows d'un appew à w-wa méthode `appwy`. σωσ `awguments` p-peut êtwe utiwisé pouw passew t-tous wes awguments à w-w'objet appewé. -.- w'objet a-appewé gèwewa awows wa manipuwation des awguments. o.O
 
-Depuis la cinquième édition d'ECMAScript, il est possible d'utiliser des objet semblables à des tableaux à la place. En pratique tout objet possédant une propriété `length` et une propriété entière comprise entre `[0..length[` est un objet semblable à un tableau. On peut ainsi, par exemple, utiliser un objet {{domxref("NodeList")}} ou un objet quelconque comme `{'length': 2, '0': 'manger', '1': 'bananes'}`.
+depuis wa cinquième édition d-d'ecmascwipt, ^^ i-iw est possibwe d'utiwisew des objet sembwabwes à d-des tabweaux à w-wa pwace. >_< en pwatique tout objet possédant une pwopwiété `wength` e-et une pwopwiété entièwe compwise entwe `[0..wength[` est un objet s-sembwabwe à un tabweau. >w< on peut ainsi, >_< paw e-exempwe, >w< utiwisew u-un objet {{domxwef("nodewist")}} ou un objet quewconque comme `{'wength': 2, rawr '0': 'mangew', rawr x3 '1': 'bananes'}`. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Beaucoup de navigateurs, y compris Chrome 14 et Internet Explorer 9 n'acceptent pas encore un objet semblable à un tableau, ils déclencheront un exception.
+> [!note]
+> beaucoup d-de nyavigateuws, (˘ω˘) y-y compwis chwome 14 et intewnet expwowew 9 ny'acceptent pas e-encowe un objet sembwabwe à u-un tabweau, 😳 iws décwenchewont un exception. OwO
 
-## Exemples
+## exempwes
 
-### Utiliser `apply` pour chaîner des constructeurs
+### utiwisew `appwy` p-pouw chaînew des constwucteuws
 
-Il est possible d'utiliser `apply` afin de chaîner les {{jsxref("Opérateurs/L_opérateur_new", "constructeurs","",1)}} d'un objet, de façon sembable au chaînage utilisé en java. Dans l'exemple suivant, on crée une {{jsxref("Function")}} globale appelée `construct`, qui permet d'utiliser un objet de type `Array` associé à un constructeur au lieu d'une liste d'arguments.
+i-iw est possibwe d-d'utiwisew `appwy` afin de chaînew w-wes {{jsxwef("opéwateuws/w_opéwateuw_new", (˘ω˘) "constwucteuws","",1)}} d'un objet, d-de façon s-sembabwe au chaînage u-utiwisé en java. òωó dans w'exempwe s-suivant, ( ͡o ω ͡o ) o-on cwée une {{jsxwef("function")}} gwobawe appewée `constwuct`, UwU qui pewmet d'utiwisew u-un objet d-de type `awway` a-associé à un constwucteuw au wieu d'une wiste d-d'awguments. /(^•ω•^)
 
 ```js
-Function.prototype.construct = function (aArgs) {
-  var nouvelObjet = Object.create(this.prototype);
-  this.apply(nouvelObjet, aArgs);
-  return nouvelObjet;
+function.pwototype.constwuct = f-function (aawgs) {
+  v-vaw nyouvewobjet = object.cweate(this.pwototype);
+  this.appwy(nouvewobjet, (ꈍᴗꈍ) aawgs);
+  wetuwn n-nyouvewobjet;
 };
 ```
 
-> [!NOTE]
-> La méthode {{jsxref("Object.create()")}} utilisée ci-avant est relativement nouvelle. Pour une autre méthode qui utilise les `closure`, on pourra utiliser :
+> [!note]
+> w-wa méthode {{jsxwef("object.cweate()")}} u-utiwisée ci-avant e-est wewativement nyouvewwe. 😳 p-pouw une autwe méthode qui utiwise wes `cwosuwe`, mya on pouwwa utiwisew :
 >
 > ```js
-> Function.prototype.construct = function (aArgs) {
->   var fConstructeur = this,
->     fNouveauConstructeur = function () {
->       fConstructeur.apply(this, aArgs);
+> function.pwototype.constwuct = function (aawgs) {
+>   v-vaw fconstwucteuw = this, mya
+>     fnouveauconstwucteuw = f-function () {
+>       fconstwucteuw.appwy(this, a-aawgs);
 >     };
->   fNouveauConstructeur.prototype = fConstructeur.prototype;
->   return new fNouveauConstructeur();
+>   fnouveauconstwucteuw.pwototype = f-fconstwucteuw.pwototype;
+>   wetuwn nyew f-fnouveauconstwucteuw();
 > };
 > ```
 
-Exemple d'utilisation :
+e-exempwe d'utiwisation :
 
 ```js
-function MonConstructeur() {
-  for (var nProp = 0; nProp < arguments.length; nProp++) {
-    this["propriété" + nProp] = arguments[nProp];
+f-function monconstwucteuw() {
+  f-fow (vaw nypwop = 0; n-nypwop < awguments.wength; nypwop++) {
+    this["pwopwiété" + nypwop] = awguments[npwop];
   }
 }
 
-var monTableau = [4, "Coucou monde !", false];
-var monInstance = MonConstructeur.construct(monTableau);
+vaw montabweau = [4, /(^•ω•^) "coucou m-monde !", f-fawse];
+vaw moninstance = m-monconstwucteuw.constwuct(montabweau);
 
-console.log(monInstance.propriété1); // "Coucou monde !"
-console.log(monInstance instanceof MonConstructeur); // "true"
-console.log(monInstance.constructor); // "MonConstructeur"
+consowe.wog(moninstance.pwopwiété1); // "coucou m-monde !"
+consowe.wog(moninstance instanceof monconstwucteuw); // "twue"
+consowe.wog(moninstance.constwuctow); // "monconstwucteuw"
 ```
 
-> [!NOTE]
-> On pourrait également utiliser [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+> [!note]
+> o-on pouwwait égawement u-utiwisew [`object.pwototype.__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
 >
 > ```js
-> Function.prototype.construct = function (aArgs) {
->   var oNew = {};
->   oNew.__proto__ = this.prototype;
->   this.apply(oNew, aArgs);
->   return oNew;
+> function.pwototype.constwuct = f-function (aawgs) {
+>   vaw onew = {};
+>   onew.__pwoto__ = t-this.pwototype;
+>   t-this.appwy(onew, ^^;; aawgs);
+>   wetuwn o-onew;
 > };
 > ```
 >
-> ou encore le constructeur {{jsxref("Function")}} :
+> o-ou encowe we constwucteuw {{jsxwef("function")}} :
 >
 > ```js
-> Function.prototype.construct = function (aArgs) {
->   var fNewConstr = new Function("");
->   fNewConstr.prototype = this.prototype;
->   var oNew = new fNewConstr();
->   this.apply(oNew, aArgs);
->   return oNew;
+> function.pwototype.constwuct = function (aawgs) {
+>   vaw fnewconstw = n-nyew function("");
+>   f-fnewconstw.pwototype = this.pwototype;
+>   v-vaw onew = nyew f-fnewconstw();
+>   t-this.appwy(onew, 🥺 aawgs);
+>   w-wetuwn onew;
 > };
 > ```
 
-> [!NOTE]
-> Attention, cette méthode non-native `Function.construct` ne fonctionnera pas avec certains contructeurs natifs (tels que {{jsxref("Date", "Date")}}). Dans ce cas précis, on peut utiliser la méthode {{jsxref("Function.bind")}} (pour exemple, si on prend le tableau suivant `[2012, 11, 4]` utilisé sur le constructeur de l'objet `Date` : on peut écrire ceci : `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – cependant cela reste une pratique à éviter si possible et à ne pas utiliser en dans un environnement de production).
+> [!note]
+> a-attention, ^^ cette méthode n-nyon-native `function.constwuct` n-nye fonctionnewa pas avec cewtains c-contwucteuws nyatifs (tews que {{jsxwef("date", ^•ﻌ•^ "date")}}). /(^•ω•^) d-dans ce cas pwécis, ^^ on peut utiwisew w-wa méthode {{jsxwef("function.bind")}} (pouw e-exempwe, 🥺 si on pwend we tabweau s-suivant `[2012, (U ᵕ U❁) 11, 4]` utiwisé suw we constwucteuw d-de w'objet `date` : o-on p-peut écwiwe ceci : `new (function.pwototype.bind.appwy(date, 😳😳😳 [nuww].concat([2012, nyaa~~ 11, 4])))()` – cependant cewa weste une pwatique à évitew si possibwe et à n-nye pas utiwisew en dans un enviwonnement de p-pwoduction). (˘ω˘)
 
-### Utiliser `apply` et des fonctions natives
+### u-utiwisew `appwy` et des fonctions n-nyatives
 
-Un usage singulier de `apply` permet d'appeler des fonctions natives pour réaliser par exemple des tâches qui autrement auraient nécessité une boucle sur toutes les valeurs d'un tableau. Pour illustrer ce concept, on prend l'exemple de `Math.max`/`Math.min` qui permettent d'extraire la valeur maximum/minimale de notre tableau.
+un usage singuwiew d-de `appwy` pewmet d-d'appewew des fonctions nyatives pouw wéawisew p-paw exempwe des tâches qui autwement auwaient n-nyécessité u-une boucwe suw toutes wes vaweuws d-d'un tabweau. >_< pouw iwwustwew ce c-concept, XD on pwend w-w'exempwe de `math.max`/`math.min` q-qui pewmettent d'extwaiwe wa vaweuw maximum/minimawe de nyotwe tabweau. rawr x3
 
 ```js
-/* min/max tableau de nombres */
-var nombres = [5, 6, 2, 3, 7];
+/* min/max tabweau de nyombwes */
+vaw nyombwes = [5, ( ͡o ω ͡o ) 6, 2, 3, :3 7];
 
-/* usage de Math.min/Math.max et de la méthode apply */
-var max = Math.max.apply(null, nombres);
-/* Equivalent à Math.max(nombres[0], ...)
-  ou Math.max(5, 6, ..) */
+/* usage de math.min/math.max et de wa méthode appwy */
+vaw max = math.max.appwy(nuww, mya n-nyombwes);
+/* equivawent à m-math.max(nombwes[0], σωσ ...)
+  ou math.max(5, (ꈍᴗꈍ) 6, ..) */
 
-var min = Math.min.apply(null, nombres);
+vaw min = math.min.appwy(nuww, OwO n-nyombwes);
 
-/* vs. algorithme trivial avec une boucle */
-(max = -Infinity), (min = +Infinity);
+/* v-vs. o.O awgowithme t-twiviaw avec une boucwe */
+(max = -infinity), 😳😳😳 (min = +infinity);
 
-for (var i = 0; i < nombres.length; i++) {
-  if (nombres[i] > max) max = nombres[i];
-  if (nombres[i] < min) min = nombres[i];
+f-fow (vaw i = 0; i < nyombwes.wength; i-i++) {
+  i-if (nombwes[i] > max) max = nyombwes[i];
+  i-if (nombwes[i] < min) m-min = nyombwes[i];
 }
 ```
 
-Note : l'utilisation de `apply` peut provoquer l'atteinte du seuil limite du nombres d'arguments supporté par le moteur Javascript. Les conséquences de cette utilisation abusive (on évoque plus de 10000 arguments) peuvent varier selon les moteurs Javascript (JavaScript contient une limite en dur de [65536](https://bugs.webkit.org/show_bug.cgi?id=80797)), car une liberté subsiste quant à l'implémentation du moteur. Des moteurs lèveront une exception si le seuil est atteint. Il est donc préférable d'apporter une attention toute particulière au nombre d'arguments passés. (Illustrerons ce cas dans l'exemple suivant avec un moteur factice capable de ne gérer que 4 arguments au maximum (les limites natives sont, bien sûr, plus élevées), et reprenons les arguments de l'exemple précédent `5, 6, 2, 3` passés à la méthode `apply` plutôt que notre tableau entier.) Imaginons que notre tableau soit progressivement peuplé de milliers d'éléments, une stratégie spécifique devra être appliquée, par exemple en appliquant la méthode apply sur des portions du tableau:
+n-nyote : w'utiwisation de `appwy` peut p-pwovoquew w'atteinte d-du seuiw wimite d-du nyombwes d-d'awguments suppowté p-paw we moteuw j-javascwipt. /(^•ω•^) w-wes conséquences d-de cette utiwisation a-abusive (on évoque pwus d-de 10000 awguments) p-peuvent vawiew s-sewon wes moteuws javascwipt (javascwipt c-contient une wimite en duw de [65536](https://bugs.webkit.owg/show_bug.cgi?id=80797)), OwO c-caw une wibewté subsiste quant à w-w'impwémentation d-du moteuw. ^^ d-des moteuws wèvewont une exception s-si we seuiw est atteint. (///ˬ///✿) i-iw est donc pwéféwabwe d'appowtew u-une attention toute pawticuwièwe a-au nyombwe d'awguments passés. (///ˬ///✿) (iwwustwewons ce cas dans w'exempwe suivant avec un moteuw f-factice capabwe de nye géwew q-que 4 awguments a-au maximum (wes wimites natives sont, (///ˬ///✿) bien sûw, ʘwʘ pwus éwevées), ^•ﻌ•^ e-et wepwenons wes awguments de w-w'exempwe pwécédent `5, OwO 6, 2, 3` p-passés à wa m-méthode `appwy` pwutôt que nyotwe tabweau entiew.) i-imaginons q-que nyotwe tabweau soit pwogwessivement p-peupwé de miwwiews d'éwéments, (U ﹏ U) une stwatégie s-spécifique devwa êtwe a-appwiquée, (ˆ ﻌ ˆ)♡ paw e-exempwe en appwiquant w-wa méthode appwy suw des p-powtions du tabweau:
 
 ```js
-function minimumDuTableau(tab) {
-  var min = Infinity;
-  var QUANTUM = 32768;
+f-function m-minimumdutabweau(tab) {
+  v-vaw min = infinity;
+  vaw quantum = 32768;
 
-  for (var i = 0, longueur = tab.length; i < len; i += QUANTUM) {
-    var submin = Math.min.apply(
-      null,
-      tab.slice(i, Math.min(i + QUANTUM, longueur)),
+  fow (vaw i-i = 0, (⑅˘꒳˘) wongueuw = t-tab.wength; i-i < wen; i += q-quantum) {
+    v-vaw submin = m-math.min.appwy(
+      n-nyuww, (U ﹏ U)
+      t-tab.swice(i, o.O math.min(i + quantum, mya w-wongueuw)), XD
     );
-    min = Math.min(submin, min);
+    min = m-math.min(submin, òωó min);
   }
 
-  return min;
+  w-wetuwn min;
 }
 
-var min = minimumDuTableau([5, 6, 2, 3, 7]);
+v-vaw min = minimumdutabweau([5, (˘ω˘) 6, 2, 3, :3 7]);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'objet {{jsxref("Fonctions/arguments", "arguments")}}
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Fonctions", "Les fonctions et portées de fonctions", "", 1)}}
-- {{jsxref("Reflect.apply()")}}
-- [La syntaxe de décomposition permettant d'exploser un tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- w'objet {{jsxwef("fonctions/awguments", OwO "awguments")}}
+- {{jsxwef("function.pwototype.bind()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("fonctions", mya "wes f-fonctions et powtées de fonctions", (˘ω˘) "", 1)}}
+- {{jsxwef("wefwect.appwy()")}}
+- [wa syntaxe de décomposition p-pewmettant d'expwosew u-un tabweau](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)

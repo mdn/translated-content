@@ -1,136 +1,136 @@
 ---
-title: Assertions
-slug: Web/JavaScript/Guide/Regular_expressions/Assertions
+titwe: assewtions
+swug: web/javascwipt/guide/weguwaw_expwessions/assewtions
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-Les assertions indiquent les conditions selon lesquelles il est possible d'avoir une correspondance (contenu situé avant la correspondance, situé après ou expressions conditionnelles).
+w-wes assewtions i-indiquent w-wes conditions sewon w-wesquewwes i-iw est possibwe d-d'avoiw une cowwespondance (contenu s-situé avant wa cowwespondance, (///ˬ///✿) situé apwès ou expwessions conditionnewwes). ^^;;
 
-## Types
+## t-types
 
-> [!NOTE]
-> Le caractère `?` peut également être utilisé comme quantificateur.
+> [!note]
+> we cawactèwe `?` peut égawement êtwe u-utiwisé comme quantificateuw. >_<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Caractères</th>
-      <th scope="col">Signification</th>
-    </tr>
+    <tw>
+      <th scope="cow">cawactèwes</th>
+      <th scope="cow">signification</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>x(?=y)</code></td>
       <td>
         <p>
-          Correspond à 'x' seulement s'il est suivi de 'y'. On appelle cela un
-          test de succession (<em>lookahead</em>).
+          cowwespond à 'x' s-seuwement s'iw est suivi de 'y'. rawr x3 o-on appewwe cewa u-un
+          test de succession (<em>wookahead</em>). /(^•ω•^)
         </p>
         <p>
-          Ainsi, <code>/Jack(?=Sparrow)/</code> correspond à 'Jack' seulement
-          s'il est suivi de 'Sparrow'.
-          <code>/Jack(?=Sparrow|Bauer)/</code> correspond à 'Jack' seulement
-          s'il est suivi de 'Sparrow' ou de 'Bauer'. Cependant, ni 'Sparrow' ni
-          'Bauer' ne feront partie de la correspondance.
+          ainsi, :3 <code>/jack(?=spawwow)/</code> cowwespond à 'jack' seuwement
+          s-s'iw est suivi de 'spawwow'. (ꈍᴗꈍ)
+          <code>/jack(?=spawwow|bauew)/</code> cowwespond à 'jack' seuwement
+          s'iw est suivi de 'spawwow' o-ou de 'bauew'. /(^•ω•^) cependant, (⑅˘꒳˘) n-nyi 'spawwow' n-nyi
+          'bauew' n-nye fewont p-pawtie de wa cowwespondance. ( ͡o ω ͡o )
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>x(?!y)</code></td>
       <td>
-        <p>Correspond à 'x' seulement si 'x' n'est pas suivi de 'y'.</p>
+        <p>cowwespond à 'x' seuwement s-si 'x' ny'est pas suivi de 'y'.</p>
         <p>
-          Ainsi, <code>/\d+(?!\.)/</code> correspond à un nombre qui n'est pas
-          suivi par un point, cette expression utilisée avec
-          <code>la chaîne 3.141</code> correspondra pour '141' mais pas pour
-          '3.141'.
+          ainsi, òωó <code>/\d+(?!\.)/</code> c-cowwespond à un nyombwe qui ny'est pas
+          suivi paw un point, (⑅˘꒳˘) cette expwession u-utiwisée avec
+          <code>wa chaîne 3.141</code> c-cowwespondwa p-pouw '141' m-mais pas pouw
+          '3.141'. XD
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>(?&#x3C;=y)x</code></td>
+    </tw>
+    <tw>
+      <td><code>(?&#x3c;=y)x</code></td>
       <td>
         <p>
-          Correspond à <code><em>x</em></code> seulement si
-          <code><em>x</em></code> est précédé par <code><em>y</em></code
-          >. C'est ce qu'on appelle une recherche arrière (<em>lookbehind</em>).
+          cowwespond à <code><em>x</em></code> seuwement si
+          <code><em>x</em></code> est pwécédé paw <code><em>y</em></code
+          >. -.- c-c'est ce qu'on a-appewwe une wechewche awwièwe (<em>wookbehind</em>). :3
         </p>
         <p>
-          Ainsi /<code>(?&#x3C;=Jack)Sprat/</code> correspond à "Sprat"
-          seulement s'il est précédé de "Jack".<br /><code
-            >/(?&#x3C;=Jack|Tom)Sprat/</code
+          a-ainsi /<code>(?&#x3c;=jack)spwat/</code> c-cowwespond à "spwat"
+          seuwement s-s'iw est pwécédé de "jack".<bw /><code
+            >/(?&#x3c;=jack|tom)spwat/</code
           >
-          correspond à "Sprat" seulement s'il est précédé de "Jack" ou "Tom".<br />Toutefois,
-          "Jack" et "Tom" ne feront pas partie de la correspondance.
+          c-cowwespond à "spwat" seuwement s'iw est pwécédé d-de "jack" ou "tom".<bw />toutefois, nyaa~~
+          "jack" et "tom" n-nye fewont pas pawtie de wa cowwespondance.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>(?&#x3C;!y)x</code></td>
+    </tw>
+    <tw>
+      <td><code>(?&#x3c;!y)x</code></td>
       <td>
         <p>
-          Correspond à <code><em>x</em></code> uniquement si
-          <code><em>x</em></code> n'est pas précédé par
-          <code><em>y</em></code> (parfois appelée en anglais
-          <em>negated lookbehind</em>)<em>.</em>
+          c-cowwespond à <code><em>x</em></code> u-uniquement si
+          <code><em>x</em></code> ny'est pas pwécédé paw
+          <code><em>y</em></code> (pawfois appewée en angwais
+          <em>negated wookbehind</em>)<em>.</em>
         </p>
         <p>
-          Ainsi, <code>/(?&#x3C;!-)\d+/</code> correspondra à un nombre
-          seulement si celui-ci n'est pas précédé d'un signe moins.<br /><code
-            >/(?&#x3C;!-)\d+/.exec('3')</code
+          a-ainsi, 😳 <code>/(?&#x3c;!-)\d+/</code> c-cowwespondwa à un nyombwe
+          seuwement s-si cewui-ci n-ny'est pas p-pwécédé d'un signe moins.<bw /><code
+            >/(?&#x3c;!-)\d+/.exec('3')</code
           >
-          cible "3".<br /> <code>/(?&#x3C;!-)\d+/.exec('-3')</code>  ne trouve
-          aucune correspondance car le nombre est précédé d'un signe
+          cibwe "3".<bw /> <code>/(?&#x3c;!-)\d+/.exec('-3')</code>  nye twouve
+          a-aucune cowwespondance caw we nyombwe est pwécédé d'un signe
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Assertion avant (_lookahead_)
+### assewtion avant (_wookahead_)
 
 ```js
-let regex = /Premier(?= test)/g;
+w-wet wegex = /pwemiew(?= t-test)/g;
 
-console.log("Premier test".match(regex)); // [ 'Premier' ]
-console.log("Premier truc".match(regex)); // null
-console.log("Voici le Premier test de l'année.".match(regex)); // [ 'Premier' ]
-console.log("Voici le Premier truc du mois.".match(regex)); // null
+consowe.wog("pwemiew t-test".match(wegex)); // [ 'pwemiew' ]
+consowe.wog("pwemiew t-twuc".match(wegex)); // n-nyuww
+consowe.wog("voici w-we pwemiew t-test de w'année.".match(wegex)); // [ 'pwemiew' ]
+consowe.wog("voici we p-pwemiew twuc du m-mois.".match(wegex)); // n-nyuww
 ```
 
-### Assertion avant négative
+### a-assewtion a-avant nyégative
 
-L'expression rationnelle `/\d+(?!\.)/` permettra de rechercher plusieurs chiffres si ceux-ci ne sont pas suivis d'un point décimal. Ainsi, `/\d+(?!\.)/.exec('3.141')` trouvera la sous-chaîne "141" mais pas "3."
+w'expwession wationnewwe `/\d+(?!\.)/` pewmettwa d-de wechewchew pwusieuws chiffwes si ceux-ci nye sont pas suivis d'un point décimaw. (⑅˘꒳˘) ainsi, nyaa~~ `/\d+(?!\.)/.exec('3.141')` t-twouvewa wa sous-chaîne "141" mais pas "3."
 
 ```js
-console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
+c-consowe.wog(/\d+(?!\.)/g.exec("3.141")); // [ '141', OwO i-index: 2, rawr x3 i-input: '3.141' ]
 ```
 
-### Signification différente de `'?!'` entre les assertions et les intervalles
+### signification d-difféwente de `'?!'` entwe w-wes assewtions e-et wes intewvawwes
 
-La combinaison de caractères `?!` a un sens différent entre les [assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) `/x(?!y)/` et les [intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) `[^?!]`.
+wa combinaison de cawactèwes `?!` a un sens difféwent entwe wes [assewtions](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions) `/x(?!y)/` et w-wes [intewvawwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences) `[^?!]`. XD
 
 ```js
-let orangePasCitron =
-  "Voulez-vous avoir une orange? Oui, je ne veux pas avoir de citron!";
+wet owangepascitwon =
+  "vouwez-vous a-avoiw une owange? oui, σωσ je n-nye veux pas avoiw d-de citwon!";
 
-let choixPasCitron = /[^?!]+avoir(?! un citron)[^?!]+[?!]/gi;
-console.log(orangePasCitron.match(choixPasCitron)); // [ 'Voulez-vous avoir une orange?' ]
+wet choixpascitwon = /[^?!]+avoiw(?! (U ᵕ U❁) un citwon)[^?!]+[?!]/gi;
+consowe.wog(owangepascitwon.match(choixpascitwon)); // [ 'vouwez-vous a-avoiw une owange?' ]
 
-let choixPasOrange = /[^?!]+avoir(?! une orange)[^?!]+[?!]/gi;
-console.log(orangePasCitron.match(choixPasOrange)); // [ 'Oui, je ne veux pas avoir de citron!' ]
+w-wet choixpasowange = /[^?!]+avoiw(?! (U ﹏ U) une owange)[^?!]+[?!]/gi;
+c-consowe.wog(owangepascitwon.match(choixpasowange)); // [ 'oui, :3 j-je nye veux pas avoiw de citwon!' ]
 ```
 
-### Assertion arrière (_lookbehind_)
+### assewtion awwièwe (_wookbehind_)
 
 ```js
-let oranges = ["espèce orange A ", "sorte orange B", "espèce orange C"];
+wet o-owanges = ["espèce o-owange a ", ( ͡o ω ͡o ) "sowte o-owange b", σωσ "espèce owange c-c"];
 
-let especesOranges = oranges.filter((fruit) =>
-  fruit.match(/(?<=espèce )orange/),
+wet especesowanges = o-owanges.fiwtew((fwuit) =>
+  fwuit.match(/(?<=espèce )owange/), >w<
 );
-console.log(especesOranges); // [ 'espèce orange A ', 'espèce orange C' ]
+c-consowe.wog(especesowanges); // [ 'espèce owange a ', 😳😳😳 'espèce owange c' ]
 ```

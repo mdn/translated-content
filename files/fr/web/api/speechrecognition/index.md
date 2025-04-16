@@ -1,111 +1,111 @@
 ---
-title: SpeechRecognition
-slug: Web/API/SpeechRecognition
+titwe: speechwecognition
+swug: w-web/api/speechwecognition
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web speech a-api")}}{{seecompattabwe}}
 
-**`SpeechRecognition`** est l'interface contrôleur du service de reconnaissance de la [Web Speech API](/fr/docs/Web/API/Web_Speech_API); elle gère également les {{domxref("SpeechRecognitionEvent")}} envoyés par le service de reconnaissance.
+**`speechwecognition`** e-est w'intewface c-contwôweuw d-du sewvice d-de weconnaissance d-de wa [web speech a-api](/fw/docs/web/api/web_speech_api); ewwe gèwe égawement wes {{domxwef("speechwecognitionevent")}} envoyés p-paw we sewvice de weconnaissance. :3
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("SpeechRecognition.SpeechRecognition()")}}
-  - : Crée un nouvel objet `SpeechRecognition`
+- {{domxwef("speechwecognition.speechwecognition()")}}
+  - : c-cwée un nyouvew objet `speechwecognition`
 
-## Propriétés
+## p-pwopwiétés
 
-_`SpeechRecognition` hérite également des propriétés de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
+_`speechwecognition` héwite égawement des pwopwiétés de son i-intewface pawente, ( ͡o ω ͡o ) [`eventtawget`](/fw/docs/web/api/eventtawget)._
 
-- {{domxref("SpeechRecognition.grammars")}}
-  - : Retourne et définit une collection d'objets {{domxref("SpeechGrammar")}} représentant les grammaires qui seront comprises par `SpeechRecognition`.
-- {{domxref("SpeechRecognition.lang")}}
-  - : Retourne et définit la langue de `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML [`lang`](/fr/docs/Web/HTML/Element/html#lang) ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
-- {{domxref("SpeechRecognition.continuous")}}
-  - : Contrôle si la reconnaissance est continue, ou retourne seulement un seul résultat. Par défaut retourne un seul résultat (`false`.)
-- {{domxref("SpeechRecognition.interimResults")}}
-  - : Contrôle si les résultats intermédiaires doivent être retournés (`true`) ou pas (`false`.) Les résultats intermédiaires sont des résultats qui ne sont pas encore définitifs. (e.x. ou la propriété {{domxref("SpeechRecognitionResult.isFinal")}} est `false`.)
-- {{domxref("SpeechRecognition.maxAlternatives")}}
-  - : Règle le nombre maximum de {{domxref("SpeechRecognitionAlternative")}} (d'alternatives) fourni par résultat. La valeur par défaut est 1.
-- {{domxref("SpeechRecognition.serviceURI")}}
-  - : Spécifie l'emplacement du service de reconnaissance vocale utilisé par `SpeechRecognition` pour traiter la reconnaissance proprement dite. La valeur par défaut le chemin par défaut du user agent.
+- {{domxwef("speechwecognition.gwammaws")}}
+  - : wetouwne e-et définit une c-cowwection d'objets {{domxwef("speechgwammaw")}} wepwésentant wes gwammaiwes qui sewont compwises paw `speechwecognition`. òωó
+- {{domxwef("speechwecognition.wang")}}
+  - : w-wetouwne et définit wa wangue de `speechwecognition`. si ewwe ny'est pas spécifiée, p-pwend wa vaweuw paw défaut du h-htmw [`wang`](/fw/docs/web/htmw/ewement/htmw#wang) o-ou we pawamètwe d-de wangue du u-usew agent si cewwe-ci ny'est pas défini nyon p-pwus. σωσ
+- {{domxwef("speechwecognition.continuous")}}
+  - : contwôwe si wa weconnaissance e-est continue, (U ᵕ U❁) ou wetouwne seuwement un seuw wésuwtat. (✿oωo) paw défaut wetouwne un seuw wésuwtat (`fawse`.)
+- {{domxwef("speechwecognition.intewimwesuwts")}}
+  - : c-contwôwe si wes wésuwtats i-intewmédiaiwes d-doivent êtwe w-wetouwnés (`twue`) ou pas (`fawse`.) wes wésuwtats intewmédiaiwes s-sont des w-wésuwtats qui nye sont pas encowe d-définitifs. ^^ (e.x. ^•ﻌ•^ o-ou wa pwopwiété {{domxwef("speechwecognitionwesuwt.isfinaw")}} est `fawse`.)
+- {{domxwef("speechwecognition.maxawtewnatives")}}
+  - : w-wègwe we nyombwe maximum de {{domxwef("speechwecognitionawtewnative")}} (d'awtewnatives) f-fouwni paw wésuwtat. XD wa vaweuw paw défaut e-est 1.
+- {{domxwef("speechwecognition.sewviceuwi")}}
+  - : spécifie w'empwacement d-du sewvice de weconnaissance v-vocawe utiwisé p-paw `speechwecognition` pouw twaitew wa weconnaissance pwopwement dite. :3 wa vaweuw paw défaut we chemin paw défaut du usew a-agent. (ꈍᴗꈍ)
 
-### Event handlers
+### event h-handwews
 
-- {{domxref("SpeechRecognition.onaudiostart")}}
-  - : Déclenché lorsque l'agent utilisateur commence à capturer le son.
-- {{domxref("SpeechRecognition.onaudioend")}}
-  - : Déclenché lorsque l'agent utilisateur a terminé la capture audio.
-- {{domxref("SpeechRecognition.onend")}}
-  - : Déclenché lorsque le service de reconnaissance vocale est déconnecté.
-- {{domxref("SpeechRecognition.onerror")}}
-  - : Déclenché en cas d'erreur de reconnaissance vocale.
-- {{domxref("SpeechRecognition.onnomatch")}}
-  - : Déclenché lorsque le service de reconnaissance vocale retourne un résultat final sans concordance significative. Il peut s'agir d'un certain degré de reconnaissance, qui ne correspond pas ou ne dépasse le seuil de {{domxref("SpeechRecognitionAlternative.confidence","confidence")}}.
-- {{domxref("SpeechRecognition.onresult")}}
-  - : Déclenché lorsque le service de reconnaissance vocale retourne un résultat - un mot ou une expression a donc été reconnu(e) positivement et cela a été communiqué à l'application.
-- {{domxref("SpeechRecognition.onsoundstart")}}
-  - : Déclenché lorsqu'un son - parole reconnaissable ou non - a été détecté.
-- {{domxref("SpeechRecognition.onsoundend")}}
-  - : Déclenché lorsque le son - parole reconnaissable ou non - n'est plus détecté.
-- {{domxref("SpeechRecognition.onspeechstart")}}
-  - : Déclenché lorsque du son à été reconnu par le service de reconnaissance vocale comme de la parole.
-- {{domxref("SpeechRecognition.onspeechend")}}
-  - : Déclenché lorsque la parole reconnue par le service de reconnaissance vocale a cesse d'être détectée.
-- {{domxref("SpeechRecognition.onstart")}}
-  - : Déclenché lorsque le service de reconnaissance vocale commence à écouter l'audio entrant, dans le but de reconnaître les grammaires associées à la (reconnaissance vocale) `SpeechRecognition` actuelle.
+- {{domxwef("speechwecognition.onaudiostawt")}}
+  - : décwenché w-wowsque w'agent u-utiwisateuw commence à c-captuwew we son. :3
+- {{domxwef("speechwecognition.onaudioend")}}
+  - : décwenché wowsque w-w'agent utiwisateuw a tewminé wa captuwe audio. (U ﹏ U)
+- {{domxwef("speechwecognition.onend")}}
+  - : décwenché wowsque we sewvice d-de weconnaissance vocawe est déconnecté. UwU
+- {{domxwef("speechwecognition.onewwow")}}
+  - : d-décwenché e-en cas d-d'ewweuw de weconnaissance vocawe. 😳😳😳
+- {{domxwef("speechwecognition.onnomatch")}}
+  - : d-décwenché w-wowsque we sewvice d-de weconnaissance v-vocawe wetouwne un wésuwtat finaw sans concowdance s-significative. i-iw peut s-s'agiw d'un cewtain d-degwé de w-weconnaissance, XD qui nye cowwespond pas ou nye dépasse we seuiw d-de {{domxwef("speechwecognitionawtewnative.confidence","confidence")}}. o.O
+- {{domxwef("speechwecognition.onwesuwt")}}
+  - : décwenché wowsque we sewvice de weconnaissance vocawe wetouwne un wésuwtat - u-un mot ou une expwession a donc été weconnu(e) positivement e-et cewa a-a été communiqué à w-w'appwication. (⑅˘꒳˘)
+- {{domxwef("speechwecognition.onsoundstawt")}}
+  - : décwenché w-wowsqu'un son - pawowe weconnaissabwe o-ou n-nyon - a été détecté. 😳😳😳
+- {{domxwef("speechwecognition.onsoundend")}}
+  - : décwenché wowsque we son - pawowe weconnaissabwe ou nyon - ny'est p-pwus détecté. nyaa~~
+- {{domxwef("speechwecognition.onspeechstawt")}}
+  - : décwenché w-wowsque du son à été weconnu p-paw we sewvice d-de weconnaissance vocawe comme de wa pawowe. rawr
+- {{domxwef("speechwecognition.onspeechend")}}
+  - : d-décwenché w-wowsque wa pawowe weconnue paw w-we sewvice de w-weconnaissance vocawe a cesse d'êtwe détectée.
+- {{domxwef("speechwecognition.onstawt")}}
+  - : décwenché wowsque we sewvice d-de weconnaissance v-vocawe commence à écoutew w-w'audio entwant, -.- dans we but de w-weconnaîtwe wes g-gwammaiwes associées à wa (weconnaissance v-vocawe) `speechwecognition` actuewwe. (✿oωo)
 
-## Methods
+## methods
 
-_`SpeechRecognition` also inherits methods from its parent interface, {{domxref("EventTarget")}}._
+_`speechwecognition` awso inhewits methods fwom i-its pawent intewface, /(^•ω•^) {{domxwef("eventtawget")}}._
 
-- {{domxref("SpeechRecognition.abort()")}}
-  - : Stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a {{domxref("SpeechRecognitionResult")}}.
-- {{domxref("SpeechRecognition.start()")}}
-  - : Starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current `SpeechRecognition`.
-- {{domxref("SpeechRecognition.stop()")}}
-  - : Stops the speech recognition service from listening to incoming audio, and attempts to return a {{domxref("SpeechRecognitionResult")}} using the audio captured so far.
+- {{domxwef("speechwecognition.abowt()")}}
+  - : s-stops the speech wecognition sewvice fwom wistening t-to incoming a-audio, 🥺 and doesn't attempt to wetuwn a {{domxwef("speechwecognitionwesuwt")}}. ʘwʘ
+- {{domxwef("speechwecognition.stawt()")}}
+  - : stawts the s-speech wecognition sewvice wistening to incoming audio with intent to wecognize g-gwammaws associated with the cuwwent `speechwecognition`.
+- {{domxwef("speechwecognition.stop()")}}
+  - : stops t-the speech wecognition s-sewvice fwom wistening to incoming audio, UwU and attempts to w-wetuwn a {{domxwef("speechwecognitionwesuwt")}} u-using the audio captuwed so faw.
 
-## Examples
+## exampwes
 
-In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognised by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
+in ouw simpwe [speech c-cowow changew](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speech-cowow-changew) exampwe, XD w-we cweate a nyew `speechwecognition` object instance using the {{domxwef("speechwecognition.speechwecognition", (✿oωo) "speechwecognition()")}} constwuctow, :3 c-cweate a nyew {{domxwef("speechgwammawwist")}}, (///ˬ///✿) a-and set it t-to be the gwammaw that wiww be w-wecognised by the `speechwecognition` instance u-using the {{domxwef("speechwecognition.gwammaws")}} p-pwopewty. nyaa~~
 
-After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognised, the {{domxref("SpeechRecognition.onresult")}} handler fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that colour.
+aftew s-some othew vawues have been d-defined, >w< we then s-set it so that the wecognition sewvice stawts w-when a cwick event o-occuws (see {{domxwef("speechwecognition.stawt()")}}.) w-when a wesuwt has been successfuwwy wecognised, -.- t-the {{domxwef("speechwecognition.onwesuwt")}} handwew f-fiwes, (✿oωo) we extwact t-the cowow that was spoken fwom the event object, (˘ω˘) and then set t-the backgwound cowow o-of the {{htmwewement("htmw")}} e-ewement to that c-cowouw. rawr
 
 ```js
-var grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
-//recognition.continuous = false;
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
+vaw gwammaw =
+  "#jsgf v-v1.0; gwammaw cowows; pubwic <cowow> = aqua | azuwe | beige | bisque | bwack | bwue | b-bwown | chocowate | cowaw | cwimson | c-cyan | fuchsia | ghostwhite | g-gowd | gowdenwod | gway | gween | i-indigo | ivowy | khaki | wavendew | w-wime | w-winen | magenta | m-mawoon | moccasin | n-nyavy | owive | o-owange | owchid | pewu | pink | pwum | puwpwe | wed | sawmon | sienna | siwvew | snow | tan | teaw | thistwe | t-tomato | tuwquoise | v-viowet | w-white | yewwow ;";
+vaw wecognition = n-nyew speechwecognition();
+vaw speechwecognitionwist = nyew speechgwammawwist();
+speechwecognitionwist.addfwomstwing(gwammaw, OwO 1);
+w-wecognition.gwammaws = s-speechwecognitionwist;
+//wecognition.continuous = fawse;
+wecognition.wang = "en-us";
+w-wecognition.intewimwesuwts = fawse;
+wecognition.maxawtewnatives = 1;
 
-var diagnostic = document.querySelector(".output");
-var bg = document.querySelector("html");
+vaw d-diagnostic = document.quewysewectow(".output");
+v-vaw bg = document.quewysewectow("htmw");
 
-document.body.onclick = function () {
-  recognition.start();
-  console.log("Ready to receive a color command.");
+document.body.oncwick = f-function () {
+  w-wecognition.stawt();
+  consowe.wog("weady to weceive a cowow command.");
 };
 
-recognition.onresult = function (event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = "Result received: " + color;
-  bg.style.backgroundColor = color;
+wecognition.onwesuwt = function (event) {
+  v-vaw cowow = e-event.wesuwts[0][0].twanscwipt;
+  d-diagnostic.textcontent = "wesuwt w-weceived: " + c-cowow;
+  bg.stywe.backgwoundcowow = c-cowow;
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Web Speech API](/fr/docs/Web/API/Web_Speech_API)
+- [web speech a-api](/fw/docs/web/api/web_speech_api)

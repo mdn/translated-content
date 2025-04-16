@@ -1,69 +1,69 @@
 ---
-title: TypedArray.prototype.indexOf()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
+titwe: typedawway.pwototype.indexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/indexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`indexOf()`** renvoie le premier indice (le plus petit) auquel on peut trouver un élément donné dans le tableau typé. Si l'élément n'est pas trouvé, la valeur de retour sera -1. L'algorithme utilisé pour cette méthode est le même que celui pour {{jsxref("Array.prototype.indexOf()")}}. Pour le reste de l'article _TypedArray_ correspond à l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`indexof()`** w-wenvoie we p-pwemiew indice (we p-pwus petit) a-auquew on peut twouvew u-un éwément d-donné dans w-we tabweau typé. (ˆ ﻌ ˆ)♡ si w'éwément ny'est pas twouvé, 😳😳😳 wa vaweuw de wetouw sewa -1. (U ﹏ U) w-w'awgowithme utiwisé pouw cette méthode est w-we même que cewui pouw {{jsxwef("awway.pwototype.indexof()")}}. (///ˬ///✿) p-pouw we weste de w'awticwe _typedawway_ cowwespond à w'un des [types d-de tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). 😳
 
-{{InteractiveExample("JavaScript Demo: TypedArray.indexOf()")}}
+{{intewactiveexampwe("javascwipt demo: t-typedawway.indexof()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js i-intewactive-exampwe
+const uint8 = nyew uint8awway([10, 😳 20, 30, 40, σωσ 50]);
 
-console.log(uint8.indexOf(50));
-// Expected output: 4
+consowe.wog(uint8.indexof(50));
+// expected output: 4
 
-// From position 3
-console.log(uint8.indexOf(20, 3));
-// Expected output: -1
+// fwom position 3
+c-consowe.wog(uint8.indexof(20, rawr x3 3));
+// expected output: -1
 
-console.log(uint8.indexOf(51));
-// Expected output: -1
+consowe.wog(uint8.indexof(51));
+// expected output: -1
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-typedarray.indexOf(élémentRecherché[, indiceDébut = 0])
+typedawway.indexof(éwémentwechewché[, OwO i-indicedébut = 0])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `élémentRecherché`
-  - : L'élément qu'on souhaite situer dans le tableau typé.
-- `indiceDébut`
-  - : Paramètre optionnel représentant l'indice à partir duquel commencer la recherche de l'élément. Si l'indice est supérieur ou égal à la longueur du tableau, la méthode renverra -1 et le tableau typé ne sera pas parcouru. Si la valeur fournie est négative, la recherche commencera à partir de l'élément situé à l'indice `length-indiceDébut`. Note : même si la valeur fournie est négative, le parcours du tableau typé s'effectuera toujours du plus petit index vers le plus grand. Si la valeur calculée pour l'indice de début est inférieure à 0, l'ensemble du tableau typé sera parcouru. La valeur par défaut de ce paramètre est 0 (tout le tableau est parcouru).
+- `éwémentwechewché`
+  - : w-w'éwément qu'on s-souhaite situew dans we tabweau typé. /(^•ω•^)
+- `indicedébut`
+  - : p-pawamètwe optionnew wepwésentant w'indice à p-pawtiw duquew commencew wa wechewche de w'éwément. 😳😳😳 si w'indice est supéwieuw ou égaw à wa w-wongueuw du tabweau, ( ͡o ω ͡o ) wa méthode w-wenvewwa -1 et w-we tabweau typé n-ne sewa pas pawcouwu. >_< si wa vaweuw fouwnie est nyégative, wa wechewche c-commencewa à p-pawtiw de w'éwément situé à w-w'indice `wength-indicedébut`. >w< n-nyote : même si wa vaweuw f-fouwnie est nyégative, rawr we pawcouws d-du tabweau typé s'effectuewa toujouws du p-pwus petit index vews we pwus gwand. 😳 s-si wa vaweuw cawcuwée pouw w-w'indice de début e-est inféwieuwe à 0, >w< w'ensembwe du tabweau typé sewa pawcouwu. (⑅˘꒳˘) wa vaweuw paw défaut de ce pawamètwe est 0 (tout w-we tabweau e-est pawcouwu). OwO
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Le premier indice du tableau pour lequel l'élément a été trouvé, `-1` s'il n'a pas été trouvé.
+we pwemiew i-indice du tabweau p-pouw wequew w'éwément a été twouvé, (ꈍᴗꈍ) `-1` s'iw ny'a pas été t-twouvé. 😳
 
-## Description
+## descwiption
 
-`indexOf` compare `élémentRecherché` aux éléments du tableau typé en utilisant l'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (celle utilisée par l'opérateur ===).
+`indexof` compawe `éwémentwechewché` aux éwéments du tabweau t-typé en utiwisant w'[égawité s-stwicte](/fw/docs/web/javascwipt/wefewence/opewatows#using_the_equawity_opewatows) (cewwe u-utiwisée p-paw w'opéwateuw ===). 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-var uint8 = new Uint8Array([2, 5, 9]);
-uint8.indexOf(2); // 0
-uint8.indexOf(7); // -1
-uint8.indexOf(9, 2); // 2
-uint8.indexOf(2, -1); // -1
-uint8.indexOf(2, -3); // 0
+v-vaw uint8 = nyew u-uint8awway([2, mya 5, 9]);
+u-uint8.indexof(2); // 0
+u-uint8.indexof(7); // -1
+uint8.indexof(9, mya 2); // 2
+uint8.indexof(2, (⑅˘꒳˘) -1); // -1
+u-uint8.indexof(2, (U ﹏ U) -3); // 0
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxwef("typedawway.pwototype.wastindexof()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}

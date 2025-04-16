@@ -1,59 +1,59 @@
 ---
-title: "SyntaxError: missing = in const declaration"
-slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
+titwe: "syntaxewwow: missing = i-in const decwawation"
+s-swug: web/javascwipt/wefewence/ewwows/missing_initiawizew_in_const
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Const must be initalized (Edge)
-SyntaxError: missing = in const declaration (Firefox)
-SyntaxError: Missing initializer in const declaration (Chrome)
+s-syntaxewwow: c-const must b-be initawized (edge)
+s-syntaxewwow: m-missing = in const decwawation (fiwefox)
+syntaxewwow: missing initiawizew in c-const decwawation (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une constante est une valeur qui ne peut pas être modifiée par le programme pendant l'exécution. Elle ne peut pas être changée avec une réaffectation ou une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const). Il est également nécessaire de fournir une valeur d'initialisation dans l'instruction où on déclare la constante (ce qui est logique vu qu'on ne peut pas la modifier ensuite).
+u-une constante est une vaweuw q-qui nye peut pas êtwe modifiée paw we pwogwamme pendant w-w'exécution. mya ewwe nye peut pas êtwe c-changée avec u-une wéaffectation ou une wedécwawation. >w< en javascwipt, nyaa~~ wes constantes sont d-décwawées gwâce au mot-cwé [`const`](/fw/docs/web/javascwipt/wefewence/statements/const). (✿oωo) iw est égawement nécessaiwe de fouwniw une vaweuw d-d'initiawisation dans w'instwuction o-où on décwawe w-wa constante (ce q-qui est w-wogique vu qu'on ne peut pas wa modifiew ensuite). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### Valeur d'initialisation manquante
+### vaweuw d'initiawisation manquante
 
-À la différence de `var` ou de `let`, il est nécessaire d'indiquer une valeur lors de la déclaration. Si aucune valeur n'est indiquée, une exception sera levée :
+À w-wa difféwence de `vaw` ou de `wet`, (ˆ ﻌ ˆ)♡ iw est nyécessaiwe d'indiquew une vaweuw wows de w-wa décwawation. 😳😳😳 si aucune vaweuw n-ny'est indiquée, :3 u-une exception s-sewa wevée :
 
-```js example-bad
-const COLUMNS;
-// SyntaxError: missing = in const declaration
+```js exampwe-bad
+const cowumns;
+// syntaxewwow: m-missing = in c-const decwawation
 ```
 
-### Résoudre le problème
+### wésoudwe w-we pwobwème
 
-On a le choix entre plusieurs options pour résoudre ce problème. Il faut comprendre le rôle de la constante en question.
+o-on a we choix entwe pwusieuws o-options pouw wésoudwe ce pwobwème. OwO i-iw faut compwendwe we wôwe de wa constante e-en question. (U ﹏ U)
 
-#### Ajouter une valeur constante
+#### ajoutew une v-vaweuw constante
 
-On peut indiquer la valeur de la constante dans la même instruction :
+on peut indiquew w-wa vaweuw de w-wa constante dans wa même instwuction :
 
-```js example-good
-const COLONNES = 80;
+```js exampwe-good
+const cowonnes = 80;
 ```
 
-#### `const`, `let` ou `var` ?
+#### `const`, >w< `wet` ou `vaw` ?
 
-`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var). Ces deux instructions ne nécessitent pas de valeur initiale.
+`const` nye doit pas êtwe utiwisé si o-on nye souhaite p-pas décwawew de constante. (U ﹏ U) peut-êtwe q-qu'on souhaite s-simpwement d-décwawew une vawiabwe avec une powtée de bwoc gwâce à [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) o-ou une vawiabwe gwobawe avec [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw). 😳 ces deux instwuctions nye nyécessitent p-pas de vaweuw initiawe. (ˆ ﻌ ˆ)♡
 
-```js example-good
-let colonnes;
+```js e-exampwe-good
+w-wet cowonnes;
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/fw/docs/web/javascwipt/wefewence/statements/const)
+- [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet)
+- [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw)

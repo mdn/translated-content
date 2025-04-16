@@ -1,30 +1,30 @@
 ---
-title: Notification.title
-slug: Web/API/Notification/title
+titwe: nyotification.titwe
+swug: w-web/api/notification/titwe
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`title`** de l'interface {{domxref ("Notification")}} indique le titre de la notification, comme définis à l'aide de l'option `silent` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()") }} constructeur.
+w-wa pwopwiété e-en wectuwe seuwe **`titwe`** d-de w'intewface {{domxwef ("notification")}} i-indique w-we titwe de w-wa nyotification, >_< comme définis à w'aide de w'option `siwent` wows de wa cwéation de wa nyotification à w-w'aide du constwucteuw {{domxwef ("notification.notification", mya "notification()") }} constwucteuw.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.title;
+nyotification.titwe;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("DOMString")}}.
+u-une {{domxwef("domstwing")}}. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api n-notifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

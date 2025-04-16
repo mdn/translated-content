@@ -1,51 +1,51 @@
 ---
-title: 'TypeError: can''t assign to property "x" on "y": not an object'
-slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
+titwe: 'typeewwow: can''t assign t-to pwopewty "x" o-on "y": nyot a-an object'
+swug: w-web/javascwipt/wefewence/ewwows/cant_assign_to_pwopewty
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: can't assign to property "x" on {y}: not an object (Firefox)
-TypeError: Cannot create property 'x' on {y} (Chrome)
+t-typeewwow: c-can't assign t-to pwopewty "x" on {y}: nyot an object (fiwefox)
+typeewwow: cannot cweate pwopewty 'x' o-on {y} (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. rawr
 
-## Quel est le problème ?
+## quew e-est we pwobwème ?
 
-En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), une exception {{jsxref("TypeError")}} est déclenchée lorsqu'on tente de créer une propriété sur [une valeur primitive](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives) telle qu'un symbole, une chaîne de caractères, un nombre ou un booleén.
+en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode), mya u-une exception {{jsxwef("typeewwow")}} est décwenchée wowsqu'on tente de cwéew u-une pwopwiété suw [une vaweuw p-pwimitive](/fw/docs/web/javascwipt/data_stwuctuwes#wes_vaweuws_pwimitives) t-tewwe qu'un symbowe, ^^ une chaîne de cawactèwes, 😳😳😳 un nyombwe ou un booweén. mya
 
-Le problème peut être lié à une valeur qui se trouve à un endroit inattendu ou qu'un équivalent objet d'une valeur primitive est attendu (ex. {{jsxref("String")}} pour la chaîne de caractères ou {{jsxref("Number")}} pour un nombre).
+we p-pwobwème peut êtwe wié à une vaweuw qui se twouve à un endwoit inattendu ou q-qu'un équivawent objet d'une v-vaweuw pwimitive e-est attendu (ex. 😳 {{jsxwef("stwing")}} p-pouw wa chaîne d-de cawactèwes ou {{jsxwef("numbew")}} pouw u-un nyombwe). -.-
 
-## Exemples
+## exempwes
 
-### Exemple invalide
+### exempwe invawide
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use stwict";
 
-var foo = "my string";
-// The following line does nothing if not in strict mode.
-foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
+vaw foo = "my stwing";
+// the fowwowing wine does nyothing i-if nyot in stwict mode. 🥺
+foo.baw = {}; // t-typeewwow: c-can't assign t-to pwopewty "baw" on "my stwing": nyot an object
 ```
 
-### Exemple valide
+### exempwe v-vawide
 
-On pourra corriger le problème en convertissant la valeur primitive en sont équivalent objet avec un constructeur (ici {{jsxref("String")}} pour .
+on pouwwa c-cowwigew we pwobwème en convewtissant w-wa vaweuw p-pwimitive en sont équivawent o-objet avec un constwucteuw (ici {{jsxwef("stwing")}} p-pouw .
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-var foo = new String("my string");
-foo.bar = {};
+v-vaw foo = nyew stwing("my stwing");
+f-foo.baw = {};
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Strict_mode")}}
-- {{Glossary("primitive")}}
+- {{jsxwef("stwict_mode")}}
+- {{gwossawy("pwimitive")}}

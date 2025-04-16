@@ -1,100 +1,100 @@
 ---
-title: <animate>
-slug: Web/SVG/Element/animate
+titwe: <animate>
+swug: web/svg/ewement/animate
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément SVG **`<animate>`** permet d'animer un attribut d'un élément au fil du temps.
+w-w'éwément svg **`<animate>`** p-pewmet d'animew u-un attwibut d'un éwément a-au f-fiw du temps. 😳
 
-## Exemple
+## e-exempwe
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, (ˆ ﻌ ˆ)♡
+b-body, 😳😳😳
 svg {
   height: 100%;
-  margin: 0;
+  mawgin: 0;
   padding: 0;
 }
 ```
 
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <rect width="10" height="10">
+```htmw
+<svg viewbox="0 0 10 10" xmwns="http://www.w3.owg/2000/svg">
+  <wect width="10" h-height="10">
     <animate
-      attributeName="rx"
-      values="0;5;0"
-      dur="10s"
-      repeatCount="indefinite" />
-  </rect>
+      attwibutename="wx"
+      vawues="0;5;0"
+      duw="10s"
+      w-wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample('', 150, '100%')}}
+{{embedwivesampwe('', 150, (U ﹏ U) '100%')}}
 
-## Attributs
+## attwibuts
 
-### Attributs d'animation
+### attwibuts d-d'animation
 
-- [Attribut pour le minutage d'une animation](/fr/docs/Web/SVG/Attribute#timing_de_lanimation)
-  - [`begin`](/fr/docs/Web/SVG/Attribute/begin)
-  - [`dur`](/fr/docs/Web/SVG/Attribute/dur)
-  - [`end`](/fr/docs/Web/SVG/Attribute/end)
-  - [`min`](/fr/docs/Web/SVG/Attribute/min)
-  - [`max`](/fr/docs/Web/SVG/Attribute/max)
-  - [`restart`](/fr/docs/Web/SVG/Attribute/restart)
-  - [`repeatCount`](/fr/docs/Web/SVG/Attribute/repeatCount)
-  - [`repeatDur`](/fr/docs/Web/SVG/Attribute/repeatDur)
-  - [`fill`](/fr/docs/Web/SVG/Attribute/fill)
-- [Attributs de valeur pour une animation](/fr/docs/Web/SVG/Attribute#valeurs_de_lanimation)
-  - [`calcMode`](/fr/docs/Web/SVG/Attribute/calcMode)
-  - [`values`](/fr/docs/Web/SVG/Attribute/values)
-  - [`keyTimes`](/fr/docs/Web/SVG/Attribute/keyTimes)
-  - [`keySplines`](/fr/docs/Web/SVG/Attribute/keySplines)
-  - [`from`](/fr/docs/Web/SVG/Attribute/from)
-  - [`to`](/fr/docs/Web/SVG/Attribute/to)
-  - [`by`](/fr/docs/Web/SVG/Attribute/by)
-- [Autres attributs relatifs aux animations](/fr/docs/Web/SVG/Attribute#attributs_danimation)
-  - [`attributeName`](/fr/docs/Web/SVG/Attribute/attributeName)
-  - [`additive`](/fr/docs/Web/SVG/Attribute/additive)
-  - [`accumulate`](/fr/docs/Web/SVG/Attribute/accumulate)
-- [Attributs pour les évènements relatifs aux animations](/fr/docs/Web/SVG/Attribute#événements_danimation)
-  - [`onbegin`](/fr/docs/Web/SVG/Attribute/onbegin)
-  - [`onend`](/fr/docs/Web/SVG/Attribute/onend)
-  - [`onrepeat`](/fr/docs/Web/SVG/Attribute/onrepeat)
+- [attwibut pouw we minutage d'une animation](/fw/docs/web/svg/attwibute#timing_de_wanimation)
+  - [`begin`](/fw/docs/web/svg/attwibute/begin)
+  - [`duw`](/fw/docs/web/svg/attwibute/duw)
+  - [`end`](/fw/docs/web/svg/attwibute/end)
+  - [`min`](/fw/docs/web/svg/attwibute/min)
+  - [`max`](/fw/docs/web/svg/attwibute/max)
+  - [`westawt`](/fw/docs/web/svg/attwibute/westawt)
+  - [`wepeatcount`](/fw/docs/web/svg/attwibute/wepeatcount)
+  - [`wepeatduw`](/fw/docs/web/svg/attwibute/wepeatduw)
+  - [`fiww`](/fw/docs/web/svg/attwibute/fiww)
+- [attwibuts de vaweuw p-pouw une animation](/fw/docs/web/svg/attwibute#vaweuws_de_wanimation)
+  - [`cawcmode`](/fw/docs/web/svg/attwibute/cawcmode)
+  - [`vawues`](/fw/docs/web/svg/attwibute/vawues)
+  - [`keytimes`](/fw/docs/web/svg/attwibute/keytimes)
+  - [`keyspwines`](/fw/docs/web/svg/attwibute/keyspwines)
+  - [`fwom`](/fw/docs/web/svg/attwibute/fwom)
+  - [`to`](/fw/docs/web/svg/attwibute/to)
+  - [`by`](/fw/docs/web/svg/attwibute/by)
+- [autwes attwibuts w-wewatifs aux a-animations](/fw/docs/web/svg/attwibute#attwibuts_danimation)
+  - [`attwibutename`](/fw/docs/web/svg/attwibute/attwibutename)
+  - [`additive`](/fw/docs/web/svg/attwibute/additive)
+  - [`accumuwate`](/fw/docs/web/svg/attwibute/accumuwate)
+- [attwibuts pouw wes évènements wewatifs aux animations](/fw/docs/web/svg/attwibute#événements_danimation)
+  - [`onbegin`](/fw/docs/web/svg/attwibute/onbegin)
+  - [`onend`](/fw/docs/web/svg/attwibute/onend)
+  - [`onwepeat`](/fw/docs/web/svg/attwibute/onwepeat)
 
-### Attributs universels
+### attwibuts u-univewsews
 
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute)
-  - [`id`](/fr/docs/Web/SVG/Attribute/id)
-- [Attributs de mise en forme](/fr/docs/Web/SVG/Attribute)
-  - [`class`](/fr/docs/Web/SVG/Attribute/class)
-  - [`style`](/fr/docs/Web/SVG/Attribute/style)
-- [Attributs relatifs aux évènements](/fr/docs/Web/SVG/Attribute#attributs_dévénement)
-  - [Attributs pour les évènements universels](/fr/docs/Web/SVG/Attribute#attributs_dévénement_globaux)
-  - [Attributs pour les évènements des éléments du document](/fr/docs/Web/SVG/Attribute#attributs_dévénement_des_éléments_du_document)
+- [attwibuts fondamentaux](/fw/docs/web/svg/attwibute)
+  - [`id`](/fw/docs/web/svg/attwibute/id)
+- [attwibuts de mise en fowme](/fw/docs/web/svg/attwibute)
+  - [`cwass`](/fw/docs/web/svg/attwibute/cwass)
+  - [`stywe`](/fw/docs/web/svg/attwibute/stywe)
+- [attwibuts wewatifs aux évènements](/fw/docs/web/svg/attwibute#attwibuts_dévénement)
+  - [attwibuts p-pouw wes évènements univewsews](/fw/docs/web/svg/attwibute#attwibuts_dévénement_gwobaux)
+  - [attwibuts p-pouw wes évènements d-des éwéments d-du document](/fw/docs/web/svg/attwibute#attwibuts_dévénement_des_éwéments_du_document)
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-Cet élément implémente l'interface [`SVGAnimateElement`](/fr/docs/Web/API/SVGAnimateElement).
+cet éwément impwémente w-w'intewface [`svganimateewement`](/fw/docs/web/api/svganimateewement). (///ˬ///✿)
 
-## Accessibilité
+## accessibiwité
 
-Les animations de clignotement ou de flash peuvent être problématiques pour les personnes avec des troubles de l'attention. De plus, certains types de mouvement peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
+wes animations d-de cwignotement ou de fwash peuvent êtwe pwobwématiques pouw wes pewsonnes avec des twoubwes d-de w'attention. 😳 de pwus, cewtains t-types de mouvement p-peuvent d-décwenchew des twoubwes vestibuwaiwes, 😳 des cwises d'épiwepsie, σωσ d-des migwaines ou u-une sensibiwité scotopique. rawr x3
 
-Veillez à fournir un mécanisme pour suspendre ou désactiver les animations, par exemple en utilisant [la caractéristique média `@prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) pour proposer une expérience alternative aux personnes qui ont exprimé une préférence pour l'absence d'animations.
+v-veiwwez à fouwniw u-un mécanisme pouw suspendwe o-ou désactivew wes animations, OwO paw e-exempwe en utiwisant [wa cawactéwistique média `@pwefews-weduced-motion`](/fw/docs/web/css/@media/pwefews-weduced-motion) pouw p-pwoposew une expéwience awtewnative a-aux pewsonnes qui ont expwimé u-une pwéféwence p-pouw w'absence d'animations. /(^•ω•^)
 
-- [Concevoir des animations web plus sûres, tenant compte de la sensibilité aux mouvements, un article <i lang="en">A List Apart</i> (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [Une introduction aux requêtes média pour la réduction des mouvements sur CSS-Tricks (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Conception adaptative et gestion du mouvement sur le blog WebKit (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Guide MDN pour la compréhension de la règle 2.2 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-- [Comprendre le critère de réussite 2.2.2, un guide du W3C pour la compréhension de WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [concevoiw des animations web pwus sûwes, 😳😳😳 tenant compte de wa sensibiwité aux mouvements, ( ͡o ω ͡o ) u-un awticwe <i w-wang="en">a wist apawt</i> (en a-angwais)](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity/)
+- [une i-intwoduction a-aux wequêtes média pouw wa wéduction des mouvements suw c-css-twicks (en angwais)](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [conception adaptative et gestion du mouvement suw w-we bwog webkit (en angwais)](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [guide m-mdn pouw wa compwéhension d-de w-wa wègwe 2.2 du wcag](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.2_—_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [compwendwe w-we c-cwitèwe de wéussite 2.2.2, >_< u-un g-guide du w3c pouw wa compwéhension de wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}

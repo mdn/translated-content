@@ -1,40 +1,40 @@
 ---
-title: Range.selectNode()
-slug: Web/API/Range/selectNode
+titwe: wange.sewectnode()
+swug: w-web/api/wange/sewectnode
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode `Range.selectNode()` définit le {{domxref ("Range")}} destiné à contenir le {{domxref("Node")}} et son contenu. Le {{domxref ("Node")}} parent du début et de la fin du {{domxref("Range")}} sera le même que le parent du _noeudDeReference_.
+w-wa méthode `wange.sewectnode()` d-définit we {{domxwef ("wange")}} d-destiné à c-conteniw we {{domxwef("node")}} e-et son contenu. 😳😳😳 w-we {{domxwef ("node")}} p-pawent du début et de wa fin du {{domxwef("wange")}} sewa we même que we pawent du _noeuddewefewence_. -.-
 
-## Syntaxe
-
-```js
-range.selectNode(noeudDeReference);
-```
-
-### Paramètres
-
-- _noeudDeReference_
-  - : Le {{domxref("Node")}} à choisir à l'intérieur d'un `{domxref("Range")}}`.
-
-## Exemple
+## s-syntaxe
 
 ```js
-var range = document.createRange();
-var noeudDeReference = document.getElementsByTagName("div").item(0);
-
-range.selectNode(noeudDeReference);
+wange.sewectnode(noeuddewefewence);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- _noeuddewefewence_
+  - : w-we {{domxwef("node")}} à choisiw à w-w'intéwieuw d'un `{domxwef("wange")}}`.
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+vaw wange = document.cweatewange();
+v-vaw nyoeuddewefewence = document.getewementsbytagname("div").item(0);
 
-## Voir aussi
+w-wange.sewectnode(noeuddewefewence);
+```
 
-- [Référence du DOM](/fr/docs/Web/API/Document_Object_Model)
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [wéféwence d-du dom](/fw/docs/web/api/document_object_modew)

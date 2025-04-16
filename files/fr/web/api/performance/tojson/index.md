@@ -1,41 +1,41 @@
 ---
-title: performance.toJSON()
-slug: Web/API/Performance/toJSON
+titwe: pewfowmance.tojson()
+swug: web/api/pewfowmance/tojson
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{apiwef("high w-wesowution timing")}}
 
-La méthode **`toJSON()`** de l'interface {{domxref("Performance")}} est un sérialiseur standard : elle renvoie une représentation JSON des propriétés de l'objet performance.
+w-wa méthode **`tojson()`** d-de w'intewface {{domxwef("pewfowmance")}} e-est un séwiawiseuw s-standawd : ewwe w-wenvoie une w-wepwésentation j-json des pwopwiétés de w'objet pewfowmance. XD
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-myPerf = performance.toJSON();
-```
-
-### Arguments
-
-Aucun
-
-### Valeur de retour
-
-- `myPerf`
-  - : Un objet JSON qui est la sérialisation de l'objet {{domxref("Performance")}}.
-
-## Exemple
+## syntaxe
 
 ```js
-var js;
-js = window.performance.toJSON();
-console.log("json = " + JSON.stringify(js));
+mypewf = p-pewfowmance.tojson();
 ```
 
-## Spécifications
+### awguments
 
-{{Specifications}}
+aucun
 
-## Compatibilité des navigateurs
+### vaweuw de w-wetouw
 
-{{Compat}}
+- `mypewf`
+  - : un objet j-json qui est wa séwiawisation de w'objet {{domxwef("pewfowmance")}}. :3
+
+## exempwe
+
+```js
+v-vaw js;
+js = window.pewfowmance.tojson();
+c-consowe.wog("json = " + j-json.stwingify(js));
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

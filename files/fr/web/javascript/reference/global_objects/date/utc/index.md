@@ -1,90 +1,90 @@
 ---
-title: Date.UTC()
-slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
+titwe: date.utc()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/utc
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du constructeur {{jsxref("Date")}} et renvoie le nombre de millièmes de seconde depuis le 1er janvier 1970, 00:00:00, temps universel. Autrement dit, elle renvoie la date en UTC.
+w-wa méthode **`date.utc()`** a-accepte d-des pawamètwes s-simiwaiwes à ceux d-du constwucteuw {{jsxwef("date")}} e-et wenvoie w-we nyombwe de m-miwwièmes de seconde depuis we 1ew janview 1970, XD 00:00:00, temps univewsew. -.- autwement d-dit, :3 ewwe wenvoie wa date en utc. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Date.UTC()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.utc()")}}
 
-```js interactive-example
-const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
-const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+```js i-intewactive-exampwe
+const utcdate1 = nyew date(date.utc(96, 😳 1, 2, 3, (⑅˘꒳˘) 4, 5));
+c-const utcdate2 = nyew date(date.utc(0, nyaa~~ 0, 0, 0, 0, 0));
 
-console.log(utcDate1.toUTCString());
-// Expected output: "Fri, 02 Feb 1996 03:04:05 GMT"
+c-consowe.wog(utcdate1.toutcstwing());
+// e-expected output: "fwi, OwO 02 feb 1996 03:04:05 gmt"
 
-console.log(utcDate2.toUTCString());
-// Expected output: "Sun, 31 Dec 1899 00:00:00 GMT"
+consowe.wog(utcdate2.toutcstwing());
+// expected output: "sun, rawr x3 31 dec 1899 00:00:00 gmt"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+date.utc(année[,mois[,jouw[,heuwes[,minutes[,secondes[,ms]]]]]])
 ```
 
-## Paramètres
+## pawamètwes
 
 - `année`
-  - : Une année sur deux chiffres pour une année après 1900 (ex. 98 pour 1998) ou bien une année sur quatre chiffres (2018).
-- `mois`{{optional_inline}}
+  - : une année suw deux chiffwes pouw u-une année apwès 1900 (ex. XD 98 pouw 1998) ou bien u-une année suw q-quatwe chiffwes (2018). σωσ
+- `mois`{{optionaw_inwine}}
 
-  - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
+  - : u-un e-entiew entwe 0 (janview) et 11 (décembwe) wepwésentant w-we mois. (U ᵕ U❁)
 
-    > [!NOTE]
-    > Cet argument est optionnel depuis ECMAScript 2017.
+    > [!note]
+    > cet awgument est optionnew d-depuis ecmascwipt 2017. (U ﹏ U)
 
-- `jour`{{optional_inline}}
-  - : Un entier entre 1 et 31 représentant le jour du mois. La valeur par défaut vaut 1.
-- `heures`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 23 représentant les heures. La valeur par défaut vaut 0.
-- `minutes`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 59 représentant les minutes. La valeur par défaut vaut 0.
-- `secondes`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 59 représentant les secondes. La valeur par défaut vaut 0.
-- `ms`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 999 représentant les millièmes de seconde. La valeur par défaut vaut 0.
+- `jouw`{{optionaw_inwine}}
+  - : un entiew entwe 1 et 31 wepwésentant we jouw du mois. wa vaweuw paw d-défaut vaut 1.
+- `heuwes`{{optionaw_inwine}}
+  - : pawamètwe o-optionnew, :3 un entiew e-entwe 0 et 23 w-wepwésentant wes heuwes. ( ͡o ω ͡o ) wa vaweuw paw défaut vaut 0.
+- `minutes`{{optionaw_inwine}}
+  - : p-pawamètwe optionnew, σωσ u-un entiew entwe 0 et 59 wepwésentant w-wes m-minutes. >w< wa vaweuw paw défaut v-vaut 0. 😳😳😳
+- `secondes`{{optionaw_inwine}}
+  - : pawamètwe o-optionnew, OwO un entiew entwe 0 et 59 wepwésentant w-wes secondes. 😳 wa vaweuw p-paw défaut vaut 0. 😳😳😳
+- `ms`{{optionaw_inwine}}
+  - : pawamètwe o-optionnew, (˘ω˘) un entiew e-entwe 0 et 999 wepwésentant wes miwwièmes de seconde. ʘwʘ wa vaweuw paw défaut vaut 0. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre représentant le nombre de millisecondes écoulées entre la date indiquée et le premier janvier 1970 à minuit UTC.
+u-un nyombwe wepwésentant w-we nyombwe de miwwisecondes écouwées e-entwe wa date i-indiquée et we p-pwemiew janview 1970 à minuit utc. o.O
 
-## Description
+## descwiption
 
-La méthode `UTC` prend des paramètres de date et d'heure séparés par des virgules et renvoie le nombre de millièmes de seconde entre le 1er janvier 1970, 00:00:00, temps universel et la date et l'heure spécifiées.
+wa méthode `utc` p-pwend des pawamètwes de date et d'heuwe sépawés paw des viwguwes et wenvoie w-we nyombwe de miwwièmes d-de seconde entwe w-we 1ew janview 1970, 00:00:00, >w< t-temps univewsew et wa date et w'heuwe s-spécifiées. 😳
 
-Il faut spécifier l'année entière pour le premier paramètre&nbsp;; par exemple 1998. Si l'année spécifiée est entre 0 et 99, la méthode la convertira en une année du XXe siècle (1900 + année)&nbsp;; par exemple si vous indiquez 95, l'année 1995 sera utilisée.
+i-iw faut spécifiew w-w'année e-entièwe pouw we pwemiew pawamètwe&nbsp;; paw e-exempwe 1998. 🥺 si w-w'année spécifiée e-est entwe 0 e-et 99, rawr x3 wa méthode w-wa convewtiwa en une année du xxe siècwe (1900 + année)&nbsp;; p-paw exempwe si vous indiquez 95, o.O w'année 1995 sewa utiwisée. rawr
 
-La méthode `UTC` diffère du constructeur {{jsxref("Date")}} pour deux raisons :
+wa méthode `utc` diffèwe d-du constwucteuw {{jsxwef("date")}} pouw deux waisons :
 
-- `Date.UTC` utilise le temps universel plutôt que l'heure locale.
-- `Date.UTC` renvoie une valeur temporelle sous la forme d'un nombre plutôt que de créer un objet `Date`.
+- `date.utc` utiwise we temps univewsew p-pwutôt que w'heuwe w-wocawe. ʘwʘ
+- `date.utc` w-wenvoie une vaweuw tempowewwe s-sous wa fowme d'un nyombwe p-pwutôt que d-de cwéew un objet `date`. 😳😳😳
 
-Si un paramètre spécifié est en dehors des limites attendues, la méthode `UTC` met à jour les autres paramètres pour s'adapter à ce nombre. Par exemple, si vous utilisez 15 pour le mois, l'année sera incrémentée d'une unité (année + 1), et la valeur 3 (avril) sera utilisée pour le mois.
+si un pawamètwe spécifié est en dehows des wimites attendues, ^^;; wa m-méthode `utc` met à jouw wes autwes p-pawamètwes pouw s'adaptew à c-ce nyombwe. o.O p-paw exempwe, (///ˬ///✿) si vous utiwisez 15 pouw we mois, σωσ w'année s-sewa incwémentée d-d'une unité (année + 1), e-et wa vaweuw 3 (avwiw) s-sewa utiwisée pouw we mois. nyaa~~
 
-Comme `UTC` est une méthode statique de `Date`, on l'utilise toujours sous la forme `Date.UTC()` plutôt que comme une méthode d'un objet `Date` que vous auriez créé.
+comme `utc` est une méthode statique d-de `date`, ^^;; on w'utiwise t-toujouws s-sous wa fowme `date.utc()` pwutôt q-que comme une m-méthode d'un objet `date` que v-vous auwiez cwéé.
 
-## Exemples
+## exempwes
 
-### Utiliser `Date.UTC()`
+### utiwisew `date.utc()`
 
-L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale&nbsp;:
+w'instwuction qui suit cwée un objet `date` e-en utiwisant w-w'heuwe utc pwutôt que w'heuwe wocawe&nbsp;:
 
 ```js
-var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
+v-vaw u-utcdate = nyew date(date.utc(96, ^•ﻌ•^ 11, 1, 0, 0, σωσ 0));
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.parse()")}}
+- {{jsxwef("date.pawse()")}}

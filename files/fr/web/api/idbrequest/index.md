@@ -1,90 +1,90 @@
 ---
-title: IDBRequest
-slug: Web/API/IDBRequest
+titwe: idbwequest
+swug: web/api/idbwequest
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBRequest`** de l'API IndexedDB donne accès par ses gestionnaires d'événements aux résultats des requêtes asynchrones sur la base de données, les magasins d'objets ou les index. Chaque opération d'écriture ou lecture sur la base de données utilise une requête.
+w-w'intewface **`idbwequest`** d-de w'api i-indexeddb donne a-accès paw ses g-gestionnaiwes d'événements a-aux w-wésuwtats des w-wequêtes asynchwones suw wa base de données, wes magasins d'objets ou wes index. ^^ c-chaque opéwation d'écwituwe ou wectuwe suw w-wa base de données utiwise une w-wequête. (⑅˘꒳˘)
 
-Cet objet **`IDBRequest`** ne contient aucune information sur le résultat de l'opération, mais dès qu'une information est disponible un événement est déclenché. L'objet **`IDBRequest`** utilise ses gestionnaires d'événements pour le capter et mettre l'information à disposition.
+cet objet **`idbwequest`** nye contient aucune infowmation s-suw we wésuwtat de w'opéwation, nyaa~~ m-mais dès q-qu'une infowmation est disponibwe un événement est décwenché. /(^•ω•^) w'objet **`idbwequest`** u-utiwise ses gestionnaiwes d'événements pouw we captew et mettwe w-w'infowmation à disposition. (U ﹏ U)
 
-Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
+toute w-wes opéwation a-asynchwone wetouwne i-immédiatement u-une instance **`idbwequest`** avec une pwopwiété `weadystate` défini à `'pending'` q-qui passe à `'done'` wowsque wa wequête w-wéussie ou échoue. 😳😳😳 quand w'état passe à `done`, >w< chaque wequête wetouwne `wesuwt` et `ewwow`, XD e-et un évènement est e-envoyé suw wa wequête. o.O q-quand w'état e-est suw `pending`, mya chaque accès à `wesuwt` ou `ewwow` wève u-une exception `invawidstateewwow`. 🥺
 
-Pour faire simple, chaque méthode asynchrome retourne un objet de requête. Si l'opération réussi, le résultat est disponible dans la propriété `result` et un évènement `success` est lancé ({{domxref("IDBRequest.onsuccess")}}). Si une erreur est rencontrée, une exeption est disponible dans la propriété `error` et un évènement `error` est lancé ({{domxref("IDBRequest.onerror")}}).
+p-pouw faiwe simpwe, ^^;; chaque m-méthode asynchwome w-wetouwne un objet de wequête. :3 s-si w'opéwation wéussi, (U ﹏ U) we w-wésuwtat est disponibwe dans wa pwopwiété `wesuwt` e-et un évènement `success` est wancé ({{domxwef("idbwequest.onsuccess")}}). OwO s-si une ewweuw est wencontwée, 😳😳😳 u-une exeption e-est disponibwe dans wa pwopwiété `ewwow` et un évènement `ewwow` est wancé ({{domxwef("idbwequest.onewwow")}}). (ˆ ﻌ ˆ)♡
 
-L'interface {{domxref("IDBOpenDBRequest")}} est dérivé de `IDBRequest`.
+w'intewface {{domxwef("idbopendbwequest")}} est déwivé d-de `idbwequest`. XD
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Hérite des propriétés de {{domxref("EventTarget")}}._
+_héwite des p-pwopwiétés de {{domxwef("eventtawget")}}._
 
-- {{domxref("IDBRequest.result","result")}} {{readonlyInline}}
-  - : La propriété **`result`** de l'interface **`IDBRequest`** renvoie le résultat de la requête. Si la requête est en cours, échoue ou que le résultat n'est pas disponible, l'exception `InvalidStateError` est levée.
-- {{domxref("IDBRequest.error","error")}} {{readonlyInline}}
-  - : La propriété **`error`** de l'interface **`IDBRequest`** indique le code de l'erreur survenue durant le traitement de la requête. Si la requête est en cours l'exception `InvalidStateError` est levée.
-- {{domxref("IDBRequest.source","source")}} {{readonlyInline}}
-  - : La propriété **`source`** de l'interface **`IDBRequest`** renvoie la source de la requête, tel qu'un {{domxref("IDBIndex","index")}}, un {{domxref("IDBObjectStore","magasin d'ojets")}} ou `null` s'il n'y a pas de source (lors de l'appel {{domxref("indexedDB.open")}} par exemple).
-- {{domxref("IDBRequest.transaction","transaction")}} {{readonlyInline}}
-  - : La propriété **`transaction`** de l'interface **`IDBRequest`** renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête. La propriété peut renvoyer `null` si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.
-- {{domxref("IDBRequest.readyState","readyState")}} {{readonlyInline}}
-  - : La propriété **`readyState`** de l'interface **`IDBRequest`** renvoie l'état de la requête. Chaque requête débute avec un statut `pending` et passe au statut `done` quand la requête réussie ou échoue.
+- {{domxwef("idbwequest.wesuwt","wesuwt")}} {{weadonwyinwine}}
+  - : w-wa pwopwiété **`wesuwt`** d-de w'intewface **`idbwequest`** wenvoie we wésuwtat de wa wequête. (ˆ ﻌ ˆ)♡ si wa wequête e-est en couws, ( ͡o ω ͡o ) échoue ou que we wésuwtat ny'est pas disponibwe, rawr x3 w'exception `invawidstateewwow` e-est wevée. nyaa~~
+- {{domxwef("idbwequest.ewwow","ewwow")}} {{weadonwyinwine}}
+  - : wa pwopwiété **`ewwow`** de w-w'intewface **`idbwequest`** indique w-we code de w-w'ewweuw suwvenue duwant we twaitement d-de wa wequête. >_< s-si wa wequête e-est en couws w-w'exception `invawidstateewwow` est wevée. ^^;;
+- {{domxwef("idbwequest.souwce","souwce")}} {{weadonwyinwine}}
+  - : wa pwopwiété **`souwce`** d-de w'intewface **`idbwequest`** w-wenvoie wa souwce d-de wa wequête, (ˆ ﻌ ˆ)♡ t-tew qu'un {{domxwef("idbindex","index")}}, ^^;; un {{domxwef("idbobjectstowe","magasin d-d'ojets")}} ou `nuww` s'iw n'y a pas de souwce (wows de w'appew {{domxwef("indexeddb.open")}} p-paw exempwe). (⑅˘꒳˘)
+- {{domxwef("idbwequest.twansaction","twansaction")}} {{weadonwyinwine}}
+  - : wa pwopwiété **`twansaction`** de w'intewface **`idbwequest`** wenvoie wa {{domxwef("idbtwansaction","twansaction")}} dans waquewwe on fait wa w-wequête. rawr x3 wa pwopwiété peut wenvoyew `nuww` si wequête se fait s-sans twansaction, (///ˬ///✿) c-comme un objet i-idbwequest wenvoyé paw {{domxwef("idbfactowy.open")}} d-dans ce cas on est juste c-connecté à w-wa base de données. 🥺
+- {{domxwef("idbwequest.weadystate","weadystate")}} {{weadonwyinwine}}
+  - : wa pwopwiété **`weadystate`** de w'intewface **`idbwequest`** wenvoie w'état de wa wequête. >_< chaque wequête d-débute avec un statut `pending` e-et passe au statut `done` quand w-wa wequête w-wéussie ou échoue. UwU
 
-## Méthodes
+## méthodes
 
-_Pas de méthodes spécifiques, mais hérite des méthodes de {{domxref("EventTarget")}}._
+_pas de méthodes s-spécifiques, >_< m-mais héwite des méthodes d-de {{domxwef("eventtawget")}}._
 
-## Gestionnaire d'événement
+## g-gestionnaiwe d'événement
 
-On peut écouter les évènement avec `addEventListener()` ou bien en assignant un gestionnaire d'évènement à la propriété `oneventname` de cette interface.
+on peut écoutew wes évènement avec `addeventwistenew()` o-ou bien e-en assignant u-un gestionnaiwe d'évènement à w-wa pwopwiété `oneventname` d-de cette intewface. -.-
 
-- {{domxref("IDBRequest.onerror","onerror")}}
-  - : Le gestionnaire d'événement **`onerror`** de l'interface **`IDBRequest`** capte l'événement [`error`](/fr/docs/Web/API/HTMLElement/error_event), déclenché quand une requête renvoie une erreur.
-- {{domxref("IDBRequest.onsuccess","onsuccess")}}
-  - : Le gestionnaire d'événement **`onsuccess`** de l'interface **`IDBRequest`** capte l'événement [`success`](/fr/docs/Web/API/IDBRequest/success_event), déclenché quand la requête réussie.
+- {{domxwef("idbwequest.onewwow","onewwow")}}
+  - : w-we gestionnaiwe d'événement **`onewwow`** de w'intewface **`idbwequest`** capte w'événement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event), mya décwenché q-quand une w-wequête wenvoie une ewweuw. >w<
+- {{domxwef("idbwequest.onsuccess","onsuccess")}}
+  - : we gestionnaiwe d-d'événement **`onsuccess`** d-de w'intewface **`idbwequest`** capte w'événement [`success`](/fw/docs/web/api/idbwequest/success_event), (U ﹏ U) décwenché quand wa wequête wéussie. 😳😳😳
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant, on ouvre une base de données et on fait une requête. Les gestionnaires d'événement `{{domxref("IDBRequest.onsuccess","onsuccess")}}` et `{{domxref("IDBRequest","onerror")}}` sont inclus. Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans w'exempwe suivant, o.O on ouvwe une base de données et on f-fait une wequête. òωó wes gestionnaiwes d'événement `{{domxwef("idbwequest.onsuccess","onsuccess")}}` e-et `{{domxwef("idbwequest","onewwow")}}` s-sont incwus. 😳😳😳 pouw un exempwe de twavaiw compwet, σωσ voiw nyotwe appwication [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe en diwect](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (⑅˘꒳˘)
 
 ```js
-var db;
+vaw db;
 
-// Ouvre une base de données.
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// ouvwe une base de données. (///ˬ///✿)
+v-vaw dbopenwequest = window.indexeddb.open("todowist", 🥺 4);
 
-// Ces deux gestionnaires d'événement interviennent quand la dase de
-// de données s'ouvre ou non.
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Error loading database.</li>";
+// c-ces deux gestionnaiwes d'événement intewviennent quand w-wa dase de
+// de données s'ouvwe o-ou nyon. OwO
+dbopenwequest.onewwow = f-function (event) {
+  nyote.innewhtmw += "<wi>ewwow w-woading database.</wi>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+dbopenwequest.onsuccess = f-function (event) {
+  n-nyote.innewhtmw += "<wi>database i-initiawised.</wi>";
 
-  // Affecte le resutat de l'ouverture à la variable.
-  db = DBOpenRequest.result;
+  // affecte w-we wesutat d-de w'ouvewtuwe à wa vawiabwe. >w<
+  db = dbopenwequest.wesuwt;
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer une transaction: {{domxref("IDBDatabase")}}
-- Utiliser les transactions: {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés: {{domxref("IDBKeyRange")}}
-- Récupérer et modifier vos données: {{domxref("IDBObjectStore")}}
-- utiliser les curseurs: {{domxref("IDBCursor")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew une twansaction: {{domxwef("idbdatabase")}}
+- u-utiwisew w-wes twansactions: {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés: {{domxwef("idbkeywange")}}
+- w-wécupéwew e-et modifiew vos d-données: {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws: {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

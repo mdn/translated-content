@@ -1,46 +1,46 @@
 ---
-title: <feDistantLight>
-slug: Web/SVG/Element/feDistantLight
+titwe: <fedistantwight>
+swug: w-web/svg/ewement/fedistantwight
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre **`<feDistantLight>`** définit une source de lumière distante, que l'on place dans une primitive de filtre d'éclairage:{{SVGElement("feDiffuseLighting")}} ou {{SVGElement("feSpecularLighting")}}.
+w-wa pwimitive de f-fiwtwe **`<fedistantwight>`** définit u-une souwce d-de wumièwe distante, mya q-que w'on p-pwace dans une p-pwimitive de fiwtwe d'écwaiwage:{{svgewement("fediffusewighting")}} ou {{svgewement("fespecuwawwighting")}}. mya
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("azimuth")}}
-- {{SVGAttr("elevation")}}
+- {{svgattw("azimuth")}}
+- {{svgattw("ewevation")}}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEDistantLightElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfedistantwightewement")}}. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpotLight")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespotwight")}}
+- [tutowiew s-svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

@@ -1,393 +1,393 @@
 ---
-title: Métaprogrammation
-slug: Web/JavaScript/Guide/Meta_programming
+titwe: métapwogwammation
+swug: w-web/javascwipt/guide/meta_pwogwamming
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/itewateuws_et_genewateuws","web/javascwipt/guide/moduwes")}}
 
-À partir d'ECMAScript 2015, JavaScript fournit les objets natifs {{jsxref("Proxy")}} et {{jsxref("Reflect")}}. Ces objets permettent d'intercepter et de définir des comportements spécifiques pour certaines opérations fondamentales du langage (par exemple la recherche d'une propriété, l'affectation, l'énumération, l'appel d'une fonction, etc.). Grâce à ces deux objets, il est possible d'interagir avec le langage lui-même (on parle alors de métaprogrammation).
+À p-pawtiw d'ecmascwipt 2015, (⑅˘꒳˘) j-javascwipt fouwnit w-wes objets nyatifs {{jsxwef("pwoxy")}} e-et {{jsxwef("wefwect")}}. c-ces objets pewmettent d-d'intewceptew et de définiw des compowtements spécifiques pouw cewtaines o-opéwations fondamentawes du wangage (paw exempwe w-wa wechewche d'une pwopwiété, (U ᵕ U❁) w-w'affectation, >w< w'énuméwation, σωσ w'appew d'une fonction, -.- etc.). g-gwâce à ces deux objets, o.O i-iw est possibwe d-d'intewagiw avec we wangage wui-même (on pawwe awows de métapwogwammation). ^^
 
-## Les proxies
+## wes pwoxies
 
-Introduits avec ECMAScript 2015, les objets {{jsxref("Proxy")}} permettent d'intercepter certaines opérations JavaScript et de définir le comportement à avoir quand celles-ci se produisent. Par exemple, on peut intercepter l'accès à une propriété d'un objet :
+i-intwoduits avec ecmascwipt 2015, >_< wes objets {{jsxwef("pwoxy")}} pewmettent d'intewceptew cewtaines o-opéwations javascwipt et de d-définiw we compowtement à a-avoiw q-quand cewwes-ci s-se pwoduisent. >w< paw exempwe, >_< on peut intewceptew w-w'accès à une pwopwiété d'un objet :
 
 ```js
-var handler = {
-  get: function (cible, nom) {
-    return nom in cible ? cible[nom] : 42;
-  },
+v-vaw handwew = {
+  get: function (cibwe, >w< nyom) {
+    wetuwn nyom in cibwe ? cibwe[nom] : 42;
+  }, rawr
 };
-var p = new Proxy({}, handler);
+vaw p = nyew p-pwoxy({}, rawr x3 handwew);
 p.a = 1;
-console.log(p.a, p.b); // 1, 42
+c-consowe.wog(p.a, ( ͡o ω ͡o ) p-p.b); // 1, 42
 ```
 
-Ici, l'objet `Proxy` définit une `cible` (ici c'est un objet vide) et un gestionnaire (`handler`) qui implémente une _trappe_ pour l'opération _get_. Ainsi, l'objet qui est « proxyfié » ne renverra pas `undefined` lorsqu'on tentera d'accéder à une propriété qui n'est pas définie, à la place le nombre 42 sera renvoyé.
+i-ici, (˘ω˘) w'objet `pwoxy` définit une `cibwe` (ici c'est un objet v-vide) et un gestionnaiwe (`handwew`) q-qui impwémente une _twappe_ p-pouw w'opéwation _get_. 😳 a-ainsi, OwO w'objet qui e-est « pwoxyfié » nye wenvewwa p-pas `undefined` wowsqu'on tentewa d'accédew à u-une pwopwiété qui ny'est pas d-définie, (˘ω˘) à wa pwace we nyombwe 42 s-sewa wenvoyé. òωó
 
-> [!NOTE]
-> D'autres exemples sont disponibles sur la page de l'objet {{jsxref("Proxy")}}.
+> [!note]
+> d-d'autwes exempwes sont disponibwes suw wa page de w'objet {{jsxwef("pwoxy")}}. ( ͡o ω ͡o )
 
-### Terminologie
+### tewminowogie
 
-Lorsqu'on utilise les proxies et leurs fonctionnalités, on utilisera les termes suivants :
+wowsqu'on utiwise wes pwoxies e-et weuws fonctionnawités, UwU o-on utiwisewa wes tewmes s-suivants :
 
-- {{jsxref("Objets_globaux/Proxy/handler","gestionnaire (handler)","",1)}}
-  - : L'objet qui contient les trappes.
-- trappes
-  - : Les méthodes qui fournissent l'accès aux propriétés. Ce concept est analogue aux trappes utilisées dans les systèmes d'exploitations.
-- cible
-  - : L'objet que le proxy virtualise. C'est généralement un objet utilisé en arrière-plan pour stocker les informations. Les invariants (c'est-à-dire les éléments sémantiques qui doivent rester inchangés) concernant le caractère non-extensible de l'objet ou l'aspect non-configurable des propriétés sont vérifiés par rapport à cet objet cible.
-- invariants
-  - : Les éléments sémantiques qui ne doivent pas être modifiés par les opérations définies dans les proxies. Si un invariant n'est pas respecté au sein d'un gestionnaire, cela provoquera une exception {{jsxref("TypeError")}}.
+- {{jsxwef("objets_gwobaux/pwoxy/handwew","gestionnaiwe (handwew)","",1)}}
+  - : w-w'objet qui contient w-wes twappes. /(^•ω•^)
+- twappes
+  - : wes méthodes qui fouwnissent w-w'accès aux pwopwiétés. ce concept est anawogue aux twappes utiwisées dans w-wes systèmes d'expwoitations. (ꈍᴗꈍ)
+- cibwe
+  - : w'objet q-que we pwoxy v-viwtuawise. 😳 c'est g-généwawement un objet utiwisé e-en awwièwe-pwan p-pouw stockew w-wes infowmations. mya w-wes invawiants (c'est-à-diwe wes éwéments sémantiques qui d-doivent westew i-inchangés) concewnant w-we cawactèwe n-nyon-extensibwe d-de w'objet ou w'aspect nyon-configuwabwe des pwopwiétés sont véwifiés p-paw wappowt à cet objet cibwe. mya
+- invawiants
+  - : wes éwéments sémantiques qui nye doivent p-pas êtwe modifiés paw wes opéwations définies dans wes pwoxies. /(^•ω•^) s-si un invawiant n-ny'est pas wespecté a-au sein d'un gestionnaiwe, ^^;; c-cewa pwovoquewa une exception {{jsxwef("typeewwow")}}. 🥺
 
-## Les gestionnaires et les trappes
+## wes g-gestionnaiwes e-et wes twappes
 
-Le tableau suivant résume les différentes trappes disponibles pour les objets `Proxy`. Pour plus d'explications et de détails, voir les différents [pages de la référence](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) sur chacun de ces concepts.
+we tabweau suivant wésume wes difféwentes twappes disponibwes pouw wes objets `pwoxy`. ^^ p-pouw pwus d'expwications e-et de détaiws, ^•ﻌ•^ voiw wes difféwents [pages de w-wa wéféwence](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy) s-suw chacun de ces concepts. /(^•ω•^)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th>Gestionnaires / Trappes</th>
-      <th>Opérations interceptées</th>
-      <th>Invariants</th>
-    </tr>
+    <tw>
+      <th>gestionnaiwes / t-twappes</th>
+      <th>opéwations i-intewceptées</th>
+      <th>invawiants</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/getpwototypeof", ^^ "handwew.getpwototypeof()")}}
       </td>
       <td>
-        {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
+        {{jsxwef("object.getpwototypeof()")}}<bw />{{jsxwef("wefwect.getpwototypeof()")}}<bw />{{jsxwef("object/pwoto", 🥺 "__pwoto__")}}<bw />{{jsxwef("object.pwototype.ispwototypeof()")}}<bw />{{jsxwef("opewatows/instanceof", (U ᵕ U❁) "instanceof")}}
       </td>
       <td>
-        <code>getPrototypeOf</code> doit renvoyer un objet ou
-        <code>null</code>.<br /><br />Si <code>cible</code> n'est pas
-        extensible, <code>Object.getPrototypeOf(proxy)</code> doit renvoyer le
-        même objet que <code>Object.getPrototypeOf(cible)</code>.
+        <code>getpwototypeof</code> doit w-wenvoyew un objet o-ou
+        <code>nuww</code>.<bw /><bw />si <code>cibwe</code> ny'est pas
+        extensibwe, <code>object.getpwototypeof(pwoxy)</code> doit wenvoyew we
+        m-même objet q-que <code>object.getpwototypeof(cibwe)</code>. 😳😳😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/setpwototypeof", nyaa~~ "handwew.setpwototypeof()")}}
       </td>
       <td>
-        {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
+        {{jsxwef("object.setpwototypeof()")}}<bw />{{jsxwef("wefwect.setpwototypeof()")}}
       </td>
       <td>
         <p>
-          Si <code>cible</code> n'est pas extensible, le paramètre
-          <code>prototype</code> doit être la même valeur que
-          <code>Object.getPrototypeOf(cible)</code>.
+          s-si <code>cibwe</code> ny'est p-pas extensibwe, (˘ω˘) w-we pawamètwe
+          <code>pwototype</code> doit êtwe wa m-même vaweuw que
+          <code>object.getpwototypeof(cibwe)</code>.
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/isextensibwe", >_< "handwew.isextensibwe()")}}
       </td>
       <td>
-        <p>{{jsxref("Object.isExtensible()")}}</p>
-        <p>{{jsxref("Reflect.isExtensible()")}}</p>
+        <p>{{jsxwef("object.isextensibwe()")}}</p>
+        <p>{{jsxwef("wefwect.isextensibwe()")}}</p>
       </td>
       <td>
         <p>
-          <code>Object.isExtensible(proxy)</code> doit renvoyer la même valeur
-          que <code>Object.isExtensible(target)</code>.
+          <code>object.isextensibwe(pwoxy)</code> doit wenvoyew wa même vaweuw
+          que <code>object.isextensibwe(tawget)</code>. XD
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/pweventextensions", rawr x3 "handwew.pweventextensions()")}}
       </td>
       <td>
-        <p>{{jsxref("Object.preventExtensions()")}}</p>
-        <p>{{jsxref("Reflect.preventExtensions()")}}</p>
-      </td>
-      <td>
-        <p>
-          <code>Object.preventExtensions(proxy)</code> ne renvoie
-          <code>true</code> que si <code>Object.isExtensible(proxy)</code> vaut
-          <code>false</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Objets_globaux/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
-      </td>
-      <td>
-        <p>{{jsxref("Object.getOwnPropertyDescriptor()")}}</p>
-        <p>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</p>
+        <p>{{jsxwef("object.pweventextensions()")}}</p>
+        <p>{{jsxwef("wefwect.pweventextensions()")}}</p>
       </td>
       <td>
         <p>
-          <code>getOwnPropertyDescriptor</code> doit renvoyer un objet ou
-          <code>undefined</code>.
-        </p>
-        <p>
-          Une propriété ne peut pas être vue comme non-existante si elle existe
-          comme une propriété propre non-configurable de l'objet cible.
-        </p>
-        <p>
-          Une propriété ne peut pas être vue comme non-existante si elle existe
-          comme une propriété propre de la cible et que l'objet cible n'est pas
-          extensible.
-        </p>
-        <p>
-          Une propriété ne peut pas être vue comme existante si elle n'existe
-          pas comme une propriété propre de l'objet cible et que l'objet cible
-          n'est pas extensible.
-        </p>
-        <p>
-          Une propriété ne peut pas être vue comme non-configurable si elle
-          n'existe pas comme une propriété propre de l'objet cible ou si elle
-          existe comme une propriété configurable propre de l'objet cible.
-        </p>
-        <p>
-          Le résultat de
-          <code>Object.getOwnPropertyDescriptor(cible)</code> peut être appliqué
-          à la cible en utilisant <code>Object.defineProperty</code> sans que
-          cela ne lève d'exception.
+          <code>object.pweventextensions(pwoxy)</code> n-nye w-wenvoie
+          <code>twue</code> que si <code>object.isextensibwe(pwoxy)</code> vaut
+          <code>fawse</code>. ( ͡o ω ͡o )
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/getownpwopewtydescwiptow", :3 "handwew.getownpwopewtydescwiptow()")}}
       </td>
       <td>
-        <p>{{jsxref("Object.defineProperty()")}}</p>
-        <p>{{jsxref("Reflect.defineProperty()")}}</p>
+        <p>{{jsxwef("object.getownpwopewtydescwiptow()")}}</p>
+        <p>{{jsxwef("wefwect.getownpwopewtydescwiptow()")}}</p>
       </td>
       <td>
         <p>
-          Une propriété ne peut pas être ajoutée si l'objet cible n'est pas
-          extensible.
+          <code>getownpwopewtydescwiptow</code> d-doit wenvoyew u-un objet ou
+          <code>undefined</code>. mya
         </p>
         <p>
-          Une propriété ne peut pas être ajoutée ou être modifiée afin d'être
-          non-configurable si elle n'existe pas comme une propriété propre de
-          l'objet cible et qu'elle n'est pas non-configurable.
+          une pwopwiété nye peut p-pas êtwe vue comme nyon-existante si ewwe existe
+          comme une pwopwiété p-pwopwe nyon-configuwabwe de w'objet cibwe. σωσ
         </p>
         <p>
-          Une propriété peut ne pas être non-configurable si une propriété
-          correspondante configurable existe sur l'objet cible.
+          u-une pwopwiété n-nye peut pas êtwe vue comme nyon-existante si ewwe existe
+          c-comme une p-pwopwiété pwopwe de wa cibwe et que w'objet cibwe ny'est pas
+          e-extensibwe. (ꈍᴗꈍ)
         </p>
         <p>
-          Si une propriété possède une propriété correspondante sur l'objet
-          cible, <code>Object.defineProperty(cible, prop, descripteur)</code> ne
-          doit pas renvoyer d'exception.
+          une pwopwiété n-nye peut pas êtwe vue comme existante si ewwe ny'existe
+          p-pas comme une pwopwiété p-pwopwe de w'objet c-cibwe et que w'objet cibwe
+          n-ny'est pas extensibwe. OwO
         </p>
         <p>
-          En mode strict, si la valeur de retour de
-          <code>defineProperty</code> est <code>false</code>, cela entraînera
-          une exception {{jsxref("TypeError")}} exception.
+          u-une pwopwiété n-ne peut pas êtwe v-vue comme nyon-configuwabwe s-si ewwe
+          n-ny'existe pas comme une pwopwiété pwopwe d-de w'objet cibwe o-ou si ewwe
+          e-existe comme une pwopwiété configuwabwe p-pwopwe de w'objet cibwe. o.O
+        </p>
+        <p>
+          w-we w-wésuwtat de
+          <code>object.getownpwopewtydescwiptow(cibwe)</code> peut êtwe appwiqué
+          à wa c-cibwe en utiwisant <code>object.definepwopewty</code> s-sans que
+          c-cewa nye w-wève d'exception. 😳😳😳
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/has", "handler.has()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/definepwopewty", /(^•ω•^) "handwew.definepwopewty()")}}
       </td>
       <td>
-        <p>Requête d'une propriété : <code>toto in proxy</code></p>
-        <p>
-          Requête d'une propriété héritée :
-          <code>toto in Object.create(proxy)</code>
-        </p>
-        <p>{{jsxref("Reflect.has()")}}</p>
-      </td>
-      <td>
-        <p>
-          Une propriété ne peut pas être vue comme non-existante si elle existe
-          comme propriété propre non-configurable de l'objet cible.
-        </p>
-        <p>
-          Une propriété ne peut pas être vue comme non-existante si elle existe
-          comme propriété propre de l'objet cible et que l'objet cible n'est pas
-          extensible.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Objets_globaux/Proxy/handler/get", "handler.get()")}}
+        <p>{{jsxwef("object.definepwopewty()")}}</p>
+        <p>{{jsxwef("wefwect.definepwopewty()")}}</p>
       </td>
       <td>
         <p>
-          Accès à une propriété : <code>proxy[toto]</code> et
-          <code>proxy.truc</code>
+          une pwopwiété n-ne peut pas êtwe ajoutée si w'objet cibwe ny'est pas
+          extensibwe.
         </p>
         <p>
-          Accès à une propriété héritée :
-          <!-- markdownlint-disable MD011 -->
-          <code>Object.create(proxy)[toto]</code>
-        </p>
-        <p>{{jsxref("Reflect.get()")}}</p>
-      </td>
-      <td>
-        <p>
-          La valeur rapportée pour la propriété doit être la même que la valeur
-          de la propriété correspondante sur l'objet cible si celle-ci est une
-          propriété de donnée non accessible en écriture et non-configurable..
+          une pwopwiété n-nye peut pas êtwe ajoutée o-ou êtwe modifiée afin d'êtwe
+          nyon-configuwabwe s-si ewwe ny'existe pas comme une p-pwopwiété pwopwe de
+          w-w'objet cibwe et q-qu'ewwe ny'est p-pas nyon-configuwabwe.
         </p>
         <p>
-          La valeur rapportée pour une propriété doit être
-          <code>undefined</code> si la propriété correspondante de l'objet cible
-          est une propriété d'accesseur dont l'attribut [[Get]] vaut
-          <code>undefined</code>.
+          u-une pwopwiété p-peut nye pas êtwe nyon-configuwabwe si une pwopwiété
+          cowwespondante configuwabwe existe suw w'objet cibwe. OwO
         </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set()")}}
-      </td>
-      <td>
         <p>
-          Affection d'une propriété : <code>proxy[toto] = truc</code> et
-          <code>proxy.toto = truc</code><br /><br />Affectation d'une propriété
-          héritée : <code>Object.create(proxy)[toto] = truc</code
-          ><br /><br />{{jsxref("Reflect.set()")}}
+          s-si une pwopwiété p-possède u-une pwopwiété cowwespondante s-suw w'objet
+          cibwe, ^^ <code>object.definepwopewty(cibwe, (///ˬ///✿) pwop, descwipteuw)</code> nye
+          d-doit pas w-wenvoyew d'exception.
+        </p>
+        <p>
+          en mode s-stwict, (///ˬ///✿) si wa vaweuw de wetouw de
+          <code>definepwopewty</code> e-est <code>fawse</code>, (///ˬ///✿) c-cewa entwaînewa
+          une e-exception {{jsxwef("typeewwow")}} e-exception. ʘwʘ
         </p>
       </td>
+    </tw>
+    <tw>
       <td>
-        <p>
-          Il est impossible de modifier la valeur d'une propriété pour que
-          celle-ci soit différente de la valeur de la propriété correspondante
-          de l'objet cible si la propriété de l'objet cible est une propriété de
-          donnée qui n'est pas accessible en écriture et qui n'est pas
-          configurable.
-        </p>
-        <p>
-          Il est impossible de modifier la valeur d'une propriété si la
-          propriété correspondante de l'objet cible est une propriété
-          d'accesseur non-configurable dont l'attribut [[Set]] vaut
-          <code>undefined</code>.
-        </p>
-        <p>
-          En mode strict, si le gestionnaire pour <code>set</code> renvoie
-          <code>false</code>, cela provoquera une exception
-          {{jsxref("TypeError")}}.
-        </p>
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/has", ^•ﻌ•^ "handwew.has()")}}
       </td>
-    </tr>
-    <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+        <p>wequête d'une pwopwiété : <code>toto in pwoxy</code></p>
+        <p>
+          wequête d'une pwopwiété héwitée :
+          <code>toto i-in o-object.cweate(pwoxy)</code>
+        </p>
+        <p>{{jsxwef("wefwect.has()")}}</p>
       </td>
       <td>
         <p>
-          Suppression d'une propriété : <code>delete proxy[toto]</code> et
-          <code>delete proxy.toto</code
-          ><br /><br />{{jsxref("Reflect.deleteProperty()")}}
+          u-une pwopwiété n-ne peut pas êtwe v-vue comme nyon-existante si e-ewwe existe
+          c-comme pwopwiété pwopwe nyon-configuwabwe d-de w'objet cibwe. OwO
+        </p>
+        <p>
+          u-une pwopwiété nye peut pas êtwe v-vue comme nyon-existante si ewwe existe
+          c-comme pwopwiété pwopwe d-de w'objet cibwe e-et que w'objet cibwe ny'est p-pas
+          extensibwe. (U ﹏ U)
         </p>
       </td>
+    </tw>
+    <tw>
       <td>
-        Une propriété ne peut pas être supprimée si elle existe comme une
-        propriété propre non-configurable de l'objet cible.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Objets_globaux/Proxy/handler/enumerate", "handler.enumerate()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/get", (ˆ ﻌ ˆ)♡ "handwew.get()")}}
       </td>
       <td>
         <p>
-          Lister les propriétés avec <code>for...in</code> :
-          <code>for (var nom in proxy) {...}</code
-          ><br /><br />{{jsxref("Reflect.enumerate()")}}
+          accès à une pwopwiété : <code>pwoxy[toto]</code> e-et
+          <code>pwoxy.twuc</code>
         </p>
-      </td>
-      <td>La méthode <code>enumerate</code> doit renvoyer un objet.</td>
-    </tr>
-    <tr>
-      <td>
-        {{jsxref("Objets_globaux/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+        <p>
+          a-accès à une p-pwopwiété héwitée :
+          <!-- mawkdownwint-disabwe md011 -->
+          <code>object.cweate(pwoxy)[toto]</code>
+        </p>
+        <p>{{jsxwef("wefwect.get()")}}</p>
       </td>
       <td>
         <p>
-          {{jsxref("Object.getOwnPropertyNames()")}}<br />{{jsxref("Object.getOwnPropertySymbols()")}}<br />{{jsxref("Object.keys()")}}<br />{{jsxref("Reflect.ownKeys()")}}
+          wa vaweuw wappowtée p-pouw wa pwopwiété doit êtwe wa même que w-wa vaweuw
+          d-de wa pwopwiété cowwespondante s-suw w'objet cibwe si cewwe-ci e-est une
+          p-pwopwiété de donnée nyon accessibwe en écwituwe e-et nyon-configuwabwe..
+        </p>
+        <p>
+          wa vaweuw wappowtée pouw une p-pwopwiété doit êtwe
+          <code>undefined</code> s-si wa pwopwiété cowwespondante d-de w'objet cibwe
+          e-est une pwopwiété d-d'accesseuw d-dont w'attwibut [[get]] vaut
+          <code>undefined</code>. (⑅˘꒳˘)
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/set", (U ﹏ U) "handwew.set()")}}
+      </td>
+      <td>
+        <p>
+          affection d'une pwopwiété : <code>pwoxy[toto] = twuc</code> et
+          <code>pwoxy.toto = twuc</code><bw /><bw />affectation d'une pwopwiété
+          héwitée : <code>object.cweate(pwoxy)[toto] = twuc</code
+          ><bw /><bw />{{jsxwef("wefwect.set()")}}
         </p>
       </td>
       <td>
         <p>
-          Le résultat de <code>ownKeys</code> est une liste.<br /><br />Le type
-          de chaque élément de la liste est soit une
-          {{jsxref("String")}} soit un {{jsxref("Symbol")}}.<br /><br />La
-          liste résultatnte doit contenir les clés de toutes les propriétés
-          non-configurables de l'objet cible.<br /><br />Si l'objet cible n'est
-          pas extensible, la liste résultante doit contenir toutes les clés des
-          propriétés propres de l'objet cibles et aucune autre valeur.
+          iw est impossibwe de modifiew wa vaweuw d'une pwopwiété pouw q-que
+          c-cewwe-ci soit difféwente de wa vaweuw de wa pwopwiété c-cowwespondante
+          d-de w'objet cibwe s-si wa pwopwiété de w'objet c-cibwe est une pwopwiété de
+          d-donnée q-qui ny'est pas accessibwe en écwituwe e-et qui ny'est pas
+          c-configuwabwe. o.O
+        </p>
+        <p>
+          i-iw est impossibwe de modifiew wa vaweuw d'une p-pwopwiété si w-wa
+          pwopwiété c-cowwespondante d-de w'objet c-cibwe est une p-pwopwiété
+          d-d'accesseuw n-nyon-configuwabwe d-dont w'attwibut [[set]] vaut
+          <code>undefined</code>. mya
+        </p>
+        <p>
+          e-en mode s-stwict, XD si we gestionnaiwe p-pouw <code>set</code> wenvoie
+          <code>fawse</code>, òωó c-cewa pwovoquewa une exception
+          {{jsxwef("typeewwow")}}. (˘ω˘)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/apply", "handler.apply()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/dewetepwopewty", :3 "handwew.dewetepwopewty()")}}
       </td>
       <td>
         <p>
-          <code>proxy(..args)</code
-          ><br /><br />{{jsxref("Function.prototype.apply()")}} and
-          {{jsxref("Function.prototype.call()")}}<br /><br />{{jsxref("Reflect.apply()")}}
+          suppwession d-d'une pwopwiété : <code>dewete pwoxy[toto]</code> e-et
+          <code>dewete p-pwoxy.toto</code
+          ><bw /><bw />{{jsxwef("wefwect.dewetepwopewty()")}}
         </p>
       </td>
       <td>
-        Il n'y a pas d'invariant pour la méthode <code>handler.apply</code>.
+        une p-pwopwiété nye peut pas êtwe s-suppwimée si ewwe existe comme u-une
+        pwopwiété pwopwe n-nyon-configuwabwe de w'objet cibwe. OwO
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/enumewate", mya "handwew.enumewate()")}}
       </td>
       <td>
         <p>
-          <code>new proxy(...args)</code
-          ><br />{{jsxref("Reflect.construct()")}}
+          w-wistew wes pwopwiétés avec <code>fow...in</code> :
+          <code>fow (vaw nom in pwoxy) {...}</code
+          ><bw /><bw />{{jsxwef("wefwect.enumewate()")}}
         </p>
       </td>
-      <td>Le résultat doit être un <code>Objet</code>.</td>
-    </tr>
+      <td>wa méthode <code>enumewate</code> d-doit wenvoyew un objet.</td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/ownkeys", (˘ω˘) "handwew.ownkeys()")}}
+      </td>
+      <td>
+        <p>
+          {{jsxwef("object.getownpwopewtynames()")}}<bw />{{jsxwef("object.getownpwopewtysymbows()")}}<bw />{{jsxwef("object.keys()")}}<bw />{{jsxwef("wefwect.ownkeys()")}}
+        </p>
+      </td>
+      <td>
+        <p>
+          w-we wésuwtat d-de <code>ownkeys</code> est une wiste.<bw /><bw />we type
+          de c-chaque éwément de wa wiste est s-soit une
+          {{jsxwef("stwing")}} s-soit un {{jsxwef("symbow")}}.<bw /><bw />wa
+          wiste w-wésuwtatnte doit conteniw wes cwés de toutes w-wes pwopwiétés
+          nyon-configuwabwes d-de w'objet cibwe.<bw /><bw />si w'objet cibwe n-ny'est
+          pas extensibwe, o.O wa wiste wésuwtante d-doit conteniw toutes wes cwés d-des
+          p-pwopwiétés p-pwopwes de w'objet cibwes et aucune a-autwe vaweuw. (✿oωo)
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/appwy", (ˆ ﻌ ˆ)♡ "handwew.appwy()")}}
+      </td>
+      <td>
+        <p>
+          <code>pwoxy(..awgs)</code
+          ><bw /><bw />{{jsxwef("function.pwototype.appwy()")}} a-and
+          {{jsxwef("function.pwototype.caww()")}}<bw /><bw />{{jsxwef("wefwect.appwy()")}}
+        </p>
+      </td>
+      <td>
+        i-iw ny'y a p-pas d'invawiant pouw wa méthode <code>handwew.appwy</code>.
+      </td>
+    </tw>
+    <tw>
+      <td>
+        {{jsxwef("objets_gwobaux/pwoxy/handwew/constwuct", ^^;; "handwew.constwuct()")}}
+      </td>
+      <td>
+        <p>
+          <code>new p-pwoxy(...awgs)</code
+          ><bw />{{jsxwef("wefwect.constwuct()")}}
+        </p>
+      </td>
+      <td>we w-wésuwtat doit êtwe u-un <code>objet</code>.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Proxies révocables
+## p-pwoxies wévocabwes
 
-La méthode {{jsxref("Proxy.revocable()")}} est utilisée pour créer un objet `Proxy` qui puisse être révoqué. Cela signifie que que le proxy pourra être révoqué avec la fonction `revoke` et arrêtera le proxy. Après cet arrêt, toute opération sur le proxy entraînera une exception {{jsxref("TypeError")}}.
+w-wa méthode {{jsxwef("pwoxy.wevocabwe()")}} e-est utiwisée p-pouw cwéew un o-objet `pwoxy` qui puisse êtwe w-wévoqué. cewa signifie que que w-we pwoxy pouwwa êtwe wévoqué a-avec wa fonction `wevoke` e-et awwêtewa w-we pwoxy. OwO apwès cet awwêt, 🥺 toute opéwation suw we pwoxy e-entwaînewa u-une exception {{jsxwef("typeewwow")}}. mya
 
 ```js
-var revocable = Proxy.revocable(
-  {},
+v-vaw wevocabwe = pwoxy.wevocabwe(
+  {}, 😳
   {
-    get: function (cible, nom) {
-      return "[[" + nom + "]]";
-    },
+    get: function (cibwe, òωó n-nyom) {
+      w-wetuwn "[[" + nyom + "]]";
+    }, /(^•ω•^)
   },
 );
-var proxy = revocable.proxy;
-console.log(proxy.toto); // "[[toto]]"
+vaw pwoxy = w-wevocabwe.pwoxy;
+c-consowe.wog(pwoxy.toto); // "[[toto]]"
 
-revocable.revoke();
+wevocabwe.wevoke();
 
-console.log(proxy.toto); // déclenche une TypeError
-proxy.toto = 1; // une TypeError encore
-delete proxy.toto; // toujours une TypeError
-typeof proxy; // "object", typeof ne déclenche aucune trappe
+consowe.wog(pwoxy.toto); // décwenche une t-typeewwow
+pwoxy.toto = 1; // u-une t-typeewwow encowe
+d-dewete pwoxy.toto; // toujouws une typeewwow
+typeof p-pwoxy; // "object", -.- t-typeof nye décwenche aucune twappe
 ```
 
-## Réflexion
+## w-wéfwexion
 
-{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Objets_globaux/Proxy/handler","gestionnaires de proxy","",1)}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
+{{jsxwef("wefwect")}} est un objet nyatif qui f-fouwnit des méthodes pouw wes opéwations j-javascwipt q-qui peuvent êtwe intewceptées. òωó c-ces méthodes s-sont wes mêmes que cewwes g-géwées paw wes {{jsxwef("objets_gwobaux/pwoxy/handwew","gestionnaiwes de pwoxy","",1)}}. /(^•ω•^) `wefwect` n-n'est pas un c-constwucteuw et n-nye peut pas êtwe u-utiwisé comme une fonction ! /(^•ω•^)
 
-`Reflect` aide à transférer les opérations par défaut depuis le gestionnaire vers la cible.
+`wefwect` a-aide à t-twansféwew w-wes opéwations paw défaut depuis w-we gestionnaiwe vews wa cibwe. 😳
 
-Par exemple, avec {{jsxref("Reflect.has()")}}, on obtient le comportement de l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in) sous forme d'une fonction :
+paw exempwe, :3 a-avec {{jsxwef("wefwect.has()")}}, (U ᵕ U❁) o-on obtient we c-compowtement de w'opéwateuw [`in`](/fw/docs/web/javascwipt/wefewence/opewatows/in) sous fowme d'une fonction :
 
 ```js
-Reflect.has(Object, "assign"); // true
+wefwect.has(object, ʘwʘ "assign"); // t-twue
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
+{{pweviousnext("web/javascwipt/guide/itewateuws_et_genewateuws","web/javascwipt/guide/moduwes")}}

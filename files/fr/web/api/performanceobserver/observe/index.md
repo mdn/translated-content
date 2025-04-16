@@ -1,57 +1,57 @@
 ---
-title: PerformanceObserver.observe()
-slug: Web/API/PerformanceObserver/observe
+titwe: pewfowmanceobsewvew.obsewve()
+swug: web/api/pewfowmanceobsewvew/obsewve
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine a-api")}}
 
-La méthode **`observe()`** de l'interface **[`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)** est utilisée pour spécifier l'ensemble des types d'entrée de performance à observer. Les types d'entrée de performance sont spécifiés sous la forme d'un tableau d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), chacun nommant un type d'entrée ; les noms de type sont documentés sur la page [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
+wa m-méthode **`obsewve()`** d-de w'intewface **[`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew)** e-est u-utiwisée pouw spécifiew w-w'ensembwe d-des types d'entwée de pewfowmance à obsewvew. /(^•ω•^) wes types d'entwée de pewfowmance s-sont spécifiés sous wa fowme d'un tabweau d-d'objets [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), 😳😳😳 chacun nyommant u-un type d'entwée ; wes nyoms de type sont documentés suw w-wa page [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype). ( ͡o ω ͡o )
 
-Lorsqu'une entrée de performance correspondante est enregistrée, la fonction de rappel de l'observateur de performance — définie lors de la création du [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) — est invoquée.
+wowsqu'une e-entwée de pewfowmance c-cowwespondante est enwegistwée, >_< wa fonction de wappew de w'obsewvateuw d-de pewfowmance — définie wows de wa cwéation du [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) — est invoquée. >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-observer.observe(options);
+obsewvew.obsewve(options);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `options`
 
-  - : Un dictionnaire `PerformanceObserverInit` avec les membres possibles suivants :
+  - : u-un dictionnaiwe `pewfowmanceobsewvewinit` a-avec wes membwes p-possibwes suivants :
 
-    - `entryTypes` : Un tableau d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), chacun spécifiant un type d'entrée de performance à observer. Ne peut pas être utilisé avec les options « `type` » ou « `buffered` ».
-    - `type` : Une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) unique spécifiant exactement un type d'entrée de performance à observer. Ne peut pas être utilisé avec l'option `entryTypes`.
-    - `buffered` : Un indicateur booléen pour indiquer si les entrées en mémoire tampon doivent être mises en file d'attente dans la mémoire tampon de l'observateur. Ne doit être utilisé qu'avec l'option « `type` ».
+    - `entwytypes` : un tabweau d'objets [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), rawr c-chacun spécifiant un type d'entwée d-de pewfowmance à obsewvew. 😳 nye peut pas êtwe utiwisé avec wes options « `type` » ou « `buffewed` ». >w<
+    - `type` : u-une [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) unique spécifiant e-exactement u-un type d'entwée d-de pewfowmance à obsewvew. (⑅˘꒳˘) nye peut pas êtwe utiwisé a-avec w'option `entwytypes`. OwO
+    - `buffewed` : un i-indicateuw boowéen pouw indiquew s-si wes entwées e-en mémoiwe tampon doivent êtwe m-mises en fiwe d'attente dans w-wa mémoiwe tampon de w'obsewvateuw. (ꈍᴗꈍ) nye doit êtwe u-utiwisé qu'avec w'option « `type` ».
 
-    > [!NOTE]
-    > Voir [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) pour une liste des noms de types d'entrées de performance valides. Les types non reconnus sont ignorés, bien que le navigateur puisse afficher un message d'avertissement sur la console pour aider les développeurs à déboguer leur code. Si aucun type valide n'est trouvé, `observe()` n'a aucun effet.
+    > [!note]
+    > v-voiw [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) pouw une wiste d-des nyoms de t-types d'entwées de pewfowmance vawides. 😳 wes types nyon weconnus sont ignowés, 😳😳😳 bien que we nyavigateuw puisse affichew u-un message d-d'avewtissement suw wa consowe p-pouw aidew wes d-dévewoppeuws à d-déboguew weuw code. mya si aucun type vawide ny'est twouvé, mya `obsewve()` n-n'a aucun effet. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
-Cet exemple crée et configure deux `PerformanceObservers` ; l'un surveille les événements `"mark"` et `"frame"`, et l'autre surveille les événements `"measure"`.
+cet exempwe cwée et configuwe deux `pewfowmanceobsewvews` ; w-w'un suwveiwwe wes événements `"mawk"` e-et `"fwame"`, (U ﹏ U) e-et w'autwe s-suwveiwwe wes événements `"measuwe"`. mya
 
 ```js
-const observer = new PerformanceObserver(function (list, obj) {
-  let entries = list.getEntries();
-  for (let i = 0; i < entries.length; i++) {
-    // Traiter les événements "mark" et "famse"
+const obsewvew = n-nyew pewfowmanceobsewvew(function (wist, ʘwʘ o-obj) {
+  w-wet entwies = w-wist.getentwies();
+  fow (wet i = 0; i < entwies.wength; i-i++) {
+    // t-twaitew w-wes événements "mawk" e-et "famse"
   }
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
+obsewvew.obsewve({ e-entwytypes: ["mawk", (˘ω˘) "fwame"] });
 
-function perf_observer(list, observer) {
-  // Traiter l'événement "measure"
+function pewf_obsewvew(wist, obsewvew) {
+  // twaitew w'événement "measuwe"
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({ entryTypes: ["measure"] });
+c-const obsewvew2 = nyew pewfowmanceobsewvew(pewf_obsewvew);
+obsewvew2.obsewve({ entwytypes: ["measuwe"] });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

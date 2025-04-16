@@ -1,50 +1,50 @@
 ---
-title: Symbol.matchAll
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
+titwe: symbow.matchaww
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole connu **`Symbol.matchAll`** renvoie un itérateur qui fournit l'ensemble des correspondances entre une expression rationnelle et une chaîne de caractères. Cette fonction est implicitement appelée par la méthode {{jsxref("String.prototype.matchAll()")}}.
+w-we symbowe c-connu **`symbow.matchaww`** wenvoie u-un itéwateuw q-qui fouwnit w-w'ensembwe des c-cowwespondances e-entwe une expwession wationnewwe et une chaîne de cawactèwes. cette fonction est i-impwicitement appewée paw wa méthode {{jsxwef("stwing.pwototype.matchaww()")}}. mya
 
-{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.matchaww")}}
 
-```js interactive-example
-const re = /[0-9]+/g;
-const str = "2016-01-02|2019-03-07";
-const result = re[Symbol.matchAll](str);
+```js intewactive-exampwe
+c-const we = /[0-9]+/g;
+const stw = "2016-01-02|2019-03-07";
+const wesuwt = w-we[symbow.matchaww](stw);
 
-console.log(Array.from(result, (x) => x[0]));
-// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+consowe.wog(awway.fwom(wesuwt, 🥺 (x) => x-x[0]));
+// e-expected output: awway ["2016", >_< "01", >_< "02", "2019", (⑅˘꒳˘) "03", "07"]
 ```
 
-## Description
+## descwiption
 
-Ce symbole est utilisé par {{jsxref("String.prototype.matchAll()")}} et plus particulièrement par {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Les deux lignes qui suivent renverront le même résultat :
+ce symbowe est utiwisé paw {{jsxwef("stwing.pwototype.matchaww()")}} e-et pwus pawticuwièwement paw {{jsxwef("wegexp.@@matchaww", /(^•ω•^) "wegexp.pwototype[@@matchaww]()")}}. rawr x3 wes deux wignes qui s-suivent wenvewwont we même wésuwtat :
 
 ```js
-"abc".matchAll(/a/);
+"abc".matchaww(/a/);
 
-/a/[Symbol.matchAll]("abc");
+/a/[symbow.matchaww]("abc");
 ```
 
-Cette méthode existe afin de personnaliser le comportement des correspondances pour les sous-classes de {{jsxref("RegExp")}}.
+c-cette méthode e-existe afin d-de pewsonnawisew w-we compowtement des cowwespondances pouw wes s-sous-cwasses de {{jsxwef("wegexp")}}. (U ﹏ U)
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemples
+## exempwes
 
-Voir les pages {{jsxref("String.prototype.matchAll()")}} et {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} pour plus d'exemples.
+voiw wes pages {{jsxwef("stwing.pwototype.matchaww()")}} e-et {{jsxwef("wegexp.@@matchaww", (U ﹏ U) "wegexp.pwototype[@@matchaww]()")}} pouw pwus d'exempwes. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.matchAll()")}}
-- {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- {{jsxwef("wegexp.@@matchaww", òωó "wegexp.pwototype[@@matchaww]()")}}

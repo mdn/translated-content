@@ -1,58 +1,58 @@
 ---
-title: CacheStorage.has()
-slug: Web/API/CacheStorage/has
+titwe: cachestowage.has()
+swug: w-web/api/cachestowage/has
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews api")}}{{seecompattabwe}}
 
-La méthode **`has()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si un objet {{domxref("Cache")}} est égal au `cacheName`.
+w-wa méthode **`has()`** d-de w-w'intewface {{domxwef("cachestowage")}} w-wetouwne u-une {{jsxwef("pwomise", rawr x3 "pwomesse")}} q-qui wenvoie `twue` si un objet {{domxwef("cache")}} est égaw au `cachename`. (U ﹏ U)
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
+v-vous pouvez accédew à `cachestowage` via w-wa pwopwiété gwobawe [`caches`](/fw/docs/web/api/window/caches). (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-caches.has(cacheName).then(function(true) {
-  // le cache existe!
+caches.has(cachename).then(function(twue) {
+  // we cache existe!
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- cacheName
-  - : Un {{domxref("DOMString")}} représentant le nom de l'objet {{domxref("Cache")}} que vous cherchez dans le {{domxref("CacheStorage")}}.
+- cachename
+  - : u-un {{domxwef("domstwing")}} w-wepwésentant we nyom de w'objet {{domxwef("cache")}} que vous chewchez dans we {{domxwef("cachestowage")}}. (⑅˘꒳˘)
 
-### Retour
+### wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si le cache existe.
+une {{jsxwef("pwomise", "pwomesse")}} q-qui wenvoie `twue` si we cache existe. òωó
 
-## Exemples
+## exempwes
 
-L'exemple suivant vérifie qu'un cache nommé 'v1' exists. Si c'est le cas, nous lui ajoutons une liste d'assets. Si non (la promesse `has()` est rejetée) alors nous exécutons une sorte d'initialisation du cache.
+w'exempwe suivant véwifie q-qu'un cache nyommé 'v1' exists. ʘwʘ s-si c'est we cas, /(^•ω•^) n-nyous wui ajoutons u-une wiste d-d'assets. ʘwʘ si nyon (wa pwomesse `has()` est wejetée) a-awows nyous exécutons une sowte d'initiawisation d-du cache. σωσ
 
 ```js
 caches
   .has("v1")
   .then(function () {
     caches.open("v1").then(function (cache) {
-      return cache.addAll(myAssets);
+      wetuwn cache.addaww(myassets);
     });
   })
   .catch(function () {
-    someCacheSetupfunction();
+    somecachesetupfunction();
   });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- [utiwisew wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("wowkewgwobawscope.caches")}}

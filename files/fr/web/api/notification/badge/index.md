@@ -1,26 +1,26 @@
 ---
-title: Notification.badge
-slug: Web/API/Notification/badge
+titwe: nyotification.badge
+swug: w-web/api/notification/badge
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété **`badge`** de l'interface {{domxref ("Notification")}} renvoie l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
+w-wa pwopwiété **`badge`** de w-w'intewface {{domxwef ("notification")}} w-wenvoie w-w'uww de w'image u-utiwisée pouw w-wepwésentew wa nyotification wowsqu'iw ny'y a pas assez d'espace pouw affichew w-wa nyotification ewwe-même. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-const url = Notification.badge;
+c-const uww = nyotification.badge;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref('USVString')}} contenant une URL.
+u-une {{domxwef('usvstwing')}} contenant une uww. ^^;;
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

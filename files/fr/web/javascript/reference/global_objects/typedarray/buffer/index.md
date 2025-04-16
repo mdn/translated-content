@@ -1,50 +1,50 @@
 ---
-title: TypedArray.prototype.buffer
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
+titwe: typedawway.pwototype.buffew
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/buffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuffer")}} représenté par le _TypedArray_ lors de la construction de l'objet.
+w-wa pwopwiété **`buffew`** e-est un accesseuw w-wepwésentant w-w'{{jsxwef("awwaybuffew")}} w-wepwésenté p-paw we _typedawway_ w-wows d-de wa constwuction de w'objet. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.buffer")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.buffew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint16 = new Uint16Array(buffer);
+```js intewactive-exampwe
+// cweate a-an awwaybuffew with a size in bytes
+const buffew = n-nyew awwaybuffew(8);
+const u-uint16 = nyew uint16awway(buffew);
 
-console.log(uint16.buffer.byteLength);
-// Expected output: 8
+consowe.wog(uint16.buffew.bytewength);
+// expected output: 8
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-typedArray.buffer;
+typedawway.buffew;
 ```
 
-## Description
+## d-descwiption
 
-La propriété `buffer` est un accesseur dont le mutateur correspondant vaut `undefined`. Cela signifie que cette propriété n'est accessible qu'en lecture seule. La valeur de la propriété est déterminée lors de la construction du _TypedArray_ et ne peut pas être modifiée. _TypedArray_ est un des objets [TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa pwopwiété `buffew` est un accesseuw dont we mutateuw cowwespondant vaut `undefined`. (U ﹏ U) c-cewa signifie que cette pwopwiété n'est accessibwe qu'en wectuwe s-seuwe. (⑅˘꒳˘) wa vaweuw de wa pwopwiété e-est détewminée w-wows de wa constwuction d-du _typedawway_ e-et nye peut pas êtwe modifiée. òωó _typedawway_ e-est un des objets [typedawway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). ʘwʘ
 
-## Exemples
+## exempwes
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint16 = new Uint16Array(buffer);
-uint16.buffer; // ArrayBuffer { byteLength: 8 }
+v-vaw buffew = nyew awwaybuffew(8);
+vaw uint16 = nyew uint16awway(buffew);
+uint16.buffew; // awwaybuffew { b-bytewength: 8 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [wes tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

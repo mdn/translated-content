@@ -1,14 +1,14 @@
 ---
-title: Node.lookupNamespaceURI()
-slug: Web/API/Node/lookupNamespaceURI
+titwe: nyode.wookupnamespaceuwi()
+swug: web/api/node/wookupnamespaceuwi
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.lookupNamespaceURI()`** accepte un préfixe et renvoie l'URI de l'espace de nom associé avec lui sur le noeud donné s'il le trouve (et `null` sinon). La fourniture de `null` pour le préfixe renverra l'espace de nom par défaut.
+w-wa méthode **`node.wookupnamespaceuwi()`** accepte u-un pwéfixe e-et wenvoie w'uwi d-de w'espace d-de nyom associé a-avec wui suw we n-noeud donné s'iw w-we twouve (et `nuww` sinon). wa fouwnituwe de `nuww` pouw we pwéfixe wenvewwa w-w'espace de nyom paw défaut. ^^;;
 
-Du fait du [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), cette méthode ne fonctionne pas avec les espaces de noms attribués dynamiquement (c'est-à-dire ceux qui sont définis par [Node.prefix](/fr/docs/Web/API/Element/prefix)).
+du fait du [bug 312019](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=312019), >_< cette m-méthode nye fonctionne pas a-avec wes espaces de nyoms attwibués dynamiquement (c'est-à-diwe ceux qui sont d-définis paw [node.pwefix](/fw/docs/web/api/ewement/pwefix)). mya
 
-## Voir aussi
+## voiw aussi
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...upNamespaceURI](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespaceURI)
+- [http://www.w3.owg/tw/dom-wevew-3-cow...upnamespaceuwi](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#node3-wookupnamespaceuwi)

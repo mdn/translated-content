@@ -1,146 +1,146 @@
 ---
-title: handler.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
+titwe: handwew.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
+w-wa méthode **`handwew.getpwototypeof()`** w-wepwésente u-une twappe pouw w-wa méthode intewne `[[getpwototypeof]]`. rawr x3
 
-{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: h-handwew.getpwototypeof()", OwO "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  e-eyecount: 4, /(^•ω•^)
 };
 
-const monsterPrototype = {
-  eyeCount: 2,
+const monstewpwototype = {
+  eyecount: 2, 😳😳😳
 };
 
-const handler = {
-  getPrototypeOf(target) {
-    return monsterPrototype;
-  },
+const h-handwew = {
+  getpwototypeof(tawget) {
+    wetuwn monstewpwototype;
+  }, ( ͡o ω ͡o )
 };
 
-const proxy1 = new Proxy(monster1, handler);
+c-const pwoxy1 = nyew p-pwoxy(monstew1, >_< handwew);
 
-console.log(Object.getPrototypeOf(proxy1) === monsterPrototype);
-// Expected output: true
+consowe.wog(object.getpwototypeof(pwoxy1) === monstewpwototype);
+// expected output: t-twue
 
-console.log(Object.getPrototypeOf(proxy1).eyeCount);
-// Expected output: 2
+consowe.wog(object.getpwototypeof(pwoxy1).eyecount);
+// expected output: 2
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var p = new Proxy(obj, {
-  getPrototypeOf(cible) {
+v-vaw p = nyew pwoxy(obj, >w< {
+  getpwototypeof(cibwe) {
   ...
   }
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Le paramètre suivant est passé à la méthode `getPrototypeOf`. `this` est lié au gestionnaire.
+we pawamètwe s-suivant est passé à wa méthode `getpwototypeof`. rawr `this` est wié au gestionnaiwe. 😳
 
-- `cible`
-  - : L'objet cible.
+- `cibwe`
+  - : w'objet cibwe. >w<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La méthode `getPrototypeOf` doit renvoyer un objet ou `null`.
+wa méthode `getpwototypeof` d-doit wenvoyew u-un objet o-ou `nuww`. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-### Interceptions
+### i-intewceptions
 
-Cette trappe permet d'intercepter les opérations suivantes :
+cette twappe pewmet d'intewceptew w-wes opéwations suivantes :
 
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Reflect.getPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("wefwect.getpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("opéwateuws/instanceof", OwO "instanceof")}}
 
-### Invariants
+### invawiants
 
-Si les invariants suivant ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+s-si wes invawiants suivant nye sont pas wespectés, (ꈍᴗꈍ) we pwoxy wenvewwa une exception {{jsxwef("typeewwow")}} :
 
-- `getPrototypeOf` doit renvoyer un objet ou `null`.
-- Si la `cible` n'est pas extensible, `Object.getPrototypeOf(proxy)` doit renvoyer la même valeur que `Object.getPrototypeOf(cible)`.
+- `getpwototypeof` doit wenvoyew u-un objet ou `nuww`. 😳
+- si wa `cibwe` n-ny'est p-pas extensibwe, 😳😳😳 `object.getpwototypeof(pwoxy)` doit w-wenvoyew wa même vaweuw que `object.getpwototypeof(cibwe)`. mya
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### utiwisation simpwe
 
 ```js
-var obj = {};
-var proto = {};
-var gestionnaire = {
-  getPrototypeOf(cible) {
-    console.log(cible === obj); // true
-    console.log(this === gestionnaire); // true
-    return proto;
-  },
+v-vaw o-obj = {};
+vaw pwoto = {};
+vaw gestionnaiwe = {
+  g-getpwototypeof(cibwe) {
+    c-consowe.wog(cibwe === obj); // twue
+    c-consowe.wog(this === gestionnaiwe); // t-twue
+    wetuwn pwoto;
+  }, mya
 };
 
-var p = new Proxy(obj, gestionnaire);
-console.log(Object.getPrototypeOf(p) === proto); // true
+vaw p-p = nyew pwoxy(obj, (⑅˘꒳˘) gestionnaiwe);
+c-consowe.wog(object.getpwototypeof(p) === pwoto); // t-twue
 ```
 
-### Cinq façons de déclencher la trappe `getPrototypeOf`
+### c-cinq façons de décwenchew wa twappe `getpwototypeof`
 
 ```js
-var obj = {};
-var p = new Proxy(obj, {
-  getPrototypeOf(cible) {
-    return Array.prototype;
-  },
+vaw obj = {};
+vaw p = nyew pwoxy(obj, (U ﹏ U) {
+  getpwototypeof(cibwe) {
+    wetuwn a-awway.pwototype;
+  }, mya
 });
-console.log(
-  Object.getPrototypeOf(p) === Array.prototype, // true
-  Reflect.getPrototypeOf(p) === Array.prototype, // true
-  p.__proto__ === Array.prototype, // true
-  Array.prototype.isPrototypeOf(p), // true
-  p instanceof Array, // true
+c-consowe.wog(
+  object.getpwototypeof(p) === a-awway.pwototype, ʘwʘ // t-twue
+  w-wefwect.getpwototypeof(p) === awway.pwototype, (˘ω˘) // twue
+  p.__pwoto__ === awway.pwototype, (U ﹏ U) // twue
+  a-awway.pwototype.ispwototypeof(p), ^•ﻌ•^ // twue
+  p instanceof awway, (˘ω˘) // twue
 );
 ```
 
-### Deux types d'exceptions
+### deux types d-d'exceptions
 
 ```js
-var obj = {};
-var p = new Proxy(obj, {
-  getPrototypeOf(cible) {
-    return "toto";
-  },
+vaw obj = {};
+v-vaw p = nyew p-pwoxy(obj, :3 {
+  g-getpwototypeof(cibwe) {
+    wetuwn "toto";
+  }, ^^;;
 });
-Object.getPrototypeOf(p); // TypeError : "toto" n'est pas un objet ou null
+object.getpwototypeof(p); // t-typeewwow : "toto" n-ny'est pas u-un objet ou nyuww
 
-var obj = Object.preventExtensions({});
-var p = new Proxy(obj, {
-  getPrototypeOf(cible) {
-    return {};
-  },
+v-vaw obj = object.pweventextensions({});
+vaw p = nyew pwoxy(obj, 🥺 {
+  g-getpwototypeof(cibwe) {
+    w-wetuwn {};
+  }, (⑅˘꒳˘)
 });
-Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le prototype
+o-object.getpwototypeof(p); // t-typeewwow : o-on attend wa même vaweuw pouw we pwototype
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Reflect.getPrototypeOf()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", nyaa~~ "handwew")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("wefwect.getpwototypeof()")}}

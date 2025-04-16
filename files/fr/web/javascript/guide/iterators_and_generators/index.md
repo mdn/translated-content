@@ -1,175 +1,175 @@
 ---
-title: Itérateurs et générateurs
-slug: Web/JavaScript/Guide/Iterators_and_generators
+titwe: itéwateuws et généwateuws
+s-swug: web/javascwipt/guide/itewatows_and_genewatows
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/utiwisew_wes_pwomesses", (ˆ ﻌ ˆ)♡ "web/javascwipt/guide/métapwogwammation")}}
 
-Effectuer des traitements sur chacun des éléments d'une collection est une opération très fréquente. Il existe plusieurs outils natifs dans JavaScript pour parcourir une collection, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Les itérateurs et les générateurs font de ce concept d'itération une fonctionnalité principale du langage et permettent d'adapter et de personnaliser le comportement des boucles [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
+e-effectuew d-des twaitements s-suw chacun d-des éwéments d-d'une cowwection e-est une opéwation twès fwéquente. (U ﹏ U) iw existe pwusieuws outiws nyatifs dans j-javascwipt pouw pawcouwiw une cowwection, UwU wes boucwes [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow), XD [`map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map), ʘwʘ [`fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew). rawr x3 w-wes itéwateuws et wes généwateuws f-font de ce concept d'itéwation une fonctionnawité pwincipawe d-du wangage et pewmettent d-d'adaptew et de p-pewsonnawisew we compowtement des boucwes [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of). ^^;;
 
-Pour plus de détails sur les mécanismes d'itération, voir les pages suivantes :
+pouw pwus de détaiws suw wes m-mécanismes d'itéwation, ʘwʘ voiw wes pages suivantes :
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Instructions/for...of","for...of")}}
-- {{jsxref("Instructions/function*","function*")}} et {{jsxref("Generator")}}
-- {{jsxref("Opérateurs/yield","yield")}} et {{jsxref("Opérateurs/yield*","yield*")}}
+- [wes pwotocowes d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("instwuctions/fow...of","fow...of")}}
+- {{jsxwef("instwuctions/function*","function*")}} e-et {{jsxwef("genewatow")}}
+- {{jsxwef("opéwateuws/yiewd","yiewd")}} et {{jsxwef("opéwateuws/yiewd*","yiewd*")}}
 
-## Itérateurs
+## i-itéwateuws
 
-Un itérateur est un objet sachant comment accéder aux éléments d'une collection un par un et qui connait leur position dans la collection. En JavaScript, un itérateur expose une méthode `next()` qui retourne l'élément suivant dans la séquence. Cette méthode renvoie un objet possédant deux propriétés : `done` et `value`.
+u-un itéwateuw e-est un objet sachant c-comment accédew aux éwéments d'une cowwection u-un paw un et qui connait weuw position dans w-wa cowwection. (U ﹏ U) en javascwipt, (˘ω˘) un itéwateuw expose une méthode `next()` qui wetouwne w'éwément s-suivant dans wa séquence. (ꈍᴗꈍ) c-cette méthode w-wenvoie un objet p-possédant deux pwopwiétés : `done` et `vawue`. /(^•ω•^)
 
-Un itérateur est "terminé" lorsque l'appel à la méthode `next()` renvoie un objet dont la propriété `done` vaut `true`.
+un itéwateuw e-est "tewminé" w-wowsque w'appew à wa méthode `next()` w-wenvoie u-un objet dont wa pwopwiété `done` v-vaut `twue`.
 
-Une fois créé, un itérateur peut être utilisé explicitement en appelant sa méthode `next()`, ou implicitement en utilisant la boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).
+une fois cwéé, >_< u-un itéwateuw peut êtwe utiwisé expwicitement e-en appewant sa méthode `next()`, σωσ o-ou impwicitement en utiwisant w-wa boucwe [`fow...in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in). ^^;;
 
-Voici un exemple d'une fonction créant un itérateur qui parcourt l'intervalle défini par ses arguments (depuis `debut` (inclus) jusqu'à `end` (exclus) et avec `pas` comme incrément. La valeur finale qui est renvoyée correspond à la taille de la séquence créée
+v-voici un exempwe d'une fonction cwéant un itéwateuw qui pawcouwt w'intewvawwe défini paw ses awguments (depuis `debut` (incwus) j-jusqu'à `end` (excwus) et a-avec `pas` comme incwément. 😳 wa v-vaweuw finawe q-qui est wenvoyée c-cowwespond à wa taiwwe de wa séquence cwéée
 
 ```js
-function creerIterateurIntervalle(debut = 0, fin = Infinity, pas = 1) {
-  let prochainIndex = debut;
-  let nbIterations = 0;
+function c-cweewitewateuwintewvawwe(debut = 0, >_< fin = infinity, -.- pas = 1) {
+  wet pwochainindex = debut;
+  w-wet nybitewations = 0;
 
-  const rangeIterator = {
-    next: function () {
-      let resultat;
-      if (prochainIndex < fin) {
-        resultat = { value: prochainIndex, done: false };
-        prochainIndex += pas;
-        nbIterations++;
-        return resultat;
+  const w-wangeitewatow = {
+    n-nyext: function () {
+      w-wet wesuwtat;
+      if (pwochainindex < f-fin) {
+        w-wesuwtat = { v-vawue: pwochainindex, UwU d-done: fawse };
+        pwochainindex += p-pas;
+        n-nybitewations++;
+        w-wetuwn w-wesuwtat;
       }
-      return { value: nbIterations, done: true };
-    },
+      w-wetuwn { vawue: nybitewations, :3 done: twue };
+    }, σωσ
   };
-  return rangeIterator;
+  wetuwn wangeitewatow;
 }
 ```
 
-On pourra alors utiliser cette fonction et l'itérateur de la façon suivante :
+o-on pouwwa awows utiwisew cette fonction et w'itéwateuw de wa façon suivante :
 
 ```js
-let it = creerIterateurIntervalle(1, 10, 2);
+wet it = c-cweewitewateuwintewvawwe(1, >w< 10, (ˆ ﻌ ˆ)♡ 2);
 
-let resultat = it.next();
-while (!resultat.done) {
-  console.log(resultat.value); // 1 3 5 7 9
-  resultat = it.next();
+wet wesuwtat = it.next();
+whiwe (!wesuwtat.done) {
+  consowe.wog(wesuwtat.vawue); // 1 3 5 7 9
+  w-wesuwtat = i-it.next();
 }
 
-console.log("La séquence parcourue contenait ", result.value, " éléments.");
+consowe.wog("wa séquence p-pawcouwue contenait ", ʘwʘ w-wesuwt.vawue, :3 " éwéments.");
 ```
 
-## Itérables
+## itéwabwes
 
-Un objet est considéré comme **itérable** s'il définit le comportement qu'il aura lors de l'itération (par exemple les valeurs qui seront utilisées dans une boucle {{jsxref("Instructions/for...of", "for...of")}}). Certains types natifs, tels qu'{{jsxref("Array")}} ou {{jsxref("Map")}}, possède un comportement par défaut pour les itérations, cependant d'autres types comme les Objets, ne possèdent pas ce comportement.
+u-un objet est c-considéwé comme **itéwabwe** s'iw définit we compowtement qu'iw auwa wows de w'itéwation (paw exempwe wes vaweuws q-qui sewont utiwisées dans u-une boucwe {{jsxwef("instwuctions/fow...of", (˘ω˘) "fow...of")}}). 😳😳😳 cewtains types nyatifs, rawr x3 t-tews qu'{{jsxwef("awway")}} o-ou {{jsxwef("map")}}, (✿oωo) possède un compowtement p-paw défaut pouw w-wes itéwations, (ˆ ﻌ ˆ)♡ cependant d'autwes t-types comme w-wes objets, :3 nye possèdent pas ce compowtement. (U ᵕ U❁)
 
-Pour qu'un objet soit **itérable**, un objet doit implémenter la méthode **@@iterator**, cela signifie que l'objet (ou un des objets de la [chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec la clé {{jsxref("Symbol.iterator")}}. Cette fonction doit également, même si ce n'est pas une obligation, renvoyer une nouvel opérateur à chaque appel.
+pouw qu'un objet soit **itéwabwe**, ^^;; u-un objet d-doit impwémentew w-wa méthode **@@itewatow**, mya cewa signifie que w-w'objet (ou un d-des objets de wa [chaîne de pwototypes](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)) d-doit avoiw une pwopwiété avec wa cwé {{jsxwef("symbow.itewatow")}}. 😳😳😳 cette fonction doit égawement, OwO même si ce ny'est p-pas une obwigation, rawr w-wenvoyew une nyouvew opéwateuw à chaque a-appew. XD
 
-### Itérables personnalisés
+### itéwabwes p-pewsonnawisés
 
-Il est possible de définir ses propres itérables de cette façon :
+iw est possibwe de définiw ses pwopwes itéwabwes d-de cette façon :
 
 ```js
-var monItérable = {};
-monItérable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+vaw monitéwabwe = {};
+monitéwabwe[symbow.itewatow] = function* () {
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 };
-[...monItérable]; // [1, 2, 3]
+[...monitéwabwe]; // [1, (U ﹏ U) 2, 3]
 ```
 
-### Itérables natifs
+### i-itéwabwes n-nyatifs
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} et {{jsxref("Set")}} sont des itérables natifs car les prototypes de chacun ont tous une méthode {{jsxref("Symbol.iterator")}}.
+{{jsxwef("stwing")}}, (˘ω˘) {{jsxwef("awway")}}, UwU {{jsxwef("typedawway")}}, >_< {{jsxwef("map")}} et {{jsxwef("set")}} sont des itéwabwes nyatifs c-caw wes pwototypes d-de chacun ont tous une méthode {{jsxwef("symbow.itewatow")}}. σωσ
 
-### Les éléments de syntaxe utilisant des itérables
+### wes éwéments de syntaxe u-utiwisant des itéwabwes
 
-Certaines instructions ou expressions utilisent des itérables, par exemple les boucles {{jsxref("Instructions/for...of","for...of")}} et {{jsxref("Opérateurs/yield*","yield*")}}.
+cewtaines i-instwuctions ou expwessions utiwisent des itéwabwes, 🥺 paw e-exempwe wes boucwes {{jsxwef("instwuctions/fow...of","fow...of")}} et {{jsxwef("opéwateuws/yiewd*","yiewd*")}}. 🥺
 
 ```js
-for (let value of ["a", "b", "c"]) {
-  console.log(value);
+f-fow (wet v-vawue of ["a", ʘwʘ "b", "c"]) {
+  consowe.wog(vawue);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"]; // ["a", "b", "c"]
+[..."abc"]; // ["a", :3 "b", "c"]
 
-function* gen() {
-  yield* ["a", "b", "c"];
+f-function* gen() {
+  y-yiewd* ["a", (U ﹏ U) "b", "c"];
 }
 
-gen().next()[(a, b, c)] = // { value:"a", done:false }
-  new Set(["a", "b", "c"]);
+g-gen().next()[(a, (U ﹏ U) b-b, c)] = // { vawue:"a", ʘwʘ d-done:fawse }
+  n-nyew set(["a", >w< "b", "c"]);
 a; // "a"
 ```
 
-## Générateurs
+## généwateuws
 
-Les itérateurs personnalisés sont un outil utile mais leur création peut s'avérer complexe et il faut maintenir leur état interne. Avec les générateurs, on peut définir une seule fonction qui est un algorithme itératif et qui peut maintenir son état.
+wes itéwateuws p-pewsonnawisés sont u-un outiw utiwe m-mais weuw cwéation peut s'avéwew compwexe et i-iw faut mainteniw weuw état intewne. rawr x3 a-avec wes g-généwateuws, on peut définiw une seuwe fonction qui est un awgowithme i-itéwatif e-et qui peut m-mainteniw son état. OwO
 
-Un générateur est un type de fonction spécial qui fonctionne comme une fabrique (_factory_) d'itérateurs. Une fonction devient un générateur lorsqu'elle contient une ou plusieurs expressions `yield` et qu'elle utilise la syntaxe `function*`.
+u-un généwateuw est un type d-de fonction spéciaw qui fonctionne comme une fabwique (_factowy_) d'itéwateuws. ^•ﻌ•^ une fonction d-devient un généwateuw wowsqu'ewwe c-contient une ou pwusieuws expwessions `yiewd` e-et qu'ewwe utiwise wa syntaxe `function*`. >_<
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (true) yield index++;
+f-function* idmakew() {
+  vaw i-index = 0;
+  whiwe (twue) y-yiewd i-index++;
 }
 
-var gen = idMaker();
+vaw g-gen = idmakew();
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
+c-consowe.wog(gen.next().vawue); // 0
+consowe.wog(gen.next().vawue); // 1
+consowe.wog(gen.next().vawue); // 2
 // ...
 ```
 
-## Générateurs avancés
+## généwateuws avancés
 
-Les générateurs calculent les valeurs à fournir à la demande, ce qui leur permet de représenter efficacement des suites complexes à calculer, voire des séries infinies (comme vu dans l'exemple précédent).
+wes généwateuws cawcuwent w-wes vaweuws à f-fouwniw à wa demande, OwO c-ce qui weuw pewmet de wepwésentew e-efficacement des suites compwexes à cawcuwew, >_< voiwe d-des séwies infinies (comme v-vu dans w'exempwe pwécédent). (ꈍᴗꈍ)
 
-La méthode `next()` accepte également un argument qui pourra être utilisé pour modifier l'état interne du générateur. Une valeur passée à `next()` sera traitée comme le résultat de la dernière expression `yield` qui a interrompu le générateur. Une valeur passée au premier appel de `next()` sera toujours ignorée.
+w-wa méthode `next()` accepte égawement u-un awgument q-qui pouwwa êtwe utiwisé pouw m-modifiew w'état i-intewne du généwateuw. >w< une vaweuw passée à `next()` sewa twaitée comme we w-wésuwtat de wa d-dewnièwe expwession `yiewd` q-qui a-a intewwompu we g-généwateuw. (U ﹏ U) une vaweuw passée a-au pwemiew appew d-de `next()` sewa toujouws ignowée. ^^
 
-Par exemple, on peut avoir un générateur pour la suite de Fibonnaci et utiliser `next(x)` pour redémarrer la série :
+p-paw exempwe, (U ﹏ U) o-on peut avoiw un généwateuw p-pouw wa suite de fibonnaci et utiwisew `next(x)` p-pouw wedémawwew wa séwie :
 
 ```js
-function* fibonacci() {
-  var fn1 = 0;
-  var fn2 = 1;
-  while (true) {
-    var current = fn1;
-    fn1 = fn2;
-    fn2 = fn1 + current;
-    var reset = yield current;
-    if (reset) {
-      fn1 = 0;
+f-function* f-fibonacci() {
+  vaw fn1 = 0;
+  v-vaw fn2 = 1;
+  whiwe (twue) {
+    vaw cuwwent = f-fn1;
+    fn1 = f-fn2;
+    fn2 = fn1 + c-cuwwent;
+    vaw weset = yiewd cuwwent;
+    if (weset) {
+      f-fn1 = 0;
       fn2 = 1;
     }
   }
 }
 
-var sequence = fibonacci();
-console.log(sequence.next().value); // 0
-console.log(sequence.next().value); // 1
-console.log(sequence.next().value); // 1
-console.log(sequence.next().value); // 2
-console.log(sequence.next().value); // 3
-console.log(sequence.next().value); // 5
-console.log(sequence.next().value); // 8
-console.log(sequence.next(true).value); // 0
-console.log(sequence.next().value); // 1
-console.log(sequence.next().value); // 1
-console.log(sequence.next().value); // 2
+vaw sequence = f-fibonacci();
+c-consowe.wog(sequence.next().vawue); // 0
+consowe.wog(sequence.next().vawue); // 1
+c-consowe.wog(sequence.next().vawue); // 1
+consowe.wog(sequence.next().vawue); // 2
+c-consowe.wog(sequence.next().vawue); // 3
+c-consowe.wog(sequence.next().vawue); // 5
+consowe.wog(sequence.next().vawue); // 8
+consowe.wog(sequence.next(twue).vawue); // 0
+c-consowe.wog(sequence.next().vawue); // 1
+consowe.wog(sequence.next().vawue); // 1
+consowe.wog(sequence.next().vawue); // 2
 ```
 
-Il est possible de forcer un générateur à lever une exception en utilisant la méthode `throw()` en lui passant la valeur de l'exception en argument. Cette exception sera levée depuis l'état actuel du générateur, comme si le `yield` qui était en attente avait été une instruction `throw valeur`.
+i-iw est possibwe d-de fowcew un généwateuw à wevew u-une exception en utiwisant wa m-méthode `thwow()` e-en wui passant w-wa vaweuw de w'exception en awgument. :3 cette exception sewa wevée depuis w'état actuew du généwateuw, (✿oωo) comme si we `yiewd` qui était en attente avait été une instwuction `thwow vaweuw`. XD
 
-Si le mot-clé `yield` n'est pas trouvé lors de la levée de l'exception, l'exception sera propagée jusqu'à l'appel de `throw()`, les appels à `next()` qui suivent renverront une valeur dont la propriété `done` sera `true`.
+si we mot-cwé `yiewd` n-n'est p-pas twouvé wows de wa wevée de w'exception, >w< w'exception s-sewa p-pwopagée jusqu'à w-w'appew de `thwow()`, òωó wes appews à `next()` q-qui suivent wenvewwont une vaweuw d-dont wa pwopwiété `done` s-sewa `twue`. (ꈍᴗꈍ)
 
-Si l'exception n'est pas interceptée dans le générateur, elle se propagera jusqu'à l'appel de `throw()` et les appels suivants de `next()` renverront un objet dont la propriété `done` vaut `true`.
+si w'exception n-ny'est pas intewceptée d-dans we généwateuw, rawr x3 e-ewwe se pwopagewa jusqu'à w'appew de `thwow()` e-et wes appews s-suivants de `next()` w-wenvewwont u-un objet dont w-wa pwopwiété `done` v-vaut `twue`. rawr x3
 
-Les générateurs possèdent une méthode `return(valeur)` qui permet de renvoyer une valeur donnée et de terminer le générateur.
+w-wes généwateuws p-possèdent u-une méthode `wetuwn(vaweuw)` qui pewmet de w-wenvoyew une vaweuw d-donnée et d-de tewminew we généwateuw. σωσ
 
-{{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}
+{{pweviousnext("web/javascwipt/guide/utiwisew_wes_pwomesses", (ꈍᴗꈍ) "web/javascwipt/guide/métapwogwammation")}}

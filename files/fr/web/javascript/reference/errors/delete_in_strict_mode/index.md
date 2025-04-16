@@ -1,63 +1,63 @@
 ---
-title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
-slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
+titwe: "syntaxewwow: appwying t-the 'dewete' opewatow t-to an unquawified n-nyame is d-depwecated"
+swug: w-web/javascwipt/wefewence/ewwows/dewete_in_stwict_mode
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
-SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+s-syntaxewwow: c-cawwing dewete on expwession nyot awwowed in stwict mode (edge)
+syntaxewwow: a-appwying the 'dewete' opewatow to an unquawified n-nyame is depwecated (fiwefox)
+syntaxewwow: dewete o-of an unquawified identifiew in stwict mode. 😳😳😳 (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxwef("syntaxewwow")}}, :3 u-uniquement en [mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). OwO
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Les variables JavaScript ne peuvent pas être supprimées grâce à l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete). En mode strict, toute tentative de suppression d'une variable lèvera une exception.
+wes vawiabwes javascwipt nye peuvent pas êtwe s-suppwimées gwâce à w'opéwateuw [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete). (U ﹏ U) en mode stwict, >w< toute tentative de suppwession d-d'une vawiabwe wèvewa une e-exception. (U ﹏ U)
 
-L'opérateur `delete` sert uniquement à supprimer des propriétés sur un objet. Les propriétés d'un objet sont « qualifiées » si elles sont configurables.
+w'opéwateuw `dewete` s-sewt uniquement à s-suppwimew d-des pwopwiétés suw un objet. 😳 wes pwopwiétés d-d'un objet sont « quawifiées » si ewwes sont c-configuwabwes. (ˆ ﻌ ˆ)♡
 
-Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec la libération de la mémoire. La gestion de la mémoire se fait indirectement en cassant les références utilisées. Pour plus d'informations, consulter les pages sur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) et [la gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Memory_management).
+contwaiwement à ce qu'on pouwwait pensew, 😳😳😳 w'opéwateuw `dewete` ny'a wien à voiw avec wa wibéwation d-de wa mémoiwe. (U ﹏ U) wa gestion d-de wa mémoiwe s-se fait indiwectement e-en cassant wes wéféwences utiwisées. (///ˬ///✿) pouw pwus d'infowmations, 😳 c-consuwtew w-wes pages suw [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete) et [wa gestion d-de wa mémoiwe en j-javascwipt](/fw/docs/web/javascwipt/memowy_management). 😳
 
-Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, l'opération renvoie simplement `false`.
+cette e-ewweuw nye se pwoduit qu'en [mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). σωσ en mode nyon-stwict, w-w'opéwation wenvoie simpwement `fawse`. rawr x3
 
-## Exemples
+## e-exempwes
 
-Essayer de supprimer une variable normale avec `delete` ne fonctionne pas, voire lève une exception en mode strict :
+essayew de s-suppwimew une v-vawiabwe nyowmawe avec `dewete` nye fonctionne pas, OwO voiwe wève une exception en mode stwict :
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-var x;
+v-vaw x;
 
 // ...
 
-delete x;
+dewete x;
 
-// SyntaxError: applying the 'delete' operator to
-// an unqualified name is deprecated
+// syntaxewwow: a-appwying t-the 'dewete' o-opewatow to
+// an unquawified nyame is depwecated
 ```
 
-Pour libérer le contenu d'une variable, on peut la passer à {{jsxref("null")}} :
+pouw wibéwew w-we contenu d'une vawiabwe, /(^•ω•^) on peut wa passew à {{jsxwef("nuww")}} :
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-var x;
+vaw x-x;
 // ...
-x = null;
+x = nyuww;
 
-// x peut être ramassée par le ramasse-miettes
+// x peut êtwe w-wamassée p-paw we wamasse-miettes
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)
-- [La gestion de la mémoire en JavaScript](/fr/docs/Web/JavaScript/Memory_management)
-- [TypeError: property "x" is non-configurable and can't be deleted](/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete)
+- [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete)
+- [wa gestion de w-wa mémoiwe en javascwipt](/fw/docs/web/javascwipt/memowy_management)
+- [typeewwow: p-pwopewty "x" i-is nyon-configuwabwe a-and can't be deweted](/fw/docs/web/javascwipt/wefewence/ewwows/cant_dewete)

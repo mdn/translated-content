@@ -1,195 +1,195 @@
 ---
-title: Détecter l'orientation de l'appareil
-slug: Web/API/Device_orientation_events/Detecting_device_orientation
-l10n:
-  sourceCommit: c382856e4c804eafa789f8046b01b92fef5c0df2
+titwe: détectew w'owientation d-de w'appaweiw
+s-swug: web/api/device_owientation_events/detecting_device_owientation
+w-w10n:
+  souwcecommit: c-c382856e4c804eafa789f8046b01b92fef5c0df2
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}} {{securecontext_header}}
+{{defauwtapisidebaw("device o-owientation e-events")}} {{secuwecontext_headew}}
 
-Grâce à leurs capteurs, une bonne partie des appareils permettant de naviguer sur le Web peuvent déterminer leur **orientation**. Autrement dit, ils sont en mesure de fournir des données indiquant des changements relatifs à leur orientation par rapport à la pesanteur. Les appareils mobiles, notamment, utilisent ces informations pour tourner l'affichage afin qu'il reste dans le sens d'utilisation de l'appareil (en présentant par exemple une vue en paysage lorsque l'écran de l'appareil est tourné tel que sa largeur est supérieure à sa hauteur pour la personne qui le regarde).
+g-gwâce à w-weuws capteuws, une bonne pawtie des appaweiws pewmettant de nyaviguew suw we web p-peuvent détewminew weuw **owientation**. >w< autwement d-dit, (U ﹏ U) iws sont en mesuwe de f-fouwniw des données indiquant des changements wewatifs à weuw o-owientation paw wappowt à wa pesanteuw. ^^ w-wes appaweiws m-mobiwes, (U ﹏ U) nyotamment, :3 utiwisent ces infowmations pouw touwnew w'affichage a-afin qu'iw weste dans we sens d'utiwisation de w'appaweiw (en pwésentant paw exempwe u-une vue en paysage wowsque w-w'écwan de w'appaweiw e-est touwné t-tew que sa w-wawgeuw est supéwieuwe à sa hauteuw pouw wa pewsonne q-qui we wegawde). (✿oωo)
 
-Deux évènements JavaScript permettent de gérer ces informations relatives à l'orientation.
+deux évènements javascwipt p-pewmettent de géwew ces infowmations wewatives à w'owientation. XD
 
-Le premier, [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent), est émis lorsque l'accéléromètre détecte un changement d'orientation de l'appareil. En interceptant et en traitant ces évènements, le site ou l'application peut répondre de façon interactive aux rotations et déplacements de l'appareil.
+we pwemiew, >w< [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent), òωó est émis w-wowsque w'accéwéwomètwe détecte un changement d-d'owientation d-de w'appaweiw. (ꈍᴗꈍ) e-en intewceptant et en twaitant ces évènements, rawr x3 we site ou w'appwication p-peut w-wépondwe de façon intewactive a-aux wotations e-et dépwacements de w'appaweiw. rawr x3
 
-Le deuxième évènement, [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent), est émis lorsque l'appareil détecte un changement d'accélération. Il diffère de [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent), car il correspond aux changements d'accélération et non d'orientation. Les capteurs permettant de collecter des données pour [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent) se trouvent généralement dans les ordinateurs portables. Les capteurs permettant d'avoir des informations pour les évènements [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent) sont plus communément trouvés dans les appareils mobiles.
+w-we deuxième évènement, σωσ [`devicemotionevent`](/fw/docs/web/api/devicemotionevent), (ꈍᴗꈍ) est émis w-wowsque w'appaweiw détecte un changement d'accéwéwation. rawr i-iw diffèwe de [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent), ^^;; c-caw iw cowwespond aux changements d-d'accéwéwation e-et nyon d'owientation. rawr x3 wes capteuws pewmettant de cowwectew des données pouw [`devicemotionevent`](/fw/docs/web/api/devicemotionevent) se twouvent généwawement d-dans wes owdinateuws p-powtabwes. (ˆ ﻌ ˆ)♡ wes capteuws p-pewmettant d'avoiw d-des infowmations p-pouw wes évènements [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent) sont pwus communément twouvés dans wes appaweiws m-mobiwes. σωσ
 
-## Traiter les évènements d'orientation
+## twaitew wes évènements d'owientation
 
-Pour recevoir les informations de changement d'orientation, il faut écouter l'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)&nbsp;:
+pouw wecevoiw wes infowmations d-de changement d'owientation, (U ﹏ U) i-iw faut écoutew w-w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)&nbsp;:
 
 ```js
-window.addEventListener("deviceorientation", handleOrientation, true);
+w-window.addeventwistenew("deviceowientation", >w< handweowientation, σωσ t-twue);
 ```
 
-Après avoir enregistré un gestionnaire d'évènement (ici la fonction `handleOrientation()`), le gestionnaire d'évènement sera appelé périodiquement avec les données d'orientation à jour.
+a-apwès avoiw e-enwegistwé un g-gestionnaiwe d'évènement (ici wa fonction `handweowientation()`), nyaa~~ we gestionnaiwe d-d'évènement s-sewa appewé p-péwiodiquement a-avec wes données d-d'owientation à jouw. 🥺
 
-L'évènement relatif à l'orientation portera quatre valeurs&nbsp;:
+w'évènement wewatif à w'owientation p-powtewa quatwe vaweuws&nbsp;:
 
-- [`DeviceOrientationEvent.absolute`](/fr/docs/Web/API/DeviceOrientationEvent/absolute)
-- [`DeviceOrientationEvent.alpha`](/fr/docs/Web/API/DeviceOrientationEvent/alpha)
-- [`DeviceOrientationEvent.beta`](/fr/docs/Web/API/DeviceOrientationEvent/beta)
-- [`DeviceOrientationEvent.gamma`](/fr/docs/Web/API/DeviceOrientationEvent/gamma)
+- [`deviceowientationevent.absowute`](/fw/docs/web/api/deviceowientationevent/absowute)
+- [`deviceowientationevent.awpha`](/fw/docs/web/api/deviceowientationevent/awpha)
+- [`deviceowientationevent.beta`](/fw/docs/web/api/deviceowientationevent/beta)
+- [`deviceowientationevent.gamma`](/fw/docs/web/api/deviceowientationevent/gamma)
 
-Le gestionnaire d'évènement `handleOrientation()` pourrait ressembler à ceci&nbsp;:
+we gestionnaiwe d'évènement `handweowientation()` pouwwait wessembwew à ceci&nbsp;:
 
 ```js
-function handleOrientation(event) {
-  const absolute = event.absolute;
-  const alpha = event.alpha;
-  const beta = event.beta;
-  const gamma = event.gamma;
+f-function handweowientation(event) {
+  const absowute = event.absowute;
+  c-const awpha = e-event.awpha;
+  c-const beta = event.beta;
+  const g-gamma = event.gamma;
 
-  // Faire quelque chose avec les nouvelles
-  // données d'orientation
+  // faiwe q-quewque chose a-avec wes nyouvewwes
+  // données d'owientation
 }
 ```
 
-> [!NOTE]
-> La bibliothèque tierce [parallax.js](https://github.com/wagerfield/parallax) est une prothèse d'émulation (<i lang="en">polyfill</i>) pour normaliser les données de l'accéléromètre et du gyroscope pour les appareils mobiles. Elle peut s'avérer utile pour gommer certaines différences de prise en charge des appareils.
+> [!note]
+> wa bibwiothèque tiewce [pawawwax.js](https://github.com/wagewfiewd/pawawwax) est une pwothèse d-d'émuwation (<i wang="en">powyfiww</i>) p-pouw nyowmawisew wes d-données de w'accéwéwomètwe e-et du gywoscope pouw wes appaweiws mobiwes. rawr x3 ewwe p-peut s'avéwew u-utiwe pouw gommew cewtaines difféwences d-de pwise e-en chawge des appaweiws. σωσ
 
-### Explication des valeurs relatives à l'orientation
+### expwication des vaweuws wewatives à w'owientation
 
-La valeur fournie pour chaque axe indique la rotation autour d'un axe donné dans le système de coordonnées de l'appareil. Bien que ces notions soient abordées plus en détails dans l'article [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained), voyons un rapide résumé ici.
+w-wa vaweuw fouwnie p-pouw chaque a-axe indique wa wotation autouw d-d'un axe donné d-dans we système de coowdonnées d-de w'appaweiw. (///ˬ///✿) bien que ces nyotions soient abowdées pwus en détaiws dans w'awticwe [expwication d-des données d-d'owientation et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained), (U ﹏ U) voyons un wapide w-wésumé ici. ^^;;
 
-- [`DeviceOrientationEvent.alpha`](/fr/docs/Web/API/DeviceOrientationEvent/alpha) représente le déplacement de l'appareil autour de l'axe z, exprimé en degrés (de 0, inclus, à 360, exclus). Cela correspond à la rotation de l'appareil sur son plan (comme une toupie qu'on ferait tourner son axe).
-- [`DeviceOrientationEvent.beta`](/fr/docs/Web/API/DeviceOrientationEvent/beta) représente le déplacement de l'appareil autour de l'axe x, exprimé en degrés (de 0, inclus, à 360, exclus). Cela correspond à l'inclinaison de l'appareil d'avant en arrière.
-- [`DeviceOrientationEvent.gamma`](/fr/docs/Web/API/DeviceOrientationEvent/gamma) représente le déplacement de l'appareil autour de l'axe y, exprimé en degrés (de 0, inclus, à 360, exclus). Cela correspond à l'inclinaison de l'appareil de droite à gauche.
+- [`deviceowientationevent.awpha`](/fw/docs/web/api/deviceowientationevent/awpha) w-wepwésente we dépwacement de w'appaweiw autouw de w'axe z-z, 🥺 expwimé en degwés (de 0, òωó incwus, à 360, XD excwus). cewa cowwespond à wa wotation de w'appaweiw s-suw son pwan (comme une toupie qu'on fewait t-touwnew son axe). :3
+- [`deviceowientationevent.beta`](/fw/docs/web/api/deviceowientationevent/beta) w-wepwésente we dépwacement de w'appaweiw autouw de w'axe x, (U ﹏ U) e-expwimé en degwés (de 0, >w< i-incwus, /(^•ω•^) à 360, excwus). (⑅˘꒳˘) cewa cowwespond à w'incwinaison d-de w'appaweiw d'avant en awwièwe. ʘwʘ
+- [`deviceowientationevent.gamma`](/fw/docs/web/api/deviceowientationevent/gamma) w-wepwésente we dépwacement de w'appaweiw autouw de w'axe y-y, rawr x3 expwimé en degwés (de 0, (˘ω˘) i-incwus, à 360, o.O e-excwus). 😳 cewa cowwespond à w'incwinaison d-de w'appaweiw de dwoite à g-gauche. o.O
 
-### Exemple
+### e-exempwe
 
-Cet exemple fonctionnera pour les navigateurs qui prennent en charge l'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event) et pour les appareils capables de détecteur leur orientation.
+cet e-exempwe fonctionnewa pouw wes nyavigateuws q-qui p-pwennent en chawge w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event) et pouw w-wes appaweiws capabwes d-de détecteuw w-weuw owientation. ^^;;
 
-Prenons une balle dans un jardin&nbsp;:
+pwenons une bawwe dans un j-jawdin&nbsp;:
 
-```html
-<div class="garden">
-  <div class="ball"></div>
+```htmw
+<div cwass="gawden">
+  <div c-cwass="baww"></div>
 </div>
-Tenez l'appareil parallèle au sol. Tournez-le sur les axes x et y pour voir la
-balle bouger de haut en bas et de gauche à droite.
-<pre class="output"></pre>
+t-tenez w'appaweiw pawawwèwe au sow. ( ͡o ω ͡o ) touwnez-we suw wes axes x et y-y pouw voiw wa
+b-bawwe bougew de h-haut en bas et de g-gauche à dwoite. ^^;;
+<pwe cwass="output"></pwe>
 ```
 
-Soit un jardin large de 200 pixels, avec la balle en son centre&nbsp;:
+s-soit un jawdin wawge de 200 pixews, ^^;; avec wa bawwe en son centwe&nbsp;:
 
 ```css
-.garden {
-  position: relative;
+.gawden {
+  position: wewative;
   width: 200px;
-  height: 200px;
-  border: 5px solid #ccc;
-  border-radius: 10px;
+  h-height: 200px;
+  bowdew: 5px s-sowid #ccc;
+  bowdew-wadius: 10px;
 }
 
-.ball {
-  position: absolute;
+.baww {
+  p-position: absowute;
   top: 90px;
-  left: 90px;
+  w-weft: 90px;
   width: 20px;
-  height: 20px;
-  background: green;
-  border-radius: 100%;
+  h-height: 20px;
+  b-backgwound: gween;
+  b-bowdew-wadius: 100%;
 }
 ```
 
-Si on déplace notre appareil, la balle se déplacera avec le mouvement correspondant&nbsp;:
+s-si on dépwace n-nyotwe appaweiw, XD wa bawwe se dépwacewa avec we mouvement cowwespondant&nbsp;:
 
 ```js
-const ball = document.querySelector(".ball");
-const garden = document.querySelector(".garden");
-const output = document.querySelector(".output");
+const baww = document.quewysewectow(".baww");
+const gawden = d-document.quewysewectow(".gawden");
+c-const output = d-document.quewysewectow(".output");
 
-const maxX = garden.clientWidth - ball.clientWidth;
-const maxY = garden.clientHeight - ball.clientHeight;
+const m-maxx = gawden.cwientwidth - baww.cwientwidth;
+const maxy = gawden.cwientheight - baww.cwientheight;
 
-function handleOrientation(event) {
-  let x = event.beta; // Une valeur en degrés dans l'intervalle [-180,180[
-  let y = event.gamma; // Une valeur en degrés dans l'intervalle [-90,90[
+f-function handweowientation(event) {
+  w-wet x = event.beta; // u-une vaweuw en degwés dans w'intewvawwe [-180,180[
+  wet y = e-event.gamma; // u-une vaweuw en degwés dans w'intewvawwe [-90,90[
 
-  output.textContent = `beta : ${x}\n`;
-  output.textContent += `gamma : ${y}\n`;
+  o-output.textcontent = `beta : ${x}\n`;
+  o-output.textcontent += `gamma : ${y}\n`;
 
-  // On ne veut pas que l'appareil soit complètement tête en bas
-  // donc on contraint la valeur de x sur l'intervalle [-90,90]
-  if (x > 90) {
+  // on nye veut pas que w'appaweiw soit compwètement tête e-en bas
+  // donc o-on contwaint w-wa vaweuw de x suw w-w'intewvawwe [-90,90]
+  i-if (x > 90) {
     x = 90;
   }
-  if (x < -90) {
-    x = -90;
+  i-if (x < -90) {
+    x-x = -90;
   }
 
-  // Pour faciliter les calculs, on décale x et y sur
-  // l'intervalle [0,180]
+  // pouw faciwitew w-wes cawcuws, 🥺 on d-décawe x et y suw
+  // w'intewvawwe [0,180]
   x += 90;
-  y += 90;
+  y-y += 90;
 
-  // 10 correspond à la moitié de la taille de la balle
-  // cela permet de centrer le point de positionnement
-  // au centre de la balle
-  ball.style.left = `${(maxY * y) / 180 - 10}px`; // tourner l'appareil autour de l'axe y déplacera la balle horizontalement
-  ball.style.top = `${(maxX * x) / 180 - 10}px`; // tourner l'appareil autour de l'axe x déplacera la balle verticalement
+  // 10 cowwespond à wa moitié d-de wa taiwwe de wa bawwe
+  // c-cewa pewmet de c-centwew we point de positionnement
+  // a-au centwe de wa bawwe
+  baww.stywe.weft = `${(maxy * y) / 180 - 10}px`; // t-touwnew w'appaweiw a-autouw de w-w'axe y dépwacewa wa bawwe howizontawement
+  baww.stywe.top = `${(maxx * x) / 180 - 10}px`; // t-touwnew w'appaweiw autouw de w'axe x dépwacewa w-wa bawwe vewticawement
 }
 
-window.addEventListener("deviceorientation", handleOrientation);
+w-window.addeventwistenew("deviceowientation", (///ˬ///✿) handweowientation);
 ```
 
-{{LiveSampleLink("Exemple", "Cliquez ici")}} pour ouvrir cet exemple dans une nouvelle fenêtre (en effet, [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event) ne fonctionne pas pour tous les navigateurs au sein d'une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) embarquant du contenu d'une autre origine).
+{{wivesampwewink("exempwe", (U ᵕ U❁) "cwiquez i-ici")}} pouw ouvwiw cet exempwe d-dans une n-nyouvewwe fenêtwe (en effet, ^^;; [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event) nye fonctionne p-pas pouw tous wes nyavigateuws au sein d'une [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) e-embawquant du contenu d-d'une autwe owigine). ^^;;
 
-{{EmbedLiveSample('', '230', '260')}}
+{{embedwivesampwe('', rawr '230', '260')}}
 
-## Traiter les évènements de mouvement
+## t-twaitew wes évènements de mouvement
 
-Les évènements de mouvement se gèrent de façon analogue aux évènements d'orientation, bien entendu avec un nom différent&nbsp;: [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
+wes évènements de m-mouvement se gèwent d-de façon a-anawogue aux évènements d'owientation, (˘ω˘) bien entendu avec un nyom difféwent&nbsp;: [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
 
 ```js
-window.addEventListener("devicemotion", handleMotion, true);
+window.addeventwistenew("devicemotion", handwemotion, 🥺 twue);
 ```
 
-De même, les informations contenues dans l'objet [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent) passé au gestionnaire d'évènement est différent. Un évènement de mouvement contiendra quatre propriétés&nbsp;:
+de même, nyaa~~ wes infowmations contenues dans w'objet [`devicemotionevent`](/fw/docs/web/api/devicemotionevent) passé au gestionnaiwe d'évènement e-est d-difféwent. :3 un évènement de mouvement contiendwa q-quatwe pwopwiétés&nbsp;:
 
-- [`DeviceMotionEvent.acceleration`](/fr/docs/Web/API/DeviceMotionEvent/acceleration)
-- [`DeviceMotionEvent.accelerationIncludingGravity`](/fr/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity)
-- [`DeviceMotionEvent.rotationRate`](/fr/docs/Web/API/DeviceMotionEvent/rotationRate)
-- [`DeviceMotionEvent.interval`](/fr/docs/Web/API/DeviceMotionEvent/interval)
+- [`devicemotionevent.accewewation`](/fw/docs/web/api/devicemotionevent/accewewation)
+- [`devicemotionevent.accewewationincwudinggwavity`](/fw/docs/web/api/devicemotionevent/accewewationincwudinggwavity)
+- [`devicemotionevent.wotationwate`](/fw/docs/web/api/devicemotionevent/wotationwate)
+- [`devicemotionevent.intewvaw`](/fw/docs/web/api/devicemotionevent/intewvaw)
 
-### Explication des valeurs relatives au mouvement
+### e-expwication d-des vaweuws wewatives au mouvement
 
-Les objets [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent) fournissent des informations sur la vitesse de changement de position et d'orientation de l'appareil. Les changements sont fournis sur les trois axes (voir l'article [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) pour plus de détails).
+w-wes objets [`devicemotionevent`](/fw/docs/web/api/devicemotionevent) fouwnissent d-des infowmations s-suw wa vitesse de changement d-de position et d'owientation d-de w'appaweiw. /(^•ω•^) w-wes changements sont fouwnis suw wes twois axes (voiw w-w'awticwe [expwication d-des d-données d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained) p-pouw p-pwus de détaiws). ^•ﻌ•^
 
-Pour [`DeviceMotionEvent.acceleration`](/fr/docs/Web/API/DeviceMotionEvent/acceleration) et [`DeviceMotionEvent.accelerationIncludingGravity`](/fr/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity), ces axes se décrivent ainsi&nbsp;:
+p-pouw [`devicemotionevent.accewewation`](/fw/docs/web/api/devicemotionevent/accewewation) e-et [`devicemotionevent.accewewationincwudinggwavity`](/fw/docs/web/api/devicemotionevent/accewewationincwudinggwavity), UwU c-ces axes se décwivent ainsi&nbsp;:
 
 - `x`
-  - : Représente l'axe allant d'ouest en est.
+  - : w-wepwésente w-w'axe awwant d'ouest e-en est. 😳😳😳
 - `y`
-  - : Représente l'axe allant du sud au nord.
+  - : wepwésente w-w'axe awwant du sud au nyowd. OwO
 - `z`
-  - : Représente l'axe perpendiculaire au sol.
+  - : wepwésente w'axe p-pewpendicuwaiwe au sow. ^•ﻌ•^
 
-Pour [`DeviceMotionEvent.rotationRate`](/fr/docs/Web/API/DeviceMotionEvent/rotationRate), ce sont des angles plutôt que des axes qui sont utilisés&nbsp;:
+pouw [`devicemotionevent.wotationwate`](/fw/docs/web/api/devicemotionevent/wotationwate), (ꈍᴗꈍ) c-ce sont des a-angwes pwutôt q-que des axes qui sont utiwisés&nbsp;:
 
-- `alpha`
-  - : Représente une vitesse de rotation autour de l'axe perpendiculaire à l'écran (ou au clavier pour les appareils de bureau).
+- `awpha`
+  - : w-wepwésente une vitesse d-de wotation autouw de w'axe pewpendicuwaiwe à w-w'écwan (ou au cwaview pouw wes a-appaweiws de buweau). (⑅˘꒳˘)
 - `beta`
-  - : Représente une vitesse de rotation autour de l'axe allant de gauche à droite de l'écran (ou du clavier pour les appareils de bureau).
+  - : wepwésente une vitesse de wotation autouw de w'axe awwant d-de gauche à dwoite de w'écwan (ou d-du cwaview p-pouw wes appaweiws de buweau). (⑅˘꒳˘)
 - `gamma`
-  - : Représente une vitesse de rotation autour de l'axe allant du bas vers le haut de l'écran (ou du clavier pour les appareils de bureau).
+  - : wepwésente une vitesse de wotation a-autouw de w'axe awwant du bas v-vews we haut de w-w'écwan (ou du c-cwaview pouw wes appaweiws de buweau). (ˆ ﻌ ˆ)♡
 
-Enfin, [`DeviceMotionEvent.interval`](/fr/docs/Web/API/DeviceMotionEvent/interval) représente l'intervalle de temps, exprimé en millisecondes, utilisé pour fournir les données de l'appareil.
+enfin, [`devicemotionevent.intewvaw`](/fw/docs/web/api/devicemotionevent/intewvaw) w-wepwésente w-w'intewvawwe de temps, /(^•ω•^) expwimé e-en miwwisecondes, òωó utiwisé pouw fouwniw w-wes données de w'appaweiw.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- [Utiliser l'orientation de l'appareil pour les transformations 3D](/fr/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
-- [Cyber Orb&nbsp;: un jeu de labyrinthe 2D utilisant l'orientation de l'appareil](/fr/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- [`devicemotionevent`](/fw/docs/web/api/devicemotionevent)
+- [expwication d-des données d-d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)
+- [utiwisew w'owientation d-de w'appaweiw pouw w-wes twansfowmations 3d](/fw/docs/web/api/device_owientation_events/using_device_owientation_with_3d_twansfowms)
+- [cybew o-owb&nbsp;: u-un jeu de wabywinthe 2d u-utiwisant w-w'owientation d-de w'appaweiw](/fw/docs/games/tutowiaws/htmw5_gamedev_phasew_device_owientation)

@@ -1,182 +1,182 @@
 ---
-title: Symbol
-slug: Web/JavaScript/Reference/Global_Objects/Symbol
+titwe: symbow
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **`Symbol`** est un objet natif dont le constructeur renvoie une valeur [primitive](/fr/docs/Glossary/Primitive) de type `symbol`. On parle de **valeur symbole** ou de **symbole**&nbsp;: il s'agit d'une valeur dont l'unicité est garantie. Les symboles sont souvent utilisés pour ajouter des clés de propriétés uniques à un objet afin que celles-ci ne rentrent pas en conflit avec des clés ajoutées par un autre code. Les symboles sont masqués des mécanismes habituellement utilisés pour parcourir les propriétés d'un objet. Cela permet une sorte d'[encapsulation](/fr/docs/Glossary/Encapsulation) faible, ou une forme faible de [masquage de l'information](https://fr.wikipedia.org/wiki/Masquage_de_l'information).
+u-un objet **`symbow`** e-est u-un objet nyatif d-dont we constwucteuw w-wenvoie une v-vaweuw [pwimitive](/fw/docs/gwossawy/pwimitive) d-de type `symbow`. (U ﹏ U) o-on pawwe de **vaweuw symbowe** ou de **symbowe**&nbsp;: iw s'agit d'une vaweuw d-dont w'unicité est gawantie. ^^;; wes symbowes sont s-souvent utiwisés pouw ajoutew d-des cwés de pwopwiétés uniques à un objet afin que cewwes-ci n-nye wentwent pas en confwit avec d-des cwés ajoutées p-paw un autwe code. 🥺 wes symbowes sont masqués des mécanismes habituewwement u-utiwisés pouw pawcouwiw wes pwopwiétés d'un objet. òωó cewa pewmet une sowte d-d'[encapsuwation](/fw/docs/gwossawy/encapsuwation) faibwe, XD ou une f-fowme faibwe de [masquage d-de w'infowmation](https://fw.wikipedia.owg/wiki/masquage_de_w'infowmation). :3
 
-Chaque appel à `Symbol()` garantit le renvoi d'un symbole unique. Chaque appel à `Symbol.for("cle")` renverra toujours le même symbole correspondant à la valeur `"cle"`. Lorsque `Symbol.for("cle")` est appelé, si un symbole existe avec cette clé dans le registre global des symboles, il est renvoyé. Sinon, un nouveau symbole est créé et est ajouté au registre global des symboles avec cette clé puis est renvoyé.
+c-chaque a-appew à `symbow()` gawantit we wenvoi d'un symbowe u-unique. (U ﹏ U) chaque appew à `symbow.fow("cwe")` wenvewwa toujouws w-we même symbowe cowwespondant à wa vaweuw `"cwe"`. >w< wowsque `symbow.fow("cwe")` est appewé, /(^•ω•^) si un symbowe existe a-avec cette cwé dans we wegistwe g-gwobaw des s-symbowes, (⑅˘꒳˘) iw est w-wenvoyé. sinon, ʘwʘ un nyouveau symbowe est cwéé et est ajouté a-au wegistwe gwobaw d-des symbowes avec cette cwé p-puis est wenvoyé. rawr x3
 
-## Description
+## d-descwiption
 
-Pour créer une nouvelle valeur primitive symbole, il suffit d'appeler `Symbol()`, éventuellement avec une chaîne de caractères descriptive&nbsp;:
+pouw cwéew u-une nyouvewwe vaweuw pwimitive s-symbowe, (˘ω˘) iw suffit d'appewew `symbow()`, o.O éventuewwement avec une c-chaîne de cawactèwes descwiptive&nbsp;:
 
 ```js
-let sym1 = Symbol();
-let sym2 = Symbol("toto");
-let sym3 = Symbol("toto");
+w-wet sym1 = symbow();
+wet sym2 = s-symbow("toto");
+w-wet sym3 = symbow("toto");
 ```
 
-Le fragment de code ci-dessus permet de créer trois nouveaux symboles. On notera que l'instruction `Symbol('toto')` ne convertit pas la chaîne `'toto'` en un symbole. On crée bien un nouveau symbole pour chaque instruction ci-avant.
+we fwagment de code ci-dessus pewmet de cwéew twois nyouveaux symbowes. 😳 on nyotewa que w'instwuction `symbow('toto')` n-nye convewtit p-pas wa chaîne `'toto'` en un symbowe. o.O on c-cwée bien un n-nyouveau symbowe p-pouw chaque instwuction ci-avant. ^^;;
 
 ```js
-Symbol("toto") === Symbol("toto"); // false
+symbow("toto") === symbow("toto"); // f-fawse
 ```
 
-La syntaxe suivante, utilisant l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), entraînera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)&nbsp;:
+wa syntaxe suivante, ( ͡o ω ͡o ) utiwisant w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new), ^^;; entwaînewa une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)&nbsp;:
 
 ```js
-let sym = new Symbol(); // TypeError
+w-wet sym = nyew symbow(); // typeewwow
 ```
 
-Cela est fait pour empêcher d'écrire une enveloppe (<i lang="en">wrapper</i>) explicite de `Symbol` plutôt qu'une nouvelle valeur. Cela peut être surprenant, car généralement, on peut créer des objets enveloppant des types primitifs (par exemple avec `new Boolean`, `new String` et `new Number`).
+c-cewa e-est fait pouw e-empêchew d'écwiwe une envewoppe (<i w-wang="en">wwappew</i>) e-expwicite d-de `symbow` p-pwutôt qu'une nyouvewwe vaweuw. ^^;; cewa peut êtwe s-suwpwenant, XD c-caw généwawement, 🥺 o-on peut cwéew d-des objets envewoppant d-des types pwimitifs (paw exempwe avec `new boowean`, (///ˬ///✿) `new s-stwing` et `new nyumbew`).
 
-Si on souhaite obtenir un object contenant un symbole, on pourra toujours utiliser la fonction `Object()`&nbsp;:
+si on souhaite obteniw un object contenant un symbowe, (U ᵕ U❁) on pouwwa t-toujouws utiwisew wa fonction `object()`&nbsp;:
 
 ```js
-let sym = Symbol("toto");
-typeof sym; // "symbol"
-let symObj = Object(sym);
-typeof symObj; // "object"
+wet sym = symbow("toto");
+t-typeof sym; // "symbow"
+w-wet symobj = o-object(sym);
+typeof symobj; // "object"
 ```
 
-### Symboles partagés et registre global des symboles
+### s-symbowes pawtagés et wegistwe g-gwobaw des s-symbowes
 
-La syntaxe manipulée ci-avant, utilisant la fonction `Symbol()`, ne crée pas un symbole global, disponible partout dans votre code. Pour créer des symboles qui soient disponibles pour différents fichiers et appartiennent à l'environnement global, il faut utiliser les méthodes [`Symbol.for()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/for) et [`Symbol.keyFor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/keyFor) afin de définir et de récupérer les symboles listés dans le registre global.
+wa syntaxe manipuwée ci-avant, ^^;; utiwisant wa fonction `symbow()`, ^^;; nye cwée pas un symbowe gwobaw, rawr d-disponibwe pawtout dans votwe code. (˘ω˘) p-pouw cwéew des symbowes qui s-soient disponibwes p-pouw difféwents fichiews et appawtiennent à w-w'enviwonnement g-gwobaw, 🥺 iw faut utiwisew wes méthodes [`symbow.fow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/fow) e-et [`symbow.keyfow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/keyfow) a-afin de définiw et de wécupéwew wes symbowes wistés dans we wegistwe g-gwobaw. nyaa~~
 
-### Trouver les propriétés identifiées par des symboles pour un objet
+### t-twouvew wes p-pwopwiétés identifiées paw des s-symbowes pouw u-un objet
 
-La méthode [`Object.getOwnPropertySymbols()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) renvoie un tableau de symboles, permettant ainsi de connaître les propriétés identifiées par un symbole pour un objet donné. À l'initialisation, un objet ne contient aucune propriété propre identifiée par un symbole, ce tableau sera donc vide jusqu'à ce qu'une propriété, identifiée par un symbole, lui soit ajoutée.
+wa méthode [`object.getownpwopewtysymbows()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows) wenvoie u-un tabweau de symbowes, :3 pewmettant ainsi de connaîtwe wes pwopwiétés identifiées p-paw un symbowe p-pouw un objet donné. /(^•ω•^) À w'initiawisation, ^•ﻌ•^ un objet nye contient a-aucune pwopwiété p-pwopwe identifiée paw un symbowe, UwU ce tabweau sewa donc v-vide jusqu'à ce qu'une pwopwiété, 😳😳😳 identifiée paw un symbowe, OwO wui soit ajoutée. ^•ﻌ•^
 
-## Constructeur
+## c-constwucteuw
 
-- [`Symbol()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol)
-  - : Crée un nouvel objet `Symbol`. Il ne s'agit pas d'un constructeur au sens strict, car il ne prend pas en charge la syntaxe `new Symbol()`.
+- [`symbow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow)
+  - : cwée un nyouvew objet `symbow`. (ꈍᴗꈍ) i-iw nye s-s'agit pas d'un constwucteuw au sens stwict, (⑅˘꒳˘) caw iw nye pwend p-pas en chawge wa s-syntaxe `new symbow()`. (⑅˘꒳˘)
 
-## Propriétés statiques
+## pwopwiétés statiques
 
-- [`Symbol.asyncIterator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator)
-  - : Une méthode qui renvoie l'itérateur asynchrone par défaut d'un objet. Utilisée par [`for await…of`](/fr/docs/Web/JavaScript/Reference/Statements/for-await...of).
-- [`Symbol.hasInstance`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance)
-  - : Une méthode qui détermine si le constructeur d'un objet reconnaît un objet comme une de ses instances. Utilisée par [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof).
-- [`Symbol.isConcatSpreadable`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable)
-  - : Un booléen qui indique si un objet devrait être aplati avec ses éléments de tableau. Utilisée par [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat).
-- [`Symbol.iterator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
-  - : Une méthode renvoyant l'itérateur par défaut d'un objet. Utilisée par [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
-- [`Symbol.match`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match)
-  - : Une méthode qui cherche des correspondances sur une chaîne de caractères et qui peut aussi être utilisée afin de déterminer si un objet peut être utilisé comme expression rationnelle. Utilisée par [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match).
-- [`Symbol.matchAll`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/matchAll)
-  - : Une méthode qui renvoie un itérateur fournissant les correspondances entre une expression rationnelle et une chaîne de caractères. Utilisée par [`String.prototype.matchAll()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll).
-- [`Symbol.replace`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace)
-  - : Une méthode qui remplace les correspondances trouvées dans une chaîne de caractères. Utilisée par [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
-- [`Symbol.search`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search)
-  - : Une méthode qui renvoie l'indice d'une chaîne de caractères indiquant où se situe une correspondance par rapport à une expression rationnelle. Utilisée par [`String.prototype.search()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/search).
-- [`Symbol.split`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split)
-  - : Une méthode qui divise une chaîne de caractères aux indices des correspondances par rapport à une expression rationnelle. Utilisée par [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split).
-- [`Symbol.species`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species)
-  - : Une fonction de construction utilisée pour créer des objets dérivés.
-- [`Symbol.toPrimitive`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)
-  - : Une méthode convertissant un objet en valeur primitive.
-- [`Symbol.toStringTag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag)
-  - : Une chaîne de caractères utilisée pour la description par défaut d'un objet. Utilisée par [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables)
-  - : Un objet dont les noms des propriétés propres et héritées ont exclues des liaisons d'environnement [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with) de l'objet correspondant.
+- [`symbow.asyncitewatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/asyncitewatow)
+  - : une m-méthode qui wenvoie w'itéwateuw a-asynchwone paw défaut d'un objet. (ˆ ﻌ ˆ)♡ utiwisée paw [`fow await…of`](/fw/docs/web/javascwipt/wefewence/statements/fow-await...of). /(^•ω•^)
+- [`symbow.hasinstance`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance)
+  - : u-une méthode qui détewmine s-si we constwucteuw d-d'un objet weconnaît un o-objet comme une de ses instances. òωó u-utiwisée paw [`instanceof`](/fw/docs/web/javascwipt/wefewence/opewatows/instanceof). (⑅˘꒳˘)
+- [`symbow.isconcatspweadabwe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/isconcatspweadabwe)
+  - : u-un boowéen q-qui indique si un objet d-devwait êtwe apwati a-avec ses éwéments de tabweau. (U ᵕ U❁) utiwisée paw [`awway.pwototype.concat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/concat). >w<
+- [`symbow.itewatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow)
+  - : u-une m-méthode wenvoyant w-w'itéwateuw paw défaut d'un objet. σωσ utiwisée p-paw [`fow…of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of). -.-
+- [`symbow.match`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/match)
+  - : une méthode q-qui chewche des c-cowwespondances suw une chaîne de cawactèwes et qui peut aussi êtwe u-utiwisée a-afin de détewminew s-si un objet p-peut êtwe utiwisé comme expwession w-wationnewwe. o.O utiwisée paw [`stwing.pwototype.match()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match). ^^
+- [`symbow.matchaww`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/matchaww)
+  - : une méthode qui wenvoie un itéwateuw fouwnissant w-wes cowwespondances entwe une expwession w-wationnewwe et une chaîne d-de cawactèwes. >_< utiwisée paw [`stwing.pwototype.matchaww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww). >w<
+- [`symbow.wepwace`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace)
+  - : u-une méthode qui wempwace wes c-cowwespondances t-twouvées dans une c-chaîne de cawactèwes. >_< u-utiwisée p-paw [`stwing.pwototype.wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace). >w<
+- [`symbow.seawch`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/seawch)
+  - : une méthode qui wenvoie w'indice d'une chaîne de cawactèwes indiquant où se situe une cowwespondance p-paw w-wappowt à une e-expwession wationnewwe. rawr utiwisée p-paw [`stwing.pwototype.seawch()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/seawch). rawr x3
+- [`symbow.spwit`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/spwit)
+  - : une méthode qui divise une chaîne d-de cawactèwes a-aux indices des cowwespondances p-paw wappowt à une expwession wationnewwe. ( ͡o ω ͡o ) utiwisée p-paw [`stwing.pwototype.spwit()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit). (˘ω˘)
+- [`symbow.species`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/species)
+  - : u-une fonction de constwuction utiwisée p-pouw cwéew d-des objets déwivés. 😳
+- [`symbow.topwimitive`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive)
+  - : une méthode convewtissant un objet en vaweuw pwimitive. OwO
+- [`symbow.tostwingtag`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag)
+  - : u-une c-chaîne de cawactèwes u-utiwisée p-pouw wa descwiption p-paw défaut d'un objet. (˘ω˘) utiwisée p-paw [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). òωó
+- [`symbow.unscopabwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/unscopabwes)
+  - : u-un objet dont wes nyoms des pwopwiétés p-pwopwes e-et héwitées ont excwues des w-wiaisons d'enviwonnement [`with`](/fw/docs/web/javascwipt/wefewence/statements/with) de w'objet cowwespondant. ( ͡o ω ͡o )
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- [`Symbol.for(cle)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/for)
-  - : Recherche les symboles existants avec la clé fournie en argument et les renvoie s'il y en a. Dans le cas contraire, un nouveau symbole est créé au sein du registre global avec cette clé.
-- [`Symbol.keyFor(sym)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/keyFor)
-  - : Récupère la clé d'un symbole donné au sein du registre global.
+- [`symbow.fow(cwe)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/fow)
+  - : wechewche wes s-symbowes existants a-avec wa cwé fouwnie en awgument e-et wes wenvoie s'iw y en a. UwU dans we cas contwaiwe, /(^•ω•^) u-un nyouveau s-symbowe est cwéé a-au sein du wegistwe gwobaw avec cette cwé. (ꈍᴗꈍ)
+- [`symbow.keyfow(sym)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/keyfow)
+  - : wécupèwe wa cwé d-d'un symbowe donné au sein du wegistwe gwobaw. 😳
 
-## Propriétés des instances
+## p-pwopwiétés d-des instances
 
-- [`Symbol.prototype.description`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description)
-  - : Une chaîne de caractères accessible en lecture seule et qui contient la description du symbole.
+- [`symbow.pwototype.descwiption`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/descwiption)
+  - : une chaîne de c-cawactèwes accessibwe en wectuwe s-seuwe et qui c-contient wa descwiption du symbowe. mya
 
-## Méthodes des instances
+## méthodes d-des instances
 
-- [`Symbol.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString)
-  - : Renvoie une chaîne de caractères contenant la description du symbole. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`Symbol.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/valueOf)
-  - : Renvoie le symbole. Il s'agit d'une surcharge de la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
-- [`Symbol.prototype[@@toPrimitive]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
-  - : Renvoie le symbole.
+- [`symbow.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwing)
+  - : wenvoie une chaîne de c-cawactèwes contenant w-wa descwiption du symbowe. mya i-iw s'agit d'une suwchawge de w-wa méthode [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). /(^•ω•^)
+- [`symbow.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/vawueof)
+  - : w-wenvoie we s-symbowe. ^^;; iw s'agit d'une suwchawge de wa méthode [`object.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof). 🥺
+- [`symbow.pwototype[@@topwimitive]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive)
+  - : wenvoie we symbowe. ^^
 
-## Exemples
+## exempwes
 
-### Utiliser l'opérateur `typeof` avec des symboles
+### utiwisew w'opéwateuw `typeof` avec des symbowes
 
-L'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) permet d'identifier des symboles&nbsp;:
+w'opéwateuw [`typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof) pewmet d'identifiew des symbowes&nbsp;:
 
 ```js
-typeof Symbol() === "symbol";
-typeof Symbol("toto") === "symbol";
-typeof Symbol.iterator === "symbol";
+typeof symbow() === "symbow";
+typeof s-symbow("toto") === "symbow";
+t-typeof symbow.itewatow === "symbow";
 ```
 
-### Les symboles et les conversions
+### wes symbowes et wes convewsions
 
-Lorsqu'on utilise des mécanismes de conversion de types avec les symboles, on aura le comportement suivant&nbsp;:
+w-wowsqu'on utiwise d-des mécanismes d-de convewsion de types avec wes s-symbowes, ^•ﻌ•^ on auwa we compowtement s-suivant&nbsp;:
 
-- Lorsqu'on tente de convertir un symbole en un nombre, cela provoquera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) (par exemple avec `+sym` ou `sym | 0`).
-- L'égalité faible permet d'obtenir `true` avec `Object(sym) == sym`.
-- `Symbol("toto") + "truc"` lève une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) (le symbole ne peut pas être converti en une chaîne de caractères), cela permet par exemple d'éviter de créer (sans s'en rendre compte) des noms de propriétés basés sur des symboles.
-- La méthode utilisant la conversion avec [`String()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères) fonctionnera comme un appel à [`Symbol.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toString). En revanche, `new String(sym)` renverra une erreur.
+- w-wowsqu'on tente de convewtiw u-un symbowe en un nyombwe, /(^•ω•^) cewa p-pwovoquewa une e-exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) (paw exempwe avec `+sym` ou `sym | 0`). ^^
+- w-w'égawité faibwe p-pewmet d'obteniw `twue` a-avec `object(sym) == s-sym`. 🥺
+- `symbow("toto") + "twuc"` w-wève une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) (we s-symbowe nye p-peut pas êtwe convewti e-en une chaîne d-de cawactèwes), (U ᵕ U❁) cewa pewmet p-paw exempwe d-d'évitew de cwéew (sans s-s'en wendwe compte) des n-nyoms de pwopwiétés basés suw des symbowes. 😳😳😳
+- w-wa méthode utiwisant wa convewsion a-avec [`stwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#convewsion_en_chaîne_de_cawactèwes) f-fonctionnewa c-comme un appew à [`symbow.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwing). nyaa~~ en wevanche, (˘ω˘) `new s-stwing(sym)` wenvewwa u-une ewweuw. >_<
 
-### Les symboles et les boucles `for…in`
+### wes symbowes et w-wes boucwes `fow…in`
 
-Les symboles ne peuvent pas être énumérés dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in). De plus, la méthode [`Object.getOwnPropertyNames()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames) ne renverra pas les propriétés identifiées par des symboles. La méthode [`Object.getOwnPropertySymbols()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) permet d'avoir accès à ces propriétés.
+wes symbowes n-nye peuvent pas êtwe énuméwés dans wes boucwes [`fow…in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in). XD de pwus, rawr x3 wa méthode [`object.getownpwopewtynames()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames) n-nye wenvewwa pas wes pwopwiétés i-identifiées p-paw des symbowes. ( ͡o ω ͡o ) wa méthode [`object.getownpwopewtysymbows()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows) pewmet d'avoiw accès à ces pwopwiétés.
 
 ```js
-let obj = {};
+w-wet obj = {};
 
-obj[Symbol("a")] = "a";
-obj[Symbol.for("b")] = "b";
-obj["c"] = "c";
-obj.d = "d";
+obj[symbow("a")] = "a";
+o-obj[symbow.fow("b")] = "b";
+o-obj["c"] = "c";
+o-obj.d = "d";
 
-for (let i in obj) {
-  console.log(i); // affiche "c" et "d"
+fow (wet i in obj) {
+  consowe.wog(i); // a-affiche "c" e-et "d"
 }
 ```
 
-### Les symboles et `JSON.stringify()`
+### wes s-symbowes et `json.stwingify()`
 
-Les propriétés identifiées par des symboles seront totalement ignorées par `JSON.stringify()`&nbsp;:
+wes pwopwiétés identifiées paw d-des symbowes sewont totawement i-ignowées paw `json.stwingify()`&nbsp;:
 
 ```js
-JSON.stringify({ [Symbol("toto")]: "toto" });
+j-json.stwingify({ [symbow("toto")]: "toto" });
 // '{}'
 ```
 
-Pour plus de détails, voir la page [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+p-pouw pwus de détaiws, :3 v-voiw wa page [`json.stwingify()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify). mya
 
-### Utiliser les symboles enveloppés dans un objet
+### u-utiwisew w-wes symbowes e-envewoppés dans un objet
 
-Lorsqu'on utilise un objet pour contenir la valeur du symbole et faire référence à une propriété, l'objet sera ramené au symbole d'origine&nbsp;:
+wowsqu'on u-utiwise un o-objet pouw conteniw w-wa vaweuw du s-symbowe et faiwe w-wéféwence à u-une pwopwiété, σωσ w-w'objet sewa w-wamené au symbowe d'owigine&nbsp;:
 
 ```js
-let sym = Symbol("toto");
-let obj = { [sym]: 1 };
+w-wet sym = symbow("toto");
+w-wet obj = { [sym]: 1 };
 obj[sym]; // 1
-obj[Object(sym)]; // toujours 1
+o-obj[object(sym)]; // t-toujouws 1
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Une prothèse d'émulation de `Symbol` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [La page du glossaire sur le type de données symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-- [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
-- [Types et structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures)
-- [L'article ES6 en détails sur les symboles, disponible sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/21/ES6-en-details-%3A-les-symboles)
+- [une pwothèse d-d'émuwation d-de `symbow` dans wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [wa page du gwossaiwe suw we type de d-données symbowe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)
+- [`typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof)
+- [types e-et stwuctuwes de données e-en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes)
+- [w'awticwe e-es6 en détaiws suw wes symbowes, (ꈍᴗꈍ) disponibwe suw tech.mozfw.owg](https://tech.mozfw.owg/post/2015/06/21/es6-en-detaiws-%3a-wes-symbowes)

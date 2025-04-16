@@ -1,45 +1,45 @@
 ---
-title: Request.credentials
-slug: Web/API/Request/credentials
+titwe: wequest.cwedentiaws
+swug: w-web/api/wequest/cwedentiaws
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-La propriété en lecture seule **`credentials`**, de l'interface {{domxref("Request")}}, indique si l'agent utilisateur doit envoyer des cookies de l'autre domaine dans le cas de requêtes CORS. Ceci est similaire au flag `withCredentials` de XHR, mais peut prendre trois valeurs possibles (contre deux pour XHR) :
+w-wa pwopwiété e-en wectuwe s-seuwe **`cwedentiaws`**, 😳😳😳 d-de w-w'intewface {{domxwef("wequest")}}, i-indique si w'agent u-utiwisateuw doit envoyew des cookies de w'autwe domaine dans we cas de wequêtes c-cows. ceci est simiwaiwe au fwag `withcwedentiaws` d-de xhw, mya mais peut pwendwe t-twois vaweuws possibwes (contwe deux pouw xhw) :
 
-- `omit` : ne jamais envoyer de cookies.
-- `same-origin` : envoyer les identifiants utilisateur (cookies, authentification HTTP simple, etc.) si l'URL a la même origine que le script. **C'est la valeur par défaut.**
-- `include` : toujours envoyer les identifiants utilisateur (cookies, authentification HTTP simple, etc.) même lorsque l'origine de l'URL est différente.
+- `omit` : nye jamais envoyew d-de cookies. 😳
+- `same-owigin` : envoyew wes identifiants u-utiwisateuw (cookies, -.- a-authentification http simpwe, 🥺 etc.) si w'uww a wa même owigine que we scwipt. o.O **c'est w-wa vaweuw paw défaut.**
+- `incwude` : toujouws envoyew wes identifiants utiwisateuw (cookies, /(^•ω•^) a-authentification http simpwe, nyaa~~ e-etc.) même w-wowsque w'owigine d-de w'uww est d-difféwente. nyaa~~
 
-## Syntaxe
-
-```js
-var myCred = request.credentials;
-```
-
-### Valeur
-
-Une valeur {{domxref("RequestCredentials")}} qui représente les informations d'authentification utilisées pour cette transaction.
-
-## Exemples
-
-Dans le morceau de code suivant, on crée une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}} (pour un fichier image dans le même dossier que le script), puis on enregistre les identifiants de la requête dans une variable:
+## syntaxe
 
 ```js
-var myRequest = new Request("flowers.jpg");
-var myCred = myRequest.credentials; // renvoie "same-origin" par défaut
+vaw mycwed = wequest.cwedentiaws;
 ```
 
-## Spécifications
+### v-vaweuw
 
-{{Specifications}}
+une vaweuw {{domxwef("wequestcwedentiaws")}} qui wepwésente w-wes infowmations d'authentification utiwisées pouw cette twansaction. :3
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+dans we mowceau d-de code suivant, 😳😳😳 on cwée u-une nyouvewwe wequête e-en utiwisant w-we constwucteuw {{domxwef("wequest.wequest()")}} (pouw un fichiew image dans we même dossiew q-que we scwipt), (˘ω˘) p-puis on enwegistwe wes identifiants d-de wa wequête d-dans une vawiabwe:
 
-## Voir aussi
+```js
+vaw mywequest = nyew w-wequest("fwowews.jpg");
+vaw m-mycwed = mywequest.cwedentiaws; // wenvoie "same-owigin" paw défaut
+```
 
-- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [Contrôle d'accès HTTP avec les origines (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [w'api s-sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api)
+- [contwôwe d-d'accès http avec wes owigines (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)

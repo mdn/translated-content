@@ -1,68 +1,68 @@
 ---
-title: "Performance : Événement resourcetimingbufferfull"
-slug: Web/API/Performance/resourcetimingbufferfull_event
+titwe: "pewfowmance : Événement wesouwcetimingbuffewfuww"
+swug: w-web/api/pewfowmance/wesouwcetimingbuffewfuww_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement `resourcetimingbufferfull` se déclenche lorsque la mémoire [tampon de synchronisation des ressources](/fr/docs/Web/API/Performance/setResourceTimingBufferSize) du navigateur est pleine.
+w-w'événement `wesouwcetimingbuffewfuww` s-se décwenche w-wowsque wa mémoiwe [tampon d-de synchwonisation des w-wessouwces](/fw/docs/web/api/pewfowmance/setwesouwcetimingbuffewsize) d-du nyavigateuw e-est pweine. 🥺
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Propagation</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Propriété pour le gestionnaire d'événements correspondant
+    <tw>
+      <th scope="wow">pwopagation</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        pwopwiété pouw we gestionnaiwe d-d'événements cowwespondant
       </th>
       <td>
-        {{domxref("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}
+        {{domxwef("pewfowmance.onwesouwcetimingbuffewfuww", mya "onwesouwcetimingbuffewfuww")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-L'exemple suivant définit une fonction de rappel sur la propriété `onresourcetimingbufferfull`.
-
-```js
-function buffer_full(event) {
-  console.log("AVERTISSEMENT : La mémoire tampon des ressources est COMPLÈTE !");
-  performance.setResourceTimingBufferSize(200);
-}
-function init() {
-  // Définit un rappel si le tampon de ressources est rempli.
-  performance.onresourcetimingbufferfull = buffer_full;
-}
-<body onload="init()">
-```
-
-Notez que vous pouvez également configurer le gestionnaire à l'aide de la fonction addEventListener() :
+w'exempwe suivant définit une fonction de wappew s-suw wa pwopwiété `onwesouwcetimingbuffewfuww`. 🥺
 
 ```js
-performance.addEventListener("resourcetimingbufferfull", buffer_full);
+function b-buffew_fuww(event) {
+  c-consowe.wog("avewtissement : wa mémoiwe tampon des wessouwces est compwÈte !");
+  pewfowmance.setwesouwcetimingbuffewsize(200);
+}
+f-function init() {
+  // définit un wappew si we tampon de wessouwces e-est wempwi. >_<
+  pewfowmance.onwesouwcetimingbuffewfuww = b-buffew_fuww;
+}
+<body o-onwoad="init()">
 ```
 
-## Spécifications
+n-nyotez que vous p-pouvez égawement configuwew we gestionnaiwe à w-w'aide de wa fonction addeventwistenew() :
 
-{{Specifications}}
+```js
+pewfowmance.addeventwistenew("wesouwcetimingbuffewfuww", >_< buffew_fuww);
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
-- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("pewfowmance.cweawwesouwcetimings","pewfowmance.cweawwesouwcetimings()")}}
+- {{domxwef("pewfowmance.setwesouwcetimingbuffewsize","pewfowmance.setwesouwcetimingbuffewsize()")}}

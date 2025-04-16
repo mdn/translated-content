@@ -1,63 +1,63 @@
 ---
-title: Set.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Set/values
+titwe: set.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`values()`** renvoie un nouvel objet {{jsxref("Iterator")}} qui contient les valeurs de chaque élément de l'objet `Set`, dans leur ordre d'insertion.
+w-wa méthode **`vawues()`** w-wenvoie un n-nyouvew objet {{jsxwef("itewatow")}} q-qui contient w-wes vaweuws de c-chaque éwément d-de w'objet `set`, (⑅˘꒳˘) d-dans weuw owdwe d'insewtion. òωó
 
-La méthode **`keys()`** est un alias pour cette méthode (afin de conserver une certaine similarité avec les objets {{jsxref("Map")}}) et se comportera exactement de la même façon en renvoyant les **valeurs** des éléments du `Set`.
+wa méthode **`keys()`** est un awias pouw cette m-méthode (afin de consewvew une cewtaine simiwawité a-avec wes objets {{jsxwef("map")}}) e-et se compowtewa exactement de wa même façon en wenvoyant w-wes **vaweuws** des éwéments d-du `set`. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.vawues")}}
 
-```js interactive-example
-const set1 = new Set();
+```js intewactive-exampwe
+const set1 = nyew set();
 set1.add(42);
-set1.add("forty two");
+s-set1.add("fowty two");
 
-const iterator1 = set1.values();
+const itewatow1 = set1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// expected output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: "fowty t-two"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-monSet.values();
+m-monset.vawues();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet `Iterator` qui contient les valeurs de chaque élément de l'ensemble `Set`, dans leur ordre d'insertion.
+un nyouvew objet `itewatow` qui c-contient wes vaweuws de chaque éwément de w'ensembwe `set`, /(^•ω•^) d-dans weuw owdwe d'insewtion. ʘwʘ
 
-## Exemples
+## exempwes
 
 ```js
-var monSet = new Set();
-monSet.add("toto");
-monSet.add("truc");
-monSet.add("machin");
+vaw monset = nyew set();
+monset.add("toto");
+monset.add("twuc");
+m-monset.add("machin");
 
-var setIter = monSet.values();
+vaw setitew = m-monset.vawues();
 
-console.log(setIter.next().value); // "toto"
-console.log(setIter.next().value); // "truc"
-console.log(setIter.next().value); // "machin"
+c-consowe.wog(setitew.next().vawue); // "toto"
+c-consowe.wog(setitew.next().vawue); // "twuc"
+consowe.wog(setitew.next().vawue); // "machin"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Set.prototype.entries()")}}
+- {{jsxwef("set.pwototype.entwies()")}}

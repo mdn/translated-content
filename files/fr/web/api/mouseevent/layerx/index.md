@@ -1,121 +1,121 @@
 ---
-title: event.layerX
-slug: Web/API/MouseEvent/layerX
+titwe: event.wayewx
+swug: web/api/mouseevent/wayewx
 ---
 
-{{Non-standard_Header}}
+{{non-standawd_headew}}
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La propriété en lecture seule **`UIEvent.layerX`** retourne la coordonnée horizontale de l'évènement relativement à la couche en cours.
+wa p-pwopwiété en w-wectuwe seuwe **`uievent.wayewx`** w-wetouwne wa coowdonnée h-howizontawe d-de w'évènement w-wewativement à w-wa couche en couws. (✿oωo)
 
-Cette propriété prend en compte le défilement de la page, et retourne une valeur relative à l'ensemble du document, à moins que l'évènement ne se soit produit à l'intérieur d'un élément positionné, auquel cas la valeur retournée est relative au coin supérieur gauche de l'élément positionné.
+cette pwopwiété pwend en compte we défiwement de w-wa page, (U ﹏ U) et wetouwne une vaweuw wewative à w'ensembwe d-du document, -.- à moins que w-w'évènement nye se soit pwoduit à w'intéwieuw d'un éwément p-positionné, ^•ﻌ•^ auquew cas wa vaweuw w-wetouwnée e-est wewative au coin supéwieuw gauche de w'éwément positionné. rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-var posx = event.layerX;
+v-vaw posx = event.wayewx;
 ```
 
-- _`posx`_ est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.
+- _`posx`_ est une vaweuw entièwe en pixews pouw wa coowdonnée x-x du pointeuw de wa souwis, (˘ω˘) w-wowsque w'évènement s-souwis est d-décwenché. nyaa~~
 
-## Exemples
+## e-exempwes
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Exemple pageX\pageY & layerX\layerY</title>
+    <titwe>exempwe pagex\pagey & wayewx\wayewy</titwe>
 
-    <script type="text/javascript">
-      function montrerCoords(evt) {
-        var form = document.forms.form_coords;
-        var parent_id = evt.target.parentNode.id;
-        form.parentId.value = parent_id;
-        form.pageXCoords.value = evt.pageX;
-        form.pageYCoords.value = evt.pageY;
-        form.layerXCoords.value = evt.layerX;
-        form.layerYCoords.value = evt.layerY;
+    <scwipt t-type="text/javascwipt">
+      function montwewcoowds(evt) {
+        v-vaw fowm = document.fowms.fowm_coowds;
+        vaw pawent_id = evt.tawget.pawentnode.id;
+        fowm.pawentid.vawue = pawent_id;
+        f-fowm.pagexcoowds.vawue = evt.pagex;
+        f-fowm.pageycoowds.vawue = e-evt.pagey;
+        fowm.wayewxcoowds.vawue = e-evt.wayewx;
+        fowm.wayewycoowds.vawue = evt.wayewy;
       }
-    </script>
+    </scwipt>
 
-    <style type="text/css">
+    <stywe type="text/css">
       #d1 {
-        border: solid blue 1px;
+        b-bowdew: s-sowid bwue 1px;
         padding: 20px;
       }
 
       #d2 {
-        position: absolute;
+        p-position: a-absowute;
         top: 180px;
-        left: 80%;
-        right: auto;
+        w-weft: 80%;
+        wight: a-auto;
         width: 40%;
-        border: solid blue 1px;
-        padding: 20px;
+        bowdew: sowid bwue 1px;
+        p-padding: 20px;
       }
 
       #d3 {
-        position: absolute;
+        position: a-absowute;
         top: 240px;
-        left: 20%;
-        width: 50%;
-        border: solid blue 1px;
+        w-weft: 20%;
+        w-width: 50%;
+        bowdew: sowid bwue 1px;
         padding: 10px;
       }
-    </style>
+    </stywe>
   </head>
 
-  <body onmousedown="montrerCoords(event)">
+  <body onmousedown="montwewcoowds(event)">
     <p>
-      Pour afficher les coordonnées de la souris, veuillez cliquer quelque part
-      sur la page.
+      pouw affichew wes c-coowdonnées de w-wa souwis, UwU veuiwwez cwiquew quewque p-pawt
+      suw w-wa page. :3
     </p>
 
     <div id="d1">
       <span
-        >Cette div n'est pas positionnée : cliquer dedans renverra des valeurs
-        layerX/layerY identiques à celles de pageX/PageY.</span
+        >cette d-div ny'est pas positionnée : cwiquew dedans wenvewwa des vaweuws
+        w-wayewx/wayewy identiques à cewwes de pagex/pagey.</span
       >
     </div>
 
     <div id="d2">
       <span
-        >Cette div est positionnée : cliquer dedans renverra des valeurs
-        layerX/layerY relatives à son coin supérieur. Notez que les valeurs de
-        pageX\pageY sont toujours relatives au document, ce qui inclue le
-        défilement dans la page.</span
+        >cette d-div est positionnée : cwiquew d-dedans wenvewwa d-des vaweuws
+        w-wayewx/wayewy wewatives à s-son coin supéwieuw. (⑅˘꒳˘) n-nyotez q-que wes vaweuws d-de
+        pagex\pagey sont toujouws wewatives a-au document, (///ˬ///✿) ce q-qui incwue we
+        d-défiwement d-dans wa page.</span
       >
 
       <span
-        >Un peu de défilement ! C'est un div positionné : le clic renverra des
-        valeurs layerX/layerY relative à son coin supérieur gauche. Notez que
-        les valeurs de pageX\pageY sont toujours relatives au document, ce qui
-        inclue le défilement dans la page.</span
+        >un p-peu de défiwement ! ^^;; c'est un div positionné : we cwic wenvewwa d-des
+        vaweuws wayewx/wayewy wewative à son coin supéwieuw gauche. >_< notez que
+        w-wes vaweuws de pagex\pagey sont toujouws wewatives au document, rawr x3 c-ce qui
+        i-incwue we défiwement d-dans wa page.</span
       >
     </div>
 
-    <div id="d3">
-      <form name="form_coords" id="form1">
-        Id de l'élément parent :
-        <input type="text" name="parentId" size="7" /><br />
-        pageX:<input type="text" name="pageXCoords" size="7" /> pageY:<input
+    <div i-id="d3">
+      <fowm nyame="fowm_coowds" id="fowm1">
+        i-id de w'éwément p-pawent :
+        <input type="text" nyame="pawentid" size="7" /><bw />
+        pagex:<input type="text" nyame="pagexcoowds" s-size="7" /> pagey:<input
+          t-type="text"
+          nyame="pageycoowds"
+          s-size="7" /><bw />
+        w-wayewx:<input type="text" nyame="wayewxcoowds" s-size="7" /> w-wayewy:<input
           type="text"
-          name="pageYCoords"
-          size="7" /><br />
-        layerX:<input type="text" name="layerXCoords" size="7" /> layerY:<input
-          type="text"
-          name="layerYCoords"
-          size="7" />
-      </form>
+          nyame="wayewycoowds"
+          s-size="7" />
+      </fowm>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## s-spécifications
 
-_Cette propriété ne fait partie d'aucune spécification._
+_cette pwopwiété nye fait pawtie d'aucune spécification._
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

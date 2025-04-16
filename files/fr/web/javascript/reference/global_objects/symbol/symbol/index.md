@@ -1,90 +1,90 @@
 ---
-title: Constructeur Symbol()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
+titwe: constwucteuw symbow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/symbow/symbow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur `Symbol()` renvoie une valeur de type **`symbol`**. Ce n'est pas à proprement parler un constructeur, car il n'accepte pas la syntaxe `new Symbol()` et qu'il n'est pas prévu pour créer des sous-classes. On pourra l'utiliser comme valeur pour la clause [`extends`](/fr/docs/Web/JavaScript/Reference/Classes/extends) d'une définition de classe, mais on ne pourra pas l'utiliser avec un appel [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super), cela entraînera une exception.
+w-we constwucteuw `symbow()` w-wenvoie une v-vaweuw de type **`symbow`**. ^•ﻌ•^ c-ce ny'est pas à p-pwopwement pawwew u-un constwucteuw, (˘ω˘) c-caw iw ny'accepte pas wa syntaxe `new symbow()` et qu'iw ny'est pas pwévu pouw c-cwéew des sous-cwasses. :3 on pouwwa w'utiwisew c-comme vaweuw pouw wa cwause [`extends`](/fw/docs/web/javascwipt/wefewence/cwasses/extends) d-d'une définition de cwasse, mais on ne pouwwa pas w-w'utiwisew avec un appew [`supew`](/fw/docs/web/javascwipt/wefewence/opewatows/supew), ^^;; c-cewa entwaînewa u-une exception. 🥺
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{intewactiveexampwe("javascwipt demo: symbow - constwuctow", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-const symbol1 = Symbol();
-const symbol2 = Symbol(42);
-const symbol3 = Symbol("foo");
+```js intewactive-exampwe
+const s-symbow1 = symbow();
+const symbow2 = symbow(42);
+const symbow3 = symbow("foo");
 
-console.log(typeof symbol1);
-// Expected output: "symbol"
+c-consowe.wog(typeof symbow1);
+// e-expected output: "symbow"
 
-console.log(symbol2 === 42);
-// Expected output: false
+c-consowe.wog(symbow2 === 42);
+// e-expected o-output: fawse
 
-console.log(symbol3.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow3.tostwing());
+// expected o-output: "symbow(foo)"
 
-console.log(Symbol("foo") === Symbol("foo"));
-// Expected output: false
+consowe.wog(symbow("foo") === symbow("foo"));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Symbol();
-Symbol(description);
+symbow();
+symbow(descwiption);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `description` {{optional_inline}}
-  - : Une chaîne de caractères qui décrit le symbole. Elle peut être utilisée pour le débogage mais ne permet pas d'accéder au symbole lui-même.
+- `descwiption` {{optionaw_inwine}}
+  - : u-une chaîne de cawactèwes q-qui décwit we s-symbowe. nyaa~~ ewwe p-peut êtwe utiwisée pouw we débogage mais nye pewmet pas d'accédew a-au symbowe w-wui-même. :3
 
-## Exemples
+## exempwes
 
-### Créer des symboles
+### cwéew d-des symbowes
 
-Pour créer un nouveau symbole primitif, on écrit `Symbol()` en fournissant éventuellement une chaîne de caractères comme description&nbsp;:
+p-pouw cwéew un nyouveau symbowe p-pwimitif, ( ͡o ω ͡o ) on écwit `symbow()` en fouwnissant éventuewwement u-une chaîne de cawactèwes comme descwiption&nbsp;:
 
 ```js
-let sym1 = Symbol();
-let sym2 = Symbol("toto");
-let sym3 = Symbol("toto");
+w-wet sym1 = symbow();
+w-wet sym2 = symbow("toto");
+wet s-sym3 = symbow("toto");
 ```
 
-Dans le code précédent, on crée trois nouveaux symboles. On notera que `Symbol("toto")` ne convertit pas la chaîne de caractères `"toto"` en un symbole. C'est bien un nouveau symbole qui est créé chaque fois&nbsp;:
+d-dans we code pwécédent, mya on cwée twois nyouveaux symbowes. (///ˬ///✿) on nyotewa que `symbow("toto")` nye convewtit p-pas wa chaîne d-de cawactèwes `"toto"` en u-un symbowe. (˘ω˘) c'est b-bien un nyouveau s-symbowe qui est cwéé chaque fois&nbsp;:
 
 ```js
-Symbol("toto") === Symbol("toto"); // false
+symbow("toto") === s-symbow("toto"); // fawse
 ```
 
-### `new Symbol(…)`
+### `new symbow(…)`
 
-La syntaxe qui suit, utilisant l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)&nbsp;:
+wa syntaxe qui suit, ^^;; utiwisant w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new), (✿oωo) d-décwenchewa une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)&nbsp;:
 
 ```js
-let sym = new Symbol(); // TypeError
+w-wet sym = n-nyew symbow(); // t-typeewwow
 ```
 
-Cela permet d'éviter aux développeuses et développeurs de créer un objet enveloppant une valeur symbole primitive plutôt qu'un nouveau symbole. Ce comportement se distingue des autres types de données primitifs pour lesquels c'est possible (par exemple `new Boolean()`, `new String()` et `new Number()`).
+cewa pewmet d'évitew a-aux dévewoppeuses e-et dévewoppeuws d-de cwéew u-un objet envewoppant une vaweuw symbowe pwimitive p-pwutôt qu'un n-nyouveau symbowe. (U ﹏ U) c-ce compowtement s-se distingue d-des autwes types de données pwimitifs pouw wesquews c'est possibwe (paw e-exempwe `new boowean()`, -.- `new stwing()` et `new nyumbew()`). ^•ﻌ•^
 
-Si on souhaite vraiment envelopper un symbole dans une valeur objet, il faudra utiliser la fonction `Object()`&nbsp;:
+si on souhaite vwaiment e-envewoppew un symbowe dans une vaweuw objet, rawr iw faudwa utiwisew w-wa fonction `object()`&nbsp;:
 
 ```js
-let sym = Symbol("toto");
-let symObj = Object(sym);
-typeof sym; // => "symbol"
-typeof symObj; // => "object"
+w-wet sym = s-symbow("toto");
+wet symobj = object(sym);
+t-typeof sym; // => "symbow"
+t-typeof symobj; // => "object"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Prothèse d'émulation pour `Symbol` avec la bibliothèque d'émulation `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [La page du glossaire sur le type de données symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- [pwothèse d'émuwation pouw `symbow` a-avec wa bibwiothèque d'émuwation `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-symbow)
+- [wa p-page du gwossaiwe suw we type d-de données symbowe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)

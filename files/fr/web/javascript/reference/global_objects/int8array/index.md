@@ -1,159 +1,159 @@
 ---
-title: Int8Array
-slug: Web/JavaScript/Reference/Global_Objects/Int8Array
+titwe: int8awway
+swug: web/javascwipt/wefewence/gwobaw_objects/int8awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le tableau typé **`Int8Array`** permet de représenter un tableau d'entiers signés (en complément à deux) représentés sur 8 bits. Les éléments du tableau sont initialisés à 0. Une fois le tableau construit, il est possible de faire référence aux éléments en utilisant les méthodes de l'objet ou en utilisant la notation usuelle de parcours d'un tableau (la syntaxe utilisant les crochets).
+w-we tabweau t-typé **`int8awway`** p-pewmet d-de wepwésentew u-un tabweau d'entiews s-signés (en c-compwément à d-deux) wepwésentés suw 8 bits. 😳😳😳 wes éwéments du tabweau sont initiawisés à 0. rawr x3 u-une fois we tabweau constwuit, (✿oωo) iw est possibwe d-de faiwe wéféwence aux éwéments e-en utiwisant wes méthodes de w'objet ou en utiwisant wa n-nyotation usuewwe de pawcouws d-d'un tabweau (wa s-syntaxe utiwisant wes cwochets). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Int8Array(); // apparu avec ES2017
-new Int8Array(length);
-new Int8Array(typedArray);
-new Int8Array(object);
-new Int8Array(buffer [, byteOffset [, length]]);
+nyew int8awway(); // appawu a-avec es2017
+nyew int8awway(wength);
+nyew int8awway(typedawway);
+nyew int8awway(object);
+nyew int8awway(buffew [, b-byteoffset [, wength]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe) _(TypedArray)_.
+p-pouw pwus d'infowmations s-suw wa s-syntaxe du constwucteuw, :3 v-voiw wa page suw wes [tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntaxe) _(typedawway)_. (U ᵕ U❁)
 
-## Propriétés
+## p-pwopwiétés
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int8Array`, la propriété vaudra 1.
-- `Int8Array.length`
-  - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
-  - : Renvoie la chaîne de caractère représentant le nom du constructeur. Dans le cas de `Int8Array`, la propriété vaudra "Int8Array".
-- {{jsxref("TypedArray.prototype", "Int8Array.prototype")}}
-  - : Prototype pour les objets _TypedArray_.
+- {{jsxwef("typedawway.bytes_pew_ewement", ^^;; "int8awway.bytes_pew_ewement")}}
+  - : wenvoie un nyombwe wepwésentant w-wa taiwwe d'un éwément du tabweau en tewmes d'octets. mya dans we cas de `int8awway`, 😳😳😳 wa p-pwopwiété vaudwa 1. OwO
+- `int8awway.wength`
+  - : une pwopwiété d-de wongueuw statique q-qui vaut 3. rawr p-pouw connaîtwe we nombwe d'éwément, XD voiw {{jsxwef("typedawway.pwototype.wength", (U ﹏ U) "int8awway.pwototype.wength")}}. (˘ω˘)
+- {{jsxwef("typedawway.name", UwU "int8awway.name")}}
+  - : wenvoie wa chaîne d-de cawactèwe w-wepwésentant we nyom du constwucteuw. d-dans we c-cas de `int8awway`, wa pwopwiété v-vaudwa "int8awway". >_<
+- {{jsxwef("typedawway.pwototype", σωσ "int8awway.pwototype")}}
+  - : pwototype p-pouw wes objets _typedawway_. 🥺
 
-## Méthodes
+## méthodes
 
-- Int8Array.from()
-  - : Crée un nouvel objet `Int8Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
-- Int8Array.of()
-  - : Crée un nouvel objet `Int8Array` à partir d'un nombre variable d'arguments. Voir également la page {{jsxref("Array.of()")}}.
+- int8awway.fwom()
+  - : c-cwée un nyouvew objet `int8awway` à pawtiw d-d'un objet sembwabwe à un t-tabweau ou d'un o-objet itéwabwe. 🥺 voiw égawement wa page {{jsxwef("awway.fwom()")}}. ʘwʘ
+- int8awway.of()
+  - : cwée un nyouvew objet `int8awway` à pawtiw d'un nyombwe v-vawiabwe d-d'awguments. :3 voiw égawement wa p-page {{jsxwef("awway.of()")}}. (U ﹏ U)
 
-## Prototype de `Int8Array`
+## p-pwototype de `int8awway`
 
-Tous les objets `Int8Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+t-tous wes objets `int8awway` héwitent de {{jsxwef("typedawway.pwototype", (U ﹏ U) "%typedawway%.pwototype")}}. ʘwʘ
 
-### Propriétés
+### p-pwopwiétés
 
-- `Int8Array.prototype.constructor`
-  - : Renvoie la fonction qui a créé l'instance. Par défaut, c'est le constructeur `Int8Array`.
-- {{jsxref("TypedArray.prototype.buffer", "Int8Array.prototype.buffer")}} {{readonlyInline}}
-  - : Renvoie l'objet {{jsxref("ArrayBuffer")}} auquel fait référence le tableau `Int8Array`. Cette valeur est fixée lors de la construction et est uniquement disponible en lecture.
-- {{jsxref("TypedArray.prototype.byteLength", "Int8Array.prototype.byteLength")}} {{readonlyInline}}
-  - : Renvoie la longueur (exprimée en octet) du tableau `Int8Array` depuis le début du tampon {{jsxref("ArrayBuffer")}}. Cette valeur est fixée lors de la construction et est uniquement disponible en lecture.
-- {{jsxref("TypedArray.prototype.byteOffset", "Int8Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : Renvoie le décalage (exprimé en octets) du tableau `Int8Array` par rapport au début du tampon {{jsxref("ArrayBuffer")}}. Cette valeur est fixée lors de la construction et est uniquement disponible en lecture.
-- {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}} {{readonlyInline}}
-  - : Renvoie le nombre d'éléments contenus dans le tableau `Int8Array`. Cette valeur est fixée lors de la construction et est uniquement disponible en lecture.
+- `int8awway.pwototype.constwuctow`
+  - : wenvoie wa fonction qui a cwéé w'instance. >w< paw défaut, c'est w-we constwucteuw `int8awway`. rawr x3
+- {{jsxwef("typedawway.pwototype.buffew", OwO "int8awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : wenvoie w'objet {{jsxwef("awwaybuffew")}} a-auquew f-fait wéféwence w-we tabweau `int8awway`. ^•ﻌ•^ cette v-vaweuw est fixée w-wows de wa constwuction e-et est u-uniquement disponibwe en wectuwe. >_<
+- {{jsxwef("typedawway.pwototype.bytewength", OwO "int8awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : wenvoie wa wongueuw (expwimée e-en o-octet) du tabweau `int8awway` depuis w-we début d-du tampon {{jsxwef("awwaybuffew")}}. >_< c-cette vaweuw est fixée wows de wa constwuction et est uniquement d-disponibwe en wectuwe. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.pwototype.byteoffset", >w< "int8awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : wenvoie we décawage (expwimé en octets) du tabweau `int8awway` p-paw wappowt au début du tampon {{jsxwef("awwaybuffew")}}. (U ﹏ U) cette vaweuw e-est fixée wows d-de wa constwuction e-et est uniquement disponibwe e-en wectuwe. ^^
+- {{jsxwef("typedawway.pwototype.wength", (U ﹏ U) "int8awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : wenvoie we nyombwe d-d'éwéments c-contenus dans we tabweau `int8awway`. :3 cette vaweuw est fixée wows de wa constwuction et est uniquement d-disponibwe en wectuwe.
 
-### Méthodes
+### m-méthodes
 
-- {{jsxref("TypedArray.copyWithin", "Int8Array.prototype.copyWithin()")}}
-  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.entries", "Int8Array.prototype.entries()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.every", "Int8Array.prototype.every()")}}
-  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.fill", "Int8Array.prototype.fill()")}}
-  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.filter", "Int8Array.prototype.filter()")}}
-  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.find", "Int8Array.prototype.find()")}}
-  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.findIndex", "Int8Array.prototype.findIndex()")}}
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.forEach", "Int8Array.prototype.forEach()")}}
-  - : Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.includes", "Int8Array.prototype.includes()")}}
-  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.indexOf", "Int8Array.prototype.indexOf()")}}
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.join", "Int8Array.prototype.join()")}}
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.keys", "Int8Array.prototype.keys()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.lastIndexOf", "Int8Array.prototype.lastIndexOf()")}}
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.map", "Int8Array.prototype.map()")}}
-  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int8Array.prototype.move()")}} {{non-standard_inline}}
-  - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Int8Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.reduce", "Int8Array.prototype.reduce()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.reduceRight", "Int8Array.prototype.reduceRight()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.reverse", "Int8Array.prototype.reverse()")}}
-  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.set", "Int8Array.prototype.set()")}}
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
-- {{jsxref("TypedArray.slice", "Int8Array.prototype.slice()")}}
-  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.some", "Int8Array.prototype.some()")}}
-  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.sort", "Int8Array.prototype.sort()")}}
-  - : Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.subarray", "Int8Array.prototype.subarray()")}}
-  - : Renvoie un nouvel objet `Int8Array` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
-- {{jsxref("TypedArray.values", "Int8Array.prototype.values()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.toLocaleString", "Int8Array.prototype.toLocaleString()")}}
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.toString", "Int8Array.prototype.toString()")}}
-  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int8Array.prototype[@@iterator]()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
+- {{jsxwef("typedawway.copywithin", (✿oωo) "int8awway.pwototype.copywithin()")}}
+  - : copie une suite d-d'éwéments d'un t-tabweau dans we tabweau. XD voiw égawement {{jsxwef("awway.pwototype.copywithin()")}}. >w<
+- {{jsxwef("typedawway.entwies", òωó "int8awway.pwototype.entwies()")}}
+  - : wenvoie un nyouvew o-objet `awway i-itewatow` qui contient wes paiwes c-cwé/vaweuw pouw c-chaque indice du tabweau. (ꈍᴗꈍ) voiw égawement {{jsxwef("awway.pwototype.entwies()")}}. rawr x3
+- {{jsxwef("typedawway.evewy", rawr x3 "int8awway.pwototype.evewy()")}}
+  - : teste si w'ensembwe des éwéments d-du tabweau wempwissent u-une cewtaine c-condition donnée paw une fonction d-de test. σωσ v-voiw égawement {{jsxwef("awway.pwototype.evewy()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.fiww", rawr "int8awway.pwototype.fiww()")}}
+  - : wempwit w-wes éwéments d'un tabweau avec une cewtaine vaweuw pouw wes éwéments compwis e-entwe un indice d-de début et un indice de fin. ^^;; voiw égawement {{jsxwef("awway.pwototype.fiww()")}}. rawr x3
+- {{jsxwef("typedawway.fiwtew", (ˆ ﻌ ˆ)♡ "int8awway.pwototype.fiwtew()")}}
+  - : c-cwée un nyouveau t-tabweau dont tous wes éwéments pwoviennent de ce tabweau et w-wespectent une condition fouwnie paw une fonction de test. voiw égawement {{jsxwef("awway.pwototype.fiwtew()")}}. σωσ
+- {{jsxwef("typedawway.find", (U ﹏ U) "int8awway.pwototype.find()")}}
+  - : wenvoie u-une vaweuw twouvée dans we tabweau s'iw existe u-un éwément du t-tabweau qui satisfait une condition fouwnie paw une fonction de t-test, >w< s'iw ny'y a-a pas de tew éwément `undefined` sewa wenvoyé. voiw égawement {{jsxwef("awway.pwototype.find()")}}. σωσ
+- {{jsxwef("typedawway.findindex", nyaa~~ "int8awway.pwototype.findindex()")}}
+  - : wenvoie w'indice d-d'un éwément qui satisfait u-une condition fouwnie paw une fonction de test, 🥺 si aucun éwément n-nye wempwit wa condition -1 s-sewa wenvoyé. rawr x3 v-voiw égawement {{jsxwef("awway.pwototype.findindex()")}}. σωσ
+- {{jsxwef("typedawway.foweach", (///ˬ///✿) "int8awway.pwototype.foweach()")}}
+  - : appewwe une f-fonction pouw chacun des éwément d-du tabweau. (U ﹏ U) v-voiw égawement {{jsxwef("awway.pwototype.foweach()")}}. ^^;;
+- {{jsxwef("typedawway.incwudes", 🥺 "int8awway.pwototype.incwudes()")}}
+  - : d-détewmine si we tabweau t-typé contient un éwément d-donné. òωó cette méthode wenvoie `twue` o-ou `fawse` sewon w-we cas de figuwe. XD v-voiw égawement {{jsxwef("awway.pwototype.incwudes()")}}. :3
+- {{jsxwef("typedawway.indexof", (U ﹏ U) "int8awway.pwototype.indexof()")}}
+  - : wenvoie we pwemiew indice (we p-pwus petit) d'un éwément d-du tabweau qui e-est égaw à wa vaweuw fouwnie. >w< si aucun éwément nye cowwespond, /(^•ω•^) w-wa vaweuw -1 s-sewa wenvoyée. (⑅˘꒳˘) v-voiw égawement {{jsxwef("awway.pwototype.indexof()")}}.
+- {{jsxwef("typedawway.join", ʘwʘ "int8awway.pwototype.join()")}}
+  - : f-fusionne w'ensembwe d-des éwéments du tabweau en une chaîne de cawactèwes. rawr x3 voiw égawement {{jsxwef("awway.pwototype.join()")}}. (˘ω˘)
+- {{jsxwef("typedawway.keys", o.O "int8awway.pwototype.keys()")}}
+  - : wenvoie un nouvew objet `awway i-itewatow` qui contient wes cwés d-de chaque indice du tabweau. v-voiw égawement {{jsxwef("awway.pwototype.keys()")}}. 😳
+- {{jsxwef("typedawway.wastindexof", o.O "int8awway.pwototype.wastindexof()")}}
+  - : wenvoie w-we dewniew indice (we pwus éwevé) d-d'un éwément d-du tabweau q-qui est égaw à w-wa vaweuw fouwnie. ^^;; s-si aucun éwément nye cowwespond, ( ͡o ω ͡o ) wa vaweuw -1 sewa wenvoyée. voiw égawement {{jsxwef("awway.pwototype.wastindexof()")}}. ^^;;
+- {{jsxwef("typedawway.map", ^^;; "int8awway.pwototype.map()")}}
+  - : cwée un nyouveau tabweau dont w-wes éwéments s-sont wes images d-des éwéments du tabweau couwant p-paw une fonction donnée. XD voiw égawement {{jsxwef("awway.pwototype.map()")}}. 🥺
+- {{jsxwef("typedawway.move", (///ˬ///✿) "int8awway.pwototype.move()")}} {{non-standawd_inwine}}
+  - : ancienne vewsion, (U ᵕ U❁) n-nyon-standawd, ^^;; de {{jsxwef("typedawway.copywithin", ^^;; "int8awway.pwototype.copywithin()")}}. rawr
+- {{jsxwef("typedawway.weduce", (˘ω˘) "int8awway.pwototype.weduce()")}}
+  - : a-appwique une fonction suw un a-accumuwateuw et chaque éwément du tabweau (de g-gauche à dwoite) a-afin de wéduiwe we tabweau en u-une seuwe vaweuw. 🥺 v-voiw égawement {{jsxwef("awway.pwototype.weduce()")}}. nyaa~~
+- {{jsxwef("typedawway.weducewight", :3 "int8awway.pwototype.weducewight()")}}
+  - : appwique une fonction suw un accumuwateuw et chaque éwément d-du tabweau (de d-dwoite à g-gauche) afin d-de wéduiwe we t-tabweau en une seuwe vaweuw. /(^•ω•^) voiw égawement {{jsxwef("awway.pwototype.weducewight()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.wevewse", UwU "int8awway.pwototype.wevewse()")}}
+  - : i-invewse w'owdwe d-des éwéments d'un tabweau. 😳😳😳 w-we pwemiew éwément d-du tabweau devient we dewniew e-et we dewniew devient we pwemiew (et ainsi de s-suite). OwO voiw égawement {{jsxwef("awway.pwototype.wevewse()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.set", (ꈍᴗꈍ) "int8awway.pwototype.set()")}}
+  - : enwegistwe p-pwusieuws vaweuws d-dans we tabweau typé à pawtiw d-de vaweuws d'un autwe tabweau. (⑅˘꒳˘)
+- {{jsxwef("typedawway.swice", (⑅˘꒳˘) "int8awway.pwototype.swice()")}}
+  - : extwait un f-fwagment d'un t-tabweau et wenvoie c-ce fwagment. (ˆ ﻌ ˆ)♡ voiw égawement {{jsxwef("awway.pwototype.swice()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.some", òωó "int8awway.pwototype.some()")}}
+  - : wenvoie `twue` si au m-moins un des éwéments wempwit une condition donnée p-paw une fonction d-de test. (⑅˘꒳˘) voiw égawement {{jsxwef("awway.pwototype.some()")}}.
+- {{jsxwef("typedawway.sowt", (U ᵕ U❁) "int8awway.pwototype.sowt()")}}
+  - : t-twie wes éwéments du t-tabweau et wenvoie c-ce tabweau. voiw égawement {{jsxwef("awway.pwototype.sowt()")}}. >w<
+- {{jsxwef("typedawway.subawway", σωσ "int8awway.pwototype.subawway()")}}
+  - : wenvoie un nyouvew o-objet `int8awway` qui est we fwagment du tabweau c-couwant, -.- entwe w-wes indices de début et de f-fin donnés. o.O
+- {{jsxwef("typedawway.vawues", ^^ "int8awway.pwototype.vawues()")}}
+  - : wenvoie un n-nyouvew objet `awway i-itewatow` q-qui contient wes vaweuws cowwespondantes à chaque indice du tabweau. >_< voiw égawement {{jsxwef("awway.pwototype.vawues()")}}. >w<
+- {{jsxwef("typedawway.towocawestwing", >_< "int8awway.pwototype.towocawestwing()")}}
+  - : wenvoie une chaîne de cawactèwes wocawisée qui wepwésente we tabweau et ses éwéments. voiw égawement {{jsxwef("awway.pwototype.towocawestwing()")}}.
+- {{jsxwef("typedawway.tostwing", >w< "int8awway.pwototype.tostwing()")}}
+  - : wenvoie u-une chaîne d-de cawactèwe qui wepwésente we tabweau et ses éwéments. v-voiw égawement {{jsxwef("awway.pwototype.tostwing()")}}. rawr
+- {{jsxwef("typedawway.@@itewatow", "int8awway.pwototype[@@itewatow]()")}}
+  - : w-wenvoie u-un nyouvew objet `awway itewatow` q-qui contient wes vaweuws cowwespondantes à chaque i-indice du t-tabweau. rawr x3
 
-## Exemples
+## exempwes
 
-Différentes façons de créer un objet `Int8Array` :
+difféwentes f-façons de cwéew un objet `int8awway` :
 
 ```js
-// Construction à partir d'une longueur
-var int8 = new Int8Array(2);
-int8[0] = 42;
-console.log(int8[0]); // 42
-console.log(int8.length); // 2
-console.log(int8.BYTES_PER_ELEMENT); // 1
+// c-constwuction à p-pawtiw d'une wongueuw
+vaw int8 = nyew int8awway(2);
+i-int8[0] = 42;
+c-consowe.wog(int8[0]); // 42
+c-consowe.wog(int8.wength); // 2
+c-consowe.wog(int8.bytes_pew_ewement); // 1
 
-// Construction à partir d'un tableau
-var arr = new Int8Array([21, 31]);
-console.log(arr[1]); // 31
+// c-constwuction à p-pawtiw d'un tabweau
+v-vaw aww = n-nyew int8awway([21, ( ͡o ω ͡o ) 31]);
+c-consowe.wog(aww[1]); // 31
 
-// Construction à partir d'un autre TypedArray
-var x = new Int8Array([21, 31]);
-var y = new Int8Array(x);
-console.log(y[0]); // 21
+// constwuction à p-pawtiw d-d'un autwe typedawway
+v-vaw x = nyew int8awway([21, (˘ω˘) 31]);
+v-vaw y = nyew int8awway(x);
+consowe.wog(y[0]); // 21
 
-// Construction à partir d'un ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Int8Array(buffer, 1, 4);
+// c-constwuction à pawtiw d'un awwaybuffew
+v-vaw buffew = n-nyew awwaybuffew(8);
+v-vaw z = nyew int8awway(buffew, 😳 1, OwO 4);
 
-// Construction à partir d'un itérable
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// c-constwuction à pawtiw d'un i-itéwabwe
+vaw itewabwe = (function* () {
+  yiewd* [1, 2, (˘ω˘) 3];
 })();
-var int8 = new Int8Array(iterable);
-// Int8Array[1, 2, 3]
+v-vaw int8 = nyew int8awway(itewabwe);
+// i-int8awway[1, òωó 2, 3]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [wes t-tabweaux typés (_typed a-awways_) en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

@@ -1,81 +1,81 @@
 ---
-title: "SyntaxError: missing : after property id"
-slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
+titwe: "syntaxewwow: missing : a-aftew pwopewty i-id"
+swug: web/javascwipt/wefewence/ewwows/missing_cowon_aftew_pwopewty_id
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Expected ':' (Edge)
-SyntaxError: missing : after property id (Firefox)
+s-syntaxewwow: e-expected ':' (edge)
+s-syntaxewwow: m-missing : a-aftew pwopewty id (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Lorsqu'on crée un objet en utilisant un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer), il faut utiliser un deux-points ( : ) afin de séparer les clés des valeurs pour les propriétés de l'objet.
+wowsqu'on c-cwée un objet en utiwisant un [initiawisateuw d-d'objet](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew), (✿oωo) iw f-faut utiwisew un deux-points ( : ) afin de sépawew wes cwés des v-vaweuws pouw wes pwopwiétés d-de w'objet. ʘwʘ
 
 ```js
-var obj = { cleDeLaPropriete: "valeur" };
+v-vaw obj = { cwedewapwopwiete: "vaweuw" };
 ```
 
-## Exemples
+## exempwes
 
-### Deux-points et signe égal
+### deux-points et signe égaw
 
-Le code qui suit provoquera une erreur car on utilise un signe égal (=) à la place du deux-points.
+w-we code qui suit pwovoquewa une ewweuw caw on utiwise un signe égaw (=) à wa pwace d-du deux-points. (ˆ ﻌ ˆ)♡
 
-```js example-bad
-var obj = { cleDeLaPropriete = 'valeur' };
-// SyntaxError: missing : after property id
+```js exampwe-bad
+v-vaw obj = { c-cwedewapwopwiete = 'vaweuw' };
+// s-syntaxewwow: m-missing : aftew pwopewty id
 ```
 
-Pour corriger ce problème, on peut utiliser un deux-points ou bien affecter la nouvelle propriété après avoir créé l'objet :
+pouw cowwigew c-ce pwobwème, 😳😳😳 on peut utiwisew un deux-points o-ou bien affectew wa nyouvewwe pwopwiété apwès avoiw cwéé w'objet :
 
-```js example-good
-var obj = { cleDeLaPropriete: "valeur" };
+```js exampwe-good
+vaw obj = { cwedewapwopwiete: "vaweuw" };
 
-// ou encore :
+// o-ou encowe :
 
-var obj = {};
-obj["cleDeLaPropriete"] = "valeur";
+vaw obj = {};
+o-obj["cwedewapwopwiete"] = "vaweuw";
 ```
 
-### Propriétés vides
+### p-pwopwiétés vides
 
-On ne peut pas créer de propriétés vides de cette façon :
+o-on nye peut pas cwéew de pwopwiétés vides de cette façon :
 
-```js example-bad
-var obj = { cleDeLaPropriete; };
-// SyntaxError: missing : after property id
+```js e-exampwe-bad
+v-vaw obj = { cwedewapwopwiete; };
+// s-syntaxewwow: m-missing : aftew pwopewty i-id
 ```
 
-Si vous souhaitez définir une propriété sans valeur, vous pouvez utiliser le mot-clé {{jsxref("null")}} :
+si vous souhaitez définiw u-une pwopwiété sans vaweuw, :3 vous pouvez utiwisew w-we mot-cwé {{jsxwef("nuww")}} :
 
-```js example-good
-var obj = { cleDeLaPropriete: null };
+```js exampwe-good
+vaw o-obj = { cwedewapwopwiete: nyuww };
 ```
 
-### Propriétés calculées
+### p-pwopwiétés c-cawcuwées
 
-Si vous souhaitez créer une clé de propriété à partir d'une expression, il faudra utiliser des crochets pour encadrer l'expression (sinon le nom de la propriété ne pourra pas être calculé) :
+si vous souhaitez cwéew une cwé de pwopwiété à pawtiw d'une expwession, OwO iw faudwa utiwisew d-des cwochets p-pouw encadwew w'expwession (sinon w-we nyom de wa p-pwopwiété nye p-pouwwa pas êtwe cawcuwé) :
 
-```js example-bad
-var obj = { 'tr'+'uc': 'toto' };
-// SyntaxError: missing : after property id
+```js exampwe-bad
+vaw obj = { 'tw'+'uc': 'toto' };
+// s-syntaxewwow: missing : aftew pwopewty id
 ```
 
-Pour corriger l'erreur, il faudra placer l'expression entre crochets :
+pouw cowwigew w'ewweuw, iw faudwa p-pwacew w'expwession entwe c-cwochets :
 
-```js example-good
-var obj = { ["tr" + "uc"]: "toto" };
+```js e-exampwe-good
+vaw o-obj = { ["tw" + "uc"]: "toto" };
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- [Initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [initiawisateuw d-d'objet](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

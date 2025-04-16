@@ -1,54 +1,54 @@
 ---
-title: "RangeError: argument is not a valid code point"
-slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
+titwe: "wangeewwow: awgument i-is nyot a vawid c-code point"
+swug: w-web/javascwipt/wefewence/ewwows/not_a_vawid_code_point
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-RangeError: Invalid code point {0} (Edge)
-RangeError: {0} is not a valid code point (Firefox)
-RangeError: Invalid code point {0} (Chrome)
+w-wangeewwow: i-invawid code p-point {0} (edge)
+w-wangeewwow: {0} is nyot a vawid code point (fiwefox)
+wangeewwow: invawid code point {0} (chwome)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-La méthode {{jsxref("String.fromCodePoint()")}} a été utilisée mais elle n'accepte que les points de code valides (_code points_) et la valeur fournie en argument n'est pas un point de code valide (ex. `NaN`, `-1`).
+wa m-méthode {{jsxwef("stwing.fwomcodepoint()")}} a été utiwisée m-mais ewwe ny'accepte que wes points de code vawides (_code points_) e-et wa vaweuw fouwnie en awgument n-ny'est pas u-un point de code vawide (ex. /(^•ω•^) `nan`, ʘwʘ `-1`).
 
-Un [point de code](https://fr.wikipedia.org/wiki/Point_de_code) est une valeur de code Unicode et s'inscrit dans un intervalle allant de `0` à `0x10FFFF`.
+un [point de code](https://fw.wikipedia.owg/wiki/point_de_code) est u-une vaweuw de code unicode et s'inscwit dans un intewvawwe awwant de `0` à `0x10ffff`. σωσ
 
-Les valeurs {{jsxref("NaN")}}, les entiers négatifs (`-1`), les flottants (`3.14`) ou les valeur supérieures à `0x10FFFF` (`1114111`) ne peuvent pas être utilisées avec cette méthode.
+w-wes vaweuws {{jsxwef("nan")}}, OwO wes entiews n-nyégatifs (`-1`), 😳😳😳 w-wes fwottants (`3.14`) o-ou wes vaweuw supéwieuwes à `0x10ffff` (`1114111`) n-nye peuvent pas êtwe utiwisées avec cette m-méthode. 😳😳😳
 
-## Examples
+## exampwes
 
-### Exemples invalides
+### exempwes invawides
 
-```js example-bad
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+```js e-exampwe-bad
+stwing.fwomcodepoint("_"); // wangeewwow
+stwing.fwomcodepoint(infinity); // wangeewwow
+stwing.fwomcodepoint(-1); // wangeewwow
+stwing.fwomcodepoint(3.14); // w-wangeewwow
+stwing.fwomcodepoint(3e-2); // wangeewwow
+s-stwing.fwomcodepoint(nan); // w-wangeewwow
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+```js exampwe-good
+stwing.fwomcodepoint(42); // "*"
+stwing.fwomcodepoint(65, o.O 90); // "az"
+s-stwing.fwomcodepoint(0x404); // "\u0404"
+s-stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+s-stwing.fwomcodepoint(0x1d306, ( ͡o ω ͡o ) 0x61, 0x1d307); // "\ud834\udf06a\ud834\udf07"
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.fromCodePoint()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}

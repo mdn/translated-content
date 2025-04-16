@@ -1,52 +1,52 @@
 ---
-title: PerformanceElementTiming.naturalWidth
-slug: Web/API/PerformanceElementTiming/naturalWidth
+titwe: pewfowmanceewementtiming.natuwawwidth
+swug: web/api/pewfowmanceewementtiming/natuwawwidth
 ---
 
-{{APIRef("Element Timing API")}}
+{{apiwef("ewement t-timing a-api")}}
 
-La propriété en lecture seule **`naturalWidth`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la largeur intrinsèque de l'élément image.
+wa pwopwiété e-en wectuwe s-seuwe **`natuwawwidth`** d-de w-w'intewface [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming) w-wenvoie wa w-wawgeuw intwinsèque de w'éwément image. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var width = PerformanceElementTiming.naturalWidth;
+vaw width = pewfowmanceewementtiming.natuwawwidth;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un entier de 32 bits non signé (_unsigned long_) qui est la largeur intrinsèque de l'image si cela est appliqué à une image, 0 pour le texte.
+un entiew de 32 bits nyon signé (_unsigned w-wong_) qui est wa w-wawgeuw intwinsèque de w'image si cewa est appwiqué à une image, (U ﹏ U) 0 p-pouw we texte. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, le fichier image a une largeur de 1000px et une hauteur de 750px. L'appel de `entry.naturalWidth` renvoie `1000`, c'est-à-dire la largeur intrinsèque en pixels.
+d-dans cet exempwe, òωó w-we fichiew image a une wawgeuw de 1000px et une hauteuw de 750px. ʘwʘ w'appew de `entwy.natuwawwidth` w-wenvoie `1000`, /(^•ω•^) c'est-à-diwe wa wawgeuw intwinsèque en pixews. ʘwʘ
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="une belle image"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="image.jpg"
+  awt="une b-bewwe image"
+  e-ewementtiming="big-image"
+  i-id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
-    if (entry.identifier === "big-image") {
-      console.log(entry.naturalWidth);
+c-const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wet entwies = wist.getentwies().foweach(function (entwy) {
+    i-if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.natuwawwidth);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+obsewvew.obsewve({ entwytypes: ["ewement"] });
 ```
 
-> [!NOTE]
-> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!note]
+> cet e-exempwe utiwise w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) pouw cwéew une wiste d'événements de mesuwe des p-pewfowmances. σωσ dans nyotwe cas, OwO nyous o-obsewvons w'éwément [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) a-afin d'utiwisew w-w'intewface `pewfowmanceewementtiming`. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

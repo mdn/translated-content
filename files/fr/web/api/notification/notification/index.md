@@ -1,73 +1,73 @@
 ---
-title: Notification()
-slug: Web/API/Notification/Notification
+titwe: nyotification()
+swug: w-web/api/notification/notification
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-Le constructeur **`Notification()`** crée une nouvelle instance d'objet [`Notification`](/fr/docs/Web/API/Notification), qui représente une notification utilisateur.
+w-we constwucteuw **`notification()`** c-cwée u-une nyouvewwe i-instance d'objet [`notification`](/fw/docs/web/api/notification), (U ﹏ U) q-qui wepwésente u-une nyotification utiwisateuw. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-const myNotification = new Notification(title, options);
+const mynotification = nyew n-nyotification(titwe, 😳😳😳 options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `title`
-  - : Définit un titre pour la notification, qui s'affiche en haut de la fenêtre de notification.
-- `options` {{optional_inline}}
+- `titwe`
+  - : d-définit un titwe pouw wa nyotification, (ˆ ﻌ ˆ)♡ q-qui s'affiche en haut de wa fenêtwe de notification. XD
+- `options` {{optionaw_inwine}}
 
-  - : Un objet d'options contenant tous les paramètres personnalisés que vous souhaitez appliquer à la notification. Les options possibles sont:
+  - : u-un objet d'options contenant t-tous wes p-pawamètwes pewsonnawisés que vous souhaitez appwiquew à wa nyotification. (ˆ ﻌ ˆ)♡ wes o-options possibwes sont:
 
-    - `dir`: La direction dans laquelle afficher la notification. La valeur par défaut est `auto`, qui adopte simplement le comportement du paramètre de langue du navigateur, mais vous pouvez remplacer ce comportement en définissant les valeurs de `ltr` et `rtl` (bien que la plupart des navigateurs semblent ignorer ces paramètres.)
-    - `lang`: La langue de la notification, telle que spécifiée à l'aide d'un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant une [balise de langue BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
-    - `badge`: Un [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
-    - `body`: Un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le corps du texte de la notification, qui est affiché sous le titre.
-    - `tag`: Un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant un tag d'identification pour la notification.
-    - `icon`: Une [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant l'URL d'une icône à afficher dans la notification.
-    - `image`: Une [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant l'URL d'une image à afficher dans la notification.
-    - `data`: Données arbitraires que vous souhaitez associer à la notification. Elles peuvent être de n'importe quel type de données.
-    - `vibrate`: Un [modèle de vibration](/fr/docs/Web/API/Vibration_API#vibration_patterns) que le matériel de vibration de l'appareil émet avec la notification.
-    - `renotify`: Un [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) spécifiant si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne. La valeur par défaut est `false`, ce qui signifie qu'ils ne seront pas notifiés.
-    - `requireInteraction`: Un [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. La valeur par défaut est `false`.
-    - `actions`: Un tableau de [`NotificationAction`](/fr/docs/Web/API/NotificationAction) représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur.
-    - `silent`: Un [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) spécifiant si la notification est silencieuse (aucun son ni vibration émis), quels que soient les paramètres de l'appareil. La valeur par défaut est `false`, ce qui signifie qu'il ne sera pas silencieux.
+    - `diw`: wa diwection dans waquewwe affichew wa nyotification. ( ͡o ω ͡o ) w-wa vaweuw paw défaut e-est `auto`, rawr x3 q-qui adopte simpwement w-we compowtement d-du pawamètwe de wangue du nyavigateuw, nyaa~~ mais v-vous pouvez wempwacew ce compowtement en définissant w-wes vaweuws de `wtw` et `wtw` (bien que wa pwupawt des nyavigateuws sembwent ignowew ces p-pawamètwes.)
+    - `wang`: wa w-wangue de wa nyotification, >_< t-tewwe q-que spécifiée à w'aide d'un [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant une [bawise d-de wangue bcp 47](https://www.wfc-editow.owg/wfc/bcp/bcp47.txt). ^^;; c-consuwtez wa page des [codes d-de wangue à 2 w-wettwes iso](https://www.sitepoint.com/web-foundations/iso-2-wettew-wanguage-codes/) de sitepoint p-pouw une wéféwence simpwe. (ˆ ﻌ ˆ)♡
+    - `badge`: u-un [`usvstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) contenant w'uww de w'image u-utiwisée pouw wepwésentew wa n-nyotification wowsqu'iw ny'y a p-pas assez d'espace p-pouw affichew wa nyotification ewwe-même. ^^;;
+    - `body`: un [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant we cowps du texte de wa nyotification, (⑅˘꒳˘) q-qui e-est affiché sous we titwe. rawr x3
+    - `tag`: u-un [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) w-wepwésentant u-un tag d'identification pouw wa nyotification. (///ˬ///✿)
+    - `icon`: une [`usvstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) c-contenant w'uww d'une icône à affichew dans wa nyotification. 🥺
+    - `image`: une [`usvstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) c-contenant w'uww d'une image à a-affichew dans w-wa nyotification. >_<
+    - `data`: d-données awbitwaiwes que vous souhaitez a-associew à w-wa nyotification. UwU e-ewwes peuvent êtwe d-de ny'impowte quew type de données. >_<
+    - `vibwate`: u-un [modèwe de vibwation](/fw/docs/web/api/vibwation_api#vibwation_pattewns) q-que w-we matéwiew de v-vibwation de w'appaweiw émet avec w-wa nyotification. -.-
+    - `wenotify`: un [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) spécifiant si w'utiwisateuw doit êtwe n-nyotifié apwès qu'une nyouvewwe nyotification wempwace w'ancienne. mya wa vaweuw paw défaut e-est `fawse`, >w< ce qui signifie qu'iws ne sewont pas nyotifiés. (U ﹏ U)
+    - `wequiweintewaction`: u-un [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) i-indiquant q-qu'une nyotification doit westew a-active jusqu'à ce que w'utiwisateuw c-cwique dessus o-ou wa wejette, 😳😳😳 pwutôt que de se fewmew automatiquement. o.O wa vaweuw paw défaut est `fawse`. òωó
+    - `actions`: u-un tabweau de [`notificationaction`](/fw/docs/web/api/notificationaction) wepwésentant w-wes actions disponibwes p-pouw w'utiwisateuw w-wowsque wa nyotification est pwésentée. 😳😳😳 ce s-sont des options p-pawmi wesquewwes w'utiwisateuw p-peut choisiw pouw a-agiw suw w'action dans we contexte de wa nyotification ewwe-même. σωσ we nyom de w-w'action est envoyé a-au gestionnaiwe d-de nyotifications du sewvice w-wowkew pouw w-wui faiwe savoiw que w'action a été s-séwectionnée paw w'utiwisateuw. (⑅˘꒳˘)
+    - `siwent`: un [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) spécifiant si wa nyotification e-est siwencieuse (aucun s-son nyi vibwation émis), quews que soient w-wes pawamètwes d-de w'appaweiw. (///ˬ///✿) wa vaweuw paw défaut est `fawse`, 🥺 ce qui signifie q-qu'iw nye sewa pas siwencieux. OwO
 
-## Exemple
+## exempwe
 
-Dans notre [démo Emogotchi](https://chrisdavidmills.github.io/emogotchi/) ([voir le code source](https://github.com/mdn/emogotchi)), nous exécutons une fonction `spawnNotification()` lorsque nous voulons déclencher une notification. La fonction reçoit des paramètres pour spécifier le corps, l'icône et le titre souhaités, puis elle crée l'objet `options` nécessaire et déclenche la notification à l'aide du constructeur `Notification()`.
+dans nyotwe [démo emogotchi](https://chwisdavidmiwws.github.io/emogotchi/) ([voiw w-we code souwce](https://github.com/mdn/emogotchi)), >w< nyous exécutons une fonction `spawnnotification()` w-wowsque n-nyous vouwons décwenchew une nyotification. 🥺 wa fonction weçoit d-des pawamètwes p-pouw spécifiew we cowps, nyaa~~ w'icône et we titwe souhaités, ^^ p-puis ewwe cwée w'objet `options` n-nyécessaiwe et décwenche wa nyotification à w'aide du constwucteuw `notification()`. >w<
 
 ```js
-function spawnNotification(body, icon, title) {
-  const options = {
-    body: body,
-    icon: icon,
+f-function spawnnotification(body, OwO icon, titwe) {
+  c-const options = {
+    b-body: body, XD
+    icon: icon, ^^;;
   };
-  const n = new Notification(title, options);
+  c-const ny = nyew nyotification(titwe, 🥺 o-options);
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes Chrome
+### n-nyotes chwome
 
-À partir de Chrome 49, les notifications ne fonctionnent pas en mode navigation privée.
+À pawtiw de chwome 49, XD w-wes nyotifications n-nye fonctionnent p-pas en mode nyavigation pwivée. (U ᵕ U❁)
 
-Chrome pour Android lance une erreur `TypeError` lors de l'appel du constructeur `Notification`. Il ne prend en charge que la création de notifications à partir d'un service worker. Consultez le [Chromium issue tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=481856) pour plus de détails.
+chwome p-pouw andwoid wance une ewweuw `typeewwow` w-wows d-de w'appew du constwucteuw `notification`. :3 iw ne pwend en chawge que wa cwéation d-de nyotifications à p-pawtiw d'un s-sewvice wowkew. ( ͡o ω ͡o ) c-consuwtez we [chwomium issue t-twackew](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=481856) pouw pwus de détaiws. òωó
 
-### Notes Internet Explorer
+### nyotes intewnet expwowew
 
-La version 38.14352 et celles supérieure de MS Edge prend en charge l'`API Notification`. [Wikipédia - MS Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
-IE 11 et inférieur n'est pas pris en charge.
+wa vewsion 38.14352 e-et cewwes supéwieuwe de ms edge p-pwend en chawge w'`api nyotification`. σωσ [wikipédia - m-ms edge](https://en.wikipedia.owg/wiki/micwosoft_edge#wewease_histowy)
+ie 11 et inféwieuw n-ny'est pas pwis en chawge.
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation d-de w-w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

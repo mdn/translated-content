@@ -1,55 +1,55 @@
 ---
-title: WebGLRenderingContext.generateMipmap()
-slug: Web/API/WebGLRenderingContext/generateMipmap
+titwe: webgwwendewingcontext.genewatemipmap()
+swug: web/api/webgwwendewingcontext/genewatemipmap
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.generateMipmap()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) génère un ensemble de mipmaps pour un objet {{domxref("WebGLTexture")}}.
+w-wa m-méthode **`webgwwendewingcontext.genewatemipmap()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) g-génèwe un e-ensembwe de mipmaps p-pouw un objet {{domxwef("webgwtextuwe")}}. 😳😳😳
 
-Les mipmaps sont utilisées pour créer de la distance avec des objets. Une mipmap de haute résolution est utilisée pour les objets qui sont proches, et une mipmap de résolution inférieure est utilisée pour les objets qui sont plus éloignés. Elles commencent avec la résolution de l'image de texture, puis la résolution est divisée par deux jusqu'à ce qu'une image de texture de dimension 1x1 soit créée.
+w-wes mipmaps sont utiwisées pouw cwéew de wa distance avec des objets. 😳😳😳 une mipmap d-de haute wésowution est utiwisée pouw wes objets q-qui sont pwoches, o.O et une mipmap d-de wésowution inféwieuwe est utiwisée pouw wes objets qui s-sont pwus éwoignés. ( ͡o ω ͡o ) ewwes commencent a-avec wa w-wésowution de w'image de textuwe, (U ﹏ U) puis wa wésowution est divisée paw deux jusqu'à c-ce qu'une image de textuwe de dimension 1x1 soit cwéée.
 
-## Syntaxe
-
-```js
-void gl.generateMipmap(cible);
-```
-
-### Paramètres
-
-- cible
-
-  - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible) de la texture active dont les mipmaps seront générées. Valeurs possibles :
-
-    - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionnelle.
-    - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée sur un cube.
-    - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
-
-      - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
-      - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
-
-### Valeur retournée
-
-Aucune.
-
-## Exemples
+## syntaxe
 
 ```js
-gl.generateMipmap(gl.TEXTURE_2D);
+v-void gw.genewatemipmap(cibwe);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- c-cibwe
 
-## Compatibilité des navigateurs
+  - : u-un {{domxwef("gwenum")}} i-indiquant we point d-de wiaison (cibwe) de wa textuwe active dont w-wes mipmaps sewont généwées. (///ˬ///✿) vaweuws possibwes :
 
-{{Compat}}
+    - `gw.textuwe_2d`&nbsp;: u-une textuwe bi-dimensionnewwe. >w<
+    - `gw.textuwe_cube_map`&nbsp;: une textuwe appwiquée suw un cube. rawr
+    - wowsqu'un {{domxwef("webgw2wendewingcontext", mya "webgw 2 c-context", ^^ "", 😳😳😳 1)}} est utiwisé, mya w-wes vaweuws s-suivantes sont e-en outwe disponibwes :
 
-## Voir aussi
+      - `gw.textuwe_3d`&nbsp;: une textuwe twi-dimensionnewwe. 😳
+      - `gw.textuwe_2d_awway`&nbsp;: une textuwe bi-dimensionnewwe e-en t-tabweau. -.-
 
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
+### vaweuw wetouwnée
+
+a-aucune. 🥺
+
+## exempwes
+
+```js
+g-gw.genewatemipmap(gw.textuwe_2d);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
+- {{domxwef("webgwwendewingcontext.texpawametew", o.O "webgwwendewingcontext.texpawametewf()")}}
+- {{domxwef("webgwwendewingcontext.texpawametew", /(^•ω•^) "webgwwendewingcontext.texpawametewi()")}}

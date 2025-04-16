@@ -1,58 +1,58 @@
 ---
-title: "ReferenceError: can't access lexical declaration 'X' before initialization"
-slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
+titwe: "wefewenceewwow: can't a-access wexicaw d-decwawation 'x' b-befowe initiawization"
+s-swug: web/javascwipt/wefewence/ewwows/cant_access_wexicaw_decwawation_befowe_init
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-ReferenceError: Use before delaration (Edge)
-ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
+w-wefewenceewwow: u-use befowe d-dewawation (edge)
+wefewenceewwow: can't access wexicaw decwawation `x' befowe i-initiawization (fiwefox)
+wefewenceewwow: 'x' is n-nyot defined (chwome)
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("ReferenceError")}}
+{{jsxwef("wefewenceewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec `let` ou `const` et qui est utilisée avant son initialisation.
+iw y a eu u-un accès à une vawiabwe décwawée a-avec `wet` o-ou `const` avant que cewwe-ci ait été initiawisée. o.O cewa peut se pwoduiwe dans n-ny'impowte quewwe instwuction de bwoc avec une vawiabwe décwawée avec `wet` o-ou `const` et qui est utiwisée a-avant son initiawisation. /(^•ω•^)
 
-## Exemple
+## e-exempwe
 
-### Exemples invalides
+### e-exempwes i-invawides
 
-Dans l'exemple qui suit, la variable `toto` est redéclarée dans le bloc avec un second `let` et elle n'est donc pas initialisée.
+dans w'exempwe qui suit, wa vawiabwe `toto` e-est wedécwawée dans we bwoc avec un s-second `wet` et ewwe ny'est donc pas initiawisée.
 
-```js example-bad
+```js exampwe-bad
 function test() {
-  let toto = 33;
-  if (true) {
-    let toto = toto + 55;
-    // ReferenceError: can't access lexical
-    // declaration `toto` before initialization
+  wet toto = 33;
+  i-if (twue) {
+    wet t-toto = toto + 55;
+    // w-wefewenceewwow: c-can't access wexicaw
+    // decwawation `toto` befowe initiawization
   }
 }
-test();
+t-test();
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-Afin que `toto` puisse être modifiée au sein de l'instruction `if`, on enlèvera la redéclaration dans ce bloc :
+afin que `toto` p-puisse êtwe m-modifiée au sein de w'instwuction `if`, nyaa~~ o-on enwèvewa wa wedécwawation d-dans ce bwoc :
 
-```js example-good
-function test() {
-  let toto = 33;
-  if (true) {
+```js exampwe-good
+function t-test() {
+  wet toto = 33;
+  i-if (twue) {
     toto = toto + 55;
   }
 }
-test();
+t-test();
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [La « zone morte temporelle » (ou TDZ pour « _Temporal Dead Zone_ ») et les erreurs avec `let`](</fr/docs/Web/JavaScript/Reference/Statements/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>)
+- [wa « zone mowte tempowewwe » (ou tdz pouw « _tempowaw dead zone_ ») et wes ewweuws a-avec `wet`](</fw/docs/web/javascwipt/wefewence/statements/wet#zone_mowte_tempowaiwe_(tempowaw_dead_zone_tdz)_et_wes_ewweuws_wiées_à_wet>)

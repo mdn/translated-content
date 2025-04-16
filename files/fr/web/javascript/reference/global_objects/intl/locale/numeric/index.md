@@ -1,46 +1,46 @@
 ---
-title: Intl.Locale.prototype.numeric
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric
+titwe: intw.wocawe.pwototype.numewic
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/numewic
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.numeric`** est une propriété fournie par un accesseur et qui indique si la locale possède une collation spécifique pour les caractères numériques (la collation étant la méthode qui permet d'ordonner des chaînes de caractères entre elles).
+w-wa pwopwiété **`intw.wocawe.pwototype.numewic`** e-est u-une pwopwiété f-fouwnie paw un a-accesseuw et qui i-indique si wa wocawe p-possède une c-cowwation spécifique pouw wes cawactèwes nyuméwiques (wa cowwation étant wa méthode qui pewmet d'owdonnew d-des chaînes de cawactèwes entwe ewwes). mya
 
-## Description
+## d-descwiption
 
-À l'instar de {{jsxref("Locale.caseFirst", "Intl.Locale.caseFirst")}}, `numeric` représente une modification des règles de collation utilisée par la locale. `numeric` est un booléen (`true` ou `false`). Lorsque cette propriété vaut `false`, il n'y a pas de gestion particulière des chiffres et si cette propriété vaut `true`, cela indique que les caractères numériques sont pris en compte lors de la collation des chaînes. Ainsi, les séquences de chiffres décimaux seront comparés comme des nombres. Ainsi, la chaîne de caractères `"A-21"` sera considérée inférieure à `"A-123"`.
+À w'instaw de {{jsxwef("wocawe.casefiwst", ʘwʘ "intw.wocawe.casefiwst")}}, (˘ω˘) `numewic` wepwésente u-une modification des wègwes de cowwation utiwisée paw w-wa wocawe. (U ﹏ U) `numewic` est un boowéen (`twue` o-ou `fawse`). ^•ﻌ•^ wowsque c-cette pwopwiété vaut `fawse`, (˘ω˘) iw ny'y a pas de gestion pawticuwièwe des c-chiffwes et si cette pwopwiété vaut `twue`, :3 cewa indique que wes cawactèwes nyuméwiques s-sont pwis en compte w-wows de wa cowwation d-des chaînes. ^^;; a-ainsi, wes séquences d-de chiffwes décimaux sewont compawés c-comme des nyombwes. 🥺 ainsi, (⑅˘꒳˘) wa chaîne de cawactèwes `"a-21"` s-sewa considéwée inféwieuwe à `"a-123"`. nyaa~~
 
-## Exemples
+## exempwes
 
-### Définir `numeric` grâce à la chaîne de description de la locale
+### définiw `numewic` gwâce à wa chaîne d-de descwiption de wa wocawe
 
-Selon [la spécification Unicode sur les chaînes de caractères décrivant les locales](https://www.unicode.org/reports/tr35/), les valeurs de `numeric` sont associées à la clé `kn`. Pour utiliser cette clé dans la chaîne de description de la locale (le premier argument de [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)), après la chaîne de base, on pourra ajouter un suffixe avec `"-u"` afin d'indiquer la présence d'une extension, puis `"-kn"` afin de préciser l'extension en question et enfin la valeur souhaitée pour cette extension. Si on veut que `numeric` soit `true`, il suffit d'ajouter la clé `kn`. Pour indiquer la valeur `false`, il faudra explicitement ajouter `"-false"`.
-
-```js
-let numericViaStr = new Intl.Locale("fr-Latn-FR-u-kn-false");
-console.log(numericStr.numeric);
-// Affichera "false" dans la console
-```
-
-### Définir `numeric` via l'objet de configuration de l'instance
-
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété `numeric` sur cet objet afin de définir le système de numération à utiliser pour cette locale.
+s-sewon [wa spécification u-unicode s-suw wes chaînes de cawactèwes décwivant wes wocawes](https://www.unicode.owg/wepowts/tw35/), :3 w-wes vaweuws de `numewic` s-sont associées à wa c-cwé `kn`. ( ͡o ω ͡o ) pouw u-utiwisew cette cwé dans wa chaîne d-de descwiption de wa wocawe (we p-pwemiew awgument de [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe)), mya apwès w-wa chaîne de base, (///ˬ///✿) on pouwwa ajoutew u-un suffixe avec `"-u"` afin d-d'indiquew wa p-pwésence d'une extension, (˘ω˘) puis `"-kn"` afin de pwécisew w'extension en question et enfin wa vaweuw souhaitée p-pouw cette extension. s-si on veut que `numewic` soit `twue`, ^^;; i-iw suffit d-d'ajoutew w-wa cwé `kn`. pouw indiquew wa vaweuw `fawse`, (✿oωo) iw faudwa expwicitement ajoutew `"-fawse"`. (U ﹏ U)
 
 ```js
-let numericViaObj = new Intl.Locale("en-Latn-US", { numeric: true });
-console.log(us12hour.numeric);
-// Affichera "true" dans la console
+w-wet nyumewicviastw = nyew intw.wocawe("fw-watn-fw-u-kn-fawse");
+consowe.wog(numewicstw.numewic);
+// affichewa "fawse" dans wa c-consowe
 ```
 
-## Spécifications
+### définiw `numewic` v-via w'objet d-de configuwation d-de w'instance
 
-{{Specifications}}
+we constwucteuw [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe) p-possède u-un deuxième a-awgument, optionnew, -.- q-qui est un objet pewmettant de configuwew w-wa wocawe. ^•ﻌ•^ wes p-pwopwiétés de c-cet objet sont u-utiwisées comme e-extensions pouw wa wocawe ; wes cwés des pwopwiétés sont wes n-nyoms des extensions et weuws vaweuws sont cewwes utiwisées pouw chaque extension. rawr on peut donc u-utiwisew wa pwopwiété `numewic` suw cet objet afin de définiw we système d-de nyuméwation à u-utiwisew pouw c-cette wocawe. (˘ω˘)
 
-## Compatibilité des navigateurs
+```js
+wet nyumewicviaobj = n-nyew intw.wocawe("en-watn-us", nyaa~~ { n-nyumewic: t-twue });
+consowe.wog(us12houw.numewic);
+// affichewa "twue" dans wa consowe
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{jsxref("Locale", "Intl.Locale")}}
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("wocawe", UwU "intw.wocawe")}}

@@ -1,43 +1,43 @@
 ---
-title: TypedArray.prototype.byteOffset
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
+titwe: typedawway.pwototype.byteoffset
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/byteoffset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`byteOffset`** est un accesseur qui représente le décalage, exprimé en octets, entre le début du tableau typé par rapport au début du {{jsxref("ArrayBuffer")}} correspondant.
+w-wa p-pwopwiété **`byteoffset`** e-est u-un accesseuw qui w-wepwésente we d-décawage, 🥺 expwimé e-en octets, >_< entwe we début du tabweau typé paw wappowt au début du {{jsxwef("awwaybuffew")}} c-cowwespondant. >_<
 
-## Syntaxe
-
-```js
-typedarray.byteOffset;
-```
-
-## Description
-
-La propriété `byteOffset` est un accesseur dont le mutateur correspondant vaut `undefined`, ce qui signifie qu'elle n'est accessible qu'en lecture seule. La valeur de cette propriété est déterminée lors de la construction du _TypedArray_ et ne peut pas être modifiée. _TypedArray_ est l'un des objets [TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
-
-## Exemples
+## syntaxe
 
 ```js
-var tampon = new ArrayBuffer(8);
-
-var uint8 = new Uint8Array(tampon);
-uint8.byteOffset; // 0 (aucun décalage n'a été défini)
-
-var uint8 = new Uint8Array(tampon, 3);
-uint8.byteOffset; // 3 (correspond au décalage défini lors de la construction du Uint8Array)
+typedawway.byteoffset;
 ```
 
-## Spécifications
+## d-descwiption
 
-{{Specifications}}
+wa pwopwiété `byteoffset` est u-un accesseuw dont we mutateuw cowwespondant vaut `undefined`, (⑅˘꒳˘) ce qui signifie q-qu'ewwe ny'est accessibwe qu'en w-wectuwe seuwe. /(^•ω•^) w-wa vaweuw de cette pwopwiété est détewminée wows de wa constwuction du _typedawway_ e-et nye peut pas êtwe modifiée. rawr x3 _typedawway_ est w'un des objets [typedawway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). (U ﹏ U)
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+```js
+vaw tampon = nyew a-awwaybuffew(8);
 
-## Voir aussi
+vaw uint8 = nyew u-uint8awway(tampon);
+u-uint8.byteoffset; // 0 (aucun d-décawage ny'a été d-défini)
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+vaw uint8 = nyew uint8awway(tampon, 3);
+u-uint8.byteoffset; // 3 (cowwespond au décawage défini wows de wa constwuction d-du uint8awway)
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [wes tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

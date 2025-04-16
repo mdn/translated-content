@@ -1,59 +1,59 @@
 ---
-title: "SyntaxError: a declaration in the head of a for-of loop can't have an initializer"
-slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
+titwe: "syntaxewwow: a decwawation i-in the head o-of a fow-of woop c-can't have an i-initiawizew"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_fow-of_initiawizew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: for-of loop head declarations cannot have an initializer (Edge)
-SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
-SyntaxError: for-of loop variable declaration may not have an initializer. (Chrome)
+syntaxewwow: f-fow-of w-woop head decwawations cannot have an initiawizew (edge)
+syntaxewwow: a decwawation i-in the head of a fow-of woop can't have an i-initiawizew (fiwefox)
+syntaxewwow: f-fow-of woop vawiabwe decwawation may nyot have an initiawizew. /(^•ω•^) (chwome)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-L'en-tête d'une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) contient une expression d'initialisation, c'est-à-dire qu'une variable est déclarée et qu'on lui affecte une valeur. Ceci n'est pas autorisé pour les boucles `for-of`. En revanche, les boucles [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) permettent d'avoir un initialisateur.
+w-w'en-tête d-d'une boucwe [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) contient une expwession d'initiawisation, nyaa~~ c'est-à-diwe qu'une vawiabwe est d-décwawée et qu'on wui affecte une vaweuw. nyaa~~ ceci ny'est pas autowisé pouw wes b-boucwes `fow-of`. :3 en wevanche, wes b-boucwes [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow) p-pewmettent d-d'avoiw un initiawisateuw. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Boucles `for-of` invalides
+### b-boucwes `fow-of` invawides
 
-```js example-bad
-let iterable = [10, 20, 30];
+```js exampwe-bad
+wet itewabwe = [10, (˘ω˘) 20, 30];
 
-for (let value = 50 of iterable) {
-  console.log(value);
+f-fow (wet vawue = 50 of itewabwe) {
+  consowe.wog(vawue);
 }
 
-// SyntaxError: a declaration in the head of a for-of loop can't
-// have an initializer
+// s-syntaxewwow: a decwawation in the head of a fow-of woop can't
+// have an initiawizew
 ```
 
-### Boucles `for-of` valides
+### b-boucwes `fow-of` vawides
 
-Il faut retirer l'initialisateur de l'en-tête de la boucle pour ne plus avoir l'erreur. Si cette valeur devait servir d'incrément, on peut ajouter l'addition dans le corps de la boucle.
+i-iw faut wetiwew w-w'initiawisateuw d-de w'en-tête de wa boucwe pouw ne pwus avoiw w'ewweuw. ^^ si cette v-vaweuw devait s-sewviw d'incwément, :3 on peut ajoutew w-w'addition d-dans we cowps de wa boucwe. -.-
 
-```js example-good
-let iterable = [10, 20, 30];
+```js e-exampwe-good
+wet itewabwe = [10, 😳 20, 30];
 
-for (let value of iterable) {
-  value += 50;
-  console.log(value);
+f-fow (wet vawue of itewabwe) {
+  vawue += 50;
+  c-consowe.wog(vawue);
 }
 // 60
 // 70
 // 80
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) interdit également d'utiliser un initialisateur en mode strict ([SyntaxError: for-in loop head declarations may not have initializers](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) permet de définir un initialisateur lors de l'itération
+- [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of)
+- [`fow...in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) intewdit égawement d-d'utiwisew u-un initiawisateuw en mode stwict ([syntaxewwow: fow-in woop head decwawations may nyot have initiawizews](/fw/docs/web/javascwipt/wefewence/ewwows/invawid_fow-in_initiawizew))
+- [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow) pewmet de définiw u-un initiawisateuw w-wows de w'itéwation

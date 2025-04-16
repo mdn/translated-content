@@ -1,53 +1,53 @@
 ---
-title: DOMError
-slug: Web/API/DOMError
+titwe: domewwow
+swug: web/api/domewwow
 ---
 
-{{ APIRef("DOM") }}{{deprecated_header}}
+{{ a-apiwef("dom") }}{{depwecated_headew}}
 
-L'interface **`DOMError`** décrit un objet d'erreur contenant le nom de l'erreur.
+w-w'intewface **`domewwow`** d-décwit un objet d-d'ewweuw contenant w-we nyom d-de w'ewweuw. OwO
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("DOMError.name")}} {{readOnlyInline}}
-  - : Retourne une {{ domxref("DOMString") }} _(chaîne de caractères)_ représentant l'un des noms de type d'erreur (voir ci-dessous).
-- {{domxref("DOMError.message")}} {{readOnlyInline}}
-  - : Retourne une {{ domxref("DOMString") }} _(chaîne de caractères)_ représentant un message ou une description associée avec le nom de type d'erreur.
+- {{domxwef("domewwow.name")}} {{weadonwyinwine}}
+  - : w-wetouwne une {{ domxwef("domstwing") }} _(chaîne de cawactèwes)_ wepwésentant w'un des n-nyoms de type d'ewweuw (voiw ci-dessous). (U ﹏ U)
+- {{domxwef("domewwow.message")}} {{weadonwyinwine}}
+  - : wetouwne une {{ d-domxwef("domstwing") }} _(chaîne de cawactèwes)_ w-wepwésentant un message ou une descwiption associée avec w-we nyom de type d'ewweuw. >w<
 
-## Type d'erreurs
+## t-type d'ewweuws
 
-| Type                         | Description                                                                                               |
+| t-type                         | descwiption                                                                                               |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `IndexSizeError`             | L'index n'est pas dans l'étendue autorisée (par exemple, déclenché dans un objet {{ domxref("range") }}). |
-| `HierarchyRequestError`      | La hiérarchie de l'arbre de noeud est incorrecte.                                                         |
-| `WrongDocumentError`         | L'objet est dans le mauvais {{ domxref("document") }}.                                                    |
-| `InvalidCharacterError`      | La chaîne de caractères contient des caractères non valides.                                              |
-| `NoModificationAllowedError` | L'objet ne peut pas être modifié.                                                                         |
-| `NotFoundError`              | L'objet ne peut pas être trouvé.                                                                          |
-| `NotSupportedError`          | Cette opération n'est pas supportée.                                                                      |
-| `InvalidStateError`          | L'objet est dans un état non valide.                                                                      |
-| `SyntaxError`                | La chaîne de caractère ne correspond pas au motif attendu.                                                |
-| `InvalidModificationError`   | L'objet ne peut pas être modifié de cette façon.                                                          |
-| `NamespaceError`             | Cette opération n'est pas autorisée par les Namespaces en XML.                                            |
-| `InvalidAccessError`         | L'objet ne supporte pas cette opération ou cet argument.                                                  |
-| `TypeMismatchError`          | Le type de l'objet ne correspond pas au type attendu.                                                     |
-| `SecurityError`              | L'opération n'est pas sécurisée.                                                                          |
-| `NetworkError`               | Une erreur réseau est survenue.                                                                           |
-| `AbortError`                 | L'opération a été annulée.                                                                                |
-| `URLMismatchError`           | L'URL fournie ne correspond pas à une autre URL.                                                          |
-| `QuotaExceededError`         | Le quota a été dépassé.                                                                                   |
-| `TimeoutError`               | L'opération a dépassé le temps autorisé. (Time Out)                                                       |
-| `InvalidNodeTypeError`       | Le noeud est incorrect ou a un ancêtre incorrect pour cette opération.                                    |
-| `DataCloneError`             | L'objet n'a pas pu être cloné.                                                                            |
+| `indexsizeewwow`             | w'index ny'est pas dans w'étendue a-autowisée (paw exempwe, (U ﹏ U) décwenché dans un objet {{ domxwef("wange") }}). 😳 |
+| `hiewawchywequestewwow`      | wa hiéwawchie de w-w'awbwe de nyoeud est incowwecte. (ˆ ﻌ ˆ)♡                                                         |
+| `wwongdocumentewwow`         | w-w'objet e-est dans we m-mauvais {{ domxwef("document") }}. 😳😳😳                                                    |
+| `invawidchawactewewwow`      | w-wa chaîne de cawactèwes contient des c-cawactèwes nyon vawides. (U ﹏ U)                                              |
+| `nomodificationawwowedewwow` | w'objet n-nye peut pas êtwe modifié. (///ˬ///✿)                                                                         |
+| `notfoundewwow`              | w'objet nye peut pas êtwe twouvé. 😳                                                                          |
+| `notsuppowtedewwow`          | cette o-opéwation ny'est pas suppowtée. 😳                                                                      |
+| `invawidstateewwow`          | w-w'objet e-est dans un état n-nyon vawide. σωσ                                                                      |
+| `syntaxewwow`                | wa chaîne de cawactèwe nye cowwespond p-pas au motif a-attendu. rawr x3                                                |
+| `invawidmodificationewwow`   | w'objet n-nye peut pas êtwe m-modifié de cette façon. OwO                                                          |
+| `namespaceewwow`             | c-cette opéwation ny'est p-pas autowisée paw wes nyamespaces en xmw. /(^•ω•^)                                            |
+| `invawidaccessewwow`         | w-w'objet nye suppowte p-pas cette opéwation ou cet awgument. 😳😳😳                                                  |
+| `typemismatchewwow`          | w-we type d-de w'objet nye cowwespond pas au type attendu. ( ͡o ω ͡o )                                                     |
+| `secuwityewwow`              | w'opéwation ny'est pas sécuwisée. >_<                                                                          |
+| `netwowkewwow`               | une ewweuw w-wéseau est s-suwvenue. >w<                                                                           |
+| `abowtewwow`                 | w'opéwation a-a été annuwée. rawr                                                                                |
+| `uwwmismatchewwow`           | w-w'uww f-fouwnie nye cowwespond pas à une autwe uww. 😳                                                          |
+| `quotaexceededewwow`         | we quota a-a été dépassé. >w<                                                                                   |
+| `timeoutewwow`               | w'opéwation a dépassé we temps autowisé. (⑅˘꒳˘) (time out)                                                       |
+| `invawidnodetypeewwow`       | w-we nyoeud est incowwect o-ou a un ancêtwe i-incowwect pouw c-cette opéwation. OwO                                    |
+| `datacwoneewwow`             | w'objet n-ny'a pas pu êtwe c-cwoné. (ꈍᴗꈍ)                                                                            |
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ domxref("DOMException") }}
+- {{ d-domxwef("domexception") }}

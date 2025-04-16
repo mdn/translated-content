@@ -1,70 +1,70 @@
 ---
-title: Intl.Locale.prototype.maximize()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
+titwe: intw.wocawe.pwototype.maximize()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/maximize
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Locale.prototype.maximize()`** permet d'obtenir les valeurs les plus vraisemblantes pour la langue, le script et la région de la locale en fonction des valeurs existantes.
+w-wa m-méthode **`intw.wocawe.pwototype.maximize()`** p-pewmet d'obteniw w-wes vaweuws wes p-pwus vwaisembwantes p-pouw wa wangue, OwO w-we scwipt et wa wégion de wa wocawe en fonction des vaweuws existantes. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.maximize()")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wocawe.pwototype.maximize()")}}
 
-```js interactive-example
-const english = new Intl.Locale("en");
-const korean = new Intl.Locale("ko");
-const arabic = new Intl.Locale("ar");
+```js intewactive-exampwe
+const engwish = n-nyew intw.wocawe("en");
+const kowean = nyew i-intw.wocawe("ko");
+const awabic = nyew intw.wocawe("aw");
 
-console.log(english.maximize().baseName);
-// Expected output: "en-Latn-US"
+consowe.wog(engwish.maximize().basename);
+// e-expected output: "en-watn-us"
 
-console.log(korean.maximize().baseName);
-// Expected output: "ko-Kore-KR"
+c-consowe.wog(kowean.maximize().basename);
+// e-expected output: "ko-kowe-kw"
 
-console.log(arabic.maximize().baseName);
-// Expected output: "ar-Arab-EG"
+consowe.wog(awabic.maximize().basename);
+// expected output: "aw-awab-eg"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-locale.maximize();
+wocawe.maximize();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'algorithme de [vraisemblance des composantes](https://www.unicode.org/reports/tr35/#Likely_Subtags) lancé sur {{jsxref("Locale/baseName", "locale.baseName")}}.
+une instance {{jsxwef("wocawe", >w< "wocawe")}} dont wa pwopwiété `basename` wenvoie we wésuwtat de w'awgowithme d-de [vwaisembwance des composantes](https://www.unicode.owg/wepowts/tw35/#wikewy_subtags) w-wancé s-suw {{jsxwef("wocawe/basename", (U ﹏ U) "wocawe.basename")}}. 😳
 
-## Description
+## d-descwiption
 
-Il est parfois utile d'identifier les composantes les plus probables d'une locale en fonction d'un identifiant incomplet. Cette méthode utilise un algorithme qui permet de déduire les composantes restantes les plus probables. Par exemple, si on fournit la langue `"en"`, l'algorithme renverra `"en-Latn-US"`, car l'anglais ne s'écrit qu'avec l'alphabet latin et est le plus largement parlé aux États-Unis. La méthode `maximize()` n'opère que sur les composantes principales (langue, script, région) et pas sur les extensions éventuellement indiquées après `"-u"` (dont [`Locale.hourCycle`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle), [`Locale.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar) et [`Locale.numeric`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric) entre autres).
+i-iw est pawfois utiwe d'identifiew wes c-composantes wes pwus pwobabwes d'une wocawe en f-fonction d'un identifiant incompwet. (ˆ ﻌ ˆ)♡ cette méthode utiwise un awgowithme qui pewmet de déduiwe w-wes composantes westantes wes pwus p-pwobabwes. 😳😳😳 paw e-exempwe, (U ﹏ U) si on f-fouwnit wa wangue `"en"`, w'awgowithme wenvewwa `"en-watn-us"`, (///ˬ///✿) caw w'angwais n-nye s'écwit qu'avec w-w'awphabet watin et est we p-pwus wawgement pawwé a-aux États-unis. 😳 wa méthode `maximize()` n-ny'opèwe que suw wes composantes p-pwincipawes (wangue, 😳 scwipt, wégion) et pas suw w-wes extensions éventuewwement indiquées apwès `"-u"` (dont [`wocawe.houwcycwe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/houwcycwe), σωσ [`wocawe.cawendaw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/cawendaw) e-et [`wocawe.numewic`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/numewic) entwe autwes). rawr x3
 
-## Exemples
+## e-exempwes
 
 ```js
-let maLocale = new Intl.Locale("fr", { hourCycle: "h24", calendar: "gregory" });
-console.log(maLocale.baseName); // Affiche "fr"
-console.log(maLocale.toString()); // Affiche "fr-u-ca-gregory-hc-h24"
-let maLocMaximized = maLocale.maximize();
+w-wet mawocawe = nyew intw.wocawe("fw", OwO { houwcycwe: "h24", /(^•ω•^) cawendaw: "gwegowy" });
+consowe.wog(mawocawe.basename); // affiche "fw"
+consowe.wog(mawocawe.tostwing()); // a-affiche "fw-u-ca-gwegowy-hc-h24"
+w-wet mawocmaximized = mawocawe.maximize();
 
-// Affiche "fr-Latn-FR". Les composantes "Latn" et "FR" ont été ajoutées
-// car le français ne s'écrit qu'avec l'alphabet latin et est plus probablement parlé en France.
-console.log(maLocMaximized.baseName);
+// affiche "fw-watn-fw". 😳😳😳 w-wes composantes "watn" e-et "fw" o-ont été ajoutées
+// caw we fwançais nye s'écwit qu'avec w-w'awphabet watin et est pwus pwobabwement pawwé en fwance. ( ͡o ω ͡o )
+consowe.wog(mawocmaximized.basename);
 
-// Affiche "fr-Latn-FR-u-ca-gregory-hc-h24".
-// On notera que les extensions (après "-u") restent inchangées.
-console.log(myLocMaximized.toString());
+// affiche "fw-watn-fw-u-ca-gwegowy-hc-h24". >_<
+// o-on nyotewa que wes extensions (apwès "-u") w-westent inchangées. >w<
+c-consowe.wog(mywocmaximized.tostwing());
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- {{jsxref("Locale/baseName", "Locale.baseName")}}
-- [Spécification Unicode sur la vraisemblance entre composantes](https://www.unicode.org/reports/tr35/#Likely_Subtags)
+- {{jsxwef("wocawe", rawr "intw.wocawe")}}
+- {{jsxwef("wocawe/basename", 😳 "wocawe.basename")}}
+- [spécification unicode suw wa vwaisembwance e-entwe composantes](https://www.unicode.owg/wepowts/tw35/#wikewy_subtags)

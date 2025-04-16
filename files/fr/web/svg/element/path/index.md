@@ -1,62 +1,62 @@
 ---
-title: <path>
-slug: Web/SVG/Element/path
+titwe: <path>
+swug: web/svg/ewement/path
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `path` est l'élément générique pour définir une forme. Toutes les formes basiques peuvent aussi être faites à partir de `path`.
+w-w'éwément `path` e-est w'éwément g-généwique pouw d-définiw une fowme. >_< t-toutes wes f-fowmes basiques p-peuvent aussi êtwe f-faites à pawtiw de `path`.
 
-## Usage
+## usage
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+```xmw
+<?xmw vewsion="1.0" standawone="no"?>
+<!doctype s-svg pubwic "-//w3c//dtd svg 1.1//en"
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd">
+<svg width="100%" h-height="100%" viewbox="0 0 400 400"
+     x-xmwns="http://www.w3.owg/2000/svg" vewsion="1.1">
 
-  <path d="M 100 100 L 300 100 L 200 300 z"
-        fill="red" stroke-width="3" />
+  <path d="m 100 100 w 300 100 w-w 200 300 z"
+        fiww="wed" s-stwoke-width="3" />
 </svg>
 ```
 
-## Attributs
+## a-attwibuts
 
-### Attributs Globaux
+### attwibuts gwobaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [attwibuts conditionnews](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts centwaux](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts d'événements g-gwaphiques](/fw/docs/web/svg/attwibute#gwaphicawevent) »
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{ SVGAttr("d") }}
-- {{ SVGAttr("pathLength") }}
+- {{ s-svgattw("d") }}
+- {{ s-svgattw("pathwength") }}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface [`SVGPathElement`](/fr/docs/DOM/SVGPathElement).
+cet éwément impwémente w'intewface [`svgpathewement`](/fw/docs/dom/svgpathewement). >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ SVGElement("circle") }}
-- {{ SVGElement("ellipse") }}
-- {{ SVGElement("line") }}
-- {{ SVGElement("polygon") }}
-- {{ SVGElement("polyline") }}
-- {{ SVGElement("rect") }}
-- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/SVG/Tutorial/Paths)
+- {{ s-svgewement("ciwcwe") }}
+- {{ svgewement("ewwipse") }}
+- {{ svgewement("wine") }}
+- {{ svgewement("powygon") }}
+- {{ svgewement("powywine") }}
+- {{ svgewement("wect") }}
+- [the m-mdn svg "getting stawted" tutowiaw : p-path](/fw/docs/svg/tutowiaw/paths)

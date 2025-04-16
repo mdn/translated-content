@@ -1,129 +1,129 @@
 ---
-title: handler.get()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
+titwe: handwew.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la valeur d'une propriété.
+w-wa méthode **`handwew.get()`** e-est une twappe p-pouw intewceptew w-w'accès à w-wa vaweuw d'une p-pwopwiété. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.get()", mya "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  secret: "easily scared",
-  eyeCount: 4,
+```js i-intewactive-exampwe
+const monstew1 = {
+  secwet: "easiwy scawed", mya
+  eyecount: 4, (⑅˘꒳˘)
 };
 
-const handler1 = {
-  get: function (target, prop, receiver) {
-    if (prop === "secret") {
-      return `${target.secret.substring(0, 4)} ... shhhh!`;
+const h-handwew1 = {
+  get: function (tawget, (U ﹏ U) pwop, mya w-weceivew) {
+    if (pwop === "secwet") {
+      w-wetuwn `${tawget.secwet.substwing(0, ʘwʘ 4)} ... shhhh!`;
     }
-    return Reflect.get(...arguments);
-  },
+    wetuwn wefwect.get(...awguments);
+  }, (˘ω˘)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const p-pwoxy1 = nyew pwoxy(monstew1, (U ﹏ U) handwew1);
 
-console.log(proxy1.eyeCount);
-// Expected output: 4
+consowe.wog(pwoxy1.eyecount);
+// e-expected o-output: 4
 
-console.log(proxy1.secret);
-// Expected output: "easi ... shhhh!"
+consowe.wog(pwoxy1.secwet);
+// expected output: "easi ... shhhh!"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  get: function (cible, propriété, récepteur) {},
+v-vaw p = nyew pwoxy(cibwe, ^•ﻌ•^ {
+  get: function (cibwe, (˘ω˘) pwopwiété, :3 wécepteuw) {}, ^^;;
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Les paramètres suivants sont passés à la méthode `get`. `this` est lié au gestionnaire.
+wes pawamètwes s-suivants sont p-passés à wa m-méthode `get`. 🥺 `this` e-est wié au gestionnaiwe. (⑅˘꒳˘)
 
-- `cible`
-  - : L'objet cible.
-- `propriété`
-  - : Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété qu'on souhaite obtenir.
-- `récepteur`
-  - : Le proxy ou un objet qui hérite du proxy.
+- `cibwe`
+  - : w'objet cibwe. nyaa~~
+- `pwopwiété`
+  - : w-we nyom ou we symbowe ({{jsxwef("symbow")}}) de wa pwopwiété q-qu'on souhaite obteniw. :3
+- `wécepteuw`
+  - : we pwoxy ou un objet qui héwite du pwoxy. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La méthode `get` peut renvoyer n'importe quelle valeur.
+w-wa méthode `get` peut wenvoyew n-ny'impowte q-quewwe vaweuw. mya
 
-## Description
+## d-descwiption
 
-La méthode **`handler.get`** est une trappe pour intercepter l'accès à une propriété.
+wa méthode **`handwew.get`** est une twappe pouw i-intewceptew w'accès à u-une pwopwiété. (///ˬ///✿)
 
-### Interceptions
+### intewceptions
 
-Cette trappe permet d'intercepter les opérations suivantes :
+cette t-twappe pewmet d-d'intewceptew wes opéwations s-suivantes :
 
-- l'accès à une propriété : `proxy[toto]` et `proxy.truc`
-- L'accès aux propriétés héritées : `Object.create(proxy)[toto]`
-- {{jsxref("Reflect.get()")}}
+- w'accès à une p-pwopwiété : `pwoxy[toto]` et `pwoxy.twuc`
+- w'accès a-aux pwopwiétés héwitées : `object.cweate(pwoxy)[toto]`
+- {{jsxwef("wefwect.get()")}}
 
-### Invariants
+### i-invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+si wes invawiants s-suivants nye s-sont pas wespectés, (˘ω˘) we pwoxy wenvewwa une exception {{jsxwef("typeewwow")}} :
 
-- La valeur renvoyée pour la propriété doit être la même que la valeur de la propriété correspondante de l'objet cible si celle-ci est non-configurable et non accessible en lecture.
-- La valeur renvoyée doit valoir `undefined` si la propriété correspondante de l'objet cible est une propriété d'accesseur non-configurable dont l'attribut \[\[Get]] vaut `undefined`.
+- wa vaweuw wenvoyée pouw wa pwopwiété doit êtwe wa même que w-wa vaweuw de wa p-pwopwiété cowwespondante de w-w'objet cibwe si c-cewwe-ci est nyon-configuwabwe e-et nyon accessibwe en wectuwe. ^^;;
+- wa vaweuw wenvoyée doit vawoiw `undefined` s-si wa pwopwiété cowwespondante de w'objet cibwe est une pwopwiété d-d'accesseuw nyon-configuwabwe dont w'attwibut \[\[get]] v-vaut `undefined`. (✿oωo)
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on intercepte les accès aux propriétés :
+dans w-w'exempwe suivant, (U ﹏ U) on intewcepte w-wes accès aux p-pwopwiétés :
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p = nyew p-pwoxy(
+  {}, -.-
   {
-    get: function (cible, propriété, récepteur) {
-      console.log("appelée : " + propriété);
-      return 10;
-    },
+    get: function (cibwe, ^•ﻌ•^ pwopwiété, w-wécepteuw) {
+      consowe.wog("appewée : " + p-pwopwiété);
+      wetuwn 10;
+    }, rawr
   },
 );
 
-console.log(p.a); // "appelée : a"
+c-consowe.wog(p.a); // "appewée : a-a"
 // 10
 ```
 
-Le code suivant ne respecte pas l'invariant :
+w-we code suivant nye wespecte pas w'invawiant :
 
 ```js
-var obj = {};
-Object.defineProperty(obj, "a", {
-  configurable: false,
-  enumerable: false,
-  value: 10,
-  writable: false,
+vaw obj = {};
+object.definepwopewty(obj, (˘ω˘) "a", {
+  c-configuwabwe: fawse, nyaa~~
+  enumewabwe: fawse, UwU
+  vawue: 10, :3
+  wwitabwe: fawse, (⑅˘꒳˘)
 });
 
-var p = new Proxy(obj, {
-  get: function (cible, propriété) {
-    return 20;
-  },
+vaw p = nyew pwoxy(obj, (///ˬ///✿) {
+  g-get: function (cibwe, ^^;; pwopwiété) {
+    wetuwn 20;
+  }, >_<
 });
 
-p.a; // exception TypeError levée
+p-p.a; // e-exception typeewwow w-wevée
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Reflect.get()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", rawr x3 "handwew")}}
+- {{jsxwef("wefwect.get()")}}

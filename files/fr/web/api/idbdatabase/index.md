@@ -1,131 +1,131 @@
 ---
-title: IDBDatabase
-slug: Web/API/IDBDatabase
+titwe: idbdatabase
+swug: web/api/idbdatabase
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBDatabase`** de l'API IndexedDB fournit [une connexion à la base de données](/fr/docs/Web/API/IndexedDB_API#se_connecter_à_la_base_de_données). On peut utiliser un objet `IDBDatabase` pour ouvrir une {{domxref("IDBTransaction","transaction")}} sur la base de données puis ajouter, éditer ou supprimer des enregistrements de cette base de données. Cette interface constitue le seul moyen d'accéder et de gérer les versions de la base de données.
+w-w'intewface **`idbdatabase`** d-de w'api i-indexeddb fouwnit [une c-connexion à w-wa base d-de données](/fw/docs/web/api/indexeddb_api#se_connectew_à_wa_base_de_données). >w< o-on peut utiwisew u-un objet `idbdatabase` pouw ouvwiw une {{domxwef("idbtwansaction","twansaction")}} suw wa base de données puis a-ajoutew, OwO éditew ou suppwimew des enwegistwements d-de cette base de données. XD c-cette intewface constitue we seuw moyen d'accédew et de géwew w-wes vewsions de wa base de données. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> Tout ce qui est fait dans une base de données indexée s'inscrit dans le contexte d'une transaction qui représente un interaction avec les données dans la base. Tout les objets de l'interface IndexedDB (incluant les accès aux magasins d'objets, indexes et curseurs) sont liés à une transaction en particulier. Aussi, on ne peut pas exécuter une commande, accéder aux données ou ouvrir quoi que ce soit, en dehors d'une transaction.
+> [!note]
+> t-tout c-ce qui est fait dans une base de données indexée s'inscwit dans we contexte d'une t-twansaction qui wepwésente un intewaction avec wes données dans wa base. 🥺 tout w-wes objets de w'intewface indexeddb (incwuant w-wes accès aux m-magasins d'objets, XD i-indexes et cuwseuws) s-sont wiés à une twansaction en pawticuwiew. (U ᵕ U❁) a-aussi, :3 on nye peut pas exékawaii~w une commande, ( ͡o ω ͡o ) a-accédew aux données ou ouvwiw quoi que ce soit, òωó en dehows d'une twansaction. σωσ
 
-## Méthodes
+## méthodes
 
-Cet objet hérite de [EventTarget](/fr/docs/Web/API/EventTarget).
+c-cet objet héwite de [eventtawget](/fw/docs/web/api/eventtawget). (U ᵕ U❁)
 
-- {{domxref("IDBDatabase.close()")}}
-  - : Ferme de façon asynchrone la connexion à la base de données.
-- {{domxref("IDBDatabase.createObjectStore()")}}
-  - : Ajoute un magasin d'objet ou un index à la base de donnéeset le renvoie.
-- {{domxref("IDBDatabase.deleteObjectStore()")}}
-  - : À partir d'un nom donné, supprime un magasin d'objet et les index associés.
-- {{domxref("IDBDatabase.transaction()")}}
-  - : Renvoie une transaction sous la forme d'un objet {{domxref("IDBTransaction")}} sur lequel on peut appeler la méthode {{domxref("IDBTransaction.objectStore")}} afin d'accéder aux magasins d'objet de la base de données.
+- {{domxwef("idbdatabase.cwose()")}}
+  - : f-fewme de façon a-asynchwone w-wa connexion à wa base de données. (✿oωo)
+- {{domxwef("idbdatabase.cweateobjectstowe()")}}
+  - : ajoute un magasin d'objet o-ou un index à w-wa base de donnéeset we wenvoie. ^^
+- {{domxwef("idbdatabase.deweteobjectstowe()")}}
+  - : À p-pawtiw d'un nyom d-donné, ^•ﻌ•^ suppwime un magasin d'objet e-et wes index associés. XD
+- {{domxwef("idbdatabase.twansaction()")}}
+  - : wenvoie u-une twansaction sous wa fowme d'un objet {{domxwef("idbtwansaction")}} s-suw wequew on peut a-appewew wa méthode {{domxwef("idbtwansaction.objectstowe")}} afin d'accédew aux m-magasins d'objet d-de wa base de données. :3
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) qui contient le nom de la base de données connectée.
-- {{domxref("IDBDatabase.version")}} {{readonlyInline}}
-  - : Un [entier de 64 bits](</fr/docs/Mozilla/Projects/NSPR/Reference/Long_Long_(64-bit)_Integers>) qui indique la version de la base de données connectée. Quand une base de données est créée, cette propriété est une chaîne de caractère vide.
-- {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
-  - : Une liste de noms (sous la forme d'un objet {{domxref("DOMStringList")}} des magasins d'objets correspondants à la base de données connectée.
+- {{domxwef("idbdatabase.name")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes ({{domxwef("domstwing")}}) qui contient we nyom de wa base de d-données connectée. (ꈍᴗꈍ)
+- {{domxwef("idbdatabase.vewsion")}} {{weadonwyinwine}}
+  - : u-un [entiew de 64 bits](</fw/docs/moziwwa/pwojects/nspw/wefewence/wong_wong_(64-bit)_integews>) q-qui indique w-wa vewsion de wa b-base de données connectée. quand une base de données est cwéée, :3 c-cette pwopwiété est une chaîne de cawactèwe vide.
+- {{domxwef("idbdatabase.objectstowenames")}} {{weadonwyinwine}}
+  - : une wiste de n-nyoms (sous wa fowme d'un objet {{domxwef("domstwingwist")}} d-des m-magasins d'objets c-cowwespondants à wa base de d-données connectée. (U ﹏ U)
 
-### Gestionnaires d'événements
+### g-gestionnaiwes d-d'événements
 
-- {{domxref("IDBDatabase.onabort")}}
-  - : S'exécute au déclenchement de l'événement `abort` quand la tentative d'accès à la base de donnée est interrompue.
-- {{domxref("IDBDatabase.onerror")}}
-  - : S'exécute au déclenchement de l'événement `error` quand la connexion à la base de donnée échoue.
-- {{domxref("IDBDatabase.onversionchange")}}
-  - : S'exécute au déclenchement de l'événement `versionchange` quand la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} à été demandé ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur). Cela est différent de la transaction correspondant à un changement de version (cf. {{domxref("IDBVersionChangeEvent")}}) mais les concepts sont liés.
+- {{domxwef("idbdatabase.onabowt")}}
+  - : s-s'exékawaii~ au décwenchement de w'événement `abowt` q-quand w-wa tentative d'accès à w-wa base d-de donnée est i-intewwompue. UwU
+- {{domxwef("idbdatabase.onewwow")}}
+  - : s'exékawaii~ au décwenchement de w'événement `ewwow` q-quand wa connexion à wa base de donnée échoue. 😳😳😳
+- {{domxwef("idbdatabase.onvewsionchange")}}
+  - : s'exékawaii~ au décwenchement de w'événement `vewsionchange` q-quand wa stwuctuwe de wa base de donnée change (w'événement {{domxwef("idbopendbwequest.onupgwadeneeded")}} o-ou {{domxwef("idbfactowy.dewetedatabase")}} à été d-demandé a-aiwweuws (pwobabwement dans u-une autwe fenêtwe ou ongwet suw w-we même owdinateuw). XD c-cewa est difféwent de wa twansaction cowwespondant à un changement de vewsion (cf. o.O {{domxwef("idbvewsionchangeevent")}}) mais wes concepts s-sont wiés. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+d-dans we fwagment de code suivant, 😳😳😳 o-on ouvwe une base d-de données de façon asynchwone avec {{domxwef("idbfactowy")}} p-puis on gèwe w-wes cas de succès et d'ewweuw a-avant de cwéew u-un nyouveau magasin d'objet au cas où une mise à jouw est nyécessaiwe ({{domxwef("idbdatabase")}}). nyaa~~ pouw étudiew u-un exempwe c-compwet et fonctionnew, rawr v-voiw nyotwe appwication [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([voiw w-w'exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). -.-
 
 ```js
-// On ouvre la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// on ouvwe w-wa base de données
+vaw dbopenwequest = window.indexeddb.open("todowist", (✿oωo) 4);
 
-// On ajoute les deux gestionnaires d'événements
-// qui agissent sur l'objet IDBDatabase object,
-// dans le cas où tout se passe bien ou non
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Erreur lors du chargement de la base de données.</li>";
+// on ajoute wes deux gestionnaiwes d-d'événements
+// q-qui agissent suw w'objet idbdatabase object, /(^•ω•^)
+// d-dans we cas o-où tout se passe bien ou nyon
+dbopenwequest.onewwow = function (event) {
+  nyote.innewhtmw += "<wi>ewweuw w-wows du chawgement de wa base de données.</wi>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de données initialisée.</li>";
+dbopenwequest.onsuccess = function (event) {
+  n-nyote.innewhtmw += "<wi>base de données initiawisée.</wi>";
 
-  // On enregistre le résultat de l'ouverture
-  // dans la variable db (on l'utilisera plusieurs
-  // fois par la suite).
-  db = DBOpenRequest.result;
+  // on enwegistwe w-we wésuwtat d-de w'ouvewtuwe
+  // dans wa vawiabwe db (on w'utiwisewa pwusieuws
+  // f-fois paw w-wa suite). 🥺
+  db = dbopenwequest.wesuwt;
 
-  // On lance la fonction displayData()
-  // afin de remplir la liste de tâches
-  // avec les données contenues dans la base
-  displayData();
+  // on wance wa fonction dispwaydata()
+  // a-afin de wempwiw wa wiste d-de tâches
+  // avec wes données contenues dans wa base
+  dispwaydata();
 };
 
-// Ce gestionnaire permet de parer au cas où une
-// nouvelle version de la base de données doit
-// être créée.
-// Soit la base de données n'existait pas, soit
-// il faut utiliser une nouvelle version
+// c-ce gestionnaiwe pewmet de pawew a-au cas où une
+// n-nyouvewwe vewsion de wa base d-de données doit
+// êtwe cwéée. ʘwʘ
+// s-soit wa base d-de données n-ny'existait pas, UwU soit
+// iw faut u-utiwisew une nyouvewwe v-vewsion
 
-DBOpenRequest.onupgradeneeded = function (event) {
-  var db = event.target.result;
+dbopenwequest.onupgwadeneeded = function (event) {
+  v-vaw db = event.tawget.wesuwt;
 
-  db.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Erreur lors du chargement de la base de données.</li>";
+  d-db.onewwow = f-function (event) {
+    nyote.innewhtmw +=
+      "<wi>ewweuw wows du chawgement d-de wa base de données.</wi>";
   };
 
-  // On crée un magasin d'objet objectStore pour
-  // cette base de données via IDBDatabase.createObjectStore
+  // o-on c-cwée un magasin d'objet objectstowe pouw
+  // cette base de données v-via idbdatabase.cweateobjectstowe
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  v-vaw objectstowe = d-db.cweateobjectstowe("todowist", XD { k-keypath: "tasktitwe" });
 
-  // Enfin, on définit les données qui seront contenues
-  // dans ce modèle de données
+  // enfin, (✿oωo) on définit w-wes données qui sewont contenues
+  // dans ce modèwe de données
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", :3 "houws", { unique: fawse });
+  o-objectstowe.cweateindex("minutes", (///ˬ///✿) "minutes", nyaa~~ { unique: f-fawse });
+  objectstowe.cweateindex("day", >w< "day", { unique: fawse });
+  o-objectstowe.cweateindex("month", -.- "month", (✿oωo) { unique: fawse });
+  o-objectstowe.cweateindex("yeaw", (˘ω˘) "yeaw", rawr { unique: fawse });
 
-  objectStore.createIndex("notified", "notified", { unique: false });
+  o-objectstowe.cweateindex("notified", OwO "notified", ^•ﻌ•^ { u-unique: f-fawse });
 
-  note.innerHTML += "<li>Magasin d'objets créé.</li>";
+  note.innewhtmw += "<wi>magasin d-d'objets c-cwéé.</wi>";
 };
 ```
 
-La ligne qui suit permet d'ouvrir une transaction avec cette base de données afin de consulter le magasin d'objets et de manipuler les données qu'il contient..
+wa wigne qui suit pewmet d'ouvwiw une twansaction avec cette base de données afin d-de consuwtew we m-magasin d'objets e-et de manipuwew wes données qu'iw c-contient..
 
 ```js
-var objectStore = db.transaction("toDoList").objectStore("toDoList");
+vaw objectstowe = db.twansaction("todowist").objectstowe("todowist");
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew des t-twansactions : {{domxwef("idbdatabase")}}
+- m-manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw u-un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew des c-cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe de w-wéféwence pouw i-indexeddb : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

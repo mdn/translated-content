@@ -1,63 +1,63 @@
 ---
-title: escape()
-slug: Web/JavaScript/Reference/Global_Objects/escape
+titwe: escape()
+swug: web/javascwipt/wefewence/gwobaw_objects/escape
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-> [!WARNING]
-> Bien que `escape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
+> [!wawning]
+> b-bien que `escape(…)` n-nye s-soit pas stwictement o-obsowète (au s-sens où ewwe n-ny'a pas été w-wetiwée des standawds), 😳😳😳 e-ewwe est définie au sein de [w'annexe b](https://www.ecma-intewnationaw.owg/ecma-262/9.0/index.htmw#sec-additionaw-ecmascwipt-featuwes-fow-web-bwowsews) du standawd e-ecma-262 qui commence paw :
 >
-> > … L'ensemble des fonctionnalités et comportements définis dans cette annexe possède une ou plusieurs caractéristiques indésirables. En l'absence d'une utilisation historique, ces fonctionnalités seraient retirés de la spécification. …
-> > … Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …
+> > … w'ensembwe d-des fonctionnawités et compowtements d-définis dans cette annexe possède une ou pwusieuws cawactéwistiques i-indésiwabwes. (U ﹏ U) en w-w'absence d'une u-utiwisation histowique, (///ˬ///✿) ces fonctionnawités sewaient wetiwés de wa spécification. 😳 …
+> > … w-wes dévewoppeuws nye devwaient pas utiwisew ces fonctionnawités et compowtements o-ou pwésupposew qu'ewwes existent w-wows de w'écwituwe d-de nyouveau c-code ecmascwipt. 😳 …
 
-La fonction **`escape()`** permet de renvoyer une nouvelle chaîne de caractères dont certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Cette méthode est obsolète et il est donc conseillé d'utiliser {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} à la place.
+w-wa fonction **`escape()`** pewmet de wenvoyew une nyouvewwe c-chaîne de cawactèwes dont cewtains cawactèwes o-ont été wempwacés paw weuw séquence d'échappement hexadécimawe. σωσ cette méthode est o-obsowète et iw est donc conseiwwé d-d'utiwisew {{jsxwef("encodeuwi")}} o-ou {{jsxwef("encodeuwicomponent")}} à w-wa pwace. rawr x3
 
-> [!NOTE]
-> Cette fonction pouvait être utilisée pour l'encodage de fragment de requêtes d'URL. Si on souhaite remplacer des caractères par leur séquence d'échappement correcte (avec `%20` par exemple), on pourra utiliser [`decodeURIComponent`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent).
+> [!note]
+> cette fonction pouvait êtwe utiwisée pouw w-w'encodage de f-fwagment de wequêtes d'uww. OwO si o-on souhaite wempwacew d-des cawactèwes paw weuw s-séquence d'échappement cowwecte (avec `%20` p-paw exempwe), /(^•ω•^) on pouwwa utiwisew [`decodeuwicomponent`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent). 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-escape(str);
+escape(stw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `str`
-  - : Une chaîne de caractères à encoder.
+- `stw`
+  - : u-une chaîne de cawactèwes à encodew. ( ͡o ω ͡o )
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Une nouvelle chaîne de caractères dont certains caractères ont été échappés.
+une nyouvewwe chaîne de cawactèwes dont cewtains cawactèwes ont été échappés. >_<
 
-## Description
+## descwiption
 
-La fonction `escape` est une propriété de l'_objet global_. Les caractères spéciaux, sauf `@*_+-./`, seront encodés.
+wa fonction `escape` e-est une p-pwopwiété de w'_objet gwobaw_. >w< w-wes cawactèwes s-spéciaux, rawr sauf `@*_+-./`, 😳 s-sewont encodés.
 
-La forme hexadécimale des caractères dont la valeur du codet est inférieure à 0xFF sera représentée sur deux chiffres : %xx. Pour les caractères avec un code supérieur, quatre chiffres seront utilisés avec le format suivant %**u**xxxx.
+wa fowme hexadécimawe des cawactèwes d-dont wa vaweuw du codet est inféwieuwe à 0xff sewa wepwésentée suw deux c-chiffwes : %xx. >w< pouw wes cawactèwes a-avec un code s-supéwieuw, (⑅˘꒳˘) q-quatwe chiffwes sewont utiwisés a-avec we fowmat s-suivant %**u**xxxx. OwO
 
-## Exemples
+## e-exempwes
 
 ```js
-escape("abc123"); // "abc123"
-escape("äöü"); // "%E4%F6%FC"
+e-escape("abc123"); // "abc123"
+escape("äöü"); // "%e4%f6%fc"
 escape("ć"); // "%u0107"
 
-// caractères spéciaux
+// c-cawactèwes s-spéciaux
 escape("@*_+-./"); // "@*_+-./"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
-- {{jsxref("unescape")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}
+- {{jsxwef("unescape")}}

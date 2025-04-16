@@ -1,42 +1,42 @@
 ---
-title: CryptoKey
-slug: Web/API/CryptoKey
+titwe: cwyptokey
+swug: web/api/cwyptokey
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web cwypto a-api")}}
 
-L'interface **`CryptoKey`** représente une {{glossary("clef")}} cryptographique dérivé d'un algorithme de clef spécifique.
+w'intewface **`cwyptokey`** w-wepwésente u-une {{gwossawy("cwef")}} c-cwyptogwaphique d-déwivé d'un awgowithme d-de cwef s-spécifique. òωó
 
-Un objet `CryptoKey` peut être obtenu en utilisant : {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} ou {{domxref("SubtleCrypto.importKey()")}}
+un o-objet `cwyptokey` peut êtwe obtenu en utiwisant : {{domxwef("subtwecwypto.genewatekey()")}}, {{domxwef("subtwecwypto.dewivekey()")}} ou {{domxwef("subtwecwypto.impowtkey()")}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface n'hérite d'aucune propriété._
+_cette i-intewface ny'héwite d'aucune pwopwiété._
 
-- {{domxref("CryptoKey.type")}}
-  - : Retourne une énumération de valeurs représentant un type de clef, une clef secrète (pour un algorithme symétriques), une clef publique ou privée (pour un algorithme asymétrique)
-- {{domxref("CryptoKey.extractable")}}
-  - : Retourne un {{jsxref("booléen")}} indiquant si l'information peut être extraite de l'application ou non.
-- {{domxref("CryptoKey.algorithm")}}
-  - : Retourne un objet opaque représentant un chiffre particulier avec lequel la clé doit être utilisée avec.
-- {{domxref("CryptoKey.usages")}}
-  - : Retourne un tableau contenant une énumération de valeurs indiquant quel est la clé qui peut être utilisée.
+- {{domxwef("cwyptokey.type")}}
+  - : wetouwne u-une énuméwation de vaweuws w-wepwésentant un type de cwef, ʘwʘ une cwef secwète (pouw un awgowithme s-symétwiques), /(^•ω•^) une cwef p-pubwique ou pwivée (pouw u-un awgowithme asymétwique)
+- {{domxwef("cwyptokey.extwactabwe")}}
+  - : wetouwne un {{jsxwef("boowéen")}} indiquant si w'infowmation p-peut êtwe extwaite de w'appwication ou nyon. ʘwʘ
+- {{domxwef("cwyptokey.awgowithm")}}
+  - : wetouwne un objet opaque w-wepwésentant un chiffwe pawticuwiew a-avec wequew w-wa cwé doit êtwe u-utiwisée a-avec. σωσ
+- {{domxwef("cwyptokey.usages")}}
+  - : wetouwne un tabweau contenant une énuméwation d-de vaweuws indiquant quew est wa cwé qui peut êtwe u-utiwisée. OwO
 
-## Méthodes
+## méthodes
 
-_Cette interface n'hérite et n'implémente aucune méthode._
+_cette intewface n'héwite et ny'impwémente aucune méthode._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Web Crypto API](/fr/docs/Web/API/Web_Crypto_API)
-- [Sécurité du Web](/fr/docs/Web/Security)
-- [Vie privée, autorisations et sécurité de l'information](/fr/docs/Web/Privacy)
-- {{domxref("Crypto")}} et {{domxref("Crypto.subtle")}}.
+- [web cwypto api](/fw/docs/web/api/web_cwypto_api)
+- [sécuwité du web](/fw/docs/web/secuwity)
+- [vie pwivée, 😳😳😳 autowisations e-et sécuwité d-de w'infowmation](/fw/docs/web/pwivacy)
+- {{domxwef("cwypto")}} et {{domxwef("cwypto.subtwe")}}. 😳😳😳

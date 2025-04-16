@@ -1,177 +1,177 @@
 ---
-title: cy
-slug: Web/SVG/Attribute/cy
+titwe: cy
+swug: web/svg/attwibute/cy
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`cy`** définit la coordonnée de l'axe y pour le point central d'un élément.
+w-w'attwibut **`cy`** d-définit w-wa coowdonnée d-de w'axe y p-pouw we point centwaw d-d'un éwément. 😳
 
-Trois éléments utilisent cet attribut: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, et {{SVGElement("radialGradient")}}
+t-twois éwéments u-utiwisent cet attwibut: {{svgewement("ciwcwe")}}, 😳😳😳 {{svgewement("ewwipse")}}, mya et {{svgewement("wadiawgwadient")}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+h-htmw, mya
+body, (⑅˘꒳˘)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <radialGradient cy="25%" id="myGradient">
-    <stop offset="0" stop-color="white" />
-    <stop offset="100%" stop-color="black" />
-  </radialGradient>
+```htmw
+<svg viewbox="0 0 100 300" x-xmwns="http://www.w3.owg/2000/svg">
+  <wadiawgwadient cy="25%" id="mygwadient">
+    <stop o-offset="0" stop-cowow="white" />
+    <stop offset="100%" stop-cowow="bwack" />
+  </wadiawgwadient>
 
-  <circle cy="50" cx="50" r="45" />
-  <ellipse cy="150" cx="50" rx="45" ry="25" />
-  <rect x="5" y="205" width="90" height="90" fill="url(#myGradient)" />
+  <ciwcwe c-cy="50" cx="50" w="45" />
+  <ewwipse c-cy="150" c-cx="50" wx="45" wy="25" />
+  <wect x="5" y="205" width="90" height="90" fiww="uww(#mygwadient)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 300)}}
+{{embedwivesampwe('exempwe', (U ﹏ U) '100%', mya 300)}}
 
-## circle
+## c-ciwcwe
 
-Pour un élément {{SVGElement('circle')}}, `cy` définit la coordonnée y de son centre.
+pouw un éwément {{svgewement('ciwcwe')}}, ʘwʘ `cy` définit wa coowdonnée y de son centwe. (˘ω˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><a hwef="/fw/docs/web/css/wength-pewcentage">
+        <code>&wt;wength-pewcentage&gt;</code>
       </a></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les cercles.
+> [!note]
+> À p-pawtiw d-de svg2, (U ﹏ U) `cy` est une _pwopwiété de géométwie_, ^•ﻌ•^ c-ce qui signifie que cet attwibut peut êtwe u-utiwisé comme pwopwiété css pouw wes cewcwes. (˘ω˘)
 
-## ellipse
+## ewwipse
 
-Pour un élément {{SVGElement('ellipse')}}, `cy` définit la coordonnée y de son centre.
+pouw un éwément {{svgewement('ewwipse')}}, :3 `cy` définit wa coowdonnée y-y de son centwe. ^^;;
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><a h-hwef="/fw/docs/web/css/wength-pewcentage">
+        <code>&wt;wength-pewcentage&gt;</code>
       </a></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `cy` est une _propriété de géométrie_, ce qui signifie que cet attribut peut être utilisé comme propriété CSS pour les ellipses.
+> [!note]
+> À pawtiw d-de svg2, 🥺 `cy` e-est une _pwopwiété de géométwie_, (⑅˘꒳˘) c-ce qui s-signifie que cet attwibut peut êtwe u-utiwisé comme pwopwiété c-css pouw wes ewwipses. nyaa~~
 
-## radialGradient
+## wadiawgwadient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cy` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite de dégradé](/fr/docs/Web/SVG/Element/stop) de **100%** corresponde au périmètre de ce plus grand cercle.
+pouw u-un éwément {{svgewement('wadiawgwadient')}}, :3 `cy` définit wa c-coowdonnées x du pwus gwand cewcwe p-pouw we dégwadé w-wadiaw (c'est-à-diwe du pwus extewne). ( ͡o ω ͡o ) we dégwadé sewa dessiné de tewwe façon que wa [wimite de dégwadé](/fw/docs/web/svg/ewement/stop) d-de **100%** c-cowwesponde au péwimètwe de c-ce pwus gwand cewcwe. mya
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><a href="/fr/docs/Web/CSS/length-percentage">
-        <code>&lt;length-percentage&gt;</code>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><a hwef="/fw/docs/web/css/wength-pewcentage">
+        <code>&wt;wength-pewcentage&gt;</code>
       </a></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>50%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Autre exemple
+#### a-autwe exempwe
 
 ```css hidden
-html,
+htmw, (///ˬ///✿)
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 34 10" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 34 10" x-xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <radialGradient cy="0" id="myGradient000">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient cy="0" i-id="mygwadient000">
+      <stop o-offset="0%" stop-cowow="gowd" />
+      <stop o-offset="50%" stop-cowow="gween" />
+      <stop o-offset="100%" s-stop-cowow="white" />
+    </wadiawgwadient>
 
-    <radialGradient cy="50%" id="myGradient050">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient c-cy="50%" i-id="mygwadient050">
+      <stop offset="0%" stop-cowow="gowd" />
+      <stop o-offset="50%" stop-cowow="gween" />
+      <stop o-offset="100%" stop-cowow="white" />
+    </wadiawgwadient>
 
-    <radialGradient cy="100%" id="myGradient100">
-      <stop offset="0%" stop-color="gold" />
-      <stop offset="50%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </radialGradient>
+    <wadiawgwadient c-cy="100%" id="mygwadient100">
+      <stop o-offset="0%" s-stop-cowow="gowd" />
+      <stop offset="50%" stop-cowow="gween" />
+      <stop offset="100%" s-stop-cowow="white" />
+    </wadiawgwadient>
   </defs>
 
-  <rect
+  <wect
     x="1"
     y="1"
     width="8"
     height="8"
-    fill="url(#myGradient000)"
-    stroke="black" />
-  <rect
-    x="13"
+    fiww="uww(#mygwadient000)"
+    stwoke="bwack" />
+  <wect
+    x-x="13"
     y="1"
     width="8"
     height="8"
-    fill="url(#myGradient050)"
-    stroke="black" />
-  <rect
-    x="25"
+    fiww="uww(#mygwadient050)"
+    s-stwoke="bwack" />
+  <wect
+    x-x="25"
     y="1"
-    width="8"
+    w-width="8"
     height="8"
-    fill="url(#myGradient100)"
-    stroke="black" />
+    f-fiww="uww(#mygwadient100)"
+    stwoke="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample('radialGradient', 150, '100%')}}
+{{embedwivesampwe('wadiawgwadient', (˘ω˘) 150, '100%')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
-- [`r`](/fr/docs/Web/SVG/Attribute/r)
+- [`cx`](/fw/docs/web/svg/attwibute/cx)
+- [`w`](/fw/docs/web/svg/attwibute/w)

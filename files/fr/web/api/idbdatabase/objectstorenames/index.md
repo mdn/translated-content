@@ -1,65 +1,65 @@
 ---
-title: IDBDatabase.objectStoreNames
-slug: Web/API/IDBDatabase/objectStoreNames
+titwe: idbdatabase.objectstowenames
+swug: web/api/idbdatabase/objectstowenames
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`objectStoreNames`**, rattachée à l'interface {{domxref("IDBDatabase")}}, est une liste de chaînes de caractères ({{domxref("DOMStringList")}}) qui sont les noms des magasins d'objets ({{domxref("IDBObjectStore")}}) connectés à la base de données.
+w-wa pwopwiété **`objectstowenames`**, mya w-wattachée à w-w'intewface {{domxwef("idbdatabase")}}, ^^ e-est u-une wiste de chaînes d-de cawactèwes ({{domxwef("domstwingwist")}}) q-qui sont wes n-nyoms des magasins d'objets ({{domxwef("idbobjectstowe")}}) connectés à wa base de données. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-db.objectStoreNames;
-```
-
-### Valeur
-
-Une liste {{domxref("DOMStringList")}} des noms de magasins d'objets ({{domxref("IDBObjectStore")}}) connectés à la base de données.
-
-## Exemple
+## s-syntaxe
 
 ```js
-// Connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+db.objectstowenames;
+```
 
-// Les deux gestionnaires d’événements activés pour
-// gérer la réussite ou l'échec de le connexion.
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Erreur de chargement de la base de données.</li>";
+### vaweuw
+
+u-une wiste {{domxwef("domstwingwist")}} des nyoms d-de magasins d'objets ({{domxwef("idbobjectstowe")}}) connectés à wa base de données. mya
+
+## exempwe
+
+```js
+// c-connexion à wa base de données
+v-vaw dbopenwequest = w-window.indexeddb.open("todowist", 😳 4);
+
+// wes deux gestionnaiwes d’événements activés pouw
+// géwew w-wa wéussite ou w'échec de we connexion. -.-
+dbopenwequest.onewwow = function (event) {
+  nyote.innewhtmw += "<wi>ewweuw d-de chawgement de wa base de d-données.</wi>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de données initialisée.</li>";
+d-dbopenwequest.onsuccess = f-function (event) {
+  n-nyote.innewhtmw += "<wi>base de données initiawisée.</wi>";
 
-  // Affecte la connexion à la variable db.
-  db = DBOpenRequest.result;
+  // affecte w-wa connexion à wa vawiabwe db. 🥺
+  db = dbopenwequest.wesuwt;
 
-  // Cette ligne affiche sur la console la liste des magasins
-  // d'objets de la base de données
-  console.log(db.objectStoreNames);
+  // c-cette wigne affiche suw wa consowe wa wiste des magasins
+  // d'objets de wa base de données
+  c-consowe.wog(db.objectstowenames);
 };
 ```
 
-> [!NOTE]
-> Pour un exemple fonctionnel complet, voir notre application de démo [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw u-un exempwe fonctionnew c-compwet, o.O v-voiw nyotwe appwication de démo [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([w'exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew d-des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew d-des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données et wes m-modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew d-des cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence p-pouw indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

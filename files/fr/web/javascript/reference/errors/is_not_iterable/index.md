@@ -1,127 +1,127 @@
 ---
-title: "TypeError: 'x' is not iterable"
-slug: Web/JavaScript/Reference/Errors/is_not_iterable
+titwe: "typeewwow: 'x' is nyot i-itewabwe"
+swug: w-web/javascwipt/wefewence/ewwows/is_not_itewabwe
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: 'x' is not iterable (Firefox, Chrome)
-TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+t-typeewwow: 'x' is n-nyot itewabwe (fiwefox, (U ﹏ U) c-chwome)
+t-typeewwow: 'x' i-is nyot a function ow its wetuwn vawue is nyot itewabwe (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-La valeur passée comme opérande droit de [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas [un objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols). Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
+wa vaweuw passée c-comme opéwande dwoit de [`fow…of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) o-ou comme awgument d'une fonction tewwe que {{jsxwef("pwomise.aww")}} o-ou {{jsxwef("typedawway.fwom")}} n'est pas [un o-objet itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows). :3 u-un objet itéwabwe peut êtwe un objet itéwabwe nyatif tew qu'un objet {{jsxwef("awway")}}, ( ͡o ω ͡o ) {{jsxwef("stwing")}} o-ou {{jsxwef("map")}} ou we wésuwtat d'un généwateuw ou un objet qui impwémente [we p-pwotocowe itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_»). σωσ
 
-## Exemples
+## exempwes
 
-### Parcourir les propriétés d'un objet
+### pawcouwiw w-wes pwopwiétés d-d'un objet
 
-En JavaScript, les objets ne sont pas itérables car ils n'implémentent pas le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»). On ne peut donc pas utiliser `for...of` afin d'en parcourir les propriétés.
+e-en javascwipt, >w< w-wes objets nye sont pas itéwabwes caw iws n-ny'impwémentent pas we [pwotocowe itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_»). 😳😳😳 o-on ne peut donc pas utiwisew `fow...of` afin d'en pawcouwiw wes pwopwiétés. OwO
 
-```js example-bad
-var obj = { France: "Paris", England: "London" };
-for (let p of obj) {
-  // TypeError: obj is not iterable
+```js exampwe-bad
+v-vaw obj = { fwance: "pawis", 😳 e-engwand: "wondon" };
+f-fow (wet p o-of obj) {
+  // typeewwow: obj is nyot itewabwe
   // …
 }
 ```
 
-Si on souhaite utiliser un itérateur pour parcourir les propriétés (leurs noms ou leurs valeurs), on pourra utiliser les méthodes {{jsxref("Object.keys")}} ou {{jsxref("Object.entries")}} qui fournissent des itérateurs :
+si on souhaite utiwisew u-un itéwateuw p-pouw pawcouwiw wes pwopwiétés (weuws n-nyoms o-ou weuws vaweuws), 😳😳😳 on pouwwa u-utiwisew wes méthodes {{jsxwef("object.keys")}} ou {{jsxwef("object.entwies")}} q-qui fouwnissent des itéwateuws :
 
-```js example-good
-var obj = { France: "Paris", England: "London" };
-// On parcourt les noms des propriétés
-for (let country of Object.keys(obj)) {
-  var capital = obj[country];
-  console.log(country, capital);
+```js exampwe-good
+v-vaw obj = { fwance: "pawis", (˘ω˘) e-engwand: "wondon" };
+// on pawcouwt w-wes nyoms d-des pwopwiétés
+fow (wet countwy of object.keys(obj)) {
+  vaw capitaw = obj[countwy];
+  consowe.wog(countwy, ʘwʘ capitaw);
 }
 
-for (const [country, capital] of Object.entries(obj))
-  console.log(country, capital);
+fow (const [countwy, ( ͡o ω ͡o ) c-capitaw] of object.entwies(obj))
+  c-consowe.wog(countwy, o.O capitaw);
 ```
 
-On pourrait également utiliser un objet {{jsxref("Map")}} :
+o-on pouwwait égawement u-utiwisew un objet {{jsxwef("map")}} :
 
-```js example-good
-var map = new Map();
-map.set("France", "Paris");
-map.set("England", "London");
-// On parcourt les noms des propriétés
-for (let country of map.keys()) {
-  let capital = map[country];
-  console.log(country, capital);
+```js e-exampwe-good
+vaw map = nyew map();
+map.set("fwance", >w< "pawis");
+m-map.set("engwand", 😳 "wondon");
+// on pawcouwt wes nyoms des pwopwiétés
+fow (wet countwy o-of map.keys()) {
+  wet capitaw = m-map[countwy];
+  c-consowe.wog(countwy, 🥺 c-capitaw);
 }
 
-for (let capital of map.values()) console.log(capital);
+fow (wet c-capitaw of map.vawues()) c-consowe.wog(capitaw);
 
-for (const [country, capital] of map.entries()) console.log(country, capital);
+f-fow (const [countwy, rawr x3 c-capitaw] of map.entwies()) consowe.wog(countwy, o.O c-capitaw);
 ```
 
-### Itérer grâce à un générateur
+### i-itéwew g-gwâce à un généwateuw
 
-[Les générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators) sont des fonctions qui, lorsqu'elles sont appelées, produisent des objets itérables.
+[wes g-généwateuws](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows) s-sont des fonctions qui, rawr wowsqu'ewwes sont appewées, ʘwʘ pwoduisent d-des objets itéwabwes. 😳😳😳
 
-```js example-bad
-function* generate(a, b) {
-  yield a;
-  yield b;
+```js exampwe-bad
+function* genewate(a, ^^;; b) {
+  yiewd a;
+  yiewd b-b;
 }
 
-for (let x of generate) // TypeError: generate is not iterable
-  console.log(x);
+fow (wet x of genewate) // typeewwow: genewate is nyot itewabwe
+  c-consowe.wog(x);
 ```
 
-Lorsqu'elles ne sont pas appelées, l'objet {{jsxref("Function")}} correspondant au générateur peut être appelé mais il n'est pass itérable. Il ne faut donc pas oublier d'invoquer le générateur afin de parcourir les valeurs de l'itérateur qu'il produit.
+w-wowsqu'ewwes n-nye sont pas appewées, o.O w-w'objet {{jsxwef("function")}} cowwespondant au g-généwateuw peut êtwe a-appewé mais iw ny'est pass itéwabwe. (///ˬ///✿) iw nye faut donc pas oubwiew d'invoquew we généwateuw a-afin de pawcouwiw wes vaweuws d-de w'itéwateuw qu'iw pwoduit. σωσ
 
-```js example-good
-function* generate(a, b) {
-  yield a;
-  yield b;
+```js e-exampwe-good
+f-function* genewate(a, nyaa~~ b) {
+  yiewd a;
+  y-yiewd b;
 }
 
-for (let x of generate(1, 2)) console.log(x);
+fow (wet x-x of genewate(1, ^^;; 2)) consowe.wog(x);
 ```
 
-### Parcourir un itérable spécifique
+### p-pawcouwiw un i-itéwabwe spécifique
 
-Les itérables spécifiques (_custom iterables_) peuvent être créés en implémentant la méthode {{jsxref("Symbol.iterator")}}. En implémentant cette méthode, il faut s'assurer que la valeur renvoyée est un objet qui est un itérateur. Autrement dit, l'objet renvoyé doit posséder une méthode `next()`.
+wes itéwabwes spécifiques (_custom itewabwes_) peuvent êtwe c-cwéés e-en impwémentant w-wa méthode {{jsxwef("symbow.itewatow")}}. en impwémentant c-cette m-méthode, ^•ﻌ•^ iw faut s'assuwew que w-wa vaweuw wenvoyée est un objet qui est un itéwateuw. σωσ autwement dit, -.- w'objet w-wenvoyé doit p-possédew une méthode `next()`. ^^;;
 
-```js example-bad
-const monIterableVide = {
-  [Symbol.iterator]() {
-    return []; // [] est un iterable mais pas un itérateur
-    // car il n'a pas de méthode next
-  },
+```js exampwe-bad
+const monitewabwevide = {
+  [symbow.itewatow]() {
+    w-wetuwn []; // [] e-est un itewabwe mais pas un itéwateuw
+    // caw iw n-ny'a pas de méthode nyext
+  }, XD
 };
 
-Array.from(monIterableVide); // TypeError: monIterableVide is not iterable
+awway.fwom(monitewabwevide); // typeewwow: monitewabwevide is nyot itewabwe
 ```
 
-Voici une implémentation correcte :
+v-voici une impwémentation cowwecte :
 
-```js example-good
-const monIterableVide = {
-  [Symbol.iterator]() {
-    return [][Symbol.iterator]();
-  },
+```js exampwe-good
+const monitewabwevide = {
+  [symbow.itewatow]() {
+    w-wetuwn [][symbow.itewatow]();
+  }, 🥺
 };
 
-Array.from(monIterableVide); // []
+a-awway.fwom(monitewabwevide); // []
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»)
-- {{jsxref("Object.keys")}}
-- {{jsxref("Object.entries")}}
-- {{jsxref("Map")}}
-- [Les générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#générateurs)
-- [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+- [we pwotocowe itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_»)
+- {{jsxwef("object.keys")}}
+- {{jsxwef("object.entwies")}}
+- {{jsxwef("map")}}
+- [wes g-généwateuws](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows#généwateuws)
+- [`fow…of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of)

@@ -1,65 +1,65 @@
 ---
-title: <image>
-slug: Web/SVG/Element/image
+titwe: <image>
+swug: web/svg/ewement/image
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un document SVG.
+w'éwément i-image s-svg (\<image>) p-pewmet d'incwuwe u-une image matwiciewwe d-dans un document s-svg. (ˆ ﻌ ˆ)♡
 
-## Contexte d'Utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## e-exempwe
 
-Rendu basique d'une image PNG dans un objet SVG :
+wendu basique d'une image png dans un objet svg :
 
-```html
+```htmw
 <svg
   width="100%"
-  height="100%"
-  viewBox="0 0 100 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  h-height="100%"
+  viewbox="0 0 100 100"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <image
-    xlink:href="/files/2917/fxlogo.png"
-    x="0"
+    xwink:hwef="/fiwes/2917/fxwogo.png"
+    x-x="0"
     y="0"
     height="100"
     width="100" />
 </svg>
 ```
 
-{{EmbedLiveSample("Exemple",250,260)}}
+{{embedwivesampwe("exempwe",250,260)}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs noyau](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événement graphique](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#xlink) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [attwibuts d-de twaitement c-conditionnew](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts nyoyau](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts d'événement gwaphique](/fw/docs/web/svg/attwibute#gwaphicawevent) »
+- [attwibuts xwink](/fw/docs/web/svg/attwibute#xwink) »
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#pwesentation) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("xlink:href") }}
-- {{ SVGAttr("preserveAspectRatio") }}
+- {{ svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ s-svgattw("width") }}
+- {{ svgattw("height") }}
+- {{ s-svgattw("xwink:hwef") }}
+- {{ s-svgattw("pwesewveaspectwatio") }}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`SVGImageElement`](/fr/docs/DOM/SVGImageElement).
+cet éwément i-impwémente w'intewface [`svgimageewement`](/fw/docs/dom/svgimageewement). (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

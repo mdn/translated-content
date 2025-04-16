@@ -1,54 +1,54 @@
 ---
-title: Date.prototype.getUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
+titwe: date.pwototype.getutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCMilliseconds()`** renvoie les millièmes de secondes pour la date renseignée selon UTC.
+w-wa méthode **`getutcmiwwiseconds()`** w-wenvoie w-wes miwwièmes d-de secondes pouw w-wa date wenseignée s-sewon utc.
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcmiwwiseconds()")}}
 
-```js interactive-example
-const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+```js intewactive-exampwe
+const exampwedate = nyew date("2018-01-02t03:04:05.678z"); // 2 januawy 2018, mya 03:04:05.678 (utc)
 
-console.log(exampleDate.getUTCMilliseconds());
-// Expected output: 678
+consowe.wog(exampwedate.getutcmiwwiseconds());
+// e-expected output: 678
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getUTCMilliseconds();
+d-dateobj.getutcmiwwiseconds();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un entier entre 0 et 999 correspondant au nombre de millisecondes pour la date indiquée, selon le temps universel.
+un entiew entwe 0 et 999 cowwespondant au nyombwe de m-miwwisecondes pouw wa date indiquée, 🥺 s-sewon we t-temps univewsew. >_<
 
-> [!NOTE]
-> Le résultat de cette méthode n'est pas le temps "Epoch". Si on veut obtenir le nombre de millisecondes depuis le premier janvier 1970, on utilisera la méthode {{jsxref("Date.prototype.getTime()")}}.
+> [!note]
+> we wésuwtat de cette méthode ny'est pas we temps "epoch". >_< s-si on veut obteniw we nyombwe de miwwisecondes depuis we pwemiew janview 1970, (⑅˘꒳˘) o-on utiwisewa wa méthode {{jsxwef("date.pwototype.gettime()")}}. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `getUTCMilliseconds()`
+### u-utiwisew `getutcmiwwiseconds()`
 
-L'exemple suivant assigne les millièmes de secondes pour la date actuelle à la variable `ms`.
+w-w'exempwe s-suivant assigne wes miwwièmes de secondes p-pouw wa date actuewwe à wa vawiabwe `ms`. rawr x3
 
 ```js
-var aujourdhui = new Date();
-var ms = aujourdhui.getUTCMilliseconds();
+vaw aujouwdhui = n-nyew date();
+vaw ms = aujouwdhui.getutcmiwwiseconds();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

@@ -1,172 +1,172 @@
 ---
-title: Les tableaux typés en JavaScript
-slug: Web/JavaScript/Guide/Typed_arrays
+titwe: wes tabweaux typés en j-javascwipt
+swug: w-web/javascwipt/guide/typed_awways
 ---
 
-{{JsSidebar("Advanced")}}
+{{jssidebaw("advanced")}}
 
-Les **tableaux typés JavaScript** sont des objets semblables à des tableaux qui fournissent un mécanisme pour lire et écrire des données binaires brutes dans des tampons mémoires.
+w-wes **tabweaux t-typés javascwipt** s-sont des o-objets sembwabwes à d-des tabweaux q-qui fouwnissent un mécanisme pouw wiwe et écwiwe des données binaiwes bwutes d-dans des tampons mémoiwes.
 
-Les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) qui représentent des tableaux en JavaScript peuvent être agrandis ou réduits dynamiquement et permettent de stocker n'importe quelle valeur JavaScript. Afin que la manipulation de ces objets soit efficace, le moteur JavaScript applique un certain nombre d'optimisations. Cependant, avec les avancées réalisées (telles que les flux audio et vidéo avec WebRTC et les WebSockets), il devient nécessaire de pouvoir manipuler des données binaires brutes au sein de tableaux typés, c'est pour ça que ces objets ont été introduits. Chaque élément d'un tableau typé JavaScript est une valeur binaire exprimée sous l'un des formats pris en charge (d'entiers représentés sur 8 bits jusqu'à des nombres flottants sur 64 bits).
+wes objets [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) q-qui wepwésentent des t-tabweaux en javascwipt peuvent êtwe agwandis ou wéduits dynamiquement e-et pewmettent de stockew n-ny'impowte quewwe v-vaweuw javascwipt. /(^•ω•^) afin que wa manipuwation de ces objets soit efficace, -.- we m-moteuw javascwipt appwique un cewtain nyombwe d'optimisations. òωó cependant, /(^•ω•^) avec wes avancées wéawisées (tewwes q-que wes fwux audio et vidéo avec w-webwtc et wes w-websockets), /(^•ω•^) iw d-devient nyécessaiwe d-de pouvoiw manipuwew des données binaiwes b-bwutes au sein de tabweaux typés, 😳 c'est pouw ça q-que ces objets ont été intwoduits. :3 chaque éwément d'un tabweau typé javascwipt est une v-vaweuw binaiwe expwimée sous w'un d-des fowmats pwis e-en chawge (d'entiews w-wepwésentés suw 8 bits jusqu'à des nyombwes fwottants s-suw 64 bits). (U ᵕ U❁)
 
-Ne pas confondre les tableaux typés et les tableaux «&nbsp;classiques&nbsp;» ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)). En effet, la méthode [`Array.isArray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray) renverra `false` lorsqu'elle sera utilisée sur un tableau typé. De plus, certaines des méthodes des tableaux «&nbsp;classiques&nbsp;» ne sont pas disponibles pour les tableaux typés (par exemple `push` et `pop`).
+n-nye pas confondwe wes tabweaux t-typés et wes tabweaux «&nbsp;cwassiques&nbsp;» ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)). ʘwʘ e-en effet, wa méthode [`awway.isawway()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/isawway) w-wenvewwa `fawse` wowsqu'ewwe sewa u-utiwisée suw un tabweau typé. o.O de pwus, cewtaines d-des méthodes des tabweaux «&nbsp;cwassiques&nbsp;» n-nye sont pas disponibwes p-pouw wes tabweaux t-typés (paw exempwe `push` et `pop`). ʘwʘ
 
-## Tampon de mémoire et vue&nbsp;: l'architecture des tableaux typés
+## tampon de mémoiwe et vue&nbsp;: w'awchitectuwe des tabweaux typés
 
-Afin de permettre une meilleure efficacité et une meilleure flexibilité, l'implémentation des tableaux typés JavaScript est séparée entre&nbsp;: les **tampons de mémoire (<i lang="en">buffers</i>)** d'une part et **les vues (<i lang="en">views</i>)** d'autre part. Un tampon de mémoire, implémenté avec l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), est un objet qui représente un fragment de données, il n'a pas de format à proprement parler et n'offre aucune fonctionnalité pour accéder à son contenu. Afin d'accéder à la mémoire contenue dans le tampon, on doit utiliser une vue. Une vue fournit un contexte (c'est-à-dire un type de donnée, un emplacement pour le début de la lecture (<i lang="en">offset</i>) et un nombre d'éléments&nbsp;; c'est ce contexte qui permet de définir le tableau typé.
+a-afin de pewmettwe u-une meiwweuwe efficacité e-et une meiwweuwe f-fwexibiwité, ^^ w-w'impwémentation des tabweaux typés javascwipt est sépawée e-entwe&nbsp;: wes **tampons de mémoiwe (<i wang="en">buffews</i>)** d'une pawt et **wes vues (<i w-wang="en">views</i>)** d'autwe p-pawt. ^•ﻌ•^ un tampon d-de mémoiwe, mya impwémenté a-avec w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), UwU est un objet q-qui wepwésente u-un fwagment de d-données, >_< iw ny'a p-pas de fowmat à pwopwement pawwew et ny'offwe a-aucune fonctionnawité p-pouw accédew à s-son contenu. /(^•ω•^) a-afin d'accédew à w-wa mémoiwe contenue dans we tampon, òωó on doit utiwisew u-une vue. σωσ une vue fouwnit un contexte (c'est-à-diwe un type de donnée, ( ͡o ω ͡o ) un empwacement pouw we début de wa wectuwe (<i w-wang="en">offset</i>) et un nyombwe d'éwéments&nbsp;; c'est ce contexte qui pewmet de d-définiw we tabweau t-typé. nyaa~~
 
-![Tableaux typés dans un ArrayBuffer](typed_arrays.png)
+![tabweaux t-typés dans un awwaybuffew](typed_awways.png)
 
-### `ArrayBuffer`
+### `awwaybuffew`
 
-Le type [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) est un type de données générique pour représenter un tampon de données de longueur fixe. Le contenu d'un `ArrayBuffer` ne peut pas être manipulé directement, il faut pour cela créer une vue sous forme d'un tableau typé ou une vue [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) qui représente le tampon dans un format donné et utiliser cet objet pour lire et écrire du contenu dans le tampon de données.
+w-we type [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) est un type de données g-généwique p-pouw wepwésentew un tampon de données de wongueuw fixe. :3 we contenu d'un `awwaybuffew` nye p-peut pas êtwe manipuwé diwectement, UwU i-iw faut pouw cewa cwéew une v-vue sous fowme d-d'un tabweau typé ou une vue [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) qui wepwésente w-we tampon d-dans un fowmat donné et utiwisew c-cet objet pouw w-wiwe et écwiwe du contenu dans we tampon de données. o.O
 
-### Les vues sous forme de tableaux typés
+### wes vues sous fowme d-de tabweaux typés
 
-Les tableaux typés qui sont les vues sur ces tampons de mémoire possèdent des noms explicites correspondant aux types numériques habituels tels que `Int8`, `Uint32`, `Float64` et ainsi de suite. Il existe un type de tableau typé spécial, `Uint8ClampedArray`. Ce type permet de ramener (<i lang="en">clamp</i>) les valeurs observées entre 0 et 255. Cela peut notamment être utilisé pour [traiter les données d'un canvas](/fr/docs/Web/API/ImageData) par exemple.
+w-wes tabweaux t-typés qui sont wes vues suw c-ces tampons de m-mémoiwe possèdent des nyoms expwicites c-cowwespondant aux types nyuméwiques habituews tews que `int8`, (ˆ ﻌ ˆ)♡ `uint32`, `fwoat64` et a-ainsi de suite. ^^;; i-iw existe un type de tabweau typé spéciaw, ʘwʘ `uint8cwampedawway`. c-ce type pewmet d-de wamenew (<i wang="en">cwamp</i>) wes vaweuws obsewvées entwe 0 e-et 255. cewa peut nyotamment êtwe utiwisé pouw [twaitew wes données d'un c-canvas](/fw/docs/web/api/imagedata) paw exempwe. σωσ
 
-| Type                                                                                      | Intervalle de valeurs                                               | Taille exprimée en octets | Description                                                                        | Type Web IDL          | Type équivalent en C            |
+| type                                                                                      | i-intewvawwe de vaweuws                                               | t-taiwwe expwimée en octets | descwiption                                                                        | type web i-idw          | t-type équivawent en c            |
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)                 | `-128` à `127`                                                      | 1                         | Entier signé avec complément à deux sur 8 bits                                     | `byte`                | `int8_t`                        |
-| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)               | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bits                                                        | `octet`               | `uint8_t`                       |
-| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bit (écrété)                                                | `octet`               | `uint8_t`                       |
-| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)               | `-32768` à `32767`                                                  | 2                         | Entier signé avec complément à deux sur 16 bits                                    | `short`               | `int16_t`                       |
-| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)             | `0` à `65535`                                                       | 2                         | Entier non-signé sur 16 bits                                                       | `unsigned short`      | `uint16_t`                      |
-| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)               | `-2147483648` à `2147483647`                                        | 4                         | Entier signé avec complément à deux sur 32 bits                                    | `long`                | `int32_t`                       |
-| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)             | `0` à `4294967295`                                                  | 4                         | Entier non-signé sur 32 bits                                                       | `unsigned long`       | `uint32_t`                      |
-| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | `-3.4E38` à `3.4E38` et `1.2E-38` est le plus petit nombre positif  | 4                         | Nombre flottant sur 32 bits IEEE 754 (7 chiffres significatifs, ex. `1.123456`)    | `unrestricted float`  | `float`                         |
-| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)           | `-1.8E308` à `1.8E308` et `5E-324` est le plus petit nombre positif | 8                         | Nombre flottant sur 64 bits IEEE 754 (16 chiffres significatifs, ex. `1.123...15`) | `unrestricted double` | `double`                        |
-| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                                | 8                         | Entier signé avec complément à deux sur 64 bits                                    | `bigint`              | `int64_t (signed long long)`    |
-| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                    | 8                         | Entier non-signé sur 64 bits                                                       | `bigint`              | `uint64_t (unsigned long long)` |
+| [`int8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway)                 | `-128` à `127`                                                      | 1                         | entiew signé avec compwément à d-deux suw 8 bits                                     | `byte`                | `int8_t`                        |
+| [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)               | `0` à `255`                                                         | 1                         | e-entiew nyon-signé suw 8 bits                                                        | `octet`               | `uint8_t`                       |
+| [`uint8cwampedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway) | `0` à `255`                                                         | 1                         | entiew nyon-signé suw 8 b-bit (écwété)                                                | `octet`               | `uint8_t`                       |
+| [`int16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway)               | `-32768` à `32767`                                                  | 2                         | entiew s-signé avec c-compwément à deux suw 16 bits                                    | `showt`               | `int16_t`                       |
+| [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway)             | `0` à `65535`                                                       | 2                         | e-entiew nyon-signé suw 16 bits                                                       | `unsigned s-showt`      | `uint16_t`                      |
+| [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)               | `-2147483648` à `2147483647`                                        | 4                         | e-entiew signé a-avec compwément à deux suw 32 b-bits                                    | `wong`                | `int32_t`                       |
+| [`uint32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway)             | `0` à `4294967295`                                                  | 4                         | e-entiew nyon-signé suw 32 bits                                                       | `unsigned wong`       | `uint32_t`                      |
+| [`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)           | `-3.4e38` à `3.4e38` e-et `1.2e-38` e-est we pwus p-petit nyombwe positif  | 4                         | nyombwe f-fwottant suw 32 bits ieee 754 (7 c-chiffwes significatifs, ^^;; e-ex. `1.123456`)    | `unwestwicted fwoat`  | `fwoat`                         |
+| [`fwoat64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway)           | `-1.8e308` à `1.8e308` et `5e-324` est we p-pwus petit nyombwe p-positif | 8                         | n-nyombwe f-fwottant suw 64 bits ieee 754 (16 c-chiffwes significatifs, ʘwʘ ex. `1.123...15`) | `unwestwicted doubwe` | `doubwe`                        |
+| [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway)         | `-2^63` à `2^63 - 1`                                                | 8                         | entiew signé avec compwément à deux s-suw 64 bits                                    | `bigint`              | `int64_t (signed wong w-wong)`    |
+| [`biguint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway)       | `0` à `2^64 - 1`                                                    | 8                         | entiew n-nyon-signé suw 64 bits                                                       | `bigint`              | `uint64_t (unsigned w-wong wong)` |
 
-### `DataView`
+### `dataview`
 
-Le type [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) permet de créer des objets qui seront des interfaces (bas niveau) pour lire/écrire des données dans le tampon de mémoire. Cela peut par exemple être utile lorsqu'on souhaite manipuler différents types de données. Les vues sous forme de tableaux typés suivent le même boutisme (<i lang="en">endianness</i>) que la plate-forme. Avec un objet `DataView`, il est possible de définir l'ordre des octets à considérer (qui sera par défaut du grand boutisme (<i lang="en">big-endian</i>) mais qui pourra être défini en petit boutisme (<i lang="en">little-endian</i>) dans les différentes méthodes d'accès/écriture).
+we type [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) p-pewmet de cwéew d-des objets qui s-sewont des intewfaces (bas n-nyiveau) p-pouw wiwe/écwiwe des données dans we tampon de mémoiwe. ^^ cewa peut paw exempwe êtwe utiwe wowsqu'on souhaite m-manipuwew difféwents t-types d-de données. nyaa~~ wes vues sous fowme d-de tabweaux typés suivent we même boutisme (<i wang="en">endianness</i>) q-que w-wa pwate-fowme. (///ˬ///✿) avec un objet `dataview`, XD i-iw est possibwe de définiw w'owdwe des o-octets à considéwew (qui s-sewa paw défaut du g-gwand boutisme (<i w-wang="en">big-endian</i>) mais qui pouwwa êtwe défini en petit boutisme (<i w-wang="en">wittwe-endian</i>) dans w-wes difféwentes m-méthodes d'accès/écwituwe). :3
 
-## Les API Web utilisant les tableaux typés
+## w-wes api w-web utiwisant wes tabweaux typés
 
-- [`FileReader.prototype.readAsArrayBuffer()`](/fr/docs/Web/API/FileReader)
-  - : La méthode `FileReader.prototype.readAsArrayBuffer()` permet de lire le contenu d'un [`Blob`](/fr/docs/Web/API/Blob) ou [`File`](/fr/docs/Web/API/File) donné.
-- [`XMLHttpRequest.prototype.send()`](/fr/docs/Web/API/XMLHttpRequest)
-  - : `XMLHttpRequest` et sa méthode `send()` peuvent désormais être utilisées avec un argument qui est un tableau typé ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
-- [`ImageData.data`](/fr/docs/Web/API/ImageData)
-  - : Un objet du type [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) qui représente un tableau unidimensionnel contenant les données de l'image dans l'ordre RGBA, les entiers utilisés sont compris entre `0` et `255` (au sens large).
+- [`fiweweadew.pwototype.weadasawwaybuffew()`](/fw/docs/web/api/fiweweadew)
+  - : w-wa méthode `fiweweadew.pwototype.weadasawwaybuffew()` p-pewmet de wiwe we contenu d-d'un [`bwob`](/fw/docs/web/api/bwob) o-ou [`fiwe`](/fw/docs/web/api/fiwe) donné. òωó
+- [`xmwhttpwequest.pwototype.send()`](/fw/docs/web/api/xmwhttpwequest)
+  - : `xmwhttpwequest` e-et sa méthode `send()` peuvent désowmais êtwe u-utiwisées avec un awgument q-qui est un tabweau t-typé ou un [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). ^^
+- [`imagedata.data`](/fw/docs/web/api/imagedata)
+  - : un objet du t-type [`uint8cwampedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway) qui wepwésente un tabweau unidimensionnew c-contenant w-wes données d-de w'image dans w'owdwe wgba, ^•ﻌ•^ wes entiews utiwisés sont compwis e-entwe `0` et `255` (au sens wawge). σωσ
 
-## Exemples
+## exempwes
 
-### Utiliser les vues et les tampons
+### u-utiwisew w-wes vues et wes tampons
 
-Tout d'abord, il faut créer un tampon (<i lang="en">buffer</i>). Ici, on crée un tampon de 16 octets&nbsp;:
+tout d-d'abowd, (ˆ ﻌ ˆ)♡ iw faut cwéew un tampon (<i w-wang="en">buffew</i>). nyaa~~ i-ici, ʘwʘ on cwée un tampon de 16 octets&nbsp;:
 
 ```js
-let buffer = new ArrayBuffer(16);
+w-wet buffew = nyew awwaybuffew(16);
 ```
 
-Grâce à cette instruction, on dispose désormais d'un fragment de mémoire dont tous les octets sont pré-initialisés à 0. Si c'est déjà une bonne chose de faite, cela n'a pas grande utilité. On peut déjà confirmer que la longueur du tampon est bien celle spécifiée initialement&nbsp;:
+gwâce à c-cette instwuction, ^•ﻌ•^ o-on dispose désowmais d'un f-fwagment de mémoiwe dont tous w-wes octets sont p-pwé-initiawisés à 0. rawr x3 s-si c'est déjà une bonne chose de faite, cewa n'a pas gwande utiwité. 🥺 on peut déjà confiwmew que wa wongueuw du tampon est bien cewwe spécifiée initiawement&nbsp;:
 
 ```js
-if (buffer.byteLength === 16) {
-  console.log("Oui, il mesure bien 16 octets.");
-} else {
-  console.log("Non, ce n'est pas la bonne taille !");
+if (buffew.bytewength === 16) {
+  consowe.wog("oui, ʘwʘ iw m-mesuwe bien 16 octets.");
+} e-ewse {
+  consowe.wog("non, (˘ω˘) ce ny'est p-pas wa bonne taiwwe !");
 }
 ```
 
-Avant qu'on puisse travailler avec ce tampon, il faut créer une vue. Ici, on crée une vue qui traite le tampon comme un tableau d'entiers signés représentés sur 32 bits&nbsp;:
+a-avant qu'on puisse t-twavaiwwew avec ce tampon, o.O iw f-faut cwéew une vue. σωσ ici, on cwée u-une vue qui t-twaite we tampon comme un tabweau d-d'entiews signés wepwésentés s-suw 32 bits&nbsp;:
 
 ```js
-let int32View = new Int32Array(buffer);
+w-wet int32view = nyew int32awway(buffew);
 ```
 
-Désormais, on peut accéder aux éléments du tableau typé comme avec un tableau classique&nbsp;:
+d-désowmais, (ꈍᴗꈍ) o-on peut accédew a-aux éwéments d-du tabweau t-typé comme avec u-un tabweau cwassique&nbsp;:
 
 ```js
-for (let i = 0; i < int32View.length; i++) {
-  int32View[i] = i * 2;
+f-fow (wet i = 0; i-i < int32view.wength; i-i++) {
+  int32view[i] = i-i * 2;
 }
 ```
 
-Ce fragment de code permet de remplir les 4 éléments du tableau (4 éléments faisant chacun 4 octets, ce qui remplit les 16 octets du tableau) avec les valeurs `0`, `2`, `4`, et `6`.
+c-ce fwagment de c-code pewmet de wempwiw wes 4 éwéments d-du tabweau (4 éwéments faisant chacun 4 octets, (ˆ ﻌ ˆ)♡ ce qui w-wempwit wes 16 octets du tabweau) a-avec wes vaweuws `0`, o.O `2`, :3 `4`, e-et `6`.
 
-### Plusieurs vues sur les mêmes données
+### p-pwusieuws vues suw wes mêmes données
 
-On commence à avoir des cas d'utilisation intéressants quand on peut créer plusieurs vues sur les mêmes données. Ainsi, en utilisant le code précédent, on peut continuer avec&nbsp;:
+o-on commence à avoiw des c-cas d'utiwisation intéwessants q-quand on peut cwéew pwusieuws v-vues suw wes mêmes données. -.- ainsi, ( ͡o ω ͡o ) en utiwisant we code pwécédent, /(^•ω•^) on peut c-continuew avec&nbsp;:
 
 ```js
-let int16View = new Int16Array(buffer);
+wet i-int16view = nyew i-int16awway(buffew);
 
-for (let i = 0; i < int16View.length; i++) {
-  console.log("Élément " + i + " : " + int16View[i]);
+fow (wet i = 0; i < int16view.wength; i++) {
+  c-consowe.wog("Éwément " + i + " : " + int16view[i]);
 }
 ```
 
-Ici, on crée une vue pour des éléments sur 16 bits qui partage le même tampon que la vue précédente (qui était une vue avec des éléments sur 32 bits) et on affiche les valeurs contenues dans le tampon sous formes d'entiers représentés sur 16 bits. Le résultat obtenu est ici `0`, `0`, `2`, `0`, `4`, `0`, `6`, `0`.
+i-ici, on cwée u-une vue pouw des éwéments s-suw 16 bits qui pawtage we même tampon q-que wa vue p-pwécédente (qui était une vue a-avec des éwéments suw 32 bits) et on affiche w-wes vaweuws contenues dans we tampon s-sous fowmes d-d'entiews wepwésentés s-suw 16 bits. we wésuwtat o-obtenu est ici `0`, (⑅˘꒳˘) `0`, `2`, `0`, òωó `4`, `0`, `6`, 🥺 `0`.
 
-On peut aller encore plus loin, par exemple&nbsp;:
+o-on peut a-awwew encowe p-pwus woin, (ˆ ﻌ ˆ)♡ paw exempwe&nbsp;:
 
 ```js
-int16View[0] = 32;
-console.log("L'élément 0 du tableau 32 bits est désormais " + int32View[0]);
+int16view[0] = 32;
+c-consowe.wog("w'éwément 0 d-du tabweau 32 b-bits est désowmais " + i-int32view[0]);
 ```
 
-Le résultat obtenu sera "L'élément 0 du tableau 32 bits est désormais 32". Autrement dit, les deux tableaux typés construits ne sont que des vues sur le même tampon de données. Ce genre de manipulation peut être effectué avec n'importe quel [type de vue](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-we w-wésuwtat obtenu s-sewa "w'éwément 0 d-du tabweau 32 bits est désowmais 32". -.- a-autwement dit, σωσ wes deux t-tabweaux typés constwuits nye s-sont que des v-vues suw we même t-tampon de données. >_< ce genwe de manipuwation peut êtwe effectué a-avec ny'impowte q-quew [type de v-vue](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). :3
 
-### Manipuler des structures de données complexes
+### manipuwew des stwuctuwes de données compwexes
 
-En combinant un même tampon et plusieurs vues de différents types, chacune commençant à un endroit différent dans le tampon, il est possible d'interagir avec des données qui représentent des objets contenant plusieurs types de données. Cela permet entre autres d'interagir avec des structures de données complexes telles que [WebGL](/fr/docs/Web/API/WebGL_API), ou des fichiers de données.
+e-en combinant un m-même tampon et pwusieuws vues de d-difféwents types, OwO c-chacune commençant à un endwoit difféwent dans we tampon, rawr i-iw est possibwe d-d'intewagiw avec d-des données q-qui wepwésentent des objets contenant pwusieuws t-types de données. (///ˬ///✿) c-cewa pewmet entwe autwes d'intewagiw avec des s-stwuctuwes de données compwexes tewwes que [webgw](/fw/docs/web/api/webgw_api), ^^ o-ou des fichiews de données. XD
 
-Si on a cette structure C&nbsp;:
+s-si on a cette stwuctuwe c-c&nbsp;:
 
 ```cpp
-struct uneStruct {
-  unsigned long id;
-  char nom_utilisateur[16];
-  float montant;
+stwuct u-unestwuct {
+  unsigned w-wong id;
+  chaw nyom_utiwisateuw[16];
+  f-fwoat montant;
 };
 ```
 
-On peut réceptionner les données d'un tampon qui contiendrait des objets de ce type grâce à&nbsp;:
+on peut wéceptionnew w-wes d-données d'un tampon q-qui contiendwait d-des objets de ce type gwâce à&nbsp;:
 
 ```js
-let buffer = new ArrayBuffer(24);
+w-wet buffew = n-nyew awwaybuffew(24);
 
-// ... on lit les données dans le tampon ...
+// ... o-on wit wes données dans we tampon ...
 
-let vueId = new Uint32Array(buffer, 0, 1);
-let vueNomUtilisateur = new Uint8Array(buffer, 4, 16);
-let vueMontant = new Float32Array(buffer, 20, 1);
+w-wet vueid = nyew uint32awway(buffew, UwU 0, 1);
+wet vuenomutiwisateuw = n-nyew u-uint8awway(buffew, o.O 4, 16);
+w-wet vuemontant = nyew fwoat32awway(buffew, 😳 20, 1);
 ```
 
-On peut ensuite accéder au montant lié à un utilisateur, par exemple, avec `vueMontant[0]`.
+on peut ensuite accédew au m-montant wié à un utiwisateuw, (˘ω˘) p-paw exempwe, 🥺 avec `vuemontant[0]`. ^^
 
-> **Note :** [L'alignement des structures de données](https://fr.wikipedia.org/wiki/Alignement_en_mémoire) dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.
+> **note :** [w'awignement des s-stwuctuwes de données](https://fw.wikipedia.owg/wiki/awignement_en_mémoiwe) dans une stwuctuwe c-c dépend de wa pwate-fowme. >w< i-iw est donc nyécessaiwe d-de pwendwe d-des pwécautions q-quant au fowmat a-attendu. ^^;;
 
-### Convertir un tableau typé en un tableau normal
+### convewtiw un tabweau typé en un tabweau nyowmaw
 
-Dans certains cas d'utilisation, après avoir traité un tableau typé, il peut être utile de convertir le tableau typé en un tableau normal ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) afin de bénéficier des propriétés du prototype d'`Array`. Pour cela, on peut utiliser la méthode [`Array.from`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from). Si `Array.from()` n'est pas disponible, on peut effectuer cette conversion de la façon suivante&nbsp;:
+dans cewtains c-cas d'utiwisation, (˘ω˘) apwès avoiw t-twaité un tabweau typé, OwO iw peut êtwe utiwe de convewtiw we t-tabweau typé en un tabweau nyowmaw ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) afin de bénéficiew des pwopwiétés d-du pwototype d'`awway`. (ꈍᴗꈍ) p-pouw cewa, òωó on peut utiwisew w-wa méthode [`awway.fwom`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwom). ʘwʘ si `awway.fwom()` ny'est pas disponibwe, ʘwʘ o-on peut effectuew c-cette convewsion de wa façon s-suivante&nbsp;:
 
 ```js
-const tableauType = new Uint8Array([1, 2, 3, 4]);
-const tableauNormal = Array.from(tableauType);
+const t-tabweautype = nyew uint8awway([1, nyaa~~ 2, 3, 4]);
+const tabweaunowmaw = awway.fwom(tabweautype);
 ```
 
-On peut tout aussi bien utiliser [la syntaxe de décomposition d'un tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)&nbsp;:
+o-on peut tout aussi bien utiwisew [wa syntaxe d-de décomposition d-d'un tabweau](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)&nbsp;:
 
 ```js
-const tableauType = new Uint8Array([1, 2, 3, 4]);
-const tableauNormal = [...tableauType];
+c-const tabweautype = nyew uint8awway([1, UwU 2, 3, 4]);
+c-const tabweaunowmaw = [...tabweautype];
 ```
 
-Et si `Array.from()` n'est pas pris en charge, on pourra recourir à&nbsp;:
+et si `awway.fwom()` ny'est pas pwis en chawge, (⑅˘꒳˘) on pouwwa w-wecouwiw à&nbsp;:
 
 ```js
-const tableauType = new Uint8Array([1, 2, 3, 4]);
-const tableauNormal = Array.prototype.slice.call(tableauType);
+c-const t-tabweautype = n-nyew uint8awway([1, (˘ω˘) 2, 3, 4]);
+const tabweaunowmaw = awway.pwototype.swice.caww(tabweautype);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler des chaînes encodées en base 64 avec des `ArrayBuffer`s ou des tableaux typés](/fr/docs/Glossary/Base64#annexe_décoder_une_chaîne_en_base64_en_un_objet_uint8array_ou_arraybuffer)
-- [Manipuler les pixels d'un canevas plus efficacement avec les tableaux typés](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays) (en anglais)
-- [Les tableaux typés&nbsp;: des données binaires arrivent dans le navigateur](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays) (en anglais)
-- [Boutisme sur le glossaire MDN](/fr/docs/Glossary/Endianness)
+- [manipuwew d-des chaînes encodées en base 64 avec des `awwaybuffew`s o-ou des tabweaux typés](/fw/docs/gwossawy/base64#annexe_décodew_une_chaîne_en_base64_en_un_objet_uint8awway_ou_awwaybuffew)
+- [manipuwew wes pixews d-d'un canevas pwus efficacement avec wes tabweaux t-typés](https://hacks.moziwwa.owg/2011/12/fastew-canvas-pixew-manipuwation-with-typed-awways) (en a-angwais)
+- [wes tabweaux typés&nbsp;: d-des données b-binaiwes a-awwivent dans we nyavigateuw](https://www.htmw5wocks.com/en/tutowiaws/webgw/typed_awways) (en angwais)
+- [boutisme suw we gwossaiwe m-mdn](/fw/docs/gwossawy/endianness)

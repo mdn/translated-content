@@ -1,87 +1,87 @@
 ---
-title: Function.caller
-slug: Web/JavaScript/Reference/Global_Objects/Function/caller
+titwe: function.cawwew
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/cawwew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété **`function.caller`** renvoie la fonction qui a appelé la fonction donnée. Cette propriété est interdite en mode strict.
+w-wa pwopwiété **`function.cawwew`** w-wenvoie wa f-fonction qui a appewé w-wa fonction d-donnée. (ˆ ﻌ ˆ)♡ cette p-pwopwiété est i-intewdite en mode stwict. 😳😳😳
 
-## Description
+## descwiption
 
-Si la fonction `f` a été invoquée par du code situé au plus haut niveau, la valeur de `f.caller` sera {{jsxref("null")}}, sinon, ce sera la fonction qui a appelé `f`.
+si wa fonction `f` a été invoquée p-paw du code situé au pwus haut nyiveau, :3 wa vaweuw d-de `f.cawwew` sewa {{jsxwef("nuww")}}, s-sinon, OwO ce sewa wa fonction qui a appewé `f`.
 
-Cette propriété remplace la propriété obsolète {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} de l'objet {{jsxref("Fonctions/arguments", "arguments")}}.
+cette p-pwopwiété wempwace wa pwopwiété o-obsowète {{jsxwef("fonctions/awguments/cawwew", "awguments.cawwew")}} d-de w'objet {{jsxwef("fonctions/awguments", (U ﹏ U) "awguments")}}. >w<
 
-La propriété spéciale `__caller__` qui renvoyait l'objet qui dans lequel était fait l'appel a été supprimée pour des raisons de sécurités.
+wa pwopwiété spéciawe `__cawwew__` qui wenvoyait w'objet q-qui dans wequew était fait w'appew a été suppwimée pouw des waisons de sécuwités. (U ﹏ U)
 
-### Notes
+### n-nyotes
 
-Dans une fonction récursive, cette propriété ne peut pas être utilisée pour reconstituer la pile d'appels (_call stack_). Par exemple, si on a :
+dans une fonction wécuwsive, 😳 c-cette pwopwiété n-nye peut p-pas êtwe utiwisée p-pouw weconstituew wa piwe d'appews (_caww s-stack_). (ˆ ﻌ ˆ)♡ paw exempwe, si on a :
 
 ```js
-function f(n) {
+function f-f(n) {
   g(n - 1);
 }
 function g(n) {
   if (n > 0) {
     f(n);
-  } else {
+  } ewse {
     stop();
   }
 }
 f(2);
 ```
 
-Au moment où `stop()` est appelé, la pile sera :
+a-au moment où `stop()` est a-appewé, 😳😳😳 wa piwe s-sewa :
 
 ```js
-f(2) -> g(1) -> f(1) -> g(0) -> stop()
+f-f(2) -> g(1) -> f(1) -> g(0) -> stop()
 ```
 
-Et ceci est vrai :
+et ceci est vwai :
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f;
+s-stop.cawwew === g-g && f.cawwew === g && g.cawwew === f-f;
 ```
 
-Donc si on essaie d'obtenir la pile de cette façon :
+d-donc si on essaie d'obteniw wa p-piwe de cette façon :
 
 ```js
-var f = stop;
-var stack = "Stack trace:";
-while (f) {
-  stack += "\n" + f.name;
-  f = f.caller;
+vaw f = stop;
+vaw s-stack = "stack twace:";
+whiwe (f) {
+  stack += "\n" + f-f.name;
+  f = f.cawwew;
 }
 ```
 
-la boucle ne s'arrêterait jamais.
+w-wa boucwe nye s'awwêtewait j-jamais.
 
-## Exemples
+## exempwes
 
-### Vérifier la valeur de la propriété `caller`
+### v-véwifiew wa vaweuw de wa pwopwiété `cawwew`
 
-Dans l'exemple suivant, on verifie la propriété `caller` de la fonction.
+dans w'exempwe suivant, (U ﹏ U) on vewifie wa pwopwiété `cawwew` d-de wa fonction. (///ˬ///✿)
 
 ```js
-function maFonction() {
-  if (maFonction.caller == null) {
-    return "Fonction appelée au plus haut niveau !";
-  } else {
-    return "Fonction appelée par " + maFonction.caller;
+f-function mafonction() {
+  i-if (mafonction.cawwew == n-nyuww) {
+    wetuwn "fonction appewée a-au pwus haut nyiveau !";
+  } ewse {
+    wetuwn "fonction a-appewée paw " + mafonction.cawwew;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
+nye fait pawtie d'aucune spécification. 😳 i-impwémentée avec j-javascwipt 1.5. 😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Le bug d'implémentation pour SpiderMonkey [bug Firefox 65683](https://bugzil.la/65683)
+- w-we bug d'impwémentation p-pouw s-spidewmonkey [bug f-fiwefox 65683](https://bugziw.wa/65683)

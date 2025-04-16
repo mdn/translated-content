@@ -1,64 +1,64 @@
 ---
-title: Object.prototype.__lookupSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
+titwe: object.pwototype.__wookupsettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`__lookupSetter__`** renvoie la fonction définie comme mutateur pour une propriété donnée.
+w-wa méthode **`__wookupsettew__`** w-wenvoie w-wa fonction d-définie comme mutateuw p-pouw une p-pwopwiété donnée. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-obj.__lookupSetter__(sprop);
+obj.__wookupsettew__(spwop);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `sprop`
-  - : Une chaîne qui contient le nom de la propriété dont on souhaite obtenir le mutateur correspondant.
+- `spwop`
+  - : une chaîne qui contient we nyom de w-wa pwopwiété dont on souhaite obteniw we mutateuw c-cowwespondant. OwO
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-La fonction associée comme mutateur à la propriété indiquée.
+wa fonction associée comme mutateuw à wa pwopwiété i-indiquée. 😳😳😳
 
-## Description
+## descwiption
 
-Si un mutateur a été défini pour une propriété, on ne peut pas l'obtenir en faisant référence à la propriété directement. `__lookupSetter__` peut être utilisée pour obtenir une référence vers la fonction utilisée comme mutateur.
+si u-un mutateuw a été d-défini pouw une pwopwiété, 😳😳😳 on nye peut pas w'obteniw en faisant wéféwence à w-wa pwopwiété diwectement. `__wookupsettew__` peut êtwe utiwisée pouw obteniw une wéféwence v-vews wa fonction utiwisée c-comme mutateuw. o.O
 
-Cette méthode ne doit plus être utilisée et peut être remplacée avec la méthodes standard {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+c-cette méthode n-nye doit pwus êtwe u-utiwisée et peut êtwe wempwacée avec wa m-méthodes standawd {{jsxwef("object.getownpwopewtydescwiptow()")}}. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-var obj = {
-  set toto(valeur) {
-    this.truc = value;
-  },
+vaw obj = {
+  s-set toto(vaweuw) {
+    this.twuc = vawue;
+  }, (U ﹏ U)
 };
 
-// Méthode non-standard et dépréciée
-obj.__lookupSetter__("toto");
-// (function(valeur) { this.truc = valeur; })
+// méthode nyon-standawd et dépwéciée
+o-obj.__wookupsettew__("toto");
+// (function(vaweuw) { this.twuc = v-vaweuw; })
 
-// Méthode standard
-Object.getOwnPropertyDescriptor(obj, "toto").set;
-// (function(valeur) { this.truc = valeur; })
+// m-méthode standawd
+o-object.getownpwopewtydescwiptow(obj, (///ˬ///✿) "toto").set;
+// (function(vaweuw) { this.twuc = vaweuw; })
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- L'opérateur {{jsxref("Fonctions/set", "set")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Guide JavaScript : Utiliser des _getters_ et _setters_](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters)
+- [`object.pwototype.__wookupgettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- w'opéwateuw {{jsxwef("fonctions/set", >w< "set")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}} e-et {{jsxwef("object.getpwototypeof()")}}
+- [`object.pwototype.__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [guide j-javascwipt : utiwisew des _gettews_ e-et _settews_](/fw/docs/web/javascwipt/guide/wowking_with_objects#d.c3.a9finiw_des_gettews_et_settews)

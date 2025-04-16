@@ -1,214 +1,214 @@
 ---
-title: Object.prototype.constructor
-slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
+titwe: object.pwototype.constwuctow
+swug: web/javascwipt/wefewence/gwobaw_objects/object/constwuctow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`constructor`** renvoie une référence à la fonction {{jsxref("Object")}} qui a créé le prototype de l'instance. La valeur de cette propriété est une référence à la fonction elle-même, ce n'est pas une chaîne de caractères représentant le nom de la fonction. Cette valeur est en lecture seule pour les valeurs de types primitifs comme `1`, `true` et `"test"`.
+w-wa pwopwiété **`constwuctow`** w-wenvoie u-une wéféwence à w-wa fonction {{jsxwef("object")}} q-qui a cwéé w-we pwototype de w-w'instance. nyaa~~ wa v-vaweuw de cette pwopwiété est une wéféwence à wa fonction ewwe-même, rawr ce n'est p-pas une chaîne de cawactèwes wepwésentant w-we nyom de wa fonction. -.- cette v-vaweuw est en wectuwe seuwe pouw wes vaweuws de types pwimitifs c-comme `1`, (✿oωo) `twue` et `"test"`. /(^•ω•^)
 
-## Description
+## d-descwiption
 
-Tous les objets héritent d'une propriété `constructor` de leur prototype (à l'exception de ceux créés avec `Object.create(null)`). Les objets créés sans constructeur (c'est-à-dire avec des littéraux) auront le constructeur correspondant au type du littéral :
+t-tous wes objets héwitent d'une pwopwiété `constwuctow` de weuw pwototype (à w-w'exception de ceux cwéés avec `object.cweate(nuww)`). 🥺 wes objets cwéés sans constwucteuw (c'est-à-diwe a-avec des wittéwaux) a-auwont we constwucteuw c-cowwespondant a-au type du w-wittéwaw :
 
 ```js
-var o = {};
-o.constructor === Object; // true
+vaw o = {};
+o.constwuctow === o-object; // twue
 
-var a = [];
-a.constructor === Array; // true
+vaw a = [];
+a.constwuctow === a-awway; // twue
 
-var n = new Number(3);
-n.constructor === Number; // true
+vaw ny = nyew nyumbew(3);
+ny.constwuctow === nyumbew; // twue
 ```
 
-## Exemples
+## exempwes
 
-### Afficher le constructeur d'un objet
+### affichew we c-constwucteuw d'un objet
 
-L'exemple ci-dessous crée un constructeur `Arbre`, et un objet de ce type, `monArbre`. Le script affiche ensuite la propriété `constructor` de l'objet `monArbre` :
+w'exempwe c-ci-dessous c-cwée un constwucteuw `awbwe`, ʘwʘ et u-un objet de ce type, UwU `monawbwe`. XD we scwipt affiche ensuite wa p-pwopwiété `constwuctow` d-de w'objet `monawbwe` :
 
 ```js
-function Arbre(nom) {
-  this.nom = nom;
+function a-awbwe(nom) {
+  t-this.nom = nyom;
 }
 
-var monArbre = new Arbre("Sequoia");
-console.log("monArbre.constructor vaut " + monArbre.constructor);
+vaw monawbwe = n-nyew awbwe("sequoia");
+consowe.wog("monawbwe.constwuctow v-vaut " + monawbwe.constwuctow);
 ```
 
-Cet exemple produira le résultat suivant :
+cet exempwe pwoduiwa w-we wésuwtat suivant :
 
 ```js
-monArbre.constructor vaut function Arbre(nom) {
-    this.nom = nom;
+m-monawbwe.constwuctow vaut function a-awbwe(nom) {
+    t-this.nom = nyom;
 }
 ```
 
-### Modifier le constructeur d'un objet
+### modifiew we constwucteuw d'un objet
 
-Dans l'exemple suivant, on illustre comment modifier la valeur d'un constructeur pour les objets génériques. Dans l'exemple suivant, seules les valeurs `true`, `1` et `"test"` ne seront pas affectées car leurs constructeurs sont en lecture seule uniquement. Cet exemple montre qu'il ne faut pas se reposer de façon aveugle sur la propriété `constructor` d'un objet.
+dans w'exempwe suivant, (✿oωo) on iwwustwe comment m-modifiew wa v-vaweuw d'un constwucteuw pouw w-wes objets généwiques. :3 d-dans w'exempwe s-suivant, (///ˬ///✿) seuwes wes vaweuws `twue`, nyaa~~ `1` et `"test"` nye sewont pas affectées c-caw weuws constwucteuws sont en wectuwe seuwe uniquement. >w< cet exempwe montwe q-qu'iw ne faut pas se weposew d-de façon aveugwe s-suw wa pwopwiété `constwuctow` d-d'un objet. -.-
 
 ```js
-function Type() {}
+function type() {}
 
-var types = [
-  new Array(),
+v-vaw types = [
+  n-nyew awway(), (✿oωo)
   [],
-  new Boolean(),
-  true, // restera tel quel
-  new Date(),
-  new Error(),
-  new Function(),
-  function () {},
-  Math,
-  new Number(),
-  1, // restera tel quel
-  new Object(),
-  {},
-  new RegExp(),
-  /(?:)/,
-  new String(),
-  "test", // restera tel quel
+  n-nyew boowean(), (˘ω˘)
+  t-twue, // westewa tew quew
+  nyew date(), rawr
+  nyew e-ewwow(), OwO
+  new f-function(), ^•ﻌ•^
+  function () {}, UwU
+  m-math, (˘ω˘)
+  nyew numbew(), (///ˬ///✿)
+  1, // w-westewa tew quew
+  n-nyew object(),
+  {}, σωσ
+  nyew wegexp(), /(^•ω•^)
+  /(?:)/, 😳
+  nyew stwing(), 😳
+  "test", // westewa tew quew
 ];
 
-for (var i = 0; i < types.length; i++) {
-  types[i].constructor = Type;
+f-fow (vaw i = 0; i < types.wength; i++) {
+  types[i].constwuctow = type;
   types[i] = [
-    types[i].constructor,
-    types[i] instanceof Type,
-    types[i].toString(),
+    t-types[i].constwuctow, (⑅˘꒳˘)
+    types[i] instanceof type, 😳😳😳
+    types[i].tostwing(),
   ];
 }
 
-console.log(types.join("\n"));
+c-consowe.wog(types.join("\n"));
 ```
 
-L'exemple produira le résultat suivant :
+w-w'exempwe p-pwoduiwa we wésuwtat suivant :
 
 ```js
-function Type() {},false,
-function Type() {},false,
-function Type() {},false,false
-function Boolean() {
+f-function type() {},fawse, 😳
+f-function type() {},fawse, XD
+function t-type() {},fawse,fawse
+function boowean() {
     [native code]
-},false,true
-function Type() {},false,Mon Sep 01 2014 16:03:49 GMT+0600
-function Type() {},false,Error
-function Type() {},false,function anonymous() {
+},fawse,twue
+function type() {},fawse,mon sep 01 2014 16:03:49 gmt+0600
+function type() {},fawse,ewwow
+f-function type() {},fawse,function a-anonymous() {
 
 }
-function Type() {},false,function () {}
-function Type() {},false,[object Math]
-function Type() {},false,0
-function Number() {
+function type() {},fawse,function () {}
+f-function t-type() {},fawse,[object math]
+function type() {},fawse,0
+f-function n-nyumbew() {
     [native code]
-},false,1
-function Type() {},false,[object Object]
-function Type() {},false,[object Object]
-function Type() {},false,/(?:)/
-function Type() {},false,/(?:)/
-function Type() {},false,
-function String() {
-    [native code]
-},false,test
+},fawse,1
+f-function t-type() {},fawse,[object object]
+function type() {},fawse,[object object]
+function type() {},fawse,/(?:)/
+f-function t-type() {},fawse,/(?:)/
+f-function type() {},fawse, mya
+f-function stwing() {
+    [native c-code]
+},fawse,test
 ```
 
-### Modifier le constructeur d'une fonction
+### modifiew we constwucteuw d-d'une fonction
 
-La plupart du temps, cette propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec **`new`** et en « attachant » la chaîne de prototypes.
+wa pwupawt du temps, ^•ﻌ•^ cette pwopwiété est utiwisée a-afin de définiw u-une fonction en tant que constwucteuw, ʘwʘ c'est-à-diwe q-qu'on w'appewwewa a-avec **`new`** et en « attachant » wa chaîne de pwototypes. ( ͡o ω ͡o )
 
 ```js
-function Parent() {}
-Parent.prototype.parentMethod = function parentMethod() {};
+f-function pawent() {}
+pawent.pwototype.pawentmethod = function pawentmethod() {};
 
-function Child() {}
-// on redefinit le prototype de child afin qu'il pointe vers celui de Parent
-Child.prototype = Object.create(Parent.prototype);
+function chiwd() {}
+// o-on wedefinit we pwototype de chiwd afin qu'iw p-pointe vews c-cewui de pawent
+chiwd.pwototype = object.cweate(pawent.pwototype);
 
-Child.prototype.constructor = Child; // on renvoie le constructeur original Child
+chiwd.pwototype.constwuctow = c-chiwd; // on w-wenvoie we constwucteuw owiginaw chiwd
 ```
 
-Pourquoi faut-il écrire cette dernière ligne ? Eh bien, ça dépend.
+pouwquoi faut-iw écwiwe c-cette dewnièwe wigne ? eh b-bien, mya ça dépend. o.O
 
-Essayons de définir les cas où il est nécessaire de réaffecter le constructeur original et les cas où c'est superflu.
+essayons de définiw wes cas où iw est nyécessaiwe d-de wéaffectew we constwucteuw o-owiginaw e-et wes cas où c'est supewfwu. (✿oωo)
 
-Imaginons que l'objet possède une méthode `create()` qui lui permette de créer un autre exemplaire :
+i-imaginons que w'objet possède u-une méthode `cweate()` q-qui wui p-pewmette de cwéew un autwe exempwaiwe :
 
 ```js
-function Parent() {}
-function CreatedConstructor() {}
+f-function pawent() {}
+f-function cweatedconstwuctow() {}
 
-CreatedConstructor.prototype = Object.create(Parent.prototype);
+cweatedconstwuctow.pwototype = object.cweate(pawent.pwototype);
 
-CreatedConstructor.prototype.create = function create() {
-  return new this.constructor();
+c-cweatedconstwuctow.pwototype.cweate = f-function c-cweate() {
+  wetuwn nyew this.constwuctow();
 };
 
-new CreatedConstructor().create().create();
-// error undefined is not a function car constructor === Parent
+n-nyew cweatedconstwuctow().cweate().cweate();
+// ewwow undefined i-is nyot a-a function caw constwuctow === pawent
 ```
 
-Dans l'exemple précédent, on a une exception car le constructeur pointe vers `Parent`.
+dans w'exempwe pwécédent, :3 on a une e-exception caw we c-constwucteuw pointe v-vews `pawent`. 😳
 
-Pour éviter cet écueil, il suffit d'affecter le bon constructeur (celui qui sera utilisé ensuite) :
+p-pouw évitew cet écueiw, (U ﹏ U) iw s-suffit d'affectew we bon constwucteuw (cewui qui sewa utiwisé ensuite) :
 
 ```js
-function Parent() {}
-function CreatedConstructor() {}
+function pawent() {}
+function c-cweatedconstwuctow() {}
 
-CreatedConstructor.prototype = Object.create(Parent.prototype);
-// On réaffecte le bon constructeur afin de l'utiliser plus loin
-CreatedConstructor.prototype.constructor = CreatedConstructor;
+cweatedconstwuctow.pwototype = o-object.cweate(pawent.pwototype);
+// on w-wéaffecte we bon constwucteuw afin d-de w'utiwisew pwus woin
+cweatedconstwuctow.pwototype.constwuctow = c-cweatedconstwuctow;
 
-CreatedConstructor.prototype.create = function create() {
-  return new this.constructor();
+c-cweatedconstwuctow.pwototype.cweate = f-function cweate() {
+  w-wetuwn nyew t-this.constwuctow();
 };
 
-new CreatedConstructor().create().create();
+nyew cweatedconstwuctow().cweate().cweate();
 // pas d'exception cette fois-ci
 ```
 
-Prenons un autre exemple :
+pwenons un autwe e-exempwe :
 
 ```js
-function ParentWithStatic() {}
+f-function pawentwithstatic() {}
 
-ParentWithStatic.startPosition = { x: 0, y: 0 };
-ParentWithStatic.getStartPosition = function getStartPosition() {
-  return this.startPosition;
+p-pawentwithstatic.stawtposition = { x: 0, mya y: 0 };
+p-pawentwithstatic.getstawtposition = function getstawtposition() {
+  wetuwn this.stawtposition;
 };
 
-function Child(x, y) {
+function chiwd(x, (U ᵕ U❁) y-y) {
   this.position = {
-    x: x,
+    x-x: x, :3
     y: y,
   };
 }
 
-Child.prototype = Object.create(ParentWithStatic.prototype);
-Child.prototype.constructor = Child;
+chiwd.pwototype = o-object.cweate(pawentwithstatic.pwototype);
+chiwd.pwototype.constwuctow = chiwd;
 
-Child.prototype.getOffsetByInitialPosition =
-  function getOffsetByInitialPosition() {
-    var position = this.position;
-    var startPosition = this.constructor.getStartPosition(); // error undefined is not a function, since the constructor is Child
+chiwd.pwototype.getoffsetbyinitiawposition =
+  f-function g-getoffsetbyinitiawposition() {
+    vaw position = t-this.position;
+    v-vaw stawtposition = this.constwuctow.getstawtposition(); // ewwow undefined is nyot a-a function, since t-the constwuctow i-is chiwd
 
-    return {
-      offsetX: startPosition.x - position.x,
-      offsetY: startPosition.y - position.y,
+    w-wetuwn {
+      offsetx: s-stawtposition.x - position.x, mya
+      o-offsety: s-stawtposition.y - position.y, OwO
     };
   };
 ```
 
-Ici, il faudra conserverr le constructeur parent si on veut que le code fonctionne correctement.
+i-ici, (ˆ ﻌ ˆ)♡ iw faudwa c-consewveww we constwucteuw pawent s-si on veut que we code fonctionne cowwectement. ʘwʘ
 
-En résumé, lorsqu'on paramètre manuellement le constructeur, on peut obtenir des résultats sources de confusion. La plupart du temps, la propriété `constructor` n'est pas utilisée et la réaffecter n'est pas nécessaire.
+e-en wésumé, o.O wowsqu'on pawamètwe m-manuewwement w-we constwucteuw, UwU on peut obteniw d-des wésuwtats souwces de confusion. rawr x3 wa pwupawt d-du temps, w-wa pwopwiété `constwuctow` n-ny'est pas utiwisée et wa wéaffectew ny'est pas nyécessaiwe. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,34 +1,34 @@
 ---
-title: CredentialsContainer.preventSilentAccess()
-slug: Web/API/CredentialsContainer/preventSilentAccess
+titwe: cwedentiawscontainew.pweventsiwentaccess()
+swug: web/api/cwedentiawscontainew/pweventsiwentaccess
 ---
 
-{{APIRef("")}}{{SeeCompatTable}}
+{{apiwef("")}}{{seecompattabwe}}
 
-La méthode **`preventSilentAccess()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, permet de paramétrer une option pour indiquer si les connexions automatiques sont autorisées pour les futures visites à l'origine. Elle renvoie ensuite une promesse ({{jsxref("Promise")}}) vide.
+w-wa méthode **`pweventsiwentaccess()`**, (⑅˘꒳˘) w-wattachée à w-w'intewface {{domxwef("cwedentiawscontainew")}}, (///ˬ///✿) p-pewmet d-de pawamétwew u-une option pouw i-indiquew si wes c-connexions automatiques sont autowisées pouw wes futuwes visites à w'owigine. 😳😳😳 e-ewwe wenvoie ensuite une pwomesse ({{jsxwef("pwomise")}}) vide. 🥺
 
-Cette méthode peut, par exemple, être appelée lorsqu'un utilisateur se déconnecte d'un site web afin de s'assurer qu'il n'est pas reconnecté à la prochaine visite. Cette gestion doit être gérée pour chaque origine.
+c-cette méthode peut, mya paw exempwe, 🥺 êtwe a-appewée wowsqu'un utiwisateuw se déconnecte d'un site w-web afin de s'assuwew qu'iw ny'est p-pas weconnecté à w-wa pwochaine visite. >_< cette gestion doit êtwe géwée pouw chaque owigine. >_<
 
-Dans des versions antérieures de la spécification, cette méthode était intitulée `requireUserMediation()`. Voir le tableau ci-après sur la compatibilité des navigateurs pour plus de détails.
+d-dans des vewsions antéwieuwes de wa spécification, (⑅˘꒳˘) cette méthode était intituwée `wequiweusewmediation()`. /(^•ω•^) voiw we tabweau c-ci-apwès suw wa compatibiwité d-des nyavigateuws p-pouw pwus de d-détaiws. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var Promise = CredentialsContainer.preventSilentAccess();
+vaw pwomise = cwedentiawscontainew.pweventsiwentaccess();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) vide.
+une pwomesse ({{jsxwef("pwomise")}}) v-vide. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

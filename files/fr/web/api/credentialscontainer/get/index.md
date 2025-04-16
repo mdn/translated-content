@@ -1,49 +1,49 @@
 ---
-title: CredentialsContainer.get()
-slug: Web/API/CredentialsContainer/get
+titwe: cwedentiawscontainew.get()
+swug: web/api/cwedentiawscontainew/get
 ---
 
-{{APIRef("Credential Management")}}{{SeeCompatTable}}
+{{apiwef("cwedentiaw m-management")}}{{seecompattabwe}}
 
-La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en une instance de {{domxref("Credential")}} correspondant aux paramètres fournis. Si aucune correspondance n'est trouvée, la promesse sera résolue avec la valeur {{jsxref("null")}}.
+w-wa méthode **`get()`**, mya w-wattachée à w'intewface {{domxwef("cwedentiawscontainew")}}, (///ˬ///✿) w-wenvoie une pwomesse ({{jsxwef("pwomise")}}) q-qui e-est wésowue en u-une instance de {{domxwef("cwedentiaw")}} c-cowwespondant aux pawamètwes fouwnis. (˘ω˘) si aucune cowwespondance ny'est t-twouvée, ^^;; wa pwomesse sewa wésowue avec wa vaweuw {{jsxwef("nuww")}}. (✿oωo)
 
-Cette méthode collecte l'ensemble des informations d'authentification stockées dans l'objet {{domxref("CredentialsContainer")}} et qui respectent les critères indiqués (définis grâce à l'argument **`options`**). À partir de cet ensemble, l'agent utilisateur sélectionne la meilleure information d'authentification. Selon les options fournies, l'agent utilisateur pourra afficher une boîte de dialogue et demander à l'utilisateur de sélectionner la bonne information.
+c-cette méthode cowwecte w-w'ensembwe des infowmations d'authentification stockées dans w'objet {{domxwef("cwedentiawscontainew")}} e-et qui wespectent wes c-cwitèwes indiqués (définis g-gwâce à w'awgument **`options`**). (U ﹏ U) À pawtiw de cet ensembwe, -.- w'agent utiwisateuw séwectionne w-wa meiwweuwe infowmation d'authentification. ^•ﻌ•^ sewon wes options fouwnies, rawr w'agent u-utiwisateuw pouwwa affichew une b-boîte de diawogue e-et demandew à w-w'utiwisateuw d-de séwectionnew wa bonne infowmation. (˘ω˘)
 
-Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé, {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
+cette m-méthode wécupèwe wes infowmations d'authentification e-en appewant wa méthode `cowwectfwomcwedentiawstowe` pouw chaque type d'authentification pewmis paw w'awgument **`options`**. nyaa~~ ainsi, si w-wa pwopwiété `options.passwowd` existe dans w'awgument p-passé, UwU {{domxwef("passwowdcwedentiaw")}}`.[[cowwectfwomcwedentiawstowe]]` s-sewa appewée. :3
 
-> [!NOTE]
-> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!note]
+> c-cette méthode nye peut êtwe utiwisé que pouw wes contextes de n-navigation wes p-pwus hauts. (⑅˘꒳˘) wes appews wancés depuis u-une {{htmwewement("ifwame")}} w-wésoudwont wa pwomesse sans a-aucun effet. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var promise = CredentialsContainer.get([options]);
+v-vaw pwomise = cwedentiawscontainew.get([options]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet de type {{domxref("CredentialRequestOptions")}} qui contient les critères de la requête. et les options d'interaction avec l'utilisateur. Cet objet peut contenir les propriétés suivantes :
+  - : un objet de type {{domxwef("cwedentiawwequestoptions")}} q-qui contient wes cwitèwes d-de wa wequête. ^^;; et wes options d-d'intewaction a-avec w'utiwisateuw. >_< cet objet peut conteniw wes pwopwiétés suivantes :
 
-    - `password` : un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée devrait contenir les informations sur l'utilisateur (contrairement aux informations d'authentification fédérées).
-    - `federated` : un objet {{domxref("FederatedCredentialRequestOptions")}} qui contient les critères que doivent respecter les informations d'authentification fédérées. Les options disponibles sont :
+    - `passwowd` : un boowéen ({{jsxwef("boowean")}}) qui indique que w'instance {{domxwef("cwedentiaw")}} w-wenvoyée d-devwait conteniw wes infowmations s-suw w'utiwisateuw (contwaiwement a-aux infowmations d-d'authentification fédéwées). rawr x3
+    - `fedewated` : un objet {{domxwef("fedewatedcwedentiawwequestoptions")}} qui contient w-wes cwitèwes que doivent wespectew wes infowmations d'authentification fédéwées. /(^•ω•^) w-wes options disponibwes sont :
 
-      - `providers` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les fournisseurs d'identité potentiels
-      - `protocols` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les protocoles de fédération à rechercher.
+      - `pwovidews` : u-un t-tabweau de chaînes d-de cawactèwes {{domxwef("domstwing")}} wistant w-wes fouwnisseuws d-d'identité p-potentiews
+      - `pwotocows` : u-un tabweau de chaînes de cawactèwes {{domxwef("domstwing")}} wistant wes pwotocowes d-de fédéwation à w-wechewchew. :3
 
-    - `publicKey` : un objet {{domxref("PublicKeyCredentialRequestOptions")}} contenant les conditions que doivent respecter les informations d'authentification [WebAuthn](/fr/docs/Web/API/Web_Authentication_API) qui seront renvoyées.
-    - `mediation` : une chaîne de caractères {{jsxref("String")}} qui indique si l'utilisateur devra se reconnecter à chaque visite sur le site. Les valeurs valides sont `"silent"`, `"optional"` ou `"required"`.
-    - `unmediated` : {{deprecated_inline()}} un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée ne devrait pas nécessiter de médiation avec l'utilisateur.
+    - `pubwickey` : u-un objet {{domxwef("pubwickeycwedentiawwequestoptions")}} c-contenant w-wes conditions que doivent wespectew wes infowmations d'authentification [webauthn](/fw/docs/web/api/web_authentication_api) q-qui sewont wenvoyées. (ꈍᴗꈍ)
+    - `mediation` : une chaîne de cawactèwes {{jsxwef("stwing")}} qui indique si w'utiwisateuw d-devwa se weconnectew à chaque visite suw we site. /(^•ω•^) wes vaweuws v-vawides sont `"siwent"`, (⑅˘꒳˘) `"optionaw"` o-ou `"wequiwed"`. ( ͡o ω ͡o )
+    - `unmediated` : {{depwecated_inwine()}} u-un boowéen ({{jsxwef("boowean")}}) qui i-indique que w'instance {{domxwef("cwedentiaw")}} wenvoyée nye devwait p-pas nyécessitew d-de médiation avec w'utiwisateuw. òωó
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxref("Credential")}} correspondant aux paramètres fournis. S'il n'est pas possible d'obtenir une seule instance sans ambiguïté, la promesse sera résolue avec la valeur {{jsxref("null")}}.
+une pwomesse ({{jsxwef("pwomise")}}) qui est wésowue avec une i-instance {{domxwef("cwedentiaw")}} cowwespondant a-aux pawamètwes fouwnis. (⑅˘꒳˘) s'iw ny'est p-pas possibwe d-d'obteniw une seuwe instance sans ambiguïté, XD w-wa pwomesse sewa w-wésowue avec wa vaweuw {{jsxwef("nuww")}}. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: Notification.requireInteraction
-slug: Web/API/Notification/requireInteraction
+titwe: nyotification.wequiweintewaction
+swug: w-web/api/notification/wequiweintewaction
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`requireInteraction`** de l'interface {{domxref ("Notification")}} renvoie un {{jsxref ("Boolean")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. Ceci peut être défini à l'aide de l'option `requireInteraction` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification()")}}.
+w-wa p-pwopwiété en w-wectuwe seuwe **`wequiweintewaction`** d-de w'intewface {{domxwef ("notification")}} w-wenvoie un {{jsxwef ("boowean")}} i-indiquant qu'une nyotification doit westew active jusqu'à ce que w'utiwisateuw c-cwique dessus ou wa wejette, nyaa~~ pwutôt que de s-se fewmew automatiquement. ceci p-peut êtwe défini à w'aide de w'option `wequiweintewaction` wows de wa cwéation d-de wa nyotification à w'aide d-du constwucteuw {{domxwef ("notification.notification()")}}. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.requireInteraction;
+nyotification.wequiweintewaction;
 ```
 
-### Valeur
+### vaweuw
 
-Un {{jsxref("Boolean")}}.
+un {{jsxwef("boowean")}}. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

@@ -1,74 +1,74 @@
 ---
-title: element.offsetLeft
-slug: Web/API/HTMLElement/offsetLeft
+titwe: ewement.offsetweft
+swug: w-web/api/htmwewement/offsetweft
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-Renvoie le nombre de pixels dont le
-_coin supérieur gauche_
-de l'élément courant est décalé vers la gauche au sein du nœud [`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent).
+w-wenvoie we n-nyombwe de pixews d-dont we
+_coin s-supéwieuw gauche_
+d-de w'éwément couwant est décawé vews wa gauche au sein du nyœud [`offsetpawent`](/fw/docs/web/api/htmwewement/offsetpawent). OwO
 
-### Syntaxe
+### s-syntaxe
 
 ```js
-left = element.offsetLeft;
+weft = ewement.offsetweft;
 ```
 
-`left` est un entier représentant le décalage vers la gauche en pixels.
+`weft` e-est un entiew wepwésentant we décawage v-vews wa gauche en pixews. (ꈍᴗꈍ)
 
-### Note
+### nyote
 
-`offsetLeft` renvoie la position du coin supérieur gauche de l'élément&nbsp;; pas nécessairement du «&nbsp;vrai&nbsp;» bord gauche de l'élément. C'est important pour les éléments **span** dans les textes continus qui s'étendent sur plusieurs lignes. Le span peut commencer au milieu de la page et continuer au début de la ligne suivante. La propriété `offsetLeft` fera référence au coin gauche de départ du span, pas le bord gauche du texte au début de la seconde ligne. Par conséquent, une boîte avec les valeurs left, top, width et height correspondant à `offsetLeft, offsetTop, offsetWidth` et `offsetHeight` ne contiendra pas forcément un span avec débordement de texte.
+`offsetweft` wenvoie w-wa position du coin supéwieuw g-gauche de w'éwément&nbsp;; p-pas nyécessaiwement du «&nbsp;vwai&nbsp;» bowd gauche de w'éwément. 😳 c'est impowtant p-pouw wes éwéments **span** dans wes textes continus qui s'étendent suw pwusieuws wignes. 😳😳😳 w-we span peut commencew au miwieu d-de wa page e-et continuew au d-début de wa wigne s-suivante. mya wa pwopwiété `offsetweft` fewa wéféwence a-au coin gauche de dépawt du span, mya pas w-we bowd gauche du texte au début de wa seconde wigne. (⑅˘꒳˘) paw conséquent, (U ﹏ U) une boîte avec wes vaweuws w-weft, mya top, width et height c-cowwespondant à `offsetweft, ʘwʘ offsettop, (˘ω˘) o-offsetwidth` e-et `offsetheight` nye contiendwa pas fowcément un span avec d-débowdement d-de texte. (U ﹏ U)
 
-### Exemple
+### exempwe
 
 ```js
-var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+vaw c-cowowtabwe = d-document.getewementbyid("t1");
+vaw toweft = cowowtabwe.offsetweft;
 
-if (tOLeft > 5) {
-  // grand décalage à gauche&nbsp;: faire quelque chose ici
+i-if (toweft > 5) {
+  // gwand d-décawage à gauche&nbsp;: faiwe quewque chose i-ici
 }
 ```
 
-Comme noté plus haut, cet exemple montre une «&nbsp;longue&nbsp;» phrase qui déborde dans un div avec une bordure bleue, et une boîte rouge dont on pourrait croire qu'elle décrit les limites du span.
+comme nyoté pwus haut, ^•ﻌ•^ c-cet exempwe montwe une «&nbsp;wongue&nbsp;» p-phwase qui débowde d-dans un div avec une bowduwe bweue, (˘ω˘) et une boîte wouge dont on pouwwait cwoiwe qu'ewwe décwit wes wimites d-du span. :3
 
-![](offsetleft.jpg)
+![](offsetweft.jpg)
 
-Note&nbsp;: il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.
+n-nyote&nbsp;: iw s'agit d'une image d-de w'exempwe, ^^;; p-pas d'un wendu d-diwect dans we nyavigateuw. 🥺 en effet, (⑅˘꒳˘) iw ny'est pas possibwe d'intégwew d-des scwipts dans wa page du wiki. nyaa~~
 
-```html
+```htmw
 <div
-  style="width: 300px; border-color:blue;
-  border-style:solid; border-width:1;">
-  <span>Short span. </span>
-  <span id="long">Long span that wraps withing this div.</span>
+  stywe="width: 300px; bowdew-cowow:bwue;
+  b-bowdew-stywe:sowid; bowdew-width:1;">
+  <span>showt s-span. :3 </span>
+  <span id="wong">wong s-span t-that wwaps withing this div.</span>
 </div>
 
 <div
-  id="box"
-  style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10"></div>
+  i-id="box"
+  s-stywe="position: a-absowute; bowdew-cowow: w-wed;
+  bowdew-width: 1; bowdew-stywe: s-sowid; z-index: 10"></div>
 
-<script>
-  var box = document.getElementById("box");
-  var long = document.getElementById("long");
-  box.style.left = long.offsetLeft + document.body.scrollLeft;
-  box.style.top = long.offsetTop + document.body.scrollTop;
-  box.style.width = long.offsetWidth;
-  box.style.height = long.offsetHeight;
-</script>
+<scwipt>
+  v-vaw box = d-document.getewementbyid("box");
+  v-vaw wong = document.getewementbyid("wong");
+  b-box.stywe.weft = wong.offsetweft + document.body.scwowwweft;
+  box.stywe.top = w-wong.offsettop + document.body.scwowwtop;
+  box.stywe.width = wong.offsetwidth;
+  box.stywe.height = wong.offsetheight;
+</scwipt>
 ```
 
-### Voir aussi
+### v-voiw aussi
 
-[`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent), [`offsetTop`](/fr/docs/Web/API/HTMLElement/offsetTop), [`offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth), [`offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight)
+[`offsetpawent`](/fw/docs/web/api/htmwewement/offsetpawent), ( ͡o ω ͡o ) [`offsettop`](/fw/docs/web/api/htmwewement/offsettop), mya [`offsetwidth`](/fw/docs/web/api/htmwewement/offsetwidth), (///ˬ///✿) [`offsetheight`](/fw/docs/web/api/htmwewement/offsetheight)
 
-### Spécification
+### spécification
 
-Cette propriété ne fait partie d'aucun standard ou recommandation technique du W3C.
+cette pwopwiété n-nye fait p-pawtie d'aucun s-standawd ou wecommandation technique d-du w3c. (˘ω˘)
 
-[MSDN: offsetLeft](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetleft.asp)
+[msdn: offsetweft](http://msdn.micwosoft.com/wowkshop/authow/dhtmw/wefewence/pwopewties/offsetweft.asp)

@@ -1,46 +1,46 @@
 ---
-title: "RangeError: repeat count must be less than infinity"
-slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
+titwe: "wangeewwow: wepeat count m-must be wess t-than infinity"
+s-swug: web/javascwipt/wefewence/ewwows/wesuwting_stwing_too_wawge
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-RangeError: argument out of range (Edge)
-RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
-RangeError: Invalid count value (Chrome)
+wangeewwow: a-awgument o-out of wange (edge)
+w-wangeewwow: w-wepeat count must be wess than infinity and nyot ovewfwow maximum stwing size (fiwefox)
+w-wangeewwow: invawid count vawue (chwome)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-La méthode {{jsxref("String.prototype.repeat()")}}, qui permet de répéter une chaîne de caractères, a été utilisée avec un argument qui n'est pas compris entre 0 et {{jsxref("Infinity")}} (exclue) (ce qui correspond à l'intervalle \[0, +∞))
+wa méthode {{jsxwef("stwing.pwototype.wepeat()")}}, >_< qui pewmet d-de wépétew une chaîne de cawactèwes, (⑅˘꒳˘) a-a été u-utiwisée avec un awgument qui ny'est pas compwis entwe 0 et {{jsxwef("infinity")}} (excwue) (ce qui cowwespond à w-w'intewvawwe \[0, /(^•ω•^) +∞))
 
-La chaîne de caractères crée par cette méthode ne doit pas dépasser la taille maximale d'une chaîne. Cette taille varie selon le moteur JavaScript. Pour Firefox (SpiderMonkey), la taille maximale d'une chaîne de caractères vaut 2^28-1 (`0xFFFFFFF`).
+wa chaîne de cawactèwes cwée paw cette méthode nye doit pas d-dépassew wa taiwwe maximawe d'une c-chaîne. rawr x3 cette t-taiwwe vawie sewon w-we moteuw javascwipt. (U ﹏ U) p-pouw fiwefox (spidewmonkey), wa taiwwe m-maximawe d'une chaîne de cawactèwes vaut 2^28-1 (`0xfffffff`). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Exemples invalides
+### exempwes invawides
 
-```js example-bad
-"abc".repeat(Infinity); // RangeError
-"a".repeat(2 ** 28); // RangeError
+```js exampwe-bad
+"abc".wepeat(infinity); // wangeewwow
+"a".wepeat(2 ** 28); // wangeewwow
 ```
 
-### Exemples valides
+### exempwes vawides
 
-```js example-good
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
+```js e-exampwe-good
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count wiww be c-convewted to integew)
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("String.prototype.repeat()")}}
+- {{jsxwef("stwing.pwototype.wepeat()")}}

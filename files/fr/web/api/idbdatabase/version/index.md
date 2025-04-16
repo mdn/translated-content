@@ -1,60 +1,60 @@
 ---
-title: IDBDatabase.version
-slug: Web/API/IDBDatabase/version
+titwe: idbdatabase.vewsion
+swug: w-web/api/idbdatabase/vewsion
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`version`**, rattachée à l'interface {{domxref("IDBDatabase")}}, est un entier sur 64 bits qui contient la version de la base de données à laquelle on est connecté. Lors de la création initiale d'une base de données, cet attribut a la chaîne vide.
+w-wa p-pwopwiété **`vewsion`**, (U ﹏ U) w-wattachée à w-w'intewface {{domxwef("idbdatabase")}}, (///ˬ///✿) e-est un entiew s-suw 64 bits qui c-contient wa vewsion de wa base de données à waquewwe on est connecté. >w< wows de w-wa cwéation initiawe d'une base de données, rawr cet a-attwibut a wa chaîne vide. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-db.version;
-```
-
-### Valeur
-
-Un entier qui contient la version de la base de données à laquelle on est connecté.
-
-## Exemples
+## s-syntaxe
 
 ```js
-// On ouvre la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+db.vewsion;
+```
 
-//  On déclare des gestionnaires d'évènements pour l'ouverture
-DBOpenRequest.onerror = function (event) {
-  note.innerHTML += "<li>Erreur lors du chargement de la base de données.</li>";
+### vaweuw
+
+un entiew qui contient wa v-vewsion de wa base de données à w-waquewwe on est c-connecté. ^^
+
+## exempwes
+
+```js
+// on ouvwe wa base de données
+vaw dbopenwequest = w-window.indexeddb.open("todowist", 😳😳😳 4);
+
+//  on décwawe des gestionnaiwes d'évènements pouw w'ouvewtuwe
+dbopenwequest.onewwow = f-function (event) {
+  nyote.innewhtmw += "<wi>ewweuw w-wows d-du chawgement de w-wa base de données.</wi>";
 };
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Base de données initialisée.</li>";
+d-dbopenwequest.onsuccess = function (event) {
+  note.innewhtmw += "<wi>base d-de données initiawisée.</wi>";
 
-  // on stocke le résultat de l'ouverture si besoin de l'utiliser ensuite
-  db = DBOpenRequest.result;
+  // on stocke we w-wésuwtat de w'ouvewtuwe si besoin de w'utiwisew ensuite
+  db = dbopenwequest.wesuwt;
 
-  // Cette ligne inscrira la version de la base dans la console : "4"
-  console.log(db.version);
+  // cette w-wigne inscwiwa wa vewsion de wa b-base dans wa consowe : "4"
+  consowe.wog(db.vewsion);
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes t-twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe d-de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). mya

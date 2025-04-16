@@ -1,79 +1,79 @@
 ---
-title: IDBRequest.readyState
-slug: Web/API/IDBRequest/readyState
+titwe: idbwequest.weadystate
+swug: web/api/idbwequest/weadystate
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`readyState`**, rattachée à l'interface {{domxref("IDBRequest")}}, est une propriété en lecture seule qui indique l'état de la requête.
+w-wa pwopwiété **`weadystate`**, ^•ﻌ•^ w-wattachée à w-w'intewface {{domxwef("idbwequest")}}, (˘ω˘) e-est une p-pwopwiété en wectuwe s-seuwe qui i-indique w'état d-de wa wequête. :3
 
-Chaque requête démarre avec l'état `pending` (c'est-à-dire en attente). Cet état vaut ensuite `done` (fini) lorsque la requête est terminée (en cas de réussite de l'opération comme en cas d'échec).
+chaque wequête démawwe avec w'état `pending` (c'est-à-diwe en attente). ^^;; cet état v-vaut ensuite `done` (fini) wowsque wa wequête est tewminée (en c-cas de wéussite de w'opéwation c-comme en cas d'échec). 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var currentReadyState = request.readyState;
+vaw c-cuwwentweadystate = wequest.weadystate;
 ```
 
-### Valeur
+### v-vaweuw
 
-La valeur {{domxref("IDBRequestReadyState")}} de la requête, qui peut être l'un de deux valeurs. `pending` lorsque la requête est en attente, `done` lorsque celle-ci est finie.
+wa vaweuw {{domxwef("idbwequestweadystate")}} d-de wa wequête, (⑅˘꒳˘) qui peut êtwe w'un de deux vaweuws. nyaa~~ `pending` wowsque wa w-wequête est en attente, :3 `done` wowsque cewwe-ci est finie. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on effectue une requête sur un enregistrement avec un titre donné et on recupère l'enregistrement associé grâce au gestionnaire d'évènement `onsuccess` à partir du magasin d'objets {{domxref("IDBObjectStore")}}. Ensuite, on met à jour une des propriétés de cet enregistrement et on replace cet objet mis à jour dans le magasin d'objets via une autre requête. La valeur de la propriété `readyState` pour la deuxième requête est affichée dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre appliction [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. également l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans w-w'exempwe qui suit, mya on effectue u-une wequête suw u-un enwegistwement a-avec un titwe d-donné et on wecupèwe w'enwegistwement associé g-gwâce au gestionnaiwe d'évènement `onsuccess` à pawtiw du m-magasin d'objets {{domxwef("idbobjectstowe")}}. (///ˬ///✿) ensuite, (˘ω˘) on met à jouw une des pwopwiétés de cet enwegistwement et on wepwace c-cet objet mis à jouw dans we m-magasin d'objets v-via une autwe wequête. ^^;; w-wa vaweuw de wa pwopwiété `weadystate` pouw wa deuxième wequête est a-affichée dans w-wa consowe. (✿oωo) pouw consuwtew un exempwe f-fonctionnew c-compwet, (U ﹏ U) vous pouvez vous wéféwew à n-nyotwe appwiction [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([cf. -.- égawement w'exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^•ﻌ•^
 
 ```js
-var title = "Walk dog";
+vaw titwe = "wawk d-dog";
 
-// On ouvre une transaction
-var objectStore = db
-  .transaction(["toDoList"], "readwrite")
-  .objectStore("toDoList");
+// on ouvwe une t-twansaction
+vaw objectstowe = d-db
+  .twansaction(["todowist"], rawr "weadwwite")
+  .objectstowe("todowist");
 
-// On récupère l'enregistrement avec le titre souhaité
-var objectStoreTitleRequest = objectStore.get(title);
+// o-on wécupèwe w'enwegistwement avec we titwe souhaité
+vaw objectstowetitwewequest = objectstowe.get(titwe);
 
-objectStoreTitleRequest.onsuccess = function () {
-  // On récupère les données du résultat de la requête
-  var data = objectStoreTitleRequest.result;
+objectstowetitwewequest.onsuccess = f-function () {
+  // o-on wécupèwe wes données du w-wésuwtat de wa w-wequête
+  vaw d-data = objectstowetitwewequest.wesuwt;
 
-  // On met à jour la propriété notified de l'objet
-  // avec la valeur "yes"
+  // on met à jouw wa pwopwiété nyotified d-de w'objet
+  // avec wa vaweuw "yes"
   data.notified = "yes";
 
-  // Ensuite, on crée une autre requête pour insérer
-  // l'enregistrement dans la base de données
-  var updateTitleRequest = objectStore.put(data);
+  // ensuite, (˘ω˘) on cwée une autwe w-wequête pouw inséwew
+  // w-w'enwegistwement d-dans wa base de d-données
+  vaw updatetitwewequest = o-objectstowe.put(data);
 
-  // On affiche l'état de la requête dans la console
-  console.log("La valeur de readyState est " + updateTitlerequest.readyState);
+  // o-on affiche w'état d-de wa wequête d-dans wa consowe
+  consowe.wog("wa vaweuw de w-weadystate est " + u-updatetitwewequest.weadystate);
 
-  // Lorsque cette deuxième requête est appliquée,
-  // on exécute la fonction displayData() afin d'afficher
-  // les données à jour
-  updateTitleRequest.onsuccess = function () {
-    displayData();
+  // w-wowsque c-cette deuxième w-wequête est appwiquée, nyaa~~
+  // on exékawaii~ wa fonction dispwaydata() afin d'affichew
+  // w-wes données à jouw
+  updatetitwewequest.onsuccess = function () {
+    dispwaydata();
   };
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew des twansactions : {{domxwef("idbdatabase")}}
+- m-manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw u-un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew des c-cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe d-de wéféwence pouw indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

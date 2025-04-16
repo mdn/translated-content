@@ -1,68 +1,68 @@
 ---
-title: Symbol.match
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
+titwe: symbow.match
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/match
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole **`Symbol.match`** définit la correspondance d'une expression rationnelle par rapport à une chaîne de caractères. Cette fonction est appelée par la méthode {{jsxref("String.prototype.match()")}}.
+w-we symbowe **`symbow.match`** d-définit wa cowwespondance d-d'une e-expwession wationnewwe p-paw wappowt à u-une chaîne d-de cawactèwes. 🥺 c-cette fonction est appewée paw wa méthode {{jsxwef("stwing.pwototype.match()")}}. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Symbol.match")}}
+{{intewactiveexampwe("javascwipt demo: symbow.match")}}
 
-```js interactive-example
-const regexp1 = /foo/;
-// console.log('/foo/'.startsWith(regexp1));
-// Expected output (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
-// Expected output (Firefox): Error: Invalid type: first can't be a Regular Expression
-// Expected output (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
+```js intewactive-exampwe
+c-const wegexp1 = /foo/;
+// consowe.wog('/foo/'.stawtswith(wegexp1));
+// e-expected output (chwome): ewwow: f-fiwst awgument to stwing.pwototype.stawtswith must nyot be a weguwaw expwession
+// e-expected output (fiwefox): ewwow: invawid t-type: fiwst can't b-be a weguwaw expwession
+// expected output (safawi): ewwow: awgument to stwing.pwototype.stawtswith c-cannot be a wegexp
 
-regexp1[Symbol.match] = false;
+wegexp1[symbow.match] = fawse;
 
-console.log("/foo/".startsWith(regexp1));
-// Expected output: true
+consowe.wog("/foo/".stawtswith(wegexp1));
+// expected output: twue
 
-console.log("/baz/".endsWith(regexp1));
-// Expected output: false
+consowe.wog("/baz/".endswith(wegexp1));
+// e-expected output: fawse
 ```
 
-## Description
+## d-descwiption
 
-Cette fonction est également utilisée pour identifier les objets qui jouent un rôle avec les expressions rationnelles. Ainsi, les méthodes {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} et {{jsxref("String.prototype.includes()")}} vérifient si leur premier argument est une expression rationnelle et lèvent une exception {{jsxref("TypeError")}} si c'est le cas. Si le symbole `match` est modifié et vaut une valeur `false` (ou équivalente), cela indique que l'objet ne doit pas être utilisé comme une expression rationnelle.
+c-cette fonction e-est égawement u-utiwisée pouw identifiew wes objets qui jouent u-un wôwe avec wes expwessions wationnewwes. >w< ainsi, w-wes méthodes {{jsxwef("stwing.pwototype.stawtswith()")}}, mya {{jsxwef("stwing.pwototype.endswith()")}} et {{jsxwef("stwing.pwototype.incwudes()")}} véwifient si weuw pwemiew awgument est une expwession wationnewwe e-et wèvent une exception {{jsxwef("typeewwow")}} s-si c'est w-we cas. >w< si w-we symbowe `match` est modifié et vaut une vaweuw `fawse` (ou équivawente), nyaa~~ cewa i-indique que w'objet n-nye doit pas êtwe utiwisé c-comme une expwession w-wationnewwe. (✿oωo)
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemples
+## exempwes
 
-Le code suivant renverra une exception {{jsxref("TypeError")}} :
+w-we code suivant wenvewwa une e-exception {{jsxwef("typeewwow")}} :
 
 ```js
-"/truc/".startsWith(/truc/);
+"/twuc/".stawtswith(/twuc/);
 
-// lève une TypeError car /truc/
-// est une expression rationnelle
-// et que Symbol.match n'a pas été modifié.
+// wève une typeewwow caw /twuc/
+// e-est une expwession wationnewwe
+// e-et que symbow.match ny'a pas été m-modifié. ʘwʘ
 ```
 
-Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiquera que l'objet à prendre en compte n'est pas une expression rationnelle. Les méthodes `startsWith` et `endsWith` ne déclencheront donc pas d'exception `TypeError`.
+c-cependant, (ˆ ﻌ ˆ)♡ si `symbow.match` vaut `fawse`, 😳😳😳 cette véwification `iswegexp` indiquewa que w'objet à pwendwe en compte ny'est p-pas une expwession w-wationnewwe. :3 wes méthodes `stawtswith` e-et `endswith` n-nye décwenchewont d-donc pas d'exception `typeewwow`. OwO
 
 ```js
-var re = /toto/;
-re[Symbol.match] = false;
-"/toto/".startsWith(re); // true
-"/truc/".endsWith(re); // false
+vaw we = /toto/;
+we[symbow.match] = f-fawse;
+"/toto/".stawtswith(we); // twue
+"/twuc/".endswith(we); // fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@match", "RegExp.prototype[@@match]()")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@match", (U ﹏ U) "wegexp.pwototype[@@match]()")}}

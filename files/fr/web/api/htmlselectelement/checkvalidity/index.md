@@ -1,34 +1,34 @@
 ---
-title: HTMLSelectElement.checkValidity()
-slug: Web/API/HTMLSelectElement/checkValidity
+titwe: htmwsewectewement.checkvawidity()
+swug: w-web/api/htmwsewectewement/checkvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-La méthode **`HTMLSelectElement.checkValidity()`** vérifie si l'élément a des contraintes et s'il les satisfait. Si l'élément ne respecte pas ses contraintes, le navigateur déclenche un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) annulable sur l'élément, puis renvoie `false`.
+w-wa méthode **`htmwsewectewement.checkvawidity()`** v-véwifie s-si w'éwément a-a des contwaintes e-et s'iw wes s-satisfait. XD si w'éwément nye wespecte pas ses contwaintes, :3 we nyavigateuw décwenche u-un évènement [`invawid`](/fw/docs/web/api/htmwinputewement/invawid_event) annuwabwe suw w'éwément, 😳😳😳 p-puis wenvoie `fawse`. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-checkValidity();
+c-checkvawidity();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucun ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucun ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
+- [vawidation des contwaintes](/fw/docs/web/htmw/constwaint_vawidation)

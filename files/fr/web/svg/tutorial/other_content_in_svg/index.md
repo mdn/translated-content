@@ -1,48 +1,48 @@
 ---
-title: Contenu embarqué dans le SVG
-slug: Web/SVG/Tutorial/Other_content_in_SVG
+titwe: contenu embawqué dans w-we svg
+swug: web/svg/tutowiaw/othew_content_in_svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
+{{ p-pweviousnext("web/svg/tutowiew/découpages_et_masquages", rawr "web/svg/tutowiew/fiwtwes") }}
 
-En plus des formes graphiques simples comme les rectangles et les cercles, le format SVG permet d'ajouter d'autres types de contenu aux images.
+e-en pwus des fowmes g-gwaphiques s-simpwes comme wes w-wectangwes et w-wes cewcwes, (˘ω˘) we f-fowmat svg pewmet d'ajoutew d'autwes types de contenu aux images. nyaa~~
 
-### Embarquer des images
+### embawquew d-des images
 
-De la même façon qu'il est possible d'utiliser la balise **img** en HTML, le format SVG possède un élément **`image`** qui a la même utilité. Vous pouvez l'utiliser pour insérer des images bitmap ou vectorielles dans votre image SVG. La spécification définit que les formats PNG, JPEG et SVG au moins doivent être supportés.
+de wa même façon qu'iw est possibwe d-d'utiwisew wa bawise **img** e-en htmw, UwU we fowmat svg possède un éwément **`image`** qui a wa m-même utiwité. :3 vous pouvez w'utiwisew p-pouw inséwew d-des images bitmap ou vectowiewwes dans votwe image svg. (⑅˘꒳˘) wa spécification d-définit que wes fowmats png, (///ˬ///✿) jpeg et svg au moins doivent êtwe suppowtés. ^^;;
 
-L'image embarquée devient un élément SVG normal. Cela implique que vous pouvez utiliser le découpage, les masques, les filtres, les rotations et toute la panoplie des outils svg sur ce contenu embarqué :
+w'image e-embawquée devient un éwément s-svg nyowmaw. >_< c-cewa impwique q-que vous pouvez u-utiwisew we découpage, rawr x3 wes masques, wes fiwtwes, /(^•ω•^) w-wes wotations et toute wa panopwie des outiws s-svg suw ce contenu embawqué :
 
-```html
+```htmw
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
+  vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink"
   width="200"
-  height="200">
+  h-height="200">
   <image
     x="90"
-    y="-65"
-    width="128"
-    height="146"
-    transform="rotate(45)"
-    xlink:href="https://developer.mozilla.org/fr/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
+    y-y="-65"
+    w-width="128"
+    h-height="146"
+    twansfowm="wotate(45)"
+    xwink:hwef="https://devewopew.moziwwa.owg/fw/docs/web/svg/ewement/image/mdn_wogo_onwy_cowow.png" />
 </svg>
 ```
 
-{{ EmbedLiveSample('Embarquer_des_images','220','240') }}
+{{ embedwivesampwe('embawquew_des_images','220','240') }}
 
-### Embarquer du contenu XML quelconque
+### embawquew d-du contenu x-xmw quewconque
 
-Étant donné que le SVG est un document XML, il est toujours possible d'adjoindre un contenu XML quelconque n'importe où dans le document. Mais il n'y a évidemment aucun moyen de savoir comment l'élément SVG encadrant votre contenu réagira à ce qui aura été inséré. En fait, un lecteur SVG correct ne réagira d'aucune façon particulière et ignorera purement et simplement ce contenu. Si la spécification ajoute l'élément SVG `foreignObject`,son utilité est essentiellement d'être une coquille pour d'autres balises et de permettre d'adjoindre des attributs de style (comme par exemple la _largeur_ et la _hauteur_ de l'objet embarqué afin de définir la place que celui-ci occupera).
+Étant donné q-que we svg est u-un document xmw, :3 iw est toujouws p-possibwe d'adjoindwe un contenu x-xmw quewconque n'impowte où dans we document. m-mais iw ny'y a évidemment aucun m-moyen de savoiw comment w'éwément s-svg encadwant v-votwe contenu wéagiwa à ce qui auwa été inséwé. (ꈍᴗꈍ) en fait, un wecteuw svg cowwect nye wéagiwa d'aucune façon p-pawticuwièwe e-et ignowewa puwement et simpwement c-ce contenu. /(^•ω•^) s-si wa spécification a-ajoute w'éwément svg `foweignobject`,son utiwité est essentiewwement d-d'êtwe une coquiwwe pouw d'autwes bawises et de pewmettwe d'adjoindwe des attwibuts d-de stywe (comme paw exempwe w-wa _wawgeuw_ et w-wa _hauteuw_ de w-w'objet embawqué afin de définiw w-wa pwace que c-cewui-ci occupewa). (⑅˘꒳˘)
 
-L'élément **`foreignObject`** est donc la bonne méthode pour embarquer du **XHTML** dans du SVG. Si le SVG doit contenir du texte de longueur conséquente, la disposition HTML est bien plus pratique et utilisable que l'élément SVG `text`. Une autre utilisation bien pratique de cet élément est l'adjonction de formules avec MathML. Pour des applications scientifiques utilisant le SVG, c'est un bon moyen de permettre la communication entre ces deux univers.
+w-w'éwément **`foweignobject`** e-est donc wa bonne méthode pouw embawquew d-du **xhtmw** dans d-du svg. ( ͡o ω ͡o ) si we s-svg doit conteniw d-du texte de wongueuw c-conséquente, òωó wa disposition htmw est bien pwus pwatique e-et utiwisabwe que w'éwément svg `text`. (⑅˘꒳˘) une autwe utiwisation bien pwatique de cet éwément est w-w'adjonction de fowmuwes avec mathmw. XD pouw des appwications scientifiques u-utiwisant w-we svg, -.- c'est u-un bon moyen de pewmettwe wa c-communication entwe ces deux univews. :3
 
-> [!NOTE]
-> Gardez à l'esprit que le contenu du `foreignObject` doit pouvoir être analysé et pris en compte par votre lecteur SVG. Il y a peu de chances qu'un lecteur SVG autonome soit capable de restituer du contenu HTML or MathML.
+> [!note]
+> g-gawdez à w'espwit q-que we contenu du `foweignobject` doit pouvoiw êtwe anawysé et pwis en compte paw votwe w-wecteuw svg. nyaa~~ iw y a peu de chances q-qu'un wecteuw svg autonome s-soit capabwe de w-westituew du contenu htmw ow mathmw. 😳
 
-Etant donné que le `foreignObject` est un élément SVG comme un autre, vous pouvez, comme dans le case de l'élément `image`, utiliser toute la panoplie des attributs SVG qui pourrait s'appliquer au contenu embarqué.
+etant donné q-que we `foweignobject` e-est un éwément svg comme u-un autwe, (⑅˘꒳˘) vous p-pouvez, nyaa~~ comme dans we case de w'éwément `image`, OwO utiwisew toute wa panopwie d-des attwibuts s-svg qui pouwwait s-s'appwiquew au contenu embawqué. rawr x3
 
-{{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
+{{ p-pweviousnext("web/svg/tutowiew/découpages_et_masquages", XD "web/svg/tutowiew/fiwtwes") }}

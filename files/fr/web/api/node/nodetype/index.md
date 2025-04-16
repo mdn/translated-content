@@ -1,124 +1,124 @@
 ---
-title: element.nodeType
-slug: Web/API/Node/nodeType
+titwe: ewement.nodetype
+swug: w-web/api/node/nodetype
 ---
 
-{{APIRef("DOM")}}La propriété en lecture seule **`Node.nodeType`** représente le type du noeud.
+{{apiwef("dom")}}wa p-pwopwiété en wectuwe s-seuwe **`node.nodetype`** w-wepwésente we t-type du nyoeud. (///ˬ///✿)
 
-## Description
+## d-descwiption
 
-La propriété **`nodeType`** peut être utilisée pour distinguer les uns des autres les différents genres de noeuds tels que {{domxref("Element")}}, {{domxref("Text")}} et {{domxref("Comment")}} .
+w-wa pwopwiété **`nodetype`** peut êtwe u-utiwisée pouw distinguew wes uns des autwes wes difféwents genwes de n-nyoeuds tews que {{domxwef("ewement")}}, 😳 {{domxwef("text")}} et {{domxwef("comment")}} . 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-Type = node.nodeType;
+t-type = nyode.nodetype;
 ```
 
-Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans [Constantes](#constantes).
+w-wenvoie un entiew (_integew_) qui spécifie we type du n-nyoeud ; wes vaweuws possibwes sont w-wistées dans [constantes](#constantes). σωσ
 
-## Constantes
+## c-constantes
 
-### Constantes de type nœud
+### constantes de type nyœud
 
-| Constante                          | Valeur | Description                                                                                                  |
+| constante                          | vaweuw | descwiption                                                                                                  |
 | ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
-| `Node.ELEMENT_NODE`                | `1`    | Un noeud {{domxref("Element")}} tel que {{HTMLElement("p")}} ou {{HTMLElement("div")}}`.`                    |
-| `Node.TEXT_NODE`                   | `3`    | Le {{domxref("Text")}} actuel de l'{{domxref("Element")}} ou {{domxref("Attr")}}.                            |
-| `Node.PROCESSING_INSTRUCTION_NODE` | `7`    | Une {{domxref("ProcessingInstruction")}} d'un document XML tel que la déclaration `<?xml-stylesheet ... ?>`. |
-| `Node.COMMENT_NODE`                | `8`    | Un noeud {{domxref("Comment")}}.                                                                             |
-| `Node.DOCUMENT_NODE`               | `9`    | Un noeud {{domxref("Document")}}.                                                                            |
-| `Node.DOCUMENT_TYPE_NODE`          | `10`   | Un noeud {{domxref("DocumentType")}} c'est-à-dire `<!DOCTYPE html>` pour des documents HTML5.                |
-| `Node.DOCUMENT_FRAGMENT_NODE`      | `11`   | Un noeud {{domxref("DocumentFragment")}}.                                                                    |
+| `node.ewement_node`                | `1`    | un nyoeud {{domxwef("ewement")}} t-tew que {{htmwewement("p")}} ou {{htmwewement("div")}}`.`                    |
+| `node.text_node`                   | `3`    | we {{domxwef("text")}} actuew de w'{{domxwef("ewement")}} ou {{domxwef("attw")}}. rawr x3                            |
+| `node.pwocessing_instwuction_node` | `7`    | u-une {{domxwef("pwocessinginstwuction")}} d'un document x-xmw tew que wa décwawation `<?xmw-stywesheet ... ?>`. OwO |
+| `node.comment_node`                | `8`    | u-un nyoeud {{domxwef("comment")}}. /(^•ω•^)                                                                             |
+| `node.document_node`               | `9`    | u-un nyoeud {{domxwef("document")}}. 😳😳😳                                                                            |
+| `node.document_type_node`          | `10`   | u-un nyoeud {{domxwef("documenttype")}} c'est-à-diwe `<!doctype htmw>` pouw des documents h-htmw5. ( ͡o ω ͡o )                |
+| `node.document_fwagment_node`      | `11`   | un nyoeud {{domxwef("documentfwagment")}}. >_<                                                                    |
 
-### Constantes de type noeud dépréciées {{deprecated_inline()}}
+### constantes de type n-nyoeud dépwéciées {{depwecated_inwine()}}
 
-Les constantes suivantes ont été dépréciées et ne doivent plus être utilisées.
+wes constantes suivantes ont été dépwéciées et nye doivent pwus êtwe utiwisées. >w<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td>Constante</td>
-      <td>Valeur</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code>Node.ATTRIBUTE_NODE</code></td>
+    <tw>
+      <td>constante</td>
+      <td>vaweuw</td>
+      <td>descwiption</td>
+    </tw>
+    <tw>
+      <td><code>node.attwibute_node</code></td>
       <td>2</td>
       <td>
-        Un {{domxref("Attr", "Attribut")}} d'un
-        {{domxref("Element")}}. Les attributs d'élément n'implémentent
-        plus l'interface {{domxref("Node")}} dans la spécification
-        DOM4.
+        u-un {{domxwef("attw", rawr "attwibut")}} d'un
+        {{domxwef("ewement")}}. 😳 w-wes attwibuts d-d'éwément ny'impwémentent
+        p-pwus w'intewface {{domxwef("node")}} dans wa spécification
+        dom4. >w<
       </td>
-    </tr>
-    <tr>
-      <td><code>Node.CDATA_SECTION_NODE</code></td>
+    </tw>
+    <tw>
+      <td><code>node.cdata_section_node</code></td>
       <td><code>4</code></td>
       <td>
-        Une {{domxref("CDATASection")}}. Supprimée dans la
-        spécification DOM4.
+        u-une {{domxwef("cdatasection")}}. (⑅˘꒳˘) s-suppwimée dans wa
+        s-spécification dom4. OwO
       </td>
-    </tr>
-    <tr>
-      <td><code>Node.ENTITY_REFERENCE_NODE</code></td>
+    </tw>
+    <tw>
+      <td><code>node.entity_wefewence_node</code></td>
       <td>5</td>
       <td>
-        Un noeud référence d'entité XML. Supprimé dans la spécification
-        DOM4.
+        un n-nyoeud wéféwence d'entité xmw. s-suppwimé dans wa spécification
+        d-dom4. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <td><code>Node.ENTITY_NODE</code></td>
+    </tw>
+    <tw>
+      <td><code>node.entity_node</code></td>
       <td>6</td>
       <td>
-        Un noeud <code>&#x3C;!ENTITY ...></code> XML. Supprimé dans la
-        spécificatioin DOM4.
+        un nyoeud <code>&#x3c;!entity ...></code> xmw. 😳 s-suppwimé dans wa
+        spécificatioin d-dom4. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><code>Node.NOTATION_NODE</code></td>
+    </tw>
+    <tw>
+      <td><code>node.notation_node</code></td>
       <td>12</td>
       <td>
-        Un noeud <code>&#x3C;!NOTATION ...></code> XML. Supprimé dans la
-        spécification DOM4.
+        un nyoeud <code>&#x3c;!notation ...></code> x-xmw. mya suppwimé d-dans wa
+        spécification dom4. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Différents types de noeuds
-
-```js
-document.nodeType === Node.DOCUMENT_NODE; // true (vrai)
-document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true  (vrai)
-
-var fragment = document.createDocumentFragment();
-fragment.nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true  (vrai)
-
-var p = document.createElement("p");
-p.textContent = "Once upon a time...";
-
-p.nodeType === Node.ELEMENT_NODE; // true  (vrai)
-p.firstChild.nodeType === Node.TEXT_NODE; // true  (vrai)
-```
-
-### Commentaires
-
-Cet exemple vérifie si le premier noeud dans l'élément du document est un noeud commentaire et si ce n'est pas le cas, affiche un message.
+### difféwents types de nyoeuds
 
 ```js
-var node = document.documentElement.firstChild;
-if (node.nodeType != Node.COMMENT_NODE)
-  console.log("You should comment your code well!");
+document.nodetype === nyode.document_node; // t-twue (vwai)
+document.doctype.nodetype === n-nyode.document_type_node; // twue  (vwai)
+
+v-vaw fwagment = d-document.cweatedocumentfwagment();
+f-fwagment.nodetype === nyode.document_fwagment_node; // twue  (vwai)
+
+vaw p = document.cweateewement("p");
+p-p.textcontent = "once upon a time...";
+
+p.nodetype === nyode.ewement_node; // twue  (vwai)
+p.fiwstchiwd.nodetype === n-nyode.text_node; // twue  (vwai)
 ```
 
-## Spécifications
+### c-commentaiwes
 
-{{Specifications}}
+c-cet exempwe véwifie s-si we pwemiew nyoeud dans w-w'éwément du document e-est un nyoeud c-commentaiwe e-et si ce ny'est pas we cas, (⑅˘꒳˘) affiche un message. (U ﹏ U)
 
-## Compatibilité des navigateurs
+```js
+v-vaw nyode = d-document.documentewement.fiwstchiwd;
+i-if (node.nodetype != nyode.comment_node)
+  c-consowe.wog("you s-shouwd comment youw code weww!");
+```
 
-{{Compat}}
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

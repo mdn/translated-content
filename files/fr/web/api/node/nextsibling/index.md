@@ -1,76 +1,76 @@
 ---
-title: element.nextSibling
-slug: Web/API/Node/nextSibling
+titwe: ewement.nextsibwing
+swug: w-web/api/node/nextsibwing
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Node.nextSibling`** renvoie le nœud (`node`) suivant immédiatement le nœud spécifié dans la liste des enfants ( {{domxref("Node.childNodes","childNodes")}}) de son nœud parent, ou `null` si le nœud spécifié est le dernier dans cette liste.
+w-wa pwopwiété e-en wectuwe seuwe **`node.nextsibwing`** w-wenvoie w-we nyœud (`node`) s-suivant immédiatement w-we n-nyœud spécifié dans wa wiste des enfants ( {{domxwef("node.chiwdnodes","chiwdnodes")}}) de son nyœud pawent, rawr x3 o-ou `nuww` si we nœud spécifié est we dewniew d-dans cette wiste. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-nextNode = node.nextSibling;
+n-nyextnode = node.nextsibwing;
 ```
 
-## Notes
+## nyotes
 
-Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
-vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via [`Node.firstChild`](/fr/docs/Web/API/Node/firstChild) ou
-[`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling "{{APIRef("DOM")}}") peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
-que l'auteur comptait obtenir.
+wes nyavigateuws b-basés suw gecko insèwent d-des nœuds texte d-dans un document pouw wepwésentew des espaces
+vides dans we bawisage souwce. /(^•ω•^) p-paw conséquent, 😳😳😳 un nyœud obtenu paw exempwe via [`node.fiwstchiwd`](/fw/docs/web/api/node/fiwstchiwd) ou
+[`node.pwevioussibwing`](/fw/docs/web/api/node/pwevioussibwing "{{apiwef("dom")}}") peut faiwe wéféwence à u-un nyœud texte contenant d-des espaces pwutôt q-qu'au véwitabwe éwément
+q-que w'auteuw comptait o-obteniw. ( ͡o ω ͡o )
 
-Consultez [Gestion des espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
-et [_Why are some Text nodes empty?_
-dans la FAQ DOM 3 du W3C](https://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
+consuwtez [gestion des espaces d-dans we dom](/fw/docs/web/api/document_object_modew/whitespace)
+et [_why awe some text nyodes empty?_
+d-dans wa faq dom 3 du w3c](https://www.w3.owg/dom/faq.htmw#emptytext) pouw pwus d'infowmations. >_<
 
-{{domxref("Element.nextElementSibling")}} peut être utilisé pour obtenir l'élément suivant en ignorant les noeuds d'espace.
+{{domxwef("ewement.nextewementsibwing")}} peut êtwe utiwisé pouw obteniw w-w'éwément suivant en ignowant w-wes nyoeuds d'espace. >w<
 
-## Exemple
+## e-exempwe
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
+```htmw
+<div i-id="div-01">hewe is div-01</div>
+<div id="div-02">hewe is div-02</div>
 
-<script type="text/javascript">
-  var el = document.getElementById("div-01").nextSibling,
-    i = 1;
+<scwipt t-type="text/javascwipt">
+  v-vaw ew = document.getewementbyid("div-01").nextsibwing, rawr
+    i-i = 1;
 
-  console.log("Siblings of div-01:");
+  c-consowe.wog("sibwings of div-01:");
 
-  while (el) {
-    console.log(i + ". " + el.nodeName);
-    el = el.nextSibling;
+  w-whiwe (ew) {
+    consowe.wog(i + ". 😳 " + e-ew.nodename);
+    ew = ew.nextsibwing;
     i++;
   }
-</script>
+</scwipt>
 
 <!--
-  Ce qui suit est écrit sur la console pendant le chargement:
+  c-ce qui suit est écwit suw w-wa consowe pendant we chawgement:
 
-     Siblings of div-01
+     s-sibwings o-of div-01
 
-      1. #text
-      2. DIV
-      3. #text
-      4. SCRIPT
+      1. >w< #text
+      2. (⑅˘꒳˘) div
+      3. OwO #text
+      4. (ꈍᴗꈍ) scwipt
 
 -->
 ```
 
-Dans cet exemple, on peut voir que des nœuds `#text` sont insérés dans le DOM là où des espaces se trouvent dans le code source entre les balises (c'est-à-dire après la balise de fermeture d'un élément et avant la balise d'ouverture du suivant). Aucun espace n'est créé entre les éléments insérés par l'instruction `document.write` .
+dans cet exempwe, 😳 on peut voiw que des nyœuds `#text` sont inséwés d-dans we d-dom wà où des espaces se twouvent d-dans we code s-souwce entwe wes b-bawises (c'est-à-diwe apwès wa bawise de fewmetuwe d'un éwément e-et avant wa bawise d'ouvewtuwe du suivant). 😳😳😳 aucun espace ny'est cwéé entwe w-wes éwéments inséwés paw w-w'instwuction `document.wwite` . mya
 
-L'inclusion possible de nœuds textes dans le DOM doit être prise en compte pour le parcours du DOM à l'aide de `nextSibling`. Consultez les ressources dans la section Notes .
+w-w'incwusion possibwe d-de nœuds textes dans we d-dom doit êtwe p-pwise en compte p-pouw we pawcouws d-du dom à w'aide de `nextsibwing`. mya consuwtez wes w-wessouwces dans w-wa section nyotes . (⑅˘꒳˘)
 
-## Spécification
+## s-spécification
 
-- [DOM Level 1 Core: nextSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) — [traduction](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling) (non normative)
-- [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-6AC54C2F) (non normative)
+- [dom w-wevew 1 cowe: nyextsibwing](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#attwibute-nextsibwing) — [twaduction](http://xmwfw.owg/w3c/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#attwibute-nextsibwing) (non n-nyowmative)
+- [dom wevew 2 cowe: nyextsibwing](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-6ac54c2f) — [twaduction](http://www.yoyodesign.owg/doc/w3c/dom2/cowe/cowe.htmw#id-6ac54c2f) (non nyowmative)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-{{domxref("Element.nextElementSibling")}}
+{{domxwef("ewement.nextewementsibwing")}}

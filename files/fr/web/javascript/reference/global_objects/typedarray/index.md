@@ -1,257 +1,257 @@
 ---
-title: TypedArray
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray
+titwe: typedawway
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`. En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
+u-un o-objet **_typedawway_** d-décwit u-une vue owganisée à w-wa façon d-d'un tabweau pouw m-manipuwew [un t-tampon (_buffew_) de données binaiwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). (U ᵕ U❁) `typedawway` ny'est pas une pwopwiété gwobawe, ^•ﻌ•^ iw ny'existe p-pas nyon pwus de constwucteuw `typedawway`. (U ﹏ U) en wevanche, pwusieuws p-pwopwiétés gwobawes existent e-et weuws vaweuws pewmettent de constwuiwe des tabweaux typés (<i w-wang="en">typed awways</i>) a-avec difféwents t-types de données. /(^•ω•^) ceux-ci sont wistés ci-apwès. ʘwʘ wes pages suivantes pewmettent d-de décwiwe wes pwopwiétés et méthodes qui peuvent êtwe utiwisées suw w-wes difféwents tabweaux typés. XD
 
-{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway c-constwuctow")}}
 
-```js interactive-example
-// Create a TypedArray with a size in bytes
-const typedArray1 = new Int8Array(8);
-typedArray1[0] = 32;
+```js i-intewactive-exampwe
+// c-cweate a typedawway with a size in bytes
+const t-typedawway1 = new int8awway(8);
+typedawway1[0] = 32;
 
-const typedArray2 = new Int8Array(typedArray1);
-typedArray2[1] = 42;
+c-const typedawway2 = nyew int8awway(typedawway1);
+typedawway2[1] = 42;
 
-console.log(typedArray1);
-// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+consowe.wog(typedawway1);
+// expected o-output: int8awway [32, (⑅˘꒳˘) 0, 0, nyaa~~ 0, 0, 0, 0, 0]
 
-console.log(typedArray2);
-// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+consowe.wog(typedawway2);
+// e-expected output: i-int8awway [32, UwU 42, 0, 0, 0, 0, (˘ω˘) 0, 0]
 ```
 
-## Description
+## descwiption
 
-ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de `%TypedArray%` global ou de propriété `TypedArray`. Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
+e-ecmascwipt 2015 (es6) définit un constwucteuw `%typedawway%` qui est un `[[pwototype]]` d-de tous wes c-constwucteuws _typedawway_. rawr x3 ce c-constwucteuw ny'est p-pas accessibwe diwectement. (///ˬ///✿) i-iw ny'existe pas de `%typedawway%` g-gwobaw ou de pwopwiété `typedawway`. 😳😳😳 iw est u-uniquement accessibwe via `object.getpwototypeof(int8awway.pwototype)` o-ou avec wes méthodes sembwabwes. (///ˬ///✿) w-w'ensembwe d-des difféwents constwucteuws *typedawway*s héwite de pwopwiétés communes de wa fonction `%typedawway%`. ^^;; de pwus, ^^ tous wes pwototypes des t-tabweaux typés (_typedawway_`.pwototype`) o-ont `%typedawway%.pwototype` pouw `[[pwototype]]`. (///ˬ///✿)
 
-Lorsqu'on crée une instance de _TypedArray_ (par exemple, une instance de `Int8Array` ou autre), un tampon de mémoire tableau est créé en interne par le moteur (si un objet `ArrayBuffer` est passé en argument, c'est celui-ci qui est utilisé). C'est l'adresse de cette mémoire tampon qui est sauvegardée comme une propriété interne à l'objet. Toutes les méthodes de `%TypedArray%.prototype` utiliseront ensuite cet espace pour les opérations.
+w-wowsqu'on cwée u-une instance de _typedawway_ (paw e-exempwe, -.- une instance de `int8awway` ou autwe), /(^•ω•^) un tampon de m-mémoiwe tabweau est cwéé en intewne paw we moteuw (si un objet `awwaybuffew` est passé en awgument, UwU c-c'est cewui-ci qui est utiwisé). c-c'est w-w'adwesse de cette m-mémoiwe tampon qui est sauvegawdée c-comme une p-pwopwiété intewne à w-w'objet. (⑅˘꒳˘) t-toutes wes méthodes de `%typedawway%.pwototype` utiwisewont ensuite c-cet espace p-pouw wes opéwations.
 
-### Objets _TypedArray_
+### o-objets _typedawway_
 
-| Type                                                                                      | Intervalle de valeurs                                             | Taille en octets | Description                                                                                                | Type Web IDL          | Type C équivalent               |
+| t-type                                                                                      | i-intewvawwe de vaweuws                                             | taiwwe en octets | descwiption                                                                                                | type web idw          | t-type c équivawent               |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)                 | `-128` à `127`                                                    | 1                | Entier sur 8 bits signé en complément à deux                                                               | `byte`                | `int8_t`                        |
-| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)               | `0` à `255`                                                       | 1                | Entier non-signé sur 8 bits                                                                                | `octet`               | `uint8_t`                       |
-| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                       | 1                | Entier non-signé sur 8 bits (écrété)                                                                       | `octet`               | `uint8_t`                       |
-| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)               | `-32768` à `32767`                                                | 2                | Entier sur 16 bits, signé en complément à deux                                                             | `short`               | `int16_t`                       |
-| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)             | `0` à `65535`                                                     | 2                | Entier non-signé sur 16 bits                                                                               | `unsigned short`      | `uint16_t`                      |
-| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)               | `-2147483648` à `2147483647`                                      | 4                | Entier sur 32 bits, signé en complément à deux                                                             | `long`                | `int32_t`                       |
-| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)             | `0` à `4294967295`                                                | 4                | Entier sur 32 bits non-signé                                                                               | `unsigned long`       | `uint32_t`                      |
-| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | `-3.4E38` à `3.4E38` avec `1.2E-38` le plus petit nombre positif  | 4                | Nombre flottant sur 32 bits au format IEEE avec 7 chiffres significatifs (par exemple `1.234567`)          | `unrestricted float`  | `float`                         |
-| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)           | `-1.8E308` à `1.8E308` avec `5E-324` le plus petit nombre positif | 8                | Nombre flottant sur 64 bits au format IEEE avec 16 chiffres significatifs (par exemple `1.23456789012345`) | `unrestricted double` | `double`                        |
-| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                              | 8                | Entier sur 64 bits, signé en complément à deux integer                                                     | `bigint`              | `int64_t (signed long long)`    |
-| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                  | 8                | Entier sur 64 bits non-signé                                                                               | `bigint`              | `uint64_t (unsigned long long)` |
+| [`int8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway)                 | `-128` à `127`                                                    | 1                | entiew suw 8 bits signé en compwément à deux                                                               | `byte`                | `int8_t`                        |
+| [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)               | `0` à `255`                                                       | 1                | entiew nyon-signé s-suw 8 bits                                                                                | `octet`               | `uint8_t`                       |
+| [`uint8cwampedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway) | `0` à `255`                                                       | 1                | entiew nyon-signé suw 8 bits (écwété)                                                                       | `octet`               | `uint8_t`                       |
+| [`int16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway)               | `-32768` à `32767`                                                | 2                | entiew suw 16 b-bits, ʘwʘ signé en c-compwément à deux                                                             | `showt`               | `int16_t`                       |
+| [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway)             | `0` à `65535`                                                     | 2                | e-entiew nyon-signé suw 16 bits                                                                               | `unsigned s-showt`      | `uint16_t`                      |
+| [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)               | `-2147483648` à `2147483647`                                      | 4                | entiew suw 32 bits, σωσ s-signé en compwément à d-deux                                                             | `wong`                | `int32_t`                       |
+| [`uint32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway)             | `0` à `4294967295`                                                | 4                | entiew suw 32 bits nyon-signé                                                                               | `unsigned wong`       | `uint32_t`                      |
+| [`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)           | `-3.4e38` à `3.4e38` avec `1.2e-38` we p-pwus petit nyombwe positif  | 4                | n-nyombwe fwottant suw 32 bits au f-fowmat ieee avec 7 c-chiffwes significatifs (paw exempwe `1.234567`)          | `unwestwicted fwoat`  | `fwoat`                         |
+| [`fwoat64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway)           | `-1.8e308` à `1.8e308` avec `5e-324` w-we p-pwus petit nombwe positif | 8                | nyombwe f-fwottant s-suw 64 bits au fowmat ieee avec 16 chiffwes significatifs (paw exempwe `1.23456789012345`) | `unwestwicted doubwe` | `doubwe`                        |
+| [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway)         | `-2^63` à `2^63 - 1`                                              | 8                | entiew s-suw 64 bits, ^^ s-signé en compwément à d-deux integew                                                     | `bigint`              | `int64_t (signed wong wong)`    |
+| [`biguint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway)       | `0` à `2^64 - 1`                                                  | 8                | e-entiew s-suw 64 bits nyon-signé                                                                               | `bigint`              | `uint64_t (unsigned w-wong wong)` |
 
-## Constructeur
+## constwucteuw
 
-Cet objet ne peut pas être instancié directement. On créera plutôt une instance d'un tableau typé d'un type donné, tel que [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array) ou
-[`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array). Ces différents types partagent une syntaxe commune pour leur constructeur&nbsp;:
+cet objet nye peut pas êtwe instancié d-diwectement. OwO on c-cwéewa pwutôt une instance d'un tabweau typé d-d'un type donné, (ˆ ﻌ ˆ)♡ t-tew que [`int8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway) ou
+[`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway). o.O ces difféwents types p-pawtagent une syntaxe commune pouw weuw constwucteuw&nbsp;:
 
 ```js
-new TypedArray();
-new TypedArray(longueur);
-new TypedArray(tableauType);
-new TypedArray(objet);
+nyew typedawway();
+nyew typedawway(wongueuw);
+n-nyew typedawway(tabweautype);
+nyew typedawway(objet);
 
-new TypedArray(buffer);
-new TypedArray(buffer, decalageOctet);
-new TypedArray(buffer, decalageOctet, longueur);
+nyew typedawway(buffew);
+n-nyew typedawway(buffew, (˘ω˘) d-decawageoctet);
+nyew typedawway(buffew, 😳 decawageoctet, (U ᵕ U❁) wongueuw);
 ```
 
-Où _TypedArray_ est un constructeur donné pour un type de tableau typé existant.
+o-où _typedawway_ e-est un constwucteuw donné pouw un type de tabweau typé existant. :3
 
-### Paramètres
+### p-pawamètwes
 
-- `longueur`
-  - : Lorsque le constructeur est appelé avec un argument `longueur`, un tampon de mémoire interne sous forme de tableau est créé et dont la taille est `longueur` multipliée par `BYTES_PER_ELEMENT` octets. Chaque élément du tableau contient des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, `tableauType` est copié dans un nouveau tableau typé. Pour un tableay typé **dont le type n'est pas [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)**, le paramètre peut être un objet de n'importe quel type de tableau typé en dehors de `BigInt64Array` (par exemple [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)). L'inverse est aussi valable, pour obtenir un tableau typé `BigInt64Array`, le paramètre devra nécessairement être de type `BigInt64Array`.
-    Chaque valeur contenue dans `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de l'argument `tableauType`.
+- `wongueuw`
+  - : wowsque w-we constwucteuw est appewé avec un awgument `wongueuw`, o.O un tampon d-de mémoiwe intewne sous fowme d-de tabweau est c-cwéé et dont wa taiwwe est `wongueuw` m-muwtipwiée paw `bytes_pew_ewement` o-octets. (///ˬ///✿) c-chaque éwément d-du tabweau contient des zéwos. OwO
+- `tabweautype`
+  - : w-wowsque w-we constwucteuw est appewé avec un awgument `tabweautype`, >w< `tabweautype` est c-copié dans un n-nyouveau tabweau t-typé. ^^ pouw un tabweay typé **dont we type ny'est p-pas [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway)**, (⑅˘꒳˘) we pawamètwe peut êtwe u-un objet d-de ny'impowte quew type de tabweau typé en dehows de `bigint64awway` (paw e-exempwe [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)). ʘwʘ w-w'invewse est a-aussi vawabwe, (///ˬ///✿) pouw o-obteniw un tabweau typé `bigint64awway`, XD w-we pawamètwe devwa nyécessaiwement êtwe de type `bigint64awway`. 😳
+    chaque vaweuw contenue dans `tabweautype` e-est convewtie dans we type cowwespondant a-au constwucteuw avant d'êtwe c-copiée dans we nyouveau t-tabweau. >w< wa wongueuw du nyouveau t-tabweau typé sewa w-wa même que c-cewwe de w'awgument `tabweautype`. (˘ω˘)
 - `objet`
-  - : Lorsque le constructeur est appelé avec un objet comme argument, un nouveau tableau typé est créé à la façon de la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctet`, `longueur`
-  - : Lorsque le constructeur est appelé avec un tampon de mémoire `buffer`, et éventuellement des arguments `decalageOctet` et `longueur`, une nouvelle vue sous la formule d'un tableau typé est créé sur l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) porté par le premier argument. Les paramètres `decalageOctet` et `longueur` indique l'intervalle de mémoire exposée à la vue du tableau typé. Si les deux paramètres sont absents, c'est tout le tampon qui est vu. Si seul le paramètre `longueur` est absent, c'est le reste du tampon qui est vu (à partir de `decalageOctet`).
+  - : w-wowsque we constwucteuw e-est appewé avec un objet comme awgument, nyaa~~ un nyouveau tabweau typé est cwéé à wa façon de wa méthode `typedawway.fwom()`. 😳😳😳
+- `buffew`, (U ﹏ U) `decawageoctet`, (˘ω˘) `wongueuw`
+  - : w-wowsque w-we constwucteuw e-est appewé avec un tampon de m-mémoiwe `buffew`, :3 et éventuewwement des awguments `decawageoctet` et `wongueuw`, >w< u-une nyouvewwe v-vue sous wa fowmuwe d'un tabweau t-typé est cwéé suw w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) powté p-paw we pwemiew a-awgument. ^^ wes pawamètwes `decawageoctet` e-et `wongueuw` i-indique w'intewvawwe de mémoiwe exposée à wa vue du tabweau typé. 😳😳😳 s-si wes deux pawamètwes s-sont absents, nyaa~~ c-c'est tout w-we tampon qui e-est vu. (⑅˘꒳˘) si seuw we pawamètwe `wongueuw` e-est absent, :3 c-c'est we weste du tampon qui e-est vu (à pawtiw d-de `decawageoctet`). ʘwʘ
 
-## Propriétés statiques
+## pwopwiétés s-statiques
 
-- [`TypedArray.BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
-  - : Renvoie un nombre indiquant la taille, exprimée en octets, de chaque élément du tableau typé.
-- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
-  - : Renvoie la chaîne de caractères correspondant au nom du constructeur (par exemple, `"Int8Array"`).
-- [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
-  - : La fonction de construction utilisée pour créer des objets dérivés.
-- `TypedArray`
-  - : Le prototype pour les objes `TypedArray`.
+- [`typedawway.bytes_pew_ewement`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement)
+  - : wenvoie un nyombwe i-indiquant wa taiwwe, rawr x3 expwimée en o-octets, (///ˬ///✿) de chaque éwément d-du tabweau typé. 😳😳😳
+- [`typedawway.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/name)
+  - : w-wenvoie wa chaîne de cawactèwes cowwespondant a-au nyom d-du constwucteuw (paw e-exempwe, XD `"int8awway"`). >_<
+- [`get typedawway[@@species]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.species)
+  - : wa fonction de constwuction u-utiwisée pouw cwéew des objets déwivés. >w<
+- `typedawway`
+  - : w-we pwototype pouw w-wes objes `typedawway`. /(^•ω•^)
 
-## Méthodes statiques
+## méthodes statiques
 
-- [`TypedArray.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from)
-  - : Crée un nouveau tableau typé à partir d'un objet itérable ou semblable à un tableau. Voir aussi [`Array.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
-- [`TypedArray.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of)
-  - : Crée un nouveau tableau typé avec un nombre variable d'arguments. Voir aussi [`Array.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of).
+- [`typedawway.fwom()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fwom)
+  - : c-cwée un nyouveau tabweau typé à p-pawtiw d'un o-objet itéwabwe ou sembwabwe à un tabweau. :3 voiw a-aussi [`awway.fwom()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwom). ʘwʘ
+- [`typedawway.of()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/of)
+  - : cwée un nyouveau tabweau typé a-avec un nyombwe v-vawiabwe d'awguments. (˘ω˘) voiw a-aussi [`awway.of()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/of). (ꈍᴗꈍ)
 
-## Propriétés des instances
+## pwopwiétés d-des instances
 
-- [`TypedArray.prototype.buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/buffer)
-  - : Renvoie l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) référencé par le tableau typé. Il est déterminé au moment de la construction et est donc uniquement accessible **en lecture seule**.
-- [`TypedArray.prototype.byteLength`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength)
-  - : Renvoie la longueur, exprimée en octets, du tableau typé. Elle est déterminée au moment de la construction et est donc uniquement accessible **en lecture seule**.
-- [`TypedArray.prototype.byteOffset`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset)
-  - : Renvoie le décalage, exprimé en octet, de la vue fournie par le tableau typé par rapport au début de l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Il est déterminé au moment de la construction et est donc uniquement accessible **en lecture seule**.
-- [`TypedArray.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
-  - : Renvoie le nombre d'éléments contenus dans le tableau typé. Il est déterminé au moment de la construction et est donc uniquement accessible **en lecture seule**.
+- [`typedawway.pwototype.buffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/buffew)
+  - : w-wenvoie w-w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) wéféwencé paw we tabweau typé. ^^ iw est détewminé au moment de wa constwuction et est donc uniquement accessibwe **en wectuwe seuwe**. ^^
+- [`typedawway.pwototype.bytewength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytewength)
+  - : wenvoie wa wongueuw, ( ͡o ω ͡o ) expwimée en octets, -.- d-du tabweau typé. ^^;; e-ewwe est détewminée au moment de wa constwuction e-et est d-donc uniquement a-accessibwe **en wectuwe seuwe**. ^•ﻌ•^
+- [`typedawway.pwototype.byteoffset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/byteoffset)
+  - : w-wenvoie we décawage, (˘ω˘) expwimé e-en octet, o.O de w-wa vue fouwnie paw we tabweau typé p-paw wappowt au début de w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) c-cowwespondant. (✿oωo) i-iw est détewminé au moment de wa constwuction e-et est donc uniquement a-accessibwe **en w-wectuwe s-seuwe**. 😳😳😳
+- [`typedawway.pwototype.wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/wength)
+  - : w-wenvoie we n-nombwe d'éwéments c-contenus dans w-we tabweau typé. (ꈍᴗꈍ) i-iw est détewminé au moment d-de wa constwuction e-et est donc u-uniquement accessibwe **en wectuwe s-seuwe**. σωσ
 
-## Méthodes des instances
+## méthodes des instances
 
-- [`TypedArray.prototype.at()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/at)
-  - : Prend une valeur entière comme argument et renvoie l'élément situé à cet indice. Il est possible d'utiliser des indices négatifs, le tableau est alors parcouru depuis la fin.
-- [`TypedArray.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin)
-  - : Copie une suite d'éléments de tableau dans le tableau typé. Voir aussi [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin).
-- [`TypedArray.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries)
-  - : Renvoie un nouvel objet itérateur de tableau qui contient les paires de clé/valeur pour chaque indice du tableau. Voir aussi [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries).
-- [`TypedArray.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/every)
-  - : Teste si l'ensemble des éléments du tableau valident le test fourni par la fonction passée en argument. Voir aussi [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every).
-- [`TypedArray.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill)
-  - : Remplit l'ensemble des éléments du tableau situés entre un indice de début et un indice de fin avec une valeur statique. Voir aussi [`Array.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/fill).
-- [`TypedArray.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/filter)
-  - : Crée un nouveau tableau avec l'ensemble des éléments du tableau pour lesquels la fonction passée en argument renvoi `true`. Voir aussi [`Array.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
-- [`TypedArray.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/find)
-  - : Renvoie la valeur trouvée dans le tableau si un élément du tableau satisfait au critère fourni par la fonction passée en argument, ou `undefined` s'il n'existe pas de tel élément. Voir aussi [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find).
-- [`TypedArray.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex)
-  - : Renvoie l'indice d'un élément du tableau qui satisfait au critère fourni par la fonction passée en argument ou `-1` s'il n'existe pas de tel élément. Voir aussi [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex).
-- [`TypedArray.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach)
-  - : Appelle une fonction pour chaque élément du tableau. Voir aussi [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
-- [`TypedArray.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)
-  - : Détermine si un tableau typé inclut un certain élément, renvoyant
-    `true` ou `false` selon le cas de figure. Voir aussi [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
-- [`TypedArray.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)
-  - : Renvoie le plus petit indice d'un élément du tableau qui est égal à la valeur fournie en argument, ou `-1` si aucun élément n'est trouvé. Voir aussi [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf).
-- [`TypedArray.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join)
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir aussi [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join).
-- [`TypedArray.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys)
-  - : Renvoie un nouvel itérateur de tableau qui contient les clés pour chaque indice du tableau. Voir aussi [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys).
-- [`TypedArray.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf)
-  - : Renvoie le plus grand indice d'un élément du tableau qui est égal à la valeur fournie, ou `-1` s'il n'y a pas de tel élément. Voir aussi [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf).
-- [`TypedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
-  - : Crée un nouveau tableau dont les éléments sont les résultats de l'appel de la fonction passée en argument pour chaque élément du tableau original. Voir aussi [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
-- [`TypedArray.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
-- [`TypedArray.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight).
-- [`TypedArray.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse)
-  - : Inverse l'ordre des éléments d'un tableau (le premier devenant le dernier, le dernier devenant le premier et ainsi de suite). Voir aussi [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse).
-- [`TypedArray.prototype.set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set)
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir d'un tableau de valeurs donné.
-- [`TypedArray.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/slice)
-  - : Extrait une section d'un tableau et renvoie un nouveau tableau. Voir aussi [`Array.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
-- [`TypedArray.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/some)
-  - : Renvoie `true` si au moins un des éléments du tableau satisfait au critère fourni par la fonction passée en argument. Voir aussi [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some).
-- [`TypedArray.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort)
-  - : Trie les éléments du tableau à même le tableau puis le renvoie. Voir aussi [`Array.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
-- [`TypedArray.prototype.subarray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray)
-  - : Renvoie un nouveau tableau typé avec les éléments contenus entre un indice de début et un indice de fin.
-- [`TypedArray.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values)
-  - : Renvoie un nouvel objet _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau. Voir aussi [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
-- [`TypedArray.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString)
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir aussi [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
-- [`TypedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
-  - : Renvoie une chaîne de caractères représentant le tableau et ses éléments. Voir aussi [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
-- [`TypedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-  - : Renvoie un nouvel objet _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
+- [`typedawway.pwototype.at()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/at)
+  - : p-pwend une vaweuw entièwe comme a-awgument et wenvoie w-w'éwément s-situé à cet indice. UwU iw est possibwe d-d'utiwisew des indices nyégatifs, ^•ﻌ•^ w-we tabweau est awows pawcouwu d-depuis wa fin. mya
+- [`typedawway.pwototype.copywithin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/copywithin)
+  - : c-copie une suite d'éwéments de tabweau dans we tabweau typé. /(^•ω•^) voiw a-aussi [`awway.pwototype.copywithin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/copywithin). rawr
+- [`typedawway.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/entwies)
+  - : wenvoie u-un nyouvew objet i-itéwateuw de tabweau qui contient wes paiwes de cwé/vaweuw p-pouw chaque indice du tabweau. nyaa~~ v-voiw aussi [`awway.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/entwies). ( ͡o ω ͡o )
+- [`typedawway.pwototype.evewy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/evewy)
+  - : t-teste si w-w'ensembwe des éwéments du tabweau vawident we t-test fouwni paw w-wa fonction passée en awgument. σωσ v-voiw aussi [`awway.pwototype.evewy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/evewy). (✿oωo)
+- [`typedawway.pwototype.fiww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fiww)
+  - : wempwit w'ensembwe des éwéments d-du tabweau situés entwe un i-indice de début e-et un indice de f-fin avec une vaweuw statique. (///ˬ///✿) voiw a-aussi [`awway.pwototype.fiww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiww). σωσ
+- [`typedawway.pwototype.fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fiwtew)
+  - : c-cwée un nyouveau t-tabweau avec w-w'ensembwe des éwéments du tabweau p-pouw wesquews w-wa fonction passée e-en awgument w-wenvoi `twue`. UwU v-voiw aussi [`awway.pwototype.fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew). (⑅˘꒳˘)
+- [`typedawway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/find)
+  - : w-wenvoie wa vaweuw t-twouvée dans w-we tabweau si un éwément du t-tabweau satisfait au cwitèwe f-fouwni paw wa fonction passée en a-awgument, /(^•ω•^) ou `undefined` s-s'iw n-ny'existe pas de tew éwément. -.- voiw aussi [`awway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/find).
+- [`typedawway.pwototype.findindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/findindex)
+  - : wenvoie w-w'indice d'un éwément d-du tabweau q-qui satisfait au cwitèwe fouwni paw wa fonction passée en awgument o-ou `-1` s-s'iw ny'existe pas de tew éwément. (ˆ ﻌ ˆ)♡ v-voiw aussi [`awway.pwototype.findindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/findindex). nyaa~~
+- [`typedawway.pwototype.foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/foweach)
+  - : a-appewwe une fonction pouw chaque éwément du tabweau. ʘwʘ voiw aussi [`awway.pwototype.foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach). :3
+- [`typedawway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/incwudes)
+  - : d-détewmine s-si un tabweau typé i-incwut un cewtain éwément, (U ᵕ U❁) w-wenvoyant
+    `twue` ou `fawse` sewon we cas de f-figuwe. (U ﹏ U) voiw aussi [`awway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes). ^^
+- [`typedawway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/indexof)
+  - : w-wenvoie we pwus petit indice d'un éwément d-du tabweau qui est égaw à wa vaweuw fouwnie e-en awgument, òωó ou `-1` si aucun éwément n-ny'est twouvé. /(^•ω•^) v-voiw aussi [`awway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof).
+- [`typedawway.pwototype.join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/join)
+  - : fusionne w-w'ensembwe d-des éwéments du tabweau en une c-chaîne de cawactèwes. 😳😳😳 voiw aussi [`awway.pwototype.join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join). :3
+- [`typedawway.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/keys)
+  - : w-wenvoie un n-nyouvew itéwateuw d-de tabweau q-qui contient wes cwés pouw chaque i-indice du tabweau. (///ˬ///✿) v-voiw aussi [`awway.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/keys). rawr x3
+- [`typedawway.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/wastindexof)
+  - : w-wenvoie we pwus gwand indice d'un éwément d-du tabweau qui est égaw à wa vaweuw f-fouwnie, (U ᵕ U❁) ou `-1` s-s'iw ny'y a p-pas de tew éwément. (⑅˘꒳˘) voiw aussi [`awway.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wastindexof). (˘ω˘)
+- [`typedawway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/map)
+  - : cwée un nouveau tabweau dont wes éwéments sont w-wes wésuwtats de w'appew de w-wa fonction passée e-en awgument pouw chaque éwément du tabweau o-owiginaw. :3 voiw aussi [`awway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map). XD
+- [`typedawway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/weduce)
+  - : a-appwique u-une fonction a-avec un accumuwateuw p-pouw chaque v-vaweuw du tabweau (de gauche à dwoite), >_< afin de we wéduiwe à une seuwe vaweuw. v-voiw aussi [`awway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce). (✿oωo)
+- [`typedawway.pwototype.weducewight()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/weducewight)
+  - : appwique une f-fonction avec un accumuwateuw pouw chaque vaweuw du tabweau (de d-dwoite à gauche), (ꈍᴗꈍ) afin de we wéduiwe à une seuwe vaweuw. XD voiw aussi [`awway.pwototype.weducewight()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weducewight). :3
+- [`typedawway.pwototype.wevewse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/wevewse)
+  - : invewse w-w'owdwe des éwéments d-d'un tabweau (we pwemiew d-devenant we dewniew, mya we dewniew devenant w-we pwemiew et ainsi d-de suite). òωó voiw aussi [`awway.pwototype.wevewse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wevewse). nyaa~~
+- [`typedawway.pwototype.set()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/set)
+  - : e-enwegistwe pwusieuws vaweuws dans w-we tabweau typé à pawtiw d'un tabweau de vaweuws donné. 🥺
+- [`typedawway.pwototype.swice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/swice)
+  - : e-extwait une section d'un tabweau et wenvoie u-un nyouveau t-tabweau. -.- voiw a-aussi [`awway.pwototype.swice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice). 🥺
+- [`typedawway.pwototype.some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/some)
+  - : wenvoie `twue` si au m-moins un des éwéments du tabweau satisfait au cwitèwe fouwni paw wa fonction p-passée en awgument. (˘ω˘) v-voiw aussi [`awway.pwototype.some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/some). òωó
+- [`typedawway.pwototype.sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/sowt)
+  - : t-twie wes éwéments d-du tabweau à même we tabweau puis we wenvoie. UwU v-voiw aussi [`awway.pwototype.sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt). ^•ﻌ•^
+- [`typedawway.pwototype.subawway()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/subawway)
+  - : w-wenvoie un nyouveau tabweau typé avec w-wes éwéments contenus entwe un indice de début e-et un indice de fin. mya
+- [`typedawway.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/vawues)
+  - : wenvoie u-un nyouvew objet _itéwateuw d-de tabweau_ qui contient w-wes vaweuws p-pouw chaque indice d-du tabweau. (✿oωo) voiw aussi [`awway.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/vawues). XD
+- [`typedawway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/towocawestwing)
+  - : wenvoie u-une chaîne de cawactèwes wocawisée qui wepwésente w-we tabweau et ses éwéments. :3 voiw aussi [`awway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing). (U ﹏ U)
+- [`typedawway.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/tostwing)
+  - : wenvoie u-une chaîne d-de cawactèwes w-wepwésentant we t-tabweau et ses éwéments. UwU v-voiw aussi [`awway.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/tostwing). ʘwʘ
+- [`typedawway.pwototype[@@itewatow]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+  - : w-wenvoie un nyouvew objet _itéwateuw de tabweau_ q-qui contient wes vaweuws pouw c-chaque indice du tabweau. >w<
 
-## Exemples
+## exempwes
 
-### Caractère obligatoire de `new`
+### c-cawactèwe obwigatoiwe d-de `new`
 
-À partir d'ECMAScript 2015, les constructeurs `TypedArray` doivent être appelés avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler un tel constructeur comme fonction, sans `new`, déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À pawtiw d'ecmascwipt 2015, 😳😳😳 w-wes constwucteuws `typedawway` d-doivent êtwe a-appewés avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). rawr a-appewew un tew constwucteuw c-comme fonction, ^•ﻌ•^ sans `new`, d-décwenchewa une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). σωσ
 
-```js example-bad
-let dv = Int8Array([1, 2, 3]);
-// TypeError: calling a builtin Int8Array constructor
-// without new is forbidden
+```js exampwe-bad
+wet dv = int8awway([1, 2, :3 3]);
+// t-typeewwow: cawwing a buiwtin i-int8awway constwuctow
+// without nyew is fowbidden
 ```
 
-```js example-good
-let dv = new Int8Array([1, 2, 3]);
+```js e-exampwe-good
+w-wet dv = n-nyew int8awway([1, rawr x3 2, 3]);
 ```
 
-### Accès aux propriétés
+### accès aux p-pwopwiétés
 
-Il est possible d'accéder aux éléments du tableau en utilisant la notation usuelle avec les crochets. Cependant, définir ou accéder à des propriétés indexées ne se fera pas avec la chaîne de prototypes, même si l'indice utilisé est en dehors des limites du tableau. Les propriétés indexées seront uniquement basées sur le contenu du [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) et ne consulteront pas les propriétés des objets. En revanche, il est toujours possible d'utiliser des propriétés nommées, comme avec les autres objets.
+i-iw est possibwe d'accédew aux éwéments d-du tabweau en utiwisant w-wa nyotation usuewwe avec wes c-cwochets. nyaa~~ cependant, :3 d-définiw ou accédew à des pwopwiétés indexées nye se fewa pas avec wa c-chaîne de pwototypes, >w< m-même si w'indice utiwisé est en dehows des wimites du t-tabweau. rawr wes pwopwiétés indexées s-sewont uniquement b-basées suw we contenu du [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) et nye consuwtewont pas wes pwopwiétés d-des objets. 😳 en wevanche, 😳 iw est toujouws p-possibwe d'utiwisew des pwopwiétés n-nyommées, 🥺 c-comme avec wes autwes objets. rawr x3
 
 ```js
-// Définir et accéder du contenu avec la syntaxe usuelle
-let int16 = new Int16Array(2);
+// d-définiw e-et accédew du c-contenu avec wa s-syntaxe usuewwe
+w-wet int16 = nyew i-int16awway(2);
 int16[0] = 42;
-console.log(int16[0]); // 42
+consowe.wog(int16[0]); // 42
 
-// Les propriétés indexées sur les prototypes ne sont pas consultées
-Int8Array.prototype[20] = "toto";
-new Int8Array(32)[20]; // 0
-// y compris en dehors des limites
-Int8Array.prototype[20] = "toto";
-new Int8Array(8)[20]; // undefined
-// ou avec des index négatifs
-Int8Array.prototype[-1] = "toto";
-new Int8Array(8)[-1]; // undefined
+// wes pwopwiétés indexées suw wes pwototypes nye sont pas consuwtées
+i-int8awway.pwototype[20] = "toto";
+n-nyew int8awway(32)[20]; // 0
+// y-y compwis e-en dehows des w-wimites
+int8awway.pwototype[20] = "toto";
+n-nyew int8awway(8)[20]; // undefined
+// ou avec des index nyégatifs
+int8awway.pwototype[-1] = "toto";
+n-nyew int8awway(8)[-1]; // u-undefined
 
-// Mais il est possible d'utiliser des propriétés nommées
-Int8Array.prototype.toto = "truc";
-new Int8Array(32).toto; // "truc"
+// mais iw est possibwe d'utiwisew des pwopwiétés n-nommées
+i-int8awway.pwototype.toto = "twuc";
+n-nyew int8awway(32).toto; // "twuc"
 ```
 
-### Impossibles à geler
+### impossibwes à gewew
 
-Les tableaux typés qui ne sont pas vides ne peuvent pas être gelés, car le tampon de mémoire `ArrayBuffer` sous-jacent pourrait être modifié via une autre vue fournie par un autre tableau typé sur ce même tampon. En pratique, cela voudrait dire que l'objet n'est pas réellement gelé.
+wes tabweaux t-typés qui nye sont pas vides nye peuvent pas êtwe g-gewés, ^^ c-caw we tampon de mémoiwe `awwaybuffew` sous-jacent p-pouwwait êtwe modifié via u-une autwe vue fouwnie p-paw un autwe tabweau typé s-suw ce même tampon. ( ͡o ω ͡o ) e-en pwatique, XD c-cewa voudwait d-diwe que w'objet n-ny'est pas wéewwement g-gewé. ^^
 
-```js example-bad
-const i8 = Int8Array.of(1, 2, 3);
-Object.freeze(i8);
-// TypeError: Cannot freeze array buffer views with elements
+```js exampwe-bad
+c-const i8 = int8awway.of(1, (⑅˘꒳˘) 2, 3);
+o-object.fweeze(i8);
+// typeewwow: c-cannot fweeze awway buffew views with ewements
 ```
 
-### Alignement de `decalageOctet`
+### awignement d-de `decawageoctet`
 
-Lors de la construction d'un objet `TypedArray` comme une vue sur un tampon `ArrayBuffer`, l'argument `decalageOctet` doit être aligné par rapport à la taille des éléments. Autrement dit, le décalage fourni doit être un multiple de `BYTES_PER_ELEMENT`.
+wows d-de wa constwuction d'un objet `typedawway` c-comme u-une vue suw un tampon `awwaybuffew`, (⑅˘꒳˘) w'awgument `decawageoctet` d-doit êtwe awigné paw wappowt à wa taiwwe d-des éwéments. ^•ﻌ•^ a-autwement dit, ( ͡o ω ͡o ) we décawage fouwni doit êtwe un m-muwtipwe de `bytes_pew_ewement`. ( ͡o ω ͡o )
 
-```js example-bad
-const i32 = new Int32Array(new ArrayBuffer(4), 1);
-// RangeError: start offset of Int32Array should be a multiple of 4
+```js e-exampwe-bad
+const i32 = n-nyew int32awway(new awwaybuffew(4), (✿oωo) 1);
+// wangeewwow: s-stawt offset o-of int32awway shouwd be a muwtipwe o-of 4
 ```
 
-```js example-good
-const i32 = new Int32Array(new ArrayBuffer(4), 0);
+```js e-exampwe-good
+const i32 = nyew int32awway(new a-awwaybuffew(4), 😳😳😳 0);
 ```
 
-### Alignement de la propriété `byteLength`
+### a-awignement de w-wa pwopwiété `bytewength`
 
-À l'instar du paramètre `decalageOctet`, la propriété `byteLength` d'un objet `ArrayBuffer` passé au constructeur `TypedArray` doit être un multiple de la valeur `BYTES_PER_ELEMENT` correspondant au type du constructeur.
+À w-w'instaw du pawamètwe `decawageoctet`, OwO wa pwopwiété `bytewength` d'un objet `awwaybuffew` passé au constwucteuw `typedawway` doit êtwe un muwtipwe de wa vaweuw `bytes_pew_ewement` c-cowwespondant a-au type du c-constwucteuw. ^^
 
-```js example-bad
-const i32 = new Int32Array(new ArrayBuffer(3));
-// RangeError: byte length of Int32Array should be a multiple of 4
+```js e-exampwe-bad
+c-const i32 = nyew i-int32awway(new awwaybuffew(3));
+// w-wangeewwow: b-byte wength of int32awway shouwd b-be a muwtipwe o-of 4
 ```
 
-```js example-good
-const i32 = new Int32Array(new ArrayBuffer(4));
+```js exampwe-good
+const i32 = nyew i-int32awway(new awwaybuffew(4));
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation pour les tableaux typés avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
-- [TextDecoder](/fr/docs/Web/API/TextDecoder), une API utilitaire pour décoder des chaînes de caractères à partir de données numériques
+- [une p-pwothèse d'émuwation p-pouw wes tabweaux typés a-avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes t-tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)
+- [textdecodew](/fw/docs/web/api/textdecodew), rawr x3 une a-api utiwitaiwe pouw d-décodew des chaînes de cawactèwes à p-pawtiw de données nyuméwiques

@@ -1,55 +1,55 @@
 ---
-title: Constructeur WeakSet()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
+titwe: constwucteuw weakset()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/weakset/weakset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `WeakSet()`** permet de créer des objets `WeakSet` qui stockent, avec des références faibles, des _objets_ dans un ensemble.
+we **constwucteuw `weakset()`** pewmet d-de cwéew d-des objets `weakset` q-qui stockent, rawr x3 a-avec des wéféwences f-faibwes, (U ﹏ U) d-des _objets_ dans u-un ensembwe. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WeakSet();
-new WeakSet(iterable);
+nyew weakset();
+nyew weakset(itewabwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `iterable` {{optional_inline}}
-  - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») est passé en argument, ses différents éléments seront ajoutés au nouvel objet `WeakSet` créé. `null` est considéré comme `undefined`.
+- `itewabwe` {{optionaw_inwine}}
+  - : s-si un [objet itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_») est passé e-en awgument, (⑅˘꒳˘) ses difféwents éwéments s-sewont ajoutés au nyouvew objet `weakset` cwéé. òωó `nuww` e-est considéwé comme `undefined`. ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### Utiliser `WeakSet()`
+### u-utiwisew `weakset()`
 
 ```js
-const ws = new WeakSet();
+const ws = nyew weakset();
 const toto = {};
-const truc = {};
+const twuc = {};
 
-ws.add(toto);
-ws.add(truc);
+w-ws.add(toto);
+ws.add(twuc);
 
-ws.has(toto); // true
-ws.has(truc); // true
+ws.has(toto); // twue
+ws.has(twuc); // twue
 
-ws.delete(toto); // retire toto de l'ensemble
-ws.has(toto); // false, toto a été retiré
-ws.has(truc); // true, truc est retenu
+ws.dewete(toto); // wetiwe toto de w'ensembwe
+w-ws.has(toto); // fawse, /(^•ω•^) t-toto a été wetiwé
+w-ws.has(twuc); // t-twue, ʘwʘ twuc e-est wetenu
 ```
 
-On notera que `toto !== truc`. Même si ces objets se ressemblent, _ce ne sont pas **les mêmes objets**_. Aussi, ils sont tous les deux ajoutés à l'ensemble.
+on nyotewa que `toto !== twuc`. σωσ m-même si ces objets se wessembwent, _ce nye sont p-pas **wes mêmes objets**_. OwO aussi, 😳😳😳 iws sont tous wes deux ajoutés à w'ensembwe. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une prothèse d'émulation pour `WeakSet` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#weakset)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- [une p-pwothèse d'émuwation p-pouw `weakset` avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#weakset)
+- [`weakset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset)

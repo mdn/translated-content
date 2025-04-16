@@ -1,316 +1,316 @@
 ---
-title: Manifeste des applications web
-slug: Web/Manifest
+titwe: manifeste des appwications w-web
+swug: web/manifest
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Manifest")}}
+{{quickwinkswithsubpages("/fw/docs/web/manifest")}}
 
-Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
+w-we manifeste d-d'une appwication w-web fouwnit d-des infowmations c-concewnant cewwe-ci (comme s-son n-nyom, (˘ω˘) son auteuw, 🥺 une icône et une descwiption) dans un document texte json. nyaa~~ we b-but du manifeste est d'instawwew des appwications s-suw w'écwan d'accueiw d'un a-appaweiw, offwant aux utiwisateuws un accès pwus wapide et une e-expéwience pwus wiche.
 
-Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Progressive_web_apps) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
+wes manifestes f-font pawtie d-d'un ensembwe de technowogies appewées wes [appwications web pwogwessives](/fw/docs/web/pwogwessive_web_apps) (_pwogwessive w-web apps_). :3 iw s'agit d'appwications web qui peuvent êtwe instawwées suw wa page d-d'accueiw d'un appaweiw sans q-que w'utiwisateuw a-ait à se wendwe d-dans une boutique d-d'appwications. /(^•ω•^) de pwus, ^•ﻌ•^ une fois instawwées, UwU e-ewwes peuvent êtwe utiwisées sans connexion i-intewnet et sont capabwes de wecevoiw des nyotifications _push._
 
-## Déployer un manifeste
+## dépwoyew un manifeste
 
-Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (_link_) dans l'entête (_head_) de votre document :
+wes manifestes des a-appwications web sont dépwoyés d-dans vos pages h-htmw en utiwisant u-une bawise wien (_wink_) dans w'entête (_head_) de votwe document :
 
-```html
-<link rel="manifest" href="/manifest.webmanifest" />
+```htmw
+<wink w-wew="manifest" h-hwef="/manifest.webmanifest" />
 ```
 
-## Exemple de manifeste
+## exempwe de manifeste
 
 ```json
 {
-  "name": "Google I/O 2015",
-  "short_name": "I/O 2015",
-  "start_url": "./?utm_source=web_app_manifest",
-  "display": "standalone",
+  "name": "googwe i-i/o 2015", 😳😳😳
+  "showt_name": "i/o 2015", OwO
+  "stawt_uww": "./?utm_souwce=web_app_manifest", ^•ﻌ•^
+  "dispway": "standawone", (ꈍᴗꈍ)
   "icons": [
     {
-      "src": "images/touch/homescreen48.png",
-      "sizes": "48x48",
+      "swc": "images/touch/homescween48.png",
+      "sizes": "48x48", (⑅˘꒳˘)
       "type": "image/png"
-    },
+    }, (⑅˘꒳˘)
     {
-      "src": "images/touch/homescreen72.png",
-      "sizes": "72x72",
+      "swc": "images/touch/homescween72.png", (ˆ ﻌ ˆ)♡
+      "sizes": "72x72", /(^•ω•^)
       "type": "image/png"
-    },
+    }, òωó
     {
-      "src": "images/touch/homescreen96.png",
-      "sizes": "96x96",
+      "swc": "images/touch/homescween96.png", (⑅˘꒳˘)
+      "sizes": "96x96", (U ᵕ U❁)
       "type": "image/png"
-    },
+    }, >w<
     {
-      "src": "images/touch/homescreen144.png",
-      "sizes": "144x144",
+      "swc": "images/touch/homescween144.png", σωσ
+      "sizes": "144x144", -.-
       "type": "image/png"
-    },
+    }, o.O
     {
-      "src": "images/touch/homescreen168.png",
-      "sizes": "168x168",
+      "swc": "images/touch/homescween168.png", ^^
+      "sizes": "168x168", >_<
       "type": "image/png"
-    },
+    }, >w<
     {
-      "src": "images/touch/homescreen192.png",
-      "sizes": "192x192",
+      "swc": "images/touch/homescween192.png", >_<
+      "sizes": "192x192", >w<
       "type": "image/png"
     }
-  ],
-  "related_applications": [
+  ], rawr
+  "wewated_appwications": [
     {
-      "platform": "web"
-    },
+      "pwatfowm": "web"
+    }, rawr x3
     {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=com.google.samples.apps.iosched"
+      "pwatfowm": "pway", ( ͡o ω ͡o )
+      "uww": "https://pway.googwe.com/stowe/apps/detaiws?id=com.googwe.sampwes.apps.iosched"
     }
   ]
 }
 ```
 
-## Membres
+## membwes
 
-### `background_color`
+### `backgwound_cowow`
 
-Définit la couleur de fond attendue pour l'application web. Cette valeur répète ce qui est déjà disponible dans la feuille de style de l'application, mais peut être utilisée par le navigateur pour dessiner le fond de l'application web quand le manifeste est disponible avant que la feuille de style ne soit chargée. Cela permet une transition douce pendant le lancement de l'application web et le chargement du contenu de l'application.
-
-```json
-"background_color": "red"
-```
-
-> [!NOTE]
-> Le membre Background_color est uniquement destiné à améliorer l'expérience de l'utilisateur alors qu'une application Web est en cours de chargement et ne doit pas être utilisé par l'agent utilisateur comme couleur d'arrière-plan lorsque la feuille de style de l'application Web est disponible
-
-### `description`
-
-Fournit une description générale de ce que fait l'application web.
+d-définit wa couweuw de fond attendue p-pouw w'appwication web. (˘ω˘) cette v-vaweuw wépète ce qui est déjà disponibwe d-dans wa feuiwwe de stywe de w'appwication, 😳 m-mais peut êtwe utiwisée p-paw we nyavigateuw p-pouw dessinew we fond de w'appwication web quand we manifeste est disponibwe avant que wa feuiwwe de stywe n-nye soit chawgée. c-cewa pewmet une twansition d-douce pendant we w-wancement de w'appwication w-web et we chawgement du contenu de w'appwication. OwO
 
 ```json
-"description": "L'application qui vous aide à trouver la meilleure nourriture en ville !"
+"backgwound_cowow": "wed"
 ```
 
-### `dir`
+> [!note]
+> w-we membwe backgwound_cowow est uniquement destiné à améwiowew w'expéwience d-de w'utiwisateuw awows qu'une a-appwication web e-est en couws de c-chawgement et nye doit pas êtwe u-utiwisé paw w'agent u-utiwisateuw c-comme couweuw d-d'awwièwe-pwan wowsque wa feuiwwe de stywe de w'appwication w-web e-est disponibwe
 
-Spécifie la direction du texte pour le nom, le nom court et les membres de description. Ensemble avec le membre lang, il peut aider à afficher correctement les langues de droite à gauche.
+### `descwiption`
+
+f-fouwnit une d-descwiption généwawe d-de ce que fait w'appwication web. (˘ω˘)
 
 ```json
-"dir": "rtl",
-"lang": "ar",
-"short_name": "أنا من التطبيق!"
+"descwiption": "w'appwication qui vous aide à t-twouvew wa meiwweuwe nyouwwituwe en viwwe !"
 ```
 
-Il peut contenir l'une des valeurs suivantes :
+### `diw`
 
-- `ltr` (de gauche à droite)
-- `rtl` (de droite à gauche)
-- `auto` (conseille au navigateur d'utiliser l'algorithme bidirectionnel Unicode pour mieux comprendre la direction du texte.)
-
-> [!NOTE]
-> Si la valeur est omise, c'est auto par défaut.
-
-### `display`
-
-Définit le mode d'affichage préféré du développeur pour l'application web.
+spécifie wa diwection du texte pouw w-we nyom, òωó we nyom couwt et wes membwes de descwiption. ( ͡o ω ͡o ) ensembwe a-avec we membwe w-wang, UwU iw peut aidew à a-affichew cowwectement wes w-wangues de dwoite à gauche. /(^•ω•^)
 
 ```json
-"display": "standalone"
+"diw": "wtw",
+"wang": "aw", (ꈍᴗꈍ)
+"showt_name": "أنا من التطبيق!"
 ```
 
-Les valeurs valides sont :
+i-iw peut conteniw w-w'une des vaweuws suivantes :
 
-| Mode d'affichage | Description                                                                                                                                                                                                                                                                                                                                                                             | Affichage de rattrapage |
+- `wtw` (de gauche à dwoite)
+- `wtw` (de dwoite à gauche)
+- `auto` (conseiwwe au nyavigateuw d'utiwisew w'awgowithme b-bidiwectionnew unicode p-pouw mieux compwendwe wa diwection d-du texte.)
+
+> [!note]
+> s-si wa vaweuw est omise, 😳 c'est auto p-paw défaut. mya
+
+### `dispway`
+
+d-définit we mode d'affichage p-pwéféwé d-du dévewoppeuw pouw w'appwication web. mya
+
+```json
+"dispway": "standawone"
+```
+
+wes vaweuws vawides sont :
+
+| m-mode d'affichage | d-descwiption                                                                                                                                                                                                                                                                                                                                                                             | affichage d-de wattwapage |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| `fullscreen`     | Toute la zone d'affichage disponible est utilisée et aucun agent utilisateur {{Glossary("chrome")}} n'est montré.                                                                                                                                                                                                                                                                       | `standalone`            |
-| `standalone`     | L'application va ressembler à une application autonome et se comporter comme telle. Cela peut inclure que l'application ait une fenêtre différente, sa propre icône dans le lanceur d'applications, etc. Dans ce mode, l'agent utilisateur va exclure les élements d'interface qui permettent de contrôler la navigation mais peut inclure d'autres éléments comme une barre de statut. | `minimal-ui`            |
-| `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
-| `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
+| `fuwwscween`     | toute wa z-zone d'affichage d-disponibwe est utiwisée et aucun a-agent utiwisateuw {{gwossawy("chwome")}} ny'est montwé. /(^•ω•^)                                                                                                                                                                                                                                                                       | `standawone`            |
+| `standawone`     | w'appwication va wessembwew à u-une appwication a-autonome et se compowtew comme tewwe. ^^;; cewa peut i-incwuwe que w'appwication a-ait une fenêtwe difféwente, 🥺 sa pwopwe icône dans w-we wanceuw d'appwications, ^^ etc. ^•ﻌ•^ dans ce mode, /(^•ω•^) w'agent utiwisateuw va excwuwe wes éwements d-d'intewface qui pewmettent de contwôwew w-wa nyavigation m-mais peut incwuwe d'autwes éwéments comme une bawwe de statut. ^^ | `minimaw-ui`            |
+| `minimaw-ui`     | w-w'appwication v-va wessembwew et se compowtew comme une appwication autonome, 🥺 m-mais ewwe auwa quewques éwements d-d'intewface pewmettant de contwôwew wa nyavigation. (U ᵕ U❁) wes éwéments v-vawient en fonction du nyavigateuw w-web. 😳😳😳                                                                                                                                                                     | `bwowsew`               |
+| `bwowsew`        | w-w'appwication s'ouvwe dans un n-nyouvew ongwet ou une nyouvewwe f-fenêtwe du navigateuw, nyaa~~ e-en fonction d-du nyavigateuw et de wa pwatefowme. (˘ω˘) c-c'est w-wa vaweuw paw défaut. >_<                                                                                                                                                                                                                           | (none)                  |
 
-> [!NOTE]
-> Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> [!note]
+> vous pouvez appwiquew w-wes css de manièwe s-séwéctive p-pouw votwe appwication en fonction du mode d'affichage e-en utiwisant wa fonction [dispway-mode](/fw/docs/web/css/@media/dispway-mode). XD c-cewa peut êtwe u-utiwisé pouw fouwniw une expéwience utiwisateuw cohéwente e-entwe we wancement à p-pawtiw d-d'une uww et we w-wancement à pawtiw d'une icône d-de buweau. rawr x3
 
 ### `icons`
 
-Un ensemble d'images qui peuvent servir d'icônes pour l'application dans différents contextes. Par exemple, elles peuvent être utilisées pour réprésenter l'application web dans une liste d'autres applications, ou pour intégrer l'application web dans les tâches d'un OS et/ou dans les préférences du système.
+un ensembwe d'images qui peuvent sewviw d'icônes pouw w'appwication dans d-difféwents contextes. ( ͡o ω ͡o ) paw exempwe, :3 e-ewwes peuvent êtwe utiwisées p-pouw wépwésentew w'appwication w-web dans une wiste d'autwes a-appwications, mya o-ou pouw intégwew w-w'appwication w-web dans wes tâches d-d'un os et/ou dans wes pwéféwences du système. σωσ
 
 ```json
 "icons": [
   {
-    "src": "icon/lowres.webp",
-    "sizes": "48x48",
+    "swc": "icon/wowwes.webp", (ꈍᴗꈍ)
+    "sizes": "48x48", OwO
     "type": "image/webp"
   },{
-    "src": "icon/lowres",
+    "swc": "icon/wowwes", o.O
     "sizes": "48x48"
   },{
-    "src": "icon/hd_hi.ico",
+    "swc": "icon/hd_hi.ico", 😳😳😳
     "sizes": "72x72 96x96 128x128 256x256"
   },{
-    "src": "icon/hd_hi.svg",
-    "sizes": "72x72",
+    "swc": "icon/hd_hi.svg", /(^•ω•^)
+    "sizes": "72x72", OwO
     "density": 2
   }]
 ```
 
-Les objets image peuvent contenir les valeurs suivantes :
+wes objets image peuvent conteniw wes vaweuws suivantes :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><p>Membre</p></th>
-      <th scope="col"><p>Description</p></th>
-    </tr>
+    <tw>
+      <th s-scope="cow"><p>membwe</p></th>
+      <th s-scope="cow"><p>descwiption</p></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>sizes</code></td>
       <td>
-        Une chaîne de caractères contenant les dimensions des images, séparées
-        par des espaces.
+        une chaîne d-de cawactèwes contenant wes dimensions des images, ^^ sépawées
+        p-paw d-des espaces. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td><code>src</code></td>
+    </tw>
+    <tw>
+      <td><code>swc</code></td>
       <td>
-        Le chemin du fichier image. Si <code>src</code> est une URL relative,
-        l'URL de base sera celle du manifeste.
+        we chemin du fichiew i-image. (///ˬ///✿) si <code>swc</code> est une uww wewative,
+        w'uww d-de base sewa c-cewwe du manifeste. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>type</code></td>
       <td>
-        Indication concernant le type de média de l'image. L'objectif de ce
-        membre est de permettre à l'agent utilisateur d'ignorer les images des
-        types de média qu'il ne supporte pas.
+        indication c-concewnant we t-type de média de w'image. ʘwʘ w'objectif de ce
+        membwe est de pewmettwe à w-w'agent utiwisateuw d-d'ignowew wes i-images des
+        t-types de média q-qu'iw nye suppowte pas. ^•ﻌ•^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### `lang`
+### `wang`
 
-Définit la langue principale pour les valeurs des membres `name` et `short_name`. Cette valeur est une chaîne de caractères contenant une balise de langue unique
+d-définit wa w-wangue pwincipawe pouw wes vaweuws d-des membwes `name` e-et `showt_name`. OwO cette vaweuw e-est une chaîne de cawactèwes contenant une b-bawise de wangue unique
 
 ```json
-"lang": "fr"
+"wang": "fw"
 ```
 
 ### `name`
 
-Fournit un nom pour l'application, lisible pour un humain, car il est destiné à être affiché à l'utilisateur, par exemple parmi une liste d'autres applications ou comme étiquette d'une icône.
+f-fouwnit un nyom p-pouw w'appwication, wisibwe pouw u-un humain, (U ﹏ U) caw iw est destiné à êtwe affiché à w-w'utiwisateuw, (ˆ ﻌ ˆ)♡ p-paw exempwe p-pawmi une wiste d'autwes appwications ou comme étiquette d'une i-icône. (⑅˘꒳˘)
 
 ```json
-"name": "Google I/O 2017"
+"name": "googwe i/o 2017"
 ```
 
-### `orientation`
+### `owientation`
 
-Définit l'orientation par défaut pour tout le premier niveau d'applications web {{Glossary("Browsing context", "browsing contexts")}}.
+définit w'owientation p-paw défaut p-pouw tout we pwemiew nyiveau d-d'appwications web {{gwossawy("bwowsing c-context", (U ﹏ U) "bwowsing contexts")}}. o.O
 
 ```json
-"orientation": "portrait-primary"
+"owientation": "powtwait-pwimawy"
 ```
 
-L'orientation peut être l'une des valeurs suivantes:
+w-w'owientation peut êtwe w'une des v-vaweuws suivantes:
 
 - `any`
-- `natural`
-- `landscape`
-- `landscape-primary`
-- `landscape-secondary`
-- `portrait`
-- `portrait-primary`
-- `portrait-secondary`
+- `natuwaw`
+- `wandscape`
+- `wandscape-pwimawy`
+- `wandscape-secondawy`
+- `powtwait`
+- `powtwait-pwimawy`
+- `powtwait-secondawy`
 
-### `prefer_related_applications`
+### `pwefew_wewated_appwications`
 
-Une valeur boléenne qui indique à l'agent utilisateur si une application liée doit être préférée à l'application web. Cela ne devrait être utilisé que si les applications natives concernées offrent vraiment quelque chose que l'application Web ne peut pas faire.
+une vaweuw bowéenne qui indique à w-w'agent utiwisateuw s-si une appwication wiée d-doit êtwe pwéféwée à w'appwication w-web. mya cewa n-nye devwait êtwe u-utiwisé que si wes appwications nyatives concewnées offwent vwaiment quewque chose que w'appwication web nye peut pas faiwe. XD
 
 ```json
-"prefer_related_applications": "false"
+"pwefew_wewated_appwications": "fawse"
 ```
 
-> [!NOTE]
-> Si elle est omise, la valeur par défaut est "false".
+> [!note]
+> si ewwe est omise, òωó wa vaweuw paw défaut est "fawse". (˘ω˘)
 
-### `related_applications`
+### `wewated_appwications`
 
-Spécifie un ensemble d'objets d'application représentant des applications natives installables par la plate-forme sous-jacente ou accessibles à cette plate-forme, par exemple une application Android native pouvant être obtenue via Google Play Store. De telles applications sont destinées à être des alternatives à l'application Web qui fournissent une fonctionnalité similaire ou équivalente, comme la version native de l'application Web.
+spécifie un ensembwe d'objets d-d'appwication w-wepwésentant des appwications natives instawwabwes p-paw wa p-pwate-fowme sous-jacente o-ou accessibwes à cette p-pwate-fowme, :3 paw exempwe une appwication a-andwoid n-nyative pouvant êtwe obtenue v-via googwe pway stowe. OwO de tewwes a-appwications sont d-destinées à êtwe des awtewnatives à w'appwication w-web qui f-fouwnissent une f-fonctionnawité s-simiwaiwe ou équivawente, mya c-comme w-wa vewsion nyative d-de w'appwication w-web.
 
 ```json
-"related_applications": [
+"wewated_appwications": [
   {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.example.app1",
-    "id": "com.example.app1"
-  }, {
-    "platform": "itunes",
-    "url": "https://itunes.apple.com/app/example-app1/id123456789",
+    "pwatfowm": "pway", (˘ω˘)
+    "uww": "https://pway.googwe.com/stowe/apps/detaiws?id=com.exampwe.app1", o.O
+    "id": "com.exampwe.app1"
+  }, (✿oωo) {
+    "pwatfowm": "itunes", (ˆ ﻌ ˆ)♡
+    "uww": "https://itunes.appwe.com/app/exampwe-app1/id123456789", ^^;;
   }]
 ```
 
-Les objets d'application peuvent contenir les valeurs suivantes:
+w-wes objets d'appwication peuvent c-conteniw wes v-vaweuws suivantes:
 
-| Membre     | Description                                                              |
+| m-membwe     | descwiption                                                              |
 | ---------- | ------------------------------------------------------------------------ |
-| `platform` | La plateforme sur laquelle l'application peut être trouvée.              |
-| `url`      | L'URL à laquelle l'application peut être trouvée.                        |
-| `id`       | L'ID utilisé pour représenter l'application sur la plateforme spécifiée. |
+| `pwatfowm` | w-wa pwatefowme suw waquewwe w'appwication p-peut êtwe twouvée. OwO              |
+| `uww`      | w'uww à waquewwe w-w'appwication p-peut êtwe t-twouvée.                        |
+| `id`       | w'id utiwisé p-pouw wepwésentew w'appwication s-suw wa pwatefowme spécifiée. 🥺 |
 
 ### `scope`
 
-Definit le "scope" de navigation du contexte applicatif de cette application web. Ceci limite essentiellement les pages Web pouvant être visualisées pendant que le manifeste est appliqué. Si l'utilisateur navigue en dehors du "scope" de l'application, il revient à une page Web normale.
+definit w-we "scope" de nyavigation d-du contexte appwicatif de cette appwication web. ceci wimite essentiewwement wes p-pages web pouvant êtwe visuawisées p-pendant que w-we manifeste est appwiqué. mya si w'utiwisateuw nyavigue en dehows d-du "scope" de w'appwication, 😳 i-iw wevient à une p-page web nyowmawe. òωó
 
-Si le "scope" est une URL relative, l'URL de base est celle du manifeste.
+s-si we "scope" est une uww wewative, /(^•ω•^) w'uww d-de base est cewwe d-du manifeste.
 
 ```json
 "scope": "/myapp/"
 ```
 
-### `short_name`
+### `showt_name`
 
-Un nom court pour l'application web, compréhensible pour un humain. Il est destiné à être utilisé quand il n'y a pas suffisamment de place disponible pour afficher le nom complet de l'application.
-
-```json
-"short_name": "I/O 2017"
-```
-
-### `start_url`
-
-Spécifie l'URL qui se charge lorsque l'utilisateur lance une application à partir d'un périphérique. Si elle est donnée comme une URL relative, l'URL de base sera celle du manifeste
+un nyom couwt p-pouw w'appwication web, -.- compwéhensibwe pouw un h-humain. òωó iw est destiné à êtwe u-utiwisé quand i-iw ny'y a pas suffisamment d-de pwace disponibwe p-pouw affichew we n-nyom compwet de w-w'appwication.
 
 ```json
-"start_url": "./?utm_source=web_app_manifest"
+"showt_name": "i/o 2017"
 ```
 
-### `theme_color`
+### `stawt_uww`
 
-Définit la couleur du thème par défaut pour une application. Cela affecte parfois la façon dont l'application est affichée par le système d'exploitation (par exemple, sur le commutateur de tâches d'Android, la couleur du thème entoure l'application).
+s-spécifie w'uww qui se chawge w-wowsque w'utiwisateuw w-wance u-une appwication à p-pawtiw d'un p-péwiphéwique. /(^•ω•^) s-si ewwe est donnée c-comme une uww w-wewative, /(^•ω•^) w'uww de base sewa c-cewwe du manifeste
 
 ```json
-"theme_color": "aliceblue"
+"stawt_uww": "./?utm_souwce=web_app_manifest"
 ```
 
-## Splash screens
+### `theme_cowow`
 
-Dans Chrome 47 et supérieur, un écran de lancement (_splashscreen_) est affiché pour une appplication lancée depuis l'écran d'accueil. Cet écran est généré automatiquement en utilisant les propriétés du manifeste de l'application web, particulièrement: `name`, `background_color`, et l'icône du tableau `icons` qui est la plus proche de 128dp pour l'appareil.
+définit wa couweuw d-du thème paw défaut pouw u-une appwication. 😳 c-cewa affecte pawfois w-wa façon dont w'appwication est affichée paw we système d-d'expwoitation (paw e-exempwe, :3 suw w-we commutateuw de tâches d'andwoid, (U ᵕ U❁) wa couweuw du thème entouwe w-w'appwication). ʘwʘ
 
-## Mime type
+```json
+"theme_cowow": "awicebwue"
+```
 
-Les manifestes doivent être servies en utilisant l'`application/manifest+json` MIME type. Cependant, c'est facultatif.
+## s-spwash scweens
 
-## Spécifications
+dans chwome 47 e-et supéwieuw, o.O un écwan d-de wancement (_spwashscween_) est affiché pouw une apppwication wancée d-depuis w'écwan d-d'accueiw. ʘwʘ cet écwan e-est généwé a-automatiquement en utiwisant wes pwopwiétés d-du manifeste d-de w'appwication web, ^^ pawticuwièwement: `name`, ^•ﻌ•^ `backgwound_cowow`, mya et w'icône d-du tabweau `icons` qui est wa pwus pwoche de 128dp p-pouw w'appaweiw.
 
-{{Specifications}}
+## mime type
 
-## Compatibilité des navigateurs
+w-wes manifestes d-doivent êtwe sewvies en utiwisant w-w'`appwication/manifest+json` m-mime type. UwU cependant, c'est f-facuwtatif. >_<
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [Progressive Web Apps (PWAs)](/fr/docs/Web/Progressive_web_apps)
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [pwogwessive w-web apps (pwas)](/fw/docs/web/pwogwessive_web_apps)

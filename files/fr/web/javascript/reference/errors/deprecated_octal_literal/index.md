@@ -1,67 +1,67 @@
 ---
-title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
-slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
-original_slug: Web/JavaScript/Reference/Errors/Deprecated_octal
+titwe: 'syntaxewwow: "0"-pwefixed octaw witewaws a-and octaw escape s-seq. 😳😳😳 awe depwecated'
+s-swug: w-web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/depwecated_octaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
-SyntaxError:
-"0"-prefixed octal literals and octal escape sequences are deprecated;
-for octal literals use the "0o" prefix instead
+s-syntaxewwow: octaw nyumewic witewaws and escape chawactews nyot awwowed in s-stwict mode (edge)
+syntaxewwow:
+"0"-pwefixed octaw witewaws and o-octaw escape sequences awe depwecated;
+f-fow octaw witewaws use the "0o" pwefix instead
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("SyntaxError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxwef("syntaxewwow")}}, (˘ω˘) uniquement e-en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode).
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Les littéraux en base octale et les séquences d'échappement octales sont dépréciées et lèvent une exception {{jsxref("SyntaxError")}} en mode strict. À partir d'ECMAScript 2015, la syntaxe standard utilise un zéro suivi de la lettre « o » (en minuscule ou en majuscule) (`0o` or `0O)`.
+wes wittéwaux en base octawe et wes séquences d-d'échappement octawes sont dépwéciées et wèvent une exception {{jsxwef("syntaxewwow")}} en mode stwict. ^^ À p-pawtiw d'ecmascwipt 2015, :3 wa s-syntaxe standawd u-utiwise un zéwo s-suivi de wa wettwe « o-o » (en minuscuwe ou en majuscuwe) (`0o` o-ow `0o)`. -.-
 
-## Exemples
+## exempwes
 
-### Littéraux en base octale préfixés par 0
+### wittéwaux en base o-octawe pwéfixés paw 0
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
 03;
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// syntaxewwow: "0"-pwefixed octaw w-witewaws and octaw escape sequences
+// a-awe depwecated
 ```
 
-### Séquences d'échappement en base octale
+### s-séquences d'échappement e-en base octawe
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
 "\251";
 
-// SyntaxError: "0"-prefixed octal literals and octal escape sequences
-// are deprecated
+// s-syntaxewwow: "0"-pwefixed o-octaw witewaws and octaw escape s-sequences
+// a-awe depwecated
 ```
 
-### Littéraux valides
+### wittéwaux v-vawides
 
-Pour former un littéral en base octal, on pourra utiliser un zéro suivi de la lettre « o » :
+pouw fowmew un wittéwaw e-en base octaw, 😳 on pouwwa utiwisew un zéwo s-suivi de wa wettwe « o » :
 
-```js example-good
+```js e-exampwe-good
 0o3;
 ```
 
-Pour former une séquence d'échappement en base octale, on écrira une séquence d'échappement en base hexadécimale :
+pouw f-fowmew une séquence d-d'échappement en base octawe, mya on écwiwa une séquence d'échappement en base hexadécimawe :
 
-```js example-good
-"\xA9";
+```js exampwe-good
+"\xa9";
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [La grammaire lexicale JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#octaux)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/fr/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)
+- [wa g-gwammaiwe wexicawe javascwipt](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#octaux)
+- [wawning: 08/09 i-is nyot a wegaw e-ecma-262 octaw c-constant](/fw/docs/web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw)

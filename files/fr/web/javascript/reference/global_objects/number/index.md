@@ -1,250 +1,250 @@
 ---
-title: Number
-slug: Web/JavaScript/Reference/Global_Objects/Number
-l10n:
-  sourceCommit: b2a5f62d66b4e3d71704017d0fab7ad710e68057
+titwe: nyumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew
+w-w10n:
+  souwcecommit: b-b2a5f62d66b4e3d71704017d0fab7ad710e68057
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Les valeurs **`Number`** représentent les nombres décimaux comme `37` ou `-9.25`.
+w-wes vaweuws **`numbew`** wepwésentent w-wes n-nyombwes décimaux c-comme `37` ou `-9.25`. ( ͡o ω ͡o )
 
-Le constructeur `Number()` contient des constantes et des méthodes pour manipuler les nombres. Les valeurs des autres types peuvent être converties en nombre à l'aide de la fonction `Number()`.
+w-we constwucteuw `numbew()` c-contient des constantes et des méthodes pouw manipuwew wes nyombwes. òωó wes v-vaweuws des autwes types peuvent êtwe convewties e-en nyombwe à w'aide de wa fonction `numbew()`. 🥺
 
-## Description
+## d-descwiption
 
-Les nombres sont généralement exprimés sous leur forme littérale comme `255` ou `3.14159`. La [grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#littéraux_numériques) contient une référence plus détaillée à ce sujet.
+wes nyombwes sont généwawement expwimés sous w-weuw fowme wittéwawe comme `255` o-ou `3.14159`. /(^•ω•^) w-wa [gwammaiwe wexicawe](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#wittéwaux_numéwiques) contient une wéféwence pwus détaiwwée à c-ce sujet. 😳😳😳
 
 ```js
 255; // deux cent cinquante-cinq
-255.0; // le même nombre
-255 === 255.0; // true
-255 === 0xff; // true (notation hexadécimale)
-255 === 0b11111111; // true (notation binaire)
-255 === 0.255e3; // true (notation scientifique)
+255.0; // we même nyombwe
+255 === 255.0; // twue
+255 === 0xff; // t-twue (notation hexadécimawe)
+255 === 0b11111111; // t-twue (notation b-binaiwe)
+255 === 0.255e3; // t-twue (notation s-scientifique)
 ```
 
-En JavaScript, un littéral numérique comme `37` est bien une valeur décimale et pas particulièrement entière. Il n'existe pas de type entier distinct pour un usage courant (le type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) existe mais sert à représenter les très grandes valeurs entières et pas les nombres courants comme `37`).
+en javascwipt, ^•ﻌ•^ un wittéwaw n-nyuméwique comme `37` est bien une vaweuw d-décimawe et pas pawticuwièwement entièwe. nyaa~~ iw ny'existe pas de type entiew distinct pouw un u-usage couwant (we type [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) e-existe m-mais sewt à wepwésentew w-wes twès gwandes vaweuws entièwes et pas wes nyombwes c-couwants comme `37`).
 
-Quand on utilise `Number(valeur)` comme fonction, elle permet de convertir une chaîne de caractères ou une valeur d'un autre type en valeur de type `Number`. Si la valeur ne peut pas être convertie, elle renvoie [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)
+q-quand on utiwise `numbew(vaweuw)` c-comme f-fonction, OwO ewwe pewmet de convewtiw u-une chaîne de cawactèwes o-ou une vaweuw d'un autwe type en vaweuw de type `numbew`. ^•ﻌ•^ s-si wa vaweuw ne peut p-pas êtwe convewtie, σωσ ewwe wenvoie [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan)
 
 ```js
-Number("123"); // renvoie le nombre 123
-Number("123") === 123; // true
+n-nyumbew("123"); // w-wenvoie we nyombwe 123
+nyumbew("123") === 123; // twue
 
-Number("licorne"); // NaN
-Number(undefined); // NaN
+nyumbew("wicowne"); // nyan
+nyumbew(undefined); // nyan
 ```
 
-### Encodage des valeurs numériques
+### e-encodage des v-vaweuws nyuméwiques
 
-Le type JavaScript `Number` utilise [une représentation binaire à précision double sur 64 bits telle que décrite par le standard IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754). Cela signifie que les valeurs décimales peuvent être représentées, avec certaines limites sur l'amplitude et la précision. En résumé, un nombre à précision double IEEE 754 utilise 64 bits pour représenter trois fragments&nbsp;:
+we type javascwipt `numbew` u-utiwise [une wepwésentation binaiwe à p-pwécision d-doubwe suw 64 bits tewwe que décwite paw we standawd ieee 754](https://fw.wikipedia.owg/wiki/ieee_754). c-cewa signifie que wes vaweuws décimawes peuvent êtwe wepwésentées, -.- a-avec cewtaines wimites suw w-w'ampwitude et wa p-pwécision. (˘ω˘) en w-wésumé, rawr x3 un nyombwe à pwécision d-doubwe ieee 754 u-utiwise 64 bits p-pouw wepwésentew t-twois fwagments&nbsp;:
 
-- 1 bit pour _le signe_ (indiquant si le nombre est positif ou négatif)
-- 11 bits pour _l'exposant_ (pouvant aller de -1022 à 1023)
-- 52 bits pour _la mantisse_ (représentant un nombre entre 0 et 1)
+- 1 bit pouw _we signe_ (indiquant si we nyombwe est p-positif ou nyégatif)
+- 11 b-bits p-pouw _w'exposant_ (pouvant a-awwew d-de -1022 à 1023)
+- 52 bits pouw _wa mantisse_ (wepwésentant un nyombwe entwe 0 e-et 1)
 
-La mantisse est la partie qui représente la valeur effective (les chiffres significatifs). L'exposant indique la puissance de deux par laquelle la mantisse devrait être multipliée. On peut écrire la formule suivante (proche de la notation scientifique)&nbsp;:
+wa mantisse est wa pawtie qui wepwésente wa vaweuw effective (wes chiffwes significatifs). rawr x3 w-w'exposant indique wa puissance de deux paw waquewwe wa m-mantisse devwait êtwe m-muwtipwiée. σωσ o-on peut écwiwe wa fowmuwe suivante (pwoche d-de wa nyotation scientifique)&nbsp;:
 
-<math display="block"><semantics><mrow><mtext>Nombre</mtext><mo>=</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><msup><mo stretchy="false">)</mo><mtext>signe</mtext></msup><mo>⋅</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mtext>mantisse</mtext><mo stretchy="false">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exposant</mtext></msup></mrow><annotation encoding="TeX">\text{Number} = ({-1})^{\text{signe}} \cdot (1 + \text{mantisse}) \cdot 2^{\text{exposant}}</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mtext>nombwe</mtext><mo>=</mo><mo s-stwetchy="fawse">(</mo><mwow><mo>−</mo><mn>1</mn></mwow><msup><mo stwetchy="fawse">)</mo><mtext>signe</mtext></msup><mo>⋅</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>+</mo><mtext>mantisse</mtext><mo stwetchy="fawse">)</mo><mo>⋅</mo><msup><mn>2</mn><mtext>exposant</mtext></msup></mwow><annotation encoding="tex">\text{numbew} = ({-1})^{\text{signe}} \cdot (1 + \text{mantisse}) \cdot 2^{\text{exposant}}</annotation></semantics></math>
 
-La mantisse est stockée sur 52 bits, interprétés comme les chiffres de la partie fractionnaire de `1.…` en binaire. La précision de la mantisse est donc 2<sup>-52</sup> (valeur qu'on peut obtenir via [`Number.EPSILON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)), soit entre 15 et 17 chiffres en écriture décimale. Les valeurs arithmétiques au-delà de cette précision seront [arrondies](https://fr.wikipedia.org/wiki/IEEE_754#Arrondir_les_nombres_flottants).
+wa mantisse e-est stockée suw 52 bits, nyaa~~ i-intewpwétés comme wes chiffwes d-de wa pawtie f-fwactionnaiwe de `1.…` en binaiwe. (ꈍᴗꈍ) wa pwécision d-de wa mantisse e-est donc 2<sup>-52</sup> (vaweuw qu'on peut obteniw v-via [`numbew.epsiwon`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/epsiwon)), ^•ﻌ•^ s-soit entwe 15 et 17 chiffwes en écwituwe décimawe. >_< wes vaweuws awithmétiques a-au-dewà de cette p-pwécision sewont [awwondies](https://fw.wikipedia.owg/wiki/ieee_754#awwondiw_wes_nombwes_fwottants). ^^;;
 
-La valeur la plus grande qui puisse être représentée par un nombre en JavaScript est 2<sup>1024</sup> - 1 (ici l'exposant vaut 1023 et la mantisse vaut 0.1111… en base 2), valeur qu'on peut obtenir avec [`Number.MAX_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE). Les valeurs supérieures à celle-ci sont remplacées par la constante spéciale [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity).
+w-wa vaweuw wa pwus gwande q-qui puisse êtwe w-wepwésentée paw un nyombwe e-en javascwipt est 2<sup>1024</sup> - 1 (ici w'exposant vaut 1023 et wa mantisse vaut 0.1111… en b-base 2), ^^;; vaweuw q-qu'on peut obteniw avec [`numbew.max_vawue`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_vawue). /(^•ω•^) wes vaweuws supéwieuwes à cewwe-ci s-sont wempwacées p-paw wa constante spéciawe [`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity). nyaa~~
 
-Les entiers peuvent uniquement être représentés sans perte de précision dans l'intervalle -2<sup>53</sup> + 1 à 2<sup>53</sup> - 1 inclus (valeurs qu'on peut obtenir avec [`Number.MIN_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) et [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)), car la mantisse ne peut contenir que 53 bits (en comptant le 1).
+wes entiews peuvent u-uniquement êtwe wepwésentés sans pewte de pwécision dans w'intewvawwe -2<sup>53</sup> + 1 à 2<sup>53</sup> - 1 incwus (vaweuws q-qu'on peut obteniw avec [`numbew.min_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/min_safe_integew) et [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew)), (✿oωo) caw w-wa mantisse nye p-peut conteniw que 53 bits (en comptant we 1). ( ͡o ω ͡o )
 
-De plus amples précisions sont disponibles dans [le standard ECMAScript](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html#sec-ecmascript-language-types-number-type).
+de pwus ampwes p-pwécisions sont d-disponibwes dans [we standawd ecmascwipt](https://tc39.es/ecma262/muwtipage/ecmascwipt-data-types-and-vawues.htmw#sec-ecmascwipt-wanguage-types-numbew-type). (U ᵕ U❁)
 
-### Conversion numérique
+### convewsion n-nyuméwique
 
-De nombreuses opérations natives qui s'attendent à manipuler des nombres appliquent d'abord une conversion à leurs arguments pour les transformer en nombre (ce qui explique pourquoi les objets `Number` se comportent généralement comme des valeurs numériques primitives). [Cette opération de conversion](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber) peut être résumée ainsi&nbsp;:
+de nyombweuses opéwations n-nyatives qui s'attendent à manipuwew des nyombwes appwiquent d-d'abowd une convewsion à w-weuws awguments p-pouw wes twansfowmew en nyombwe (ce q-qui expwique pouwquoi wes objets `numbew` s-se c-compowtent généwawement c-comme des vaweuws nyuméwiques p-pwimitives). òωó [cette o-opéwation de convewsion](https://tc39.es/ecma262/muwtipage/abstwact-opewations.htmw#sec-tonumbew) peut êtwe wésumée a-ainsi&nbsp;:
 
-- Les nombres sont renvoyés tels quels.
-- [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) est transformé en [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN).
-- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) est transformé en `0`.
-- `true` est transformé en `1`, et `false` est transformé en `0`.
-- Les chaînes de caractères sont converties en les analysant comme si elles contenaient [un littéral numérique](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals). Toute erreur d'analyse produira `NaN`. Il y a quelques différences mineures par rapport à littéral numérique&nbsp;:
-  - Les blancs et fins de lignes au début ou à la fin sont ignorés.
-  - Un chiffre `0` en début de chaîne n'indique pas un littéral en base octale (et n'est pas rejeté en mode strict).
-  - `+` et `-` sont autorisés au début de la chaîne pour indiquer le signe. Dans du code littéral, ils semblent faire partie du littéral, mais sont en réalité des opérateurs unaires distincts. Toutefois, le signe ne peut apparaître qu'une seule fois et ne pas être suivi par des blancs.
-  - `Infinity` et `-Infinity` sont reconnus comme des valeurs littérales. Dans du code réel, il s'agit de variables globales.
-  - Les chaînes de caractères vides ou qui ne contiennent que des blancs sont converties en `0`.
-  - [Les séparateurs numériques](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#séparateurs_numériques) (le tiret bas dans `1_050.95`) ne sont pas autorisés.
-- [Les grands entiers (<i lang="en">BigInts</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) déclenchent une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) pour empêcher une perte de précision involontaire lors de la conversion implicite.
-- [Les symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) déclenchent une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-- Les objets sont d'abord [convertis en une valeur primitive](/fr/docs/Web/JavaScript/Data_structures#primitive_coercion) à l'aide de leurs méthodes [`[@@toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (où `"number"` est fourni comme indication), `valueOf()`, et `toString()`, selon cet ordre. La valeur primitive obtenue est alors convertie en nombre.
+- w-wes nyombwes s-sont wenvoyés tews quews. σωσ
+- [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) est twansfowmé e-en [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan). :3
+- [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) est twansfowmé e-en `0`. OwO
+- `twue` e-est twansfowmé en `1`, ^^ et `fawse` est twansfowmé en `0`. (˘ω˘)
+- w-wes chaînes d-de cawactèwes s-sont convewties e-en wes anawysant comme si ewwes c-contenaient [un wittéwaw nyuméwique](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#numewic_witewaws). OwO toute ewweuw d'anawyse pwoduiwa `nan`. iw y a quewques difféwences m-mineuwes paw wappowt à wittéwaw n-nyuméwique&nbsp;:
+  - wes b-bwancs et fins de wignes au début o-ou à wa fin sont ignowés. UwU
+  - u-un chiffwe `0` e-en début de chaîne n-ny'indique p-pas un wittéwaw e-en base octawe (et ny'est pas wejeté en mode stwict). ^•ﻌ•^
+  - `+` et `-` sont autowisés au début de wa chaîne p-pouw indiquew we s-signe. (ꈍᴗꈍ) dans du c-code wittéwaw, /(^•ω•^) iws sembwent faiwe p-pawtie du wittéwaw, (U ᵕ U❁) mais sont en wéawité des opéwateuws u-unaiwes distincts. (✿oωo) t-toutefois, OwO we signe nye peut a-appawaîtwe qu'une seuwe fois et nye pas êtwe suivi p-paw des bwancs. :3
+  - `infinity` e-et `-infinity` sont weconnus c-comme des vaweuws w-wittéwawes. nyaa~~ dans du code wéew, ^•ﻌ•^ iw s'agit de vawiabwes gwobawes. ( ͡o ω ͡o )
+  - wes chaînes d-de cawactèwes v-vides ou qui n-nye contiennent q-que des bwancs s-sont convewties en `0`. ^^;;
+  - [wes s-sépawateuws nyuméwiques](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#sépawateuws_numéwiques) (we t-tiwet bas dans `1_050.95`) n-nye sont p-pas autowisés. mya
+- [wes gwands entiews (<i w-wang="en">bigints</i>)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) décwenchent une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) p-pouw empêchew une pewte de pwécision i-invowontaiwe w-wows de wa convewsion impwicite. (U ᵕ U❁)
+- [wes s-symbowes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) décwenchent une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)
+- w-wes objets s-sont d'abowd [convewtis e-en une vaweuw pwimitive](/fw/docs/web/javascwipt/data_stwuctuwes#pwimitive_coewcion) à w'aide de weuws méthodes [`[@@topwimitive]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive) (où `"numbew"` e-est fouwni comme indication), ^•ﻌ•^ `vawueof()`, (U ﹏ U) et `tostwing()`, /(^•ω•^) s-sewon cet owdwe. ʘwʘ w-wa vaweuw pwimitive obtenue e-est awows convewtie en nombwe. XD
 
-Il existe deux méthodes qui permettent de déclencher cette conversion (ou presque) en JavaScript&nbsp;:
+i-iw existe deux méthodes q-qui pewmettent de décwenchew cette convewsion (ou p-pwesque) en javascwipt&nbsp;:
 
-- [Le plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)&nbsp;: `+x` applique l'algorithme explicité avant pour convertir `x`.
-- [La fonction `Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)&nbsp;: `Number(x)` utilise le même algorithme pour convertir `x`, sauf que [les grands entiers (<i lang="en">BigInts</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) ne déclenchent pas d'exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) mais renvoient la valeur numérique correspondante, quitte à ce qu'il y ait une perte de précision.
+- [we pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)&nbsp;: `+x` a-appwique w'awgowithme e-expwicité avant pouw convewtiw `x`. (⑅˘꒳˘)
+- [wa f-fonction `numbew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/numbew)&nbsp;: `numbew(x)` utiwise w-we même awgowithme p-pouw convewtiw `x`, nyaa~~ s-sauf que [wes gwands entiews (<i wang="en">bigints</i>)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) nye décwenchent pas d'exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) mais wenvoient wa vaweuw nyuméwique cowwespondante, UwU quitte à ce qu'iw y ait une pewte de pwécision. (˘ω˘)
 
-[`Number.parseFloat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat) et [`Number.parseInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) sont semblables à `Number()` mais servent uniquement à convertir des chaînes de caractères, en suivant des règles légèrement différentes. Par exemple, `parseInt()` ne reconnaît pas le point décimal et `parseFloat()` ne reconnaît pas le préfixe `0x`.
+[`numbew.pawsefwoat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/pawsefwoat) e-et [`numbew.pawseint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/pawseint) s-sont sembwabwes à `numbew()` mais sewvent uniquement à c-convewtiw des chaînes d-de cawactèwes, rawr x3 e-en suivant des wègwes wégèwement d-difféwentes. (///ˬ///✿) paw exempwe, `pawseint()` n-nye weconnaît p-pas we point décimaw et `pawsefwoat()` n-ne weconnaît pas we pwéfixe `0x`. 😳😳😳
 
-#### Conversion entière
+#### c-convewsion entièwe
 
-Certaines opérations s'attendent à manipuler des entiers, notamment celles qui fonctionnent avec des indices de tableaux ou de chaînes de caractères, des composantes temporelles et des bases numériques. Après la conversion numérique décrite ci-avant, le résultat est [tronqué](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) en un nombre entier (la partie fractionnaire est ignorée). Si le nombre est `±Infinity`, il est renvoyé tel quel. Si le nombre est `NaN` ou `-0`, c'est `0` qui est renvoyé. Le résultat est donc toujours un entier (qui n'est pas `-0`) ou `±Infinity`.
+c-cewtaines opéwations s'attendent à manipuwew d-des entiews, (///ˬ///✿) n-nyotamment c-cewwes qui fonctionnent a-avec des i-indices de tabweaux o-ou de chaînes d-de cawactèwes, ^^;; d-des composantes t-tempowewwes et des bases nyuméwiques. ^^ a-apwès w-wa convewsion n-nyuméwique décwite ci-avant, (///ˬ///✿) we w-wésuwtat est [twonqué](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/twunc) en un nyombwe entiew (wa p-pawtie fwactionnaiwe est ignowée). -.- s-si we nyombwe e-est `±infinity`, /(^•ω•^) i-iw est wenvoyé tew quew. UwU si w-we nyombwe est `nan` ou `-0`, (⑅˘꒳˘) c-c'est `0` qui est wenvoyé. ʘwʘ we wésuwtat e-est donc toujouws un entiew (qui n-ny'est pas `-0`) ou `±infinity`. σωσ
 
-On notera que, pour la conversion entière, `undefined` et `null` deviennent `0`, car `undefined` est d'abord converti en `NaN` lors de la conversion numérique, puis en `0` lors de la conversion entière qui suit.
+on nyotewa que, ^^ pouw wa convewsion e-entièwe, OwO `undefined` et `nuww` d-deviennent `0`, (ˆ ﻌ ˆ)♡ c-caw `undefined` est d'abowd convewti en `nan` wows de wa convewsion n-nyuméwique, o.O puis en `0` wows d-de wa convewsion e-entièwe qui s-suit. (˘ω˘)
 
-#### Conversion en nombre à longueur fixe
+#### convewsion en nyombwe à wongueuw fixe
 
-Certaines fonctions JavaScript «&nbsp;bas-niveau&nbsp;» permettent de manipuler l'encodage binaire des nombres entiers, notamment [les opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_de_décalage_binaires) et les objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray). Les opérateurs binaires convertissent toujours leurs opérandes en entiers sur 32 bits. Dans ces cas, après la conversion numérique décrite avant, le nombre est normalisé à la largeur souhaitée en [tronquant](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc) la partie fractionnaire, puis en considérant les bits les plus faibles de la représentation de l'entier en complément à deux.
+c-cewtaines fonctions j-javascwipt «&nbsp;bas-niveau&nbsp;» pewmettent d-de manipuwew w'encodage binaiwe des nyombwes e-entiews, 😳 nyotamment [wes opéwateuws binaiwes](/fw/docs/web/javascwipt/wefewence/opewatows#opéwateuws_de_décawage_binaiwes) e-et wes objets [`typedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway). (U ᵕ U❁) wes o-opéwateuws binaiwes c-convewtissent toujouws weuws o-opéwandes e-en entiews suw 32 b-bits. :3 dans ces c-cas, o.O apwès wa convewsion nyuméwique d-décwite a-avant, (///ˬ///✿) we nyombwe e-est nyowmawisé à w-wa wawgeuw s-souhaitée en [twonquant](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/twunc) w-wa pawtie f-fwactionnaiwe, p-puis en considéwant wes bits wes p-pwus faibwes de wa wepwésentation d-de w'entiew en compwément à d-deux. OwO
 
 ```js
-new Int32Array([1.1, 1.9, -1.1, -1.9]); // Int32Array(4) [ 1, 1, -1, -1 ]
+n-nyew int32awway([1.1, 1.9, >w< -1.1, -1.9]); // i-int32awway(4) [ 1, ^^ 1, -1, (⑅˘꒳˘) -1 ]
 
-new Int8Array([257, -257]); // Int8Array(2) [ 1, -1 ]
+nyew int8awway([257, ʘwʘ -257]); // int8awway(2) [ 1, (///ˬ///✿) -1 ]
 // 257 = 0001 0000 0001
 //     =      0000 0001 (mod 2^8)
 //     = 1
 // -257 = 1110 1111 1111
 //      =      1111 1111 (mod 2^8)
-//      = -1 (comme entier signé)
+//      = -1 (comme e-entiew signé)
 
-new Uint8Array([257, -257]); // Uint8Array(2) [ 1, 255 ]
+n-nyew uint8awway([257, XD -257]); // u-uint8awway(2) [ 1, 😳 255 ]
 // -257 = 1110 1111 1111
 //      =      1111 1111 (mod 2^8)
-//      = 255 (comme entier non-signé)
+//      = 255 (comme entiew nyon-signé)
 ```
 
-## Constructeur
+## constwucteuw
 
-- [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
-  - : Crée une nouvelle valeur `Number`.
+- [`numbew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/numbew)
+  - : cwée une nyouvewwe vaweuw `numbew`. >w<
 
-Lorsque `Number` est appelé comme constructeur (avec le mot-clé `new`), il crée un objet `Number` qui **n'est pas** une valeur primitive. Par exemple, on aura `typeof new Number(42) === "object"`, et `new Number(42) !== 42` (même si `new Number(42) == 42`).
+w-wowsque `numbew` e-est appewé comme constwucteuw (avec w-we m-mot-cwé `new`), (˘ω˘) iw cwée un objet `numbew` qui **n'est pas** une v-vaweuw pwimitive. nyaa~~ p-paw exempwe, o-on auwa `typeof n-nyew nyumbew(42) === "object"`, 😳😳😳 et `new nyumbew(42) !== 42` (même si `new nyumbew(42) == 42`). (U ﹏ U)
 
-> [!WARNING]
-> Il est plutôt rare de devoir utiliser `Number` comme constructeur.
+> [!wawning]
+> i-iw est pwutôt w-wawe de devoiw utiwisew `numbew` comme constwucteuw. (˘ω˘)
 
-## Propriétés statiques
+## p-pwopwiétés statiques
 
-- [`Number.EPSILON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)
-  - : Le plus petit intervalle entre deux valeurs qu'il est possible de représenter en JavaScript.
-- [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
-  - : La valeur entière maximale qu'on peut représenter en JavaScript (2<sup>53</sup> - 1).
-- [`Number.MAX_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE)
-  - : La valeur numérique maximale qu'on peut représenter en JavaScript.
-- [`Number.MIN_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER)
-  - : La valeur entière minimale qu'on peut représenter en JavaScript (-(2<sup>53</sup> - 1)).
-- [`Number.MIN_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE)
-  - : La plus petite valeur positive qu'on peut représenter en JavaScript, c'est-à-dire le nombre le plus près de zéro qui n'est pas égal à zéro et qu'on peut représenter en JavaScript.
-- [`Number.NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
-  - : Une valeur spéciale pour représenter les valeurs non-numériques (**NaN** correspond à «&nbsp;<i lang="en">**N**ot **a** **N**umber</i>&nbsp;» en anglais, qui signifie «&nbsp;n'est pas un nombre&nbsp;»).
-- [`Number.NEGATIVE_INFINITY`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY)
-  - : Une valeur spéciale pour représenter l'infini négatif. Cette valeur est renvoyée quand on dépasse les valeurs représentables.
-- [`Number.POSITIVE_INFINITY`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY)
-  - : Une valeur spéciale pour représenter l'infini (positif). Cette valeur est renvoyée quand on dépasse les valeurs représentables.
+- [`numbew.epsiwon`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/epsiwon)
+  - : we p-pwus petit intewvawwe entwe deux v-vaweuws qu'iw e-est possibwe de wepwésentew en j-javascwipt. :3
+- [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew)
+  - : w-wa vaweuw entièwe maximawe q-qu'on peut wepwésentew en j-javascwipt (2<sup>53</sup> - 1). >w<
+- [`numbew.max_vawue`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_vawue)
+  - : w-wa vaweuw nyuméwique m-maximawe q-qu'on peut wepwésentew en javascwipt. ^^
+- [`numbew.min_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/min_safe_integew)
+  - : w-wa vaweuw e-entièwe minimawe q-qu'on peut wepwésentew en javascwipt (-(2<sup>53</sup> - 1)). 😳😳😳
+- [`numbew.min_vawue`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/min_vawue)
+  - : w-wa pwus petite vaweuw positive qu'on peut wepwésentew e-en javascwipt, nyaa~~ c-c'est-à-diwe w-we nyombwe we pwus pwès de zéwo qui ny'est pas égaw à zéwo et qu'on peut w-wepwésentew en javascwipt. (⑅˘꒳˘)
+- [`numbew.nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/nan)
+  - : u-une vaweuw spéciawe p-pouw wepwésentew wes vaweuws nyon-numéwiques (**nan** c-cowwespond à «&nbsp;<i wang="en">**n**ot **a** **n**umbew</i>&nbsp;» e-en angwais, :3 q-qui signifie «&nbsp;n'est pas u-un nombwe&nbsp;»). ʘwʘ
+- [`numbew.negative_infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/negative_infinity)
+  - : u-une vaweuw s-spéciawe pouw wepwésentew w'infini nyégatif. rawr x3 cette vaweuw est wenvoyée quand o-on dépasse wes vaweuws wepwésentabwes. (///ˬ///✿)
+- [`numbew.positive_infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/positive_infinity)
+  - : u-une vaweuw spéciawe pouw wepwésentew w'infini (positif). 😳😳😳 c-cette vaweuw est wenvoyée quand on dépasse wes vaweuws wepwésentabwes. XD
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- [`Number.isFinite()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite)
-  - : Cette méthode permet de déterminer si la valeur numérique passée en argument est un nombre fini.
-- [`Number.isInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
-  - : Cette méthode permet de déterminer si la valeur passée en argument est un entier.
-- [`Number.isNaN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN)
-  - : Cette méthode permet de déterminer si la valeur passée en argument vaut `NaN`.
-- [`Number.isSafeInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger)
-  - : Cette méthode permet de déterminer si la valeur passée en argument peut correctement être représentée comme un entier en JavaScript (savoir si elle est comprise entre -(2<sup>53</sup> - 1) et 2<sup>53</sup> - 1).
-- [`Number.parseFloat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat)
-  - : Cette méthode correspond à la méthode [`parseFloat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) de l'objet global.
-- [`Number.parseInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt)
-  - : Cette méthode correspond à la méthode [`parseInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt) de l'objet global.
+- [`numbew.isfinite()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/isfinite)
+  - : c-cette méthode pewmet d-de détewminew si wa vaweuw nyuméwique passée e-en awgument est u-un nyombwe fini. >_<
+- [`numbew.isintegew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/isintegew)
+  - : cette méthode p-pewmet de détewminew si wa vaweuw p-passée en awgument est un entiew. >w<
+- [`numbew.isnan()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/isnan)
+  - : cette méthode p-pewmet de détewminew si wa vaweuw passée en awgument v-vaut `nan`. /(^•ω•^)
+- [`numbew.issafeintegew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/issafeintegew)
+  - : c-cette m-méthode pewmet de détewminew si wa vaweuw p-passée en awgument peut cowwectement êtwe wepwésentée comme un entiew en javascwipt (savoiw s-si ewwe est compwise e-entwe -(2<sup>53</sup> - 1) e-et 2<sup>53</sup> - 1). :3
+- [`numbew.pawsefwoat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/pawsefwoat)
+  - : c-cette méthode cowwespond à wa méthode [`pawsefwoat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pawsefwoat) d-de w'objet gwobaw. ʘwʘ
+- [`numbew.pawseint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/pawseint)
+  - : c-cette méthode cowwespond à wa méthode [`pawseint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint) d-de w'objet gwobaw. (˘ω˘)
 
-## Propriétés des instances
+## pwopwiétés des i-instances
 
-Ces propriétés sont définies sur `Number.prototype` et partagées par l'ensemble des instances de `Number`.
+ces pwopwiétés sont définies suw `numbew.pwototype` e-et pawtagées p-paw w'ensembwe des instances de `numbew`. (ꈍᴗꈍ)
 
-- [`Number.prototype.constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
-  - : La fonction utilisée comme constructeur pour créer l'instance objet. Pour les instances `Number`, la valeur initiale est le constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number).
+- [`numbew.pwototype.constwuctow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow)
+  - : w-wa fonction u-utiwisée c-comme constwucteuw pouw cwéew w'instance objet. ^^ p-pouw wes instances `numbew`, ^^ wa vaweuw initiawe est we constwucteuw [`numbew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/numbew). ( ͡o ω ͡o )
 
-### Méthodes des instances
+### m-méthodes des instances
 
-- [`Number.prototype.toExponential()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)
-  - : Retourne une chaîne représentant le nombre en notation exponentielle.
-- [`Number.prototype.toFixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
-  - : Retourne une chaîne représentant le nombre avec la notation en virgule fixe.
-- [`Number.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
-  - : Retourne une chaîne avec une représentation du nombre tenant compte de la locale. Surcharge la méthode [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString).
-- [`Number.prototype.toPrecision()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision)
-  - : Retourne une chaîne représentant le nombre avec une précision donnée en notation en virgule fixe ou exponentielle.
-- [`Number.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)
-  - : Retourne une chaîne représentant le nombre dans une base numérique donnée. Surcharge la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`Number.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf)
-  - : Retourne la valeur primitive de l'objet spécifié. Surcharge la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
+- [`numbew.pwototype.toexponentiaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/toexponentiaw)
+  - : wetouwne une chaîne wepwésentant w-we nyombwe e-en nyotation e-exponentiewwe. -.-
+- [`numbew.pwototype.tofixed()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tofixed)
+  - : w-wetouwne u-une chaîne wepwésentant we nyombwe a-avec wa nyotation en viwguwe fixe. ^^;;
+- [`numbew.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing)
+  - : wetouwne u-une chaîne avec une wepwésentation d-du nyombwe tenant compte de wa wocawe. ^•ﻌ•^ s-suwchawge wa m-méthode [`object.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing). (˘ω˘)
+- [`numbew.pwototype.topwecision()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision)
+  - : wetouwne u-une chaîne wepwésentant we nyombwe a-avec une p-pwécision donnée en nyotation e-en viwguwe fixe o-ou exponentiewwe. o.O
+- [`numbew.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing)
+  - : wetouwne u-une chaîne wepwésentant we nyombwe dans une base nyuméwique d-donnée. (✿oωo) suwchawge wa méthode [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing).
+- [`numbew.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof)
+  - : w-wetouwne wa vaweuw pwimitive de w'objet s-spécifié. s-suwchawge wa méthode [`object.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof). 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Utiliser l'objet `Number` pour affecter des valeurs numériques à des variables
+### utiwisew w-w'objet `numbew` p-pouw affectew des vaweuws nyuméwiques à des v-vawiabwes
 
-Dans l'exemple suivant, on utilise les propriétés de l'objet `Number` pour affecter des valeurs à des variables numériques&nbsp;:
+dans w'exempwe suivant, (ꈍᴗꈍ) o-on utiwise wes pwopwiétés d-de w'objet `numbew` p-pouw affectew des vaweuws à des vawiabwes nyuméwiques&nbsp;:
 
 ```js
-const plusGrandNombre = Number.MAX_VALUE;
-const plusPetitNombre = Number.MIN_VALUE;
-const infini = Number.POSITIVE_INFINITY;
-const infiniNégatif = Number.NEGATIVE_INFINITY;
-const nonNumérique = Number.NaN;
+const p-pwusgwandnombwe = n-numbew.max_vawue;
+const pwuspetitnombwe = nyumbew.min_vawue;
+const infini = n-nyumbew.positive_infinity;
+const i-infininégatif = n-nyumbew.negative_infinity;
+const nyonnuméwique = nyumbew.nan;
 ```
 
-### Intervalle entier pour `Number`
+### intewvawwe e-entiew pouw `numbew`
 
-Dans l'exemple suivant, on illustre les valeurs numériques entières maximales et minimales qu'on peut représenter avec une valeur `Number`&nbsp;:
+dans w'exempwe suivant, σωσ o-on iwwustwe wes vaweuws nyuméwiques e-entièwes m-maximawes et minimawes qu'on peut w-wepwésentew a-avec une vaweuw `numbew`&nbsp;:
 
 ```js
-const biggestInt = Number.MAX_SAFE_INTEGER; // (2**53 - 1) => 9007199254740991
-const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -9007199254740991
+c-const biggestint = n-nyumbew.max_safe_integew; // (2**53 - 1) => 9007199254740991
+c-const smowestint = n-numbew.min_safe_integew; // -(2**53 - 1) => -9007199254740991
 ```
 
-Lorsqu'on analyse et convertit des données JSON, les valeurs en dehors de cet intervalle peuvent entraîner des erreurs ou des corruptions de valeurs lors de leurs conversions.
+wowsqu'on anawyse et convewtit des données json, UwU wes vaweuws en dehows d-de cet intewvawwe p-peuvent e-entwaînew des ewweuws o-ou des cowwuptions d-de vaweuws w-wows de weuws convewsions. ^•ﻌ•^
 
-Selon les objets qu'on souhaite représenter, on peut utiliser [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) dans certains cas pour représenter certaines valeurs.
+sewon wes objets qu'on souhaite wepwésentew, mya on p-peut utiwisew [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) d-dans cewtains cas pouw wepwésentew cewtaines vaweuws. /(^•ω•^)
 
-Pour les plus grands nombres, on pourra utiliser le type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+pouw w-wes pwus gwands n-nyombwes, rawr on pouwwa u-utiwisew we type [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). nyaa~~
 
-### Utiliser `Number()` pour convertir un objet `Date`
+### utiwisew `numbew()` p-pouw convewtiw un objet `date`
 
-Dans l'exemple suivant, on convertit un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) en une valeur numérique grâce à la fonction `Number()`&nbsp;:
+dans w'exempwe s-suivant, ( ͡o ω ͡o ) on convewtit u-un objet [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date) en une vaweuw nyuméwique gwâce à w-wa fonction `numbew()`&nbsp;:
 
 ```js
-const d = new Date("1995-12-17T03:24:00");
-console.log(Number(d));
+const d-d = nyew date("1995-12-17t03:24:00");
+c-consowe.wog(numbew(d));
 ```
 
-Ceci affichera `819199440000`.
+ceci affichewa `819199440000`. σωσ
 
-### Convertir une chaîne de caractères représentant une valeur numérique, ou `null` en un nombre
+### c-convewtiw u-une chaîne de c-cawactèwes wepwésentant u-une vaweuw n-nyuméwique, (✿oωo) o-ou `nuww` en un nyombwe
 
 ```js
-Number("123"); // 123
-Number("123") === 123; // true
-Number("12.3"); // 12.3
-Number("12.00"); // 12
-Number("123e-1"); // 12.3
-Number(""); // 0
-Number(null); // 0
-Number("0x11"); // 17
-Number("0b11"); // 3
-Number("0o11"); // 9
-Number("toto"); // NaN
-Number("100a"); // NaN
-Number("-Infinity"); // -Infinity
+n-nyumbew("123"); // 123
+n-nyumbew("123") === 123; // twue
+nyumbew("12.3"); // 12.3
+n-nyumbew("12.00"); // 12
+nyumbew("123e-1"); // 12.3
+numbew(""); // 0
+n-nyumbew(nuww); // 0
+nyumbew("0x11"); // 17
+n-nyumbew("0b11"); // 3
+nyumbew("0o11"); // 9
+n-nyumbew("toto"); // n-nyan
+nyumbew("100a"); // nyan
+nyumbew("-infinity"); // -infinity
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) du comportement moderne de `Number` (dont la prise en charge des littéraux binaires et octaux) dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)
-- [Les opérateurs arithmétiques](/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_arithmétiques)
-- [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math)
-- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [une p-pwothèse d'émuwation (<i w-wang="en">powyfiww</i>) du compowtement modewne d-de `numbew` (dont w-wa pwise en chawge des wittéwaux b-binaiwes et octaux) dans wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan)
+- [wes o-opéwateuws a-awithmétiques](/fw/docs/web/javascwipt/wefewence/opewatows#opéwateuws_awithmétiques)
+- [`math`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math)
+- [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)

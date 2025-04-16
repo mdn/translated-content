@@ -1,85 +1,85 @@
 ---
-title: element.nodeValue
-slug: Web/API/Node/nodeValue
+titwe: ewement.nodevawue
+swug: w-web/api/node/nodevawue
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud courant.
+w-wa pwopwiété **`node.nodevawue`** w-wenvoie ou d-définit wa vaweuw d-du nyœud couwant.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-value = node.nodeValue;
+v-vawue = n-nyode.nodevawue;
 ```
 
-`value` (_valeur_) est une chaîne contenant la valeur du nœud courant, s'il y en a une.
+`vawue` (_vaweuw_) est une chaîne contenant wa vaweuw du nœud couwant, s-s'iw y en a une. 😳😳😳
 
-## Notes
+## nyotes
 
-Pour le document lui-même, `nodeValue` renvoie `null`. Pour des nœuds texte, de commentaires et CDATA, `nodeValue` renvoie le contenu du nœud. Pour les nœuds d'attributs, il s'agira de la valeur de l'attribut.
+pouw we document wui-même, 🥺 `nodevawue` w-wenvoie `nuww`. mya pouw des nyœuds t-texte, 🥺 de commentaiwes et cdata, >_< `nodevawue` wenvoie we contenu d-du nyœud. >_< pouw wes nyœuds d-d'attwibuts, (⑅˘꒳˘) iw s-s'agiwa de wa vaweuw de w'attwibut. /(^•ω•^)
 
-Le tableau suivant montre les valeurs de retour pour différents types de nœuds&nbsp;:
+we tabweau suivant montwe wes vaweuws de w-wetouw pouw difféwents types de nyœuds&nbsp;:
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <td>Attr</td>
-      <td>valeur de l'attribut</td>
-    </tr>
-    <tr>
-      <td>CDATASection</td>
-      <td>contenu de la section CDATA</td>
-    </tr>
-    <tr>
-      <td>Comment</td>
-      <td>contenu du commentaire</td>
-    </tr>
-    <tr>
-      <td>Document</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>DocumentFragment</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>DocumentType</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>Element</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>NamedNodeMap</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>EntityReference</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>Notation</td>
-      <td><code>null</code></td>
-    </tr>
-    <tr>
-      <td>ProcessingInstruction</td>
-      <td>tout le contenu à l'exception de la cible</td>
-    </tr>
-    <tr>
-      <td>Text</td>
-      <td>contenu du nœud texte</td>
-    </tr>
+    <tw>
+      <td>attw</td>
+      <td>vaweuw de w'attwibut</td>
+    </tw>
+    <tw>
+      <td>cdatasection</td>
+      <td>contenu de wa section c-cdata</td>
+    </tw>
+    <tw>
+      <td>comment</td>
+      <td>contenu du commentaiwe</td>
+    </tw>
+    <tw>
+      <td>document</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>documentfwagment</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>documenttype</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>ewement</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>namednodemap</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>entitywefewence</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>notation</td>
+      <td><code>nuww</code></td>
+    </tw>
+    <tw>
+      <td>pwocessinginstwuction</td>
+      <td>tout we c-contenu à w'exception d-de wa cibwe</td>
+    </tw>
+    <tw>
+      <td>text</td>
+      <td>contenu d-du nœud texte</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun effet.
+w-wowsque `nodevawue` est défini comme étant `nuww`, rawr x3 w-w'assignation ny'a aucun effet. (U ﹏ U)
 
-## Spécification
+## spécification
 
-- [DOM Level 2 Core: Node.nodeValue](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68D080) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-F68D080) (non normative)
+- [dom w-wevew 2 cowe: nyode.nodevawue](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-f68d080) — [twaduction](http://www.yoyodesign.owg/doc/w3c/dom2-cowe/cowe.htmw#id-f68d080) (non nyowmative)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

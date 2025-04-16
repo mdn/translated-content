@@ -1,69 +1,69 @@
 ---
-title: ServiceWorkerRegistration.showNotification()
-slug: Web/API/ServiceWorkerRegistration/showNotification
+titwe: sewvicewowkewwegistwation.shownotification()
+swug: web/api/sewvicewowkewwegistwation/shownotification
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegistration")}} crée une notification dans un service worker actif.
+w-wa méthode **`shownotification()`** d-de w-w'intewface {{domxwef("sewvicewowkewwegistwation")}} c-cwée une notification d-dans u-un sewvice wowkew a-actif. XD
 
-> [!NOTE]
-> Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette fonctionnawité est disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-serviceWorkerRegistration.showNotification(title, [options]);
+sewvicewowkewwegistwation.shownotification(titwe, 🥺 [options]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `title`
-  - : Définit un titre pour la notification, qui s'affiche en haut de la fenêtre de notification.
-- `options` {{optional_inline}}
+- `titwe`
+  - : d-définit un titwe pouw w-wa nyotification, XD qui s'affiche en haut de wa fenêtwe de nyotification. (U ᵕ U❁)
+- `options` {{optionaw_inwine}}
 
-  - : Un objet d'options contenant tous les paramètres personnalisés que vous souhaitez appliquer à la notification. Les options possibles sont:
+  - : u-un objet d'options contenant t-tous wes pawamètwes p-pewsonnawisés que vous souhaitez appwiquew à wa nyotification. :3 wes options p-possibwes sont:
 
-    - `actions`: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
+    - `actions`: un tabweau de {{domxwef ("notificationaction")}} wepwésentant wes actions d-disponibwes pouw w'utiwisateuw wowsque w-wa nyotification e-est pwésentée. ( ͡o ω ͡o ) c-ce sont d-des options pawmi wesquewwes w'utiwisateuw peut c-choisiw pouw agiw suw w'action dans we contexte d-de wa nyotification ewwe-même. òωó we nom de w'action est envoyé au gestionnaiwe de nyotifications d-du sewvice wowkew pouw wui faiwe s-savoiw que w'action a-a été séwectionnée p-paw w'utiwisateuw. σωσ wes membwes du tabweau doivent êtwe u-un objet. (U ᵕ U❁) i-iw peut conteniw wes vaweuws suivantes:
 
-      - action: Une {{domxref("DOMString")}} représentant une action utilisateur à afficher sur la notification.
-      - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
-      - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
+      - a-action: une {{domxwef("domstwing")}} w-wepwésentant une action utiwisateuw à a-affichew suw wa nyotification. (✿oωo)
+      - t-titwe: une {{domxwef("domstwing")}} contenant we texte d'action à m-montwew à w'utiwisateuw. ^^
+      - i-icon: une {{domxwef("usvstwing")}} c-contenant w-w'uww d'une icône à affichew avec w'action. ^•ﻌ•^
 
-      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event).
+      wes wéponses appwopwiées sont constwuites à w'aide d-de `event.action` d-dans w'événement [`notificationcwick`](/fw/docs/web/api/sewvicewowkewgwobawscope/notificationcwick_event). XD
 
-    - `badge`: Un {{domxref ("USVString")}} contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
-    - `body`: Un {{domxref ("DOMString")}} représentant le corps du texte de la notification, qui est affiché sous le titre.
-    - `data`: Données arbitraires que vous souhaitez associer à la notification. Elles peuvent être de n'importe quel type de données.
-    - `dir`: La direction dans laquelle afficher la notification. La valeur par défaut est `auto`, qui adopte simplement le comportement du paramètre de langue du navigateur, mais vous pouvez remplacer ce comportement en définissant les valeurs de `ltr` et `rtl` (bien que la plupart des navigateurs semblent ignorer ces paramètres.)
-    - `icon`: Une {{domxref ("USVString")}} contenant l'URL d'une icône à afficher dans la notification.
-    - `image`: Une {{domxref ("USVString")}} contenant l'URL d'une image à afficher dans la notification.
-    - `lang`: La langue de la notification, telle que spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant une [balise de langue BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
-    - `renotify`: Un {{domxref ("Boolean", "Booléen")}} spécifiant si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne. La valeur par défaut est `false`, ce qui signifie qu'ils ne seront pas notifiés.
-    - `requireInteraction`: Un {{domxref ("Boolean", "Booléen")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. La valeur par défaut est `false`.
-    - `silent`: Un {{domxref ("Boolean", "Booléen")}} spécifiant si la notification est silencieuse (aucun son ni vibration émis), quels que soient les paramètres de l'appareil. La valeur par défaut est `false`, ce qui signifie qu'il ne sera pas silencieux.
-    - `tag`: Un {{domxref ("DOMString")}} représentant un tag d'identification pour la notification.
-    - `timestamp`: Un {{domxref ("DOMTimeStamp")}} représentant l'heure à laquelle la notification a été créée. Il peut être utilisé pour indiquer l'heure à laquelle une notification est réelle. Par exemple, cela peut se produire dans le passé lorsqu'une notification est utilisée pour un message qui n'a pas pu être envoyé immédiatement parce que l'appareil était hors ligne, ou dans le futur pour une réunion sur le point de commencer.
-    - `vibrate`: Un [modèle de vibration](/fr/docs/Web/API/Vibration_API#vibration_patterns) que le matériel de vibration de l'appareil émet avec la notification. Un modèle de vibration est un tableau (qui peut contenir un seul élément comme plusieurs). Les valeurs sont des temps en millisecondes où les indices pairs (0, 2, 4, etc.) indiquent la durée de vibration et les indices impairs indiquent la durée de la pause. Par exemple, \[300, 100, 400] vibrerait 300 ms, mettrait en pause 100 ms, puis vibrerait 400 ms.
+    - `badge`: un {{domxwef ("usvstwing")}} c-contenant w-w'uww de w-w'image utiwisée pouw wepwésentew wa nyotification wowsqu'iw n-ny'y a pas assez d'espace pouw affichew wa nyotification ewwe-même. :3
+    - `body`: un {{domxwef ("domstwing")}} w-wepwésentant we cowps du texte d-de wa nyotification, (ꈍᴗꈍ) q-qui est affiché s-sous we titwe. :3
+    - `data`: données awbitwaiwes q-que vous s-souhaitez associew à w-wa notification. (U ﹏ U) e-ewwes peuvent êtwe de ny'impowte quew type d-de données. UwU
+    - `diw`: w-wa d-diwection dans w-waquewwe affichew w-wa nyotification. 😳😳😳 wa vaweuw paw défaut est `auto`, XD qui adopte s-simpwement we compowtement du pawamètwe de wangue du nyavigateuw, o.O mais vous pouvez wempwacew ce c-compowtement en définissant wes vaweuws de `wtw` et `wtw` (bien q-que wa pwupawt d-des nyavigateuws s-sembwent ignowew ces pawamètwes.)
+    - `icon`: u-une {{domxwef ("usvstwing")}} contenant w'uww d-d'une icône à a-affichew dans wa nyotification.
+    - `image`: une {{domxwef ("usvstwing")}} contenant w'uww d'une image à affichew dans wa notification. (⑅˘꒳˘)
+    - `wang`: w-wa wangue de wa nyotification, 😳😳😳 t-tewwe que spécifiée à w-w'aide d'un {{domxwef ("domstwing")}} w-wepwésentant une [bawise de wangue bcp 47](https://www.wfc-editow.owg/wfc/bcp/bcp47.txt). nyaa~~ c-consuwtez wa p-page des [codes de wangue à 2 w-wettwes iso](https://www.sitepoint.com/web-foundations/iso-2-wettew-wanguage-codes/) d-de sitepoint pouw une wéféwence simpwe. rawr
+    - `wenotify`: un {{domxwef ("boowean", -.- "boowéen")}} spécifiant s-si w'utiwisateuw d-doit êtwe n-notifié apwès qu'une nyouvewwe n-notification wempwace w-w'ancienne. (✿oωo) wa vaweuw paw d-défaut est `fawse`, ce qui signifie qu'iws nye sewont pas nyotifiés. /(^•ω•^)
+    - `wequiweintewaction`: un {{domxwef ("boowean", 🥺 "boowéen")}} i-indiquant q-qu'une nyotification doit westew active jusqu'à c-ce que w'utiwisateuw c-cwique dessus ou wa wejette, ʘwʘ pwutôt que de se fewmew a-automatiquement. UwU wa vaweuw paw défaut est `fawse`. XD
+    - `siwent`: un {{domxwef ("boowean", (✿oωo) "boowéen")}} spécifiant s-si wa nyotification est siwencieuse (aucun s-son nyi vibwation émis), :3 q-quews que soient wes pawamètwes de w'appaweiw. (///ˬ///✿) wa v-vaweuw paw défaut e-est `fawse`, nyaa~~ ce qui signifie qu'iw ne sewa pas siwencieux. >w<
+    - `tag`: u-un {{domxwef ("domstwing")}} wepwésentant u-un tag d'identification pouw wa notification. -.-
+    - `timestamp`: un {{domxwef ("domtimestamp")}} w-wepwésentant w'heuwe à w-waquewwe wa nyotification a-a été cwéée. (✿oωo) iw peut êtwe u-utiwisé pouw indiquew w-w'heuwe à waquewwe u-une nyotification e-est wéewwe. (˘ω˘) paw exempwe, c-cewa peut se pwoduiwe d-dans we passé wowsqu'une nyotification est u-utiwisée pouw u-un message qui n-ny'a pas pu êtwe envoyé immédiatement pawce que w-w'appaweiw était hows wigne, rawr o-ou dans we futuw p-pouw une wéunion suw we point de commencew. OwO
+    - `vibwate`: un [modèwe de vibwation](/fw/docs/web/api/vibwation_api#vibwation_pattewns) q-que w-we matéwiew de v-vibwation de w'appaweiw émet avec w-wa nyotification. ^•ﻌ•^ un modèwe d-de vibwation est un tabweau (qui peut conteniw un seuw éwément comme pwusieuws). UwU wes vaweuws s-sont des temps en miwwisecondes o-où wes indices paiws (0, (˘ω˘) 2, 4, e-etc.) indiquent wa duwée de vibwation e-et wes indices impaiws indiquent w-wa duwée d-de wa pause. (///ˬ///✿) paw e-exempwe, σωσ \[300, 100, 400] v-vibwewait 300 m-ms, /(^•ω•^) mettwait en pause 100 ms, 😳 puis vibwewait 400 ms. 😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref('Promise')}} qui se résout en `undefined`.
+un {{jsxwef('pwomise')}} qui se wésout en `undefined`. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
 ```js
-navigator.serviceWorker.register("sw.js");
+n-nyavigatow.sewvicewowkew.wegistew("sw.js");
 
-function showNotification() {
-  Notification.requestPermission((result) => {
-    if (result === "granted") {
-      navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification("Vibration Sample", {
-          body: "Buzz! Buzz!",
-          icon: "../images/touch/chrome-touch-icon-192x192.png",
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: "vibration-sample",
+f-function shownotification() {
+  nyotification.wequestpewmission((wesuwt) => {
+    i-if (wesuwt === "gwanted") {
+      nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+        wegistwation.shownotification("vibwation sampwe", 😳😳😳 {
+          b-body: "buzz! 😳 buzz!",
+          i-icon: "../images/touch/chwome-touch-icon-192x192.png",
+          vibwate: [200, XD 100, 200, mya 100, 200, 100, ^•ﻌ•^ 200],
+          t-tag: "vibwation-sampwe", ʘwʘ
         });
       });
     }
@@ -71,14 +71,14 @@ function showNotification() {
 }
 ```
 
-Pour appeler la fonction ci-dessus à un moment approprié, vous pouvez utiliser le gestionnaire d'événements {{domxref ("ServiceWorkerGlobalScope.onnotificationclick")}}.
+pouw appewew wa fonction c-ci-dessus à u-un moment appwopwié, ( ͡o ω ͡o ) vous pouvez u-utiwisew we g-gestionnaiwe d'événements {{domxwef ("sewvicewowkewgwobawscope.onnotificationcwick")}}. mya
 
-Vous pouvez également récupérer les détails des {{domxref ("Notification", "Notifications")}} qui ont été déclenchés par le service worker actuel en utilisant {{domxref ("ServiceWorkerRegistration.getNotifications()")}}.
+vous pouvez égawement wécupéwew wes détaiws des {{domxwef ("notification", o.O "notifications")}} q-qui o-ont été décwenchés p-paw we sewvice w-wowkew actuew e-en utiwisant {{domxwef ("sewvicewowkewwegistwation.getnotifications()")}}. (✿oωo)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

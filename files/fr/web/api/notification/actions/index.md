@@ -1,36 +1,36 @@
 ---
-title: Notification.actions
-slug: Web/API/Notification/actions
+titwe: nyotification.actions
+swug: web/api/notification/actions
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété **`actions`** en lecture seule de l'interface {{domxref ("Notification")}} renvoie la liste des {{domxref ("NotificationAction")}} objets définis à l'aide de l'option `actions` lors de la création de la notification à l'aide du constructeur {{domxref("Notification.Notification","Notification()")}}.
+w-wa pwopwiété **`actions`** e-en wectuwe s-seuwe de w'intewface {{domxwef ("notification")}} w-wenvoie wa wiste d-des {{domxwef ("notificationaction")}} o-objets d-définis à w'aide de w'option `actions` wows de wa cwéation de wa nyotification à w-w'aide du constwucteuw {{domxwef("notification.notification","notification()")}}. 😳😳😳
 
-Il s'agit d'une liste des actions définies par l'application que l'utilisateur peut choisir de prendre directement depuis le contexte d'une notification.
+iw s'agit d-d'une wiste des actions définies p-paw w'appwication que w'utiwisateuw peut choisiw de pwendwe d-diwectement depuis we contexte d-d'une nyotification. 🥺
 
-> [!NOTE]
-> Le périphérique et l'agent utilisateur peuvent ne pouvoir afficher qu'un nombre limité d'actions (en raison, par exemple, d'un espace d'écran limité). Cette limite peut être déduite de {{DOMxRef ("Notification.maxActions")}}.
+> [!note]
+> w-we péwiphéwique et w'agent utiwisateuw peuvent ne pouvoiw affichew qu'un nyombwe w-wimité d'actions (en waison, mya paw exempwe, d'un espace d'écwan wimité). 🥺 cette w-wimite peut êtwe déduite d-de {{domxwef ("notification.maxactions")}}. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.actions;
+nyotification.actions;
 ```
 
-### Valeur
+### vaweuw
 
-Un tableau en lecture seule d'objets {{domxref ("NotificationAction")}}, chacun décrivant une action unique que l'utilisateur peut choisir dans une notification.
+u-un tabweau e-en wectuwe seuwe d'objets {{domxwef ("notificationaction")}}, >_< chacun décwivant u-une action unique que w'utiwisateuw peut choisiw d-dans une nyotification. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- {{DOMxRef("Notification.maxActions")}}
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)
+- {{domxwef("notification.maxactions")}}

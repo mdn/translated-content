@@ -1,53 +1,53 @@
 ---
-title: Gestionnaire de Proxy (handler)
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
+titwe: gestionnaiwe de pwoxy (handwew)
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (_traps_) pour le {{jsxref("Proxy", "proxy", "", 1)}}.
+w-w'objet gestionnaiwe d-d'un pwoxy e-est un objet q-qui contient wes t-twappes de captuwes (_twaps_) p-pouw we {{jsxwef("pwoxy", 🥺 "pwoxy", >_< "", 1)}}.
 
-## Méthodes
+## méthodes
 
-Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le comportement par défaut sera de transmettre l'opération à la cible.
+toutes ces twappes sont optionnewwes. >_< si une twappe n-ny'a pas été définie, (⑅˘꒳˘) we compowtement paw défaut s-sewa de twansmettwe w'opéwation à w-wa cibwe. /(^•ω•^)
 
-- {{jsxref("Objets_globaux/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
-  - : Une trappe pour {{jsxref("Object.getPrototypeOf")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
-  - : Une trappe pour {{jsxref("Object.setPrototypeOf")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/isExtensible", "handler.isExtensible()")}}
-  - : Une trappe pour {{jsxref("Object.isExtensible")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
-  - : Une trappe pour {{jsxref("Object.preventExtensions")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
-  - : Une trappe pour {{jsxref("Object.getOwnPropertyDescriptor")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty()")}}
-  - : Une trappe pour {{jsxref("Object.defineProperty")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/has", "handler.has()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/get", "handler.get()")}}
-  - : Une trappe pour l'accès aux valeurs des propriétés.
-- {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set()")}}
-  - : Une trappe pour la définition des valeurs des propriétés.
-- {{jsxref("Objets_globaux/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/ownKeys", "handler.ownKeys()")}}
-  - : Une trappe pour {{jsxref("Object.getOwnPropertyNames")}} et {{jsxref("Object.getOwnPropertySymbols")}}.
-- {{jsxref("Objets_globaux/Proxy/handler/apply", "handler.apply()")}}
-  - : Une trappe pour l'appel d'une fonction.
-- {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/getpwototypeof", rawr x3 "handwew.getpwototypeof()")}}
+  - : une twappe pouw {{jsxwef("object.getpwototypeof")}}. (U ﹏ U)
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/setpwototypeof", (U ﹏ U) "handwew.setpwototypeof()")}}
+  - : une twappe pouw {{jsxwef("object.setpwototypeof")}}.
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/isextensibwe", (⑅˘꒳˘) "handwew.isextensibwe()")}}
+  - : u-une twappe pouw {{jsxwef("object.isextensibwe")}}. òωó
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/pweventextensions", ʘwʘ "handwew.pweventextensions()")}}
+  - : une twappe p-pouw {{jsxwef("object.pweventextensions")}}. /(^•ω•^)
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/getownpwopewtydescwiptow", ʘwʘ "handwew.getownpwopewtydescwiptow()")}}
+  - : u-une twappe pouw {{jsxwef("object.getownpwopewtydescwiptow")}}.
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/definepwopewty", σωσ "handwew.definepwopewty()")}}
+  - : une twappe pouw {{jsxwef("object.definepwopewty")}}. OwO
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/has", 😳😳😳 "handwew.has()")}}
+  - : une twappe pouw w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_in", "in")}}. 😳😳😳
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/get", o.O "handwew.get()")}}
+  - : une twappe p-pouw w'accès aux vaweuws des pwopwiétés. ( ͡o ω ͡o )
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/set", (U ﹏ U) "handwew.set()")}}
+  - : une twappe pouw wa définition des vaweuws des p-pwopwiétés. (///ˬ///✿)
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/dewetepwopewty", >w< "handwew.dewetepwopewty()")}}
+  - : une twappe pouw w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_dewete", rawr "dewete")}}. mya
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/ownkeys", ^^ "handwew.ownkeys()")}}
+  - : u-une twappe p-pouw {{jsxwef("object.getownpwopewtynames")}} e-et {{jsxwef("object.getownpwopewtysymbows")}}. 😳😳😳
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/appwy", mya "handwew.appwy()")}}
+  - : u-une twappe pouw w'appew d'une fonction. 😳
+- {{jsxwef("objets_gwobaux/pwoxy/handwew/constwuct", -.- "handwew.constwuct()")}}
+  - : u-une twappe pouw w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", 🥺 "new")}}.
 
-Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#proxy).
+cewtaines t-twappes nyon standawds sont désowmais [obsowètes et ont été suppwimées](/fw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#pwoxy). o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Proxy")}}
+- {{jsxwef("pwoxy")}}

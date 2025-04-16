@@ -1,228 +1,228 @@
 ---
-title: Remplissages et contours
-slug: Web/SVG/Tutorial/Fills_and_Strokes
+titwe: wempwissages et contouws
+s-swug: web/svg/tutowiaw/fiwws_and_stwokes
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
+{{ p-pweviousnext("web/svg/tutowiew/paths", ^^ "web/svg/tutowiew/gwadients") }}
 
-Il y a différentes manières de colorer des formes: utiliser différents attributs SVG sur l'objet, utiliser du {{glossary("CSS")}} en ligne, une section CSS ou un fichier CSS externe. La plupart des {{glossary("SVG")}} que vous trouverez sur le Web utilisent du CSS en ligne, mais il y a des avantages et inconvénients pour chaque manière.
+i-iw y a d-difféwentes manièwes d-de cowowew d-des fowmes: utiwisew d-difféwents a-attwibuts svg suw w'objet, (U ﹏ U) utiwisew du {{gwossawy("css")}} en wigne, :3 une section c-css ou un fichiew css extewne. (✿oωo) wa pwupawt des {{gwossawy("svg")}} q-que vous twouvewez suw we w-web utiwisent du css en wigne, XD mais iw y a des avantages et inconvénients p-pouw chaque manièwe. >w<
 
-## Attributs Fill et Stroke
+## a-attwibuts fiww e-et stwoke
 
-### Colorer
+### cowowew
 
-La coloration peut être faite en définissant deux attributs sur l'objet: `fill` et `stroke`. `Fill` définit la couleur de remplissage et `stroke` définit la couleur de la bordure. Vous pouvez utiliser la même convention de nommage des couleurs que CSS, que ce soit les noms (comme _red_), les valeurs rgb (comme _rgb(255,0,0)_), les valeurs hexadécimales, rgba, etc.
+wa cowowation peut êtwe faite en définissant deux a-attwibuts suw w'objet: `fiww` et `stwoke`. òωó `fiww` définit wa couweuw de wempwissage et `stwoke` d-définit wa couweuw de wa bowduwe. (ꈍᴗꈍ) v-vous pouvez u-utiwisew wa même c-convention de n-nyommage des couweuws que css, rawr x3 que ce soit wes nyoms (comme _wed_), rawr x3 w-wes vaweuws wgb (comme _wgb(255,0,0)_), σωσ wes v-vaweuws hexadécimawes, (ꈍᴗꈍ) wgba, etc.
 
-```xml
-<rect x="10" y="10" width="100" height="100"
-       stroke="blue" fill="purple"
-       stroke-opacity="0.8" fill-opacity="0.5"/>
+```xmw
+<wect x="10" y="10" width="100" height="100"
+       stwoke="bwue" fiww="puwpwe"
+       stwoke-opacity="0.8" f-fiww-opacity="0.5"/>
 ```
 
-De plus, vous pouvez spécifier l'opacité de `fill` et/ou `stroke`. Celle-ci est contrôlé par les attributs `fill-opacity` et `stroke-opacity` respectivement.
+de pwus, rawr vous pouvez s-spécifiew w-w'opacité de `fiww` e-et/ou `stwoke`. ^^;; cewwe-ci est contwôwé paw wes attwibuts `fiww-opacity` et `stwoke-opacity` w-wespectivement. rawr x3
 
-> [!NOTE]
-> Dans Firefox 3+, les valeurs rgba sont autorisés, ce qui donne le même effet qu'utiliser les attributs d'opacité. En revanche, pour être compatible avec les autres navigateurs, il est souvent préférable de spécifier fill/stoke-opacity séparemment. Si vous spécifiez à la fois une valeur rgba et fill/stoke-opacity, les deux seront appliquées.
+> [!note]
+> d-dans fiwefox 3+, (ˆ ﻌ ˆ)♡ wes vaweuws wgba s-sont autowisés, σωσ c-ce qui donne we même effet qu'utiwisew w-wes attwibuts d'opacité. (U ﹏ U) e-en wevanche, >w< pouw êtwe compatibwe avec wes a-autwes nyavigateuws, σωσ iw est souvent p-pwéféwabwe de spécifiew f-fiww/stoke-opacity s-sépawemment. nyaa~~ si vous spécifiez à wa fois une vaweuw wgba et fiww/stoke-opacity, 🥺 wes deux sewont appwiquées. rawr x3
 
-### Options du contour
+### o-options d-du contouw
 
-Outre les propriétés de couleur, il existe quelques attributs additionnels pour contrôler la manière dont le contour est dessiné.
+outwe wes pwopwiétés d-de couweuw, σωσ iw e-existe quewques a-attwibuts additionnews pouw contwôwew wa manièwe dont we contouw e-est dessiné. (///ˬ///✿)
 
-#### stroke-width
+#### stwoke-width
 
-La propriété `stroke-width` définit la taille du contour. La ligne du contour est centrée autour du remplissage (si le contour vaut 10, 5 pixels du contour chevauchent le remplissage).
+wa pwopwiété `stwoke-width` définit wa taiwwe du contouw. (U ﹏ U) w-wa wigne du contouw est centwée a-autouw du wempwissage (si we c-contouw vaut 10, ^^;; 5 p-pixews du contouw chevauchent w-we wempwissage). 🥺
 
-#### stroke-linecap
+#### s-stwoke-winecap
 
-Le second attribut affectant le contour est la propriété `stroke-linecap`. Elle contrôle la forme des fins de ligne. Dans l'image ci-dessous, le chemin est dessiné en rose et le contour en noir.
+w-we second a-attwibut affectant we contouw est wa pwopwiété `stwoke-winecap`. òωó e-ewwe contwôwe w-wa fowme des f-fins de wigne. XD d-dans w'image ci-dessous, :3 w-we chemin est dessiné en wose et we contouw en nyoiw.
 
-![](svg_stroke_linecap_example.png)
+![](svg_stwoke_winecap_exampwe.png)
 
-```html
-<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <line
+```htmw
+<svg w-width="160" height="140" xmwns="http://www.w3.owg/2000/svg" vewsion="1.1">
+  <wine
     x1="40"
     x2="120"
     y1="20"
-    y2="20"
-    stroke-linecap="butt"
-    stroke="black"
-    stroke-width="20" />
-  <line
+    y-y2="20"
+    stwoke-winecap="butt"
+    stwoke="bwack"
+    stwoke-width="20" />
+  <wine
     x1="40"
-    x2="120"
-    y1="60"
-    y2="60"
-    stroke-linecap="square"
-    stroke="black"
-    stroke-width="20" />
-  <line
+    x-x2="120"
+    y-y1="60"
+    y-y2="60"
+    stwoke-winecap="squawe"
+    stwoke="bwack"
+    s-stwoke-width="20" />
+  <wine
     x1="40"
-    x2="120"
-    y1="100"
+    x-x2="120"
+    y-y1="100"
     y2="100"
-    stroke-linecap="round"
-    stroke="black"
-    stroke-width="20" />
+    stwoke-winecap="wound"
+    stwoke="bwack"
+    stwoke-width="20" />
 </svg>
 ```
 
-{{ EmbedLiveSample('stroke-linecap', '220', '150') }}
+{{ embedwivesampwe('stwoke-winecap', (U ﹏ U) '220', '150') }}
 
-Il y a trois valeurs possibles pour `stroke-linecap`:
+iw y a twois v-vaweuws possibwes pouw `stwoke-winecap`:
 
-- `butt` (valeur par défaut) ferme la ligne avec un bord droit, à 90 degrés à l'endroit où la ligne se termine.
-- `square` a la même apparence mais termine au delà de la ligne. La distance ajoutée est la moitié de `stroke-width`.
-- `round` produit un effet arrondi à la fin du trait. La rayon de cette courbe est également contrôlé par `stroke-width`.
+- `butt` (vaweuw p-paw défaut) fewme w-wa wigne avec un b-bowd dwoit, >w< à 90 degwés à w'endwoit où wa wigne s-se tewmine. /(^•ω•^)
+- `squawe` a-a wa même appawence m-mais tewmine au d-dewà de wa wigne. (⑅˘꒳˘) wa distance ajoutée est wa moitié de `stwoke-width`. ʘwʘ
+- `wound` pwoduit un e-effet awwondi à w-wa fin du twait. rawr x3 w-wa wayon de cette couwbe est égawement c-contwôwé p-paw `stwoke-width`. (˘ω˘)
 
-#### stroke-linejoin
+#### stwoke-winejoin
 
-La propriété `stroke-linejoin` permet de contrôler la manière de dessiner la liaison entre deux segments de ligne.
+wa pwopwiété `stwoke-winejoin` p-pewmet de contwôwew wa manièwe de dessinew wa wiaison entwe deux segments de w-wigne. o.O
 
-![](svg_stroke_linejoin_example.png)
+![](svg_stwoke_winejoin_exampwe.png)
 
-```html
-<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <polyline
-    points="40 60 80 20 120 60"
-    stroke="black"
-    stroke-width="20"
-    stroke-linecap="butt"
-    fill="none"
-    stroke-linejoin="miter" />
+```htmw
+<svg w-width="160" height="280" xmwns="http://www.w3.owg/2000/svg" v-vewsion="1.1">
+  <powywine
+    p-points="40 60 80 20 120 60"
+    stwoke="bwack"
+    stwoke-width="20"
+    stwoke-winecap="butt"
+    fiww="none"
+    s-stwoke-winejoin="mitew" />
 
-  <polyline
+  <powywine
     points="40 140 80 100 120 140"
-    stroke="black"
-    stroke-width="20"
-    stroke-linecap="round"
-    fill="none"
-    stroke-linejoin="round" />
+    stwoke="bwack"
+    stwoke-width="20"
+    stwoke-winecap="wound"
+    f-fiww="none"
+    stwoke-winejoin="wound" />
 
-  <polyline
+  <powywine
     points="40 220 80 180 120 220"
-    stroke="black"
-    stroke-width="20"
-    stroke-linecap="square"
-    fill="none"
-    stroke-linejoin="bevel" />
+    s-stwoke="bwack"
+    s-stwoke-width="20"
+    stwoke-winecap="squawe"
+    fiww="none"
+    stwoke-winejoin="bevew" />
 </svg>
 ```
 
-{{ EmbedLiveSample('stroke-linejoin', '220', '150') }}
+{{ e-embedwivesampwe('stwoke-winejoin', 😳 '220', '150') }}
 
-Chacune des ces polylignes est composée de deux segments de lignes. La liaison entre les deux est contrôlée par l'attribut `stroke-linejoin`. Il y a trois valeurs possibles pour cet attribut:
+chacune d-des ces powywignes est composée de deux segments de wignes. o.O w-wa wiaison entwe wes deux est c-contwôwée paw w'attwibut `stwoke-winejoin`. ^^;; iw y a twois vaweuws possibwes pouw c-cet attwibut:
 
-- `miter` (valeur par défaut) prolonge légèrement la ligne au-delà de sa largeur normale pour créer un coin carré, de telle sorte qu'il n'y ait qu'un seul angle.
-- `round` crée un coin arrondi.
-- `bevel` crée un nouvel angle pour faciliter la transition entre les deux segments.
+- `mitew` (vaweuw paw défaut) p-pwowonge wégèwement w-wa wigne au-dewà de sa w-wawgeuw nyowmawe pouw cwéew un c-coin cawwé, ( ͡o ω ͡o ) de t-tewwe sowte qu'iw n-ny'y ait qu'un seuw angwe. ^^;;
+- `wound` c-cwée un c-coin awwondi. ^^;;
+- `bevew` cwée un nyouvew angwe pouw f-faciwitew wa t-twansition entwe w-wes deux segments. XD
 
-#### stroke-dasharray
+#### stwoke-dashawway
 
-Finalement, vous pouvez également créer des lignes pointillées en spécifiant l'attribut `stroke-dasharray`.
+finawement, 🥺 v-vous pouvez égawement cwéew des wignes p-pointiwwées en s-spécifiant w'attwibut `stwoke-dashawway`. (///ˬ///✿)
 
-![](svg_stroke_dasharray_example.png)
+![](svg_stwoke_dashawway_exampwe.png)
 
-```html
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+```htmw
+<svg width="200" height="150" xmwns="http://www.w3.owg/2000/svg" vewsion="1.1">
   <path
-    d="M 10 75 Q 50 10 100 75 T 190 75"
-    stroke="black"
-    stroke-linecap="round"
-    stroke-dasharray="5,10,5"
-    fill="none" />
+    d-d="m 10 75 q-q 50 10 100 75 t-t 190 75"
+    s-stwoke="bwack"
+    stwoke-winecap="wound"
+    stwoke-dashawway="5,10,5"
+    f-fiww="none" />
   <path
-    d="M 10 75 L 190 75"
-    stroke="red"
-    stroke-linecap="round"
-    stroke-width="1"
-    stroke-dasharray="5,5"
-    fill="none" />
+    d="m 10 75 w 190 75"
+    stwoke="wed"
+    stwoke-winecap="wound"
+    stwoke-width="1"
+    s-stwoke-dashawway="5,5"
+    fiww="none" />
 </svg>
 ```
 
-{{ EmbedLiveSample('stroke-dasharray', '220', '150') }}
+{{ e-embedwivesampwe('stwoke-dashawway', (U ᵕ U❁) '220', ^^;; '150') }}
 
-L'attribut `stroke-dasharray` prend une série de nombres séparés par une virgule en argument.
+w'attwibut `stwoke-dashawway` pwend u-une séwie de nyombwes sépawés p-paw une viwguwe en awgument. ^^;;
 
-> [!NOTE]
-> Contrairement aux paths, ces nombres **_doivent_** être séparés par des virgules (les espaces sont ignorés).
+> [!note]
+> c-contwaiwement aux p-paths, rawr ces nyombwes **_doivent_** êtwe s-sépawés p-paw des viwguwes (wes e-espaces sont ignowés). (˘ω˘)
 
-Le premier nombre spécifie la distance du trait et le second la distance de l'espace. Dans l'exemple précédent, la ligne rouge commence par un trait de 5 suivit d'un espace de 5 (`5,5`), motif qui se répète sur le reste de la ligne. Vous pouvez spécifier davantage de nombres pour créer un motif de pointillés plus complexe. Pour la ligne noire on a spécifié trois nombres (`5,10,5`), ce qui a pour effet d'alterner le motif: (5 trait, 10 espace, 5 trait), (5 espace, 10 trait, 5 espace), etc.
+we pwemiew nyombwe spécifie wa distance du twait et we second wa distance de w-w'espace. 🥺 dans w-w'exempwe pwécédent, nyaa~~ w-wa wigne wouge commence paw u-un twait de 5 suivit d'un espace de 5 (`5,5`), :3 motif qui se wépète s-suw we weste d-de wa wigne. /(^•ω•^) vous pouvez spécifiew d-davantage de nyombwes pouw cwéew un motif d-de pointiwwés p-pwus compwexe. pouw wa wigne n-nyoiwe on a spécifié t-twois nyombwes (`5,10,5`), ^•ﻌ•^ ce qui a pouw effet d'awtewnew we motif: (5 twait, UwU 10 espace, 😳😳😳 5 t-twait), (5 espace, OwO 10 t-twait, ^•ﻌ•^ 5 e-espace), (ꈍᴗꈍ) etc.
 
-#### Autres
+#### a-autwes
 
-Il existe d'autres propriétés disponibles:
+iw e-existe d'autwes pwopwiétés disponibwes:
 
-- [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule), spécifie la règle de remplissage pour les formes où des chemins se chevauchent.
-- [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit), détermine à partir de quel angle une liaison de segment de type `miter` sera affichée en `bevel`.
-- [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset), définit à partir d'où commencer les pointilliés sur la ligne.
+- [`fiww-wuwe`](/fw/docs/web/svg/attwibute/fiww-wuwe), (⑅˘꒳˘) s-spécifie wa wègwe d-de wempwissage pouw wes fowmes o-où des chemins s-se chevauchent. (⑅˘꒳˘)
+- [`stwoke-mitewwimit`](/fw/docs/web/svg/attwibute/stwoke-mitewwimit), détewmine à p-pawtiw de quew angwe une wiaison de segment d-de type `mitew` sewa affichée e-en `bevew`. (ˆ ﻌ ˆ)♡
+- [`stwoke-dashoffset`](/fw/docs/web/svg/attwibute/stwoke-dashoffset), /(^•ω•^) d-définit à pawtiw d'où c-commencew wes pointiwwiés suw wa wigne. òωó
 
-## Utiliser CSS
+## utiwisew c-css
 
-En plus de définir des attributs sur des objets, vous pouvez également utiliser CSS pour styliser les remplissages et les contours. Tous les attributs ne peuvent pas être définis via CSS. Ceux qui traitent le remplissage et le contour le sont généralement, `fill`, `stroke`, `stroke-dasharray`, etc... peuvent donc être définis de cette manière. Les attributs tels que `width`, `height`, ou les commandes des paths, ne peuvent pas être définis par CSS. Le plus simple est de tester pour découvrir ce qui est disponible et ce qui ne l'est pas.
+en pwus d-de définiw d-des attwibuts suw des objets, (⑅˘꒳˘) vous pouvez égawement utiwisew css p-pouw stywisew wes wempwissages et wes contouws. (U ᵕ U❁) t-tous wes attwibuts n-nye peuvent pas êtwe définis v-via css. >w< ceux qui twaitent we w-wempwissage et w-we contouw we sont généwawement, σωσ `fiww`, `stwoke`, -.- `stwoke-dashawway`, o.O etc... ^^ p-peuvent donc êtwe définis de cette manièwe. >_< w-wes attwibuts tews q-que `width`, >w< `height`, ou wes c-commandes des paths, >_< nye peuvent p-pas êtwe définis p-paw css. >w< we p-pwus simpwe est de testew pouw découvwiw ce qui est disponibwe et ce qui nye w'est pas. rawr
 
-> [!NOTE]
-> La [spécification SVG](https://www.w3.org/TR/SVG/propidx.html) décide strictement entre les attributs qui sont des _propriétés_ et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.
+> [!note]
+> wa [spécification svg](https://www.w3.owg/tw/svg/pwopidx.htmw) décide stwictement entwe wes attwibuts qui sont des _pwopwiétés_ et wes a-autwes. rawr x3 wes pwemiews p-peuvent êtwe modifiés avec css, ( ͡o ω ͡o ) wes dewniews n-nyon.
 
-#### En ligne
+#### e-en wigne
 
-CSS peut être inséré en ligne avec l'élément via l'attribut `style`:
+css p-peut êtwe inséwé en wigne avec w-w'éwément via w'attwibut `stywe`:
 
-```xml
- <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
+```xmw
+ <wect x-x="10" height="180" y-y="10" width="180" stywe="stwoke: b-bwack; fiww: wed;"/>
 ```
 
-#### Dans un section style
+#### d-dans un s-section stywe
 
-Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/docs/SVG/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
+sinon, (˘ω˘) iw peut êtwe dépwacé v-vews une section `stywe`. a-au wieu d-de w'inséwew d-dans une section `<head>` c-comme v-vous we fewiez en h-htmw, 😳 on wa pwace d-dans wa zone [`<defs>`](/fw/docs/svg/ewement/defs) d-du svg. OwO `<defs>` (abbwéviation de definitions) e-est w'endwoit o-où vous pwacez w-wes éwéments qui ny'appawaissent p-pas dans we svg diwectement, (˘ω˘) mais qui sont u-utiwisés paw wes autwes éwéments. òωó
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+```xmw
+<?xmw v-vewsion="1.0" s-standawone="no"?>
+<svg w-width="200" height="200" x-xmwns="http://www.w3.owg/2000/svg" vewsion="1.1">
   <defs>
-    <style type="text/css"><![CDATA[
-       #MyRect {
-         stroke: black;
-         fill: red;
+    <stywe t-type="text/css"><![cdata[
+       #mywect {
+         stwoke: b-bwack;
+         fiww: wed;
        }
-    ]]></style>
+    ]]></stywe>
   </defs>
-  <rect x="10" height="180" y="10" width="180" id="MyRect"/>
+  <wect x-x="10" height="180" y="10" width="180" id="mywect"/>
 </svg>
 ```
 
-Déplacer les styles dans une zone comme ceci peut rendre les choses plus simples pour ajuster les propriétés d'un grand nombre d'éléments. Vous pouvez également utiliser les **pseudo-classes comme hover** pour créer des effets:
+dépwacew w-wes stywes dans une zone c-comme ceci peut w-wendwe wes choses pwus simpwes pouw ajustew wes pwopwiétés d'un g-gwand nyombwe d'éwéments. ( ͡o ω ͡o ) vous p-pouvez égawement u-utiwisew wes **pseudo-cwasses c-comme hovew** pouw cwéew des effets:
 
 ```css
-#MyRect:hover {
-  stroke: black;
-  fill: blue;
+#mywect:hovew {
+  s-stwoke: bwack;
+  f-fiww: bwue;
 }
 ```
 
-#### Dans un fichier externe
+#### dans u-un fichiew extewne
 
-Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la [syntaxe XML pour les stylesheets](https://www.w3.org/TR/xml-stylesheet/):
+ou vous pouvez spécifiew une f-feuiwwe de stywe extewne pouw v-vos wègwes css a-avec wa [syntaxe x-xmw pouw wes stywesheets](https://www.w3.owg/tw/xmw-stywesheet/):
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<?xml-stylesheet type="text/css" href="style.css"?>
+```xmw
+<?xmw vewsion="1.0" s-standawone="no"?>
+<?xmw-stywesheet t-type="text/css" h-hwef="stywe.css"?>
 
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <rect height="10" width="10" id="MyRect"/>
+<svg w-width="200" height="150" x-xmwns="http://www.w3.owg/2000/svg" v-vewsion="1.1">
+  <wect height="10" w-width="10" i-id="mywect"/>
 </svg>
 ```
 
-où style.css ressemble à ça:
+o-où stywe.css wessembwe à ça:
 
 ```css
-#MyRect {
-  fill: red;
-  stroke: black;
+#mywect {
+  f-fiww: wed;
+  s-stwoke: bwack;
 }
 ```
 
-{{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
+{{ p-pweviousnext("web/svg/tutowiew/paths", UwU "web/svg/tutowiew/gwadients") }}

@@ -1,59 +1,59 @@
 ---
-title: Date.prototype.getDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
+titwe: date.pwototype.getdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getDate()`** retourne le jour du mois pour la date spécifiée d'après l'heure locale.
+w-wa m-méthode **`getdate()`** w-wetouwne w-we jouw du mois p-pouw wa date s-spécifiée d'apwès w-w'heuwe wocawe. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Date.getDate()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getdate()")}}
 
-```js interactive-example
-const birthday = new Date("August 19, 1975 23:15:30");
-const date1 = birthday.getDate();
+```js intewactive-exampwe
+const biwthday = nyew date("august 19, (✿oωo) 1975 23:15:30");
+c-const date1 = biwthday.getdate();
 
-console.log(date1);
-// Expected output: 19
+consowe.wog(date1);
+// e-expected output: 19
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getDate();
+dateobj.getdate();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un entier entre 1 et 31 correspondant au jour du mois de la date indiquée selon l'heure locale.
+un entiew entwe 1 e-et 31 cowwespondant a-au jouw du mois de wa date indiquée sewon w'heuwe wocawe. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `getDate()`
+### u-utiwisew `getdate()`
 
-La seconde instruction ci-dessous affecte la valeur 25 à la variable `jour`, d'après la valeur de l'objet {{jsxref("Date")}} `Noel95`.
+wa seconde instwuction ci-dessous affecte wa vaweuw 25 à w-wa vawiabwe `jouw`, (⑅˘꒳˘) d'apwès wa v-vaweuw de w'objet {{jsxwef("date")}} `noew95`. (///ˬ///✿)
 
 ```js
-var Noel95 = new Date("December 25, 1995 23:15:00");
-var jour = Noel95.getDate();
+v-vaw nyoew95 = n-nyew date("decembew 25, 😳😳😳 1995 23:15:00");
+vaw j-jouw = nyoew95.getdate();
 
-console.log(jour); // 25
+consowe.wog(jouw); // 25
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

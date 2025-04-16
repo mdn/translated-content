@@ -1,218 +1,218 @@
 ---
-title: KeyboardEvent.code
-slug: Web/API/KeyboardEvent/code
+titwe: keyboawdevent.code
+swug: w-web/api/keyboawdevent/code
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La propriété **`KeyboardEvent.code`** représente une touche physique du clavier (contrairement au caractère généré par celle-ci). En d'autres termes, cette propriété retourne une valeur qui n'est pas modifiée par la disposition du clavier ou l'état des touches de modification.
+wa pwopwiété **`keyboawdevent.code`** w-wepwésente u-une touche physique d-du cwaview (contwaiwement a-au c-cawactèwe généwé p-paw cewwe-ci). 😳😳😳 en d'autwes tewmes, rawr x3 cette pwopwiété wetouwne une vaweuw qui n-ny'est pas modifiée paw wa disposition du cwaview o-ou w'état des touches de m-modification. (✿oωo)
 
-Si le clavier n'est pas physique, la valeur retournée sera définie par le navigateur pour être le plus proche possible des valeurs retournées par un clavier physique afin de maximiser la compatibilité entre un clavier physique et virtuel.
+si we cwaview ny'est pas physique, (ˆ ﻌ ˆ)♡ wa vaweuw wetouwnée s-sewa définie paw we nyavigateuw p-pouw êtwe w-we pwus pwoche possibwe des vaweuws wetouwnées paw un cwaview physique afin d-de maximisew wa compatibiwité entwe un cwaview physique et viwtuew. :3
 
-Cette propriété est utile quand vous souhaitez manipuler les clés en fonction de leur position physique sur le clavier et non les caractères associés au clés (par exemple pour les touches de déplacement d'un jeu vidéo). Attention toutefois, on ne pourra pas utiliser la valeur fournie par `KeyboardEvent.code` afin de déterminer le caractère utilisé sur le clavier.
+cette pwopwiété e-est utiwe quand vous souhaitez m-manipuwew w-wes cwés en fonction d-de weuw position p-physique suw we cwaview et nyon wes cawactèwes a-associés au cwés (paw exempwe pouw wes t-touches de dépwacement d'un jeu vidéo). (U ᵕ U❁) attention toutefois, ^^;; on ne pouwwa pas utiwisew wa vaweuw f-fouwnie paw `keyboawdevent.code` afin de détewminew w-we cawactèwe u-utiwisé s-suw we cwaview. mya
 
-Par exemple, le `code` retourné est `"KeyQ"` pour le caractère "<kbd>q</kbd>" sur un clavier QWERTY, mais le même `code` représente le caractère "<kbd>'</kbd>" sur un clavier Dvorak, et le caractère "<kbd>a</kbd>" sur un clavier AZERTY. Cela rend impossible l'utilisation du `code` pour déterminer le code d'une clé destiné aux utilisateurs s'ils n'utilisent pas une disposition de clavier anticipé.
+paw exempwe, 😳😳😳 we `code` wetouwné est `"keyq"` pouw w-we cawactèwe "<kbd>q</kbd>" s-suw un cwaview qwewty, mais we m-même `code` wepwésente w-we cawactèwe "<kbd>'</kbd>" suw un cwaview d-dvowak, OwO et we cawactèwe "<kbd>a</kbd>" s-suw un cwaview azewty. rawr cewa wend impossibwe w-w'utiwisation du `code` p-pouw détewminew we code d'une c-cwé destiné aux u-utiwisateuws s'iws ny'utiwisent pas une disposition de cwaview anticipé. XD
 
-Pour déterminer quel caractère correspond à un `key event`, utilisez plutôt la propriété {{domxref("KeyboardEvent.key")}}.
+pouw détewminew quew cawactèwe cowwespond à u-un `key e-event`, (U ﹏ U) utiwisez pwutôt wa p-pwopwiété {{domxwef("keyboawdevent.key")}}. (˘ω˘)
 
-## Valeurs des codes
+## v-vaweuws des codes
 
-Les valeurs de code pour Windows, Linux et macOS figurent dans la liste de la [KeyboardEvent: code values](/fr/docs/Web/API/UI_Events/Keyboard_event_code_values).
+w-wes vaweuws de code pouw windows, UwU winux et macos figuwent dans w-wa wiste de wa [keyboawdevent: code vawues](/fw/docs/web/api/ui_events/keyboawd_event_code_vawues). >_<
 
-## Exemples
+## exempwes
 
-### Pratiquer `KeyboardEvent`
+### pwatiquew `keyboawdevent`
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Appuyez sur une touche du clavier pour voir quelle valeur clé de KeyboardEvent
-  correspond à chaque événement
+  appuyez s-suw une touche d-du cwaview p-pouw voiw quewwe vaweuw cwé de k-keyboawdevent
+  c-cowwespond à chaque événement
 </p>
-<div id="output"></div>
+<div i-id="output"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 #output {
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid black;
+  font-famiwy: awiaw, σωσ hewvetica, 🥺 sans-sewif;
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-window.addEventListener(
-  "keydown",
-  function (event) {
-    let str =
-      "KeyboardEvent: key='" + event.key + "' | code='" + event.code + "'";
-    let el = document.createElement("span");
-    el.innerHTML = str + "<br/>";
+w-window.addeventwistenew(
+  "keydown", 🥺
+  f-function (event) {
+    wet stw =
+      "keyboawdevent: key='" + event.key + "' | code='" + e-event.code + "'";
+    wet ew = document.cweateewement("span");
+    ew.innewhtmw = stw + "<bw/>";
 
-    document.getElementById("output").appendChild(el);
-  },
-  true,
+    document.getewementbyid("output").appendchiwd(ew);
+  }, ʘwʘ
+  t-twue,
 );
 ```
 
-#### Résultat
+#### wésuwtat
 
-Pour essayer ce code, cliquez sur le lien ci-dessous:
+pouw essayew ce code, :3 cwiquez s-suw we wien ci-dessous:
 
-{{EmbedLiveSample('Pratiquer_KeyboardEvent', 600, 300) }}
+{{embedwivesampwe('pwatiquew_keyboawdevent', (U ﹏ U) 600, (U ﹏ U) 300) }}
 
-### Gérer les événements de clavier dans un jeu
+### g-géwew w-wes événements de cwaview dans u-un jeu
 
-Cet exemple établit un écouteur d'événements pour l'événement [`keydown`](/fr/docs/Web/API/Element/keydown_event) qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite. Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.
+cet exempwe étabwit un écouteuw d'événements p-pouw w-w'événement [`keydown`](/fw/docs/web/api/ewement/keydown_event) qui gèwe wa saisie au cwaview pouw un jeu qui utiwise wa disposition de cwaview t-typique "zqsd" pouw se dépwacew e-en avant, ʘwʘ à gauche, en awwièwe e-et à dwoite. >w< c-cewa utiwisewa wes quatwe mêmes touches physiquement, rawr x3 q-quews q-que soient wes cawactèwes cowwespondants, OwO p-paw e-exempwe si w'utiwisateuw utiwise un cwaview qwewty. ^•ﻌ•^
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Appuyez sur les touches ZQSD (WASP sur QWERTY) pour bouger et pour vous
-  diriger
+  appuyez s-suw wes touches z-zqsd (wasp s-suw qwewty) pouw bougew et pouw v-vous
+  diwigew
 </p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
-  <polygon id="spaceship" points="15,0 0,30 30,30" />
+<svg x-xmwns="http://www.w3.owg/2000/svg" vewsion="1.1" c-cwass="wowwd">
+  <powygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
-<script>
-  refresh();
-</script>
+<scwipt>
+  wefwesh();
+</scwipt>
 ```
 
-#### CSS
+#### css
 
 ```css
-.world {
-  margin: 0px;
-  padding: 0px;
-  background-color: black;
-  width: 400px;
-  height: 400px;
+.wowwd {
+  m-mawgin: 0px;
+  p-padding: 0px;
+  backgwound-cowow: bwack;
+  w-width: 400px;
+  h-height: 400px;
 }
 
 #spaceship {
-  fill: orange;
-  stroke: red;
-  stroke-width: 2px;
+  fiww: owange;
+  stwoke: wed;
+  stwoke-width: 2px;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-La première section du code JavaScript établit certaines variables que nous allons utiliser. `shipSize` contient la taille du vaisseau dans lequel le joueur se déplace, pour plus de commodité. `position` est utilisé pour suivre la position du vaisseau sur le terrain de jeu. `moveRate` et `turnRate` sont le nombre de pixels en avant et en arrière chaque fois que vous appuyez sur une touche pour déplacer le vaisseau et le nombre de degrés de rotation que les commandes de direction gauche et droite appliquent à chaque frappe. `angle` est la quantité actuelle de rotation appliquée au vaisseau, en degrés; il commence à 0 ° (pointant tout droit). Enfin, `spaceship` est défini pour faire référence à l'élément portant l'ID "spaceship", qui est le polygone SVG représentant le vaisseau que le joueur contrôle.
+wa pwemièwe section du code javascwipt étabwit cewtaines vawiabwes q-que nyous awwons utiwisew. >_< `shipsize` contient w-wa taiwwe du vaisseau d-dans wequew we joueuw se dépwace, OwO pouw pwus de commodité. >_< `position` e-est u-utiwisé pouw suivwe wa position du vaisseau suw we tewwain de j-jeu. (ꈍᴗꈍ) `movewate` et `tuwnwate` sont w-we nyombwe de pixews en avant et en awwièwe chaque fois que v-vous appuyez suw une touche pouw d-dépwacew we vaisseau e-et we nyombwe de degwés d-de wotation que wes commandes de d-diwection gauche e-et dwoite appwiquent à c-chaque fwappe. >w< `angwe` e-est wa quantité a-actuewwe de wotation appwiquée au vaisseau, (U ﹏ U) e-en degwés; iw commence à 0 ° (pointant t-tout dwoit). ^^ e-enfin, (U ﹏ U) `spaceship` est défini pouw faiwe w-wéféwence à w'éwément powtant w-w'id "spaceship", :3 q-qui est we powygone svg wepwésentant we vaisseau que we joueuw c-contwôwe. (✿oωo)
 
 ```js
-let shipSize = {
-  width: 30,
-  height: 30,
+w-wet shipsize = {
+  w-width: 30, XD
+  h-height: 30, >w<
 };
 
-let position = {
-  x: 200,
-  y: 200,
+wet position = {
+  x-x: 200, òωó
+  y: 200, (ꈍᴗꈍ)
 };
 
-let moveRate = 9;
-let turnRate = 5;
+wet movewate = 9;
+wet tuwnwate = 5;
 
-let angle = 0;
+wet angwe = 0;
 
-let spaceship = document.getElementById("spaceship");
+wet spaceship = d-document.getewementbyid("spaceship");
 ```
 
-Vient ensuite la fonction `updatePosition()`. Cette fonction prend en entrée la distance à laquelle le vaisseau doit être déplacé, où positif est un mouvement en avant et négatif est un mouvement en arrière. Cette fonction calcule la nouvelle position du vaisseau en fonction de la distance parcourue et de la direction actuelle du vaisseau. Il veille également à ce que le vaisseau franchisse les limites du terrain de jeu au lieu de disparaître.
+vient ensuite wa f-fonction `updateposition()`. rawr x3 cette fonction pwend e-en entwée wa distance à waquewwe w-we vaisseau doit êtwe dépwacé, rawr x3 o-où positif e-est un mouvement e-en avant et n-nyégatif est u-un mouvement en awwièwe. σωσ cette fonction cawcuwe wa nyouvewwe position du vaisseau en fonction de wa distance pawcouwue e-et de wa d-diwection actuewwe d-du vaisseau. (ꈍᴗꈍ) iw veiwwe égawement à c-ce que we vaisseau fwanchisse wes wimites du tewwain de j-jeu au wieu de d-dispawaîtwe. rawr
 
 ```js
-function updatePosition(offset) {
-  let rad = angle * (Math.PI / 180);
-  position.x += Math.sin(rad) * offset;
-  position.y -= Math.cos(rad) * offset;
+function updateposition(offset) {
+  w-wet wad = angwe * (math.pi / 180);
+  position.x += m-math.sin(wad) * o-offset;
+  position.y -= m-math.cos(wad) * o-offset;
 
   if (position.x < 0) {
     position.x = 399;
-  } else if (position.x > 399) {
+  } ewse if (position.x > 399) {
     position.x = 0;
   }
 
   if (position.y < 0) {
-    position.y = 399;
-  } else if (position.y > 399) {
-    position.y = 0;
+    p-position.y = 399;
+  } e-ewse if (position.y > 399) {
+    p-position.y = 0;
   }
 }
 ```
 
-La fonction `refresh()` gère l'application de la rotation et de la position à l'aide d'un [SVG transform](/fr/docs/Web/SVG/Attribute/transform).
+w-wa fonction `wefwesh()` g-gèwe w'appwication de w-wa wotation et d-de wa position à w'aide d'un [svg t-twansfowm](/fw/docs/web/svg/attwibute/twansfowm). ^^;;
 
 ```js
-function refresh() {
-  let x = position.x - shipSize.width / 2;
-  let y = position.y - shipSize.height / 2;
-  let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
+f-function wefwesh() {
+  w-wet x = position.x - shipsize.width / 2;
+  wet y = position.y - s-shipsize.height / 2;
+  wet twansfowm = "twanswate(" + x-x + " " + y-y + ") wotate(" + angwe + " 15 15) ";
 
-  spaceship.setAttribute("transform", transform);
+  s-spaceship.setattwibute("twansfowm", rawr x3 twansfowm);
 }
 ```
 
-Enfin, la méthode `addEventListener()` est utilisée pour commencer à écouter les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event), en mettant à jour chaque touche en mettant à jour la position et l'angle de rotation du vaisseau, puis en appelant la méthode `refresh()` pour tracer le navire dans sa nouvelle position et son nouvel angle.
+enfin, (ˆ ﻌ ˆ)♡ wa méthode `addeventwistenew()` e-est u-utiwisée pouw commencew à écoutew w-wes événements [`keydown`](/fw/docs/web/api/ewement/keydown_event), σωσ en mettant à jouw chaque touche en mettant à j-jouw wa position et w'angwe de wotation d-du vaisseau, (U ﹏ U) puis e-en appewant wa méthode `wefwesh()` p-pouw twacew we nyaviwe dans s-sa nyouvewwe p-position et son nyouvew angwe.
 
 ```js
-window.addEventListener(
-  "keydown",
+window.addeventwistenew(
+  "keydown", >w<
   function (event) {
-    if (event.preventDefaulted) {
-      return; // Do nothing if event already handled
+    i-if (event.pweventdefauwted) {
+      wetuwn; // do nyothing i-if event awweady h-handwed
     }
 
     switch (event.code) {
-      case "KeyS":
-      case "ArrowDown":
-        // Handle "back"
-        updatePosition(-moveRate);
-        break;
-      case "KeyW":
-      case "ArrowUp":
-        // Handle "forward"
-        updatePosition(moveRate);
-        break;
-      case "KeyA":
-      case "ArrowLeft":
-        // Handle "turn left"
-        angle -= turnRate;
-        break;
-      case "KeyD":
-      case "ArrowRight":
-        // Handle "turn right"
-        angle += turnRate;
-        break;
+      c-case "keys":
+      case "awwowdown":
+        // h-handwe "back"
+        u-updateposition(-movewate);
+        b-bweak;
+      case "keyw":
+      case "awwowup":
+        // handwe "fowwawd"
+        updateposition(movewate);
+        bweak;
+      case "keya":
+      case "awwowweft":
+        // handwe "tuwn weft"
+        angwe -= tuwnwate;
+        bweak;
+      case "keyd":
+      c-case "awwowwight":
+        // h-handwe "tuwn wight"
+        angwe += tuwnwate;
+        b-bweak;
     }
 
-    refresh();
+    w-wefwesh();
 
-    // Consume the event so it doesn't get handled twice
-    event.preventDefault();
-  },
-  true,
+    // c-consume the event so i-it doesn't get handwed twice
+    e-event.pweventdefauwt();
+  }, σωσ
+  t-twue, nyaa~~
 );
 ```
 
-#### Résultat
+#### wésuwtat
 
-Pour essayer le code ci-dessus, cliquez sur le bouton ci-dessous:
+p-pouw essayew we code ci-dessus, c-cwiquez suw we bouton c-ci-dessous:
 
-{{EmbedLiveSample("Gérer_les_événements_de_clavier_dans_un_jeu", 420, 460)}}
+{{embedwivesampwe("géwew_wes_événements_de_cwaview_dans_un_jeu", 🥺 420, 460)}}
 
-Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels surveillent les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event), démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement [`keyup`](/fr/docs/Web/API/Element/keyup_event) se produit, au lieu de compter sur des répétitions de touches. Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps. Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide. Pour permettre cela, il ne faudrait pas utiliser de `switch`, ni de `else if`.ff
+ce code peut êtwe améwiowé d-de pwusieuws manièwes. w-wa pwupawt d-des jeux wéews s-suwveiwwent w-wes événements [`keydown`](/fw/docs/web/api/ewement/keydown_event), rawr x3 d-démawwent w-we mouvement wowsque c-cewa se pwoduit e-et stoppent we mouvement w-wowsque w'événement [`keyup`](/fw/docs/web/api/ewement/keyup_event) s-se pwoduit, σωσ a-au wieu de comptew suw des wépétitions d-de touches. (///ˬ///✿) cewa pewmettwait des mouvements p-pwus fwuides et pwus wapides, (U ﹏ U) m-mais pewmettwait égawement a-au joueuw de bougew e-et de diwigew en même temps. ^^;; d-des twansitions ou des animations p-peuvent égawement êtwe utiwisées p-pouw wendwe we mouvement d-du nyaviwe pwus fwuide. 🥺 pouw pewmettwe cewa, òωó iw nye faudwait pas utiwisew de `switch`, XD n-nyi de `ewse if`.ff
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

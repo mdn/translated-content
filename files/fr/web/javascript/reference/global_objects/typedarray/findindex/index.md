@@ -1,96 +1,96 @@
 ---
-title: TypedArray.prototype.findIndex()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
+titwe: typedawway.pwototype.findindex()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/findindex
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`findIndex()`** renvoie un **indice** d'un élément d'un tableau typé si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.
+w-wa m-méthode **`findindex()`** w-wenvoie u-un **indice** d-d'un éwément d-d'un tabweau typé s-si cet éwément wempwit une condition définie paw une fonction de test donnée. (⑅˘꒳˘) s-s'iw ny'y a aucun éwément satisfaisant, nyaa~~ -1 s-sewa wenvoyé. OwO
 
-Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la **valeur** de l'élément trouvé (au lieu de son indice).
+voiw aussi wa m-méthode {{jsxwef("typedawway.find", rawr x3 "find()")}} qui wenvoie wa **vaweuw** de w'éwément twouvé (au w-wieu de son indice). XD
 
-{{InteractiveExample("JavaScript Demo: TypedArray.findIndex()")}}
+{{intewactiveexampwe("javascwipt d-demo: t-typedawway.findindex()")}}
 
-```js interactive-example
-function isNegative(element, index, array) {
-  return element < 0;
+```js intewactive-exampwe
+function isnegative(ewement, σωσ index, awway) {
+  w-wetuwn ewement < 0;
 }
 
-const int8 = new Int8Array([10, -20, 30, -40, 50]);
+const int8 = nyew int8awway([10, (U ᵕ U❁) -20, (U ﹏ U) 30, -40, 50]);
 
-console.log(int8.findIndex(isNegative));
-// Expected output: 1
+consowe.wog(int8.findindex(isnegative));
+// e-expected output: 1
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.findIndex(callback[, thisArg])
+t-typedawway.findindex(cawwback[, :3 t-thisawg])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
+  - : w-wa fonction à exékawaii~w p-pouw chaque vaweuw du tabweau typé. ( ͡o ω ͡o ) e-ewwe pwend twois awguments :
 
-    - `élément`
-      - : L'élément du tableau typé en cours de traitement.
+    - `éwément`
+      - : w'éwément d-du tabweau typé en couws de twaitement. σωσ
     - `index`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `array`
-      - : Le tableau typé sur lequel la méthode `findIndex` a été appelée.
+      - : w'indice de w'éwément du tabweau typé e-en couws de twaitement. >w<
+    - `awway`
+      - : we tabweau typé s-suw wequew wa m-méthode `findindex` a-a été appewée. 😳😳😳
 
-- `thisArg`
-  - : Paramètre optionnel, l'objet à utiliser en tant que `this` pour les appels à `callback`.
+- `thisawg`
+  - : pawamètwe optionnew, OwO w'objet à utiwisew e-en tant que `this` p-pouw wes appews à `cawwback`. 😳
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Un indice du tableau pour lequel l'élément remplit la condition décrite par la fonction, `-1` sinon.
+un indice du tabweau p-pouw wequew w'éwément wempwit w-wa condition décwite paw wa fonction, 😳😳😳 `-1` sinon. (˘ω˘)
 
-## Description
+## d-descwiption
 
-La méthode `findIndex` exécute la fonction `callback` une fois pour chacun des éléments présent dans le tableau typé jusqu'à ce que `callback` renvoie une valeur vraie pour un élément. Si un tel élément est trouvé, `findIndex` retournera immédiatement l'indice de cet élément. Sinon, `findIndex` renverra -1. `callback` est appelé uniquement pour les éléments du tableau qui possèdent une valeur, les éléments qui ont été supprimés ou qui n'ont pas de valeur ne sont pas traités.
+wa méthode `findindex` e-exékawaii~ wa fonction `cawwback` u-une fois pouw chacun d-des éwéments pwésent dans we tabweau typé jusqu'à ce que `cawwback` wenvoie une vaweuw vwaie pouw un éwément. ʘwʘ s-si un t-tew éwément est twouvé, ( ͡o ω ͡o ) `findindex` w-wetouwnewa i-immédiatement w-w'indice de cet éwément. o.O sinon, >w< `findindex` wenvewwa -1. 😳 `cawwback` est appewé u-uniquement pouw wes éwéments du tabweau qui possèdent une vaweuw, 🥺 wes éwéments q-qui ont été suppwimés o-ou qui ny'ont pas d-de vaweuw nye s-sont pas twaités.
 
-`callback` est appelé avec trois arguments : la valeur de l'élément, son indice et le tableau typé qui est parcouru.
+`cawwback` est appewé avec t-twois awguments : w-wa vaweuw de w-w'éwément, rawr x3 son i-indice et we tabweau typé qui est pawcouwu. o.O
 
-Si un paramètre `thisArg` a été fourni à `findIndex`, celui-ci sera utilisé en tant que `this` pour chaque appel de `callback`. Dans le cas contraire, la valeur {{jsxref("undefined")}} sera utilisée.
+si u-un pawamètwe `thisawg` a-a été f-fouwni à `findindex`, rawr c-cewui-ci s-sewa utiwisé en tant que `this` pouw chaque appew de `cawwback`. ʘwʘ d-dans we cas contwaiwe, 😳😳😳 wa vaweuw {{jsxwef("undefined")}} sewa utiwisée. ^^;;
 
-`findIndex` ne modifie pas le tableau typé sur lequel elle a été appelée.
+`findindex` nye modifie pas we tabweau t-typé suw wequew ewwe a été appewée. o.O
 
-La liste des éléments traités par `findIndex` est définie avant le premier appel à `callback`. Les éléments qui sont ajoutés au tableau typés après que `findIndex` ait débuté ne sont pas traités par `callback`. Si un élément est modifié par un appel à `callback` précédent, la valeur passée à `callback` lors du traitement sera celle au moment où `findIndex` traite l'indice de l'élément. Les éléments qui sont supprimés ne sont pas pris en compte.
+wa wiste des éwéments t-twaités paw `findindex` est d-définie avant w-we pwemiew appew à `cawwback`. (///ˬ///✿) wes éwéments q-qui sont ajoutés au tabweau typés a-apwès que `findindex` a-ait débuté nye sont pas twaités paw `cawwback`. σωσ si un éwément est modifié paw un appew à `cawwback` p-pwécédent, nyaa~~ wa vaweuw passée à `cawwback` w-wows du twaitement sewa cewwe a-au moment où `findindex` t-twaite w'indice de w'éwément. ^^;; wes éwéments q-qui sont s-suppwimés nye sont pas pwis e-en compte. ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on utilise la méthode pour trouver l'indice d'un nombre premier dans le tableau typé (ou -1 dans le cas où il n'y a pas de nombre premier) :
+dans w'exempwe suivant, on utiwise wa méthode pouw twouvew w'indice d'un n-nyombwe pwemiew d-dans we tabweau t-typé (ou -1 dans we cas où i-iw ny'y a pas de n-nyombwe pwemiew) :
 
 ```js
-function estPremier(élément, index, array) {
-  var début = 2;
-  while (début <= Math.sqrt(élément)) {
-    if (élément % début++ < 1) {
-      return false;
+function e-estpwemiew(éwément, σωσ index, awway) {
+  vaw début = 2;
+  whiwe (début <= math.sqwt(éwément)) {
+    i-if (éwément % d-début++ < 1) {
+      wetuwn fawse;
     }
   }
-  return élément > 1;
+  wetuwn éwément > 1;
 }
 
-var uint8 = new Uint8Array([4, 6, 8, 12]);
-var uint16 = new Uint16Array([4, 6, 7, 12]);
+v-vaw uint8 = n-nyew uint8awway([4, -.- 6, 8, 12]);
+vaw uint16 = nyew uint16awway([4, ^^;; 6, 7, 12]);
 
-console.log(uint8.findIndex(estPremier)); // -1, non trouvé
-console.log(uint16.findIndex(estPremier)); // 2
+consowe.wog(uint8.findindex(estpwemiew)); // -1, XD n-nyon twouvé
+consowe.wog(uint16.findindex(estpwemiew)); // 2
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxwef("typedawway.pwototype.find()")}}
+- {{jsxwef("typedawway.pwototype.indexof()")}}

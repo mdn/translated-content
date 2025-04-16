@@ -1,49 +1,49 @@
 ---
-title: PerformanceObserver()
-slug: Web/API/PerformanceObserver/PerformanceObserver
+titwe: pewfowmanceobsewvew()
+swug: web/api/pewfowmanceobsewvew/pewfowmanceobsewvew
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-Le constructeur **`PerformanceObserver()`** crée un nouvel objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) avec le `callback` d'observation donné. La fonction de rappel de l'observateur est invoquée lorsque des [événements d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) sont répertoriés pour les [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) qui ont été enregistrés, via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).
+w-we constwucteuw **`pewfowmanceobsewvew()`** cwée u-un nyouvew o-objet [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) a-avec we `cawwback` d-d'obsewvation d-donné. >w< wa f-fonction de wappew de w'obsewvateuw est invoquée wowsque des [événements d'entwée d-de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) sont wépewtowiés pouw w-wes [types d'entwées](/fw/docs/web/api/pewfowmanceentwy/entwytype) qui ont été e-enwegistwés, rawr via wa méthode [`obsewve()`](/fw/docs/web/api/pewfowmanceobsewvew/obsewve). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-const observer = new PerformanceObserver(callback);
+const obsewvew = n-nyew pewfowmanceobsewvew(cawwback);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
-  - : Une fonction de rappel qui sera invoquée lorsque des événements de performance _observés_ sont enregistrés. Lorsque la fonction de rappel est invoquée, son premier paramètre est une [liste des entrées de l'observateur de performance](/fr/docs/Web/API/PerformanceObserverEntryList) et le second paramètre est l'objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) courant.
+- `cawwback`
+  - : une fonction de wappew q-qui sewa invoquée w-wowsque des événements de pewfowmance _obsewvés_ sont enwegistwés. ^^ w-wowsque wa fonction de wappew est invoquée, 😳😳😳 son pwemiew pawamètwe est une [wiste d-des entwées de w'obsewvateuw d-de pewfowmance](/fw/docs/web/api/pewfowmanceobsewvewentwywist) e-et we second pawamètwe e-est w'objet [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) c-couwant. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) qui appellera le `callback` spécifiée lorsque des événements de performance observés se produisent.
+un nyouvew objet [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) q-qui appewwewa we `cawwback` spécifiée wowsque d-des événements de pewfowmance obsewvés se pwoduisent. 😳
 
-## Exemple
+## exempwe
 
 ```js
-const observer = new PerformanceObserver(function (list, obj) {
-  let entries = list.getEntries();
-  for (let i = 0; i < entries.length; i++) {
-    // Traiter les événements "mark" et "frame"
+const obsewvew = nyew p-pewfowmanceobsewvew(function (wist, -.- obj) {
+  w-wet entwies = wist.getentwies();
+  f-fow (wet i = 0; i-i < entwies.wength; i++) {
+    // twaitew wes événements "mawk" et "fwame"
   }
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
+o-obsewvew.obsewve({ e-entwytypes: ["mawk", 🥺 "fwame"] });
 
-function perf_observer(list, observer) {
-  // Traiter l'événement "measure"
+function p-pewf_obsewvew(wist, o.O o-obsewvew) {
+  // twaitew w-w'événement "measuwe"
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({ entryTypes: ["measure"] });
+const o-obsewvew2 = nyew pewfowmanceobsewvew(pewf_obsewvew);
+obsewvew2.obsewve({ e-entwytypes: ["measuwe"] });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

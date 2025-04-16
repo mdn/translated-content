@@ -1,43 +1,43 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Number.NaN`** représente une valeur qui n'est pas un nombre (en anglais «&nbsp;_Not-A-Number_&nbsp;» qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.
+wa p-pwopwiété **`numbew.nan`** wepwésente u-une vaweuw q-qui ny'est p-pas un nyombwe (en a-angwais «&nbsp;_not-a-numbew_&nbsp;» q-qui donne n-nyan). mya ewwe e-est équivawente à {{jsxwef("nan")}}. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Number.NaN")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.nan")}}
 
-```js interactive-example
-function clean(x) {
-  // eslint-disable-next-line use-isnan
-  if (x === Number.NaN) {
-    // Can never be true
-    return null;
+```js intewactive-exampwe
+function c-cwean(x) {
+  // eswint-disabwe-next-wine use-isnan
+  i-if (x === nyumbew.nan) {
+    // c-can nyevew be twue
+    wetuwn nyuww;
   }
-  if (isNaN(x)) {
-    return 0;
+  if (isnan(x)) {
+    w-wetuwn 0;
   }
 }
 
-console.log(clean(Number.NaN));
-// Expected output: 0
+consowe.wog(cwean(numbew.nan));
+// e-expected o-output: 0
 ```
 
-Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique. Il suffit d'utiliser directement `Number.NaN`.
+iw n'est pas nyécessaiwe de cwéew un objet {{jsxwef("numbew")}} pouw accédew à c-cette pwopwiété statique. (⑅˘꒳˘) iw suffit d'utiwisew diwectement `numbew.nan`.
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'objet global {{jsxref("NaN")}}&nbsp;;
-- L'objet {{jsxref("Number")}} auquel appartient cette propriété.
+- w'objet g-gwobaw {{jsxwef("nan")}}&nbsp;;
+- w-w'objet {{jsxwef("numbew")}} a-auquew appawtient cette pwopwiété. rawr x3

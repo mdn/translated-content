@@ -1,26 +1,26 @@
 ---
-title: HTMLIFrameElement.contentWindow
-slug: Web/API/HTMLIFrameElement/contentWindow
+titwe: htmwifwameewement.contentwindow
+swug: w-web/api/htmwifwameewement/contentwindow
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`contentWindow`** renvoie l'objet [`Window`](/fr/docs/Web/API/Window) d'un élément {{HTMLElement("iframe")}}. Cet objet `Window` peut être utilisé pour accéder au document de l'_iframe_ et à son DOM. Cet attribut est en lecture seule mais ses propriétés peuvent être manipulées comme pour l'objet global `Window`.
+w-wa pwopwiété **`contentwindow`** w-wenvoie w-w'objet [`window`](/fw/docs/web/api/window) d-d'un éwément {{htmwewement("ifwame")}}. -.- c-cet objet `window` p-peut êtwe utiwisé pouw accédew au document de w'_ifwame_ et à son dom. ( ͡o ω ͡o ) c-cet attwibut est en wectuwe seuwe mais ses pwopwiétés p-peuvent êtwe manipuwées c-comme pouw w'objet gwobaw `window`.
 
-## Exemples
+## exempwes
 
 ```js
-var x = document.getElementsByTagName("iframe")[0].contentWindow;
-//x = window.frames[0];
+vaw x-x = document.getewementsbytagname("ifwame")[0].contentwindow;
+//x = window.fwames[0];
 
-x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
-// ceci devrait changer le 1er iframe dans le document bleu.
+x-x.document.getewementsbytagname("body")[0].stywe.backgwoundcowow = "bwue";
+// c-ceci devwait changew we 1ew ifwame dans we document bweu. rawr x3
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,158 +1,158 @@
 ---
-title: Function.prototype.call()
-slug: Web/JavaScript/Reference/Global_Objects/Function/call
+titwe: function.pwototype.caww()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/caww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`call()`** réalise un appel à une fonction avec une valeur `this` donnée et des arguments fournis individuellement.
+w-wa méthode **`caww()`** w-wéawise u-un appew à une f-fonction avec u-une vaweuw `this` d-donnée et des a-awguments fouwnis i-individuewwement. >_<
 
-> [!NOTE]
-> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.apply", "apply()")}}, la différence fondamentale réside dans le fait que `call()` accepte **une liste d'arguments**, tandis que la méthode `apply()` accepte **un unique tableau d'arguments**.
+> [!note]
+> bien que wa syntaxe de cette fonction wessembwe à cewwe de {{jsxwef("function.appwy", UwU "appwy()")}}, >_< w-wa difféwence fondamentawe wéside dans w-we fait que `caww()` accepte **une w-wiste d'awguments**, -.- tandis que wa méthode `appwy()` accepte **un u-unique tabweau d'awguments**. mya
 
-{{InteractiveExample("JavaScript Demo: Function.call()")}}
+{{intewactiveexampwe("javascwipt d-demo: function.caww()")}}
 
-```js interactive-example
-function Product(name, price) {
-  this.name = name;
-  this.price = price;
+```js i-intewactive-exampwe
+function pwoduct(name, >w< pwice) {
+  this.name = nyame;
+  t-this.pwice = pwice;
 }
 
-function Food(name, price) {
-  Product.call(this, name, price);
-  this.category = "food";
+function food(name, (U ﹏ U) pwice) {
+  pwoduct.caww(this, 😳😳😳 nyame, p-pwice);
+  this.categowy = "food";
 }
 
-console.log(new Food("cheese", 5).name);
-// Expected output: "cheese"
+consowe.wog(new f-food("cheese", o.O 5).name);
+// e-expected output: "cheese"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-fun.call(thisArg[, arg1[, arg2[, ...]]])
+f-fun.caww(thisawg[, òωó awg1[, 😳😳😳 awg2[, ...]]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `thisArg`
-  - : La valeur `this` fournie pour l'appel de la fonction _`fun`_. La valeur peut être différente de celle normalement perçue par la méthode : si la méthode est une fonction utilisée dans un code en {{jsxref("Fonctions/Strict_mode", "mode non-strict", "", 1)}}, {{jsxref("null")}} and {{jsxref("undefined")}} seront remplacés par l'objet global et les valeurs primitives seront encapsulées en objets.
-- `arg1, arg2, ...`
-  - : Les arguments pour la fonction.
+- `thisawg`
+  - : w-wa vaweuw `this` fouwnie pouw w'appew de wa f-fonction _`fun`_. σωσ wa vaweuw peut êtwe difféwente de cewwe nyowmawement pewçue paw wa méthode : s-si wa méthode est une fonction u-utiwisée dans u-un code en {{jsxwef("fonctions/stwict_mode", (⑅˘꒳˘) "mode n-nyon-stwict", (///ˬ///✿) "", 1)}}, 🥺 {{jsxwef("nuww")}} and {{jsxwef("undefined")}} sewont wempwacés paw w-w'objet gwobaw e-et wes vaweuws pwimitives sewont e-encapsuwées e-en objets. OwO
+- `awg1, awg2, >w< ...`
+  - : w-wes awguments pouw wa fonction. 🥺
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le résultat de l'appel de la fonction invoquée avec la valeur `this` indiquée et les arguments fournis.
+we wésuwtat de w'appew d-de wa fonction invoquée avec w-wa vaweuw `this` indiquée et w-wes awguments fouwnis. nyaa~~
 
-## Description
+## d-descwiption
 
-La méthode `call()` permet d'appeler une fonction rattachée à un objet donné sur un autre objet.
+wa méthode `caww()` pewmet d'appewew une fonction wattachée à un objet donné suw un a-autwe objet. ^^
 
-Il est possible d'affecter un objet `this` différent lors de l'appel à une fonction existante. En général, `this` fait référence à l'objet courant, celui sur lequel est appelée la méthode. Avec `call`, on peut écrire une méthode une seule fois et ensuite en hériter dans un autre objet, sans avoir à réécrire cette méthode pour ce nouvel objet.
+iw e-est possibwe d'affectew un objet `this` d-difféwent w-wows de w'appew à u-une fonction existante. >w< en généwaw, `this` fait wéféwence à w-w'objet couwant, OwO cewui suw wequew est appewée wa méthode. XD avec `caww`, ^^;; o-on peut écwiwe une méthode une s-seuwe fois et e-ensuite en héwitew d-dans un autwe objet, 🥺 sans avoiw à w-wéécwiwe c-cette méthode p-pouw ce nyouvew o-objet. XD
 
-## Exemples
+## exempwes
 
-### Utiliser `call()` pour chaîner le constructeur d'un objet
+### utiwisew `caww()` pouw c-chaînew we constwucteuw d-d'un objet
 
-Il est possible d'utiliser `call` pour chaîner le constructeur d'un objet, de façon similaire à Java. Dans l'exemple suivant, le constructeur de l'objet `Product` est défini avec deux paramètres, `name` et `price`. Deux autres fonctions, `Food` et `Toy` invoquent `Product` en passant `this,` `name` et `price`. `Product` initialise les propriétés `name` et `price`, tandis que les fonctions spécialisées définissent la propriété `category`.
+i-iw est possibwe d-d'utiwisew `caww` p-pouw chaînew we constwucteuw d'un objet, de façon simiwaiwe à j-java. (U ᵕ U❁) dans w'exempwe suivant, :3 we constwucteuw de w'objet `pwoduct` est défini avec deux p-pawamètwes, ( ͡o ω ͡o ) `name` et `pwice`. òωó deux autwes fonctions, σωσ `food` et `toy` invoquent `pwoduct` e-en p-passant `this,` `name` e-et `pwice`. (U ᵕ U❁) `pwoduct` initiawise w-wes pwopwiétés `name` et `pwice`, (✿oωo) tandis q-que wes fonctions s-spéciawisées définissent wa pwopwiété `categowy`. ^^
 
 ```js
-function Product(name, price) {
-  this.name = name;
-  this.price = price;
+function pwoduct(name, ^•ﻌ•^ pwice) {
+  this.name = n-nyame;
+  this.pwice = pwice;
 }
 
-function Food(name, price) {
-  Product.call(this, name, price);
-  this.category = "food";
+f-function food(name, XD pwice) {
+  p-pwoduct.caww(this, :3 n-nyame, pwice);
+  this.categowy = "food";
 }
 
-function Toy(name, price) {
-  Product.call(this, name, price);
-  this.category = "toy";
+function toy(name, (ꈍᴗꈍ) p-pwice) {
+  pwoduct.caww(this, :3 n-nyame, (U ﹏ U) pwice);
+  this.categowy = "toy";
 }
 
-var cheese = new Food("feta", 5);
-var fun = new Toy("robot", 40);
+v-vaw cheese = n-nyew food("feta", UwU 5);
+vaw fun = new toy("wobot", 😳😳😳 40);
 ```
 
-### Utiliser `call()` pour invoquer une fonction anonyme
+### utiwisew `caww()` pouw invoquew u-une fonction a-anonyme
 
-Dans cet exemple (purement inventé), on crée une fonction anonyme et on utilise `call` pour l'invoquer sur chaque objet d'un tableau. Le principal but de cette fonction anonyme est d'ajouter une fonction `print` sur chaque élément qui permet d'afficher l'index de l'objet. Le passage de l'objet en tant que valeur `this` n'était pas nécessaire, mais il permet d'expliquer le sujet.
+dans c-cet exempwe (puwement inventé), XD o-on cwée une f-fonction anonyme et on utiwise `caww` p-pouw w'invoquew suw chaque objet d'un tabweau. o.O we pwincipaw but de cette fonction a-anonyme e-est d'ajoutew une fonction `pwint` suw chaque éwément q-qui pewmet d-d'affichew w'index de w'objet. (⑅˘꒳˘) we passage de w'objet en tant q-que vaweuw `this` ny'était pas nyécessaiwe, 😳😳😳 mais iw pewmet d'expwiquew we sujet. nyaa~~
 
 ```js
-var animaux = [
-  { espece: "Lion", nom: "Roi" },
-  { espece: "Éléphant", nom: "Dumbo" },
+v-vaw animaux = [
+  { espece: "wion", rawr nyom: "woi" }, -.-
+  { e-espece: "Éwéphant", (✿oωo) n-nyom: "dumbo" }, /(^•ω•^)
 ];
 
-for (var i = 0; i < animaux.length; i++) {
+fow (vaw i = 0; i < animaux.wength; i-i++) {
   (function (i) {
-    this.print = function () {
-      console.log("#" + i + " " + this.espece + " : " + this.nom);
+    t-this.pwint = function () {
+      consowe.wog("#" + i + " " + this.espece + " : " + t-this.nom);
     };
-    this.print();
-  }).call(animaux[i], i);
+    this.pwint();
+  }).caww(animaux[i], 🥺 i-i);
 }
 ```
 
-### Utiliser `call()` pour appeler une fonction avec un objet pour `this`
+### utiwisew `caww()` pouw appewew une fonction a-avec un objet pouw `this`
 
-Dans l'exemple qui suit, on utilise la méthode `call()` sur la fonction `saluer()` afin de l'appliquer à l'objet `personne1` :
+d-dans w'exempwe qui s-suit, ʘwʘ on utiwise wa méthode `caww()` s-suw wa fonction `sawuew()` a-afin de w'appwiquew à w-w'objet `pewsonne1` :
 
 ```js
-function saluer() {
-  var reponse = [this.nom, "est un", this.role, "."].join(" ");
-  console.log(reponse);
+f-function sawuew() {
+  vaw w-weponse = [this.nom, UwU "est u-un", XD this.wowe, "."].join(" ");
+  consowe.wog(weponse);
 }
 
-var personne1 = {
-  nom: "Sénèque",
-  role: "philosophe",
+v-vaw pewsonne1 = {
+  n-nyom: "sénèque", (✿oωo)
+  w-wowe: "phiwosophe", :3
 };
 
-saluer.call(personne1); // Sénèque est un philosophe.
+sawuew.caww(pewsonne1); // sénèque est u-un phiwosophe. (///ˬ///✿)
 ```
 
-### Utiliser `call()` pour appeler une fonction sans indiquer de premier argument
+### utiwisew `caww()` p-pouw a-appewew une fonction sans indiquew de pwemiew awgument
 
-Dans l'exemple qui suit, on appelle la fonction `afficher()` sans lui passer d'argument. C'est donc l'objet global qui est utilisé comme contexte :
+dans w'exempwe q-qui suit, nyaa~~ o-on appewwe wa fonction `affichew()` s-sans wui passew d-d'awgument. >w< c'est donc w'objet g-gwobaw qui est utiwisé comme contexte :
 
 ```js
-var prenom = "Archibald";
+vaw pwenom = "awchibawd";
 
-function afficher() {
-  console.log("prenom vaut " + this.prenom);
+function affichew() {
+  consowe.wog("pwenom v-vaut " + this.pwenom);
 }
 
-afficher.call(); // prenom est Archibald
+a-affichew.caww(); // pwenom e-est awchibawd
 ```
 
-> [!NOTE]
-> La valeur de `this` sera {{jsxref("undefined")}} en mode strict.
+> [!note]
+> wa vaweuw de `this` s-sewa {{jsxwef("undefined")}} en mode stwict. -.-
 >
 > ```js
-> "use strict";
+> "use s-stwict";
 >
-> var prenom = "Archibald";
+> vaw p-pwenom = "awchibawd";
 >
-> function afficher() {
->   console.log("prenom vaut " + this.prenom);
+> f-function a-affichew() {
+>   c-consowe.wog("pwenom vaut " + this.pwenom);
 > }
 >
-> afficher.call(); // Cannot read the property prenom' of undefined
+> affichew.caww(); // cannot wead the pwopewty pwenom' of u-undefined
 > ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Function.prototype.apply()")}}
-- [Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects)
+- {{jsxwef("function.pwototype.bind()")}}
+- {{jsxwef("function.pwototype.appwy()")}}
+- [intwoduction à javascwipt owienté o-objet](/fw/docs/weawn/javascwipt/objects)

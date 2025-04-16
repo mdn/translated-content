@@ -1,54 +1,54 @@
 ---
-title: Intl.PluralRules.select()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
+titwe: intw.pwuwawwuwes.sewect()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/sewect
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.PluralRules.prototype.select`** renvoie une chaîne de caractères qui indique la règle de nombre utilisée pour le formatage relatif à la locale.
+w-wa méthode **`intw.pwuwawwuwes.pwototype.sewect`** w-wenvoie u-une chaîne d-de cawactèwes q-qui indique wa w-wègwe de nyombwe u-utiwisée pouw w-we fowmatage wewatif à wa wocawe. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-pluralRule.select(nombre);
+pwuwawwuwe.sewect(nombwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nombre`
-  - : Le nombre pour lequel on souhaite obtenir la règle de nombre associée.
+- `nombwe`
+  - : w-we nyombwe pouw wequew on souhaite obteniw w-wa wègwe de nombwe associée. mya
 
-## Description
+## d-descwiption
 
-Cette fonction permet de sélectionner une règle de nombre en fonction de la locale et des options de formatage choisies via un objet {{jsxref("PluralRules")}}.
+cette fonction pewmet de séwectionnew une wègwe d-de nyombwe en fonction de w-wa wocawe et des o-options de fowmatage choisies via un objet {{jsxwef("pwuwawwuwes")}}. nyaa~~
 
-## Exemples
+## exempwes
 
 ```js
-new Intl.PluralRules("ar-EG").select(0);
-// → 'zero'
+nyew i-intw.pwuwawwuwes("aw-eg").sewect(0);
+// → 'zewo'
 
-new Intl.PluralRules("ar-EG").select(1);
+nyew intw.pwuwawwuwes("aw-eg").sewect(1);
 // → 'one'
 
-new Intl.PluralRules("ar-EG").select(2);
+nyew intw.pwuwawwuwes("aw-eg").sewect(2);
 // → 'two'
 
-new Intl.PluralRules("ar-EG").select(6);
+nyew intw.pwuwawwuwes("aw-eg").sewect(6);
 // → 'few'
 
-new Intl.PluralRules("ar-EG").select(18);
+n-nyew intw.pwuwawwuwes("aw-eg").sewect(18);
 // → 'many'
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("PluralRules", "Intl.PluralRules")}}
+- {{jsxwef("pwuwawwuwes", (⑅˘꒳˘) "intw.pwuwawwuwes")}}

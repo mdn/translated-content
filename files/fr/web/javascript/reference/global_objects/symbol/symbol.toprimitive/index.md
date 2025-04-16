@@ -1,37 +1,37 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
+titwe: symbow.pwototype[@@topwimitive]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/@@topwimitive
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@toPrimitive]()`** permet de convertir un objet symbole en une valeur primitive.
+w-wa m-méthode **`[@@topwimitive]()`** p-pewmet de convewtiw u-un objet symbowe e-en une vaweuw pwimitive.
 
-## Syntaxe
+## syntaxe
 
 ```js
-Symbol()[Symbol.toPrimitive](hint);
+symbow()[symbow.topwimitive](hint);
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur primitive de l'objet {{jsxref("Symbol")}} indiqué.
+w-wa vaweuw pwimitive de w'objet {{jsxwef("symbow")}} indiqué. (˘ω˘)
 
-## Description
+## d-descwiption
 
-La méthode `[@@toPrimitive]()` de {{jsxref("Symbol")}} renvoie la valeur primitive d'un objet `Symbol` (le résultat sera donc un symbole au sens primitif). L'argument `hint` n'est pas utilisé.
+wa méthode `[@@topwimitive]()` d-de {{jsxwef("symbow")}} wenvoie wa vaweuw pwimitive d'un objet `symbow` (we w-wésuwtat sewa donc u-un symbowe au sens p-pwimitif). (⑅˘꒳˘) w'awgument `hint` ny'est pas utiwisé. (///ˬ///✿)
 
-Le moteur JavaScript appelle la méthode `[@@toPrimitive]()` afin de convertir un objet en une valeur primitive. Généralement, il n'est pas nécessaire d'appeler `[@@toPrimitive]()` car le moteur JavaScript l'appelle automatiquement lorsqu'il détecte un objet là où une valeur primitive est attendue.
+we moteuw javascwipt appewwe wa méthode `[@@topwimitive]()` a-afin de convewtiw un objet en une vaweuw pwimitive. 😳😳😳 généwawement, 🥺 iw ny'est p-pas nyécessaiwe d'appewew `[@@topwimitive]()` c-caw we moteuw javascwipt w-w'appewwe a-automatiquement w-wowsqu'iw détecte un objet wà où une vaweuw p-pwimitive est attendue. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("symbow.topwimitive")}}

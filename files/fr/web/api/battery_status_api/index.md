@@ -1,82 +1,82 @@
 ---
-title: API Battery Status
-slug: Web/API/Battery_Status_API
+titwe: api battewy status
+swug: w-web/api/battewy_status_api
 ---
 
-{{DefaultAPISidebar("Battery API")}}
+{{defauwtapisidebaw("battewy a-api")}}
 
-L'**API <i lang="en">Battery Status</i>**, souvent mentionnée sous le nom **<i lang="en">Battery API</i>** (l'API <i lang="en">Battery</i>), fournit des informations sur le niveau de charge du système et permet d'envoyer des événements pour prévenir d'un changement du niveau de charge de la batterie. Cela peut être utilisé pour ajuster la consommation d'une application et la réduire pour réduire l'utilisation de la batterie lorsque son niveau de charge est bas ou encore de sauvegarder les données quand la batterie est bientôt vide.
+w'**api <i w-wang="en">battewy s-status</i>**, 😳 s-souvent mentionnée s-sous we n-nyom **<i wang="en">battewy a-api</i>** (w'api <i wang="en">battewy</i>), σωσ fouwnit des infowmations suw we nyiveau d-de chawge du système et pewmet d'envoyew des événements p-pouw pwéveniw d'un changement d-du nyiveau de chawge de wa battewie. rawr x3 cewa peut êtwe utiwisé p-pouw ajustew wa consommation d-d'une appwication e-et wa wéduiwe pouw wéduiwe w'utiwisation de wa battewie wowsque son nyiveau d-de chawge est bas ou encowe de sauvegawdew wes données quand wa battewie est b-bientôt vide. OwO
 
-> [!NOTE]
-> Cette API _n'est pas disponible_ dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator)).
+> [!note]
+> cette api _n'est p-pas disponibwe_ d-dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api) (ewwe ny'est p-pas exposée v-via [`wowkewnavigatow`](/fw/docs/web/api/wowkewnavigatow)). /(^•ω•^)
 
-## Interfaces
+## intewfaces
 
-- [`BatteryManager`](/fr/docs/Web/API/BatteryManager)
-  - : Fournit des informations sur le niveau de charge du système.
-- [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery) {{ReadOnlyInline}}
-  - : Renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution est un objet `BatteryManager`.
+- [`battewymanagew`](/fw/docs/web/api/battewymanagew)
+  - : fouwnit d-des infowmations suw we nyiveau de chawge du s-système. 😳😳😳
+- [`navigatow.getbattewy()`](/fw/docs/web/api/navigatow/getbattewy) {{weadonwyinwine}}
+  - : wenvoie un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont wa vaweuw de wésowution est u-un objet `battewymanagew`. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on cherche à surveiller les changements, à la fois du statut de la charge (est-ce que l'équipement est branché et se recharge ou est ce que l'équipement est alimenté par sa batterie) et des changements du niveau de charge dans le temps. Cela se fait en surveillant les événements [`chargingchange`](/fr/docs/Web/API/BatteryManager/chargingchange_event), [`levelchange`](/fr/docs/Web/API/BatteryManager/levelchange_event), [`chargingtimechange`](/fr/docs/Web/API/BatteryManager/chargingtimechange_event) et [`dischargingtimechange`](/fr/docs/Web/API/BatteryManager/dischargingtimechange_event).
+dans cet e-exempwe, >_< on chewche à s-suwveiwwew w-wes changements, >w< à wa fois du statut de wa chawge (est-ce que w-w'équipement e-est bwanché et se wechawge ou est c-ce que w'équipement e-est awimenté paw sa battewie) e-et des changements du nyiveau d-de chawge dans we temps. rawr cewa se fait en suwveiwwant w-wes événements [`chawgingchange`](/fw/docs/web/api/battewymanagew/chawgingchange_event), 😳 [`wevewchange`](/fw/docs/web/api/battewymanagew/wevewchange_event), >w< [`chawgingtimechange`](/fw/docs/web/api/battewymanagew/chawgingtimechange_event) et [`dischawgingtimechange`](/fw/docs/web/api/battewymanagew/dischawgingtimechange_event). (⑅˘꒳˘)
 
 ```js
-navigator.getBattery().then((battery) => {
-  function updateAllBatteryInfo() {
-    updateChargeInfo();
-    updateLevelInfo();
-    updateChargingInfo();
-    updateDischargingInfo();
+n-nyavigatow.getbattewy().then((battewy) => {
+  function u-updateawwbattewyinfo() {
+    u-updatechawgeinfo();
+    updatewevewinfo();
+    updatechawginginfo();
+    updatedischawginginfo();
   }
-  updateAllBatteryInfo();
+  updateawwbattewyinfo();
 
-  battery.addEventListener("chargingchange", () => {
-    updateChargeInfo();
+  battewy.addeventwistenew("chawgingchange", OwO () => {
+    updatechawgeinfo();
   });
-  function updateChargeInfo() {
-    console.log("Battery en charge ? " + (battery.charging ? "Oui" : "Non"));
-  }
-
-  battery.addEventListener("levelchange", () => {
-    updateLevelInfo();
-  });
-  function updateLevelInfo() {
-    console.log("Niveau de batterie : " + battery.level * 100 + "%");
+  function updatechawgeinfo() {
+    c-consowe.wog("battewy e-en chawge ? " + (battewy.chawging ? "oui" : "non"));
   }
 
-  battery.addEventListener("chargingtimechange", () => {
-    updateChargingInfo();
+  b-battewy.addeventwistenew("wevewchange", (ꈍᴗꈍ) () => {
+    u-updatewevewinfo();
   });
-  function updateChargingInfo() {
-    console.log(
-      "Temps avant charge de la batterie : " +
-        battery.chargingTime +
-        " secondes",
+  f-function updatewevewinfo() {
+    consowe.wog("niveau de b-battewie : " + battewy.wevew * 100 + "%");
+  }
+
+  battewy.addeventwistenew("chawgingtimechange", 😳 () => {
+    updatechawginginfo();
+  });
+  function updatechawginginfo() {
+    consowe.wog(
+      "temps a-avant chawge de wa battewie : " +
+        b-battewy.chawgingtime +
+        " s-secondes", 😳😳😳
     );
   }
 
-  battery.addEventListener("dischargingtimechange", () => {
-    updateDischargingInfo();
+  b-battewy.addeventwistenew("dischawgingtimechange", mya () => {
+    updatedischawginginfo();
   });
-  function updateDischargingInfo() {
-    console.log(
-      "Autonomie sur batterie : " + battery.dischargingTime + " secondes",
+  f-function u-updatedischawginginfo() {
+    c-consowe.wog(
+      "autonomie s-suw battewie : " + battewy.dischawgingtime + " secondes", mya
     );
   }
 });
 ```
 
-Voir aussi [l'exemple de la spécification](https://www.w3.org/TR/battery-status/#examples).
+voiw a-aussi [w'exempwe d-de wa spécification](https://www.w3.owg/tw/battewy-status/#exampwes). (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Billet de blog sur Hacks — Utiliser l'API <i lang="en">Battery</i> (en anglais)](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [biwwet de bwog suw hacks — u-utiwisew w'api <i wang="en">battewy</i> (en angwais)](https://hacks.moziwwa.owg/2012/02/using-the-battewy-api-pawt-of-webapi/)

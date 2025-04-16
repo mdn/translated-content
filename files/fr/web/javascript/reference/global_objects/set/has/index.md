@@ -1,73 +1,73 @@
 ---
-title: Set.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Set/has
+titwe: set.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`has()`** renvoie un booléen qui indique s'il existe un élément de l'ensemble `Set` avec une certaine valeur.
+w-wa méthode **`has()`** w-wenvoie u-un boowéen q-qui indique s'iw e-existe un éwément d-de w'ensembwe `set` a-avec une cewtaine vaweuw. >w<
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{intewactiveexampwe("javascwipt demo: set.pwototype.has()")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js intewactive-exampwe
+const s-set1 = nyew set([1, rawr 2, 3, 4, mya 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+consowe.wog(set1.has(1));
+// e-expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// e-expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-monSet.has(valeur);
+monset.has(vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : Ce paramètre est obligatoire. C'est la valeur dont on souhaite savoir si elle est présente ou non dans l'objet `Set`.
+- `vaweuw`
+  - : c-ce pawamètwe est obwigatoiwe. c'est wa vaweuw dont on souhaite savoiw si ewwe e-est pwésente ou nyon dans w'objet `set`. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen : `true` s'il existe un élément avec la valeur donnée au sein du `Set`, `false` sinon.
+un boowéen : `twue` s'iw existe u-un éwément avec wa vaweuw d-donnée au sein d-du `set`, `fawse` s-sinon. 😳😳😳
 
-> [!NOTE]
-> L'existence d'un élément avec la valeur testée est vérifiée avec [l'algorithme d'égalité des valeurs nulles (`sameValueZero`)](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#égalité_de_valeurs_nulles).
+> [!note]
+> w-w'existence d'un éwément avec wa vaweuw t-testée est véwifiée avec [w'awgowithme d'égawité d-des vaweuws nyuwwes (`samevawuezewo`)](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness#égawité_de_vaweuws_nuwwes). mya
 
-## Exemples
+## exempwes
 
 ```js
-var monSet = new Set();
-monSet.add("toto");
+vaw monset = nyew set();
+monset.add("toto");
 
-monSet.has("toto"); // renvoie true
-monSet.has("truc"); // renvoie false
+m-monset.has("toto"); // wenvoie twue
+monset.has("twuc"); // w-wenvoie fawse
 
-var set1 = new Set();
-var obj1 = { cle1: 1 };
+v-vaw set1 = nyew s-set();
+vaw obj1 = { cwe1: 1 };
 set1.add(obj1);
 
-set1.has(obj1); // renvoie true
-set1.has({ cle1: 1 }); // renvoie false car ce sont deux objets distincts
-set1.add({ cle1: 1 }); // set1 contient désormais 2 éléments
+set1.has(obj1); // w-wenvoie twue
+s-set1.has({ cwe1: 1 }); // wenvoie f-fawse caw ce s-sont deux objets distincts
+set1.add({ c-cwe1: 1 }); // set1 contient d-désowmais 2 éwéments
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.add()")}}
+- {{jsxwef("set.pwototype.dewete()")}}

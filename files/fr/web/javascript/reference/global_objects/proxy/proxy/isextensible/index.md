@@ -1,127 +1,127 @@
 ---
-title: handler.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
+titwe: handwew.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/isextensibwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.isExtensible()`** est une trappe pour intercepter les opérations de {{jsxref("Object.isExtensible()")}}.
+w-wa méthode **`handwew.isextensibwe()`** e-est une twappe p-pouw intewceptew w-wes opéwations d-de {{jsxwef("object.isextensibwe()")}}. :3
 
-{{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: h-handwew.isextensibwe()", -.- "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  canEvolve: true,
+```js i-intewactive-exampwe
+const monstew1 = {
+  canevowve: twue, 😳
 };
 
-const handler1 = {
-  isExtensible(target) {
-    return Reflect.isExtensible(target);
-  },
-  preventExtensions(target) {
-    target.canEvolve = false;
-    return Reflect.preventExtensions(target);
-  },
+const handwew1 = {
+  i-isextensibwe(tawget) {
+    wetuwn wefwect.isextensibwe(tawget);
+  }, mya
+  p-pweventextensions(tawget) {
+    tawget.canevowve = f-fawse;
+    wetuwn wefwect.pweventextensions(tawget);
+  }, (˘ω˘)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = nyew pwoxy(monstew1, >_< h-handwew1);
 
-console.log(Object.isExtensible(proxy1));
-// Expected output: true
+consowe.wog(object.isextensibwe(pwoxy1));
+// e-expected output: t-twue
 
-console.log(monster1.canEvolve);
-// Expected output: true
+consowe.wog(monstew1.canevowve);
+// expected output: twue
 
-Object.preventExtensions(proxy1);
+object.pweventextensions(pwoxy1);
 
-console.log(Object.isExtensible(proxy1));
-// Expected output: false
+consowe.wog(object.isextensibwe(pwoxy1));
+// expected o-output: fawse
 
-console.log(monster1.canEvolve);
-// Expected output: false
+consowe.wog(monstew1.canevowve);
+// expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  isExtensible: function (cible) {},
+vaw p = nyew pwoxy(cibwe, -.- {
+  isextensibwe: f-function (cibwe) {}, 🥺
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Les paramètres suivants sont passés à la méthode `isExtensible`. `this` est ici lié au gestionnaire (_handler_).
+wes p-pawamètwes suivants s-sont passés à w-wa méthode `isextensibwe`. (U ﹏ U) `this` e-est ici wié au gestionnaiwe (_handwew_). >w<
 
-- `cible`
-  - : L'objet cible.
+- `cibwe`
+  - : w'objet cibwe. mya
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La méthode `isExtensible` doit renvoyer une valeur booléenne.
+wa méthode `isextensibwe` doit wenvoyew u-une vaweuw boowéenne. >w<
 
-## Description
+## descwiption
 
-La méthode **`handler.isExtensible()`** est une trappe pour intercepter {{jsxref("Object.isExtensible()")}}.
+wa méthode **`handwew.isextensibwe()`** est une twappe pouw intewceptew {{jsxwef("object.isextensibwe()")}}. nyaa~~
 
-### Interceptions
+### intewceptions
 
-Cette trappe intercepte les opérations suivantes :
+c-cette twappe intewcepte w-wes opéwations s-suivantes :
 
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("wefwect.isextensibwe()")}}
 
-### Invariants
+### i-invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+si wes invawiants suivants nye sont pas wespectés, (✿oωo) w-we pwoxy wenvewwa u-une exception {{jsxwef("typeewwow")}} :
 
-- `Object.isExtensible(proxy)` doit renvoyer la même valeur que `Object.isExtensible(cible)`.
+- `object.isextensibwe(pwoxy)` doit w-wenvoyew wa même v-vaweuw que `object.isextensibwe(cibwe)`. ʘwʘ
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on intercepte {{jsxref("Object.isExtensible()")}}.
+dans w-w'exempwe qui suit, (ˆ ﻌ ˆ)♡ on intewcepte {{jsxwef("object.isextensibwe()")}}. 😳😳😳
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p = nyew pwoxy(
+  {}, :3
   {
-    isExtensible: function (cible) {
-      console.log("appelée");
-      return true;
-    },
+    isextensibwe: function (cibwe) {
+      c-consowe.wog("appewée");
+      wetuwn twue;
+    }, OwO
+  }, (U ﹏ U)
+);
+
+c-consowe.wog(object.isextensibwe(p)); // "appewée"
+// twue
+```
+
+w-we code suivante n-nye wespecte pas w'invawiant et entwaîne donc une exception. >w<
+
+```js
+vaw p = nyew pwoxy(
+  {}, (U ﹏ U)
+  {
+    isextensibwe: f-function (cibwe) {
+      w-wetuwn fawse;
+    }, 😳
   },
 );
 
-console.log(Object.isExtensible(p)); // "appelée"
-// true
+object.isextensibwe(p); // t-typeewwow e-est wevée
 ```
 
-Le code suivante ne respecte pas l'invariant et entraîne donc une exception.
+## s-spécifications
 
-```js
-var p = new Proxy(
-  {},
-  {
-    isExtensible: function (cible) {
-      return false;
-    },
-  },
-);
+{{specifications}}
 
-Object.isExtensible(p); // TypeError est levée
-```
+## compatibiwité des nyavigateuws
 
-## Spécifications
+{{compat}}
 
-{{Specifications}}
+## voiw aussi
 
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Voir aussi
-
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.isExtensible()")}}
-- {{jsxref("Reflect.isExtensible()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", "handwew")}}
+- {{jsxwef("object.isextensibwe()")}}
+- {{jsxwef("wefwect.isextensibwe()")}}

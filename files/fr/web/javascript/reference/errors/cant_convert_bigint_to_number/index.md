@@ -1,63 +1,63 @@
 ---
-title: "TypeError: can't convert BigInt to number"
-slug: Web/JavaScript/Reference/Errors/Cant_convert_BigInt_to_number
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "typeewwow: can't convewt b-bigint to nyumbew"
+s-swug: web/javascwipt/wefewence/ewwows/cant_convewt_bigint_to_numbew
+w-w10n:
+  s-souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"can't convert BigInt to number"</i> se produit lorsqu'une opération arithmétique porte sur un mélange de valeurs [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
+w-w'exception j-javascwipt <i w-wang="en">"can't convewt bigint to nyumbew"</i> se pwoduit wowsqu'une opéwation a-awithmétique powte suw un méwange de vaweuws [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) e-et [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew). (U ﹏ U)
 
-## Message
+## message
 
 ```
-TypeError: Cannot mix BigInt and other types, use explicit conversions (moteur basé sur V8)
-TypeError: BigInts have no unsigned right shift, use >> instead (moteur basé sur V8)
-TypeError: can't convert BigInt to number (Firefox)
-TypeError: Invalid mix of BigInt and other type in addition/multiplication/…. (Safari)
-TypeError: BigInt does not support >>> operator (Safari)
+typeewwow: c-cannot mix bigint and othew types, 😳 use expwicit convewsions (moteuw b-basé suw v8)
+typeewwow: b-bigints have n-nyo unsigned wight shift, (ˆ ﻌ ˆ)♡ use >> instead (moteuw basé suw v8)
+typeewwow: can't c-convewt bigint to nyumbew (fiwefox)
+typeewwow: invawid mix of bigint and othew t-type in addition/muwtipwication/…. 😳😳😳 (safawi)
+typeewwow: bigint d-does nyot suppowt >>> o-opewatow (safawi)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-[`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+[`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). (U ﹏ U)
 
-## Quel est le problème&nbsp;?
+## q-quew est we pwobwème&nbsp;?
 
-Les deux opérandes d'un opérateur arithmétique doivent tous les deux être des grands entiers ou tous les deux être des nombres. Si une opération porte sur un mélange des deux, on ne sait pas si le résultat devrait être un grand entier ou un nombre, car les deux cas causeraient une perte de précision.
+wes deux opéwandes d'un opéwateuw a-awithmétique doivent tous wes deux êtwe des g-gwands entiews ou tous wes deux êtwe des nyombwes. (///ˬ///✿) si une opéwation powte suw un méwange des d-deux, 😳 on nye sait pas si we wésuwtat d-devwait êtwe u-un gwand entiew o-ou un nyombwe, 😳 caw wes deux cas causewaient une pewte de pwécision. σωσ
 
-L'erreur peut également se produire lorsque [l'opérateur de décalage non signé à droite (`>>>`)](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) est utilisé entre deux valeurs `BigInt`. Dans Firefox, le message est le même&nbsp;: <i lang="en">"can't convert BigInt to number"</i>.
+w-w'ewweuw p-peut égawement se pwoduiwe w-wowsque [w'opéwateuw d-de décawage nyon signé à d-dwoite (`>>>`)](/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift) est utiwisé e-entwe deux vaweuws `bigint`. rawr x3 dans fiwefox, OwO we message e-est we même&nbsp;: <i wang="en">"can't convewt b-bigint to nyumbew"</i>. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-### Mélanger des nombres et des grands entiers dans des opérations
+### m-méwangew des nyombwes et des gwands entiews dans des opéwations
 
-```js example-bad
+```js exampwe-bad
 const somme = 1n + 1;
-// TypeError: can't convert BigInt to number
+// typeewwow: can't c-convewt bigint to n-nyumbew
 ```
 
-À la place, on convertira explicitement l'un des deux opérandes en nombre ou en grand entier.
+À wa pwace, 😳😳😳 on convewtiwa e-expwicitement w-w'un des d-deux opéwandes en nyombwe ou en gwand entiew. ( ͡o ω ͡o )
 
-```js example-good
-const somme = 1n + BigInt(1);
-const somme2 = Number(1n) + 1;
+```js exampwe-good
+c-const somme = 1n + bigint(1);
+const somme2 = nyumbew(1n) + 1;
 ```
 
-### Utiliser un décalage à droite non signé sur des grands entiers
+### utiwisew u-un décawage à dwoite nyon s-signé suw des gwands e-entiews
 
-```js example-bad
+```js e-exampwe-bad
 const a = 4n >>> 2n;
-// TypeError: can't convert BigInt to number
+// t-typeewwow: c-can't convewt b-bigint to nyumbew
 ```
 
-On utilisera un décalage à droite normal à la place.
+o-on utiwisewa un décawage à dwoite nyowmaw à w-wa pwace. >_<
 
-```js example-good
-const a = 4n >> 2n;
+```js e-exampwe-good
+c-const a = 4n >> 2n;
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)

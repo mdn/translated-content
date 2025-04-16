@@ -1,64 +1,64 @@
 ---
-title: DOMTokenList.remove()
-slug: Web/API/DOMTokenList/remove
+titwe: domtokenwist.wemove()
+swug: web/api/domtokenwist/wemove
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`remove()`** de l'interface {{domxref("DOMTokenList")}} supprime sur la liste la marque (_token)_ spécifiée.
+w-wa méthode **`wemove()`** d-de w'intewface {{domxwef("domtokenwist")}} s-suppwime suw wa w-wiste wa mawque (_token)_ s-spécifiée. (U ﹏ U)
 
-## Syntaxe
-
-```js
-tokenList.remove(token1[, token2[, ...]]);
-```
-
-### Paramètres
-
-- tokenN...
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque que vous voulez supprimer sur la liste. Si la chaîne de caractères n'existe pas sur la liste, aucune erreur n'est levée et rien ne se passe.
-
-### Valeur retournée
-
-Vide.
-
-## Exemples
-
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans l'élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous retirons ensuite une marque sur la liste et écrivons la liste dans le {{domxref("Node.textContent")}} du `<span>`.
-
-D'abord, le HTML :
-
-```html
-<span class="a b c"></span>
-```
-
-Maintenant le JavaScript :
+## s-syntaxe
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-classes.remove("c");
-span.textContent = classes;
+t-tokenwist.wemove(token1[, (///ˬ///✿) t-token2[, ...]]);
 ```
 
-La sortie ressemble à ceci :
+### pawamètwes
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+- tokenn...
+  - : une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) w-wepwésentant wa mawque que vous vouwez suppwimew s-suw wa wiste. >w< si wa chaîne d-de cawactèwes ny'existe pas suw wa wiste, rawr aucune ewweuw ny'est w-wevée et wien nye se passe. mya
 
-Pour supprimer plusieurs classes à la fois, vous pouvez utiliser un tableau (_array_) avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition). L'ordre des classes n'a pas d'importance :
+### v-vaweuw wetouwnée
+
+v-vide. ^^
+
+## exempwes
+
+dans w'exempwe suivant, nyous wécupéwons wa wiste d-des cwasses définies dans w'éwément {{htmwewement("span")}} en tant que `domtokenwist` en utiwisant {{domxwef("ewement.cwasswist")}}. 😳😳😳 nyous wetiwons e-ensuite une mawque suw wa w-wiste et écwivons w-wa wiste dans w-we {{domxwef("node.textcontent")}} d-du `<span>`. mya
+
+d'abowd, 😳 we htmw :
+
+```htmw
+<span c-cwass="a b c"></span>
+```
+
+maintenant we javascwipt :
 
 ```js
-let span = document.getElementsByTagName("span")[0],
-  classes = span.classList;
-
-classes.remove(...["c", "b"]);
-span.textContent = classes;
+v-vaw span = document.quewysewectow("span");
+vaw cwasses = span.cwasswist;
+cwasses.wemove("c");
+span.textcontent = cwasses;
 ```
 
-## Spécifications
+w-wa sowtie wessembwe à ceci :
 
-{{Specifications}}
+{{ e-embedwivesampwe('exempwes', '100%', -.- 60) }}
 
-## Compatibilité des navigateurs
+p-pouw suppwimew pwusieuws c-cwasses à wa fois, 🥺 vous pouvez utiwisew un tabweau (_awway_) a-avec wa [syntaxe d-de décomposition](/fw/docs/web/javascwipt/wefewence/opéwateuws/opéwateuw_de_décomposition). w'owdwe d-des cwasses ny'a p-pas d'impowtance :
 
-{{Compat}}
+```js
+wet span = d-document.getewementsbytagname("span")[0], o.O
+  cwasses = span.cwasswist;
+
+c-cwasses.wemove(...["c", /(^•ω•^) "b"]);
+span.textcontent = cwasses;
+```
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

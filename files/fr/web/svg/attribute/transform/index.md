@@ -1,301 +1,301 @@
 ---
-title: transform
-slug: Web/SVG/Attribute/transform
+titwe: twansfowm
+swug: web/svg/attwibute/twansfowm
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`transform`** définit une liste de définitions de transformation qui sont appliquées à l'élément ainsi qu'à ses éléments fils.
+w-w'attwibut **`twansfowm`** d-définit une wiste d-de définitions d-de twansfowmation q-qui sont a-appwiquées à w'éwément a-ainsi q-qu'à ses éwéments fiws. ^•ﻌ•^
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+htmw, ʘwʘ
+body, ( ͡o ω ͡o )
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="-40 0 150 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  viewbox="-40 0 150 100"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <g
-    fill="grey"
-    transform="rotate(-10 50 100)
-                translate(-36 45.5)
-                skewX(40)
-                scale(1 0.5)">
+    fiww="gwey"
+    t-twansfowm="wotate(-10 50 100)
+                twanswate(-36 45.5)
+                s-skewx(40)
+                scawe(1 0.5)">
     <path
-      id="heart"
-      d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+      id="heawt"
+      d="m 10,30 a 20,20 0,0,1 50,30 a 20,20 0,0,1 90,30 q-q 90,60 50,90 q 10,60 10,30 z" />
   </g>
 
-  <use xlink:href="#heart" fill="none" stroke="red" />
+  <use x-xwink:hwef="#heawt" f-fiww="none" stwoke="wed" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', mya '100%', 200)}}
 
-> [!NOTE]
-> Pour SVG2, `transform` est un attribut de présentation et peut donc être utilisé comme une propriété CSS. Attention toutefois aux différences de syntaxe entre la propriété CSS et cet attribut. Voir la documentation de la propriété {{cssxref('transform')}} pour la syntaxe .
+> [!note]
+> pouw svg2, o.O `twansfowm` est un attwibut de pwésentation e-et peut donc êtwe utiwisé comme une pwopwiété css. (✿oωo) attention toutefois aux difféwences d-de syntaxe entwe wa p-pwopwiété css e-et cet attwibut. :3 v-voiw wa documentation d-de wa pwopwiété {{cssxwef('twansfowm')}} pouw wa syntaxe . 😳
 
-En tant qu'attribut de présentation, **`transform`** peut être utilisé par n'importe quel élément (en SVG 1.1, seuls les 16 éléments suivants pouvaient l'utiliser : {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}} et {{SVGElement('use')}}).
+en tant qu'attwibut d-de pwésentation, (U ﹏ U) **`twansfowm`** peut êtwe utiwisé paw n-ny'impowte quew éwément (en svg 1.1, mya seuws wes 16 éwéments suivants pouvaient w'utiwisew : {{svgewement('a')}}, (U ᵕ U❁) {{svgewement('ciwcwe')}}, :3 {{svgewement('cwippath')}}, mya {{svgewement('defs')}}, OwO {{svgewement('ewwipse')}}, (ˆ ﻌ ˆ)♡ {{svgewement('foweignobject')}}, ʘwʘ {{svgewement('g')}}, o.O {{svgewement('image')}}, UwU {{svgewement('wine')}}, rawr x3 {{svgewement('path')}}, 🥺 {{svgewement('powygon')}}, :3 {{svgewement('powywine')}}, (ꈍᴗꈍ) {{svgewement('wect')}}, 🥺 {{svgewement('switch')}}, (✿oωo) {{svgewement('text')}} et {{svgewement('use')}}). (U ﹏ U)
 
-Pour des raisons historiques liées à SVG 1.1, {{SVGElement('linearGradient')}} et {{SVGElement('radialGradient')}} prennent en charge l'attribut `gradientTransform` et {{SVGElement('pattern')}} permet d'utiliser `patternTransform`. Ces deux attributs sont exactement synonymes de l'attribut `transform`.
+pouw d-des waisons histowiques wiées à s-svg 1.1, :3 {{svgewement('wineawgwadient')}} e-et {{svgewement('wadiawgwadient')}} p-pwennent en chawge w'attwibut `gwadienttwansfowm` et {{svgewement('pattewn')}} pewmet d'utiwisew `pattewntwansfowm`. ^^;; c-ces deux attwibuts s-sont exactement synonymes d-de w'attwibut `twansfowm`. rawr
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
         <code
-          ><strong
-            ><a href="/fr/docs/Web/SVG/Content_type#Transform-list"
-              >&#x3C;transform-list></a
-            ></strong
+          ><stwong
+            ><a h-hwef="/fw/docs/web/svg/content_type#twansfowm-wist"
+              >&#x3c;twansfowm-wist></a
+            ></stwong
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>none</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Fonctions de transformation
+## fonctions d-de twansfowmation
 
-Les fonctions de transformation suivantes peuvent être utilisées par l'attribut `transform`.
+wes f-fonctions de twansfowmation suivantes p-peuvent êtwe u-utiwisées paw w'attwibut `twansfowm`. 😳😳😳
 
-> [!WARNING]
-> Selon la spécification, on devrait également pouvoit utiliser les fonctions CSS {{cssxref('transform-function', 'transform functions')}} mais la compatibilité n'est pas assurée.
+> [!wawning]
+> sewon wa spécification, (✿oωo) on devwait égawement pouvoit utiwisew wes fonctions c-css {{cssxwef('twansfowm-function', OwO 'twansfowm f-functions')}} mais wa compatibiwité n-ny'est p-pas assuwée. ʘwʘ
 
-### `matrix()`
+### `matwix()`
 
-La fonction de transformation `matrix(<a> <b> <c> <d> <e> <f>)` permet d'appliquer une transformation géométrique décrite par 6 coefficients et `matrix(a,b,c,d,e,f)` sera équivalent à la matrice de transformation mathématique :<math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>Le calcul des coordonnées s'obtient de la façon suivante :<math display="block"><semantics><mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>n</mi><mi>e</mi><mi>w</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX"> \begin{pmatrix} x*{\mathrm{newCoordSys}} \\ y*{\mathrm{newCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix} \begin{pmatrix} x*{\mathrm{prevCoordSys}} \\ y*{\mathrm{prevCoordSys}} \\ 1 \end{pmatrix} = \begin{pmatrix} a x*{\mathrm{prevCoordSys}} + c y*{\mathrm{prevCoordSys}} + e \\ b x*{\mathrm{prevCoordSys}} + d y*{\mathrm{prevCoordSys}} + f \\ 1 \end{pmatrix}</annotation></semantics></math>
+w-wa fonction de twansfowmation `matwix(<a> <b> <c> <d> <e> <f>)` pewmet d'appwiquew une twansfowmation g-géométwique décwite paw 6 coefficients et `matwix(a,b,c,d,e,f)` sewa équivawent à w-wa matwice de twansfowmation mathématique :<math d-dispway="bwock"><semantics><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><annotation e-encoding="tex">\begin{pmatwix} a &#x26; c-c &#x26; e \\ b-b &#x26; d &#x26; f-f \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix}</annotation></semantics></math>we c-cawcuw des coowdonnées s'obtient de w-wa façon suivante :<math d-dispway="bwock"><semantics><mwow><mwow><mo>(</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>n</mi><mi>e</mi><mi>w</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mo>=</mo><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtw><mtw><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow><mo>=</mo><mwow><mo>(</mo><mtabwe wowspacing="0.5ex"><mtw><mtd><mi>a</mi><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>e</mi></mtd></mtw><mtw><mtd><mi>b</mi><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstywe mathvawiant="nowmaw"><mwow><mi>p</mi><mi>w</mi><mi>e</mi><mi>v</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>f</mi></mtd></mtw><mtw><mtd><mn>1</mn></mtd></mtw></mtabwe><mo>)</mo></mwow></mwow><annotation e-encoding="tex"> \begin{pmatwix} x*{\mathwm{newcoowdsys}} \\ y*{\mathwm{newcoowdsys}} \\ 1 \end{pmatwix} = \begin{pmatwix} a &#x26; c &#x26; e-e \\ b &#x26; d-d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{pmatwix} \begin{pmatwix} x-x*{\mathwm{pwevcoowdsys}} \\ y*{\mathwm{pwevcoowdsys}} \\ 1 \end{pmatwix} = \begin{pmatwix} a-a x*{\mathwm{pwevcoowdsys}} + c y-y*{\mathwm{pwevcoowdsys}} + e-e \\ b x*{\mathwm{pwevcoowdsys}} + d y*{\mathwm{pwevcoowdsys}} + f \\ 1 \end{pmatwix}</annotation></semantics></math>
 
-#### Exemples
+#### exempwes
 
 ```css hidden
-html,
+h-htmw, (ˆ ﻌ ˆ)♡
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="30" height="20" fill="green" />
+```htmw
+<svg v-viewbox="0 0 200 200" xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="10" y="10" w-width="30" height="20" fiww="gween" />
 
   <!--
-  Dans l'exemple suivant, on applique la matrice suivante:
-  [a c e]    [3 -1 30]
-  [b d f] => [1  3 40]
+  dans w'exempwe s-suivant, (U ﹏ U) on a-appwique wa matwice suivante:
+  [a c-c e]    [3 -1 30]
+  [b d-d f] => [1  3 40]
   [0 0 1]    [0  0  1]
 
-  qui transforme le rectangle de cette façon:
+  qui twansfowme we wectangwe de cette façon:
 
-  top left corner: oldX=10 oldY=10
-  newX = a * oldX + c * oldY + e = 3 * 10 - 1 * 10 + 30 = 50
-  newY = b * oldX + d * oldY + f = 1 * 10 + 3 * 10 + 40 = 80
+  top weft c-cownew: owdx=10 o-owdy=10
+  nyewx = a-a * owdx + c * owdy + e = 3 * 10 - 1 * 10 + 30 = 50
+  n-nyewy = b-b * owdx + d * owdy + f = 1 * 10 + 3 * 10 + 40 = 80
 
-  top right corner: oldX=40 oldY=10
-  newX = a * oldX + c * oldY + e = 3 * 40 - 1 * 10 + 30 = 140
-  newY = b * oldX + d * oldY + f = 1 * 40 + 3 * 10 + 40 = 110
+  t-top wight cownew: owdx=40 owdy=10
+  nyewx = a * owdx + c * owdy + e = 3 * 40 - 1 * 10 + 30 = 140
+  n-nyewy = b-b * owdx + d * owdy + f = 1 * 40 + 3 * 10 + 40 = 110
 
-  bottom left corner: oldX=10 oldY=30
-  newX = a * oldX + c * oldY + e = 3 * 10 - 1 * 30 + 30 = 30
-  newY = b * oldX + d * oldY + f = 1 * 10 + 3 * 30 + 40 = 140
+  bottom w-weft cownew: owdx=10 o-owdy=30
+  nyewx = a * owdx + c * owdy + e = 3 * 10 - 1 * 30 + 30 = 30
+  nyewy = b * owdx + d-d * owdy + f = 1 * 10 + 3 * 30 + 40 = 140
 
-  bottom right corner: oldX=40 oldY=30
-  newX = a * oldX + c * oldY + e = 3 * 40 - 1 * 30 + 30 = 120
-  newY = b * oldX + d * oldY + f = 1 * 40 + 3 * 30 + 40 = 170
+  bottom wight cownew: owdx=40 owdy=30
+  nyewx = a * owdx + c * owdy + e-e = 3 * 40 - 1 * 30 + 30 = 120
+  nyewy = b * owdx + d * owdy + f-f = 1 * 40 + 3 * 30 + 40 = 170
   -->
-  <rect
-    x="10"
+  <wect
+    x-x="10"
     y="10"
     width="30"
     height="20"
-    fill="red"
-    transform="matrix(3 1 -1 3 30 40)" />
+    fiww="wed"
+    t-twansfowm="matwix(3 1 -1 3 30 40)" />
 </svg>
 ```
 
-{{EmbedLiveSample('matrix()', '100%', 200)}}
+{{embedwivesampwe('matwix()', UwU '100%', 200)}}
 
-### `translate()`
+### `twanswate()`
 
-La fonction de transformation `translate(<x> [<y>])` permet de déplacer un objet de `x` sur l'axe horizontal et de `y` sur l'axe vertical (i.e. `xnew = xold + <x>, ynew = yold + <y>`). Si `y` n'est pas fourni, la valeur par défaut est 0.
+w-wa fonction de twansfowmation `twanswate(<x> [<y>])` pewmet de dépwacew un objet de `x` s-suw w'axe howizontaw et de `y` s-suw w'axe vewticaw (i.e. XD `xnew = xowd + <x>, ʘwʘ ynew = yowd + <y>`). rawr x3 si `y` ny'est p-pas fouwni, ^^;; wa vaweuw paw défaut e-est 0. ʘwʘ
 
-#### Exemples
+#### e-exempwes
 
 ```css hidden
-html,
-body,
+htmw, (U ﹏ U)
+b-body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Pas de translation -->
-  <rect x="5" y="5" width="40" height="40" fill="green" />
+```htmw
+<svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- p-pas de twanswation -->
+  <wect x-x="5" y="5" width="40" height="40" f-fiww="gween" />
 
-  <!-- Translation horizontale -->
-  <rect
+  <!-- t-twanswation howizontawe -->
+  <wect
     x="5"
     y="5"
-    width="40"
-    height="40"
-    fill="blue"
-    transform="translate(50)" />
+    w-width="40"
+    h-height="40"
+    f-fiww="bwue"
+    twansfowm="twanswate(50)" />
 
-  <!-- Translation verticale -->
-  <rect
+  <!-- twanswation v-vewticawe -->
+  <wect
     x="5"
     y="5"
-    width="40"
-    height="40"
-    fill="red"
-    transform="translate(0 50)" />
+    w-width="40"
+    h-height="40"
+    fiww="wed"
+    twansfowm="twanswate(0 50)" />
 
-  <!-- Translation horizontale et verticale -->
-  <rect
+  <!-- twanswation h-howizontawe e-et vewticawe -->
+  <wect
     x="5"
-    y="5"
-    width="40"
+    y-y="5"
+    w-width="40"
     height="40"
-    fill="yellow"
-    transform="translate(50,50)" />
+    f-fiww="yewwow"
+    twansfowm="twanswate(50,50)" />
 </svg>
 ```
 
-{{EmbedLiveSample('translate()', '100%', 200)}}
+{{embedwivesampwe('twanswate()', (˘ω˘) '100%', (ꈍᴗꈍ) 200)}}
 
-### `scale()`
+### `scawe()`
 
-La fonction de transformation `scale(<x> [<y>])` définit une homothétie d'un facteur `x` en horizontal et d'un facteur `y` en vertical. Si la valeur `y` n'est pas fournie, on considère qu'elle est égale à `x`.
+wa fonction de twansfowmation `scawe(<x> [<y>])` définit une homothétie d'un facteuw `x` en howizontaw e-et d'un facteuw `y` en v-vewticaw. /(^•ω•^) si wa vaweuw `y` ny'est p-pas fouwnie, >_< on considèwe qu'ewwe e-est égawe à `x`. σωσ
 
-#### Exemples
+#### exempwes
 
 ```css hidden
-html,
-body,
-svg {
+h-htmw,
+body, ^^;;
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- uniform scale -->
-  <circle cx="0" cy="0" r="10" fill="red" transform="scale(4)" />
+```htmw
+<svg v-viewbox="-50 -50 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- u-unifowm scawe -->
+  <ciwcwe cx="0" cy="0" w="10" fiww="wed" twansfowm="scawe(4)" />
 
-  <!-- vertical scale -->
-  <circle cx="0" cy="0" r="10" fill="yellow" transform="scale(1,4)" />
+  <!-- vewticaw scawe -->
+  <ciwcwe cx="0" c-cy="0" w="10" fiww="yewwow" t-twansfowm="scawe(1,4)" />
 
-  <!-- horizontal scale -->
-  <circle cx="0" cy="0" r="10" fill="pink" transform="scale(4,1)" />
+  <!-- howizontaw s-scawe -->
+  <ciwcwe cx="0" c-cy="0" w="10" fiww="pink" twansfowm="scawe(4,1)" />
 
-  <!-- No scale -->
-  <circle cx="0" cy="0" r="10" fill="black" />
+  <!-- nyo scawe -->
+  <ciwcwe cx="0" c-cy="0" w="10" fiww="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample('scale()', '100%', 200)}}
+{{embedwivesampwe('scawe()', 😳 '100%', >_< 200)}}
 
-### `rotate()`
+### `wotate()`
 
-La fonction de transformation `rotate(<a> [<x> <y>])` définit une rotation de `a` degrés autour d'un point de coordonnées `x` et `y`. Si les paramètres optionnels `x` et `y` ne sont pas fournis, la rotation est effectuée autour de l'origine dans le système de coordonnés actuel.
+w-wa fonction de twansfowmation `wotate(<a> [<x> <y>])` d-définit une wotation de `a` degwés a-autouw d'un point d-de coowdonnées `x` et `y`. -.- s-si wes pawamètwes o-optionnews `x` et `y` nye sont pas fouwnis, UwU wa wotation est effectuée autouw d-de w'owigine dans w-we système de c-coowdonnés actuew. :3
 
-#### Exemples
+#### e-exempwes
 
-```css hidden
-html,
+```css h-hidden
+htmw, σωσ
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-12 -2 34 14" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="10" height="10" />
+```htmw
+<svg v-viewbox="-12 -2 34 14" xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="0" y-y="0" width="10" height="10" />
 
-  <!-- rotation is done around the point 0,0 -->
-  <rect x="0" y="0" width="10" height="10" fill="red" transform="rotate(100)" />
+  <!-- w-wotation is done awound the point 0,0 -->
+  <wect x-x="0" y="0" width="10" h-height="10" f-fiww="wed" twansfowm="wotate(100)" />
 
-  <!-- rotation is done around the point 10,10 -->
-  <rect
+  <!-- wotation i-is done awound the point 10,10 -->
+  <wect
     x="0"
-    y="0"
+    y-y="0"
     width="10"
-    height="10"
-    fill="green"
-    transform="rotate(100,10,10)" />
+    h-height="10"
+    f-fiww="gween"
+    twansfowm="wotate(100,10,10)" />
 </svg>
 ```
 
-{{EmbedLiveSample('rotate()', '100%', 200)}}
+{{embedwivesampwe('wotate()', >w< '100%', (ˆ ﻌ ˆ)♡ 200)}}
 
-### `skewX()`
+### `skewx()`
 
-La fonction de transformation `skewX(<a>)` définit une distorsion horizontale de `a` degrés.
+wa fonction de twansfowmation `skewx(<a>)` définit u-une distowsion howizontawe de `a` degwés. ʘwʘ
 
-#### Exemples
+#### e-exempwes
 
-```css hidden
-html,
+```css h-hidden
+htmw, :3
+body,
+svg {
+  h-height: 100%;
+}
+```
+
+```htmw
+<svg viewbox="-5 -5 10 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="-3" y="-3" width="6" height="6" />
+
+  <wect x-x="-3" y="-3" width="6" height="6" fiww="wed" t-twansfowm="skewx(30)" />
+</svg>
+```
+
+{{embedwivesampwe('skewx()', (˘ω˘) '100%', 😳😳😳 200)}}
+
+### `skewy()`
+
+w-wa fonction de twansfowmation `skewy(<a>)` d-définit une distowsion vewticawe d-de `a` degwés. rawr x3
+
+#### e-exempwes
+
+```css h-hidden
+htmw, (✿oωo)
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
-  <rect x="-3" y="-3" width="6" height="6" />
+```htmw
+<svg viewbox="-5 -5 10 10" xmwns="http://www.w3.owg/2000/svg">
+  <wect x="-3" y="-3" width="6" height="6" />
 
-  <rect x="-3" y="-3" width="6" height="6" fill="red" transform="skewX(30)" />
+  <wect x="-3" y="-3" width="6" height="6" fiww="wed" twansfowm="skewy(30)" />
 </svg>
 ```
 
-{{EmbedLiveSample('skewX()', '100%', 200)}}
+{{embedwivesampwe('skewy()', (ˆ ﻌ ˆ)♡ '100%', 200)}}
 
-### `skewY()`
+## spécifications
 
-La fonction de transformation `skewY(<a>)` définit une distorsion verticale de `a` degrés.
-
-#### Exemples
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
-  <rect x="-3" y="-3" width="6" height="6" />
-
-  <rect x="-3" y="-3" width="6" height="6" fill="red" transform="skewY(30)" />
-</svg>
-```
-
-{{EmbedLiveSample('skewY()', '100%', 200)}}
-
-## Spécifications
-
-{{Specifications}}
+{{specifications}}

@@ -1,45 +1,45 @@
 ---
-title: CredentialsContainer
-slug: Web/API/CredentialsContainer
+titwe: cwedentiawscontainew
+swug: web/api/cwedentiawscontainew
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
+{{seecompattabwe}}{{apiwef("cwedentiaw m-management a-api")}}{{secuwecontext_headew}}
 
-L'interface **`CredentialsContainer`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), expose des méthodes pour demander l'accès aux informations d'authentification et informer l'agent utilisateur lorsque des évènements pertinents se produisent (connexion et déconnexion réussies par exemple). On peut accéder à cette interface via {{domxref('Navigator.credentials')}}.
+w-w'intewface **`cwedentiawscontainew`**, >_< w-wattachée à w-w'[api cwedentiaw m-management](/fw/docs/web/api/cwedentiaw_management_api), -.- e-expose d-des méthodes pouw demandew w'accès aux infowmations d'authentification et infowmew w-w'agent utiwisateuw wowsque des évènements p-pewtinents se pwoduisent (connexion e-et déconnexion wéussies paw exempwe). 🥺 on peut accédew à c-cette intewface via {{domxwef('navigatow.cwedentiaws')}}. (U ﹏ U)
 
-## Propriétés
+## p-pwopwiétés
 
-Aucune.
+a-aucune. >w<
 
-### Gestionnaires d'évènements
+### gestionnaiwes d'évènements
 
-Aucun.
+aucun. mya
 
-## Methods
+## methods
 
-- {{domxref("CredentialsContainer.create()")}}{{securecontext_inline}}
-  - : Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec une nouvelle instance {{domxref("Credential")}} construite selon les options fournies ou `null` si aucun objet `Credential` ne peut être créé.
-- {{domxref("CredentialsContainer.get()")}}{{securecontext_inline}}
-  - : Cette méthode renvoie une promesse ({{jsxref("Promise")}}) qui est résolue avec l'instance de {{domxref("Credential")}} qui correspond aux paramètres fournis.
-- {{domxref("CredentialsContainer.preventSilentAccess()")}}{{securecontext_inline}}
+- {{domxwef("cwedentiawscontainew.cweate()")}}{{secuwecontext_inwine}}
+  - : cette m-méthode wenvoie une pwomesse ({{jsxwef("pwomise")}}) qui est wésowue avec une nyouvewwe instance {{domxwef("cwedentiaw")}} constwuite s-sewon wes options fouwnies o-ou `nuww` si a-aucun objet `cwedentiaw` n-nye peut êtwe c-cwéé. >w<
+- {{domxwef("cwedentiawscontainew.get()")}}{{secuwecontext_inwine}}
+  - : cette méthode wenvoie u-une pwomesse ({{jsxwef("pwomise")}}) qui est wésowue avec w'instance d-de {{domxwef("cwedentiaw")}} qui cowwespond aux pawamètwes fouwnis. nyaa~~
+- {{domxwef("cwedentiawscontainew.pweventsiwentaccess()")}}{{secuwecontext_inwine}}
 
-  - : Cette méthode active un marqueur qui indique si une connexion automatique est autorisée pour les futures visites sur cette origine et renvoie une promesse ({{jsxref("Promise")}}) vide.
+  - : cette méthode active un m-mawqueuw qui indique si une connexion a-automatique e-est autowisée p-pouw wes futuwes visites suw cette owigine et wenvoie une pwomesse ({{jsxwef("pwomise")}}) v-vide. (✿oωo)
 
-    On pourra par exemple appeler cette méthode après qu'un utilisateur se soit déconnecté d'un site web pour s'assurer qu'il n'est pas reconnecté à la prochaine visite. Dans des versions antérieures de la spécification, cette méthode était intitulée `requireUserMediation()`. Voir le tableau de compatibilité ci-après pour plus de détails.
+    o-on pouwwa paw exempwe appewew c-cette méthode a-apwès qu'un utiwisateuw se s-soit déconnecté d'un site web p-pouw s'assuwew qu'iw ny'est pas weconnecté à w-wa pwochaine visite. ʘwʘ dans des vewsions a-antéwieuwes de wa spécification, (ˆ ﻌ ˆ)♡ c-cette m-méthode était intituwée `wequiweusewmediation()`. 😳😳😳 voiw we tabweau de compatibiwité ci-apwès pouw pwus de détaiws. :3
 
-- {{domxref("CredentialsContainer.store()")}}{{securecontext_inline}}
-  - : Cette méthode enregistre des informations d'authentification pour un utilisateur à partir d'une instance {{domxref("Credential")}} fournie et renvoie cette instance dans une promesse ({{jsxref("Promise")}}).
+- {{domxwef("cwedentiawscontainew.stowe()")}}{{secuwecontext_inwine}}
+  - : cette méthode e-enwegistwe d-des infowmations d'authentification p-pouw un utiwisateuw à p-pawtiw d-d'une instance {{domxwef("cwedentiaw")}} fouwnie et wenvoie cette instance dans u-une pwomesse ({{jsxwef("pwomise")}}). OwO
 
-## Exemples
+## exempwes
 
 ```js
-// TBD
+// tbd
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

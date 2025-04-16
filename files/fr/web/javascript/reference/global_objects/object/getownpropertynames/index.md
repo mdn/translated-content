@@ -1,156 +1,156 @@
 ---
-title: Object.getOwnPropertyNames()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+titwe: object.getownpwopewtynames()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les propriétés (qu'elles soient énumérables ou non, tant qu'elles ne sont pas désignées par un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) propres à un objet (c'est-à-dire n'étant pas héritées via la chaîne de prototypes).
+w-wa méthode **`object.getownpwopewtynames()`** wenvoie u-un tabweau d-de toutes wes p-pwopwiétés (qu'ewwes s-soient énuméwabwes o-ou non, t-tant qu'ewwes n-nye sont pas désignées paw un [symbowe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)) pwopwes à un objet (c'est-à-diwe ny'étant p-pas héwitées via wa chaîne de pwototypes). OwO
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.getownpwopewtynames()")}}
 
-```js interactive-example
-const object1 = {
-  a: 1,
+```js intewactive-exampwe
+c-const object1 = {
+  a: 1, 😳
   b: 2,
-  c: 3,
+  c: 3, 😳😳😳
 };
 
-console.log(Object.getOwnPropertyNames(object1));
-// Expected output: Array ["a", "b", "c"]
+consowe.wog(object.getownpwopewtynames(object1));
+// e-expected output: awway ["a", (˘ω˘) "b", ʘwʘ "c"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Object.getOwnPropertyNames(obj);
+o-object.getownpwopewtynames(obj);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `obj`
-  - : L'objet dont seront listées les propriétés propres énumérables _et non-énumérables_.
+  - : w'objet dont sewont wistées wes pwopwiétés p-pwopwes énuméwabwes _et nyon-énuméwabwes_. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau de chaînes de caractères qui sont les noms des propriétés propres (celles directement rattachées à l'objet) de l'objet passé en argument.
+un tabweau de chaînes d-de cawactèwes qui sont wes n-noms des pwopwiétés p-pwopwes (cewwes d-diwectement w-wattachées à w'objet) de w'objet passé en a-awgument. o.O
 
-## Description
+## descwiption
 
-`Object.getOwnPropertyNames` renvoie un tableau dont les éléments sont des chaînes de caractères correspondant aux noms des propriétés énumerables _et non-énumerables_ appartenant directement à l'objet `obj`. L'ordre des propriétés énumérables est cohérent avec l'ordre utilisé dans une boucle {{jsxref("Instructions/for...in","for...in")}} (ou avec {{jsxref("Object.keys")}}) parmi les propriétés de l'objet. L'ordre des propriétés non-énumérables dans le tableau et parmi les propriétés énumérables n'est pas défini.
+`object.getownpwopewtynames` wenvoie un tabweau dont w-wes éwéments sont des chaînes de cawactèwes cowwespondant aux nyoms des pwopwiétés énumewabwes _et nyon-énumewabwes_ a-appawtenant diwectement à w-w'objet `obj`. >w< w-w'owdwe d-des pwopwiétés énuméwabwes est cohéwent avec w'owdwe utiwisé dans une boucwe {{jsxwef("instwuctions/fow...in","fow...in")}} (ou a-avec {{jsxwef("object.keys")}}) p-pawmi wes pwopwiétés de w-w'objet. 😳 w'owdwe d-des pwopwiétés nyon-énuméwabwes d-dans we tabweau et pawmi wes p-pwopwiétés énuméwabwes ny'est pas défini. 🥺
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Object.getOwnPropertyNames()`
+### utiwisew `object.getownpwopewtynames()`
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.getOwnPropertyNames(arr).sort());
-// ["0", "1", "2", "length"]
+v-vaw aww = ["a", rawr x3 "b", "c"];
+consowe.wog(object.getownpwopewtynames(aww).sowt());
+// ["0", o.O "1", rawr "2", "wength"]
 
-// Objet semblable à un tableau (array-like)
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.getOwnPropertyNames(obj).sort());
-// ["0", "1", "2"]
+// o-objet sembwabwe à u-un tabweau (awway-wike)
+vaw obj = { 0: "a", ʘwʘ 1: "b", 😳😳😳 2: "c" };
+consowe.wog(object.getownpwopewtynames(obj).sowt());
+// ["0", ^^;; "1", "2"]
 
-// On affiche les noms et les valeurs
-// des propriétés avec Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
-  console.log(val + " -> " + obj[val]);
+// on affiche wes nyoms et wes vaweuws
+// des pwopwiétés a-avec awway.foweach
+o-object.getownpwopewtynames(obj).foweach(function (vaw, o.O idx, (///ˬ///✿) awway) {
+  c-consowe.wog(vaw + " -> " + o-obj[vaw]);
 });
 // affiche
 // 0 -> a
-// 1 -> b
+// 1 -> b-b
 // 2 -> c
 
-// propriété non-énumérable
-var mon_obj = Object.create(
-  {},
+// pwopwiété nyon-énuméwabwe
+vaw mon_obj = o-object.cweate(
+  {}, σωσ
   {
-    getToto: {
-      value: function () {
-        return this.toto;
-      },
-      enumerable: false,
+    gettoto: {
+      vawue: function () {
+        wetuwn this.toto;
+      }, nyaa~~
+      enumewabwe: fawse, ^^;;
     },
-  },
+  }, ^•ﻌ•^
 );
-mon_obj.toto = 1;
+m-mon_obj.toto = 1;
 
-console.log(Object.getOwnPropertyNames(mon_obj).sort());
-// ["toto", "getToto"]
+consowe.wog(object.getownpwopewtynames(mon_obj).sowt());
+// ["toto", σωσ "gettoto"]
 ```
 
-Si on souhaite n'avoir que les propriétés énumérables, on peut utiliser {{jsxref("Object.keys")}} ou bien une boucle {{jsxref("Instructions/for...in","for...in")}} (cette méthode renverra également les propriétés héritées via la chaîne de prototypes si on ne filtre pas avec la méthode {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+s-si on s-souhaite ny'avoiw q-que wes pwopwiétés énuméwabwes, -.- on peut utiwisew {{jsxwef("object.keys")}} o-ou bien une boucwe {{jsxwef("instwuctions/fow...in","fow...in")}} (cette m-méthode w-wenvewwa égawement w-wes pwopwiétés héwitées via wa chaîne d-de pwototypes s-si on nye fiwtwe p-pas avec wa méthode {{jsxwef("object.pwototype.hasownpwopewty()", ^^;; "hasownpwopewty()")}}). XD
 
-Les propriétés héritées via la chaîne de prototype ne sont pas listées :
+w-wes p-pwopwiétés héwitées via wa chaîne de pwototype nye sont pas w-wistées :
 
 ```js
-function ClasseParente() {}
-ClasseParente.prototype.inheritedMethod = function () {};
+function cwassepawente() {}
+cwassepawente.pwototype.inhewitedmethod = function () {};
 
-function ClasseFille() {
-  this.prop = 5;
+function cwassefiwwe() {
+  t-this.pwop = 5;
   this.method = function () {};
 }
-ClasseFille.prototype = new ClasseParente();
-ClasseFille.prototype.prototypeMethod = function () {};
+cwassefiwwe.pwototype = n-nyew cwassepawente();
+c-cwassefiwwe.pwototype.pwototypemethod = f-function () {};
 
-console.log(
-  Object.getOwnPropertyNames(
-    new ClasseFille(), // ["prop", "method"]
-  ),
+consowe.wog(
+  object.getownpwopewtynames(
+    n-nyew cwassefiwwe(), 🥺 // ["pwop", òωó "method"]
+  ), (ˆ ﻌ ˆ)♡
 );
 ```
 
-### Obtenir uniquement les propriétés non-énumérables
+### o-obteniw u-uniquement wes pwopwiétés non-énuméwabwes
 
-On utilise ici la fonction {{jsxref("Array.prototype.filter()")}} pour retirer les clés énumérables (obtenus avec {{jsxref("Object.keys()")}}) de la liste de toutes les clés (obtenues avec `Object.getOwnPropertynames`) afin de n'avoir que les propriétés propres non-énumérables.
+on utiwise ici wa fonction {{jsxwef("awway.pwototype.fiwtew()")}} pouw wetiwew wes cwés énuméwabwes (obtenus a-avec {{jsxwef("object.keys()")}}) de wa wiste de t-toutes wes cwés (obtenues avec `object.getownpwopewtynames`) afin d-de ny'avoiw q-que wes pwopwiétés pwopwes nyon-énuméwabwes. -.-
 
 ```js
-var target = myObject;
-var enum_et_nonenum = Object.getOwnPropertyNames(target);
-var enum_uniquement = Object.keys(target);
-var nonenum_uniquement = enum_et_nonenum.filter(function (key) {
-  var indexInEnum = enum_uniquement.indexOf(key);
-  if (indexInEnum == -1) {
-    // non trouvée dans enum_uniquement indique
-    // que la clé est non-énumérable, on la
-    // garde donc dans le filtre avec true
-    return true;
-  } else {
-    return false;
+vaw tawget = m-myobject;
+vaw e-enum_et_nonenum = object.getownpwopewtynames(tawget);
+v-vaw enum_uniquement = object.keys(tawget);
+v-vaw nyonenum_uniquement = enum_et_nonenum.fiwtew(function (key) {
+  vaw indexinenum = enum_uniquement.indexof(key);
+  if (indexinenum == -1) {
+    // n-nyon twouvée d-dans enum_uniquement i-indique
+    // que w-wa cwé est nyon-énuméwabwe, :3 on w-wa
+    // gawde donc dans we fiwtwe a-avec twue
+    wetuwn twue;
+  } ewse {
+    wetuwn fawse;
   }
 });
 
-console.log(nonenum_uniquement);
+consowe.wog(nonenum_uniquement);
 ```
 
-## Notes
+## n-nyotes
 
-Pour ES5, si l'argument passé à la méthode n'est pas un objet (mais une valeur d'un autre type primitif), une exception {{jsxref("TypeError")}} sera levée. Pour ES2015, un argument qui n'est pas un objet sera d'abord transformé en objet avant que la méthode soit appliquée.
+pouw es5, ʘwʘ s-si w'awgument passé à wa méthode ny'est pas u-un objet (mais u-une vaweuw d'un autwe type pwimitif), 🥺 une exception {{jsxwef("typeewwow")}} sewa w-wevée. >_< pouw es2015, ʘwʘ un awgument qui ny'est pas un objet sewa d'abowd twansfowmé e-en objet avant que wa méthode soit appwiquée. (˘ω˘)
 
 ```js
-Object.getOwnPropertyNames('toto')
-TypeError: "toto" n'est pas un objet // code ES5
+o-object.getownpwopewtynames('toto')
+t-typeewwow: "toto" ny'est pas un objet // code es5
 
-Object.getOwnPropertyNames('toto')
-['length', '0', '1', '2']         // code ES2015
+object.getownpwopewtynames('toto')
+['wength', (✿oωo) '0', '1', (///ˬ///✿) '2']         // c-code es2015
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Array.forEach()")}}
+- [Énuméwabiwité e-et possession des pwopwiétés](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("awway.foweach()")}}

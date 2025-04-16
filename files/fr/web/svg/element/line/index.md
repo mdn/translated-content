@@ -1,66 +1,66 @@
 ---
-title: <line>
-slug: Web/SVG/Element/line
+titwe: <wine>
+swug: web/svg/ewement/wine
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `line` est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.
+w-w'éwément `wine` e-est un éwément d-de wa catégowie d-des fowmes simpwes s-svg, (ˆ ﻌ ˆ)♡ utiwisé p-pouw cwéew une w-wigne connectant d-deux points. (˘ω˘)
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
+htmw, (⑅˘꒳˘)
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
+```htmw
+<svg viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
+  <wine x-x1="0" y1="80" x2="100" y-y2="20" stwoke="bwack" />
 
-  <!-- Si on n'indique pas stroke, la ligne de couleur
-       ne sera pas visible -->
+  <!-- si on ny'indique pas stwoke, (///ˬ///✿) wa wigne de couweuw
+       n-nye sewa pas visibwe -->
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{embedwivesampwe('exempwe', 😳😳😳 100, 100)}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts g-gwobaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)&nbsp;;
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;;
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'.c3.a9v.c3.a9nement_graphique)&nbsp;;
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_pr.c3.a9sentation)&nbsp;;
-- {{ SVGAttr("class") }}&nbsp;;
-- {{ SVGAttr("style") }}&nbsp;;
-- {{ SVGAttr("externalResourcesRequired") }}&nbsp;;
-- {{ SVGAttr("transform") }}.
+- [attwibuts conditionnews](/fw/docs/web/svg/attwibute#attwibuts_de_twaitement_conditionnew)&nbsp;;
+- [attwibuts centwaux](/fw/docs/web/svg/attwibute#attwibuts_de_base)&nbsp;;
+- [attwibuts d'événements gwaphiques](/fw/docs/web/svg/attwibute#attwibuts_d'.c3.a9v.c3.a9nement_gwaphique)&nbsp;;
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pw.c3.a9sentation)&nbsp;;
+- {{ svgattw("cwass") }}&nbsp;;
+- {{ s-svgattw("stywe") }}&nbsp;;
+- {{ svgattw("extewnawwesouwceswequiwed") }}&nbsp;;
+- {{ svgattw("twansfowm") }}. 🥺
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{ SVGAttr("x1") }}
-- {{ SVGAttr("x2") }}
-- {{ SVGAttr("y1") }}
-- {{ SVGAttr("y2") }}
+- {{ svgattw("x1") }}
+- {{ s-svgattw("x2") }}
+- {{ svgattw("y1") }}
+- {{ s-svgattw("y2") }}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface [`SVGLineElement`](/fr/docs/DOM/SVGLineElement).
+c-cet éwément i-impwémente w'intewface [`svgwineewement`](/fw/docs/dom/svgwineewement). mya
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ SVGElement("polygon") }}&nbsp;;
-- {{ SVGElement("path") }}.
+- {{ svgewement("powygon") }}&nbsp;;
+- {{ s-svgewement("path") }}. 🥺

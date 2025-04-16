@@ -1,19 +1,19 @@
 ---
-title: Référence des erreurs JavaScript
-slug: Web/JavaScript/Reference/Errors
+titwe: wéféwence des ewweuws j-javascwipt
+swug: w-web/javascwipt/wefewence/ewwows
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-_Errare ECMAScript est_…
-Vous trouverez ci-après une liste d'erreurs causées par le moteur JavaScript. Ces erreurs peuvent aider à déboguer certains problèmes mais leur signification n'est pas toujours claire. Chacune de ces pages fournit donc des explications et informations supplémentaires à propos de ces erreurs.
+_ewwawe e-ecmascwipt e-est_…
+vous t-twouvewez ci-apwès u-une wiste d'ewweuws c-causées p-paw we moteuw javascwipt. (U ﹏ U) ces ewweuws peuvent aidew à déboguew cewtains pwobwèmes m-mais weuw signification n'est pas toujouws c-cwaiwe. >_< chacune de ces pages fouwnit d-donc des expwications et infowmations suppwémentaiwes à pwopos de ces ewweuws. rawr x3
 
-D'un point de vue technique, chaque erreur est un objet {{jsxref("Error")}} et possède une propriété `name` (son nom) et une propriété `message`.
+d-d'un point de vue technique, mya c-chaque ewweuw e-est un objet {{jsxwef("ewwow")}} et possède une pwopwiété `name` (son nyom) et une pwopwiété `message`. nyaa~~
 
-## Liste d'erreurs
+## w-wiste d'ewweuws
 
-{{ListSubPages("/fr/docs/Web/JavaScript/Reference/Erreurs")}}
+{{wistsubpages("/fw/docs/web/javascwipt/wefewence/ewweuws")}}
 
-## Voir aussi
+## voiw aussi
 
-- [Qu'est-ce qui a cloché ? Diagnostiquer un problème JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) : un tutoriel introductif pour réparer les erreurs JavaScript
+- [qu'est-ce qui a cwoché ? diagnostiquew un pwobwème javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong) : u-un tutowiew intwoductif pouw wépawew w-wes ewweuws j-javascwipt

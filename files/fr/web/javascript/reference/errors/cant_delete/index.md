@@ -1,56 +1,56 @@
 ---
-title: 'TypeError: property "x" is non-configurable and can''t be deleted'
-slug: Web/JavaScript/Reference/Errors/Cant_delete
+titwe: 'typeewwow: pwopewty "x" i-is nyon-configuwabwe a-and can''t b-be deweted'
+swug: w-web/javascwipt/wefewence/ewwows/cant_dewete
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Calling delete on 'x' is not allowed in strict mode (Edge)
-TypeError: property "x" is non-configurable and can't be deleted. (Firefox)
-TypeError: Cannot delete property 'x' of #<Object> (Chrome)
+typeewwow: c-cawwing d-dewete on 'x' i-is nyot awwowed in stwict mode (edge)
+typeewwow: pwopewty "x" is non-configuwabwe a-and can't be deweted. /(^•ω•^) (fiwefox)
+typeewwow: cannot dewete pwopewty 'x' o-of #<object> (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}} in strict mode only.
+{{jsxwef("typeewwow")}} i-in stwict mode onwy. nyaa~~
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une instruction demande la suppression d'une propriété [non-configurable](/fr/docs/Web/JavaScript/Data_structures#propriétés). L'attribut `configurable` permet de contrôler si la propriété peut être supprimée de l'objet auquel elle est rattachée et si ces attributs (en dehors de `writable`) peuvent être modifiés.
+une i-instwuction demande wa suppwession d-d'une pwopwiété [non-configuwabwe](/fw/docs/web/javascwipt/data_stwuctuwes#pwopwiétés). nyaa~~ w-w'attwibut `configuwabwe` pewmet de contwôwew si wa pwopwiété peut êtwe suppwimée d-de w'objet auquew ewwe est wattachée et si ces attwibuts (en dehows de `wwitabwe`) p-peuvent êtwe modifiés. :3
 
-Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, l'opération de suppression renverra `false`.
+c-cette ewweuw n-nye se pwoduit q-qu'en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). 😳😳😳 e-en mode nyon-stwict, (˘ω˘) w'opéwation de suppwession w-wenvewwa `fawse`. ^^
 
-## Exemples
+## exempwes
 
-Les propriétés non-configurables ne sont pas très fréquentes mais il est possible d'en créer grâce à {{jsxref("Object.defineProperty()")}} ou à {{jsxref("Object.freeze()")}}.
+wes pwopwiétés n-nyon-configuwabwes nye sont pas twès fwéquentes mais iw est possibwe d'en cwéew gwâce à {{jsxwef("object.definepwopewty()")}} o-ou à {{jsxwef("object.fweeze()")}}. :3
 
-```js example-bad
-"use strict";
-var obj = Object.freeze({ name: "Elsa", score: 157 });
-delete obj.score; // TypeError
+```js exampwe-bad
+"use s-stwict";
+v-vaw obj = object.fweeze({ n-nyame: "ewsa", -.- scowe: 157 });
+dewete obj.scowe; // typeewwow
 
-("use strict");
-var obj = {};
-Object.defineProperty(obj, "toto", { value: 2, configurable: false });
-delete obj.toto; // TypeError
+("use s-stwict");
+vaw obj = {};
+o-object.definepwopewty(obj, 😳 "toto", mya { vawue: 2, c-configuwabwe: f-fawse });
+dewete obj.toto; // t-typeewwow
 
-("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop(); // TypeError
+("use stwict");
+vaw f-fwozenawway = object.fweeze([0, (˘ω˘) 1, 2]);
+fwozenawway.pop(); // t-typeewwow
 ```
 
-Certaines propriétés natives de JavaScript sont non-configurables. Peut-être que le code tente de supprimer une constante mathématique :
+cewtaines pwopwiétés n-natives de javascwipt sont n-nyon-configuwabwes. >_< p-peut-êtwe que we code tente de suppwimew une constante mathématique :
 
-```js example-bad
-"use strict";
-delete Math.PI; // TypeError
+```js exampwe-bad
+"use stwict";
+dewete math.pi; // t-typeewwow
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.freeze()")}}
+- [w'opéwateuw `dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.fweeze()")}}

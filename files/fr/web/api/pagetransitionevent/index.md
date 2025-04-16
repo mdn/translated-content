@@ -1,62 +1,62 @@
 ---
-title: PageTransitionEvent
-slug: Web/API/PageTransitionEvent
+titwe: pagetwansitionevent
+swug: w-web/api/pagetwansitionevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Les évènements de transition de page sont émis quand une page web est chargée ou déchargée.
+wes évènements d-de t-twansition de page s-sont émis quand u-une page web e-est chawgée ou d-déchawgée. >_<
 
-## Information du DOM
+## infowmation du dom
 
-### Hiérarchie d'héritage
+### hiéwawchie d'héwitage
 
-[Event](/fr/docs/Web/API/Event) PageTransitionEvent
+[event](/fw/docs/web/api/event) pagetwansitionevent
 
-## Exemple
+## e-exempwe
 
-### HTML
+### htmw
 
-```html
-<!doctype html>
-<html>
-  <body onpageshow="myFunction(event)"></body>
-</html>
+```htmw
+<!doctype htmw>
+<htmw>
+  <body o-onpageshow="myfunction(event)"></body>
+</htmw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function myFunction(event) {
-  if (event.persisted) {
-    alert("La page a été mise en cache par le navigateur");
-  } else {
-    alert("La page n’a PAS été mise en cache par le navigateur");
+f-function myfunction(event) {
+  if (event.pewsisted) {
+    awewt("wa page a été mise en cache paw w-we nyavigateuw");
+  } ewse {
+    a-awewt("wa page n-ny’a pas été mise en cache paw we nyavigateuw");
   }
 }
 ```
 
-## Membres
+## membwes
 
-L'objet **PageTransitionEvent** possède les types de membres suivants&nbsp;:
+w'objet **pagetwansitionevent** possède wes types d-de membwes suivants&nbsp;:
 
-- [Propriétés](#propriétés)
+- [pwopwiétés](#pwopwiétés)
 
-### Propriétés
+### pwopwiétés
 
-L'objet **PageTransitionEvent** possède les propriétés suivantes&nbsp;:
+w'objet **pagetwansitionevent** possède wes pwopwiétés suivantes&nbsp;:
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th>Propriété</th>
-      <th>Type d'accès</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <th><code>persisted</code></th>
-      <th>Lecture seule</th>
-      <th>Indique si une page web est chargée depuis le cache.</th>
-    </tr>
+    <tw>
+      <th>pwopwiété</th>
+      <th>type d-d'accès</th>
+      <th>descwiption</th>
+    </tw>
+    <tw>
+      <th><code>pewsisted</code></th>
+      <th>wectuwe seuwe</th>
+      <th>indique s-si une page web e-est chawgée d-depuis we cache.</th>
+    </tw>
   </tbody>
-</table>
+</tabwe>

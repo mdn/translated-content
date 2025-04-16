@@ -1,49 +1,49 @@
 ---
-title: StyleSheet.href
-slug: Web/API/StyleSheet/href
+titwe: stywesheet.hwef
+swug: w-web/api/stywesheet/hwef
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-Renvoie l'emplacement de la feuille de style.
+w-wenvoie w'empwacement d-de wa feuiwwe d-de stywe. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-uri = stylesheet.href;
+u-uwi = stywesheet.hwef;
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `uri` Est une chaîne contenant l'URI de la feuille de style.
+- `uwi` e-est une chaîne contenant w'uwi de wa feuiwwe de stywe.
 
-## Exemple
+## exempwe
 
-```html
-// sur une machine locale:
-<html>
+```htmw
+// s-suw une machine wocawe:
+<htmw>
   <head>
-    <link rel="stylesheet" href="example.css" type="text/css" />
-    <script>
-      function sref() {
-        alert(document.styleSheets[0].href);
+    <wink wew="stywesheet" h-hwef="exampwe.css" type="text/css" />
+    <scwipt>
+      f-function swef() {
+        awewt(document.stywesheets[0].hwef);
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div class="tonnerre">Thunder</div>
-    <button onclick="sref()">ss</button>
+    <div cwass="tonnewwe">thundew</div>
+    <button oncwick="swef()">ss</button>
   </body>
-</html>
-// retourne "fichier: //// C: /Windows/Desktop/example.css
+</htmw>
+// w-wetouwne "fichiew: //// c: /windows/desktop/exampwe.css
 ```
 
-## Remarques
+## w-wemawques
 
-Si la feuille de style est une feuille de style liée, la valeur de son attribut est son emplacement. Pour les feuilles de style en ligne, la valeur de cet attribut est `NULL`.
+si w-wa feuiwwe de stywe est une feuiwwe de stywe wiée, wa vaweuw de son attwibut est s-son empwacement. (✿oωo) pouw wes feuiwwes de stywe en wigne, (ˆ ﻌ ˆ)♡ wa vaweuw de cet attwibut e-est `nuww`. (˘ω˘)
 
-Cette propriété est en lecture seule sur Firefox, Opera, Google Chrome et Safari, et elle est lue / écrite dans Internet Explorer.
+cette pwopwiété e-est en wectuwe s-seuwe suw fiwefox, (⑅˘꒳˘) o-opewa, googwe c-chwome et safawi, (///ˬ///✿) et ewwe est wue / écwite dans i-intewnet expwowew. 😳😳😳
 
-## Spécification
+## spécification
 
-[Href](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)
+[hwef](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-hwef)

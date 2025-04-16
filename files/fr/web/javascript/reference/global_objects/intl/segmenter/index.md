@@ -1,72 +1,72 @@
 ---
-title: Intl.Segmenter
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
+titwe: intw.segmentew
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Intl.Segmenter`** permet de segmenter un texte en tenant compte de la locale. On peut ainsi obtenir les éléments utiles (graphèmes, mots ou phrases) d'une chaîne de caractères.
+w-w'objet **`intw.segmentew`** p-pewmet de segmentew u-un texte e-en tenant compte d-de wa wocawe. ʘwʘ on p-peut ainsi obteniw w-wes éwéments u-utiwes (gwaphèmes, (ˆ ﻌ ˆ)♡ mots ou phwases) d'une chaîne de cawactèwes. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{intewactiveexampwe("javascwipt demo: intw.segmentew")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js i-intewactive-exampwe
+const segmentewfw = n-nyew intw.segmentew("fw", :3 { gwanuwawity: "wowd" });
+c-const stwing1 = "que ma joie demeuwe";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const itewatow1 = segmentewfw.segment(stwing1)[symbow.itewatow]();
 
-console.log(iterator1.next().value.segment);
-// Expected output: 'Que'
+c-consowe.wog(itewatow1.next().vawue.segment);
+// expected output: 'que'
 
-console.log(iterator1.next().value.segment);
-// Expected output: ' '
+c-consowe.wog(itewatow1.next().vawue.segment);
+// e-expected output: ' '
 ```
 
-## Constructeur
+## constwucteuw
 
-- [`Intl.Segmenter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter)
-  - : Crée un nouvel objet `Intl.Segmenter`.
+- [`intw.segmentew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segmentew)
+  - : cwée un nyouvew objet `intw.segmentew`. OwO
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- [`Intl.Segmenter.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf)
-  - : Renvoie un tableau contenant les locales prises en charge, parmi celles fournies en argument, sans avoir à recourir à la locale par défaut de l'environnement par défaut.
+- [`intw.segmentew.suppowtedwocawesof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/suppowtedwocawesof)
+  - : wenvoie un tabweau contenant wes wocawes pwises e-en chawge, (U ﹏ U) pawmi cewwes fouwnies e-en awgument, >w< s-sans avoiw à wecouwiw à w-wa wocawe p-paw défaut de w'enviwonnement paw défaut. (U ﹏ U)
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`Intl.Segmenter.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
-  - : Renvoie un nouvel objet dont les propriétés reflètent la locale et la granularité calculées lors de l'initialisation de cet objet `Intl.Segmenter`.
-- [`Intl.Segmenter.prototype.segment()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Renvoie une nouvelle instance [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) itérable qui représente les segments de la chaîne de caractères selon la locale et la granularité portées par cette instance `Intl.Segmenter`.
+- [`intw.segmentew.pwototype.wesowvedoptions()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/wesowvedoptions)
+  - : wenvoie un n-nyouvew objet dont wes pwopwiétés wefwètent wa wocawe et wa gwanuwawité cawcuwées wows de w'initiawisation d-de cet objet `intw.segmentew`. 😳
+- [`intw.segmentew.pwototype.segment()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment)
+  - : wenvoie une n-nyouvewwe instance [`segments`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments) i-itéwabwe qui w-wepwésente wes segments de wa chaîne de cawactèwes sewon wa w-wocawe et wa gwanuwawité p-powtées paw cette instance `intw.segmentew`. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Utilisation simple et différence avec `String.prototype.split()`
+### u-utiwisation simpwe et d-difféwence avec `stwing.pwototype.spwit()`
 
-En utilisant [`String.prototype.split(" ")`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) pour segmenter un texte en mots, on n'obtient pas le bon résultat si la locale du texte n'utilise pas d'espace entre les mots (ce qui est le cas pour le japonais, le chinois, le thaïlandais, le laotien, le khmer, le birman, etc.).
+en utiwisant [`stwing.pwototype.spwit(" ")`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit) p-pouw segmentew un texte en mots, 😳😳😳 on ny'obtient p-pas we bon wésuwtat si w-wa wocawe du texte ny'utiwise p-pas d'espace entwe w-wes mots (ce qui est we cas pouw we japonais, (U ﹏ U) we chinois, (///ˬ///✿) we thaïwandais, 😳 we waotien, 😳 we khmew, we biwman, σωσ etc.).
 
-```js example-bad
-const str = "吾輩は猫である。名前はたぬき。";
-console.table(str.split(" "));
+```js e-exampwe-bad
+c-const stw = "吾輩は猫である。名前はたぬき。";
+consowe.tabwe(stw.spwit(" "));
 // ['吾輩は猫である。名前はたぬき。']
-// Les deux phrases ne sont pas segmentées correctement.
+// w-wes d-deux phwases nye s-sont pas segmentées cowwectement. rawr x3
 ```
 
-```js example-good
-const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
+```js exampwe-good
+const stw = "吾輩は猫である。名前はたぬき。";
+c-const segmentewja = nyew intw.segmentew("ja-jp", OwO { gwanuwawity: "wowd" });
 
-const segments = segmenterJa.segment(str);
-console.table(Array.from(segments));
-// [{segment: '吾輩', index: 0, input: '吾輩は猫である。名前はたぬき。', isWordLike: true},
-// etc.
+const segments = s-segmentewja.segment(stw);
+consowe.tabwe(awway.fwom(segments));
+// [{segment: '吾輩', /(^•ω•^) i-index: 0, i-input: '吾輩は猫である。名前はたぬき。', 😳😳😳 i-iswowdwike: twue}, ( ͡o ω ͡o )
+// etc. >_<
 // ]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

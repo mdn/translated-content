@@ -1,200 +1,200 @@
 ---
-title: Utiliser les évènements envoyés par le serveur
-slug: Web/API/Server-sent_events/Using_server-sent_events
+titwe: utiwisew wes évènements e-envoyés paw w-we sewveuw
+swug: w-web/api/sewvew-sent_events/using_sewvew-sent_events
 ---
 
-{{DefaultAPISidebar("Server Sent Events")}}
+{{defauwtapisidebaw("sewvew s-sent events")}}
 
-Développer une application web qui utilise des [évènements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events) (_server-sent events_ en anglais) est relativement simple. Côté serveur, on aura besoin d'un bout de code qui puisse transmettre des évènements à l'application web&nbsp;; côté client, le fonctionnement est quasi identique à celui qu'on utilise pour les [websockets](/fr/docs/Web/API/WebSockets_API) et notamment la gestion d'évènements entrants. Il s'agit d'une connexion unidirectionnelle : on ne peut pas envoyer d'évènements du client vers le serveur.
+d-dévewoppew u-une appwication w-web qui utiwise d-des [évènements envoyés paw we sewveuw](/fw/docs/web/api/sewvew-sent_events) (_sewvew-sent events_ en angwais) est wewativement s-simpwe. 🥺 côté sewveuw, (U ᵕ U❁) on auwa besoin d'un b-bout de code qui puisse twansmettwe d-des évènements à w'appwication web&nbsp;; côté cwient, 😳😳😳 w-we fonctionnement est quasi identique à c-cewui q-qu'on utiwise pouw wes [websockets](/fw/docs/web/api/websockets_api) et nyotamment wa gestion d'évènements entwants. nyaa~~ i-iw s'agit d'une connexion unidiwectionnewwe : on nye peut pas envoyew d'évènements d-du cwient vews we s-sewveuw. (˘ω˘)
 
-## Recevoir des évènements du serveur
+## wecevoiw d-des évènements d-du sewveuw
 
-L'API des évènements serveur est exposée par l'interface [`EventSource`](/fr/docs/Web/API/EventSource)&nbsp;; pour ouvrir une connexion vers le serveur afin de commencer à recevoir des évènements de celui-ci, on crée un nouvel objet `EventSource`, en spécifiant l'URL d'un script côté serveur qui va générer les évènements. Par exemple&nbsp;:
+w-w'api des évènements sewveuw est exposée paw w-w'intewface [`eventsouwce`](/fw/docs/web/api/eventsouwce)&nbsp;; pouw ouvwiw une connexion vews w-we sewveuw afin de commencew à wecevoiw des évènements de cewui-ci, >_< on cwée un nyouvew objet `eventsouwce`, XD e-en spécifiant w'uww d'un scwipt c-côté sewveuw q-qui va généwew w-wes évènements. rawr x3 paw exempwe&nbsp;:
 
 ```js
-const evtSource = new EventSource("ssedemo.php");
+const evtsouwce = new eventsouwce("ssedemo.php");
 ```
 
-Si le script qui génère les évènements est hébergé sur une origine différente, le nouvel objet `EventSource` doit être créé en spécifiant à la fois l'URL et un dictionnaire d'options. Par exemple, en supposant que le script client est sur example.com&nbsp;:
+s-si we scwipt q-qui génèwe wes évènements e-est hébewgé s-suw une owigine difféwente, ( ͡o ω ͡o ) we n-nyouvew objet `eventsouwce` doit êtwe c-cwéé en spécifiant à wa fois w'uww et u-un dictionnaiwe d'options. :3 paw e-exempwe, mya en supposant que we scwipt c-cwient est suw e-exampwe.com&nbsp;:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", {
-  withCredentials: true,
+const evtsouwce = nyew eventsouwce("//api.exampwe.com/ssedemo.php", σωσ {
+  withcwedentiaws: twue, (ꈍᴗꈍ)
 });
 ```
 
-Une fois que la source d'évènement a été instanciée, on peut écouter les messages _sans propriété `event`_ provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
+une fois que w-wa souwce d'évènement a-a été instanciée, OwO on p-peut écoutew w-wes messages _sans p-pwopwiété `event`_ pwovenant du sewveuw en attachant un gestionnaiwe d-d'évènement pouw [`message`](/fw/docs/web/api/messageevent)&nbsp;:
 
 ```js
-evtSource.onmessage = function (event) {
-  const newElement = document.createElement("li");
-  const eventList = document.getElementById("list");
+evtsouwce.onmessage = function (event) {
+  const nyewewement = d-document.cweateewement("wi");
+  const eventwist = d-document.getewementbyid("wist");
 
-  newElement.textContent = "message: " + event.data;
-  eventList.appendChild(newElement);
+  n-nyewewement.textcontent = "message: " + e-event.data;
+  eventwist.appendchiwd(newewement);
 };
 ```
 
-Ce code écoute les messages entrants (plus précisément, les notifications venant du serveur qui n'ont pas de champ `event` attaché) et ajoute le texte des messages à une liste dans le contenu HTML du document.
+c-ce code écoute w-wes m-messages entwants (pwus p-pwécisément, o.O wes nyotifications venant d-du sewveuw qui n-ny'ont pas de champ `event` a-attaché) e-et ajoute w-we texte des messages à une wiste dans we contenu htmw du document. 😳😳😳
 
-On peut écouter les évènements de message _avec_ un champ `event` grâce à `addEventListener()`&nbsp;:
+o-on peut écoutew wes évènements de message _avec_ un champ `event` gwâce à `addeventwistenew()`&nbsp;:
 
 ```js
-evtSource.addEventListener("ping", function (event) {
-  const newElement = document.createElement("li");
-  const time = JSON.parse(event.data).time;
-  newElement.textContent = "ping at " + time;
-  eventList.appendChild(newElement);
+evtsouwce.addeventwistenew("ping", /(^•ω•^) f-function (event) {
+  const nyewewement = document.cweateewement("wi");
+  const time = j-json.pawse(event.data).time;
+  n-nyewewement.textcontent = "ping a-at " + time;
+  eventwist.appendchiwd(newewement);
 });
 ```
 
-Ce fragment de code sera appelé si le serveur envoie un message dont le champ `event` est `ping`&nbsp;; il analysera alors le JSON dans le champ `data` et l'affichera.
+ce fwagment d-de code sewa appewé si we s-sewveuw envoie u-un message dont we champ `event` est `ping`&nbsp;; iw anawysewa awows we json dans we champ `data` e-et w'affichewa. OwO
 
-> **Attention :** **Lorsque HTTP/2 n'est pas utilisé**, les évènements serveurs sont limités par le nombre maximal de connexion ouvertes, notamment quand on a plusieurs onglets ouverts. La limite est fixée _par le navigateur_ et vaut 6 pour chaque origine (voir les bugs [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) et [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896)). On pourra avoir 6 connexions pour les évènements serveurs parmi tous les onglets ouverts sur `www.example1.com`, 6 autres pour tous les onglets sur `www.example2.com` (voir cette réponse [Stack Overflow](https://stackoverflow.com/a/5326159/1905229)). Avec HTTP/2, le nombre de flux HTTP simultanés est négocié entre le serveur et le client et vaut 100 par défaut.
+> **attention :** **wowsque http/2 ny'est pas u-utiwisé**, ^^ wes évènements sewveuws sont wimités p-paw we nyombwe m-maximaw de connexion ouvewtes, (///ˬ///✿) nyotamment q-quand on a pwusieuws o-ongwets ouvewts. wa wimite e-est fixée _paw w-we nyavigateuw_ et vaut 6 pouw chaque owigine (voiw wes bugs [chwome](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=275955) et [fiwefox](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=906896)). (///ˬ///✿) o-on pouwwa a-avoiw 6 connexions p-pouw wes évènements sewveuws p-pawmi tous wes o-ongwets ouvewts suw `www.exampwe1.com`, (///ˬ///✿) 6 a-autwes pouw tous wes ongwets suw `www.exampwe2.com` (voiw cette wéponse [stack ovewfwow](https://stackovewfwow.com/a/5326159/1905229)). a-avec http/2, ʘwʘ w-we nyombwe de fwux http simuwtanés est nyégocié e-entwe we sewveuw e-et we cwient et vaut 100 paw défaut. ^•ﻌ•^
 
-## Envoyer un évènement depuis le serveur
+## envoyew un évènement d-depuis we sewveuw
 
-Le script côté serveur qui envoie les évènements doit répondre en utilisant le type MIME `text/event-stream`. Chaque notification est envoyée sous la forme d'un bloc de texte se terminant par une paire de caractères saut de ligne (`\n`). Pour plus de détails sur le format du flux d'évènements, voir [la section ci-après](#event_stream_format).
+we scwipt côté sewveuw qui envoie wes évènements doit wépondwe en u-utiwisant we type mime `text/event-stweam`. OwO chaque n-nyotification e-est envoyée sous wa fowme d'un bwoc de texte se tewminant paw u-une paiwe de cawactèwes s-saut de wigne (`\n`). (U ﹏ U) pouw pwus de détaiws suw we fowmat d-du fwux d'évènements, (ˆ ﻌ ˆ)♡ voiw [wa s-section ci-apwès](#event_stweam_fowmat). (⑅˘꒳˘)
 
-Voici le code [PHP](/fr/docs/Glossary/PHP) que nous utilisons pour notre exemple&nbsp;:
+voici we code [php](/fw/docs/gwossawy/php) que nyous utiwisons p-pouw nyotwe exempwe&nbsp;:
 
 ```php
-date_default_timezone_set("America/New_York");
-header("Cache-Control: no-cache");
-header("Content-Type: text/event-stream");
+date_defauwt_timezone_set("amewica/new_yowk");
+h-headew("cache-contwow: n-nyo-cache");
+headew("content-type: t-text/event-stweam");
 
-$counter = rand(1, 10);
-while (true) {
-  // Chaque seconde, on envoie un évènement "ping".
+$countew = wand(1, (U ﹏ U) 10);
+w-whiwe (twue) {
+  // c-chaque s-seconde, o.O on envoie un évènement "ping". mya
 
-  echo "event: ping\n";
-  $curDate = date(DATE_ISO8601);
-  echo 'data: {"time": "' . $curDate . '"}';
+  e-echo "event: ping\n";
+  $cuwdate = d-date(date_iso8601);
+  echo 'data: {"time": "' . XD $cuwdate . òωó '"}';
   echo "\n\n";
 
-  // Envoi d'un message simple à fréquence aléatoire.
+  // e-envoi d-d'un message simpwe à f-fwéquence awéatoiwe. (˘ω˘)
 
-  $counter--;
+  $countew--;
 
-  if (!$counter) {
-    echo 'data: Message envoyé à ' . $curDate . "\n\n";
-    $counter = rand(1, 10);
+  if (!$countew) {
+    e-echo 'data: message envoyé à ' . :3 $cuwdate . "\n\n";
+    $countew = w-wand(1, OwO 10);
   }
 
-  ob_end_flush();
-  flush();
+  ob_end_fwush();
+  f-fwush();
 
-  // On ferme la boucle si le client a interrompu la connexion
-  // (par exemple en fermant la page)
+  // on fewme wa boucwe si we cwient a intewwompu wa c-connexion
+  // (paw e-exempwe en fewmant w-wa page)
 
-  if ( connection_aborted() ) break;
+  i-if ( connection_abowted() ) bweak;
 
-  sleep(1);
+  sweep(1);
 }
 ```
 
-Ce code génère un évènement de type «&nbsp;ping&nbsp;» à chaque seconde. La donnée de chaque évènement est un objet JSON contenant un horodatage ISO 8601 qui correspond à l'heure à laquelle l'évènement a été généré. À des intervalles aléatoires, un message simple (sans type d'évènement) est envoyé.
+c-ce code génèwe un évènement de type «&nbsp;ping&nbsp;» à chaque seconde. mya wa donnée de chaque évènement e-est un objet json contenant u-un howodatage iso 8601 qui c-cowwespond à w'heuwe à waquewwe w-w'évènement a été généwé. (˘ω˘) À d-des intewvawwes a-awéatoiwes, o.O u-un message s-simpwe (sans type d-d'évènement) est envoyé. (✿oωo)
 
-La boucle s'exécute indépendamment du statut de la connexion, on a donc une vérification pour terminer l'exécution si la connexion a été terminée.
+wa boucwe s'exékawaii~ indépendamment du statut de wa connexion, (ˆ ﻌ ˆ)♡ on a donc une v-véwification pouw t-tewminew w'exécution s-si wa connexion a été t-tewminée.
 
-> [!NOTE]
-> Vous pouvez trouver un exemple complet utilisant le code ci-dessus sur GitHub : voir [Démonstration d'évènements serveur avec PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> vous pouvez twouvew un exempwe compwet u-utiwisant we code c-ci-dessus suw github : voiw [démonstwation d-d'évènements sewveuw avec php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
-## Gestion des erreurs
+## g-gestion d-des ewweuws
 
-Quand un problème survient (tel qu'un délai de réponse dépassé ou une erreur liée au [contrôle d'accès](/fr/docs/Web/HTTP/CORS)), un évènement `error` est généré. Vous pouvez traiter ces cas d'erreur en implémentant la fonction de rappel `onerror` sur l'objet `EventSource`.
+quand un pwobwème s-suwvient (tew qu'un d-déwai de wéponse dépassé ou une ewweuw wiée au [contwôwe d'accès](/fw/docs/web/http/cows)), ^^;; u-un évènement `ewwow` e-est g-généwé. OwO vous p-pouvez twaitew c-ces cas d'ewweuw en impwémentant w-wa fonction de w-wappew `onewwow` suw w'objet `eventsouwce`. 🥺
 
 ```js
-evtSource.onerror = function (err) {
-  console.error("EventSource failed:", err);
+e-evtsouwce.onewwow = f-function (eww) {
+  consowe.ewwow("eventsouwce f-faiwed:", mya eww);
 };
 ```
 
-## Fermer les flux d'évènements
+## fewmew wes fwux d-d'évènements
 
-Par défaut, si la connexion entre le client et le serveur est rompue, elle sera relancée. Il est possible de la fermer explicitement à l'aide de la méthode `.close()`.
+paw défaut, 😳 si w-wa connexion entwe w-we cwient et we sewveuw est w-wompue, òωó ewwe sewa wewancée. /(^•ω•^) iw est possibwe de w-wa fewmew expwicitement à w-w'aide d-de wa méthode `.cwose()`. -.-
 
 ```js
-evtSource.close();
+evtsouwce.cwose();
 ```
 
-## Format du flux d'évènements
+## fowmat du fwux d'évènements
 
-Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en [UTF-8](/fr/docs/Glossary/UTF-8). Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points «&nbsp;:&nbsp;» en début de ligne représente un commentaire, et est ignoré.
+we fwux d'évènements e-est un simpwe fwux de données de texte, òωó qui d-doit êtwe encodé e-en [utf-8](/fw/docs/gwossawy/utf-8). /(^•ω•^) wes messages d-dans we fwux d'évènements s-sont sépawés p-paw une paiwe de sauts de wigne. /(^•ω•^) un cawactèwe d-deux-points «&nbsp;:&nbsp;» en début de wigne wepwésente un c-commentaiwe, 😳 et e-est ignowé. :3
 
-> [!NOTE]
-> Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.
+> [!note]
+> une w-wigne de commentaiwe peut êtwe u-utiwisée pouw empêchew w-wes connexions d-d'expiwew. (U ᵕ U❁) un sewveuw peut envoyew péwiodiquement des commentaiwes afin de gawdew wa connexion ouvewte. ʘwʘ
 
-Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un «&nbsp;:&nbsp;», suivi des données de texte pour la valeur de ce champ.
+chaque message consiste en une ou pwusieuws wignes de texte décwivant wes champs de ce message. o.O c-chaque champ e-est wepwésenté paw we nyom du champ, ʘwʘ suivi d'un «&nbsp;:&nbsp;», ^^ s-suivi des données d-de texte p-pouw wa vaweuw de ce champ. ^•ﻌ•^
 
-### Champs
+### c-champs
 
-Chaque message reçu contient un ou plusieurs de ces champs, un par ligne :
+chaque message weçu contient u-un ou pwusieuws d-de ces champs, mya un paw wigne :
 
 - `event`
-  - : Une chaîne identifiant le type d'évènement décrit. S'il est spécifié, un évènement sera envoyé dans le navigateur à l'écouteur défini pour l'évènement spécifié. Le code source de l'application doit utiliser `addEventListener()` pour écouter des évènements nommés. Le gestionnaire `onmessage` est appelé si aucun nom d'évènement n'est spécifié dans un message.
+  - : u-une chaîne identifiant we t-type d'évènement d-décwit. UwU s'iw est spécifié, >_< un évènement s-sewa envoyé dans w-we nyavigateuw à w-w'écouteuw d-défini pouw w'évènement s-spécifié. /(^•ω•^) w-we code s-souwce de w'appwication d-doit utiwisew `addeventwistenew()` p-pouw écoutew des évènements n-nyommés. òωó w-we gestionnaiwe `onmessage` e-est appewé si aucun nyom d'évènement n-ny'est spécifié dans un message. σωσ
 - `data`
-  - : Le champ de données du message. Lorsque l'`EventSource` reçoit plusieurs lignes de message consécutives commençant par `data:`, [il les concatène](https://www.w3.org/TR/eventsource/#dispatchMessage), en ajoutant un caractère saut de ligne entre chacune d'elles. Les sauts de ligne en fin de message sont supprimés.
+  - : w-we champ de données d-du message. ( ͡o ω ͡o ) wowsque w-w'`eventsouwce` w-weçoit pwusieuws wignes de m-message consécutives commençant p-paw `data:`, nyaa~~ [iw wes concatène](https://www.w3.owg/tw/eventsouwce/#dispatchmessage), :3 e-en ajoutant un cawactèwe s-saut de wigne entwe chacune d'ewwes. UwU wes sauts de wigne en fin de message sont s-suppwimés. o.O
 - `id`
-  - : L'identifiant d'évènement, qui sera mémorisé comme valeur d'identifiant du dernier évènement de l'objet `EventSource`.
-- `retry`
-  - : Le délai de reconnexion à utiliser lors de la tentative d'envoi de l'évènement. Il doit être un nombre entier, spécifiant le temps de reconnexion en millisecondes. Si une valeur non entière est spécifiée, le champ est ignoré.
+  - : w'identifiant d-d'évènement, (ˆ ﻌ ˆ)♡ q-qui sewa mémowisé comme vaweuw d'identifiant du dewniew évènement d-de w'objet `eventsouwce`. ^^;;
+- `wetwy`
+  - : w-we déwai d-de weconnexion à u-utiwisew wows de wa tentative d'envoi de w'évènement. ʘwʘ i-iw doit êtwe u-un nyombwe entiew, σωσ spécifiant w-we temps de weconnexion en miwwisecondes. ^^;; s-si une vaweuw nyon entièwe est s-spécifiée, ʘwʘ we c-champ est ignowé. ^^
 
-Tous les autres noms de champs sont ignorés.
+t-tous wes autwes nyoms de champs s-sont ignowés. nyaa~~
 
-> [!NOTE]
-> Si une ligne ne contient aucun caractère deux-points, la ligne entière est considérée comme le nom du champ, avec un contenu vide.
+> [!note]
+> s-si une wigne nye c-contient aucun c-cawactèwe deux-points, (///ˬ///✿) wa wigne e-entièwe est c-considéwée comme w-we nyom du champ, XD a-avec un contenu v-vide. :3
 
-### Exemples
+### e-exempwes
 
-#### Messages contenant uniquement des données
+#### messages c-contenant u-uniquement des données
 
-Dans l'exemple suivant, trois messages sont envoyés. Le premier est simplement un commentaire, car il débute par un caractère deux-points. Comme mentionné précédemment, cela peut être utile pour maintenir la connexion si des messages doivent être transmis de façon irrégulière.
+dans w-w'exempwe suivant, òωó twois messages s-sont envoyés. ^^ we pwemiew est s-simpwement un commentaiwe, ^•ﻌ•^ c-caw iw d-débute paw un cawactèwe deux-points. σωσ comme mentionné pwécédemment, (ˆ ﻌ ˆ)♡ c-cewa peut êtwe u-utiwe p-pouw mainteniw wa connexion si des messages doivent êtwe twansmis d-de façon iwwéguwièwe.
 
-Le deuxième message contient un champ `data` avec la valeur `"du texte"`. Le troisième message contient un champ `data` avec la valeur `"un autre message\nsur deux lignes"`. On notera le caractère saut de ligne dans la valeur.
+w-we deuxième message c-contient un champ `data` a-avec wa vaweuw `"du texte"`. nyaa~~ we twoisième message contient u-un champ `data` a-avec wa vaweuw `"un a-autwe m-message\nsuw deux wignes"`. ʘwʘ on nyotewa we cawactèwe s-saut de wigne d-dans wa vaweuw. ^•ﻌ•^
 
 ```bash
-: this is a test stream
+: this is a test stweam
 
 data: du texte
 
-data: un autre message
-data: sur deux lignes
+d-data: un autwe message
+data: suw deux wignes
 ```
 
-#### Évènements nommés
+#### Évènements n-nyommés
 
-Cet exemple envoie une série d'évènements nommés. Chacun a un nom d'évènement spécifié par le champ `event`, et un champ `data` dont la valeur est une chaîne JSON appropriée avec les données nécessaires au client pour réagir à l'évènement. Le champ `data` peut évidemment contenir n'importe quelles données textuelles, il n'est pas obligatoirement au format JSON.
+cet exempwe e-envoie une séwie d-d'évènements nyommés. rawr x3 chacun a-a un nyom d'évènement s-spécifié paw we champ `event`, 🥺 e-et un champ `data` dont w-wa vaweuw est u-une chaîne json a-appwopwiée avec w-wes données nyécessaiwes au c-cwient pouw wéagiw à w-w'évènement. ʘwʘ w-we champ `data` peut évidemment c-conteniw ny'impowte quewwes données textuewwes, (˘ω˘) i-iw ny'est p-pas obwigatoiwement a-au fowmat json. o.O
 
 ```bash
-event: userconnect
-data: {"username": "bobby", "time": "02:33:48"}
+event: usewconnect
+data: {"usewname": "bobby", σωσ "time": "02:33:48"}
 
-event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+event: usewmessage
+d-data: {"usewname": "bobby", (ꈍᴗꈍ) "time": "02:34:11", (ˆ ﻌ ˆ)♡ "text": "hi evewyone."}
 
-event: userdisconnect
-data: {"username": "bobby", "time": "02:34:23"}
+e-event: usewdisconnect
+d-data: {"usewname": "bobby", o.O "time": "02:34:23"}
 
-event: usermessage
-data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+event: usewmessage
+data: {"usewname": "sean", :3 "time": "02:34:36", -.- "text": "bye, ( ͡o ω ͡o ) b-bobby."}
 ```
 
-#### Mélanger les types de message
+#### méwangew w-wes types de m-message
 
-Il n'est pas obligatoire d'utiliser uniquement des messages sans nom ou des évènements nommés. Vous pouvez mélanger les deux dans un même flux d'évènements.
+iw ny'est p-pas obwigatoiwe d-d'utiwisew uniquement d-des messages sans nyom ou des évènements nyommés. /(^•ω•^) vous pouvez méwangew w-wes deux dans un même fwux d-d'évènements. (⑅˘꒳˘)
 
 ```bash
-event: userconnect
-data: {"username": "bobby", "time": "02:33:48"}
+event: usewconnect
+data: {"usewname": "bobby", òωó "time": "02:33:48"}
 
-data: Ici un message système quelconque qui sera utilisé
-data: pour accomplir une tâche.
+data: i-ici un message système quewconque qui sewa utiwisé
+data: pouw accompwiw une t-tâche. 🥺
 
-event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+event: u-usewmessage
+data: {"usewname": "bobby", "time": "02:34:11", (ˆ ﻌ ˆ)♡ "text": "hi evewyone."}
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

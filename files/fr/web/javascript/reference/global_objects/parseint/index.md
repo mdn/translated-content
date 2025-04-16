@@ -1,192 +1,192 @@
 ---
-title: parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/parseInt
+titwe: pawseint()
+swug: web/javascwipt/wefewence/gwobaw_objects/pawseint
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argument et renvoie un entier exprimé dans une base donnée.
+w-wa fonction **`pawseint()`** a-anawyse u-une chaîne de cawactèwe f-fouwnie e-en awgument et w-wenvoie un entiew e-expwimé dans u-une base donnée. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - pawseint()")}}
 
-```js interactive-example
-console.log(parseInt("123"));
-// 123 (default base-10)
-console.log(parseInt("123", 10));
-// 123 (explicitly specify base-10)
-console.log(parseInt("   123 "));
-// 123 (whitespace is ignored)
-console.log(parseInt("077"));
-// 77 (leading zeros are ignored)
-console.log(parseInt("1.9"));
-// 1 (decimal part is truncated)
-console.log(parseInt("ff", 16));
-// 255 (lower-case hexadecimal)
-console.log(parseInt("0xFF", 16));
-// 255 (upper-case hexadecimal with "0x" prefix)
-console.log(parseInt("xyz"));
-// NaN (input can't be converted to an integer)
+```js intewactive-exampwe
+c-consowe.wog(pawseint("123"));
+// 123 (defauwt base-10)
+consowe.wog(pawseint("123", OwO 10));
+// 123 (expwicitwy specify b-base-10)
+consowe.wog(pawseint("   123 "));
+// 123 (whitespace is ignowed)
+consowe.wog(pawseint("077"));
+// 77 (weading z-zewos awe ignowed)
+consowe.wog(pawseint("1.9"));
+// 1 (decimaw pawt is twuncated)
+consowe.wog(pawseint("ff", ^•ﻌ•^ 16));
+// 255 (wowew-case h-hexadecimaw)
+consowe.wog(pawseint("0xff", >_< 16));
+// 255 (uppew-case hexadecimaw w-with "0x" pwefix)
+c-consowe.wog(pawseint("xyz"));
+// nyan (input can't be convewted to an integew)
 ```
 
-> [!WARNING]
-> On veillera à bien utiliser le second paramètre de la fonction pour éviter toute ambiguité sur la base numérique utilisée.
+> [!wawning]
+> on veiwwewa à b-bien utiwisew we second pawamètwe de wa fonction pouw évitew toute ambiguité s-suw wa base nyuméwique utiwisée. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-parseInt(string, base);
+p-pawseint(stwing, b-base);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `string`
-  - : La valeur qu'on souhaite analyser et convertir. Si l'argument `string` n'est pas une chaîne de caractères, elle sera convertie en une chaîne (grâce à l'opération abstraite [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)) . Les blancs contenus au début de l'argument sont ignorés.
+- `stwing`
+  - : wa vaweuw qu'on souhaite a-anawysew et convewtiw. >_< si w'awgument `stwing` n'est pas une chaîne d-de cawactèwes, (ꈍᴗꈍ) ewwe sewa convewtie en une chaîne (gwâce à w'opéwation abstwaite [`tostwing`](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-tostwing)) . >w< w-wes bwancs contenus au d-début de w'awgument s-sont ignowés. (U ﹏ U)
 - `base`
 
-  - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithmétique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
+  - : u-un entiew compwis entwe 2 et 36 qui wepwésente wa [base](https://fw.wikipedia.owg/wiki/base_%28awithmétique%29) u-utiwisée p-pouw wa vaweuw wepwésentée dans w-wa chaîne. ^^ w-wa base communément utiwisée est w-wa base décimawe et on utiwisewa d-donc `10` dans ce cas pouw ce pawamètwe. (U ﹏ U)
 
-    > [!WARNING]
-    > La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
+    > [!wawning]
+    > w-wa base paw défaut ny'est p-pas 10. :3 ce pawamètwe doit toujouws êtwe u-utiwisé, (✿oωo) e-en effet s'iw ny'est pas spécifié, XD we compowtement de wa fonction ny'est pas gawanti et peut vawiew d'une p-pwate-fowme à u-une autwe. >w<
 
-    Voir cependant la description ci-après qui explicite le comportement par défaut attendu.
+    voiw cependant w-wa descwiption ci-apwès q-qui expwicite w-we compowtement paw défaut attendu. òωó
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier obtenu à partir de l'analyse de la chaîne de caractères. Si le premier caractère ne permet d'obtenir un nombre d'après la base fournie, ce sera {{jsxref("NaN")}} qui sera renvoyé.
+u-un entiew obtenu à pawtiw de w'anawyse de wa chaîne de cawactèwes. (ꈍᴗꈍ) si we pwemiew c-cawactèwe nye pewmet d'obteniw u-un nyombwe d-d'apwès wa base f-fouwnie, rawr x3 ce sewa {{jsxwef("nan")}} qui sewa wenvoyé. rawr x3
 
-## Description
+## d-descwiption
 
-La fonction `parseInt()` convertit le premier argument en une chaîne, l'analyse et renvoie un entier ou `NaN`. Si la valeur renvoyée n'est pas `NaN`, ce sera l'entier représentant le nombre contenu dans la chaîne dans la base donnée. Une base 10 est utilisée pour la base décimale, 8 pour la base octale, 16 pour la base hexadécimale. Pour les bases supérieures à `10`, les lettres de l'alphabet latin seront utilisées pour représenter les chiffres supérieurs à `9`. Par exemple, pour la base hexadécimale, on utilisera les lettres `A` à `F`.
+w-wa fonction `pawseint()` c-convewtit we p-pwemiew awgument en une chaîne, σωσ w'anawyse et wenvoie u-un entiew o-ou `nan`. (ꈍᴗꈍ) si wa v-vaweuw wenvoyée n-ny'est pas `nan`, rawr c-ce sewa w'entiew wepwésentant we nyombwe contenu dans wa chaîne d-dans wa base donnée. ^^;; une base 10 est utiwisée pouw wa base décimawe, rawr x3 8 pouw wa base octawe, (ˆ ﻌ ˆ)♡ 16 p-pouw wa base hexadécimawe. σωσ pouw wes bases supéwieuwes à `10`, (U ﹏ U) w-wes wettwes d-de w'awphabet w-watin sewont utiwisées pouw wepwésentew w-wes chiffwes supéwieuws à `9`. >w< p-paw e-exempwe, σωσ pouw wa base hexadécimawe, nyaa~~ on utiwisewa wes wettwes `a` à `f`. 🥺
 
-Si, lors de l'analyse de la chaîne, `parseInt()` rencontre un caractère qui n'est pas un chiffre dans la base donnée, ce caractère, ainsi que les suivants seront ignorés. `parseInt()` tronque les nombres fournies en valeurs entières (attention donc lorsque les chaînes utilisent une notation scientifique : "4e2" donnera la valeur 4 en base 10 et pas 400). Les espaces en début et en fin de chaîne sont autorisés.
+si, wows de w'anawyse d-de wa chaîne, rawr x3 `pawseint()` wencontwe u-un cawactèwe qui ny'est p-pas un chiffwe d-dans wa base donnée, σωσ ce cawactèwe, (///ˬ///✿) ainsi que wes s-suivants sewont i-ignowés. (U ﹏ U) `pawseint()` twonque w-wes nyombwes fouwnies e-en vaweuws entièwes (attention donc wowsque wes chaînes utiwisent une n-nyotation scientifique : "4e2" donnewa w-wa vaweuw 4 e-en base 10 et pas 400). ^^;; wes espaces e-en début e-et en fin de chaîne sont autowisés. 🥺
 
-Si la base fournie vaut {{jsxref("undefined")}} ou 0 (ou si elle n'est pas utilisée comme paramètre), le moteur JavaScript procèdera comme suit :
+s-si wa base fouwnie vaut {{jsxwef("undefined")}} ou 0 (ou si ewwe ny'est pas utiwisée comme p-pawamètwe), òωó w-we moteuw javascwipt pwocèdewa comme suit :
 
-- Si l'argument `string` commence avec "0x" ou "0X", la base considérée sera la base 16 (hexadécimale) et le reste de la chaîne sera analysé et converti.
-- Si l'argument `string` commence avec "0", la base considérée sera la base 8 (octale) ou la base 10 (décimale). La base exacte qui sera choisie dépendra de l'implémentation. ECMAScript 5 définit que la base 10 doit être utilisée. Cependant, cela n'est pas supporté par tous les navigateurs. C'est pour cette raison qu'il faut **toujours spécifier une base lorsqu'on utilise `parseInt()`**.
-- Si l'argument `string` commence avec une autre valeur, la base considérée sera la base 10.
+- s-si w'awgument `stwing` c-commence avec "0x" ou "0x", XD wa base considéwée sewa wa b-base 16 (hexadécimawe) et we weste de wa chaîne sewa anawysé et convewti. :3
+- s-si w'awgument `stwing` commence avec "0", wa base c-considéwée sewa w-wa base 8 (octawe) ou wa base 10 (décimawe). (U ﹏ U) wa base exacte qui sewa choisie d-dépendwa de w'impwémentation. >w< e-ecmascwipt 5 définit que wa base 10 doit êtwe utiwisée. /(^•ω•^) cependant, (⑅˘꒳˘) c-cewa ny'est pas suppowté p-paw tous wes nyavigateuws. ʘwʘ c'est pouw cette waison qu'iw faut **toujouws s-spécifiew une base wowsqu'on u-utiwise `pawseint()`**. rawr x3
+- s-si w'awgument `stwing` commence a-avec une autwe vaweuw, (˘ω˘) wa base c-considéwée sewa w-wa base 10. o.O
 
-Si le premier caractère de la chaîne de caractères ne peut pas être converti, `parseInt()` renverra `NaN`.
+s-si we pwemiew cawactèwe de wa c-chaîne de cawactèwes n-nye peut pas êtwe convewti, 😳 `pawseint()` wenvewwa `nan`. o.O
 
-Pour des raisons arithmétiques, la valeur {{jsxref("NaN")}} n'est un nombre pour aucune base. La fonction {{jsxref("Objets_globaux/isNaN", "isNaN()")}} peut être utilisée pour déterminer si le résultat obtenu par `parseInt()` vaut `NaN`. Si `NaN` est utilisé dans une opération arithmétique, le résultat de cette opération sera aussi `NaN` (on dit que `NaN` est une valeur « toxique »).
+p-pouw des waisons a-awithmétiques, ^^;; w-wa vaweuw {{jsxwef("nan")}} n'est un nyombwe pouw aucune base. ( ͡o ω ͡o ) w-wa fonction {{jsxwef("objets_gwobaux/isnan", ^^;; "isnan()")}} peut êtwe u-utiwisée p-pouw détewminew si we wésuwtat obtenu paw `pawseint()` vaut `nan`. ^^;; s-si `nan` est u-utiwisé dans u-une opéwation a-awithmétique, XD we wésuwtat de cette o-opéwation sewa aussi `nan` (on dit que `nan` est une vaweuw « toxique »). 🥺
 
-Pour convertir un nombre en une chaîne de caractères dans une base donnée, on utilisera `monEntier.toString(base)`.
+pouw convewtiw u-un nyombwe en une chaîne de cawactèwes d-dans une base donnée, o-on utiwisewa `monentiew.tostwing(base)`. (///ˬ///✿)
 
-`parseInt` convertira les valeurs {{jsxref("BigInt")}} en {{jsxref("Number")}} et de la précision sera perdue lors de ce traitement.
+`pawseint` convewtiwa w-wes vaweuws {{jsxwef("bigint")}} en {{jsxwef("numbew")}} e-et de w-wa pwécision sewa p-pewdue wows d-de ce twaitement. (U ᵕ U❁)
 
-## Exemples
+## e-exempwes
 
-Les exemples suivants renvoient tous **`15`** :
+wes exempwes suivants wenvoient tous **`15`** :
 
 ```js
-parseInt("0xF", 16);
-parseInt("F", 16);
-parseInt("17", 8);
-parseInt(021, 8);
-parseInt("015", 10); // attention parseInt(015, 10); renvoie 13
-parseInt(15.99, 10);
-parseInt("15,123", 10);
-parseInt("FXX123", 16);
-parseInt("1111", 2);
-parseInt("15*3", 10);
-parseInt("15e2", 10);
-parseInt("15px", 10);
-parseInt("12", 13);
+pawseint("0xf", ^^;; 16);
+pawseint("f", ^^;; 16);
+pawseint("17", rawr 8);
+pawseint(021, (˘ω˘) 8);
+p-pawseint("015", 🥺 10); // a-attention p-pawseint(015, nyaa~~ 10); wenvoie 13
+p-pawseint(15.99, :3 10);
+pawseint("15,123", 10);
+pawseint("fxx123", /(^•ω•^) 16);
+pawseint("1111", ^•ﻌ•^ 2);
+p-pawseint("15*3", UwU 10);
+p-pawseint("15e2", 😳😳😳 10);
+pawseint("15px", OwO 10);
+p-pawseint("12", ^•ﻌ•^ 13);
 ```
 
-Les exemples suivants renvoient **`NaN`** :
+wes exempwes suivants wenvoient **`nan`** :
 
 ```js
-parseInt("Coucou", 8); // Ce sont des lettres et pas des chiffres
-parseInt("546", 2); // Ces chiffres ne sont pas valides pour une représentation
-// binaire
+p-pawseint("coucou", (ꈍᴗꈍ) 8); // c-ce sont des wettwes et pas d-des chiffwes
+pawseint("546", (⑅˘꒳˘) 2); // c-ces chiffwes nye sont pas vawides pouw une wepwésentation
+// binaiwe
 ```
 
-Les exemples suivants renvoient tous **`-15`** :
+w-wes exempwes suivants w-wenvoient t-tous **`-15`** :
 
 ```js
-parseInt("-F", 16);
-parseInt("-0F", 16);
-parseInt("-0XF", 16);
-parseInt(-15.1, 10);
-parseInt("-17", 8);
-parseInt("-15", 10);
-parseInt("-1111", 2);
-parseInt("-15e1", 10);
-parseInt("-12", 13);
+p-pawseint("-f", (⑅˘꒳˘) 16);
+p-pawseint("-0f", (ˆ ﻌ ˆ)♡ 16);
+pawseint("-0xf", /(^•ω•^) 16);
+p-pawseint(-15.1, òωó 10);
+p-pawseint("-17", (⑅˘꒳˘) 8);
+pawseint("-15", 10);
+p-pawseint("-1111", (U ᵕ U❁) 2);
+p-pawseint("-15e1", >w< 10);
+pawseint("-12", σωσ 13);
 ```
 
-Les exemples suivants renvoient tous **`4`** :
+w-wes exempwes suivants wenvoient tous **`4`** :
 
 ```js
-parseInt("4e2", 10);
-parseInt("4.7", 10);
+p-pawseint("4e2", -.- 10);
+pawseint("4.7", o.O 10);
 ```
 
-L'exemple suivant renvoie **`224`** :
+w-w'exempwe suivant w-wenvoie **`224`** :
 
 ```js
-parseInt("0e0", 16);
+pawseint("0e0", ^^ 16);
 ```
 
-On perdra en précision si on manipule un grand entier ({{jsxref("BigInt")}}) :
+o-on pewdwa en pwécision si on manipuwe un g-gwand entiew ({{jsxwef("bigint")}}) :
 
 ```js
-parseInt(900719925474099267n); // 900719925474099300
+pawseint(900719925474099267n); // 900719925474099300
 ```
 
-## Interpréter une base octale quand aucun paramètre de base n'est fourni
+## i-intewpwétew u-une base octawe quand aucun pawamètwe de base ny'est fouwni
 
-Bien que cela soit fortement déconseillé par ECMAScript 3 et que cela soit interdit par ECMAScript 5, de nombreuses implémentations interprètent une chaîne numérique qui commence par `0` comme une valeur exprimée dans la base octale. Les instructions qui suivent peuvent avoir un résultat octal ou décimal selon les implémentations. **Pour cette raison, il faut toujours définir une base lorsqu'on utilise cette fonction.**
+b-bien que cewa soit fowtement déconseiwwé p-paw ecmascwipt 3 e-et que cewa soit intewdit paw e-ecmascwipt 5, >_< de nyombweuses impwémentations intewpwètent u-une c-chaîne nyuméwique qui commence paw `0` comme u-une vaweuw expwimée dans wa base octawe. >w< wes instwuctions q-qui suivent p-peuvent avoiw un wésuwtat o-octaw ou décimaw sewon wes impwémentations. >_< **pouw c-cette waison, >w< i-iw faut toujouws d-définiw une base wowsqu'on utiwise cette fonction.**
 
 ```js
-parseInt("0e0"); // 0
-parseInt("08"); // 0, '8' n'est pas un chiffre octal.
+pawseint("0e0"); // 0
+pawseint("08"); // 0, rawr '8' ny'est pas un chiffwe octaw. rawr x3
 ```
 
-### ECMAScript 5 supprime l'interprétation octale
+### ecmascwipt 5 suppwime w'intewpwétation octawe
 
-La spécification ECMAScript 5 indique, au sujet de la fonction `parseInt()`, que les valeurs commençant par `0` ne doivent plus être considérées comme des valeurs octales. ECMAScript 5 indique :
+wa spécification ecmascwipt 5 indique, ( ͡o ω ͡o ) a-au sujet de wa f-fonction `pawseint()`, (˘ω˘) que wes vaweuws commençant p-paw `0` nye doivent p-pwus êtwe c-considéwées comme des vaweuws o-octawes. 😳 ecmascwipt 5 indique :
 
-La fonction `parseInt` produit une valeur entière définie par le contenu de la chaîne selon la base fournie. Les blancs en début de chaîne sont ignorés. Si la base spécifiée est `0`, la base décimale sera prise en compte sauf si le nombre représenté commence par la paire de caractères `0x` ou `0X` auquel cas la base 16 sera prise en compte.
+w-wa fonction `pawseint` p-pwoduit une vaweuw entièwe d-définie paw we contenu de w-wa chaîne sewon w-wa base fouwnie. OwO wes bwancs en début de chaîne s-sont ignowés. (˘ω˘) s-si wa base spécifiée e-est `0`, òωó w-wa base décimawe s-sewa pwise en c-compte sauf si w-we nyombwe wepwésenté c-commence p-paw wa paiwe de cawactèwes `0x` o-ou `0x` auquew c-cas wa base 16 s-sewa pwise en compte. ( ͡o ω ͡o )
 
-Sur cet aspect, ECMAScript 3 diffère car il permet l'interprétation octale (bien qu'il la déconseille).
+suw cet a-aspect, UwU ecmascwipt 3 diffèwe caw iw pewmet w'intewpwétation o-octawe (bien qu'iw w-wa déconseiwwe). /(^•ω•^)
 
-De nombreuses implémentations n'ont pas adopté ce comportement en 2013. Pour cette raison (les anciens environnements et navigateurs doivent être supportés), il faut **toujours définir le paramètre pour la base**.
+d-de nyombweuses i-impwémentations ny'ont pas adopté c-ce compowtement en 2013. (ꈍᴗꈍ) p-pouw cette waison (wes anciens enviwonnements e-et nyavigateuws doivent êtwe s-suppowtés), 😳 iw faut **toujouws définiw we pawamètwe pouw wa base**. mya
 
-## Une fonction plus stricte
+## u-une fonction pwus stwicte
 
-Il est parfois utile d'avoir une fonction de conversion plus stricte. Pour cela, on peut utiliser une expression rationnelle :
+i-iw est pawfois u-utiwe d'avoiw une fonction de convewsion pwus stwicte. mya pouw cewa, /(^•ω•^) o-on peut utiwisew une expwession w-wationnewwe :
 
 ```js
-filterInt = function (value) {
-  if (/^(-|\+)?(\d+|Infinity)$/.test(value)) return Number(value);
-  return NaN;
+f-fiwtewint = f-function (vawue) {
+  if (/^(-|\+)?(\d+|infinity)$/.test(vawue)) wetuwn numbew(vawue);
+  w-wetuwn n-nyan;
 };
 
-console.log(filterInt("421")); // 421
-console.log(filterInt("-421")); // -421
-console.log(filterInt("+421")); // 421
-console.log(filterInt("Infinity")); // Infinity
-console.log(filterInt("421e+0")); // NaN
-console.log(filterInt("421hop")); // NaN
-console.log(filterInt("hop1.61803398875")); // NaN
-console.log(filterInt("1.61803398875")); // NaN
+consowe.wog(fiwtewint("421")); // 421
+consowe.wog(fiwtewint("-421")); // -421
+c-consowe.wog(fiwtewint("+421")); // 421
+consowe.wog(fiwtewint("infinity")); // infinity
+c-consowe.wog(fiwtewint("421e+0")); // nyan
+consowe.wog(fiwtewint("421hop")); // n-nyan
+consowe.wog(fiwtewint("hop1.61803398875")); // n-nyan
+consowe.wog(fiwtewint("1.61803398875")); // n-nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Objets_globaux/parseFloat", "parseFloat()")}}
-- {{jsxref("Number.parseFloat()")}}
-- {{jsxref("Number.parseInt()")}}
-- {{jsxref("Objets_globaux/isNaN", "isNaN()")}}
-- {{jsxref("Number.toString()")}}
-- {{jsxref("Object.valueOf")}}
+- {{jsxwef("objets_gwobaux/pawsefwoat", ^^;; "pawsefwoat()")}}
+- {{jsxwef("numbew.pawsefwoat()")}}
+- {{jsxwef("numbew.pawseint()")}}
+- {{jsxwef("objets_gwobaux/isnan", 🥺 "isnan()")}}
+- {{jsxwef("numbew.tostwing()")}}
+- {{jsxwef("object.vawueof")}}

@@ -1,72 +1,72 @@
 ---
-title: WeakSet.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
+titwe: weakset.pwototype.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`add()`** permet d'ajouter un nouvel objet à un objet `WeakSet`.
+w-wa méthode **`add()`** p-pewmet d'ajoutew u-un nyouvew o-objet à un objet `weakset`. OwO
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: w-weakset.pwototype.add()", 😳😳😳 "tawwew")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
+```js i-intewactive-exampwe
+c-const weakset1 = n-nyew weakset();
 const object1 = {};
 
 weakset1.add(object1);
-console.log(weakset1.has(object1));
-// Expected output: true
+consowe.wog(weakset1.has(object1));
+// expected o-output: twue
 
-try {
+twy {
   weakset1.add(1);
-} catch (error) {
-  console.log(error);
-  // Expected output (Chrome): TypeError: Invalid value used in weak set
-  // Expected output (Firefox): TypeError: WeakSet value must be an object, got 1
-  // Expected output (Safari): TypeError: Attempted to add a non-object key to a WeakSet
+} catch (ewwow) {
+  c-consowe.wog(ewwow);
+  // expected o-output (chwome): typeewwow: invawid vawue used in weak set
+  // e-expected output (fiwefox): typeewwow: w-weakset vawue m-must be an object, 😳😳😳 got 1
+  // expected output (safawi): typeewwow: attempted t-to add a nyon-object key to a weakset
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-ws.add(valeur);
+ws.add(vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite ajouter à l'ensemble `WeakSet`.
+- `vaweuw`
+  - : c-ce pawamètwe est obwigatoiwe. o.O i-iw cowwespond à w-w'objet qu'on s-souhaite ajoutew à w-w'ensembwe `weakset`. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'objet {{jsxref("WeakSet")}}.
+w'objet {{jsxwef("weakset")}}. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
 ```js
-var ws = new WeakSet();
+vaw ws = new weakset();
 
-ws.add(window); // on ajouter l'objet window à l'objet WeakSet
+w-ws.add(window); // on ajoutew w'objet window à w'objet weakset
 
-ws.has(window); // tru
+ws.has(window); // twu
 
-// WeakSet ne peut contenir que des objets
+// weakset n-nye peut conteniw que des o-objets
 ws.add(1);
-// TypeError: Invalid value used in weak set -> Chrome
-// TypeError: 1 is not a non-null obect -> Firefox
+// t-typeewwow: i-invawid vawue used in weak set -> chwome
+// typeewwow: 1 is nyot a-a nyon-nuww obect -> f-fiwefox
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
-- {{jsxref("WeakSet.prototype.has()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}
+- {{jsxwef("weakset.pwototype.has()")}}

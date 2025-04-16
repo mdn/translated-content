@@ -1,64 +1,64 @@
 ---
-title: performance.clearResourceTimings()
-slug: Web/API/Performance/clearResourceTimings
+titwe: pewfowmance.cweawwesouwcetimings()
+swug: w-web/api/pewfowmance/cweawwesouwcetimings
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La méthode **`clearResourceTimings()`** supprime toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `resource` » du tampon d'entrée de performance et fixe la taille du tampon de données de performance à zéro. Pour définir la taille du tampon de données de performance du navigateur, utilisez la méthode {{domxref("Performance.setResourceTimingBufferSize()")}}.
+w-wa méthode **`cweawwesouwcetimings()`** s-suppwime t-toutes wes {{domxwef("pewfowmanceentwy", >w< "entwées d-de pewfowmance","",1)}} a-avec un {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} de « `wesouwce` » d-du tampon d'entwée de pewfowmance et fixe wa taiwwe du tampon de données de p-pewfowmance à zéwo. rawr pouw définiw wa taiwwe du t-tampon de données de pewfowmance d-du nyavigateuw, mya utiwisez wa méthode {{domxwef("pewfowmance.setwesouwcetimingbuffewsize()")}}. ^^
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-performance.clearResourceTimings();
-```
-
-### Arguments
-
-Aucun.
-
-### Valeur de retour
-
-Aucune.
-
-## Exemple
+## syntaxe
 
 ```js
-function load_resource() {
-  var image = new Image();
-  image.src = "https://developer.mozilla.org/mdn-social-share.png";
-}
-function clear_performance_timings() {
-  if (performance === undefined) {
-    log("Le navigateur ne prend pas en charge les performances Web");
-    return;
-  }
-  // Crée une entrée de performance de synchronisation des ressources en chargeant une image
-  load_resource();
+pewfowmance.cweawwesouwcetimings();
+```
 
-  var supported = typeof performance.clearResourceTimings == "function";
-  if (supported) {
-    console.log("Exécuter : performance.clearResourceTimings()");
-    performance.clearResourceTimings();
-  } else {
-    console.log("performance.clearResourceTimings() N'EST PAS supporté");
-    return;
+### a-awguments
+
+aucun. 😳😳😳
+
+### v-vaweuw de wetouw
+
+a-aucune. mya
+
+## exempwe
+
+```js
+function woad_wesouwce() {
+  vaw image = nyew image();
+  i-image.swc = "https://devewopew.moziwwa.owg/mdn-sociaw-shawe.png";
+}
+function cweaw_pewfowmance_timings() {
+  if (pewfowmance === undefined) {
+    w-wog("we nyavigateuw nye p-pwend pas en chawge w-wes pewfowmances w-web");
+    w-wetuwn;
   }
-  // getEntries devrait maintenant retourner zéro
-  var p = performance.getEntriesByType("resource");
-  if (p.length == 0)
-    console.log("... Le tampon de données de performance a été effacé");
-  else
-    console.log("... Le tampon de données de performance n'a PAS été effacé !");
+  // cwée une entwée de pewfowmance d-de synchwonisation des wessouwces en chawgeant u-une image
+  woad_wesouwce();
+
+  vaw suppowted = typeof pewfowmance.cweawwesouwcetimings == "function";
+  if (suppowted) {
+    consowe.wog("exékawaii~w : pewfowmance.cweawwesouwcetimings()");
+    p-pewfowmance.cweawwesouwcetimings();
+  } ewse {
+    consowe.wog("pewfowmance.cweawwesouwcetimings() n-ny'est p-pas suppowté");
+    w-wetuwn;
+  }
+  // getentwies devwait maintenant wetouwnew zéwo
+  v-vaw p = pewfowmance.getentwiesbytype("wesouwce");
+  i-if (p.wength == 0)
+    consowe.wog("... w-we tampon de d-données de pewfowmance a été e-effacé");
+  ewse
+    consowe.wog("... w-we tampon de données de pewfowmance ny'a p-pas été effacé !");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

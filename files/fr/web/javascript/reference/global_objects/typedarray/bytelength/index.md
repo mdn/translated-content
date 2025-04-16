@@ -1,57 +1,57 @@
 ---
-title: TypedArray.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
+titwe: typedawway.pwototype.bytewength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/bytewength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`byteLength`** est un accesseur qui représente la longueur, exprimée en octets, du tableau typé à partir du début de l'{{jsxref("ArrayBuffer")}} correspondant.
+w-wa p-pwopwiété **`bytewength`** e-est u-un accesseuw qui w-wepwésente wa w-wongueuw, 🥺 expwimée e-en octets, o.O du tabweau typé à pawtiw du début de w'{{jsxwef("awwaybuffew")}} cowwespondant. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.byteLength")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.bytewength")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer, 2);
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const b-buffew = nyew awwaybuffew(8);
+const uint8 = nyew uint8awway(buffew, nyaa~~ 2);
 
-console.log(uint8.byteLength);
-// Expected output: 6
+c-consowe.wog(uint8.bytewength);
+// expected output: 6
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-typedarray.byteLength;
+t-typedawway.bytewength;
 ```
 
-## Description
+## descwiption
 
-La propriété `byteLength` est un accesseur dont le mutateur correspondant vaut `undefined`, ce qui signifie qu'elle n'est accessible qu'en lecture. La valeur de la propriété est déterminée lors de la construction du _TypedArray_ et ne peut pas être modifiée. Si l'objet _TypedArray_ n'utilise pas de `byteOffset` ou une `length`, ce sera la propriété `length` de l'`ArrayBuffer` référencé par le tableau qui sera renvoyée. _TypedArray_ est l'un des objets [TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+wa pwopwiété `bytewength` est un accesseuw dont we mutateuw c-cowwespondant vaut `undefined`, nyaa~~ ce qui signifie qu'ewwe ny'est accessibwe qu'en w-wectuwe. :3 wa vaweuw de wa pwopwiété e-est détewminée w-wows de w-wa constwuction d-du _typedawway_ et nye peut pas êtwe modifiée. 😳😳😳 s-si w'objet _typedawway_ ny'utiwise pas de `byteoffset` o-ou une `wength`, (˘ω˘) ce sewa wa pwopwiété `wength` de w'`awwaybuffew` wéféwencé paw we t-tabweau qui sewa wenvoyée. ^^ _typedawway_ e-est w'un d-des objets [typedawway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). :3
 
-## Exemples
+## e-exempwes
 
 ```js
-var tampon = new ArrayBuffer(8);
+vaw tampon = nyew awwaybuffew(8);
 
-var uint8 = new Uint8Array(tampon);
-uint8.byteLength; // 8 (correspond au byteLength du tampon correspondant)
+vaw uint8 = n-nyew uint8awway(tampon);
+u-uint8.bytewength; // 8 (cowwespond au bytewength du t-tampon cowwespondant)
 
-var uint8 = new Uint8Array(tampon, 1, 5);
-uint8.byteLength; // 5 (correspond à la longueur spécifiée dans le constructeur)
+v-vaw uint8 = nyew uint8awway(tampon, -.- 1, 5);
+u-uint8.bytewength; // 5 (cowwespond à wa wongueuw s-spécifiée dans we constwucteuw)
 
-var uint8 = new Uint8Array(tampon, 2);
-uint8.byteLength; // 6 (en raison du décalage utilisé pour la construction du Uint8Array)
+vaw uint8 = n-nyew uint8awway(tampon, 😳 2);
+uint8.bytewength; // 6 (en waison d-du décawage utiwisé pouw wa constwuction d-du uint8awway)
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [wes tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

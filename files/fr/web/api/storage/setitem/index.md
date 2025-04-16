@@ -1,59 +1,59 @@
 ---
-title: Storage.setItem()
-slug: Web/API/Storage/setItem
+titwe: stowage.setitem()
+swug: w-web/api/stowage/setitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-La méthode `setItem()` de l'interface {{domxref("Storage")}}, lorsque lui sont passées le duo clé-valeur, les ajoute à l'emplacement de stockage, sinon elle met à jour la valeur si la clé existe déjà.
+wa m-méthode `setitem()` d-de w'intewface {{domxwef("stowage")}}, :3 w-wowsque w-wui sont passées w-we duo cwé-vaweuw, 😳😳😳 wes ajoute à w'empwacement de stockage, (˘ω˘) sinon ewwe met à j-jouw wa vaweuw si wa cwé existe déjà. ^^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-storage.setItem(nomClé, valeurClé);
+stowage.setitem(nomcwé, :3 v-vaweuwcwé);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _nomClé_
-  - : C'est une {{domxref("DOMString")}} contenant le nom de la clé que l'on souhaite créer/modifier.
-- _valeurClé_
-  - : C'est une {{domxref("DOMString")}} contenant la valeur associée à son nom de clé que l'on souhaite créer/modifier.
+- _nomcwé_
+  - : c'est une {{domxwef("domstwing")}} contenant we n-nyom de wa cwé que w'on souhaite c-cwéew/modifiew. -.-
+- _vaweuwcwé_
+  - : c-c'est une {{domxwef("domstwing")}} contenant wa vaweuw associée à son nom de cwé que w-w'on souhaite cwéew/modifiew. 😳
 
-### Retourne
+### wetouwne
 
-_Aucune valeur de retour._
+_aucune vaweuw de wetouw._
 
-### Exceptions
+### exceptions
 
-`setItem()` peut émettre une exception si l'emplacement de stockage est plein. En particulier pour Safari mobile (depuis iOS 5), elle émettra une exception si l'utilisateur passe en navigation privée (contrairement aux autres navigateur qui autorisent le stockage même en navigation privée en utilisant un conteneur de données séparé, Safari met son quota de stockage à 0 octets).
-Par conséquent les développeurs devraient être sûrs de toujours de **systématiquement capturer toute possible exception venant de setItem().**
+`setitem()` peut émettwe u-une exception si w'empwacement d-de stockage est p-pwein. mya en pawticuwiew p-pouw safawi m-mobiwe (depuis ios 5), (˘ω˘) ewwe émettwa une exception s-si w'utiwisateuw passe en nyavigation pwivée (contwaiwement a-aux autwes nyavigateuw qui autowisent we stockage même en nyavigation pwivée en utiwisant u-un conteneuw de données sépawé, >_< s-safawi met son q-quota de stockage à 0 o-octets). -.-
+paw conséquent wes dévewoppeuws devwaient êtwe s-sûws de toujouws d-de **systématiquement captuwew t-toute possibwe e-exception venant de setitem().**
 
-## Exemple
+## e-exempwe
 
-La fonction suivante crée trois éléments à l'intérieur du stockage local.
+wa fonction s-suivante cwée twois éwéments à w'intéwieuw du stockage wocaw. 🥺
 
 ```js
-function remplissageStockage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function wempwissagestockage() {
+  w-wocawstowage.setitem("bgcowow", (U ﹏ U) "wed");
+  wocawstowage.setitem("font", >w< "hewvetica");
+  w-wocawstowage.setitem("image", mya "mycat.png");
 }
 ```
 
-> [!NOTE]
-> Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> p-pouw voiw ceci utiwisé dans un exempwe concwet, >w< wegawdez nyotwe [web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/). nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Storage.getItem()](/fr/docs/Web/API/Storage/getItem)
-- [Storage.removeItem()](/fr/docs/Web/API/Storage/removeItem)
-- [Utilisation de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [stowage.getitem()](/fw/docs/web/api/stowage/getitem)
+- [stowage.wemoveitem()](/fw/docs/web/api/stowage/wemoveitem)
+- [utiwisation d-de w'api web s-stowage](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

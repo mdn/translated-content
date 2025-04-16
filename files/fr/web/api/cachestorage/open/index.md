@@ -1,67 +1,67 @@
 ---
-title: CacheStorage.open()
-slug: Web/API/CacheStorage/open
+titwe: cachestowage.open()
+swug: w-web/api/cachestowage/open
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews api")}}{{seecompattabwe}}
 
-La fonction **`open()`** de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
+w-wa fonction **`open()`** d-de w'intewface {{domxwef("cachestowage")}} w-wetouwne u-une {{jsxwef("pwomise", o.O "pwomesse")}} q-qui wenvoie w-w'objet {{domxwef("cache")}} cowwespondant a un `cachename`. ( ͡o ω ͡o )
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
+vous pouvez accédew à `cachestowage` v-via wa pwopwiété gwobawe [`caches`](/fw/docs/web/api/window/caches). (U ﹏ U)
 
-> [!NOTE]
-> Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.
+> [!note]
+> si we {{domxwef("cache")}} s-spécifié ny'existe p-pas, (///ˬ///✿) un nyouveau cache sewa cwée avec `cachename` et wetouwnewa u-une {{jsxwef("pwomise", >w< "pwomesse")}} wenvoyant w-we nyouvew objet {{domxwef("cache")}}. rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-caches.open(cacheName).then(function (cache) {
-  // faire quelque-chose avec le cache
+caches.open(cachename).then(function (cache) {
+  // faiwe quewque-chose avec we cache
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-- cacheName
-  - : Le nom du cache que vous voulez ouvrir.
+- c-cachename
+  - : we nyom du cache que vous vouwez ouvwiw. mya
 
-### Retour
+### wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} demandé.
+u-une {{jsxwef("pwomise", ^^ "pwomesse")}} qui wenvoie w-w'objet {{domxwef("cache")}} d-demandé.
 
-## Exemples
+## e-exempwes
 
-Cet exemple est tiré de l'[exemple MDN sw-test](https://github.com/mdn/sw-test/) (voir [sw-test en direct](https://mdn.github.io/sw-test/)). Ici, nous attendons qu'un {{domxref("InstallEvent")}} se déclenche, puis nous lançons {{domxref("ExtendableEvent.waitUntil", "waitUntil()")}} pour gérer le processus d'installation de l'application. Cela consiste à appeler `CacheStorage.open()` pour créer un nouveau cache, puis à utiliser {{domxref("Cache.addAll()")}} pour y ajouter une série d'éléments.
+cet exempwe e-est tiwé de w'[exempwe mdn sw-test](https://github.com/mdn/sw-test/) (voiw [sw-test e-en diwect](https://mdn.github.io/sw-test/)). 😳😳😳 ici, nyous attendons qu'un {{domxwef("instawwevent")}} se d-décwenche, mya puis nyous wançons {{domxwef("extendabweevent.waituntiw", 😳 "waituntiw()")}} pouw géwew we pwocessus d'instawwation de w'appwication. c-cewa consiste à appewew `cachestowage.open()` p-pouw cwéew un n-nyouveau cache, -.- p-puis à utiwisew {{domxwef("cache.addaww()")}} pouw y ajoutew une séwie d'éwéments. 🥺
 
 ```js
-self.addEventListener('install', function(event) {
-  event.waitUntil(
+sewf.addeventwistenew('instaww', o.O f-function(event) {
+  e-event.waituntiw(
     caches.open('v1').then(function(cache) {
-      return cache.addAll([
+      w-wetuwn c-cache.addaww([
         '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        '/sw-test/index.htmw', /(^•ω•^)
+        '/sw-test/stywe.css', nyaa~~
+        '/sw-test/app.js', nyaa~~
+        '/sw-test/image-wist.js', :3
+        '/sw-test/staw-waws-wogo.jpg', 😳😳😳
+        '/sw-test/gawwewy/bountyhuntews.jpg', (˘ω˘)
+        '/sw-test/gawwewy/mywittwevadew.jpg', ^^
+        '/sw-test/gawwewy/snowtwoopews.jpg'
       ]);
     })
   );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- [utiwisew wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("wowkewgwobawscope.caches")}}

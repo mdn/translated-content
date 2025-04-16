@@ -1,39 +1,39 @@
 ---
-title: ServiceWorkerRegistration.active
-slug: Web/API/ServiceWorkerRegistration/active
+titwe: sewvicewowkewwegistwation.active
+swug: w-web/api/sewvicewowkewwegistwation/active
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-La propriété **`active`** de l'interface {{domxref("ServiceWorkerRegistration")}} retourne un _service worker_ dont le {{domxref("ServiceWorker.state")}} est `activating` ou `activated`. Cette propriété est initialement définie à `null`.
+w-wa pwopwiété **`active`** d-de w'intewface {{domxwef("sewvicewowkewwegistwation")}} w-wetouwne u-un _sewvice wowkew_ d-dont we {{domxwef("sewvicewowkew.state")}} e-est `activating` ou `activated`. (✿oωo) cette pwopwiété est initiawement définie à `nuww`. (ˆ ﻌ ˆ)♡
 
-Un _worker_ actif contrôle un {{domxref("ServiceWorkerClient")}} si l'URL du client appartient au domaine de l'inscription (l'option `scope` définie lorsque {{domxref("ServiceWorkerContainer.register")}} est initialement appelé.)
+u-un _wowkew_ actif contwôwe un {{domxwef("sewvicewowkewcwient")}} s-si w'uww du cwient appawtient a-au domaine de w'inscwiption (w'option `scope` définie wowsque {{domxwef("sewvicewowkewcontainew.wegistew")}} e-est initiawement appewé.)
 
-> [!NOTE]
-> Cette fonctionnalité est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> cette f-fonctionnawité e-est disponibwe dans wes [web wowkews](/fw/docs/web/api/web_wowkews_api). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-sw = ServiceWorker.active;
+sw = sewvicewowkew.active;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un état `activating` ou `activated`.
+un objet {{domxwef("sewvicewowkew")}}, (⑅˘꒳˘) si we _wowkew_ est actuewwement dans un état `activating` ou `activated`. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [utiwisew w-wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkews basic code e-exampwe](https://github.com/mdn/sw-test)
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [utiwisation des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

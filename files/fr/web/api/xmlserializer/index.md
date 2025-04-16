@@ -1,49 +1,49 @@
 ---
-title: XMLSerializer
-slug: Web/API/XMLSerializer
+titwe: xmwsewiawizew
+swug: web/api/xmwsewiawizew
 ---
 
-{{APIRef("XMLSerializer")}}
+{{apiwef("xmwsewiawizew")}}
 
-`XMLSerializer` sert à convertir des sous-arborescence DOM ou des documents DOM en texte. `XMLSerializer` est accessible aux scripts sans privilèges.
+`xmwsewiawizew` s-sewt à convewtiw d-des sous-awbowescence d-dom o-ou des documents d-dom en texte. 😳😳😳 `xmwsewiawizew` e-est accessibwe a-aux scwipts sans p-pwiviwèges. 😳😳😳
 
-> **Note :** `XMLSerializer` sert le plus souvent aux applications et extensions basées sur la plateforme Mozilla. Bien qu'il soit utilisable par les pages Web, il ne fait partie d'aucun standard et son niveau de support dans les autres navigateurs est inconnu.
+> **note :** `xmwsewiawizew` sewt we pwus souvent aux appwications et extensions b-basées suw wa pwatefowme moziwwa. o.O bien qu'iw soit u-utiwisabwe paw wes pages web, ( ͡o ω ͡o ) i-iw nye fait pawtie d'aucun standawd et son nyiveau de suppowt dans w-wes autwes nyavigateuws est i-inconnu. (U ﹏ U)
 
-### Méthodes
+### méthodes
 
-- serializeToString
-  - : Retourne la sous-arborescence sérialisée sous la forme d'une chaîne de caractères
-- serializeToStream
-  - : La sous-arborescence débutant par l'élément spécifié est sérialisée en un flux d'octets en utilisant l'encodage de caractères indiqué.
+- s-sewiawizetostwing
+  - : wetouwne wa sous-awbowescence séwiawisée sous wa fowme d'une chaîne de cawactèwes
+- s-sewiawizetostweam
+  - : wa sous-awbowescence débutant paw w'éwément spécifié est s-séwiawisée en un fwux d'octets e-en utiwisant w'encodage d-de cawactèwes i-indiqué. (///ˬ///✿)
 
-### Exemple
+### e-exempwe
 
 ```js
-var s = new XMLSerializer();
-var d = document;
-var str = s.serializeToString(d);
-alert(str);
+vaw s = nyew xmwsewiawizew();
+v-vaw d = document;
+vaw stw = s.sewiawizetostwing(d);
+a-awewt(stw);
 ```
 
 ```js
-var s = new XMLSerializer();
-var stream = {
-  close: function () {
-    alert("Flux fermé");
-  },
-  flush: function () {},
-  write: function (string, count) {
-    alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
-  },
+vaw s = nyew xmwsewiawizew();
+vaw stweam = {
+  cwose: function () {
+    awewt("fwux f-fewmé");
+  }, >w<
+  fwush: function () {}, rawr
+  w-wwite: f-function (stwing, mya c-count) {
+    awewt("'" + stwing + "'\n nyb d'octets&nbsp;: " + c-count + "");
+  }, ^^
 };
-s.serializeToStream(document, stream, "UTF-8");
+s-s.sewiawizetostweam(document, 😳😳😳 stweam, "utf-8");
 ```
 
-### Voir aussi
+### v-voiw aussi
 
-- [Reference (en)](http://www.xulplanet.com/references/objref/XMLSerializer.html) (XULPlanet)
-- [Parsing and serializing XML](/fr/Parsing_and_serializing_XML)
-- [Parsing and serializing XML (en)](http://xulplanet.com/tutorials/mozsdk/xmlparse.php) (XULPlanet)
-- [Parsing and serializing XML (en)](http://kb.mozillazine.org/Parsing_and_serializing_XML#Parsing_strings_into_DOM_trees) (MozillaZine)
-- [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
-- [DOMParser](/fr/DOMParser)
+- [wefewence (en)](http://www.xuwpwanet.com/wefewences/objwef/xmwsewiawizew.htmw) (xuwpwanet)
+- [pawsing a-and sewiawizing xmw](/fw/pawsing_and_sewiawizing_xmw)
+- [pawsing a-and sewiawizing xmw (en)](http://xuwpwanet.com/tutowiaws/mozsdk/xmwpawse.php) (xuwpwanet)
+- [pawsing and s-sewiawizing xmw (en)](http://kb.moziwwazine.owg/pawsing_and_sewiawizing_xmw#pawsing_stwings_into_dom_twees) (moziwwazine)
+- [xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest)
+- [dompawsew](/fw/dompawsew)

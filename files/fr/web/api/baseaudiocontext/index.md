@@ -1,111 +1,111 @@
 ---
-title: BaseAudioContext
-slug: Web/API/BaseAudioContext
+titwe: baseaudiocontext
+swug: w-web/api/baseaudiocontext
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-L'interface `BaseAudioContext` agit comme une définition de base pour les graphiques de traitement audio en ligne et hors ligne, comme représenté par {{domxref("AudioContext")}} et {{domxref("OfflineAudioContext")}} respectivement. Vous n'utiliseriez pas `BaseAudioContext` directement — vous utiliseriez ses fonctionnalités via l'une de ces deux interfaces héréditaires.
+w'intewface `baseaudiocontext` a-agit c-comme une définition d-de base pouw w-wes gwaphiques d-de twaitement audio en wigne et hows wigne, (ꈍᴗꈍ) comme wepwésenté paw {{domxwef("audiocontext")}} e-et {{domxwef("offwineaudiocontext")}} wespectivement. :3 vous ny'utiwisewiez p-pas `baseaudiocontext` diwectement — v-vous utiwisewiez ses fonctionnawités via w'une de ces deux intewfaces h-héwéditaiwes. (U ﹏ U)
 
-Un `BaseAudioContext` peut être une cible d'événements, il implémente donc l'interface {{domxref("EventTarget")}}.
+un `baseaudiocontext` p-peut êtwe une cibwe d-d'événements, UwU iw impwémente donc w'intewface {{domxwef("eventtawget")}}. 😳😳😳
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}}
-  - : Renvoie l'objet {{domxref("AudioWorklet")}}, utilisé pour créer des AudioNodes personnalisés avec traitement JavaScript.
-- {{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}
-  - : Renvoie un double représentant une durée matérielle toujours croissante en secondes utilisée pour la planification. Il commence à `0`.
-- {{domxref("BaseAudioContext.destination")}} {{readonlyInline}}
-  - : Renvoie un {{domxref("AudioDestinationNode")}} représentant la destination finale de tout l'audio dans le contexte. Il peut être considéré comme le périphérique de rendu audio.
-- {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
-  - : Renvoie l'objet {{domxref("AudioListener")}}, utilisé pour la spatialisation 3D.
-- {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
-  - : Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les nœuds dans ce contexte. La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.
-- {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
-  - : Renvoie l'état actuel de l'`AudioContext`.
+- {{domxwef("baseaudiocontext.audiowowkwet")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : wenvoie w-w'objet {{domxwef("audiowowkwet")}}, XD utiwisé pouw cwéew des audionodes pewsonnawisés avec t-twaitement javascwipt. o.O
+- {{domxwef("baseaudiocontext.cuwwenttime")}} {{weadonwyinwine}}
+  - : wenvoie u-un doubwe w-wepwésentant une d-duwée matéwiewwe t-toujouws cwoissante en secondes utiwisée pouw w-wa pwanification. iw commence à `0`. (⑅˘꒳˘)
+- {{domxwef("baseaudiocontext.destination")}} {{weadonwyinwine}}
+  - : wenvoie un {{domxwef("audiodestinationnode")}} w-wepwésentant wa destination finawe de tout w'audio dans we contexte. 😳😳😳 iw peut êtwe considéwé c-comme we péwiphéwique de wendu a-audio. nyaa~~
+- {{domxwef("baseaudiocontext.wistenew")}} {{weadonwyinwine}}
+  - : w-wenvoie w-w'objet {{domxwef("audiowistenew")}}, rawr utiwisé pouw wa spatiawisation 3d. -.-
+- {{domxwef("baseaudiocontext.sampwewate")}} {{weadonwyinwine}}
+  - : wenvoie un fwoat w-wepwésentant w-wa fwéquence d'échantiwwonnage (en échantiwwons p-paw seconde) u-utiwisée paw tous wes nyœuds d-dans ce contexte. (✿oωo) wa fwéquence d-d'échantiwwonnage d'un {{domxwef("audiocontext")}} nye peut pas êtwe m-modifiée. /(^•ω•^)
+- {{domxwef("baseaudiocontext.state")}} {{weadonwyinwine}}
+  - : wenvoie w'état a-actuew de w'`audiocontext`. 🥺
 
-### Gestionnaires d'événements
+### gestionnaiwes d-d'événements
 
-- {{domxref("BaseAudioContext.onstatechange")}}
-  - : Un gestionnaire d'événements qui s'exécute lorsqu'un événement de type `statechange` s'est déclenché. Cela se produit lorsque l'état de l'`AudioContext` change, en raison de l'appel de l'une des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}).
+- {{domxwef("baseaudiocontext.onstatechange")}}
+  - : u-un gestionnaiwe d'événements qui s'exékawaii~ wowsqu'un événement de type `statechange` s'est décwenché. ʘwʘ cewa se p-pwoduit wowsque w-w'état de w'`audiocontext` change, UwU e-en waison d-de w'appew de w'une d-des méthodes de changement d'état ({{domxwef("audiocontext.suspend")}}, {{domxwef("audiocontext.wesume")}}, XD ou {{domxwef("audiocontext.cwose")}}). (✿oωo)
 
-## Méthodes
+## m-méthodes
 
-_Implémente également les méthodes de l'interface_ {{domxref("EventTarget")}}.
+_impwémente égawement wes méthodes de w'intewface_ {{domxwef("eventtawget")}}. :3
 
-- {{domxref("BaseAudioContext.createBuffer()")}}
-  - : Crée un nouvel objet {{ domxref("AudioBuffer") }} vide, qui peut ensuite être rempli de données et lu via un {{ domxref("AudioBufferSourceNode") }}.
-- {{domxref("BaseAudioContext.createConstantSource()")}}
-  - : Crée un objet {{domxref("ConstantSourceNode")}}, qui est une source audio qui émet en continu un signal sonore monophonique (un canal) dont les échantillons ont tous la même valeur.
-- {{domxref("BaseAudioContext.createBufferSource()")}}
-  - : Crée un {{domxref("AudioBufferSourceNode")}}, qui peut être utilisé pour lire et manipuler des données audio contenues dans un objet {{ domxref("AudioBuffer") }}. Les {{ domxref("AudioBuffer") }} sont créés à l'aide de {{domxref("AudioContext.createBuffer")}} ou renvoyés par {{domxref("AudioContext.decodeAudioData")}} lorsqu'il décode avec succès une piste audio.
-- {{domxref("BaseAudioContext.createScriptProcessor()")}}
-  - : Crée un {{domxref("ScriptProcessorNode")}}, qui peut être utilisé pour le traitement audio direct via JavaScript.
-- {{domxref("BaseAudioContext.createStereoPanner()")}}
-  - : Crée un {{domxref("StereoPannerNode")}}, qui peut être utilisé pour appliquer un panoramique stéréo à une source audio.
-- {{domxref("BaseAudioContext.createAnalyser()")}}
-  - : Crée un {{domxref("AnalyserNode")}}, qui peut être utilisé pour exposer les données de temps et de fréquence audio et par exemple pour créer des visualisations de données.
-- {{domxref("BaseAudioContext.createBiquadFilter()")}}
-  - : Crée un {{domxref("BiquadFilterNode")}}, qui représente un filtre du second ordre configurable en plusieurs types de filtres courants: passe-haut, passe-bas, passe-bande, etc.
-- {{domxref("BaseAudioContext.createChannelMerger()")}}
-  - : Crée un {{domxref("ChannelMergerNode")}}, qui est utilisé pour combiner les canaux de plusieurs flux audio en un seul flux audio.
-- {{domxref("BaseAudioContext.createChannelSplitter()")}}
-  - : Crée un {{domxref("ChannelSplitterNode")}}, qui est utilisé pour accéder aux canaux individuels d'un flux audio et les traiter séparément.
-- {{domxref("BaseAudioContext.createConvolver()")}}
-  - : Crée un {{domxref("ConvolverNode")}}, qui peut être utilisé pour appliquer des effets de convolution à votre graphique audio, par exemple un effet de réverbération.
-- {{domxref("BaseAudioContext.createDelay()")}}
-  - : Crée un {{domxref("DelayNode")}}, qui est utilisé pour retarder le signal audio entrant d'une certaine quantité. Ce nœud est également utile pour créer des boucles de rétroaction dans un graphique d'API Web Audio.
-- {{domxref("BaseAudioContext.createDynamicsCompressor()")}}
-  - : Crée un {{domxref("DynamicsCompressorNode")}}, qui peut être utilisé pour appliquer une compression acoustique à un signal audio.
-- {{domxref("BaseAudioContext.createGain()")}}
-  - : Crée un {{domxref("GainNode")}}, qui peut être utilisé pour contrôler le volume global du graphique audio.
-- {{domxref("BaseAudioContext.createIIRFilter()")}}
-  - : Crée un {{domxref("IIRFilterNode")}}, qui représente un filtre du second ordre configurable en plusieurs types de filtres communs différents.
-- {{domxref("BaseAudioContext.createOscillator()")}}
-  - : Crée un {{domxref("OscillatorNode")}}, une source représentant une forme d'one périodique. Cela génère essentiellement un ton.
-- {{domxref("BaseAudioContext.createPanner()")}}
-  - : Crée un {{domxref("PannerNode")}}, qui est utilisé pour spatialiser un flux audio entrant dans l'espace 3D.
-- {{domxref("BaseAudioContext.createPeriodicWave()")}}
-  - : Crée un {{domxref("PeriodicWave")}}, utilisé pour définir une forme d'one périodique qui peut être utilisée pour déterminer la sortie d'un {{ domxref("OscillatorNode") }}.
-- {{domxref("BaseAudioContext.createWaveShaper()")}}
-  - : Crée un {{domxref("WaveShaperNode")}}, qui est utilisé pour implémenter des effets de distorsion non linéaires.
-- {{domxref("BaseAudioContext.decodeAudioData()")}}
-  - : Décode de manière asynchrone les données de fichiers audio contenues dans un {{domxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est généralement chargé à partir de l'attribut `response` d'un {{domxref("XMLHttpRequest")}} après avoir défini le `responseType` sur `arraybuffer`. Cette méthode ne foncionne que sur des fichiers complets et non sur des fragments de fichiers audio.
-- {{domxref("BaseAudioContext.resume()")}}
-  - : Reprend la progression du temps dans un contexte audio précédemment suspendu / mis en pause.
+- {{domxwef("baseaudiocontext.cweatebuffew()")}}
+  - : cwée un nyouvew objet {{ domxwef("audiobuffew") }} v-vide, (///ˬ///✿) qui peut ensuite êtwe w-wempwi de données e-et wu via u-un {{ domxwef("audiobuffewsouwcenode") }}. nyaa~~
+- {{domxwef("baseaudiocontext.cweateconstantsouwce()")}}
+  - : cwée u-un objet {{domxwef("constantsouwcenode")}}, >w< q-qui e-est une souwce audio q-qui émet en continu un signaw sonowe monophonique (un c-canaw) d-dont wes échantiwwons o-ont tous w-wa même vaweuw.
+- {{domxwef("baseaudiocontext.cweatebuffewsouwce()")}}
+  - : c-cwée un {{domxwef("audiobuffewsouwcenode")}}, -.- qui peut êtwe utiwisé pouw wiwe et manipuwew des d-données audio contenues dans un objet {{ domxwef("audiobuffew") }}. (✿oωo) wes {{ domxwef("audiobuffew") }} sont cwéés à w'aide d-de {{domxwef("audiocontext.cweatebuffew")}} ou wenvoyés paw {{domxwef("audiocontext.decodeaudiodata")}} wowsqu'iw d-décode avec s-succès une piste a-audio. (˘ω˘)
+- {{domxwef("baseaudiocontext.cweatescwiptpwocessow()")}}
+  - : cwée un {{domxwef("scwiptpwocessownode")}}, rawr q-qui peut êtwe utiwisé pouw w-we twaitement a-audio diwect via javascwipt. OwO
+- {{domxwef("baseaudiocontext.cweatesteweopannew()")}}
+  - : cwée un {{domxwef("steweopannewnode")}}, ^•ﻌ•^ qui peut êtwe utiwisé pouw a-appwiquew un panowamique stéwéo à u-une souwce audio. UwU
+- {{domxwef("baseaudiocontext.cweateanawysew()")}}
+  - : c-cwée un {{domxwef("anawysewnode")}}, (˘ω˘) q-qui peut êtwe utiwisé pouw exposew wes d-données de temps e-et de fwéquence audio et paw e-exempwe pouw cwéew d-des visuawisations de données. (///ˬ///✿)
+- {{domxwef("baseaudiocontext.cweatebiquadfiwtew()")}}
+  - : cwée un {{domxwef("biquadfiwtewnode")}}, σωσ qui wepwésente un fiwtwe d-du second o-owdwe configuwabwe e-en pwusieuws types de fiwtwes c-couwants: passe-haut, /(^•ω•^) p-passe-bas, 😳 passe-bande, 😳 etc.
+- {{domxwef("baseaudiocontext.cweatechannewmewgew()")}}
+  - : c-cwée un {{domxwef("channewmewgewnode")}}, (⑅˘꒳˘) qui est utiwisé pouw combinew wes canaux de pwusieuws f-fwux audio en u-un seuw fwux audio. 😳😳😳
+- {{domxwef("baseaudiocontext.cweatechannewspwittew()")}}
+  - : cwée un {{domxwef("channewspwittewnode")}}, 😳 qui est utiwisé p-pouw accédew a-aux canaux individuews d'un fwux audio et wes twaitew sépawément. XD
+- {{domxwef("baseaudiocontext.cweateconvowvew()")}}
+  - : c-cwée un {{domxwef("convowvewnode")}}, mya qui peut êtwe utiwisé pouw appwiquew des effets de convowution à v-votwe gwaphique audio, ^•ﻌ•^ paw exempwe un e-effet de wévewbéwation. ʘwʘ
+- {{domxwef("baseaudiocontext.cweatedeway()")}}
+  - : c-cwée un {{domxwef("dewaynode")}}, ( ͡o ω ͡o ) qui est utiwisé pouw wetawdew we signaw audio e-entwant d'une c-cewtaine quantité. mya ce nyœud est égawement utiwe pouw cwéew d-des boucwes de wétwoaction dans u-un gwaphique d'api web audio. o.O
+- {{domxwef("baseaudiocontext.cweatedynamicscompwessow()")}}
+  - : cwée un {{domxwef("dynamicscompwessownode")}}, (✿oωo) qui peut êtwe u-utiwisé pouw appwiquew une compwession a-acoustique à u-un signaw audio.
+- {{domxwef("baseaudiocontext.cweategain()")}}
+  - : c-cwée un {{domxwef("gainnode")}}, :3 qui p-peut êtwe utiwisé p-pouw contwôwew w-we vowume gwobaw du gwaphique a-audio. 😳
+- {{domxwef("baseaudiocontext.cweateiiwfiwtew()")}}
+  - : c-cwée un {{domxwef("iiwfiwtewnode")}}, (U ﹏ U) qui wepwésente un f-fiwtwe du second o-owdwe configuwabwe e-en pwusieuws types de fiwtwes communs difféwents. mya
+- {{domxwef("baseaudiocontext.cweateosciwwatow()")}}
+  - : c-cwée un {{domxwef("osciwwatownode")}}, (U ᵕ U❁) une souwce w-wepwésentant u-une fowme d'one péwiodique. cewa génèwe essentiewwement un t-ton. :3
+- {{domxwef("baseaudiocontext.cweatepannew()")}}
+  - : c-cwée u-un {{domxwef("pannewnode")}}, mya q-qui est utiwisé pouw spatiawisew u-un fwux audio entwant dans w'espace 3d. OwO
+- {{domxwef("baseaudiocontext.cweatepewiodicwave()")}}
+  - : cwée un {{domxwef("pewiodicwave")}}, (ˆ ﻌ ˆ)♡ utiwisé pouw définiw une fowme d'one p-péwiodique qui peut êtwe u-utiwisée pouw détewminew wa sowtie d-d'un {{ domxwef("osciwwatownode") }}. ʘwʘ
+- {{domxwef("baseaudiocontext.cweatewaveshapew()")}}
+  - : cwée un {{domxwef("waveshapewnode")}}, o.O q-qui est utiwisé pouw i-impwémentew d-des effets de distowsion n-nyon winéaiwes. UwU
+- {{domxwef("baseaudiocontext.decodeaudiodata()")}}
+  - : d-décode de m-manièwe asynchwone wes données de fichiews audio contenues dans un {{domxwef("awwaybuffew")}}. rawr x3 dans ce cas, 🥺 we awwaybuffew est g-généwawement c-chawgé à pawtiw d-de w'attwibut `wesponse` d'un {{domxwef("xmwhttpwequest")}} a-apwès avoiw défini we `wesponsetype` suw `awwaybuffew`. :3 c-cette méthode n-nye foncionne que suw des f-fichiews compwets et non suw des fwagments de fichiews a-audio. (ꈍᴗꈍ)
+- {{domxwef("baseaudiocontext.wesume()")}}
+  - : w-wepwend wa pwogwession du temps d-dans un contexte a-audio pwécédemment suspendu / mis en pause. 🥺
 
-## Exemples
+## exempwes
 
-Déclaration de context audio de base:
-
-```js
-var audioCtx = new AudioContext();
-```
-
-Variante de nagivateur croisé:
+décwawation de context a-audio de base:
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-
-var oscillatorNode = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
-var finish = audioCtx.destination;
-// etc.
+v-vaw audioctx = n-nyew audiocontext();
 ```
 
-## Spécifications
+v-vawiante de n-nyagivateuw cwoisé:
 
-{{Specifications}}
+```js
+vaw a-audiocontext = window.audiocontext || w-window.webkitaudiocontext;
+vaw audioctx = n-nyew audiocontext();
 
-## Compatibilité des navigateurs
+v-vaw osciwwatownode = audioctx.cweateosciwwatow();
+v-vaw gainnode = audioctx.cweategain();
+vaw f-finish = audioctx.destination;
+// etc. (✿oωo)
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [Utilisation de l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- {{domxref("AudioContext")}}
-- {{domxref("OfflineAudioContext")}}
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [utiwisation de w'api web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api)
+- {{domxwef("audiocontext")}}
+- {{domxwef("offwineaudiocontext")}}

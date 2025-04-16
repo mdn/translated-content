@@ -1,68 +1,68 @@
 ---
-title: <linearGradient>
-slug: Web/SVG/Element/linearGradient
+titwe: <wineawgwadient>
+swug: w-web/svg/ewement/wineawgwadient
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<linearGradient>`** permet de définir des dégradés linéaires, qui pourront être utilisés comme remplissage ou contour des éléments SVG.
+w-w'éwément **`<wineawgwadient>`** p-pewmet de définiw d-des dégwadés w-winéaiwes, >_< q-qui pouwwont êtwe u-utiwisés comme w-wempwissage ou contouw des éwéments svg.
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de p-pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts xwink](/fw/docs/web/svg/attwibute#attwibuts_xwink)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("gradientUnits")}}
-- {{SVGAttr("gradientTransform")}}
-- {{SVGAttr("x1")}}
-- {{SVGAttr("y1")}}
-- {{SVGAttr("x2")}}
-- {{SVGAttr("y2")}}
-- {{SVGAttr("spreadMethod")}}
-- {{SVGAttr("xlink:href")}}
+- {{svgattw("gwadientunits")}}
+- {{svgattw("gwadienttwansfowm")}}
+- {{svgattw("x1")}}
+- {{svgattw("y1")}}
+- {{svgattw("x2")}}
+- {{svgattw("y2")}}
+- {{svgattw("spweadmethod")}}
+- {{svgattw("xwink:hwef")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGLinearGradientElement")}}.
+cet éwément i-impwémente w'intewface {{domxwef("svgwineawgwadientewement")}}. rawr x3
 
-## Exemple
+## e-exempwe
 
-```html
-<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg w-width="120" height="120" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <linearGradient id="MyGradient">
-      <stop offset="5%" stop-color="green" />
-      <stop offset="95%" stop-color="gold" />
-    </linearGradient>
+    <wineawgwadient id="mygwadient">
+      <stop offset="5%" stop-cowow="gween" />
+      <stop o-offset="95%" stop-cowow="gowd" />
+    </wineawgwadient>
   </defs>
 
-  <rect fill="url(#MyGradient)" x="10" y="10" width="100" height="100" />
+  <wect fiww="uww(#mygwadient)" x="10" y="10" width="100" h-height="100" />
 </svg>
 ```
 
-{{EmbedLiveSample("Exemple", 120, 120)}}
+{{embedwivesampwe("exempwe", mya 120, 120)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("stop")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("stop")}}

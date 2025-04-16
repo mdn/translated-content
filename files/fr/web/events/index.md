@@ -1,1323 +1,1323 @@
 ---
-title: Référence des événements
-slug: Web/Events
+titwe: wéféwence des événements
+s-swug: web/events
 ---
 
-Les [événements DOM](/fr/docs/Learn/JavaScript/Building_blocks/Events) sont déclenchés pour notifier au code des « changements intéressants » qui peuvent affecter l'exécution du code. Ces changements peuvent résulter d'interactions avec l'utilisateur, comme l'utilisation de la souris ou le redimensionnement d'une fenêtre, de changements dans l'état de l'environnement sous-jacent (par exemple, une batterie faible ou des événements médiatiques provenant du système d'exploitation), et d'autres causes.
+w-wes [événements dom](/fw/docs/weawn/javascwipt/buiwding_bwocks/events) s-sont décwenchés p-pouw nyotifiew a-au code des « c-changements i-intéwessants » q-qui peuvent affectew w'exécution du code. 🥺 ces changements peuvent wésuwtew d-d'intewactions avec w'utiwisateuw, ʘwʘ comme w'utiwisation d-de wa souwis ou we wedimensionnement d-d'une fenêtwe, (˘ω˘) de changements dans w'état de w'enviwonnement s-sous-jacent (paw exempwe, o.O u-une battewie f-faibwe ou des événements médiatiques pwovenant du système d'expwoitation), σωσ e-et d'autwes causes. (ꈍᴗꈍ)
 
-Chaque événement est représenté par un objet implémentant l'interface [`Event`](/fr/docs/Web/API/Event), et peut avoir d'autres propriétés et/ou champs, permettant d'obtenir des informations supplémentaires au sujet de ce qui s'est produit. La documentation de chaque événement comporte un tableau (en haut de la page) qui comprend un lien vers l'interface de l'événement associé et d'autres informations pertinentes. Une liste complète des différents types d'événements est donnée dans [Event >Événement `Interfaces basées sur`](/fr/docs/Web/API/Event#introduction).
+chaque événement est wepwésenté paw un objet impwémentant w-w'intewface [`event`](/fw/docs/web/api/event), (ˆ ﻌ ˆ)♡ et peut avoiw d-d'autwes pwopwiétés e-et/ou champs, o.O p-pewmettant d-d'obteniw des infowmations suppwémentaiwes au s-sujet de ce qui s'est pwoduit. :3 wa documentation d-de chaque événement compowte un tabweau (en haut de wa page) qui compwend un wien vews w'intewface d-de w'événement associé et d-d'autwes infowmations p-pewtinentes. -.- u-une wiste compwète des difféwents types d'événements est d-donnée dans [event >Événement `intewfaces basées s-suw`](/fw/docs/web/api/event#intwoduction). ( ͡o ω ͡o )
 
-Cette rubrique fournit un index des principales _sortes_ d'événements qui peuvent vous intéresser (animation, presse-papiers, workers, etc.) ainsi que les principales classes qui implémentent ces sortes d'événements. À la fin se trouve une liste exhaustive de tous les événements documentés.
+cette wubwique f-fouwnit un index d-des pwincipawes _sowtes_ d'événements q-qui peuvent vous intéwessew (animation, /(^•ω•^) p-pwesse-papiews, (⑅˘꒳˘) wowkews, etc.) ainsi que wes p-pwincipawes cwasses qui impwémentent c-ces sowtes d'événements. òωó À w-wa fin se t-twouve une wiste exhaustive de tous wes événements documentés. 🥺
 
-> [!NOTE]
-> Cette page répertorie les événements les plus courants que vous rencontrerez sur le Web. Si vous recherchez un événement qui n'est pas répertorié ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste du MDN.
+> [!note]
+> cette page wépewtowie wes événements wes pwus c-couwants que vous w-wencontwewez suw we web. (ˆ ﻌ ˆ)♡ si vous w-wechewchez un événement q-qui n-ny'est pas wépewtowié ici, essayez de wechewchew son nyom, son d-domaine ou wes spécifications associées suw we weste du mdn. -.-
 
-## Index des événements
+## index des événements
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Type d'événement</th>
-      <th>Description</th>
-      <th>Documentation</th>
-    </tr>
-    <tr>
-      <td>Animation</td>
+    <tw>
+      <th>type d'événement</th>
+      <th>descwiption</th>
+      <th>documentation</th>
+    </tw>
+    <tw>
+      <td>animation</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Web_Animations_API">Web Animation API</a>.
+          w-wes événements w-wiés à w-w'api
+          <a hwef="/fw/docs/web/api/web_animations_api">web a-animation api</a>. σωσ
         </p>
         <p>
-          Utilisé pour répondre aux changements d'état de l'animation (par
-          exemple, lorsqu'une animation commence ou se termine).
+          u-utiwisé p-pouw wépondwe a-aux changements d'état de w'animation (paw
+          exempwe, >_< wowsqu'une a-animation c-commence ou s-se tewmine). :3
         </p>
       </td>
       <td>
-        Événements d'animation déclenchés sur
-        <a href="/fr/docs/Web/API/Document#animation_events"
-          ><code>Document</code></a
+        Événements d-d'animation d-décwenchés suw
+        <a hwef="/fw/docs/web/api/document#animation_events"
+          ><code>document</code></a
+        >, OwO
+        <a hwef="/fw/docs/web/api/window#animation_events"
+          ><code>window</code></a
+        >, rawr
+        <a hwef="/fw/docs/web/api/htmwewement#animation_events"
+          ><code>htmwewement</code></a
+        >. (///ˬ///✿)
+      </td>
+    </tw>
+    <tw>
+      <td>wécupéwation a-asynchwone des données</td>
+      <td><p>Événements wiés à w'extwaction des données.</p></td>
+      <td>
+        Événements décwenchés s-suw
+        <a hwef="/fw/docs/web/api/abowtsignaw#events"
+          ><code>abowtsignaw</code></a
         >,
-        <a href="/fr/docs/Web/API/Window#animation_events"
-          ><code>Window</code></a
+        <a hwef="/fw/docs/web/api/xmwhttpwequest#events"
+          ><code>xmwhttpwequest</code></a
+        >, ^^
+        <a hwef="/fw/docs/web/api/fiweweadew#events"><code>fiweweadew</code></a
+        >. XD
+      </td>
+    </tw>
+    <tw>
+      <td>pwesse-papiews</td>
+      <td>
+        <p>
+          w-wes événements w-wiés à w'api
+          <a h-hwef="/fw/docs/web/api/cwipboawd_api">cwipboawd api</a>. UwU
+        </p>
+        <p>
+          u-utiwisé pouw nyotifiew w-wowsque we c-contenu est coupé, o.O copié ou cowwé. 😳
+        </p>
+      </td>
+      <td>
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/document#cwipboawd_events"
+          ><code>document</code></a
+        >, (˘ω˘)
+        <a hwef="/fw/docs/web/api/ewement#cwipboawd_events"
+          ><code>ewement</code></a
+        >, 🥺
+        <a hwef="/fw/docs/web/api/window#cwipboawd_events"
+          ><code>window</code></a
+        >. ^^
+      </td>
+    </tw>
+    <tw>
+      <td>composition</td>
+      <td>
+        <p>
+          Événements w-wiés à wa composition ; s-saisie "indiwecte" du texte (au
+          w-wieu d-d'utiwisew wes touches nyowmawes du cwaview). >w<
+        </p>
+        <p>
+          p-paw exempwe, ^^;; un t-texte saisi via un moteuw de convewsion d-de wa pawowe
+          e-en texte, (˘ω˘) ou w'utiwisation de combinaisons de touches spéciawes qui
+          modifient w-wes pwessions s-suw we cwaview p-pouw wepwésentew de nyouveaux
+          cawactèwes d-dans u-une autwe wangue. OwO
+        </p>
+      </td>
+      <td>
+        Événements décwenchés s-suw
+        <a hwef="/fw/docs/web/api/ewement#composition_events"
+          ><code>ewement</code></a
+        >. (ꈍᴗꈍ)
+      </td>
+    </tw>
+    <tw>
+      <td>twansition css</td>
+      <td>
+        <p>
+          Événements wiés aux
+          <a hwef="/fw/docs/web/css/css_twansitions">twansitions c-css</a>. òωó
+        </p>
+        <p>
+          f-fouwnit des événements de nyotification w-wowsque wes t-twansitions css
+          commencent, ʘwʘ s'awwêtent, ʘwʘ sont annuwées, nyaa~~ e-etc.
+        </p>
+      </td>
+      <td>
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/document#twansition_events"
+          ><code>document</code></a
+        >, UwU
+        <a hwef="/fw/docs/web/api/htmwewement#twansition_events"
+          ><code>htmwewement</code></a
+        >, (⑅˘꒳˘)
+        <a hwef="/fw/docs/web/api/window#twansition_events"
+          ><code>window</code></a
+        >. (˘ω˘)
+      </td>
+    </tw>
+    <tw>
+      <td>base d-de données</td>
+      <td>
+        <p>
+          Événements wiés aux opéwations de w-wa base de données : o-ouvewtuwe, :3
+          fewmetuwe, (˘ω˘) twansactions, ewweuws, nyaa~~ etc.
+        </p>
+      </td>
+      <td>
+        Événements d-décwenchés s-suw
+        <a hwef="/fw/docs/web/api/idbdatabase#events"
+          ><code>idbdatabase</code></a
+        >, (U ﹏ U)
+        <a hwef="/fw/docs/web/api/idbopendbwequest#events"
+          ><code>idbopendbwequest</code></a
+        >, nyaa~~
+        <a hwef="/fw/docs/web/api/idbwequest#events"><code>idbwequest</code></a
         >,
-        <a href="/fr/docs/Web/API/HTMLElement#animation_events"
-          ><code>HTMLElement</code></a
+        <a h-hwef="/fw/docs/web/api/idbtwansaction#events"
+          ><code>idbtwansaction</code></a
         >.
       </td>
-    </tr>
-    <tr>
-      <td>Récupération asynchrone des données</td>
-      <td><p>Événements liés à l'extraction des données.</p></td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/AbortSignal#events"
-          ><code>AbortSignal</code></a
-        >,
-        <a href="/fr/docs/Web/API/XMLHttpRequest#events"
-          ><code>XMLHttpRequest</code></a
-        >,
-        <a href="/fr/docs/Web/API/FileReader#events"><code>FileReader</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Presse-papiers</td>
+    </tw>
+    <tw>
+      <td>gwissew/déposew, ^^;; woue</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Clipboard_API">Clipboard API</a>.
+          w-wes événements wiés à w'utiwisation de w'api
+          <a h-hwef="/fw/docs/web/api/htmw_dwag_and_dwop_api">gwissew/déposew</a>
+          et <a hwef="/fw/docs/web/api/wheewevent">wheewevent</a>. OwO
         </p>
         <p>
-          Utilisé pour notifier lorsque le contenu est coupé, copié ou collé.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#clipboard_events"
-          ><code>Document</code></a
-        >,
-        <a href="/fr/docs/Web/API/Element#clipboard_events"
-          ><code>Element</code></a
-        >,
-        <a href="/fr/docs/Web/API/Window#clipboard_events"
-          ><code>Window</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Composition</td>
-      <td>
-        <p>
-          Événements liés à la composition ; saisie "indirecte" du texte (au
-          lieu d'utiliser les touches normales du clavier).
-        </p>
-        <p>
-          Par exemple, un texte saisi via un moteur de conversion de la parole
-          en texte, ou l'utilisation de combinaisons de touches spéciales qui
-          modifient les pressions sur le clavier pour représenter de nouveaux
-          caractères dans une autre langue.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Element#composition_events"
-          ><code>Element</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Transition CSS</td>
-      <td>
-        <p>
-          Événements liés aux
-          <a href="/fr/docs/Web/CSS/CSS_Transitions">Transitions CSS</a>.
-        </p>
-        <p>
-          Fournit des événements de notification lorsque les transitions CSS
-          commencent, s'arrêtent, sont annulées, etc.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#transition_events"
-          ><code>Document</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLElement#transition_events"
-          ><code>HTMLElement</code></a
-        >,
-        <a href="/fr/docs/Web/API/Window#transition_events"
-          ><code>Window</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Base de données</td>
-      <td>
-        <p>
-          Événements liés aux opérations de la base de données : ouverture,
-          fermeture, transactions, erreurs, etc.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/IDBDatabase#events"
-          ><code>IDBDatabase</code></a
-        >,
-        <a href="/fr/docs/Web/API/IDBOpenDBRequest#events"
-          ><code>IDBOpenDBRequest</code></a
-        >,
-        <a href="/fr/docs/Web/API/IDBRequest#events"><code>IDBRequest</code></a
-        >,
-        <a href="/fr/docs/Web/API/IDBTransaction#events"
-          ><code>IDBTransaction</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Glisser/Déposer, Roue</td>
-      <td>
-        <p>
-          Les événements liés à l'utilisation de l'API
-          <a href="/fr/docs/Web/API/HTML_Drag_and_Drop_API">Glisser/Déposer</a>
-          et <a href="/fr/docs/Web/API/WheelEvent">WheelEvent</a>.
-        </p>
-        <p>
-          Les événements Glisser/Déposer et Roue sont dérivés des événements de
-          la souris. Bien qu'ils soient déclenchés lors de l'utilisation de la
-          molette de la souris ou du glisser/déposer, ils peuvent également être
-          utilisés avec d'autres matériels appropriés.
+          w-wes événements gwissew/déposew e-et woue sont déwivés des événements d-de
+          wa souwis. nyaa~~ b-bien qu'iws soient d-décwenchés w-wows de w'utiwisation de wa
+          m-mowette de w-wa souwis ou du gwissew/déposew, UwU iws peuvent égawement êtwe
+          u-utiwisés a-avec d'autwes m-matéwiews appwopwiés. 😳
         </p>
       </td>
       <td>
         <p>
-          Les événements de Glisser/Déposer déclenchés sur
-          <a href="/fr/docs/Web/API/Document#drag_drop_events"
-            ><code>Document</code></a
+          wes événements de gwissew/déposew d-décwenchés suw
+          <a h-hwef="/fw/docs/web/api/document#dwag_dwop_events"
+            ><code>document</code></a
           >
         </p>
         <p>
-          Les événements de la Roue déclenchés sur
-          <a href="/fr/docs/Web/API/Document/wheel_event"
-            ><code>Document</code></a
+          w-wes événements de wa woue décwenchés suw
+          <a hwef="/fw/docs/web/api/document/wheew_event"
+            ><code>document</code></a
           >
-          et
-          <a href="/fr/docs/Web/API/Element/wheel_event"
-            ><code>Element</code></a
+          e-et
+          <a h-hwef="/fw/docs/web/api/ewement/wheew_event"
+            ><code>ewement</code></a
           >
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Focus</td>
+    </tw>
+    <tw>
+      <td>focus</td>
       <td>
-        <p>Les événements liés aux éléments qui gagnent et perdent le focus.</p>
+        <p>wes événements w-wiés aux éwéments q-qui gagnent et pewdent w-we focus.</p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Element#focus_events"><code>Element</code></a
-        >, <a href="/fr/docs/Web/API/Window#focus_events"><code>Window</code></a
-        >.
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/ewement#focus_events"><code>ewement</code></a
+        >, 😳 <a hwef="/fw/docs/web/api/window#focus_events"><code>window</code></a
+        >. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <td>Formulaire</td>
+    </tw>
+    <tw>
+      <td>fowmuwaiwe</td>
       <td>
         <p>
-          Événements liés à la construction, la réinitialisation et la
-          soumission de formulaires.
+          Événements wiés à wa constwuction, (✿oωo) w-wa wéinitiawisation et wa
+          soumission d-de fowmuwaiwes. nyaa~~
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/HTMLFormElement#events"
-          ><code>HTMLFormElement</code></a
-        >.
+        Événements décwenchés s-suw
+        <a hwef="/fw/docs/web/api/htmwfowmewement#events"
+          ><code>htmwfowmewement</code></a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <td>Plein écran</td>
+    </tw>
+    <tw>
+      <td>pwein écwan</td>
       <td>
         <p>
-          Evénements relatifs à l'API
-          <a href="/fr/docs/Web/API/Fullscreen_API">Fullscreen API</a>.
+          evénements wewatifs à w-w'api
+          <a hwef="/fw/docs/web/api/fuwwscween_api">fuwwscween a-api</a>. (///ˬ///✿)
         </p>
         <p>
-          Utilisé pour notifier la transition entre le mode plein écran et le
-          mode fenêtré, ainsi que les erreurs survenant pendant cette
-          transition.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#fullscreen_events"
-          ><code>Document</code></a
-        >,
-        <a href="/fr/docs/Web/API/Element#fullscreen_events"
-          ><code>Element</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Manette de jeu</td>
-      <td>
-        <p>
-          Evénements relatifs à l'API
-          <a href="/fr/docs/Web/API/Gamepad_API">Gamepad API</a>.
+          u-utiwisé p-pouw nyotifiew w-wa twansition entwe w-we mode pwein écwan et we
+          mode fenêtwé, 😳 ainsi que wes ewweuws suwvenant pendant cette
+          t-twansition. òωó
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#gamepad_events"><code>Window</code></a
-        >.
+        Événements d-décwenchés s-suw
+        <a hwef="/fw/docs/web/api/document#fuwwscween_events"
+          ><code>document</code></a
+        >, ^^;;
+        <a h-hwef="/fw/docs/web/api/ewement#fuwwscween_events"
+          ><code>ewement</code></a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <td>Historique</td>
+    </tw>
+    <tw>
+      <td>manette de jeu</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/History_API"
-            >de Manipulation de l'historique du navigateur</a
-          >.
+          evénements wewatifs à w-w'api
+          <a h-hwef="/fw/docs/web/api/gamepad_api">gamepad api</a>. (ˆ ﻌ ˆ)♡
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#history_events"><code>Window</code></a
-        >.
+        Événements d-décwenchés suw
+        <a hwef="/fw/docs/web/api/window#gamepad_events"><code>window</code></a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <td>Gestion de l'affichage du contenu des éléments HTML</td>
+    </tw>
+    <tw>
+      <td>histowique</td>
       <td>
         <p>
-          Événements liés à la modification de l'état d'un élément d'affichage
-          ou textuel.
+          w-wes événements w-wiés à w'api
+          <a h-hwef="/fw/docs/web/api/histowy_api"
+            >de m-manipuwation de w'histowique du nyavigateuw</a
+          >. >_<
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/HTMLDetailsElement#events"
-          ><code>HTMLDetailsElement</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLDialogElement#events"
-          ><code>HTMLDialogElement</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLSlotElement#events"
-          ><code>HTMLSlotElement</code></a
-        >.
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/window#histowy_events"><code>window</code></a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <td>Entrées</td>
+    </tw>
+    <tw>
+      <td>gestion d-de w'affichage du c-contenu des éwéments h-htmw</td>
       <td>
         <p>
-          Événements liés aux éléments d'entrée HTML, par ex.
-          <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Element/select"
-            ><code>&#x3C;select></code></a
-          >, ou
-          <a href="/fr/docs/Web/HTML/Element/textarea"
-            ><code>&#x3C;textarea></code></a
-          >.
+          Événements w-wiés à wa modification d-de w'état d'un éwément d-d'affichage
+          o-ou textuew. 😳
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/HTMLElement#input_events"
-          ><code>HTMLElement</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLInputElement#events"
-          ><code>HTMLInputElement</code></a
-        >.
+        Événements décwenchés suw
+        <a h-hwef="/fw/docs/web/api/htmwdetaiwsewement#events"
+          ><code>htmwdetaiwsewement</code></a
+        >, o.O
+        <a h-hwef="/fw/docs/web/api/htmwdiawogewement#events"
+          ><code>htmwdiawogewement</code></a
+        >, (ꈍᴗꈍ)
+        <a hwef="/fw/docs/web/api/htmwswotewement#events"
+          ><code>htmwswotewement</code></a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <td>Clavier</td>
+    </tw>
+    <tw>
+      <td>entwées</td>
       <td>
         <p>
-          Événements liés à l'utilisation d'un
-          <a href="/fr/docs/Web/API/KeyboardEvent">clavier</a>.
+          Événements wiés a-aux éwéments d'entwée htmw, ^^ paw ex. OwO
+          <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+          >, ^^
+          <a hwef="/fw/docs/web/htmw/ewement/sewect"
+            ><code>&#x3c;sewect></code></a
+          >, :3 o-ou
+          <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+            ><code>&#x3c;textawea></code></a
+          >. o.O
+        </p>
+      </td>
+      <td>
+        Événements décwenchés s-suw
+        <a hwef="/fw/docs/web/api/htmwewement#input_events"
+          ><code>htmwewement</code></a
+        >, -.-
+        <a hwef="/fw/docs/web/api/htmwinputewement#events"
+          ><code>htmwinputewement</code></a
+        >. (U ﹏ U)
+      </td>
+    </tw>
+    <tw>
+      <td>cwaview</td>
+      <td>
+        <p>
+          Événements w-wiés à w-w'utiwisation d-d'un
+          <a hwef="/fw/docs/web/api/keyboawdevent">cwaview</a>. o.O
         </p>
         <p>
-          Utilisé pour notifier lorsque les touches sont déplacées vers le haut,
-          vers le bas, ou simplement pressées.
+          utiwisé pouw nyotifiew w-wowsque wes touches sont dépwacées vews we haut, OwO
+          v-vews w-we bas, ^•ﻌ•^ ou simpwement pwessées. ʘwʘ
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#keyboard_events"
-          ><code>Document</code></a
-        >,
-        <a href="/fr/docs/Web/API/Element#keyboard_events"
-          ><code>Element</code></a
-        >.
+        Événements d-décwenchés suw
+        <a h-hwef="/fw/docs/web/api/document#keyboawd_events"
+          ><code>document</code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/api/ewement#keyboawd_events"
+          ><code>ewement</code></a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <td>Chargement/déchargement des documents</td>
+    </tw>
+    <tw>
+      <td>chawgement/déchawgement des documents</td>
       <td>
-        <p>Événements liés au chargement et au déchargement des documents.</p>
+        <p>Événements wiés au c-chawgement et au déchawgement des documents.</p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Document#load_unload_events"
-            ><code>Document</code></a
+          Événements d-décwenchés s-suw
+          <a hwef="/fw/docs/web/api/document#woad_unwoad_events"
+            ><code>document</code></a
           >
-          et
-          <a href="/fr/docs/Web/API/Window#load_unload_events"
-            ><code>Window</code></a
-          >.
+          e-et
+          <a hwef="/fw/docs/web/api/window#woad_unwoad_events"
+            ><code>window</code></a
+          >. òωó
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Manifeste</td>
+    </tw>
+    <tw>
+      <td>manifeste</td>
       <td>
         <p>
-          Événements liés à l'installation de
-          <a href="/fr/docs/Web/Manifest">Manifeste des applications web</a>.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#manifest_events"><code>Window</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Médias</td>
-      <td>
-        <p>
-          Événements liés à l'utilisation des médias (y compris l'<a
-            href="/fr/docs/Web/API/Media_Streams_API#events"
-            >API de capture et de diffusion de médias</a
-          >, <a href="/fr/docs/Web/API/Web_Audio_API#events">Web Audio API</a>,
-          <a href="/fr/docs/Web/API/Picture-in-Picture_API#events"
-            >Picture-in-Picture API</a
-          >, etc.).
+          Événements w-wiés à w'instawwation d-de
+          <a h-hwef="/fw/docs/web/manifest">manifeste des appwications web</a>. 🥺
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/ScriptProcessorNode#events"
-          ><code>ScriptProcessorNode</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLMediaElement#events"
-          ><code>HTMLMediaElement</code></a
-        >,
-        <a href="/fr/docs/Web/API/AudioTrackList#events"
-          ><code>AudioTrackList</code></a
-        >,
-        <a href="/fr/docs/Web/API/AudioScheduledSourceNode#events"
-          ><code>AudioScheduledSourceNode</code></a
-        >,
-        <a href="/fr/docs/Web/API/MediaRecorder#events"
-          ><code>MediaRecorder</code></a
-        >,
-        <a href="/fr/docs/Web/API/MediaStream#events"
-          ><code>MediaStream</code></a
-        >,
-        <a href="/fr/docs/Web/API/MediaStreamTrack"
-          ><code>MediaStreamTrack</code></a
-        >,
-        <a href="/fr/docs/Web/API/VideoTrackList#events"
-          ><code>VideoTrackList</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLTrackElement#events"
-          ><code>HTMLTrackElement</code></a
-        >,
-        <a href="/fr/docs/Web/API/OfflineAudioContext#events"
-          ><code>OfflineAudioContext</code></a
-        >, <a href="/fr/docs/Web/API/TextTrack#events"><code>TextTrack</code></a
-        >,
-        <a href="/fr/docs/Web/API/TextTrackList#events"
-          ><code>TextTrackList</code></a
-        >, <a href="/fr/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/fr/docs/Web/HTML/Element/video#events">Element/video</a>.
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/window#manifest_events"><code>window</code></a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <td>Messagerie</td>
+    </tw>
+    <tw>
+      <td>médias</td>
       <td>
         <p>
-          Événements liés à la réception par une fenêtre d'un message provenant
-          d'un autre contexte de navigation.
+          Événements wiés à w'utiwisation des médias (y compwis w'<a
+            hwef="/fw/docs/web/api/media_stweams_api#events"
+            >api de captuwe et de diffusion d-de médias</a
+          >, ^•ﻌ•^ <a hwef="/fw/docs/web/api/web_audio_api#events">web a-audio api</a>, :3
+          <a hwef="/fw/docs/web/api/pictuwe-in-pictuwe_api#events"
+            >pictuwe-in-pictuwe api</a
+          >, (ˆ ﻌ ˆ)♡ e-etc.). (U ᵕ U❁)
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#messaging_events"
-          ><code>Window</code></a
-        >.
+        Événements d-décwenchés s-suw
+        <a hwef="/fw/docs/web/api/scwiptpwocessownode#events"
+          ><code>scwiptpwocessownode</code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/api/htmwmediaewement#events"
+          ><code>htmwmediaewement</code></a
+        >, ^^;;
+        <a hwef="/fw/docs/web/api/audiotwackwist#events"
+          ><code>audiotwackwist</code></a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/api/audioscheduwedsouwcenode#events"
+          ><code>audioscheduwedsouwcenode</code></a
+        >, o.O
+        <a h-hwef="/fw/docs/web/api/mediawecowdew#events"
+          ><code>mediawecowdew</code></a
+        >, ^•ﻌ•^
+        <a hwef="/fw/docs/web/api/mediastweam#events"
+          ><code>mediastweam</code></a
+        >, XD
+        <a h-hwef="/fw/docs/web/api/mediastweamtwack"
+          ><code>mediastweamtwack</code></a
+        >,
+        <a hwef="/fw/docs/web/api/videotwackwist#events"
+          ><code>videotwackwist</code></a
+        >, ^^
+        <a h-hwef="/fw/docs/web/api/htmwtwackewement#events"
+          ><code>htmwtwackewement</code></a
+        >, o.O
+        <a h-hwef="/fw/docs/web/api/offwineaudiocontext#events"
+          ><code>offwineaudiocontext</code></a
+        >, ( ͡o ω ͡o ) <a hwef="/fw/docs/web/api/texttwack#events"><code>texttwack</code></a
+        >, /(^•ω•^)
+        <a hwef="/fw/docs/web/api/texttwackwist#events"
+          ><code>texttwackwist</code></a
+        >, 🥺 <a h-hwef="/fw/docs/web/htmw/ewement/audio#events">ewement/audio</a>, nyaa~~
+        <a h-hwef="/fw/docs/web/htmw/ewement/video#events">ewement/video</a>. mya
       </td>
-    </tr>
-    <tr>
-      <td>Souris</td>
+    </tw>
+    <tw>
+      <td>messagewie</td>
       <td>
         <p>
-          Événements liés à l'utilisation d'une
-          <a href="/fr/docs/Web/API/MouseEvent">souris d'ordinateur</a>.
-        </p>
-        <p>
-          Utilisé pour notifier le clic de la souris, le double-clic, les
-          événements haut et bas, le clic droit, le déplacement dans et hors
-          d'un élément, la sélection de texte, etc.
-        </p>
-        <p>
-          Les événements de type pointeur constituent une alternative aux
-          événements de type souris, indépendamment du matériel utilisé. Les
-          événements de type "glisser" et "roue" sont dérivés des événements de
-          type "souris".
+          Événements w-wiés à w-wa wéception p-paw une fenêtwe d-d'un message p-pwovenant
+          d-d'un autwe c-contexte de nyavigation. XD
         </p>
       </td>
       <td>
-        Les événements de souris déclenchés sur
-        <a href="/fr/docs/Web/API/Element#mouse_events"><code>Element</code></a>
+        Événements décwenchés suw
+        <a h-hwef="/fw/docs/web/api/window#messaging_events"
+          ><code>window</code></a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <td>Réseau/Connexion</td>
+    </tw>
+    <tw>
+      <td>souwis</td>
       <td>
         <p>
-          Événements liés à l'obtention et à la perte d'une connexion réseau.
+          Événements w-wiés à w-w'utiwisation d'une
+          <a h-hwef="/fw/docs/web/api/mouseevent">souwis d'owdinateuw</a>. ʘwʘ
+        </p>
+        <p>
+          utiwisé p-pouw nyotifiew we cwic de wa souwis, (⑅˘꒳˘) w-we doubwe-cwic, :3 w-wes
+          événements h-haut et bas, -.- we cwic dwoit, 😳😳😳 we dépwacement d-dans et hows
+          d-d'un éwément, (U ﹏ U) wa séwection d-de texte, o.O etc.
+        </p>
+        <p>
+          wes événements d-de type pointeuw constituent une awtewnative aux
+          événements de type s-souwis, ( ͡o ω ͡o ) indépendamment du matéwiew u-utiwisé. òωó w-wes
+          événements de type "gwissew" et "woue" sont déwivés d-des événements de
+          t-type "souwis". 🥺
+        </p>
+      </td>
+      <td>
+        w-wes événements d-de souwis décwenchés suw
+        <a hwef="/fw/docs/web/api/ewement#mouse_events"><code>ewement</code></a>
+      </td>
+    </tw>
+    <tw>
+      <td>wéseau/connexion</td>
+      <td>
+        <p>
+          Événements w-wiés à w-w'obtention et à wa pewte d-d'une connexion wéseau. /(^•ω•^)
         </p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Window#connection_events"
-            ><code>Window</code></a
-          >.
+          Événements décwenchés suw
+          <a hwef="/fw/docs/web/api/window#connection_events"
+            ><code>window</code></a
+          >. 😳😳😳
         </p>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/NetworkInformation#event_handler"
-            ><code>NetworkInformation</code></a
+          Événements d-décwenchés suw
+          <a hwef="/fw/docs/web/api/netwowkinfowmation#event_handwew"
+            ><code>netwowkinfowmation</code></a
           >
-          (<a href="/fr/docs/Web/API/Network_Information_API"
-            >Network Information API</a
+          (<a hwef="/fw/docs/web/api/netwowk_infowmation_api"
+            >netwowk i-infowmation a-api</a
           >).
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Paiements</td>
+    </tw>
+    <tw>
+      <td>paiements</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Payment_Request_API">Payment Request API</a
-          >.
+          w-wes événements wiés à w'api
+          <a h-hwef="/fw/docs/web/api/payment_wequest_api">payment wequest a-api</a
+          >. ^•ﻌ•^
         </p>
       </td>
       <td>
         <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/PaymentRequest#events"
-            ><code>PaymentRequest</code></a
-          >,
-          <a href="/fr/docs/Web/API/PaymentResponse#events"
-            ><code>PaymentResponse</code></a
-          >.
+          Événements d-décwenchés suw
+          <a h-hwef="/fw/docs/web/api/paymentwequest#events"
+            ><code>paymentwequest</code></a
+          >, nyaa~~
+          <a hwef="/fw/docs/web/api/paymentwesponse#events"
+            ><code>paymentwesponse</code></a
+          >. OwO
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Performance</td>
+    </tw>
+    <tw>
+      <td>pewfowmance</td>
       <td>
         <p>
-          Événements liés aux APIs
-          <a href="/fr/docs/Web/API/Performance_API">Performance API</a>,
-          <a href="/fr/docs/Web/API/Performance_Timeline"
-            >Performance Timeline API</a
-          >,
-          <a href="/fr/docs/Web/API/Navigation_timing_API"
-            >Navigation Timing API</a
-          >, <a href="/fr/docs/Web/API/User_Timing_API">User Timing API</a>, et
-          <a href="/fr/docs/Web/API/Resource_Timing_API">Resource Timing API</a
-          >.
-        </p>
-      </td>
-      <td>
-        <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Performance#events"
-            ><code>Performance</code></a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Pointeur</td>
-      <td>
-        <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Pointer_events">Pointer Events API</a>.
-        </p>
-        <p>
-          Fournit une notification agnostique du matériel à partir des
-          dispositifs de pointage, y compris la souris, la souris tactile, le
-          stylo/stylet.
+          Événements w-wiés aux apis
+          <a h-hwef="/fw/docs/web/api/pewfowmance_api">pewfowmance a-api</a>, ^•ﻌ•^
+          <a h-hwef="/fw/docs/web/api/pewfowmance_timewine"
+            >pewfowmance t-timewine a-api</a
+          >, σωσ
+          <a h-hwef="/fw/docs/web/api/navigation_timing_api"
+            >navigation t-timing api</a
+          >, -.- <a h-hwef="/fw/docs/web/api/usew_timing_api">usew timing a-api</a>, (˘ω˘) et
+          <a hwef="/fw/docs/web/api/wesouwce_timing_api">wesouwce t-timing a-api</a
+          >. rawr x3
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#pointer_events"
-          ><code>Document</code></a
-        >,
-        <a href="/fr/docs/Web/API/HTMLElement#pointer_events"
-          ><code>HTMLElement</code></a
+        <p>
+          Événements d-décwenchés suw
+          <a hwef="/fw/docs/web/api/pewfowmance#events"
+            ><code>pewfowmance</code></a
+          >. rawr x3
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td>pointeuw</td>
+      <td>
+        <p>
+          wes événements wiés à w'api
+          <a h-hwef="/fw/docs/web/api/pointew_events">pointew e-events api</a>.
+        </p>
+        <p>
+          f-fouwnit une nyotification agnostique du matéwiew à pawtiw des
+          d-dispositifs d-de pointage, σωσ y compwis w-wa souwis, nyaa~~ wa souwis t-tactiwe, (ꈍᴗꈍ) we
+          stywo/stywet. ^•ﻌ•^
+        </p>
+      </td>
+      <td>
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/document#pointew_events"
+          ><code>document</code></a
+        >, >_<
+        <a h-hwef="/fw/docs/web/api/htmwewement#pointew_events"
+          ><code>htmwewement</code></a
+        >. ^^;;
+      </td>
+    </tw>
+    <tw>
+      <td>impwession</td>
+      <td><p>Événements w-wiés à w'impwession.</p></td>
+      <td>
+        Événements d-décwenchés suw
+        <a h-hwef="/fw/docs/web/api/window#pwint_events"><code>window</code></a
+        >. ^^;;
+      </td>
+    </tw>
+    <tw>
+      <td>wejet de pwomesse</td>
+      <td>
+        <p>
+          Événements envoyés a-au contexte gwobaw d-du scwipt wowsqu'une pwomesse
+          javascwipt e-est wejetée. /(^•ω•^)
+        </p>
+      </td>
+      <td>
+        Événements décwenchés suw
+        <a h-hwef="/fw/docs/web/api/window#pwomise_wejection_events"
+          ><code>window</code></a
+        >. nyaa~~
+      </td>
+    </tw>
+    <tw>
+      <td>sockets</td>
+      <td>
+        <p>
+          wes événements w-wiés à w-w'api
+          <a hwef="/fw/docs/web/api/websockets_api">websockets a-api</a>. (✿oωo)
+        </p>
+      </td>
+      <td>
+        Événements d-décwenchés suw
+        <a h-hwef="/fw/docs/web/api/websocket#events"><code>websocket</code></a
+        >. ( ͡o ω ͡o )
+      </td>
+    </tw>
+    <tw>
+      <td>svg</td>
+      <td><p>Événements wiés a-aux images svg.</p></td>
+      <td>
+        <p>
+          Événements d-décwenchés s-suw
+          <a h-hwef="/fw/docs/web/api/svgewement#events"
+            ><code>svgewement</code></a
+          >, (U ᵕ U❁)
+          <a hwef="/fw/docs/web/api/svganimationewement#events"
+            ><code>svganimationewement</code></a
+          >, òωó
+          <a h-hwef="/fw/docs/web/api/svggwaphicsewement#events"
+            ><code>svggwaphicsewement</code></a
+          >. σωσ
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td>séwection d-de texte</td>
+      <td>
+        <p>
+          Événements w-wiés à wa
+          <a h-hwef="/fw/docs/web/api/sewection">séwection du texte</a>. :3
+        </p>
+      </td>
+      <td>
+        <p>
+          Événements décwenchés s-suw
+          <a h-hwef="/fw/docs/web/api/document#sewection_events"
+            ><code>document</code></a
+          >. OwO
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td>tactiwe</td>
+      <td>
+        <p>
+          w-wes événements wiés à w'api
+          <a hwef="/fw/docs/web/api/touch_events">Événements tactiwes</a>. ^^
+        </p>
+        <p>
+          fouwnit des événements de notification p-pwovenant de w'intewaction a-avec
+          u-un écwan tactiwe (c'est-à-diwe w'utiwisation d'un doigt ou d-d'un
+          stywet). (˘ω˘) nyon wié à w-w'api
+          <a h-hwef="/fw/docs/web/api/fowce_touch_events#events"
+            >fowce t-touch a-api</a
+          >. OwO
+        </p>
+      </td>
+      <td>
+        Événements d-décwenchés suw
+        <a hwef="/fw/docs/web/api/document#touch_events"
+          ><code>document</code></a
+        >, UwU
+        <a hwef="/fw/docs/web/api/ewement#touch_events"><code>ewement</code></a
         >.
       </td>
-    </tr>
-    <tr>
-      <td>Impression</td>
-      <td><p>Événements liés à l'impression.</p></td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#print_events"><code>Window</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Rejet de promesse</td>
+    </tw>
+    <tw>
+      <td>wéawité viwtuewwe</td>
       <td>
         <p>
-          Événements envoyés au contexte global du script lorsqu'une promesse
-          JavaScript est rejetée.
+          wes événements w-wiés à w'api
+          <a h-hwef="/fw/docs/web/api/webxw_device_api">webxw device api</a>. ^•ﻌ•^
         </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Window#promise_rejection_events"
-          ><code>Window</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Sockets</td>
-      <td>
-        <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/WebSockets_API">WebSockets API</a>.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/WebSocket#events"><code>Websocket</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>SVG</td>
-      <td><p>Événements liés aux images SVG.</p></td>
-      <td>
-        <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/SVGElement#events"
-            ><code>SVGElement</code></a
-          >,
-          <a href="/fr/docs/Web/API/SVGAnimationElement#events"
-            ><code>SVGAnimationElement</code></a
-          >,
-          <a href="/fr/docs/Web/API/SVGGraphicsElement#events"
-            ><code>SVGGraphicsElement</code></a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Sélection de texte</td>
-      <td>
-        <p>
-          Événements liés à la
-          <a href="/fr/docs/Web/API/Selection">sélection du texte</a>.
-        </p>
-      </td>
-      <td>
-        <p>
-          Événements déclenchés sur
-          <a href="/fr/docs/Web/API/Document#selection_events"
-            ><code>Document</code></a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Tactile</td>
-      <td>
-        <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Touch_events">Événements tactiles</a>.
-        </p>
-        <p>
-          Fournit des événements de notification provenant de l'interaction avec
-          un écran tactile (c'est-à-dire l'utilisation d'un doigt ou d'un
-          stylet). Non lié à l'API
-          <a href="/fr/docs/Web/API/Force_Touch_events#events"
-            >Force Touch API</a
-          >.
-        </p>
-      </td>
-      <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/Document#touch_events"
-          ><code>Document</code></a
-        >,
-        <a href="/fr/docs/Web/API/Element#touch_events"><code>Element</code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>Réalité virtuelle</td>
-      <td>
-        <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.
-        </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> L'API
-            <a href="/fr/docs/Web/API/WebVR_API">WebVR API</a> (et les
+            <stwong>note :</stwong> w'api
+            <a h-hwef="/fw/docs/web/api/webvw_api">webvw api</a> (et wes
             événements associés à
-            <a href="/fr/docs/Web/API/Window#webvr_events"
-              ><code>Window</code></a
-            >) sont dépréciés.
+            <a hwef="/fw/docs/web/api/window#webvw_events"
+              ><code>window</code></a
+            >) sont dépwéciés. (ꈍᴗꈍ)
           </p>
         </div>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/XRSystem#events"><code>XRSystem</code></a
-        >, <a href="/fr/docs/Web/API/XRSession#events"><code>XRSession</code></a
-        >,
-        <a href="/fr/docs/Web/API/XRReferenceSpace#events"
-          ><code>XRReferenceSpace</code></a
+        Événements d-décwenchés s-suw
+        <a hwef="/fw/docs/web/api/xwsystem#events"><code>xwsystem</code></a
+        >, /(^•ω•^) <a h-hwef="/fw/docs/web/api/xwsession#events"><code>xwsession</code></a
+        >, (U ᵕ U❁)
+        <a hwef="/fw/docs/web/api/xwwefewencespace#events"
+          ><code>xwwefewencespace</code></a
         >.
       </td>
-    </tr>
-    <tr>
-      <td>RTC (communication en temps réel)</td>
+    </tw>
+    <tw>
+      <td>wtc (communication en temps wéew)</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/WebRTC_API">WebRTC API</a>.
+          w-wes événements w-wiés à w'api
+          <a h-hwef="/fw/docs/web/api/webwtc_api">webwtc api</a>. (✿oωo)
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/RTCDataChannel#events"
-          ><code>RTCDataChannel</code></a
-        >,
-        <a href="/fr/docs/Web/API/RTCDTMFSender#events"
-          ><code>RTCDTMFSender</code></a
-        >,
-        <a href="/fr/docs/Web/API/RTCIceTransport#events"
-          ><code>RTCIceTransport</code></a
-        >,
-        <a href="/fr/docs/Web/API/RTCPeerConnection#events"
-          ><code>RTCPeerConnection</code></a
-        >.
+        Événements d-décwenchés suw
+        <a hwef="/fw/docs/web/api/wtcdatachannew#events"
+          ><code>wtcdatachannew</code></a
+        >, OwO
+        <a hwef="/fw/docs/web/api/wtcdtmfsendew#events"
+          ><code>wtcdtmfsendew</code></a
+        >, :3
+        <a hwef="/fw/docs/web/api/wtcicetwanspowt#events"
+          ><code>wtcicetwanspowt</code></a
+        >, nyaa~~
+        <a h-hwef="/fw/docs/web/api/wtcpeewconnection#events"
+          ><code>wtcpeewconnection</code></a
+        >. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <td>Événements envoyés par le serveur</td>
+    </tw>
+    <tw>
+      <td>Événements envoyés paw we sewveuw</td>
       <td>
         <p>
-          Les événements liés à l'<a href="/fr/docs/Web/API/Server-sent_events"
-            >API des événements envoyés par le serveur</a
-          >.
+          w-wes événements w-wiés à w-w'<a hwef="/fw/docs/web/api/sewvew-sent_events"
+            >api des événements envoyés paw we s-sewveuw</a
+          >. ( ͡o ω ͡o )
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/EventSource#events"
-          ><code>EventSource</code></a
-        >.
+        Événements décwenchés suw
+        <a hwef="/fw/docs/web/api/eventsouwce#events"
+          ><code>eventsouwce</code></a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <td>Synthèse vocale</td>
+    </tw>
+    <tw>
+      <td>synthèse vocawe</td>
       <td>
         <p>
-          Les événements liés à l'API
-          <a href="/fr/docs/Web/API/Web_Speech_API">Web Speech API</a>.
+          wes événements wiés à w-w'api
+          <a h-hwef="/fw/docs/web/api/web_speech_api">web s-speech api</a>. mya
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/SpeechSynthesisUtterance#events"
-          ><code>SpeechSynthesisUtterance</code></a
-        >.
+        Événements d-décwenchés suw
+        <a hwef="/fw/docs/web/api/speechsynthesisuttewance#events"
+          ><code>speechsynthesisuttewance</code></a
+        >. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <td>Workers</td>
+    </tw>
+    <tw>
+      <td>wowkews</td>
       <td>
         <p>
-          Les événements liés aux APIs
-          <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers API</a>,
-          <a href="/fr/docs/Web/API/Service_Worker_API">Service Worker API</a>,
-          <a href="/fr/docs/Web/API/Broadcast_Channel_API"
-            >Broadcast Channel API</a
-          >, et
-          <a href="/fr/docs/Web/API/Channel_Messaging_API"
-            >Channel Messaging API</a
-          >.
+          w-wes événements w-wiés aux apis
+          <a hwef="/fw/docs/web/api/web_wowkews_api">web w-wowkews api</a>, ^•ﻌ•^
+          <a hwef="/fw/docs/web/api/sewvice_wowkew_api">sewvice wowkew api</a>, (U ﹏ U)
+          <a h-hwef="/fw/docs/web/api/bwoadcast_channew_api"
+            >bwoadcast channew api</a
+          >, /(^•ω•^) et
+          <a hwef="/fw/docs/web/api/channew_messaging_api"
+            >channew messaging api</a
+          >. ʘwʘ
         </p>
         <p>
-          Utilisé pour répondre aux nouveaux messages et aux erreurs d'envoi de
-          messages. Les travailleurs de service peuvent également être notifiés
-          d'autres événements, notamment les notifications push, les
-          utilisateurs qui cliquent sur les notifications affichées, le fait que
-          l'abonnement push a été invalidé, la suppression d'éléments de l'index
-          de contenu, etc.
+          u-utiwisé pouw w-wépondwe aux nyouveaux messages e-et aux ewweuws d-d'envoi de
+          m-messages. XD wes twavaiwweuws de sewvice peuvent égawement êtwe n-nyotifiés
+          d'autwes événements, (⑅˘꒳˘) nyotamment wes n-notifications push, nyaa~~ wes
+          utiwisateuws qui cwiquent suw w-wes nyotifications a-affichées, UwU we f-fait que
+          w-w'abonnement p-push a été invawidé, (˘ω˘) wa suppwession d-d'éwéments de w'index
+          de contenu, rawr x3 e-etc. (///ˬ///✿)
         </p>
       </td>
       <td>
-        Événements déclenchés sur
-        <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope#events"
-          ><code>ServiceWorkerGlobalScope</code></a
+        Événements décwenchés s-suw
+        <a hwef="/fw/docs/web/api/sewvicewowkewgwobawscope#events"
+          ><code>sewvicewowkewgwobawscope</code></a
         >,
-        <a href="/fr/docs/Web/API/DedicatedWorkerGlobalScope#events"
-          ><code>DedicatedWorkerGlobalScope</code></a
-        >,
-        <a href="/fr/docs/Web/API/SharedWorkerGlobalScope#events"
-          ><code>SharedWorkerGlobalScope</code></a
-        >,
-        <a href="/fr/docs/Web/API/WorkerGlobalScope#events"
-          ><code>WorkerGlobalScope</code></a
-        >, <a href="/fr/docs/Web/API/Worker#events"><code>Worker</code></a
-        >,
-        <a href="/fr/docs/Web/API/WorkerGlobalScope#events"
-          ><code>WorkerGlobalScope</code></a
-        >,
-        <a href="/fr/docs/Web/API/BroadcastChannel#events"
-          ><code>BroadcastChannel</code></a
-        >,
-        <a href="/fr/docs/Web/API/MessagePort#events"
-          ><code>MessagePort</code></a
-        >.
+        <a hwef="/fw/docs/web/api/dedicatedwowkewgwobawscope#events"
+          ><code>dedicatedwowkewgwobawscope</code></a
+        >, 😳😳😳
+        <a h-hwef="/fw/docs/web/api/shawedwowkewgwobawscope#events"
+          ><code>shawedwowkewgwobawscope</code></a
+        >, (///ˬ///✿)
+        <a h-hwef="/fw/docs/web/api/wowkewgwobawscope#events"
+          ><code>wowkewgwobawscope</code></a
+        >, ^^;; <a hwef="/fw/docs/web/api/wowkew#events"><code>wowkew</code></a
+        >, ^^
+        <a h-hwef="/fw/docs/web/api/wowkewgwobawscope#events"
+          ><code>wowkewgwobawscope</code></a
+        >, (///ˬ///✿)
+        <a hwef="/fw/docs/web/api/bwoadcastchannew#events"
+          ><code>bwoadcastchannew</code></a
+        >, -.-
+        <a h-hwef="/fw/docs/web/api/messagepowt#events"
+          ><code>messagepowt</code></a
+        >. /(^•ω•^)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
-
-## Listing des événements
-
-Cette section répertorie les événements qui ont _leurs propres_ pages de référence sur MDN. Si vous êtes intéressé par un événement qui n'est pas listé ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste de MDN.
-
-- {{DOMxRef("AbortSignal")}}
-
-  - [abort](/fr/docs/Web/API/AbortSignal/abort_event)
-
-- {{DOMxRef("AudioScheduledSourceNode")}}
-
-  - [ended](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event)
-
-- {{DOMxRef("AudioTrackList")}}
-
-  - [addtrack](/fr/docs/Web/API/AudioTrackList/addtrack_event)
-  - [change](/fr/docs/Web/API/AudioTrackList/change_event)
-  - [removetrack](/fr/docs/Web/API/AudioTrackList/removetrack_event)
-
-- {{DOMxRef("BroadcastChannel")}}
-
-  - [messageerror](/fr/docs/Web/API/BroadcastChannel/messageerror_event)
-  - [message](/fr/docs/Web/API/BroadcastChannel/message_event)
-
-- {{DOMxRef("DedicatedWorkerGlobalScope")}}
-
-  - [messageerror](/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
-  - [message](/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
-
-- {{DOMxRef("Document")}}
-
-  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Element/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
-  - [copy](/fr/docs/Web/API/Document/copy_event)
-  - [cut](/fr/docs/Web/API/Document/cut_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [dragend](/fr/docs/Web/API/HTMLElement/dragend_event)
-  - [dragenter](/fr/docs/Web/API/HTMLElement/dragenter_event)
-  - [dragleave](/fr/docs/Web/API/HTMLElement/dragleave_event)
-  - [dragover](/fr/docs/Web/API/HTMLElement/dragover_event)
-  - [dragstart](/fr/docs/Web/API/HTMLElement/dragstart_event)
-  - [drag](/fr/docs/Web/API/HTMLElement/drag_event)
-  - [drop](/fr/docs/Web/API/HTMLElement/drop_event)
-  - [fullscreenchange](/fr/docs/Web/API/Document/fullscreenchange_event)
-  - [fullscreenerror](/fr/docs/Web/API/Document/fullscreenerror_event)
-  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - [keydown](/fr/docs/Web/API/Element/keydown_event)
-  - [keypress](/fr/docs/Web/API/Element/keypress_event)
-  - [keyup](/fr/docs/Web/API/Element/keyup_event)
-  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - [paste](/fr/docs/Web/API/Document/paste_event)
-  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
-  - [pointerlockchange](/fr/docs/Web/API/Document/pointerlockchange_event)
-  - [pointerlockerror](/fr/docs/Web/API/Document/pointerlockerror_event)
-  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
-  - [readystatechange](/fr/docs/Web/API/Document/readystatechange_event)
-  - [scroll](/fr/docs/Web/API/Document/scroll_event)
-  - [selectionchange](/fr/docs/Web/API/Document/selectionchange_event)
-  - [selectstart](/fr/docs/Web/API/Node/selectstart_event)
-  - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
-  - [touchend](/fr/docs/Web/API/Element/touchend_event)
-  - [touchmove](/fr/docs/Web/API/Element/touchmove_event)
-  - [touchstart](/fr/docs/Web/API/Element/touchstart_event)
-  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
-  - [visibilitychange](/fr/docs/Web/API/Document/visibilitychange_event)
-  - [wheel](/fr/docs/Web/API/Element/wheel_event)
-
-- {{DOMxRef("Element")}}
-
-  - [afterscriptexecute](/fr/docs/Web/API/Element/afterscriptexecute_event)
-  - [auxclick](/fr/docs/Web/API/Element/auxclick_event)
-  - [beforescriptexecute](/fr/docs/Web/API/Element/beforescriptexecute_event)
-  - [blur](/fr/docs/Web/API/Element/blur_event)
-  - [click](/fr/docs/Web/API/Element/click_event)
-  - [compositionend](/fr/docs/Web/API/Element/compositionend_event)
-  - [compositionstart](/fr/docs/Web/API/Element/compositionstart_event)
-  - [compositionupdate](/fr/docs/Web/API/Element/compositionupdate_event)
-  - [contextmenu](/fr/docs/Web/API/Element/contextmenu_event)
-  - [copy](/fr/docs/Web/API/Element/copy_event)
-  - [cut](/fr/docs/Web/API/Element/cut_event)
-  - [dblclick](/fr/docs/Web/API/Element/dblclick_event)
-  - [DOMActivate](/fr/docs/Web/API/Element/DOMActivate_event)
-  - [DOMMouseScroll](/fr/docs/Web/API/Element/DOMMouseScroll_event)
-  - [error](/fr/docs/Web/API/HTMLElement/error_event)
-  - [focusin](/fr/docs/Web/API/Element/focusin_event)
-  - [focusout](/fr/docs/Web/API/Element/focusout_event)
-  - [focus](/fr/docs/Web/API/Element/focus_event)
-  - [fullscreenchange](/fr/docs/Web/API/Element/fullscreenchange_event)
-  - [fullscreenerror](/fr/docs/Web/API/Element/fullscreenerror_event)
-  - [gesturechange](/fr/docs/Web/API/Element/gesturechange_event)
-  - [gestureend](/fr/docs/Web/API/Element/gestureend_event)
-  - [gesturestart](/fr/docs/Web/API/Element/gesturestart_event)
-  - [keydown](/fr/docs/Web/API/Element/keydown_event)
-  - [keypress](/fr/docs/Web/API/Element/keypress_event)
-  - [keyup](/fr/docs/Web/API/Element/keyup_event)
-  - [mousedown](/fr/docs/Web/API/Element/mousedown_event)
-  - [mouseenter](/fr/docs/Web/API/Element/mouseenter_event)
-  - [mouseleave](/fr/docs/Web/API/Element/mouseleave_event)
-  - [mousemove](/fr/docs/Web/API/Element/mousemove_event)
-  - [mouseout](/fr/docs/Web/API/Element/mouseout_event)
-  - [mouseover](/fr/docs/Web/API/Element/mouseover_event)
-  - [mouseup](/fr/docs/Web/API/Element/mouseup_event)
-  - [mousewheel](/fr/docs/Web/API/Element/mousewheel_event)
-  - [msContentZoom](/fr/docs/Web/API/Element/msContentZoom_event)
-  - [MSGestureChange](/fr/docs/Web/API/Element/MSGestureChange_event)
-  - [MSGestureEnd](/fr/docs/Web/API/Element/MSGestureEnd_event)
-  - [MSGestureHold](/fr/docs/Web/API/Element/MSGestureHold_event)
-  - [MSGestureStart](/fr/docs/Web/API/Element/MSGestureStart_event)
-  - [MSGestureTap](/fr/docs/Web/API/Element/MSGestureTap_event)
-  - [MSInertiaStart](/fr/docs/Web/API/Element/MSInertiaStart_event)
-  - [MSManipulationStateChanged](/fr/docs/Web/API/Element/MSManipulationStateChanged_event)
-  - [overflow](/fr/docs/Web/API/Element/overflow_event)
-  - [paste](/fr/docs/Web/API/Element/paste_event)
-  - [scroll](/fr/docs/Web/API/Element/scroll_event)
-  - [select](/fr/docs/Web/API/HTMLInputElement/select_event)
-  - [show](/fr/docs/Web/API/Element/show_event)
-  - [touchcancel](/fr/docs/Web/API/Element/touchcancel_event)
-  - [touchend](/fr/docs/Web/API/Element/touchend_event)
-  - [touchmove](/fr/docs/Web/API/Element/touchmove_event)
-  - [touchstart](/fr/docs/Web/API/Element/touchstart_event)
-  - [underflow](/fr/docs/Web/API/Element/underflow_event)
-  - [webkitmouseforcechanged](/fr/docs/Web/API/Element/webkitmouseforcechanged_event)
-  - [webkitmouseforcedown](/fr/docs/Web/API/Element/webkitmouseforcedown_event)
-  - [webkitmouseforceup](/fr/docs/Web/API/Element/webkitmouseforceup_event)
-  - [webkitmouseforcewillbegin](/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event)
-  - [wheel](/fr/docs/Web/API/Element/wheel_event)
-
-- {{DOMxRef("EventSource")}}
-
-  - [error](/fr/docs/Web/API/EventSource/error_event)
-  - [message](/fr/docs/Web/API/EventSource/message_event)
-  - [open](/fr/docs/Web/API/EventSource/open_event)
-
-- {{DOMxRef("FileReader")}}
-
-  - [abort](/fr/docs/Web/API/FileReader/abort_event)
-  - [error](/fr/docs/Web/API/FileReader/error_event)
-  - [loadend](/fr/docs/Web/API/FileReader/loadend_event)
-  - [loadstart](/fr/docs/Web/API/FileReader/loadstart_event)
-  - [load](/fr/docs/Web/API/FileReader/load_event)
-  - [progress](/fr/docs/Web/API/FileReader/progress_event)
-
-- {{DOMxRef("HTMLCanvasElement")}}
-
-  - [webglcontextcreationerror](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
-  - [webglcontextlost](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
-  - [webglcontextrestored](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
-
-- {{DOMxRef("HTMLDetailsElement")}}
-
-  - [toggle](/fr/docs/Web/API/HTMLElement/toggle_event)
-
-- {{DOMxRef("HTMLDialogElement")}}
-
-  - [cancel](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
-  - [close](/fr/docs/Web/API/HTMLDialogElement/close_event)
-
-- {{DOMxRef("HTMLElement")}}
-
-  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Element/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
-  - [beforeinput](/fr/docs/Web/API/Element/beforeinput_event)
-  - [change](/fr/docs/Web/API/HTMLElement/change_event)
-  - [gotpointercapture](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - [input](/fr/docs/Web/API/Element/input_event)
-  - [lostpointercapture](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - [pointercancel](/fr/docs/Web/API/Element/pointercancel_event)
-  - [pointerdown](/fr/docs/Web/API/Element/pointerdown_event)
-  - [pointerenter](/fr/docs/Web/API/Element/pointerenter_event)
-  - [pointerleave](/fr/docs/Web/API/Element/pointerleave_event)
-  - [pointermove](/fr/docs/Web/API/Element/pointermove_event)
-  - [pointerout](/fr/docs/Web/API/Element/pointerout_event)
-  - [pointerover](/fr/docs/Web/API/Element/pointerover_event)
-  - [pointerup](/fr/docs/Web/API/Element/pointerup_event)
-  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
-
-- {{DOMxRef("HTMLFormElement")}}
-
-  - [formdata](/fr/docs/Web/API/HTMLFormElement/formdata_event)
-  - [reset](/fr/docs/Web/API/HTMLFormElement/reset_event)
-  - [submit](/fr/docs/Web/API/HTMLFormElement/submit_event)
-
-- {{DOMxRef("HTMLInputElement")}}
-
-  - [invalid](/fr/docs/Web/API/HTMLInputElement/invalid_event)
-  - [search](/fr/docs/Web/API/HTMLInputElement/search_event)
-
-- {{DOMxRef("HTMLMediaElement")}}
-
-  - [abort](/fr/docs/Web/API/HTMLMediaElement/abort_event)
-  - [canplaythrough](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-  - [canplay](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
-  - [durationchange](/fr/docs/Web/API/HTMLMediaElement/durationchange_event)
-  - [emptied](/fr/docs/Web/API/HTMLMediaElement/emptied_event)
-  - [ended](/fr/docs/Web/API/HTMLMediaElement/ended_event)
-  - [error](/fr/docs/Web/API/HTMLMediaElement/error_event)
-  - [loadeddata](/fr/docs/Web/API/HTMLMediaElement/loadeddata_event)
-  - [loadedmetadata](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-  - [loadstart](/fr/docs/Web/API/HTMLMediaElement/loadstart_event)
-  - [pause](/fr/docs/Web/API/HTMLMediaElement/pause_event)
-  - [playing](/fr/docs/Web/API/HTMLMediaElement/playing_event)
-  - [play](/fr/docs/Web/API/HTMLMediaElement/play_event)
-  - [progress](/fr/docs/Web/API/HTMLMediaElement/progress_event)
-  - [ratechange](/fr/docs/Web/API/HTMLMediaElement/ratechange_event)
-  - [seeked](/fr/docs/Web/API/HTMLMediaElement/seeked_event)
-  - [seeking](/fr/docs/Web/API/HTMLMediaElement/seeking_event)
-  - [stalled](/fr/docs/Web/API/HTMLMediaElement/stalled_event)
-  - [suspend](/fr/docs/Web/API/HTMLMediaElement/suspend_event)
-  - [timeupdate](/fr/docs/Web/API/HTMLMediaElement/timeupdate_event)
-  - [volumechange](/fr/docs/Web/API/HTMLMediaElement/volumechange_event)
-  - [waiting](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
+</tabwe>
+
+## w-wisting des événements
+
+c-cette section w-wépewtowie wes événements qui o-ont _weuws pwopwes_ pages de wéféwence suw mdn. UwU si vous êtes i-intéwessé paw un événement q-qui ny'est pas wisté ici, (⑅˘꒳˘) essayez de wechewchew s-son nyom, ʘwʘ son d-domaine ou wes spécifications associées s-suw we weste de mdn. σωσ
+
+- {{domxwef("abowtsignaw")}}
+
+  - [abowt](/fw/docs/web/api/abowtsignaw/abowt_event)
+
+- {{domxwef("audioscheduwedsouwcenode")}}
+
+  - [ended](/fw/docs/web/api/audioscheduwedsouwcenode/ended_event)
+
+- {{domxwef("audiotwackwist")}}
+
+  - [addtwack](/fw/docs/web/api/audiotwackwist/addtwack_event)
+  - [change](/fw/docs/web/api/audiotwackwist/change_event)
+  - [wemovetwack](/fw/docs/web/api/audiotwackwist/wemovetwack_event)
+
+- {{domxwef("bwoadcastchannew")}}
+
+  - [messageewwow](/fw/docs/web/api/bwoadcastchannew/messageewwow_event)
+  - [message](/fw/docs/web/api/bwoadcastchannew/message_event)
+
+- {{domxwef("dedicatedwowkewgwobawscope")}}
+
+  - [messageewwow](/fw/docs/web/api/dedicatedwowkewgwobawscope/messageewwow_event)
+  - [message](/fw/docs/web/api/dedicatedwowkewgwobawscope/message_event)
+
+- {{domxwef("document")}}
+
+  - [animationcancew](/fw/docs/web/api/ewement/animationcancew_event)
+  - [animationend](/fw/docs/web/api/ewement/animationend_event)
+  - [animationitewation](/fw/docs/web/api/ewement/animationitewation_event)
+  - [animationstawt](/fw/docs/web/api/ewement/animationstawt_event)
+  - [copy](/fw/docs/web/api/document/copy_event)
+  - [cut](/fw/docs/web/api/document/cut_event)
+  - [domcontentwoaded](/fw/docs/web/api/document/domcontentwoaded_event)
+  - [dwagend](/fw/docs/web/api/htmwewement/dwagend_event)
+  - [dwagentew](/fw/docs/web/api/htmwewement/dwagentew_event)
+  - [dwagweave](/fw/docs/web/api/htmwewement/dwagweave_event)
+  - [dwagovew](/fw/docs/web/api/htmwewement/dwagovew_event)
+  - [dwagstawt](/fw/docs/web/api/htmwewement/dwagstawt_event)
+  - [dwag](/fw/docs/web/api/htmwewement/dwag_event)
+  - [dwop](/fw/docs/web/api/htmwewement/dwop_event)
+  - [fuwwscweenchange](/fw/docs/web/api/document/fuwwscweenchange_event)
+  - [fuwwscweenewwow](/fw/docs/web/api/document/fuwwscweenewwow_event)
+  - [gotpointewcaptuwe](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - [keydown](/fw/docs/web/api/ewement/keydown_event)
+  - [keypwess](/fw/docs/web/api/ewement/keypwess_event)
+  - [keyup](/fw/docs/web/api/ewement/keyup_event)
+  - [wostpointewcaptuwe](/fw/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - [paste](/fw/docs/web/api/document/paste_event)
+  - [pointewcancew](/fw/docs/web/api/ewement/pointewcancew_event)
+  - [pointewdown](/fw/docs/web/api/ewement/pointewdown_event)
+  - [pointewentew](/fw/docs/web/api/ewement/pointewentew_event)
+  - [pointewweave](/fw/docs/web/api/ewement/pointewweave_event)
+  - [pointewwockchange](/fw/docs/web/api/document/pointewwockchange_event)
+  - [pointewwockewwow](/fw/docs/web/api/document/pointewwockewwow_event)
+  - [pointewmove](/fw/docs/web/api/ewement/pointewmove_event)
+  - [pointewout](/fw/docs/web/api/ewement/pointewout_event)
+  - [pointewovew](/fw/docs/web/api/ewement/pointewovew_event)
+  - [pointewup](/fw/docs/web/api/ewement/pointewup_event)
+  - [weadystatechange](/fw/docs/web/api/document/weadystatechange_event)
+  - [scwoww](/fw/docs/web/api/document/scwoww_event)
+  - [sewectionchange](/fw/docs/web/api/document/sewectionchange_event)
+  - [sewectstawt](/fw/docs/web/api/node/sewectstawt_event)
+  - [touchcancew](/fw/docs/web/api/ewement/touchcancew_event)
+  - [touchend](/fw/docs/web/api/ewement/touchend_event)
+  - [touchmove](/fw/docs/web/api/ewement/touchmove_event)
+  - [touchstawt](/fw/docs/web/api/ewement/touchstawt_event)
+  - [twansitioncancew](/fw/docs/web/api/ewement/twansitioncancew_event)
+  - [twansitionend](/fw/docs/web/api/ewement/twansitionend_event)
+  - [twansitionwun](/fw/docs/web/api/ewement/twansitionwun_event)
+  - [twansitionstawt](/fw/docs/web/api/ewement/twansitionstawt_event)
+  - [visibiwitychange](/fw/docs/web/api/document/visibiwitychange_event)
+  - [wheew](/fw/docs/web/api/ewement/wheew_event)
+
+- {{domxwef("ewement")}}
+
+  - [aftewscwiptexekawaii~](/fw/docs/web/api/ewement/aftewscwiptexekawaii~_event)
+  - [auxcwick](/fw/docs/web/api/ewement/auxcwick_event)
+  - [befowescwiptexekawaii~](/fw/docs/web/api/ewement/befowescwiptexekawaii~_event)
+  - [bwuw](/fw/docs/web/api/ewement/bwuw_event)
+  - [cwick](/fw/docs/web/api/ewement/cwick_event)
+  - [compositionend](/fw/docs/web/api/ewement/compositionend_event)
+  - [compositionstawt](/fw/docs/web/api/ewement/compositionstawt_event)
+  - [compositionupdate](/fw/docs/web/api/ewement/compositionupdate_event)
+  - [contextmenu](/fw/docs/web/api/ewement/contextmenu_event)
+  - [copy](/fw/docs/web/api/ewement/copy_event)
+  - [cut](/fw/docs/web/api/ewement/cut_event)
+  - [dbwcwick](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [domactivate](/fw/docs/web/api/ewement/domactivate_event)
+  - [dommousescwoww](/fw/docs/web/api/ewement/dommousescwoww_event)
+  - [ewwow](/fw/docs/web/api/htmwewement/ewwow_event)
+  - [focusin](/fw/docs/web/api/ewement/focusin_event)
+  - [focusout](/fw/docs/web/api/ewement/focusout_event)
+  - [focus](/fw/docs/web/api/ewement/focus_event)
+  - [fuwwscweenchange](/fw/docs/web/api/ewement/fuwwscweenchange_event)
+  - [fuwwscweenewwow](/fw/docs/web/api/ewement/fuwwscweenewwow_event)
+  - [gestuwechange](/fw/docs/web/api/ewement/gestuwechange_event)
+  - [gestuweend](/fw/docs/web/api/ewement/gestuweend_event)
+  - [gestuwestawt](/fw/docs/web/api/ewement/gestuwestawt_event)
+  - [keydown](/fw/docs/web/api/ewement/keydown_event)
+  - [keypwess](/fw/docs/web/api/ewement/keypwess_event)
+  - [keyup](/fw/docs/web/api/ewement/keyup_event)
+  - [mousedown](/fw/docs/web/api/ewement/mousedown_event)
+  - [mouseentew](/fw/docs/web/api/ewement/mouseentew_event)
+  - [mouseweave](/fw/docs/web/api/ewement/mouseweave_event)
+  - [mousemove](/fw/docs/web/api/ewement/mousemove_event)
+  - [mouseout](/fw/docs/web/api/ewement/mouseout_event)
+  - [mouseovew](/fw/docs/web/api/ewement/mouseovew_event)
+  - [mouseup](/fw/docs/web/api/ewement/mouseup_event)
+  - [mousewheew](/fw/docs/web/api/ewement/mousewheew_event)
+  - [mscontentzoom](/fw/docs/web/api/ewement/mscontentzoom_event)
+  - [msgestuwechange](/fw/docs/web/api/ewement/msgestuwechange_event)
+  - [msgestuweend](/fw/docs/web/api/ewement/msgestuweend_event)
+  - [msgestuwehowd](/fw/docs/web/api/ewement/msgestuwehowd_event)
+  - [msgestuwestawt](/fw/docs/web/api/ewement/msgestuwestawt_event)
+  - [msgestuwetap](/fw/docs/web/api/ewement/msgestuwetap_event)
+  - [msinewtiastawt](/fw/docs/web/api/ewement/msinewtiastawt_event)
+  - [msmanipuwationstatechanged](/fw/docs/web/api/ewement/msmanipuwationstatechanged_event)
+  - [ovewfwow](/fw/docs/web/api/ewement/ovewfwow_event)
+  - [paste](/fw/docs/web/api/ewement/paste_event)
+  - [scwoww](/fw/docs/web/api/ewement/scwoww_event)
+  - [sewect](/fw/docs/web/api/htmwinputewement/sewect_event)
+  - [show](/fw/docs/web/api/ewement/show_event)
+  - [touchcancew](/fw/docs/web/api/ewement/touchcancew_event)
+  - [touchend](/fw/docs/web/api/ewement/touchend_event)
+  - [touchmove](/fw/docs/web/api/ewement/touchmove_event)
+  - [touchstawt](/fw/docs/web/api/ewement/touchstawt_event)
+  - [undewfwow](/fw/docs/web/api/ewement/undewfwow_event)
+  - [webkitmousefowcechanged](/fw/docs/web/api/ewement/webkitmousefowcechanged_event)
+  - [webkitmousefowcedown](/fw/docs/web/api/ewement/webkitmousefowcedown_event)
+  - [webkitmousefowceup](/fw/docs/web/api/ewement/webkitmousefowceup_event)
+  - [webkitmousefowcewiwwbegin](/fw/docs/web/api/ewement/webkitmousefowcewiwwbegin_event)
+  - [wheew](/fw/docs/web/api/ewement/wheew_event)
+
+- {{domxwef("eventsouwce")}}
+
+  - [ewwow](/fw/docs/web/api/eventsouwce/ewwow_event)
+  - [message](/fw/docs/web/api/eventsouwce/message_event)
+  - [open](/fw/docs/web/api/eventsouwce/open_event)
+
+- {{domxwef("fiweweadew")}}
+
+  - [abowt](/fw/docs/web/api/fiweweadew/abowt_event)
+  - [ewwow](/fw/docs/web/api/fiweweadew/ewwow_event)
+  - [woadend](/fw/docs/web/api/fiweweadew/woadend_event)
+  - [woadstawt](/fw/docs/web/api/fiweweadew/woadstawt_event)
+  - [woad](/fw/docs/web/api/fiweweadew/woad_event)
+  - [pwogwess](/fw/docs/web/api/fiweweadew/pwogwess_event)
+
+- {{domxwef("htmwcanvasewement")}}
+
+  - [webgwcontextcweationewwow](/fw/docs/web/api/htmwcanvasewement/webgwcontextcweationewwow_event)
+  - [webgwcontextwost](/fw/docs/web/api/htmwcanvasewement/webgwcontextwost_event)
+  - [webgwcontextwestowed](/fw/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event)
+
+- {{domxwef("htmwdetaiwsewement")}}
+
+  - [toggwe](/fw/docs/web/api/htmwewement/toggwe_event)
+
+- {{domxwef("htmwdiawogewement")}}
+
+  - [cancew](/fw/docs/web/api/htmwdiawogewement/cancew_event)
+  - [cwose](/fw/docs/web/api/htmwdiawogewement/cwose_event)
+
+- {{domxwef("htmwewement")}}
+
+  - [animationcancew](/fw/docs/web/api/ewement/animationcancew_event)
+  - [animationend](/fw/docs/web/api/ewement/animationend_event)
+  - [animationitewation](/fw/docs/web/api/ewement/animationitewation_event)
+  - [animationstawt](/fw/docs/web/api/ewement/animationstawt_event)
+  - [befoweinput](/fw/docs/web/api/ewement/befoweinput_event)
+  - [change](/fw/docs/web/api/htmwewement/change_event)
+  - [gotpointewcaptuwe](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - [input](/fw/docs/web/api/ewement/input_event)
+  - [wostpointewcaptuwe](/fw/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - [pointewcancew](/fw/docs/web/api/ewement/pointewcancew_event)
+  - [pointewdown](/fw/docs/web/api/ewement/pointewdown_event)
+  - [pointewentew](/fw/docs/web/api/ewement/pointewentew_event)
+  - [pointewweave](/fw/docs/web/api/ewement/pointewweave_event)
+  - [pointewmove](/fw/docs/web/api/ewement/pointewmove_event)
+  - [pointewout](/fw/docs/web/api/ewement/pointewout_event)
+  - [pointewovew](/fw/docs/web/api/ewement/pointewovew_event)
+  - [pointewup](/fw/docs/web/api/ewement/pointewup_event)
+  - [twansitioncancew](/fw/docs/web/api/ewement/twansitioncancew_event)
+  - [twansitionend](/fw/docs/web/api/ewement/twansitionend_event)
+  - [twansitionwun](/fw/docs/web/api/ewement/twansitionwun_event)
+  - [twansitionstawt](/fw/docs/web/api/ewement/twansitionstawt_event)
+
+- {{domxwef("htmwfowmewement")}}
+
+  - [fowmdata](/fw/docs/web/api/htmwfowmewement/fowmdata_event)
+  - [weset](/fw/docs/web/api/htmwfowmewement/weset_event)
+  - [submit](/fw/docs/web/api/htmwfowmewement/submit_event)
+
+- {{domxwef("htmwinputewement")}}
+
+  - [invawid](/fw/docs/web/api/htmwinputewement/invawid_event)
+  - [seawch](/fw/docs/web/api/htmwinputewement/seawch_event)
+
+- {{domxwef("htmwmediaewement")}}
+
+  - [abowt](/fw/docs/web/api/htmwmediaewement/abowt_event)
+  - [canpwaythwough](/fw/docs/web/api/htmwmediaewement/canpwaythwough_event)
+  - [canpway](/fw/docs/web/api/htmwmediaewement/canpway_event)
+  - [duwationchange](/fw/docs/web/api/htmwmediaewement/duwationchange_event)
+  - [emptied](/fw/docs/web/api/htmwmediaewement/emptied_event)
+  - [ended](/fw/docs/web/api/htmwmediaewement/ended_event)
+  - [ewwow](/fw/docs/web/api/htmwmediaewement/ewwow_event)
+  - [woadeddata](/fw/docs/web/api/htmwmediaewement/woadeddata_event)
+  - [woadedmetadata](/fw/docs/web/api/htmwmediaewement/woadedmetadata_event)
+  - [woadstawt](/fw/docs/web/api/htmwmediaewement/woadstawt_event)
+  - [pause](/fw/docs/web/api/htmwmediaewement/pause_event)
+  - [pwaying](/fw/docs/web/api/htmwmediaewement/pwaying_event)
+  - [pway](/fw/docs/web/api/htmwmediaewement/pway_event)
+  - [pwogwess](/fw/docs/web/api/htmwmediaewement/pwogwess_event)
+  - [watechange](/fw/docs/web/api/htmwmediaewement/watechange_event)
+  - [seeked](/fw/docs/web/api/htmwmediaewement/seeked_event)
+  - [seeking](/fw/docs/web/api/htmwmediaewement/seeking_event)
+  - [stawwed](/fw/docs/web/api/htmwmediaewement/stawwed_event)
+  - [suspend](/fw/docs/web/api/htmwmediaewement/suspend_event)
+  - [timeupdate](/fw/docs/web/api/htmwmediaewement/timeupdate_event)
+  - [vowumechange](/fw/docs/web/api/htmwmediaewement/vowumechange_event)
+  - [waiting](/fw/docs/web/api/htmwmediaewement/waiting_event)
 
-- {{DOMxRef("HTMLSlotElement")}}
+- {{domxwef("htmwswotewement")}}
 
-  - [slotchange](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
+  - [swotchange](/fw/docs/web/api/htmwswotewement/swotchange_event)
 
-- {{DOMxRef("HTMLTrackElement")}}
+- {{domxwef("htmwtwackewement")}}
 
-  - [cuechange](/fr/docs/Web/API/HTMLTrackElement/cuechange_event)
+  - [cuechange](/fw/docs/web/api/htmwtwackewement/cuechange_event)
 
-- {{DOMxRef("HTMLVideoElement")}}
+- {{domxwef("htmwvideoewement")}}
 
-  - [enterpictureinpicture](/fr/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event)
-  - [leavepictureinpicture](/fr/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event)
+  - [entewpictuweinpictuwe](/fw/docs/web/api/htmwvideoewement/entewpictuweinpictuwe_event)
+  - [weavepictuweinpictuwe](/fw/docs/web/api/htmwvideoewement/weavepictuweinpictuwe_event)
 
-- {{DOMxRef("IDBDatabase")}}
+- {{domxwef("idbdatabase")}}
 
-  - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
-  - [close](/fr/docs/Web/API/IDBDatabase/close_event)
-  - [error](/fr/docs/Web/API/IDBTransaction/error_event)
-  - [versionchange](/fr/docs/Web/API/IDBDatabase/versionchange_event)
+  - [abowt](/fw/docs/web/api/idbtwansaction/abowt_event)
+  - [cwose](/fw/docs/web/api/idbdatabase/cwose_event)
+  - [ewwow](/fw/docs/web/api/idbtwansaction/ewwow_event)
+  - [vewsionchange](/fw/docs/web/api/idbdatabase/vewsionchange_event)
 
-- {{DOMxRef("IDBOpenDBRequest")}}
+- {{domxwef("idbopendbwequest")}}
 
-  - [blocked](/fr/docs/Web/API/IDBOpenDBRequest/blocked_event)
-  - [upgradeneeded](/fr/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
+  - [bwocked](/fw/docs/web/api/idbopendbwequest/bwocked_event)
+  - [upgwadeneeded](/fw/docs/web/api/idbopendbwequest/upgwadeneeded_event)
 
-- {{DOMxRef("IDBRequest")}}
+- {{domxwef("idbwequest")}}
 
-  - [error](/fr/docs/Web/API/IDBRequest/error_event)
-  - [success](/fr/docs/Web/API/IDBRequest/success_event)
+  - [ewwow](/fw/docs/web/api/idbwequest/ewwow_event)
+  - [success](/fw/docs/web/api/idbwequest/success_event)
 
-- {{DOMxRef("IDBTransaction")}}
+- {{domxwef("idbtwansaction")}}
 
-  - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
-  - [complete](/fr/docs/Web/API/IDBTransaction/complete_event)
-  - [error](/fr/docs/Web/API/IDBTransaction/error_event)
+  - [abowt](/fw/docs/web/api/idbtwansaction/abowt_event)
+  - [compwete](/fw/docs/web/api/idbtwansaction/compwete_event)
+  - [ewwow](/fw/docs/web/api/idbtwansaction/ewwow_event)
 
-- {{DOMxRef("MediaDevices")}}
+- {{domxwef("mediadevices")}}
 
-  - [devicechange](/fr/docs/Web/API/MediaDevices/devicechange_event)
+  - [devicechange](/fw/docs/web/api/mediadevices/devicechange_event)
 
-- {{DOMxRef("MediaRecorder")}}
+- {{domxwef("mediawecowdew")}}
 
-  - [error](/fr/docs/Web/API/MediaRecorder/error_event)
+  - [ewwow](/fw/docs/web/api/mediawecowdew/ewwow_event)
 
-- {{DOMxRef("MediaStream")}}
+- {{domxwef("mediastweam")}}
 
-  - [addtrack](/fr/docs/Web/API/MediaStream/addtrack_event)
-  - [removetrack](/fr/docs/Web/API/MediaStream/removetrack_event)
+  - [addtwack](/fw/docs/web/api/mediastweam/addtwack_event)
+  - [wemovetwack](/fw/docs/web/api/mediastweam/wemovetwack_event)
 
-- {{DOMxRef("MediaStreamTrack")}}
+- {{domxwef("mediastweamtwack")}}
 
-  - [ended](/fr/docs/Web/API/MediaStreamTrack/ended_event)
-  - [mute](/fr/docs/Web/API/MediaStreamTrack/mute_event)
-  - [unmute](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
+  - [ended](/fw/docs/web/api/mediastweamtwack/ended_event)
+  - [mute](/fw/docs/web/api/mediastweamtwack/mute_event)
+  - [unmute](/fw/docs/web/api/mediastweamtwack/unmute_event)
 
-- {{DOMxRef("MessagePort")}}
+- {{domxwef("messagepowt")}}
 
-  - [messageerror](/fr/docs/Web/API/MessagePort/messageerror_event)
-  - [message](/fr/docs/Web/API/MessagePort/message_event)
+  - [messageewwow](/fw/docs/web/api/messagepowt/messageewwow_event)
+  - [message](/fw/docs/web/api/messagepowt/message_event)
 
-- {{DOMxRef("OfflineAudioContext")}}
+- {{domxwef("offwineaudiocontext")}}
 
-  - [complete](/fr/docs/Web/API/OfflineAudioContext/complete_event)
+  - [compwete](/fw/docs/web/api/offwineaudiocontext/compwete_event)
 
-- {{DOMxRef("PaymentRequest")}}
+- {{domxwef("paymentwequest")}}
 
-  - [merchantvalidation](/fr/docs/Web/API/PaymentRequest/merchantvalidation_event)
-  - [paymentmethodchange](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event)
-  - [shippingaddresschange](/fr/docs/Web/API/PaymentRequest/shippingaddresschange_event)
-  - [shippingoptionchange](/fr/docs/Web/API/PaymentRequest/shippingoptionchange_event)
+  - [mewchantvawidation](/fw/docs/web/api/paymentwequest/mewchantvawidation_event)
+  - [paymentmethodchange](/fw/docs/web/api/paymentwequest/paymentmethodchange_event)
+  - [shippingaddwesschange](/fw/docs/web/api/paymentwequest/shippingaddwesschange_event)
+  - [shippingoptionchange](/fw/docs/web/api/paymentwequest/shippingoptionchange_event)
 
-- {{DOMxRef("PaymentResponse")}}
+- {{domxwef("paymentwesponse")}}
 
-  - [payerdetailchange](/fr/docs/Web/API/PaymentResponse/payerdetailchange_event)
+  - [payewdetaiwchange](/fw/docs/web/api/paymentwesponse/payewdetaiwchange_event)
 
-- {{DOMxRef("Performance")}}
+- {{domxwef("pewfowmance")}}
 
-  - [resourcetimingbufferfull](/fr/docs/Web/API/Performance/resourcetimingbufferfull_event)
+  - [wesouwcetimingbuffewfuww](/fw/docs/web/api/pewfowmance/wesouwcetimingbuffewfuww_event)
 
-- {{DOMxRef("PictureInPictureWindow")}}
+- {{domxwef("pictuweinpictuwewindow")}}
 
-  - [resize](/fr/docs/Web/API/PictureInPictureWindow/resize_event)
+  - [wesize](/fw/docs/web/api/pictuweinpictuwewindow/wesize_event)
 
-- {{DOMxRef("RTCDataChannel")}}
+- {{domxwef("wtcdatachannew")}}
 
-  - [bufferedamountlow](/fr/docs/Web/API/RTCDataChannel/bufferedamountlow_event)
-  - [close](/fr/docs/Web/API/RTCDataChannel/close_event)
-  - [closing](/fr/docs/Web/API/RTCDataChannel/closing_event)
-  - [error](/fr/docs/Web/API/RTCDataChannel/error_event)
-  - [message](/fr/docs/Web/API/RTCDataChannel/message_event)
-  - [open](/fr/docs/Web/API/RTCDataChannel/open_event)
+  - [buffewedamountwow](/fw/docs/web/api/wtcdatachannew/buffewedamountwow_event)
+  - [cwose](/fw/docs/web/api/wtcdatachannew/cwose_event)
+  - [cwosing](/fw/docs/web/api/wtcdatachannew/cwosing_event)
+  - [ewwow](/fw/docs/web/api/wtcdatachannew/ewwow_event)
+  - [message](/fw/docs/web/api/wtcdatachannew/message_event)
+  - [open](/fw/docs/web/api/wtcdatachannew/open_event)
 
-- {{DOMxRef("RTCDtlsTransport")}}
+- {{domxwef("wtcdtwstwanspowt")}}
 
-  - [error](/fr/docs/Web/API/RTCDtlsTransport/error_event)
+  - [ewwow](/fw/docs/web/api/wtcdtwstwanspowt/ewwow_event)
 
-- {{DOMxRef("RTCDTMFSender")}}
+- {{domxwef("wtcdtmfsendew")}}
 
-  - [tonechange](/fr/docs/Web/API/RTCDTMFSender/tonechange_event)
+  - [tonechange](/fw/docs/web/api/wtcdtmfsendew/tonechange_event)
 
-- {{DOMxRef("RTCIceTransport")}}
+- {{domxwef("wtcicetwanspowt")}}
 
-  - [gatheringstatechange](/fr/docs/Web/API/RTCIceTransport/gatheringstatechange_event)
-  - [selectedcandidatepairchange](/fr/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event)
-  - [statechange](/fr/docs/Web/API/RTCIceTransport/statechange_event)
+  - [gathewingstatechange](/fw/docs/web/api/wtcicetwanspowt/gathewingstatechange_event)
+  - [sewectedcandidatepaiwchange](/fw/docs/web/api/wtcicetwanspowt/sewectedcandidatepaiwchange_event)
+  - [statechange](/fw/docs/web/api/wtcicetwanspowt/statechange_event)
 
-- {{DOMxRef("RTCPeerConnection")}}
+- {{domxwef("wtcpeewconnection")}}
 
-  - [addstream](/fr/docs/Web/API/RTCPeerConnection/addstream_event)
-  - [connectionstatechange](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
-  - [datachannel](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
-  - [icecandidateerror](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event)
-  - [icecandidate](/fr/docs/Web/API/RTCPeerConnection/icecandidate_event)
-  - [iceconnectionstatechange](/fr/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event)
-  - [icegatheringstatechange](/fr/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event)
-  - [negotiationneeded](/fr/docs/Web/API/RTCPeerConnection/negotiationneeded_event)
-  - [removestream](/fr/docs/Web/API/RTCPeerConnection/removestream_event)
-  - [signalingstatechange](/fr/docs/Web/API/RTCPeerConnection/signalingstatechange_event)
-  - [track](/fr/docs/Web/API/RTCPeerConnection/track_event)
+  - [addstweam](/fw/docs/web/api/wtcpeewconnection/addstweam_event)
+  - [connectionstatechange](/fw/docs/web/api/wtcpeewconnection/connectionstatechange_event)
+  - [datachannew](/fw/docs/web/api/wtcpeewconnection/datachannew_event)
+  - [icecandidateewwow](/fw/docs/web/api/wtcpeewconnection/icecandidateewwow_event)
+  - [icecandidate](/fw/docs/web/api/wtcpeewconnection/icecandidate_event)
+  - [iceconnectionstatechange](/fw/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event)
+  - [icegathewingstatechange](/fw/docs/web/api/wtcpeewconnection/icegathewingstatechange_event)
+  - [negotiationneeded](/fw/docs/web/api/wtcpeewconnection/negotiationneeded_event)
+  - [wemovestweam](/fw/docs/web/api/wtcpeewconnection/wemovestweam_event)
+  - [signawingstatechange](/fw/docs/web/api/wtcpeewconnection/signawingstatechange_event)
+  - [twack](/fw/docs/web/api/wtcpeewconnection/twack_event)
 
-- {{DOMxRef("ScriptProcessorNode")}}
+- {{domxwef("scwiptpwocessownode")}}
 
-  - [audioprocess](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+  - [audiopwocess](/fw/docs/web/api/scwiptpwocessownode/audiopwocess_event)
 
-- {{DOMxRef("ServiceWorkerContainer")}}
+- {{domxwef("sewvicewowkewcontainew")}}
 
-  - [message](/fr/docs/Web/API/ServiceWorkerContainer/message_event)
+  - [message](/fw/docs/web/api/sewvicewowkewcontainew/message_event)
 
-- {{DOMxRef("ServiceWorkerGlobalScope")}}
+- {{domxwef("sewvicewowkewgwobawscope")}}
 
-  - [activate](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
-  - [contentdelete](/fr/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event)
-  - [install](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event)
-  - [message](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event)
-  - [notificationclick](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event)
-  - [pushsubscriptionchange](/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event)
-  - [push](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)
+  - [activate](/fw/docs/web/api/sewvicewowkewgwobawscope/activate_event)
+  - [contentdewete](/fw/docs/web/api/sewvicewowkewgwobawscope/contentdewete_event)
+  - [instaww](/fw/docs/web/api/sewvicewowkewgwobawscope/instaww_event)
+  - [message](/fw/docs/web/api/sewvicewowkewgwobawscope/message_event)
+  - [notificationcwick](/fw/docs/web/api/sewvicewowkewgwobawscope/notificationcwick_event)
+  - [pushsubscwiptionchange](/fw/docs/web/api/sewvicewowkewgwobawscope/pushsubscwiptionchange_event)
+  - [push](/fw/docs/web/api/sewvicewowkewgwobawscope/push_event)
 
-- {{DOMxRef("SharedWorkerGlobalScope")}}
+- {{domxwef("shawedwowkewgwobawscope")}}
 
-  - [connect](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event)
+  - [connect](/fw/docs/web/api/shawedwowkewgwobawscope/connect_event)
 
-- {{DOMxRef("SpeechRecognition")}}
+- {{domxwef("speechwecognition")}}
 
-  - [audioend](/fr/docs/Web/API/SpeechRecognition/audioend_event)
-  - [audiostart](/fr/docs/Web/API/SpeechRecognition/audiostart_event)
-  - [end](/fr/docs/Web/API/SpeechRecognition/end_event)
-  - [error](/fr/docs/Web/API/SpeechRecognition/error_event)
-  - [nomatch](/fr/docs/Web/API/SpeechRecognition/nomatch_event)
-  - [result](/fr/docs/Web/API/SpeechRecognition/result_event)
-  - [soundend](/fr/docs/Web/API/SpeechRecognition/soundend_event)
-  - [soundstart](/fr/docs/Web/API/SpeechRecognition/soundstart_event)
-  - [speechend](/fr/docs/Web/API/SpeechRecognition/speechend_event)
-  - [speechstart](/fr/docs/Web/API/SpeechRecognition/speechstart_event)
-  - [start](/fr/docs/Web/API/SpeechRecognition/start_event)
-
-- {{DOMxRef("SpeechSynthesis")}}
-
-  - [voiceschanged](/fr/docs/Web/API/SpeechSynthesis/voiceschanged_event)
-
-- {{DOMxRef("SpeechSynthesisUtterance")}}
-
-  - [boundary](/fr/docs/Web/API/SpeechSynthesisUtterance/boundary_event)
-  - [end](/fr/docs/Web/API/SpeechSynthesisUtterance/end_event)
-  - [error](/fr/docs/Web/API/SpeechSynthesisUtterance/error_event)
-  - [mark](/fr/docs/Web/API/SpeechSynthesisUtterance/mark_event)
-  - [pause](/fr/docs/Web/API/SpeechSynthesisUtterance/pause_event)
-  - [resume](/fr/docs/Web/API/SpeechSynthesisUtterance/resume_event)
-  - [start](/fr/docs/Web/API/SpeechSynthesisUtterance/start_event)
-
-- {{DOMxRef("SVGAnimationElement")}}
-
-  - [beginEvent](/fr/docs/Web/API/SVGAnimationElement/beginEvent_event)
-  - [endEvent](/fr/docs/Web/API/SVGAnimationElement/endEvent_event)
-  - [repeatEvent](/fr/docs/Web/API/SVGAnimationElement/repeatEvent_event)
-
-- {{DOMxRef("SVGElement")}}
-
-  - [abort](/fr/docs/Web/API/SVGElement/abort_event)
-  - [error](/fr/docs/Web/API/SVGElement/error_event)
-  - [load](/fr/docs/Web/API/SVGElement/load_event)
-  - [resize](/fr/docs/Web/API/SVGElement/resize_event)
-  - [scroll](/fr/docs/Web/API/SVGElement/scroll_event)
-  - [unload](/fr/docs/Web/API/SVGElement/unload_event)
-
-- {{DOMxRef("SVGGraphicsElement")}}
-
-  - [copy](/fr/docs/Web/API/SVGGraphicsElement/copy_event)
-  - [cut](/fr/docs/Web/API/SVGGraphicsElement/cut_event)
-  - [paste](/fr/docs/Web/API/SVGGraphicsElement/paste_event)
-
-- {{DOMxRef("TextTrack")}}
-
-  - [cuechange](/fr/docs/Web/API/TextTrack/cuechange_event)
-
-- {{DOMxRef("TextTrackList")}}
-
-  - [addtrack](/fr/docs/Web/API/TextTrackList/addtrack_event)
-  - [change](/fr/docs/Web/API/TextTrackList/change_event)
-  - [removeTrack](/fr/docs/Web/API/TextTrackList/removeTrack_event)
-
-- {{DOMxRef("VideoTrackList")}}
-
-  - [addtrack](/fr/docs/Web/API/VideoTrackList/addtrack_event)
-  - [change](/fr/docs/Web/API/VideoTrackList/change_event)
-  - [removetrack](/fr/docs/Web/API/VideoTrackList/removetrack_event)
-
-- {{DOMxRef("VisualViewport")}}
-
-  - [resize](/fr/docs/Web/API/VisualViewport/resize_event)
-  - [scroll](/fr/docs/Web/API/VisualViewport/scroll_event)
-
-- {{DOMxRef("WebSocket")}}
-
-  - [close](/fr/docs/Web/API/WebSocket/close_event)
-  - [error](/fr/docs/Web/API/WebSocket/error_event)
-  - [message](/fr/docs/Web/API/WebSocket/message_event)
-  - [open](/fr/docs/Web/API/WebSocket/open_event)
-
-- {{DOMxRef("Window")}}
-
-  - [afterprint](/fr/docs/Web/API/Window/afterprint_event)
-  - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
-  - [animationend](/fr/docs/Web/API/Element/animationend_event)
-  - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
-  - [animationstart](/fr/docs/Web/API/Element/animationstart_event)
-  - [appinstalled](/fr/docs/Web/API/Window/appinstalled_event)
-  - [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)
-  - [beforeunload](/fr/docs/Web/API/Window/beforeunload_event)
-  - [blur](/fr/docs/Web/API/Window/blur_event)
-  - [copy](/fr/docs/Web/API/Window/copy_event)
-  - [cut](/fr/docs/Web/API/Window/cut_event)
-  - [devicemotion](/fr/docs/Web/API/Window/devicemotion_event)
-  - [deviceorientation](/fr/docs/Web/API/Window/deviceorientation_event)
-  - [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [error](/fr/docs/Web/API/Window/error_event)
-  - [focus](/fr/docs/Web/API/Window/focus_event)
-  - [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)
-  - [gamepaddisconnected](/fr/docs/Web/API/Window/gamepaddisconnected_event)
-  - [hashchange](/fr/docs/Web/API/Window/hashchange_event)
-  - [languagechange](/fr/docs/Web/API/Window/languagechange_event)
-  - [load](/fr/docs/Web/API/Window/load_event)
-  - [messageerror](/fr/docs/Web/API/Window/messageerror_event)
-  - [message](/fr/docs/Web/API/Window/message_event)
-  - [offline](/fr/docs/Web/API/Window/offline_event)
-  - [online](/fr/docs/Web/API/Window/online_event)
-  - [orientationchange](/fr/docs/Web/API/Window/orientationchange_event)
-  - [pagehide](/fr/docs/Web/API/Window/pagehide_event)
-  - [pageshow](/fr/docs/Web/API/Window/pageshow_event)
-  - [paste](/fr/docs/Web/API/Window/paste_event)
-  - [popstate](/fr/docs/Web/API/Window/popstate_event)
-  - [rejectionhandled](/fr/docs/Web/API/Window/rejectionhandled_event)
-  - [resize](/fr/docs/Web/API/Window/resize_event)
-  - [storage](/fr/docs/Web/API/Window/storage_event)
-  - [transitioncancel](/fr/docs/Web/API/Element/transitioncancel_event)
-  - [transitionend](/fr/docs/Web/API/Element/transitionend_event)
-  - [transitionrun](/fr/docs/Web/API/Element/transitionrun_event)
-  - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
-  - [unhandledrejection](/fr/docs/Web/API/Window/unhandledrejection_event)
-  - [unload](/fr/docs/Web/API/Window/unload_event)
-  - [vrdisplayactivate](/fr/docs/Web/API/Window/vrdisplayactivate_event)
-  - [vrdisplayblur](/fr/docs/Web/API/Window)
-  - [vrdisplayconnect](/fr/docs/Web/API/Window/vrdisplayconnect_event)
-  - [vrdisplaydeactivate](/fr/docs/Web/API/Window/vrdisplaydeactivate_event)
-  - [vrdisplaydisconnect](/fr/docs/Web/API/Window/vrdisplaydisconnect_event)
-  - [vrdisplayfocus](/fr/docs/Web/API/Window)
-  - [vrdisplaypointerrestricted](/fr/docs/Web/API/Window)
-  - [vrdisplaypointerunrestricted](/fr/docs/Web/API/Window)
-  - [vrdisplaypresentchange](/fr/docs/Web/API/Window/vrdisplaypresentchange_event)
-
-- {{DOMxRef("Worker")}}
-
-  - [messageerror](/fr/docs/Web/API/Worker/messageerror_event)
-  - [message](/fr/docs/Web/API/Worker/message_event)
-
-- {{DOMxRef("WorkerGlobalScope")}}
-
-  - [languagechange](/fr/docs/Web/API/WorkerGlobalScope/languagechange_event)
-
-- {{DOMxRef("XMLHttpRequest")}}
-
-  - [abort](/fr/docs/Web/API/XMLHttpRequest/abort_event)
-  - [error](/fr/docs/Web/API/XMLHttpRequest/error_event)
-  - [loadend](/fr/docs/Web/API/XMLHttpRequest/loadend_event)
-  - [loadstart](/fr/docs/Web/API/XMLHttpRequest/loadstart_event)
-  - [load](/fr/docs/Web/API/XMLHttpRequest/load_event)
-  - [progress](/fr/docs/Web/API/XMLHttpRequest/progress_event)
-  - [timeout](/fr/docs/Web/API/XMLHttpRequest/timeout_event)
-
-- {{DOMxRef("XRReferenceSpace")}}
-
-  - [reset](/fr/docs/Web/API/XRReferenceSpace/reset_event)
-
-- {{DOMxRef("XRSession")}}
-
-  - [end](/fr/docs/Web/API/XRSession/end_event)
-  - [inputsourceschange](/fr/docs/Web/API/XRSession/inputsourceschange_event)
-  - [selectend](/fr/docs/Web/API/XRSession/selectend_event)
-  - [selectstart](/fr/docs/Web/API/XRSession/selectstart_event)
-  - [select](/fr/docs/Web/API/XRSession/select_event)
-  - [squeezeend](/fr/docs/Web/API/XRSession/squeezeend_event)
-  - [squeezestart](/fr/docs/Web/API/XRSession/squeezestart_event)
-  - [squeeze](/fr/docs/Web/API/XRSession/squeeze_event)
-  - [visibilitychange](/fr/docs/Web/API/XRSession/visibilitychange_event)
-
-- {{DOMxRef("XRSystem")}}
-
-  - [devicechange](/fr/docs/Web/API/XRSystem/devicechange_event)
+  - [audioend](/fw/docs/web/api/speechwecognition/audioend_event)
+  - [audiostawt](/fw/docs/web/api/speechwecognition/audiostawt_event)
+  - [end](/fw/docs/web/api/speechwecognition/end_event)
+  - [ewwow](/fw/docs/web/api/speechwecognition/ewwow_event)
+  - [nomatch](/fw/docs/web/api/speechwecognition/nomatch_event)
+  - [wesuwt](/fw/docs/web/api/speechwecognition/wesuwt_event)
+  - [soundend](/fw/docs/web/api/speechwecognition/soundend_event)
+  - [soundstawt](/fw/docs/web/api/speechwecognition/soundstawt_event)
+  - [speechend](/fw/docs/web/api/speechwecognition/speechend_event)
+  - [speechstawt](/fw/docs/web/api/speechwecognition/speechstawt_event)
+  - [stawt](/fw/docs/web/api/speechwecognition/stawt_event)
+
+- {{domxwef("speechsynthesis")}}
+
+  - [voiceschanged](/fw/docs/web/api/speechsynthesis/voiceschanged_event)
+
+- {{domxwef("speechsynthesisuttewance")}}
+
+  - [boundawy](/fw/docs/web/api/speechsynthesisuttewance/boundawy_event)
+  - [end](/fw/docs/web/api/speechsynthesisuttewance/end_event)
+  - [ewwow](/fw/docs/web/api/speechsynthesisuttewance/ewwow_event)
+  - [mawk](/fw/docs/web/api/speechsynthesisuttewance/mawk_event)
+  - [pause](/fw/docs/web/api/speechsynthesisuttewance/pause_event)
+  - [wesume](/fw/docs/web/api/speechsynthesisuttewance/wesume_event)
+  - [stawt](/fw/docs/web/api/speechsynthesisuttewance/stawt_event)
+
+- {{domxwef("svganimationewement")}}
+
+  - [beginevent](/fw/docs/web/api/svganimationewement/beginevent_event)
+  - [endevent](/fw/docs/web/api/svganimationewement/endevent_event)
+  - [wepeatevent](/fw/docs/web/api/svganimationewement/wepeatevent_event)
+
+- {{domxwef("svgewement")}}
+
+  - [abowt](/fw/docs/web/api/svgewement/abowt_event)
+  - [ewwow](/fw/docs/web/api/svgewement/ewwow_event)
+  - [woad](/fw/docs/web/api/svgewement/woad_event)
+  - [wesize](/fw/docs/web/api/svgewement/wesize_event)
+  - [scwoww](/fw/docs/web/api/svgewement/scwoww_event)
+  - [unwoad](/fw/docs/web/api/svgewement/unwoad_event)
+
+- {{domxwef("svggwaphicsewement")}}
+
+  - [copy](/fw/docs/web/api/svggwaphicsewement/copy_event)
+  - [cut](/fw/docs/web/api/svggwaphicsewement/cut_event)
+  - [paste](/fw/docs/web/api/svggwaphicsewement/paste_event)
+
+- {{domxwef("texttwack")}}
+
+  - [cuechange](/fw/docs/web/api/texttwack/cuechange_event)
+
+- {{domxwef("texttwackwist")}}
+
+  - [addtwack](/fw/docs/web/api/texttwackwist/addtwack_event)
+  - [change](/fw/docs/web/api/texttwackwist/change_event)
+  - [wemovetwack](/fw/docs/web/api/texttwackwist/wemovetwack_event)
+
+- {{domxwef("videotwackwist")}}
+
+  - [addtwack](/fw/docs/web/api/videotwackwist/addtwack_event)
+  - [change](/fw/docs/web/api/videotwackwist/change_event)
+  - [wemovetwack](/fw/docs/web/api/videotwackwist/wemovetwack_event)
+
+- {{domxwef("visuawviewpowt")}}
+
+  - [wesize](/fw/docs/web/api/visuawviewpowt/wesize_event)
+  - [scwoww](/fw/docs/web/api/visuawviewpowt/scwoww_event)
+
+- {{domxwef("websocket")}}
+
+  - [cwose](/fw/docs/web/api/websocket/cwose_event)
+  - [ewwow](/fw/docs/web/api/websocket/ewwow_event)
+  - [message](/fw/docs/web/api/websocket/message_event)
+  - [open](/fw/docs/web/api/websocket/open_event)
+
+- {{domxwef("window")}}
+
+  - [aftewpwint](/fw/docs/web/api/window/aftewpwint_event)
+  - [animationcancew](/fw/docs/web/api/ewement/animationcancew_event)
+  - [animationend](/fw/docs/web/api/ewement/animationend_event)
+  - [animationitewation](/fw/docs/web/api/ewement/animationitewation_event)
+  - [animationstawt](/fw/docs/web/api/ewement/animationstawt_event)
+  - [appinstawwed](/fw/docs/web/api/window/appinstawwed_event)
+  - [befowepwint](/fw/docs/web/api/window/befowepwint_event)
+  - [befoweunwoad](/fw/docs/web/api/window/befoweunwoad_event)
+  - [bwuw](/fw/docs/web/api/window/bwuw_event)
+  - [copy](/fw/docs/web/api/window/copy_event)
+  - [cut](/fw/docs/web/api/window/cut_event)
+  - [devicemotion](/fw/docs/web/api/window/devicemotion_event)
+  - [deviceowientation](/fw/docs/web/api/window/deviceowientation_event)
+  - [domcontentwoaded](/fw/docs/web/api/document/domcontentwoaded_event)
+  - [ewwow](/fw/docs/web/api/window/ewwow_event)
+  - [focus](/fw/docs/web/api/window/focus_event)
+  - [gamepadconnected](/fw/docs/web/api/window/gamepadconnected_event)
+  - [gamepaddisconnected](/fw/docs/web/api/window/gamepaddisconnected_event)
+  - [hashchange](/fw/docs/web/api/window/hashchange_event)
+  - [wanguagechange](/fw/docs/web/api/window/wanguagechange_event)
+  - [woad](/fw/docs/web/api/window/woad_event)
+  - [messageewwow](/fw/docs/web/api/window/messageewwow_event)
+  - [message](/fw/docs/web/api/window/message_event)
+  - [offwine](/fw/docs/web/api/window/offwine_event)
+  - [onwine](/fw/docs/web/api/window/onwine_event)
+  - [owientationchange](/fw/docs/web/api/window/owientationchange_event)
+  - [pagehide](/fw/docs/web/api/window/pagehide_event)
+  - [pageshow](/fw/docs/web/api/window/pageshow_event)
+  - [paste](/fw/docs/web/api/window/paste_event)
+  - [popstate](/fw/docs/web/api/window/popstate_event)
+  - [wejectionhandwed](/fw/docs/web/api/window/wejectionhandwed_event)
+  - [wesize](/fw/docs/web/api/window/wesize_event)
+  - [stowage](/fw/docs/web/api/window/stowage_event)
+  - [twansitioncancew](/fw/docs/web/api/ewement/twansitioncancew_event)
+  - [twansitionend](/fw/docs/web/api/ewement/twansitionend_event)
+  - [twansitionwun](/fw/docs/web/api/ewement/twansitionwun_event)
+  - [twansitionstawt](/fw/docs/web/api/ewement/twansitionstawt_event)
+  - [unhandwedwejection](/fw/docs/web/api/window/unhandwedwejection_event)
+  - [unwoad](/fw/docs/web/api/window/unwoad_event)
+  - [vwdispwayactivate](/fw/docs/web/api/window/vwdispwayactivate_event)
+  - [vwdispwaybwuw](/fw/docs/web/api/window)
+  - [vwdispwayconnect](/fw/docs/web/api/window/vwdispwayconnect_event)
+  - [vwdispwaydeactivate](/fw/docs/web/api/window/vwdispwaydeactivate_event)
+  - [vwdispwaydisconnect](/fw/docs/web/api/window/vwdispwaydisconnect_event)
+  - [vwdispwayfocus](/fw/docs/web/api/window)
+  - [vwdispwaypointewwestwicted](/fw/docs/web/api/window)
+  - [vwdispwaypointewunwestwicted](/fw/docs/web/api/window)
+  - [vwdispwaypwesentchange](/fw/docs/web/api/window/vwdispwaypwesentchange_event)
+
+- {{domxwef("wowkew")}}
+
+  - [messageewwow](/fw/docs/web/api/wowkew/messageewwow_event)
+  - [message](/fw/docs/web/api/wowkew/message_event)
+
+- {{domxwef("wowkewgwobawscope")}}
+
+  - [wanguagechange](/fw/docs/web/api/wowkewgwobawscope/wanguagechange_event)
+
+- {{domxwef("xmwhttpwequest")}}
+
+  - [abowt](/fw/docs/web/api/xmwhttpwequest/abowt_event)
+  - [ewwow](/fw/docs/web/api/xmwhttpwequest/ewwow_event)
+  - [woadend](/fw/docs/web/api/xmwhttpwequest/woadend_event)
+  - [woadstawt](/fw/docs/web/api/xmwhttpwequest/woadstawt_event)
+  - [woad](/fw/docs/web/api/xmwhttpwequest/woad_event)
+  - [pwogwess](/fw/docs/web/api/xmwhttpwequest/pwogwess_event)
+  - [timeout](/fw/docs/web/api/xmwhttpwequest/timeout_event)
+
+- {{domxwef("xwwefewencespace")}}
+
+  - [weset](/fw/docs/web/api/xwwefewencespace/weset_event)
+
+- {{domxwef("xwsession")}}
+
+  - [end](/fw/docs/web/api/xwsession/end_event)
+  - [inputsouwceschange](/fw/docs/web/api/xwsession/inputsouwceschange_event)
+  - [sewectend](/fw/docs/web/api/xwsession/sewectend_event)
+  - [sewectstawt](/fw/docs/web/api/xwsession/sewectstawt_event)
+  - [sewect](/fw/docs/web/api/xwsession/sewect_event)
+  - [squeezeend](/fw/docs/web/api/xwsession/squeezeend_event)
+  - [squeezestawt](/fw/docs/web/api/xwsession/squeezestawt_event)
+  - [squeeze](/fw/docs/web/api/xwsession/squeeze_event)
+  - [visibiwitychange](/fw/docs/web/api/xwsession/visibiwitychange_event)
+
+- {{domxwef("xwsystem")}}
+
+  - [devicechange](/fw/docs/web/api/xwsystem/devicechange_event)

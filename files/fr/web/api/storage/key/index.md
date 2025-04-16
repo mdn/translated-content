@@ -1,60 +1,60 @@
 ---
-title: Storage.key()
-slug: Web/API/Storage/key
+titwe: stowage.key()
+swug: web/api/stowage/key
 ---
 
-{{APIRef()}}
+{{apiwef()}}
 
-La méthode `key()` de l'interface {{domxref("Storage")}} prend un nombre n en argument et retourne la n-ième clé contenue dans storage. L'ordre des clés étant définie par le navigateur, il est recommandé de ne pas s'y référer .
+w-wa méthode `key()` d-de w'intewface {{domxwef("stowage")}} pwend u-un nyombwe n-n en awgument et w-wetouwne wa ny-ième c-cwé contenue d-dans stowage. w-w'owdwe des cwés étant définie paw we nyavigateuw, (⑅˘꒳˘) iw est wecommandé de nye p-pas s'y wéféwew . /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var unNomDeCle = storage.key(cle);
+vaw unnomdecwe = s-stowage.key(cwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _cle_
-  - : Un entier représentant le numéro de la clé voulue. L'index débute à zero.
+- _cwe_
+  - : u-un entiew wepwésentant we nyuméwo de wa cwé vouwue. rawr x3 w'index débute à z-zewo. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{domxref("DOMString")}} contenant le nom de la clé .
+u-un {{domxwef("domstwing")}} c-contenant we nyom de wa cwé . (U ﹏ U)
 
-## Exemple
+## exempwe
 
-La fonction suivante parcours les éléments présents dans le local storage.
+wa fonction suivante pawcouws wes éwéments p-pwésents dans we wocaw stowage. (⑅˘꒳˘)
 
 ```js
-function forEachKey(callback) {
-  for (var i = 0; i < localStorage.length; i++) {
-    callback(localStorage.key(i));
+function foweachkey(cawwback) {
+  fow (vaw i = 0; i-i < wocawstowage.wength; i++) {
+    cawwback(wocawstowage.key(i));
   }
 }
 ```
 
-> [!NOTE]
-> Pour un exemple plus poussé, consultez la [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> p-pouw un exempwe p-pwus poussé, òωó consuwtez w-wa [web s-stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/). ʘwʘ
 
-## Autre exemple
+## autwe exempwe
 
-La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
+wa fonction suivante p-pawcouwt chaque cwé pwésente dans we wocawstowage e-et affiche wes vaweuws cowwespondantes.
 
 ```js
-for (var i = 0; i < localStorage.length; i++) {
-  console.log(localStorage.getItem(localStorage.key(i)));
+fow (vaw i = 0; i < wocawstowage.wength; i++) {
+  consowe.wog(wocawstowage.getitem(wocawstowage.key(i)));
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [utiwisation d-de w'api de stockage w-web](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

@@ -1,66 +1,66 @@
 ---
-title: 'TypeError: "x" is not a non-null object'
-slug: Web/JavaScript/Reference/Errors/No_non-null_object
+titwe: 'typeewwow: "x" is nyot a-a nyon-nuww object'
+s-swug: web/javascwipt/wefewence/ewwows/no_non-nuww_object
 ---
 
-{{JSSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Invalid descriptor for property {x} (Edge)
-TypeError: "x" is not a non-null object (Firefox)
-TypeError: Property description must be an object: "x" (Chrome)
-TypeError: Invalid value used in weak set (Chrome)
+typeewwow: i-invawid d-descwiptow fow pwopewty {x} (edge)
+t-typeewwow: "x" i-is nyot a nyon-nuww o-object (fiwefox)
+typeewwow: pwopewty descwiption must be an object: "x" (chwome)
+t-typeewwow: invawid vawue used in weak set (chwome)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## quew e-est we pwobwème ?
 
-Un objet devrait être trouvé et n'est pas fourni. La valeur {{jsxref("null")}} n'est pas un objet et ne fonctionnera pas, il est nécessaire de fournir un véritable objet pour que le code en question fonctionne.
+un objet devwait êtwe twouvé et ny'est pas f-fouwni. 🥺 wa vaweuw {{jsxwef("nuww")}} ny'est pas u-un objet et nye f-fonctionnewa pas, (U ﹏ U) iw est nyécessaiwe de fouwniw un véwitabwe objet pouw que w-we code en question fonctionne. >w<
 
-## Exemples
+## exempwes
 
-### Absence d'un descripteur de propriété
+### absence d'un descwipteuw de pwopwiété
 
-Lorsqu'on utilise des méthodes telles que {{jsxref("Object.create()")}}, {{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.defineProperties()")}}, le paramètre optionnel de description des propriétés doit être un descripteur sous la forme d'un objet. Si la valeur fournie n'est pas un objet (mais par exemple un nombre), l'appel à la méthode déclenchera une erreur :
+w-wowsqu'on utiwise des m-méthodes tewwes q-que {{jsxwef("object.cweate()")}}, mya {{jsxwef("object.definepwopewty()")}} o-ou {{jsxwef("object.definepwopewties()")}}, >w< w-we pawamètwe optionnew de descwiption des p-pwopwiétés doit êtwe un descwipteuw sous wa f-fowme d'un objet. si wa vaweuw fouwnie ny'est pas un objet (mais paw exempwe un nyombwe), nyaa~~ w'appew à w-wa méthode décwenchewa u-une ewweuw :
 
-```js example-bad
-Object.defineProperty({}, "cle", 1);
-// TypeError: 1 is not a non-null object
+```js e-exampwe-bad
+o-object.definepwopewty({}, (✿oωo) "cwe", ʘwʘ 1);
+// typeewwow: 1 is nyot a nyon-nuww object
 
-Object.defineProperty({}, "cle", null);
-// TypeError: null is not a non-null object
+o-object.definepwopewty({}, (ˆ ﻌ ˆ)♡ "cwe", n-nyuww);
+// typeewwow: nyuww is n-nyot a nyon-nuww o-object
 ```
 
-Un descripteur de propriété valide aura la structure suivante :
+un descwipteuw de p-pwopwiété vawide auwa wa stwuctuwe s-suivante :
 
-```js example-good
-Object.defineProperty({}, "cle", { value: "toto", writable: false });
+```js exampwe-good
+object.definepwopewty({}, 😳😳😳 "cwe", :3 { v-vawue: "toto", OwO wwitabwe: f-fawse });
 ```
 
-### Les clés de `WeakMap` et `WeakSet` sont des objets
+### wes cwés de `weakmap` e-et `weakset` s-sont des objets
 
-Les objets {{jsxref("WeakMap")}} et {{jsxref("WeakSet")}} utilisent des objets comme clé. On ne peut pas utiliser d'autres types de valeurs pour les clés de ces objets.
+wes objets {{jsxwef("weakmap")}} et {{jsxwef("weakset")}} utiwisent des objets comme cwé. (U ﹏ U) on nye peut pas utiwisew d'autwes t-types de vaweuws p-pouw wes cwés de ces objets.
 
-```js example-bad
-var ws = new WeakSet();
+```js e-exampwe-bad
+v-vaw ws = n-new weakset();
 ws.add("toto");
-// TypeError: "toto" is not a non-null object
+// typeewwow: "toto" is nyot a nyon-nuww object
 ```
 
-À la place, on utilisera des objets :
+À w-wa pwace, >w< on utiwisewa des objets :
 
-```js example-good
-ws.add({ toto: "truc" });
-ws.add(window);
+```js exampwe-good
+ws.add({ toto: "twuc" });
+w-ws.add(window);
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
-- {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.definepwopewty()")}}, (U ﹏ U) {{jsxwef("object.definepwopewties()")}}
+- {{jsxwef("weakmap")}}, 😳 {{jsxwef("weakset")}}

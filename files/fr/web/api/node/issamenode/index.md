@@ -1,73 +1,73 @@
 ---
-title: Node.isSameNode()
-slug: Web/API/Node/isSameNode
+titwe: nyode.issamenode()
+swug: w-web/api/node/issamenode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-à-dire, s'ils font référence au même objet.
+w-wa méthode **`node.issamenode()`** t-teste si d-deux nyoeuds sont i-identiques, 😳😳😳 c'est-à-diwe, o.O s-s'iws f-font wéféwence a-au même objet. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var isSameNode = node.isSameNode(other);
+vaw issamenode = nyode.issamenode(othew);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `other` Le {{domxref("Node")}} à tester.
+- `othew` w-we {{domxwef("node")}} à testew. (U ﹏ U)
 
-## Exemple
+## exempwe
 
-Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Ensuite, nous exécutons du JavaScript pour comparer les nœuds en utilisant `isSameNode()` et sortons les résultats.
+d-dans cet exempwe, (///ˬ///✿) nous cwéons 3 b-bwocs {{htmwewement("div")}}. >w< we pwemiew et we twoisième ont wes mêmes contenus e-et attwibuts, rawr awows que we second e-est difféwent. mya e-ensuite, ^^ nyous exécutons du javascwipt pouw compawew wes nyœuds en utiwisant `issamenode()` e-et sowtons wes wésuwtats. 😳😳😳
 
-### HTML
+### htmw
 
-```html
-<div>This is the first element.</div>
-<div>This is the second element.</div>
-<div>This is the first element.</div>
+```htmw
+<div>this is the fiwst ewement.</div>
+<div>this i-is the second ewement.</div>
+<div>this is the fiwst e-ewement.</div>
 
-<p id="output"></p>
+<p i-id="output"></p>
 ```
 
-```css hidden
+```css h-hidden
 #output {
-  width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
+  w-width: 440px;
+  bowdew: 2px sowid bwack;
+  b-bowdew-wadius: 5px;
   padding: 10px;
-  margin-top: 20px;
-  display: block;
+  mawgin-top: 20px;
+  d-dispway: bwock;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let output = document.getElementById("output");
-let divList = document.getElementsByTagName("div");
+wet output = document.getewementbyid("output");
+wet divwist = d-document.getewementsbytagname("div");
 
-output.innerHTML +=
-  "div 0 same as div 0: " + divList[0].isSameNode(divList[0]) + "<br/>";
-output.innerHTML +=
-  "div 0 same as div 1: " + divList[0].isSameNode(divList[1]) + "<br/>";
-output.innerHTML +=
-  "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) + "<br/>";
+output.innewhtmw +=
+  "div 0 s-same a-as div 0: " + d-divwist[0].issamenode(divwist[0]) + "<bw/>";
+output.innewhtmw +=
+  "div 0 same as div 1: " + divwist[0].issamenode(divwist[1]) + "<bw/>";
+o-output.innewhtmw +=
+  "div 0 s-same as div 2: " + divwist[0].issamenode(divwist[2]) + "<bw/>";
 ```
 
-### Résultats
+### w-wésuwtats
 
-{{ EmbedLiveSample('Exemple', 480) }}
+{{ embedwivesampwe('exempwe', mya 480) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node.isEqualNode()")}}
+- {{domxwef("node.isequawnode()")}}

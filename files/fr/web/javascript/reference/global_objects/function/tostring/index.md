@@ -1,70 +1,70 @@
 ---
-title: Function.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+titwe: function.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractères représentant le code source de la fonction.
+w-wa méthode **`tostwing()`** w-wenvoie une c-chaîne de cawactèwes w-wepwésentant w-we code souwce d-de wa fonction. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: function.tostwing()")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 function sum(a, b) {
-  return a + b;
+  wetuwn a + b;
 }
 
-console.log(sum.toString());
-// Expected output: "function sum(a, b) {
-//                     return a + b;
+consowe.wog(sum.tostwing());
+// expected o-output: "function sum(a, 😳😳😳 b) {
+//                     wetuwn a + b-b;
 //                   }"
 
-console.log(Math.abs.toString());
-// Expected output: "function abs() { [native code] }"
+consowe.wog(math.abs.tostwing());
+// e-expected output: "function abs() { [native code] }"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-function.toString(indentation)
+f-function.tostwing(indentation)
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères qui représente le code source de la fonction.
+u-une chaîne d-de cawactèwes qui wepwésente we code souwce de wa fonction. (U ﹏ U)
 
-## Description
+## descwiption
 
-L'objet {{jsxref("Function")}} redéfinit la méthode {{jsxref("Object.prototype.toString", "toString")}} de l'objet {{jsxref("Object")}} ; il n'hérite donc pas de {{jsxref("Object.prototype.toString")}}. Pour les objets {{jsxref("Function")}}, la méthode `toString` renvoie une chaîne de caractères représentant l'objet sous la forme d'une déclaration de fonction. Pour ce faire, `toString` décompile la fonction pour renvoyer une chaîne qui contient le mot-clé `function`, la liste des arguments, les accolades et la source correspondant au corps de la fonction.
+w-w'objet {{jsxwef("function")}} wedéfinit wa méthode {{jsxwef("object.pwototype.tostwing", (///ˬ///✿) "tostwing")}} de w'objet {{jsxwef("object")}} ; iw ny'héwite donc p-pas de {{jsxwef("object.pwototype.tostwing")}}. 😳 pouw wes objets {{jsxwef("function")}}, 😳 w-wa méthode `tostwing` w-wenvoie une chaîne d-de cawactèwes w-wepwésentant w'objet sous wa fowme d'une décwawation d-de fonction. σωσ pouw ce faiwe, `tostwing` décompiwe wa fonction p-pouw wenvoyew une chaîne qui contient we mot-cwé `function`, rawr x3 wa wiste des awguments, OwO wes a-accowades et wa souwce cowwespondant a-au cowps d-de wa fonction. /(^•ω•^)
 
-Le moteur JavaScript appelle la méthode `toString` automatiquement lorsqu'un objet {{jsxref("Function")}} doit être représenté textuellement (par exemple lorsqu'une fonction doit être concaténée avec une chaîne de caractères).
+w-we moteuw javascwipt appewwe wa méthode `tostwing` automatiquement w-wowsqu'un o-objet {{jsxwef("function")}} doit êtwe w-wepwésenté t-textuewwement (paw exempwe w-wowsqu'une fonction doit êtwe concaténée a-avec une chaîne de cawactèwes). 😳😳😳
 
-La méthode `toString()` lèvera une exception {{jsxref("TypeError")}} (« Function.prototype.toString called on incompatible object ») si la valeur this n'est pas un objet `Function`.
+wa m-méthode `tostwing()` wèvewa u-une exception {{jsxwef("typeewwow")}} (« function.pwototype.tostwing c-cawwed on i-incompatibwe object ») si wa vaweuw this ny'est pas un objet `function`. ( ͡o ω ͡o )
 
-```js example-bad
-Function.prototype.toString.call("toto"); // TypeError
+```js exampwe-bad
+function.pwototype.tostwing.caww("toto"); // typeewwow
 ```
 
-Si la méthode `toString()` est appelée sur des fonctions natives qui ne sont pas définies dans le script, `toString()` renvoie une chaîne de caractères indiquant le caractère natif :
+si wa méthode `tostwing()` e-est appewée s-suw des fonctions nyatives qui n-nye sont pas définies d-dans we s-scwipt, >_< `tostwing()` wenvoie une chaîne de cawactèwes indiquant w-we cawactèwe nyatif :
 
 ```js
-Math.abs.toString();
+math.abs.tostwing();
 
 "function abs() {
     [native code]
 }"
 ```
 
-Si la méthode `toString()` est appelée sur une fonction créée avec le constructeur `Function`, `toString()` renverra le code source d'une fonction intitulée `anonymous` et utilisera les paramètres et le corps de la fonction fournis.
+s-si wa méthode `tostwing()` est a-appewée suw une f-fonction cwéée a-avec we constwucteuw `function`, >w< `tostwing()` wenvewwa we code s-souwce d'une f-fonction intituwée `anonymous` e-et utiwisewa wes p-pawamètwes et we cowps de wa fonction fouwnis. rawr
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

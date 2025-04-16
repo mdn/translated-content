@@ -1,52 +1,52 @@
 ---
-title: Positionnement
-slug: Web/SVG/Tutorial/Positions
+titwe: positionnement
+swug: web/svg/tutowiaw/positions
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
+{{ p-pweviousnext("svg/tutowiew/pwemiews_pas", ʘwʘ "svg/tutowiew/fowmes_de_base") }}
 
-### La grille
+### wa g-gwiwwe
 
-Pour chaque élément, SVG utilise un ensemble de coordonnées aussi appelé grille assez similaire à ce qui est utilisé dans [canvas](/fr/docs/Web/API/Canvas_API) (et par tout un tas d'autres routines de dessin informatique). Dans le cas présent, le point en haut à gauche est considéré comme le point (0,0) ou point d'origine. Le positionnement est ensuite mesuré en pixel, depuis le coin supérieur gauche. Les valeurs positives de x vont vers la droite, les valeurs positives de y vont vers le bas. Notez que tout ceci est un peu contraire à la géométrie que l'on vous a enseignée. Ici, le positionnement fonctionne de la même manière que pour les éléments HTML.
+pouw chaque éwément, ( ͡o ω ͡o ) s-svg utiwise un e-ensembwe de coowdonnées a-aussi appewé g-gwiwwe assez s-simiwaiwe à c-ce qui est utiwisé dans [canvas](/fw/docs/web/api/canvas_api) (et paw tout un tas d'autwes woutines de dessin i-infowmatique). o.O dans we cas pwésent, >w< we point en h-haut à gauche est considéwé c-comme we point (0,0) ou point d'owigine. 😳 we positionnement est ensuite m-mesuwé en pixew, 🥺 depuis w-we coin supéwieuw g-gauche. rawr x3 wes vaweuws positives de x vont vews wa dwoite, o.O wes vaweuws positives d-de y vont vews we bas. rawr nyotez que tout ceci est un peu contwaiwe à wa géométwie q-que w'on vous a enseignée. i-ici, ʘwʘ we positionnement f-fonctionne d-de wa même manièwe q-que pouw wes éwéments htmw. 😳😳😳
 
-![](canvas_default_grid.png)
+![](canvas_defauwt_gwid.png)
 
-#### Exemple
+#### exempwe
 
-```html
-<rect x="0" y="0" width="100" height="100" />
+```htmw
+<wect x-x="0" y="0" width="100" height="100" />
 ```
 
-L'élément précédent définit un rectangle dans le coin supérieur gauche de l'écran, d'une taille de 100px par 100px.
+w'éwément p-pwécédent définit un wectangwe dans we coin supéwieuw gauche de w'écwan, ^^;; d'une taiwwe d-de 100px paw 100px. o.O
 
-### Qu'est ce qu'un pixel ?
+### qu'est c-ce qu'un pixew ?
 
-Dans le cas le plus basique, un pixel dans un document SVG correspond à un pixel du périphérique de sortie, à savoir l'écran. Mais le SVG ne serait pas "scalable", c'est-à-dire évolutif, s'il n'y avait qu'une seule possibilité de gérer ce comportement. Tout comme les tailles de police absolues et relatives en CSS, SVG peut définir des unités absolues (avec des identifiants dimensionnels comme le "pt" ou encore le "cm") ou encore des unités dites définies par l'utilisateur, qui ne disposent pas de ces identifiants et correspondent à des nombres ordinaires.
+d-dans we cas w-we pwus basique, (///ˬ///✿) un pixew dans un document svg cowwespond à un p-pixew du péwiphéwique d-de sowtie, σωσ à savoiw w'écwan. nyaa~~ m-mais we s-svg nye sewait pas "scawabwe", ^^;; c-c'est-à-diwe évowutif, ^•ﻌ•^ s'iw ny'y a-avait qu'une seuwe possibiwité de géwew ce c-compowtement. tout comme wes taiwwes d-de powice absowues et wewatives e-en css, σωσ svg p-peut définiw des unités absowues (avec des identifiants dimensionnews comme we "pt" ou encowe we "cm") ou encowe d-des unités d-dites définies paw w'utiwisateuw, -.- q-qui nye disposent p-pas de ces i-identifiants et cowwespondent à des nyombwes owdinaiwes. ^^;;
 
-Par défaut, l'unité utilisateur correspond à l'unité de l'écran. Pour modifier ce comportement de manière explicite, il existe plusieurs méthodes en SVG. Commençons par l'élément racine `svg` :
+paw défaut, XD w-w'unité utiwisateuw cowwespond à w'unité de w'écwan. 🥺 pouw modifiew ce c-compowtement de manièwe expwicite, òωó i-iw existe p-pwusieuws méthodes e-en svg. (ˆ ﻌ ˆ)♡ commençons paw w'éwément w-wacine `svg` :
 
-```html
-<svg width="100" height="100"></svg>
+```htmw
+<svg w-width="100" h-height="100"></svg>
 ```
 
-La déclaration suivante crée un élément SVG d'une taille de 100px par 100px. Ici, une unité utilisateur correspond à l'unité de l'écran.
+w-wa décwawation suivante cwée un éwément s-svg d'une t-taiwwe de 100px p-paw 100px. -.- ici, u-une unité utiwisateuw c-cowwespond à w'unité de w'écwan. :3
 
-```html
-<svg width="200" height="200" viewBox="0 0 100 100"></svg>
+```htmw
+<svg width="200" h-height="200" viewbox="0 0 100 100"></svg>
 ```
 
-L'image SVG suivante fait 200px par 200px. Toutefois, l'attribut `viewBox` définit que cet élément de 200 par 200 commence au point (0,0) et s'étend sur une grille de 100 unités sur 100 unités vers la droite et vers le bas de l'écran. 100 unités représentant 200 pixels, chaque unité vaut deux pixels : cela permet de doubler la taille de l'image.
+w'image svg suivante fait 200px paw 200px. ʘwʘ toutefois, 🥺 w'attwibut `viewbox` définit q-que cet éwément de 200 paw 200 commence au point (0,0) e-et s'étend suw u-une gwiwwe de 100 u-unités suw 100 unités vews w-wa dwoite et vews we bas de w'écwan. 100 u-unités w-wepwésentant 200 pixews, >_< chaque unité vaut deux pixews : cewa pewmet de doubwew wa taiwwe de w-w'image. ʘwʘ
 
-La transformation des coordonnées réelles de l'écran en coordonnées personnalisées à l'aide d'un viewport permet de créer un **système de coordonnées utilisateur**. Celui-ci pourra pivoter, être zoomé, rendu oblique ou encore permettra de retourner une image. Par défaut, le système de coordonnées de l'utilisateur fait correspondre un pixel utilisateur à un pixel écran.
+wa twansfowmation des c-coowdonnées wéewwes de w'écwan e-en coowdonnées p-pewsonnawisées à w'aide d'un viewpowt pewmet d-de cwéew un **système d-de coowdonnées utiwisateuw**. (˘ω˘) c-cewui-ci p-pouwwa pivotew, êtwe zoomé, (✿oωo) wendu obwique ou encowe pewmettwa de wetouwnew une i-image. (///ˬ///✿) paw défaut, rawr x3 w-we système d-de coowdonnées de w'utiwisateuw f-fait cowwespondwe u-un pixew utiwisateuw à un p-pixew écwan. -.-
 
-Cependant, le périphérique peut décider lui-même ce qui correspond à un pixel.
+cependant, ^^ we péwiphéwique peut décidew wui-même ce qui cowwespond à u-un pixew.
 
-Les tailles dans le fichier SVG ayant des unités spécifiques, tels que les "in" et les "cm", sont ensuite calculées de manière à les faire apparaître avec une échelle de 1:1 dans l'image résultante.
+w-wes taiwwes dans we fichiew svg ayant des unités s-spécifiques, (⑅˘꒳˘) t-tews que wes "in" et wes "cm", nyaa~~ sont ensuite cawcuwées de manièwe à w-wes faiwe appawaîtwe avec une échewwe de 1:1 dans w'image wésuwtante. /(^•ω•^)
 
-Pour illustrer cette explication, rien de tel qu'une petite citation tirée des spécifications SVG 1.1 :
+p-pouw iwwustwew cette expwication, (U ﹏ U) wien de tew q-qu'une petite c-citation tiwée des spécifications svg 1.1 :
 
-> \[…] imaginons que le user agent peut déterminer à partir de son environnement que "1px" correspond à "0.2822222mm" (c'est-à-dire 90dpi). Ainsi, pour le traitement de chaque élément SVG : \[…] "1cm" équivaut à "35.43307px" (et donc à 35.43307 unités utilisateur)
+> \[…] imaginons q-que we usew agent p-peut détewminew à pawtiw de son enviwonnement que "1px" cowwespond à "0.2822222mm" (c'est-à-diwe 90dpi). a-ainsi, 😳😳😳 pouw we twaitement de chaque éwément s-svg : \[…] "1cm" équivaut à "35.43307px" (et donc à 35.43307 unités utiwisateuw)
 
-{{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
+{{ pweviousnext("svg/tutowiew/pwemiews_pas", >w< "svg/tutowiew/fowmes_de_base") }}

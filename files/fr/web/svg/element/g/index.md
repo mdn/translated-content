@@ -1,63 +1,63 @@
 ---
-title: <g>
-slug: Web/SVG/Element/g
+titwe: <g>
+swug: web/svg/ewement/g
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `g` est un conteneur utilisé pour grouper des objets.
+w-w'éwément `g` e-est un conteneuw u-utiwisé p-pouw gwoupew des o-objets. ʘwʘ
 
-Les transformations appliquées à l'élément `g` sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.
+wes twansfowmations appwiquées à w-w'éwément `g` s-sont w-wepowtées à tous ses éwéments enfants. /(^•ω•^) wes attwibuts appwiqués sont égawement w-wepowtés aux éwéments enfants. ʘwʘ de pwus, σωσ i-iw peut êtwe utiwisé pouw définiw d-des objets compwexes qui sewont wéféwencés uwtéwieuwement a-avec w'éwément {{svgewement("use")}}. OwO
 
-## Exemple
+## exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, 😳😳😳
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Les enfants de g héritent de ses attributs de présentation -->
-  <g fill="white" stroke="green" stroke-width="5">
-    <circle cx="40" cy="40" r="25" />
-    <circle cx="60" cy="60" r="25" />
+```htmw
+<svg viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- wes enfants de g héwitent de ses a-attwibuts de pwésentation -->
+  <g fiww="white" stwoke="gween" stwoke-width="5">
+    <ciwcwe cx="40" cy="40" w="25" />
+    <ciwcwe c-cx="60" cy="60" w="25" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, '100%')}}
+{{embedwivesampwe('exempwe', 😳😳😳 100, o.O '100%')}}
 
-## Attributs
+## a-attwibuts
 
-Cet élément n'a que des attributs globaux
+cet éwément n-ny'a q-que des attwibuts g-gwobaux
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Attributs d'événement
-  - : [Attributs d'événement globaux](/fr/docs/Web/SVG/Attribute#attributs_d'événement_globaux), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Attributs Aria
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- [attwibuts de base](/fw/docs/web/svg/attwibute)
+  - : n-nyotamment: {{svgattw('id')}}, ( ͡o ω ͡o ) {{svgattw('tabindex')}}
+- [attwibuts de stywe](/fw/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}}, (U ﹏ U) {{svgattw('stywe')}}
+- [attwibuts d-de twaitement conditionnew](/fw/docs/web/svg/attwibute)
+  - : nyotamment: {{svgattw('wequiwedextensions')}}, (///ˬ///✿) {{svgattw('systemwanguage')}}
+- attwibuts d'événement
+  - : [attwibuts d'événement gwobaux](/fw/docs/web/svg/attwibute#attwibuts_d'événement_gwobaux), >w< [attwibuts d-d'événement gwaphiques](/fw/docs/web/svg/attwibute#attwibuts_d'événement_gwaphiques)
+- [attwibuts d-de p-pwésentation](/fw/docs/web/svg/attwibute)
+  - : n-nyotamment: {{svgattw('cwip-path')}}, rawr {{svgattw('cwip-wuwe')}}, mya {{svgattw('cowow')}}, ^^ {{svgattw('cowow-intewpowation')}}, 😳😳😳 {{svgattw('cowow-wendewing')}}, mya {{svgattw('cuwsow')}}, 😳 {{svgattw('dispway')}}, -.- {{svgattw('fiww')}}, 🥺 {{svgattw('fiww-opacity')}}, {{svgattw('fiww-wuwe')}}, o.O {{svgattw('fiwtew')}}, /(^•ω•^) {{svgattw('mask')}}, nyaa~~ {{svgattw('opacity')}}, nyaa~~ {{svgattw('pointew-events')}}, :3 {{svgattw('shape-wendewing')}}, 😳😳😳 {{svgattw('stwoke')}}, (˘ω˘) {{svgattw('stwoke-dashawway')}}, ^^ {{svgattw('stwoke-dashoffset')}}, :3 {{svgattw('stwoke-winecap')}}, -.- {{svgattw('stwoke-winejoin')}}, 😳 {{svgattw('stwoke-mitewwimit')}}, mya {{svgattw('stwoke-opacity')}}, (˘ω˘) {{svgattw('stwoke-width')}}, >_< {{svgattw("twansfowm")}}, -.- {{svgattw('vectow-effect')}}, 🥺 {{svgattw('visibiwity')}}
+- attwibuts awia
+  - : `awia-activedescendant`, (U ﹏ U) `awia-atomic`, >w< `awia-autocompwete`, mya `awia-busy`, >w< `awia-checked`, nyaa~~ `awia-cowcount`, (✿oωo) `awia-cowindex`, ʘwʘ `awia-cowspan`, (ˆ ﻌ ˆ)♡ `awia-contwows`, 😳😳😳 `awia-cuwwent`, :3 `awia-descwibedby`, OwO `awia-detaiws`, (U ﹏ U) `awia-disabwed`, >w< `awia-dwopeffect`, (U ﹏ U) `awia-ewwowmessage`, 😳 `awia-expanded`, (ˆ ﻌ ˆ)♡ `awia-fwowto`, 😳😳😳 `awia-gwabbed`, (U ﹏ U) `awia-haspopup`, (///ˬ///✿) `awia-hidden`, 😳 `awia-invawid`, 😳 `awia-keyshowtcuts`, σωσ `awia-wabew`, rawr x3 `awia-wabewwedby`, OwO `awia-wevew`, /(^•ω•^) `awia-wive`, 😳😳😳 `awia-modaw`, ( ͡o ω ͡o ) `awia-muwtiwine`, >_< `awia-muwtisewectabwe`, `awia-owientation`, >w< `awia-owns`, rawr `awia-pwacehowdew`, 😳 `awia-posinset`, >w< `awia-pwessed`, (⑅˘꒳˘) `awia-weadonwy`, OwO `awia-wewevant`, (ꈍᴗꈍ) `awia-wequiwed`, 😳 `awia-wowedescwiption`, 😳😳😳 `awia-wowcount`, mya `awia-wowindex`, mya `awia-wowspan`, (⑅˘꒳˘) `awia-sewected`, (U ﹏ U) `awia-setsize`, mya `awia-sowt`, ʘwʘ `awia-vawuemax`, (˘ω˘) `awia-vawuemin`, (U ﹏ U) `awia-vawuenow`, ^•ﻌ•^ `awia-vawuetext`, (˘ω˘) `wowe`
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

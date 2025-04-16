@@ -1,54 +1,54 @@
 ---
-title: WebGLRenderingContext.useProgram()
-slug: Web/API/WebGLRenderingContext/useProgram
+titwe: webgwwendewingcontext.usepwogwam()
+swug: w-web/api/webgwwendewingcontext/usepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.useProgram()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le {{domxref("WebGLProgram")}} spécifié comme faisant partie de l'état de rendu en cours.
+w-wa méthode **`webgwwendewingcontext.usepwogwam()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) d-définit w-we {{domxwef("webgwpwogwam")}} s-spécifié comme f-faisant pawtie de w'état de wendu en couws. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-void gl.useProgram(programme);
-```
-
-### Paramètres
-
-- programme
-  - : Un {{domxref("WebGLProgram")}} à utiliser.
-
-### Valeur retournée
-
-Aucune.
-
-## Exemples
+## syntaxe
 
 ```js
-var programme = gl.createProgram();
-
-// Attacher les shaders pré-existants
-gl.attachShader(programme, vertexShader);
-gl.attachShader(programme, fragmentShader);
-
-gl.linkProgram(programme);
-gl.useProgram(programme);
+void gw.usepwogwam(pwogwamme);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- pwogwamme
+  - : un {{domxwef("webgwpwogwam")}} à u-utiwisew. rawr x3
 
-## Compatibilité des navigateurs
+### vaweuw w-wetouwnée
 
-{{Compat}}
+aucune. nyaa~~
 
-## Voir aussi
+## exempwes
 
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+```js
+vaw pwogwamme = gw.cweatepwogwam();
+
+// a-attachew wes shadews pwé-existants
+g-gw.attachshadew(pwogwamme, /(^•ω•^) vewtexshadew);
+g-gw.attachshadew(pwogwamme, rawr fwagmentshadew);
+
+gw.winkpwogwam(pwogwamme);
+gw.usepwogwam(pwogwamme);
+```
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

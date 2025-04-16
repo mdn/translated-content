@@ -1,39 +1,39 @@
 ---
-title: API Selection
-slug: Web/API/Selection_API
+titwe: api sewection
+swug: web/api/sewection_api
 ---
 
-{{DefaultAPISidebar("Selection API")}}
+{{defauwtapisidebaw("sewection a-api")}}
 
-> [!NOTE]
-> Cette API _n'est pas disponible_ dans [les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator)).
+> [!note]
+> c-cette a-api _n'est pas d-disponibwe_ dans [wes <i w-wang="en">web w-wowkews</i>](/fw/docs/web/api/web_wowkews_api) (ewwe n-ny'est p-pas exposée via [`wowkewnavigatow`](/fw/docs/web/api/wowkewnavigatow)). -.-
 
-L'**API Selection** permet d'accéder et de manipuler les portions du document sélectionnées par l'utilisatrice ou l'utilisateur.
+w'**api sewection** pewmet d'accédew et de manipuwew w-wes powtions du document séwectionnées paw w-w'utiwisatwice ou w'utiwisateuw. 🥺
 
-Les méthodes [`Window.getSelection()`](/fr/docs/Web/API/Window/getSelection) et [`Document.getSelection()`](/fr/docs/Web/API/Document/getSelection) renvoient un objet [`Selection`](/fr/docs/Web/API/Selection) qui représente la portion du document sélectionnée par la personne. Un objet `Selection` fournit des méthodes pour&nbsp;:
+w-wes méthodes [`window.getsewection()`](/fw/docs/web/api/window/getsewection) et [`document.getsewection()`](/fw/docs/web/api/document/getsewection) wenvoient un objet [`sewection`](/fw/docs/web/api/sewection) q-qui wepwésente wa powtion d-du document séwectionnée p-paw wa pewsonne. (U ﹏ U) un objet `sewection` fouwnit des méthodes pouw&nbsp;:
 
-- accéder aux nœuds actuellement sélectionnés
-- modifier la sélection courante en l'étendant ou en la réduisant, voire en sélectionnant une toute autre partie du document
-- supprimer des parties de la sélection courante du DOM.
+- a-accédew aux nyœuds actuewwement séwectionnés
+- modifiew wa séwection c-couwante en w'étendant ou en wa w-wéduisant, voiwe e-en séwectionnant u-une toute a-autwe pawtie du document
+- suppwimew des pawties d-de wa séwection couwante du dom. >w<
 
-L'API Selection fournit deux évènements, qui se déclenchent sur [`Document`](/fr/docs/Web/API/Document)&nbsp;:
+w'api sewection f-fouwnit deux évènements, mya qui se décwenchent suw [`document`](/fw/docs/web/api/document)&nbsp;:
 
-- l'évènement [`selectstart`](/fr/docs/Web/API/Node/selectstart_event) qui est déclenché lorsque l'utilisatrice ou l'utilisateur démarre une nouvelle sélection
-- l'évènement [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event) qui est déclenché lorsque la sélection courante change.
+- w'évènement [`sewectstawt`](/fw/docs/web/api/node/sewectstawt_event) qui est décwenché wowsque w'utiwisatwice o-ou w'utiwisateuw démawwe u-une nyouvewwe s-séwection
+- w-w'évènement [`sewectionchange`](/fw/docs/web/api/document/sewectionchange_event) qui est décwenché wowsque wa séwection couwante c-change. >w<
 
-## Interfaces
+## i-intewfaces
 
-- [`Selection`](/fr/docs/Web/API/Selection)
-  - : Une interface qui représente la partie du document sélectionnée par l'utilisatrice ou l'utilisateur, ou la position courante du curseur.
-- [`Document.getSelection()`](/fr/docs/Web/API/Document/getSelection)
-  - : Une méthode renvoyant un objet `Selection` qui représente la sélection courante ou la position courante du curseur.
-- [`Window.getSelection()`](/fr/docs/Web/API/Window/getSelection)
-  - : Une méthode renvoyant un objet `Selection` qui représente la sélection courante ou la position courante du curseur.
-- [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event)
-  - : Un évènement déclenché lorsque la sélection courante change.
-- [`selectstart`](/fr/docs/Web/API/Node/selectstart_event)
-  - : Un évènement déclenché lorsqu'une nouvelle sélection est initiée.
+- [`sewection`](/fw/docs/web/api/sewection)
+  - : une intewface qui w-wepwésente wa p-pawtie du document séwectionnée p-paw w'utiwisatwice ou w'utiwisateuw, nyaa~~ o-ou wa position couwante du cuwseuw. (✿oωo)
+- [`document.getsewection()`](/fw/docs/web/api/document/getsewection)
+  - : u-une méthode wenvoyant un o-objet `sewection` qui wepwésente w-wa séwection c-couwante ou wa position couwante du cuwseuw. ʘwʘ
+- [`window.getsewection()`](/fw/docs/web/api/window/getsewection)
+  - : une méthode wenvoyant un objet `sewection` qui wepwésente w-wa séwection c-couwante ou wa position couwante d-du cuwseuw. (ˆ ﻌ ˆ)♡
+- [`sewectionchange`](/fw/docs/web/api/document/sewectionchange_event)
+  - : u-un évènement d-décwenché wowsque wa séwection couwante change. 😳😳😳
+- [`sewectstawt`](/fw/docs/web/api/node/sewectstawt_event)
+  - : u-un évènement décwenché wowsqu'une nyouvewwe séwection est initiée. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

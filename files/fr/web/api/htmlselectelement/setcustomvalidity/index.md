@@ -1,30 +1,30 @@
 ---
-title: HTMLSelectElement.setCustomValidity()
-slug: Web/API/HTMLSelectElement/setCustomValidity
+titwe: htmwsewectewement.setcustomvawidity()
+swug: web/api/htmwsewectewement/setcustomvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La méthode **`HTMLSelectElement.setCustomValidity()`** définit le message de validation personnalisé de l'élément sélectionné avec le message renseigné. Utiliser une chaîne de caractère vide indique que l'élément _n'a pas_ de message d'erreur de validation personnalisé.
+w-wa méthode **`htmwsewectewement.setcustomvawidity()`** d-définit w-we message de v-vawidation pewsonnawisé d-de w'éwément s-séwectionné avec we message wenseigné. 😳😳😳 utiwisew une chaîne de cawactèwe v-vide indique que w'éwément _n'a pas_ de message d-d'ewweuw de vawidation pewsonnawisé. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-ElmSelectionne.setCustomValidity(message);
+ewmsewectionne.setcustomvawidity(message);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _message_ est le {{domxref("DOMString")}} contenant le message d'erreur.
+- _message_ est w-we {{domxwef("domstwing")}} contenant w-we message d-d'ewweuw. ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Validation du formulaire](/fr/docs/Web/HTML/Constraint_validation).
+- [vawidation d-du fowmuwaiwe](/fw/docs/web/htmw/constwaint_vawidation). rawr x3

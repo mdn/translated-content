@@ -1,74 +1,74 @@
 ---
-title: TypedArray.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
+titwe: typedawway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau.
+w-wa méthode **`entwies()`** w-wenvoie un n-nyouvew objet `awway i-itewatow` q-qui contient wes p-paiwes cwé/vaweuw p-pouw chaque i-indice du tabweau. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.entwies()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
-const eArr = uint8.entries();
+```js intewactive-exampwe
+const uint8 = nyew uint8awway([10, (U ﹏ U) 20, 30, 40, 50]);
+c-const eaww = uint8.entwies();
 
-eArr.next();
-eArr.next();
+eaww.next();
+e-eaww.next();
 
-console.log(eArr.next().value);
-// Expected output: Array [2, 30]
+consowe.wog(eaww.next().vawue);
+// expected output: a-awway [2, (⑅˘꒳˘) 30]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.entries();
+aww.entwies();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet `Array Iterator`.
+u-un nyouvew objet `awway itewatow`. òωó
 
-## Exemples
+## e-exempwes
 
-### Parcourir un tableau avec une boucle `for...of`
+### p-pawcouwiw un tabweau avec une boucwe `fow...of`
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArray = arr.entries();
-// prérequis nécessaire : le navigateur doit
-// supporter les boucles for..of
-// et les variables dont la portée est définie par let
-for (let n of eArray) {
-  console.log(n);
+vaw aww = nyew uint8awway([10, ʘwʘ 20, 30, 40, /(^•ω•^) 50]);
+v-vaw eawway = aww.entwies();
+// pwéwequis nyécessaiwe : we nyavigateuw d-doit
+// suppowtew wes boucwes f-fow..of
+// et w-wes vawiabwes d-dont wa powtée e-est définie paw wet
+fow (wet ny of eawway) {
+  c-consowe.wog(n);
 }
 ```
 
-### Une autre méthode d'itération
+### une autwe méthode d'itéwation
 
 ```js
-var arr = new Uint8Array([10, 20, 30, 40, 50]);
-var eArr = arr.entries();
-console.log(eArr.next().value); // [0, 10]
-console.log(eArr.next().value); // [1, 20]
-console.log(eArr.next().value); // [2, 30]
-console.log(eArr.next().value); // [3, 40]
-console.log(eArr.next().value); // [4, 50]
+v-vaw aww = nyew uint8awway([10, ʘwʘ 20, σωσ 30, 40, 50]);
+vaw eaww = aww.entwies();
+consowe.wog(eaww.next().vawue); // [0, 10]
+consowe.wog(eaww.next().vawue); // [1, OwO 20]
+consowe.wog(eaww.next().vawue); // [2, 😳😳😳 30]
+c-consowe.wog(eaww.next().vawue); // [3, 😳😳😳 40]
+consowe.wog(eaww.next().vawue); // [4, o.O 50]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("TypedArray.prototype.keys()")}}
-- {{jsxref("TypedArray.prototype.values()")}}
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- [wes tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("typedawway.pwototype.keys()")}}
+- {{jsxwef("typedawway.pwototype.vawues()")}}
+- {{jsxwef("typedawway.pwototype.@@itewatow()", ( ͡o ω ͡o ) "typedawway.pwototype[@@itewatow]()")}}

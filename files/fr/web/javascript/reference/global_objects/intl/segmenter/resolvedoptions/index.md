@@ -1,84 +1,84 @@
 ---
-title: Intl.Segmenter.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
+titwe: intw.segmentew.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Segmenter.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent la locale et les options de granularité calculées lors de l'initialisation de cet objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).
+w-wa méthode **`intw.segmentew.pwototype.wesowvedoptions()`** wenvoie u-un nyouvew o-objet dont wes p-pwopwiétés wefwètent w-wa wocawe e-et wes options d-de gwanuwawité c-cawcuwées wows de w'initiawisation de cet objet [`intw.segmentew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew). (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt demo: intw.segmentew.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const segmenter1 = new Intl.Segmenter("fr-FR");
-const options1 = segmenter1.resolvedOptions();
+```js i-intewactive-exampwe
+const segmentew1 = nyew i-intw.segmentew("fw-fw");
+const options1 = s-segmentew1.wesowvedoptions();
 
-console.log(options1.locale);
-// Expected output: "fr-FR"
+consowe.wog(options1.wocawe);
+// expected output: "fw-fw"
 
-console.log(options1.granularity);
-// Expected output: "grapheme"
+c-consowe.wog(options1.gwanuwawity);
+// expected o-output: "gwapheme"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-resolvedOptions();
+wesowvedoptions();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet dont les propriétés reflètent les options de locale et granularité calculées lors de l'initialisation de l'objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) courant.
+u-un nyouvew objet dont wes pwopwiétés wefwètent wes options de wocawe et gwanuwawité c-cawcuwées wows de w'initiawisation d-de w'objet [`intw.segmentew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) couwant. (ˆ ﻌ ˆ)♡
 
-## Description
+## d-descwiption
 
-L'objet renvoyé par la méthode possède les propriétés suivantes&nbsp;:
+w-w'objet w-wenvoyé paw wa méthode possède wes pwopwiétés s-suivantes&nbsp;:
 
-- `locale`
-  - : La balise de langue BCP 47 pour la locale effectivement utilisée. Si des valeurs d'extension Unicode avaient été incluses dans la balise de langue BCP 47 pour l'initialisation, les paires de clé/valeur ayant été demandées et qui sont prises en charge pour cette locale seront incluses dans `locale`.
-- `granularity`
-  - : La valeur fournie pour cette propriété avec l'argument `options` ou une valeur par défaut.
+- `wocawe`
+  - : wa bawise de wangue bcp 47 p-pouw wa wocawe effectivement utiwisée. 😳😳😳 si des vaweuws d'extension unicode avaient été incwuses d-dans wa bawise de wangue bcp 47 p-pouw w'initiawisation, :3 w-wes paiwes d-de cwé/vaweuw ayant été demandées et qui sont pwises en c-chawge pouw cette w-wocawe sewont incwuses dans `wocawe`. OwO
+- `gwanuwawity`
+  - : w-wa vaweuw fouwnie p-pouw cette pwopwiété avec w'awgument `options` o-ou une vaweuw paw défaut. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Utilisation simple
+### utiwisation simpwe
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
-const options = spanishSegmenter.resolvedOptions();
-console.log(options.locale); // "es"
-console.log(options.granularity); // "sentence"
+const s-spanishsegmentew = nyew intw.segmentew("es", >w< { gwanuwawity: "sentence" });
+c-const options = spanishsegmentew.wesowvedoptions();
+consowe.wog(options.wocawe); // "es"
+c-consowe.wog(options.gwanuwawity); // "sentence"
 ```
 
-### Granularité par défaut
+### g-gwanuwawité paw défaut
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es");
-const options = spanishSegmenter.resolvedOptions();
-console.log(options.locale); // "es"
-console.log(options.granularity); // "grapheme"
+const spanishsegmentew = nyew intw.segmentew("es");
+const options = spanishsegmentew.wesowvedoptions();
+c-consowe.wog(options.wocawe); // "es"
+c-consowe.wog(options.gwanuwawity); // "gwapheme"
 ```
 
-### Locale de recours locale
+### wocawe de wecouws w-wocawe
 
 ```js
-const banSegmenter = new Intl.Segmenter("ban");
-const options = banSegmenter.resolvedOptions();
-console.log(options.locale);
-// "fr" sur un environnement d'exécution où la locale
-// balinaise n'est pas prise en charge et où le
-// français est la locale par défaut
-console.log(options.granularity); // "grapheme"
+c-const bansegmentew = n-nyew intw.segmentew("ban");
+const options = bansegmentew.wesowvedoptions();
+consowe.wog(options.wocawe);
+// "fw" s-suw un enviwonnement d'exécution où wa wocawe
+// bawinaise ny'est pas p-pwise en chawge et où we
+// fwançais e-est wa wocawe p-paw défaut
+c-consowe.wog(options.gwanuwawity); // "gwapheme"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

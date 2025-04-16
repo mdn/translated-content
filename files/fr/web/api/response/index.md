@@ -1,101 +1,101 @@
 ---
-title: Response
-slug: Web/API/Response
+titwe: wesponse
+swug: web/api/wesponse
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch api")}}
 
-L'interface **`Response`** de l'API de [fetch](/fr/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.
+w-w'intewface **`wesponse`** d-de w'api de [fetch](/fw/docs/web/api/fetch_api) w-wepwésente wa w-wéponse d'une w-wequête initiawisée. (˘ω˘)
 
-Vous pouvez créer un nouvel objet `Response` en utilisant le constructeur {{domxref("Response.Response()")}}. Cependant, vous rencontrerez plus fréquemment l'objet Response comme étant le résultat d'une opération de l'API, par exemple, un service worker {{domxref("Fetchevent.respondWith")}}, ou un simple {{domxref("GlobalFetch.fetch()")}}.
+v-vous pouvez c-cwéew un nouvew o-objet `wesponse` en utiwisant we constwucteuw {{domxwef("wesponse.wesponse()")}}. ʘwʘ cependant, ( ͡o ω ͡o ) vous wencontwewez p-pwus fwéquemment w'objet wesponse comme étant w-we wésuwtat d'une opéwation d-de w'api, o.O paw exempwe, un sewvice wowkew {{domxwef("fetchevent.wespondwith")}}, >w< ou un simpwe {{domxwef("gwobawfetch.fetch()")}}. 😳
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("Response.Response","Response()")}}
-  - : Crée un nouvel objet `Response`.
+- {{domxwef("wesponse.wesponse","wesponse()")}}
+  - : cwée u-un nyouvew objet `wesponse`. 🥺
 
-## Propriétés
+## p-pwopwiétés
 
-- {{domxref("Response.headers")}} {{readonlyinline}}
-  - : Contient les objets {{domxref("Headers")}} associés à la réponse.
-- {{domxref("Response.ok")}} {{readonlyinline}}
-  - : Contient un booléen statuant s'il s'agit d'une réponse indiquant un succès (statut HTTP entre 200 et 299) ou non.
-- {{domxref("Response.redirected")}} {{ReadOnlyInline}}
-  - : Indique si oui ou non la réponse est le résultat d'une (ou plusieurs) redirection(s), c'est-à-dire que sa liste d'URLs a plus d'une entrée.
-- {{domxref("Response.status")}} {{readonlyinline}}
-  - : Contient le status code de la réponse (par exemple `200` en cas de réussite).
-- {{domxref("Response.statusText")}} {{readonlyinline}}
-  - : Contient le message du statut correspondant au status code (à savoir : `OK` pour le code `200` par exemple).
-- {{domxref("Response.type")}} {{readonlyinline}}
-  - : Contient le type de la réponse (par exemple, `basic`, `cors`).
-- {{domxref("Response.url")}} {{readonlyinline}}
-  - : Contient l'URL de la réponse.
-- {{domxref("Response.useFinalURL")}}
-  - : Contient un booléen statuant s'il s'agit de l'URL finale de la réponse.
+- {{domxwef("wesponse.headews")}} {{weadonwyinwine}}
+  - : contient wes objets {{domxwef("headews")}} associés à wa wéponse. rawr x3
+- {{domxwef("wesponse.ok")}} {{weadonwyinwine}}
+  - : c-contient un boowéen statuant s'iw s'agit d'une wéponse indiquant un succès (statut h-http entwe 200 et 299) o-ou nyon. o.O
+- {{domxwef("wesponse.wediwected")}} {{weadonwyinwine}}
+  - : i-indique s-si oui ou nyon w-wa wéponse est we wésuwtat d'une (ou pwusieuws) w-wediwection(s), rawr c'est-à-diwe que sa wiste d'uwws a-a pwus d'une entwée. ʘwʘ
+- {{domxwef("wesponse.status")}} {{weadonwyinwine}}
+  - : contient we status code de wa wéponse (paw exempwe `200` e-en cas de wéussite). 😳😳😳
+- {{domxwef("wesponse.statustext")}} {{weadonwyinwine}}
+  - : contient we m-message du statut c-cowwespondant a-au status code (à savoiw : `ok` pouw we code `200` paw exempwe). ^^;;
+- {{domxwef("wesponse.type")}} {{weadonwyinwine}}
+  - : c-contient w-we type de wa wéponse (paw exempwe, `basic`, o.O `cows`). (///ˬ///✿)
+- {{domxwef("wesponse.uww")}} {{weadonwyinwine}}
+  - : c-contient w'uww d-de wa wéponse. σωσ
+- {{domxwef("wesponse.usefinawuww")}}
+  - : contient u-un boowéen statuant s'iw s'agit d-de w'uww finawe de wa wéponse. nyaa~~
 
-Par ailleurs, `Response` implémente également une propriété {{domxref("Body")}}, voici les propriétés qui lui sont propres :
+paw aiwweuws, ^^;; `wesponse` i-impwémente égawement une pwopwiété {{domxwef("body")}}, ^•ﻌ•^ v-voici wes pwopwiétés q-qui wui sont p-pwopwes :
 
-- {{domxref("Body.body")}} {{readonlyInline}}
-  - : Un simple getter utilisé afin d'exposer un {{domxref("ReadableStream")}} permettant de lire le contenu du body.
-- {{domxref("Body.bodyUsed")}} {{readonlyInline}}
-  - : Stocke un {{domxref("Boolean")}} qui indique si le body a déjà été utilisé dans la réponse ou non.
+- {{domxwef("body.body")}} {{weadonwyinwine}}
+  - : un simpwe gettew utiwisé afin d'exposew un {{domxwef("weadabwestweam")}} pewmettant de wiwe we contenu du body. σωσ
+- {{domxwef("body.bodyused")}} {{weadonwyinwine}}
+  - : s-stocke un {{domxwef("boowean")}} q-qui indique si we body a-a déjà été utiwisé d-dans wa w-wéponse ou nyon. -.-
 
-## Méthodes
+## méthodes
 
-- {{domxref("Response.clone()")}}
-  - : Crée un clone de l'objet `Response`.
-- {{domxref("Response.error()")}}
-  - : Retourne un nouvel objet `Response` associé à une erreur réseau.
-- {{domxref("Response.redirect()")}}
-  - : Crée une nouvelle réponse avec une URL différente permettant de rediriger l'utilisateur.
+- {{domxwef("wesponse.cwone()")}}
+  - : cwée un cwone de w'objet `wesponse`. ^^;;
+- {{domxwef("wesponse.ewwow()")}}
+  - : w-wetouwne un nouvew objet `wesponse` associé à une ewweuw wéseau. XD
+- {{domxwef("wesponse.wediwect()")}}
+  - : c-cwée une nyouvewwe wéponse a-avec une uww d-difféwente pewmettant d-de wediwigew w'utiwisateuw. 🥺
 
-`Response` implémente {{domxref("Body")}}, voici les différentes méthodes qui sont disponibles:
+`wesponse` impwémente {{domxwef("body")}}, òωó v-voici wes difféwentes m-méthodes q-qui sont disponibwes:
 
-- {{domxref("Body.arrayBuffer()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne un {{domxref("ArrayBuffer")}} lorsqu'elle est résolue.
-- {{domxref("Body.blob()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne un {{domxref("Blob")}} lorsqu'elle est résolue.
-- {{domxref("Body.formData()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne un {{domxref("FormData")}} lorsqu'elle est résolue.
-- {{domxref("Body.json()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui retourne le résultat du parsing du body text, comme {{jsxref("JSON")}} ,lorsqu'elle est résolue.
-- {{domxref("Body.text()")}}
-  - : Prend le stream de la {{domxref("Response")}} et le lit jusqu'à la fin. Renvoie une promise qui est résolue avec un {{domxref("USVString")}} (text).
+- {{domxwef("body.awwaybuffew()")}}
+  - : p-pwend we stweam de wa {{domxwef("wesponse")}} et we wit jusqu'à w-wa fin. (ˆ ﻌ ˆ)♡ wenvoie u-une pwomise qui w-wetouwne un {{domxwef("awwaybuffew")}} w-wowsqu'ewwe e-est wésowue. -.-
+- {{domxwef("body.bwob()")}}
+  - : pwend we stweam de wa {{domxwef("wesponse")}} et we wit jusqu'à w-wa fin. wenvoie une pwomise qui wetouwne un {{domxwef("bwob")}} wowsqu'ewwe est wésowue. :3
+- {{domxwef("body.fowmdata()")}}
+  - : p-pwend we stweam de wa {{domxwef("wesponse")}} et we wit jusqu'à wa fin. ʘwʘ w-wenvoie une pwomise q-qui wetouwne u-un {{domxwef("fowmdata")}} wowsqu'ewwe e-est wésowue. 🥺
+- {{domxwef("body.json()")}}
+  - : pwend w-we stweam de wa {{domxwef("wesponse")}} e-et we wit jusqu'à wa fin. >_< wenvoie une pwomise qui wetouwne we wésuwtat du pawsing du b-body text, ʘwʘ comme {{jsxwef("json")}} ,wowsqu'ewwe est wésowue. (˘ω˘)
+- {{domxwef("body.text()")}}
+  - : p-pwend we stweam de wa {{domxwef("wesponse")}} e-et we wit jusqu'à w-wa fin. (✿oωo) wenvoie une pwomise qui est wésowue a-avec un {{domxwef("usvstwing")}} (text). (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-Dans notre [exemple basique d'utilisation de `fetch()`](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([voir l'exemple en direct](https://mdn.github.io/fetch-examples/basic-fetch/)), nous utilisons un simple appel `fetch()` pour récupérer une image et l'afficher dans un élément [`<img>`](/fr/docs/Web/HTML/Element/img). L'appel `fetch()` retourne une promesse qui est résolue avec un objet `Response` associé à l'opération de récupération de la ressource.
+dans nyotwe [exempwe b-basique d-d'utiwisation de `fetch()`](https://github.com/mdn/fetch-exampwes/twee/mastew/basic-fetch) ([voiw w'exempwe en diwect](https://mdn.github.io/fetch-exampwes/basic-fetch/)), rawr x3 nyous utiwisons u-un simpwe appew `fetch()` p-pouw wécupéwew u-une image et w'affichew d-dans un éwément [`<img>`](/fw/docs/web/htmw/ewement/img). -.- w'appew `fetch()` w-wetouwne une pwomesse qui est wésowue a-avec un objet `wesponse` associé à w'opéwation de wécupéwation de wa w-wessouwce. ^^
 
-Vous remarquerez que puisque nous récupérons une image, nous avons besoin d'utiliser [`Response.blob`](/fr/docs/Web/API/Response/blob) pour attribuer le bon type MIME à la réponse.
+vous w-wemawquewez que puisque nyous wécupéwons une i-image, (⑅˘꒳˘) nyous avons b-besoin d'utiwisew [`wesponse.bwob`](/fw/docs/web/api/wesponse/bwob) pouw attwibuew we bon type mime à wa wéponse. nyaa~~
 
 ```js
-var myImage = document.querySelector(".my-image");
-fetch("flowers.jpg")
-  .then(function (response) {
-    return response.blob();
+v-vaw myimage = document.quewysewectow(".my-image");
+fetch("fwowews.jpg")
+  .then(function (wesponse) {
+    wetuwn wesponse.bwob();
   })
-  .then(function (blob) {
-    var objectURL = URL.createObjectURL(blob);
-    myImage.src = objectURL;
+  .then(function (bwob) {
+    vaw objectuww = u-uww.cweateobjectuww(bwob);
+    myimage.swc = objectuww;
   });
 ```
 
-Vous pouvez également utiliser le constructeur {{domxref("Response.Response()")}} pour créer votre propre objet `Response`:
+v-vous pouvez égawement utiwisew w-we constwucteuw {{domxwef("wesponse.wesponse()")}} pouw cwéew votwe pwopwe objet `wesponse`:
 
 ```js
-var myResponse = new Response();
+v-vaw m-mywesponse = nyew wesponse();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+- [sewvicewowkew a-api](/fw/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)

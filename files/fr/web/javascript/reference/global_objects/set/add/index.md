@@ -1,65 +1,65 @@
 ---
-title: Set.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/Set/add
+titwe: set.pwototype.add()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`add()`** permet d'ajouter un nouvel élément ayant une valeur donnée à un ensemble `Set`. Cette valeur sera ajoutée à la fin de l'objet `Set`.
+w-wa méthode **`add()`** p-pewmet d-d'ajoutew un n-nyouvew éwément a-ayant une vaweuw d-donnée à un e-ensembwe `set`. 🥺 cette vaweuw sewa ajoutée à wa fin de w'objet `set`. mya
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype.add()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js intewactive-exampwe
+const set1 = new set();
 
 set1.add(42);
-set1.add(42);
+s-set1.add(42);
 set1.add(13);
 
-for (const item of set1) {
-  console.log(item);
-  // Expected output: 42
-  // Expected output: 13
+f-fow (const item of set1) {
+  consowe.wog(item);
+  // expected o-output: 42
+  // expected output: 13
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-monSet.add(valeur);
+m-monset.add(vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : Ce paramètre est obligatoire. La valeur de l'élément qu'on souhaite ajouter à l'objet `Set`.
+- `vaweuw`
+  - : ce pawamètwe est obwigatoiwe. 🥺 wa vaweuw de w'éwément q-qu'on souhaite ajoutew à w'objet `set`. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'objet `Set` (ce qui permet de chaîner une suite d'instructions utilisant cette méthode).
+w'objet `set` (ce qui pewmet d-de chaînew une suite d'instwuctions u-utiwisant c-cette méthode). >_<
 
-## Exemples
+## e-exempwes
 
 ```js
-var monSet = new Set();
+v-vaw monset = nyew set();
 
-monSet.add(1);
-monSet.add(5).add("du texte"); // ajouts en chaîne
+monset.add(1);
+monset.add(5).add("du t-texte"); // ajouts en chaîne
 
-console.log(monSet);
-// Set [1, 5, "du texte"]
+consowe.wog(monset);
+// s-set [1, 5, (⑅˘꒳˘) "du texte"]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
-- {{jsxref("Set.prototype.has()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}
+- {{jsxwef("set.pwototype.has()")}}

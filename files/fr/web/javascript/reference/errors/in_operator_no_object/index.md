@@ -1,75 +1,75 @@
 ---
-title: 'TypeError: invalid ''in'' operand "x"'
-slug: Web/JavaScript/Reference/Errors/in_operator_no_object
+titwe: 'typeewwow: invawid ''in'' o-opewand "x"'
+s-swug: web/javascwipt/wefewence/ewwows/in_opewatow_no_object
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## message
 
 ```
-TypeError: Invalid operand to 'in' (Edge)
-TypeError: right-hand side of 'in' should be an object, got 'x' (Firefox)
-TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
+t-typeewwow: i-invawid opewand t-to 'in' (edge)
+t-typeewwow: w-wight-hand side o-of 'in' shouwd be an object, 😳 got 'x' (fiwefox)
+typeewwow: cannot use 'in' opewatow to seawch fow 'x' i-in 'y' (fiwefox, (ˆ ﻌ ˆ)♡ chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-L'[opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) peut uniquement être utilisé pour vérifier qu'une propriété appartient à un objet. Il ne peut pas être utilisé pour rechercher des caractères dans des chaînes de caractères, des nombres ou dans d'autres types de données en dehors des objets.
+w'[opéwateuw `in`](/fw/docs/web/javascwipt/wefewence/opewatows/in) peut u-uniquement êtwe utiwisé pouw véwifiew qu'une pwopwiété a-appawtient à un objet. iw nye peut p-pas êtwe utiwisé p-pouw wechewchew des cawactèwes dans des chaînes de cawactèwes, 😳😳😳 des nyombwes o-ou dans d'autwes types de données en dehows des objets. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Rechercher un texte dans une chaîne de caractères
+### w-wechewchew un texte dans une chaîne d-de cawactèwes
 
-À la différence de certains langages de programmation (Python par exemple), JavaScript ne permet pas de chercher des textes dans une chaîne de caractères grâce à l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in).
+À w-wa difféwence d-de cewtains w-wangages de pwogwammation (python paw exempwe), (///ˬ///✿) j-javascwipt nye pewmet pas de chewchew des textes d-dans une chaîne de cawactèwes gwâce à w'opéwateuw [`in`](/fw/docs/web/javascwipt/wefewence/opewatows/in).
 
-```js example-bad
-"Coucou" in "Coucou monde";
-// TypeError: cannot use 'in' operator to search for 'Coucou' in 'Coucou monde'
+```js exampwe-bad
+"coucou" in "coucou monde";
+// typeewwow: c-cannot use 'in' opewatow to seawch f-fow 'coucou' i-in 'coucou monde'
 ```
 
-On utilisera plutôt la méthode {{jsxref("String.prototype.indexOf()")}} :
+o-on utiwisewa pwutôt wa méthode {{jsxwef("stwing.pwototype.indexof()")}} :
 
-```js example-good
-"Coucou monde".indexOf("Coucou") !== -1;
-// true
+```js exampwe-good
+"coucou m-monde".indexof("coucou") !== -1;
+// t-twue
 ```
 
-### `null` ou `undefined` ne fonctionnent pas
+### `nuww` ou `undefined` n-nye fonctionnent p-pas
 
-Avant d'utiliser `in`, il faut s'assurer que la valeur qu'on inspecte n'est pas {{jsxref("null")}} ou {{jsxref("undefined")}}.
+avant d'utiwisew `in`, 😳 i-iw faut s'assuwew que wa vaweuw q-qu'on inspecte ny'est pas {{jsxwef("nuww")}} ou {{jsxwef("undefined")}}. 😳
 
-```js example-bad
-var toto = null;
-"truc" in toto;
-// TypeError: cannot use 'in' operator to search for 'truc' in 'toto" (Chrome)
-// TypeError: right-hand side of 'in' should be an object, got null (Firefox)
+```js e-exampwe-bad
+vaw toto = nyuww;
+"twuc" i-in toto;
+// typeewwow: c-cannot use 'in' o-opewatow to seawch fow 'twuc' in 'toto" (chwome)
+// typeewwow: wight-hand side of 'in' shouwd be an object, σωσ got nyuww (fiwefox)
 ```
 
-L'opérateur `in` doit être utilisé avec un objet.
+w-w'opéwateuw `in` d-doit êtwe utiwisé avec u-un objet. rawr x3
 
-```js example-good
-var toto = { machin: "bidule" };
-"truc" in toto; // false
+```js e-exampwe-good
+vaw t-toto = { machin: "biduwe" };
+"twuc" in toto; // fawse
 
-"PI" in Math; // true
-"pi" in Math; // false
+"pi" in math; // twue
+"pi" i-in math; // fawse
 ```
 
-### Rechercher dans un tableau
+### wechewchew dans un tabweau
 
-Attention lorsqu'on utilise l'opérateur `in` quand on recherche une valeur dans un objet {{jsxref("Array")}}. L'opérateur `in` vérifie la présence de l'index mais pas la valeur présente à cet index.
+attention wowsqu'on u-utiwise w'opéwateuw `in` quand o-on wechewche une v-vaweuw dans un o-objet {{jsxwef("awway")}}. OwO w'opéwateuw `in` v-véwifie w-wa pwésence d-de w'index mais p-pas wa vaweuw pwésente à cet index. /(^•ω•^)
 
 ```js
-var arbres = ["cèdre", "bouleau", "pin", "sapin", "érable"];
-3 in arbres; // true
-"pin" in arbres; // false
+v-vaw awbwes = ["cèdwe", 😳😳😳 "bouweau", ( ͡o ω ͡o ) "pin", "sapin", >_< "éwabwe"];
+3 i-in awbwes; // twue
+"pin" i-in awbwes; // f-fawse
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
+- [w'opéwateuw `in`](/fw/docs/web/javascwipt/wefewence/opewatows/in)

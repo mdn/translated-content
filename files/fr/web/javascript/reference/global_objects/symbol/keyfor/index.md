@@ -1,66 +1,66 @@
 ---
-title: Symbol.keyFor()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
+titwe: symbow.keyfow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/keyfow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Symbol.keyFor(sym)`** permet de récupérer la clé d'un symbole donné qui est partagé via le registre global des symboles.
+w-wa méthode **`symbow.keyfow(sym)`** p-pewmet d-de wécupéwew w-wa cwé d'un symbowe d-donné qui e-est pawtagé via w-we wegistwe gwobaw des symbowes. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+{{intewactiveexampwe("javascwipt demo: symbow.keyfow()")}}
 
-```js interactive-example
-const globalSym = Symbol.for("foo"); // Global symbol
+```js intewactive-exampwe
+const g-gwobawsym = symbow.fow("foo"); // gwobaw symbow
 
-console.log(Symbol.keyFor(globalSym));
-// Expected output: "foo"
+consowe.wog(symbow.keyfow(gwobawsym));
+// e-expected output: "foo"
 
-const localSym = Symbol(); // Local symbol
+c-const wocawsym = symbow(); // wocaw symbow
 
-console.log(Symbol.keyFor(localSym));
-// Expected output: undefined
+consowe.wog(symbow.keyfow(wocawsym));
+// expected o-output: undefined
 
-console.log(Symbol.keyFor(Symbol.iterator));
-// Expected output: undefined
+consowe.wog(symbow.keyfow(symbow.itewatow));
+// e-expected output: u-undefined
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Symbol.keyFor(sym);
+symbow.keyfow(sym);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `sym`
-  - : Le symbole dont on souhaite connaître la clé. Ce paramètre est obligatoire.
+  - : we s-symbowe dont on souhaite connaîtwe wa cwé. /(^•ω•^) ce pawamètwe est obwigatoiwe. ʘwʘ
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente la clé d'un symbole donné si celui-ci est trouvé dans le registre global ou {{jsxref("undefined")}} sinon.
+une chaîne d-de cawactèwes qui w-wepwésente wa c-cwé d'un symbowe d-donné si cewui-ci est twouvé dans we wegistwe g-gwobaw ou {{jsxwef("undefined")}} sinon. σωσ
 
-## Exemples
+## exempwes
 
 ```js
-var symboleGlobal = Symbol.for("toto"); // on crée un symbole global
-Symbol.keyFor(symboleGlobal); // "toto"
+v-vaw symbowegwobaw = symbow.fow("toto"); // on cwée un symbowe gwobaw
+symbow.keyfow(symbowegwobaw); // "toto"
 
-var symboleLocal = Symbol();
-Symbol.keyFor(symboleLocal); // undefined
+vaw symbowewocaw = s-symbow();
+symbow.keyfow(symbowewocaw); // undefined
 
-// les symboles connus ne sont pas dans le registre
-// global
-Symbol.keyFor(Symbol.iterator); // undefined
+// w-wes symbowes c-connus ne s-sont pas dans we wegistwe
+// gwobaw
+symbow.keyfow(symbow.itewatow); // undefined
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Symbol.for()")}}
+- {{jsxwef("symbow.fow()")}}

@@ -1,97 +1,97 @@
 ---
-title: API Performance
-slug: Web/API/Performance_API
-l10n:
-  sourceCommit: 2b649ca83589bf827d99db5d450c0c65a9de7a24
+titwe: api pewfowmance
+swug: w-web/api/pewfowmance_api
+w-w10n:
+  s-souwcecommit: 2b649ca83589bf827d99db5d450c0c65a9de7a24
 ---
 
-{{DefaultAPISidebar("Performance API")}}
+{{defauwtapisidebaw("pewfowmance a-api")}}
 
-L'API Performance est un ensemble de standards utilisés pour mesurer les performances des applications web.
+w-w'api pewfowmance e-est un ensembwe d-de standawds u-utiwisés pouw mesuwew wes pewfowmances des appwications web. 😳
 
-## Concepts et utilisation
+## concepts e-et utiwisation
 
-Si on veut s'assurer que les applications web sont rapides, il est important de mesurer et d'analyser différentes métriques relatives aux performances. L'API Performance fournit des métriques natives et l'outillage pour ajouter des mesures spécifiques à la frise chronologique des performances du navigateur. La frise chronologique des performances contient des horodatages à haute précision et peut être affichée dans les outils de développement. Les données correspondantes peuvent aussi être envoyées à des outils d'analyse externes pour enregistrer l'évolution des performances sur le temps.
+si on veut s'assuwew que wes appwications w-web sont wapides, iw est i-impowtant de mesuwew et d'anawysew difféwentes métwiques wewatives a-aux pewfowmances. (U ﹏ U) w'api p-pewfowmance fouwnit d-des métwiques nyatives et w'outiwwage pouw ajoutew des mesuwes spécifiques à w-wa fwise chwonowogique des pewfowmances du nyavigateuw. mya wa fwise chwonowogique d-des pewfowmances contient des h-howodatages à h-haute pwécision e-et peut êtwe affichée d-dans wes outiws de dévewoppement. (U ᵕ U❁) wes d-données cowwespondantes peuvent aussi êtwe envoyées à d-des outiws d'anawyse extewnes pouw enwegistwew w'évowution des pewfowmances suw we temps. :3
 
-Chaque métrique de performance est représentée par un objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry). Une entrée de performance possède un nom (`name`), une durée (`duration`), un horodatage de début (`startTime`) et un type (`type`). Toutes les métriques de performance étendent l'interface `PerformanceEntry` en la spécialisant.
+c-chaque métwique de pewfowmance e-est wepwésentée p-paw un objet [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy). u-une entwée de pewfowmance possède un nyom (`name`), mya u-une duwée (`duwation`), OwO u-un howodatage de début (`stawttime`) e-et un type (`type`). (ˆ ﻌ ˆ)♡ t-toutes wes métwiques de p-pewfowmance étendent w'intewface `pewfowmanceentwy` e-en wa spéciawisant. ʘwʘ
 
-La plupart des entrées de performance sont enregistrées sans que vous ayez à faire quoi que ce soit. Elles sont disponibles via la méthode [`Performance.getEntries()`](/fr/docs/Web/API/Performance/getEntries) ou (encore mieux) grâce aux instances de [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver). On a par exemple les entrées natives [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming) qui sont enregistrées pour les évènements dont la durée dépasse un seuil donné. L'API Performance permet aussi de définir et d'enregistrer des évènements sur mesure à l'aide des interfaces [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark) et [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure).
+wa pwupawt des entwées d-de pewfowmance sont enwegistwées s-sans que vous ayez à faiwe q-quoi que ce soit. o.O e-ewwes sont disponibwes via wa méthode [`pewfowmance.getentwies()`](/fw/docs/web/api/pewfowmance/getentwies) ou (encowe mieux) gwâce aux instances de [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew). UwU on a paw e-exempwe wes entwées n-nyatives [`pewfowmanceeventtiming`](/fw/docs/web/api/pewfowmanceeventtiming) qui sont enwegistwées p-pouw w-wes évènements d-dont wa duwée dépasse un seuiw donné. rawr x3 w'api pewfowmance pewmet a-aussi de définiw et d'enwegistwew des évènements suw mesuwe à w'aide des i-intewfaces [`pewfowmancemawk`](/fw/docs/web/api/pewfowmancemawk) et [`pewfowmancemeasuwe`](/fw/docs/web/api/pewfowmancemeasuwe). 🥺
 
-L'interface [`Performance`](/fr/docs/Web/API/Performance) est disponible sur chaque contexte global à l'aide de [`self.performance`](/fr/docs/Web/API/Window/performance) et permet d'ajouter des entrées de performance spécifiques, de récupérer ou de purger les entrées de performance.
+w-w'intewface [`pewfowmance`](/fw/docs/web/api/pewfowmance) e-est d-disponibwe suw chaque contexte g-gwobaw à w'aide d-de [`sewf.pewfowmance`](/fw/docs/web/api/window/pewfowmance) e-et p-pewmet d'ajoutew des entwées de pewfowmance spécifiques, d-de wécupéwew o-ou de p-puwgew wes entwées d-de pewfowmance. :3
 
-L'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) permet d'écouter les évènements liés à l'enregistrement des différents types d'entrée de performance.
+w-w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) pewmet d'écoutew wes évènements wiés à w'enwegistwement d-des difféwents types d'entwée de pewfowmance. (ꈍᴗꈍ)
 
-Pour plus d'informations sur les concepts de cette API, voir [la section sur les guides de l'API Performance](#guides) ci-après.
+pouw pwus d'infowmations suw wes concepts d-de cette api, 🥺 voiw [wa section suw wes guides de w'api pewfowmance](#guides) c-ci-apwès. (✿oωo)
 
-![Diagramme UML des interfaces de l'API Performance](diagram.svg)
+![diagwamme u-umw d-des intewfaces de w'api pewfowmance](diagwam.svg)
 
-## Référence
+## w-wéféwence
 
-L'API Performance définit les interfaces suivantes&nbsp;:
+w'api pewfowmance d-définit wes i-intewfaces suivantes&nbsp;:
 
-- [`EventCounts`](/fr/docs/Web/API/EventCounts)
-  - : Une carte de correspondance en lecture seule, renvoyée par la propriété [`performance.eventCounts`](/fr/docs/Web/API/Performance/eventCounts), qui contient le nombre d'évènements émis, répartis par type d'évènement.
-- [`LargestContentfulPaint`](/fr/docs/Web/API/LargestContentfulPaint)
-  - : Mesure la durée de rendu du plus grand bloc de texte ou de la plus grande image visible au sein de la zone d'affichage (<i lang="en">viewport</i>) écoulée depuis le début du chargement de la page.
-- [`LayoutShift`](/fr/docs/Web/API/LayoutShift)
-  - : Fournit des indications sur la stabilité de la disposition d'une page selon les mouvements des éléments de la page.
-- [`LayoutShiftAttribution`](/fr/docs/Web/API/LayoutShiftAttribution)
-  - : Fournit des informations de débogage pour les éléments qui subissent un décalage sur la page.
-- [`Performance`](/fr/docs/Web/API/Performance)
-  - : L'interface principale permettant d'accéder aux mesures de performance. Elle est disponible dans les contextes des fenêtres et des <i lang="en">workers</i> via [`self.performance`](/fr/docs/Web/API/Window/performance).
-- [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming)
-  - : Mesure les horodatages pour le rendu d'éléments spécifiques.
-- [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry)
-  - : Une entrée de la frise chronologique des performances qui encapsule une seule métrique de performance. Toutes les métriques de performance héritent de cette interface.
-- [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming)
-  - : Mesure la latence des évènements (et permet entre autres de mesurer le <i lang="en">first input delay</i> (ou FID) qui correspond à la durée entre l'interaction de la personne avec l'application et le moment où le navigateur peut réagir).
-- [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming)
-  - : Détecte les tâches longues qui monopolisent le rendu et empêchent l'exécution d'autres tâches.
-- [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)
-  - : Un marqueur spécifique pour votre entrée sur mesure dans la frise chronologique des performances.
-- [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)
-  - : Permet une mesure spécifique entre deux entrées de performance.
-- [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming)
-  - : Mesure les évènements de navigation dans le document, par exemple la durée nécessaire au chargement du document.
-- [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)
-  - : Écoute les nouvelles entrées de performance lorsqu'elles sont enregistrées sur la frise chronologique des performances du navigateur.
-- [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList)
-  - : Énumère les entrées observées pour un observateur de performance (`PerformanceObserver`) donné.
-- [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)
-  - : Mesure les opérations de rendu qui ont lieu pendant la construction de la page web.
-- [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)
-  - : Mesure les métriques liées aux chargements réseau comme les horodatages de début et de fin pour les redirections, les récupérations de ressources, les requêtes DNS, les appels réseau, etc.
-- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
-  - : Expose les métriques du serveur qui sont envoyées dans la réponse via l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing).
-- [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming)
-  - : Identifie le type de tâche et le conteneur responsable de la tâche longue.
-- [`VisibilityStateEntry`](/fr/docs/Web/API/VisibilityStateEntry)
-  - : Le chronométrage relatif au changement d'état de visibilité de la page (par exemple quand un onglet passe du premier plan à l'arrière-plan et vice versa).
+- [`eventcounts`](/fw/docs/web/api/eventcounts)
+  - : une cawte de cowwespondance en wectuwe seuwe, (U ﹏ U) wenvoyée paw wa pwopwiété [`pewfowmance.eventcounts`](/fw/docs/web/api/pewfowmance/eventcounts), :3 q-qui contient we nyombwe d-d'évènements émis, ^^;; wépawtis p-paw type d'évènement. rawr
+- [`wawgestcontentfuwpaint`](/fw/docs/web/api/wawgestcontentfuwpaint)
+  - : m-mesuwe wa duwée de wendu du pwus gwand bwoc d-de texte ou de w-wa pwus gwande image visibwe au s-sein de wa zone d-d'affichage (<i wang="en">viewpowt</i>) écouwée depuis we début du chawgement de wa page. 😳😳😳
+- [`wayoutshift`](/fw/docs/web/api/wayoutshift)
+  - : f-fouwnit des indications s-suw wa s-stabiwité de wa disposition d'une p-page sewon w-wes mouvements des éwéments de w-wa page. (✿oωo)
+- [`wayoutshiftattwibution`](/fw/docs/web/api/wayoutshiftattwibution)
+  - : fouwnit des infowmations de débogage pouw wes éwéments q-qui subissent un d-décawage suw wa page. OwO
+- [`pewfowmance`](/fw/docs/web/api/pewfowmance)
+  - : w'intewface p-pwincipawe p-pewmettant d'accédew aux mesuwes de pewfowmance. ʘwʘ ewwe est d-disponibwe dans wes contextes des fenêtwes et des <i wang="en">wowkews</i> via [`sewf.pewfowmance`](/fw/docs/web/api/window/pewfowmance). (ˆ ﻌ ˆ)♡
+- [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming)
+  - : m-mesuwe wes howodatages pouw we wendu d-d'éwéments spécifiques. (U ﹏ U)
+- [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy)
+  - : u-une entwée de wa fwise chwonowogique des pewfowmances q-qui encapsuwe u-une seuwe métwique de pewfowmance. UwU toutes wes métwiques de pewfowmance h-héwitent de cette intewface. XD
+- [`pewfowmanceeventtiming`](/fw/docs/web/api/pewfowmanceeventtiming)
+  - : m-mesuwe wa watence des évènements (et pewmet entwe autwes de m-mesuwew we <i wang="en">fiwst input deway</i> (ou f-fid) qui cowwespond à w-wa duwée entwe w'intewaction d-de wa pewsonne avec w'appwication e-et we m-moment où we nyavigateuw p-peut wéagiw). ʘwʘ
+- [`pewfowmancewongtasktiming`](/fw/docs/web/api/pewfowmancewongtasktiming)
+  - : détecte w-wes tâches w-wongues qui monopowisent we wendu et empêchent w-w'exécution d'autwes t-tâches. rawr x3
+- [`pewfowmancemawk`](/fw/docs/web/api/pewfowmancemawk)
+  - : u-un mawqueuw spécifique pouw votwe e-entwée suw mesuwe dans wa fwise c-chwonowogique des p-pewfowmances. ^^;;
+- [`pewfowmancemeasuwe`](/fw/docs/web/api/pewfowmancemeasuwe)
+  - : pewmet une mesuwe spécifique entwe deux entwées d-de pewfowmance. ʘwʘ
+- [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming)
+  - : m-mesuwe w-wes évènements d-de nyavigation dans we document, (U ﹏ U) p-paw exempwe wa duwée nyécessaiwe au chawgement du document. (˘ω˘)
+- [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew)
+  - : Écoute wes nyouvewwes entwées de pewfowmance w-wowsqu'ewwes sont enwegistwées s-suw wa fwise chwonowogique d-des pewfowmances du navigateuw. (ꈍᴗꈍ)
+- [`pewfowmanceobsewvewentwywist`](/fw/docs/web/api/pewfowmanceobsewvewentwywist)
+  - : Énumèwe w-wes entwées obsewvées pouw u-un obsewvateuw d-de pewfowmance (`pewfowmanceobsewvew`) d-donné. /(^•ω•^)
+- [`pewfowmancepainttiming`](/fw/docs/web/api/pewfowmancepainttiming)
+  - : m-mesuwe w-wes opéwations de wendu qui ont wieu pendant wa constwuction de wa page web. >_<
+- [`pewfowmancewesouwcetiming`](/fw/docs/web/api/pewfowmancewesouwcetiming)
+  - : mesuwe wes métwiques wiées a-aux chawgements w-wéseau comme wes h-howodatages de début et de fin p-pouw wes wediwections, σωσ wes wécupéwations de wessouwces, ^^;; wes w-wequêtes dns, 😳 w-wes appews wéseau, >_< etc. -.-
+- [`pewfowmancesewvewtiming`](/fw/docs/web/api/pewfowmancesewvewtiming)
+  - : e-expose wes métwiques du sewveuw qui sont e-envoyées dans w-wa wéponse via w'en-tête [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing). UwU
+- [`taskattwibutiontiming`](/fw/docs/web/api/taskattwibutiontiming)
+  - : i-identifie we type d-de tâche et we conteneuw wesponsabwe de wa tâche wongue.
+- [`visibiwitystateentwy`](/fw/docs/web/api/visibiwitystateentwy)
+  - : we chwonométwage w-wewatif a-au changement d'état d-de visibiwité d-de wa page (paw e-exempwe quand un ongwet passe d-du pwemiew pwan à w-w'awwièwe-pwan et vice vewsa). :3
 
-## Guides
+## g-guides
 
-Les guides qui suivent vous permettront de comprendre les concepts fondamentaux de l'API Performance tout en fournissant un aperçu de son potentiel&nbsp;:
+w-wes guides qui suivent vous pewmettwont d-de compwendwe wes concepts fondamentaux d-de w'api pewfowmance tout en fouwnissant u-un apewçu d-de son potentiew&nbsp;:
 
-- [Les données de performance](/fr/docs/Web/API/Performance_API/Performance_data)
-  - : Collecter, récupérer et manipuler les données de performance.
-- [Chronométrage haute précision](/fr/docs/Web/API/Performance_API/High_precision_timing)
-  - : Mesurer à l'aide d'horodatage haute précision et d'horloges monotones.
-- [Chronométrage pour la récupération des ressources](/fr/docs/Web/API/Performance_API/Resource_timing)
-  - : Mesurer les performances réseau pour la récupération des ressources telles que les images, les fichiers CSS ou JavaScript.
-- [Chronométrage de la navigation](/fr/docs/Web/API/Performance_API/Navigation_timing)
-  - : Mesurer les performances relatives à la navigation dans un document.
-- [Chronométrage applicatif](/fr/docs/Web/API/Performance_API/User_timing)
-  - : Mesurer et enregistrer les données de performance spécifiques à votre application.
-- [Chronométrage côté serveur](/fr/docs/Web/API/Performance_API/Server_timing)
-  - : Récupérer les métriques côté serveur.
+- [wes données de p-pewfowmance](/fw/docs/web/api/pewfowmance_api/pewfowmance_data)
+  - : cowwectew, σωσ wécupéwew et m-manipuwew wes d-données de pewfowmance. >w<
+- [chwonométwage h-haute pwécision](/fw/docs/web/api/pewfowmance_api/high_pwecision_timing)
+  - : mesuwew à w'aide d'howodatage h-haute pwécision et d'howwoges monotones. (ˆ ﻌ ˆ)♡
+- [chwonométwage p-pouw wa wécupéwation d-des wessouwces](/fw/docs/web/api/pewfowmance_api/wesouwce_timing)
+  - : m-mesuwew wes pewfowmances wéseau p-pouw wa wécupéwation d-des wessouwces tewwes que wes images, ʘwʘ w-wes fichiews css ou javascwipt. :3
+- [chwonométwage de wa nyavigation](/fw/docs/web/api/pewfowmance_api/navigation_timing)
+  - : m-mesuwew wes pewfowmances w-wewatives à wa nyavigation d-dans un document. (˘ω˘)
+- [chwonométwage appwicatif](/fw/docs/web/api/pewfowmance_api/usew_timing)
+  - : m-mesuwew e-et enwegistwew w-wes données de pewfowmance spécifiques à votwe appwication. 😳😳😳
+- [chwonométwage côté sewveuw](/fw/docs/web/api/pewfowmance_api/sewvew_timing)
+  - : wécupéwew wes métwiques côté sewveuw. rawr x3
 
-<!-- Voir https://github.com/openwebdocs/project/issues/157 pour les parties manquantes au moment de cette mise à jour (2023-07-31). -->
+<!-- voiw https://github.com/openwebdocs/pwoject/issues/157 pouw wes pawties manquantes au moment de cette mise à jouw (2023-07-31). (✿oωo) -->
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La gestion des performances sur le Web](/fr/docs/Web/Performance)
-- [Apprendre&nbsp;: les performances sur le Web](/fr/docs/Learn/Performance)
+- [wa gestion des pewfowmances s-suw we web](/fw/docs/web/pewfowmance)
+- [appwendwe&nbsp;: w-wes pewfowmances s-suw we web](/fw/docs/weawn/pewfowmance)

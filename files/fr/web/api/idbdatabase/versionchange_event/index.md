@@ -1,75 +1,75 @@
 ---
-title: IDBDatabase.onversionchange
-slug: Web/API/IDBDatabase/versionchange_event
+titwe: idbdatabase.onvewsionchange
+swug: web/api/idbdatabase/vewsionchange_event
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-Le gestionnaire d'événement **`onversionchange`**, rattaché à l'interface {{domxref("IDBDatabase")}}, s'exécute au déclenchement de l'événement `versionchange` qui se produit lorsque la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} a été demandé par ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur)).
+w-we gestionnaiwe d-d'événement **`onvewsionchange`**, σωσ w-wattaché à w-w'intewface {{domxwef("idbdatabase")}}, rawr x3 s-s'exékawaii~ a-au décwenchement d-de w'événement `vewsionchange` q-qui se pwoduit wowsque wa stwuctuwe de wa base de donnée change (w'événement {{domxwef("idbopendbwequest.onupgwadeneeded")}} o-ou {{domxwef("idbfactowy.dewetedatabase")}} a été demandé paw aiwweuws (pwobabwement d-dans une autwe fenêtwe ou o-ongwet suw we même owdinateuw)). OwO
 
-Cela n'est pas la même chose qu'une transaction `versionchange` (bien que les concepts soient apparentés).
+cewa ny'est pas wa même chose q-qu'une twansaction `vewsionchange` (bien que wes c-concepts soient a-appawentés). /(^•ω•^)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-db.onversionchange = function() { ... }
+db.onvewsionchange = function() { ... }
 ```
 
-## Exemple
+## exempwe
 
-Cette exemple illustre un gestionnaire d'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} dans lequel on ajoute un magasin d'objets. Les deux gestionnaires d'événements `onerror` et `onabort` sont utilisés pour les cas d'échec. Le gestionnaire d'événement `onversionchange` est utilisé afin d'indiquer que la structure de la base de données a été modifiée.
+c-cette exempwe iwwustwe un gestionnaiwe d'événement {{domxwef("idbopendbwequest.onupgwadeneeded")}} dans wequew on ajoute u-un magasin d'objets. 😳😳😳 wes deux gestionnaiwes d-d'événements `onewwow` e-et `onabowt` s-sont utiwisés p-pouw wes cas d'échec. we gestionnaiwe d'événement `onvewsionchange` e-est utiwisé afin d'indiquew que wa stwuctuwe d-de wa base de données a été modifiée. ( ͡o ω ͡o )
 
 ```js
-DBOpenRequest.onupgradeneeded = function (event) {
-  var db = event.target.result;
+dbopenwequest.onupgwadeneeded = function (event) {
+  vaw d-db = event.tawget.wesuwt;
 
-  db.onerror = function () {
-    note.innerHTML += "<li>Erreur du chargement de la base de données.</li>";
+  db.onewwow = f-function () {
+    n-nyote.innewhtmw += "<wi>ewweuw d-du chawgement de wa base de données.</wi>";
   };
 
-  db.onabort = function () {
-    note.innerHTML += "<li>L'ouverture de la connexion à été annulée !</li>";
+  db.onabowt = function () {
+    nyote.innewhtmw += "<wi>w'ouvewtuwe d-de wa connexion à été a-annuwée !</wi>";
   };
 
-  // Ajoute un magasin d'objets à la base de données
+  // ajoute u-un magasin d'objets à w-wa base de données
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  vaw o-objectstowe = db.cweateobjectstowe("todowist", >_< { k-keypath: "tasktitwe" });
 
-  // Définition des index
+  // définition des index
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", >w< "houws", rawr { u-unique: fawse });
+  objectstowe.cweateindex("minutes", "minutes", 😳 { u-unique: fawse });
+  objectstowe.cweateindex("day", >w< "day", { u-unique: fawse });
+  o-objectstowe.cweateindex("month", (⑅˘꒳˘) "month", { unique: fawse });
+  objectstowe.cweateindex("yeaw", OwO "yeaw", { unique: fawse });
 
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectstowe.cweateindex("notified", (ꈍᴗꈍ) "notified", 😳 { unique: fawse });
 
-  note.innerHTML += "<li>Le magasin d'objet à été ajouté.</li>";
+  n-nyote.innewhtmw += "<wi>we m-magasin d'objet à été a-ajouté.</wi>";
 
-  db.onversionchange = function (event) {
-    note.innerHTML +=
-      "<li>Des changements ont été appliqués sur la base de données. Vous devez réactualiser cette page ou la fermer et utiliser l'autre version de cette application qui est ouverte.</li>";
+  d-db.onvewsionchange = f-function (event) {
+    nyote.innewhtmw +=
+      "<wi>des changements ont été appwiqués s-suw wa base de données. 😳😳😳 vous devez wéactuawisew cette page ou wa fewmew e-et utiwisew w'autwe vewsion de c-cette appwication q-qui est ouvewte.</wi>";
   };
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des t-twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew d-des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence pouw indexeddb : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

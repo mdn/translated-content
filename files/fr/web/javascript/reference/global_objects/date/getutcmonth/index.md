@@ -1,57 +1,57 @@
 ---
-title: Date.prototype.getUTCMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
+titwe: date.pwototype.getutcmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCMonth()`** renvoie le mois de la date renseignée, d'après UTC. La numérotation des mois commence à 0 pour le premier mois de l'année.
+w-wa méthode **`getutcmonth()`** w-wenvoie we m-mois de wa date w-wenseignée, 🥺 d'apwès u-utc. mya wa numéwotation d-des m-mois commence à 0 p-pouw we pwemiew mois de w'année. 🥺
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMonth()")}}
+{{intewactiveexampwe("javascwipt demo: date.getutcmonth()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js intewactive-exampwe
+const date1 = nyew d-date("decembew 31, >_< 1975, 23:15:30 gmt+11:00");
+const date2 = n-new date("decembew 31, >_< 1975, (⑅˘꒳˘) 23:15:30 gmt-11:00");
 
-// December
-console.log(date1.getUTCMonth());
-// Expected output: 11
+// d-decembew
+consowe.wog(date1.getutcmonth());
+// expected output: 11
 
-// January
-console.log(date2.getUTCMonth());
-// Expected output: 0
+// januawy
+c-consowe.wog(date2.getutcmonth());
+// expected o-output: 0
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getUTCMonth();
+dateobj.getutcmonth();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier entre 0 et 11 correspondant au mois dans l'année de la date indiquée selon le temps universel (0 pour janvier, 1 pour février, 2 pour mars, et ainsi de suite…).
+un entiew entwe 0 et 11 cowwespondant a-au mois dans w'année de wa date indiquée sewon we temps univewsew (0 p-pouw janview, /(^•ω•^) 1 pouw févwiew, rawr x3 2 p-pouw maws, (U ﹏ U) et a-ainsi de suite…). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `getUTCMonth()`
+### u-utiwisew `getutcmonth()`
 
-L'exemple suivant assigne le mois de la date actuelle à la variable `mois`.
+w'exempwe suivant assigne we mois d-de wa date actuewwe à wa vawiabwe `mois`. (⑅˘꒳˘)
 
 ```js
-var aujourdhui = new Date();
-var mois = aujourdhui.getUTCMonth();
+vaw aujouwdhui = n-nyew date();
+vaw mois = aujouwdhui.getutcmonth();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getMonth()")}}
-- {{jsxref("Date.prototype.setUTCMonth()")}}
+- {{jsxwef("date.pwototype.getmonth()")}}
+- {{jsxwef("date.pwototype.setutcmonth()")}}

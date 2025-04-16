@@ -1,95 +1,95 @@
 ---
-title: IDBRequest.error
-slug: Web/API/IDBRequest/error
+titwe: idbwequest.ewwow
+swug: w-web/api/idbwequest/ewwow
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`error`** de l'interface {{domxref("IDBRequest")}} renvoie l'erreur associée lorsque la requête est un échec.
+w-wa pwopwiété **`ewwow`** d-de w'intewface {{domxwef("idbwequest")}} w-wenvoie w-w'ewweuw associée w-wowsque wa w-wequête est un échec. (///ˬ///✿)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myError = request.error;
+vaw myewwow = wequest.ewwow;
 ```
 
-### Valeur
+### vaweuw
 
-Une erreur {{domxref("DOMError")}} qui contient l'erreur pertinente. Pour Chrome 48 et les versions ultérieures, cette propriété est une {{domxref("DOMException")}} car `DOMError` a été retiré du standard pour le DOM. Les codes d'erreurs suivants sont utilisés selon les conditions d'erreur :
+une ewweuw {{domxwef("domewwow")}} q-qui contient w'ewweuw pewtinente. σωσ pouw chwome 48 e-et wes vewsions uwtéwieuwes, nyaa~~ c-cette pwopwiété est une {{domxwef("domexception")}} caw `domewwow` a été w-wetiwé du standawd pouw we dom. ^^;; w-wes codes d'ewweuws s-suivants sont utiwisés sewon wes conditions d'ewweuw :
 
-| Erreur               | Explication                                                                                                                                                                                                                                                                                 |
+| ewweuw               | e-expwication                                                                                                                                                                                                                                                                                 |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `AbortError`         | Si on annule la transaction en cours, toutes les requêtes en cours reçoivent cette erreur.                                                                                                                                                                                                  |
-| `ConstraintError`    | Erreur obtenue lorsqu'on tente d'insérer des données qui ne respectent pas une contrainte. C'est un type d'exception utilisé lorsqu'on crée des magasins d'objet et des index. On aura cette erreur lorsqu'on essaiera par exemple d'ajouter une clé qui existe déjà dans l'enregistrement. |
-| `QuotaExceededError` | Erreur obtenue lorsque atteint le quota d'espace disque et que l'utilisateur refuse de céder plus d'espace mémoire.                                                                                                                                                                         |
-| `UnknownError`       | Erreur obtenue lorsque l'opération a échoué pour des raisons qui ne sont pas propres à la base de données (par exemple une erreur d'écriture sur le disque).                                                                                                                                |
-| `NoError`            | Valeur utilisée lorsque la requête est réussie.                                                                                                                                                                                                                                             |
-| `VersionError`       | Erreur obtenue lorsqu'on essaye d'ouvrir une base de données avec une version inférieure à celle dont elle dispose déjà.                                                                                                                                                                    |
+| `abowtewwow`         | si on annuwe wa twansaction en couws, ^•ﻌ•^ toutes wes wequêtes e-en couws weçoivent cette ewweuw. σωσ                                                                                                                                                                                                  |
+| `constwaintewwow`    | e-ewweuw obtenue wowsqu'on t-tente d'inséwew d-des données q-qui nye wespectent pas une contwainte. -.- c'est u-un type d'exception utiwisé wowsqu'on cwée d-des magasins d'objet et des index. on auwa cette ewweuw wowsqu'on essaiewa paw exempwe d'ajoutew u-une cwé qui existe déjà dans w-w'enwegistwement. ^^;; |
+| `quotaexceededewwow` | ewweuw o-obtenue wowsque a-atteint we quota d'espace disque et que w'utiwisateuw wefuse d-de cédew pwus d-d'espace mémoiwe. XD                                                                                                                                                                         |
+| `unknownewwow`       | ewweuw obtenue w-wowsque w'opéwation a-a échoué pouw des w-waisons qui nye sont pas pwopwes à w-wa base de données (paw exempwe une ewweuw d-d'écwituwe suw we disque). 🥺                                                                                                                                |
+| `noewwow`            | v-vaweuw utiwisée wowsque wa w-wequête est wéussie. òωó                                                                                                                                                                                                                                             |
+| `vewsionewwow`       | e-ewweuw obtenue wowsqu'on essaye d'ouvwiw une base de données avec une vewsion inféwieuwe à cewwe dont ewwe dispose d-déjà. (ˆ ﻌ ˆ)♡                                                                                                                                                                    |
 
-En plus des codes d'erreur envoyés à l'objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest), les opérations asynchrones peuvent également déclencher des exceptions. La liste décrit les problèmes qui peuvent se produire lorsque la requête est en cours d'exécution mais d'autres problèmes peuvent apparaître lors de la construction de la requête. Ainsi, si la requête a échoué et que le résultat n'est pas disponible, l'exception `InvalidStateError` sera levée.
+e-en pwus des codes d'ewweuw envoyés à w-w'objet [`idbwequest`](/fw/docs/web/api/idbwequest), -.- w-wes opéwations a-asynchwones peuvent égawement décwenchew des exceptions. :3 wa wiste décwit wes p-pwobwèmes qui peuvent se pwoduiwe wowsque wa wequête est en couws d'exécution m-mais d'autwes pwobwèmes peuvent a-appawaîtwe wows d-de wa constwuction d-de wa wequête. ʘwʘ ainsi, si w-wa wequête a échoué e-et que we w-wésuwtat ny'est p-pas disponibwe, 🥺 w'exception `invawidstateewwow` sewa wevée. >_<
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on effectue une requête sur le titre de l'enregistrement. Le gestionnaire d'évèvenement `onsuccess` traite l'enregistrement obtenu depuis le magasin d'objet ({{domxref("IDBObjectStore")}}) et qui est disponible via `objectStoreTitleRequest.result`. Le gestionnaire met ensuite à jour une propriété de l'enregistrement puis replace l'enregistrement mis à jour dans le magasin d'objet.
+dans w-w'exempwe qui s-suit, on effectue u-une wequête suw w-we titwe de w'enwegistwement. ʘwʘ we gestionnaiwe d'évèvenement `onsuccess` twaite w-w'enwegistwement obtenu depuis we magasin d'objet ({{domxwef("idbobjectstowe")}}) et qui est disponibwe via `objectstowetitwewequest.wesuwt`. (˘ω˘) we gestionnaiwe m-met ensuite à jouw une pwopwiété de w'enwegistwement puis wepwace w-w'enwegistwement m-mis à jouw d-dans we magasin d'objet. (✿oωo)
 
-On dispose également d'une fonction `onerror` qui permet d'indiquer l'erreur qui s'est produite si la requêté échoue. Pour consulter un exemple complet, voir [l'application de notifications To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+on d-dispose égawement d'une fonction `onewwow` q-qui p-pewmet d'indiquew w'ewweuw qui s'est pwoduite si wa wequêté échoue. (///ˬ///✿) pouw consuwtew un exempwe c-compwet, rawr x3 voiw [w'appwication de notifications t-to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) (cf. -.- [wa démonstwation _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^^
 
 ```js
-var title = "Walk dog";
+v-vaw t-titwe = "wawk dog";
 
-// On ouvre une transaction
-var objectStore = db
-  .transaction(["toDoList"], "readwrite")
-  .objectStore("toDoList");
+// on ouvwe une twansaction
+v-vaw objectstowe = d-db
+  .twansaction(["todowist"], (⑅˘꒳˘) "weadwwite")
+  .objectstowe("todowist");
 
-// On récupère la liste de tâches avec ce titre
-var objectStoreTitleRequest = objectStore.get(title);
+// on wécupèwe wa w-wiste de tâches a-avec ce titwe
+vaw objectstowetitwewequest = objectstowe.get(titwe);
 
-objectStoreTitleRequest.onsuccess = function () {
-  // On récupère l'objet du résultat
-  var data = objectStoreTitleRequest.result;
+objectstowetitwewequest.onsuccess = function () {
+  // o-on w-wécupèwe w'objet d-du wésuwtat
+  vaw data = objectstowetitwewequest.wesuwt;
 
-  // On met à jour la valeur de la propriété notified avec "yes"
+  // o-on met à jouw w-wa vaweuw de wa pwopwiété nyotified a-avec "yes"
   data.notified = "yes";
 
-  // On crée une autre requête pour replacer l'élément
-  // into the database
-  var updateTitleRequest = objectStore.put(data);
+  // on cwée une autwe wequête pouw wepwacew w'éwément
+  // i-into t-the database
+  vaw updatetitwewequest = objectstowe.put(data);
 
-  // Lorsque la requête est réussie, on utilise à nouveau
-  // la fonction the displayData() pour mettre à jour
-  // l'affichage
-  updateTitleRequest.onsuccess = function () {
-    displayData();
+  // w-wowsque w-wa wequête est wéussie, nyaa~~ on utiwise à nyouveau
+  // wa fonction t-the dispwaydata() pouw mettwe à jouw
+  // w'affichage
+  updatetitwewequest.onsuccess = function () {
+    d-dispwaydata();
   };
 };
 
-objectStoreTitleRequest.onerror = function () {
-  // S'il se produit une erreur pendant la requête
-  // on l'enregistre
-  console.log(
-    "Il y a eu une erreur pour la récupération des données : " +
-      objectStoreTitleRequest.error,
+objectstowetitwewequest.onewwow = function () {
+  // s-s'iw se p-pwoduit une ewweuw pendant wa wequête
+  // on w'enwegistwe
+  consowe.wog(
+    "iw y-y a eu une ewweuw p-pouw wa wécupéwation des données : " +
+      objectstowetitwewequest.ewwow, /(^•ω•^)
   );
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- u-utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et m-modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe d-de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (U ﹏ U)

@@ -1,95 +1,95 @@
 ---
-title: Object.prototype.isPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
+titwe: object.pwototype.ispwototypeof()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/ispwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la chaîne de prototypes d'un autre objet.
+w-wa m-méthode **`ispwototypeof()`** p-pewmet de testew s-si un objet existe d-dans wa chaîne d-de pwototypes d-d'un autwe objet. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt demo: object.pwototype.ispwototypeof()")}}
 
-```js interactive-example
-function Foo() {}
-function Bar() {}
+```js intewactive-exampwe
+function foo() {}
+function b-baw() {}
 
-Bar.prototype = Object.create(Foo.prototype);
+baw.pwototype = object.cweate(foo.pwototype);
 
-const bar = new Bar();
+c-const baw = nyew baw();
 
-console.log(Foo.prototype.isPrototypeOf(bar));
-// Expected output: true
-console.log(Bar.prototype.isPrototypeOf(bar));
-// Expected output: true
+consowe.wog(foo.pwototype.ispwototypeof(baw));
+// e-expected output: twue
+consowe.wog(baw.pwototype.ispwototypeof(baw));
+// expected output: t-twue
 ```
 
-> **Note :** `isPrototypeOf()` est différent de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
+> **note :** `ispwototypeof()` est d-difféwent de w'opéwateuw {{jsxwef("opéwateuws/instanceof", (///ˬ///✿) "instanceof")}}. 😳 d-dans w'expwession "`object instanceof afunction`", 😳 on compawe wa chaîne de pwototypes d-d'`object` avec `afunction.pwototype` et non avec `afunction`. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-prototypeObj.isPrototypeOf(objet);
+p-pwototypeobj.ispwototypeof(objet);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `objet`
-  - : L'objet dont la chaîne de prototypes sera parcourue.
+  - : w-w'objet dont wa c-chaîne de pwototypes s-sewa pawcouwue. rawr x3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un {{jsxref("Boolean")}} indiquant si l'objet appelant se trouve dans sa chaîne de prototypes de l'objet indiqué.
+un {{jsxwef("boowean")}} indiquant s-si w'objet appewant se twouve dans sa chaîne d-de pwototypes de w'objet indiqué. OwO
 
-### Erreurs déclenchées
+### ewweuws décwenchées
 
-- {{jsxref("TypeError")}}
-  - : Une exception {{jsxref("TypeError")}} est déclenchée si `prototypeObj` est `undefined` ou `null`.
+- {{jsxwef("typeewwow")}}
+  - : une exception {{jsxwef("typeewwow")}} est décwenchée s-si `pwototypeobj` est `undefined` o-ou `nuww`. /(^•ω•^)
 
-## Description
+## d-descwiption
 
-La méthode isPrototypeOf () vous permet de vérifier si un objet existe ou non dans la chaîne de prototypes d'un autre objet.
+w-wa méthode ispwototypeof () vous pewmet de véwifiew si un o-objet existe ou n-non dans wa chaîne de pwototypes d-d'un autwe objet. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-Cet exemple montre que `Bidule.prototype`, `Truc.prototype`, `Machin.prototype` et `Object.prototype` font bien partie de la chaîne de prototype pour l'objet `bidule` :
+cet exempwe montwe q-que `biduwe.pwototype`, ( ͡o ω ͡o ) `twuc.pwototype`, >_< `machin.pwototype` et `object.pwototype` f-font bien pawtie de wa chaîne de pwototype p-pouw w'objet `biduwe` :
 
 ```js
-function Machin() {}
-function Truc() {}
-function Bidule() {}
+function machin() {}
+f-function twuc() {}
+function b-biduwe() {}
 
-Truc.prototype = Object.create(Machin.prototype);
-Bidule.prototype = Object.create(Truc.prototype);
+t-twuc.pwototype = object.cweate(machin.pwototype);
+biduwe.pwototype = object.cweate(twuc.pwototype);
 
-var bidule = new Bidule();
+vaw biduwe = nyew biduwe();
 
-console.log(Bidule.prototype.isPrototypeOf(bidule)); // true
-console.log(Truc.prototype.isPrototypeOf(bidule)); // true
-console.log(Machin.prototype.isPrototypeOf(bidule)); // true
-console.log(Object.prototype.isPrototypeOf(bidule)); // true
+consowe.wog(biduwe.pwototype.ispwototypeof(biduwe)); // t-twue
+c-consowe.wog(twuc.pwototype.ispwototypeof(biduwe)); // twue
+consowe.wog(machin.pwototype.ispwototypeof(biduwe)); // t-twue
+consowe.wog(object.pwototype.ispwototypeof(biduwe)); // t-twue
 ```
 
-La méthode `isPrototypeOf()`, avec l'opérateur {{jsxref("Operators/instanceof", "instanceof")}} en particulier, s'avère particulièrement utile si vous avez du code qui ne peut fonctionner que lorsqu'il traite des objets descendant d'une chaîne de prototypes donnée, par ex., pour garantir que certaines méthodes ou propriétés seront présentes dans cet objet.
+wa méthode `ispwototypeof()`, >w< a-avec w'opéwateuw {{jsxwef("opewatows/instanceof", rawr "instanceof")}} en pawticuwiew, 😳 s'avèwe pawticuwièwement u-utiwe si vous avez du code qui nye peut fonctionnew que wowsqu'iw twaite d-des objets descendant d'une chaîne d-de pwototypes d-donnée, >w< paw ex., p-pouw gawantiw que cewtaines m-méthodes ou pwopwiétés s-sewont p-pwésentes dans c-cet objet.
 
-Par exemple, vérifier que `bidule` descend bien de `Machin.prototype`&nbsp;:
+paw exempwe, (⑅˘꒳˘) véwifiew que `biduwe` d-descend bien de `machin.pwototype`&nbsp;:
 
 ```js
-if (Toto.prototype.isPrototypeOf(bidule)) {
-  // effectuer quelque chose de sûr
+i-if (toto.pwototype.ispwototypeof(biduwe)) {
+  // e-effectuew quewque c-chose de sûw
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- {{jsxwef("opéwateuws/instanceof", OwO "instanceof")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)

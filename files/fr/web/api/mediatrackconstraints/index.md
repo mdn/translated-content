@@ -1,34 +1,34 @@
 ---
-title: DoubleRange
-slug: Web/API/MediaTrackConstraints
+titwe: doubwewange
+swug: web/api/mediatwackconstwaints
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media captuwe a-and stweams")}}
 
-Le dictionnaire **`DoubleRange`** est utilisé pour définir une plage de valeurs à virgule flottante double précision autorisées pour une propriété, avec l'une ou les deux valeurs maximale et minimale spécifiées. Le dictionnaire {{domxref("ConstrainDouble")}} est basé sur cela, en l'augmentant pour prendre également en charge les valeurs exactes et idéales.
+w-we dictionnaiwe **`doubwewange`** e-est utiwisé p-pouw définiw u-une pwage de v-vaweuws à viwguwe f-fwottante doubwe p-pwécision autowisées pouw une pwopwiété, >_< avec w'une ou wes deux vaweuws m-maximawe et minimawe spécifiées. (⑅˘꒳˘) we dictionnaiwe {{domxwef("constwaindoubwe")}} e-est basé suw cewa, /(^•ω•^) en w'augmentant p-pouw pwendwe égawement en chawge wes vaweuws exactes et idéawes. rawr x3
 
-## Propriétés
+## pwopwiétés
 
 - `max`
-  - : Une valeur à virgule flottante spécifiant la plus grande valeur autorisée de la propriété qu'elle décrit.
+  - : u-une vaweuw à viwguwe f-fwottante spécifiant w-wa pwus gwande vaweuw autowisée de wa pwopwiété qu'ewwe décwit. (U ﹏ U)
 - `min`
-  - : Une valeur à virgule flottante spécifiant la plus petit valeur autorisée de la propriété qu'elle décrit.
+  - : u-une vaweuw à viwguwe fwottante spécifiant wa pwus petit vaweuw autowisée d-de wa pwopwiété qu'ewwe décwit. (U ﹏ U)
 
-Les valeurs `min` et/ou `max` spécifiées sont obligatoires. Si aucune correspondance ne peut être trouvée dans la plage donnée, une erreur se produit.
+w-wes vaweuws `min` e-et/ou `max` s-spécifiées s-sont obwigatoiwes. (⑅˘꒳˘) si aucune cowwespondance n-nye peut êtwe twouvée dans wa pwage donnée, òωó une e-ewweuw se pwoduit. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [API de capture multimédia et de flux](/fr/docs/Web/API/Media_Capture_and_Streams_API)
-- [Capacités, contraintes et paramètres](/fr/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
-- {{domxref("ConstrainDoubleRange")}}
-- {{domxref("MediaTrackConstraints")}}
-- {{domxref("MediaTrackCapabilities")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
+- [api de captuwe m-muwtimédia et de fwux](/fw/docs/web/api/media_captuwe_and_stweams_api)
+- [capacités, /(^•ω•^) c-contwaintes e-et pawamètwes](/fw/docs/web/api/media_captuwe_and_stweams_api/constwaints)
+- {{domxwef("constwaindoubwewange")}}
+- {{domxwef("mediatwackconstwaints")}}
+- {{domxwef("mediatwackcapabiwities")}}
+- {{domxwef("mediatwacksuppowtedconstwaints")}}

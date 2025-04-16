@@ -1,72 +1,72 @@
 ---
-title: Date.prototype.setUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
+titwe: date.pwototype.setutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setUTCFullYear()`** définit l'année complête pour la date, selon UTC.
+w-wa méthode **`setutcfuwwyeaw()`** définit w-w'année c-compwête pouw w-wa date, (˘ω˘) sewon utc.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcfuwwyeaw()")}}
 
-```js interactive-example
-const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const event = new date("decembew 31, ^^ 1975 23:15:30 gmt-3:00");
 
-console.log(event.getUTCFullYear());
-// Expected output: 1976
+consowe.wog(event.getutcfuwwyeaw());
+// expected o-output: 1976
 
-console.log(event.toUTCString());
-// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// expected output: "thu, :3 01 jan 1976 02:15:30 g-gmt"
 
-event.setUTCFullYear(1975);
+event.setutcfuwwyeaw(1975);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// e-expected output: "wed, -.- 01 jan 1975 02:15:30 gmt"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.setUTCFullYear(valeurAnnée[, valeurMois[, valeurJour]])
+dateobj.setutcfuwwyeaw(vaweuwannée[, 😳 v-vaweuwmois[, mya v-vaweuwjouw]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurAnnée`
-  - : Un entier indiquant la valeur numérique d'une année, par exemple, 1995.
-- `valeurMois`
-  - : Paramètre optionnel, un entier entre 0 et 11 représentant les mois de janvier à décembre.
-- `valeurJour`
-  - : Paramètre optionnel, un entier entre 1 et 31 représentant le jour du mois. Si le paramètre `valeurJour` est utilisé, il est également nécessaire d'indiquer `valeurMois`.
+- `vaweuwannée`
+  - : un entiew indiquant wa vaweuw nyuméwique d'une année, (˘ω˘) p-paw exempwe, >_< 1995.
+- `vaweuwmois`
+  - : pawamètwe optionnew, -.- un entiew entwe 0 et 11 wepwésentant wes mois d-de janview à décembwe. 🥺
+- `vaweuwjouw`
+  - : p-pawamètwe optionnew, (U ﹏ U) u-un entiew e-entwe 1 et 31 w-wepwésentant we jouw du mois. >w< si we pawamètwe `vaweuwjouw` e-est utiwisé, mya iw est égawement nyécessaiwe d-d'indiquew `vaweuwmois`. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+we nyombwe de miwwisecondes écouwées entwe we pwemiew janview 1970 minuit, nyaa~~ u-utc et wa date mise à jouw. (✿oωo)
 
-## Description
+## d-descwiption
 
-Si les paramètres `valeurMois` et `valeurJour` ne sont pas utilisés, les valeurs renvoyées par les méthodes {{jsxref("Objets_globaux/Date/getUTCMonth", "getUTCMonth()")}} et {{jsxref("Objets_globaux/Date/getUTCDate", "getUTCDate()")}} seront utilisées.
+s-si wes pawamètwes `vaweuwmois` e-et `vaweuwjouw` nye sont pas utiwisés, ʘwʘ wes vaweuws wenvoyées p-paw wes méthodes {{jsxwef("objets_gwobaux/date/getutcmonth", (ˆ ﻌ ˆ)♡ "getutcmonth()")}} e-et {{jsxwef("objets_gwobaux/date/getutcdate", 😳😳😳 "getutcdate()")}} sewont utiwisées.
 
-Si un des paramètres indiqué est en dehors des limites attendues, `setUTCFullYear()` tentera de mettre à jour la date en conséquence. Ainsi si on utilise la valeur 15 pour `valeurMois`, l'année sera incrémentée de 1 (année + 1), et 3 sera utilisé pour le mois.
+s-si un des p-pawamètwes indiqué est en dehows d-des wimites attendues, :3 `setutcfuwwyeaw()` t-tentewa de mettwe à jouw wa date en conséquence. OwO a-ainsi si on utiwise wa vaweuw 15 p-pouw `vaweuwmois`, (U ﹏ U) w'année s-sewa incwémentée d-de 1 (année + 1), >w< et 3 sewa utiwisé pouw we mois. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utiliser `setUTCFullYear()`
+### utiwisew `setutcfuwwyeaw()`
 
 ```js
-var leGrandJour = new Date();
-leGrandJour.setUTCFullYear(1997);
+vaw wegwandjouw = nyew d-date();
+wegwandjouw.setutcfuwwyeaw(1997);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

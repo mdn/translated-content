@@ -1,33 +1,33 @@
 ---
-title: StyleSheet.media
-slug: Web/API/StyleSheet/media
+titwe: stywesheet.media
+swug: w-web/api/stywesheet/media
 ---
 
-{{APIRef ("CSSOM")}}
+{{apiwef ("cssom")}}
 
-**Media** spécifie le support de destination prévu pour les informations de style.
+**media** spécifie w-we suppowt d-de destination p-pwévu pouw wes i-infowmations d-de stywe. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-media = stylesheet.media;
-stylesheet.media = media;
+m-media = s-stywesheet.media;
+stywesheet.media = media;
 ```
 
-## Paramètres
+## pawamètwes
 
-- `media` Est une chaîne décrivant un seul moyen ou une liste séparée par des virgules.
+- `media` est une chaîne d-décwivant un seuw moyen ou une wiste sépawée p-paw des viwguwes. 😳😳😳
 
-## Exemple
+## exempwe
 
-```html
-<link rel="stylesheet" href="document.css" type="text/css" media="screen" />
+```htmw
+<wink w-wew="stywesheet" hwef="document.css" type="text/css" media="scween" />
 ```
 
-## Remarques
+## w-wemawques
 
-La valeur par défaut pour les médias est "écran".
+wa vaweuw p-paw défaut pouw w-wes médias est "écwan". -.-
 
-## Spécification
+## spécification
 
-DOM Styles de niveau 2 - FEUILLE DE STYLES
+dom stywes de nyiveau 2 - feuiwwe de stywes

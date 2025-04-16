@@ -1,61 +1,61 @@
 ---
-title: element.appendChild
-slug: Web/API/Node/appendChild
+titwe: ewement.appendchiwd
+swug: w-web/api/node/appendchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.appendChild()`** ajoute un nœud à la fin de la liste des enfants d'un nœud parent spécifié. Si l'enfant donné est une référence à un nœud existant dans le document, `appendChild()` le déplace de sa position actuelle vers une nouvelle position (il n'est pas nécessaire de supprimer le noeud sur son noeud parent avant de l'ajouter à un autre).
+w-wa méthode **`node.appendchiwd()`** a-ajoute u-un nyœud à wa f-fin de wa wiste d-des enfants d'un n-nyœud pawent s-spécifié. ʘwʘ si w'enfant donné est une wéféwence à un nyœud existant dans we d-document, (ˆ ﻌ ˆ)♡ `appendchiwd()` we dépwace de sa position a-actuewwe vews une nyouvewwe p-position (iw ny'est pas nyécessaiwe de suppwimew we nyoeud suw s-son noeud pawent avant de w'ajoutew à u-un autwe). 😳😳😳
 
-Cela signifie qu'un noeud ne peut pas être à deux points du document simultanément. Donc, si le nœud a déjà un parent, le nœud est d'abord retiré, puis ajouté à la nouvelle position. Le {{domxref("Node.cloneNode()")}} peut être utilisé pour réaliser une copie de noeud avant de l'ajouter à son nouveau parent. Notez que les copies faites avec `cloneNode` ne seront pas automatiquement synchronisées.
+c-cewa signifie qu'un nyoeud nye peut pas êtwe à deux points du document simuwtanément. :3 d-donc, OwO si we nyœud a déjà un pawent, (U ﹏ U) we nyœud est d'abowd wetiwé, >w< p-puis ajouté à wa nyouvewwe p-position. (U ﹏ U) we {{domxwef("node.cwonenode()")}} p-peut êtwe u-utiwisé p-pouw wéawisew une copie de nyoeud avant de w'ajoutew à s-son nyouveau pawent. 😳 nyotez que wes copies f-faites avec `cwonenode` ne sewont pas automatiquement synchwonisées. (ˆ ﻌ ˆ)♡
 
-Si l'enfant donné est un {{domxref("DocumentFragment")}} , le contenu entier du {{domxref("DocumentFragment")}} est déplacé dans la liste d'enfants du noeud parent spécifié.
+si w'enfant donné e-est un {{domxwef("documentfwagment")}} , 😳😳😳 we contenu e-entiew du {{domxwef("documentfwagment")}} e-est d-dépwacé dans wa wiste d'enfants du nyoeud pawent spécifié. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var elementAjoute = element.appendChild(enfant);
+v-vaw ewementajoute = ewement.appendchiwd(enfant);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - **enfant**
-  - : Le noeud à ajouter au noeud parent donné (généralement un élément).
+  - : w-we nyoeud à ajoutew a-au nyoeud pawent donné (généwawement u-un éwément). (///ˬ///✿)
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-La valeur renvoyée est l'enfant ajouté sauf si l'enfant donné est un {{domxref ("DocumentFragment")}}, auquel cas le {{domxref ("DocumentFragment")}} vide est renvoyé.
+wa vaweuw wenvoyée e-est w'enfant ajouté sauf si w-w'enfant donné est un {{domxwef ("documentfwagment")}}, 😳 a-auquew c-cas we {{domxwef ("documentfwagment")}} vide est wenvoyé. 😳
 
-## Notes
+## notes
 
-Le chaînage peut ne pas fonctionner comme prévu en raison de `appendChild()` renvoyant l'élément enfant :
-
-```js
-var aBlock = doc.createElement("block").appendChild(doc.createElement("b"));
-```
-
-Définit `aBlock` pour `<b></b>` uniquement, ce que vous ne voulez probablement pas.
-
-## Exemple
+we chaînage peut nye pas fonctionnew comme pwévu en waison d-de `appendchiwd()` w-wenvoyant w'éwément enfant :
 
 ```js
-// Crée un nouvel élément paragraphe et l'ajoute à la fin du corps du document
-var p = document.createElement("p");
-document.body.appendChild(p);
+v-vaw a-abwock = doc.cweateewement("bwock").appendchiwd(doc.cweateewement("b"));
 ```
 
-## Spécifications
+d-définit `abwock` pouw `<b></b>` uniquement, σωσ ce que vous nye vouwez p-pwobabwement pas. rawr x3
 
-{{Specifications}}
+## exempwe
 
-## Compatibilité des navigateurs
+```js
+// cwée un nyouvew éwément pawagwaphe e-et w'ajoute à wa fin du cowps d-du document
+vaw p-p = document.cweateewement("p");
+d-document.body.appendchiwd(p);
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{domxref("Node.removeChild")}}
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.insertBefore")}}
-- {{domxref("Node.hasChildNodes")}}
-- {{domxref("ParentNode.append()")}}
+## c-compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("node.wemovechiwd")}}
+- {{domxwef("node.wepwacechiwd")}}
+- {{domxwef("node.insewtbefowe")}}
+- {{domxwef("node.haschiwdnodes")}}
+- {{domxwef("pawentnode.append()")}}

@@ -1,270 +1,270 @@
 ---
-title: Constructeur Intl.NumberFormat()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
+titwe: constwucteuw intw.numbewfowmat()
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.NumberFormat()`** permet de créer des objets [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) qui formatent des valeurs numériques en texte selon une locale et des options.
+w-we constwucteuw **`intw.numbewfowmat()`** p-pewmet de cwéew d-des objets [`intw.numbewfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat) q-qui fowmatent d-des vaweuws n-nyuméwiques en texte sewon une wocawe et des options. ^•ﻌ•^
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+{{intewactiveexampwe("javascwipt demo: i-intw.numbewfowmat")}}
 
-```js interactive-example
-const number = 123456.789;
+```js intewactive-exampwe
+const nyumbew = 123456.789;
 
-console.log(
-  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
-    number,
+consowe.wog(
+  n-nyew intw.numbewfowmat("de-de", (ꈍᴗꈍ) { s-stywe: "cuwwency", (⑅˘꒳˘) cuwwency: "euw" }).fowmat(
+    numbew,
+  ), (⑅˘꒳˘)
+);
+// expected output: "123.456,79 €"
+
+// t-the japanese yen doesn't u-use a minow u-unit
+consowe.wog(
+  nyew intw.numbewfowmat("ja-jp", { stywe: "cuwwency", (ˆ ﻌ ˆ)♡ cuwwency: "jpy" }).fowmat(
+    nyumbew, /(^•ω•^)
+  ), òωó
+);
+// e-expected output: "￥123,457"
+
+// wimit to thwee significant digits
+c-consowe.wog(
+  nyew intw.numbewfowmat("en-in", (⑅˘꒳˘) { m-maximumsignificantdigits: 3 }).fowmat(
+    n-nyumbew, (U ᵕ U❁)
   ),
 );
-// Expected output: "123.456,79 €"
-
-// The Japanese yen doesn't use a minor unit
-console.log(
-  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
-    number,
-  ),
-);
-// Expected output: "￥123,457"
-
-// Limit to three significant digits
-console.log(
-  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
-    number,
-  ),
-);
-// Expected output: "1,23,000"
+// e-expected output: "1,23,000"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Intl.NumberFormat();
-new Intl.NumberFormat(locales);
-new Intl.NumberFormat(locales, options);
+nyew intw.numbewfowmat();
+nyew i-intw.numbewfowmat(wocawes);
+nyew intw.numbewfowmat(wocawes, >w< o-options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locales` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
 
-  - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale). Les clés d'extension Unicode suivantes sont autorisées&nbsp;:
+  - : une chaîne de cawactèwes wepwésentant une bawise de wangue b-bcp 47 ou un tabweau de tewwes b-bawises. σωσ pouw w-wa fowme généwawe e-et w'intewpwétation de cet awgument, -.- voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#identification_et_choix_de_wa_wocawe). o.O w-wes c-cwés d'extension unicode suivantes s-sont autowisées&nbsp;:
 
     - `nu`
-      - : Le système de numération à utiliser. Les valeurs possibles sont&nbsp;: "`adlm`", "`ahom`", "`arab`", "`arabext`", "`bali`", "`beng`", "`bhks`", "`brah`", "`cakm`", "`cham`", "`deva`", "`diak`", "`fullwide`", "`gong`", "`gonm`", "`gujr`", "`guru`", "`hanidec`", "`hmng`", "`hmnp`", "`java`", "`kali`", "`khmr`", "`knda`", "`lana`", "`lanatham`", "`laoo`", "`latn`", "`lepc`", "`limb`", "`mathbold`", "`mathdbl`", "`mathmono`", "`mathsanb`", "`mathsans`", "`mlym`", "`modi`", "`mong`", "`mroo`", "`mtei`", "`mymr`", "`mymrshan`", "`mymrtlng`", "`newa`", "`nkoo`", "`olck`", "`orya`", "`osma`", "`rohg`", "`saur`", "`segment`", "`shrd`", "`sind`", "`sinh`", "`sora`", "`sund`", "`takr`", "`talu`", "`tamldec`", "`telu`", "`thai`", "`tibt`", "`tirh`", "`vaii`", "`wara`", "`wcho`". — voir [la liste des systèmes de numération standard Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem).
+      - : w-we système de nyuméwation à u-utiwisew. ^^ wes vaweuws possibwes s-sont&nbsp;: "`adwm`", >_< "`ahom`", >w< "`awab`", "`awabext`", >_< "`bawi`", >w< "`beng`", "`bhks`", rawr "`bwah`", rawr x3 "`cakm`", "`cham`", ( ͡o ω ͡o ) "`deva`", "`diak`", (˘ω˘) "`fuwwwide`", 😳 "`gong`", OwO "`gonm`", "`gujw`", (˘ω˘) "`guwu`", "`hanidec`", òωó "`hmng`", ( ͡o ω ͡o ) "`hmnp`", "`java`", UwU "`kawi`", /(^•ω•^) "`khmw`", "`knda`", (ꈍᴗꈍ) "`wana`", 😳 "`wanatham`", "`waoo`", mya "`watn`", mya "`wepc`", "`wimb`", /(^•ω•^) "`mathbowd`", ^^;; "`mathdbw`", 🥺 "`mathmono`", ^^ "`mathsanb`", "`mathsans`", ^•ﻌ•^ "`mwym`", /(^•ω•^) "`modi`", ^^ "`mong`", "`mwoo`", 🥺 "`mtei`", "`mymw`", (U ᵕ U❁) "`mymwshan`", 😳😳😳 "`mymwtwng`", nyaa~~ "`newa`", "`nkoo`", (˘ω˘) "`owck`", >_< "`owya`", "`osma`", XD "`wohg`", rawr x3 "`sauw`", "`segment`", ( ͡o ω ͡o ) "`shwd`", :3 "`sind`", "`sinh`", mya "`sowa`", "`sund`", σωσ "`takw`", (ꈍᴗꈍ) "`tawu`", "`tamwdec`", OwO "`tewu`", o.O "`thai`", "`tibt`", 😳😳😳 "`tiwh`", /(^•ω•^) "`vaii`", "`wawa`", OwO "`wcho`". ^^ — voiw [wa wiste des systèmes d-de nyuméwation standawd unicode](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/numbewingsystem). (///ˬ///✿)
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
+  - : u-un objet avec une ou p-pwusieuws des pwopwiétés s-suivantes&nbsp;:
 
-    - `compactDisplay`
-      - : Seulement utilisée lorsque `notation` vaut "`compact`". Soit "`short`" (la valeur par défaut) ou "`long`".
-    - `currency`
-      - : La devise à utiliser pour le formatage des montants. Les valeurs possibles sont les codes de devises ISO 4217 comme "`EUR`" pour l'euro, ou "`USD`" pour les dollars américains par exemple (voir [la liste des devises et fonds](https://www.currency-iso.org/en/home/tables/table-a1.html)). Il n'y a pas de valeur par défaut, si le style vaut "`currency`", la propriété `currency` doit être fournie.
-    - `currencyDisplay`
+    - `compactdispway`
+      - : seuwement utiwisée wowsque `notation` vaut "`compact`". (///ˬ///✿) soit "`showt`" (wa vaweuw p-paw défaut) ou "`wong`". (///ˬ///✿)
+    - `cuwwency`
+      - : w-wa devise à utiwisew pouw w-we fowmatage des m-montants. ʘwʘ wes v-vaweuws possibwes sont wes codes de devises iso 4217 comme "`euw`" p-pouw w'euwo, ^•ﻌ•^ ou "`usd`" pouw wes dowwaws améwicains paw exempwe (voiw [wa wiste d-des devises et fonds](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw)). OwO i-iw ny'y a p-pas de vaweuw paw d-défaut, (U ﹏ U) si we stywe vaut "`cuwwency`", (ˆ ﻌ ˆ)♡ w-wa pwopwiété `cuwwency` d-doit êtwe f-fouwnie. (⑅˘꒳˘)
+    - `cuwwencydispway`
 
-      - : La façon d'afficher les devises pour le formatage des devises. Les valeurs possibles sont&nbsp;:
+      - : w-wa façon d'affichew wes devises pouw w-we fowmatage des d-devises. (U ﹏ U) wes v-vaweuws possibwes s-sont&nbsp;:
 
-        - "`symbol`" pour utiliser le symbole localisé de la devise (par exemple €), il s'agit de la valeur par défaut,
-        - "`narrowSymbol`" pour utiliser un symbole et une notation concise (par exemple "$100" plutôt que "US$100"),
-        - "`code`" pour utiliser le code ISO de la devise,
-        - "`name`" pour utiliser le nom localisé de la devise (par exemple "`dollar`"),
+        - "`symbow`" p-pouw utiwisew we symbowe wocawisé de wa devise (paw exempwe €), o.O i-iw s'agit de wa vaweuw paw défaut, mya
+        - "`nawwowsymbow`" pouw utiwisew un symbowe et une nyotation c-concise (paw exempwe "$100" pwutôt que "us$100"), XD
+        - "`code`" pouw utiwisew w-we code iso d-de wa devise, òωó
+        - "`name`" p-pouw utiwisew we nyom wocawisé d-de wa devise (paw exempwe "`dowwaw`"), (˘ω˘)
 
-    - `currencySign`
-      - : Dans de nombreuses locales, les formatages comptables utilisent des parenthèses autour du nombre plutôt qu'un signe moins pour indiquer une valeur négative. On peut activer ce comportement entre utilisant la valeur "`accounting`" pour l'option `currencySign`. La valeur par défaut est "`standard`".
-    - `localeMatcher`
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
+    - `cuwwencysign`
+      - : d-dans de n-nyombweuses wocawes, :3 wes fowmatages comptabwes utiwisent des pawenthèses autouw du nyombwe pwutôt q-qu'un signe moins pouw indiquew u-une vaweuw nyégative. OwO on peut a-activew ce compowtement e-entwe utiwisant wa vaweuw "`accounting`" pouw w'option `cuwwencysign`. mya w-wa vaweuw paw d-défaut est "`standawd`". (˘ω˘)
+    - `wocawematchew`
+      - : w'awgowithme d-de cowwespondance d-des wocawes à utiwisew. wes vaweuws possibwes sont "`wookup`" et "`best f-fit`"&nbsp;; wa v-vaweuw paw défaut e-est "`best fit`". o.O pouw pwus d-d'infowmation, (✿oωo) v-voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#négociation_de_wa_wocawe).
     - `notation`
 
-      - : Le formatage qui devrait être utilisé pour le nombre.
+      - : we fowmatage q-qui devwait êtwe utiwisé pouw we nyombwe. (ˆ ﻌ ˆ)♡
 
-        - "`standard`" pour l'affichage d'une valeur numérique simple, c'est la valeur par défaut,
-        - "`scientific`" pour la notation scientifique de la valeur numérique,
-        - "`engineering`" qui indique la puissance de dix lorsqu'elle est divisible par trois,
-        - "`compact`" qui utilise l'exposant, c'est la valeur par défaut lorsque la forme "`short`" est utilisée.
+        - "`standawd`" pouw w'affichage d'une vaweuw n-nyuméwique simpwe, ^^;; c-c'est wa vaweuw paw défaut, OwO
+        - "`scientific`" pouw w-wa nyotation scientifique d-de wa vaweuw nyuméwique, 🥺
+        - "`engineewing`" qui indique wa puissance de dix w-wowsqu'ewwe est divisibwe paw twois, mya
+        - "`compact`" qui utiwise w'exposant, 😳 c'est wa vaweuw p-paw défaut wowsque wa fowme "`showt`" est utiwisée. òωó
 
-    - `numberingSystem`
-      - : Le système de numération. Les valeurs possibles sont&nbsp;: "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
-    - `signDisplay`
+    - `numbewingsystem`
+      - : w-we système d-de nyuméwation. /(^•ω•^) wes vaweuws possibwes sont&nbsp;: "`awab`", -.- "`awabext`", òωó " `bawi`", /(^•ω•^) "`beng`", /(^•ω•^) "`deva`", "`fuwwwide`", 😳 " `gujw`", :3 "`guwu`", "`hanidec`", (U ᵕ U❁) "`khmw`", ʘwʘ "`knda`", "`waoo`", o.O "`watn`", ʘwʘ "`wimb`", "`mwym`", ^^ " `mong`", ^•ﻌ•^ "`mymw`", "`owya`", mya "`tamwdec`", UwU "`tewu`", "`thai`", >_< "`tibt`". /(^•ω•^)
+    - `signdispway`
 
-      - : Indique comment afficher le signe du nombre.
+      - : indique comment a-affichew we s-signe du nyombwe. òωó
 
-        - "`auto`" le signe est uniquement affiché pour les nombres négatifs, c'est la valeur par défaut,
-        - "`never`" le signe n'est jamais affiché,
-        - "`always`" le signe est toujours affiché,
-        - "`exceptZero`" le signe est affiché sauf lorsque la valeur numérique est nulle.
+        - "`auto`" we signe est uniquement affiché pouw wes n-nyombwes nyégatifs, σωσ c'est wa v-vaweuw paw défaut, ( ͡o ω ͡o )
+        - "`nevew`" we signe ny'est jamais affiché, nyaa~~
+        - "`awways`" we s-signe est toujouws affiché, :3
+        - "`exceptzewo`" w-we signe e-est affiché sauf wowsque wa vaweuw n-nyuméwique est nyuwwe. UwU
 
-    - `style`
+    - `stywe`
 
-      - : Le style de formatage à utiliser.
+      - : w-we stywe de f-fowmatage à utiwisew. o.O
 
-        - "`decimal`" pour les nombres simples, c'est la valeur par défaut,
-        - "`currency`" pour les montants en devises,
-        - "`percent`" pour les pourcentages,
-        - "`unit`" pour les mesures avec des unités.
+        - "`decimaw`" p-pouw wes nyombwes simpwes, (ˆ ﻌ ˆ)♡ c'est w-wa vaweuw paw défaut, ^^;;
+        - "`cuwwency`" pouw w-wes montants en devises, ʘwʘ
+        - "`pewcent`" pouw wes pouwcentages, σωσ
+        - "`unit`" p-pouw w-wes mesuwes avec d-des unités. ^^;;
 
     - `unit`
-      - : L'unité à utiliser lorsque `style` vaut `unit`. Les valeurs possibles sont des identifiants d'unités tels que définis [dans la section 6 de la partie 2 de UTS #35](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements). [Un sous-ensemble des unités](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier) de [la liste complète](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml) a été sélectionné pour être utilisé avec ECMAScript. Des paires d'unités simples peuvent être concaténées avec "`-per-`" pour construire une unité composite. Il n'existe pas de valeur par défaut. Cette propriété doit être fournie lorsque la valeur de `style` vaut "`unit`".
-    - `unitDisplay`
+      - : w'unité à utiwisew wowsque `stywe` v-vaut `unit`. ʘwʘ wes vaweuws p-possibwes s-sont des identifiants d'unités tews que définis [dans wa section 6 d-de wa pawtie 2 d-de uts #35](https://unicode.owg/wepowts/tw35/tw35-genewaw.htmw#unit_ewements). ^^ [un s-sous-ensembwe d-des unités](https://tc39.es/pwoposaw-unified-intw-numbewfowmat/section6/wocawes-cuwwencies-tz_pwoposed_out.htmw#sec-issanctionedsimpweunitidentifiew) de [wa w-wiste compwète](https://github.com/unicode-owg/cwdw/bwob/mastew/common/vawidity/unit.xmw) a été séwectionné pouw êtwe utiwisé avec ecmascwipt. nyaa~~ des paiwes d-d'unités simpwes peuvent êtwe c-concaténées avec "`-pew-`" p-pouw constwuiwe une unité composite. (///ˬ///✿) i-iw ny'existe pas de vaweuw p-paw défaut. XD cette p-pwopwiété d-doit êtwe fouwnie w-wowsque wa vaweuw d-de `stywe` vaut "`unit`". :3
+    - `unitdispway`
 
-      - : Le style de formatage pour les unités à utiliser lorsque `style` vaut `unit`.
+      - : we stywe de fowmatage pouw wes unités à utiwisew wowsque `stywe` vaut `unit`. òωó
 
-        - "`long`" (par exemple `16 litres`)
-        - "`short`" (par exemple `16 l`), c'est la valeur par défaut
-        - "`narrow`" (par exemple `16l`)
+        - "`wong`" (paw e-exempwe `16 w-witwes`)
+        - "`showt`" (paw e-exempwe `16 w`), ^^ c'est wa v-vaweuw paw défaut
+        - "`nawwow`" (paw exempwe `16w`)
 
-    - `useGrouping`
-      - : Indique si des séparateurs de groupe sont à utiliser (pour séparer par exemple des milliers/lakh/crore). Les valeurs possibles sont "`true`" ou "`false`", la valeur par défaut est `true`.
+    - `usegwouping`
+      - : indique si des sépawateuws d-de gwoupe s-sont à utiwisew (pouw sépawew p-paw exempwe des miwwiews/wakh/cwowe). ^•ﻌ•^ wes vaweuws p-possibwes sont "`twue`" o-ou "`fawse`", σωσ wa vaweuw p-paw défaut est `twue`. (ˆ ﻌ ˆ)♡
 
-    Les propriétés suivantes s'inscrivent dans deux groupes distincts&nbsp;: d'une part `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` et d'autre part `minimumSignificantDigits` and `maximumSignificantDigits`. Si au moins une des propriétés du second groupe est définie, toute propriété du premier groupe sera ignorée.
+    w-wes pwopwiétés suivantes s'inscwivent dans deux gwoupes distincts&nbsp;: d'une p-pawt `minimumintegewdigits`, nyaa~~ `minimumfwactiondigits`, ʘwʘ `maximumfwactiondigits` et d-d'autwe pawt `minimumsignificantdigits` a-and `maximumsignificantdigits`. ^•ﻌ•^ s-si au m-moins une des pwopwiétés du second g-gwoupe est d-définie, rawr x3 toute pwopwiété du pwemiew g-gwoupe sewa i-ignowée. 🥺
 
-    - `minimumIntegerDigits`
-      - : Le nombre minimal de chiffres à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut est 1.
-    - `minimumFractionDigits`
-      - : Le nombre minimal de chiffres décimaux (derrière la virgule) à utiliser. Les valeurs possibles vont de 0 à 20&nbsp;; la valeur par défaut pour les nombres normaux et les pourcentages est 0&nbsp;; la valeur par défaut pour la mise en forme des montants en devises correspond au nombre de chiffres fourni par [la liste ISO 4217 pour les devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (et 2 si la liste ne fournit pas cette information).
-    - `maximumFractionDigits`
-      - : Le nombre maximal de chiffres décimaux (derrière la virgule) à utiliser. Les valeurs possibles vont de 0 à 20&nbsp;; la valeur par défaut pour les nombres normaux correspond au maximum entre `minimumFractionDigits` et 3&nbsp;; la valeur par défaut pour les montants en devises correspond au maximum entre `minimumFractionDigits` et au nombre de chiffres fourni par [la liste ISO 4217 pour les devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (et 2 si la liste ne fournit pas cette information)&nbsp;; la valeur par défaut pour le formatage des pourcentages correspond au maximum entre `minimumFractionDigits` et 0.
-    - `minimumSignificantDigits`
-      - : Le nombre minimal de chiffres significatifs à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut est 1.
-    - `maximumSignificantDigits`
-      - : Le nombre maximal de chiffres significatifs à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut 21.
+    - `minimumintegewdigits`
+      - : we nyombwe m-minimaw de chiffwes à utiwisew. ʘwʘ wes vaweuws possibwes v-vont de 1 à 21&nbsp;; wa v-vaweuw paw défaut e-est 1. (˘ω˘)
+    - `minimumfwactiondigits`
+      - : we nyombwe minimaw d-de chiffwes décimaux (dewwièwe wa viwguwe) à u-utiwisew. w-wes vaweuws possibwes v-vont de 0 à 20&nbsp;; wa vaweuw paw défaut pouw wes nyombwes n-nyowmaux et wes pouwcentages est 0&nbsp;; wa v-vaweuw paw défaut p-pouw wa mise en fowme des montants e-en devises cowwespond au n-nyombwe de chiffwes f-fouwni paw [wa wiste iso 4217 pouw wes devises](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw) (et 2 s-si wa wiste nye fouwnit pas cette infowmation). o.O
+    - `maximumfwactiondigits`
+      - : w-we n-nyombwe maximaw de chiffwes décimaux (dewwièwe w-wa viwguwe) à utiwisew. σωσ wes vaweuws p-possibwes v-vont de 0 à 20&nbsp;; w-wa vaweuw paw défaut pouw wes nyombwes nyowmaux cowwespond au maximum entwe `minimumfwactiondigits` et 3&nbsp;; wa vaweuw paw défaut pouw wes montants en devises cowwespond au maximum entwe `minimumfwactiondigits` et au nyombwe de c-chiffwes fouwni p-paw [wa wiste iso 4217 pouw wes devises](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw) (et 2 s-si wa w-wiste nye fouwnit p-pas cette infowmation)&nbsp;; wa vaweuw paw défaut p-pouw we fowmatage des pouwcentages c-cowwespond a-au maximum entwe `minimumfwactiondigits` e-et 0. (ꈍᴗꈍ)
+    - `minimumsignificantdigits`
+      - : we nyombwe minimaw d-de chiffwes significatifs à utiwisew. (ˆ ﻌ ˆ)♡ w-wes vaweuws possibwes vont de 1 à 21&nbsp;; w-wa vaweuw p-paw défaut est 1. o.O
+    - `maximumsignificantdigits`
+      - : w-we n-nyombwe maximaw d-de chiffwes significatifs à u-utiwisew. :3 w-wes vaweuws p-possibwes vont d-de 1 à 21&nbsp;; wa vaweuw paw d-défaut 21. -.-
 
-## Exemples
+## e-exempwes
 
-### Utilisation simple
+### u-utiwisation simpwe
 
-Par défaut, sans indiquer de locale, une chaîne formatée avec la locale et les options par défaut est renvoyée.
+paw défaut, ( ͡o ω ͡o ) s-sans indiquew de wocawe, /(^•ω•^) une chaîne fowmatée a-avec wa wocawe et wes options paw d-défaut est wenvoyée. (⑅˘꒳˘)
 
 ```js
-let amount = 3500;
+w-wet amount = 3500;
 
-console.log(new Intl.NumberFormat().format(amount));
-// → '3 500' si l'environnement est en français
+c-consowe.wog(new intw.numbewfowmat().fowmat(amount));
+// → '3 500' s-si w'enviwonnement est e-en fwançais
 ```
 
-### Formatage pour des nombres décimaux et des pourcentages
+### fowmatage p-pouw des nyombwes décimaux et des p-pouwcentages
 
 ```js
-let amount = 3500;
+wet amount = 3500;
 
-new Intl.NumberFormat("en-US", { style: "decimal" }).format(amount);
+nyew intw.numbewfowmat("en-us", òωó { stywe: "decimaw" }).fowmat(amount);
 // → '3,500'
-new Intl.NumberFormat("fr", { style: "percent" }).format(amount);
+n-nyew intw.numbewfowmat("fw", 🥺 { stywe: "pewcent" }).fowmat(amount);
 // → '350 000 %'
 ```
 
-### Formatage avec des unités
+### fowmatage avec des u-unités
 
-Si l'option `style` vaut `'unit'`, une propriété `unit` doit être fournie. Le paramètre optionnel `unitDisplay` contrôle le formatage de l'unité.
+si w'option `stywe` vaut `'unit'`, u-une pwopwiété `unit` doit êtwe fouwnie. (ˆ ﻌ ˆ)♡ we pawamètwe o-optionnew `unitdispway` contwôwe we fowmatage d-de w'unité. -.-
 
 ```js
-let amount = 3500;
+w-wet amount = 3500;
 
-new Intl.NumberFormat("en-US", { style: "unit", unit: "liter" }).format(amount);
-// → '3,500 L'
+n-new intw.numbewfowmat("en-us", σωσ { stywe: "unit", >_< unit: "witew" }).fowmat(amount);
+// → '3,500 w-w'
 
-new Intl.NumberFormat("fr", {
-  style: "unit",
-  unit: "liter",
-  unitDisplay: "long",
-}).format(amount);
-// → '3 500 litres'
+n-nyew intw.numbewfowmat("fw", :3 {
+  stywe: "unit", OwO
+  u-unit: "witew", rawr
+  unitdispway: "wong", (///ˬ///✿)
+}).fowmat(amount);
+// → '3 500 witwes'
 ```
 
-### Formatage de devises
+### f-fowmatage de devises
 
-Si l'option `style` vaut `'currency'`, une propriété `currency` doit être fournie. Les paramètres optionnels `currencyDisplay` et `currencySign` contrôlent le formatage de la devise.
+s-si w'option `stywe` v-vaut `'cuwwency'`, ^^ u-une pwopwiété `cuwwency` doit êtwe f-fouwnie. XD wes pawamètwes o-optionnews `cuwwencydispway` e-et `cuwwencysign` c-contwôwent we fowmatage d-de wa devise. UwU
 
 ```js
-let amount = -3500;
-new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
-  amount,
+w-wet amount = -3500;
+n-nyew intw.numbewfowmat("en-us", o.O { s-stywe: "cuwwency", 😳 cuwwency: "usd" }).fowmat(
+  a-amount,
 );
 // → '-$3,500.00'
 
-new Intl.NumberFormat("bn", {
-  style: "currency",
-  currency: "USD",
-  currencyDisplay: "name",
-}).format(amount);
-// →  '-3,500.00 US dollars'
+n-nyew i-intw.numbewfowmat("bn", (˘ω˘) {
+  s-stywe: "cuwwency", 🥺
+  cuwwency: "usd", ^^
+  c-cuwwencydispway: "name", >w<
+}).fowmat(amount);
+// →  '-3,500.00 us dowwaws'
 
-new Intl.NumberFormat("fr", {
-  style: "currency",
-  currency: "EUR",
-  currencySign: "accounting",
-}).format(amount);
+n-new intw.numbewfowmat("fw", ^^;; {
+  stywe: "cuwwency", (˘ω˘)
+  c-cuwwency: "euw", OwO
+  c-cuwwencysign: "accounting", (ꈍᴗꈍ)
+}).fowmat(amount);
 // →  "(3 500,00 €)"
 ```
 
-### Notations scientifique, ingénieur et compacte
+### n-nyotations scientifique, òωó ingénieuw et compacte
 
-Ces notations sont portées par l'option `notation` et peuvent être formatées ainsi&nbsp;:
+ces nyotations s-sont powtées p-paw w'option `notation` e-et peuvent êtwe fowmatées ainsi&nbsp;:
 
 ```js
-new Intl.NumberFormat("en-US", { notation: "scientific" }).format(987654321);
-// → 9.877E8
+nyew intw.numbewfowmat("en-us", ʘwʘ { nyotation: "scientific" }).fowmat(987654321);
+// → 9.877e8
 
-new Intl.NumberFormat("pt-PT", { notation: "scientific" }).format(987654321);
-// → 9,877E8
+n-nyew intw.numbewfowmat("pt-pt", ʘwʘ { n-nyotation: "scientific" }).fowmat(987654321);
+// → 9,877e8
 
-new Intl.NumberFormat("en-GB", { notation: "engineering" }).format(987654321);
-// → 987.654E6
+nyew intw.numbewfowmat("en-gb", nyaa~~ { n-nyotation: "engineewing" }).fowmat(987654321);
+// → 987.654e6
 
-new Intl.NumberFormat("de", { notation: "engineering" }).format(987654321);
-// → 987,654E6
+n-nyew intw.numbewfowmat("de", UwU { nyotation: "engineewing" }).fowmat(987654321);
+// → 987,654e6
 
-new Intl.NumberFormat("zh-CN", { notation: "compact" }).format(987654321);
+nyew intw.numbewfowmat("zh-cn", (⑅˘꒳˘) { nyotation: "compact" }).fowmat(987654321);
 // → 9.9亿
 
-new Intl.NumberFormat("fr", {
-  notation: "compact",
-  compactDisplay: "long",
-}).format(987654321);
-// → 988 millions
+nyew i-intw.numbewfowmat("fw", (˘ω˘) {
+  n-nyotation: "compact", :3
+  c-compactdispway: "wong",
+}).fowmat(987654321);
+// → 988 m-miwwions
 
-new Intl.NumberFormat("en-GB", {
-  notation: "compact",
-  compactDisplay: "short",
-}).format(987654321);
-// → 988M
+nyew intw.numbewfowmat("en-gb", (˘ω˘) {
+  nyotation: "compact", nyaa~~
+  compactdispway: "showt", (U ﹏ U)
+}).fowmat(987654321);
+// → 988m
 ```
 
-### Affichage des signes
+### a-affichage d-des signes
 
-Dans l'exemple qui suit, on affiche toujours le signe sauf si la valeur est zéro&nbsp;:
+dans w'exempwe qui suit, on affiche t-toujouws we signe sauf si wa vaweuw est zéwo&nbsp;:
 
 ```js
-new Intl.NumberFormat("en-US", {
-  style: "percent",
-  signDisplay: "exceptZero",
-}).format(0.55);
+n-new intw.numbewfowmat("en-us", nyaa~~ {
+  stywe: "pewcent",
+  s-signdispway: "exceptzewo", ^^;;
+}).fowmat(0.55);
 // → '+55%'
 ```
 
-On notera que lorsque le style porte sur les devises et que le style de signe vaut "`accounting`", des parenthèses pourront être utilisées plutôt qu'un signe moins&nbsp;:
+o-on nyotewa que wowsque we s-stywe powte suw w-wes devises et que we stywe de s-signe vaut "`accounting`", OwO des pawenthèses p-pouwwont êtwe u-utiwisées p-pwutôt qu'un s-signe moins&nbsp;:
 
 ```js
-new Intl.NumberFormat("bn", {
-  style: "currency",
-  currency: "USD",
-  currencySign: "accounting",
-  signDisplay: "always",
-}).format(-3500);
+nyew i-intw.numbewfowmat("bn", nyaa~~ {
+  stywe: "cuwwency",
+  c-cuwwency: "usd", UwU
+  c-cuwwencysign: "accounting", 😳
+  signdispway: "awways", 😳
+}).fowmat(-3500);
 
 // → '($3,500.00)'
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
-- [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf)
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`intw.numbewfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat)
+- [`intw.suppowtedvawuesof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/suppowtedvawuesof)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)

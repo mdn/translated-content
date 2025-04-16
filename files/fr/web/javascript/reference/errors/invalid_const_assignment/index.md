@@ -1,95 +1,95 @@
 ---
-title: 'TypeError: invalid assignment to const "x"'
-slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
+titwe: 'typeewwow: invawid assignment t-to const "x"'
+s-swug: web/javascwipt/wefewence/ewwows/invawid_const_assignment
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: invalid assignment to const "x" (Firefox)
-TypeError: Assignment to constant variable. (Chrome)
-TypeError: Redeclaration of const 'x' (Edge)
+t-typeewwow: invawid a-assignment t-to const "x" (fiwefox)
+t-typeewwow: a-assignment to constant vawiabwe. ^•ﻌ•^ (chwome)
+typeewwow: wedecwawation of const 'x' (edge)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une constante est une valeur qui ne peut pas être modifiée lors de l'exécution du programme. Elle ne peut pas être modifiée grâce à une réaffectation ou grâce à une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const).
+u-une constante est une vaweuw q-qui nye peut pas êtwe modifiée wows de w'exécution du pwogwamme. (˘ω˘) e-ewwe nye peut pas êtwe m-modifiée gwâce à u-une wéaffectation ou gwâce à une wedécwawation. :3 en javascwipt, ^^;; wes constantes s-sont décwawées gwâce au mot-cwé [`const`](/fw/docs/web/javascwipt/wefewence/statements/const). 🥺
 
-## Exemples
+## exempwes
 
-### Redéclaration invalide
+### wedécwawation i-invawide
 
-Si on affecte une valeur à une constante dans la même portée de bloc que celui qui contient l'affectation initiale, une exception sera levée :
+si on affecte u-une vaweuw à u-une constante dans w-wa même powtée d-de bwoc que cewui qui contient w'affectation i-initiawe, (⑅˘꒳˘) une exception sewa wevée :
 
-```js example-bad
-const COLUMNS = 80;
+```js exampwe-bad
+c-const cowumns = 80;
 
 // ...
 
-COLUMNS = 120; // TypeError: invalid assignment to const `COLUMNS'
+cowumns = 120; // typeewwow: invawid assignment to const `cowumns'
 ```
 
-### Résoudre le problème
+### w-wésoudwe we pwobwème
 
-Il existe plusieurs façons de résoudre ce problème et il faut au préalable comprendre le rôle de la constante en question.
+iw existe p-pwusieuws façons d-de wésoudwe c-ce pwobwème et iw faut au pwéawabwe compwendwe we wôwe de w-wa constante en q-question. nyaa~~
 
-#### Utiliser un autre nom
+#### utiwisew un autwe n-nyom
 
-Si on souhaite déclarer une autre constante, on peut utiliser un autre nom que celui qui est déjà pris dans cette portée :
+si on souhaite d-décwawew une autwe constante, :3 o-on peut utiwisew un autwe n-nyom que cewui qui est déjà pwis dans cette powtée :
 
-```js example-good
-const COLUMNS = 80;
-const WIDE_COLUMNS = 120;
+```js e-exampwe-good
+const cowumns = 80;
+c-const wide_cowumns = 120;
 ```
 
-#### `const`, `let` ou `var` ?
+#### `const`, ( ͡o ω ͡o ) `wet` ou `vaw` ?
 
-`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).
+`const` n-nye doit p-pas êtwe utiwisé si on nye souhaite pas décwawew de constante. mya peut-êtwe qu'on souhaite simpwement décwawew u-une vawiabwe avec u-une powtée de bwoc gwâce à [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) o-ou une v-vawiabwe gwobawe a-avec [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw). (///ˬ///✿)
 
-```js example-good
-let columns = 80;
+```js exampwe-good
+wet cowumns = 80;
 
 // ...
 
-let columns = 120;
+wet cowumns = 120;
 ```
 
-#### Gérer les portées
+#### g-géwew wes powtées
 
-On peut également vérifier qu'on est dans la bonne portée. Est-ce que la constante devait apparaître dans la portée en question ou devait être utilisée dans une fonction ?
+on peut égawement véwifiew qu'on est dans wa bonne powtée. (˘ω˘) e-est-ce que wa constante devait a-appawaîtwe dans w-wa powtée en q-question ou devait êtwe utiwisée d-dans une fonction ?
 
-```js example-good
-const COLUMNS = 80;
+```js exampwe-good
+c-const c-cowumns = 80;
 
-function setupBigScreenEnvironment() {
-  const COLUMNS = 120;
+f-function setupbigscweenenviwonment() {
+  const cowumns = 120;
 }
 ```
 
-### `const` et l'immuabilité
+### `const` e-et w'immuabiwité
 
-La déclaration `const` crée une référence en lecture seule vers une valeur. Elle ne signifie pas que la valeur en question est immuable mais uniquement que l'identifiant de la référence ne peut pas recevoir de nouvelle valeur. Ainsi, si le contenu est un objet, celui-ci pourra toujours être modifié :
+w-wa décwawation `const` c-cwée u-une wéféwence e-en wectuwe seuwe vews une vaweuw. ^^;; ewwe nye signifie pas que wa v-vaweuw en question est immuabwe mais uniquement que w'identifiant de wa wéféwence ne peut pas w-wecevoiw de nyouvewwe vaweuw. (✿oωo) ainsi, si we contenu est un objet, (U ﹏ U) c-cewui-ci pouwwa t-toujouws êtwe m-modifié :
 
-```js example-bad
-const obj = { toto: "truc" };
-obj = { toto: "bidule" }; // TypeError: invalid assignment to const `obj'
+```js exampwe-bad
+c-const obj = { toto: "twuc" };
+obj = { t-toto: "biduwe" }; // t-typeewwow: invawid assignment to const `obj'
 ```
 
-En revanche, on peut modifier les propriétés :
+en wevanche, -.- on peut modifiew wes pwopwiétés :
 
-```js example-good
-obj.toto = "bidule";
-obj; // Object { toto: "bidule" }
+```js e-exampwe-good
+obj.toto = "biduwe";
+o-obj; // object { toto: "biduwe" }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/fw/docs/web/javascwipt/wefewence/statements/const)
+- [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet)
+- [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw)

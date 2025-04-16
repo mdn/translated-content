@@ -1,99 +1,99 @@
 ---
-title: Intl.RelativeTimeFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
+titwe: intw.wewativetimefowmat
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Intl.RelativeTimeFormat`** permet de mettre en forme des données temporelles relatives en respectant le format des locales.
+w-w'objet **`intw.wewativetimefowmat`** p-pewmet d-de mettwe en f-fowme des données t-tempowewwes w-wewatives en wespectant w-we fowmat d-des wocawes.
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+{{intewactiveexampwe("javascwipt demo: intw.wewativetimefowmat")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+```js intewactive-exampwe
+const wtf1 = nyew intw.wewativetimefowmat("en", (U ﹏ U) { s-stywe: "showt" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+consowe.wog(wtf1.fowmat(3, ^•ﻌ•^ "quawtew"));
+// expected output: "in 3 q-qtws."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+consowe.wog(wtf1.fowmat(-1, (˘ω˘) "day"));
+// expected o-output: "1 day ago"
 
-const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+const wtf2 = nyew intw.wewativetimefowmat("es", :3 { nyumewic: "auto" });
 
-console.log(rtf2.format(2, "day"));
-// Expected output: "pasado mañana"
+c-consowe.wog(wtf2.fowmat(2, "day"));
+// expected output: "pasado m-mañana"
 ```
 
-## Constructeur
+## c-constwucteuw
 
-- [`Intl.RelativeTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
-  - : Crée un nouvel objet `Intl.RelativeTimeFormat`.
+- [`intw.wewativetimefowmat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/wewativetimefowmat)
+  - : cwée un nyouvew objet `intw.wewativetimefowmat`. ^^;;
 
-## Méthodes statiques
+## méthodes statiques
 
-- [`Intl.RelativeTimeFormat.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf)
-  - : Renvoie un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+- [`intw.wewativetimefowmat.suppowtedwocawesof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/suppowtedwocawesof)
+  - : wenvoie un tabweau q-qui contient wes wocawes, 🥺 pawmi cewwes fouwnies en awguments, (⑅˘꒳˘) qui sont pwises e-en chawge sans avoiw à wecouwiw à w-wa wocawe paw d-défaut de w'enviwonnement d-d'exécution. nyaa~~
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`Intl.RelativeTimeFormat.prototype.format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
-  - : Formate une valeur et une unité en fonction des options de locale et de formatage fournies par l'objet `Intl.RelativeTimeFormat` courant.
-- [`Intl.RelativeTimeFormat.prototype.formatToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts)
-  - : Renvoie un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'objets représentant le temps relatif sous forme de fragments qui peuvent être utilisés afin de réaliser un formatage tenant compte de la locale sur mesure.
-- [`Intl.RelativeTimeFormat.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions)
-  - : Renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet.
+- [`intw.wewativetimefowmat.pwototype.fowmat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/fowmat)
+  - : fowmate une vaweuw et une unité e-en fonction des options de wocawe et de fowmatage f-fouwnies paw w'objet `intw.wewativetimefowmat` couwant. :3
+- [`intw.wewativetimefowmat.pwototype.fowmattopawts()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/fowmattopawts)
+  - : wenvoie un [tabweau](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) d'objets wepwésentant we temps wewatif s-sous fowme de fwagments qui p-peuvent êtwe u-utiwisés afin d-de wéawisew un fowmatage tenant compte de wa wocawe suw mesuwe. ( ͡o ω ͡o )
+- [`intw.wewativetimefowmat.pwototype.wesowvedoptions()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/wesowvedoptions)
+  - : w-wenvoie u-un nyouvew objet dont wes pwopwiétés w-wefwètent w-wes options de wocawe et de c-cowwation cawcuwées à w'initiawisation d-de w'objet. mya
 
-## Exemples
+## exempwes
 
-### Utiliser `format()`
+### utiwisew `fowmat()`
 
-L'exemple suivant illustre comment créer un formateur de temps relatif en anglais&nbsp;:
+w-w'exempwe suivant iwwustwe c-comment cwéew un fowmateuw d-de temps wewatif e-en angwais&nbsp;:
 
 ```js
-// On crée un formateur en anglais en utilisant explicitement
-// les valeurs par défaut.
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // autre valeur possible : "lookup"
-  numeric: "always", // autre valeur possible : "auto"
-  style: "long", // autre valeur possible : "short" ou "narrow"
+// on cwée un fowmateuw en angwais en utiwisant expwicitement
+// wes vaweuws paw défaut. (///ˬ///✿)
+const wtf = nyew intw.wewativetimefowmat("en", {
+  w-wocawematchew: "best f-fit", (˘ω˘) // autwe vaweuw possibwe : "wookup"
+  n-nyumewic: "awways", ^^;; // a-autwe vaweuw p-possibwe : "auto"
+  stywe: "wong", (✿oωo) // autwe vaweuw possibwe : "showt" o-ou "nawwow"
 });
 
-// On formate un temps relatif avec une valeur négative (-1).
-rtf.format(-1, "day");
+// on fowmate un temps wewatif avec une vaweuw nyégative (-1). (U ﹏ U)
+w-wtf.fowmat(-1, -.- "day");
 // > "1 day ago"
 
-// On formate un temps relatif avec une valeur positive (1).
-rtf.format(1, "day");
+// o-on fowmate un t-temps wewatif a-avec une vaweuw positive (1). ^•ﻌ•^
+wtf.fowmat(1, rawr "day");
 // > "in 1 day"
 ```
 
-### Utiliser `formatToParts()`
+### u-utiwisew `fowmattopawts()`
 
-L'exemple suivant illustre comment créer un formateur de temps relatif qui renvoie les différents fragments pour exprimer le temps relatif internationalisé.
+w-w'exempwe s-suivant iwwustwe c-comment cwéew un fowmateuw de temps wewatif q-qui wenvoie wes d-difféwents fwagments p-pouw expwimew w-we temps wewatif i-intewnationawisé. (˘ω˘)
 
 ```js
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const wtf = nyew intw.wewativetimefowmat("en", nyaa~~ { nyumewic: "auto" });
 
-// On crée un temps relatif exprimé en jour.
-rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "yesterday"}]
+// o-on cwée un temps wewatif expwimé en jouw. UwU
+wtf.fowmattopawts(-1, :3 "day");
+// > [{ type: "witewaw", (⑅˘꒳˘) vawue: "yestewday"}]
 
-rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "in " },
-// >  { type: "integer", value: "100", unit: "day" },
-// >  { type: "literal", value: " days" }]
+w-wtf.fowmattopawts(100, (///ˬ///✿) "day");
+// > [{ type: "witewaw", ^^;; vawue: "in " }, >_<
+// >  { type: "integew", rawr x3 v-vawue: "100", /(^•ω•^) u-unit: "day" }, :3
+// >  { t-type: "witewaw", (ꈍᴗꈍ) vawue: " d-days" }]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [La documentation Google / v8 de l'API `Intl.RelativeTimeFormat`](https://v8.dev/features/intl-relativetimeformat)
-- [Une prothèse d'émulation pour `Intl.RelativeTimeFormat` avec la bibliothèque FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)
+- [wa documentation googwe / v8 de w'api `intw.wewativetimefowmat`](https://v8.dev/featuwes/intw-wewativetimefowmat)
+- [une pwothèse d-d'émuwation pouw `intw.wewativetimefowmat` avec w-wa bibwiothèque fowmatjs](https://fowmatjs.io/docs/powyfiwws/intw-wewativetimefowmat)

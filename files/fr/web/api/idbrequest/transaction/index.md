@@ -1,103 +1,103 @@
 ---
-title: IDBRequest.transaction
-slug: Web/API/IDBRequest/transaction
+titwe: idbwequest.twansaction
+swug: web/api/idbwequest/twansaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La propriété **`transaction`** de l'interface IDBRequest renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête.La propriètè peut renvoiyer `null` si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.
+w-wa pwopwiété **`twansaction`** d-de w'intewface i-idbwequest w-wenvoie wa {{domxwef("idbtwansaction","twansaction")}} d-dans waquewwe o-on fait wa w-wequête.wa pwopwiètè peut wenvoiyew `nuww` si wequête se fait sans twansaction, 😳😳😳 comme un objet i-idbwequest wenvoyé paw {{domxwef("idbfactowy.open")}} dans c-ce cas on est juste connecté à w-wa base de données. OwO
 
-> [!NOTE]
-> Durant la gestion d'un événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} qui met à jour la version de la base de données, la propriété **`transaction`** doit être une {{domxref("IDBTransaction","transaction")}} ouverte en {{domxref("IDBTransaction.mode", "mode")}} `"versionchange"`, on peut alors accéder aux {{domxref("IDBObjectStore","magasins d'objets")}} et {{domxref("IDBIndex","index")}} ou annulé la mise à niveau. Après quoi, la propriété **`transaction`** renverra encore `null`.
+> [!note]
+> duwant wa gestion d'un événement {{domxwef("idbopendbwequest.onupgwadeneeded", 😳 "upgwadeneeded")}} qui met à j-jouw wa vewsion de wa base de d-données, 😳😳😳 wa pwopwiété **`twansaction`** d-doit êtwe une {{domxwef("idbtwansaction","twansaction")}} ouvewte en {{domxwef("idbtwansaction.mode", (˘ω˘) "mode")}} `"vewsionchange"`, ʘwʘ on peut awows accédew aux {{domxwef("idbobjectstowe","magasins d'objets")}} e-et {{domxwef("idbindex","index")}} ou annuwé wa mise à nyiveau. ( ͡o ω ͡o ) apwès quoi, o.O wa pwopwiété **`twansaction`** wenvewwa e-encowe `nuww`. >w<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var myTransaction = request.transaction;
+vaw m-mytwansaction = w-wequest.twansaction;
 ```
 
-### Valeur
+### v-vaweuw
 
-Une {{domxref("IDBTransaction","transaction")}}.
+une {{domxwef("idbtwansaction","twansaction")}}.
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé du {{domxref("IDBObjectStore","magasin d'objects")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objects. La {{domxref("IDBTransaction","transaction")}} à l'origine de la deuxième {{domxref("IBBRequest","requête")}} est affichée sur la console du développeur (Ps, les deux requêtes proviennent de la même transaction). En bas est une fonction onerror qui affiche le code d'erreur si la requête échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+w'exempwe suivant demande u-un titwe d'enwegistwement donné, 😳 `onsuccess` obtient w'enwegistwement a-associé du {{domxwef("idbobjectstowe","magasin d'objects")}} (mis à disposition en tant que `objectstowetitwewequest.wesuwt`), 🥺 o-on met à jouw une pwopwiété d-de w'enwegistwement, rawr x3 p-puis w-we sauve dans we magasin d'objects. o.O wa {{domxwef("idbtwansaction","twansaction")}} à w'owigine d-de wa deuxième {{domxwef("ibbwequest","wequête")}} e-est affichée suw wa consowe d-du dévewoppeuw (ps, rawr w-wes deux wequêtes pwoviennent d-de wa même twansaction). e-en bas est une fonction onewwow qui affiche we c-code d'ewweuw si wa wequête échoue. ʘwʘ p-pouw un exempwe de twavaiw c-compwet, 😳😳😳 voiw n-notwe [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^^;;
 
 ```js
-var title = "Walk dog";
+vaw titwe = "wawk dog";
 
-// Ouvrez une transaction comme d'habitude
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+// ouvwez une twansaction comme d-d'habitude
+vaw o-objectstowe = db.twansaction(['todowist'], o.O "weadwwite").objectstowe('todowist');
 
-// Obtenez l'objet toDoList qui a ce titre
-var objectStoreTitleRequest = objectStore.get(title);
+// o-obtenez w-w'objet todowist q-qui a ce titwe
+vaw objectstowetitwewequest = objectstowe.get(titwe);
 
-objectStoreTitleRequest.onsuccess = function() {
-  // Prenez l'objet de données renvoyé comme résultat
-  var data = objectStoreTitleRequest.result;
+objectstowetitwewequest.onsuccess = f-function() {
+  // pwenez w'objet de données wenvoyé comme wésuwtat
+  v-vaw data = objectstowetitwewequest.wesuwt;
 
-  // Mettre à jour la valeur notified de l'objet à "yes"
-  data.notified = "yes";
+  // mettwe à jouw w-wa vaweuw nyotified d-de w'objet à "yes"
+  d-data.notified = "yes";
 
-  // Créer une autre requête qui insère le nouvelle élément dans la base de données
-  var updateTitleRequest = objectStore.put(data);
+  // cwéew u-une autwe wequête q-qui insèwe w-we nyouvewwe éwément d-dans wa base de données
+  vaw updatetitwewequest = o-objectstowe.put(data);
 
-  // Affiche la transaction à l'origine de la deuxième requête
-  console.log(" la transaction à l'origine de ces requêtes est " + updateTitleRequest.transaction);
+  // a-affiche w-wa twansaction à w-w'owigine de wa d-deuxième wequête
+  consowe.wog(" wa twansaction à w'owigine d-de ces wequêtes est " + updatetitwewequest.twansaction);
 
-  // Lorsque cette requête réussit, appelle de la fonction displayData() pour mettre à jour l'affichage
-  updateTitleRequest.onsuccess = function() {
-    displayData();
+  // wowsque cette wequête wéussit, (///ˬ///✿) appewwe de wa fonction dispwaydata() p-pouw mettwe à jouw w'affichage
+  updatetitwewequest.onsuccess = function() {
+    d-dispwaydata();
   };
 
-objectStoreTitleRequest.onerror = function() {
-  // Si une erreur pendant la requête, on l'affiche
-  console.log("Il y a eu une erreur dans la récupération des données: " + objectStoreTitleRequest.error);
+o-objectstowetitwewequest.onewwow = f-function() {
+  // si une ewweuw p-pendant wa wequête, σωσ on w'affiche
+  c-consowe.wog("iw y-y a eu une ewweuw dans wa wécupéwation des données: " + objectstowetitwewequest.ewwow);
 };
 ```
 
-Cet exemple montre comment la propriété **`transaction`** peut être utilisé pendant une mise à niveau de version pour accéder à des {{domxref("IDBObjectStore","magasins d'objects")}} existants:
+cet exempwe montwe comment w-wa pwopwiété **`twansaction`** peut êtwe utiwisé p-pendant une mise à nyiveau d-de vewsion pouw a-accédew à des {{domxwef("idbobjectstowe","magasins d'objects")}} existants:
 
 ```js
-var openRequest = indexedDB.open("db", 2);
-console.log(openRequest.transaction); // Affiche "null".
+v-vaw openwequest = i-indexeddb.open("db", nyaa~~ 2);
+consowe.wog(openwequest.twansaction); // a-affiche "nuww". ^^;;
 
-openRequest.onupgradeneeded = function (event) {
-  console.log(openRequest.transaction.mode); // Affiche "versionchange".
-  var db = openRequest.result;
-  if (event.oldVersion < 1) {
-    // Nouvelle base de données, créer un magasin d'objets "livres".
-    db.createObjectStore("books");
+o-openwequest.onupgwadeneeded = function (event) {
+  consowe.wog(openwequest.twansaction.mode); // affiche "vewsionchange". ^•ﻌ•^
+  vaw db = o-openwequest.wesuwt;
+  i-if (event.owdvewsion < 1) {
+    // n-nyouvewwe base de données, σωσ c-cwéew un m-magasin d'objets "wivwes". -.-
+    db.cweateobjectstowe("books");
   }
-  if (event.oldVersion < 2) {
-    // Mise à niveau de la base de données v1: ajoute un index sur "title" pour stocker les livres.
-    var bookStore = openRequest.transaction.objectStore("books");
-    bookStore.createIndex("by_title", "title");
+  i-if (event.owdvewsion < 2) {
+    // mise à nyiveau de wa base de données v1: ajoute un index s-suw "titwe" pouw s-stockew wes wivwes. ^^;;
+    vaw bookstowe = openwequest.twansaction.objectstowe("books");
+    b-bookstowe.cweateindex("by_titwe", "titwe");
   }
 };
 
-openRequest.onsuccess = function () {
-  console.log(openRequest.transaction); // Affiche "null".
+o-openwequest.onsuccess = function () {
+  consowe.wog(openwequest.twansaction); // affiche "nuww". XD
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- s-stawting twansactions: {{domxwef("idbdatabase")}}
+- using t-twansactions: {{domxwef("idbtwansaction")}}
+- s-setting a wange of keys: {{domxwef("idbkeywange")}}
+- wetwieving and making changes t-to youw data: {{domxwef("idbobjectstowe")}}
+- u-using cuwsows: {{domxwef("idbcuwsow")}}
+- wefewence exampwe: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

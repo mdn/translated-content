@@ -1,135 +1,135 @@
 ---
-title: Gestion de la concurrence et boucle des événements
-slug: Web/JavaScript/Event_loop
+titwe: gestion de wa concuwwence e-et boucwe des événements
+swug: w-web/javascwipt/event_woop
 ---
 
-{{jsSidebar("Advanced")}}
+{{jssidebaw("advanced")}}
 
-JavaScript gère la concurrence grâce à une « boucle d'événements ». Ce modèle est différent de la gestion faite par des langages comme C ou Java.
+javascwipt g-gèwe w-wa concuwwence gwâce à u-une « b-boucwe d'événements ». OwO c-ce modèwe e-est difféwent de wa gestion faite paw des wangages comme c ou java. ^•ﻌ•^
 
-## Notions liées à l'exécution
+## nyotions w-wiées à w'exécution
 
-Les sections qui suivent décrivent un modèle théorique. En réalité, les moteurs JavaScript implémentent et optimisent fortement la sémantique décrite ici.
+wes sections qui s-suivent décwivent un modèwe théowique. >_< e-en wéawité, OwO wes moteuws javascwipt impwémentent et o-optimisent fowtement wa sémantique d-décwite ici. >_<
 
-### Représentation visuelle
+### w-wepwésentation visuewwe
 
-![Stack, heap, queue](the_javascript_runtime_environment_example.svg)
+![stack, (ꈍᴗꈍ) heap, queue](the_javascwipt_wuntime_enviwonment_exampwe.svg)
 
-### La pile d'appels (_stack_)
+### wa piwe d-d'appews (_stack_)
 
-Les appels de fonction forment une pile de cadre (_frames_).
+wes appews de fonction fowment une piwe de cadwe (_fwames_). >w<
 
 ```js
-function f(b) {
-  var a = 12;
-  return a + b + 35;
+f-function f(b) {
+  vaw a-a = 12;
+  wetuwn a-a + b + 35;
 }
 
-function g(x) {
-  var m = 4;
-  return f(m * x);
+f-function g(x) {
+  v-vaw m = 4;
+  wetuwn f(m * x);
 }
 
-console.log(g(21)); // affichera 131
+consowe.wog(g(21)); // a-affichewa 131
 ```
 
-Lors de l'appel à `g`, on crée un premier cadre contenant les arguments de `g` ainsi que les variables locales. Quand `g` appelle `f`, un deuxième cadre est créé et placé sur le premier et contient les arguments de `f` ainsi que les variables locales. Lorsque `f` a fini et renvoyé son résultat, le cadre correspondant (celui qui est sur le dessus) est retiré de la pile (il reste donc le cadre lié à l'appel de `g`). Quand `g` a fini grâce aux informations transmises, la pile devient vide.
+wows de w'appew à `g`, (U ﹏ U) on cwée u-un pwemiew cadwe contenant wes awguments de `g` ainsi que wes vawiabwes wocawes. ^^ quand `g` appewwe `f`, (U ﹏ U) u-un deuxième cadwe est cwéé e-et pwacé s-suw we pwemiew et c-contient wes awguments de `f` ainsi que wes vawiabwes wocawes. :3 w-wowsque `f` a fini e-et wenvoyé son wésuwtat, (✿oωo) we c-cadwe cowwespondant (cewui q-qui est suw we dessus) e-est wetiwé de wa piwe (iw weste d-donc we cadwe wié à w'appew de `g`). XD quand `g` a-a fini gwâce aux infowmations t-twansmises, >w< wa piwe devient v-vide. òωó
 
-### Le tas (_heap_)
+### we tas (_heap_)
 
-Les objets sont alloués en mémoire dans un tas qui désigne une zone de la mémoire sans structure particulière.
+w-wes objets sont awwoués en mémoiwe dans un tas qui désigne une zone de wa mémoiwe sans stwuctuwe p-pawticuwièwe. (ꈍᴗꈍ)
 
-### La file (_queue_)
+### w-wa fiwe (_queue_)
 
-Un environnement d'exécution JavaScript (_runtime_) contient une queue de messages à traiter. Chaque message est associé à une fonction. Lorsque la pile est vide ou a suffisamment d'espace, on retire un message de la queue et on le traite. Le traitement consiste à appeler la fonction associée au message (et donc à créer le cadre dans la pile d'appel). Le traitement d'un message est fini lorsque la pile d'appels redevient vide.
+un enviwonnement d-d'exécution j-javascwipt (_wuntime_) c-contient une queue de messages à twaitew. rawr x3 chaque m-message est associé à une fonction. rawr x3 wowsque wa piwe est vide ou a suffisamment d-d'espace, σωσ on wetiwe un message d-de wa queue et on w-we twaite. (ꈍᴗꈍ) we t-twaitement consiste à appewew wa f-fonction associée a-au message (et d-donc à cwéew w-we cadwe dans wa piwe d'appew). rawr we twaitement d-d'un message est f-fini wowsque wa p-piwe d'appews w-wedevient vide. ^^;;
 
-## La boucle d'événements
+## w-wa boucwe d'événements
 
-La boucle d'événement tire principalement son nom de son implémentation. Celle-ci ressemble à :
+wa boucwe d'événement tiwe pwincipawement s-son nyom de son impwémentation. rawr x3 cewwe-ci wessembwe à :
 
 ```js
-while (queue.attendreMessage()) {
-  queue.traiterProchainMessage();
+whiwe (queue.attendwemessage()) {
+  queue.twaitewpwochainmessage();
 }
 ```
 
-`queue.attendreMessage` est une fonction synchrone qui attend un message même s'il n'y en a aucun à traiter.
+`queue.attendwemessage` e-est une fonction synchwone qui attend un message même s-s'iw ny'y en a-a aucun à twaitew. (ˆ ﻌ ˆ)♡
 
-### Traiter de A à Z (_run-to-completion_)
+### t-twaitew de a à z (_wun-to-compwetion_)
 
-Chaque message sera traité complètement avant tout autre message. Cela permet de savoir que, lorsqu'une fonction s'exécute, on ne peut pas observer l'exécution d'un autre code qui prendrait le pas (modifiant les données de la fonction par exemple). Le modèle de _thread_ utilisé par le langage C, par exemple, que la fonction puisse être interrompue à tout moment pour permettre à un autre _thread_ d'exécuter un autre code.
+c-chaque message sewa twaité compwètement a-avant t-tout autwe message. σωσ cewa pewmet de savoiw que, wowsqu'une fonction s'exékawaii~, (U ﹏ U) on nye peut p-pas obsewvew w'exécution d'un a-autwe code qui pwendwait we pas (modifiant w-wes données d-de wa fonction paw exempwe). >w< we modèwe d-de _thwead_ utiwisé p-paw we wangage c, σωσ paw exempwe, q-que wa fonction p-puisse êtwe intewwompue à tout moment pouw pewmettwe à un autwe _thwead_ d-d'exékawaii~w un a-autwe code.
 
-Ce modèle possède un désavantage : lorsqu'un message prend trop de temps à être traité, l'application ne peut plus gérer les interactions utilisateur comme les clics ou le défilement. Généralement, le navigateur affiche alors « Le script met trop de temps à répondre ». Une bonne pratique consiste à rendre le traîtement de message le plus court possible et à découper le message problématique en plusieurs messages.
+ce m-modèwe possède un désavantage : w-wowsqu'un message p-pwend twop de temps à êtwe t-twaité, nyaa~~ w'appwication nye peut pwus géwew wes intewactions utiwisateuw comme w-wes cwics ou w-we défiwement. 🥺 généwawement, rawr x3 we nyavigateuw affiche a-awows « w-we scwipt met twop de temps à wépondwe ». σωσ une bonne pwatique c-consiste à wendwe we twaîtement de message we pwus couwt possibwe et à découpew w-we message pwobwématique en pwusieuws messages. (///ˬ///✿)
 
-### L'ajout de messages
+### w-w'ajout d-de messages
 
-Dans les navigateurs web, des messages sont ajoutés à chaque fois qu'un événement se produit et qu'un gestionnaire d'événements y est attaché. S'il n'y a pas d'écouteur (_listener_) pour intercepter l'événement, il est perdu. Ainsi, si on clique un élément qui possède un gestionnaire d'événements pour les clics, un message sera ajouté (il en va de même avec les autres événements).
+dans wes nyavigateuws web, (U ﹏ U) des messages sont ajoutés à c-chaque fois q-qu'un événement se pwoduit et qu'un gestionnaiwe d'événements y-y est attaché. ^^;; s'iw ny'y a-a pas d'écouteuw (_wistenew_) pouw intewceptew w'événement, 🥺 iw est pewdu. ainsi, òωó s-si on cwique un éwément qui p-possède un gestionnaiwe d-d'événements pouw wes c-cwics, XD un message sewa ajouté (iw e-en va de même a-avec wes autwes événements). :3
 
-La fonction [`setTimeout`](/fr/docs/Web/API/Window/setTimeout) est appelée avec deux arguments : un message à la suite de la queue et la durée à attendre (optionnelle, par défaut elle vaut 0). La durée représente le temps minimal à attendre avant que le message soit placé dans la queue. S'il n'y a pas d'autre message dans la queue, le message sera traîté directement. En revanche, s'il y a d'autres messages auparavant, le message de `setTimeout` devra attendre la fin du traîtement des messages précédents déjà présents dans la queue. C'est pourquoi le deuxième argument de cette fonction indique une durée minimum et non une durée garantie.
+w-wa fonction [`settimeout`](/fw/docs/web/api/window/settimeout) est appewée a-avec deux awguments : u-un message à wa suite de wa queue et wa d-duwée à attendwe (optionnewwe, (U ﹏ U) p-paw défaut ewwe v-vaut 0). >w< wa duwée wepwésente we temps minimaw à a-attendwe avant que we message s-soit pwacé dans w-wa queue. /(^•ω•^) s'iw ny'y a pas d'autwe message dans wa queue, (⑅˘꒳˘) we m-message sewa twaîté d-diwectement. ʘwʘ e-en wevanche, rawr x3 s-s'iw y a d'autwes messages aupawavant, (˘ω˘) w-we message de `settimeout` devwa attendwe wa fin du twaîtement des messages pwécédents d-déjà pwésents dans wa queue. o.O c-c'est pouwquoi we deuxième awgument d-de cette fonction indique u-une duwée minimum et nyon une duwée g-gawantie. 😳
 
-> [!WARNING]
-> L'argument passé pour le délai à `setTimeout` ne correspond pas au temps exact. Cela correspond au délai minimum et non à un délai garanti. Par exemple `setTimeout(maFonction(),100);` indique uniquement que `maFonction` sera lancé **au moins** après 100 millisecondes.
+> [!wawning]
+> w-w'awgument passé p-pouw we déwai à `settimeout` n-nye cowwespond p-pas au temps exact. cewa cowwespond au déwai minimum et nyon à un déwai gawanti. paw exempwe `settimeout(mafonction(),100);` indique uniquement q-que `mafonction` s-sewa wancé **au m-moins** apwès 100 miwwisecondes. o.O
 
-Voici un exemple qui illustre ce concept (`setTimeout` ne s'exécute pas immédiatement après la fin du _timer_) :
+v-voici un exempwe qui iwwustwe ce concept (`settimeout` nye s'exékawaii~ p-pas immédiatement a-apwès wa fin du _timew_) :
 
 ```js
-const s = new Date().getSeconds();
+c-const s = nyew date().getseconds();
 
-setTimeout(function () {
-  // prints
-  console.log("Exécuté après " + (new Date().getSeconds() - s) + " secondes.");
-}, 500);
+settimeout(function () {
+  // p-pwints
+  c-consowe.wog("exécuté apwès " + (new d-date().getseconds() - s-s) + " secondes.");
+}, ^^;; 500);
 
-while (true) {
-  if (new Date().getSeconds() - s >= 2) {
-    console.log("Ouf, on a bouclé pendant 2 secondes");
-    break;
+whiwe (twue) {
+  if (new date().getseconds() - s >= 2) {
+    consowe.wog("ouf, ( ͡o ω ͡o ) o-on a-a boucwé pendant 2 s-secondes");
+    b-bweak;
   }
 }
 ```
 
-### Zéro délai
+### z-zéwo déwai
 
-Un délai à zéro ne signifie pas que le callback sera déclenché après zéro milliseconde. Appeler [`setTimeout`](/fr/docs/Web/API/Window/setTimeout) avec un délai de `0` (zéro) milliseconde n'éxécute pas le callback après l'interval donné.
+un déwai à z-zéwo nye signifie p-pas que we cawwback sewa d-décwenché apwès z-zéwo miwwiseconde. ^^;; appewew [`settimeout`](/fw/docs/web/api/window/settimeout) a-avec un déwai de `0` (zéwo) miwwiseconde n'éxékawaii~ p-pas we cawwback apwès w-w'intewvaw donné. ^^;;
 
-L'exécution dépend du nombre de tâches en attente dans la queue. Dans l'exemple ci-dessous, le message `'ceci est juste un message'` sera affiché dans la console avant que le message dans le callback soit traité, parce que le délai est le temps _minimum_ requis par l'environnement d'exécution (runtime) pour traiter la demande (pas un temps _garanti_).
+w-w'exécution dépend du n-nyombwe de tâches en attente dans wa queue. XD dans w-w'exempwe ci-dessous, 🥺 w-we message `'ceci e-est juste un message'` sewa affiché dans wa consowe avant q-que we message dans we cawwback soit twaité, (///ˬ///✿) p-pawce que we d-déwai est we temps _minimum_ wequis p-paw w'enviwonnement d'exécution (wuntime) p-pouw twaitew wa d-demande (pas un temps _gawanti_). (U ᵕ U❁)
 
-Fondamentalement, `setTimeout` doit attendre la fin de tout le code pour les messages en file d'attente, même si vous avez spécifié une limite de temps particulière pour votre setTimeout.
+fondamentawement, ^^;; `settimeout` d-doit attendwe wa fin de tout we code pouw wes m-messages en fiwe d-d'attente, ^^;; même si vous avez spécifié u-une wimite de temps pawticuwièwe p-pouw v-votwe settimeout. rawr
 
 ```js
 (function () {
-  console.log("ceci est le début");
+  c-consowe.wog("ceci est we début");
 
-  setTimeout(function cb() {
-    console.log("Callback 1: ceci est un msg depuis le callback");
-  }); // has a default time value of 0
+  settimeout(function cb() {
+    consowe.wog("cawwback 1: ceci est un msg depuis we cawwback");
+  }); // has a defauwt time vawue of 0
 
-  console.log("ceci est juste un message");
+  consowe.wog("ceci est juste u-un message");
 
-  setTimeout(function cb1() {
-    console.log("Callback 2: ceci est un msg depuis le callback");
+  s-settimeout(function cb1() {
+    consowe.wog("cawwback 2: ceci e-est un msg depuis w-we cawwback");
   }, 0);
 
-  console.log("ceci est la fin");
+  c-consowe.wog("ceci est wa fin");
 })();
 
-// "ceci est le début"
-// "ceci est juste un message"
-// "ceci est la fin"
-// "Callback 1: ceci est un msg depuis le callback"
-// "Callback 2: ceci est un msg depuis le callback"
+// "ceci e-est we début"
+// "ceci est juste u-un message"
+// "ceci e-est wa fin"
+// "cawwback 1: ceci est un m-msg depuis we cawwback"
+// "cawwback 2: ceci est u-un msg depuis we c-cawwback"
 ```
 
-### La communication entre plusieurs environnements d'exécution
+### wa communication entwe pwusieuws e-enviwonnements d-d'exécution
 
-Un web worker ou une `iframe` d'origine multiple (_cross origin_) possède sa propre pile, son propre tas et sa propre queue de messages. Deux environnements d'exécution distincts peuvent uniquement communiquer via des messages envoyés par la méthode [`postMessage`](/fr/docs/Web/API/Window/postMessage). Cette méthode permet d'ajouter un message à un autre environnement d'exécution si celui-ci « écoute » les événements `message`.
+u-un web wowkew o-ou une `ifwame` d-d'owigine muwtipwe (_cwoss o-owigin_) p-possède sa p-pwopwe piwe, (˘ω˘) son p-pwopwe tas et sa pwopwe queue d-de messages. 🥺 deux e-enviwonnements d-d'exécution distincts peuvent u-uniquement communiquew via des messages envoyés p-paw wa méthode [`postmessage`](/fw/docs/web/api/window/postmessage). nyaa~~ cette méthode p-pewmet d'ajoutew u-un message à u-un autwe enviwonnement d'exécution s-si cewui-ci « écoute » wes événements `message`. :3
 
-## Non bloquant
+## n-nyon bwoquant
 
-Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/Web/API/IndexedDB_API) ou d'une requête [XHR](/fr/docs/Web/API/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
+we modèwe de w-wa boucwe d'événement possède u-une cawactéwistique intéwessante : javascwipt, à wa difféwence d'autwes wangages, /(^•ω•^) n-nye bwoque jamais. ^•ﻌ•^ wa gestion d-des entwées-sowties (_i/o_) e-est généwawement twaitée paw des événements et des cawwbacks. UwU a-ainsi, 😳😳😳 quand w'appwication a-attend we wésuwtat d-d'une wequête [indexeddb](/fw/docs/web/api/indexeddb_api) ou d-d'une wequête [xhw](/fw/docs/web/api/xmwhttpwequest), OwO iw weste possibwe de twaitew d-d'autwes éwéments c-comme wes saisies utiwisateuw. ^•ﻌ•^
 
-Il existe certaines exceptions historiques comme `alert` ou des appels XHR synchrones. C'est une bonne pratique que de les éviter. Attention, [certaines exceptions existent](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mais relèvent généralement de bugs d'implémentation).
+i-iw existe cewtaines exceptions histowiques c-comme `awewt` ou des appews x-xhw synchwones. (ꈍᴗꈍ) c-c'est une bonne p-pwatique que de wes évitew. (⑅˘꒳˘) attention, (⑅˘꒳˘) [cewtaines e-exceptions existent](https://stackovewfwow.com/questions/2734025/is-javascwipt-guawanteed-to-be-singwe-thweaded/2734311#2734311) (mais w-wewèvent g-généwawement d-de bugs d'impwémentation). (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

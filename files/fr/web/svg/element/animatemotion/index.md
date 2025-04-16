@@ -1,86 +1,86 @@
 ---
-title: animateMotion
-slug: Web/SVG/Element/animateMotion
+titwe: animatemotion
+swug: web/svg/ewement/animatemotion
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chemin donné.
+w-w'éwément **`<animatemotion>`** pewmet d-d'animew un éwément w-we wong d-d'un chemin d-donné. OwO
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements d'animation](/fr/docs/Web/SVG/Attribute#animationevent) »
-- [Attributs XLink](/fr/docs/Web/SVG/Attribute#xlink) »
-- [Attributs d'animation de timing](/fr/docs/Web/SVG/Attribute#animationtiming) »
-- [Attributs d'animation de valeurs](/fr/docs/Web/SVG/Attribute#animationvalue) »
-- [Attributs d'animation d'ajout](/fr/docs/Web/SVG/Attribute#animationaddition) »
-- {{ SVGAttr("externalResourcesRequired") }}
+- [attwibuts à twaitement conditionnew](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts fondamentaux](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts d'événements d-d'animation](/fw/docs/web/svg/attwibute#animationevent) »
+- [attwibuts xwink](/fw/docs/web/svg/attwibute#xwink) »
+- [attwibuts d'animation de t-timing](/fw/docs/web/svg/attwibute#animationtiming) »
+- [attwibuts d'animation d-de vaweuws](/fw/docs/web/svg/attwibute#animationvawue) »
+- [attwibuts d'animation d'ajout](/fw/docs/web/svg/attwibute#animationaddition) »
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{ SVGAttr("calcMode") }}
-- {{ SVGAttr("path") }}
-- {{ SVGAttr("keyPoints") }}
-- {{ SVGAttr("rotate") }}
-- {{ SVGAttr("origin") }}
+- {{ svgattw("cawcmode") }}
+- {{ s-svgattw("path") }}
+- {{ s-svgattw("keypoints") }}
+- {{ svgattw("wotate") }}
+- {{ svgattw("owigin") }}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`SVGAnimateMotionElement`](/fr/docs/Web/API/SVGAnimateMotionElement).
+cet éwément impwémente w-w'intewface [`svganimatemotionewement`](/fw/docs/web/api/svganimatemotionewement). 😳😳😳
 
-## Exemple
+## exempwe
 
-### SVG
+### svg
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw vewsion="1.0"?>
 <svg
   width="120"
   height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Dessine le chemin en gris, avec 2 cercles aux extrémités -->
+  v-viewbox="0 0 120 120"
+  xmwns="http://www.w3.owg/2000/svg"
+  v-vewsion="1.1"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- d-dessine we chemin e-en gwis, 😳😳😳 avec 2 cewcwes aux extwémités -->
   <path
-    d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
-    stroke="lightgrey"
-    stroke-width="2"
-    fill="none"
-    id="theMotionPath" />
-  <circle cx="10" cy="110" r="3" fill="lightgrey" />
-  <circle cx="110" cy="10" r="3" fill="lightgrey" />
+    d="m10,110 a-a120,120 -45 0,1 110 10 a120,120 -45 0,1 10,110"
+    stwoke="wightgwey"
+    stwoke-width="2"
+    f-fiww="none"
+    id="themotionpath" />
+  <ciwcwe cx="10" cy="110" w="3" fiww="wightgwey" />
+  <ciwcwe cx="110" cy="10" w-w="3" fiww="wightgwey" />
 
-  <!-- Cercle rouge qui sera déplacé le long du chemin. -->
-  <circle cx="" cy="" r="5" fill="red">
-    <!-- Définit l'animation -->
-    <animateMotion dur="6s" repeatCount="indefinite">
-      <mpath xlink:href="#theMotionPath" />
-    </animateMotion>
-  </circle>
+  <!-- cewcwe wouge q-qui sewa dépwacé w-we wong du chemin. o.O -->
+  <ciwcwe c-cx="" cy="" w="5" fiww="wed">
+    <!-- définit w'animation -->
+    <animatemotion d-duw="6s" w-wepeatcount="indefinite">
+      <mpath xwink:hwef="#themotionpath" />
+    </animatemotion>
+  </ciwcwe>
 </svg>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple", 120, 120)}}
+{{embedwivesampwe("exempwe", ( ͡o ω ͡o ) 120, 120)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{ SVGElement("mpath") }}
+- {{ svgewement("mpath") }}

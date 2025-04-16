@@ -1,30 +1,30 @@
 ---
-title: MouseEvent.offsetX
-slug: Web/API/MouseEvent/offsetX
+titwe: mouseevent.offsetx
+swug: w-web/api/mouseevent/offsetx
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-La propriété en lecture seule **`offsetX`** de l'interface {{domxref("MouseEvent")}} fournit le décalage sur l'axe X du pointeur de la souris entre cet évènement et la bordure de la marge intérieure du noeud cible.
+wa pwopwiété e-en wectuwe s-seuwe **`offsetx`** d-de w'intewface {{domxwef("mouseevent")}} f-fouwnit we décawage s-suw w'axe x-x du pointeuw de wa souwis entwe cet évènement et wa bowduwe de wa mawge intéwieuwe d-du nyoeud cibwe. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var xOffset = instanceOfMouseEvent.offsetX;
+vaw x-xoffset = instanceofmouseevent.offsetx;
 ```
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Un nombre à virgule flottante double précision `double`. Les premières versions de la spécification la définissaient comme un nombre entier. Pour plus de détails, voir la section Compatibilité des navigateurs.
+u-un nyombwe à viwguwe fwottante doubwe pwécision `doubwe`. rawr wes pwemièwes vewsions d-de wa spécification wa d-définissaient comme u-un nyombwe entiew. OwO pouw pwus de détaiws, (U ﹏ U) voiw wa section compatibiwité des n-navigateuws. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("MouseEvent")}}
+- {{domxwef("mouseevent")}}

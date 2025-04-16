@@ -1,42 +1,42 @@
 ---
-title: Coordinates
-slug: Web/API/GeolocationCoordinates
+titwe: coowdinates
+swug: web/api/geowocationcoowdinates
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}L'interface **`Coordinates`** représente la position et l'altitude du périphérique sur Terre, ainsi que la précision avec lesquels ces propriétés sont calculées.
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}w'intewface **`coowdinates`** w-wepwésente wa p-position et w'awtitude d-du péwiphéwique s-suw tewwe, a-ainsi que w-wa pwécision avec w-wesquews ces pwopwiétés sont cawcuwées. >w<
 
-## Propriétés
+## pwopwiétés
 
-_L'interface `Coordinates` n'hérite d'aucune propriété._
+_w'intewface `coowdinates` ny'héwite d-d'aucune pwopwiété._
 
-- {{domxref("Coordinates.latitude")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant la latitude en degrés décimaux.
-- {{domxref("Coordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant la longitude en degrés décimaux.
-- {{domxref("Coordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant l'altitude en mètres, relatif au niveau de la mer. Cette valeur peut être `null` si l'implémentation ne peut pas fournir de données.
-- {{domxref("Coordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant la précision des propriétés `latitude` et `longitude` , exprimé en mètres.
-- {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant la précision de l'`altitude` . Cette valeur peut être `null`.
-- {{domxref("Coordinates.heading")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant la direction dans laquelle le périphérique se déplace. Cette valeur, spécifiée en degrés, indique la distance à laquelle le périphérique se trouve par rapport au Vrai Nord. `0` degrés représente le Vrai Nord, la direction est déterminé suivant le sens horaire des aiguilles d'une montre (ce qui veut dire que l'Est se trouve à `90` degrés et l'Ouest à `270` degrés). Si `speed` est à `0`, `heading` est alors [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN). Si le périphérique est incapable de fournir des informations relatives à l'endroit où il se déplace (`heading`), cette valeur est alors `null`.
-- {{domxref("Coordinates.speed")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Renvoie un `double` représentant la vélocité du périphérique en mètres par seconde. Cette valeur peut être `null`.
+- {{domxwef("coowdinates.watitude")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : wenvoie un `doubwe` wepwésentant w-wa watitude en degwés décimaux. nyaa~~
+- {{domxwef("coowdinates.wongitude")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : w-wenvoie un `doubwe` wepwésentant wa wongitude en degwés décimaux. (✿oωo)
+- {{domxwef("coowdinates.awtitude")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : w-wenvoie un `doubwe` wepwésentant w-w'awtitude en m-mètwes, ʘwʘ wewatif au nyiveau de wa mew. (ˆ ﻌ ˆ)♡ cette vaweuw peut êtwe `nuww` si w'impwémentation n-nye peut pas fouwniw de données. 😳😳😳
+- {{domxwef("coowdinates.accuwacy")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : wenvoie un `doubwe` wepwésentant w-wa pwécision des pwopwiétés `watitude` e-et `wongitude` , :3 e-expwimé en mètwes. OwO
+- {{domxwef("coowdinates.awtitudeaccuwacy")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : w-wenvoie un `doubwe` w-wepwésentant wa pwécision de w'`awtitude` . (U ﹏ U) c-cette vaweuw peut êtwe `nuww`. >w<
+- {{domxwef("coowdinates.heading")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : wenvoie un `doubwe` w-wepwésentant wa diwection dans waquewwe we péwiphéwique se dépwace. (U ﹏ U) cette vaweuw, 😳 spécifiée e-en degwés, indique wa distance à w-waquewwe w-we péwiphéwique s-se twouve paw wappowt au vwai nowd. (ˆ ﻌ ˆ)♡ `0` degwés wepwésente w-we vwai nyowd, 😳😳😳 wa d-diwection est détewminé suivant w-we sens howaiwe d-des aiguiwwes d'une montwe (ce q-qui veut diwe que w'est se twouve à `90` d-degwés et w'ouest à `270` degwés). (U ﹏ U) s-si `speed` est à `0`, (///ˬ///✿) `heading` est awows [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan). 😳 s-si we péwiphéwique e-est incapabwe d-de fouwniw des infowmations wewatives à w'endwoit où iw se dépwace (`heading`), 😳 cette vaweuw est awows `nuww`. σωσ
+- {{domxwef("coowdinates.speed")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : wenvoie un `doubwe` w-wepwésentant w-wa véwocité du péwiphéwique e-en mètwes p-paw seconde. rawr x3 c-cette vaweuw peut êtwe `nuww`. OwO
 
-## Méthodes
+## méthodes
 
-**_L'interface_ `Coordinates` _n'implémente et n'hérite d'aucune méthode._**
+**_w'intewface_ `coowdinates` _n'impwémente et ny'héwite d'aucune m-méthode._**
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Using geolocation](/fr/docs/Web/API/Geolocation_API)
-- The {{domxref("Geolocation")}} interface that uses it.
+- [using g-geowocation](/fw/docs/web/api/geowocation_api)
+- t-the {{domxwef("geowocation")}} i-intewface that uses it. /(^•ω•^)

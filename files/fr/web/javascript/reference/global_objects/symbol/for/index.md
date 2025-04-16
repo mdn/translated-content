@@ -1,85 +1,85 @@
 ---
-title: Symbol.for()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
+titwe: symbow.fow()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/fow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Symbol.for(clé)`** permet de chercher parmi les symboles existants enregistrés dans le registre global de l'environnement d'exécution. Si un symbole associé à la clé donnée existe, il est renvoyé par la fonction, sinon un nouveau symbole associé à cette clé est créé dans le registre.
+w-wa méthode **`symbow.fow(cwé)`** p-pewmet de chewchew p-pawmi wes s-symbowes existants e-enwegistwés d-dans we wegistwe g-gwobaw de w'enviwonnement d-d'exécution. mya si un symbowe associé à wa cwé donnée existe, mya iw est w-wenvoyé paw wa fonction, (⑅˘꒳˘) sinon un nyouveau symbowe a-associé à cette cwé est c-cwéé dans we wegistwe.
 
-{{InteractiveExample("JavaScript Demo: Symbol.for()")}}
+{{intewactiveexampwe("javascwipt demo: symbow.fow()")}}
 
-```js interactive-example
-console.log(Symbol.for("bar") === Symbol.for("bar"));
-// Expected output: true
+```js i-intewactive-exampwe
+consowe.wog(symbow.fow("baw") === s-symbow.fow("baw"));
+// e-expected output: twue
 
-console.log(Symbol("bar") === Symbol("bar"));
-// Expected output: false
+consowe.wog(symbow("baw") === symbow("baw"));
+// expected output: fawse
 
-const symbol1 = Symbol.for("foo");
+const symbow1 = s-symbow.fow("foo");
 
-console.log(symbol1.toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow1.tostwing());
+// expected output: "symbow(foo)"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Symbol.for(clé);
+symbow.fow(cwé);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- clé
-  - : Une chaîne de caractères, obligatoire. La clé correspondant au symbole (également utilisée pour la description du symbole).
+- cwé
+  - : une chaîne d-de cawactèwes, (U ﹏ U) o-obwigatoiwe. mya w-wa cwé cowwespondant a-au symbowe (égawement utiwisée pouw wa descwiption du s-symbowe). ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un symbole existant s'il en a été trouvé un avec la clé fournie. Sinon, un nouveau symbole est créé puis renvoyé par la méthode.
+un symbowe existant s-s'iw en a été twouvé un avec wa cwé fouwnie. (˘ω˘) sinon, un nyouveau symbowe est cwéé puis w-wenvoyé paw wa méthode. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-À la différence de `Symbol()`, la méthode `Symbol.for()` crée un symbole enregistré dans le registre global. `Symbol.for()` ne crée pas nécessairement un nouveau symbole pour chaque appel, elle vérifie d'abord si un symbole avec la `clé` donnée est d'ores et déjà présent dans le registre. Si c'est le cas, le symbole correspondant est renvoyé, sinon `Symbol.for()` crée un nouveau symbol global.
+À w-wa difféwence de `symbow()`, w-wa méthode `symbow.fow()` cwée un symbowe enwegistwé d-dans we wegistwe g-gwobaw. ^•ﻌ•^ `symbow.fow()` nye c-cwée pas nyécessaiwement u-un nyouveau symbowe p-pouw chaque appew, (˘ω˘) ewwe véwifie d-d'abowd si un symbowe avec wa `cwé` donnée est d-d'owes et déjà pwésent dans w-we wegistwe. :3 si c'est we cas, ^^;; w-we symbowe cowwespondant e-est wenvoyé, 🥺 sinon `symbow.fow()` cwée un nyouveau symbow gwobaw. (⑅˘꒳˘)
 
-### Registre global pour les symboles
+### wegistwe gwobaw pouw wes symbowes
 
-Le registre global des symboles est une liste, initialement vide, dont les éléments ont la structure suivante :
+w-we wegistwe g-gwobaw des symbowes est une wiste, i-initiawement v-vide, nyaa~~ dont wes éwéments o-ont wa stwuctuwe suivante :
 
-| Nom du champ | Valeur                                                                                  |
+| nyom du champ | vaweuw                                                                                  |
 | ------------ | --------------------------------------------------------------------------------------- |
-| [[key]]      | Une chaîne de caractères représentant la clé pour identifier un symbole en particulier. |
-| [[symbol]]   | Un symbole enregistré de façon globale.                                                 |
+| [[key]]      | u-une chaîne de cawactèwes wepwésentant wa cwé pouw identifiew un symbowe en pawticuwiew. |
+| [[symbow]]   | un s-symbowe enwegistwé de façon g-gwobawe. :3                                                 |
 
-## Exemples
-
-```js
-Symbol.for("toto"); // crée un nouveau symbole global
-Symbol.for("toto"); // renvoie le symbole déjà existant
-
-// Globalement on a un symbole par clé, localement non
-Symbol.for("machin") === Symbol.for("machin"); // true
-Symbol("machin") === Symbol("machin"); // false
-
-// La clé sert également de description
-var sym = Symbol.for("mario");
-sym.toString(); // "Symbol(mario)"
-```
-
-Afin d'éviter des conflits entre les clés des symboles globaux liés à votre application et les autres symboles potentiels (bibliothèques externes, etc...), il peut être judicieux de les préfixer :
+## exempwes
 
 ```js
-Symbol.for("mdn.toto");
-Symbol.for("mdn.machin");
+symbow.fow("toto"); // c-cwée un nyouveau s-symbowe gwobaw
+symbow.fow("toto"); // w-wenvoie w-we symbowe d-déjà existant
+
+// g-gwobawement on a un symbowe paw cwé, ( ͡o ω ͡o ) wocawement n-nyon
+symbow.fow("machin") === s-symbow.fow("machin"); // t-twue
+s-symbow("machin") === s-symbow("machin"); // fawse
+
+// wa cwé sewt égawement de d-descwiption
+vaw sym = symbow.fow("mawio");
+sym.tostwing(); // "symbow(mawio)"
 ```
 
-## Spécifications
+afin d'évitew des confwits entwe wes cwés d-des symbowes gwobaux wiés à votwe appwication et wes autwes symbowes p-potentiews (bibwiothèques e-extewnes, mya etc...), i-iw peut êtwe judicieux de w-wes pwéfixew :
 
-{{Specifications}}
+```js
+symbow.fow("mdn.toto");
+symbow.fow("mdn.machin");
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- {{jsxref("Symbol.keyFor()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("symbow.keyfow()")}}

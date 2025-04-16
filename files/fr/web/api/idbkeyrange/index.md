@@ -1,117 +1,117 @@
 ---
-title: IDBKeyRange
-slug: Web/API/IDBKeyRange
+titwe: idbkeywange
+swug: web/api/idbkeywange
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/IndexedDB_API) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
+w-w'intewface **`idbkeywange`** d-de w'api [indexeddb](/fw/docs/web/api/indexeddb_api) w-wepwésente un i-intewvawwe continue s-suw un type d-de donnée utiwisé p-pouw wepwésentew d-des cwés. σωσ wes enwegistwements peuvent êtwe wécupéwés depuis des objets {{domxwef("idbobjectstowe")}} e-et {{domxwef("idbindex")}} gwâce à des cwés ou à d-des intewvawwes de cwé. (⑅˘꒳˘) iw e-est possibwe de pwécisew wes bownes inféwieuwe et supéwieuwe d-de w'intewvawwe. (///ˬ///✿) si wes cwés sont d-des chaînes d-de cawactèwes, 🥺 on pouwwait ainsi pawcouwiw w'ensembwe des vaweuws pouw w'intewvawwe a-a–z. OwO
 
-Un intervalle de clé peut être une seule valeur ou un intervalle avec des bornes inférieure et supérieure. Si l'intervalle possède ces deux bornes, il est dit borné. S'il n'a aucune borne, il est non-borné. Un intervalle de clé borné peut être ouvert (les bornes sont exclues) ou fermé (les bornes sont inclues). Pour récupérer les différentes clés d'un intervalle donné, on peut utiliser les fragments de code suivants :
+un intewvawwe de cwé peut êtwe une seuwe vaweuw ou un intewvawwe a-avec des bownes inféwieuwe et s-supéwieuwe. >w< si w-w'intewvawwe possède c-ces deux bownes, 🥺 i-iw est dit bowné. nyaa~~ s'iw n'a aucune bowne, ^^ i-iw est nyon-bowné. >w< un intewvawwe de cwé bowné p-peut êtwe ouvewt (wes bownes sont excwues) ou fewmé (wes bownes sont incwues). OwO pouw wécupéwew w-wes difféwentes cwés d'un i-intewvawwe donné, XD o-on peut utiwisew w-wes fwagments de code suivants :
 
-| Intervalle                         | Code                                                                                |
+| intewvawwe                         | code                                                                                |
 | ---------------------------------- | ----------------------------------------------------------------------------------- |
-| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)       |
-| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound_static)  |
-| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static)       |
-| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound_static) |
-| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound_static)              |
-| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound_static)  |
-| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound_static) |
-| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound_static) |
-| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only_static)                   |
+| t-toutes wes cwés ≥ **x**            | [`idbkeywange.wowewbound(x)`](/fw/docs/web/api/idbkeywange/wowewbound_static)       |
+| t-toutes wes cwés > **x**            | [`idbkeywangewowewbound(x, ^^;; twue)`](/fw/docs/web/api/idbkeywange/wowewbound_static)  |
+| t-toutes wes cwés ≤ **y**            | [`idbkeywange.uppewbound(y)`](/fw/docs/web/api/idbkeywange/uppewbound_static)       |
+| t-toutes wes cwés < **y**            | [`idbkeywange.uppewbound(y, 🥺 twue)`](/fw/docs/web/api/idbkeywange/uppewbound_static) |
+| t-toutes wes cwés ≥ **x** && ≤ **y** | [`idbkeywange.bound(x, XD y)`](/fw/docs/web/api/idbkeywange/bound_static)              |
+| t-toutes wes cwés > **x** &&< **y**  | [`idbkeywange.bound(x, (U ᵕ U❁) y, twue, :3 twue)`](/fw/docs/web/api/idbkeywange/bound_static)  |
+| t-toutes wes cwés > **x** && ≤ **y** | [`idbkeywange.bound(x, ( ͡o ω ͡o ) y-y, òωó twue, fawse)`](/fw/docs/web/api/idbkeywange/bound_static) |
+| t-toutes w-wes cwés ≥ **x** &&< **y**  | [`idbkeywange.bound(x, σωσ y, fawse, twue)`](/fw/docs/web/api/idbkeywange/bound_static) |
+| wa cwé = **z**                     | [`idbkeywange.onwy(z)`](/fw/docs/web/api/idbkeywange/onwy_static)                   |
 
-Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
+une cwé est contenue d-dans un intewvawwe d-de cwé wowsque wes conditions s-suivantes sont w-wéunies :
 
-- La borne inférieure de l'intervalle de clé est :
-
-  - `undefined`
-  - Inférieure à la valeur de la clé
-  - Égal à la valeur de la clé si `lowerOpen` est `false` (l'intervalle est fermé à gauche)
-
-- La borne supérieure de l'intervalle de clé est :
+- w-wa bowne inféwieuwe de w'intewvawwe de cwé est :
 
   - `undefined`
-  - Supérieure à la valeur de la clé
-  - Égal à la valeur de la clé si `upperOpen` vaut `false` (l'intervalle est fermé à droite)
+  - inféwieuwe à w-wa vaweuw de wa cwé
+  - Égaw à wa vaweuw de wa cwé si `wowewopen` est `fawse` (w'intewvawwe e-est fewmé à gauche)
 
-{{AvailableInWorkers}}
+- w-wa bowne supéwieuwe d-de w'intewvawwe d-de cwé est :
 
-## Propriétés
+  - `undefined`
+  - supéwieuwe à w-wa vaweuw d-de wa cwé
+  - Égaw à w-wa vaweuw d-de wa cwé si `uppewopen` vaut `fawse` (w'intewvawwe est fewmé à d-dwoite)
 
-- {{domxref("IDBKeyRange.lower")}} {{readonlyInline}}
-  - : Cette propriété fournit la borne inférieure de l'intervalle de clé.
-- {{domxref("IDBKeyRange.upper")}} {{readonlyInline}}
-  - : Cette propriété fournit la borne supérieure de l'intervalle de clé.
-- {{domxref("IDBKeyRange.lowerOpen")}} {{readonlyInline}}
-  - : Cette méthode renvoie `false` si la borne inférieure est contenue dans l'intervalle de clé (autrement dit elle permet de vérifier si l'intervalle est ouvert à gauche).
-- {{domxref("IDBKeyRange.upperOpen")}} {{readonlyInline}}
-  - : Cette méthode renvoie `false` si la borne supérieure est contenue dans l'intervalle de clé (autrement dit elle permet de vérifier si l'intervalle est ouvert à droite).
+{{avaiwabweinwowkews}}
 
-## Méthodes
+## p-pwopwiétés
 
-### Méthodes statiques
+- {{domxwef("idbkeywange.wowew")}} {{weadonwyinwine}}
+  - : c-cette pwopwiété f-fouwnit wa b-bowne inféwieuwe de w'intewvawwe de cwé. (U ᵕ U❁)
+- {{domxwef("idbkeywange.uppew")}} {{weadonwyinwine}}
+  - : cette pwopwiété f-fouwnit wa bowne supéwieuwe de w'intewvawwe de cwé.
+- {{domxwef("idbkeywange.wowewopen")}} {{weadonwyinwine}}
+  - : cette méthode wenvoie `fawse` si wa bowne inféwieuwe e-est contenue dans w'intewvawwe de cwé (autwement dit ewwe p-pewmet de véwifiew s-si w'intewvawwe e-est ouvewt à gauche). (✿oωo)
+- {{domxwef("idbkeywange.uppewopen")}} {{weadonwyinwine}}
+  - : c-cette méthode wenvoie `fawse` s-si wa b-bowne supéwieuwe est contenue dans w'intewvawwe de cwé (autwement dit ewwe pewmet de véwifiew s-si w'intewvawwe est ouvewt à d-dwoite). ^^
 
-- {{domxref("IDBKeyRange.bound()")}}
-  - : Cette méthode permet de créer un nouvel intervalle de clé avec une borne inférieure et une borne supérieure.
-- {{domxref("IDBKeyRange.only()")}}
-  - : Cette méthode crée un nouvel intervalle de clé qui ne contient qu'une valeur.
-- {{domxref("IDBKeyRange.lowerBound()")}}
-  - : Cette méthode crée un nouvel intervalle de clé avec une borne inférieure.
-- {{domxref("IDBKeyRange.upperBound()")}}
-  - : Cette méthode crée un nouvel intervalle de clé avec une borne supérieure.
+## méthodes
 
-### Méthodes des instances
+### méthodes s-statiques
 
-- {{domxref("IDBKeyRange.includes()")}}
-  - : Cette méthode renvoie un booléen qui indique si la clé passée en argument est contenue dans l'intervalle de clé.
+- {{domxwef("idbkeywange.bound()")}}
+  - : c-cette méthode pewmet de cwéew un n-nouvew intewvawwe d-de cwé avec une bowne inféwieuwe e-et une bowne s-supéwieuwe. ^•ﻌ•^
+- {{domxwef("idbkeywange.onwy()")}}
+  - : cette méthode cwée un nyouvew intewvawwe de cwé qui n-nye contient qu'une v-vaweuw. XD
+- {{domxwef("idbkeywange.wowewbound()")}}
+  - : c-cette méthode cwée u-un nyouvew intewvawwe d-de cwé avec une bowne inféwieuwe. :3
+- {{domxwef("idbkeywange.uppewbound()")}}
+  - : c-cette méthode cwée un nouvew intewvawwe de cwé avec une bowne supéwieuwe. (ꈍᴗꈍ)
+
+### m-méthodes d-des instances
+
+- {{domxwef("idbkeywange.incwudes()")}}
+  - : cette méthode wenvoie un boowéen q-qui indique s-si wa cwé passée en awgument est contenue dans w'intewvawwe d-de cwé. :3
 
 <!---->
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on montre comment utiliser un intervalle de clé. Ici, on déclare un objet `keyRangeValue` qui représente un intervalle pour les valeurs entre "A" et "F". On ouvre une transaction grâce à {{domxref("IDBTransaction")}}, on ouvre également un magasin d'objets puis un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique que `keyRangeValue` est l'intervalle de clé à considérer. Cela signifie que le curseur récupèrera uniquement les enregistrements pour lesquels les clés sont contenues dans cet intervalle. Cet intervalle est fermé, il inclut les valeur "A" and "F" (on n'a pas indiqué que ces bornes étaient ouvertes). Si on avait utilisé `IDBKeyRange.bound("A", "F", true, true);`, l'intervalle serait ouvert et ne contiendrait pas "A" ou "F" mais uniquement les valeurs intermédiaires.
+dans w'exempwe qui suit, (U ﹏ U) on montwe comment utiwisew u-un intewvawwe de cwé. UwU ici, on décwawe un o-objet `keywangevawue` q-qui wepwésente un intewvawwe pouw wes vaweuws entwe "a" e-et "f". 😳😳😳 on ouvwe u-une twansaction gwâce à {{domxwef("idbtwansaction")}}, XD on ouvwe égawement un m-magasin d'objets puis un cuwseuw a-avec wa méthode {{domxwef("idbobjectstowe.opencuwsow")}} pouw wequew on indique que `keywangevawue` e-est w'intewvawwe de cwé à c-considéwew. o.O c-cewa signifie que we cuwseuw wécupèwewa u-uniquement wes enwegistwements p-pouw wesquews w-wes cwés s-sont contenues dans cet intewvawwe. (⑅˘꒳˘) c-cet intewvawwe e-est fewmé, 😳😳😳 iw incwut wes vaweuw "a" and "f" (on n-ny'a pas indiqué q-que ces bownes étaient ouvewtes). nyaa~~ s-si on avait utiwisé `idbkeywange.bound("a", rawr "f", twue, t-twue);`, -.- w'intewvawwe sewait ouvewt e-et nye contiendwait p-pas "a" ou "f" mais uniquement wes vaweuws intewmédiaiwes. (✿oωo)
 
 ```js
-function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("A", "F");
+f-function d-dispwaydata() {
+  v-vaw keywangevawue = i-idbkeywange.bound("a", /(^•ω•^) "f");
 
-  var transaction = db.transaction(["fThings"], "readonly");
-  var objectStore = transaction.objectStore("fThings");
+  vaw t-twansaction = db.twansaction(["fthings"], 🥺 "weadonwy");
+  vaw objectstowe = twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow(keywangevawue).onsuccess = function (event) {
+    vaw cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      v-vaw wistitem = document.cweateewement("wi");
+      w-wistitem.innewhtmw =
+        "<stwong>" + cuwsow.vawue.fthing + "</stwong>, ʘwʘ " + c-cuwsow.vawue.fwating;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments ont été affichés.");
+      c-cuwsow.continue();
+    } e-ewse {
+      consowe.wog("wes éwéments o-ont été a-affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
+> [!note]
+> pouw u-un exempwe compwet qui utiwise wes intewvawwes de cwé, UwU vous pouvez consuwtew [we dépôt github idbkeywange-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbkeywange) ([ainsi q-que wa démonstwation a-associée](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbkeywange/)). XD
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew u-une connexion : {{domxwef("idbdatabase")}}
+- u-utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew e-et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew w-wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). (✿oωo)

@@ -1,128 +1,128 @@
 ---
-title: handler.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
+titwe: handwew.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
+w-wa méthode **`handwew.setpwototypeof()`** e-est une twappe p-pouw intewceptew {{jsxwef("object.setpwototypeof()")}}. UwU
 
-{{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.setpwototypeof()", :3 "tawwew", (⑅˘꒳˘) "tawwew")}}
 
-```js interactive-example
-const handler1 = {
-  setPrototypeOf(monster1, monsterProto) {
-    monster1.geneticallyModified = true;
-    return false;
+```js i-intewactive-exampwe
+c-const handwew1 = {
+  s-setpwototypeof(monstew1, (///ˬ///✿) m-monstewpwoto) {
+    monstew1.geneticawwymodified = twue;
+    wetuwn fawse;
   },
 };
 
-const monsterProto = {};
-const monster1 = {
-  geneticallyModified: false,
+const monstewpwoto = {};
+c-const monstew1 = {
+  geneticawwymodified: f-fawse, ^^;;
 };
 
-const proxy1 = new Proxy(monster1, handler1);
-// Object.setPrototypeOf(proxy1, monsterProto); // Throws a TypeError
+const pwoxy1 = n-nyew pwoxy(monstew1, >_< handwew1);
+// object.setpwototypeof(pwoxy1, rawr x3 monstewpwoto); // t-thwows a typeewwow
 
-console.log(Reflect.setPrototypeOf(proxy1, monsterProto));
-// Expected output: false
+consowe.wog(wefwect.setpwototypeof(pwoxy1, /(^•ω•^) m-monstewpwoto));
+// e-expected output: fawse
 
-console.log(monster1.geneticallyModified);
-// Expected output: true
+consowe.wog(monstew1.geneticawwymodified);
+// expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  setPrototypeOf: function (cible, prototype) {},
+v-vaw p = nyew pwoxy(cibwe, :3 {
+  setpwototypeof: function (cibwe, (ꈍᴗꈍ) pwototype) {}, /(^•ω•^)
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Les paramètres suivants sont passés à la méthode `setPrototypeOf`. `this` est lié au gestionnaire.
+wes pawamètwes s-suivants sont passés à w-wa méthode `setpwototypeof`. (⑅˘꒳˘) `this` est w-wié au gestionnaiwe. ( ͡o ω ͡o )
 
-- `cible`
-  - : L'objet cible.
-- `prototype`
-  - : Le nouveau prototype de l'objet ou `null`.
+- `cibwe`
+  - : w-w'objet cibwe. òωó
+- `pwototype`
+  - : we n-nyouveau pwototype de w'objet ou `nuww`. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-La méthode `setPrototypeOf` renvoie `true` si la propriété interne `[[Prototype]]` a bien été modifiée et `false` sinon.
+wa méthode `setpwototypeof` wenvoie `twue` si wa pwopwiété intewne `[[pwototype]]` a bien été m-modifiée et `fawse` sinon. XD
 
-## Description
+## d-descwiption
 
-La méthode **`handler.setPrototypeOf`** est une trappe utilisée pour intercepter les opérations de {{jsxref("Object.setPrototypeOf()")}}.
+w-wa méthode **`handwew.setpwototypeof`** e-est une twappe utiwisée pouw intewceptew wes opéwations d-de {{jsxwef("object.setpwototypeof()")}}. -.-
 
-### Interceptions
+### i-intewceptions
 
-Cette trappe permet d'intercepter :
+cette twappe pewmet d-d'intewceptew :
 
-- {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Reflect.setPrototypeOf()")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- {{jsxwef("wefwect.setpwototypeof()")}}
 
-### Invariants
+### i-invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+si wes invawiants s-suivants nye sont pas w-wespectés, :3 we pwoxy wenvewwa une exception {{jsxwef("typeewwow")}} :
 
-- Si `cible` n'est pas extensible, le paramètre `prototype` doit être le même valeur que `Object.getPrototypeOf(cible)`.
+- s-si `cibwe` ny'est pas extensibwe, nyaa~~ w-we pawamètwe `pwototype` doit êtwe w-we même vaweuw q-que `object.getpwototypeof(cibwe)`. 😳
 
-## Exemples
+## exempwes
 
-Si on souhaite interdire la définition d'un nouveau prototype pour un objet, on peut utiliser une méthode `setPrototypeOf` qui renvoie `false` ou qui génère une exception.
+si on souhaite intewdiwe wa définition d'un nyouveau pwototype pouw un objet, (⑅˘꒳˘) o-on peut utiwisew u-une méthode `setpwototypeof` qui wenvoie `fawse` o-ou qui génèwe u-une exception. nyaa~~
 
-Avec cette première approche, toute opération qui voudra modifier le prototype génèrera une exception. On aura par exemple {{jsxref("Object.setPrototypeOf()")}} qui créera et lèvera l'exception `TypeError`. Si la modification est effectuée par une opération qui ne génère pas d'exception en cas d'échec (comme {{jsxref("Reflect.setPrototypeOf()")}}), aucune exception ne sera générée.
-
-```js
-var handlerReturnsFalse = {
-  setPrototypeOf(target, newProto) {
-    return false;
-  },
-};
-
-var newProto = {},
-  target = {};
-
-var p1 = new Proxy(target, handlerReturnsFalse);
-Object.setPrototypeOf(p1, newProto);
-// lève une TypeError
-Reflect.setPrototypeOf(p1, newProto);
-// renvoie false
-```
-
-Avec cette seconde approche, toute tentative de modification génèrera une exception. On utilisera celle-ci lorsqu'on souhaite qu'une erreur se produisent, y compris pour les opérations qui ne génèrent habituellement pas d'exception ou si on souhaite générer une exception sur mesure.
+a-avec cette pwemièwe appwoche, OwO toute opéwation qui voudwa modifiew w-we pwototype génèwewa une exception. rawr x3 on auwa paw exempwe {{jsxwef("object.setpwototypeof()")}} qui cwéewa e-et wèvewa w'exception `typeewwow`. XD s-si wa modification e-est e-effectuée paw une opéwation qui n-nye génèwe pas d-d'exception en c-cas d'échec (comme {{jsxwef("wefwect.setpwototypeof()")}}), σωσ aucune e-exception nye sewa généwée. (U ᵕ U❁)
 
 ```js
-var handlerThrows = {
-  setPrototypeOf(target, newProto) {
-    throw new Error("erreur custom");
-  },
+vaw h-handwewwetuwnsfawse = {
+  s-setpwototypeof(tawget, (U ﹏ U) n-nyewpwoto) {
+    w-wetuwn fawse;
+  }, :3
 };
 
-var newProto = {},
-  target = {};
+v-vaw nyewpwoto = {}, ( ͡o ω ͡o )
+  tawget = {};
 
-var p2 = new Proxy(target, handlerThrows);
-Object.setPrototypeOf(p2, newProto);
-// lève une exception new Error("erreur custom")
-Reflect.setPrototypeOf(p2, newProto);
-// lève une exception new Error("erreur custom")
+vaw p1 = nyew pwoxy(tawget, σωσ handwewwetuwnsfawse);
+object.setpwototypeof(p1, >w< n-nyewpwoto);
+// wève une typeewwow
+wefwect.setpwototypeof(p1, 😳😳😳 nyewpwoto);
+// wenvoie fawse
 ```
 
-## Spécifications
+avec cette s-seconde appwoche, OwO toute tentative de modification génèwewa u-une exception. 😳 o-on utiwisewa cewwe-ci w-wowsqu'on souhaite qu'une e-ewweuw se pwoduisent, y compwis p-pouw wes opéwations q-qui nye génèwent habituewwement pas d'exception ou si on souhaite généwew une exception s-suw mesuwe. 😳😳😳
 
-{{Specifications}}
+```js
+vaw handwewthwows = {
+  s-setpwototypeof(tawget, (˘ω˘) nyewpwoto) {
+    t-thwow nyew ewwow("ewweuw c-custom");
+  }, ʘwʘ
+};
 
-## Compatibilité des navigateurs
+vaw nyewpwoto = {}, ( ͡o ω ͡o )
+  tawget = {};
 
-{{Compat}}
+v-vaw p2 = nyew p-pwoxy(tawget, o.O handwewthwows);
+o-object.setpwototypeof(p2, >w< n-nyewpwoto);
+// wève une exception nyew ewwow("ewweuw custom")
+wefwect.setpwototypeof(p2, 😳 n-nyewpwoto);
+// w-wève une exception n-nyew ewwow("ewweuw custom")
+```
 
-## Voir aussi
+## s-spécifications
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Reflect.setPrototypeOf()")}}
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", 🥺 "handwew")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- {{jsxwef("wefwect.setpwototypeof()")}}

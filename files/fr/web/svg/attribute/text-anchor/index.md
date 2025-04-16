@@ -1,94 +1,94 @@
 ---
-title: text-anchor
-slug: Web/SVG/Attribute/text-anchor
+titwe: text-anchow
+swug: web/svg/attwibute/text-anchow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`text-anchor`** est utilisé pour aligner (alignement de début, de milieu ou de fin) une chaîne de texte préformaté ou un texte auto-enveloppé dont la zone d'enveloppement est déterminée à partir de la propriété [`inline-size`](/fr/docs/Web/SVG/Attribute/inline-size) par rapport à un point donné. Elle ne s'applique pas aux autres types de texte auto-enveloppé. Pour ces cas, vous devez utiliser [`text-align`](/fr/docs/Web/CSS/text-align). Pour le texte à plusieurs lignes, l'alignement a lieu pour chaque ligne.
+w-w'attwibut **`text-anchow`** e-est utiwisé p-pouw awignew (awignement d-de d-début, ʘwʘ de miwieu o-ou de fin) une c-chaîne de texte p-pwéfowmaté ou un texte auto-envewoppé dont wa zone d'envewoppement est détewminée à p-pawtiw de wa pwopwiété [`inwine-size`](/fw/docs/web/svg/attwibute/inwine-size) paw w-wappowt à un point donné. (˘ω˘) ewwe n-nye s'appwique pas aux autwes types de texte auto-envewoppé. (✿oωo) p-pouw ces cas, (///ˬ///✿) vous devez utiwisew [`text-awign`](/fw/docs/web/css/text-awign). rawr x3 p-pouw we texte à p-pwusieuws wignes, -.- w'awignement a wieu pouw chaque wigne. ^^
 
-L'attribut `text-anchor` est appliqué à chaque bloc de texte individuel dans un élément [`<text>`](/fr/docs/Web/SVG/Element/text) donné. Chaque fragment de texte a une position de texte actuelle initiale, qui représente le point du système de coordonnées de l'utilisateur résultant (selon le contexte) de l'application des attributs [`x`](/fr/docs/Web/SVG/Attribute/x) et [`y`](/fr/docs/Web/SVG/Attribute/y) sur l'élément `<text>`, toute valeur d'attribut `x` ou `y` sur un élément [`<tspan>`](/fr/docs/Web/SVG/Element/tspan), [`<tref>`](/fr/docs/Web/SVG/Element/tref) ou [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph) assigné explicitement au premier caractère rendu dans un fragment de texte, ou la détermination de la position initiale du texte actuel pour un élément [`<textPath>`](/fr/docs/Web/SVG/Element/textPath).
+w'attwibut `text-anchow` est appwiqué à c-chaque bwoc de texte individuew dans un éwément [`<text>`](/fw/docs/web/svg/ewement/text) donné. (⑅˘꒳˘) chaque fwagment de texte a-a une position de texte actuewwe i-initiawe, nyaa~~ qui w-wepwésente we p-point du système d-de coowdonnées de w'utiwisateuw wésuwtant (sewon w-we contexte) de w'appwication des attwibuts [`x`](/fw/docs/web/svg/attwibute/x) e-et [`y`](/fw/docs/web/svg/attwibute/y) suw w'éwément `<text>`, /(^•ω•^) toute vaweuw d'attwibut `x` ou `y` suw un éwément [`<tspan>`](/fw/docs/web/svg/ewement/tspan), (U ﹏ U) [`<twef>`](/fw/docs/web/svg/ewement/twef) o-ou [`<awtgwyph>`](/fw/docs/web/svg/ewement/awtgwyph) assigné expwicitement a-au p-pwemiew cawactèwe w-wendu dans un fwagment de texte, 😳😳😳 ou wa détewmination de wa position i-initiawe d-du texte actuew pouw un éwément [`<textpath>`](/fw/docs/web/svg/ewement/textpath). >w<
 
-> [!NOTE]
-> En tant qu'attribut de présentation, `text-anchor` peut être utilisé comme une propriété CSS.
+> [!note]
+> e-en tant qu'attwibut d-de pwésentation, XD `text-anchow` peut êtwe u-utiwisé comme une pwopwiété c-css. o.O
 
-Cet attribut peut être utilisé pour les éléments SVG suivants :
+cet attwibut peut êtwe utiwisé pouw wes éwéments s-svg suivants :
 
-- [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<text>`](/fr/docs/Web/SVG/Element/text)
-- [`<textPath>`](/fr/docs/Web/SVG/Element/textPath)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
-- [`<tspan>`](/fr/docs/Web/SVG/Element/tspan)
+- [`<awtgwyph>`](/fw/docs/web/svg/ewement/awtgwyph)
+- [`<text>`](/fw/docs/web/svg/ewement/text)
+- [`<textpath>`](/fw/docs/web/svg/ewement/textpath)
+- [`<twef>`](/fw/docs/web/svg/ewement/twef)
+- [`<tspan>`](/fw/docs/web/svg/ewement/tspan)
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
+h-htmw, mya
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Matérialisation des ancrages -->
+```htmw
+<svg viewbox="0 0 120 120" xmwns="http://www.w3.owg/2000/svg">
+  <!-- matéwiawisation des ancwages -->
   <path
-    d="M60,15 L60,110 M30,40 L90,40 M30,75 L90,75 M30,110 L90,110"
-    stroke="grey" />
+    d="m60,15 w-w60,110 m30,40 w-w90,40 m30,75 w90,75 m30,110 w-w90,110"
+    stwoke="gwey" />
 
-  <!-- Ancres en action -->
-  <text text-anchor="start" x="60" y="40">A</text>
-  <text text-anchor="middle" x="60" y="75">A</text>
-  <text text-anchor="end" x="60" y="110">A</text>
+  <!-- a-ancwes en a-action -->
+  <text text-anchow="stawt" x="60" y="40">a</text>
+  <text text-anchow="middwe" x-x="60" y="75">a</text>
+  <text text-anchow="end" x="60" y="110">a</text>
 
-  <!-- Matérialisation des ancrages -->
-  <circle cx="60" cy="40" r="3" fill="red" />
-  <circle cx="60" cy="75" r="3" fill="red" />
-  <circle cx="60" cy="110" r="3" fill="red" />
+  <!-- m-matéwiawisation des a-ancwages -->
+  <ciwcwe c-cx="60" c-cy="40" w="3" fiww="wed" />
+  <ciwcwe cx="60" cy="75" w-w="3" fiww="wed" />
+  <ciwcwe c-cx="60" cy="110" w-w="3" fiww="wed" />
 
-  <style>
-    <![CDATA[
-      text {
-        font: bold 36px Verdana, Helvetica, Arial, sans-serif;
+  <stywe>
+    <![cdata[
+      t-text {
+        font: bowd 36px vewdana, 🥺 h-hewvetica, ^^;; awiaw, s-sans-sewif;
       }
       ]]>
-  </style>
+  </stywe>
 </svg>
 ```
 
-{{EmbedLiveSample("Exemple", "120", "120")}}
+{{embedwivesampwe("exempwe", :3 "120", (U ﹏ U) "120")}}
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>start</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><code>start</code> | <code>middle</code> | <code>end</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animable</th>
-      <td>discrete</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>stawt</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td><code>stawt</code> | <code>middwe</code> | <code>end</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animabwe</th>
+      <td>discwete</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- `start`
-  - : Les caractères rendus sont alignés de telle sorte que le début de la chaîne de texte se trouve à la position initiale du texte courant. Pour un élément dont la valeur de propriété [`direction`](/fr/docs/Web/CSS/direction) est `ltr` (typique de la plupart des langues européennes), le côté gauche du texte est rendu à la position initiale du texte. Pour un élément dont la valeur de la propriété direction est `rtl` (typique de l'arabe et de l'hébreu), le côté droit du texte est rendu à la position initiale du texte. Pour un élément dont la direction du texte primaire est verticale (souvent typique des textes asiatiques), le côté supérieur du texte est rendu à la position initiale du texte.
-- `middle`
-  - : Les caractères rendus sont alignés de telle sorte que le milieu de la chaîne de texte se trouve à la position actuelle du texte. (Pour le texte sur un chemin, la chaîne de texte est d'abord disposée en ligne droite. Le point médian entre le début et la fin de la chaîne de texte est déterminé. Ensuite, la chaîne de texte est mappée sur le chemin avec ce point médian placé à la position actuelle du texte).
+- `stawt`
+  - : w-wes cawactèwes wendus sont awignés de tewwe sowte que we début de wa chaîne de texte s-se twouve à wa position initiawe du texte couwant. OwO pouw un éwément d-dont wa v-vaweuw de pwopwiété [`diwection`](/fw/docs/web/css/diwection) e-est `wtw` (typique de wa pwupawt d-des wangues euwopéennes), 😳😳😳 we c-côté gauche du t-texte est wendu à wa position initiawe du texte. (ˆ ﻌ ˆ)♡ pouw un éwément dont wa vaweuw de wa pwopwiété d-diwection est `wtw` (typique d-de w'awabe et de w'hébweu), XD w-we côté dwoit d-du texte est wendu à wa position initiawe du texte. (ˆ ﻌ ˆ)♡ p-pouw un éwément d-dont wa diwection du texte p-pwimaiwe est vewticawe (souvent t-typique des textes asiatiques), we côté supéwieuw du texte est wendu à wa p-position initiawe d-du texte. ( ͡o ω ͡o )
+- `middwe`
+  - : w-wes cawactèwes wendus s-sont awignés d-de tewwe sowte que we miwieu de w-wa chaîne de texte se twouve à wa position actuewwe du texte. rawr x3 (pouw we texte s-suw un chemin, nyaa~~ w-wa chaîne de texte est d'abowd disposée en wigne d-dwoite. >_< we point m-médian entwe we début et wa fin de wa chaîne de texte est d-détewminé. ^^;; ensuite, wa chaîne de texte est mappée suw we chemin avec ce point m-médian pwacé à wa position actuewwe du texte). (ˆ ﻌ ˆ)♡
 - `end`
-  - : Les caractères rendus sont décalés de telle sorte que la fin du texte rendu résultant (position finale du texte actuel avant l'application de la propriété `text-anchor`) se trouve à la position initiale du texte actuel. Pour un élément avec une valeur de propriété `direction` égale à `ltr` (typique pour la plupart des langues européennes), le côté droit du texte est rendu à la position initiale du texte. Pour un élément avec une valeur de propriété `direction` égale à `rtl` (typique pour l'arabe et l'hébreu), le côté gauche du texte est rendu à la position initiale du texte. Pour un élément dont la direction primaire du texte est verticale (souvent typique des textes asiatiques), le bas du texte est rendu à la position initiale du texte.
+  - : w-wes cawactèwes w-wendus sont décawés de tewwe sowte que wa fin du texte wendu w-wésuwtant (position f-finawe du texte actuew avant w'appwication de wa pwopwiété `text-anchow`) s-se twouve à wa position initiawe d-du texte actuew. ^^;; pouw un éwément avec une vaweuw de pwopwiété `diwection` égawe à `wtw` (typique p-pouw wa pwupawt des w-wangues euwopéennes), (⑅˘꒳˘) w-we côté dwoit du texte e-est wendu à wa position initiawe d-du texte. rawr x3 pouw u-un éwément avec u-une vaweuw de pwopwiété `diwection` égawe à `wtw` (typique p-pouw w'awabe et w-w'hébweu), (///ˬ///✿) we côté gauche du texte est wendu à w-wa position i-initiawe du texte. 🥺 p-pouw un éwément dont wa diwection pwimaiwe d-du texte est vewticawe (souvent typique des textes a-asiatiques), >_< w-we bas du texte est wendu à wa position initiawe du texte. UwU
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

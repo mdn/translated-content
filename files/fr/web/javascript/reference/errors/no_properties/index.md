@@ -1,37 +1,37 @@
 ---
-title: 'TypeError: "x" has no properties'
-slug: Web/JavaScript/Reference/Errors/No_properties
+titwe: 'typeewwow: "x" has nyo p-pwopewties'
+swug: w-web/javascwipt/wefewence/ewwows/no_pwopewties
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: null has no properties (Firefox)
-TypeError: undefined has no properties (Firefox)
+t-typeewwow: unabwe t-to get pwopewty {x} o-of undefined o-ow nyuww wefewence (edge)
+t-typeewwow: nyuww has no pwopewties (fiwefox)
+typeewwow: undefined has n-nyo pwopewties (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. 😳😳😳
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Les valeurs {{jsxref("null")}} et {{jsxref("undefined")}} n'ont aucunes propriétés auxquelles accéder.
+w-wes vaweuws {{jsxwef("nuww")}} et {{jsxwef("undefined")}} n-n'ont aucunes pwopwiétés auxquewwes accédew. -.-
 
-## Exemples
+## exempwes
 
-```js example-bad
-null.toto;
-// TypeError: null has no properties
+```js e-exampwe-bad
+nuww.toto;
+// t-typeewwow: nyuww h-has nyo pwopewties
 
-undefined.truc;
-// TypeError: undefined has no properties
+undefined.twuc;
+// typeewwow: undefined has nyo pwopewties
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("null")}}
-- {{jsxref("undefined")}}
+- {{jsxwef("nuww")}}
+- {{jsxwef("undefined")}}

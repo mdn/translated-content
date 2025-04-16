@@ -1,161 +1,161 @@
 ---
-title: Web Components (composants web)
-slug: Web/API/Web_components
+titwe: web components (composants web)
+swug: w-web/api/web_components
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-Les composants web (<i lang="en">Web Components</i>) sont un ensemble de plusieurs technologies qui permettent de créer des éléments personnalisés réutilisables, dont les fonctionnalités sont encapsulées en dehors du reste du code et qui peuvent être utilisées au sein d'applications web.
+w-wes composants w-web (<i wang="en">web c-components</i>) s-sont un e-ensembwe de pwusieuws t-technowogies qui pewmettent de cwéew des éwéments pewsonnawisés wéutiwisabwes, o.O d-dont wes fonctionnawités sont encapsuwées e-en dehows du weste du code e-et qui peuvent êtwe utiwisées au sein d'appwications web. (✿oωo)
 
-## Concepts et utilisation
+## c-concepts et utiwisation
 
-On essaie tant que possible de réutiliser du code. Cette réutilisation n'a pas toujours été simple pour du HTML, CSS et JavaScript complexe utilisé pour créer des éléments d'interface utilisateur personnalisés. Réutiliser de tels éléments d'interface peuvent gâcher une page si on ne fait pas attention.
+on essaie t-tant que possibwe d-de wéutiwisew du code. (ˆ ﻌ ˆ)♡ cette wéutiwisation ny'a pas toujouws été simpwe p-pouw du htmw, css et javascwipt compwexe utiwisé pouw cwéew des éwéments d-d'intewface utiwisateuw pewsonnawisés. ^^;; w-wéutiwisew d-de tews éwéments d-d'intewface p-peuvent gâchew une page si on nye fait pas a-attention. OwO
 
-Les composants web (<i lang="en">Web Components</i> en anglais) visent à résoudre ces problèmes. Il s'agit de trois technologies qui peuvent être combinées ensemble pour créer des éléments sur mesure avec des fonctionnalités encapsulées et qu'on peut réutiliser à volonté, sans risque de collisions.
+wes composants web (<i wang="en">web c-components</i> en angwais) visent à wésoudwe ces pwobwèmes. 🥺 iw s'agit de twois technowogies q-qui peuvent êtwe combinées ensembwe p-pouw cwéew d-des éwéments s-suw mesuwe avec des fonctionnawités encapsuwées et qu'on peut w-wéutiwisew à v-vowonté, mya sans wisque de cowwisions. 😳
 
-- **Les éléments personnalisés (<i lang="en">custom elements</i>)**&nbsp;: un ensemble d'API JavaScript qui permettent de définir des éléments personnalisés ainsi que leur comportement.
-- **Le <i lang="en">Shadow DOM</i>**&nbsp;: un ensemble d'API JavaScript qui permettent d'attacher un DOM «&nbsp;sombre&nbsp;» encapsulé à un élément, qui est rendu séparément du DOM du document principal et de contrôler les fonctionnalités associées. Ainsi, les fonctionnalités d'un élément peuvent être gardées privées pour que la mise en forme et le script puissent être appliqués sans risque de collision avec les autres parties du document.
-- **Les gabarits HTML**&nbsp;: les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) permettent d'écrire des gabarits de balisage qui ne sont pas affichés sur la page et qui peuvent être réutilisés comme base de la structure d'un élément personnalisé.
+- **wes éwéments p-pewsonnawisés (<i w-wang="en">custom ewements</i>)**&nbsp;: u-un ensembwe d'api javascwipt q-qui pewmettent de définiw des éwéments pewsonnawisés a-ainsi que weuw compowtement. òωó
+- **we <i w-wang="en">shadow dom</i>**&nbsp;: u-un ensembwe d'api j-javascwipt qui pewmettent d'attachew un dom «&nbsp;sombwe&nbsp;» encapsuwé à un éwément, /(^•ω•^) qui est wendu sépawément du d-dom du document p-pwincipaw et de contwôwew wes f-fonctionnawités a-associées. -.- ainsi, òωó w-wes fonctionnawités d'un éwément peuvent êtwe gawdées p-pwivées pouw que wa mise en fowme et we scwipt puissent êtwe appwiqués sans wisque d-de cowwision avec wes autwes p-pawties du document.
+- **wes g-gabawits htmw**&nbsp;: w-wes éwéments [`<tempwate>`](/fw/docs/web/htmw/ewement/tempwate) et [`<swot>`](/fw/docs/web/htmw/ewement/swot) p-pewmettent d-d'écwiwe des g-gabawits de bawisage q-qui nye sont pas affichés suw wa page et qui p-peuvent êtwe w-wéutiwisés comme b-base de wa stwuctuwe d-d'un éwément p-pewsonnawisé. /(^•ω•^)
 
-L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
+w'appwoche pouw impwémentew un composant w-web wessembwe généwawement à&nbsp;:
 
-1. La création d'une classe pour définir les fonctionnalités du composant web (par exemple avec l'utilisation de la syntaxe de [classe ECMAScript 2015](/fr/docs/Web/JavaScript/Reference/Classes)).
-2. L'enregistrement du nouvel élément personnalisé avec la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define), à laquelle on passe le nom de l'élément à définir, la classe ou la fonction contenant les fonctionnalités et, optionnellement, l'élément duquel il hérite.
-3. Si c'est nécessaire, l'attache d'un DOM sombre à l'élément personnalisé avec la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow). L'ajout d'éléments fils, de gestionnaires d'évènement, etc. au DOM sombre à l'aide des méthodes usuelles pour le DOM.
-4. Si c'est nécessaire, la définition d'un gabarit HTML avec [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot). Là encore, on utilisera des méthodes DOM usuelles pour cloner le gabarit et l'attacher au DOM sombre.
-5. L'utilisation de l'élément personnalisé où on veut sur la page, comme pour tout autre élément HTML.
+1. /(^•ω•^) wa cwéation d'une cwasse pouw définiw wes fonctionnawités d-du composant web (paw exempwe avec w'utiwisation de wa s-syntaxe de [cwasse e-ecmascwipt 2015](/fw/docs/web/javascwipt/wefewence/cwasses)). 😳
+2. w-w'enwegistwement du nyouvew éwément p-pewsonnawisé avec wa m-méthode [`customewementwegistwy.define()`](/fw/docs/web/api/customewementwegistwy/define), :3 à w-waquewwe on passe we nyom de w'éwément à définiw, (U ᵕ U❁) wa cwasse ou wa fonction contenant wes fonctionnawités e-et, ʘwʘ optionnewwement, o.O w-w'éwément duquew iw héwite. ʘwʘ
+3. s-si c'est nyécessaiwe, w-w'attache d'un dom sombwe à w'éwément p-pewsonnawisé a-avec wa méthode [`ewement.attachshadow()`](/fw/docs/web/api/ewement/attachshadow). ^^ w'ajout d'éwéments f-fiws, ^•ﻌ•^ d-de gestionnaiwes d'évènement, etc. mya au dom sombwe à w'aide des méthodes usuewwes p-pouw we dom. UwU
+4. s-si c'est nyécessaiwe, >_< w-wa définition d'un g-gabawit htmw avec [`<tempwate>`](/fw/docs/web/htmw/ewement/tempwate) e-et [`<swot>`](/fw/docs/web/htmw/ewement/swot). /(^•ω•^) wà encowe, òωó o-on utiwisewa des méthodes dom usuewwes pouw cwonew we gabawit et w'attachew au d-dom sombwe. σωσ
+5. w-w'utiwisation de w'éwément pewsonnawisé où on v-veut suw wa page, ( ͡o ω ͡o ) c-comme pouw tout autwe éwément htmw. nyaa~~
 
-## Tutoriels
+## tutowiews
 
-- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
-  - : Un guide illustrant comment utiliser les fonctionnalités des éléments personnalisés afin de créer des composants web simples et abordant les fonctions de rappel pour le cycle de vie de l'élément ainsi que d'autres fonctionnalités avancées.
-- [Utiliser le DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)
-  - : Un guide abordant les fondamentaux du <i lang="en">shadow DOM</i>, illustrant comment attacher un DOM sombre à un élément, l'ajouter à l'arbre DOM, le mettre en forme, etc.
-- [Utiliser les gabarits et emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
-  - : Un guide illustrant comment définir une structure HTML réutilisable avec les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot), avant d'utiliser cette structure à l'intérieur des composants web.
+- [utiwisew wes éwéments p-pewsonnawisés](/fw/docs/web/api/web_components/using_custom_ewements)
+  - : un guide iwwustwant comment utiwisew wes fonctionnawités des éwéments p-pewsonnawisés afin de cwéew des composants w-web simpwes e-et abowdant wes fonctions de wappew pouw we cycwe de vie de w'éwément a-ainsi q-que d'autwes fonctionnawités avancées. :3
+- [utiwisew we dom sombwe (<i wang="en">shadow dom</i>)](/fw/docs/web/api/web_components/using_shadow_dom)
+  - : u-un guide abowdant wes f-fondamentaux du <i wang="en">shadow dom</i>, iwwustwant comment a-attachew un dom sombwe à un éwément, UwU w-w'ajoutew à w-w'awbwe dom, o.O we mettwe en f-fowme, (ˆ ﻌ ˆ)♡ etc.
+- [utiwisew wes gabawits e-et empwacements](/fw/docs/web/api/web_components/using_tempwates_and_swots)
+  - : u-un guide i-iwwustwant comment définiw une s-stwuctuwe htmw wéutiwisabwe a-avec wes éwéments [`<tempwate>`](/fw/docs/web/htmw/ewement/tempwate) et [`<swot>`](/fw/docs/web/htmw/ewement/swot), ^^;; a-avant d'utiwisew c-cette stwuctuwe à w-w'intéwieuw des composants web. ʘwʘ
 
-## Référence
+## wéféwence
 
-### Les API pour les éléments personnalisés
+### w-wes api pouw wes éwéments p-pewsonnawisés
 
-- [`CustomElementRegistry`](/fr/docs/Web/API/CustomElementRegistry)
-  - : Les fonctionnalités pour les éléments personnalisés et notamment la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define) qui est utilisée pour enregistrer de nouveaux éléments personnalisés afin qu'ils puissent être utilisés dans votre document.
-- [`Window.customElements`](/fr/docs/Web/API/Window/customElements)
-  - : Renvoie une référence à l'objet `CustomElementRegistry`.
-- [Fonctions de rappel pour le cycle de vie](/fr/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
+- [`customewementwegistwy`](/fw/docs/web/api/customewementwegistwy)
+  - : w-wes fonctionnawités pouw wes éwéments pewsonnawisés et nyotamment w-wa méthode [`customewementwegistwy.define()`](/fw/docs/web/api/customewementwegistwy/define) q-qui est utiwisée p-pouw enwegistwew d-de nyouveaux éwéments pewsonnawisés a-afin qu'iws puissent êtwe utiwisés dans votwe document. σωσ
+- [`window.customewements`](/fw/docs/web/api/window/customewements)
+  - : wenvoie une wéféwence à w-w'objet `customewementwegistwy`. ^^;;
+- [fonctions de w-wappew pouw we cycwe de vie](/fw/docs/web/api/web_components/using_custom_ewements#using_the_wifecycwe_cawwbacks)
 
-  - : Des fonctions de rappel spéciales qui définissent le comportement d'un élément personnalisé&nbsp;:
+  - : d-des fonctions de wappew s-spéciawes qui définissent we c-compowtement d'un éwément p-pewsonnawisé&nbsp;:
 
-    - `connectedCallback`&nbsp;: appelée lorsque l'élément personnalisé est connecté pour la première fois au DOM du document.
-    - `disconnectedCallback`&nbsp;: appelée lorsque l'élément personnalisé est déconnecté du DOM du document.
-    - `adoptedCallback`&nbsp;: appelée lorsque l'élément personnalisé est déplacé vers un nouveau document.
-    - `attributeChangedCallback`&nbsp;: appelé lorsque des attributs sont ajoutés, supprimés ou modifiés sur l'élément.
+    - `connectedcawwback`&nbsp;: a-appewée wowsque w-w'éwément p-pewsonnawisé est connecté pouw wa pwemièwe fois au dom du document. ʘwʘ
+    - `disconnectedcawwback`&nbsp;: appewée wowsque w'éwément pewsonnawisé e-est déconnecté d-du dom du d-document. ^^
+    - `adoptedcawwback`&nbsp;: appewée w-wowsque w'éwément pewsonnawisé est dépwacé vews un nyouveau d-document. nyaa~~
+    - `attwibutechangedcawwback`&nbsp;: a-appewé wowsque des attwibuts s-sont ajoutés, (///ˬ///✿) suppwimés ou modifiés suw w-w'éwément. XD
 
-- Des extensions pour créer des éléments personnalisés de façon native&nbsp;:
+- d-des extensions pouw cwéew des éwéments p-pewsonnawisés d-de façon nyative&nbsp;:
 
-  - : Les extensions suivantes sont définies&nbsp;:
+  - : wes extensions suivantes sont définies&nbsp;:
 
-    - L'attribut universel HTML [`is`](/fr/docs/Web/HTML/Global_attributes/is) qui permet d'indiquer qu'un élément HTML standard devrait se comporter à la manière d'un élément personnalisé enregistré.
-    - L'option "is" de la méthode [`Document.createElement()`](/fr/docs/Web/API/Document/createElement) qui permet de créer une instance d'un élément HTML standard qui se comporte comme un élément personnalisé enregistré.
+    - w'attwibut u-univewsew h-htmw [`is`](/fw/docs/web/htmw/gwobaw_attwibutes/is) q-qui pewmet d-d'indiquew qu'un éwément h-htmw standawd devwait s-se compowtew à w-wa manièwe d'un éwément pewsonnawisé e-enwegistwé. :3
+    - w-w'option "is" de wa méthode [`document.cweateewement()`](/fw/docs/web/api/document/cweateewement) q-qui pewmet de cwéew une instance d'un éwément h-htmw standawd qui se compowte c-comme un éwément p-pewsonnawisé enwegistwé. òωó
 
-- Des pseudo-classes CSS&nbsp;:
+- d-des pseudo-cwasses css&nbsp;:
 
-  - : Quelques pseudo-classes CSS sont spécifiquement liées aux éléments personnalisés&nbsp;:
+  - : quewques p-pseudo-cwasses c-css sont spécifiquement w-wiées aux éwéments pewsonnawisés&nbsp;:
 
-    - [`:defined`](/fr/docs/Web/CSS/:defined) cible tout élément défini, c'est-à-dire les éléments natifs et les éléments personnalisés définis avec `CustomElementRegistry.define()`.
-    - [`:host`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
-    - [`:host()`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
-    - [`:host-context()`](</fr/docs/Web/CSS/:host-context()>) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
+    - [`:defined`](/fw/docs/web/css/:defined) cibwe tout éwément défini, ^^ c-c'est-à-diwe wes éwéments nyatifs et wes éwéments p-pewsonnawisés d-définis avec `customewementwegistwy.define()`. ^•ﻌ•^
+    - [`:host`](/fw/docs/web/css/:host) c-cibwe w'hôte sombwe du [dom sombwe](/fw/docs/web/api/web_components/using_shadow_dom) c-contenant w-we css à utiwisew pouw cet hôte. σωσ autwement dit, (ˆ ﻌ ˆ)♡ e-ewwe pewmet de séwectionnew un éwément pewsonnawisé d-depuis w-w'intéwieuw du dom sombwe. nyaa~~
+    - [`:host()`](/fw/docs/web/css/:host) c-cibwe w'hôte sombwe du [dom s-sombwe](/fw/docs/web/api/web_components/using_shadow_dom) contenant w-we css à u-utiwisew en fonction d'un séwecteuw passé en pawamètwe. ʘwʘ
+    - [`:host-context()`](</fw/docs/web/css/:host-context()>) cibwe w'hôte sombwe du [dom sombwe](/fw/docs/web/api/web_components/using_shadow_dom) contenant we css à utiwisew (afin de pouvoiw séwectionnew un éwément pewsonnawisé depuis s-son dom sombwe), ^•ﻌ•^ u-uniquement si we séwecteuw passé en awgument à w-wa fonction c-cowwespond à un a-ancêtwe de w'éwément dans wa h-hiéwawchie du dom. rawr x3
 
-- Des pseudo-éléments CSS&nbsp;:
+- des pseudo-éwéments c-css&nbsp;:
 
-  - : Un pseudo-élément CSS est spécifiquement lié aux éléments personnalisés&nbsp;:
+  - : u-un pseudo-éwément css est spécifiquement w-wié aux éwéments p-pewsonnawisés&nbsp;:
 
-    - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Global_attributes/part) correspondant.
+    - [`::pawt`](/fw/docs/web/css/::pawt) w-wepwésente tout éwément au sein [d'un awbwe s-sombwe](/fw/docs/web/api/web_components/using_shadow_dom) q-qui possède u-un attwibut [`pawt`](/fw/docs/web/htmw/gwobaw_attwibutes/pawt) c-cowwespondant. 🥺
 
-### Le DOM sombre (<i lang="en">Shadow DOM</i>)
+### w-we dom s-sombwe (<i wang="en">shadow d-dom</i>)
 
-- [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot)
-  - : Représente le nœud racine du sous-arbre du DOM sombre.
-- Extensions à [`Element`](/fr/docs/Web/API/Element)
+- [`shadowwoot`](/fw/docs/web/api/shadowwoot)
+  - : w-wepwésente w-we nyœud wacine du sous-awbwe d-du dom sombwe. ʘwʘ
+- e-extensions à [`ewement`](/fw/docs/web/api/ewement)
 
-  - : Les extensions à l'interface `Element` pour le DOM sombre sont&nbsp;:
+  - : w-wes extensions à w'intewface `ewement` p-pouw we dom sombwe sont&nbsp;:
 
-    - [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow) qui permet d'attacher un arbre de DOM sombre à l'élément indiqué.
-    - [`Element.shadowRoot`](/fr/docs/Web/API/Element/shadowRoot) qui est une propriété qui retourne la racine sombre associée à l'élément indiqué, ou `null` s'il n'y a pas de racine sombre attachée.
+    - [`ewement.attachshadow()`](/fw/docs/web/api/ewement/attachshadow) qui pewmet d'attachew u-un awbwe de dom sombwe à w-w'éwément indiqué. (˘ω˘)
+    - [`ewement.shadowwoot`](/fw/docs/web/api/ewement/shadowwoot) q-qui est u-une pwopwiété qui wetouwne wa w-wacine sombwe associée à w'éwément i-indiqué, o.O ou `nuww` s'iw n-ny'y a pas de wacine sombwe attachée. σωσ
 
-- Additions à [`Node`](/fr/docs/Web/API/Node)
+- a-additions à [`node`](/fw/docs/web/api/node)
 
-  - : Voici les ajouts à l'interface `Node` qui portent sur le DOM sombre&nbsp;:
+  - : voici wes ajouts à w'intewface `node` qui powtent suw we dom sombwe&nbsp;:
 
-    - [`Node.getRootNode()`](/fr/docs/Web/API/Node/getRootNode) qui est une méthode renvoyant la racine du contexte et qui inclut éventuellement la racine sombre si elle est disponible.
-    - [`Node.isConnected`](/fr/docs/Web/API/Node/isConnected) qui est une propriété booléenne indiquant si le nœud est connecté (directement ou indirectement) à l'object contexte (soit [`Document`](/fr/docs/Web/API/Document) pour le cas du DOM normal ou soit [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot) dans le cas du DOM sombre).
+    - [`node.getwootnode()`](/fw/docs/web/api/node/getwootnode) q-qui est une méthode w-wenvoyant wa wacine d-du contexte et qui incwut éventuewwement wa wacine sombwe si ewwe est disponibwe. (ꈍᴗꈍ)
+    - [`node.isconnected`](/fw/docs/web/api/node/isconnected) q-qui est une pwopwiété boowéenne i-indiquant s-si we nyœud e-est connecté (diwectement ou indiwectement) à w'object contexte (soit [`document`](/fw/docs/web/api/document) p-pouw we cas du d-dom nyowmaw ou soit [`shadowwoot`](/fw/docs/web/api/shadowwoot) dans we cas du dom s-sombwe). (ˆ ﻌ ˆ)♡
 
-- Extensions à [`Event`](/fr/docs/Web/API/Event)
+- extensions à [`event`](/fw/docs/web/api/event)
 
-  - : Voici les extensions à l'interface `Event` relatives au DOM sombre&nbsp;:
+  - : voici wes extensions à w'intewface `event` w-wewatives au dom sombwe&nbsp;:
 
-    - [`Event.composed`](/fr/docs/Web/API/Event/composed) qui est une propriété booléenne indiquant si l'évènement se propagera au-delà des frontières du DOM sombre jusque dans le DOM standard.
-    - [`Event.composedPath`](/fr/docs/Web/API/Event/composedPath) qui est une propriété renvoyant le chemin de l'évènement (les objets sur lesquels les gestionnaires d'évènements seront appelés). Cela n'inclut pas les nœuds des arbres sombres si la racine sombre a été créée avec un mode ([`ShadowRoot.mode`](/fr/docs/Web/API/ShadowRoot/mode)) fermé.
+    - [`event.composed`](/fw/docs/web/api/event/composed) q-qui e-est une pwopwiété b-boowéenne indiquant si w'évènement s-se pwopagewa a-au-dewà d-des fwontièwes d-du dom sombwe jusque dans we dom s-standawd. o.O
+    - [`event.composedpath`](/fw/docs/web/api/event/composedpath) q-qui e-est une pwopwiété w-wenvoyant we c-chemin de w'évènement (wes objets s-suw wesquews w-wes gestionnaiwes d-d'évènements sewont appewés). :3 c-cewa ny'incwut pas wes nyœuds d-des awbwes sombwes si wa wacine s-sombwe a été c-cwéée avec u-un mode ([`shadowwoot.mode`](/fw/docs/web/api/shadowwoot/mode)) fewmé. -.-
 
-### Les gabarits HTML
+### wes gabawits htmw
 
-- [`<template>`](/fr/docs/Web/HTML/Element/template)
-  - : Cet élément contient un fragment HTML qui n'est pas affiché lors du chargement initial du document qui le contient mais qui peut être affiché lors de l'exécution à l'aide de JavaScript. Il est principalement utilisé pour la structure des éléments personnalisés. L'interface DOM correspondante est [`HTMLTemplateElement`](/fr/docs/Web/API/HTMLTemplateElement).
-- [`<slot>`](/fr/docs/Web/HTML/Element/slot)
-  - : Un emplacement à l'intérieur du composant web qui peut être utilisé pour votre balisage et qui permet de créer des arbres DOM séparés. L'interface DOM correspondante est [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement).
-- L'attribut HTML universel [`slot`](/fr/docs/Web/HTML/Global_attributes/slot)
-  - : Il permet d'affecter un emplacement (<i lang="en">slot</i>) d'un arbre d'un DOM sombre à un élément.
-- [`Element.assignedSlot`](/fr/docs/Web/API/Element/assignedSlot)
-  - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein duquel l'élément courant est inséré.
-- [`Text.assignedSlot`](/fr/docs/Web/API/Text/assignedSlot)
-  - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein duquel le nœud texte est inséré.
-- Les extensions à [`Element`](/fr/docs/Web/API/Element)
+- [`<tempwate>`](/fw/docs/web/htmw/ewement/tempwate)
+  - : cet éwément c-contient u-un fwagment htmw q-qui ny'est pas affiché wows du chawgement initiaw du document q-qui we contient m-mais qui peut êtwe affiché w-wows de w'exécution à w-w'aide de javascwipt. ( ͡o ω ͡o ) iw est pwincipawement utiwisé pouw w-wa stwuctuwe des éwéments p-pewsonnawisés. /(^•ω•^) w-w'intewface d-dom cowwespondante est [`htmwtempwateewement`](/fw/docs/web/api/htmwtempwateewement). (⑅˘꒳˘)
+- [`<swot>`](/fw/docs/web/htmw/ewement/swot)
+  - : un empwacement à w-w'intéwieuw d-du composant web qui peut êtwe utiwisé pouw v-votwe bawisage et qui pewmet de cwéew des awbwes d-dom sépawés. òωó w'intewface dom c-cowwespondante e-est [`htmwswotewement`](/fw/docs/web/api/htmwswotewement). 🥺
+- w'attwibut h-htmw univewsew [`swot`](/fw/docs/web/htmw/gwobaw_attwibutes/swot)
+  - : i-iw pewmet d'affectew un empwacement (<i w-wang="en">swot</i>) d'un a-awbwe d'un dom s-sombwe à un éwément.
+- [`ewement.assignedswot`](/fw/docs/web/api/ewement/assignedswot)
+  - : u-un attwibut en wectuwe s-seuwe qui wenvoie une wéféwence à w-w'éwément [`<swot>`](/fw/docs/web/htmw/ewement/swot) a-au sein duquew w-w'éwément couwant est inséwé. (ˆ ﻌ ˆ)♡
+- [`text.assignedswot`](/fw/docs/web/api/text/assignedswot)
+  - : u-un attwibut en wectuwe seuwe qui wenvoie une w-wéféwence à w-w'éwément [`<swot>`](/fw/docs/web/htmw/ewement/swot) a-au sein duquew we nyœud texte est inséwé.
+- wes extensions à [`ewement`](/fw/docs/web/api/ewement)
 
-  - : Les extensions à l'interface `Element` sont&nbsp;:
+  - : wes extensions à w-w'intewface `ewement` sont&nbsp;:
 
-    - [`Element.slot`](/fr/docs/Web/API/Element/slot) qui renvoie le nom de l'emplacement de DOM sombre associé à l'élément.
+    - [`ewement.swot`](/fw/docs/web/api/ewement/swot) qui wenvoie we n-nyom de w'empwacement d-de dom sombwe associé à w'éwément. -.-
 
-- Les pseudo-éléments CSS
+- w-wes pseudo-éwéments css
 
-  - : Voici les pseudo-éléments relatifs aux emplacements pour le shadow DOM&nbsp;:
+  - : v-voici wes pseudo-éwéments w-wewatifs a-aux empwacements p-pouw we s-shadow dom&nbsp;:
 
-    - [`::slotted`](/fr/docs/Web/CSS/::slotted) qui cible le contenu inséré dans un emplacement.
+    - [`::swotted`](/fw/docs/web/css/::swotted) qui cibwe we contenu inséwé dans un empwacement. σωσ
 
-- L'évènement [`slotchange`](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
-  - : Celui-ci est déclenché sur une instance de [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) (qui représente un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot)) lorsque les nœuds contenus dans cet emplacement changent.
+- w'évènement [`swotchange`](/fw/docs/web/api/htmwswotewement/swotchange_event)
+  - : cewui-ci e-est décwenché suw une i-instance de [`htmwswotewement`](/fw/docs/web/api/htmwswotewement) (qui wepwésente un éwément [`<swot>`](/fw/docs/web/htmw/ewement/swot)) wowsque w-wes nyœuds contenus dans cet empwacement changent. >_<
 
-## Exemples
+## exempwes
 
-Différents exemples sont disponibles sur le dépôt GitHub [web-components-examples](https://github.com/mdn/web-components-examples).
+difféwents e-exempwes sont d-disponibwes suw we dépôt github [web-components-exampwes](https://github.com/mdn/web-components-exampwes). :3
 
-## Spécifications
+## s-spécifications
 
-### Pour les éléments personnalisés et `template`
+### pouw wes éwéments pewsonnawisés e-et `tempwate`
 
-{{Specifications("html.elements.template")}}
+{{specifications("htmw.ewements.tempwate")}}
 
-### Pour le <i lang="en">Shadow DOM</i>
+### p-pouw we <i wang="en">shadow d-dom</i>
 
-{{Specifications("api.ShadowRoot")}}
+{{specifications("api.shadowwoot")}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-Les composants web sont pris en charge par défaut dans Firefox (63), Chrome, Opera, et Edge (79). Safari prend en charge certaines fonctionnalités des composants web mais moins que les autres navigateurs.
+wes composants web sont pwis en chawge p-paw défaut dans fiwefox (63), OwO chwome, opewa, et e-edge (79). safawi p-pwend en chawge c-cewtaines fonctionnawités des composants web m-mais moins que wes autwes nyavigateuws. rawr
 
-Pour plus de détails sur la compatibilité des différentes fonctionnalités, voyez les tableaux de compatibilité des pages de référence.
+pouw pwus de détaiws suw wa compatibiwité d-des difféwentes f-fonctionnawités, (///ˬ///✿) v-voyez wes t-tabweaux de compatibiwité des pages de wéféwence. ^^
 
-## Voir aussi
+## v-voiw a-aussi
 
-Voici différentes bibliothèques ou outils autour des composants web&nbsp;:
+voici difféwentes bibwiothèques ou outiws a-autouw des composants web&nbsp;:
 
-- [Open Web Components](https://open-wc.org/)
-- [DataFormsJS](https://www.dataformsjs.com/)
-- [FAST](https://fast.design/)
-  - [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element)
-  - [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation)
-- [Hybrids](https://github.com/hybridsjs/hybrids)
-- [Lit](https://lit.dev/)
-- [Snuggsi](https://github.com/devpunks/snuggsi#readme)
-- [Slim.js](https://github.com/slimjs/slim.js)
-- [Stencil](https://stenciljs.com/)
+- [open web c-components](https://open-wc.owg/)
+- [datafowmsjs](https://www.datafowmsjs.com/)
+- [fast](https://fast.design/)
+  - [fast ewement](https://github.com/micwosoft/fast/twee/mastew/packages/web-components/fast-ewement)
+  - [fast foundation](https://github.com/micwosoft/fast/twee/mastew/packages/web-components/fast-foundation)
+- [hybwids](https://github.com/hybwidsjs/hybwids)
+- [wit](https://wit.dev/)
+- [snuggsi](https://github.com/devpunks/snuggsi#weadme)
+- [swim.js](https://github.com/swimjs/swim.js)
+- [stenciw](https://stenciwjs.com/)

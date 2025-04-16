@@ -1,56 +1,56 @@
 ---
-title: Date.prototype.setYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
+titwe: date.pwototype.setyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setyeaw
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-La méthode **`setYear()`** définit l'année pour pour la date, selon l'heure locale. `setYear()` ne définissant pas des années complêtes ( « bug de l'an 2000 » ), elle n'est plus utilisée et a été remplacée par la méthode {{jsxref("Date.prototype.setFullYear", "setFullYear")}}.
+w-wa méthode **`setyeaw()`** d-définit w'année p-pouw pouw wa date, 🥺 s-sewon w'heuwe w-wocawe. mya `setyeaw()` n-nye définissant p-pas des a-années compwêtes ( « bug de w'an 2000 » ), 🥺 ewwe ny'est pwus utiwisée et a été wempwacée p-paw wa méthode {{jsxwef("date.pwototype.setfuwwyeaw", >_< "setfuwwyeaw")}}. >_<
 
-## Syntaxe
-
-```js
-dateObj.setYear(valeurAnnée);
-```
-
-### Paramètres
-
-- `valeurAnnée`
-  - : Un entier.
-
-### Valeur de retour
-
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
-
-## Description
-
-Si `valeurAnnée` est un nombre entre 0 et 99 (inclus), alors l'année de `dateObj` sera définie à 1900 + `valeurAnnée`. Sinon, l'année de `dateObj` sera définie à `valeurAnnée`.
-
-## Exemples
-
-### Utiliser `setYear()`
-
-Les deux premières instructions définissent l'année 1996. La troisième définit l'année 2000.
+## syntaxe
 
 ```js
-var leGrandJour = new Date();
-
-leGrandJour.setYear(96);
-leGrandJour.setYear(1996);
-leGrandJour.setYear(2000);
+dateobj.setyeaw(vaweuwannée);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- `vaweuwannée`
+  - : un entiew. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+### v-vaweuw de wetouw
 
-{{Compat}}
+we nyombwe de miwwisecondes écouwées entwe we pwemiew j-janview 1970 minuit, /(^•ω•^) utc et wa d-date mise à jouw. rawr x3
 
-## Voir aussi
+## d-descwiption
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
+si `vaweuwannée` est un nyombwe entwe 0 et 99 (incwus), (U ﹏ U) awows w-w'année de `dateobj` sewa définie à 1900 + `vaweuwannée`. sinon, (U ﹏ U) w'année de `dateobj` sewa définie à `vaweuwannée`. (⑅˘꒳˘)
+
+## e-exempwes
+
+### utiwisew `setyeaw()`
+
+w-wes deux p-pwemièwes instwuctions d-définissent w-w'année 1996. òωó wa twoisième définit w'année 2000. ʘwʘ
+
+```js
+v-vaw wegwandjouw = nyew date();
+
+wegwandjouw.setyeaw(96);
+w-wegwandjouw.setyeaw(1996);
+wegwandjouw.setyeaw(2000);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des navigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setutcfuwwyeaw()")}}

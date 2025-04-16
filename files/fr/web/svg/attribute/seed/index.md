@@ -1,52 +1,52 @@
 ---
-title: seed
-slug: Web/SVG/Attribute/seed
+titwe: seed
+swug: web/svg/attwibute/seed
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [Page de référence des attributs SVG](/fr/docs/Web/SVG/Attribute)
+« [page d-de wéféwence d-des attwibuts s-svg](/fw/docs/web/svg/attwibute)
 
-L'attribut `seed` représente le nombre palier pour la pseudo génération d'un nombre aléatoire via la primitive {{SVGElement("feTurbulence")}}.
+w-w'attwibut `seed` w-wepwésente w-we nyombwe pawiew p-pouw wa pseudo g-généwation d'un nyombwe awéatoiwe via wa pwimitive {{svgewement("fetuwbuwence")}}. -.-
 
-Si l'attribut n'est pas spécifié, alors le palier sera fixé à **0**.
+si w'attwibut n-ny'est pas spécifié, ( ͡o ω ͡o ) awows we pawiew s-sewa fixé à **0**. rawr x3
 
-## Contexte d'usage
+## contexte d-d'usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Catégories</th>
-      <td><em>Aucun</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">catégowies</th>
+      <td><em>aucun</em></td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
         <a
-          href="/fr/docs/SVG/Content_type#Number"
-          >&#x3C;number></a
+          hwef="/fw/docs/svg/content_type#numbew"
+          >&#x3c;numbew></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Animable</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Document normatif</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">animabwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">document n-nyowmatif</th>
       <td>
         <a
-          href="http://www.w3.org/TR/SVG11/filters.html#feTurbulenceSeedAttribute"
-          rel="external"
-          >SVG 1.1 (2nd Edition)</a
+          h-hwef="http://www.w3.owg/tw/svg11/fiwtews.htmw#fetuwbuwenceseedattwibute"
+          wew="extewnaw"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Éléments
+## Éwéments
 
-Les éléments suivants peuvent être utilisés avec l'attribut `seed`&nbsp;:
+wes éwéments suivants peuvent êtwe utiwisés a-avec w'attwibut `seed`&nbsp;:
 
-- {{ SVGElement("feTurbulence") }}
+- {{ svgewement("fetuwbuwence") }}

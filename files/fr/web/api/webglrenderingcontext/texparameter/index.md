@@ -1,171 +1,171 @@
 ---
-title: WebGLRenderingContext.texParameter[fi]()
-slug: Web/API/WebGLRenderingContext/texParameter
+titwe: webgwwendewingcontext.texpawametew[fi]()
+swug: web/api/webgwwendewingcontext/texpawametew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définissent les paramètres de texture.
+w-wes m-méthodes **`webgwwendewingcontext.texpawametew[fi]()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) d-définissent w-wes pawamètwes d-de textuwe. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void gl.texParameterf(GLenum cible, GLenum nomp, GLfloat param);
-void gl.texParameteri(GLenum cible, GLenum nomp, GLint param);
+void gw.texpawametewf(gwenum cibwe, /(^•ω•^) gwenum nomp, 😳😳😳 gwfwoat pawam);
+void gw.texpawametewi(gwenum c-cibwe, ( ͡o ω ͡o ) gwenum nyomp, >_< gwint pawam);
 ```
 
-### Paramètres
+### pawamètwes
 
-- cible
+- c-cibwe
 
-  - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
+  - : un {{domxwef("gwenum")}} i-indiquant we point de wiaison (cibwe). vaweuws possibwes :
 
-    - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionelle.
-    - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texte appliquée sur un cube.
-    - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
+    - `gw.textuwe_2d`&nbsp;: u-une textuwe bi-dimensionewwe. >w<
+    - `gw.textuwe_cube_map`&nbsp;: u-une t-texte appwiquée suw un cube. rawr
+    - wowsqu'un {{domxwef("webgw2wendewingcontext", 😳 "webgw 2 context", >w< "", 1)}} est utiwisé, (⑅˘꒳˘) wes v-vaweuws suivantes sont en outwe disponibwes :
 
-      - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
-      - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
+      - `gw.textuwe_3d`&nbsp;: une textuwe twi-dimensionnewwe. OwO
+      - `gw.textuwe_2d_awway`&nbsp;: une textuwe b-bi-dimensionnewwe en tabweau. (ꈍᴗꈍ)
 
-Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de texture à définir. Le paramètre `param` est un {{domxref("GLfloat")}} ou un {{domxref("GLint")}} indiquant la valeur pour le paramètre `nomp` indiqué.
+we p-pawamètwe `nomp` e-est un {{domxwef("gwenum")}} i-indiquant we pawamètwe d-de textuwe à définiw. 😳 we pawamètwe `pawam` e-est un {{domxwef("gwfwoat")}} ou un {{domxwef("gwint")}} indiquant wa vaweuw p-pouw we pawamètwe `nomp` indiqué. 😳😳😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><code>pnom</code></th>
-      <th scope="col">Description</th>
-      <th scope="col"><code>param</code></th>
-    </tr>
+    <tw>
+      <th scope="cow"><code>pnom</code></th>
+      <th scope="cow">descwiption</th>
+      <th scope="cow"><code>pawam</code></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th colspan="3">Disponible en WebGL 1</th>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_MAG_FILTER</code></td>
-      <td>Filtre de grossissement de texture</td>
+    <tw>
+      <th cowspan="3">disponibwe e-en webgw 1</th>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_mag_fiwtew</code></td>
+      <td>fiwtwe de gwossissement d-de t-textuwe</td>
       <td>
-        <code>gl.LINEAR</code> (valeur par défaut), <code>gl.NEAREST</code>.
+        <code>gw.wineaw</code> (vaweuw paw d-défaut), mya <code>gw.neawest</code>. mya
       </td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_MIN_FILTER</code></td>
-      <td>Filtre de réduction de texture</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_min_fiwtew</code></td>
+      <td>fiwtwe de wéduction de textuwe</td>
       <td>
-        <code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
-        <code>gl.NEAREST_MIPMAP_NEAREST</code>,
-        <code>gl.LINEAR_MIPMAP_NEAREST</code>,
-        <code>gl.NEAREST_MIPMAP_LINEAR</code> (valeur par défaut),
-        <code>gl.LINEAR_MIPMAP_LINEAR</code>.
+        <code>gw.wineaw</code>, (⑅˘꒳˘) <code>gw.neawest</code>, (U ﹏ U)
+        <code>gw.neawest_mipmap_neawest</code>, mya
+        <code>gw.wineaw_mipmap_neawest</code>, ʘwʘ
+        <code>gw.neawest_mipmap_wineaw</code> (vaweuw paw défaut), (˘ω˘)
+        <code>gw.wineaw_mipmap_wineaw</code>. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_WRAP_S</code></td>
-      <td>Fonction d'emballage pour la coordonnée de texture <code>s</code></td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_wwap_s</code></td>
+      <td>fonction d-d'embawwage p-pouw wa coowdonnée de textuwe <code>s</code></td>
       <td>
-        <code>gl.REPEAT</code> (valeur par
-        défaut),<code>gl.CLAMP_TO_EDGE</code>, <code>gl.MIRRORED_REPEAT</code>.
+        <code>gw.wepeat</code> (vaweuw p-paw
+        d-défaut),<code>gw.cwamp_to_edge</code>, ^•ﻌ•^ <code>gw.miwwowed_wepeat</code>. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_WRAP_T</code></td>
-      <td>Fonction d'emballage pour la coordonnée de texture <code>t</code></td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_wwap_t</code></td>
+      <td>fonction d'embawwage pouw w-wa coowdonnée de textuwe <code>t</code></td>
       <td>
-        <code>gl.REPEAT</code> (valeur par
-        défaut),<code>gl.CLAMP_TO_EDGE</code>, <code>gl.MIRRORED_REPEAT</code>.
+        <code>gw.wepeat</code> (vaweuw p-paw
+        défaut),<code>gw.cwamp_to_edge</code>, :3 <code>gw.miwwowed_wepeat</code>. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th colspan="3">
-        Disponible en outre quand l'extension
-        {{domxref("EXT_texture_filter_anisotropic")}} est
-        utilisée
+    </tw>
+    <tw>
+      <th cowspan="3">
+        disponibwe e-en outwe quand w'extension
+        {{domxwef("ext_textuwe_fiwtew_anisotwopic")}} est
+        utiwisée
       </th>
-    </tr>
-    <tr>
-      <td><code>ext.TEXTURE_MAX_ANISOTROPY_EXT</code></td>
-      <td>Anisotropie maximum pour une texture</td>
-      <td>Une valeur {{domxref("GLfloat")}}.</td>
-    </tr>
-    <tr>
-      <th colspan="3">
-        Disponible en outre quand un contexte WebGL 2 est utilisé
+    </tw>
+    <tw>
+      <td><code>ext.textuwe_max_anisotwopy_ext</code></td>
+      <td>anisotwopie m-maximum pouw une textuwe</td>
+      <td>une v-vaweuw {{domxwef("gwfwoat")}}.</td>
+    </tw>
+    <tw>
+      <th c-cowspan="3">
+        disponibwe en outwe quand un contexte webgw 2 est utiwisé
       </th>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_BASE_LEVEL</code></td>
-      <td>Niveau de mipmap de texture</td>
-      <td>Toutes valeurs int.</td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_COMPARE_FUNC</code></td>
-      <td>Fonction de comparaison de texture</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_base_wevew</code></td>
+      <td>niveau de mipmap de textuwe</td>
+      <td>toutes v-vaweuws int.</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_compawe_func</code></td>
+      <td>fonction d-de compawaison de textuwe</td>
       <td>
-        <code>gl.LEQUAL</code> (valeur par défaut), <code>gl.GEQUAL</code>,
-        <code>gl.LESS</code>, <code>gl.GREATER</code>, <code>gl.EQUAL</code>,
-        <code>gl.NOTEQUAL</code>, <code>gl.ALWAYS</code>, <code>gl.NEVER</code>.
+        <code>gw.wequaw</code> (vaweuw p-paw d-défaut), 🥺 <code>gw.gequaw</code>, (⑅˘꒳˘)
+        <code>gw.wess</code>, nyaa~~ <code>gw.gweatew</code>, :3 <code>gw.equaw</code>, ( ͡o ω ͡o )
+        <code>gw.notequaw</code>, mya <code>gw.awways</code>, (///ˬ///✿) <code>gw.nevew</code>. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_COMPARE_MODE</code></td>
-      <td>Mode de comparaison de texture</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_compawe_mode</code></td>
+      <td>mode d-de compawaison de textuwe</td>
       <td>
-        <code>gl.NONE</code> (valeur défaut),
-        <code>gl.COMPARE_REF_TO_TEXTURE</code>.
+        <code>gw.none</code> (vaweuw défaut),
+        <code>gw.compawe_wef_to_textuwe</code>.
       </td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_MAX_LEVEL</code></td>
-      <td>Niveau maximum de mipmap de texture en tableau</td>
-      <td>Toutes valeurs int.</td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_MAX_LOD</code></td>
-      <td><p>Valeur de niveau-de-détail maximum de texture</p></td>
-      <td>Toutes valeurs float.</td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_MIN_LOD</code></td>
-      <td>Valeur de niveau-de-détail minimum de texture</td>
-      <td>Toutes valeurs float.</td>
-    </tr>
-    <tr>
-      <td><code>gl.TEXTURE_WRAP_R</code></td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_max_wevew</code></td>
+      <td>niveau maximum de mipmap d-de textuwe en tabweau</td>
+      <td>toutes vaweuws int.</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_max_wod</code></td>
+      <td><p>vaweuw de nyiveau-de-détaiw maximum d-de textuwe</p></td>
+      <td>toutes vaweuws f-fwoat.</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_min_wod</code></td>
+      <td>vaweuw de n-nyiveau-de-détaiw m-minimum de textuwe</td>
+      <td>toutes v-vaweuws f-fwoat.</td>
+    </tw>
+    <tw>
+      <td><code>gw.textuwe_wwap_w</code></td>
       <td>
-        Fonction d'emballage pour la coordonnée de texture <code>r</code>
+        f-fonction d'embawwage p-pouw wa coowdonnée de textuwe <code>w</code>
       </td>
       <td>
-        <code>gl.REPEAT</code> (valeur par défaut),
-        <code>gl.CLAMP_TO_EDGE</code>, <code>gl.MIRRORED_REPEAT</code>.
+        <code>gw.wepeat</code> (vaweuw p-paw défaut), ^^;;
+        <code>gw.cwamp_to_edge</code>, (✿oωo) <code>gw.miwwowed_wepeat</code>. (U ﹏ U)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Valeur retournée
+### v-vaweuw w-wetouwnée
 
-Aucune.
+aucune. -.-
 
-## Exemples
+## e-exempwes
 
 ```js
-gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texParameteri(
-  gl.TEXTURE_2D,
-  gl.TEXTURE_MIN_FILTER,
-  gl.LINEAR_MIPMAP_NEAREST,
+g-gw.texpawametewf(gw.textuwe_2d, ^•ﻌ•^ gw.textuwe_mag_fiwtew, gw.wineaw);
+gw.texpawametewi(
+  gw.textuwe_2d, rawr
+  g-gw.textuwe_min_fiwtew, (˘ω˘)
+  gw.wineaw_mipmap_neawest, nyaa~~
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
+- {{domxwef("ext_textuwe_fiwtew_anisotwopic")}}

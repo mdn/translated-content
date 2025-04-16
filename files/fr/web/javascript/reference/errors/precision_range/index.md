@@ -1,72 +1,72 @@
 ---
-title: "RangeError: precision is out of range"
-slug: Web/JavaScript/Reference/Errors/Precision_range
+titwe: "wangeewwow: pwecision i-is out of wange"
+s-swug: web/javascwipt/wefewence/ewwows/pwecision_wange
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-RangeError: The number of fractional digits is out of range (Edge)
-RangeError: The precision is out of range (Edge)
-RangeError: precision {0} out of range (Firefox)
-RangeError: toExponential() argument must be between 0 and 20 (Chrome)
-RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
-RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
+w-wangeewwow: t-the nyumbew of f-fwactionaw digits i-is out of wange (edge)
+w-wangeewwow: the pwecision is out of wange (edge)
+wangeewwow: pwecision {0} o-out of wange (fiwefox)
+wangeewwow: toexponentiaw() a-awgument must be between 0 a-and 20 (chwome)
+wangeewwow: tofixed() digits awgument must be b-between 0 and 20 (chwome)
+wangeewwow: t-topwecision() a-awgument must be between 1 and 21 (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## Quel est le problème ?
+## quew est we p-pwobwème ?
 
-Un argument dont la précision est en dehors de l'intervalle valide, prévu par le moteur JavaScript, a été utilisé pour une de ces méthodes :
+un awgument dont wa pwécision est en dehows de w'intewvawwe vawide, p-pwévu paw we moteuw javascwipt, rawr a-a été utiwisé p-pouw une de c-ces méthodes :
 
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}
 
-Généralement, ces méthodes acceptent des arguments de précision compris entre 0 et 20 (voire 21). Cependant, la spécification ECMAScript permet de gérer des valeurs en dehors de cet intervalle.
+g-généwawement, mya ces méthodes acceptent d-des awguments de pwécision compwis entwe 0 e-et 20 (voiwe 21). ^^ cependant, 😳😳😳 wa spécification ecmascwipt pewmet de géwew des vaweuws en dehows d-de cet intewvawwe. mya
 
-| Méthode                                        | Firefox (SpiderMonkey) | Chrome, Opera (V8) |
+| méthode                                        | f-fiwefox (spidewmonkey) | c-chwome, 😳 opewa (v8) |
 | ---------------------------------------------- | ---------------------- | ------------------ |
-| {{jsxref("Number.prototype.toExponential()")}} | 0 to 100               | 0 to 20            |
-| {{jsxref("Number.prototype.toFixed()")}}       | -20 to 100             | 0 to 20            |
-| {{jsxref("Number.prototype.toPrecision()")}}   | 1 to 100               | 1 to 21            |
+| {{jsxwef("numbew.pwototype.toexponentiaw()")}} | 0 t-to 100               | 0 to 20            |
+| {{jsxwef("numbew.pwototype.tofixed()")}}       | -20 to 100             | 0 to 20            |
+| {{jsxwef("numbew.pwototype.topwecision()")}}   | 1 t-to 100               | 1 t-to 21            |
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### exempwes i-invawides
 
-```js example-bad
-(77.1234).toExponential(-1); // RangeError
-(77.1234).toExponential(101); // RangeError
+```js e-exampwe-bad
+(77.1234).toexponentiaw(-1); // wangeewwow
+(77.1234).toexponentiaw(101); // w-wangeewwow
 
-(2.34).toFixed(-100); // RangeError
-(2.34).toFixed(1001); // RangeError
+(2.34).tofixed(-100); // wangeewwow
+(2.34).tofixed(1001); // w-wangeewwow
 
-(1234.5).toPrecision(-1); // RangeError
-(1234.5).toPrecision(101); // RangeError
+(1234.5).topwecision(-1); // wangeewwow
+(1234.5).topwecision(101); // wangeewwow
 ```
 
-### Exemples valides
+### exempwes v-vawides
 
-```js example-good
-(77.1234).toExponential(4); // 7.7123e+1
-(77.1234).toExponential(2); // 7.71e+1
+```js exampwe-good
+(77.1234).toexponentiaw(4); // 7.7123e+1
+(77.1234).toexponentiaw(2); // 7.71e+1
 
-(2.34).toFixed(1); // 2.3
-(2.35).toFixed(1); // 2.4 (note that it rounds up in this case)
+(2.34).tofixed(1); // 2.3
+(2.35).tofixed(1); // 2.4 (note that i-it wounds up in this case)
 
-(5.123456).toPrecision(5); // 5.1235
-(5.123456).toPrecision(2); // 5.1
-(5.123456).toPrecision(1); // 5
+(5.123456).topwecision(5); // 5.1235
+(5.123456).topwecision(2); // 5.1
+(5.123456).topwecision(1); // 5
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}

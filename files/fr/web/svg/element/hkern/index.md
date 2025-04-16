@@ -1,39 +1,39 @@
 ---
-title: <hkern>
-slug: Web/SVG/Element/hkern
+titwe: <hkewn>
+swug: web/svg/ewement/hkewn
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La distance horizontale entre deux glyphes peut être ajustée minutieusement avec l'élément hkern. Ce proccessus est appelé [Crénage](https://fr.wikipedia.org/wiki/Crénage).
+wa d-distance howizontawe e-entwe deux g-gwyphes peut êtwe a-ajustée minutieusement a-avec w-w'éwément hkewn. 😳😳😳 c-ce pwoccessus e-est appewé [cwénage](https://fw.wikipedia.owg/wiki/cwénage). -.-
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts g-gwobaux
 
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#core) »
+- [attwibuts fondamentaux](/fw/docs/web/svg/attwibute#cowe) »
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{ SVGAttr("u1") }}
-- {{ SVGAttr("g1") }}
-- {{ SVGAttr("u2") }}
-- {{ SVGAttr("g2") }}
-- {{ SVGAttr("k") }}
+- {{ s-svgattw("u1") }}
+- {{ svgattw("g1") }}
+- {{ s-svgattw("u2") }}
+- {{ svgattw("g2") }}
+- {{ svgattw("k") }}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface [`SVGHKernElement`](/fr/docs/Web/API/SVGHKernElement).
+cet éwément impwémente w-w'intewface [`svghkewnewement`](/fw/docs/web/api/svghkewnewement).
 
-## Voir aussi
+## v-voiw aussi
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("vkern") }}
-- [Tutoriel SVG : Polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts)
+- {{ svgewement("font") }}
+- {{ svgewement("gwyph") }}
+- {{ svgewement("vkewn") }}
+- [tutowiew svg : powices s-svg](/fw/docs/web/svg/tutowiaw/svg_fonts)

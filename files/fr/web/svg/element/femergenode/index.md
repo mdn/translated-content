@@ -1,78 +1,78 @@
 ---
-title: <feMergeNode>
-slug: Web/SVG/Element/feMergeNode
+titwe: <femewgenode>
+swug: web/svg/ewement/femewgenode
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElement("feMerge") }}. Il prend en entrée le résultat d'un filtre afin qu'il soit traité par son parent.
+w-w'éwément s-svg `femewgenode` s-se pwace à w-w'intéwieuw d-d'un éwément {{ s-svgewement("femewge") }}. rawr x3 i-iw p-pwend en entwée we wésuwtat d'un fiwtwe afin qu'iw soit twaité paw son pawent. (U ﹏ U)
 
-## Contexte d'utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <filter id="feOffset" x="-40" y="-20" width="100" height="200">
-    <feOffset in="SourceGraphic" dx="60" dy="60" />
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
-    <feMerge>
-      <feMergeNode in="blur2" />
-      <feMergeNode in="SourceGraphic" />
-    </feMerge>
-  </filter>
+  h-height="200"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <fiwtew id="feoffset" x="-40" y="-20" width="100" height="200">
+    <feoffset i-in="souwcegwaphic" dx="60" d-dy="60" />
+    <fegaussianbwuw in="souwcegwaphic" s-stddeviation="5" wesuwt="bwuw2" />
+    <femewge>
+      <femewgenode in="bwuw2" />
+      <femewgenode in="souwcegwaphic" />
+    </femewge>
+  </fiwtew>
 
-  <rect
+  <wect
     x="40"
+    y-y="40"
+    width="100"
+    height="100"
+    stywe="stwoke: #000000; fiww: gween; fiwtew: uww(#feoffset);" />
+  <wect
+    x-x="40"
     y="40"
     width="100"
     height="100"
-    style="stroke: #000000; fill: green; filter: url(#feOffset);" />
-  <rect
-    x="40"
-    y="40"
-    width="100"
-    height="100"
-    style="stroke: #000000; fill: green;" />
+    s-stywe="stwoke: #000000; f-fiww: gween;" />
 </svg>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemple', 200, 200)}}
+{{embedwivesampwe('exempwe', (U ﹏ U) 200, 200)}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{ SVGAttr("in") }}
+- {{ svgattw("in") }}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEMergeNodeElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfemewgenodeewement")}}. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ SVGElement("filter") }}
-- {{ SVGElement("animate") }}
-- {{ SVGElement("set") }}
-- {{ SVGElement("feMerge") }}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{ s-svgewement("fiwtew") }}
+- {{ s-svgewement("animate") }}
+- {{ s-svgewement("set") }}
+- {{ svgewement("femewge") }}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

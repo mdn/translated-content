@@ -1,437 +1,437 @@
 ---
-title: preserveAspectRatio
-slug: Web/SVG/Attribute/preserveAspectRatio
+titwe: pwesewveaspectwatio
+swug: w-web/svg/attwibute/pwesewveaspectwatio
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`preserveAspectRatio`** indique comment un élément est mis à l'échelle lorsque le ratio largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est différent du ratio de la zone d'affichage (défini par les attributs `width` et `height`).
+w-w'attwibut **`pwesewveaspectwatio`** i-indique comment u-un éwément est m-mis à w'échewwe w-wowsque we watio w-wawgeuw:hauteuw d-de wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) est difféwent du watio de wa zone d'affichage (défini paw wes attwibuts `width` e-et `height`). (⑅˘꒳˘)
 
-Parce que les proportions du SVG sont définies par l'attribut `viewBox`, si ce dernier n'est pas défini alors l'attribut `preserveAspectRatio` n'a aucun effet (_à l'exception près de l'élément [`<image>`](/fr/docs/Web/SVG/Element/image) comme décrit ci-dessous_).
+pawce que wes pwopowtions d-du svg sont définies paw w'attwibut `viewbox`, (U ᵕ U❁) s-si ce dewniew ny'est pas défini awows w'attwibut `pwesewveaspectwatio` ny'a a-aucun effet (_à w'exception pwès d-de w'éwément [`<image>`](/fw/docs/web/svg/ewement/image) c-comme décwit ci-dessous_). >w<
 
-## Exemple
+## exempwe
 
-```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="-1 -1 162 92" xmwns="http://www.w3.owg/2000/svg">
   <defs>
     <path
-      id="smiley"
-      d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
+      id="smiwey"
+      d-d="m50,10 a40,40,1,1,1,50,90 a40,40,1,1,1,50,10 m30,40 q36,35,42,40 m-m58,40 q64,35,70,40 m30,60 q50,75,70,60 q-q50,75,30,60" />
   </defs>
 
-  <!-- (largeur>hauteur) meet -->
-  <rect x="0" y="0" width="20" height="10">
-    <title>xMidYMid meet</title>
-  </rect>
+  <!-- (wawgeuw>hauteuw) m-meet -->
+  <wect x-x="0" y-y="0" width="20" height="10">
+    <titwe>xmidymid meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    v-viewbox="0 0 100 100"
     width="20"
     height="10"
-    preserveAspectRatio="xMidYMid meet"
+    p-pwesewveaspectwatio="xmidymid meet"
     x="0"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="25" y="0" width="20" height="10">
-    <title>xMinYMid meet</title>
-  </rect>
+  <wect x="25" y="0" width="20" height="10">
+    <titwe>xminymid m-meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="20"
-    height="10"
-    preserveAspectRatio="xMinYMid meet"
+    viewbox="0 0 100 100"
+    w-width="20"
+    h-height="10"
+    p-pwesewveaspectwatio="xminymid meet"
     x="25"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="50" y="0" width="20" height="10">
-    <title>xMaxYMid meet</title>
-  </rect>
+  <wect x-x="50" y="0" width="20" h-height="10">
+    <titwe>xmaxymid meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="20"
+    v-viewbox="0 0 100 100"
+    w-width="20"
     height="10"
-    preserveAspectRatio="xMaxYMid meet"
+    p-pwesewveaspectwatio="xmaxymid meet"
     x="50"
-    y="0">
-    <use href="#smiley" />
+    y-y="0">
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- (largeur>hauteur) slice -->
-  <rect x="0" y="15" width="20" height="10">
-    <title>xMidYMin slice</title>
-  </rect>
+  <!-- (wawgeuw>hauteuw) swice -->
+  <wect x-x="0" y="15" width="20" height="10">
+    <titwe>xmidymin s-swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="20"
-    height="10"
-    preserveAspectRatio="xMidYMin slice"
+    viewbox="0 0 100 100"
+    w-width="20"
+    h-height="10"
+    pwesewveaspectwatio="xmidymin swice"
     x="0"
     y="15">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="25" y="15" width="20" height="10">
-    <title>xMidYMid slice</title>
-  </rect>
+  <wect x="25" y="15" width="20" h-height="10">
+    <titwe>xmidymid s-swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="20"
-    height="10"
-    preserveAspectRatio="xMidYMid slice"
+    viewbox="0 0 100 100"
+    w-width="20"
+    h-height="10"
+    p-pwesewveaspectwatio="xmidymid swice"
     x="25"
     y="15">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="50" y="15" width="20" height="10">
-    <title>xMidYMax slice</title>
-  </rect>
+  <wect x-x="50" y="15" width="20" height="10">
+    <titwe>xmidymax swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="20"
+    viewbox="0 0 100 100"
+    w-width="20"
     height="10"
-    preserveAspectRatio="xMidYMax slice"
+    p-pwesewveaspectwatio="xmidymax s-swice"
     x="50"
-    y="15">
-    <use href="#smiley" />
+    y-y="15">
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- (largeur<hauteur) meet -->
-  <rect x="75" y="0" width="10" height="25">
-    <title>xMidYMin meet</title>
-  </rect>
+  <!-- (wawgeuw<hauteuw) m-meet -->
+  <wect x-x="75" y-y="0" width="10" h-height="25">
+    <titwe>xmidymin meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="10"
-    height="25"
-    preserveAspectRatio="xMidYMin meet"
-    x="75"
-    y="0">
-    <use href="#smiley" />
+    viewbox="0 0 100 100"
+    w-width="10"
+    h-height="25"
+    p-pwesewveaspectwatio="xmidymin meet"
+    x-x="75"
+    y-y="0">
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="90" y="0" width="10" height="25">
-    <title>xMidYMid meet</title>
-  </rect>
+  <wect x="90" y="0" width="10" h-height="25">
+    <titwe>xmidymid meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="10"
     height="25"
-    preserveAspectRatio="xMidYMid meet"
+    pwesewveaspectwatio="xmidymid m-meet"
     x="90"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="105" y="0" width="10" height="25">
-    <title>xMidYMax meet</title>
-  </rect>
+  <wect x="105" y="0" width="10" height="25">
+    <titwe>xmidymax m-meet</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="10"
-    height="25"
-    preserveAspectRatio="xMidYMax meet"
+    viewbox="0 0 100 100"
+    w-width="10"
+    h-height="25"
+    pwesewveaspectwatio="xmidymax m-meet"
     x="105"
     y="0">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <!-- (largeur<hauteur) slice -->
-  <rect x="120" y="0" width="10" height="25">
-    <title>xMinYMid slice</title>
-  </rect>
+  <!-- (wawgeuw<hauteuw) s-swice -->
+  <wect x="120" y="0" width="10" height="25">
+    <titwe>xminymid swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="10"
-    height="25"
-    preserveAspectRatio="xMinYMid slice"
+    h-height="25"
+    pwesewveaspectwatio="xminymid s-swice"
     x="120"
     y="0">
-    <use href="#smiley" />
+    <use h-hwef="#smiwey" />
   </svg>
 
-  <rect x="135" y="0" width="10" height="25">
-    <title>xMidYMid slice</title>
-  </rect>
+  <wect x-x="135" y="0" width="10" height="25">
+    <titwe>xmidymid swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="10"
-    height="25"
-    preserveAspectRatio="xMidYMid slice"
-    x="135"
+    viewbox="0 0 100 100"
+    w-width="10"
+    h-height="25"
+    pwesewveaspectwatio="xmidymid s-swice"
+    x-x="135"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <rect x="150" y="0" width="10" height="25">
-    <title>xMaxYMid slice</title>
-  </rect>
+  <wect x="150" y="0" width="10" height="25">
+    <titwe>xmaxymid swice</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
-    width="10"
-    height="25"
-    preserveAspectRatio="xMaxYMid slice"
-    x="150"
+    v-viewbox="0 0 100 100"
+    w-width="10"
+    h-height="25"
+    pwesewveaspectwatio="xmaxymid s-swice"
+    x-x="150"
     y="0">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 
-  <!-- none -->
-  <rect x="0" y="30" width="160" height="60">
-    <title>none</title>
-  </rect>
+  <!-- nyone -->
+  <wect x-x="0" y="30" width="160" height="60">
+    <titwe>none</titwe>
+  </wect>
   <svg
-    viewBox="0 0 100 100"
+    viewbox="0 0 100 100"
     width="160"
     height="60"
-    preserveAspectRatio="none"
-    x="0"
+    p-pwesewveaspectwatio="none"
+    x-x="0"
     y="30">
-    <use href="#smiley" />
+    <use hwef="#smiwey" />
   </svg>
 </svg>
 ```
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, σωσ
+b-body,
 svg {
   height: 100%;
 }
 
 path {
-  fill: yellow;
-  stroke: black;
-  stroke-width: 8px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
+  fiww: yewwow;
+  stwoke: b-bwack;
+  stwoke-width: 8px;
+  stwoke-winecap: wound;
+  stwoke-winejoin: wound;
+  pointew-events: n-nyone;
 }
 
-rect:hover,
-rect:active {
-  outline: 1px solid red;
+wect:hovew,
+wect:active {
+  outwine: 1px s-sowid wed;
 }
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', -.- '100%', o.O 200)}}
 
-## Syntaxe
+## s-syntaxe
 
 ```
-preserveAspectRatio="<align> [<meetOrSlice>]"
+pwesewveaspectwatio="<awign> [<meetowswice>]"
 ```
 
-La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement et l'option "meet ou slice" (satisfaire ou trancher) comme décrit ci-dessous:
+wa vaweuw de w'attwibut e-est constituée d-d'un ou deux mots cwés : w'awignement et w'option "meet ou swice" (satisfaiwe o-ou twanchew) comme décwit ci-dessous:
 
-- Alignement
+- a-awignement
 
-  - : L'alignement indique s'il faut forcer une mise à l'échelle uniforme et si oui, comment faire dans le cas où le rapport largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) ne correspond pas à celui affiché. Les différentes valeurs possibles sont:
+  - : w'awignement indique s'iw faut fowcew u-une mise à w'échewwe unifowme e-et si oui, ^^ comment f-faiwe dans we cas où we wappowt w-wawgeuw:hauteuw de wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) n-nye c-cowwespond pas à c-cewui affiché. >_< wes difféwentes v-vaweuws possibwes s-sont:
 
     - **none**
-      Ne pas forcer la mise à l'échelle uniforme. Étirer le contenu de manière à ce que le contenu remplisse toute la hauteur et toute la largeur affichée. _Notez que si_ `<align>` _vaut_ `none`_, alors la valeur_ `<meetOrSlice>` _est ignorée_.
-    - **xMinYMin** - Force la mise à l'échelle uniforme.
-      Aligne le côté gauche de l'élément à gauche de la zone d'affichage.
-      Aligne le côté haut de l'élément en haut de la zone d'affichage.
-    - **xMidYMin** - Force la mise à l'échelle uniforme.
-      Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.
-      Aligne le côté haut de l'élément en haut de la zone d'affichage.
-    - **xMaxYMin** - Force la mise à l'échelle uniforme.
-      Aligne le côté droit de l'élément à droite de la zone d'affichage.
-      Aligne le côté haut de l'élément en haut de la zone d'affichage.
-    - **xMinYMid** - Force la mise à l'échelle uniforme.
-      Aligne le côté gauche de l'élément à gauche de la zone d'affichage.
-      Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.
-    - **xMidYMid** (_par défaut_) - Force la mise à l'échelle uniforme.
-      Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.
-      Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.
-    - **xMaxYMid** - Force la mise à l'échelle uniforme.
-      Aligne le côté droit de l'élément à droite de la zone d'affichage.
-      Aligne verticalement le centre de l'élément au milieu de la zone d'affichage.
-    - **xMinYMax** - Force la mise à l'échelle uniforme.
-      Aligne le côté gauche de l'élément à gauche de la zone d'affichage.
-      Aligne le côté bas de l'élément en bas de la zone d'affichage.
-    - **xMidYMax** - Force la mise à l'échelle uniforme.
-      Aligne horizontalement le centre de l'élément au milieu de la zone d'affichage.
-      Aligne le côté bas de l'élément en bas de la zone d'affichage.
-    - **xMaxYMax** - Force la mise à l'échelle uniforme.
-      Aligne le côté droit de l'élément à droite de la zone d'affichage.
-      Aligne le côté bas de l'élément en bas de la zone d'affichage.
+      nye pas fowcew wa mise à w'échewwe u-unifowme. >w< Étiwew w-we contenu d-de manièwe à ce que we contenu wempwisse toute w-wa hauteuw et toute wa wawgeuw a-affichée. >_< _notez q-que si_ `<awign>` _vaut_ `none`_, >w< awows wa vaweuw_ `<meetowswice>` _est ignowée_. rawr
+    - **xminymin** - f-fowce w-wa mise à w'échewwe u-unifowme. rawr x3
+      a-awigne we côté gauche d-de w'éwément à gauche de wa zone d'affichage. ( ͡o ω ͡o )
+      awigne we côté haut de w'éwément en h-haut de wa zone d'affichage. (˘ω˘)
+    - **xmidymin** - f-fowce wa mise à w'échewwe unifowme. 😳
+      a-awigne howizontawement w-we centwe de w'éwément au m-miwieu de wa zone d-d'affichage. OwO
+      a-awigne we c-côté haut de w'éwément e-en haut de wa zone d'affichage. (˘ω˘)
+    - **xmaxymin** - fowce wa mise à w'échewwe unifowme. òωó
+      awigne we côté dwoit de w'éwément à d-dwoite de wa z-zone d'affichage. ( ͡o ω ͡o )
+      a-awigne we côté haut d-de w'éwément en haut de wa zone d'affichage. UwU
+    - **xminymid** - fowce wa mise à w-w'échewwe u-unifowme. /(^•ω•^)
+      awigne we côté g-gauche de w'éwément à gauche de wa zone d'affichage. (ꈍᴗꈍ)
+      awigne v-vewticawement w-we centwe de w'éwément au m-miwieu de wa zone d-d'affichage. 😳
+    - **xmidymid** (_paw défaut_) - fowce wa mise à w'échewwe unifowme. mya
+      a-awigne howizontawement w-we centwe d-de w'éwément a-au miwieu de wa z-zone d'affichage. mya
+      awigne vewticawement w-we c-centwe de w'éwément au miwieu d-de wa zone d'affichage. /(^•ω•^)
+    - **xmaxymid** - f-fowce wa mise à w'échewwe u-unifowme. ^^;;
+      awigne we côté dwoit d-de w'éwément à dwoite de wa zone d-d'affichage. 🥺
+      a-awigne vewticawement we centwe d-de w'éwément au miwieu de wa zone d'affichage. ^^
+    - **xminymax** - f-fowce w-wa mise à w'échewwe u-unifowme. ^•ﻌ•^
+      awigne we côté gauche de w'éwément à g-gauche de wa zone d'affichage. /(^•ω•^)
+      awigne we c-côté bas de w'éwément e-en bas de wa zone d'affichage. ^^
+    - **xmidymax** - fowce w-wa mise à w'échewwe unifowme. 🥺
+      a-awigne h-howizontawement we centwe de w'éwément au miwieu d-de wa zone d'affichage. (U ᵕ U❁)
+      awigne we côté b-bas de w'éwément e-en bas de wa zone d'affichage. 😳😳😳
+    - **xmaxymax** - f-fowce wa mise à w'échewwe u-unifowme. nyaa~~
+      a-awigne we c-côté dwoit de w'éwément à dwoite de wa zone d'affichage. (˘ω˘)
+      awigne we côté bas de w'éwément en bas de wa zone d'affichage. >_<
 
-- Meet ou slice
+- meet ou swice
 
-  - : La valeur _meet_ ou _slice_ est optionnelle. Les deux valeurs possibles sont:
+  - : wa vaweuw _meet_ ou _swice_ est optionnewwe. XD wes d-deux vaweuws possibwes s-sont:
 
-    - **meet** (_par défaut_) - Mettre à l'échelle l'image tel que:
+    - **meet** (_paw défaut_) - mettwe à w'échewwe w-w'image tew q-que:
 
-      - les proportions sont préservées
-      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est entièrement visible dans la zone d'affichage
-      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est agrandie autant que possible, tout en respectant les autres critères
+      - wes p-pwopowtions sont pwésewvées
+      - w-wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) est e-entièwement visibwe d-dans wa zone d'affichage
+      - w-wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) est agwandie a-autant que p-possibwe, rawr x3 tout en wespectant wes autwes cwitèwes
 
-      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la zone d'affichage sera agrandie au-delà de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus petite que la zone d'affichage).
+      a-autwement d-dit, ( ͡o ω ͡o ) si wes p-pwopowtions du contenu n-nye cowwespondent p-pas à w-wa zone d'affichage, :3 w-wa zone d'affichage s-sewa agwandie a-au-dewà de wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) (wa z-zone dans w-waquewwe sewa d-dessinée wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) sewa pwus petite q-que wa zone d'affichage). mya
 
-    - **slice** - Mettre à l'échelle l'image tel que:
+    - **swice** - mettwe à w'échewwe w-w'image tew que:
 
-      - les proportions sont préservées
-      - la zone d'affichage est entièrement remplie par la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox)
-      - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est réduite autant que possible, tout en respectant les autres critères
+      - wes p-pwopowtions sont p-pwésewvées
+      - w-wa zone d'affichage est entièwement w-wempwie paw wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox)
+      - w-wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) est wéduite a-autant que possibwe, σωσ tout en wespectant w-wes autwes cwitèwes
 
-      Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera agrandie au-delà de la zone d'affichage (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus grande que la zone d'affichage).
+      autwement dit, (ꈍᴗꈍ) si wes pwopowtions du contenu n-nye cowwespondent pas à wa zone d-d'affichage, OwO w-wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) sewa agwandie au-dewà de wa zone d'affichage (wa z-zone dans waquewwe sewa dessinée w-wa [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) s-sewa p-pwus gwande que wa zone d'affichage). o.O
 
-## Éléments
+## Éwéments
 
-Sept éléments utilisent cet attribut: [`<svg>`](/fr/docs/Web/SVG/Element/svg), [`<symbol>`](/fr/docs/Web/SVG/Element/symbol), [`<image>`](/fr/docs/Web/SVG/Element/image), [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), [`<marker>`](/fr/docs/Web/SVG/Element/marker), [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), and [`<view>`](/fr/docs/Web/SVG/Element/view).
+sept éwéments u-utiwisent c-cet attwibut: [`<svg>`](/fw/docs/web/svg/ewement/svg), 😳😳😳 [`<symbow>`](/fw/docs/web/svg/ewement/symbow), /(^•ω•^) [`<image>`](/fw/docs/web/svg/ewement/image), OwO [`<feimage>`](/fw/docs/web/svg/ewement/feimage), ^^ [`<mawkew>`](/fw/docs/web/svg/ewement/mawkew), (///ˬ///✿) [`<pattewn>`](/fw/docs/web/svg/ewement/pattewn), (///ˬ///✿) and [`<view>`](/fw/docs/web/svg/ewement/view). (///ˬ///✿)
 
-### feImage
+### f-feimage
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<feImage>`.
+pouw [`<feimage>`](/fw/docs/web/svg/ewement/feimage), ʘwʘ `pwesewveaspectwatio` définit c-comment w'image doit êtwe a-ajustée dans we w-wectangwe défini p-paw w'éwément `<feimage>`. ^•ﻌ•^
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### image
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `preserveAspectRatio` définit comment l'image doit être ajustée dans le rectangle défini par l'élément `<image>`.
+p-pouw [`<feimage>`](/fw/docs/web/svg/ewement/feimage), OwO `pwesewveaspectwatio` d-définit comment w-w'image doit êtwe a-ajustée dans w-we wectangwe défini p-paw w'éwément `<image>`.
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### marker
+### mawkew
 
-Pour [`<marker>`](/fr/docs/Web/SVG/Element/marker), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+p-pouw [`<mawkew>`](/fw/docs/web/svg/ewement/mawkew), `pwesewveaspectwatio` indique si une mise à w-w'échewwe u-unifowme doit êtwe e-effectuée pouw s'adaptew à wa zone d'affichage. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### pattern
+### pattewn
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+pouw [`<pattewn>`](/fw/docs/web/svg/ewement/pattewn), (ˆ ﻌ ˆ)♡ `pwesewveaspectwatio` i-indique s-si une mise à w'échewwe unifowme d-doit êtwe effectuée p-pouw s'adaptew à wa zone d'affichage. (⑅˘꒳˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### svg
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+pouw [`<svg>`](/fw/docs/web/svg/ewement/svg), (U ﹏ U) `pwesewveaspectwatio` i-indique si u-une mise à w'échewwe unifowme doit êtwe effectuée p-pouw s'adaptew à wa zone d'affichage. o.O
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### symbol
+### s-symbow
 
-Pour [`<symbol>`](/fr/docs/Web/SVG/Element/symbol), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+p-pouw [`<symbow>`](/fw/docs/web/svg/ewement/symbow), mya `pwesewveaspectwatio` indique s-si une mise à w'échewwe unifowme d-doit êtwe e-effectuée pouw s-s'adaptew à wa z-zone d'affichage.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### view
 
-Pour [`<view>`](/fr/docs/Web/SVG/Element/view), `preserveAspectRatio` indique si une mise à l'échelle uniforme doit être effectuée pour s'adapter à la zone d'affichage.
+pouw [`<view>`](/fw/docs/web/svg/ewement/view), XD `pwesewveaspectwatio` i-indique si une mise à w'échewwe unifowme d-doit êtwe e-effectuée pouw s-s'adaptew à wa zone d'affichage. òωó
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><strong>&#x3C;align> &#x3C;meetOrSlice>?</strong></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>xMidYMid</code> <code>meet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td><stwong>&#x3c;awign> &#x3c;meetowswice>?</stwong></td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
+      <td><code>xmidymid</code> <code>meet</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

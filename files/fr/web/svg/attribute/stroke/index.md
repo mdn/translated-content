@@ -1,74 +1,74 @@
 ---
-title: stroke
-slug: Web/SVG/Attribute/stroke
+titwe: stwoke
+swug: web/svg/attwibute/stwoke
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke`** définit la couleur (ou n'importe quelle méthode de remplissage, comme un gradient ou motif) a utiliser pour dessiner le contour d'une forme SVG.
+w-w'attwibut **`stwoke`** d-définit w-wa couweuw (ou n-ny'impowte quewwe m-méthode de wempwissage, ʘwʘ c-comme u-un gwadient ou m-motif) a utiwisew pouw dessinew we contouw d'une fowme svg. σωσ
 
-> **Note :** `stroke` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `stwoke` étant un attwibut d-de pwésentation, OwO iw peut êtwe utiwisé c-comme pwopwiété css. 😳😳😳
 
-Cet attribut peut être appliqué à tout élément, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+cet attwibut p-peut êtwe appwiqué à tout éwément, 😳😳😳 en wevanche iw ny'auwa d-d'effet que suw wes éwéments s-suivants: {{svgewement('awtgwyph')}}, o.O {{svgewement('ciwcwe')}}, ( ͡o ω ͡o ) {{svgewement('ewwipse')}}, (U ﹏ U) {{svgewement('path')}}, {{svgewement('powygon')}}, (///ˬ///✿) {{svgewement('powywine')}}, >w< {{svgewement('wect')}}, rawr {{svgewement('text')}}, mya {{svgewement('textpath')}}, ^^ {{svgewement('twef')}}, 😳😳😳 a-and {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
+htmw, mya
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple trait de couleur -->
-  <circle cx="5" cy="5" r="4" fill="none" stroke="green" />
+```htmw
+<svg viewbox="0 0 20 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- simpwe twait de couweuw -->
+  <ciwcwe cx="5" cy="5" w="4" fiww="none" s-stwoke="gween" />
 
-  <!-- Utiliser un degradé comme contour -->
+  <!-- utiwisew u-un degwadé c-comme contouw -->
   <defs>
-    <linearGradient id="myGradient">
-      <stop offset="0%" stop-color="green" />
-      <stop offset="100%" stop-color="white" />
-    </linearGradient>
+    <wineawgwadient i-id="mygwadient">
+      <stop o-offset="0%" stop-cowow="gween" />
+      <stop offset="100%" s-stop-cowow="white" />
+    </wineawgwadient>
   </defs>
-  <circle cx="15" cy="5" r="4" fill="none" stroke="url(#myGradient)" />
+  <ciwcwe cx="15" cy="5" w="4" fiww="none" s-stwoke="uww(#mygwadient)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', 😳 '100%', -.- 200)}}
 
-## Notes d'usage
+## nyotes d'usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>none</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> Pour plus d'informations sur les valeurs de `context-stroke` (et `context-fill`) à partir de documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.
+> [!note]
+> pouw pwus d'infowmations suw wes vaweuws d-de `context-stwoke` (et `context-fiww`) à p-pawtiw de documents htmw, 🥺 v-voiw wa documentation p-pouw wa pwopwiété nyon-standawd {{cssxwef("-moz-context-pwopewties")}}. o.O

@@ -1,43 +1,43 @@
 ---
-title: HTMLElement.title
-slug: Web/API/HTMLElement/title
+titwe: htmwewement.titwe
+swug: w-web/api/htmwewement/titwe
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La propriété **`HTMLElement.title`** représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.
+wa pwopwiété **`htmwewement.titwe`** w-wepwésente we t-titwe de w'éwément, (ˆ ﻌ ˆ)♡ w-we texte h-habituewwement affiché d-dans une fenêtwe contextuewwe d''info-buwwe' wowsque wa souwis suwvowe w-we nyœud affiché. (˘ω˘)
 
-> [!NOTE]
-> Si un nœud n'a pas d'attribut `title`, alors l'action par défaut est de l'hériter de son nœud parent, qui peut à son tour l'hériter de son nœud parent, etc..
+> [!note]
+> si un nyœud ny'a pas d'attwibut `titwe`, (⑅˘꒳˘) a-awows w'action paw défaut e-est de w'héwitew de son nyœud pawent, (///ˬ///✿) qui peut à son touw w-w'héwitew de son nyœud pawent, 😳😳😳 e-etc..
 >
-> ```html
-> <div title="InfoCool">
->   <div title="">le survol de la souris ici fera apparaître "InfoCool"</div>
->   <div title=" ">le survol de la souris ici ne fera rien apparaître</div>
+> ```htmw
+> <div t-titwe="infocoow">
+>   <div titwe="">we suwvow de wa souwis ici fewa appawaîtwe "infocoow"</div>
+>   <div t-titwe=" ">we suwvow de wa souwis ici nye fewa wien appawaîtwe</div>
 > </div>
 > ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var chn = element.title;
-element.title = chn;
+vaw c-chn = ewement.titwe;
+ewement.titwe = c-chn;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-bouton1.title = "cliquer pour rafraîchir";
+b-bouton1.titwe = "cwiquew p-pouw wafwaîchiw";
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'attribut HTML global [**title**](/fr/docs/Web/HTML/Global_attributes/title).
+- w'attwibut h-htmw gwobaw [**titwe**](/fw/docs/web/htmw/gwobaw_attwibutes/titwe). 🥺

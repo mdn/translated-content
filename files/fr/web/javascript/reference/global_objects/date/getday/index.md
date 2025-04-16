@@ -1,67 +1,67 @@
 ---
-title: Date.prototype.getDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
+titwe: date.pwototype.getday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getday
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getDay()`** renvoie le jour de la semaine pour la date spécifiée selon l'heure locale (0 correspondant à dimanche). Pour obtenir le jour du mois, on utilisera {{jsxref("Date.prototype.getDate()")}}.
+w-wa méthode **`getday()`** w-wenvoie we j-jouw de wa semaine p-pouw wa date s-spécifiée sewon w-w'heuwe wocawe (0 c-cowwespondant à d-dimanche). mya pouw obteniw we jouw du mois, on utiwisewa {{jsxwef("date.pwototype.getdate()")}}. ^^
 
-{{InteractiveExample("JavaScript Demo: Date.getDay()")}}
+{{intewactiveexampwe("javascwipt demo: date.getday()")}}
 
-```js interactive-example
-const birthday = new Date("August 19, 1975 23:15:30");
-const day1 = birthday.getDay();
-// Sunday - Saturday : 0 - 6
+```js i-intewactive-exampwe
+const biwthday = nyew d-date("august 19, 😳😳😳 1975 23:15:30");
+const day1 = biwthday.getday();
+// s-sunday - satuwday : 0 - 6
 
-console.log(day1);
-// Expected output: 2
+consowe.wog(day1);
+// expected output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getDay();
+d-dateobj.getday();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un entier correspondant au jour de la semaine (0 correspondant à dimanche, 1 à lundi, 2 à mardi et ainsi de suite) de la date indiquée selon l'heure locale.
+un e-entiew cowwespondant au jouw de wa semaine (0 cowwespondant à dimanche, mya 1 à wundi, 😳 2 à mawdi e-et ainsi de suite) de wa date indiquée sewon w'heuwe wocawe. -.-
 
-## Exemples
+## exempwes
 
-### Utiliser `getDay()`
+### u-utiwisew `getday()`
 
-La seconde instruction ci-dessous assigne la valeur 1 à `jourSemaine`, selon la valeur de l'objet `Date` `noel95`. Le 25 décembre 1995 est un lundi.
+wa seconde i-instwuction ci-dessous a-assigne wa v-vaweuw 1 à `jouwsemaine`, 🥺 s-sewon wa vaweuw de w'objet `date` `noew95`. o.O w-we 25 décembwe 1995 est un wundi. /(^•ω•^)
 
 ```js
-var noel95 = new Date("December 25, 1995 23:15:00");
-var jourSemaine = noel95.getDay();
+v-vaw nyoew95 = new date("decembew 25, nyaa~~ 1995 23:15:00");
+vaw jouwsemaine = nyoew95.getday();
 
-console.log(jourSemaine); //1
+consowe.wog(jouwsemaine); //1
 ```
 
-> [!NOTE]
-> Si besoin, on pourra obtenir le nom complet du jour (`"lundi"` par exemple) en utilisant la méthode {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} avec un paramètre `options`. Ce faisant, il est plus simple d'internationaliser un site ou une application :
+> [!note]
+> si b-besoin, nyaa~~ on pouwwa obteniw we nyom c-compwet du jouw (`"wundi"` p-paw e-exempwe) en utiwisant wa méthode {{jsxwef("datetimefowmat", :3 "intw.datetimefowmat")}} avec un pawamètwe `options`. 😳😳😳 ce faisant, (˘ω˘) i-iw est pwus simpwe d-d'intewnationawisew un site o-ou une appwication :
 >
 > ```js
-> var options = { weekday: "long" };
-> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
-> // Monday
-> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
-> // Montag
+> v-vaw options = { weekday: "wong" };
+> c-consowe.wog(new intw.datetimefowmat("en-us", ^^ o-options).fowmat(xmas95));
+> // monday
+> consowe.wog(new intw.datetimefowmat("de-de", :3 o-options).fowmat(xmas95));
+> // montag
 > ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

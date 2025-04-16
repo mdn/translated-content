@@ -1,225 +1,225 @@
 ---
-title: WebGL2RenderingContext
-slug: Web/API/WebGL2RenderingContext
+titwe: webgw2wendewingcontext
+swug: web/api/webgw2wendewingcontext
 ---
 
-{{APIRef("WebGL")}} {{SeeCompatTable}}
+{{apiwef("webgw")}} {{seecompattabwe}}
 
-L'interface **WebGL2RenderingContext** fournit le contexte de rendu OpenGL ES 3.0 pour la surface de dessin d'un élément HTML {{HTMLElement("canvas")}}.
+w-w'intewface **webgw2wendewingcontext** f-fouwnit w-we contexte de w-wendu opengw es 3.0 p-pouw wa suwface d-de dessin d'un éwément h-htmw {{htmwewement("canvas")}}. >w<
 
-Pour obtenir un objet de cette interface, appelez {{domxref ("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "webgl2" comme argument :
+pouw o-obteniw un objet de cette intewface, (ˆ ﻌ ˆ)♡ appewez {{domxwef ("htmwcanvasewement.getcontext()", ʘwʘ "getcontext()")}} suw un éwément `<canvas>`, :3 en f-fouwnissant "webgw2" comme awgument :
 
 ```js
-var canevas = document.getElementById("monCanevas");
-var gl = canevas.getContext("webgl2");
+vaw c-canevas = document.getewementbyid("moncanevas");
+vaw gw = canevas.getcontext("webgw2");
 ```
 
-> [!NOTE]
-> WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.
+> [!note]
+> w-webgw 2 est une extension de webgw 1. (˘ω˘) w'intewface `webgw2wendewingcontext` i-impwémente tous wes membwes d-de w'intewface {{domxwef("webgwwendewingcontext")}}. 😳😳😳 c-cewtaines méthodes du contexte webgw 1 peuvent acceptew des vaweuws suppwémentaiwes w-wowsqu'ewwes sont utiwisées dans un contexte webgw 2. rawr x3 vous twouvewez c-cette infowmation suw wes pages d-de wéféwence w-webgw 1. (✿oωo)
 
-Le [didacticiel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient plus d'informations, d'exemples et de ressources sur la façon de démarrer avec WebGL.
+we [didacticiew w-webgw](/fw/docs/web/api/webgw_api/tutowiaw) c-contient pwus d'infowmations, (ˆ ﻌ ˆ)♡ d'exempwes e-et de wessouwces suw wa façon de démawwew avec w-webgw. :3
 
-## Constantes
+## constantes
 
-Voir la page des [constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants).
+voiw wa page des [constantes webgw](/fw/docs/web/api/webgw_api/constants).
 
-## Informations d'état
+## infowmations d'état
 
-- {{domxref("WebGL2RenderingContext.getIndexedParameter()")}}
-  - : Retourne la valeur indexée pour la `cible` donnée.
+- {{domxwef("webgw2wendewingcontext.getindexedpawametew()")}}
+  - : w-wetouwne wa vaweuw indexée pouw w-wa `cibwe` donnée. (U ᵕ U❁)
 
-## Tampons
+## t-tampons
 
-- {{domxref("WebGL2RenderingContext.bufferData()")}}
-  - : Initialise et crée le magasin de données de l'objet tampon.
-- {{domxref("WebGL2RenderingContext.bufferSubData()")}}
-  - : Met à jour un sous-ensemble d'un magasin de données d'un objet tampon.
-- {{domxref("WebGL2RenderingContext.copyBufferSubData()")}}
-  - : Copie une partie des données d'un tampon vers un autre tampon.
-- {{domxref("WebGL2RenderingContext.getBufferSubData()")}}
-  - : Lit les données d'un tampon et les écrit dans un {{jsxref ("ArrayBuffer")}} ou un {{jsxref ("SharedArrayBuffer")}}.
+- {{domxwef("webgw2wendewingcontext.buffewdata()")}}
+  - : initiawise e-et cwée we magasin de données de w'objet tampon. ^^;;
+- {{domxwef("webgw2wendewingcontext.buffewsubdata()")}}
+  - : m-met à j-jouw un sous-ensembwe d'un magasin d-de données d-d'un objet tampon.
+- {{domxwef("webgw2wendewingcontext.copybuffewsubdata()")}}
+  - : copie une p-pawtie des données d'un tampon v-vews un autwe tampon. mya
+- {{domxwef("webgw2wendewingcontext.getbuffewsubdata()")}}
+  - : wit wes données d'un tampon e-et wes écwit dans un {{jsxwef ("awwaybuffew")}} o-ou un {{jsxwef ("shawedawwaybuffew")}}. 😳😳😳
 
-## Tampons d'image
+## tampons d'image
 
-- {{domxref("WebGL2RenderingContext.blitFramebuffer()")}}
-  - : Transfère un bloc de pixels du tampon d'image lu vers le tampon d'image de dessin.
-- {{domxref("WebGL2RenderingContext.framebufferTextureLayer()")}}
-  - : Attache une seule couche de texture à un tampon d'image.
-- {{domxref("WebGL2RenderingContext.invalidateFramebuffer()")}}
-  - : Invalide le contenu des éléments joints dans un tampon d'image.
-- {{domxref("WebGL2RenderingContext.invalidateSubFramebuffer()")}}
-  - : Invalide le contenu des éléments joints dans un tampon d'image.
-- {{domxref("WebGL2RenderingContext.readBuffer()")}}
-  - : Sélectionne un tampon de couleur comme source pour les pixels.
+- {{domxwef("webgw2wendewingcontext.bwitfwamebuffew()")}}
+  - : t-twansfèwe un b-bwoc de pixews du tampon d'image wu vews we tampon d'image de dessin. OwO
+- {{domxwef("webgw2wendewingcontext.fwamebuffewtextuwewayew()")}}
+  - : attache une seuwe couche de textuwe à u-un tampon d'image. rawr
+- {{domxwef("webgw2wendewingcontext.invawidatefwamebuffew()")}}
+  - : i-invawide we contenu d-des éwéments j-joints dans un t-tampon d'image. XD
+- {{domxwef("webgw2wendewingcontext.invawidatesubfwamebuffew()")}}
+  - : invawide we contenu des éwéments joints d-dans un tampon d'image. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.weadbuffew()")}}
+  - : séwectionne un tampon de couweuw comme souwce p-pouw wes pixews. (˘ω˘)
 
-## Tampons de rendu
+## tampons d-de wendu
 
-- {{domxref("WebGL2RenderingContext.getInternalformatParameter()")}}
-  - : Retourne des informations sur le support, dépendant de l'implémentation, des formats internes.
-- {{domxref("WebGL2RenderingContext.renderbufferStorageMultisample()")}}
-  - : Crée et initialise le magasin de données d'un objet tampon de rendu et permet de d'indiquer le nombre d'échantillons à utiliser.
+- {{domxwef("webgw2wendewingcontext.getintewnawfowmatpawametew()")}}
+  - : w-wetouwne d-des infowmations suw we suppowt, UwU d-dépendant de w'impwémentation, d-des fowmats intewnes. >_<
+- {{domxwef("webgw2wendewingcontext.wendewbuffewstowagemuwtisampwe()")}}
+  - : c-cwée et i-initiawise we magasin de données d'un objet tampon d-de wendu et p-pewmet de d'indiquew w-we nyombwe d-d'échantiwwons à u-utiwisew. σωσ
 
-## Textures
+## textuwes
 
-- {{domxref("WebGL2RenderingContext.texStorage2D()")}}
-  - : Spécifie tous les niveaux d'un stockage de texture bidimensionnelle.
-- {{domxref("WebGL2RenderingContext.texStorage3D()")}}
-  - : Spécifie tous les niveaux d'une texture tridimensionnelle ou d'une texture de tableau bidimensionnelle.
-- {{domxref("WebGL2RenderingContext.texImage3D()")}}
-  - : Spécifie une image de texture tridimensionnelle.
-- {{domxref("WebGL2RenderingContext.texSubImage3D()")}}
-  - : Spécifie un sous-rectangle de la texture 3D en cours.
-- {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
-  - : Copie des pixels du tampon WebGLFrame en cours dans une sous-image de texture 3D existante.
-- {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
-  - : Spécifie une image de texture tridimensionnelle dans un format compressé.
-- {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
-  - : Spécifie un sous-rectangle tridimensionnel pour une image de texture dans un format compressé.
+- {{domxwef("webgw2wendewingcontext.texstowage2d()")}}
+  - : spécifie tous wes nyiveaux d-d'un stockage de textuwe bidimensionnewwe. 🥺
+- {{domxwef("webgw2wendewingcontext.texstowage3d()")}}
+  - : spécifie tous wes nyiveaux d'une textuwe twidimensionnewwe o-ou d'une textuwe de tabweau bidimensionnewwe. 🥺
+- {{domxwef("webgw2wendewingcontext.teximage3d()")}}
+  - : spécifie une image d-de textuwe t-twidimensionnewwe. ʘwʘ
+- {{domxwef("webgw2wendewingcontext.texsubimage3d()")}}
+  - : s-spécifie un sous-wectangwe de w-wa textuwe 3d en couws. :3
+- {{domxwef("webgw2wendewingcontext.copytexsubimage3d()")}}
+  - : c-copie d-des pixews du tampon webgwfwame en couws dans une sous-image de textuwe 3d existante. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.compwessedteximage3d()")}}
+  - : spécifie u-une image de textuwe twidimensionnewwe d-dans un fowmat compwessé. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.compwessedtexsubimage3d()")}}
+  - : spécifie u-un sous-wectangwe t-twidimensionnew pouw une image de textuwe d-dans un fowmat c-compwessé. ʘwʘ
 
-## Programmes et shaders
+## pwogwammes et s-shadews
 
-- {{domxref("WebGL2RenderingContext.getFragDataLocation()")}}
-  - : Retourne la liaison des numéros de couleur aux variables de sortie varying définies par l'utilisateur.
+- {{domxwef("webgw2wendewingcontext.getfwagdatawocation()")}}
+  - : wetouwne w-wa wiaison des nyuméwos de couweuw aux vawiabwes de sowtie vawying définies p-paw w'utiwisateuw. >w<
 
-## Uniforms et attributs
+## u-unifowms e-et attwibuts
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
-  - : Méthodes spécifiant les valeurs des variables uniform.
-- {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
-  - : Méthodes spécifiant les valeurs matricielles pour les variables uniform.
-- {{domxref("WebGL2RenderingContext.vertexAttribI()", "WebGL2RenderingContext.vertexAttribI4[u]i[v]()")}}
-  - : Méthodes spécifiant les valeurs entières des attributs de sommet génériques.
-- {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
-  - : Spécifie les formats et les emplacements des données entières des attributs de sommet dans un tableau d'attributs de sommet.
+- {{domxwef("webgw2wendewingcontext.unifowm()", rawr x3 "webgw2wendewingcontext.unifowm[1234][uif][v]()")}}
+  - : méthodes s-spécifiant w-wes vaweuws des vawiabwes unifowm. OwO
+- {{domxwef("webgw2wendewingcontext.unifowmmatwix()", ^•ﻌ•^ "webgw2wendewingcontext.unifowmmatwix[234]x[234]fv()")}}
+  - : m-méthodes spécifiant wes vaweuws matwiciewwes pouw wes vawiabwes unifowm. >_<
+- {{domxwef("webgw2wendewingcontext.vewtexattwibi()", OwO "webgw2wendewingcontext.vewtexattwibi4[u]i[v]()")}}
+  - : m-méthodes s-spécifiant wes vaweuws entièwes des attwibuts d-de sommet généwiques. >_<
+- {{domxwef("webgw2wendewingcontext.vewtexattwibipointew()")}}
+  - : s-spécifie wes fowmats et wes empwacements des données e-entièwes des attwibuts de sommet dans un tabweau d'attwibuts de sommet. (ꈍᴗꈍ)
 
-## Tampons de dessin
+## t-tampons de dessin
 
-- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
-  - : Modifie la vitesse à laquelle les attributs de sommet génériques progressent lors du rendu de plusieurs instances de primitives avec {{domxref ("WebGL2RenderingContext.drawArraysInstanced()", "gl.drawArraysInstanced()")}} et {{domxref("WebGL2RenderingContext.drawElementsInstanced()" , "gl.drawElementsInstanced()")}}.
-- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
-  - : Affiche des primitives à partir des données d'un tableau. En outre, elle peut exécuter plusieurs instances de la plage d'éléments.
-- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
-  - : Affiche des primitives à partir des données d'un tableau. En outre, elle peut exécuter plusieurs instances d'un ensemble d'éléments.
-- {{domxref("WebGL2RenderingContext.drawRangeElements()")}}
-  - : Affiche des primitives à partir des données d'un tableau dans la plage donnée.
-- {{domxref("WebGL2RenderingContext.drawBuffers()")}}
-  - : Spécifie une liste de tampons de couleur dans lesquels dessiner.
-- {{domxref("WebGL2RenderingContext.clearBuffer()", "WebGL2RenderingContext.clearBuffer[fiuv]()")}}
-  - : Efface les tampons du tampon d'image actuellement lié.
+- {{domxwef("webgw2wendewingcontext.vewtexattwibdivisow()")}}
+  - : modifie wa vitesse à waquewwe w-wes attwibuts d-de sommet généwiques pwogwessent wows du wendu de pwusieuws i-instances de p-pwimitives avec {{domxwef ("webgw2wendewingcontext.dwawawwaysinstanced()", >w< "gw.dwawawwaysinstanced()")}} et {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()" , (U ﹏ U) "gw.dwawewementsinstanced()")}}. ^^
+- {{domxwef("webgw2wendewingcontext.dwawawwaysinstanced()")}}
+  - : affiche des pwimitives à pawtiw d-des données d'un tabweau. (U ﹏ U) en outwe, :3 e-ewwe peut exékawaii~w pwusieuws instances de wa pwage d'éwéments. (✿oωo)
+- {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()")}}
+  - : a-affiche des pwimitives à pawtiw d-des données d'un t-tabweau. XD en outwe, ewwe peut e-exékawaii~w pwusieuws instances d-d'un ensembwe d'éwéments. >w<
+- {{domxwef("webgw2wendewingcontext.dwawwangeewements()")}}
+  - : affiche d-des pwimitives à p-pawtiw des données d'un t-tabweau dans wa p-pwage donnée. òωó
+- {{domxwef("webgw2wendewingcontext.dwawbuffews()")}}
+  - : spécifie une wiste d-de tampons de couweuw d-dans wesquews d-dessinew. (ꈍᴗꈍ)
+- {{domxwef("webgw2wendewingcontext.cweawbuffew()", rawr x3 "webgw2wendewingcontext.cweawbuffew[fiuv]()")}}
+  - : efface wes tampons du tampon d-d'image actuewwement wié. rawr x3
 
-## Objets requêtes
+## o-objets wequêtes
 
-Méthodes pour travailler avec les objets {{domxref("WebGLQuery")}}.
+m-méthodes pouw twavaiwwew avec wes objets {{domxwef("webgwquewy")}}. σωσ
 
-- {{domxref("WebGL2RenderingContext.createQuery()")}}
-  - : Crée un nouvel objet {{domxref("WebGLQuery")}}.
-- {{domxref("WebGL2RenderingContext.deleteQuery()")}}
-  - : Supprime l'objet {{domxref("WebGLQuery")}} donné.
-- {{domxref("WebGL2RenderingContext.isQuery()")}}
-  - : Retourne `true` si l'objet donné est un objet {{domxref("WebGLQuery")}} valide.
-- {{domxref("WebGL2RenderingContext.beginQuery()")}}
-  - : Commence une requête asynchrone.
-- {{domxref("WebGL2RenderingContext.endQuery()")}}
-  - : Marque la fin d'une requête asynchrone.
-- {{domxref("WebGL2RenderingContext.getQuery()")}}
-  - : Retourne un objet {{domxref("WebGLQuery")}} pour la cible donnée.
-- {{domxref("WebGL2RenderingContext.getQueryParameter()")}}
-  - : Retourne des informations sur une requête.
+- {{domxwef("webgw2wendewingcontext.cweatequewy()")}}
+  - : cwée un n-nyouvew objet {{domxwef("webgwquewy")}}. (ꈍᴗꈍ)
+- {{domxwef("webgw2wendewingcontext.dewetequewy()")}}
+  - : s-suppwime w-w'objet {{domxwef("webgwquewy")}} d-donné. rawr
+- {{domxwef("webgw2wendewingcontext.isquewy()")}}
+  - : wetouwne `twue` s-si w'objet donné est un objet {{domxwef("webgwquewy")}} vawide. ^^;;
+- {{domxwef("webgw2wendewingcontext.beginquewy()")}}
+  - : commence une wequête asynchwone. rawr x3
+- {{domxwef("webgw2wendewingcontext.endquewy()")}}
+  - : m-mawque wa fin d'une wequête a-asynchwone.
+- {{domxwef("webgw2wendewingcontext.getquewy()")}}
+  - : wetouwne u-un objet {{domxwef("webgwquewy")}} pouw wa cibwe d-donnée.
+- {{domxwef("webgw2wendewingcontext.getquewypawametew()")}}
+  - : wetouwne des infowmations s-suw une w-wequête. (ˆ ﻌ ˆ)♡
 
-## Objets échantilloneurs
+## o-objets échantiwwoneuws
 
-- {{domxref("WebGL2RenderingContext.createSampler()")}}
-  - : Crée un nouvel objet {{domxref("WebGLSampler")}}.
-- {{domxref("WebGL2RenderingContext.deleteSampler()")}}
-  - : Supprime l'objet {{domxref("WebGLSampler")}} donné.
-- {{domxref("WebGL2RenderingContext.bindSampler()")}}
-  - : Lie le {{domxref("WebGLSampler")}} donné à une unité de texture.
-- {{domxref("WebGL2RenderingContext.isSampler()")}}
-  - : Retourne `true` si l'objet donné est un objet {{domxref("WebGLSampler")}} valide.
-- {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}
-  - : Définit les paramètres de l'échantillonneur.
-- {{domxref("WebGL2RenderingContext.getSamplerParameter()")}}
-  - : Retourne les informations de paramètres de l'échantillonneur.
+- {{domxwef("webgw2wendewingcontext.cweatesampwew()")}}
+  - : c-cwée un n-nyouvew objet {{domxwef("webgwsampwew")}}. σωσ
+- {{domxwef("webgw2wendewingcontext.dewetesampwew()")}}
+  - : suppwime w'objet {{domxwef("webgwsampwew")}} donné. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.bindsampwew()")}}
+  - : wie we {{domxwef("webgwsampwew")}} donné à une unité d-de textuwe. >w<
+- {{domxwef("webgw2wendewingcontext.issampwew()")}}
+  - : w-wetouwne `twue` s-si w'objet donné est un o-objet {{domxwef("webgwsampwew")}} vawide. σωσ
+- {{domxwef("webgw2wendewingcontext.sampwewpawametew()", nyaa~~ "webgw2wendewingcontext.sampwewpawametew[if]()")}}
+  - : définit wes pawamètwes d-de w'échantiwwonneuw. 🥺
+- {{domxwef("webgw2wendewingcontext.getsampwewpawametew()")}}
+  - : w-wetouwne wes infowmations de pawamètwes d-de w'échantiwwonneuw. rawr x3
 
-## Objets sync
+## objets sync
 
-- {{domxref("WebGL2RenderingContext.fenceSync()")}}
-  - : Crée un nouvel objet {{domxref("WebGLSync")}} et l'insère dans le flux de commandes GL.
-- {{domxref("WebGL2RenderingContext.isSync()")}}
-  - : Retourne `true` si l'objet transmis est un objet {{domxref("WebGLSync")}} valide.
-- {{domxref("WebGL2RenderingContext.deleteSync()")}}
-  - : Supprime l'objet {{domxref("WebGLSync")}} donné.
-- {{domxref("WebGL2RenderingContext.clientWaitSync()")}}
-  - : Bloque et attend qu'un objet {{domxref ("WebGLSync")}} reçoive un signal ou que l'expiration du délai donné soit reçue.
-- {{domxref("WebGL2RenderingContext.waitSync()")}}
-  - : Retourne immédiatement, mais attend le serveur GL jusqu'à ce que l'objet {{domxref("WebGLSync")}} donné reçoive un signal.
-- {{domxref("WebGL2RenderingContext.getSyncParameter()")}}
-  - : Retourne les informations de paramètres d'un objet {{domxref("WebGLSync")}}.
+- {{domxwef("webgw2wendewingcontext.fencesync()")}}
+  - : cwée u-un nouvew objet {{domxwef("webgwsync")}} e-et w'insèwe dans we f-fwux de commandes g-gw. σωσ
+- {{domxwef("webgw2wendewingcontext.issync()")}}
+  - : wetouwne `twue` si w'objet twansmis est un objet {{domxwef("webgwsync")}} v-vawide. (///ˬ///✿)
+- {{domxwef("webgw2wendewingcontext.dewetesync()")}}
+  - : s-suppwime w-w'objet {{domxwef("webgwsync")}} d-donné. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.cwientwaitsync()")}}
+  - : b-bwoque et attend qu'un o-objet {{domxwef ("webgwsync")}} w-weçoive un signaw ou que w'expiwation d-du déwai d-donné soit weçue. ^^;;
+- {{domxwef("webgw2wendewingcontext.waitsync()")}}
+  - : wetouwne immédiatement, 🥺 m-mais attend we sewveuw gw jusqu'à ce que w-w'objet {{domxwef("webgwsync")}} donné weçoive u-un signaw. òωó
+- {{domxwef("webgw2wendewingcontext.getsyncpawametew()")}}
+  - : w-wetouwne wes infowmations de pawamètwes d-d'un objet {{domxwef("webgwsync")}}. XD
 
-## Retour de transformations
+## wetouw de twansfowmations
 
-- {{domxref("WebGL2RenderingContext.createTransformFeedback()")}}
-  - : Crée et initialise les objets {{domxref("WebGLTransformFeedback")}}.
-- {{domxref("WebGL2RenderingContext.deleteTransformFeedback()")}}
-  - : Supprime l'objet {{domxref ("WebGLTransformFeedback")}} donné.
-- {{domxref("WebGL2RenderingContext.isTransformFeedback()")}}
-  - : Retourne `true` si l'objet transmis est un objet {{domxref("WebGLTransformFeedback")}} valide.
-- {{domxref("WebGL2RenderingContext.bindTransformFeedback()")}}
-  - : Lie l'objet {{domxref("WebGLTransformFeedback")}} transmis à l'état GL en cours.
-- {{domxref("WebGL2RenderingContext.beginTransformFeedback()")}}
-  - : Démarre une opération de retour de transformations.
-- {{domxref("WebGL2RenderingContext.endTransformFeedback()")}}
-  - : Termine une opération de retour de transformations.
-- {{domxref("WebGL2RenderingContext.transformFeedbackVaryings()")}}
-  - : Indique les valeurs à enregistrer dans les tampons {{domxref("WebGLTransformFeedback")}}.
-- {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
-  - : Retourne des informations sur les variables varying à partir des tampons {{domxref("WebGLTransformFeedback")}}.
-- {{domxref("WebGL2RenderingContext.pauseTransformFeedback()")}}
-  - : Suspend une opération de retour de transformations.
-- {{domxref("WebGL2RenderingContext.resumeTransformFeedback()")}}
-  - : Reprend une opération de retour de transformations.
+- {{domxwef("webgw2wendewingcontext.cweatetwansfowmfeedback()")}}
+  - : cwée et initiawise w-wes objets {{domxwef("webgwtwansfowmfeedback")}}. :3
+- {{domxwef("webgw2wendewingcontext.dewetetwansfowmfeedback()")}}
+  - : s-suppwime w'objet {{domxwef ("webgwtwansfowmfeedback")}} d-donné. (U ﹏ U)
+- {{domxwef("webgw2wendewingcontext.istwansfowmfeedback()")}}
+  - : wetouwne `twue` si w'objet twansmis est un o-objet {{domxwef("webgwtwansfowmfeedback")}} vawide. >w<
+- {{domxwef("webgw2wendewingcontext.bindtwansfowmfeedback()")}}
+  - : wie w-w'objet {{domxwef("webgwtwansfowmfeedback")}} t-twansmis à w'état g-gw en couws. /(^•ω•^)
+- {{domxwef("webgw2wendewingcontext.begintwansfowmfeedback()")}}
+  - : démawwe une o-opéwation de w-wetouw de twansfowmations. (⑅˘꒳˘)
+- {{domxwef("webgw2wendewingcontext.endtwansfowmfeedback()")}}
+  - : tewmine une opéwation de wetouw d-de twansfowmations. ʘwʘ
+- {{domxwef("webgw2wendewingcontext.twansfowmfeedbackvawyings()")}}
+  - : indique wes vaweuws à enwegistwew d-dans wes tampons {{domxwef("webgwtwansfowmfeedback")}}. rawr x3
+- {{domxwef("webgw2wendewingcontext.gettwansfowmfeedbackvawying()")}}
+  - : w-wetouwne des infowmations s-suw wes vawiabwes vawying à pawtiw d-des tampons {{domxwef("webgwtwansfowmfeedback")}}. (˘ω˘)
+- {{domxwef("webgw2wendewingcontext.pausetwansfowmfeedback()")}}
+  - : suspend u-une opéwation d-de wetouw de twansfowmations. o.O
+- {{domxwef("webgw2wendewingcontext.wesumetwansfowmfeedback()")}}
+  - : wepwend une opéwation de wetouw de twansfowmations. 😳
 
-## Objets tampons uniforms
+## objets tampons unifowms
 
-- {{domxref("WebGL2RenderingContext.bindBufferBase()")}}
-  - : Lie le {{domxref("WebGLBuffer")}} donné au point de liaison donné (`cible`) à l'`indice` donné.
-- {{domxref("WebGL2RenderingContext.bindBufferRange()")}}
-  - : Lie une plage du {{domxref("WebGLBuffer")}} donné au point de liaison donné (`cible`) à l'`indice` donné.
-- {{domxref("WebGL2RenderingContext.getUniformIndices()")}}
-  - : Récupère les indices d'un certain nombre d'uniforms dans un {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getActiveUniforms()")}}
-  - : Récupère des informations sur les uniforms actifs dans un {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getUniformBlockIndex()")}}
-  - : Récupère l'indice d'un bloc uniform dans un {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getActiveUniformBlockParameter()")}}
-  - : Récupère des informations d'un bloc uniform actif dans un {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.getActiveUniformBlockName()")}}
-  - : Récupère le nom du bloc uniform actif à l'indice donné dans un {{domxref("WebGLProgram")}}.
-- {{domxref("WebGL2RenderingContext.uniformBlockBinding()")}}
-  - : Affecte des points de liaison aux blocs uniforms actifs.
+- {{domxwef("webgw2wendewingcontext.bindbuffewbase()")}}
+  - : wie we {{domxwef("webgwbuffew")}} donné au point de wiaison donné (`cibwe`) à w'`indice` d-donné. o.O
+- {{domxwef("webgw2wendewingcontext.bindbuffewwange()")}}
+  - : w-wie une pwage du {{domxwef("webgwbuffew")}} donné au point de w-wiaison donné (`cibwe`) à w-w'`indice` d-donné. ^^;;
+- {{domxwef("webgw2wendewingcontext.getunifowmindices()")}}
+  - : wécupèwe wes i-indices d'un cewtain nombwe d'unifowms d-dans un {{domxwef("webgwpwogwam")}}. ( ͡o ω ͡o )
+- {{domxwef("webgw2wendewingcontext.getactiveunifowms()")}}
+  - : w-wécupèwe des infowmations s-suw wes unifowms actifs d-dans un {{domxwef("webgwpwogwam")}}. ^^;;
+- {{domxwef("webgw2wendewingcontext.getunifowmbwockindex()")}}
+  - : w-wécupèwe w'indice d'un bwoc unifowm d-dans un {{domxwef("webgwpwogwam")}}. ^^;;
+- {{domxwef("webgw2wendewingcontext.getactiveunifowmbwockpawametew()")}}
+  - : w-wécupèwe d-des infowmations d-d'un bwoc unifowm a-actif dans un {{domxwef("webgwpwogwam")}}. XD
+- {{domxwef("webgw2wendewingcontext.getactiveunifowmbwockname()")}}
+  - : w-wécupèwe w-we nyom du bwoc u-unifowm actif à w-w'indice donné dans un {{domxwef("webgwpwogwam")}}.
+- {{domxwef("webgw2wendewingcontext.unifowmbwockbinding()")}}
+  - : a-affecte d-des points d-de wiaison aux bwocs unifowms actifs. 🥺
 
-## Objets de tableaux de sommets
+## o-objets de tabweaux de sommets
 
-Méthodes pour travailler avec les objets {{domxref("WebGLVertexArrayObject")}} (VAO).
+méthodes p-pouw twavaiwwew avec wes objets {{domxwef("webgwvewtexawwayobject")}} (vao). (///ˬ///✿)
 
-- {{domxref("WebGL2RenderingContext.createVertexArray()")}}
-  - : Crée un nouveau {{domxref("WebGLVertexArrayObject")}}.
-- {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
-  - : Supprime le {{domxref("WebGLVertexArrayObject")}} donné.
-- {{domxref("WebGL2RenderingContext.isVertexArray()")}}
-  - : Retourne `true` si l'objet donné est un {{domxref ("WebGLVertexArrayObject")}} valide.
-- {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
-  - : Lie le {{domxref ("WebGLVertexArrayObject")}} donné au tampon.
+- {{domxwef("webgw2wendewingcontext.cweatevewtexawway()")}}
+  - : c-cwée un nyouveau {{domxwef("webgwvewtexawwayobject")}}. (U ᵕ U❁)
+- {{domxwef("webgw2wendewingcontext.dewetevewtexawway()")}}
+  - : suppwime w-we {{domxwef("webgwvewtexawwayobject")}} d-donné. ^^;;
+- {{domxwef("webgw2wendewingcontext.isvewtexawway()")}}
+  - : wetouwne `twue` s-si w'objet donné est un {{domxwef ("webgwvewtexawwayobject")}} v-vawide. ^^;;
+- {{domxwef("webgw2wendewingcontext.bindvewtexawway()")}}
+  - : wie we {{domxwef ("webgwvewtexawwayobject")}} d-donné au tampon. rawr
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("WebGLRenderingContext")}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("webgwwendewingcontext")}}

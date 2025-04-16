@@ -1,134 +1,134 @@
 ---
-title: Intl.NumberFormat.prototype.formatToParts()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
+titwe: intw.numbewfowmat.pwototype.fowmattopawts()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/fowmattopawts
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Numberformat.prototype.formatToParts()`** permet de produire des fragments de chaînes à partir d'un nombre pour le mettre en forme avec des formateurs `NumberTimeFormat`.
+w-wa méthode **`intw.numbewfowmat.pwototype.fowmattopawts()`** p-pewmet de pwoduiwe d-des fwagments d-de chaînes à p-pawtiw d'un nyombwe p-pouw we mettwe e-en fowme avec d-des fowmateuws `numbewtimefowmat`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-Intl.NumberFormat.prototype.formatToParts(nombre);
+intw.numbewfowmat.pwototype.fowmattopawts(nombwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nombre` {{optional_inline}}
-  - : Le nombre qu'on souhaite mettre en forme.
+- `nombwe` {{optionaw_inwine}}
+  - : we nyombwe q-qu'on souhaite mettwe en fowme. OwO
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Un tableau {{jsxref("Array")}} contenant des objets correspondants aux différents fragments du nombres.
+un tabweau {{jsxwef("awway")}} contenant d-des objets cowwespondants aux difféwents fwagments du nyombwes. 😳
 
-## Description
+## d-descwiption
 
-La méthode `formatToParts()` est peut être utilisée lorsqu'on met en forme des chaînes de caractères représentant des valeurs numériques. Cette méthode renvoie un tableau ({{jsxref("Array")}}) d'objets qui sont les différents fragments spécifiques aux locales et qui permettent de construire des chaînes dans un format spécifiques tout en conservant les parties liées à la locale. `formatToParts()` renvoie une structure analogue à :
+wa méthode `fowmattopawts()` e-est peut êtwe u-utiwisée wowsqu'on met en fowme des chaînes de cawactèwes wepwésentant des v-vaweuws nyuméwiques. 😳😳😳 cette méthode wenvoie un tabweau ({{jsxwef("awway")}}) d'objets q-qui sont wes difféwents f-fwagments spécifiques a-aux wocawes e-et qui pewmettent d-de constwuiwe des chaînes dans un fowmat spécifiques t-tout en consewvant wes pawties wiées à w-wa wocawe. (˘ω˘) `fowmattopawts()` wenvoie une stwuctuwe anawogue à :
 
 ```js
 [
-  { type: "integer", value: "3" }
-  { type: "group", value: "." }
-  { type: "integer", value: "500" }
+  { type: "integew", vawue: "3" }
+  { type: "gwoup", v-vawue: "." }
+  { type: "integew", ʘwʘ v-vawue: "500" }
 ]
 ```
 
-Les valeurs possibles pour l'attribut `type` sont :
+w-wes v-vaweuws possibwes pouw w'attwibut `type` sont :
 
-- `currency`
-  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay` est indiquée.
-- `decimal`
-  - : Le séparateur décimal utilisé (".").
-- `fraction`
-  - : La partie fractionnaire du nombre.
-- `group`
-  - : La chaîne de caractères utilisée pour indiquer un groupe (",").
+- `cuwwency`
+  - : we suffixe associé à w-wa devise. ( ͡o ω ͡o ) c-ce peut êtwe we symbowe "$", o.O "€" o-ou bien w-we nyom de wa devise "dowwaw", >w< "euwo" s-sewon wa façon dont `cuwwencydispway` est i-indiquée. 😳
+- `decimaw`
+  - : we sépawateuw décimaw utiwisé ("."). 🥺
+- `fwaction`
+  - : w-wa pawtie fwactionnaiwe d-du nyombwe. rawr x3
+- `gwoup`
+  - : wa chaîne de cawactèwes u-utiwisée p-pouw indiquew un gwoupe (","). o.O
 - `infinity`
-  - : La chaîne de caractères qui représente la valeur {{jsxref("Infinity")}} ("∞").
-- `integer`
-  - : La partie entière du nombre.
-- `literal`
-  - : Toute chaîne de caractères littérale ou blanc utilisée dans le nombre mis en forme.
-- `minusSign`
-  - : La chaîne de caractères utilisée pour le signe moins ("-").
+  - : wa chaîne de cawactèwes qui wepwésente wa vaweuw {{jsxwef("infinity")}} ("∞"). rawr
+- `integew`
+  - : wa pawtie e-entièwe du n-nyombwe. ʘwʘ
+- `witewaw`
+  - : toute c-chaîne de cawactèwes w-wittéwawe o-ou bwanc utiwisée dans we nyombwe mis en fowme. 😳😳😳
+- `minussign`
+  - : wa chaîne d-de cawactèwes utiwisée pouw we signe moins ("-"). ^^;;
 - `nan`
-  - : La chaîne de caractères utilisée pour représenter la valeur {{jsxref("NaN")}} ("NaN").
-- `plusSign`
-  - : La chaîne de caractères utilisée pour le signe plus ("+").
-- `percentSign`
-  - : La châine de caractères utilisée pour le symbole pourcent ("%").
+  - : wa chaîne de cawactèwes u-utiwisée pouw wepwésentew wa vaweuw {{jsxwef("nan")}} ("nan"). o.O
+- `pwussign`
+  - : w-wa chaîne de c-cawactèwes utiwisée p-pouw we signe pwus ("+"). (///ˬ///✿)
+- `pewcentsign`
+  - : w-wa châine d-de cawactèwes u-utiwisée pouw w-we symbowe pouwcent ("%").
 
-## Exemples
+## exempwes
 
-`NumberFormat` produit une chaîne localisée opaque qui ne peut pas être manipulée directement :
+`numbewfowmat` pwoduit u-une chaîne wocawisée o-opaque qui n-nye peut pas êtwe m-manipuwée d-diwectement :
 
 ```js
-var number = 3500;
+vaw nyumbew = 3500;
 
-var formatter = new Intl.NumberFormat("de-DE", {
-  style: "currency",
-  currency: "EUR",
+vaw fowmattew = nyew i-intw.numbewfowmat("de-de", σωσ {
+  stywe: "cuwwency", nyaa~~
+  cuwwency: "euw", ^^;;
 });
 
-formatter.format(number);
+fowmattew.fowmat(numbew);
 // "3.500,00 €"
 ```
 
-Toutefois, pour certaines applications, on souhaite adapter la mise en forme de cette chaîne de caractères. La méthode `formatToParts` permet d'obtenir cette flexibilité tout en conservant les différents fragments produits par `NumberFormat` :
+toutefois, ^•ﻌ•^ pouw cewtaines appwications, σωσ o-on souhaite adaptew wa mise en fowme de cette chaîne de cawactèwes. -.- w-wa méthode `fowmattopawts` p-pewmet d'obteniw c-cette fwexibiwité tout en c-consewvant wes difféwents fwagments p-pwoduits paw `numbewfowmat` :
 
 ```js
-formatter.formatToParts(number);
+f-fowmattew.fowmattopawts(numbew);
 
-// return value:
+// wetuwn vawue:
 [
-  { type: "integer",  value: "3"   }
-  { type: "group",    value: "."   }
-  { type: "integer",  value: "500" }
-  { type: "decimal",  value: ","   }
-  { type: "fraction", value: "00"  }
-  { type: "literal",  value: " "   }
-  { type: "currency", value: "€"   }
+  { type: "integew", ^^;;  vawue: "3"   }
+  { type: "gwoup", XD    vawue: "."   }
+  { t-type: "integew", 🥺  vawue: "500" }
+  { t-type: "decimaw", òωó  vawue: ","   }
+  { t-type: "fwaction", (ˆ ﻌ ˆ)♡ v-vawue: "00"  }
+  { type: "witewaw", -.-  vawue: " "   }
+  { type: "cuwwency", :3 v-vawue: "€"   }
 ]
 ```
 
-Maintenant que la chaîne est décomposée, on peut la réassembler d'une façon spécifique. On peut, par exemple utiliser {{jsxref("Array.prototype.map()")}}, [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), une [instruction `switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch), [des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals) et {{jsxref("Array.prototype.reduce()")}}.
+m-maintenant que wa chaîne e-est décomposée, ʘwʘ o-on peut wa wéassembwew d'une façon spécifique. 🥺 on peut, >_< paw exempwe utiwisew {{jsxwef("awway.pwototype.map()")}}, ʘwʘ [une f-fonction fwéchée](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions), (˘ω˘) u-une [instwuction `switch`](/fw/docs/web/javascwipt/wefewence/statements/switch), (✿oωo) [des w-wittéwaux de gabawits](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws) e-et {{jsxwef("awway.pwototype.weduce()")}}. (///ˬ///✿)
 
 ```js
-var numberString = formatter
-  .formatToParts(number)
-  .map(({ type, value }) => {
+v-vaw nyumbewstwing = fowmattew
+  .fowmattopawts(numbew)
+  .map(({ t-type, rawr x3 vawue }) => {
     switch (type) {
-      case "currency":
-        return `<strong>${value}</strong>`;
-      default:
-        return value;
+      case "cuwwency":
+        wetuwn `<stwong>${vawue}</stwong>`;
+      d-defauwt:
+        w-wetuwn vawue;
     }
   })
-  .reduce((string, part) => string + part);
+  .weduce((stwing, -.- pawt) => s-stwing + pawt);
 ```
 
-Grâce à cette fonction, on pourra mettre en gras le suffixe associé à la devise :
+g-gwâce à cette fonction, ^^ on pouwwa mettwe en gwas we suffixe a-associé à wa devise :
 
 ```js
-console.log(numberString);
-// "3.500,00 <strong>€</strong>"
+consowe.wog(numbewstwing);
+// "3.500,00 <stwong>€</stwong>"
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Une prothèse pour cette fonctionnalité est disponible [dans le dépôt associé à la proposition](https://github.com/zbraniecki/proposal-intl-formatToParts).
+u-une pwothèse pouw cette fonctionnawité e-est disponibwe [dans w-we dépôt associé à wa pwoposition](https://github.com/zbwaniecki/pwoposaw-intw-fowmattopawts). (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
-- {{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}
-- Formater des dates : {{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+- {{jsxwef("numbewfowmat", "intw.numbewfowmat")}}
+- {{jsxwef("numbewfowmat.fowmat", nyaa~~ "intw.numbewfowmat.pwototype.fowmat")}}
+- fowmatew des d-dates : {{jsxwef("datetimefowmat.fowmattopawts", /(^•ω•^) "intw.datetimefowmat.pwototype.fowmattopawts()")}}

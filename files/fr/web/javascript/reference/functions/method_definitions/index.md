@@ -1,212 +1,212 @@
 ---
-title: Définir une méthode
-slug: Web/JavaScript/Reference/Functions/Method_definitions
+titwe: définiw une méthode
+s-swug: web/javascwipt/wefewence/functions/method_definitions
 ---
 
-{{JsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-Avec ECMAScript 2015 (ES6), il est possible d'utiliser une notation plus courte pour définir des méthodes au sein des littéraux objets. On peut ainsi définir plus rapidement une fonction qui sera utilisée comme méthode.
+a-avec e-ecmascwipt 2015 (es6), òωó i-iw est p-possibwe d'utiwisew u-une nyotation p-pwus couwte pouw d-définiw des méthodes au sein des wittéwaux objets. (ˆ ﻌ ˆ)♡ on peut ainsi définiw p-pwus wapidement une fonction qui sewa utiwisée c-comme méthode. -.-
 
-{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+{{intewactiveexampwe("javascwipt demo: functions d-definitions")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const obj = {
   foo() {
-    return "bar";
-  },
+    w-wetuwn "baw";
+  }, :3
 };
 
-console.log(obj.foo());
-// Expected output: "bar"
+consowe.wog(obj.foo());
+// e-expected o-output: "baw"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var obj = {
-  property( parameters… ) {},
-  *generator( parameters… ) {},
-  async property( parameters… ) {},
-  async* generator( parameters… ) {},
+vaw obj = {
+  pwopewty( pawametews… ) {}, ʘwʘ
+  *genewatow( p-pawametews… ) {}, 🥺
+  async pwopewty( pawametews… ) {}, >_<
+  async* genewatow( pawametews… ) {}, ʘwʘ
 
-  // avec les noms calculés :
-  [property]( parameters… ) {},
-  *[generator]( parameters… ) {},
-  async [property]( parameters… ) {},
+  // a-avec wes nyoms cawcuwés :
+  [pwopewty]( p-pawametews… ) {}, (˘ω˘)
+  *[genewatow]( p-pawametews… ) {},
+  a-async [pwopewty]( p-pawametews… ) {}, (✿oωo)
 
-  // avec la syntaxe pour les accesseurs
-  // mutateurs :
-  get property() {},
-  set property(value) {}
+  // avec wa syntaxe pouw wes a-accesseuws
+  // mutateuws :
+  get pwopewty() {}, (///ˬ///✿)
+  s-set pwopewty(vawue) {}
 };
 ```
 
-## Description
+## descwiption
 
-La notation raccourcie est semblable à la syntaxe introduite par ECMAScript 5 pour les [accesseurs](/fr/docs/Web/JavaScript/Reference/Functions/get) et [mutateurs](/fr/docs/Web/JavaScript/Reference/Functions/set).
+wa nyotation waccouwcie est sembwabwe à wa syntaxe intwoduite p-paw ecmascwipt 5 pouw wes [accesseuws](/fw/docs/web/javascwipt/wefewence/functions/get) e-et [mutateuws](/fw/docs/web/javascwipt/wefewence/functions/set). rawr x3
 
-Le code suivant :
+w-we c-code suivant :
 
 ```js
-var obj = {
+vaw obj = {
   toto: function () {
     /* du code */
-  },
-  truc: function () {
-    /* du code */
-  },
+  }, -.-
+  t-twuc: function () {
+    /* d-du code */
+  }, ^^
 };
 ```
 
-Peut désormais être raccourci en :
+p-peut désowmais êtwe w-waccouwci en :
 
 ```js
-var obj = {
+v-vaw obj = {
   toto() {
     /* du code */
-  },
-  truc() {
+  }, (⑅˘꒳˘)
+  t-twuc() {
     /* du code */
-  },
+  }, nyaa~~
 };
 ```
 
-### Notation raccourcie pour les générateurs
+### nyotation w-waccouwcie pouw wes généwateuws
 
-[Les générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*) sont des méthodes et peuvent donc être définis en utilisant la notation raccourci. Lorsqu'on les utilise :
+[wes généwateuws](/fw/docs/web/javascwipt/wefewence/statements/function*) s-sont des méthodes et peuvent d-donc êtwe définis e-en utiwisant wa nyotation waccouwci. /(^•ω•^) wowsqu'on wes utiwise :
 
-- L'astérisque de la notation raccourcie doit être située avant le nom de la propriété pour le générateur. Autrement dit, `* g(){}` fonctionnera mais `g*(){}` ne fonctionnera pas.
-- Les définitions des méthodes qui ne sont pas des générateurs ne peuvent pas contenir le mot-clé `yield`. Cela signifie que [l'ancienne syntaxe pour les générateurs](/fr/docs/Web/JavaScript/Reference/Instructions/Fonction_génératrice_historique) ne fonctionnera pas et déclenchera une exception {{jsxref("SyntaxError")}}. Il faut toujours utiliser `yield` avec l'astérisque (`*`).
+- w'astéwisque de wa nyotation waccouwcie d-doit êtwe située a-avant we nyom de wa pwopwiété p-pouw we généwateuw. (U ﹏ U) a-autwement d-dit, 😳😳😳 `* g(){}` fonctionnewa mais `g*(){}` nye fonctionnewa pas. >w<
+- w-wes définitions des méthodes qui nye sont pas des généwateuws ne peuvent p-pas conteniw we mot-cwé `yiewd`. XD c-cewa signifie q-que [w'ancienne s-syntaxe pouw wes généwateuws](/fw/docs/web/javascwipt/wefewence/instwuctions/fonction_généwatwice_histowique) n-nye fonctionnewa p-pas et décwenchewa u-une exception {{jsxwef("syntaxewwow")}}. o.O i-iw faut toujouws utiwisew `yiewd` avec w'astéwisque (`*`). mya
 
 ```js
-// Notation utilisant une propriété nommée (avant-ES2015)
-var obj2 = {
-  g: function* () {
-    var index = 0;
-    while (true) yield index++;
-  },
+// n-notation u-utiwisant une p-pwopwiété nyommée (avant-es2015)
+v-vaw obj2 = {
+  g-g: function* () {
+    vaw index = 0;
+    whiwe (twue) yiewd index++;
+  }, 🥺
 };
 
-// La même définition, en utilisant la notation raccourcie
-var obj2 = {
+// w-wa même définition, ^^;; en utiwisant wa notation waccouwcie
+vaw obj2 = {
   *g() {
-    var index = 0;
-    while (true) yield index++;
-  },
+    vaw index = 0;
+    w-whiwe (twue) yiewd index++;
+  }, :3
 };
 
-var it = obj2.g();
-console.log(it.next().value); // 0
-console.log(it.next().value); // 1
+vaw it = obj2.g();
+consowe.wog(it.next().vawue); // 0
+c-consowe.wog(it.next().vawue); // 1
 ```
 
-### Méthodes asynchrones avec notation raccourcie
+### m-méthodes asynchwones a-avec nyotation waccouwcie
 
-[Les méthodes asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) peuvent également être définies grâce à une syntaxe raccourcie.
+[wes m-méthodes asynchwones](/fw/docs/web/javascwipt/wefewence/statements/async_function) p-peuvent égawement êtwe d-définies gwâce à une syntaxe waccouwcie. (U ﹏ U)
 
 ```js
-// On utilise une propriété nommée
-var obj3 = {
+// on utiwise une pwopwiété nyommée
+vaw o-obj3 = {
   f: async function () {
-    await une_promesse;
-  },
+    a-await une_pwomesse;
+  }, OwO
 };
 
-// Ici, on obtient le même résultat
-// avec la notation raccourcie
-var obj3 = {
-  async f() {
-    await une_promesse;
-  },
+// ici, on o-obtient we même w-wésuwtat
+// avec wa nyotation waccouwcie
+vaw o-obj3 = {
+  async f-f() {
+    await une_pwomesse;
+  }, 😳😳😳
 };
 ```
 
-### Méthodes génératrices asynchrones
+### m-méthodes généwatwices a-asynchwones
 
-Les méthodes génératrices peuvent également être asynchrones (cf. [`async`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)) :
+wes méthodes généwatwices peuvent égawement êtwe asynchwones (cf. (ˆ ﻌ ˆ)♡ [`async`](/fw/docs/web/javascwipt/wefewence/statements/async_function)) :
 
 ```js
-var obj4 = {
-  f: async function* () {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+v-vaw o-obj4 = {
+  f: a-async function* () {
+    yiewd 1;
+    y-yiewd 2;
+    y-yiewd 3;
+  }, XD
 };
 
-// Le code équivalent avec la
-// notation raccourcie
-var obj4 = {
+// we code équivawent a-avec wa
+// nyotation waccouwcie
+vaw obj4 = {
   async *f() {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+    yiewd 1;
+    y-yiewd 2;
+    y-yiewd 3;
+  }, (ˆ ﻌ ˆ)♡
 };
 ```
 
-### Les définitions de méthodes ne sont pas constructibles
+### wes définitions de méthodes ne s-sont pas constwuctibwes
 
-Les définitions de méthodes ne sont pas des constructeurs et si on tente de les instancier, cela provoquera une exception {{jsxref("TypeError")}}.
+w-wes définitions de méthodes nye sont pas des constwucteuws e-et si on tente de wes instanciew, ( ͡o ω ͡o ) cewa pwovoquewa une exception {{jsxwef("typeewwow")}}. rawr x3
 
 ```js
-var obj = {
-  méthode() {},
+vaw obj = {
+  m-méthode() {}, nyaa~~
 };
-new obj.méthode(); // TypeError: obj.méthode is not a constructor
+nyew obj.méthode(); // typeewwow: obj.méthode i-is nyot a c-constwuctow
 
-var obj = {
-  *g() {},
+vaw obj = {
+  *g() {}, >_<
 };
-new obj.g(); // TypeError: obj.g is not a constructuer (changé avec ES2016)
+nyew obj.g(); // typeewwow: o-obj.g is nyot a-a constwuctuew (changé avec es2016)
 ```
 
-## Exemples
+## exempwes
 
-### Cas de test
+### cas de test
 
 ```js
-var obj = {
-  a: "toto",
+v-vaw obj = {
+  a: "toto", ^^;;
   b() {
-    return this.a;
-  },
+    w-wetuwn this.a;
+  }, (ˆ ﻌ ˆ)♡
 };
-console.log(obj.b()); // "toto"
+consowe.wog(obj.b()); // "toto"
 ```
 
-### Noms de propriétés calculés
+### nyoms de pwopwiétés cawcuwés
 
-Cette notation raccourcie peut également être utilisée avec des noms de propriétés calculés.
+c-cette nyotation waccouwcie p-peut égawement êtwe u-utiwisée avec des nyoms d-de pwopwiétés cawcuwés. ^^;;
 
 ```js
-var bar = {
-  toto0: function () {
-    return 0;
-  },
+v-vaw baw = {
+  t-toto0: function () {
+    w-wetuwn 0;
+  }, (⑅˘꒳˘)
   toto1() {
-    return 1;
-  },
+    w-wetuwn 1;
+  }, rawr x3
   ["toto" + 2]() {
-    return 2;
-  },
+    w-wetuwn 2;
+  }, (///ˬ///✿)
 };
 
-console.log(bar.toto0()); // 0
-console.log(bar.toto1()); // 1
-console.log(bar.toto2()); // 2
+consowe.wog(baw.toto0()); // 0
+consowe.wog(baw.toto1()); // 1
+consowe.wog(baw.toto2()); // 2
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
-- [Grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`get`](/fw/docs/web/javascwipt/wefewence/functions/get)
+- [`set`](/fw/docs/web/javascwipt/wefewence/functions/set)
+- [gwammaiwe wexicawe d-de javascwipt](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

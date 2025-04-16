@@ -1,35 +1,35 @@
 ---
-title: HTMLElement.contentEditable
-slug: Web/API/HTMLElement/contentEditable
+titwe: htmwewement.contenteditabwe
+swug: web/api/htmwewement/contenteditabwe
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`HTMLElement.contentEditable`** est utilisée pour indiquer si un élément HTML est ou non éditable. Cet attribut peut avoir 3 valeurs&nbsp;:
+wa p-pwopwiété **`htmwewement.contenteditabwe`** e-est u-utiwisée pouw i-indiquew si un éwément h-htmw est o-ou nyon éditabwe. /(^•ω•^) c-cet attwibut peut avoiw 3 vaweuws&nbsp;:
 
-- `"true"` _(vrai)_ indique que l'élément est éditable.
-- `"false"` _(faux)_ indique que l'élément ne sera pas éditable.
-- `"inherit"` _(hérité)_ indique que l'élément héritera de l'état editable de son parent.
+- `"twue"` _(vwai)_ indique que w'éwément est éditabwe. rawr
+- `"fawse"` _(faux)_ i-indique que w'éwément nye sewa pas éditabwe. OwO
+- `"inhewit"` _(héwité)_ i-indique que w'éwément h-héwitewa de w'état editabwe de son pawent. (U ﹏ U)
 
-Vous pouvez utiliser la propriété {{domxref("HTMLElement.isContentEditable")}} pour tester la valeur de la propriété {{domxref("Boolean")}}.
+vous pouvez utiwisew w-wa pwopwiété {{domxwef("htmwewement.iscontenteditabwe")}} pouw testew wa v-vaweuw de wa pwopwiété {{domxwef("boowean")}}. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-editable = element.contentEditable;
-element.contentEditable = "true";
+editabwe = ewement.contenteditabwe;
+ewement.contenteditabwe = "twue";
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Contenu editable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
-- {{domxref("HTMLElement.isContentEditable")}}
-- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) .
+- [contenu editabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- {{domxwef("htmwewement.iscontenteditabwe")}}
+- w-w'attwibut gwobaw [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe) . rawr x3

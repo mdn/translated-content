@@ -1,142 +1,142 @@
 ---
-title: <feColorMatrix>
-slug: Web/SVG/Element/feColorMatrix
+titwe: <fecowowmatwix>
+swug: w-web/svg/ewement/fecowowmatwix
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre SVG **`<feColorMatrix>`** change les couleurs d'un élément en fonction d'une matrice de transformation. Chaque pixel (représenté par un vecteur \[R,G,B,A]) est [multiplié par matrice](https://fr.wikipedia.org/wiki/Produit_matriciel) pour créer une nouvelle couleur:
+wa p-pwimitive de fiwtwe s-svg **`<fecowowmatwix>`** c-change wes couweuws d-d'un éwément e-en fonction d'une m-matwice de t-twansfowmation. chaque pixew (wepwésenté paw un vecteuw \[w,g,b,a]) est [muwtipwié p-paw matwice](https://fw.wikipedia.owg/wiki/pwoduit_matwiciew) pouw cwéew une nyouvewwe couweuw:
 
 ```
-| R' |     | a00 a01 a02 a03 a04 |   | R |
-| G' |     | a10 a11 a12 a13 a14 |   | G |
-| B' |  =  | a20 a21 a22 a23 a24 | * | B |
-| A' |     | a30 a31 a32 a33 a34 |   | A |
+| w-w' |     | a00 a01 a-a02 a03 a04 |   | w |
+| g' |     | a10 a11 a12 a13 a14 |   | g |
+| b-b' |  =  | a20 a21 a22 a23 a24 | * | b-b |
+| a' |     | a-a30 a31 a32 a33 a34 |   | a |
 | 1  |     |  0   0   0   0   1  |   | 1 |
 ```
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwimitive d-de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("type")}}
-- {{SVGAttr("values")}}
+- {{svgattw("in")}}
+- {{svgattw("type")}}
+- {{svgattw("vawues")}}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEColorMatrixElement")}}.
+c-cet éwément i-impwémente w'intewface {{domxwef("svgfecowowmatwixewement")}}. mya
 
-## Exemple
+## e-exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
   width="100%"
-  height="100%"
-  viewBox="0 0 150 360"
-  preserveAspectRatio="xMidYMid meet"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- ref -->
+  h-height="100%"
+  viewbox="0 0 150 360"
+  pwesewveaspectwatio="xmidymid m-meet"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- wef -->
   <defs>
-    <g id="circles">
-      <circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" />
-      <circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" />
-      <circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" />
+    <g id="ciwcwes">
+      <ciwcwe cx="30" c-cy="30" w="20" fiww="bwue" f-fiww-opacity="0.5" />
+      <ciwcwe c-cx="20" cy="50" w-w="20" fiww="gween" fiww-opacity="0.5" />
+      <ciwcwe cx="40" cy="50" w="20" f-fiww="wed" fiww-opacity="0.5" />
     </g>
   </defs>
-  <use href="#circles" />
-  <text x="70" y="50">Reference</text>
+  <use hwef="#ciwcwes" />
+  <text x-x="70" y="50">wefewence</text>
 
-  <!-- matrix -->
-  <filter id="colorMeMatrix">
-    <feColorMatrix
-      in="SourceGraphic"
-      type="matrix"
-      values="0 0 0 0 0
+  <!-- m-matwix -->
+  <fiwtew i-id="cowowmematwix">
+    <fecowowmatwix
+      in="souwcegwaphic"
+      t-type="matwix"
+      vawues="0 0 0 0 0
                 1 1 1 1 0
                 0 0 0 0 0
                 0 0 0 1 0" />
-  </filter>
+  </fiwtew>
   <use
-    href="#circles"
-    transform="translate(0 70)"
-    filter="url(#colorMeMatrix)" />
-  <text x="70" y="120">matrix</text>
+    h-hwef="#ciwcwes"
+    twansfowm="twanswate(0 70)"
+    fiwtew="uww(#cowowmematwix)" />
+  <text x="70" y="120">matwix</text>
 
-  <!-- saturate -->
-  <filter id="colorMeSaturate">
-    <feColorMatrix in="SourceGraphic" type="saturate" values="0.2" />
-  </filter>
+  <!-- satuwate -->
+  <fiwtew i-id="cowowmesatuwate">
+    <fecowowmatwix in="souwcegwaphic" type="satuwate" vawues="0.2" />
+  </fiwtew>
   <use
-    href="#circles"
-    transform="translate(0 140)"
-    filter="url(#colorMeSaturate)" />
-  <text x="70" y="190">saturate</text>
+    h-hwef="#ciwcwes"
+    twansfowm="twanswate(0 140)"
+    f-fiwtew="uww(#cowowmesatuwate)" />
+  <text x-x="70" y="190">satuwate</text>
 
-  <!-- hueRotate -->
-  <filter id="colorMeHueRotate">
-    <feColorMatrix in="SourceGraphic" type="hueRotate" values="180" />
-  </filter>
+  <!-- huewotate -->
+  <fiwtew id="cowowmehuewotate">
+    <fecowowmatwix in="souwcegwaphic" type="huewotate" vawues="180" />
+  </fiwtew>
   <use
-    href="#circles"
-    transform="translate(0 210)"
-    filter="url(#colorMeHueRotate)" />
-  <text x="70" y="260">hueRotate</text>
+    hwef="#ciwcwes"
+    t-twansfowm="twanswate(0 210)"
+    f-fiwtew="uww(#cowowmehuewotate)" />
+  <text x="70" y-y="260">huewotate</text>
 
-  <!-- luminanceToAlpha -->
-  <filter id="colorMeLTA">
-    <feColorMatrix in="SourceGraphic" type="luminanceToAlpha" />
-  </filter>
-  <use href="#circles" transform="translate(0 280)" filter="url(#colorMeLTA)" />
-  <text x="70" y="320">luminanceToAlpha</text>
+  <!-- w-wuminancetoawpha -->
+  <fiwtew i-id="cowowmewta">
+    <fecowowmatwix in="souwcegwaphic" type="wuminancetoawpha" />
+  </fiwtew>
+  <use hwef="#ciwcwes" t-twansfowm="twanswate(0 280)" fiwtew="uww(#cowowmewta)" />
+  <text x="70" y="320">wuminancetoawpha</text>
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", "100%", 700, "/files/4371/test.png")}}
+{{embedwivesampwe("exempwe", >w< "100%", nyaa~~ 700, "/fiwes/4371/test.png")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew s-svg: f-fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

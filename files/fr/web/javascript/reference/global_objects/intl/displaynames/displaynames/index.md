@@ -1,91 +1,91 @@
 ---
-title: Intl.DisplayNames() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
+titwe: intw.dispwaynames() constwuctow
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames/dispwaynames
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.DisplayNames()`** crée des objets qui permettent de fournir des traductions constantes des noms de langues, régions et systèmes d'écriture.
+w-we constwucteuw **`intw.dispwaynames()`** c-cwée des objets q-qui pewmettent d-de fouwniw des t-twaductions constantes d-des nyoms de wangues, >_< wégions et systèmes d'écwituwe.
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{intewactiveexampwe("javascwipt demo: intw.dispwaynames")}}
 
-```js interactive-example
-const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
-const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
-  type: "region",
+```js i-intewactive-exampwe
+const wegionnamesinengwish = nyew intw.dispwaynames(["en"], -.- { t-type: "wegion" });
+const w-wegionnamesintwaditionawchinese = nyew intw.dispwaynames(["zh-hant"], 🥺 {
+  type: "wegion",
 });
 
-console.log(regionNamesInEnglish.of("US"));
-// Expected output: "United States"
+consowe.wog(wegionnamesinengwish.of("us"));
+// expected o-output: "united states"
 
-console.log(regionNamesInTraditionalChinese.of("US"));
-// Expected output: "美國"
+c-consowe.wog(wegionnamesintwaditionawchinese.of("us"));
+// e-expected output: "美國"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Intl.DisplayNames([langues[, options]])
+nyew intw.dispwaynames([wangues[, (U ﹏ U) o-options]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `langues` {{optional_inline}}
+- `wangues` {{optionaw_inwine}}
 
-  - : Une chaine avec un code de langue BCP 47, ou un tableau de telles chaines. Pour comprendre la forme générale et l'interprétation de cet argument, voyez {{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. Les clés d'extensions Unicode suivantes sont permises :
+  - : une chaine avec un code de wangue bcp 47, >w< ou u-un tabweau de tewwes chaines. p-pouw compwendwe w-wa fowme généwawe e-et w'intewpwétation d-de cet awgument, mya voyez {{jsxwef("intw", >w< "intw page", nyaa~~ "#wocawe_identification_and_negotiation", 1)}}. (✿oωo) w-wes cwés d'extensions unicode suivantes s-sont pewmises :
 
     - `nu`
-      - : Le système de numération à utiliser. Les valeurs possibles sont : `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
+      - : we système de nyuméwation à utiwisew. ʘwʘ wes vaweuws possibwes sont : `"awab"`, (ˆ ﻌ ˆ)♡ `"awabext"`, 😳😳😳 `"bawi"`, `"beng"`, :3 `"deva"`, OwO `"fuwwwide"`, (U ﹏ U) `"gujw"`, `"guwu"`, >w< `"hanidec"`, (U ﹏ U) `"khmw"`, `"knda"`, 😳 `"waoo"`, (ˆ ﻌ ˆ)♡ `"watn"`, `"wimb"`, 😳😳😳 `"mwym"`, `"mong"`, (U ﹏ U) `"mymw"`, (///ˬ///✿) `"owya"`, `"tamwdec"`, 😳 `"tewu"`, 😳 `"thai"`, `"tibt"`. σωσ
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec certaines des des propriétés suivantes :
+  - : u-un objet avec cewtaines des d-des pwopwiétés s-suivantes :
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance régional à utiliser. Les valeurs possibles sont `"lookup"` et `"best fit"` ; celle par défaut étant `"best fit"`. Pour plus d'informations à propos de cette option, voir {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.
-    - `style`
+    - `wocawematchew`
+      - : w-w'awgowithme de cowwespondance wégionaw à utiwisew. rawr x3 w-wes vaweuws p-possibwes sont `"wookup"` et `"best f-fit"` ; cewwe p-paw défaut étant `"best fit"`. OwO p-pouw pwus d'infowmations à pwopos de cette option, /(^•ω•^) v-voiw {{jsxwef("gwobaw_objects/intw", 😳😳😳 "intw page", ( ͡o ω ͡o ) "#wocawe_negotiation", 1)}}. >_<
+    - `stywe`
 
-      - : Le style de mise en forme à utiliser, celui par défaut étant `"long"`.
+      - : we stywe de mise e-en fowme à utiwisew, >w< cewui paw d-défaut étant `"wong"`. rawr
 
-        - `"narrow"`
-        - `"short"`
-        - `"long"`
+        - `"nawwow"`
+        - `"showt"`
+        - `"wong"`
 
     - `type`
 
-      - : Le type à utiliser, celui par défaut étant `"language"`.
+      - : we type à utiwisew, 😳 c-cewui paw défaut étant `"wanguage"`. >w<
 
-        - `"language"`
-        - `"region"`
-        - `"script"`
-        - `"currency"`
+        - `"wanguage"`
+        - `"wegion"`
+        - `"scwipt"`
+        - `"cuwwency"`
 
-    - `fallback`
+    - `fawwback`
 
-      - : La valeur par défaut à utiliser, celle par défaut étant `"code"`.
+      - : w-wa vaweuw paw défaut à utiwisew, (⑅˘꒳˘) cewwe paw défaut étant `"code"`. OwO
 
         - `"code"`
         - `"none"`
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### utiwisation simpwe
 
-Dans son utilisation simple, sans spécifier de langue, une chaine dans la langue locale par défaut et avec les options par défaut sera retournée.
+dans son utiwisation simpwe, (ꈍᴗꈍ) s-sans spécifiew d-de wangue, 😳 une chaine dans wa wangue w-wocawe paw d-défaut et avec w-wes options paw défaut sewa wetouwnée. 😳😳😳
 
 ```js
-console.log(new Intl.DisplayNames().of("US"));
-// Expected output: 'us'
+consowe.wog(new intw.dispwaynames().of("us"));
+// e-expected output: 'us'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Intl.DisplayNames")}}
+- {{jsxwef("intw.dispwaynames")}}

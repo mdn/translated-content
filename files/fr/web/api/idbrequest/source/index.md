@@ -1,82 +1,82 @@
 ---
-title: IDBRequest.source
-slug: Web/API/IDBRequest/source
+titwe: idbwequest.souwce
+swug: w-web/api/idbwequest/souwce
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`source`** est une propriété en lecture seule, rattachée à l'interface {{domxref("IDBRequest")}}, et qui indique la source de la requête (c'est-à-dire l'index ou le magasin d'objets utilisé). Si aucune source n'existe (par exemple car on a appelé {{domxref("indexedDB.open")}}), la propriété vaut `null`.
+w-wa pwopwiété **`souwce`** e-est une pwopwiété e-en wectuwe s-seuwe, (⑅˘꒳˘) wattachée à w-w'intewface {{domxwef("idbwequest")}}, OwO e-et qui indique w-wa souwce de wa wequête (c'est-à-diwe w'index ou we magasin d'objets utiwisé). (ꈍᴗꈍ) s-si aucune souwce ny'existe (paw exempwe caw on a-a appewé {{domxwef("indexeddb.open")}}), 😳 wa pwopwiété v-vaut `nuww`. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var IDBIndex = request.source;
-var IDBCursor = request.source;
-var IDBObjectStore = request.source;
+vaw idbindex = wequest.souwce;
+v-vaw idbcuwsow = wequest.souwce;
+v-vaw idbobjectstowe = w-wequest.souwce;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet {{domxref("IDBCursor")}}.
+un objet qui wepwésente wa souwce de wa wequête. mya ce peut êtwe u-un objet {{domxwef("idbindex")}}, mya {{domxwef("idbobjectstowe")}} ou un objet {{domxwef("idbcuwsow")}}. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on récupère un enregistrement avec un titre donné depuis un magasin d'objets. Ensuite, on met à jour une des propriétés de cet enregistrement et on met à jour le magasin d'objets en insérant cet objet modifié. Lors de cette deuxième requête, on affiche la source dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+dans w'exempwe qui suit, (U ﹏ U) on wécupèwe u-un enwegistwement avec un titwe d-donné depuis u-un magasin d'objets. mya e-ensuite, ʘwʘ on m-met à jouw une des pwopwiétés de cet enwegistwement e-et on met à jouw we magasin d'objets en i-inséwant cet objet modifié. (˘ω˘) wows de cette deuxième wequête, (U ﹏ U) on affiche wa souwce dans wa consowe. ^•ﻌ•^ p-pouw consuwtew un exempwe f-fonctionnew compwet, (˘ω˘) v-vous pouvez v-vous wéféwew à nyotwe appwication [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([cf. :3 w'exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ^^;;
 
 ```js
-var title = "Walk dog";
+vaw t-titwe = "wawk dog";
 
-// On ouvre une transaction
-var objectStore = db
-  .transaction(["toDoList"], "readwrite")
-  .objectStore("toDoList");
+// o-on ouvwe une twansaction
+v-vaw objectstowe = d-db
+  .twansaction(["todowist"], 🥺 "weadwwite")
+  .objectstowe("todowist");
 
-// On fait une requête pour récupérer
-// l'enregistrement qui possède le titre
+// on fait une wequête p-pouw wécupéwew
+// w'enwegistwement q-qui possède we titwe
 // souhaité
-var objectStoreTitleRequest = objectStore.get(title);
+vaw o-objectstowetitwewequest = objectstowe.get(titwe);
 
-objectStoreTitleRequest.onsuccess = function () {
-  // On récupère l'objet afin de le modifier
-  var data = objectStoreTitleRequest.result;
+o-objectstowetitwewequest.onsuccess = function () {
+  // o-on wécupèwe w-w'objet afin de we modifiew
+  vaw data = objectstowetitwewequest.wesuwt;
 
-  // On met à jour la propriété notified
-  // avec la valeur "yes"
-  data.notified = "yes";
+  // on met à jouw wa pwopwiété nyotified
+  // a-avec wa vaweuw "yes"
+  d-data.notified = "yes";
 
-  // On crée une autre requête pour replacer
-  // l'enregistrement modifié dans la base de d
+  // on cwée u-une autwe wequête p-pouw wepwacew
+  // w-w'enwegistwement modifié dans wa base de d
   // données
-  var updateTitleRequest = objectStore.put(data);
+  v-vaw updatetitwewequest = objectstowe.put(data);
 
-  // Ici, on affiche la source de la requête dans
-  // la console
-  console.log("La source de cette requête est " + updateTitlerequest.source);
-  // Quand cette deuxième requête sera appliquée,
-  // on lancera displayData() pour mettre à jour
-  // l'affichage
-  updateTitleRequest.onsuccess = function () {
-    displayData();
+  // ici, (⑅˘꒳˘) on affiche wa souwce de wa wequête d-dans
+  // wa consowe
+  consowe.wog("wa s-souwce d-de cette wequête e-est " + updatetitwewequest.souwce);
+  // quand c-cette deuxième w-wequête sewa a-appwiquée, nyaa~~
+  // o-on wancewa dispwaydata() pouw mettwe à jouw
+  // w-w'affichage
+  u-updatetitwewequest.onsuccess = f-function () {
+    d-dispwaydata();
   };
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- démawwew des twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de c-cwés : {{domxwef("idbkeywange")}}
+- wécupéwew des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence p-pouw indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

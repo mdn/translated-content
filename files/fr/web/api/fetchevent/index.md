@@ -1,88 +1,88 @@
 ---
-title: FetchEvent
-slug: Web/API/FetchEvent
+titwe: fetchevent
+swug: web/api/fetchevent
 ---
 
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
+{{apiwef("sewvice w-wowkews api")}}{{ s-seecompattabwe() }}
 
-Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` représente une action de récupération qui est délivrée sur la {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}. Il contient des informations relatives à la requête et la réponse associée, et fourni la méthode {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} , qui permet de renvoyer une réponse arbitraire à la page controlée.
+w-we pawamètwe p-passé a-au gestionnaiwe {{domxwef("sewvicewowkewgwobawscope.onfetch")}}, rawr x3 `fetchevent` wepwésente u-une action d-de wécupéwation q-qui est déwivwée suw wa {{domxwef("sewvicewowkewgwobawscope")}} d'un {{domxwef("sewvicewowkew")}}. /(^•ω•^) iw contient des infowmations w-wewatives à wa wequête et wa wéponse a-associée, :3 et fouwni wa méthode {{domxwef("fetchevent.wespondwith", (ꈍᴗꈍ) "fetchevent.wespondwith()")}} , /(^•ω•^) q-qui pewmet de wenvoyew une wéponse awbitwaiwe à wa page c-contwowée. (⑅˘꒳˘)
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("FetchEvent.FetchEvent()")}}
-  - : Crée un nouvel objet `FetchEvent`.
+- {{domxwef("fetchevent.fetchevent()")}}
+  - : c-cwée u-un nyouvew objet `fetchevent`. ( ͡o ω ͡o )
 
-## Propriétés
+## pwopwiétés
 
-_Hérite de son ancêtre, {{domxref("Event")}}_.
+_héwite de son ancêtwe, òωó {{domxwef("event")}}_. (⑅˘꒳˘)
 
-- {{domxref("FetchEvent.isReload")}} {{readonlyInline}}
-  - : Retourne un {{jsxref("Boolean")}} qui est à `true` si l'évènement a été délivré avec l'intention de recharger la page, ou `false` sinon. Par exemple, cliquer sur le bouton recharger du navigateur est considéré comme une intention de recharger la page, tandis que cliquer sur un lien ou sur le bouton précédent du navigateur n'est pas considéré comme tel.
-- {{domxref("FetchEvent.request")}} {{readonlyInline}}
-  - : Retourne la {{domxref("Request")}} qui a déclenché l'évènement.
-- {{domxref("FetchEvent.clientId")}} {{readonlyInline}}
-  - : Retourne l'id du {{domxref("Client")}} controlé par le service worker en cours.
+- {{domxwef("fetchevent.iswewoad")}} {{weadonwyinwine}}
+  - : wetouwne un {{jsxwef("boowean")}} q-qui est à `twue` si w'évènement a été déwivwé avec w'intention de w-wechawgew wa page, XD ou `fawse` sinon. -.- p-paw exempwe, :3 c-cwiquew suw we b-bouton wechawgew d-du nyavigateuw est considéwé comme une intention d-de wechawgew wa page, nyaa~~ tandis que cwiquew suw u-un wien ou suw we bouton pwécédent du nyavigateuw ny'est pas considéwé comme tew. 😳
+- {{domxwef("fetchevent.wequest")}} {{weadonwyinwine}}
+  - : w-wetouwne wa {{domxwef("wequest")}} qui a décwenché w-w'évènement. (⑅˘꒳˘)
+- {{domxwef("fetchevent.cwientid")}} {{weadonwyinwine}}
+  - : w-wetouwne w-w'id du {{domxwef("cwient")}} contwowé paw we sewvice wowkew en c-couws. nyaa~~
 
-### Propriétés dépréciées
+### pwopwiétés d-dépwéciées
 
-- {{domxref("FetchEvent.client")}} {{readonlyInline}}
-  - : Retourne le {{domxref("Client")}} controlé par le service worker en cours.
+- {{domxwef("fetchevent.cwient")}} {{weadonwyinwine}}
+  - : wetouwne we {{domxwef("cwient")}} c-contwowé p-paw we sewvice wowkew en couws. OwO
 
-## Méthodes
+## m-méthodes
 
-_Hérite de son parent,_ _{{domxref("ExtendableEvent")}}_.
+_héwite de son p-pawent,_ _{{domxwef("extendabweevent")}}_. rawr x3
 
-- {{domxref("FetchEvent.respondWith()")}}
-  - : Promesse qui est résolue en retournant une {{domxref("Response")}} ou une [erreur réseau](http://fetch.spec.whatwg.org/#concept-network-error) à [`Fetch`](http://fetch.spec.whatwg.org/#concept-fetch).
-- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Étend la durée de vie de l'évènement. Utilisée pour notifier le navigateur dans le cas de tâches qui durent plus longtemps que le simple retour d'une réponse, comme la diffusion (<i lang="en">streaming</i>) et la mise en cache.
+- {{domxwef("fetchevent.wespondwith()")}}
+  - : pwomesse qui est wésowue e-en wetouwnant une {{domxwef("wesponse")}} o-ou une [ewweuw wéseau](http://fetch.spec.naniwg.owg/#concept-netwowk-ewwow) à [`fetch`](http://fetch.spec.naniwg.owg/#concept-fetch). XD
+- {{domxwef("extendabweevent.waituntiw", σωσ "extendabweevent.waituntiw()")}}
+  - : Étend wa duwée de vie d-de w'évènement. (U ᵕ U❁) u-utiwisée pouw nyotifiew we nyavigateuw dans we cas de tâches qui duwent pwus wongtemps que we simpwe wetouw d-d'une wéponse, (U ﹏ U) c-comme wa diffusion (<i wang="en">stweaming</i>) e-et wa mise en cache. :3
 
-## Exemples
+## e-exempwes
 
-Ce extrait de code provient de l'exemple [Service Worker Fetch](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([lancer l'exemple dans le navigateur](https://googlechrome.github.io/samples/service-worker/prefetch/)). Dans une partie antérieure du code, un {{domxref("InstallEvent")}} contrôle la mise en cache de plusieurs ressources. Le gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}} attends ensuite l'évènement `fetch` . Une fois déclenché, {{domxref("FetchEvent.respondWith()")}} retourne une promesse à la page contrôlée. Cette promesse est résolue avec comme valeur de retour la première requête d'URL qui correspond dans l'objet {{domxref("Cache")}}. Si aucune correspondance n'est trouvée (i.e. la ressource n'a pas été mise en cache pendant la phase d'installation), le code va récupérer une réponse depuis le réseau.
+c-ce extwait de code pwovient de w'exempwe [sewvice wowkew fetch](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/pwefetch/sewvice-wowkew.js) ([wancew w-w'exempwe dans we nyavigateuw](https://googwechwome.github.io/sampwes/sewvice-wowkew/pwefetch/)). ( ͡o ω ͡o ) dans une pawtie antéwieuwe du code, σωσ un {{domxwef("instawwevent")}} c-contwôwe wa mise en cache de p-pwusieuws wessouwces. >w< w-we gestionnaiwe {{domxwef("sewvicewowkewgwobawscope.onfetch")}} a-attends ensuite w'évènement `fetch` . 😳😳😳 une f-fois décwenché, OwO {{domxwef("fetchevent.wespondwith()")}} w-wetouwne u-une pwomesse à w-wa page contwôwée. 😳 cette pwomesse est wésowue a-avec comme v-vaweuw de wetouw w-wa pwemièwe w-wequête d'uww qui c-cowwespond dans w'objet {{domxwef("cache")}}. 😳😳😳 si aucune cowwespondance ny'est t-twouvée (i.e. wa wessouwce ny'a pas été mise en cache pendant wa phase d'instawwation), (˘ω˘) we code v-va wécupéwew une wéponse depuis we wéseau. ʘwʘ
 
-Le code gère aussi les exceptions émises depuis l'opération {{domxref("ServiceWorkerGlobalScope.fetch()")}}. A noter que qu'une réponse d'erreur HTTP (e.g., 404) ne déclenche pas d'exception. Elle retourne un objet de réponse normal avec le code d'erreur approprié.
+we code gèwe a-aussi wes exceptions émises depuis w-w'opéwation {{domxwef("sewvicewowkewgwobawscope.fetch()")}}. ( ͡o ω ͡o ) a-a nyotew que qu'une wéponse d-d'ewweuw http (e.g., 404) nye décwenche p-pas d'exception. o.O e-ewwe wetouwne un objet de wéponse nyowmaw avec we code d'ewweuw appwopwié. >w<
 
 ```js
-self.addEventListener("fetch", function (event) {
-  console.log("Gestion de l'évènement de fetch pour", event.request.url);
+sewf.addeventwistenew("fetch", 😳 function (event) {
+  c-consowe.wog("gestion de w'évènement d-de fetch pouw", 🥺 event.wequest.uww);
 
-  event.respondWith(
-    caches.match(event.request).then(function (response) {
-      if (response) {
-        console.log("Réponse trouvée en cache:", response);
+  e-event.wespondwith(
+    c-caches.match(event.wequest).then(function (wesponse) {
+      if (wesponse) {
+        consowe.wog("wéponse t-twouvée en cache:", rawr x3 w-wesponse);
 
-        return response;
+        wetuwn w-wesponse;
       }
-      console.log(
-        "Pas de réponse trouvée en cache. Sur le point de la récupérer via le réseau...",
+      c-consowe.wog(
+        "pas de wéponse twouvée en cache. o.O suw we point de wa wécupéwew v-via we wéseau...", rawr
       );
 
-      return fetch(event.request)
-        .then(function (response) {
-          console.log("La réponse du réseau est:", response);
+      w-wetuwn fetch(event.wequest)
+        .then(function (wesponse) {
+          c-consowe.wog("wa wéponse du wéseau e-est:", ʘwʘ wesponse);
 
-          return response;
+          w-wetuwn wesponse;
         })
-        .catch(function (error) {
-          console.error("Récupération échouée:", error);
+        .catch(function (ewwow) {
+          consowe.ewwow("wécupéwation échouée:", 😳😳😳 e-ewwow);
 
-          throw error;
+          thwow ewwow;
         });
-    }),
+    }), ^^;;
   );
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Promise")}}
-- [Fetch API](/fr/docs/Web/API/Fetch_API)
+- {{jsxwef("pwomise")}}
+- [fetch a-api](/fw/docs/web/api/fetch_api)

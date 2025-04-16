@@ -1,64 +1,64 @@
 ---
-title: Date.prototype.getMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+titwe: date.pwototype.getmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getMonth()`** retourne le mois de la date renseignée d'après l'heure locale. La numérotation démarre à 0 (c'est-à-dire que 0 correspond au premier mois de l'année).
+w-wa méthode **`getmonth()`** w-wetouwne w-we mois de w-wa date wenseignée d-d'apwès w'heuwe w-wocawe. (///ˬ///✿) wa n-nyuméwotation d-démawwe à 0 (c'est-à-diwe que 0 cowwespond au pwemiew mois de w'année). >w<
 
-{{InteractiveExample("JavaScript Demo: Date.getMonth()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getmonth()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js intewactive-exampwe
+const moonwanding = n-nyew date("juwy 20, rawr 69 00:20:18");
 
-console.log(moonLanding.getMonth()); // (January gives 0)
-// Expected output: 6
+consowe.wog(moonwanding.getmonth()); // (januawy g-gives 0)
+// expected output: 6
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getMonth();
+d-dateobj.getmonth();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier entre 0 et 11 selon le mois de la date indiquée et d'après l'heure locale (0 correspond à janvier, 1 à février, et ainsi de suite).
+u-un entiew entwe 0 e-et 11 sewon we mois de wa date indiquée et d'apwès w'heuwe wocawe (0 cowwespond à j-janview, mya 1 à févwiew, ^^ et ainsi de suite). 😳😳😳
 
-## Exemples
+## exempwes
 
-### Utiliser `getMonth()`
+### utiwisew `getmonth()`
 
-La seconde instruction ci-dessous assigne la valeur 11 à la variable `mois`, d'après la valeur de l'objet {{jsxref("Date")}} `noel95`.
+w-wa seconde instwuction c-ci-dessous assigne w-wa vaweuw 11 à w-wa vawiabwe `mois`, mya d-d'apwès wa vaweuw de w'objet {{jsxwef("date")}} `noew95`. 😳
 
 ```js
-var noel95 = new Date("December 25, 1995 23:15:00");
-var mois = noel95.getMonth();
+v-vaw noew95 = nyew date("decembew 25, -.- 1995 23:15:00");
+vaw mois = nyoew95.getmonth();
 
-console.log(mois); //11
+c-consowe.wog(mois); //11
 ```
 
-> [!NOTE]
-> Si besoin, on pourra récupérer le nom complet du mois (`"Janvier"` par exemple) en utilisant [`Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) avec un paramètre `options`. En utilisant cette méthode, il est plus simple d'internationaliser le site ou l'application :
+> [!note]
+> si besoin, 🥺 on pouwwa wécupéwew we nyom compwet du mois (`"janview"` p-paw exempwe) en utiwisant [`intw.datetimefowmat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat) a-avec u-un pawamètwe `options`. o.O e-en utiwisant cette méthode, /(^•ω•^) iw est pwus simpwe d'intewnationawisew w-we s-site ou w'appwication :
 >
 > ```js
-> var options = { month: "long" };
-> console.log(new Intl.DateTimeFormat("en-US", options).format(noel95));
-> // December
-> console.log(new Intl.DateTimeFormat("de-DE", options).format(noel95));
-> // Dezember
+> vaw options = { m-month: "wong" };
+> c-consowe.wog(new intw.datetimefowmat("en-us", nyaa~~ o-options).fowmat(noew95));
+> // decembew
+> consowe.wog(new intw.datetimefowmat("de-de", nyaa~~ o-options).fowmat(noew95));
+> // dezembew
 > ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

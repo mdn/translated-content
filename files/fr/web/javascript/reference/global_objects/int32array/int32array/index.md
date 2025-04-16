@@ -1,93 +1,93 @@
 ---
-title: Constructeur Int32Array()
-slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
+titwe: constwucteuw int32awway()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/int32awway/int32awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Int32Array()`** permet de créer un nouveau tableau typé [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) dont les éléments sont des nombres entiers signés en complément à deux, représentés sur 32 bits et utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
+w-we **constwucteuw `int32awway()`** p-pewmet d-de cwéew un nouveau t-tabweau typé [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway) d-dont wes éwéments s-sont des nyombwes e-entiews signés en compwément à deux, 😳 wepwésentés suw 32 bits et utiwisant w-we boutisme de wa pwatefowme. 😳😳😳 s'iw est nyécessaiwe d-de contwôwew w'owdwe d-des octets, (˘ω˘) on utiwisewa un objet [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) à wa pwace. ʘwʘ wows de wa c-constwuction, ( ͡o ω ͡o ) wes éwéments du t-tabweau sont initiawisés a-avec wa vaweuw `0`. o.O une fois we tabweau constwuit, >w< on peut faiwe wéféwence a-aux éwéments du tabweau à w'aide des méthodes de w'objet ou en utiwisant w-wa nyotation avec wes cwochets e-et w'indice v-vouwu. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Int32Array(); // apparu avec ES2017
-new Int32Array(longueur);
-new Int32Array(tableauType);
-new Int32Array(object);
-new Int32Array(buffer);
-new Int32Array(buffer, decalageOctets);
-new Int32Array(buffer, decalageOctets, longueur);
+n-nyew i-int32awway(); // appawu avec es2017
+nyew int32awway(wongueuw);
+nyew i-int32awway(tabweautype);
+nyew int32awway(object);
+n-new int32awway(buffew);
+nyew int32awway(buffew, 🥺 decawageoctets);
+new int32awway(buffew, rawr x3 decawageoctets, o.O w-wongueuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `longueur`
-  - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non** [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int16Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+- `wongueuw`
+  - : w-wowsque we constwucteuw e-est appewé a-avec un awgument `wongueuw`, rawr un tabweau intewne de tampon de mémoiwe est c-cwéé avec une t-taiwwe en octets de `wongueuw` _muwtipwiée p-paw `bytes_pew_ewement`_ e-et dont wes éwéments sont d-des zéwos. ʘwʘ
+- `tabweautype`
+  - : wowsque we constwucteuw e-est appewé avec un awgument `tabweautype`, 😳😳😳 qui peut êtwe u-un tabweau typé de ny'impowte q-quew type **non** [`bigint`](/fw/docs/gwossawy/bigint) (comme `int16awway`), ^^;; `tabweautype` est copié dans u-un nyouveau tabweau t-typé et chaque vaweuw de `tabweautype` est convewtie dans we type cowwespondant au constwucteuw avant d'êtwe c-copiée dans w-we nyouveau tabweau. o.O wa wongueuw d-du nyouveau tabweau t-typé est égawe à c-cewwe de w'awgument `tabweautype`. (///ˬ///✿)
 - `object`
-  - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`, `longueur`
-  - : Lorsqu'il est appelé avec un argument `buffer`, et éventuellement des arguments `decalageOctets` et `longueur`, le constructeur crée une nouvelle vue sous la forme d'un tableau typé qui porte sur l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) donné par le paramètre `buffer`. Les paramètres `decalageOctets` et `longueur` indiquent l'intervalle de mémoire exposé à la vue formée par le tableau typé. Si ces deux derniers paramètres sont absents, c'est l'ensemble de `buffer` qui sera vu&nbsp;; si seul `longueur` est absent, c'est tout `buffer` qui sera vu à partir de `decalageOctets`.
+  - : wowsque we constwucteuw e-est appewé avec un awgument objet quewconque, σωσ un nyouveau tabweau typé est c-cwéé, de wa même façon qu'avec u-un appew à w-wa méthode `typedawway.fwom()`. nyaa~~
+- `buffew`, ^^;; `decawageoctets`, ^•ﻌ•^ `wongueuw`
+  - : w-wowsqu'iw est appewé avec un awgument `buffew`, σωσ e-et éventuewwement d-des awguments `decawageoctets` e-et `wongueuw`, -.- w-we constwucteuw cwée une nyouvewwe vue sous w-wa fowme d'un tabweau t-typé qui p-powte suw w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) d-donné paw we pawamètwe `buffew`. ^^;; w-wes pawamètwes `decawageoctets` et `wongueuw` indiquent w'intewvawwe de mémoiwe e-exposé à wa vue fowmée paw we tabweau typé. XD si ces deux dewniews pawamètwes sont absents, 🥺 c-c'est w'ensembwe de `buffew` qui sewa vu&nbsp;; si seuw `wongueuw` e-est absent, òωó c-c'est tout `buffew` q-qui sewa vu à pawtiw de `decawageoctets`. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Plusieurs façons de créer un objet `Int32Array`
+### pwusieuws façons d-de cwéew u-un objet `int32awway`
 
 ```js
-// À partir d'une longueur
-const int32 = new Int32Array(2);
+// À pawtiw d'une wongueuw
+const int32 = nyew int32awway(2);
 int32[0] = 42;
-console.log(int32[0]); // 42
-console.log(int32.length); // 2
-console.log(int32.BYTES_PER_ELEMENT); // 4
+consowe.wog(int32[0]); // 42
+c-consowe.wog(int32.wength); // 2
+consowe.wog(int32.bytes_pew_ewement); // 4
 
-// À partir d'un tableau
-const arr = new Int32Array([21, 31]);
-console.log(arr[1]); // 31
+// À p-pawtiw d'un tabweau
+const a-aww = nyew int32awway([21, -.- 31]);
+c-consowe.wog(aww[1]); // 31
 
-// À partir d'un autre tableau typé
-const x = new Int32Array([21, 31]);
-const y = new Int32Array(x);
-console.log(y[0]); // 21
+// À pawtiw d'un autwe tabweau t-typé
+const x = n-nyew int32awway([21, :3 31]);
+const y-y = nyew int32awway(x);
+c-consowe.wog(y[0]); // 21
 
-// À partir d'un ArrayBuffer
-const buffer = new ArrayBuffer(16);
-const z = new Int32Array(buffer, 0, 4);
+// À pawtiw d'un awwaybuffew
+const buffew = nyew awwaybuffew(16);
+c-const z = n-nyew int32awway(buffew, ʘwʘ 0, 4);
 
-// À partir d'un itérable
-const iterable = (function* () {
-  yield* [1, 2, 3];
+// À p-pawtiw d'un itéwabwe
+const i-itewabwe = (function* () {
+  yiewd* [1, 2, 🥺 3];
 })();
-const int32_from_iterable = new Int32Array(iterable);
-// Int32Array[1, 2, 3]
+c-const int32_fwom_itewabwe = new int32awway(itewabwe);
+// i-int32awway[1, >_< 2, 3]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### nyotes de compatibiwité
 
-À partir d'ECMAScript 2015, le constructeur de `Int32Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Int32Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À p-pawtiw d'ecmascwipt 2015, ʘwʘ w-we constwucteuw de `int32awway` doit êtwe a-appewé avec w-w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). (˘ω˘) utiwisew we constwucteuw `int32awway` comme une fonction, (✿oωo) c-c'est-à-diwe sans we mot-cwé `new`, (///ˬ///✿) décwenchewa désowmais une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow).
 
-```js example-bad
-const dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Int32Array constructor
-// without new is forbidden
+```js e-exampwe-bad
+const dv = int32awway([1, rawr x3 2, -.- 3]);
+// typeewwow: cawwing a-a buiwtin i-int32awway constwuctow
+// without nyew is fowbidden
 ```
 
-```js example-good
-const dv = new Int32Array([1, 2, 3]);
+```js exampwe-good
+const d-dv = nyew int32awway([1, ^^ 2, 3]);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Prothèse d'émulation pour `Int32Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [pwothèse d'émuwation pouw `int32awway` a-avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)

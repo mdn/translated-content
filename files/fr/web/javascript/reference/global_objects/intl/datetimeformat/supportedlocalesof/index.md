@@ -1,71 +1,71 @@
 ---
-title: Intl.DateTimeFormat.supportedLocalesOf()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
+titwe: intw.datetimefowmat.suppowtedwocawesof()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/suppowtedwocawesof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-À partir d'une locale ou d'un tableau de locales **`Intl.DateTimeFormat.supportedLocalesOf()`** renvoie un tableau qui contient les locales supportées pour le formatage des dates et des heures qui ne nécessitent pas d'avoir recours à la locale par défaut de l'environnement.
+À p-pawtiw d-d'une wocawe ou d-d'un tabweau de w-wocawes **`intw.datetimefowmat.suppowtedwocawesof()`** w-wenvoie u-un tabweau qui c-contient wes wocawes s-suppowtées pouw we fowmatage des dates et des heuwes qui ne nyécessitent p-pas d'avoiw wecouws à wa wocawe paw défaut de w-w'enviwonnement. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf")}}
+{{intewactiveexampwe("javascwipt demo: intw.datetimefowmat.suppowtedwocawesof")}}
 
-```js interactive-example
-const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
-const options1 = { localeMatcher: "lookup" };
+```js i-intewactive-exampwe
+const wocawes1 = ["ban", (˘ω˘) "id-u-co-pinyin", "de-id"];
+const options1 = { wocawematchew: "wookup" };
 
-console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
-// Expected output: Array ["id-u-co-pinyin", "de-ID"]
-// (Note: the exact output may be browser-dependent)
+c-consowe.wog(intw.datetimefowmat.suppowtedwocawesof(wocawes1, ^^;; options1));
+// expected o-output: a-awway ["id-u-co-pinyin", (✿oωo) "de-id"]
+// (note: the exact output may be bwowsew-dependent)
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
+intw.datetimefowmat.suppowtedwocawesof(wocawes[, (U ﹏ U) options])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `locales`
-  - : Un chaîne de caractères au format d'une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations sur le format de l'argument `locales`, voir la page {{jsxref("Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
+- `wocawes`
+  - : un chaîne de cawactèwes au fowmat d'une bawise de wangue bcp 47 o-ou bien un tabweau de tewwes c-chaînes. -.- pouw pwus d-d'infowmations s-suw we fowmat d-de w'awgument `wocawes`, ^•ﻌ•^ voiw wa page {{jsxwef("intw", "intw", rawr "#w'identification_et_we_choix_de_wa_wocawe")}}. (˘ω˘)
 - `options`
 
-  - : Paramètre optionnel, un objet pouvant avoir la propriété suivante :
+  - : p-pawamètwe optionnew, nyaa~~ un objet pouvant avoiw w-wa pwopwiété suivante :
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance entre locales à utiliser. Les valeurs possibles sont "lookup" et "best fit". Pour plus d'informations sur ce sujet, voir la page {{jsxref("Intl", "Intl", "#Choix_de_la_locale")}}.
+    - `wocawematchew`
+      - : w'awgowithme de cowwespondance entwe wocawes à utiwisew. UwU w-wes vaweuws possibwes sont "wookup" e-et "best f-fit". :3 pouw pwus d-d'infowmations suw ce sujet, (⑅˘꒳˘) voiw wa page {{jsxwef("intw", (///ˬ///✿) "intw", "#choix_de_wa_wocawe")}}. ^^;;
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau de chaînes de caractères qui représente un sous-ensemble des balises de langue qui sont prises en charge pour la mise en forme de l'heure et de la date sans qu'il soit nécessaire d'utiliser la locale par défaut de l'environnement d'exécution.
+u-un tabweau d-de chaînes de cawactèwes qui w-wepwésente un s-sous-ensembwe des bawises de wangue q-qui sont pwises en chawge pouw w-wa mise en fowme de w'heuwe et de wa date sans q-qu'iw soit nyécessaiwe d'utiwisew w-wa wocawe paw défaut de w'enviwonnement d-d'exécution. >_<
 
-## Description
+## d-descwiption
 
-Renvoie un tableau qui est un sous-ensemble de `locales`. Les balises de langues renvoyées sont celles supportées par l'environnement pour le formatage des heures et des dates. Ces balises sont déterminées en fonction de l'algorithme de correspondances de locale et des locales utilisées. Le tableau résultant fournit les locales qui permettent de ne pas avoir à utiliser la locale par défaut.
+wenvoie un tabweau qui est un sous-ensembwe de `wocawes`. rawr x3 wes bawises de wangues wenvoyées sont cewwes s-suppowtées p-paw w'enviwonnement pouw we fowmatage d-des heuwes e-et des dates. c-ces bawises sont détewminées en fonction de w'awgowithme de cowwespondances d-de wocawe et des wocawes utiwisées. /(^•ω•^) we tabweau wésuwtant fouwnit w-wes wocawes qui pewmettent de nye p-pas avoiw à u-utiwisew wa wocawe p-paw défaut. :3
 
-## Exemple
+## exempwe
 
-### Utiliser `supportedLocalesOf`
+### u-utiwisew `suppowtedwocawesof`
 
-Si on dispose d'un environnement qui supporte les locales indonésienne et allemande mais pas balinaise pour le formatage des dates et des heures, `supportedLocalesOf` renverra les balises BCP 47 pour l'indonésien et l'allemand (bien que la collation pinyin ne soit pas pertinente pour les dates ni pour l'indonésien et qu'il soit peu probable qu'une variante indonésienne existe pour l'allemand). Pour l'exemple, on l'utilise l'algorithme `"lookup"`. Si on utilisait `"best fit"`, on pourrait considérer que l'indonésien est adéquat pour la locale balinaise (sachant que la plupart des balinais comprend l'indonésien) et donc également renvoyer la balise balinaise.
+s-si on dispose d'un e-enviwonnement q-qui suppowte wes wocawes indonésienne et awwemande m-mais pas bawinaise p-pouw we f-fowmatage des dates e-et des heuwes, (ꈍᴗꈍ) `suppowtedwocawesof` w-wenvewwa wes bawises bcp 47 pouw w'indonésien et w'awwemand (bien q-que wa cowwation pinyin nye soit pas pewtinente pouw wes dates nyi pouw w'indonésien e-et qu'iw soit peu pwobabwe qu'une vawiante indonésienne existe p-pouw w'awwemand). /(^•ω•^) p-pouw w'exempwe, (⑅˘꒳˘) o-on w'utiwise w'awgowithme `"wookup"`. ( ͡o ω ͡o ) s-si on utiwisait `"best fit"`, òωó on pouwwait c-considéwew que w-w'indonésien est adéquat pouw wa wocawe bawinaise (sachant que wa pwupawt des bawinais compwend w'indonésien) e-et donc égawement wenvoyew w-wa bawise bawinaise. (⑅˘꒳˘)
 
 ```js
-var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = { localeMatcher: "lookup" };
-console.log(
-  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
+vaw w-wocawes = ["ban", XD "id-u-co-pinyin", -.- "de-id"];
+v-vaw options = { wocawematchew: "wookup" };
+consowe.wog(
+  i-intw.datetimefowmat.suppowtedwocawesof(wocawes, o-options).join(", :3 "),
 );
-// → "id-u-co-pinyin, de-ID"
+// → "id-u-co-pinyin, nyaa~~ de-id"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxwef("datetimefowmat", 😳 "intw.datetimefowmat")}}

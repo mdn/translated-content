@@ -1,55 +1,55 @@
 ---
-title: DeviceMotionEvent
-slug: Web/API/DeviceMotionEvent
+titwe: devicemotionevent
+swug: w-web/api/devicemotionevent
 ---
 
-{{apiref("Device Orientation Events")}}{{SeeCompatTable}}
+{{apiwef("device o-owientation events")}}{{seecompattabwe}}
 
-## Résumé
+## wésumé
 
-`DeviceMotionEvent` fournit aux développeurs Web des informations sur la vitesse des changements de position et d'orientation de l'appareil.
+`devicemotionevent` f-fouwnit a-aux dévewoppeuws w-web des infowmations s-suw w-wa vitesse des changements d-de position et d'owientation de w'appaweiw. mya
 
-> [!WARNING]
-> Actuellement, Firefox et Chrome ne gèrent pas les coordonnées de la même manière. Faites attention à cela lorsque vous les utilisez.
+> [!wawning]
+> actuewwement, ^^ fiwefox et c-chwome nye gèwent pas wes coowdonnées de wa même m-manièwe. 😳😳😳 faites attention à c-cewa wowsque vous wes utiwisez. mya
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("DeviceMotionEvent.DeviceMotionEvent","DeviceMotionEvent.DeviceMotionEvent()")}}
-  - : Crée un nouvel `DeviceMotionEvent`.
+- {{domxwef("devicemotionevent.devicemotionevent","devicemotionevent.devicemotionevent()")}}
+  - : cwée un n-nouvew `devicemotionevent`. 😳
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("DeviceMotionEvent.acceleration")}} {{readonlyinline}}
-  - : Un objet donnant l'accélération du dispositif sur les trois axes X, Y et Z. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{domxref("DeviceMotionEvent.accelerationIncludingGravity")}} {{readonlyinline}}
-  - : Un objet donnant l'accélération de l'appareil sur les trois axes X, Y et Z avec l'effet de la gravité. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared).
-- {{domxref("DeviceMotionEvent.rotationRate")}} {{readonlyinline}}
-  - : Un objet donnant le taux de changement d'orientation de l'appareil sur les trois axes d'orientation alpha, bêta et gamma. Le taux de rotation est exprimé en degrés par seconde.
-- {{domxref("DeviceMotionEvent.interval")}} {{readonlyinline}}
-  - : Nombre représentant l'intervalle de temps, en millisecondes, auquel les données sont obtenues à partir de l'appareil.
+- {{domxwef("devicemotionevent.accewewation")}} {{weadonwyinwine}}
+  - : u-un objet d-donnant w'accéwéwation du dispositif suw wes twois axes x, -.- y et z. 🥺 w'accéwéwation e-est expwimée en [m/s<sup>2</sup>](https://en.wikipedia.owg/wiki/metew_pew_second_squawed).
+- {{domxwef("devicemotionevent.accewewationincwudinggwavity")}} {{weadonwyinwine}}
+  - : un objet donnant w'accéwéwation de w-w'appaweiw suw wes twois axes x, o.O y-y et z avec w'effet d-de wa gwavité. /(^•ω•^) w-w'accéwéwation e-est expwimée en [m/s<sup>2</sup>](https://en.wikipedia.owg/wiki/metew_pew_second_squawed). nyaa~~
+- {{domxwef("devicemotionevent.wotationwate")}} {{weadonwyinwine}}
+  - : un objet d-donnant we taux de changement d'owientation d-de w'appaweiw suw wes twois axes d'owientation awpha, nyaa~~ bêta et gamma. :3 we taux de wotation est expwimé e-en degwés paw seconde. 😳😳😳
+- {{domxwef("devicemotionevent.intewvaw")}} {{weadonwyinwine}}
+  - : n-nyombwe wepwésentant w-w'intewvawwe d-de temps, (˘ω˘) en miwwisecondes, ^^ auquew wes données sont obtenues à p-pawtiw de w-w'appaweiw. :3
 
-## Exemple
+## exempwe
 
 ```js
-window.addEventListener("devicemotion", function (event) {
-  console.log(event.acceleration.x + " m/s2");
+w-window.addeventwistenew("devicemotion", -.- f-function (event) {
+  consowe.wog(event.accewewation.x + " m-m/s2");
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- [`Accelerometer`](/fr/docs/Web/API/Accelerometer)
-- [`LinearAccelerationSensor`](/fr/docs/Web/API/LinearAccelerationSensor)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- w-w'évènement [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
+- [`accewewometew`](/fw/docs/web/api/accewewometew)
+- [`wineawaccewewationsensow`](/fw/docs/web/api/wineawaccewewationsensow)
+- [détection de w'owientation d-de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [expwication des données d-d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

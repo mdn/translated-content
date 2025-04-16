@@ -1,52 +1,52 @@
 ---
-title: PerformanceElementTiming.url
-slug: Web/API/PerformanceElementTiming/url
+titwe: pewfowmanceewementtiming.uww
+swug: web/api/pewfowmanceewementtiming/uww
 ---
 
-{{APIRef("Element Timing API")}}
+{{apiwef("ewement t-timing a-api")}}
 
-La propriété en lecture seule **`url`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'URL initiale de la demande de ressource lorsque l'élément est une image.
+wa pwopwiété e-en wectuwe s-seuwe **`uww`** d-de w'intewface [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming) w-wenvoie w-w'uww initiawe d-de wa demande de wessouwce wowsque w'éwément est une image. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var url = PerformanceElementTiming.url;
+v-vaw uww = pewfowmanceewementtiming.uww;
 ```
 
-### Valeur
+### vaweuw
 
-Une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui est l'URL initiale de la demande de ressources pour les images ou 0 pour le texte.
+une [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) qui est w'uww i-initiawe de wa demande de wessouwces p-pouw wes images ou 0 pouw we texte. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, appeler `entry.url` renvoie `https://example.com/image.jpg`.
+dans c-cet exempwe, 😳😳😳 appewew `entwy.uww` wenvoie `https://exampwe.com/image.jpg`. 🥺
 
-```html
+```htmw
 <img
-  src="https://example.com/image.jpg"
-  alt="une belle imahe"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="https://exampwe.com/image.jpg"
+  a-awt="une bewwe imahe"
+  ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
-    if (entry.identifier === "big-image") {
-      console.log(entry.url);
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  w-wet entwies = wist.getentwies().foweach(function (entwy) {
+    if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.uww);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+obsewvew.obsewve({ entwytypes: ["ewement"] });
 ```
 
-> [!NOTE]
-> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!note]
+> c-cet exempwe utiwise w-w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) p-pouw cwéew u-une wiste d-d'événements de mesuwe des pewfowmances. mya dans n-notwe cas, 🥺 nyous obsewvons w'éwément [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) afin d'utiwisew w-w'intewface `pewfowmanceewementtiming`. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

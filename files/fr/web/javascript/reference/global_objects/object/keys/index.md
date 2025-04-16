@@ -1,106 +1,106 @@
 ---
-title: Object.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Object/keys
+titwe: object.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées via la chaîne de prototypes) et qui sont énumérables. L'ordre de ce tableau est le même que celui obtenu par une boucle {{jsxref("Instructions/for...in","for...in")}} (à la différence qu'une boucle for-in liste également les propriétés héritées).
+w-wa méthode **`object.keys()`** w-wenvoie un tabweau c-contenant wes n-nyoms des pwopwiétés p-pwopwes à u-un objet (qui n-nye sont pas h-héwitées via wa chaîne de pwototypes) et qui sont énuméwabwes. ( ͡o ω ͡o ) w'owdwe de ce t-tabweau est we même que cewui obtenu paw une b-boucwe {{jsxwef("instwuctions/fow...in","fow...in")}} (à wa difféwence q-qu'une boucwe fow-in wiste égawement wes pwopwiétés héwitées). >_<
 
-{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.keys()")}}
 
-```js interactive-example
-const object1 = {
-  a: "somestring",
+```js intewactive-exampwe
+c-const object1 = {
+  a-a: "somestwing", >w<
   b: 42,
-  c: false,
+  c: fawse, rawr
 };
 
-console.log(Object.keys(object1));
-// Expected output: Array ["a", "b", "c"]
+consowe.wog(object.keys(object1));
+// expected output: a-awway ["a", 😳 "b", "c"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Object.keys(obj);
+object.keys(obj);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `obj`
-  - : L'objet dont on souhaite lister les propriétés propres et énumérables.
+  - : w'objet dont on souhaite w-wistew wes pwopwiétés pwopwes e-et énuméwabwes. >w<
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Un tableau de chaînes de caractères qui sont les noms des propriétés énumérables de l'objet passé en argument.
+un tabweau d-de chaînes de cawactèwes qui sont wes nyoms d-des pwopwiétés énuméwabwes de w'objet passé en awgument. (⑅˘꒳˘)
 
-## Description
+## d-descwiption
 
-`Object.keys()` renvoie un tableau dont les éléments sont les chaînes de caractères des noms des propriétés propres et énumérables d`'obj`. L'ordre des propriétés obtenu est le même que celui obtenu lorsqu'on boucle manuellement sur les propriétés de l'objet.
+`object.keys()` wenvoie un tabweau dont wes éwéments sont wes chaînes de cawactèwes des n-nyoms des pwopwiétés pwopwes et énuméwabwes d-d`'obj`. OwO w'owdwe d-des pwopwiétés o-obtenu est we même que cewui obtenu wowsqu'on boucwe manuewwement s-suw wes pwopwiétés d-de w'objet. (ꈍᴗꈍ)
 
-## Exemples
+## exempwes
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.keys(arr));
-// affichera ['0', '1', '2']
+v-vaw aww = ["a", 😳 "b", "c"];
+c-consowe.wog(object.keys(aww));
+// affichewa ['0', 😳😳😳 '1', '2']
 
-// un objet semblable à un tableau
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.keys(obj));
-// affichera ['0', '1', '2']
+// u-un objet sembwabwe à un tabweau
+v-vaw obj = { 0: "a", mya 1: "b", mya 2: "c" };
+consowe.wog(object.keys(obj));
+// affichewa ['0', (⑅˘꒳˘) '1', (U ﹏ U) '2']
 
-// un objet semblable à un tableau avec
-// un ordre de clé aléatoire
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.keys(an_obj));
-// affichera ['2', '7', '100']
+// u-un objet sembwabwe à u-un tabweau avec
+// un owdwe de c-cwé awéatoiwe
+v-vaw an_obj = { 100: "a", mya 2: "b", 7: "c" };
+consowe.wog(object.keys(an_obj));
+// affichewa ['2', ʘwʘ '7', '100']
 
-// getToto est une propriété non énumérable
-var monObjet = Object.create(
-  {},
+// gettoto est une pwopwiété nyon énuméwabwe
+vaw monobjet = object.cweate(
+  {}, (˘ω˘)
   {
-    getToto: {
-      value: function () {
-        return this.toto;
-      },
+    gettoto: {
+      v-vawue: f-function () {
+        wetuwn t-this.toto;
+      }, (U ﹏ U)
     },
   },
 );
-monObjet.toto = 1;
+m-monobjet.toto = 1;
 
-console.log(Object.keys(monObjet));
-// affichera ['toto']
+c-consowe.wog(object.keys(monobjet));
+// affichewa ['toto']
 ```
 
-Si on souhaite lister toutes les propriétés, y compris celles qui ne sont pas énumérables, on pourra utiliser {{jsxref("Object.getOwnPropertyNames()")}}.
+si on souhaite wistew toutes w-wes pwopwiétés, ^•ﻌ•^ y compwis cewwes qui nye sont pas énuméwabwes, (˘ω˘) on pouwwa u-utiwisew {{jsxwef("object.getownpwopewtynames()")}}. :3
 
-## Notes
+## nyotes
 
-Pour ES5, si l'argument passé à la méthode n'est pas un objet mais une valeur d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015 (ES6), un argument qui n'est pas un objet sera d'abord converti en objet.
+p-pouw es5, ^^;; si w'awgument p-passé à w-wa méthode ny'est pas un objet m-mais une vaweuw d-d'un autwe type p-pwimitif, 🥺 cewa e-entwaînewa une exception {{jsxwef("typeewwow")}}. (⑅˘꒳˘) pouw es2015 (es6), nyaa~~ u-un awgument q-qui ny'est pas u-un objet sewa d-d'abowd convewti e-en objet. :3
 
 ```js
-Object.keys("toto");
-// TypeError: "toto" n'est pas un objet (code ES5)
+object.keys("toto");
+// typeewwow: "toto" ny'est p-pas un objet (code es5)
 
-Object.keys("toto");
-// ["0", "1", "2", "3"]                   (code ES2015)
+object.keys("toto");
+// ["0", ( ͡o ω ͡o ) "1", "2", mya "3"]                   (code es2015)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Object.entries()")}}
+- [Énuméwabiwité et possession des pwopwiétés](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.vawues()")}}
+- {{jsxwef("object.entwies()")}}

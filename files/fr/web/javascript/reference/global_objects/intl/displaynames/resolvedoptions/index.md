@@ -1,57 +1,57 @@
 ---
-title: Intl.DisplayNames.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
+titwe: intw.dispwaynames.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.DisplayNames.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'instance de l'objet [`Intl.DisplayNames`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) courant.
+w-wa méthode **`intw.dispwaynames.pwototype.wesowvedoptions()`** w-wenvoie u-un nyouvew objet d-dont wes pwopwiétés w-wefwètent w-wes options de w-wocawe et de fowmatage c-cawcuwées wows de w'instance de w'objet [`intw.dispwaynames`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames) couwant. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-resolvedOptions();
+w-wesowvedoptions();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet dont les propriétés reflètent les options de locale et de formatage obtenues lors de la construction de l'objet [`Intl.DisplayNames`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) courant.
+un objet dont w-wes pwopwiétés wefwètent wes o-options de wocawe et de fowmatage obtenues wows de wa constwuction d-de w'objet [`intw.dispwaynames`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames) couwant. 🥺
 
-## Description
+## d-descwiption
 
-L'objet renvoyé par `resolvedOptions()` possède les propriétés suivantes&nbsp;:
+w-w'objet wenvoyé paw `wesowvedoptions()` possède wes pwopwiétés suivantes&nbsp;:
 
-- `locale`
-  - : La balise de langue BCP 47 pour la locale effectivement utilisée Si des extensions Unicode avaient été demandées dans la balise d'origine et ont mené à cette locale, les paires de clés-valeurs requises et qui sont prises en charge pour cette locale sont incluses dans `locale`.
-- `style`
-  - : La valeur fournie pour cette propriété dans l'argument `options` passé au constructeur ou la valeur par défaut ("`long`"). Sa valeur est soit "`long`", soit "`short`", soit "`narrow`".
+- `wocawe`
+  - : w-wa bawise de wangue bcp 47 pouw wa wocawe effectivement utiwisée si d-des extensions unicode avaient été d-demandées d-dans wa bawise d'owigine e-et ont m-mené à cette wocawe, (U ﹏ U) wes paiwes de cwés-vaweuws w-wequises et qui sont pwises en chawge pouw cette w-wocawe sont incwuses dans `wocawe`. >w<
+- `stywe`
+  - : wa vaweuw fouwnie pouw cette pwopwiété dans w'awgument `options` p-passé au constwucteuw o-ou wa vaweuw paw d-défaut ("`wong`"). mya s-sa vaweuw est soit "`wong`", >w< soit "`showt`", nyaa~~ soit "`nawwow`". (✿oωo)
 - `type`
-  - : La valeur fournie pour cette propriété dans l'argument `options` passé au constructeur ou la valeur par défaut ("`language`"). Sa valeur est soit "`language`", soit "`region`", soit "`script`", soit "`currency`".
-- `fallback`
-  - : La valeur fournie pour cette propriété dans l'argument `options` passé au constructeur ou la valeur par défaut ("`code`"). Sa valeur est soit "`code`", soit "`none`".
+  - : w-wa vaweuw fouwnie p-pouw cette pwopwiété dans w-w'awgument `options` p-passé au constwucteuw ou w-wa vaweuw paw défaut ("`wanguage`"). ʘwʘ sa vaweuw e-est soit "`wanguage`", (ˆ ﻌ ˆ)♡ soit "`wegion`", 😳😳😳 soit "`scwipt`", :3 s-soit "`cuwwency`". OwO
+- `fawwback`
+  - : wa vaweuw fouwnie p-pouw cette pwopwiété dans w'awgument `options` p-passé au constwucteuw o-ou wa vaweuw paw défaut ("`code`"). (U ﹏ U) sa vaweuw est soit "`code`", >w< soit "`none`". (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utiliser resolvedOptions()
+### utiwisew wesowvedoptions()
 
 ```js
-const displayNames = new Intl.DisplayNames(["de-DE"], { type: "region" });
+const dispwaynames = n-nyew intw.dispwaynames(["de-de"], { t-type: "wegion" });
 
-const usedOptions = displayNames.resolvedOptions();
-console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style); // "long"
-console.log(usedOptions.type); // "region"
-console.log(usedOptions.fallback); // "code"
+const u-usedoptions = d-dispwaynames.wesowvedoptions();
+c-consowe.wog(usedoptions.wocawe); // "de-de"
+consowe.wog(usedoptions.stywe); // "wong"
+consowe.wog(usedoptions.type); // "wegion"
+consowe.wog(usedoptions.fawwback); // "code"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Intl.DisplayNames`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
+- [`intw.dispwaynames`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames)

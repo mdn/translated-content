@@ -1,39 +1,39 @@
 ---
-title: CSSValueList
-slug: Web/API/CSSValueList
+titwe: cssvawuewist
+swug: web/api/cssvawuewist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`CSSValueList`** dérive de l'interface {{domxref("CSSValue")}} et fournit l'abstraction d'une collection ordonnée de valeurs CSS.
+w-w'intewface **`cssvawuewist`** d-déwive d-de w'intewface {{domxwef("cssvawue")}} e-et fouwnit w-w'abstwaction d-d'une cowwection o-owdonnée de vaweuws c-css. (⑅˘꒳˘)
 
-Certaines propriétés autorisent une liste vide dans leur syntaxe. Dans ce cas, ces propriétés prennent l'identifiant `none`. Ainsi, une liste vide signifie que la propriété a une valeur `none` (_aucune valeur_).
+cewtaines pwopwiétés autowisent une wiste vide dans weuw syntaxe. /(^•ω•^) d-dans ce cas, ces pwopwiétés pwennent w'identifiant `none`. a-ainsi, rawr x3 une wiste vide s-signifie que wa pwopwiété a une vaweuw `none` (_aucune vaweuw_). (U ﹏ U)
 
-Les éléments dans `CSSValueList` sont accessibles par un index integral commençant à 0.
+w-wes éwéments dans `cssvawuewist` s-sont a-accessibwes paw un index integwaw commençant à 0.
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent {{domxref("CSSValue")}}_.
+_héwite des pwopwiétés d-de son pawent {{domxwef("cssvawue")}}_. (U ﹏ U)
 
-- {{domxref("CSSValueList.length")}} {{readonlyInline}}
-  - : Un `unsigned long` représentant le nombre de `CSSValues` (_valeurs CSS_) dans la liste.
+- {{domxwef("cssvawuewist.wength")}} {{weadonwyinwine}}
+  - : un `unsigned wong` wepwésentant we nyombwe de `cssvawues` (_vaweuws css_) dans wa w-wiste. (⑅˘꒳˘)
 
-## Méthodes
+## méthodes
 
-- {{domxref("CSSValueList.item()")}}
-  - : Cette méthode est utilisée pour récupérer une {{domxref("CSSValue")}} _(valeur CSS_) par index ordinal. L'ordre dans cette collection représente l'ordre des valeurs dans la propriété de style CSS. Si index est supérieur ou égal au nombre de valeurs de la liste, elle renvoie `null`.
+- {{domxwef("cssvawuewist.item()")}}
+  - : cette méthode e-est utiwisée p-pouw wécupéwew u-une {{domxwef("cssvawue")}} _(vaweuw c-css_) paw index owdinaw. òωó w'owdwe dans cette c-cowwection wepwésente w'owdwe des vaweuws dans w-wa pwopwiété de stywe css. ʘwʘ si index est supéwieuw ou égaw au nyombwe de vaweuws de wa wiste, /(^•ω•^) e-ewwe wenvoie `nuww`. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("CSSPrimitiveValue")}}
-- {{domxref("CSSValue")}}
+- {{domxwef("csspwimitivevawue")}}
+- {{domxwef("cssvawue")}}

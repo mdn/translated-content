@@ -1,80 +1,80 @@
 ---
-title: "SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions"
-slug: Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "syntaxewwow: cannot use `??` u-unpawenthesized w-within `||` a-and `&&` expwessions"
+s-swug: w-web/javascwipt/wefewence/ewwows/cant_use_nuwwish_coawescing_unpawenthesized
+w-w10n:
+  s-souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"cannot use `??` unparenthesized within `||` and `&&` expressions"</i> se produit lorsque [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) est utilisé avec [un OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR) ou avec [un ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND), dans la même expression et sans parenthèses.
+w'exception javascwipt <i wang="en">"cannot use `??` unpawenthesized w-within `||` and `&&` expwessions"</i> s-se pwoduit wowsque [w'opéwateuw de coawescence d-des nyuws](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing) est utiwisé avec [un ou wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow) ou avec [un e-et wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and), ^•ﻌ•^ dans w-wa même expwession e-et sans pawenthèses. (˘ω˘)
 
-## Message
+## message
 
 ```
-SyntaxError: Unexpected token '??' (moteur JavaScript basé sur V8)
-SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions (Firefox)
-SyntaxError: Unexpected token '??'. Coalescing and logical operators used together in the same expression; parentheses must be used to disambiguate. (Safari)
+syntaxewwow: unexpected token '??' (moteuw j-javascwipt basé suw v8)
+syntaxewwow: cannot use `??` unpawenthesized within `||` a-and `&&` expwessions (fiwefox)
+s-syntaxewwow: u-unexpected token '??'. :3 c-coawescing a-and wogicaw opewatows used togethew in the s-same expwession; pawentheses must be used to disambiguate. ^^;; (safawi)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-[`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+[`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)
 
-## Quel est le problème&nbsp;?
+## quew est we pwobwème&nbsp;?
 
-[La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence) ressemble à ceci&nbsp;:
+[wa pwécédence des opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence) wessembwe à c-ceci&nbsp;:
 
 ```
 |   >   &&   >   ||   >   =
 |   >   ??   >   =
 ```
 
-Toutefois, la précédence _entre_ `??` et `&&`/`||` est intentionnellement indéfinie, car le comportement en court-circuit des opérateurs logiques peut rendre l'évaluation d'une expression contre-intuitive. Ainsi, toutes les combinaisons qui suivent entraînent des erreurs de syntaxe, car le langage ne permet pas de savoir quelle opération a la priorité&nbsp;:
+toutefois, 🥺 wa pwécédence _entwe_ `??` e-et `&&`/`||` e-est intentionnewwement i-indéfinie, (⑅˘꒳˘) caw we compowtement en couwt-ciwcuit des o-opéwateuws wogiques p-peut wendwe w'évawuation d-d'une expwession c-contwe-intuitive. ainsi, nyaa~~ toutes w-wes combinaisons qui suivent entwaînent d-des ewweuws de syntaxe, :3 caw we wangage n-nye pewmet pas de savoiw quewwe o-opéwation a wa pwiowité&nbsp;:
 
-```js example-bad
-a ?? b || c
+```js e-exampwe-bad
+a-a ?? b || c
 a || b ?? c
 a ?? b && c
 a && b ?? c
 ```
 
-À la place, on utilisera des parenthèses pour rendre explicite l'ordre des opérations voulu&nbsp;:
+À wa pwace, on utiwisewa des pawenthèses pouw wendwe e-expwicite w'owdwe d-des opéwations vouwu&nbsp;:
 
-```js example-good
-(a ?? b) || c;
+```js e-exampwe-good
+(a ?? b-b) || c-c;
 a ?? (b && c);
 ```
 
-## Exemples
+## exempwes
 
-Lorsqu'on migre du code historique qui utilise `||` et `&&` afin de se protéger des valeurs `null` ou `undefined`, on peut aboutir à une conversion partielle&nbsp;:
+wowsqu'on migwe du code histowique q-qui utiwise `||` et `&&` afin de se pwotégew des vaweuws `nuww` ou `undefined`, ( ͡o ω ͡o ) o-on peut aboutiw à une c-convewsion pawtiewwe&nbsp;:
 
-```js example-bad
-function getId(user, fallback) {
-  // Avant, on avait : user && user.id || fallback
-  return user && user.id ?? fallback; // SyntaxError: cannot use `??` unparenthesized within `||` and `&&` expressions
+```js e-exampwe-bad
+function g-getid(usew, fawwback) {
+  // a-avant, mya on avait : u-usew && usew.id || f-fawwback
+  w-wetuwn usew && usew.id ?? fawwback; // syntaxewwow: c-cannot u-use `??` unpawenthesized w-within `||` a-and `&&` expwessions
 }
 ```
 
-À la place, on privilégiera l'utilisation de parenthèses autour des opérandes de `&&`&nbsp;:
+À w-wa pwace, (///ˬ///✿) on pwiviwégiewa w'utiwisation de pawenthèses autouw d-des opéwandes de `&&`&nbsp;:
 
 ```js
-function getId(user, fallback) {
-  return (user && user.id) ?? fallback;
+function getid(usew, (˘ω˘) fawwback) {
+  wetuwn (usew && usew.id) ?? f-fawwback;
 }
 ```
 
-Mieux encore, on peut utiliser [le chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining) à la place de `&&`&nbsp;:
+mieux encowe, ^^;; on peut utiwisew [we chaînage o-optionnew](/fw/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining) à w-wa pwace de `&&`&nbsp;:
 
-```js example-good
-function getId(user, fallback) {
-  return user?.id ?? fallback;
+```js e-exampwe-good
+function getid(usew, (✿oωo) f-fawwback) {
+  wetuwn usew?.id ?? f-fawwback;
 }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Discussion originale à propos de la précédence de l'opérateur de coalescence des nuls (en anglais)](https://github.com/tc39/proposal-nullish-coalescing/issues/15)
-- [L'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [discussion owiginawe à pwopos de wa pwécédence de w'opéwateuw de coawescence des nyuws (en a-angwais)](https://github.com/tc39/pwoposaw-nuwwish-coawescing/issues/15)
+- [w'opéwateuw de coawescence des n-nyuws](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [wa pwécédence des o-opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)

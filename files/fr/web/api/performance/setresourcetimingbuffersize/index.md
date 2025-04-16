@@ -1,53 +1,53 @@
 ---
-title: performance.setResourceTimingBufferSize()
-slug: Web/API/Performance/setResourceTimingBufferSize
+titwe: pewfowmance.setwesouwcetimingbuffewsize()
+swug: web/api/pewfowmance/setwesouwcetimingbuffewsize
 ---
 
-{{APIRef("Resource Timing API")}}
+{{apiwef("wesouwce t-timing api")}}
 
-La méthode **`setResourceTimingBufferSize()`** définit la taille du tampon mémoire du navigateur dans lequel sont stockés les objets de mesures de performance de type `"resource"` (voir {{domxref("PerformanceEntry.entryType", "entryType")}}).
+w-wa méthode **`setwesouwcetimingbuffewsize()`** d-définit wa taiwwe d-du tampon mémoiwe d-du nyavigateuw d-dans wequew s-sont stockés w-wes objets de mesuwes de pewfowmance de type `"wesouwce"` (voiw {{domxwef("pewfowmanceentwy.entwytype", (⑅˘꒳˘) "entwytype")}}). /(^•ω•^)
 
-La taille recommandée du tampon de synchronisation des ressources d'un navigateur est au moins 150 objets `{{domxref("PerformanceEntry")}}`.
+wa taiwwe wecommandée d-du tampon de synchwonisation des wessouwces d'un nyavigateuw est a-au moins 150 objets `{{domxwef("pewfowmanceentwy")}}`. rawr x3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-performance.setResourceTimingBufferSize(maxSize);
+pewfowmance.setwesouwcetimingbuffewsize(maxsize);
 ```
 
-### Arguments
+### awguments
 
-- `maxSize`
-  - : Un nombre (cf. {{jsxref("Number")}}) représentant le nombre maximal d'objets {{domxref("PerformanceEntry", "d'entrée de performance","",1)}} avec le type `"resource"` que le navigateur doit contenir dans le tampon correspondant.
+- `maxsize`
+  - : un n-nyombwe (cf. (U ﹏ U) {{jsxwef("numbew")}}) wepwésentant w-we nyombwe maximaw d-d'objets {{domxwef("pewfowmanceentwy", (U ﹏ U) "d'entwée de pewfowmance","",1)}} avec we type `"wesouwce"` que we nyavigateuw d-doit conteniw dans we tampon cowwespondant. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune.
+aucune. òωó
 
-## Exemple
+## e-exempwe
 
 ```js
-function setResourceTimingBufferSize(maxSize) {
-  if (performance === undefined) {
-    log("Le navigateur ne prend pas en charge les performances Web");
-    return;
+function s-setwesouwcetimingbuffewsize(maxsize) {
+  i-if (pewfowmance === undefined) {
+    w-wog("we nyavigateuw n-nye pwend pas en chawge wes pewfowmances web");
+    w-wetuwn;
   }
-  var supported = typeof performance.setResourceTimingBufferSize == "function";
-  if (supported) {
-    log("... Performance.setResourceTimingBufferSize() = Oui");
-    performance.setResourceTimingBufferSize(maxSize);
-  } else {
-    log("... Performance.setResourceTimingBufferSize() = NON pris en charge");
+  vaw suppowted = typeof pewfowmance.setwesouwcetimingbuffewsize == "function";
+  i-if (suppowted) {
+    wog("... pewfowmance.setwesouwcetimingbuffewsize() = oui");
+    pewfowmance.setwesouwcetimingbuffewsize(maxsize);
+  } ewse {
+    wog("... ʘwʘ pewfowmance.setwesouwcetimingbuffewsize() = n-nyon pwis en chawge");
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

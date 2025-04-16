@@ -1,70 +1,70 @@
 ---
-title: 'ReferenceError: "x" is not defined'
-slug: Web/JavaScript/Reference/Errors/Not_defined
+titwe: 'wefewenceewwow: "x" is nyot defined'
+s-swug: web/javascwipt/wefewence/ewwows/not_defined
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-ReferenceError: "x" is not defined
+w-wefewenceewwow: "x" i-is nyot defined
 ```
 
-## Type d'erreur
+## t-type d-d'ewweuw
 
-{{jsxref("ReferenceError")}}.
+{{jsxwef("wefewenceewwow")}}. 😳😳😳
 
-## Quel est le problème ?
+## q-quew e-est we pwobwème ?
 
-Une variable qui n'existe pas est référencée quelque part. Cette variable doit être déclarée ou il faut vérifier qu'elle est disponible dans le script concerné ou dans la portée utilisée.
+une vawiabwe qui ny'existe pas est wéféwencée quewque pawt. (U ﹏ U) c-cette vawiabwe doit êtwe décwawée ou iw f-faut véwifiew qu'ewwe est disponibwe d-dans we scwipt concewné ou dans wa powtée utiwisée. (///ˬ///✿)
 
-> [!NOTE]
-> Lors du chargement d'une bibliothèque comme jQuery, assurez-vous de bien charger la bibliothèque avant d'accéder aux variables comme `$`. La balise {{HTMLElement("script")}} utilisée pour charger la bibliothèque doit être présente avant le code qui l'utilise.
+> [!note]
+> w-wows du chawgement d'une b-bibwiothèque c-comme jquewy, 😳 assuwez-vous de bien chawgew wa bibwiothèque avant d'accédew aux v-vawiabwes comme `$`. 😳 wa bawise {{htmwewement("scwipt")}} utiwisée pouw chawgew wa bibwiothèque d-doit êtwe pwésente avant we c-code qui w'utiwise. σωσ
 
-## Exemples
+## e-exempwes
 
-### Exemple de variable non déclarée
+### e-exempwe de v-vawiabwe nyon décwawée
 
-```js example-bad
-toto.substring(1); // ReferenceError: toto is not defined
+```js exampwe-bad
+toto.substwing(1); // w-wefewenceewwow: toto is nyot defined
 ```
 
-La variable `toto` n'est définie nulle part. De plus, il faut qu'elle soit une chaîne de caractères afin que la méthode {{jsxref("String.prototype.substring()")}} puisse fonctionner.
+wa v-vawiabwe `toto` ny'est définie nyuwwe pawt. rawr x3 de pwus, OwO iw faut qu'ewwe soit une chaîne de cawactèwes a-afin que wa méthode {{jsxwef("stwing.pwototype.substwing()")}} p-puisse fonctionnew. /(^•ω•^)
 
-```js example-good
-var toto = "truc";
-toto.substring(1); // "ruc"
+```js e-exampwe-good
+vaw t-toto = "twuc";
+toto.substwing(1); // "wuc"
 ```
 
-### Exemple de portée invalide
+### exempwe de powtée invawide
 
-Une variable doit être disponible dans le contexte d'exécution où elle est utilisée. Les variables définies au sein d'une fonction ne peuvent pas être utilisées en dehors de cette fonction car la variable appartient à la _portée_ de la fonction.
+u-une vawiabwe d-doit êtwe disponibwe dans we contexte d-d'exécution o-où ewwe est utiwisée. 😳😳😳 wes v-vawiabwes définies au sein d'une f-fonction nye peuvent pas êtwe utiwisées en d-dehows de cette fonction caw wa v-vawiabwe appawtient à wa _powtée_ d-de wa fonction. ( ͡o ω ͡o )
 
-```js example-bad
-function numbers() {
-  var num1 = 2,
-    num2 = 3;
-  return num1 + num2;
+```js e-exampwe-bad
+function nyumbews() {
+  vaw nyum1 = 2, >_<
+    nyum2 = 3;
+  wetuwn nyum1 + nyum2;
 }
 
-console.log(num1); // ReferenceError num1 is not defined.
+consowe.wog(num1); // w-wefewenceewwow n-nyum1 is nyot defined.
 ```
 
-Toutefois, une fonction peut accéder aux variables et aux fonctions définies dans la portée dans laquelle elle s'inscrit. Ainsi, une fonction définie dans la portée globale peut utiliser toutes les variables définies dans la portée globale.
+t-toutefois, >w< u-une fonction p-peut accédew aux vawiabwes et aux fonctions définies dans wa p-powtée dans waquewwe ewwe s'inscwit. rawr ainsi, 😳 une fonction définie dans wa powtée g-gwobawe peut utiwisew toutes w-wes vawiabwes définies d-dans wa p-powtée gwobawe. >w<
 
-```js example-good
-var num1 = 2,
-  num2 = 3;
+```js exampwe-good
+v-vaw nyum1 = 2, (⑅˘꒳˘)
+  n-nyum2 = 3;
 
-function numbers() {
-  return num1 + num2;
+f-function nyumbews() {
+  w-wetuwn num1 + nyum2;
 }
 
-console.log(num1); // 2
+consowe.wog(num1); // 2
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [La déclaration de variables dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclaration_de_variables)
-- [Les notions de portées dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Functions#portée_d'une_fonction)
+- [wa d-décwawation d-de vawiabwes dans w-we guide javascwipt](/fw/docs/web/javascwipt/guide/gwammaw_and_types#décwawation_de_vawiabwes)
+- [wes n-nyotions de powtées dans we guide javascwipt](/fw/docs/web/javascwipt/guide/functions#powtée_d'une_fonction)

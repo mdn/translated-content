@@ -1,96 +1,96 @@
 ---
-title: Object.prototype.__defineSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
+titwe: object.pwototype.__definesettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> [!WARNING]
-> Cette fonctionnalité est dépréciée et il est préférable d'utiliser l'API {{jsxref("Object.defineProperty()")}} et [la syntaxe d'initialisation d'objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer). Toutefois, `__defineGetter__` est largement utilisée sur le Web et est implémentée. Il est donc peu probable que les navigateurs retirent cette méthode.
+> [!wawning]
+> c-cette fonctionnawité e-est dépwéciée e-et iw e-est pwéféwabwe d-d'utiwisew w'api {{jsxwef("object.definepwopewty()")}} e-et [wa syntaxe d-d'initiawisation d'objets](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). nyaa~~ toutefois, `__definegettew__` est wawgement utiwisée suw we w-web et est impwémentée. (✿oωo) iw est donc peu pwobabwe q-que wes nyavigateuws wetiwent c-cette méthode. ʘwʘ
 
-La méthode **`__defineSetter__`** permet de lier une propriété d'un objet à une fonction qui sera exécutée pour toute tentative de définition/changement de cette propriété.
+wa méthode **`__definesettew__`** pewmet de wiew une pwopwiété d-d'un objet à une fonction qui s-sewa exécutée p-pouw toute tentative de définition/changement de cette pwopwiété. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-obj.__defineSetter__(prop, fun);
+obj.__definesettew__(pwop, 😳😳😳 f-fun);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `prop`
-  - : Une chaîne de caractères qui contient le nom de la propriété qu'on souhaite lier à la fonction.
+- `pwop`
+  - : une chaîne de cawactèwes qui contient we nyom d-de wa pwopwiété qu'on souhaite w-wiew à wa fonction. :3
 - `fun`
 
-  - : Une fonction à appeler pour chaque modification de la propriété. Cette fonction prend la forme suivante :
+  - : u-une fonction à a-appewew pouw c-chaque modification de wa pwopwiété. OwO cette f-fonction pwend wa fowme suivante :
 
     ```js
-    function(val) { . . . }
+    function(vaw) { . (U ﹏ U) . . >w< }
     ```
 
-    - `val`
-      - : Un alias pour la variable contenant la nouvelle valeur qu'on souhaite affecter à `prop`.
+    - `vaw`
+      - : u-un awias pouw wa vawiabwe contenant wa nyouvewwe vaweuw qu'on souhaite affectew à `pwop`.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-La méthode `__defineSetter__` permet de définir un {{jsxref("Opérateurs/L_opérateur_set", "mutateur", "", 1)}} sur un objet pré-existant.
+w-wa méthode `__definesettew__` p-pewmet de définiw un {{jsxwef("opéwateuws/w_opéwateuw_set", 😳 "mutateuw", (ˆ ﻌ ˆ)♡ "", 1)}} suw un objet pwé-existant. 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
-// Méthode non-standard et dépréciée
+// m-méthode nyon-standawd e-et dépwéciée
 
-var o = {};
-o.__defineSetter__("valeur", function (val) {
-  this.uneAutreValeur = val;
+v-vaw o = {};
+o.__definesettew__("vaweuw", (U ﹏ U) function (vaw) {
+  this.uneautwevaweuw = v-vaw;
 });
-o.valeur = 5;
-console.log(o.valeur); // undefined
-console.log(o.uneAutreValeur); // 5
+o.vaweuw = 5;
+consowe.wog(o.vaweuw); // u-undefined
+consowe.wog(o.uneautwevaweuw); // 5
 
-// Façons standard
+// façons s-standawd
 
-// En utilisant l'opérateur set
-var o = {
-  set valeur(val) {
-    this.uneAutreValeur = val;
-  },
+// en utiwisant w'opéwateuw s-set
+vaw o = {
+  set vaweuw(vaw) {
+    t-this.uneautwevaweuw = v-vaw;
+  }, (///ˬ///✿)
 };
-o.valeur = 5;
-console.log(o.valeur); // undefined
-console.log(o.uneAutreValeur); // 5
+o.vaweuw = 5;
+consowe.wog(o.vaweuw); // undefined
+consowe.wog(o.uneautwevaweuw); // 5
 
-// En utilisant Object.defineProperty
-var o = {};
-Object.defineProperty(o, "valeur", {
-  set: function (val) {
-    this.uneAutreValeur = val;
-  },
+// en utiwisant object.definepwopewty
+vaw o-o = {};
+object.definepwopewty(o, 😳 "vaweuw", 😳 {
+  s-set: function (vaw) {
+    this.uneautwevaweuw = v-vaw;
+  }, σωσ
 });
-o.valeur = 5;
-console.log(o.valeur); // undefined
-console.log(o.uneAutreValeur); // 5
+o.vaweuw = 5;
+c-consowe.wog(o.vaweuw); // u-undefined
+consowe.wog(o.uneautwevaweuw); // 5
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_set", "set")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [Guide JavaScript : Définir des getters et setters](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters)
-- [\[Billet de blog\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (en anglais)
-- [bug Firefox 647423](https://bugzil.la/647423)
+- [`object.pwototype.__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_set", "set")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__wookupgettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- [`object.pwototype.__wookupsettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- [guide javascwipt : définiw d-des gettews et settews](/fw/docs/web/javascwipt/guide/wowking_with_objects#d.c3.a9finiw_des_gettews_et_settews)
+- [\[biwwet d-de bwog\] depwecation o-of \_\_definegettew\_\_ a-and \_\_definesettew\_\_](https://wheweswawden.com/2010/04/16/mowe-spidewmonkey-changes-ancient-esotewic-vewy-wawewy-used-syntax-fow-cweating-gettews-and-settews-is-being-wemoved/) (en angwais)
+- [bug f-fiwefox 647423](https://bugziw.wa/647423)

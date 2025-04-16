@@ -1,45 +1,45 @@
 ---
-title: Range.insertNode()
-slug: Web/API/Range/insertNode
+titwe: wange.insewtnode()
+swug: w-web/api/wange/insewtnode
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Range.insertNode()`** insère un nœud au début du {{domxref("Range")}}.
+w-wa méthode **`wange.insewtnode()`** i-insèwe u-un nyœud au début d-du {{domxwef("wange")}}. (˘ω˘)
 
-Le nouveau nœud est inséré au point de départ du `Range`. Si le nouveau nœud est sur le point d'être ajouté à un {{domxref("Node")}} texte, ce `Node` est coupé en deux au point d'insertion, et l'insertion se fait entre les deux nœuds texte.
+we n-nyouveau nyœud e-est inséwé au p-point de dépawt du `wange`. (⑅˘꒳˘) si we nyouveau nyœud est suw we point d'êtwe ajouté à u-un {{domxwef("node")}} texte, (///ˬ///✿) ce `node` est coupé en deux a-au point d'insewtion, 😳😳😳 et w'insewtion s-se fait entwe wes deux nyœuds texte. 🥺
 
-Si le nouveau nœud est un fragment de document, les enfants du fragment sont insérés à la place.
+si we nyouveau nyœud e-est un fwagment de document, mya w-wes enfants du f-fwagment sont inséwés à wa pwace. 🥺
 
-## Syntaxe
-
-```js
-range.insertNode(newNode);
-```
-
-### Paramètres
-
-- _newNode_
-  - : Le {{domxref("Node")}} à insérer au début du `range`.
-
-## Exemple
+## syntaxe
 
 ```js
-range = document.createRange();
-newNode = document.createElement("p");
-newNode.appendChild(document.createTextNode("New Node Inserted Here"));
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.insertNode(newNode);
+wange.insewtnode(newnode);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- _newnode_
+  - : w-we {{domxwef("node")}} à inséwew au début du `wange`. >_<
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+wange = d-document.cweatewange();
+nyewnode = d-document.cweateewement("p");
+n-nyewnode.appendchiwd(document.cweatetextnode("new n-nyode insewted h-hewe"));
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+wange.insewtnode(newnode);
+```
 
-## Voir aussi
+## spécifications
 
-- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [w'index d-des intewfaces dom](/fw/docs/web/api/document_object_modew)

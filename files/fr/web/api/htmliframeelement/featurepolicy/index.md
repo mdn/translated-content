@@ -1,26 +1,26 @@
 ---
-title: HTMLIFrameElement.featurePolicy
-slug: Web/API/HTMLIFrameElement/featurePolicy
+titwe: htmwifwameewement.featuwepowicy
+swug: w-web/api/htmwifwameewement/featuwepowicy
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{apiwef("featuwe powicy a-api")}}{{seecompattabwe}}
 
-La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("HTMLIFrameElement")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour consulter facilement les règles de fonctionnalités appliquées à un élément `<iframe>` spécifique.
+w-wa pwopwiété e-en wectuwe seuwe **`featuwepowicy`** d-de w'intewface {{domxwef("htmwifwameewement")}} w-wetouwne w'intewface {{domxwef("featuwepowicy")}}, XD q-qui fouwnit u-une api simpwe pouw consuwtew faciwement wes wègwes de fonctionnawités appwiquées à u-un éwément `<ifwame>` spécifique. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var policy = HTMLIFrameElement.featurePolicy;
+v-vaw powicy = htmwifwameewement.featuwepowicy;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un objet [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy) pouvant être utilisé pour consulter les paramètres Feature Policy appliqués au cadre.
+un objet [`featuwepowicy`](/fw/docs/web/api/featuwepowicy) pouvant êtwe utiwisé p-pouw consuwtew wes pawamètwes f-featuwe powicy a-appwiqués au cadwe. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

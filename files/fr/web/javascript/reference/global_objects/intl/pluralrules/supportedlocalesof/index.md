@@ -1,56 +1,56 @@
 ---
-title: Intl.PluralRules.supportedLocalesOf()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
+titwe: intw.pwuwawwuwes.suppowtedwocawesof()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/suppowtedwocawesof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.PluralRules.supportedLocalesOf()`** renvoie un tableau contenant les locales prises en charge, parmi celles passées en argument, pour les règles de nombre (sans avoir à utiliser la locale par défaut du système d'exécution).
+w-wa méthode **`intw.pwuwawwuwes.suppowtedwocawesof()`** w-wenvoie u-un tabweau contenant w-wes wocawes p-pwises en chawge, ʘwʘ p-pawmi cewwes p-passées en awgument, (˘ω˘) p-pouw wes wègwes de nyombwe (sans avoiw à utiwisew wa wocawe paw défaut d-du système d'exécution). (U ﹏ U)
 
-## Syntaxe
-
-```js
-Intl.PluralRules.supportedLocalesOf(locales[, options])
-```
-
-### Paramètres
-
-- `locales`
-  - : Une chaîne de caractères représentant une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour la forme générale de l'argument `locales`, se référer à la page {{jsxref("Intl", "Intl", "#Identification_et_choix_de_la_locale", 1)}}.
-- `options` {{optional_inline}}
-
-  - : Optionnel. Un objet pouvant contenir la propriété suivante :
-
-    - `localeMatcher`
-      - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.
-
-### Valeur de retour
-
-Un tableau de chaînes de caractères représentant le sous-ensemble de balises de langues prises en charge pour le formatage avec les règles de nombre (sans qu'il soit nécssaire d'utiliser la locale par défaut du système d'exploitation).
-
-## Description
-
-Cette méthode renvoie un tableau contenant un sous-ensemble des balises de langue fournies dans l'argument `locales`. Les balises de langue sont celles qui sont prises en charge par l'environnement pour le formatage avec les règles de nombre et pour lesquelles la locale respecte l'algorithme de correspondance indiqué. Les locales de ce tableau évitent d'avoir à utiliser la locale du système d'exécution par défaut.
-
-## Exemples
-
-Dans l'hypothèse où on utilise un système prenant en charge l'indonésien, l'allemand mais pas le balinais pour le formatage avec les règles de nombre, `supportedLocalesOf` renvoie les balises de langue indonésienne et allemande inchangées bien que la collation `pinyin` ne soit pas pertinente ni utilisée avec l'indonésien (et qu'il est peu probable qu'une variante indonésienne pour l'allemand soit prise en charge). On notera que l'algorithme de correspondance `"lookup"` est utilisé ici. L'algorithme `"best fit"` aurait pu déterminer que l'indonésien aurait pu remplacer le balinais car la plupart des personnes parlant le balinais comprend également l'indonésien, la fonction aurait alors pu remplacer la balise de langue balinaise.
+## syntaxe
 
 ```js
-var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = { localeMatcher: "lookup" };
-console.log(Intl.PluralRules.supportedLocalesOf(locales, options).join(", "));
-// → "id-u-co-pinyin, de-ID"
+intw.pwuwawwuwes.suppowtedwocawesof(wocawes[, o-options])
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- `wocawes`
+  - : u-une chaîne de cawactèwes wepwésentant une bawise de wangue bcp 47 o-ou bien un tabweau de tewwes c-chaînes. ^•ﻌ•^ pouw w-wa fowme généwawe de w'awgument `wocawes`, (˘ω˘) se wéféwew à wa page {{jsxwef("intw", :3 "intw", "#identification_et_choix_de_wa_wocawe", ^^;; 1)}}.
+- `options` {{optionaw_inwine}}
 
-## Compatibilité des navigateurs
+  - : o-optionnew. 🥺 un objet pouvant conteniw wa pwopwiété suivante :
 
-{{Compat}}
+    - `wocawematchew`
+      - : w'awgowithme d-de cowwespondance à utiwisew p-pouw wa wocawe. (⑅˘꒳˘) w-wes vaweuws possibwes s-sont `"wookup"` e-et `"best fit"` ; we défaut est `"best fit"`. nyaa~~ p-pouw des infowmations suw cette option, :3 voiw w-wa page {{jsxwef("objets_gwobaux/intw","intw","##choix_de_wa_wocawe")}}. ( ͡o ω ͡o )
 
-## Voir aussi
+### vaweuw de wetouw
 
-- {{jsxref("PluralRules", "Intl.PluralRules")}}
+un tabweau de chaînes de cawactèwes wepwésentant we sous-ensembwe d-de bawises de wangues pwises e-en chawge pouw w-we fowmatage a-avec wes wègwes de nyombwe (sans qu'iw soit nyécssaiwe d'utiwisew w-wa wocawe paw d-défaut du système d'expwoitation). mya
+
+## d-descwiption
+
+c-cette méthode wenvoie un t-tabweau contenant un sous-ensembwe d-des bawises de wangue fouwnies dans w'awgument `wocawes`. (///ˬ///✿) wes b-bawises de wangue sont cewwes q-qui sont pwises en chawge paw w'enviwonnement pouw w-we fowmatage a-avec wes wègwes de nyombwe et pouw wesquewwes wa wocawe wespecte w'awgowithme de cowwespondance indiqué. (˘ω˘) wes w-wocawes de ce tabweau évitent d'avoiw à u-utiwisew wa wocawe du s-système d'exécution p-paw défaut. ^^;;
+
+## e-exempwes
+
+dans w'hypothèse où on utiwise un système pwenant e-en chawge w'indonésien, (✿oωo) w'awwemand mais pas we bawinais pouw we fowmatage a-avec wes wègwes de nyombwe, (U ﹏ U) `suppowtedwocawesof` w-wenvoie wes bawises d-de wangue i-indonésienne et awwemande inchangées b-bien que w-wa cowwation `pinyin` n-nye soit p-pas pewtinente nyi utiwisée avec w'indonésien (et q-qu'iw est peu p-pwobabwe qu'une v-vawiante indonésienne p-pouw w'awwemand s-soit pwise en chawge). -.- on nyotewa que w'awgowithme de cowwespondance `"wookup"` e-est utiwisé ici. ^•ﻌ•^ w'awgowithme `"best fit"` auwait pu détewminew que w'indonésien auwait pu wempwacew w-we bawinais caw wa pwupawt des pewsonnes pawwant we bawinais compwend égawement w-w'indonésien, rawr w-wa fonction auwait a-awows pu wempwacew wa bawise d-de wangue bawinaise.
+
+```js
+vaw w-wocawes = ["ban", (˘ω˘) "id-u-co-pinyin", nyaa~~ "de-id"];
+vaw o-options = { wocawematchew: "wookup" };
+consowe.wog(intw.pwuwawwuwes.suppowtedwocawesof(wocawes, UwU options).join(", :3 "));
+// → "id-u-co-pinyin, (⑅˘꒳˘) de-id"
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("pwuwawwuwes", (///ˬ///✿) "intw.pwuwawwuwes")}}

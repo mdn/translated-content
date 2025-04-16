@@ -1,104 +1,104 @@
 ---
-title: Symbol.iterator
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
+titwe: symbow.itewatow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole **`Symbol.iterator`** définit l'itérateur par défaut d'un objet. C'est l'itérateur qui sera utilisé par [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of).
+w-we symbowe **`symbow.itewatow`** d-définit w-w'itéwateuw paw d-défaut d'un o-objet. 😳😳😳 c'est w'itéwateuw q-qui sewa u-utiwisé paw [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of). :3
 
-{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+{{intewactiveexampwe("javascwipt demo: symbow.itewatow")}}
 
-```js interactive-example
-const iterable1 = {};
+```js intewactive-exampwe
+const itewabwe1 = {};
 
-iterable1[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+i-itewabwe1[symbow.itewatow] = function* () {
+  yiewd 1;
+  yiewd 2;
+  y-yiewd 3;
 };
 
-console.log([...iterable1]);
-// Expected output: Array [1, 2, 3]
+consowe.wog([...itewabwe1]);
+// e-expected output: awway [1, OwO 2, 3]
 ```
 
-## Description
+## descwiption
 
-Lorsqu'on doit itérer sur un objet (par exemple avec une boucle `for..of`), sa méthode `@@iterator` est appelée sans argument et l'itérateur renvoyé par la méthode est utilisé pour récupérer les valeurs sur lesquelles itérer.
+wowsqu'on d-doit itéwew suw un objet (paw e-exempwe avec u-une boucwe `fow..of`), (U ﹏ U) sa méthode `@@itewatow` est appewée sans awgument et w'itéwateuw wenvoyé p-paw wa méthode est utiwisé pouw wécupéwew wes vaweuws suw wesquewwes itéwew. >w<
 
-Certains types natifs possèdent un comportement par défaut pour l'itération, d'autres types (tels qu'{{jsxref("Object")}}) n'ont pas de tel comportement. Les types natifs qui disposent d'une méthode `@@iterator` sont :
+c-cewtains types nyatifs possèdent u-un compowtement p-paw défaut p-pouw w'itéwation, (U ﹏ U) d-d'autwes types (tews qu'{{jsxwef("object")}}) ny'ont pas d-de tew compowtement. wes types nyatifs qui disposent d-d'une méthode `@@itewatow` sont :
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxwef("awway.@@itewatow", 😳 "awway.pwototype[@@itewatow]()")}}
+- {{jsxwef("typedawway.@@itewatow", (ˆ ﻌ ˆ)♡ "typedawway.pwototype[@@itewatow]()")}}
+- {{jsxwef("stwing.@@itewatow", 😳😳😳 "stwing.pwototype[@@itewatow]()")}}
+- {{jsxwef("map.@@itewatow", (U ﹏ U) "map.pwototype[@@itewatow]()")}}
+- {{jsxwef("set.@@itewatow", (///ˬ///✿) "set.pwototype[@@itewatow]()")}}
 
-Pour plus d'informations, voir aussi [la page sur les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols).
+pouw pwus d'infowmations, 😳 voiw aussi [wa page suw wes pwotocowes d-d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows). 😳
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemples
+## exempwes
 
-### Itérables définis par l'utilisateur
+### i-itéwabwes d-définis paw w'utiwisateuw
 
-Il est possible de construire un itérable de la façon suivante :
+i-iw est possibwe de constwuiwe un itéwabwe de wa façon s-suivante :
 
 ```js
-var monItérable = {};
-monItérable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+v-vaw monitéwabwe = {};
+monitéwabwe[symbow.itewatow] = f-function* () {
+  y-yiewd 1;
+  yiewd 2;
+  y-yiewd 3;
 };
-[...monItérable]; // [1, 2, 3]
+[...monitéwabwe]; // [1, σωσ 2, 3]
 ```
 
-On peut également définir ces itérables via des propriétés calculées dans des déclarations de classe ou dans des littéraux objets :
+on peut égawement d-définiw ces itéwabwes via des pwopwiétés c-cawcuwées dans des décwawations d-de cwasse ou dans des wittéwaux o-objets :
 
 ```js
-class Toto {
-  *[Symbol.iterator] () {
-    yield 1;
-    yield 2;
-    yield 3;
+c-cwass toto {
+  *[symbow.itewatow] () {
+    yiewd 1;
+    yiewd 2;
+    yiewd 3;
   }
 }
 
-const monObj = {
-  *[Symbol.iterator] () {
-    yield "a";
-    yield "b";
+const monobj = {
+  *[symbow.itewatow] () {
+    yiewd "a";
+    yiewd "b";
   }
 }
 
-[... new Toto] // [1, 2, 3]
-[... monObj]   // ["a", "b"]
+[... n-new toto] // [1, rawr x3 2, 3]
+[... m-monobj]   // ["a", OwO "b"]
 ```
 
-### Itérables mal-formés
+### itéwabwes maw-fowmés
 
-Si la méthode `@@iterator` d'un itérable ne renvoie pas un itérateur, on dira que c'est un itérable mal-formé. Utiliser un tel itérable peut provoquer des erreurs lors de l'exécution :
+s-si wa méthode `@@itewatow` d-d'un itéwabwe n-ne wenvoie pas un itéwateuw, /(^•ω•^) on diwa que c'est un itéwabwe maw-fowmé. 😳😳😳 u-utiwisew un tew itéwabwe peut pwovoquew des ewweuws wows de w'exécution :
 
 ```js
-var itérableMalFormé = {}
-itérableMalFormé[Symbol.iterator] = () => 1
-[...itérableMalFormé] // TypeError: [] is not a function
+v-vaw itéwabwemawfowmé = {}
+i-itéwabwemawfowmé[symbow.itewatow] = () => 1
+[...itéwabwemawfowmé] // t-typeewwow: [] i-is nyot a function
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- [wes p-pwotocowes d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("awway.@@itewatow", ( ͡o ω ͡o ) "awway.pwototype[@@itewatow]()")}}
+- {{jsxwef("typedawway.@@itewatow", >_< "typedawway.pwototype[@@itewatow]()")}}
+- {{jsxwef("stwing.@@itewatow", >w< "stwing.pwototype[@@itewatow]()")}}
+- {{jsxwef("map.@@itewatow", rawr "map.pwototype[@@itewatow]()")}}
+- {{jsxwef("set.@@itewatow", 😳 "set.pwototype[@@itewatow]()")}}

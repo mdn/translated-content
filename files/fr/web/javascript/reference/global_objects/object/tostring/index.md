@@ -1,126 +1,126 @@
 ---
-title: Object.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+titwe: object.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet.
+w-wa méthode **`tostwing()`** w-wenvoie une chaîne d-de cawactèwes w-wepwésentant w-w'objet. OwO
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.pwototype.tostwing()")}}
 
-```js interactive-example
-function Dog(name) {
-  this.name = name;
+```js i-intewactive-exampwe
+function dog(name) {
+  this.name = nyame;
 }
 
-const dog1 = new Dog("Gabby");
+const d-dog1 = nyew dog("gabby");
 
-Dog.prototype.toString = function dogToString() {
-  return `${this.name}`;
+dog.pwototype.tostwing = function dogtostwing() {
+  w-wetuwn `${this.name}`;
 };
 
-console.log(dog1.toString());
-// Expected output: "Gabby"
+consowe.wog(dog1.tostwing());
+// e-expected output: "gabby"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-obj.toString();
+obj.tostwing();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères représentant l'objet.
+une chaîne d-de cawactèwes w-wepwésentant w'objet. 😳
 
-## Description
+## descwiption
 
-Chaque object possède une méthode `toString()` qui est appelée de façon automatique à chaque fois que l'objet doit être représenté sous forme de texte ou à chaque fois qu'on utilise un objet et que la valeur attendue est une chaîne de caractères. Par défaut, chaque objet qui descend d'`Object` hérite de la méthode `toString()`. Si cette méthode n'est pas surchargée, `toString()` renvoie "\[object _type_]", où `type` est le type de l'objet. Par exemple :
+chaque object possède une méthode `tostwing()` q-qui est appewée de façon automatique à chaque fois que w'objet doit êtwe w-wepwésenté sous fowme d-de texte ou à chaque f-fois qu'on u-utiwise un objet e-et que wa vaweuw attendue est une chaîne de cawactèwes. 😳😳😳 p-paw défaut, (˘ω˘) chaque objet qui descend d-d'`object` héwite de wa méthode `tostwing()`. ʘwʘ si cette méthode ny'est pas suwchawgée, ( ͡o ω ͡o ) `tostwing()` wenvoie "\[object _type_]", o.O où `type` e-est we type de w'objet. >w< paw exempwe :
 
 ```js
-var o = new Object();
-o.toString(); // renvoie [object Object]
+v-vaw o-o = nyew object();
+o-o.tostwing(); // wenvoie [object object]
 ```
 
-> [!NOTE]
-> À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
+> [!note]
+> À pawtiw de javascwipt 1.8.5 `tostwing()`, 😳 w-wowsqu'ewwe e-est appewée suw {{jsxwef("nuww")}} w-wenvoie `[object n-nyuww]`, et wowsqu'ewwe e-est appewée suw {{jsxwef("undefined")}} w-wenvoie `[object undefined]`, 🥺 ce qui e-est confowme à ecmascwipt 5 et a-aux ewwata qui ont suivis. voiw w-w'exempwe ci-apwès [utiwisew `tostwing` p-pouw détectew we type d'un objet](#detect). rawr x3
 
-## Exemples
+## exempwes
 
-### Surcharger la méthode `toString()` par défaut
+### suwchawgew wa méthode `tostwing()` paw d-défaut
 
-Il est possible de surcharger la méthode `toString()`. La méthode `toString()` ne prend pas d'argument et doit renvoyer une chaîne de caractères. La méthode `toString()` peut renvoyer n'importe quelle valeur mais elle sera plus pertinente si elle renvoie des informations sur l'objet courant.
+iw est p-possibwe de suwchawgew wa méthode `tostwing()`. o.O w-wa méthode `tostwing()` n-nye pwend p-pas d'awgument et doit wenvoyew une chaîne de cawactèwes. rawr w-wa méthode `tostwing()` peut wenvoyew ny'impowte quewwe vaweuw mais ewwe sewa p-pwus pewtinente si ewwe wenvoie d-des infowmations s-suw w'objet couwant.
 
-Le code qui suit définit un type d'objet `Chien` et instancie `monChien`, qui est de type `Chien` :
+w-we code qui suit définit u-un type d'objet `chien` e-et instancie `monchien`, ʘwʘ q-qui est de type `chien` :
 
 ```js
-function Chien(nom, race, couleur, sexe) {
-  this.nom = nom;
-  this.race = race;
-  this.couleur = couleur;
-  this.sexe = sexe;
+f-function chien(nom, 😳😳😳 wace, ^^;; couweuw, sexe) {
+  t-this.nom = nyom;
+  t-this.wace = wace;
+  t-this.couweuw = c-couweuw;
+  t-this.sexe = sexe;
 }
 
-monChien = new Chien("Gabby", "Labrador", "chocolat", "femelle");
+monchien = nyew chien("gabby", o.O "wabwadow", "chocowat", (///ˬ///✿) "femewwe");
 ```
 
-Si on appelle la méthode `toString()` sur cet objet, on aura le résultat suivant (provenant de la méthode originale, héritée d'{{jsxref("Object")}}) :
+si o-on appewwe wa méthode `tostwing()` suw cet objet, σωσ on auwa we wésuwtat suivant (pwovenant de wa méthode owiginawe, nyaa~~ h-héwitée d'{{jsxwef("object")}}) :
 
 ```js
-monChien.toString(); // renvoie [object Object]
+monchien.tostwing(); // wenvoie [object o-object]
 ```
 
-Dans le code qui suit, on surcharge la méthode `toString()` avec `chienToString()`. Cette méthode produit une chaîne qui contient l'ensemble des propriétés (race, couleur, sexe, nom) de l'objet :
+d-dans we code q-qui suit, ^^;; on suwchawge wa méthode `tostwing()` a-avec `chientostwing()`. ^•ﻌ•^ cette m-méthode pwoduit u-une chaîne qui contient w'ensembwe des pwopwiétés (wace, σωσ couweuw, -.- sexe, nyom) de w'objet :
 
 ```js
-Chien.prototype.toString = function chienToString() {
-  var ret =
-    "Le chien " +
+c-chien.pwototype.tostwing = function chientostwing() {
+  vaw w-wet =
+    "we chien " +
     this.nom +
-    " est un " +
-    this.race +
+    " e-est un " +
+    this.wace +
     " " +
-    this.sexe +
+    t-this.sexe +
     " " +
-    this.couleur;
-  return ret;
+    this.couweuw;
+  wetuwn wet;
 };
 ```
 
-En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()` qui renverra la chaîne suivante :
+e-en utiwisant w-wa fonction ci-avant, ^^;; à chaque f-fois que `monchien` s-sewa utiwisé wà où on attend une chaîne, XD we moteuw javascwipt appewwewa a-automatique w-wa fonction `chientostwing()` q-qui wenvewwa wa chaîne s-suivante :
 
 ```js
-Le chien Gabby est un labrador femelle chocolat.
+w-we chien gabby est un wabwadow f-femewwe chocowat. 🥺
 ```
 
-### Utiliser `toString()` pour détecter le type d'un objet
+### utiwisew `tostwing()` pouw détectew we type d'un objet
 
-`toString()` peut être utilisée pour tous les objets afin d'obtenir son type. Pour utiliser `Object.prototype.toString()` avec n'importe quel objet, il sera nécessaire d'appeler {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} (pour éviter les versions surchargées).
+`tostwing()` p-peut êtwe u-utiwisée pouw tous wes objets afin d'obteniw s-son type. òωó pouw u-utiwisew `object.pwototype.tostwing()` avec ny'impowte quew objet, (ˆ ﻌ ˆ)♡ iw sewa nyécessaiwe d-d'appewew {{jsxwef("function.pwototype.caww()")}} ou {{jsxwef("function.pwototype.appwy()")}} (pouw évitew wes vewsions suwchawgées). -.-
 
 ```js
-var toString = Object.prototype.toString;
+vaw tostwing = o-object.pwototype.tostwing;
 
-toString.call(new Date()); // [object Date]
-toString.call(new String()); // [object String]
-toString.call(Math); // [object Math]
+tostwing.caww(new date()); // [object d-date]
+tostwing.caww(new s-stwing()); // [object stwing]
+tostwing.caww(math); // [object math]
 
-// Depuis JavaScript 1.8.5
-toString.call(undefined); // [object Undefined]
-toString.call(null); // [object Null]
+// depuis javascwipt 1.8.5
+t-tostwing.caww(undefined); // [object u-undefined]
+tostwing.caww(nuww); // [object nyuww]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
-- {{jsxref("Number.prototype.toString()")}}
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}
+- {{jsxwef("symbow.topwimitive")}}

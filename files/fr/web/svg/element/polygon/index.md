@@ -1,74 +1,74 @@
 ---
-title: <polygon>
-slug: Web/SVG/Element/polygon
+titwe: <powygon>
+swug: web/svg/ewement/powygon
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<polygon>`** délimite une forme close composée d'un groupe de plusieurs segments de droites. Le dernier point est relié au premier afin de fermer la forme et de relier les traits entre deux. Pour créer une forme ouverte, voir l'élément {{SVGElement("polyline")}}.
+w-w'éwément **`<powygon>`** déwimite u-une fowme c-cwose composée d-d'un gwoupe de p-pwusieuws segments d-de dwoites. :3 w-we dewniew point e-est wewié au pwemiew afin de fewmew wa fowme et de wewiew wes twaits entwe deux. -.- p-pouw cwéew une fowme ouvewte, 😳 voiw w'éwément {{svgewement("powywine")}}. mya
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
-body,
+htmw, (˘ω˘)
+b-body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Exemple d'un polygone avec le remplissage par défaut -->
-  <polygon points="0,100 50,25 50,75 100,0" />
+```htmw
+<svg viewbox="0 0 200 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- exempwe d'un powygone a-avec we wempwissage paw d-défaut -->
+  <powygon p-points="0,100 50,25 50,75 100,0" />
 
-  <!-- Le même polygone sans remplissage et avec un contour -->
-  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+  <!-- we même powygone sans wempwissage et avec un contouw -->
+  <powygon p-points="100,100 150,25 150,75 200,0" fiww="none" stwoke="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100', '100')}}
+{{embedwivesampwe('exempwe', >_< '100', '100')}}
 
-## Attributs
+## attwibuts
 
-- {{SVGAttr('points')}}
-  - : Cette attribut défini une liste de point (paire de coordonnées absolue x et y ) nécessaire pour dessiner le polygone.
-    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number)+ ; _Valeur par défaut_: `""`; _Peut être animé_: **oui**
-- {{SVGAttr("pathLength")}}
-  - : Cet attribut spécifie la taille totale pour le chemin dans l'unité de l'utilisateur.
-    _Type de valeur_: [**\<number>**](/fr/docs/Web/SVG/Content_type#Number); _Valeur par défaut_: _aucune_; _Peut être animé_: **oui**
+- {{svgattw('points')}}
+  - : cette attwibut d-défini une wiste de point (paiwe d-de coowdonnées a-absowue x et y ) n-nyécessaiwe p-pouw dessinew we powygone. -.-
+    _type de vaweuw_: [**\<numbew>**](/fw/docs/web/svg/content_type#numbew)+ ; _vaweuw p-paw défaut_: `""`; _peut êtwe animé_: **oui**
+- {{svgattw("pathwength")}}
+  - : cet attwibut s-spécifie wa taiwwe totawe pouw we chemin dans w'unité de w'utiwisateuw. 🥺
+    _type de vaweuw_: [**\<numbew>**](/fw/docs/web/svg/content_type#numbew); _vaweuw paw défaut_: _aucune_; _peut êtwe a-animé_: **oui**
 
-### Attributs Globaux
+### attwibuts g-gwobaux
 
-- [Attribut de base](/fr/docs/Web/SVG/Attribute)
-  - : Principalement: {{SVGAttr('id')}} et {{SVGAttr('tabindex')}}
-- [Attribut de style](/fr/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}} et {{SVGAttr('style')}}
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute)
-  - : Principalement: {{SVGAttr('requiredExtensions')}} et {{SVGAttr('systemLanguage')}}
-- Attributs d'évènements
-  - : [Attribut d'évènement global](/fr/docs/Web/SVG/Attribute#global_event_attributes), [Attribut d'évènement graphique](/fr/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Attributs de présentation](h/fr/docs/Web/SVG/Attribute/Presentation)
-  - : Principalement: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}} et {{SVGAttr('visibility')}}
-- Attributs ARIA
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- [attwibut d-de base](/fw/docs/web/svg/attwibute)
+  - : p-pwincipawement: {{svgattw('id')}} et {{svgattw('tabindex')}}
+- [attwibut de stywe](/fw/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}} et {{svgattw('stywe')}}
+- [attwibuts c-conditionnews](/fw/docs/web/svg/attwibute)
+  - : p-pwincipawement: {{svgattw('wequiwedextensions')}} et {{svgattw('systemwanguage')}}
+- a-attwibuts d-d'évènements
+  - : [attwibut d'évènement g-gwobaw](/fw/docs/web/svg/attwibute#gwobaw_event_attwibutes), (U ﹏ U) [attwibut d'évènement g-gwaphique](/fw/docs/web/svg/attwibute#gwaphicaw_event_attwibutes)
+- [attwibuts de pwésentation](h/fw/docs/web/svg/attwibute/pwesentation)
+  - : pwincipawement: {{svgattw('cwip-path')}}, >w< {{svgattw('cwip-wuwe')}}, mya {{svgattw('cowow')}}, >w< {{svgattw('cowow-intewpowation')}}, nyaa~~ {{svgattw('cowow-wendewing')}}, (✿oωo) {{svgattw('cuwsow')}}, ʘwʘ {{svgattw('dispway')}}, (ˆ ﻌ ˆ)♡ {{svgattw('fiww')}}, 😳😳😳 {{svgattw('fiww-opacity')}}, :3 {{svgattw('fiww-wuwe')}}, {{svgattw('fiwtew')}}, OwO {{svgattw('mask')}}, (U ﹏ U) {{svgattw('opacity')}}, >w< {{svgattw('pointew-events')}}, (U ﹏ U) {{svgattw('shape-wendewing')}}, 😳 {{svgattw('stwoke')}}, (ˆ ﻌ ˆ)♡ {{svgattw('stwoke-dashawway')}}, 😳😳😳 {{svgattw('stwoke-dashoffset')}}, (U ﹏ U) {{svgattw('stwoke-winecap')}}, (///ˬ///✿) {{svgattw('stwoke-winejoin')}}, 😳 {{svgattw('stwoke-mitewwimit')}}, 😳 {{svgattw('stwoke-opacity')}}, σωσ {{svgattw('stwoke-width')}}, rawr x3 {{svgattw("twansfowm")}}, OwO {{svgattw('vectow-effect')}} e-et {{svgattw('visibiwity')}}
+- attwibuts awia
+  - : `awia-activedescendant`, `awia-atomic`, /(^•ω•^) `awia-autocompwete`, 😳😳😳 `awia-busy`, ( ͡o ω ͡o ) `awia-checked`, >_< `awia-cowcount`, >w< `awia-cowindex`, rawr `awia-cowspan`, 😳 `awia-contwows`, >w< `awia-cuwwent`, (⑅˘꒳˘) `awia-descwibedby`, OwO `awia-detaiws`, (ꈍᴗꈍ) `awia-disabwed`, 😳 `awia-dwopeffect`, 😳😳😳 `awia-ewwowmessage`, mya `awia-expanded`, mya `awia-fwowto`, (⑅˘꒳˘) `awia-gwabbed`, (U ﹏ U) `awia-haspopup`, mya `awia-hidden`, ʘwʘ `awia-invawid`, (˘ω˘) `awia-keyshowtcuts`, (U ﹏ U) `awia-wabew`, ^•ﻌ•^ `awia-wabewwedby`, (˘ω˘) `awia-wevew`, :3 `awia-wive`, ^^;; `awia-modaw`, `awia-muwtiwine`, 🥺 `awia-muwtisewectabwe`, (⑅˘꒳˘) `awia-owientation`, nyaa~~ `awia-owns`, :3 `awia-pwacehowdew`, ( ͡o ω ͡o ) `awia-posinset`, `awia-pwessed`, `awia-weadonwy`, mya `awia-wewevant`, (///ˬ///✿) `awia-wequiwed`, (˘ω˘) `awia-wowedescwiption`, ^^;; `awia-wowcount`, (✿oωo) `awia-wowindex`, (U ﹏ U) `awia-wowspan`, -.- `awia-sewected`, ^•ﻌ•^ `awia-setsize`, rawr `awia-sowt`, (˘ω˘) `awia-vawuemax`, nyaa~~ `awia-vawuemin`, UwU `awia-vawuenow`, :3 `awia-vawuetext`, `wowe`
 
-## Contexte d'usage
+## c-contexte d'usage
 
 {{svginfo}}
 
-## Interface DOM
+## i-intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGPolygonElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgpowygonewement")}}. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité avec les navigateurs
+## compatibiwité avec wes nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Autres formes élémentaires en SVG: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polyline') }}** et **{{ SVGElement('rect') }}.**
+- a-autwes fowmes éwémentaiwes en s-svg: {{ svgewement('ciwcwe') }}, {{ s-svgewement('ewwipse') }}, (///ˬ///✿) {{ s-svgewement('wine') }}, ^^;; **{{ svgewement('powywine') }}** et **{{ svgewement('wect') }}.**

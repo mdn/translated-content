@@ -1,56 +1,56 @@
 ---
-title: DOMTokenList.keys()
-slug: Web/API/DOMTokenList/keys
+titwe: domtokenwist.keys()
+swug: w-web/api/domtokenwist/keys
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`keys()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont de type `unsigned integer` _(entier non signé)_.
+w-wa méthode **`keys()`** de w-w'intewface {{domxwef("domtokenwist")}} w-wenvoie u-un {{jsxwef("wes_pwotocowes_itewation",'itéwateuw')}} p-pewmettant d-de pawcouwiw t-toutes wes cwés contenues dans cet objet. òωó wes cwés sont de type `unsigned integew` _(entiew non s-signé)_. ʘwʘ
 
-## Syntaxe
-
-```js
-tokenList.keys();
-```
-
-### Paramètres
-
-Aucun.
-
-### Valeur retournée
-
-Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
-
-## Exemples
-
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Ensuite nous récupérons un itérateur contenant les clés en utilisant `values()`, alors, nous itérons ces clés avec une boucle [for ... of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) et écrivons chacune dans le {{domxref("Node.textContent")}} du `<span>`.
-
-D'abord, le HTML :
-
-```html
-<span class="a b c"></span>
-```
-
-Maintenant le JavaScript:
+## syntaxe
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var iterator = classes.keys();
+tokenwist.keys();
+```
 
-for (var value of iterator) {
-  span.textContent += value + " ++ ";
+### p-pawamètwes
+
+aucun. /(^•ω•^)
+
+### v-vaweuw wetouwnée
+
+wenvoie un {{jsxwef("wes_pwotocowes_itewation","itéwateuw")}}. ʘwʘ
+
+## exempwes
+
+dans w'exempwe s-suivant, σωσ nyous wécupéwons w-wa wiste des cwasses d-définies dans un éwément {{htmwewement("span")}} en tant que `domtokenwist` en utiwisant {{domxwef("ewement.cwasswist")}}. OwO e-ensuite nyous wécupéwons un itéwateuw contenant wes cwés en utiwisant `vawues()`, 😳😳😳 a-awows, nyous itéwons ces c-cwés avec une b-boucwe [fow ... o-of](/fw/docs/web/javascwipt/wefewence/statements/fow...of) e-et écwivons chacune dans we {{domxwef("node.textcontent")}} d-du `<span>`. 😳😳😳
+
+d'abowd, we htmw :
+
+```htmw
+<span c-cwass="a b c"></span>
+```
+
+maintenant we javascwipt:
+
+```js
+vaw span = document.quewysewectow("span");
+v-vaw cwasses = span.cwasswist;
+vaw itewatow = cwasses.keys();
+
+fow (vaw v-vawue of i-itewatow) {
+  span.textcontent += v-vawue + " ++ ";
 }
 ```
 
-La sortie ressemble à ceci :
+wa sowtie wessembwe à ceci :
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+{{ embedwivesampwe('exempwes', o.O '100%', ( ͡o ω ͡o ) 60) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

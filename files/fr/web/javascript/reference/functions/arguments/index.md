@@ -1,247 +1,247 @@
 ---
-title: arguments
-slug: Web/JavaScript/Reference/Functions/arguments
+titwe: awguments
+swug: web/javascwipt/wefewence/functions/awguments
 ---
 
-{{jsSidebar("Fonctions")}}
+{{jssidebaw("fonctions")}}
 
-L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant aux arguments passés à une fonction.
+w-w'objet **`awguments`** e-est un objet, :3 **sembwabwe** à un t-tabweau, /(^•ω•^) cowwespondant a-aux awguments p-passés à u-une fonction. ^•ﻌ•^
 
-> [!NOTE]
-> Si vous pouvez utiliser les fonctionnalités ECMAScript 2015/ES6, il est préférable de manipuler les arguments avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+> [!note]
+> s-si v-vous pouvez utiwisew wes fonctionnawités ecmascwipt 2015/es6, UwU iw est pwéféwabwe de manipuwew w-wes awguments avec [wes pawamètwes du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews). 😳😳😳
 
-> [!NOTE]
-> Par « objet semblable à un tableau », on indique que l'objet `arguments` possède une propriété {{jsxref("Fonctions/arguments.length", "length")}} et que ses propriétés sont indexées à partir de 0 mais qu'il ne possède aucune des méthodes natives de {{jsxref("Array")}} telles que {{jsxref("Array.forEach", "forEach()")}} et {{jsxref("Array.map", "map()")}}.
+> [!note]
+> p-paw « objet sembwabwe à u-un tabweau », OwO on indique que w'objet `awguments` possède une p-pwopwiété {{jsxwef("fonctions/awguments.wength", ^•ﻌ•^ "wength")}} et que ses pwopwiétés s-sont indexées à p-pawtiw de 0 mais qu'iw nye possède aucune des méthodes nyatives de {{jsxwef("awway")}} t-tewwes que {{jsxwef("awway.foweach", (ꈍᴗꈍ) "foweach()")}} et {{jsxwef("awway.map", (⑅˘꒳˘) "map()")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{intewactiveexampwe("javascwipt demo: functions awguments")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  console.log(arguments[0]);
-  // Expected output: 1
+```js intewactive-exampwe
+function f-func1(a, (ˆ ﻌ ˆ)♡ b, c) {
+  consowe.wog(awguments[0]);
+  // e-expected output: 1
 
-  console.log(arguments[1]);
-  // Expected output: 2
+  c-consowe.wog(awguments[1]);
+  // e-expected o-output: 2
 
-  console.log(arguments[2]);
-  // Expected output: 3
+  consowe.wog(awguments[2]);
+  // expected output: 3
 }
 
-func1(1, 2, 3);
+f-func1(1, /(^•ω•^) 2, 3);
 ```
 
-> [!NOTE]
-> « Variable ayant la fonction pour portée » correspond à la traduction de « Variable of the function scope » qu'il serait incorrect de traduire par « Variable de la portée de la fonction » car la portée de la fonction est la portée dans laquelle on peut appeler la fonction. Une variable locale de la fonction pourrait quant à elle avoir une portée strictement incluse dans le corps de la fonction (variable définie dans un bloc de la fonction même si cette subtilité n'existe pas en Javascript). Toute suggestion pour éviter cette tournure un peu longue sans altérer le sens est la bienvenue. (variable intrinsèque)
+> [!note]
+> « vawiabwe ayant wa fonction p-pouw powtée » cowwespond à wa twaduction de « vawiabwe of the function scope » qu'iw sewait i-incowwect de twaduiwe paw « v-vawiabwe de wa p-powtée de wa f-fonction » caw wa powtée de wa fonction est wa powtée dans waquewwe o-on peut appewew w-wa fonction. òωó une vawiabwe w-wocawe de wa fonction p-pouwwait quant à ewwe avoiw u-une powtée stwictement incwuse d-dans we cowps de wa fonction (vawiabwe définie d-dans un bwoc de wa fonction m-même si cette subtiwité ny'existe p-pas en javascwipt). (⑅˘꒳˘) t-toute suggestion pouw évitew cette touwnuwe un peu wongue sans awtéwew we sens est wa bienvenue. (U ᵕ U❁) (vawiabwe i-intwinsèque)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arguments;
+awguments;
 ```
 
-## Description
+## d-descwiption
 
-L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonctions) disponible dans toutes les fonctions (qui ne sont pas [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)).
+w-w'objet `awguments` e-est une vawiabwe wocawe (intwinsèque et inhéwente aux fonctions) disponibwe d-dans toutes wes fonctions (qui nye sont pas [des fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions)). >w<
 
-Vous pouvez accéder aux arguments d'une fonction à l'intérieur de celle-ci en utilisant l'objet `arguments`. Cet objet contient une entrée pour chaque argument passé à la fonction, l'indice de la première entrée commençant à 0. Par exemple, si une fonction est appelée avec trois arguments, on accède à ceux-ci comme suit&nbsp;:
+vous p-pouvez accédew aux awguments d-d'une fonction à w-w'intéwieuw d-de cewwe-ci en utiwisant w'objet `awguments`. σωσ cet o-objet contient u-une entwée pouw c-chaque awgument p-passé à wa fonction, -.- w'indice de wa pwemièwe e-entwée commençant à 0. o.O p-paw e-exempwe, ^^ si une f-fonction est appewée a-avec twois awguments, >_< on accède à ceux-ci comme suit&nbsp;:
 
 ```js
-arguments[0];
-arguments[1];
-arguments[2];
+a-awguments[0];
+awguments[1];
+awguments[2];
 ```
 
-Les arguments peuvent aussi être modifiés&nbsp;:
+wes awguments peuvent aussi êtwe modifiés&nbsp;:
 
 ```js
-arguments[1] = "nouvelle valeur";
+a-awguments[1] = "nouvewwe vaweuw";
 ```
 
-### Type de l'objet `arguments` et liens avec `Array`
+### type de w'objet `awguments` et wiens a-avec `awway`
 
-L'objet `arguments` n'est pas un {{jsxref("Array")}}. Il est similaire à un `Array`, mais il n'a pas les propriétés d'un `Array,` exceptée la propriété {{jsxref("Array.length", "length")}}. Par exemple, il n'a pas la méthode {{jsxref("Array.pop", "pop()")}}. Néanmoins, il peut être converti en un vrai objet de type `Array`&nbsp;:
+w-w'objet `awguments` n-ny'est pas un {{jsxwef("awway")}}. >w< i-iw est simiwaiwe à un `awway`, >_< m-mais iw n-ny'a pas wes pwopwiétés d'un `awway,` exceptée wa pwopwiété {{jsxwef("awway.wength", >w< "wength")}}. rawr paw exempwe, rawr x3 iw ny'a pas w-wa méthode {{jsxwef("awway.pop", ( ͡o ω ͡o ) "pop()")}}. nyéanmoins, (˘ω˘) iw p-peut êtwe convewti en un vwai objet d-de type `awway`&nbsp;:
 
 ```js
-console.log(typeof arguments); // 'object'
-var args = Array.prototype.slice.call(arguments);
+c-consowe.wog(typeof awguments); // 'object'
+vaw a-awgs = awway.pwototype.swice.caww(awguments);
 
-// Avec ECMAScript 2015 / ES6
-var args = Array.from(arguments);
+// a-avec ecmascwipt 2015 / es6
+vaw a-awgs = awway.fwom(awguments);
 ```
 
-### Utilisation de la décomposition avec les arguments
+### u-utiwisation de wa décomposition avec wes awguments
 
-On peut utiliser la méthode {{jsxref("Array.from()")}} ou encore [l'opérateur de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition) afin de convertir cet objet en un _vrai_ `Array` :
+on peut utiwisew w-wa méthode {{jsxwef("awway.fwom()")}} o-ou encowe [w'opéwateuw de d-décomposition](/fw/docs/web/javascwipt/wefewence/opéwateuws/opéwateuw_de_décomposition) afin d-de convewtiw c-cet objet en un _vwai_ `awway` :
 
 ```js
-var args = Array.from(arguments);
-var args = [...arguments];
+vaw awgs = a-awway.fwom(awguments);
+vaw awgs = [...awguments];
 ```
 
-> [!WARNING]
-> Il est déconseillé d'utiliser `slice` sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir [cette page](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser `Array.apply` :
+> [!wawning]
+> iw est déconseiwwé d'utiwisew `swice` suw wes awguments c-caw cewa peut e-empêchew cewtaines optimisations des moteuws javascwipt. 😳 p-pouw c-ce scénawio, on peut paw exempwe constwuiwe un nyouveau tabweau e-en pawcouwant w'objet awguments (à ce sujet, OwO voiw [cette page](https://github.com/petkaantonov/bwuebiwd/wiki/optimization-kiwwews#3-managing-awguments) suw wes c-contwaintes d'optimisations wiées à v8). (˘ω˘) pouw c-cet exempwe, òωó on p-pouwwa utiwisew `awway.appwy` :
 >
 > ```js
-> var args =
->   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
+> vaw awgs =
+>   awguments.wength === 1 ? [awguments[0]] : awway.appwy(nuww, ( ͡o ω ͡o ) a-awguments);
 > ```
 
-L'objet `arguments` est disponible uniquement dans le corps d'une fonction. Tenter d'accéder à l'objet `arguments` en dehors de la déclaration d'une fonction renvoie une erreur.
+w-w'objet `awguments` est disponibwe uniquement dans we cowps d'une fonction. UwU t-tentew d'accédew à w'objet `awguments` e-en dehows de wa décwawation d'une fonction wenvoie une ewweuw. /(^•ω•^)
 
-Vous pouvez utiliser l'objet `arguments` si vous appelez une fonction avec plus de paramètres que ceux déclarés dans sa signature. Cette technique est utile pour les fonctions qui acceptent un nombre variable d'arguments. Vous pouvez utiliser {{jsxref("Fonctions/arguments/length", "arguments.length")}} pour déterminer le nombre de paramètres passés à la fonction, puis utiliser chaque argument en utilisant l'objet `arguments`. (Pour déterminer le nombre d'arguments déclarés à la définition de la fonction, il faut utiliser la propriété {{jsxref("Function.length", "length")}}.)
+v-vous pouvez utiwisew w'objet `awguments` s-si vous a-appewez une fonction avec pwus d-de pawamètwes que ceux décwawés d-dans sa signatuwe. (ꈍᴗꈍ) c-cette technique e-est utiwe pouw wes fonctions q-qui acceptent u-un nyombwe vawiabwe d'awguments. 😳 vous pouvez u-utiwisew {{jsxwef("fonctions/awguments/wength", mya "awguments.wength")}} p-pouw détewminew w-we nyombwe de pawamètwes passés à wa fonction, mya p-puis utiwisew chaque awgument e-en utiwisant w-w'objet `awguments`. /(^•ω•^) (pouw détewminew we nyombwe d'awguments décwawés à w-wa définition de w-wa fonction, ^^;; iw f-faut utiwisew w-wa pwopwiété {{jsxwef("function.wength", 🥺 "wength")}}.)
 
-### Utiliser `typeof` sur `arguments`
+### utiwisew `typeof` s-suw `awguments`
 
-L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof","typeof")}} renvoie `"object"` lorsqu'on l'utilise sur `arguments`
+w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_typeof","typeof")}} wenvoie `"object"` wowsqu'on w'utiwise suw `awguments`
 
 ```js
-console.log(typeof arguments); // "object"
+consowe.wog(typeof a-awguments); // "object"
 ```
 
-On peut tout à fait utiliser `typeof` sur chacun des arguments afin de connaître leur type respectif
+on peut tout à f-fait utiwisew `typeof` suw chacun d-des awguments afin de connaîtwe w-weuw type wespectif
 
 ```js
-console.log(typeof arguments[0]); // renvoie le type du premier argument
+c-consowe.wog(typeof a-awguments[0]); // w-wenvoie we t-type du pwemiew a-awgument
 ```
 
-## Propriétés
+## pwopwiétés
 
-- {{jsxref("Fonctions/arguments/callee", "arguments.callee")}} {{Deprecated_inline}}
-  - : Référence à la fonction en cours d'exécution.
-- {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} {{deprecated_inline}}
-  - : Référence à la fonction appelante.
-- {{jsxref("Fonctions/arguments/length", "arguments.length")}}
-  - : Référence au nombre d'arguments passés à la fonction.
-- {{jsxref("Fonctions/arguments/@@iterator", "arguments[@@iterator]")}}
-  - : Renvoie un nouvel [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérateurs) qui contient les valeurs pour chaque indice d'`arguments`.
+- {{jsxwef("fonctions/awguments/cawwee", ^^ "awguments.cawwee")}} {{depwecated_inwine}}
+  - : wéféwence à wa fonction en couws d'exécution. ^•ﻌ•^
+- {{jsxwef("fonctions/awguments/cawwew", /(^•ω•^) "awguments.cawwew")}} {{depwecated_inwine}}
+  - : wéféwence à wa fonction a-appewante. ^^
+- {{jsxwef("fonctions/awguments/wength", 🥺 "awguments.wength")}}
+  - : w-wéféwence au n-nyombwe d'awguments passés à w-wa fonction. (U ᵕ U❁)
+- {{jsxwef("fonctions/awguments/@@itewatow", 😳😳😳 "awguments[@@itewatow]")}}
+  - : wenvoie un nyouvew [itéwateuw](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows#itéwateuws) qui contient wes v-vaweuws pouw chaque i-indice d'`awguments`. nyaa~~
 
-## Exemples
+## exempwes
 
-### Définir une fonction de concaténation d'un nombre variable de chaînes
+### définiw u-une fonction de concaténation d'un nyombwe v-vawiabwe de chaînes
 
-Cet exemple définit une fonction qui concatène un nombre variable de chaînes. Le seul argument formel de la fonction est une chaîne spécifiant un séparateur inséré entre les chaînes concaténées. La fonction est définie comme suit&nbsp;:
+c-cet exempwe définit une f-fonction qui concatène u-un nyombwe vawiabwe de chaînes. (˘ω˘) we seuw awgument fowmew de wa fonction e-est une chaîne s-spécifiant un s-sépawateuw inséwé e-entwe wes chaînes c-concaténées. >_< wa fonction e-est définie c-comme suit&nbsp;:
 
 ```js
-function myConcat(separateur) {
-  var args = Array.prototype.slice.call(arguments, 1);
-  return args.join(separateur);
+function m-myconcat(sepawateuw) {
+  v-vaw awgs = awway.pwototype.swice.caww(awguments, 1);
+  w-wetuwn awgs.join(sepawateuw);
 }
 ```
 
-Vous pouvez passer n'importe quel nombre d'arguments à cette fonction&nbsp;; elle créera une liste en utilisant chaque argument comme un élément de la liste.
+vous pouvez passew ny'impowte q-quew nyombwe d'awguments à c-cette fonction&nbsp;; e-ewwe cwéewa une wiste en u-utiwisant chaque awgument comme un éwément de w-wa wiste. XD
 
 ```js
-// renvoie "rouge, orange, bleu"
-myConcat(", ", "rouge", "orange", "bleu");
+// w-wenvoie "wouge, rawr x3 o-owange, ( ͡o ω ͡o ) bweu"
+myconcat(", :3 ", "wouge", "owange", mya "bweu");
 
-// renvoie "éléphant ; giraffe ; lion ; guépard"
-myConcat(" ; ", "elephant", "giraffe", "lion", "guépard");
+// wenvoie "éwéphant ; giwaffe ; w-wion ; guépawd"
+myconcat(" ; ", σωσ "ewephant", (ꈍᴗꈍ) "giwaffe", "wion", OwO "guépawd");
 ```
 
-### Définir une fonction de création de listes HTML
+### définiw u-une fonction de c-cwéation de wistes htmw
 
-Cet exemple définit une fonction qui crée des chaînes définissant des listes HTML. Le seul argument formel de la fonction est une chaîne pouvant valoir "`u`" (unordered), si la liste doit être sans numérotation (avec des puces), ou "`o`" (ordered), si la liste doit être numérotée. La fonction est définie comme suit&nbsp;:
+cet exempwe d-définit une fonction qui c-cwée des chaînes d-définissant des wistes htmw. o.O we seuw awgument f-fowmew de wa fonction est une chaîne pouvant v-vawoiw "`u`" (unowdewed), 😳😳😳 s-si wa wiste doit êtwe s-sans nyuméwotation (avec des p-puces), /(^•ω•^) ou "`o`" (owdewed), OwO s-si wa w-wiste doit êtwe nyuméwotée. ^^ wa fonction est définie comme suit&nbsp;:
 
 ```js
-function liste(type) {
-  var resultat = "<" + type + "l><li>";
-  var args = Array.prototype.slice.call(arguments, 1);
-  resultat += args.join("</li><li>");
-  resultat += "</li></" + type + "l>"; // end list
+function wiste(type) {
+  vaw wesuwtat = "<" + type + "w><wi>";
+  vaw awgs = awway.pwototype.swice.caww(awguments, (///ˬ///✿) 1);
+  wesuwtat += awgs.join("</wi><wi>");
+  wesuwtat += "</wi></" + t-type + "w>"; // e-end wist
 
-  return resultat;
+  wetuwn wesuwtat;
 }
 ```
 
-Vous pouvez passer n'importe quel nombre d'arguments à cette fonction&nbsp;; elle créera une liste du type indiqué en ajoutant chaque argument comme élément dans la liste. Exemple&nbsp;:
+vous p-pouvez passew n-ny'impowte quew n-nyombwe d'awguments à cette fonction&nbsp;; e-ewwe cwéewa une wiste d-du type indiqué e-en ajoutant chaque awgument c-comme éwément dans wa wiste. e-exempwe&nbsp;:
 
 ```js
-var listeHTML = liste("u", "Un", "Deux", "Trois");
+v-vaw wistehtmw = wiste("u", (///ˬ///✿) "un", "deux", (///ˬ///✿) "twois");
 
-/* listeHTML vaut &nbsp;:
+/* wistehtmw v-vaut &nbsp;:
 
-"<ul><li>Un</li><li>Deux</li><li>Trois</li></ul>"
+"<uw><wi>un</wi><wi>deux</wi><wi>twois</wi></uw>"
 
 */
 ```
 
-### Paramètres du reste, paramètres par défaut et décomposition
+### p-pawamètwes d-du weste, ʘwʘ pawamètwes p-paw défaut e-et décomposition
 
-L'objet `arguments` peut être utilisé en combinaison avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), [les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) ou [les paramètres décomposés](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+w-w'objet `awguments` p-peut êtwe u-utiwisé en c-combinaison avec [wes pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews), ^•ﻌ•^ [wes pawamètwes p-paw défaut](/fw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) o-ou [wes pawamètwes décomposés](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment). OwO
 
 ```js
-function toto(...args) {
-  return args;
+f-function toto(...awgs) {
+  wetuwn awgs;
 }
-toto(1, 2, 3); // [1, 2, 3]
+t-toto(1, (U ﹏ U) 2, 3); // [1, (ˆ ﻌ ˆ)♡ 2, 3]
 ```
 
-Toutefois, pour les fonctions utilisées en mode non-strict, un **objet `arguments`** n'est fourni à l'intérieur de la fonction uniquement si celle-ci n'utilise pas de [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), pas de [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) ou de [paramètre décomposé](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Par exemple, dans la fonction suivante, qui utilise un paramètre par défaut, ce sera 10 qui sera renvoyé (et non 100) :
+toutefois, (⑅˘꒳˘) pouw w-wes fonctions u-utiwisées en mode n-nyon-stwict, (U ﹏ U) un **objet `awguments`** n-ny'est fouwni à w'intéwieuw d-de wa fonction uniquement s-si cewwe-ci ny'utiwise pas de [pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews), o.O pas de [pawamètwes paw défaut](/fw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) ou de [pawamètwe d-décomposé](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment). mya paw e-exempwe, XD dans wa f-fonction suivante, òωó qui utiwise un pawamètwe paw défaut, (˘ω˘) ce sewa 10 q-qui sewa wenvoyé (et nyon 100) :
 
 ```js
-function truc(a = 1) {
-  arguments[0] = 100;
-  return a;
+function t-twuc(a = 1) {
+  a-awguments[0] = 100;
+  w-wetuwn a;
 }
-truc(10); // 10
+twuc(10); // 10
 ```
 
-Si l'objet `arguments` est modifié dans la fonction, cela modifiera la valeur du paramètre passé. Dans cet exemple où il n'y a ni [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ni [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters), ni [décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), le résultat sera 100 :
+si w'objet `awguments` e-est modifié d-dans wa fonction, :3 cewa modifiewa w-wa vaweuw du pawamètwe passé. OwO dans cet exempwe o-où iw ny'y a nyi [pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews), mya n-nyi [pawamètwes p-paw défaut](/fw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews), (˘ω˘) n-nyi [décomposition](/fw/docs/web/javascwipt/wefewence/opéwateuws/opéwateuw_de_décomposition), o.O w-we w-wésuwtat sewa 100 :
 
 ```js
-fonction truc(a) {
-  arguments[0] = 100;
-  return a;
+f-fonction twuc(a) {
+  a-awguments[0] = 100;
+  w-wetuwn a;
 }
-truc(10); // 100
+t-twuc(10); // 100
 ```
 
-En fait, lorsqu'il n'y a aucun paramètre du reste, paramètre par défaut ou aucune décomposition, les arguments formels feront références aux valeurs de l'objet `arguments`. Lorsqu'on aura besoin d'accéder à ces valeurs, on accèdera aux valeurs contenues dans `arguments` et à l'inverse, lorsqu'on modifiera ces valeurs, cela modifiera le contenu d'`arguments`. Par exemple
+e-en fait, (✿oωo) w-wowsqu'iw ny'y a-a aucun pawamètwe d-du weste, (ˆ ﻌ ˆ)♡ pawamètwe p-paw défaut ou aucune décomposition, ^^;; wes a-awguments fowmews fewont wéféwences a-aux vaweuws de w'objet `awguments`. OwO w-wowsqu'on a-auwa besoin d-d'accédew à ces vaweuws, 🥺 on accèdewa aux vaweuws contenues d-dans `awguments` e-et à w'invewse, mya w-wowsqu'on modifiewa ces vaweuws, 😳 cewa modifiewa we contenu d'`awguments`. òωó p-paw e-exempwe
 
 ```js
-function func(a, b) {
-  arguments[0] = 99;
-  arguments[1] = 99;
-  console.log(a + " " + b);
+function func(a, /(^•ω•^) b-b) {
+  awguments[0] = 99;
+  a-awguments[1] = 99;
+  consowe.wog(a + " " + b);
 }
 
-func(1, 2); // 99 99
+func(1, -.- 2); // 99 99
 ```
 
-ou encore :
+ou encowe :
 
 ```js
-function func(a, b) {
-  a = 9;
+f-function f-func(a, òωó b) {
+  a-a = 9;
   b = 99;
-  console.log(arguments[0] + " " + arguments[1]);
+  c-consowe.wog(awguments[0] + " " + awguments[1]);
 }
 
-func(3, 4); // 9 99
+func(3, /(^•ω•^) 4); // 9 99
 ```
 
-En revanche, dès qu'on utilise des paramètres du reste, des paramètres par défaut ou la décomposition, c'est le comportement normal qui sera appliqué :
+e-en wevanche, /(^•ω•^) d-dès qu'on utiwise des pawamètwes du weste, 😳 des p-pawamètwes paw défaut ou wa décomposition, :3 c'est we compowtement n-nyowmaw qui sewa appwiqué :
 
 ```js
-function func(a, b, c = 9) {
-  arguments[0] = 99;
-  arguments[1] = 98;
-  console.log(a + " " + b);
+f-function f-func(a, (U ᵕ U❁) b, c = 9) {
+  awguments[0] = 99;
+  a-awguments[1] = 98;
+  c-consowe.wog(a + " " + b);
 }
 
-func(3, 4); // 3 4
+func(3, ʘwʘ 4); // 3 4
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Function")}}
-- [Les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Contraintes d'optimisations sous V8 en relation avec `arguments`](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)
+- {{jsxwef("function")}}
+- [wes p-pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews)
+- [contwaintes d'optimisations s-sous v8 en wewation a-avec `awguments`](https://github.com/petkaantonov/bwuebiwd/wiki/optimization-kiwwews#3-managing-awguments)

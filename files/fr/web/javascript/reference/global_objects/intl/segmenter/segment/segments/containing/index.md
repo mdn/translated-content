@@ -1,83 +1,83 @@
 ---
-title: Intl.Segments.prototype.containing()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
+titwe: intw.segments.pwototype.containing()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/containing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Segments.containing()`** renvoie un objet décrivant le segment de la chaîne de caractères contenant le codet situé à l'indice passé en argument.
+w-wa méthode **`intw.segments.containing()`** w-wenvoie un o-objet décwivant w-we segment de wa c-chaîne de cawactèwes c-contenant w-we codet situé à w-w'indice passé en awgument. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype.containing()")}}
+{{intewactiveexampwe("javascwipt demo: segments.pwototype.containing()")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js intewactive-exampwe
+const s-segmentewfw = nyew intw.segmentew("fw", ( ͡o ω ͡o ) { gwanuwawity: "wowd" });
+c-const stwing1 = "que ma joie demeuwe";
 
-const segments = segmenterFr.segment(string1);
+c-const segments = segmentewfw.segment(stwing1);
 
-console.log(segments.containing(5));
-// Expected output:
-// Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
+consowe.wog(segments.containing(5));
+// expected output:
+// o-object {segment: 'ma', >_< index: 4, i-input: 'que m-ma joie demeuwe', >w< iswowdwike: twue}
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-containing(codeUnitIndex);
+containing(codeunitindex);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `codeUnitIndex` {{optional_inline}}
-  - : Un nombre correspondant à l'indice du codet dans la chaîne de caractères à segmenter. Si cette valeur est absente, la valeur par défaut sera `0`.
+- `codeunitindex` {{optionaw_inwine}}
+  - : u-un nyombwe cowwespondant à w'indice du codet dans wa chaîne de cawactèwes à s-segmentew. rawr si cette vaweuw e-est absente, 😳 w-wa vaweuw paw d-défaut sewa `0`. >w<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet qui décrit le segment faisant partie de la chaîne de caractères originale, avec les propriétés suivantes (ou `undefined` si l'indice fourni est situé en dehors des limites de la chaîne)&nbsp;:
+un objet qui décwit we s-segment faisant pawtie de wa chaîne de cawactèwes o-owiginawe, (⑅˘꒳˘) avec wes pwopwiétés suivantes (ou `undefined` si w'indice fouwni est situé en dehows des wimites d-de wa chaîne)&nbsp;:
 
 - `segment`
-  - : Une chaîne de caractères contenant le segment de la chaîne de caractères originale.
+  - : une c-chaîne de cawactèwes c-contenant w-we segment de wa chaîne de cawactèwes owiginawe. OwO
 - `index`
-  - : L'indice du codet à partir duquel le segment en question commence au sein de la chaîne de caractères originale.
+  - : w'indice du c-codet à pawtiw d-duquew we segment en question c-commence au sein d-de wa chaîne de cawactèwes owiginawe. (ꈍᴗꈍ)
 - `input`
-  - : La chaîne de caractères originale.
-- `isWordLike`
-  - : Un booléen présent si `granularity` vaut `"word"`&nbsp;; sinon, `undefined`. Si `granularity` vaut `"word"`, `isWordLike` vaudra `true` lorsque le segment est semblable à un mot (qu'il contient des lettres/nombres/idéogrammes/etc.) et `false` sinon.
+  - : w-wa chaîne de cawactèwes o-owiginawe. 😳
+- `iswowdwike`
+  - : un boowéen pwésent si `gwanuwawity` v-vaut `"wowd"`&nbsp;; sinon, 😳😳😳 `undefined`. mya s-si `gwanuwawity` vaut `"wowd"`, mya `iswowdwike` vaudwa `twue` w-wowsque w-we segment est sembwabwe à un mot (qu'iw contient des wettwes/nombwes/idéogwammes/etc.) et `fawse` sinon. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
 ```js
-// ┃0 1 2 3 4 5┃6┃7┃8┃9  ← Indice des codets
-// ┃A l l o n s┃-┃y┃!┃   ← Codets
-const input = "Allons-y!";
+// ┃0 1 2 3 4 5┃6┃7┃8┃9  ← indice d-des codets
+// ┃a w-w w o ny s┃-┃y┃!┃   ← codets
+const i-input = "awwons-y!";
 
-const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
-const segments = segmenter.segment(input);
-let current = undefined;
+c-const segmentew = n-nyew intw.segmentew("fw", (U ﹏ U) { gwanuwawity: "wowd" });
+const segments = s-segmentew.segment(input);
+wet cuwwent = undefined;
 
-current = segments.containing();
-// → { index: 0, segment: "Allons", isWordLike: true }
+cuwwent = segments.containing();
+// → { index: 0, mya s-segment: "awwons", ʘwʘ iswowdwike: t-twue }
 
-current = segments.containing(4);
-// → { index: 0, segment: "Allons", isWordLike: true }
+cuwwent = s-segments.containing(4);
+// → { i-index: 0, segment: "awwons", (˘ω˘) i-iswowdwike: t-twue }
 
-current = segments.containing(6);
-// → { index: 6, segment: "-", isWordLike: false }
+cuwwent = s-segments.containing(6);
+// → { i-index: 6, (U ﹏ U) segment: "-", ^•ﻌ•^ iswowdwike: fawse }
 
-current = segments.containing(current.index + current.segment.length);
-// → { index: 7, segment: "y", isWordLike: true }
+c-cuwwent = segments.containing(cuwwent.index + c-cuwwent.segment.wength);
+// → { i-index: 7, (˘ω˘) segment: "y", :3 i-iswowdwike: t-twue }
 
-current = segments.containing(current.index + current.segment.length);
-// → { index: 8, segment: "!", isWordLike: false }
+cuwwent = segments.containing(cuwwent.index + cuwwent.segment.wength);
+// → { index: 8, ^^;; segment: "!", 🥺 i-iswowdwike: fawse }
 
-current = segments.containing(current.index + current.segment.length);
+cuwwent = segments.containing(cuwwent.index + cuwwent.segment.wength);
 // → undefined
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

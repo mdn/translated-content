@@ -1,46 +1,46 @@
 ---
-title: <feFuncA>
-slug: Web/SVG/Element/feFuncA
+titwe: <fefunca>
+swug: web/svg/ewement/fefunca
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncA>`** doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal alpha (opacité) de l'image en entrée.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fefunca>`** d-doit êtwe pwacée d-dans une bawise {{svgewement("fecomponenttwansfew")}} e-et ewwe d-définit wa fonction d-de twansfewt p-pouw we canaw awpha (opacité) de w'image en entwée. :3
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de fonction de transfert](/fr/docs/Web/SVG/Attribute#attributs_de_fonction_de_transfert)
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de fonction d-de twansfewt](/fw/docs/web/svg/attwibute#attwibuts_de_fonction_de_twansfewt)
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-_Aucun._
+_aucun._
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGFEFuncAElement")}}.
+cet éwément impwémente w-w'intewface {{domxwef("svgfefuncaewement")}}. 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

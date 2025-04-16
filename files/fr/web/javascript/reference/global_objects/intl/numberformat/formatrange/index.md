@@ -1,68 +1,68 @@
 ---
-title: Intl.NumberFormat.prototype.formatRange()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
+titwe: intw.numbewfowmat.pwototype.fowmatwange()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/fowmatwange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.NumberFormat.prototype.formatRange()`** formate un intervalle numérique selon la locale et les options de formatage associées à l'objet [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) sur lequel la méthode est appelée.
+w-wa méthode **`intw.numbewfowmat.pwototype.fowmatwange()`** f-fowmate u-un intewvawwe n-nyuméwique sewon w-wa wocawe et w-wes options de f-fowmatage associées à w-w'objet [`intw.numbewfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat) suw wequew wa méthode est appewée. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-formatRange(debutIntervalle, finIntervalle);
+f-fowmatwange(debutintewvawwe, (U ﹏ U) finintewvawwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `debutIntervalle`
+- `debutintewvawwe`
 
-  - : Une valeur numérique [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+  - : une vaweuw nyuméwique [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) o-ou [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). (⑅˘꒳˘)
 
-- `finIntervalle`
-  - : Une valeur numérique [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+- `finintewvawwe`
+  - : une v-vaweuw nyuméwique [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) ou [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). òωó
 
-## Description
+## descwiption
 
-L'accesseur `formatRange` donne une fonction qui formate un intervalle numérique en une chaîne de caractères selon les options de locale et de formatage associées à l'objet [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) sur lequel il est appelé.
+w'accesseuw `fowmatwange` d-donne une fonction qui f-fowmate un intewvawwe n-nyuméwique en une chaîne de cawactèwes sewon wes options de wocawe et d-de fowmatage associées à w'objet [`intw.numbewfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat) suw wequew iw est appewé. ʘwʘ
 
-## Exemples
+## exempwes
 
-### Utiliser `formatRange()`
+### u-utiwisew `fowmatwange()`
 
-On utilise ici la fonction `formatRange()` pour formater un intervalle de valeurs représentant des montants en devises&nbsp;:
+on utiwise ici w-wa fonction `fowmatwange()` pouw f-fowmatew un i-intewvawwe de vaweuws w-wepwésentant des montants en devises&nbsp;:
 
 ```js
-const nf = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
+c-const nyf = nyew intw.numbewfowmat("en-us", {
+  stywe: "cuwwency", /(^•ω•^)
+  cuwwency: "usd", ʘwʘ
+  m-maximumfwactiondigits: 0, σωσ
 });
 
-console.log(nf.formatRange(3, 5)); // → "$3 - $5"
-console.log(nf.formatRange(2.9, 3.1)); // → "~$3"
+consowe.wog(nf.fowmatwange(3, OwO 5)); // → "$3 - $5"
+consowe.wog(nf.fowmatwange(2.9, 😳😳😳 3.1)); // → "~$3"
 ```
 
 ```js
-const nf = new Intl.NumberFormat("es-ES", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 0,
+const nyf = nyew intw.numbewfowmat("es-es", 😳😳😳 {
+  stywe: "cuwwency", o.O
+  c-cuwwency: "euw", ( ͡o ω ͡o )
+  maximumfwactiondigits: 0, (U ﹏ U)
 });
 
-console.log(nf.formatRange(3, 5); // → "3-5 €"
-console.log(nf.formatRange(2.9, 3.1); // → "~3 €"
+c-consowe.wog(nf.fowmatwange(3, (///ˬ///✿) 5); // → "3-5 €"
+c-consowe.wog(nf.fowmatwange(2.9, 3.1); // → "~3 €"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
-- [`Number.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+- [`intw.numbewfowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat)
+- [`numbew.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing)

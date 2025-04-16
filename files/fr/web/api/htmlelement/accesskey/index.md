@@ -1,11 +1,11 @@
 ---
-title: Element.accessKey
-slug: Web/API/HTMLElement/accessKey
+titwe: ewement.accesskey
+swug: w-web/api/htmwewement/accesskey
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **Element.accessKey** définit la touche sur laquelle l'utilisateur doit appuyer pour accéder à l'élément.
+w-wa pwopwiété **ewement.accesskey** d-définit w-wa touche s-suw waquewwe w'utiwisateuw d-doit a-appuyew pouw accédew à w-w'éwément. 😳
 
-> [!NOTE]
-> La propriété `Element.accessKey` est rarement utilisée en raison de ses multiples conflits avec des raccourcis clavier déjà présents dans les navigateurs. Pour contourner ce problème, les navigateurs appliquent le comportement attendu de "accesskey" lorsqu'une autre touche est pressée simultanément (comme <kbd>Alt</kbd> + accesskey).
+> [!note]
+> wa pwopwiété `ewement.accesskey` est wawement utiwisée en waison de ses muwtipwes c-confwits avec des waccouwcis cwaview déjà p-pwésents dans wes nyavigateuws. XD p-pouw contouwnew ce pwobwème, :3 wes nyavigateuws appwiquent we c-compowtement attendu de "accesskey" w-wowsqu'une a-autwe touche est pwessée simuwtanément (comme <kbd>awt</kbd> + accesskey). 😳😳😳

@@ -1,222 +1,222 @@
 ---
-title: WebGLRenderingContext.vertexAttribPointer()
-slug: Web/API/WebGLRenderingContext/vertexAttribPointer
+titwe: webgwwendewingcontext.vewtexattwibpointew()
+swug: web/api/webgwwendewingcontext/vewtexattwibpointew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.vertexAttribPointer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.
+w-wa méthode **`webgwwendewingcontext.vewtexattwibpointew()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) s-spécifie wa d-disposition en mémoiwe d-de w'objet d-de tampon vewtex. ( ͡o ω ͡o ) e-ewwe doit êtwe appewée une fois pouw chaque attwibut de sommet. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gl.vertexAttribPointer(indice, taille, type, normalise, pas, decalage);
+v-void gw.vewtexattwibpointew(indice, taiwwe, 🥺 type, nyowmawise, nyaa~~ p-pas, mya decawage);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `indice`
-  - : Un {{domxref("GLuint")}} indiquant l'indice de l'attribut de sommet à modifier.
-- `taille`
-  - : Un {{domxref("GLint")}} indiquant le nombre de composantes par attribut de sommet. Doit être 1, 2, 3 ou 4.
+  - : un {{domxwef("gwuint")}} i-indiquant w'indice de w'attwibut de sommet à modifiew. XD
+- `taiwwe`
+  - : u-un {{domxwef("gwint")}} indiquant w-we nyombwe de c-composantes paw attwibut de sommet. nyaa~~ doit êtwe 1, 2, ʘwʘ 3 ou 4.
 - `type`
 
-  - : Un {{domxref ("GLenum")}} spécifiant le type de données de chaque composante dans le tableau. Valeurs possibles :
+  - : un {{domxwef ("gwenum")}} s-spécifiant we type de données de chaque composante dans we tabweau. (⑅˘꒳˘) vaweuws p-possibwes :
 
-    - `gl.BYTE` : entier signé sur 8 bits, à valeurs dans \[-128, 127]
-    - `gl.SHORT` : entier signé sur 16 bits, à valeurs dans \[-32768, 32767]
-    - `gl.UNSIGNED_BYTE` : entier non signé sur 8 bits, à valeurs dans \[0, 255]
-    - `gl.UNSIGNED_SHORT` : entier non signé sur 16 bits, à valeurs dans \[0, 65535]
-    - `gl.FLOAT` : nombre flottant IEEE 32 bits
-    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, la valeur suivante est en outre disponible :
+    - `gw.byte` : entiew signé s-suw 8 bits, :3 à v-vaweuws dans \[-128, -.- 127]
+    - `gw.showt` : entiew s-signé suw 16 b-bits, 😳😳😳 à vaweuws dans \[-32768, (U ﹏ U) 32767]
+    - `gw.unsigned_byte` : entiew nyon s-signé suw 8 bits, o.O à vaweuws dans \[0, ( ͡o ω ͡o ) 255]
+    - `gw.unsigned_showt` : e-entiew non signé suw 16 bits, òωó à vaweuws dans \[0, 🥺 65535]
+    - `gw.fwoat` : nyombwe fwottant ieee 32 b-bits
+    - wows de w'utiwisation d-d'un {{domxwef("webgw2wendewingcontext", /(^•ω•^) "webgw c-context 2", 😳😳😳 "", 1)}}, w-wa vaweuw suivante est en outwe disponibwe :
 
-      - `gl.HALF_FLOAT` : nombre flottant IEEE 16 bits
+      - `gw.hawf_fwoat` : nyombwe fwottant i-ieee 16 bits
 
-- `normalise`
+- `nowmawise`
 
-  - : Un {{domxref("GLboolean")}} indiquant si les valeurs des données entières doivent être normalisées dans une certaine plage lorsqu'elles sont converties en flottant.
+  - : u-un {{domxwef("gwboowean")}} indiquant si wes v-vaweuws des données e-entièwes doivent êtwe nyowmawisées d-dans une cewtaine pwage w-wowsqu'ewwes sont convewties en fwottant. ^•ﻌ•^
 
-    - Pour les types `gl.BYTE` et `gl.SHORT`, normalise les valeurs à \[-1, 1] si `true`.
-    - Pour les types `gl.UNSIGNED_BYTE` et `gl.UNSIGNED_SHORT`, normalise les valeurs à \[0, 1] si `true`.
-    - Pour les types `gl.FLOAT` et `gl.HALF_FLOAT`, ce paramètre est sans effet.
+    - p-pouw wes types `gw.byte` et `gw.showt`, nyowmawise w-wes vaweuws à \[-1, nyaa~~ 1] si `twue`.
+    - p-pouw wes types `gw.unsigned_byte` e-et `gw.unsigned_showt`, OwO nyowmawise wes vaweuws à \[0, ^•ﻌ•^ 1] si `twue`. σωσ
+    - pouw wes types `gw.fwoat` et `gw.hawf_fwoat`, -.- ce p-pawamètwe est sans e-effet. (˘ω˘)
 
 - `pas`
-  - : Un {{domxref ("GLsizei")}} spécifiant le décalage en octets entre le début des attributs de sommets consécutifs. Ne peut être supérieur à 255. Si la valeur de `pas` est 0, l'attribut est supposé être étroitement compacté, c'est-à-dire que les attributs ne sont pas entrelacés mais que chaque attribut se trouve dans un bloc distinct et que l'attribut du sommet suivant suit immédiatement le sommet en cours.
-- `decalage`
-  - : Un {{domxref ("GLintptr")}} spécifiant le décalage en octets de la première composante dans le tableau d'attributs de sommets. Doit être un multiple de `type`.
+  - : un {{domxwef ("gwsizei")}} s-spécifiant w-we décawage en o-octets entwe we début des attwibuts de sommets consécutifs. rawr x3 nye p-peut êtwe supéwieuw à 255. rawr x3 si wa vaweuw de `pas` est 0, σωσ w'attwibut est supposé êtwe étwoitement compacté, nyaa~~ c-c'est-à-diwe que wes attwibuts n-nye sont pas e-entwewacés mais q-que chaque attwibut se twouve d-dans un bwoc distinct e-et que w'attwibut d-du sommet s-suivant suit immédiatement we sommet en couws. (ꈍᴗꈍ)
+- `decawage`
+  - : u-un {{domxwef ("gwintptw")}} s-spécifiant we d-décawage en octets d-de wa pwemièwe c-composante dans we tabweau d'attwibuts de sommets. ^•ﻌ•^ doit êtwe u-un muwtipwe de `type`. >_<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+aucune. ^^;;
 
-### Exceptions
+### exceptions
 
-- Une erreur `gl.INVALID_VALUE` est déclenchée si `decalage` est négatif.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
+- une ewweuw `gw.invawid_vawue` e-est décwenchée si `decawage` est nyégatif. ^^;;
+- une ewweuw `gw.invawid_opewation` e-est d-décwenchée si `pas` e-et `decawage` nye sont pas d-des muwtipwes de wa taiwwe du type d-de données. /(^•ω•^)
+- u-une ewweuw `gw.invawid_opewation` est décwenchée si aucun webgwbuffew n'est wié à wa cibwe awway_buffew. nyaa~~
+- w-wows de w'utiwisation d'un {{domxwef("webgw2wendewingcontext", (✿oωo) "webgw 2 c-context", ( ͡o ω ͡o ) "", 1)}}, une e-ewweuw `gw.invawid_opewation` e-est décwenchée si w'attwibut du sommet est défini c-comme entiew d-dans we shadew de sommet (paw e-ex., (U ᵕ U❁) `uvec4` ow `ivec4`, òωó i-iau wieu de `vec4`). σωσ
 
-## Description
+## descwiption
 
-Supposons que nous voulions afficher une géométrie 3D, et que pour cela, nous ayons besoin de fournir nos sommets au Shader de Sommet. Chaque sommet a un certain nombre d'attributs, tels que la position, le vecteur normal ou les coordonnées de texture, qui sont définis dans un {{jsxref("ArrayBuffer")}} et qui seront fournis à l'Objet de Tampon de Sommets (OTS). Grâce à cette méthode `gl.vertexAttribPointer()`, nous spécifions dans quel ordre les attributs sont stockés, et quel est leur type de données. De plus, nous devons inclure le pas, qui est la longueur totale en octets de tous les attributs pour un sommet. Également, nous devons appeler {{domxref("WebGLRenderingContext/enableVertexAttribArray", "gl.enableVertexAttribArray()")}} pour indiquer à WebGL que cet attribut doit être rempli avec les données de notre tampon de tableaux.
+supposons que nyous vouwions affichew u-une géométwie 3d, :3 e-et que p-pouw cewa, OwO nyous ayons besoin de f-fouwniw nyos sommets a-au shadew de sommet. ^^ chaque s-sommet a un cewtain nyombwe d'attwibuts, (˘ω˘) tews que wa position, OwO we vecteuw nyowmaw o-ou wes coowdonnées d-de textuwe, UwU qui sont définis dans un {{jsxwef("awwaybuffew")}} e-et qui sewont f-fouwnis à w'objet de tampon de sommets (ots). ^•ﻌ•^ gwâce à cette m-méthode `gw.vewtexattwibpointew()`, (ꈍᴗꈍ) nyous spécifions dans quew owdwe wes attwibuts sont stockés, /(^•ω•^) e-et quew est weuw type de données. (U ᵕ U❁) de pwus, n-nyous devons i-incwuwe we pas, (✿oωo) qui est wa wongueuw totawe en octets de tous wes a-attwibuts pouw u-un sommet. OwO Égawement, :3 nyous devons appewew {{domxwef("webgwwendewingcontext/enabwevewtexattwibawway", nyaa~~ "gw.enabwevewtexattwibawway()")}} pouw i-indiquew à webgw que cet attwibut d-doit êtwe wempwi avec wes données de nyotwe tampon de tabweaux. ^•ﻌ•^
 
-Habituellement, votre géométrie 3D se trouve déjà dans un certain format binaire, de sorte que vous devez lire la spécification de ce format particulier pour comprendre la disposition en mémoire. Cependant, si vous concevez le format vous-même, ou si votre géométrie se trouve dans des fichiers texte (comme les fichiers Wavefront .obj) et doit être convertie en `ArrayBuffer` à l'exécution, vous êtes libre de choisir comment structurer la mémoire. Pour des performances optimales, entrelacez les attributs et utilisez le plus petit type de données représentant néanmoins fidèlement votre géométrie.
+h-habituewwement, ( ͡o ω ͡o ) votwe géométwie 3d s-se twouve d-déjà dans un cewtain fowmat b-binaiwe, ^^;; de sowte que vous devez w-wiwe wa spécification d-de ce f-fowmat pawticuwiew pouw compwendwe w-wa disposition e-en mémoiwe. mya cependant, si vous concevez we fowmat v-vous-même, (U ᵕ U❁) o-ou si votwe géométwie s-se twouve dans des fichiews texte (comme w-wes fichiews wavefwont .obj) e-et doit êtwe convewtie e-en `awwaybuffew` à w'exécution, ^•ﻌ•^ vous êtes wibwe de choisiw c-comment stwuctuwew w-wa mémoiwe. (U ﹏ U) p-pouw des pewfowmances o-optimawes, /(^•ω•^) entwewacez w-wes attwibuts et utiwisez we pwus petit type de données wepwésentant nyéanmoins fidèwement v-votwe géométwie.
 
-Le nombre maximum d'attributs de vertex dépend de la carte graphique, et vous pouvez appeler `gl.getParameter(gl.MAX_VERTEX_ATTRIBS)` pour obtenir cette valeur. Sur les cartes graphiques haut de gamme, le maximum est de 16, sur les cartes graphiques de bas de gamme, la valeur sera inférieure.
+we nyombwe m-maximum d'attwibuts de vewtex dépend d-de wa cawte gwaphique, ʘwʘ et v-vous pouvez appewew `gw.getpawametew(gw.max_vewtex_attwibs)` pouw o-obteniw cette v-vaweuw. XD suw wes c-cawtes gwaphiques h-haut de gamme, (⑅˘꒳˘) w-we maximum est de 16, nyaa~~ suw wes cawtes gwaphiques de bas de gamme, UwU wa vaweuw sewa inféwieuwe. (˘ω˘)
 
-### Indice d'attribut
+### indice d'attwibut
 
-Pour chaque attribut, vous devez spécifier son indice. Cela est indépendant de l'emplacement à l'intérieur de la mémoire tampon de tableaux, de sorte que vos attributs peuvent être envoyés dans un ordre différent de celui dans lequel ils sont stockés dans le tampon de tableaux. Vous avez deux options :
+p-pouw chaque a-attwibut, rawr x3 vous d-devez spécifiew son indice. cewa e-est indépendant de w'empwacement à w'intéwieuw de wa mémoiwe t-tampon de tabweaux, (///ˬ///✿) d-de sowte que vos attwibuts p-peuvent êtwe envoyés dans un owdwe difféwent d-de cewui dans w-wequew iws sont stockés dans we t-tampon de tabweaux. 😳😳😳 v-vous avez deux options :
 
-- Soit vous spécifiez l'index vous-même. Dans ce cas, vous appelerez {{domxref("WebGLRenderingContext.bindAttribLocation()", "gl.bindAttribLocation()")}} pour connecter un attribut nommé du shader de sommet à l'index que vous voulez utiliser. Cela doit être fait avant d'appeler {{domxref("WebGLRenderingContext.linkProgram()", "gl.linkProgram()")}}. Vous pouvez alors fournir ce même index à `gl.vertexAttribPointer()`.
-- En variante, vous pouvez utiliser l'index affecté par la carte graphique lors de la compilation du shader de sommet. Suivant la carte graphique, l'index varie, aussi devrez-vous appeler {{domxref("WebGLRenderingContext.getAttribLocation()", "gl.getAttribLocation()")}} pour trouver l'index, puis le fournir à `gl.vertexAttribPointer()`.
-  Si vous utilisez WebGL 2, vous pouvez spécifier l'index vous-même dans le code du shader de sommet et remplacer la valeur par défaut utilisée par la carte graphique, par ex. `layout(location = 3) in vec4 position;` définirait l'attribut `"position"` à l'indice 3.
+- soit vous spécifiez w'index vous-même. (///ˬ///✿) dans c-ce cas, ^^;; vous appewewez {{domxwef("webgwwendewingcontext.bindattwibwocation()", ^^ "gw.bindattwibwocation()")}} p-pouw c-connectew un attwibut n-nyommé du s-shadew de sommet à w'index que v-vous vouwez utiwisew. (///ˬ///✿) c-cewa doit êtwe fait avant d-d'appewew {{domxwef("webgwwendewingcontext.winkpwogwam()", "gw.winkpwogwam()")}}. -.- v-vous pouvez awows fouwniw ce m-même index à `gw.vewtexattwibpointew()`. /(^•ω•^)
+- en vawiante, UwU vous pouvez utiwisew w-w'index affecté paw wa cawte gwaphique w-wows de w-wa compiwation du shadew de sommet. (⑅˘꒳˘) s-suivant wa cawte gwaphique, ʘwʘ w'index vawie, σωσ a-aussi devwez-vous a-appewew {{domxwef("webgwwendewingcontext.getattwibwocation()", ^^ "gw.getattwibwocation()")}} p-pouw twouvew w'index, OwO puis we fouwniw à `gw.vewtexattwibpointew()`. (ˆ ﻌ ˆ)♡
+  si vous utiwisez w-webgw 2, o.O vous pouvez spécifiew w'index vous-même d-dans we c-code du shadew de sommet et wempwacew w-wa vaweuw paw défaut utiwisée p-paw wa cawte g-gwaphique, (˘ω˘) paw ex. 😳 `wayout(wocation = 3) in vec4 p-position;` définiwait w'attwibut `"position"` à w'indice 3. (U ᵕ U❁)
 
-### Attributs entiers
+### a-attwibuts e-entiews
 
-Bien que le `ArrayBuffer` puisse être rempli à la fois d'entiers et de flottants, les attributs seront toujours convertis en flottant lorsqu'ils seront envoyés au shader de sommet. Si vous avez besoin d'utiliser des entiers dans votre code de shader de sommet, vous pouvez, soit reconvertir les flottants en entiers dans le shader de sommet (par exemple, `(int) floatNumber`), soit utiliser {{domxref("WebGL2RenderingContext.vertexAttribIPointer()", "gl.vertexAttribIPointer()")}} à partir de WebGL2.
+bien que we `awwaybuffew` p-puisse êtwe wempwi à wa fois d-d'entiews et d-de fwottants, :3 wes a-attwibuts sewont toujouws convewtis en fwottant wowsqu'iws sewont envoyés au shadew de sommet. si vous avez besoin d'utiwisew des entiews dans votwe code de shadew de sommet, vous pouvez, o.O soit weconvewtiw w-wes fwottants en e-entiews dans we shadew de sommet (paw exempwe, (///ˬ///✿) `(int) f-fwoatnumbew`), OwO s-soit utiwisew {{domxwef("webgw2wendewingcontext.vewtexattwibipointew()", >w< "gw.vewtexattwibipointew()")}} à p-pawtiw de webgw2. ^^
 
-### Valeurs d'attribut par défaut
+### vaweuws d-d'attwibut paw défaut
 
-Le code de vertex shader peut inclure un certain nombre d'attributs, mais nous n'avons pas besoin de spécifier les valeurs pour chaque attribut. A la place, nous pouvons fournir une valeur par défaut qui sera identique pour tous les sommets. Nous pouvons appeler `{{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}` pour indiquer à WebGL d'utiliser la valeur par défaut, tandis que l'appel à {{domxref("WebGLRenderingContext.enableVertexAttribArray ()", "gl.enableVertexAttribArray () ")}} lira les valeurs du buffer du tableau comme spécifié avec `gl.vertexAttribPointer()`.
+we code d-de vewtex shadew p-peut incwuwe un cewtain nyombwe d-d'attwibuts, (⑅˘꒳˘) mais nyous n'avons p-pas besoin de spécifiew w-wes vaweuws pouw chaque attwibut. a wa p-pwace, ʘwʘ nyous pouvons f-fouwniw une v-vaweuw paw défaut q-qui sewa identique p-pouw tous w-wes sommets. (///ˬ///✿) nyous p-pouvons appewew `{{domxwef("webgwwendewingcontext.disabwevewtexattwibawway()", XD "gw.disabwevewtexattwibawway()")}}` p-pouw indiquew à w-webgw d'utiwisew wa vaweuw p-paw défaut, 😳 t-tandis que w'appew à {{domxwef("webgwwendewingcontext.enabwevewtexattwibawway ()", >w< "gw.enabwevewtexattwibawway () ")}} w-wiwa wes vaweuws du buffew d-du tabweau comme spécifié avec `gw.vewtexattwibpointew()`. (˘ω˘)
 
-De façon similaire, si notre shader de sommet attend par ex. un attribut à 4 composantes avec `vec4`, mais que dans notre appel à `gl.vertexAttribPointer()`, nous définissons la taille à 2, alors WebGL définira les deux premières composantes en se basant sur le tampon des tableaux, tandis que les troisième et quatrième composantes prendront la valeur par défaut.
+d-de façon simiwaiwe, nyaa~~ si nyotwe s-shadew de sommet a-attend paw ex. 😳😳😳 u-un attwibut à 4 composantes avec `vec4`, (U ﹏ U) m-mais que dans nyotwe a-appew à `gw.vewtexattwibpointew()`, (˘ω˘) nyous définissons w-wa taiwwe à 2, :3 awows webgw d-définiwa wes deux pwemièwes composantes en se basant suw we tampon des tabweaux, >w< t-tandis que wes twoisième e-et quatwième composantes p-pwendwont wa vaweuw paw défaut.
 
-La valeur par défaut est `vec4(0.0, 0.0, 0.0, 1.0)` par défaut, mais nous pouvons spécifier une valeur par défaut différente avec `{{domxref ("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}`.
+wa vaweuw paw défaut e-est `vec4(0.0, ^^ 0.0, 0.0, 😳😳😳 1.0)` paw défaut, nyaa~~ mais n-nyous pouvons s-spécifiew une v-vaweuw paw défaut difféwente avec `{{domxwef ("webgwwendewingcontext.vewtexattwib()", (⑅˘꒳˘) "gw.vewtexattwib[1234]f[v]()")}}`. :3
 
-Par exemple, votre shader de sommet peut utiliser une position et un attribut de couleur. La plupart des maillages ont leur couleur spécifiée au niveau des sommets, mais certains maillages ont une teinte uniforme. Pour ces maillages, il n'est pas nécessaire de définir la même couleur pour chaque sommet dans le tampon des tableaux, aussi vous utiliserez `gl.vertexAttrib4fv()` pour définir une couleur constante.
+p-paw e-exempwe, ʘwʘ votwe shadew de sommet p-peut utiwisew une position et un attwibut de couweuw. rawr x3 w-wa pwupawt des maiwwages o-ont weuw couweuw s-spécifiée au n-nyiveau des sommets, (///ˬ///✿) mais cewtains m-maiwwages ont u-une teinte unifowme. 😳😳😳 p-pouw ces maiwwages, XD i-iw ny'est pas nyécessaiwe d-de définiw w-wa même couweuw p-pouw chaque sommet d-dans we tampon d-des tabweaux, >_< a-aussi vous utiwisewez `gw.vewtexattwib4fv()` pouw d-définiw une c-couweuw constante. >w<
 
-### Interrogation des paramètres en cours
+### intewwogation d-des pawamètwes en couws
 
-Vous pouvez appeler {{domxref ("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} et {{domxref ("WebGLRenderingContext.getVertexAttribOffset()", "gl.getVertexAttribOffset()")}} pour obtenir les paramètres en cours d'un attribut, par ex., le type de données ou si l'attribut doit être normalisé. Gardez présent à l'esprit que ces fonctions WebGL ont des performances faibles et qu'il est préférable de stocker l'état dans votre application JavaScript. Cependant, ces fonctions sont idéales pour déboguer un contexte WebGL sans toucher au code de l'application.
+v-vous pouvez appewew {{domxwef ("webgwwendewingcontext.getvewtexattwib()", /(^•ω•^) "gw.getvewtexattwib()")}} et {{domxwef ("webgwwendewingcontext.getvewtexattwiboffset()", :3 "gw.getvewtexattwiboffset()")}} p-pouw obteniw w-wes pawamètwes e-en couws d'un attwibut, ʘwʘ paw ex., we type de données ou si w'attwibut d-doit êtwe n-nowmawisé. (˘ω˘) gawdez p-pwésent à w'espwit que ces fonctions webgw ont des pewfowmances f-faibwes et q-qu'iw est pwéféwabwe de stockew w-w'état dans v-votwe appwication javascwipt. (ꈍᴗꈍ) cependant, ^^ ces fonctions sont idéawes p-pouw déboguew u-un contexte w-webgw sans touchew a-au code de w'appwication.
 
-## Exemples
+## exempwes
 
-Cet exemple montre comment envoyer vos attributs de sommet au programme shader. Nous utilisons une structure de données imaginaire, dans laquelle les attributs de chaque sommet sont stockés entrelacés avec une longueur de 20 octets par sommet :
+cet exempwe montwe comment e-envoyew vos a-attwibuts de sommet au pwogwamme shadew. ^^ nyous u-utiwisons une stwuctuwe de données imaginaiwe, ( ͡o ω ͡o ) d-dans waquewwe wes attwibuts de c-chaque sommet sont s-stockés entwewacés avec une w-wongueuw de 20 o-octets paw sommet :
 
-1. **position :** nous devons stocker les coordonnées X, Y et Z. Pour une précision maximale, nous utilisons des flottants 32 bits ; au total, cela utilise 12 octets ;
-2. **vecteur normal :** nous avons besoin de stocker les composantes X, Y et Z du vecteur normal, mais comme la précision n'est pas si importante que cela, nous utilisons des entiers signés sur 8 bits. Pour de meilleures performances, nous alignons les données sur 32 bits en stockant également une quatrième composante de valeur zéro, ce qui porte la taille totale à 4 octets. Également, nous indiquons à WebGL de normaliser les valeurs, car nos normales sont toujours dans la plage \[-1, 1] ;
-3. **coordonnées de texture :** nous avons besoin de stocker les coordonnées U et V ; pour que ces nombres entiers non signés sur 16 bits offrent suffisamment de précision, la taille totale est de 4 octets. Nous indiquons également à WebGL de normaliser les valeurs à \[0, 1].
+1. -.- **position :** nyous devons s-stockew wes coowdonnées x, ^^;; y-y et z. pouw une p-pwécision maximawe, ^•ﻌ•^ n-nyous utiwisons d-des fwottants 32 bits ; au t-totaw, (˘ω˘) cewa utiwise 12 o-octets ;
+2. o.O **vecteuw nyowmaw :** n-nyous avons besoin de s-stockew wes composantes x, y et z du vecteuw nyowmaw, (✿oωo) m-mais comme w-wa pwécision n-ny'est pas si impowtante que cewa, 😳😳😳 nyous utiwisons des entiews signés suw 8 bits. (ꈍᴗꈍ) p-pouw de meiwweuwes pewfowmances, n-nyous awignons w-wes données suw 32 bits en stockant égawement une quatwième c-composante de vaweuw zéwo, ce q-qui powte wa taiwwe t-totawe à 4 o-octets. σωσ Égawement, n-nyous indiquons à w-webgw de nyowmawisew wes vaweuws, UwU caw nyos nyowmawes sont toujouws dans w-wa pwage \[-1, ^•ﻌ•^ 1] ;
+3. mya **coowdonnées de textuwe :** n-nyous avons besoin de stockew wes coowdonnées u et v ; pouw q-que ces nyombwes entiews nyon signés suw 16 bits offwent suffisamment de pwécision, /(^•ω•^) w-wa taiwwe t-totawe est de 4 octets. nyous i-indiquons égawement à webgw de nyowmawisew wes v-vaweuws à \[0, rawr 1].
 
-Par exemple, le sommet suivant :
+p-paw exempwe, nyaa~~ we sommet suivant :
 
 ```json
 {
-  "position": [1.0, 2.0, 1.5],
-  "normale": [1.0, 0.0, 0.0],
-  "coordTex": [0.5, 0.25]
+  "position": [1.0, ( ͡o ω ͡o ) 2.0, 1.5],
+  "nowmawe": [1.0, 0.0, σωσ 0.0],
+  "coowdtex": [0.5, (✿oωo) 0.25]
 }
 ```
 
-sera stocké dans le tampon des tableaux comme suit :
+s-sewa stocké dans we tampon des t-tabweaux comme suit :
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <td>00 00 80 3F</td>
+    <tw>
+      <td>00 00 80 3f</td>
       <td>00 00 00 40</td>
-      <td>00 00 0C 3F</td>
-      <td>7F</td>
+      <td>00 00 0c 3f</td>
+      <td>7f</td>
       <td>00</td>
       <td>00</td>
       <td>00</td>
-      <td>7F FF</td>
-      <td>3F FF</td>
-    </tr>
+      <td>7f ff</td>
+      <td>3f ff</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Création du tampon des tableaux
+### cwéation d-du tampon des tabweaux
 
-Tout d'abord, nous créons dynamiquement le tampon des tableaux à partir de données JSON en utilisant un {{domxref("DataView")}}. Notez l'utilisation de `true`, car WebGL s'attend à ce que nos données soient en little-endian.
+tout d'abowd, (///ˬ///✿) nyous cwéons d-dynamiquement w-we tampon des t-tabweaux à pawtiw de données json en utiwisant u-un {{domxwef("dataview")}}. σωσ nyotez w'utiwisation de `twue`, UwU caw webgw s'attend à ce que nyos d-données soient e-en wittwe-endian. (⑅˘꒳˘)
 
 ```js
-// Charger la géometrie avec fetch() et Response.json()
-const response = await fetch("assets/geometry.json");
-const sommets = await response.json();
+// c-chawgew w-wa géometwie avec fetch() et wesponse.json()
+c-const wesponse = a-await fetch("assets/geometwy.json");
+const sommets = await wesponse.json();
 
-// Créer le tampon des tableaux
-const tampon = new ArrayBuffer(20 * sommets.length);
-// Remplir le tampon des tableaux
-const dv = new DataView(tampon);
-for (let i = 0; i < sommets.length; i++) {
-  dv.setFloat32(20 * i, sommets[i].position[0], true);
-  dv.setFloat32(20 * i + 4, sommets[i].position[1], true);
-  dv.setFloat32(20 * i + 8, sommets[i].position[2], true);
-  dv.setInt8(20 * i + 12, sommets[i].normale[0] * 0x7f);
-  dv.setInt8(20 * i + 13, sommets[i].normale[1] * 0x7f);
-  dv.setInt8(20 * i + 14, sommets[i].normale[2] * 0x7f);
-  dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, sommets[i].coordTex[0] * 0xffff, true);
-  dv.setUint16(20 * i + 18, sommets[i].coordTex[1] * 0xffff, true);
+// c-cwéew we tampon des tabweaux
+const tampon = n-nyew awwaybuffew(20 * sommets.wength);
+// wempwiw w-we tampon des t-tabweaux
+const dv = nyew dataview(tampon);
+f-fow (wet i-i = 0; i < s-sommets.wength; i++) {
+  dv.setfwoat32(20 * i, /(^•ω•^) sommets[i].position[0], -.- t-twue);
+  dv.setfwoat32(20 * i + 4, sommets[i].position[1], (ˆ ﻌ ˆ)♡ t-twue);
+  dv.setfwoat32(20 * i + 8, nyaa~~ sommets[i].position[2], ʘwʘ twue);
+  d-dv.setint8(20 * i-i + 12, :3 sommets[i].nowmawe[0] * 0x7f);
+  dv.setint8(20 * i + 13, (U ᵕ U❁) s-sommets[i].nowmawe[1] * 0x7f);
+  d-dv.setint8(20 * i-i + 14, (U ﹏ U) sommets[i].nowmawe[2] * 0x7f);
+  d-dv.setint8(20 * i + 15, ^^ 0);
+  dv.setuint16(20 * i + 16, òωó sommets[i].coowdtex[0] * 0xffff, /(^•ω•^) t-twue);
+  dv.setuint16(20 * i-i + 18, 😳😳😳 sommets[i].coowdtex[1] * 0xffff, :3 twue);
 }
 ```
 
-Pour de meilleures performances, nous pourrions également effectuer la conversion JSON vers ArrayBuffer précédente du côté serveur, par ex. avec Node.js. Nous pourrions alors charger le fichier binaire et l'interpréter comme un tampon de tableaux :
+pouw d-de meiwweuwes pewfowmances, (///ˬ///✿) n-nyous pouwwions égawement e-effectuew wa convewsion j-json vews awwaybuffew p-pwécédente du côté sewveuw, rawr x3 p-paw ex. (U ᵕ U❁) avec n-nyode.js. (⑅˘꒳˘) nyous pouwwions awows c-chawgew we fichiew binaiwe et w'intewpwétew comme un tampon d-de tabweaux :
 
 ```js
-const response = await fetch("assets/geometry.bin");
-const tampon = await response.arrayBuffer();
+const wesponse = a-await fetch("assets/geometwy.bin");
+const tampon = await wesponse.awwaybuffew();
 ```
 
-### Utiliser le tampon de tableaux avec WebGL
+### u-utiwisew we tampon d-de tabweaux avec w-webgw
 
-Tout d'abord, nous créons un nouvel Objet Tampon de Sommets (OTS) et nous l'alimentons avec notre tampon de tableaux :
+tout d'abowd, (˘ω˘) nyous cwéons u-un nyouvew o-objet tampon de sommets (ots) e-et nyous w'awimentons avec nyotwe t-tampon de tabweaux :
 
 ```js
-// Lier le tampon de tableaux à l'Objet Tampon de Sommets
-const ots = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, ots);
-gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
+// wiew we tampon d-de tabweaux à w'objet t-tampon de sommets
+const ots = gw.cweatebuffew();
+gw.bindbuffew(gw.awway_buffew, :3 ots);
+gw.buffewdata(gw.awway_buffew, XD b-buffew, >_< g-gw.static_dwaw);
 ```
 
-Ensuite, nous spécifions la disposition en mémoire du tampon de tableaux, soit en définissant nous-mêmes l'indice :
+ensuite, (✿oωo) nyous spécifions wa disposition e-en mémoiwe du tampon de tabweaux, (ꈍᴗꈍ) s-soit en définissant n-nyous-mêmes w'indice :
 
 ```js
-// Décrire la disposition du tampon :
-//1. position, non normalisé
-gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
-gl.enableVertexAttribArray(0);
-//2. vecteur normal, normalisé à [-1, 1]
-gl.vertexAttribPointer(1, 4, gl.BYTE, true, 20, 12);
-gl.enableVertexAttribArray(1);
-//3. coordonnées de texture, normalisées à [0, 1]
-gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
-gl.enableVertexAttribArray(2);
+// décwiwe wa disposition du tampon :
+//1. XD p-position, :3 nyon nyowmawisé
+gw.vewtexattwibpointew(0, mya 3, gw.fwoat, òωó f-fawse, 20, 0);
+gw.enabwevewtexattwibawway(0);
+//2. nyaa~~ v-vecteuw n-nowmaw, 🥺 nyowmawisé à [-1, 1]
+gw.vewtexattwibpointew(1, -.- 4, g-gw.byte, 🥺 twue, (˘ω˘) 20, 12);
+g-gw.enabwevewtexattwibawway(1);
+//3. c-coowdonnées d-de textuwe, òωó n-nowmawisées à [0, UwU 1]
+g-gw.vewtexattwibpointew(2, ^•ﻌ•^ 2, gw.unsigned_showt, mya twue, 20, (✿oωo) 16);
+gw.enabwevewtexattwibawway(2);
 
-// Définir les attributs dans le shader de sommet aux mêmes indices
-gl.bindAttribLocation(shaderProgram, 0, "position");
-gl.bindAttribLocation(shaderProgram, 1, "normal");
-gl.bindAttribLocation(shaderProgram, 2, "texUV");
-// Du fait que indices des attributs ont changé, nous devons refaire l'édition de liens du shader
-// Noter que cela réinitialisera tous les uniforms qui avaient été précédemment définis.
-gl.linkProgram(shaderProgram);
+// définiw wes attwibuts d-dans we shadew d-de sommet aux m-mêmes indices
+g-gw.bindattwibwocation(shadewpwogwam, XD 0, "position");
+g-gw.bindattwibwocation(shadewpwogwam, :3 1, "nowmaw");
+g-gw.bindattwibwocation(shadewpwogwam, (U ﹏ U) 2, "texuv");
+// du fait que indices des attwibuts ont changé, UwU nyous d-devons wefaiwe w-w'édition de wiens du shadew
+// nyotew que cewa wéinitiawisewa t-tous wes unifowms q-qui avaient été p-pwécédemment définis. ʘwʘ
+gw.winkpwogwam(shadewpwogwam);
 ```
 
-soit en utilisant l'indice fourni par la carte graphique, au lieu de le définir nous-mêmes ; cela évite la réédition des liens du programme shader.
+s-soit en utiwisant w'indice fouwni paw wa cawte g-gwaphique, >w< au w-wieu de we définiw nyous-mêmes ; cewa évite w-wa wéédition des wiens du pwogwamme s-shadew. 😳😳😳
 
 ```js
-const positionLoc = gl.getAttribLocation(shaderProgram, "position");
-gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
-gl.enableVertexAttribArray(positionLoc);
+c-const positionwoc = gw.getattwibwocation(shadewpwogwam, rawr "position");
+g-gw.vewtexattwibpointew(positionwoc, ^•ﻌ•^ 3, σωσ g-gw.fwoat, fawse, :3 20, 0);
+g-gw.enabwevewtexattwibawway(positionwoc);
 
-const normalLoc = gl.getAttribLocation(shaderProgram, "normal");
-gl.vertexAttribPointer(normalLoc, 4, gl.BYTE, true, 20, 12);
-gl.enableVertexAttribArray(normalLoc);
+c-const nyowmawwoc = g-gw.getattwibwocation(shadewpwogwam, rawr x3 "nowmaw");
+g-gw.vewtexattwibpointew(nowmawwoc, nyaa~~ 4, gw.byte, t-twue, :3 20, 12);
+g-gw.enabwevewtexattwibawway(nowmawwoc);
 
-const texUVLoc = gl.getAttribLocation(shaderProgram, "texUV");
-gl.vertexAttribPointer(texUVLoc, 2, gl.UNSIGNED_SHORT, true, 20, 16);
-gl.enableVertexAttribArray(texUVLoc);
+const t-texuvwoc = gw.getattwibwocation(shadewpwogwam, "texuv");
+gw.vewtexattwibpointew(texuvwoc, >w< 2, gw.unsigned_showt, rawr t-twue, 20, 16);
+gw.enabwevewtexattwibawway(texuvwoc);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Vertex Specification](https://www.khronos.org/opengl/wiki/Vertex_Specification) sur le wiki OpenGL
+- [vewtex specification](https://www.khwonos.owg/opengw/wiki/vewtex_specification) suw we wiki o-opengw

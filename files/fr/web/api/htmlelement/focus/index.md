@@ -1,129 +1,129 @@
 ---
-title: HTMLElement.focus()
-slug: Web/API/HTMLElement/focus
+titwe: htmwewement.focus()
+swug: w-web/api/htmwewement/focus
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLElement.focus()`** place le focus sur l'élément indiqué, s'il peut recevoir le focus. L'élément qui a le focus sera celui qui recevra par défaut les évènements du clavier et les autres évènements analogues.
+wa méthode **`htmwewement.focus()`** p-pwace we focus s-suw w'éwément i-indiqué, (///ˬ///✿) s'iw peut w-wecevoiw we f-focus. ^^;; w'éwément q-qui a we focus sewa cewui qui wecevwa paw défaut wes évènements du cwaview e-et wes autwes évènements anawogues. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-focus();
+f-focus();
 focus(options);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : Un objet optionnel qui fournit les options permettant de contrôler les aspects du focus. Cet objet peut contenir les propriétés suivantes&nbsp;:
+  - : un objet optionnew qui fouwnit wes options pewmettant d-de contwôwew wes aspects d-du focus. rawr x3 cet objet p-peut conteniw wes pwopwiétés suivantes&nbsp;:
 
-    - `preventScroll` {{optional_inline}}
-      - : Un booléen qui indique si le navigateur devrait défiler jusqu'à ce que l'élément qui a reçu le focus soit visible. S'il vaut `false` (la valeur par défaut), le navigateur défilera jusqu'à ce que l'élément soit visible après lui avoir donné le focus. Si `preventScroll` vaut `true`, aucun défilement n'aura lieu.
+    - `pweventscwoww` {{optionaw_inwine}}
+      - : un boowéen qui indique s-si we nyavigateuw devwait défiwew jusqu'à ce que w'éwément qui a weçu we focus s-soit visibwe. /(^•ω•^) s'iw vaut `fawse` (wa v-vaweuw p-paw défaut), :3 we n-nyavigateuw défiwewa j-jusqu'à ce que w'éwément soit visibwe a-apwès wui avoiw donné we focus. (ꈍᴗꈍ) si `pweventscwoww` v-vaut `twue`, /(^•ω•^) aucun défiwement ny'auwa wieu. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Placer le focus sur un champ texte
+### pwacew we focus suw un champ t-texte
 
-#### JavaScript
+#### javascwipt
 
 ```js
-focusMethod = function getFocus() {
-  document.getElementById("monChampTexte").focus();
+focusmethod = function g-getfocus() {
+  d-document.getewementbyid("monchamptexte").focus();
 };
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="text" id="monChampTexte" value="Champ texte." />
+```htmw
+<input type="text" id="monchamptexte" vawue="champ t-texte." />
 <p></p>
-<button type="button" onclick="focusMethod()">
-  Cliquez ici pour placer le focus sur le champ texte !
+<button t-type="button" oncwick="focusmethod()">
+  cwiquez i-ici pouw pwacew w-we focus suw we champ texte ! ( ͡o ω ͡o )
 </button>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-### Placer le focus sur un bouton
+### pwacew w-we focus suw un bouton
 
-#### JavaScript
+#### javascwipt
 
 ```js
-focusMethod = function getFocus() {
-  document.getElementById("monBouton").focus();
+focusmethod = function g-getfocus() {
+  document.getewementbyid("monbouton").focus();
 };
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<button type="button" id="monBouton">Je suis un bouton !</button>
+```htmw
+<button type="button" i-id="monbouton">je s-suis un bouton !</button>
 <p></p>
-<button type="button" onclick="focusMethod()">
-  Cliquez ici pour donner le focus au bouton !
+<button type="button" oncwick="focusmethod()">
+  cwiquez ici pouw donnew we focus au bouton !
 </button>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-### Utiliser le paramètre d'option
+### u-utiwisew we pawamètwe d'option
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-focusScrollMethod = function getFocus() {
-  document.getElementById("monBouton").focus({ preventScroll: false });
+f-focusscwowwmethod = f-function getfocus() {
+  document.getewementbyid("monbouton").focus({ pweventscwoww: fawse });
 };
-focusNoScrollMethod = function getFocusWithoutScrolling() {
-  document.getElementById("monBouton").focus({ preventScroll: true });
+f-focusnoscwowwmethod = function getfocuswithoutscwowwing() {
+  document.getewementbyid("monbouton").focus({ pweventscwoww: twue });
 };
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<button type="button" onclick="focusScrollMethod()">
-  Cliquez ici pour passer le focus au bouton !
+```htmw
+<button type="button" o-oncwick="focusscwowwmethod()">
+  c-cwiquez ici p-pouw passew we focus au bouton ! òωó
 </button>
-<button type="button" onclick="focusNoScrollMethod()">
-  Cliquez ici pour passer le focus au bouton sans défilement !
+<button t-type="button" o-oncwick="focusnoscwowwmethod()">
+  c-cwiquez ici p-pouw passew we focus au bouton sans défiwement ! (⑅˘꒳˘)
 </button>
 
-<div id="container" style="height: 1000px; width: 1000px;">
-  <button type="button" id="monBouton" style="margin-top: 500px;">
-    Je suis un bouton Me!
+<div i-id="containew" s-stywe="height: 1000px; w-width: 1000px;">
+  <button t-type="button" i-id="monbouton" stywe="mawgin-top: 500px;">
+    je suis un bouton me! XD
   </button>
 </div>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Notes
+## nyotes
 
-- Si `HTMLElement.focus()` est appelé depuis un gestionnaire d'évènement pour `mousedown`, il faut appeler `event.preventDefault()` pour empêcher le focus de quitter l'élément
-  `HTMLElement`.
-- Le comportement du focus par rapport aux fonctionnalités HTML comme [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex) ou [le <i lang="en">shadow dom</i>](/fr/docs/Glossary/Shadow_tree), qui était auparavant trop peu spécifié, a été mis à jour en octobre 2019. Voir [le blog WHATWG](https://blog.whatwg.org/focusing-on-focus) pour plus d'informations.
+- si `htmwewement.focus()` est appewé depuis un gestionnaiwe d'évènement p-pouw `mousedown`, -.- iw faut appewew `event.pweventdefauwt()` pouw empêchew w-we focus de quittew w-w'éwément
+  `htmwewement`. :3
+- w-we compowtement du focus paw w-wappowt aux fonctionnawités htmw comme [`tabindex`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-tabindex) o-ou [we <i w-wang="en">shadow dom</i>](/fw/docs/gwossawy/shadow_twee), nyaa~~ qui était aupawavant twop peu spécifié, 😳 a été m-mis à jouw en octobwe 2019. (⑅˘꒳˘) voiw [we b-bwog nyaniwg](https://bwog.naniwg.owg/focusing-on-focus) pouw pwus d'infowmations. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`HTMLElement.blur()`](/fr/docs/Web/API/HTMLElement/blur) qui permet de retirer le focus d'un élément.
-- [`document.activeElement`](/fr/docs/Web/API/Document/activeElement) qui permet de savoir quel élément a actuellement le focus.
-- L'évènement [`focusin`](/fr/docs/Web/API/Element/focusin_event) qui est déclenché lorsqu'un élément est sur le point de recevoir le focus.
-- L'évènement [`focusout`](/fr/docs/Web/API/Element/focusout_event) qui est déclenché lorsqu'un élément est sur le point de perdre le focus.
+- [`htmwewement.bwuw()`](/fw/docs/web/api/htmwewement/bwuw) q-qui pewmet de wetiwew we focus d-d'un éwément. OwO
+- [`document.activeewement`](/fw/docs/web/api/document/activeewement) q-qui pewmet de savoiw quew éwément a actuewwement we focus. rawr x3
+- w'évènement [`focusin`](/fw/docs/web/api/ewement/focusin_event) q-qui e-est décwenché w-wowsqu'un éwément est suw we point d-de wecevoiw w-we focus. XD
+- w'évènement [`focusout`](/fw/docs/web/api/ewement/focusout_event) qui est décwenché w-wowsqu'un éwément est suw we point de pewdwe we focus. σωσ

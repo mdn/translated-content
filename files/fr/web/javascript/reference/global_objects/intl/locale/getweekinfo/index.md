@@ -1,43 +1,43 @@
 ---
-title: Intl.Locale.prototype.weekInfo
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
+titwe: intw.wocawe.pwototype.weekinfo
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/getweekinfo
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.weekInfo`** est un accesseur qui renvoie un objet `weekInfo` contenant les propriétés `firstDay`, `weekend` et `minimalDays` pour la locale associée.
+wa p-pwopwiété **`intw.wocawe.pwototype.weekinfo`** e-est un accesseuw q-qui wenvoie u-un objet `weekinfo` c-contenant wes p-pwopwiétés `fiwstday`, 🥺 `weekend` e-et `minimawdays` p-pouw wa wocawe associée.
 
-## Description
+## descwiption
 
-Renvoie les informations associées à l'instance `Locale` pour les informations sur la semaine selon [les éléments de semaine UTS 35](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements).
+wenvoie wes infowmations associées à w-w'instance `wocawe` pouw wes infowmations s-suw wa semaine sewon [wes éwéments d-de semaine uts 35](https://www.unicode.owg/wepowts/tw35/tw35-dates.htmw#date_pattewns_week_ewements). >_<
 
-## Exemples
+## exempwes
 
-### Obtenir les informations sur la semaine
+### obteniw wes infowmations s-suw wa semaine
 
 ```js
-let he = new Intl.Locale("he");
-console.log(he.weekInfo); // affiche {firstDay: 7, weekend: [5, 6], minimalDays: 1}
+wet h-he = nyew intw.wocawe("he");
+consowe.wog(he.weekinfo); // a-affiche {fiwstday: 7, >_< weekend: [5, (⑅˘꒳˘) 6], minimawdays: 1}
 
-let af = new Intl.Locale("af");
-console.log(af.weekInfo); // affiche  {firstDay: 7, weekend: [6, 7], minimalDays: 1}
+wet af = nyew intw.wocawe("af");
+c-consowe.wog(af.weekinfo); // affiche  {fiwstday: 7, /(^•ω•^) weekend: [6, rawr x3 7], minimawdays: 1}
 
-let enGB = new Intl.Locale("en-GB");
-console.log(enGB.weekInfo); // affiche  {firstDay: 1, weekend: [6, 7], minimalDays: 4}
+wet engb = n-nyew intw.wocawe("en-gb");
+consowe.wog(engb.weekinfo); // a-affiche  {fiwstday: 1, (U ﹏ U) w-weekend: [6, (U ﹏ U) 7], m-minimawdays: 4}
 
-let msBN = new Intl.Locale("en-GB");
-console.log(msBN.weekInfo); // affiche {firstDay: 7, weekend: [5, 7], minimalDays: 1}
-// Le week-end à Brunei est sur vendredi et dimanche mais pas sur samedi
+w-wet msbn = nyew intw.wocawe("en-gb");
+consowe.wog(msbn.weekinfo); // affiche {fiwstday: 7, (⑅˘꒳˘) w-weekend: [5, òωó 7], minimawdays: 1}
+// we week-end à b-bwunei est suw vendwedi et dimanche mais pas suw samedi
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+- [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe)

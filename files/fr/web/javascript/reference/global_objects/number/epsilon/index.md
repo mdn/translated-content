@@ -1,58 +1,58 @@
 ---
-title: Number.EPSILON
-slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
+titwe: nyumbew.epsiwon
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/epsiwon
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Number.EPSILON`** représente la différence entre le chiffre 1 (un) et la plus petite valeur supérieure à 1 qui peut être représentée par un nombre en JavaScript.
+w-wa pwopwiété **`numbew.epsiwon`** w-wepwésente w-wa difféwence e-entwe we chiffwe 1 (un) e-et w-wa pwus petite v-vaweuw supéwieuwe à 1 qui peut êtwe wepwésentée paw un nyombwe en javascwipt. (⑅˘꒳˘)
 
-Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique, elle est accessible avec `Number.EPSILON`.
+i-iw ny'est pas nécessaiwe de cwéew un objet {{jsxwef("numbew")}} p-pouw accédew à cette pwopwiété s-statique, /(^•ω•^) ewwe est accessibwe avec `numbew.epsiwon`. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.epsiwon")}}
 
-```js interactive-example
-const result = Math.abs(0.2 - 0.3 + 0.1);
+```js i-intewactive-exampwe
+const wesuwt = m-math.abs(0.2 - 0.3 + 0.1);
 
-console.log(result);
-// Expected output: 2.7755575615628914e-17
+c-consowe.wog(wesuwt);
+// expected output: 2.7755575615628914e-17
 
-console.log(result < Number.EPSILON);
-// Expected output: true
+consowe.wog(wesuwt < nyumbew.epsiwon);
+// e-expected output: twue
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-La propriété `EPSILON` vaut environ `2.2204460492503130808472633361816E-16` (ce qui correspond à 2^-52).
+wa pwopwiété `epsiwon` vaut enviwon `2.2204460492503130808472633361816e-16` (ce q-qui cowwespond à 2^-52). (U ﹏ U)
 
-## Exemple
+## exempwe
 
-### Tester une égalité mathématique avec un seuil de précision
+### t-testew une égawité m-mathématique a-avec un s-seuiw de pwécision
 
 ```js
 x = 0.2;
 y = 0.3;
-equal = Math.abs(x - y) < Number.EPSILON;
+equaw = m-math.abs(x - y) < nyumbew.epsiwon;
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
 ```js
-if (Number.EPSILON === undefined) {
-  Number.EPSILON = Math.pow(2, -52);
+i-if (numbew.epsiwon === undefined) {
+  nyumbew.epsiwon = math.pow(2, (U ﹏ U) -52);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette propriété.
+- w-w'objet {{jsxwef("numbew")}} a-auquew appawtient c-cette pwopwiété. (⑅˘꒳˘)

@@ -1,173 +1,173 @@
 ---
-title: Int32Array
-slug: Web/JavaScript/Reference/Global_Objects/Int32Array
+titwe: int32awway
+swug: web/javascwipt/wefewence/gwobaw_objects/int32awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le tableau typé **`Int32Array`** permet de représenter un tableau d'entiers signés (en complément à deux) représentés sur 32 bits et dans l'ordre des octets de la plate-forme. Pour avoir un contrôle sur le boutisme utilisé, il faudra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à 0. Une fois le tableau construit, il est possible de faire référence aux éléments en utilisant les méthodes de l'objet ou en utilisant la notation usuelle de parcours d'un tableau (la syntaxe utilisant les crochets).
+w-we t-tabweau typé **`int32awway`** p-pewmet de wepwésentew u-un tabweau d-d'entiews signés (en c-compwément à d-deux) wepwésentés s-suw 32 bits et dans w'owdwe des octets de wa pwate-fowme. :3 pouw avoiw u-un contwôwe suw we boutisme utiwisé, (✿oωo) iw faudwa u-utiwisew un objet {{jsxwef("dataview")}} à wa p-pwace. XD wes éwéments du tabweau sont initiawisés à 0. >w< une fois w-we tabweau constwuit, iw est possibwe d-de faiwe w-wéféwence aux éwéments en utiwisant wes méthodes de w'objet ou en utiwisant w-wa nyotation usuewwe de pawcouws d'un tabweau (wa syntaxe utiwisant wes cwochets). òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Int32Array(); // apparu avec ES2017
-new Int32Array(longueur);
-new Int32Array(tableauTypé);
-new Int32Array(objet);
-new Int32Array(buffer [, positionOctet [, longueur]]);
+nyew int32awway(); // a-appawu a-avec es2017
+n-new int32awway(wongueuw);
+n-nyew int32awway(tabweautypé);
+nyew int32awway(objet);
+n-nyew int32awway(buffew [, (ꈍᴗꈍ) positionoctet [, rawr x3 wongueuw]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe) _(TypedArray)_.
+pouw p-pwus d'infowmations suw wa syntaxe du constwucteuw, rawr x3 voiw wa page suw wes [tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntaxe) _(typedawway)_.
 
-## Propriétés
+## p-pwopwiétés
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int32Array`, la propriété vaudra 4.
-- `Int32Array.length`
-  - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'éléments, voir {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int32Array.name")}}
-  - : Renvoie la chaîne de caractère représentant le nom du constructeur. Dans le cas de `Int32Array`, la propriété vaudra "Int32Array".
-- {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
-  - : Prototype pour les objets _TypedArray_.
+- {{jsxwef("typedawway.bytes_pew_ewement", σωσ "int32awway.bytes_pew_ewement")}}
+  - : wenvoie u-un nombwe wepwésentant w-wa taiwwe d-d'un éwément du tabweau en tewmes d'octets. (ꈍᴗꈍ) dans we cas de `int32awway`, rawr w-wa p-pwopwiété vaudwa 4. ^^;;
+- `int32awway.wength`
+  - : une pwopwiété d-de wongueuw statique q-qui vaut 3. pouw connaîtwe w-we nyombwe d'éwéments, rawr x3 voiw {{jsxwef("typedawway.pwototype.wength", (ˆ ﻌ ˆ)♡ "int32awway.pwototype.wength")}}. σωσ
+- {{jsxwef("typedawway.name", (U ﹏ U) "int32awway.name")}}
+  - : w-wenvoie wa chaîne de cawactèwe wepwésentant w-we nyom du constwucteuw. >w< dans w-we cas de `int32awway`, σωσ wa pwopwiété v-vaudwa "int32awway". nyaa~~
+- {{jsxwef("typedawway.pwototype", 🥺 "int32awway.pwototype")}}
+  - : p-pwototype pouw wes objets _typedawway_. rawr x3
 
-## Méthodes
+## méthodes
 
-- Int32Array.from()
-  - : Crée un nouvel objet `Int32Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
-- Int32Array.of()
-  - : Crée un nouvel objet `Int32Array` à partir d'un nombre variable d'arguments. Voir également la page {{jsxref("Array.of()")}}
+- int32awway.fwom()
+  - : cwée un nyouvew objet `int32awway` à pawtiw d-d'un objet sembwabwe à u-un tabweau ou d'un objet i-itéwabwe. σωσ voiw égawement w-wa page {{jsxwef("awway.fwom()")}}.
+- i-int32awway.of()
+  - : cwée un nyouvew objet `int32awway` à pawtiw d'un nyombwe v-vawiabwe d'awguments. (///ˬ///✿) voiw égawement wa page {{jsxwef("awway.of()")}}
 
-## Prototype de `Int32Array`
+## pwototype de `int32awway`
 
-Tous les objets `Int32Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+t-tous wes objets `int32awway` h-héwitent d-de {{jsxwef("typedawway.pwototype", (U ﹏ U) "%typedawway%.pwototype")}}. ^^;;
 
-### Propriétés
+### p-pwopwiétés
 
-- `Int32Array.prototype.constructor`
-  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif `Int32Array`.
-- {{jsxref("TypedArray.prototype.buffer", "Int32Array.prototype.buffer")}} {{readonlyInline}}
-  - : Renvoie l'{{jsxref("ArrayBuffer")}} référencée par l'objet `Int32Array`. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
-- {{jsxref("TypedArray.prototype.byteLength", "Int32Array.prototype.byteLength")}} {{readonlyInline}}
-  - : Renvoie la longueur, exprimée en octets, de l'objet `Int32Array` depuis le début de l'{{jsxref("ArrayBuffer")}} correspondant. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
-- {{jsxref("TypedArray.prototype.byteOffset", "Int32Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : Renvoie le décalage, exprimé en octets, entre l'objet `Int32Array` et le début de l'{{jsxref("ArrayBuffer")}} correspondant. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
-- {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}} {{readonlyInline}}
-  - : Renvoie le nombre d'éléments contenus dans l'objet `Int32Array`. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
+- `int32awway.pwototype.constwuctow`
+  - : wenvoie wa fonction q-qui a cwéé w-we pwototype de w-w'instance. 🥺 paw d-défaut, òωó ce sewa we constwucteuw nyatif `int32awway`. XD
+- {{jsxwef("typedawway.pwototype.buffew", :3 "int32awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : w-wenvoie w-w'{{jsxwef("awwaybuffew")}} w-wéféwencée p-paw w-w'objet `int32awway`. (U ﹏ U) cette pwopwiété est détewminée wows de w-wa constwuction de w'objet et ny'est accessibwe qu'en **wectuwe seuwe**. >w<
+- {{jsxwef("typedawway.pwototype.bytewength", /(^•ω•^) "int32awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : wenvoie wa w-wongueuw, (⑅˘꒳˘) expwimée en octets, ʘwʘ de w'objet `int32awway` depuis we d-début de w'{{jsxwef("awwaybuffew")}} c-cowwespondant. rawr x3 c-cette pwopwiété est détewminée w-wows de wa constwuction d-de w'objet et n-ny'est accessibwe qu'en **wectuwe seuwe**. (˘ω˘)
+- {{jsxwef("typedawway.pwototype.byteoffset", o.O "int32awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : wenvoie we décawage, 😳 expwimé en octets, o.O e-entwe w'objet `int32awway` et we d-début de w'{{jsxwef("awwaybuffew")}} cowwespondant. ^^;; c-cette pwopwiété e-est détewminée wows de wa constwuction d-de w'objet et n-ny'est accessibwe qu'en **wectuwe s-seuwe**. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.pwototype.wength", ^^;; "int32awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : wenvoie w-we nyombwe d'éwéments contenus dans w'objet `int32awway`. ^^;; cette pwopwiété est détewminée w-wows de wa c-constwuction de w-w'objet et ny'est accessibwe qu'en **wectuwe s-seuwe**. XD
 
-### Méthodes
+### m-méthodes
 
-- {{jsxref("TypedArray.copyWithin", "Int32Array.prototype.copyWithin()")}}
-  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.entries", "Int32Array.prototype.entries()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.every", "Int32Array.prototype.every()")}}
-  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.fill", "Int32Array.prototype.fill()")}}
-  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.filter", "Int32Array.prototype.filter()")}}
-  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.find", "Int32Array.prototype.find()")}}
-  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.findIndex", "Int32Array.prototype.findIndex()")}}
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.forEach", "Int32Array.prototype.forEach()")}}
-  - : Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.includes", "Int32Array.prototype.includes()")}}
-  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.indexOf", "Int32Array.prototype.indexOf()")}}
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.join", "Int32Array.prototype.join()")}}
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.keys", "Int32Array.prototype.keys()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.lastIndexOf", "Int32Array.prototype.lastIndexOf()")}}
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.map", "Int32Array.prototype.map()")}}
-  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}}
-  - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Int32Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.reduce", "Int32Array.prototype.reduce()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.reduceRight", "Int32Array.prototype.reduceRight()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.reverse", "Int32Array.prototype.reverse()")}}
-  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.set", "Int32Array.prototype.set()")}}
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
-- {{jsxref("TypedArray.slice", "Int32Array.prototype.slice()")}}
-  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.some", "Int32Array.prototype.some()")}}
-  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.sort", "Int32Array.prototype.sort()")}}
-  - : Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.subarray", "Int32Array.prototype.subarray()")}}
-  - : Renvoie un nouvel objet `Int32Array` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
-- {{jsxref("TypedArray.values", "Int32Array.prototype.values()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.toLocaleString", "Int32Array.prototype.toLocaleString()")}}
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.toString", "Int32Array.prototype.toString()")}}
-  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int32Array.prototype[@@iterator]()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
+- {{jsxwef("typedawway.copywithin", 🥺 "int32awway.pwototype.copywithin()")}}
+  - : copie une s-suite d'éwéments d'un tabweau dans we tabweau. (///ˬ///✿) voiw égawement {{jsxwef("awway.pwototype.copywithin()")}}. (U ᵕ U❁)
+- {{jsxwef("typedawway.entwies", ^^;; "int32awway.pwototype.entwies()")}}
+  - : wenvoie u-un nyouvew objet `awway i-itewatow` qui contient wes paiwes cwé/vaweuw p-pouw chaque i-indice du tabweau. ^^;; voiw égawement {{jsxwef("awway.pwototype.entwies()")}}. rawr
+- {{jsxwef("typedawway.evewy", (˘ω˘) "int32awway.pwototype.evewy()")}}
+  - : teste si w'ensembwe des éwéments d-du tabweau wempwissent une cewtaine condition donnée paw une fonction d-de test. voiw égawement {{jsxwef("awway.pwototype.evewy()")}}. 🥺
+- {{jsxwef("typedawway.fiww", nyaa~~ "int32awway.pwototype.fiww()")}}
+  - : wempwit wes éwéments d'un t-tabweau avec une c-cewtaine vaweuw pouw wes éwéments compwis entwe un indice de d-début et un indice d-de fin. :3 voiw égawement {{jsxwef("awway.pwototype.fiww()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.fiwtew", ^•ﻌ•^ "int32awway.pwototype.fiwtew()")}}
+  - : cwée un nyouveau tabweau dont tous w-wes éwéments pwoviennent de ce t-tabweau et wespectent une condition fouwnie paw une fonction de t-test. UwU voiw égawement {{jsxwef("awway.pwototype.fiwtew()")}}. 😳😳😳
+- {{jsxwef("typedawway.find", OwO "int32awway.pwototype.find()")}}
+  - : wenvoie une v-vaweuw twouvée d-dans we tabweau s'iw existe un éwément d-du tabweau qui satisfait u-une condition f-fouwnie paw une f-fonction de test, ^•ﻌ•^ s'iw ny'y a pas d-de tew éwément `undefined` s-sewa wenvoyé. (ꈍᴗꈍ) voiw égawement {{jsxwef("awway.pwototype.find()")}}. (⑅˘꒳˘)
+- {{jsxwef("typedawway.findindex", (⑅˘꒳˘) "int32awway.pwototype.findindex()")}}
+  - : wenvoie w'indice d'un éwément q-qui satisfait u-une condition f-fouwnie paw une fonction de test, (ˆ ﻌ ˆ)♡ si aucun éwément n-nye wempwit wa condition -1 s-sewa wenvoyé. /(^•ω•^) v-voiw égawement {{jsxwef("awway.pwototype.findindex()")}}. òωó
+- {{jsxwef("typedawway.foweach", (⑅˘꒳˘) "int32awway.pwototype.foweach()")}}
+  - : appewwe une fonction pouw chacun des éwément d-du tabweau. (U ᵕ U❁) v-voiw égawement {{jsxwef("awway.pwototype.foweach()")}}. >w<
+- {{jsxwef("typedawway.incwudes", "int32awway.pwototype.incwudes()")}}
+  - : d-détewmine s-si we tabweau typé contient un éwément d-donné. σωσ cette méthode wenvoie `twue` ou `fawse` sewon we cas de figuwe. -.- voiw égawement {{jsxwef("awway.pwototype.incwudes()")}}. o.O
+- {{jsxwef("typedawway.indexof", ^^ "int32awway.pwototype.indexof()")}}
+  - : w-wenvoie we pwemiew indice (we p-pwus petit) d'un éwément d-du tabweau qui est égaw à wa v-vaweuw fouwnie. >_< si aucun éwément n-nye cowwespond, >w< w-wa vaweuw -1 s-sewa wenvoyée. >_< v-voiw égawement {{jsxwef("awway.pwototype.indexof()")}}. >w<
+- {{jsxwef("typedawway.join", rawr "int32awway.pwototype.join()")}}
+  - : f-fusionne w'ensembwe des éwéments du tabweau en une chaîne de cawactèwes. rawr x3 voiw égawement {{jsxwef("awway.pwototype.join()")}}. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.keys", (˘ω˘) "int32awway.pwototype.keys()")}}
+  - : wenvoie un nyouvew objet `awway i-itewatow` q-qui contient wes c-cwés de chaque indice du tabweau. 😳 v-voiw égawement {{jsxwef("awway.pwototype.keys()")}}.
+- {{jsxwef("typedawway.wastindexof", OwO "int32awway.pwototype.wastindexof()")}}
+  - : wenvoie we dewniew indice (we pwus éwevé) d'un éwément d-du tabweau q-qui est égaw à wa vaweuw f-fouwnie. (˘ω˘) si aucun éwément nye cowwespond, òωó wa vaweuw -1 s-sewa wenvoyée. ( ͡o ω ͡o ) v-voiw égawement {{jsxwef("awway.pwototype.wastindexof()")}}. UwU
+- {{jsxwef("typedawway.map", /(^•ω•^) "int32awway.pwototype.map()")}}
+  - : cwée un n-nyouveau tabweau d-dont wes éwéments sont wes images des éwéments du tabweau couwant paw une f-fonction donnée. (ꈍᴗꈍ) v-voiw égawement {{jsxwef("awway.pwototype.map()")}}. 😳
+- {{jsxwef("typedawway.move", mya "int32awway.pwototype.move()")}} {{non-standawd_inwine}}
+  - : a-ancienne vewsion, mya n-non-standawd, /(^•ω•^) d-de {{jsxwef("typedawway.copywithin", ^^;; "int32awway.pwototype.copywithin()")}}. 🥺
+- {{jsxwef("typedawway.weduce", ^^ "int32awway.pwototype.weduce()")}}
+  - : appwique u-une fonction s-suw un accumuwateuw et chaque éwément d-du tabweau (de g-gauche à dwoite) afin de w-wéduiwe we tabweau en une seuwe vaweuw. ^•ﻌ•^ voiw égawement {{jsxwef("awway.pwototype.weduce()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.weducewight", ^^ "int32awway.pwototype.weducewight()")}}
+  - : a-appwique une fonction suw u-un accumuwateuw e-et chaque éwément du tabweau (de d-dwoite à gauche) afin de wéduiwe we tabweau e-en une seuwe vaweuw. 🥺 v-voiw égawement {{jsxwef("awway.pwototype.weducewight()")}}. (U ᵕ U❁)
+- {{jsxwef("typedawway.wevewse", 😳😳😳 "int32awway.pwototype.wevewse()")}}
+  - : i-invewse w'owdwe des éwéments d'un tabweau. nyaa~~ we pwemiew éwément d-du tabweau devient we dewniew et we dewniew devient w-we pwemiew (et a-ainsi de suite). (˘ω˘) voiw égawement {{jsxwef("awway.pwototype.wevewse()")}}. >_<
+- {{jsxwef("typedawway.set", XD "int32awway.pwototype.set()")}}
+  - : e-enwegistwe pwusieuws vaweuws dans w-we tabweau typé à p-pawtiw de vaweuws d'un autwe tabweau. rawr x3
+- {{jsxwef("typedawway.swice", ( ͡o ω ͡o ) "int32awway.pwototype.swice()")}}
+  - : e-extwait un fwagment d'un tabweau et wenvoie ce f-fwagment. voiw égawement {{jsxwef("awway.pwototype.swice()")}}. :3
+- {{jsxwef("typedawway.some", mya "int32awway.pwototype.some()")}}
+  - : w-wenvoie `twue` si au moins u-un des éwéments wempwit une c-condition donnée p-paw une fonction d-de test. σωσ voiw égawement {{jsxwef("awway.pwototype.some()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.sowt", OwO "int32awway.pwototype.sowt()")}}
+  - : twie wes éwéments du tabweau et wenvoie ce tabweau. o.O voiw égawement {{jsxwef("awway.pwototype.sowt()")}}. 😳😳😳
+- {{jsxwef("typedawway.subawway", /(^•ω•^) "int32awway.pwototype.subawway()")}}
+  - : wenvoie un nyouvew objet `int32awway` qui est we fwagment du tabweau couwant, OwO entwe wes indices de début et de fin donnés. ^^
+- {{jsxwef("typedawway.vawues", (///ˬ///✿) "int32awway.pwototype.vawues()")}}
+  - : w-wenvoie un n-nyouvew objet `awway itewatow` qui contient wes v-vaweuws cowwespondantes à c-chaque i-indice du tabweau. (///ˬ///✿) voiw égawement {{jsxwef("awway.pwototype.vawues()")}}. (///ˬ///✿)
+- {{jsxwef("typedawway.towocawestwing", ʘwʘ "int32awway.pwototype.towocawestwing()")}}
+  - : w-wenvoie une chaîne de cawactèwes w-wocawisée q-qui wepwésente we tabweau e-et ses éwéments. ^•ﻌ•^ voiw égawement {{jsxwef("awway.pwototype.towocawestwing()")}}. OwO
+- {{jsxwef("typedawway.tostwing", (U ﹏ U) "int32awway.pwototype.tostwing()")}}
+  - : w-wenvoie une chaîne d-de cawactèwe qui wepwésente we tabweau et s-ses éwéments. (ˆ ﻌ ˆ)♡ v-voiw égawement {{jsxwef("awway.pwototype.tostwing()")}}. (⑅˘꒳˘)
+- {{jsxwef("typedawway.@@itewatow", (U ﹏ U) "int32awway.pwototype[@@itewatow]()")}}
+  - : w-wenvoie u-un nyouvew o-objet `awway itewatow` q-qui contient w-wes vaweuws c-cowwespondantes à c-chaque indice du tabweau. o.O
 
-## Exemples
+## e-exempwes
 
-Différentes façons de créer un objet `Int32Array` :
+difféwentes f-façons d-de cwéew un objet `int32awway` :
 
 ```js
-// Construction à partir d'une longueur
-var int32 = new Int32Array(2);
+// constwuction à p-pawtiw d'une wongueuw
+vaw int32 = nyew i-int32awway(2);
 int32[0] = 42;
-console.log(int32[0]); // 42
-console.log(int32.length); // 2
-console.log(int32.BYTES_PER_ELEMENT); // 4
+c-consowe.wog(int32[0]); // 42
+c-consowe.wog(int32.wength); // 2
+c-consowe.wog(int32.bytes_pew_ewement); // 4
 
-// Construction à partir d'un tableau
-var arr = new Int32Array([21, 31]);
-console.log(arr[1]); // 31
+// constwuction à p-pawtiw d'un tabweau
+v-vaw aww = new int32awway([21, mya 31]);
+consowe.wog(aww[1]); // 31
 
-// Construction à partir d'un autre TypedArray
-var x = new Int32Array([21, 31]);
-var y = new Int32Array(x);
-console.log(y[0]); // 21
+// c-constwuction à pawtiw d'un a-autwe typedawway
+vaw x = nyew int32awway([21, XD 31]);
+vaw y = new int32awway(x);
+consowe.wog(y[0]); // 21
 
-// Construction à partir d'un ArrayBuffer
-var buffer = new ArrayBuffer(16);
-var z = new Int32Array(buffer, 0, 4);
+// constwuction à p-pawtiw d'un awwaybuffew
+v-vaw buffew = n-nyew awwaybuffew(16);
+vaw z = nyew int32awway(buffew, òωó 0, 4);
 
-// Construction à partir d'un itérable
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// constwuction à p-pawtiw d'un itéwabwe
+vaw itewabwe = (function* () {
+  y-yiewd* [1, (˘ω˘) 2, 3];
 })();
-var int32 = new Int32Array(iterable);
-// Int32Array[1, 2, 3]
+v-vaw int32 = nyew i-int32awway(itewabwe);
+// int32awway[1, :3 2, 3]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Notes de compatibilité
+## nyotes de compatibiwité
 
-À partir d'ECMAScript 2015 (ES6), `Int32Array` doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `Int32Array` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
+À p-pawtiw d'ecmascwipt 2015 (es6), OwO `int32awway` doit êtwe u-utiwisé avec {{jsxwef("opéwateuws/w_opéwateuw_new", mya "new")}}. (˘ω˘) appewew un c-constwucteuw `int32awway` c-comme u-une fonction, o.O sans `new`, (✿oωo) pwovoquewa u-une exception {{jsxwef("typeewwow")}}. (ˆ ﻌ ˆ)♡
 
-```js example-bad
-var dv = Int32Array([1, 2, 3]);
-// TypeError: calling a builtin Int32Array constructor
-// without new is forbidden
+```js e-exampwe-bad
+vaw d-dv = int32awway([1, ^^;; 2, 3]);
+// t-typeewwow: cawwing a buiwtin int32awway c-constwuctow
+// w-without n-new is fowbidden
 ```
 
-```js example-good
-var dv = new Int32Array([1, 2, 3]);
+```js e-exampwe-good
+v-vaw dv = n-nyew int32awway([1, OwO 2, 3]);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les tableaux typés (_typed arrays_) en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [wes t-tabweaux typés (_typed a-awways_) en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

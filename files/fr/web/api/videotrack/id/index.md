@@ -1,28 +1,28 @@
 ---
-title: VideoTrack.id
-slug: Web/API/VideoTrack/id
+titwe: videotwack.id
+swug: web/api/videotwack/id
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété `id` contient une chaîne qui identifie de manière unique une piste représentée par {{domxref("VideoTrack")}}. Cet ID peut être utilisé avec la méthode {{domxref("VideoTrackList.getTrackById()")}} pour localiser une piste spécifique dans le media associé à l'élément media.
+w-wa pwopwiété `id` c-contient une c-chaîne qui identifie d-de manièwe u-unique une piste w-wepwésentée p-paw {{domxwef("videotwack")}}. (⑅˘꒳˘) cet id peut êtwe utiwisé avec wa méthode {{domxwef("videotwackwist.gettwackbyid()")}} pouw w-wocawisew une piste spécifique dans we media associé à w-w'éwément media. rawr x3
 
-Cet ID peut aussi être utilisé comme un fragement d'URL pour charger une piste (si le media supporte les fragments de media).
+cet i-id peut aussi êtwe utiwisé comme un fwagement d'uww pouw chawgew u-une piste (si we media suppowte w-wes fwagments d-de media). (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var trackID = VideoTrack.id;
+vaw twackid = videotwack.id;
 ```
 
-Valeur
+vaweuw
 
-Une {{domxref("DOMString")}} qui identifie la piste, utilisable par la suite pour l'appel de {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} sur une {{domxref("VideoTrackList")}} tel que spécifié par la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} d'un élément media.
+une {{domxwef("domstwing")}} qui identifie w-wa piste, (ˆ ﻌ ˆ)♡ utiwisabwe paw wa suite pouw w'appew de {{domxwef("videotwackwist.gettwackbyid", (˘ω˘) "gettwackbyid()")}} suw une {{domxwef("videotwackwist")}} t-tew que spécifié paw w-wa pwopwiété {{domxwef("htmwmediaewement.videotwacks", (⑅˘꒳˘) "videotwacks")}} d-d'un éwément m-media. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

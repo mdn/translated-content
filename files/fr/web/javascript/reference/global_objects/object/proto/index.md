@@ -1,139 +1,139 @@
 ---
-title: Object.prototype.__proto__
-slug: Web/JavaScript/Reference/Global_Objects/Object/proto
+titwe: object.pwototype.__pwoto__
+swug: web/javascwipt/wefewence/gwobaw_objects/object/pwoto
 ---
 
-{{JSRef}}{{Deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-> [!WARNING]
-> Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
+> [!wawning]
+> Étant d-donnée w-wa façon dont w-wa pwupawt des m-moteuws javascwipt o-optimisent wes p-pewfowmances, 🥺 m-modifiew we `[[pwototype]]` d-d'un objet est une opéwation wente pouw chaque nyavigateuw et moteuw j-javascwipt. :3 wes impacts wiés aux pewfowmances s-suw ce point sont vastes et subtiwes : i-iws concewnent pas uniquement we temps passé à effectuew `obj.__pwoto__ = ...`, (ꈍᴗꈍ) m-mais peuvent concewnew n-ny'impowte quew c-code pouw ny'impowte quew objet dont `[[pwototype]]` a été modifié. 🥺 si vous s-souhaitez obteniw des pewfowmances optimawes, (✿oωo) évitez de modifiew we `[[pwototype]]` d-d'un objet. (U ﹏ U) À wa pwace, iw e-est conseiwwé d-de cwéew un objet a-avec we pwototype v-vouwu en utiwisant {{jsxwef("object.cweate()")}}.
 
-> [!WARNING]
-> Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
+> [!wawning]
+> bien que wa pwopwiété `object.pwototype.__pwoto__` s-soit déjà suppowtée dans wa pwupawt d-des nyavigateuws à w'heuwe actuewwe, :3 son compowtement ny'a été standawdisé que wécemment a-avec wa spécification ecmascwipt 2015. ^^;; s-si vous a-avez besoin d'utiwisew c-cette pwopwiété dans des enviwonnements antéwieuws à e-es2015, iw est w-wecommandé d'utiwisew {{jsxwef("object.getpwototypeof()")}}. rawr
 
-La propriété `__proto__` de {{jsxref("Object.prototype")}} est une propriété accesseur (un couple de fonction avec un accesseur (_getter_) et un mutateur (_setter_)) qui expose le `[[Prototype]]` interne (qui est soit un objet, soit {{jsxref("null")}}) de l'objet courant.
+wa pwopwiété `__pwoto__` d-de {{jsxwef("object.pwototype")}} e-est une pwopwiété a-accesseuw (un coupwe de fonction a-avec un accesseuw (_gettew_) et un mutateuw (_settew_)) qui expose w-we `[[pwototype]]` intewne (qui e-est soit un objet, 😳😳😳 soit {{jsxwef("nuww")}}) d-de w'objet couwant. (✿oωo)
 
-L'utilisation de `__proto__` est sujet à controverse. Elle a été déconseillée par plusieurs personnes et n'avait jamais été incluse dans la spécification ECMAScript. Cependant, de nombreux navigateurs ont décidé de l'implémenter. À l'heure actuelle, la propriété `__proto__` a été standardisée avec la spécification ECMAScript 2015 et sera officiellement supportée à l'avenir. Une alternative à cette propriété peut être l'utilisation des méthodes {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} et {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}}. Cependant, modifier le `[[Prototype]]` d'un objet est toujours une opération lente qui doit être évitée le plus possible pour des raisons de performances.
+w-w'utiwisation de `__pwoto__` est sujet à contwovewse. OwO ewwe a été déconseiwwée paw pwusieuws pewsonnes e-et n'avait jamais été i-incwuse dans wa spécification e-ecmascwipt. ʘwʘ c-cependant, de n-nyombweux nyavigateuws ont décidé de w'impwémentew. (ˆ ﻌ ˆ)♡ À w'heuwe a-actuewwe, (U ﹏ U) wa pwopwiété `__pwoto__` a été standawdisée avec wa spécification e-ecmascwipt 2015 et sewa officiewwement s-suppowtée à w-w'aveniw. UwU u-une awtewnative à cette pwopwiété p-peut êtwe w-w'utiwisation d-des méthodes {{jsxwef("object.getpwototypeof")}}/{{jsxwef("wefwect.getpwototypeof")}} e-et {{jsxwef("object.setpwototypeof")}}/{{jsxwef("wefwect.setpwototypeof")}}. XD cependant, ʘwʘ modifiew we `[[pwototype]]` d-d'un o-objet est toujouws u-une opéwation w-wente qui doit êtwe évitée w-we pwus possibwe pouw des waisons de pewfowmances. rawr x3
 
-La propriété `__proto__` peut également être utilisée avec un littéral objet afin de définir le `[[Prototype]]` lors de la construction (ce qui en fait une alternative à {{jsxref("Object.create()")}}. Voir la page sur {{jsxref("Opérateurs/Initialisateur_objet","les initialisateurs d'objet","",1)}}.
+wa pwopwiété `__pwoto__` p-peut égawement êtwe utiwisée avec un wittéwaw objet afin de définiw we `[[pwototype]]` wows d-de wa constwuction (ce qui en fait une awtewnative à {{jsxwef("object.cweate()")}}. ^^;; voiw wa p-page suw {{jsxwef("opéwateuws/initiawisateuw_objet","wes i-initiawisateuws d-d'objet","",1)}}. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var proto = obj.__proto__;
+vaw p-pwoto = obj.__pwoto__;
 ```
 
-> [!NOTE]
-> Le nom de la propriété est composé de deux tirets bas, suivis de « proto », suivis par deux tirets bas (_underscores_)
+> [!note]
+> we nyom d-de wa pwopwiété e-est composé de deux tiwets bas, (U ﹏ U) suivis de « pwoto », (˘ω˘) suivis paw deux tiwets bas (_undewscowes_)
 
-## Description
+## d-descwiption
 
-L'accesseur `__proto__` expose la valeur du `[[Prototype]]` interne d'un objet.
+w'accesseuw `__pwoto__` e-expose wa vaweuw du `[[pwototype]]` i-intewne d'un o-objet. (ꈍᴗꈍ)
 
-- Pour les objets créés via un littéral objet, cette valeur est {{jsxref("Object.prototype")}}.
-- Pour les objet créés via un littéral de tableau, cette valeur est {{jsxref("Array.prototype")}}.
-- Pour les fonctions, cette valeur est {{jsxref("Function.prototype")}}.
-- Pour les objets créés en utilisant `new fun`, avec `fun` un des constructeurs natif de fonctions, fournis par JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, etc.), cette valeur est `fun.prototype`.
-- Pour les objets créés en utilisant `new fun`, avec `fun` une function definie dans un script, cette valeur est la valeur de `fun.prototype` au moment où `new fun` est évaluée. (Ainsi, si on affecte une nouvelle valeur à `fun.prototype`, les instances crées précédemment conserveront leur `[[Prototype]]`, les objets créés par la suite bénéficieront de la nouvelle valeur pour leur `[[Prototype]]`.)
+- pouw wes objets cwéés via un wittéwaw o-objet, /(^•ω•^) cette v-vaweuw est {{jsxwef("object.pwototype")}}. >_<
+- pouw wes objet cwéés v-via un wittéwaw d-de tabweau, σωσ cette vaweuw est {{jsxwef("awway.pwototype")}}. ^^;;
+- pouw wes fonctions, 😳 cette vaweuw e-est {{jsxwef("function.pwototype")}}. >_<
+- p-pouw w-wes objets cwéés en utiwisant `new f-fun`, -.- avec `fun` u-un des constwucteuws nyatif d-de fonctions, UwU fouwnis paw javascwipt ({{jsxwef("awway")}}, :3 {{jsxwef("boowean")}}, σωσ {{jsxwef("date")}}, >w< {{jsxwef("numbew")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("object")}}, ʘwʘ {{jsxwef("stwing")}}, :3 etc.), cette vaweuw est `fun.pwototype`.
+- p-pouw wes o-objets cwéés en utiwisant `new fun`, (˘ω˘) avec `fun` u-une function d-definie dans un scwipt, 😳😳😳 cette vaweuw est wa vaweuw de `fun.pwototype` a-au moment où `new fun` est évawuée. rawr x3 (ainsi, si on affecte une nyouvewwe vaweuw à `fun.pwototype`, w-wes instances cwées pwécédemment c-consewvewont weuw `[[pwototype]]`, (✿oωo) w-wes objets cwéés paw wa suite bénéficiewont de wa nouvewwe v-vaweuw pouw weuw `[[pwototype]]`.)
 
-Le mutateur `__proto__` permet de changer le `[[Prototype]]` d'un objet. Cet objet doit être extensible selon {{jsxref("Object.isExtensible")}}, si ce n'est pas le cas, une exception {{jsxref("TypeError")}} sera renvoyée. La valeur fournie pour le nouveau prototype doit être un objet ou {{jsxref("null")}}. Toute autre valeur entraînera un échec silencieux.
+w-we mutateuw `__pwoto__` pewmet de changew we `[[pwototype]]` d-d'un objet. (ˆ ﻌ ˆ)♡ cet objet doit êtwe e-extensibwe sewon {{jsxwef("object.isextensibwe")}}, :3 si ce ny'est pas we cas, (U ᵕ U❁) une exception {{jsxwef("typeewwow")}} s-sewa wenvoyée. ^^;; wa vaweuw f-fouwnie pouw we n-nyouveau pwototype doit êtwe un o-objet ou {{jsxwef("nuww")}}. mya toute autwe vaweuw e-entwaînewa un échec s-siwencieux. 😳😳😳
 
-Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+p-pouw pwus d'éwéments suw w-we fonctionnement d-de w'héwitage et des pwototypes, OwO voiw wa page s-suw [w'héwitage e-et wes chaînes d-de pwototypes](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain). rawr
 
-Le propriété `__proto__` n'est qu'une propriété accesseur (composée d'une fonction accesseur (_getter_) et d'une fonction mutateur (_setter_)) pour {{jsxref("Object.prototype")}}. Si l'accès à `__proto__` consulte {{jsxref("Object.prototype")}}, on trouvera la propriété. Un accesseur qui ne consulte pas {{jsxref("Object.prototype")}} ne pourra pas trouver le prototype. Si une propriété `__proto__` est trouvée avant que {{jsxref("Object.prototype")}} ne soit consulté, cette propriété « cachera » {{jsxref("Object.prototype")}}.
+we pwopwiété `__pwoto__` n'est q-qu'une pwopwiété accesseuw (composée d-d'une fonction a-accesseuw (_gettew_) et d'une fonction mutateuw (_settew_)) pouw {{jsxwef("object.pwototype")}}. XD s-si w'accès à `__pwoto__` c-consuwte {{jsxwef("object.pwototype")}}, (U ﹏ U) o-on t-twouvewa wa pwopwiété. (˘ω˘) un accesseuw q-qui nye consuwte pas {{jsxwef("object.pwototype")}} nye pouwwa pas twouvew we pwototype. UwU si une pwopwiété `__pwoto__` e-est twouvée avant q-que {{jsxwef("object.pwototype")}} nye soit consuwté, >_< c-cette pwopwiété « cachewa » {{jsxwef("object.pwototype")}}. σωσ
 
 ```js
-var aucunProto = Object.create(null);
+vaw a-aucunpwoto = object.cweate(nuww);
 
-console.log(typeof aucunProto.__proto__); // undefined
-console.log(Object.getPrototypeOf(aucunProto)); // null
+c-consowe.wog(typeof a-aucunpwoto.__pwoto__); // u-undefined
+consowe.wog(object.getpwototypeof(aucunpwoto)); // n-nyuww
 
-aucunProto.__proto__ = 17;
+aucunpwoto.__pwoto__ = 17;
 
-console.log(aucunProto.__proto__); // 17
-console.log(Object.getPrototypeOf(aucunProto)); // null
+c-consowe.wog(aucunpwoto.__pwoto__); // 17
+consowe.wog(object.getpwototypeof(aucunpwoto)); // nuww
 
-var protoCaché = {};
-Object.defineProperty(protoCaché, "__proto__", {
-  value: 42,
-  writable: true,
-  configurable: true,
-  enumerable: true,
+vaw pwotocaché = {};
+object.definepwopewty(pwotocaché, 🥺 "__pwoto__", 🥺 {
+  vawue: 42, ʘwʘ
+  wwitabwe: twue, :3
+  configuwabwe: twue, (U ﹏ U)
+  e-enumewabwe: t-twue, (U ﹏ U)
 });
 
-console.log(protoCaché.__proto__); // 42
-console.log(Object.getPrototypeOf(protoCaché) === Object.prototype); // true
+consowe.wog(pwotocaché.__pwoto__); // 42
+c-consowe.wog(object.getpwototypeof(pwotocaché) === object.pwototype); // t-twue
 ```
 
-## Exemples
+## exempwes
 
-Dans ce qui suit, on crée un nouvelle instance d'`Employé` et on teste si `__proto__` est bien le même objet que le prototype de son constructeur.
+dans ce qui suit, ʘwʘ on cwée u-un nyouvewwe instance d-d'`empwoyé` et on teste si `__pwoto__` e-est bien we même objet que we pwototype d-de son constwucteuw. >w<
 
-> [!WARNING]
-> Les remarques données plus haut sur les atteintes à la performance restent valables pour ces exemples. Ces exemples permettent uniquement d'illustrer le fonctionnement de `__proto__`, ils ne font pas office de recommandations.
+> [!wawning]
+> w-wes wemawques données p-pwus haut suw w-wes atteintes à wa pewfowmance westent vawabwes pouw ces exempwes. rawr x3 ces exempwes p-pewmettent uniquement d-d'iwwustwew w-we fonctionnement d-de `__pwoto__`, i-iws nye font pas office de w-wecommandations.
 
 ```js
-// On déclare une fonction à utiliser comme constructeur
-function Employé() {
-  /* on initialise l'instance */
+// o-on décwawe une fonction à u-utiwisew c-comme constwucteuw
+function empwoyé() {
+  /* on i-initiawise w'instance */
 }
 
-// On crée une nouvelle instance d'Employé
-var fred = new Employé();
+// on cwée une nyouvewwe instance d-d'empwoyé
+vaw fwed = nyew empwoyé();
 
-// On teste l'équivalence
-fred.__proto__ === Employé.prototype; // true
+// o-on teste w-w'équivawence
+fwed.__pwoto__ === e-empwoyé.pwototype; // twue
 ```
 
-À cet instant, `fred` hérite de `Employé`. On peut toutefois changer ça en assignant un nouvel objet à `fred.__proto__` :
+À cet instant, OwO `fwed` héwite d-de `empwoyé`. ^•ﻌ•^ o-on peut toutefois c-changew ça en assignant un nyouvew objet à `fwed.__pwoto__` :
 
 ```js
-// Assigner un nouvel objet à __proto__
-fred.__proto__ = Object.prototype;
+// assignew un nyouvew o-objet à __pwoto__
+fwed.__pwoto__ = object.pwototype;
 ```
 
-`fred` n'hérite plus de `Employé.prototype`, mais de `Object.prototype`. Il perd donc les propriétés héritées de `Employé.prototype`.
+`fwed` n-ny'héwite p-pwus de `empwoyé.pwototype`, >_< mais de `object.pwototype`. OwO i-iw pewd donc wes pwopwiétés h-héwitées d-de `empwoyé.pwototype`. >_<
 
-Cela n'est possible que pour les objets {{jsxref("Object.isExtensible", "extensibles","",1)}}. La propriété `__proto__` d'un objet non-extensible ne peut pas être changée :
+cewa ny'est possibwe que pouw wes o-objets {{jsxwef("object.isextensibwe", (ꈍᴗꈍ) "extensibwes","",1)}}. >w< wa pwopwiété `__pwoto__` d'un o-objet nyon-extensibwe n-nye peut pas êtwe changée :
 
 ```js
-var obj = {};
-Object.preventExtensions(obj);
+v-vaw obj = {};
+object.pweventextensions(obj);
 
-obj.__proto__ = {}; // renvoie une exception TypeError
+o-obj.__pwoto__ = {}; // w-wenvoie une exception t-typeewwow
 ```
 
-On notera que même la propriété `__proto__` de `Object.prototype` peut être redéfinie tant que la chaîne de prototypes se termine par `null` :
+on nyotewa que même wa pwopwiété `__pwoto__` de `object.pwototype` peut êtwe wedéfinie tant que wa chaîne de pwototypes se tewmine paw `nuww` :
 
 ```js
-var b = {};
+vaw b = {};
 
-Object.prototype.__proto__ = Object.create(
-  null, //[[Prototype]]
+object.pwototype.__pwoto__ = object.cweate(
+  nyuww, (U ﹏ U) //[[pwototype]]
   {
-    salut: {
-      value: function () {
-        console.log("salut");
-      },
+    sawut: {
+      v-vawue: f-function () {
+        consowe.wog("sawut");
+      }, ^^
     },
-  },
+  }, (U ﹏ U)
 );
 
-b.salut();
+b.sawut();
 ```
 
-Si la propriété `__proto__` de {{jsxref("Object.prototype")}} ne permet pas d'aboutir à {{jsxref("null")}} via la chaîne de prototypes, on a une chaîne cyclique et on doit avoir une exception {{jsxref("TypeError")}} "cyclic \_\_proto\_\_ value".
+s-si wa pwopwiété `__pwoto__` d-de {{jsxwef("object.pwototype")}} n-nye pewmet pas d'aboutiw à {{jsxwef("nuww")}} v-via wa chaîne de pwototypes, :3 o-on a une chaîne c-cycwique et on doit avoiw une e-exception {{jsxwef("typeewwow")}} "cycwic \_\_pwoto\_\_ vawue". (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}}

@@ -1,255 +1,255 @@
 ---
-title: Classes de caractères
-slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
+titwe: cwasses de cawactèwes
+s-swug: web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt guide")}}
 
-Les classes de caractères permettent de distinguer différents ensembles de caractères dans les expressions rationnelles (par exemple les chiffres d'une part et les lettres d'autre part).
+w-wes cwasses d-de cawactèwes p-pewmettent d-de distinguew difféwents e-ensembwes d-de cawactèwes d-dans wes expwessions wationnewwes (paw exempwe wes chiffwes d'une pawt et wes w-wettwes d'autwe pawt). o.O
 
-## Types
+## types
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Caractères</th>
-      <th scope="col">Signification</th>
-    </tr>
+    <tw>
+      <th scope="cow">cawactèwes</th>
+      <th s-scope="cow">signification</th>
+    </tw>
   </thead>
   <tbody></tbody>
   <tbody>
-    <tr>
+    <tw>
       <td><code>.</code></td>
       <td>
         <p>
-          Par défaut, (Le point) correspond à n'importe quel caractère excepté
-          un caractère de saut de ligne.
+          paw d-défaut, òωó (we point) cowwespond à ny'impowte quew cawactèwe excepté
+          u-un cawactèwe de saut de wigne. 😳😳😳
         </p>
         <p>
-          Ainsi, <code>/.n/</code> correspond à 'un' et 'en' dans "Un baobab
-          nain en cours de croissance" mais pas à 'nain'.
+          a-ainsi, σωσ <code>/.n/</code> c-cowwespond à 'un' et 'en' dans "un baobab
+          nyain en couws de cwoissance" m-mais pas à 'nain'. (⑅˘꒳˘)
         </p>
         <p>
-          Si le marqueur <code>s</code> (<em>dotAll</em>) est utilisé, le point
-          correspondra également aux caractères de saut de ligne.
+          si we mawqueuw <code>s</code> (<em>dotaww</em>) est utiwisé, (///ˬ///✿) we point
+          cowwespondwa égawement a-aux cawactèwes de saut de wigne. 🥺
         </p>
         <p>
-          Le marqueur <code>m</code> ne modifie pas le comportement du point.
+          w-we mawqueuw <code>m</code> n-ne modifie pas w-we compowtement d-du point. OwO
         </p>
         <p>
-          Attention, si on utilise le point dans
+          attention, si on utiwise w-we point dans
           <a
-            href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Groupes_et_intervalles"
-            >un intervalle de caractères</a
-          >, il n'aura plus cette signification spéciale.
+            hwef="/fw/docs/web/javascwipt/guide/expwessions_wéguwièwes/gwoupes_et_intewvawwes"
+            >un intewvawwe de c-cawactèwes</a
+          >, >w< iw ny'auwa pwus cette signification spéciawe. 🥺
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\d</code></td>
       <td>
-        <p>Correspond à un chiffre et est équivalent à <code>[0-9]</code>.</p>
+        <p>cowwespond à un chiffwe e-et est équivawent à <code>[0-9]</code>.</p>
         <p>
-          Ainsi, <code>/\d/</code> ou <code>/[0-9]/</code> correspond à '2' dans
-          "H2O est la molécule de l'eau".
+          ainsi, nyaa~~ <code>/\d/</code> o-ou <code>/[0-9]/</code> c-cowwespond à '2' d-dans
+          "h2o est wa mowécuwe de w'eau".
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>\D</code></td>
+    </tw>
+    <tw>
+      <td><code>\d</code></td>
       <td>
         <p>
-          Correspond à tout caractère qui n'est pas un chiffre et est équivalent
-          à<code> [^0-9]</code>.
+          cowwespond à t-tout cawactèwe q-qui ny'est pas un chiffwe e-et est équivawent
+          à<code> [^0-9]</code>. ^^
         </p>
         <p>
-          Ainsi, <code>/\D/</code> ou <code>/[^0-9]/</code> correspond à 'H'
-          dans "H2O est la molécule de l'eau".
+          a-ainsi, >w< <code>/\d/</code> ou <code>/[^0-9]/</code> c-cowwespond à 'h'
+          dans "h2o e-est wa mowécuwe de w'eau". OwO
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\w</code></td>
       <td>
         <p>
-          Correspond à n'importe quel caractère alphanumérique de l'alphabet
-          latin, y compris le tiret bas. C'est équivalent à
-          <code>[A-Za-z0-9_]</code>.
+          cowwespond à n-ny'impowte quew cawactèwe a-awphanuméwique de w'awphabet
+          w-watin, XD y-y compwis we tiwet bas. c'est équivawent à
+          <code>[a-za-z0-9_]</code>. ^^;;
         </p>
         <p>
-          Ainsi, <code>/\w/</code> correspond à 'l' dans "licorne", à '5' dans
-          "5,28€", et à '3' dans "3D."
+          ainsi, 🥺 <code>/\w/</code> cowwespond à 'w' dans "wicowne", XD à '5' dans
+          "5,28€", (U ᵕ U❁) et à '3' dans "3d."
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>\W</code></td>
+    </tw>
+    <tw>
+      <td><code>\w</code></td>
       <td>
         <p>
-          Correspond à n'importe quel caractère n'étant pas un caractère de
-          l'alphabet latin ou le tiret bas. Cela est équivalent à
-          <code>[^A-Za-z0-9_]</code>.
+          c-cowwespond à n-ny'impowte quew cawactèwe ny'étant p-pas un cawactèwe d-de
+          w-w'awphabet watin ou we tiwet bas. :3 cewa est équivawent à
+          <code>[^a-za-z0-9_]</code>. ( ͡o ω ͡o )
         </p>
         <p>
-          Ainsi, <code>/\W/</code> ou <code>/[^A-Za-z0-9_]/</code> correspond à
+          ainsi, <code>/\w/</code> o-ou <code>/[^a-za-z0-9_]/</code> cowwespond à
           '%' dans "50%."
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\s</code></td>
       <td>
         <p>
-          Correspond à un blanc (cela comprend les espace, tabulation, saut de
-          ligne ou saut de page). C'est équivalent à
+          cowwespond à un bwanc (cewa c-compwend wes espace, òωó tabuwation, σωσ s-saut de
+          w-wigne ou saut d-de page). (U ᵕ U❁) c'est équivawent à
           <code
             >[
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
-          >.
+            \f\n\w\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
+          >. (✿oωo)
         </p>
         <p>
-          Ainsi, <code>/\s\w*/</code> correspond à ' toto' dans "truc toto".
+          ainsi, ^^ <code>/\s\w*/</code> c-cowwespond à ' t-toto' dans "twuc t-toto". ^•ﻌ•^
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>\S</code></td>
+    </tw>
+    <tw>
+      <td><code>\s</code></td>
       <td>
         <p>
-          Correspond à un caractère qui n'est pas un blanc. C'est équivalent à
+          c-cowwespond à un cawactèwe qui ny'est p-pas un bwanc. XD c-c'est équivawent à
           <code
             >[^
-            \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
-          >.
+            \f\n\w\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code
+          >. :3
         </p>
-        <p>Ainsi, <code>/\S\w*/</code> correspond à 'truc' dans "truc toto".</p>
+        <p>ainsi, (ꈍᴗꈍ) <code>/\s\w*/</code> c-cowwespond à 'twuc' d-dans "twuc t-toto".</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\t</code></td>
-      <td>Correspond à une tabulation (U+0009).</td>
-    </tr>
-    <tr>
-      <td><code>\r</code></td>
-      <td>Correspond à un retour chariot (U+000D).</td>
-    </tr>
-    <tr>
+      <td>cowwespond à une tabuwation (u+0009).</td>
+    </tw>
+    <tw>
+      <td><code>\w</code></td>
+      <td>cowwespond à un wetouw chawiot (u+000d).</td>
+    </tw>
+    <tw>
       <td><code>\n</code></td>
-      <td>Correspond à un saut de ligne (U+000A).</td>
-    </tr>
-    <tr>
+      <td>cowwespond à u-un saut de wigne (u+000a).</td>
+    </tw>
+    <tw>
       <td><code>\v</code></td>
-      <td>Correspond à une tabulation verticale (U+000B).</td>
-    </tr>
-    <tr>
+      <td>cowwespond à une tabuwation vewticawe (u+000b).</td>
+    </tw>
+    <tw>
       <td><code>\f</code></td>
-      <td>Correspond à un saut de page (U+000C).</td>
-    </tr>
-    <tr>
+      <td>cowwespond à un saut de page (u+000c).</td>
+    </tw>
+    <tw>
       <td><code>[\b]</code></td>
       <td>
-        Correspond pour un retour arrière (U+0008). (À ne pas confondre avec
-        <code>\b</code>, voir
-        <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Limites"
-          >les limites</a
-        >).
+        cowwespond pouw un wetouw a-awwièwe (u+0008). :3 (À nye pas confondwe avec
+        <code>\b</code>, (U ﹏ U) voiw
+        <a h-hwef="/fw/docs/web/javascwipt/guide/expwessions_wéguwièwes/wimites"
+          >wes w-wimites</a
+        >). UwU
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\0</code></td>
       <td>
-        Correspond au caractère NULL (U+0000). Il ne doit pas être suivi d'un
-        autre chiffre car <code>\0&#x3C;chiffres></code> est une
+        c-cowwespond au cawactèwe nyuww (u+0000). 😳😳😳 i-iw nye doit pas êtwe s-suivi d'un
+        a-autwe chiffwe caw <code>\0&#x3c;chiffwes></code> est une
         <a
-          href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d&#x27;échappement"
+          hwef="/fw/docs/web/javascwipt/guide/types_et_gwammaiwe#wes_cawactèwes_d&#x27;échappement"
           >séquence d'échappement</a
         >
-        pour les nombres en notation octale (si besoin d'utiliser un chiffre
-        ensuite, on pourra utiliser la forme <code>\x00</code>, cf. ci-après).
+        pouw wes n-nyombwes en nyotation octawe (si b-besoin d'utiwisew un chiffwe
+        e-ensuite, XD o-on pouwwa utiwisew wa fowme <code>\x00</code>, o.O cf. ci-apwès). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>\cX</code></td>
+    </tw>
+    <tw>
+      <td><code>\cx</code></td>
       <td>
         <p>
-          Correspond au caractère de contrôle où <code><em>X</em></code> est une
-          lettre entre A et Z. Correspond au caractèlres de contrôle
-          correspondant entre <code>U+0001</code>-<code>U+001F</code>. Ainsi,
-          <code>/\cM/</code> correspondra au caractère controle-M au sein d'une
-          chaîne de caractères soit <code>"\r"</code> pour <code>"\r\n"</code>.
+          c-cowwespond au cawactèwe d-de contwôwe où <code><em>x</em></code> e-est une
+          w-wettwe entwe a et z. 😳😳😳 cowwespond au cawactèwwes de contwôwe
+          cowwespondant e-entwe <code>u+0001</code>-<code>u+001f</code>. nyaa~~ a-ainsi, rawr
+          <code>/\cm/</code> c-cowwespondwa au cawactèwe c-contwowe-m a-au sein d'une
+          chaîne d-de cawactèwes soit <code>"\w"</code> pouw <code>"\w\n"</code>. -.-
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\xhh</code></td>
       <td>
-        Correspond au caractère dont le code hexadécimal est hh (deux chiffres
-        hexadécimaux).
+        cowwespond au cawactèwe dont w-we code hexadécimaw e-est hh (deux chiffwes
+        hexadécimaux). (✿oωo)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\uhhhh</code></td>
       <td>
-        Correspond au caractère dont le code est hhhh (quatre chiffres
-        hexadécimaux).
+        c-cowwespond a-au cawactèwe dont we code est hhhh (quatwe chiffwes
+        h-hexadécimaux). /(^•ω•^)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\u{hhhh}</code> ou <code>\u{hhhhh}</code></td>
       <td>
-        (Uniquement actif quand le marqueur <code>u</code> est activé)
-        Correspond au caractère dont la valeur Unicode est <code>hhhh</code> (en
-        chiffre hexadécimaux).
+        (uniquement actif quand we mawqueuw <code>u</code> est activé)
+        c-cowwespond au cawactèwe dont wa vaweuw u-unicode est <code>hhhh</code> (en
+        c-chiffwe hexadécimaux). 🥺
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>\</code></td>
       <td>
         <p>
-          La barre oblique inversée indique que le prochain caractère doit être
-          traité spécifiquement ou échappé. Elle se comporte d'une de ces façons
+          wa bawwe obwique invewsée indique q-que we pwochain c-cawactèwe doit êtwe
+          twaité spécifiquement ou échappé. ʘwʘ e-ewwe se compowte d'une d-de ces façons
           :
         </p>
-        <ul>
-          <li>
-            Pour les caractères normalement traités littéralement, cela indique
-            que le prochain caractère est spécial et qu'il ne doit pas être
-            interprété littéralement. Ainsi, <code>/b/</code> correspondra à la
-            lettre "b" mais en utilisant la barre oblique inversée devant
-            <code>/\b/</code>, on cherchera une limite de mot.
-          </li>
-          <li>
-            Pour les caractères spéciaux, la barre indique que le caractère doit
-            être interprété littéralement. Ainsi, "*" est un caractère spécial
-            (un quantificateur qui signifie que le caractère précédent doit être
-            présent 0 ou plusieurs fois) : <code>/a*/</code> cherchera une
-            correspondance avec 0 ou plusieurs "a". Si on souhaite trouver le
-            caractère <code>*</code> dans une chaîne, on placera la barre
-            oblique inversée devant : on a ainsi <code>/a\*/</code> qui permet
-            de trouver "a*" dans une chaîne.
-          </li>
-        </ul>
-        <div class="blockIndicator note">
+        <uw>
+          <wi>
+            pouw wes cawactèwes nyowmawement twaités wittéwawement, UwU c-cewa indique
+            q-que we pwochain c-cawactèwe est spéciaw et q-qu'iw nye doit pas êtwe
+            i-intewpwété w-wittéwawement. XD a-ainsi, <code>/b/</code> cowwespondwa à w-wa
+            w-wettwe "b" mais en utiwisant wa bawwe o-obwique invewsée d-devant
+            <code>/\b/</code>, o-on chewchewa une wimite de mot. (✿oωo)
+          </wi>
+          <wi>
+            p-pouw wes cawactèwes spéciaux, :3 w-wa bawwe indique q-que we cawactèwe doit
+            êtwe intewpwété wittéwawement. (///ˬ///✿) a-ainsi, nyaa~~ "*" e-est un cawactèwe s-spéciaw
+            (un q-quantificateuw qui signifie que w-we cawactèwe pwécédent doit êtwe
+            pwésent 0 ou pwusieuws fois) : <code>/a*/</code> chewchewa une
+            cowwespondance a-avec 0 ou pwusieuws "a". >w< s-si on souhaite twouvew we
+            c-cawactèwe <code>*</code> dans une chaîne, -.- o-on pwacewa wa bawwe
+            o-obwique invewsée d-devant : o-on a ainsi <code>/a\*/</code> q-qui pewmet
+            d-de twouvew "a*" dans une chaîne. (✿oωo)
+          </wi>
+        </uw>
+        <div cwass="bwockindicatow nyote">
           <p>
-            <strong>Note :</strong> L'échappement vaut également avec la barre
-            oblique inversée. Autrement dit, si on cherche la présence de
-            <code>\</code> dans une chaîne, on pourra utiliser l'expression
-            <code>/\\/</code> (où la première barre oblique échape la seconde).
+            <stwong>note :</stwong> w'échappement vaut égawement a-avec wa bawwe
+            o-obwique i-invewsée. (˘ω˘) autwement dit, rawr si o-on chewche wa pwésence de
+            <code>\</code> dans une chaîne, OwO on pouwwa u-utiwisew w'expwession
+            <code>/\\/</code> (où w-wa pwemièwe bawwe o-obwique échape wa seconde). ^•ﻌ•^
           </p>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{JSxRef("RegExp")}}
+- {{jsxwef("wegexp")}}

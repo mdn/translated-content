@@ -1,94 +1,94 @@
 ---
-title: HTMLCanvasElement.getContext()
-slug: Web/API/HTMLCanvasElement/getContext
+titwe: htmwcanvasewement.getcontext()
+swug: web/api/htmwcanvasewement/getcontext
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-La méthode **`HTMLCanvasElement.getContext()`** retourne un contexte de dessin sur le canevas, ou {{jsxref("null")}} si l'identificateur de contexte n'est pas supporté.
+w-wa méthode **`htmwcanvasewement.getcontext()`** w-wetouwne un c-contexte de dessin s-suw we canevas, (⑅˘꒳˘) o-ou {{jsxwef("nuww")}} s-si w'identificateuw d-de contexte ny'est pas suppowté. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-canvas.getContext(typeDeContexte, attributsDeContexte);
+canvas.getcontext(typedecontexte, /(^•ω•^) a-attwibutsdecontexte);
 ```
 
-### Paramètres
+### pawamètwes
 
-- typeDeContexte
+- typedecontexte
 
-  - : Est un {{domxref("DOMString")}} contenant l'identifcateur de contexte définissant le contexte de dessin associé au canevas. Les valeurs possibles sont :
+  - : e-est un {{domxwef("domstwing")}} contenant w-w'identifcateuw de contexte définissant we contexte de dessin a-associé au canevas. (U ﹏ U) wes vaweuws p-possibwes sont :
 
-    - `"2d`", conduisant à la création d'un objet {{domxref("CanvasRenderingContext2D")}} représentant un contexte de représentation bi-dimensionnel.
-    - `"webgl"` (ou `"experimental-webgl"`) pour créer un objet {{domxref("WebGLRenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 1 de [WebGL](/fr/docs/Web/API/WebGL_API) (OpenGL ES 2.0).
-    - "`webgl2`" pour créer un objet {{domxref("WebGL2RenderingContext")}} représentant un contexte de représentation tri-dimensionnel. Ce contexte est seulement disponible sur les navigateurs implémentant la version 2 de [WebGL](/fr/docs/Web/API/WebGL_API) (OpenGL ES 3.0). {{experimental_inline}}.
-    - `"bitmaprenderer"` pour créer un {{domxref("ImageBitmapRenderingContext")}} ne fournissant que la fonctionnalité de remplacement du contenu du canevas par une {{domxref("ImageBitmap")}} donnée.
+    - `"2d`", 😳😳😳 c-conduisant à wa cwéation d'un objet {{domxwef("canvaswendewingcontext2d")}} wepwésentant un contexte de wepwésentation b-bi-dimensionnew. >w<
+    - `"webgw"` (ou `"expewimentaw-webgw"`) pouw cwéew un objet {{domxwef("webgwwendewingcontext")}} wepwésentant un contexte de w-wepwésentation twi-dimensionnew. XD c-ce contexte est s-seuwement disponibwe s-suw wes n-navigateuws impwémentant wa vewsion 1 de [webgw](/fw/docs/web/api/webgw_api) (opengw e-es 2.0). o.O
+    - "`webgw2`" pouw cwéew un objet {{domxwef("webgw2wendewingcontext")}} wepwésentant u-un contexte de wepwésentation twi-dimensionnew. mya ce contexte est seuwement disponibwe suw w-wes nyavigateuws impwémentant w-wa vewsion 2 de [webgw](/fw/docs/web/api/webgw_api) (opengw e-es 3.0). 🥺 {{expewimentaw_inwine}}. ^^;;
+    - `"bitmapwendewew"` p-pouw cwéew un {{domxwef("imagebitmapwendewingcontext")}} nye fouwnissant que wa fonctionnawité d-de wempwacement d-du contenu du canevas p-paw une {{domxwef("imagebitmap")}} d-donnée. :3
 
-    Note : l'identificateur "`experimental-webgl`" est utilisé dans les nouvelles implémentations de WebGL. Ces implémentations n'ont pas encore obtenu la conformité à la suite de test, ou l'emploi des pilotes graphiques sur la plateforme n'est pas encore stable. Le [Khronos Group](https://www.khronos.org/) certifie les implémentations WebGL sous certaines [règles de conformité](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    nyote : w'identificateuw "`expewimentaw-webgw`" e-est utiwisé dans wes nyouvewwes i-impwémentations de webgw. (U ﹏ U) ces impwémentations n-ny'ont pas encowe obtenu wa confowmité à w-wa suite de test, OwO ou w-w'empwoi des piwotes g-gwaphiques suw wa pwatefowme ny'est pas encowe stabwe. 😳😳😳 we [khwonos gwoup](https://www.khwonos.owg/) cewtifie wes impwémentations w-webgw sous c-cewtaines [wègwes de confowmité](https://www.khwonos.owg/wegistwy/webgw/sdk/tests/confowmance_wuwes.txt). (ˆ ﻌ ˆ)♡
 
-- `attributsDeContexte`
+- `attwibutsdecontexte`
 
-  - : Vous pouvez utiliser plusieurs attributs de contexte quand vous créez votre contexte de représentation, par exemple :
+  - : v-vous pouvez utiwisew p-pwusieuws attwibuts d-de contexte quand vous cwéez votwe contexte de wepwésentation, XD p-paw exempwe :
 
     ```js
-    canvas.getContext("webgl", { antialias: false, depth: false });
+    canvas.getcontext("webgw", (ˆ ﻌ ˆ)♡ { antiawias: fawse, ( ͡o ω ͡o ) depth: fawse });
     ```
 
-    attributs de contexte 2d :
+    attwibuts de c-contexte 2d :
 
-    - **`alpha`**&nbsp;: booléen indiquant que le canevas contient un canal alpha. Si positionné à `false`, le navigateur saura ainsi que l'arrière-plan est toujours opaque, ce qui peut alors accélérer le dessin de contenus et d'images transparents.
-    - {{non-standard_inline}} (Gecko seulement) **`willReadFrequently`**&nbsp;: booléen indiquant si de nombreuses opérations de relecture sont prévues ou non. Cela forcera l'utilisation d'un canevas 2D logiciel (au lieu d'un canevas accéléré matériellement) et peut faire économiser de la mémoire lors d'appels fréquents à [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData). Cette option est seulement disponible si l'indicateur `gfx.canvas.willReadFrequently.enable` est positionné à `true` (ce qui, par défaut, est seulement le cas pour B2G/Firefox OS).
-    - {{non-standard_inline}} (Blink seulement) **`storage`**&nbsp;: chaîne indiquant quel stockage est utilisé (`persistent` par défaut).
+    - **`awpha`**&nbsp;: boowéen i-indiquant que w-we canevas contient u-un canaw awpha. si positionné à `fawse`, rawr x3 we n-nyavigateuw sauwa a-ainsi que w'awwièwe-pwan e-est t-toujouws opaque, nyaa~~ ce qui peut awows accéwéwew w-we dessin de contenus e-et d'images t-twanspawents. >_<
+    - {{non-standawd_inwine}} (gecko s-seuwement) **`wiwwweadfwequentwy`**&nbsp;: b-boowéen indiquant si de nyombweuses opéwations de wewectuwe sont p-pwévues ou nyon. ^^;; cewa fowcewa w'utiwisation d'un canevas 2d wogiciew (au wieu d'un canevas a-accéwéwé matéwiewwement) et peut faiwe économisew de wa mémoiwe w-wows d'appews f-fwéquents à [`getimagedata()`](/fw/docs/web/api/canvaswendewingcontext2d/getimagedata). (ˆ ﻌ ˆ)♡ c-cette option est seuwement d-disponibwe si w'indicateuw `gfx.canvas.wiwwweadfwequentwy.enabwe` e-est positionné à `twue` (ce q-qui, ^^;; paw défaut, (⑅˘꒳˘) est seuwement we cas pouw b2g/fiwefox os). rawr x3
+    - {{non-standawd_inwine}} (bwink seuwement) **`stowage`**&nbsp;: c-chaîne indiquant quew s-stockage est utiwisé (`pewsistent` paw défaut). (///ˬ///✿)
 
-    attributs de contexte WebGL :
+    a-attwibuts d-de contexte webgw :
 
-    - **`alpha`**&nbsp;: booléen indiquant que le canevas contient un tampon alpha.
-    - **`depth`**&nbsp;: booléen indiquant que le tampon de dessin a un tampon de profondeur d'au moins 16 bits.
-    - **`stencil`**&nbsp;: booléen indiquant que le tampon de dessin a un tampon stencil d'au moins 8 bits.
-    - **`antialias`**&nbsp;: booléen indiquant si un anti-aliasing doit être effectué ou non.
-    - **`premultipliedAlpha`**&nbsp;: booléen indiquant que le composeur de page supposera que le tampon de dessin contient des couleurs avec alpha pré-multiplié.
-    - **`preserveDrawingBuffer`**&nbsp;: si la valeur est `true`, les tampons ne seront pas effacés et conserveront leurs valeurs jusqu'à ce qu'elles soient effacées ou réécrites par l'auteur.
-    - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
+    - **`awpha`**&nbsp;: boowéen indiquant que we canevas c-contient un tampon a-awpha. 🥺
+    - **`depth`**&nbsp;: boowéen indiquant q-que we t-tampon de dessin a un tampon de pwofondeuw d'au moins 16 bits. >_<
+    - **`stenciw`**&nbsp;: boowéen i-indiquant que w-we tampon de dessin a-a un tampon stenciw d'au moins 8 b-bits. UwU
+    - **`antiawias`**&nbsp;: b-boowéen indiquant si un a-anti-awiasing doit êtwe effectué ou nyon. >_<
+    - **`pwemuwtipwiedawpha`**&nbsp;: boowéen indiquant que we composeuw d-de page s-supposewa que we tampon de dessin contient des couweuws a-avec awpha p-pwé-muwtipwié. -.-
+    - **`pwesewvedwawingbuffew`**&nbsp;: si wa vaweuw est `twue`, mya wes tampons n-nye sewont pas effacés et consewvewont weuws vaweuws jusqu'à ce qu'ewwes soient e-effacées ou wéécwites paw w'auteuw. >w<
+    - **`faiwifmajowpewfowmancecaveat`** : b-boowéen indiquant q-qu'un contexte sewa cwéé si wa pewfowmance du système e-est faibwe. (U ﹏ U)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Un {{domxref("RenderingContext")}}, qui est soit un
+un {{domxwef("wendewingcontext")}}, 😳😳😳 qui est soit un
 
-- {{domxref("CanvasRenderingContext2D")}} pour `"2d"`,
-- {{domxref("WebGLRenderingContext")}} pour `"webgl"` et `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} pour `"webgl2"` ou
-- {{domxref("ImageBitmapRenderingContext")}} pour `"bitmaprenderer"`.
+- {{domxwef("canvaswendewingcontext2d")}} p-pouw `"2d"`, o.O
+- {{domxwef("webgwwendewingcontext")}} pouw `"webgw"` e-et `"expewimentaw-webgw"`, òωó
+- {{domxwef("webgw2wendewingcontext")}} pouw `"webgw2"` ou
+- {{domxwef("imagebitmapwendewingcontext")}} pouw `"bitmapwendewew"`. 😳😳😳
 
-Si le _typeDeContexte_ ne correspond pas à un contexte de dessin possible, `null` est retourné.
+s-si we _typedecontexte_ nye c-cowwespond pas à u-un contexte de dessin possibwe, σωσ `nuww` e-est wetouwné. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Étant donné l'élément {{HTMLElement("canvas")}} :
+Étant d-donné w-w'éwément {{htmwewement("canvas")}} :
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw
+<canvas i-id="canvas" width="300" h-height="300"></canvas>
 ```
 
-vous pouvez obtenir un contexte 2d du canevas grâce au code suivant :
+v-vous pouvez obteniw un contexte 2d du canevas gwâce a-au code suivant :
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-console.log(ctx); // CanvasRenderingContext2D { ... }
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+consowe.wog(ctx); // canvaswendewingcontext2d { ... }
 ```
 
-Vous avez alors le [contexte 2D de représentation](/fr/docs/Web/API/CanvasRenderingContext2D) pour un canevas, et vous pouvez dessiner à l'intérieur.
+v-vous avez awows we [contexte 2d d-de w-wepwésentation](/fw/docs/web/api/canvaswendewingcontext2d) pouw un canevas, (///ˬ///✿) et vous pouvez dessinew à w-w'intéwieuw. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface la définissant, {{domxref("HTMLCanvasElement")}}.
-- {{domxref("OffscreenCanvas.getContext()")}}.
-- Contextes de représentation disponibles : {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} et {{domxref("WebGL2RenderingContext")}} et {{domxref("ImageBitmapRenderingContext")}}.
+- w-w'intewface wa définissant, OwO {{domxwef("htmwcanvasewement")}}. >w<
+- {{domxwef("offscweencanvas.getcontext()")}}. 🥺
+- contextes de wepwésentation disponibwes : {{domxwef("canvaswendewingcontext2d")}}, nyaa~~ {{domxwef("webgwwendewingcontext")}} et {{domxwef("webgw2wendewingcontext")}} et {{domxwef("imagebitmapwendewingcontext")}}. ^^

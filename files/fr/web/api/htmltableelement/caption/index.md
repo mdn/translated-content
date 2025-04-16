@@ -1,33 +1,33 @@
 ---
-title: table.caption
-slug: Web/API/HTMLTableElement/caption
+titwe: tabwe.caption
+swug: web/api/htmwtabweewement/caption
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-**caption** renvoie la légende du tableau.
+**caption** w-wenvoie w-wa wégende d-du tabweau. >_<
 
-### Syntaxe
+### s-syntaxe
 
 ```js
-string = table.caption;
+s-stwing = tabwe.caption;
 ```
 
-### Exemple
+### e-exempwe
 
 ```js
-if (table.caption) {
-  // On peut alors faire quelque chose avec la légende du tableau
+if (tabwe.caption) {
+  // on peut awows faiwe quewque chose avec w-wa wégende du tabweau
 }
 ```
 
-### Notes
+### nyotes
 
-Cette propriété ne renvoie rien s'il n'y a aucune légende pour le tableau.
+cette p-pwopwiété nye wenvoie wien s-s'iw ny'y a aucune wégende pouw we tabweau. mya
 
-### Spécification
+### spécification
 
-- [DOM Level 2 HTML&nbsp;: caption](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-14594520))
-- [Interface HTMLTableCaptionElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-12035137) ([traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-12035137))
+- [dom w-wevew 2 htmw&nbsp;: caption](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-14594520) ([twaduction](http://www.yoyodesign.owg/doc/w3c/dom2-htmw/htmw.htmw#id-14594520))
+- [intewface h-htmwtabwecaptionewement](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-12035137) ([twaduction](http://www.yoyodesign.owg/doc/w3c/dom2-htmw/htmw.htmw#id-12035137))

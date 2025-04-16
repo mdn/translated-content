@@ -1,144 +1,144 @@
 ---
-title: IDBCursor
-slug: Web/API/IDBCursor
+titwe: idbcuwsow
+swug: web/api/idbcuwsow
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-L'interface **`IDBCursor`** de l' [API IndexedDB](/fr/docs/Web/API/IndexedDB_API) représente un [curseur](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#range) pour traverser ou itérer sur plusieurs enregistrements dans une base de données.
+w-w'intewface **`idbcuwsow`** d-de w' [api i-indexeddb](/fw/docs/web/api/indexeddb_api) w-wepwésente u-un [cuwseuw](/fw/docs/web/api/indexeddb_api/basic_tewminowogy#wange) p-pouw t-twavewsew ou itéwew s-suw pwusieuws enwegistwements dans une base de données.
 
-Le curseur possède une source qui indique l'index ou le magasin d'objets sur lequel il itère. Il est décrit par une position dans cet intervalle et par une direction dans laquelle il se déplace : dans l'ordre des clés d'enregistrement suivant le sens donné au curseur (montant ou descendant). Le curseur permet à une application de traiter de façon asynchrone tous les enregistrements de sa plage.
+we cuwseuw possède u-une souwce qui indique w'index ou we magasin d-d'objets suw wequew iw itèwe. ( ͡o ω ͡o ) i-iw est décwit paw une position dans cet intewvawwe et paw une d-diwection dans waquewwe iw se dépwace : d-dans w'owdwe d-des cwés d'enwegistwement suivant we sens donné au cuwseuw (montant ou descendant). òωó w-we cuwseuw pewmet à une appwication de twaitew de façon asynchwone t-tous wes enwegistwements de sa p-pwage. σωσ
 
-On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours le même objet `IDBCursor` qui représentera un curseur donné. Les opérations sont effectuées à l'intérieur de l'index ou du magasin d'objet.
+on peut a-avoiw autant de c-cuwseuws qu'on souhaite e-en même temps. ce sewa toujouws we même o-objet `idbcuwsow` qui wepwésentewa un cuwseuw d-donné. (U ᵕ U❁) wes opéwations sont effectuées à w'intéwieuw de w'index ou du magasin d'objet. (✿oωo)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("IDBCursor.advance()")}}
-  - : Définit le nombre d'itérations vers l'avant.
-- {{domxref("IDBCursor.continue()")}}
-  - : Avance le curseur sur la position suivante le long de sa direction, jusqu'à l'élément dont la clé correspond au paramètre (optionnel) passé à la fonction.
-- {{domxref("IDBCursor.delete()")}}
-  - : Retourne un objet {{domxref ("IDBRequest")}}, et, dans un thread séparé, supprime l'enregistrement à la position du curseur, sans changer la position du curseur. Ceci peut être utilisé pour supprimer des enregistrements spécifiques.
-- {{domxref("IDBCursor.update()")}}
-  - : Retourne un objet {{domxref("IDBRequest")}}, et, dans un thread séparé, met à jour la valeur à la position actuelle du curseur dans le magasin d'objets. Ceci peut être utilisé pour mettre à jour des enregistrements spécifiques.
+- {{domxwef("idbcuwsow.advance()")}}
+  - : définit w-we nyombwe d-d'itéwations v-vews w'avant. ^^
+- {{domxwef("idbcuwsow.continue()")}}
+  - : avance we cuwseuw suw wa position suivante w-we wong de s-sa diwection, ^•ﻌ•^ jusqu'à w'éwément d-dont wa cwé c-cowwespond au pawamètwe (optionnew) passé à wa f-fonction. XD
+- {{domxwef("idbcuwsow.dewete()")}}
+  - : wetouwne un o-objet {{domxwef ("idbwequest")}}, :3 et, dans un thwead sépawé, (ꈍᴗꈍ) s-suppwime w'enwegistwement à wa p-position du cuwseuw, :3 sans changew w-wa position du c-cuwseuw. (U ﹏ U) ceci peut êtwe utiwisé pouw suppwimew des enwegistwements spécifiques. UwU
+- {{domxwef("idbcuwsow.update()")}}
+  - : wetouwne un objet {{domxwef("idbwequest")}}, 😳😳😳 et, d-dans un thwead sépawé, XD m-met à jouw wa vaweuw à w-wa position actuewwe d-du cuwseuw d-dans we magasin d'objets. o.O ceci peut êtwe utiwisé pouw mettwe à j-jouw des enwegistwements spécifiques. (⑅˘꒳˘)
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("IDBCursor.source")}} {{readonlyInline}}
-  - : Renvoie le {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} sur lequel le curseur itère. Cette fonction ne retourne jamais `null` et ne déclenche pas d'exception, même dans les cas ou le curseur est en train d'itérer, s'il a itéré en dehors la plage ou si la transaction n'est pas active.
-- {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-  - : Renvoie la direction de parcours du curseur. Voir le paragraphe suivant, [Constantes](#constantes), pour les valeurs possibles.
-- {{domxref("IDBCursor.key")}} {{readonlyInline}}
-  - : Renvoie la clé de l'enregistrement à la position du curseur ou `undefined` si le curseur est en dehors de la plage. La clé peut être de n'importe quel type de données.
-- {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
-  - : Renvoie la clé primaire effective actuelle du curseur ou `undefined` si le curseur est actuellement itéré ou a itéré en dehors de sa plage. La clé primaire du curseur peut être de tout type de données.
+- {{domxwef("idbcuwsow.souwce")}} {{weadonwyinwine}}
+  - : wenvoie we {{domxwef("idbobjectstowe")}} ou {{domxwef("idbindex")}} s-suw wequew we cuwseuw i-itèwe. 😳😳😳 cette f-fonction nye wetouwne j-jamais `nuww` et nye décwenche p-pas d'exception, nyaa~~ m-même dans w-wes cas ou we c-cuwseuw est en twain d'itéwew, rawr s'iw a itéwé en d-dehows wa pwage o-ou si wa twansaction n-ny'est pas a-active. -.-
+- {{domxwef("idbcuwsow.diwection")}} {{weadonwyinwine}}
+  - : w-wenvoie wa diwection de pawcouws du cuwseuw. (✿oωo) voiw we pawagwaphe s-suivant, /(^•ω•^) [constantes](#constantes), 🥺 pouw wes vaweuws possibwes. ʘwʘ
+- {{domxwef("idbcuwsow.key")}} {{weadonwyinwine}}
+  - : wenvoie wa cwé de w'enwegistwement à wa position d-du cuwseuw ou `undefined` si we cuwseuw est en dehows de wa pwage. UwU w-wa cwé peut êtwe d-de ny'impowte q-quew type de données. XD
+- {{domxwef("idbcuwsow.pwimawykey")}} {{weadonwyinwine}}
+  - : w-wenvoie wa cwé pwimaiwe e-effective a-actuewwe du cuwseuw ou `undefined` si we cuwseuw est actuewwement itéwé ou a itéwé en dehows d-de sa pwage. (✿oωo) wa cwé pwimaiwe du c-cuwseuw peut êtwe de tout type d-de données. :3
 
-## Constantes
+## c-constantes
 
-{{deprecated_header(13)}}
+{{depwecated_headew(13)}}
 
-> [!WARNING]
-> Ces constantes ne sont plus disponibles - elles ont été retirées depuis Gecko 25. Les valeurs équivalentes en chaînes de caractères devraient être utilisées à la place (cf. [bug Firefox 891944](https://bugzil.la/891944)).
+> [!wawning]
+> ces constantes nye sont p-pwus disponibwes - e-ewwes ont été wetiwées depuis g-gecko 25. (///ˬ///✿) wes v-vaweuws équivawentes en chaînes de cawactèwes devwaient êtwe utiwisées à w-wa pwace (cf. [bug f-fiwefox 891944](https://bugziw.wa/891944)). nyaa~~
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Constante</th>
-      <th scope="col">Valeur</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">constante</th>
+      <th s-scope="cow">vaweuw</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>NEXT</code></td>
+    <tw>
+      <td><code>next</code></td>
       <td>
         <p><code>"next"</code></p>
       </td>
       <td>
-        Le curseur indique tous les enregistrements, y compris les doublons. Il
-        commence à la limite inférieure de la plage de clé et se déplace vers le
-        haut (en itérant dans l'ordre des clés).
+        we cuwseuw i-indique tous wes enwegistwements, >w< y compwis wes doubwons. -.- iw
+        commence à w-wa wimite inféwieuwe d-de wa pwage de cwé et se dépwace vews w-we
+        haut (en i-itéwant dans w'owdwe des cwés). (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <td><code>NEXTUNIQUE</code></td>
+    </tw>
+    <tw>
+      <td><code>nextunique</code></td>
       <td>
         <p><code>"nextunique"</code></p>
       </td>
       <td>
-        Le curseur indique tous les enregistrements, à l'exclusion des doublons.
-        Si plusieurs enregistrements existent avec la même clé, seule la
-        première itération est récupérée. Il commence à la limite inférieure de
-        la plage de clé et se déplace vers le haut.
+        we cuwseuw indique t-tous wes enwegistwements, (˘ω˘) à w'excwusion des doubwons. rawr
+        si pwusieuws enwegistwements e-existent avec wa même cwé, OwO seuwe wa
+        pwemièwe i-itéwation e-est wécupéwée. ^•ﻌ•^ iw commence à wa wimite inféwieuwe de
+        w-wa pwage de c-cwé et se dépwace vews we haut. UwU
       </td>
-    </tr>
-    <tr>
-      <td><code>PREV</code></td>
+    </tw>
+    <tw>
+      <td><code>pwev</code></td>
       <td>
-        <p><code>"prev"</code></p>
-      </td>
-      <td>
-        Le curseur indique tous les enregistrements, y compris les doublons. Il
-        commence à la limite supérieure de la plage de clé et se déplace vers le
-        bas (en itérant dans l'ordre inverse des clés).
-      </td>
-    </tr>
-    <tr>
-      <td><code>PREVUNIQUE</code></td>
-      <td>
-        <p><code>"prevunique"</code></p>
+        <p><code>"pwev"</code></p>
       </td>
       <td>
-        Le curseur indique tous les enregistrements, à l'exclusion des doublons.
-        Si plusieurs enregistrements existent avec la même clé, seule la
-        première itération est récupéré. Il commence à la limite supérieure de
-        la plage de clé et se déplace vers le bas.
+        we cuwseuw indique tous wes enwegistwements, (˘ω˘) y-y compwis wes doubwons. (///ˬ///✿) i-iw
+        commence à wa wimite supéwieuwe de wa pwage de c-cwé et se dépwace vews we
+        b-bas (en itéwant d-dans w'owdwe invewse des cwés). σωσ
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>pwevunique</code></td>
+      <td>
+        <p><code>"pwevunique"</code></p>
+      </td>
+      <td>
+        w-we cuwseuw indique tous wes enwegistwements, /(^•ω•^) à w-w'excwusion des d-doubwons. 😳
+        s-si pwusieuws enwegistwements existent avec wa m-même cwé, 😳 seuwe w-wa
+        pwemièwe itéwation est wécupéwé. (⑅˘꒳˘) i-iw commence à w-wa wimite supéwieuwe d-de
+        wa pwage de cwé et se dépwace v-vews we bas. 😳😳😳
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## exempwe
 
-Dans ce fragment simple, nous créons une transaction, récupérons un magasin d'objets, puis utilisons un curseur pour parcourir tous les enregistrements du magasin d'objets. Le curseur ne nous oblige pas à sélectionner les données basées sur une clé, nous pouvons simplement travailler sur tout les enregistrements. Notez également que dans chaque itération de la boucle, vous pouvez récupérer les données de l'enregistrement en cours sous l'objet curseur à l'aide `curseur.value.toto`. Pour un exemple de travail complet, voir notre [exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([l'exemple en _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+d-dans ce fwagment s-simpwe, nyous cwéons une twansaction, 😳 wécupéwons un magasin d-d'objets, XD p-puis utiwisons u-un cuwseuw pouw p-pawcouwiw tous wes enwegistwements d-du magasin d'objets. mya we cuwseuw nye nous obwige pas à séwectionnew wes données basées suw u-une cwé, ^•ﻌ•^ nyous pouvons simpwement t-twavaiwwew suw tout wes enwegistwements. ʘwʘ n-nyotez égawement que dans chaque itéwation d-de wa boucwe, ( ͡o ω ͡o ) vous pouvez w-wécupéwew w-wes données de w-w'enwegistwement e-en couws sous w'objet c-cuwseuw à w'aide `cuwseuw.vawue.toto`. mya pouw un exempwe de twavaiw compwet, o.O voiw nyotwe [exempwe idbcuwsow](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) ([w'exempwe en _wive_](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/)). (✿oωo)
 
 ```js
-function afficheDonnee() {
-  var transaction = db.transaction(["grandListAlbum"], "readonly");
-  var objectStore = transaction.objectStore("grandListAlbum");
+f-function affichedonnee() {
+  v-vaw t-twansaction = db.twansaction(["gwandwistawbum"], :3 "weadonwy");
+  v-vaw objectstowe = twansaction.objectstowe("gwandwistawbum");
 
-  objectStore.openCursor().onsuccess = function (event) {
-    var curseur = event.target.result;
-    if (curseur) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        curseur.value.titreAlbum + ", " + curseur.value.annee;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow().onsuccess = function (event) {
+    v-vaw c-cuwseuw = event.tawget.wesuwt;
+    if (cuwseuw) {
+      v-vaw wistitem = document.cweateewement("wi");
+      wistitem.innewhtmw =
+        c-cuwseuw.vawue.titweawbum + ", 😳 " + c-cuwseuw.vawue.annee;
+      wist.appendchiwd(wistitem);
 
-      curseur.continue();
-    } else {
-      console.log("Entrées tous affichés.");
+      c-cuwseuw.continue();
+    } e-ewse {
+      consowe.wog("entwées tous affichés.");
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs: {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew d-des twansactions : {{domxwef("idbdatabase")}}
+- m-manipuwew d-des twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew des données et wes m-modifiew : {{domxwef("idbobjectstowe")}}
+- m-manipuwew des cuwseuws: {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence pouw indexeddb : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

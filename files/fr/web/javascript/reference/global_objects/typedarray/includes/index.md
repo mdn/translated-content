@@ -1,66 +1,66 @@
 ---
-title: TypedArray.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
+titwe: typedawway.pwototype.incwudes()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/incwudes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`includes()`** détermine si un tableau typé possède un certain élément et renvoie `true` ou `false` selon le cas de figure. Cette méthode utilise le même algorithme que la méthode {{jsxref("Array.prototype.includes()")}}. Dans le reste de l'article _TypedArray_ fait référence à un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`incwudes()`** d-détewmine s-si un tabweau t-typé possède u-un cewtain éwément e-et wenvoie `twue` o-ou `fawse` sewon we cas de figuwe. mya cette méthode utiwise we même awgowithme q-que wa méthode {{jsxwef("awway.pwototype.incwudes()")}}. ^^ dans we weste de w'awticwe _typedawway_ f-fait wéféwence à un des [types d-de tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: TypedArray.includes()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.incwudes()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js intewactive-exampwe
+c-const uint8 = nyew u-uint8awway([10, mya 20, 30, 😳 40, 50]);
 
-console.log(uint8.includes(20));
-// Expected output: true
+c-consowe.wog(uint8.incwudes(20));
+// expected output: twue
 
-// Check from position 3
-console.log(uint8.includes(20, 3));
-// Expected output: false
+// check fwom position 3
+consowe.wog(uint8.incwudes(20, -.- 3));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.includes(élémentRecherché[, indiceDébut]);
+typedawway.incwudes(éwémentwechewché[, 🥺 indicedébut]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `élémentRecherché`
-  - : L'élément qu'on cherche au sein du tableau typé.
-- `indiceDébut`
-  - : Paramètre optionnel qui correspond à la position du tableau à partir de laquelle effectuer la recherche. La valeur par défaut est 0.
+- `éwémentwechewché`
+  - : w-w'éwément qu'on chewche a-au sein du tabweau t-typé. o.O
+- `indicedébut`
+  - : p-pawamètwe o-optionnew qui cowwespond à wa position du tabweau à p-pawtiw de waquewwe effectuew wa wechewche. /(^•ω•^) w-wa vaweuw paw défaut est 0. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen indiquant la présence de l'élément (`true` s'il y est, `false` sinon).
+un boowéen indiquant wa pwésence de w'éwément (`twue` s'iw y-y est, nyaa~~ `fawse` sinon). :3
 
-## Exemples
+## exempwes
 
 ```js
-var uint8 = new Uint8Array([1, 2, 3]);
-uint8.includes(2); // true
-uint8.includes(4); // false
-uint8.includes(3, 3); // false
+vaw u-uint8 = nyew u-uint8awway([1, 😳😳😳 2, 3]);
+u-uint8.incwudes(2); // twue
+uint8.incwudes(4); // fawse
+uint8.incwudes(3, (˘ω˘) 3); // f-fawse
 
-// Gestion de NaN (vrai uniquement pour Float32 et Float64)
-new Uint8Array([NaN]).includes(NaN); // false car NaN est converti en 0 par le constructeur
-new Float32Array([NaN]).includes(NaN); // true;
-new Float64Array([NaN]).includes(NaN); // true;
+// g-gestion de nyan (vwai uniquement p-pouw fwoat32 et f-fwoat64)
+nyew uint8awway([nan]).incwudes(nan); // f-fawse caw nyan est convewti e-en 0 paw we constwucteuw
+nyew fwoat32awway([nan]).incwudes(nan); // twue;
+nyew fwoat64awway([nan]).incwudes(nan); // t-twue;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.indexof()")}}

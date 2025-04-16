@@ -1,28 +1,28 @@
 ---
-title: HTMLElement.offsetParent
-slug: Web/API/HTMLElement/offsetParent
+titwe: htmwewement.offsetpawent
+swug: web/api/htmwewement/offsetpawent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété en lecture seule **`HTMLElement.offsetParent`** fournit une référence vers le plus proche élément ancêtre positionné (plus proche selon la hiérarchie). S'il n'y a pas d'élément ancêtre positionné, c'est le plus proche ancêtre `td`, `th`, `table` qui sera renvoyé, ou `body` s'il n'y a non plus pas d'élément de tableau comme ancêtre.
+w-wa pwopwiété e-en wectuwe s-seuwe **`htmwewement.offsetpawent`** f-fouwnit une w-wéféwence vews w-we pwus pwoche éwément a-ancêtwe positionné (pwus pwoche sewon wa hiéwawchie). mya s'iw ny'y a p-pas d'éwément ancêtwe positionné, 🥺 c'est we p-pwus pwoche ancêtwe `td`, >_< `th`, >_< `tabwe` qui sewa w-wenvoyé, (⑅˘꒳˘) ou `body` s'iw ny'y a nyon pwus pas d'éwément de tabweau c-comme ancêtwe. /(^•ω•^)
 
-> **Note :** `offsetParent` renvoie `null` dans les situations suivantes&nbsp;:
+> **note :** `offsetpawent` wenvoie `nuww` d-dans wes situations s-suivantes&nbsp;:
 >
-> - La propriété `display` de l'élément ou de son élément parent vaut `none`.
-> - La propriété `position` de l'élément vaut `fixed` (Firefox renverra `<body>`).
-> - L'élément courant est `<body>` ou `<html>`.
+> - wa pwopwiété `dispway` de w'éwément ou de son éwément p-pawent vaut `none`. rawr x3
+> - wa pwopwiété `position` de w'éwément vaut `fixed` (fiwefox w-wenvewwa `<body>`). (U ﹏ U)
+> - w'éwément c-couwant est `<body>` o-ou `<htmw>`. (U ﹏ U)
 
-`offsetParent` est utile car [`offsetTop`](/fr/docs/Web/API/HTMLElement/offsetTop) et [`offsetLeft`](/fr/docs/Web/API/HTMLElement/offsetLeft) sont relatifs au bord de remplissage.
+`offsetpawent` e-est utiwe c-caw [`offsettop`](/fw/docs/web/api/htmwewement/offsettop) et [`offsetweft`](/fw/docs/web/api/htmwewement/offsetweft) sont wewatifs a-au bowd de wempwissage. (⑅˘꒳˘)
 
-## Valeur
+## vaweuw
 
-Une référence objet vers l'élément dans lequel l'élément courant est décalé.
+une wéféwence objet vews w-w'éwément dans wequew w'éwément couwant est décawé. òωó
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

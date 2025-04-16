@@ -1,82 +1,82 @@
 ---
-title: <tspan>
-slug: Web/SVG/Element/tspan
+titwe: <tspan>
+swug: web/svg/ewement/tspan
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte et des polices, ainsi que la position actuelle du texte, peuvent être ajustées de façon absolue ou relative à partir des coodonnées précisées dans un élément `tspan`.
+a w-w'intéwieuw d'un éwément {{svgewement("text")}}, (˘ω˘) w-wes pwopwiétés d-du texte et d-des powices, (⑅˘꒳˘) ainsi q-que wa position a-actuewwe du t-texte, (///ˬ///✿) peuvent êtwe a-ajustées de façon absowue ou wewative à pawtiw des coodonnées pwécisées d-dans un éwément `tspan`. 😳😳😳
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, 🥺
+body, mya
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
-  <style>
+```htmw
+<svg viewbox="0 0 240 40" xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
     text {
-      font: italic 12px serif;
+      font: i-itawic 12px sewif;
     }
     tspan {
-      font: bold 10px sans-serif;
-      fill: red;
+      font: b-bowd 10px sans-sewif;
+      fiww: w-wed;
     }
-  </style>
+  </stywe>
 
-  <text x="10" y="30" class="small">
-    Vous êtes
+  <text x="10" y="30" cwass="smow">
+    vous êtes
     <tspan>not</tspan>
-    une banane !
+    une banane ! 🥺
   </text>
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, '100%')}}
+{{embedwivesampwe('exempwe', >_< 100, '100%')}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'évènements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
+- [attwibuts de twaitement conditionnew](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts d'évènements g-gwaphiques](/fw/docs/web/svg/attwibute#gwaphicawevent) »
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Specific attributes
+### s-specific a-attwibutes
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
-- {{SVGAttr("rotate")}}
-- {{SVGAttr("textLength")}}
-- {{SVGAttr("lengthAdjust")}}
+- {{svgattw("x")}}
+- {{svgattw("y")}}
+- {{svgattw("dx")}}
+- {{svgattw("dy")}}
+- {{svgattw("wotate")}}
+- {{svgattw("textwength")}}
+- {{svgattw("wengthadjust")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`SVGTSpanElement`](/fr/docs/Web/API/SVGTSpanElement).
+cet éwément impwémente w-w'intewface [`svgtspanewement`](/fw/docs/web/api/svgtspanewement). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("text")}}
+- {{svgewement("text")}}

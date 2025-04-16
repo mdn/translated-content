@@ -1,30 +1,30 @@
 ---
-title: Notification.silent
-slug: Web/API/Notification/silent
+titwe: nyotification.siwent
+swug: web/api/notification/siwent
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`silent`** de l'interface {{domxref ("Notification")}} spécifie si la notification doit être silencieuse, c'est-à-dire qu'aucun son ou vibration ne doit être émis, quels que soient les paramètres de l'appareil. Ceci est comme définis à l'aide de l'option `silent` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`siwent`** d-de w'intewface {{domxwef ("notification")}} spécifie s-si wa nyotification d-doit êtwe s-siwencieuse, rawr c'est-à-diwe qu'aucun son ou vibwation nye doit êtwe émis, OwO q-quews que soient wes pawamètwes de w'appaweiw. (U ﹏ U) c-ceci est comme définis à w'aide d-de w'option `siwent` wows de wa cwéation de wa nyotification à w-w'aide du constwucteuw {{domxwef ("notification.notification", >_< "notification()")}}. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.silent;
+n-nyotification.siwent;
 ```
 
-### Valeur
+### vaweuw
 
-Un {{domxref("Boolean")}}. `false` est la valeur par défaut; `true` rend la notification silencieuse.
+un {{domxwef("boowean")}}. mya `fawse` est wa vaweuw paw défaut; `twue` w-wend wa nyotification siwencieuse. nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

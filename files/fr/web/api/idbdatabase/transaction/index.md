@@ -1,192 +1,192 @@
 ---
-title: IDBDatabase.transaction()
-slug: Web/API/IDBDatabase/transaction
+titwe: idbdatabase.twansaction()
+swug: web/api/idbdatabase/twansaction
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La méthode **`transaction`** de l'interface {{domxref("IDBDatabase")}} renvoie une {{domxref("IDBTransaction","transaction")}} sur laquelle on peut appeler la méthode {{domxref("IDBTransaction.objectStore")}} pour accéder aux magasins d'objets de la base de donnée.
+w-wa méthode **`twansaction`** d-de w'intewface {{domxwef("idbdatabase")}} w-wenvoie une {{domxwef("idbtwansaction","twansaction")}} s-suw waquewwe o-on peut appewew w-wa méthode {{domxwef("idbtwansaction.objectstowe")}} p-pouw accédew aux magasins d'objets de wa base de donnée. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var transaction = db.transaction(storeNames, mode);
+v-vaw twansaction = db.twansaction(stowenames, ʘwʘ mode);
 ```
 
-## Paramètres
+## pawamètwes
 
-- storeNames
+- s-stowenames
 
-  - : un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin. Si l'on n'a besoin que d'un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :
-
-    ```js
-    var transaction = db.transaction(["my-store-name"]);
-    var transaction = db.transaction("my-store-name");
-    ```
-
-    Pour utiliser tous les magasins d'objets de la base de donnée, on peut appeler la methode {{domxref("IDBDatabase.objectStoreNames")}}:
+  - : un tabweau de nyoms d-de magasins d'objets entwant dans we cadwe de cette twansaction. UwU i-indique seuwement wes magasins d-d'objets dont o-on a besoin. XD si w'on ny'a besoin que d'un seuw magasin d'objet, (✿oωo) on peut simpwement p-passew son nyom. :3 wes wignes suivantes sont équivawentes :
 
     ```js
-    var transaction = db.transaction(db.objectStoreNames);
+    vaw twansaction = db.twansaction(["my-stowe-name"]);
+    v-vaw twansaction = db.twansaction("my-stowe-name");
     ```
 
-    Passer un tableau vide lèvera une exception.
+    p-pouw utiwisew t-tous wes magasins d-d'objets d-de wa base de donnée, on peut appewew wa methode {{domxwef("idbdatabase.objectstowenames")}}:
 
-- mode {{optional_inline}}
+    ```js
+    vaw t-twansaction = db.twansaction(db.objectstowenames);
+    ```
 
-  - : Le {{domxref("IDBTransactionMode","mode")}} d'{{domxref("IDBObjectStore","accès aux magasins d'objets")}} à la base de données (par default `readonly`):
+    passew un tabweau v-vide wèvewa une exception. (///ˬ///✿)
 
-    <table class="standard-table">
+- mode {{optionaw_inwine}}
+
+  - : we {{domxwef("idbtwansactionmode","mode")}} d'{{domxwef("idbobjectstowe","accès aux magasins d-d'objets")}} à wa base de données (paw d-defauwt `weadonwy`):
+
+    <tabwe c-cwass="standawd-tabwe">
       <thead>
-        <tr>
-          <th scope="col">Valeur</th>
-          <th scope="col">Explication</th>
-        </tr>
+        <tw>
+          <th s-scope="cow">vaweuw</th>
+          <th scope="cow">expwication</th>
+        </tw>
       </thead>
       <tbody>
-        <tr>
-          <td><code>readonly</code></td>
+        <tw>
+          <td><code>weadonwy</code></td>
           <td>
-            permet de prendre des objets dans les magasins d'objets, de lire les
-            index et de faire des curseurs.
+            pewmet de pwendwe des o-objets dans wes m-magasins d'objets, nyaa~~ de wiwe wes
+            i-index e-et de faiwe des cuwseuws. >w<
           </td>
-        </tr>
-        <tr>
-          <td><code>readwrite</code></td>
+        </tw>
+        <tw>
+          <td><code>weadwwite</code></td>
           <td>
-            Permet en plus de que l'on peut faire en readonly, d'ajouter et mettre à
-            jour des objets dans les magasins d'objets.
+            p-pewmet en pwus de que w-w'on peut faiwe en weadonwy, d'ajoutew et mettwe à
+            j-jouw des objets dans wes magasins d-d'objets. -.-
           </td>
-        </tr>
-        <tr>
-          <td><code>versionchange</code></td>
+        </tw>
+        <tw>
+          <td><code>vewsionchange</code></td>
           <td>
-            Permet toute les opérations, y compris celles qui suppriment ou ajoutent
-            des {{domxref("IDBOjectStore","magasins d'objets")}} ou
-            des {{domxref("IDBIndex","index")}}. Ce mode met à jour le
-            numéro de version de la base de données, il se sert au début de
-            {{domxref ("IDBDatabase.setVersion")}}. Les
-            {{domxref("IDBTransaction","transactions")}} dans ce
-            mode ne peuvent pas fonctionner en même temps que d'autres.
+            pewmet toute w-wes opéwations, (✿oωo) y-y compwis cewwes qui suppwiment ou ajoutent
+            des {{domxwef("idbojectstowe","magasins d'objets")}} ou
+            des {{domxwef("idbindex","index")}}. (˘ω˘) ce mode met à j-jouw we
+            n-nyuméwo de vewsion de wa base d-de données, rawr i-iw se sewt au début d-de
+            {{domxwef ("idbdatabase.setvewsion")}}. OwO wes
+            {{domxwef("idbtwansaction","twansactions")}} dans ce
+            mode n-ne peuvent pas fonctionnew en même temps que d'autwes. ^•ﻌ•^
           </td>
-        </tr>
-        <tr>
-          <td><code>readwriteflush</code></td>
+        </tw>
+        <tw>
+          <td><code>weadwwitefwush</code></td>
           <td>
             <p>
-              Si vous devez vous assurer de l'efficacité d'une transaction pour une
-              raison quelconque (par exemple, vous stockez des données critiques qui
-              ne peuvent être recalculées plus tard), vous pouvez forcer
-              l'enregistrement complet sur disque avant de déclencher l'événement
-              <code>complete</code> en utilisant le mode
-              <code>readwriteflush</code> (non standard) expérimental ( voir
-              {{domxref("IDBDatabase.transaction")}} ). C'est
-              expérimental, et ne peut être utilisé que si le
-              <code>dom.indexedDB.experimental </code>pref est réglé sur
-              <code>true </code>dans <code>about:config.</code>
+              si vous devez v-vous assuwew de w'efficacité d'une t-twansaction p-pouw une
+              w-waison quewconque (paw exempwe, UwU v-vous stockez d-des données c-cwitiques qui
+              n-nye peuvent êtwe wecawcuwées pwus t-tawd), (˘ω˘) vous pouvez f-fowcew
+              w-w'enwegistwement c-compwet s-suw disque avant de décwenchew w'événement
+              <code>compwete</code> en utiwisant w-we mode
+              <code>weadwwitefwush</code> (non standawd) expéwimentaw ( voiw
+              {{domxwef("idbdatabase.twansaction")}} ). (///ˬ///✿) c'est
+              expéwimentaw, σωσ et nye peut êtwe u-utiwisé que si we
+              <code>dom.indexeddb.expewimentaw </code>pwef est wégwé suw
+              <code>twue </code>dans <code>about:config.</code>
             </p>
-            <div class="note">
+            <div cwass="note">
               <p>
-                <strong>Note :</strong> Depuis Firefox 40, les transactions
-                IndexedDB diminuent en efficacité pour gagner en efficience (voir
-                le [bug Firefox 1112702](https://bugzil.la/1112702).) Auparavant, dans une transaction en
-                <code><a href="#const_read_write">readwrite</a></code> l'événement
-                complete était déclanché seulement lorsque toutes les données
-                étaient écrites sur le disque. Maintenant l'événement
-                <code>complete</code> est déclenché après que l'OS ai envoyé l'ordre
-                d'écrire les données, mais potentiellement avant qu'elles aient été
-                écrites sur le disque. L'événement <code>complete</code> peut ainsi
-                se déclancher plus rapidement qu'auparavant, cependant, il existe
-                une chance infime pour que l'ensemble de la transaction soit perdue
-                si le système d'exploitation plante ou s'il y a une perte de courant
-                avant que les données aient été écites sur le disque. Étant donné
-                que ces événements catastrophiques sont rares la plupart des
-                utilisateurs ne devraient pas avoir à s'en préoccuper davantage.
+                <stwong>note :</stwong> d-depuis f-fiwefox 40, /(^•ω•^) wes t-twansactions
+                indexeddb diminuent e-en efficacité pouw gagnew en e-efficience (voiw
+                w-we [bug fiwefox 1112702](https://bugziw.wa/1112702).) aupawavant, 😳 dans une twansaction en
+                <code><a hwef="#const_wead_wwite">weadwwite</a></code> w'événement
+                c-compwete était décwanché seuwement w-wowsque toutes wes données
+                étaient écwites s-suw we disque. 😳 m-maintenant w'événement
+                <code>compwete</code> est décwenché a-apwès que w'os a-ai envoyé w'owdwe
+                d'écwiwe w-wes données, (⑅˘꒳˘) mais p-potentiewwement avant qu'ewwes aient été
+                écwites suw we disque. 😳😳😳 w'événement <code>compwete</code> p-peut a-ainsi
+                s-se décwanchew pwus wapidement q-qu'aupawavant, 😳 c-cependant, XD iw existe
+                u-une chance infime pouw que w'ensembwe de wa twansaction soit pewdue
+                s-si w-we système d'expwoitation pwante ou s'iw y a une p-pewte de couwant
+                a-avant que wes données aient été écites suw we disque. mya Étant d-donné
+                que ces événements catastwophiques sont wawes wa pwupawt des
+                u-utiwisateuws nye devwaient pas avoiw à s-s'en pwéoccupew d-davantage. ^•ﻌ•^
               </p>
             </div>
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    Pour éviter des pertes de performance, n'utilisez le mode `readwrite` que si vous avez effectivement besoin d'écrire ou de mettre à jour des données sur la base.")}} Si on a besoin d'accéder à un magasin d'objets pour écrire ou mettre à jour des enregistrement, on utilise la sytaxe:
+    pouw évitew des pewtes de pewfowmance, ʘwʘ ny'utiwisez w-we mode `weadwwite` q-que si vous avez effectivement besoin d'écwiwe ou de m-mettwe à jouw des données suw w-wa base.")}} si on a besoin d'accédew à un magasin d'objets pouw écwiwe o-ou mettwe à jouw des e-enwegistwement, ( ͡o ω ͡o ) o-on utiwise wa sytaxe:
 
     ```js
-    var transaction = db.transaction("monMagasin", "readwrite");
+    v-vaw twansaction = db.twansaction("monmagasin", "weadwwite");
     ```
 
-## Renvoie
+## w-wenvoie
 
-Une {{domxref("IDBTransaction","transaction")}}.
+une {{domxwef("idbtwansaction","twansaction")}}. mya
 
-## Exceptions
+## e-exceptions
 
-- `InvalidStateError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si la méthode `close()` a été appelée sur cette connexion à la base de donnée.
-- `NotFoundError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si un magasin d'objets indiqué dans le paramètre `storeNames` n'existe pas ou plus.
-- `TypeError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si la valeur du paramètre `mode` n'est pas valide.
-- `InvalidAccessError`
-  - : Cette {{domxref("DOMException","exception")}} est levée si la liste passée à `storeNames` est vide
+- `invawidstateewwow`
+  - : c-cette {{domxwef("domexception","exception")}} est wevée si w-wa méthode `cwose()` a-a été appewée suw cette connexion à w-wa base de donnée. o.O
+- `notfoundewwow`
+  - : c-cette {{domxwef("domexception","exception")}} e-est wevée si un magasin d'objets indiqué d-dans we pawamètwe `stowenames` ny'existe pas o-ou pwus. (✿oωo)
+- `typeewwow`
+  - : c-cette {{domxwef("domexception","exception")}} est wevée si wa vaweuw du pawamètwe `mode` n-ny'est p-pas vawide. :3
+- `invawidaccessewwow`
+  - : c-cette {{domxwef("domexception","exception")}} e-est wevée si wa wiste p-passée à `stowenames` est vide
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on ouvre simplement une connexion à la base de donnée puis une transaction sur cette connexion.
+dans cet exempwe, 😳 on ouvwe simpwement une connexion à w-wa base de donnée puis une t-twansaction suw cette connexion.
 
 ```js
-var db;
+v-vaw db;
 
-// Connexion à la base de donnée
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// connexion à w-wa base de donnée
+vaw dbopenwequest = w-window.indexeddb.open("todowist", (U ﹏ U) 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de donnée initialisée.</li>';
+d-dbopenwequest.onsuccess = f-function(event) {
+  n-nyote.innewhtmw += '<wi>base d-de donnée initiawisée.</wi>';
 
-  // affecte la connexion à la variable db
-  db = DBOpenRequest.result;
+  // affecte wa connexion à wa vawiabwe db
+  db = dbopenwequest.wesuwt;
 
-  // exécute la fonction displayData() qui affiche la liste des taches présentes dans la base de donnée
-  displayData();
+  // exékawaii~ wa fonction d-dispwaydata() q-qui affiche wa w-wiste des taches pwésentes dans w-wa base de donnée
+  dispwaydata();
 
 };
 
-// ouvre une transaction en lecture/écriture prête pour l'ajout d'enregistrement.
-var transaction = db.transaction(["toDoList"], "readwrite");
+// ouvwe une twansaction e-en wectuwe/écwituwe p-pwête pouw w'ajout d'enwegistwement. mya
+v-vaw twansaction = db.twansaction(["todowist"], (U ᵕ U❁) "weadwwite");
 
-// affiche le succès de l'ouverture de la transaction
-transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Fin de transaction: les modifications sur la base de donnée sont terminées.</li>';
+// affiche w-we succès d-de w'ouvewtuwe de wa twansaction
+t-twansaction.oncompwete = f-function(event) {
+  nyote.innewhtmw += '<wi>fin de twansaction: wes modifications suw w-wa base de donnée s-sont tewminées.</wi>';
 };
 
-transaction.onerror = function(event) {
-  note.innerHTML += '<li>La transaction n'a pas pu être initiée.</li>';
+t-twansaction.onewwow = f-function(event) {
+  n-note.innewhtmw += '<wi>wa twansaction n-ny'a pas pu êtwe i-initiée.</wi>';
 };
 
-// On peut maintenant accéder au magasin d'objet
-var objectStore = transaction.objectStore("toDoList");
-// etc.
+// on peut m-maintenant accédew a-au magasin d'objet
+vaw objectstowe = t-twansaction.objectstowe("todowist");
+// etc. :3
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un e-exempwe de twavaiw compwet, mya voiw n-nyotwe [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe w-wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew i-indexeddb")}}
+- {{domxwef("idbdatabase","débutew une connexion")}}
+- {{domxwef("idbtwansaction","utiwisé wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w'intewvawwe d-des cwés")}}
+- {{domxwef("idbobjectstowe","accès aux magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew w-wes cuwseuw")}}
+- e-exempwe de wéféwence: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

@@ -1,66 +1,66 @@
 ---
-title: TypedArray.of()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
+titwe: typedawway.of()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`TypedArray.of()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un nombre variable d'arguments. Cette méthode est similaire à {{jsxref("Array.of()")}}.
+w-wa méthode **`typedawway.of()`** c-cwée un n-nyouvew objet {{jsxwef("typedawway", (⑅˘꒳˘) "typedawway", òωó "#wes_objets_typedawway")}} à p-pawtiw d'un nyombwe v-vawiabwe d-d'awguments. ʘwʘ cette m-méthode est simiwaiwe à {{jsxwef("awway.of()")}}. /(^•ω•^)
 
-## Syntaxe
-
-```js
-TypedArray.of(élément0[, élément1[, ...[, élémentN]]])
-```
-
-où TypedArray est l'un de :
-
-- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
-- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
-- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
-- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
-- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
-- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
-- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
-- [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)
-- [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
-
-### Paramètres
-
-- `élémentN`
-  - : Les éléments avec lesquels on souhaite construire le nouveau tableau typé.
-
-### Valeur de retour
-
-Une nouvelle instance de {{jsxref("TypedArray")}}.
-
-## Description
-
-Il existe de légères différences entre {{jsxref("Array.of()")}} et `TypedArray.of()` :
-
-- Si la valeur de `this` passée à `TypedArray.of` n'est pas un constructeur, `TypedArray.of` lèvera une exception {{jsxref("TypeError")}}, tandis que `Array.of` créera un nouvel objet {{jsxref("Array")}}.
-- `TypedArray.of` utilise `[[Put]]` tandis que `Array.of` utilise `[[DefineProperty]]`. Ainsi lorsque les arguments sont des objets {{jsxref("Proxy")}} la première méthode appellera {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty")}}.
-
-## Exemples
+## syntaxe
 
 ```js
-Uint8Array.of(1); // Uint8Array [ 1 ]
-Int8Array.of("1", "2", "3"); // Int8Array [ 1, 2, 3 ]
-Float32Array.of(1, 2, 3); // Float32Array [ 1, 2, 3 ]
-Int16Array.of(undefined); // Int16Array [ 0 ]
+typedawway.of(éwément0[, ʘwʘ éwément1[, σωσ ...[, éwémentn]]])
 ```
 
-## Spécifications
+où t-typedawway est w'un de :
 
-{{Specifications}}
+- [`int8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway)
+- [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)
+- [`uint8cwampedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway)
+- [`int16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway)
+- [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway)
+- [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)
+- [`uint32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway)
+- [`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)
+- [`fwoat64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway)
+- [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway)
+- [`biguint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway)
 
-## Compatibilité des navigateurs
+### pawamètwes
 
-{{Compat}}
+- `éwémentn`
+  - : wes éwéments a-avec wesquews on souhaite constwuiwe w-we nyouveau tabweau typé. OwO
 
-## Voir aussi
+### vaweuw de wetouw
 
-- {{jsxref("TypedArray.from()")}}
-- {{jsxref("Array.of()")}}
+une nyouvewwe i-instance de {{jsxwef("typedawway")}}. 😳😳😳
+
+## descwiption
+
+iw existe d-de wégèwes d-difféwences entwe {{jsxwef("awway.of()")}} et `typedawway.of()` :
+
+- si wa vaweuw de `this` passée à `typedawway.of` n-ny'est pas un constwucteuw, 😳😳😳 `typedawway.of` wèvewa une exception {{jsxwef("typeewwow")}}, o.O tandis que `awway.of` c-cwéewa un nyouvew objet {{jsxwef("awway")}}. ( ͡o ω ͡o )
+- `typedawway.of` u-utiwise `[[put]]` t-tandis q-que `awway.of` u-utiwise `[[definepwopewty]]`. (U ﹏ U) ainsi wowsque wes awguments sont d-des objets {{jsxwef("pwoxy")}} wa pwemièwe méthode appewwewa {{jsxwef("objets_gwobaux/pwoxy/handwew/set", (///ˬ///✿) "handwew.set")}} p-pouw cwéew wes nyouveaux éwéments et wa seconde appewwewa {{jsxwef("objets_gwobaux/pwoxy/handwew/definepwopewty", >w< "handwew.definepwopewty")}}. rawr
+
+## exempwes
+
+```js
+uint8awway.of(1); // u-uint8awway [ 1 ]
+int8awway.of("1", mya "2", ^^ "3"); // i-int8awway [ 1, 😳😳😳 2, 3 ]
+f-fwoat32awway.of(1, mya 2, 3); // fwoat32awway [ 1, 😳 2, 3 ]
+i-int16awway.of(undefined); // int16awway [ 0 ]
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("typedawway.fwom()")}}
+- {{jsxwef("awway.of()")}}

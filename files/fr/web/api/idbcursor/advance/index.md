@@ -1,80 +1,80 @@
 ---
-title: IDBCursor.advance()
-slug: Web/API/IDBCursor/advance
+titwe: idbcuwsow.advance()
+swug: w-web/api/idbcuwsow/advance
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`advance()`** de l'interface {{domxref("IDBCursor")}} définit le nombre d'itérations du curseur avec lequel celui-ci doit se déplacer vers l'avant.
+w-wa méthode **`advance()`** d-de w'intewface {{domxwef("idbcuwsow")}} d-définit we nyombwe d-d'itéwations d-du cuwseuw avec w-wequew cewui-ci d-doit se dépwacew vews w'avant. 😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-cursor.advance(count);
+cuwsow.advance(count);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `count`
-  - : Le nombre d'itérations du curseur.
+  - : w-we nyombwe d'itéwations du cuwseuw. σωσ
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Aucune.
+aucune. rawr x3
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut déclencher des exceptions {{domxref("DOMException")}} :
+cette méthode peut décwenchew des exceptions {{domxwef("domexception")}} :
 
-| Exception                  | Description                                                      |
+| exception                  | d-descwiption                                                      |
 | -------------------------- | ---------------------------------------------------------------- |
-| `TransactionInactiveError` | Cette transaction IDBCursor est inactive.                        |
-| `TypeError`                | La valeur passée au paramètre `count` vaut zéro ou est négative. |
-| `InvalidStateError`        | Le curseur est en itération ou a itéré au-delà de la plage.      |
+| `twansactioninactiveewwow` | cette twansaction i-idbcuwsow est i-inactive. OwO                        |
+| `typeewwow`                | wa vaweuw passée au pawamètwe `count` vaut zéwo ou est nyégative. /(^•ω•^) |
+| `invawidstateewwow`        | w-we cuwseuw est en itéwation ou a itéwé au-dewà de wa pwage. 😳😳😳      |
 
-## Exemple
+## e-exempwe
 
-Dans ce petit morceau de code on fait une transaction, récupère un magasin d'objet, puis utilise un curseur pour itérer sur les enregistrements du magasin. Ici, on utilise `cursor.advance(2)` pour avancer de 2 cases à chaque fois, ce qui signifie que seule la moitié des résultats sera affichée. `advance()` fonctionne de façon similaire à {{domxref ("IDBCursor.continue")}} mais permet de sauter plusieurs enregistrements à la fois et pas uniquement d'accéder à l'enregistrement suivant.
+dans ce petit mowceau d-de code on fait u-une twansaction, ( ͡o ω ͡o ) w-wécupèwe un m-magasin d'objet, >_< puis utiwise un cuwseuw pouw i-itéwew suw wes enwegistwements du magasin. >w< ici, o-on utiwise `cuwsow.advance(2)` pouw avancew de 2 cases à chaque fois, rawr ce qui signifie que seuwe wa moitié des w-wésuwtats sewa affichée. 😳 `advance()` f-fonctionne d-de façon simiwaiwe à {{domxwef ("idbcuwsow.continue")}} m-mais pewmet de sautew pwusieuws enwegistwements à wa fois et pas uniquement d-d'accédew à w-w'enwegistwement suivant. >w<
 
-On notera également que, dans chaque itération de la boucle, on peut récupérer les données de l'enregistrement en cours grâce à l'objet curseur via `curseur.value.foo`. Pour un exemple fonctionnel complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([l'exemple en _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
+o-on nyotewa égawement q-que, (⑅˘꒳˘) dans chaque itéwation d-de wa boucwe, OwO on peut wécupéwew w-wes données de w'enwegistwement en couws g-gwâce à w'objet cuwseuw via `cuwseuw.vawue.foo`. (ꈍᴗꈍ) p-pouw un exempwe fonctionnew c-compwet, 😳 voiw [notwe e-exempwe idbcuwsow](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) ([w'exempwe en _wive_](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/)). 😳😳😳
 
 ```js
-function advanceResult() {
-  list.innerHTML = "";
-  var transaction = db.transaction(["granListAlbum"], "readonly");
-  var objectStore = transaction.objectStore("granListAlbum");
+function advancewesuwt() {
+  wist.innewhtmw = "";
+  vaw twansaction = db.twansaction(["gwanwistawbum"], mya "weadonwy");
+  vaw o-objectstowe = twansaction.objectstowe("gwanwistawbum");
 
-  objectStore.openCursor().onsuccess = function (event) {
-    var curseur = event.target.result;
-    if (curseur) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "" + curseur.value.titreAlbum + ", " + curseur.value.annee;
-      list.appendChild(listItem);
-      curseur.advance(2);
-    } else {
-      console.log("moitié des resultats affichée");
+  o-objectstowe.opencuwsow().onsuccess = function (event) {
+    v-vaw cuwseuw = e-event.tawget.wesuwt;
+    if (cuwseuw) {
+      v-vaw wistitem = document.cweateewement("wi");
+      wistitem.innewhtmw =
+        "" + cuwseuw.vawue.titweawbum + ", mya " + c-cuwseuw.vawue.annee;
+      wist.appendchiwd(wistitem);
+      cuwseuw.advance(2);
+    } ewse {
+      consowe.wog("moitié des wesuwtats a-affichée");
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew des t-twansactions : {{domxwef("idbdatabase")}}
+- m-manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew d-des données e-et wes modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe de w-wéféwence pouw indexeddb : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

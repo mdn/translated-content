@@ -1,33 +1,33 @@
 ---
-title: ServiceWorkerRegistration.scope
-slug: Web/API/ServiceWorkerRegistration/scope
+titwe: sewvicewowkewwegistwation.scope
+swug: w-web/api/sewvicewowkewwegistwation/scope
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice wowkews a-api")}}
 
-La propriété en lecture seule **`scope`** de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie un identifiant unique pour un enregistrement de service worker. Le service worker doit être sur la même origine que le document qui enregistre le {{domxref ("ServiceWorker")}}.
+w-wa pwopwiété en w-wectuwe seuwe **`scope`** d-de w'intewface {{domxwef ("sewvicewowkewwegistwation")}} w-wenvoie un i-identifiant unique p-pouw un enwegistwement de sewvice wowkew. nyaa~~ we sewvice wowkew doit êtwe suw wa m-même owigine que we document qui enwegistwe we {{domxwef ("sewvicewowkew")}}. /(^•ω•^)
 
-> [!NOTE]
-> Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!note]
+> c-cette fonctionnawité e-est disponibwe dans [web wowkews](/fw/docs/web/api/web_wowkews_api). rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-serviceWorkerRegistration.scope;
+sewvicewowkewwegistwation.scope;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Exemple basique de code pour les Services workers](https://github.com/mdn/sw-test)
-- [ServiceWorker est-il prêt?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise","Promesse")}}
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [utiwisation des sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [exempwe basique de code p-pouw wes sewvices wowkews](https://github.com/mdn/sw-test)
+- [sewvicewowkew est-iw pwêt?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise","pwomesse")}}
+- [utiwisation des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

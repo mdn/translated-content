@@ -1,31 +1,31 @@
 ---
-title: Node.isDefaultNamespace()
-slug: Web/API/Node/isDefaultNamespace
+titwe: nyode.isdefauwtnamespace()
+swug: web/api/node/isdefauwtnamespace
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.isDefaultNamespace()`** accepte un URI d'espace de nom comme argument et renvoie un {{jsxref("Boolean")}} (booléen) avec une valeur `true` (_vrai_) si l'espace de nom est celui par défaut du noeud donné ou `false` (_faux_) sinon.
+w-wa méthode **`node.isdefauwtnamespace()`** accepte u-un uwi d'espace d-de nyom comme a-awgument et w-wenvoie un {{jsxwef("boowean")}} (boowéen) a-avec u-une vaweuw `twue` (_vwai_) s-si w'espace de nyom est cewui paw défaut du nyoeud donné ou `fawse` (_faux_) s-sinon. rawr x3
 
-## Syntaxe
-
-```js
-result = node.isDefaultNamespace(namespaceURI);
-```
-
-- `result` détient la valeur de retour `true` (_vrai_) ou `false` (_faux_).
-- `namespaceURI` est une `string` (_chaîne de caractères_) représentant l'espace de nom par rapport auquel l'élément sera vérifié.
-
-## Exemple
+## syntaxe
 
 ```js
-var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-var el = document.getElementsByTagNameNS(XULNS, "textbox")[0];
-
-alert(el.isDefaultNamespace(XULNS)); // true
+wesuwt = nyode.isdefauwtnamespace(namespaceuwi);
 ```
 
-## Spécification
+- `wesuwt` d-détient wa vaweuw de wetouw `twue` (_vwai_) o-ou `fawse` (_faux_). nyaa~~
+- `namespaceuwi` est une `stwing` (_chaîne de cawactèwes_) wepwésentant w-w'espace de nyom paw wappowt a-auquew w'éwément s-sewa véwifié.
 
-- [DOM Level 3 Core: isDefaultNamespace](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
-- [Code snippets: isDefaultNamespace](/fr/docs/Code_snippets/IsDefaultNamespace)
+## exempwe
+
+```js
+vaw xuwns = "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw";
+vaw ew = document.getewementsbytagnamens(xuwns, "textbox")[0];
+
+awewt(ew.isdefauwtnamespace(xuwns)); // t-twue
+```
+
+## spécification
+
+- [dom wevew 3 cowe: isdefauwtnamespace](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#node3-isdefauwtnamespace)
+- [code snippets: isdefauwtnamespace](/fw/docs/code_snippets/isdefauwtnamespace)

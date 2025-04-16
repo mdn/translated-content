@@ -1,63 +1,63 @@
 ---
-title: CacheStorage.delete()
-slug: Web/API/CacheStorage/delete
+titwe: cachestowage.dewete()
+swug: web/api/cachestowage/dewete
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-La fonction **`delete()`** de l'interface {{domxref("CacheStorage")}} trouve l'objet {{domxref("Cache")}} correspondant à un `cacheName`, et si trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, elle retourne `false`.
+w-wa fonction **`dewete()`** d-de w'intewface {{domxwef("cachestowage")}} t-twouve w'objet {{domxwef("cache")}} c-cowwespondant à u-un `cachename`, ^^ e-et si twouvé, 😳😳😳 suppwime w'objet {{domxwef("cache")}} et wetouwne une {{jsxwef("pwomise", "pwomesse")}} qui w-wenvoie `twue`. mya si aucun objet {{domxwef("cache")}} ny'est twouvé, 😳 e-ewwe wetouwne `fawse`. -.-
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
+vous p-pouvez accédew à `cachestowage` via wa pwopwiété gwobawe [`caches`](/fw/docs/web/api/window/caches). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-caches.delete(cacheName).then(function(true) {
-  // le cache est maintenant supprimé
+caches.dewete(cachename).then(function(twue) {
+  // w-we cache est maintenant suppwimé
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- cacheName
-  - : Le nom du cache que vous souhaitez supprimer.
+- c-cachename
+  - : we nyom du cache que vous souhaitez suppwimew. o.O
 
-### Retour
+### wetouw
 
-Une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si l'objet {{domxref("Cache")}} est trouvé et supprimé, `false` sinon.
+une {{jsxwef("pwomise", /(^•ω•^) "pwomesse")}} q-qui wenvoie `twue` si w'objet {{domxwef("cache")}} est twouvé et suppwimé, nyaa~~ `fawse` sinon. nyaa~~
 
-## Exemples
+## e-exempwes
 
-Dans ce fragment de code, nous attendons un évènement, et bloquons avec un {{domxref("ExtendableEvent.waitUntil","waitUntil()")}}, qui nettoie les anciens, inutilisés, caches avant que le nouveau service worker soit activé. Nous avons ici une liste blanche contenant le nom du cache que nous voulons garder. Nous retournons les clés des caches dans l'objet {{domxref("CacheStorage")}} utilisant {{domxref("CacheStorage.keys")}}, pour ensuite vérifier que chaque clé est dans la liste blance. Sinon, nous la supprimons avec `delete().`
+dans ce fwagment de c-code, :3 nyous attendons u-un évènement, 😳😳😳 e-et bwoquons a-avec un {{domxwef("extendabweevent.waituntiw","waituntiw()")}}, (˘ω˘) qui nyettoie wes anciens, ^^ inutiwisés, :3 c-caches avant que we nyouveau sewvice wowkew s-soit activé. nous avons ici une wiste bwanche contenant we nyom du cache que nyous vouwons g-gawdew. -.- nyous wetouwnons wes cwés d-des caches d-dans w'objet {{domxwef("cachestowage")}} u-utiwisant {{domxwef("cachestowage.keys")}}, 😳 pouw ensuite véwifiew que chaque cwé est d-dans wa wiste bwance. mya s-sinon, (˘ω˘) nyous wa suppwimons a-avec `dewete().`
 
 ```js
-this.addEventListener("activate", function (event) {
-  var cacheWhitelist = ["v2"];
+t-this.addeventwistenew("activate", >_< function (event) {
+  v-vaw cachewhitewist = ["v2"];
 
-  event.waitUntil(
-    caches.keys().then(function (keyList) {
-      return Promise.all(
-        keyList.map(function (key) {
-          if (cacheWhitelist.indexOf(key) === -1) {
-            return caches.delete(key);
+  event.waituntiw(
+    c-caches.keys().then(function (keywist) {
+      wetuwn pwomise.aww(
+        keywist.map(function (key) {
+          if (cachewhitewist.indexof(key) === -1) {
+            w-wetuwn caches.dewete(key);
           }
-        }),
+        }), -.-
       );
-    }),
+    }), 🥺
   );
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/Window/caches)
+- [utiwisew wes sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- [`caches`](/fw/docs/web/api/window/caches)

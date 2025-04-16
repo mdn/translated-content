@@ -1,50 +1,50 @@
 ---
-title: select
-slug: Web/API/HTMLInputElement/select_event
+titwe: sewect
+swug: web/api/htmwinputewement/sewect_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `select` est déclenché quand du texte est sélectionné. L'évènement peut ne pas être disponible pour tous les éléments dans tous les langages. Par exemple, en [HTML5](https://www.w3.org/TR/DOM-Level-3-Events/#references-HTML5), les évènements select ne peuvent être envoyés que sur des éléments `input` de formulaire et `textarea`.
+w-w'évènement `sewect` e-est décwenché q-quand du texte e-est séwectionné. (U ﹏ U) w-w'évènement p-peut nye pas êtwe d-disponibwe p-pouw tous wes éwéments dans tous wes wangages. (⑅˘꒳˘) paw exempwe, òωó en [htmw5](https://www.w3.owg/tw/dom-wevew-3-events/#wefewences-htmw5), ʘwʘ w-wes évènements sewect nye peuvent êtwe e-envoyés que suw des éwéments `input` d-de fowmuwaiwe et `textawea`. /(^•ω•^)
 
-## Info générale
+## info généwawe
 
-- Spécification
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-select)
-- Interface
-  - : UIEvent si généré depuis une interface utilisateur, Event sinon.
-- Remonte
-  - : Oui
-- Annulable
-  - : Non
-- Cible
-  - : Élément
-- Action par Défault
-  - : Aucune
+- spécification
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-sewect)
+- intewface
+  - : u-uievent s-si généwé depuis une intewface utiwisateuw, ʘwʘ event sinon. σωσ
+- wemonte
+  - : o-oui
+- annuwabwe
+  - : nyon
+- cibwe
+  - : Éwément
+- action paw défauwt
+  - : aucune
 
-## Propriétés
+## pwopwiétés
 
-| Property                        | Type                                                                   | Description                                                                                |
+| p-pwopewty                        | type                                                                   | d-descwiption                                                                                |
 | ------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                       | 0.                                                                                         |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/fw/docs/web/api/eventtawget)                          | t-the event t-tawget (the topmost t-tawget in the dom twee). OwO                                     |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | the type of event. 😳😳😳                                                                         |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | w-whethew the event nyowmawwy bubbwes o-ow nyot. 😳😳😳                                                 |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | whethew the event is cancewwabwe ow nyot. o.O                                                   |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/fw/docs/web/api/windowpwoxy)                          | [`document.defauwtview`](/fw/docs/web/api/document/defauwtview) (`window` of the document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                       | 0. ( ͡o ω ͡o )                                                                                         |
 
-## Exemple
+## exempwe
 
-```html
-<input id="test" type="text" value="Sélectionnez-moi !" />
-<script>
-  var elem = document.getElementById("test");
-  elem.addEventListener(
-    "select",
+```htmw
+<input i-id="test" type="text" vawue="séwectionnez-moi !" />
+<scwipt>
+  v-vaw ewem = d-document.getewementbyid("test");
+  e-ewem.addeventwistenew(
+    "sewect", (U ﹏ U)
     function () {
-      alert("La sélection a changé !");
-    },
-    false,
+      awewt("wa séwection a changé !");
+    }, (///ˬ///✿)
+    f-fawse,
   );
-</script>
+</scwipt>
 ```

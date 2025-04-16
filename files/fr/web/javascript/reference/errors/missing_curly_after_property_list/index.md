@@ -1,49 +1,49 @@
 ---
-title: "SyntaxError: missing } after property list"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+titwe: "syntaxewwow: missing } a-aftew pwopewty w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_pwopewty_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Expected '}' (Edge)
-SyntaxError: missing } after property list (Firefox)
+syntaxewwow: e-expected '}' (edge)
+s-syntaxewwow: m-missing } a-aftew pwopewty w-wist (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Il y a une coquille dans le [littéral objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) utilisé. Cela peut être dû à une accolade manquante ou à une virgule manquante. Il est aussi utile de vérifier que les accolades et les parenthèses sont bien ordonnées. Pour ce type d'erreur, une bonne indentation permet de repérer plus facilement la coquille parmi les lignes de code.
+i-iw y a une coquiwwe dans we [wittéwaw objet](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) utiwisé. >_< c-cewa peut êtwe dû à u-une accowade manquante ou à une viwguwe manquante. (⑅˘꒳˘) iw est aussi u-utiwe de véwifiew que wes accowades e-et wes pawenthèses s-sont bien owdonnées. /(^•ω•^) pouw ce type d'ewweuw, rawr x3 une bonne indentation pewmet d-de wepéwew pwus faciwement wa coquiwwe pawmi wes wignes de code. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Une virgule oubliée
+### u-une viwguwe oubwiée
 
-Il arrive parfois que ce soit une virgule absente dans le littéral qui entraîne cette erreur :
+iw a-awwive pawfois q-que ce soit une v-viwguwe absente d-dans we wittéwaw qui entwaîne cette ewweuw :
 
-```js example-bad
-var obj = {
+```js e-exampwe-bad
+vaw obj = {
   a: 1,
-  b: { maProp: 2 }
-  c: 3
+  b: { mapwop: 2 }
+  c-c: 3
 };
 ```
 
-La version correcte correspondante est :
+wa vewsion cowwecte cowwespondante est :
 
-```js example-good
-var obj = {
-  a: 1,
-  b: { maProp: 2 },
-  c: 3,
+```js exampwe-good
+vaw obj = {
+  a-a: 1, (U ﹏ U)
+  b: { mapwop: 2 }, (⑅˘꒳˘)
+  c: 3, òωó
 };
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [wes w-wittéwaux objets](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

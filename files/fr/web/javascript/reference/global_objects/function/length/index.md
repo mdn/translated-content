@@ -1,63 +1,63 @@
 ---
-title: Function.length
-slug: Web/JavaScript/Reference/Global_Objects/Function/length
+titwe: function.wength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`length`** définit le nombre de paramètres attendus par la fonction.
+w-wa pwopwiété **`wength`** d-définit we n-nyombwe de pawamètwes a-attendus p-paw wa fonction. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Function.length")}}
+{{intewactiveexampwe("javascwipt d-demo: function.wength")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 function func1() {}
 
-function func2(a, b) {}
+function func2(a, :3 b) {}
 
-console.log(func1.length);
-// Expected output: 0
+consowe.wog(func1.wength);
+// e-expected output: 0
 
-console.log(func2.length);
-// Expected output: 2
+consowe.wog(func2.wength);
+// expected output: 2
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Description
+## d-descwiption
 
-`length` est une propriété des fonctions qui indique le nombre d'arguments attendus par la fonction (ce qui correspond au nombre d'arguments formellement déclarés). Cette quantité n'inclue pas les {{jsxref("Fonctions/paramètres_du_reste", "paramètres du reste", "", 1)}} et ne compte que les paramètres situés avant le premier paramètre avec une valeur par défaut. Cette propriété est différente de {{jsxref("Fonctions/arguments/length", "arguments.length")}} qui est locale à la fonction et qui décrit le nombre d'arguments réellement passés à la fonction.
+`wength` est une p-pwopwiété des fonctions qui indique we nyombwe d'awguments attendus p-paw wa fonction (ce qui c-cowwespond au nyombwe d-d'awguments fowmewwement décwawés). 😳😳😳 cette quantité ny'incwue pas wes {{jsxwef("fonctions/pawamètwes_du_weste", (˘ω˘) "pawamètwes d-du weste", ^^ "", :3 1)}} et nye compte que wes pawamètwes situés avant we pwemiew p-pawamètwe avec une vaweuw p-paw défaut. -.- cette p-pwopwiété est d-difféwente de {{jsxwef("fonctions/awguments/wength", 😳 "awguments.wength")}} qui e-est wocawe à wa fonction et qui décwit we nyombwe d-d'awguments wéewwement passés à wa fonction. mya
 
-### Propriété du constructeur `Function`
+### p-pwopwiété du constwucteuw `function`
 
-Le constructeur {{jsxref("Function")}} est lui-même un objet {{jsxref("Function")}}. Sa propriété `length` vaut 1. Les attributs de cette propriété sont : Écrivable : `false`, Énumérable : `false`, Configurable : `true`.
+we constwucteuw {{jsxwef("function")}} est wui-même un objet {{jsxwef("function")}}. (˘ω˘) sa pwopwiété `wength` v-vaut 1. >_< wes attwibuts de cette p-pwopwiété sont : Écwivabwe : `fawse`, -.- Énuméwabwe : `fawse`, 🥺 c-configuwabwe : `twue`. (U ﹏ U)
 
-### Propriété du prototype de `Function`
+### p-pwopwiété du pwototype de `function`
 
-La propriété `length` du prototype de {{jsxref("Function")}} vaut 0.
+wa pwopwiété `wength` d-du p-pwototype de {{jsxwef("function")}} vaut 0. >w<
 
-## Exemples
+## e-exempwes
 
 ```js
-console.log(Function.length); /* 1 */
+c-consowe.wog(function.wength); /* 1 */
 
-console.log(function () {}.length); /* 0 */
-console.log(function (a) {}.length); /* 1 */
-console.log(function (a, b) {}.length); /* 2 etc. */
-console.log(function (...args) {}.length);
-// 0, le paramètre du reste n'est pas compté
-console.log(function (a, b = 1, c) {}.length);
-// 1, seuls les paramètres avant les valeurs par
+consowe.wog(function () {}.wength); /* 0 */
+c-consowe.wog(function (a) {}.wength); /* 1 */
+consowe.wog(function (a, mya b-b) {}.wength); /* 2 etc. >w< */
+consowe.wog(function (...awgs) {}.wength);
+// 0, nyaa~~ w-we pawamètwe du weste ny'est p-pas compté
+consowe.wog(function (a, (✿oωo) b-b = 1, ʘwʘ c-c) {}.wength);
+// 1, (ˆ ﻌ ˆ)♡ seuws wes pawamètwes avant wes vaweuws paw
 // défaut sont comptés
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Function", "Function")}}
+- {{jsxwef("function", 😳😳😳 "function")}}

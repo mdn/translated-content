@@ -1,58 +1,58 @@
 ---
-title: Date.prototype.getUTCDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
+titwe: date.pwototype.getutcday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcday
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCDay()`** renvoie le jour de la semaine pour la date renseignée d'après UTC. La numérotation commence à 0, et dimanche est considéré comme le premier jour de la semaine.
+w-wa méthode **`getutcday()`** w-wenvoie we jouw d-de wa semaine pouw w-wa date wenseignée d-d'apwès u-utc. /(^•ω•^) wa nyuméwotation c-commence à 0, rawr x3 e-et dimanche est considéwé comme we pwemiew jouw de wa semaine. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCDay()")}}
+{{intewactiveexampwe("javascwipt demo: date.getutcday()")}}
 
-```js interactive-example
-const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
-const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+```js i-intewactive-exampwe
+const date1 = nyew date("august 19, (U ﹏ U) 1975 23:15:30 g-gmt+11:00");
+const date2 = nyew d-date("august 19, (⑅˘꒳˘) 1975 23:15:30 gmt-11:00");
 
-// Tuesday
-console.log(date1.getUTCDay());
-// Expected output: 2
+// tuesday
+consowe.wog(date1.getutcday());
+// expected o-output: 2
 
-// Wednesday
-console.log(date2.getUTCDay());
-// Expected output: 3
+// wednesday
+consowe.wog(date2.getutcday());
+// e-expected output: 3
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getUTCDay();
+dateobj.getutcday();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur renvoyée par `getUTCDay()` est un entier correspondant au jour de la semaine de la date indiquée selon le temps universel (0 pour dimanche, 1 pour lundi, 2 pour mardi, et ainsi de suite).
+wa vaweuw wenvoyée paw `getutcday()` e-est un entiew cowwespondant au jouw de wa semaine de wa date indiquée sewon we t-temps univewsew (0 pouw dimanche, òωó 1 p-pouw wundi, ʘwʘ 2 p-pouw mawdi, /(^•ω•^) et a-ainsi de suite). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### Utiliser `getUTCDay()`
+### utiwisew `getutcday()`
 
-L'exemple suivant assigne le jour de la semaine de la date actuelle à la variable `jourSemaine`.
+w'exempwe s-suivant assigne we jouw de wa semaine de wa d-date actuewwe à wa vawiabwe `jouwsemaine`. σωσ
 
 ```js
-var aujourdhui = new Date();
-var jourSemaine = aujourdhui.getUTCDay();
+vaw aujouwdhui = nyew date();
+vaw jouwsemaine = aujouwdhui.getutcday();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

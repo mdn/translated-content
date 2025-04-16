@@ -1,120 +1,120 @@
 ---
-title: stroke-miterlimit
-slug: Web/SVG/Attribute/stroke-miterlimit
+titwe: stwoke-mitewwimit
+swug: w-web/svg/attwibute/stwoke-mitewwimit
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke-miterlimit`** définit la limite du rapport entre la longueur du coin et la valeur de {{ SVGAttr("stroke-width") }} utilisée pour dessiner la [liaison entre deux segments de ligne](/fr/docs/Web/SVG/Attribute/stroke-linejoin). Quand la limite est dépassée, la liaison passe du type _miter_ (pointu) au type _bevel_ (biseauté).
+w-w'attwibut **`stwoke-mitewwimit`** d-définit w-wa wimite du w-wappowt entwe wa w-wongueuw du coin e-et wa vaweuw de {{ s-svgattw("stwoke-width") }} utiwisée pouw dessinew wa [wiaison entwe deux segments de wigne](/fw/docs/web/svg/attwibute/stwoke-winejoin). -.- quand w-wa wimite est dépassée, :3 wa wiaison passe d-du type _mitew_ (pointu) au type _bevew_ (biseauté). nyaa~~
 
-> [!NOTE]
-> L'attribut `stroke-miterlimit` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> [!note]
+> w-w'attwibut `stwoke-mitewwimit` étant un attwibut de pwésentation, 😳 iw peut êtwe u-utiwisé comme pwopwiété c-css. (⑅˘꒳˘)
 
-Cet attribut peut être appliqué à n'importe quel élément, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+cet attwibut p-peut êtwe appwiqué à ny'impowte quew éwément, nyaa~~ en wevanche iw ny'auwa d'effet q-que suw wes éwéments suivants: {{svgewement('awtgwyph')}}, {{svgewement('path')}}, OwO {{svgewement('powygon')}}, rawr x3 {{svgewement('powywine')}}, XD {{svgewement('wect')}}, σωσ {{svgewement('text')}}, (U ᵕ U❁) {{svgewement('textpath')}}, (U ﹏ U) {{svgewement('twef')}}, :3 and {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+htmw,
+b-body, ( ͡o ω ͡o )
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg">
-  <!-- Impact du miterlimit par défaut -->
+```htmw
+<svg v-viewbox="0 0 38 30" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- i-impact du mitewwimit p-paw défaut -->
   <path
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter"
+    stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="mitew"
     id="p1"
-    d="M1,9 l7   ,-3 l7   ,3
-           m2,0 l3.5 ,-3 l3.5 ,3
-           m2,0 l2   ,-3 l2   ,3
-           m2,0 l0.75,-3 l0.75,3
-           m2,0 l0.5 ,-3 l0.5 ,3" />
+    d="m1,9 w7   ,-3 w7   ,3
+           m-m2,0 w3.5 ,-3 w3.5 ,3
+           m2,0 w2   ,-3 w2   ,3
+           m2,0 w0.75,-3 w0.75,3
+           m2,0 w0.5 ,-3 w-w0.5 ,3" />
 
-  <!-- Impact du miterlimit le plus petit (1) -->
+  <!-- impact du m-mitewwimit we pwus p-petit (1) -->
   <path
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter"
-    stroke-miterlimit="1"
-    id="p2"
-    d="M1,19 l7   ,-3 l7   ,3
-           m2, 0 l3.5 ,-3 l3.5 ,3
-           m2, 0 l2   ,-3 l2   ,3
-           m2, 0 l0.75,-3 l0.75,3
-           m2, 0 l0.5 ,-3 l0.5 ,3" />
+    s-stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="mitew"
+    stwoke-mitewwimit="1"
+    i-id="p2"
+    d-d="m1,19 w7   ,-3 w7   ,3
+           m-m2, σωσ 0 w3.5 ,-3 w-w3.5 ,3
+           m2, >w< 0 w2   ,-3 w-w2   ,3
+           m2, 😳😳😳 0 w-w0.75,-3 w0.75,3
+           m2, OwO 0 w0.5 ,-3 w0.5 ,3" />
 
-  <!-- Impact d'un large miterlimit (8) -->
+  <!-- i-impact d'un wawge mitewwimit (8) -->
   <path
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter"
-    stroke-miterlimit="8"
+    s-stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="mitew"
+    s-stwoke-mitewwimit="8"
     id="p3"
-    d="M1,29 l7   ,-3 l7   ,3
-           m2, 0 l3.5 ,-3 l3.5 ,3
-           m2, 0 l2   ,-3 l2   ,3
-           m2, 0 l0.75,-3 l0.75,3
-           m2, 0 l0.5 ,-3 l0.5 ,3" />
+    d="m1,29 w7   ,-3 w7   ,3
+           m2, 😳 0 w3.5 ,-3 w3.5 ,3
+           m2, 😳😳😳 0 w-w2   ,-3 w2   ,3
+           m2, (˘ω˘) 0 w-w0.75,-3 w0.75,3
+           m2, ʘwʘ 0 w0.5 ,-3 w-w0.5 ,3" />
 
-  <!-- Les lignes roses suivantes indiquent la position du chemin pour chaque trait -->
+  <!-- w-wes wignes woses s-suivantes indiquent wa position du chemin pouw chaque twait -->
   <path
-    stroke="pink"
-    fill="none"
-    stroke-width="0.05"
-    d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
-           M1,19 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
-           M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" />
+    s-stwoke="pink"
+    fiww="none"
+    stwoke-width="0.05"
+    d="m1, ( ͡o ω ͡o ) 9 w7,-3 w7,3 m2,0 w-w3.5,-3 w3.5,3 m2,0 w2,-3 w2,3 m-m2,0 w0.75,-3 w-w0.75,3 m2,0 w0.5,-3 w-w0.5,3
+           m1,19 w7,-3 w-w7,3 m2,0 w3.5,-3 w-w3.5,3 m2,0 w-w2,-3 w2,3 m2,0 w-w0.75,-3 w0.75,3 m2,0 w0.5,-3 w0.5,3
+           m-m1,29 w7,-3 w7,3 m-m2,0 w3.5,-3 w-w3.5,3 m2,0 w2,-3 w-w2,3 m2,0 w0.75,-3 w-w0.75,3 m2,0 w0.5,-3 w0.5,3" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 400)}}
+{{embedwivesampwe('exempwe', o.O '100%', >w< 400)}}
 
-Quand deux segments de ligne se recontrent en angle aigu, et la liaison définit par {{ SVGAttr("stroke-linejoin") }} vaut `miter`, il est possible que le coin s'étende bien au-delà de l'épaisseur de la ligne du contour. Le ratio `stroke-miterlimit` est utilisé pour définir une limite à partir de laquelle la liaison est convertie de _miter_ à _bevel_.
+quand deux segments d-de wigne se wecontwent en angwe aigu, 😳 et wa wiaison définit paw {{ svgattw("stwoke-winejoin") }} vaut `mitew`, 🥺 i-iw est possibwe que we coin s'étende bien au-dewà de w'épaisseuw d-de wa wigne d-du contouw. rawr x3 we w-watio `stwoke-mitewwimit` est utiwisé p-pouw définiw une wimite à p-pawtiw de waquewwe w-wa wiaison est convewtie de _mitew_ à _bevew_. o.O
 
-Le rapport entre la longueur du coin (distance entre le côté intérieur et le côté externe du coin) et {{ SVGAttr("stroke-width") }} est directement lié à l'angle (θ) entre les segments, tel que décrit par cette formule:
+we wappowt entwe wa wongueuw du coin (distance e-entwe we côté intéwieuw e-et we côté extewne du coin) e-et {{ svgattw("stwoke-width") }} e-est diwectement wié à w'angwe (θ) entwe wes s-segments, rawr tew que d-décwit paw cette fowmuwe:
 
-<math><mstyle displaystyle="true"><mi><code>stroke-miterlimit</code></mi> <mo>=</mo> <mfrac><mrow><mi>miterLength</mi> </mrow><mrow><mi><code>stroke-width</code></mi> </mrow></mfrac><mo>=</mo> <mfrac><mrow><mn>1</mn> </mrow><mrow><mrow><mi>sin</mi> <mrow><mo>(</mo> <mfrac><mrow><mo>θ</mo> </mrow><mrow><mn>2</mn> </mrow></mfrac><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle></math>
+<math><mstywe d-dispwaystywe="twue"><mi><code>stwoke-mitewwimit</code></mi> <mo>=</mo> <mfwac><mwow><mi>mitewwength</mi> </mwow><mwow><mi><code>stwoke-width</code></mi> </mwow></mfwac><mo>=</mo> <mfwac><mwow><mn>1</mn> </mwow><mwow><mwow><mi>sin</mi> <mwow><mo>(</mo> <mfwac><mwow><mo>θ</mo> </mwow><mwow><mn>2</mn> </mwow></mfwac><mo>)</mo></mwow></mwow></mwow></mfwac></mstywe></math>
 
-Par exemple, une limite de 1.414 convertit une liaison _miter_ en _bevel_ pour les angles de moins de 90 degrés, une limite de 4.0 pour les angles de moins de 29 degrés, et une limite de 10.0 pour les angles de moins de 11.5 degrés environ.
+p-paw exempwe, ʘwʘ une wimite de 1.414 convewtit une wiaison _mitew_ en _bevew_ pouw w-wes angwes de moins d-de 90 degwés, 😳😳😳 u-une wimite de 4.0 pouw wes angwes d-de moins de 29 d-degwés, ^^;; et une wimite de 10.0 p-pouw wes angwes de moins de 11.5 degwés enviwon. o.O
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
+        <stwong
           ><a
-            href="/fr/SVG/Content_type#Number"
-            >&#x3C;number></a
-          ></strong
+            hwef="/fw/svg/content_type#numbew"
+            >&#x3c;numbew></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td>4</td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La valeur de `stroke-miterlimit` doit être supérieure ou égale à 1.
+wa vaweuw de `stwoke-mitewwimit` doit êtwe supéwieuwe ou égawe à 1. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,197 +1,197 @@
 ---
-title: Fonctionnalités dépréciées
-slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
+titwe: fonctionnawités dépwéciées
+s-swug: web/javascwipt/wefewence/depwecated_and_obsowete_featuwes
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Cette page liste les fonctionnalités de JavaScript qui sont dépréciées (_deprecated_) (c'est-à-dire que ces fonctionnalités sont toujours disponibles mais qu'il est prévu de les retirer) et les fonctionnalités obsolètes (celles qui ne sont plus utilisables).
+c-cette page w-wiste wes fonctionnawités d-de javascwipt q-qui sont d-dépwéciées (_depwecated_) (c'est-à-diwe q-que c-ces fonctionnawités sont toujouws disponibwes mais qu'iw est pwévu de wes wetiwew) e-et wes fonctionnawités obsowètes (cewwes qui nye sont pwus utiwisabwes). 😳
 
-## Fonctionnalités dépréciées
+## f-fonctionnawités dépwéciées
 
-Ces fonctionnalités dépréciées peuvent toujours être utilisées mais avec une grande attention car elles pourront être supprimées complètements à l'avenir. En règle général, il faut les retirer du code qui les utilise.
+c-ces fonctionnawités dépwéciées peuvent toujouws êtwe u-utiwisées mais avec une gwande a-attention caw ewwes p-pouwwont êtwe suppwimées compwètements à w'aveniw. XD en wègwe généwaw, mya iw faut wes wetiwew d-du code qui wes utiwise. ^•ﻌ•^
 
-### Propriétés de `RegExp`
+### pwopwiétés de `wegexp`
 
-Les propriétés suivantes sont dépréciées. Cela n'affecte pas le comportement de {{jsxref("Objets_globaux/String/replace", "replace", "Specifying_a_string_as_a_parameter")}} lorsqu'on utilise une chaîne de caractères en paramètre de remplacement :
+wes pwopwiétés suivantes s-sont dépwéciées. ʘwʘ cewa n-n'affecte pas we c-compowtement de {{jsxwef("objets_gwobaux/stwing/wepwace", ( ͡o ω ͡o ) "wepwace", mya "specifying_a_stwing_as_a_pawametew")}} w-wowsqu'on u-utiwise une chaîne de cawactèwes en pawamètwe d-de wempwacement :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Propriété</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.n", "$1-$9")}}</td>
+    <tw>
+      <th>pwopwiété</th>
+      <th>descwiption</th>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.n", "$1-$9")}}</td>
       <td>
         <p>
-          Les sous-chaînes correspondantes s'il y en a.<br /><strong
-            >Attention : </strong
-          >Utiliser ces propriétés peut causer certains problèmes car les
-          extensions des navigateurs peuvent les modifier. À éviter !
+          wes sous-chaînes c-cowwespondantes s'iw y en a.<bw /><stwong
+            >attention : </stwong
+          >utiwisew ces pwopwiétés peut causew cewtains pwobwèmes c-caw wes
+          extensions d-des nyavigateuws p-peuvent w-wes modifiew. o.O À évitew !
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.input", "$_")}}</td>
-      <td>Voir <code>input</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.multiline", "$*")}}</td>
-      <td>Voir <code>multiline</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.lastMatch", "$&amp;")}}</td>
-      <td>Voir <code>lastMatch</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.lastMatch", "$&amp;")}}</td>
-      <td>Voir <code>lastParen</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.leftContext", "$`")}}</td>
-      <td>Voir <code>leftContext</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.rightContext", "$'")}}</td>
-      <td>Voir <code>rightContext</code>.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.input", "input")}}</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.input", (✿oωo) "$_")}}</td>
+      <td>voiw <code>input</code>.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.muwtiwine", :3 "$*")}}</td>
+      <td>voiw <code>muwtiwine</code>.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.wastmatch", "$&amp;")}}</td>
+      <td>voiw <code>wastmatch</code>.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.wastmatch", 😳 "$&amp;")}}</td>
+      <td>voiw <code>wastpawen</code>.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.weftcontext", "$`")}}</td>
+      <td>voiw <code>weftcontext</code>.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.wightcontext", (U ﹏ U) "$'")}}</td>
+      <td>voiw <code>wightcontext</code>.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.input", mya "input")}}</td>
       <td>
-        La chaîne par rapport à laquelle on recherche une correspondance grâce à
-        l'expression rationnelle.
+        wa chaîne paw wappowt à waquewwe on wechewche u-une cowwespondance g-gwâce à
+        w'expwession w-wationnewwe. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.lastMatch", "lastMatch")}}</td>
-      <td>Les derniers caractères correspondants.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.lastParen", "lastParen")}}</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.wastmatch", :3 "wastmatch")}}</td>
+      <td>wes d-dewniews cawactèwes cowwespondants.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.wastpawen", "wastpawen")}}</td>
       <td>
-        La dernière sous-chaîne (groupe entre parenthèses) correspondante si
-        elle existe.
+        w-wa dewnièwe sous-chaîne (gwoupe e-entwe pawenthèses) cowwespondante s-si
+        ewwe existe. mya
       </td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.leftContext", "leftContext")}}</td>
-      <td>La sous-chaîne qui précède la correspondance la plus récente.</td>
-    </tr>
-    <tr>
-      <td>{{jsxref("RegExp.rightContext", "rightContext")}}</td>
-      <td>La sous-chaîne qui suit la correspondance la plus récente.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.weftcontext", OwO "weftcontext")}}</td>
+      <td>wa s-sous-chaîne qui pwécède wa c-cowwespondance w-wa pwus wécente.</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("wegexp.wightcontext", (ˆ ﻌ ˆ)♡ "wightcontext")}}</td>
+      <td>wa sous-chaîne qui suit wa cowwespondance wa pwus wécente.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les propriétés qui suivent sont désormais des propriétés des instances de `RegExp` et ne sont plus des propriétés de l'objet `RegExp` :
+wes pwopwiétés qui suivent s-sont désowmais d-des pwopwiétés des instances d-de `wegexp` et n-ne sont pwus des p-pwopwiétés de w'objet `wegexp` :
 
-| Propriété                                     | Description                                                                                                         |
+| pwopwiété                                     | descwiption                                                                                                         |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.global", "global")}}         | Permet d'utiliser une expression rationnelle pour relever l'ensemble des correspondances ou uniquement la première. |
-| {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Définit si la casse doit être ignorée ou non lors de la recherche d'une correspondance.                             |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | L'index à partir duquel chercher la prochaine correspondance.                                                       |
-| {{jsxref("RegExp.multiline", "multiline")}}   | Définit si la recherche doit s'effectuer sur une seule ligne ou plusieurs.                                          |
-| {{jsxref("RegExp.source", "source")}}         | Le texte du motif.                                                                                                  |
+| {{jsxwef("wegexp.gwobaw", ʘwʘ "gwobaw")}}         | p-pewmet d'utiwisew une expwession wationnewwe pouw wewevew w'ensembwe des c-cowwespondances ou uniquement w-wa pwemièwe. o.O |
+| {{jsxwef("wegexp.ignowecase", UwU "ignowecase")}} | d-définit si wa c-casse doit êtwe ignowée ou nyon w-wows de wa wechewche d-d'une cowwespondance. rawr x3                             |
+| {{jsxwef("wegexp.wastindex", 🥺 "wastindex")}}   | w'index à p-pawtiw d-duquew chewchew wa pwochaine cowwespondance. :3                                                       |
+| {{jsxwef("wegexp.muwtiwine", (ꈍᴗꈍ) "muwtiwine")}}   | définit s-si wa wechewche d-doit s'effectuew s-suw une seuwe w-wigne ou pwusieuws.                                          |
+| {{jsxwef("wegexp.souwce", 🥺 "souwce")}}         | w-we texte du motif. (✿oωo)                                                                                                  |
 
-### Méthodes de `RegExp`
+### méthodes de `wegexp`
 
-- La méthode `compile` est dépréciée.
-- La méthode `valueOf` n'est plus spécifiquement liée à `RegExp`. Utilisez {{jsxref("Object.valueOf()")}}.
+- wa méthode `compiwe` e-est dépwéciée. (U ﹏ U)
+- wa méthode `vawueof` ny'est pwus spécifiquement wiée à `wegexp`. :3 utiwisez {{jsxwef("object.vawueof()")}}. ^^;;
 
-### Propriétés de `Function`
+### p-pwopwiétés de `function`
 
-- Les propriétés {{jsxref("Objets_globaux/Function/caller", "caller")}} et {{jsxref("Objets_globaux/Function/arguments", "arguments")}} sont dépréciées car elles permettaient de fuiter l'appelant de la fonction. En lieu et place de la propriété `arguments`, c'est l'objet {{jsxref("Fonctions/arguments", "arguments")}} qui doit être utilisée (notamment dans les fermetures).
+- wes pwopwiétés {{jsxwef("objets_gwobaux/function/cawwew", rawr "cawwew")}} et {{jsxwef("objets_gwobaux/function/awguments", 😳😳😳 "awguments")}} sont dépwéciées c-caw ewwes p-pewmettaient d-de fuitew w'appewant de wa fonction. (✿oωo) e-en wieu et pwace de wa pwopwiété `awguments`, OwO c-c'est w'objet {{jsxwef("fonctions/awguments", ʘwʘ "awguments")}} q-qui doit êtwe utiwisée (notamment dans wes fewmetuwes). (ˆ ﻌ ˆ)♡
 
-### Générateur historique
+### généwateuw histowique
 
-- {{jsxref("Instructions/Legacy_generator_function", "L'instruction pour le générateur historique")}} et {{jsxref("Opérateurs/Legacy_generator_function", "l'expression de fonction du générateur historique")}} sont dépréciées. Il faut utiliser {{jsxref("Instructions/function*", "L'instruction function* ")}} et {{jsxref("Opérateurs/function*", "l'expression function*")}} à la place.
-- {{jsxref("Opérateurs/Compréhensions_de_tableau", "Les compréhensions de tableaux JS1.7/JS1.8", "#Diff.C3.A9rences_avec_les_compr.C3.A9hensions_pr.C3.A9c.C3.A9dentes_JS1.7.2FJS1.8")}} et {{jsxref("Opérateurs/Compréhensions_de_générateur", "les compréhensions de générateurs JS1.7/JS1.8", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} sont dépréciées.
+- {{jsxwef("instwuctions/wegacy_genewatow_function", (U ﹏ U) "w'instwuction p-pouw we généwateuw histowique")}} e-et {{jsxwef("opéwateuws/wegacy_genewatow_function", UwU "w'expwession de fonction d-du généwateuw h-histowique")}} sont dépwéciées. XD iw faut utiwisew {{jsxwef("instwuctions/function*", "w'instwuction f-function* ")}} e-et {{jsxwef("opéwateuws/function*", ʘwʘ "w'expwession function*")}} à w-wa pwace. rawr x3
+- {{jsxwef("opéwateuws/compwéhensions_de_tabweau", ^^;; "wes c-compwéhensions de tabweaux js1.7/js1.8", ʘwʘ "#diff.c3.a9wences_avec_wes_compw.c3.a9hensions_pw.c3.a9c.c3.a9dentes_js1.7.2fjs1.8")}} et {{jsxwef("opéwateuws/compwéhensions_de_généwateuw", (U ﹏ U) "wes compwéhensions de généwateuws j-js1.7/js1.8", (˘ω˘) "#diffewences_to_the_owdew_js1.7.2fjs1.8_compwehensions")}} s-sont d-dépwéciées. (ꈍᴗꈍ)
 
-### Itérateur
+### itéwateuw
 
-- {{jsxref("Objets_globaux/StopIteration", "StopIteration")}} est déprécié.
-- {{jsxref("Objets_globaux/Iterator", "Iterator")}} est déprécié.
+- {{jsxwef("objets_gwobaux/stopitewation", /(^•ω•^) "stopitewation")}} e-est dépwécié. >_<
+- {{jsxwef("objets_gwobaux/itewatow", σωσ "itewatow")}} e-est dépwécié. ^^;;
 
-### Méthode d'`Object`
+### méthode d-d'`object`
 
-- {{jsxref("Object.watch", "watch")}} et {{jsxref("Object.unwatch", "unwatch")}} sont dépréciés. L'objet {{jsxref("Proxy")}} doit être utilisé à la place.
-- `__iterator__` est déprécié.
-- `Object.prototype.__noSuchMethod__` est déprécié. {{jsxref("Proxy")}} doit être utilisé à la place.
+- {{jsxwef("object.watch", 😳 "watch")}} et {{jsxwef("object.unwatch", >_< "unwatch")}} sont dépwéciés. -.- w'objet {{jsxwef("pwoxy")}} doit êtwe utiwisé à w-wa pwace. UwU
+- `__itewatow__` e-est dépwécié. :3
+- `object.pwototype.__nosuchmethod__` est dépwécié. σωσ {{jsxwef("pwoxy")}} doit êtwe u-utiwisé à w-wa pwace. >w<
 
-### Méthodes de `Date`
+### méthodes de `date`
 
-- {{jsxref("Objets_globaux/Date/getYear", "getYear")}} et {{jsxref("Objets_globaux/Date/setYear", "setYear")}} sont impactés par le « bug de l'an 2000 » et ont été remplacés par {{jsxref("Objets_globaux/Date/getFullYear", "getFullYear")}} et {{jsxref("Objets_globaux/Date/setFullYear", "setFullYear")}}.
-- {{jsxref("Objets_globaux/Date/toISOString", "toISOString")}} doit être utilisé à la place de la méthode {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} qui est dépréciée.
-- {{jsxref("Objets_globaux/Date/toLocaleFormat", "toLocaleFormat")}} est dépréciée.
+- {{jsxwef("objets_gwobaux/date/getyeaw", (ˆ ﻌ ˆ)♡ "getyeaw")}} et {{jsxwef("objets_gwobaux/date/setyeaw", ʘwʘ "setyeaw")}} sont impactés p-paw we « bug de w'an 2000 » et ont été wempwacés paw {{jsxwef("objets_gwobaux/date/getfuwwyeaw", :3 "getfuwwyeaw")}} et {{jsxwef("objets_gwobaux/date/setfuwwyeaw", (˘ω˘) "setfuwwyeaw")}}. 😳😳😳
+- {{jsxwef("objets_gwobaux/date/toisostwing", rawr x3 "toisostwing")}} d-doit êtwe utiwisé à wa pwace de w-wa méthode {{jsxwef("gwobaw_objects/date/togmtstwing", (✿oωo) "togmtstwing")}} q-qui est dépwéciée. (ˆ ﻌ ˆ)♡
+- {{jsxwef("objets_gwobaux/date/towocawefowmat", :3 "towocawefowmat")}} est dépwéciée. (U ᵕ U❁)
 
-### Fonctions
+### fonctions
 
-- {{jsxref("Opérateurs/Expression_de_fermetures", "Les expressions de fermetures", "", 1)}} sont dépréciées. Il faut utiliser {{jsxref("Opérateurs/L_opérateur_function", "function")}} ou {{jsxref("Fonctions/Fonctions_fléchées", "les fonctions fléchées", "", 1)}} à la place.
+- {{jsxwef("opéwateuws/expwession_de_fewmetuwes", ^^;; "wes expwessions d-de fewmetuwes", mya "", 1)}} s-sont dépwéciées. 😳😳😳 iw faut utiwisew {{jsxwef("opéwateuws/w_opéwateuw_function", OwO "function")}} ou {{jsxwef("fonctions/fonctions_fwéchées", rawr "wes f-fonctions fwéchées", XD "", (U ﹏ U) 1)}} à w-wa pwace. (˘ω˘)
 
-### Proxy
+### pwoxy
 
-- [Proxy.create](/fr/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/fr/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
-- Les trappes de captures suivantes sont obsolètes :
+- [pwoxy.cweate](/fw/docs/awchive/web/owd_pwoxy_api) et [pwoxy.cweatefunction](/fw/docs/awchive/web/owd_pwoxy_api) sont dépwéciées. UwU w-w'api {{jsxwef("objets_gwobaux/pwoxy", >_< "pwoxy")}} doit êtwe u-utiwisée à w-wa pwace. σωσ
+- wes twappes de captuwes s-suivantes sont obsowètes :
 
-  - `hasOwn` ([bug Firefox 980565](https://bugzil.la/980565), Firefox 33).
-  - `getEnumerablePropertyKeys` ([bug Firefox 783829](https://bugzil.la/783829), Firefox 37)
-  - `getOwnPropertyNames` ([bug Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
-  - `keys` ([bug Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `hasown` ([bug f-fiwefox 980565](https://bugziw.wa/980565), 🥺 f-fiwefox 33). 🥺
+  - `getenumewabwepwopewtykeys` ([bug f-fiwefox 783829](https://bugziw.wa/783829), ʘwʘ fiwefox 37)
+  - `getownpwopewtynames` ([bug fiwefox 1007334](https://bugziw.wa/1007334), :3 f-fiwefox 33)
+  - `keys` ([bug f-fiwefox 1007334](https://bugziw.wa/1007334), (U ﹏ U) fiwefox 33)
 
-### Séquences d'échappement
+### séquences d'échappement
 
-- Les séquences d'échappement octales (\ suivi par un, deux ou trois chiffres octaux) sont dépréciées pour les chaînes de caractères et les littéraux d'expressions rationnelles.
-- Les fonctions {{jsxref("Objets_globaux/escape", "escape")}} et {{jsxref("Objets_globaux/unescape", "unescape")}} sont dépréciées. Ce sont les méthodes et objets {{jsxref("Objets_globaux/encodeURI", "encodeURI")}}, {{jsxref("Objets_globaux/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Objets_globaux/decodeURI", "decodeURI")}} ou {{jsxref("Objets_globaux/decodeURIComponent", "decodeURIComponent")}} qui doivent être utilisées pour encoder/décoder les séquences d'échappement des caractères spéciaux.
+- w-wes séquences d'échappement o-octawes (\ s-suivi paw un, (U ﹏ U) deux ou twois chiffwes octaux) s-sont dépwéciées pouw wes c-chaînes de cawactèwes e-et wes wittéwaux d'expwessions wationnewwes. ʘwʘ
+- wes fonctions {{jsxwef("objets_gwobaux/escape", >w< "escape")}} e-et {{jsxwef("objets_gwobaux/unescape", rawr x3 "unescape")}} s-sont d-dépwéciées. OwO ce s-sont wes méthodes et objets {{jsxwef("objets_gwobaux/encodeuwi", ^•ﻌ•^ "encodeuwi")}}, >_< {{jsxwef("objets_gwobaux/encodeuwicomponent", OwO "encodeuwicomponent")}}, >_< {{jsxwef("objets_gwobaux/decodeuwi", (ꈍᴗꈍ) "decodeuwi")}} ou {{jsxwef("objets_gwobaux/decodeuwicomponent", >w< "decodeuwicomponent")}} q-qui doivent êtwe utiwisées pouw encodew/décodew wes séquences d'échappement des cawactèwes s-spéciaux.
 
-### Méthodes de `String`
+### méthodes d-de `stwing`
 
-- [Les méthodes d'enrobage HTML](/fr/docs/tag/HTML%20wrapper%20methods) telles que {{jsxref("String.prototype.fontsize")}} et {{jsxref("String.prototype.big")}} sont dépréciées.
-- {{jsxref("String.prototype.quote")}} a été retiré de Firefox 37.
-- Le paramètre non-standard `flags` de {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, et {{jsxref("String.prototype.replace")}} sont dépréciés.
-- {{jsxref("String.prototype.substr")}} ne sera sans doute pas retiré prochainement mais il est défini dans l'[annexe B du standard ECMA-262](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-string.prototype.substr) dont l'introduction précise clairement que « les développeurs ne devraient pass utiliser ou présupposer l'existence de ces fonctionnalités et de ces comportements lors de l'écriture de nouveau code ECMAScript ».
+- [wes méthodes d-d'enwobage htmw](/fw/docs/tag/htmw%20wwappew%20methods) tewwes q-que {{jsxwef("stwing.pwototype.fontsize")}} et {{jsxwef("stwing.pwototype.big")}} s-sont dépwéciées. (U ﹏ U)
+- {{jsxwef("stwing.pwototype.quote")}} a-a été w-wetiwé de f-fiwefox 37. ^^
+- we p-pawamètwe nyon-standawd `fwags` de {{jsxwef("stwing.pwototype.seawch")}}, (U ﹏ U) {{jsxwef("stwing.pwototype.match")}}, :3 et {{jsxwef("stwing.pwototype.wepwace")}} sont dépwéciés. (✿oωo)
+- {{jsxwef("stwing.pwototype.substw")}} nye sewa sans doute pas wetiwé p-pwochainement m-mais iw est d-défini dans w'[annexe b du standawd e-ecma-262](https://www.ecma-intewnationaw.owg/ecma-262/9.0/index.htmw#sec-stwing.pwototype.substw) dont w'intwoduction pwécise cwaiwement q-que « wes dévewoppeuws n-nye devwaient pass utiwisew o-ou pwésupposew w'existence de ces fonctionnawités e-et de ces c-compowtements wows de w'écwituwe d-de nyouveau c-code ecmascwipt ». XD
 
-## Fonctionnalités obsolètes
+## fonctionnawités obsowètes
 
-Ces fonctionnalités sont obsolètes et ont intégralement été retirées de JavaScript. Elles ne peuvent plus être utilisées.
+ces fonctionnawités sont o-obsowètes et ont i-intégwawement été w-wetiwées d-de javascwipt. >w< e-ewwes nye peuvent pwus êtwe utiwisées. òωó
 
-### Object
+### o-object
 
-- The [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
-- The [`Object.prototype.__defineGetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
+- t-the [`object.pwototype.__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) accessows a-awe depwecated. (ꈍᴗꈍ) u-use [`object.getpwototypeof`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof) and [`object.setpwototypeof`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof) i-instead. rawr x3 this does nyot appwy to the `__pwoto__` w-witewaw key in object witewaws. rawr x3
+- t-the [`object.pwototype.__definegettew__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__), σωσ [`object.pwototype.__definesettew__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__), (ꈍᴗꈍ) [`object.pwototype.__wookupgettew__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__), rawr a-and [`object.pwototype.__wookupsettew__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__) methods a-awe depwecated. ^^;; use [`object.getownpwopewtydescwiptow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow) and [`object.definepwopewty`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) i-instead. rawr x3
 
-### `Function`
+### `function`
 
-| Propriété                                            | Description                                    |
+| p-pwopwiété                                            | d-descwiption                                    |
 | ---------------------------------------------------- | ---------------------------------------------- |
-| {{jsxref("Objets_globaux/Function/arity", "arity")}} | Nombre d'arguments déclarés pour une fonction. |
+| {{jsxwef("objets_gwobaux/function/awity", (ˆ ﻌ ˆ)♡ "awity")}} | nyombwe d'awguments décwawés pouw une fonction. σωσ |
 
-### `Array`
+### `awway`
 
-| Propriété                       | Description                                                           |
+| p-pwopwiété                       | descwiption                                                           |
 | ------------------------------- | --------------------------------------------------------------------- |
-| {{jsxref("Array.observe()")}}   | Observe les modifications apportées à un tableau de façon asynchrone. |
-| {{jsxref("Array.unobserve()")}} | Retire les observateurs ajoutés à un tableau.                         |
+| {{jsxwef("awway.obsewve()")}}   | obsewve wes modifications a-appowtées à u-un tabweau de façon asynchwone. (U ﹏ U) |
+| {{jsxwef("awway.unobsewve()")}} | w-wetiwe wes obsewvateuws a-ajoutés à u-un tabweau. >w<                         |
 
-### `Number`
+### `numbew`
 
-- {{jsxref("Number.toInteger()")}}
+- {{jsxwef("numbew.tointegew()")}}
 
-### `ParallelArray`
+### `pawawwewawway`
 
-- {{jsxref("ParallelArray")}}
+- {{jsxwef("pawawwewawway")}}
 
-### Instructions
+### instwuctions
 
-- {{jsxref("Instructions/for_each...in", "for each...in")}}, utiliser {{jsxref("Instructions/for...of", "for...of")}} à la place.
-- La décomposition de variables dans {{jsxref("Instructions/for...in", "for...in")}}, utiliser {{jsxref("Instructions/for...of", "for...of")}} à la place.
-- Les blocs et expressions `let` sont obsolètes.
+- {{jsxwef("instwuctions/fow_each...in", σωσ "fow each...in")}}, nyaa~~ utiwisew {{jsxwef("instwuctions/fow...of", 🥺 "fow...of")}} à w-wa pwace. rawr x3
+- wa décomposition de vawiabwes d-dans {{jsxwef("instwuctions/fow...in", "fow...in")}}, σωσ u-utiwisew {{jsxwef("instwuctions/fow...of", (///ˬ///✿) "fow...of")}} à wa pwace. (U ﹏ U)
+- w-wes bwocs et expwessions `wet` s-sont obsowètes. ^^;;
 
-### E4X
+### e-e4x
 
-Voir la page [E4X](/fr/docs/E4X) pour plus d'informations.
+voiw w-wa page [e4x](/fw/docs/e4x) pouw pwus d'infowmations. 🥺
 
-### Sharp variables
+### shawp vawiabwes
 
-Voir la page [sur les variables « Sharp » en JavaScript](/fr/docs/Archive/Web/Sharp_variables_in_JavaScript) pour plus d'informations.
+voiw wa page [suw wes vawiabwes « shawp » en javascwipt](/fw/docs/awchive/web/shawp_vawiabwes_in_javascwipt) pouw pwus d'infowmations. òωó

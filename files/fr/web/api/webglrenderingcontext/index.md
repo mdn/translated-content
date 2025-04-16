@@ -1,306 +1,306 @@
 ---
-title: WebGLRenderingContext
-slug: Web/API/WebGLRenderingContext
+titwe: webgwwendewingcontext
+swug: web/api/webgwwendewingcontext
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-L'interface **`WebGLRenderingContext`** fournit une interface pour le contexte de rendu graphique OpenGL ES 2.0 de la surface de dessin fournie par un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+w-w'intewface **`webgwwendewingcontext`** f-fouwnit une i-intewface pouw w-we contexte de w-wendu gwaphique o-opengw es 2.0 de w-wa suwface de dessin f-fouwnie paw un éwément htmw [`<canvas>`](/fw/docs/web/htmw/ewement/canvas). ʘwʘ
 
-Pour obtenir un accès à un contexte WebGL pour le rendu graphique 2D et/ou 3D, on appellera [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur un élément `<canvas>` en fournissant la chaîne de caractères `webgl`&nbsp;:
+pouw obteniw un accès à un contexte webgw p-pouw we wendu gwaphique 2d et/ou 3d, ^^ on appewwewa [`getcontext()`](/fw/docs/web/api/htmwcanvasewement/getcontext) s-suw un éwément `<canvas>` en fouwnissant wa c-chaîne de cawactèwes `webgw`&nbsp;:
 
 ```js
-let canvas = document.getElementById("myCanvas");
-let gl = canvas.getContext("webgl");
+wet canvas = document.getewementbyid("mycanvas");
+wet gw = canvas.getcontext("webgw");
 ```
 
-Une fois le contexte de rendu WebGL obtenu pour le canevas, on peut l'utiliser pour le rendu graphique d'objets à l'intérieur de ce canevas. [Le tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient de plus amples informations, exemples et ressources pour débuter avec WebGL.
+u-une fois we contexte de w-wendu webgw obtenu p-pouw we canevas, nyaa~~ on peut w'utiwisew pouw we wendu gwaphique d'objets à w'intéwieuw d-de ce canevas. (///ˬ///✿) [we tutowiew webgw](/fw/docs/web/api/webgw_api/tutowiaw) contient de pwus ampwes infowmations, XD e-exempwes et wessouwces pouw d-débutew avec w-webgw. :3
 
-Si vous avez besoin d'un contexte WebGL 2.0, voyez [`WebGL2RenderingContext`](/fr/docs/Web/API/WebGL2RenderingContext) qui permet d'utiliser une implémentation avec des graphismes OpenGL ES 3.0.
+si vous a-avez besoin d'un c-contexte webgw 2.0, òωó voyez [`webgw2wendewingcontext`](/fw/docs/web/api/webgw2wendewingcontext) qui pewmet d'utiwisew u-une impwémentation avec des gwaphismes opengw e-es 3.0. ^^
 
-## Constantes
+## constantes
 
-Voir la page sur [les constantes WebGL](/fr/docs/Web/API/WebGL_API/Constants).
+voiw wa page suw [wes constantes webgw](/fw/docs/web/api/webgw_api/constants). ^•ﻌ•^
 
-## Le contexte WebGL
+## we contexte webgw
 
-Les propriétés et méthodes suivantes fournissent des informations et fonctionnalités générales pour manipuler le contexte WebGL&nbsp;:
+wes pwopwiétés e-et méthodes suivantes fouwnissent d-des infowmations e-et fonctionnawités g-généwawes pouw manipuwew we contexte webgw&nbsp;:
 
-- [`WebGLRenderingContext.canvas`](/fr/docs/Web/API/WebGLRenderingContext/canvas)
-  - : Une référence en lecture seule vers l'objet [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) correspondant. Peut valoir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si le contexte n'est pas associé à un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
-- [`WebGLRenderingContext.commit()`](/fr/docs/Web/API/WebGLRenderingContext/commit) {{experimental_inline}}
-  - : Pousse les <i lang="en">frames</i> sur l'élément [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement), si le contexte n'est pas directement rattaché à un canevas donné.
-- [`WebGLRenderingContext.drawingBufferWidth`](/fr/docs/Web/API/WebGLRenderingContext/drawingBufferWidth)
-  - : La largeur, en lecture seule, du tampon de dessin courant. Celle-ci devrait correspondre à la largeur de l'élément canevas associé à ce contexte.
-- [`WebGLRenderingContext.drawingBufferHeight`](/fr/docs/Web/API/WebGLRenderingContext/drawingBufferHeight)
-  - : La hauteur, en lecture seule, du tampon de dessin courant. Celle-ci devrait correspondre à la hauteur de l'élément canevas associé à ce contexte.
-- [`WebGLRenderingContext.getContextAttributes()`](/fr/docs/Web/API/WebGLRenderingContext/getContextAttributes)
-  - : Renvoie un objet `WebGLContextAttributes` qui contient les paramètres de contextes réels. Peut renvoyer [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) si le contexte est perdu.
-- [`WebGLRenderingContext.isContextLost()`](/fr/docs/Web/API/WebGLRenderingContext/isContextLost)
-  - : Renvoie `true` si le contexte est perdu et `false` sinon.
-- [`WebGLRenderingContext.makeXRCompatible()`](/fr/docs/Web/API/WebGLRenderingContext/makeXRCompatible)
-  - : S'assure que le contexte est compatible avec le matériel de réalité mixte, recréant si besoin le contexte avec une nouvelle configuration. Cette méthode peut être utilisée pour démarrer une application dont l'affichage commence en 2D puis passe ensuite dans un mode de réalité virtuelle ou augmentée.
+- [`webgwwendewingcontext.canvas`](/fw/docs/web/api/webgwwendewingcontext/canvas)
+  - : u-une wéféwence e-en wectuwe seuwe vews w-w'objet [`htmwcanvasewement`](/fw/docs/web/api/htmwcanvasewement) c-cowwespondant. σωσ peut vawoiw [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) s-si we contexte ny'est pas a-associé à un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas). (ˆ ﻌ ˆ)♡
+- [`webgwwendewingcontext.commit()`](/fw/docs/web/api/webgwwendewingcontext/commit) {{expewimentaw_inwine}}
+  - : pousse wes <i wang="en">fwames</i> s-suw w'éwément [`htmwcanvasewement`](/fw/docs/web/api/htmwcanvasewement), nyaa~~ si we c-contexte ny'est pas diwectement w-wattaché à un c-canevas donné. ʘwʘ
+- [`webgwwendewingcontext.dwawingbuffewwidth`](/fw/docs/web/api/webgwwendewingcontext/dwawingbuffewwidth)
+  - : wa wawgeuw, ^•ﻌ•^ en wectuwe seuwe, rawr x3 du tampon de dessin couwant. 🥺 cewwe-ci devwait cowwespondwe à wa w-wawgeuw de w'éwément c-canevas associé à ce contexte. ʘwʘ
+- [`webgwwendewingcontext.dwawingbuffewheight`](/fw/docs/web/api/webgwwendewingcontext/dwawingbuffewheight)
+  - : w-wa hauteuw, (˘ω˘) e-en wectuwe s-seuwe, o.O du tampon de dessin couwant. σωσ cewwe-ci devwait cowwespondwe à w-wa hauteuw de w'éwément canevas associé à ce contexte. (ꈍᴗꈍ)
+- [`webgwwendewingcontext.getcontextattwibutes()`](/fw/docs/web/api/webgwwendewingcontext/getcontextattwibutes)
+  - : wenvoie un o-objet `webgwcontextattwibutes` qui contient wes p-pawamètwes de c-contextes wéews. (ˆ ﻌ ˆ)♡ p-peut wenvoyew [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) si we c-contexte est pewdu. o.O
+- [`webgwwendewingcontext.iscontextwost()`](/fw/docs/web/api/webgwwendewingcontext/iscontextwost)
+  - : w-wenvoie `twue` s-si w-we contexte est pewdu et `fawse` sinon. :3
+- [`webgwwendewingcontext.makexwcompatibwe()`](/fw/docs/web/api/webgwwendewingcontext/makexwcompatibwe)
+  - : s-s'assuwe que w-we contexte est c-compatibwe avec w-we matéwiew d-de wéawité mixte, -.- wecwéant si besoin we contexte avec une nyouvewwe c-configuwation. ( ͡o ω ͡o ) cette méthode peut êtwe utiwisée pouw démawwew une appwication dont w'affichage c-commence en 2d puis passe ensuite dans un mode de wéawité v-viwtuewwe o-ou augmentée. /(^•ω•^)
 
-## Vue et rognage
+## v-vue et wognage
 
-- [`WebGLRenderingContext.scissor()`](/fr/docs/Web/API/WebGLRenderingContext/scissor)
-  - : Définit la boîte de découpe (<i lang="en">scissor box</i>).
-- [`WebGLRenderingContext.viewport()`](/fr/docs/Web/API/WebGLRenderingContext/viewport)
-  - : Définit la zone d'affichage (<i lang="en">viewport</i>).
+- [`webgwwendewingcontext.scissow()`](/fw/docs/web/api/webgwwendewingcontext/scissow)
+  - : définit wa boîte d-de découpe (<i wang="en">scissow b-box</i>). (⑅˘꒳˘)
+- [`webgwwendewingcontext.viewpowt()`](/fw/docs/web/api/webgwwendewingcontext/viewpowt)
+  - : d-définit wa zone d'affichage (<i wang="en">viewpowt</i>). òωó
 
-## Informations sur l'état
+## infowmations suw w'état
 
-- [`WebGLRenderingContext.activeTexture()`](/fr/docs/Web/API/WebGLRenderingContext/activeTexture)
-  - : Sélectionne l'unité de texture active.
-- [`WebGLRenderingContext.blendColor()`](/fr/docs/Web/API/WebGLRenderingContext/blendColor)
-  - : Définit la source et la destination des facteurs de fusion.
-- [`WebGLRenderingContext.blendEquation()`](/fr/docs/Web/API/WebGLRenderingContext/blendEquation)
-  - : Définit l'équation de fusion RGB et l'équation de fusion alpha avec une seule équation.
-- [`WebGLRenderingContext.blendEquationSeparate()`](/fr/docs/Web/API/WebGLRenderingContext/blendEquationSeparate)
-  - : Définit l'équation de fusion RGB et l'équation de fusion alpha séparément.
-- [`WebGLRenderingContext.blendFunc()`](/fr/docs/Web/API/WebGLRenderingContext/blendFunc)
-  - : Definit la fonction utilisée pour l'arithmétique de la fusion des pixels.
-- [`WebGLRenderingContext.blendFuncSeparate()`](/fr/docs/Web/API/WebGLRenderingContext/blendFuncSeparate)
-  - : Definit séparément la fonction utilisée pour l'arithmétique de la fusion des pixels pour les composantes RGB d'une part et alpha d'autre part.
-- [`WebGLRenderingContext.clearColor()`](/fr/docs/Web/API/WebGLRenderingContext/clearColor)
-  - : Définit les valeurs de couleur utilisées lors du nettoyage des tampons de couleur.
-- [`WebGLRenderingContext.clearDepth()`](/fr/docs/Web/API/WebGLRenderingContext/clearDepth)
-  - : Définit la valeur de profondeur utilisée lors du nettoyage du tampon de profondeur.
-- [`WebGLRenderingContext.clearStencil()`](/fr/docs/Web/API/WebGLRenderingContext/clearStencil)
-  - : Définit la valeur du pochoir utilisée lors du nettoyage du tampon de pochoir.
-- [`WebGLRenderingContext.colorMask()`](/fr/docs/Web/API/WebGLRenderingContext/colorMask)
-  - : Définit les composantes de couleur à activer ou à désactiver lors du dessin ou du rendu dans un objet [`WebGLFramebuffer`](/fr/docs/Web/API/WebGLFramebuffer).
-- [`WebGLRenderingContext.cullFace()`](/fr/docs/Web/API/WebGLRenderingContext/cullFace)
-  - : Indique si les polygones masqués en face arrière ou en face avant sont coupés (voir [l'article Wikipédia sur <i lang="en">Back-face culling</i>](https://en.wikipedia.org/wiki/Back-face_culling)).
-- [`WebGLRenderingContext.depthFunc()`](/fr/docs/Web/API/WebGLRenderingContext/depthFunc)
-  - : Indique une fonction qui compare la profondeur du pixel à venir avec la valeur actuelle de profondeur sur le tampon.
-- [`WebGLRenderingContext.depthMask()`](/fr/docs/Web/API/WebGLRenderingContext/depthMask)
-  - : Indique si l'écriture sur le tampon de profondeur est activée ou désactivée.
-- [`WebGLRenderingContext.depthRange()`](/fr/docs/Web/API/WebGLRenderingContext/depthRange)
-  - : Indique la correspondance pour l'intervalle de profondeur entre les coordonnées normalisées de l'appareil et les coordonnées de la fenêtre ou de la zone d'affichage.
-- [`WebGLRenderingContext.disable()`](/fr/docs/Web/API/WebGLRenderingContext/disable)
-  - : Désactive les capacités spécifiques à WebGL pour ce contexte.
-- [`WebGLRenderingContext.enable()`](/fr/docs/Web/API/WebGLRenderingContext/enable)
-  - : Active les capacités spécifiques à WebGL pour ce contexte.
-- [`WebGLRenderingContext.frontFace()`](/fr/docs/Web/API/WebGLRenderingContext/frontFace)
-  - : Indique si les polygones font face vers l'avant ou vers l'arrière en indiquant une orientation d'enroulement.
-- [`WebGLRenderingContext.getParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getParameter)
-  - : Renvoie une valeur pour le nom de paramètre passé en argument.
-- [`WebGLRenderingContext.getError()`](/fr/docs/Web/API/WebGLRenderingContext/getError)
-  - : Renvoie des informations sur l'erreur.
-- [`WebGLRenderingContext.hint()`](/fr/docs/Web/API/WebGLRenderingContext/hint)
-  - : Définit les indications pour certains comportements. L'interprétation de ces indications dépend de l'implémentation.
-- [`WebGLRenderingContext.isEnabled()`](/fr/docs/Web/API/WebGLRenderingContext/isEnabled)
-  - : Teste si une fonctionnalité WebGL donnée est activée ou non pour ce contexte.
-- [`WebGLRenderingContext.lineWidth()`](/fr/docs/Web/API/WebGLRenderingContext/lineWidth)
-  - : Définit la largeur des lignes pour les lignes matricielles.
-- [`WebGLRenderingContext.pixelStorei()`](/fr/docs/Web/API/WebGLRenderingContext/pixelStorei)
-  - : Définit le mode de stockage des pixels.
-- [`WebGLRenderingContext.polygonOffset()`](/fr/docs/Web/API/WebGLRenderingContext/polygonOffset)
-  - : Définit les facteurs d'échelle et les unités pour calculer les valeurs de profondeur.
-- [`WebGLRenderingContext.sampleCoverage()`](/fr/docs/Web/API/WebGLRenderingContext/sampleCoverage)
-  - : Définit les paramètres de couverture multi-échantillonnage pour les effets anti-crénelage.
-- [`WebGLRenderingContext.stencilFunc()`](/fr/docs/Web/API/WebGLRenderingContext/stencilFunc)
-  - : Définit la fonction et la valeur de référence pour les fonctions avant et arrière pour le test du pochoir.
-- [`WebGLRenderingContext.stencilFuncSeparate()`](/fr/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate)
-  - : Définit la fonction avant et/ou arrière et la valeur de référence pour le test du pochoir.
-- [`WebGLRenderingContext.stencilMask()`](/fr/docs/Web/API/WebGLRenderingContext/stencilMask)
-  - : Contrôle l'activation/la désactivation des modes d'écriture avant et arrière pour les bits individuels sur les plans du pochoir.
-- [`WebGLRenderingContext.stencilMaskSeparate()`](/fr/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate)
-  - : Contrôle l'activation/la désactivation des modes d'écriture avant et/ou arrière pour les bits individuels sur les plans du pochoir.
-- [`WebGLRenderingContext.stencilOp()`](/fr/docs/Web/API/WebGLRenderingContext/stencilOp)
-  - : Définit les actions de test du pochoir pour l'avant et pour l'arrière.
-- [`WebGLRenderingContext.stencilOpSeparate()`](/fr/docs/Web/API/WebGLRenderingContext/stencilOpSeparate)
-  - : Définit les actions de test du pochoir pour l'avant et/ou pour l'arrière.
+- [`webgwwendewingcontext.activetextuwe()`](/fw/docs/web/api/webgwwendewingcontext/activetextuwe)
+  - : séwectionne w-w'unité de textuwe active. 🥺
+- [`webgwwendewingcontext.bwendcowow()`](/fw/docs/web/api/webgwwendewingcontext/bwendcowow)
+  - : d-définit wa souwce et wa d-destination des f-facteuws de fusion. (ˆ ﻌ ˆ)♡
+- [`webgwwendewingcontext.bwendequation()`](/fw/docs/web/api/webgwwendewingcontext/bwendequation)
+  - : définit w'équation d-de fusion wgb et w-w'équation de fusion awpha avec u-une seuwe équation. -.-
+- [`webgwwendewingcontext.bwendequationsepawate()`](/fw/docs/web/api/webgwwendewingcontext/bwendequationsepawate)
+  - : d-définit w'équation de fusion wgb et w'équation de fusion awpha sépawément. σωσ
+- [`webgwwendewingcontext.bwendfunc()`](/fw/docs/web/api/webgwwendewingcontext/bwendfunc)
+  - : d-definit wa fonction u-utiwisée pouw w-w'awithmétique de wa fusion d-des pixews. >_<
+- [`webgwwendewingcontext.bwendfuncsepawate()`](/fw/docs/web/api/webgwwendewingcontext/bwendfuncsepawate)
+  - : d-definit sépawément w-wa fonction utiwisée pouw w'awithmétique de wa fusion des pixews pouw wes composantes w-wgb d'une p-pawt et awpha d'autwe pawt. :3
+- [`webgwwendewingcontext.cweawcowow()`](/fw/docs/web/api/webgwwendewingcontext/cweawcowow)
+  - : définit wes vaweuws d-de couweuw u-utiwisées wows du nyettoyage des tampons de couweuw. OwO
+- [`webgwwendewingcontext.cweawdepth()`](/fw/docs/web/api/webgwwendewingcontext/cweawdepth)
+  - : définit w-wa vaweuw de pwofondeuw utiwisée wows du nyettoyage du tampon de pwofondeuw. rawr
+- [`webgwwendewingcontext.cweawstenciw()`](/fw/docs/web/api/webgwwendewingcontext/cweawstenciw)
+  - : d-définit wa vaweuw du pochoiw utiwisée wows d-du nyettoyage d-du tampon de pochoiw. (///ˬ///✿)
+- [`webgwwendewingcontext.cowowmask()`](/fw/docs/web/api/webgwwendewingcontext/cowowmask)
+  - : définit wes composantes de couweuw à activew o-ou à désactivew w-wows du dessin ou du wendu dans un objet [`webgwfwamebuffew`](/fw/docs/web/api/webgwfwamebuffew). ^^
+- [`webgwwendewingcontext.cuwwface()`](/fw/docs/web/api/webgwwendewingcontext/cuwwface)
+  - : indique s-si wes powygones masqués en face a-awwièwe ou en face avant sont coupés (voiw [w'awticwe wikipédia s-suw <i wang="en">back-face cuwwing</i>](https://en.wikipedia.owg/wiki/back-face_cuwwing)). XD
+- [`webgwwendewingcontext.depthfunc()`](/fw/docs/web/api/webgwwendewingcontext/depthfunc)
+  - : i-indique une fonction q-qui compawe wa pwofondeuw du p-pixew à veniw avec wa vaweuw a-actuewwe de pwofondeuw s-suw we tampon. UwU
+- [`webgwwendewingcontext.depthmask()`](/fw/docs/web/api/webgwwendewingcontext/depthmask)
+  - : i-indique si w'écwituwe suw w-we tampon de pwofondeuw e-est activée ou désactivée. o.O
+- [`webgwwendewingcontext.depthwange()`](/fw/docs/web/api/webgwwendewingcontext/depthwange)
+  - : indique w-wa cowwespondance p-pouw w'intewvawwe d-de pwofondeuw entwe wes coowdonnées nyowmawisées d-de w'appaweiw et wes coowdonnées d-de wa f-fenêtwe ou de wa zone d'affichage. 😳
+- [`webgwwendewingcontext.disabwe()`](/fw/docs/web/api/webgwwendewingcontext/disabwe)
+  - : désactive wes capacités spécifiques à w-webgw p-pouw ce contexte. (˘ω˘)
+- [`webgwwendewingcontext.enabwe()`](/fw/docs/web/api/webgwwendewingcontext/enabwe)
+  - : a-active w-wes capacités spécifiques à w-webgw pouw ce contexte. 🥺
+- [`webgwwendewingcontext.fwontface()`](/fw/docs/web/api/webgwwendewingcontext/fwontface)
+  - : indique si wes powygones font face vews w'avant ou vews w-w'awwièwe en indiquant une owientation d-d'enwouwement. ^^
+- [`webgwwendewingcontext.getpawametew()`](/fw/docs/web/api/webgwwendewingcontext/getpawametew)
+  - : wenvoie une vaweuw p-pouw we nyom de pawamètwe passé e-en awgument. >w<
+- [`webgwwendewingcontext.getewwow()`](/fw/docs/web/api/webgwwendewingcontext/getewwow)
+  - : wenvoie des infowmations s-suw w'ewweuw. ^^;;
+- [`webgwwendewingcontext.hint()`](/fw/docs/web/api/webgwwendewingcontext/hint)
+  - : d-définit w-wes indications p-pouw cewtains c-compowtements. (˘ω˘) w'intewpwétation de ces indications dépend de w'impwémentation. OwO
+- [`webgwwendewingcontext.isenabwed()`](/fw/docs/web/api/webgwwendewingcontext/isenabwed)
+  - : teste si une fonctionnawité w-webgw donnée e-est activée ou n-nyon pouw ce contexte. (ꈍᴗꈍ)
+- [`webgwwendewingcontext.winewidth()`](/fw/docs/web/api/webgwwendewingcontext/winewidth)
+  - : définit w-wa wawgeuw des wignes pouw wes wignes matwiciewwes. òωó
+- [`webgwwendewingcontext.pixewstowei()`](/fw/docs/web/api/webgwwendewingcontext/pixewstowei)
+  - : définit w-we mode de stockage d-des pixews. ʘwʘ
+- [`webgwwendewingcontext.powygonoffset()`](/fw/docs/web/api/webgwwendewingcontext/powygonoffset)
+  - : définit w-wes facteuws d'échewwe et wes unités pouw cawcuwew w-wes vaweuws d-de pwofondeuw.
+- [`webgwwendewingcontext.sampwecovewage()`](/fw/docs/web/api/webgwwendewingcontext/sampwecovewage)
+  - : définit w-wes pawamètwes d-de couvewtuwe muwti-échantiwwonnage pouw wes effets anti-cwénewage. ʘwʘ
+- [`webgwwendewingcontext.stenciwfunc()`](/fw/docs/web/api/webgwwendewingcontext/stenciwfunc)
+  - : définit wa fonction e-et wa vaweuw d-de wéféwence p-pouw wes fonctions a-avant et awwièwe p-pouw we test du pochoiw. nyaa~~
+- [`webgwwendewingcontext.stenciwfuncsepawate()`](/fw/docs/web/api/webgwwendewingcontext/stenciwfuncsepawate)
+  - : d-définit wa fonction a-avant et/ou awwièwe et wa v-vaweuw de wéféwence p-pouw we test du pochoiw. UwU
+- [`webgwwendewingcontext.stenciwmask()`](/fw/docs/web/api/webgwwendewingcontext/stenciwmask)
+  - : c-contwôwe w'activation/wa désactivation des modes d'écwituwe a-avant et awwièwe pouw wes bits i-individuews s-suw wes pwans du pochoiw. (⑅˘꒳˘)
+- [`webgwwendewingcontext.stenciwmasksepawate()`](/fw/docs/web/api/webgwwendewingcontext/stenciwmasksepawate)
+  - : c-contwôwe w'activation/wa désactivation d-des modes d-d'écwituwe avant e-et/ou awwièwe pouw wes bits individuews suw wes pwans du pochoiw. (˘ω˘)
+- [`webgwwendewingcontext.stenciwop()`](/fw/docs/web/api/webgwwendewingcontext/stenciwop)
+  - : d-définit wes actions de test du pochoiw pouw w-w'avant et pouw w-w'awwièwe. :3
+- [`webgwwendewingcontext.stenciwopsepawate()`](/fw/docs/web/api/webgwwendewingcontext/stenciwopsepawate)
+  - : définit wes actions d-de test du pochoiw pouw w'avant e-et/ou pouw w'awwièwe. (˘ω˘)
 
-## Tampons
+## tampons
 
-- [`WebGLRenderingContext.bindBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/bindBuffer)
-  - : Lie un objet `WebGLBuffer` à une cible donnée.
-- [`WebGLRenderingContext.bufferData()`](/fr/docs/Web/API/WebGLRenderingContext/bufferData)
-  - : Met à jour les données du tampon.
-- [`WebGLRenderingContext.bufferSubData()`](/fr/docs/Web/API/WebGLRenderingContext/bufferSubData)
-  - : Met à jour les données du tampon à partir d'un décalage donné.
-- [`WebGLRenderingContext.createBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/createBuffer)
-  - : Crée un objet `WebGLBuffer`.
-- [`WebGLRenderingContext.deleteBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/deleteBuffer)
-  - : Supprime un objet `WebGLBuffer`.
-- [`WebGLRenderingContext.getBufferParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getBufferParameter)
-  - : Renvoie des informations à propos du tampon.
-- [`WebGLRenderingContext.isBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/isBuffer)
-  - : Renvoie un booléen indiquant si le tampon passé est valide.
+- [`webgwwendewingcontext.bindbuffew()`](/fw/docs/web/api/webgwwendewingcontext/bindbuffew)
+  - : w-wie un objet `webgwbuffew` à une cibwe d-donnée. nyaa~~
+- [`webgwwendewingcontext.buffewdata()`](/fw/docs/web/api/webgwwendewingcontext/buffewdata)
+  - : met à jouw wes données d-du tampon. (U ﹏ U)
+- [`webgwwendewingcontext.buffewsubdata()`](/fw/docs/web/api/webgwwendewingcontext/buffewsubdata)
+  - : m-met à jouw wes données d-du tampon à pawtiw d'un décawage d-donné. nyaa~~
+- [`webgwwendewingcontext.cweatebuffew()`](/fw/docs/web/api/webgwwendewingcontext/cweatebuffew)
+  - : c-cwée un objet `webgwbuffew`. ^^;;
+- [`webgwwendewingcontext.dewetebuffew()`](/fw/docs/web/api/webgwwendewingcontext/dewetebuffew)
+  - : s-suppwime un objet `webgwbuffew`. OwO
+- [`webgwwendewingcontext.getbuffewpawametew()`](/fw/docs/web/api/webgwwendewingcontext/getbuffewpawametew)
+  - : wenvoie des infowmations à pwopos du tampon. nyaa~~
+- [`webgwwendewingcontext.isbuffew()`](/fw/docs/web/api/webgwwendewingcontext/isbuffew)
+  - : wenvoie un boowéen indiquant si we tampon passé est vawide. UwU
 
-## Tampons d'image (<i lang="en">framebuffers</i>)
+## tampons d'image (<i wang="en">fwamebuffews</i>)
 
-- [`WebGLRenderingContext.bindFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/bindFramebuffer)
-  - : Lie un objet `WebGLFrameBuffer` à une cible donnée.
-- [`WebGLRenderingContext.checkFramebufferStatus()`](/fr/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus)
-  - : Renvoie le statut du tampon d'image (<i lang="en">framebuffer</i>).
-- [`WebGLRenderingContext.createFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/createFramebuffer)
-  - : Crée un objet `WebGLFrameBuffer`.
-- [`WebGLRenderingContext.deleteFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/deleteFramebuffer)
-  - : Supprime un objet `WebGLFrameBuffer`.
-- [`WebGLRenderingContext.framebufferRenderbuffer()`](/fr/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer)
-  - : Attache un objet `WebGLRenderingBuffer` à un objet `WebGLFrameBuffer`.
-- [`WebGLRenderingContext.framebufferTexture2D()`](/fr/docs/Web/API/WebGLRenderingContext/framebufferTexture2D)
-  - : Attache une image de texture à un objet `WebGLFrameBuffer`.
-- [`WebGLRenderingContext.getFramebufferAttachmentParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter)
-  - : Renvoie des informations à propos du tampon d'image (<i lang="en">framebuffer</i>).
-- [`WebGLRenderingContext.isFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/isFramebuffer)
-  - : Renvoie un booléen indiquant si l'objet `WebGLFrameBuffer` passé est valide.
-- [`WebGLRenderingContext.readPixels()`](/fr/docs/Web/API/WebGLRenderingContext/readPixels)
-  - : Lit un bloc de pixels à partir du `WebGLFrameBuffer`.
+- [`webgwwendewingcontext.bindfwamebuffew()`](/fw/docs/web/api/webgwwendewingcontext/bindfwamebuffew)
+  - : wie un objet `webgwfwamebuffew` à u-une cibwe d-donnée. 😳
+- [`webgwwendewingcontext.checkfwamebuffewstatus()`](/fw/docs/web/api/webgwwendewingcontext/checkfwamebuffewstatus)
+  - : wenvoie we statut du tampon d-d'image (<i wang="en">fwamebuffew</i>). 😳
+- [`webgwwendewingcontext.cweatefwamebuffew()`](/fw/docs/web/api/webgwwendewingcontext/cweatefwamebuffew)
+  - : c-cwée un o-objet `webgwfwamebuffew`. (ˆ ﻌ ˆ)♡
+- [`webgwwendewingcontext.dewetefwamebuffew()`](/fw/docs/web/api/webgwwendewingcontext/dewetefwamebuffew)
+  - : suppwime u-un objet `webgwfwamebuffew`. (✿oωo)
+- [`webgwwendewingcontext.fwamebuffewwendewbuffew()`](/fw/docs/web/api/webgwwendewingcontext/fwamebuffewwendewbuffew)
+  - : attache u-un objet `webgwwendewingbuffew` à u-un objet `webgwfwamebuffew`. nyaa~~
+- [`webgwwendewingcontext.fwamebuffewtextuwe2d()`](/fw/docs/web/api/webgwwendewingcontext/fwamebuffewtextuwe2d)
+  - : attache u-une image de textuwe à un objet `webgwfwamebuffew`. ^^
+- [`webgwwendewingcontext.getfwamebuffewattachmentpawametew()`](/fw/docs/web/api/webgwwendewingcontext/getfwamebuffewattachmentpawametew)
+  - : w-wenvoie d-des infowmations à pwopos du tampon d'image (<i w-wang="en">fwamebuffew</i>). (///ˬ///✿)
+- [`webgwwendewingcontext.isfwamebuffew()`](/fw/docs/web/api/webgwwendewingcontext/isfwamebuffew)
+  - : w-wenvoie un b-boowéen indiquant s-si w'objet `webgwfwamebuffew` p-passé est vawide. 😳
+- [`webgwwendewingcontext.weadpixews()`](/fw/docs/web/api/webgwwendewingcontext/weadpixews)
+  - : w-wit un bwoc d-de pixews à p-pawtiw du `webgwfwamebuffew`. òωó
 
-## Tampons de rendu
+## t-tampons de wendu
 
-- [`WebGLRenderingContext.bindRenderbuffer()`](/fr/docs/Web/API/WebGLRenderingContext/bindRenderbuffer)
-  - : Lie un objet `WebGLRenderBuffer` à une cible donnée.
-- [`WebGLRenderingContext.createRenderbuffer()`](/fr/docs/Web/API/WebGLRenderingContext/createRenderbuffer)
-  - : Crée un objet `WebGLRenderBuffer`.
-- [`WebGLRenderingContext.deleteRenderbuffer()`](/fr/docs/Web/API/WebGLRenderingContext/deleteRenderbuffer)
-  - : Supprime un objet `WebGLRenderBuffer`.
-- [`WebGLRenderingContext.getRenderbufferParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getRenderbufferParameter)
-  - : Renvoie des informations à propos du tampon de rendu.
-- [`WebGLRenderingContext.isRenderbuffer()`](/fr/docs/Web/API/WebGLRenderingContext/isRenderbuffer)
-  - : Renvoie un booléen indiquant si l'objet `WebGLRenderingBuffer` passé est valide.
-- [`WebGLRenderingContext.renderbufferStorage()`](/fr/docs/Web/API/WebGLRenderingContext/renderbufferStorage)
-  - : Crée un magasin de données pour le tampon de rendu.
+- [`webgwwendewingcontext.bindwendewbuffew()`](/fw/docs/web/api/webgwwendewingcontext/bindwendewbuffew)
+  - : wie un objet `webgwwendewbuffew` à u-une cibwe d-donnée. ^^;;
+- [`webgwwendewingcontext.cweatewendewbuffew()`](/fw/docs/web/api/webgwwendewingcontext/cweatewendewbuffew)
+  - : c-cwée un objet `webgwwendewbuffew`. rawr
+- [`webgwwendewingcontext.dewetewendewbuffew()`](/fw/docs/web/api/webgwwendewingcontext/dewetewendewbuffew)
+  - : s-suppwime un objet `webgwwendewbuffew`. (ˆ ﻌ ˆ)♡
+- [`webgwwendewingcontext.getwendewbuffewpawametew()`](/fw/docs/web/api/webgwwendewingcontext/getwendewbuffewpawametew)
+  - : wenvoie des infowmations à p-pwopos du tampon de wendu. XD
+- [`webgwwendewingcontext.iswendewbuffew()`](/fw/docs/web/api/webgwwendewingcontext/iswendewbuffew)
+  - : w-wenvoie un b-boowéen indiquant s-si w'objet `webgwwendewingbuffew` passé est v-vawide. >_<
+- [`webgwwendewingcontext.wendewbuffewstowage()`](/fw/docs/web/api/webgwwendewingcontext/wendewbuffewstowage)
+  - : cwée u-un magasin de données pouw w-we tampon de wendu.
 
-## Textures
+## textuwes
 
-- [`WebGLRenderingContext.bindTexture()`](/fr/docs/Web/API/WebGLRenderingContext/bindTexture)
-  - : Lie un objet `WebGLTexture` à une cible donnée.
-- [`WebGLRenderingContext.compressedTexImage2D()`](/fr/docs/Web/API/WebGLRenderingContext/compressedTexImage2D)
-  - : Indique une image de texture 2D dans un format compressé.
-- [`WebGLRenderingContext.compressedTexSubImage2D()`](/fr/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D)
-  - : Indique une sous-image de texture 2D dans un format compressé.
-- [`WebGLRenderingContext.copyTexImage2D()`](/fr/docs/Web/API/WebGLRenderingContext/copyTexImage2D)
-  - : Copie une image de texture 2D.
-- [`WebGLRenderingContext.copyTexSubImage2D()`](/fr/docs/Web/API/WebGLRenderingContext/copyTexSubImage2D)
-  - : Copie une sous-image de texture 2D.
-- [`WebGLRenderingContext.createTexture()`](/fr/docs/Web/API/WebGLRenderingContext/createTexture)
-  - : Crée un objet `WebGLTexture`.
-- [`WebGLRenderingContext.deleteTexture()`](/fr/docs/Web/API/WebGLRenderingContext/deleteTexture)
-  - : Supprime un objet `WebGLTexture`.
-- [`WebGLRenderingContext.generateMipmap()`](/fr/docs/Web/API/WebGLRenderingContext/generateMipmap)
-  - : Génère un ensemble de mipmaps pour un objet `WebGLTexture`.
-- [`WebGLRenderingContext.getTexParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getTexParameter)
-  - : Renvoie des informations à propos de la texture.
-- [`WebGLRenderingContext.isTexture()`](/fr/docs/Web/API/WebGLRenderingContext/isTexture)
-  - : Renvoie un booléen qui indique sur l'objet `WebGLTexture` passé est valide.
-- [`WebGLRenderingContext.texImage2D()`](/fr/docs/Web/API/WebGLRenderingContext/texImage2D)
-  - : Indique une image de texture 2D.
-- [`WebGLRenderingContext.texSubImage2D()`](/fr/docs/Web/API/WebGLRenderingContext/texSubImage2D)
-  - : Met à jour le sous-rectangle de l'objet `WebGLTexture` courant.
-- [`WebGLRenderingContext.texParameterf()`](/fr/docs/Web/API/WebGLRenderingContext/texParameter)
-  - : Définit les paramètres de texture.
-- [`WebGLRenderingContext.texParameteri()`](/fr/docs/Web/API/WebGLRenderingContext/texParameter)
-  - : Définit les paramètres de texture.
+- [`webgwwendewingcontext.bindtextuwe()`](/fw/docs/web/api/webgwwendewingcontext/bindtextuwe)
+  - : w-wie un objet `webgwtextuwe` à une cibwe donnée. (˘ω˘)
+- [`webgwwendewingcontext.compwessedteximage2d()`](/fw/docs/web/api/webgwwendewingcontext/compwessedteximage2d)
+  - : indique une image de textuwe 2d dans u-un fowmat compwessé. 😳
+- [`webgwwendewingcontext.compwessedtexsubimage2d()`](/fw/docs/web/api/webgwwendewingcontext/compwessedtexsubimage2d)
+  - : indique une s-sous-image de textuwe 2d d-dans un fowmat compwessé. o.O
+- [`webgwwendewingcontext.copyteximage2d()`](/fw/docs/web/api/webgwwendewingcontext/copyteximage2d)
+  - : copie une image de textuwe 2d. (ꈍᴗꈍ)
+- [`webgwwendewingcontext.copytexsubimage2d()`](/fw/docs/web/api/webgwwendewingcontext/copytexsubimage2d)
+  - : c-copie une sous-image d-de textuwe 2d. rawr x3
+- [`webgwwendewingcontext.cweatetextuwe()`](/fw/docs/web/api/webgwwendewingcontext/cweatetextuwe)
+  - : c-cwée u-un objet `webgwtextuwe`. ^^
+- [`webgwwendewingcontext.dewetetextuwe()`](/fw/docs/web/api/webgwwendewingcontext/dewetetextuwe)
+  - : suppwime un objet `webgwtextuwe`. OwO
+- [`webgwwendewingcontext.genewatemipmap()`](/fw/docs/web/api/webgwwendewingcontext/genewatemipmap)
+  - : génèwe u-un ensembwe d-de mipmaps pouw un objet `webgwtextuwe`. ^^
+- [`webgwwendewingcontext.gettexpawametew()`](/fw/docs/web/api/webgwwendewingcontext/gettexpawametew)
+  - : w-wenvoie des infowmations à pwopos de wa t-textuwe. :3
+- [`webgwwendewingcontext.istextuwe()`](/fw/docs/web/api/webgwwendewingcontext/istextuwe)
+  - : wenvoie u-un boowéen qui i-indique suw w'objet `webgwtextuwe` p-passé est vawide. o.O
+- [`webgwwendewingcontext.teximage2d()`](/fw/docs/web/api/webgwwendewingcontext/teximage2d)
+  - : indique u-une image de textuwe 2d. -.-
+- [`webgwwendewingcontext.texsubimage2d()`](/fw/docs/web/api/webgwwendewingcontext/texsubimage2d)
+  - : m-met à jouw we s-sous-wectangwe d-de w'objet `webgwtextuwe` couwant. (U ﹏ U)
+- [`webgwwendewingcontext.texpawametewf()`](/fw/docs/web/api/webgwwendewingcontext/texpawametew)
+  - : d-définit w-wes pawamètwes d-de textuwe. o.O
+- [`webgwwendewingcontext.texpawametewi()`](/fw/docs/web/api/webgwwendewingcontext/texpawametew)
+  - : d-définit wes p-pawamètwes de t-textuwe. OwO
 
-## Programmes et <i lang="en">shaders</i>
+## pwogwammes e-et <i w-wang="en">shadews</i>
 
-- [`WebGLRenderingContext.attachShader()`](/fr/docs/Web/API/WebGLRenderingContext/attachShader)
-  - : Attache un `WebGLShader` à un `WebGLProgram`.
-- [`WebGLRenderingContext.bindAttribLocation()`](/fr/docs/Web/API/WebGLRenderingContext/bindAttribLocation)
-  - : Lie un index de sommet générique à une variable d'attribut nommée.
-- [`WebGLRenderingContext.compileShader()`](/fr/docs/Web/API/WebGLRenderingContext/compileShader)
-  - : Compile un `WebGLShader`.
-- [`WebGLRenderingContext.createProgram()`](/fr/docs/Web/API/WebGLRenderingContext/createProgram)
-  - : Crée un `WebGLProgram`.
-- [`WebGLRenderingContext.createShader()`](/fr/docs/Web/API/WebGLRenderingContext/createShader)
-  - : Crée un `WebGLShader`.
-- [`WebGLRenderingContext.deleteProgram()`](/fr/docs/Web/API/WebGLRenderingContext/deleteProgram)
-  - : Supprime un `WebGLProgram`.
-- [`WebGLRenderingContext.deleteShader()`](/fr/docs/Web/API/WebGLRenderingContext/deleteShader)
-  - : Supprime un `WebGLShader`.
-- [`WebGLRenderingContext.detachShader()`](/fr/docs/Web/API/WebGLRenderingContext/detachShader)
-  - : Détache un `WebGLShader`.
-- [`WebGLRenderingContext.getAttachedShaders()`](/fr/docs/Web/API/WebGLRenderingContext/getAttachedShaders)
-  - : Renvoie une liste d'objets `WebGLShader` attachés à un `WebGLProgram`.
-- [`WebGLRenderingContext.getProgramParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getProgramParameter)
-  - : Renvoie des informations à propos du programme.
-- [`WebGLRenderingContext.getProgramInfoLog()`](/fr/docs/Web/API/WebGLRenderingContext/getProgramInfoLog)
-  - : Renvoie le journal d'informations pour un objet `WebGLProgram`.
-- [`WebGLRenderingContext.getShaderParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getShaderParameter)
-  - : Renvoie des informations à propos du <i lang="en">shader</i>.
-- [`WebGLRenderingContext.getShaderPrecisionFormat()`](/fr/docs/Web/API/WebGLRenderingContext/getShaderPrecisionFormat)
-  - : Renvoie un objet `WebGLShaderPrecisionFormat` décrivant la précision pour le format numérique du <i lang="en">shader</i>.
-- [`WebGLRenderingContext.getShaderInfoLog()`](/fr/docs/Web/API/WebGLRenderingContext/getShaderInfoLog)
-  - : Renvoie le journal d'informations pour un objet `WebGLShader`.
-- [`WebGLRenderingContext.getShaderSource()`](/fr/docs/Web/API/WebGLRenderingContext/getShaderSource)
-  - : Renvoie le code source d'un `WebGLShader` sous la forme d'une chaîne de caractères.
-- [`WebGLRenderingContext.isProgram()`](/fr/docs/Web/API/WebGLRenderingContext/isProgram)
-  - : Renvoie un booléen indiquant si l'objet `WebGLProgram` passé est valide.
-- [`WebGLRenderingContext.isShader()`](/fr/docs/Web/API/WebGLRenderingContext/isShader)
-  - : Renvoie un booléen indiquant si l'objet `WebGLShader` passé est valide.
-- [`WebGLRenderingContext.linkProgram()`](/fr/docs/Web/API/WebGLRenderingContext/linkProgram)
-  - : Effectue les liaisons pour l'objet `WebGLProgram` passé.
-- [`WebGLRenderingContext.shaderSource()`](/fr/docs/Web/API/WebGLRenderingContext/shaderSource)
-  - : Définit le code source d'un `WebGLShader`.
-- [`WebGLRenderingContext.useProgram()`](/fr/docs/Web/API/WebGLRenderingContext/useProgram)
-  - : Utilise le `WebGLProgram` indiqué comme partie de l'état de rendu courant.
-- [`WebGLRenderingContext.validateProgram()`](/fr/docs/Web/API/WebGLRenderingContext/validateProgram)
-  - : Valide un `WebGLProgram`.
+- [`webgwwendewingcontext.attachshadew()`](/fw/docs/web/api/webgwwendewingcontext/attachshadew)
+  - : attache u-un `webgwshadew` à un `webgwpwogwam`.
+- [`webgwwendewingcontext.bindattwibwocation()`](/fw/docs/web/api/webgwwendewingcontext/bindattwibwocation)
+  - : w-wie un index de sommet g-généwique à u-une vawiabwe d-d'attwibut nyommée. ^•ﻌ•^
+- [`webgwwendewingcontext.compiweshadew()`](/fw/docs/web/api/webgwwendewingcontext/compiweshadew)
+  - : compiwe un `webgwshadew`. ʘwʘ
+- [`webgwwendewingcontext.cweatepwogwam()`](/fw/docs/web/api/webgwwendewingcontext/cweatepwogwam)
+  - : cwée un `webgwpwogwam`. :3
+- [`webgwwendewingcontext.cweateshadew()`](/fw/docs/web/api/webgwwendewingcontext/cweateshadew)
+  - : cwée u-un `webgwshadew`. 😳
+- [`webgwwendewingcontext.dewetepwogwam()`](/fw/docs/web/api/webgwwendewingcontext/dewetepwogwam)
+  - : suppwime u-un `webgwpwogwam`. òωó
+- [`webgwwendewingcontext.deweteshadew()`](/fw/docs/web/api/webgwwendewingcontext/deweteshadew)
+  - : s-suppwime un `webgwshadew`. 🥺
+- [`webgwwendewingcontext.detachshadew()`](/fw/docs/web/api/webgwwendewingcontext/detachshadew)
+  - : détache un `webgwshadew`. rawr x3
+- [`webgwwendewingcontext.getattachedshadews()`](/fw/docs/web/api/webgwwendewingcontext/getattachedshadews)
+  - : wenvoie une wiste d'objets `webgwshadew` a-attachés à u-un `webgwpwogwam`. ^•ﻌ•^
+- [`webgwwendewingcontext.getpwogwampawametew()`](/fw/docs/web/api/webgwwendewingcontext/getpwogwampawametew)
+  - : wenvoie d-des infowmations à p-pwopos du pwogwamme. :3
+- [`webgwwendewingcontext.getpwogwaminfowog()`](/fw/docs/web/api/webgwwendewingcontext/getpwogwaminfowog)
+  - : wenvoie we jouwnaw d-d'infowmations pouw u-un objet `webgwpwogwam`. (ˆ ﻌ ˆ)♡
+- [`webgwwendewingcontext.getshadewpawametew()`](/fw/docs/web/api/webgwwendewingcontext/getshadewpawametew)
+  - : wenvoie d-des infowmations à p-pwopos du <i wang="en">shadew</i>.
+- [`webgwwendewingcontext.getshadewpwecisionfowmat()`](/fw/docs/web/api/webgwwendewingcontext/getshadewpwecisionfowmat)
+  - : wenvoie u-un objet `webgwshadewpwecisionfowmat` d-décwivant wa pwécision pouw we fowmat n-nyuméwique du <i wang="en">shadew</i>. (U ᵕ U❁)
+- [`webgwwendewingcontext.getshadewinfowog()`](/fw/docs/web/api/webgwwendewingcontext/getshadewinfowog)
+  - : wenvoie w-we jouwnaw d'infowmations pouw un o-objet `webgwshadew`. :3
+- [`webgwwendewingcontext.getshadewsouwce()`](/fw/docs/web/api/webgwwendewingcontext/getshadewsouwce)
+  - : w-wenvoie we code souwce d'un `webgwshadew` s-sous w-wa fowme d'une chaîne de cawactèwes. ^^;;
+- [`webgwwendewingcontext.ispwogwam()`](/fw/docs/web/api/webgwwendewingcontext/ispwogwam)
+  - : w-wenvoie un boowéen indiquant s-si w'objet `webgwpwogwam` p-passé est vawide. ( ͡o ω ͡o )
+- [`webgwwendewingcontext.isshadew()`](/fw/docs/web/api/webgwwendewingcontext/isshadew)
+  - : w-wenvoie un boowéen i-indiquant si w'objet `webgwshadew` p-passé e-est vawide. o.O
+- [`webgwwendewingcontext.winkpwogwam()`](/fw/docs/web/api/webgwwendewingcontext/winkpwogwam)
+  - : e-effectue wes wiaisons pouw w'objet `webgwpwogwam` p-passé. ^•ﻌ•^
+- [`webgwwendewingcontext.shadewsouwce()`](/fw/docs/web/api/webgwwendewingcontext/shadewsouwce)
+  - : définit we code souwce d'un `webgwshadew`.
+- [`webgwwendewingcontext.usepwogwam()`](/fw/docs/web/api/webgwwendewingcontext/usepwogwam)
+  - : u-utiwise w-we `webgwpwogwam` i-indiqué comme pawtie de w'état de wendu couwant. XD
+- [`webgwwendewingcontext.vawidatepwogwam()`](/fw/docs/web/api/webgwwendewingcontext/vawidatepwogwam)
+  - : vawide un `webgwpwogwam`. ^^
 
-## Uniformes et attributs
+## u-unifowmes et attwibuts
 
-- [`WebGLRenderingContext.disableVertexAttribArray()`](/fr/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray)
-  - : Désactive un tableau d'attribut de sommet à une position donnée.
-- [`WebGLRenderingContext.enableVertexAttribArray()`](/fr/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray)
-  - : Active un tableau d'attribut de sommet à une position donnée.
-- [`WebGLRenderingContext.getActiveAttrib()`](/fr/docs/Web/API/WebGLRenderingContext/getActiveAttrib)
-  - : Renvoie des informations à propos d'une variable d'attribut active.
-- [`WebGLRenderingContext.getActiveUniform()`](/fr/docs/Web/API/WebGLRenderingContext/getActiveUniform)
-  - : Renvoie des informations à propos d'une variable d'uniforme active.
-- [`WebGLRenderingContext.getAttribLocation()`](/fr/docs/Web/API/WebGLRenderingContext/getAttribLocation)
-  - : Renvoie l'emplacement d'une variable d'attribut.
-- [`WebGLRenderingContext.getUniform()`](/fr/docs/Web/API/WebGLRenderingContext/getUniform)
-  - : Renvoie la valeur d'une variable d'uniforme à un emplacement donné.
-- [`WebGLRenderingContext.getUniformLocation()`](/fr/docs/Web/API/WebGLRenderingContext/getUniformLocation)
-  - : Renvoie l'emplacement d'une variable d'uniforme.
-- [`WebGLRenderingContext.getVertexAttrib()`](/fr/docs/Web/API/WebGLRenderingContext/getVertexAttrib)
-  - : Renvoie les informations à propos d'un attribut de sommet à une position donnée.
-- [`WebGLRenderingContext.getVertexAttribOffset()`](/fr/docs/Web/API/WebGLRenderingContext/getVertexAttribOffset)
-  - : Renvoie l'adresse d'un attribut de sommet donné.
-- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/fr/docs/Web/API/WebGLRenderingContext/uniform)
-  - : Définit une valeur pour une variable d'uniforme.
-- [`WebGLRenderingContext.uniformMatrix[234]fv()`](/fr/docs/Web/API/WebGLRenderingContext/uniformMatrix)
-  - : Définit la valeur matricielle pour une variable d'uniforme.
-- [`WebGLRenderingContext.vertexAttrib[1234]f[v]()`](/fr/docs/Web/API/WebGLRenderingContext/vertexAttrib)
-  - : Définit une valeur pour un attribut de sommet générique.
-- [`WebGLRenderingContext.vertexAttribPointer()`](/fr/docs/Web/API/WebGLRenderingContext/vertexAttribPointer)
-  - : Définit les formats de données et les emplacements des attributs de sommet dans un tableau d'attributs de sommet.
+- [`webgwwendewingcontext.disabwevewtexattwibawway()`](/fw/docs/web/api/webgwwendewingcontext/disabwevewtexattwibawway)
+  - : d-désactive u-un tabweau d'attwibut de sommet à une position d-donnée. o.O
+- [`webgwwendewingcontext.enabwevewtexattwibawway()`](/fw/docs/web/api/webgwwendewingcontext/enabwevewtexattwibawway)
+  - : active u-un tabweau d'attwibut d-de sommet à u-une position d-donnée. ( ͡o ω ͡o )
+- [`webgwwendewingcontext.getactiveattwib()`](/fw/docs/web/api/webgwwendewingcontext/getactiveattwib)
+  - : w-wenvoie des infowmations à pwopos d'une vawiabwe d'attwibut active. /(^•ω•^)
+- [`webgwwendewingcontext.getactiveunifowm()`](/fw/docs/web/api/webgwwendewingcontext/getactiveunifowm)
+  - : w-wenvoie des infowmations à p-pwopos d'une vawiabwe d'unifowme active. 🥺
+- [`webgwwendewingcontext.getattwibwocation()`](/fw/docs/web/api/webgwwendewingcontext/getattwibwocation)
+  - : wenvoie w'empwacement d-d'une vawiabwe d'attwibut. nyaa~~
+- [`webgwwendewingcontext.getunifowm()`](/fw/docs/web/api/webgwwendewingcontext/getunifowm)
+  - : wenvoie wa vaweuw d'une vawiabwe d'unifowme à u-un empwacement d-donné. mya
+- [`webgwwendewingcontext.getunifowmwocation()`](/fw/docs/web/api/webgwwendewingcontext/getunifowmwocation)
+  - : wenvoie w-w'empwacement d'une vawiabwe d'unifowme. XD
+- [`webgwwendewingcontext.getvewtexattwib()`](/fw/docs/web/api/webgwwendewingcontext/getvewtexattwib)
+  - : wenvoie wes i-infowmations à p-pwopos d'un attwibut de sommet à u-une position donnée. nyaa~~
+- [`webgwwendewingcontext.getvewtexattwiboffset()`](/fw/docs/web/api/webgwwendewingcontext/getvewtexattwiboffset)
+  - : w-wenvoie w'adwesse d'un attwibut de sommet donné. ʘwʘ
+- [`webgwwendewingcontext.unifowm[1234][fi][v]()`](/fw/docs/web/api/webgwwendewingcontext/unifowm)
+  - : définit u-une vaweuw pouw une vawiabwe d'unifowme. (⑅˘꒳˘)
+- [`webgwwendewingcontext.unifowmmatwix[234]fv()`](/fw/docs/web/api/webgwwendewingcontext/unifowmmatwix)
+  - : définit w-wa vaweuw m-matwiciewwe pouw u-une vawiabwe d'unifowme. :3
+- [`webgwwendewingcontext.vewtexattwib[1234]f[v]()`](/fw/docs/web/api/webgwwendewingcontext/vewtexattwib)
+  - : définit u-une vaweuw pouw un attwibut de sommet généwique. -.-
+- [`webgwwendewingcontext.vewtexattwibpointew()`](/fw/docs/web/api/webgwwendewingcontext/vewtexattwibpointew)
+  - : définit wes fowmats d-de données et w-wes empwacements d-des attwibuts de s-sommet dans un tabweau d'attwibuts de sommet. 😳😳😳
 
-## Dessiner les tampons
+## d-dessinew wes t-tampons
 
-- [`WebGLRenderingContext.clear()`](/fr/docs/Web/API/WebGLRenderingContext/clear)
-  - : Nettoie les tampons indiqués avec les valeurs prédéfinies.
-- [`WebGLRenderingContext.drawArrays()`](/fr/docs/Web/API/WebGLRenderingContext/drawArrays)
-  - : Effectue le rendu des primitives à partir des données de tableaux.
-- [`WebGLRenderingContext.drawElements()`](/fr/docs/Web/API/WebGLRenderingContext/drawElements)
-  - : Effectue le rendu des primitives à partir des données d'élément.
-- [`WebGLRenderingContext.finish()`](/fr/docs/Web/API/WebGLRenderingContext/finish)
-  - : Bloque l'exécution jusqu'à ce que les commandes précédemment appelées soient terminées.
-- [`WebGLRenderingContext.flush()`](/fr/docs/Web/API/WebGLRenderingContext/flush)
-  - : Vide les différents tampons de commandes, entraînant l'exécution la plus rapide possible pour toutes les commandes.
+- [`webgwwendewingcontext.cweaw()`](/fw/docs/web/api/webgwwendewingcontext/cweaw)
+  - : nyettoie wes tampons indiqués a-avec wes vaweuws pwédéfinies. (U ﹏ U)
+- [`webgwwendewingcontext.dwawawways()`](/fw/docs/web/api/webgwwendewingcontext/dwawawways)
+  - : effectue we wendu d-des pwimitives à pawtiw des données de tabweaux. o.O
+- [`webgwwendewingcontext.dwawewements()`](/fw/docs/web/api/webgwwendewingcontext/dwawewements)
+  - : e-effectue w-we wendu des pwimitives à p-pawtiw des données d-d'éwément. ( ͡o ω ͡o )
+- [`webgwwendewingcontext.finish()`](/fw/docs/web/api/webgwwendewingcontext/finish)
+  - : b-bwoque w'exécution jusqu'à ce que w-wes commandes pwécédemment appewées soient tewminées. òωó
+- [`webgwwendewingcontext.fwush()`](/fw/docs/web/api/webgwwendewingcontext/fwush)
+  - : v-vide wes difféwents tampons de commandes, 🥺 entwaînant w'exécution w-wa pwus wapide p-possibwe pouw t-toutes wes commandes. /(^•ω•^)
 
-## Utiliser les extensions
+## u-utiwisew w-wes extensions
 
-Ces méthodes permettent de gérer les extensions WebGL&nbsp;:
+ces méthodes p-pewmettent de géwew wes extensions webgw&nbsp;:
 
-- [`WebGLRenderingContext.getSupportedExtensions()`](/fr/docs/Web/API/WebGLRenderingContext/getSupportedExtensions)
-  - : Renvoie un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de chaînes de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)). Les éléments sont les noms des extensions WebGL prises en charge.
-- [`WebGLRenderingContext.getExtension()`](/fr/docs/Web/API/WebGLRenderingContext/getExtension)
-  - : Renvoie un objet d'extension.
+- [`webgwwendewingcontext.getsuppowtedextensions()`](/fw/docs/web/api/webgwwendewingcontext/getsuppowtedextensions)
+  - : w-wenvoie un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) de chaînes d-de cawactèwes ([`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)). 😳😳😳 wes éwéments sont w-wes nyoms des extensions w-webgw pwises en chawge. ^•ﻌ•^
+- [`webgwwendewingcontext.getextension()`](/fw/docs/web/api/webgwwendewingcontext/getextension)
+  - : w-wenvoie un objet d'extension. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)
+- [`htmwcanvasewement`](/fw/docs/web/api/htmwcanvasewement)

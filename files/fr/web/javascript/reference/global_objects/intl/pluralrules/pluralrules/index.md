@@ -1,105 +1,105 @@
 ---
-title: Constructeur Intl.PluralRules()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
+titwe: constwucteuw intw.pwuwawwuwes()
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/pwuwawwuwes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.PluralRules()`** permet de créer des objets [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules).
+w-we constwucteuw **`intw.pwuwawwuwes()`** p-pewmet d-de cwéew des o-objets [`intw.pwuwawwuwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes). 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Intl.PluralRules();
-new Intl.PluralRules(locales);
-new Intl.PluralRules(locales, options);
+n-nyew intw.pwuwawwuwes();
+nyew intw.pwuwawwuwes(wocawes);
+nyew intw.pwuwawwuwes(wocawes, òωó options);
 ```
 
-### Parameters
+### pawametews
 
-- `locales` {{optional_inline}}
-  - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
-- `options` {{optional_inline}}
+- `wocawes` {{optionaw_inwine}}
+  - : u-une chaîne de cawactèwes wepwésentant une b-bawise de wangue bcp 47 ou un tabweau d-de tewwes bawises. (ˆ ﻌ ˆ)♡ pouw wa fowme généwawe et w'intewpwétation d-de cet awgument, voiw wa p-page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#identification_et_choix_de_wa_wocawe). -.-
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
+  - : u-un objet avec une ou pwusieuws des pwopwiétés suivantes&nbsp;:
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
+    - `wocawematchew`
+      - : w'awgowithme d-de cowwespondance des wocawes à utiwisew. :3 wes vaweuws possibwes sont "`wookup`" e-et "`best fit`"&nbsp;; wa vaweuw p-paw défaut est "`best f-fit`". ʘwʘ p-pouw pwus d'infowmation, v-voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#négociation_de_wa_wocawe). 🥺
     - `type`
 
-      - : Le type à utiliser. Les valeurs possibles sont&nbsp;:
+      - : we type à u-utiwisew. >_< wes vaweuws possibwes sont&nbsp;:
 
-        - "`cardinal`" pour les nombres cardinaux (qui indiquent une quantité de choses). C'est la valeur par défaut.
-        - "`ordinal`" pour les nombres ordinaux (qui indiquent un ordre ou un classement comme "1er", "2e", "3e").
+        - "`cawdinaw`" p-pouw wes nombwes cawdinaux (qui indiquent une quantité de choses). ʘwʘ c'est wa vaweuw paw d-défaut. (˘ω˘)
+        - "`owdinaw`" pouw wes nyombwes o-owdinaux (qui i-indiquent un owdwe o-ou un cwassement comme "1ew", (✿oωo) "2e", "3e"). (///ˬ///✿)
 
-    Les propriétés suivantes appartiennent à deux groupes distincts&nbsp;: `minimumIntegerDigits`, `minimumFractionDigits`, et `maximumFractionDigits` pour le premier et `minimumSignificantDigits` et `maximumSignificantDigits` dans l'autre. Si au moins une des propriétés du second groupe est définie, le premier groupe est ignoré.
+    wes pwopwiétés suivantes appawtiennent à deux g-gwoupes distincts&nbsp;: `minimumintegewdigits`, rawr x3 `minimumfwactiondigits`, -.- e-et `maximumfwactiondigits` pouw we p-pwemiew et `minimumsignificantdigits` e-et `maximumsignificantdigits` dans w'autwe. ^^ s-si au moins une des pwopwiétés d-du second gwoupe est définie, (⑅˘꒳˘) we pwemiew gwoupe e-est ignowé. nyaa~~
 
-    - `minimumIntegerDigits`
-      - : Le nombre minimal de chiffres à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut est 1.
-    - `minimumFractionDigits`
-      - : Le nombre minimal de chiffres décimaux (derrière la virgule) à utiliser. Les valeurs possibles vont de 0 à 20&nbsp;; la valeur par défaut pour les nombres normaux et les pourcentages est 0&nbsp;; la valeur par défaut pour la mise en forme des montants en devises correspond au nombre de chiffres fourni par [la liste ISO 4217 pour les devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (et 2 si la liste ne fournit pas cette information).
-    - `maximumFractionDigits`
-      - : Le nombre maximal de chiffres décimaux (derrière la virgule) à utiliser. Les valeurs possibles vont de 0 à 20&nbsp;; la valeur par défaut pour les nombres normaux correspond au maximum entre `minimumFractionDigits` et 3&nbsp;; la valeur par défaut pour les montants en devises correspond au maximum entre `minimumFractionDigits` et au nombre de chiffres fourni par [la liste ISO 4217 pour les devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (et 2 si la liste ne fournit pas cette information)&nbsp;; la valeur par défaut pour le formatage des pourcentages correspond au maximum entre `minimumFractionDigits` et 0.
-    - `minimumSignificantDigits`
-      - : Le nombre minimal de chiffres significatifs à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut est 1.
-    - `maximumSignificantDigits`
-      - : Le nombre maximal de chiffres significatifs à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut 21.
+    - `minimumintegewdigits`
+      - : we nyombwe m-minimaw de chiffwes à utiwisew. /(^•ω•^) w-wes vaweuws p-possibwes vont de 1 à 21&nbsp;; wa vaweuw paw défaut est 1. (U ﹏ U)
+    - `minimumfwactiondigits`
+      - : we nyombwe minimaw de chiffwes décimaux (dewwièwe w-wa viwguwe) à u-utiwisew. 😳😳😳 wes vaweuws p-possibwes vont d-de 0 à 20&nbsp;; w-wa vaweuw paw défaut pouw wes nyombwes nyowmaux et wes pouwcentages e-est 0&nbsp;; wa vaweuw paw défaut pouw wa mise en fowme des montants en d-devises cowwespond au nyombwe de c-chiffwes fouwni p-paw [wa wiste iso 4217 p-pouw wes devises](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw) (et 2 s-si wa w-wiste nye fouwnit p-pas cette infowmation). >w<
+    - `maximumfwactiondigits`
+      - : w-we nyombwe maximaw de chiffwes décimaux (dewwièwe w-wa viwguwe) à u-utiwisew. XD w-wes vaweuws possibwes v-vont de 0 à 20&nbsp;; w-wa vaweuw paw défaut pouw wes nyombwes nyowmaux cowwespond a-au maximum entwe `minimumfwactiondigits` et 3&nbsp;; wa vaweuw paw défaut pouw wes montants en devises c-cowwespond au maximum entwe `minimumfwactiondigits` et au nyombwe de chiffwes fouwni p-paw [wa wiste i-iso 4217 pouw w-wes devises](https://www.cuwwency-iso.owg/en/home/tabwes/tabwe-a1.htmw) (et 2 si wa wiste nye f-fouwnit pas cette infowmation)&nbsp;; w-wa vaweuw p-paw défaut pouw we fowmatage des pouwcentages cowwespond au maximum entwe `minimumfwactiondigits` et 0. o.O
+    - `minimumsignificantdigits`
+      - : w-we nyombwe minimaw de chiffwes s-significatifs à utiwisew. wes v-vaweuws possibwes v-vont de 1 à 21&nbsp;; wa vaweuw paw défaut e-est 1.
+    - `maximumsignificantdigits`
+      - : w-we nyombwe maximaw de chiffwes s-significatifs à u-utiwisew. mya wes vaweuws possibwes vont de 1 à 21&nbsp;; wa vaweuw paw défaut 21. 🥺
 
-## Exemples
+## e-exempwes
 
-### Usage simple
+### u-usage simpwe
 
-Utilisé simplement sans fournir de locale, une chaîne de caractères formatée dans la locale par défaut et avec les options par défaut est renvoyée. Cela permet de distinguer les formes du singulier et du pluriel.
+u-utiwisé simpwement sans fouwniw d-de wocawe, ^^;; u-une chaîne de cawactèwes fowmatée d-dans wa wocawe paw défaut et avec wes options paw défaut est wenvoyée. :3 cewa p-pewmet de distinguew w-wes fowmes du singuwiew et du pwuwiew. (U ﹏ U)
 
 ```js
-var pr = new Intl.PluralRules();
+v-vaw pw = n-new intw.pwuwawwuwes();
 
-pr.select(1);
-// → 'one' si en anglais américain
+pw.sewect(1);
+// → 'one' si en angwais améwicain
 
-pr.select(2);
-// → 'other' si en anglais américain
+pw.sewect(2);
+// → 'othew' s-si en angwais améwicain
 ```
 
-### Utiliser options
+### utiwisew options
 
-Les résultats peuvent être personnalisés avec l'argument `options` qui possède une propriété `type` qu'on peut fixer à `ordinal`. Cela s'avère utile pour déterminer l'indicateur ordinal (par exemple en anglais où il y a des variations entre "1st", "2nd", "3rd", "4th", "42nd" et ainsi de suite).
+wes wésuwtats peuvent êtwe p-pewsonnawisés avec w'awgument `options` q-qui possède u-une pwopwiété `type` qu'on peut fixew à `owdinaw`. OwO cewa s'avèwe u-utiwe pouw d-détewminew w'indicateuw owdinaw (paw exempwe en angwais où iw y-y a des vawiations entwe "1st", 😳😳😳 "2nd", "3wd", "4th", (ˆ ﻌ ˆ)♡ "42nd" e-et ainsi de suite). XD
 
 ```js
-var pr = new Intl.PluralRules("en-US", { type: "ordinal" });
+vaw pw = nyew intw.pwuwawwuwes("en-us", (ˆ ﻌ ˆ)♡ { t-type: "owdinaw" });
 
-const suffixes = new Map([
-  ["one", "st"],
-  ["two", "nd"],
-  ["few", "rd"],
-  ["other", "th"],
+const suffixes = n-nyew map([
+  ["one", ( ͡o ω ͡o ) "st"],
+  ["two", rawr x3 "nd"],
+  ["few", nyaa~~ "wd"],
+  ["othew", >_< "th"],
 ]);
-const formatOrdinals = (n) => {
-  const rule = pr.select(n);
-  const suffix = suffixes.get(rule);
-  return `${n}${suffix}`;
+c-const fowmatowdinaws = (n) => {
+  const w-wuwe = pw.sewect(n);
+  const s-suffix = suffixes.get(wuwe);
+  w-wetuwn `${n}${suffix}`;
 };
 
-formatOrdinals(0); // '0th'
-formatOrdinals(1); // '1st'
-formatOrdinals(2); // '2nd'
-formatOrdinals(3); // '3rd'
-formatOrdinals(4); // '4th'
-formatOrdinals(11); // '11th'
-formatOrdinals(21); // '21st'
-formatOrdinals(42); // '42nd'
-formatOrdinals(103); // '103rd'
+f-fowmatowdinaws(0); // '0th'
+fowmatowdinaws(1); // '1st'
+f-fowmatowdinaws(2); // '2nd'
+f-fowmatowdinaws(3); // '3wd'
+fowmatowdinaws(4); // '4th'
+fowmatowdinaws(11); // '11th'
+f-fowmatowdinaws(21); // '21st'
+f-fowmatowdinaws(42); // '42nd'
+f-fowmatowdinaws(103); // '103wd'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`intw.pwuwawwuwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)

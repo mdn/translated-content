@@ -1,80 +1,80 @@
 ---
-title: "HTMLElement : méthode showPopover()"
-slug: Web/API/HTMLElement/showPopover
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: "htmwewement : méthode s-showpopovew()"
+s-swug: web/api/htmwewement/showpopovew
+w-w10n:
+  souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`showPopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) affiche un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en l'ajoutant à [la couche supérieure](/fr/docs/Glossary/Top_layer).
+w-wa méthode **`showpopovew()`** d-de w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) a-affiche un éwément [<i w-wang="en">popovew</i>](/fw/docs/web/api/popovew_api) (c'est-à-diwe un éwément qui a un attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew) vawide) en w-w'ajoutant à [wa couche supéwieuwe](/fw/docs/gwossawy/top_wayew). (///ˬ///✿)
 
-Lorsque `showPopover()` est appelée sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) qui est actuellement masqué&nbsp;:
+wowsque `showpopovew()` e-est appewée suw un éwément a-avec w'attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew) qui est actuewwement masqué&nbsp;:
 
-1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
-2. Le <i lang="en">popover</i> est affiché.
-3. L'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est déclenché.
+1. >w< u-un évènement [`befowetoggwe`](/fw/docs/web/api/htmwewement/befowetoggwe_event) est d-décwenché. rawr
+2. w-we <i wang="en">popovew</i> est affiché. mya
+3. w'évènement [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event) est décwenché. ^^
 
-Si l'élément est déjà visible, une erreur est lancée.
+si w'éwément e-est déjà visibwe, 😳😳😳 une ewweuw est wancée. mya
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-showPopover()
+```js-nowint
+showpopovew()
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. 😳
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). -.-
 
-### Exceptions
+### e-exceptions
 
-- `InvalidStateError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Lancée si le <i lang="en">popover</i> est déjà affiché.
+- `invawidstateewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : w-wancée s-si we <i wang="en">popovew</i> est déjà affiché.
 
-## Exemples
+## exempwes
 
-L'exemple suivant définit un comportement pour afficher un popover en appuyant sur une touche particulière du clavier.
+w-w'exempwe suivant définit un compowtement p-pouw affichew un popovew en appuyant suw une touche pawticuwièwe du cwaview. 🥺
 
-### HTML
+### htmw
 
-```html
-<button popovertarget="mypopover">Basculer l'affichage du popover</button>
+```htmw
+<button p-popovewtawget="mypopovew">bascuwew w'affichage d-du popovew</button>
 <p>
-  Vous pouvez appuyer sur la touche <kbd>h</kbd> de votre clavier pour afficher
-  le popover.
+  v-vous pouvez appuyew s-suw wa touche <kbd>h</kbd> de votwe cwaview pouw affichew
+  we popovew. o.O
 </p>
-<div id="mypopover" popover="manual">Coucou</div>
+<div i-id="mypopovew" p-popovew="manuaw">coucou</div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const popover = document.getElementById("mypopover");
+const popovew = d-document.getewementbyid("mypopovew");
 
-document.addEventListener("keydown", (event) => {
+d-document.addeventwistenew("keydown", /(^•ω•^) (event) => {
   if (event.key === "h") {
-    popover.showPopover();
+    p-popovew.showpopovew();
   }
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("","100%",100)}}
+{{embedwivesampwe("","100%",100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api p-popovew](/fw/docs/web/api/popovew_api)

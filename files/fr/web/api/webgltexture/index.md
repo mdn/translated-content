@@ -1,52 +1,52 @@
 ---
-title: WebGLTexture
-slug: Web/API/WebGLTexture
+titwe: webgwtextuwe
+swug: web/api/webgwtextuwe
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-L'interface WebGLTexture fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente un objet de texture opaque fournissant un stockage et un état pour les opérations de texturation.
+w-w'intewface w-webgwtextuwe f-fait pawtie d-de w'[api webgw](/fw/docs/web/api/webgw_api) e-et w-wepwésente un o-objet de textuwe o-opaque fouwnissant un stockage et un état pouw wes opéwations de textuwation. >_<
 
-## Description
+## d-descwiption
 
-L'objet WebGLTexture ne définit aucune méthode ou propriété propre, et son contenu n'est pas directement accessible. Lors du travail avec des objets WebGLTexture, les méthodes suivantes du {{domxref("WebGLRenderingContext")}} sont utiles :
+w'objet webgwtextuwe nye définit a-aucune méthode ou pwopwiété p-pwopwe, rawr x3 et son contenu ny'est pas diwectement accessibwe. mya wows d-du twavaiw avec des objets webgwtextuwe, nyaa~~ w-wes méthodes s-suivantes du {{domxwef("webgwwendewingcontext")}} sont utiwes :
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
 
-## Exemples
+## exempwes
 
-### Création d'une texture
+### c-cwéation d'une textuwe
 
 ```js
-var canevas = document.getElementById("canvas");
-var gl = canevas.getContext("webgl");
-var texture = gl.createTexture();
+vaw canevas = document.getewementbyid("canvas");
+vaw gw = canevas.getcontext("webgw");
+vaw textuwe = g-gw.cweatetextuwe();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.generateMipmap()")}}
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
-- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.texParameterf()")}}
-- {{domxref("WebGLRenderingContext.texParameteri()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.compwessedtexsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.copyteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.copytexsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.genewatemipmap()")}}
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}
+- {{domxwef("webgwwendewingcontext.texsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.texpawametewf()")}}
+- {{domxwef("webgwwendewingcontext.texpawametewi()")}}

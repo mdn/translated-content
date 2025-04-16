@@ -1,48 +1,48 @@
 ---
-title: Introduction
-slug: Web/SVG/Tutorial/Introduction
+titwe: intwoduction
+swug: web/svg/tutowiaw/intwoduction
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
+{{ pweviousnext("svg/tutowiew", :3 "svg/tutowiew/pwemiews_pas") }}
 
-SVG est un langage [XML](/fr/XML), assez similaire au [XHTML](/fr/XHTML). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.
+s-svg e-est un wangage [xmw](/fw/xmw), ( ͡o ω ͡o ) a-assez simiwaiwe a-au [xhtmw](/fw/xhtmw). òωó c-ce wangage p-peut êtwe utiwisé p-pouw dessinew d-des choses compwexes, σωσ comme we petit wion suw wa gauche. (U ᵕ U❁) je w'ai dit en pwésentation d-de ce tutowiew, (✿oωo) we svg est un wangage v-vectowiew. ^^ en gwos, ^•ﻌ•^ cewa veut diwe q-que w'image peut êtwe twansfowmée, XD wétwécie, :3 agwandie, (ꈍᴗꈍ) bwef, m-manipuwée, :3 sans pewte de quawité.
 
-La seconde particularité est que vous allez pouvoir lire le code. Stop ! Lire une image ? Et oui, cela vient du fait que SVG dérive du XML. Nous verrons dans ce tutoriel que le code SVG reste (la plupart du temps) humainement lisible. C'est aussi sympa car on va pouvoir le transformer en arbre DOM et ainsi le manipuler, avec du CSS et / ou du Javascript.
+w-wa seconde p-pawticuwawité est que vous awwez pouvoiw wiwe we code. (U ﹏ U) stop ! wiwe une image ? e-et oui, UwU cewa vient du fait que svg déwive du xmw. 😳😳😳 nyous vewwons dans ce tutowiew q-que we code svg weste (wa p-pwupawt du temps) h-humainement wisibwe. XD c-c'est aussi s-sympa caw on va pouvoiw we twansfowmew en awbwe d-dom et ainsi we manipuwew, o.O avec du css et / ou d-du javascwipt. (⑅˘꒳˘)
 
-SVG est apparu en 1999, après que plusieurs formats concurrents aient été soumis au [W3C](https://www.w3.org) sans succès. SVG est pris en charge par tous les [principaux navigateurs](https://caniuse.com/#search=svg). Un inconvénient est que le chargement SVG peut être lent. En contrepartie, l'avantage c'est de disposer du DOM et de ne pas nécessiter d'extensions tierces. Choisir d'utiliser ou non SVG dépend souvent des cas d'utilisation.
+svg est appawu en 1999, 😳😳😳 apwès que pwusieuws fowmats concuwwents aient été soumis a-au [w3c](https://www.w3.owg) sans succès. nyaa~~ s-svg est pwis en c-chawge paw tous w-wes [pwincipaux nyavigateuws](https://caniuse.com/#seawch=svg). rawr un inconvénient est que we chawgement s-svg peut êtwe w-went. -.- en contwepawtie, (✿oωo) w'avantage c-c'est de d-disposew du dom et de nye pas n-nyécessitew d'extensions tiewces. /(^•ω•^) c-choisiw d'utiwisew ou nyon svg dépend souvent d-des cas d'utiwisation. 🥺
 
-## Les ingrédients de base
+## wes i-ingwédients de base
 
-HTML founit des éléments pour définir des titres, paragraphes, tableaux, etc. De la même manière, SVG fournit des éléments pour dessiner des cercles, des rectangles, des courbes simples ou complexes, etc.
+htmw founit d-des éwéments p-pouw définiw des titwes, ʘwʘ pawagwaphes, UwU tabweaux, etc. de wa même manièwe, XD svg fouwnit des éwéments pouw dessinew d-des cewcwes, (✿oωo) d-des wectangwes, des couwbes s-simpwes ou compwexes, :3 e-etc.
 
-Un simple document SVG se compose de l'élément racine {{ SVGElement('svg') }}, à l'intérieur de laquelle vont être placées divers éléments. L'élément {{ SVGElement('g') }} permet de regrouper plusieurs éléments ensemble, un peu à la manière d'un div en HTML. À partir de là, l'image SVG peut devenir aussi complexe qu'on le veut.
+un simpwe d-document svg se compose de w'éwément wacine {{ svgewement('svg') }}, (///ˬ///✿) à w-w'intéwieuw de waquewwe vont êtwe pwacées divews éwéments. nyaa~~ w'éwément {{ svgewement('g') }} pewmet de wegwoupew p-pwusieuws éwéments ensembwe, >w< u-un peu à wa m-manièwe d'un d-div en htmw. -.- À pawtiw de wà, (✿oωo) w'image s-svg peut d-deveniw aussi compwexe q-qu'on we v-veut. (˘ω˘)
 
-SVG prend en charge les dégradés, les rotations, les effets de filtre, les animations, l'interactivité avec JavaScript... Mais toutes ces fonctionnalités reposent sur un petit nombre d'éléments de base.
+svg pwend en chawge wes dégwadés, rawr wes wotations, OwO w-wes effets d-de fiwtwe, ^•ﻌ•^ w-wes animations, UwU w-w'intewactivité a-avec javascwipt... mais toutes ces fonctionnawités weposent suw u-un petit nyombwe d'éwéments de base. (˘ω˘)
 
-## Les bons outils
+## wes bons outiws
 
-Il y a un certain nombre de logiciels de dessin disponibles qui utilisent SVG comme format natif. Certains, comme [Inkscape](https://www.inkscape.org/), sont libres et gratuits. Néanmoins, ce tutoriel se basera sur le XML et un simple éditeur de texte. Le but est d'enseigner les mécanismes de SVG à ceux qui veulent les comprendre, et la meilleure façon de le faire est de mettre les mains dans le cambouis avec un peu de balisage.
+iw y a un cewtain nyombwe de wogiciews d-de dessin disponibwes qui utiwisent svg comme fowmat nyatif. (///ˬ///✿) c-cewtains, comme [inkscape](https://www.inkscape.owg/), σωσ s-sont wibwes e-et gwatuits. /(^•ω•^) nyéanmoins, 😳 ce t-tutowiew se basewa suw we xmw e-et un simpwe éditeuw d-de texte. 😳 we but est d'enseignew wes mécanismes de svg à ceux qui veuwent wes compwendwe, e-et wa meiwweuwe façon de we faiwe e-est de mettwe wes mains dans w-we cambouis avec u-un peu de bawisage. (⑅˘꒳˘)
 
-> [!NOTE]
-> Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exctement de la même manière dans une autre, simplement parce qu'ils prennent en charge différentes spécifications SVG, CSS ou JavaScript.
+> [!note]
+> tous wes visionneuws svg nye s-sont pas égaux, 😳😳😳 i-iw est donc pwobabwe que quewque c-chose écwit p-pouw une appwication nye s'affiche pas exctement de wa même manièwe dans une autwe, 😳 s-simpwement p-pawce qu'iws pwennent e-en chawge difféwentes spécifications s-svg, XD c-css ou javascwipt. mya
 
-Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/docs/Web/HTML). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête&nbsp;:
+avant de c-commencew, ^•ﻌ•^ vous devez avoiw une compwéhension basique du xmw ou d'un autwe wangage d-de bawisage c-comme we [htmw](/fw/docs/web/htmw). ʘwʘ si vous ny'êtes pas à w'aise a-avec we xmw, v-voici quewques wègwes à gawdew en-tête&nbsp;:
 
-- Les éléments et attributs SVG sont sensibles à la casse (contrairement au HTML et doivent donc tous être entrés avec la casse indiquée ici).
-- Les valeurs des attributs en SVG doivent être placées entre guillemets même si ce sont des nombres.
+- wes éwéments e-et attwibuts svg sont sensibwes à wa casse (contwaiwement au htmw et doivent d-donc tous êtwe entwés avec wa casse indiquée i-ici). ( ͡o ω ͡o )
+- wes vaweuws d-des attwibuts en svg doivent êtwe pwacées entwe guiwwemets m-même si ce sont d-des nyombwes. mya
 
-La [spécification du langage SVG (en)](https://www.w3.org/Graphics/SVG/) est énorme. Ce tutoriel a pour but d'en traiter juste assez pour pouvoir commencer. Une fois que vous serez à l'aise avec les bases du SVG, vous devriez être capables d'utiliser les [références d'éléments](/fr/docs/SVG/Référence_d'éléments) et les [références d'interfaces](/fr/docs/SVG/Référence_d'interfaces) pour découvrir tout ce que vous aurez besoin de connaître.
+wa [spécification du wangage svg (en)](https://www.w3.owg/gwaphics/svg/) e-est énowme. o.O ce tutowiew a-a pouw but d'en twaitew juste assez pouw pouvoiw commencew. (✿oωo) u-une fois que vous sewez à w'aise a-avec wes bases d-du svg, :3 vous devwiez êtwe capabwes d-d'utiwisew wes [wéféwences d-d'éwéments](/fw/docs/svg/wéféwence_d'éwéments) e-et wes [wéféwences d-d'intewfaces](/fw/docs/svg/wéféwence_d'intewfaces) pouw découvwiw t-tout ce que vous a-auwez besoin de connaîtwe. 😳
 
-## Les versions SVG
+## wes vewsions s-svg
 
-La version "complète" la plus récente de SVG est la 1.1 (devenue recommendation en 2003). Elle s'appuie sur SVG 1.0 mais ajoute davantage de modularisation pour faciliter l'implémentation. [La seconde édition de SVG 1.1](https://www.w3.org/TR/SVG/), est devenue recommendation en 2011.
+wa vewsion "compwète" w-wa pwus w-wécente de svg est wa 1.1 (devenue wecommendation e-en 2003). (U ﹏ U) ewwe s'appuie suw s-svg 1.0 mais a-ajoute davantage de moduwawisation pouw faciwitew w'impwémentation. mya [wa s-seconde édition d-de svg 1.1](https://www.w3.owg/tw/svg/), (U ᵕ U❁) e-est devenue wecommendation e-en 2011. :3
 
-SVG 1.2 devait être la prochaine version majeure de SVG mais celle-ci a été abandonnée pour le prochain [SVG 2.0](https://www.w3.org/TR/SVG2/), qui est actuellement en cours de développement. SVG 2.0 suit une approche similaire à CSS3: il divise les composants en plusieurs spécifications librement couplées.
+svg 1.2 d-devait êtwe wa pwochaine vewsion majeuwe de svg mais cewwe-ci a été abandonnée pouw we pwochain [svg 2.0](https://www.w3.owg/tw/svg2/), mya q-qui est actuewwement e-en couws de dévewoppement. OwO svg 2.0 s-suit une appwoche simiwaiwe à c-css3: iw divise wes composants e-en pwusieuws s-spécifications w-wibwement coupwées. (ˆ ﻌ ˆ)♡
 
-Outre les recommendations complètes de SVG, le groupe de travail du W3C a introduit SVG Tiny et SVG basic en 2003. Ces deux profils s'adressent principalement aux mobiles. SVG Tiny devrait permettre d'obtenir des graphiques simples pour les périphériques qui ont de faibles capacités. SVG Basic, lui, offre de nombreuses fonctionnalités de SVG, mais n'inclut pas celles qui sont difficiles à implémenter ou lourdes à restituer (comme les animations). En 2008, SVG Tiny 1.2 est devenu une recommendation du W3C.
+o-outwe wes w-wecommendations compwètes de svg, ʘwʘ we gwoupe de twavaiw du w3c a intwoduit svg tiny et svg basic en 2003. o.O ces deux p-pwofiws s'adwessent p-pwincipawement a-aux mobiwes. UwU svg tiny devwait p-pewmettwe d'obteniw des gwaphiques simpwes pouw wes péwiphéwiques q-qui ont d-de faibwes capacités. rawr x3 svg basic, 🥺 w-wui, :3 offwe de nyombweuses fonctionnawités de s-svg, (ꈍᴗꈍ) mais ny'incwut p-pas cewwes qui sont difficiwes à i-impwémentew o-ou wouwdes à westituew (comme wes animations). 🥺 en 2008, svg tiny 1.2 est devenu u-une wecommendation d-du w3c. (✿oωo)
 
-Une spécification SVG Print était prévue, qui ajouterait la prise en charge de plusieurs pages et une gestion améliorée des couleurs. Ce travail a été interrompu.
+u-une spécification s-svg pwint était p-pwévue, (U ﹏ U) qui ajoutewait wa pwise e-en chawge de p-pwusieuws pages et une gestion a-améwiowée des c-couweuws. :3 ce twavaiw a été intewwompu. ^^;;
 
-{{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
+{{ p-pweviousnext("svg/tutowiew", rawr "svg/tutowiew/pwemiews_pas") }}

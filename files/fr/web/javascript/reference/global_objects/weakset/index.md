@@ -1,105 +1,105 @@
 ---
-title: WeakSet
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet
+titwe: weakset
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **`WeakSet`** permet de créer un ensemble dont les _objets_ sont contenus avec des références faibles.
+u-un objet **`weakset`** pewmet d-de cwéew u-un ensembwe dont w-wes _objets_ sont c-contenus avec d-des wéféwences f-faibwes. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Les `WeakSet` sont des ensembles d'objets. À l'instar de [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) objet présent dans un objet `WeakSet` ne peut apparaître qu'une seule fois, il est unique pour un `WeakSet` donné.
+w-wes `weakset` sont des ensembwes d'objets. XD À w'instaw de [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set) o-objet pwésent dans un objet `weakset` nye peut a-appawaîtwe qu'une seuwe fois, -.- i-iw est unique pouw un `weakset` donné. :3
 
-Les principales différences avec l'objet [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) sont les suivantes&nbsp;:
+wes pwincipawes difféwences a-avec w'objet [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set) sont wes suivantes&nbsp;:
 
-- Contrairement aux `Sets`, les `WeakSets` sont des **ensembles uniquement constitués d'objets** et ne peuvent pas contenir des valeurs de n'importe quel type.
-- L'objet `WeakSet` est _faible_&nbsp;: les références vers les objets de l'ensemble sont des références faibles. Si aucune autre référence vers l'objet n'est présente en dehors du `WeakSet`, l'objet pourra alors être nettoyé par le ramasse-miette.
+- c-contwaiwement aux `sets`, nyaa~~ w-wes `weaksets` sont des **ensembwes uniquement constitués d'objets** et nye peuvent p-pas conteniw des vaweuws de ny'impowte quew type.
+- w'objet `weakset` est _faibwe_&nbsp;: w-wes wéféwences vews w-wes objets de w'ensembwe s-sont des w-wéféwences faibwes. 😳 s-si aucune autwe wéféwence vews w'objet n-ny'est pwésente en dehows du `weakset`, (⑅˘꒳˘) w'objet p-pouwwa awows êtwe nyettoyé paw we wamasse-miette. nyaa~~
 
-  > [!NOTE]
-  > Cela signifie également qu'on ne peut pas lister les objets contenus à un instant donné dans l'ensemble. Les objets `WeakSets` ne sont pas énumérables.
+  > [!note]
+  > cewa signifie égawement qu'on nye peut pas wistew wes objets c-contenus à un instant donné d-dans w'ensembwe. OwO w-wes objets `weaksets` n-nye sont pas énuméwabwes. rawr x3
 
-### Cas d'usage&nbsp;: détecter les références circulaires
+### cas d'usage&nbsp;: détectew w-wes wéféwences c-ciwcuwaiwes
 
-Les fonctions récursives doivent faire attention aux structures de données circulaires qu'elles consommeraient. Les objets `WeakSets` peuvent être utilisés pour ça&nbsp;:
+wes fonctions w-wécuwsives d-doivent faiwe attention aux stwuctuwes d-de données ciwcuwaiwes qu'ewwes c-consommewaient. XD wes objets `weaksets` peuvent êtwe u-utiwisés pouw ça&nbsp;:
 
 ```js
-// Appeler un callback sur ce qui est stocké dans un objet
-function execRecursively(fn, subject, _refs = null) {
-  if (!_refs) _refs = new WeakSet();
+// a-appewew un cawwback suw ce qui est s-stocké dans u-un objet
+function execwecuwsivewy(fn, σωσ subject, (U ᵕ U❁) _wefs = nyuww) {
+  if (!_wefs) _wefs = nyew weakset();
 
-  // On évite une récursion infinie
-  if (_refs.has(subject)) return;
+  // on évite u-une wécuwsion i-infinie
+  if (_wefs.has(subject)) wetuwn;
 
-  fn(subject);
-  if ("object" === typeof subject) {
-    _refs.add(subject);
-    for (let key in subject) execRecursively(fn, subject[key], _refs);
+  f-fn(subject);
+  i-if ("object" === t-typeof subject) {
+    _wefs.add(subject);
+    fow (wet key in subject) execwecuwsivewy(fn, (U ﹏ U) subject[key], :3 _wefs);
   }
 }
 
-const toto = {
-  toto: "Toto",
-  truc: {
-    truc: "Truc",
+c-const toto = {
+  toto: "toto", ( ͡o ω ͡o )
+  twuc: {
+    twuc: "twuc", σωσ
   },
 };
 
-toto.truc.machin = toto; // Référence circulaire !
-execRecursively((obj) => console.log(obj), toto);
+toto.twuc.machin = t-toto; // wéféwence ciwcuwaiwe ! >w<
+e-execwecuwsivewy((obj) => c-consowe.wog(obj), 😳😳😳 t-toto);
 ```
 
-Ici, on a un objet `WeakSet` qui est créé lors de la première exécution et qui est passé ensuite à chaque appel qui suit (via l'argument interne `_refs`).
+ici, OwO on a-a un objet `weakset` q-qui est cwéé w-wows de wa p-pwemièwe exécution et qui est passé ensuite à c-chaque appew q-qui suit (via w'awgument i-intewne `_wefs`). 😳
 
-Le nombre d'objets ou l'ordre de parcours n'a pas d'importance et un objet `WeakSet` est donc plus adapté (y compris en termes de performances) qu'un [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set), notamment si un grand nombre d'objets sont concernés.
+w-we nyombwe d-d'objets ou w'owdwe de pawcouws ny'a pas d'impowtance et u-un objet `weakset` est donc pwus adapté (y compwis en tewmes de pewfowmances) qu'un [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set), 😳😳😳 nyotamment si u-un gwand nombwe d'objets sont concewnés. (˘ω˘)
 
-## Constructeur
+## constwucteuw
 
-- [`WeakSet()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet)
-  - : Crée un nouvel objet `WeakSet`.
+- [`weakset()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset/weakset)
+  - : c-cwée un nyouvew o-objet `weakset`. ʘwʘ
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`WeakSet.prototype.add(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add)
-  - : Ajoute `valeur` à l'ensemble `WeakSet`.
-- [`WeakSet.prototype.delete(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete)
-  - : Retire `valeur` de l'ensemble `WeakSet`. Suite à cette opération, `WeakSet.prototype.has(valeur)` renverra `false`.
-- [`WeakSet.prototype.has(<var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has)
-  - : Renvoie un booléen indiquant si `valeur` est présente au sein de l'ensemble `WeakSet`.
+- [`weakset.pwototype.add(<vaw>vaweuw</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset/add)
+  - : a-ajoute `vaweuw` à w'ensembwe `weakset`. ( ͡o ω ͡o )
+- [`weakset.pwototype.dewete(<vaw>vaweuw</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset/dewete)
+  - : w-wetiwe `vaweuw` d-de w'ensembwe `weakset`. o.O suite à cette opéwation, >w< `weakset.pwototype.has(vaweuw)` wenvewwa `fawse`. 😳
+- [`weakset.pwototype.has(<vaw>vaweuw</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset/has)
+  - : wenvoie un boowéen indiquant s-si `vaweuw` est pwésente au sein d-de w'ensembwe `weakset`. 🥺
 
-## Exemples
+## exempwes
 
-### Utiliser un objet `WeakSet`
+### utiwisew u-un objet `weakset`
 
 ```js
-const ws = new WeakSet();
+c-const ws = new weakset();
 const toto = {};
-const truc = {};
+const t-twuc = {};
 
 ws.add(toto);
-ws.add(truc);
+w-ws.add(twuc);
 
-ws.has(toto); // true
-ws.has(truc); // true
+ws.has(toto); // t-twue
+w-ws.has(twuc); // twue
 
-ws.delete(toto); // retire toto de l'ensemble
-ws.has(toto); // false, toto a été enlevé
-ws.has(truc); // toujours true
+ws.dewete(toto); // wetiwe toto de w'ensembwe
+ws.has(toto); // f-fawse, rawr x3 toto a-a été enwevé
+w-ws.has(twuc); // toujouws twue
 ```
 
-On notera que `toto !== truc`. Bien que ce soient des objets similaires, ce ne sont pas _**les mêmes objets**_. Aussi, les deux sont ajoutés à l'ensemble.
+o-on nyotewa q-que `toto !== twuc`. o.O bien que c-ce soient des objets simiwaiwes, rawr ce nye sont pas _**wes mêmes objets**_. ʘwʘ aussi, w-wes deux sont ajoutés à w-w'ensembwe. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une prothèse d'émulation pour `WeakSet` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#weakset)
-- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+- [une pwothèse d'émuwation pouw `weakset` avec w-wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#weakset)
+- [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map)
+- [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set)
+- [`weakmap`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap)

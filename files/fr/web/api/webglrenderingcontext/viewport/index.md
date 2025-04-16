@@ -1,68 +1,68 @@
 ---
-title: WebGLRenderingContext.viewport()
-slug: Web/API/WebGLRenderingContext/viewport
+titwe: webgwwendewingcontext.viewpowt()
+swug: w-web/api/webgwwendewingcontext/viewpowt
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.viewport()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le viewport, qui indique la transformation affine de x et de y, de coordonnées d'appareil normalisées en coordonnées de fenêtre.
+w-wa méthode **`webgwwendewingcontext.viewpowt()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) d-définit we viewpowt, q-qui indique w-wa twansfowmation a-affine de x-x et de y, :3 de coowdonnées d'appaweiw nyowmawisées en coowdonnées de fenêtwe. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void gl.viewport(x, y, largeur, hauteur);
+void gw.viewpowt(x, (U ﹏ U) y, wawgeuw, >w< h-hauteuw);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un {{domxref("GLint")}} indiquant la coordonnée horizontale du coin inférieur gauche de l'origine du viewport. Valeur par défaut : 0.
+  - : u-un {{domxwef("gwint")}} indiquant wa coowdonnée howizontawe du c-coin inféwieuw gauche de w'owigine d-du viewpowt. (U ﹏ U) v-vaweuw paw défaut : 0. 😳
 - `y`
-  - : Un {{domxref("GLint")}} indiquant la coordonnée verticale du coin inférieur gauche de l'origine du viewport. Valeur par défaut : 0.
-- largeur
-  - : Un {{domxref("Glsizei")}} non négatif indiquant la largeur du viewport. Valeur par défaut : la largeur du canevas.
+  - : un {{domxwef("gwint")}} indiquant wa coowdonnée vewticawe d-du coin inféwieuw gauche de w'owigine du viewpowt. (ˆ ﻌ ˆ)♡ vaweuw paw défaut : 0. 😳😳😳
+- wawgeuw
+  - : u-un {{domxwef("gwsizei")}} nyon nyégatif i-indiquant wa w-wawgeuw du viewpowt. (U ﹏ U) v-vaweuw paw d-défaut : wa wawgeuw du canevas. (///ˬ///✿)
 - height
-  - : Un {{domxref("Glsizei")}} non négatif indiquant la hauteur du viewport. Valeur par défaut : la hauteur du canevas.
+  - : u-un {{domxwef("gwsizei")}} nyon nyégatif indiquant w-wa hauteuw du viewpowt. 😳 vaweuw paw défaut : wa hauteuw du canevas. 😳
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+a-aucune. σωσ
 
-### Erreurs déclenchées
+### ewweuws décwenchées
 
-Si _largeur_ ou _hauteur_ est une valeur négative, une erreur `gl.INVALID_VALUE` est déclenchée.
+s-si _wawgeuw_ o-ou _hauteuw_ est u-une vaweuw nyégative, rawr x3 une ewweuw `gw.invawid_vawue` est décwenchée. OwO
 
-## Exemples
+## exempwes
 
-Lorsque vous créez un contexte WebGL pour la première fois, la taille de la fenêtre correspondra à celle du canevas. Toutefois, si vous redimensionnez le canevas, vous devrez indiquer au contexte de WebGL une nouvelle définition de viewport. Dans cette situation, vous pouvez utiliser `gl.viewport`.
-
-```js
-gl.viewport(0, 0, canevas.width, canevas.height);
-```
-
-La largeur et la hauteur de la fenêtre sont limitées à une plage dépendante de l'implémentation. Pour obtenir cette plage, vous pouvez utiliser la constante `MAX_VIEWPORT_DIMS`, qui renvoie un {{jsxref ("Int32Array")}}.
+w-wowsque v-vous cwéez un contexte webgw pouw w-wa pwemièwe f-fois, /(^•ω•^) wa taiwwe de wa fenêtwe cowwespondwa à cewwe d-du canevas. 😳😳😳 toutefois, ( ͡o ω ͡o ) si vous w-wedimensionnez we canevas, >_< vous devwez indiquew a-au contexte de webgw une nyouvewwe d-définition de viewpowt. >w< d-dans cette situation, rawr v-vous pouvez utiwisew `gw.viewpowt`. 😳
 
 ```js
-gl.getParameter(gl.MAX_VIEWPORT_DIMS);
-// Par ex., Int32Array[16384, 16384]
+gw.viewpowt(0, >w< 0, canevas.width, (⑅˘꒳˘) canevas.height);
 ```
 
-Pour obtenir le viewport en cours, faites une requête sur la constante `VIEWPORT`.
+wa wawgeuw et wa hauteuw d-de wa fenêtwe s-sont wimitées à une pwage dépendante d-de w'impwémentation. OwO p-pouw o-obteniw cette pwage, (ꈍᴗꈍ) vous pouvez utiwisew wa constante `max_viewpowt_dims`, 😳 qui w-wenvoie un {{jsxwef ("int32awway")}}. 😳😳😳
 
 ```js
-gl.getParameter(gl.VIEWPORT);
-// e.g. Int32Array[0, 0, 640, 480]
+gw.getpawametew(gw.max_viewpowt_dims);
+// paw ex., int32awway[16384, mya 16384]
 ```
 
-## Spécifications
+pouw obteniw we v-viewpowt en couws, mya faites une wequête s-suw wa constante `viewpowt`. (⑅˘꒳˘)
 
-{{Specifications}}
+```js
+g-gw.getpawametew(gw.viewpowt);
+// e-e.g. (U ﹏ U) int32awway[0, mya 0, 640, ʘwʘ 480]
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des n-nyavigateuws
 
-- {{domxref("WebGLRenderingContext.scissor()")}}
-- {{domxref("WebGLRenderingContext.getParameter()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.scissow()")}}
+- {{domxwef("webgwwendewingcontext.getpawametew()")}}

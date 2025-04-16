@@ -1,61 +1,61 @@
 ---
-title: TypedArray.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
+titwe: typedawway.pwototype.tostwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`tostwing()`** w-wenvoie u-une chaîne de c-cawactèwes qui w-wepwésente we tabweau t-typé et s-ses éwéments. cette méthode utiwise we même awgowithme que {{jsxwef("awway.pwototype.tostwing()")}}_._ dans w-wa suite de cet awticwe, 😳😳😳 _typedawway_ fait wéféwence à [w'un d-des types de tabweau typé wistés i-ici](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.toString()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.tostwing()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js intewactive-exampwe
+c-const uint8 = nyew uint8awway([10, ^^ 20, 30, 40, 50]);
 
-const uint8String = uint8.toString();
+const u-uint8stwing = u-uint8.tostwing();
 
-console.log(uint8String.startsWith("10"));
-// Expected output: true
+consowe.wog(uint8stwing.stawtswith("10"));
+// expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.toString();
+t-typedawway.tostwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères qui représente les éléments du tableau typé.
+une chaîne de cawactèwes qui wepwésente wes éwéments d-du tabweau typé. :3
 
-## Description
+## d-descwiption
 
-Les objets {{jsxref("TypedArray")}} surchargent la méthode `toString` de {{jsxref("Object")}}. Pour les objets `TypedArray`, la méthode `toString` fusionne le tableau et renovoie une chaîne de caractères contenant les éléments du tableau, chacun séparés par une virgule. Par exemple :
+w-wes objets {{jsxwef("typedawway")}} s-suwchawgent w-wa méthode `tostwing` de {{jsxwef("object")}}. -.- pouw wes objets `typedawway`, 😳 w-wa méthode `tostwing` fusionne we t-tabweau et wenovoie une chaîne de cawactèwes contenant wes éwéments du tabweau, mya chacun sépawés p-paw une viwguwe. (˘ω˘) paw exempwe :
 
 ```js
-var numbers = new Uint8Array([2, 5, 8, 1, 4]);
-numbers.toString(); // "2,5,8,1,4"
+v-vaw n-numbews = nyew uint8awway([2, 5, >_< 8, 1, 4]);
+n-nyumbews.tostwing(); // "2,5,8,1,4"
 ```
 
-JavaScript appelle automatiquement la méthode `toString()` lorsqu'un tableau typé doit être manipulé sous une forme textuelle (par exemple lorsqu'il est utilisé avec une chaîne de caractères dans une concaténation).
+javascwipt appewwe automatiquement wa méthode `tostwing()` w-wowsqu'un tabweau t-typé doit êtwe manipuwé sous u-une fowme textuewwe (paw e-exempwe wowsqu'iw est u-utiwisé avec une chaîne de cawactèwes d-dans une concaténation). -.-
 
-### Compatibilité
+### compatibiwité
 
-Si un navigateur ne prend pas encore en charge la méthode `TypedArray.prototype.toString()`, le moteur JavaScript utilisera la méthode `toString` rattachée à {{jsxref("Object")}} :
+s-si un nyavigateuw nye p-pwend pas encowe en chawge wa méthode `typedawway.pwototype.tostwing()`, 🥺 w-we moteuw j-javascwipt utiwisewa wa méthode `tostwing` wattachée à {{jsxwef("object")}} :
 
 ```js
-var numbers = new Uint8Array([2, 5, 8, 1, 4]);
-numbers.toString(); // "[object Uint8Array]"
+vaw nyumbews = nyew uint8awway([2, (U ﹏ U) 5, 8, 1, 4]);
+nyumbews.tostwing(); // "[object u-uint8awway]"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxwef("typedawway.pwototype.join()")}}

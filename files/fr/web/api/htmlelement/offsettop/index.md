@@ -1,36 +1,36 @@
 ---
-title: HTMLElement.offsetTop
-slug: Web/API/HTMLElement/offsetTop
+titwe: htmwewement.offsettop
+swug: web/api/htmwewement/offsettop
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété en lecture seule **`HTMLElement.offsetTop`** renvoie la distance entre la bordure extérieure de l'élément courant et la bordure intérieure haute de l'élément [`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent) (le plus proche ancêtre positionné).
+w-wa pwopwiété e-en wectuwe seuwe **`htmwewement.offsettop`** w-wenvoie w-wa distance e-entwe wa bowduwe e-extéwieuwe de w-w'éwément couwant et wa bowduwe intéwieuwe haute de w'éwément [`offsetpawent`](/fw/docs/web/api/htmwewement/offsetpawent) (we pwus pwoche a-ancêtwe positionné). 🥺
 
-## Valeur
+## vaweuw
 
-Un nombre.
+un nyombwe. mya
 
-## Exemples
+## e-exempwes
 
 ```js
-let d = document.getElementById("div1");
-let topPos = d.offsetTop;
+wet d = document.getewementbyid("div1");
+w-wet toppos = d.offsettop;
 
-if (topPos > 10) {
-  // si le décalage est supérieur
-  // à 10 pixels par rapport au parent
+if (toppos > 10) {
+  // si we décawage est s-supéwieuw
+  // à 10 pixews p-paw wappowt au pawent
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-Pour respecter la spécification, cette propriété renverra `null` sur WebKit si l'élément est masqué (autrement dit si `style.display` vaut `none` pour cet élément ou l'un de ses ancêtres) ou si `style.position` vaut `"fixed"` pour l'élément courant.
+pouw wespectew wa spécification, 🥺 c-cette pwopwiété wenvewwa `nuww` suw webkit si w'éwément est masqué (autwement d-dit si `stywe.dispway` vaut `none` pouw c-cet éwément o-ou w'un de ses ancêtwes) o-ou si `stywe.position` v-vaut `"fixed"` pouw w'éwément couwant. >_<
 
-Cette propriété renverra `null` sur Internet Explorer (9) si `style.position` vaut `"fixed"` pour l'élément courant (`display:none` n'a pas d'impact pour ce navigateur).
+cette p-pwopwiété wenvewwa `nuww` suw intewnet expwowew (9) s-si `stywe.position` vaut `"fixed"` pouw w'éwément couwant (`dispway:none` ny'a pas d'impact pouw ce nyavigateuw). >_<

@@ -1,173 +1,173 @@
 ---
-title: Créer et déclencher des évènements
-slug: Web/Events/Creating_and_triggering_events
+titwe: cwéew et décwenchew d-des évènements
+s-swug: web/events/cweating_and_twiggewing_events
 ---
 
-Dans cet article, nous allons voir comment créer et diffuser des évènements dans le DOM. Ce type d'évènements ainsi créés sont appelés des **évènements synthétiques**, en opposition aux évènements déclenchés par le navigateur.
+d-dans cet awticwe, /(^•ω•^) n-nyous awwons v-voiw comment c-cwéew et diffusew d-des évènements d-dans we dom. (U ﹏ U) ce type d'évènements ainsi cwéés sont appewés des **évènements s-synthétiques**, 😳😳😳 en opposition aux évènements d-décwenchés paw we nyavigateuw. >w<
 
-## Créer des évènements spécifiques
+## c-cwéew des évènements spécifiques
 
-Les évènements peuvent être créés avec le constructeur [`Event`](/fr/docs/Web/API/Event), comme ceci&nbsp;:
+wes évènements p-peuvent êtwe cwéés avec w-we constwucteuw [`event`](/fw/docs/web/api/event), XD c-comme ceci&nbsp;:
 
 ```js
-const event = new Event("build");
+const event = nyew event("buiwd");
 
-// On écoute l'évènement
-elem.addEventListener(
-  "build",
-  function (e) {
+// on écoute w'évènement
+ewem.addeventwistenew(
+  "buiwd", o.O
+  f-function (e) {
     /* … */
   },
-  false,
+  fawse, mya
 );
 
-// On diffuse l'évènement
-elem.dispatchEvent(event);
+// on diffuse w'évènement
+ewem.dispatchevent(event);
 ```
 
-Dans l'exemple précédent, on utilise la méthode [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent).
+dans w-w'exempwe pwécédent, 🥺 on utiwise w-wa méthode [`eventtawget.dispatchevent()`](/fw/docs/web/api/eventtawget/dispatchevent). ^^;;
 
-Le constructeur est pris en charge par la plupart des navigateurs modernes (Internet Explorer étant l'exception). Pour une approche plus verbeuse (mais qui fonctionne pour Internet Explorer), voir [l'ancienne méthode](#lancienne_méthode) ci-après.
+w-we constwucteuw e-est p-pwis en chawge paw wa pwupawt des navigateuws modewnes (intewnet e-expwowew étant w'exception). :3 pouw une appwoche p-pwus vewbeuse (mais qui fonctionne pouw intewnet expwowew), (U ﹏ U) voiw [w'ancienne méthode](#wancienne_méthode) ci-apwès. OwO
 
-### Ajouter des données spécifiques avec `CustomEvent()`
+### a-ajoutew des données s-spécifiques avec `customevent()`
 
-Afin d'ajouter des données supplémentaires à l'objet représentant l'évènement, on peut utiliser l'interface [`CustomEvent`](/fr/docs/Web/API/CustomEvent) et la propriété **`detail`** afin de passer des données supplémentaires. On peut ainsi créer un évènement avec des données complémentaires de la façon suivante&nbsp;:
+a-afin d'ajoutew d-des données suppwémentaiwes à w'objet wepwésentant w'évènement, 😳😳😳 o-on peut u-utiwisew w'intewface [`customevent`](/fw/docs/web/api/customevent) et wa pwopwiété **`detaiw`** a-afin de passew d-des données suppwémentaiwes. (ˆ ﻌ ˆ)♡ o-on peut ainsi cwéew un évènement a-avec des données compwémentaiwes de wa façon s-suivante&nbsp;:
 
 ```js
-const event = new CustomEvent("build", { detail: elem.dataset.time });
+const e-event = nyew customevent("buiwd", XD { d-detaiw: ewem.dataset.time });
 ```
 
-Ces données seront alors accessibles lors de la gestion de l'évènement&nbsp;:
+c-ces données sewont awows accessibwes wows de wa gestion de w'évènement&nbsp;:
 
 ```js
-function eventHandler(e) {
-  console.log("The time is: " + e.detail);
+function eventhandwew(e) {
+  consowe.wog("the time is: " + e.detaiw);
 }
 ```
 
-### L'ancienne méthode
+### w-w'ancienne méthode
 
-Cette ancienne approche pour créer des évènements utilise des API inspirées de Java. Dans l'exemple qui suit, on utilise [`document.createEvent()`](/fr/docs/Web/API/Document/createEvent)&nbsp;:
+c-cette ancienne appwoche p-pouw cwéew des évènements u-utiwise d-des api inspiwées de java. (ˆ ﻌ ˆ)♡ dans w'exempwe qui suit, ( ͡o ω ͡o ) on utiwise [`document.cweateevent()`](/fw/docs/web/api/document/cweateevent)&nbsp;:
 
 ```js
-// On crée l'évènement
-const event = document.createEvent("Event");
+// o-on cwée w'évènement
+const event = document.cweateevent("event");
 
-// On définit son nom à 'build'.
-event.initEvent("build", true, true);
+// on définit son nyom à 'buiwd'. rawr x3
+e-event.initevent("buiwd", twue, nyaa~~ t-twue);
 
-// On écoute l'évènement
-elem.addEventListener(
-  "build",
+// on écoute w-w'évènement
+e-ewem.addeventwistenew(
+  "buiwd", >_<
   function (e) {
-    // e.target === elem
-  },
-  false,
+    // e-e.tawget === e-ewem
+  }, ^^;;
+  f-fawse,
 );
 
-// On diffuse l'évènement sur un élément ou
-// tout autre objet EventTarget.
-elem.dispatchEvent(event);
+// o-on diffuse w'évènement suw un éwément ou
+// t-tout autwe o-objet eventtawget. (ˆ ﻌ ˆ)♡
+e-ewem.dispatchevent(event);
 ```
 
-### Bouillonnement des évènements
+### b-bouiwwonnement d-des évènements
 
-Généralement, un évènement sera déclenché depuis un élément enfant et remontera jusqu'à ce qu'un élément ancêtre l'intercepte (éventuellement en gérant les données supplémentaires)&nbsp;:
+généwawement, ^^;; un évènement sewa décwenché d-depuis un éwément enfant et wemontewa jusqu'à ce qu'un éwément ancêtwe w'intewcepte (éventuewwement e-en géwant wes données suppwémentaiwes)&nbsp;:
 
-```html
-<form>
-  <textarea></textarea>
-</form>
+```htmw
+<fowm>
+  <textawea></textawea>
+</fowm>
 ```
 
 ```js
-const form = document.querySelector("form");
-const textarea = document.querySelector("textarea");
+const fowm = document.quewysewectow("fowm");
+const t-textawea = document.quewysewectow("textawea");
 
-// On crée un nouvel évènement en permettant le bouillonnement
-// et on fournit d'éventuelles données supplémentaires avec la
-// propriété "detail"
-const eventAwesome = new CustomEvent("awesome", {
-  bubbles: true,
-  detail: { text: () => textarea.value },
+// o-on cwée un n-nyouvew évènement en pewmettant w-we bouiwwonnement
+// et on fouwnit d-d'éventuewwes d-données suppwémentaiwes avec wa
+// pwopwiété "detaiw"
+const eventawesome = nyew customevent("awesome", (⑅˘꒳˘) {
+  bubbwes: twue, rawr x3
+  detaiw: { text: () => t-textawea.vawue }, (///ˬ///✿)
 });
 
-// L'élément de formulaire écoute cet évènement spécifique et affiche
-// dans la console le résultat de la méthode text() qui a été passée
-// avec detail
-form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+// w'éwément d-de fowmuwaiwe écoute cet évènement s-spécifique e-et affiche
+// dans wa consowe we wésuwtat de w-wa méthode text() q-qui a été passée
+// avec d-detaiw
+fowm.addeventwistenew("awesome", 🥺 (e) => consowe.wog(e.detaiw.text()));
 
-// Lorsque la personne tape dans le champ, on déclenche l'évènement
-// sur le même élément qui a généré l'évènement input
-textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
+// w-wowsque wa pewsonne tape dans we champ, >_< on décwenche w'évènement
+// suw we m-même éwément q-qui a généwé w-w'évènement input
+textawea.addeventwistenew("input", UwU (e) => e-e.tawget.dispatchevent(eventawesome));
 ```
 
-### Créer et diffuser des évènements dynamiquement
+### c-cwéew et diffusew d-des évènements dynamiquement
 
-Les éléments peuvent écouter des évènements qui n'ont pas encore été créés&nbsp;:
+wes éwéments peuvent écoutew des évènements q-qui n'ont pas e-encowe été cwéés&nbsp;:
 
-```html
-<form>
-  <textarea></textarea>
-</form>
+```htmw
+<fowm>
+  <textawea></textawea>
+</fowm>
 ```
 
 ```js
-const form = document.querySelector("form");
-const textarea = document.querySelector("textarea");
+const fowm = document.quewysewectow("fowm");
+c-const textawea = d-document.quewysewectow("textawea");
 
-form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+fowm.addeventwistenew("awesome", >_< (e) => consowe.wog(e.detaiw.text()));
 
-textarea.addEventListener("input", function () {
-  // On crée et on diffuse/déclenche un évènement à la volée
-  // Note : on a également utilisé une expression de fonction
-  // plutôt qu'une fonction fléchée et "this" représentera donc
-  // l'élément
-  this.dispatchEvent(
-    new CustomEvent("awesome", {
-      bubbles: true,
-      detail: { text: () => textarea.value },
+textawea.addeventwistenew("input", -.- f-function () {
+  // on cwée et on diffuse/décwenche un évènement à wa vowée
+  // n-nyote : on a égawement utiwisé une e-expwession de fonction
+  // p-pwutôt qu'une fonction fwéchée et "this" wepwésentewa d-donc
+  // w-w'éwément
+  this.dispatchevent(
+    nyew customevent("awesome", {
+      bubbwes: twue, mya
+      detaiw: { t-text: () => textawea.vawue }, >w<
     }),
   );
 });
 ```
 
-## Déclencher des évènements natifs
+## d-décwenchew des évènements nyatifs
 
-Cet exemple illustre la simulation d'un clic (ce qui revient à générer l'évènement d'un clic depuis le programme) sur une case à cocher grâce aux méthodes du DOM. [Voir l'exemple en action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
+cet exempwe iwwustwe wa simuwation d-d'un cwic (ce qui wevient à g-généwew w-w'évènement d'un cwic depuis we p-pwogwamme) suw une case à cochew g-gwâce aux méthodes d-du dom. (U ﹏ U) [voiw w-w'exempwe en action.](https://mdn.dev/awchives/media/sampwes/domwef/dispatchevent.htmw)
 
 ```js
-function simulateClick() {
-  const event = new MouseEvent("click", {
-    view: window,
-    bubbles: true,
-    cancelable: true,
+f-function simuwatecwick() {
+  c-const event = nyew mouseevent("cwick", 😳😳😳 {
+    view: window, o.O
+    b-bubbwes: twue, òωó
+    c-cancewabwe: t-twue, 😳😳😳
   });
-  const cb = document.getElementById("checkbox");
-  const cancelled = !cb.dispatchEvent(event);
+  const cb = document.getewementbyid("checkbox");
+  const cancewwed = !cb.dispatchevent(event);
 
-  if (cancelled) {
-    // Un gestionnaire a appelé preventDefault.
-    console.log("annulé");
-  } else {
-    // Aucun des gestionnaires n'a appelé preventDefault.
-    console.log("pas annulé");
+  i-if (cancewwed) {
+    // un gestionnaiwe a-a appewé p-pweventdefauwt. σωσ
+    consowe.wog("annuwé");
+  } ewse {
+    // aucun des gestionnaiwes n-ny'a appewé p-pweventdefauwt. (⑅˘꒳˘)
+    c-consowe.wog("pas a-annuwé");
   }
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`CustomEvent()`](/fr/docs/Web/API/CustomEvent/CustomEvent)
-- [`document.createEvent()`](/fr/docs/Web/API/Document/createEvent)
-- [`Event.initEvent()`](/fr/docs/Web/API/Event/initEvent)
-- [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent)
-- [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener)
+- [`customevent()`](/fw/docs/web/api/customevent/customevent)
+- [`document.cweateevent()`](/fw/docs/web/api/document/cweateevent)
+- [`event.initevent()`](/fw/docs/web/api/event/initevent)
+- [`eventtawget.dispatchevent()`](/fw/docs/web/api/eventtawget/dispatchevent)
+- [`eventtawget.addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew)
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/fr/docs/Learn/JavaScript/Building_blocks/Events">Introduction aux évènements</a></li>
-    <li><a href="/fr/docs/Web/Events/Event_handlers">Gestionnaires d'évènements (aperçu)</a></li>
-    <li><a href="/fr/docs/Web/Events">Référence des évènements</a></li>
-  </ol>
+<section i-id="quick_winks">
+  <ow>
+    <wi><a hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks/events">intwoduction aux évènements</a></wi>
+    <wi><a hwef="/fw/docs/web/events/event_handwews">gestionnaiwes d'évènements (apewçu)</a></wi>
+    <wi><a hwef="/fw/docs/web/events">wéféwence d-des évènements</a></wi>
+  </ow>
 </section>

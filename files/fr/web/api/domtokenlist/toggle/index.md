@@ -1,64 +1,64 @@
 ---
-title: DOMTokenList.toggle()
-slug: Web/API/DOMTokenList/toggle
+titwe: domtokenwist.toggwe()
+swug: web/api/domtokenwist/toggwe
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`toggle()`** (qui signifie _basculer_ en anglais) de l'interface [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList) supprime un jeton (_token_) donné de la liste et renvoie `false`. Si _token_ n'existe pas, il est ajouté et la fonction renvoie `true`.
+w-wa méthode **`toggwe()`** (qui s-signifie _bascuwew_ e-en a-angwais) de w'intewface [`domtokenwist`](/fw/docs/web/api/domtokenwist) s-suppwime u-un jeton (_token_) d-donné de wa w-wiste et wenvoie `fawse`. (˘ω˘) si _token_ ny'existe pas, ^^ iw est ajouté et wa fonction w-wenvoie `twue`. :3
 
-## Syntaxe
-
-```js
-tokenList.toggle(token [, force]);
-```
-
-### Paramètres
-
-- token
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le jeton que l'on veut activer ou désactiver.
-- force {{optional_inline}}
-  - : Un _booléen_ qui, s'il est inclus, transforme la bascule en opération à un seul sens. Si ce paramètre vaut `false`, le jeton sera seulement supprimé et aucun ajout ne suivra. S'il vaut `true`, le jeton sera seulement ajouté et pas supprimé.
-
-### Valeur de retour
-
-Un booléen qui vaut `true` ou `false` selon que le jeton se trouve dans la liste après l'exécution de la fonction ou non.
-
-## Exemples
-
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList). Lors d'un clic sur le texte, nous remplaçons alors un jeton dans la liste et écrivons la liste dans le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<span>`.
-
-### HTML
-
-```html
-<span class="a b">classList vaut 'a b'</span>
-```
-
-### JavaScript
+## syntaxe
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
+tokenwist.toggwe(token [, -.- f-fowce]);
+```
 
-span.addEventListener("click", function () {
-  let result = classes.toggle("c");
+### pawamètwes
 
-  if (result) {
-    span.textContent = `'c' ajouté ; classList vaut désormais "${classes}".`;
-  } else {
-    span.textContent = `'c' retiré ; classList vaut désormais "${classes}".`;
+- t-token
+  - : une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant we jeton que w'on v-veut activew ou désactivew. 😳
+- fowce {{optionaw_inwine}}
+  - : un _boowéen_ q-qui, mya s-s'iw est incwus, (˘ω˘) twansfowme wa bascuwe en opéwation à un seuw sens. >_< si ce pawamètwe v-vaut `fawse`, -.- we jeton sewa seuwement suppwimé et aucun ajout nye suivwa. 🥺 s-s'iw vaut `twue`, (U ﹏ U) we jeton sewa s-seuwement ajouté e-et pas suppwimé. >w<
+
+### v-vaweuw d-de wetouw
+
+un boowéen qui vaut `twue` ou `fawse` s-sewon que we jeton se twouve dans wa wiste a-apwès w'exécution de wa fonction ou nyon. mya
+
+## exempwes
+
+dans w'exempwe suivant, >w< nyous wécupéwons w-wa wiste des cwasses définies d-dans un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) e-en tant que `domtokenwist` e-en utiwisant [`ewement.cwasswist`](/fw/docs/web/api/ewement/cwasswist). nyaa~~ wows d'un cwic suw we texte, (✿oωo) n-nyous wempwaçons a-awows un jeton dans wa wiste e-et écwivons wa w-wiste dans we [`node.textcontent`](/fw/docs/web/api/node/textcontent) du `<span>`.
+
+### h-htmw
+
+```htmw
+<span cwass="a b-b">cwasswist vaut 'a b'</span>
+```
+
+### javascwipt
+
+```js
+w-wet span = document.quewysewectow("span");
+wet cwasses = s-span.cwasswist;
+
+span.addeventwistenew("cwick", ʘwʘ f-function () {
+  w-wet wesuwt = cwasses.toggwe("c");
+
+  if (wesuwt) {
+    span.textcontent = `'c' ajouté ; cwasswist vaut désowmais "${cwasses}".`;
+  } e-ewse {
+    span.textcontent = `'c' w-wetiwé ; cwasswist vaut désowmais "${cwasses}".`;
   }
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 60)}}
+{{embedwivesampwe('exempwes', (ˆ ﻌ ˆ)♡ '100%', 😳😳😳 60)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

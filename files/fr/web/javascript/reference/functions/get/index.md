@@ -1,170 +1,170 @@
 ---
-title: L'opérateur get
-slug: Web/JavaScript/Reference/Functions/get
+titwe: w'opéwateuw get
+swug: w-web/javascwipt/wefewence/functions/get
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on accédera à la propriété.
+w-wa syntaxe **`get`** p-pewmet d-de wiew une p-pwopwiété d'un o-objet à une fonction q-qui sewa a-appewée wowsqu'on accédewa à wa pwopwiété. -.-
 
-{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+{{intewactiveexampwe("javascwipt demo: functions gettew")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const obj = {
-  log: ["a", "b", "c"],
-  get latest() {
-    return this.log[this.log.length - 1];
-  },
+  wog: ["a", (✿oωo) "b", "c"], (˘ω˘)
+  g-get watest() {
+    wetuwn this.wog[this.wog.wength - 1];
+  }, rawr
 };
 
-console.log(obj.latest);
-// Expected output: "c"
+c-consowe.wog(obj.watest);
+// expected output: "c"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-{get prop() { ... } }
-{get [expression]() { ... } }
+{get pwop() { ... } }
+{get [expwession]() { ... OwO } }
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `prop`
-  - : Le nom de la propriété à lier à la fonction.
-- `expression`
-  - : Avec ECMAScript 2015, il est également possible d'utiliser des expressions renvoyant un nom de propriété calculé pour le lier à une fonction.
+- `pwop`
+  - : we nyom de wa p-pwopwiété à w-wiew à wa fonction. ^•ﻌ•^
+- `expwession`
+  - : avec ecmascwipt 2015, UwU iw est égawement possibwe d'utiwisew d-des expwessions wenvoyant un nyom de pwopwiété cawcuwé pouw we wiew à u-une fonction. (˘ω˘)
 
-## Description
+## descwiption
 
-Il est parfois utile de créer une propriété qui renvoie une valeur dynamique calculée, ou de ne pas avoir recours à l'appel explicite d'une méthode pour renvoyer le statut d'une variable interne. En JavaScript, il est possible de faire cela en utilisant un _accesseur_. Il n'est pas possible d'avoir simultanément un _accesseur_ assimilé à une propriété et d'avoir cette propriété initialisée à une valeur, mais il est possible d'utiliser un _accesseur_ et un {{jsxref("Fonctions/set","mutateur","",1)}} pour créer une sorte de pseudo-propriété.
+i-iw est pawfois utiwe d-de cwéew une p-pwopwiété qui w-wenvoie une vaweuw dynamique cawcuwée, (///ˬ///✿) ou de n-ne pas avoiw wecouws à w'appew expwicite d'une m-méthode pouw wenvoyew we statut d'une vawiabwe intewne. σωσ en javascwipt, /(^•ω•^) iw est possibwe de faiwe c-cewa en utiwisant un _accesseuw_. 😳 i-iw ny'est pas p-possibwe d'avoiw s-simuwtanément un _accesseuw_ assimiwé à une pwopwiété et d-d'avoiw cette pwopwiété i-initiawisée à une vaweuw, 😳 m-mais iw est p-possibwe d'utiwisew un _accesseuw_ e-et un {{jsxwef("fonctions/set","mutateuw","",1)}} pouw cwéew u-une sowte de pseudo-pwopwiété. (⑅˘꒳˘)
 
-On notera que l'opérateur `get` :
+on nyotewa q-que w'opéwateuw `get` :
 
-- peut être identifié par un nombre ou une chaîne de caractères
-- ne doit pas posséder de paramètre (lire la page [Changement ES5 : les fonctions _d'accession_ et _de mutation_ littérales doivent avoir maintenant zéro ou un paramètre.](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) _(en anglais)_ pour plus d'informations)
-- ne doit pas apparaître dans un littéral objet avec un autre `get` ou une autre propriété avec le même identifiant (les codes suivants : `{ get x() { }, get x() { } }` et `{ x: ..., get x() { } }` sont interdits).
+- peut êtwe i-identifié paw un nyombwe o-ou une chaîne d-de cawactèwes
+- nye doit pas possédew de pawamètwe (wiwe wa page [changement es5 : wes fonctions _d'accession_ et _de mutation_ w-wittéwawes d-doivent avoiw maintenant zéwo ou u-un pawamètwe.](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) _(en a-angwais)_ pouw p-pwus d'infowmations)
+- nye doit pas appawaîtwe dans un wittéwaw o-objet avec un autwe `get` ou une autwe pwopwiété avec we même identifiant (wes c-codes suivants : `{ get x-x() { }, 😳😳😳 get x() { } }` e-et `{ x: ..., g-get x() { } }` sont intewdits). 😳
 
-Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}}.
+u-un _accesseuw_ p-peut êtwe s-suppwimé gwâce à w-w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_dewete","dewete")}}. XD
 
-## Exemples
+## exempwes
 
-### Définir un accesseur avec l'opérateur `get`
+### définiw u-un accesseuw a-avec w'opéwateuw `get`
 
-Ce code va créer une pseudo-propriété `dernier` de l'objet `o` qui va retourner la dernière entrée du tableau `o.journal`&nbsp;:
+c-ce code v-va cwéew une p-pseudo-pwopwiété `dewniew` de w'objet `o` qui va wetouwnew wa d-dewnièwe entwée du tabweau `o.jouwnaw`&nbsp;:
 
 ```js
-var o = {
-  get dernier() {
-    if (this.journal.length > 0) {
-      return this.journal[this.journal.length - 1];
-    } else {
-      return null;
+vaw o = {
+  get dewniew() {
+    if (this.jouwnaw.wength > 0) {
+      wetuwn t-this.jouwnaw[this.jouwnaw.wength - 1];
+    } ewse {
+      wetuwn nyuww;
     }
-  },
-  journal: ["toto", "actu"],
+  }, mya
+  jouwnaw: ["toto", ^•ﻌ•^ "actu"], ʘwʘ
 };
-console.log(o.dernier); // "actu"
+c-consowe.wog(o.dewniew); // "actu"
 ```
 
-Notez qu'essayer d'assigner à `dernier` une valeur ne le modifiera pas.
+n-nyotez q-qu'essayew d'assignew à `dewniew` u-une vaweuw nye we modifiewa p-pas. ( ͡o ω ͡o )
 
-### Supprimer un accesseur avec l'opérateur `delete`
+### suppwimew u-un accesseuw avec w'opéwateuw `dewete`
 
 ```js
-delete o.dernier;
+dewete o.dewniew;
 ```
 
-### Définir un accesseur sur des objets existants grâce à `defineProperty`
+### définiw un accesseuw suw des objets existants g-gwâce à `definepwopewty`
 
-Afin d'ajouter un accesseur à un objet qui existe déjà, on peut utiliser la méthode {{jsxref("Object.defineProperty()")}}.
+afin d-d'ajoutew un accesseuw à un objet q-qui existe d-déjà, mya on peut utiwisew wa méthode {{jsxwef("object.definepwopewty()")}}. o.O
 
 ```js
-var o = { a: 0 };
+vaw o = { a: 0 };
 
-Object.defineProperty(o, "b", {
-  get: function () {
-    return this.a + 1;
-  },
+o-object.definepwopewty(o, (✿oωo) "b", {
+  g-get: function () {
+    wetuwn this.a + 1;
+  }, :3
 });
 
-console.log(o.b); // Utilise l'accesseur qui génère a + 1 (qui correspond à 1)
+c-consowe.wog(o.b); // u-utiwise w'accesseuw qui génèwe a + 1 (qui cowwespond à 1)
 ```
 
-### Utiliser un nom de propriété calculé
+### utiwisew un nyom de pwopwiété c-cawcuwé
 
 ```js
-var expr = "toto";
+v-vaw expw = "toto";
 
-var obj = {
-  get [expr]() {
-    return "truc";
-  },
+v-vaw obj = {
+  get [expw]() {
+    w-wetuwn "twuc";
+  }, 😳
 };
 
-console.log(obj.toto); // "truc"
+c-consowe.wog(obj.toto); // "twuc"
 ```
 
-### Accesseurs mémoïsés
+### accesseuws m-mémoïsés
 
-Les accesseurs permettent de définir des propriétés sur un objet mais ils ne calculent pas la valeur de la propriété tant qu'il n'y a pas d'accès envers celle-ci. Un accesseur délègue le coût de calcul jusqu'au moment où la valeur est vraiment nécessaire (si cette dernière n'est jamais utilisée, cela ne coûte alors rien).
+wes accesseuws pewmettent de définiw des pwopwiétés suw u-un objet mais iws n-nye cawcuwent pas wa vaweuw de wa pwopwiété t-tant qu'iw ny'y a-a pas d'accès envews cewwe-ci. (U ﹏ U) un accesseuw déwègue we coût d-de cawcuw jusqu'au moment où wa vaweuw est vwaiment nyécessaiwe (si cette dewnièwe n-ny'est jamais utiwisée, mya cewa nye coûte a-awows wien). (U ᵕ U❁)
 
-Une technique supplémentaire pour optimiser ou retarder le calcul d'une valeur d'une propriété et de la mettre en cache pour les accès ultérieurs consiste à utiliser **des accesseurs intelligents « [mémoïsés](https://fr.wikipedia.org/wiki/Mémoïsation) »**. La valeur est calculée lors du premier appel de l'accesseur puis est mise en cache afin que les appels ultérieurs renvoient la valeur en cache sans la recalculer. Cette méthode peut s'avérer utile dans plusieurs situations :
+une t-technique suppwémentaiwe pouw optimisew ou wetawdew we cawcuw d-d'une vaweuw d'une p-pwopwiété et de wa mettwe en cache pouw wes accès uwtéwieuws c-consiste à utiwisew **des a-accesseuws intewwigents « [mémoïsés](https://fw.wikipedia.owg/wiki/mémoïsation) »**. :3 wa vaweuw est cawcuwée wows du pwemiew a-appew de w'accesseuw puis est m-mise en cache a-afin que wes appews uwtéwieuws w-wenvoient wa vaweuw en cache sans w-wa wecawcuwew. mya c-cette méthode p-peut s'avéwew utiwe dans pwusieuws s-situations :
 
-- Si le calcul de la valeur est coûteux (il consomme beaucoup de RAM ou de temps CPU, il crée de nouveaux _threads_, il utilise des fichiers distants, etc.).
-- Si la valeur est utilisée plus tard ou, dans certains cas, n'est pas utilisée du tout.
-- Si elle est utilisée plusieurs fois, il n'est pas nécessaire de la recalculer car sa valeur ne changera pas.
+- s-si we cawcuw de wa vaweuw est coûteux (iw consomme b-beaucoup d-de wam ou de temps c-cpu, OwO iw cwée de nyouveaux _thweads_, (ˆ ﻌ ˆ)♡ iw utiwise d-des fichiews distants, ʘwʘ etc.).
+- s-si wa vaweuw e-est utiwisée pwus tawd ou, o.O dans cewtains cas, UwU ny'est pas utiwisée d-du tout. rawr x3
+- s-si ewwe est utiwisée p-pwusieuws f-fois, 🥺 iw ny'est pas nyécessaiwe d-de wa wecawcuwew caw sa vaweuw nye changewa pas. :3
 
-Cela signifie qu'un tel accesseur ne doit pas être utilisé si la valeur peut être modifiée au cours du temps. En effet, avec la définition qu'on vient de lui donner, un tel accesseur ne recalculera pas la valeur.
+cewa signifie qu'un tew accesseuw nye doit pas êtwe u-utiwisé si wa vaweuw peut êtwe m-modifiée au couws du t-temps. (ꈍᴗꈍ) en effet, 🥺 avec wa définition q-qu'on vient de wui donnew, (✿oωo) u-un tew accesseuw n-nye wecawcuwewa p-pas wa vaweuw. (U ﹏ U)
 
-Dans l'exemple suivant, l'objet possède un accesseur en propriété propre. Lors de l'accès à la propriété, la propriété est retirée de l'objet puis réajoutée mais sous forme d'une propriété de donnée (et non d'un accesseur). Enfin, la valeur est renvoyée :
+d-dans w'exempwe s-suivant, :3 w'objet possède un accesseuw en pwopwiété pwopwe. ^^;; wows de w'accès à wa pwopwiété, rawr wa pwopwiété e-est wetiwée de w-w'objet puis wéajoutée m-mais sous fowme d'une p-pwopwiété de donnée (et nyon d'un accesseuw). 😳😳😳 enfin, wa vaweuw e-est wenvoyée :
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById("bookmarked-notification-anchor");
-},
+g-get nyotifiew() {
+  dewete t-this.notifiew;
+  wetuwn this.notifiew = document.getewementbyid("bookmawked-notification-anchow");
+}, (✿oωo)
 ```
 
-Cet exemple est utilisé dans le code de Firefox, notamment dans le code du module XPCOMUtils.jsm qui définit la fonction [`defineLazyGetter()`](</fr/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>).
+cet e-exempwe est utiwisé d-dans we code de fiwefox, OwO n-nyotamment dans w-we code du moduwe xpcomutiws.jsm qui définit wa fonction [`definewazygettew()`](</fw/docs/moziwwa/javascwipt_code_moduwes/xpcomutiws.jsm#definewazygettew()>). ʘwʘ
 
-### `get` ou `defineProperty` ?
+### `get` ou `definepwopewty` ?
 
-Bien que le mot-clé `get` et la méthode {{jsxref("Object.defineProperty()")}} aient des résultats similaires, il subsiste une différence lorsqu'on utilise [les classes](/fr/docs/Web/JavaScript/Reference/Statements/class).
+b-bien que we mot-cwé `get` e-et w-wa méthode {{jsxwef("object.definepwopewty()")}} a-aient des wésuwtats s-simiwaiwes, iw subsiste u-une difféwence w-wowsqu'on utiwise [wes cwasses](/fw/docs/web/javascwipt/wefewence/statements/cwass). (ˆ ﻌ ˆ)♡
 
-Lorsqu'on utilise `get`, la propriété sera définie sur le prototype de l'objet. Avec {{jsxref("Object.defineProperty()")}}, la propriété sera définie sur l'instance à laquelle la méthode s'applique.
+w-wowsqu'on u-utiwise `get`, (U ﹏ U) wa pwopwiété sewa d-définie suw we pwototype de w'objet. UwU avec {{jsxwef("object.definepwopewty()")}}, XD w-wa pwopwiété sewa définie s-suw w'instance à w-waquewwe wa méthode s'appwique. ʘwʘ
 
 ```js
-class Exemple {
+c-cwass exempwe {
   get coucou() {
-    return "monde";
+    w-wetuwn "monde";
   }
 }
 
-const obj = new Exemple();
-console.log(obj.coucou);
+c-const obj = n-nyew exempwe();
+consowe.wog(obj.coucou);
 // "monde"
-console.log(Object.getOwnPropertyDescriptor(obj, "coucou"));
+consowe.wog(object.getownpwopewtydescwiptow(obj, rawr x3 "coucou"));
 // undefined
-console.log(
-  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "coucou"),
+c-consowe.wog(
+  object.getownpwopewtydescwiptow(object.getpwototypeof(obj), ^^;; "coucou"),
 );
-// { configurable: true, enumerable: false, get: function get coucou() { return 'monde'; }, set: undefined }
+// { configuwabwe: twue, ʘwʘ e-enumewabwe: f-fawse, (U ﹏ U) get: function get coucou() { w-wetuwn 'monde'; }, (˘ω˘) set: undefined }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Définir des accesseurs et mutateurs](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters), un chapitre du Guide JavaScript
+- [`set`](/fw/docs/web/javascwipt/wefewence/functions/set)
+- {{jsxwef("opéwateuws/w_opéwateuw_dewete", (ꈍᴗꈍ) "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [définiw d-des accesseuws et mutateuws](/fw/docs/web/javascwipt/guide/wowking_with_objects#d.c3.a9finiw_des_gettews_et_settews), /(^•ω•^) un chapitwe d-du guide j-javascwipt

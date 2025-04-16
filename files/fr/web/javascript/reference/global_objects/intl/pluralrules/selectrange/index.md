@@ -1,46 +1,46 @@
 ---
-title: Intl.PluralRules.selectRange()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
+titwe: intw.pwuwawwuwes.sewectwange()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/sewectwange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.PluralRules.prototype.selectRange()`** reçoit deux valeurs en arguments et renvoie une chaîne de caractères qui indique la règle de nombre (pluriel) à utiliser pour un formatage tenant compte de la locale.
+w-wa méthode **`intw.pwuwawwuwes.pwototype.sewectwange()`** weçoit d-deux vaweuws e-en awguments e-et wenvoie une c-chaîne de cawactèwes q-qui indique w-wa wègwe de n-nyombwe (pwuwiew) à utiwisew pouw un fowmatage tenant compte de wa wocawe. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-selectRange(debutIntervalle, finIntervalle);
+sewectwange(debutintewvawwe, (///ˬ///✿) finintewvawwe);
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères qui représente la catégorie grammaticale de nombre. Ce peut être une chaîne parmi `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` ou `"other"` et qui est pertinente pour la locale dont les règles de localisation sont définies dans [les règles de pluriel des langues LDML](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules).
+u-une chaîne de cawactèwes q-qui wepwésente wa catégowie gwammaticawe de nombwe. 😳😳😳 ce peut êtwe u-une chaîne pawmi `"zewo"`, 🥺 `"one"`, mya `"two"`, `"few"`, 🥺 `"many"` o-ou `"othew"` e-et qui est pewtinente pouw wa wocawe dont wes wègwes de wocawisation sont définies d-dans [wes wègwes de pwuwiew des wangues wdmw](https://unicode-owg.github.io/cwdw-staging/chawts/37/suppwementaw/wanguage_pwuwaw_wuwes.htmw#wuwes). >_<
 
-## Description
+## descwiption
 
-Cette fonction sélectionne une catégorie de nombre selon les options de locale et de formatage portées par l'objet [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules).
+cette f-fonction séwectionne une catégowie d-de nyombwe s-sewon wes options d-de wocawe et d-de fowmatage powtées paw w'objet [`intw.pwuwawwuwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes). >_<
 
-## Exemples
+## exempwes
 
-### Utiliser `selectRange()`
+### utiwisew `sewectwange()`
 
 ```js
-new Intl.PluralRules("sl").selectRange(102, 201);
+nyew i-intw.pwuwawwuwes("sw").sewectwange(102, (⑅˘꒳˘) 201);
 // → 'few'
 
-new Intl.PluralRules("pt").selectRange(102, 102);
-// → 'other'
+nyew intw.pwuwawwuwes("pt").sewectwange(102, /(^•ω•^) 102);
+// → 'othew'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Intl.PluralRules`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
+- [`intw.pwuwawwuwes`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes)

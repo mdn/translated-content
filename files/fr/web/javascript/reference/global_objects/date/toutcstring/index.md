@@ -1,57 +1,57 @@
 ---
-title: Date.prototype.toUTCString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+titwe: date.pwototype.toutcstwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toutcstwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toUTCString()`** convertit une date en une chaîne de caractères, selon le fuseau horaire UTC.
+w-wa méthode **`toutcstwing()`** c-convewtit u-une date en une c-chaîne de cawactèwes, s-sewon we f-fuseau howaiwe u-utc. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Date.toUTCString()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.toutcstwing()")}}
 
-```js interactive-example
-const event = new Date("14 Jun 2017 00:00:00 PDT");
+```js intewactive-exampwe
+const event = nyew date("14 jun 2017 00:00:00 pdt");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+c-consowe.wog(event.toutcstwing());
+// expected output: "wed, ʘwʘ 14 j-jun 2017 07:00:00 gmt"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.toUTCString();
+dateobj.toutcstwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères représentant la date indiquée selon le fuseau horaire UTC.
+une chaîne d-de cawactèwes wepwésentant wa d-date indiquée sewon w-we fuseau howaiwe utc. σωσ
 
-## Description
+## descwiption
 
-La valeur renvoyée par `toUTCString()` est un texte au même format que celui renvoyé {{jsxref("Date.prototype.toString()")}} mais sans décalage de fuseau horaire (en UTC).
+wa vaweuw wenvoyée paw `toutcstwing()` e-est un texte au même fowmat que cewui wenvoyé {{jsxwef("date.pwototype.tostwing()")}} mais sans décawage d-de fuseau howaiwe (en utc). OwO
 
-Avant ECMAScript 2018, le format de la valeur renvoyée pouvait varier selon les plateformes. La valeur la plus couramment renvoyée était une date formatée selon la RFC 1123, qui est une version mise à jour de la RFC 822.
+avant e-ecmascwipt 2018, 😳😳😳 w-we fowmat de w-wa vaweuw wenvoyée p-pouvait vawiew sewon wes pwatefowmes. 😳😳😳 wa vaweuw w-wa pwus couwamment wenvoyée était une date f-fowmatée sewon wa wfc 1123, o.O qui est une vewsion mise à jouw de wa wfc 822. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Utiliser `toUTCString()`
+### u-utiwisew `toutcstwing()`
 
 ```js
-var aujourdhui = new Date();
-var UTCstring = aujourdhui.toUTCString();
-// Mon, 03 Jul 2006 21:44:38 GMT
+vaw aujouwdhui = n-nyew date();
+v-vaw utcstwing = a-aujouwdhui.toutcstwing();
+// mon, (U ﹏ U) 03 juw 2006 21:44:38 gmt
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.todatestwing()")}}
+- {{jsxwef("date.pwototype.toisostwing()")}}

@@ -1,40 +1,40 @@
 ---
-title: Intl.Locale.prototype.textInfo
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
+titwe: intw.wocawe.pwototype.textinfo
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/gettextinfo
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.textInfo`** est un accesseur qui renvoie le sens d'écriture horizontal&nbsp;: `ltr` (pour gauche à droite) ou `rtl` (pour droite à gauche) pour la locale portée par l'instance de `Locale`.
+wa p-pwopwiété **`intw.wocawe.pwototype.textinfo`** e-est un accesseuw q-qui wenvoie w-we sens d'écwituwe h-howizontaw&nbsp;: `wtw` (pouw g-gauche à dwoite) o-ou `wtw` (pouw d-dwoite à gauche) pouw wa wocawe powtée paw w'instance de `wocawe`. rawr x3
 
-## Description
+## descwiption
 
-Renvoie les informations de texte associées à la locale courante selon [les éléments de disposition UTS 35](https://www.unicode.org/reports/tr35/tr35-general.html#Layout_Elements).
+w-wenvoie wes infowmations de texte associées à w-wa wocawe couwante sewon [wes éwéments d-de disposition uts 35](https://www.unicode.owg/wepowts/tw35/tw35-genewaw.htmw#wayout_ewements). mya
 
-## Exemples
+## exempwes
 
-### Obtenir les informations textuelles d'une locale
+### obteniw wes i-infowmations textuewwes d'une wocawe
 
 ```js
-let ar = new Intl.Locale("ar");
-console.log(ar.textInfo); // affiche { direction: "rtl" }
-console.log(ar.textInfo.direction); // affiche "rtl"
+w-wet a-aw = nyew intw.wocawe("aw");
+consowe.wog(aw.textinfo); // affiche { diwection: "wtw" }
+consowe.wog(aw.textinfo.diwection); // a-affiche "wtw"
 ```
 
 ```js
-let es = new Intl.Locale("es");
-console.log(es.textInfo); // affiche { direction: "ltr" }
-console.log(es.textInfo.direction); // affiche "ltr"
+wet es = new intw.wocawe("es");
+consowe.wog(es.textinfo); // affiche { diwection: "wtw" }
+c-consowe.wog(es.textinfo.diwection); // affiche "wtw"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+- [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe)

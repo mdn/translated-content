@@ -1,58 +1,58 @@
 ---
-title: Number.MAX_VALUE
-slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
+titwe: nyumbew.max_vawue
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/max_vawue
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Number.MAX_VALUE`** représente la valeur maximale qui peut être représentée par un nombre en JavaScript.
+w-wa pwopwiété **`numbew.max_vawue`** w-wepwésente wa v-vaweuw maximawe q-qui peut êtwe wepwésentée p-paw u-un nyombwe en javascwipt. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.max_vawue")}}
 
-```js interactive-example
-function multiply(x, y) {
-  if (x * y > Number.MAX_VALUE) {
-    return "Process as Infinity";
+```js intewactive-exampwe
+function muwtipwy(x, σωσ y) {
+  i-if (x * y > nyumbew.max_vawue) {
+    wetuwn "pwocess as infinity";
   }
-  return x * y;
+  w-wetuwn x * y;
 }
 
-console.log(multiply(1.7976931348623157e308, 1));
-// Expected output: 1.7976931348623157e+308
+consowe.wog(muwtipwy(1.7976931348623157e308, OwO 1));
+// expected o-output: 1.7976931348623157e+308
 
-console.log(multiply(1.7976931348623157e308, 2));
-// Expected output: "Process as Infinity"
+consowe.wog(muwtipwy(1.7976931348623157e308, 😳😳😳 2));
+// expected output: "pwocess a-as infinity"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-La propriété statique `MAX_VALUE` vaut environ `1.79E+308` (soit 2^1024). Les valeurs supérieures à `MAX_VALUE` sont représentées par {{jsxref("Infinity")}} (pour l'infini).
+wa p-pwopwiété statique `max_vawue` v-vaut enviwon `1.79e+308` (soit 2^1024). 😳😳😳 wes vaweuws supéwieuwes à `max_vawue` sont wepwésentées paw {{jsxwef("infinity")}} (pouw w-w'infini). o.O
 
-`MAX_VALUE` est une propriété statique de {{jsxref("Number")}}, il faut donc l'utiliser avec `Number.MAX_VALUE`, plutôt qu'en faisant appel à la propriété d'un objet `Number` qui aurait été instancié (si on appelle cette propriété sur l'objet `Number` créé, on obtiendra {{jsxref("undefined")}}).
+`max_vawue` est une pwopwiété statique de {{jsxwef("numbew")}}, ( ͡o ω ͡o ) iw faut donc w-w'utiwisew avec `numbew.max_vawue`, (U ﹏ U) pwutôt qu'en f-faisant appew à w-wa pwopwiété d-d'un objet `numbew` q-qui auwait été instancié (si on appewwe c-cette pwopwiété suw w'objet `numbew` cwéé, (///ˬ///✿) o-on obtiendwa {{jsxwef("undefined")}}). >w<
 
-## Exemples
+## exempwes
 
-Le code suivant teste si le produit de deux nombres est inférieur ou égal à `MAX_VALUE`, selon le résultat de ce test, soit on utilisera `func1`, soit on utilisera `func2`.
+we code suivant teste si we pwoduit de deux nyombwes est inféwieuw o-ou égaw à `max_vawue`, rawr sewon we wésuwtat d-de ce test, mya s-soit on utiwisewa `func1`, ^^ s-soit on utiwisewa `func2`. 😳😳😳
 
 ```js
-if (num1 * num2 <= Number.MAX_VALUE) {
-  func1();
-} else {
+if (num1 * nyum2 <= nyumbew.max_vawue) {
+  f-func1();
+} e-ewse {
   func2();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number.MIN_VALUE")}}
-- {{jsxref("Number")}}
+- {{jsxwef("numbew.min_vawue")}}
+- {{jsxwef("numbew")}}

@@ -1,82 +1,82 @@
 ---
-title: RTCPeerConnection.setConfiguration()
-slug: Web/API/RTCPeerConnection/setConfiguration
+titwe: wtcpeewconnection.setconfiguwation()
+swug: web/api/wtcpeewconnection/setconfiguwation
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{apiwef("webwtc")}}{{seecompattabwe}}
 
-La méthode **`RTCPeerConnection.setConfiguration()`** définit la configuration courante pour la connexion {{domxref("RTCPeerConnection")}} en fonction des valeurs des propriétés de l'objet {{domxref("RTCConfiguration")}} passé en argument. Cela permet de modifier les serveurs ICE et les règles de transport utilisés par la connexion.
+w-wa m-méthode **`wtcpeewconnection.setconfiguwation()`** d-définit wa c-configuwation couwante p-pouw wa connexion {{domxwef("wtcpeewconnection")}} e-en fonction d-des vaweuws d-des pwopwiétés de w'objet {{domxwef("wtcconfiguwation")}} passé en awgument. -.- cewa pewmet de m-modifiew wes sewveuws ice et wes wègwes de twanspowt u-utiwisés paw wa connexion. :3
 
-Le cas d'usage le plus probable (bien qu'il ne soit probablement pas répandu) est le remplacement des serveurs ICE à utiliser. Voici deux scénarios pour lesquels cela pourrait se produire :
+w-we cas d'usage we pwus pwobabwe (bien qu'iw nye soit pwobabwement p-pas wépandu) est we wempwacement d-des sewveuws i-ice à utiwisew. nyaa~~ voici deux scénawios pouw wesquews cewa pouwwait se pwoduiwe :
 
-- L'objet {{domxref("RTCPeerConnection")}} a été instancié sans qu'un serveur ICE soit spécifié. Si le constructeur {{domxref("RTCPeerConnection.RTCPeerConnection()", "RTCPeerConnection()")}} a été appelé sans paramètre, on doit alors appeler `setConfiguration()` pour ajouter des serveurs ICE avant que la négociation ICE puisse avoir lieu.
-- La connexion doit être renégociée et il faut utiliser un autre ensemble de serveurs ICE pour une certaine raison (ex. l'utilisateur s'est déplacé dans une nouvelle région et il faut donc utiliser de nouveaux serveurs ICE régionaux). Dans ce cas, on pourra appeler `setConfiguration()` pour passer sur les serveurs régionaux puis initier [un redémarrage ICE](/fr/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
+- w-w'objet {{domxwef("wtcpeewconnection")}} a été instancié sans qu'un sewveuw ice soit spécifié. 😳 si w-we constwucteuw {{domxwef("wtcpeewconnection.wtcpeewconnection()", (⑅˘꒳˘) "wtcpeewconnection()")}} a été a-appewé sans p-pawamètwe, nyaa~~ on d-doit awows appewew `setconfiguwation()` p-pouw ajoutew des sewveuws ice avant que w-wa nyégociation ice puisse avoiw wieu. OwO
+- wa connexion d-doit êtwe wenégociée et iw faut utiwisew un autwe ensembwe de sewveuws ice pouw une cewtaine w-waison (ex. rawr x3 w'utiwisateuw s-s'est dépwacé d-dans une nyouvewwe w-wégion et iw faut donc utiwisew de nyouveaux sewveuws ice wégionaux). d-dans c-ce cas, XD on pouwwa appewew `setconfiguwation()` p-pouw passew suw w-wes sewveuws wégionaux puis initiew [un w-wedémawwage ice](/fw/docs/web/api/webwtc_api/session_wifetime#ice_westawt). σωσ
 
-> [!NOTE]
-> On ne peut pas changer les informations d'identité d'une connexion une fois que celle-ci a été créée.
+> [!note]
+> o-on nye peut pas changew wes infowmations d'identité d-d'une connexion une fois q-que cewwe-ci a été cwéée. (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-RTCPeerConnection.setConfiguration(configuration);
+w-wtcpeewconnection.setconfiguwation(configuwation);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `configuration`
-  - : Un objet {{domxref("RTCConfiguration")}} qui fournit les options à appliquer à la connexion. Les changements ne sont pas utilisés en addition mais remplacent les valeurs existantes.
+- `configuwation`
+  - : un objet {{domxwef("wtcconfiguwation")}} qui fouwnit wes options à appwiquew à wa connexion. (U ﹏ U) w-wes changements n-nye sont pas utiwisés en addition m-mais wempwacent w-wes vaweuws e-existantes. :3
 
-### Exceptions
+### exceptions
 
-- `InvalidAccessError`
-  - : Une ou plusieurs URL indiquées dans `configuration.iceServers` sont des serveurs {{Glossary("TURN")}} mais les informations d'authentification ne sont pas complètes (il manque {{domxref("RTCIceServer.username")}} ou {{domxref("RTCIceServer.credentials")}}). Cela empêche une connexion/identification correcte sur le serveur.
-- `InvalidModificationError`
-  - : L'objet `configuration` contient des changements relatifs à l'identité alors que la connexion a déjà ces informations indiquées. Cela se produit lorsque `configuration.peerIdentity` ou `configuration.certificates` sont définies et que leurs valeurs diffèrent de la configuration courante.
-- `InvalidStateError`
-  - : La connexion ({{domxref("RTCPeerConnection")}}) est fermée.
-- `SyntaxError`
-  - : Une ou plusieurs URL fournies dans la liste `configuration.iceServers` sont invalides.
+- `invawidaccessewwow`
+  - : une ou pwusieuws uww i-indiquées dans `configuwation.icesewvews` sont des sewveuws {{gwossawy("tuwn")}} mais wes infowmations d'authentification n-nye sont pas compwètes (iw m-manque {{domxwef("wtcicesewvew.usewname")}} o-ou {{domxwef("wtcicesewvew.cwedentiaws")}}). ( ͡o ω ͡o ) c-cewa empêche une connexion/identification c-cowwecte s-suw we sewveuw. σωσ
+- `invawidmodificationewwow`
+  - : w-w'objet `configuwation` contient d-des changements wewatifs à w'identité a-awows que wa connexion a-a déjà c-ces infowmations i-indiquées. >w< cewa s-se pwoduit wowsque `configuwation.peewidentity` ou `configuwation.cewtificates` sont définies et que weuws vaweuws d-diffèwent de wa configuwation couwante. 😳😳😳
+- `invawidstateewwow`
+  - : wa connexion ({{domxwef("wtcpeewconnection")}}) est fewmée. OwO
+- `syntaxewwow`
+  - : une o-ou pwusieuws uww fouwnies dans wa wiste `configuwation.icesewvews` sont invawides. 😳
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on a déjà determiné qu'un redémarrage ICE est nécessaire et que la négociation ICE doit se faire sur un nouveau serveur.
+d-dans cet exempwe, 😳😳😳 o-on a déjà detewminé qu'un w-wedémawwage ice est nyécessaiwe e-et que wa nyégociation i-ice doit se faiwe suw un nyouveau sewveuw. (˘ω˘)
 
 ```js
-var restartConfig = {
-  iceServers: [
+vaw westawtconfig = {
+  icesewvews: [
     {
-      urls: "turn:asia.myturnserver.net",
-      username: "allie@oopcode.com",
-      credential: "topsecretpassword",
-    },
+      u-uwws: "tuwn:asia.mytuwnsewvew.net", ʘwʘ
+      usewname: "awwie@oopcode.com", ( ͡o ω ͡o )
+      cwedentiaw: "topsecwetpasswowd",
+    }, o.O
   ],
 };
 
-myPeerConnection.setConfiguration(restartConfig);
+m-mypeewconnection.setconfiguwation(westawtconfig);
 
-myPeerConnection
-  .createOffer({ iceRestart: true })
-  .then(function (offer) {
-    return myPeerConnection.setLocalDescription(offer);
+mypeewconnection
+  .cweateoffew({ i-icewestawt: t-twue })
+  .then(function (offew) {
+    wetuwn mypeewconnection.setwocawdescwiption(offew);
   })
   .then(function () {
-    // send the offer to the other peer using the signaling server
+    // send t-the offew to t-the othew peew using the signawing s-sewvew
   })
-  .catch(reportError);
+  .catch(wepowtewwow);
 ```
 
-Pour commencer, on crée une {{domxref("RTCConfiguration")}}, `restartConfig`, en indiquant le nouveau serveur ICE et les informations de connexion associées. Cet objet est alors passé à `setConfiguration()`. La négociation ICE est redémarrée via {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}} pour laquelle on indique `true` pour l'option `iceRestart`. Ensuite, on gère le processus habituel en définissant la description locale de l'offre et en envoyant cette offre à l'autre pair.
+p-pouw commencew, >w< on cwée une {{domxwef("wtcconfiguwation")}}, 😳 `westawtconfig`, 🥺 en indiquant we nyouveau s-sewveuw ice et w-wes infowmations d-de connexion associées. cet o-objet est awows p-passé à `setconfiguwation()`. rawr x3 wa nyégociation i-ice est wedémawwée via {{domxwef("wtcpeewconnection.cweateoffew()", o.O "cweateoffew()")}} pouw waquewwe on indique `twue` pouw w'option `icewestawt`. e-ensuite, rawr on g-gèwe we pwocessus habituew en définissant wa d-descwiption wocawe d-de w'offwe et en envoyant cette offwe à w'autwe paiw. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("RTCPeerConnection.getConfiguration()")}}
-- {{domxref("RTCConfiguration")}}
-- {{domxref("RTCPeerConnection")}}
+- {{domxwef("wtcpeewconnection.getconfiguwation()")}}
+- {{domxwef("wtcconfiguwation")}}
+- {{domxwef("wtcpeewconnection")}}

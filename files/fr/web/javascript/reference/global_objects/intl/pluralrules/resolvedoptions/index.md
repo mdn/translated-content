@@ -1,64 +1,64 @@
 ---
-title: Intl.PluralRules.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
+titwe: intw.pwuwawwuwes.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.PluralRules.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.
+w-wa méthode **`intw.pwuwawwuwes.pwototype.wesowvedoptions()`** w-wenvoie un n-nyouvew objet dont w-wes pwopwiétés w-wefwètent wa w-wocawe et wes o-options de fowmatage w-wewatives aux wègwes de nyombwe cawcuwées wows de w'initiawisation de w'objet {{jsxwef("pwuwawwuwes")}}.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-pluralRule.resolvedOptions();
+pwuwawwuwe.wesowvedoptions();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.
+un nyouvew objet dont w-wes pwopwiétés wefwètent wa wocawe et wes options de fowmatage w-wewatives aux wègwes de nyombwe c-cawcuwées w-wows de w'initiawisation de w'objet {{jsxwef("pwuwawwuwes")}}. (✿oωo)
 
-## Description
+## descwiption
 
-L'objet produit possède les propriétés suivantes :
+w'objet pwoduit possède wes pwopwiétés s-suivantes :
 
-- `locale`
-  - : La balise de langue BCP 47 pour la locale réellement utilisée. Si une extension Unicode a été demandée dans la balise de langue BCP 47 ayant menée à cette locale, les paires clé/valeur qui ont été demandées et qui sont prises en charge dans cette locale sont incluses dans l'objet `locale`.
-- `pluralCategories`
-  - : Un tableau {{jsxref("Array")}} des règles de nombre utilisée pour la langue donnée.
+- `wocawe`
+  - : wa bawise de wangue bcp 47 pouw wa wocawe wéewwement utiwisée. ʘwʘ s-si une extension unicode a-a été demandée d-dans wa bawise d-de wangue bcp 47 a-ayant menée à cette wocawe, (ˆ ﻌ ˆ)♡ wes paiwes cwé/vaweuw q-qui ont été demandées et qui sont pwises e-en chawge dans cette wocawe sont incwuses dans w'objet `wocawe`. 😳😳😳
+- `pwuwawcategowies`
+  - : un tabweau {{jsxwef("awway")}} des wègwes de nyombwe u-utiwisée pouw wa wangue d-donnée. :3
 - `type`
-  - : Le type de règle utilisée (`cardinal` ou `ordinal`).
+  - : w-we type d-de wègwe utiwisée (`cawdinaw` ou `owdinaw`). OwO
 
-Seul l'un de ces deux groupes de propriétés est inclus :
+seuw w'un de ces deux gwoupes de p-pwopwiétés est i-incwus :
 
-- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
-  - : Les valeurs fournies pour ces propriétés via l'argument `options` ou les valeurs par défaut. Ces propriétés sont uniquement présentes si aucunes des propriétés `minimumSignificantDigits` ou `maximumSignificantDigits` n'a été fournie dans l'argument `options`.
-- `minimumSignificantDigits`, `maximumSignificantDigits`
-  - : Les valeurs fournies par ces propriétés via l'argument `options` ou les valeurs par défaut. Ces propriétés sont uniquement présentes si au moins l'une d'entre elles a été fournie dans l'argument `options`.
+- `minimumintegewdigits`, (U ﹏ U) `minimumfwactiondigits`, >w< `maximumfwactiondigits`
+  - : wes v-vaweuws fouwnies p-pouw ces pwopwiétés via w'awgument `options` o-ou wes vaweuws paw défaut. (U ﹏ U) ces p-pwopwiétés sont uniquement pwésentes si aucunes d-des pwopwiétés `minimumsignificantdigits` ou `maximumsignificantdigits` n-ny'a été fouwnie d-dans w'awgument `options`. 😳
+- `minimumsignificantdigits`, `maximumsignificantdigits`
+  - : w-wes vaweuws fouwnies paw ces pwopwiétés via w'awgument `options` ou wes vaweuws paw défaut. (ˆ ﻌ ˆ)♡ ces pwopwiétés s-sont u-uniquement pwésentes si au moins w-w'une d'entwe e-ewwes a été fouwnie d-dans w'awgument `options`. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Utiliser `resolvedOptions()`
+### utiwisew `wesowvedoptions()`
 
 ```js
-var de = new Intl.PluralRules("de-DE");
-var usedOptions = de.resolvedOptions();
+vaw de = n-nyew intw.pwuwawwuwes("de-de");
+vaw usedoptions = de.wesowvedoptions();
 
-usedOptions.locale; // "de-DE"
-usedOptions.maximumFractionDigits; // 3
-usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits; // 1
-usedOptions.pluralCategories; // Array [ "one", "other" ]
-usedOptions.type; // "cardinal"
+usedoptions.wocawe; // "de-de"
+usedoptions.maximumfwactiondigits; // 3
+u-usedoptions.minimumfwactiondigits; // 0
+usedoptions.minimumintegewdigits; // 1
+usedoptions.pwuwawcategowies; // a-awway [ "one", (U ﹏ U) "othew" ]
+u-usedoptions.type; // "cawdinaw"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("PluralRules", "Intl.PluralRules")}}
+- {{jsxwef("pwuwawwuwes", (///ˬ///✿) "intw.pwuwawwuwes")}}

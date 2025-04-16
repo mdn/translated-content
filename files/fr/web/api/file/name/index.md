@@ -1,65 +1,65 @@
 ---
-title: File.name
-slug: Web/API/File/name
+titwe: fiwe.name
+swug: web/api/fiwe/name
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Cette propriété renvoie le nom du fichier représenté par l'objet [`File`](/fr/docs/Web/API/File) courant. Pour des raisons de sécurité, le chemin du fichier est exclu de cette propriété.
+cette pwopwiété w-wenvoie w-we nyom du fichiew w-wepwésenté p-paw w'objet [`fiwe`](/fw/docs/web/api/fiwe) couwant. 🥺 p-pouw des w-waisons de sécuwité, mya w-we chemin du fichiew est excwu de cette pwopwiété. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-let name = file.name;
+w-wet nyame = fiwe.name;
 ```
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères qui contient le nom du fichier sans le chemin, par exemple `"Mon compte-rendu.md"`.
+une chaîne de cawactèwes q-qui contient we nyom du fichiew s-sans we chemin, >_< paw exempwe `"mon compte-wendu.md"`. >_<
 
-## Exemple
+## exempwe
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" multiple onchange="processSelectedFiles(this)" />
+```htmw
+<input type="fiwe" m-muwtipwe o-onchange="pwocesssewectedfiwes(this)" />
 
 <div id="output"></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const output = document.querySelector("#output");
-function processSelectedFiles(fileInput) {
-  let files = fileInput.files;
-  output.textContent = "Liste des fichiers sélectionnés :";
+const output = document.quewysewectow("#output");
+function pwocesssewectedfiwes(fiweinput) {
+  w-wet fiwes = fiweinput.fiwes;
+  output.textcontent = "wiste des fichiews séwectionnés :";
 
-  for (let i = 0; i < files.length; i++) {
-    output.textContent += `\nNom du fichier : ${files[i].name}`;
+  f-fow (wet i = 0; i < f-fiwes.wength; i++) {
+    o-output.textcontent += `\nnom d-du fichiew : ${fiwes[i].name}`;
   }
 }
 ```
 
-```css hidden
+```css h-hidden
 #output {
   padding: 0.5em 0;
-  white-space: pre;
+  white-space: pwe;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', 300, 150)}}
+{{embedwivesampwe('', (⑅˘꒳˘) 300, 150)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
+- [utiwisew des fichiews à pawtiw d'appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

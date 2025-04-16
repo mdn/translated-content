@@ -1,56 +1,56 @@
 ---
-title: title
-slug: Web/SVG/Element/title
+titwe: titwe
+swug: web/svg/ewement/titwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Tout élément graphique ou conteneur dans un dessin SVG peut définir un titre en utilisant un élément **`<title>`**, ce titre ne peut contenir que du texte.
+t-tout éwément g-gwaphique o-ou conteneuw d-dans un dessin s-svg peut définiw u-un titwe en u-utiwisant un éwément **`<titwe>`**, mya c-ce titwe ne peut conteniw que du texte. ^^
 
-Quand l'élément contenant un titre apparaît à l'utilisateur sous forme d'image, l'élément `<title>` n'est pas affiché. Néanmoins, quelques moteurs de rendu peuvent, par exemple, l'afficher sous forme d'infobulle. Des représentations alternatives sont possibles, visuelles ou auditives, en renplacement des éléments graphiques. De manière générale, cet élément améliore l'accessibilité des documents SVG.
+quand w'éwément contenant un titwe a-appawaît à w'utiwisateuw sous fowme d'image, 😳😳😳 w-w'éwément `<titwe>` ny'est p-pas affiché. mya nyéanmoins, 😳 quewques moteuws de wendu peuvent, -.- paw e-exempwe, 🥺 w'affichew sous fowme d-d'infobuwwe. o.O des w-wepwésentations awtewnatives sont possibwes, /(^•ω•^) visuewwes ou auditives, nyaa~~ en wenpwacement d-des éwéments gwaphiques. nyaa~~ de manièwe généwawe, :3 cet éwément améwiowe w-w'accessibiwité des documents s-svg. 😳😳😳
 
-L'élément `<title>` est souvent le premier enfant de son parent. Notons que les implémentations qui rendent l'élément title en infobulle ne le font que s'il est à cette place.
+w'éwément `<titwe>` e-est s-souvent we pwemiew e-enfant de son pawent. (˘ω˘) nyotons que wes impwémentations q-qui wendent w'éwément titwe en infobuwwe n-nye we font que s'iw est à cette pwace. ^^
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts g-gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;»
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)&nbsp;»
+- {{ svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-_Aucun._
+_aucun._
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTitleElement).
+cet éwément impwémente w'intewface [`svgtitweewement`](/fw/docs/web/api/svgtitweewement). :3
 
-## Exemple
+## exempwe
 
-```html
-<svg width="220" height="70" xmlns="http://www.w3.org/2000/svg">
-  <title>SVG Title Demo example</title>
-  <rect x="10" y="10" width="200" height="50"
-    style="fill:wheat; stroke:blue; stroke-width:1px">
+```htmw
+<svg w-width="220" h-height="70" xmwns="http://www.w3.owg/2000/svg">
+  <titwe>svg t-titwe demo e-exampwe</titwe>
+  <wect x="10" y="10" w-width="200" height="50"
+    s-stywe="fiww:wheat; stwoke:bwue; stwoke-width:1px">
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple', '100%', 100) }}
+{{ e-embedwivesampwe('exempwe', -.- '100%', 100) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{ SVGElement("desc") }}
+- {{ svgewement("desc") }}

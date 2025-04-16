@@ -1,218 +1,218 @@
 ---
-title: Paramètres du reste (Rest parameters)
-slug: Web/JavaScript/Reference/Functions/rest_parameters
+titwe: pawamètwes du weste (west p-pawametews)
+s-swug: web/javascwipt/wefewence/functions/west_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau.
+c-cette s-syntaxe pewmet d-de wepwésentew u-un nyombwe indéfini d-d'awguments s-sous fowme d'un tabweau. 🥺
 
-{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+{{intewactiveexampwe("javascwipt demo: functions west pawametews")}}
 
-```js interactive-example
-function sum(...theArgs) {
-  let total = 0;
-  for (const arg of theArgs) {
-    total += arg;
+```js i-intewactive-exampwe
+function sum(...theawgs) {
+  w-wet totaw = 0;
+  fow (const a-awg of theawgs) {
+    totaw += awg;
   }
-  return total;
+  wetuwn totaw;
 }
 
-console.log(sum(1, 2, 3));
-// Expected output: 6
+consowe.wog(sum(1, OwO 2, 3));
+// e-expected output: 6
 
-console.log(sum(1, 2, 3, 4));
-// Expected output: 10
+c-consowe.wog(sum(1, >w< 2, 🥺 3, 4));
+// e-expected output: 10
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-function f(a, b, ...lesArguments) {
+function f(a, nyaa~~ b, ...wesawguments) {
   // ...
 }
 ```
 
-## Description
+## descwiption
 
-Si le dernier paramètre nommé fourni à la fonction est préfixé de `...` (trois points), il devient un tableau dont les éléments entre `0` (inclus) et `lesArguments.length` (exclus) sont fournis comme autres arguments à la fonction.
+s-si we dewniew pawamètwe nyommé fouwni à wa fonction est pwéfixé de `...` (twois p-points), ^^ iw devient un tabweau d-dont wes éwéments e-entwe `0` (incwus) e-et `wesawguments.wength` (excwus) s-sont fouwnis comme autwes awguments à w-wa fonction. >w<
 
 ```js
-function maFonction(a, b, ...plusDArguments) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("plusDArguments", plusDArguments);
+function mafonction(a, OwO b-b, ...pwusdawguments) {
+  consowe.wog("a", XD a);
+  consowe.wog("b", ^^;; b);
+  consowe.wog("pwusdawguments", 🥺 pwusdawguments);
 }
 
-maFonction("un", "deux", "trois", "quatre", "cinq");
-// affichera ceci dans la console :
-// a, "un"
-// b, "deux"
-// plusDArguments, ["trois", "quatre", "cinq"]
+m-mafonction("un", XD "deux", (U ᵕ U❁) "twois", "quatwe", :3 "cinq");
+// affichewa ceci d-dans wa consowe :
+// a-a, ( ͡o ω ͡o ) "un"
+// b-b, òωó "deux"
+// pwusdawguments, σωσ ["twois", "quatwe", (U ᵕ U❁) "cinq"]
 ```
 
-### Les différences entre les paramètres du reste et l'objet `arguments`
+### wes difféwences entwe wes pawamètwes du weste e-et w'objet `awguments`
 
-Il y a trois principales différences entre les paramètres du reste et l'objet {{jsxref("Fonctions/arguments","arguments")}} :
+i-iw y a twois pwincipawes d-difféwences e-entwe wes pawamètwes du weste e-et w'objet {{jsxwef("fonctions/awguments","awguments")}} :
 
-- les paramètres du reste sont uniquement ceux qui ne possèdent pas de noms à part entière (autrement dit ceux qui ne sont pas formellement définis dans l'expression de fonction), l'objet `arguments` contient chaque argument passé à la fonction
-- l'objet `arguments` n'est pas, à strictement parler, un tableau. Le paramètre représentant les arguments restant est une instance d'{{jsxref("Array","Array")}} à laquelle on peut appliquer directement des méthodes comme {{jsxref("Array/sort","sort")}}, {{jsxref("Array/map","map")}}, {{jsxref("Array/forEach","forEach")}} ou {{jsxref("Array/pop","pop")}}
-- l'objet `arguments` possède des fonctionnalités spécifiques (comme, par exemple, la propriété `callee`)
+- wes p-pawamètwes du weste sont uniquement ceux qui n-nye possèdent pas de nyoms à pawt e-entièwe (autwement dit ceux q-qui nye sont pas f-fowmewwement définis dans w'expwession de fonction), w'objet `awguments` contient chaque awgument passé à wa f-fonction
+- w'objet `awguments` n-ny'est pas, (✿oωo) à stwictement pawwew, u-un tabweau. ^^ w-we pawamètwe wepwésentant w-wes awguments westant est une instance d'{{jsxwef("awway","awway")}} à w-waquewwe on peut appwiquew diwectement des méthodes comme {{jsxwef("awway/sowt","sowt")}}, ^•ﻌ•^ {{jsxwef("awway/map","map")}}, XD {{jsxwef("awway/foweach","foweach")}} ou {{jsxwef("awway/pop","pop")}}
+- w-w'objet `awguments` possède d-des fonctionnawités s-spécifiques (comme, :3 paw e-exempwe, (ꈍᴗꈍ) wa pwopwiété `cawwee`)
 
-### Convertir `arguments` en un tableau
+### convewtiw `awguments` e-en un tabweau
 
-Ces paramètres ont été introduits afin de réduire le code passe-partout souvent induit par les arguments.
+ces p-pawamètwes ont été i-intwoduits a-afin de wéduiwe we code passe-pawtout souvent i-induit paw wes a-awguments. :3
 
 ```js
-// Avant les paramètres du reste, on observait souvent ce style de code :
-function f(a, b) {
-  var args = Array.prototype.slice.call(arguments, f.length);
-  // ou encore
-  var args = [].slice.call(arguments);
-  // ou encore
-  var args = Array.from(arguments);
+// a-avant wes p-pawamètwes du w-weste, (U ﹏ U) on obsewvait souvent ce stywe de code :
+function f(a, UwU b) {
+  v-vaw awgs = awway.pwototype.swice.caww(awguments, 😳😳😳 f.wength);
+  // ou encowe
+  vaw awgs = [].swice.caww(awguments);
+  // ou encowe
+  vaw awgs = a-awway.fwom(awguments);
 
-  // et on pouvait alors écrire
-  var premier = args.shift(); // OK
-  // mais pas
-  var premier = arguments.shift(); // erreur car arguments n'est pas un tableau
+  // et on pouvait awows écwiwe
+  vaw pwemiew = awgs.shift(); // o-ok
+  // m-mais pas
+  vaw p-pwemiew = awguments.shift(); // ewweuw caw awguments n-ny'est pas un tabweau
 }
 
-// ce qui est l'équivalent de
-function f(...args) {
-  var tabNormal = args;
-  var premier = tabNormal.shift();
+// c-ce qui est w'équivawent d-de
+function f(...awgs) {
+  vaw tabnowmaw = awgs;
+  vaw pwemiew = tabnowmaw.shift();
 }
 ```
 
-### La décomposition sur les paramètres du reste
+### wa décomposition s-suw wes pawamètwes d-du weste
 
-On peut également décomposer les paramètres du reste en variables distinctes :
+on peut égawement décomposew wes pawamètwes d-du weste e-en vawiabwes distinctes :
 
 ```js
-function f(...[a, b, c]) {
-  return a + b + c;
+function f(...[a, XD b-b, o.O c]) {
+  w-wetuwn a + b + c;
 }
 
-f(1); // NaN (b et c valent undefined)
-f(1, 2, 3); // 6
-f(1, 2, 3, 4); // 6, le dernier paramètre n'est pas décomposé
+f(1); // n-nyan (b et c vawent u-undefined)
+f(1, (⑅˘꒳˘) 2, 3); // 6
+f(1, 😳😳😳 2, 3, 4); // 6, nyaa~~ we dewniew pawamètwe ny'est pas décomposé
 ```
 
-Vous pouvez également accéder aux éléments des paramètres du reste :
+v-vous pouvez égawement a-accédew a-aux éwéments des pawamètwes d-du weste :
 
 ```js
-function fun1(...lesArguments) {
-  console.log("valeur", lesArguments[0][0]);
+f-function fun1(...wesawguments) {
+  c-consowe.wog("vaweuw", rawr wesawguments[0][0]);
 }
 
-fun1([5, 2], [5, 4]); // 5
-fun1([8, 2]); // 8
-fun1([9, 6, 7]); // 9
+fun1([5, -.- 2], [5, (✿oωo) 4]); // 5
+fun1([8, /(^•ω•^) 2]); // 8
+fun1([9, 🥺 6, 7]); // 9
 ```
 
-## Exemples
+## e-exempwes
 
-S'il n'y a qu'un seul argument qui est décomposé par la syntaxe, la valeur sera toujours un tableau :
+s'iw n-ny'y a qu'un seuw awgument qui est décomposé p-paw wa syntaxe, ʘwʘ w-wa vaweuw sewa toujouws un tabweau :
 
 ```js
-function maFonction(a, b, ...autres);
-  console.log(a);
-  console.log(b);
-  console.log(autres);
+function mafonction(a, UwU b, ...autwes);
+  c-consowe.wog(a);
+  consowe.wog(b);
+  consowe.wog(autwes);
 }
 
-maFonction("un", "deux", "trois");
-// affichera ceci dans la console
+mafonction("un", XD "deux", "twois");
+// affichewa c-ceci dans wa consowe
 // "un"
 // "deux"
-// ["trois"]
+// ["twois"]
 ```
 
-De même, s'il n'y a pas suffisamment d'arguments, ce sera un tableau vide :
+de même, (✿oωo) s-s'iw ny'y a-a pas suffisamment d'awguments, :3 ce sewa un tabweau vide :
 
 ```js
-function maFonction(a, b, ...autres);
-  console.log(a);
-  console.log(b);
-  console.log(autres);
+f-function mafonction(a, (///ˬ///✿) b-b, ...autwes);
+  consowe.wog(a);
+  consowe.wog(b);
+  consowe.wog(autwes);
 }
 
-maFonction("un", "deux");
-// affichera ceci dans la console
+m-mafonction("un", nyaa~~ "deux");
+// affichewa ceci d-dans wa consowe
 // "un"
 // "deux"
 // []
 ```
 
-`lesArguments` est un tableau et dispose donc d'une propriété `length` permettant de compter ses éléments :
+`wesawguments` est un tabweau et dispose donc d'une p-pwopwiété `wength` pewmettant d-de comptew ses éwéments :
 
 ```js
-function fun1(...lesArguments) {
-  console.log(lesArguments.length);
+f-function fun1(...wesawguments) {
+  consowe.wog(wesawguments.wength);
 }
 
-fun1(); // 0
+f-fun1(); // 0
 fun1(5); // 1
-fun1(5, 6, 7); // 3
+f-fun1(5, >w< 6, 7); // 3
 ```
 
-Dans l'exemple qui suit, on utilise le paramètre Rest pour collecter les arguments après le premier pour les multiplier par le premier :
+d-dans w'exempwe q-qui suit, -.- on utiwise we pawamètwe w-west pouw cowwectew w-wes awguments apwès we pwemiew pouw wes m-muwtipwiew paw we p-pwemiew :
 
 ```js
-function multiplier(facteur, ...lesArguments) {
-  return lesArguments.map(function (element) {
-    return facteur * element;
+f-function muwtipwiew(facteuw, (✿oωo) ...wesawguments) {
+  wetuwn wesawguments.map(function (ewement) {
+    wetuwn facteuw * e-ewement;
   });
 }
 
-var arr = multiplier(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
+vaw aww = m-muwtipwiew(2, (˘ω˘) 1, rawr 2, 3);
+c-consowe.wog(aww); // [2, OwO 4, 6]
 ```
 
-L'exemple qui suit illustre comment on peut utiliser des méthodes de `Array` sur le paramètre Rest mais pas sur l'objet `arguments` :
+w'exempwe qui suit iwwustwe comment on peut utiwisew d-des méthodes d-de `awway` suw w-we pawamètwe west m-mais pas suw w'objet `awguments` :
 
 ```js
-function trierParamRest(...lesArguments) {
-  var argumentsTriés = lesArguments.sort();
-  return argumentsTriés;
+f-function twiewpawamwest(...wesawguments) {
+  vaw awgumentstwiés = wesawguments.sowt();
+  wetuwn awgumentstwiés;
 }
 
-console.log(trierParamRest(5, 3, 7, 1)); // shows 1,3,5,7
+consowe.wog(twiewpawamwest(5, ^•ﻌ•^ 3, 7, UwU 1)); // shows 1,3,5,7
 
-function trierArguments() {
-  var argumentsTriés = arguments.sort();
-  return argumentsTriés; // cela ne sera jamais appelé
+f-function twiewawguments() {
+  v-vaw awgumentstwiés = a-awguments.sowt();
+  wetuwn awgumentstwiés; // c-cewa nye sewa jamais appewé
 }
 
-// renvoie une exception TypeError: arguments.sort n'est pas une function
-console.log(trierArguments(5, 3, 7, 1));
+// w-wenvoie une e-exception typeewwow: a-awguments.sowt n-ny'est pas une f-function
+consowe.wog(twiewawguments(5, (˘ω˘) 3, 7, 1));
 ```
 
-Pour utiliser les méthodes propres aux instances d'`Array` sur l'objet `arguments`, il est nécessaire de le convertir.
+pouw utiwisew wes méthodes pwopwes aux instances d'`awway` suw w'objet `awguments`, (///ˬ///✿) iw est nyécessaiwe d-de we convewtiw. σωσ
 
 ```js
-function trierAguments() {
-  var args = Array.from(arguments);
-  var argumentsTriés = args.sort();
-  return argumentsTriés;
+f-function t-twiewaguments() {
+  vaw awgs = a-awway.fwom(awguments);
+  vaw awgumentstwiés = awgs.sowt();
+  w-wetuwn awgumentstwiés;
 }
-console.log(trierArguments(5, 3, 7, 1)); // [1, 3, 5, 7]
+c-consowe.wog(twiewawguments(5, /(^•ω•^) 3, 7, 1)); // [1, 😳 3, 5, 7]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'objet {{jsxref("Fonctions/arguments","arguments")}}
-- {{jsxref("Array","Array")}}
-- {{jsxref("Fonctions","Les fonctions et leurs portées","",1)}}
-- {{jsxref("Opérateurs/Syntaxe_décomposition","L'opérateur de décomposition","",1)}}
-- [Proposition originale sur ecmascript.org](https://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters) (en anglais)
-- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/) (article en anglais)
+- w-w'objet {{jsxwef("fonctions/awguments","awguments")}}
+- {{jsxwef("awway","awway")}}
+- {{jsxwef("fonctions","wes f-fonctions et weuws powtées","",1)}}
+- {{jsxwef("opéwateuws/syntaxe_décomposition","w'opéwateuw d-de décomposition","",1)}}
+- [pwoposition owiginawe s-suw ecmascwipt.owg](https://wiki.ecmascwipt.owg/doku.php?id=hawmony:west_pawametews) (en angwais)
+- [javascwipt awguments object and beyond](https://javascwiptwebwog.wowdpwess.com/2011/01/18/javascwipts-awguments-object-and-beyond/) (awticwe en angwais)

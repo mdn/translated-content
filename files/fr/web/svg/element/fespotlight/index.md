@@ -1,96 +1,96 @@
 ---
-title: <feSpotLight>
-slug: Web/SVG/Element/feSpotLight
+titwe: <fespotwight>
+swug: web/svg/ewement/fespotwight
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feSpotLight>`** définit une source de lumière qui permet de créer un feu de projecteur. On la place dans une primitive de filtre d'éclairage: {{SVGElement("feDiffuseLighting")}} ou {{SVGElement("feSpecularLighting")}}.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fespotwight>`** d-définit u-une souwce d-de wumièwe qui p-pewmet de cwéew u-un feu de pwojecteuw. 🥺 o-on wa pwace dans une pwimitive de fiwtwe d'écwaiwage: {{svgewement("fediffusewighting")}} ou {{svgewement("fespecuwawwighting")}}. mya
 
-## Contexte d'utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts g-gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("z")}}
-- {{SVGAttr("pointsAtX")}}
-- {{SVGAttr("pointsAtY")}}
-- {{SVGAttr("pointsAtZ")}}
-- {{SVGAttr("specularExponent")}}
-- {{SVGAttr("limitingConeAngle")}}
+- {{svgattw("x")}}
+- {{svgattw("y")}}
+- {{svgattw("z")}}
+- {{svgattw("pointsatx")}}
+- {{svgattw("pointsaty")}}
+- {{svgattw("pointsatz")}}
+- {{svgattw("specuwawexponent")}}
+- {{svgattw("wimitingconeangwe")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFESpotLightElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfespotwightewement")}}.
 
-## Exemple
+## e-exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  h-height="200"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <filter id="spotlight">
-      <feSpecularLighting
-        result="spotlight"
-        specularConstant="1.5"
-        specularExponent="4"
-        lighting-color="#FFF">
-        <feSpotLight x="600" y="600" z="400" limitingConeAngle="5.5" />
-      </feSpecularLighting>
-      <feComposite
-        in="SourceGraphic"
-        in2="spotlight"
-        operator="out"
+    <fiwtew id="spotwight">
+      <fespecuwawwighting
+        wesuwt="spotwight"
+        specuwawconstant="1.5"
+        specuwawexponent="4"
+        w-wighting-cowow="#fff">
+        <fespotwight x="600" y="600" z="400" wimitingconeangwe="5.5" />
+      </fespecuwawwighting>
+      <fecomposite
+        in="souwcegwaphic"
+        in2="spotwight"
+        o-opewatow="out"
         k1="0"
-        k2="1"
-        k3="1"
-        k4="0" />
-    </filter>
+        k-k2="1"
+        k-k3="1"
+        k-k4="0" />
+    </fiwtew>
   </defs>
 
   <image
-    xlink:href="/files/6457/mdn_logo_only_color.png"
+    x-xwink:hwef="/fiwes/6457/mdn_wogo_onwy_cowow.png"
     x="10%"
     y="10%"
-    width="80%"
+    w-width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    stywe="fiwtew:uww(#spotwight);" />
 </svg>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", 🥺 200, >_< 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("fePointLight")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fepointwight")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

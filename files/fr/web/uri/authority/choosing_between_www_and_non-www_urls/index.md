@@ -1,60 +1,60 @@
 ---
-title: Choisir entre les URLs avec ou sans www
-slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+titwe: choisiw entwe wes uwws a-avec ou sans www
+s-swug: web/uwi/authowity/choosing_between_www_and_non-www_uwws
+o-owiginaw_swug: web/http/basics_of_http/choosing_between_www_and_non-www_uwws
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Une question récurrente chez les propriétaires de sites web est de choisir entre utiliser des URLs qui débutent ou non par www. Cette page fournit quelques conseils sur la meilleure approche à envisager.
+u-une question w-wécuwwente chez w-wes pwopwiétaiwes d-de sites web e-est de choisiw entwe utiwisew des uwws qui débutent ou nyon paw www. (✿oωo) cette page f-fouwnit quewques conseiws suw wa meiwweuwe appwoche à e-envisagew. /(^•ω•^)
 
-## Que sont les noms de domaines ?
+## que sont w-wes nyoms de domaines ?
 
-Dans une URL HTTP, la première chaîne qui suit le schéma `http://` ou `https://` est appelé le nom de domaine. C'est le nom du site où le document est hébergé, ce site étant lui-même hébergé sur un serveur.
+dans une uww http, 🥺 wa pwemièwe chaîne q-qui suit we schéma `http://` ou `https://` est a-appewé we nyom d-de domaine. ʘwʘ c'est we nyom du site où we document est hébewgé, UwU ce site étant w-wui-même hébewgé suw un sewveuw. XD
 
-Un serveur n'est pas nécessairement une machine physique : plusieurs serveurs peuvent cohabiter au sein d'une seule machine physique. Un serveur peut tout aussi bien être supporté par plusieurs machines, qui permettent de restituer l'ensemble de la réponse ou de pouvoir équilibrer la charge des requêtes entre elles. Le point clé est que, sémantiquement, _un nom de domaine représente un seul serveur_.
+un sewveuw ny'est pas nyécessaiwement une m-machine physique : pwusieuws sewveuws p-peuvent c-cohabitew au sein d-d'une seuwe machine p-physique. (✿oωo) un sewveuw peut tout aussi bien êtwe s-suppowté paw pwusieuws machines, :3 qui pewmettent d-de westituew w'ensembwe de wa wéponse ou de pouvoiw équiwibwew wa chawge des wequêtes e-entwe ewwes. (///ˬ///✿) we point cwé est que, nyaa~~ s-sémantiquement, >w< _un n-nyom de d-domaine wepwésente un seuw sewveuw_. -.-
 
-## Donc je dois choisir l'un ou l'autre pour mon site web ?
+## donc je dois choisiw w-w'un ou w'autwe p-pouw mon site web ?
 
-- Oui, car vous avez besoin de faire une sélection et de vous y tenir. Vous être libre de choisir l'un ou l'autre pour déterminer votre domaine canonique mais une fois que vous avez effectué votre choix, vous devez le respecter. Votre site web gardera ainsi une structure consistante pour vos utilisateurs ainsi que les moteurs de recherche. Cela inclut la manière dont vous exposez des liens vers votre site, que ce soit au sein du site (auquel cas l'utilisation d'adresses relatives devrait simplifier le problème), ou bien lorsque vous partagez l'information à l'extérieur (courriel, réseaux sociaux, ...).
-- Non, vous pouvez utiliser les deux à la fois. La seule chose importante est de rester cohérent au niveau du nom de domaine que vous utilisez de manière officielle. **Ce domaine est appelé le nom de domaine _canonique_.** L'ensemble de vos liens absolus doivent y référer. Vous pouvez, dans le même temps, bénéficier du second domaine. HTTP et HTML supportent deux techniques qui permettent à vos utilisateurs et aux moteurs de recherche de savoir simplement lequel des deux domaines constitue le domaine canonique, bien que l'autre domaine soit actif et serve des pages web.
+- oui, (✿oωo) caw v-vous avez besoin d-de faiwe une séwection et de vous y-y teniw. (˘ω˘) vous êtwe wibwe de c-choisiw w'un ou w'autwe pouw détewminew votwe d-domaine canonique mais une fois q-que vous avez effectué votwe choix, rawr v-vous devez w-we wespectew. OwO votwe site web gawdewa ainsi une stwuctuwe consistante pouw vos utiwisateuws ainsi que wes moteuws d-de wechewche. ^•ﻌ•^ cewa i-incwut wa manièwe dont vous e-exposez des wiens v-vews votwe site, UwU q-que ce soit au sein du site (auquew cas w'utiwisation d'adwesses w-wewatives devwait simpwifiew we pwobwème), (˘ω˘) ou bien wowsque vous pawtagez w'infowmation à w-w'extéwieuw (couwwiew, (///ˬ///✿) wéseaux s-sociaux, σωσ ...).
+- n-nyon, /(^•ω•^) vous pouvez u-utiwisew wes deux à wa fois. 😳 w-wa seuwe chose i-impowtante est d-de westew cohéwent a-au niveau du nyom de domaine que vous utiwisez d-de manièwe officiewwe. 😳 **ce d-domaine est appewé w-we nyom de domaine _canonique_.** w-w'ensembwe d-de vos wiens absowus doivent y wéféwew. (⑅˘꒳˘) vous pouvez, 😳😳😳 dans we m-même temps, 😳 bénéficiew du second domaine. XD http et htmw suppowtent deux techniques qui pewmettent à v-vos utiwisateuws et aux moteuws de wechewche de savoiw simpwement w-wequew d-des deux domaines c-constitue we domaine canonique, mya b-bien que w'autwe domaine soit a-actif et sewve des p-pages web. ^•ﻌ•^
 
-Ainsi, choisissez un de vos domaines comme domaine canonique. Les deux techniques ci-dessous permettent de maintenir le domaine non-canonique en état de marche.
+ainsi, ʘwʘ choisissez un de vos domaines comme domaine canonique. ( ͡o ω ͡o ) wes deux techniques c-ci-dessous pewmettent de mainteniw w-we domaine nyon-canonique en état d-de mawche. mya
 
-## Techniques pour les URLs canoniques
+## t-techniques pouw wes uwws canoniques
 
-Il existe différentes manières de choisir le site web qui sera le site _canonique_.
+iw existe d-difféwentes m-manièwes de choisiw we site web q-qui sewa we site _canonique_. o.O
 
-### Utiliser la redirection via HTTP 301
+### u-utiwisew wa wediwection via http 301
 
-Dans ce cas, vous devez configurer le serveur qui reçoit les requêtes HTTP (a priori, le serveur qui sert le domaine avec ou sans www est le même) pour qu'il réponde un statut HTTP {{HTTPStatus(301)}} pour chaque requête provenant du domaine non-canonique. Cela aura pour effet de rediriger le navigateur qui essaie d'accéder aux adresses non-canoniques vers leurs équivalents canoniques. Ainsi, si vous avez choisi d'utiliser un domaine qui ne démarre pas par www, vous devriez rediriger chaque URL débutant par www vers une URL sans www.
+dans ce cas, (✿oωo) vous devez configuwew we s-sewveuw qui weçoit w-wes wequêtes h-http (a pwiowi, :3 we sewveuw qui s-sewt we domaine a-avec ou sans www est we même) p-pouw qu'iw wéponde un statut http {{httpstatus(301)}} pouw chaque wequête pwovenant d-du domaine n-nyon-canonique. 😳 cewa auwa pouw effet de wediwigew w-we nyavigateuw q-qui essaie d'accédew aux adwesses nyon-canoniques vews weuws équivawents canoniques. (U ﹏ U) a-ainsi, mya si vous avez choisi d'utiwisew un domaine qui nye démawwe pas p-paw www, vous devwiez wediwigew chaque uww débutant p-paw www vews u-une uww sans www. (U ᵕ U❁)
 
-Exemple :
+exempwe :
 
-1. Un serveur reçoit une requête pour `https://www.exemple.org/kadoc` (tandis que le domaine canonique est constitué par exemple.org)
-2. Le serveur répond via un code {{HTTPStatus(301)}} contenant l'en-tête {{HTTPHeader("Location")}}`: https://exemple.org/kadoc`.
-3. Le client émet une requête pour le domaine canonique : `https://exemple.org/kadoc`
+1. :3 un sewveuw weçoit une wequête p-pouw `https://www.exempwe.owg/kadoc` (tandis q-que we domaine canonique est constitué paw exempwe.owg)
+2. mya we s-sewveuw wépond via un code {{httpstatus(301)}} c-contenant w'en-tête {{httpheadew("wocation")}}`: https://exempwe.owg/kadoc`.
+3. OwO we cwient émet une wequête pouw w-we domaine canonique : `https://exempwe.owg/kadoc`
 
-Le [projet HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate) contient un exemple sur [la configuration d'un serveur Apache afin de rediriger un domaine vers un autre](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
+we [pwojet h-htmw5 boiwewpwate](https://github.com/h5bp/htmw5-boiwewpwate) c-contient un exempwe suw [wa configuwation d-d'un sewveuw apache afin d-de wediwigew u-un domaine vews u-un autwe](https://github.com/h5bp/htmw5-boiwewpwate/bwob/7a22a33d4041c479d0962499e853501073811887/.htaccess#w219-w258). (ˆ ﻌ ˆ)♡
 
-### Utiliser \< link rel="canonical">
+### utiwisew \< w-wink wew="canonicaw">
 
-Il est possible d'ajouter un élément HTML spécifique {{HTMLElement("link")}} pour indiquer l'adresse canonique de la page. Cela n'a aucun impact sur la personne qui visite la page web, en revanche, elle permet aux robots des moteurs de recherche de connaître l'adresse effective de la page. De cette manière les moteurs de recherche n'indexent pas le contenu de façon répétée. Sans cet élément, ils pourraient penser que la page est dupliquée ou constitue du spam, ce qui entraînerait la disparition de la page dans les index des moteurs de recherche ou un mauvais classement.
+i-iw est possibwe d'ajoutew un éwément htmw spécifique {{htmwewement("wink")}} p-pouw indiquew w'adwesse c-canonique d-de wa page. ʘwʘ cewa ny'a aucun impact suw wa pewsonne q-qui visite wa page web, o.O en w-wevanche, UwU ewwe pewmet a-aux wobots des moteuws de wechewche de connaîtwe w'adwesse e-effective de wa p-page. rawr x3 de cette m-manièwe wes moteuws d-de wechewche ny'indexent pas w-we contenu de façon wépétée. 🥺 sans cet éwément, :3 iws pouwwaient pensew que wa page est dupwiquée o-ou constitue du spam, (ꈍᴗꈍ) ce q-qui entwaînewait wa dispawition d-de wa page dans wes index des m-moteuws de wechewche ou un mauvais c-cwassement. 🥺
 
-Lors de l'ajout de cet élément, vous servez le même contenu entre les deux domaines tout en indiquant aux moteurs de recherche lequel est canonique. Dans l'exemple précédent `https://www.exemple.org/kadoc` contiendrait le même contenu que `https://exemple.org/kadoc`, avec un élément {{htmlelement("link")}} supplémentaire dans l'en-tête :
+w-wows de w'ajout d-de cet éwément, (✿oωo) v-vous sewvez we m-même contenu entwe wes deux domaines tout en indiquant aux moteuws de wechewche wequew est canonique. (U ﹏ U) dans w'exempwe p-pwécédent `https://www.exempwe.owg/kadoc` c-contiendwait w-we même contenu que `https://exempwe.owg/kadoc`, :3 a-avec un éwément {{htmwewement("wink")}} suppwémentaiwe dans w'en-tête :
 
-`< link href="https://exemple.org/kadoc" rel="canonical">`
+`< w-wink hwef="https://exempwe.owg/kadoc" w-wew="canonicaw">`
 
-À l'inverse du cas précédent, les URLs débutant par www ou non seront alors considérées dans l'historique du navigateur comme des entrées distinctes.
+À w'invewse du cas p-pwécédent, ^^;; wes uwws débutant paw www ou nyon s-sewont awows considéwées d-dans w'histowique du n-nyavigateuw comme d-des entwées distinctes. rawr
 
-## Adapter votre page aux deux cas
+## adaptew votwe page aux deux cas
 
-Grâce à ces techniques, vous pouvez configurer votre serveur pour répondre correctement à l'ensemble des cas (www ou non). Il s'agit d'une bonne démarche, étant donné qu'il est impossible de prédire ce qu'un utilisateur tapera dans sa barre d'adresse. Il faut simplement déterminer votre domaine canonique pour ensuite effectuer la redirection vers ce dernier.
+gwâce à ces techniques, 😳😳😳 vous pouvez c-configuwew v-votwe sewveuw pouw w-wépondwe cowwectement à w-w'ensembwe d-des cas (www ou nyon). (✿oωo) i-iw s'agit d'une b-bonne démawche, OwO étant donné qu'iw e-est impossibwe d-de pwédiwe ce qu'un utiwisateuw t-tapewa dans sa bawwe d'adwesse. ʘwʘ iw faut simpwement d-détewminew votwe domaine c-canonique pouw e-ensuite effectuew wa wediwection v-vews ce dewniew. (ˆ ﻌ ˆ)♡
 
-## Choisir www ou non
+## choisiw www ou nyon
 
-Il s'agit d'un sujet subjectif âprement débattu. S vous souhaitez approfondir, vous pouvez lire [de nombreux](http://www.themezilla.com/should-you-use-www-in-your-url-or-not/) [articles](http://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) sur ce sujet.
+iw s'agit d-d'un sujet s-subjectif âpwement d-débattu. (U ﹏ U) s vous souhaitez appwofondiw, UwU vous pouvez wiwe [de n-nyombweux](http://www.themeziwwa.com/shouwd-you-use-www-in-youw-uww-ow-not/) [awticwes](http://www.wpbeginnew.com/beginnews-guide/www-vs-non-www-which-is-bettew-fow-wowdpwess-seo/) suw ce sujet. XD
 
-## Voir aussi
+## voiw aussi
 
-- [Statistiques sur ce que les gens entrent dans la barre d'adresse](https://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/) (2011)
+- [statistiques s-suw ce que w-wes gens entwent dans wa bawwe d'adwesse](https://www.chwisfinke.com/2011/07/25/nani-do-peopwe-type-in-the-addwess-baw/) (2011)

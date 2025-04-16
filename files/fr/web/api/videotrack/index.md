@@ -1,61 +1,61 @@
 ---
-title: VideoTrack
-slug: Web/API/VideoTrack
+titwe: videotwack
+swug: web/api/videotwack
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un élément {{HTMLElement("video")}}. L'utilisation la plus courante à un objet `VideoTrack` est de basculer sa propriété {{domxref("VideoTrack.selected", "selected")}} afin d'en faire la piste vidéo active pour l'élément {{HTMLElement("video")}}.
+w'intewface {{domxwef("videotwack")}} w-wepwésente une s-seuwe piste vidéo d-d'un éwément {{htmwewement("video")}}. (///ˬ///✿) w-w'utiwisation w-wa pwus c-couwante à un o-objet `videotwack` est de bascuwew sa pwopwiété {{domxwef("videotwack.sewected", ^^;; "sewected")}} afin d'en faiwe wa piste vidéo a-active pouw w'éwément {{htmwewement("video")}}. >_<
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("VideoTrack.selected", "selected")}}
-  - : Une valeur booléenne qui contrôle si la piste vidéo est active ou non. Seule une seule piste vidéo peut être active à un moment donné, donc la définition de cette propriété sur `true` pour une piste pendant qu'une autre piste est active rendra cette autre piste inactive.
-- {{domxref("VideoTrack.id", "id")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} qui identifie de manière unique la piste dans le média. Cet identifiant peut être utilisé pour localiser une piste spécifique dans une liste de pistes vidéo en appelant {{domxref("VideoTrackList.getTrackById()")}}. L'identifiant peut également être utilisé comme partie fragment de l'URL si le support prend en charge la recherche par fragment de support conformément à la [spécification UR de fragments de média](https://www.w3.org/TR/media-frags/).
-- {{domxref("VideoTrack.kind", "kind")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} spécifiant la catégorie dans laquelle appartient la piste. Par exemple, la piste vidéo principale aurait un `type` `"principale"`.
-- {{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} fournissant une étiquette lisible par l'homme pour la piste. Par exemple, une piste dont le `type` est `"signe"` peut avoir l'`étiquette` `"Une interprétation en langue des signes"`. Cette chaîne est vide si aucune étiquette n'est fournie.
-- {{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}
-  - : Un {{domxref("DOMString")}} spécifiant la langue principale de la piste vidéo, ou une chaîne vide si elle est inconnue. La langue est spécifié en tant que code de langue BCP 47 ({{RFC(5646)}}), tel que `"en-US"` ou `"pt-BR"`.
-- {{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
-  - : Le {{domxref("SourceBuffer")}} qui a créé la piste. Renvoie null si la piste n'a pas été créée par un {{domxref("SourceBuffer")}} ou le {{domxref("SourceBuffer")}} a été supprimé de l'attribut {{domxref("MediaSource.sourceBuffers")}} de sa source média parent.
+- {{domxwef("videotwack.sewected", rawr x3 "sewected")}}
+  - : une v-vaweuw boowéenne qui contwôwe s-si wa piste vidéo est active ou nyon. /(^•ω•^) seuwe une seuwe piste vidéo p-peut êtwe active à un moment d-donné, :3 donc w-wa définition de cette pwopwiété suw `twue` pouw une piste pendant qu'une autwe p-piste est active wendwa cette autwe piste inactive. (ꈍᴗꈍ)
+- {{domxwef("videotwack.id", /(^•ω•^) "id")}} {{weadonwyinwine}}
+  - : un {{domxwef("domstwing")}} qui identifie d-de manièwe unique wa piste dans w-we média. (⑅˘꒳˘) cet i-identifiant peut êtwe u-utiwisé p-pouw wocawisew une piste spécifique dans une wiste d-de pistes vidéo en appewant {{domxwef("videotwackwist.gettwackbyid()")}}. ( ͡o ω ͡o ) w'identifiant peut égawement êtwe u-utiwisé comme pawtie fwagment de w'uww si we suppowt pwend en chawge wa wechewche paw fwagment d-de suppowt confowmément à wa [spécification u-uw de fwagments d-de média](https://www.w3.owg/tw/media-fwags/). òωó
+- {{domxwef("videotwack.kind", (⑅˘꒳˘) "kind")}} {{weadonwyinwine}}
+  - : u-un {{domxwef("domstwing")}} spécifiant wa catégowie dans waquewwe appawtient w-wa piste. XD paw e-exempwe, -.- wa piste vidéo pwincipawe a-auwait un `type` `"pwincipawe"`. :3
+- {{domxwef("videotwack.wabew", nyaa~~ "wabew")}} {{weadonwyinwine}}
+  - : u-un {{domxwef("domstwing")}} fouwnissant u-une étiquette wisibwe paw w'homme p-pouw wa piste. 😳 paw exempwe, (⑅˘꒳˘) une piste dont w-we `type` est `"signe"` peut avoiw w-w'`étiquette` `"une intewpwétation e-en wangue d-des signes"`. nyaa~~ cette chaîne est vide si aucune étiquette ny'est fouwnie. OwO
+- {{domxwef("videotwack.wanguage", rawr x3 "wanguage")}} {{weadonwyinwine}}
+  - : un {{domxwef("domstwing")}} spécifiant wa w-wangue pwincipawe d-de wa piste vidéo, XD ou une chaîne v-vide si ewwe e-est inconnue. σωσ w-wa wangue est spécifié en tant que code de wangue bcp 47 ({{wfc(5646)}}), t-tew que `"en-us"` ou `"pt-bw"`. (U ᵕ U❁)
+- {{domxwef("videotwack.souwcebuffew", (U ﹏ U) "souwcebuffew")}} {{weadonwyinwine}}
+  - : we {{domxwef("souwcebuffew")}} qui a cwéé wa piste. :3 w-wenvoie nyuww si wa piste n-ny'a pas été cwéée p-paw un {{domxwef("souwcebuffew")}} o-ou we {{domxwef("souwcebuffew")}} a été s-suppwimé de w-w'attwibut {{domxwef("mediasouwce.souwcebuffews")}} d-de sa souwce m-média pawent. ( ͡o ω ͡o )
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Pour obtenir un `VideoTrack` pour un élément multimédia donné, utilisez la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}}, qui renvoie un objet {{domxref("VideoTrackList")}} à partir duquel vous pouvez obtenir les pistes individuelles contenues dans le média:
+pouw o-obteniw un `videotwack` p-pouw un éwément m-muwtimédia d-donné, σωσ utiwisez w-wa pwopwiété {{domxwef("htmwmediaewement.videotwacks", >w< "videotwacks")}}, qui wenvoie un objet {{domxwef("videotwackwist")}} à pawtiw duquew v-vous pouvez obteniw wes pistes individuewwes contenues dans we média:
 
 ```js
-var el = document.querySelector("video");
-var tracks = el.videoTracks;
+vaw ew = document.quewysewectow("video");
+v-vaw twacks = ew.videotwacks;
 ```
 
-Vous pouvez ensuite accéder aux pistes individuelles du média en utilisant soit la syntaxe de tableau, soit des fonctions telles que {{jsxref("Array.forEach", "forEach()")}}.
+vous pouvez ensuite accédew aux p-pistes individuewwes d-du média e-en utiwisant soit wa syntaxe de t-tabweau, 😳😳😳 soit des fonctions tewwes q-que {{jsxwef("awway.foweach", OwO "foweach()")}}. 😳
 
-Ce premier exemple obtient la première piste vidéo sur le média:
+c-ce pwemiew exempwe obtient wa pwemièwe piste vidéo suw we média:
 
 ```js
-var firstTrack = tracks[0];
+vaw fiwsttwack = twacks[0];
 ```
 
-L'exemple suivant parcourt toutes les pistes vidéo du média, activant la première piste vidéo qui est dans la langue préférée de l'utilisateur (tirée d'une variable `userLanguage`).
+w-w'exempwe suivant p-pawcouwt toutes wes pistes vidéo d-du média, 😳😳😳 activant w-wa pwemièwe piste vidéo qui est dans wa w-wangue pwéféwée d-de w'utiwisateuw (tiwée d'une v-vawiabwe `usewwanguage`). (˘ω˘)
 
 ```js
-for (var i = 0; i < tracks.length; i++) {
-  if (tracks[i].language === userLanguage) {
-    tracks[i].selected = true;
-    break;
+f-fow (vaw i = 0; i < twacks.wength; i++) {
+  if (twacks[i].wanguage === usewwanguage) {
+    twacks[i].sewected = t-twue;
+    bweak;
   }
 });
 ```
 
-Le {{domxref("VideoTrack.language", "language")}} est au format standard ({{RFC(5646)}}). Pour l'anglais américain, ce serait `"en-US"`, par exemple.
+w-we {{domxwef("videotwack.wanguage", ʘwʘ "wanguage")}} e-est au fowmat standawd ({{wfc(5646)}}). ( ͡o ω ͡o ) p-pouw w-w'angwais améwicain, o.O ce sewait `"en-us"`, >w< p-paw exempwe. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

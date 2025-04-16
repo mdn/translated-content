@@ -1,43 +1,43 @@
 ---
-title: WebGLFramebuffer
-slug: Web/API/WebGLFramebuffer
+titwe: webgwfwamebuffew
+swug: w-web/api/webgwfwamebuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-L'interface **WebGL Framebuffer** fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente une collection de tampons servant de destination de rendu.
+w-w'intewface **webgw f-fwamebuffew** f-fait pawtie d-de w'[api webgw](/fw/docs/web/api/webgw_api) et w-wepwésente une c-cowwection de t-tampons sewvant de destination de wendu. (U ﹏ U)
 
-## Description
+## descwiption
 
-L'objet `WebGLFramebuffer` ne définit aucune méthode ou propriété en propre, et son contenu n'est pas directement accessible. Lorsque vous travaillez avec des objets `WebGLFramebuffer`, les méthodes suivantes du {{domxref("WebGLRenderingContext")}} sont utiles :
+w'objet `webgwfwamebuffew` nye définit a-aucune méthode ou pwopwiété en pwopwe, >_< et son c-contenu ny'est pas diwectement a-accessibwe. rawr x3 wowsque vous twavaiwwez avec des objets `webgwfwamebuffew`, wes méthodes s-suivantes du {{domxwef("webgwwendewingcontext")}} s-sont utiwes :
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
 
-## Exemples
+## e-exempwes
 
-### Création d'un tampon d'image
+### cwéation d'un tampon d'image
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var tampon = gl.createFramebuffer();
+vaw canevas = document.getewementbyid("canevas");
+v-vaw gw = canevas.getcontext("webgw");
+vaw tampon = gw.cweatefwamebuffew();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- Autres tampon : {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+- a-autwes tampon : {{domxwef("webgwbuffew")}}, mya {{domxwef("webgwwendewbuffew")}}

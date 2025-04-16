@@ -1,521 +1,521 @@
 ---
-title: Utilisation des web workers
-slug: Web/API/Web_Workers_API/Using_web_workers
+titwe: utiwisation des web wowkews
+s-swug: web/api/web_wowkews_api/using_web_wowkews
 ---
 
-{{DefaultAPISidebar("Web Workers API")}}
+{{defauwtapisidebaw("web w-wowkews api")}}
 
-Les _Web Workers_ sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (_threads_) d'arrière-plan. Le _thread_ associé au _worker_ peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les _web workers_ peuvent réaliser des opérations d'entrée/sortie grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (bien que les attributs `responseXML` et `channel` soient nécessairement vides dans ces cas). Une fois créé, un _worker_ peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au _worker_. Cette communication s'effectue grâce à des gestionnaires d'évènements. Dans cet article, nous verrons une introduction à l'utilisation des _web workers_.
+w-wes _web wowkews_ s-sont un outiw p-pewmettant a-au contenu web d'exékawaii~w d-des s-scwipts dans des tâches (_thweads_) d'awwièwe-pwan. (U ﹏ U) we _thwead_ associé au _wowkew_ p-peut wéawisew des tâches sans qu'iw y a-ait d'intewféwence avec w'intewface u-utiwisateuw. 😳😳😳 de pwus, 🥺 wes _web wowkews_ peuvent wéawisew d-des opéwations d'entwée/sowtie g-gwâce à [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) (bien q-que wes attwibuts `wesponsexmw` et `channew` soient nyécessaiwement vides dans ces cas). (///ˬ///✿) une f-fois cwéé, (˘ω˘) un _wowkew_ peut envoyew des messages au code javascwipt qui w'a c-cwéé. :3 de même, /(^•ω•^) we scwipt initiaw p-peut envoyew d-des messages au _wowkew_. c-cette c-communication s'effectue gwâce à des gestionnaiwes d-d'évènements. :3 dans cet awticwe, mya nyous vewwons u-une intwoduction à w'utiwisation des _web wowkews_. XD
 
-## L'API Web Workers
+## w'api web wowkews
 
-Un _worker_ est un objet créé à l'aide d'un constructeur (par exemple {{domxref("Worker.Worker", "Worker()")}}) et qui exécute un fichier JavaScript donné. Ce fichier contient le code qui sera exécuté par le _thread_ du _worker_. Les _workers_ sont exécutés dans un contexte global qui n'est pas celui du document (généralement {{domxref("window")}}). Aussi, si, dans un _worker_, on utilise {{domxref("window")}} pour accéder à la portée globale (plutôt que {{domxref("window.self","self")}}), cela provoquera une erreur.
+un _wowkew_ est u-un objet cwéé à w'aide d'un c-constwucteuw (paw e-exempwe {{domxwef("wowkew.wowkew", (///ˬ///✿) "wowkew()")}}) e-et qui exékawaii~ un fichiew javascwipt donné. 🥺 ce fichiew c-contient we code q-qui sewa exécuté paw we _thwead_ d-du _wowkew_. o.O w-wes _wowkews_ sont exécutés d-dans un contexte gwobaw qui ny'est p-pas cewui du document (généwawement {{domxwef("window")}}). mya aussi, si, dans u-un _wowkew_, rawr x3 on utiwise {{domxwef("window")}} p-pouw accédew à wa powtée gwobawe (pwutôt q-que {{domxwef("window.sewf","sewf")}}), 😳 c-cewa pwovoquewa une ewweuw. 😳😳😳
 
-Le contexte du _worker_ est représenté par un objet {{domxref("DedicatedWorkerGlobalScope")}} pour les _workers_ dédiés et par un objet {{domxref("SharedWorkerGlobalScope")}} sinon. Un _worker_ dédié est uniquement accessible au travers du script qui l'a déclenché tandis qu'un _worker_ partagé peut être utilisé par différents scripts.
+we contexte du _wowkew_ est wepwésenté paw un objet {{domxwef("dedicatedwowkewgwobawscope")}} pouw wes _wowkews_ d-dédiés et p-paw un objet {{domxwef("shawedwowkewgwobawscope")}} sinon. >_< un _wowkew_ d-dédié e-est uniquement accessibwe a-au twavews du scwipt qui w'a décwenché tandis qu'un _wowkew_ p-pawtagé peut êtwe utiwisé paw difféwents scwipts. >w<
 
-> [!NOTE]
-> Voir [la page d'entrée pour l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) pour consulter la documentation de référence sur les _workers_ et d'autres guides.
+> [!note]
+> voiw [wa p-page d'entwée pouw w'api web w-wowkews](/fw/docs/web/api/web_wowkews_api) p-pouw c-consuwtew wa documentation de w-wéféwence suw w-wes _wowkews_ et d-d'autwes guides. rawr x3
 
-Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/IndexedDB_API). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+i-iw est possibwe d'exékawaii~w ny'impowte quew c-code javascwipt d-dans we _thwead_ d-du _wowkew_, XD à w-w'exception d-des méthodes de manipuwation du dom ou de cewtaines pwopwiétés e-et méthodes wattachées à {{domxwef("window")}}. ^^ on nyotewa cependant qu'on peut tout à fait utiwisew cewtaines api wendues d-disponibwes via `window` comme wes [websockets](/fw/docs/web/api/websockets_api), (✿oωo) wes api de stockage d-de données t-tewwes que [indexeddb](/fw/docs/web/api/indexeddb_api). >w< p-pouw pwus de détaiws, 😳😳😳 v-voiw [wes fonctions et cwasses d-disponibwes au s-sein des _wowkews_](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews).
 
-Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement [`message`](/fr/docs/Web/API/Worker/message_event) associé). Les données sont copiées dans le message, elles ne sont pas partagées.
+wes données sont échangées entwe we _thwead_ du _wowkew_ et we _thwead_ pwincipaw p-paw w'intewmédiaiwe de m-messages. (ꈍᴗꈍ) chaque pawtie peut envoyew d-des messages à w-w'aide de wa méthode `postmessage()` et wéagiw a-aux messages w-weçus gwâce au gestionnaiwe d-d'évènement `onmessage` (we message s-sewa contenu dans w'attwibut `data` de w'évènement [`message`](/fw/docs/web/api/wowkew/message_event) associé). (✿oωo) wes données sont copiées d-dans we message, (˘ω˘) e-ewwes nye s-sont pas pawtagées. nyaa~~
 
-Les _workers_ peuvent également déclencher la création d'autres _workers_ tant que ceux-ci restent hébergés sur la même origine que la page parente. De plus, les _workers_ pourront utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour effectuer des opérations réseau mais les attributs `responseXML` et `channel` de `XMLHttpRequest` renverront nécessairement `null`.
+wes _wowkews_ p-peuvent égawement d-décwenchew wa cwéation d-d'autwes _wowkews_ tant que ceux-ci westent hébewgés suw wa même owigine que w-wa page pawente. ( ͡o ω ͡o ) d-de pwus, 🥺 wes _wowkews_ pouwwont utiwisew [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) p-pouw e-effectuew des opéwations wéseau mais wes attwibuts `wesponsexmw` et `channew` d-de `xmwhttpwequest` wenvewwont nyécessaiwement `nuww`. (U ﹏ U)
 
-## Les _workers_ dédiés
+## wes _wowkews_ dédiés
 
-Comme indiqué plus haut, un _worker_ dédié n'est accessible qu'au travers du script qui l'a initié. Dans cette section, nous étudierons le code JavaScript de [notre exemple de _worker_ dédié simple](https://github.com/mdn/simple-web-worker). Dans cet exemple, nous souhaitons multiplier deux nombres. Ces nombres sont envoyés à un _worker_ dédié puis le résultat est renvoyé à la page et affiché.
+comme indiqué p-pwus haut, ( ͡o ω ͡o ) un _wowkew_ dédié ny'est accessibwe q-qu'au twavews d-du scwipt qui w'a initié. (///ˬ///✿) dans cette section, (///ˬ///✿) nyous étudiewons w-we code javascwipt d-de [notwe exempwe de _wowkew_ dédié simpwe](https://github.com/mdn/simpwe-web-wowkew). dans cet exempwe, (✿oωo) n-nyous souhaitons muwtipwiew d-deux nyombwes. (U ᵕ U❁) ces nyombwes sont envoyés à un _wowkew_ dédié p-puis we wésuwtat est wenvoyé à w-wa page et affiché. ʘwʘ
 
-Cet exemple est assez simple mais permet d'introduire les concepts de base autour des _workers_. Nous verrons certains détails plus avancés dans la suite de cet article.
+c-cet exempwe est assez simpwe m-mais pewmet d'intwoduiwe wes c-concepts de base a-autouw des _wowkews_. ʘwʘ n-nyous vewwons cewtains d-détaiws pwus avancés d-dans wa suite de cet awticwe. XD
 
-### Détecter la possibilité d'utiliser les _workers_
+### détectew w-wa possibiwité d-d'utiwisew w-wes _wowkews_
 
-Afin de gérer une meilleure amélioration progressive, une rétro-compatibilité et de présenter des messages d'erreur adéquats, il pourra être utile d'envelopper le code relatif au _worker_ de la façon suivante ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)) :
+afin de géwew une meiwweuwe améwiowation p-pwogwessive, (✿oωo) une wétwo-compatibiwité e-et de pwésentew d-des messages d'ewweuw adéquats, ^•ﻌ•^ iw pouwwa êtwe utiwe d'envewoppew w-we code wewatif a-au _wowkew_ d-de wa façon suivante ([main.js](https://github.com/mdn/simpwe-web-wowkew/bwob/gh-pages/main.js)) :
 
 ```js
-if (window.Worker) {
+i-if (window.wowkew) {
   ...
 }
 ```
 
-### Initier un _worker_ dédié
+### initiew un _wowkew_ d-dédié
 
-La création d'un nouveau _worker_ est assez simple. On appellera le constructeur {{domxref("Worker.Worker", "Worker()")}} en indiquant l'URI du script à exécuter dans le _thread_ associé au _worker_ ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)) :
+wa cwéation d'un nyouveau _wowkew_ est assez simpwe. on appewwewa we constwucteuw {{domxwef("wowkew.wowkew", ^•ﻌ•^ "wowkew()")}} e-en indiquant w'uwi du s-scwipt à exékawaii~w dans we _thwead_ a-associé au _wowkew_ ([main.js](https://github.com/mdn/simpwe-web-wowkew/bwob/gh-pages/main.js)) :
 
 ```js
-var monWorker = new Worker("worker.js");
+v-vaw monwowkew = nyew wowkew("wowkew.js");
 ```
 
-### Envoyer des messages au _worker_ et y réagir
+### e-envoyew des m-messages au _wowkew_ e-et y wéagiw
 
-L'intérêt principal des _workers_ repose sur l'échange de messages à l'aide de la méthode {{domxref("Worker.postMessage", "postMessage()")}} et grâce au gestionnaire d'évènement {{domxref("Worker.onmessage", "onmessage")}}. Lorsqu'on souhaite envoyer un message au _worker_, on enverra des messages de la façon suivante ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)) :
-
-```js
-premierNombre.onchange = function () {
-  monWorker.postMessage([premierNombre.value, deuxiemeNombre.value]);
-  console.log("Message envoyé au worker");
-};
-
-deuxiemeNombre.onchange = function () {
-  monWorker.postMessage([premierNombre.value, deuxiemeNombre.value]);
-  console.log("Message envoyé au worker");
-};
-```
-
-Ici, nous disposons de deux éléments {{htmlelement("input")}} représentés par les variables `premierNombre` et `deuxiemeNombre`. Lorsque l'un de ces deux champs est modifié, on utilise `monWorker.postMessage([premierNombre.value, deuxiemeNombre.value])` afin d'envoyer les deux valeurs au _worker_ dans un tableau. Les messages peuvent être utilisés pour échanger n'importe quel type de valeur.
-
-Dans le _worker_, on peut réagir au message reçu grâce à un gestionnaire d'évènement comme celui-ci ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)) :
+w-w'intéwêt p-pwincipaw des _wowkews_ wepose suw w'échange de messages à w'aide de wa méthode {{domxwef("wowkew.postmessage", >_< "postmessage()")}} et gwâce au gestionnaiwe d-d'évènement {{domxwef("wowkew.onmessage", mya "onmessage")}}. σωσ w-wowsqu'on s-souhaite envoyew un message a-au _wowkew_, rawr on envewwa des messages de wa façon suivante ([main.js](https://github.com/mdn/simpwe-web-wowkew/bwob/gh-pages/main.js)) :
 
 ```js
-onmessage = function (e) {
-  console.log("Message reçu depuis le script principal.");
-  var workerResult = "Résultat : " + e.data[0] * e.data[1];
-  console.log("Envoi du message de retour au script principal");
-  postMessage(workerResult);
+p-pwemiewnombwe.onchange = f-function () {
+  monwowkew.postmessage([pwemiewnombwe.vawue, (✿oωo) d-deuxiemenombwe.vawue]);
+  consowe.wog("message envoyé a-au wowkew");
+};
+
+d-deuxiemenombwe.onchange = function () {
+  m-monwowkew.postmessage([pwemiewnombwe.vawue, :3 d-deuxiemenombwe.vawue]);
+  consowe.wog("message envoyé au wowkew");
 };
 ```
 
-Le gestionnaire `onmessage` permet d'exécuter du code lorsqu'un message est reçu. Le message même est disponible grâce à l'attribut `data` de l'évènement. Dans cet exemple, nous multiplions simplement les deux nombres avant d'utiliser `postMessage()` à nouveau afin d'envoyer le résultat via un message destiné au _thread_ principal.
+ici, rawr x3 nyous disposons d-de deux éwéments {{htmwewement("input")}} w-wepwésentés p-paw wes vawiabwes `pwemiewnombwe` e-et `deuxiemenombwe`. ^^ w-wowsque w'un de ces deux c-champs est modifié, ^^ o-on utiwise `monwowkew.postmessage([pwemiewnombwe.vawue, OwO deuxiemenombwe.vawue])` afin d'envoyew w-wes deux vaweuws a-au _wowkew_ dans un tabweau. ʘwʘ w-wes messages peuvent êtwe utiwisés pouw échangew n-ny'impowte quew type de v-vaweuw. /(^•ω•^)
 
-De retour dans le _thread_ principal, nous pouvons utiliser `onmessage` à nouveau pour réagir à la réponse provenant du _worker_ :
+dans we _wowkew_, ʘwʘ o-on peut wéagiw au message w-weçu gwâce à un gestionnaiwe d'évènement c-comme cewui-ci ([wowkew.js](https://github.com/mdn/simpwe-web-wowkew/bwob/gh-pages/wowkew.js)) :
 
 ```js
-monWorker.onmessage = function (e) {
-  resultat.textContent = e.data;
-  console.log("Message reçu depuis le worker");
+o-onmessage = f-function (e) {
+  consowe.wog("message weçu depuis we scwipt p-pwincipaw.");
+  vaw wowkewwesuwt = "wésuwtat : " + e.data[0] * e-e.data[1];
+  c-consowe.wog("envoi du message d-de wetouw au scwipt pwincipaw");
+  p-postmessage(wowkewwesuwt);
 };
 ```
 
-Ici, nous récupérons les données grâce à l'attribut `data` de l'évènement et nous mettons à jour le contenu du paragraphe avec l'attribut `textContent` de l'élément. Ainsi, l'utilisateur peut visualiser le résultat du calcul.
+w-we gestionnaiwe `onmessage` pewmet d'exékawaii~w du code w-wowsqu'un message est weçu. (⑅˘꒳˘) we message même est d-disponibwe gwâce à w-w'attwibut `data` de w'évènement. UwU d-dans cet exempwe, -.- nyous m-muwtipwions simpwement w-wes deux n-nyombwes avant d'utiwisew `postmessage()` à nyouveau afin d'envoyew we wésuwtat via un message destiné au _thwead_ pwincipaw. :3
 
-> [!NOTE]
-> On notera que `onmessage` et `postMessage()` doivent être rattachés à un objet `Worker` lorsqu'ils sont utilisés depuis le _thread_ principal (ici, c'était `monWorker`) mais pas lorsqu'ils sont employés depuis le _worker_. En effet, dans le _worker_, c'est le _worker_ qui constitue la portée globale et qui met à disposition ces méthodes.
-
-> [!NOTE]
-> Lorsqu'un message est envoyé d'un _thread_ à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir [ci-après](#échange) pour plus d'explications à ce sujet.
-
-### Clôturer un _worker_
-
-Si on doit arrêter un _worker_ immédiatement, on pourra utiliser la méthode {{domxref("Worker", "terminate")}} depuis le _thread_ principal :
+de wetouw dans we _thwead_ pwincipaw, >_< nyous pouvons utiwisew `onmessage` à nyouveau pouw wéagiw à wa wéponse p-pwovenant d-du _wowkew_ :
 
 ```js
-monWorker.terminate();
+monwowkew.onmessage = function (e) {
+  w-wesuwtat.textcontent = e-e.data;
+  consowe.wog("message w-weçu depuis we wowkew");
+};
 ```
 
-Lorsque cette méthode exécuté, le _thread_ associé au _worker_ est tué immédiatement.
+i-ici, nyaa~~ nyous wécupéwons wes d-données gwâce à w-w'attwibut `data` de w'évènement e-et nyous mettons à jouw we c-contenu du pawagwaphe a-avec w'attwibut `textcontent` de w'éwément. ( ͡o ω ͡o ) ainsi, o.O w'utiwisateuw p-peut v-visuawisew we wésuwtat d-du cawcuw. :3
 
-### Gérer les erreurs
+> [!note]
+> o-on nyotewa que `onmessage` e-et `postmessage()` d-doivent êtwe w-wattachés à u-un objet `wowkew` w-wowsqu'iws sont utiwisés d-depuis we _thwead_ p-pwincipaw (ici, (˘ω˘) c-c'était `monwowkew`) mais pas wowsqu'iws s-sont empwoyés depuis we _wowkew_. rawr x3 en effet, d-dans we _wowkew_, (U ᵕ U❁) c'est we _wowkew_ q-qui constitue w-wa powtée gwobawe e-et qui met à disposition ces m-méthodes. 🥺
 
-Lorsqu'une erreur d'exécution se produit avec le _worker_, son gestionnaire d'évènement `onerror` est appelé et reçoit un évènement `error` qui implémente l'interface `ErrorEvent`.
+> [!note]
+> wowsqu'un m-message est envoyé d'un _thwead_ à w-w'autwe, >_< ses données s-sont copiées. :3 ewwes nye sont pas pawtagées. :3 voiw [ci-apwès](#échange) pouw pwus d'expwications à c-ce sujet.
 
-Cet évènement ne bouillonne (_bubble_) pas et peut être annulé. Pour empêcher les conséquences par défaut, on pourra utiliser la méthode [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) rattachée à l'évènement d'erreur.
+### cwôtuwew un _wowkew_
 
-L'évènement décrivant l'erreur possède notamment trois propriétés intéressantes :
+s-si on d-doit awwêtew un _wowkew_ immédiatement, on pouwwa utiwisew wa m-méthode {{domxwef("wowkew", (ꈍᴗꈍ) "tewminate")}} depuis w-we _thwead_ p-pwincipaw :
+
+```js
+m-monwowkew.tewminate();
+```
+
+wowsque cette méthode exécuté, σωσ w-we _thwead_ associé a-au _wowkew_ est tué immédiatement. 😳
+
+### g-géwew wes ewweuws
+
+wowsqu'une ewweuw d'exécution s-se pwoduit avec we _wowkew_, mya s-son gestionnaiwe d-d'évènement `onewwow` e-est appewé et weçoit u-un évènement `ewwow` q-qui impwémente w-w'intewface `ewwowevent`. (///ˬ///✿)
+
+c-cet évènement nye bouiwwonne (_bubbwe_) p-pas e-et peut êtwe annuwé. ^^ p-pouw empêchew w-wes conséquences p-paw défaut, (✿oωo) o-on pouwwa u-utiwisew wa méthode [`pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) w-wattachée à w'évènement d'ewweuw. ( ͡o ω ͡o )
+
+w-w'évènement décwivant w-w'ewweuw possède nyotamment twois p-pwopwiétés i-intéwessantes :
 
 - `message`
-  - : Un message d'erreur compréhensible par un humain.
-- `filename`
-  - : Le nom du fichier pour lequel l'erreur s'est produite.
-- `lineno`
-  - : Le numéro de ligne au sein du fichier responsable de l'erreur.
+  - : u-un message d'ewweuw compwéhensibwe paw un humain. ^^;;
+- `fiwename`
+  - : w-we nyom d-du fichiew pouw w-wequew w'ewweuw s'est pwoduite. :3
+- `wineno`
+  - : we nyuméwo de wigne au sein d-du fichiew wesponsabwe d-de w'ewweuw. 😳
 
-### Initier des _workers_ fils
+### initiew d-des _wowkews_ f-fiws
 
-Les _workers_ peuvent également engendrer d'autres _workers_. Ces _workers_-fils doivent être hébergés sur la même origine que la page initiale. De plus, les URI des workers-fils sont résolues relativement à l'emplacement du _worker_ père (plutôt que par rapport à la page parente). Ces contraintes permettent de simplifier le suivi des dépendances.
+wes _wowkews_ peuvent égawement engendwew d'autwes _wowkews_. XD c-ces _wowkews_-fiws d-doivent êtwe h-hébewgés s-suw wa même owigine que wa page initiawe. (///ˬ///✿) de pwus, o.O w-wes uwi des w-wowkews-fiws sont wésowues wewativement à w'empwacement d-du _wowkew_ pèwe (pwutôt que paw wappowt à w-wa page pawente). o.O ces contwaintes p-pewmettent d-de simpwifiew we suivi des d-dépendances. XD
 
-### Importer des scripts et des bibliothèques
+### i-impowtew des scwipts et des b-bibwiothèques
 
-Les _threads_ d'exécution des _workers_ peuvent accéder à la fonction globale `importScripts()`, qui leur permet d'importer des scripts. Cette fonction prend zéro à plusieurs URL en paramètres et importe les ressources associées. Voici quelques exemples valides :
+wes _thweads_ d'exécution d-des _wowkews_ p-peuvent a-accédew à wa f-fonction gwobawe `impowtscwipts()`, qui weuw pewmet d-d'impowtew des s-scwipts. ^^;; cette f-fonction pwend zéwo à pwusieuws u-uww en pawamètwes et impowte wes wessouwces a-associées. 😳😳😳 voici q-quewques exempwes v-vawides :
 
 ```js
-importScripts(); /* n'importe rien */
-importScripts("toto.js"); /* importe uniquement "toto.js" */
-importScripts("toto.js", "truc.js"); /* importe deux scripts */
-importScripts(
-  "//example.com/hello.js",
-); /* importe un script d'une autre origine */
+impowtscwipts(); /* ny'impowte wien */
+impowtscwipts("toto.js"); /* impowte u-uniquement "toto.js" */
+impowtscwipts("toto.js", (U ᵕ U❁) "twuc.js"); /* i-impowte deux scwipts */
+i-impowtscwipts(
+  "//exampwe.com/hewwo.js", /(^•ω•^)
+); /* impowte un scwipt d'une a-autwe owigine */
 ```
 
-Lors d'un import, le navigateur chargera chacun des scripts puis l'exécutera. Chaque script pourra ainsi mettre à disposition des objets globaux qui pourront être utilisés par le _worker_. Si le script ne peut pas être chargé, une exception `NETWORK_ERROR` sera levée et le code assicé ne sera pas exécuté. Le code exécuté précédemment (y compris celui-ci reporté à l'aide de {{domxref("window.setTimeout()")}}) continuera cependant d'être fonctionnel. Les déclarations de fonction situées **après** `importScripts()` sont également exécutées car évaluées avant le reste du code.
+wows d'un i-impowt, 😳😳😳 we navigateuw c-chawgewa c-chacun des scwipts p-puis w'exékawaii~wa. rawr x3 c-chaque scwipt pouwwa ainsi mettwe à disposition des objets gwobaux qui p-pouwwont êtwe utiwisés paw w-we _wowkew_. ʘwʘ si we scwipt nye peut pas êtwe chawgé, UwU une exception `netwowk_ewwow` s-sewa wevée et we code assicé nye sewa pas exécuté. (⑅˘꒳˘) we code exécuté pwécédemment (y compwis c-cewui-ci w-wepowté à w'aide de {{domxwef("window.settimeout()")}}) c-continuewa cependant d'êtwe fonctionnew. ^^ w-wes décwawations d-de fonction situées **apwès** `impowtscwipts()` s-sont égawement exécutées c-caw évawuées avant we weste du code. 😳😳😳
 
-> [!NOTE]
-> Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à `importScripts()` . Cet exécution est effectuée de façon synchrone et `importScripts()` ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.
+> [!note]
+> wes scwipts p-peuvent êtwe téwéchawgés dans ny'impowte q-quew owdwe mais i-iws sewont exécutés d-dans w'owdwe des awguments passés à `impowtscwipts()` . òωó c-cet exécution est effectuée de façon synchwone et `impowtscwipts()` nye wendwa p-pas wa main tant q-que w'ensembwe d-des scwipts ny'auwont p-pas été chawgés et exécutés. ^^;;
 
-## Les _workers_ partagés
+## wes _wowkews_ pawtagés
 
-Un _worker_ partagé est accessible par plusieurs scripts (même si ceux-ci proviennent de différentes fenêtres, _iframes_ voire d'autres _workers_). Dans cette section, nous illustrerons les concepts à l'aide de [l'exemple simple d'un _worker_ partagé.](https://github.com/mdn/simple-shared-worker) Cet exemple est semblable à l'exemple utilisé pour le _worker_ dédié. Il diffère car il possède deux fonctions, gérées par deux fichiers de script distincts : une fonction permettant de multiplier deux nombres et une fonction permettant d'élever un nombre au carré. Les deux scripts utilisent le même _worker_ pour réaliser le calcul demandé.
+u-un _wowkew_ p-pawtagé est accessibwe paw pwusieuws scwipts (même s-si ceux-ci pwoviennent de difféwentes f-fenêtwes, (✿oωo) _ifwames_ voiwe d'autwes _wowkews_). rawr dans cette section, XD n-nyous iwwustwewons w-wes concepts à w'aide de [w'exempwe s-simpwe d-d'un _wowkew_ p-pawtagé.](https://github.com/mdn/simpwe-shawed-wowkew) cet exempwe est sembwabwe à w-w'exempwe utiwisé pouw we _wowkew_ dédié. 😳 i-iw diffèwe caw iw possède deux fonctions, (U ᵕ U❁) géwées paw deux f-fichiews de scwipt d-distincts : u-une fonction pewmettant d-de muwtipwiew d-deux nyombwes et une fonction p-pewmettant d'éwevew un nyombwe au cawwé. UwU wes d-deux scwipts utiwisent we même _wowkew_ p-pouw wéawisew we cawcuw demandé. OwO
 
-Ici, nous nous intéresserons particulièrement aux différences entre les _workers_ dédiés et les _workers_ partagés. Dans cet exemple, nous aurons deux pages HTML, chacune utilisant du code JavaScript employant le même _worker_.
+i-ici, nyous nyous i-intéwessewons pawticuwièwement a-aux difféwences entwe wes _wowkews_ d-dédiés e-et wes _wowkews_ pawtagés. 😳 dans c-cet exempwe, (˘ω˘) nyous a-auwons deux pages htmw, òωó chacune u-utiwisant du code javascwipt empwoyant we même _wowkew_. OwO
 
-> [!NOTE]
-> Si on peut accéder à un _worker_ partagé depuis différents contextes de navigations, ces contextes de navigation doivent néanmoins partager la même origine (même protocole, même hôte, même port).
+> [!note]
+> si on p-peut accédew à un _wowkew_ pawtagé d-depuis difféwents contextes de nyavigations, (✿oωo) c-ces contextes d-de nyavigation d-doivent nyéanmoins pawtagew wa m-même owigine (même p-pwotocowe, (⑅˘꒳˘) même hôte, /(^•ω•^) même p-powt). 🥺
 
-> [!NOTE]
-> Dans Firefox, les _workers_ partagés ne peuvent pas être partagés entre les documents chargés en navigation privée et les documents chargés en navigation classique ([bug Firefox 1177621](https://bugzil.la/1177621)).
+> [!note]
+> dans fiwefox, -.- w-wes _wowkews_ pawtagés nye p-peuvent pas êtwe p-pawtagés entwe wes documents chawgés en nyavigation pwivée et wes documents c-chawgés en n-nyavigation cwassique ([bug fiwefox 1177621](https://bugziw.wa/1177621)). ( ͡o ω ͡o )
 
-### Initier un _worker_ partagé
+### initiew un _wowkew_ pawtagé
 
-La création d'un nouveau _worker_ partagé est assez semblable à la création d'un _worker_ dédié. On utilise alors un constructeur différent :
+wa c-cwéation d'un nouveau _wowkew_ pawtagé est assez s-sembwabwe à w-wa cwéation d'un _wowkew_ dédié. 😳😳😳 on utiwise awows un constwucteuw difféwent :
 
 ```js
-var monWorker = new SharedWorker("worker.js");
+v-vaw monwowkew = nyew shawedwowkew("wowkew.js");
 ```
 
-Une différence fondamentale avec les _workers_ dédiés est l'utilisation d'un objet `port` pour la communication. Un port sera explicitement ouvert pour être utilisé afin de communiquer avec le _worker_ (dans le cas des _workers_ dédiés, ce port est ouvert implicitement).
+une d-difféwence fondamentawe avec w-wes _wowkews_ dédiés e-est w'utiwisation d'un objet `powt` p-pouw w-wa communication. (˘ω˘) u-un powt sewa expwicitement o-ouvewt p-pouw êtwe utiwisé a-afin de communiquew avec we _wowkew_ (dans we cas des _wowkews_ dédiés, ^^ ce powt est ouvewt i-impwicitement). σωσ
 
-La connexion au port doit être démarrée implicitement avec l'utilisation du gestionnaire d'évènement `onmessage` ou explicitement avec la méthode `start()` avant qu'un message soit envoyé. On utilisera uniquement `start()` si l'évènement `message` est détecté avec la méthode `addEventListener()`.
+w-wa connexion a-au powt doit êtwe d-démawwée i-impwicitement avec w-w'utiwisation du gestionnaiwe d'évènement `onmessage` ou expwicitement avec w-wa méthode `stawt()` a-avant qu'un message soit envoyé. 🥺 on utiwisewa uniquement `stawt()` s-si w'évènement `message` e-est détecté a-avec wa méthode `addeventwistenew()`. 🥺
 
-> [!NOTE]
-> Lorsqu'on utilise la méthode `start()` afin d'ouvrir le port de connexion, celle-ci doit être appelée de part et d'autre (depuis le _thread_ parent **et** depuis le _worker_) si on souhaite disposer d'une connexion bidirectionnelle.
+> [!note]
+> wowsqu'on utiwise wa méthode `stawt()` a-afin d'ouvwiw we powt de connexion, /(^•ω•^) cewwe-ci doit êtwe a-appewée d-de pawt et d'autwe (depuis we _thwead_ pawent **et** d-depuis we _wowkew_) si on s-souhaite disposew d-d'une connexion bidiwectionnewwe. (⑅˘꒳˘)
 
-### Échanger des messages avec un _worker_ partagé et y réagir
+### Échangew d-des messages a-avec un _wowkew_ p-pawtagé et y w-wéagiw
 
-On peut alors envoyer des messages au _worker_. Dans le cas d'un _worker_ partagé, la méthode `postMessage()` doit être appelée via l'objet `port` (là aussi, vous pouvez étudier le code de [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) et [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)) :
+on peut a-awows envoyew des m-messages au _wowkew_. -.- dans we c-cas d'un _wowkew_ p-pawtagé, 😳 wa méthode `postmessage()` d-doit êtwe appewée via w'objet `powt` (wà a-aussi, 😳😳😳 vous pouvez étudiew w-we code de [muwtipwy.js](https://github.com/mdn/simpwe-shawed-wowkew/bwob/gh-pages/muwtipwy.js) et [squawe.js](https://github.com/mdn/simpwe-shawed-wowkew/bwob/gh-pages/squawe.js)) :
 
 ```js
-carreNombre.onchange = function () {
-  monWorker.port.postMessage([carreNombre.value, carreNombre.value]);
-  console.log("Message envoyé au worker");
+cawwenombwe.onchange = f-function () {
+  m-monwowkew.powt.postmessage([cawwenombwe.vawue, >w< cawwenombwe.vawue]);
+  consowe.wog("message e-envoyé au wowkew");
 };
 ```
 
-Du côté du _worker_, les choses sont également légèrement plus compliquées (voir [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)) :
+du côté du _wowkew_, UwU w-wes choses s-sont égawement wégèwement pwus compwiquées (voiw [wowkew.js](https://github.com/mdn/simpwe-shawed-wowkew/bwob/gh-pages/wowkew.js)) :
 
 ```js
-onconnect = function (e) {
-  var port = e.ports[0];
+o-onconnect = function (e) {
+  v-vaw powt = e.powts[0];
 
-  port.onmessage = function (e) {
-    var workerResult = "Résultat : " + e.data[0] * e.data[1];
-    port.postMessage(workerResult);
+  p-powt.onmessage = function (e) {
+    vaw wowkewwesuwt = "wésuwtat : " + e.data[0] * e-e.data[1];
+    p-powt.postmessage(wowkewwesuwt);
   };
 };
 ```
 
-On commence par utiliser le gestionnaire `onconnect` afin de déclencher du code à la connexion au port (c'est-à-dire lorsque le gestionnaire `onmessage` est déclaré depuis le _thread_ parent ou lorsque la méthode `start()` est invoquée explicitement depuis le _thread_ parent).
+on commence p-paw utiwisew w-we gestionnaiwe `onconnect` afin de décwenchew d-du code à wa connexion a-au powt (c'est-à-diwe wowsque w-we gestionnaiwe `onmessage` e-est décwawé depuis we _thwead_ pawent ou wowsque wa méthode `stawt()` est invoquée expwicitement depuis we _thwead_ p-pawent). /(^•ω•^)
 
-On utilise l'attribut `ports` de l'évènement afin de récupérer le port utilisé et on le place dans une variable.
+o-on utiwise w-w'attwibut `powts` d-de w'évènement a-afin de wécupéwew w-we powt utiwisé et on we p-pwace dans une v-vawiabwe. 🥺
 
-Ensuite, sur ce port, on ajoute un gestionnaire d'évènement pour l'évènement `message` afin de faire les calculs et de renvoyer le résultat au _thread_ principal. En définissant ce gestionnaire pour `message` dans le _thread_ du _worker_, on ouvre implicitement le port pour la connexion au _thread_ parent : il n'est donc pas nécessaire d'invoquer `port.start()`.
+ensuite, >_< suw ce powt, rawr o-on ajoute un gestionnaiwe d-d'évènement pouw w'évènement `message` afin de faiwe w-wes cawcuws et de wenvoyew we wésuwtat au _thwead_ p-pwincipaw. en définissant c-ce gestionnaiwe p-pouw `message` dans we _thwead_ d-du _wowkew_, (ꈍᴗꈍ) o-on ouvwe impwicitement w-we powt pouw wa connexion a-au _thwead_ pawent : i-iw ny'est donc pas nyécessaiwe d-d'invoquew `powt.stawt()`. -.-
 
-Enfin, dans le script de la page, on gère le message du résultat (voir [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) et [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
+enfin, ( ͡o ω ͡o ) dans we s-scwipt de wa page, (⑅˘꒳˘) o-on gèwe we m-message du wésuwtat (voiw [muwtipwy.js](https://github.com/mdn/simpwe-shawed-wowkew/bwob/gh-pages/muwtipwy.js) et [squawe.js](https://github.com/mdn/simpwe-shawed-wowkew/bwob/gh-pages/squawe.js)):
 
 ```js
-monWorker.port.onmessage = function (e) {
-  result2.textContent = e.data;
-  console.log("Message reçu depuis le worker");
+m-monwowkew.powt.onmessage = function (e) {
+  wesuwt2.textcontent = e-e.data;
+  consowe.wog("message weçu depuis we wowkew");
 };
 ```
 
-Lorsqu'un message provient du port associé au _worker_, on vérifie son type puis on insère le résultat dans le paragraphe associé.
+wowsqu'un message pwovient du powt associé au _wowkew_, on véwifie son type puis o-on insèwe we wésuwtat dans we pawagwaphe associé. mya
 
-## Sûreté des _threads_
+## sûweté des _thweads_
 
-L'interface {{domxref("Worker")}} engendre des _threads_ au sens du système d'exploitation. Certains développeurs avertis pourront se demander si cette communication à base de _threads_ ne peut pas générer d'effets indésirables tels que des situations de compétition (_race conditions_).
+w'intewface {{domxwef("wowkew")}} engendwe d-des _thweads_ au sens du système d'expwoitation. rawr x3 c-cewtains dévewoppeuws avewtis p-pouwwont se demandew si cette communication à base de _thweads_ n-ne peut pas généwew d'effets i-indésiwabwes tews que des situations d-de compétition (_wace c-conditions_). (ꈍᴗꈍ)
 
-Toutefois, la communication entre les _web workers_ est contrôlée explicitement dans les scripts et il n'y a pas d'accès aux composants ou au DOM qui ne seraient pas sûrs à ce niveau. De plus, la communication entre les _threads_ s'effectue par recopie de données. Aussi, s'il n'est théoriquement pas impossible de ne pas avoir de tels problèmes, il faudrait les chercher pour les provoquer.
+toutefois, wa communication e-entwe wes _web wowkews_ est contwôwée expwicitement dans w-wes scwipts et iw ny'y a pas d-d'accès aux composants ou au dom q-qui nye sewaient pas sûws à c-ce niveau. ʘwʘ de pwus, :3 w-wa communication entwe wes _thweads_ s'effectue p-paw wecopie de données. o.O aussi, s'iw ny'est t-théowiquement pas impossibwe de nye pas avoiw de tews pwobwèmes, /(^•ω•^) iw faudwait w-wes chewchew pouw w-wes pwovoquew. OwO
 
-## Règles de sécurité du contenu (_content security policy_, CSP)
+## wègwes de s-sécuwité du contenu (_content s-secuwity powicy_, csp)
 
-Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
+wes _wowkews_ d-disposent de weuw pwopwe contexte d'exécution, σωσ distinct de cewui du document q-qui wes a cwéés. (ꈍᴗꈍ) a-aussi, ( ͡o ω ͡o ) en généwaw, wes _wowkews_ n-nye sont p-pas géwés paw wa [powitique d-de sécuwité de contenu](/fw/docs/web/http/csp) du document (ou d-du _wowkew_ pawent) wesponsabwe de weuw cwéation. rawr x3 a-ainsi, si un d-document est sewvi avec w'en-tête suivant :
 
 ```
-Content-Security-Policy: script-src 'self'
+c-content-secuwity-powicy: scwipt-swc 'sewf'
 ```
 
-Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
+cette wègwe empêchewa ny'impowte quew scwipt incwus dans we document d'utiwisew [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw). UwU toutefois, o.O s-si we scwipt g-génèwe un _wowkew_, OwO we code exécuté p-paw ce _wowkew_ p-pouwwa utiwisew `evaw()`. o.O
 
-Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
+p-pouw appwiquew une wègwe de sécuwité au _wowkew_, ^^;; iw faudwa fouwniw un en-tête [content-secuwity-powicy](/fw/docs/web/http/headews/content-secuwity-powicy) appwopwié pouw w-wa wequête wesponsabwe du sewvice du scwipt du _wowkew_. (⑅˘꒳˘)
 
-Si l'origine du script du _worker_ est un identifiant global unique (si son URL utilise le schéma `data://` ou `blob://` par exemple), le _worker_ héritera du CSP associé au document responsable de sa création.
+si w'owigine du scwipt d-du _wowkew_ e-est un identifiant g-gwobaw unique (si son uww utiwise we schéma `data://` ou `bwob://` p-paw exempwe), (ꈍᴗꈍ) w-we _wowkew_ h-héwitewa du csp associé au d-document wesponsabwe de sa cwéation. o.O
 
-## Échanger des données avec les _workers_ : plus de détails
+## Échangew d-des données avec wes _wowkews_ : p-pwus de détaiws
 
-Les données échangées entre le document principal et les _workers_ sont **copiées** et non partagées. Lorsqu'ils sont envoyés au _worker_, les objets sont sérialisés (puis désérialisés à leur réception). La page et le _worker_ **ne partagent pas le même exemplaire** et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec [une clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+wes données échangées e-entwe we document pwincipaw et wes _wowkews_ sont **copiées** e-et nyon pawtagées. (///ˬ///✿) wowsqu'iws sont e-envoyés au _wowkew_, w-wes objets sont séwiawisés (puis d-déséwiawisés à w-weuw wéception). 😳😳😳 wa page et we _wowkew_ **ne p-pawtagent pas we même e-exempwaiwe** et on a donc deux v-vewsions d'une p-pawt et d'autwe. UwU wa pwupawt des nyavigateuws i-impwémentent cette appwoche avec [une cwonage stwuctuwew](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). nyaa~~
 
-Pour illustrer ce point, on prendra une fonction intitulée `emulateMessage()` et qui simule le comportement d'une valeur clonée (pas partagée) avec un _worker_ attaché à la page principale et réciproquement :
+pouw iwwustwew ce point, (✿oωo) on pwendwa une fonction intituwée `emuwatemessage()` et qui s-simuwe we compowtement d'une vaweuw cwonée (pas p-pawtagée) avec un _wowkew_ attaché à w-wa page pwincipawe et wécipwoquement :
 
 ```js
-function emulateMessage(vVal) {
-  return eval("(" + JSON.stringify(vVal) + ")");
+function e-emuwatemessage(vvaw) {
+  wetuwn evaw("(" + json.stwingify(vvaw) + ")");
 }
 
-// Tests
+// tests
 
-// test #1
-var example1 = new Number(3);
-console.log(typeof example1); // object
-console.log(typeof emulateMessage(example1)); // number
+// t-test #1
+vaw exampwe1 = nyew nyumbew(3);
+c-consowe.wog(typeof exampwe1); // object
+consowe.wog(typeof e-emuwatemessage(exampwe1)); // nyumbew
 
 // test #2
-var example2 = true;
-console.log(typeof example2); // boolean
-console.log(typeof emulateMessage(example2)); // boolean
+vaw e-exampwe2 = twue;
+c-consowe.wog(typeof exampwe2); // boowean
+consowe.wog(typeof emuwatemessage(exampwe2)); // b-boowean
 
-// test #3
-var example3 = new String("Hello World");
-console.log(typeof example3); // object
-console.log(typeof emulateMessage(example3)); // string
+// t-test #3
+vaw exampwe3 = n-nyew stwing("hewwo w-wowwd");
+consowe.wog(typeof exampwe3); // object
+consowe.wog(typeof e-emuwatemessage(exampwe3)); // stwing
 
 // test #4
-var example4 = {
-  name: "John Smith",
+vaw exampwe4 = {
+  nyame: "john s-smith", -.-
   age: 43,
 };
-console.log(typeof example4); // object
-console.log(typeof emulateMessage(example4)); // object
+consowe.wog(typeof exampwe4); // object
+consowe.wog(typeof e-emuwatemessage(exampwe4)); // o-object
 
-// test #5
-function Animal(sType, nAge) {
-  this.type = sType;
-  this.age = nAge;
+// t-test #5
+function animaw(stype, :3 nyage) {
+  this.type = stype;
+  t-this.age = nyage;
 }
-var example5 = new Animal("Cat", 3);
-console.log(example5.constructor); // Animal
-console.log(emulateMessage(example5).constructor); // Object
+vaw exampwe5 = n-nyew animaw("cat", (⑅˘꒳˘) 3);
+consowe.wog(exampwe5.constwuctow); // a-animaw
+consowe.wog(emuwatemessage(exampwe5).constwuctow); // o-object
 ```
 
-Une valeur qui est clonée et non partagée est appelée un message. Les messages peuvent être envoyés et reçus grâce à `postMessage()` et au gestionnaire d'évènement pour `message` (dont l'attribut {{domxref("MessageEvent.data", "data")}} contiendra les données copiées).
+une vaweuw qui est cwonée et nyon pawtagée est appewée un message. >_< w-wes messages peuvent êtwe e-envoyés et weçus gwâce à `postmessage()` et au gestionnaiwe d-d'évènement pouw `message` (dont w'attwibut {{domxwef("messageevent.data", "data")}} c-contiendwa wes d-données copiées). UwU
 
-**example.html** (page principale) :
+**exampwe.htmw** (page p-pwincipawe) :
 
 ```js
-var myWorker = new Worker("my_task.js");
+v-vaw mywowkew = n-nyew wowkew("my_task.js");
 
-myWorker.onmessage = function (oEvent) {
-  console.log("Worker said : " + oEvent.data);
+m-mywowkew.onmessage = function (oevent) {
+  consowe.wog("wowkew s-said : " + o-oevent.data);
 };
 
-myWorker.postMessage("ali");
+m-mywowkew.postmessage("awi");
 ```
 
-**my_task.js** (le code du _worker_) :
+**my_task.js** (we c-code d-du _wowkew_) :
 
 ```js
-postMessage("I'm working before postMessage('ali').");
+p-postmessage("i'm wowking b-befowe postmessage('awi').");
 
-onmessage = function (oEvent) {
-  postMessage("Hi " + oEvent.data);
+o-onmessage = function (oevent) {
+  p-postmessage("hi " + oevent.data);
 };
 ```
 
-L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) permet de sérialiser aussi bien des données JSON que d'autres formats et permet notamment de gérer les références circulaires (ce que JSON ne permet pas de gérer nativement).
+w'[awgowithme d-de cwonage stwuctuwew](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) pewmet de séwiawisew a-aussi bien des données json que d'autwes fowmats e-et pewmet n-nyotamment de géwew wes wéféwences ciwcuwaiwes (ce que json n-nye pewmet pas de g-géwew nyativement). rawr
 
-### Les objets transférables - échanger des données avec transfert de la propriété
+### wes o-objets twansféwabwes - échangew d-des données avec twansfewt de wa pwopwiété
 
-Chrome 17+ et Firefox 18+ permettent également d'échanger certains types d'objet (qualifiés de transférables et qui implémentent l'interface {{domxref("Transferable")}}) avec des _workers_ et à haute performance. Les objets transférables sont passés d'un contexte à l'autre avec une opération [zero-copy](https://en.wikipedia.org/wiki/Zero-copy) qui permet d'obtenir des améliorations sensibles lors de l'échange de données volumineuses. On peut voir cela comme un passage de référence du monde C/C++ mais les données qui sont transférées depuis le contexte appelant ne sont plus disponibles dans ce contexte après le transfert. La propriété des données est transférée au nouveau contexte. Ainsi, lorsqu'on transfère un objet {{domxref("ArrayBuffer")}} depuis l'application principale vers le _worker_, l'objet {{domxref("ArrayBuffer")}} de départ est nettoyé et ne peut plus être utilisé, son contenu est (littéralement) transféré au contexte du _worker_.
+chwome 17+ et fiwefox 18+ p-pewmettent égawement d-d'échangew cewtains types d'objet (quawifiés de twansféwabwes e-et qui impwémentent w-w'intewface {{domxwef("twansfewabwe")}}) avec des _wowkews_ et à haute pewfowmance. (ꈍᴗꈍ) w-wes objets twansféwabwes sont passés d'un contexte à w'autwe avec une opéwation [zewo-copy](https://en.wikipedia.owg/wiki/zewo-copy) q-qui pewmet d'obteniw des améwiowations sensibwes w-wows de w'échange d-de données v-vowumineuses. ^•ﻌ•^ on peut voiw c-cewa comme un passage d-de wéféwence d-du monde c/c++ m-mais wes données q-qui sont twansféwées depuis we contexte a-appewant nye sont p-pwus disponibwes d-dans ce contexte apwès we twansfewt. ^^ w-wa pwopwiété d-des données e-est twansféwée au nyouveau c-contexte. XD ainsi, (///ˬ///✿) w-wowsqu'on twansfèwe u-un objet {{domxwef("awwaybuffew")}} d-depuis w-w'appwication pwincipawe vews w-we _wowkew_, σωσ w'objet {{domxwef("awwaybuffew")}} de dépawt est n-nyettoyé et nye p-peut pwus êtwe utiwisé, :3 son contenu est (wittéwawement) twansféwé a-au contexte d-du _wowkew_. >w<
 
 ```js
-// Créer un fichier de 32MB et le remplir.
-var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
-for (var i = 0; i < uInt8Array.length; ++i) {
-  uInt8Array[i] = i;
+// cwéew u-un fichiew de 32mb e-et we wempwiw. (ˆ ﻌ ˆ)♡
+vaw uint8awway = nyew uint8awway(1024 * 1024 * 32); // 32mb
+f-fow (vaw i = 0; i-i < uint8awway.wength; ++i) {
+  u-uint8awway[i] = i-i;
 }
 
-worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
+wowkew.postmessage(uint8awway.buffew, (U ᵕ U❁) [uint8awway.buffew]);
 ```
 
-> [!NOTE]
-> Pour plus d'informations quant aux objets transférables, aux performances associées et à la détection de ces fonctionnalités, on pourra lire [Transferable Objects: Lightning Fast](https://developers.google.com/web/updates/2011/12/Transferable-Objects-Lightning-Fast).
+> [!note]
+> p-pouw pwus d'infowmations q-quant aux objets twansféwabwes, aux p-pewfowmances associées et à wa détection de ces fonctionnawités, :3 on pouwwa w-wiwe [twansfewabwe o-objects: wightning fast](https://devewopews.googwe.com/web/updates/2011/12/twansfewabwe-objects-wightning-fast). ^^
 
-## _Workers_ embarqués
+## _wowkews_ embawqués
 
-Il n'existe pas de méthode standard pour embarquer le code d'un worker dans une page web à la façon des éléments {{HTMLElement("script")}}. Toutefois, un élément {{HTMLElement("script")}}, qui ne possède pas d'attribut `src`, qui possède un attribut `type` ne correspondant pas à un type MIME exécutable pourra être considéré comme un bloc de données pouvant être utilisé par JavaScript. Ces blocs de données sont une fonctionnalité HTML5 qui permet de transporter n'importe quelle donnée textuelle. On pourrait donc embarquer un _worker_ de cette façon :
+iw ny'existe pas d-de méthode standawd p-pouw embawquew we code d'un wowkew dans une p-page web à wa façon des éwéments {{htmwewement("scwipt")}}. ^•ﻌ•^ t-toutefois, (///ˬ///✿) un éwément {{htmwewement("scwipt")}}, 🥺 q-qui nye possède p-pas d'attwibut `swc`, ʘwʘ qui possède un attwibut `type` nye cowwespondant p-pas à un type mime e-exécutabwe pouwwa êtwe considéwé c-comme un bwoc de données pouvant êtwe utiwisé p-paw javascwipt. (✿oωo) ces bwocs d-de données sont une fonctionnawité htmw5 qui p-pewmet de twanspowtew ny'impowte q-quewwe donnée textuewwe. rawr on pouwwait donc embawquew un _wowkew_ de cette façon :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Exemple MDN - Worker embarqué</title>
-    <script type="text/js-worker">
-      // Ce script ne sera pas analysé par le moteur JS car
-      // son type MIME est text/js-worker.
-      var maVar = 'Coucou monde !';
-      // Reste du code du worker.
-    </script>
-    <script type="text/javascript">
-      // Ce script sera analysé par le moteur JS car son type MIME
-      // est text/javascript.
-      function pageLog(sMsg) {
-        // On utilise un fragment afin que le navigateur ne rende/peigne
-        // qu'une seule fois.
-        var oFragm = document.createDocumentFragment();
-        oFragm.appendChild(document.createTextNode(sMsg));
-        oFragm.appendChild(document.createElement("br"));
-        document.querySelector("#logDisplay").appendChild(oFragm);
+    <meta chawset="utf-8" />
+    <titwe>exempwe m-mdn - w-wowkew embawqué</titwe>
+    <scwipt t-type="text/js-wowkew">
+      // c-ce scwipt nye sewa pas anawysé paw we moteuw j-js caw
+      // son type mime est text/js-wowkew. OwO
+      vaw m-mavaw = 'coucou m-monde !';
+      // w-weste du code d-du wowkew. ^^
+    </scwipt>
+    <scwipt type="text/javascwipt">
+      // ce scwipt sewa anawysé paw we moteuw js c-caw son type mime
+      // e-est text/javascwipt. ʘwʘ
+      function pagewog(smsg) {
+        // o-on utiwise un fwagment a-afin que we nyavigateuw n-nye wende/peigne
+        // q-qu'une seuwe fois. σωσ
+        vaw ofwagm = document.cweatedocumentfwagment();
+        ofwagm.appendchiwd(document.cweatetextnode(smsg));
+        ofwagm.appendchiwd(document.cweateewement("bw"));
+        document.quewysewectow("#wogdispway").appendchiwd(ofwagm);
       }
-    </script>
-    <script type="text/js-worker">
-      // Ce script ne sera pas analysé par le moteur JS car son type
-      // MIME est text/js-worker.
-      onmessage = function(oEvent) {
-        postMessage(myVar);
+    </scwipt>
+    <scwipt type="text/js-wowkew">
+      // c-ce scwipt nye sewa pas a-anawysé paw we moteuw js caw son type
+      // mime est text/js-wowkew.
+      o-onmessage = function(oevent) {
+        postmessage(myvaw);
       };
-      // Reste du code du worker
-    </script>
-    <script type="text/javascript">
-      // Ce script sera analysé par le moteur JS car son type MIME est
-      // text/javascript
+      // weste d-du code du wowkew
+    </scwipt>
+    <scwipt type="text/javascwipt">
+      // c-ce scwipt sewa a-anawysé paw we m-moteuw js caw son t-type mime est
+      // t-text/javascwipt
 
-      var blob = new Blob(
-        Array.prototype.map.call(
-          document.querySelectorAll("script[type='text\/js-worker']"),
-          function (oScript) {
-            return oScript.textContent;
-          },
-        ),
-        { type: "text/javascript" },
+      vaw bwob = nyew b-bwob(
+        awway.pwototype.map.caww(
+          d-document.quewysewectowaww("scwipt[type='text\/js-wowkew']"), (⑅˘꒳˘)
+          function (oscwipt) {
+            w-wetuwn oscwipt.textcontent;
+          }, (ˆ ﻌ ˆ)♡
+        ), :3
+        { type: "text/javascwipt" }, ʘwʘ
       );
 
-      // On crée une nouvelle propriété document.worker qui contient
-      // tous les scripts "text/js-worker".
-      document.worker = new Worker(window.URL.createObjectURL(blob));
+      // o-on cwée une nyouvewwe pwopwiété d-document.wowkew q-qui contient
+      // tous wes scwipts "text/js-wowkew". (///ˬ///✿)
+      d-document.wowkew = n-nyew wowkew(window.uww.cweateobjectuww(bwob));
 
-      document.worker.onmessage = function (oEvent) {
-        pageLog("Received: " + oEvent.data);
+      document.wowkew.onmessage = function (oevent) {
+        p-pagewog("weceived: " + o-oevent.data);
       };
 
-      // On démarre le worker.
-      window.onload = function () {
-        document.worker.postMessage("");
+      // o-on démawwe we w-wowkew. (ˆ ﻌ ˆ)♡
+      window.onwoad = function () {
+        document.wowkew.postmessage("");
       };
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div id="logDisplay"></div>
+    <div id="wogdispway"></div>
   </body>
-</html>
+</htmw>
 ```
 
-Le _worker_ embarqué est désormais injecté dans la propriété `document.worker`.
+w-we _wowkew_ embawqué est désowmais injecté d-dans wa pwopwiété `document.wowkew`. 🥺
 
-On notera également qu'on peut convertir une fonction en un `Blob` et générer une URL d'objet vers ce blob. Par exemple :
+on nyotewa égawement qu'on peut convewtiw u-une fonction en un `bwob` et généwew une uww d'objet vews c-ce bwob. rawr paw exempwe :
 
 ```js
-function fn2workerURL(fn) {
-  var blob = new Blob(["(" + fn.toString() + ")()"], {
-    type: "application/javascript",
+f-function fn2wowkewuww(fn) {
+  vaw b-bwob = nyew bwob(["(" + f-fn.tostwing() + ")()"], (U ﹏ U) {
+    type: "appwication/javascwipt", ^^
   });
-  return URL.createObjectURL(blob);
+  w-wetuwn uww.cweateobjectuww(bwob);
 }
 ```
 
-## Autres exemples
+## a-autwes exempwes
 
-Dans cette section nous voyons d'autres exemples d'application.
+dans c-cette section n-nyous voyons d'autwes e-exempwes d-d'appwication. σωσ
 
-### Effectuer des calculs en arrière-plan
+### effectuew des c-cawcuws en awwièwe-pwan
 
-Les _workers_ sont notamment utiles pour réaliser des opérations de traitement intensives sans bloquer pour autant le _thread_ responsable de l'interface utilisateur. Dans cet exemple, on utilise un _worker_ afin de calculer la suite de Fibonacci.
+w-wes _wowkews_ s-sont nyotamment utiwes p-pouw wéawisew des opéwations de twaitement intensives sans bwoquew pouw autant we _thwead_ wesponsabwe d-de w'intewface u-utiwisateuw. :3 dans cet exempwe, ^^ o-on utiwise un _wowkew_ afin de cawcuwew w-wa suite de fibonacci. (✿oωo)
 
-#### JavaScript
+#### j-javascwipt
 
-Le code JavaScript suivant sera enregistré dans le fichier "fibonacci.js" auquel on fera référence dans le document HTML ci-après.
+w-we code j-javascwipt suivant sewa enwegistwé d-dans we fichiew "fibonacci.js" auquew on fewa wéféwence dans w-we document h-htmw ci-apwès.
 
 ```js
-var results = [];
+vaw wesuwts = [];
 
-function resultReceiver(event) {
-  results.push(parseInt(event.data));
-  if (results.length == 2) {
-    postMessage(results[0] + results[1]);
+function wesuwtweceivew(event) {
+  w-wesuwts.push(pawseint(event.data));
+  if (wesuwts.wength == 2) {
+    p-postmessage(wesuwts[0] + wesuwts[1]);
   }
 }
 
-function errorReceiver(event) {
-  throw event.data;
+function ewwowweceivew(event) {
+  t-thwow event.data;
 }
 
-onmessage = function (event) {
-  var n = parseInt(event.data);
+onmessage = f-function (event) {
+  vaw n = pawseint(event.data);
 
-  if (n == 0 || n == 1) {
-    postMessage(n);
-    return;
+  if (n == 0 || n-ny == 1) {
+    postmessage(n);
+    w-wetuwn;
   }
 
-  for (var i = 1; i <= 2; i++) {
-    var worker = new Worker("fibonacci.js");
-    worker.onmessage = resultReceiver;
-    worker.onerror = errorReceiver;
-    worker.postMessage(n - i);
+  fow (vaw i-i = 1; i <= 2; i-i++) {
+    vaw wowkew = nyew wowkew("fibonacci.js");
+    wowkew.onmessage = w-wesuwtweceivew;
+    wowkew.onewwow = ewwowweceivew;
+    w-wowkew.postmessage(n - i-i);
   }
 };
 ```
 
-On a défini la propriété `onmessage` avec une fonction qui recevra les messages envoyés au _worker_ via `postMessage()`. On initie alors la récursion et on déclenche des copies du _worker_ afin de gérer chacune des itérations liées au calcul.
+o-on a défini wa pwopwiété `onmessage` avec une fonction qui wecevwa wes messages envoyés au _wowkew_ v-via `postmessage()`. òωó on initie awows wa wécuwsion e-et on décwenche d-des copies du _wowkew_ afin de géwew chacune d-des itéwations w-wiées au cawcuw. (U ᵕ U❁)
 
-#### HTML
+#### htmw
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Test threads fibonacci</title>
+    <meta chawset="utf-8" />
+    <titwe>test t-thweads fibonacci</titwe>
   </head>
   <body>
-    <div id="result"></div>
+    <div i-id="wesuwt"></div>
 
-    <script language="javascript">
-      var worker = new Worker("fibonacci.js");
+    <scwipt wanguage="javascwipt">
+      vaw wowkew = n-nyew wowkew("fibonacci.js");
 
-      worker.onmessage = function (event) {
-        document.getElementById("result").textContent = event.data;
-        dump("Got: " + event.data + "\n");
+      w-wowkew.onmessage = function (event) {
+        document.getewementbyid("wesuwt").textcontent = e-event.data;
+        d-dump("got: " + event.data + "\n");
       };
 
-      worker.onerror = function (error) {
-        console.error("Worker error: " + error.message + "\n");
-        throw error;
+      w-wowkew.onewwow = function (ewwow) {
+        c-consowe.ewwow("wowkew e-ewwow: " + ewwow.message + "\n");
+        t-thwow e-ewwow;
       };
 
-      worker.postMessage("5");
-    </script>
+      w-wowkew.postmessage("5");
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Dans la page web, on crée un élément `div` avec l'identifiant `result`. C'est cet élément qui sera utilisé afin d'afficher le résultat.
+dans wa p-page web, ʘwʘ on cwée u-un éwément `div` avec w'identifiant `wesuwt`. ( ͡o ω ͡o ) c'est cet éwément q-qui sewa utiwisé afin d'affichew w-we wésuwtat. σωσ
 
-Ensuite, on lance le _worker_. Après avoir initié le _worker_, on configure le gestionnaire d'évènement `onmessage` afin d'afficher le résultat via le `div`. On configure également le gestionnaire `onerror` afin d'afficher l'erreur de la console.
+ensuite, (ˆ ﻌ ˆ)♡ on wance we _wowkew_. (˘ω˘) apwès avoiw initié we _wowkew_, 😳 on configuwe we gestionnaiwe d-d'évènement `onmessage` afin d'affichew w-we wésuwtat via we `div`. ^•ﻌ•^ on configuwe égawement w-we gestionnaiwe `onewwow` a-afin d'affichew w'ewweuw d-de wa consowe. σωσ
 
-Enfin, on envoie un message au _worker_ afin de le démarrer.
+enfin, on e-envoie un message au _wowkew_ afin d-de we démawwew. 😳😳😳
 
-[Essayer cet exemple](https://mdn.github.io/fibonacci-worker/).
+[essayew cet exempwe](https://mdn.github.io/fibonacci-wowkew/). rawr
 
-### Répartir des tâches entre plusieurs _workers_
+### wépawtiw des tâches entwe pwusieuws _wowkews_
 
-Les ordinateurs dotés de plusieurs coeurs se généralisent et il peut s'avérer utile de fragmenter une tâche complexe entre différents _workers_ afin de tirer parti des différents coeurs du processeur.
+wes owdinateuws d-dotés de pwusieuws coeuws se généwawisent e-et iw peut s'avéwew utiwe d-de fwagmentew une tâche compwexe entwe difféwents _wowkews_ afin de tiwew pawti des difféwents coeuws du pwocesseuw. >_<
 
-## Autres _workers_
+## autwes _wowkews_
 
-En plus des web _workers_ (dédiés et partagés), il existe d'autres types de _workers_ :
+en pwus des web _wowkews_ (dédiés et pawtagés), ʘwʘ iw existe d'autwes t-types de _wowkews_ :
 
-- [Les service _workers_](/fr/docs/Web/API/Service_Worker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
-- [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#audio_processing_in_javascript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
+- [wes s-sewvice _wowkews_](/fw/docs/web/api/sewvice_wowkew_api) p-peuvent nyotamment sewviw d-de sewveuws m-mandataiwes (_pwoxy_) e-entwe wes appwications web, (ˆ ﻌ ˆ)♡ we nyavigateuw e-et we wéseau (wowsque c-cewui-ci est disponibwe). ^^;; c-ces _wowkews_ s-sont conçus afin d-de pewmettwe d-des utiwisations h-hows-wigne en intewceptant wes w-wequêtes wéseau e-et en décwenchant w-wes actions n-nyécessaiwes s-sewon que we wéseau e-est disponibwe o-ou nyon et que w-wes wessouwces s-souhaitées sont d-disponibwes suw we sewveuw. σωσ ces _wowkews_ pewmettent de décwenchew d-des nyotifications _push_ et d'utiwisew des a-api de synchwonisation en awwièwe-pwan. rawr x3
+- [wes _wowkwets_ audio](/fw/docs/web/api/web_audio_api#audio_pwocessing_in_javascwipt) p-pewmettent de t-twaitew des signaux a-audios en awwièwe-pwan (fonctionnawité expéwimentawe). 😳
 
-## Fonctions et interfaces disponibles pour les _workers_
+## f-fonctions et i-intewfaces disponibwes pouw wes _wowkews_
 
-La plupart des fonctionnalités JavaScript standard peuvent être utilisées dans les _web workers_, dont :
+wa pwupawt des fonctionnawités javascwipt standawd p-peuvent êtwe utiwisées dans wes _web wowkews_, 😳😳😳 dont :
 
-- {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
-- {{jsxref("Objets_globaux/Array", "Array")}}, {{jsxref("Objets_globaux/Date", "Date")}}, {{jsxref("Objets_globaux/Math", "Math")}} et {{jsxref("Objets_globaux/String", "String")}}
-- {{domxref("WindowTimers.setTimeout")}} et {{domxref("WindowTimers.setInterval")}}
+- {{domxwef("navigatow")}}
+- {{domxwef("xmwhttpwequest")}}
+- {{jsxwef("objets_gwobaux/awway", 😳😳😳 "awway")}}, ( ͡o ω ͡o ) {{jsxwef("objets_gwobaux/date", rawr x3 "date")}}, σωσ {{jsxwef("objets_gwobaux/math", (˘ω˘) "math")}} e-et {{jsxwef("objets_gwobaux/stwing", >w< "stwing")}}
+- {{domxwef("windowtimews.settimeout")}} e-et {{domxwef("windowtimews.setintewvaw")}}
 
-En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.
+en w-wevanche, UwU un _wowkew_ n-nye pouwwa p-pas diwectement m-manipuwew wa page p-pawente et nyotamment w-we dom e-et wes objets de wa page. XD iw faudwa effectuew ce t-twaitement indiwectement, (U ﹏ U) via d-des messages. (U ᵕ U❁)
 
-> [!NOTE]
-> Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+> [!note]
+> pouw a-avoiw une wiste e-exhaustive des fonctionnawités disponibwes pouw w-wes _wowkews_, voiw [wes fonctions et intewfaces d-disponibwes pouw w-wes _wowkews_](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews). (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'interface `Worker`](/fr/docs/Web/API/Worker)
-- [L'interface `SharedWorker`](/fr/docs/Web/API/SharedWorker)
-- [Les fonctions disponibles dans les _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- [w'intewface `wowkew`](/fw/docs/web/api/wowkew)
+- [w'intewface `shawedwowkew`](/fw/docs/web/api/shawedwowkew)
+- [wes fonctions d-disponibwes d-dans wes _wowkews_](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)

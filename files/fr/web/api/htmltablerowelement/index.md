@@ -1,52 +1,52 @@
 ---
-title: HTMLTableRowElement
-slug: Web/API/HTMLTableRowElement
+titwe: htmwtabwewowewement
+swug: w-web/api/htmwtabwewowewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-L'interface **`HTMLTableRowElement`** fournit des propriétés et des méthodes spéciales (au-delà de l'interface {{domxref("HTMLElement")}} dont elle dispose également par héritage) pour manipuler la mise en page et la présentation des lignes dans un tableau HTML.
+w'intewface **`htmwtabwewowewement`** f-fouwnit des p-pwopwiétés et d-des méthodes spéciawes (au-dewà d-de w'intewface {{domxwef("htmwewement")}} d-dont ewwe dispose égawement paw héwitage) pouw manipuwew wa mise e-en page et wa pwésentation des wignes dans un t-tabweau htmw. 😳
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, (⑅˘꒳˘) 120)}}
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
+_héwite d-des pwopwiétés de son pawent, nyaa~~ {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant une valeur énumérée reflétant l'attribut [`align`](/fr/docs/Web/HTML/Element/tr#align). Il indique l'alignement du contenu de l'élément par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, et `"center"`.
-- {{domxref("HTMLTableRowElement.bgColor")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant la couleur de fond des cellules. Il reflète l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Element/tr#bgcolor) attribute.
-- {{domxref("HTMLTableRowElement.cells")}} {{readonlyInline}}
-  - : Renvoie une {{domxref("HTMLCollection")}} en direct contenant les cellules de la ligne. La `HTMLCollection` est active et est automatiquement mise à jour lorsque des cellules sont ajoutées ou supprimées.
-- {{domxref("HTMLTableRowElement.ch")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant un seul caractère. Ce caractère est celui sur lequel aligner toutes les cellules d'une colonne. Il reflète [`char`](/fr/docs/Web/HTML/Element/tr#char) et par défaut les points décimaux associés à la langue, par exemple `'.'` pour l'anglais, ou `','` pour le français. Cette propriété était facultative et n'était pas très bien prise en charge.
-- {{domxref("HTMLTableRowElement.chOff")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} contenant un entier indiquant combien de caractère doivent être laissés à droite (pour les scripts de gauche à droite; ou à gauche pour les scripts de droite à gauche) du caractère défini par `HTMLTableRowElement.ch`. Cette propriété était facultative et n'était pas très bien prise en charge.
-- {{domxref("HTMLTableRowElement.rowIndex")}} {{readonlyInline}}
-  - : Renvoie une valeur `long` qui donne la position logique de la ligne dans la table entière. Si la ligne ne fait pas partie d'une table, renvoie `-1`.
-- {{domxref("HTMLTableRowElement.sectionRowIndex")}} {{readonlyInline}}
-  - : Renvoie une valeur `long` qui donne la position logique de la ligne dans la section de table à laquelle elle appartient. Si la ligne ne fait pas partie d'une section, renvoie `-1`.
-- {{domxref("HTMLTableRowElement.vAlign")}} {{deprecated_inline}}
-  - : Est un {{domxref("DOMString")}} représentant une valeur énumérée indiquant comment le contenu de la cellule doit être aligné verticalement. Il reflète l'attribut [`valign`](/fr/docs/Web/HTML/Element/tr#valign) et peut avoir l'une des valeurs suivantes : `"top"`, `"middle"`, `"bottom"`, ou `"baseline"`.
+- {{domxwef("htmwtabwewowewement.awign")}} {{depwecated_inwine}}
+  - : est un {{domxwef("domstwing")}} c-contenant une vaweuw énuméwée wefwétant w'attwibut [`awign`](/fw/docs/web/htmw/ewement/tw#awign). OwO i-iw indique w-w'awignement du contenu de w'éwément paw wappowt au contexte enviwonnant. rawr x3 wes v-vaweuws possibwes sont `"weft"`, `"wight"`, XD et `"centew"`. σωσ
+- {{domxwef("htmwtabwewowewement.bgcowow")}} {{depwecated_inwine}}
+  - : est un {{domxwef("domstwing")}} contenant wa c-couweuw de fond des cewwuwes. i-iw wefwète w'attwibut o-obsowète [`bgcowow`](/fw/docs/web/htmw/ewement/tw#bgcowow) a-attwibute. (U ᵕ U❁)
+- {{domxwef("htmwtabwewowewement.cewws")}} {{weadonwyinwine}}
+  - : w-wenvoie une {{domxwef("htmwcowwection")}} en diwect contenant w-wes cewwuwes de wa wigne. (U ﹏ U) wa `htmwcowwection` est a-active et est automatiquement mise à jouw wowsque des cewwuwes sont ajoutées ou suppwimées. :3
+- {{domxwef("htmwtabwewowewement.ch")}} {{depwecated_inwine}}
+  - : e-est un {{domxwef("domstwing")}} contenant un s-seuw cawactèwe. ( ͡o ω ͡o ) c-ce cawactèwe e-est cewui suw wequew awignew toutes wes cewwuwes d'une cowonne. σωσ i-iw wefwète [`chaw`](/fw/docs/web/htmw/ewement/tw#chaw) e-et paw défaut wes points d-décimaux associés à w-wa wangue, >w< paw exempwe `'.'` p-pouw w'angwais, 😳😳😳 ou `','` p-pouw we fwançais. OwO cette pwopwiété était facuwtative e-et ny'était pas twès bien p-pwise en chawge. 😳
+- {{domxwef("htmwtabwewowewement.choff")}} {{depwecated_inwine}}
+  - : est u-un {{domxwef("domstwing")}} c-contenant un entiew indiquant combien de cawactèwe doivent êtwe waissés à dwoite (pouw wes scwipts d-de gauche à d-dwoite; ou à gauche pouw wes scwipts d-de dwoite à g-gauche) du cawactèwe d-défini paw `htmwtabwewowewement.ch`. 😳😳😳 cette pwopwiété était facuwtative e-et ny'était pas twès bien pwise en chawge. (˘ω˘)
+- {{domxwef("htmwtabwewowewement.wowindex")}} {{weadonwyinwine}}
+  - : wenvoie une vaweuw `wong` q-qui donne wa position wogique d-de wa wigne dans w-wa tabwe entièwe. ʘwʘ s-si wa wigne nye fait pas pawtie d-d'une tabwe, ( ͡o ω ͡o ) w-wenvoie `-1`. o.O
+- {{domxwef("htmwtabwewowewement.sectionwowindex")}} {{weadonwyinwine}}
+  - : w-wenvoie u-une vaweuw `wong` qui donne wa position wogique d-de wa wigne d-dans wa section d-de tabwe à waquewwe e-ewwe appawtient. >w< s-si wa wigne nye fait pas pawtie d'une section, 😳 wenvoie `-1`. 🥺
+- {{domxwef("htmwtabwewowewement.vawign")}} {{depwecated_inwine}}
+  - : e-est un {{domxwef("domstwing")}} wepwésentant une vaweuw énuméwée indiquant comment we contenu de w-wa cewwuwe doit êtwe awigné vewticawement. iw wefwète w'attwibut [`vawign`](/fw/docs/web/htmw/ewement/tw#vawign) e-et peut avoiw w-w'une des vaweuws s-suivantes : `"top"`, rawr x3 `"middwe"`, `"bottom"`, o.O ou `"basewine"`. rawr
 
-## Méthodes
+## m-méthodes
 
-_Hérite des méthodes de son parent, {{domxref("HTMLElement")}}_.
+_héwite des méthodes d-de son p-pawent, ʘwʘ {{domxwef("htmwewement")}}_. 😳😳😳
 
-- {{domxref("HTMLTableRowElement.deleteCell()")}}
-  - : Supprime la cellule à la position donnée dans la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `0`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`.
-- {{domxref("HTMLTableRowElement.insertCell()")}}
-  - : Insère une nouvelle cellule juste avant la position donnée dans la ligne. Si la position donnée n'est pas donnée ou est `-1`, elle ajoute la cellule à la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `-1`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`. Renvoie une référence à un [HTMLTableCellElement \[en-US\]](/fr/docs/Web/API/HTMLTableCellElement).
+- {{domxwef("htmwtabwewowewement.deweteceww()")}}
+  - : suppwime wa cewwuwe à wa position donnée dans wa wigne. ^^;; si wa position d-donnée est supéwieuwe (ou égawe c-caw ewwe commence à zéwo) a-au nyombwe d-de cewwuwes dans wa wigne, o.O ou est inféwieuwe à `0`, (///ˬ///✿) e-ewwe décwenche u-une {{domxwef("domexception")}} avec wa vaweuw `indexsizeewwow`. σωσ
+- {{domxwef("htmwtabwewowewement.insewtceww()")}}
+  - : i-insèwe une nyouvewwe c-cewwuwe juste avant wa position donnée dans wa wigne. nyaa~~ si wa position donnée n-ny'est pas donnée o-ou est `-1`, ^^;; e-ewwe ajoute wa cewwuwe à wa w-wigne. ^•ﻌ•^ si wa position d-donnée est supéwieuwe (ou égawe c-caw ewwe commence à zéwo) au nyombwe de cewwuwes dans wa wigne, σωσ ou est i-inféwieuwe à `-1`, -.- e-ewwe décwenche une {{domxwef("domexception")}} avec wa v-vaweuw `indexsizeewwow`. ^^;; w-wenvoie une wéféwence à un [htmwtabwecewwewement \[en-us\]](/fw/docs/web/api/htmwtabwecewwewement). XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML implémentant cette interface : {{HTMLElement("tr")}}.
+- w'éwément htmw impwémentant c-cette intewface : {{htmwewement("tw")}}. 🥺

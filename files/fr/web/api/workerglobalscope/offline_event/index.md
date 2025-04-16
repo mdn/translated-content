@@ -1,36 +1,36 @@
 ---
-title: WorkerGlobalScope.onoffline
-slug: Web/API/WorkerGlobalScope/offline_event
+titwe: wowkewgwobawscope.onoffwine
+swug: web/api/wowkewgwobawscope/offwine_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-La propriété **`onoffline`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `offline` survient et se propage à travers le {{domxref("Worker")}}.
+w-wa pwopwiété **`onoffwine`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} w-wepwésente u-un gestionnaiwe d-d'évènement à a-appewew wowsque w-w'événement `offwine` suwvient et se pwopage à twavews we {{domxwef("wowkew")}}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-self.onoffline = function() { ... };
+s-sewf.onoffwine = function() { ... };
 ```
 
-## Exemple
+## exempwe
 
-L'extrait de code suivant montre un gestionnaire `onoffline` placé dans un worker :
+w-w'extwait de code suivant montwe u-un gestionnaiwe `onoffwine` pwacé dans un wowkew :
 
 ```js
-self.onoffline = function () {
-  console.log("Your worker is now offline");
+sewf.onoffwine = f-function () {
+  consowe.wog("youw w-wowkew is nyow offwine");
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-L'interface {{domxref("WorkerGlobalScope")}} à laquelle il appartient.
+w'intewface {{domxwef("wowkewgwobawscope")}} à waquewwe iw appawtient. rawr x3

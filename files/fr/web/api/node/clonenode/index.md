@@ -1,58 +1,58 @@
 ---
-title: element.cloneNode
-slug: Web/API/Node/cloneNode
+titwe: ewement.cwonenode
+swug: w-web/api/node/cwonenode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.cloneNode()`** renvoie une copie du nœud sur lequel elle a été appelée.
+w-wa méthode **`node.cwonenode()`** w-wenvoie une c-copie du nyœud s-suw wequew ewwe a-a été appewée. XD
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var dupNode = node.cloneNode([deep]);
+v-vaw dupnode = nyode.cwonenode([deep]);
 ```
 
-- node
-  - : Le noeud à dupliquer.
-- dupNode
-  - : Le nouveau noeud qui sera un clone du `node`.
-- deep _{{optional_inline}} (profondeur)_
-  - : `true` (_vrai_) si les enfants du noeud doivent aussi être clonés ou `false` (_faux_) si seul le noeud spécifié doit l'être.
+- nyode
+  - : we noeud à dupwiquew. -.-
+- dupnode
+  - : w-we nyouveau nyoeud qui sewa un cwone du `node`. :3
+- d-deep _{{optionaw_inwine}} (pwofondeuw)_
+  - : `twue` (_vwai_) si wes enfants d-du nyoeud doivent aussi êtwe cwonés ou `fawse` (_faux_) si seuw we nyoeud s-spécifié doit w'êtwe. nyaa~~
 
-> [!NOTE]
-> Dans la spécification DOM4 (telle qu'implémentée dans Gecko 13.0), `deep` est un argument facultatif. S'il est omis, la méthode agit comme si la valeur de `deep` était **`true`** par défaut, elle utilise le clonage profond comme comportement par défaut. Pour créer un clone superficiel, `deep` doit être défini sur `false`.
+> [!note]
+> d-dans wa spécification d-dom4 (tewwe qu'impwémentée dans gecko 13.0), 😳 `deep` est un awgument f-facuwtatif. (⑅˘꒳˘) s'iw est omis, nyaa~~ wa méthode agit comme si wa vaweuw de `deep` était **`twue`** paw d-défaut, OwO ewwe utiwise we cwonage p-pwofond comme c-compowtement paw d-défaut. rawr x3 pouw c-cwéew un cwone supewficiew, XD `deep` doit êtwe d-défini suw `fawse`. σωσ
 >
-> Le comportement a été modifié dans la dernière spécification et, s'il est omis, la méthode doit agir comme si la valeur de `deep` était **`false`**. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument `deep` pour la compatibilité amont et aval. Avec Gecko 28.0, la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0, un clone superficiel est défini par défaut au lieu d'un clone profond.
+> we compowtement a été m-modifié dans wa dewnièwe spécification et, (U ᵕ U❁) s'iw est omis, (U ﹏ U) wa méthode doit agiw comme si wa v-vaweuw de `deep` était **`fawse`**. :3 bien que ce s-soit toujouws facuwtatif, ( ͡o ω ͡o ) v-vous d-devwiez toujouws fouwniw w'awgument `deep` pouw wa compatibiwité a-amont et avaw. σωσ a-avec gecko 28.0, >w< wa consowe a avewti w-wes dévewoppeuws d-de nye pas omettwe w'awgument. 😳😳😳 À p-pawtiw de gecko 29.0, OwO u-un cwone supewficiew est défini paw défaut au w-wieu d'un cwone pwofond. 😳
 
-## Exemple
+## exempwe
 
 ```js
-p = document.getElementById("para1");
-p_prime = p.cloneNode(true);
+p-p = document.getewementbyid("pawa1");
+p-p_pwime = p.cwonenode(twue);
 ```
 
-## Notes
+## n-notes
 
-Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou ceux assignés au propriétés d'éléments (par exemple `node.onclick = fn`). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.
+cwonew un nyœud copie tous ses attwibuts ainsi que weuws vaweuws, 😳😳😳 y compwis wes auditeuws intwinsèques (en w-wigne). (˘ω˘) i-iw nye copie pas wes auditeuws d-d'évènement a-ajoutés avec [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) o-ou ceux assignés au pwopwiétés d'éwéments (paw exempwe `node.oncwick = f-fn`). ʘwʘ de pwus, ( ͡o ω ͡o ) pouw un éwément {{htmwewement("canvas")}} w'image peinte ny'est pas copiée. o.O
 
-Le nœud dupliqué renvoyé par `cloneNode` ne fera pas partie du document tant qu'il n'y est pas ajouté via la méthode {{domxref("Node.appendChild()")}} ou une méthode similaire. De même, il n'a pas de parent tant qu'il n'a pas été ajouté à un autre nœud.
+we n-nyœud dupwiqué wenvoyé paw `cwonenode` n-nye f-fewa pas pawtie d-du document tant qu'iw ny'y est p-pas ajouté via w-wa méthode {{domxwef("node.appendchiwd()")}} o-ou u-une méthode simiwaiwe. >w< de même, 😳 iw ny'a pas de p-pawent tant qu'iw n-ny'a pas été a-ajouté à un a-autwe nyœud. 🥺
 
-Si `deep` est défini à `false`, aucun des nœuds enfants n'est copié.
-*T*out texte contenu dans le nœud n'est pas copié non plus , car il fait partie d'un ou plusieurs nœuds {{domxref("Text")}} enfants.
+s-si `deep` est défini à `fawse`, aucun des nyœuds enfants ny'est copié. rawr x3
+*t*out t-texte contenu dans we nyœud ny'est pas copié nyon pwus , o.O caw iw fait pawtie d'un ou pwusieuws n-nyœuds {{domxwef("text")}} enfants. rawr
 
-Si `deep` est évalué à `true`, le sous-arbre entier est copié également (y compris le texte qui peut être contenu dans des nœuds {{domxref("Text")}} enfants). Pour les nœuds vides (par exemple les éléments {{HTMLElement("img")}} et {{HTMLElement("input")}} ) le fait de mettre `deep` à `true` ou `false` n'a aucune incidence sur la copie, mais il est tout de même nécessaire de fournir une valeur.
+si `deep` est évawué à `twue`, ʘwʘ w-we sous-awbwe e-entiew est c-copié égawement (y compwis w-we texte qui peut êtwe contenu d-dans des nyœuds {{domxwef("text")}} e-enfants). 😳😳😳 pouw wes nyœuds vides (paw exempwe wes éwéments {{htmwewement("img")}} et {{htmwewement("input")}} ) we fait de m-mettwe `deep` à `twue` ou `fawse` n-ny'a aucune incidence suw wa c-copie, ^^;; mais iw e-est tout de même nyécessaiwe de fouwniw une vaweuw. o.O
 
-> **Attention :** `cloneNode()` peut conduire à dupliquer des ID (_identifiant_) d'éléments dans un document.
+> **attention :** `cwonenode()` p-peut conduiwe à d-dupwiquew des id (_identifiant_) d-d'éwéments d-dans un document. (///ˬ///✿)
 
-Si le noeud d'origine a un identifiant et que le clone doit être placé dans le même document, l'identifiant du clone peut être modifié pour être unique. Les attributs du nom peuvent devoir être modifiés également, selon que les noms en double sont attendus.
+si we nyoeud d'owigine a un identifiant et que we cwone d-doit êtwe pwacé d-dans we même d-document, w'identifiant du cwone p-peut êtwe modifié p-pouw êtwe unique. σωσ wes attwibuts d-du nom peuvent devoiw êtwe modifiés égawement, nyaa~~ sewon que wes nyoms en d-doubwe sont attendus. ^^;;
 
-Pour cloner un noeud à ajouter dans un document différent, utilisez {{domxref("Document.importNode()")}} à la place.
+p-pouw cwonew un nyoeud à ajoutew dans un d-document difféwent, ^•ﻌ•^ u-utiwisez {{domxwef("document.impowtnode()")}} à wa pwace. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

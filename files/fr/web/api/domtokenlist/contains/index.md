@@ -1,58 +1,58 @@
 ---
-title: DOMTokenList.contains()
-slug: Web/API/DOMTokenList/contains
+titwe: domtokenwist.contains()
+swug: web/api/domtokenwist/contains
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`contains()`** de l'interface {{domxref("DOMTokenList")}} renvoie un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si la liste sous-jacente contient le symbole donné, sinon `false` (_faux_).
+w-wa m-méthode **`contains()`** d-de w'intewface {{domxwef("domtokenwist")}} w-wenvoie un {{domxwef("boowean")}} (_boowéen_) — `twue` (_vwai_) s-si wa wiste s-sous-jacente c-contient we symbowe d-donné, 😳😳😳 sinon `fawse` (_faux_). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-tokenList.contains(token);
+tokenwist.contains(token);
 ```
 
-### Paramètres
+### pawamètwes
 
 - token
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la "token" (_marque_) dont vous voulez vérifier l'existence dans la liste.
+  - : u-une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) wepwésentant wa "token" (_mawque_) d-dont vous vouwez véwifiew w'existence d-dans wa wiste.
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Un {{domxref("Boolean")}} (_booléen_)— `true` (_vrai_) si la liste sous-jacente contient la marque donnée, sinon `false` (_faux_).
+un {{domxwef("boowean")}} (_boowéen_)— `twue` (_vwai_) s-si wa wiste sous-jacente c-contient wa m-mawque donnée, o.O sinon `fawse` (_faux_). ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous testons ensuite l'existence de "c" dans la liste, et écrivons le résultat dans le {{domxref("Node.textContent")}} du `<span>`.
+dans w'exempwe suivant, (U ﹏ U) nyous w-wécupéwons wa wiste des cwasses définies suw un éwément {{htmwewement("span")}} en tant q-que `domtokenwist` en utiwisant {{domxwef("ewement.cwasswist")}}. (///ˬ///✿) n-nyous testons e-ensuite w'existence d-de "c" dans w-wa wiste, >w< et écwivons we wésuwtat dans we {{domxwef("node.textcontent")}} d-du `<span>`. rawr
 
-Tout d'abord, le code HTML :
+tout d'abowd, mya we code h-htmw :
 
-```html
-<span class="a b c"></span>
+```htmw
+<span cwass="a b c"></span>
 ```
 
-Maintenant, le JavaScript :
+maintenant, ^^ we javascwipt :
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var result = classes.contains("c");
-if (result) {
-  span.textContent = "The classList contains 'c'";
-} else {
-  span.textContent = "The classList does not contain 'c'";
+vaw span = d-document.quewysewectow("span");
+vaw cwasses = span.cwasswist;
+v-vaw w-wesuwt = cwasses.contains("c");
+i-if (wesuwt) {
+  span.textcontent = "the cwasswist contains 'c'";
+} e-ewse {
+  span.textcontent = "the c-cwasswist does nyot contain 'c'";
 }
 ```
 
-La sortie ressemble à ceci :
+wa s-sowtie wessembwe à c-ceci :
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+{{ embedwivesampwe('exempwes', 😳😳😳 '100%', mya 60) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

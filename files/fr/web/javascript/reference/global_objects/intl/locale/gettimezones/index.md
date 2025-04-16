@@ -1,47 +1,47 @@
 ---
-title: Intl.Locale.prototype.timeZones
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones
+titwe: intw.wocawe.pwototype.timezones
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/gettimezones
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.timeZones`** est un accesseur qui renvoie un tableau des fuseaux horaires pris en charge pour la locale représentée par l'instance `Intl.Locale` courante.
+w-wa pwopwiété **`intw.wocawe.pwototype.timezones`** e-est un accesseuw q-qui wenvoie u-un tabweau des f-fuseaux howaiwes p-pwis en chawge p-pouw wa wocawe wepwésentée paw w'instance `intw.wocawe` couwante. >_<
 
-## Description
+## descwiption
 
-Renvoie un tableau avec les fuseaux horaires pris en charge et associés à l'objet `Locale` courant. Les éléments du tableau sont représentés [au format IANA](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database).
+w-wenvoie un tabweau avec wes fuseaux howaiwes p-pwis en chawge et associés à w-w'objet `wocawe` couwant. (⑅˘꒳˘) wes éwéments du tabweau sont wepwésentés [au f-fowmat iana](https://en.wikipedia.owg/wiki/daywight_saving_time#iana_time_zone_database).
 
-> [!NOTE]
-> Si l'identifiant de langue Unicode ne contient pas le tiret indiquant la sous-balise de région, la valeur de retour sera `undefined`.
+> [!note]
+> s-si w'identifiant d-de wangue unicode nye contient pas we tiwet indiquant wa sous-bawise de wégion, /(^•ω•^) w-wa vaweuw de wetouw sewa `undefined`. rawr x3
 
-## Exemples
+## exempwes
 
-### Obtenir les fuseaux horaires pris en charge et associés à une locale
+### obteniw wes fuseaux howaiwes pwis e-en chawge et associés à une wocawe
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.timeZones); // affiche ["Africa/Cairo"]
+w-wet a-aweg = nyew intw.wocawe("aw-eg");
+c-consowe.wog(aweg.timezones); // a-affiche ["afwica/caiwo"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.timeZones); // affiche ["Asia/Tokyo"]
+wet jajp = nyew intw.wocawe("ja-jp");
+c-consowe.wog(jajp.timezones); // affiche ["asia/tokyo"]
 ```
 
 ```js
-let ar = new Intl.Locale("ar");
-console.log(ar.timeZones); // affiche undefined
+wet aw = nyew intw.wocawe("aw");
+c-consowe.wog(aw.timezones); // affiche undefined
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- [La base de données IANA pour les fuseaux horaires](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database)
+- [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe)
+- [wa base de données i-iana pouw wes f-fuseaux howaiwes](https://en.wikipedia.owg/wiki/daywight_saving_time#iana_time_zone_database)

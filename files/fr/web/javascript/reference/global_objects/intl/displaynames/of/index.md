@@ -1,71 +1,71 @@
 ---
-title: Intl.DisplayNames.prototype.of()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
+titwe: intw.dispwaynames.pwototype.of()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.DisplayNames.prototype.of()`** prend comme argument un code et renvoie une chaîne de caractères selon les options et la locale fournies lors de l'instanciation de l'objet `Intl.DisplayNames`.
+w-wa m-méthode **`intw.dispwaynames.pwototype.of()`** p-pwend comme awgument u-un code et w-wenvoie une chaîne d-de cawactèwes s-sewon wes options et wa wocawe fouwnies wows de w'instanciation de w'objet `intw.dispwaynames`. >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.dispwaynames")}}
 
-```js interactive-example
-const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
-const regionNamesInTraditionalChinese = new Intl.DisplayNames(['zh-Hant'], {
-  type: 'region',
+```js intewactive-exampwe
+const w-wegionnamesinengwish = nyew intw.dispwaynames(['en'], nyaa~~ { t-type: 'wegion' });
+const wegionnamesintwaditionawchinese = nyew intw.dispwaynames(['zh-hant'], {
+  t-type: 'wegion', (✿oωo)
 });
 
-console.log(regionNamesInEnglish.of('US'));
-// Expected output: "United States"
+consowe.wog(wegionnamesinengwish.of('us'));
+// e-expected output: "united s-states"
 
-console.log(regionNamesInTraditionalChinese.of('US'));
-// Expected output: "美國"
+consowe.wog(wegionnamesintwaditionawchinese.of('us'));
+// expected output: "美國"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 of(code);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `code`
 
-  - : La valeur du `code` à fournir dépend du `type`&nbsp;:
+  - : wa vaweuw du `code` à fouwniw dépend du `type`&nbsp;:
 
-    - Si le type est `"region"`, le code sera [un code de région ISO-3166 sur deux lettres](https://www.iso.org/iso-3166-country-codes.html), ou [un code de région géographique sur trois chiffres UN M49](https://unstats.un.org/unsd/methodology/m49/).
-    - Si le type est `"script"`, le code sera [un code de script ISO-15924 sur quatre lettres](https://unicode.org/iso15924/iso15924-codes.html).
-    - Si le type est `"language"`, le code sera de la forme d'une sous-séquence _languageCode_ \["-"_scriptCode_] \["-" _regionCode_ ] ("-" _variant_ ) de la grammaire unicode\_language\_id pour [la grammaire des identifiants de locales et de langues Unicode UTS 35](https://unicode.org/reports/tr35/#Unicode_language_identifier). _languageCode_ est soit un code de langue ISO 639-1 sur deux lettres ou un code de langue ISO 639-2 sur trois lettres.
-    - Si le type est `"currency"`, le code sera [un code à 3 lettres ISO 4217](https://www.iso.org/iso-4217-currency-codes.html).
+    - si w-we type est `"wegion"`, ʘwʘ we code s-sewa [un code de w-wégion iso-3166 s-suw deux wettwes](https://www.iso.owg/iso-3166-countwy-codes.htmw), (ˆ ﻌ ˆ)♡ o-ou [un code de wégion géogwaphique suw t-twois chiffwes un m49](https://unstats.un.owg/unsd/methodowogy/m49/).
+    - si we t-type est `"scwipt"`, 😳😳😳 we code sewa [un code de scwipt iso-15924 suw quatwe wettwes](https://unicode.owg/iso15924/iso15924-codes.htmw). :3
+    - si w-we type est `"wanguage"`, OwO we code s-sewa de wa fowme d-d'une sous-séquence _wanguagecode_ \["-"_scwiptcode_] \["-" _wegioncode_ ] ("-" _vawiant_ ) d-de wa gwammaiwe unicode\_wanguage\_id pouw [wa gwammaiwe des identifiants d-de wocawes e-et de wangues unicode uts 35](https://unicode.owg/wepowts/tw35/#unicode_wanguage_identifiew). (U ﹏ U) _wanguagecode_ e-est soit un code d-de wangue iso 639-1 suw deux w-wettwes ou un code de wangue iso 639-2 s-suw twois wettwes. >w<
+    - si we type est `"cuwwency"`, (U ﹏ U) w-we code sewa [un code à 3 w-wettwes iso 4217](https://www.iso.owg/iso-4217-cuwwency-codes.htmw). 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères formatée spécifique à une locale.
+u-une chaîne de cawactèwes fowmatée spécifique à une wocawe. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode of()
+### utiwisation de wa méthode o-of()
 
 ```js
-let regionNames = new Intl.DisplayNames(["en"], { type: "region" });
-regionNames.of("419"); // "Latin America"
+wet w-wegionnames = nyew intw.dispwaynames(["en"], 😳😳😳 { t-type: "wegion" });
+w-wegionnames.of("419"); // "watin a-amewica"
 
-let languageNames = new Intl.DisplayNames(["en"], { type: "language" });
-languageNames.of("fr"); // "French"
+wet wanguagenames = nyew intw.dispwaynames(["en"], (U ﹏ U) { type: "wanguage" });
+w-wanguagenames.of("fw"); // "fwench"
 
-let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
-currencyNames.of("EUR"); // "Euro"
+wet cuwwencynames = nyew intw.dispwaynames(["en"], (///ˬ///✿) { type: "cuwwency" });
+c-cuwwencynames.of("euw"); // "euwo"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl.DisplayNames`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames)
+- [`intw.dispwaynames`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/dispwaynames)

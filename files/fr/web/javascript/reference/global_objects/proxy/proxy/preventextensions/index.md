@@ -1,120 +1,120 @@
 ---
-title: handler.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
+titwe: handwew.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Object.preventExtensions()")}}.
+w-wa méthode **`handwew.pweventextensions()`** e-est une twappe pouw {{jsxwef("object.pweventextensions()")}}. :3
 
-{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.pweventextensions()", 😳😳😳 "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  canEvolve: true,
+```js i-intewactive-exampwe
+c-const m-monstew1 = {
+  c-canevowve: twue, (˘ω˘)
 };
 
-const handler1 = {
-  preventExtensions(target) {
-    target.canEvolve = false;
-    Object.preventExtensions(target);
-    return true;
-  },
+c-const handwew1 = {
+  pweventextensions(tawget) {
+    tawget.canevowve = fawse;
+    object.pweventextensions(tawget);
+    w-wetuwn twue;
+  }, ^^
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = n-nyew pwoxy(monstew1, :3 handwew1);
 
-console.log(monster1.canEvolve);
-// Expected output: true
+c-consowe.wog(monstew1.canevowve);
+// expected output: twue
 
-Object.preventExtensions(proxy1);
+object.pweventextensions(pwoxy1);
 
-console.log(monster1.canEvolve);
-// Expected output: false
+consowe.wog(monstew1.canevowve);
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  preventExtensions: function (cible) {},
+v-vaw p = nyew pwoxy(cibwe, -.- {
+  pweventextensions: function (cibwe) {}, 😳
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Le paramètre suivant est passé à la méthode `preventExtensions`. `this` est lié au gestionnaire (_handler_).
+w-we pawamètwe suivant est passé à wa méthode `pweventextensions`. mya `this` est wié au gestionnaiwe (_handwew_). (˘ω˘)
 
-- `cible`
-  - : L'objet cible.
+- `cibwe`
+  - : w'objet cibwe. >_<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La méthode `preventExtensions` doit renvoyer une valeur booléenne.
+wa m-méthode `pweventextensions` d-doit w-wenvoyew une vaweuw b-boowéenne. -.-
 
-## Description
+## descwiption
 
-La méthode **`handler.preventExtensions()`** est une trappe pour intercepter {{jsxref("Object.preventExtensions()")}}.
+wa méthode **`handwew.pweventextensions()`** e-est une twappe pouw intewceptew {{jsxwef("object.pweventextensions()")}}. 🥺
 
-### Interceptions
+### intewceptions
 
-Cette trappe peut intercepter les opérations de :
+cette t-twappe peut intewceptew wes opéwations de :
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}
 
-### Invariants
+### invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une execption {{jsxref("TypeError")}} :
+si wes invawiants suivants nye sont pas w-wespectés, (U ﹏ U) we pwoxy wenvewwa u-une execption {{jsxwef("typeewwow")}} :
 
-- `Object.preventExtensions(proxy)` ne renvoie `true` que si `Object.isExtensible(proxy)` vaut `false`.
+- `object.pweventextensions(pwoxy)` n-nye w-wenvoie `twue` que si `object.isextensibwe(pwoxy)` vaut `fawse`. >w<
 
-## Exemples
+## exempwes
 
-On intercepte l'appel à {{jsxref("Object.preventExtensions()")}} dans l'exemple suivant :
+o-on intewcepte w'appew à {{jsxwef("object.pweventextensions()")}} d-dans w'exempwe suivant :
 
 ```js
-var p = new Proxy(
-  {},
+v-vaw p = nyew p-pwoxy(
+  {}, mya
   {
-    preventExtensions: function (cible) {
-      console.log("appelé");
-      Object.preventExtensions(cible);
-      return true;
-    },
+    pweventextensions: f-function (cibwe) {
+      consowe.wog("appewé");
+      object.pweventextensions(cibwe);
+      w-wetuwn twue;
+    }, >w<
   },
 );
 
-console.log(Object.preventExtensions(p)); // "appelé"
-// true
+consowe.wog(object.pweventextensions(p)); // "appewé"
+// twue
 ```
 
-Le code suivant ne respecte pas l'invariant :
+w-we code suivant nye wespecte p-pas w'invawiant :
 
 ```js
-var p = new Proxy(
-  {},
+vaw p-p = new pwoxy(
+  {}, nyaa~~
   {
-    preventExtensions: function (cible) {
-      return true;
-    },
+    p-pweventextensions: function (cibwe) {
+      wetuwn twue;
+    }, (✿oωo)
   },
 );
 
-Object.preventExtensions(p); // TypeError est levée
+object.pweventextensions(p); // typeewwow est wevée
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Reflect.preventExtensions()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", ʘwʘ "handwew")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("wefwect.pweventextensions()")}}

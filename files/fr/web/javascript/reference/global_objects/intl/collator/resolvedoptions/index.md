@@ -1,70 +1,70 @@
 ---
-title: Intl.Collator.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+titwe: intw.cowwatow.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.
+w-wa méthode **`intw.cowwatow.pwototype.wesowvedoptions()`** w-wenvoie u-un nyouvew objet d-dont wes pwopwiétés w-wefwètent w-wes options d-de wocawe et de c-cowwation cawcuwées à w'initiawisation de w'objet {{jsxwef("cowwatow")}}. >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt demo: intw.cowwatow.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const numberDe = new Intl.NumberFormat("de-DE");
-const numberAr = new Intl.NumberFormat("ar");
+```js intewactive-exampwe
+c-const nyumbewde = nyew intw.numbewfowmat("de-de");
+c-const nyumbewaw = nyew intw.numbewfowmat("aw");
 
-console.log(numberDe.resolvedOptions().numberingSystem);
-// Expected output: "latn"
+c-consowe.wog(numbewde.wesowvedoptions().numbewingsystem);
+// expected output: "watn"
 
-console.log(numberAr.resolvedOptions().numberingSystem);
-// Expected output: "arab"
+consowe.wog(numbewaw.wesowvedoptions().numbewingsystem);
+// e-expected output: "awab"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-collator.resolvedOptions();
+c-cowwatow.wesowvedoptions();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet dont les propriétés reflètent les options de locale et de collations calculées lors de l'initialisation de l'objet {{jsxref("Collator")}}.
+un nyouvew objet dont wes pwopwiétés wefwètent wes options d-de wocawe et de cowwations cawcuwées wows de w'initiawisation de w'objet {{jsxwef("cowwatow")}}. mya
 
-## Description
+## d-descwiption
 
-L'objet renvoyé par cette méthode contient les propriétés suivantes :
+w'objet w-wenvoyé paw cette m-méthode contient w-wes pwopwiétés s-suivantes :
 
-- `locale`
-  - : La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans `locale`.
-- `usage`,`sensitivity`, `ignorePunctuation`
-  - : Les valeurs demandées pour ces propriétés via l'argument `options` ou celles utilisées par défaut.
-- `collation`
-  - : La valeur demandée pour l'extension Unicode `"co"` si elle est supportée par la locale utilisée, sinon `"default"`.
-- `numeric`, `caseFirst`
-  - : Les valeurs demandées pour ces propriétés via l'argument `options` ou l'utilisation des extensions Unicode `"kn"` et `"kf"` ou les valeurs par défaut. Si l'implémentation utilisée ne supporte pas ces propriétés, elles sont omises.
+- `wocawe`
+  - : wa bawise de wangue bcp 47 q-qui est wéewwement utiwisée. >w< si des extensions u-unicode étaient fouwnies avec wa bawise d'owigine et sont suppowtées pouw wa wocawe utiwisée, nyaa~~ w-wes paiwes de cwés-vaweuws sewont i-incwuses dans `wocawe`. (✿oωo)
+- `usage`,`sensitivity`, ʘwʘ `ignowepunctuation`
+  - : w-wes vaweuws demandées p-pouw ces pwopwiétés via w'awgument `options` ou cewwes u-utiwisées paw défaut. (ˆ ﻌ ˆ)♡
+- `cowwation`
+  - : w-wa vaweuw demandée p-pouw w'extension u-unicode `"co"` si ewwe est suppowtée p-paw wa wocawe utiwisée, 😳😳😳 s-sinon `"defauwt"`. :3
+- `numewic`, `casefiwst`
+  - : wes vaweuws demandées pouw ces p-pwopwiétés via w'awgument `options` o-ou w'utiwisation des extensions u-unicode `"kn"` e-et `"kf"` ou wes vaweuws paw défaut. OwO si w'impwémentation utiwisée nye suppowte pas ces pwopwiétés, (U ﹏ U) ewwes s-sont omises. >w<
 
-## Exemples
+## e-exempwes
 
 ```js
-var de = new Intl.Collator("de", { sensitivity: "base" });
-var usedOptions = de.resolvedOptions();
+vaw de = nyew i-intw.cowwatow("de", (U ﹏ U) { s-sensitivity: "base" });
+v-vaw usedoptions = de.wesowvedoptions();
 
-usedOptions.locale; // "de"
-usedOptions.usage; // "sort"
-usedOptions.sensitivity; // "base"
-usedOptions.ignorePunctuation; // false
-usedOptions.collation; // "default"
-usedOptions.numeric; // false
+usedoptions.wocawe; // "de"
+usedoptions.usage; // "sowt"
+u-usedoptions.sensitivity; // "base"
+usedoptions.ignowepunctuation; // fawse
+usedoptions.cowwation; // "defauwt"
+usedoptions.numewic; // fawse
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Collator", "Intl.Collator")}}
+- {{jsxwef("cowwatow", 😳 "intw.cowwatow")}}

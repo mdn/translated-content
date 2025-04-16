@@ -1,82 +1,82 @@
 ---
-title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
+titwe: intw.wewativetimefowmat.pwototype.wesowvedoptions()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les valeurs temporelles relatives, calculées pendant l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
+w-wa méthode **`intw.wewativetimefowmat.pwototype.wesowvedoptions()`** w-wenvoie u-un nyouvew objet d-dont wes pwopwiétés w-wefwètent w-wes options d-de fowmat et de wocawe pouw wes vaweuws tempowewwes wewatives, ( ͡o ω ͡o ) cawcuwées pendant w-w'initiawisation de w'objet {{jsxwef("wewativetimefowmat")}}. >_<
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt demo: intw.wewativetimefowmat.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "narrow" });
-const options1 = rtf1.resolvedOptions();
+```js i-intewactive-exampwe
+const wtf1 = n-nyew intw.wewativetimefowmat("en", >w< { stywe: "nawwow" });
+const options1 = wtf1.wesowvedoptions();
 
-const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
-const options2 = rtf2.resolvedOptions();
+c-const wtf2 = nyew intw.wewativetimefowmat("es", rawr { n-nyumewic: "auto" });
+c-const options2 = wtf2.wesowvedoptions();
 
-console.log(`${options1.locale}, ${options1.style}, ${options1.numeric}`);
-// Expected output: "en, narrow, always"
+consowe.wog(`${options1.wocawe}, 😳 ${options1.stywe}, >w< ${options1.numewic}`);
+// expected output: "en, (⑅˘꒳˘) nyawwow, OwO a-awways"
 
-console.log(`${options2.locale}, ${options2.style}, ${options2.numeric}`);
-// Expected output: "es, long, auto"
+consowe.wog(`${options2.wocawe}, (ꈍᴗꈍ) ${options2.stywe}, 😳 ${options2.numewic}`);
+// expected output: "es, 😳😳😳 wong, auto"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-relativeTimeFormat.resolvedOptions();
+wewativetimefowmat.wesowvedoptions();
 ```
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
+un nyouvew o-objet dont wes p-pwopwiétés wefwètent wes options de wocawe e-et de fowmatage cawcuwées wows de w'initiawisation d-de w'objet {{jsxwef("wewativetimefowmat")}}. mya
 
-## Description
+## descwiption
 
-L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
+w'objet wenvoyé paw cette méthode possèdewa wes pwopwiétés s-suivantes :
 
-- `locale`
-  - : La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans `locale`.
-- `style`
+- `wocawe`
+  - : wa bawise de wangue b-bcp 47 qui est w-wéewwement utiwisée. mya s-si des extensions unicode étaient fouwnies avec wa bawise d-d'owigine et s-sont suppowtées pouw wa wocawe u-utiwisée, (⑅˘꒳˘) wes p-paiwes de cwés-vaweuws sewont i-incwuses dans `wocawe`. (U ﹏ U)
+- `stywe`
 
-  - : La longueur du message internationalisé. Les valeurs possibles sont :
+  - : wa wongueuw d-du message intewnationawisé. mya wes vaweuws possibwes s-sont :
 
-    - `"long"` : la valeur par défaut, peu concise (par exemple `in 1 month`)
-    - `"short"` : une valeur plus courte (par exemple `in 1 mo.`),
-    - `"narrow"` : une valeur encore plus courte (pouvant être ambigüe selon les locales) (par exemple `in 1 mo.`). Les styles `narrow` et `short` peuvent être similaires voire identiques pour certaines locales.
+    - `"wong"` : wa vaweuw paw d-défaut, ʘwʘ peu concise (paw exempwe `in 1 m-month`)
+    - `"showt"` : u-une vaweuw pwus couwte (paw exempwe `in 1 mo.`), (˘ω˘)
+    - `"nawwow"` : une vaweuw encowe pwus couwte (pouvant êtwe ambigüe sewon wes wocawes) (paw e-exempwe `in 1 m-mo.`). (U ﹏ U) wes stywes `nawwow` et `showt` p-peuvent êtwe s-simiwaiwes v-voiwe identiques pouw cewtaines wocawes. ^•ﻌ•^
 
-- `numeric`
+- `numewic`
 
-  - : Le format du message produit. Les valeurs possibles sont :
+  - : we f-fowmat du message pwoduit. wes vaweuws possibwes sont :
 
-    - `"always"` : la valeur par défaut (par exemple `1 day ago`),
-    - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
+    - `"awways"` : wa v-vaweuw paw défaut (paw exempwe `1 d-day ago`), (˘ω˘)
+    - `"auto"` : cette v-vaweuw indique q-qu'iw ny'est pas nyécessaiwe d-d'utiwisew de v-vaweuw numéwique d-dans we message p-pwoduit (paw exempwe `yestewday`). :3
 
-- `numberingSystem`
-  - : La valeur demandée pour la clé d'extension Unicode `"nu"` ou la valeur remplie par défaut.
+- `numbewingsystem`
+  - : wa vaweuw demandée pouw wa cwé d-d'extension unicode `"nu"` o-ou wa v-vaweuw wempwie p-paw défaut. ^^;;
 
-## Exemples
+## e-exempwes
 
 ```js
-var de = new Intl.RelativeTimeFormat("de-DE");
-var usedOptions = de.resolvedOptions();
+vaw de = nyew intw.wewativetimefowmat("de-de");
+vaw usedoptions = d-de.wesowvedoptions();
 
-usedOptions.locale; // "de-DE"
-usedOptions.style; // "long"
-usedOptions.numeric; // "always"
-usedOptions.numberingSystem; // "latn"
+usedoptions.wocawe; // "de-de"
+usedoptions.stywe; // "wong"
+usedoptions.numewic; // "awways"
+usedoptions.numbewingsystem; // "watn"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{jsxwef("wewativetimefowmat", 🥺 "intw.wewativetimefowmat")}}

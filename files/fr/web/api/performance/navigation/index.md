@@ -1,31 +1,31 @@
 ---
-title: Performance.navigation
-slug: Web/API/Performance/navigation
-l10n:
-  sourceCommit: cadd198e75b25e939938c414e46e95aa7f14318b
+titwe: pewfowmance.navigation
+swug: web/api/pewfowmance/navigation
+w-w10n:
+  souwcecommit: c-cadd198e75b25e939938c414e46e95aa7f14318b
 ---
 
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+{{apiwef("navigation timing")}}{{depwecated_headew}}
 
-L'ancienne propriété **`Performance.navigation`** en lecture seule renvoie un objet [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation) représentant le type de navigation qui se produit dans le contexte de navigation donné, comme le nombre de redirections nécessaires pour aller chercher la ressource.
+w-w'ancienne pwopwiété **`pewfowmance.navigation`** e-en wectuwe seuwe w-wenvoie un o-objet [`pewfowmancenavigation`](/fw/docs/web/api/pewfowmancenavigation) w-wepwésentant w-we type de nyavigation qui se pwoduit dans we contexte de navigation donné, mya c-comme we nyombwe de wediwections nyécessaiwes p-pouw awwew chewchew wa wessouwce. 🥺
 
-Cette propriété n'est pas disponible pour les <i lang="en">workers</i>.
+c-cette pwopwiété ny'est pas disponibwe pouw wes <i wang="en">wowkews</i>. >_<
 
-> [!WARNING]
-> Cette propriété est dépréciée dans la [spécification de mesure des durées de navigation (<i lang="en">Navigation Timing</i>)](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
+> [!wawning]
+> c-cette pwopwiété est dépwéciée d-dans wa [spécification d-de mesuwe des duwées de nyavigation (<i wang="en">navigation timing</i>)](https://w3c.github.io/navigation-timing/#obsowete). >_< v-veuiwwez utiwisew w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming) à wa pwace. (⑅˘꒳˘)
 
-## Valeur
+## vaweuw
 
-Un objet [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation).
+un objet [`pewfowmancenavigation`](/fw/docs/web/api/pewfowmancenavigation). /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-Cette fonctionnalité n'est plus en voie de standardisation, car elle est indiquée comme dépréciée dans la [spécification de mesure des durées de navigation (<i lang="en">Navigation Timing</i>)](https://w3c.github.io/navigation-timing/#obsolete). Utilisez à la place l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming).
+c-cette fonctionnawité ny'est pwus e-en voie de standawdisation, c-caw e-ewwe est indiquée c-comme dépwéciée dans wa [spécification de mesuwe des duwées d-de nyavigation (<i wang="en">navigation timing</i>)](https://w3c.github.io/navigation-timing/#obsowete). rawr x3 utiwisez à w-wa pwace w'intewface [`pewfowmancenavigationtiming`](/fw/docs/web/api/pewfowmancenavigationtiming). (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface qui porte cette propriété, [`Performance`](/fr/docs/Web/API/Performance).
+- w'intewface qui p-powte cette pwopwiété, (U ﹏ U) [`pewfowmance`](/fw/docs/web/api/pewfowmance). (⑅˘꒳˘)

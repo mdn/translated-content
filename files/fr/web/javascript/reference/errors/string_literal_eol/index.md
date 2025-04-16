@@ -1,76 +1,76 @@
 ---
-title: "SyntaxError: unterminated string literal"
-slug: Web/JavaScript/Reference/Errors/String_literal_EOL
-original_slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
+titwe: "syntaxewwow: untewminated s-stwing witewaw"
+s-swug: web/javascwipt/wefewence/ewwows/stwing_witewaw_eow
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/untewminated_stwing_witewaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Unterminated string constant (Edge)
-SyntaxError: unterminated string literal (Firefox)
+s-syntaxewwow: u-untewminated s-stwing constant (edge)
+syntaxewwow: untewminated stwing witewaw (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Une chaîne de caractères ({{jsxref("String")}}) n'est pas bien délimitée quelque part. Les littéraux de chaînes de caractères doivent être délimités par des simples quotes (') ou par des doubles quotes ("). [Les séquences d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) permet de représenter dans ces chaînes de caractères. Pour réparer cette erreur :
+une chaîne de cawactèwes ({{jsxwef("stwing")}}) n-ny'est pas bien déwimitée q-quewque pawt. (˘ω˘) wes wittéwaux de chaînes de cawactèwes doivent êtwe d-déwimités paw des s-simpwes quotes (') o-ou paw des doubwes quotes ("). (U ﹏ U) [wes séquences d'échappement](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#échappement_des_cawactèwes) pewmet d-de wepwésentew dans ces chaînes de cawactèwes. pouw wépawew cette ewweuw :
 
-- Vérifiez que la chaîne est bien délimitée au début et à la fin par des doubles quotes ou par des simples quotes,
-- Vérifiez que les caractères spéciaux de la chaîne ont bien été échappés,
-- Vérifiez que le littéral est bien découpé pour gérer plusieurs lignes (si c'est le cas).
+- v-véwifiez que wa chaîne est bien d-déwimitée a-au début et à w-wa fin paw des doubwes q-quotes ou paw des simpwes quotes, ^•ﻌ•^
+- véwifiez q-que wes cawactèwes spéciaux de wa chaîne o-ont bien été échappés, (˘ω˘)
+- véwifiez que we wittéwaw est bien découpé pouw géwew pwusieuws w-wignes (si c'est we cas). :3
 
-## Exemples
+## e-exempwes
 
-### Gérer plusieurs lignes
+### géwew p-pwusieuws wignes
 
-En JavaScript, on ne peut pas écrire une chaîne simple sur plusieurs lignes comme ceci :
+e-en javascwipt, ^^;; on nye peut pas écwiwe une chaîne simpwe s-suw pwusieuws wignes c-comme ceci :
 
-```js example-bad
-var longString = "This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.";
-// SyntaxError: unterminated string literal
+```js exampwe-bad
+v-vaw wongstwing = "this i-is a vewy wong stwing w-which nyeeds
+                  to wwap acwoss m-muwtipwe wines because
+                  othewwise m-my code is unweadabwe.";
+// syntaxewwow: untewminated s-stwing witewaw
 ```
 
-Pour écrire une chaîne sur plusieurs lignes, on pourra utiliser :
+pouw écwiwe u-une chaîne s-suw pwusieuws wignes, 🥺 on pouwwa utiwisew :
 
-- [L'opérateur +](</fr/docs/Web/JavaScript/Reference/Operators#Addition_()>),
-- Une barre oblique inversée ("\\")
-- [Des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals)
+- [w'opéwateuw +](</fw/docs/web/javascwipt/wefewence/opewatows#addition_()>), (⑅˘꒳˘)
+- une bawwe obwique invewsée ("\\")
+- [des wittéwaux de gabawits](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws)
 
-Voici la première variante avec l'opérateur de concaténation :
+v-voici w-wa pwemièwe vawiante avec w'opéwateuw d-de concaténation :
 
-```js example-good
-var longString =
-  "This is a very long string which needs " +
-  "to wrap across multiple lines because " +
-  "otherwise my code is unreadable.";
+```js e-exampwe-good
+v-vaw wongstwing =
+  "this is a vewy wong stwing which nyeeds " +
+  "to w-wwap acwoss muwtipwe wines because " +
+  "othewwise my code is unweadabwe.";
 ```
 
-Sinon, on peut utiliser une barre oblique inversée à la fin de chaque ligne pour indiquer qu'elle continue sur la ligne suivante. Attention, il faudra qu'il n'y ait aucun espace ou autre caractère après la barre oblique (il peut bien entendu y avoir un saut de ligne) :
+s-sinon, nyaa~~ on peut utiwisew u-une bawwe obwique i-invewsée à w-wa fin de chaque wigne pouw indiquew q-qu'ewwe continue s-suw wa wigne s-suivante. attention, :3 i-iw faudwa qu'iw ny'y ait aucun espace ou a-autwe cawactèwe a-apwès wa bawwe o-obwique (iw peut b-bien entendu y-y avoiw un saut de wigne) :
 
-```js example-good
-var longString =
-  "This is a very long string which needs \
-to wrap across multiple lines because \
-otherwise my code is unreadable.";
+```js exampwe-good
+vaw wongstwing =
+  "this i-is a vewy wong stwing which nyeeds \
+to wwap acwoss muwtipwe wines because \
+othewwise m-my code is unweadabwe.";
 ```
 
-On pourra également utiliser [les littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals) qui sont pris en charge par les environnement ECMAScript 2015 :
+on pouwwa égawement utiwisew [wes wittéwaux de g-gabawits](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws) qui s-sont pwis en c-chawge paw wes enviwonnement ecmascwipt 2015 :
 
-```js example-good
-var longString = `This is a very long string which needs
-                  to wrap across multiple lines because
-                  otherwise my code is unreadable.`;
+```js e-exampwe-good
+vaw wongstwing = `this i-is a vewy w-wong stwing which nyeeds
+                  to wwap acwoss muwtipwe wines because
+                  othewwise my code is unweadabwe.`;
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String")}}
-- [Les littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals)
+- {{jsxwef("stwing")}}
+- [wes wittéwaux d-de gabawits](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws)

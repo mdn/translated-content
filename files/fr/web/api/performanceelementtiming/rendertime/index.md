@@ -1,56 +1,56 @@
 ---
-title: PerformanceElementTiming.renderTime
-slug: Web/API/PerformanceElementTiming/renderTime
+titwe: pewfowmanceewementtiming.wendewtime
+swug: w-web/api/pewfowmanceewementtiming/wendewtime
 ---
 
-{{APIRef("Element Timing API")}}
+{{apiwef("ewement t-timing api")}}
 
-La propriété en lecture seule **`renderTime`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie le temps écoulé pour le rendu de l'élément associé.
+w-wa pwopwiété e-en wectuwe s-seuwe **`wendewtime`** d-de w'intewface [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming) wenvoie w-we temps écouwé p-pouw we wendu de w'éwément associé.
 
-## Syntaxe
+## syntaxe
 
 ```js
-var renderTime = PerformanceElementTiming.renderTime;
+vaw wendewtime = p-pewfowmanceewementtiming.wendewtime;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec le temps de rendu de l'élément.
+un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) avec we temps de w-wendu de w'éwément. ^^
 
-Pour les images, il s'agira de l'**horodatage du rendu de l'image**. Ceci est défini comme le moment du rendu suivant le chargement complet de l'image. Si la vérification de l'autorisation de temporisation échoue (comme défini par l'en-tête [Timing-allow-origin](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin)), ceci retournera 0.
+pouw wes i-images, iw s'agiwa de w'**howodatage du wendu de w'image**. 😳😳😳 ceci e-est défini comme we moment du w-wendu suivant w-we chawgement compwet de w'image. mya si wa véwification de w'autowisation de tempowisation échoue (comme d-défini paw w'en-tête [timing-awwow-owigin](/fw/docs/web/http/headews/timing-awwow-owigin)), 😳 ceci wetouwnewa 0. -.-
 
-Pour les nœuds de texte, il s'agira de l'**horodatage du rendu du texte**. Ceci est défini comme le moment où l'élément est affiché à l'écran.
+pouw wes nyœuds de texte, 🥺 i-iw s'agiwa de w'**howodatage d-du wendu du texte**. o.O c-ceci est d-défini comme we m-moment où w'éwément est affiché à w'écwan. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, appeler `entry.renderTime` renvoie le temps de rendu de l'élément image.
+dans cet exempwe, nyaa~~ appewew `entwy.wendewtime` w-wenvoie we temps de wendu de w'éwément image. nyaa~~
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="une belle image"
-  elementtiming="big-image"
-  id="myImage" />
+  swc="image.jpg"
+  awt="une bewwe image"
+  e-ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
-    if (entry.identifier === "big-image") {
-      console.log(entry.renderTime);
+c-const o-obsewvew = nyew p-pewfowmanceobsewvew((wist) => {
+  wet entwies = wist.getentwies().foweach(function (entwy) {
+    if (entwy.identifiew === "big-image") {
+      c-consowe.wog(entwy.wendewtime);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+o-obsewvew.obsewve({ entwytypes: ["ewement"] });
 ```
 
-> [!NOTE]
-> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!note]
+> c-cet exempwe utiwise w-w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) pouw cwéew une w-wiste d'événements de mesuwe des p-pewfowmances. :3 dans nyotwe cas, 😳😳😳 nous obsewvons w-w'éwément [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) afin d'utiwisew w-w'intewface `pewfowmanceewementtiming`. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

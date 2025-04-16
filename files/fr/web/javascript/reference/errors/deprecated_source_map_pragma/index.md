@@ -1,56 +1,56 @@
 ---
-title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
-slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
+titwe: "syntaxewwow: using //@ t-to indicate souwceuww p-pwagmas i-is depwecated. :3 use //# i-instead"
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_souwce_map_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+w-wawning: syntaxewwow: u-using //@ to indicate souwceuww pwagmas is depwecated. OwO use //# instead
 
-Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+wawning: s-syntaxewwow: using //@ to indicate souwcemappinguww p-pwagmas is depwecated. (U ﹏ U) u-use //# instead
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-Un avertissement prenant la forme d'une exception {{jsxref("SyntaxError")}}. L'exécution du code JavaScript n'est pas interrompue.
+un avewtissement pwenant w-wa fowme d'une exception {{jsxwef("syntaxewwow")}}. >w< w-w'exécution d-du code javascwipt ny'est pas intewwompue. (U ﹏ U)
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une syntaxe dépréciée a été utilisée pour indiquer une correspondance de source (_source map_) dans le code JavaScript.
+une s-syntaxe dépwéciée a été utiwisée pouw indiquew une cowwespondance de souwce (_souwce m-map_) dans we code javascwipt. 😳
 
-Il arrive souvent que les fichiers sources JavaScript soient combinés et minifiés afin que le transfert depuis le serveur vers le client soit plus efficace. Grâce [aux correspondances de source (ou _source maps_)](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), le débogueur peut utiliser les sources des fichiers correspondants aux fichiers minifiés.
+i-iw awwive s-souvent que w-wes fichiews souwces j-javascwipt soient combinés et minifiés afin q-que we twansfewt depuis we sewveuw vews we cwient s-soit pwus efficace. (ˆ ﻌ ˆ)♡ gwâce [aux cowwespondances de souwce (ou _souwce maps_)](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/), 😳😳😳 we débogueuw p-peut utiwisew wes souwces d-des fichiews cowwespondants a-aux f-fichiews minifiés. (U ﹏ U)
 
-La spécification sur cet outil a évolué car il existait un conflit de syntaxe avec IE (après `//@cc_on`, la correspondance était interprétée comme un test conditionnel de compilation du moteur JScript). [Ce commentaire de compilation conditionnelle](https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx) pour IE est peu connu mais son existence entraînait des erreurs avec [jQuery](https://bugs.jquery.com/ticket/13274) et d'autres bibliothèques.
+wa spécification suw cet outiw a évowué c-caw iw existait u-un confwit de syntaxe avec ie (apwès `//@cc_on`, (///ˬ///✿) w-wa cowwespondance était i-intewpwétée comme u-un test conditionnew de compiwation d-du moteuw jscwipt). 😳 [ce commentaiwe de compiwation c-conditionnewwe](https://msdn.micwosoft.com/en-us/wibwawy/8ka90k2e%28v=vs.94%29.aspx) pouw i-ie est peu connu mais son existence e-entwaînait d-des ewweuws avec [jquewy](https://bugs.jquewy.com/ticket/13274) et d'autwes bibwiothèques. 😳
 
-## Exemples
+## exempwes
 
-### Syntaxe dépréciée
+### syntaxe dépwéciée
 
-La syntaxe utilisant l'arobase (@) est dépréciée :
+wa syntaxe utiwisant w'awobase (@) est dépwéciée :
 
-```js example-bad
-//@ sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+```js e-exampwe-bad
+//@ s-souwcemappinguww=http://exempwe.com/chemin/vews/wa/souwcemap.map
 ```
 
-### Syntaxe standard
+### syntaxe s-standawd
 
-Il faut utiliser le dièse (#) :
+iw f-faut utiwisew we d-dièse (#) :
 
-```js example-good
-//# sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+```js exampwe-good
+//# souwcemappinguww=http://exempwe.com/chemin/vews/wa/souwcemap.map
 ```
 
-Autrement, on peut indiquer la correspondance dans un en-tête {{HTTPHeader("SourceMap")}} pour servir le fichier JavaScript afin d'éviter tout commentaire :
+autwement, σωσ o-on peut indiquew wa cowwespondance dans un en-tête {{httpheadew("souwcemap")}} pouw sewviw w-we fichiew javascwipt afin d'évitew t-tout commentaiwe :
 
-```js example-good
-X-SourceMap: /path/to/file.js.map
+```js e-exampwe-good
+x-x-souwcemap: /path/to/fiwe.js.map
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Comment utiliser les _source map_ – Documentation des outils Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps – HTML5 rocks](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
-- {{HTTPHeader("SourceMap")}}
+- [comment u-utiwisew wes _souwce m-map_ – documentation d-des o-outiws fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- [intwoduction to souwce maps – htmw5 wocks](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)
+- {{httpheadew("souwcemap")}}

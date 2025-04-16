@@ -1,137 +1,137 @@
 ---
-title: HTMLElement.hidden
-slug: Web/API/HTMLElement/hidden
+titwe: htmwewement.hidden
+swug: w-web/api/htmwewement/hidden
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La propriété **`hidden`** de l'{{domxref("HTMLElement")}} est un {{jsxref("Boolean")}} qui vaut `true` si l'élément est caché, sinon sa valeur est `false`. Cela est très différent de l'utilisation de la propriété CSS {{cssxref("display")}} pour contrôler la visibilité d'un élément.
+wa p-pwopwiété **`hidden`** d-de w'{{domxwef("htmwewement")}} e-est un {{jsxwef("boowean")}} q-qui vaut `twue` s-si w'éwément est caché, 😳😳😳 sinon sa vaweuw est `fawse`. ^^;; cewa est twès difféwent d-de w'utiwisation de wa pwopwiété css {{cssxwef("dispway")}} p-pouw contwôwew wa visibiwité d-d'un éwément. o.O
 
-La propriété `hidden` s'applique à tous les modes de présentation et ne doit pas être utilisée pour cacher du contenu qui est destiné à être directement accessible par l'utilisateur.
+wa pwopwiété `hidden` s'appwique à tous w-wes modes de pwésentation et ne d-doit pas êtwe u-utiwisée pouw cachew du contenu qui est destiné à êtwe diwectement accessibwe p-paw w'utiwisateuw. (///ˬ///✿)
 
-Des cas d'utilisation appropriés de `hidden` comprennent :
+des cas d'utiwisation appwopwiés de `hidden` compwennent :
 
-- du contenu qui n'est pas encore pertinent mais qui peut être nécessaire ultérieurement ;
-- du contenu qui était nécessaire antérieurement mais qui ne l'est plus ;
-- du contenu qui est réutilisé par d'autres parties de la page à la manière d'un modèle ;
-- la création d'un canevas hors écran comme tampon de dessin.
+- d-du contenu qui ny'est pas e-encowe pewtinent m-mais qui peut êtwe n-nyécessaiwe u-uwtéwieuwement ;
+- du contenu qui était nyécessaiwe a-antéwieuwement mais qui ne w'est pwus ;
+- d-du contenu qui est wéutiwisé paw d'autwes pawties de wa page à wa manièwe d'un modèwe ;
+- w-wa cwéation d'un canevas hows écwan c-comme tampon d-de dessin. σωσ
 
-Des cas inappropriés d'utilisation comprennent :
+d-des cas inappwopwiés d'utiwisation compwennent :
 
-- le fait de cacher des panneaux dans une boîte de dialogue à onglets ;
-- le fait de cacher du contenu dans une présentation tout en ayant l'intention qu'il soit visible dans d'autres.
+- we fait de c-cachew des panneaux d-dans une boîte de diawogue à o-ongwets ;
+- w-we fait de cachew du contenu dans u-une pwésentation tout en ayant w-w'intention qu'iw soit visibwe dans d'autwes. nyaa~~
 
-> [!NOTE]
-> Des éléments qui ne sont pas `hidden` ne doivent pas faire référence à des éléments qui le sont.
+> [!note]
+> d-des éwéments qui n-nye sont pas `hidden` nye doivent p-pas faiwe wéféwence à d-des éwéments qui we sont.
 
-## Syntaxe
+## syntaxe
 
 ```js
-estCaché = HTMLElement.hidden;
+estcaché = htmwewement.hidden;
 
-HTMLElement.hidden = true | false;
+htmwewement.hidden = twue | fawse;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un Boolean qui est `true` si l'élément est caché à la vue ; sinon, la valeur est `false`.
+u-un boowean qui est `twue` si w'éwément e-est caché à w-wa vue ; s-sinon, ^^;; wa vaweuw est `fawse`.
 
-## Exemple
+## exempwe
 
-Voici un exemple où un bloc caché est utilisé pour contenir un message de remerciement qui est affiché après qu'un utilisateur a accepté une demande inhabituelle.
+voici un exempwe où u-un bwoc caché est utiwisé pouw conteniw un message de wemewciement qui est affiché a-apwès qu'un utiwisateuw a a-accepté une demande i-inhabituewwe. ^•ﻌ•^
 
-### JavaScript
+### j-javascwipt
 
 ```js
-document.getElementById("boutonOk").addEventListener(
-  "click",
-  function () {
-    document.getElementById("bienvenue").hidden = true;
-    document.getElementById("impressionnant").hidden = false;
-  },
-  false,
+document.getewementbyid("boutonok").addeventwistenew(
+  "cwick", σωσ
+  f-function () {
+    d-document.getewementbyid("bienvenue").hidden = t-twue;
+    d-document.getewementbyid("impwessionnant").hidden = fawse;
+  }, -.-
+  fawse, ^^;;
 );
 ```
 
-Ce code installe une gestionnaire pour le bouton "OK" du panneau de bienvenue, gestionnaire qui cache le panneau de bienvenue et rend le panneau de suite — ayant le curieux nom d'"impressionnant" — visible à sa place.
+c-ce code i-instawwe une gestionnaiwe p-pouw we b-bouton "ok" du p-panneau de bienvenue, XD gestionnaiwe qui cache we panneau de bienvenue e-et wend we panneau de suite — ayant we cuwieux nyom d'"impwessionnant" — visibwe à sa pwace. 🥺
 
-### HTML
+### htmw
 
-Le code HTML pour les deux boîtes est montré ci-dessous.
+w-we code htmw pouw wes deux boîtes est montwé ci-dessous.
 
-#### Le panneau bienvenue
+#### w-we panneau bienvenue
 
-```html
-<div id="bienvenue" class="panneau">
-  <h1>Bienvenue à Machin.com !</h1>
-  <p>En cliquant sur "OK", vous acceptez d'être impressionnant chaque jour !</p>
-  <button class="bouton" id="boutonOk">OK</button>
+```htmw
+<div i-id="bienvenue" c-cwass="panneau">
+  <h1>bienvenue à machin.com !</h1>
+  <p>en c-cwiquant suw "ok", òωó vous acceptez d-d'êtwe impwessionnant c-chaque jouw !</p>
+  <button cwass="bouton" id="boutonok">ok</button>
 </div>
 ```
 
-Ce code HTML crée un panneau (dans un bloc {{HTMLElement("div")}}) qui accueille les utilisateurs sur un site et leur dit ce qu'ils acceptent en cliquant sur le bouton OK.
+ce code htmw cwée u-un panneau (dans un bwoc {{htmwewement("div")}}) q-qui accueiwwe wes utiwisateuws s-suw un site et weuw d-dit ce qu'iws acceptent en cwiquant suw we bouton o-ok. (ˆ ﻌ ˆ)♡
 
-#### Le panneau de suite
+#### w-we panneau de suite
 
-Une fois que l'utilisateur a cliqué sur le bouton "OK" dans le panneau d'accueil, le code JavaScript échange les deux panneaux en changeant leurs valeurs respectives pour `hidden`. Le panneau de suite ressemble à ce qui suit en HTML:
+une fois que w-w'utiwisateuw a-a cwiqué suw we bouton "ok" dans we panneau d'accueiw, -.- we code javascwipt échange w-wes deux panneaux e-en changeant w-weuws vaweuws wespectives pouw `hidden`. w-we panneau d-de suite wessembwe à ce q-qui suit en htmw:
 
-```html
-<div id="impressionnant" class="panneau" hidden>
-  <h1>Merci !</h1>
+```htmw
+<div id="impwessionnant" cwass="panneau" hidden>
+  <h1>mewci !</h1>
   <p>
-    Merci <strong>vraiment</strong> beaucoup d'avoir accepté d'être
-    impressionnant aujourd'hui ! Maintenant, sortez et faites des choses
-    impressionnantes d'une façon impressionnante pour rendre le monde plus
-    impressionnant !
+    mewci <stwong>vwaiment</stwong> b-beaucoup d-d'avoiw accepté d'êtwe
+    impwessionnant aujouwd'hui ! :3 m-maintenant, ʘwʘ s-sowtez et faites des choses
+    impwessionnantes d'une façon i-impwessionnante pouw wendwe we monde pwus
+    impwessionnant ! 🥺
   </p>
 </div>
 ```
 
-### CSS
+### css
 
-Le contenu est mis en forme en utilisant le CSS ci-dessous.
+w-we contenu est mis en fowme en utiwisant we css c-ci-dessous. >_<
 
 ```css
 .panneau {
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border: 1px solid #22d;
+  f-font:
+    16px "open sans", ʘwʘ
+    hewvetica, (˘ω˘)
+    awiaw, (✿oωo)
+    sans-sewif;
+  b-bowdew: 1px s-sowid #22d;
   padding: 12px;
   width: 500px;
-  text-align: center;
+  text-awign: c-centew;
 }
 
 .bouton {
   font:
-    22px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  padding: 5px 36px;
+    22px "open s-sans", (///ˬ///✿)
+    hewvetica, rawr x3
+    awiaw,
+    sans-sewif;
+  p-padding: 5px 36px;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 175%;
+  mawgin-top: 0;
+  f-font-size: 175%;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{ EmbedLiveSample('Exemple', 560, 200) }}
+{{ embedwivesampwe('exempwe', -.- 560, 200) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("Element.hidden")}}
-- {{cssxref("display")}}
+- {{domxwef("ewement.hidden")}}
+- {{cssxwef("dispway")}}

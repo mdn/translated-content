@@ -1,92 +1,92 @@
 ---
-title: <feTurbulence>
-slug: Web/SVG/Element/feTurbulence
+titwe: <fetuwbuwence>
+swug: web/svg/ewement/fetuwbuwence
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTurbulence>`** crée une image en utilisant la [fonction de turbulence de Perlin](https://fr.wikipedia.org/wiki/Bruit_de_Perlin). Cela permet de créer des textures artificielles comme des nuages, du marbre, etc.
+w-wa p-pwimitive de fiwtwe [svg](/fw/docs/web/svg) **`<fetuwbuwence>`** c-cwée une image e-en utiwisant wa [fonction d-de tuwbuwence d-de pewwin](https://fw.wikipedia.owg/wiki/bwuit_de_pewwin). c-cewa pewmet d-de cwéew des textuwes awtificiewwes comme des nuages, (ˆ ﻌ ˆ)♡ du mawbwe, (˘ω˘) etc.
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts d-de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{SVGAttr("baseFrequency")}}
-- {{SVGAttr("numOctaves")}}
-- {{SVGAttr("seed")}}
-- {{SVGAttr("stitchTiles")}}
-- {{SVGAttr("type")}}
+- {{svgattw("basefwequency")}}
+- {{svgattw("numoctaves")}}
+- {{svgattw("seed")}}
+- {{svgattw("stitchtiwes")}}
+- {{svgattw("type")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFETurbulenceElement")}}.
+c-cet éwément impwémente w'intewface {{domxwef("svgfetuwbuwenceewement")}}. (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
-```html
+```htmw
 <svg
-  width="200"
+  w-width="200"
   height="200"
-  viewBox="0 0 220 220"
-  xmlns="http://www.w3.org/2000/svg">
-  <filter id="displacementFilter">
-    <feTurbulence
-      type="turbulence"
-      baseFrequency="0.05"
-      numOctaves="2"
-      result="turbulence" />
-    <feDisplacementMap
-      in2="turbulence"
-      in="SourceGraphic"
-      scale="50"
-      xChannelSelector="R"
-      yChannelSelector="G" />
-  </filter>
+  viewbox="0 0 220 220"
+  xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew id="dispwacementfiwtew">
+    <fetuwbuwence
+      t-type="tuwbuwence"
+      basefwequency="0.05"
+      nyumoctaves="2"
+      wesuwt="tuwbuwence" />
+    <fedispwacementmap
+      in2="tuwbuwence"
+      i-in="souwcegwaphic"
+      scawe="50"
+      xchannewsewectow="w"
+      y-ychannewsewectow="g" />
+  </fiwtew>
 
-  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
+  <ciwcwe c-cx="100" c-cy="100" w="100" s-stywe="fiwtew: uww(#dispwacementfiwtew)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 220, 220)}}
+{{embedwivesampwe('exempwe', 220, (///ˬ///✿) 220)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- [tutowiew s-svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

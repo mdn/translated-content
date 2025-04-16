@@ -1,13 +1,13 @@
 ---
-title: XPathExpression
-slug: Web/API/XPathExpression
+titwe: xpathexpwession
+swug: w-web/api/xpathexpwession
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Une `XPathExpression` est une requête de XPath compilé renvoyée par {{domxref("document.createExpression()")}}. Elle a une méthode `evaluate()` qui peut être utilisée pour exécuter le XPath compilé.
+u-une `xpathexpwession` est u-une wequête d-de xpath compiwé w-wenvoyée paw {{domxwef("document.cweateexpwession()")}}. /(^•ω•^) e-ewwe a-a une méthode `evawuate()` q-qui peut êtwe utiwisée pouw exékawaii~w we xpath compiwé. rawr
 
-## Méthodes
+## méthodes
 
-- evaluate (`contextNode`, `type`, `result`) - fournit un noeud / document contextuel, une constante {{domxref("XPathResult")}} et `XPathResult` pour stocker la requête ou null pour renvoyer un nouveau XPathResult.
-- evaluateWithContext (`contextNode`, `contextPosition`, `contextSize`, `type`, `result`) - fournit un noeud / document, une position et une taille contextuels, une constante `XPathResult` et un `XPathResult` pour stocker la requête ou null pour renvoyer un nouveau XPathResult.
+- e-evawuate (`contextnode`, OwO `type`, `wesuwt`) - fouwnit un nyoeud / document c-contextuew, (U ﹏ U) une constante {{domxwef("xpathwesuwt")}} e-et `xpathwesuwt` pouw stockew wa wequête ou nyuww pouw w-wenvoyew un nyouveau xpathwesuwt. >_<
+- e-evawuatewithcontext (`contextnode`, rawr x3 `contextposition`, mya `contextsize`, nyaa~~ `type`, `wesuwt`) - f-fouwnit un nyoeud / document, (⑅˘꒳˘) une position et une taiwwe contextuews, rawr x3 une constante `xpathwesuwt` e-et un `xpathwesuwt` pouw stockew wa wequête ou nuww pouw wenvoyew un nyouveau x-xpathwesuwt. (✿oωo)

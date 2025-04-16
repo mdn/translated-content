@@ -1,71 +1,71 @@
 ---
-title: animateTransform
-slug: Web/SVG/Element/animateTransform
+titwe: animatetwansfowm
+swug: w-web/svg/ewement/animatetwansfowm
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<animateTransform>`** permet d'animer un élement en appliquant une transformation: translation, mise à l'échelle, rotation et/ou inclinaison.
+w-w'éwément **`<animatetwansfowm>`** p-pewmet d'animew u-un éwement e-en appwiquant u-une twansfowmation: t-twanswation, rawr x3 m-mise à w'échewwe, (U ﹏ U) wotation et/ou incwinaison. (U ﹏ U)
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-```html
-<?xml version="1.0"?>
+```htmw
+<?xmw v-vewsion="1.0"?>
 <svg
   width="120"
   height="120"
-  viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <polygon points="60,30 90,90 30,90">
-    <animateTransform
-      attributeName="transform"
-      attributeType="XML"
-      type="rotate"
-      from="0 60 70"
-      to="360 60 70"
-      dur="10s"
-      repeatCount="indefinite" />
-  </polygon>
+  v-viewbox="0 0 120 120"
+  xmwns="http://www.w3.owg/2000/svg"
+  v-vewsion="1.1"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <powygon points="60,30 90,90 30,90">
+    <animatetwansfowm
+      attwibutename="twansfowm"
+      a-attwibutetype="xmw"
+      type="wotate"
+      f-fwom="0 60 70"
+      t-to="360 60 70"
+      duw="10s"
+      wepeatcount="indefinite" />
+  </powygon>
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple','120','120') }}
+{{ embedwivesampwe('exempwe','120','120') }}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs de l'évènement d'animation](/fr/docs/Web/SVG/Attribute#animationevent) »
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#xlink) »
-- [Attributs de ciblage d'animation](/fr/docs/Web/SVG/Attribute#animationattributetarget) »
-- [Attributs de chronométrage d'animation](/fr/docs/Web/SVG/Attribute#animationtiming) »
-- [Attributs de valeur d'animation](/fr/docs/Web/SVG/Attribute#animationvalue) »
-- [Attributs d'ajout d'animations](/fr/docs/Web/SVG/Attribute#animationaddition)&nbsp;»
-- {{ SVGAttr("externalResourcesRequired") }}
+- [attwibuts de twaitement conditionnew](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts de base](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts de w'évènement d-d'animation](/fw/docs/web/svg/attwibute#animationevent) »
+- [attwibuts xwink](/fw/docs/web/svg/attwibute#xwink) »
+- [attwibuts d-de c-cibwage d'animation](/fw/docs/web/svg/attwibute#animationattwibutetawget) »
+- [attwibuts d-de chwonométwage d-d'animation](/fw/docs/web/svg/attwibute#animationtiming) »
+- [attwibuts de vaweuw d'animation](/fw/docs/web/svg/attwibute#animationvawue) »
+- [attwibuts d-d'ajout d'animations](/fw/docs/web/svg/attwibute#animationaddition)&nbsp;»
+- {{ svgattw("extewnawwesouwceswequiwed") }}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{ SVGAttr("by") }}
-- {{ SVGAttr("from") }}
-- {{ SVGAttr("to") }}
-- {{ SVGAttr("type") }}
+- {{ svgattw("by") }}
+- {{ svgattw("fwom") }}
+- {{ svgattw("to") }}
+- {{ svgattw("type") }}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/Web/API/SVGAnimateTransformElement).
+cet éwément i-impwémente w-w'intewface [`svganimatetwansfowmewement`](/fw/docs/web/api/svganimatetwansfowmewement). (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

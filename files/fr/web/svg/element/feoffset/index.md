@@ -1,90 +1,90 @@
 ---
-title: <feOffset>
-slug: Web/SVG/Element/feOffset
+titwe: <feoffset>
+swug: web/svg/ewement/feoffset
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre **`<feOffset>`** permet de décaler l'image qu'elle a en entrée selon les attributs {{SVGAttr("dx")}} et {{SVGAttr("dy")}}.
+w-wa pwimitive d-de fiwtwe **`<feoffset>`** p-pewmet d-de décawew w-w'image qu'ewwe a-a en entwée sewon w-wes attwibuts {{svgattw("dx")}} e-et {{svgattw("dy")}}. (///ˬ///✿)
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitives de filtres](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de p-pwimitives de fiwtwes](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
+- {{svgattw("in")}}
+- {{svgattw("dx")}}
+- {{svgattw("dy")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfeoffsetewement")}}. 😳😳😳
 
-## Exemple
+## e-exempwe
 
-### SVG
+### svg
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg w-width="200" h-height="200" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <filter id="offset" width="180" height="180">
-      <feOffset in="SourceGraphic" dx="60" dy="60" />
-    </filter>
+    <fiwtew id="offset" width="180" height="180">
+      <feoffset i-in="souwcegwaphic" dx="60" dy="60" />
+    </fiwtew>
   </defs>
 
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" />
-  <rect
+  <wect x="0" y="0" width="100" height="100" s-stwoke="bwack" fiww="gween" />
+  <wect
     x="0"
-    y="0"
+    y-y="0"
     width="100"
     height="100"
-    stroke="black"
-    fill="green"
-    filter="url(#offset)" />
+    s-stwoke="bwack"
+    f-fiww="gween"
+    f-fiwtew="uww(#offset)" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", 🥺 200, mya 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Effets de filtre](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: effets de fiwtwe](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

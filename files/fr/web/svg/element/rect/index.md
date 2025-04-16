@@ -1,68 +1,68 @@
 ---
-title: <rect>
-slug: Web/SVG/Element/rect
+titwe: <wect>
+swug: web/svg/ewement/wect
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `rect` est un élément de Formes basiques, utilisé pour dessiner des rectangles à partir de la position d'un angle, de largeur et de la hauteur. Il peut aussi être utilisé avec des arrondis.
+w-w'éwément `wect` e-est un éwément d-de fowmes basiques, >_< u-utiwisé pouw d-dessinew des w-wectangwes à pawtiw d-de wa position d-d'un angwe, de wawgeuw et de wa hauteuw. >_< iw peut aussi êtwe utiwisé avec des a-awwondis. (⑅˘꒳˘)
 
-## Usage
+## usage
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, /(^•ω•^)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple rect element -->
-  <rect x="0" y="0" width="100" height="100" />
+```htmw
+<svg viewbox="0 0 220 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- simpwe wect e-ewement -->
+  <wect x="0" y="0" w-width="100" height="100" />
 
-  <!-- Rounded corner rect element -->
-  <rect x="120" y="0" width="100" height="100" rx="15" ry="15" />
+  <!-- w-wounded cownew wect ewement -->
+  <wect x="120" y="0" width="100" height="100" w-wx="15" wy="15" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, '100%')}}
+{{embedwivesampwe('exempwe', rawr x3 100, (U ﹏ U) '100%')}}
 
-## Attributs
+## attwibuts
 
-### Attributs Globaux
+### attwibuts gwobaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [attwibuts conditionnews](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts centwaux](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts d-d'événements gwaphiques](/fw/docs/web/svg/attwibute#gwaphicawevent) »
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("width") }}
-- {{ SVGAttr("height") }}
-- {{ SVGAttr("rx") }}
-- {{ SVGAttr("ry") }}
+- {{ svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ svgattw("width") }}
+- {{ svgattw("height") }}
+- {{ svgattw("wx") }}
+- {{ s-svgattw("wy") }}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/DOM/SVGRectElement) .
+cet éwément impwémente w'intewface [`svgwectewement`](/fw/docs/dom/svgwectewement) . (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ SVGElement("path") }}
+- {{ s-svgewement("path") }}

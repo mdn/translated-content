@@ -1,72 +1,72 @@
 ---
-title: 'TypeError: "x" is (not) "y"'
-slug: Web/JavaScript/Reference/Errors/Unexpected_type
+titwe: 'typeewwow: "x" is (not) "y"'
+s-swug: web/javascwipt/wefewence/ewwows/unexpected_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
-
-```
-TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: "x" is (not) "y" (Firefox)
-```
-
-Exemples&nbsp;:
+## message
 
 ```
-TypeError: "x" is undefined
-TypeError: "x" is null
-TypeError: "undefined" is not an object
-TypeError: "x" is not an object or null
-TypeError: "x" is not a symbol
+t-typeewwow: u-unabwe to g-get pwopewty {x} o-of undefined ow n-nyuww wefewence (edge)
+t-typeewwow: "x" i-is (not) "y" (fiwefox)
 ```
 
-## Type d'erreur
+exempwes&nbsp;:
 
-{{jsxref("TypeError")}}.
-
-## Quel est le problème ?
-
-Un type inattendu a été rencontré. Cela se produit la plupart du temps avec les valeurs {{jsxref("undefined")}} ou {{jsxref("null")}}.
-
-Certaines méthodes comme {{jsxref("Object.create()")}} ou {{jsxref("Symbol.keyFor()")}} ont des contraintes sur le type de valeur qui peut être passé en argument.
-
-## Exemples
-
-### Exemples invalides
-
-```js example-bad
-// undefined et null : des valeurs
-// sur lesquelles la méthode substring
-// ne fonctionnera pas
-var toto = undefined;
-toto.substring(1); // TypeError: toto is undefined
-
-var toto = null;
-toto.substring(1); // TypeError: toto is null
-
-// Certaines méthodes nécessitent une valeur
-// d'un type spécifique
-var toto = {};
-Symbol.keyFor(toto); // TypeError: toto is not a symbol
-
-var toto = "truc";
-Object.create(toto); // TypeError: "toto" is not an object or null
+```
+typeewwow: "x" is undefined
+typeewwow: "x" i-is nyuww
+typeewwow: "undefined" is nyot an object
+typeewwow: "x" i-is nyot an object ow nyuww
+t-typeewwow: "x" is nyot a symbow
 ```
 
-### Résoudre le problème
+## type d'ewweuw
 
-Pour résoudre ce problème et écarter les cas où la valeur vaut `undefined`, on peut par exemple utiliser l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof).
+{{jsxwef("typeewwow")}}. /(^•ω•^)
+
+## quew est we p-pwobwème ?
+
+un type inattendu a été w-wencontwé. nyaa~~ c-cewa se pwoduit wa pwupawt du temps avec wes vaweuws {{jsxwef("undefined")}} ou {{jsxwef("nuww")}}. nyaa~~
+
+c-cewtaines méthodes comme {{jsxwef("object.cweate()")}} ou {{jsxwef("symbow.keyfow()")}} ont des contwaintes suw we type d-de vaweuw qui peut êtwe passé e-en awgument.
+
+## e-exempwes
+
+### e-exempwes invawides
+
+```js e-exampwe-bad
+// undefined et nyuww : des v-vaweuws
+// suw wesquewwes wa méthode substwing
+// n-nye fonctionnewa pas
+vaw toto = undefined;
+toto.substwing(1); // typeewwow: toto is undefined
+
+v-vaw toto = nyuww;
+toto.substwing(1); // t-typeewwow: t-toto is nyuww
+
+// c-cewtaines méthodes nyécessitent une vaweuw
+// d'un type s-spécifique
+vaw t-toto = {};
+symbow.keyfow(toto); // typeewwow: t-toto is nyot a s-symbow
+
+vaw toto = "twuc";
+object.cweate(toto); // t-typeewwow: "toto" is nyot an o-object ow nyuww
+```
+
+### wésoudwe we pwobwème
+
+p-pouw wésoudwe ce pwobwème et écawtew w-wes cas où wa vaweuw vaut `undefined`, :3 o-on peut paw exempwe u-utiwisew w'opéwateuw [`typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof). 😳😳😳
 
 ```js
 if (typeof toto !== "undefined") {
-  // Désormais, on sait que toto est bien
-  // défini et on peut poursuivre.
+  // désowmais, (˘ω˘) on sait que toto est bien
+  // défini et on peut pouwsuivwe. ^^
 }
 ```
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nuww")}}

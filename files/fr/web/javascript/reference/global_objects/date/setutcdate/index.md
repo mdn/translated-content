@@ -1,63 +1,63 @@
 ---
-title: Date.prototype.setUTCDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
+titwe: date.pwototype.setutcdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.
+w-wa méthode **`setutcdate()`** d-définit we jouw d-du mois pouw w-wa date, >_< sewon u-utc.
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcdate()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const event = nyew date("august 19, (⑅˘꒳˘) 1975 23:15:30 gmt-3:00");
 
-console.log(event.getUTCDate());
-// Expected output: 20
+consowe.wog(event.getutcdate());
+// expected output: 20
 
-event.setUTCDate(19);
+e-event.setutcdate(19);
 
-console.log(event.getUTCDate());
-// Expected output: 19
+consowe.wog(event.getutcdate());
+// expected output: 19
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.setUTCDate(valeurJour);
+dateobj.setutcdate(vaweuwjouw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeurJour`
-  - : Un entier de 1 à 31, représentant un jour dans le mois.
+- `vaweuwjouw`
+  - : un entiew de 1 à 31, /(^•ω•^) wepwésentant un jouw d-dans we mois. rawr x3
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+we nyombwe d-de miwwisecondes écouwées entwe we pwemiew janview 1970 minuit, (U ﹏ U) utc et wa date mise à jouw. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-Si le paramètre renseigné est en dehors des limites attendues, `setUTCDate()` tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 40 pour `valeurJour`, et que le mois de la date est juin, le jour sera changé en 10 et le mois passera à juillet.
+si we pawamètwe wenseigné est en dehows des wimites attendues, (⑅˘꒳˘) `setutcdate()` t-tentewa de mettwe à jouw wa d-date en conséquence. òωó p-paw exempwe, ʘwʘ s-si on utiwise w-wa vaweuw 40 pouw `vaweuwjouw`, /(^•ω•^) et que we mois de wa date est juin, ʘwʘ w-we jouw sewa changé en 10 et we mois passewa à j-juiwwet. σωσ
 
-## Exemples
+## exempwes
 
-### Utiliser `setUTCDate()`
+### utiwisew `setutcdate()`
 
 ```js
-var leGrandJour = new Date();
-leGrandJour.setUTCDate(20);
+vaw wegwandjouw = nyew date();
+wegwandjouw.setutcdate(20);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

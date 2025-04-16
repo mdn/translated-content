@@ -1,79 +1,79 @@
 ---
-title: TypedArray.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduce
+titwe: typedawway.pwototype.weduce()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/weduce
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`reduce()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la gauche vers la droite) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduce()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`weduce()`** a-appwique une f-fonction suw un a-accumuwateuw et c-chaque vaweuw du t-tabweau typé (de w-wa gauche vews w-wa dwoite) afin de wéduiwe we tabweau en une seuwe vaweuw. ^^;; cette méthode utiwise w-we même awgowithme que {{jsxwef("awway.pwototype.weduce()")}}. (✿oωo) dans we weste d-de cet awticwe _typedawway_ cowwespond à un d-des [types de tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.reduce()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.weduce()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([0, 1, 2, 3]);
+```js intewactive-exampwe
+c-const uint8 = nyew u-uint8awway([0, -.- 1, 2, 3]);
 
-function sum(accumulator, currentValue) {
-  return accumulator + currentValue;
+f-function sum(accumuwatow, ^•ﻌ•^ cuwwentvawue) {
+  wetuwn accumuwatow + cuwwentvawue;
 }
 
-console.log(uint8.reduce(sum));
-// Expected output: 6
+c-consowe.wog(uint8.weduce(sum));
+// expected output: 6
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.reduce(callback[, valeurInitiale])
+typedawway.weduce(cawwback[, rawr vaweuwinitiawe])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à exécuter sur chaque valeur du tableau typé. Elle utilise quatre arguments :
+  - : wa fonction à e-exékawaii~w suw c-chaque vaweuw d-du tabweau typé. (˘ω˘) e-ewwe utiwise quatwe awguments :
 
-    - `valeurPrécédente`
-      - : La valeur renvoyée précédemment par l'appel précédent à `callback`. Dans le cadre du premier élément, ce sera `valeurInitiale` si ce paramètre est fourni (voir ci-après).
-    - `valeurCourante`
-      - : L'élément du tableau typé en cours de traitement
+    - `vaweuwpwécédente`
+      - : wa vaweuw w-wenvoyée pwécédemment paw w'appew pwécédent à `cawwback`. nyaa~~ d-dans we cadwe du pwemiew éwément, UwU ce sewa `vaweuwinitiawe` si ce pawamètwe est fouwni (voiw ci-apwès). :3
+    - `vaweuwcouwante`
+      - : w'éwément d-du tabweau typé en couws d-de twaitement
     - `index`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `array`
-      - : Le tableau typé pour lequel `reduce` a été appelée.
+      - : w-w'indice d-de w'éwément du tabweau typé en couws de twaitement.
+    - `awway`
+      - : w-we tabweau typé p-pouw wequew `weduce` a été a-appewée. (⑅˘꒳˘)
 
-- `valeurInitiale`
-  - : Paramètre optionnel qui correspond à l'objet à utiliser en tant que premier argument pour le premier appel à `callback`.
+- `vaweuwinitiawe`
+  - : p-pawamètwe optionnew qui cowwespond à w-w'objet à utiwisew e-en tant que pwemiew awgument pouw we pwemiew appew à `cawwback`. (///ˬ///✿)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La valeur obtenue à partir de la réduction du tableau typé.
+wa vaweuw o-obtenue à pawtiw de wa wéduction d-du tabweau t-typé. ^^;;
 
-## Description
+## descwiption
 
-`reduce` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau typé (les éléments vides ou supprimés ne sont pas traités). La fonction `callback` utilise quatre arguments : la valeur initiale ou la valeur précédemment calculée, la valeur de l'élément courant, l'indice de l'élément courant et le tableau typé qui est parcouru.
+`weduce` exékawaii~ wa fonction `cawwback` une fois pouw chaque éwément pwésent dans we tabweau typé (wes éwéments v-vides ou suppwimés n-nye sont pas twaités). >_< w-wa fonction `cawwback` u-utiwise quatwe a-awguments : wa vaweuw initiawe ou wa vaweuw pwécédemment c-cawcuwée, wa vaweuw de w'éwément couwant, rawr x3 w'indice de w'éwément couwant et w-we tabweau typé qui est pawcouwu. /(^•ω•^)
 
-Lors du premier appel à la fonction callback, `valeurPrécédente` et `valeurCourante` peuvent être un ou deux valeurs différentes. Si `valeurInitiale` est fournie, `valeurPrécédente` sera alors égale à `valeurInitiale` et `valeurCourante` sera égale à la première valeur du tableau. Si le paramètre `valeurInitiale` n'est pas utilisé, `valeurPrécédente` sera égale au premier élément du tableau typé et `valeurCourante` sera égale au second élément.
+w-wows du pwemiew a-appew à wa f-fonction cawwback, `vaweuwpwécédente` et `vaweuwcouwante` p-peuvent êtwe u-un ou d-deux vaweuws difféwentes. :3 s-si `vaweuwinitiawe` est fouwnie, (ꈍᴗꈍ) `vaweuwpwécédente` sewa awows égawe à `vaweuwinitiawe` e-et `vaweuwcouwante` s-sewa égawe à w-wa pwemièwe v-vaweuw du t-tabweau. /(^•ω•^) si we pawamètwe `vaweuwinitiawe` ny'est pas utiwisé, `vaweuwpwécédente` s-sewa égawe au pwemiew éwément du tabweau typé et `vaweuwcouwante` sewa égawe au second éwément. (⑅˘꒳˘)
 
-Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été fourni, une exception {{jsxref("TypeError")}} sera levée. SI le tableau typé ne possède qu'un seul élément et que `valeurInitiale` n'a pas été fourni (ou que `valeurInitiale` a été utilisée mais que le tableau typé est vide), la valeur unique sera renvoyée et `callback` ne sera pas appelée.
+si w-we tabweau typé est vide et que we pawamètwe `vaweuwinitiawe` n'a pas été f-fouwni, ( ͡o ω ͡o ) une exception {{jsxwef("typeewwow")}} s-sewa w-wevée. òωó si we tabweau typé nye p-possède qu'un seuw éwément e-et que `vaweuwinitiawe` n-ny'a pas été fouwni (ou que `vaweuwinitiawe` a été utiwisée mais que we tabweau typé e-est vide), (⑅˘꒳˘) wa vaweuw unique s-sewa wenvoyée et `cawwback` nye s-sewa pas appewée. XD
 
-## Exemples
+## e-exempwes
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
-  return a + b;
+vaw totaw = nyew uint8awway([0, -.- 1, :3 2, 3]).weduce(function (a, nyaa~~ b-b) {
+  wetuwn a-a + b;
 });
-// total == 6
+// totaw == 6
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("TypedArray.prototype.reduceRight()")}}
-- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxwef("typedawway.pwototype.weducewight()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}

@@ -1,271 +1,271 @@
 ---
-title: KeyboardEvent
-slug: Web/API/KeyboardEvent
+titwe: keyboawdevent
+swug: web/api/keyboawdevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-Les objets **`KeyboardEvent`** décrivent l'interaction d'un utilisateur avec le clavier. Chaque événement décrit une touche&nbsp;; le type d'événement (`keydown`, `keypress`, ou `keyup`) identifie quel type d'activité a été effectué.
+w-wes objets **`keyboawdevent`** d-décwivent w'intewaction d-d'un utiwisateuw a-avec w-we cwaview. o.O chaque événement décwit u-une touche&nbsp;; w-we type d'événement (`keydown`, mya `keypwess`, XD ou `keyup`) identifie quew type d'activité a-a été effectué. òωó
 
-> **Note :** `KeyboardEvent` indique exactement ce qui est en train de se passer sur une touche. Lorsque vous devez gérer une saisie de texte, utilisez l'événement `input` HTML5 à la place. Par exemple, si un utilisateur saisit du texte à partir d'un système d'écriture à la main comme une tablette PC, les événements touche peuvent ne pas être déclenchés.
+> **note :** `keyboawdevent` indique exactement ce qui est e-en twain de se passew suw une t-touche. (˘ω˘) wowsque vous devez géwew une saisie de texte, :3 utiwisez w-w'événement `input` htmw5 à wa p-pwace. OwO paw exempwe, s-si un utiwisateuw saisit du texte à pawtiw d'un système d'écwituwe à wa m-main comme une tabwette pc, mya wes événements touche peuvent nye pas êtwe décwenchés. (˘ω˘)
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
-  - : Crée un objet `KeyboardEvent`.
+- {{domxwef("keyboawdevent.keyboawdevent", o.O "keyboawdevent()")}}
+  - : c-cwée un objet `keyboawdevent`. (✿oωo)
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite également des méthodes de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}._
+_cette i-intewface h-héwite égawement d-des méthodes d-de ses pawents, (ˆ ﻌ ˆ)♡ {{domxwef("uievent")}} et {{domxwef("event")}}._
 
-- {{domxref("KeyboardEvent.getModifierState()")}}
+- {{domxwef("keyboawdevent.getmodifiewstate()")}}
 
-  - : Retourne un {{jsxref("Boolean")}} indiquant si une touche modifcatrice, telle que
+  - : wetouwne u-un {{jsxwef("boowean")}} indiquant si une touche modifcatwice, t-tewwe que
 
-    <kbd>Alt</kbd>
+    <kbd>awt</kbd>
 
-    ,
+    , ^^;;
 
-    <kbd>Shift</kbd>
+    <kbd>shift</kbd>
 
-    ,
+    , OwO
 
-    <kbd>Ctrl</kbd>
+    <kbd>ctww</kbd>
 
     , ou
 
-    <kbd>Meta</kbd>
+    <kbd>meta</kbd>
 
-    , était pressée quand l'évènement a été créé.
+    , 🥺 était pwessée quand w'évènement a été cwéé. mya
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}}{{deprecated_inline}}
-  - : Initialise un objet `KeyboardEvent`. Ceci a été implémenté seulement par Gecko (d'autres utilisaient {{domxref ("KeyboardEvent.initKeyboardEvent()")}}) et ne devrait plus être utilisé. La manière moderne standard consiste à utiliser le constructeur {{domxref ("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
-- {{domxref("KeyboardEvent.initKeyboardEvent()")}}{{deprecated_inline}}
-  - : Initialise un objet `KeyboardEvent`. Cela n'a jamais été implémenté par Gecko (qui utilisait {{domxref ("KeyboardEvent.initKeyEvent()")}}) et ne devrait plus être utilisé. La manière moderne standard consiste à utiliser le constructeur {{domxref ("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+- {{domxwef("keyboawdevent.initkeyevent()")}}{{depwecated_inwine}}
+  - : initiawise un objet `keyboawdevent`. 😳 c-ceci a été impwémenté s-seuwement paw gecko (d'autwes u-utiwisaient {{domxwef ("keyboawdevent.initkeyboawdevent()")}}) e-et ne devwait pwus êtwe utiwisé. òωó wa manièwe modewne s-standawd consiste à u-utiwisew we constwucteuw {{domxwef ("keyboawdevent.keyboawdevent", /(^•ω•^) "keyboawdevent()")}}. -.-
+- {{domxwef("keyboawdevent.initkeyboawdevent()")}}{{depwecated_inwine}}
+  - : i-initiawise un objet `keyboawdevent`. òωó c-cewa ny'a jamais été impwémenté p-paw gecko (qui utiwisait {{domxwef ("keyboawdevent.initkeyevent()")}}) e-et nye devwait pwus êtwe utiwisé. /(^•ω•^) wa manièwe m-modewne standawd consiste à utiwisew w-we constwucteuw {{domxwef ("keyboawdevent.keyboawdevent", /(^•ω•^) "keyboawdevent()")}}. 😳
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite également des propriétés de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}._
+_cette intewface h-héwite égawement d-des pwopwiétés de ses pawents, :3 {{domxwef("uievent")}} et {{domxwef("event")}}._
 
-- {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
+- {{domxwef("keyboawdevent.awtkey")}} {{weadonwyinwine}}
 
-  - : Returne un {{jsxref("Boolean")}} qui est `true` si la touche
+  - : wetuwne un {{jsxwef("boowean")}} qui est `twue` si wa touche
 
-    <kbd>Alt</kbd>
+    <kbd>awt</kbd>
 
     (
 
-    <kbd>Option</kbd>
+    <kbd>option</kbd>
 
-    ou
+    o-ou
 
     <kbd>⌥</kbd>
 
-    sous OS X) était active quand l'évènement touche a été généré.
+    sous o-os x) était active quand w'évènement t-touche a-a été généwé. (U ᵕ U❁)
 
-- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
+- {{domxwef("keyboawdevent.chaw")}} {{non-standawd_inwine}}{{depwecated_inwine}}{{weadonwyinwine}}
 
-  - : Renvoie une {{domxref("DOMString")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.
+  - : w-wenvoie une {{domxwef("domstwing")}} wepwésentant wa vaweuw de cawactèwe de wa t-touche. ʘwʘ si wa touche cowwespond à un cawactèwe impwimabwe, o.O cette vaweuw est u-une chaîne unicode nyon vide contenant c-ce cawactèwe. ʘwʘ s-si wa touche n-ny'a pas de wepwésentation i-impwimabwe, ^^ iw s'agit d-d'une chaîne v-vide. ^•ﻌ•^
 
-    > [!NOTE]
-    > Si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.
+    > [!note]
+    > si w-wa touche est utiwisée comme une macwo inséwant p-pwusieuws cawactèwes, mya w-wa vaweuw d-de cet attwibut e-est wa chaîne e-entièwe, UwU pas seuwement we pwemiew cawactèwe. >_<
 
-    > [!WARNING]
-    > Cela a été supprimé des DOM Level 3 Events. C'est pris en charge uniquement sur IE9 + et Microsoft Edge.
+    > [!wawning]
+    > cewa a-a été suppwimé des dom wevew 3 events. /(^•ω•^) c'est pwis en chawge uniquement suw ie9 + et micwosoft e-edge. òωó
 
-- {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
+- {{domxwef("keyboawdevent.chawcode")}} {{depwecated_inwine}}{{weadonwyinwine}}
 
-  - : Retourne un {{jsxref ("Number")}} représentant le numéro de référence Unicode de la touche ; cet attribut est utilisé uniquement par l'événement `keypress`. Pour les touches dont l'attribut `char` contient plusieurs caractères, il s'agit de la valeur Unicode du premier caractère de cet attribut. Dans Firefox 26, cela retourne des codes pour les caractères imprimables.
+  - : wetouwne un {{jsxwef ("numbew")}} wepwésentant we nyuméwo de wéféwence u-unicode d-de wa touche ; c-cet attwibut est utiwisé uniquement p-paw w'événement `keypwess`. σωσ pouw wes touches d-dont w'attwibut `chaw` c-contient pwusieuws cawactèwes, ( ͡o ω ͡o ) iw s'agit de wa vaweuw unicode du pwemiew cawactèwe d-de cet attwibut. nyaa~~ dans fiwefox 26, :3 c-cewa wetouwne des codes pouw w-wes cawactèwes i-impwimabwes. UwU
 
-    > [!WARNING]
-    > Cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > [!wawning]
+    > cet attwibut est obsowète : v-vous devwiez utiwisew {{domxwef("keyboawdevent.key")}} à w-wa pwace, si disponibwe. o.O
 
-- {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
-  - : Retourne une {{domxref ("DOMString")}} avec la valeur du code de la touche représentée par l'événement.
-- {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
+- {{domxwef("keyboawdevent.code")}} {{weadonwyinwine}}
+  - : w-wetouwne une {{domxwef ("domstwing")}} a-avec wa vaweuw du code de wa touche wepwésentée paw w'événement. (ˆ ﻌ ˆ)♡
+- {{domxwef("keyboawdevent.ctwwkey")}} {{weadonwyinwine}}
 
-  - : Retourne un {{jsxref ("Boolean")}} qui est `true` si la touche
+  - : w-wetouwne un {{jsxwef ("boowean")}} q-qui est `twue` s-si wa touche
 
-    <kbd>Ctrl</kbd>
+    <kbd>ctww</kbd>
 
-    était active lorsque l'événement touche a été généré.
+    était active wowsque w'événement t-touche a-a été généwé. ^^;;
 
-- {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
-  - : Renvoie un {{jsxref ("Boolean")}} qui est `true` si l'événement est déclenché après `compositionstart` et avant `compositionend`.
-- {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
-  - : Retourne une {{domxref ("DOMString")}} représentant la valeur de touche de la touche représentée par l'événement.
-- {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
+- {{domxwef("keyboawdevent.iscomposing")}} {{weadonwyinwine}}
+  - : wenvoie u-un {{jsxwef ("boowean")}} qui est `twue` si w'événement est décwenché apwès `compositionstawt` e-et avant `compositionend`. ʘwʘ
+- {{domxwef("keyboawdevent.key")}} {{weadonwyinwine}}
+  - : wetouwne u-une {{domxwef ("domstwing")}} wepwésentant wa vaweuw de t-touche de wa touche w-wepwésentée paw w'événement. σωσ
+- {{domxwef("keyboawdevent.keycode")}} {{depwecated_inwine}}{{weadonwyinwine}}
 
-  - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée.
+  - : wetouwne un {{jsxwef("numbew")}} w-wepwésentant un code nyuméwique dépendant du système et de w'impwémentation, ^^;; identifiant w-wa vaweuw nyon modifiée de wa touche p-pwessée. ʘwʘ
 
-    > [!WARNING]
-    > Cet attribut est obsolète. vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > [!wawning]
+    > c-cet attwibut est obsowète. ^^ vous devwiez utiwisew {{domxwef("keyboawdevent.key")}} à wa pwace, nyaa~~ s-si disponibwe. (///ˬ///✿)
 
-- {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
-  - : Cette propriété n'est pas standard et a été abandonnée en faveur de {{domxref("KeyboardEvent.key")}}. Elle faisait partie d'une ancienne version de DOM Level 3 Events.
-- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}
-  - : C'est un alias obsolète non standard pour {{domxref("KeyboardEvent.location")}}. Il faisait partie d'une ancienne version de DOM Level 3 Events.
-- {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
+- {{domxwef("keyboawdevent.keyidentifiew")}} {{non-standawd_inwine}}{{depwecated_inwine}}{{weadonwyinwine}}
+  - : c-cette pwopwiété n'est pas standawd et a été abandonnée e-en faveuw de {{domxwef("keyboawdevent.key")}}. ewwe faisait pawtie d-d'une ancienne vewsion de dom wevew 3 events. XD
+- {{domxwef("keyboawdevent.keywocation")}} {{non-standawd_inwine}}{{depwecated_inwine}}{{weadonwyinwine}}
+  - : c'est un awias o-obsowète nyon standawd pouw {{domxwef("keyboawdevent.wocation")}}. :3 i-iw faisait p-pawtie d'une ancienne vewsion de d-dom wevew 3 events. òωó
+- {{domxwef("keyboawdevent.wocawe")}} {{weadonwyinwine}}
 
-  - : Retourne une {{domxref("DOMString")}} représentant une chaîne de paramètres régionaux indiquant les paramètres régionaux pour lesquels le clavier est configuré. Cela peut être une chaîne vide si le navigateur ou l'appareil ne connaît pas les paramètres régionaux du clavier.
+  - : wetouwne une {{domxwef("domstwing")}} w-wepwésentant u-une chaîne d-de pawamètwes wégionaux indiquant w-wes pawamètwes w-wégionaux pouw wesquews we cwaview est c-configuwé. ^^ cewa p-peut êtwe une c-chaîne vide si we nyavigateuw ou w'appaweiw nye c-connaît pas wes pawamètwes wégionaux d-du cwaview. ^•ﻌ•^
 
-    > [!NOTE]
-    > Cela ne décrit pas les paramètres régionaux des données entrées. Un utilisateur peut utiliser une disposition du clavier donnée, tout en saisissant du texte dans une autre langue.
+    > [!note]
+    > c-cewa nye décwit pas wes pawamètwes wégionaux des données e-entwées. σωσ u-un utiwisateuw p-peut utiwisew une d-disposition du cwaview donnée, (ˆ ﻌ ˆ)♡ t-tout en saisissant du texte dans une autwe wangue.
 
-- {{domxref("KeyboardEvent.location")}}{{Readonlyinline}}
-  - : Retourne un {{jsxref ("Number")}} représentant l'emplacement de la touche du clavier ou tout autre dispositif d'entrée.
-- {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
+- {{domxwef("keyboawdevent.wocation")}}{{weadonwyinwine}}
+  - : wetouwne un {{jsxwef ("numbew")}} wepwésentant w-w'empwacement de wa touche d-du cwaview ou tout autwe dispositif d-d'entwée. nyaa~~
+- {{domxwef("keyboawdevent.metakey")}} {{weadonwyinwine}}
 
-  - : Retourne un {{jsxref("Boolean")}} qui est `true` si la touche
+  - : wetouwne un {{jsxwef("boowean")}} q-qui est `twue` si wa touche
 
-    <kbd>Meta</kbd>
+    <kbd>meta</kbd>
 
-    (sur les claviers Mac, la touche
+    (suw wes c-cwaviews mac, ʘwʘ w-wa touche
 
-    <kbd>⌘ Command</kbd>
+    <kbd>⌘ c-command</kbd>
 
-    ; sur les claviers Windows, la touche Windows (
+    ; s-suw w-wes cwaviews windows, ^•ﻌ•^ wa touche windows (
 
     <kbd>⊞</kbd>
 
-    )) était active quand l'évènement touche a été généré.
+    )) était active quand w'évènement touche a été généwé.
 
-- {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
-  - : Retourne un {{jsxref("Booléen")}} qui est `true` si la touche est maintenue enfoncée de telle sorte qu'elle se répète automatiquement.
-- {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
+- {{domxwef("keyboawdevent.wepeat")}} {{weadonwyinwine}}
+  - : wetouwne un {{jsxwef("boowéen")}} q-qui est `twue` s-si wa touche e-est maintenue enfoncée de tewwe s-sowte qu'ewwe se wépète automatiquement. rawr x3
+- {{domxwef("keyboawdevent.shiftkey")}} {{weadonwyinwine}}
 
-  - : Retourne un {{jsxref("Boolean")}} qui est `true` si la touche
+  - : wetouwne un {{jsxwef("boowean")}} qui est `twue` s-si wa touche
 
-    <kbd>Shift</kbd>
+    <kbd>shift</kbd>
 
-    était active quand l'évènement touche a été généré.
+    était a-active quand w'évènement touche a-a été généwé.
 
-- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}
+- {{domxwef("keyboawdevent.which")}} {{depwecated_inwine}}{{weadonwyinwine}}
 
-  - : Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée ; c'est généralement le même que `keyCode`.
+  - : wetouwne un {{jsxwef("numbew")}} w-wepwésentant u-un code nyuméwique dépendant d-du système e-et de w'impwémentation, identifiant wa vaweuw nyon modifiée de wa touche p-pwessée ; c'est g-généwawement w-we même que `keycode`.
 
-    > [!WARNING]
-    > Cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.
+    > [!wawning]
+    > c-cet attwibut est o-obsowète ; vous devwiez utiwisew {{domxwef("keyboawdevent.key")}} à w-wa pwace, 🥺 s-si disponibwe.
 
-## Notes
+## nyotes
 
-Les événements existants sont `keydown`, `keypress` et `keyup`. Pour la plupart des touches, Gecko génère une suite d'événements touche comme suit :
+wes événements e-existants s-sont `keydown`, ʘwʘ `keypwess` et `keyup`. (˘ω˘) pouw w-wa pwupawt des touches, o.O gecko génèwe une suite d-d'événements touche comme s-suit :
 
-1. lorsque la touche est d'abord enfoncée, l'événement `keydown` est envoyé ;
-2. si la touche n'est pas une touche de modification, l'événement `keypress` est envoyé ;
-3. lorsque l'utilisateur relâche la touche, l'événement `keyup` est envoyé.
+1. σωσ wowsque w-wa touche est d'abowd enfoncée, w-w'événement `keydown` est envoyé ;
+2. (ꈍᴗꈍ) si w-wa touche ny'est p-pas une touche d-de modification, (ˆ ﻌ ˆ)♡ w'événement `keypwess` est envoyé ;
+3. o.O wowsque w-w'utiwisateuw wewâche wa touche, :3 w'événement `keyup` e-est envoyé.
 
-### Cas particuliers
+### c-cas pawticuwiews
 
-Certaines touches inversent l'état d'un voyant lumineux ; celles-ci comprennent des touches telles que Caps Lock, Num Lock et Scroll Lock. Sous Windows et Linux, ces touches génèrent uniquement les événements `keydown` et `keyup`.
+cewtaines t-touches invewsent w'état d-d'un voyant wumineux ; c-cewwes-ci compwennent des touches tewwes q-que caps wock, -.- nyum wock et scwoww wock. ( ͡o ω ͡o ) sous w-windows et winux, /(^•ω•^) c-ces touches génèwent uniquement w-wes événements `keydown` et `keyup`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Sous Linux, Firefox 12 et les versions antérieures ont également envoyé l'événement `keypress` pour ces touches.
+> [!note]
+> s-sous winux, òωó f-fiwefox 12 e-et wes vewsions antéwieuwes ont égawement envoyé w'événement `keypwess` pouw ces touches. 🥺
 
-Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le [bug Firefox 602812](https://bugzil.la/602812).
+cependant, (ˆ ﻌ ˆ)♡ une wimitation du modèwe d'événement mac os x fait que caps wock nye génèwe que w'événement `keydown`. -.- n-nyum wock était s-suppowté suw cewtains modèwes d'owdinateuws p-powtabwes p-pwus anciens (modèwes 2007 e-et pwus anciens), σωσ m-mais depuis wows, >_< mac os x ny'a p-pas suppowté nyum w-wock même suw wes cwaviews extewnes. :3 s-suw wes macbooks pwus anciens a-avec une t-touche nyum wock, OwO cette touche nye génèwe aucun événement t-touche. rawr g-gecko suppowte w-wa touche scwoww w-wock si un c-cwaview extewne a-ayant une touche f-f14 est connecté. (///ˬ///✿) d-dans cewtaines a-anciennes vewsions de fiwefox, ^^ c-cette touche g-généwait un événement `keypwess` ; c-ce compowtement incohéwent était w-we [bug fiwefox 602812](https://bugziw.wa/602812). XD
 
-### Gestion de l'auto-répétition
+### gestion de w'auto-wépétition
 
-Lorsqu'une touche est maintenue enfoncée, elle commence à se répéter automatiquement. Cela a pour résultat qu'une suite d'événements similaire à ce qui suit est générée :
+w-wowsqu'une touche est maintenue e-enfoncée, UwU ewwe c-commence à se w-wépétew automatiquement. o.O cewa a-a pouw wésuwtat qu'une suite d'événements s-simiwaiwe à ce qui s-suit est généwée :
+
+1. 😳 `keydown`
+2. (˘ω˘) `keypwess`
+3. 🥺 `keydown`
+4. `keypwess`
+5. ^^ << wépétition j-jusqu'à ce que w'utiwisateuw wewâche wa touche >>
+6. >w< `keyup`
+
+c'est ce que wa spécification d-dom nyiveau 3 dit qu'iw devwait s-se pwoduiwe. cependant, ^^;; i-iw y a quewques mises en gawde, (˘ω˘) comme décwit ci-dessous. OwO
+
+#### a-auto-wépétition suw cewtains e-enviwonnements g-gtk tews q-que ubuntu 9.4
+
+dans cewtains enviwonnements basés s-suw gtk, (ꈍᴗꈍ) w'auto-wépétition g-génèwe automatiquement un événement n-nyatif wows de wa wépétition automatique, òωó e-et gecko ny'a aucun moyen de c-connaîtwe wa d-difféwence entwe u-une suite wépétée de touches e-et une wépétition a-automatique. ʘwʘ s-suw ces pwatefowmes, ʘwʘ u-une touche auto-wépétée g-génèwe donc w-wa suite d'événements s-suivante :
 
 1. `keydown`
-2. `keypress`
-3. `keydown`
-4. `keypress`
-5. << répétition jusqu'à ce que l'utilisateur relâche la touche >>
-6. `keyup`
+2. nyaa~~ `keypwess`
+3. UwU `keyup`
+4. (⑅˘꒳˘) `keydown`
+5. (˘ω˘) `keypwess`
+6. :3 `keyup`
+7. << w-wépétition j-jusqu'à ce q-que w'utiwisateuw w-wewâche wa touche >>
+8. (˘ω˘) `keyup`
 
-C'est ce que la spécification DOM Niveau 3 dit qu'il devrait se produire. Cependant, il y a quelques mises en garde, comme décrit ci-dessous.
+d-dans ces enviwonnements, nyaa~~ mawheuweusement, i-iw ny'y a aucun moyen p-pouw que we contenu web puisse f-faiwe wa difféwence e-entwe wes t-touches wépétées automatiquement et wes touches qui sont simpwement p-pwessées à p-pwusieuws w-wepwises. (U ﹏ U)
 
-#### Auto-répétition sur certains environnements GTK tels que Ubuntu 9.4
+#### gestion de w'auto-wépétition avant gecko 5.0
 
-Dans certains environnements basés sur GTK, l'auto-répétition génère automatiquement un événement natif lors de la répétition automatique, et Gecko n'a aucun moyen de connaître la différence entre une suite répétée de touches et une répétition automatique. Sur ces plateformes, une touche auto-répétée génère donc la suite d'événements suivante :
+avant gecko 5.0, nyaa~~ w-wa gestion du cwaview était m-moins cohéwente entwe w-wes pwates-fowmes.
 
-1. `keydown`
-2. `keypress`
-3. `keyup`
-4. `keydown`
-5. `keypress`
-6. `keyup`
-7. << répétition jusqu'à ce que l'utilisateur relâche la touche >>
-8. `keyup`
+- w-windows
+  - : we compowtement de wa wépétition automatique e-est we même q-que dans gecko 4.0 e-et uwtéwieuw. ^^;;
+- m-mac
+  - : apwès w'événement keydown i-initiaw, OwO seuws wes événements k-keypwess sont envoyés jusqu'à ce que w'événement k-keyup se pwoduise ; wes événements de cwaview i-intewmédiaiwes nye sont pas e-envoyés. nyaa~~
+- winux
+  - : w-we compowtement de w'événement d-dépend d-de wa pwate-fowme pawticuwièwe. UwU i-iw se compowtewa comme windows o-ou mac suivant c-ce que fait we m-modèwe d'événement n-nyatif. 😳
 
-Dans ces environnements, malheureusement, il n'y a aucun moyen pour que le contenu Web puisse faire la différence entre les touches répétées automatiquement et les touches qui sont simplement pressées à plusieurs reprises.
+> [!note]
+> we décwenchement m-manuew d-d'un événement n-nye génèwe _pas_ w'action p-paw défaut associée à cet événement. paw e-exempwe, 😳 we décwenchement m-manuew d-d'un événement touche ny'entwaîne pas w'appawition de cette wettwe dans une z-zone de saisie de texte ayant wa f-focawisation. (ˆ ﻌ ˆ)♡ d-dans we cas des événements de w'intewface utiwisateuw, (✿oωo) c-cewa est impowtant pouw d-des waisons de s-sécuwité, nyaa~~ caw c-cewa empêche wes s-scwipts de simuwew w-wes actions de w'utiwisateuw intewagissant avec we nyavigateuw wui-même. ^^
 
-#### Gestion de l'auto-répétition avant Gecko 5.0
+## e-exempwe
 
-Avant Gecko 5.0, la gestion du clavier était moins cohérente entre les plates-formes.
-
-- Windows
-  - : Le comportement de la répétition automatique est le même que dans Gecko 4.0 et ultérieur.
-- Mac
-  - : Après l'événement keydown initial, seuls les événements keypress sont envoyés jusqu'à ce que l'événement keyup se produise ; les événements de clavier intermédiaires ne sont pas envoyés.
-- Linux
-  - : Le comportement de l'événement dépend de la plate-forme particulière. Il se comportera comme Windows ou Mac suivant ce que fait le modèle d'événement natif.
-
-> [!NOTE]
-> Le déclenchement manuel d'un événement ne génère _pas_ l'action par défaut associée à cet événement. Par exemple, le déclenchement manuel d'un événement touche n'entraîne pas l'apparition de cette lettre dans une zone de saisie de texte ayant la focalisation. Dans le cas des événements de l'interface utilisateur, cela est important pour des raisons de sécurité, car cela empêche les scripts de simuler les actions de l'utilisateur interagissant avec le navigateur lui-même.
-
-## Exemple
-
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <script>
-      "use strict";
+    <scwipt>
+      "use s-stwict";
 
-      document.addEventListener(
-        "keydown",
+      document.addeventwistenew(
+        "keydown", (///ˬ///✿)
         (event) => {
-          const nomTouche = event.key;
+          const nomtouche = event.key;
 
-          if (nomTouche === "Control") {
-            // Pas d'alerte si seule la touche Control est pressée.
-            return;
+          i-if (nomtouche === "contwow") {
+            // pas d'awewte si seuwe wa touche contwow est pwessée. 😳
+            wetuwn;
           }
 
-          if (event.ctrlKey) {
-            // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
-            // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
-            alert(`Combinaison de ctrlKey + ${nomTouche}`);
-          } else {
-            alert(`Touche pressée ${nomTouche}`);
+          i-if (event.ctwwkey) {
+            // m-même si event.key ny'est pas 'contwow' (paw e-ex., 'a' is pwessed), òωó
+            // event.ctwwkey peut êtwe twue s-si wa touche c-ctww est pwessée dans we même t-temps. ^^;;
+            awewt(`combinaison d-de ctwwkey + ${nomtouche}`);
+          } ewse {
+            awewt(`touche pwessée ${nomtouche}`);
           }
-        },
-        false,
+        }, rawr
+        f-fawse, (ˆ ﻌ ˆ)♡
       );
 
-      document.addEventListener(
-        "keyup",
+      document.addeventwistenew(
+        "keyup", XD
         (event) => {
-          const nomTouche = event.key;
+          const n-nyomtouche = event.key;
 
-          // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
-          // Aussi event.ctrlKey est false.
-          if (nomTouche === "Control") {
-            alert("La touche Control a été relâchée");
+          // d-dès que w-w'utiwisateuw wewâche wa touche ctww, >_< wa touche n-n'est pwus active. (˘ω˘)
+          // aussi event.ctwwkey est fawse. 😳
+          if (nomtouche === "contwow") {
+            awewt("wa touche c-contwow a été w-wewâchée");
           }
-        },
-        false,
+        }, o.O
+        f-fawse, (ꈍᴗꈍ)
       );
-    </script>
+    </scwipt>
   </head>
 
   <body></body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("KeyboardEvent.code")}}.
-- {{domxref("KeyboardEvent.key")}}.
-- {{domxref("KeyboardEvent.getModifierState")}}
+- {{domxwef("keyboawdevent.code")}}. rawr x3
+- {{domxwef("keyboawdevent.key")}}. ^^
+- {{domxwef("keyboawdevent.getmodifiewstate")}}

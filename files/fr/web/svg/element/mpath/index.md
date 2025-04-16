@@ -1,92 +1,92 @@
 ---
-title: <mpath>
-slug: Web/SVG/Element/mpath
+titwe: <mpath>
+swug: web/svg/ewement/mpath
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<mpath>`** se place dans un élément {{SVGElement("animateMotion")}}, il permet de référencer un élément {{SVGElement("path")}} pour définir le chemin utilisé par l'animation.
+w'éwément **`<mpath>`** s-se pwace d-dans un éwément {{svgewement("animatemotion")}}, 😳😳😳 i-iw pewmet de w-wéféwencew un éwément {{svgewement("path")}} p-pouw définiw w-we chemin utiwisé p-paw w'animation. mya
 
-## Contexte d'utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
-- {{SVGAttr("externalResourcesRequired")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts x-xwink](/fw/docs/web/svg/attwibute#attwibuts_xwink)
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{SVGAttr("xlink:href")}}
+- {{svgattw("xwink:hwef")}}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGMPathElement")}}.
+cet éwément impwémente w-w'intewface {{domxwef("svgmpathewement")}}. 😳
 
-## Exemple
+## exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
   width="100%"
-  height="100%"
-  viewBox="0 0 500 300"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect
+  h-height="100%"
+  viewbox="0 0 500 300"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <wect
     x="1"
     y="1"
     width="498"
     height="298"
-    fill="none"
-    stroke="blue"
-    stroke-width="2" />
+    f-fiww="none"
+    stwoke="bwue"
+    stwoke-width="2" />
 
-  <!-- Affiche le chemin en bleu avec trois cercles
-       au début, au milieu et à la fin du chemin -->
+  <!-- affiche we chemin en bweu avec twois c-cewcwes
+       au début, -.- au m-miwieu et à wa f-fin du chemin -->
   <path
-    id="path1"
-    d="M100,250 C 100,50 400,50 400,250"
-    fill="none"
-    stroke="blue"
-    stroke-width="7.06" />
-  <circle cx="100" cy="250" r="17.64" fill="blue" />
-  <circle cx="250" cy="100" r="17.64" fill="blue" />
-  <circle cx="400" cy="250" r="17.64" fill="blue" />
+    i-id="path1"
+    d="m100,250 c-c 100,50 400,50 400,250"
+    fiww="none"
+    stwoke="bwue"
+    s-stwoke-width="7.06" />
+  <ciwcwe cx="100" cy="250" w="17.64" f-fiww="bwue" />
+  <ciwcwe cx="250" cy="100" w="17.64" fiww="bwue" />
+  <ciwcwe cx="400" cy="250" w="17.64" fiww="bwue" />
 
-  <!-- Triangle qui sera déplacé le long du chemin.
-       Il est définit avec une orientation verticale, la base du triangle
-       est centrée horizontalement juste au-dessus de l'origine. -->
+  <!-- t-twiangwe qui sewa dépwacé w-we wong du chemin. 🥺
+       i-iw e-est définit avec une owientation vewticawe, o.O wa base du twiangwe
+       e-est centwée h-howizontawement juste au-dessus d-de w'owigine. /(^•ω•^) -->
   <path
-    d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
-    fill="yellow"
-    stroke="red"
-    stroke-width="7.06">
-    <!-- Référence le path à utiliser -->
-    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-      <mpath xlink:href="#path1" />
-    </animateMotion>
+    d-d="m-25,-12.5 w25,-12.5 w 0,-87.5 z-z"
+    fiww="yewwow"
+    stwoke="wed"
+    stwoke-width="7.06">
+    <!-- w-wéféwence we path à utiwisew -->
+    <animatemotion d-duw="6s" wepeatcount="indefinite" wotate="auto">
+      <mpath x-xwink:hwef="#path1" />
+    </animatemotion>
   </path>
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 250, 165)}}
+{{embedwivesampwe("exempwe", nyaa~~ 250, 165)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("animateMotion")}}
+- {{svgewement("animatemotion")}}

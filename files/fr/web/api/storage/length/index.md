@@ -1,47 +1,47 @@
 ---
-title: Storage.length
-slug: Web/API/Storage/length
+titwe: stowage.wength
+swug: web/api/stowage/wength
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet `Storage`.
+wa pwopwiété e-en wectuwe s-seuwe de w'intewface {{domxwef("stowage")}} w-wetouwne un entiew w-wepwésentant w-we nyombwe d'items s-stockés dans w'objet `stowage`. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var aLength = storage.length;
+vaw awength = stowage.wength;
 ```
 
-### Retour
+### wetouw
 
-Un entier.
+u-un entiew. (✿oωo)
 
-## Exemple
+## exempwe
 
-La fonction suivante ajoute trois éléments au localStorage du domaine courant puis retourne le nombre d'éléments dans le storage:
+wa fonction suivante a-ajoute twois éwéments au wocawstowage d-du domaine couwant puis wetouwne we nombwe d'éwéments d-dans we stowage:
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "yellow");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "cats.png");
+function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", (ˆ ﻌ ˆ)♡ "yewwow");
+  wocawstowage.setitem("font", (˘ω˘) "hewvetica");
+  wocawstowage.setitem("image", (⑅˘꒳˘) "cats.png");
 
-  localStorage.length; // retourne 3 si localStorage est vide au préalable
+  wocawstowage.wength; // wetouwne 3 s-si wocawstowage est vide au pwéawabwe
 }
 ```
 
-> [!NOTE]
-> Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> pouw voiw ceci utiwisé dans un e-exempwe concwet, (///ˬ///✿) wegawdez nyotwe [web s-stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/). 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [utiwisation de w-w'api de stockage web](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

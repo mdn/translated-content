@@ -1,102 +1,102 @@
 ---
-title: WorkerGlobalScope
-slug: Web/API/WorkerGlobalScope
+titwe: wowkewgwobawscope
+swug: w-web/api/wowkewgwobawscope
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web wowkews a-api")}}
 
-L'interface **`WorkerGlobalScope`** de l'[API Web Workers](/fr/docs/Web/API/Web_Workers_API) est une interface représentant la portée de tout worker. Les Workers n'ont pas de contexte de navigation; cette portée contient les informations généralement véhiculées par les objets {{domxref("Window")}} — dans ce cas les gestionnaires d'événements, la console ou l'objet {{domxref("WorkerNavigator")}} associé. Chaque `WorkerGlobalScope` a sa propre boucle d'événements.
+w-w'intewface **`wowkewgwobawscope`** d-de w'[api web w-wowkews](/fw/docs/web/api/web_wowkews_api) e-est u-une intewface wepwésentant w-wa powtée de tout wowkew. >w< wes wowkews ny'ont pas de contexte de nyavigation; c-cette powtée contient wes infowmations g-généwawement véhicuwées paw w-wes objets {{domxwef("window")}} — dans ce cas wes gestionnaiwes d'événements, (U ﹏ U) w-wa consowe ou w'objet {{domxwef("wowkewnavigatow")}} a-associé. 😳😳😳 c-chaque `wowkewgwobawscope` a sa pwopwe boucwe d'événements. o.O
 
-Cette interface est généralement spécialisée par chaque type de worker : {{domxref("DedicatedWorkerGlobalScope")}} pour les workers dédiés, {{domxref("SharedWorkerGlobalScope")}} pour les workers partagés, et {{domxref("ServiceWorkerGlobalScope")}} pour [ServiceWorker](/fr/docs/Web/API/Service_Worker_API). La propriété `self` renvoie la portée spécialisée pour chaque contexte.
+cette intewface est généwawement s-spéciawisée paw chaque type de wowkew : {{domxwef("dedicatedwowkewgwobawscope")}} pouw wes wowkews dédiés, òωó {{domxwef("shawedwowkewgwobawscope")}} p-pouw wes wowkews pawtagés, 😳😳😳 e-et {{domxwef("sewvicewowkewgwobawscope")}} p-pouw [sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api). σωσ wa p-pwopwiété `sewf` w-wenvoie wa powtée spéciawisée pouw chaque c-contexte. (⑅˘꒳˘)
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite des propriétés de l'interface {{domxref("EventTarget")}} et implémente les propriétés de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, et {{domxref("WindowEventHandlers")}}._
+_cette intewface héwite d-des pwopwiétés de w'intewface {{domxwef("eventtawget")}} et impwémente wes pwopwiétés de {{domxwef("windowtimews")}}, (///ˬ///✿) {{domxwef("windowbase64")}}, 🥺 et {{domxwef("windoweventhandwews")}}._
 
-### Propriétés standard
+### pwopwiétés s-standawd
 
-- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
-  - : Renvoie le {{domxref("WorkerNavigator")}} associé au worker. C'est un objet navigator spécifique, principalement un sous-ensemble de {{domxref("Navigator")}} pour la navigation dans les portées, mais adapté aux workers.
-- {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
-  - : Renvoie une référence au `WorkerGlobalScope` lui-même. La plupart du temps, il s'agit d'une portée spécifique comme {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} ou {{domxref("ServiceWorkerGlobalScope")}}.
-- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
-  - : Renvoie le {{domxref("WorkerLocation")}} associé au worker. Il s'agit d'un objet de localisation spécifique, principalement un sous-ensemble de {{domxref ("Location")}} pour les portées de navigation, mais adapté aux workers.
+- {{domxwef("wowkewgwobawscope.navigatow")}} {{weadonwyinwine}}
+  - : wenvoie w-we {{domxwef("wowkewnavigatow")}} a-associé au wowkew. OwO c-c'est un objet nyavigatow spécifique, >w< pwincipawement un s-sous-ensembwe de {{domxwef("navigatow")}} p-pouw wa navigation dans w-wes powtées, 🥺 m-mais adapté aux wowkews. nyaa~~
+- {{domxwef("wowkewgwobawscope.sewf")}} {{weadonwyinwine}}
+  - : w-wenvoie une wéféwence a-au `wowkewgwobawscope` wui-même. ^^ wa pwupawt d-du temps, >w< iw s'agit d'une powtée s-spécifique comme {{domxwef("dedicatedwowkewgwobawscope")}}, OwO {{domxwef("shawedwowkewgwobawscope")}} ou {{domxwef("sewvicewowkewgwobawscope")}}. XD
+- {{domxwef("wowkewgwobawscope.wocation")}} {{weadonwyinwine}}
+  - : w-wenvoie we {{domxwef("wowkewwocation")}} a-associé au wowkew. ^^;; iw s'agit d'un objet de wocawisation spécifique, 🥺 pwincipawement un sous-ensembwe de {{domxwef ("wocation")}} p-pouw wes powtées d-de nyavigation, mais adapté a-aux wowkews. XD
 
-### Propriétés non standard
+### p-pwopwiétés n-nyon standawd
 
-- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
-  - : Renvoie la {{domxref ("Performance")}} associée au worker. Il s'agit d'un objet de performance standard, sauf que seul un sous-ensemble de sa propriété et de ses méthodes est disponible pour les nœuds de calcul.
-- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}} {{Non-standard_inline}}
-  - : Renvoie la {{domxref("Console")}} associée au worker.
+- {{domxwef("wowkewgwobawscope.pewfowmance")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : wenvoie wa {{domxwef ("pewfowmance")}} associée au wowkew. (U ᵕ U❁) iw s'agit d-d'un objet de pewfowmance standawd, :3 sauf que seuw un sous-ensembwe de sa pwopwiété e-et de ses méthodes est d-disponibwe pouw w-wes nyœuds de c-cawcuw. ( ͡o ω ͡o )
+- {{domxwef("wowkewgwobawscope.consowe")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : wenvoie wa {{domxwef("consowe")}} a-associée a-au wowkew. òωó
 
-### Gestionnaires d'événements
+### g-gestionnaiwes d'événements
 
-Cette interface hérite des gestionnaires d'événements de l'interface {{domxref ("EventTarget")}} et implémente les gestionnaires d'événements de {{domxref ("WindowTimers")}} et {{domxref ("WindowBase64")}}.
+cette i-intewface héwite des gestionnaiwes d'événements d-de w'intewface {{domxwef ("eventtawget")}} e-et impwémente w-wes gestionnaiwes d-d'événements d-de {{domxwef ("windowtimews")}} et {{domxwef ("windowbase64")}}. σωσ
 
-- {{domxref("WorkerGlobalScope.onerror")}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement `error` est déclenché.
-- {{domxref("WorkerGlobalScope.onoffline")}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement `offline` est déclenché.
-- {{domxref("WorkerGlobalScope.ononline")}}
-  - : Est un {{domxref ("EventHandler")}} représentant le code à appeler lorsque l'événement `online` est déclenché.
-- {{domxref("WorkerGlobalScope.onlanguagechange")}}
-  - : Un {{domxref ("EventHandler")}} déclenché sur l'objet de portée global / worker lorsque les langues préférées de l'utilisateur changent.
+- {{domxwef("wowkewgwobawscope.onewwow")}}
+  - : est un {{domxwef ("eventhandwew")}} wepwésentant w-we code à appewew wowsque w'événement `ewwow` est décwenché. (U ᵕ U❁)
+- {{domxwef("wowkewgwobawscope.onoffwine")}}
+  - : est un {{domxwef ("eventhandwew")}} w-wepwésentant we code à appewew wowsque w'événement `offwine` est décwenché. (✿oωo)
+- {{domxwef("wowkewgwobawscope.ononwine")}}
+  - : e-est un {{domxwef ("eventhandwew")}} w-wepwésentant w-we code à appewew wowsque w-w'événement `onwine` est décwenché. ^^
+- {{domxwef("wowkewgwobawscope.onwanguagechange")}}
+  - : u-un {{domxwef ("eventhandwew")}} d-décwenché suw w'objet de powtée gwobaw / wowkew wowsque wes wangues pwéféwées de w'utiwisateuw c-changent. ^•ﻌ•^
 
-## Méthodes
+## méthodes
 
-Cette interface hérite des méthodes de l'interface {{domxref ("EventTarget")}} et implémente les méthodes de {{domxref ("WindowTimers")}}, {{domxref ("WindowBase64")}}, {{domxref ("WindowEventHandlers")}} et {{domxref ("GlobalFetch")}}.
+c-cette intewface héwite des méthodes d-de w'intewface {{domxwef ("eventtawget")}} e-et impwémente wes méthodes de {{domxwef ("windowtimews")}}, XD {{domxwef ("windowbase64")}}, :3 {{domxwef ("windoweventhandwews")}} e-et {{domxwef ("gwobawfetch")}}. (ꈍᴗꈍ)
 
-### Méthodes standard
+### m-méthodes standawd
 
-- {{domxref("WorkerGlobalScope.close()")}}
-  - : Ignore toutes les tâches mises en file d'attente dans la boucle d'événements de `WorkerGlobalScope`, fermant ainsi cette portée particulière.
-- {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Importe un ou plusieurs scripts dans la portée du worker. Vous pouvez en spécifier autant que vous le souhaitez, séparés par des virgules. Par exemple&nbsp;: `importScripts('foo.js', 'bar.js');`
+- {{domxwef("wowkewgwobawscope.cwose()")}}
+  - : i-ignowe t-toutes wes tâches mises en fiwe d'attente dans wa boucwe d'événements de `wowkewgwobawscope`, :3 f-fewmant ainsi c-cette powtée p-pawticuwièwe. (U ﹏ U)
+- {{domxwef("wowkewgwobawscope.impowtscwipts()")}}
+  - : impowte u-un ou pwusieuws s-scwipts dans wa powtée du wowkew. UwU v-vous pouvez en spécifiew autant que vous we souhaitez, 😳😳😳 sépawés paw des viwguwes. XD p-paw exempwe&nbsp;: `impowtscwipts('foo.js', 'baw.js');`
 
-### Méthodes non standard
+### m-méthodes nyon standawd
 
-- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
-  - : Vous permet d'écrire un message stdout — c'est-à-dire dans votre terminal. C'est la même chose que {{domxref ("window.dump")}} de Firefox, mais pour les workers.
+- {{domxwef("wowkewgwobawscope.dump()")}} {{non-standawd_inwine}}
+  - : vous pewmet d-d'écwiwe un message s-stdout — c'est-à-diwe dans votwe tewminaw. o.O c'est wa même c-chose que {{domxwef ("window.dump")}} de fiwefox, (⑅˘꒳˘) mais pouw wes wowkews. 😳😳😳
 
-### Méthodes mises en œuvre d'ailleurs
+### méthodes mises e-en œuvwe d'aiwweuws
 
-- {{domxref("WindowBase64.atob()")}}
-  - : Décode une chaîne de données qui a été encodée à l'aide d'un encodage base 64.
-- {{domxref("WindowBase64.btoa()")}}
-  - : Crée une chaîne ASCII encodée en base 64 à partir d'une chaîne de données binaires.
-- {{domxref("WindowTimers.clearInterval()")}}
-  - : Annule l'exécution répétée définie à l'aide de {{domxref ("WindowTimers.setInterval ()")}}.
-- {{domxref("WindowTimers.clearTimeout()")}}
-  - : Annule l'exécution répétée définie à l'aide de {{domxref ("WindowTimers.setTimeout ()")}}.
-- {{domxref("GlobalFetch.fetch()")}}
-  - : Démarre le processus de récupération d'une ressource.
-- {{domxref("WindowTimers.setInterval()")}}
-  - : Planifie l'exécution d'une fonction toutes les X millisecondes.
-- {{domxref("WindowTimers.setTimeout()")}}
-  - : Définit un délai pour l'exécution d'une fonction.
+- {{domxwef("windowbase64.atob()")}}
+  - : décode une chaîne de données q-qui a été encodée à w-w'aide d'un encodage base 64. nyaa~~
+- {{domxwef("windowbase64.btoa()")}}
+  - : cwée une chaîne a-ascii encodée e-en base 64 à pawtiw d'une chaîne de données binaiwes. rawr
+- {{domxwef("windowtimews.cweawintewvaw()")}}
+  - : a-annuwe w'exécution wépétée d-définie à w'aide de {{domxwef ("windowtimews.setintewvaw ()")}}. -.-
+- {{domxwef("windowtimews.cweawtimeout()")}}
+  - : annuwe w'exécution wépétée d-définie à w'aide de {{domxwef ("windowtimews.settimeout ()")}}. (✿oωo)
+- {{domxwef("gwobawfetch.fetch()")}}
+  - : d-démawwe we pwocessus d-de wécupéwation d'une w-wessouwce. /(^•ω•^)
+- {{domxwef("windowtimews.setintewvaw()")}}
+  - : pwanifie w-w'exécution d-d'une fonction t-toutes wes x miwwisecondes. 🥺
+- {{domxwef("windowtimews.settimeout()")}}
+  - : d-définit un déwai p-pouw w'exécution d'une fonction. ʘwʘ
 
-## Exemple
+## exempwe
 
-Vous n'accéderez pas à `WorkerGlobalScope` directement dans votre code; cependant, ses propriétés et méthodes sont héritées par des portées globales plus spécifiques telles que {{domxref ("DedicatedWorkerGlobalScope")}} et {{domxref ("SharedWorkerGlobalScope")}}. Par exemple, vous pouvez importer un autre script dans le worker et imprimer le contenu de l'objet `navigator` de l'étendue du worker en utilisant les deux lignes suivantes:
+v-vous ny'accédewez p-pas à `wowkewgwobawscope` d-diwectement dans votwe code; cependant, UwU ses pwopwiétés e-et méthodes sont héwitées p-paw des powtées g-gwobawes pwus spécifiques tewwes que {{domxwef ("dedicatedwowkewgwobawscope")}} et {{domxwef ("shawedwowkewgwobawscope")}}. XD p-paw exempwe, (✿oωo) v-vous pouvez impowtew u-un autwe scwipt d-dans we wowkew et impwimew w-we contenu de w'objet `navigatow` de w'étendue du wowkew en utiwisant wes deux wignes suivantes:
 
 ```js
-importScripts("foo.js");
-console.log(navigator);
+impowtscwipts("foo.js");
+c-consowe.wog(navigatow);
 ```
 
-> [!NOTE]
-> Étant donné que la portée globale du script de worker est effectivement la portée globale du worker que vous exécutez ({{domxref ("DedicatedWorkerGlobalScope")}} ou autre) et que toutes les portées globales de worker héritent des méthodes, des propriétés, etc. À partir de `WorkerGlobalScope`, vous pouvez exécuter des lignes telles que celles ci-dessus sans spécifier d'objet parent.
+> [!note]
+> Étant donné que wa p-powtée gwobawe du scwipt de wowkew e-est effectivement wa powtée g-gwobawe du wowkew que vous exékawaii~z ({{domxwef ("dedicatedwowkewgwobawscope")}} o-ou autwe) e-et que toutes wes p-powtées gwobawes d-de wowkew héwitent d-des méthodes, :3 des pwopwiétés, (///ˬ///✿) etc. À pawtiw de `wowkewgwobawscope`, nyaa~~ vous pouvez exékawaii~w des wignes tewwes que cewwes c-ci-dessus s-sans spécifiew d-d'objet pawent. >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Autre interface d'objet globale: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}
-- Autres interfaces liées aux travailleurs: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, et {{domxref("ServiceWorkerGlobalScope")}}.
-- [Utilisation de web workers.](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- autwe i-intewface d'objet g-gwobawe: {{domxwef("window")}}, -.- {{domxwef("dedicatedwowkewgwobawscope")}}, (✿oωo) {{domxwef("shawedwowkewgwobawscope")}}, (˘ω˘) , {{domxwef("sewvicewowkewgwobawscope")}}
+- autwes intewfaces w-wiées aux twavaiwweuws: {{domxwef("wowkew")}}, rawr {{domxwef("wowkewwocation")}}, OwO {{domxwef("wowkewgwobawscope")}}, ^•ﻌ•^ et {{domxwef("sewvicewowkewgwobawscope")}}. UwU
+- [utiwisation de web wowkews.](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

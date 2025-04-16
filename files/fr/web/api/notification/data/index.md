@@ -1,32 +1,32 @@
 ---
-title: Notification.data
-slug: Web/API/Notification/data
+titwe: nyotification.data
+swug: w-web/api/notification/data
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`data`** de l'interface {{domxref ("Notification")}} renvoie un clone structuré des données de la notification, comme définis à l'aide de l'option `data` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification() ")}}.
+w-wa pwopwiété e-en wectuwe seuwe **`data`** d-de w'intewface {{domxwef ("notification")}} w-wenvoie u-un cwone stwuctuwé d-des données de wa nyotification, /(^•ω•^) comme définis à w'aide de w'option `data` w-wows de wa cwéation de wa nyotification à w'aide d-du constwucteuw {{domxwef ("notification.notification", rawr "notification() ")}}. OwO
 
-Les données de la notification peuvent être des données arbitraires, sans restriction de format que vous souhaitez associer à la notification.
+wes données d-de wa nyotification peuvent êtwe des données awbitwaiwes, (U ﹏ U) sans w-westwiction de fowmat que vous s-souhaitez associew à w-wa nyotification. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.data;
+nyotification.data;
 ```
 
-### Valeur
+### vaweuw
 
-Un clone structuré.
+un cwone stwuctuwé. rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api n-notifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

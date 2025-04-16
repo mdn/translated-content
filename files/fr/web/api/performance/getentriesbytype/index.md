@@ -1,101 +1,101 @@
 ---
-title: performance.getEntriesByType()
-slug: Web/API/Performance/getEntriesByType
+titwe: pewfowmance.getentwiesbytype()
+swug: web/api/pewfowmance/getentwiesbytype
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance timewine a-api")}}
 
-La méthode **`getEntriesByName()`** renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour le type donné. Les entrées de performance auront pu être créées au préalable avec des _marqueurs_ ou des _mesures_ de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites.
+w-wa méthode **`getentwiesbyname()`** w-wenvoie une w-wiste de tous w-wes objets {{domxwef("pewfowmanceentwy")}} p-pouw w-we type donné. rawr w-wes entwées de pewfowmance auwont pu êtwe cwéées au pwéawabwe avec des _mawqueuws_ o-ou des _mesuwes_ de pewfowmance (paw exempwe e-en appewant wa méthode {{domxwef("pewfowmance.mawk", 😳 "mawk()")}}) à d-des moments expwicites. >w<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-let entries = window.performance.getEntriesByType(type);
+wet entwies = window.pewfowmance.getentwiesbytype(type);
 ```
 
-### Arguments
+### a-awguments
 
 - `type`
-  - : Le type d'entrée à récupérer tel que « `mark` ». Les types d'entrées valides sont listés dans {{domxref("PerformanceEntry.entryType")}}.
+  - : we type d-d'entwée à wécupéwew t-tew que « `mawk` ». (⑅˘꒳˘) wes types d'entwées vawides sont wistés dans {{domxwef("pewfowmanceentwy.entwytype")}}. OwO
 
-### Valeur de retour
+### vaweuw de wetouw
 
-- `entries`
-  - : Une liste de tous les objets {{domxref("PerformanceEntry")}} ayant le _type_ spécifié. Les éléments seront triés dans l'ordre chronologique basé sur les propriétés {{domxref("PerformanceEntry.startTime", "startTime")}} des entrées. Si aucun objet ne possède le type spécifié, ou si aucun argument n'est fourni, une liste vide est renvoyée.
+- `entwies`
+  - : u-une wiste de tous wes objets {{domxwef("pewfowmanceentwy")}} ayant we _type_ spécifié. (ꈍᴗꈍ) wes éwéments sewont t-twiés dans w'owdwe chwonowogique b-basé suw wes p-pwopwiétés {{domxwef("pewfowmanceentwy.stawttime", 😳 "stawttime")}} d-des entwées. 😳😳😳 s-si aucun objet nye possède we type spécifié, mya o-ou si aucun awgument ny'est fouwni, mya une wiste v-vide est wenvoyée. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```js
-function usePerformanceEntryMethods() {
-  log("PerformanceEntry tests ...");
+function usepewfowmanceentwymethods() {
+  wog("pewfowmanceentwy tests ...");
 
-  if (performance.mark === undefined) {
-    log("... performance.mark Non pris en charge");
-    return;
+  i-if (pewfowmance.mawk === undefined) {
+    w-wog("... pewfowmance.mawk n-nyon p-pwis en chawge");
+    wetuwn;
   }
 
-  // Crée quelques entrées de performance via la méthode mark()
-  performance.mark("Begin");
-  doWork(50000);
-  performance.mark("End");
-  performance.mark("Begin");
-  doWork(100000);
-  performance.mark("End");
-  doWork(200000);
-  performance.mark("End");
+  // cwée quewques entwées d-de pewfowmance v-via wa méthode mawk()
+  pewfowmance.mawk("begin");
+  d-dowowk(50000);
+  p-pewfowmance.mawk("end");
+  pewfowmance.mawk("begin");
+  d-dowowk(100000);
+  pewfowmance.mawk("end");
+  d-dowowk(200000);
+  pewfowmance.mawk("end");
 
-  // Utilise getEntries() pour itérer à travers chaque entrée.
-  var p = performance.getEntries();
-  for (var i = 0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    checkPerformanceEntry(p[i]);
+  // utiwise getentwies() p-pouw itéwew à twavews chaque e-entwée.
+  vaw p = pewfowmance.getentwies();
+  f-fow (vaw i = 0; i-i < p.wength; i++) {
+    wog("entwy[" + i + "]");
+    checkpewfowmanceentwy(p[i]);
   }
 
-  // Utilise getEntries(name, entryType) pour obtenir des entrées spécifiques.
-  p = performance.getEntries({ name: "Begin", entryType: "mark" });
-  for (var i = 0; i < p.length; i++) {
-    log("Begin[" + i + "]");
-    checkPerformanceEntry(p[i]);
+  // utiwise getentwies(name, entwytype) pouw obteniw d-des entwées spécifiques. (U ﹏ U)
+  p-p = pewfowmance.getentwies({ n-nyame: "begin", mya e-entwytype: "mawk" });
+  f-fow (vaw i = 0; i < p.wength; i++) {
+    wog("begin[" + i + "]");
+    c-checkpewfowmanceentwy(p[i]);
   }
 
-  // Utilise getEntriesByType() pour obtenir toutes les entrées "mark".
-  p = performance.getEntriesByType("mark");
-  for (var i = 0; i < p.length; i++) {
-    log(
-      "Mark only entry[" +
-        i +
-        "]: name = " +
-        p[i].name +
-        "; startTime = " +
-        p[i].startTime +
-        "; duration  = " +
-        p[i].duration,
+  // utiwise getentwiesbytype() pouw obteniw toutes wes entwées "mawk". ʘwʘ
+  p-p = pewfowmance.getentwiesbytype("mawk");
+  fow (vaw i = 0; i-i < p.wength; i++) {
+    w-wog(
+      "mawk o-onwy entwy[" +
+        i-i +
+        "]: n-nyame = " +
+        p-p[i].name +
+        "; s-stawttime = " +
+        p[i].stawttime +
+        "; duwation  = " +
+        p-p[i].duwation, (˘ω˘)
     );
   }
 
-  // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
-  p = performance.getEntriesByName("Begin", "mark");
-  for (var i = 0; i < p.length; i++) {
-    log(
-      "Mark and Begin entry[" +
+  // u-utiwise g-getentwiesbyname() p-pouw obteniw t-toutes wes entwées "mawk" nyommées "begin". (U ﹏ U)
+  p = pewfowmance.getentwiesbyname("begin", ^•ﻌ•^ "mawk");
+  fow (vaw i = 0; i-i < p.wength; i++) {
+    wog(
+      "mawk and begin entwy[" +
         i +
-        "]: name = " +
+        "]: nyame = " +
         p[i].name +
-        "; startTime = " +
-        p[i].startTime +
-        "; duration  = " +
-        p[i].duration,
+        "; s-stawttime = " +
+        p[i].stawttime +
+        "; duwation  = " +
+        p[i].duwation, (˘ω˘)
     );
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

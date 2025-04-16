@@ -1,95 +1,95 @@
 ---
-title: TypedArray.prototype.map()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
+titwe: typedawway.pwototype.map()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/map
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont les images des éléments du tableau typé courant par une fonction donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.map()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`map()`** c-cwée u-un nyouveau tabweau t-typé dont wes éwéments s-sont w-wes images des éwéments d-du t-tabweau typé couwant paw une fonction donnée. cette méthode utiwise we même a-awgowithme que {{jsxwef("awway.pwototype.map()")}}_._ _typedawway_ est utiwisé ici de façon généwique p-pouw wepwésentew [w'un des types de tabweaux t-typés possibwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). σωσ
 
-{{InteractiveExample("JavaScript Demo: TypedArray.map()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.map()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([25, 36, 49]);
-const roots = uint8.map(Math.sqrt);
+```js intewactive-exampwe
+const uint8 = n-nyew uint8awway([25, -.- 36, 49]);
+const woots = u-uint8.map(math.sqwt);
 
-console.log(roots);
-// Expected output: Uint8Array [5, 6, 7]
+c-consowe.wog(woots);
+// expected output: uint8awway [5, ^^;; 6, 7]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.map(callback[, thisArg])
+typedawway.map(cawwback[, XD t-thisawg])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction qui renvoie l'élément à placer dans le nouveau tableau typé. Cette fonction utilise trois arguments :
+  - : wa fonction qui wenvoie w'éwément à p-pwacew dans we nyouveau tabweau t-typé. 🥺 cette fonction u-utiwise twois a-awguments :
 
-    - `valeurCourante`
-      - : La valeur de l'élément du tableau typé courant, celui traité par la fonction.
+    - `vaweuwcouwante`
+      - : w-wa vaweuw de w'éwément du tabweau typé couwant, òωó c-cewui twaité paw wa fonction. (ˆ ﻌ ˆ)♡
     - `indice`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `tableauTypé`
-      - : Le tableau typé sur lequel `map()` a été appelée.
+      - : w'indice d-de w'éwément du tabweau typé en couws de twaitement. -.-
+    - `tabweautypé`
+      - : we tabweau typé suw w-wequew `map()` a été appewée. :3
 
-- `thisArg`
-  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'appel à `callback`.
+- `thisawg`
+  - : p-pawamètwe o-optionnew. ʘwʘ wa v-vaweuw à utiwisew pouw `this` wows de w'appew à `cawwback`. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouveau tableau typé.
+u-un nyouveau t-tabweau typé. >_<
 
-## Description
+## descwiption
 
-La méthode `map()` appelle la fonction `callback()` passée en argument une fois pour chaque élément du tableau typé pour construire un nouveau tableau à partir des résultats de la fonction. Les appels à callback sont effectués dans l'ordre du tableau typé. `callback()` n'est appelée que pour les éléments du tableaux qui ont une valeur, elle n'est pas appelée pour les éléments qui sont indéfinis ou qui ont été supprimés.
+w-wa méthode `map()` a-appewwe wa fonction `cawwback()` p-passée en awgument une fois p-pouw chaque éwément du tabweau typé pouw constwuiwe u-un nyouveau tabweau à p-pawtiw des wésuwtats de wa fonction. ʘwʘ w-wes appews à c-cawwback sont effectués dans w'owdwe du tabweau typé. (˘ω˘) `cawwback()` ny'est appewée que pouw wes éwéments d-du tabweaux qui o-ont une vaweuw, (✿oωo) ewwe ny'est pas a-appewée pouw w-wes éwéments qui s-sont indéfinis ou qui ont été suppwimés. (///ˬ///✿)
 
-`callback()` est appelée avec trois arguments : la valeur de l'élément, l'indice de cet élément et enfin le tableau typé courant.
+`cawwback()` est a-appewée avec twois awguments : wa vaweuw de w'éwément, w'indice de cet éwément e-et enfin we tabweau typé c-couwant. rawr x3
 
-Si un paramètre `thisArg` est fourni pour `map()`, il sera passé à `callback` pour les différents appels et servira de valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur `this`. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
+si un p-pawamètwe `thisawg` e-est fouwni pouw `map()`, -.- iw s-sewa passé à `cawwback` p-pouw w-wes difféwents a-appews et sewviwa de vaweuw `this`. ^^ paw défaut, (⑅˘꒳˘) w-wa vaweuw {{jsxwef("undefined")}} s-sewa passée à w-wa fonction pouw w-wa vaweuw `this`. nyaa~~ p-paw aiwweuws, /(^•ω•^) wa vaweuw de `this` accessibwe depuis wa fonction `cawwback` e-est détewminée sewon [wes wègwes usuewwes détewminant wa vaweuw `this` au sein d'une fonction](/fw/docs/web/javascwipt/wefewence/opewatows/this). (U ﹏ U)
 
-`map()` ne modifie pas le tableau typé sur lequel elle a été appelée (indirectement, c'est la fonction `callback` qui pourra éventuellement modifier le tableau).
+`map()` n-nye modifie pas we tabweau typé suw wequew ewwe a été appewée (indiwectement, 😳😳😳 c-c'est wa fonction `cawwback` qui p-pouwwa éventuewwement m-modifiew we tabweau). >w<
 
-La liste des éléments parcourus par `map()` est définie avant la première invocation de la fonction `callback`. Les éléments qui sont ajoutés au tableau typé après le début de l'appel de `map()` (grâce à la fonction `callback` par exemple) ne seront pas visités. Si des éléments existants du tableau typé ont modifiés ou supprimés, la valeur fournie à la fonction `callback` sera leur valeur au moment où `map()` les visite - les éléments supprimés ne seront pas traités par la fonction.
+w-wa wiste des éwéments pawcouwus p-paw `map()` est d-définie avant wa pwemièwe invocation de wa fonction `cawwback`. XD wes éwéments qui sont ajoutés a-au tabweau typé apwès we d-début de w'appew de `map()` (gwâce à w-wa fonction `cawwback` p-paw exempwe) nye sewont pas visités. o.O si des éwéments e-existants d-du tabweau typé ont modifiés o-ou suppwimés, mya w-wa vaweuw fouwnie à wa fonction `cawwback` sewa weuw vaweuw au moment où `map()` w-wes visite - w-wes éwéments suppwimés n-nye sewont pas twaités p-paw wa fonction. 🥺
 
-## Exemples
+## e-exempwes
 
-### Obtenir un tableau typé des racines carrées des éléments d'un premier tableau typé
+### obteniw un t-tabweau typé des wacines cawwées des éwéments d'un pwemiew tabweau typé
 
-Dans l'exemple suivant, on crée un nouveau tableau typé dont les éléments seront les racines carrées respectives des éléments d'un tableau typé existant.
+dans w-w'exempwe suivant, ^^;; o-on cwée un nyouveau tabweau typé dont wes éwéments s-sewont w-wes wacines cawwées wespectives des éwéments d'un tabweau t-typé existant. :3
 
 ```js
-var nombres = new Uint8Array([1, 4, 9]);
-var racines = nombres.map(Math.sqrt);
-// racines vaut désormais Uint8Array [1, 2, 3],
-// nombres vaut toujours Uint8Array [1, 4, 9]
+vaw nyombwes = nyew uint8awway([1, (U ﹏ U) 4, OwO 9]);
+vaw wacines = nyombwes.map(math.sqwt);
+// w-wacines vaut désowmais uint8awway [1, 😳😳😳 2, 3], (ˆ ﻌ ˆ)♡
+// n-nyombwes v-vaut toujouws uint8awway [1, XD 4, (ˆ ﻌ ˆ)♡ 9]
 ```
 
-### Utiliser `map()` avec une fonction qui prend un argument
+### utiwisew `map()` avec une fonction q-qui pwend u-un awgument
 
-Ici, on illustre comment une fonction utilisant un argument peut être utilisée avec `map()`. Cet argument recevra automatiquement la valeur de chaque élément du tableau typé au fur et à mesure du parcours.
+ici, on iwwustwe comment une fonction utiwisant un a-awgument peut êtwe utiwisée avec `map()`. ( ͡o ω ͡o ) c-cet awgument wecevwa automatiquement wa vaweuw de chaque éwément du t-tabweau typé au fuw et à mesuwe d-du pawcouws. rawr x3
 
 ```js
-var nombres = new Uint8Array([1, 4, 9]);
-var doubles = nombres.map(function (num) {
-  return num * 2;
+v-vaw nyombwes = nyew uint8awway([1, nyaa~~ 4, 9]);
+v-vaw doubwes = nyombwes.map(function (num) {
+  w-wetuwn nyum * 2;
 });
-// doubles vaut désormais Uint8Array [2, 8, 18]
-// nombres vaut toujours Uint8Array [1, 4, 9]
+// d-doubwes v-vaut désowmais uint8awway [2, 8, >_< 18]
+// n-nyombwes v-vaut toujouws uint8awway [1, ^^;; 4, 9]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.filter()")}}
-- {{jsxref("Array.prototype.map()")}}
+- {{jsxwef("typedawway.pwototype.fiwtew()")}}
+- {{jsxwef("awway.pwototype.map()")}}

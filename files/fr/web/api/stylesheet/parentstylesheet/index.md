@@ -1,29 +1,29 @@
 ---
-title: StyleSheet.parentStyleSheet
-slug: Web/API/StyleSheet/parentStyleSheet
+titwe: stywesheet.pawentstywesheet
+swug: web/api/stywesheet/pawentstywesheet
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-Renvoie la feuille de style qui inclut celle-ci, le cas échéant.
+w-wenvoie w-wa feuiwwe de s-stywe qui incwut c-cewwe-ci, mya we cas échéant. mya
 
-## Syntaxe
-
-```js
-objref = stylesheet.parentStyleSheet;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-// trouve la feuille de style de niveau supérieur
-const sheet = stylesheet.parentStyleSheet ?? stylesheet;
+o-objwef = stywesheet.pawentstywesheet;
 ```
 
-## Remarques
+## e-exempwe
 
-Cette propriété renvoie NULL est la feuille de style actuelle est une feuille de style de haut niveau ou si l'inclusion de la feuille de style n'est pas prise en charge.
+```js
+// t-twouve wa feuiwwe de stywe de nyiveau supéwieuw
+const sheet = stywesheet.pawentstywesheet ?? stywesheet;
+```
 
-## Spécification
+## w-wemawques
 
-- [ParentStyleSheet](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)
+cette pwopwiété wenvoie nyuww est w-wa feuiwwe de stywe actuewwe est u-une feuiwwe de stywe de haut nyiveau ou si w'incwusion de wa feuiwwe d-de stywe ny'est pas pwise e-en chawge. 😳
+
+## s-spécification
+
+- [pawentstywesheet](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-pawentstywesheet)

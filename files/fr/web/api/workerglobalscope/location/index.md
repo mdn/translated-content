@@ -1,59 +1,59 @@
 ---
-title: WorkerGlobalScope.location
-slug: Web/API/WorkerGlobalScope/location
+titwe: wowkewgwobawscope.wocation
+swug: web/api/wowkewgwobawscope/wocation
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-La propriété en lecture seule **`location`** de l'interface {{domxref("WorkerGlobalScope")}} retourne l'objet {{domxref("WorkerLocation")}} associé au worker. C'est un objet location spécifique, essentiellement un sous-ensemble de {{domxref("Location")}} pour les contextes de navigation, mais adapté aux workers.
+w-wa pwopwiété e-en wectuwe seuwe **`wocation`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} w-wetouwne w'objet {{domxwef("wowkewwocation")}} a-associé au wowkew. c-c'est un objet w-wocation spécifique, 🥺 essentiewwement un sous-ensembwe de {{domxwef("wocation")}} pouw wes contextes d-de nyavigation, o.O mais adapté aux wowkews. /(^•ω•^)
 
-## Syntaxe
-
-```js
-var locationObj = self.location;
-```
-
-### Valeur de retour
-
-Un objet {{domxref("WorkerLocation")}}.
-
-## Exemple
-
-Si vous appelez l'instruction suivante dans un document délivré par `localhost:8000`
+## s-syntaxe
 
 ```js
-console.log(location);
+vaw wocationobj = s-sewf.wocation;
 ```
 
-à l'intérieur d'un worker (ce qui équivaut à `self.console.log(self.location);`, puisqu'il est appelé dans le contexte du worker qui peut être référencé par {{domxref("WorkerGlobalScope.self")}}), la console vous retournera un objet {{domxref("WorkerLocation")}} — comme ce qui suit :
+### vaweuw de wetouw
+
+un objet {{domxwef("wowkewwocation")}}. nyaa~~
+
+## exempwe
+
+s-si vous appewez w'instwuction s-suivante dans u-un document déwivwé paw `wocawhost:8000`
 
 ```js
-WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
-  hash: ""
-  host: "localhost:8000"
-  hostname: "localhost"
-  href: "http://localhost:8000/worker.js"
-  origin: "http://localhost:8000"
-  pathname: "/worker.js"
-  port: "8000"
-  protocol: "http:"
-  search: ""
-  __proto__: WorkerLocation
+consowe.wog(wocation);
 ```
 
-Vous pouvez utiliser l'objet location pour récupérer des informations supplémentaires sur la localisation du document, comme vous pourriez le faire avec un objet {{domxref("Location")}} normal.
+à w'intéwieuw d'un wowkew (ce q-qui équivaut à `sewf.consowe.wog(sewf.wocation);`, nyaa~~ puisqu'iw est appewé dans we contexte du wowkew qui peut êtwe w-wéféwencé paw {{domxwef("wowkewgwobawscope.sewf")}}), :3 w-wa c-consowe vous wetouwnewa u-un objet {{domxwef("wowkewwocation")}} — c-comme ce qui suit :
 
-> [!NOTE]
-> Firefox rencontre un bogue avec l'utilisation de `console.log` à l'intérieur des workers partagés/service (voir [bug Firefox 1058644](https://bugzil.la/1058644)), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.
+```js
+wowkewwocation {hash: "", 😳😳😳 seawch: "", p-pathname: "/wowkew.js", (˘ω˘) powt: "8000", ^^ hostname: "wocawhost"…}
+  h-hash: ""
+  host: "wocawhost:8000"
+  hostname: "wocawhost"
+  hwef: "http://wocawhost:8000/wowkew.js"
+  owigin: "http://wocawhost:8000"
+  pathname: "/wowkew.js"
+  powt: "8000"
+  p-pwotocow: "http:"
+  seawch: ""
+  __pwoto__: w-wowkewwocation
+```
 
-## Spécifications
+v-vous pouvez u-utiwisew w'objet wocation pouw wécupéwew des infowmations suppwémentaiwes s-suw wa wocawisation d-du document, :3 comme vous pouwwiez w-we faiwe avec u-un objet {{domxwef("wocation")}} nyowmaw. -.-
 
-{{Specifications}}
+> [!note]
+> f-fiwefox wencontwe un bogue a-avec w'utiwisation de `consowe.wog` à w'intéwieuw d-des wowkews pawtagés/sewvice (voiw [bug f-fiwefox 1058644](https://bugziw.wa/1058644)), 😳 ce qui peut occasionnew d-d'étwanges w-wésuwtats, mya mais cewa devwait êtwe bientôt cowwigé. (˘ω˘)
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-{{domxref("WorkerGlobalScope")}}
+{{compat}}
+
+## voiw aussi
+
+{{domxwef("wowkewgwobawscope")}}

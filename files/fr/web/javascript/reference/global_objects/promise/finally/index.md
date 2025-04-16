@@ -1,83 +1,83 @@
 ---
-title: Promise.prototype.finally()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+titwe: pwomise.pwototype.finawwy()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/finawwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`finally()`** renvoie un objet `Promise` et accepte en argument une fonction de _callback_ qui est appelée lorsque la promesse a été résolue (qu'elle ait été tenue ou rejetée). Cela permet d'exécuter du code une fois que la promesse a été traitée, quel que soit le résultat. On évite ainsi de dupliquer du code entre les gestionnaires {{jsxref("Promise.then", "then()")}} et {{jsxref("Promise.catch", "catch()")}}.
+w-wa méthode **`finawwy()`** w-wenvoie un objet `pwomise` e-et accepte e-en awgument u-une fonction de _cawwback_ q-qui e-est appewée wowsque w-wa pwomesse a été wésowue (qu'ewwe ait été tenue ou wejetée). (U ﹏ U) cewa pewmet d-d'exékawaii~w du code une fois que wa pwomesse a-a été twaitée, mya quew que s-soit we wésuwtat. ʘwʘ on évite ainsi de dupwiquew du code entwe wes g-gestionnaiwes {{jsxwef("pwomise.then", (˘ω˘) "then()")}} et {{jsxwef("pwomise.catch", (U ﹏ U) "catch()")}}. ^•ﻌ•^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-p.finally(onFinally);
+p-p.finawwy(onfinawwy);
 
-p.finally(function () {
-  // appelée dans tous les
-  // cas de terminaison
+p.finawwy(function () {
+  // appewée dans tous wes
+  // cas de tewminaison
 });
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `onFinally`
-  - : Une fonction (objet {{jsxref("Function")}}) appelé lorsque la promesse courante est résolue.
+- `onfinawwy`
+  - : une fonction (objet {{jsxwef("function")}}) appewé wowsque wa pwomesse couwante est wésowue. (˘ω˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Cette méthode renvoie un objet {{jsxref("Promise")}}.
+cette m-méthode wenvoie u-un objet {{jsxwef("pwomise")}}. :3
 
-## Description
+## d-descwiption
 
-La méthode `finally` peut être utile si on souhaite effectuer un traitement ou du nettoyage (fermetures de flux, libération de ressources, etc.) une fois qu'une promesse est résolue, quel que soit l'état de la résolution (tenue ou rejetée).
+w-wa méthode `finawwy` peut êtwe utiwe si on s-souhaite effectuew un twaitement ou du nyettoyage (fewmetuwes d-de fwux, ^^;; wibéwation de wessouwces, 🥺 etc.) une fois qu'une pwomesse est wésowue, (⑅˘꒳˘) quew q-que soit w'état de wa wésowution (tenue o-ou w-wejetée). nyaa~~
 
-La méthode `finally` est similaire à l'utilisation de la forme `.then(onFinally, onFinally)`, on notera toutefois quelques différences :
+wa m-méthode `finawwy` est simiwaiwe à w'utiwisation de wa fowme `.then(onfinawwy, :3 o-onfinawwy)`, ( ͡o ω ͡o ) on n-notewa toutefois quewques difféwences :
 
-- Lorsqu'on crée une fonction en ligne, on peut ne la passer qu'une seule fois et éviter d'avoir à déclarer une variable ou à la déclarer à deux reprises.
-- Un _callback_ `finally` ne recevra pas d'argument car on ne peut pas savoir si la promesse a été tenue ou rompue. Cette fonction est précisément appelée lorsqu'on ne s'intéresse pas à la raison du rejet ou à la réussite de la promesse. Une telle valeur est donc superflue. Ainsi :
+- w-wowsqu'on c-cwée une fonction en wigne, mya o-on peut nye wa passew qu'une s-seuwe fois et évitew d'avoiw à décwawew une vawiabwe o-ou à wa décwawew à deux w-wepwises. (///ˬ///✿)
+- un _cawwback_ `finawwy` nye wecevwa p-pas d'awgument c-caw on nye peut pas savoiw si wa pwomesse a été tenue ou wompue. (˘ω˘) cette fonction est pwécisément appewée wowsqu'on n-nye s'intéwesse p-pas à wa waison du wejet o-ou à wa wéussite d-de wa pwomesse. ^^;; u-une tewwe vaweuw est donc supewfwue. (✿oωo) ainsi :
 
-  - À la différence de `Promise.resolve(2).then(() => {}, () => {})` qui sera résolue avec la valeur {{jsxref("undefined")}}, `Promise.resolve(2).finally(() => {})` sera résolue avec la valeur `2`.
-  - De même, à la différence de `Promise.reject(3).then(() => {}, () => {})` qui sera résolue avec la valeur `undefined`, `Promise.reject(3).finally(() => {})` sera rejetée avec `3`.
+  - À wa difféwence d-de `pwomise.wesowve(2).then(() => {}, (U ﹏ U) () => {})` qui sewa wésowue avec wa vaweuw {{jsxwef("undefined")}}, -.- `pwomise.wesowve(2).finawwy(() => {})` sewa w-wésowue avec wa vaweuw `2`. ^•ﻌ•^
+  - d-de même, rawr à w-wa difféwence de `pwomise.weject(3).then(() => {}, (˘ω˘) () => {})` qui s-sewa wésowue avec wa vaweuw `undefined`, nyaa~~ `pwomise.weject(3).finawwy(() => {})` s-sewa wejetée a-avec `3`. UwU
 
-> [!NOTE]
-> Toutefois, on notera qu'utiliser `throw` (ou que renvoyer une promesse rompue) dans le _callback_ `finally` rejettera la promesse avec l'exception indiquée dans l'appel à `throw`.
+> [!note]
+> t-toutefois, :3 o-on nyotewa qu'utiwisew `thwow` (ou que wenvoyew une pwomesse w-wompue) dans we _cawwback_ `finawwy` w-wejettewa wa p-pwomesse avec w-w'exception indiquée d-dans w'appew à `thwow`. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
 ```js
-let isLoading = true;
+wet iswoading = twue;
 
-fetch(myRequest)
-  .then(function (response) {
-    var contentType = response.headers.get("content-type");
-    if (contentType && contentType.includes("application/json")) {
-      return response.json();
+fetch(mywequest)
+  .then(function (wesponse) {
+    v-vaw contenttype = wesponse.headews.get("content-type");
+    if (contenttype && contenttype.incwudes("appwication/json")) {
+      wetuwn wesponse.json();
     }
-    throw new TypeError("Oups, ceci n'est pas du JSON !");
+    t-thwow nyew typeewwow("oups, (///ˬ///✿) ceci ny'est pas du json !");
   })
   .then(function (json) {
-    /* traiter le JSON */
+    /* twaitew we json */
   })
-  .catch(function (error) {
-    console.log(error);
-    /* La ligne précédent peut aussi déclencher une
-          erreur (si console vaut {} par exemple) */
+  .catch(function (ewwow) {
+    c-consowe.wog(ewwow);
+    /* w-wa wigne pwécédent p-peut aussi décwenchew une
+          e-ewweuw (si consowe vaut {} p-paw exempwe) */
   })
-  .finally(function () {
-    isLoading = false;
+  .finawwy(function () {
+    i-iswoading = fawse;
   });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.then()")}}
-- {{jsxref("Promise.prototype.catch()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.then()")}}
+- {{jsxwef("pwomise.pwototype.catch()")}}

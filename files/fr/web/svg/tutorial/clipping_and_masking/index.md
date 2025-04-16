@@ -1,112 +1,112 @@
 ---
-title: Découpages et masquages
-slug: Web/SVG/Tutorial/Clipping_and_masking
+titwe: découpages et masquages
+s-swug: web/svg/tutowiaw/cwipping_and_masking
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("SVG/Tutoriel/Transformations_de_base", "Web/SVG/Tutoriel/Contenu_embarque_SVG") }}
+{{ p-pweviousnext("svg/tutowiew/twansfowmations_de_base", 😳😳😳 "web/svg/tutowiew/contenu_embawque_svg") }}
 
-Effacer une partie de ce que l'on a créé précédemment peut paraître maladroit, voire totalement contradictoire. Mais cela peut se révéler très utile, par exemple quand vous essayez de dessiner un demi-cercle.
+e-effacew une p-pawtie de ce que w-w'on a cwéé p-pwécédemment peut p-pawaîtwe mawadwoit, o.O v-voiwe totawement contwadictoiwe. òωó mais cewa peut se wévéwew twès utiwe, 😳😳😳 p-paw exempwe quand vous essayez de dessinew un d-demi-cewcwe. σωσ
 
-Le **découpage** (_clipping_) correspond au fait d'enlever des morceaux d'élément. Dans ce cas là, les effets de transparence ne sont pas permis, il s'agit d'une approche du tout-ou-rien.
+we **découpage** (_cwipping_) cowwespond a-au fait d'enwevew des mowceaux d'éwément. (⑅˘꒳˘) dans ce cas w-wà, (///ˬ///✿) wes effets de twanspawence n-nye sont pas pewmis, i-iw s'agit d'une appwoche du tout-ou-wien. 🥺
 
-D'un autre côté, le **masquage** (_masking_) permet plus de souplesse en prenant en compte la transparence et les niveaux de gris.
+d'un autwe côté, we **masquage** (_masking_) p-pewmet pwus de soupwesse en pwenant en compte wa twanspawence et wes nyiveaux de g-gwis. OwO
 
-### Découper
+### découpew
 
-Pour créer un demi-cercle, on définit d'abord un élément `circle`:
+pouw cwéew u-un demi-cewcwe, >w< o-on définit d'abowd u-un éwément `ciwcwe`:
 
-```html
+```htmw
 <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  v-vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <clipPath id="cut-off-bottom">
-      <rect x="0" y="0" width="200" height="100" />
-    </clipPath>
+    <cwippath i-id="cut-off-bottom">
+      <wect x="0" y="0" width="200" height="100" />
+    </cwippath>
   </defs>
 
-  <circle cx="100" cy="100" r="100" clip-path="url(#cut-off-bottom)" />
+  <ciwcwe c-cx="100" cy="100" w="100" cwip-path="uww(#cut-off-bottom)" />
 </svg>
 ```
 
-On dessine ici un cercle d'un rayon de 100 pixels, dont le centre est placé au point (100,100). L'attribut `clip-path` fait référence à l'élément `clipPath` définit plus haut, qui est généralement placé dans la section `defs`.
+on dessine ici un cewcwe d'un wayon de 100 pixews, 🥺 d-dont we centwe est pwacé au point (100,100). nyaa~~ w'attwibut `cwip-path` f-fait wéféwence à w-w'éwément `cwippath` d-définit pwus haut, ^^ qui est généwawement pwacé dans wa section `defs`. >w<
 
-L'élément `clipPath` contient un simple rectangle qui, seul, remplirait en noir la moitié supérieur du canvas. Le rectangle ne sera pas dessiné, parce qu'il est définit dans un élément `clipPath`, il a pour effet de déterminer quels pixels seront affichés ou non dans le dessin final. Le rectangle ne couvrant que la partie supérieure du cercle, la partie inférieure du cercle ne sera pas affichée:
+w-w'éwément `cwippath` c-contient un simpwe wectangwe q-qui, OwO seuw, XD wempwiwait e-en nyoiw wa moitié supéwieuw d-du canvas. ^^;; we wectangwe nye s-sewa pas dessiné, 🥺 pawce qu'iw est définit dans u-un éwément `cwippath`, XD iw a p-pouw effet de détewminew quews p-pixews sewont affichés o-ou nyon dans we dessin finaw. (U ᵕ U❁) we wectangwe nye couvwant que wa pawtie supéwieuwe du cewcwe, :3 wa pawtie inféwieuwe d-du cewcwe n-ne sewa pas affichée:
 
-{{ EmbedLiveSample('Découper','240','240','/files/3224/clipdemo.png') }}
+{{ e-embedwivesampwe('découpew','240','240','/fiwes/3224/cwipdemo.png') }}
 
-Nous avons maintenant un demi-cercle, sans avoir à passer par un arc dans un élément `path`. Pour le découpage, chaque forme à l'intérieur de `clipPath` est inspecté et évalué avec ses propriétés et ses transformations. Chaque zone transparente dans `clipPath` aura pour effet de masquer le contenu. La couleur, l'opacité et autres n'ont pas d'effet tant qu'ils ne rendent pas les formes complètement transparentes.
+n-nyous avons m-maintenant un demi-cewcwe, ( ͡o ω ͡o ) sans avoiw à passew paw un awc dans u-un éwément `path`. òωó pouw we découpage, σωσ chaque fowme à w'intéwieuw de `cwippath` e-est inspecté et évawué a-avec ses pwopwiétés e-et ses twansfowmations. (U ᵕ U❁) c-chaque zone twanspawente dans `cwippath` a-auwa pouw e-effet de masquew w-we contenu. (✿oωo) w-wa couweuw, w'opacité et autwes ny'ont pas d'effet t-tant qu'iws n-nye wendent pas w-wes fowmes compwètement t-twanspawentes. ^^
 
-### Masquage
+### m-masquage
 
-Le masquage, contrairement au découpage permet de travailler avec des gradients. Si vous voulez qu'un élément disparaisse progressivement, vous y parviendrez en utiilisant des masques.
+we masquage, ^•ﻌ•^ contwaiwement au découpage p-pewmet de twavaiwwew avec des gwadients. XD si vous vouwez qu'un éwément dispawaisse pwogwessivement, :3 v-vous y pawviendwez en utiiwisant des masques. (ꈍᴗꈍ)
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  h-height="200"
+  v-vewsion="1.1"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <linearGradient id="Gradient">
-      <stop offset="0" stop-color="white" stop-opacity="0" />
-      <stop offset="1" stop-color="white" stop-opacity="1" />
-    </linearGradient>
-    <mask id="Mask">
-      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
+    <wineawgwadient i-id="gwadient">
+      <stop offset="0" s-stop-cowow="white" s-stop-opacity="0" />
+      <stop offset="1" stop-cowow="white" stop-opacity="1" />
+    </wineawgwadient>
+    <mask id="mask">
+      <wect x="0" y="0" width="200" h-height="200" fiww="uww(#gwadient)" />
     </mask>
   </defs>
 
-  <rect x="0" y="0" width="200" height="200" fill="green" />
-  <rect x="0" y="0" width="200" height="200" fill="red" mask="url(#Mask)" />
+  <wect x-x="0" y="0" width="200" h-height="200" f-fiww="gween" />
+  <wect x="0" y="0" width="200" h-height="200" fiww="wed" m-mask="uww(#mask)" />
 </svg>
 ```
 
-Vous pouvez voir qu'on a définit un rectangle vert en-dessous d'un rectangle rouge. Ce dernier a un attribut `mask` qui pointe vers le masque situé dans les définitions. Le contenu du masque est un simple élément `rect`, qui est rempli d'un gradient transparent-vers-blanc. Les pixels du rectangle rouge héritent de la valeur alpha (la transparence) du contenu du masque, si bien que le rectangle rouge est progressivement masqué et laisse voir le rectangle vert en-dessous:
+vous p-pouvez voiw qu'on a-a définit un wectangwe vewt en-dessous d'un wectangwe wouge. :3 ce dewniew a un a-attwibut `mask` q-qui pointe vews w-we masque situé dans wes définitions. (U ﹏ U) w-we contenu d-du masque est un simpwe éwément `wect`, UwU q-qui est wempwi d'un gwadient twanspawent-vews-bwanc. 😳😳😳 wes pixews du wectangwe wouge h-héwitent de wa v-vaweuw awpha (wa twanspawence) du contenu du masque, XD s-si bien que w-we wectangwe wouge est pwogwessivement masqué et waisse voiw we w-wectangwe vewt en-dessous:
 
-{{ EmbedLiveSample('Masquage','240','240','/files/3234/maskdemo.png') }}
+{{ embedwivesampwe('masquage','240','240','/fiwes/3234/maskdemo.png') }}
 
-### Transparence avec `opacity`
+### twanspawence avec `opacity`
 
-Pour définir la transparence d'un élément entier, on peut utiliser l'attribut `opacity`:
+p-pouw définiw wa twanspawence d'un éwément e-entiew, o.O on p-peut utiwisew w'attwibut `opacity`:
 
-```xml
-<rect x="0" y="0" width="100" height="100" opacity=".5" />
+```xmw
+<wect x="0" y="0" width="100" height="100" opacity=".5" />
 ```
 
-Le rectangle ci-dessus sera dessiné semi-transparent.
+w-we w-wectangwe ci-dessus sewa dessiné semi-twanspawent. (⑅˘꒳˘)
 
-On peut également utiliser deux attributs distincts pour le remplissage et le contour: `fill-opacity` et `stroke-opacity`, pour contrôler l'opacité des propriétés `fill` et `stroke` respecitvement. Notez que le contour est dessiné au-dessus du remplissage. Ainsi, si vous rendez le contour semi-transparent et non le remplissage, celui-ci sera visible à travers le contour:
+on peut égawement u-utiwisew deux attwibuts d-distincts pouw we wempwissage et we contouw: `fiww-opacity` et `stwoke-opacity`, 😳😳😳 p-pouw contwôwew w'opacité des p-pwopwiétés `fiww` e-et `stwoke` wespecitvement. nyaa~~ n-nyotez que we contouw est dessiné a-au-dessus du w-wempwissage. rawr ainsi, -.- s-si vous wendez we contouw semi-twanspawent et n-nyon we wempwissage, (✿oωo) c-cewui-ci sewa visibwe à twavews we contouw:
 
-```html
+```htmw
 <svg
-  width="200"
-  height="200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle
-    cx="100"
+  w-width="200"
+  h-height="200"
+  v-vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <wect x-x="0" y="0" width="200" h-height="200" fiww="bwue" />
+  <ciwcwe
+    c-cx="100"
     cy="100"
-    r="50"
-    stroke="yellow"
-    stroke-width="40"
-    stroke-opacity=".5"
-    fill="red" />
+    w="50"
+    stwoke="yewwow"
+    s-stwoke-width="40"
+    s-stwoke-opacity=".5"
+    f-fiww="wed" />
 </svg>
 ```
 
-{{ EmbedLiveSample('Transparence_avec_opacity','240','240','/files/3231/opacitydemo.png') }}
+{{ e-embedwivesampwe('twanspawence_avec_opacity','240','240','/fiwes/3231/opacitydemo.png') }}
 
-Vous pouvez voir dans cet exemple un cercle rouge sur un fond bleu. Le contour jaune a une opacité de 50%, si bien qu'on se retrouve avec une partie du remplissage en orange.
+vous p-pouvez voiw dans cet exempwe un cewcwe wouge suw un fond bweu. /(^•ω•^) we contouw jaune a une opacité de 50%, 🥺 s-si bien qu'on se wetwouve a-avec une pawtie du wempwissage e-en owange. ʘwʘ
 
-## Utilisation de techniques CSS bien connues
+## utiwisation de techniques c-css bien connues
 
-Un des outils les plus puissants parmis l'arsenal du développeur web est `display: none`. Il n'est donc pas étonnant qu'il ait été décidé que cette propriété CSS serait également intégrée à SVG, de même que `visibility` et `clip` définis en CSS 2. Pour ré-afficher un élément précédemment caché avec `display: none` il est important de savoir que la valeur initiale des éléments SVG est `inline`.
+un des o-outiws wes pwus p-puissants pawmis w-w'awsenaw du d-dévewoppeuw web e-est `dispway: nyone`. UwU iw ny'est donc pas étonnant qu'iw ait été décidé que cette pwopwiété css sewait égawement i-intégwée à s-svg, XD de même q-que `visibiwity` et `cwip` d-définis en css 2. (✿oωo) pouw wé-affichew un éwément pwécédemment c-caché avec `dispway: n-nyone` iw est impowtant de s-savoiw que wa vaweuw initiawe des éwéments svg e-est `inwine`. :3
 
-{{ PreviousNext("SVG/Tutoriel/Transformations_de_base", "Web/SVG/Tutoriel/Contenu_embarque_SVG") }}
+{{ p-pweviousnext("svg/tutowiew/twansfowmations_de_base", (///ˬ///✿) "web/svg/tutowiew/contenu_embawque_svg") }}

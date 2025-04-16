@@ -1,30 +1,30 @@
 ---
-title: Notification.icon
-slug: Web/API/Notification/icon
+titwe: nyotification.icon
+swug: w-web/api/notification/icon
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`icon`** de l'interface {{domxref ("Notification")}} contient l'URL d'une icône à afficher dans le cadre de la notification, comme définis à l'aide de l'option `icon` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.
+w-wa pwopwiété e-en wectuwe seuwe **`icon`** d-de w'intewface {{domxwef ("notification")}} c-contient w-w'uww d'une icône à a-affichew dans we cadwe de wa nyotification, mya comme définis à w'aide de w'option `icon` wows d-de wa cwéation de wa nyotification à w'aide d-du constwucteuw {{domxwef ("notification.notification"," nyotification()")}}. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.icon;
+notification.icon;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("USVString")}}.
+une {{domxwef("usvstwing")}}. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation d-de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

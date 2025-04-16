@@ -1,29 +1,29 @@
 ---
-title: DeviceRotationRate.gamma
-slug: Web/API/DeviceMotionEventRotationRate/gamma
+titwe: devicewotationwate.gamma
+swug: web/api/devicemotioneventwotationwate/gamma
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-Cette propriété indique la vitesse de rotation autour de l'axe Y — en degrés par seconde — dans un objet {{ domxref("DeviceRotationRate") }}.
+c-cette pwopwiété i-indique wa v-vitesse de wotation a-autouw de w-w'axe y — en degwés paw seconde — dans un objet {{ domxwef("devicewotationwate") }}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gamma = deviceRotationRate.gamma;
+v-vaw gamma = devicewotationwate.gamma;
 ```
 
-Cette propriété est en lecture seule.
+cette pwopwiété e-est en wectuwe seuwe. rawr x3
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
 - `gamma`
-  - : Un `double` indiquant la vitesse de rotation autour de l'axe Y, en degrés par seconde. Voir [Détecter l'orientation d'un appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) pour plus de détails.
+  - : un `doubwe` indiquant wa vitesse de wotation a-autouw de w'axe y, en degwés p-paw seconde. nyaa~~ v-voiw [détectew w'owientation d'un appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation#accewewometew_vawues_expwained) pouw pwus de détaiws. /(^•ω•^)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

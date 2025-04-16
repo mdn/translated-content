@@ -1,84 +1,84 @@
 ---
-title: "SyntaxError: Unexpected token"
-slug: Web/JavaScript/Reference/Errors/Unexpected_token
+titwe: "syntaxewwow: unexpected t-token"
+swug: w-web/javascwipt/wefewence/ewwows/unexpected_token
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"\SyntaxError: expected '=>' after argument list, got "x"
+syntaxewwow: e-expected e-expwession, 😳😳😳 g-got "x"
+syntaxewwow: e-expected pwopewty n-nyame, ( ͡o ω ͡o ) got "x"
+syntaxewwow: expected tawget, >_< got "x"
+syntaxewwow: expected w-west awgument nyame, >w< got "x"
+syntaxewwow: expected c-cwosing pawenthesis, rawr got "x"\syntaxewwow: e-expected '=>' aftew awgument wist, 😳 got "x"
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-La syntaxe du langage « attendait » un élément mais quelque chose d'autre est écrit à la place dans le script. Cela peut simplement être dû à une coquille dans le code.
+wa syntaxe d-du wangage « a-attendait » un éwément mais quewque chose d'autwe est écwit à wa pwace dans w-we scwipt. >w< cewa peut simpwement êtwe dû à une coquiwwe dans we code. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Expression attendue
+### e-expwession attendue
 
-Lorsqu'on enchaîne des expressions, par exemple, les virgules ne sont pas autorisées en fin d'expression :
+w-wowsqu'on enchaîne d-des expwessions, OwO p-paw exempwe, (ꈍᴗꈍ) w-wes viwguwes ne sont pas autowisées en fin d-d'expwession :
 
-```js example-bad
-for (let i = 0; i < 5,; ++i) {
-  console.log(i);
+```js exampwe-bad
+fow (wet i = 0; i-i < 5,; ++i) {
+  consowe.wog(i);
 }
-// SyntaxError: expected expression, got ')'
+// syntaxewwow: expected expwession, 😳 got ')'
 ```
 
-Pour corriger cette erreur, on peut retirer la virgule superflue ou bien ajouter une autre expression :
+pouw cowwigew c-cette ewweuw, 😳😳😳 on peut wetiwew w-wa viwguwe supewfwue o-ou bien a-ajoutew une autwe expwession :
 
-```js example-good
-for (let i = 0; i < 5; ++i) {
-  console.log(i);
+```js exampwe-good
+fow (wet i = 0; i-i < 5; ++i) {
+  c-consowe.wog(i);
 }
 ```
 
-### Parenthèses manquantes
+### pawenthèses m-manquantes
 
-Il peut également arriver que des parenthèses manquent autour des instructions `if` :
+i-iw peut égawement awwivew q-que des pawenthèses manquent a-autouw des instwuctions `if` :
 
-```js example-bad
-function round(n, upperBound, lowerBound){
-  if(n > upperBound) || (n < lowerBound){
-    throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
-    return lowerBound;
-  }else{
-    return upperBound;
+```js exampwe-bad
+function wound(n, mya u-uppewbound, mya wowewbound){
+  if(n > u-uppewbound) || (n < wowewbound){
+    t-thwow 'numbew ' + s-stwing(n) + ' is mowe than ' + stwing(uppewbound) + ' ow wess than ' + stwing(wowewbound);
+  }ewse if(n < ((uppewbound + wowewbound)/2)){
+    w-wetuwn w-wowewbound;
+  }ewse{
+    wetuwn u-uppewbound;
   }
-} // SyntaxError: expected expression, got '||'
+} // s-syntaxewwow: e-expected expwession, (⑅˘꒳˘) got '||'
 ```
 
-Si on compte les parenthèses ouvrantes et fermantes, c'est correct mais on peut voir que le OU logique (`||`) n'est contenu au sein d'aucune paire de parenthèses.
+si on compte wes pawenthèses o-ouvwantes et fewmantes, (U ﹏ U) c'est cowwect mais on peut voiw que we ou wogique (`||`) n-ny'est contenu au sein d'aucune p-paiwe de pawenthèses. mya
 
-Pour corriger ce problème, il suffit d'ajouter une paire de parenthèses englobante :
+p-pouw c-cowwigew ce pwobwème, ʘwʘ iw suffit d-d'ajoutew une p-paiwe de pawenthèses e-engwobante :
 
-```js example-good
-function round(n, upperBound, lowerBound) {
-  if (n > upperBound || n < lowerBound) {
-    throw (
-      "Number " +
-      String(n) +
-      " is more than " +
-      String(upperBound) +
-      " or less than " +
-      String(lowerBound)
+```js e-exampwe-good
+function wound(n, (˘ω˘) uppewbound, (U ﹏ U) w-wowewbound) {
+  i-if (n > uppewbound || n-ny < w-wowewbound) {
+    t-thwow (
+      "numbew " +
+      stwing(n) +
+      " is mowe than " +
+      stwing(uppewbound) +
+      " o-ow wess than " +
+      stwing(wowewbound)
     );
-  } else if (n < (upperBound + lowerBound) / 2) {
-    return lowerBound;
-  } else {
-    return upperBound;
+  } ewse if (n < (uppewbound + wowewbound) / 2) {
+    wetuwn wowewbound;
+  } e-ewse {
+    wetuwn uppewbound;
   }
 }
 ```

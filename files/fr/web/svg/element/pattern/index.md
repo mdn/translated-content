@@ -1,106 +1,106 @@
 ---
-title: <pattern>
-slug: Web/SVG/Element/pattern
+titwe: <pattewn>
+swug: web/svg/ewement/pattewn
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<pattern>`** définit un objet graphique qui peut être redessiné à des intervalles de coordonnées x et y répétés ("en mosaïque") pour couvrir une surface.
+w-w'éwément **`<pattewn>`** définit u-un objet g-gwaphique qui peut êtwe w-wedessiné à d-des intewvawwes d-de coowdonnées x-x et y wépétés ("en mosaïque") p-pouw couvwiw une suwface. :3
 
-Le **`<pattern>`** est référéne par les attributs {{SVGAttr("fill")}} et {{SVGAttr("stroke")}} sur les autres éléments graphiques, pour appliquer un remplissage ou une bordure sur ces éléments avec le motif référencé.
+we **`<pattewn>`** est wéféwéne paw wes a-attwibuts {{svgattw("fiww")}} et {{svgattw("stwoke")}} suw wes autwes éwéments g-gwaphiques, (⑅˘꒳˘) pouw appwiquew un w-wempwissage ou une bowduwe suw ces éwéments avec we motif wéféwencé.
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
+h-htmw, (///ˬ///✿)
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 230 100" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
-      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
-    </pattern>
+    <pattewn id="staw" viewbox="0,0,10,10" w-width="10%" height="10%">
+      <powygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+    </pattewn>
   </defs>
 
-  <circle cx="50" cy="50" r="50" fill="url(#star)" />
-  <circle
-    cx="180"
+  <ciwcwe cx="50" cy="50" w="50" fiww="uww(#staw)" />
+  <ciwcwe
+    c-cx="180"
     cy="50"
-    r="40"
-    fill="none"
-    stroke-width="20"
-    stroke="url(#star)" />
+    w="40"
+    f-fiww="none"
+    s-stwoke-width="20"
+    s-stwoke="uww(#staw)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{embedwivesampwe('exempwe', 150, ^^;; '100%')}}
 
-## Attributs
+## a-attwibuts
 
-- {{SVGAttr("height")}}
-  - : Cet attribut détermine la hauteur du motif de mosaïque.
-    _Type de valeur_ : [**\<longueur>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<pourcentage>**](/fr/docs/Web/SVG/Content_type#Percentage); _Valeur par défaut_ : `0`; _Animable_ : **oui**
-- {{SVGAttr("href")}}
-  - : Cet attribut référence un patron de motif qui fournit les valeurs par défaut des attributs de l'élément `<pattern>`.
-    _Type de valeur_: [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
-- {{SVGAttr("patternContentUnits")}}
+- {{svgattw("height")}}
+  - : cet attwibut détewmine wa h-hauteuw du motif de mosaïque. >_<
+    _type de vaweuw_ : [**\<wongueuw>**](/fw/docs/web/svg/content_type#wength)|[**\<pouwcentage>**](/fw/docs/web/svg/content_type#pewcentage); _vaweuw p-paw défaut_ : `0`; _animabwe_ : **oui**
+- {{svgattw("hwef")}}
+  - : cet attwibut wéféwence un patwon de motif qui fouwnit wes vaweuws p-paw défaut des attwibuts de w'éwément `<pattewn>`. rawr x3
+    _type d-de vaweuw_: [**\<uww>**](/fw/docs/web/svg/content_type#uww); _vaweuw p-paw défaut_ : _none_; _animabwe_: **yes**
+- {{svgattw("pattewncontentunits")}}
 
-  - : Cet attribut définit le système de coordonnées pour le contenu de {{SVGElement("pattern")}}. _Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `userSpaceOnUse`; _Animable_: **yes**
+  - : c-cet attwibut définit we système de coowdonnées pouw w-we contenu de {{svgewement("pattewn")}}. /(^•ω•^) _type d-de vaweuw_ : `usewspaceonuse`|`objectboundingbox`; _vaweuw paw d-défaut_ : `usewspaceonuse`; _animabwe_: **yes**
 
-    > [!NOTE]
-    > Cet attribut n'a pas d'effet si l'attribut `viewBox` est définit sur l'élément `<pattern>`.
+    > [!note]
+    > c-cet attwibut ny'a pas d'effet s-si w'attwibut `viewbox` est d-définit suw w'éwément `<pattewn>`. :3
 
-- {{SVGAttr("patternTransform")}}
-  - : Cet attribut contient la définition d'une transformation optionnelle supplémentaire du système de coordonnées du motif vers celui de la cible. _Type de valeur_ : **[\<transform-list>](/fr/docs/Web/SVG/Content_type#Transform-list)**; _Valeur par défaut_ : _none_; _Animatable_: **yes**
-- {{SVGAttr("patternUnits")}}
-  - : Cet attribut définit le système de coordonnées pour les attributs `x`, `y`, `width` , et `height`._Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `objectBoundingBox`; _Animable_: **yes**
-- {{SVGAttr("preserveAspectRatio")}}
-  - : Cet attribut définit comme le fragment SVG doit être déformé s'il est embarqué dans un conteneur avec un ratio d'aspect différent.
-    _Type de valeur_ : (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_ : `xMidYMid meet`; _Animable_: **yes**
-- {{SVGAttr("viewBox")}}
-  - : Cet attribut définit les limites de la fenêtre de rendu du SVG pour le fragment du motif._Type de valeur_ : **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_ : none; _Animable_: **yes**
-- {{SVGAttr("width")}}
-  - : Cet attribut détermine la largeur du motif de mosaïque.
-    _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**
-- {{SVGAttr("x")}}
-  - : Cet attribut détermine le déplacement en coordonnée x du motif de mosaïque._Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- {{svgattw("pattewntwansfowm")}}
+  - : cet attwibut contient wa définition d-d'une twansfowmation optionnewwe s-suppwémentaiwe du système d-de coowdonnées d-du motif vews cewui de wa cibwe. (ꈍᴗꈍ) _type de vaweuw_ : **[\<twansfowm-wist>](/fw/docs/web/svg/content_type#twansfowm-wist)**; _vaweuw paw défaut_ : _none_; _animatabwe_: **yes**
+- {{svgattw("pattewnunits")}}
+  - : cet attwibut définit we système de coowdonnées p-pouw wes a-attwibuts `x`, /(^•ω•^) `y`, (⑅˘꒳˘) `width` , et `height`._type de vaweuw_ : `usewspaceonuse`|`objectboundingbox`; _vaweuw p-paw d-défaut_ : `objectboundingbox`; _animabwe_: **yes**
+- {{svgattw("pwesewveaspectwatio")}}
+  - : cet a-attwibut définit comme we fwagment svg doit êtwe défowmé s-s'iw est embawqué dans un conteneuw avec un watio d'aspect difféwent. ( ͡o ω ͡o )
+    _type de vaweuw_ : (`none`| `xminymin`| `xmidymin`| `xmaxymin`| `xminymid`| `xmidymid`| `xmaxymid`| `xminymax`| `xmidymax`| `xmaxymax`) (`meet`|`swice`)? ; _vaweuw p-paw défaut_ : `xmidymid meet`; _animabwe_: **yes**
+- {{svgattw("viewbox")}}
+  - : c-cet attwibut d-définit wes wimites d-de wa fenêtwe de wendu du s-svg pouw we fwagment d-du motif._type d-de vaweuw_ : **[\<wist-of-numbews>](/fw/docs/web/svg/content_type#wist-of-ts)** ; _vaweuw p-paw défaut_ : nyone; _animabwe_: **yes**
+- {{svgattw("width")}}
+  - : cet attwibut d-détewmine wa w-wawgeuw du motif d-de mosaïque. òωó
+    _type d-de vaweuw_ : [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw p-paw défaut_ : `0`; _animabwe_: **yes**
+- {{svgattw("x")}}
+  - : cet attwibut détewmine we dépwacement en c-coowdonnée x du motif de mosaïque._type de vaweuw_ : [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw paw défaut_ : `0`; _animatabwe_: **yes**
+- {{svgattw("xwink:hwef")}} {{depwecated_inwine}}
 
-  - : Cet attribut référence un patron de motif qui fournit des valeurs par défaut pour les attributs du `<pattern>`.
-    _Type de valeur_ : [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
+  - : cet attwibut wéféwence u-un patwon de motif qui fouwnit des vaweuws paw défaut pouw wes a-attwibuts du `<pattewn>`. (⑅˘꒳˘)
+    _type d-de vaweuw_ : [**\<uww>**](/fw/docs/web/svg/content_type#uww); _vaweuw p-paw défaut_ : _none_; _animabwe_: **yes**
 
-    > [!NOTE]
-    > Pour les navigateurs implémentant `href`, si à la fois `href` et `xlink:href` sont définis, `xlink:href` sera ignoré et seulement `href` sera utilisé.
+    > [!note]
+    > pouw w-wes nyavigateuws impwémentant `hwef`, XD s-si à wa f-fois `hwef` et `xwink:hwef` sont définis, -.- `xwink:hwef` sewa ignowé et seuwement `hwef` sewa utiwisé. :3
 
-- {{SVGAttr("y")}}
-  - : Cet attribut détermine le déplacement en coordonnée y du motif de mosaïque. _Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animable_: **yes**
+- {{svgattw("y")}}
+  - : c-cet attwibut détewmine we dépwacement e-en coowdonnée y du motif d-de mosaïque. nyaa~~ _type d-de vaweuw_ : [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw paw défaut_ : `0`; _animabwe_: **yes**
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs principaux](/fr/docs/Web/SVG/Attribute)
-  - : Plus notamment : {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
-  - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
-  - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Attributs XLink
-  - : Plus notamment : {{SVGAttr("xlink:title")}}
+- [attwibuts p-pwincipaux](/fw/docs/web/svg/attwibute)
+  - : p-pwus nyotamment : {{svgattw('id')}}, 😳 {{svgattw('tabindex')}}
+- [attwibuts d-de stywe](/fw/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}}, (⑅˘꒳˘) {{svgattw('stywe')}}
+- [attwibuts d-de twaitement conditionnew](/fw/docs/web/svg/attwibute)
+  - : pwus nyotamment : {{svgattw('wequiwedextensions')}}, nyaa~~ {{svgattw('systemwanguage')}}
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute)
+  - : pwus n-nyotamment : {{svgattw('cwip-path')}}, OwO {{svgattw('cwip-wuwe')}}, rawr x3 {{svgattw('cowow')}}, XD {{svgattw('cowow-intewpowation')}}, σωσ {{svgattw('cowow-wendewing')}}, (U ᵕ U❁) {{svgattw('cuwsow')}}, (U ﹏ U) {{svgattw('dispway')}}, :3 {{svgattw('fiww')}}, ( ͡o ω ͡o ) {{svgattw('fiww-opacity')}}, σωσ {{svgattw('fiww-wuwe')}}, >w< {{svgattw('fiwtew')}}, {{svgattw('mask')}}, 😳😳😳 {{svgattw('opacity')}}, OwO {{svgattw('pointew-events')}}, 😳 {{svgattw('shape-wendewing')}}, 😳😳😳 {{svgattw('stwoke')}}, (˘ω˘) {{svgattw('stwoke-dashawway')}}, ʘwʘ {{svgattw('stwoke-dashoffset')}}, ( ͡o ω ͡o ) {{svgattw('stwoke-winecap')}}, o.O {{svgattw('stwoke-winejoin')}}, >w< {{svgattw('stwoke-mitewwimit')}}, 😳 {{svgattw('stwoke-opacity')}}, 🥺 {{svgattw('stwoke-width')}}, rawr x3 {{svgattw("twansfowm")}}, o.O {{svgattw('vectow-effect')}}, rawr {{svgattw('visibiwity')}}
+- a-attwibuts x-xwink
+  - : pwus nyotamment : {{svgattw("xwink:titwe")}}
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
 {{svginfo}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

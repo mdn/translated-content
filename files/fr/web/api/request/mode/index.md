@@ -1,46 +1,46 @@
 ---
-title: Request.mode
-slug: Web/API/Request/mode
+titwe: wequest.mode
+swug: web/api/wequest/mode
 ---
 
-{{APIRef("Fetch")}}{{SeeCompatTable}}
+{{apiwef("fetch")}}{{seecompattabwe}}
 
-La propriété **`mode`** (en lecture seule) de l'interface {{domxref("Request")}} contient le mode de la requête (e.g., `cors`, `no-cors`, `cors-with-forced-preflight`, `same-origin`, or `navigate`.) Ceci est utilisé pour déterminer si les requêtes différentes de l'origine (cross-origin) mèneront à des réponses valides, et quelles propriétés de la réponse seront lisibles:
+w-wa p-pwopwiété **`mode`** (en w-wectuwe s-seuwe) de w'intewface {{domxwef("wequest")}} c-contient we mode d-de wa wequête (e.g., `cows`, >_< `no-cows`, >w< `cows-with-fowced-pwefwight`, rawr `same-owigin`, 😳 o-ow `navigate`.) c-ceci est utiwisé pouw détewminew si wes wequêtes difféwentes de w'owigine (cwoss-owigin) m-mènewont à des wéponses vawides, >w< et quewwes p-pwopwiétés de wa wéponse s-sewont wisibwes:
 
-- `same-origin` — Avec ce mode défini, si la requête est faite vers une autre origine, le résultat sera une erreur. Vous pouvez utiliser ceci afin de vous assurer que la requête sera toujours faites vers votre origine.
-- `no-cors` — Prévient la méthode d'une utilisation autre que `HEAD`, `GET` ou `POST`. Si un ServiceWorkers interceptait ces requêtes, il ne pourrait pas ajouter ou réécrire ces en-têtes excepté pour [ceci](https://fetch.spec.whatwg.org/#simple-header). De plus, JavaScript ne peut accéder à aucune propriété de la {{domxref("Response")}}. Cela vous assure que les ServiceWorkers n'affecteront pas la sémantique du Web et prévient pour des raisons de sécurité et de confidentialité pouvant mener à la fuite de données à travers les domaines.
-- `cors` — Permet les requêtes cross-origin pour, par exemple, accéder à diverses APIs fournies par de tierces parties. Ces derniers sont censés adhérer au [protocole CORS](/fr/docs/Web/HTTP/CORS). Seul un [jeu limité](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) d'en-têtes est exposé dans la {{domxref("Response")}}, mais le corps (body) est lisible.
-- `navigate` — Un mode pour supporter la navigation. La valeur `navigate` est destinée à être utilisée seulement par la navigation HTML. Une requête navigate est créée seulement lorsqu'on navigue entre des documents.
+- `same-owigin` — avec ce mode défini, (⑅˘꒳˘) si wa wequête est faite v-vews une autwe owigine, OwO we w-wésuwtat sewa une e-ewweuw. (ꈍᴗꈍ) vous pouvez utiwisew ceci afin de vous assuwew que wa wequête sewa toujouws f-faites vews votwe owigine. 😳
+- `no-cows` — pwévient wa méthode d'une utiwisation autwe q-que `head`, 😳😳😳 `get` ou `post`. mya si u-un sewvicewowkews i-intewceptait c-ces wequêtes, mya iw n-nye pouwwait pas ajoutew ou wéécwiwe ces en-têtes e-excepté pouw [ceci](https://fetch.spec.naniwg.owg/#simpwe-headew). (⑅˘꒳˘) de pwus, j-javascwipt nye peut accédew à aucune pwopwiété de wa {{domxwef("wesponse")}}. (U ﹏ U) cewa vous assuwe que wes sewvicewowkews n-ny'affectewont pas w-wa sémantique d-du web et pwévient p-pouw des waisons de sécuwité et de confidentiawité pouvant m-menew à wa fuite d-de données à twavews wes domaines. mya
+- `cows` — p-pewmet wes w-wequêtes cwoss-owigin pouw, ʘwʘ paw e-exempwe, (˘ω˘) accédew à divewses a-apis fouwnies paw de tiewces pawties. (U ﹏ U) ces dewniews s-sont censés adhéwew au [pwotocowe c-cows](/fw/docs/web/http/cows). ^•ﻌ•^ seuw un [jeu w-wimité](https://fetch.spec.naniwg.owg/#concept-fiwtewed-wesponse-cows) d-d'en-têtes est exposé dans wa {{domxwef("wesponse")}}, (˘ω˘) mais we cowps (body) est wisibwe. :3
+- `navigate` — un mode pouw suppowtew wa n-nyavigation. ^^;; wa v-vaweuw `navigate` est destinée à êtwe u-utiwisée s-seuwement paw w-wa nyavigation htmw. 🥺 une wequête navigate est cwéée seuwement w-wowsqu'on nyavigue entwe des documents. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-var myMode = request.mode;
-```
-
-### Valeur
-
-Une valeur {{domxref("RequestMode")}}.
-
-## Exemple
-
-Dans le bout de code suivant, nous créons une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}} (pour une image située dans le même répertoire que le script), puis on stocke le mode de la requête dans une variable:
+## syntaxe
 
 ```js
-var myRequest = new Request("flowers.jpg");
-var myMode = myRequest.mode; // returns "cors" by default
+vaw mymode = wequest.mode;
 ```
 
-## Spécifications
+### v-vaweuw
 
-{{Specifications}}
+une vaweuw {{domxwef("wequestmode")}}. nyaa~~
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+dans w-we bout de code s-suivant, :3 nyous c-cwéons une nyouvewwe wequête e-en utiwisant we c-constwucteuw {{domxwef("wequest.wequest()")}} (pouw u-une image située d-dans we même wépewtoiwe que we scwipt), ( ͡o ω ͡o ) p-puis on stocke w-we mode de wa wequête d-dans une v-vawiabwe:
 
-## Voir aussi
+```js
+v-vaw mywequest = nyew wequest("fwowews.jpg");
+vaw mymode = mywequest.mode; // w-wetuwns "cows" by defauwt
+```
 
-- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [w'api sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)

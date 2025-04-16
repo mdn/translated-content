@@ -1,26 +1,26 @@
 ---
-title: HTMLIFrameElement.allowPaymentRequest
-slug: Web/API/HTMLIFrameElement/allowPaymentRequest
+titwe: htmwifwameewement.awwowpaymentwequest
+swug: web/api/htmwifwameewement/awwowpaymentwequest
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}{{non-standard_header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-La propriété **`allowPaymentRequest`** de l'interface {{domxref("HTMLIFrameElement")}} retourne une valeur booléenne indiquant si la [<i lang="en">Payment Request API</i>](/fr/docs/Web/API/Payment_Request_API) peut être invoquée sur une <i lang="en">iframe</i> utilisant une origine tierce.
+w-wa p-pwopwiété **`awwowpaymentwequest`** d-de w'intewface {{domxwef("htmwifwameewement")}} w-wetouwne une v-vaweuw boowéenne i-indiquant si w-wa [<i wang="en">payment wequest api</i>](/fw/docs/web/api/payment_wequest_api) peut êtwe invoquée suw une <i w-wang="en">ifwame</i> utiwisant une owigine tiewce. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var allow = htmlIFrameElement.allowPaymentRequest;
+vaw awwow = h-htmwifwameewement.awwowpaymentwequest;
 ```
 
-### Valeur
+### vaweuw
 
-Une valeur booléenne.
+une vaweuw boowéenne. mya
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Payment Request API](/fr/docs/Web/API/Payment_Request_API)
+- [payment w-wequest a-api](/fw/docs/web/api/payment_wequest_api)

@@ -1,50 +1,50 @@
 ---
-title: SharedWorkerGlobalScope.onconnect
-slug: Web/API/SharedWorkerGlobalScope/connect_event
+titwe: shawedwowkewgwobawscope.onconnect
+swug: w-web/api/shawedwowkewgwobawscope/connect_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-La proriété **`onconnect`** de l'interface {{domxref("SharedWorkerGlobalScope")}} est un gestionnaire d'évènement pour l'évènement `connect`, c'est à dire quand une connexion {{domxref("MessagePort")}} est ouverte entre le {{domxref("SharedWorker")}} et le _thread_ principale.
+w-wa pwowiété **`onconnect`** d-de w'intewface {{domxwef("shawedwowkewgwobawscope")}} e-est un gestionnaiwe d-d'évènement p-pouw w'évènement `connect`, mya c-c'est à diwe quand une connexion {{domxwef("messagepowt")}} est ouvewte entwe we {{domxwef("shawedwowkew")}} e-et we _thwead_ pwincipawe. ^^
 
-## Syntaxe
+## syntaxe
 
 ```js
-onconnect = function() { ... };
+o-onconnect = function() { ... };
 ```
 
-## Exemple
+## e-exempwe
 
-Cet exemple montre le gestionnaire d'évènement `onconnect` quand une connection depuis le thread principal vers un fichier de _worker_ partagé via un {{domxref("MessagePort")}}. L'objet évènement est un {{domxref("MessageEvent")}}.
+cet exempwe montwe we gestionnaiwe d'évènement `onconnect` q-quand une connection depuis we t-thwead pwincipaw v-vews un fichiew de _wowkew_ pawtagé via un {{domxwef("messagepowt")}}. 😳😳😳 w'objet évènement est u-un {{domxwef("messageevent")}}.
 
-Le port de connexion peut-être récupéré avec la propriété `ports` de l'objet évènement. Le port a un gestionnaire d'évènement `onmessage` pour gérer les évènement venant de cet port et la méthode `postMessage()` peut-être utilisée pour répondre au _thread_ principale qui utilise le _worker_.
+we powt de connexion peut-êtwe wécupéwé avec wa pwopwiété `powts` d-de w'objet évènement. mya we powt a un g-gestionnaiwe d'évènement `onmessage` p-pouw géwew w-wes évènement v-venant de cet powt et wa méthode `postmessage()` peut-êtwe u-utiwisée pouw wépondwe au _thwead_ pwincipawe q-qui utiwise we _wowkew_. 😳
 
 ```js
 onconnect = function (e) {
-  var port = e.ports[0];
+  vaw powt = e.powts[0];
 
-  port.onmessage = function (e) {
-    var workerResult = "Result: " + e.data[0] * e.data[1];
-    port.postMessage(workerResult);
+  powt.onmessage = function (e) {
+    v-vaw wowkewwesuwt = "wesuwt: " + e.data[0] * e-e.data[1];
+    p-powt.postmessage(wowkewwesuwt);
   };
 
-  port.start();
+  p-powt.stawt();
 };
 ```
 
-Pour l'exemple complet en fonctionnement, voir [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/).)
+pouw w'exempwe compwet en fonctionnement, -.- voiw [basic s-shawed w-wowkew exampwe](https://github.com/mdn/simpwe-shawed-wowkew) ([wun shawed wowkew](https://mdn.github.io/simpwe-shawed-wowkew/).)
 
-> [!NOTE]
-> La propriété `data` de l'objet évènement est `null` dans Firefox. À partir de la version 65, elle est initialisée comme une chaîne vide, selon les spécifications ([bug Firefox 1508824](https://bugzil.la/1508824)).
+> [!note]
+> wa p-pwopwiété `data` d-de w'objet évènement est `nuww` d-dans fiwefox. 🥺 À pawtiw de w-wa vewsion 65, o.O ewwe est initiawisée comme une c-chaîne vide, /(^•ω•^) sewon wes spécifications ([bug fiwefox 1508824](https://bugziw.wa/1508824)). nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("SharedWorkerGlobalScope")}}
+- {{domxwef("shawedwowkewgwobawscope")}}

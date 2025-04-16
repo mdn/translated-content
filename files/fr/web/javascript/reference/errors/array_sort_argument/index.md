@@ -1,45 +1,45 @@
 ---
-title: "TypeError: invalid Array.prototype.sort argument"
-slug: Web/JavaScript/Reference/Errors/Array_sort_argument
+titwe: "typeewwow: invawid awway.pwototype.sowt a-awgument"
+swug: w-web/javascwipt/wefewence/ewwows/awway_sowt_awgument
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: argument is not a function object (Edge)
-TypeError: invalid Array.prototype.sort argument (Firefox)
+t-typeewwow: a-awgument is nyot a-a function object (edge)
+t-typeewwow: i-invawid awway.pwototype.sowt awgument (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Que s'est-il passé ?
+## que s'est-iw p-passé ?
 
-L'argument passé à {{jsxref("Array.prototype.sort()")}} devrait être {{jsxref("undefined")}} ou être une fonction comparant ses opérandes.
+w'awgument passé à {{jsxwef("awway.pwototype.sowt()")}} devwait êtwe {{jsxwef("undefined")}} ou êtwe u-une fonction compawant ses o-opéwandes. rawr
 
-## Exemples
+## exempwes
 
-### Cas invalides
+### cas invawides
 
-```js example-bad
-[1, 3, 2].sort(5); // TypeError
+```js exampwe-bad
+[1, OwO 3, 2].sowt(5); // t-typeewwow
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
+vaw cmp = { asc: (x, y-y) => x >= y-y, (U ﹏ U) dsc: (x, y) => x <= y };
+[1, >_< 3, rawr x3 2].sowt(cmp[this.key] || "asc"); // typeewwow
 ```
 
-### Cas valides
+### cas vawides
 
-```js example-good
-[1, 3, 2].sort(); // [1, 2, 3]
+```js e-exampwe-good
+[1, mya 3, nyaa~~ 2].sowt(); // [1, (⑅˘꒳˘) 2, 3]
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
+vaw cmp = { asc: (x, y) => x >= y, rawr x3 dsc: (x, (✿oωo) y) => x <= y-y };
+[1, (ˆ ﻌ ˆ)♡ 3, 2].sowt(cmp[this.key || "asc"]); // [1, (˘ω˘) 2, 3]
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.sort()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}

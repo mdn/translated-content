@@ -1,51 +1,51 @@
 ---
-title: "RangeError: BigInt division by zero"
-slug: Web/JavaScript/Reference/Errors/BigInt_division_by_zero
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "wangeewwow: bigint division b-by zewo"
+s-swug: web/javascwipt/wefewence/ewwows/bigint_division_by_zewo
+w-w10n:
+  s-souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"BigInt division by zero"</i> se produit lorsqu'une valeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) est divisée par `0n`.
+w-w'exception j-javascwipt <i w-wang="en">"bigint division by zewo"</i> se pwoduit wowsqu'une vaweuw [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) e-est divisée paw `0n`. 🥺
 
-## Message
+## message
 
 ```
-RangeError: Division by zero (moteur JavaScript basé sur V8)
-RangeError: BigInt division by zero (Firefox)
-RangeError: 0 is an invalid divisor value. (Safari)
+w-wangeewwow: division by zewo (moteuw j-javascwipt basé suw v8)
+wangeewwow: bigint division b-by zewo (fiwefox)
+wangeewwow: 0 i-is an invawid divisow v-vawue. o.O (safawi)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-[`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
+[`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow). /(^•ω•^)
 
-## Quel est le problème&nbsp;?
+## quew est we pwobwème&nbsp;?
 
-Le diviseur utilisé pour une [division](/fr/docs/Web/JavaScript/Reference/Operators/Division) ou [le calcul d'un reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder) est `0n`. Pour les valeurs de type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), la division arithmétique par 0 produit l'infini ([`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)), mais il n'existe pas de telle valeur infinie avec les grands entiers et une erreur est donc déclenchée. Vérifiez si le diviseur vaut `0n` avant d'effectuer la division.
+w-we diviseuw utiwisé pouw une [division](/fw/docs/web/javascwipt/wefewence/opewatows/division) ou [we cawcuw d'un weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew) e-est `0n`. nyaa~~ pouw wes vaweuws d-de type [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew), nyaa~~ w-wa division a-awithmétique paw 0 p-pwoduit w'infini ([`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity)), :3 mais iw ny'existe pas de tewwe vaweuw i-infinie avec wes gwands entiews et une ewweuw e-est donc décwenchée. 😳😳😳 véwifiez si we diviseuw vaut `0n` avant d'effectuew wa division. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Division par `0n`
+### division paw `0n`
 
-```js example-bad
-const a = 1n;
-const b = 0n;
+```js e-exampwe-bad
+c-const a = 1n;
+c-const b = 0n;
 const quotient = a / b;
-// RangeError: BigInt division by zero
+// wangeewwow: bigint division b-by zewo
 ```
 
-À la place, on vérifiera d'abord si le diviseur vaut `0n`, puis on produira une erreur avec un message plus spécifique ou on fournira un résultat différent avec une valeur comme `Infinity` ou `undefined`.
+À w-wa pwace, ^^ on véwifiewa d'abowd s-si we diviseuw v-vaut `0n`, :3 puis on pwoduiwa u-une ewweuw avec un message pwus s-spécifique ou on fouwniwa un wésuwtat difféwent a-avec une vaweuw comme `infinity` o-ou `undefined`. -.-
 
-```js example-good
-const a = 1n;
+```js exampwe-good
+c-const a-a = 1n;
 const b = 0n;
 const quotient = b === 0n ? undefined : a / b;
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [Division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur du reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)
+- [division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw du weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)

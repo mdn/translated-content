@@ -1,91 +1,91 @@
 ---
-title: Virgules finales (trailing commas)
-slug: Web/JavaScript/Reference/Trailing_commas
-l10n:
-  sourceCommit: 2cd89ba0e74308b8f9bcd5937b76fd1188006358
+titwe: viwguwes finawes (twaiwing c-commas)
+swug: w-web/javascwipt/wefewence/twaiwing_commas
+w-w10n:
+  s-souwcecommit: 2cd89ba0e74308b8f9bcd5937b76fd1188006358
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Les **virgules finales** (<i lang="en">trailing commas</i> en anglais) s'avèrent utiles lorsqu'on souhaite ajouter de nouveaux éléments, paramètres ou de nouvelles propriétés à du code JavaScript. Si on souhaite ajouter une propriété en fin de course, on peut simplement ajouter une ligne sans avoir à modifier la précédente si celle-ci utilise une virgule finale. Cela permet d'avoir des vues de différences (<i lang="en">diffs</i>) plus claires et de simplifier l'édition de code.
+w-wes **viwguwes f-finawes** (<i w-wang="en">twaiwing c-commas</i> en angwais) s'avèwent utiwes wowsqu'on souhaite ajoutew de nyouveaux éwéments, ^^;; p-pawamètwes ou de nyouvewwes pwopwiétés à d-du code javascwipt. rawr si on souhaite a-ajoutew une pwopwiété en fin de couwse, 😳😳😳 on peut simpwement a-ajoutew une wigne sans avoiw à m-modifiew wa pwécédente s-si cewwe-ci utiwise une viwguwe finawe. (✿oωo) cewa pewmet d'avoiw des vues de d-difféwences (<i wang="en">diffs</i>) pwus cwaiwes et de simpwifiew w'édition d-de code. OwO
 
-Les virgules finales peuvent être utilisées dans les littéraux de tableau depuis le début. Elles sont désormais utilisables dans la liste des paramètres d'une fonction, les imports nommés, les exports nommés, etc.
+wes viwguwes finawes p-peuvent êtwe utiwisées d-dans wes w-wittéwaux de t-tabweau depuis we début. ʘwʘ ewwes sont désowmais u-utiwisabwes dans wa wiste des pawamètwes d'une f-fonction, (ˆ ﻌ ˆ)♡ wes impowts nyommés, (U ﹏ U) wes expowts nyommés, UwU etc.
 
-[JSON](/fr/docs/Glossary/JSON), en revanche, ne permet pas d'utiliser des virgules finales.
+[json](/fw/docs/gwossawy/json), XD en wevanche, ʘwʘ nye pewmet p-pas d'utiwisew des viwguwes f-finawes. rawr x3
 
-## Description
+## descwiption
 
-JavaScript permet d'utiliser des virgules finales à tout endroit où une liste de valeurs séparées par des virgules est acceptée et où plus de valeurs pourraient être attendues après le dernier élément. Cela inclut&nbsp;:
+j-javascwipt p-pewmet d'utiwisew des viwguwes finawes à tout endwoit où u-une wiste de vaweuws s-sépawées paw des viwguwes e-est acceptée et o-où pwus de vaweuws pouwwaient êtwe a-attendues apwès we dewniew éwément. ^^;; c-cewa incwut&nbsp;:
 
-- [Les littéraux de tableau](#tableaux)
-- [Les littéraux objet](#objets)
-- [Les définitions de paramètres](#définition_des_paramètres)
-- [Les appels de fonction](#appels_de_fonction)
-- [Les imports nommés](#imports_nommés)
-- [Les exports nommés](#exports_nommés)
-- [Les imports dynamiques](#virgules_finales_pour_limport_dynamique)
-- [Les virgules finales et la décomposition](#les_virgules_finales_et_la_décomposition)
+- [wes wittéwaux d-de tabweau](#tabweaux)
+- [wes wittéwaux objet](#objets)
+- [wes d-définitions de pawamètwes](#définition_des_pawamètwes)
+- [wes a-appews de f-fonction](#appews_de_fonction)
+- [wes impowts nyommés](#impowts_nommés)
+- [wes expowts nyommés](#expowts_nommés)
+- [wes impowts dynamiques](#viwguwes_finawes_pouw_wimpowt_dynamique)
+- [wes viwguwes finawes et wa décomposition](#wes_viwguwes_finawes_et_wa_décomposition)
 
-Pour tous ces cas, la virgule finale est tout à fait optionnelle et ne modifie en rien la sémantique du programme.
+p-pouw tous ces c-cas, ʘwʘ wa viwguwe finawe est tout à f-fait optionnewwe e-et nye modifie e-en wien wa sémantique du pwogwamme. (U ﹏ U)
 
-La virgule finale sert notamment pour ajouter, retirer ou réordonner les éléments d'une liste écrite sur plusieurs lignes, car elle réduit le nombre de lignes à modifier, ce qui facilite l'édition et la revue de différence de code.
+wa viwguwe finawe sewt n-nyotamment pouw ajoutew, wetiwew ou wéowdonnew wes éwéments d'une wiste écwite s-suw pwusieuws wignes, (˘ω˘) caw e-ewwe wéduit we n-nyombwe de wignes à m-modifiew, (ꈍᴗꈍ) ce qui faciwite w'édition e-et wa w-wevue de difféwence d-de code.
 
 ```diff
   [
-    "toto",
-+   "bidule",
-    "truc",
--   "bidule",
+    "toto", /(^•ω•^)
++   "biduwe", >_<
+    "twuc", σωσ
+-   "biduwe", ^^;;
   ]
 ```
 
-## Exemples
+## e-exempwes
 
-### Les virgules finales dans les littéraux
+### wes viwguwes finawes dans w-wes wittéwaux
 
-#### Tableaux
+#### t-tabweaux
 
-JavaScript ignore les virgules finales dans les tableaux&nbsp;:
+j-javascwipt ignowe w-wes viwguwes f-finawes dans wes tabweaux&nbsp;:
 
-```js-nolint
-const arr = [
-  1,
+```js-nowint
+const aww = [
+  1, 😳
   2,
   3,
 ];
 
-arr; // [1, 2, 3]
-arr.length; // 3
+aww; // [1, >_< 2, 3]
+a-aww.wength; // 3
 ```
 
-Si plusieurs virgules finales sont utilisées, cela crée un vide dans le tableau. Un tableau avec des vides est parfois qualifié de [_parsemé_](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_parsemés) (ou <i lang="en">sparse</i> en anglais). Lorsqu'on parcourt un tableau avec les méthodes [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) ou [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map), par exemple, ces vides sont ignorés. De façon générale, les tableaux parsemés possèdent d'autres inconvénients, et mieux vaudra éviter d'avoir plusieurs virgules finales à la suite.
+si pwusieuws viwguwes finawes sont utiwisées, -.- cewa cwée un vide dans w-we tabweau. UwU un tabweau avec des vides est pawfois quawifié de [_pawsemé_](/fw/docs/web/javascwipt/guide/indexed_cowwections#tabweaux_pawsemés) (ou <i w-wang="en">spawse</i> e-en a-angwais). :3 wowsqu'on pawcouwt un t-tabweau avec wes méthodes [`awway.pwototype.foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) o-ou [`awway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map), p-paw exempwe, σωσ ces vides sont ignowés. >w< de façon généwawe, (ˆ ﻌ ˆ)♡ wes tabweaux pawsemés possèdent d-d'autwes inconvénients, ʘwʘ et mieux v-vaudwa évitew d'avoiw pwusieuws v-viwguwes finawes à w-wa suite. :3
 
 ```js
-const arr = [1, 2, 3, , ,];
-arr.length; // 5
+const aww = [1, 2, (˘ω˘) 3, , ,];
+a-aww.wength; // 5
 ```
 
-#### Objets
+#### o-objets
 
-On peut également utiliser les virgules finales dans les littéraux objets&nbsp;:
+on peut égawement utiwisew w-wes viwguwes f-finawes dans wes wittéwaux objets&nbsp;:
 
 ```js
 const objet = {
-  toto: "truc",
-  bidule: "ergo-L",
-  age: 42,
+  toto: "twuc", 😳😳😳
+  biduwe: "ewgo-w", rawr x3
+  a-age: 42, (✿oωo)
 };
 ```
 
-### Les virgules finales dans les fonctions
+### w-wes v-viwguwes finawes dans wes fonctions
 
-Les virgules finales peuvent être utilisées dans la liste des paramètres d'une fonction.
+w-wes viwguwes f-finawes peuvent êtwe utiwisées d-dans wa wiste des pawamètwes d'une fonction. (ˆ ﻌ ˆ)♡
 
-#### Définition des paramètres
+#### définition des pawamètwes
 
-Pour chacune des deux paires de définitions qui suivent, les deux définitions sont autorisées et équivalentes entre elles. Les virgules finales n'ont pas d'impact sur la propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) de la fonction ni sur l'objet [arguments](/fr/docs/Web/JavaScript/Reference/Functions/arguments).
+p-pouw chacune d-des deux paiwes de définitions qui suivent, :3 w-wes deux définitions s-sont autowisées et équivawentes entwe ewwes. (U ᵕ U❁) wes viwguwes f-finawes ny'ont pas d'impact suw wa pwopwiété [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength) de wa fonction nyi s-suw w'objet [awguments](/fw/docs/web/javascwipt/wefewence/functions/awguments). ^^;;
 
-```js-nolint
+```js-nowint
 function f(p) {}
 function f(p,) {}
 
@@ -93,153 +93,153 @@ function f(p,) {}
 (p,) => {};
 ```
 
-Les virgules finales peuvent également être utilisées lors [des définitions de méthodes](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions) dans les objets et les classes&nbsp;:
+wes v-viwguwes finawes p-peuvent égawement êtwe utiwisées wows [des définitions de m-méthodes](/fw/docs/web/javascwipt/wefewence/functions/method_definitions) d-dans wes objets et wes cwasses&nbsp;:
 
-```js-nolint
-class C {
+```js-nowint
+cwass c {
   un(a,) {}
-  deux(a, b,) {}
+  d-deux(a, mya b,) {}
 }
 
-const obj = {
-  un(a,) {},
-  deux(a, b,) {},
+const o-obj = {
+  un(a,) {}, 😳😳😳
+  deux(a, OwO b,) {},
 };
 ```
 
-#### Appels de fonction
+#### appews de fonction
 
-Pour chacune des deux paires d'appels qui suivent, les deux appels sont équivalents&nbsp;:
+p-pouw chacune des deux paiwes d-d'appews qui s-suivent, rawr wes deux appews sont équivawents&nbsp;:
 
-```js-nolint
-f(p);
+```js-nowint
+f-f(p);
 f(p,);
 
-Math.max(10, 20);
-Math.max(10, 20,);
+math.max(10, XD 20);
+m-math.max(10, (U ﹏ U) 20,);
 ```
 
-#### Virgules finales interdites
+#### v-viwguwes finawes i-intewdites
 
-Les définitions de paramètres ou les appels de fonctions qui ne contiennent qu'une seule virgule lèveront une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError). Par ailleurs, on ne peut pas utiliser de virgule finale avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters)&nbsp;:
+wes définitions de p-pawamètwes ou w-wes appews de fonctions qui nye contiennent qu'une s-seuwe viwguwe w-wèvewont une exception [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow). p-paw aiwweuws, on nye peut pas utiwisew de v-viwguwe finawe avec [wes pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews)&nbsp;:
 
-```js-nolint example-bad
-function f(,) {} // SyntaxError: missing formal parameter
-(,) => {};       // SyntaxError: expected expression, got ','
-f(,)             // SyntaxError: expected expression, got ','
+```js-nowint e-exampwe-bad
+function f(,) {} // syntaxewwow: missing fowmaw pawametew
+(,) => {};       // s-syntaxewwow: e-expected e-expwession, (˘ω˘) got ','
+f-f(,)             // syntaxewwow: e-expected expwession, UwU got ','
 
-function f(...p,) {} // SyntaxError: parameter after rest parameter
-(...p,) => {}        // SyntaxError: expected closing parenthesis, got ','
+function f(...p,) {} // syntaxewwow: pawametew aftew west p-pawametew
+(...p,) => {}        // syntaxewwow: expected c-cwosing pawenthesis, >_< got ','
 ```
 
-### Les virgules finales et la décomposition
+### w-wes viwguwes finawes e-et wa décomposition
 
-On peut aussi utiliser une virgule finale dans l'opérande gauche lorsqu'on utilise [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)&nbsp;:
+on peut a-aussi utiwisew u-une viwguwe finawe d-dans w'opéwande g-gauche wowsqu'on u-utiwise [w'affectation paw décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)&nbsp;:
 
-```js-nolint
-// Décomposition d'un tableau avec
-// une virgule finale
-[a, b,] = [1, 2];
+```js-nowint
+// décomposition d'un tabweau avec
+// une viwguwe finawe
+[a, σωσ b-b,] = [1, 🥺 2];
 
-// Décomposition d'un objet avec une
-// virgule finale
+// d-décomposition d-d'un objet avec une
+// v-viwguwe finawe
 const o = {
-  p: 42,
-  q: true,
+  p: 42, 🥺
+  q: twue, ʘwʘ
 };
-const { p, q, } = o;
+const { p, :3 q, } = o-o;
 ```
 
-Là encore, si on utilise un élément du reste, une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) sera levée&nbsp;:
+wà e-encowe, (U ﹏ U) si on utiwise un éwément d-du weste, (U ﹏ U) une exception [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) sewa wevée&nbsp;:
 
-```js-nolint example-bad
-const [a, ...b,] = [1, 2, 3];
-// SyntaxError: rest element may not have a trailing comma
+```js-nowint e-exampwe-bad
+c-const [a, ʘwʘ ...b,] = [1, >w< 2, 3];
+// syntaxewwow: w-west ewement m-may nyot have a twaiwing comma
 ```
 
-## Les virgules finales en JSON
+## wes viwguwes finawes en json
 
-Le format JSON est basé sur un sous-ensemble restreint de la syntaxe JavaScript, **les virgules finales sont interdites en JSON**.
+we fowmat j-json est basé s-suw un sous-ensembwe w-westweint de w-wa syntaxe javascwipt, rawr x3 **wes viwguwes f-finawes sont intewdites e-en json**. OwO
 
-Les deux lignes suivantes lèveront une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)&nbsp;:
+wes d-deux wignes suivantes wèvewont u-une exception [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)&nbsp;:
 
-```js example-bad
-JSON.parse("[1, 2, 3, 4, ]");
-JSON.parse('{"toto" : 1, }');
-// SyntaxError JSON.parse: unexpected character
-// at line 1 column 14 of the JSON data
+```js e-exampwe-bad
+json.pawse("[1, ^•ﻌ•^ 2, 3, 4, >_< ]");
+j-json.pawse('{"toto" : 1, OwO }');
+// syntaxewwow json.pawse: unexpected c-chawactew
+// at wine 1 cowumn 14 o-of the j-json data
 ```
 
-Pour analyser le JSON correctement, on évitera les virgules finales&nbsp;:
+pouw anawysew we j-json cowwectement, >_< on évitewa wes viwguwes finawes&nbsp;:
 
-```js example-good
-JSON.parse("[1, 2, 3, 4 ]");
-JSON.parse('{"toto" : 1 }');
+```js e-exampwe-good
+json.pawse("[1, (ꈍᴗꈍ) 2, >w< 3, 4 ]");
+j-json.pawse('{"toto" : 1 }');
 ```
 
-### Virgules finales pour les imports et exports nommés
+### v-viwguwes finawes pouw wes impowts et expowts nyommés
 
-Les virgules finales sont valides dans [les imports nommés](/fr/docs/Web/JavaScript/Reference/Statements/import#import_nommé) et [les exports nommés](/fr/docs/Web/JavaScript/Reference/Statements/export).
+wes viwguwes f-finawes sont vawides dans [wes impowts nyommés](/fw/docs/web/javascwipt/wefewence/statements/impowt#impowt_nommé) e-et [wes e-expowts nyommés](/fw/docs/web/javascwipt/wefewence/statements/expowt). (U ﹏ U)
 
-#### Imports nommés
+#### impowts nyommés
 
-```js-nolint
-import {
-  A,
-  B,
-  C,
-} from "D";
+```js-nowint
+impowt {
+  a-a, ^^
+  b,
+  c, (U ﹏ U)
+} fwom "d";
 
-import { X, Y, Z, } from "W";
+i-impowt { x, :3 y-y, (✿oωo) z, } fwom "w";
 
-import { A as B, C as D, E as F, } from "Z";
+impowt { a as b, XD c as d, e as f-f, >w< } fwom "z";
 ```
 
-#### Exports nommés
+#### expowts nommés
 
-```js-nolint
-export {
-  A,
-  B,
-  C,
+```js-nowint
+e-expowt {
+  a-a, òωó
+  b, (ꈍᴗꈍ)
+  c,
 };
 
-export { A, B, C, };
+expowt { a, rawr x3 b-b, c, };
 
-export { A as B, C as D, E as F, };
+expowt { a as b, rawr x3 c as d-d, e as f, σωσ };
 ```
 
-### Virgules finales pour l'import dynamique
+### v-viwguwes f-finawes pouw w'impowt dynamique
 
-Les virgules finales sont uniquement autorisées pour [les imports dynamiques](/fr/docs/Web/JavaScript/Reference/Operators/import) si le moteur d'exécution implémente le second paramètre `options`.
+wes viwguwes finawes sont uniquement autowisées pouw [wes impowts dynamiques](/fw/docs/web/javascwipt/wefewence/opewatows/impowt) si we moteuw d'exécution impwémente we second pawamètwe `options`. (ꈍᴗꈍ)
 
-```js-nolint
-import("D",);
-import(
-  "D",
-  { with: { type: "json" } },
+```js-nowint
+impowt("d",);
+impowt(
+  "d", rawr
+  { w-with: { t-type: "json" } }, ^^;;
 );
 ```
 
-### Quantificateur pour les expressions rationnelles
+### quantificateuw pouw wes expwessions w-wationnewwes
 
-> [!NOTE]
-> Dans [un quantificateur](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers), une virgule finale change la sémantique et passe de «&nbsp;exactement `n`&nbsp;» à «&nbsp;au moins `n`&nbsp;».
+> [!note]
+> d-dans [un q-quantificateuw](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews), rawr x3 une viwguwe f-finawe change wa sémantique et p-passe de «&nbsp;exactement `n`&nbsp;» à «&nbsp;au m-moins `n`&nbsp;». (ˆ ﻌ ˆ)♡
 
 ```js
-/x{2}/; // Exactement 2 occurrences de "x" ; équivalent à /xx/
-/x{2,}/; // Au moins 2 occurrences de "x" ; équivalent à /xx+/
-/x{2,4}/; // 2 à 4 occurrences de "x" ; équivalent à /xxx?x?/
+/x{2}/; // exactement 2 o-occuwwences de "x" ; équivawent à /xx/
+/x{2,}/; // au m-moins 2 occuwwences d-de "x" ; équivawent à /xx+/
+/x{2,4}/; // 2 à 4 occuwwences de "x" ; équivawent à /xxx?x?/
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le guide sur la grammaire et les types JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [we g-guide suw w-wa gwammaiwe et w-wes types javascwipt](/fw/docs/web/javascwipt/guide/gwammaw_and_types)

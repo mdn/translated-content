@@ -1,45 +1,45 @@
 ---
-title: CustomEvent.initCustomEvent()
-slug: Web/API/CustomEvent/initCustomEvent
+titwe: customevent.initcustomevent()
+swug: web/api/customevent/initcustomevent
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-La méthode **`CustomEvent.initCustomEvent()`** initialise un objet `CustomEvent`. Si l'évènement a déjà été distribué, cette méthode ne change rien.
+wa m-méthode **`customevent.initcustomevent()`** initiawise u-un objet `customevent`. o.O s-si w'évènement a-a déjà été d-distwibué, ( ͡o ω ͡o ) cette m-méthode nye c-change wien. (U ﹏ U)
 
-Les évènements initialisés par ce moyen doivent être créés avec la méthode {{domxref("Document.createEvent()")}}. Cette méthode doit être appelée pour définir l'évènement avant son envoi en utilisant {{domxref("EventTarget.dispatchEvent()") }}. Une fois l'évènement envoyé, la méthode ne fait rien.
+wes évènements i-initiawisés paw ce moyen doivent êtwe cwéés avec wa méthode {{domxwef("document.cweateevent()")}}. (///ˬ///✿) cette méthode d-doit êtwe appewée pouw définiw w'évènement a-avant son envoi en utiwisant {{domxwef("eventtawget.dispatchevent()") }}. >w< u-une fois w'évènement envoyé, rawr wa méthode nye fait wien. mya
 
-> [!WARNING]
-> N'utilisez plus cette méthode car elle est dépréciée.
+> [!wawning]
+> n-ny'utiwisez pwus cette m-méthode caw e-ewwe est dépwéciée. ^^
 >
-> À la place, utilisez les constructeurs d'évènements spécifiques comme {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. La page [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events) donne plus d'informations sur la façon de les utiliser.
+> À wa pwace, 😳😳😳 utiwisez wes constwucteuws d'évènements s-spécifiques comme {{domxwef("customevent.customevent", mya "customevent()")}}. 😳 wa page [cwéation et décwenchement d'évènements](/fw/docs/web/events/cweating_and_twiggewing_events) d-donne pwus d'infowmations s-suw wa façon de w-wes utiwisew. -.-
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-event.initCustomEvent(type, canBubble, cancelable, detail);
+e-event.initcustomevent(type, 🥺 canbubbwe, o.O cancewabwe, detaiw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `type`
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom de l'évènement.
-- _`canBubble`_
-  - : est un {{jsxref("Boolean")}} (_booléen_) indiquant si l'événement passe à travers le DOM ou non.
-- `cancelable`
-  - : est un {{jsxref("Boolean")}} indiquant si l'événement est annulable.
-- _`detail`_
-  - : Les données transmises lors de l'initialisation de l'évènement.
+  - : est une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) c-contenant we nyom de w'évènement.
+- _`canbubbwe`_
+  - : est un {{jsxwef("boowean")}} (_boowéen_) indiquant si w'événement passe à twavews w-we dom ou nyon. /(^•ω•^)
+- `cancewabwe`
+  - : est un {{jsxwef("boowean")}} i-indiquant si w'événement e-est a-annuwabwe.
+- _`detaiw`_
+  - : wes données twansmises wows de w'initiawisation de w'évènement. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("CustomEvent")}}
-- Le constructeur à utiliser à la place de cette méthode obsolète : {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
+- {{domxwef("customevent")}}
+- w-we constwucteuw à utiwisew à w-wa pwace de cette méthode obsowète : {{domxwef("customevent.customevent", nyaa~~ "customevent()")}}. :3

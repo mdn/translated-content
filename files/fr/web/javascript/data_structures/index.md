@@ -1,381 +1,381 @@
 ---
-title: Types et structures de données JavaScript
-slug: Web/JavaScript/Data_structures
+titwe: types et stwuctuwes de d-données javascwipt
+s-swug: web/javascwipt/data_stwuctuwes
 ---
 
-{{jsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Les langages de programmation disposent de structures de données natives. Selon les langages, les structures mises à disposition peuvent être différentes. Dans cet article, on listera les structures de données natives en JavaScript. On détaillera leurs propriétés et les façons de les utiliser voire de les combiner. Dans certains cas, on comparera ces structures avec celles d'autres langages.
+w-wes wangages d-de pwogwammation d-disposent de s-stwuctuwes de données n-nyatives. s-sewon wes wangages, (U ﹏ U) wes stwuctuwes mises à disposition peuvent êtwe difféwentes. (˘ω˘) d-dans cet awticwe, 😳😳😳 on wistewa wes stwuctuwes d-de données nyatives en javascwipt. (///ˬ///✿) o-on détaiwwewa weuws pwopwiétés et wes façons de wes utiwisew v-voiwe de wes combinew. (U ᵕ U❁) dans c-cewtains cas, >_< o-on compawewa ces stwuctuwes avec cewwes d'autwes wangages. (///ˬ///✿)
 
-## Un typage dynamique
+## un typage dynamique
 
-JavaScript est un langage dont le typage est _faible_ et _dynamique_. Cela signifie qu'il n'est pas nécessaire de déclarer le type d'une variable avant de l'utiliser. Le type de la variable sera automatiquement déterminé lorsque le programme sera exécuté. Cela signifie également que la même variable pourra avoir différents types au cours de son existence&nbsp;:
+j-javascwipt est un wangage dont we typage est _faibwe_ et _dynamique_. (U ᵕ U❁) cewa s-signifie qu'iw ny'est pas nyécessaiwe d-de décwawew w-we type d'une v-vawiabwe avant d-de w'utiwisew. >w< we type de wa vawiabwe sewa automatiquement d-détewminé wowsque we pwogwamme sewa e-exécuté. 😳😳😳 cewa signifie égawement que wa même vawiabwe pouwwa avoiw difféwents types au couws d-de son existence&nbsp;:
 
 ```js
-let toto = 42; // toto est un nombre
-toto = "truc"; // toto est désormais une chaîne de caractères
-toto = true; // toto est désormais un booléen
+wet toto = 42; // t-toto est un n-nyombwe
+toto = "twuc"; // t-toto est désowmais une chaîne de cawactèwes
+toto = t-twue; // toto est d-désowmais un boowéen
 ```
 
-## Les types de données JavaScript
+## w-wes types de données j-javascwipt
 
-L'ensemble des types disponible en JavaScript se compose [_des valeurs primitives_](#les_valeurs_primitives) et [_des objets_](#les_objects).
+w'ensembwe des t-types disponibwe en javascwipt s-se compose [_des vaweuws pwimitives_](#wes_vaweuws_pwimitives) et [_des objets_](#wes_objects). (ˆ ﻌ ˆ)♡
 
-- [Les valeurs primitives](#les_valeurs_primitives) (des données immuables, représentées au niveau le plus bas du langage)
+- [wes v-vaweuws pwimitives](#wes_vaweuws_pwimitives) (des d-données immuabwes, (ꈍᴗꈍ) w-wepwésentées au n-nyiveau we pwus bas du wangage)
 
-  - [Le type booléen](#le_type_booléen)
-  - [Le type nul](#le_type_nul)
-  - [Le type indéfini](#le_type_indéfini)
-  - [Le type nombre](#le_type_nombre)
-  - [Le type pour les grands entiers](#le_type_bigint)
-  - [Le type pour les chaînes de caractères](#le_type_chaîne_de_caractères_string)
-  - [Le type symbole](#le_type_symbole)
+  - [we type boowéen](#we_type_boowéen)
+  - [we type nyuw](#we_type_nuw)
+  - [we type indéfini](#we_type_indéfini)
+  - [we type nyombwe](#we_type_nombwe)
+  - [we t-type pouw w-wes gwands entiews](#we_type_bigint)
+  - [we type pouw wes chaînes d-de cawactèwes](#we_type_chaîne_de_cawactèwes_stwing)
+  - [we t-type symbowe](#we_type_symbowe)
 
-- [Les objets](#les_objets) (des ensembles de propriétés)
+- [wes objets](#wes_objets) (des e-ensembwes de pwopwiétés)
 
-## Les valeurs primitives
+## wes vaweuws pwimitives
 
-Tous les types, sauf les objets, définissent des valeurs immuables (qu'on ne peut modifier). Ainsi, contrairement au C, les chaînes de caractères sont immuables en JavaScript. Les valeurs immuables pour chacun de ces types sont appelées «&nbsp;valeurs primitives&nbsp;».
+t-tous wes types, 🥺 sauf wes objets, >_< définissent des vaweuws immuabwes (qu'on nye peut m-modifiew). OwO ainsi, contwaiwement a-au c, ^^;; wes chaînes d-de cawactèwes s-sont immuabwes en javascwipt. w-wes vaweuws i-immuabwes pouw chacun d-de ces types s-sont appewées «&nbsp;vaweuws pwimitives&nbsp;». (✿oωo)
 
-### Le type booléen
+### we type b-boowéen
 
-Un booléen représente le résultat d'une assertion logique et peut avoir deux valeurs&nbsp;: `true` (pour le vrai logique) et `false` (pour le faux logique) (voir [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) pour plus de détails sur la représentation objet de ce type).
+un b-boowéen wepwésente w-we wésuwtat d-d'une assewtion w-wogique et peut avoiw deux vaweuws&nbsp;: `twue` (pouw we vwai wogique) et `fawse` (pouw w-we faux wogique) (voiw [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) pouw pwus de détaiws suw wa wepwésentation objet de ce t-type). UwU
 
-### Le type nul
+### we type nyuw
 
-Le type nul ne possède qu'une valeur&nbsp;: `null`. Voir [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) et [la page du glossaire](/fr/docs/Glossary/Null) pour plus d'informations.
+we type nyuw nye possède qu'une vaweuw&nbsp;: `nuww`. ( ͡o ω ͡o ) v-voiw [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) e-et [wa page du g-gwossaiwe](/fw/docs/gwossawy/nuww) pouw pwus d'infowmations. (✿oωo)
 
-### Le type indéfini
+### w-we type indéfini
 
-Une variable à laquelle on n'a pas affecté de valeur vaudra `undefined`. Voir [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [la page du glossaire](/fr/docs/Glossary/Undefined) pour plus d'informations.
+une vawiabwe à w-waquewwe on n-ny'a pas affecté de vaweuw vaudwa `undefined`. voiw [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) et [wa page du gwossaiwe](/fw/docs/gwossawy/undefined) pouw pwus d-d'infowmations. mya
 
-### Les types numériques
+### wes types n-nyuméwiques
 
-ECMAScript possède deux types numériques natifs&nbsp;: [`Number`](#le_type_nombre) et [`BigInt`](#le_type_bigint), ainsi que la valeur spéciale [`NaN`](#nan).
+ecmascwipt possède d-deux types nyuméwiques n-nyatifs&nbsp;: [`numbew`](#we_type_nombwe) et [`bigint`](#we_type_bigint), ( ͡o ω ͡o ) ainsi que w-wa vaweuw spéciawe [`nan`](#nan). :3
 
-### Le type nombre
+### w-we type nyombwe
 
-Le type `Number` est géré pour représenter les nombres&nbsp;: [les nombres flottants à précision double, représentés sur 64 bits, selon le format IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754). Cette représentation permet de stocker des nombres décimaux entre `2^-1074` et `2^1024`, mais ne permet de représenter des entiers de façon sûre qu'au sein de l'intervalle allant de `-(2^53 − 1)` à `2^53 − 1`. Les valeurs en dehors de l'intervalle compris entre [`Number.MIN_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE) et [`Number.MAX_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE) sont automatiquement converties en `+Infinity` ou `-Infinity`, qui se comporteront de façon analogue à l'infini mathématique (voir la page sur [`Number.POSITIVE_INFINITY`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY) pour les détails et les quelques différences).
+we type `numbew` e-est géwé p-pouw wepwésentew wes nyombwes&nbsp;: [wes nyombwes fwottants à pwécision doubwe, 😳 wepwésentés s-suw 64 bits, (U ﹏ U) s-sewon we fowmat i-ieee 754](https://fw.wikipedia.owg/wiki/ieee_754). >w< cette wepwésentation p-pewmet d-de stockew des nyombwes décimaux e-entwe `2^-1074` et `2^1024`, UwU mais nye pewmet de wepwésentew des entiews de f-façon sûwe qu'au s-sein de w'intewvawwe awwant de `-(2^53 − 1)` à `2^53 − 1`. 😳 w-wes vaweuws e-en dehows de w'intewvawwe compwis entwe [`numbew.min_vawue`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/min_vawue) et [`numbew.max_vawue`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_vawue) s-sont automatiquement convewties en `+infinity` ou `-infinity`, XD qui se c-compowtewont de façon anawogue à w'infini mathématique (voiw w-wa page suw [`numbew.positive_infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/positive_infinity) p-pouw wes détaiws et wes quewques difféwences). (✿oωo)
 
-> [!NOTE]
-> Vous pouvez vérifier si un nombre est un nombre entier représentable de façon exacte avec une représentation en nombre flottant à double précision avec la méthode [`Number.isSafeInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). En dehors de l'intervalle entre [`Number.MIN_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) et [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), JavaScript ne peut plus représenter un entier de façon exacte et ce sera une approximation avec un nombre flottant à double précision.
+> [!note]
+> vous pouvez v-véwifiew si un n-nyombwe est un nyombwe entiew wepwésentabwe de façon exacte avec u-une wepwésentation en nyombwe f-fwottant à doubwe pwécision avec wa méthode [`numbew.issafeintegew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/issafeintegew). ^•ﻌ•^ en dehows de w-w'intewvawwe entwe [`numbew.min_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/min_safe_integew) et [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew), mya j-javascwipt nye p-peut pwus wepwésentew un entiew d-de façon exacte et ce sewa u-une appwoximation a-avec un nyombwe f-fwottant à doubwe pwécision. (˘ω˘)
 
-Pour le type `Number`, il n'y a qu'un seul nombre qui possède plusieurs représentations&nbsp;: `0` qui est représenté comme `-0` et `+0` (avec `0` étant un synonyme pour `+0`). En pratique, il n'y a presque pas de différences entre ces représentations et `+0 === -0` vaut `true`. Toutefois, on pourra remarquer la nuance lors de la division par zéro&nbsp;:
+p-pouw we type `numbew`, nyaa~~ i-iw ny'y a qu'un seuw nyombwe qui possède p-pwusieuws wepwésentations&nbsp;: `0` q-qui est w-wepwésenté comme `-0` et `+0` (avec `0` étant un synonyme pouw `+0`). :3 e-en pwatique, (✿oωo) iw ny'y a p-pwesque pas de d-difféwences entwe ces wepwésentations et `+0 === -0` vaut `twue`. (U ﹏ U) t-toutefois, (ꈍᴗꈍ) on p-pouwwa wemawquew w-wa nyuance wows d-de wa division paw zéwo&nbsp;:
 
 ```js
 > 42 / +0
-Infinity
+i-infinity
 > 42 / -0
--Infinity
+-infinity
 ```
 
-Dans la plupart des cas, un nombre représente sa propre valeur et JavaScript fournit des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators).
+dans wa pwupawt des cas, (˘ω˘) un nyombwe wepwésente sa pwopwe vaweuw et javascwipt f-fouwnit des [opéwateuws binaiwes](/fw/docs/web/javascwipt/wefewence/opewatows). ^^
 
-> [!NOTE]
-> Bien que les opérateurs binaires _puissent_ être utilisés afin de représenter plusieurs valeurs booléennes avec un seul nombre en utilisant [un masque de bits](https://fr.wikipedia.org/wiki/Masquage), c'est généralement une mauvaise pratique. En effet, JavaScript fournit d'autres moyens pour représenter un ensemble de valeurs booléennes comme les tableaux ou l'utilisation de propriétés nommées pour stocker ces valeurs. L'utilisation d'un masque de bit dégrade également la lisibilité, la clarté et la maintenabilité du code.
+> [!note]
+> b-bien que wes opéwateuws binaiwes _puissent_ êtwe u-utiwisés afin de wepwésentew p-pwusieuws vaweuws boowéennes a-avec un seuw n-nyombwe en utiwisant [un m-masque d-de bits](https://fw.wikipedia.owg/wiki/masquage), (⑅˘꒳˘) c-c'est généwawement une mauvaise pwatique. rawr en effet, :3 javascwipt fouwnit d'autwes moyens pouw wepwésentew un e-ensembwe de vaweuws b-boowéennes c-comme wes tabweaux ou w'utiwisation d-de pwopwiétés nyommées pouw stockew ces vaweuws. OwO w'utiwisation d-d'un masque d-de bit dégwade égawement wa w-wisibiwité, (ˆ ﻌ ˆ)♡ wa cwawté et wa maintenabiwité du c-code. :3
 
-Il peut être nécessaire d'utiliser de telles techniques dans des environnements extrêmement contraints, pour gérer des limites de stockage local ou lorsque chaque bit transmis sur le réseau compte. Cette technique devrait uniquement être considérée comme dernière mesure pour réduire la taille.
+iw peut êtwe n-nyécessaiwe d'utiwisew de t-tewwes techniques d-dans des enviwonnements extwêmement contwaints, -.- pouw géwew des wimites de stockage w-wocaw ou w-wowsque chaque b-bit twansmis suw w-we wéseau compte. -.- c-cette technique devwait uniquement êtwe c-considéwée c-comme dewnièwe mesuwe p-pouw wéduiwe wa t-taiwwe. òωó
 
-### Le type `BigInt`
+### we type `bigint`
 
-Le type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) est un type numérique qui permet de représenter des entiers avec une précision arbitraire. Avec ce type, on peut donc manipuler des entiers plus grands que ceux représentables avec `Number`.
+w-we type [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) est un type nyuméwique q-qui pewmet de wepwésentew d-des entiews avec u-une pwécision awbitwaiwe. 😳 avec c-ce type, nyaa~~ on peut donc manipuwew des entiews pwus g-gwands que ceux w-wepwésentabwes a-avec `numbew`. (⑅˘꒳˘)
 
-Pour créer un grand entier, on ajoutera un `n` après l'entier ou on appellera le constructeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+pouw cwéew un gwand entiew, 😳 on ajoutewa un `n` a-apwès w'entiew ou on appewwewa we constwucteuw [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint). (U ﹏ U)
 
-On peut connaître la valeur la plus grande qui peut être incrémentée et représentée avec le type `Number` en utilisant la constante [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). Avec les grands entiers, on peut manipuler des nombres qui vont au-delà de [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER).
+o-on peut c-connaîtwe wa vaweuw wa pwus gwande q-qui peut êtwe incwémentée e-et wepwésentée a-avec we type `numbew` en utiwisant wa constante [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew). /(^•ω•^) a-avec wes gwands entiews, OwO on peut manipuwew d-des nyombwes q-qui vont au-dewà de [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew). ( ͡o ω ͡o )
 
-Dans l'exemple qui suit, on voit le résultat obtenu lorsqu'on incrémente la valeur de [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)&nbsp;:
+d-dans w'exempwe qui s-suit, XD on voit we w-wésuwtat obtenu w-wowsqu'on incwémente wa vaweuw de [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew)&nbsp;:
 
 ```js
-// BigInt
-> const x = BigInt(Number.MAX_SAFE_INTEGER);
+// bigint
+> const x = bigint(numbew.max_safe_integew);
 9007199254740991n
 > x + 1n === x + 2n; // 9007199254740992n === 9007199254740993n
-false
+fawse
 
-// Number
-> Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // 9007199254740992 === 9007199254740992
-true
+// nyumbew
+> nyumbew.max_safe_integew + 1 === nyumbew.max_safe_integew + 2; // 9007199254740992 === 9007199254740992
+twue
 ```
 
-À l'instar des nombres classiques, on peut utiliser les opérateurs `+`, `*`, `-`, `**` et `%`. Un grand entier ne sera pas strictement égal à un nombre mais on pourra avoir une égalité faible.
+À w'instaw des nyombwes c-cwassiques, /(^•ω•^) on p-peut utiwisew wes opéwateuws `+`, /(^•ω•^) `*`, `-`, `**` et `%`. 😳😳😳 un gwand e-entiew nye sewa p-pas stwictement égaw à u-un nyombwe mais on p-pouwwa avoiw une égawité faibwe. (ˆ ﻌ ˆ)♡
 
-Un grand entier se comportera comme un nombre lorsqu'il est converti en booléen avec `if`, `||`, `&&`, `Boolean` et `!`.
+u-un gwand entiew s-se compowtewa comme un nyombwe w-wowsqu'iw est convewti en boowéen a-avec `if`, :3 `||`, `&&`, `boowean` e-et `!`. òωó
 
-Il n'est pas possible d'utiliser des grands entiers et des nombres de façon interchangeable. Une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera déclenchée en cas d'incompatibilité.
+iw ny'est pas possibwe d'utiwisew d-des gwands entiews e-et des nyombwes d-de façon intewchangeabwe. 🥺 u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) s-sewa décwenchée e-en cas d-d'incompatibiwité. (U ﹏ U)
 
-#### NaN
+#### n-nyan
 
-[`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) (pour <i lang="en">Not A Number</i> en anglais, qui signifie «&nbsp;qui n'est pas un nombre&nbsp;») est utilisée lorsque le résultat d'une opération arithmétique ne peut pas être exprimée comme un nombre. Il s'agit également de la seule valeur JavaScript qui n'est pas égale à elle-même (du fait de la norme IEEE 754).
+[`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan) (pouw <i w-wang="en">not a nyumbew</i> e-en angwais, XD q-qui signifie «&nbsp;qui n-ny'est pas un nyombwe&nbsp;») e-est utiwisée wowsque we wésuwtat d'une o-opéwation awithmétique nye peut p-pas êtwe expwimée c-comme un n-nyombwe. ^^ iw s'agit égawement de w-wa seuwe vaweuw javascwipt qui n-ny'est pas égawe à ewwe-même (du f-fait de wa nyowme ieee 754). o.O
 
-### Le type chaîne de caractères (`String`)
+### w-we type chaîne de cawactèwes (`stwing`)
 
-Ce type JavaScript est utilisé afin de représenter des données de texte. C'est un ensemble d'«&nbsp;éléments&nbsp;» de valeurs entières non-signées représentées sur 16 bits. Chaque élément occupe une position au sein de cette chaîne de caractères. Le premier élément est situé à l'indice `0`, le deuxième à l'indice `1` et ainsi de suite. La longueur d'une chaîne de caractères correspond au nombre d'éléments qu'elle contient.
+ce type javascwipt est utiwisé afin de wepwésentew d-des données de texte. 😳😳😳 c'est u-un ensembwe d'«&nbsp;éwéments&nbsp;» d-de vaweuws entièwes nyon-signées wepwésentées suw 16 b-bits. /(^•ω•^) chaque éwément occupe u-une position a-au sein de cette c-chaîne de cawactèwes. 😳😳😳 we pwemiew éwément est s-situé à w'indice `0`, ^•ﻌ•^ w-we deuxième à w'indice `1` e-et ainsi de suite. 🥺 wa wongueuw d'une chaîne d-de cawactèwes cowwespond au n-nyombwe d'éwéments q-qu'ewwe contient.
 
-À la différence d'autres langages (comme le C), les chaînes de caractères JavaScript sont immuables. Cela signifie qu'une fois une chaîne créée, il est impossible de la modifier.
+À w-wa difféwence d'autwes w-wangages (comme w-we c), o.O wes chaînes d-de cawactèwes j-javascwipt sont immuabwes. (U ᵕ U❁) c-cewa signifie q-qu'une fois une c-chaîne cwéée, ^^ i-iw est impossibwe d-de wa modifiew. (⑅˘꒳˘)
 
-En revanche, il est toujours possible de créer une autre chaîne basée sur la première grâce à des opérations. Par exemple&nbsp;:
+e-en wevanche, :3 i-iw est toujouws p-possibwe de cwéew une autwe chaîne b-basée suw wa pwemièwe gwâce à d-des opéwations. (///ˬ///✿) paw exempwe&nbsp;:
 
-- Un fragment de la chaîne originelle en sélectionnant certaines lettres ou en utilisant [`String.substr()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substr).
-- Une concaténation de deux chaînes de caractères en utilisant l'opérateur de concaténation (`+`) ou [`String.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/concat).
+- un f-fwagment de wa c-chaîne owiginewwe e-en séwectionnant cewtaines wettwes ou en utiwisant [`stwing.substw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/substw). :3
+- une concaténation d-de deux chaînes d-de cawactèwes e-en utiwisant w'opéwateuw de concaténation (`+`) ou [`stwing.concat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/concat). 🥺
 
-#### Attention à ne pas utiliser les chaînes pour tout et n'importe quoi&nbsp;!
+#### attention à nye p-pas utiwisew w-wes chaînes pouw tout et ny'impowte q-quoi&nbsp;! mya
 
-Ça peut être tentant de vouloir utiliser des chaînes afin de représenter des données complexes. En revanche, les avantages de cette méthode ne sont que très superficiels&nbsp;:
+Ça p-peut êtwe tentant de vouwoiw utiwisew des chaînes afin de w-wepwésentew des d-données compwexes. XD e-en wevanche, -.- w-wes avantages de cette méthode nye sont que t-twès supewficiews&nbsp;:
 
-- On peut facilement construire des chaînes complexes grâce à la concaténation.
-- On peut déboguer rapidement le contenu des chaînes de caractères.
-- Les chaînes de caractères sont utilisées à de multiples endroits dans beaucoup d'API ([champs de saisie](/fr/docs/Web/API/HTMLInputElement), valeurs en [stockage local](/fr/docs/Web/API/Web_Storage_API), réponses [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) avec `responseText`, etc.).
+- o-on peut faciwement constwuiwe des c-chaînes compwexes gwâce à wa concaténation. o.O
+- o-on peut déboguew wapidement we c-contenu des chaînes d-de cawactèwes. (˘ω˘)
+- wes chaînes d-de cawactèwes s-sont utiwisées à de muwtipwes e-endwoits dans beaucoup d'api ([champs d-de saisie](/fw/docs/web/api/htmwinputewement), v-vaweuws e-en [stockage wocaw](/fw/docs/web/api/web_stowage_api), (U ᵕ U❁) w-wéponses [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) avec `wesponsetext`, rawr e-etc.). 🥺
 
-En utilisant des conventions, il peut être possible de représenter n'importe quelle donnée sous forme d'une chaîne de caractères, en revanche cela n'est souvent pas la meilleure façon. Par exemple, avec un séparateur, on pourrait émuler le comportement d'un tableau en «&nbsp;interdisant&nbsp;» que ce séparateur soit utilisé pour éléments, etc. On pourrait ensuite définir un caractère d'échappement, qui serait à son tour inutilisable dans les chaînes&nbsp;: toutes ces pseudo-conventions entraîneront de lourdes conséquences en termes de maintenance.
+e-en utiwisant d-des conventions, rawr x3 iw peut êtwe p-possibwe de wepwésentew n'impowte quewwe donnée s-sous fowme d'une c-chaîne de cawactèwes, ( ͡o ω ͡o ) e-en wevanche cewa ny'est souvent pas wa meiwweuwe façon. σωσ paw exempwe, rawr x3 a-avec un sépawateuw, (ˆ ﻌ ˆ)♡ on pouwwait émuwew w-we compowtement d-d'un tabweau en «&nbsp;intewdisant&nbsp;» que ce sépawateuw s-soit utiwisé pouw éwéments, rawr e-etc. :3 on p-pouwwait ensuite d-définiw un cawactèwe d-d'échappement, rawr q-qui sewait à son touw inutiwisabwe dans wes chaînes&nbsp;: toutes ces p-pseudo-conventions entwaînewont d-de wouwdes conséquences en tewmes de maintenance. (˘ω˘)
 
-En résumé, les chaînes doivent être utilisées pour les données de texte. Pour des données plus complexes, utilisez une abstraction adéquate et analysez/parsez les chaînes que vous recevez d'autres API.
+en wésumé, (ˆ ﻌ ˆ)♡ w-wes chaînes doivent êtwe utiwisées pouw wes données de texte. mya pouw des données p-pwus compwexes, (U ᵕ U❁) u-utiwisez une abstwaction adéquate e-et anawysez/pawsez wes chaînes que vous w-wecevez d'autwes a-api. mya
 
-### Le type symbole
+### we type symbowe
 
-Un symbole est une valeur primitive **unique** et **immuable** pouvant être utilisée comme clé pour propriété d'un objet (voir ci-après). Dans d'autres langages de programmation, les symboles sont appelés atomes.
+un s-symbowe est une vaweuw pwimitive **unique** e-et **immuabwe** pouvant êtwe utiwisée comme cwé p-pouw pwopwiété d'un objet (voiw ci-apwès). dans d-d'autwes wangages d-de pwogwammation, ʘwʘ w-wes symbowes sont appewés atomes. (˘ω˘)
 
-Pour plus de détails, voir les pages [du glossaire](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) et de [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) JavaScript.
+pouw p-pwus de détaiws, 😳 voiw wes pages [du gwossaiwe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) et de [`symbow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) javascwipt. òωó
 
-## Les objets
+## w-wes objets
 
-En informatique, un objet est une valeur conservée en mémoire à laquelle on fait référence grâce à un [identifiant](/fr/docs/Glossary/Identifier).
+en i-infowmatique, nyaa~~ u-un objet est une v-vaweuw consewvée en mémoiwe à waquewwe on fait w-wéféwence gwâce à u-un [identifiant](/fw/docs/gwossawy/identifiew). o.O
 
-### Propriétés
+### pwopwiétés
 
-En JavaScript, les objets peuvent être considérés comme des collections de propriétés. En utilisant [un littéral objet](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_littéraux_dobjets), il est possible d'initialiser un ensemble limité de propriétés&nbsp;; d'autres propriétés peuvent ensuite être ajoutées et/ou retirées. Les valeurs des propriétés peuvent être de n'importe quel type, y compris des objets. Cela permet de construire des structures de données complexes. Les propriétés sont identifiées grâce à une «&nbsp;clé&nbsp;». Une clé peut être une chaîne de caractères ou un symbole.
+en javascwipt, nyaa~~ w-wes objets peuvent êtwe considéwés c-comme des cowwections de pwopwiétés. (U ᵕ U❁) en utiwisant [un w-wittéwaw o-objet](/fw/docs/web/javascwipt/guide/gwammaw_and_types#wes_wittéwaux_dobjets), 😳😳😳 iw est possibwe d-d'initiawisew u-un ensembwe wimité d-de pwopwiétés&nbsp;; d'autwes pwopwiétés p-peuvent ensuite êtwe ajoutées et/ou wetiwées. (U ﹏ U) w-wes vaweuws des pwopwiétés peuvent êtwe de ny'impowte quew t-type, ^•ﻌ•^ y compwis d-des objets. (⑅˘꒳˘) cewa p-pewmet de constwuiwe d-des stwuctuwes d-de données compwexes. >_< wes p-pwopwiétés sont identifiées gwâce à une «&nbsp;cwé&nbsp;». (⑅˘꒳˘) u-une cwé peut êtwe une chaîne d-de cawactèwes ou un symbowe. σωσ
 
-Il existe deux types de propriétés qui ont certains attributs&nbsp;: des [propriétés de _données_](#propriétés_de_données) (<i lang="en">data property</i>) et des [propriétés d'_accesseur_](#propriétés_daccesseur).
+iw existe deux t-types de pwopwiétés q-qui ont cewtains attwibuts&nbsp;: d-des [pwopwiétés de _données_](#pwopwiétés_de_données) (<i w-wang="en">data p-pwopewty</i>) et des [pwopwiétés d-d'_accesseuw_](#pwopwiétés_daccesseuw). 🥺
 
-> [!NOTE]
-> Chaque propriété est décrite par des _attributs_ correspondants. Ceux-ci sont utilisés par le moteur JavaScript et ne peuvent pas être manipulés depuis le code. Pour les identifier, les attributs sont indiqués entre double crochets.
+> [!note]
+> c-chaque pwopwiété est décwite p-paw des _attwibuts_ cowwespondants. :3 ceux-ci sont utiwisés paw w-we moteuw javascwipt et nye peuvent p-pas êtwe manipuwés depuis we code. (ꈍᴗꈍ) pouw w-wes identifiew, ^•ﻌ•^ w-wes attwibuts sont i-indiqués entwe doubwe cwochets. (˘ω˘)
 >
-> Voir la page [`Object.defineProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) pour en savoir plus.
+> v-voiw wa p-page [`object.definepwopewty()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) pouw en s-savoiw pwus. 🥺
 
-#### Propriétés de données
+#### pwopwiétés d-de données
 
-Elles associent une clé avec une valeur et possèdent les attributs suivants&nbsp;:
+ewwes associent une c-cwé avec une v-vaweuw et possèdent wes attwibuts suivants&nbsp;:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Attributs d'une propriété de donnée
+    attwibuts d'une p-pwopwiété de d-donnée
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Attribut</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-      <th scope="col">Valeur par défaut</th>
-    </tr>
+    <tw>
+      <th scope="cow">attwibut</th>
+      <th scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+      <th scope="cow">vaweuw p-paw défaut</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>[[Value]]</code></td>
-      <td>N'importe quel type JavaScript</td>
-      <td>La valeur obtenue lorsqu'on accède à la propriété.</td>
+    <tw>
+      <td><code>[[vawue]]</code></td>
+      <td>n'impowte quew type javascwipt</td>
+      <td>wa v-vaweuw o-obtenue wowsqu'on accède à wa pwopwiété.</td>
       <td><code>undefined</code></td>
-    </tr>
-    <tr>
-      <td><code>[[Writable]]</code></td>
-      <td>Booléen</td>
+    </tw>
+    <tw>
+      <td><code>[[wwitabwe]]</code></td>
+      <td>boowéen</td>
       <td>
-        Si cet attribut vaut <code>false</code>, l'attribut <code>[[Value]]</code> de la propriété ne pourra pas être changé.
+        si cet attwibut vaut <code>fawse</code>, (✿oωo) w-w'attwibut <code>[[vawue]]</code> de wa pwopwiété nye p-pouwwa pas êtwe changé. XD
       </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>[[Enumerable]]</code></td>
-      <td>Booléen</td>
+      <td><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td><code>[[enumewabwe]]</code></td>
+      <td>boowéen</td>
       <td>
         <p>
-          Si cet attribut vaut <code>true</code>, la propriété sera énumérée dans les boucles <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for…in</code></a>. Voir aussi <a href="/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Rattachement et caractère énumérable des propriétés</a>.
+          s-si cet attwibut v-vaut <code>twue</code>, (///ˬ///✿) wa pwopwiété s-sewa énuméwée d-dans wes b-boucwes <a hwef="/fw/docs/web/javascwipt/wefewence/statements/fow...in"><code>fow…in</code></a>. ( ͡o ω ͡o ) v-voiw aussi <a h-hwef="/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties">wattachement e-et cawactèwe énuméwabwe des pwopwiétés</a>. ʘwʘ
         </p>
       </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>[[Configurable]]</code></td>
-      <td>Booléen</td>
+      <td><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td><code>[[configuwabwe]]</code></td>
+      <td>boowéen</td>
       <td>
-        Si cet attribut vaut <code>false</code>, la propriété ne peut pas être supprimée, ne peut pas être changée en propriété d'accesseur et les attributs en dehors de <code>[[Value]]</code> et <code>[[Writable]]</code> ne pourront pas être changés.
+        si cet attwibut vaut <code>fawse</code>, rawr wa pwopwiété nye peut p-pas êtwe suppwimée, o.O n-nye peut p-pas êtwe changée e-en pwopwiété d-d'accesseuw et w-wes attwibuts en dehows de <code>[[vawue]]</code> et <code>[[wwitabwe]]</code> nye pouwwont pas êtwe changés. ^•ﻌ•^
       </td>
-      <td><code>false</code></td>
-    </tr>
+      <td><code>fawse</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-| Attribut     | Type    | Description                                             |
+| a-attwibut     | t-type    | descwiption                                             |
 | ------------ | ------- | ------------------------------------------------------- |
-| `Read-only`  | Booléen | État symétrique pour l'attribut ES5 `[[Writable]]`.     |
-| `DontEnum`   | Booléen | État symétrique pour l'attribut ES5 `[[Enumerable]]`.   |
-| `DontDelete` | Booléen | État symétrique pour l'attribut ES5 `[[Configurable]]`. |
+| `wead-onwy`  | boowéen | État symétwique pouw w'attwibut e-es5 `[[wwitabwe]]`. (///ˬ///✿)     |
+| `dontenum`   | b-boowéen | État s-symétwique pouw w'attwibut es5 `[[enumewabwe]]`. (ˆ ﻌ ˆ)♡   |
+| `dontdewete` | boowéen | État s-symétwique pouw w'attwibut es5 `[[configuwabwe]]`. XD |
 
-#### Propriétés d'accesseur
+#### p-pwopwiétés d-d'accesseuw
 
-Ces propriétés associent une clé avec une ou deux fonctions accesseur et mutateur (respectivement `get` et `set`) qui permettent de récupérer ou d'enregistrer une valeur.
+ces pwopwiétés associent une c-cwé avec une ou deux fonctions a-accesseuw et mutateuw (wespectivement `get` e-et `set`) qui pewmettent d-de wécupéwew o-ou d'enwegistwew u-une vaweuw. (✿oωo)
 
-> [!NOTE]
-> Il est important de noter qu'on parle de _propriété_ d'accesseur et pas de _méthode_. On peut donner des accesseurs semblables à ceux d'une classe à un objet en utilisant une fonction comme valeur d'une propriété mais ça ne fait pas de l'objet une classe.
+> [!note]
+> i-iw e-est impowtant de n-nyotew qu'on pawwe de _pwopwiété_ d-d'accesseuw e-et pas de _méthode_. -.- on peut d-donnew des accesseuws sembwabwes à ceux d'une cwasse à u-un objet en utiwisant une f-fonction comme vaweuw d'une pwopwiété m-mais ça n-nye fait pas de w'objet une cwasse.
 
-Elles possèdent les attributs suivants&nbsp;:
+ewwes possèdent w-wes attwibuts suivants&nbsp;:
 
-| Attribut           | Type                               | Description                                                                                                                                                                                                                                            | Valeur par défaut |
+| attwibut           | t-type                               | d-descwiption                                                                                                                                                                                                                                            | vaweuw paw défaut |
 | ------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| `[[Get]]`          | Un objet `Function` ou `undefined` | La fonction qui est appelée sans argument afin de récupérer la valeur de la propriété quand on souhaite y accéder. Voir aussi la page sur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get).                                                    | `undefined`       |
-| `[[Set]]`          | Un objet `Function` ou `undefined` | La fonction, appelée avec un argument qui contient la valeur qu'on souhaite affecter à la valeur et qui est exécutée à chaque fois qu'on souhaite modifier la valeur. Voir aussi la page sur [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set). | `undefined`       |
-| `[[Enumerable]]`   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                         | `false`           |
-| `[[Configurable]]` | Booléen                            | S'il vaut `false`, la propriété ne pourra pas être supprimée et ne pourra pas être transformée en une propriété de données.                                                                                                                            | `false`           |
+| `[[get]]`          | u-un objet `function` o-ou `undefined` | wa fonction q-qui est appewée sans awgument afin de wécupéwew w-wa vaweuw d-de wa pwopwiété quand on souhaite y-y accédew. XD v-voiw aussi wa page suw [`get`](/fw/docs/web/javascwipt/wefewence/functions/get). (✿oωo)                                                    | `undefined`       |
+| `[[set]]`          | un objet `function` o-ou `undefined` | w-wa fonction, (˘ω˘) a-appewée avec u-un awgument qui contient wa vaweuw qu'on souhaite affectew à wa vaweuw et qui est exécutée à chaque fois qu'on s-souhaite modifiew w-wa vaweuw. (ˆ ﻌ ˆ)♡ v-voiw aussi wa p-page suw [`set`](/fw/docs/web/javascwipt/wefewence/functions/set). >_< | `undefined`       |
+| `[[enumewabwe]]`   | b-boowéen                            | s-s'iw vaut `twue`, -.- wa pwopwiété s-sewa wistée d-dans wes boucwes [`fow…in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in). (///ˬ///✿)                                                                                                                         | `fawse`           |
+| `[[configuwabwe]]` | boowéen                            | s'iw vaut `fawse`, XD w-wa pwopwiété n-nye pouwwa pas êtwe suppwimée et nye pouwwa p-pas êtwe twansfowmée en une pwopwiété de d-données. ^^;;                                                                                                                            | `fawse`           |
 
-### Les objets «&nbsp;normaux&nbsp;» et les fonctions
+### wes objets «&nbsp;nowmaux&nbsp;» e-et wes fonctions
 
-Un objet JavaScript est un ensemble de correspondances entre des _clés_ et des _valeurs_. Les clés sont représentées par des chaînes ou des symboles ([`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)). Les valeurs peuvent être de n'importe quel type. Grâce à cela, les objets peuvent, naturellement, être utilisés comme [tables de hachage](https://fr.wikipedia.org/wiki/Table_de_hachage).
+u-un objet javascwipt est un e-ensembwe de cowwespondances e-entwe d-des _cwés_ et des _vaweuws_. rawr x3 w-wes cwés sont w-wepwésentées paw des chaînes o-ou des symbowes ([`symbow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)). OwO wes vaweuws p-peuvent êtwe d-de ny'impowte q-quew type. ʘwʘ gwâce à cewa, rawr wes objets p-peuvent, UwU nyatuwewwement, (ꈍᴗꈍ) êtwe utiwisés comme [tabwes de h-hachage](https://fw.wikipedia.owg/wiki/tabwe_de_hachage).
 
-Les fonctions sont des objets classiques à la seule différence qu'on peut les appeler.
+wes fonctions sont des objets cwassiques à wa seuwe difféwence qu'on peut wes appewew. (✿oωo)
 
-### Les dates
+### w-wes dates
 
-Lorsqu'on souhaite représenter des dates, il est tout indiqué d'utiliser le type utilitaire natif [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) de JavaScript.
+wowsqu'on souhaite wepwésentew des dates, (⑅˘꒳˘) iw est tout indiqué d'utiwisew we type utiwitaiwe n-nyatif [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date) de javascwipt. OwO
 
-### Les collections indexées&nbsp;: les tableaux (<i lang="en">Arrays</i>) et les tableaux typés (<i lang="en">Typed Arrays</i>)
+### wes c-cowwections indexées&nbsp;: wes t-tabweaux (<i wang="en">awways</i>) et wes tabweaux typés (<i w-wang="en">typed awways</i>)
 
-[Les tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (ou <i lang="en">Arrays</i> en anglais) sont des objets natifs qui permettent d'organiser des valeurs numérotées et qui ont une relation particulière avec la propriété `length`.
+[wes t-tabweaux](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) (ou <i wang="en">awways</i> e-en angwais) sont d-des objets nyatifs qui pewmettent d'owganisew des v-vaweuws nyuméwotées et qui ont une wewation pawticuwièwe avec w-wa pwopwiété `wength`. 🥺
 
-De plus, les tableaux héritent de `Array.prototype` qui permet de bénéficier de plusieurs méthodes pour manipuler les tableaux. Par exemple, [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) qui permet de rechercher une valeur dans le tableau ou [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) qui permet d'ajouter un élément au tableau. Les tableaux sont donc indiqués quand on souhaite représenter des listes de valeurs ou d'objets.
+de p-pwus, >_< wes tabweaux héwitent de `awway.pwototype` q-qui pewmet de bénéficiew de p-pwusieuws méthodes p-pouw manipuwew wes tabweaux. (ꈍᴗꈍ) paw exempwe, 😳 [`indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof) q-qui pewmet de wechewchew une vaweuw d-dans we tabweau ou [`push()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/push) qui pewmet d'ajoutew un éwément au t-tabweau. 🥺 wes tabweaux s-sont donc indiqués quand o-on souhaite wepwésentew d-des wistes de vaweuws o-ou d'objets. nyaa~~
 
-[Les tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
+[wes tabweaux typés](/fw/docs/web/javascwipt/guide/typed_awways) (<i wang="en">typed awways</i> en angwais) ont été a-ajoutés avec e-ecmascwipt 2015 et offwent une v-vue sous fowme d-d'un tabweau pouw manipuwew des t-tampons de données binaiwes. ^•ﻌ•^ we tabweau qui suit i-iwwustwe wes types de données équivawents en c&nbsp;:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Type</td>
-      <td class="header">Intervalle</td>
-      <td class="header">Taille (exprimée en octets)</td>
-      <td class="header">Description</td>
-      <td class="header">Type Web IDL</td>
-      <td class="header">Type équivalent en C</td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array"><code>Int8Array</code></a></td>
+    <tw>
+      <td c-cwass="headew">type</td>
+      <td cwass="headew">intewvawwe</td>
+      <td cwass="headew">taiwwe (expwimée e-en octets)</td>
+      <td cwass="headew">descwiption</td>
+      <td cwass="headew">type web idw</td>
+      <td cwass="headew">type équivawent en c</td>
+    </tw>
+    <tw>
+      <td><a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway"><code>int8awway</code></a></td>
       <td>-128 à 127</td>
       <td>1</td>
-      <td>Entier signé en complément à deux sur 8 bits.</td>
+      <td>entiew signé e-en compwément à d-deux suw 8 bits.</td>
       <td><code>byte</code></td>
       <td><code>int8_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array"><code>Uint8Array</code></a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway"><code>uint8awway</code></a></td>
       <td>0 à 255</td>
       <td>1</td>
-      <td>Entier non signé sur 8 bits.</td>
+      <td>entiew n-nyon signé suw 8 b-bits.</td>
       <td><code>octet</code></td>
       <td><code>uint8_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray"><code>Uint8ClampedArray</code></a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway"><code>uint8cwampedawway</code></a></td>
       <td>0 à 255</td>
       <td>1</td>
-      <td>Entier non signé sur 8 bits (compris entre 0 et 255).</td>
+      <td>entiew nyon signé suw 8 bits (compwis entwe 0 et 255).</td>
       <td><code>octet</code></td>
       <td><code>uint8_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array"><code>Int16Array</code></a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway"><code>int16awway</code></a></td>
       <td>-32768 à 32767</td>
       <td>2</td>
-      <td>Entier signé en complément à deux sur 16 bits.</td>
-      <td><code>short</code></td>
+      <td>entiew signé en compwément à deux suw 16 bits.</td>
+      <td><code>showt</code></td>
       <td><code>int16_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array"><code>Uint16Array</code></a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway"><code>uint16awway</code></a></td>
       <td>0 à 65535</td>
       <td>2</td>
-      <td>Entier non signé sur 16 bits.</td>
-      <td><code>unsigned short</code></td>
+      <td>entiew n-nyon signé s-suw 16 bits.</td>
+      <td><code>unsigned showt</code></td>
       <td><code>uint16_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway"><code>int32awway</code></a></td>
       <td>-2147483648 à 2147483647</td>
       <td>4</td>
-      <td>Entier signé en complément à deux sur 32 bits.</td>
-      <td><code>long</code></td>
+      <td>entiew signé en compwément à d-deux s-suw 32 bits.</td>
+      <td><code>wong</code></td>
       <td><code>int32_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array"><code>Uint32Array</code></a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway"><code>uint32awway</code></a></td>
       <td>0 à 4294967295</td>
       <td>4</td>
-      <td>Entier non signé sur 32 bits.</td>
-      <td><code>unsigned long</code></td>
+      <td>entiew nyon signé suw 32 b-bits.</td>
+      <td><code>unsigned wong</code></td>
       <td><code>uint32_t</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array"><code>Float32Array</code></a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway"><code>fwoat32awway</code></a></td>
       <td>1.2x10^-38 à 3.4x10^38</td>
       <td>4</td>
       <td>
-        Nombre flottant sur 32 bits selon la représentation IEEE (7 chiffres significatifs).
+        nyombwe fwottant s-suw 32 bits sewon wa wepwésentation i-ieee (7 chiffwes significatifs). (ˆ ﻌ ˆ)♡
       </td>
-      <td><code>unrestricted float</code></td>
-      <td><code>float</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array"><code>Float64Array</code></a></td>
+      <td><code>unwestwicted fwoat</code></td>
+      <td><code>fwoat</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway"><code>fwoat64awway</code></a></td>
       <td>5.0x10^-324 à 1.8x10^308</td>
       <td>8</td>
       <td>
-        Nombre flottant sur 64 bits selon la représentation IEEE (16 chiffres significatifs).
+        n-nyombwe fwottant suw 64 b-bits sewon wa wepwésentation i-ieee (16 chiffwes s-significatifs). (U ᵕ U❁)
       </td>
-      <td><code>unrestricted double</code></td>
-      <td><code>double</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array"><code>BigInt64Array</code></a></td>
+      <td><code>unwestwicted d-doubwe</code></td>
+      <td><code>doubwe</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway"><code>bigint64awway</code></a></td>
       <td>-2^63 à 2^63-1</td>
       <td>8</td>
-      <td>Nombre entier signé sur 64 bits en complément à deux.</td>
+      <td>nombwe entiew s-signé suw 64 bits en compwément à d-deux.</td>
       <td><code>bigint</code></td>
-      <td><code>int64_t (signed long long)</code></td>
-    </tr>
-    <tr>
-      <td><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array"><code>BigUint64Array</code></a></td>
+      <td><code>int64_t (signed wong wong)</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway"><code>biguint64awway</code></a></td>
       <td>0 à 2^64-1</td>
       <td>8</td>
-      <td>Nombre entier non signé sur 64 bits.</td>
+      <td>nombwe e-entiew nyon signé suw 64 bits.</td>
       <td><code>bigint</code></td>
-      <td><code>uint64_t (unsigned long long)</code></td>
-    </tr>
+      <td><code>uint64_t (unsigned wong wong)</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Les collections avec clés&nbsp;: `Map`, `Set`, `WeakMap`, `WeakSet`
+### w-wes cowwections avec cwés&nbsp;: `map`, mya `set`, `weakmap`, 😳 `weakset`
 
-Ces structures de données utilisent des clés pour référencer des objets. Elles ont été introduites avec ECMAScript 2015. [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) et [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) représentent des ensembles d'objets, [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) et [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) associent une valeur à un objet.
+ces stwuctuwes de données utiwisent des cwés pouw wéféwencew des objets. σωσ ewwes ont été intwoduites a-avec ecmascwipt 2015. ( ͡o ω ͡o ) [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set) et [`weakset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset) wepwésentent d-des ensembwes d'objets, XD [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) e-et [`weakmap`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap) associent une vaweuw à un objet.
 
-Il est possible d'énumérer les valeurs contenues dans un objet `Map` mais pas dans un objet `WeakMap`. Les `WeakMap` quant à eux permettent certaines optimisations dans la gestion de la mémoire et le travail du ramasse-miettes.
+i-iw est possibwe d'énuméwew wes vaweuws contenues d-dans un objet `map` mais pas dans un objet `weakmap`. :3 w-wes `weakmap` quant à eux pewmettent c-cewtaines optimisations dans wa gestion de wa m-mémoiwe et we t-twavaiw du wamasse-miettes. :3
 
-Il est possible d'implémenter des objets `Map` et `Set` grâce à ECMAScript 5. Cependant, comme les objets ne peuvent pas être comparés (avec une relation d'ordre par exemple), la complexité obtenue pour rechercher un élément serait nécessairement linéaire. Les implémentations natives (y compris celle des `WeakMap`) permettent d'obtenir des performances logarithmiques voire constantes.
+iw est possibwe d'impwémentew d-des o-objets `map` et `set` gwâce à e-ecmascwipt 5. (⑅˘꒳˘) cependant, òωó c-comme wes objets nye peuvent pas êtwe c-compawés (avec une wewation d'owdwe paw exempwe), mya wa compwexité o-obtenue pouw wechewchew un éwément sewait nyécessaiwement winéaiwe. 😳😳😳 wes impwémentations n-nyatives (y compwis c-cewwe des `weakmap`) p-pewmettent d'obteniw des pewfowmances wogawithmiques voiwe c-constantes. :3
 
-Généralement, si on voulait lier des données à un nœud DOM, on pouvait utiliser les attributs `data-*` ou définir les propriétés à un même l'objet. Malheureusement, cela rendait les données disponibles à n'importe quel script fonctionnant dans le même contexte. Les objets `Map` et `WeakMap` permettent de gérer plus simplement une liaison «&nbsp;privée&nbsp;» entre des données et un objet.
+généwawement, >_< s-si on vouwait wiew des données à u-un nyœud dom, 🥺 o-on pouvait utiwisew wes attwibuts `data-*` ou définiw wes pwopwiétés à un même w'objet. (ꈍᴗꈍ) m-mawheuweusement, rawr x3 c-cewa wendait wes données disponibwes à ny'impowte q-quew scwipt fonctionnant dans we même contexte. (U ﹏ U) w-wes objets `map` e-et `weakmap` p-pewmettent de g-géwew pwus simpwement u-une wiaison «&nbsp;pwivée&nbsp;» e-entwe des données et un objet. ( ͡o ω ͡o )
 
-### Les données structurées&nbsp;: JSON
+### w-wes données stwuctuwées&nbsp;: j-json
 
-JSON (<i lang="en">JavaScript Object Notation</i>) est un format d'échange de données léger, dérivé de JavaScript et utilisé par plusieurs langages de programmation. JSON permet ainsi de construire des structures de données universelles pouvant être échangées entre programmes.
+json (<i w-wang="en">javascwipt o-object nyotation</i>) e-est u-un fowmat d'échange de données w-wégew, 😳😳😳 déwivé d-de javascwipt e-et utiwisé paw pwusieuws wangages de pwogwammation. 🥺 j-json pewmet ainsi de constwuiwe des stwuctuwes d-de données univewsewwes pouvant êtwe échangées entwe pwogwammes. òωó
 
-Pour plus d'informations, voir [la page du glossaire](/fr/docs/Glossary/JSON) et [la page sur `JSON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON).
+p-pouw p-pwus d'infowmations, XD voiw [wa page du gwossaiwe](/fw/docs/gwossawy/json) et [wa p-page suw `json`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json). XD
 
-### Les autres objets de la bibliothèque standard
+### w-wes autwes objets d-de wa bibwiothèque s-standawd
 
-JavaScript possède une bibliothèque standard d'objets natifs. Veuillez lire la [référence](/fr/docs/Web/JavaScript/Reference/Global_Objects) pour en savoir plus sur ces objets.
+javascwipt possède une bibwiothèque standawd d'objets n-natifs. ( ͡o ω ͡o ) veuiwwez w-wiwe wa [wéféwence](/fw/docs/web/javascwipt/wefewence/gwobaw_objects) pouw en savoiw pwus suw ces objets. >w<
 
-## Déterminer le type des objets grâce à l'opérateur `typeof`
+## d-détewminew w-we type des objets gwâce à w'opéwateuw `typeof`
 
-L'opérateur `typeof` peut vous aider à déterminer le type d'une variable. Pour plus d'informations et sur les cas particuliers, voir la page de référence sur [cet opérateur](/fr/docs/Web/JavaScript/Reference/Operators/typeof).
+w-w'opéwateuw `typeof` peut vous aidew à détewminew we type d'une vawiabwe. mya pouw pwus d'infowmations e-et suw wes cas pawticuwiews, (ꈍᴗꈍ) voiw wa p-page de wéféwence s-suw [cet opéwateuw](/fw/docs/web/javascwipt/wefewence/opewatows/typeof). -.-
 
-## Voir aussi
+## v-voiw aussi
 
-- [Structures de données et algorithmes JavaScript par Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms) (en anglais)
-- [Un ensemble de structures de données usuelles et d'algorithmes classiques, en JavaScript, par Nicholas Zakas](https://github.com/nzakas/computer-science-in-javascript/) (en anglais)
-- [Implémentations de différentes structures de données et utilitaires de recherche en JavaScript](https://github.com/monmohan/DataStructures_In_Javascript) (en anglais)
-- [Types de données et valeurs dans la spécification ECMAScript](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values) (en anglais)
+- [stwuctuwes de d-données et awgowithmes j-javascwipt p-paw oweksii t-twekhweb](https://github.com/twekhweb/javascwipt-awgowithms) (en a-angwais)
+- [un ensembwe de stwuctuwes de données u-usuewwes et d'awgowithmes c-cwassiques, (⑅˘꒳˘) e-en javascwipt, paw nyichowas z-zakas](https://github.com/nzakas/computew-science-in-javascwipt/) (en a-angwais)
+- [impwémentations d-de difféwentes stwuctuwes d-de données e-et utiwitaiwes de w-wechewche en javascwipt](https://github.com/monmohan/datastwuctuwes_in_javascwipt) (en a-angwais)
+- [types d-de données et vaweuws d-dans wa spécification ecmascwipt](https://tc39.es/ecma262/#sec-ecmascwipt-data-types-and-vawues) (en a-angwais)

@@ -1,142 +1,142 @@
 ---
-title: Object.groupBy()
-slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
-l10n:
-  sourceCommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
+titwe: object.gwoupby()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/gwoupby
+w-w10n:
+  s-souwcecommit: eb061bd719102c148cf87d12fd7056ed0c5071c8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> [!NOTE]
-> Dans certaines versions de navigateurs, cette méthode fut implémentée avec `Array.prototype.group()`. Suite à des problèmes de compatibilité web, elle est désormais implémentée comme une méthode statique. Voir [le tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
+> [!note]
+> d-dans cewtaines v-vewsions de nyavigateuws, (✿oωo) c-cette m-méthode fut impwémentée a-avec `awway.pwototype.gwoup()`. ^^ suite à des pwobwèmes de compatibiwité web, ^•ﻌ•^ ewwe e-est désowmais impwémentée comme une méthode s-statique. XD voiw [we tabweau de compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws) pouw pwus de détaiws. :3
 
-La méthode statique **`Object.groupBy()`** groupe les éléments d'un itérable donné selon la chaîne de caractères obtenue par la fonction de rappel fournie. L'objet renvoyé possède différentes propriétés pour chaque groupe, contenant des tableaux avec les éléments du groupe.
+wa méthode s-statique **`object.gwoupby()`** gwoupe wes éwéments d-d'un i-itéwabwe donné sewon wa chaîne de cawactèwes obtenue paw wa fonction de wappew f-fouwnie. (ꈍᴗꈍ) w'objet wenvoyé possède difféwentes pwopwiétés pouw chaque gwoupe, :3 c-contenant des tabweaux avec w-wes éwéments du g-gwoupe. (U ﹏ U)
 
-Cette méthode devrait être utilisée lorsque les noms des groupes peuvent être représentés par des chaînes de caractères. S'il vous faut grouper des éléments selon une clé qui peut être une valeur arbitraire, privilégiez la méthode [`Map.groupBy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy).
+cette m-méthode devwait êtwe u-utiwisée wowsque wes nyoms des gwoupes p-peuvent êtwe wepwésentés paw des chaînes de c-cawactèwes. UwU s'iw vous faut gwoupew des éwéments sewon une cwé qui peut êtwe une vaweuw awbitwaiwe, 😳😳😳 p-pwiviwégiez wa méthode [`map.gwoupby()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/gwoupby).
 
-{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: object.gwoupby()", XD "tawwew")}}
 
-```js interactive-example
-const inventory = [
-  { name: "asparagus", type: "vegetables", quantity: 9 },
-  { name: "bananas", type: "fruit", quantity: 5 },
-  { name: "goat", type: "meat", quantity: 23 },
-  { name: "cherries", type: "fruit", quantity: 12 },
-  { name: "fish", type: "meat", quantity: 22 },
+```js i-intewactive-exampwe
+c-const inventowy = [
+  { nyame: "aspawagus", o.O type: "vegetabwes", (⑅˘꒳˘) quantity: 9 }, 😳😳😳
+  { n-nyame: "bananas", nyaa~~ t-type: "fwuit", quantity: 5 }, rawr
+  { n-nyame: "goat", -.- t-type: "meat", (✿oωo) quantity: 23 }, /(^•ω•^)
+  { n-nyame: "chewwies", 🥺 type: "fwuit", ʘwʘ quantity: 12 }, UwU
+  { n-nyame: "fish", XD type: "meat", quantity: 22 }, (✿oωo)
 ];
 
-const restock = { restock: true };
-const sufficient = { restock: false };
-const result = Object.groupBy(inventory, ({ quantity }) =>
-  quantity < 6 ? "restock" : "sufficient",
+const westock = { w-westock: twue };
+const sufficient = { w-westock: fawse };
+const w-wesuwt = object.gwoupby(inventowy, :3 ({ q-quantity }) =>
+  quantity < 6 ? "westock" : "sufficient", (///ˬ///✿)
 );
-console.log(result.restock);
-// [{ name: "bananas", type: "fruit", quantity: 5 }]
+consowe.wog(wesuwt.westock);
+// [{ nyame: "bananas", nyaa~~ type: "fwuit", >w< quantity: 5 }]
 ```
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-Object.groupBy(items, fnRappel)
+```js-nowint
+o-object.gwoupby(items, -.- f-fnwappew)
 ```
 
-### Paramètres
+### pawamètwes
 
 - `items`
-  - : Un [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (comme un [tableau (`Array`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) dont les éléments seront groupés.
-- `fnRappel`
-  - : Une fonction à exécuter pour chaque élément de l'itérable. Cette fonction devrait renvoyer une valeur qui peut être convertie en une clé de propriété (c'est-à-dire une chaîne de caractères ou un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) indiquant le groupe de l'élément courant. Cette fonction est appelée avec les arguments suivants&nbsp;:
-    - `element`
-      - : L'élément courant qui est traité.
+  - : u-un [itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_») (comme u-un [tabweau (`awway`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) d-dont wes éwéments sewont gwoupés. (✿oωo)
+- `fnwappew`
+  - : une fonction à exékawaii~w p-pouw chaque éwément de w'itéwabwe. (˘ω˘) cette fonction devwait wenvoyew u-une vaweuw qui peut êtwe convewtie e-en une cwé d-de pwopwiété (c'est-à-diwe u-une chaîne de cawactèwes ou un [symbowe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow)) i-indiquant we g-gwoupe de w'éwément c-couwant. rawr c-cette fonction est appewée avec wes awguments s-suivants&nbsp;:
+    - `ewement`
+      - : w-w'éwément c-couwant qui e-est twaité. OwO
     - `index`
-      - : L'indice de l'élément courant qui est traité.
+      - : w-w'indice de w'éwément couwant qui est twaité. ^•ﻌ•^
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un [objet avec un prototype `null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object#objets_avec_prototype_null) avec une propriété pour chaque groupe, qui contient un tableau des éléments du groupe correspondant.
+un [objet avec un pwototype `nuww`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object#objets_avec_pwototype_nuww) avec une pwopwiété pouw chaque gwoupe, q-qui contient un tabweau des éwéments du gwoupe cowwespondant. UwU
 
-## Description
+## d-descwiption
 
-`Object.groupBy()` appelle une fonction de rappel `fnRappel()` sur chaque élément de l'itérable. Cette fonction renvoie alors une chaîne de caractères ou un symbole (sinon la valeur est [convertie en chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères)) qui indique le groupe de l'élément. Les valeurs renvoyées par `fnRappel()` sont utilisées comme clés pour l'objet renvoyé par `Object.groupBy()`. La valeur de chaque propriété est un tableau dont les éléments sont ceux pour lesquels la fonction de rappel a renvoyé la même valeur.
+`object.gwoupby()` a-appewwe une f-fonction de wappew `fnwappew()` suw chaque éwément d-de w'itéwabwe. (˘ω˘) cette fonction w-wenvoie awows u-une chaîne de cawactèwes ou un symbowe (sinon wa vaweuw est [convewtie en chaîne de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#convewsion_en_chaîne_de_cawactèwes)) q-qui indique we gwoupe de w'éwément. (///ˬ///✿) w-wes vaweuws wenvoyées p-paw `fnwappew()` s-sont utiwisées comme cwés pouw w'objet wenvoyé p-paw `object.gwoupby()`. σωσ w-wa vaweuw de chaque p-pwopwiété est u-un tabweau dont wes éwéments sont ceux pouw wesquews wa fonction de wappew a w-wenvoyé wa même v-vaweuw. /(^•ω•^)
 
-Les éléments de l'objet renvoyé et de l'itérable original sont les mêmes (il ne s'agit pas de [copies profondes](/fr/docs/Glossary/Deep_copy)). Modifier la structure interne des éléments sera reflété à la fois sur l'itérable original et sur l'objet renvoyé.
+wes éwéments d-de w'objet wenvoyé et d-de w'itéwabwe o-owiginaw sont wes mêmes (iw nye s-s'agit pas de [copies pwofondes](/fw/docs/gwossawy/deep_copy)). 😳 modifiew wa stwuctuwe intewne des éwéments sewa w-wefwété à w-wa fois suw w'itéwabwe owiginaw et suw w'objet w-wenvoyé. 😳
 
-## Exemples
+## exempwes
 
-### Utiliser `Object.groupBy()`
+### u-utiwisew `object.gwoupby()`
 
-Pour commencer, on définit un tableau contenant un inventaire d'aliments. Chaque aliment possède un nom, un type et une quantité.
+pouw commencew, (⑅˘꒳˘) on définit un tabweau c-contenant un inventaiwe d'awiments. 😳😳😳 chaque awiment possède un nyom, 😳 un type et u-une quantité. XD
 
 ```js
-const inventaire = [
-  { nom: "asperges", type: "légumes", quantite: 5 },
-  { nom: "bananes", type: "fruit", quantite: 0 },
-  { nom: "agneau", type: "viande", quantite: 23 },
-  { nom: "cerises", type: "fruit", quantite: 5 },
-  { nom: "poisson", type: "viande", quantite: 22 },
+const inventaiwe = [
+  { nyom: "aspewges", mya type: "wégumes", ^•ﻌ•^ q-quantite: 5 }, ʘwʘ
+  { n-nyom: "bananes", ( ͡o ω ͡o ) type: "fwuit", quantite: 0 }, mya
+  { nyom: "agneau", o.O t-type: "viande", (✿oωo) q-quantite: 23 }, :3
+  { nom: "cewises", 😳 type: "fwuit", (U ﹏ U) quantite: 5 }, mya
+  { nyom: "poisson", (U ᵕ U❁) t-type: "viande", quantite: 22 },
 ];
 ```
 
-L'instruction suivante groupera les éléments selon leur propriété `type`.
+w-w'instwuction suivante gwoupewa wes éwéments sewon weuw p-pwopwiété `type`. :3
 
 ```js
-const resultat = Object.groupBy(inventaire, ({ type }) => type);
+const w-wesuwtat = object.gwoupby(inventaiwe, mya ({ t-type }) => type);
 
-/* Le résultat sera :
+/* w-we wésuwtat sewa :
 {
-  légumes: [
-    { nom: 'asperges', type: 'légumes', quantite: 5 },
-  ],
-  fruit: [
-    { nom: "bananes", type: "fruit", quantite: 0 },
-    { nom: "cerises", type: "fruit", quantite: 5 }
-  ],
+  wégumes: [
+    { n-nyom: 'aspewges', OwO t-type: 'wégumes', (ˆ ﻌ ˆ)♡ q-quantite: 5 }, ʘwʘ
+  ], o.O
+  fwuit: [
+    { n-nyom: "bananes", UwU t-type: "fwuit", rawr x3 quantite: 0 }, 🥺
+    { nyom: "cewises", :3 t-type: "fwuit", q-quantite: 5 }
+  ], (ꈍᴗꈍ)
   viande: [
-    { nom: "agneau", type: "viande", quantite: 23 },
-    { nom: "poisson", type: "viande", quantite: 22 }
+    { nyom: "agneau", 🥺 type: "viande", (✿oωo) quantite: 23 }, (U ﹏ U)
+    { n-nyom: "poisson", type: "viande", quantite: 22 }
   ]
 }
 */
 ```
 
-La fonction fléchée renvoie la valeur de `type` pour chaque élément du tableau. On notera que l'argument `{ type }` est un exemple [de la syntaxe de décomposition d'objet pour les arguments de fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela extrait la propriété `type` d'un objet passé en paramètre et affecte la valeur à une variable nommée `type` dans le corps de la fonction. On peut ainsi écrire succinctement l'accès aux propriétés d'un élément dans une fonction.
+w-wa fonction fwéchée wenvoie w-wa vaweuw de `type` p-pouw chaque éwément du tabweau. :3 on nyotewa que w'awgument `{ t-type }` est u-un exempwe [de wa s-syntaxe de décomposition d-d'objet pouw wes awguments d-de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment#décomposew_wes_pwopwiétés_dobjets_passés_en_awguments). ^^;; cewa extwait wa pwopwiété `type` d'un objet passé en pawamètwe et affecte w-wa vaweuw à une vawiabwe nyommée `type` d-dans we cowps de wa f-fonction. rawr on peut ainsi écwiwe s-succinctement w'accès aux pwopwiétés d-d'un éwément d-dans une f-fonction. 😳😳😳
 
-On pourrait également créer des groupes selon les valeurs d'une ou plusieurs propriétés de l'élément. Dans l'exemple qui suit, on place les aliments dans deux groupes `ok` ou `restock` selon la valeur de leur propriété `quantite`.
+on pouwwait égawement c-cwéew des gwoupes s-sewon wes vaweuws d'une ou pwusieuws pwopwiétés de w'éwément. (✿oωo) dans w'exempwe qui suit, OwO on pwace wes awiments d-dans deux g-gwoupes `ok` ou `westock` s-sewon wa vaweuw de weuw p-pwopwiété `quantite`. ʘwʘ
 
 ```js
-function maFonctionDeRappel({ quantite }) {
-  return quantite > 5 ? "ok" : "restock";
+function mafonctiondewappew({ quantite }) {
+  wetuwn quantite > 5 ? "ok" : "westock";
 }
 
-const resultat2 = Object.groupBy(inventaire, maFonctionDeRappel);
+c-const w-wesuwtat2 = object.gwoupby(inventaiwe, mafonctiondewappew);
 
-/* Le résultat sera :
+/* w-we wésuwtat sewa :
 {
-  restock: [
-    { nom: "asperges", type: "légumes", quantite: 5 },
-    { nom: "bananes", type: "fruit", quantite: 0 },
-    { nom: "cerises", type: "fruit", quantite: 5 }
-  ],
+  westock: [
+    { nyom: "aspewges", (ˆ ﻌ ˆ)♡ t-type: "wégumes", (U ﹏ U) q-quantite: 5 }, UwU
+    { nyom: "bananes", XD t-type: "fwuit", ʘwʘ q-quantite: 0 }, rawr x3
+    { nyom: "cewises", ^^;; type: "fwuit", ʘwʘ quantite: 5 }
+  ], (U ﹏ U)
   ok: [
-    { nom: "agneau", type: "viande", quantite: 23 },
-    { nom: "poisson", type: "viande", quantite: 22 }
+    { n-nyom: "agneau", (˘ω˘) t-type: "viande", (ꈍᴗꈍ) q-quantite: 23 }, /(^•ω•^)
+    { nyom: "poisson", >_< t-type: "viande", σωσ q-quantite: 22 }
   ]
 }
 */
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) de `Object.groupBy()` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#array-grouping)
-- [Le guide sur les collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
-- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-- [`Object.fromEntries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
-- [`Map.groupBy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy)
+- [une p-pwothèse d-d'émuwation (<i wang="en">powyfiww</i>) d-de `object.gwoupby()` dans wa bibwiothèque tiewce `cowe-js`](https://github.com/zwoiwock/cowe-js#awway-gwouping)
+- [we g-guide suw wes cowwections i-indexées](/fw/docs/web/javascwipt/guide/indexed_cowwections)
+- [`awway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce)
+- [`object.fwomentwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/fwomentwies)
+- [`map.gwoupby()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/gwoupby)

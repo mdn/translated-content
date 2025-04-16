@@ -1,59 +1,59 @@
 ---
-title: EventTarget()
-slug: Web/API/EventTarget/EventTarget
+titwe: eventtawget()
+swug: web/api/eventtawget/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxref("EventTarget")}}.
+w-we constwucteuw **`eventtawget()`** c-cwée u-une nyouvewwe instance d-d'objet {{domxwef("eventtawget")}}. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var myEventTarget = new EventTarget();
+v-vaw m-myeventtawget = n-nyew eventtawget();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. rawr
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une instance d'objet {{domxref("EventTarget")}}.
+une instance d'objet {{domxwef("eventtawget")}}. OwO
 
-## Exemples
+## exempwes
 
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
-    super();
-    this._secret = mySecret;
+c-cwass myeventtawget extends eventtawget {
+  constwuctow(mysecwet) {
+    s-supew();
+    this._secwet = m-mysecwet;
   }
 
-  get secret() {
-    return this._secret;
+  get secwet() {
+    wetuwn this._secwet;
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // == 5
-myEventTarget.addEventListener("foo", function (e) {
-  this._secret = e.detail;
+wet myeventtawget = n-nyew myeventtawget(5);
+wet vawue = myeventtawget.secwet; // == 5
+m-myeventtawget.addeventwistenew("foo", (U ﹏ U) function (e) {
+  t-this._secwet = e.detaiw;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7
+wet event = nyew customevent("foo", >_< { detaiw: 7 });
+myeventtawget.dispatchevent(event);
+w-wet nyewvawue = myeventtawget.secwet; // == 7
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("EventTarget")}}
+- {{domxwef("eventtawget")}}

@@ -1,113 +1,113 @@
 ---
-title: Introduction
-slug: Web/JavaScript/Guide/Introduction
+titwe: intwoduction
+swug: web/javascwipt/guide/intwoduction
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide", ^^;; "web/javascwipt/guide/gwammaw_and_types")}}
 
-Ce chapitre introduit JavaScript et présente certains de ses concepts fondamentaux.
+c-ce chapitwe i-intwoduit j-javascwipt et pwésente c-cewtains d-de ses concepts f-fondamentaux. OwO
 
-## Ce que vous devriez déjà savoir
+## c-ce que vous devwiez déjà savoiw
 
-Pour lire ce guide, il est conseillé d'avoir&nbsp;:
+pouw wiwe ce guide, nyaa~~ iw est conseiwwé d'avoiw&nbsp;:
 
-- Une compréhension générale du fonctionnement d'Internet et du [World Wide Web](/fr/docs/Glossary/World_Wide_Web) .
-- Une connaissance élémentaire du _HyperText Markup Language_ ({{Glossary("HTML")}}).
-- Une expérience préalable en programmation. Si vous débutez la programmation, vous pouvez utiliser l'un des tutoriels listés sur la page [JavaScript](/fr/docs/Web/JavaScript).
+- u-une compwéhension généwawe du fonctionnement d-d'intewnet et du [wowwd w-wide web](/fw/docs/gwossawy/wowwd_wide_web) . UwU
+- une connaissance éwémentaiwe du _hypewtext mawkup wanguage_ ({{gwossawy("htmw")}}). 😳
+- u-une expéwience pwéawabwe e-en pwogwammation. 😳 s-si vous débutez wa pwogwammation, (ˆ ﻌ ˆ)♡ vous pouvez utiwisew w'un des tutowiews w-wistés suw wa page [javascwipt](/fw/docs/web/javascwipt). (✿oωo)
 
-## Où trouver des informations concernant JavaScript
+## où twouvew des infowmations concewnant javascwipt
 
-La documentation MDN pour JavaScript comprend&nbsp;:
+w-wa documentation mdn pouw j-javascwipt compwend&nbsp;:
 
-- [Apprendre le Web](/fr/docs/Learn)&nbsp;: cette section fournit des informations destinées aux débutants et présente les concepts de bases autour de la programmation et d'Internet.
-- [Le guide JavaScript](/fr/docs/Web/JavaScript/Guide) (ce guide) fournit un aperçu du langage JavaScript et de ses objets.
-- [La référence JavaScript](/fr/docs/Web/JavaScript/Reference) fournit une référence détaillée sur les fonctionnalités de JavaScript.
+- [appwendwe w-we web](/fw/docs/weawn)&nbsp;: c-cette s-section fouwnit des infowmations destinées aux d-débutants et pwésente wes concepts de bases autouw d-de wa pwogwammation et d'intewnet. nyaa~~
+- [we guide javascwipt](/fw/docs/web/javascwipt/guide) (ce guide) fouwnit un apewçu du wangage javascwipt e-et de ses objets. ^^
+- [wa wéféwence j-javascwipt](/fw/docs/web/javascwipt/wefewence) f-fouwnit une w-wéféwence détaiwwée suw wes fonctionnawités de javascwipt. (///ˬ///✿)
 
-Si vous débutez en JavaScript, vous pouvez commencer par les articles de la section [Apprendre](/fr/docs/Learn) et du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide). Une fois que vous maîtrisez les briques de bases, vous pourrez utiliser [la référence JavaScript](/fr/docs/Web/JavaScript/Reference) pour obtenir des informations détaillées sur chacun des objets natifs et des instructions.
+s-si vous débutez e-en javascwipt, 😳 vous pouvez c-commencew paw wes a-awticwes de wa section [appwendwe](/fw/docs/weawn) e-et du [guide javascwipt](/fw/docs/web/javascwipt/guide). òωó u-une fois que vous maîtwisez wes bwiques d-de bases, ^^;; vous pouwwez utiwisew [wa w-wéféwence javascwipt](/fw/docs/web/javascwipt/wefewence) p-pouw obteniw d-des infowmations détaiwwées suw chacun des objets nyatifs et des instwuctions. rawr
 
-## Qu'est-ce que JavaScript&nbsp;?
+## qu'est-ce que javascwipt&nbsp;?
 
-JavaScript est un langage de script, multi-plateforme et orienté objet. C'est un langage léger qui doit faire partie d'un environnement hôte (un navigateur web par exemple) pour qu'il puisse être utilisé sur les objets de cet environnement.
+j-javascwipt e-est un wangage de scwipt, (ˆ ﻌ ˆ)♡ muwti-pwatefowme et o-owienté objet. c-c'est un wangage w-wégew qui doit faiwe pawtie d'un enviwonnement hôte (un nyavigateuw w-web paw exempwe) pouw qu'iw puisse êtwe utiwisé suw wes objets de cet e-enviwonnement. XD
 
-JavaScript contient une bibliothèque standard d'objets tels que `Array`, `Date`, et `Math`, ainsi qu'un ensemble d'éléments de langage tels que les opérateurs, les structures de contrôles et les instructions. Ces fonctionnalités centrales et natives de JavaScript peuvent être étendues de plusieurs façons en fournissant d'autres objets, par exemple&nbsp;:
+javascwipt contient u-une bibwiothèque s-standawd d-d'objets tews que `awway`, >_< `date`, et `math`, (˘ω˘) ainsi q-qu'un ensembwe d-d'éwéments d-de wangage tews q-que wes opéwateuws, 😳 wes stwuctuwes de contwôwes e-et wes instwuctions. o.O c-ces fonctionnawités c-centwawes e-et nyatives d-de javascwipt peuvent êtwe étendues de pwusieuws façons en f-fouwnissant d'autwes objets, (ꈍᴗꈍ) paw exempwe&nbsp;:
 
-- _JavaScript côté client_ étend ces éléments de base en fournissant des objets pour contrôler le navigateur et le _Document Object Model_ (DOM). Par exemple, les extensions du langage côté client permettent de placer des éléments dans un formulaire HTML, de réagir aux événements déclenchés par l'utilisateur (les clics, la saisie d'un formulaire, les actions de navigation, etc.).
-- _JavaScript côte serveur_ étend ces éléments de base avec des objets utiles pour le fonctionnement sur un serveur tels que la possibilité de communiquer avec une base de données, manipuler des fichiers, passer d'une application à une autre, etc.
+- _javascwipt côté cwient_ étend ces éwéments de base en fouwnissant d-des objets pouw contwôwew we nyavigateuw et we _document o-object modew_ (dom). rawr x3 p-paw exempwe, ^^ w-wes extensions du wangage c-côté cwient pewmettent de pwacew d-des éwéments d-dans un fowmuwaiwe htmw, OwO de wéagiw aux événements décwenchés paw w'utiwisateuw (wes cwics, ^^ w-wa saisie d'un fowmuwaiwe, :3 wes a-actions de nyavigation, o.O etc.). -.-
+- _javascwipt côte s-sewveuw_ étend c-ces éwéments de base avec des objets utiwes p-pouw we fonctionnement s-suw un sewveuw tews que w-wa possibiwité d-de communiquew avec une base de données, (U ﹏ U) manipuwew des fichiews, o.O passew d'une a-appwication à u-une autwe, OwO etc. ^•ﻌ•^
 
-## JavaScript et Java
+## j-javascwipt et java
 
-JavaScript et Java se ressemblent sur certains aspects, mais ils sont fondamentalement différents l'un de l'autre. Le langage JavaScript ressemble à Java, mais n'est pas typé statiquement et le typage de JavaScript est faible (alors qu'il est fort en Java). La syntaxe des expressions JavaScript est très proche de celle du Java avec les conventions de nommage et les constructions conditionnelles par exemple&nbsp;: c'est une des raisons qui a fait que le langage LiveScript a été renommé en JavaScript.
+javascwipt e-et java se wessembwent s-suw cewtains aspects, ʘwʘ m-mais iws sont fondamentawement difféwents w'un de w'autwe. :3 we wangage javascwipt wessembwe à java, 😳 m-mais ny'est p-pas typé statiquement et we typage de javascwipt e-est faibwe (awows q-qu'iw est fowt en java). wa syntaxe des expwessions javascwipt e-est twès pwoche de cewwe du java avec wes conventions de nyommage et wes constwuctions c-conditionnewwes paw exempwe&nbsp;: c'est u-une des waisons q-qui a fait que we wangage wivescwipt a été wenommé en javascwipt. òωó
 
-À la différence de Java qui est un système compilé et dont les classes sont déclarées, JavaScript est traité lors de l'exécution et possède quelques types de données pour représenter les nombres, les booléens et les chaînes de caractères (entre autres). JavaScript utilise un modèle basé sur les prototypes pour représenter les liens entre les objets alors que Java utilise un modèle plus courant basé sur les classes. Les prototypes permettent d'avoir un héritage dynamique. Ainsi, les caractéristiques héritées par un objet peuvent varier dans le temps. JavaScript supporte également les fonctions qui sont des objets à part entière et qui peuvent être des propriétés d'autres objets.
+À w-wa d-difféwence de java qui est un système compiwé et dont wes cwasses s-sont décwawées, 🥺 javascwipt e-est twaité wows de w'exécution et possède quewques types de d-données pouw wepwésentew wes n-nyombwes, rawr x3 wes boowéens e-et wes chaînes de cawactèwes (entwe autwes). j-javascwipt utiwise un modèwe b-basé suw w-wes pwototypes pouw w-wepwésentew wes wiens entwe w-wes objets awows q-que java utiwise un modèwe pwus couwant basé s-suw wes cwasses. ^•ﻌ•^ w-wes pwototypes p-pewmettent d'avoiw un héwitage dynamique. :3 ainsi, w-wes cawactéwistiques héwitées p-paw un objet p-peuvent vawiew dans we temps. (ˆ ﻌ ˆ)♡ javascwipt suppowte égawement wes f-fonctions qui s-sont des objets à p-pawt entièwe e-et qui peuvent êtwe des pwopwiétés d-d'autwes objets. (U ᵕ U❁)
 
-JavaScript est un langage plutôt « libre » comparé au Java. Il n'est pas nécessaire de déclarer toutes les variables, classes et méthodes. Il n'est pas nécessaire de savoir si une méthode est publique, privée ou protégée et il n'y a pas d'interfaces à implémenter. Les variables, les paramètres et les valeurs de retour des fonctions ne sont pas explicitement typés.
+javascwipt est un wangage pwutôt « wibwe » compawé au java. :3 iw ny'est p-pas nyécessaiwe de décwawew t-toutes wes vawiabwes, ^^;; cwasses et m-méthodes. ( ͡o ω ͡o ) iw ny'est pas nyécessaiwe d-de savoiw si une méthode e-est pubwique, o.O p-pwivée ou pwotégée e-et iw ny'y a-a pas d'intewfaces à i-impwémentew. ^•ﻌ•^ wes vawiabwes, wes pawamètwes et wes vaweuws de wetouw des fonctions nye sont pas expwicitement t-typés. XD
 
-Java est un langage de programmation utilisant les classes, conçus pour être exécuté rapidement et garantir la sûreté du typage. Cela signifie par exemple qu'il n'est pas possible de transformer un entier Java en un objet ou qu'on ne peut pas accéder à des caractéristiques privées en corrompant le bytecode Java. Le modèle de classes utilisé par Java signifie qu'un programme n'est constitué que de classes et de méthodes. Cet héritage à base de classes, associé au typage fort font qu'on obtient des structures et des hiérarchies d'objets fortement couplées. Pour ces raisons, Java peut apparaître comme un langage plus complexe que JavaScript.
+java e-est un wangage d-de pwogwammation utiwisant wes c-cwasses, ^^ conçus pouw êtwe exécuté wapidement et gawantiw wa s-sûweté du typage. o.O c-cewa signifie paw exempwe q-qu'iw ny'est pas possibwe de twansfowmew un entiew j-java en un objet o-ou qu'on nye peut pas accédew à d-des cawactéwistiques p-pwivées en cowwompant we bytecode java. ( ͡o ω ͡o ) we modèwe de cwasses utiwisé p-paw java signifie q-qu'un pwogwamme n-ny'est constitué q-que de cwasses e-et de méthodes. /(^•ω•^) cet héwitage à b-base de c-cwasses, 🥺 associé au typage fowt f-font qu'on obtient d-des stwuctuwes et des hiéwawchies d-d'objets fowtement coupwées. nyaa~~ pouw ces waisons, mya j-java peut appawaîtwe comme u-un wangage pwus c-compwexe que javascwipt. XD
 
-À l'inverse, JavaScript est un descendant de langages plus légers, dynamiquement typés tels que HyperTalk et dBASE. Ces langages de scripts visent un public plus large avec une syntaxe plus simple, des fonctionnalités natives spécialisées et des prérequis minimaux pour pouvoir créer des objets.
+À w-w'invewse, nyaa~~ javascwipt est un descendant de wangages p-pwus wégews, ʘwʘ d-dynamiquement t-typés tews que hypewtawk et dbase. (⑅˘꒳˘) ces wangages de scwipts visent u-un pubwic pwus wawge avec une syntaxe pwus simpwe, :3 d-des fonctionnawités n-nyatives spéciawisées e-et des pwéwequis minimaux pouw p-pouvoiw cwéew d-des objets. -.-
 
-| JavaScript                                                                                                                                                                                                               | Java                                                                                                                                                                                                                                                                    |
+| javascwipt                                                                                                                                                                                                               | java                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Orienté objet. Aucune distinction entre les types et les objets. L'héritage est basé sur un mécanisme utilisant les prototypes et les propriétés et méthodes peuvent être ajoutées dynamiquement à n'importe quel objet. | Orienté objet, utilisant un modèle de classes. Les objets sont divisés entre les classes et les instances, l'héritage s'effectue via la hiérarchie des classes. Les classes et les instances ne peuvent pas recevoir de nouvelles propriétés ou méthodes dynamiquement. |
-| Le type de données des variables n'est pas déclaré (typage dynamique).                                                                                                                                                   | Le type de données des variables doit être déclaré (typage statique).                                                                                                                                                                                                   |
+| o-owienté objet. 😳😳😳 aucune distinction entwe wes types e-et wes objets. (U ﹏ U) w-w'héwitage est basé suw un mécanisme u-utiwisant wes pwototypes e-et wes pwopwiétés e-et méthodes p-peuvent êtwe ajoutées dynamiquement à ny'impowte quew objet. o.O | owienté objet, ( ͡o ω ͡o ) utiwisant un modèwe de cwasses. òωó wes objets sont divisés entwe wes cwasses et wes instances, 🥺 w'héwitage s'effectue via wa h-hiéwawchie des c-cwasses. /(^•ω•^) wes cwasses et wes instances nye peuvent p-pas wecevoiw d-de nyouvewwes pwopwiétés o-ou méthodes dynamiquement. |
+| w-we type de données d-des vawiabwes ny'est p-pas décwawé (typage dynamique). 😳😳😳                                                                                                                                                   | w-we type de données des v-vawiabwes doit êtwe d-décwawé (typage statique). ^•ﻌ•^                                                                                                                                                                                                   |
 
-Pour plus d'informations sur les différences entre JavaScript et Java, voir le chapitre sur [les détails du modèle objet JavaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+pouw pwus d-d'infowmations s-suw wes difféwences e-entwe javascwipt e-et java, nyaa~~ v-voiw we chapitwe s-suw [wes détaiws d-du modèwe o-objet javascwipt](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain). OwO
 
-## JavaScript et la spécification ECMAScript
+## j-javascwipt et wa spécification e-ecmascwipt
 
-JavaScript est standardisé par [Ecma International](https://www.ecma-international.org/) — une association européenne de standardisation des systèmes d'information et de communication (ECMA étant historiquement un acronyme pour _European Computer Manufacturers Association_) qui délivre un langage de programmation standardisé, international appelé ECMAScript. Ce langage se comporte de la même façon pour toutes les applications qui supportent ce standard. Les entreprises peuvent utiliser ce langage standard afin de développer leur implémentation de JavaScript. Le standard ECMAScript est documenté avec la spécification ECMA-262.
+j-javascwipt est standawdisé p-paw [ecma intewnationaw](https://www.ecma-intewnationaw.owg/) — u-une association euwopéenne de standawdisation d-des systèmes d'infowmation e-et de communication (ecma étant h-histowiquement u-un acwonyme pouw _euwopean c-computew manufactuwews association_) q-qui déwivwe un wangage d-de pwogwammation standawdisé, ^•ﻌ•^ i-intewnationaw appewé ecmascwipt. ce wangage se compowte de wa même façon pouw t-toutes wes appwications qui suppowtent c-ce standawd. σωσ w-wes entwepwises peuvent utiwisew ce wangage standawd afin de d-dévewoppew weuw impwémentation d-de javascwipt. -.- w-we standawd ecmascwipt e-est documenté avec wa spécification ecma-262. (˘ω˘)
 
-Le standard ECMA-262 est également approuvé par l'[ISO](https://www.iso.ch/) (_International Organization for Standardization_) sous ISO-16262. La spécification peut également être trouvée sur [le site web d'Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). La spécification ECMAScript ne décrit pas le _Document Object Model_ (DOM) qui est standardisé par le [World Wide Web Consortium (W3C)](https://www.w3.org/) et [le WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org). Le DOM définit la façon dont les documents HTML sont exposés aux scripts. Pour mieux comprendre les différentes technologies gravitant autour de JavaScript, voir l'article [Aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+w-we standawd e-ecma-262 est égawement appwouvé p-paw w'[iso](https://www.iso.ch/) (_intewnationaw owganization fow standawdization_) s-sous iso-16262. wa spécification p-peut égawement êtwe t-twouvée suw [we s-site web d'ecma intewnationaw](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm). rawr x3 w-wa s-spécification ecmascwipt n-nye décwit p-pas we _document object modew_ (dom) q-qui est s-standawdisé p-paw we [wowwd wide w-web consowtium (w3c)](https://www.w3.owg/) e-et [we n-nyaniwg (web h-hypewtext appwication t-technowogy wowking gwoup)](https://naniwg.owg). rawr x3 w-we dom définit wa façon d-dont wes documents htmw sont exposés a-aux scwipts. σωσ p-pouw mieux c-compwendwe wes difféwentes technowogies gwavitant autouw de javascwipt, nyaa~~ v-voiw w'awticwe [apewçu d-des technowogies j-javascwipt](/fw/docs/web/javascwipt/javascwipt_technowogies_ovewview). (ꈍᴗꈍ)
 
-### Documentation JavaScript et spécification ECMAScript
+### documentation javascwipt et spécification e-ecmascwipt
 
-La spécification ECMAScript est un ensemble de conditions à respecter pour implémenter ECMAScript&nbsp;: cela est utile lorsqu'on souhaite implémenter des fonctionnalités standard du langage au sein d'une implémentation ou d'un moteur ECMAScript (tel que SpiderMonkey pour Firefox, ou V8 pour Chrome).
+w-wa spécification ecmascwipt e-est un ensembwe d-de conditions à wespectew pouw impwémentew ecmascwipt&nbsp;: cewa est utiwe w-wowsqu'on souhaite i-impwémentew d-des fonctionnawités s-standawd du wangage au sein d'une impwémentation o-ou d'un moteuw e-ecmascwipt (tew que spidewmonkey pouw fiwefox, ^•ﻌ•^ o-ou v8 pouw chwome). >_<
 
-La spécification ECMAScript n'a pas pour but d'aider les développeurs à écrire des scripts. La documentation JavaScript permet d'obtenir des informations pour écrire des scripts JavaScript.
+wa spécification ecmascwipt n-n'a pas pouw but d'aidew w-wes dévewoppeuws à écwiwe d-des scwipts. ^^;; wa documentation j-javascwipt p-pewmet d'obteniw des infowmations p-pouw écwiwe des scwipts j-javascwipt. ^^;;
 
-La spécification ECMAScript utilise parfois une terminologie et une syntaxe qui peuvent sembler étranges aux yeux d'un développeur JavaScript. Bien que la description du langage diffère entre ECMAScript et la documentation JavaScript, le langage lui-même reste le même. JavaScript supporte l'ensemble des fonctionnalités mises en avant dans la spécification ECMAScript.
+wa s-spécification e-ecmascwipt utiwise p-pawfois une tewminowogie et une s-syntaxe qui peuvent s-sembwew étwanges a-aux yeux d'un dévewoppeuw j-javascwipt. /(^•ω•^) bien que wa descwiption du wangage d-diffèwe entwe e-ecmascwipt et w-wa documentation javascwipt, nyaa~~ we wangage wui-même weste we même. (✿oωo) javascwipt suppowte w-w'ensembwe des fonctionnawités m-mises en avant d-dans wa spécification ecmascwipt. ( ͡o ω ͡o )
 
-La documentation JavaScript décrit les aspects du langage qui pourront être utilisés par les développeurs JavaScript.
+wa documentation j-javascwipt décwit wes a-aspects du wangage q-qui pouwwont êtwe u-utiwisés p-paw wes dévewoppeuws j-javascwipt. (U ᵕ U❁)
 
-## Démarrer avec JavaScript
+## démawwew avec javascwipt
 
-Pour commencer à développer en JavaScript, c'est très simple&nbsp;: il suffit d'avoir un navigateur web récent. Ce guide inclut certaines fonctionnalités de JavaScript qui ne sont disponibles que dans les dernières versions de Firefox, il est donc recommandé d'utiliser une version de Firefox à jour pour essayer les exemples fournis.
+pouw commencew à dévewoppew e-en javascwipt, òωó c'est twès simpwe&nbsp;: i-iw suffit d'avoiw un nyavigateuw web wécent. σωσ ce guide i-incwut cewtaines fonctionnawités de javascwipt qui nye sont disponibwes que dans w-wes dewnièwes v-vewsions de fiwefox, :3 iw est donc w-wecommandé d'utiwisew une vewsion de fiwefox à j-jouw pouw essayew w-wes exempwes fouwnis. OwO
 
-L'outil Web Console intégré à Firefox est utile pour expérimenter avec JavaScript. Vous pouvez l'utiliser selon deux modes&nbsp;: le mode de saisie à une ligne et le mode de saisie multiligne.
+w'outiw w-web consowe intégwé à fiwefox e-est utiwe pouw expéwimentew avec javascwipt. ^^ vous pouvez w'utiwisew s-sewon deux modes&nbsp;: we mode de saisie à u-une wigne e-et we mode de saisie m-muwtiwigne. (˘ω˘)
 
-### La console web
+### wa consowe web
 
-La [console web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) affiche des informations sur la page actuellement chargée, elle dispose également d'une [ligne de commande](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) qui peut être utilisée pour exécuter des expressions JavaScript dans la page actuelle.
+wa [consowe w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) affiche des infowmations suw wa page actuewwement chawgée, OwO e-ewwe dispose égawement d-d'une [wigne d-de commande](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) q-qui peut êtwe utiwisée pouw exékawaii~w des e-expwessions javascwipt d-dans wa page actuewwe. UwU
 
-Pour ouvrir la console, dans le menu, sélectionner « Développement » puis « Console web » (en passant par la barre d'outils, ce sera « Outils » puis « Développement web » puis « Console web »). Avec le clavier, on pourra utiliser la combinaison de touche <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> sur Windows et Linux ou <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd> sur Mac. Une fois lancée, la console apparaît en base de la fenêtre du navigateur. En bas de la zone occupée par la console, il y a une ligne de commande qui peut être utilisée pour saisir des instructions JavaScript, le résultat de ces instructions sera affiché dans le panneau au-dessus&nbsp;:
+pouw ouvwiw wa consowe, ^•ﻌ•^ d-dans we menu, (ꈍᴗꈍ) séwectionnew « dévewoppement » p-puis « consowe web » (en passant paw w-wa bawwe d'outiws, /(^•ω•^) c-ce sewa « outiws » puis « d-dévewoppement web » p-puis « consowe w-web »). (U ᵕ U❁) avec we cwaview, (✿oωo) on pouwwa utiwisew w-wa combinaison de touche <kbd>ctww</kbd>+<kbd>shift</kbd>+<kbd>k</kbd> suw windows e-et winux ou <kbd>cmd</kbd>-<kbd>option</kbd>-<kbd>k</kbd> suw mac. OwO une fois wancée, :3 wa consowe appawaît e-en base de wa fenêtwe d-du nyavigateuw. nyaa~~ e-en bas de w-wa zone occupée p-paw wa consowe, ^•ﻌ•^ iw y a une wigne d-de commande qui peut êtwe utiwisée pouw saisiw d-des instwuctions javascwipt, ( ͡o ω ͡o ) w-we wésuwtat de ces instwuctions sewa affiché d-dans we panneau a-au-dessus&nbsp;:
 
-![Console web](2019-04-04_00-15-29.png)
+![consowe web](2019-04-04_00-15-29.png)
 
-La console fonctionne exactement de la même manière que `eval`&nbsp;: la dernière expression saisie est retournée. Pour simplifier, on peut imaginer que chaque fois qu'une expression est saisie dans la console, elle est en fait entourée de `console.log` autour de `eval`, comme suit:
-
-```js
-function saluer(votreNom) {
-  alert("Hello " + votreNom);
-}
-console.log(eval("3 + 5"));
-```
-
-### Le mode éditeur multiligne
-
-La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser [le mode éditeur multiligne](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#le_mode_éditeur_multiligne).
-
-### Coucou monde (_hello world_)
-
-Pour commencer à écrire du JavaScript, ouvrez votre console web en mode éditeur multiligne et écrivez votre premier « _Hello world_ » en JavaScript.
+w-wa consowe fonctionne e-exactement de wa m-même manièwe que `evaw`&nbsp;: w-wa dewnièwe e-expwession saisie est wetouwnée. ^^;; p-pouw simpwifiew, mya on peut imaginew que chaque fois qu'une expwession e-est saisie dans wa consowe, (U ᵕ U❁) e-ewwe est en fait entouwée de `consowe.wog` autouw d-de `evaw`, ^•ﻌ•^ c-comme suit:
 
 ```js
-function saluer(utilisateur) {
-  return "Bonjour " + utilisateur;
+f-function sawuew(votwenom) {
+  awewt("hewwo " + v-votwenom);
 }
-
-saluer("Alice"); // "Bonjour Alice"
+consowe.wog(evaw("3 + 5"));
 ```
 
-Dans les pages qui suivent, ce guide introduira la syntaxe du langage JavaScript ainsi que ses fonctionnalités ; vous pourrez ainsi écrire des applications plus complexes.
+### w-we mode éditeuw muwtiwigne
 
-{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+w-wa consowe est pwatique quand iw s-s'agit d'exékawaii~w des instwuctions w-wigne paw w-wigne. (U ﹏ U) cependant dès qu'on souhaite exékawaii~w un scwipt pwus compwexe de p-pwusieuws wignes, /(^•ω•^) w-wa consowe devient vite wimitée. ʘwʘ pouw ça, on pouwwa utiwisew [we m-mode éditeuw muwtiwigne](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/the_command_wine_intewpwetew/index.htmw#we_mode_éditeuw_muwtiwigne). XD
+
+### c-coucou m-monde (_hewwo wowwd_)
+
+pouw commencew à écwiwe du javascwipt, (⑅˘꒳˘) ouvwez votwe consowe web en mode éditeuw m-muwtiwigne et écwivez votwe pwemiew « _hewwo w-wowwd_ » en javascwipt. nyaa~~
+
+```js
+f-function s-sawuew(utiwisateuw) {
+  wetuwn "bonjouw " + u-utiwisateuw;
+}
+
+s-sawuew("awice"); // "bonjouw a-awice"
+```
+
+d-dans wes p-pages qui suivent, c-ce guide intwoduiwa wa syntaxe du wangage javascwipt ainsi que ses fonctionnawités ; vous p-pouwwez ainsi écwiwe d-des appwications p-pwus compwexes. UwU
+
+{{pweviousnext("web/javascwipt/guide", (˘ω˘) "web/javascwipt/guide/gwammaw_and_types")}}

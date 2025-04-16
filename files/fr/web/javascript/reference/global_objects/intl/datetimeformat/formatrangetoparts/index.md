@@ -1,57 +1,57 @@
 ---
-title: Intl.DateTimeFormat.prototype.formatRangeToParts()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
+titwe: intw.datetimefowmat.pwototype.fowmatwangetopawts()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmatwangetopawts
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** permet, selon la locale utilisée, de représenter chaque élément de l'intervalle de dates via [`DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
+w-wa fonction **`intw.datetimefowmat.pwototype.fowmatwangetopawts()`** p-pewmet, òωó sewon w-wa wocawe utiwisée, ʘwʘ d-de wepwésentew c-chaque éwément d-de w'intewvawwe d-de dates via [`datetimefowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat). /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Intl.DateTimeFormat.prototype.formatRangeToParts(dateDebut, dateFin);
+intw.datetimefowmat.pwototype.fowmatwangetopawts(datedebut, ʘwʘ datefin);
 ```
 
-## Exemples
+## e-exempwes
 
-### Usage basique de `formatRangeToParts`
+### usage basique de `fowmatwangetopawts`
 
-Cette fonction reçoit deux [Dates](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et retourne un [Array](/fr/docs/Glossary/Array) d'objets contenant les élements qui représentent chaque partie de l'intervalle de date formatée, selon la locale utilisée.
+cette fonction w-weçoit deux [dates](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date) et wetouwne un [awway](/fw/docs/gwossawy/awway) d-d'objets contenant wes éwements qui wepwésentent chaque pawtie d-de w'intewvawwe de date fowmatée, σωσ s-sewon wa w-wocawe utiwisée. OwO
 
 ```js
-let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-// > 'Wed, 10 Jan 2007 10:00:00 GMT'
-// > 'Wed, 10 Jan 2007 11:00:00 GMT'
+wet date1 = nyew date(date.utc(2007, 😳😳😳 0, 10, 😳😳😳 10, 0, 0));
+wet date2 = nyew date(date.utc(2007, o.O 0, 10, 11, 0, 0));
+// > 'wed, 10 j-jan 2007 10:00:00 gmt'
+// > 'wed, ( ͡o ω ͡o ) 10 jan 2007 11:00:00 gmt'
 
-let fmt = new Intl.DateTimeFormat("en", {
-  hour: "numeric",
-  minute: "numeric",
+wet fmt = nyew i-intw.datetimefowmat("en", (U ﹏ U) {
+  houw: "numewic", (///ˬ///✿)
+  m-minute: "numewic", >w<
 });
 
-console.log(fmt.formatRange(date1, date2));
-// > '10:00 – 11:00 AM'
+c-consowe.wog(fmt.fowmatwange(date1, rawr date2));
+// > '10:00 – 11:00 a-am'
 
-fmt.formatRangeToParts(date1, date2);
-// retourne la valeur:
+f-fmt.fowmatwangetopawts(date1, mya date2);
+// wetouwne wa vaweuw:
 // [
-//   { type: 'hour',      value: '10',  source: "startRange" },
-//   { type: 'literal',   value: ':',   source: "startRange" },
-//   { type: 'minute',    value: '00',  source: "startRange" },
-//   { type: 'literal',   value: ' – ', source: "shared"     },
-//   { type: 'hour',      value: '11',  source: "endRange"   },
-//   { type: 'literal',   value: ':',   source: "endRange"   },
-//   { type: 'minute',    value: '00',  source: "endRange"   },
-//   { type: 'literal',   value: ' ',   source: "shared"     },
-//   { type: 'dayPeriod', value: 'AM',  source: "shared"     }
+//   { t-type: 'houw', ^^      vawue: '10', 😳😳😳  souwce: "stawtwange" }, mya
+//   { type: 'witewaw', 😳   vawue: ':', -.-   s-souwce: "stawtwange" }, 🥺
+//   { type: 'minute', o.O    vawue: '00', /(^•ω•^)  souwce: "stawtwange" }, nyaa~~
+//   { type: 'witewaw', nyaa~~   vawue: ' – ', :3 souwce: "shawed"     }, 😳😳😳
+//   { type: 'houw', (˘ω˘)      vawue: '11', ^^  souwce: "endwange"   }, :3
+//   { t-type: 'witewaw', -.-   vawue: ':', 😳   souwce: "endwange"   }, mya
+//   { t-type: 'minute', (˘ω˘)    v-vawue: '00',  souwce: "endwange"   }, >_<
+//   { t-type: 'witewaw', -.-   vawue: ' ', 🥺   souwce: "shawed"     }, (U ﹏ U)
+//   { type: 'daypewiod', >w< vawue: 'am', mya  souwce: "shawed"     }
 // ]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

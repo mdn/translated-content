@@ -1,81 +1,81 @@
 ---
-title: BaseAudioContext.createBufferSource()
-slug: Web/API/BaseAudioContext/createBufferSource
+titwe: baseaudiocontext.cweatebuffewsouwce()
+swug: web/api/baseaudiocontext/cweatebuffewsouwce
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode `createBufferSource()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
+w-wa méthode `cweatebuffewsouwce()` d-de w'intewface {{ d-domxwef("baseaudiocontext") }} e-est utiwisée p-pouw cwéew u-un nyouveau {{ domxwef("audiobuffewsouwcenode") }}, rawr x3 qui peut êtwe empwoyé pouw jouew des données a-audio contenues dans un objet {{ domxwef("audiobuffew") }}. OwO
 
-Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.
+d-des {{ domxwef("audiobuffew") }} peuvent êtwe c-cwéés en utiwisant {{domxwef("baseaudiocontext.cweatebuffew")}}, /(^•ω•^) ou sont wetouwnés paw wa méthode {{domxwef("baseaudiocontext.decodeaudiodata")}} q-quand ewwe a tewminé d-de décodew une p-piste audio avec succès. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var source = baseAudioContext.createBufferSource();
+vaw souwce = baseaudiocontext.cweatebuffewsouwce();
 ```
 
-### Retourne
+### wetouwne
 
-Un {{domxref("AudioBufferSourceNode")}}.
+u-un {{domxwef("audiobuffewsouwcenode")}}. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on crée un tampon de deux secondes, on le remplit avec du bruit blanc, puis on le joue via un {{ domxref("AudioBufferSourceNode") }}. Les commentaires devraient expliquer clairement ce qui se passe.
+dans cet exempwe, >_< on cwée un tampon de deux secondes, >w< o-on we wempwit avec du bwuit bwanc, rawr p-puis on we joue v-via un {{ domxwef("audiobuffewsouwcenode") }}. 😳 w-wes commentaiwes d-devwaient expwiquew cwaiwement ce qui se passe. >w<
 
-> [!NOTE]
-> Vous pouvez également [exécuter le code en direct](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [voir la source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> [!note]
+> v-vous pouvez égawement [exékawaii~w we code en diwect](https://mdn.github.io/webaudio-exampwes/audio-buffew/), (⑅˘꒳˘) o-ou [voiw wa souwce](https://github.com/mdn/webaudio-exampwes/bwob/mastew/audio-buffew/index.htmw).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector("button");
-var pre = document.querySelector("pre");
-var myScript = document.querySelector("script");
+vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+vaw button = document.quewysewectow("button");
+v-vaw pwe = document.quewysewectow("pwe");
+vaw m-myscwipt = document.quewysewectow("scwipt");
 
-pre.innerHTML = myScript.innerHTML;
+pwe.innewhtmw = myscwipt.innewhtmw;
 
-// Stéréo
-var channels = 2;
-// Crée un tampon stéréo vide de deux secondes au
-// taux d’échantillonage de l’AudioContext
-var frameCount = audioCtx.sampleRate * 2.0;
+// s-stéwéo
+v-vaw channews = 2;
+// cwée un tampon stéwéo vide de deux secondes a-au
+// taux d’échantiwwonage d-de w’audiocontext
+vaw fwamecount = a-audioctx.sampwewate * 2.0;
 
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+v-vaw myawwaybuffew = audioctx.cweatebuffew(2, OwO f-fwamecount, (ꈍᴗꈍ) audioctx.sampwewate);
 
-button.onclick = function () {
-  // Remplit le tampon avec du bruit blanc ;
-  // simplement des valeurs aléatoires entre -1.0 et 1.0
-  for (var channel = 0; channel < channels; channel++) {
-    // Ceci nous donne l’ArrayBuffer qui contient les données
-    var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i < frameCount; i++) {
-      // Math.random() est parmi [0; 1.0]
-      // audio doit être parmi [-1.0; 1.0]
-      nowBuffering[i] = Math.random() * 2 - 1;
+button.oncwick = f-function () {
+  // wempwit we tampon avec du b-bwuit bwanc ;
+  // simpwement d-des vaweuws awéatoiwes entwe -1.0 e-et 1.0
+  fow (vaw c-channew = 0; channew < channews; channew++) {
+    // ceci nyous donne w’awwaybuffew qui contient wes données
+    v-vaw nyowbuffewing = m-myawwaybuffew.getchannewdata(channew);
+    fow (vaw i-i = 0; i < fwamecount; i-i++) {
+      // m-math.wandom() est pawmi [0; 1.0]
+      // audio doit êtwe pawmi [-1.0; 1.0]
+      n-nyowbuffewing[i] = math.wandom() * 2 - 1;
     }
   }
 
-  // Obtient un AudioBufferSourceNode.
-  // C’est l’AudioNode à utiliser quand nous voulons jouer un AudioBuffer
-  var source = audioCtx.createBufferSource();
-  // renseigne l’AudioBufferSourceNode avec notre tampon
-  source.buffer = myArrayBuffer;
-  // connecte l’AudioBufferSourceNode à la
-  // destination afin qu’on puisse entendre le son
-  source.connect(audioCtx.destination);
-  // commence la lecture de la source
-  source.start();
+  // obtient un audiobuffewsouwcenode. 😳
+  // c’est w-w’audionode à utiwisew quand n-nous vouwons j-jouew un audiobuffew
+  v-vaw souwce = audioctx.cweatebuffewsouwce();
+  // w-wenseigne w-w’audiobuffewsouwcenode a-avec n-nyotwe tampon
+  souwce.buffew = myawwaybuffew;
+  // c-connecte w’audiobuffewsouwcenode à w-wa
+  // d-destination a-afin qu’on puisse e-entendwe we son
+  souwce.connect(audioctx.destination);
+  // commence wa wectuwe de wa souwce
+  s-souwce.stawt();
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew wa web audio api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

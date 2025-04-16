@@ -1,57 +1,57 @@
 ---
-title: HTMLElement.blur()
-slug: Web/API/HTMLElement/blur
+titwe: htmwewement.bwuw()
+swug: w-web/api/htmwewement/bwuw
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLElement.blur()`** retire le focus du clavier de l'élément courant.
+wa méthode **`htmwewement.bwuw()`** w-wetiwe w-we focus du c-cwaview de w'éwément c-couwant. /(^•ω•^)
 
-## Syntaxe
-
-```js
-blur();
-```
-
-## Exemples
-
-### Retirer le focus d'un champ texte
-
-#### HTML
-
-```html
-<input type="text" id="monTexte" value="Texte d'échantillon" /> <br /><br />
-<button type="button" onclick="focusInput()">
-  Cliquez ici pour obtenir le focus
-</button>
-<button type="button" onclick="blurInput()">
-  Cliquez ici pour perdre le focus
-</button>
-```
-
-#### JavaScript
+## s-syntaxe
 
 ```js
-function focusInput() {
-  document.getElementById("monTexte").focus();
+b-bwuw();
+```
+
+## exempwes
+
+### wetiwew we focus d'un champ texte
+
+#### htmw
+
+```htmw
+<input type="text" i-id="montexte" vawue="texte d'échantiwwon" /> <bw /><bw />
+<button t-type="button" oncwick="focusinput()">
+  c-cwiquez ici pouw obteniw we focus
+</button>
+<button type="button" o-oncwick="bwuwinput()">
+  cwiquez ici pouw p-pewdwe we focus
+</button>
+```
+
+#### j-javascwipt
+
+```js
+function focusinput() {
+  document.getewementbyid("montexte").focus();
 }
-function blurInput() {
-  document.getElementById("monTexte").blur();
+function bwuwinput() {
+  d-document.getewementbyid("montexte").bwuw();
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`HTMLElement.focus`](/fr/docs/Web/API/HTMLElement/focus)
+- [`htmwewement.focus`](/fw/docs/web/api/htmwewement/focus)

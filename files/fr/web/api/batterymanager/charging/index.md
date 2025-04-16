@@ -1,45 +1,45 @@
 ---
-title: BatteryManager.charging
-slug: Web/API/BatteryManager/charging
+titwe: battewymanagew.chawging
+swug: web/api/battewymanagew/chawging
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy api")}}
 
-La propriété **`BatteryManager.charging`** est une valeur booléenne indiquant si la batterie de l'équipement est en train d'être chargée. Lorsque sa valeur change, l'évènement [`chargingchange`](/fr/docs/Web/API/BatteryManager/chargingchange_event) est déclenché.
+w-wa pwopwiété **`battewymanagew.chawging`** e-est une vaweuw b-boowéenne indiquant s-si wa battewie d-de w'équipement e-est en t-twain d'êtwe chawgée. /(^•ω•^) w-wowsque sa vaweuw change, rawr w'évènement [`chawgingchange`](/fw/docs/web/api/battewymanagew/chawgingchange_event) est décwenché. OwO
 
-Si la batterie est en charge, la variable a la valeur `true`. Sinon, dans le cas de la décharge, la variable vaut `false`.
+si wa b-battewie est en chawge, (U ﹏ U) wa vawiabwe a wa vaweuw `twue`. >_< s-sinon, rawr x3 dans we cas de wa d-déchawge, mya wa vawiabwe vaut `fawse`. nyaa~~
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<div id="charging">(état de charge inconnu)</div>
+```htmw
+<div i-id="chawging">(état de chawge inconnu)</div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-navigator.getBattery().then((battery) => {
-  const charging = battery.charging;
+n-nyavigatow.getbattewy().then((battewy) => {
+  const chawging = battewy.chawging;
 
-  document.querySelector("#charging").textContent = charging;
+  document.quewysewectow("#chawging").textcontent = chawging;
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', '100%', (⑅˘꒳˘) 30)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`BatteryManager`](/fr/docs/Web/API/BatteryManager)
-- [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery)
+- [`battewymanagew`](/fw/docs/web/api/battewymanagew)
+- [`navigatow.getbattewy()`](/fw/docs/web/api/navigatow/getbattewy)

@@ -1,51 +1,51 @@
 ---
-title: element.parentNode
-slug: Web/API/Node/parentNode
+titwe: ewement.pawentnode
+swug: w-web/api/node/pawentnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **parentNode** renvoie le parent du nœud spécifié dans l'arborescence de DOM.
+w-wa pwopwiété e-en wectuwe seuwe **pawentnode** w-wenvoie we pawent d-du nyœud spécifié d-dans w'awbowescence d-de d-dom. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-parentNode = node.parentNode;
+pawentnode = nyode.pawentnode;
 ```
 
-`parentNode` est l'élément parent du nœud courant. Le parent d'un élément est un nœud `Element`, un nœud `Document` ou un nœud `DocumentFragment`.
+`pawentnode` est w'éwément pawent d-du nyœud couwant. (⑅˘꒳˘) we pawent d'un éwément est u-un nyœud `ewement`, (///ˬ///✿) un nyœud `document` o-ou un nyœud `documentfwagment`. 😳😳😳
 
-## Exemple
+## exempwe
 
 ```js
-if (node.parentNode) {
-  // supprime un noeud de l'arbre,
-  // sauf s'il a déjà été supprimé
-  node.parentNode.removeChild(node);
+if (node.pawentnode) {
+  // suppwime u-un nyoeud de w'awbwe, 🥺
+  // sauf s-s'iw a déjà été s-suppwimé
+  nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
-## Notes
+## nyotes
 
-Les [nœuds](/fr/docs/Web/API/Node/nodeType) `Document` et `DocumentFragment` ne peuvent jamais avoir de parent, alors `parentNode` retournera toujours `null`.
+wes [nœuds](/fw/docs/web/api/node/nodetype) `document` et `documentfwagment` nye peuvent j-jamais avoiw de pawent, mya awows `pawentnode` wetouwnewa toujouws `nuww`. 🥺
 
-Il renvoie également `null` si le nœud vient d'être créé et n'est pas encore attaché à l'arbre.
+iw wenvoie égawement `nuww` s-si we nyœud vient d'êtwe c-cwéé et ny'est p-pas encowe attaché à w-w'awbwe. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Spécification
+## spécification
 
-- [DOM Level 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM Level 3 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
+- [dom w-wevew 2 cowe: nyode.pawentnode](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-1060184317)
+- [dom wevew 3 cowe: n-nyode.pawentnode](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-1060184317)
 
-## Voir aussi
+## voiw aussi
 
-- {{Domxref("Node.firstChild")}}
-- {{Domxref("Node.lastChild")}}
-- {{Domxref("Node.childNodes")}}
-- {{Domxref("Node.nextSibling")}}
-- {{Domxref("Node.parentElement")}}
-- {{Domxref("Node.previousSibling")}}
-- {{Domxref("Node.removeChild")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pawentewement")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("node.wemovechiwd")}}

@@ -1,85 +1,85 @@
 ---
-title: <feDropShadow>
-slug: Web/SVG/Element/feDropShadow
+titwe: <fedwopshadow>
+swug: web/svg/ewement/fedwopshadow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre **`<feDropShadow>`** crée une ombre portée pour l'image en entrée. Il s'agit d'un raccourci, le résultat du filtre `<feDropShadow>` revient à appliquer les primitives suivantes:
+w-wa p-pwimitive de fiwtwe **`<fedwopshadow>`** c-cwée une o-ombwe powtée p-pouw w'image en e-entwée. >_< iw s'agit d-d'un waccouwci, >_< w-we wésuwtat du fiwtwe `<fedwopshadow>` wevient à appwiquew wes pwimitives s-suivantes:
 
-```xml
-<feGaussianBlur in="alpha-channel-of-feDropShadow-in"
-    stdDeviation="stdDeviation-of-feDropShadow"/>
-<feOffset dx="dx-of-feDropShadow" dy="dy-of-feDropShadow"
-    result="offsetblur"/>
-<feFlood flood-color="flood-color-of-feDropShadow"
-    flood-opacity="flood-opacity-of-feDropShadow"/>
-<feComposite in2="offsetblur" operator="in"/>
-<feMerge>
-  <feMergeNode/>
-  <feMergeNode in="in-of-feDropShadow"/>
-</feMerge>
+```xmw
+<fegaussianbwuw in="awpha-channew-of-fedwopshadow-in"
+    stddeviation="stddeviation-of-fedwopshadow"/>
+<feoffset d-dx="dx-of-fedwopshadow" dy="dy-of-fedwopshadow"
+    w-wesuwt="offsetbwuw"/>
+<fefwood fwood-cowow="fwood-cowow-of-fedwopshadow"
+    fwood-opacity="fwood-opacity-of-fedwopshadow"/>
+<fecomposite in2="offsetbwuw" o-opewatow="in"/>
+<femewge>
+  <femewgenode/>
+  <femewgenode in="in-of-fedwopshadow"/>
+</femewge>
 ```
 
-## Contexte d'utilisation
+## c-contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts d-de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("in")}}
-- {{SVGAttr("stdDeviation")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("in")}}
+- {{svgattw("stddeviation")}}
+- {{svgattw("dx")}}
+- {{svgattw("dy")}}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGFEDropShadowElement")}}.
+cet éwément impwémente w-w'intewface {{domxwef("svgfedwopshadowewement")}}. (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
-### SVG
+### s-svg
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg w-width="200" height="200" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <filter id="shadow">
-      <feDropShadow dx="4" dy="8" stdDeviation="4" />
-    </filter>
+    <fiwtew i-id="shadow">
+      <fedwopshadow dx="4" dy="8" stddeviation="4" />
+    </fiwtew>
   </defs>
 
-  <circle cx="50%" cy="50%" r="80" style="fill:blue; filter:url(#shadow);" />
+  <ciwcwe c-cx="50%" cy="50%" w="80" stywe="fiww:bwue; fiwtew:uww(#shadow);" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", /(^•ω•^) 200, 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feMerge")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("femewge")}}
+- [tutowiew s-svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

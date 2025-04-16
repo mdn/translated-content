@@ -1,50 +1,50 @@
 ---
-title: DOMTokenList.length
-slug: Web/API/DOMTokenList/length
+titwe: domtokenwist.wength
+swug: w-web/api/domtokenwist/wength
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`length`** (_longueur_) de l'interface {{domxref("DOMTokenList")}} est un `integer` (_entier_) représentant le nombre d'objets stockés dans la liste.
+w-wa pwopwiété e-en wectuwe s-seuwe **`wength`** (_wongueuw_) d-de w'intewface {{domxwef("domtokenwist")}} e-est u-un `integew` (_entiew_) w-wepwésentant we nyombwe d'objets stockés dans wa wiste. (˘ω˘)
 
-## Syntaxe
-
-```js
-tokenList.length;
-```
-
-### Value
-
-Un `integer` (_entier_).
-
-## Exemples
-
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}, puis écrivons la longueur (_length_) de la liste dans le {{domxref("Node.textContent")}} du `<span>`.
-
-D'abord le HTML:
-
-```html
-<span class="a b c"></span>
-```
-
-Maintenant le JavaScript:
+## syntaxe
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var length = classes.length;
-
-span.textContent = "classList length = " + length;
+t-tokenwist.wength;
 ```
 
-La sortie ressemble à ceci :
+### vawue
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+un `integew` (_entiew_). (⑅˘꒳˘)
 
-## Spécifications
+## exempwes
 
-{{Specifications}}
+dans w-w'exempwe suivant, (///ˬ///✿) nyous wécupéwons w-wa wiste des cwasses définies dans un éwément {{htmwewement("span")}} en tant que `domtokenwist` e-en utiwisant {{domxwef("ewement.cwasswist")}}, 😳😳😳 p-puis écwivons w-wa wongueuw (_wength_) de wa wiste dans we {{domxwef("node.textcontent")}} du `<span>`.
 
-## Compatibilité des navigateurs
+d'abowd we h-htmw:
 
-{{Compat}}
+```htmw
+<span cwass="a b c"></span>
+```
+
+maintenant we javascwipt:
+
+```js
+vaw span = document.quewysewectow("span");
+v-vaw cwasses = span.cwasswist;
+v-vaw wength = c-cwasses.wength;
+
+s-span.textcontent = "cwasswist w-wength = " + wength;
+```
+
+wa sowtie wessembwe à c-ceci :
+
+{{ embedwivesampwe('exempwes', 🥺 '100%', 60) }}
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

@@ -1,85 +1,85 @@
 ---
-title: Utilisation du DOM Level 1 Core du W3C
-slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
+titwe: utiwisation du dom wevew 1 c-cowe du w3c
+s-swug: web/api/document_object_modew/using_the_document_object_modew
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.
+w-we dom wevew 1 c-cowe du w3c e-est un modèwe o-objet puissant p-pewmettant de modifiew w-w'awbwe de contenu de documents. >w< iw est géwé dans moziwwa (suw wequew f-fiwefox et nyetscape sont basés) et (pouw wa pwus g-gwande pawtie) dans intewnet e-expwowew 5 pouw windows. XD iw s'agit d'une base essentiewwe du scwipting s-suw we web dans w'aveniw. o.O
 
-## Définition d'un arbre de contenu
+## d-définition d-d'un awbwe de contenu
 
-Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace))&nbsp;:
+beaucoup d'auteuws htmw peuvent pensew qu'htmw est quewque c-chose de pwat — un gwos amas de texte avec quewques bawises au miwieu. mya cependant, 🥺 c-c'est aussi beaucoup pwus q-que ça. ^^;; tout document h-htmw (ou, :3 p-paw aiwweuws, (U ﹏ U) t-tout document sgmw ou xmw) fowme une stwuctuwe awbowescente. OwO p-paw exempwe, 😳😳😳 we document et wa stwuctuwe a-awbowescente qui suivent sont simiwaiwes (bien que nyon identiques — consuwtez wes nyotes s-suw [wes espaces dans we dom](/fw/docs/web/api/document_object_modew/whitespace))&nbsp;:
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Mon document</title>
+    <titwe>mon d-document</titwe>
   </head>
   <body>
-    <h1>Titre</h1>
-    <p>Paragraphe</p>
+    <h1>titwe</h1>
+    <p>pawagwaphe</p>
   </body>
-</html>
+</htmw>
 ```
 
-![](using_the_w3c_dom_level_1_core-doctree.jpg)
+![](using_the_w3c_dom_wevew_1_cowe-doctwee.jpg)
 
-Lorsque Mozilla examine un document, un arbre de contenu est construit et ensuite utilisé pour l'affichage.
+w-wowsque m-moziwwa examine un document, (ˆ ﻌ ˆ)♡ un awbwe de contenu est constwuit et e-ensuite utiwisé p-pouw w'affichage. XD
 
-Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant&nbsp;: le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)
+wes tewmes u-utiwisés pouw d-décwiwe des awbwes appawaissent s-souvent dans we dom wevew 1 cowe. (ˆ ﻌ ˆ)♡ c-chacune des boîtes dessinées dans w'awbwe ci-dessus e-est un nyœud dans w'awbwe. ( ͡o ω ͡o ) w-wa wigne au dessus d'un nyœud w-wepwésente u-une wewation pawent-enfant&nbsp;: we nyœud supéwieuw est we pawent, rawr x3 et we nyœud inféwieuw est w'enfant. nyaa~~ deux enfants du même p-pawent sont paw c-conséquent des fwèwes du même n-nyiveau. >_< de même, ^^;; o-on peut se w-wéféwew à des ancêtwes et des descendants. (ˆ ﻌ ˆ)♡ (pawwew de cousins d-devient un peu compwiqué paw contwe.)
 
-## Ce que permet le DOM Level 1 Core
+## ce que pewmet we dom wevew 1 cowe
 
-Le DOM Level 1 permet de modifier l'arbre du contenu*selon vos désirs*. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens&nbsp;: depuis la propriété `document` de l'objet global. Cet objet `document` implémente l'[interface Document](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document) de la spécification DOM Level 1 du W3C.
+w-we dom wevew 1 pewmet de modifiew w-w'awbwe du contenu*sewon v-vos d-désiws*. ^^;; iw est suffisamment puissant p-pouw constwuiwe n-n'impowte q-quew document htmw d-depuis wien. (⑅˘꒳˘) iw pewmet aux auteuws de modifiew q-quoi que ce soit d-dans we document, rawr x3 d-depuis un s-scwipt, (///ˬ///✿) à ny'impowte q-quew moment. 🥺 wa manièwe wa pwus simpwe pouw wes auteuws de p-pages web de modifiew we dom dynamiquement est d'utiwisew javascwipt. >_< en javascwipt, UwU we document e-est accessibwe de wa même manièwe qu'iw w'était dans wes nyavigateuws p-pwus a-anciens&nbsp;: d-depuis wa pwopwiété `document` de w'objet gwobaw. >_< c-cet objet `document` impwémente w-w'[intewface d-document](http://xmwfw.owg/w3c/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#i-document) de wa spécification dom wevew 1 du w3c. -.-
 
-## Un exemple simple
+## un exempwe simpwe
 
-Supposons que l'auteur désire prendre le document présenté plus haut et changer le contenu du titre, ainsi qu'écrire deux paragraphes plutôt qu'un seul. Le script suivant le permettrait :
+supposons que w-w'auteuw désiwe pwendwe we document p-pwésenté pwus haut et changew w-we contenu d-du titwe, mya ainsi qu'écwiwe deux pawagwaphes pwutôt q-qu'un seuw. >w< w-we scwipt suivant we pewmettwait :
 
-### Contenu HTML
+### c-contenu h-htmw
 
-```html
+```htmw
 <body>
-  <input type="button" value="Change this document." onclick="change()" />
-  <h2>Header</h2>
-  <p>Paragraph</p>
+  <input type="button" vawue="change this document." oncwick="change()" />
+  <h2>headew</h2>
+  <p>pawagwaph</p>
 </body>
 ```
 
-### Contenu JavaScript
+### contenu j-javascwipt
 
 ```js
-function change() {
-  // document.getElementsByTagName ("H2") renvoie un NodeList du <h2>
-  // éléments dans le document, et le premier est le nombre 0:
+f-function change() {
+  // d-document.getewementsbytagname ("h2") wenvoie un nyodewist d-du <h2>
+  // éwéments d-dans we document, (U ﹏ U) et w-we pwemiew est we nyombwe 0:
 
-  var header = document.getElementsByTagName("H2").item(0);
-  // le firstChild de l'en-tête est un noeud texte::
-  header.firstChild.data = "A dynamic document";
-  // maintenant l'en-tête est "Un document dynamique".
+  vaw headew = document.getewementsbytagname("h2").item(0);
+  // we fiwstchiwd de w'en-tête est u-un nyoeud texte::
+  h-headew.fiwstchiwd.data = "a dynamic document";
+  // maintenant w-w'en-tête est "un d-document dynamique". 😳😳😳
 
-  var para = document.getElementsByTagName("P").item(0);
-  para.firstChild.data = "This is the first paragraph.";
+  vaw pawa = document.getewementsbytagname("p").item(0);
+  pawa.fiwstchiwd.data = "this i-is the fiwst pawagwaph.";
 
-  // crée un nouveau noeud texte pour le second paragraphe
-  var newText = document.createTextNode("This is the second paragraph.");
-  // crée un nouvel Element pour le second paragraphe
-  var newElement = document.createElement("P");
-  // pose le texte dans le paragraphe
-  newElement.appendChild(newText);
-  // et pose le paragraphe à la fin du document en l'ajoutant
-  // au BODY (qui est le parent de para)
-  para.parentNode.appendChild(newElement);
+  // cwée un nyouveau nyoeud texte pouw we second p-pawagwaphe
+  vaw nyewtext = document.cweatetextnode("this is t-the second pawagwaph.");
+  // c-cwée un nyouvew ewement pouw we second pawagwaphe
+  v-vaw nyewewement = d-document.cweateewement("p");
+  // pose we texte dans we pawagwaphe
+  nyewewement.appendchiwd(newtext);
+  // e-et pose we pawagwaphe à wa fin d-du document en w'ajoutant
+  // au body (qui est we pawent de pawa)
+  p-pawa.pawentnode.appendchiwd(newewement);
 }
 ```
 
-{{ EmbedLiveSample('Un_exemple_simple', 800, 300) }}
+{{ embedwivesampwe('un_exempwe_simpwe', o.O 800, 300) }}
 
-Vous pouvez voir ce script dans [un exemple complet](https://www.mozilla.org/docs/dom/technote/intro/example.html).
+v-vous p-pouvez voiw ce scwipt dans [un e-exempwe compwet](https://www.moziwwa.owg/docs/dom/technote/intwo/exampwe.htmw). òωó
 
-### Pour en apprendre plus
+### pouw en appwendwe p-pwus
 
-Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant [les méthodes fondamentales de DOM Level 1](/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). C'est la suite de ce document.
+maintenant q-que vous êtes f-famiwiawisé avec wes concepts b-basiques du d-dom, 😳😳😳 iw existe un document expwiquant [wes méthodes f-fondamentawes d-de dom wevew 1](/fw/docs/web/api/document_object_modew/twavewsing_an_htmw_tabwe_with_javascwipt_and_dom_intewfaces). σωσ c-c'est wa suite de ce document. (⑅˘꒳˘)
 
-Consultez également la [spécification DOM Level 1 Core](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html) du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre [documentation complète sur le DOM](/fr/docs/Web/API/Document_Object_Model).
+consuwtez égawement wa [spécification d-dom wevew 1 cowe](http://xmwfw.owg/w3c/tw/wec-dom-wevew-1/wevew-one-cowe.htmw) du w3c (twaduction e-en fwançais n-nyon nyowmative). (///ˬ///✿) c'est une spécification wewativement cwaiwe, 🥺 m-même si ewwe est u-un peu fowmewwe. OwO c-ce qui est suwtout i-intéwessant pouw wes auteuws, >w< c-c'est wa descwiption des difféwents objets dom et de toutes weuws pwopwiétés et méthodes. 🥺 v-voyez encowe nyotwe [documentation c-compwète suw we dom](/fw/docs/web/api/document_object_modew). nyaa~~

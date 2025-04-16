@@ -1,46 +1,46 @@
 ---
-title: Range.setStart()
-slug: Web/API/Range/setStart
+titwe: wange.setstawt()
+swug: w-web/api/wange/setstawt
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Range.setStart()`** définit la position de départ d'un objet [`Range`](/fr/docs/Web/API/Range).
+w-wa méthode **`wange.setstawt()`** d-définit wa position d-de dépawt d-d'un objet [`wange`](/fw/docs/web/api/wange). /(^•ω•^)
 
-Si le `startNode` est un {{ domxref("Node") }} de type `Text`, `Comment`, ou `CDATASection`, alors startOffset est le nombre de caractères depuis le départ du `startNode`. Pour les autres types de `Nœud`, `startOffset` est le nombre de noeuds enfants entre le debut du `startNode`.
+s-si we `stawtnode` e-est un {{ domxwef("node") }} d-de type `text`, ʘwʘ `comment`, ou `cdatasection`, σωσ awows stawtoffset est we nyombwe de cawactèwes depuis w-we dépawt du `stawtnode`. OwO pouw wes autwes t-types de `nœud`, 😳😳😳 `stawtoffset` est we nyombwe d-de nyoeuds enfants entwe we debut du `stawtnode`. 😳😳😳
 
-Si vous définissez le point de départ en dessous (plus bas dans le document), le point final entraînera une plage réduite avec les points de départ et de fin réglés tous les deux sur la position de départ spécifiée.
+si vous définissez w-we point de dépawt en dessous (pwus b-bas d-dans we document), o.O we point finaw entwaînewa une pwage wéduite avec wes points d-de dépawt et de fin wégwés tous wes deux suw wa position de dépawt spécifiée. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-range.setStart(startNode, startOffset);
-```
-
-### Paramètres
-
-- _startNode_
-  - : {{ domxref("Node") }} ou {{ domxref("Range") }} devrait démarrer.
-- _startOffset_
-  - : Un entier supérieur ou égal à zéro représentant le décalage pour le début du {{domxref ("Range")}} à partir du début de startNode.
-
-## Example
+## s-syntaxe
 
 ```js
-var range = document.createRange();
-var startNode = document.getElementsByTagName("p").item(2);
-var startOffset = 0;
-range.setStart(startNode, startOffset);
+wange.setstawt(stawtnode, (U ﹏ U) s-stawtoffset);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- _stawtnode_
+  - : {{ d-domxwef("node") }} o-ou {{ domxwef("wange") }} devwait démawwew. (///ˬ///✿)
+- _stawtoffset_
+  - : u-un entiew supéwieuw ou égaw à zéwo wepwésentant w-we décawage pouw we début du {{domxwef ("wange")}} à pawtiw du début de stawtnode. >w<
 
-## Compatibilité des navigateurs
+## exampwe
 
-{{Compat}}
+```js
+v-vaw wange = document.cweatewange();
+vaw stawtnode = d-document.getewementsbytagname("p").item(2);
+v-vaw stawtoffset = 0;
+w-wange.setstawt(stawtnode, rawr stawtoffset);
+```
 
-## Voir aussi
+## spécifications
 
-- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+{{specifications}}
+
+## compatibiwité des n-navigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [w'index d-des intewfaces d-dom](/fw/docs/web/api/document_object_modew)

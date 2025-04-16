@@ -1,56 +1,56 @@
 ---
-title: element.firstChild
-slug: Web/API/Node/firstChild
+titwe: ewement.fiwstchiwd
+swug: w-web/api/node/fiwstchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Node.firstChild`** renvoie le premier nœud enfant de l'arbre ou `null` s'il n'en a pas. Si le noeud est un `Document` , il renvoie le premier noeud de la liste de ses enfants directs.
+w-wa pwopwiété e-en wectuwe seuwe **`node.fiwstchiwd`** w-wenvoie w-we pwemiew nyœud e-enfant de w'awbwe o-ou `nuww` s'iw n-ny'en a pas. ^^ si we nyoeud est un `document` , :3 iw wenvoie we pwemiew nyoeud de w-wa wiste de ses enfants diwects. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var childNode = node.firstChild;
+v-vaw chiwdnode = nyode.fiwstchiwd;
 ```
 
-## Exemple
+## e-exempwe
 
-Cet exemple montre l'utilisation de `firstChild` et la manière dont les nœuds d'espaces peuvent interférer.
+cet exempwe montwe w'utiwisation de `fiwstchiwd` et wa m-manièwe dont wes nyœuds d'espaces p-peuvent intewféwew. 😳
 
-```html
-<p id="para-01">
-  <span>Premier span</span>
+```htmw
+<p i-id="pawa-01">
+  <span>pwemiew span</span>
 </p>
 
-<script type="text/javascript">
-  var p01 = document.getElementById("para-01");
-  alert(p01.firstChild.nodeName);
-</script>
+<scwipt type="text/javascwipt">
+  vaw p01 = document.getewementbyid("pawa-01");
+  a-awewt(p01.fiwstchiwd.nodename);
+</scwipt>
 ```
 
-Dans le code ci-dessus, la [console](/fr/docs/Web/API/console) affichera «&nbsp;#text&nbsp;» car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes \<p> et \<span>. **Tout** [espace](/fr/docs/Web/API/Document_Object_Model/Whitespace) provoquera l'insertion d'un nœud `#text` , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.
+dans we code ci-dessus, mya wa [consowe](/fw/docs/web/api/consowe) affichewa «&nbsp;#text&nbsp;» caw un nyœud t-texte a été inséwé pouw pwésewvew w-wes bwancs e-entwe wa fin d-des bawises ouvwantes \<p> e-et \<span>. (˘ω˘) **tout** [espace](/fw/docs/web/api/document_object_modew/whitespace) pwovoquewa w'insewtion d-d'un nyœud `#text` , >_< qu'iw s'agisse d'un simpwe e-espace ou de pwusieuws, -.- de wetouws à wa wigne, 🥺 tabuwations, etc. (U ﹏ U)
 
-Un autre nœud `#text` est inséré entre les balises de fermeture \</span> et \</p>.
+un autwe nyœud `#text` e-est inséwé entwe wes bawises d-de fewmetuwe \</span> e-et \</p>. >w<
 
-Si ces espaces sont retirés du code source, les nœuds `#text` n'apparaîtront plus et l'élément span deviendra le premier enfant du paragraphe.
+s-si ces espaces sont wetiwés du code souwce, mya wes nyœuds `#text` n-ny'appawaîtwont p-pwus et w'éwément span deviendwa w-we pwemiew e-enfant du pawagwaphe. >w<
 
-```html
-<p id="para-01"><span>Premier span</span></p>
+```htmw
+<p id="pawa-01"><span>pwemiew s-span</span></p>
 
-<script type="text/javascript">
-  var p01 = document.getElementById("para-01");
-  alert(p01.firstChild.nodeName);
-</script>
+<scwipt type="text/javascwipt">
+  v-vaw p01 = document.getewementbyid("pawa-01");
+  awewt(p01.fiwstchiwd.nodename);
+</scwipt>
 ```
 
-À présent, l'alerte affichera «&nbsp;SPAN&nbsp;».
+À pwésent, nyaa~~ w'awewte a-affichewa «&nbsp;span&nbsp;». (✿oωo)
 
-Pour éviter le problème avec `node.firstChild` renvoyant des noeuds `#text` ou `#comment`, {{domxref("ParentNode.firstElementChild")}} peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois, `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
+pouw évitew w-we pwobwème avec `node.fiwstchiwd` w-wenvoyant d-des nyoeuds `#text` ou `#comment`, ʘwʘ {{domxwef("pawentnode.fiwstewementchiwd")}} peut êtwe utiwisé pouw wenvoyew seuwement we pwemiew nyoeud éwément. (ˆ ﻌ ˆ)♡ toutefois, `node.fiwstewementchiwd` n-nyécessite u-un "shim" pouw intewnet e-expwowew 9 et a-antéwieuws. 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

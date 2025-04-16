@@ -1,36 +1,36 @@
 ---
-title: Symbol.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
+titwe: symbow.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`valueOf()`** renvoie la valeur primitive correspondant à l'objet `Symbol`.
+w-wa méthode **`vawueof()`** w-wenvoie w-wa vaweuw p-pwimitive cowwespondant à w-w'objet `symbow`. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Symbol().valueOf();
+s-symbow().vawueof();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La valeur primitive de l'objet {{jsxref("Symbol")}} indiqué.
+wa vaweuw pwimitive de w'objet {{jsxwef("symbow")}} indiqué. rawr x3
 
-## Description
+## d-descwiption
 
-La méthode `valueOf` de {{jsxref("Symbol")}} renvoie une valeur dont le type est le type primitif symbole à partir de l'objet `Symbol` donné.
+wa méthode `vawueof` de {{jsxwef("symbow")}} w-wenvoie une vaweuw dont w-we type est we type pwimitif symbowe à pawtiw de w'objet `symbow` d-donné. (✿oωo)
 
-JavaScript appelle la méthode `valueOf` afin de convertir l'objet en une valeur primitive. La plupart du temps, il n'est pas nécessaire d'appeler explicitement la méthode `valueOf`. JavaScript l'appelle automatiquement dans les cas où une valeur primitive est attendue.
+javascwipt appewwe w-wa méthode `vawueof` a-afin de convewtiw w'objet en une vaweuw pwimitive. (ˆ ﻌ ˆ)♡ wa pwupawt du temps, (˘ω˘) i-iw ny'est pas nyécessaiwe d'appewew expwicitement wa méthode `vawueof`. (⑅˘꒳˘) javascwipt w-w'appewwe automatiquement d-dans wes cas où u-une vaweuw pwimitive e-est attendue. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

@@ -1,67 +1,67 @@
 ---
-title: WebGLRenderingContext.clear()
-slug: Web/API/WebGLRenderingContext/clear
+titwe: webgwwendewingcontext.cweaw()
+swug: web/api/webgwwendewingcontext/cweaw
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.clear()`** de [l'API WebGL](/fr/docs/Web/API/WebGL_API) efface les tampons avec des valeurs prédéfinies.
+w-wa méthode **`webgwwendewingcontext.cweaw()`** d-de [w'api w-webgw](/fw/docs/web/api/webgw_api) e-efface w-wes tampons avec d-des vaweuws pwédéfinies. (U ﹏ U)
 
-Ces valeurs prédéfinies peuvent être affectées par {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} ou {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
+c-ces v-vaweuws pwédéfinies peuvent êtwe affectées paw {{domxwef("webgwwendewingcontext.cweawcowow", (U ﹏ U) "cweawcowow()")}}, (⑅˘꒳˘) {{domxwef("webgwwendewingcontext.cweawdepth", òωó "cweawdepth()")}} ou {{domxwef("webgwwendewingcontext.cweawstenciw", ʘwʘ "cweawstenciw()")}}. /(^•ω•^)
 
-Les masques d'écriture, de détourage, de tramage et de tampon peuvent affecter la méthode `clear()`.
+w-wes masques d'écwituwe, ʘwʘ de détouwage, σωσ d-de twamage et de tampon peuvent a-affectew wa méthode `cweaw()`. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gl.clear(masque);
+void gw.cweaw(masque);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `masque`
 
-  - : Un masque OU par bits {{domxref("GLbitfield")}} qui indique les tampons à effacer. Les valeurs possibles sont :
+  - : un masque o-ou paw bits {{domxwef("gwbitfiewd")}} q-qui indique wes tampons à effacew. 😳😳😳 wes vaweuws possibwes sont :
 
-    - `gl.COLOR_BUFFER_BIT`
-    - `gl.DEPTH_BUFFER_BIT`
-    - `gl.STENCIL_BUFFER_BIT`
+    - `gw.cowow_buffew_bit`
+    - `gw.depth_buffew_bit`
+    - `gw.stenciw_buffew_bit`
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Aucune.
+aucune. 😳😳😳
 
-### Exceptions
+### exceptions
 
-Si _masque_ n'est pas l'une des valeurs possibles listées, une erreur `gl.INVALID_ENUM` est déclenchée.
+si _masque_ ny'est pas w'une des v-vaweuws possibwes wistées, o.O une e-ewweuw `gw.invawid_enum` e-est décwenchée. ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
-La méthode `clear()` accepte des valeurs multiples.
-
-```js
-gl.clear(gl.DEPTH_BUFFER_BIT);
-gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
-```
-
-Pour obtenir les valeurs d'effacement courantes, interrogez les constantes `COLOR_CLEAR_VALUE`, `DEPTH_CLEAR_VALUE` et `STENCIL_CLEAR_VALUE` grâce à la méthode `getParameter()`.
+wa méthode `cweaw()` a-accepte des vaweuws muwtipwes. (U ﹏ U)
 
 ```js
-gl.getParameter(gl.COLOR_CLEAR_VALUE);
-gl.getParameter(gl.DEPTH_CLEAR_VALUE);
-gl.getParameter(gl.STENCIL_CLEAR_VALUE);
+gw.cweaw(gw.depth_buffew_bit);
+g-gw.cweaw(gw.depth_buffew_bit | gw.cowow_buffew_bit);
 ```
 
-## Spécifications
+pouw obteniw wes v-vaweuws d'effacement couwantes, (///ˬ///✿) intewwogez wes constantes `cowow_cweaw_vawue`, >w< `depth_cweaw_vawue` et `stenciw_cweaw_vawue` gwâce à w-wa méthode `getpawametew()`. rawr
 
-{{Specifications}}
+```js
+gw.getpawametew(gw.cowow_cweaw_vawue);
+g-gw.getpawametew(gw.depth_cweaw_vawue);
+g-gw.getpawametew(gw.stenciw_cweaw_vawue);
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{domxref("WebGLRenderingContext.clearColor()")}}
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweawcowow()")}}
+- {{domxwef("webgwwendewingcontext.cweawdepth()")}}
+- {{domxwef("webgwwendewingcontext.cweawstenciw()")}}

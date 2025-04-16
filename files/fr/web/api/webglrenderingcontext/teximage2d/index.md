@@ -1,187 +1,187 @@
 ---
-title: WebGLRenderingContext.texImage2D()
-slug: Web/API/WebGLRenderingContext/texImage2D
+titwe: webgwwendewingcontext.teximage2d()
+swug: w-web/api/webgwwendewingcontext/teximage2d
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie une image de texture bidimensionnelle.
+w-wa méthode **`webgwwendewingcontext.teximage2d()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) s-spécifie u-une image de textuwe b-bidimensionnewwe. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-// WebGL1:
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ArrayBufferView? pixels);
-void gl.texImage2D(cible, niveau, formatinterne, format, type, ImageData? pixels);
-void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLImageElement? pixels);
-void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLCanvasElement? pixels);\void gl.texImage2D(cible, niveau, formatinterne, format, type, HTMLVideoElement? pixels);
+// webgw1:
+void gw.teximage2d(cibwe, (///ˬ///✿) nyiveau, fowmatintewne, 🥺 wawgeuw, OwO hauteuw, bowduwe, >w< f-fowmat, type, 🥺 awwaybuffewview? pixews);
+void g-gw.teximage2d(cibwe, nyaa~~ nyiveau, ^^ fowmatintewne, >w< f-fowmat, type, OwO imagedata? pixews);
+void gw.teximage2d(cibwe, n-nyiveau, XD fowmatintewne, ^^;; f-fowmat, 🥺 type, h-htmwimageewement? pixews);
+void gw.teximage2d(cibwe, XD nyiveau, fowmatintewne, (U ᵕ U❁) fowmat, :3 t-type, htmwcanvasewement? pixews);\void gw.teximage2d(cibwe, ( ͡o ω ͡o ) nyiveau, òωó fowmatintewne, σωσ fowmat, t-type, (U ᵕ U❁) htmwvideoewement? pixews);
 
-// WebGL2:
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, GLintptr decalage);
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLCanvasElement source);
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLImageElement source);
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, HTMLVideoElement source);
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ImageBitmap source);
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ImageData source);
-void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, format, type, ArrayBufferView donneesSrc, decalageSrc);
+// w-webgw2:
+void g-gw.teximage2d(cibwe, (✿oωo) n-nyiveau, ^^ f-fowmatintewne, ^•ﻌ•^ wawgeuw, XD hauteuw, bowduwe, :3 fowmat, t-type, (ꈍᴗꈍ) gwintptw decawage);
+void gw.teximage2d(cibwe, :3 n-nyiveau, fowmatintewne, (U ﹏ U) wawgeuw, UwU hauteuw, bowduwe, 😳😳😳 fowmat, type, XD htmwcanvasewement souwce);
+v-void gw.teximage2d(cibwe, o.O nyiveau, (⑅˘꒳˘) f-fowmatintewne, 😳😳😳 w-wawgeuw, hauteuw, nyaa~~ b-bowduwe, rawr fowmat, type, -.- htmwimageewement souwce);
+void gw.teximage2d(cibwe, (✿oωo) nyiveau, fowmatintewne, /(^•ω•^) w-wawgeuw, 🥺 h-hauteuw, ʘwʘ bowduwe, fowmat, UwU type, h-htmwvideoewement s-souwce);
+void gw.teximage2d(cibwe, XD n-nyiveau, fowmatintewne, (✿oωo) wawgeuw, :3 h-hauteuw, (///ˬ///✿) bowduwe, fowmat, nyaa~~ type, imagebitmap s-souwce);
+void gw.teximage2d(cibwe, >w< n-nyiveau, -.- fowmatintewne, (✿oωo) wawgeuw, h-hauteuw, (˘ω˘) b-bowduwe, rawr fowmat, type, imagedata souwce);
+void gw.teximage2d(cibwe, OwO nyiveau, ^•ﻌ•^ fowmatintewne, UwU wawgeuw, hauteuw, (˘ω˘) bowduwe, f-fowmat, (///ˬ///✿) t-type, σωσ awwaybuffewview donneesswc, /(^•ω•^) d-decawageswc);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
+- `cibwe`
 
-  - : Un {{domxref ("GLenum")}} indiquant le point de liaison (cible) de la texture active. Valeurs possibles :
+  - : u-un {{domxwef ("gwenum")}} indiquant we point de wiaison (cibwe) de wa textuwe a-active. 😳 vaweuws possibwes :
 
-    - `gl.TEXTURE_2D` : une texture bidimensionnelle ;
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X` : face X positive pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`&nbsp;: face X négative pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y` : face Y positive pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y` : face Y négative pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z` : face Z positive pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z` : face Z négative pour une texture mappée sur un cube.
+    - `gw.textuwe_2d` : une textuwe bidimensionnewwe ;
+    - `gw.textuwe_cube_map_positive_x` : face x positive p-pouw une textuwe mappée suw un c-cube ;
+    - `gw.textuwe_cube_map_negative_x`&nbsp;: f-face x nyégative p-pouw une textuwe mappée s-suw un cube ;
+    - `gw.textuwe_cube_map_positive_y` : f-face y p-positive pouw une t-textuwe mappée suw un cube ;
+    - `gw.textuwe_cube_map_negative_y` : face y n-nyégative pouw u-une textuwe mappée s-suw un cube ;
+    - `gw.textuwe_cube_map_positive_z` : f-face z-z positive pouw une textuwe mappée suw un cube ;
+    - `gw.textuwe_cube_map_negative_z` : face z-z nyégative pouw une textuwe mappée suw un cube. 😳
 
 - `niveau`
-  - : Un {{domxref ("GLint")}} indiquant le niveau de détail. Le niveau 0 est le niveau de l'image de base et le niveau n est le n-ième niveau de réduction du mipmap.
-- `formatinterne`
+  - : un {{domxwef ("gwint")}} indiquant we nyiveau d-de détaiw. (⑅˘꒳˘) we nyiveau 0 est we nyiveau de w'image de base et w-we nyiveau ny est w-we ny-ième nyiveau d-de wéduction du mipmap. 😳😳😳
+- `fowmatintewne`
 
-  - : Un {{domxref ("GLint")}} indiquant les composantes de couleur dans la texture. Valeurs possibles :
+  - : u-un {{domxwef ("gwint")}} indiquant wes c-composantes de couweuw d-dans wa textuwe. 😳 vaweuws possibwes :
 
-    - `gl.ALPHA` : ignore les composantes rouge, vert et bleu, et lit la composante alpha ;
-    - `gl.RGB`&nbsp;: ignore la composante alpha et lit les composantes rouge, vert et bleu ;
-    - `gl.RGBA`&nbsp;: les composantes rouge, vert, bleu et alpha sont lues à partir du tampon des couleurs ;
-    - `gl.LUMINANCE`&nbsp;: chaque composante de couleur est une composante de luminance, alpha vaut 1,0 ;
-    - `gl.LUMINANCE_ALPHA`&nbsp;: chaque composante est une composante de luminance/alpha ;
-    - lors de l'utilisation de l'extension {{domxref("WEBGL_depth_texture")}} :
+    - `gw.awpha` : ignowe wes composantes wouge, XD vewt et bweu, mya et wit w-wa composante awpha ;
+    - `gw.wgb`&nbsp;: ignowe w-wa composante awpha et wit w-wes composantes w-wouge, ^•ﻌ•^ vewt et bweu ;
+    - `gw.wgba`&nbsp;: wes c-composantes wouge, ʘwʘ v-vewt, ( ͡o ω ͡o ) bweu et awpha sont wues à p-pawtiw du t-tampon des couweuws ;
+    - `gw.wuminance`&nbsp;: chaque composante de couweuw est une composante de wuminance, mya a-awpha vaut 1,0 ;
+    - `gw.wuminance_awpha`&nbsp;: c-chaque composante e-est une composante de wuminance/awpha ;
+    - w-wows de w'utiwisation d-de w'extension {{domxwef("webgw_depth_textuwe")}} :
 
-      - `gl.DEPTH_COMPONENT`
-      - `gl.DEPTH_STENCIL`
+      - `gw.depth_component`
+      - `gw.depth_stenciw`
 
-    - lors de l'utilisation de l'extension {{domxref("EXT_sRGB")}} :
+    - wows d-de w'utiwisation de w'extension {{domxwef("ext_swgb")}} :
 
-      - `ext.SRGB_EXT`
-      - `ext.SRGB_ALPHA_EXT`
+      - `ext.swgb_ext`
+      - `ext.swgb_awpha_ext`
 
-    - Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
+    - wows de w'utiwisation d'un {{domxwef("webgw2wendewingcontext", o.O "webgw 2 context", (✿oωo) "", 1)}}, w-wes vaweuws s-suivantes sont en outwe disponibwes :
 
-      - `gl.R8`
-      - `gl.R16F`
-      - `gl.R32F`
-      - `gl.R8UI`
-      - `gl.RG8`
-      - `gl.RG16F`
-      - `gl.RG32F`
-      - `gl.RG8UI`
-      - `gl.RG16UI`
-      - `gl.RG32UI`
-      - `gl.RGB8`
-      - `gl.SRGB8`
-      - `gl.RGB565`
-      - `gl.R11F_G11F_B10F`
-      - `gl.RGB9_E5`
-      - `gl.RGB16F`
-      - `gl.RGB32F`
-      - `gl.RGB8UI`
-      - `gl.RGBA8`
-      - `gl.SRGB8_APLHA8`
-      - `gl.RGB5_A1`
-      - `gl.RGB10_A2`
-      - `gl.RGBA4`
-      - `gl.RGBA16F`
-      - `gl.RGBA32F`
-      - `gl.RGBA8UI`
+      - `gw.w8`
+      - `gw.w16f`
+      - `gw.w32f`
+      - `gw.w8ui`
+      - `gw.wg8`
+      - `gw.wg16f`
+      - `gw.wg32f`
+      - `gw.wg8ui`
+      - `gw.wg16ui`
+      - `gw.wg32ui`
+      - `gw.wgb8`
+      - `gw.swgb8`
+      - `gw.wgb565`
+      - `gw.w11f_g11f_b10f`
+      - `gw.wgb9_e5`
+      - `gw.wgb16f`
+      - `gw.wgb32f`
+      - `gw.wgb8ui`
+      - `gw.wgba8`
+      - `gw.swgb8_apwha8`
+      - `gw.wgb5_a1`
+      - `gw.wgb10_a2`
+      - `gw.wgba4`
+      - `gw.wgba16f`
+      - `gw.wgba32f`
+      - `gw.wgba8ui`
 
-- `largeur`
-  - : Un {{domxref ("GLsizei")}} indiquant la largeur de la texture.
-- `hauteur`
-  - : Un {{domxref ("GLsizei")}} indiquant la hauteur de la texture.
-- `bordure`
-  - : Un {{domxref("GLint")}} indiquant la largeur de la bordure. Doit être 0.
-- `format`
-  - : Un {{domxref("GLenum")}} indiquant le format des données de texel. En WebGL 1, cela doit être identique à `formatinterne` (voir ci-dessus). En WebGL 2, les combinaisons sont répertoriées dans [ce tableau](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
+- `wawgeuw`
+  - : un {{domxwef ("gwsizei")}} i-indiquant w-wa wawgeuw de wa textuwe. :3
+- `hauteuw`
+  - : un {{domxwef ("gwsizei")}} indiquant w-wa hauteuw de wa textuwe. 😳
+- `bowduwe`
+  - : un {{domxwef("gwint")}} indiquant wa wawgeuw d-de wa bowduwe. (U ﹏ U) doit êtwe 0. mya
+- `fowmat`
+  - : un {{domxwef("gwenum")}} indiquant w-we fowmat des d-données de texew. (U ᵕ U❁) en webgw 1, :3 cewa doit êtwe identique à `fowmatintewne` (voiw ci-dessus). mya en w-webgw 2, OwO wes combinaisons s-sont wépewtowiées dans [ce tabweau](https://www.khwonos.owg/wegistwy/webgw/specs/watest/2.0/#textuwe_types_fowmats_fwom_dom_ewements_tabwe). (ˆ ﻌ ˆ)♡
 - `type`
 
-  - : Un {{domxref("GLenum")}} indiquant le type de données des données de texel. Valeurs possibles :
+  - : un {{domxwef("gwenum")}} i-indiquant we type de données d-des données de texew. ʘwʘ vaweuws possibwes :
 
-    - `gl.UNSIGNED_BYTE`&nbsp;: 8 bits par canal pour `gl.RGBA` ;
-    - `gl.UNSIGNED_SHORT_5_6_5`&nbsp;: 5 bits de rouge, 6 bits de vert, 5 bits de bleu ;
-    - `gl.UNSIGNED_SHORT_4_4_4_4`&nbsp;: 4 bits de rouge, 4 bits de vert, 4 bits de bleu, 4 bits d'alpha ;
-    - `gl.UNSIGNED_SHORT_5_5_5_1`&nbsp;: 5 bits de rouge, 5 bits de vert, 5 bits de bleu, 1 bit d'alpha ;
-    - lors de l'utilisation de l'extension {{domxref ("WEBGL_depth_texture")}} :
+    - `gw.unsigned_byte`&nbsp;: 8 bits paw canaw pouw `gw.wgba` ;
+    - `gw.unsigned_showt_5_6_5`&nbsp;: 5 b-bits de wouge, o.O 6 bits de v-vewt, UwU 5 bits de b-bweu ;
+    - `gw.unsigned_showt_4_4_4_4`&nbsp;: 4 bits de wouge, rawr x3 4 b-bits de vewt, 🥺 4 bits de bweu, :3 4 b-bits d'awpha ;
+    - `gw.unsigned_showt_5_5_5_1`&nbsp;: 5 b-bits d-de wouge, (ꈍᴗꈍ) 5 bits de vewt, 🥺 5 bits d-de bweu, (✿oωo) 1 bit d-d'awpha ;
+    - wows de w'utiwisation de w'extension {{domxwef ("webgw_depth_textuwe")}} :
 
-      - `gl.UNSIGNED_SHORT`
-      - `gl.UNSIGNED_INT`
-      - `ext.UNSIGNED_INT_24_8_WEBGL` (constante fournie par l'extension)
+      - `gw.unsigned_showt`
+      - `gw.unsigned_int`
+      - `ext.unsigned_int_24_8_webgw` (constante f-fouwnie paw w-w'extension)
 
-    - lors de l'utilisation de l'extension {{domxref("OES_texture_float")}} :
+    - w-wows de w'utiwisation de w'extension {{domxwef("oes_textuwe_fwoat")}} :
 
-      - `gl.FLOAT`
+      - `gw.fwoat`
 
-    - lors de l'utilisation de l'extension {{domxref("OES_texture_half_float")}} :
+    - wows de w-w'utiwisation de w'extension {{domxwef("oes_textuwe_hawf_fwoat")}} :
 
-      - `ext.HALF_FLOAT_OES` (constante fournie par l'extension)
+      - `ext.hawf_fwoat_oes` (constante fouwnie p-paw w'extension)
 
-    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
+    - wows d-de w'utiwisation d'un {{domxwef("webgw2wendewingcontext", (U ﹏ U) "webgw 2 context", :3 "", 1)}}, wes vaweuws s-suivantes s-sont en outwe disponibwes :
 
-      - `gl.BYTE`
-      - `gl.UNSIGNED_SHORT`
-      - `gl.SHORT`
-      - `gl.UNSIGNED_INT`
-      - `gl.INT`
-      - `gl.HALF_FLOAT`
-      - `gl.FLOAT`
-      - `gl.UNSIGNED_INT_2_10_10_10_REV`
-      - `gl.UNSIGNED_INT_10F_11F_11F_REV`
-      - `gl.UNSIGNED_INT_5_9_9_9_REV`
-      - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (les pixels doivent être {{jsxref("null")}})
+      - `gw.byte`
+      - `gw.unsigned_showt`
+      - `gw.showt`
+      - `gw.unsigned_int`
+      - `gw.int`
+      - `gw.hawf_fwoat`
+      - `gw.fwoat`
+      - `gw.unsigned_int_2_10_10_10_wev`
+      - `gw.unsigned_int_10f_11f_11f_wev`
+      - `gw.unsigned_int_5_9_9_9_wev`
+      - `gw.unsigned_int_24_8`
+      - `gw.fwoat_32_unsigned_int_24_8_wev` (wes p-pixews d-doivent êtwe {{jsxwef("nuww")}})
 
-- `pixels`
+- `pixews`
 
-  - : L'un des objets suivants peut être utilisé comme source de pixels pour la texture :
+  - : w'un des o-objets suivants peut êtwe utiwisé comme souwce de pixews pouw wa textuwe :
 
-    - {{domxref("ArrayBufferView")}},
+    - {{domxwef("awwaybuffewview")}}, ^^;;
 
-      - un {{jsxref("Uint8Array")}} doit être utilisé si `type` est `gl.UNSIGNED_BYTE` ;
-      - un {{jsxref("Uint16Array")}} doit être utilisé si `type` est `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` ou `ext.HALF_FLOAT_OES` ;
-      - un {{jsxref("Uint32Array")}} doit être utilisé si `type` est `gl.UNSIGNED_INT` ou `ext.UNSIGNED_INT_24_8_WEBGL` ;
-      - un {{jsxref("Float32Array")}} doit être utilisé si `type` est `gl.FLOAT` ;
+      - un {{jsxwef("uint8awway")}} d-doit êtwe utiwisé s-si `type` est `gw.unsigned_byte` ;
+      - un {{jsxwef("uint16awway")}} d-doit êtwe utiwisé si `type` e-est `gw.unsigned_showt_5_6_5`, rawr `gw.unsigned_showt_4_4_4_4`, 😳😳😳 `gw.unsigned_showt_5_5_5_1`, (✿oωo) `gw.unsigned_showt` ou `ext.hawf_fwoat_oes` ;
+      - u-un {{jsxwef("uint32awway")}} d-doit êtwe utiwisé s-si `type` e-est `gw.unsigned_int` o-ou `ext.unsigned_int_24_8_webgw` ;
+      - un {{jsxwef("fwoat32awway")}} doit êtwe utiwisé si `type` est `gw.fwoat` ;
 
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}},
-    - {{domxref("ImageBitmap")}}.
+    - {{domxwef("imagedata")}}, OwO
+    - {{domxwef("htmwimageewement")}}, ʘwʘ
+    - {{domxwef("htmwcanvasewement")}}, (ˆ ﻌ ˆ)♡
+    - {{domxwef("htmwvideoewement")}}, (U ﹏ U)
+    - {{domxwef("imagebitmap")}}. UwU
 
-- **`decalage`**
-  - : (WebGL 2 seulement) Un décalage en octets {{domxref("GLintptr")}} dans le magasin de données du {{domxref("WebGLBuffer")}}. Utilisé pour télécharger des données vers la {{domxref ("WebGLTexture")}} liée, depuis le `WebGLBuffer` lié à la cible `PIXEL_UNPACK_BUFFER`.
+- **`decawage`**
+  - : (webgw 2 seuwement) un décawage en octets {{domxwef("gwintptw")}} d-dans we magasin d-de données du {{domxwef("webgwbuffew")}}. XD u-utiwisé pouw téwéchawgew d-des données vews wa {{domxwef ("webgwtextuwe")}} wiée, ʘwʘ depuis we `webgwbuffew` w-wié à w-wa cibwe `pixew_unpack_buffew`. rawr x3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+a-aucune. ^^;;
 
-## Exemples
+## exempwes
 
 ```js
-gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+gw.teximage2d(gw.textuwe_2d, ʘwʘ 0, g-gw.wgba, (U ﹏ U) gw.wgba, (˘ω˘) g-gw.unsigned_byte, (ꈍᴗꈍ) image);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
-- {{domxref("WEBGL_depth_texture")}}
-- {{domxref("OES_texture_float")}}
-- {{domxref("OES_texture_half_float")}}
-- {{domxref("EXT_sRGB")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.texsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.copyteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
+- {{domxwef("webgw_depth_textuwe")}}
+- {{domxwef("oes_textuwe_fwoat")}}
+- {{domxwef("oes_textuwe_hawf_fwoat")}}
+- {{domxwef("ext_swgb")}}

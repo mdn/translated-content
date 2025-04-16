@@ -1,71 +1,71 @@
 ---
-title: HTMLIFrameElement
-slug: Web/API/HTMLIFrameElement
+titwe: htmwifwameewement
+swug: w-web/api/htmwifwameewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLIFrameElement`** fournit des propriétés et des méthodes spéciales (en plus de celles de l'interface {{domxref("HTMLElement")}} auxquelles elle peut accéder par héritage) pour manipuler la disposition et la présentation des éléments "en-ligne" d'un cadre.
+w'intewface **`htmwifwameewement`** f-fouwnit d-des pwopwiétés e-et des méthodes s-spéciawes (en p-pwus de cewwes d-de w'intewface {{domxwef("htmwewement")}} auxquewwes ewwe peut accédew paw héwitage) pouw manipuwew wa disposition e-et wa pwésentation des éwéments "en-wigne" d'un cadwe. ( ͡o ω ͡o )
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Propriétés héritées de son parent, {{domxref("HTMLElement")}}_.
+_pwopwiétés héwitées d-de son pawent, o.O {{domxwef("htmwewement")}}_. >w<
 
-- {{domxref("HTMLIFrameElement.align")}} {{deprecated_inline}}
-  - : Est une caîne de caractères {{domxref("DOMString")}} qui spécifie l'alignement du cadre par rapport au contexte environnant.
-- {{domxref("HTMLIFrameElement.allow")}} {{experimental_inline}}
-  - : Est une liste d'origines à partir desquelles le cadre est autorisé à afficher du contenu. Cet attribut accepte également les valeurs `self` et `src` qui représentent l'origine dans l'attribut src de l'iframe. La valeur par défaut est `src`.
-- {{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}
-  - : Est un {{domxref("Boolean")}} indiquant si le cadre en ligne est prêt à être placé en mode plein écran. Voir [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API) pour plus de détails.
-- {{domxref("HTMLIFrameElement.allowPaymentRequest")}}
-  - : Est un {{domxref("Boolean")}} indiquant si l'API' [Payment Request API](/fr/docs/Web/API/Payment_Request_API) peut être appelée à l'intérieur d'une iframe cross-origin.
-- {{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}
-  - : Retourne un {{domxref("Document")}}, le document actif dans le contexte de navigation imbriqué du cadre en ligne.
-- {{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}
-  - : Renvoie un {{domxref("WindowProxy")}}, la fenêtre proxy pour le contexte de navigation imbriqué.
-- {{domxref("HTMLIFrameElement.csp")}}
-  - : Spécifie la politique de sécurité du contenu qu'un document incorporé doit accepter d'appliquer à lui-même.
-- {{domxref("HTMLIFrameElement.frameBorder")}} {{deprecated_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui indique s'il faut créer des bordures entre les cadres.
-- {{domxref("HTMLIFrameElement.height")}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/iframe#height) indiquant la hauteur du cadre.
-- {{domxref("HTMLIFrameElement.longDesc")}} {{deprecated_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui contient l'URI d'une description longue du cadre.
-- {{domxref("HTMLIFrameElement.marginHeight")}} {{deprecated_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} représentant la hauteur de la marge du cadre.
-- {{domxref("HTMLIFrameElement.marginWidth")}} {{deprecated_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} représentant la largeur de la marge du cadre.
-- {{domxref("HTMLIFrameElement.name")}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`name`](/fr/docs/Web/HTML/Element/iframe#name) contenant un nom permettant de faire référence au cadre.
-- {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}
-  - : Retourne l'interface {{domxref("FeaturePolicy")}} qui fournit une API simple pour l'introspection des politiques de fonctionnalité appliquées à un document spécifique.
-- {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`referrerPolicy`](/fr/docs/Web/HTML/Element/iframe#referrerpolicy) attribut HTML indiquant le référent à utiliser lors de l'extraction de la ressource liée.
-- {{domxref("HTMLIFrameElement.sandbox")}}
-  - : Est un {{domxref("DOMSettableTokenList")}} qui reflète l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) indiquant des restrictions supplémentaires sur le comportement du contenu imbriqué.
-- {{domxref("HTMLIFrameElement.scrolling")}} {{deprecated_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui indique si le navigateur doit fournir des barres de défilement pour le cadre.
-- {{domxref("HTMLIFrameElement.src")}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`src`](/fr/docs/Web/HTML/Element/iframe#src) contenant l'adresse du contenu à intégrer. Notez que la suppression programmatique de l'attribut src d'un `<iframe>` (par exemple via {{domxref("Element.removeAttribute()")}}) entraîne le chargement de `about:blank` dans le cadre dans Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.
-- {{domxref("HTMLIFrameElement.srcdoc")}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui représente le contenu à afficher dans le cadre.
-- {{domxref("HTMLIFrameElement.width")}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/iframe#width) indiquant la largeur du cadre.
+- {{domxwef("htmwifwameewement.awign")}} {{depwecated_inwine}}
+  - : est une caîne de cawactèwes {{domxwef("domstwing")}} qui spécifie w-w'awignement du cadwe paw w-wappowt au contexte e-enviwonnant. 😳
+- {{domxwef("htmwifwameewement.awwow")}} {{expewimentaw_inwine}}
+  - : est une wiste d'owigines à pawtiw desquewwes we cadwe e-est autowisé à affichew du contenu. 🥺 cet attwibut accepte égawement wes vaweuws `sewf` e-et `swc` qui wepwésentent w-w'owigine dans w-w'attwibut swc d-de w'ifwame. rawr x3 wa v-vaweuw paw défaut est `swc`. o.O
+- {{domxwef("htmwifwameewement.awwowfuwwscween")}} {{expewimentaw_inwine}}
+  - : est un {{domxwef("boowean")}} indiquant s-si we cadwe en wigne est pwêt à êtwe p-pwacé en mode pwein écwan. rawr voiw [utiwisew we mode pwein écwan](/fw/docs/web/api/fuwwscween_api) pouw pwus de détaiws. ʘwʘ
+- {{domxwef("htmwifwameewement.awwowpaymentwequest")}}
+  - : e-est un {{domxwef("boowean")}} indiquant s-si w'api' [payment w-wequest api](/fw/docs/web/api/payment_wequest_api) p-peut êtwe appewée à w'intéwieuw d'une ifwame cwoss-owigin. 😳😳😳
+- {{domxwef("htmwifwameewement.contentdocument")}} {{weadonwyinwine}}
+  - : w-wetouwne un {{domxwef("document")}}, ^^;; w-we document actif dans we c-contexte de nyavigation i-imbwiqué du cadwe en wigne. o.O
+- {{domxwef("htmwifwameewement.contentwindow")}} {{weadonwyinwine}}
+  - : wenvoie u-un {{domxwef("windowpwoxy")}}, (///ˬ///✿) wa fenêtwe p-pwoxy pouw we contexte de nyavigation imbwiqué. σωσ
+- {{domxwef("htmwifwameewement.csp")}}
+  - : s-spécifie wa powitique de sécuwité d-du contenu qu'un document incowpowé d-doit acceptew d-d'appwiquew à wui-même. nyaa~~
+- {{domxwef("htmwifwameewement.fwamebowdew")}} {{depwecated_inwine}}
+  - : est une chaîne de cawactèwes {{domxwef("domstwing")}} qui indique s'iw faut cwéew d-des bowduwes entwe w-wes cadwes. ^^;;
+- {{domxwef("htmwifwameewement.height")}}
+  - : est une chaîne d-de cawactèwes {{domxwef("domstwing")}} q-qui wefwète w-w'attwibut htmw [`height`](/fw/docs/web/htmw/ewement/ifwame#height) indiquant wa hauteuw du c-cadwe. ^•ﻌ•^
+- {{domxwef("htmwifwameewement.wongdesc")}} {{depwecated_inwine}}
+  - : est une chaîne de cawactèwes {{domxwef("domstwing")}} qui contient w'uwi d'une d-descwiption wongue du cadwe. σωσ
+- {{domxwef("htmwifwameewement.mawginheight")}} {{depwecated_inwine}}
+  - : e-est une c-chaîne de cawactèwes {{domxwef("domstwing")}} w-wepwésentant wa hauteuw de wa m-mawge du cadwe.
+- {{domxwef("htmwifwameewement.mawginwidth")}} {{depwecated_inwine}}
+  - : e-est u-une chaîne de c-cawactèwes {{domxwef("domstwing")}} wepwésentant wa wawgeuw de w-wa mawge du cadwe. -.-
+- {{domxwef("htmwifwameewement.name")}}
+  - : e-est une chaîne d-de cawactèwes {{domxwef("domstwing")}} q-qui wefwète w-w'attwibut htmw [`name`](/fw/docs/web/htmw/ewement/ifwame#name) contenant un nyom pewmettant d-de faiwe wéféwence au cadwe. ^^;;
+- {{domxwef("htmwifwameewement.featuwepowicy")}} {{weadonwyinwine}}{{expewimentaw_inwine}}
+  - : wetouwne w'intewface {{domxwef("featuwepowicy")}} qui fouwnit une api simpwe pouw w'intwospection d-des powitiques de fonctionnawité appwiquées à un document s-spécifique. XD
+- {{domxwef("htmwifwameewement.wefewwewpowicy")}} {{expewimentaw_inwine}}
+  - : e-est une chaîne d-de cawactèwes {{domxwef("domstwing")}} qui wefwète w-w'attwibut htmw [`wefewwewpowicy`](/fw/docs/web/htmw/ewement/ifwame#wefewwewpowicy) a-attwibut h-htmw indiquant we wéféwent à utiwisew wows de w'extwaction de wa wessouwce wiée. 🥺
+- {{domxwef("htmwifwameewement.sandbox")}}
+  - : e-est un {{domxwef("domsettabwetokenwist")}} qui wefwète w-w'attwibut [`sandbox`](/fw/docs/web/htmw/ewement/ifwame#sandbox) indiquant des westwictions s-suppwémentaiwes s-suw we compowtement du contenu imbwiqué. òωó
+- {{domxwef("htmwifwameewement.scwowwing")}} {{depwecated_inwine}}
+  - : e-est une chaîne d-de cawactèwes {{domxwef("domstwing")}} qui indique s-si we nyavigateuw d-doit fouwniw des bawwes de défiwement pouw we cadwe. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwifwameewement.swc")}}
+  - : est une c-chaîne de cawactèwes {{domxwef("domstwing")}} q-qui wefwète w'attwibut h-htmw [`swc`](/fw/docs/web/htmw/ewement/ifwame#swc) contenant w-w'adwesse d-du contenu à intégwew. -.- nyotez q-que wa suppwession pwogwammatique de w'attwibut swc d'un `<ifwame>` (paw exempwe v-via {{domxwef("ewement.wemoveattwibute()")}}) entwaîne w-we chawgement de `about:bwank` dans we c-cadwe dans fiwefox (à p-pawtiw de wa vewsion 65), :3 wes nyavigateuws basés suw chwomium e-et safawi/ios. ʘwʘ
+- {{domxwef("htmwifwameewement.swcdoc")}}
+  - : est une chaîne de cawactèwes {{domxwef("domstwing")}} qui wepwésente we c-contenu à affichew dans we cadwe. 🥺
+- {{domxwef("htmwifwameewement.width")}}
+  - : est une chaîne d-de cawactèwes {{domxwef("domstwing")}} q-qui wefwète w'attwibut htmw [`width`](/fw/docs/web/htmw/ewement/ifwame#width) indiquant w-wa wawgeuw du c-cadwe. >_<
 
-## Méthodes
+## méthodes
 
-_Aucune méthode spécifique ; hérite des propriétés de son parent, {{domxref("HTMLElement")}}_.
+_aucune méthode spécifique ; héwite des pwopwiétés de s-son pawent, ʘwʘ {{domxwef("htmwewement")}}_. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML implémentant cette interface : {{HTMLElement("iframe")}}
+- w'éwément htmw impwémentant c-cette intewface : {{htmwewement("ifwame")}}

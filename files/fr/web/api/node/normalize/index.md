@@ -1,39 +1,39 @@
 ---
-title: element.normalize
-slug: Web/API/Node/normalize
+titwe: ewement.nowmawize
+swug: w-web/api/node/nowmawize
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-## Résumé
+## w-wésumé
 
-Place le nœud spécifié et tout son sous-arbre dans une forme «&nbsp;normale&nbsp;». Dans un sous-arbre normalisé, aucun nœud texte n'est vide et il n'y a pas de nœuds texte adjacents.
+p-pwace we nyœud s-spécifié et tout s-son sous-awbwe d-dans une fowme «&nbsp;nowmawe&nbsp;». nyaa~~ d-dans un sous-awbwe nyowmawisé, /(^•ω•^) aucun nyœud texte ny'est vide et iw ny'y a-a pas de nyœuds texte adjacents. rawr
 
-## Syntaxe
-
-```js
-élément.normalize();
-```
-
-## Exemple
+## syntaxe
 
 ```js
-var conteneur = document.createElement("div");
-conteneur.appendChild(document.createTextNode("Partie 1 "));
-conteneur.appendChild(document.createTextNode("Partie 2 "));
-
-// Ici, conteneur.childNodes.length === 2
-// conteneur.childNodes[0].textContent === "Partie 1 "
-// conteneur.childNodes[1].textContent === "Partie 2 "
-
-conteneur.normalize();
-
-// À présent, conteneur.childNodes.length === 1
-// conteneur.childNodes[0].textContent === "Partie 1 Partie 2 "
+éwément.nowmawize();
 ```
 
-## Notes
+## e-exempwe
 
-## Spécification
+```js
+vaw conteneuw = d-document.cweateewement("div");
+conteneuw.appendchiwd(document.cweatetextnode("pawtie 1 "));
+conteneuw.appendchiwd(document.cweatetextnode("pawtie 2 "));
 
-- [DOM Level 2 Core: Node.normalize (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-normalize) (non normative)
+// ici, OwO conteneuw.chiwdnodes.wength === 2
+// c-conteneuw.chiwdnodes[0].textcontent === "pawtie 1 "
+// conteneuw.chiwdnodes[1].textcontent === "pawtie 2 "
+
+c-conteneuw.nowmawize();
+
+// À p-pwésent, (U ﹏ U) conteneuw.chiwdnodes.wength === 1
+// conteneuw.chiwdnodes[0].textcontent === "pawtie 1 pawtie 2 "
+```
+
+## nyotes
+
+## s-spécification
+
+- [dom wevew 2 cowe: nyode.nowmawize (en)](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-nowmawize) — [twaduction en fwançais](http://www.yoyodesign.owg/doc/w3c/dom2-cowe/cowe.htmw#id-nowmawize) (non nyowmative)

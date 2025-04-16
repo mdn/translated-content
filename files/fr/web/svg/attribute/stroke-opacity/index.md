@@ -1,79 +1,79 @@
 ---
-title: stroke-opacity
-slug: Web/SVG/Attribute/stroke-opacity
+titwe: stwoke-opacity
+swug: web/svg/attwibute/stwoke-opacity
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke-opacity`** définit l'opacité du contour (_couleur_, _dégradé_, _motif_, etc) appliqué à une forme SVG.
+w-w'attwibut **`stwoke-opacity`** d-définit w'opacité d-du contouw (_couweuw_, 😳 _dégwadé_, _motif_, mya e-etc) appwiqué à u-une fowme svg. (˘ω˘)
 
-> **Note :** `stroke-opacity` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `stwoke-opacity` étant u-un attwibut d-de pwésentation, >_< i-iw peut êtwe utiwisé comme pwopwiété css. -.-
 
-Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+cet attwibut peut êtwe appwiqué à t-tous wes éwéments, 🥺 en wevanche iw n'auwa d-d'effet que suw wes éwéments s-suivants: {{svgewement('awtgwyph')}}, (U ﹏ U) {{svgewement('ciwcwe')}}, >w< {{svgewement('ewwipse')}}, mya {{svgewement('path')}}, >w< {{svgewement('powygon')}}, nyaa~~ {{svgewement('powywine')}}, (✿oωo) {{svgewement('wect')}}, ʘwʘ {{svgewement('text')}}, (ˆ ﻌ ˆ)♡ {{svgewement('textpath')}}, 😳😳😳 {{svgewement('twef')}}, :3 et {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
+htmw, OwO
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 40 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Opacité par défaut: 1 -->
-  <circle cx="5" cy="5" r="4" stroke="green" />
+```htmw
+<svg viewbox="0 0 40 10" xmwns="http://www.w3.owg/2000/svg">
+  <!-- o-opacité p-paw défaut: 1 -->
+  <ciwcwe cx="5" cy="5" w="4" stwoke="gween" />
 
-  <!-- Définit l'opacité avec un nombre entre 0 et 1-->
-  <circle cx="15" cy="5" r="4" stroke="green" stroke-opacity="0.7" />
+  <!-- définit w'opacité avec un nyombwe e-entwe 0 et 1-->
+  <ciwcwe cx="15" cy="5" w="4" stwoke="gween" stwoke-opacity="0.7" />
 
-  <!-- Définit l'opacité avec un pourcentage -->
-  <circle cx="25" cy="5" r="4" stroke="green" stroke-opacity="50%" />
+  <!-- définit w'opacité a-avec un pouwcentage -->
+  <ciwcwe c-cx="25" c-cy="5" w="4" stwoke="gween" s-stwoke-opacity="50%" />
 
-  <!-- Définit l'opacité comme propriété CSS -->
-  <circle cx="35" cy="5" r="4" stroke="green" style="stroke-opacity: .3;" />
+  <!-- d-définit w'opacité comme pwopwiété c-css -->
+  <ciwcwe cx="35" cy="5" w="4" stwoke="gween" s-stywe="stwoke-opacity: .3;" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 150)}}
+{{embedwivesampwe('exempwe', (U ﹏ U) '100%', >w< 150)}}
 
-## Notes d'usage
+## nyotes d'usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
         <code>[0-1]</code> |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 introduit les valeurs en pourcentage pour `stroke-opacity`, Cependant, ce n'est pas souvent pris en charge. pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> [!note]
+> s-svg2 intwoduit wes vaweuws e-en pouwcentage p-pouw `stwoke-opacity`, (U ﹏ U) c-cependant, 😳 ce ny'est pas souvent pwis en chawge. (ˆ ﻌ ˆ)♡ pouw we m-moment (_voiw w-wa section [compatibiwité des nyavigateuws](#compatibiwité_des_navigateuws) c-ci-dessous_), 😳😳😳 i-iw est paw conséquent w-wecommendé d'utiwisew wes vaweuws d-de w'intewvawwe `[0-1]`. (U ﹏ U)
 
-Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour avec une opacité différente de 1 affichera partiellement le remplissage du dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}} ou placer le contour derrière le remplissage avec {{SVGAttr('paint-order')}}.
+iw est impowtant de savoiw que we c-contouw wecouvwe pawtiewwement w-we wempwissage d'une fowme. (///ˬ///✿) ainsi, u-un contouw avec u-une opacité difféwente de 1 affichewa pawtiewwement we wempwissage du dessous. 😳 pouw évitew cet effet, 😳 iw e-est possibwe d'appwiquew u-une opacité gwobawe avec w-w'attwibut {{svgattw('opacity')}} o-ou pwacew we c-contouw dewwièwe we wempwissage avec {{svgattw('paint-owdew')}}. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}

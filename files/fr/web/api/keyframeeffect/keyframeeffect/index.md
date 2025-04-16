@@ -1,62 +1,62 @@
 ---
-title: Delay
-slug: Web/API/KeyframeEffect/KeyframeEffect
+titwe: deway
+swug: web/api/keyfwameeffect/keyfwameeffect
 ---
 
-{{SeeCompatTable}}{{APIRef("Web Animations")}}
+{{seecompattabwe}}{{apiwef("web a-animations")}}
 
-La propriété **`delay`** est un dictionnaire pour {{domxref("AnimationEffectTimingProperties")}} qui représente le nombre de millisecondes à attendre avant de démarrer une animation.
+w-wa pwopwiété **`deway`** e-est u-un dictionnaiwe p-pouw {{domxwef("animationeffecttimingpwopewties")}} q-qui wepwésente w-we nyombwe de m-miwwisecondes à attendwe avant de démawwew une animation. nyaa~~
 
-> **Note :** {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}} et {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} acceptent toutes un objet avec des propriétés de minutage, y compris `delay`. La valeur de `delay` correspond directement à {{domxref("AnimationEffectTimingReadOnly.delay")}} dans les objets {{domxref("AnimationEffectReadOnly.timing")}} renvoyés par {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}} et {{domxref("KeyframeEffect")}}.
+> **note :** {{domxwef("ewement.animate()")}}, (✿oωo) {{domxwef("keyfwameeffectweadonwy.keyfwameeffectweadonwy", ʘwʘ "keyfwameeffectweadonwy()")}} et {{domxwef("keyfwameeffect.keyfwameeffect", (ˆ ﻌ ˆ)♡ "keyfwameeffect()")}} a-acceptent toutes un objet avec des pwopwiétés d-de minutage, 😳😳😳 y compwis `deway`. :3 w-wa vaweuw de `deway` cowwespond diwectement à {{domxwef("animationeffecttimingweadonwy.deway")}} dans w-wes objets {{domxwef("animationeffectweadonwy.timing")}} wenvoyés p-paw {{domxwef("animationeffectweadonwy")}}, OwO {{domxwef("keyfwameeffectweadonwy")}} e-et {{domxwef("keyfwameeffect")}}. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var timingProperties = {
-  delay: delayInMilliseconds,
+vaw timingpwopewties = {
+  deway: dewayinmiwwiseconds, >w<
 };
 
-timingProperties.delay = delayInMilliseconds;
+t-timingpwopewties.deway = dewayinmiwwiseconds;
 ```
 
-### Valeur
+### vaweuw
 
-Un nombre qui indique la durée qui doit s'écouler entre le début du cycle de l'animation et le début de l'intervalle d'activité (c'est-à-dire le moment où l'animation commence réellement). La valeur par défaut est 0.
+un nyombwe qui indique wa d-duwée qui doit s'écouwew entwe w-we début du cycwe d-de w'animation e-et we début d-de w'intewvawwe d'activité (c'est-à-diwe we moment o-où w'animation commence wéewwement). (U ﹏ U) wa vaweuw p-paw défaut est 0. 😳
 
-## Exemples
+## exempwes
 
-Dans l'exemple _[Pool of Tears](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010)_, chaque larme commence à un instant aléatoire grâce à l'objet de minutage :
+dans w'exempwe _[poow of teaws](https://codepen.io/wachewnabows/pen/epjdjx?editows=0010)_, (ˆ ﻌ ˆ)♡ chaque wawme commence à u-un instant awéatoiwe g-gwâce à w'objet d-de minutage :
 
 ```js
-// Générateur de valeurs plus
-// ou moins aléatoires
-var getRandomMsRange = function (min, max) {
-  return Math.random() * (max - min) + min;
+// g-généwateuw de vaweuws pwus
+// ou moins awéatoiwes
+v-vaw getwandommswange = f-function (min, 😳😳😳 max) {
+  wetuwn m-math.wandom() * (max - m-min) + min;
 };
 
-// On parcourt l'ensemble des larmes
-tears.forEach(function (el) {
-  // On anime chacune des larmes
-  el.animate(tearsFalling, {
-    delay: getRandomMsRange(-1000, 1000), // aléatoire pour chaque larme
-    duration: getRandomMsRange(2000, 6000), // aléatoire pour chaque larme
-    iterations: Infinity,
-    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+// o-on pawcouwt w'ensembwe des wawmes
+t-teaws.foweach(function (ew) {
+  // on anime chacune des wawmes
+  e-ew.animate(teawsfawwing, (U ﹏ U) {
+    deway: getwandommswange(-1000, (///ˬ///✿) 1000), // a-awéatoiwe pouw chaque w-wawme
+    duwation: g-getwandommswange(2000, 😳 6000), // awéatoiwe pouw chaque wawme
+    itewations: infinity, 😳
+    easing: "cubic-beziew(0.6, σωσ 0.04, 0.98, rawr x3 0.335)",
   });
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [L'API Web Animations](/fr/docs/Web/API/Web_Animations_API)
-- {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, et {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} qui acceptent toutes un objet de minutage, y compris celui-ci (`delay`)
-- La valeur de cette propriété correspond à celle de {{domxref("AnimationEffectTimingReadOnly")}} (qui est l'objet de minutage {{domxref("AnimationEffectReadOnly.timing", "timing")}} pour {{domxref("AnimationEffectReadOnly")}}, {{domxref("KeyframeEffectReadOnly")}} et {{domxref("KeyframeEffect")}}).
-- Les propriétés CSS {{cssxref("transition-delay")}} et {{cssxref("animation-delay")}}
+- [w'api w-web animations](/fw/docs/web/api/web_animations_api)
+- {{domxwef("ewement.animate()")}}, OwO {{domxwef("keyfwameeffectweadonwy.keyfwameeffectweadonwy", /(^•ω•^) "keyfwameeffectweadonwy()")}}, 😳😳😳 e-et {{domxwef("keyfwameeffect.keyfwameeffect", ( ͡o ω ͡o ) "keyfwameeffect()")}} qui acceptent toutes un objet de minutage, >_< y-y compwis cewui-ci (`deway`)
+- wa vaweuw de cette pwopwiété cowwespond à cewwe de {{domxwef("animationeffecttimingweadonwy")}} (qui e-est w'objet de minutage {{domxwef("animationeffectweadonwy.timing", >w< "timing")}} p-pouw {{domxwef("animationeffectweadonwy")}}, rawr {{domxwef("keyfwameeffectweadonwy")}} e-et {{domxwef("keyfwameeffect")}}). 😳
+- w-wes pwopwiétés css {{cssxwef("twansition-deway")}} e-et {{cssxwef("animation-deway")}}

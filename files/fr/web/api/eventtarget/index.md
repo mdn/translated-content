@@ -1,94 +1,94 @@
 ---
-title: EventTarget
-slug: Web/API/EventTarget
+titwe: eventtawget
+swug: web/api/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.
+`eventtawget` e-est une intewface d-dom impwémentée p-paw des o-objets qui peuvent w-wecevoiw des événements et p-peuvent avoiw d-des écouteuws pouw e-eux. 😳😳😳
 
-{{domxref ("Element")}}, {{domxref ("Document")}} et {{domxref ("Window")}} sont les cibles d'événements les plus fréquentes, mais d'autres objets peuvent également être des cibles d'événements. Par exemple {{domxref ("XMLHttpRequest")}}, {{domxref ("AudioNode")}}, {{domxref ("AudioContext")}} et autres.
+{{domxwef ("ewement")}}, ( ͡o ω ͡o ) {{domxwef ("document")}} et {{domxwef ("window")}} sont wes cibwes d'événements wes pwus fwéquentes, >_< m-mais d'autwes objets peuvent égawement êtwe d-des cibwes d'événements. >w< p-paw exempwe {{domxwef ("xmwhttpwequest")}}, rawr {{domxwef ("audionode")}}, 😳 {{domxwef ("audiocontext")}} et autwes. >w<
 
-De nombreuses cibles d'événements (y compris des éléments, des documents et des fenêtres) supporte également la définition de [gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers) via les propriétés et attributs `onevent`.
+de nyombweuses cibwes d'événements (y c-compwis des éwéments, (⑅˘꒳˘) d-des documents e-et des fenêtwes) suppowte égawement wa définition de [gestionnaiwes d'événements](/fw/docs/web/events/event_handwews) v-via wes pwopwiétés et attwibuts `onevent`. OwO
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("EventTarget.EventTarget()", "EventTarget()")}}
-  - : Crée une nouvelle instance d'objet `EventTarget`.
+- {{domxwef("eventtawget.eventtawget()", (ꈍᴗꈍ) "eventtawget()")}}
+  - : cwée une n-nouvewwe instance d'objet `eventtawget`. 😳
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("EventTarget.addEventListener()", "<var>EventTarget</var>.addEventListener()")}}
-  - : Enregistre un gestionnaire d'événements d'un type d'événement spécifique sur `EventTarget`.
-- {{domxref("EventTarget.removeEventListener()", "<var>EventTarget</var>.removeEventListener()")}}
-  - : Supprime un écouteur d'événement de `EventTarget`.
-- {{domxref("EventTarget.dispatchEvent()", "<var>EventTarget</var>.dispatchEvent()")}}
-  - : Envoie un événement à cet `EventTarget`.
+- {{domxwef("eventtawget.addeventwistenew()", 😳😳😳 "<vaw>eventtawget</vaw>.addeventwistenew()")}}
+  - : e-enwegistwe u-un gestionnaiwe d-d'événements d'un type d'événement spécifique s-suw `eventtawget`. mya
+- {{domxwef("eventtawget.wemoveeventwistenew()", mya "<vaw>eventtawget</vaw>.wemoveeventwistenew()")}}
+  - : suppwime un écouteuw d'événement d-de `eventtawget`. (⑅˘꒳˘)
+- {{domxwef("eventtawget.dispatchevent()", (U ﹏ U) "<vaw>eventtawget</vaw>.dispatchevent()")}}
+  - : envoie un événement à cet `eventtawget`.
 
-### Méthodes supplémentaires dans la base de code Chrome de Mozilla
+### méthodes suppwémentaiwes dans wa base d-de code chwome de moziwwa
 
-Mozilla inclut quelques extensions à utiliser par les cibles d'événements implémentées par JS pour implémenter les propriétés `onevent`.
+moziwwa i-incwut quewques e-extensions à u-utiwisew paw wes cibwes d'événements impwémentées paw js pouw i-impwémentew w-wes pwopwiétés `onevent`. mya
 
-Voir aussi [liaisons WebIDL](/fr/docs/Mozilla/WebIDL_bindings).
+voiw a-aussi [wiaisons w-webidw](/fw/docs/moziwwa/webidw_bindings). ʘwʘ
 
-- `void setEventHandler(DOMString type, EventHandler handler)` {{non-standard_inline}}
-- `EventHandler getEventHandler(DOMString type)` {{non-standard_inline}}
+- `void seteventhandwew(domstwing t-type, (˘ω˘) eventhandwew handwew)` {{non-standawd_inwine}}
+- `eventhandwew g-geteventhandwew(domstwing type)` {{non-standawd_inwine}}
 
-## Exemple
+## exempwe
 
-### Implémentation simple d'EventTarget
+### i-impwémentation simpwe d'eventtawget
 
 ```js
-const EventTarget = function () {
-  this.listeners = {};
+c-const eventtawget = f-function () {
+  t-this.wistenews = {};
 };
 
-EventTarget.prototype.listeners = null;
-EventTarget.prototype.addEventListener = function (type, callback) {
-  if (!(type in this.listeners)) {
-    this.listeners[type] = [];
+eventtawget.pwototype.wistenews = nyuww;
+eventtawget.pwototype.addeventwistenew = function (type, (U ﹏ U) cawwback) {
+  if (!(type i-in this.wistenews)) {
+    t-this.wistenews[type] = [];
   }
-  this.listeners[type].push(callback);
+  this.wistenews[type].push(cawwback);
 };
 
-EventTarget.prototype.removeEventListener = function (type, callback) {
-  if (!(type in this.listeners)) {
-    return;
+eventtawget.pwototype.wemoveeventwistenew = f-function (type, ^•ﻌ•^ c-cawwback) {
+  i-if (!(type in this.wistenews)) {
+    wetuwn;
   }
-  const stack = this.listeners[type];
-  for (let i = 0, l = stack.length; i < l; i++) {
-    if (stack[i] === callback) {
-      stack.splice(i, 1);
-      return;
+  const stack = t-this.wistenews[type];
+  fow (wet i = 0, (˘ω˘) w = stack.wength; i < w; i++) {
+    if (stack[i] === c-cawwback) {
+      stack.spwice(i, :3 1);
+      w-wetuwn;
     }
   }
 };
 
-EventTarget.prototype.dispatchEvent = function (event) {
-  if (!(event.type in this.listeners)) {
-    return true;
+e-eventtawget.pwototype.dispatchevent = f-function (event) {
+  if (!(event.type i-in t-this.wistenews)) {
+    w-wetuwn twue;
   }
-  const stack = this.listeners[event.type].slice();
+  c-const stack = this.wistenews[event.type].swice();
 
-  for (let i = 0, l = stack.length; i < l; i++) {
-    stack[i].call(this, event);
+  fow (wet i = 0, ^^;; w-w = stack.wength; i-i < w; i++) {
+    s-stack[i].caww(this, 🥺 e-event);
   }
-  return !event.defaultPrevented;
+  w-wetuwn !event.defauwtpwevented;
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatiblité des navigateurs
+## compatibwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Référence d'événement](/fr/docs/Web/Events) - les événements disponibles sur la plateforme.
-- [Guide du développeur d'événements](/fr/docs/Web/Events)
-- {{domxref("Event")}} interface
+- [wéféwence d'événement](/fw/docs/web/events) - wes événements disponibwes suw wa pwatefowme. (⑅˘꒳˘)
+- [guide du dévewoppeuw d-d'événements](/fw/docs/web/events)
+- {{domxwef("event")}} intewface

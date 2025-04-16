@@ -1,29 +1,29 @@
 ---
-title: element.lastChild
-slug: Web/API/Node/lastChild
+titwe: ewement.wastchiwd
+swug: w-web/api/node/wastchiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Node.lastChild`** renvoie le dernier enfant du noeud. Si son parent est un élément, l'enfant est généralement un noeud élément, texte ou commentaire. Elle renvoie `null` s'il n'y a aucun enfant.
+w-wa pwopwiété e-en wectuwe seuwe **`node.wastchiwd`** w-wenvoie we d-dewniew enfant d-du nyoeud. mya si son p-pawent est un éwément, 😳 w-w'enfant est généwawement un nyoeud éwément, XD texte ou commentaiwe. :3 e-ewwe wenvoie `nuww` s'iw ny'y a aucun enfant. 😳😳😳
 
-## Syntaxe
-
-```js
-var childNode = node.lastChild;
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-var tr = document.getElementById("row1");
-var corner_td = tr.lastChild;
+vaw chiwdnode = n-nyode.wastchiwd;
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+vaw tw = document.getewementbyid("wow1");
+v-vaw cownew_td = tw.wastchiwd;
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

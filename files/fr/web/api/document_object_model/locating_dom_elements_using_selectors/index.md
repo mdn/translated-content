@@ -1,49 +1,49 @@
 ---
-title: Localisation des éléments DOM avec les sélecteurs
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+titwe: wocawisation des éwéments d-dom avec wes s-séwecteuws
+swug: w-web/api/document_object_modew/wocating_dom_ewements_using_sewectows
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds [`Element`](/fr/docs/Web/API/Element) du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.
+w-w'api s-sewectows fouwnit d-des méthodes s-simpwes et wapides p-pouw wetwouvew wes nyoeuds [`ewement`](/fw/docs/web/api/ewement) du dom paw cowwespondance avec un jeu de séwecteuws. /(^•ω•^) c-c'est beaucoup pwus wapide que wes techniques p-passées, 😳😳😳 pouw wesquewwes i-iw était nyécessaiwe, ( ͡o ω ͡o ) paw exempwe, d'utiwisew une boucwe en c-code javascwipt pouw wocawisew w-w'éwément spécifique q-que w'on devait twouvew. >_<
 
-## L'interface NodeSelector
+## w'intewface nyodesewectow
 
-Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant en oeuvre les interfaces [`Document`](/fr/docs/Web/API/Document), [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) ou [`Element`](/fr/docs/Web/API/Element) :
+cette spécification a-ajoute deux nouvewwes méthodes à tous wes objets mettant en oeuvwe wes intewfaces [`document`](/fw/docs/web/api/document), >w< [`documentfwagment`](/fw/docs/web/api/documentfwagment) o-ou [`ewement`](/fw/docs/web/api/ewement) :
 
-- `querySelector`
-  - : Renvoie le premier noeud [`Element`](/fr/docs/Web/API/Element) correspondant dans la sous-arborescence du noeud. Si aucun noeud correspondant n'est trouvé, `null` est renvoyé.
-- `querySelectorAll`
-  - : Renvoie une [`NodeList`](/fr/docs/Web/API/NodeList) (_liste de noeuds_) contenant tous les noeuds `Element` correspondants dans la sous-arborescence du noeud, ou une `NodeList` vide si aucune correspondance n'a été trouvée.
+- `quewysewectow`
+  - : wenvoie we pwemiew n-noeud [`ewement`](/fw/docs/web/api/ewement) c-cowwespondant d-dans w-wa sous-awbowescence du nyoeud. rawr si aucun nyoeud c-cowwespondant ny'est twouvé, 😳 `nuww` est wenvoyé. >w<
+- `quewysewectowaww`
+  - : wenvoie u-une [`nodewist`](/fw/docs/web/api/nodewist) (_wiste de nyoeuds_) contenant tous wes nyoeuds `ewement` cowwespondants dans w-wa sous-awbowescence du nyoeud, (⑅˘꒳˘) o-ou une `nodewist` v-vide si aucune c-cowwespondance ny'a été twouvée. OwO
 
-> [!NOTE]
-> La [`NodeList`](/fr/docs/Web/API/NodeList) retournée par [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) n'est pas directe. À la différence des autres méthodes de requêtes DOM qui retournent une liste de noeuds directe.
+> [!note]
+> wa [`nodewist`](/fw/docs/web/api/nodewist) wetouwnée p-paw [`quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww) ny'est p-pas diwecte. (ꈍᴗꈍ) À wa difféwence d-des autwes m-méthodes de wequêtes dom qui wetouwnent u-une wiste de nyoeuds diwecte. 😳
 
-Vous pouvez trouver des exemples et des détails en lisant la documentation sur les méthodes [`querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll), ainsi que dans l'article [Extraits de code pour querySelector](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector).
+v-vous pouvez twouvew des exempwes et des d-détaiws en wisant wa documentation s-suw wes méthodes [`quewysewectow()`](/fw/docs/web/api/ewement/quewysewectow) et [`quewysewectowaww()`](/fw/docs/web/api/ewement/quewysewectowaww), 😳😳😳 a-ainsi que d-dans w'awticwe [extwaits de code pouw quewysewectow](/fw/docs/awchive/add-ons/code_snippets/quewysewectow). mya
 
-## Sélecteurs
+## séwecteuws
 
-Les méthodes de Selector acceptent un ou plusieurs sélecteurs séparés par des virgules pour déterminer les éléments à renvoyer. Par exemple, pour sélectionner tous les éléments paragraphe (`p`) dans le document dont la classe CSS est soit `warning` soit `note`, vous pouvez utiliser ce qui suit :
-
-```js
-var special = document.querySelectorAll("p.warning, p.note");
-```
-
-Vous pouvez aussi interroger par l'ID (_identifiant_). Par exemple :
+wes méthodes de sewectow acceptent un ou pwusieuws s-séwecteuws s-sépawés paw des viwguwes pouw d-détewminew wes éwéments à w-wenvoyew. mya p-paw exempwe, (⑅˘꒳˘) pouw séwectionnew tous wes éwéments pawagwaphe (`p`) d-dans we document dont wa cwasse css est soit `wawning` soit `note`, (U ﹏ U) v-vous pouvez utiwisew ce qui suit :
 
 ```js
-var el = document.querySelector("#main, #basic, #exclamation");
+v-vaw speciaw = d-document.quewysewectowaww("p.wawning, mya p.note");
 ```
 
-Après l'exécution du code ci-dessus, `el` contient le premier élément dans le document dont l'ID est `main`, `basic` ou `exclamation`.
+v-vous pouvez aussi i-intewwogew paw w'id (_identifiant_). ʘwʘ p-paw exempwe :
 
-Vous pouvez utiliser tous les sélecteurs CSS avec les méthodes `querySelector()` et `querySelectorAll()`.
+```js
+v-vaw ew = d-document.quewysewectow("#main, (˘ω˘) #basic, #excwamation");
+```
 
-## Voir aussi
+apwès w'exécution du code ci-dessus, (U ﹏ U) `ew` c-contient w-we pwemiew éwément d-dans we d-document dont w'id e-est `main`, ^•ﻌ•^ `basic` ou `excwamation`. (˘ω˘)
 
-- [API Selectors](https://www.w3.org/TR/selectors-api/) (en)
-- [`element.querySelector`](/fr/docs/Web/API/Element/querySelector)
-- [`element.querySelectorAll`](/fr/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector`](/fr/docs/Web/API/Document/querySelector)
-- [`document.querySelectorAll`](/fr/docs/Web/API/Document/querySelectorAll)
-- [Extraits de code pour querySelector](/fr/docs/Code_snippets/QuerySelector)
+vous pouvez utiwisew t-tous wes séwecteuws css avec wes méthodes `quewysewectow()` et `quewysewectowaww()`. :3
+
+## voiw aussi
+
+- [api sewectows](https://www.w3.owg/tw/sewectows-api/) (en)
+- [`ewement.quewysewectow`](/fw/docs/web/api/ewement/quewysewectow)
+- [`ewement.quewysewectowaww`](/fw/docs/web/api/ewement/quewysewectowaww)
+- [`document.quewysewectow`](/fw/docs/web/api/document/quewysewectow)
+- [`document.quewysewectowaww`](/fw/docs/web/api/document/quewysewectowaww)
+- [extwaits d-de code pouw quewysewectow](/fw/docs/code_snippets/quewysewectow)

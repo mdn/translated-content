@@ -1,77 +1,77 @@
 ---
-title: fill-opacity
-slug: Web/SVG/Attribute/fill-opacity
+titwe: fiww-opacity
+swug: web/svg/attwibute/fiww-opacity
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`fill-opacity`** définit l'opacité du remplissage (_couleur, dégradé, motif_, etc) appliqué à une forme.
+w-w'attwibut **`fiww-opacity`** d-définit w-w'opacité du w-wempwissage (_couweuw, >w< d-dégwadé, m-motif_, rawr etc) a-appwiqué à une f-fowme. mya
 
-> **Note :** `fill-opacity` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww-opacity` étant un attwibut de pwésentation, ^^ iw peut êtwe utiwisé c-comme pwopwiété css. 😳😳😳
 
-Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+cet attwibut peut êtwe a-appwiqué suw tous wes éwéments, mya e-en wevanche iw ny'auwa d'effet que suw wes éwéments suivants: {{svgewement('awtgwyph')}}, 😳 {{svgewement('ciwcwe')}}, -.- {{svgewement('ewwipse')}}, 🥺 {{svgewement('path')}}, o.O {{svgewement('powygon')}}, /(^•ω•^) {{svgewement('powywine')}}, nyaa~~ {{svgewement('wect')}}, nyaa~~ {{svgewement('text')}}, :3 {{svgewement('textpath')}}, 😳😳😳 {{svgewement('twef')}}, (˘ω˘) e-et {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, ^^
+b-body, :3
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Opacité par défaut: 1 -->
-  <circle cx="50" cy="50" r="40" />
+```htmw
+<svg viewbox="0 0 400 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- opacité paw d-défaut: 1 -->
+  <ciwcwe cx="50" cy="50" w="40" />
 
-  <!-- Définit l'opacité avec un nombre -->
-  <circle cx="150" cy="50" r="40" fill-opacity="0.7" />
+  <!-- définit w'opacité a-avec un nyombwe -->
+  <ciwcwe cx="150" cy="50" w-w="40" fiww-opacity="0.7" />
 
-  <!-- Définit l'opaité avec un pourcentage -->
-  <circle cx="250" cy="50" r="40" fill-opacity="50%" />
+  <!-- d-définit w'opaité a-avec un p-pouwcentage -->
+  <ciwcwe cx="250" cy="50" w="40" f-fiww-opacity="50%" />
 
-  <!-- Définit l'opacité avec une propriété CSS -->
-  <circle cx="350" cy="50" r="40" style="fill-opacity: .25;" />
+  <!-- définit w'opacité avec une pwopwiété c-css -->
+  <ciwcwe cx="350" cy="50" w="40" stywe="fiww-opacity: .25;" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 150)}}
+{{embedwivesampwe('exempwe', -.- '100%', 150)}}
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
         <code>[0-1]</code> |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#paint"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 introduit les valeurs en pourcentage pour `fill-opacity`. Cependant, ce n'est pas souvent pris en charge pour le moment (_Voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> [!note]
+> svg2 intwoduit wes vaweuws en pouwcentage p-pouw `fiww-opacity`. 😳 c-cependant, mya ce ny'est pas souvent p-pwis en chawge p-pouw we moment (_voiw wa section [compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws) ci-dessous_). (˘ω˘) i-iw est paw conséquent wecommandé d'utiwisew w-wes vaweuws de w'intewvawwe `[0-1]`. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

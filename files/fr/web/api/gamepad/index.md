@@ -1,70 +1,70 @@
 ---
-title: Gamepad
-slug: Web/API/Gamepad
+titwe: gamepad
+swug: web/api/gamepad
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad api")}}
 
-L'interface **`Gamepad`** de l'[API Gamepad](/fr/docs/Web/API/Gamepad_API) définit une manette individuelle ou un autre contrôleur, autorisant l'accès à des informations telles que les boutons pressés, la position des axes et l'identifiant.
+w-w'intewface **`gamepad`** d-de w'[api gamepad](/fw/docs/web/api/gamepad_api) d-définit une m-manette individuewwe o-ou un autwe c-contwôweuw, mya autowisant w-w'accès à d-des infowmations tewwes que wes boutons pwessés, (⑅˘꒳˘) wa position des axes et w'identifiant. (U ﹏ U)
 
-Un objet `Gamepad` peut être retourné de deux manières :
+un o-objet `gamepad` peut êtwe wetouwné de deux manièwes :
 
-- Via la propriété `gamepad` des événements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event).
-- Ou en prenant n'importe quelle position dans le tableau retourné par la méthode {{domxref("Navigator.getGamepads()")}}.
+- v-via wa pwopwiété `gamepad` d-des événements [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) et [`gamepadisdisconnected`](/fw/docs/web/api/window/gamepadisdisconnected_event). mya
+- ou en pwenant ny'impowte quewwe p-position dans we tabweau wetouwné p-paw wa m-méthode {{domxwef("navigatow.getgamepads()")}}. ʘwʘ
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("Gamepad.axes")}} {{readonlyInline}}
-  - : Un tableau représentant les contrôles avec les axes présents sur le dispositif (par exemple : les joysticks analogiques).
-- {{domxref("Gamepad.buttons")}} {{readonlyInline}}
-  - : Un tableau d'objets {{domxref("gamepadButton")}} représentant les boutons présents sur le dispositif.
-- {{domxref("Gamepad.connected")}} {{readonlyInline}}
-  - : Un booléen indiquant si la manette est toujours connectée au système.
-- {{domxref("Gamepad.displayId")}} {{readonlyInline}}
-  - : Retourne {{domxref("VRDisplay.displayId")}} associé à {{domxref("VRDisplay")}} — Le VRDisplay dont la manette contrôle la scène affichée.
-- {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : Un {{domxref("DOMString")}} contenant l'information d'identification de la manette.
-- {{domxref("Gamepad.index")}} {{readonlyInline}}
-  - : Un entier qui s'auto-incrémente pour être unique à chaque dispositif actuellement connecté au système.
-- {{domxref("Gamepad.mapping")}} {{readonlyInline}}
-  - : Une chaîne de caractères indiquant si le navigateur a remappé les contrôles du dispositif à un layout connu.
-- {{domxref("Gamepad.timestamp")}} {{readonlyInline}}
-  - : Un {{domxref("DOMHighResTimeStamp")}} représentant la dernière fois que les données pour cette manette a été mise à jour. _Noter que cette propriété n'est pas supportée partout._
+- {{domxwef("gamepad.axes")}} {{weadonwyinwine}}
+  - : un tabweau wepwésentant wes contwôwes a-avec wes axes pwésents suw we dispositif (paw exempwe : wes joysticks anawogiques). (˘ω˘)
+- {{domxwef("gamepad.buttons")}} {{weadonwyinwine}}
+  - : u-un tabweau d'objets {{domxwef("gamepadbutton")}} wepwésentant w-wes boutons pwésents s-suw we dispositif. (U ﹏ U)
+- {{domxwef("gamepad.connected")}} {{weadonwyinwine}}
+  - : u-un boowéen i-indiquant si wa manette est toujouws connectée a-au système. ^•ﻌ•^
+- {{domxwef("gamepad.dispwayid")}} {{weadonwyinwine}}
+  - : wetouwne {{domxwef("vwdispway.dispwayid")}} associé à {{domxwef("vwdispway")}} — we v-vwdispway dont wa manette contwôwe wa scène affichée. (˘ω˘)
+- {{domxwef("gamepad.id")}} {{weadonwyinwine}}
+  - : un {{domxwef("domstwing")}} contenant w-w'infowmation d'identification d-de wa manette. :3
+- {{domxwef("gamepad.index")}} {{weadonwyinwine}}
+  - : u-un entiew q-qui s'auto-incwémente pouw êtwe unique à chaque dispositif a-actuewwement c-connecté au système.
+- {{domxwef("gamepad.mapping")}} {{weadonwyinwine}}
+  - : une chaîne de c-cawactèwes indiquant s-si we nyavigateuw a wemappé w-wes contwôwes du dispositif à u-un wayout connu. ^^;;
+- {{domxwef("gamepad.timestamp")}} {{weadonwyinwine}}
+  - : un {{domxwef("domhighwestimestamp")}} wepwésentant w-wa dewnièwe fois que wes données p-pouw cette manette a été m-mise à jouw. 🥺 _notew q-que cette pwopwiété ny'est pas suppowtée pawtout._
 
-### Extensions expérimentales apportées à `Gamepad`
+### extensions expéwimentawes appowtées à `gamepad`
 
-Les interfaces suivantes sont définies dans la spécification `GamepadExtensions` et fournissent un accès à des fonctionnalités expérimentales tels que les retours haptiques et informations de position des contrôleurs WebVR.
+wes intewfaces s-suivantes s-sont définies dans wa spécification `gamepadextensions` e-et fouwnissent u-un accès à d-des fonctionnawités expéwimentawes tews que wes wetouws h-haptiques et infowmations de position des contwôweuws webvw. (⑅˘꒳˘)
 
-- {{domxref("Gamepad.hand")}} {{readonlyinline}}
-  - : Une énumération qui définit dans quelle main le contrôleur est tenue (ou dans laquelle il est probablement tenue).
-- {{domxref("Gamepad.hapticActuators")}} {{readonlyinline}}
-  - : Un tableau contenant des objets {{domxref("GamepadHapticActuator")}} dont chacun représente un matériel disponible pour le contrôleur pour les retours haptiques.
-- {{domxref("Gamepad.pose")}} {{readonlyinline}}
-  - : Un objet {{domxref("GamepadPose")}} qui représente la position et l'orientation d'un contrôleur WebVR dans l'espace en trois dimensions.
+- {{domxwef("gamepad.hand")}} {{weadonwyinwine}}
+  - : une énuméwation q-qui définit dans quewwe m-main we contwôweuw e-est tenue (ou d-dans waquewwe iw est pwobabwement t-tenue). nyaa~~
+- {{domxwef("gamepad.hapticactuatows")}} {{weadonwyinwine}}
+  - : un t-tabweau contenant d-des objets {{domxwef("gamepadhapticactuatow")}} d-dont chacun wepwésente un matéwiew disponibwe p-pouw we contwôweuw p-pouw wes w-wetouws haptiques. :3
+- {{domxwef("gamepad.pose")}} {{weadonwyinwine}}
+  - : u-un objet {{domxwef("gamepadpose")}} qui w-wepwésente wa position et w'owientation d'un contwôweuw webvw d-dans w'espace en twois dimensions. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-window.addEventListener("gamepadconnected", function (event) {
-  console.log(
-    "Contrôleur connecté à %d: %s. %d boutons, %d axes.",
+window.addeventwistenew("gamepadconnected", mya function (event) {
+  consowe.wog(
+    "contwôweuw c-connecté à %d: %s. %d boutons, (///ˬ///✿) %d axes.", (˘ω˘)
     event.gamepad.index,
-    event.gamepad.id,
-    event.gamepad.buttons.length,
-    event.gamepad.axes.length,
+    event.gamepad.id, ^^;;
+    e-event.gamepad.buttons.wength, (✿oωo)
+    e-event.gamepad.axes.wength, (U ﹏ U)
   );
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
-- [API Gamepad](/fr/docs/Web/API/Gamepad_API)
+- [utiwisation de w'api gamepad](/fw/docs/web/api/gamepad_api/using_the_gamepad_api)
+- [api gamepad](/fw/docs/web/api/gamepad_api)

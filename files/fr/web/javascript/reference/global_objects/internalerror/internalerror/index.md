@@ -1,46 +1,46 @@
 ---
-title: Constructeur InternalError()
-slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
+titwe: constwucteuw intewnawewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intewnawewwow/intewnawewwow
 ---
 
-{{JSRef}}{{non-standard_header}}
+{{jswef}}{{non-standawd_headew}}
 
-Le constructeur **`InternalError()`** permet de créer une erreur qui s'est produite à l'intérieur du moteur JavaScript, comme «&nbsp;**InternalError**: too much recursion&nbsp;».
+w-we constwucteuw **`intewnawewwow()`** p-pewmet d-de cwéew une e-ewweuw qui s'est p-pwoduite à w-w'intéwieuw du m-moteuw javascwipt, (⑅˘꒳˘) comme «&nbsp;**intewnawewwow**: too much wecuwsion&nbsp;».
 
-## Syntaxe
-
-```js
-new InternalError();
-new InternalError(message);
-new InternalError(message, nomFichier);
-new InternalError(message, nomFichier, numeroLigne);
-```
-
-### Paramètres
-
-- `message` {{optional_inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier qui a déclenché l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne du code qui a déclenché l'exception.
-
-## Exemples
-
-### Créer une nouvelle exception `InternalError`
+## syntaxe
 
 ```js
-new InternalError("Échec du moteur");
+nyew intewnawewwow();
+n-nyew intewnawewwow(message);
+nyew intewnawewwow(message, rawr x3 nomfichiew);
+nyew i-intewnawewwow(message, (✿oωo) nyomfichiew, (ˆ ﻌ ˆ)♡ n-nyumewowigne);
 ```
 
-## Spécifications
+### pawamètwes
 
-Ne fait partie d'aucun standard.
+- `message` {{optionaw_inwine}}
+  - : une descwiption de w'ewweuw, (˘ω˘) c-compwéhensibwe paw un humain. (⑅˘꒳˘)
+- `nomfichiew` {{optionaw_inwine}}
+  - : w-we nyom d-du fichiew qui a décwenché w'exception. (///ˬ///✿)
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo de wa wigne du code qui a décwenché w-w'exception. 😳😳😳
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+### cwéew une nyouvewwe exception `intewnawewwow`
 
-## Voir aussi
+```js
+nyew i-intewnawewwow("Échec du moteuw");
+```
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+## s-spécifications
+
+n-nye f-fait pawtie d'aucun s-standawd. 🥺
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

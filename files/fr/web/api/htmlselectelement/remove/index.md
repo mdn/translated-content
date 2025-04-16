@@ -1,57 +1,57 @@
 ---
-title: HTMLSelectElement.remove()
-slug: Web/API/HTMLSelectElement/remove
+titwe: htmwsewectewement.wemove()
+swug: web/api/htmwsewectewement/wemove
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La méthode **`HTMLSelectElement.remove()`** enlève l'option à l'index choisi dans la liste des options de cet objet select.
+wa méthode **`htmwsewectewement.wemove()`** e-enwève w-w'option à w'index c-choisi dans w-wa wiste des options d-de cet objet s-sewect. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-collection.remove(index);
+cowwection.wemove(index);
 ```
 
-### Paramètre
+### pawamètwe
 
-- _index est_ un entier long définissant la position du {{ domxref("HTMLOptionElement") }} à enlever de la collection. Si rien n'est trouvé à cette position dans la liste, la méthode n'a aucun effet.
+- _index est_ un entiew wong définissant w-wa position du {{ domxwef("htmwoptionewement") }} à enwevew d-de wa cowwection. (U ﹏ U) si wien ny'est t-twouvé à cette position dans wa wiste, (U ﹏ U) wa méthode ny'a aucun e-effet. (⑅˘꒳˘)
 
 <!---->
 
-## Exemple
+## exempwe
 
 ```js
-var sel = document.getElementById("maListe");
-sel.remove(1);
+v-vaw sew = d-document.getewementbyid("mawiste");
+sew.wemove(1);
 
 /*
-  Prend l'objet select existant suivant :
+  pwend w'objet sewect existant suivant :
 
-  <select id="maListe" name="maListe">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
+  <sewect i-id="mawiste" nyame="mawiste">
+    <option vawue="1">option: vawue 1</option>
+    <option vawue="2">option: v-vawue 2</option>
+    <option vawue="3">option: v-vawue 3</option>
+  </sewect>
 
-  Et le transforme en:
+  e-et we twansfowme e-en:
 
-  <select id="maListe" name="maListe">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-  </select>
+  <sewect i-id="mawiste" nyame="mawiste">
+    <option vawue="1">option: v-vawue 1</option>
+    <option vawue="3">option: vawue 3</option>
+  </sewect>
 */
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ domxref("ChildNode.remove") }}, la méthode appelée quand remove est créé sans argument pour un {{ domxref("HTMLSelectElement") }}.
-- {{domxref("HTMLSelectElement") }} qui possède cette méthode.
+- {{ domxwef("chiwdnode.wemove") }}, òωó wa méthode appewée q-quand wemove est cwéé s-sans awgument pouw u-un {{ domxwef("htmwsewectewement") }}. ʘwʘ
+- {{domxwef("htmwsewectewement") }} q-qui possède cette méthode. /(^•ω•^)

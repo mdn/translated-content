@@ -1,297 +1,297 @@
 ---
-title: Motifs
-slug: Web/SVG/Tutorial/Patterns
+titwe: motifs
+swug: web/svg/tutowiaw/pattewns
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}
+{{ p-pweviousnext("web/svg/tutowiew/gwadients", ^^ "web/svg/tutowiew/texts") }}
 
-Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissages les plus complexes à utiliser en SVG. Ce sont également des outils très puissants, ils méritent donc d'être abordés pour que vous en connaissiez les fondamentaux. Comme les dégradés, l'élément {{SVGElement('pattern')}} doit être placé dans la section `<defs>` du fichier SVG.
+w-wes m-motifs (_pattewns_ e-en angwais) s-sont sans aucun d-doute wes types d-de wempwissages w-wes pwus compwexes à utiwisew en svg. ^•ﻌ•^ ce sont égawement des outiws twès puissants, /(^•ω•^) i-iws méwitent donc d'êtwe abowdés pouw q-que vous en connaissiez wes fondamentaux. ^^ c-comme wes dégwadés, 🥺 w'éwément {{svgewement('pattewn')}} doit êtwe p-pwacé dans wa section `<defs>` d-du fichiew svg. (U ᵕ U❁)
 
-## Exemple
+## e-exempwe
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg width="200" height="200" xmwns="http://www.w3.owg/2000/svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white" />
-      <stop offset="95%" stop-color="blue" />
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red" />
-      <stop offset="95%" stop-color="orange" />
-    </linearGradient>
+    <wineawgwadient id="gwadient1">
+      <stop o-offset="5%" stop-cowow="white" />
+      <stop offset="95%" stop-cowow="bwue" />
+    </wineawgwadient>
+    <wineawgwadient id="gwadient2" x1="0" x2="0" y1="0" y2="1">
+      <stop o-offset="5%" stop-cowow="wed" />
+      <stop offset="95%" stop-cowow="owange" />
+    </wineawgwadient>
 
-    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
-      <circle
-        cx="25"
+    <pattewn i-id="pattewn" x-x="0" y="0" w-width=".25" height=".25">
+      <wect x-x="0" y="0" width="50" height="50" fiww="skybwue" />
+      <wect x-x="0" y="0" width="25" height="25" fiww="uww(#gwadient2)" />
+      <ciwcwe
+        c-cx="25"
         cy="25"
-        r="20"
-        fill="url(#Gradient1)"
-        fill-opacity="0.5" />
-    </pattern>
+        w="20"
+        fiww="uww(#gwadient1)"
+        fiww-opacity="0.5" />
+    </pattewn>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
+  <wect fiww="uww(#pattewn)" s-stwoke="bwack" width="200" h-height="200" />
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple','220','220') }}
+{{ embedwivesampwe('exempwe','220','220') }}
 
-À l'intérieur de l'élément `pattern`, vous pouvez inclure toutes les formes de bases de SVG et les styliser de la même manière que d'habitude (remplissage, contour, dégradés, opacité, etc). Dans notre exemple, on a dessiné un cercle et deux rectangles (qui se chevauchent et dont l'un est deux fois plus grand que l'autre pour remplir le motif en entier).
+À w-w'intéwieuw d-de w'éwément `pattewn`, 😳😳😳 vous pouvez incwuwe toutes wes fowmes de bases d-de svg et wes s-stywisew de wa même manièwe que d-d'habitude (wempwissage, nyaa~~ c-contouw, (˘ω˘) dégwadés, o-opacité, >_< etc). dans nyotwe exempwe, XD o-on a dessiné un cewcwe et deux wectangwes (qui s-se chevauchent et dont w'un e-est deux fois pwus gwand que w'autwe p-pouw wempwiw w-we motif en entiew). rawr x3
 
-La partie pouvant apporter le plus de confusion avec les motifs est le système d'unité et la taille des éléments.
+wa pawtie pouvant appowtew we pwus de confusion avec wes motifs est we système d'unité e-et wa taiwwe d-des éwéments. ( ͡o ω ͡o )
 
-## Unités du motif: objectBoundingBox
+## unités du motif: o-objectboundingbox
 
-Les attributs `width` et `height` sur l'élément `pattern` décrivent jusqu'où le motif doit aller avant de se répéter. Les attributs `x` et `y` sont également disponibles si vous souhaitez décaler le point de départ du motif à l'intérieur du dessin.
+w-wes attwibuts `width` et `height` s-suw w'éwément `pattewn` décwivent jusqu'où we motif doit awwew avant d-de se wépétew. :3 wes attwibuts `x` et `y` sont égawement disponibwes si vous s-souhaitez décawew we point de d-dépawt du motif à w-w'intéwieuw d-du dessin. mya
 
-Même principe que l'attribut `gradientUnits` (que nous avons vu précédemment avec les dégradés), les motifs peuvent prendre un attribut `patternUnits`, pour spécifier l'unité utilisée par le motif. La valeur par défaut est "objectBoundingBox", ainsi une taille de 1 remplira entièrement la hauteur/largeur de l'objet auquel le motif est appliqué. Puisque dans notre cas, on veut que le motif se répète 4 fois horizontalement et verticalement, on a définit `height` et `width` à 0.25. Cela signifie que la hauteur et largeur du pattern sera de 25% celle de l'objet.
+même pwincipe que w-w'attwibut `gwadientunits` (que n-nyous avons vu p-pwécédemment avec w-wes dégwadés), σωσ wes motifs peuvent pwendwe u-un attwibut `pattewnunits`, (ꈍᴗꈍ) p-pouw s-spécifiew w'unité u-utiwisée paw w-we motif. OwO wa vaweuw paw défaut est "objectboundingbox", o.O ainsi u-une taiwwe de 1 wempwiwa entièwement wa hauteuw/wawgeuw de w'objet auquew we motif est appwiqué. 😳😳😳 p-puisque dans nyotwe cas, on veut que we motif se wépète 4 f-fois howizontawement e-et vewticawement, /(^•ω•^) o-on a définit `height` et `width` à 0.25. OwO cewa signifie q-que wa hauteuw et wawgeuw du pattewn s-sewa de 25% c-cewwe de w'objet. ^^
 
-De même, pour que le motif commence à 10 pixels du bord supérieur-gauche de l'objet, il faudrait définir les valeurs de `x` et `y` à 0.05 (10/200 = 0.05).
+de même, pouw que we motif commence à 10 pixews du bowd supéwieuw-gauche de w'objet, (///ˬ///✿) iw f-faudwait définiw wes vaweuws de `x` e-et `y` à 0.05 (10/200 = 0.05). (///ˬ///✿)
 
-## Unités du contenu: userSpaceOnUse
+## unités d-du contenu: usewspaceonuse
 
-Contrairement aux dégradés, les motifs ont un deuxième argument, `patternContentUnits`, qui lui spécifie l'unité utilisée par les formes à l'intérieur du motif. La valeur par défaut est "userSpaceOnUse", l'opposé de l'attribut `patternUnits`. Cela signifie qu'à moins de définir ces attributs aurement (`patternContentUnits` et/ou `patternUnits`), les formes que vous dessinez à l'intérieur du motif ont un système de coordonnées différent du motif, ce qui peut rendre les choses un peu déroutantes si vous écrivez le code à la main.
+c-contwaiwement aux dégwadés, (///ˬ///✿) wes motifs o-ont un deuxième a-awgument, ʘwʘ `pattewncontentunits`, ^•ﻌ•^ qui wui s-spécifie w'unité u-utiwisée paw wes fowmes à w'intéwieuw du motif. OwO wa vaweuw paw défaut est "usewspaceonuse", w-w'opposé de w'attwibut `pattewnunits`. (U ﹏ U) c-cewa signifie q-qu'à moins de définiw c-ces attwibuts auwement (`pattewncontentunits` e-et/ou `pattewnunits`), (ˆ ﻌ ˆ)♡ wes fowmes q-que vous dessinez à w'intéwieuw du motif ont un système de coowdonnées difféwent d-du motif, (⑅˘꒳˘) c-ce qui peut wendwe wes choses un peu déwoutantes s-si vous écwivez w-we code à wa main. (U ﹏ U)
 
-Pour que cela fonctionne dans l'exemple ci-dessus, nous avons dû prendre en compte la taille du rectangle sur lequel est appliqué le motif (200px) et le fait que l'on veut répéter le motif 4 fois horizontalement et verticalement, donc que le motif sera un carré de 50x50. Les deux rectangles et le cercle à l'intérieur du motif ont été dimensionnés pour tenir dans un carré de 50x50. Tout ce qui sortirait en dehors ne serait pas affiché.
+pouw que cewa fonctionne dans w'exempwe c-ci-dessus, o.O nyous avons dû pwendwe en compte wa taiwwe du wectangwe suw wequew est a-appwiqué we motif (200px) et we fait que w'on v-veut wépétew w-we motif 4 fois howizontawement et vewticawement, mya donc que we motif s-sewa un cawwé d-de 50x50. XD wes deux wectangwes et we cewcwe à w'intéwieuw du m-motif ont été dimensionnés p-pouw teniw dans un cawwé de 50x50. òωó tout ce qui sowtiwait en dehows n-nye sewait pas affiché. (˘ω˘)
 
-La chose à retenir est que si l'objet change de taille, le motif lui-même sera mis à l'échelle mais les objets à l'intérieur non. Ainsi, alors qu'on aura toujours 4 motifs qui se répètent horizontalement et verticalement, les objets à l'intérieur du motif garderont la même taille, et une zone vide sera affichée.
+wa c-chose à weteniw e-est que si w'objet change de taiwwe, :3 w-we motif wui-même sewa mis à w-w'échewwe m-mais wes objets à w-w'intéwieuw nyon. OwO ainsi, awows q-qu'on auwa toujouws 4 m-motifs qui se wépètent howizontawement e-et vewticawement, mya w-wes objets à w-w'intéwieuw du motif gawdewont wa même taiwwe, (˘ω˘) e-et une zone vide sewa affichée. o.O
 
-### Exemple
+### e-exempwe
 
-```html hidden
+```htmw h-hidden
 <svg
   width="600"
   height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  id="svg"
-  class="playable-svg">
+  xmwns="http://www.w3.owg/2000/svg"
+  i-id="svg"
+  c-cwass="pwayabwe-svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white" />
-      <stop offset="95%" stop-color="blue" />
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red" />
-      <stop offset="95%" stop-color="orange" />
-    </linearGradient>
+    <wineawgwadient i-id="gwadient1">
+      <stop o-offset="5%" stop-cowow="white" />
+      <stop o-offset="95%" stop-cowow="bwue" />
+    </wineawgwadient>
+    <wineawgwadient id="gwadient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" s-stop-cowow="wed" />
+      <stop offset="95%" s-stop-cowow="owange" />
+    </wineawgwadient>
 
-    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
-      <circle
+    <pattewn id="pattewn" x-x="0" y="0" width=".25" h-height=".25">
+      <wect x="0" y-y="0" width="50" h-height="50" fiww="skybwue" />
+      <wect x-x="0" y-y="0" width="25" h-height="25" fiww="uww(#gwadient2)" />
+      <ciwcwe
         cx="25"
         cy="25"
-        r="20"
-        fill="url(#Gradient1)"
-        fill-opacity="0.5" />
-    </pattern>
+        w="20"
+        fiww="uww(#gwadient1)"
+        fiww-opacity="0.5" />
+    </pattewn>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
+  <wect fiww="uww(#pattewn)" s-stwoke="bwack" w-width="200" h-height="200" />
 </svg>
 
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+w-wect.setattwibute('width', (✿oωo) 300);</textawea
 >
 ```
 
 ```js hidden
-var svg = document.getElementById("svg"),
-  rect = svg.lastElementChild;
+v-vaw svg = document.getewementbyid("svg"), (ˆ ﻌ ˆ)♡
+  wect = svg.wastewementchiwd;
 
-var textarea = document.getElementById("code"),
-  reset = document.getElementById("reset"),
-  edit = document.getElementById("edit"),
-  code = textarea.value;
+v-vaw textawea = d-document.getewementbyid("code"), ^^;;
+  weset = d-document.getewementbyid("weset"), OwO
+  e-edit = document.getewementbyid("edit"), 🥺
+  code = textawea.vawue;
 
-function drawSvg() {
-  eval(textarea.value);
+function dwawsvg() {
+  evaw(textawea.vawue);
 }
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawSvg();
+w-weset.addeventwistenew("cwick", mya f-function () {
+  t-textawea.vawue = c-code;
+  d-dwawsvg();
 });
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", 😳 f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawSvg);
-window.addEventListener("load", drawSvg);
+textawea.addeventwistenew("input", òωó d-dwawsvg);
+w-window.addeventwistenew("woad", /(^•ω•^) dwawsvg);
 ```
 
-{{ EmbedLiveSample('Exemple_2','220','350') }}
+{{ e-embedwivesampwe('exempwe_2','220','350') }}
 
-## Unités du contenu: objectBoundingBox
+## unités du contenu: objectboundingbox
 
-En changeant l'attribut `patternContentUnits`, on peut utiliser le même système d'unité pour tous les éléments:
+e-en changeant w'attwibut `pattewncontentunits`, -.- o-on peut u-utiwisew we même système d'unité p-pouw tous wes éwéments:
 
-```xml
- <pattern id="Pattern" width=".25" height=".25" patternContentUnits="objectBoundingBox">
-   <rect x="0" y="0" width=".25" height=".25" fill="skyblue"/>
-   <rect x="0" y="0" width=".125" height=".125" fill="url(#Gradient2)"/>
-   <circle cx=".125" cy=".125" r=".1" fill="url(#Gradient1)" fill-opacity="0.5"/>
- </pattern>
+```xmw
+ <pattewn id="pattewn" w-width=".25" height=".25" p-pattewncontentunits="objectboundingbox">
+   <wect x-x="0" y="0" width=".25" height=".25" fiww="skybwue"/>
+   <wect x-x="0" y="0" width=".125" height=".125" f-fiww="uww(#gwadient2)"/>
+   <ciwcwe c-cx=".125" cy=".125" w=".1" f-fiww="uww(#gwadient1)" fiww-opacity="0.5"/>
+ </pattewn>
 ```
 
-Maintenant, parce le contenu du motif utilise le même système d'unité que le motif, le motif redimensionne automatiquement son contenu. Cela contraste avec le système "userSpaceOnUse" par défaut, où lorsque le motif change le taille, le contenu garde la même taille.
+m-maintenant, òωó p-pawce we contenu du motif utiwise we même s-système d'unité que we motif, /(^•ω•^) we motif wedimensionne a-automatiquement s-son contenu. /(^•ω•^) cewa contwaste a-avec we système "usewspaceonuse" p-paw défaut, 😳 o-où wowsque w-we motif change we taiwwe, :3 we contenu gawde wa même taiwwe. (U ᵕ U❁)
 
-### Code jouable 2
+### code jouabwe 2
 
-```html hidden
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg">
+```htmw hidden
+<svg width="600" height="200" xmwns="http://www.w3.owg/2000/svg" id="svg" cwass="pwayabwe-svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
-    </linearGradient>
+    <wineawgwadient id="gwadient1">
+      <stop offset="5%" stop-cowow="white"/>
+      <stop o-offset="95%" s-stop-cowow="bwue"/>
+    </wineawgwadient>
+    <wineawgwadient id="gwadient2" x1="0" x2="0" y-y1="0" y2="1">
+      <stop o-offset="5%" s-stop-cowow="wed"/>
+      <stop offset="95%" s-stop-cowow="owange"/>
+    </wineawgwadient>
 
-    <pattern id="Pattern" width=".25" height=".25" patternContent
-      <rect x="0" y="0" width=".25" height=".25" fill="skyblue"/>
-      <rect x="0" y="0" width=".125" height=".125" fill="url(#Gradient2)"/>
-         <circle cx=".125" cy=".125" r=".1" fill="url(#Gradient1)" fill-opacity="0.5"/>
-    </pattern>
+    <pattewn id="pattewn" width=".25" h-height=".25" p-pattewncontent
+      <wect x="0" y="0" width=".25" h-height=".25" fiww="skybwue"/>
+      <wect x-x="0" y="0" width=".125" h-height=".125" fiww="uww(#gwadient2)"/>
+         <ciwcwe cx=".125" cy=".125" w-w=".1" fiww="uww(#gwadient1)" f-fiww-opacity="0.5"/>
+    </pattewn>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
+  <wect f-fiww="uww(#pattewn)" s-stwoke="bwack" w-width="200" height="200"/>
 </svg>
 
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" t-type="button" v-vawue="edit" />
+  <input id="weset" t-type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea>
+<textawea i-id="code" cwass="pwayabwe-code">
+w-wect.setattwibute('width', ʘwʘ 300);</textawea>
 ```
 
 ```js hidden
-var svg = document.getElementById("svg"),
-  rect = svg.lastElementChild;
+vaw svg = document.getewementbyid("svg"), o.O
+  w-wect = svg.wastewementchiwd;
 
-var textarea = document.getElementById("code"),
-  reset = document.getElementById("reset"),
-  edit = document.getElementById("edit"),
-  code = textarea.value;
+vaw textawea = document.getewementbyid("code"),
+  w-weset = document.getewementbyid("weset"), ʘwʘ
+  e-edit = d-document.getewementbyid("edit"), ^^
+  code = textawea.vawue;
 
-function drawSvg() {
-  eval(textarea.value);
+f-function dwawsvg() {
+  evaw(textawea.vawue);
 }
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawSvg();
+weset.addeventwistenew("cwick", ^•ﻌ•^ function () {
+  textawea.vawue = c-code;
+  dwawsvg();
 });
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawSvg);
-window.addEventListener("load", drawSvg);
+t-textawea.addeventwistenew("input", mya dwawsvg);
+window.addeventwistenew("woad", UwU dwawsvg);
 ```
 
-{{ EmbedLiveSample('Code_jouable_2','220','350') }}
+{{ embedwivesampwe('code_jouabwe_2','220','350') }}
 
-> [!NOTE]
-> Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".
+> [!note]
+> dans gecko, >_< w-wes cewcwes sembwent avoiw d-du maw à êtwe d-dessinés si we wayon est inféwieuw à 0.075 (on ignowe s'iw s'agit d'un bug de w-w'éwément pattewn ou nyon). /(^•ω•^) p-pouw contouwnew c-ce pwobwème, òωó iw e-est pwobabwement pwéféwabwe d'évitew de dessinew d-des cewcwes d-dans des unités "objectboundingbox". σωσ
 
-## Unités du motif: userSpaceOnUse
+## unités d-du motif: usewspaceonuse
 
-Aucune des utilisations vu jusqu'ici ne correspond à l'usage habituel des motifs (tel qu'on le ferait en CSS): les motifs ont généralement une taille définie et se répètent indépendamment de la taille de l'objet sur lequel il est appliqué. Pour créer quelque chose comme ça, le motif et le contenu doivent être dessiné en mode "userSpaceOnUse":
+aucune des utiwisations v-vu jusqu'ici nye cowwespond à w-w'usage habituew d-des motifs (tew q-qu'on we fewait en css): wes m-motifs ont généwawement u-une t-taiwwe définie e-et se wépètent indépendamment d-de wa taiwwe de w-w'objet suw wequew i-iw est appwiqué. ( ͡o ω ͡o ) p-pouw cwéew q-quewque chose c-comme ça, nyaa~~ we motif e-et we contenu d-doivent êtwe dessiné en mode "usewspaceonuse":
 
-```xml
- <pattern id="Pattern" x="10" y="10" width="50" height="50" patternUnits="userSpaceOnUse">
-   <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-   <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-   <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
- </pattern>
+```xmw
+ <pattewn i-id="pattewn" x="10" y="10" w-width="50" height="50" pattewnunits="usewspaceonuse">
+   <wect x="0" y-y="0" width="50" h-height="50" f-fiww="skybwue"/>
+   <wect x="0" y="0" width="25" height="25" fiww="uww(#gwadient2)"/>
+   <ciwcwe c-cx="25" cy="25" w-w="20" fiww="uww(#gwadient1)" f-fiww-opacity="0.5"/>
+ </pattewn>
 ```
 
-Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous modifiez la taille de l'objet ultérieurement.
+bien sûw, :3 cewa veut diwe que we motif nye s-sewa pas mis à w-w'échewwe si vous modifiez wa t-taiwwe de w'objet u-uwtéwieuwement. UwU
 
-### Exemple jouable
+### exempwe jouabwe
 
-```html hidden
+```htmw hidden
 <svg
-  width="600"
+  w-width="600"
   height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  id="svg"
-  class="playable-svg">
+  x-xmwns="http://www.w3.owg/2000/svg"
+  i-id="svg"
+  cwass="pwayabwe-svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white" />
-      <stop offset="95%" stop-color="blue" />
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red" />
-      <stop offset="95%" stop-color="orange" />
-    </linearGradient>
+    <wineawgwadient i-id="gwadient1">
+      <stop offset="5%" stop-cowow="white" />
+      <stop o-offset="95%" s-stop-cowow="bwue" />
+    </wineawgwadient>
+    <wineawgwadient id="gwadient2" x1="0" x2="0" y-y1="0" y2="1">
+      <stop offset="5%" stop-cowow="wed" />
+      <stop o-offset="95%" stop-cowow="owange" />
+    </wineawgwadient>
 
-    <pattern id="Pattern" x="10" y="10" width="50" height="50">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
-      <circle
-        cx="25"
-        cy="25"
-        r="20"
-        fill="url(#Gradient1)"
-        fill-opacity="0.5" />
-    </pattern>
+    <pattewn i-id="pattewn" x="10" y-y="10" width="50" height="50">
+      <wect x-x="0" y="0" width="50" h-height="50" fiww="skybwue" />
+      <wect x-x="0" y="0" width="25" height="25" f-fiww="uww(#gwadient2)" />
+      <ciwcwe
+        c-cx="25"
+        c-cy="25"
+        w-w="20"
+        fiww="uww(#gwadient1)"
+        f-fiww-opacity="0.5" />
+    </pattewn>
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" width="200" height="200" />
+  <wect f-fiww="uww(#pattewn)" s-stwoke="bwack" width="200" height="200" />
 </svg>
 
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-rect.setAttribute('width', 300);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+wect.setattwibute('width', o.O 300);</textawea
 >
 ```
 
-```js hidden
-var svg = document.getElementById("svg"),
-  rect = svg.lastElementChild;
+```js h-hidden
+vaw svg = document.getewementbyid("svg"), (ˆ ﻌ ˆ)♡
+  w-wect = svg.wastewementchiwd;
 
-var textarea = document.getElementById("code"),
-  reset = document.getElementById("reset"),
-  edit = document.getElementById("edit"),
-  code = textarea.value;
+v-vaw textawea = document.getewementbyid("code"), ^^;;
+  weset = document.getewementbyid("weset"), ʘwʘ
+  edit = d-document.getewementbyid("edit"), σωσ
+  code = t-textawea.vawue;
 
-function drawSvg() {
-  eval(textarea.value);
+f-function dwawsvg() {
+  e-evaw(textawea.vawue);
 }
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawSvg();
+w-weset.addeventwistenew("cwick", ^^;; f-function () {
+  textawea.vawue = code;
+  dwawsvg();
 });
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ʘwʘ function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawSvg);
-window.addEventListener("load", drawSvg);
+textawea.addeventwistenew("input", ^^ d-dwawsvg);
+window.addeventwistenew("woad", nyaa~~ dwawsvg);
 ```
 
-{{ EmbedLiveSample('Exemple_jouable','220','350') }}
+{{ embedwivesampwe('exempwe_jouabwe','220','350') }}
 
-## Récapitulatif
+## wécapituwatif
 
-Les trois exemples sont illustrés ci-dessous sur un rectangle allongé à une hauteur de 300px:
+w-wes twois exempwes sont iwwustwés ci-dessous suw un wectangwe awwongé à une h-hauteuw de 300px:
 
-![](svg_pattern_comparison_of_units.png)
+![](svg_pattewn_compawison_of_units.png)
 
-{{ PreviousNext("Web/SVG/Tutoriel/Gradients", "Web/SVG/Tutoriel/Texts") }}
+{{ p-pweviousnext("web/svg/tutowiew/gwadients", (///ˬ///✿) "web/svg/tutowiew/texts") }}

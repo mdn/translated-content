@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+titwe: date.pwototype.getminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'après l'heure locale.
+w-wa méthode **`getminutes()`** w-wenvoie wes minutes p-pouw wa date w-wenseignée d-d'apwès w'heuwe w-wocawe. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.getminutes()")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js intewactive-exampwe
+const biwthday = nyew date("mawch 13, (˘ω˘) 08 04:20");
 
-console.log(birthday.getMinutes());
-// Expected output: 20
+consowe.wog(biwthday.getminutes());
+// e-expected output: 20
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getMinutes();
+d-dateobj.getminutes();
 ```
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-La valeur renvoyée par `getMinutes` est un entier entre 0 et 59 représentant le nombre de minutes pour la date indiquée, selon l'heure locale.
+wa vaweuw wenvoyée paw `getminutes` est un entiew entwe 0 e-et 59 wepwésentant we nyombwe d-de minutes pouw w-wa date indiquée, (⑅˘꒳˘) sewon w'heuwe wocawe. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Utiliser `getMinutes()`
+### utiwisew `getminutes()`
 
-La seconde instruction ci-dessous assigne la valeur 15 à la variable `minutes`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
+wa seconde i-instwuction ci-dessous assigne wa vaweuw 15 à wa vawiabwe `minutes`, 😳😳😳 sewon wa v-vaweuw de w'objet {{jsxwef("date")}} `noew95`. 🥺
 
 ```js
-var noel95 = new Date("December 25, 1995 23:15:00");
-var minutes = noel95.getMinutes();
+vaw nyoew95 = n-nyew date("decembew 25, mya 1995 23:15:00");
+v-vaw m-minutes = nyoew95.getminutes();
 
-console.log(minutes); //15
+c-consowe.wog(minutes); //15
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

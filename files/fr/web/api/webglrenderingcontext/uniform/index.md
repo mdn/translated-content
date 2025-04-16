@@ -1,70 +1,70 @@
 ---
-title: WebGLRenderingContext.uniform[1234][fi][v]()
-slug: Web/API/WebGLRenderingContext/uniform
+titwe: webgwwendewingcontext.unifowm[1234][fi][v]()
+swug: web/api/webgwwendewingcontext/unifowm
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Les méthodes **`WebGLRenderingContext.uniform[1234][fi][v]()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) indiquent les valeurs des variables uniform.
+w-wes m-méthodes **`webgwwendewingcontext.unifowm[1234][fi][v]()`** d-de w-w'[api webgw](/fw/docs/web/api/webgw_api) i-indiquent w-wes vaweuws d-des vawiabwes unifowm. ^^
 
-> [!NOTE]
-> Beaucoup des fonctions décrites ici ont des interfaces WebGL 2 étendues, qui peuvent être trouvées en {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> [!note]
+> b-beaucoup des fonctions décwites ici ont des intewfaces webgw 2 étendues, qui peuvent êtwe t-twouvées en {{domxwef("webgw2wendewingcontext.unifowm","webgw2wendewingcontext.unifowm[1234][uif][v]()")}}. :3
 
-## Syntaxe
-
-```js
-void gl.uniform1f(emplacement, v0);
-void gl.uniform1fv(emplacement, valeur);
-void gl.uniform1i(emplacement, v0);
-void gl.uniform1iv(emplacement, valeur);
-
-void gl.uniform2f(emplacement, v0, v1);
-void gl.uniform2fv(emplacement, valeur);
-void gl.uniform2i(emplacement, v0, v1);
-void gl.uniform2iv(emplacement, valeur);
-
-void gl.uniform3f(emplacement, v0, v1, v2);
-void gl.uniform3fv(emplacement, valeur);
-void gl.uniform3i(emplacement, v0, v1, v2);
-void gl.uniform3iv(emplacement, valeur);
-
-void gl.uniform4f(emplacement, v0, v1, v2, v3);
-void gl.uniform4fv(emplacement, valeur);
-void gl.uniform4i(emplacement, v0, v1, v2, v3);
-void gl.uniform4iv(emplacement, valeur);
-```
-
-### Paramètres
-
-- emplacement
-  - : Un objet {{domxref("WebGLUniformLocation")}} contenant l'emplacement de l'attribut uniform à modifier.
-- `valeur, v0, v1, v2, v3`
-
-  - : La nouvelle valeur à utiliser pour la variable uniform. Types possibles :
-
-    - Un {{jsxref("Number")}} flottant pour les valeurs flottantes (méthodes avec "f").
-    - Une suite de nombres flottants (par exemple, un {{jsxref("Float32Array")}} ou un {{jsxref("Array")}} de nombres) pour les méthodes de vecteurs de flottants (méthodes avec "fv").
-    - Un {{jsxref("Number")}} entier pour les valeurs entières (méthodes avec "i").
-    - Un {{jsxref("int32Array")}} pour les méthodes de vecteur d'entiers (méthodes avec "iv").
-
-### Valeur retournée
-
-Aucune.
-
-## Exemples
+## syntaxe
 
 ```js
-gl.uniform1f(u_alpha, 0.8);
+void gw.unifowm1f(empwacement, -.- v-v0);
+void gw.unifowm1fv(empwacement, 😳 vaweuw);
+void g-gw.unifowm1i(empwacement, mya v0);
+void gw.unifowm1iv(empwacement, (˘ω˘) vaweuw);
+
+void g-gw.unifowm2f(empwacement, >_< v0, v-v1);
+void gw.unifowm2fv(empwacement, -.- v-vaweuw);
+void gw.unifowm2i(empwacement, 🥺 v0, v1);
+void gw.unifowm2iv(empwacement, (U ﹏ U) vaweuw);
+
+v-void gw.unifowm3f(empwacement, >w< v0, mya v1, v2);
+void gw.unifowm3fv(empwacement, >w< vaweuw);
+void gw.unifowm3i(empwacement, nyaa~~ v-v0, v1, v2);
+void gw.unifowm3iv(empwacement, (✿oωo) v-vaweuw);
+
+void g-gw.unifowm4f(empwacement, ʘwʘ v-v0, (ˆ ﻌ ˆ)♡ v1, v-v2, v3);
+void gw.unifowm4fv(empwacement, 😳😳😳 vaweuw);
+v-void gw.unifowm4i(empwacement, :3 v0, OwO v1, v2, v3);
+void gw.unifowm4iv(empwacement, (U ﹏ U) v-vaweuw);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- empwacement
+  - : un objet {{domxwef("webgwunifowmwocation")}} contenant w'empwacement de w'attwibut u-unifowm à modifiew. >w<
+- `vaweuw, (U ﹏ U) v-v0, v1, 😳 v-v2, v3`
 
-## Compatibilité des navigateurs
+  - : w-wa nyouvewwe vaweuw à utiwisew pouw wa vawiabwe unifowm. (ˆ ﻌ ˆ)♡ types p-possibwes :
 
-{{Compat}}
+    - u-un {{jsxwef("numbew")}} fwottant p-pouw wes vaweuws f-fwottantes (méthodes avec "f"). 😳😳😳
+    - u-une suite de nyombwes f-fwottants (paw exempwe, (U ﹏ U) un {{jsxwef("fwoat32awway")}} ou un {{jsxwef("awway")}} d-de nyombwes) pouw wes méthodes d-de vecteuws de fwottants (méthodes a-avec "fv"). (///ˬ///✿)
+    - u-un {{jsxwef("numbew")}} entiew pouw wes vaweuws entièwes (méthodes avec "i"). 😳
+    - un {{jsxwef("int32awway")}} pouw wes méthodes de vecteuw d'entiews (méthodes a-avec "iv"). 😳
 
-## Voir aussi
+### vaweuw w-wetouwnée
 
-- {{domxref("WebGLRenderingContext.uniformMatrix()")}}
+aucune. σωσ
+
+## exempwes
+
+```js
+g-gw.unifowm1f(u_awpha, rawr x3 0.8);
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.unifowmmatwix()")}}

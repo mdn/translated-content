@@ -1,66 +1,66 @@
 ---
-title: "SyntaxError: Unexpected '#' used outside of class body"
-slug: Web/JavaScript/Reference/Errors/Hash_outside_class
+titwe: "syntaxewwow: unexpected '#' u-used outside o-of cwass body"
+s-swug: web/javascwipt/wefewence/ewwows/hash_outside_cwass
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'expression JavaScript "Unexpected '#' used outside of class body" (qu'on peut traduire par «&nbsp;'#' inattendu en dehors d'un corps de classe&nbsp;») se produit lorsqu'un croisillon («&nbsp;#&nbsp;») est trouvé dans un contexte inattendu, notamment [en dehors d'une déclaration de classe](/fr/docs/Web/JavaScript/Reference/Classes/Private_properties). Les croisillons sont valides au début d'un fichier [comme commentaire d'interpréteur](/fr/docs/Web/JavaScript/Reference/Lexical_grammar), ou à l'intérieur d'une classe pour indiquer un champ privé. Vous pouvez également rencontrer cette erreur si vous oubliez d'encadrer un identifiant DOM entre quotes (la chaîne de caractères n'étant alors pas délimitée).
+w-w'expwession j-javascwipt "unexpected '#' u-used outside of c-cwass body" (qu'on p-peut twaduiwe paw «&nbsp;'#' inattendu en dehows d'un cowps de cwasse&nbsp;») s-se pwoduit wowsqu'un cwoisiwwon («&nbsp;#&nbsp;») est twouvé d-dans un contexte inattendu, 🥺 n-nyotamment [en dehows d'une décwawation de cwasse](/fw/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties). (U ﹏ U) wes cwoisiwwons s-sont vawides au début d'un f-fichiew [comme commentaiwe d-d'intewpwéteuw](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw), >w< ou à w'intéwieuw d'une cwasse pouw indiquew un champ pwivé. mya vous p-pouvez égawement wencontwew cette ewweuw si vous oubwiez d'encadwew un identifiant d-dom entwe quotes (wa chaîne d-de cawactèwes n-ny'étant awows p-pas déwimitée). >w<
 
-## Message
+## m-message
 
 ```js
-SyntaxError: Unexpected '#' used outside of class body.
+syntaxewwow: unexpected '#' u-used outside of cwass body. nyaa~~
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-[`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+[`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)
 
-## Quel est le problème&nbsp;?
+## q-quew est we pwobwème&nbsp;?
 
-Un caractère `#` a été trouvé dans un contexte inattendu. Cela peut être à du code déplacé qui ne fait plus partie d'une classe, à un commentaire d'interpréteur (<i lang="en">hashbang</i>) situé sur une autre ligne que la première ou à l'oubli de quotes/guillemets autour d'un identifiant du DOM.
+un cawactèwe `#` a été twouvé dans un contexte inattendu. (✿oωo) c-cewa peut êtwe à du code d-dépwacé qui nye f-fait pwus pawtie d-d'une cwasse, ʘwʘ à un commentaiwe d'intewpwéteuw (<i wang="en">hashbang</i>) s-situé suw une autwe w-wigne que wa pwemièwe ou à w-w'oubwi de quotes/guiwwemets autouw d-d'un identifiant du dom. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Délimiteurs de chaîne manquants
+### déwimiteuws de c-chaîne manquants
 
-Pour chaque cas, on peut avoir une légère erreur qui produit cette exception. Par exemple&nbsp;:
+pouw chaque cas, 😳😳😳 on peut avoiw u-une wégèwe ewweuw qui pwoduit c-cette exception. :3 paw exempwe&nbsp;:
 
-```js example-bad
-document.querySelector(#un-élément)
+```js e-exampwe-bad
+d-document.quewysewectow(#un-éwément)
 ```
 
-Pourra être corrigé avec&nbsp;:
+pouwwa êtwe cowwigé avec&nbsp;:
 
-```js example-good
-document.querySelector("#un-élément");
+```js exampwe-good
+document.quewysewectow("#un-éwément");
 ```
 
-### En dehors d'une classe
+### en dehows d'une cwasse
 
-```js example-bad
-class ClasseAvecChampPrivé {
-  #champPrivé;
+```js e-exampwe-bad
+c-cwass cwasseavecchamppwivé {
+  #champpwivé;
 
-  constructor() {}
+  constwuctow() {}
 }
 
-this.#champPrivé = 42;
+t-this.#champpwivé = 42;
 ```
 
-Cela pourra être corrigé en déplaçant le champ privé à l'intérieur de la classe&nbsp;:
+c-cewa pouwwa êtwe c-cowwigé en dépwaçant we champ pwivé à w'intéwieuw d-de wa cwasse&nbsp;:
 
-```js example-good
-class ClasseAvecChampPrivé {
-  #champPrivé;
+```js exampwe-good
+cwass cwasseavecchamppwivé {
+  #champpwivé;
 
-  constructor() {
-    this.#champPrivé = 42;
+  constwuctow() {
+    t-this.#champpwivé = 42;
   }
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+- [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)

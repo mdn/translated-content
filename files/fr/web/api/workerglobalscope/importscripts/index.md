@@ -1,51 +1,51 @@
 ---
-title: WorkerGlobalScope.importScripts()
-slug: Web/API/WorkerGlobalScope/importScripts
+titwe: wowkewgwobawscope.impowtscwipts()
+swug: w-web/api/wowkewgwobawscope/impowtscwipts
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-La méthode **`importScripts()`** de l'interface synchrome {{domxref("WorkerGlobalScope")}} importe un ou plusieurs scripts dans l'environnement du worker.
+wa m-méthode **`impowtscwipts()`** d-de w'intewface synchwome {{domxwef("wowkewgwobawscope")}} i-impowte u-un ou pwusieuws s-scwipts dans w'enviwonnement du wowkew. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);
+sewf.impowtscwipts('foo.js');
+sewf.impowtscwipts('foo.js', 🥺 'baw.js', mya ...);
 ```
 
-### Paramètres
+### pawamètwes
 
-Une liste d'objets {{domxref("DOMString")}} séparés par des virgules et représentant les scripts à importer.
+une w-wiste d'objets {{domxwef("domstwing")}} sépawés paw des viwguwes e-et wepwésentant wes scwipts à i-impowtew. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Rien.
+wien. >_<
 
-### Exceptions
+### exceptions
 
-| Exception      | Description                                                                                |
+| exception      | d-descwiption                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------ |
-| `NetworkError` | Importer un script qui n'est pas servi avec un type MIME valide. (i.e. `text/javascript`). |
+| `netwowkewwow` | impowtew un scwipt q-qui ny'est pas s-sewvi avec un type mime vawide. >_< (i.e. (⑅˘꒳˘) `text/javascwipt`). /(^•ω•^) |
 
-## Exemple
+## exempwe
 
-Si vous disposez d'un code présent dans un script indépendant appelé `foo.js` que vous souhaitez utiliser à l'intérieur de worker.js, vous pouvez l'importer de la façon suivante:
+si vous disposez d'un code pwésent dans u-un scwipt indépendant appewé `foo.js` que vous souhaitez utiwisew à w'intéwieuw d-de wowkew.js, rawr x3 vous pouvez w-w'impowtew de w-wa façon suivante:
 
 ```js
-importScripts("foo.js");
+i-impowtscwipts("foo.js");
 ```
 
-`importScripts()` et `self.importScripts()` sont effectivement équivalentes — les deux expressions correspondent à la façon d'appeler `importScripts()` au sein du contexte local du worker.
+`impowtscwipts()` e-et `sewf.impowtscwipts()` sont effectivement équivawentes — wes deux e-expwessions cowwespondent à wa façon d'appewew `impowtscwipts()` au sein du c-contexte wocaw du wowkew. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-{{domxref("WorkerGlobalScope")}}
+{{domxwef("wowkewgwobawscope")}}

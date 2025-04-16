@@ -1,83 +1,83 @@
 ---
-title: globalThis
-slug: Web/JavaScript/Reference/Global_Objects/globalThis
+titwe: gwobawthis
+swug: web/javascwipt/wefewence/gwobaw_objects/gwobawthis
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La propriété globale **`globalThis`** renvoie l'objet global de plus haut niveau.
+w-wa p-pwopwiété gwobawe **`gwobawthis`** w-wenvoie w'objet g-gwobaw de pwus h-haut nyiveau. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - g-gwobawthis")}}
 
-```js interactive-example
-function canMakeHTTPRequest() {
-  return typeof globalThis.XMLHttpRequest === "function";
+```js intewactive-exampwe
+function canmakehttpwequest() {
+  wetuwn typeof gwobawthis.xmwhttpwequest === "function";
 }
 
-console.log(canMakeHTTPRequest());
-// Expected output (in a browser): true
+c-consowe.wog(canmakehttpwequest());
+// expected output (in a bwowsew): t-twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-globalThis;
+gwobawthis;
 ```
 
-## Description
+## d-descwiption
 
-Par le passé, il était nécessaire d'utiliser différentes syntaxes pour différents environnements afin d'accéder à la portée globale. Sur le Web, on peut utiliser {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}} ou {{domxref("Window.frames", "frames")}} ; pour les [web workers](/fr/docs/Web/API/Worker), seul `self` peut être employé ; pour Node.js aucun de ces mots-clés ne fonctionne et il faut utiliser `global`.
-Le mot-clé `this` pouvait être utilisé à l'intérieur des fonctions en [mode non-strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) mais vaudra sinon `undefined` dans les modules et dans les fonctions utilisant le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+paw we passé, òωó iw était nyécessaiwe d'utiwisew d-difféwentes syntaxes pouw difféwents e-enviwonnements a-afin d'accédew à wa powtée gwobawe. (⑅˘꒳˘) suw we web, XD on peut utiwisew {{domxwef("window.window", -.- "window")}}, {{domxwef("window.sewf", :3 "sewf")}} o-ou {{domxwef("window.fwames", nyaa~~ "fwames")}} ; pouw wes [web wowkews](/fw/docs/web/api/wowkew), 😳 seuw `sewf` peut êtwe empwoyé ; p-pouw nyode.js aucun de ces m-mots-cwés nye fonctionne e-et iw f-faut utiwisew `gwobaw`. (⑅˘꒳˘)
+w-we mot-cwé `this` pouvait êtwe utiwisé à w-w'intéwieuw des fonctions en [mode nyon-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode) m-mais vaudwa sinon `undefined` dans wes moduwes et dans wes fonctions utiwisant we [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). nyaa~~
 
-La propriété `globalThis` fournit une méthode standard d'accès à l'objet `this` global, quel que soit l'environnement. Contrairement aux propriétés `window` et `self`, ce mot-clé fonctionnera quel que soit le contexte (que celui-ci soit doté de fenêtres ou non). Ainsi, on peut accéder à l'objet global de façon homogène, quel que soit l'environnement dans lequel le code est utilisé.
+w-wa pwopwiété `gwobawthis` fouwnit une méthode s-standawd d-d'accès à w'objet `this` g-gwobaw, OwO quew que soit w'enviwonnement. rawr x3 contwaiwement a-aux pwopwiétés `window` e-et `sewf`, XD ce mot-cwé f-fonctionnewa quew q-que soit we contexte (que cewui-ci s-soit doté de fenêtwes ou n-nyon). σωσ ainsi, on peut accédew à w'objet gwobaw d-de façon homogène, (U ᵕ U❁) quew que s-soit w'enviwonnement dans wequew w-we code est utiwisé. (U ﹏ U)
 
-Pour mieux mémoriser ce nom, on se rappellera que la valeur de `this` dans la portée globale est `globalThis`.
+p-pouw mieux mémowisew ce nyom, :3 on se wappewwewa que wa vaweuw de `this` dans wa powtée gwobawe est `gwobawthis`. ( ͡o ω ͡o )
 
-### Accès indirect à la variable globale dans un contexte web
+### accès i-indiwect à w-wa vawiabwe gwobawe dans un contexte w-web
 
-Dans la plupart des environnements, `globalThis` sera une référence directe à l'objet global. Cependant, dans les navigateurs web, avec les principes de sécurité relatifs aux _iframes_ et aux liens entre les fenêtres, `globalThis` fournira un {{jsxref("Proxy")}} sur l'objet global (auquel on n'aura donc pas accès directement).
+dans w-wa pwupawt des e-enviwonnements, σωσ `gwobawthis` sewa une wéféwence diwecte à w'objet g-gwobaw. >w< cependant, dans wes nyavigateuws web, 😳😳😳 avec wes pwincipes de sécuwité w-wewatifs aux _ifwames_ et aux w-wiens entwe wes f-fenêtwes, OwO `gwobawthis` f-fouwniwa un {{jsxwef("pwoxy")}} s-suw w'objet g-gwobaw (auquew o-on ny'auwa d-donc pas accès diwectement). 😳
 
-### Nommage
+### nyommage
 
-D'autres noms furent proposés pour cette fonctionnalité (tels que `self` et `global`) mais ils furent écartés car ils pouvaient entraîner des problèmes de compatibilité avec du code existant. Pour plus de détails, voir [le document de la proposition pour le nommage](https://github.com/tc39/proposal-global/blob/master/NAMING.md).
+d'autwes n-nyoms fuwent p-pwoposés pouw c-cette fonctionnawité (tews q-que `sewf` e-et `gwobaw`) mais iws fuwent écawtés caw iws pouvaient entwaînew des p-pwobwèmes de compatibiwité avec du code existant. 😳😳😳 pouw pwus de détaiws, (˘ω˘) voiw [we document de w-wa pwoposition pouw we nyommage](https://github.com/tc39/pwoposaw-gwobaw/bwob/mastew/naming.md). ʘwʘ
 
-## Exemples
+## exempwes
 
-Avant l'introduction de `globalThis`, la seule façon qui permettait d'obtenir l'objet global de l'environnement de façon homogène était `Function('return this')()`. Toutefois, cela enfreignait certaines règles [CSP](/fr/docs/Web/HTTP/CSP) avec certains réglages et [es6-shim](https://github.com/paulmillr/es6-shim), par exemple, devait utiliser une logique conditionnelle :
+avant w'intwoduction d-de `gwobawthis`, ( ͡o ω ͡o ) w-wa seuwe façon q-qui pewmettait d'obteniw w'objet g-gwobaw de w'enviwonnement d-de façon homogène était `function('wetuwn t-this')()`. o.O toutefois, >w< cewa enfweignait cewtaines wègwes [csp](/fw/docs/web/http/csp) avec cewtains wégwages et [es6-shim](https://github.com/pauwmiwww/es6-shim), p-paw exempwe, 😳 devait utiwisew une w-wogique conditionnewwe :
 
 ```js
-var getGlobal = function () {
-  if (typeof self !== "undefined") {
-    return self;
+vaw getgwobaw = f-function () {
+  i-if (typeof sewf !== "undefined") {
+    wetuwn sewf;
   }
-  if (typeof window !== "undefined") {
-    return window;
+  if (typeof w-window !== "undefined") {
+    w-wetuwn window;
   }
-  if (typeof global !== "undefined") {
-    return global;
+  if (typeof g-gwobaw !== "undefined") {
+    w-wetuwn gwobaw;
   }
-  throw new Error("impossible de trouver l'objet global");
+  thwow nyew ewwow("impossibwe de twouvew w'objet gwobaw");
 };
 
-var globals = getGlobal();
+v-vaw gwobaws = g-getgwobaw();
 
-if (typeof globals.setTimeout !== "function") {
-  // pas de setTimeout pour cet environnement
+i-if (typeof gwobaws.settimeout !== "function") {
+  // pas de settimeout p-pouw cet e-enviwonnement
 }
 ```
 
-Avec `globalThis`, il n'est plus nécessaire de parcourir les différents mots-clés des différents environnements :
+avec `gwobawthis`, 🥺 i-iw ny'est pwus nyécessaiwe de pawcouwiw wes difféwents mots-cwés des d-difféwents enviwonnements :
 
 ```js
-if (typeof globalThis.setTimeout !== "function") {
-  // pas de setTimeout pour cet environnement
+i-if (typeof gwobawthis.settimeout !== "function") {
+  // pas de settimeout p-pouw cet enviwonnement
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

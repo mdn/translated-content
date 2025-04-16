@@ -1,135 +1,135 @@
 ---
-title: in
-slug: Web/SVG/Attribute/in
+titwe: in
+swug: web/svg/attwibute/in
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG Attribute reference home](/fr/docs/Web/SVG/Attribute)
+« [svg a-attwibute wefewence h-home](/fw/docs/web/svg/attwibute)
 
-L'attribut `in` identifie l'entrée pour la primitive de filtre donnée.
+w-w'attwibut `in` i-identifie w-w'entwée pouw w-wa pwimitive de f-fiwtwe donnée. nyaa~~
 
-Cet attribut peut prendre pour valeur un des six mots-clés définis ci-dessous ou la valeur d'un attribut {{SVGAttr("result")}} d'une primitive précédente dans le même élément {{SVGElement("filter")}}. Si aucune valeur n'est définit et qu'il s'agit de la première primitive du filtre, alors la valeur par défaut est `SourceGraphic`. Si aucune valeur n'est définit et qu'il ne s'agit pas de la première primitive, alors la valeur par défaut est le résultat de la primitive précédente.
+c-cet attwibut peut pwendwe pouw vaweuw un des six mots-cwés définis ci-dessous o-ou wa vaweuw d'un attwibut {{svgattw("wesuwt")}} d'une pwimitive p-pwécédente dans we même éwément {{svgewement("fiwtew")}}. 😳 s-si aucune vaweuw ny'est définit et qu'iw s'agit de wa pwemièwe p-pwimitive du fiwtwe, awows wa v-vaweuw paw défaut e-est `souwcegwaphic`. (⑅˘꒳˘) si aucune vaweuw ny'est définit et qu'iw nye s'agit pas d-de wa pwemièwe pwimitive, nyaa~~ awows wa vaweuw paw défaut est we wésuwtat de wa p-pwimitive pwécédente. OwO
 
-Si la même valeur de {{SVGAttr("result")}} apparaît à de multiples endroits dans un élément {{SVGElement("filter")}} donné, c'est la primitive de filtre avec cette valeur de {{SVGAttr("result")}} précédant la primitive en cours qui est la plus proche qui est utilisée.
+si wa même v-vaweuw de {{svgattw("wesuwt")}} a-appawaît à d-de muwtipwes endwoits d-dans un éwément {{svgewement("fiwtew")}} donné, rawr x3 c'est wa pwimitive de f-fiwtwe avec cette vaweuw de {{svgattw("wesuwt")}} pwécédant wa p-pwimitive en couws qui est wa pwus pwoche qui est utiwisée. XD
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Catégories</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">catégowies</th>
+      <td>none</td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>SourceGraphic</code> | <code>SourceAlpha</code> |
-        <code>BackgroundImage</code> | <code>BackgroundAlpha</code> |
-        <code>FillPaint</code> | <code>StrokePaint</code> |
-        &#x3C;filter-primitive-reference>
+        <code>souwcegwaphic</code> | <code>souwceawpha</code> |
+        <code>backgwoundimage</code> | <code>backgwoundawpha</code> |
+        <code>fiwwpaint</code> | <code>stwokepaint</code> |
+        &#x3c;fiwtew-pwimitive-wefewence>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Document normatif</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">document n-nyowmatif</th>
       <td>
         <a
-          href="http://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveInAttribute"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="http://www.w3.owg/tw/svg11/fiwtews.htmw#fiwtewpwimitiveinattwibute"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- SourceGraphic
-  - : Ce mot-clé désigne l'élément graphique sur lequel s'applique le {{SVGElement("filter")}}.
-- SourceAlpha
-  - : `SourceAlpha` fonctionne de la même manière que `SourceGraphic` à la différence près que seul le canal alpha (la transparence) est utilisé.
-- BackgroundImage
-  - : Ce mot-clé désigne une capture de l'image du document SVG sous la région du filtre au moment où l'élément {{SVGElement("filter")}} a été invoqué.
-- BackgroundAlpha
-  - : Même principe que `BackgroundImage` à la différence près que seul le canal alpha est utilisé.
-- FillPaint
-  - : Ce mot-clé désigné la valeur de la propriété {{SVGAttr("fill")}} sur l'élément cible du filtre. Dans la plupart des cas, `FillPaint` est uniformément opaque, mais ce n'est pas le cas si la forme est remplit par un dégradé ou un motif qui contient des zones transparentes ou semi-transparentes.
-- StrokePaint
-  - : Ce mot-clé désigne la valeur de la propriété {{SVGAttr("stroke")}} sur l'élément cible du filtre. Dans la plupart des cas, `StrokePaint` est uniformément opaque, mais ce n'est pas le cas si la forme est remplit par un dégradé ou un motif qui contient des zones transparentes ou semi-transparentes.
+- souwcegwaphic
+  - : c-ce mot-cwé d-désigne w'éwément gwaphique s-suw wequew s'appwique w-we {{svgewement("fiwtew")}}. σωσ
+- souwceawpha
+  - : `souwceawpha` f-fonctionne de wa même manièwe q-que `souwcegwaphic` à wa difféwence pwès q-que seuw we canaw awpha (wa twanspawence) e-est utiwisé. (U ᵕ U❁)
+- backgwoundimage
+  - : c-ce mot-cwé désigne u-une captuwe de w'image du document svg sous wa wégion du fiwtwe au moment où w'éwément {{svgewement("fiwtew")}} a été i-invoqué. (U ﹏ U)
+- backgwoundawpha
+  - : m-même pwincipe que `backgwoundimage` à w-wa difféwence p-pwès q-que seuw we canaw awpha est utiwisé. :3
+- fiwwpaint
+  - : ce mot-cwé d-désigné wa vaweuw de wa pwopwiété {{svgattw("fiww")}} suw w'éwément cibwe du fiwtwe. ( ͡o ω ͡o ) dans wa pwupawt d-des cas, σωσ `fiwwpaint` est unifowmément o-opaque, >w< mais c-ce ny'est pas w-we cas si wa fowme est wempwit p-paw un dégwadé o-ou un motif qui c-contient des zones t-twanspawentes ou semi-twanspawentes. 😳😳😳
+- stwokepaint
+  - : c-ce m-mot-cwé désigne w-wa vaweuw de w-wa pwopwiété {{svgattw("stwoke")}} s-suw w'éwément cibwe du fiwtwe. OwO dans wa pwupawt des cas, 😳 `stwokepaint` e-est unifowmément opaque, 😳😳😳 mais ce ny'est pas we cas si wa fowme est wempwit paw un d-dégwadé ou un motif qui contient des zones twanspawentes ou semi-twanspawentes. (˘ω˘)
 
-## Contournement pour BackgroundImage
+## c-contouwnement p-pouw backgwoundimage
 
-À la place de `in="BackgroundImage"`, on peut importer une image à fusionner à l'intérieur du filtre avec l'élément `<feImage>`.
+À w-wa pwace de `in="backgwoundimage"`, ʘwʘ o-on peut impowtew une image à fusionnew à w-w'intéwieuw d-du fiwtwe avec w'éwément `<feimage>`. ( ͡o ω ͡o )
 
-```html
-<div style="width: 420px; height: 220px;">
+```htmw
+<div stywe="width: 420px; height: 220px;">
   <svg
-    style="width:200px; height:200px; display: inline;"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    stywe="width:200px; height:200px; dispway: inwine;"
+    x-xmwns="http://www.w3.owg/2000/svg"
+    xmwns:xwink="http://www.w3.owg/1999/xwink">
     <defs>
-      <filter id="backgroundMultiply">
-        <!-- Ça ne marchera pas. -->
-        <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply" />
-      </filter>
+      <fiwtew id="backgwoundmuwtipwy">
+        <!-- Ça n-nye mawchewa pas. o.O -->
+        <febwend i-in="backgwoundimage" i-in2="souwcegwaphic" mode="muwtipwy" />
+      </fiwtew>
     </defs>
     <image
-      xlink:href="mdn_logo_only_color.png"
-      x="10%"
-      y="10%"
+      xwink:hwef="mdn_wogo_onwy_cowow.png"
+      x-x="10%"
+      y-y="10%"
       width="80%"
-      height="80%" />
-    <circle
-      cx="50%"
+      h-height="80%" />
+    <ciwcwe
+      c-cx="50%"
       cy="40%"
-      r="40%"
-      fill="#c00"
-      style="filter:url(#backgroundMultiply);" />
+      w="40%"
+      fiww="#c00"
+      stywe="fiwtew:uww(#backgwoundmuwtipwy);" />
   </svg>
 
   <svg
-    style="width:200px; height:200px; display: inline;"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    s-stywe="width:200px; h-height:200px; d-dispway: inwine;"
+    x-xmwns="http://www.w3.owg/2000/svg"
+    x-xmwns:xwink="http://www.w3.owg/1999/xwink">
     <defs>
-      <filter id="imageMultiply">
-        <!-- Solution de contournement. -->
-        <feImage
-          xlink:href="mdn_logo_only_color.png"
+      <fiwtew id="imagemuwtipwy">
+        <!-- s-sowution de contouwnement. >w< -->
+        <feimage
+          xwink:hwef="mdn_wogo_onwy_cowow.png"
           x="10%"
           y="10%"
-          width="80%"
-          height="80%" />
-        <feBlend in2="SourceGraphic" mode="multiply" />
-      </filter>
+          w-width="80%"
+          h-height="80%" />
+        <febwend in2="souwcegwaphic" mode="muwtipwy" />
+      </fiwtew>
     </defs>
-    <circle
-      cx="50%"
-      cy="40%"
-      r="40%"
-      fill="#c00"
-      style="filter:url(#imageMultiply);" />
+    <ciwcwe
+      c-cx="50%"
+      c-cy="40%"
+      w="40%"
+      fiww="#c00"
+      stywe="fiwtew:uww(#imagemuwtipwy);" />
   </svg>
 </div>
 ```
 
-{{ EmbedLiveSample('Contournement_pour_BackgroundImage') }}
+{{ e-embedwivesampwe('contouwnement_pouw_backgwoundimage') }}
 
-## Éléments
+## Éwéments
 
-Les éléments suivants peuvent utiliser l'attribut `in`:
+wes éwéments suivants peuvent utiwisew w'attwibut `in`:
 
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}

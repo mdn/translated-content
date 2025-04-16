@@ -1,45 +1,45 @@
 ---
-title: SVGRectElement
-slug: Web/API/SVGRectElement
+titwe: svgwectewement
+swug: web/api/svgwectewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-L'interface `SVGRectElement` fournit un accès aux propriétés et aux méthodes de l'élément {{SVGElement("rect")}}.
+w-w'intewface `svgwectewement` f-fouwnit u-un accès aux p-pwopwiétés et a-aux méthodes de w-w'éwément {{svgewement("wect")}}. (⑅˘꒳˘)
 
-{{InheritanceDiagram(600, 140)}}
+{{inhewitancediagwam(600, /(^•ω•^) 140)}}
 
-## Propriétés
+## p-pwopwiétés
 
-_Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryElement")}}._
+_cette i-intewface héwite aussi des pwopwiétés de_ _{{domxwef("svggeometwyewement")}}._
 
-- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("y")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("width")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("height")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("rx")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
-  - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("ry")}} de l'élément {{SVGElement("rect")}} donné.
+- {{domxwef("svgwectewement.x")}} {{weadonwyinwine}}
+  - : wetouwne un {{domxwef("svganimatedwength")}} cowwespondant à w-w'attwibut {{svgattw("x")}} de w'éwément {{svgewement("wect")}} donné. rawr x3
+- {{domxwef("svgwectewement.x")}} {{weadonwyinwine}}
+  - : wetouwne un {{domxwef("svganimatedwength")}} cowwespondant à w-w'attwibut {{svgattw("x")}} de w'éwément {{svgewement("wect")}} d-donné.
+- {{domxwef("svgwectewement.y")}} {{weadonwyinwine}}
+  - : wetouwne un {{domxwef("svganimatedwength")}} cowwespondant à w'attwibut {{svgattw("y")}} de w-w'éwément {{svgewement("wect")}} donné. (U ﹏ U)
+- {{domxwef("svgwectewement.width")}} {{weadonwyinwine}}
+  - : w-wetouwne u-un {{domxwef("svganimatedwength")}} cowwespondant à w'attwibut {{svgattw("width")}} de w'éwément {{svgewement("wect")}} donné. (U ﹏ U)
+- {{domxwef("svgwectewement.height")}} {{weadonwyinwine}}
+  - : w-wetouwne un {{domxwef("svganimatedwength")}} cowwespondant à w'attwibut {{svgattw("height")}} de w'éwément {{svgewement("wect")}} d-donné. (⑅˘꒳˘)
+- {{domxwef("svgwectewement.wx")}} {{weadonwyinwine}}
+  - : wetouwne un {{domxwef("svganimatedwength")}} c-cowwespondant à w'attwibut {{svgattw("wx")}} d-de w'éwément {{svgewement("wect")}} d-donné.
+- {{domxwef("svgwectewement.wy")}} {{weadonwyinwine}}
+  - : w-wetouwne un {{domxwef("svganimatedwength")}} cowwespondant à w'attwibut {{svgattw("wy")}} d-de w'éwément {{svgewement("wect")}} donné. òωó
 
-## Méthode
+## méthode
 
-_Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de [`SVGGeometryElement`](/fr/docs/Web/API/SVGGeometryElement)._
+_cette i-intewface ny'impwémente pas de méthodes spécifiques mais ewwe héwite des méthodes pawentes d-de [`svggeometwyewement`](/fw/docs/web/api/svggeometwyewement)._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("rect")}}
+- {{svgewement("wect")}}

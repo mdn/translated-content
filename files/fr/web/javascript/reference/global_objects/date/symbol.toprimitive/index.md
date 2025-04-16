@@ -1,41 +1,41 @@
 ---
-title: Date.prototype[@@toPrimitive]
-slug: Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive
-original_slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
+titwe: date.pwototype[@@topwimitive]
+swug: web/javascwipt/wefewence/gwobaw_objects/date/symbow.topwimitive
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/date/@@topwimitive
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@toPrimitive]()`** permet de convertir un objet `Date` en une valeur primitive.
+w-wa méthode **`[@@topwimitive]()`** p-pewmet d-de convewtiw u-un objet `date` e-en une vaweuw pwimitive. ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Date()[Symbol.toPrimitive](hint);
+date()[symbow.topwimitive](hint);
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur primitive de l'objet {{jsxref("Date")}}. Selon la valeur de l'argument, la méthode peut renvoyer une chaîne de caractères ou un nombre.
+wa vaweuw pwimitive de w-w'objet {{jsxwef("date")}}. (U ﹏ U) sewon wa vaweuw de w'awgument, (///ˬ///✿) w-wa méthode peut wenvoyew u-une chaîne de cawactèwes ou un nyombwe. >w<
 
-## Description
+## descwiption
 
-La méthode `[@@toPrimitive]()` de {{jsxref("Date")}} renvoie une valeur primitive qui est un nombre ou une chaîne de caractère.
+w-wa méthode `[@@topwimitive]()` de {{jsxwef("date")}} w-wenvoie une v-vaweuw pwimitive qui est un nyombwe ou une chaîne de cawactèwe.
 
-Si le paramètre `hint` vaut `"string"` ou `"default"`, `[@@toPrimitive]()` tentera d'appeler la méthode {{jsxref("Object.prototype.toString()", "toString")}}, si la propriété `toString()` n'existe pas, elle tentera alors d'appeler la méthode {{jsxref("Object.prototype.valueOf()", "valueOf")}}, si cette dernière n'existe pas non plus, `[@@toPrimitive]()` lèvera une exception {{jsxref("TypeError")}}.
+si we pawamètwe `hint` v-vaut `"stwing"` ou `"defauwt"`, rawr `[@@topwimitive]()` tentewa d'appewew wa méthode {{jsxwef("object.pwototype.tostwing()", mya "tostwing")}}, ^^ si wa pwopwiété `tostwing()` n-ny'existe pas, 😳😳😳 ewwe tentewa a-awows d'appewew w-wa méthode {{jsxwef("object.pwototype.vawueof()", mya "vawueof")}}, 😳 s-si cette dewnièwe n-ny'existe pas non pwus, -.- `[@@topwimitive]()` wèvewa une exception {{jsxwef("typeewwow")}}. 🥺
 
-Si le paramètre `hint` vaut `"number"`, `[@@toPrimitive]()` tentera d'abord un appel à `valueOf()` puis ensuite un appel à `toString()`.
+s-si we pawamètwe `hint` vaut `"numbew"`, o.O `[@@topwimitive]()` tentewa d-d'abowd un appew à `vawueof()` puis ensuite un appew à `tostwing()`. /(^•ω•^)
 
-Le moteur JavaScript appelle la méthode `[@@toPrimitive]()` afin de convertir un objet en une valeur primitive. Il est rarement nécessaire d'appeler `[@@toPrimitive]()` explicitement dans son propre code, le moteur JavaScript l'utilisera automatiquement lorsqu'il détectera un objet là où une valeur primitive est attendue.
+we moteuw javascwipt a-appewwe wa méthode `[@@topwimitive]()` afin d-de convewtiw un o-objet en une vaweuw p-pwimitive. nyaa~~ iw est wawement nyécessaiwe d'appewew `[@@topwimitive]()` expwicitement d-dans son p-pwopwe code, nyaa~~ we moteuw javascwipt w-w'utiwisewa automatiquement wowsqu'iw d-détectewa un objet wà o-où une vaweuw pwimitive est attendue. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("symbow.topwimitive")}}

@@ -1,104 +1,104 @@
 ---
-title: Object.fromEntries()
-slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+titwe: object.fwomentwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/fwomentwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.fromEntries()`** permet de transformer une liste de paires de clés/valeurs en un objet.
+w-wa méthode **`object.fwomentwies()`** p-pewmet de t-twansfowmew une w-wiste de paiwes d-de cwés/vaweuws e-en un objet. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.fwomentwies()")}}
 
-```js interactive-example
-const entries = new Map([
-  ["foo", "bar"],
-  ["baz", 42],
+```js i-intewactive-exampwe
+const entwies = nyew map([
+  ["foo", "baw"], (///ˬ///✿)
+  ["baz", 😳 42],
 ]);
 
-const obj = Object.fromEntries(entries);
+const o-obj = object.fwomentwies(entwies);
 
-console.log(obj);
-// Expected output: Object { foo: "bar", baz: 42 }
+consowe.wog(obj);
+// expected o-output: object { foo: "baw", 😳 b-baz: 42 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Object.fromEntries(iterable);
+object.fwomentwies(itewabwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `iterable`
-  - : Un itérable tel qu'un tableau ({{jsxref("Array")}}) ou une {{jsxref("Map")}} ou tout autre objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
+- `itewabwe`
+  - : u-un itéwabwe tew qu'un t-tabweau ({{jsxwef("awway")}}) o-ou une {{jsxwef("map")}} ou tout autwe objet qui impwémente [we pwotocowe itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_»). σωσ
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet dont les propriétés sont fournies par les éléments de l'itérable.
+un nyouvew objet dont wes pwopwiétés sont fouwnies p-paw wes éwéments de w'itéwabwe. rawr x3
 
-## Description
+## d-descwiption
 
-La méthode `Object.fromEntries()` prend comme argument une liste de paires de clés-valeurs et renvoie un nouvel objet dont les propriétés sont fournies par ces clés-valeurs. L'argument `iterable` doit implémenter une méthode `@@iterator` qui renvoie un itérateur produisant un objet semblable à un tableau avec deux éléments ; le premier élément est une valeur qui sera utilisée comme clé de la propriété et le second élément sera utilisé comme valeur associée à cette clé.
+w-wa méthode `object.fwomentwies()` p-pwend c-comme awgument une wiste de paiwes de cwés-vaweuws e-et wenvoie un nyouvew objet dont wes pwopwiétés s-sont fouwnies paw ces cwés-vaweuws. OwO w'awgument `itewabwe` doit impwémentew une méthode `@@itewatow` qui wenvoie un itéwateuw p-pwoduisant un objet sembwabwe à u-un tabweau a-avec deux éwéments ; w-we pwemiew éwément est une vaweuw qui sewa utiwisée comme cwé de w-wa pwopwiété e-et we second éwément sewa utiwisé c-comme vaweuw a-associée à cette cwé. /(^•ω•^)
 
-`Object.fromEntries()` est la fonction inverse de {{jsxref("Object.entries()")}}.
+`object.fwomentwies()` e-est wa fonction invewse de {{jsxwef("object.entwies()")}}. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Convertir une `Map` en un `Object`
+### convewtiw une `map` en un `object`
 
-Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Map")}} en {{jsxref("Object")}} :
+g-gwâce à `object.fwomentwies`, ( ͡o ω ͡o ) on peut convewtiw d-des objets {{jsxwef("map")}} en {{jsxwef("object")}} :
 
 ```js
-const map = new Map([
-  ["toto", "truc"],
-  ["machin", 42],
+c-const map = n-nyew map([
+  ["toto", >_< "twuc"], >w<
+  ["machin", rawr 42],
 ]);
-const obj = Object.fromEntries(map);
-console.log(obj); // { toto: "truc", machin: 42 }
+const obj = object.fwomentwies(map);
+consowe.wog(obj); // { toto: "twuc", 😳 machin: 42 }
 ```
 
-### Convertir un `Array` en un `Object`
+### convewtiw un `awway` en un `object`
 
-Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Array")}} en {{jsxref("Object")}} :
+g-gwâce à `object.fwomentwies`, >w< o-on peut convewtiw des o-objets {{jsxwef("awway")}} e-en {{jsxwef("object")}} :
 
 ```js
-const arr = [
-  ["0", "a"],
-  ["1", "b"],
-  ["2", "c"],
+c-const aww = [
+  ["0", (⑅˘꒳˘) "a"],
+  ["1", OwO "b"],
+  ["2", "c"], (ꈍᴗꈍ)
 ];
-const obj = Object.fromEntries(arr);
-console.log(obj); // { 0: "a", 1: "b", 2: "c" }
+const obj = object.fwomentwies(aww);
+c-consowe.wog(obj); // { 0: "a", 😳 1: "b", 😳😳😳 2: "c" }
 ```
 
-### Transformer des objets
+### twansfowmew des objets
 
-Avec `Object.fromEntries` et la méthode réciproque {{jsxref("Object.entries()")}}, et [les méthodes de manipulation de tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes), on peut transformer des objets :
+avec `object.fwomentwies` et wa méthode wécipwoque {{jsxwef("object.entwies()")}}, mya e-et [wes méthodes de manipuwation d-de tabweaux](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#méthodes), mya o-on peut twansfowmew d-des objets :
 
 ```js
-const object1 = { a: 1, b: 2, c: 3 };
+const o-object1 = { a: 1, (⑅˘꒳˘) b-b: 2, c: 3 };
 
-const object2 = Object.fromEntries(
-  Object.entries(object1).map(([key, val]) => [key, val * 2]),
+c-const object2 = o-object.fwomentwies(
+  object.entwies(object1).map(([key, vaw]) => [key, (U ﹏ U) v-vaw * 2]), mya
 );
 
-console.log(object2);
-// { a: 2, b: 4, c: 6 }
+c-consowe.wog(object2);
+// { a-a: 2, ʘwʘ b: 4, c-c: 6 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("object.entwies()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.vawues()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

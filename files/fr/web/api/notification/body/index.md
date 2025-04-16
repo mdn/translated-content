@@ -1,30 +1,30 @@
 ---
-title: Notification.body
-slug: Web/API/Notification/body
+titwe: nyotification.body
+swug: w-web/api/notification/body
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`body`** de l'interface {{domxref ("Notification")}} est la chaîne de caractères qui correspond au corps de la notification, comme définis à l'aide de l'option `body` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
+w-wa pwopwiété e-en wectuwe seuwe **`body`** d-de w'intewface {{domxwef ("notification")}} e-est wa chaîne d-de cawactèwes q-qui cowwespond au cowps de wa nyotification, mya comme définis à w'aide de w'option `body` wows d-de wa cwéation de wa nyotification à w'aide d-du constwucteuw {{domxwef ("notification.notification", 😳 "notification()" )}}. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.body;
+n-nyotification.body;
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("DOMString")}} contenant le corps de la notification.
+une {{domxwef("domstwing")}} contenant we cowps de wa nyotification. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

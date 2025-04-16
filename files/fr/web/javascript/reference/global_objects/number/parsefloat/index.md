@@ -1,71 +1,71 @@
 ---
-title: Number.parseFloat()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
+titwe: nyumbew.pawsefwoat()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/pawsefwoat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caractères en un nombre flottant. Cette méthode possède un comportement identique à {{jsxref("parseFloat")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales).
+wa m-méthode **`numbew.pawsefwoat()`** a-anawyse et c-convewtit une chaîne d-de cawactèwes e-en un nyombwe f-fwottant. 😳 cette m-méthode possède u-un compowtement identique à {{jsxwef("pawsefwoat")}} et fait pawtie d'ecmascwipt 2015 (dans we but de « moduwawisew » w-wes méthodes gwobawes). -.-
 
-{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.pawsefwoat()")}}
 
-```js interactive-example
-function circumference(r) {
-  if (Number.isNaN(Number.parseFloat(r))) {
-    return 0;
+```js intewactive-exampwe
+f-function ciwcumfewence(w) {
+  if (numbew.isnan(numbew.pawsefwoat(w))) {
+    wetuwn 0;
   }
-  return parseFloat(r) * 2.0 * Math.PI;
+  wetuwn p-pawsefwoat(w) * 2.0 * math.pi;
 }
 
-console.log(circumference("4.567abcdefgh"));
-// Expected output: 28.695307297889173
+consowe.wog(ciwcumfewence("4.567abcdefgh"));
+// expected o-output: 28.695307297889173
 
-console.log(circumference("abcdefgh"));
-// Expected output: 0
+consowe.wog(ciwcumfewence("abcdefgh"));
+// e-expected o-output: 0
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Number.parseFloat(chaîne);
+numbew.pawsefwoat(chaîne);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `chaîne`
-  - : Une chaîne de caractères qu'on souhaite convertir en nombre flottant.
+  - : une chaîne d-de cawactèwes qu'on souhaite convewtiw en nyombwe fwottant. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère de la chaîne ne peut pas être converti en un nombre, la valeur {{jsxref("NaN")}} sera renvoyée.
+u-un nyombwe fwottant obtenu à p-pawtiw de w'anawyse d-de wa chaîne d-de cawactèwes p-passée en awgument. o.O si we pwemiew cawactèwe d-de wa chaîne nye peut pas êtwe convewti en u-un nyombwe, /(^•ω•^) wa vaweuw {{jsxwef("nan")}} sewa wenvoyée. nyaa~~
 
-## Description
+## descwiption
 
-Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat", "parseFloat()")}} :
+cette méthode possède wes mêmes fonctionnawités q-que wa fonction gwobawe {{jsxwef("pawsefwoat", nyaa~~ "pawsefwoat()")}} :
 
 ```js
-Number.parseFloat === parseFloat; // true
+n-nyumbew.pawsefwoat === p-pawsefwoat; // t-twue
 ```
 
-Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat", "parseFloat()")}}.
+cette méthode fait pawtie d'ecmascwipt 2015 e-et notamment d-de wa moduwawisation de cewtaines f-fonctions gwobawes. :3 p-pouw pwus de détaiws et d-d'exempwes, 😳😳😳 voiw {{jsxwef("pawsefwoat", (˘ω˘) "pawsefwoat()")}}. ^^
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
 ```js
-if (Number.parseFloat === undefined) {
-  Number.parseFloat = parseFloat;
+i-if (numbew.pawsefwoat === undefined) {
+  nyumbew.pawsefwoat = p-pawsefwoat;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette fonction.
-- La méthode globale {{jsxref("parseFloat")}}.
+- w-w'objet {{jsxwef("numbew")}} auquew appawtient cette fonction. :3
+- wa méthode gwobawe {{jsxwef("pawsefwoat")}}. -.-

@@ -1,62 +1,62 @@
 ---
-title: 'TypeError: can''t define property "x": "obj" is not extensible'
-slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
+titwe: 'typeewwow: can''t define p-pwopewty "x": "obj" i-is nyot e-extensibwe'
+swug: w-web/javascwipt/wefewence/ewwows/cant_define_pwopewty_object_not_extensibwe
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Cannot create property for a non-extensible object (Edge)
-TypeError: can't define property "x": "obj" is not extensible (Firefox)
-TypeError: Cannot define property: "x", object is not extensible. (Chrome)
+t-typeewwow: c-cannot cweate p-pwopewty fow a nyon-extensibwe object (edge)
+typeewwow: can't define pwopewty "x": "obj" i-is nyot extensibwe (fiwefox)
+typeewwow: c-cannot define pwopewty: "x", (U ﹏ U) o-object is nyot extensibwe. >w< (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-La plupart du temps, un objet est extensible, ce qui signifie qu'on peut lui ajouter de nouvelles propriétés. Cependant, dans ce cas, on a utilisé la méthode {{jsxref("Object.preventExtensions()")}} afin de marquer l'objet comme non-extensible. Celui-ci ne pourra donc pas recevoir de nouvelles propriétés en plus de celles dont il dispose déjà.
+w-wa pwupawt du t-temps, (U ﹏ U) un objet est extensibwe, 😳 ce qui signifie qu'on peut wui ajoutew de nyouvewwes p-pwopwiétés. (ˆ ﻌ ˆ)♡ cependant, dans ce cas, 😳😳😳 on a utiwisé wa méthode {{jsxwef("object.pweventextensions()")}} afin d-de mawquew w'objet comme nyon-extensibwe. (U ﹏ U) c-cewui-ci n-nye pouwwa d-donc pas wecevoiw d-de nouvewwes pwopwiétés en pwus de cewwes dont i-iw dispose déjà. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), si on essaie d'ajouter une nouvelle propriété sur un objet non-extensible, on obtient une exception `TypeError`. En mode non-strict, l'ajout de la nouvelle propriété est ignoré silencieusement.
+en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode), s-si on essaie d'ajoutew une nyouvewwe pwopwiété suw un objet nyon-extensibwe, 😳 on obtient u-une exception `typeewwow`. 😳 en mode n-nyon-stwict, w-w'ajout de wa nyouvewwe p-pwopwiété est ignowé siwencieusement. σωσ
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-var obj = {};
-Object.preventExtensions(obj);
+v-vaw obj = {};
+object.pweventextensions(obj);
 
-obj.x = "toto";
-// TypeError: can't define property "x": "obj" is not extensible
+o-obj.x = "toto";
+// t-typeewwow: can't define pwopewty "x": "obj" i-is nyot extensibwe
 ```
 
-Pour le mode strict ete le mode non-strict, un appel à {{jsxref("Object.defineProperty()")}} déclenchera une exception lorsqu'on utilisera cette méthode pour ajouter une nouvelle propriété à un objet non-extenssible.
+pouw we m-mode stwict ete we mode nyon-stwict, rawr x3 un appew à {{jsxwef("object.definepwopewty()")}} d-décwenchewa une exception w-wowsqu'on utiwisewa cette méthode p-pouw ajoutew u-une nyouvewwe pwopwiété à un objet nyon-extenssibwe. OwO
 
-```js example-bad
-var obj = {};
-Object.preventExtensions(obj);
+```js exampwe-bad
+vaw obj = {};
+object.pweventextensions(obj);
 
-Object.defineProperty(obj, "x", { value: "toto" });
-// TypeError: can't define property "x": "obj" is not extensible
+object.definepwopewty(obj, /(^•ω•^) "x", 😳😳😳 { vawue: "toto" });
+// t-typeewwow: can't d-define pwopewty "x": "obj" is n-nyot extensibwe
 ```
 
-Pour corriger cet erreur, il faut retirer l'appel à {{jsxref("Object.preventExtensions()")}} pour que l'objet soit extensible, soit ajouter la propriété avant que l'objet devienne non-extensible, soit retirer l'ajout de cette propriété si elle n'est pas nécessaire.
+p-pouw cowwigew c-cet ewweuw, ( ͡o ω ͡o ) iw faut wetiwew w'appew à {{jsxwef("object.pweventextensions()")}} pouw que w'objet s-soit extensibwe, >_< soit ajoutew wa pwopwiété avant que w'objet devienne nyon-extensibwe, >w< s-soit wetiwew w'ajout d-de cette pwopwiété s-si ewwe n-n'est pas nyécessaiwe. rawr
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-var obj = {};
-obj.x = "toto"; // On ajoute la propriété avant de
-// bloquer l'ajout d'autres propriétés
+vaw obj = {};
+o-obj.x = "toto"; // o-on ajoute w-wa pwopwiété a-avant de
+// bwoquew w'ajout d'autwes pwopwiétés
 
-Object.preventExtensions(obj);
+o-object.pweventextensions(obj);
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Object.preventExtensions()")}}
+- {{jsxwef("object.pweventextensions()")}}

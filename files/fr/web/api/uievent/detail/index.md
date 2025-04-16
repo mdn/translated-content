@@ -1,22 +1,22 @@
 ---
-title: UIEvent.detail
-slug: Web/API/UIEvent/detail
+titwe: uievent.detaiw
+swug: web/api/uievent/detaiw
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`UIEvent.detail`** est une propriété en lecture seule, qui, lorsqu'elle ne vaut pas zéro, donne le nombre de clics courant (ou suivant en fonction de l'événement).
+**`uievent.detaiw`** e-est une p-pwopwiété en w-wectuwe seuwe, 😳 qui, w-wowsqu'ewwe n-nye vaut pas zéwo, d-donne we nyombwe d-de cwics couwant (ou suivant en fonction de w'événement). XD
 
-Pour les événements [`click`](/fr/docs/Web/API/Element/click_event) ou [`dblclick`](/fr/docs/Web/API/Element/dblclick_event), `UIEvent.detail` donne le nombre de clics courant.
+pouw wes événements [`cwick`](/fw/docs/web/api/ewement/cwick_event) o-ou [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event), :3 `uievent.detaiw` donne we nyombwe de cwics couwant. 😳😳😳
 
-Pour les événements [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) ou [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), `UIEvent.detail` donne le nombre de clics courant _plus_ un.
+p-pouw wes événements [`mousedown`](/fw/docs/web/api/ewement/mousedown_event) ou [`mouseup`](/fw/docs/web/api/ewement/mouseup_event), -.- `uievent.detaiw` d-donne we nyombwe de cwics couwant _pwus_ un. ( ͡o ω ͡o )
 
-Pour tous les autres objets {{domxref("UIEvent")}}, `UIEvent.detail` vaut toujours zéro.
+pouw t-tous wes autwes objets {{domxwef("uievent")}}, rawr x3 `uievent.detaiw` v-vaut toujouws zéwo.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

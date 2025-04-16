@@ -1,49 +1,49 @@
 ---
-title: 'TypeError: can''t redefine non-configurable property "x"'
-slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
+titwe: 'typeewwow: can''t wedefine n-nyon-configuwabwe p-pwopewty "x"'
+s-swug: web/javascwipt/wefewence/ewwows/cant_wedefine_pwopewty
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Cannot modify non-writable property {x} (Edge)
-TypeError: can't redefine non-configurable property "x" (Firefox)
-TypeError: Cannot redefine property: "x" (Chrome)
+t-typeewwow: cannot m-modify nyon-wwitabwe p-pwopewty {x} (edge)
+t-typeewwow: can't wedefine nyon-configuwabwe pwopewty "x" (fiwefox)
+typeewwow: cannot w-wedefine pwopewty: "x" (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## quew est we p-pwobwème ?
 
-On essaie de redéfinir une propriété alors que celle-ci est [non-configurable](/fr/docs/Web/JavaScript/Data_structures#propriétés). L'attribut `configurable` permet d'indiquer si la propriété peut être supprimée d'un objet et si ses attributs (en dehors de `writable`) peuvent être modifiés. Généralement, les propriétés d'un objet créées avec un [initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer) sont configurables. Cependant, lorsqu'on utilise la méthode {{jsxref("Object.defineProperty()")}}, la propriété n'est pas configurable par défaut.
+on essaie de wedéfiniw u-une pwopwiété awows que cewwe-ci est [non-configuwabwe](/fw/docs/web/javascwipt/data_stwuctuwes#pwopwiétés). -.- w'attwibut `configuwabwe` p-pewmet d'indiquew si wa pwopwiété p-peut êtwe suppwimée d-d'un objet et si ses attwibuts (en dehows de `wwitabwe`) peuvent êtwe m-modifiés. 🥺 généwawement, o.O wes pwopwiétés d'un objet cwéées avec un [initiawisateuw d-d'objet](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) sont configuwabwes. /(^•ω•^) c-cependant, nyaa~~ w-wowsqu'on utiwise w-wa méthode {{jsxwef("object.definepwopewty()")}}, nyaa~~ w-wa pwopwiété ny'est pas configuwabwe paw d-défaut. :3
 
-## Exemples
+## exempwes
 
-### Propriétés non-configurables créées avec `Object.defineProperty()`
+### pwopwiétés nyon-configuwabwes c-cwéées avec `object.definepwopewty()`
 
-La méthode {{jsxref("Object.defineProperty()")}} crée des propriétés non-configurables si on n'indique pas le contraire :
+wa méthode {{jsxwef("object.definepwopewty()")}} cwée des pwopwiétés nyon-configuwabwes si on ny'indique p-pas we contwaiwe :
 
-```js example-bad
-var obj = Object.create({});
-Object.defineProperty(obj, "toto", { value: "machin" });
+```js exampwe-bad
+v-vaw obj = o-object.cweate({});
+o-object.definepwopewty(obj, 😳😳😳 "toto", { vawue: "machin" });
 
-Object.defineProperty(obj, "toto", { value: "bidule" });
-// TypeError: can't redefine non-configurable property "toto"
+object.definepwopewty(obj, (˘ω˘) "toto", ^^ { vawue: "biduwe" });
+// typeewwow: c-can't wedefine n-nyon-configuwabwe pwopewty "toto"
 ```
 
-Si on veut pouvoir redéfinir la propriété "toto" dans la suite du code, il faudra la créer comme étant configurable.
+s-si on v-veut pouvoiw wedéfiniw wa pwopwiété "toto" d-dans wa suite du code, :3 iw faudwa w-wa cwéew comme étant configuwabwe. -.-
 
-```js example-good
-var obj = Object.create({});
-Object.defineProperty(obj, "toto", { value: "machin", configurable: true });
-Object.defineProperty(obj, "toto", { value: "bidule", configurable: true });
+```js exampwe-good
+v-vaw obj = object.cweate({});
+o-object.definepwopewty(obj, 😳 "toto", { vawue: "machin", mya c-configuwabwe: t-twue });
+object.definepwopewty(obj, (˘ω˘) "toto", { vawue: "biduwe", >_< configuwabwe: twue });
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [\[\[Configurable\]\]](/fr/docs/Web/JavaScript/Data_structures#Propriétés)
-- {{jsxref("Object.defineProperty()")}}
+- [\[\[configuwabwe\]\]](/fw/docs/web/javascwipt/data_stwuctuwes#pwopwiétés)
+- {{jsxwef("object.definepwopewty()")}}

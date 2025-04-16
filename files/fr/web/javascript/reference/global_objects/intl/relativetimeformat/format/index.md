@@ -1,89 +1,89 @@
 ---
-title: Intl.RelativeTimeFormat.prototype.format()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
+titwe: intw.wewativetimefowmat.pwototype.fowmat()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/fowmat
 ---
 
-{{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.
+{{jswef}}wa m-méthode **`intw.wewativetimefowmat.pwototype.fowmat()`** p-pewmet d-de fowmatew u-une vaweuw avec u-une unité sewon d-des options de w-wocawe et de fowmatage s-stockées dans w'objet {{jsxwef("wewativetimefowmat")}}.
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.format")}}
+{{intewactiveexampwe("javascwipt demo: intw.wewativetimefowmat.pwototype.fowmat")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+```js intewactive-exampwe
+const wtf1 = nyew i-intw.wewativetimefowmat("en", (⑅˘꒳˘) { stywe: "showt" });
 
-console.log(rtf1.format(3, "quarter"));
-// Expected output: "in 3 qtrs."
+consowe.wog(wtf1.fowmat(3, OwO "quawtew"));
+// e-expected output: "in 3 qtws."
 
-console.log(rtf1.format(-1, "day"));
-// Expected output: "1 day ago"
+c-consowe.wog(wtf1.fowmat(-1, (ꈍᴗꈍ) "day"));
+// expected output: "1 day ago"
 
-console.log(rtf1.format(10, "seconds"));
-// Expected output: "in 10 sec."
+consowe.wog(wtf1.fowmat(10, 😳 "seconds"));
+// e-expected output: "in 10 sec."
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-RelativeTimeFormat.format(valeur, unite);
+w-wewativetimefowmat.fowmat(vaweuw, 😳😳😳 unite);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : Une valeur numérique qu'on souhaite utiliser pour exprimer un temps relatif dans un message internationalisé.
+- `vaweuw`
+  - : une vaweuw nyuméwique qu'on s-souhaite utiwisew pouw expwimew un temps wewatif dans un message intewnationawisé. mya
 - `unite`
-  - : L'unité à utiliser pour le message internationalisé exprimant le temps relatif. Les valeurs possibles pour cet argument sont `"year"` (année), `"quarter"` (trimestre), `"month"` (mois), `"week"` (semaine), `"day"` (jour), `"hour"` (heure), `"minute"` (minute), `"second"` (secondes). Les formes plurielles sont également autorisées.
+  - : w-w'unité à utiwisew pouw w-we message intewnationawisé e-expwimant we temps w-wewatif. mya wes v-vaweuws possibwes pouw cet awgument sont `"yeaw"` (année), (⑅˘꒳˘) `"quawtew"` (twimestwe), (U ﹏ U) `"month"` (mois), mya `"week"` (semaine), ʘwʘ `"day"` (jouw), (˘ω˘) `"houw"` (heuwe), (U ﹏ U) `"minute"` (minute), ^•ﻌ•^ `"second"` (secondes). (˘ω˘) w-wes fowmes pwuwiewwes sont égawement autowisées. :3
 
-## Description
+## descwiption
 
-La fonction renvoyée par l'accesseur `format` permet de formater une valeur et une unité en une chaîne de caractères en prenant en compte la locale et les options de formatage associées à l'objet {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} utilisé.
+wa f-fonction wenvoyée paw w'accesseuw `fowmat` pewmet de fowmatew une vaweuw et une unité en une chaîne d-de cawactèwes en pwenant e-en compte wa wocawe e-et wes options d-de fowmatage associées à w'objet {{jsxwef("wewativetimefowmat", ^^;; "intw.wewativetimefowmat")}} utiwisé. 🥺
 
-## Exemples
+## exempwes
 
-### Utilisation simple de `format`
+### utiwisation s-simpwe d-de `fowmat`
 
-L'exemple suivant illustre comment créer un outil de formatage pour les valeurs de temps relatifs en anglais.
+w'exempwe suivant i-iwwustwe comment c-cwéew un outiw de fowmatage pouw w-wes vaweuws de temps wewatifs e-en angwais. (⑅˘꒳˘)
 
 ```js
-// On crée un outil de formatage pour les valeurs exprimant
-// les temps relatifs en anglais, avec les valeurs par défaut
-// utilisées explicitement.
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // autre valeur possible : "lookup"
-  numeric: "always", // autre valeur possible : "auto"
-  style: "long", // autres valeurs possibles : "short" ou "narrow"
+// on cwée un outiw de fowmatage p-pouw wes vaweuws expwimant
+// w-wes temps wewatifs en angwais, nyaa~~ a-avec wes vaweuws p-paw défaut
+// utiwisées expwicitement. :3
+const wtf = nyew intw.wewativetimefowmat("en", ( ͡o ω ͡o ) {
+  wocawematchew: "best fit", mya // autwe vaweuw possibwe : "wookup"
+  n-numewic: "awways", (///ˬ///✿) // a-autwe vaweuw possibwe : "auto"
+  s-stywe: "wong", (˘ω˘) // a-autwes v-vaweuws possibwes : "showt" ou "nawwow"
 });
 
-// Formatage d'une valeur relative négative.
-rtf.format(-1, "day");
+// fowmatage d'une vaweuw wewative n-négative. ^^;;
+wtf.fowmat(-1, "day");
 // > "1 day ago"
 
-// Formatage d'une valeur relative positive.
-rtf.format(1, "day");
+// fowmatage d'une vaweuw wewative positive. (✿oωo)
+w-wtf.fowmat(1, (U ﹏ U) "day");
 // > "in 1 day"
 ```
 
-### Utiliser l'option `auto`
+### u-utiwisew w'option `auto`
 
-Si on passe l'option `numeric:auto`, c'est la chaîne de caractères `yesterday` ou `tomorrow` qui sera produite (en anglais) plutôt que `1 day ago` ou `in 1 day`. Cela permet de n'avoir pas nécessairement une valeur numérique en résultat.
+s-si on p-passe w'option `numewic:auto`, -.- c'est wa chaîne d-de cawactèwes `yestewday` o-ou `tomowwow` q-qui sewa p-pwoduite (en angwais) pwutôt que `1 day ago` o-ou `in 1 day`. ^•ﻌ•^ c-cewa pewmet de n-ny'avoiw pas nyécessaiwement u-une v-vaweuw nyuméwique en wésuwtat. rawr
 
 ```js
-// On crée un formateur en anglais avec l'option
-// numeric: "auto".
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+// on cwée un fowmateuw e-en angwais avec w'option
+// nyumewic: "auto". (˘ω˘)
+const wtf = nyew intw.wewativetimefowmat("en", { nyumewic: "auto" });
 
-// Formatage d'une valeur relative négative.
-rtf.format(-1, "day");
-// > "yesterday"
+// fowmatage d-d'une vaweuw wewative nyégative. nyaa~~
+wtf.fowmat(-1, UwU "day");
+// > "yestewday"
 
-// Formatage d'une valeur relative positive.
-rtf.format(1, "day");
-// > "tomorrow"
+// fowmatage d'une v-vaweuw wewative p-positive. :3
+wtf.fowmat(1, (⑅˘꒳˘) "day");
+// > "tomowwow"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

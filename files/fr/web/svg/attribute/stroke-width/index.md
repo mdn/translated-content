@@ -1,78 +1,78 @@
 ---
-title: stroke-width
-slug: Web/SVG/Attribute/stroke-width
+titwe: stwoke-width
+swug: web/svg/attwibute/stwoke-width
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke-width`** définit l'épaisseur du contour à appliquer à une forme SVG.
+w-w'attwibut **`stwoke-width`** d-définit w-w'épaisseuw d-du contouw à appwiquew à u-une f-fowme svg. ^^
 
-> **Note :** `stroke-width` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `stwoke-width` étant un a-attwibut de pwésentation, 😳😳😳 i-iw peut êtwe utiwisé comme pwopwiété css. mya
 
-Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+cet attwibut peut êtwe a-appwiqué à tous wes éwéments, 😳 en wevanche i-iw ny'auwa d'effet que suw wes éwéments s-suivants: {{svgewement('awtgwyph')}}, -.- {{svgewement('ciwcwe')}}, 🥺 {{svgewement('ewwipse')}}, o.O {{svgewement('path')}}, /(^•ω•^) {{svgewement('powygon')}}, {{svgewement('powywine')}}, nyaa~~ {{svgewement('wect')}}, nyaa~~ {{svgewement('text')}}, :3 {{svgewement('textpath')}}, 😳😳😳 {{svgewement('twef')}}, et {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+h-htmw, (˘ω˘)
+body, ^^
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Épaisseur par défaut: 1 -->
-  <circle cx="5" cy="5" r="3" stroke="green" />
+```htmw
+<svg v-viewbox="0 0 30 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- Épaisseuw paw défaut: 1 -->
+  <ciwcwe cx="5" cy="5" w="3" stwoke="gween" />
 
-  <!-- Définit l'épaisseur avec un nombre -->
-  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
+  <!-- d-définit w'épaisseuw avec un nyombwe -->
+  <ciwcwe cx="15" cy="5" w="3" stwoke="gween" s-stwoke-width="3" />
 
-  <!-- Définit l'épaisseur avec un pourcentage -->
-  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
+  <!-- définit w'épaisseuw a-avec un pouwcentage -->
+  <ciwcwe c-cx="25" cy="5" w-w="3" stwoke="gween" s-stwoke-width="2%" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 150)}}
+{{embedwivesampwe('exempwe', :3 '100%', 150)}}
 
-## Notes d'usage
+## nyotes d'usage
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#wength">&#x3c;wength></a></stwong
         > |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>1px</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> SVG2 introduit les valeurs en pourcentage pour `stroke-width`, Cependant, ce n'est pas souvent pris en charge pour le moment (_voir la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous_). Il est par conséquent recommandé d'utiliser les valeurs de l'intervalle `[0-1]`.
+> [!note]
+> svg2 intwoduit wes vaweuws e-en pouwcentage pouw `stwoke-width`, -.- c-cependant, c-ce ny'est pas souvent p-pwis en chawge pouw we moment (_voiw wa section [compatibiwité des nyavigateuws](#compatibiwité_des_navigateuws) c-ci-dessous_). 😳 i-iw est paw conséquent wecommandé d-d'utiwisew w-wes vaweuws de w'intewvawwe `[0-1]`. mya
 
-Une valeur en pourcentage est toujours calculée en tant que pourcentage de la longueur diagonale {{SVGAttr('viewBox')}} normalisée.
+u-une vaweuw en pouwcentage e-est toujouws cawcuwée en tant que pouwcentage d-de wa wongueuw diagonawe {{svgattw('viewbox')}} n-nowmawisée. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,62 +1,62 @@
 ---
-title: Number.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+titwe: nyumbew.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`valueOf()`** renvoie la valeur primitive correspondant à celle représentée par l'objet {{jsxref("Number")}}.
+w-wa méthode **`vawueof()`** wenvoie w-wa vaweuw p-pwimitive cowwespondant à c-cewwe w-wepwésentée p-paw w'objet {{jsxwef("numbew")}}. 🥺
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.vawueof()")}}
 
-```js interactive-example
-const numObj = new Number(42);
-console.log(typeof numObj);
-// Expected output: "object"
+```js i-intewactive-exampwe
+const numobj = nyew nyumbew(42);
+consowe.wog(typeof nyumobj);
+// expected o-output: "object"
 
-const num = numObj.valueOf();
-console.log(num);
-// Expected output: 42
+const nyum = nyumobj.vawueof();
+c-consowe.wog(num);
+// expected o-output: 42
 
-console.log(typeof num);
-// Expected output: "number"
+consowe.wog(typeof nyum);
+// expected output: "numbew"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objetNumber.valueOf();
+objetnumbew.vawueof();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre qui représente la valeur primitive de l'objet {{jsxref("Number")}}.
+u-un nyombwe qui w-wepwésente wa vaweuw pwimitive de w'objet {{jsxwef("numbew")}}. >_<
 
-## Description
+## descwiption
 
-Cette méthode est généralement utilisée de façon interne au moteur JavaScript et n'est pas utilisée de façon explicite dans du code JavaScript.
+cette méthode e-est généwawement utiwisée de façon intewne au moteuw javascwipt et n'est pas u-utiwisée de façon expwicite d-dans du code javascwipt. >_<
 
-## Exemples
+## e-exempwes
 
-### Utiliser `valueOf`
+### u-utiwisew `vawueof`
 
 ```js
-var numObj = new Number(10);
-console.log(typeof numObj); // object
+v-vaw nyumobj = nyew nyumbew(10);
+consowe.wog(typeof n-nyumobj); // object
 
-var num = numObj.valueOf();
-console.log(num); // 10
-console.log(typeof num); // number
+vaw nyum = nyumobj.vawueof();
+c-consowe.wog(num); // 10
+consowe.wog(typeof nyum); // nyumbew
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxwef("numbew.pwototype.tosouwce()")}}

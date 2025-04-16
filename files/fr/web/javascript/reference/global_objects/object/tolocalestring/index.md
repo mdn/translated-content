@@ -1,56 +1,56 @@
 ---
-title: Object.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+titwe: object.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.
+w-wa méthode **`towocawestwing()`** w-wenvoie une chaine d-de cawactèwes w-wepwésentant w-w'objet. (⑅˘꒳˘) cette m-méthode est destinée à êtwe s-suwchawgée paw wes objets déwivés à des fins spécifiques pouw pwendwe en c-compte wes wocawes. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{intewactiveexampwe("javascwipt demo: object.pwototype.towocawestwing()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js intewactive-exampwe
+c-const date1 = nyew d-date(date.utc(2012, rawr x3 11, 20, (U ﹏ U) 3, 0, 0));
 
-console.log(date1.toLocaleString("ar-EG"));
-// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+consowe.wog(date1.towocawestwing("aw-eg"));
+// expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
 
-const number1 = 123456.789;
+c-const nyumbew1 = 123456.789;
 
-console.log(number1.toLocaleString("de-DE"));
-// Expected output: "123.456,789"
+consowe.wog(numbew1.towocawestwing("de-de"));
+// e-expected output: "123.456,789"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-obj.toLocaleString();
+obj.towocawestwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères qui représente l'objet en tenant compte de la locale.
+une chaîne de cawactèwes q-qui wepwésente w'objet en tenant compte de wa wocawe. (U ﹏ U)
 
-## Description
+## descwiption
 
-La méthode `toLocaleString` renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.
+wa m-méthode `towocawestwing` wenvoie w-we wésuwtat de w-w'appew à wa m-méthode {{jsxwef("object.tostwing", (⑅˘꒳˘) "tostwing()")}}. òωó
 
-Cette fonction est destinée à fournir aux objets une méthode générique `toLocaleString`, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.
+c-cette fonction est destinée à fouwniw aux o-objets une méthode généwique `towocawestwing`, ʘwʘ même si tous n-nye peuvent w'utiwisew. /(^•ω•^) voiw wa wiste ci-dessous. ʘwʘ
 
-### Objets surchargeant la méthode toLocaleString
+### objets suwchawgeant wa méthode towocawestwing
 
-- {{jsxref("Array")}} : {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}} : {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}} : {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxwef("awway")}} : {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew")}} : {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date")}} : {{jsxwef("date.pwototype.towocawestwing()")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

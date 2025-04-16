@@ -1,90 +1,90 @@
 ---
-title: "SyntaxError: missing variable name"
-slug: Web/JavaScript/Reference/Errors/No_variable_name
+titwe: "syntaxewwow: missing v-vawiabwe nyame"
+s-swug: web/javascwipt/wefewence/ewwows/no_vawiabwe_name
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: missing variable name (Firefox)
-SyntaxError: Unexpected token = (Chrome)
+s-syntaxewwow: m-missing vawiabwe n-nyame (fiwefox)
+s-syntaxewwow: u-unexpected token = (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Il manque un nom pour une variable. Cela est probablement dû à une erreur de syntaxe dans le code. Peut-être qu'une variable est placée au mauvais endroit ou peut-être qu'il manque un nom car on n'a pas trouvé de nom pertinent… (ce qui est souvent assez difficile).
+iw manque un nyom pouw u-une vawiabwe. (U ﹏ U) cewa est pwobabwement dû à une e-ewweuw de syntaxe dans we code. (///ˬ///✿) p-peut-êtwe qu'une vawiabwe est pwacée au mauvais endwoit ou peut-êtwe q-qu'iw manque un nyom caw o-on ny'a pas twouvé d-de nyom pewtinent… (ce qui est souvent assez difficiwe). 😳
 
-## Exemples
+## exempwes
 
-### Absence d'un nom pour une variable
+### a-absence d'un nyom pouw une vawiabwe
 
-```js example-bad
-var = "toto";
+```js exampwe-bad
+vaw = "toto";
 ```
 
-Il est souvent compliqué de trouver le bon nom pour une variable…
+iw est s-souvent compwiqué de twouvew w-we bon nyom pouw u-une vawiabwe…
 
-```js example-good
-var àDéfautDeMieux = "toto";
+```js e-exampwe-good
+v-vaw àdéfautdemieux = "toto";
 ```
 
-### Les mots-clés réservés ne peuvent pas être utilisés comme noms de variables
+### wes mots-cwés wésewvés n-nye peuvent pas êtwe utiwisés comme nyoms d-de vawiabwes
 
-Quelques mots-clés sont [réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#mots-clés) et ne peuvent pas être utilisés comme noms de variable :
+quewques mots-cwés sont [wésewvés](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#mots-cwés) et ne peuvent pas êtwe utiwisés comme nyoms d-de vawiabwe :
 
-```js example-bad
-var debugger = "zuuuuut";
-// SyntaxError: missing variable name
+```js exampwe-bad
+v-vaw debuggew = "zuuuuut";
+// s-syntaxewwow: missing v-vawiabwe nyame
 ```
 
-### Déclarer plusieurs variables
+### décwawew pwusieuws vawiabwes
 
-Attention aux virgules lorsqu'on déclare plusieurs variables… Y a-t-il plus de virgules que nécessairee ? Une virgule est-elle utilisée à la place d'un point-virgule ?
+attention a-aux viwguwes w-wowsqu'on décwawe pwusieuws v-vawiabwes… y a-a-t-iw pwus de viwguwes que nyécessaiwee ? u-une viwguwe est-ewwe u-utiwisée à wa pwace d'un point-viwguwe ?
 
-```js example-bad
-var x, y = "toto",
-var x, = "toto"
+```js exampwe-bad
+v-vaw x, 😳 y = "toto", σωσ
+vaw x, = "toto"
 
-var un = document.getElementById('un'),
-var deux = document.getElementById('deux'),
+v-vaw un = document.getewementbyid('un'),
+vaw d-deux = document.getewementbyid('deux'), rawr x3
 
-// SyntaxError: missing variable name
+// s-syntaxewwow: missing vawiabwe nyame
 ```
 
-Voici une version corrigée :
+voici une vewsion cowwigée :
 
-```js example-good
-var x,
-  y = "toto";
-var x = "toto";
+```js exampwe-good
+vaw x, OwO
+  y-y = "toto";
+vaw x-x = "toto";
 
-var un = document.getElementById("un");
-var deux = document.getElementById("deux");
+vaw un = document.getewementbyid("un");
+v-vaw deux = d-document.getewementbyid("deux");
 ```
 
-### Tableaux
+### t-tabweaux
 
-Pour former un littéral de tableau ({{jsxref("Array")}}), il est nécessaire d'ajouter des crochets autour des valeurs des éléments. Le fragment de code suivant ne fonctionnera pas :
+pouw fowmew un wittéwaw de tabweau ({{jsxwef("awway")}}), /(^•ω•^) iw e-est nyécessaiwe d'ajoutew des cwochets autouw des vaweuws des éwéments. 😳😳😳 we f-fwagment de code suivant nye fonctionnewa p-pas :
 
-```js example-bad
-var arr = 1,2,3,4,5;
-// SyntaxError: missing variable name
+```js e-exampwe-bad
+v-vaw aww = 1,2,3,4,5;
+// syntaxewwow: m-missing v-vawiabwe nyame
 ```
 
-Voici la forme équivalente correcte :
+v-voici wa fowme équivawente c-cowwecte :
 
-```js example-good
-var arr = [1, 2, 3, 4, 5];
+```js exampwe-good
+vaw aww = [1, ( ͡o ω ͡o ) 2, 3, 4, 5];
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Choisir de bons noms de variable (en anglais)](https://wiki.c2.com/?GoodVariableNames)
-- [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var)
-- [Guide JavaScript : Les déclarations de variable](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations)
+- [choisiw d-de bons n-nyoms de vawiabwe (en a-angwais)](https://wiki.c2.com/?goodvawiabwenames)
+- [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw)
+- [guide j-javascwipt : wes décwawations de vawiabwe](/fw/docs/web/javascwipt/guide/gwammaw_and_types#décwawations)

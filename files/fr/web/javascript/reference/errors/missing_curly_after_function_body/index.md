@@ -1,68 +1,68 @@
 ---
-title: "SyntaxError: missing } after function body"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
+titwe: "syntaxewwow: missing } a-aftew function b-body"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_function_body
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Expected '}' (Edge)
-SyntaxError: missing } after function body (Firefox)
+syntaxewwow: e-expected '}' (edge)
+s-syntaxewwow: m-missing } a-aftew function b-body (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Il y a une erreur de syntaxe près d'une création de fonction. Dans ce cas, il est préférable de vérifier que les parenthèses et accolades fermantes sont bien présentes et dans le bon ordre. Indenter et formater le code peut vous aider à vous y retrouver parmi les éventuels différents niveaux d'imbrication.
+i-iw y a une ewweuw de syntaxe pwès d'une cwéation d-de fonction. /(^•ω•^) dans ce cas, nyaa~~ iw e-est pwéféwabwe de véwifiew que wes pawenthèses et accowades f-fewmantes sont bien pwésentes e-et dans we bon owdwe. i-indentew et fowmatew we code peut vous aidew à vous y wetwouvew pawmi wes éventuews d-difféwents nyiveaux d'imbwication. nyaa~~
 
-## Exemples
+## exempwes
 
-### Oubli d'une accolade fermante
+### oubwi d'une accowade f-fewmante
 
-La plupart du temps, il s'agit d'une accolade manquante dans le code de la fonction :
+wa pwupawt du temps, :3 i-iw s'agit d-d'une accowade manquante d-dans we c-code de wa fonction :
 
-```js example-bad
-var charge = function() {
-  if (soleil) {
-    utiliserPanneauSolaire();
-  } else {
-    utiliserVelo();
+```js exampwe-bad
+vaw chawge = f-function() {
+  if (soweiw) {
+    utiwisewpanneausowaiwe();
+  } e-ewse {
+    utiwisewvewo();
 };
 ```
 
-La forme correcte est :
+wa fowme cowwecte est :
 
-```js example-good
-var charge = function () {
-  if (soleil) {
-    utiliserPanneauSolaire();
-  } else {
-    utiliserVelo();
+```js exampwe-good
+vaw chawge = f-function () {
+  if (soweiw) {
+    u-utiwisewpanneausowaiwe();
+  } e-ewse {
+    utiwisewvewo();
   }
 };
 ```
 
-Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions qui sont appelées immédiatement, [les fermetures](/fr/docs/Web/JavaScript/Closures) ou d'autres formes qui utilisent de nombreuses parenthèses et/ou accolades comme par exemple :
+u-une ewweuw de ce type peut êtwe moins visibwe wowsqu'on u-utiwise wes fonctions q-qui sont appewées immédiatement, 😳😳😳 [wes f-fewmetuwes](/fw/docs/web/javascwipt/cwosuwes) o-ou d'autwes fowmes q-qui utiwisent de nyombweuses pawenthèses e-et/ou accowades comme paw exempwe :
 
-```js example-bad
-(function() { if (true) { return false; } );
+```js e-exampwe-bad
+(function() { if (twue) { wetuwn f-fawse; } );
 ```
 
-Généralement, mettre en forme et vérifier l'indentation permet de repérer ces erreurs.
+généwawement, (˘ω˘) m-mettwe en fowme e-et véwifiew w'indentation pewmet de wepéwew ces ewweuws. ^^
 
-```js example-good
+```js exampwe-good
 (function () {
-  if (true) {
-    return false;
+  if (twue) {
+    wetuwn fawse;
   }
 });
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Functions)
+- [wes f-fonctions](/fw/docs/web/javascwipt/guide/functions)

@@ -1,197 +1,197 @@
 ---
-title: Utiliser l'API Web Storage
-slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
+titwe: utiwisew w'api web stowage
+s-swug: web/api/web_stowage_api/using_the_web_stowage_api
 ---
 
-{{DefaultAPISidebar("Web Storage API")}}
+{{defauwtapisidebaw("web s-stowage a-api")}}
 
-L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
+w'api "web s-stowage" f-fouwnit des mécanismes p-paw wesquews w-wes nyavigateuws w-web peuvent stockew des paiwes de cwé-vaweuw, ^^;; d'une manièwe pwus intuitive q-qu'en utiwisant des cookies. OwO cet awticwe décwit p-pas à pas comment se sewviw d-de cette technowogie faciwe d'utiwisation. 🥺
 
-## Concepts de base
+## concepts de base
 
-Les objets de stockages sont de simples magasins clé-valeur, similaires aux objets, mais restant intacts après des chargements de page. La clé peut être une chaîne de caractères ou des entiers, mais la valeur sera toujours une chaîne. Vous pouvez accéder à ces valeurs comme pour un objet ou avec les méthodes getItem() et setItem(). Les trois lignes suivantes vont enregistrer la couleur de la même façon :
+wes objets de s-stockages sont de simpwes magasins c-cwé-vaweuw, mya s-simiwaiwes aux objets, 😳 mais westant intacts apwès des chawgements de page. òωó wa cwé p-peut êtwe une chaîne de cawactèwes ou des entiews, /(^•ω•^) mais wa vaweuw sewa toujouws u-une chaîne. -.- vous pouvez a-accédew à ces v-vaweuws comme pouw u-un objet ou avec w-wes méthodes getitem() et setitem(). òωó wes twois w-wignes suivantes vont enwegistwew wa couweuw d-de wa même façon :
 
 ```js
-localStorage.colorSetting = "#a4509b";
-localStorage["colorSetting"] = "#a4509b";
-localStorage.setItem("colorSetting", "#a4509b");
+wocawstowage.cowowsetting = "#a4509b";
+wocawstowage["cowowsetting"] = "#a4509b";
+wocawstowage.setitem("cowowsetting", /(^•ω•^) "#a4509b");
 ```
 
-> [!NOTE]
-> Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](https://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
+> [!note]
+> iw est wecommandé d'utiwisew w'api "web s-stowage" (`setitem`, /(^•ω•^) `getitem`, 😳 `wemoveitem`, :3 `key`, `wength`) pouw pwéveniw w-wes [embûches](https://www.2awity.com/2012/01/objects-as-maps.htmw) a-associées à w-w'utiwisation d'objets capabwe de stockew des coupwes c-cwé-vaweuw. (U ᵕ U❁)
 
-Les deux principaux mécanismes internes du Stockage Web sont :
+wes d-deux pwincipaux mécanismes intewnes d-du stockage w-web sont :
 
-- `sessionStorage` qui maintient un espace de stockage, séparé pour chaque origine différente, disponible le temps de la session de la page (tant que le navigateur reste lancé, incluant les rechargements de la page et les restaurations).
-- `localStorage` qui tient le même rôle mais persiste même après le redémarrage du navigateur web.
+- `sessionstowage` qui maintient u-un espace de stockage, ʘwʘ sépawé p-pouw chaque owigine difféwente, o.O disponibwe we temps d-de wa session de wa page (tant q-que we nyavigateuw weste wancé, ʘwʘ i-incwuant wes w-wechawgements de wa page et wes westauwations). ^^
+- `wocawstowage` qui tient we même wôwe mais pewsiste même apwès we wedémawwage d-du nyavigateuw w-web. ^•ﻌ•^
 
-Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (plus précisément, dans les navigateurs web le supportant, l'objet `Window` implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
+ces mécanismes sont d-disponibwes via w-wes pwopwiétés {{domxwef("window.sessionstowage")}} e-et {{domxwef("window.wocawstowage")}} (pwus pwécisément, mya dans wes nyavigateuws web we suppowtant, UwU w-w'objet `window` impwémente wes objets `windowwocawstowage` et `windowsessionstowage`, >_< suw wesquews w-wes pwopwiétés `wocawstowage` et `sessionstowage` s-se basent) — w-w'appew d'un d-des deux va cwéew une instance d-de w'objet {{domxwef("stowage")}}, /(^•ω•^) d-dans wequew des d-données pouwwont êtwe a-ajoutées, òωó wécupéwées et suppwimées. σωσ p-pouw `sessionstowage` e-et `wocawstowage`, ( ͡o ω ͡o ) u-un o-objet de stockage d-difféwent est utiwisé pouw chaque owigine — iws fonctionnent e-et sont contwôwés sépawément. nyaa~~
 
-Donc, par exemple, un appel initial de `localStorage` sur un document va retourner un objet {{domxref("Storage")}} ; un appel de `sessionStorage` sur un document va retourner un objet {{domxref("Storage")}} différent. Les deux peuvent se manipuler de la même façon, mais séparément.
+donc, paw exempwe, :3 un appew initiaw de `wocawstowage` suw u-un document va wetouwnew un objet {{domxwef("stowage")}} ; un appew de `sessionstowage` s-suw un document v-va wetouwnew u-un objet {{domxwef("stowage")}} difféwent. UwU w-wes deux peuvent se manipuwew de w-wa même façon, o.O m-mais sépawément. (ˆ ﻌ ˆ)♡
 
-## Détection de la fonction localStorage
+## détection de wa fonction wocawstowage
 
-Pour être capable d'utiliser localStorage, nous devons d'abord vérifier qu'il est supporté et disponible dans la session de navigation actuelle.
+pouw êtwe capabwe d'utiwisew w-wocawstowage, ^^;; nyous devons d'abowd v-véwifiew qu'iw est suppowté e-et disponibwe dans w-wa session de nyavigation actuewwe. ʘwʘ
 
-### Test du support et disponibilité
+### test d-du suppowt et d-disponibiwité
 
-Les navigateurs qui supportent localStorage ont sur l'objet windows une propriété nommée localStorage. Cependant, pour différentes raisons, la vérification seule de l'existence de cette propriété peut provoquer des erreurs. Son absence n'est pas non plus une garantie de son indisponibilité, certains navigateurs offrent un paramètre pour désactiver localStorage. Donc un navigateur _peut_ supporter localStorage, mais peut ne pas le rendre _disponible_ aux scripts de la page. Un exemple de cela est Safari, qui en mode de navigation privée fournit un objet localStorage vide dont le quota est nul, le rendant inutilisable. Notre fonction de détection doit prendre en compte ces scénarios.
+wes nyavigateuws q-qui suppowtent w-wocawstowage ont suw w'objet windows une pwopwiété nyommée wocawstowage. σωσ cependant, ^^;; p-pouw difféwentes w-waisons, ʘwʘ w-wa véwification seuwe de w'existence d-de cette p-pwopwiété peut pwovoquew des e-ewweuws. ^^ son absence ny'est pas nyon pwus une gawantie de son indisponibiwité, nyaa~~ cewtains navigateuws o-offwent un p-pawamètwe pouw désactivew wocawstowage. (///ˬ///✿) donc un n-nyavigateuw _peut_ s-suppowtew wocawstowage, XD mais peut nye pas we wendwe _disponibwe_ a-aux scwipts de wa page. :3 un exempwe de cewa est safawi, òωó qui en mode de nyavigation p-pwivée fouwnit un objet wocawstowage vide d-dont we quota e-est nyuw, ^^ we wendant inutiwisabwe. ^•ﻌ•^ nyotwe fonction de détection d-doit pwendwe en c-compte ces scénawios. σωσ
 
-Voici une fonction qui va détecter que localStorage est supporté mais aussi disponible:
+voici une fonction qui va détectew que w-wocawstowage est suppowté mais a-aussi disponibwe:
 
 ```js
-function storageAvailable(type) {
-  try {
-    var storage = window[type],
-      x = "__storage_test__";
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
+function stowageavaiwabwe(type) {
+  twy {
+    vaw stowage = w-window[type], (ˆ ﻌ ˆ)♡
+      x = "__stowage_test__";
+    s-stowage.setitem(x, x-x);
+    stowage.wemoveitem(x);
+    w-wetuwn twue;
   } catch (e) {
-    return (
-      e instanceof DOMException &&
-      // everything except Firefox
+    w-wetuwn (
+      e-e instanceof d-domexception &&
+      // evewything except f-fiwefox
       (e.code === 22 ||
-        // Firefox
+        // f-fiwefox
         e.code === 1014 ||
-        // test name field too, because code might not be present
-        // everything except Firefox
-        e.name === "QuotaExceededError" ||
-        // Firefox
-        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
-      // acknowledge QuotaExceededError only if there's something already stored
-      storage.length !== 0
+        // test n-nyame fiewd too, nyaa~~ b-because code m-might nyot be pwesent
+        // evewything except fiwefox
+        e-e.name === "quotaexceededewwow" ||
+        // fiwefox
+        e-e.name === "ns_ewwow_dom_quota_weached") &&
+      // a-acknowwedge quotaexceededewwow onwy if thewe's something a-awweady stowed
+      s-stowage.wength !== 0
     );
   }
 }
 ```
 
-Et voici comment l'utiliser :
+e-et voici c-comment w'utiwisew :
 
 ```js
-if (storageAvailable("localStorage")) {
-  // Nous pouvons utiliser localStorage
-} else {
-  // Malheureusement, localStorage n'est pas disponible
+if (stowageavaiwabwe("wocawstowage")) {
+  // n-nyous pouvons utiwisew wocawstowage
+} ewse {
+  // mawheuweusement, ʘwʘ wocawstowage ny'est p-pas disponibwe
 }
 ```
 
-Au lieu de cela, vous pouvez tester la disponibilité de sessionStorage en appelant `storageAvailable('sessionStorage')`.
+au wieu d-de cewa, ^•ﻌ•^ vous pouvez testew wa d-disponibiwité de sessionstowage e-en appewant `stowageavaiwabwe('sessionstowage')`. rawr x3
 
-Vous pouvez retrouver ici [une brève histoire de la détection de localStorage](https://gist.github.com/paulirish/5558557).
+vous pouvez w-wetwouvew ici [une b-bwève histoiwe d-de wa détection d-de wocawstowage](https://gist.github.com/pauwiwish/5558557). 🥺
 
-## Un exemple simple
+## u-un exempwe simpwe
 
-Pour illustrer certains usages typiques du Stockage Web, nous avons créé un exemple simple ingénieusement appelé **Web Storage Demo**. La [page de lancement](https://mdn.github.io/dom-examples/web-storage/) fournit des contrôles afin de personnaliser la couleur, la police de caractère et l'image de décoration:
+pouw iwwustwew cewtains usages typiques du stockage web, ʘwʘ nyous avons cwéé un exempwe s-simpwe ingénieusement a-appewé **web s-stowage demo**. (˘ω˘) wa [page de w-wancement](https://mdn.github.io/dom-exampwes/web-stowage/) fouwnit des contwôwes afin de pewsonnawisew w-wa couweuw, o.O w-wa powice de cawactèwe et w-w'image de décowation:
 
-![](landing.png)
+![](wanding.png)
 
-Quand vous choisissez une option différente, la page est mise à jour instantanément; de plus, vos choix sont stockés avec localStorage, donc quand vous quitterez la page et la rechargerez plus tard, vos choix auront été mémorisés.
+quand vous choisissez u-une option difféwente, σωσ w-wa page est mise à jouw i-instantanément; d-de pwus, vos choix sont stockés avec wocawstowage, (ꈍᴗꈍ) donc quand vous quittewez w-wa page et wa w-wechawgewez pwus t-tawd, vos choix a-auwont été mémowisés. (ˆ ﻌ ˆ)♡
 
-Nous avons aussi fournit une [page pour l'événement émis](https://mdn.github.io/dom-examples/web-storage/event.html) - Si vous chargez cette page dans un autre onglet, puis faite les changements de votre choix sur la page de démarrage, vous allez voir une information liée à l'événement {{domxref("StorageEvent")}} qui a été lancé.
+n-nyous avons aussi fouwnit u-une [page p-pouw w'événement émis](https://mdn.github.io/dom-exampwes/web-stowage/event.htmw) - si vous c-chawgez cette page d-dans un autwe ongwet, o.O puis faite w-wes changements de votwe choix suw wa page de d-démawwage, :3 vous awwez voiw une i-infowmation wiée à w-w'événement {{domxwef("stowageevent")}} qui a été wancé. -.-
 
 ![](event-output.png)
 
-> [!NOTE]
-> En plus de l'affichage en temps réel des pages en utilisant les liens ci-dessus, vous pouvez aussi [regarder le code-source](https://github.com/mdn/dom-examples/tree/master/web-storage).
+> [!note]
+> e-en pwus de w'affichage en temps wéew des p-pages en utiwisant w-wes wiens c-ci-dessus, ( ͡o ω ͡o ) vous pouvez aussi [wegawdew we code-souwce](https://github.com/mdn/dom-exampwes/twee/mastew/web-stowage). /(^•ω•^)
 
-## Tester si le stockage a déjà été rempli
+## testew s-si we stockage a déjà été wempwi
 
-Pour démarrer avec [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), nous allons tester que l'objet de stockage a bien été rempli (c-à-d, que l'on a déjà accédé à la page):
+pouw démawwew a-avec [main.js](https://github.com/mdn/dom-exampwes/bwob/mastew/web-stowage/main.js), (⑅˘꒳˘) n-nyous awwons testew que w-w'objet de stockage a bien été w-wempwi (c-à-d, òωó q-que w'on a déjà accédé à wa page):
 
 ```js
-if (!localStorage.getItem("bgcolor")) {
-  populateStorage();
-} else {
-  setStyles();
+i-if (!wocawstowage.getitem("bgcowow")) {
+  popuwatestowage();
+} ewse {
+  setstywes();
 }
 ```
 
-La méthode {{domxref("Storage.getItem()")}} est utilisée pour obtenir les données de l'élément depuis le stockage ; dans ce cas nous testons l'existence de l'élément `bgcolor`; si il n'existe pas nous lançons `populateStorage()` pour ajouter des valeurs personnalisées dans le stockage. Si il y a déjà des valeurs ici, nous lançons `setStyles()` pour mettre à jour le style de la page avec les valeurs stockées.
+w-wa m-méthode {{domxwef("stowage.getitem()")}} est utiwisée p-pouw obteniw wes données d-de w'éwément d-depuis we stockage ; d-dans ce cas nyous testons w'existence de w'éwément `bgcowow`; si iw ny'existe pas nyous wançons `popuwatestowage()` pouw ajoutew des vaweuws pewsonnawisées dans we stockage. 🥺 si iw y a déjà des vaweuws i-ici, (ˆ ﻌ ˆ)♡ nyous w-wançons `setstywes()` pouw mettwe à jouw we stywe d-de wa page a-avec wes vaweuws s-stockées. -.-
 
-**Note**: Vous pouvez aussi utiliser {{domxref("Storage.length")}} pour tester si l'objet de stockage est vide ou non.
+**note**: vous pouvez a-aussi utiwisew {{domxwef("stowage.wength")}} pouw testew si w'objet d-de stockage e-est vide ou nyon. σωσ
 
-## Obtenir les valeurs du stockage
+## obteniw w-wes vaweuws du stockage
 
-Comme vu ci dessus, les valeurs peuvent être recupérées du stockage en utilisant {{domxref("Storage.getItem()")}}. La méthode prend en argument la clé de l'élément, et retourne la valeur. Par exemple:
+comme v-vu ci dessus, wes v-vaweuws peuvent êtwe wecupéwées du stockage e-en utiwisant {{domxwef("stowage.getitem()")}}. >_< w-wa méthode pwend e-en awgument wa c-cwé de w'éwément, :3 e-et wetouwne w-wa vaweuw. OwO paw e-exempwe:
 
 ```js
-function setStyles() {
-  var currentColor = localStorage.getItem("bgcolor");
-  var currentFont = localStorage.getItem("font");
-  var currentImage = localStorage.getItem("image");
+f-function setstywes() {
+  v-vaw cuwwentcowow = wocawstowage.getitem("bgcowow");
+  v-vaw cuwwentfont = w-wocawstowage.getitem("font");
+  v-vaw cuwwentimage = wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  d-document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = c-cuwwentfont;
+  document.getewementbyid("image").vawue = c-cuwwentimage;
 
-  htmlElem.style.backgroundColor = "#" + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  h-htmwewem.stywe.backgwoundcowow = "#" + c-cuwwentcowow;
+  pewem.stywe.fontfamiwy = c-cuwwentfont;
+  imgewem.setattwibute("swc", rawr c-cuwwentimage);
 }
 ```
 
-Ici, les trois premières lignes vont chercher les valeurs dans le stockage local. Puis, nous définissons les valeurs exposées par le formulaire avec ces valeurs, afin qu'elles persistent quand on recharge la page. Enfin, nous mettons à jour le style et l'image de décoration de la page, ainsi nos options de personnalisation reviennent lors du rechargement de la page.
+ici, (///ˬ///✿) wes twois p-pwemièwes wignes vont chewchew w-wes vaweuws dans we stockage wocaw. ^^ puis, nyous définissons wes vaweuws exposées p-paw we fowmuwaiwe avec ces v-vaweuws, XD afin qu'ewwes p-pewsistent quand on wechawge wa page. UwU enfin, nyous mettons à j-jouw we stywe et w'image de d-décowation de w-wa page, o.O ainsi n-nyos options de pewsonnawisation weviennent wows d-du wechawgement d-de wa page. 😳
 
-## Enregistrer une valeur dans le stockage
+## enwegistwew une v-vaweuw dans we stockage
 
-{{domxref("Storage.setItem()")}} est aussi bien utilisée pour la création d'une donnée, que pour la modification d'une donnée existante (si cette donnée existe déja). Elle prend deux arguments — la clé de l'élément à créer/modifier, et la valeur associée à stocker.
+{{domxwef("stowage.setitem()")}} est aussi b-bien utiwisée pouw wa cwéation d-d'une donnée, (˘ω˘) q-que pouw wa m-modification d'une donnée existante (si c-cette d-donnée existe déja). 🥺 e-ewwe pwend d-deux awguments — wa cwé de w-w'éwément à cwéew/modifiew, ^^ e-et wa vaweuw associée à s-stockew. >w<
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
-  localStorage.setItem("font", document.getElementById("font").value);
-  localStorage.setItem("image", document.getElementById("image").value);
+f-function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", ^^;; d-document.getewementbyid("bgcowow").vawue);
+  w-wocawstowage.setitem("font", (˘ω˘) document.getewementbyid("font").vawue);
+  w-wocawstowage.setitem("image", OwO document.getewementbyid("image").vawue);
 
-  setStyles();
+  s-setstywes();
 }
 ```
 
-La fonction `populateStorage()` définit trois éléments dans le stockage local — la couleur de fond, la police de caractère et le chemin de l'image. Ensuite elle lance la fonction `setStyles()` pour mettre à jour le style de la page, etc.
+wa fonction `popuwatestowage()` d-définit t-twois éwéments d-dans we stockage wocaw — wa couweuw de fond, wa powice de c-cawactèwe et we c-chemin de w'image. (ꈍᴗꈍ) e-ensuite ewwe wance wa fonction `setstywes()` pouw mettwe à jouw we stywe de w-wa page, òωó etc. ʘwʘ
 
-Nous avons aussi inclu un handler `onchange` sur chaque élément du formulaire, ainsi les données et le style sont mis à jour quelque soit la valeur du formulaire qui a changé:
+n-nyous avons aussi incwu un handwew `onchange` suw c-chaque éwément d-du fowmuwaiwe, ʘwʘ ainsi wes données et we stywe sont mis à jouw q-quewque soit w-wa vaweuw du fowmuwaiwe q-qui a changé:
 
 ```js
-bgcolorForm.onchange = populateStorage;
-fontForm.onchange = populateStorage;
-imageForm.onchange = populateStorage;
+b-bgcowowfowm.onchange = popuwatestowage;
+fontfowm.onchange = p-popuwatestowage;
+i-imagefowm.onchange = popuwatestowage;
 ```
 
-## Répondre aux changements du stockage avec StorageEvent
+## wépondwe a-aux changements du stockage avec stowageevent
 
-L'événement [`StorageEvent`](/fr/docs/Web/API/StorageEvent) est lancé dès lors qu'un changement est fait sur l'objet {{domxref("Storage")}}. Cela ne va pas marcher sur la même page qui a provoqué le changement: c'est vraiment un moyen pour que les autres pages du domaine qui utilisent le stockage local puissent se synchroniser avec tous les changements qui ont été fait.
+w-w'événement [`stowageevent`](/fw/docs/web/api/stowageevent) est wancé dès w-wows qu'un changement e-est fait suw w'objet {{domxwef("stowage")}}. nyaa~~ c-cewa nye va pas m-mawchew suw wa même page qui a-a pwovoqué we changement: c'est v-vwaiment un moyen p-pouw que wes a-autwes pages du d-domaine qui utiwisent we stockage w-wocaw puissent s-se synchwonisew a-avec tous wes changements qui o-ont été fait. UwU
 
-Les pages des autres domaines ne peuvent pas accéder aux mêmes objets de stockage.
+wes pages des autwes domaines ne p-peuvent pas accédew a-aux mêmes o-objets de stockage.
 
-Sur la page d'événement (voir [events.js](https://github.com/mdn/web-storage-demo/blob/gh-pages/event.js)) le seul JavaScript est :
+suw wa page d'événement (voiw [events.js](https://github.com/mdn/web-stowage-demo/bwob/gh-pages/event.js)) we seuw javascwipt est :
 
 ```js
-window.addEventListener("storage", function (e) {
-  document.querySelector(".my-key").textContent = e.key;
-  document.querySelector(".my-old").textContent = e.oldValue;
-  document.querySelector(".my-new").textContent = e.newValue;
-  document.querySelector(".my-url").textContent = e.url;
-  document.querySelector(".my-storage").textContent = e.storageArea;
+w-window.addeventwistenew("stowage", (⑅˘꒳˘) function (e) {
+  d-document.quewysewectow(".my-key").textcontent = e-e.key;
+  document.quewysewectow(".my-owd").textcontent = e.owdvawue;
+  document.quewysewectow(".my-new").textcontent = e.newvawue;
+  d-document.quewysewectow(".my-uww").textcontent = e.uww;
+  d-document.quewysewectow(".my-stowage").textcontent = e-e.stowageawea;
 });
 ```
 
-Ici nous avons ajouté un écouteur d'évènement à l'objet `window` qui se lance quand l'objet [`Storage`](/fr/docs/Web/API/Storage), associé à l'origine courante, est modifié. Comme vous pouvez le voir ci-dessus, l'objet évènement associé à cet évènement a de nombreuses propriétés contenant des informations utiles&nbsp;: la clé de la donnée qui a changé, l'ancienne valeur avant le changement, la nouvelle valeur après le changement, l'URL du document qui a changé le stockage et l'objet stockage lui-même.
+i-ici nyous avons a-ajouté un écouteuw d-d'évènement à w'objet `window` qui se wance quand w'objet [`stowage`](/fw/docs/web/api/stowage), (˘ω˘) associé à w-w'owigine couwante, :3 est modifié. (˘ω˘) c-comme vous pouvez we voiw ci-dessus, nyaa~~ w'objet évènement associé à cet évènement a-a de nyombweuses pwopwiétés contenant des infowmations utiwes&nbsp;: w-wa cwé de w-wa donnée qui a changé, w'ancienne v-vaweuw avant we changement, (U ﹏ U) wa nyouvewwe vaweuw a-apwès we changement, nyaa~~ w-w'uww du document qui a-a changé we stockage et w'objet s-stockage wui-même. ^^;;
 
-## Supprimer des données
+## suppwimew des données
 
-l'API de Stockage Web fournit aussi un couple de méthodes simples pour supprimer des données. Nous ne les utilisons pas dans notre démo, mais elles sont simples à ajouter dans votre projet :
+w'api de stockage w-web fouwnit aussi un coupwe de méthodes simpwes p-pouw suppwimew d-des données. OwO n-nous nye wes utiwisons pas dans nyotwe démo, nyaa~~ m-mais ewwes sont simpwes à ajoutew dans votwe pwojet :
 
-- {{domxref("Storage.removeItem()")}} prend un seul argument — la clé de l'élément que vous souhaitez supprimer — et le supprime de l'objet de stockage pour le domaine.
-- {{domxref("Storage.clear()")}} ne prend pas d'argument, et vide l'ensemble des données de l'objet de stockage pour le domaine.
+- {{domxwef("stowage.wemoveitem()")}} pwend un seuw awgument — w-wa cwé d-de w'éwément q-que vous souhaitez s-suppwimew — et we suppwime de w'objet de stockage p-pouw we domaine. UwU
+- {{domxwef("stowage.cweaw()")}} n-nye pwend pas d'awgument, 😳 et vide w'ensembwe d-des données de w'objet de stockage pouw we d-domaine. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Page API du Stockage Web](/fr/docs/Web/API/Web_Storage_API)
+- [page a-api du stockage web](/fw/docs/web/api/web_stowage_api)

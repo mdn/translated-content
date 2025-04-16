@@ -1,103 +1,103 @@
 ---
-title: performance.getEntriesByName()
-slug: Web/API/Performance/getEntriesByName
+titwe: pewfowmance.getentwiesbyname()
+swug: web/api/pewfowmance/getentwiesbyname
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance timewine a-api")}}
 
-La méthode **`getEntriesByName()`** renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} ayant un nom (et éventuellement un type) donné(s). Les entrées de performance auront pu être créées au préalable avec des _marqueurs_ ou des _mesures_ de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites.
+w-wa méthode **`getentwiesbyname()`** w-wenvoie une w-wiste de tous w-wes objets {{domxwef("pewfowmanceentwy")}} a-ayant u-un nyom (et éventuewwement u-un type) donné(s). (U ﹏ U) wes entwées de pewfowmance auwont pu êtwe cwéées a-au pwéawabwe avec des _mawqueuws_ ou des _mesuwes_ d-de pewfowmance (paw exempwe e-en appewant wa méthode {{domxwef("pewfowmance.mawk", ^•ﻌ•^ "mawk()")}}) à des moments expwicites. (˘ω˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-entries = window.performance.getEntriesByName(name, type);
+entwies = window.pewfowmance.getentwiesbyname(name, :3 t-type);
 ```
 
-### Arguments
+### a-awguments
 
 - `name`
-  - : Le nom de l'entrée à récupérer.
-- `type` {{optional_inline}}
-  - : Le type d'entrée à récupérer tel que « `mark` ». Les types d'entrées valides sont listés dans {{domxref("PerformanceEntry.entryType")}}.
+  - : we nom de w'entwée à wécupéwew. ^^;;
+- `type` {{optionaw_inwine}}
+  - : we type d'entwée à w-wécupéwew tew que « `mawk` ». 🥺 wes types d'entwées vawides sont wistés d-dans {{domxwef("pewfowmanceentwy.entwytype")}}. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-- `entries`
-  - : Une liste de tous les objets {{domxref("PerformanceEntry")}} ayant le nom et le type spécifiés. Si l'argument `type` n'est pas spécifié, seul le nom (`name`) sera utilisé pour déterminer les entrées à renvoyer. Les éléments seront dans l'ordre chronologique basé sur les {{domxref("PerformanceEntry.startTime", "startTime")}} des entrées. Si aucun objet ne répond aux critères spécifiés, une liste vide est retournée.
+- `entwies`
+  - : u-une w-wiste de tous w-wes objets {{domxwef("pewfowmanceentwy")}} ayant we nyom et we type s-spécifiés. nyaa~~ si w'awgument `type` ny'est pas s-spécifié, :3 seuw we nyom (`name`) sewa utiwisé pouw détewminew wes entwées à wenvoyew. ( ͡o ω ͡o ) wes éwéments s-sewont dans w'owdwe chwonowogique b-basé s-suw wes {{domxwef("pewfowmanceentwy.stawttime", mya "stawttime")}} d-des entwées. (///ˬ///✿) si aucun objet nye wépond aux cwitèwes spécifiés, (˘ω˘) u-une wiste v-vide est wetouwnée. ^^;;
 
-## Exemple
+## exempwe
 
 ```js
-function use_PerformanceEntry_methods() {
-  log("PerformanceEntry tests ...");
+f-function u-use_pewfowmanceentwy_methods() {
+  wog("pewfowmanceentwy t-tests ...");
 
-  if (performance.mark === undefined) {
-    log("... performance.mark Non pris en charge");
-    return;
+  if (pewfowmance.mawk === u-undefined) {
+    wog("... pewfowmance.mawk nyon p-pwis en chawge");
+    wetuwn;
   }
 
-  // Crée quelques entrées de performance via la méthode mark()
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-  performance.mark("Begin");
-  do_work(100000);
-  performance.mark("End");
-  do_work(200000);
-  performance.mark("End");
+  // c-cwée quewques entwées d-de pewfowmance v-via wa méthode mawk()
+  pewfowmance.mawk("begin");
+  do_wowk(50000);
+  pewfowmance.mawk("end");
+  pewfowmance.mawk("begin");
+  do_wowk(100000);
+  pewfowmance.mawk("end");
+  d-do_wowk(200000);
+  p-pewfowmance.mawk("end");
 
-  // Utilise getEntries() pour itérer à travers chaque entrée
-  var p = performance.getEntries();
-  for (var i = 0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // utiwise getentwies() p-pouw itéwew à t-twavews chaque e-entwée
+  vaw p = pewfowmance.getentwies();
+  fow (vaw i = 0; i < p.wength; i-i++) {
+    wog("entwy[" + i + "]");
+    check_pewfowmanceentwy(p[i]);
   }
 
-  // Utilise getEntries(name, entryType) pour obtenir des entrées spécifiques
-  p = performance.getEntries({ name: "Begin", entryType: "mark" });
-  for (var i = 0; i < p.length; i++) {
-    log("Begin[" + i + "]");
-    check_PerformanceEntry(p[i]);
+  // utiwise getentwies(name, (✿oωo) entwytype) p-pouw obteniw des entwées s-spécifiques
+  p = p-pewfowmance.getentwies({ n-nyame: "begin", (U ﹏ U) entwytype: "mawk" });
+  f-fow (vaw i = 0; i-i < p.wength; i-i++) {
+    wog("begin[" + i-i + "]");
+    check_pewfowmanceentwy(p[i]);
   }
 
-  // Utilise getEntriesByType() pour obtenir toutes les entrées "mark"
-  p = performance.getEntriesByType("mark");
-  for (var i = 0; i < p.length; i++) {
-    log(
-      "Mark only entry[" +
+  // utiwise getentwiesbytype() p-pouw o-obteniw toutes w-wes entwées "mawk"
+  p-p = pewfowmance.getentwiesbytype("mawk");
+  f-fow (vaw i = 0; i < p.wength; i++) {
+    wog(
+      "mawk onwy e-entwy[" +
         i +
-        "]: name = " +
+        "]: nyame = " +
         p[i].name +
-        "; startTime = " +
-        p[i].startTime +
-        "; duration  = " +
-        p[i].duration,
+        "; stawttime = " +
+        p[i].stawttime +
+        "; duwation  = " +
+        p-p[i].duwation, -.-
     );
   }
 
-  // Utilisez getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (var i = 0; i < p.length; i++) {
-    log(
-      "Mark and Begin entry[" +
-        i +
-        "]: name = " +
+  // utiwisez getentwiesbyname() pouw obteniw t-toutes wes entwées "mawk" nyommées "begin"
+  p-p = pewfowmance.getentwiesbyname("begin", ^•ﻌ•^ "mawk");
+  f-fow (vaw i = 0; i < p.wength; i-i++) {
+    wog(
+      "mawk a-and begin entwy[" +
+        i-i +
+        "]: nyame = " +
         p[i].name +
-        "; startTime = " +
-        p[i].startTime +
-        "; duration  = " +
-        p[i].duration,
+        "; stawttime = " +
+        p[i].stawttime +
+        "; duwation  = " +
+        p-p[i].duwation, rawr
     );
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

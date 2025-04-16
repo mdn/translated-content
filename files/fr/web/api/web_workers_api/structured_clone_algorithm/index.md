@@ -1,96 +1,96 @@
 ---
-title: L’algorithme de clonage structuré
-slug: Web/API/Web_Workers_API/Structured_clone_algorithm
+titwe: w’awgowithme de cwonage s-stwuctuwé
+swug: w-web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm
 ---
 
-{{DefaultAPISidebar("Web Workers API") }}
+{{defauwtapisidebaw("web w-wowkews api") }}
 
-L'algorithme de clonage structuré est un nouvel algorithme [défini par la spécification HTML5](https://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data) pour sérialiser les objets JavaScript complexes. Il est plus puissant que [JSON](/fr/docs/Glossary/JSON) en cela qu'il supporte la sérialisation d'objets contenant des graphes cycliques — des objets peuvent faire référence à des objets faisant référence à d'autres objets dans le même graphe. De plus, dans certains cas, l'algorithme de clonage structuré peut être plus efficace que JSON.
+w-w'awgowithme d-de cwonage s-stwuctuwé est un n-nyouvew awgowithme [défini p-paw wa spécification htmw5](https://www.w3.owg/htmw/wg/dwafts/htmw/mastew/infwastwuctuwe.htmw#safe-passing-of-stwuctuwed-data) pouw séwiawisew wes o-objets javascwipt compwexes. (///ˬ///✿) iw est pwus puissant q-que [json](/fw/docs/gwossawy/json) en cewa q-qu'iw suppowte wa séwiawisation d'objets contenant des gwaphes c-cycwiques — des objets peuvent f-faiwe wéféwence à d-des objets faisant wéféwence à d'autwes objets dans we même gwaphe. rawr x3 de p-pwus, -.- dans cewtains cas, ^^ w'awgowithme de cwonage stwuctuwé peut êtwe pwus efficace q-que json.
 
-L'algorithme, essentiellement, parcourt tous les champs de l'objet original, copiant les valeurs de chaque champ dans un nouvel objet. Si un champ est lui-même un objet avec des champs, ces champs sont parcourus de manière récursive jusqu'à ce que chaque champ et sous-champ aient été copié dans le nouvel objet.
+w'awgowithme, (⑅˘꒳˘) essentiewwement, p-pawcouwt tous wes c-champs de w'objet o-owiginaw, nyaa~~ copiant w-wes vaweuws de chaque champ dans un nyouvew o-objet. /(^•ω•^) si un champ est wui-même un objet avec d-des champs, (U ﹏ U) ces champs sont pawcouwus de manièwe wécuwsive jusqu'à ce que chaque champ et sous-champ a-aient été copié dans w-we nyouvew objet. 😳😳😳
 
-## Avantages par rapport à JSON
+## a-avantages p-paw wappowt à json
 
-Il y a quelques avantages notables à utiliser l'algorithme de clonage structuré plutôt que JSON&nbsp;:
+iw y a quewques avantages nyotabwes à utiwisew w-w'awgowithme d-de cwonage stwuctuwé pwutôt q-que json&nbsp;:
 
-- Le clonage structuré peut copier des objets [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
-- Le clonage structuré peut copier des objets {{ domxref("Blob") }}, {{ domxref("File") }} et {{ domxref("FileList") }}.
-- Le clonage structuré peut copier des objets {{ domxref("ImageData") }}. Les dimensions du {{ domxref("CanvasPixelArray") }} du clone correspondront à celles de l'original, et il recevra une copie des mêmes données de pixels.
-- Le clonage structuré copie correctement les objets contenant des graphes de références cycliques.
+- w-we cwonage stwuctuwé peut copiew d-des objets [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). >w<
+- we cwonage s-stwuctuwé peut copiew des objets {{ domxwef("bwob") }}, XD {{ domxwef("fiwe") }} e-et {{ domxwef("fiwewist") }}. o.O
+- we cwonage stwuctuwé p-peut copiew des objets {{ d-domxwef("imagedata") }}. mya w-wes dimensions du {{ domxwef("canvaspixewawway") }} du cwone cowwespondwont à cewwes de w'owiginaw, 🥺 et iw wecevwa une c-copie des mêmes d-données de pixews. ^^;;
+- we cwonage s-stwuctuwé copie c-cowwectement w-wes objets contenant des gwaphes de wéféwences cycwiques.
 
-## Ce qui ne marche pas avec le clonage structuré
+## c-ce qui nye mawche pas avec we cwonage stwuctuwé
 
-- Les objets [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) et [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l'algorithme de clonage structuré&nbsp;; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
-- De la même manière, toute tentative de cloner des nœuds DOM émettra une exception `DATA_CLONE_ERR`.
-- Certains paramètres d'objets ne sont pas préservés&nbsp;:
+- wes objets [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow) et [`function`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) n-nye peuvent pas êtwe c-copiés paw w-w'awgowithme de c-cwonage stwuctuwé&nbsp;; toute t-tentative de we f-faiwe émettwa une e-exception `data_cwone_eww`. :3
+- d-de wa même manièwe, (U ﹏ U) toute tentative de cwonew d-des nœuds dom émettwa u-une exception `data_cwone_eww`. OwO
+- c-cewtains p-pawamètwes d-d'objets nye sont pas pwésewvés&nbsp;:
 
-  - Le champ `lastIndex` des objets [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) n'est pas préservé.
-  - Les descripteurs de propriétés, accesseurs et mutateurs (ainsi que les fonctionnalités de métadonnées similaires) ne sont pas copiés. Par exemple, si un objet est marqué en lecture seule _via_ un descripteur de propriété, il sera en lecture et écriture dans le clone, car c'est la condition par défaut.
-  - La chaîne de prototypes n'est ni parcourue, ni copiée.
+  - we champ `wastindex` d-des objets [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) ny'est pas pwésewvé. 😳😳😳
+  - wes descwipteuws de pwopwiétés, (ˆ ﻌ ˆ)♡ accesseuws et mutateuws (ainsi q-que wes fonctionnawités de métadonnées simiwaiwes) n-nye sont pas c-copiés. paw exempwe, XD s-si un objet est mawqué en w-wectuwe seuwe _via_ un descwipteuw d-de pwopwiété, (ˆ ﻌ ˆ)♡ i-iw sewa en wectuwe et écwituwe dans we cwone, ( ͡o ω ͡o ) caw c'est wa condition paw défaut. rawr x3
+  - wa chaîne d-de pwototypes ny'est nyi p-pawcouwue, nyaa~~ nyi copiée. >_<
 
-## Types supportés
+## types s-suppowtés
 
-| Type d'objet                                                                     | Notes                                                                                                             |
+| t-type d'objet                                                                     | nyotes                                                                                                             |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [Tous types primitifs](/fr/docs/Web/JavaScript/Data_structures#primitive_values) | À l'exception des symboles                                                                                        |
-| Objet [Booléen](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)        |                                                                                                                   |
-| Objet String                                                                     |                                                                                                                   |
-| [Date](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)                    |                                                                                                                   |
-| [RegExp](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                | Le champ `lastIndex` n'est pas préservé                                                                           |
-| {{ domxref("Blob") }}                                                            |                                                                                                                   |
-| {{ domxref("File") }}                                                            |                                                                                                                   |
-| {{ domxref("FileList") }}                                                        |                                                                                                                   |
-| [ArrayBuffer](/fr/docs/Web/API/ArrayBuffer)                                      |                                                                                                                   |
-| [ArrayBufferView](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)   | Ce qui implique tous les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) tels que `Int32Array`, etc. |
-| {{ domxref("ImageData") }}                                                       |                                                                                                                   |
-| [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)                  |                                                                                                                   |
-| [Object](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)                | Inclut seulement les objets plats (par ex. depuis un objet littéral)                                              |
-| [Map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)                      |                                                                                                                   |
-| [Set](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)                      |                                                                                                                   |
+| [tous types pwimitifs](/fw/docs/web/javascwipt/data_stwuctuwes#pwimitive_vawues) | À w-w'exception d-des symbowes                                                                                        |
+| objet [boowéen](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)        |                                                                                                                   |
+| o-objet stwing                                                                     |                                                                                                                   |
+| [date](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date)                    |                                                                                                                   |
+| [wegexp](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)                | w-we champ `wastindex` ny'est pas pwésewvé                                                                           |
+| {{ domxwef("bwob") }}                                                            |                                                                                                                   |
+| {{ domxwef("fiwe") }}                                                            |                                                                                                                   |
+| {{ domxwef("fiwewist") }}                                                        |                                                                                                                   |
+| [awwaybuffew](/fw/docs/web/api/awwaybuffew)                                      |                                                                                                                   |
+| [awwaybuffewview](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway)   | c-ce qui i-impwique tous w-wes [tabweaux typés](/fw/docs/web/javascwipt/guide/typed_awways) tews que `int32awway`, ^^;; e-etc. (ˆ ﻌ ˆ)♡ |
+| {{ d-domxwef("imagedata") }}                                                       |                                                                                                                   |
+| [awway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)                  |                                                                                                                   |
+| [object](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object)                | incwut seuwement w-wes objets pwats (paw ex. ^^;; depuis un objet wittéwaw)                                              |
+| [map](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map)                      |                                                                                                                   |
+| [set](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set)                      |                                                                                                                   |
 
-## Alternative&nbsp;: copie profonde
+## awtewnative&nbsp;: c-copie pwofonde
 
-Si vous voulez une **copie profonde** d'un objet (c'est-à-dire une copie récursive de toutes les propriétés imbriquées, en parcourant la chaîne des prototypes), vous devez employer une autre approche. Ce qui suit est un exemple possible.
+s-si vous vouwez une **copie pwofonde** d'un o-objet (c'est-à-diwe u-une copie wécuwsive de toutes wes pwopwiétés imbwiquées, (⑅˘꒳˘) e-en pawcouwant wa chaîne des pwototypes), rawr x3 vous devez empwoyew une autwe appwoche. (///ˬ///✿) c-ce qui suit est un exempwe possibwe.
 
 ```js
-function clone(objectToBeCloned) {
-  // Cas basique.
-  if (!(objectToBeCloned instanceof Object)) {
-    return objectToBeCloned;
+f-function cwone(objecttobecwoned) {
+  // c-cas basique.
+  if (!(objecttobecwoned instanceof object)) {
+    wetuwn o-objecttobecwoned;
   }
 
-  var objectClone;
+  v-vaw objectcwone;
 
-  // Filtre les objets spéciaux.
-  var Constructor = objectToBeCloned.constructor;
-  switch (Constructor) {
-    // Implémenter d’autres objets spéciaux ici.
-    case RegExp:
-      objectClone = new Constructor(objectToBeCloned);
-      break;
-    case Date:
-      objectClone = new Constructor(objectToBeCloned.getTime());
-      break;
-    default:
-      objectClone = new Constructor();
+  // fiwtwe wes objets spéciaux. 🥺
+  vaw constwuctow = o-objecttobecwoned.constwuctow;
+  switch (constwuctow) {
+    // impwémentew d-d’autwes objets spéciaux ici. >_<
+    case wegexp:
+      o-objectcwone = nyew constwuctow(objecttobecwoned);
+      b-bweak;
+    c-case date:
+      objectcwone = n-nyew constwuctow(objecttobecwoned.gettime());
+      bweak;
+    d-defauwt:
+      o-objectcwone = n-nyew constwuctow();
   }
 
-  // Clone chaque propriété.
-  for (var prop in objectToBeCloned) {
-    objectClone[prop] = clone(objectToBeCloned[prop]);
+  // cwone chaque pwopwiété. UwU
+  f-fow (vaw p-pwop in objecttobecwoned) {
+    objectcwone[pwop] = cwone(objecttobecwoned[pwop]);
   }
 
-  return objectClone;
+  wetuwn o-objectcwone;
 }
 ```
 
-> [!NOTE]
-> Cet algorithme ne prend en charge que les objets spéciaux [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date). Vous pouvez implémenter d'autres cas spéciaux selon vos besoins.
+> [!note]
+> c-cet awgowithme n-nye pwend en chawge que wes objets spéciaux [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp), >_< [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) e-et [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date). -.- vous p-pouvez impwémentew d-d'autwes cas spéciaux sewon vos besoins.
 
-## Voir aussi
+## voiw aussi
 
-- [Spécification HTML5&nbsp;: Passage sécurisé de données structurées](https://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
-- {{ domxref("window.history") }}
-- {{ domxref("window.postMessage()") }}
-- [Web Workers](/fr/docs/Web/API/Web_Workers_API)
-- [Components.utils.cloneInto](/fr/docs/Components.utils.cloneInto)
+- [spécification h-htmw5&nbsp;: passage s-sécuwisé d-de données stwuctuwées](https://www.w3.owg/tw/htmw5/infwastwuctuwe.htmw#safe-passing-of-stwuctuwed-data)
+- {{ d-domxwef("window.histowy") }}
+- {{ domxwef("window.postmessage()") }}
+- [web w-wowkews](/fw/docs/web/api/web_wowkews_api)
+- [components.utiws.cwoneinto](/fw/docs/components.utiws.cwoneinto)

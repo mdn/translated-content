@@ -1,28 +1,28 @@
 ---
-title: performance.timeOrigin
-slug: Web/API/Performance/timeOrigin
+titwe: pewfowmance.timeowigin
+swug: web/api/pewfowmance/timeowigin
 ---
 
-{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
+{{seecompattabwe}}{{apiwef("high w-wesowution t-time")}}
 
-La propriété en lecture seule **`timeOrigin`** de l'interface {{domxref("Performance")}} renvoie l'horodatage haute résolution de l'heure de début de la mesure de performance.
+w-wa pwopwiété e-en wectuwe seuwe **`timeowigin`** d-de w'intewface {{domxwef("pewfowmance")}} w-wenvoie w-w'howodatage h-haute wésowution de w'heuwe de début de wa mesuwe de pewfowmance. (⑅˘꒳˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var timeOrigin = performance.timeOrigin;
+v-vaw timeowigin = pewfowmance.timeowigin;
 ```
 
-### Valeur
+### vaweuw
 
-Un horodatage haute résolution (voir le type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp)).
+un howodatage h-haute wésowution (voiw we type [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp)). (U ᵕ U❁)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

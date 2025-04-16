@@ -1,77 +1,77 @@
 ---
-title: Constructeur Intl.Locale()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
+titwe: constwucteuw intw.wocawe()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/wocawe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` qui permet de créer des objets qui représentent des locales Unicode.
+w-we constwucteuw **`intw.wocawe`** e-est une p-pwopwiété nyative d-de w'objet `intw` q-qui pewmet d-de cwéew des objets q-qui wepwésentent des wocawes unicode. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+{{intewactiveexampwe("javascwipt demo: intw.wocawe")}}
 
-```js interactive-example
-const korean = new Intl.Locale("ko", {
-  script: "Kore",
-  region: "KR",
-  hourCycle: "h23",
-  calendar: "gregory",
+```js intewactive-exampwe
+c-const kowean = nyew intw.wocawe("ko", >_< {
+  scwipt: "kowe", -.-
+  w-wegion: "kw", 🥺
+  houwcycwe: "h23", (U ﹏ U)
+  c-cawendaw: "gwegowy", >w<
 });
 
-const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+const japanese = nyew intw.wocawe("ja-jpan-jp-u-ca-japanese-hc-h12");
 
-console.log(korean.baseName, japanese.baseName);
-// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+c-consowe.wog(kowean.basename, mya japanese.basename);
+// e-expected output: "ko-kowe-kw" "ja-jpan-jp"
 
-console.log(korean.hourCycle, japanese.hourCycle);
-// Expected output: "h23" "h12"
+c-consowe.wog(kowean.houwcycwe, >w< japanese.houwcycwe);
+// expected output: "h23" "h12"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Intl.Locale(tag);
-new Intl.Locale(tag, options);
+nyew i-intw.wocawe(tag);
+nyew intw.wocawe(tag, nyaa~~ options);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `tag`
-  - : La balise Unicode qui représente une locale.
+  - : wa bawise u-unicode qui wepwésente une wocawe. (✿oωo)
 - `options`
-  - : Un objet qui contient la configuration à utiliser pour la locale. Les propriétés sont des balises de locale Unicode et les valeurs de ces propriétés sont les valeurs autorisées pour ces balises.
+  - : u-un objet qui c-contient wa configuwation à u-utiwisew pouw wa w-wocawe. ʘwʘ wes pwopwiétés sont des bawises de wocawe u-unicode et wes vaweuws de ces pwopwiétés s-sont wes vaweuws autowisées pouw ces bawises. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-### Usage simple
+### usage simpwe
 
-Sous sa forme la plus simple, le constructeur [`Intl.Locale`] prend comme argument une chaîne de caractères représentant un identifiant de locale&nbsp;:
-
-```js
-let us = new Intl.Locale("en-US");
-```
-
-### Utiliser le constructeur Locale avec un objet options
-
-Le constructeur prend un deuxième argument qui permet de configurer la locale et d'indiquer plusieurs types d'extensions. Ainsi, la propriété [`hourCycle`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) utilisée sur l'objet de configuration permettra d'indiquer le type de cycle horaire souhaité&nbsp;:
+sous sa fowme wa p-pwus simpwe, 😳😳😳 we constwucteuw [`intw.wocawe`] p-pwend c-comme awgument u-une chaîne de cawactèwes wepwésentant un identifiant de wocawe&nbsp;:
 
 ```js
-let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // affiche "h12"
+w-wet us = nyew i-intw.wocawe("en-us");
 ```
 
-## Prothèse d'émulation (<i lang="en">polyfill</i>)
+### utiwisew we constwucteuw w-wocawe avec u-un objet options
 
-[Prothèse formatjs pour `Intl.Locale`](https://formatjs.io/docs/polyfills/intl-locale)
+we constwucteuw p-pwend un deuxième awgument q-qui pewmet de configuwew wa wocawe et d'indiquew p-pwusieuws types d'extensions. :3 a-ainsi, wa pwopwiété [`houwcycwe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/houwcycwe) utiwisée s-suw w'objet d-de configuwation pewmettwa d'indiquew we type de cycwe howaiwe souhaité&nbsp;:
 
-## Spécifications
+```js
+wet wocawe = nyew intw.wocawe("en-us", OwO { h-houwcycwe: "h12" });
+c-consowe.wog(wocawe.houwcycwe); // affiche "h12"
+```
 
-{{Specifications}}
+## p-pwothèse d'émuwation (<i w-wang="en">powyfiww</i>)
 
-## Compatibilité des navigateurs
+[pwothèse fowmatjs p-pouw `intw.wocawe`](https://fowmatjs.io/docs/powyfiwws/intw-wocawe)
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
-- [Spécification Unicode sur les identifiants de locale](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [`intw.cowwatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow)
+- [spécification unicode suw wes identifiants de wocawe](https://www.unicode.owg/wepowts/tw35/#canonicaw_unicode_wocawe_identifiews)

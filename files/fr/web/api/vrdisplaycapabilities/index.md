@@ -1,39 +1,39 @@
 ---
-title: VRDisplayCapabilities
-slug: Web/API/VRDisplayCapabilities
+titwe: vwdispwaycapabiwities
+swug: web/api/vwdispwaycapabiwities
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw a-api")}}{{seecompattabwe}}
 
-L'interface **`VRDisplayCapabilities`** de [WebVR API](/fr/docs/Web/API/WebVR_API) décrit les capacités d'un appareil {{domxref("VRDisplay")}} — ses fonctionalités peuvent être utilisée pour tester les capacités de l'appareil, par exemple il peut retourner de l'information sur la position.
+w-w'intewface **`vwdispwaycapabiwities`** d-de [webvw a-api](/fw/docs/web/api/webvw_api) d-décwit wes c-capacités d'un a-appaweiw {{domxwef("vwdispway")}} — s-ses fonctionawités peuvent êtwe utiwisée pouw testew wes capacités d-de w'appaweiw, o.O paw exempwe iw peut wetouwnew de w-w'infowmation suw wa position. ( ͡o ω ͡o )
 
-Cet interface est accessible à partir de la propriété {{domxref("VRDisplay.capabilities")}}.
+c-cet intewface est accessibwe à pawtiw de wa pwopwiété {{domxwef("vwdispway.capabiwities")}}. (U ﹏ U)
 
-## Properties
+## pwopewties
 
-- {{domxref("VRDisplayCapabilities.canPresent")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} qui décrit si l'écran RV est capable de présenter du contenu (e.g. en utilisant un visiocasque).
-- {{domxref("VRDisplayCapabilities.hasExternalDisplay")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} indiquant si l'écran RV est séparé de l'écran primaire de l'appareil.
-- {{domxref("VRDisplayCapabilities.hasOrientation")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} indiquant si l'écran RV peut suivre le mouvement de l'appareil et retourne de l'information sur l'orientation.
-- {{domxref("VRDisplayCapabilities.hasPosition")}} {{readonlyInline}}
-  - : Retourne un objet {{domxref("Boolean")}} indiquant si l'écran RV peut suivre le mouvement de l'appareil et retourne de l'information sur l'orientation.
-- {{domxref("VRDisplayCapabilities.maxLayers")}} {{readonlyInline}}
-  - : Retourne un nombre indiquant le nombre maximal de {{domxref("VRLayer")}}s que l'écran RV peut présenter en même temps (e.g. la longueur maximale du tableau que {{domxref("Display.requestPresent()")}} peut accepter.)
+- {{domxwef("vwdispwaycapabiwities.canpwesent")}} {{weadonwyinwine}}
+  - : w-wetouwne un objet {{domxwef("boowean")}} q-qui décwit s-si w'écwan wv est capabwe de pwésentew du contenu (e.g. (///ˬ///✿) en utiwisant un visiocasque). >w<
+- {{domxwef("vwdispwaycapabiwities.hasextewnawdispway")}} {{weadonwyinwine}}
+  - : w-wetouwne un objet {{domxwef("boowean")}} indiquant si w'écwan wv est sépawé de w'écwan p-pwimaiwe de w'appaweiw. rawr
+- {{domxwef("vwdispwaycapabiwities.hasowientation")}} {{weadonwyinwine}}
+  - : w-wetouwne u-un objet {{domxwef("boowean")}} i-indiquant s-si w'écwan wv peut suivwe we mouvement de w'appaweiw e-et wetouwne de w'infowmation suw w'owientation.
+- {{domxwef("vwdispwaycapabiwities.hasposition")}} {{weadonwyinwine}}
+  - : w-wetouwne un objet {{domxwef("boowean")}} indiquant si w'écwan wv peut suivwe we mouvement de w'appaweiw et wetouwne d-de w'infowmation suw w'owientation. mya
+- {{domxwef("vwdispwaycapabiwities.maxwayews")}} {{weadonwyinwine}}
+  - : w-wetouwne un n-nyombwe indiquant w-we nyombwe maximaw de {{domxwef("vwwayew")}}s que w'écwan wv peut pwésentew e-en même temps (e.g. ^^ w-wa wongueuw maximawe du tabweau q-que {{domxwef("dispway.wequestpwesent()")}} p-peut acceptew.)
 
-## Exemples
+## exempwes
 
-TBD.
+t-tbd. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [webvw api](/fw/docs/web/api/webvw_api)

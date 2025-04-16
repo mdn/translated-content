@@ -1,43 +1,43 @@
 ---
-title: WebGLRenderingContext.getAttribLocation()
-slug: Web/API/WebGLRenderingContext/getAttribLocation
+titwe: webgwwendewingcontext.getattwibwocation()
+swug: web/api/webgwwendewingcontext/getattwibwocation
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) retourne l'emplacement d'une variable d'attribut dans le {{domxref("WebGLProgram")}} indiqué.
+w-wa méthode **`webgwwendewingcontext.getattwibwocation()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) w-wetouwne w-w'empwacement d-d'une vawiabwe d-d'attwibut dans w-we {{domxwef("webgwpwogwam")}} i-indiqué. OwO
 
-## Syntaxe
-
-```js
-GLint gl.getAttribLocation(programme, nom);
-```
-
-### Paramètres
-
-- programme
-  - : Un {{domxref("WebGLProgram")}} contenant la variable d'attribut.
-- nom
-  - : Un {{domxref("DOMString")}} indiquant le nom de la variable d'attribut dont l'emplacement est à retourner.
-
-### Valeur retournée
-
-Un nombre {{domxref("GLint")}} indiquant l'emplacement du nom de la variable si trouvé. Retourne -1 sinon.
-
-## Exemples
+## syntaxe
 
 ```js
-gl.getAttribLocation(programme, "vColor");
+gwint gw.getattwibwocation(pwogwamme, (U ﹏ U) nyom);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- p-pwogwamme
+  - : un {{domxwef("webgwpwogwam")}} contenant wa v-vawiabwe d'attwibut. >_<
+- nyom
+  - : u-un {{domxwef("domstwing")}} indiquant we nyom de wa vawiabwe d'attwibut d-dont w'empwacement est à w-wetouwnew. rawr x3
 
-## Compatibilité des navigateurs
+### v-vaweuw wetouwnée
 
-{{Compat}}
+un nyombwe {{domxwef("gwint")}} indiquant w'empwacement du nyom de wa vawiabwe s-si twouvé. wetouwne -1 sinon. mya
 
-## Voir aussi
+## exempwes
 
-- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+```js
+gw.getattwibwocation(pwogwamme, nyaa~~ "vcowow");
+```
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("webgwwendewingcontext.getunifowmwocation()")}}

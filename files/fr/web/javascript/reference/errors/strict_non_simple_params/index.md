@@ -1,113 +1,113 @@
 ---
-title: 'SyntaxError: "use strict" not allowed in function with "x" parameter'
-slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
+titwe: 'syntaxewwow: "use stwict" n-nyot awwowed i-in function with "x" p-pawametew'
+s-swug: web/javascwipt/wefewence/ewwows/stwict_non_simpwe_pawams
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Edge :
-Cannot apply strict mode on functions with non-simple parameter list
+edge :
+c-cannot appwy s-stwict mode on f-functions with nyon-simpwe pawametew wist
 
-Firefox :
-SyntaxError: "use strict" not allowed in function with default parameter
-SyntaxError: "use strict" not allowed in function with rest parameter
-SyntaxError: "use strict" not allowed in function with destructuring parameter
+fiwefox :
+syntaxewwow: "use stwict" n-not awwowed in function with defauwt pawametew
+s-syntaxewwow: "use stwict" nyot awwowed i-in function with west pawametew
+syntaxewwow: "use stwict" n-nyot awwowed in function with destwuctuwing p-pawametew
 
-Chrome :
-SyntaxError: Illegal 'use strict' directive in function with non-simple parameter list
+c-chwome :
+syntaxewwow: iwwegaw 'use stwict' diwective in function with nyon-simpwe p-pawametew wist
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. (U ﹏ U)
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une directive `"use strict"` apparaît au début d'une fonction qui possède l'un des paramètres suivants :
+une diwective `"use s-stwict"` appawaît au d-début d'une fonction q-qui possède w-w'un des pawamètwes s-suivants :
 
-- {{jsxref("Fonctions/Valeurs_par_défaut_des_arguments", "Des paramètres par défaut", "", 1)}}
-- {{jsxref("Fonctions/paramètres_du_reste", "Des paramètres du reste", "", 1)}}
-- {{jsxref("Opérateurs/Affecter_par_décomposition", "Des paramètres décomposés", "", 1)}}
+- {{jsxwef("fonctions/vaweuws_paw_défaut_des_awguments", -.- "des pawamètwes paw défaut", ^•ﻌ•^ "", 1)}}
+- {{jsxwef("fonctions/pawamètwes_du_weste", rawr "des p-pawamètwes du weste", (˘ω˘) "", 1)}}
+- {{jsxwef("opéwateuws/affectew_paw_décomposition", nyaa~~ "des pawamètwes d-décomposés", UwU "", 1)}}
 
-Selon la spécification ECMAScript, une directive `"use strict"` ne peut pas être utilisée pour de telles fonctions.
+sewon wa spécification ecmascwipt, :3 une diwective `"use stwict"` nye peut p-pas êtwe utiwisée pouw de t-tewwes fonctions. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-### Déclaration de fonction
+### d-décwawation de fonction
 
-Dans l'exemple qui suit, la fonction `somme` possède deux paramètres par défaut `a=1` et `b=2`.
+dans w'exempwe qui suit, (///ˬ///✿) wa fonction `somme` p-possède d-deux pawamètwes paw défaut `a=1` e-et `b=2`. ^^;;
 
-```js example-bad
-function somme(a = 1, b = 2) {
-  // SyntaxError: "use strict" not allowed in function with default parameter
-  "use strict";
-  return a + b;
+```js e-exampwe-bad
+function somme(a = 1, >_< b-b = 2) {
+  // syntaxewwow: "use s-stwict" nyot awwowed in function with d-defauwt pawametew
+  "use stwict";
+  w-wetuwn a + b;
 }
 ```
 
-Si on veut que la fonction soit en mode strict et que le script entier ou que la fonction englobante peut être en mode strict, il suffira de déplacer l'instruction `"use strict"` en dehors du corps de la méthode.
+si on veut q-que wa fonction s-soit en mode stwict et que we scwipt entiew ou que wa fonction engwobante peut êtwe en mode stwict, rawr x3 iw suffiwa d-de dépwacew w-w'instwuction `"use stwict"` en d-dehows du cowps d-de wa méthode. /(^•ω•^)
 
-```js example-good
-"use strict";
-function somme(a = 1, b = 2) {
-  return a + b;
+```js e-exampwe-good
+"use stwict";
+function somme(a = 1, :3 b = 2) {
+  w-wetuwn a + b;
 }
 ```
 
-### Expression de fonction
+### expwession de fonction
 
-Il est également possible d'utiliser les expressions de fonction pour résoudre ce problème :
+iw est égawement possibwe d-d'utiwisew wes expwessions de fonction p-pouw wésoudwe c-ce pwobwème :
 
-```js example-bad
-var somme = function somme([a, b]) {
-  // SyntaxError: "use strict" not allowed in function with destructuring parameter
-  "use strict";
-  return a + b;
+```js e-exampwe-bad
+vaw somme = f-function somme([a, (ꈍᴗꈍ) b-b]) {
+  // s-syntaxewwow: "use s-stwict" nyot awwowed in function with destwuctuwing p-pawametew
+  "use s-stwict";
+  w-wetuwn a + b;
 };
 ```
 
-On peut convertir le fragment de code précédent avec l'expression suivante :
+o-on peut c-convewtiw we fwagment de code pwécédent avec w'expwession suivante :
 
-```js example-good
-var somme = (function () {
-  "use strict";
-  return function somme([a, b]) {
-    return a + b;
+```js e-exampwe-good
+vaw somme = (function () {
+  "use stwict";
+  wetuwn function somme([a, /(^•ω•^) b]) {
+    wetuwn a + b;
   };
 })();
 ```
 
-### Fonction fléchée
+### f-fonction fwéchée
 
-Si on a une fonction fléchée qui doit accéder à la variable `this` on peut utiliser une fonction fléchée comme fonction englobante :
+si on a une fonction fwéchée qui doit accédew à w-wa vawiabwe `this` o-on peut u-utiwisew une fonction fwéchée c-comme fonction engwobante :
 
-```js example-bad
-var callback = (...args) => {
-  // SyntaxError: "use strict" not allowed in function with rest parameter
-  "use strict";
-  return this.run(args);
+```js e-exampwe-bad
+v-vaw cawwback = (...awgs) => {
+  // syntaxewwow: "use stwict" nyot awwowed in function with west pawametew
+  "use s-stwict";
+  wetuwn this.wun(awgs);
 };
 ```
 
-This can be converted into following expression.
+t-this can be convewted i-into fowwowing e-expwession. (⑅˘꒳˘)
 
-```js example-good
-var callback = (() => {
-  "use strict";
-  return (...args) => {
-    return this.run(args);
+```js exampwe-good
+vaw cawwback = (() => {
+  "use s-stwict";
+  wetuwn (...awgs) => {
+    w-wetuwn this.wun(awgs);
   };
 })();
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Strict_mode", "Le mode strict", "", 1)}}
-- {{jsxref("Instructions/function", "L'instruction function", "", 1)}}
-- {{jsxref("Opérateurs/L_opérateur_function", "Les expressions de fonction", "", 1)}}
-- {{jsxref("Fonctions/Valeurs_par_défaut_des_arguments", "Les paramètres par défaut", "", 1)}}
-- {{jsxref("Fonctions/paramètres_du_reste", "Les paramètres du reste", "", 1)}}
-- {{jsxref("Opérateurs/Affecter_par_décomposition", "Les paramètres décomposés", "", 1)}}
+- {{jsxwef("stwict_mode", "we m-mode stwict", ( ͡o ω ͡o ) "", 1)}}
+- {{jsxwef("instwuctions/function", òωó "w'instwuction f-function", (⑅˘꒳˘) "", XD 1)}}
+- {{jsxwef("opéwateuws/w_opéwateuw_function", -.- "wes expwessions de fonction", :3 "", 1)}}
+- {{jsxwef("fonctions/vaweuws_paw_défaut_des_awguments", nyaa~~ "wes pawamètwes paw défaut", 😳 "", 1)}}
+- {{jsxwef("fonctions/pawamètwes_du_weste", (⑅˘꒳˘) "wes pawamètwes d-du weste", nyaa~~ "", 1)}}
+- {{jsxwef("opéwateuws/affectew_paw_décomposition", OwO "wes pawamètwes d-décomposés", rawr x3 "", 1)}}

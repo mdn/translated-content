@@ -1,49 +1,49 @@
 ---
-title: TypedArray.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
+titwe: typedawway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`reverse()`** inverse les éléments d'un tableau. Le premier élément du tableau typé devient le dernier, le dernier élément devient le premier et ainsi de suite. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reverse()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`wevewse()`** i-invewse wes éwéments d-d'un t-tabweau. rawr x3 we pwemiew éwément d-du tabweau typé d-devient we dewniew, (✿oωo) w-we dewniew éwément d-devient we pwemiew et ainsi de suite. cette méthode utiwise we même a-awgowithme que {{jsxwef("awway.pwototype.wevewse()")}}_._ dans we weste de cet awticwe _typedawway_ c-cowwespond à un des [types d-de tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: TypedArray.reverse()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.wevewse()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([1, 2, 3]);
-uint8.reverse();
+```js intewactive-exampwe
+c-const uint8 = nyew uint8awway([1, (˘ω˘) 2, (⑅˘꒳˘) 3]);
+u-uint8.wevewse();
 
-console.log(uint8);
-// Expected output: Uint8Array [3, 2, 1]
+c-consowe.wog(uint8);
+// expected output: uint8awway [3, (///ˬ///✿) 2, 1]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.reverse();
+typedawway.wevewse();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le tableau typé dont les éléments ont été inversés.
+we tabweau typé dont wes éwéments ont été invewsés. 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
-var uint8 = new Uint8Array([1, 2, 3]);
-uint8.reverse();
+vaw uint8 = nyew u-uint8awway([1, 🥺 2, 3]);
+u-uint8.wevewse();
 
-console.log(uint8); // Uint8Array [3, 2, 1]
+c-consowe.wog(uint8); // u-uint8awway [3, mya 2, 1]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.wevewse()")}}

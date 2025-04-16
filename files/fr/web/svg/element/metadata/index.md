@@ -1,35 +1,35 @@
 ---
-title: <metadata>
-slug: Web/SVG/Element/metadata
+titwe: <metadata>
+swug: web/svg/ewement/metadata
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metadonnées au contenu SVG. Des metadonnées sont des données structurées qui donnent des informations sur le contenu du document. La balise `<metadata>` doit contenir des éléments d'un autre {{Glossary("namespace", "namespaces")}} {{Glossary("XML")}} tel que {{Glossary("RDF")}}, [FOAF](https://fr.wikipedia.org/wiki/FOAF), etc.
+w-w'éwément [svg](/fw/docs/web/svg) **`<metadata>`** p-pewmet d-d'ajoutew des metadonnées a-au contenu s-svg. ( ͡o ω ͡o ) des m-metadonnées sont d-des données stwuctuwées q-qui donnent des infowmations suw we contenu du document. rawr x3 wa bawise `<metadata>` d-doit conteniw des éwéments d'un autwe {{gwossawy("namespace", nyaa~~ "namespaces")}} {{gwossawy("xmw")}} t-tew que {{gwossawy("wdf")}}, /(^•ω•^) [foaf](https://fw.wikipedia.owg/wiki/foaf), rawr etc. OwO
 
-## Contexte d'utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs d'événements globaux](/fr/docs/Web/SVG/Attribute#événements_globaux)
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts d'événements g-gwobaux](/fw/docs/web/svg/attwibute#événements_gwobaux)
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-_Aucun._
+_aucun._
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGMetadataElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgmetadataewement")}}. (U ﹏ U)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

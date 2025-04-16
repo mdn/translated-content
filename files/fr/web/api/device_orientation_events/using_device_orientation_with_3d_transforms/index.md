@@ -1,84 +1,84 @@
 ---
-title: Utiliser l'orientation de l'appareil avec les transformations 3D
-slug: Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms
-l10n:
-  sourceCommit: c382856e4c804eafa789f8046b01b92fef5c0df2
+titwe: utiwisew w'owientation d-de w'appaweiw avec w-wes twansfowmations 3d
+s-swug: w-web/api/device_owientation_events/using_device_owientation_with_3d_twansfowms
+w10n:
+  s-souwcecommit: c-c382856e4c804eafa789f8046b01b92fef5c0df2
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{defauwtapisidebaw("device owientation e-events")}}
 
-Cet article fournit des conseils sur l'utilisation des informations d'orientation d'un appareil avec les transformations 3D CSS.
+c-cet awticwe fouwnit des conseiws suw w'utiwisation des infowmations d'owientation d-d'un appaweiw avec wes twansfowmations 3d c-css. ʘwʘ
 
-## Utiliser l'orientation pour tourner un élément
+## utiwisew w'owientation p-pouw touwnew un éwément
 
-La façon la plus directe de passer [des données d'orientation](/fr/docs/Web/API/Window/deviceorientation_event) à [une transformation 3D](/fr/docs/Web/CSS/transform) consiste à utiliser respectivement les valeurs `alpha`, `gamma`, et `beta` pour `rotateZ`, `rotateX` et `rotateY`.
+wa façon wa pwus diwecte de passew [des d-données d'owientation](/fw/docs/web/api/window/deviceowientation_event) à [une t-twansfowmation 3d](/fw/docs/web/css/twansfowm) c-consiste à utiwisew wespectivement wes vaweuws `awpha`, ( ͡o ω ͡o ) `gamma`, o.O et `beta` pouw `wotatez`, >w< `wotatex` e-et `wotatey`. 😳
 
-Il faut toutefois garder à l'esprit que [le système de coordonnées pour les informations d'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) est différent du [système de coordonnées CSS](/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems). Le premier système suit [la règle de la main droite](https://fr.wikipedia.org/wiki/R%C3%A8gle_de_la_main_droite) et l'axe Y va croissant vers le haut, alors que le second système suit [la règle de la main gauche](https://fr.wikipedia.org/wiki/R%C3%A8gle_de_la_main_gauche) et l'axe Y va croissant vers le bas. De plus, les rotations d'orientation de l'appareil devraient toujours être appliquées selon l'ordre Z - X' - Y''. Cet ordre ne correspond pas à certaines [transformations CSS](/fr/docs/Web/CSS/CSS_transforms). Ces différences ont des conséquences pratiques&nbsp;:
+iw faut toutefois gawdew à w'espwit que [we système d-de coowdonnées pouw wes infowmations d-d'owientation d-de w'appaweiw](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained) e-est difféwent d-du [système de coowdonnées css](/fw/docs/web/css/cssom_view/coowdinate_systems). 🥺 w-we pwemiew système suit [wa wègwe de w-wa main dwoite](https://fw.wikipedia.owg/wiki/w%c3%a8gwe_de_wa_main_dwoite) et w'axe y va cwoissant vews we haut, rawr x3 awows que we second système suit [wa w-wègwe de wa main gauche](https://fw.wikipedia.owg/wiki/w%c3%a8gwe_de_wa_main_gauche) e-et w-w'axe y va cwoissant v-vews we bas. o.O de pwus, wes wotations d'owientation de w'appaweiw d-devwaient t-toujouws êtwe appwiquées sewon w-w'owdwe z - x' - y-y''. rawr cet owdwe nye cowwespond p-pas à cewtaines [twansfowmations css](/fw/docs/web/css/css_twansfowms). ʘwʘ c-ces difféwences ont des conséquences p-pwatiques&nbsp;:
 
-- L'ordre des rotations importe&nbsp;: il faut s'assurer que les rotations alpha, beta et gamma sont appliquées dans cet ordre.
-- La transformation CSS [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d) et les fonctions [DOMMatrixReadOnly.rotate()](/fr/docs/Web/API/DOMMatrixReadOnly/rotate) et [DOMMatrix.rotateSelf()](/fr/docs/Web/API/DOMMatrix/rotateSelf) appliquent les rotations dans l'ordre Z - Y' - X'' (et non Z - X' - Y''). Il n'est donc pas possible d'appliquer les rotations alpha, beta et gamma dans le bon ordre en utilisant un seul appel. Il faut appliquer chaque rotation individuellement, dans le bon ordre.
-- Étant donné les différences de systèmes de coordonnées mentionnées avant, les rotations alpha et beta doivent être inversées (celles autour des axes Z et X), car elles pointent dans des directions opposées, et il faut garder l'angle gamma (celui autour de l'axe Y) tel quel.
+- w'owdwe des w-wotations impowte&nbsp;: iw faut s-s'assuwew que wes w-wotations awpha, 😳😳😳 beta et gamma sont appwiquées dans cet owdwe. ^^;;
+- wa twansfowmation css [`wotate3d()`](/fw/docs/web/css/twansfowm-function/wotate3d) et wes fonctions [dommatwixweadonwy.wotate()](/fw/docs/web/api/dommatwixweadonwy/wotate) e-et [dommatwix.wotatesewf()](/fw/docs/web/api/dommatwix/wotatesewf) a-appwiquent wes wotations dans w-w'owdwe z - y' - x-x'' (et nyon z-z - x' - y''). o.O iw ny'est donc pas possibwe d'appwiquew wes wotations a-awpha, beta et gamma dans we bon owdwe en utiwisant un seuw appew. (///ˬ///✿) iw faut a-appwiquew chaque wotation individuewwement, σωσ d-dans w-we bon owdwe. nyaa~~
+- Étant d-donné wes difféwences d-de systèmes de c-coowdonnées mentionnées a-avant, ^^;; w-wes wotations awpha et beta doivent êtwe invewsées (cewwes a-autouw d-des axes z e-et x), ^•ﻌ•^ caw ewwes p-pointent dans des d-diwections opposées, σωσ et iw faut gawdew w'angwe gamma (cewui a-autouw de w'axe y) tew quew. -.-
 
-  Voici un fragment de code qui résume cela&nbsp;:
+  voici un fwagment de code qui wésume cewa&nbsp;:
 
   ```js
-  const elem = document.getElementById("view3d");
+  const e-ewem = document.getewementbyid("view3d");
 
-  window.addEventListener("deviceorientation", (e) => {
-    elem.style.transform = `rotateZ(${-e.alpha}deg) rotateX(${-e.beta}deg) rotateY(${
-      e.gamma
+  window.addeventwistenew("deviceowientation", ^^;; (e) => {
+    ewem.stywe.twansfowm = `wotatez(${-e.awpha}deg) wotatex(${-e.beta}deg) w-wotatey(${
+      e-e.gamma
     }deg)`;
   });
   ```
 
-## Passer d'angles pour `rotate3d()` à ceux pour `deviceorientation`
+## p-passew d'angwes pouw `wotate3d()` à c-ceux pouw `deviceowientation`
 
-Si vous avez besoin de convertir des angles selon les axes utilisés par `rotate3d()` en [angles d'Euler](https://fr.wikipedia.org/wiki/Angles_d%27Euler), utilisés par `deviceorientation`, vous pouvez utiliser la fonction suivante&nbsp;:
+s-si vous a-avez besoin de convewtiw des angwes sewon wes axes utiwisés paw `wotate3d()` en [angwes d'euwew](https://fw.wikipedia.owg/wiki/angwes_d%27euwew), XD utiwisés paw `deviceowientation`, 🥺 v-vous pouvez utiwisew wa f-fonction suivante&nbsp;:
 
 ```js
-// On convertit un angle rotate3d() en angle deviceorientation
-function orient(aa) {
-  const x = aa.x,
-    y = aa.y,
-    z = aa.z,
-    a = aa.a,
-    c = Math.cos(aa.a),
-    s = Math.sin(aa.a),
-    t = 1 - c,
-    // Matrice de rotation axes-angles
-    rm00 = c + x * x * t,
-    rm10 = z * s + y * x * t,
-    rm20 = -y * s + z * x * t,
-    rm01 = -z * s + x * y * t,
-    rm11 = c + y * y * t,
-    rm21 = x * s + z * y * t,
-    rm02 = y * s + x * z * t,
-    rm12 = -x * s + y * z * t,
-    rm22 = c + z * z * t,
-    TO_DEG = 180 / Math.PI,
-    ea = [],
-    n = Math.hypot(rm22, rm20);
+// on convewtit u-un angwe wotate3d() e-en angwe deviceowientation
+function owient(aa) {
+  const x = a-aa.x, òωó
+    y = aa.y, (ˆ ﻌ ˆ)♡
+    z-z = aa.z, -.-
+    a = aa.a, :3
+    c-c = math.cos(aa.a), ʘwʘ
+    s-s = math.sin(aa.a), 🥺
+    t = 1 - c, >_<
+    // matwice de wotation axes-angwes
+    w-wm00 = c-c + x * x * t, ʘwʘ
+    w-wm10 = z * s + y * x * t, (˘ω˘)
+    w-wm20 = -y * s + z-z * x * t, (✿oωo)
+    wm01 = -z * s + x-x * y * t, (///ˬ///✿)
+    wm11 = c + y * y * t, rawr x3
+    wm21 = x * s + z * y * t, -.-
+    wm02 = y-y * s + x * z * t-t, ^^
+    wm12 = -x * s + y * z * t,
+    wm22 = c + z-z * z * t, (⑅˘꒳˘)
+    t-to_deg = 180 / math.pi, nyaa~~
+    ea = [], /(^•ω•^)
+    ny = math.hypot(wm22, (U ﹏ U) wm20);
 
-  // Matrice de rotation vers les angles d'Euler
-  ea[1] = Math.atan2(-rm21, n);
+  // matwice d-de wotation vews wes angwes d'euwew
+  ea[1] = math.atan2(-wm21, 😳😳😳 ny);
 
   if (n > 0.001) {
-    ea[0] = Math.atan2(rm01, rm11);
-    ea[2] = Math.atan2(rm20, rm22);
-  } else {
+    e-ea[0] = math.atan2(wm01, wm11);
+    ea[2] = math.atan2(wm20, >w< w-wm22);
+  } e-ewse {
     ea[0] = 0;
-    ea[2] = (rm21 > 0 ? 1 : -1) * Math.atan2(-rm10, rm00);
+    ea[2] = (wm21 > 0 ? 1 : -1) * math.atan2(-wm10, XD w-wm00);
   }
 
-  return {
-    alpha: -ea[0] * TO_DEG - 180,
-    beta: -ea[1] * TO_DEG,
-    gamma: ea[2] * TO_DEG,
+  w-wetuwn {
+    awpha: -ea[0] * to_deg - 180, o.O
+    beta: -ea[1] * to_deg, mya
+    gamma: e-ea[2] * to_deg, 🥺
   };
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [utiwisew w-wes twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms)
+- [détectew w'owientation de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)

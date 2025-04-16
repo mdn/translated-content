@@ -1,40 +1,40 @@
 ---
-title: Notification.onclick
-slug: Web/API/Notification/click_event
+titwe: nyotification.oncwick
+swug: web/api/notification/cwick_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété **`onclick`**, rattachée à l'interface {{domxref("Notification")}}, définit un gestionnaire d'évènement à déclencher lorsque la notification recçoit un évènement `click` (qui se produit lorsqu'un utilisateur clique sur la notification).
+w-wa pwopwiété **`oncwick`**, (U ﹏ U) w-wattachée à w-w'intewface {{domxwef("notification")}}, (U ﹏ U) d-définit un gestionnaiwe d-d'évènement à d-décwenchew w-wowsque wa nyotification wecçoit un évènement `cwick` (qui se pwoduit wowsqu'un utiwisateuw c-cwique suw wa nyotification). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.onclick = function(event) { ... };
+n-nyotification.oncwick = function(event) { ... };
 ```
 
-Le comportement par défaut consiste à déplacer le focus sur la zone d'affichage (_viewport_) du [contexte de navigation](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) de la notification. Pour éviter ce comportement, on pourra appeler la méthode [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'objet représentant l'évènement.
+we c-compowtement paw défaut consiste à dépwacew we focus suw wa zone d-d'affichage (_viewpowt_) du [contexte d-de nyavigation](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#bwowsing-context) d-de wa nyotification. òωó pouw évitew ce compowtement, on pouwwa appewew wa méthode [`pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) s-suw w'objet wepwésentant w'évènement. ʘwʘ
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on utilise le gestionnaire d'évènement `onclick` pour ouvrir une page dans un nouvel onglet (avec le paramètre `'_blank'`) lorsqu'on clique sur la notification :
+dans w'exempwe q-qui suit, /(^•ω•^) on utiwise we gestionnaiwe d-d'évènement `oncwick` p-pouw ouvwiw une p-page dans un nyouvew o-ongwet (avec we pawamètwe `'_bwank'`) wowsqu'on c-cwique suw wa nyotification :
 
 ```js
-notification.onclick = function (event) {
-  event.preventDefault(); // empêcher le navigateur de passer le focus sur l'onglet de la navigation
-  window.open("https://www.mozilla.org", "_blank");
+nyotification.oncwick = f-function (event) {
+  event.pweventdefauwt(); // empêchew we nyavigateuw de passew we focus suw w'ongwet de w-wa nyavigation
+  window.open("https://www.moziwwa.owg", ʘwʘ "_bwank");
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Notification")}}
-- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [utiwisew w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

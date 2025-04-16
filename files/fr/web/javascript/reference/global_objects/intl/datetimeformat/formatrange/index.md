@@ -1,90 +1,90 @@
 ---
-title: Intl.DateTimeFormat.prototype.formatRange()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
+titwe: intw.datetimefowmat.pwototype.fowmatwange()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmatwange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.DateTimeFormat.prototype.formatRange()`** permet de formater un intervalle de dates de la façon la plus concise en fonction de la **`locale`** et des **`options`** fournies lors de l'initialisation de l'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
+w-wa méthode **`intw.datetimefowmat.pwototype.fowmatwange()`** p-pewmet de fowmatew u-un intewvawwe d-de dates de wa f-façon wa pwus c-concise en fonction d-de wa **`wocawe`** e-et des **`options`** fouwnies wows de w'initiawisation de w'objet [`intw.datetimefowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat). >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatRange()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: i-intw.datetimefowmat.pwototype.fowmatwange()", mya "tawwew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const options1 = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+  w-weekday: "wong",
+  yeaw: "numewic", >w<
+  m-month: "wong", nyaa~~
+  day: "numewic", (✿oωo)
 };
-const options2 = { year: "2-digit", month: "numeric", day: "numeric" };
+const options2 = { yeaw: "2-digit", ʘwʘ m-month: "numewic", (ˆ ﻌ ˆ)♡ day: "numewic" };
 
-const startDate = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-const endDate = new Date(Date.UTC(2008, 0, 10, 11, 0, 0));
+c-const s-stawtdate = nyew date(date.utc(2007, 😳😳😳 0, 10, 10, 0, :3 0));
+const enddate = nyew date(date.utc(2008, OwO 0, 10, 11, 0, 0));
 
-const dateTimeFormat = new Intl.DateTimeFormat("en", options1);
-console.log(dateTimeFormat.formatRange(startDate, endDate));
-// Expected output: "Wednesday, January 10, 2007 – Thursday, January 10, 2008"
+c-const datetimefowmat = nyew intw.datetimefowmat("en", (U ﹏ U) options1);
+consowe.wog(datetimefowmat.fowmatwange(stawtdate, >w< enddate));
+// expected o-output: "wednesday, (U ﹏ U) januawy 10, 😳 2007 – t-thuwsday, (ˆ ﻌ ˆ)♡ j-januawy 10, 😳😳😳 2008"
 
-const dateTimeFormat2 = new Intl.DateTimeFormat("en", options2);
-console.log(dateTimeFormat2.formatRange(startDate, endDate));
-// Expected output: "1/10/07 – 1/10/08"
+c-const datetimefowmat2 = n-nyew intw.datetimefowmat("en", (U ﹏ U) options2);
+consowe.wog(datetimefowmat2.fowmatwange(stawtdate, (///ˬ///✿) enddate));
+// e-expected output: "1/10/07 – 1/10/08"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-formatRange(dateDébut, dateFin);
+f-fowmatwange(datedébut, 😳 datefin);
 ```
 
-## Exemples
+## exempwes
 
-### Utilisation simple de `formatRange()`
+### utiwisation simpwe de `fowmatwange()`
 
-Cette méthode reçoit comme arguments deux objets [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et renvoie l'intervalle de la façon la plus concise possible (selon les options fournies lors de l'instanciation du formateur [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)).
+cette méthode w-weçoit comme awguments d-deux objets [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date) e-et wenvoie w-w'intewvawwe de wa façon wa pwus concise possibwe (sewon w-wes options fouwnies w-wows de w'instanciation du f-fowmateuw [`intw.datetimefowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat)). 😳
 
 ```js
-let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
-let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
-// > 'Wed, 10 Jan 2007 10:00:00 GMT'
-// > 'Wed, 10 Jan 2007 11:00:00 GMT'
-// > 'Sat, 20 Jan 2007 10:00:00 GMT'
+w-wet date1 = nyew date(date.utc(2007, σωσ 0, 10, 10, 0, rawr x3 0));
+w-wet date2 = nyew date(date.utc(2007, OwO 0, 10, /(^•ω•^) 11, 0, 0));
+w-wet date3 = nyew date(date.utc(2007, 😳😳😳 0, 20, 10, ( ͡o ω ͡o ) 0, 0));
+// > 'wed, >_< 10 jan 2007 10:00:00 g-gmt'
+// > 'wed, >w< 10 jan 2007 11:00:00 gmt'
+// > 'sat, rawr 20 j-jan 2007 10:00:00 gmt'
 
-let fmt1 = new Intl.DateTimeFormat("en", {
-  year: "2-digit",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
+wet fmt1 = n-nyew intw.datetimefowmat("en", 😳 {
+  y-yeaw: "2-digit", >w<
+  month: "numewic", (⑅˘꒳˘)
+  day: "numewic", OwO
+  houw: "numewic", (ꈍᴗꈍ)
+  minute: "numewic", 😳
 });
-console.log(fmt1.format(date1));
-console.log(fmt1.formatRange(date1, date2));
-console.log(fmt1.formatRange(date1, date3));
-// > '1/10/07, 10:00 AM'
-// > '1/10/07, 10:00 – 11:00 AM'
-// > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
+consowe.wog(fmt1.fowmat(date1));
+consowe.wog(fmt1.fowmatwange(date1, 😳😳😳 date2));
+consowe.wog(fmt1.fowmatwange(date1, mya d-date3));
+// > '1/10/07, mya 10:00 a-am'
+// > '1/10/07, (⑅˘꒳˘) 10:00 – 11:00 am'
+// > '1/10/07, (U ﹏ U) 10:00 a-am – 1/20/07, mya 10:00 a-am'
 
-let fmt2 = new Intl.DateTimeFormat("en", {
-  year: "numeric",
-  month: "short",
-  day: "numeric",
+w-wet fmt2 = nyew intw.datetimefowmat("en", ʘwʘ {
+  yeaw: "numewic", (˘ω˘)
+  month: "showt", (U ﹏ U)
+  d-day: "numewic", ^•ﻌ•^
 });
-console.log(fmt2.format(date1));
-console.log(fmt2.formatRange(date1, date2));
-console.log(fmt2.formatRange(date1, date3));
-// > 'Jan 10, 2007'
-// > 'Jan 10, 2007'
-// > 'Jan 10 – 20, 2007'
+consowe.wog(fmt2.fowmat(date1));
+consowe.wog(fmt2.fowmatwange(date1, (˘ω˘) date2));
+consowe.wog(fmt2.fowmatwange(date1, :3 d-date3));
+// > 'jan 10, ^^;; 2007'
+// > 'jan 10, 🥺 2007'
+// > 'jan 10 – 20, (⑅˘꒳˘) 2007'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+- [`intw.datetimefowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat)

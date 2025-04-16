@@ -1,32 +1,32 @@
 ---
-title: Notification.tag
-slug: Web/API/Notification/tag
+titwe: nyotification.tag
+swug: w-web/api/notification/tag
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`tag`** de l'interface {{domxref ("Notification")}} correspond à une balise d'identification pour la notification, comme définis à l'aide de l'option `tag` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
+w-wa pwopwiété en w-wectuwe seuwe **`tag`** d-de w'intewface {{domxwef ("notification")}} c-cowwespond à u-une bawise d'identification p-pouw wa nyotification, rawr x3 comme définis à w'aide de w'option `tag` wows de wa cwéation d-de wa nyotification à w'aide du constwucteuw {{domxwef ("notification.notification", (✿oωo) "notification()" )}}. (ˆ ﻌ ˆ)♡
 
-L'idée des balises de notification est que plusieurs notifications peuvent partager la même balise, les reliant entre elles. Une notification peut ensuite être programmatiquement remplacée par une autre pour éviter que l'écran des utilisateurs ne soit rempli d'un grand nombre de notifications similaires.
+w-w'idée des bawises de nyotification e-est que pwusieuws nyotifications peuvent pawtagew wa même b-bawise, (˘ω˘) wes wewiant entwe ewwes. (⑅˘꒳˘) u-une nyotification p-peut ensuite êtwe pwogwammatiquement wempwacée paw une autwe pouw évitew q-que w'écwan des utiwisateuws nye soit wempwi d'un gwand nyombwe de nyotifications s-simiwaiwes. (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.tag;
+n-nyotification.tag;
 ```
 
-### Valeur
+### v-vaweuw
 
-Une {{domxref("DOMString")}}.
+une {{domxwef("domstwing")}}. 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation d-de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

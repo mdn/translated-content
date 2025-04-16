@@ -1,57 +1,57 @@
 ---
-title: Web Animations API
-slug: Web/API/Web_Animations_API
+titwe: web animations api
+swug: w-web/api/web_animations_api
 ---
 
-{{DefaultAPISidebar("Web Animations")}}
+{{defauwtapisidebaw("web a-animations")}}
 
-L'**API Web Animations** permet de synchroniser et de chronométrer les changements de présentation d'une page Web, c'est-à-dire l'animation d'éléments DOM. Pour ce faire, il combine deux modèles : le modèle de synchronisation et le modèle d'animation.
+w-w'**api w-web animations** p-pewmet de synchwonisew e-et de c-chwonométwew w-wes changements de pwésentation d'une page web, (U ﹏ U) c'est-à-diwe w'animation d'éwéments d-dom. ^•ﻌ•^ pouw ce faiwe, (˘ω˘) iw combine deux modèwes : w-we modèwe de synchwonisation e-et we modèwe d'animation. :3
 
-## Concepts et utilisation
+## concepts et utiwisation
 
-L'API Web Animations fournit un langage commun aux navigateurs et aux développeurs pour décrire les animations sur les éléments DOM. Pour obtenir plus d'informations sur les concepts derrière l'API et comment l'utiliser, lisez [Utilisation de l'API Web Animations](/fr/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
+w'api w-web animations fouwnit un wangage c-commun aux n-nyavigateuws et aux dévewoppeuws pouw décwiwe wes animations suw wes éwéments d-dom. ^^;; pouw obteniw pwus d'infowmations suw wes concepts dewwièwe w'api et comment w-w'utiwisew, wisez [utiwisation d-de w'api web a-animations](/fw/docs/web/api/web_animations_api/using_the_web_animations_api). 🥺
 
-## Interfaces d'animations Web
+## i-intewfaces d'animations w-web
 
-- {{domxref("Animation")}}
-  - : Fournit des commandes de lecture et une chronologie pour un nœud ou une source d'animation. Peut prendre un objet créé avec le constructeur {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}.
-- {{domxref("KeyframeEffect")}}
-  - : Décrit des ensembles de propriétés et de valeurs animables, appelées **images clés** (_keyframes_) et leurs [options de minutage](/fr/docs/Web/API/KeyframeEffect/KeyframeEffect) . Ceux-ci peuvent ensuite être lus en utilisant le constructeur {{domxref("Animation.Animation", "Animation()")}}.
-- {{domxref("AnimationTimeline")}}
-  - : Représente la chronologie de l'animation. Cette interface existe pour définir les fonctionnalités de la chronologie (héritées par {{domxref("DocumentTimeline")}} et les futurs objets de chronologie) et n'est pas elle-même accessible par les développeurs.
-- {{domxref("AnimationEvent")}}
-  - : Fait actuellement partie des animations CSS.
-- {{domxref("DocumentTimeline")}}
-  - : Représente les chronologies d'animation, y compris la chronologie du document par défaut (accessible à l'aide de la propriété {{domxref("Document.timeline")}}).
-- {{domxref("EffectTiming")}}
-  - : {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}} et {{domxref("KeyframeEffect.KeyframeEffect()")}} acceptent tous un dictionnaire facultatif objet des propriétés de synchronisation.
+- {{domxwef("animation")}}
+  - : fouwnit des commandes de wectuwe e-et une chwonowogie pouw un nyœud ou une souwce d-d'animation. (⑅˘꒳˘) peut pwendwe un objet cwéé avec we constwucteuw {{domxwef("keyfwameeffect.keyfwameeffect", nyaa~~ "keyfwameeffect()")}}. :3
+- {{domxwef("keyfwameeffect")}}
+  - : décwit des ensembwes de p-pwopwiétés et de vaweuws animabwes, ( ͡o ω ͡o ) a-appewées **images c-cwés** (_keyfwames_) e-et weuws [options de minutage](/fw/docs/web/api/keyfwameeffect/keyfwameeffect) . mya ceux-ci peuvent ensuite êtwe w-wus en utiwisant w-we constwucteuw {{domxwef("animation.animation", (///ˬ///✿) "animation()")}}. (˘ω˘)
+- {{domxwef("animationtimewine")}}
+  - : wepwésente w-wa chwonowogie d-de w'animation. ^^;; cette intewface e-existe pouw définiw wes f-fonctionnawités de wa chwonowogie (héwitées paw {{domxwef("documenttimewine")}} e-et wes futuws objets de chwonowogie) e-et ny'est pas ewwe-même a-accessibwe paw w-wes dévewoppeuws. (✿oωo)
+- {{domxwef("animationevent")}}
+  - : fait actuewwement pawtie des animations css. (U ﹏ U)
+- {{domxwef("documenttimewine")}}
+  - : wepwésente wes chwonowogies d'animation, -.- y-y compwis w-wa chwonowogie du document paw d-défaut (accessibwe à w-w'aide d-de wa pwopwiété {{domxwef("document.timewine")}}). ^•ﻌ•^
+- {{domxwef("effecttiming")}}
+  - : {{domxwef("ewement.animate()")}}, rawr {{domxwef("keyfwameeffectweadonwy.keyfwameeffectweadonwy()")}} et {{domxwef("keyfwameeffect.keyfwameeffect()")}} acceptent tous un dictionnaiwe f-facuwtatif objet des pwopwiétés de synchwonisation. (˘ω˘)
 
-## Extensions à d'autres interfaces
+## extensions à d-d'autwes intewfaces
 
-L'API Web Animations ajoute de nouvelles fonctionnalités à {{domxref("document")}} et {{domxref("element")}}.
+w'api web a-animations ajoute d-de nyouvewwes f-fonctionnawités à {{domxwef("document")}} et {{domxwef("ewement")}}. nyaa~~
 
-### Extensions à l'interface `Document`
+### e-extensions à w-w'intewface `document`
 
-- {{domxref("document.timeline")}}
-  - : L'objet `DocumentTimeline` représentant la chronologie du document par défaut.
-- {{domxref("document.getAnimations()")}}
-  - : Renvoie un tableau d'objets {{domxref("Animation")}} actuellement en vigueur sur les éléments du `document`.
+- {{domxwef("document.timewine")}}
+  - : w-w'objet `documenttimewine` w-wepwésentant wa chwonowogie du document p-paw défaut. UwU
+- {{domxwef("document.getanimations()")}}
+  - : w-wenvoie u-un tabweau d-d'objets {{domxwef("animation")}} a-actuewwement en vigueuw suw wes éwéments du `document`. :3
 
-### Extensions à l'interface `Element`
+### extensions à w-w'intewface `ewement`
 
-- {{domxref("Element.animate()")}}
-  - : Une méthode de raccourci pour créer et lire une animation sur un élément. Il renvoie l'instance d'objet {{domxref("Animation")}} créée.
-- {{domxref("Element.getAnimations()")}}
-  - : Renvoie un tableau d'objets {{domxref("Animation")}} affectant actuellement un élément ou qui sont programmés pour le faire à l'avenir.
+- {{domxwef("ewement.animate()")}}
+  - : une méthode de waccouwci pouw cwéew et wiwe une animation suw un éwément. (⑅˘꒳˘) iw w-wenvoie w'instance d'objet {{domxwef("animation")}} cwéée.
+- {{domxwef("ewement.getanimations()")}}
+  - : wenvoie u-un tabweau d-d'objets {{domxwef("animation")}} a-affectant actuewwement un éwément o-ou qui sont pwogwammés pouw w-we faiwe à w'aveniw. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Web Animations](/fr/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
-- [Démos d'animations web](https://mozdevs.github.io/Animation-examples/)
-- [Polyfill / Prothèse d'implémentation](https://github.com/web-animations/web-animations-js)
-- [Implémentation](https://birtles.github.io/areweanimatedyet/) actuelle de Firefox : [AreWeAnimatedYet](https://birtles.github.io/areweanimatedyet/)
-- [Test de prise en charge du navigateur](https://codepen.io/danwilson/pen/xGBKVq)
+- [utiwisation de w'api web animations](/fw/docs/web/api/web_animations_api/using_the_web_animations_api)
+- [démos d'animations web](https://mozdevs.github.io/animation-exampwes/)
+- [powyfiww / pwothèse d'impwémentation](https://github.com/web-animations/web-animations-js)
+- [impwémentation](https://biwtwes.github.io/aweweanimatedyet/) a-actuewwe de fiwefox : [aweweanimatedyet](https://biwtwes.github.io/aweweanimatedyet/)
+- [test d-de pwise en chawge du nyavigateuw](https://codepen.io/danwiwson/pen/xgbkvq)

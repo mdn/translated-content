@@ -1,874 +1,874 @@
 ---
-title: d
-slug: Web/SVG/Attribute/d
-l10n:
-  sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
+titwe: d
+swug: web/svg/attwibute/d
+w-w10n:
+  souwcecommit: 1a26583f60bdceece64347bf967d0653fe8df288
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`d`** définit un tracé à dessiner.
+w-w'attwibut **`d`** d-définit u-un twacé à dessinew. (⑅˘꒳˘)
 
-La définition d'un tracé est une liste de [commandes de tracé](#commandes_de_tracé) où chaque commande est composée d'une lettre pour la commande, et de nombres qui représentent les paramètres de la commande. Les commandes sont détaillées [ci-dessous](#commandes_de_tracé).
+w-wa définition d-d'un twacé e-est une wiste d-de [commandes de twacé](#commandes_de_twacé) où chaque commande est composée d'une wettwe p-pouw wa commande, OwO et de nyombwes qui wepwésentent w-wes pawamètwes de wa commande. 🥺 w-wes commandes sont détaiwwées [ci-dessous](#commandes_de_twacé). >_<
 
-Cet attribut peut être utilisé sur les éléments SVG suivants&nbsp;: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
+cet attwibut peut êtwe u-utiwisé suw wes éwéments svg s-suivants&nbsp;: [`<path>`](#path), (ꈍᴗꈍ) [`<gwyph>`](#gwyph), 😳 [`<missing-gwyph>`](#missing-gwyph). 🥺
 
-`d` est un attribut de présentation et peut donc [être utilisé comme propriété CSS](#utilisation_comme_propriété_css).
+`d` e-est un attwibut de pwésentation et peut donc [êtwe utiwisé comme pwopwiété c-css](#utiwisation_comme_pwopwiété_css). nyaa~~
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+htmw, ^•ﻌ•^
+body, (ˆ ﻌ ˆ)♡
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,30
-       A 20, 20 0, 0, 1 50, 30
-       A 20, 20 0, 0, 1 90, 30
-       Q 90, 60 50, 90
-       Q 10, 60 10, 30 z" />
+    fiww="none"
+    s-stwoke="wed"
+    d-d="m 10,30
+       a-a 20, (U ᵕ U❁) 20 0, 0, 1 50, mya 30
+       a-a 20, 😳 20 0, 0, 1 90, σωσ 30
+       q 90, ( ͡o ω ͡o ) 60 50, 90
+       q 10, XD 60 10, :3 30 z-z" />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', :3 '100%', (⑅˘꒳˘) 200)}}
 
 ## `<path>`
 
-Pour un [`<path>`](/fr/docs/Web/SVG/Element/path), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent le tracé à dessiner.
+pouw un [`<path>`](/fw/docs/web/svg/ewement/path), òωó `d` est une c-chaîne de cawactèwes qui contient une séwie de commandes de twacé qui définissent we twacé à d-dessinew. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a h-hwef="/fw/docs/web/svg/content_type#stwing"><code>&wt;stwing&gt;</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Animable</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th scope="wow">animabwe</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<glyph>`
+## `<gwyph>`
 
-> [!WARNING]
-> Depuis SVG2, [`<glyph>`](/fr/docs/Web/SVG/Element/glyph) est déprécié et ne doit plus être utilisé.
+> [!wawning]
+> d-depuis s-svg2, 😳😳😳 [`<gwyph>`](/fw/docs/web/svg/ewement/gwyph) est dépwécié e-et nye doit pwus êtwe u-utiwisé.
 
-Pour un élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
+pouw un éwément [`<gwyph>`](/fw/docs/web/svg/ewement/gwyph), `d` e-est une chaîne de cawactèwes q-qui contient une séwie de commandes de twacé q-qui définissent wa fowme d-du contouw du gwyphe. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a h-hwef="/fw/docs/web/svg/content_type#stwing"><code>&wt;stwing&gt;</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Animable</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th scope="wow">animabwe</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Le point d'origine (situé aux coordonnées `0, 0`) correspond généralement au _coin en haut à gauche_ du contexte. Néanmoins, pour l'élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), l'origine se situe dans le coin en bas à gauche de son enveloppe.
+> [!note]
+> we point d'owigine (situé aux coowdonnées `0, >_< 0`) cowwespond g-généwawement au _coin e-en haut à gauche_ du contexte. 🥺 n-nyéanmoins, (ꈍᴗꈍ) p-pouw w'éwément [`<gwyph>`](/fw/docs/web/svg/ewement/gwyph), rawr x3 w-w'owigine se situe dans we coin en bas à gauche de son envewoppe. (U ﹏ U)
 
-## `<missing-glyph>`
+## `<missing-gwyph>`
 
-> [!WARNING]
-> Depuis SVG2, [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph) est déprécié et ne doit plus être utilisé.
+> [!wawning]
+> d-depuis svg2, ( ͡o ω ͡o ) [`<missing-gwyph>`](/fw/docs/web/svg/ewement/missing-gwyph) est dépwécié et nye doit pwus êtwe utiwisé. 😳😳😳
 
-Pour un élément [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
+p-pouw un éwément [`<missing-gwyph>`](/fw/docs/web/svg/ewement/missing-gwyph), 🥺 `d` est une c-chaîne de cawactèwes q-qui contient u-une séwie de commandes de t-twacé qui définissent w-wa fowme d-du contouw du g-gwyphe. òωó
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a hwef="/fw/docs/web/svg/content_type#stwing"><code>&wt;stwing&gt;</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Animable</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animabwe</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Utilisation comme propriété CSS
+## u-utiwisation c-comme pwopwiété css
 
-`d` est un attribut de présentation et peut donc être modifié à l'aide de CSS. La propriété peut prendre [`path()`](/fr/docs/Web/CSS/basic-shape/path) ou `none` comme valeur.
+`d` est un attwibut de pwésentation e-et peut donc êtwe modifié à w'aide de css. wa pwopwiété peut pwendwe [`path()`](/fw/docs/web/css/basic-shape/path) ou `none` c-comme vaweuw. XD
 
-Dans l'exemple qui suit, on illustre comment appliquer un nouveau tracé au survol d'un élément. Le nouveau tracé est le même que le précédent, mais ajoute une ligne sur le cœur.
+dans w'exempwe qui suit, XD on iwwustwe comment a-appwiquew un nyouveau t-twacé au s-suwvow d'un éwément. ( ͡o ω ͡o ) we nyouveau t-twacé est we même que we pwécédent, >w< m-mais a-ajoute une wigne suw we cœuw. mya
 
 ```css
-html,
-body,
+htmw, (ꈍᴗꈍ)
+body, -.-
 svg {
   height: 100%;
 }
 
-/* Ce tracé est affiché au survol */
-#svg_css_ex1:hover path {
+/* ce twacé est affiché au suwvow */
+#svg_css_ex1:hovew p-path {
   d: path(
-    "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
+    "m10,30 a-a20,20 0,0,1 50,30 a20,20 0,0,1 90,30 q-q90,60 50,90 q-q10,60 10,30 z m5,5 w90,90"
   );
 }
 ```
 
-```html
-<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg id="svg_css_ex1" v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,30
-       A 20,20 0,0,1 50,30
-       A 20,20 0,0,1 90,30
-       Q 90,60 50,90
-       Q 10,60 10,30 z
+    fiww="none"
+    s-stwoke="wed"
+    d-d="m 10,30
+       a 20,20 0,0,1 50,30
+       a 20,20 0,0,1 90,30
+       q 90,60 50,90
+       q 10,60 10,30 z
        " />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', (⑅˘꒳˘) '100%', (U ﹏ U) 200)}}
 
-## Commandes de tracé
+## c-commandes de twacé
 
-Les commandes de tracé sont des instructions qui définissent un tracé à dessiner. Chaque commande est composée d'une lettre de commande et de nombres qui représentent les paramètres de la commande.
+w-wes commandes d-de twacé sont des instwuctions q-qui définissent u-un twacé à dessinew. σωσ chaque c-commande est composée d'une wettwe de commande et de nyombwes qui wepwésentent w-wes pawamètwes d-de wa commande. :3
 
-SVG définit 6 types de commandes, pour un total de 20 commandes&nbsp;:
+svg définit 6 types de commandes, /(^•ω•^) p-pouw un t-totaw de 20 commandes&nbsp;:
 
-- `MoveTo` (commande de déplacement)&nbsp;: `M`, `m`
-- `LineTo` (commande pour tracer une ligne)&nbsp;: `L`, `l`, `H`, `h`, `V`, `v`
-- Courbe de Bézier cubique&nbsp;: `C`, `c`, `S`, `s`
-- Courbe de Bézier quadratique&nbsp;: `Q`, `q`, `T`, `t`
-- Courbe d'arc elliptique&nbsp;: `A`, `a`
-- `ClosePath` (commande pour fermer le tracé): `Z`, `z`
+- `moveto` (commande de dépwacement)&nbsp;: `m`, σωσ `m`
+- `wineto` (commande pouw twacew une wigne)&nbsp;: `w`, (U ᵕ U❁) `w`, 😳 `h`, `h`, `v`, ʘwʘ `v`
+- c-couwbe de béziew cubique&nbsp;: `c`, (⑅˘꒳˘) `c`, `s`, `s`
+- couwbe de béziew quadwatique&nbsp;: `q`, ^•ﻌ•^ `q`, `t`, nyaa~~ `t`
+- couwbe d'awc e-ewwiptique&nbsp;: `a`, XD `a`
+- `cwosepath` (commande pouw fewmew we twacé): `z`, /(^•ω•^) `z`
 
-> [!NOTE]
-> Les commandes sont sensibles à la casse&nbsp;; une commande en majuscule attend des positions absolues en arguments, alors qu'une commande en minuscule attend des points relatifs à la position actuelle du point.
+> [!note]
+> w-wes commandes s-sont sensibwes à wa casse&nbsp;; une commande en majuscuwe attend d-des positions a-absowues en awguments, (U ᵕ U❁) awows qu'une commande en minuscuwe attend d-des points wewatifs à wa position a-actuewwe du point. mya
 
-Il est toujours possible de spécifier une valeur négative en argument d'une commande&nbsp;:
+iw est toujouws possibwe de spécifiew u-une vaweuw nyégative en awgument d-d'une commande&nbsp;:
 
-- Des angles négatifs iront dans le sens inverse des aiguilles d'une montre
-- Des positions _absolues_ négatives `x` et `y` seront interprétées comme des coordonnées négatives
-- Pour les valeurs _relatives_, une valeur de `x` négative ira vers la gauche, et une valeur de `y` négative ira vers le haut.
+- d-des angwes nyégatifs i-iwont dans we sens invewse des a-aiguiwwes d'une m-montwe
+- des p-positions _absowues_ nyégatives `x` e-et `y` sewont i-intewpwétées comme des coowdonnées négatives
+- p-pouw wes vaweuws _wewatives_, (ˆ ﻌ ˆ)♡ u-une vaweuw de `x` n-nyégative iwa vews wa gauche, (✿oωo) et une vaweuw d-de `y` négative iwa vews we h-haut. (✿oωo)
 
-### `MoveTo` (déplacement)
+### `moveto` (dépwacement)
 
-Cette instruction peut être vue comme un déplacement du pinceau à une position donnée sans rien tracer. Autrement dit, on déplace _le point courant_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) et on ne trace pas de ligne entre _P<sub>o</sub>_ et le nouveau _point courant_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}).
+c-cette instwuction peut êtwe vue comme un dépwacement du pinceau à u-une position d-donnée sans w-wien twacew. òωó a-autwement dit, (˘ω˘) on dépwace _we point c-couwant_ (_p<sub>o</sub>_; {_x<sub>o</sub>_, (ˆ ﻌ ˆ)♡ _y<sub>o</sub>_}) et on ne twace pas de wigne entwe _p<sub>o</sub>_ et we nyouveau _point couwant_ (_p<sub>n</sub>_; {_x<sub>n</sub>_, ( ͡o ω ͡o ) _y<sub>n</sub>_}). rawr x3
 
-Une bonne pratique consiste à commencer tous ses chemins par une instruction `MoveTo` car, sans un positionnement initial, les instructions du chemin commenceront à un point quelconque, ce qui peut donner des résultats non désirés.
+u-une bonne pwatique c-consiste à commencew tous ses chemins p-paw une instwuction `moveto` caw, (˘ω˘) sans un p-positionnement initiaw, òωó wes instwuctions d-du chemin c-commencewont à u-un point quewconque, ( ͡o ω ͡o ) c-ce qui p-peut donnew des wésuwtats non désiwés. σωσ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="col">Commande</th>
-      <th scope="col">Paramètres</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">M</th>
+    <tw>
+      <th scope="cow">commande</th>
+      <th scope="cow">pawamètwes</th>
+      <th scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th scope="wow">m</th>
       <td>
-        (<code><var>x</var></code>, <code><var>y</var></code>)+
+        (<code><vaw>x</vaw></code>, (U ﹏ U) <code><vaw>y</vaw></code>)+
       </td>
       <td>
         <p>
-          Déplace <em>le point courant</em> aux coordonnées <code><var>x</var></code>,<code><var>y</var></code>. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres absolus fournis à une commande <code>LineTo</code> (<code>L</code>) implicite (voir ci-après).
+          dépwace <em>we p-point c-couwant</em> a-aux coowdonnées <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. rawr wes éventuewwes p-paiwes de coowdonnées qui suivent sont intewpwétées comme d-des pawamètwes a-absowus fouwnis à une commande <code>wineto</code> (<code>w</code>) i-impwicite (voiw ci-apwès).
         </p>
         <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>n</sub></var> = {<code><var>x</var></code>, <code><var>y</var></code>}
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>n</sub></vaw> = {<code><vaw>x</vaw></code>, -.- <code><vaw>y</vaw></code>}
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">m</th>
+    </tw>
+    <tw>
+      <th scope="wow">m</th>
       <td>
-        (<code><var>dx</var></code>, <code><var>dy</var></code>)+
+        (<code><vaw>dx</vaw></code>, ( ͡o ω ͡o ) <code><vaw>dy</vaw></code>)+
       </td>
       <td>
         <p>
-          Déplace <em>le point courant</em> en décalant la dernière position connue du tracé de <code><var>dx</var></code> sur l'axe horizontal et de <code><var>dy</var></code> sur l'axe vertical. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres relatifs fournis à une commande <code>LineTo</code> (<code>l</code>) implicite (voir ci-après).
+          d-dépwace <em>we p-point couwant</em> e-en décawant wa d-dewnièwe position connue du twacé de <code><vaw>dx</vaw></code> suw w'axe howizontaw et de <code><vaw>dy</vaw></code> s-suw w'axe v-vewticaw. >_< wes éventuewwes p-paiwes d-de coowdonnées q-qui suivent sont intewpwétées c-comme des pawamètwes w-wewatifs fouwnis à une c-commande <code>wineto</code> (<code>w</code>) i-impwicite (voiw ci-apwès). o.O
         </p>
         <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var>+ <code><var>dx</var></code>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>}
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw>+ <code><vaw>dx</vaw></code>, σωσ <vaw>y<sub>o</sub></vaw> + <code><vaw>dy</vaw></code>}
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Exemples
+#### e-exempwes
 
 ```css hidden
-html,
+htmw, -.-
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,10 h 10
+    f-fiww="none"
+    stwoke="wed"
+    d-d="m 10,10 h 10
+       m  0,10 h 10
+       m-m  0,10 h 10
+       m-m 40,20 h-h 10
        m  0,10 h 10
        m  0,10 h 10
-       M 40,20 h 10
        m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
+       m-m 50,50 h 10
        m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" />
+       m-m-20,10 h 10
+       m-m-20,10 h 10" />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', σωσ '100%', 200)}}
 
-### `LineTo` (tracé d'une ligne)
+### `wineto` (twacé d'une w-wigne)
 
-Les instructions `LineTo` permettent de dessiner une ligne droite à partir du _point courant_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>_}) et jusqu'au _point final_ (_P<sub>n</sub>_; {_x<sub>n</sub>_, _y<sub>n</sub>_}), selon les paramètres indiqués. _Le point final_ (_P<sub>n</sub>_) devient alors _le point courant_ pour la prochaine commande (_P<sub>o</sub>′_).
+wes instwuctions `wineto` p-pewmettent d-de dessinew une wigne dwoite à pawtiw du _point c-couwant_ (_p<sub>o</sub>_; {_x<sub>o</sub>_, :3 _y<sub>o</sub>_}) et jusqu'au _point finaw_ (_p<sub>n</sub>_; {_x<sub>n</sub>_, ^^ _y<sub>n</sub>_}), òωó s-sewon wes pawamètwes i-indiqués. (ˆ ﻌ ˆ)♡ _we point finaw_ (_p<sub>n</sub>_) d-devient awows _we point couwant_ p-pouw wa pwochaine c-commande (_p<sub>o</sub>′_). XD
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="col">Commande</th>
-      <th scope="col">Paramètres</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">L</th>
-      <td>(<code>x</code>, <code>y</code>)+</td>
+    <tw>
+      <th scope="cow">commande</th>
+      <th scope="cow">pawamètwes</th>
+      <th scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th scope="wow">w</th>
+      <td>(<code>x</code>, òωó <code>y</code>)+</td>
       <td>
-        <p>Dessine une ligne à partir du <em>point courant</em> jusqu'au <em>point final</em> indiqué par <code><var>x</var></code>,<code><var>y</var></code>. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour une commande <code>LineTo</code> absolue (<code>L</code>) implicite.
+        <p>dessine une wigne à pawtiw du <em>point couwant</em> jusqu'au <em>point finaw</em> indiqué paw <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. (ꈍᴗꈍ) wes éventuewwes paiwes de coowdonnées q-qui suivent s-sont intewpwétées comme des pawamètwes pouw u-une commande <code>wineto</code> a-absowue (<code>w</code>) i-impwicite. UwU
         </p>
         <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code><var>x</var></code>, <code><var>y</var></code>}
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<code><vaw>x</vaw></code>, >w< <code><vaw>y</vaw></code>}
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">l</th>
+    </tw>
+    <tw>
+      <th scope="wow">w</th>
       <td>
-        (<code><var>dx</var></code>, <code><var>dy</var></code>)+
-      </td>
-      <td>
-        <p>
-          Dessine une ligne à partir du <em>point courant</em> jusqu'au <em>point final</em>, déterminé par le décalage horizontal <code><var>dx</var></code> et le décalage vertical <code><var>dy</var></code> du <em>point courant</em>. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour une commande <code>LineTo</code> relative (<code>l</code>) implicite.
-        </p>
-        <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx</var></code>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>}
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">H</th>
-      <td>
-        <code><var>x</var></code>+
+        (<code><vaw>dx</vaw></code>, ʘwʘ <code><vaw>dy</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une ligne horizontale à partir du <em>point courant</em> et jusqu'au <em>point final</em>, déterminé par la coordonnée <code><var>x</var></code> fournie en paramètre et l'ordonnée <code>y</code> du <em>point courant</em>. Les éventuelles valeurs suivantes sont interprétées comme des paramètres pour des appels <code>LineTo</code> (<code>H</code>) implicites.
+          dessine u-une wigne à pawtiw du <em>point c-couwant</em> j-jusqu'au <em>point finaw</em>, :3 d-détewminé paw we décawage h-howizontaw <code><vaw>dx</vaw></code> e-et we décawage vewticaw <code><vaw>dy</vaw></code> du <em>point c-couwant</em>. ^•ﻌ•^ w-wes éventuewwes p-paiwes de c-coowdonnées qui s-suivent sont intewpwétées c-comme d-des pawamètwes p-pouw une commande <code>wineto</code> w-wewative (<code>w</code>) impwicite. (ˆ ﻌ ˆ)♡
         </p>
         <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code><var>x</var></code>, <var>y<sub>o</sub></var>}
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx</vaw></code>, 🥺 <vaw>y<sub>o</sub></vaw> + <code><vaw>dy</vaw></code>}
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">h</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">h</th>
       <td>
-        <code><var>dx</var></code>+
-      </td>
-      <td>
-        <p>
-          Dessine une ligne horizontale à partir du <em>point courant</em>, jusqu'au <em>point final</em> dont l'abscisse est celle du point courant décalée de <code><var>dx</var></code> et dont l'ordonnée est celle du point courant. Les éventuelles valeurs suivantes sont interprétées comme des paramètres pour des appels <code>LineTo</code> (<code>h</code>) implicites.
-        </p>
-        <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx</var></code>, <var>y<sub>o</sub></var>}
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">V</th>
-      <td>
-        <code><var>y</var></code>+
+        <code><vaw>x</vaw></code>+
       </td>
       <td>
         <p>
-          Dessine une ligne verticale à partir du <em>point courant</em>, jusqu'au <em>point final</em>, dont l'ordonnée est indiquée par le paramètre <code><var>y</var></code> et dont l'abscisse est celle du point courant. Les éventuelles valeurs suivantes sont interprétées comme des paramètres pour des appels <code>LineTo</code> (<code>V</code>) implicites.
+          d-dessine u-une wigne howizontawe à pawtiw d-du <em>point couwant</em> et jusqu'au <em>point f-finaw</em>, OwO détewminé paw w-wa coowdonnée <code><vaw>x</vaw></code> f-fouwnie e-en pawamètwe et w'owdonnée <code>y</code> du <em>point c-couwant</em>. 🥺 wes éventuewwes v-vaweuws suivantes sont i-intewpwétées comme des pawamètwes p-pouw des appews <code>wineto</code> (<code>h</code>) impwicites. OwO
         </p>
         <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var>, <code><var>y</var></code>}
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<code><vaw>x</vaw></code>, (U ᵕ U❁) <vaw>y<sub>o</sub></vaw>}
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">v</th>
+    </tw>
+    <tw>
+      <th scope="wow">h</th>
       <td>
-        <code><var>dy</var></code>+
+        <code><vaw>dx</vaw></code>+
       </td>
       <td>
         <p>
-          Dessine une ligne verticale à partir du <em>point courant</em>, jusqu'au <em>point final</em> dont l'ordonnée est celle du point courant décalée de <code><var>dy</var></code> et dont l'abscisse est celle du point courant. Les éventuelles valeurs suivantes sont interprétées comme des paramètres pour des appels <code>LineTo</code> (<code>v</code>) implicites.
+          dessine une wigne h-howizontawe à pawtiw du <em>point c-couwant</em>, ( ͡o ω ͡o ) j-jusqu'au <em>point finaw</em> dont w'abscisse est cewwe du point c-couwant décawée de <code><vaw>dx</vaw></code> e-et dont w'owdonnée e-est cewwe d-du point couwant. ^•ﻌ•^ wes éventuewwes vaweuws suivantes s-sont intewpwétées c-comme des pawamètwes p-pouw des appews <code>wineto</code> (<code>h</code>) impwicites. o.O
         </p>
         <p>
-          <strong>Formule&nbsp;:</strong> <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>}
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx</vaw></code>, (⑅˘꒳˘) <vaw>y<sub>o</sub></vaw>}
         </p>
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">v</th>
+      <td>
+        <code><vaw>y</vaw></code>+
+      </td>
+      <td>
+        <p>
+          d-dessine une wigne vewticawe à p-pawtiw du <em>point c-couwant</em>, (ˆ ﻌ ˆ)♡ j-jusqu'au <em>point finaw</em>, :3 d-dont w'owdonnée e-est indiquée p-paw we pawamètwe <code><vaw>y</vaw></code> e-et dont w'abscisse e-est cewwe du point c-couwant. /(^•ω•^) wes éventuewwes v-vaweuws s-suivantes s-sont intewpwétées c-comme des pawamètwes p-pouw des a-appews <code>wineto</code> (<code>v</code>) impwicites. òωó
+        </p>
+        <p>
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw>, :3 <code><vaw>y</vaw></code>}
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">v</th>
+      <td>
+        <code><vaw>dy</vaw></code>+
+      </td>
+      <td>
+        <p>
+          d-dessine une wigne vewticawe à p-pawtiw du <em>point couwant</em>, (˘ω˘) j-jusqu'au <em>point f-finaw</em> d-dont w'owdonnée est cewwe du point couwant décawée de <code><vaw>dy</vaw></code> e-et dont w'abscisse e-est cewwe d-du point couwant. 😳 wes éventuewwes vaweuws suivantes sont intewpwétées c-comme d-des pawamètwes pouw des appews <code>wineto</code> (<code>v</code>) i-impwicites. σωσ
+        </p>
+        <p>
+          <stwong>fowmuwe&nbsp;:</stwong> <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw>, UwU <vaw>y<sub>o</sub></vaw> + <code><vaw>dy</vaw></code>}
+        </p>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Exemples
+#### e-exempwes
 
 ```css hidden
-html,
+htmw, -.-
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Commandes LineTo avec coordonnées absolues -->
+```htmw
+<svg v-viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- c-commandes w-wineto avec coowdonnées absowues -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,10
-           L 90,90
-           V 10
-           H 50" />
+    fiww="none"
+    s-stwoke="wed"
+    d-d="m 10,10
+           w 90,90
+           v 10
+           h 50" />
 
-  <!-- Commandes LineTo avec coordonnées relatives -->
+  <!-- c-commandes wineto avec coowdonnées wewatives -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 110,10
-           l 80,80
+    f-fiww="none"
+    stwoke="wed"
+    d-d="m 110,10
+           w-w 80,80
            v -80
-           h -40" />
+           h-h -40" />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', 🥺 '100%', 200)}}
 
-### Courbes de Bézier cubiques
+### c-couwbes de béziew cubiques
 
-[Les courbes de Bézier](/fr/docs/Glossary/Bezier_curve) définissent des courbes douces à l'aide de quatre points&nbsp;:
+[wes c-couwbes de béziew](/fw/docs/gwossawy/beziew_cuwve) d-définissent des c-couwbes douces à w-w'aide de quatwe p-points&nbsp;:
 
-- Le point de départ (le point courant)
-  - : (_P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_})
-- Le point final
-  - : (_P<sub>n</sub>_ = {_x<sub>n</sub>_, _y<sub>n</sub>_})
-- Le point de contrôle initial
-  - : (_P<sub>cs</sub>_ = {_x<sub>cs</sub>_, _y<sub>cs</sub>_})
-    (il contrôle la courbure au début de la courbe)
-- Le point de contrôle final
-  - : (_P<sub>ce</sub>_ = {_x<sub>ce</sub>_, _y<sub>ce</sub>_})
-    (il contrôle la courbure vers la fin de la courbe)
+- we point d-de dépawt (we point c-couwant)
+  - : (_p<sub>o</sub>_ = {_x<sub>o</sub>_, 😳😳😳 _y<sub>o</sub>_})
+- w-we point finaw
+  - : (_p<sub>n</sub>_ = {_x<sub>n</sub>_, 🥺 _y<sub>n</sub>_})
+- w-we point de contwôwe initiaw
+  - : (_p<sub>cs</sub>_ = {_x<sub>cs</sub>_, ^^ _y<sub>cs</sub>_})
+    (iw c-contwôwe wa couwbuwe a-au début d-de wa couwbe)
+- we point de contwôwe finaw
+  - : (_p<sub>ce</sub>_ = {_x<sub>ce</sub>_, ^^;; _y<sub>ce</sub>_})
+    (iw contwôwe wa couwbuwe vews w-wa fin de wa couwbe)
 
-Après le tracé, _le point final_ (_P<sub>n</sub>_) devient _le point courant_ pour la prochaine commande (_P<sub>o</sub>′_).
+apwès we t-twacé, >w< _we point f-finaw_ (_p<sub>n</sub>_) devient _we point couwant_ p-pouw wa pwochaine commande (_p<sub>o</sub>′_). σωσ
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="col">Commande</th>
-      <th scope="col">Paramètres</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">C</th>
+    <tw>
+      <th s-scope="cow">commande</th>
+      <th s-scope="cow">pawamètwes</th>
+      <th s-scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">c</th>
       <td>
-        (<code><var>x1</var></code>,<code><var>y1</var></code>, <code><var>x2</var></code>,<code><var>y2</var></code>, <code><var>x</var></code>,<code><var>y</var></code>)+
+        (<code><vaw>x1</vaw></code>,<code><vaw>y1</vaw></code>, >w< <code><vaw>x2</vaw></code>,<code><vaw>y2</vaw></code>, (⑅˘꒳˘) <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une courbe de Bézier cubique à partir du <em>point courant</em> jusqu'au <em>point final</em> indiqué par <code><var>x</var></code>,<code><var>y</var></code>. Le <em>point de contrôle initial</em> est indiqué par les paramètres <code><var>x1</var></code>,<code><var>y1</var></code>, et le <em>point de contrôle final</em> est indiqué par <code><var>x2</var></code>,<code><var>y2</var></code>. Les éventuels triplets de paires de coordonnées sont interprétés comme des paramètres pour des appels implicites à une commande de courbe de Bézier cubique (<code>C</code>) absolue.
+          d-dessine une couwbe de béziew cubique à pawtiw du <em>point couwant</em> j-jusqu'au <em>point finaw</em> i-indiqué paw <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. òωó we <em>point de contwôwe initiaw</em> est indiqué p-paw wes pawamètwes <code><vaw>x1</vaw></code>,<code><vaw>y1</vaw></code>, (⑅˘꒳˘) et we <em>point de contwôwe finaw</em> est indiqué paw <code><vaw>x2</vaw></code>,<code><vaw>y2</vaw></code>. (ꈍᴗꈍ) w-wes éventuews t-twipwets de paiwes de coowdonnées s-sont intewpwétés comme des pawamètwes pouw d-des appews impwicites à u-une commande de couwbe d-de béziew cubique (<code>c</code>) absowue. rawr x3
         </p>
-        <dl>
-          <dt>Formules&nbsp;:</dt>
+        <dw>
+          <dt>fowmuwes&nbsp;:</dt>
           <dd>
-            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code><var>x</var></code>, <code><var>y</var></code>} ;<br /><var>P<sub>cs</sub></var> = {<code><var>x1</var></code>, <code><var>y1</var></code>} ;<br /><var>P<sub>ce</sub></var> = {<code><var>x2</var></code>, <code><var>y2</var></code>}
+            <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<code><vaw>x</vaw></code>, ( ͡o ω ͡o ) <code><vaw>y</vaw></code>} ;<bw /><vaw>p<sub>cs</sub></vaw> = {<code><vaw>x1</vaw></code>, UwU <code><vaw>y1</vaw></code>} ;<bw /><vaw>p<sub>ce</sub></vaw> = {<code><vaw>x2</vaw></code>, <code><vaw>y2</vaw></code>}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">c</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">c</th>
       <td>
-        (<code><var>dx1</var></code>,<code><var>dy1</var></code>, <code><var>dx2</var></code>,<code><var>dy2</var></code>, <code><var>dx</var></code>,<code><var>dy</var></code>)+
+        (<code><vaw>dx1</vaw></code>,<code><vaw>dy1</vaw></code>, ^^ <code><vaw>dx2</vaw></code>,<code><vaw>dy2</vaw></code>, (˘ω˘) <code><vaw>dx</vaw></code>,<code><vaw>dy</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une courbe de Bézier cubique à partir du <em>point courant</em>, jusqu'au <em>point final</em>, déterminé par le décalage horizontal <code><var>dx</var></code> et le décalage vertical <code><var>dy</var></code> du point courant. Le <em>point de contrôle initial</em> correspond au <em>point courant</em> (le point de départ de la courbe) décalé de <code><var>dx1</var></code> sur l'axe horizontal et de <code><var>dy1</var></code> sur l'axe vertical. Le <em>point de contrôle final</em> correspond au <em>point courant</em> (le point de départ de la courbe) décalé de <code><var>dx2</var></code> le long de l'axe horizontal et de <code><var>dy2</var></code> le long de l'axe vertical. Les éventuels triplets de paires de coordonnées sont interprétés comme des paramètres pour des appels implicites à une commande de courbe de Bézier cubique (<code>c</code>) relative.
+          dessine une couwbe de béziew cubique à pawtiw d-du <em>point couwant</em>, jusqu'au <em>point finaw</em>, (ˆ ﻌ ˆ)♡ détewminé p-paw we d-décawage howizontaw <code><vaw>dx</vaw></code> e-et we décawage vewticaw <code><vaw>dy</vaw></code> du point couwant. OwO w-we <em>point de contwôwe initiaw</em> cowwespond au <em>point couwant</em> (we p-point de dépawt d-de wa couwbe) d-décawé de <code><vaw>dx1</vaw></code> s-suw w'axe howizontaw et de <code><vaw>dy1</vaw></code> s-suw w'axe vewticaw. 😳 w-we <em>point de contwôwe finaw</em> cowwespond a-au <em>point couwant</em> (we point de dépawt d-de wa couwbe) décawé de <code><vaw>dx2</vaw></code> we w-wong de w'axe howizontaw e-et de <code><vaw>dy2</vaw></code> we wong d-de w'axe vewticaw. UwU w-wes éventuews t-twipwets de paiwes de coowdonnées sont intewpwétés c-comme des pawamètwes pouw des appews i-impwicites à une commande de couwbe de béziew cubique (<code>c</code>) w-wewative. 🥺
         </p>
-        <dl>
-          <dt>Formules&nbsp;:</dt>
+        <dw>
+          <dt>fowmuwes&nbsp;:</dt>
           <dd>
-            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx</var></code>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>} ;<br /><var>P<sub>cs</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx1</var></code>, <var>y<sub>o</sub></var> + <code><var>dy1</var></code>} ;<br /><var>P<sub>ce</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx2</var></code>, <var>y<sub>o</sub></var> + <code><var>dy2</var></code>}
+            <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx</vaw></code>, 😳😳😳 <vaw>y<sub>o</sub></vaw> + <code><vaw>dy</vaw></code>} ;<bw /><vaw>p<sub>cs</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx1</vaw></code>, ʘwʘ <vaw>y<sub>o</sub></vaw> + <code><vaw>dy1</vaw></code>} ;<bw /><vaw>p<sub>ce</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx2</vaw></code>, /(^•ω•^) <vaw>y<sub>o</sub></vaw> + <code><vaw>dy2</vaw></code>}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">S</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">s</th>
       <td>
-        (<code><var>x2</var></code>,<code><var>y2</var></code>, <code><var>x</var></code>,<code><var>y</var></code>)+
-      </td>
-      <td>
-        Dessine une courbe de Bézier lisse allant du <em>point courant</em> au <em>point final</em> indiqué par les coordonnées <code><var>x</var></code>,<code><var>y</var></code>. Le <em>point de contrôle final</em> est indiqué par <code><var>x2</var></code>,<code><var>y2</var></code>. Le <em>point de contrôle initial</em> est le symétrique du <em>point de contrôle final</em> de la précédente commande de courbe par rapport au <em>point courant</em>. Si la commande précédente n'était pas une courbe de Bézier cubique, le <em>point de contrôle initial</em> correspondra au point de départ de la courbe (c'est-à-dire le point courant). Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour des commandes de courbe de Bézier cubique lisse absolue (<code>S</code>) implicites.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">s</th>
-      <td>
-        (<code><var>dx2</var></code>,<code><var>dy2</var></code>, <code><var>dx</var></code>,<code><var>dy</var></code>)+
+        (<code><vaw>x2</vaw></code>,<code><vaw>y2</vaw></code>, :3 <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>)+
       </td>
       <td>
-        Dessine une courbe de Bézier cubique lisse allant du <em>point courant</em> au <em>point final</em>, qui est déterminé par le décalage du <em>point courant</em> de <code><var>dx</var></code> sur l'axe horizontal et de <code><var>dy</var></code> sur l'axe vertical. Le <em>point de contrôle final</em> correspond au <em>point courant</em> (le point de départ de la courbe) décalé de <code><var>dx2</var></code> sur l'axe horizontal et décalé de <code><var>dy2</var></code> le long de l'axe vertical. Le <em>point de contrôle initial</em> est le symétrique du <em>point de contrôle final</em> de la commande de courbe précédente par rapport au <em>point courant</em>. Si la commande précédente n'était pas une courbe de Bézier cubique, le <em>point de contrôle initial</em> correspondra au point de départ de la courbe (<em>point courant</em>). Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour des commandes de courbe de Bézier cubique lisse relative (<code>s</code>) implicites.
+        d-dessine une c-couwbe de béziew w-wisse awwant du <em>point couwant</em> a-au <em>point finaw</em> indiqué paw w-wes coowdonnées <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. :3 we <em>point d-de contwôwe finaw</em> est indiqué paw <code><vaw>x2</vaw></code>,<code><vaw>y2</vaw></code>. mya w-we <em>point d-de contwôwe initiaw</em> est we s-symétwique du <em>point de contwôwe f-finaw</em> d-de wa pwécédente commande de c-couwbe paw wappowt a-au <em>point couwant</em>. (///ˬ///✿) si w-wa commande pwécédente n'était pas une couwbe de béziew cubique, (⑅˘꒳˘) w-we <em>point de contwôwe i-initiaw</em> cowwespondwa au point de dépawt de w-wa couwbe (c'est-à-diwe w-we point c-couwant). wes éventuewwes paiwes de coowdonnées q-qui suivent s-sont intewpwétées comme des p-pawamètwes pouw des commandes de c-couwbe de béziew cubique wisse a-absowue (<code>s</code>) i-impwicites. :3
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">s</th>
+      <td>
+        (<code><vaw>dx2</vaw></code>,<code><vaw>dy2</vaw></code>, /(^•ω•^) <code><vaw>dx</vaw></code>,<code><vaw>dy</vaw></code>)+
+      </td>
+      <td>
+        dessine une couwbe de béziew cubique wisse a-awwant du <em>point c-couwant</em> au <em>point finaw</em>, ^^;; qui est détewminé p-paw we décawage du <em>point couwant</em> d-de <code><vaw>dx</vaw></code> s-suw w'axe howizontaw et de <code><vaw>dy</vaw></code> suw w'axe vewticaw. (U ᵕ U❁) we <em>point d-de contwôwe finaw</em> cowwespond au <em>point c-couwant</em> (we point de dépawt d-de wa couwbe) d-décawé de <code><vaw>dx2</vaw></code> suw w'axe h-howizontaw et d-décawé de <code><vaw>dy2</vaw></code> w-we wong d-de w'axe vewticaw. (U ﹏ U) w-we <em>point d-de contwôwe initiaw</em> est we symétwique du <em>point de contwôwe finaw</em> de wa commande d-de couwbe pwécédente p-paw wappowt a-au <em>point c-couwant</em>. mya s-si wa commande pwécédente n-ny'était pas une couwbe de béziew cubique, ^•ﻌ•^ we <em>point de contwôwe i-initiaw</em> c-cowwespondwa au point de dépawt de wa couwbe (<em>point couwant</em>). (U ﹏ U) w-wes éventuewwes p-paiwes d-de coowdonnées qui suivent sont intewpwétées c-comme des pawamètwes pouw des commandes de couwbe d-de béziew cubique w-wisse wewative (<code>s</code>) impwicites. :3
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Exemples
+#### exempwes
 
-```css hidden
-html,
+```css h-hidden
+htmw, rawr x3
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 200 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Courbe de Bézier cubique avec des coordonnées absolues -->
+  v-viewbox="0 0 200 100"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- couwbe de béziew c-cubique avec d-des coowdonnées a-absowues -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,90
-           C 30,90 25,10 50,10
-           S 70,90 90,90" />
+    f-fiww="none"
+    s-stwoke="wed"
+    d-d="m 10,90
+           c 30,90 25,10 50,10
+           s-s 70,90 90,90" />
 
-  <!-- Courbe de Bézier cubique avec des coordonnées relatives -->
+  <!-- c-couwbe de béziew cubique a-avec des coowdonnées wewatives -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 110,90
-           c 20,0 15,-80 40,-80
+    fiww="none"
+    s-stwoke="wed"
+    d="m 110,90
+           c-c 20,0 15,-80 40,-80
            s 20,80 40,80" />
 
-  <!-- Met en évidence le sommet de la courbe et les points de contrôle -->
-  <g id="ControlPoints">
-    <!-- Points de contrôles initiaux -->
-    <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
-    <circle cx="30" cy="90" r="1.5" />
+  <!-- m-met en évidence w-we sommet de wa couwbe et wes points de c-contwôwe -->
+  <g id="contwowpoints">
+    <!-- points de contwôwes i-initiaux -->
+    <wine x-x1="10" y1="90" x2="30" y2="90" stwoke="wightgwey" />
+    <ciwcwe c-cx="30" c-cy="90" w="1.5" />
 
-    <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
-    <circle cx="25" cy="10" r="1.5" />
+    <wine x1="50" y1="10" x-x2="25" y2="10" stwoke="wightgwey" />
+    <ciwcwe cx="25" cy="10" w-w="1.5" />
 
-    <!-- Deuxième ensemble de points de contrôle (où le premier est implicite) -->
-    <line
+    <!-- d-deuxième ensembwe de p-points de contwôwe (où w-we pwemiew est impwicite) -->
+    <wine
       x1="50"
-      y1="10"
-      x2="75"
-      y2="10"
-      stroke="lightgrey"
-      stroke-dasharray="2" />
-    <circle cx="75" cy="10" r="1.5" fill="lightgrey" />
+      y-y1="10"
+      x-x2="75"
+      y-y2="10"
+      s-stwoke="wightgwey"
+      stwoke-dashawway="2" />
+    <ciwcwe cx="75" cy="10" w="1.5" fiww="wightgwey" />
 
-    <line x1="90" y1="90" x2="70" y2="90" stroke="lightgrey" />
-    <circle cx="70" cy="90" r="1.5" />
+    <wine x1="90" y1="90" x2="70" y2="90" s-stwoke="wightgwey" />
+    <ciwcwe c-cx="70" cy="90" w-w="1.5" />
 
-    <!-- Sommets de la courbe -->
-    <circle cx="10" cy="90" r="1.5" />
-    <circle cx="50" cy="10" r="1.5" />
-    <circle cx="90" cy="90" r="1.5" />
+    <!-- s-sommets d-de wa couwbe -->
+    <ciwcwe c-cx="10" cy="90" w="1.5" />
+    <ciwcwe c-cx="50" cy="10" w-w="1.5" />
+    <ciwcwe cx="90" c-cy="90" w="1.5" />
   </g>
-  <use href="#ControlPoints" x="100" />
+  <use h-hwef="#contwowpoints" x="100" />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', 😳😳😳 '100%', 200)}}
 
-### Courbe de Bézier quadratique
+### couwbe d-de béziew quadwatique
 
-_[Les courbes de Bézier quadratiques](/fr/docs/Glossary/Bezier_curve)_ définissent des courbes douces à l'aide de trois points&nbsp;:
+_[wes couwbes de béziew q-quadwatiques](/fw/docs/gwossawy/beziew_cuwve)_ définissent d-des couwbes douces à w-w'aide de twois points&nbsp;:
 
-- Le point de départ (point courant)
-  - : _P<sub>o</sub>_ = {_x<sub>o</sub>_, _y<sub>o</sub>_}
-- Le point final
-  - : _P<sub>n</sub>_ = {_x<sub>n</sub>_, _y<sub>n</sub>_}
-- Le point de contrôle
-  - : _P<sub>c</sub>_ = {_x<sub>c</sub>_, _y<sub>c</sub>_}
-    (qui contrôle la courbure)
+- w-we point d-de dépawt (point c-couwant)
+  - : _p<sub>o</sub>_ = {_x<sub>o</sub>_, >w< _y<sub>o</sub>_}
+- we point f-finaw
+  - : _p<sub>n</sub>_ = {_x<sub>n</sub>_, òωó _y<sub>n</sub>_}
+- w-we point de contwôwe
+  - : _p<sub>c</sub>_ = {_x<sub>c</sub>_, _y<sub>c</sub>_}
+    (qui c-contwôwe wa couwbuwe)
 
-Après le tracé, _le point final_ (_P<sub>n</sub>_) devient _le point courant_ de la prochaine commande (_P<sub>o</sub>′_).
+apwès we t-twacé, 😳 _we point f-finaw_ (_p<sub>n</sub>_) d-devient _we point couwant_ d-de wa pwochaine commande (_p<sub>o</sub>′_). (✿oωo)
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="col">Commande</th>
-      <th scope="col">Paramètres</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">Q</th>
+    <tw>
+      <th scope="cow">commande</th>
+      <th s-scope="cow">pawamètwes</th>
+      <th scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th scope="wow">q</th>
       <td>
-        (<code><var>x1</var></code>,<code><var>y1</var></code>, <code><var>x</var></code>,<code><var>y</var></code>)+
+        (<code><vaw>x1</vaw></code>,<code><vaw>y1</vaw></code>, OwO <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une courbe de Bézier quadratique à partir du <em>point courant</em> jusqu'au <em>point final</em> situé aux coordonnées <code><var>x</var></code>,<code><var>y</var></code>. Le <em>point de contrôle</em> est aux coordonnées <code><var>x1</var></code>,<code><var>y1</var></code>. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour des commandes de courbe de Bézier quadratique absolue (<code>Q</code>) implicites.
+          dessine une couwbe de béziew quadwatique à pawtiw du <em>point c-couwant</em> jusqu'au <em>point finaw</em> situé aux coowdonnées <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. (U ﹏ U) we <em>point de contwôwe</em> est aux coowdonnées <code><vaw>x1</vaw></code>,<code><vaw>y1</vaw></code>. (ꈍᴗꈍ) w-wes éventuewwes paiwes de coowdonnées qui s-suivent sont intewpwétées comme d-des pawamètwes pouw des commandes de couwbe d-de béziew quadwatique absowue (<code>q</code>) i-impwicites. rawr
         </p>
-        <dl>
-          <dt><strong>Formules&nbsp;:</strong></dt>
+        <dw>
+          <dt><stwong>fowmuwes&nbsp;:</stwong></dt>
           <dd>
-            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code><var>x</var></code>, <code><var>y</var></code>} ;<br /><var>P<sub>c</sub></var> = {<code><var>x1</var></code>, <code><var>y1</var></code>}
+            <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<code><vaw>x</vaw></code>, ^^ <code><vaw>y</vaw></code>} ;<bw /><vaw>p<sub>c</sub></vaw> = {<code><vaw>x1</vaw></code>, rawr <code><vaw>y1</vaw></code>}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">q</th>
+    </tw>
+    <tw>
+      <th scope="wow">q</th>
       <td>
-        (<code><var>dx1</var></code>,<code><var>dy1</var></code>, <code><var>dx</var></code>,<code><var>dy</var></code>)+
+        (<code><vaw>dx1</vaw></code>,<code><vaw>dy1</vaw></code>, nyaa~~ <code><vaw>dx</vaw></code>,<code><vaw>dy</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une courbe de Bézier quadratique à partir du <em>point courant</em> jusqu'au <em>point final</em>, calculé en décalant le <em>point courant</em> de <code><var>dx</var></code> sur l'axe horizontal et de <code><var>dy</var></code> sur l'axe vertical. Le <em>point de contrôle</em> correspond au <em>point courant</em> (le point de départ de la courbe) décalé de <code><var>dx1</var></code> le long de l'axe horizontal et de <code><var>dy1</var></code> le long de l'axe vertical. Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour des commandes de courbe de Bézier quadratique relative (<code>q</code>) implicites.
+          d-dessine u-une couwbe de béziew quadwatique à pawtiw d-du <em>point couwant</em> jusqu'au <em>point finaw</em>, nyaa~~ cawcuwé e-en décawant we <em>point couwant</em> d-de <code><vaw>dx</vaw></code> suw w'axe h-howizontaw et de <code><vaw>dy</vaw></code> suw w-w'axe vewticaw. o.O w-we <em>point de contwôwe</em> cowwespond au <em>point c-couwant</em> (we point de dépawt de wa c-couwbe) décawé de <code><vaw>dx1</vaw></code> we wong de w'axe howizontaw et de <code><vaw>dy1</vaw></code> we w-wong de w'axe vewticaw. òωó w-wes éventuewwes paiwes d-de coowdonnées q-qui suivent sont intewpwétées c-comme des pawamètwes pouw des commandes de couwbe de béziew quadwatique wewative (<code>q</code>) i-impwicites. ^^;;
         </p>
-        <dl>
-          <dt>Formules&nbsp;:</dt>
+        <dw>
+          <dt>fowmuwes&nbsp;:</dt>
           <dd>
-            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var>+ <code><var>dx</var></code>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>} ;<br /><var>P<sub>c</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx1</var></code>, <var>y<sub>o</sub></var> + <code><var>dy1</var></code>}
+            <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw>+ <code><vaw>dx</vaw></code>, rawr <vaw>y<sub>o</sub></vaw> + <code><vaw>dy</vaw></code>} ;<bw /><vaw>p<sub>c</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx1</vaw></code>, ^•ﻌ•^ <vaw>y<sub>o</sub></vaw> + <code><vaw>dy1</vaw></code>}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">T</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">t</th>
       <td>
-        (<code><var>x</var></code>,<code><var>y</var></code>)+
+        (<code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une courbe de Bézier quadratique lisse à partir du <em>point courant</em>, jusqu'au <em>point final</em> situé aux coordonnées <code><var>x</var></code>,<code><var>y</var></code>. Le <em>point de contrôle</em> est le symétrique du <em>point de contrôle</em> de la précédente commande de courbe par rapport au <em>point courant</em>. Si la commande précédente n'était pas une courbe de Bézier quadratique, le <em>point de contrôle</em> sera identique au point de départ de la courbe (c'est-à-dire le <em>point courant</em>). Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour des commandes de courbe de Bézier quadratique lisse absolue (<code>T</code>) implicites.
+          dessine une c-couwbe de béziew q-quadwatique wisse à pawtiw du <em>point c-couwant</em>, nyaa~~ jusqu'au <em>point finaw</em> s-situé aux coowdonnées <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. we <em>point d-de contwôwe</em> e-est we symétwique du <em>point de contwôwe</em> d-de wa pwécédente commande de couwbe paw wappowt au <em>point couwant</em>. nyaa~~ si wa commande pwécédente ny'était pas une c-couwbe de béziew q-quadwatique, 😳😳😳 we <em>point de contwôwe</em> s-sewa i-identique au point de dépawt d-de wa couwbe (c'est-à-diwe we <em>point couwant</em>). 😳😳😳 wes éventuewwes paiwes de coowdonnées q-qui suivent sont intewpwétées comme des pawamètwes pouw des commandes de couwbe d-de béziew quadwatique w-wisse a-absowue (<code>t</code>) impwicites. σωσ
         </p>
-        <dl>
-          <dt>Formula:</dt>
+        <dw>
+          <dt>fowmuwa:</dt>
           <dd>
-            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code><var>x</var></code>, <code><var>y</var></code>}
+            <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<code><vaw>x</vaw></code>, <code><vaw>y</vaw></code>}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">t</th>
+    </tw>
+    <tw>
+      <th scope="wow">t</th>
       <td>
-        (<code><var>dx</var></code>,<code><var>dy</var></code>)+
+        (<code><vaw>dx</vaw></code>,<code><vaw>dy</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine une courbe de Bézier quadratique lisse à partir du <em>point courant</em>, jusqu'au <em>point final</em> qui correspond au décalage du <em>point courant</em> de <code><var>dx</var></code> sur l'axe horizontal et de <code><var>dy</var></code> sur l'axe vertical. Le <em>point de contrôle</em> est le symétrique du <em>point de contrôle</em> de la précédente commande de courbe par rapport au <em>point courant</em>. Si la précédente commande n'était pas une courbe de Bézier quadratique, le <em>point de contrôle</em> correspondra alors au point de départ de la courbe (c'est-à-dire le <em>point courant</em>). Les éventuelles paires de coordonnées qui suivent sont interprétées comme des paramètres pour des commandes de courbe de Bézier quadratique lisse relative (<code>t</code>) implicites.
+          dessine u-une couwbe de b-béziew quadwatique w-wisse à pawtiw du <em>point c-couwant</em>, o.O jusqu'au <em>point finaw</em> qui c-cowwespond au décawage du <em>point c-couwant</em> de <code><vaw>dx</vaw></code> s-suw w'axe howizontaw et de <code><vaw>dy</vaw></code> suw w'axe v-vewticaw. σωσ we <em>point de contwôwe</em> e-est we s-symétwique du <em>point de contwôwe</em> d-de wa p-pwécédente commande de couwbe p-paw wappowt au <em>point couwant</em>. nyaa~~ s-si wa pwécédente commande n-ny'était pas u-une couwbe de béziew quadwatique, rawr x3 we <em>point d-de contwôwe</em> cowwespondwa awows au point de dépawt de wa couwbe (c'est-à-diwe we <em>point couwant</em>). (///ˬ///✿) wes éventuewwes p-paiwes de coowdonnées qui suivent sont intewpwétées c-comme des pawamètwes p-pouw des commandes de couwbe de béziew quadwatique w-wisse wewative (<code>t</code>) impwicites.
         </p>
-        <dl>
-          <dt>Formules&nbsp;:</dt>
+        <dw>
+          <dt>fowmuwes&nbsp;:</dt>
           <dd>
-            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> + <code><var>dx</var></code>, <var>y<sub>o</sub></var> + <code><var>dy</var></code>}
+            <vaw>p<sub>o</sub>′</vaw> = <vaw>p<sub>n</sub></vaw> = {<vaw>x<sub>o</sub></vaw> + <code><vaw>dx</vaw></code>, o.O <vaw>y<sub>o</sub></vaw> + <code><vaw>dy</vaw></code>}
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Exemples
+#### exempwes
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, òωó
+body, OwO
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 200 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Courbe de Bézier quadratique avec répétition implicite -->
+  viewbox="0 0 200 100"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- couwbe de béziew q-quadwatique avec wépétition impwicite -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,50
-           Q 25,25 40,50
-           t 30,0 30,0 30,0 30,0 30,0" />
+    f-fiww="none"
+    s-stwoke="wed"
+    d="m 10,50
+           q 25,25 40,50
+           t-t 30,0 30,0 30,0 30,0 30,0" />
 
-  <!-- Met en évidence le sommet de la courbe et les points de contrôle -->
+  <!-- m-met en évidence we sommet de wa c-couwbe et wes p-points de contwôwe -->
   <g>
-    <polyline
+    <powywine
       points="10,50 25,25 40,50"
-      stroke="rgb(0 0 0 / 20%)"
-      fill="none" />
-    <circle cx="25" cy="25" r="1.5" />
+      stwoke="wgb(0 0 0 / 20%)"
+      f-fiww="none" />
+    <ciwcwe cx="25" cy="25" w="1.5" />
 
-    <!-- Sommets de la courbe -->
-    <circle cx="10" cy="50" r="1.5" />
-    <circle cx="40" cy="50" r="1.5" />
+    <!-- sommets de wa c-couwbe -->
+    <ciwcwe cx="10" cy="50" w="1.5" />
+    <ciwcwe cx="40" cy="50" w="1.5" />
 
-    <g id="SmoothQuadraticDown">
-      <polyline
-        points="40,50 55,75 70,50"
-        stroke="rgb(0 0 0 / 20%)"
-        stroke-dasharray="2"
-        fill="none" />
-      <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
-      <circle cx="70" cy="50" r="1.5" />
+    <g i-id="smoothquadwaticdown">
+      <powywine
+        p-points="40,50 55,75 70,50"
+        s-stwoke="wgb(0 0 0 / 20%)"
+        stwoke-dashawway="2"
+        fiww="none" />
+      <ciwcwe cx="55" cy="75" w-w="1.5" fiww="wightgwey" />
+      <ciwcwe cx="70" c-cy="50" w="1.5" />
     </g>
 
-    <g id="SmoothQuadraticUp">
-      <polyline
-        points="70,50 85,25 100,50"
-        stroke="rgb(0 0 0 / 20%)"
-        stroke-dasharray="2"
-        fill="none" />
-      <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
-      <circle cx="100" cy="50" r="1.5" />
+    <g id="smoothquadwaticup">
+      <powywine
+        p-points="70,50 85,25 100,50"
+        s-stwoke="wgb(0 0 0 / 20%)"
+        stwoke-dashawway="2"
+        fiww="none" />
+      <ciwcwe cx="85" cy="25" w="1.5" fiww="wightgwey" />
+      <ciwcwe cx="100" cy="50" w-w="1.5" />
     </g>
 
-    <use href="#SmoothQuadraticDown" x="60" />
-    <use href="#SmoothQuadraticUp" x="60" />
-    <use href="#SmoothQuadraticDown" x="120" />
+    <use h-hwef="#smoothquadwaticdown" x="60" />
+    <use hwef="#smoothquadwaticup" x-x="60" />
+    <use hwef="#smoothquadwaticdown" x="120" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', σωσ '100%', 200)}}
 
-### Courbe d'arc elliptique
+### c-couwbe d'awc ewwiptique
 
-_Les courbes d'arc elliptique_ sont des courbes définies comme une portion d'ellipse. Certaines courbes régulières sont parfois plus facilement obtenues avec des portions d'ellipses qu'avec des courbes de Bézier.
+_wes c-couwbes d'awc ewwiptique_ s-sont des c-couwbes définies c-comme une powtion d-d'ewwipse. nyaa~~ cewtaines couwbes wéguwièwes s-sont pawfois pwus f-faciwement obtenues a-avec des p-powtions d'ewwipses q-qu'avec des c-couwbes de béziew. OwO
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="col">Commande</th>
-      <th scope="col">Paramètres</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">A</th>
+    <tw>
+      <th s-scope="cow">commande</th>
+      <th s-scope="cow">pawamètwes</th>
+      <th s-scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th scope="wow">a</th>
       <td>
-        (<code><var>rx</var></code> <code><var>ry</var></code> <code><var>angle</var></code> <code><var>large-arc-flag</var></code> <code><var>sweep-flag</var></code> <code><var>x</var></code> <code><var>y</var></code>)+
+        (<code><vaw>wx</vaw></code> <code><vaw>wy</vaw></code> <code><vaw>angwe</vaw></code> <code><vaw>wawge-awc-fwag</vaw></code> <code><vaw>sweep-fwag</vaw></code> <code><vaw>x</vaw></code> <code><vaw>y</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine un arc à partir du point courant jusqu'aux coordonnées <code><var>x</var></code>,<code><var>y</var></code>. Le centre de l'ellipse utilisé pour dessiner l'arc est déterminé automatiquement en fonction des paramètres de la commande&nbsp;:
+          dessine un a-awc à pawtiw du point couwant jusqu'aux coowdonnées <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code>. ^^ w-we centwe de w'ewwipse utiwisé pouw d-dessinew w'awc est d-détewminé automatiquement en fonction des pawamètwes de wa commande&nbsp;:
         </p>
-        <ul>
-          <li>
-            <code><var>rx</var></code> et <code><var>ry</var></code> sont les deux rayons de l'ellipse&nbsp;;
-          </li>
-          <li>
-            <code><var>angle</var></code> représente une rotation (exprimée en degrés) de l'ellipse par rapport à l'axe horizontal&nbsp;;
-          </li>
-          <li>
-            <code><var>large-arc-flag</var></code> et <code><var>sweep-flag</var></code> permettent de choisir l'arc à dessiner parmi les 4 arcs possibles.
-            <ul>
-              <li>
-                <code><var>large-arc-flag</var></code> permet de choisir entre le grand (<code>1</code>) ou le petit (<code>0</code>) arc,
-              </li>
-              <li>
-                <code><var>sweep-flag</var></code> permet de choisir entre l'arc dans le sens horaire (<code>1</code>) ou celui dans le sens anti-horaire (<code>0</code>)
-              </li>
-            </ul>
-          </li>
-        </ul>
-        Les coordonnées <code><var>x</var></code>,<code><var>y</var></code> sont celles du nouveau point courant pour la prochaine commande. Les éventuels paramètres suivants sont considérés comme des paramètres à passer à des commandes d'arc absolu (<code>A</code>) implicites.
+        <uw>
+          <wi>
+            <code><vaw>wx</vaw></code> e-et <code><vaw>wy</vaw></code> sont w-wes deux wayons de w'ewwipse&nbsp;;
+          </wi>
+          <wi>
+            <code><vaw>angwe</vaw></code> w-wepwésente une w-wotation (expwimée en degwés) de w'ewwipse paw wappowt à w'axe h-howizontaw&nbsp;;
+          </wi>
+          <wi>
+            <code><vaw>wawge-awc-fwag</vaw></code> e-et <code><vaw>sweep-fwag</vaw></code> pewmettent de choisiw w-w'awc à dessinew p-pawmi wes 4 awcs possibwes. (///ˬ///✿)
+            <uw>
+              <wi>
+                <code><vaw>wawge-awc-fwag</vaw></code> pewmet d-de choisiw entwe we gwand (<code>1</code>) ou we petit (<code>0</code>) awc,
+              </wi>
+              <wi>
+                <code><vaw>sweep-fwag</vaw></code> pewmet d-de choisiw entwe w'awc dans we sens howaiwe (<code>1</code>) o-ou c-cewui dans we sens a-anti-howaiwe (<code>0</code>)
+              </wi>
+            </uw>
+          </wi>
+        </uw>
+        wes c-coowdonnées <code><vaw>x</vaw></code>,<code><vaw>y</vaw></code> s-sont cewwes du n-nyouveau point c-couwant pouw wa p-pwochaine commande. σωσ wes éventuews pawamètwes s-suivants sont considéwés c-comme d-des pawamètwes à passew à des c-commandes d'awc a-absowu (<code>a</code>) i-impwicites. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">a</th>
+    </tw>
+    <tw>
+      <th scope="wow">a</th>
       <td>
-        (<code><var>rx</var></code> <code><var>ry</var></code> <code><var>angle</var></code> <code><var>large-arc-flag</var></code> <code><var>sweep-flag</var></code> <code><var>dx</var></code> <code><var>dy</var></code>)+
+        (<code><vaw>wx</vaw></code> <code><vaw>wy</vaw></code> <code><vaw>angwe</vaw></code> <code><vaw>wawge-awc-fwag</vaw></code> <code><vaw>sweep-fwag</vaw></code> <code><vaw>dx</vaw></code> <code><vaw>dy</vaw></code>)+
       </td>
       <td>
         <p>
-          Dessine un arc à partir du point courant jusqu'au point dont les coordonnées sont celles du point courant décalées de <code><var>dx</var></code> horizontalement et de <code><var>dy</var></code> verticalement. Le centre de l'ellipse utilisé pour dessiner l'arc est déterminé automatiquement en fonction des paramètres de la commande&nbsp;:
+          dessine u-un awc à pawtiw d-du point couwant j-jusqu'au point d-dont wes coowdonnées s-sont cewwes du point couwant d-décawées de <code><vaw>dx</vaw></code> h-howizontawement e-et de <code><vaw>dy</vaw></code> vewticawement. (ˆ ﻌ ˆ)♡ we centwe de w'ewwipse u-utiwisé pouw d-dessinew w'awc est détewminé a-automatiquement e-en fonction des pawamètwes de wa commande&nbsp;:
         </p>
-        <ul>
-          <li>
-            <code><var>rx</var></code> et <code><var>ry</var></code> sont les deux rayons de l'ellipse&nbsp;;
-          </li>
-          <li>
-            <code><var>angle</var></code> exprime la rotation (en degrés) de l'ellipse par rapport à l'axe horizontal&nbsp;;
-          </li>
-          <li>
-            <code><var>large-arc-flag</var></code> et <code><var>sweep-flag</var></code> permettent de choisir l'arc à dessiner parmi les 4 arcs possibles.
-            <ul>
-              <li>
-                <code><var>large-arc-flag</var></code> permet de choisir entre le grand (<code>1</code>) ou le petit (<code>0</code>) arc,
-              </li>
-              <li>
-                <code><var>sweep-flag</var></code> permet de choisir entre l'arc dans le sens horaire (<code>1</code>) ou celui dans le sens anti-horaire (<code>0</code>)
-              </li>
-            </ul>
-          </li>
-        </ul>
-        En prenant le point courant et en le décalant de <code><var>dx</var></code> et <code><var>dy</var></code> sur les axes respectifs, on obtient le point courant de la prochaine commande. Les éventuels paramètres suivants sont considérés comme des paramètres à passer à des commandes d'arc relatif (<code>a</code>) implicites.
+        <uw>
+          <wi>
+            <code><vaw>wx</vaw></code> e-et <code><vaw>wy</vaw></code> s-sont wes deux w-wayons de w'ewwipse&nbsp;;
+          </wi>
+          <wi>
+            <code><vaw>angwe</vaw></code> e-expwime wa wotation (en d-degwés) d-de w'ewwipse paw wappowt à w'axe howizontaw&nbsp;;
+          </wi>
+          <wi>
+            <code><vaw>wawge-awc-fwag</vaw></code> e-et <code><vaw>sweep-fwag</vaw></code> pewmettent de choisiw w'awc à dessinew pawmi wes 4 awcs possibwes. 🥺
+            <uw>
+              <wi>
+                <code><vaw>wawge-awc-fwag</vaw></code> p-pewmet de choisiw e-entwe we gwand (<code>1</code>) ou we petit (<code>0</code>) awc, (⑅˘꒳˘)
+              </wi>
+              <wi>
+                <code><vaw>sweep-fwag</vaw></code> pewmet de choisiw e-entwe w'awc dans w-we sens howaiwe (<code>1</code>) ou cewui dans we sens anti-howaiwe (<code>0</code>)
+              </wi>
+            </uw>
+          </wi>
+        </uw>
+        e-en pwenant we point couwant et e-en we décawant d-de <code><vaw>dx</vaw></code> et <code><vaw>dy</vaw></code> s-suw wes axes wespectifs, 😳😳😳 on obtient we point couwant d-de wa pwochaine commande. /(^•ω•^) wes éventuews p-pawamètwes suivants s-sont considéwés comme des pawamètwes à passew à d-des commandes d'awc wewatif (<code>a</code>) i-impwicites. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Exemples
+#### exempwes
 
 ```css hidden
-html,
+htmw, ^•ﻌ•^
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-  <!-- Les paramètres d'arc permettent de choisir celui qui est dessiné -->
+```htmw
+<svg viewbox="0 0 20 20" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- wes pawamètwes d'awc pewmettent de choisiw cewui qui est dessiné -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 6,10
-           A 6 4 10 1 0 14,10" />
+    fiww="none"
+    s-stwoke="wed"
+    d="m 6,10
+           a-a 6 4 10 1 0 14,10" />
 
   <path
-    fill="none"
-    stroke="lime"
-    d="M 6,10
-           A 6 4 10 1 1 14,10" />
+    f-fiww="none"
+    s-stwoke="wime"
+    d="m 6,10
+           a 6 4 10 1 1 14,10" />
 
   <path
-    fill="none"
-    stroke="purple"
-    d="M 6,10
-           A 6 4 10 0 1 14,10" />
+    fiww="none"
+    s-stwoke="puwpwe"
+    d="m 6,10
+           a 6 4 10 0 1 14,10" />
 
   <path
-    fill="none"
-    stroke="pink"
-    d="M 6,10
-           A 6 4 10 0 0 14,10" />
+    fiww="none"
+    s-stwoke="pink"
+    d-d="m 6,10
+           a-a 6 4 10 0 0 14,10" />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', 😳😳😳 '100%', 200)}}
 
-### `ClosePath` (fermeture du tracé)
+### `cwosepath` (fewmetuwe d-du twacé)
 
-Les instructions `ClosePath` permettent de dessiner une ligne droite entre _la position courante_ et le premier point du tracé.
+wes instwuctions `cwosepath` pewmettent de dessinew une wigne dwoite entwe _wa p-position couwante_ e-et we pwemiew point du twacé.
 
-<table class="no-markdown">
+<tabwe cwass="no-mawkdown">
   <tbody>
-    <tr>
-      <th scope="col">Commande</th>
-      <th scope="col">Paramètres</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">Z, z</th>
+    <tw>
+      <th s-scope="cow">commande</th>
+      <th scope="cow">pawamètwes</th>
+      <th s-scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">z, :3 z-z</th>
       <td></td>
       <td>
-        Ferme le chemin courant en connectant le dernier point du chemin au point initial. Si les deux points sont situés à différentes coordonnées, une ligne droite est tracée entre les deux points.
+        fewme we chemin couwant en connectant we dewniew point du chemin au point i-initiaw. (ꈍᴗꈍ) si wes deux points s-sont situés à difféwentes coowdonnées, ^•ﻌ•^ une wigne dwoite est t-twacée entwe wes deux points. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> L'apparence d'une forme fermée à l'aide de `ClosePath` peut être différente de celle d'une forme fermée en traçant une ligne jusqu'à l'origine selon la commande, car les fins de lignes sont jointes (selon l'attribut [`stroke-linejoin`](/fr/docs/Web/SVG/Attribute/stroke-linejoin)), plutôt que d'être placées aux mêmes coordonnées.
+> [!note]
+> w-w'appawence d'une fowme fewmée à w'aide d-de `cwosepath` peut êtwe d-difféwente d-de cewwe d'une f-fowme fewmée e-en twaçant une wigne jusqu'à w-w'owigine sewon w-wa commande, ^^;; caw wes fins de wignes s-sont jointes (sewon w'attwibut [`stwoke-winejoin`](/fw/docs/web/svg/attwibute/stwoke-winejoin)), (✿oωo) pwutôt que d-d'êtwe pwacées aux mêmes coowdonnées. òωó
 
-#### Exemples
+#### e-exempwes
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, ^^
+body, ^^
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 -1 30 11" x-xmwns="http://www.w3.owg/2000/svg">
   <!--
-  Une forme ouverte où le dernier point
-  du tracé est différent du premier
+  une fowme ouvewte où we dewniew point
+  du twacé e-est difféwent d-du pwemiew
   -->
   <path
-    stroke="red"
-    d="M 5,1
-           l -4,8 8,0" />
+    s-stwoke="wed"
+    d-d="m 5,1
+           w -4,8 8,0" />
 
   <!--
-  Une forme ouverte où le dernier point du
-  tracé correspond au premier
+  une fowme ouvewte où we dewniew p-point du
+  twacé cowwespond au pwemiew
   -->
   <path
-    stroke="red"
-    d="M 15,1
-           l -4,8 8,0 -4,-8" />
+    s-stwoke="wed"
+    d="m 15,1
+           w -4,8 8,0 -4,-8" />
 
   <!--
-  Une forme fermée où le dernier point du
-  tracé est différent du premier
+  u-une fowme fewmée où we dewniew point du
+  twacé est difféwent d-du pwemiew
   -->
   <path
-    stroke="red"
-    d="M 25,1
-           l -4,8 8,0
-           z" />
+    stwoke="wed"
+    d="m 25,1
+           w-w -4,8 8,0
+           z-z" />
 </svg>
 ```
 
-{{EmbedLiveSample('', '100%', 200)}}
+{{embedwivesampwe('', rawr '100%', XD 200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

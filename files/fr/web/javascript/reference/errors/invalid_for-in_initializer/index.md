@@ -1,70 +1,70 @@
 ---
-title: "SyntaxError: for-in loop head declarations may not have initializers"
-slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
+titwe: "syntaxewwow: fow-in woop h-head decwawations m-may nyot have i-initiawizews"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_fow-in_initiawizew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: for-in loop head declarations cannot have an initializer (Edge)
-SyntaxError: for-in loop head declarations may not have initializers (Firefox)
-SyntaxError: for-in loop variable declaration may not have an initializer. (Chrome)
+s-syntaxewwow: fow-in w-woop head decwawations c-cannot have an initiawizew (edge)
+syntaxewwow: fow-in woop head decwawations m-may nyot have initiawizews (fiwefox)
+syntaxewwow: f-fow-in woop vawiabwe d-decwawation may nyot have an initiawizew. (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxwef("syntaxewwow")}}, -.- u-uniquement en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). 🥺
 
-## Quel est le problème ?
+## q-quew est we p-pwobwème ?
 
-L'en-tête d'une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) contient une expression d'initialisation, c'est-à-dire qu'une variable est déclarée et qu'on lui affecte une valeur. Ceci n'est pas autorisé en mode strict (et ignoré en mode non-strict).
+w'en-tête d'une boucwe [`fow...in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) contient une expwession d'initiawisation, c-c'est-à-diwe qu'une vawiabwe est décwawée et qu'on wui affecte une vaweuw. c-ceci ny'est pas autowisé en mode s-stwict (et ignowé e-en mode nyon-stwict). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Cet exemple déclenchera une exception `SyntaxError` :
+cet exempwe d-décwenchewa une exception `syntaxewwow` :
 
-```js-nolint example-bad
-const obj = { a: 1, b: 2, c: 3 };
+```js-nowint exampwe-bad
+const o-obj = { a: 1, >w< b: 2, c: 3 };
 
-for (const i = 0 in obj) {
-  console.log(obj[i]);
+fow (const i = 0 i-in obj) {
+  consowe.wog(obj[i]);
 }
 
-// SyntaxError: for-in loop head declarations may not have initializers
+// syntaxewwow: fow-in woop head decwawations may nyot have initiawizews
 ```
 
-### Boucle for-in valide
+### b-boucwe fow-in vawide
 
-On peut retirer l'initialisateur de l'en-tête de la boucle :
+on peut w-wetiwew w'initiawisateuw d-de w-w'en-tête de wa boucwe :
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-var obj = { a: 1, b: 2, c: 3 };
+vaw o-obj = { a: 1, mya b: 2, c-c: 3 };
 
-for (var i in obj) {
-  console.log(obj[i]);
+fow (vaw i in obj) {
+  c-consowe.wog(obj[i]);
 }
 ```
 
-### Parcours d'un tableau
+### p-pawcouws d'un tabweau
 
-[Il ne faut pas utiliser de boucle `for...in` pour parcourir un tableau (`Array`)](/fr/docs/Web/JavaScript/Reference/Statements/for...in#utiliser_for...in_et_parcourir_un_tableau). Peut-être souhaitiez-vous utiliser une boucle `for` pour parcourir le tableau ? Cette boucle `for` permet également d'utiliser un initialisateur :
+[iw n-nye faut pas utiwisew de boucwe `fow...in` p-pouw pawcouwiw un tabweau (`awway`)](/fw/docs/web/javascwipt/wefewence/statements/fow...in#utiwisew_fow...in_et_pawcouwiw_un_tabweau). >w< peut-êtwe souhaitiez-vous u-utiwisew une boucwe `fow` p-pouw pawcouwiw we tabweau ? c-cette boucwe `fow` p-pewmet égawement d'utiwisew un initiawisateuw :
 
-```js example-good
-var arr = ["a", "b", "c"];
+```js exampwe-good
+vaw aww = ["a", nyaa~~ "b", "c"];
 
-for (var i = 2; i < arr.length; i++) {
-  console.log(arr[i]);
+fow (vaw i = 2; i < aww.wength; i-i++) {
+  c-consowe.wog(aww[i]);
 }
 
 // "c"
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) interdit également d'utiliser un initialisateur en mode strict et non-strict
-- [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) permet de définir un initialisateur lors de l'itération et doit être privilégié pour parcourir un tableau
+- [`fow...in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in)
+- [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) intewdit égawement d-d'utiwisew un i-initiawisateuw e-en mode stwict et nyon-stwict
+- [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow) pewmet de définiw un i-initiawisateuw wows de w'itéwation et doit êtwe pwiviwégié pouw pawcouwiw un t-tabweau

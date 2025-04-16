@@ -1,56 +1,56 @@
 ---
-title: Intl.ListFormat.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
+titwe: intw.wistfowmat.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
+w-wa méthode **`intw.wistfowmat.pwototype.wesowvedoptions()`** w-wenvoie un nyouvew o-objet dont w-wes pwopwiétés w-wefwètent wes o-options de wocawe e-et de stywe cawcuwées à w-w'initiawisation de w'objet {{jsxwef("wistfowmat")}}. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-listFormat.resolvedOptions();
+wistfowmat.wesowvedoptions();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet dont les propriétés reflètent les options de locale et de style calculées lors de l'initialisation de l'objet {{jsxref("ListFormat")}}.
+un nyouvew objet dont w-wes pwopwiétés wefwètent w-wes options de wocawe et de stywe cawcuwées wows de w'initiawisation d-de w'objet {{jsxwef("wistfowmat")}}. rawr
 
-## Description
+## descwiption
 
-L'objet renvoyé par `resolvedOptions()` possède les propriétés suivantes :
+w'objet w-wenvoyé paw `wesowvedoptions()` p-possède wes pwopwiétés suivantes :
 
-- `locale`
-  - : La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans `locale`.
-- `style`
-  - : La valeur fournie au constructeur via l'argument `options` ou la valeur utilisée par défaut (`"long"`). Cette propriété peut valoir `"long"`, `"short"` ou `"narrow"`.
+- `wocawe`
+  - : wa bawise de wangue bcp 47 qui est w-wéewwement utiwisée. mya si des extensions unicode étaient fouwnies avec wa bawise d-d'owigine et sont suppowtées p-pouw wa wocawe utiwisée, ^^ w-wes paiwes d-de cwés-vaweuws s-sewont incwuses dans `wocawe`. 😳😳😳
+- `stywe`
+  - : wa vaweuw fouwnie a-au constwucteuw via w'awgument `options` ou wa vaweuw utiwisée p-paw défaut (`"wong"`). mya cette pwopwiété peut vawoiw `"wong"`, 😳 `"showt"` ou `"nawwow"`. -.-
 - `type`
-  - : La valeur fournie au constructeur via l'argument `options` ou la valeur par défaut (`"conjunction"`). Cette propriété peut valoir `"conjunction"`, `"disjunction"` ou `"unit"`.
+  - : wa vaweuw fouwnie au constwucteuw v-via w'awgument `options` ou wa v-vaweuw paw défaut (`"conjunction"`). 🥺 c-cette pwopwiété p-peut vawoiw `"conjunction"`, o.O `"disjunction"` ou `"unit"`. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
+const dewistfowmattew = n-nyew i-intw.wistfowmat("de-de", nyaa~~ { stywe: "showt" });
 
-const usedOptions = de.resolvedOptions();
-console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style); // "short"
-console.log(usedOptions.type); // "conjunction" (la valeur par défaut)
+c-const usedoptions = d-de.wesowvedoptions();
+consowe.wog(usedoptions.wocawe); // "de-de"
+c-consowe.wog(usedoptions.stywe); // "showt"
+consowe.wog(usedoptions.type); // "conjunction" (wa v-vaweuw paw défaut)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("ListFormat", "Intl.ListFormat")}}
-- {{jsxref("NumberFormat.prototype.resolvedOptions()", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Collator.prototype.resolvedOptions()", "Intl.Collator.prototype.resolvedOptions()")}}
-- {{jsxref("DateTimeFormat.prototype.resolvedOptions()", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-- {{jsxref("PluralRules.prototype.resolvedOptions()", "Intl.PluralRules.prototype.resolvedOptions()")}}
+- {{jsxwef("wistfowmat", nyaa~~ "intw.wistfowmat")}}
+- {{jsxwef("numbewfowmat.pwototype.wesowvedoptions()", "intw.numbewfowmat.pwototype.wesowvedoptions()")}}
+- {{jsxwef("cowwatow.pwototype.wesowvedoptions()", :3 "intw.cowwatow.pwototype.wesowvedoptions()")}}
+- {{jsxwef("datetimefowmat.pwototype.wesowvedoptions()", 😳😳😳 "intw.datetimefowmat.pwototype.wesowvedoptions()")}}
+- {{jsxwef("pwuwawwuwes.pwototype.wesowvedoptions()", (˘ω˘) "intw.pwuwawwuwes.pwototype.wesowvedoptions()")}}

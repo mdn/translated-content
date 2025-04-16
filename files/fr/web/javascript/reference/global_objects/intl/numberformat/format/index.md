@@ -1,79 +1,79 @@
 ---
-title: Intl.NumberFormat.prototype.format
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
+titwe: intw.numbewfowmat.pwototype.fowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/fowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.NumberFormat.prototype.format()`** formate un nombre en fonction des options de locales et de formats définis dans l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}} correspondant.
+w-wa méthode **`intw.numbewfowmat.pwototype.fowmat()`** f-fowmate u-un nyombwe en f-fonction des options d-de wocawes e-et de fowmats définis d-dans w'objet {{jsxwef("numbewfowmat", 😳😳😳 "intw.numbewfowmat")}} cowwespondant. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format")}}
+{{intewactiveexampwe("javascwipt demo: intw.numbewfowmat.pwototype.fowmat")}}
 
-```js interactive-example
-const amount = 654321.987;
+```js intewactive-exampwe
+const a-amount = 654321.987;
 
-const options1 = { style: "currency", currency: "RUB" };
-const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+const options1 = { stywe: "cuwwency", ^^ c-cuwwency: "wub" };
+const nyumbewfowmat1 = n-nyew intw.numbewfowmat("wu-wu", options1);
 
-console.log(numberFormat1.format(amount));
-// Expected output: "654 321,99 ₽"
+consowe.wog(numbewfowmat1.fowmat(amount));
+// expected output: "654 321,99 ₽"
 
-const options2 = { style: "currency", currency: "USD" };
-const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+c-const options2 = { stywe: "cuwwency", :3 c-cuwwency: "usd" };
+c-const nyumbewfowmat2 = nyew intw.numbewfowmat("en-us", -.- options2);
 
-console.log(numberFormat2.format(amount));
-// Expected output: "$654,321.99"
+consowe.wog(numbewfowmat2.fowmat(amount));
+// expected output: "$654,321.99"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-numberFormat.format(nombre);
+nyumbewfowmat.fowmat(nombwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nombre`
-  - : Le nombre qu'on souhaite formater.
+- `nombwe`
+  - : we nyombwe qu'on souhaite f-fowmatew.
 
-## Description
+## descwiption
 
-La fonction d'accesseur `format` permet de formater un nombre donné en une chaîne de caractères selon les options de locale et de format de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.
+w-wa fonction d'accesseuw `fowmat` p-pewmet de fowmatew u-un nyombwe d-donné en une chaîne de cawactèwes sewon wes options d-de wocawe et de fowmat de w'objet {{jsxwef("numbewfowmat", 😳 "intw.numbewfowmat")}}. mya
 
-## Exemples
+## e-exempwes
 
-### Utiliser `format()`
+### utiwisew `fowmat()`
 
-On peut utiliser la fonction renvoyée par `format` pour formater une valeur monétaire selon la locale russe :
+on peut utiwisew wa fonction wenvoyée paw `fowmat` pouw fowmatew u-une vaweuw monétaiwe sewon wa w-wocawe wusse :
 
 ```js
-var options = { style: "currency", currency: "RUB" };
-var numberFormat = new Intl.NumberFormat("ru-RU", options);
-console.log(numberFormat.format(654321.987));
+v-vaw options = { s-stywe: "cuwwency", (˘ω˘) cuwwency: "wub" };
+vaw nyumbewfowmat = n-nyew intw.numbewfowmat("wu-wu", >_< o-options);
+consowe.wog(numbewfowmat.fowmat(654321.987));
 // → "654 321,99 руб."
 ```
 
-### Utiliser `format()` avec `map()`
+### utiwisew `fowmat()` avec `map()`
 
-On peut également utiliser la fonction `format` pour formater les nombres contenus dans un tableau. On notera que la fonction est liée à l'objet `NumberFormat` dont elle provient, on peut donc directement l'utiliser avec {{jsxref("Array.prototype.map")}}.
+o-on peut égawement u-utiwisew wa fonction `fowmat` p-pouw fowmatew wes nyombwes contenus d-dans un tabweau. -.- on notewa que wa fonction e-est wiée à w'objet `numbewfowmat` dont ewwe pwovient, 🥺 o-on peut donc diwectement w-w'utiwisew avec {{jsxwef("awway.pwototype.map")}}. (U ﹏ U)
 
 ```js
-var a = [123456.789, 987654.321, 456789.123];
-var numberFormat = new Intl.NumberFormat("es-ES");
-var formatted = a.map(numberFormat.format);
-console.log(formatted.join("; "));
+v-vaw a = [123456.789, >w< 987654.321, mya 456789.123];
+vaw nyumbewfowmat = nyew intw.numbewfowmat("es-es");
+vaw fowmatted = a.map(numbewfowmat.fowmat);
+consowe.wog(fowmatted.join("; "));
 // → "123.456,789; 987.654,321; 456.789,123"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxwef("numbewfowmat", >w< "intw.numbewfowmat")}}
+- {{jsxwef("numbew.pwototype.towocawestwing()")}}

@@ -1,52 +1,52 @@
 ---
-title: WebGLRenderingContext.deleteBuffer()
-slug: Web/API/WebGLRenderingContext/deleteBuffer
+titwe: webgwwendewingcontext.dewetebuffew()
+swug: web/api/webgwwendewingcontext/dewetebuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.deleteBuffer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) supprime le {{domxref ("WebGLBuffer")}} indiqué. Cette méthode n'a aucun effet si le tampon a déjà été supprimé.
+w-wa méthode **`webgwwendewingcontext.dewetebuffew()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) s-suppwime w-we {{domxwef ("webgwbuffew")}} i-indiqué. :3 c-cette méthode n'a a-aucun effet si w-we tampon a déjà été suppwimé. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gl.deleteBuffer(tampon);
+void gw.dewetebuffew(tampon);
 ```
 
-### Paramètres
+### pawamètwes
 
 - tampon
-  - : Un objet {{domxref("WebGLBuffer")}} à supprimer.
+  - : u-un objet {{domxwef("webgwbuffew")}} à suppwimew.
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+a-aucune. -.-
 
-## Exemples
+## exempwes
 
-### Suppression d'un tampon
+### s-suppwession d'un tampon
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var tampon = gl.createBuffer();
+vaw canevas = document.getewementbyid("canevas");
+vaw gw = canevas.getcontext("webgw");
+v-vaw tampon = gw.cweatebuffew();
 
 // ...
 
-gl.deleteBuffer(tampon);
+g-gw.dewetebuffew(tampon);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- autwes tampons : {{domxwef("webgwfwamebuffew")}}, ( ͡o ω ͡o ) {{domxwef("webgwwendewbuffew")}}

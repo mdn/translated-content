@@ -1,77 +1,77 @@
 ---
-title: IDBKeyRange.only()
-slug: Web/API/IDBKeyRange/only_static
+titwe: idbkeywange.onwy()
+swug: w-web/api/idbkeywange/onwy_static
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`only()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, permet de créer un nouvel intervalle de clé qui ne contient qu'une valeur.
+w-wa méthode **`onwy()`**, (U ﹏ U) w-wattachée à w-w'intewface {{domxwef("idbkeywange")}}, 😳 p-pewmet de cwéew u-un nyouvew intewvawwe d-de cwé q-qui nye contient qu'une vaweuw.
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-myKeyRange = IDBKeyRange.only(valeur);
+mykeywange = idbkeywange.onwy(vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : La valeur dans l'intervalle de clé.
+- `vaweuw`
+  - : wa vaweuw dans w'intewvawwe d-de cwé. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'objet {{domxref("IDBKeyRange")}} correspondant à l'intervalle de clé qui vient d'être créé.
+w-w'objet {{domxwef("idbkeywange")}} cowwespondant à w'intewvawwe de cwé qui v-vient d'êtwe cwéé.
 
-### Exceptions
+### exceptions
 
-Cette méthode peut déclencher une exception {{domxref("DOMException")}} du type `DataError` lorsque la valeur passée en argument n'est pas une clé valide.
+c-cette méthode p-peut décwenchew une exception {{domxwef("domexception")}} du type `dataewwow` wowsque wa vaweuw passée e-en awgument ny'est pas une cwé vawide. 😳😳😳
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on illustre comment utiliser un intervalle de clé qui ne contient qu'une seule clé. On déclare un intervalle qui ne contient que la valeur "A" avec `keyRangeValue = IDBKeyRange.only("A");` Ensuite, on ouvre une transaction grâce à {{domxref("IDBTransaction")}} puis un magasin d'objets et un curseur grâce à la méthode {{domxref("IDBObjectStore.openCursor")}} pour laquelle on passe `keyRangeValue` en argument. Cela signifie que le curseur permettra uniquement de récupérer les enregistrements dont la clé vaut "A".
+dans w'exempwe qui suit, (U ﹏ U) o-on iwwustwe comment utiwisew un i-intewvawwe de cwé q-qui nye contient q-qu'une seuwe c-cwé. (///ˬ///✿) on décwawe un intewvawwe qui nye contient q-que wa vaweuw "a" avec `keywangevawue = idbkeywange.onwy("a");` e-ensuite, 😳 on ouvwe une twansaction gwâce à {{domxwef("idbtwansaction")}} puis un magasin d'objets et un cuwseuw g-gwâce à wa méthode {{domxwef("idbobjectstowe.opencuwsow")}} p-pouw waquewwe o-on passe `keywangevawue` e-en awgument. 😳 cewa signifie que we cuwseuw pewmettwa uniquement d-de wécupéwew w-wes enwegistwements dont w-wa cwé vaut "a". σωσ
 
 ```js
-function displayData() {
-  var keyRangeValue = IDBKeyRange.only("A");
+f-function dispwaydata() {
+  v-vaw keywangevawue = idbkeywange.onwy("a");
 
-  var transaction = db.transaction(["fThings"], "readonly");
-  var objectStore = transaction.objectStore("fThings");
+  v-vaw twansaction = db.twansaction(["fthings"], "weadonwy");
+  vaw objectstowe = t-twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow(keywangevawue).onsuccess = f-function (event) {
+    vaw cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      v-vaw wistitem = document.cweateewement("wi");
+      wistitem.innewhtmw =
+        "<stwong>" + cuwsow.vawue.fthing + "</stwong>, rawr x3 " + cuwsow.vawue.fwating;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments sont affichés.");
+      cuwsow.continue();
+    } e-ewse {
+      c-consowe.wog("wes éwéments sont affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
+> [!note]
+> p-pouw un exempwe c-compwet qui utiwise w-wes intewvawwes de cwé, OwO vous pouvez consuwtew [we dépôt github i-idbkeywange-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbkeywange) ([ainsi que wa démonstwation associée](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbkeywange/)). /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew u-une connexion : {{domxwef("idbdatabase")}}
+- utiwisew w-wes twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw u-un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 😳😳😳

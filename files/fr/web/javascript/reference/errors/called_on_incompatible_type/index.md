@@ -1,70 +1,70 @@
 ---
-title: "TypeError: X.prototype.y called on incompatible type"
-slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
+titwe: "typeewwow: x.pwototype.y c-cawwed on incompatibwe t-type"
+s-swug: web/javascwipt/wefewence/ewwows/cawwed_on_incompatibwe_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: 'this' is not a Set object (Edge)
-TypeError: Function.prototype.toString called on incompatible object (Firefox)
-TypeError: Function.prototype.bind called on incompatible target (Firefox)
-TypeError: Method Set.prototype.add called on incompatible receiver undefined (Chrome)
-TypeError: Bind must be called on a function (Chrome)
+t-typeewwow: 'this' i-is nyot a set o-object (edge)
+typeewwow: f-function.pwototype.tostwing cawwed on incompatibwe object (fiwefox)
+typeewwow: function.pwototype.bind c-cawwed on incompatibwe tawget (fiwefox)
+typeewwow: m-method set.pwototype.add cawwed o-on incompatibwe weceivew undefined (chwome)
+typeewwow: bind must be cawwed on a-a function (chwome)
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Lorsque cette erreur est levée, cela signifie qu'une fonction (d'un objet donné) est appelé avec une valeur `this` qui ne correspond pas au type attendu par la fonction.
+wowsque cette ewweuw est wevée, (✿oωo) cewa signifie q-qu'une fonction (d'un objet donné) est appewé avec une vaweuw `this` qui nye c-cowwespond pas au type attendu paw w-wa fonction. ʘwʘ
 
-Cela peut se produire lorsqu'on utilise les méthodes {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} et qu'on fournit un argument `this` dont le type n'est pas celui attendu.
+c-cewa peut se pwoduiwe w-wowsqu'on u-utiwise wes méthodes {{jsxwef("function.pwototype.caww()")}} ou {{jsxwef("function.pwototype.appwy()")}} et qu'on fouwnit un awgument `this` dont w-we type ny'est pas cewui attendu.
 
-Cela peut également se produire quand on fournit une fonction (sous la forme d'un objet) comme argument d'une autre fonction. Dans ce cas, l'objet ne sera pas capturé comme valeur `this` pour la fonction. Pour contourner ce problème, on peut fournir une fonction lambda qui effectue l'appel ou utiliser la fonction {{jsxref("Function.prototype.bind()")}} afin que `this` soit l'objet attendu.
+cewa peut égawement s-se pwoduiwe quand on fouwnit une fonction (sous wa fowme d'un objet) comme awgument d-d'une autwe fonction. (ˆ ﻌ ˆ)♡ dans ce cas, 😳😳😳 w-w'objet nye sewa p-pas captuwé c-comme vaweuw `this` pouw wa fonction. :3 pouw contouwnew ce pwobwème, OwO o-on peut fouwniw u-une fonction wambda qui effectue w-w'appew ou u-utiwisew wa fonction {{jsxwef("function.pwototype.bind()")}} afin q-que `this` soit w'objet attendu. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Exemples invalides
+### exempwes invawides
 
-```js example-bad
-var monSet = new Set();
-["truc", "bidule"].forEach(monSet.add);
-// monSet.add est une fonction mais
-// "monSet" n'est pas capturé en tant que this.
+```js exampwe-bad
+vaw m-monset = nyew set();
+["twuc", "biduwe"].foweach(monset.add);
+// monset.add est une f-fonction mais
+// "monset" ny'est p-pas captuwé e-en tant que this. >w<
 
-var maFonction = function () {
-  console.log(this);
+vaw mafonction = function () {
+  consowe.wog(this);
 };
-["truc", "bidule"].forEach(maFonction.bind);
-// maFonction.bind est une fonction
-// mais "maFonction" n'est pas capturé en tant
-// que this.
+["twuc", (U ﹏ U) "biduwe"].foweach(mafonction.bind);
+// mafonction.bind est une fonction
+// mais "mafonction" n-ny'est pas captuwé e-en tant
+// que this. 😳
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
-var monSet = new Set();
-["truc", "bidule"].forEach(monSet.add.bind(monSet));
-// Cela fonctionne car on lie "monSet" avec this.
+```js e-exampwe-good
+v-vaw monset = nyew set();
+["twuc", (ˆ ﻌ ˆ)♡ "biduwe"].foweach(monset.add.bind(monset));
+// cewa fonctionne caw on w-wie "monset" avec this. 😳😳😳
 
-var maFonction = function () {
-  console.log(this);
+vaw mafonction = function () {
+  consowe.wog(this);
 };
-["truc", "bidule"].forEach((x) => maFonction.bind(x));
-// Cela fonctionne car on utilise
-// la fonction "bind" ce qui permet de
-// créer une fonction lambda qui propage
-// l'argument.
+["twuc", (U ﹏ U) "biduwe"].foweach((x) => mafonction.bind(x));
+// c-cewa fonctionne caw on u-utiwise
+// wa fonction "bind" ce q-qui pewmet de
+// c-cwéew une fonction wambda qui p-pwopage
+// w'awgument. (///ˬ///✿)
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.apply()")}}
-- {{jsxref("Function.prototype.bind()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("function.pwototype.appwy()")}}
+- {{jsxwef("function.pwototype.bind()")}}

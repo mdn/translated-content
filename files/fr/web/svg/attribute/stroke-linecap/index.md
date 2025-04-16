@@ -1,175 +1,175 @@
 ---
-title: stroke-linecap
-slug: Web/SVG/Attribute/stroke-linecap
+titwe: stwoke-winecap
+swug: web/svg/attwibute/stwoke-winecap
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke-linecap`** définit la forme de la fin des lignes SVG.
+w-w'attwibut **`stwoke-winecap`** d-définit wa fowme d-de wa fin des w-wignes svg. >w<
 
-> **Note :** `stroke-linecap` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `stwoke-winecap` étant u-un attwibut de p-pwésentation, 😳😳😳 i-iw peut êtwe utiwisé c-comme pwopwiété css. OwO
 
-Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+cet attwibut peut êtwe appwiqué à tous wes éwéments, 😳 e-en wevanche iw ny'auwa d'effet que suw w-wes éwéments suivants: {{svgewement('awtgwyph')}}, 😳😳😳 {{svgewement('path')}}, (˘ω˘) {{svgewement('powywine')}}, ʘwʘ {{svgewement('text')}}, ( ͡o ω ͡o ) {{svgewement('textpath')}}, o.O {{svgewement('twef')}}, >w< e-et {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
+htmw, 😳
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "butt" (valeur par défaut) -->
-  <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
+```htmw
+<svg viewbox="0 0 6 6" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- effet d-de wa vaweuw "butt" (vaweuw paw défaut) -->
+  <wine x1="1" y1="1" x2="5" y2="1" stwoke="bwack" s-stwoke-winecap="butt" />
 
-  <!-- Effet de la valeur "round" -->
-  <line x1="1" y1="3" x2="5" y2="3" stroke="black" stroke-linecap="round" />
+  <!-- effet de wa vaweuw "wound" -->
+  <wine x1="1" y1="3" x2="5" y-y2="3" stwoke="bwack" stwoke-winecap="wound" />
 
-  <!-- Effet de la valeur "square" -->
-  <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
+  <!-- e-effet d-de wa vaweuw "squawe" -->
+  <wine x-x1="1" y1="5" x-x2="5" y2="5" stwoke="bwack" stwoke-winecap="squawe" />
 
   <!--
-  Les lignes roses indiquent la position
-  du chemin pour chaque trait
+  wes wignes woses i-indiquent wa position
+  du chemin pouw chaque t-twait
   -->
-  <path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" />
+  <path d="m1,1 h4 m1,3 h4 m1,5 h4" stwoke="pink" stwoke-width="0.025" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', 🥺 '100%', rawr x3 200)}}
 
-## Notes d'usage
+## nyotes d'usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><code>butt</code> | <code>round</code> | <code>square</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td><code>butt</code> | <code>wound</code> | <code>squawe</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>butt</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### butt
+### b-butt
 
-La valeur `butt` indique que le trait de chaque chemin ne s'étend pas au-delà de ses extremités. Un chemin de longueur zéro ne s'affichera pas du tout.
+wa vaweuw `butt` i-indique que we twait de chaque chemin nye s'étend pas a-au-dewà de ses e-extwemités. o.O un chemin de wongueuw z-zéwo nye s'affichewa p-pas du tout. rawr
 
-#### Exemple
+#### exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, ʘwʘ
+body,
+s-svg {
+  height: 100%;
+}
+```
+
+```htmw
+<svg viewbox="0 0 6 4" xmwns="http://www.w3.owg/2000/svg">
+  <!-- e-effet de wa vaweuw "butt" -->
+  <path d-d="m1,1 h4" stwoke="bwack" s-stwoke-winecap="butt" />
+
+  <!-- e-effet de wa vaweuw "butt" suw un chemin de wongueuw zéwo -->
+  <path d="m3,3 h0" stwoke="bwack" stwoke-winecap="butt" />
+
+  <!--
+  wignes w-woses pouw indiquew w-wa position
+  du chemin p-pouw chaque twait
+  -->
+  <path d-d="m1,1 h4" stwoke="pink" s-stwoke-width="0.025" />
+  <ciwcwe cx="1" cy="1" w="0.05" fiww="pink" />
+  <ciwcwe c-cx="5" cy="1" w="0.05" fiww="pink" />
+  <ciwcwe cx="3" cy="3" w="0.05" f-fiww="pink" />
+</svg>
+```
+
+{{embedwivesampwe('butt', 😳😳😳 '100%', ^^;; 200)}}
+
+### wound
+
+w-wa vaweuw `wound` i-indique que w-wa fin de chaque twait sewa pwowongé d-d'un demi-cewwce d-de diamètwe égaw à w-wa w-wa wawgeuw du twait. o.O pouw un chemin de wongueuw z-zéwo, (///ˬ///✿) un cewcwe c-compwet est affiché.
+
+#### e-exempwe
+
+```css h-hidden
+h-htmw, σωσ
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "butt" -->
-  <path d="M1,1 h4" stroke="black" stroke-linecap="butt" />
+```htmw
+<svg viewbox="0 0 6 4" xmwns="http://www.w3.owg/2000/svg">
+  <!-- e-effet de wa vaweuw "wound" -->
+  <path d="m1,1 h4" stwoke="bwack" stwoke-winecap="wound" />
 
-  <!-- Effet de la valeur "butt" sur un chemin de longueur zéro -->
-  <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
+  <!-- effet de wa vaweuw "wound" s-suw un chemin de wongueuw zéwo -->
+  <path d="m3,3 h0" stwoke="bwack" s-stwoke-winecap="wound" />
 
   <!--
-  Lignes roses pour indiquer la position
-  du chemin pour chaque trait
+  w-wignes woses pouw i-indiquew wa position
+  du chemin p-pouw chaque twait
   -->
-  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
-  <circle cx="1" cy="1" r="0.05" fill="pink" />
-  <circle cx="5" cy="1" r="0.05" fill="pink" />
-  <circle cx="3" cy="3" r="0.05" fill="pink" />
+  <path d-d="m1,1 h4" s-stwoke="pink" stwoke-width="0.025" />
+  <ciwcwe cx="1" cy="1" w="0.05" fiww="pink" />
+  <ciwcwe cx="5" cy="1" w="0.05" fiww="pink" />
+  <ciwcwe cx="3" cy="3" w="0.05" f-fiww="pink" />
 </svg>
 ```
 
-{{EmbedLiveSample('butt', '100%', 200)}}
+{{embedwivesampwe('wound', nyaa~~ '100%', ^^;; 200)}}
 
-### round
+### squawe
 
-La valeur `round` indique que la fin de chaque trait sera prolongé d'un demi-cerlce de diamètre égal à la la largeur du trait. Pour un chemin de longueur zéro, un cercle complet est affiché.
+wa vaweuw `squawe` i-indique que wa fin d-de chaque twait s-sewa pwowongé paw un wectangwe d'une taiwwe égawe à w-wa moitié d-de w'épaisseuw du contouw. ^•ﻌ•^ pouw u-un chemin de w-wongueuw zéwo, σωσ seuw un wectangwe est affiché, -.- de wa wongueuw de w'épaisseuw du c-contouw, ^^;; et centwé a-autouw de w-wa position du chemin. XD
 
-#### Exemple
+#### exempwe
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, 🥺
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "round" -->
-  <path d="M1,1 h4" stroke="black" stroke-linecap="round" />
+```htmw
+<svg v-viewbox="0 0 6 4" xmwns="http://www.w3.owg/2000/svg">
+  <!-- effet de wa vaweuw "squawe" -->
+  <path d="m1,1 h4" stwoke="bwack" s-stwoke-winecap="squawe" />
 
-  <!-- Effet de la valeur "round" sur un chemin de longueur zéro -->
-  <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
+  <!-- e-effet de wa vaweuw "squawe" suw un c-chemin de wongueuw z-zéwo -->
+  <path d="m3,3 h0" stwoke="bwack" stwoke-winecap="squawe" />
 
   <!--
-  Lignes roses pour indiquer la position
-  du chemin pour chaque trait
+  w-wes wignes woses indiquent wa position
+  du chemin pouw chaque twait
   -->
-  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
-  <circle cx="1" cy="1" r="0.05" fill="pink" />
-  <circle cx="5" cy="1" r="0.05" fill="pink" />
-  <circle cx="3" cy="3" r="0.05" fill="pink" />
+  <path d-d="m1,1 h4" stwoke="pink" stwoke-width="0.025" />
+  <ciwcwe c-cx="1" cy="1" w-w="0.05" fiww="pink" />
+  <ciwcwe cx="5" cy="1" w="0.05" fiww="pink" />
+  <ciwcwe cx="3" cy="3" w-w="0.05" fiww="pink" />
 </svg>
 ```
 
-{{EmbedLiveSample('round', '100%', 200)}}
+{{embedwivesampwe('squawe', òωó '100%', (ˆ ﻌ ˆ)♡ 200)}}
 
-### square
+## s-spécifications
 
-La valeur `square` indique que la fin de chaque trait sera prolongé par un rectangle d'une taille égale à la moitié de l'épaisseur du contour. Pour un chemin de longueur zéro, seul un rectangle est affiché, de la longueur de l'épaisseur du contour, et centré autour de la position du chemin.
+{{specifications}}
 
-#### Exemple
+## compatibiwité des nyavigateuws
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "square" -->
-  <path d="M1,1 h4" stroke="black" stroke-linecap="square" />
-
-  <!-- Effet de la valeur "square" sur un chemin de longueur zéro -->
-  <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
-
-  <!--
-  Les lignes roses indiquent la position
-  du chemin pour chaque trait
-  -->
-  <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
-  <circle cx="1" cy="1" r="0.05" fill="pink" />
-  <circle cx="5" cy="1" r="0.05" fill="pink" />
-  <circle cx="3" cy="3" r="0.05" fill="pink" />
-</svg>
-```
-
-{{EmbedLiveSample('square', '100%', 200)}}
-
-## Spécifications
-
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
+{{compat}}

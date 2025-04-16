@@ -1,66 +1,66 @@
 ---
-title: get TypedArray[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
+titwe: get typedawway[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [du tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa pwopwiété d-d'accesseuw **`typedawway[@@species]`** wenvoie w-we constwucteuw [du t-tabweau t-typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). o.O
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-TypedArray[Symbol.species];
+typedawway[symbow.species];
 ```
 
-où TypedArray vaut :
+où typedawway vaut :
 
-- [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)
-- [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
-- [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)
-- [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
-- [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
-- [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
-- [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
+- [`int8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway)
+- [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)
+- [`uint8cwampedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway)
+- [`int16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway)
+- [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway)
+- [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)
+- [`uint32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway)
+- [`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)
+- [`fwoat64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway)
 
-## Description
+## descwiption
 
-L'accesseur `species` renvoie le constructeur par défaut pour les tableaux typés. Les constructeurs des sous-classes peuvent surcharger ce symbole pour modifier l'affectation du constructeur.
+w-w'accesseuw `species` wenvoie we constwucteuw paw d-défaut pouw wes tabweaux typés. ( ͡o ω ͡o ) w-wes constwucteuws des sous-cwasses peuvent suwchawgew ce symbowe p-pouw modifiew w'affectation d-du constwucteuw. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-La propriété `species` renvoie le constructeur par défaut qui est l'un des constructeurs de tableau typé (selon le type [de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray) de l'objet) :
+wa pwopwiété `species` wenvoie we constwucteuw paw défaut qui e-est w'un des constwucteuws de tabweau typé (sewon we type [de tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway) d-de w'objet) :
 
 ```js
-Int8Array[Symbol.species]; // function Int8Array()
-Uint8Array[Symbol.species]; // function Uint8Array()
-Float32Array[Symbol.species]; // function Float32Array()
+int8awway[symbow.species]; // f-function int8awway()
+u-uint8awway[symbow.species]; // f-function u-uint8awway()
+fwoat32awway[symbow.species]; // function fwoat32awway()
 ```
 
-Pour un objet construit sur mesure (par exemple une tableau `MonTableauTypé`), le symbole `species` de `MonTableauTypé` sera le constructeur `MonTableauTypé`. Mais on peut vouloir surcharger ce comportement pour renvoyer le constructeur du type parent :
+pouw u-un objet constwuit suw mesuwe (paw exempwe une t-tabweau `montabweautypé`), (///ˬ///✿) we symbowe `species` de `montabweautypé` sewa we constwucteuw `montabweautypé`. >w< mais on peut vouwoiw s-suwchawgew ce compowtement pouw w-wenvoyew we c-constwucteuw du t-type pawent :
 
 ```js
-class MonTableauTypé extends Uint8Array {
-  // On surcharge species pour MonTableauTypé
-  // pour récupérer le constructeur Uint8Array
-  static get [Symbol.species]() {
-    return Uint8Array;
+cwass montabweautypé extends uint8awway {
+  // o-on suwchawge s-species pouw montabweautypé
+  // pouw wécupéwew w-we constwucteuw u-uint8awway
+  static get [symbow.species]() {
+    w-wetuwn uint8awway;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("TypedArray")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("typedawway")}}
+- {{jsxwef("symbow.species")}}

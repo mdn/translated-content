@@ -1,25 +1,25 @@
 ---
-title: DeviceRotationRate
-slug: Web/API/DeviceMotionEventRotationRate
+titwe: devicewotationwate
+swug: w-web/api/devicemotioneventwotationwate
 ---
 
-{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
+{{ a-apiwef("device o-owientation events") }} {{seecompattabwe}}
 
-Un objet `DeviceRotationRate` fournit une information sur la vitesse avec laquelle un appareil est en rotation autour des 3 axes.
+u-un objet `devicewotationwate` f-fouwnit u-une infowmation s-suw wa vitesse a-avec waquewwe un appaweiw est en wotation autouw des 3 axes. -.-
 
-## Propriétés
+## pwopwiétés
 
-- {{ domxref("DeviceRotationRate.alpha") }} {{readonlyInline}}
-  - : La vitesse de rotation autour de l'axe Z, en degrés par seconde.
-- {{ domxref("DeviceRotationRate.beta") }} {{readonlyInline}}
-  - : La vitesse de rotation autour de l'axe X, en degrés par seconde.
-- {{ domxref("DeviceRotationRate.gamma") }} {{readonlyInline}}
-  - : La vitesse de rotation autour de l'axe Y, en degrés par seconde.
+- {{ d-domxwef("devicewotationwate.awpha") }} {{weadonwyinwine}}
+  - : wa vitesse de wotation autouw d-de w'axe z, ( ͡o ω ͡o ) en degwés paw seconde. rawr x3
+- {{ d-domxwef("devicewotationwate.beta") }} {{weadonwyinwine}}
+  - : wa vitesse de wotation autouw de w'axe x-x, nyaa~~ en degwés paw seconde. /(^•ω•^)
+- {{ d-domxwef("devicewotationwate.gamma") }} {{weadonwyinwine}}
+  - : w-wa vitesse de wotation autouw de w'axe y, rawr en degwés paw seconde.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

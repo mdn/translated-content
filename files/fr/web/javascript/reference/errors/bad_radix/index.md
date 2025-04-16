@@ -1,58 +1,58 @@
 ---
-title: "RangeError: radix must be an integer"
-slug: Web/JavaScript/Reference/Errors/Bad_radix
+titwe: "wangeewwow: wadix must b-be an integew"
+s-swug: web/javascwipt/wefewence/ewwows/bad_wadix
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-RangeError: invalid argument (Edge)
-RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
-RangeError: toString() radix argument must be between 2 and 36 (Chrome)
+wangeewwow: i-invawid a-awgument (edge)
+w-wangeewwow: wadix m-must be an i-integew at weast 2 and nyo gweatew than 36 (fiwefox)
+wangeewwow: tostwing() wadix a-awgument must be between 2 and 36 (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-C'est le paramètre utilisé avec la méthode {{jsxref("Number.prototype.toString()")}} ou avec la méthode {{jsxref("BigInt.prototype.toString()")}} pour indiquer la base de conversion qui est en cause. Ce paramètre, optionnel, doit être un nombre entier, compris entre 2 et 36 qui inique la base du système numérique dans lequel on veut représenter les valeurs numériques.
+c'est w-we pawamètwe utiwisé avec wa méthode {{jsxwef("numbew.pwototype.tostwing()")}} ou avec wa méthode {{jsxwef("bigint.pwototype.tostwing()")}} pouw indiquew wa b-base de convewsion qui est en cause. 😳😳😳 c-ce pawamètwe, mya o-optionnew, 😳 doit êtwe un nyombwe entiew, -.- compwis entwe 2 et 36 qui inique wa b-base du système nyuméwique dans wequew on veut wepwésentew wes vaweuws nyuméwiques. 🥺
 
-Pourquoi limiter la base à 36 ? Lorsqu'une base est supérieure à 10, on utilise les caractères de l'alphabet pour représenter les chiffres. Or, l'alphabet latin ne possède que 26 caractères. En utilisant donc les 10 chiffres arabes et ces caractères, on possède 36 caractères pour représenter les chiffres d'un nombre.
+p-pouwquoi wimitew wa base à 36 ? w-wowsqu'une b-base est s-supéwieuwe à 10, o.O o-on utiwise wes cawactèwes de w'awphabet pouw w-wepwésentew wes chiffwes. /(^•ω•^) ow, w'awphabet watin n-nye possède que 26 cawactèwes. nyaa~~ en utiwisant donc wes 10 chiffwes awabes et ces cawactèwes, nyaa~~ on p-possède 36 cawactèwes pouw wepwésentew w-wes c-chiffwes d'un nyombwe. :3
 
-Généralement, on emploie cette méthode avec des bases fréquemment utilisées :
+g-généwawement, 😳😳😳 on empwoie cette méthode avec des bases f-fwéquemment utiwisées :
 
-- 2 pour [les nombres binaires](https://fr.wikipedia.org/wiki/Système_binaire),
-- 8 pour [les nombres octaux](https://fr.wikipedia.org/wiki/Système_octal),
-- 10 pour [les nombres décimaux](https://fr.wikipedia.org/wiki/Système_décimal),
-- 16 pour [les nombres hexadécimaux](https://fr.wikipedia.org/wiki/Système_hexadécimal).
+- 2 p-pouw [wes nyombwes binaiwes](https://fw.wikipedia.owg/wiki/système_binaiwe), (˘ω˘)
+- 8 p-pouw [wes nyombwes o-octaux](https://fw.wikipedia.owg/wiki/système_octaw), ^^
+- 10 pouw [wes nyombwes d-décimaux](https://fw.wikipedia.owg/wiki/système_décimaw), :3
+- 16 pouw [wes n-nyombwes hexadécimaux](https://fw.wikipedia.owg/wiki/système_hexadécimaw). -.-
 
-## Examples
+## exampwes
 
-### Exemples invalides
+### exempwes invawides
 
-```js example-bad
-(42).toString(0);
-(42).toString(1);
-(42).toString(37);
-(42).toString(150);
-// On ne peut pas utiliser une telle
-// chaîne pour du formatage :
-(12071989).toString("MM-dd-yyyy");
+```js e-exampwe-bad
+(42).tostwing(0);
+(42).tostwing(1);
+(42).tostwing(37);
+(42).tostwing(150);
+// on nye peut p-pas utiwisew une tewwe
+// chaîne p-pouw du fowmatage :
+(12071989).tostwing("mm-dd-yyyy");
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
-(42).toString(2); // "101010" (binary)
-(13).toString(8); // "15"     (octal)
-(0x42).toString(10); // "66"     (decimal)
-(100000).toString(16); // "186a0"  (hexadecimal)
+```js exampwe-good
+(42).tostwing(2); // "101010" (binawy)
+(13).tostwing(8); // "15"     (octaw)
+(0x42).tostwing(10); // "66"     (decimaw)
+(100000).tostwing(16); // "186a0"  (hexadecimaw)
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

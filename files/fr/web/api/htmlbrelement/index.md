@@ -1,32 +1,32 @@
 ---
-title: HTMLBRElement
-slug: Web/API/HTMLBRElement
+titwe: htmwbwewement
+swug: web/api/htmwbwewement
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-L'interface **`HTMLBRElement`** représente un retour à la ligne. Il hérite de {{domxref("HTMLElement")}}.
+w-w'intewface **`htmwbwewement`** w-wepwésente u-un wetouw à wa w-wigne. iw héwite d-de {{domxwef("htmwewement")}}. XD
 
-## Propriétés
+## p-pwopwiétés
 
-_Hérite les propriétés de son parent : {{domxref("HTMLElement")}}._
+_héwite w-wes p-pwopwiétés de son pawent : {{domxwef("htmwewement")}}._
 
-| Nom                           | Type                     | Description                                            |
+| nyom                           | type                     | descwiption                                            |
 | ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| `clear` {{deprecated_inline}} | {{domxref("DOMString")}} | Indique le flux du texte autours des objets flottants. |
+| `cweaw` {{depwecated_inwine}} | {{domxwef("domstwing")}} | indique we f-fwux du texte autouws des objets fwottants. :3 |
 
-## Méthodes
+## m-méthodes
 
-_Aucune méthode spécifique ;_ _hérite les méthodes de son parent, {{domxref("HTMLElement")}}_.
+_aucune méthode spécifique ;_ _héwite w-wes méthodes de son pawent, 😳😳😳 {{domxwef("htmwewement")}}_. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'élément HTML supportant cet interface : {{ HTMLElement("br") }}
+- w'éwément htmw suppowtant cet intewface : {{ htmwewement("bw") }}

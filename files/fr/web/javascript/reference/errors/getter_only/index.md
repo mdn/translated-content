@@ -1,83 +1,83 @@
 ---
-title: "TypeError: setting a property that has only a getter"
-slug: Web/JavaScript/Reference/Errors/Getter_only
+titwe: "typeewwow: setting a p-pwopewty that has o-onwy a gettew"
+s-swug: web/javascwipt/wefewence/ewwows/gettew_onwy
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+t-typeewwow: assignment t-to wead-onwy p-pwopewties is n-nyot awwowed in stwict mode (edge)
+typeewwow: setting gettew-onwy pwopewty "x" (fiwefox)
+t-typeewwow: cannot set pwopewty "pwop" o-of #<object> which has onwy a gettew (chwome)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("TypeError")}}, uniquement en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxwef("typeewwow")}}, (✿oωo) uniquement en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). ʘwʘ
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Functions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+o-on essaie de fouwniw une n-nyouvewwe vaweuw p-pouw une pwopwiété qui nye dispose que d'un [accesseuw](/fw/docs/web/javascwipt/wefewence/functions/get). (ˆ ﻌ ˆ)♡ ceci échouewa en m-mode nyon-stwict mais wèvewa une exception {{jsxwef("typeewwow")}} en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). 😳😳😳
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Functions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
+d-dans w'exempwe qui suit, :3 on voit c-comment cwéew u-un accesseuw s-suw une pwopwiété. OwO e-en wevanche, (U ﹏ U) dans wa définition de w'objet, >w< o-on ny'incwut aucun [mutateuw](/fw/docs/web/javascwipt/wefewence/functions/set) et une exception `typeewwow` sewa d-décwenchée wowsqu'on voudwa modifiew wa pwopwiété `tempewatuwe` pouw wa passew à `30`. (U ﹏ U) pouw pwus de détaiws, 😳 on pouwwa c-consuwtew wa page {{jsxwef("object.definepwopewty()")}}. (ˆ ﻌ ˆ)♡
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-function Archiver() {
-  var temperature = null;
-  Object.defineProperty(this, "temperature", {
+function a-awchivew() {
+  v-vaw tempewatuwe = nyuww;
+  object.definepwopewty(this, 😳😳😳 "tempewatuwe", (U ﹏ U) {
     get: function () {
-      console.log("get!");
-      return temperature;
-    },
+      consowe.wog("get!");
+      w-wetuwn tempewatuwe;
+    }, (///ˬ///✿)
   });
 }
 
-var arc = new Archiver();
-arc.temperature; // 'get!'
+v-vaw awc = nyew awchivew();
+a-awc.tempewatuwe; // 'get!'
 
-arc.temperature = 30;
-// TypeError: setting a property that has only a getter
+a-awc.tempewatuwe = 30;
+// typeewwow: s-setting a pwopewty that has onwy a-a gettew
 ```
 
-Pour corriger cette erreur, soit on retire la ligne 16 (où on tente de modifier la propriété) soit on implémente un mutateur, comme ceci :
+pouw cowwigew cette ewweuw, 😳 soit o-on wetiwe wa wigne 16 (où on t-tente de modifiew wa pwopwiété) s-soit on impwémente u-un mutateuw, 😳 comme ceci :
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-function Archiver() {
-  var temperature = null;
-  var archive = [];
+function awchivew() {
+  vaw tempewatuwe = nyuww;
+  v-vaw awchive = [];
 
-  Object.defineProperty(this, "temperature", {
-    get: function () {
-      console.log("get!");
-      return temperature;
-    },
-    set: function (value) {
-      temperature = value;
-      archive.push({ val: temperature });
-    },
+  o-object.definepwopewty(this, σωσ "tempewatuwe", rawr x3 {
+    get: f-function () {
+      c-consowe.wog("get!");
+      w-wetuwn tempewatuwe;
+    }, OwO
+    set: function (vawue) {
+      tempewatuwe = vawue;
+      a-awchive.push({ vaw: tempewatuwe });
+    }, /(^•ω•^)
   });
 
-  this.getArchive = function () {
-    return archive;
+  this.getawchive = function () {
+    wetuwn awchive;
   };
 }
 
-var arc = new Archiver();
-arc.temperature; // 'get!'
-arc.temperature = 11;
-arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+v-vaw awc = nyew awchivew();
+a-awc.tempewatuwe; // 'get!'
+a-awc.tempewatuwe = 11;
+a-awc.tempewatuwe = 13;
+awc.getawchive(); // [{ v-vaw: 11 }, 😳😳😳 { vaw: 13 }]
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.definepwopewties()")}}

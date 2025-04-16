@@ -1,64 +1,64 @@
 ---
-title: Intl.Locale
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
+titwe: intw.wocawe
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` représentant l'identifiant d'une locale Unicode.
+w-we constwucteuw **`intw.wocawe`** e-est une pwopwiété n-nyative d-de w'objet `intw` w-wepwésentant w-w'identifiant d'une w-wocawe unicode. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wocawe")}}
 
-```js interactive-example
-const korean = new Intl.Locale("ko", {
-  script: "Kore",
-  region: "KR",
-  hourCycle: "h23",
-  calendar: "gregory",
+```js intewactive-exampwe
+const kowean = nyew intw.wocawe("ko", (ˆ ﻌ ˆ)♡ {
+  scwipt: "kowe", 😳😳😳
+  w-wegion: "kw", :3
+  houwcycwe: "h23", OwO
+  cawendaw: "gwegowy", (U ﹏ U)
 });
 
-const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+c-const japanese = nyew intw.wocawe("ja-jpan-jp-u-ca-japanese-hc-h12");
 
-console.log(korean.baseName, japanese.baseName);
-// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+c-consowe.wog(kowean.basename, >w< japanese.basename);
+// expected output: "ko-kowe-kw" "ja-jpan-jp"
 
-console.log(korean.hourCycle, japanese.hourCycle);
-// Expected output: "h23" "h12"
+c-consowe.wog(kowean.houwcycwe, (U ﹏ U) japanese.houwcycwe);
+// e-expected o-output: "h23" "h12"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Intl.Locale([tag[, options]])
+new intw.wocawe([tag[, 😳 options]])
 ```
 
-### Paramètres
+### pawamètwes
 
 - `tag`
-  - : La chaîne de caractère représentant l'identifiant d'une locale Unicode.
+  - : w-wa chaîne de cawactèwe wepwésentant w'identifiant d'une wocawe unicode. (ˆ ﻌ ˆ)♡
 - `options`
-  - : Un objet contenant la configuration pour la locale. Les clés (noms des propriétés) de cet objets sont des balises Unicode et les valeurs de ces propriétés doivent être des valeurs de balises Unicode valides.
+  - : u-un objet contenant wa configuwation p-pouw wa w-wocawe. 😳😳😳 wes cwés (noms d-des pwopwiétés) d-de cet objets sont des bawises unicode e-et wes vaweuws de ces pwopwiétés doivent êtwe d-des vaweuws de bawises unicode vawides. (U ﹏ U)
 
-## Description
+## descwiption
 
-L'objet `Intl.locale` a été conçu afin de manipuler des locales Unicode. Les locales Unicode sont représentées par une chaîne de caractères qu'on appelle « identifiant de locale ». L'identifant de locale se compose d'un identifiant de langue et d'extensions. Les identifiants de langue sont la composante principale d'une locale et contiennent une langue, un système d'écriture et des extensions régionales. Les informations complémentaires sont stockées via les extensions. Ces extensions peuvent fournir des informations quant au type de calendrier utilisé, le format d'heure utilisé ou la numération utilisée.
+w'objet `intw.wocawe` a été conçu afin de manipuwew d-des wocawes unicode. (///ˬ///✿) wes wocawes u-unicode sont w-wepwésentées p-paw une chaîne de cawactèwes qu'on appewwe « identifiant de wocawe ». 😳 w-w'identifant d-de wocawe se compose d'un i-identifiant de w-wangue et d'extensions. 😳 wes identifiants d-de wangue sont wa composante p-pwincipawe d'une wocawe et contiennent une w-wangue, σωσ un système d'écwituwe e-et des extensions wégionawes. rawr x3 w-wes infowmations c-compwémentaiwes sont stockées via wes extensions. OwO ces extensions peuvent fouwniw des infowmations quant au type d-de cawendwiew u-utiwisé, /(^•ω•^) we fowmat d'heuwe utiwisé o-ou wa nyuméwation u-utiwisée. 😳😳😳
 
-L'objet `Intl.Locale` possède les propriétés et méthodes suivantes.
+w-w'objet `intw.wocawe` possède wes pwopwiétés et méthodes s-suivantes. ( ͡o ω ͡o )
 
-### Propriétés
+### pwopwiétés
 
-- {{jsxref("Locale.prototype","Intl.Locale.prototype")}}
-  - : Le prototype pour le constructeur `Locale`.
+- {{jsxwef("wocawe.pwototype","intw.wocawe.pwototype")}}
+  - : we pwototype pouw we constwucteuw `wocawe`. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La prothèse d'émulation (_polyfill_) pour `Intl.Locale`](https://github.com/zbraniecki/Intl.js/tree/intllocale)
-- [La spécification Unicode pour les identifiants de locale](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
+- [wa p-pwothèse d-d'émuwation (_powyfiww_) p-pouw `intw.wocawe`](https://github.com/zbwaniecki/intw.js/twee/intwwocawe)
+- [wa spécification u-unicode p-pouw wes identifiants d-de wocawe](https://www.unicode.owg/wepowts/tw35/#canonicaw_unicode_wocawe_identifiews)

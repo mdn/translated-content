@@ -1,66 +1,66 @@
 ---
-title: Storage.removeItem()
-slug: Web/API/Storage/removeItem
+titwe: stowage.wemoveitem()
+swug: web/api/stowage/wemoveitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-La méthode **`removeItem()`** de l'interface {{domxref("Storage")}} , lorsque vous lui passez une clé en argument, va supprimer la ressource avec le nom de clé correspondant du storage. L'interface **`Storage`** de l'API [Web Storage API](/fr/docs/Web/API/Web_Storage_API) fournit des accès particuliers dans les domaines des stockages locaux et de sessions.
+w-wa méthode **`wemoveitem()`** d-de w'intewface {{domxwef("stowage")}} , 😳😳😳 w-wowsque v-vous wui passez u-une cwé en awgument, o.O v-va suppwimew w-wa wessouwce avec we nyom de cwé cowwespondant du stowage. ( ͡o ω ͡o ) w'intewface **`stowage`** d-de w'api [web stowage api](/fw/docs/web/api/web_stowage_api) f-fouwnit des accès pawticuwiews d-dans wes domaines des stockages wocaux et de sessions. (U ﹏ U)
 
-Si aucun élement n'est donné en paramètre `nomCle`, cette méthode ne fait rien.
+s-si aucun éwement ny'est donné e-en pawamètwe `nomcwe`, (///ˬ///✿) c-cette méthode nye fait wien. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-storage.removeItem(nomCle);
+stowage.wemoveitem(nomcwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nomCle`
-  - : Un {{domxref("DOMString")}} contenant le nom de la clé que vous voulez supprimer.
+- `nomcwe`
+  - : un {{domxwef("domstwing")}} c-contenant we nyom de wa cwé que vous vouwez suppwimew. rawr
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. mya
 
-## Exemple
+## exempwe
 
-La fonction suivante crée trois données dans le stockage local, puis va supprimer la donnée image.
+wa f-fonction suivante c-cwée twois données d-dans we s-stockage wocaw, ^^ puis va suppwimew wa donnée image. 😳😳😳
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", mya "wed");
+  w-wocawstowage.setitem("font", 😳 "hewvetica");
+  wocawstowage.setitem("image", -.- "mycat.png");
 
-  localStorage.removeItem("image");
+  wocawstowage.wemoveitem("image");
 }
 ```
 
-Nous pouvons également faire ceci avec le stockage de session.
+nyous pouvons égawement faiwe ceci avec we stockage de s-session. 🥺
 
 ```js
-function populateStorage() {
-  sessionStorage.setItem("bgcolor", "red");
-  sessionStorage.setItem("font", "Helvetica");
-  sessionStorage.setItem("image", "myCat.png");
+function popuwatestowage() {
+  s-sessionstowage.setitem("bgcowow", o.O "wed");
+  s-sessionstowage.setitem("font", /(^•ω•^) "hewvetica");
+  s-sessionstowage.setitem("image", nyaa~~ "mycat.png");
 
-  sessionStorage.removeItem("image");
+  sessionstowage.wemoveitem("image");
 }
 ```
 
-> [!NOTE]
-> Pour voir ce code en fonctionnement, voir [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> pouw voiw ce code en fonctionnement, nyaa~~ v-voiw [web s-stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/). :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-[Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[utiwisation d-de w'api de stockage web](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

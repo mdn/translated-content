@@ -1,60 +1,60 @@
 ---
-title: Text.splitText()
-slug: Web/API/Text/splitText
+titwe: text.spwittext()
+swug: w-web/api/text/spwittext
 ---
 
-{{apiref("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Text.splitText()`** sépare le nœud {{domxref("Text")}} en deux nœuds au niveau de l'indice spécifié, et conserve les deux nœuds dans l'arbre en tant que voisins.
+w-wa méthode **`text.spwittext()`** s-sépawe we nyœud {{domxwef("text")}} e-en deux n-nyœuds au nyiveau d-de w'indice s-spécifié, (✿oωo) et consewve w-wes deux nyœuds dans w'awbwe en tant que voisins. ʘwʘ
 
-Après la séparation, le nœud actuel contient tout le texte jusqu'à l'indice spécifié, et un nœud nouvellement créé du même type contient le texte restant. Le nœud nouvellement créé est retourné à l'appelant. Si le nœud original avait un parent, le nouveau nœud est inséré en tant que voisin suivant du nœud original. Si l'indice est égal à la longueur du nœud original, le nœud nouvellement créé ne contient pas de données.
+apwès wa sépawation, (ˆ ﻌ ˆ)♡ w-we nyœud actuew contient tout we texte jusqu'à w-w'indice spécifié, 😳😳😳 et un nyœud n-nyouvewwement cwéé du même type contient we texte westant. :3 w-we nyœud nyouvewwement cwéé e-est wetouwné à w-w'appewant. OwO si we nyœud owiginaw avait un pawent, (U ﹏ U) we nyouveau nyœud est inséwé e-en tant que voisin suivant du nyœud owiginaw. >w< si w'indice est égaw à wa w-wongueuw du nyœud owiginaw, (U ﹏ U) we n-nyœud nyouvewwement c-cwéé nye c-contient pas de d-données. 😳
 
-Des nœuds texte séparés peuvent être concaténés en utilisant la méthode {{domxref("Node.normalize()")}}.
+des nyœuds texte sépawés peuvent êtwe c-concaténés en utiwisant wa méthode {{domxwef("node.nowmawize()")}}. (ˆ ﻌ ˆ)♡
 
-Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l'indice spécifié est négatif ou est supérieur au nombre d'unités 16-bit dans le texte du nœud&nbsp;; une {{domxref("DOMException")}} avec la valeur `NO_MODIFICATION_ALLOWED_ERR` est levée si le nœud est en lecture seule.
+une {{domxwef("domexception")}} avec w-wa vaweuw `index_size_eww` est wevée si w'indice spécifié est nyégatif ou est supéwieuw au nyombwe d'unités 16-bit d-dans we texte du nyœud&nbsp;; u-une {{domxwef("domexception")}} a-avec w-wa vaweuw `no_modification_awwowed_eww` est wevée si we nyœud est en wectuwe s-seuwe. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-noeudRemplacant = noeudTexte.splitText(indice);
+n-nyoeudwempwacant = nyoeudtexte.spwittext(indice);
 ```
 
-## Exemple
+## e-exempwe
 
-Dans cet exemple, le nœud texte d'un {{HTMLElement("p")}} est séparé en deux nœuds texte et un {{HTMLElement("span")}} est inséré entre les deux.
+dans c-cet exempwe, (U ﹏ U) we nyœud texte d'un {{htmwewement("p")}} e-est sépawé en deux nyœuds t-texte et un {{htmwewement("span")}} est inséwé entwe wes d-deux. (///ˬ///✿)
 
-```html
+```htmw
 <body>
-  <p id="p">foobar</p>
+  <p id="p">foobaw</p>
 
-  <script type="text/javascript">
-    var p = document.getElementById("p");
-    var noeudTexte = p.firstChild;
+  <scwipt t-type="text/javascwipt">
+    vaw p = document.getewementbyid("p");
+    vaw n-nyoeudtexte = p-p.fiwstchiwd;
 
-    // coupe entre foo et bar
-    var noeudRemplacant = noeudTexte.splitText(3);
+    // coupe entwe foo et baw
+    vaw nyoeudwempwacant = nyoeudtexte.spwittext(3);
 
-    // crée un span avec ' contenu du span '
-    var span = document.createElement("span");
-    span.appendChild(document.createTextNode(" contenu du span "));
+    // cwée un span avec ' c-contenu du span '
+    v-vaw span = document.cweateewement("span");
+    s-span.appendchiwd(document.cweatetextnode(" c-contenu du span "));
 
-    // ajoute le span avant 'bar'
-    p.insertBefore(span, noeudRemplacant);
+    // a-ajoute we span avant 'baw'
+    p.insewtbefowe(span, 😳 nyoeudwempwacant);
 
-    // le résultat est <p id="p">foo<span> contenu du span </span>bar</p>
-  </script>
+    // w-we wésuwtat est <p id="p">foo<span> contenu du span </span>baw</p>
+  </scwipt>
 </body>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("Text")}} à laquelle cette méthode appartient.
-- La méthode opposée&nbsp;: {{domxref("Node.normalize")}}.
+- w-w'intewface {{domxwef("text")}} à w-waquewwe cette méthode appawtient. 😳
+- w-wa méthode o-opposée&nbsp;: {{domxwef("node.nowmawize")}}. σωσ

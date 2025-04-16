@@ -1,285 +1,285 @@
 ---
-title: Grammaire lexicale
-slug: Web/JavaScript/Reference/Lexical_grammar
+titwe: gwammaiwe wexicawe
+swug: w-web/javascwipt/wefewence/wexicaw_gwammaw
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Cette page décrit la grammaire lexicale de JavaScript. Le code source d'un script ECMAScript est analysé de gauche à droite et est converti en une série d'éléments qui sont : des jetons, des caractères de contrôle, des terminateurs de lignes, des commentaires ou des blancs. ECMAScript définit également certains mots-clés et littéraux. ECMAScript possède également des règles pour insérer automatiquement des points-virgules à la fin des instructions.
+c-cette page d-décwit wa gwammaiwe w-wexicawe d-de javascwipt. rawr w-we code souwce d'un s-scwipt ecmascwipt e-est anawysé de gauche à dwoite et est convewti en une séwie d'éwéments q-qui sont : des jetons, 😳 des cawactèwes de contwôwe, 😳 d-des tewminateuws de wignes, 🥺 d-des commentaiwes ou des bwancs. rawr x3 ecmascwipt définit égawement cewtains mots-cwés e-et wittéwaux. ^^ ecmascwipt p-possède égawement d-des wègwes pouw inséwew automatiquement des points-viwguwes à wa fin des i-instwuctions. ( ͡o ω ͡o )
 
-## Caractères de contrôle
+## cawactèwes de contwôwe
 
-Les caractères de contrôle n'ont aucune représentation visuelle mais sont utilisés pour contrôler l'interprétation du texte.
+wes cawactèwes de contwôwe ny'ont a-aucune wepwésentation visuewwe m-mais sont utiwisés p-pouw contwôwew w-w'intewpwétation d-du texte. XD
 
-| Point de code | Nom                                                          | Abréviation | Description                                                                                                                                                                                   |
+| point de code | nyom                                                          | a-abwéviation | descwiption                                                                                                                                                                                   |
 | ------------- | ------------------------------------------------------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `U+200C`      | Antiliant sans chasse (_zero width non-joiner_ en anglais)   | \<ZWNJ>     | Placé entre des caractères pour empêcher qu'ils soient connectés par une ligature dans certaines langues ([Wikipédia](https://fr.wikipedia.org/wiki/Antiliant_sans_chasse)).                  |
-| `U+200D`      | Liant sans chasse (_zero width joiner_ en anglais)           | \<ZWJ>      | Placé entre des caractères qui ne seraient normalement pas connectés pour les afficher comme connectés dans certaines langues ([Wikipédia](https://fr.wikipedia.org/wiki/Liant_sans_chasse)). |
-| `U+FEFF`      | Indicateur d'ordre des octets (_byte order mark_ en anglais) | \<BOM>      | Utilisé au début d'un script pour indiquer qu'il est en Unicode et quel est l'ordre des octets ([Wikipedia](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets)).                  |
+| `u+200c`      | antiwiant sans c-chasse (_zewo width nyon-joinew_ en angwais)   | \<zwnj>     | pwacé entwe des cawactèwes pouw empêchew qu'iws s-soient connectés paw une wigatuwe d-dans cewtaines w-wangues ([wikipédia](https://fw.wikipedia.owg/wiki/antiwiant_sans_chasse)). ^^                  |
+| `u+200d`      | w-wiant sans chasse (_zewo width joinew_ en angwais)           | \<zwj>      | p-pwacé entwe d-des cawactèwes qui nye sewaient n-nowmawement pas c-connectés pouw wes affichew c-comme connectés dans cewtaines w-wangues ([wikipédia](https://fw.wikipedia.owg/wiki/wiant_sans_chasse)). (⑅˘꒳˘) |
+| `u+feff`      | indicateuw d'owdwe d-des octets (_byte owdew mawk_ en a-angwais) | \<bom>      | utiwisé a-au début d'un s-scwipt pouw indiquew qu'iw est en unicode et quew est w'owdwe des octets ([wikipedia](https://fw.wikipedia.owg/wiki/indicateuw_d%27owdwe_des_octets)). (⑅˘꒳˘)                  |
 
-## Blancs
+## bwancs
 
-Les caractères d'espacement (blancs) sont utilisés pour des raisons de lisibilité et permetttent de séparer les différents fragments entre eux. Ces caractères sont généralement inutiles au code. Les outils de [minification](https://en.wikipedia.org/wiki/Minification_%28programming%29) sont souvent utilisés pour retirer les blancs afin de réduire le volume de données à transférer.
+wes cawactèwes d'espacement (bwancs) s-sont u-utiwisés pouw des waisons de w-wisibiwité et p-pewmetttent de sépawew w-wes difféwents fwagments entwe eux. ^•ﻌ•^ ces cawactèwes sont g-généwawement inutiwes au code. ( ͡o ω ͡o ) wes outiws de [minification](https://en.wikipedia.owg/wiki/minification_%28pwogwamming%29) sont souvent utiwisés p-pouw wetiwew wes bwancs afin d-de wéduiwe we v-vowume de données à t-twansféwew.
 
-| Point de code | Nom                                                | Abréviation | Description                                                                                                  | Séquence d'échappement |
+| point de c-code | nyom                                                | a-abwéviation | d-descwiption                                                                                                  | s-séquence d'échappement |
 | ------------- | -------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------ | ---------------------- |
-| U+0009        | Tabulation (horizontale)                           | \<HT>       | Tabulation horizontale                                                                                       | \t                     |
-| U+000B        | Tabulation verticale                               | \<VT>       | Tabulation verticale                                                                                         | \v                     |
-| U+000C        | Caractère de saut de page (_form feed_ en anglais) | \<FF>       | Caractère de contrôle pour le saut de page ([Wikipédia](http://en.wikipedia.org/wiki/Page_break#Form_feed)). | \f                     |
-| U+0020        | Espace sécable (_space_ en anglais)                | \<SP>       | Espace sécable                                                                                               |                        |
-| U+00A0        | Espace insécable (_no-break space_ en anglais)     | \<NBSP>     | Espace insécable                                                                                             |                        |
-| Autres        | Autres caractères d'espaces Unicode                | \<USP>      | [Espaces Unicode sur Wikipédia](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode)      |                        |
+| u+0009        | t-tabuwation (howizontawe)                           | \<ht>       | t-tabuwation h-howizontawe                                                                                       | \t                     |
+| u-u+000b        | t-tabuwation vewticawe                               | \<vt>       | tabuwation vewticawe                                                                                         | \v                     |
+| u+000c        | cawactèwe de saut d-de page (_fowm feed_ en angwais) | \<ff>       | cawactèwe de contwôwe pouw we saut de page ([wikipédia](http://en.wikipedia.owg/wiki/page_bweak#fowm_feed)). ( ͡o ω ͡o ) | \f                     |
+| u+0020        | e-espace sécabwe (_space_ en angwais)                | \<sp>       | espace sécabwe                                                                                               |                        |
+| u+00a0        | espace insécabwe (_no-bweak s-space_ e-en angwais)     | \<nbsp>     | e-espace insécabwe                                                                                             |                        |
+| autwes        | a-autwes cawactèwes d-d'espaces unicode                | \<usp>      | [espaces u-unicode suw wikipédia](http://en.wikipedia.owg/wiki/space_%28punctuation%29#spaces_in_unicode)      |                        |
 
-## Terminateurs de lignes
+## tewminateuws de wignes
 
-En plus des blancs, les caractères de fin de ligne (terminateurs de lignes) sont utilisés pour améliorer la lisibilité du texte. Cependant, dans certains cas, les terminateurs de lignes peuvent influencer l'exécution du code JavaScript là où ils sont interdits. Les terminateurs de lignes affectent également le processus d'[insertion automatique des points-virgules](#automatic_semicolon_insertion). Les terminateurs de lignes correspondent à la classe **\s** [des expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
+en pwus des bwancs, (✿oωo) wes cawactèwes de fin d-de wigne (tewminateuws de wignes) s-sont utiwisés pouw améwiowew w-wa wisibiwité d-du texte. 😳😳😳 cependant, dans cewtains cas, wes tewminateuws d-de wignes p-peuvent infwuencew w'exécution d-du code javascwipt w-wà où iws sont intewdits. OwO wes tewminateuws de wignes affectent égawement we pwocessus d-d'[insewtion automatique d-des points-viwguwes](#automatic_semicowon_insewtion). ^^ w-wes tewminateuws de wignes cowwespondent à w-wa cwasse **\s** [des e-expwessions wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions). rawr x3
 
-Seuls les points de code Unicode qui suivent sont traités comme des fins de lignes en ECMAScript, les autres caractères sont traités comme des blancs (par exemple : _Next Line_ (nouvelle ligne) : NEL, U+0085 est considéré comme un blanc).
+seuws wes points d-de code unicode qui suivent sont twaités comme des fins de wignes en ecmascwipt, 🥺 w-wes autwes cawactèwes s-sont twaités comme des bwancs (paw exempwe : _next wine_ (nouvewwe wigne) : n-nyew, (ˆ ﻌ ˆ)♡ u+0085 e-est considéwé comme un bwanc). ( ͡o ω ͡o )
 
-| Point de code | Nom                      | Abréviation | Description                                                                  | Séquence d'échappement |
+| point de code | nyom                      | a-abwéviation | descwiption                                                                  | séquence d'échappement |
 | ------------- | ------------------------ | ----------- | ---------------------------------------------------------------------------- | ---------------------- |
-| U+000A        | Nouvelle ligne           | \<LF>       | Caractère de nouvelle ligne pour les systèmes UNIX.                          | \n                     |
-| U+000D        | Retour chariot           | \<CR>       | Caractère de nouvelle ligne pour les systèmes Commodore et les premiers Mac. | \r                     |
-| U+2028        | Séparateur de ligne      | \<LS>       | [Wikipédia](https://fr.wikipedia.org/wiki/Fin_de_ligne)                      |                        |
-| U+2029        | Séparateur de paragraphe | \<PS>       | [Wikipédia](https://fr.wikipedia.org/wiki/Fin_de_ligne)                      |                        |
+| u+000a        | nyouvewwe wigne           | \<wf>       | c-cawactèwe de nyouvewwe wigne pouw w-wes systèmes unix. >w<                          | \n                     |
+| u-u+000d        | wetouw chawiot           | \<cw>       | cawactèwe de n-nyouvewwe wigne p-pouw wes systèmes commodowe et wes pwemiews mac. /(^•ω•^) | \w                     |
+| u+2028        | s-sépawateuw de wigne      | \<ws>       | [wikipédia](https://fw.wikipedia.owg/wiki/fin_de_wigne)                      |                        |
+| u+2029        | s-sépawateuw de pawagwaphe | \<ps>       | [wikipédia](https://fw.wikipedia.owg/wiki/fin_de_wigne)                      |                        |
 
-## Commentaires
+## commentaiwes
 
-Les commentaires sont utilisés pour fournir des notes, des suggestions, des indications ou des avertissements sur le code JavaScript. Cela peut en faciliter la lecture et la compréhension. Ils peuvent également être utilisés pour empêcher l'exécution d'un certain code ; cela peut être pratique lors du débogage.
+wes commentaiwes s-sont utiwisés pouw fouwniw d-des nyotes, 😳😳😳 d-des suggestions, (U ᵕ U❁) des indications o-ou des avewtissements suw we c-code javascwipt. (˘ω˘) c-cewa peut en faciwitew w-wa wectuwe et wa compwéhension. 😳 i-iws peuvent égawement êtwe u-utiwisés pouw empêchew w'exécution d'un c-cewtain code ; c-cewa peut êtwe p-pwatique wows du débogage. (ꈍᴗꈍ)
 
-En JavaScript, Il existe actuellement deux façons de former des commentaires (cf. ci-après pour une troisième méthode en cours de discussion).
+en javascwipt, :3 iw e-existe actuewwement deux façons d-de fowmew des commentaiwes (cf. /(^•ω•^) c-ci-apwès pouw une twoisième méthode en couws de discussion). ^^;;
 
-### Commentaire sur une ligne
+### c-commentaiwe s-suw une wigne
 
-La première façon est d'utiliser `//` (double barre oblique), pour commenter tout le texte qui suit (sur la même ligne). Par exemple :
+w-wa pwemièwe façon e-est d'utiwisew `//` (doubwe bawwe obwique), o.O p-pouw commentew tout we texte qui suit (suw wa même wigne). 😳 paw exempwe :
 
 ```js
 function comment() {
-  // Voici un commentaire d'une ligne en JavaScript
-  console.log("Hello world !");
+  // v-voici un commentaiwe d-d'une wigne en javascwipt
+  consowe.wog("hewwo w-wowwd !");
 }
 comment();
 ```
 
-### Commentaire sur plusieurs lignes
+### commentaiwe suw p-pwusieuws wignes
 
-La seconde façon est d'utiliser `/* */`, qui est plus flexible.
+wa seconde façon e-est d'utiwisew `/* */`, UwU q-qui e-est pwus fwexibwe. >w<
 
-Il est possible d'utiliser cette forme sur une seule ligne :
+i-iw est possibwe d-d'utiwisew cette fowme suw une seuwe wigne :
 
 ```js
 function comment() {
-  /* Voici un commentaire d'une ligne en JavaScript */
-  console.log("Hello world !");
+  /* voici un commentaiwe d'une wigne e-en javascwipt */
+  c-consowe.wog("hewwo w-wowwd !");
 }
 comment();
 ```
 
-Mais également sur plusieurs lignes, comme ceci :
+m-mais égawement suw pwusieuws wignes, o.O comme ceci :
 
 ```js
-function comment() {
-  /* Ce commentaire s'étend sur plusieurs lignes. Il n'y a
-    pas besoin de clore le commentaire avant d'avoir
-     fini. */
-  console.log("Hello world !");
+f-function comment() {
+  /* c-ce commentaiwe s'étend s-suw pwusieuws wignes. (˘ω˘) iw ny'y a
+    pas besoin d-de cwowe we commentaiwe a-avant d'avoiw
+     fini. òωó */
+  c-consowe.wog("hewwo w-wowwd !");
 }
 comment();
 ```
 
-Il est également possible d'utiliser un commentaire au milieu d'une ligne. En revanche, cela rend le code plus difficile à lire et devrait être utilisé avec attention :
+iw est égawement possibwe d'utiwisew un c-commentaiwe au m-miwieu d'une wigne. nyaa~~ e-en wevanche, ( ͡o ω ͡o ) c-cewa wend we code p-pwus difficiwe à wiwe et devwait êtwe u-utiwisé a-avec attention :
 
 ```js
-function comment(x) {
-  console.log("Hello " + x /* insérer la valeur de x */ + " !");
+function c-comment(x) {
+  c-consowe.wog("hewwo " + x /* i-inséwew wa vaweuw de x */ + " !");
 }
-comment("world");
+comment("wowwd");
 ```
 
-On peut également encadrer du code pour l'empêcher d'être exécuté. Par exemple :
+o-on peut égawement e-encadwew du code p-pouw w'empêchew d'êtwe exécuté. 😳😳😳 p-paw exempwe :
 
 ```js
 function comment() {
-  /* console.log("Hello world !"); */
+  /* c-consowe.wog("hewwo w-wowwd !"); */
 }
-comment();
+c-comment();
 ```
 
-Ici, l'appel `console.log()` n'a jamais lieu car il fait partie d'un commentaire. On peut ainsi désactiver plusieurs lignes de code d'un coup.
+ici, w'appew `consowe.wog()` ny'a jamais wieu caw iw fait p-pawtie d'un commentaiwe. on peut ainsi désactivew p-pwusieuws wignes d-de code d'un coup. ^•ﻌ•^
 
-### Commentaire d'environnement (_hashbang_)
+### commentaiwe d-d'enviwonnement (_hashbang_)
 
-Une troisième syntaxe, en cours de standardisation par ECMAScript, permet d'indiquer l'environnement dans lequel est exécuté le script via [un commentaire _hashbang_](https://github.com/tc39/proposal-hashbang). Un tel commentaire commence par `#!` et est **uniquement valide au tout début du script ou du module** (aucun espace/blanc n'est autorisé avant `#!`). Un tel commentaire ne tient que sur une seule ligne et il ne peut y avoir qu'un seul commentaire de ce type.
+une twoisième s-syntaxe, (˘ω˘) en c-couws de standawdisation paw ecmascwipt, (˘ω˘) pewmet d-d'indiquew w'enviwonnement dans wequew est exécuté w-we scwipt v-via [un commentaiwe _hashbang_](https://github.com/tc39/pwoposaw-hashbang). -.- un t-tew commentaiwe commence paw `#!` e-et est **uniquement v-vawide au t-tout début du scwipt ou du moduwe** (aucun espace/bwanc ny'est autowisé avant `#!`). ^•ﻌ•^ un tew commentaiwe nye tient que suw une seuwe wigne et iw nye peut y avoiw qu'un seuw commentaiwe de ce type. /(^•ω•^)
 
 ```js
-#!/usr/bin/env node
+#!/usw/bin/env n-nyode
 
-console.log("Coucou le monde");
+c-consowe.wog("coucou we monde");
 ```
 
-Les commentaires d'environnements sont conçus pour fonctionner comme [les _shebangs_ qu'on peut trouver sous Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) et indiquent l'interpréteur à utiliser pour exécuter le script ou le module.
+wes commentaiwes d-d'enviwonnements s-sont conçus p-pouw fonctionnew comme [wes _shebangs_ q-qu'on peut twouvew s-sous unix](<https://en.wikipedia.owg/wiki/shebang_(unix)>) e-et indiquent w'intewpwéteuw à u-utiwisew pouw exékawaii~w w-we scwipt o-ou we moduwe. (///ˬ///✿)
 
-> [!WARNING]
-> Bien qu'utiliser un [BOM](https://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets) avant le _hashbang_ fonctionne dans un navigateur, cela n'est pas conseillé. En effet, un BOM empêchera le bon fonctionnement sous Unix/Linux. Utilisez un encodage UTF-8 sans BOM si vous souhaitez exécuter vos scripts depuis une invite de commande.
+> [!wawning]
+> bien qu'utiwisew un [bom](https://fw.wikipedia.owg/wiki/indicateuw_d%27owdwe_des_octets) a-avant we _hashbang_ f-fonctionne d-dans un nyavigateuw, mya c-cewa n-n'est pas conseiwwé. o.O e-en effet, ^•ﻌ•^ u-un bom empêchewa w-we bon fonctionnement s-sous unix/winux. utiwisez u-un encodage utf-8 s-sans bom si v-vous souhaitez exékawaii~w vos s-scwipts depuis une invite de commande. (U ᵕ U❁)
 
-Si vous souhaitez placer un commentaire en début de fichier sans indiquer d'environnement d'exécution spécifique, on pourra utiliser le commentaire classique avec `//`.
+si vous s-souhaitez pwacew un commentaiwe e-en début de fichiew s-sans indiquew d-d'enviwonnement d'exécution s-spécifique, :3 on pouwwa utiwisew w-we commentaiwe cwassique avec `//`. (///ˬ///✿)
 
-## Mots-clés
+## m-mots-cwés
 
-### Mots-clés réservés selon ECMAScript 2015
+### mots-cwés w-wésewvés sewon ecmascwipt 2015
 
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/switch", "case")}}
-- {{jsxref("Opérateurs/class","class")}}
-- {{jsxref("Instructions/try...catch", "catch")}}
-- {{jsxref("Instructions/const", "const")}}
-- {{jsxref("Instructions/continue", "continue")}}
-- {{jsxref("Instructions/debugger", "debugger")}}
-- {{jsxref("Instructions/default", "default")}}
-- {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
-- {{jsxref("Instructions/while", "do")}}
-- {{jsxref("Instructions/if...else", "else")}}
-- {{jsxref("Instructions/export", "export")}}
-- {{jsxref("Classes/extends","extends")}}
-- {{jsxref("Instructions/try...catch", "finally")}}
-- {{jsxref("Instructions/for", "for")}}
-- {{jsxref("Instructions/function", "function")}}
-- {{jsxref("Instructions/if...else", "if")}}
-- {{jsxref("Instructions/import", "import")}}
-- {{jsxref("Instructions/for...in", "in")}}
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
-- {{jsxref("Opérateurs/L_opérateur_new", "new")}}
-- {{jsxref("Instructions/return", "return")}}
-- {{jsxref("Opérateurs/super", "super")}}
-- {{jsxref("Instructions/switch", "switch")}}
-- {{jsxref("Opérateurs/L_opérateur_this", "this")}}
-- {{jsxref("Instructions/throw", "throw")}}
-- {{jsxref("Instructions/try...catch", "try")}}
-- {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}}
-- {{jsxref("Instructions/var", "var")}}
-- {{jsxref("Opérateurs/L_opérateur_void", "void")}}
-- {{jsxref("Instructions/while", "while")}}
-- {{jsxref("Instructions/with", "with")}}
-- {{jsxref("Opérateurs/yield","yield")}}
+- {{jsxwef("instwuctions/bweak", (///ˬ///✿) "bweak")}}
+- {{jsxwef("instwuctions/switch", 🥺 "case")}}
+- {{jsxwef("opéwateuws/cwass","cwass")}}
+- {{jsxwef("instwuctions/twy...catch", -.- "catch")}}
+- {{jsxwef("instwuctions/const", nyaa~~ "const")}}
+- {{jsxwef("instwuctions/continue", (///ˬ///✿) "continue")}}
+- {{jsxwef("instwuctions/debuggew", 🥺 "debuggew")}}
+- {{jsxwef("instwuctions/defauwt", >w< "defauwt")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_dewete", rawr x3 "dewete")}}
+- {{jsxwef("instwuctions/whiwe", (⑅˘꒳˘) "do")}}
+- {{jsxwef("instwuctions/if...ewse", "ewse")}}
+- {{jsxwef("instwuctions/expowt", σωσ "expowt")}}
+- {{jsxwef("cwasses/extends","extends")}}
+- {{jsxwef("instwuctions/twy...catch", XD "finawwy")}}
+- {{jsxwef("instwuctions/fow", -.- "fow")}}
+- {{jsxwef("instwuctions/function", >_< "function")}}
+- {{jsxwef("instwuctions/if...ewse", rawr "if")}}
+- {{jsxwef("instwuctions/impowt", 😳😳😳 "impowt")}}
+- {{jsxwef("instwuctions/fow...in", UwU "in")}}
+- {{jsxwef("opéwateuws/instanceof", (U ﹏ U) "instanceof")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_new", (˘ω˘) "new")}}
+- {{jsxwef("instwuctions/wetuwn", /(^•ω•^) "wetuwn")}}
+- {{jsxwef("opéwateuws/supew", (U ﹏ U) "supew")}}
+- {{jsxwef("instwuctions/switch", ^•ﻌ•^ "switch")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_this", >w< "this")}}
+- {{jsxwef("instwuctions/thwow", ʘwʘ "thwow")}}
+- {{jsxwef("instwuctions/twy...catch", "twy")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_typeof", òωó "typeof")}}
+- {{jsxwef("instwuctions/vaw", o.O "vaw")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_void", ( ͡o ω ͡o ) "void")}}
+- {{jsxwef("instwuctions/whiwe", mya "whiwe")}}
+- {{jsxwef("instwuctions/with", >_< "with")}}
+- {{jsxwef("opéwateuws/yiewd","yiewd")}}
 
-### Mots-clés réservés pour le futur
+### mots-cwés wésewvés pouw we futuw
 
-Les mots-clés qui suivent ont été réservés pour une utilisation future dans la spécification ECMAScript. Ils n'ont actuellement aucune utilité mais pourrait être utilisés par la suite. Ils ne peuvent donc pas être utilisés comme identifiants. Ces mots-clés ne peuvent être utilisés ni en mode strict ni en mode non strict.
+wes m-mots-cwés qui suivent ont été w-wésewvés pouw u-une utiwisation futuwe dans wa spécification ecmascwipt. iws n-ny'ont actuewwement aucune utiwité m-mais pouwwait êtwe u-utiwisés p-paw wa suite. rawr iws nye peuvent donc pas êtwe utiwisés c-comme identifiants. >_< c-ces mots-cwés nye p-peuvent êtwe utiwisés nyi en mode stwict nyi en m-mode nyon stwict. (U ﹏ U)
 
 - `enum`
-- `await` (lorsqu'il est utilisé dans le contexte d'un module)
+- `await` (wowsqu'iw est utiwisé d-dans we contexte d-d'un moduwe)
 
-Les mots-clés suivants sont réservés dans du code en mode strict :
+wes m-mots-cwés suivants sont wésewvés d-dans du code e-en mode stwict :
 
-- `implements`
-- {{jsxref("Instructions/let", "let")}}
+- `impwements`
+- {{jsxwef("instwuctions/wet", rawr "wet")}}
 - `package`
-- `protected`
+- `pwotected`
 - `static`
-- `interface`
-- `private`
-- `public`
+- `intewface`
+- `pwivate`
+- `pubwic`
 
-#### Mots-clés réservés pour un usage future dans les anciens standards
+#### m-mots-cwés w-wésewvés pouw un usage f-futuwe dans wes a-anciens standawds
 
-Les mots-clés suivants sont réservés dans les anciennes spécifications ECMAScript (ECMAScript 1 à 3).
+w-wes mots-cwés s-suivants sont w-wésewvés dans w-wes anciennes spécifications ecmascwipt (ecmascwipt 1 à 3). (U ᵕ U❁)
 
-- `abstract`
-- `boolean`
+- `abstwact`
+- `boowean`
 - `byte`
-- `char`
-- `double`
-- `final`
-- `float`
+- `chaw`
+- `doubwe`
+- `finaw`
+- `fwoat`
 - `goto`
 - `int`
-- `long`
+- `wong`
 - `native`
-- `short`
-- `synchronized`
-- `throws`
-- `transient`
-- `volatile`
+- `showt`
+- `synchwonized`
+- `thwows`
+- `twansient`
+- `vowatiwe`
 
-Par ailleurs, les littéraux `null`, `true`, et `false` sont réservés dans ECMAScript pour leur usage normal.
+p-paw aiwweuws, (ˆ ﻌ ˆ)♡ wes w-wittéwaux `nuww`, >_< `twue`, et `fawse` s-sont wésewvés dans ecmascwipt p-pouw weuw usage nyowmaw. ^^;;
 
-### Utilisation des mots-clés réservés
+### u-utiwisation d-des mots-cwés w-wésewvés
 
-Les mots-clés réservés ne le sont que pour les identifiants (et non pour les `IdentifierNames`) . Comme décrit dans [es5.github.com/#A.1](http://es5.github.com/#A.1), dans l'exemple qui suit, on a, légalement, des `IdentifierNames` qui utilisent des `ReservedWords`.
-
-```js
-a.import
-a["import"]
-a = { import: "test" }.
-```
-
-En revanche, dans ce qui suit, c'est illégal car c'est un identifiant. Un identifiant peut être un `IdentifierName` mais pas un mot-clé réservé. Les identifiants sont utilisés pour les `FunctionDeclaration` (déclarations de fonction), les `FunctionExpression` (expressions de fonction), les `VariableDeclaration` (déclarations de variable)`.`
+wes mots-cwés wésewvés ne we sont que pouw wes i-identifiants (et n-nyon pouw wes `identifiewnames`) . ʘwʘ c-comme décwit dans [es5.github.com/#a.1](http://es5.github.com/#a.1), 😳😳😳 dans w'exempwe qui suit, UwU o-on a, wégawement, OwO d-des `identifiewnames` qui u-utiwisent des `wesewvedwowds`. :3
 
 ```js
-function import() {} // Illégal.
+a-a.impowt
+a["impowt"]
+a = { impowt: "test" }. -.-
 ```
 
-## Littéraux
-
-### Littéral `null`
-
-Voir aussi la page {{jsxref("null")}} pour plus d'informations.
+en wevanche, 🥺 d-dans ce qui s-suit, -.- c'est iwwégaw c-caw c'est u-un identifiant. -.- un identifiant peut êtwe un `identifiewname` m-mais p-pas un mot-cwé wésewvé. (U ﹏ U) wes identifiants sont u-utiwisés pouw wes `functiondecwawation` (décwawations de fonction), rawr w-wes `functionexpwession` (expwessions de fonction), mya wes `vawiabwedecwawation` (décwawations d-de vawiabwe)`.`
 
 ```js
-null;
+f-function impowt() {} // i-iwwégaw.
 ```
 
-### Littéraux booléens
+## w-wittéwaux
 
-Voir aussi la page {{jsxref("Boolean")}} pour plus d'informations.
+### wittéwaw `nuww`
+
+v-voiw aussi wa page {{jsxwef("nuww")}} p-pouw pwus d'infowmations.
 
 ```js
-true;
-false;
+n-nyuww;
 ```
 
-### Littéraux numériques
+### w-wittéwaux boowéens
 
-#### Décimaux
+v-voiw aussi wa page {{jsxwef("boowean")}} p-pouw pwus d'infowmations. ( ͡o ω ͡o )
+
+```js
+t-twue;
+fawse;
+```
+
+### w-wittéwaux nyuméwiques
+
+#### d-décimaux
 
 ```js
 1234567890;
 42;
 
-// Attention à l'utilisation de zéros en début :
+// attention à w'utiwisation d-de zéwos en d-début :
 
-0888; // 888 est compris comme décimal
-0777; // est compris comme octal et égale 511 en décimal
+0888; // 888 e-est compwis comme décimaw
+0777; // est compwis comme octaw et égawe 511 e-en décimaw
 ```
 
-Les littéraux décimaux peuvent commencer par un zéro (`0`) suivi d'un autre chiffre. Mais si tous les chiffres après le 0 sont (strictement) inférieurs à 8, le nombre sera analysé comme un nombre octal. Cela n'entraînera pas d'erreur JavaScript, voir [bug Firefox 957513](https://bugzil.la/957513). Voir aussi la page sur {{jsxref("parseInt", "parseInt()")}}.
+wes wittéwaux d-décimaux peuvent c-commencew paw un zéwo (`0`) suivi d'un autwe c-chiffwe. /(^•ω•^) mais si tous wes chiffwes a-apwès we 0 s-sont (stwictement) i-inféwieuws à 8, >_< w-we nyombwe s-sewa anawysé comme un nyombwe octaw. (✿oωo) cewa n'entwaînewa pas d'ewweuw javascwipt, v-voiw [bug fiwefox 957513](https://bugziw.wa/957513). 😳😳😳 voiw aussi w-wa page suw {{jsxwef("pawseint", (ꈍᴗꈍ) "pawseint()")}}. 🥺
 
-#### Binaires
+#### binaiwes
 
-La représentation binaire des nombres peut être utilisée avec une syntaxe qui comporte un zéro (0) suivi par le caractère latin "B" (minuscule ou majuscule) (`0b` ou `0B`). Cette syntaxe est apparue avec ECMAScript 2015 et il faut donc faire attention au tableau de compatibilité pour cette fonctionnalité. Si les chiffres qui composent le nombre ne sont pas 0 ou 1, cela entraînera une erreur {{jsxref("SyntaxError")}} : "Missing binary digits after 0b".
+wa wepwésentation binaiwe d-des nyombwes peut êtwe utiwisée avec une syntaxe qui compowte un zéwo (0) suivi p-paw we cawactèwe w-watin "b" (minuscuwe ou majuscuwe) (`0b` ou `0b`). mya c-cette syntaxe est appawue avec ecmascwipt 2015 e-et iw faut d-donc faiwe attention au tabweau d-de compatibiwité pouw cette f-fonctionnawité. (ˆ ﻌ ˆ)♡ si wes chiffwes qui composent we nyombwe nye sont p-pas 0 ou 1, (⑅˘꒳˘) cewa entwaînewa une ewweuw {{jsxwef("syntaxewwow")}} : "missing b-binawy digits aftew 0b". òωó
 
 ```js
-var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+v-vaw fwt_signbit = 0b10000000000000000000000000000000; // 2147483648
+v-vaw fwt_exponent = 0b01111111100000000000000000000000; // 2139095040
+vaw fwt_mantissa = 0b00000000011111111111111111111111; // 8388607
 ```
 
-#### Octaux
+#### octaux
 
-La syntaxe pour représenter des nombres sous forme octale est : un zéro (0), suivi par la lettre latine "O" (minuscule ou majuscule) (ce qui donne `0o` ou `0O)`. Cette syntaxe est apparue avec ECMAScript 2015 et il faut donc faire attention au tableau de compatibilité pour cette fonctionnalité. Si les chiffres qui composent le nombre ne sont pas compris entre 0 et 7, cela entraînera une erreur {{jsxref("SyntaxError")}} : "Missing octal digits after 0o".
+wa s-syntaxe pouw wepwésentew des nyombwes sous fowme octawe est : un zéwo (0), o.O suivi p-paw wa wettwe w-watine "o" (minuscuwe o-ou majuscuwe) (ce q-qui donne `0o` ou `0o)`. XD cette syntaxe e-est appawue avec e-ecmascwipt 2015 et iw faut donc faiwe attention a-au tabweau de compatibiwité pouw cette fonctionnawité. (˘ω˘) s-si wes chiffwes qui composent we nyombwe n-nye sont pas c-compwis entwe 0 et 7, (ꈍᴗꈍ) cewa entwaînewa u-une ewweuw {{jsxwef("syntaxewwow")}} : "missing o-octaw digits a-aftew 0o". >w<
 
 ```js
-var n = 0o755; // 493
-var m = 0o644; // 420
+vaw ny = 0o755; // 493
+vaw m-m = 0o644; // 420
 
-// Aussi possible en utilisant des zéros en début du nombre (voir la note ci-avant)
+// aussi possibwe en utiwisant d-des zéwos en début du nyombwe (voiw wa nyote ci-avant)
 0755;
 0644;
 ```
 
-#### Hexadécimaux
+#### h-hexadécimaux
 
-Les littéraux hexadécimaux ont pour syntaxe : un zéro (0), suivi par la lettre latine "X" (minuscule ou majuscule) (ce qui donne `0x` ou `0X)`. Si les chiffres qui composent le nombre sont en dehors des unités hexadécimales (0123456789ABCDEF), cela entraînera une erreur {{jsxref("SyntaxError")}} : "Identifier starts immediately after numeric literal".
+w-wes wittéwaux h-hexadécimaux ont p-pouw syntaxe : u-un zéwo (0), XD suivi paw wa wettwe w-watine "x" (minuscuwe ou majuscuwe) (ce qui donne `0x` o-ou `0x)`. -.- si wes chiffwes q-qui composent we nyombwe sont en dehows des u-unités hexadécimawes (0123456789abcdef), ^^;; c-cewa entwaînewa une e-ewweuw {{jsxwef("syntaxewwow")}} : "identifiew stawts immediatewy a-aftew nyumewic w-witewaw". XD
 
 ```js
 0xfffffffffffffffff; // 295147905179352830000
@@ -287,188 +287,188 @@ Les littéraux hexadécimaux ont pour syntaxe : un zéro (0), suivi par la lettr
 0xa; // 10
 ```
 
-#### Littéraux `BigInt`
+#### wittéwaux `bigint`
 
-Le type {{jsxref("BigInt")}} est un type numérique primitif de JavaScript qui permet de représenter des entiers avec une précision arbitraire. De tels littéraux s'écrivent en ajoutant un `n` à la fin d'un entier.
+w-we type {{jsxwef("bigint")}} est u-un type nyuméwique pwimitif d-de javascwipt qui pewmet de wepwésentew des entiews avec une pwécision a-awbitwaiwe. :3 de tews wittéwaux s-s'écwivent en ajoutant un `n` à wa fin d-d'un entiew. σωσ
 
 ```js
-123456789123456789n (nombre décimal, en base 10)
-0o7777777777777777n (nombre octal, en base 8)
-0x123456789ABCDEF1n (nombre hexadécimal, en base 16)
-0b0101010101110101n (nombre binaire, en base 2)
+123456789123456789n (nombwe d-décimaw, XD en base 10)
+0o7777777777777777n (nombwe o-octaw, :3 en base 8)
+0x123456789abcdef1n (nombwe hexadécimaw, rawr en b-base 16)
+0b0101010101110101n (nombwe b-binaiwe, 😳 en base 2)
 ```
 
-Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures#le_type_bigint).
+v-voiw aussi [we pawagwaphe suw wes g-gwands entiews/bigint suw wes s-stwuctuwes de données e-en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes#we_type_bigint). 😳😳😳
 
-### Littéraux objets
+### wittéwaux objets
 
-Voir aussi les pages {{jsxref("Object")}} et {{jsxref("Opérateurs/Initialisateur_objet","Initialisateur d'objet","",1)}} pour plus d'informations.
+voiw aussi wes pages {{jsxwef("object")}} et {{jsxwef("opéwateuws/initiawisateuw_objet","initiawisateuw d-d'objet","",1)}} p-pouw pwus d'infowmations. (ꈍᴗꈍ)
 
 ```js
-var o = { a: "toto", b: "truc", c: 42 };
+vaw o = { a: "toto", 🥺 b: "twuc", ^•ﻌ•^ c: 42 };
 
-// notation raccourcie depuis ES6
-var a = "toto",
-  b = "truc",
+// nyotation w-waccouwcie depuis es6
+vaw a-a = "toto", XD
+  b-b = "twuc", ^•ﻌ•^
   c = 42;
-var o = { a, b, c };
-// plutôt que
-var o = { a: a, b: b, c: c };
+vaw o = { a, ^^;; b, c };
+// pwutôt que
+vaw o = { a: a, ʘwʘ b: b, c-c: c };
 ```
 
-### Littéraux de tableaux
+### wittéwaux de tabweaux
 
-Voir aussi la page {{jsxref("Array")}} pour plus d'informations.
+voiw aussi w-wa page {{jsxwef("awway")}} pouw pwus d'infowmations. OwO
 
 ```js
-[1954, 1974, 1990, 2014];
+[1954, 🥺 1974, 1990, (⑅˘꒳˘) 2014];
 ```
 
-### Littéraux de chaînes de caractères
+### w-wittéwaux d-de chaînes de cawactèwes
 
-Un littéral de chaîne de caractères correspond à zéro ou plusieurs codets Unicode entourés de simples ou de doubles quotes. Les codets Unicode peuvent également être représentés avec des séquences d'échappements. Tous les codets peuvent apparaître dans un littéral de chaîne de caractères à l'exception de ces trois codets :
+un wittéwaw d-de chaîne d-de cawactèwes c-cowwespond à z-zéwo ou pwusieuws c-codets unicode e-entouwés de simpwes ou de doubwes quotes. (///ˬ///✿) wes codets unicode peuvent égawement êtwe wepwésentés a-avec des s-séquences d'échappements. (✿oωo) t-tous w-wes codets peuvent a-appawaîtwe d-dans un wittéwaw de chaîne de cawactèwes à w'exception de ces twois codets :
 
-- U+005C \ (barre oblique inverse)
-- U+000D (retour chariot, _carriage return_, _CR_)
-- U+000A (saut de ligne, _line feed_, _LF_)
+- u-u+005c \ (bawwe o-obwique invewse)
+- u+000d (wetouw chawiot, nyaa~~ _cawwiage wetuwn_, >w< _cw_)
+- u-u+000a (saut d-de wigne, (///ˬ///✿) _wine f-feed_, rawr _wf_)
 
-Avant la proposition consistant à rendre les chaînes JSON valides selon ECMA-262, les caractères U+2028 et U+2029 étaient également interdits.
+avant wa pwoposition consistant à w-wendwe wes chaînes json vawides sewon e-ecma-262, wes cawactèwes u-u+2028 et u+2029 étaient égawement intewdits. (U ﹏ U)
 
-Tous les codets peuvent être écrits sous la forme d'une séquence d'échappement. Les littéraux de chaînes de caractères sont évalués comme des valeurs `String` ECMAScript. Lorsque ces valeurs `String` sont générées, les codets Unicode sont encodés en UTF-16.
+tous w-wes codets peuvent êtwe écwits sous wa fowme d'une s-séquence d'échappement. ^•ﻌ•^ wes w-wittéwaux de chaînes de cawactèwes s-sont évawués c-comme des v-vaweuws `stwing` e-ecmascwipt. (///ˬ///✿) wowsque c-ces vaweuws `stwing` s-sont généwées, o.O wes c-codets unicode s-sont encodés en utf-16. >w<
 
-```js-nolint
+```js-nowint
 'toto';
-"truc";
+"twuc";
 ```
 
-#### Séquence d'échappement hexadécimale
+#### s-séquence d'échappement hexadécimawe
 
-Une séquence d'échappement hexadécimale consiste en la succession de `\x` et de deux chiffres hexadécimaux représentant un codet sur l'intervalle 0x0000 à 0x00FF.
+une séquence d-d'échappement hexadécimawe c-consiste en wa succession de `\x` e-et de deux c-chiffwes hexadécimaux wepwésentant un codet s-suw w'intewvawwe 0x0000 à 0x00ff. nyaa~~
 
 ```js
-"\xA9"; // "©"
+"\xa9"; // "©"
 ```
 
-#### Séquence d'échappement Unicode
+#### séquence d'échappement unicode
 
-La séquence d'échappement Unicode est composée de `\u` suivi de quatre chiffres hexadécimaux. Chacun de ces chiffres définit un caractères sur deux octets selon l'encodage UTF-16. Pour les codes situés entre `U+0000` et `U+FFFF`, les chiffres à utiliser sont identiques au code. Pour les codes supérieurs, il faudra utiliser deux séquences d'échappement dont chacune représentera un demi-codet de la paire de _surrogates_.
+w-wa séquence d-d'échappement unicode est composée de `\u` s-suivi de quatwe c-chiffwes hexadécimaux. òωó chacun de c-ces chiffwes définit un cawactèwes suw deux o-octets sewon w'encodage u-utf-16. (U ᵕ U❁) pouw wes codes situés e-entwe `u+0000` e-et `u+ffff`, (///ˬ///✿) wes chiffwes à utiwisew sont i-identiques au code. (✿oωo) p-pouw wes codes s-supéwieuws, 😳😳😳 i-iw faudwa utiwisew deux séquences d'échappement dont chacune wepwésentewa un demi-codet de wa paiwe de _suwwogates_. (✿oωo)
 
-Voir aussi {{jsxref("String.fromCharCode()")}} et {{jsxref("String.prototype.charCodeAt()")}}.
+v-voiw aussi {{jsxwef("stwing.fwomchawcode()")}} e-et {{jsxwef("stwing.pwototype.chawcodeat()")}}. (U ﹏ U)
 
 ```js
-"\u00A9"; // "©" (U+A9)
+"\u00a9"; // "©" (u+a9)
 ```
 
-#### Échappement de points de code Unicode
+#### Échappement d-de points de code u-unicode
 
-Apparu avec ECMAScript 2015, l'échappement de points de code Unicode permet d'échapper n'importe quel caractère en utilisant une notation hexadécimale. Il est possible de le faire pour échapper les points de code Unicode dont la représentation va jusqu'à `0x10FFFF`. Avec la séquence « simple » d'échappement Unicode, il était nécessaire d'échapper respectivement les deux demi-codets d'une paire si on voulait échapper le caractère correspondant, avec cette nouvelle méthode, ce n'est plus nécessaire de faire la distinction.
+appawu a-avec ecmascwipt 2015, (˘ω˘) w-w'échappement de points d-de code unicode p-pewmet d'échappew ny'impowte quew c-cawactèwe en u-utiwisant une nyotation hexadécimawe. 😳😳😳 iw est p-possibwe de we faiwe pouw échappew wes points de c-code unicode dont wa wepwésentation v-va jusqu'à `0x10ffff`. (///ˬ///✿) avec w-wa séquence « simpwe » d'échappement u-unicode, (U ᵕ U❁) i-iw était n-nyécessaiwe d'échappew wespectivement w-wes deux d-demi-codets d'une paiwe si on vouwait échappew w-we cawactèwe cowwespondant, >_< avec c-cette nyouvewwe m-méthode, (///ˬ///✿) ce n-ny'est pwus nyécessaiwe de faiwe w-wa distinction. (U ᵕ U❁)
 
-Voir également {{jsxref("String.fromCodePoint()")}} et {{jsxref("String.prototype.codePointAt()")}}.
+voiw égawement {{jsxwef("stwing.fwomcodepoint()")}} et {{jsxwef("stwing.pwototype.codepointat()")}}. >w<
 
 ```js
-"\u{2F804}"; // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+"\u{2f804}"; // c-cjk compatibiwity ideogwaph-2f804 (u+2f804)
 
-// avec l'ancienne méthode d'échappement, cela aurait été écrit
-// avec une paire de surrogates
-"\uD87E\uDC04";
+// avec w'ancienne méthode d'échappement, 😳😳😳 cewa auwait été écwit
+// avec une paiwe de suwwogates
+"\ud87e\udc04";
 ```
 
-### Littéraux d'expressions rationnelles
+### w-wittéwaux d'expwessions wationnewwes
 
-Voir la page [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) pour plus d'informations.
+voiw wa page [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) pouw pwus d'infowmations. (ˆ ﻌ ˆ)♡
 
 ```js
 /ab+c/g
 
-// Un littéral pour une expression rationnelle
-// vide. Le groupe non-capturant est utilisé pour
-// lever l'ambigüité avec les commentaires
+// un wittéwaw pouw une expwession w-wationnewwe
+// vide. we gwoupe non-captuwant est u-utiwisé pouw
+// wevew w'ambigüité a-avec wes commentaiwes
 /(?:)/
 ```
 
-### Littéraux modèles (gabarits ou _templates_)
+### wittéwaux m-modèwes (gabawits ou _tempwates_)
 
-Voir également la page sur [les gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Template_literals) pour plus d'informations.
+v-voiw égawement wa page s-suw [wes gabawits d-de chaînes de cawactèwes](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws) pouw pwus d-d'infowmations. (ꈍᴗꈍ)
 
 ```js
-`chaîne de caractères`;
+`chaîne de cawactèwes`;
 
-`chaîne de caractères ligne 1
- chaîne de caractères ligne 2`;
+`chaîne de cawactèwes wigne 1
+ c-chaîne de cawactèwes wigne 2`;
 
-`chaîne1 ${expression} chaîne2`;
+`chaîne1 ${expwession} c-chaîne2`;
 
-tag`chaîne1 ${expression} chaîne2`;
+tag`chaîne1 ${expwession} c-chaîne2`;
 ```
 
-## Insertion automatique de points-virgules
+## insewtion a-automatique de p-points-viwguwes
 
-Certaines [instructions JavaScript](/fr/docs/Web/JavaScript/Reference/Statements) doivent finir par un point-virgule et sont donc concernées par l'insertion automatique de points-virgules (ASI pour _automatic semicolon insertion_ en anglais) :
+cewtaines [instwuctions javascwipt](/fw/docs/web/javascwipt/wefewence/statements) d-doivent finiw paw un point-viwguwe et sont donc c-concewnées paw w'insewtion automatique de points-viwguwes (asi pouw _automatic semicowon insewtion_ e-en angwais) :
 
-- Instruction vide
-- instruction de variable, `let`, `const`
-- `import`, `export`, déclaration de module
-- Instruction d'expression
-- `debugger`
-- `continue`, `break`, `throw`
-- `return`
+- i-instwuction vide
+- instwuction d-de vawiabwe, 🥺 `wet`, `const`
+- `impowt`, >_< `expowt`, OwO d-décwawation de moduwe
+- i-instwuction d'expwession
+- `debuggew`
+- `continue`, ^^;; `bweak`, (✿oωo) `thwow`
+- `wetuwn`
 
-La spécification ECMAScript mentionne [trois règles quant à l'insertion de points-virgules](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion) :
+wa spécification ecmascwipt mentionne [twois w-wègwes quant à w-w'insewtion de points-viwguwes](https://tc39.github.io/ecma262/#sec-wuwes-of-automatic-semicowon-insewtion) :
 
-1\. Un point-vrigule est inséré avant un [terminateur de ligne](#line_terminators) ou une accolade ("}") quand celui ou celle-ci n'est pas autorisé par la grammaire
+1\. UwU u-un point-vwiguwe e-est inséwé avant un [tewminateuw d-de wigne](#wine_tewminatows) ou une accowade ("}") quand c-cewui ou cewwe-ci ny'est pas autowisé paw wa g-gwammaiwe
 
 ```js
 { 1 2 } 3
-// est donc transformé, après ASI, en :
+// e-est donc twansfowmé, ( ͡o ω ͡o ) apwès asi, (✿oωo) en :
 { 1 2 ;} 3;
 ```
 
-2\. Un point-virgule est inséré à la fin lorsqu'on détecte la fin d'une série de jetons en flux d'entrée et que le parseur est incapable d'analyser le flux d'entrée comme un programme complet.
+2\. mya u-un point-viwguwe est inséwé à wa fin wowsqu'on détecte wa fin d'une séwie de jetons en fwux d'entwée et que we p-pawseuw est incapabwe d-d'anawysew we fwux d'entwée c-comme un pwogwamme c-compwet. ( ͡o ω ͡o )
 
-Ici `++` n'est pas traité comme [opérateur postfixe](/fr/docs/Web/JavaScript/Reference/Operators#increment) s'appliquant à la variable `b` car il y a un terminateur de ligne entre `b` et `++`.
+ici `++` ny'est p-pas twaité comme [opéwateuw postfixe](/fw/docs/web/javascwipt/wefewence/opewatows#incwement) s'appwiquant à wa vawiabwe `b` caw iw y a un tewminateuw de wigne entwe `b` et `++`. :3
 
 ```js
-a = b;
+a-a = b;
 ++c;
 
-// devient, après ASI :
+// devient, 😳 apwès asi :
 
 a = b;
 ++c;
 ```
 
-3\. Un point-virgule est inséré à la fin, lorsqu'une instruction, à production limitée pour la grammaire, est suivie par un terminateur de ligne. Les instructions concernées par cette règle sont :
+3\. (U ﹏ U) un point-viwguwe e-est inséwé à w-wa fin, >w< w-wowsqu'une instwuction, UwU à pwoduction wimitée pouw wa gwammaiwe, 😳 e-est suivie paw u-un tewminateuw d-de wigne. XD wes instwuctions concewnées p-paw cette wègwe sont :
 
-- Expressions postfixes (`++` et `--`)
+- e-expwessions postfixes (`++` e-et `--`)
 - `continue`
-- `break`
-- `return`
-- `yield`, `yield*`
-- `module`
+- `bweak`
+- `wetuwn`
+- `yiewd`, (✿oωo) `yiewd*`
+- `moduwe`
 
-```js-nolint
-return
-a + b
+```js-nowint
+wetuwn
+a + b-b
 
-// est transformé, après ASI, en :
+// est twansfowmé, ^•ﻌ•^ apwès asi, mya en :
 
-return;
-a + b;
+wetuwn;
+a-a + b;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Jeff Walden : Nombres binaires et forme octale (en anglais)](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens : Séquences d'échappements de caractères (en anglais)](https://mathiasbynens.be/notes/javascript-escapes)
-- {{jsxref("Boolean")}}
-- {{jsxref("Number")}}
-- {{jsxref("RegExp")}}
-- {{jsxref("String")}}
+- [jeff wawden : n-nyombwes binaiwes et fowme o-octawe (en angwais)](https://wheweswawden.com/2013/08/12/micwo-featuwe-fwom-es6-now-in-fiwefox-auwowa-and-nightwy-binawy-and-octaw-numbews/)
+- [mathias bynens : s-séquences d'échappements de cawactèwes (en a-angwais)](https://mathiasbynens.be/notes/javascwipt-escapes)
+- {{jsxwef("boowean")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("stwing")}}

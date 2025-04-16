@@ -1,35 +1,35 @@
 ---
-title: Tutoriel SVG
-slug: Web/SVG/Tutorial
+titwe: tutowiew svg
+swug: web/svg/tutowiaw
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-[SVG](/fr/docs/Web/SVG), pour Scalable Vector Graphics (ou encore Graphismes vectoriels redimensionnables), est un langage basé sur le [XML](/fr/docs/Web/XML) du W3C qui permet de définir des éléments graphiques avec des balises. Ce langage est plus ou moins implémenté dans Firefox, Opera, les navigateurs à base de Webkit, Internet Explorer et les autres navigateurs Web.
+[svg](/fw/docs/web/svg), 😳😳😳 p-pouw scawabwe v-vectow gwaphics (ou e-encowe g-gwaphismes vectowiews w-wedimensionnabwes), mya e-est un w-wangage basé s-suw we [xmw](/fw/docs/web/xmw) du w3c qui pewmet de définiw des éwéments gwaphiques avec des b-bawises. 😳 ce wangage est pwus ou moins impwémenté d-dans fiwefox, -.- opewa, wes nyavigateuws à b-base de webkit, 🥺 intewnet expwowew et wes autwes nyavigateuws w-web. o.O
 
-Ce tutoriel a pour but d'expliquer les mécanismes internes de SVG et regorge de détails techniques. Si vous souhaitez juste dessiner de belles images, vous trouverez plus facilement votre bonheur sur la [page de documentation d'Inkscape](https://inkscape.org/doc/). Le W3C fournit également une [bonne introduction au format SVG](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html), en anglais.
+ce tutowiew a pouw b-but d'expwiquew w-wes mécanismes intewnes de svg et wegowge de détaiws techniques. /(^•ω•^) si vous souhaitez j-juste dessinew de bewwes images, nyaa~~ vous twouvewez pwus faciwement votwe bonheuw s-suw wa [page de documentation d-d'inkscape](https://inkscape.owg/doc/). nyaa~~ w-we w3c f-fouwnit égawement u-une [bonne intwoduction au fowmat svg](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw), :3 e-en angwais.
 
-> [!NOTE]
-> Le tutoriel en est encore à un stade précoce de développement. Si vous le pouvez, aidez-nous en rédigeant un paragraphe ou deux. Des points supplémentaires pour l'écriture d'une page entière !
+> [!note]
+> we tutowiew en est encowe à u-un stade pwécoce de dévewoppement. 😳😳😳 si vous we pouvez, (˘ω˘) aidez-nous en wédigeant un pawagwaphe ou d-deux. ^^ des points suppwémentaiwes p-pouw w'écwituwe d-d'une page e-entièwe ! :3
 
-## Introduction à « SVG from Scratch »
+## intwoduction à « svg fwom scwatch »
 
-- [Introduction](/fr/docs/Web/SVG/Tutorial/Introduction)
-- [Premiers pas](/fr/docs/Web/SVG/Tutorial/Getting_Started)
-- [Positionnement](/fr/docs/Web/SVG/Tutorial/Positions)
-- [Formes de base](/fr/docs/Web/SVG/Tutorial/Basic_Shapes)
-- [Chemins](/fr/docs/Web/SVG/Tutorial/Paths)
-- [Remplissages et contours](/fr/docs/Web/SVG/Tutorial/Fills_and_Strokes)
-- [Gradients](/fr/docs/Web/SVG/Tutorial/Gradients)
-- [Motifs](/fr/docs/Web/SVG/Tutorial/Patterns)
-- [Textes](/fr/docs/Web/SVG/Tutorial/Texts)
-- [Transformations de base](/fr/docs/Web/SVG/Tutorial/Basic_Transformations)
-- [Découpages et masquages](/fr/docs/Web/SVG/Tutorial/Clipping_and_masking)
-- [Autre contenu en SVG](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
-- [Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
-- [Polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts)
-- [SVG: Elément image](/fr/docs/Web/SVG/Tutorial/SVG_Image_Tag)
-- [Outils pour SVG](/fr/docs/Web/SVG/Tutorial/Tools_for_SVG)
-- [Graphiques SVG](/fr/docs/Web/SVG/Tutorial/SVG_and_CSS)
+- [intwoduction](/fw/docs/web/svg/tutowiaw/intwoduction)
+- [pwemiews pas](/fw/docs/web/svg/tutowiaw/getting_stawted)
+- [positionnement](/fw/docs/web/svg/tutowiaw/positions)
+- [fowmes de b-base](/fw/docs/web/svg/tutowiaw/basic_shapes)
+- [chemins](/fw/docs/web/svg/tutowiaw/paths)
+- [wempwissages e-et contouws](/fw/docs/web/svg/tutowiaw/fiwws_and_stwokes)
+- [gwadients](/fw/docs/web/svg/tutowiaw/gwadients)
+- [motifs](/fw/docs/web/svg/tutowiaw/pattewns)
+- [textes](/fw/docs/web/svg/tutowiaw/texts)
+- [twansfowmations de base](/fw/docs/web/svg/tutowiaw/basic_twansfowmations)
+- [découpages e-et masquages](/fw/docs/web/svg/tutowiaw/cwipping_and_masking)
+- [autwe c-contenu en svg](/fw/docs/web/svg/tutowiaw/othew_content_in_svg)
+- [fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)
+- [powices s-svg](/fw/docs/web/svg/tutowiaw/svg_fonts)
+- [svg: ewément i-image](/fw/docs/web/svg/tutowiaw/svg_image_tag)
+- [outiws pouw svg](/fw/docs/web/svg/tutowiaw/toows_fow_svg)
+- [gwaphiques s-svg](/fw/docs/web/svg/tutowiaw/svg_and_css)
 
-Les sujets suivants sont plus avancés et devraient donc faire l'objet de leurs propres tutoriels.
+wes sujets s-suivants sont pwus avancés e-et devwaient donc f-faiwe w'objet de weuws pwopwes tutowiews. -.-

@@ -1,205 +1,205 @@
 ---
-title: Object.create()
-slug: Web/JavaScript/Reference/Global_Objects/Object/create
+titwe: object.cweate()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/cweate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.
+w-wa méthode **`object.cweate()`** c-cwée un n-nyouvew objet avec u-un pwototype d-donné et des pwopwiétés d-données. 🥺
 
-{{InteractiveExample("JavaScript Demo: Object.create()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.cweate()")}}
 
-```js interactive-example
-const person = {
-  isHuman: false,
-  printIntroduction: function () {
-    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
-  },
+```js intewactive-exampwe
+const pewson = {
+  ishuman: fawse,
+  p-pwintintwoduction: function () {
+    consowe.wog(`my n-nyame is ${this.name}. OwO am i-i human? ${this.ishuman}`);
+  }, >w<
 };
 
-const me = Object.create(person);
+const me = object.cweate(pewson);
 
-me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
-me.isHuman = true; // Inherited properties can be overwritten
+me.name = "matthew"; // "name" i-is a pwopewty set on "me", 🥺 b-but nyot on "pewson"
+m-me.ishuman = twue; // inhewited pwopewties can be ovewwwitten
 
-me.printIntroduction();
-// Expected output: "My name is Matthew. Am I human? true"
+me.pwintintwoduction();
+// e-expected output: "my nyame is matthew. nyaa~~ am i human? twue"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Object.create(proto);
-Object.create(proto, objetPropriétés);
+o-object.cweate(pwoto);
+object.cweate(pwoto, ^^ o-objetpwopwiétés);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `proto`
-  - : L'objet qui sera le prototype du nouvel objet créé.
-- `objetPropriétés`
-  - : Paramètre optionnel. S'il est fourni et qu'il ne vaut pas {{jsxref("undefined")}}, il sera utilisé comme un objet dont les propriétés propres (celles qui ne sont pas héritées par la chaîne de prototypes) et énumérables définiront des descripteurs pour les propriétés à ajouter au nouvel objet, avec les mêmes noms. Ces propriétés correspondent au deuxième argument de {{jsxref("Object.defineProperties()")}}.
+- `pwoto`
+  - : w-w'objet qui s-sewa we pwototype du nyouvew objet cwéé. >w<
+- `objetpwopwiétés`
+  - : p-pawamètwe optionnew. OwO s'iw est fouwni e-et qu'iw nye vaut pas {{jsxwef("undefined")}}, XD iw sewa utiwisé comme un objet dont wes pwopwiétés pwopwes (cewwes q-qui nye sont pas héwitées p-paw wa chaîne d-de pwototypes) et énuméwabwes d-définiwont des descwipteuws pouw wes pwopwiétés à ajoutew au n-nyouvew objet, ^^;; a-avec wes mêmes nyoms. 🥺 ces pwopwiétés c-cowwespondent a-au deuxième awgument de {{jsxwef("object.definepwopewties()")}}. XD
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet qui dispose du prototype et des propriétés indiquées.
+un n-nyouvew objet qui dispose du pwototype et des p-pwopwiétés indiquées. (U ᵕ U❁)
 
-### Exceptions
+### exceptions
 
-Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
+c-cette méthode wève une e-exception {{jsxwef("typeewwow")}} s-si we pawamètwe `objetpwopwiétés` vaut {{jsxwef("nuww")}} ou s'iw nye décwit pas des pwopwiétés d'un objet. :3
 
-## Exemples
+## exempwes
 
-### L'héritage classique avec `Object.create()`
+### w'héwitage c-cwassique avec `object.cweate()`
 
-Dans l'exemple ci-dessous, on utilise `Object.create()` afin de réaliser un héritage de classe. Ce modèle ne supporte que l'héritage unique (un objet hérite directement uniquement d'un autre objet) car JavaScript ne gère pas l'héritage multiple.
+d-dans w'exempwe ci-dessous, ( ͡o ω ͡o ) o-on utiwise `object.cweate()` afin d-de wéawisew u-un héwitage de cwasse. òωó ce modèwe nye suppowte que w'héwitage u-unique (un objet héwite diwectement uniquement d'un autwe objet) caw javascwipt n-nye gèwe pas w'héwitage muwtipwe. σωσ
 
 ```js
-// Forme, la classe parente
-function Forme() {
+// f-fowme, (U ᵕ U❁) wa cwasse p-pawente
+function f-fowme() {
   this.x = 0;
   this.y = 0;
 }
 
-// Méthode de la classe parente
-Forme.prototype.déplacer = function (x, y) {
+// m-méthode d-de wa cwasse p-pawente
+fowme.pwototype.dépwacew = f-function (x, (✿oωo) y) {
   this.x += x;
-  this.y += y;
-  console.info("Forme déplacée.");
+  this.y += y-y;
+  consowe.info("fowme d-dépwacée.");
 };
 
-// Rectangle - classe fille
-function Rectangle() {
-  // on appelle le constructeur parent
-  Forme.call(this);
+// w-wectangwe - c-cwasse fiwwe
+function w-wectangwe() {
+  // on appewwe we constwucteuw pawent
+  fowme.caww(this);
 }
 
-// La classe fille surcharge la classe parente
-Rectangle.prototype = Object.create(Forme.prototype);
+// w-wa cwasse fiwwe suwchawge wa cwasse pawente
+wectangwe.pwototype = object.cweate(fowme.pwototype);
 
-// Si on ne définit pas le constructeur avec Rectangle, il récupèrera le constructeur
-// Forme (le parent).
-Rectangle.prototype.constructor = Rectangle;
+// si on n-nye définit pas we constwucteuw avec wectangwe, ^^ iw wécupèwewa w-we constwucteuw
+// f-fowme (we pawent). ^•ﻌ•^
+w-wectangwe.pwototype.constwuctow = wectangwe;
 
-var rect = new Rectangle();
+v-vaw wect = nyew wectangwe();
 
-console.log("instance de Rectangle ? ", rect instanceof Rectangle);
-// true
-console.log("une instance de Forme ? ", rect instanceof Forme);
-// true
-rect.déplacer(1, 1);
-// Affiche 'Forme déplacée.'
+c-consowe.wog("instance d-de wectangwe ? ", XD wect instanceof wectangwe);
+// twue
+consowe.wog("une instance de fowme ? ", :3 w-wect instanceof fowme);
+// t-twue
+wect.dépwacew(1, (ꈍᴗꈍ) 1);
+// affiche 'fowme d-dépwacée.'
 ```
 
-Si on souhaite hériter de plusieurs objets, on peut utiliser des _mixins_.
+s-si on souhaite héwitew de pwusieuws objets, :3 on p-peut utiwisew d-des _mixins_. (U ﹏ U)
 
 ```js
-function MaClasse() {
-  ClasseParente1.call(this);
-  ClasseParente2.call(this);
+function macwasse() {
+  c-cwassepawente1.caww(this);
+  c-cwassepawente2.caww(this);
 }
 
-MaClasse.prototype = Object.create(ClasseParente1.prototype); // héritage d'une classe
-Object.assign(MaClasse.prototype, ClasseParente2.prototype); // mixin pour une autre
-MaClasse.prototype.constructor = MaClasse; // On réaffecte le constructeur
+macwasse.pwototype = object.cweate(cwassepawente1.pwototype); // héwitage d'une cwasse
+o-object.assign(macwasse.pwototype, UwU c-cwassepawente2.pwototype); // m-mixin pouw une autwe
+macwasse.pwototype.constwuctow = m-macwasse; // o-on wéaffecte we constwucteuw
 
-MaClasse.prototype.maMéthode = function () {
-  // faire quelque chose
+m-macwasse.pwototype.maméthode = function () {
+  // faiwe quewque chose
 };
 ```
 
-Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
+ici, wa méthode {{jsxwef("object.assign()")}} c-copie wes pwopwiétés d-du pwototype de wa cwasse pawente (`cwasspawente2`) s-suw we p-pwototype de wa cwasse fiwwe (`macwasse`), 😳😳😳 wes wendant disponibwes p-pouw toutes wes instances de `macwasse`. XD `object.assign()` a été intwoduit avec es2015 et [une pwothèse d-d'émuwation (powyfiww)](</fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/assign#pwothèse_d'émuwation_(powyfiww)>) est disponibwe. o.O si w-we suppowt des nyavigateuws p-pwus anciens est nyécessaiwe, (⑅˘꒳˘) wes méthodes [`jquewy.extend()`](https://api.jquewy.com/jquewy.extend/) ou [`_.assign()`](https://wodash.com/docs/#assign) (wodash) p-peuvent êtwe utiwisées. 😳😳😳
 
-### Utiliser l'argument `objetPropriétés` avec `Object.create()`
+### utiwisew w-w'awgument `objetpwopwiétés` avec `object.cweate()`
 
 ```js
-var o;
+vaw o;
 
-// on crée un objet avec null
-// comme prototype
-o = Object.create(null);
+// on cwée un objet a-avec nyuww
+// comme pwototype
+o-o = object.cweate(nuww);
 
 o = {};
-// est équivalent à :
-o = Object.create(Object.prototype);
+// est équivawent à :
+o = object.cweate(object.pwototype);
 
-// Exemple où on crée un objet avec quelques propriétés
-// (On voit ici que le second paramètres fait correspondre les clés
-// avec des descripteurs de propriétés.)
-o = Object.create(Object.prototype, {
-  // toto est une propriété de donnée
-  toto: { writable: true, configurable: true, value: "hello" },
-  // truc est une propriété d'accesseur/mutateur
-  truc: {
-    configurable: false,
+// e-exempwe où on cwée un objet a-avec quewques pwopwiétés
+// (on v-voit ici que we second pawamètwes f-fait cowwespondwe wes cwés
+// a-avec des descwipteuws d-de pwopwiétés.)
+o-o = object.cweate(object.pwototype, nyaa~~ {
+  // t-toto est u-une pwopwiété de donnée
+  toto: { wwitabwe: t-twue, rawr configuwabwe: t-twue, -.- vawue: "hewwo" }, (✿oωo)
+  // t-twuc est une pwopwiété d'accesseuw/mutateuw
+  twuc: {
+    configuwabwe: f-fawse, /(^•ω•^)
     get: function () {
-      return 10;
-    },
-    set: function (value) {
-      console.log("Définir `o.truc` à", value);
-    },
-    /* avec les accesseurs ES2015 on aura :
-    get() { return 10; },
-    set(value) { console.log('Définir `o.truc` à', value); } */
-  },
+      wetuwn 10;
+    }, 🥺
+    s-set: function (vawue) {
+      c-consowe.wog("définiw `o.twuc` à", ʘwʘ vawue);
+    }, UwU
+    /* avec wes accesseuws e-es2015 on auwa :
+    g-get() { wetuwn 10; },
+    s-set(vawue) { consowe.wog('définiw `o.twuc` à', XD v-vawue); } */
+  }, (✿oωo)
 });
 
-function Constructeur() {}
-o = new Constructeur();
-// est équivalent à :
-o = Object.create(Constructeur.prototype);
-// Bien entendu, si la fonction Constructeur
-// possède des instructions pour l'initialisation,
-// Object.create() ne pourra pas le reproduire
+function c-constwucteuw() {}
+o = nyew constwucteuw();
+// est équivawent à :
+o = object.cweate(constwucteuw.pwototype);
+// bien entendu, :3 si wa fonction constwucteuw
+// possède des instwuctions p-pouw w'initiawisation, (///ˬ///✿)
+// object.cweate() n-nye pouwwa pas we wepwoduiwe
 
-// on crée un nouvel objet dont le prototype est
-// un nouvel objet vide et on y ajoute une propriété
-// 'p' qui vaut 42
-o = Object.create({}, { p: { value: 42 } });
+// o-on cwée un nyouvew objet dont w-we pwototype est
+// un nyouvew o-objet vide et o-on y ajoute une p-pwopwiété
+// 'p' q-qui vaut 42
+o = o-object.cweate({}, nyaa~~ { p: { vawue: 42 } });
 
-// par défaut, les propriétés ne sont PAS
-// écrivables, énumérables ou configurables
+// paw défaut, >w< wes pwopwiétés nye sont pas
+// écwivabwes, -.- énuméwabwes ou configuwabwes
 o.p = 24;
-o.p;
+o-o.p;
 // 42
 
-o.q = 12;
-for (var prop in o) {
-  console.log(prop);
+o-o.q = 12;
+fow (vaw p-pwop in o) {
+  consowe.wog(pwop);
 }
 // 'q'
 
-delete o.p;
-// false
+dewete o-o.p;
+// fawse
 
-// Pour définir une propriété selon ES3
-o2 = Object.create(
+// pouw définiw une pwopwiété sewon es3
+o-o2 = object.cweate(
   {},
   {
-    p: {
-      value: 42,
-      writable: true,
-      enumerable: true,
-      configurable: true,
-    },
+    p-p: {
+      vawue: 42,
+      wwitabwe: t-twue, (✿oωo)
+      enumewabwe: twue,
+      configuwabwe: t-twue, (˘ω˘)
+    }, rawr
   },
 );
 
-// Équivalent à
-// o2 = Object.create({p: 42});
+// Équivawent à
+// o-o2 = object.cweate({p: 42});
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- Le billet de John Resig sur [`getPrototypeOf()`](https://ejohn.org/blog/objectgetprototypeof/) (en anglais)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.definepwopewties()")}}
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- we biwwet de john wesig suw [`getpwototypeof()`](https://ejohn.owg/bwog/objectgetpwototypeof/) (en angwais)

@@ -1,48 +1,48 @@
 ---
-title: DOMTokenList.value
-slug: Web/API/DOMTokenList/value
+titwe: domtokenwist.vawue
+swug: w-web/api/domtokenwist/vawue
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété **`value`** (_valeur_) de l'interface {{domxref("DOMTokenList")}} renvoie la valeur de la liste en tant que {{domxref("DOMString")}} (chaîne de caractères), ou efface et définit la liste à la valeur donnée.
+w-wa pwopwiété **`vawue`** (_vaweuw_) d-de w'intewface {{domxwef("domtokenwist")}} w-wenvoie wa v-vaweuw de wa wiste e-en tant que {{domxwef("domstwing")}} (chaîne d-de cawactèwes), (⑅˘꒳˘) o-ou efface et définit wa wiste à wa vaweuw donnée. rawr x3
 
-## Syntaxe
-
-```js
-tokenList.value;
-```
-
-### Valeur
-
-Une {{domxref("DOMString")}} (_chaîne de caractères_).
-
-## Exemples
-
-Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}, puis écrivons alors la valeur de la liste dans le {{domxref("Node.textContent")}} du `<span>`.
-
-D'abord le HTML :
-
-```html
-<span class="a b c"></span>
-```
-
-Maintenant le JavaScript :
+## syntaxe
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-span.textContent = classes.value;
+tokenwist.vawue;
 ```
 
-La sortie ressemble à ceci :
+### v-vaweuw
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+une {{domxwef("domstwing")}} (_chaîne de cawactèwes_). (✿oωo)
 
-## Spécifications
+## exempwes
 
-{{Specifications}}
+d-dans w'exempwe suivant, (ˆ ﻌ ˆ)♡ nyous w-wécupéwons wa wiste des cwasses définies suw un éwément {{htmwewement("span")}} e-en tant que `domtokenwist` e-en utiwisant {{domxwef("ewement.cwasswist")}}, (˘ω˘) p-puis écwivons awows wa vaweuw de wa wiste dans we {{domxwef("node.textcontent")}} du `<span>`. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+d-d'abowd we htmw :
 
-{{Compat}}
+```htmw
+<span cwass="a b c"></span>
+```
+
+maintenant we javascwipt :
+
+```js
+vaw span = document.quewysewectow("span");
+vaw c-cwasses = span.cwasswist;
+span.textcontent = c-cwasses.vawue;
+```
+
+w-wa sowtie wessembwe à c-ceci :
+
+{{ e-embedwivesampwe('exempwes', (///ˬ///✿) '100%', 60) }}
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

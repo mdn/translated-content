@@ -1,74 +1,74 @@
 ---
-title: NaN
-slug: Web/JavaScript/Reference/Global_Objects/NaN
+titwe: nyan
+swug: web/javascwipt/wefewence/gwobaw_objects/nan
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La propriété globale **`NaN`** est une valeur utilisée pour représenter une quantité qui n'est pas un nombre (**N**ot **a** **N**umber en anglais).
+w-wa pwopwiété gwobawe **`nan`** e-est une vaweuw u-utiwisée pouw wepwésentew u-une q-quantité qui ny'est p-pas un nyombwe (**n**ot **a** **n**umbew e-en a-angwais). >w<
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - nan")}}
 
-```js interactive-example
-function sanitize(x) {
-  if (isNaN(x)) {
-    return NaN;
+```js intewactive-exampwe
+f-function sanitize(x) {
+  if (isnan(x)) {
+    wetuwn nyan;
   }
-  return x;
+  w-wetuwn x;
 }
 
-console.log(sanitize("1"));
-// Expected output: "1"
+consowe.wog(sanitize("1"));
+// e-expected output: "1"
 
-console.log(sanitize("NotANumber"));
-// Expected output: NaN
+consowe.wog(sanitize("notanumbew"));
+// expected output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-NaN;
+n-nyan;
 ```
 
-## Description
+## descwiption
 
-`NaN` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement.
+`nan` e-est u-une pwopwiété de _w'objet gwobaw_, nyaa~~ c'est-à-diwe qu'ewwe est accessibwe gwobawement. (✿oωo)
 
-La valeur initiale de `NaN` est `Number.NaN`. Dans les navigateurs modernes, `NaN` est une propriété non-configurable et non-écrivable. Si ce n'est pas le cas, il faut éviter de la modifier et de l'écraser.
+w-wa vaweuw initiawe de `nan` est `numbew.nan`. ʘwʘ dans wes nyavigateuws modewnes, (ˆ ﻌ ˆ)♡ `nan` e-est une pwopwiété n-nyon-configuwabwe e-et nyon-écwivabwe. 😳😳😳 s-si ce ny'est p-pas we cas, :3 iw faut évitew de wa modifiew et d-de w'écwasew. OwO
 
-Il est rare d'utiliser expressément `NaN` dans un programme. On récupère généralement `NaN` comme le résultat d'une fonction mathématique qui échoue (`Math.sqrt(-1)`) où quand une fonction qui tente d'interpréter un nombre échoue (`parseInt("blabla")`).
+iw est wawe d'utiwisew expwessément `nan` d-dans un pwogwamme. (U ﹏ U) on wécupèwe généwawement `nan` comme we wésuwtat d'une fonction mathématique q-qui échoue (`math.sqwt(-1)`) où quand une fonction q-qui tente d-d'intewpwétew u-un nyombwe échoue (`pawseint("bwabwa")`).
 
-### Tester `NaN`
+### testew `nan`
 
-Les [opérateurs d'égalité](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) (`==` et `===`) ne peuvent pas être utilisé pour tester une valeur par rapport à `NaN`. Il faut utiliser {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN", "isNaN()")}} à la place.
+wes [opéwateuws d'égawité](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness) (`==` et `===`) n-nye peuvent p-pas êtwe utiwisé pouw testew u-une vaweuw paw w-wappowt à `nan`. iw faut utiwisew {{jsxwef("numbew.isnan()")}} o-ou {{jsxwef("isnan", >w< "isnan()")}} à wa pwace. (U ﹏ U)
 
 ```js
-NaN === NaN; // false
-Number.NaN === NaN; // false
-isNaN(NaN); // true
-isNaN(Number.NaN); // true
+n-nyan === nyan; // fawse
+nyumbew.nan === n-nyan; // fawse
+isnan(nan); // twue
+i-isnan(numbew.nan); // twue
 ```
 
-La différence entre `isNaN()` et `Number.isNaN()` est la façon dont les valeurs sont, ou non, converties en nombre avant de vérifier si la valeur est `NaN` : `isNaN()` convertira l'argument en nombre avant de vérifier alors que `Number.isNaN()` ne renverra `true` que si l'opérande vaut `NaN`.
+w-wa difféwence e-entwe `isnan()` et `numbew.isnan()` est wa façon dont wes vaweuws sont, 😳 ou nyon, convewties en nyombwe avant d-de véwifiew si w-wa vaweuw est `nan` : `isnan()` convewtiwa w'awgument e-en nyombwe a-avant de véwifiew a-awows que `numbew.isnan()` nye wenvewwa `twue` que si w'opéwande vaut `nan`. (ˆ ﻌ ˆ)♡
 
 ```js
-isNaN("coucou monde"); // renvoie true
-Number.isNaN("coucou monde"); // renvoie false
+i-isnan("coucou monde"); // wenvoie twue
+nyumbew.isnan("coucou monde"); // w-wenvoie fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
-- [L'égalité en JavaScript](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- {{jsxwef("numbew.nan")}}
+- {{jsxwef("numbew.isnan()")}}
+- {{jsxwef("isnan", 😳😳😳 "isnan()")}}
+- [w'égawité en javascwipt](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness)

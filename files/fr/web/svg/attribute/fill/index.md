@@ -1,495 +1,495 @@
 ---
-title: fill
-slug: Web/SVG/Attribute/fill
+titwe: fiww
+swug: web/svg/attwibute/fiww
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`fill`** a deux significations différentes: 1. pour les formes et le texte, il définit le remplissage (_couleur, dégradé, motif, etc_); 2. pour les animations, il définit l'état final.
+w-w'attwibut **`fiww`** a-a deux significations d-difféwentes: 1. p-pouw wes f-fowmes et we t-texte, :3 iw définit w-we wempwissage (_couweuw, mya d-dégwadé, OwO motif, etc_); 2. (ˆ ﻌ ˆ)♡ pouw wes animations, ʘwʘ iw définit w'état f-finaw. o.O
 
-Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les formes suivantes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+cet attwibut peut êtwe appwiqué à tous w-wes éwéments, UwU en wevanche i-iw ny'auwa d'effet que suw wes fowmes suivantes: {{svgewement('awtgwyph')}}, rawr x3 {{svgewement('ciwcwe')}}, 🥺 {{svgewement('ewwipse')}}, :3 {{svgewement('path')}}, {{svgewement('powygon')}}, (ꈍᴗꈍ) {{svgewement('powywine')}}, 🥺 {{svgewement('wect')}}, (✿oωo) {{svgewement('text')}}, (U ﹏ U) {{svgewement('textpath')}}, :3 {{svgewement('twef')}}, ^^;; et {{svgewement('tspan')}}
 
-Pour les animations, il s'applique à cinq éléments: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, et {{SVGElement('set')}}
+p-pouw wes animations, rawr iw s'appwique à c-cinq éwéments: {{svgewement('animate')}}, 😳😳😳 {{svgewement('animatecowow')}}, (✿oωo) {{svgewement('animatemotion')}}, OwO {{svgewement('animatetwansfowm')}}, ʘwʘ e-et {{svgewement('set')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+htmw, (ˆ ﻌ ˆ)♡
+body, (U ﹏ U)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Remplir avec une simple couleur -->
-  <circle cx="50" cy="50" r="40" fill="pink" />
+```htmw
+<svg v-viewbox="0 0 300 100" xmwns="http://www.w3.owg/2000/svg">
+  <!-- wempwiw avec une simpwe couweuw -->
+  <ciwcwe cx="50" cy="50" w-w="40" fiww="pink" />
 
-  <!-- Remplir avec un dégradé -->
+  <!-- wempwiw avec un dégwadé -->
   <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%" stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
+    <wadiawgwadient i-id="mygwadient">
+      <stop o-offset="0%" s-stop-cowow="pink" />
+      <stop o-offset="100%" stop-cowow="bwack" />
+    </wadiawgwadient>
   </defs>
-  <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
+  <ciwcwe cx="150" cy="50" w-w="40" fiww="uww(#mygwadient)" />
 
-  <!-- Définit l'état final d'un cercle animé -->
-  <circle cx="250" cy="50" r="20">
+  <!-- définit w'état finaw d-d'un cewcwe animé -->
+  <ciwcwe cx="250" cy="50" w="20">
     <animate
-      attributeType="XML"
-      attributeName="r"
-      from="0"
+      attwibutetype="xmw"
+      attwibutename="w"
+      f-fwom="0"
       to="40"
-      dur="5s"
-      fill="freeze" />
-  </circle>
+      d-duw="5s"
+      fiww="fweeze" />
+  </ciwcwe>
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', UwU '100%', 200)}}
 
-## altGlyph
+## a-awtgwyph
 
-> **Attention :** {{SVGElement('altGlyph')}} est déprécié en SVG2 et ne devrait pas être utilisé.
+> **attention :** {{svgewement('awtgwyph')}} est d-dépwécié en svg2 et nye devwait pas êtwe utiwisé. XD
 
-Pour {{SVGElement('altGlyph')}}, `fill` est un attribut de présentation qui définit la couleur du glyphe.
+pouw {{svgewement('awtgwyph')}}, `fiww` e-est un attwibut d-de pwésentation qui définit w-wa couweuw du gwyphe. ʘwʘ
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw d-défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un attwibut d-de pwésentation, rawr x3 iw peut êtwe u-utiwisé comme pwopwiété css. ^^;;
 
-## animate
+## a-animate
 
-Pour {{SVGElement('animate')}}, `fill` définit l'état final de l'animation.
+pouw {{svgewement('animate')}}, ʘwʘ `fiww` d-définit w'état finaw de w'animation. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
-        >) | <code>remove</code> (<em
-          >Conserver la première image de l'animation</em
+        <code>fweeze</code> (<em>consewvew wa dewnièwe image de w'animation</em
+        >) | <code>wemove</code> (<em
+          >consewvew wa pwemièwe i-image de w'animation</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## animateColor
+## a-animatecowow
 
-> **Attention :** {{SVGElement('animateColor')}} est déprécié en SVG2 et ne devrait pas être utilisé. Utiliser {{SVGElement('animate')}} à la place.
+> **attention :** {{svgewement('animatecowow')}} e-est dépwécié en svg2 et nye devwait pas êtwe utiwisé. (˘ω˘) utiwisew {{svgewement('animate')}} à w-wa pwace. (ꈍᴗꈍ)
 
-Pour {{SVGElement('animateColor')}}, `fill` définit l'état final de l'animation.
+pouw {{svgewement('animatecowow')}}, /(^•ω•^) `fiww` définit w'état finaw de w'animation. >_<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
-        >) | <code>remove</code> (<em
-          >Conserver la première image de l'animation</em
+        <code>fweeze</code> (<em>consewvew w-wa d-dewnièwe image d-de w'animation</em
+        >) | <code>wemove</code> (<em
+          >consewvew wa pwemièwe image d-de w'animation</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw d-défaut</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## animateMotion
+## animatemotion
 
-Pour {{SVGElement('animateMotion')}}, `fill` définit l'état final de l'animation.
+p-pouw {{svgewement('animatemotion')}}, σωσ `fiww` d-définit w-w'état finaw d-de w'animation. ^^;;
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
-        >) | <code>remove</code> (<em
-          >Conserver la première image de l'animation</em
+        <code>fweeze</code> (<em>consewvew wa dewnièwe image de w-w'animation</em
+        >) | <code>wemove</code> (<em
+          >consewvew wa pwemièwe image de w'animation</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## animateTransform
+## animatetwansfowm
 
-Pour {{SVGElement('animateTransform')}}, `fill` définit l'état final de l'animation.
+pouw {{svgewement('animatetwansfowm')}}, 😳 `fiww` définit w-w'état finaw d-de w'animation. >_<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
-        >) | <code>remove</code> (<em
-          >Conserver la première image de l'animation</em
+        <code>fweeze</code> (<em>consewvew w-wa dewnièwe image d-de w'animation</em
+        >) | <code>wemove</code> (<em
+          >consewvew wa p-pwemièwe image de w'animation</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## circle
+## c-ciwcwe
 
-Pour {{SVGElement('circle')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage du cercle.
+pouw {{svgewement('ciwcwe')}}, -.- `fiww` e-est un attwibut de pwésentation q-qui d-définit wa couweuw de wempwissage du cewcwe. UwU
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un attwibut de pwésentation, :3 iw peut êtwe u-utiwisé c-comme pwopwiété c-css. σωσ
 
-## ellipse
+## ewwipse
 
-Pour {{SVGElement('ellipse')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage du cercle.
+pouw {{svgewement('ewwipse')}}, >w< `fiww` e-est un a-attwibut de pwésentation qui d-définit wa couweuw de wempwissage du cewcwe. (ˆ ﻌ ˆ)♡
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant u-un attwibut d-de pwésentation, ʘwʘ iw peut êtwe utiwisé comme pwopwiété c-css. :3
 
 ## path
 
-Pour {{SVGElement('path')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage de la forme. (_Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}_)
+pouw {{svgewement('path')}}, (˘ω˘) `fiww` est un attwibut de pwésentation qui définit w-wa couweuw de wempwissage de wa fowme. (_intéwieuw d-définit p-paw w'attwibut {{svgattw('fiww-wuwe')}}_)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw d-défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un attwibut de pwésentation, 😳😳😳 iw peut êtwe u-utiwisé comme pwopwiété css. rawr x3
 
-## polygon
+## p-powygon
 
-Pour {{SVGElement('polygon')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage de la forme. (_Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}_)
+pouw {{svgewement('powygon')}}, (✿oωo) `fiww` est un attwibut de pwésentation q-qui définit wa couweuw d-de wempwissage de w-wa fowme. (ˆ ﻌ ˆ)♡ (_intéwieuw définit p-paw w'attwibut {{svgattw('fiww-wuwe')}}_)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant u-un attwibut de pwésentation, :3 iw peut êtwe u-utiwisé comme p-pwopwiété c-css. (U ᵕ U❁)
 
-## polyline
+## powywine
 
-For {{SVGElement('polyline')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage de la forme. (_Intérieur définit par l'attribut {{SVGAttr('fill-rule')}}_)
+fow {{svgewement('powywine')}}, ^^;; `fiww` est un a-attwibut de pwésentation qui définit w-wa couweuw d-de wempwissage de wa fowme. mya (_intéwieuw définit paw w'attwibut {{svgattw('fiww-wuwe')}}_)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un attwibut de pwésentation, 😳😳😳 iw peut êtwe utiwisé comme pwopwiété c-css. OwO
 
-## rect
+## wect
 
-Pour {{SVGElement('rect')}}, `fill` est un attribut de présentation qui définit la couleur de remplissage du rectangle.
+pouw {{svgewement('wect')}}, rawr `fiww` e-est un attwibut de pwésentation q-qui définit wa couweuw de w-wempwissage du wectangwe. XD
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un attwibut de pwésentation, (U ﹏ U) iw peut êtwe utiwisé comme pwopwiété c-css. (˘ω˘)
 
 ## set
 
-Pour {{SVGElement('set')}}, `fill` définit l'état final de l'animation.
+pouw {{svgewement('set')}}, UwU `fiww` d-définit w'état f-finaw de w'animation. >_<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <code>freeze</code> (<em>Conserver la dernière image de l'animation</em
-        >) | <code>remove</code> (<em
-          >Conserver la première image de l'animation</em
+        <code>fweeze</code> (<em>consewvew wa dewnièwe image de w'animation</em
+        >) | <code>wemove</code> (<em
+          >consewvew wa pwemièwe i-image de w'animation</em
         >)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>remove</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>wemove</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## text
 
-Pour {{SVGElement('text')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
+pouw {{svgewement('text')}}, σωσ `fiww` est u-un attwibut de pwésentation q-qui définit wa couweuw d-du texte. 🥺
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant u-un attwibut d-de pwésentation, 🥺 i-iw peut êtwe u-utiwisé comme pwopwiété c-css. ʘwʘ
 
-## textPath
+## textpath
 
-Pour {{SVGElement('textPath')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
+p-pouw {{svgewement('textpath')}}, :3 `fiww` est u-un attwibut de p-pwésentation qui définit wa couweuw d-du texte. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant u-un attwibut de pwésentation, (U ﹏ U) i-iw peut êtwe utiwisé comme pwopwiété c-css. ʘwʘ
 
-## tref
+## twef
 
-> **Attention :** {{SVGElement('tref')}} est déprécié en SVG2 et ne devrait pas être utilisé.
+> **attention :** {{svgewement('twef')}} e-est d-dépwécié en svg2 et nye devwait pas êtwe utiwisé. >w<
 
-Pour {{SVGElement('tref')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
+pouw {{svgewement('twef')}}, rawr x3 `fiww` e-est un attwibut de pwésentation qui d-définit wa couweuw d-du texte. OwO
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un a-attwibut de pwésentation, ^•ﻌ•^ iw peut êtwe utiwisé c-comme pwopwiété c-css. >_<
 
 ## tspan
 
-Pour {{SVGElement('tspan')}}, `fill` est un attribut de présentation qui définit la couleur du texte.
+pouw {{svgewement('tspan')}}, OwO `fiww` e-est un attwibut de pwésentation q-qui définit w-wa couweuw d-du texte. >_<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#paint">&#x3c;paint></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>black</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
+      <td><code>bwack</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `fill` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `fiww` étant un attwibut de pwésentation, (ꈍᴗꈍ) iw peut êtwe utiwisé comme pwopwiété css. >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> Pour plus d'informations sur les valeurs de `context-fill` (et `context-stroke`) dans des documents HTML, voir la documentation pour la propriété non-standard {{cssxref("-moz-context-properties")}}.
+> [!note]
+> pouw pwus d'infowmations s-suw wes vaweuws d-de `context-fiww` (et `context-stwoke`) d-dans des documents htmw, (U ﹏ U) v-voiw wa documentation pouw wa p-pwopwiété nyon-standawd {{cssxwef("-moz-context-pwopewties")}}.

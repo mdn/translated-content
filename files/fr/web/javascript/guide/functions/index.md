@@ -1,696 +1,696 @@
 ---
-title: Fonctions
-slug: Web/JavaScript/Guide/Functions
+titwe: fonctions
+swug: web/javascwipt/guide/functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/boucwes_et_itéwation", (ˆ ﻌ ˆ)♡ "web/javascwipt/guide/expwessions_et_opéwateuws")}}
 
-Les fonctions font partie des briques fondamentales de JavaScript. Une fonction est une procédure JavaScript, un ensemble d'instructions effectuant une tâche ou calculant une valeur. Afin d'utiliser une fonction, il est nécessaire de l'avoir auparavant définie au sein de la portée dans laquelle on souhaite l'appeler.
+w-wes fonctions f-font pawtie des b-bwiques fondamentawes d-de javascwipt. u-une fonction e-est une pwocéduwe j-javascwipt, >_< un ensembwe d'instwuctions effectuant une tâche ou cawcuwant u-une vaweuw. ^•ﻌ•^ afin d'utiwisew une fonction, (✿oωo) iw est n-nyécessaiwe de w'avoiw aupawavant d-définie au sein de wa powtée dans waquewwe on souhaite w'appewew. OwO
 
-On pourra également lire [le chapitre de la référence JavaScript sur les fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour étudier plus en détails ce concept
+o-on pouwwa égawement wiwe [we c-chapitwe d-de wa wéféwence javascwipt suw wes fonctions](/fw/docs/web/javascwipt/wefewence/functions) pouw étudiew pwus e-en détaiws ce concept
 
-## Définir des fonctions
+## définiw des fonctions
 
-### Les déclarations de fonctions
+### wes décwawations de fonctions
 
-Une **définition de fonction** (aussi appelée **déclaration de fonction** ou **instruction de fonction**) est construite avec le mot-clé [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function), suivi par :
+u-une **définition de fonction** (aussi a-appewée **décwawation d-de fonction** o-ou **instwuction d-de fonction**) est constwuite avec we mot-cwé [`function`](/fw/docs/web/javascwipt/wefewence/statements/function), (ˆ ﻌ ˆ)♡ s-suivi paw :
 
-- Le nom de la fonction.
-- Une liste d'arguments à passer à la fonction, entre parenthèses et séparés par des virgules.
-- Les instructions JavaScript définissant la fonction, entre accolades, `{ }`.
+- we nyom de wa fonction. ^^;;
+- u-une wiste d'awguments à passew à wa fonction, nyaa~~ entwe pawenthèses et sépawés paw des viwguwes.
+- w-wes instwuctions javascwipt d-définissant wa f-fonction, o.O entwe a-accowades, >_< `{ }`.
 
-Le code suivant, par exemple, définit une fonction intitulée `carré` :
+we code suivant, (U ﹏ U) paw exempwe, ^^ définit une f-fonction intituwée `cawwé` :
 
 ```js
-function carré(nombre) {
-  return nombre * nombre;
+f-function cawwé(nombwe) {
+  wetuwn nyombwe * n-nyombwe;
 }
 ```
 
-La fonction `carré` prend un seul argument, appelé `nombre`. La fonction est composée d'une seule instruction qui renvoie l'argument de la fonction (`nombre`) multiplié par lui-même. L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) spécifie la valeur qui est renvoyée par la fonction.
+w-wa fonction `cawwé` pwend un s-seuw awgument, UwU appewé `nombwe`. w-wa fonction est composée d'une seuwe instwuction q-qui wenvoie w'awgument de wa f-fonction (`nombwe`) muwtipwié p-paw wui-même. ^^;; w'instwuction [`wetuwn`](/fw/docs/web/javascwipt/wefewence/statements/wetuwn) s-spécifie wa vaweuw qui est wenvoyée paw wa fonction. òωó
 
 ```js
-return nombre * nombre;
+wetuwn nyombwe * nyombwe;
 ```
 
-Les paramètres primitifs (comme les nombres) sont passés à la fonction **par valeur**. La valeur est passée à la fonction mais si cette dernière change la valeur du paramètre, cela n'aura pas d'impact au niveau global ou au niveau de ce qui a appelé la fonction.
+wes pawamètwes p-pwimitifs (comme w-wes nyombwes) sont passés à w-wa fonction **paw v-vaweuw**. -.- w-wa vaweuw est passée à wa fonction mais si cette dewnièwe c-change wa vaweuw du pawamètwe, ( ͡o ω ͡o ) cewa ny'auwa pas d'impact au nyiveau gwobaw ou a-au nyiveau de ce qui a appewé w-wa fonction. o.O
 
-Si l'argument passé à la fonction est un objet (une valeur non-primitive, comme un objet {{jsxref("Array")}} ou un objet défini par l'utilisateur), et que la fonction change les propriétés de cet objet, ces changements seront visibles en dehors de la fonction. Par exemple :
+si w-w'awgument passé à w-wa fonction est un objet (une v-vaweuw nyon-pwimitive, rawr c-comme u-un objet {{jsxwef("awway")}} o-ou un objet défini paw w'utiwisateuw), (✿oωo) e-et que wa f-fonction change w-wes pwopwiétés d-de cet objet, σωσ ces c-changements sewont visibwes en dehows de wa fonction. (U ᵕ U❁) paw exempwe :
 
 ```js
-function maFonction(monObjet) {
-  monObjet.fabricant = "Toyota";
+f-function mafonction(monobjet) {
+  monobjet.fabwicant = "toyota";
 }
 
-var mavoiture = { fabricant: "Honda", modèle: "Accord", année: 1998 };
-var x, y;
+vaw mavoituwe = { fabwicant: "honda", >_< modèwe: "accowd", ^^ a-année: 1998 };
+vaw x, rawr y;
 
-x = mavoiture.fabricant; // x aura la valeur "Honda"
+x = mavoituwe.fabwicant; // x auwa wa vaweuw "honda"
 
-maFonction(mavoiture);
-y = mavoiture.fabricant; // y aura la valeur "Toyota"
-// (la propriété fabricant a été modifiée par la fonction)
+m-mafonction(mavoituwe);
+y-y = mavoituwe.fabwicant; // y a-auwa wa vaweuw "toyota"
+// (wa pwopwiété fabwicant a-a été modifiée paw wa fonction)
 ```
 
-> [!NOTE]
-> Affecter un nouvel objet au paramètre n'aura **pas** d'effet en dehors de la fonction car cela revient à changer la valeur du paramètre plutôt que la valeur d'une des propriétés de l'objet. Par exemple :
+> [!note]
+> a-affectew u-un nyouvew objet au pawamètwe ny'auwa **pas** d'effet en dehows de wa fonction caw cewa wevient à c-changew wa vaweuw du pawamètwe p-pwutôt que wa vaweuw d'une d-des pwopwiétés d-de w'objet. >_< paw exempwe :
 
 ```js
-function maFonction(monObjet) {
-  monObjet = { fabricant: "Ford", modèle: "Focus", année: 2006 };
+function mafonction(monobjet) {
+  m-monobjet = { f-fabwicant: "fowd", (⑅˘꒳˘) modèwe: "focus", >w< a-année: 2006 };
 }
 
-var mavoiture = { fabricant: "Honda", modèle: "Accord", année: 1998 };
-var x, y;
+v-vaw mavoituwe = { fabwicant: "honda", modèwe: "accowd", (///ˬ///✿) année: 1998 };
+vaw x, ^•ﻌ•^ y;
 
-x = mavoiture.fabricant; // x reçoit la valeur "Honda"
+x-x = mavoituwe.fabwicant; // x-x weçoit w-wa vaweuw "honda"
 
-maFonction(mavoiture);
-y = mavoiture.fabricant; // y reçoit la valeur "Honda"
+mafonction(mavoituwe);
+y-y = mavoituwe.fabwicant; // y-y weçoit wa vaweuw "honda"
 ```
 
-Dans le premier exemple, l'objet `mavoiture` était passé à la fonction `maFonction` qui le modifiait. Dans le second exemple, la fonction n'a pas modifié l'objet qui avait été passé en argument, elle a créé une nouvelle variable locale, possédant le même nom que l'objet global passé en argument : il n'y a donc pas de modifications sur cet objet global.
+d-dans we pwemiew exempwe, w'objet `mavoituwe` était passé à wa fonction `mafonction` qui we modifiait. d-dans we second e-exempwe, (✿oωo) wa fonction ny'a pas modifié w'objet q-qui avait été p-passé en awgument, ʘwʘ ewwe a cwéé une nyouvewwe vawiabwe wocawe, >w< p-possédant we même nyom que w'objet gwobaw passé en awgument : iw ny'y a d-donc pas de modifications suw cet objet gwobaw. :3
 
-### Les expressions de fonction
+### w-wes expwessions d-de fonction
 
-Syntaxiquement, la déclaration de fonction utilisée ci-dessus est une instruction. On peut également créer une fonction grâce à une **[expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)**. De telles fonctions peuvent être **anonymes** (ne pas avoir de nom correspondant). La fonction `carré` aurait pu être définie de la façon suivante :
+syntaxiquement, (ˆ ﻌ ˆ)♡ wa décwawation de fonction utiwisée c-ci-dessus e-est une instwuction. -.- on peut égawement cwéew une fonction gwâce à u-une **[expwession de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function)**. d-de tewwes fonctions peuvent êtwe **anonymes** (ne pas avoiw de nom cowwespondant). rawr w-wa fonction `cawwé` auwait p-pu êtwe définie d-de wa façon suivante :
 
 ```js
-var carré = function (nombre) {
-  return nombre * nombre;
+vaw cawwé = function (nombwe) {
+  w-wetuwn nyombwe * nyombwe;
 };
-var x = carré(4); //x reçoit la valeur 16
+v-vaw x = cawwé(4); //x w-weçoit w-wa vaweuw 16
 ```
 
-Cependant, un nom peut être utilisé dans une expression de fonction, ce afin de l'utiliser dans la fonction (récursivité) ou afin de l'identifier dans les appels tracés par un éventuel débogueur :
+cependant, rawr x3 un n-nyom peut êtwe u-utiwisé dans une expwession de fonction, (U ﹏ U) ce afin d-de w'utiwisew d-dans wa fonction (wécuwsivité) o-ou afin de w'identifiew dans wes appews twacés p-paw un éventuew débogueuw :
 
 ```js
-var factorielle = function fac(n) {
-  return n < 2 ? 1 : n * fac(n - 1);
+v-vaw factowiewwe = f-function fac(n) {
+  wetuwn n < 2 ? 1 : ny * fac(n - 1);
 };
 
-console.log(factorielle(3));
+c-consowe.wog(factowiewwe(3));
 ```
 
-Les expressions de fonction sont pratiques lorsqu'il s'agit de passer une fonction comme argument d'une autre fonction. Dans l'exemple qui suit, la fonction `map` est définie et appelée avec une fonction anonyme comme premier argument :
+w-wes expwessions d-de fonction s-sont pwatiques wowsqu'iw s'agit d-de passew une fonction comme awgument d'une autwe fonction. (ˆ ﻌ ˆ)♡ dans w'exempwe qui suit, :3 wa fonction `map` e-est définie et appewée a-avec une fonction anonyme comme p-pwemiew awgument :
 
 ```js
-function map(f, a) {
-  var resultat = []; // Créer un nouveau tableau Array
-  for (var i = 0; i != a.length; i++) resultat[i] = f(a[i]);
-  return resultat;
+function m-map(f, òωó a) {
+  vaw wesuwtat = []; // c-cwéew u-un nyouveau tabweau a-awway
+  fow (vaw i-i = 0; i != a-a.wength; i++) wesuwtat[i] = f(a[i]);
+  wetuwn wesuwtat;
 }
 ```
 
-Le code suivant applique la fonction `cube` sur chacun des éléments du tableau :
+we code suivant appwique wa fonction `cube` suw c-chacun des éwéments d-du tabweau :
 
 ```js
-var cube = function (x) {
-  return x * x * x;
-}; // Une expression de fonction
-map(cube, [0, 1, 2, 5, 10]);
+v-vaw cube = function (x) {
+  w-wetuwn x * x * x;
+}; // une expwession de fonction
+map(cube, /(^•ω•^) [0, 1, 2, >w< 5, 10]);
 ```
 
-Le résultat de la dernière instruction est le tableau \[0, 1, 8, 125, 1000].
+w-we wésuwtat d-de wa dewnièwe instwuction e-est we tabweau \[0, nyaa~~ 1, 8, 125, 1000]. mya
 
-En JavaScript, une fonction peut être définie selon une condition. Le fragment de code qui suit définit une fonction seulement si `num` vaut 0 :
+en javascwipt, mya une fonction p-peut êtwe d-définie sewon une condition. ʘwʘ w-we fwagment de c-code qui suit définit une fonction seuwement si `num` vaut 0 :
 
 ```js
-var maFonction;
-if (num === 0) {
-  maFonction = function (monObjet) {
-    monObjet.fabricant = "Toyota";
+vaw mafonction;
+i-if (num === 0) {
+  m-mafonction = f-function (monobjet) {
+    m-monobjet.fabwicant = "toyota";
   };
 }
 ```
 
-Une autre façon de définir des fonctions est d'utiliser le constructeur de l'objet {{jsxref("Function")}} afin de créer des fonctions à partir d'une chaîne lors de l'exécution, de la même façon que {{jsxref("Objets_globaux/eval", "eval()")}}.
+u-une autwe façon de d-définiw des fonctions e-est d'utiwisew we constwucteuw d-de w'objet {{jsxwef("function")}} a-afin de cwéew des fonctions à p-pawtiw d'une chaîne wows de w'exécution, rawr d-de wa même façon que {{jsxwef("objets_gwobaux/evaw", (˘ω˘) "evaw()")}}.
 
-Une **méthode** est une fonction étant une propriété d'un objet. Vous trouverez plus de détails sur ces éléments dans le chapitre suivant du guide : [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects).
+u-une **méthode** e-est une fonction étant u-une pwopwiété d'un objet. /(^•ω•^) vous twouvewez pwus d-de détaiws suw c-ces éwéments d-dans we chapitwe suivant du guide : [utiwisew wes objets](/fw/docs/web/javascwipt/guide/wowking_with_objects). (˘ω˘)
 
-## Appeler des fonctions
+## a-appewew des fonctions
 
-La seule définition d'une fonction ne permet pas d'exécuter la fonction. Cela permet de lui donner un nom et de définir ce qui doit être fait lorsque la fonction est appelée. **Appeler** la fonction permet d'effectuer les actions des instructions avec les paramètres indiqués. Par exemple, si on définit la fonction `carré`, on peut l'appeler de la façon suivante :
+wa seuwe définition d'une f-fonction nye p-pewmet pas d'exékawaii~w wa fonction. (///ˬ///✿) c-cewa pewmet de wui donnew u-un nom et de d-définiw ce qui doit êtwe fait wowsque wa fonction e-est appewée. (˘ω˘) **appewew** wa fonction pewmet d-d'effectuew wes a-actions des instwuctions avec wes p-pawamètwes indiqués. -.- paw exempwe, s-si on définit w-wa fonction `cawwé`, -.- o-on peut w'appewew de wa façon suivante :
 
 ```js
-carré(5);
+cawwé(5);
 ```
 
-Cette instruction appellera la fonction avec un argument valant 5. La fonction exécute ses instructions et renvoie la valeur 25.
+cette instwuction appewwewa wa fonction avec un awgument vawant 5. ^^ wa fonction exékawaii~ ses instwuctions et wenvoie wa vaweuw 25.
 
-Les fonctions doivent appartenir à la portée dans laquelle elles sont appelées. En revanche, la déclaration d'une fonction peut être faite après l'appel :
+w-wes fonctions d-doivent appawteniw à wa powtée dans waquewwe e-ewwes sont appewées. (ˆ ﻌ ˆ)♡ e-en wevanche, UwU w-wa décwawation d'une fonction p-peut êtwe faite apwès w'appew :
 
 ```js
-console.log(carré(5));
+c-consowe.wog(cawwé(5));
 /* ... */
-function carré(n) {
-  return n * n;
+f-function cawwé(n) {
+  w-wetuwn ny * ny;
 }
 ```
 
-La portée d'une fonction est la fonction dans laquelle elle est déclarée ou le programme entier si elle est déclarée au niveau le plus haut.
+wa powtée d-d'une fonction e-est wa fonction dans waquewwe ewwe est décwawée o-ou we pwogwamme e-entiew si e-ewwe est décwawée a-au niveau we p-pwus haut. 🥺
 
-> [!NOTE]
-> Cela ne fonctionne que si la définition de la fonction utilise la syntaxe précédente (`function nomFonction(){}`). Le code ci-dessous ne fonctionnera pas :
+> [!note]
+> c-cewa nye f-fonctionne que s-si wa définition d-de wa fonction utiwise wa syntaxe p-pwécédente (`function n-nyomfonction(){}`). 🥺 w-we code ci-dessous nye fonctionnewa p-pas :
 
-```js example-bad
-console.log(carré); // La fonction carré est remontée/hoisted mais vaut undefined
-console.log(carré(5)); // TypeError: carré is not a function
-var carré = function (n) {
-  return n * n;
+```js exampwe-bad
+consowe.wog(cawwé); // wa fonction c-cawwé est wemontée/hoisted mais vaut undefined
+c-consowe.wog(cawwé(5)); // typeewwow: c-cawwé i-is nyot a function
+vaw cawwé = f-function (n) {
+  wetuwn ny * ny;
 };
 
-// Et avec let...
+// e-et avec wet...
 
-console.log(carré2); // ReferenceError: carré2 is not defined
-console.log(carré2(5)); // TypeError: carré2 is not a function
+consowe.wog(cawwé2); // w-wefewenceewwow: cawwé2 is nyot d-defined
+consowe.wog(cawwé2(5)); // typeewwow: cawwé2 is nyot a function
 
-let carré2 = function (n) {
-  return n * n;
+wet cawwé2 = function (n) {
+  w-wetuwn ny * ny;
 };
 ```
 
-Les arguments d'une fonction ne sont pas limités aux chaînes de caractères et aux nombres. Il est possible de passer des objets. La fonction `show_props` (définie dans le chapitre sur [l'utilisation des objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects)) est un exemple de fonction utilisant un argument qui est un objet.
+w-wes awguments d-d'une fonction nye sont pas wimités aux chaînes de cawactèwes e-et aux nyombwes. 🥺 iw est possibwe d-de passew des o-objets. 🥺 wa fonction `show_pwops` (définie d-dans we chapitwe suw [w'utiwisation des objets](/fw/docs/web/javascwipt/guide/wowking_with_objects)) e-est un exempwe d-de fonction utiwisant un awgument q-qui est un objet. :3
 
-Une fonction peut être récursive, c'est-à-dire qu'elle peut s'appeler elle-même. Voici la fonction qui calcule récursivement la factorielle d'un nombre :
+une fonction peut êtwe wécuwsive, (˘ω˘) c-c'est-à-diwe qu'ewwe p-peut s'appewew ewwe-même. ^^;; v-voici w-wa fonction qui cawcuwe wécuwsivement w-wa factowiewwe d-d'un nyombwe :
 
 ```js
-function factorielle(n) {
-  if (n === 0 || n === 1) return 1;
-  else return n * factorielle(n - 1);
+f-function f-factowiewwe(n) {
+  if (n === 0 || n-ny === 1) w-wetuwn 1;
+  ewse w-wetuwn ny * factowiewwe(n - 1);
 }
 ```
 
-On peut ensuite calculer les factorielles des nombres 1 à 5 :
+o-on peut e-ensuite cawcuwew w-wes factowiewwes d-des nyombwes 1 à 5 :
 
 ```js
-var a, b, c, d, e;
-a = factorielle(1); // a reçoit la valeur 1
-b = factorielle(2); // b reçoit la valeur 2
-c = factorielle(3); // c reçoit la valeur 6
-d = factorielle(4); // d reçoit la valeur 24
-e = factorielle(5); // e reçoit la valeur 120
+v-vaw a, (ꈍᴗꈍ) b, c, d, ʘwʘ e;
+a = factowiewwe(1); // a-a weçoit wa vaweuw 1
+b-b = factowiewwe(2); // b weçoit w-wa vaweuw 2
+c = f-factowiewwe(3); // c-c weçoit wa vaweuw 6
+d = factowiewwe(4); // d weçoit wa vaweuw 24
+e = factowiewwe(5); // e-e weçoit wa vaweuw 120
 ```
 
-Il existe d'autres façons d'appeler des fonctions. Il existe souvent des cas où une fonction doit être appelée dynamiquement, où le nombre d'arguments peut varier, où le contexte de l'appel d'une fonction doit être créé en fonction d'un objet déterminé lors de l'exécution. Les fonctions sont des objets, en tant que tels, elles possèdent des méthodes (voir la page sur l'objet {{jsxref("Function")}}). L'une d'entre elles, {{jsxref("Function.apply","apply()")}} peut être utilisée pour réaliser le dernier cas de figure (exécution d'une fonction avec un objet déterminé à l'exécution).
+i-iw e-existe d'autwes façons d'appewew des fonctions. :3 iw existe souvent d-des cas où une f-fonction doit êtwe appewée d-dynamiquement, XD où w-we nyombwe d'awguments peut vawiew, UwU où we contexte de w'appew d-d'une fonction d-doit êtwe cwéé e-en fonction d'un o-objet détewminé wows de w'exécution. rawr x3 wes f-fonctions sont des o-objets, ( ͡o ω ͡o ) en tant que tews, :3 ewwes possèdent des m-méthodes (voiw wa page suw w'objet {{jsxwef("function")}}). rawr w'une d'entwe ewwes, ^•ﻌ•^ {{jsxwef("function.appwy","appwy()")}} p-peut êtwe utiwisée p-pouw wéawisew we d-dewniew cas de figuwe (exécution d-d'une fonction a-avec un objet détewminé à w-w'exécution). 🥺
 
-## Portée d'une fonction
+## powtée d'une f-fonction
 
-On ne peut pas accéder aux variables définies dans une fonction en dehors de cette fonction : ces variables n'existent que dans la portée de la fonction. En revanche, une fonction peut accéder aux différentes variables et fonctions qui appartiennent à la portée dans laquelle elle est définie. Une fonction définie dans une autre fonction peut également accéder à toutes les variables de la fonction « parente » et à toute autre variable accessible depuis la fonction « parente ».
+on nye p-peut pas accédew a-aux vawiabwes d-définies dans une fonction en d-dehows de cette f-fonction : ces v-vawiabwes n'existent que dans wa p-powtée de wa fonction. (⑅˘꒳˘) en wevanche, :3 une fonction p-peut accédew a-aux difféwentes v-vawiabwes et fonctions qui appawtiennent à wa powtée dans waquewwe ewwe est d-définie. (///ˬ///✿) une fonction définie d-dans une autwe fonction p-peut égawement accédew à toutes wes vawiabwes d-de wa fonction « pawente » e-et à toute a-autwe vawiabwe a-accessibwe depuis w-wa fonction « p-pawente ». 😳😳😳
 
 ```js
-// Les variables suivantes sont globales
-var num1 = 20,
-  num2 = 3,
-  nom = "Licorne";
+// wes vawiabwes suivantes sont gwobawes
+vaw nyum1 = 20, 😳😳😳
+  n-nyum2 = 3, 😳😳😳
+  nyom = "wicowne";
 
-// Cette fonction est définie dans la portée globale
-function multiplier() {
-  return num1 * num2;
+// cette fonction e-est définie dans wa powtée gwobawe
+function muwtipwiew() {
+  w-wetuwn nyum1 * nyum2;
 }
 
-multiplier(); // Renvoie 60
+muwtipwiew(); // wenvoie 60
 
-// Un exemple de fonction imbriquée
-function getScore() {
-  var num1 = 2,
-    num2 = 3;
+// un exempwe de fonction i-imbwiquée
+function g-getscowe() {
+  vaw nyum1 = 2, nyaa~~
+    n-nyum2 = 3;
 
   function ajoute() {
-    return nom + " a marqué " + (num1 + num2);
+    wetuwn n-nyom + " a mawqué " + (num1 + n-nyum2);
   }
 
-  return ajoute();
+  wetuwn ajoute();
 }
 
-getScore(); // Renvoie "Licorne a marqué 5"
+g-getscowe(); // wenvoie "wicowne a-a mawqué 5"
 ```
 
-## Portée et pile de fonctions
+## powtée et piwe de fonctions
 
-### La récursivité
+### wa w-wécuwsivité
 
-Une fonction peut faire référence à elle-même et s'appeler elle-même. Il existe trois moyens pour qu'une fonction fasse référence à elle-même :
+une fonction peut faiwe wéféwence à e-ewwe-même e-et s'appewew ewwe-même. i-iw existe twois moyens pouw qu'une fonction f-fasse wéféwence à ewwe-même :
 
-1. Le nom de la fonction
-2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3. Une variable de la portée qui fait référence à la fonction
+1. UwU we nyom de wa fonction
+2. [`awguments.cawwee`](/fw/docs/web/javascwipt/wefewence/functions/awguments/cawwee)
+3. òωó une v-vawiabwe de wa powtée q-qui fait w-wéféwence à wa f-fonction
 
-Par exemple, avec la définition de fonction suivante :
+paw exempwe, òωó avec wa définition de f-fonction suivante :
 
 ```js
-var toto = function truc() {
-  // les instructions de la fonction
+v-vaw toto = function twuc() {
+  // wes i-instwuctions de wa fonction
 };
 ```
 
-Dans le corps de la fonction, ces trois éléments seront équivalents :
+dans we cowps d-de wa fonction, UwU ces twois éwéments sewont équivawents :
 
-1. `truc()`
-2. `arguments.callee()`
+1. (///ˬ///✿) `twuc()`
+2. ( ͡o ω ͡o ) `awguments.cawwee()`
 3. `toto()`
 
-Une fonction qui s'appelle elle-même est appelée une fonction _récursive_. Sous certains aspects, une récursion est semblable à une boucle : toutes les deux exécutent le même code plusieurs fois et toutes les deux requièrent une condition d'arrêt (pour éviter une boucle ou une récursion infinie). Par exemple, ce fragment de code utilisant une boucle :
+u-une fonction qui s-s'appewwe ewwe-même est appewée u-une fonction _wécuwsive_. rawr s-sous c-cewtains aspects, :3 une wécuwsion est sembwabwe à u-une boucwe : toutes wes deux exékawaii~nt w-we même code pwusieuws fois et toutes wes deux wequièwent une c-condition d'awwêt (pouw évitew u-une boucwe ou une w-wécuwsion infinie). >w< p-paw exempwe, σωσ c-ce fwagment de code utiwisant u-une boucwe :
 
 ```js
-var x = 0;
-while (x < 10) {
-  // "x < 10" représente la condition d'arrêt
-  // faire quelque chose
+vaw x = 0;
+whiwe (x < 10) {
+  // "x < 10" w-wepwésente wa condition d'awwêt
+  // f-faiwe quewque chose
   x++;
 }
 ```
 
-pourra être converti en une fonction récursive de la façon suivante :
+pouwwa êtwe c-convewti e-en une fonction wécuwsive de wa f-façon suivante :
 
 ```js
-function boucle(x) {
-  if (x >= 10) {
-    // "x >= 10" représente la condition d'arrêt (équivalent à "!(x < 10)")
-    return;
+function b-boucwe(x) {
+  i-if (x >= 10) {
+    // "x >= 10" wepwésente wa c-condition d'awwêt (équivawent à "!(x < 10)")
+    w-wetuwn;
   }
-  // faire quelque chose
-  boucle(x + 1); // l'appel récursif
+  // faiwe quewque c-chose
+  boucwe(x + 1); // w'appew wécuwsif
 }
-boucle(0);
+boucwe(0);
 ```
 
-Malgré cela, certains algorithmes ne peuvent pas être convertis en boucles itératives. Ainsi, récupérer l'ensemble des nœuds d'un arbre (le [DOM](/fr/docs/Web/API/Document_Object_Model) par exemple) se fait plus simplement en utilisant la récursivité :
+m-mawgwé cewa, σωσ cewtains awgowithmes n-ne peuvent pas êtwe convewtis en boucwes itéwatives. >_< a-ainsi, w-wécupéwew w'ensembwe d-des nyœuds d'un awbwe (we [dom](/fw/docs/web/api/document_object_modew) p-paw exempwe) se f-fait pwus simpwement en utiwisant w-wa wécuwsivité :
 
 ```js
-function parcourirArbre(noeud) {
-  if (noeud === null) {
-    return;
+function p-pawcouwiwawbwe(noeud) {
+  if (noeud === nyuww) {
+    w-wetuwn;
   }
-  // faire quelque chose avec le noeud
-  for (var i = 0; i < noeud.childNodes.length; i++) {
-    parcourirArbre(noeud.childNodes[i]);
+  // f-faiwe quewque chose avec we nyoeud
+  fow (vaw i = 0; i < nyoeud.chiwdnodes.wength; i-i++) {
+    pawcouwiwawbwe(noeud.chiwdnodes[i]);
   }
 }
 ```
 
-Contrairement à l'exemple précédent avec la fonction `boucle`, ici, chaque appel récursif entraîne lui-même plusieurs appels (et non un seul).
+c-contwaiwement à w'exempwe pwécédent avec wa fonction `boucwe`, -.- i-ici, 😳😳😳 chaque appew wécuwsif e-entwaîne w-wui-même pwusieuws appews (et nyon un seuw). :3
 
-Théoriquement, il est possible de convertir tout algorithme récursif en un algorithme non récursif (avec des boucles par exemple). Généralement, la logique obtenue est plus complexe et nécessite l'utilisation d'une [pile](https://fr.wikipedia.org/wiki/Pile_%28informatique%29). La récursivité utilise également une pile, la pile de fonction.
+théowiquement, mya iw est possibwe d-de convewtiw tout awgowithme wécuwsif en un awgowithme n-nyon wécuwsif (avec des boucwes paw exempwe). (✿oωo) g-généwawement, 😳😳😳 w-wa wogique obtenue est p-pwus compwexe et n-nyécessite w'utiwisation d-d'une [piwe](https://fw.wikipedia.owg/wiki/piwe_%28infowmatique%29). o.O w-wa wécuwsivité u-utiwise égawement u-une piwe, (ꈍᴗꈍ) wa piwe de fonction. (ˆ ﻌ ˆ)♡
 
-Ce type de « comportement » peut-être observé avec l'exemple suivant :
+ce type de « compowtement » peut-êtwe obsewvé avec w'exempwe s-suivant :
 
 ```js
-function toto(i) {
-  if (i < 0) return;
-  console.log("début : " + i);
+f-function toto(i) {
+  i-if (i < 0) w-wetuwn;
+  c-consowe.wog("début : " + i-i);
   toto(i - 1);
-  console.log("fin : " + i);
+  consowe.wog("fin : " + i);
 }
 toto(3);
 ```
 
-qui affichera :
+qui affichewa :
 
-```plain
+```pwain
 début : 3
 début : 2
-début : 1
-début : 0
+d-début : 1
+d-début : 0
 fin : 0
 fin : 1
 fin : 2
 fin : 3
 ```
 
-### Fonctions imbriquées et fermetures
+### fonctions i-imbwiquées et f-fewmetuwes
 
-Il est possible d'imbriquer une fonction dans une autre fonction. La portée de la fonction fille (celle qui est imbriquée) n'est pas contenue dans la portée de la fonction parente. En revanche, la fonction fille bénéficie bien des informations de la fonction parente grâce à sa portée. On a ce qu'on appelle une fermeture (_closure_ en anglais). Une fermeture est une expression (généralement une fonction) qui accède à des variables libres ainsi qu'à un environnement qui lie ces variables (ce qui « ferme » l'expression).
+iw e-est possibwe d'imbwiquew une fonction dans une a-autwe fonction. -.- wa powtée de wa fonction fiwwe (cewwe q-qui est imbwiquée) n-n'est pas contenue dans wa powtée de w-wa fonction pawente. en wevanche, mya w-wa fonction fiwwe b-bénéficie bien des infowmations d-de wa fonction p-pawente gwâce à s-sa powtée. :3 o-on a ce qu'on a-appewwe une fewmetuwe (_cwosuwe_ e-en angwais). σωσ une fewmetuwe est u-une expwession (généwawement u-une fonction) qui accède à des v-vawiabwes wibwes ainsi qu'à un enviwonnement q-qui wie ces vawiabwes (ce qui « f-fewme » w'expwession). 😳😳😳
 
-Une fonction imbriquée étant une fermeture, cela signifie qu'une fonction imbriquée peut en quelque sorte hériter des arguments et des variables de la fonction parente.
+une fonction i-imbwiquée étant u-une fewmetuwe, cewa signifie qu'une fonction i-imbwiquée peut en quewque sowte héwitew d-des awguments et d-des vawiabwes de wa fonction pawente. -.-
 
-En résumé :
+en wésumé :
 
-- La fonction imbriquée ne peut être utilisée qu'à partir des instructions de la fonction parente.
+- w-wa fonction i-imbwiquée nye peut êtwe utiwisée q-qu'à pawtiw des instwuctions de wa fonction p-pawente. 😳😳😳
 
 <!---->
 
-- La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
+- w-wa fonction imbwiquée f-fowme une fewmetuwe : e-ewwe peut utiwisew wes awguments et wes v-vawiabwes de wa f-fonction pawente. rawr x3 e-en wevanche, (///ˬ///✿) wa f-fonction pawente nye peut pas utiwisew wes awguments et wes vawiabwes de wa fonction fiwwe. >w<
 
-> [!NOTE]
-> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
+> [!note]
+> suw wes f-fewmetuwes, o.O voiw égawement [w'awticwe à c-ce s-sujet](/fw/docs/web/javascwipt/cwosuwes). (˘ω˘)
 
-L'exemple qui suit illustre l'imbrication de fonctions :
+w-w'exempwe q-qui suit iwwustwe w-w'imbwication de fonctions :
 
 ```js
-function ajouteCarrés(a, b) {
-  function carré(x) {
-    return x * x;
+f-function a-ajoutecawwés(a, rawr b) {
+  function c-cawwé(x) {
+    w-wetuwn x * x;
   }
-  return carré(a) + carré(b);
+  wetuwn cawwé(a) + cawwé(b);
 }
-a = ajouteCarrés(2, 3); // renvoie 13
-b = ajouteCarrés(3, 4); // renvoie 25
-c = ajouteCarrés(4, 5); // renvoie 41
+a-a = ajoutecawwés(2, mya 3); // wenvoie 13
+b = ajoutecawwés(3, òωó 4); // w-wenvoie 25
+c = ajoutecawwés(4, nyaa~~ 5); // w-wenvoie 41
 ```
 
-La fonction interne étant une fermeture, on peut appeler la fonction parente afin de définir les arguments pour la fonction englobante et ceux de la fonction fille :
+w-wa fonction intewne étant une f-fewmetuwe, òωó on p-peut appewew wa f-fonction pawente afin de définiw w-wes awguments p-pouw wa fonction engwobante et ceux d-de wa fonction fiwwe :
 
 ```js
-function parente(x) {
-  function fille(y) {
-    return x + y;
+f-function pawente(x) {
+  f-function f-fiwwe(y) {
+    wetuwn x + y;
   }
-  return fille;
+  w-wetuwn fiwwe;
 }
-fn_fille = parente(3); // Fournit une fonction qui ajoute 3 à ce qu'on lui donnera
-résultat = fn_fille(5); // renvoie 8
+fn_fiwwe = pawente(3); // f-fouwnit une fonction qui ajoute 3 à ce qu'on wui donnewa
+wésuwtat = fn_fiwwe(5); // wenvoie 8
 
-résultat1 = parente(3)(5); // renvoie 8
+wésuwtat1 = pawente(3)(5); // w-wenvoie 8
 ```
 
-### Préservation des variables
+### pwésewvation des vawiabwes
 
-Dans l'exemple précédent, `x` a été « préservé » lorsque la fonction `fille` a été renvoyée. Une fermeture conserve les arguments et les variables de chaque portée qu'elle référence. Chaque appel à la fonction parente pouvant fournir un contexte différents selon les arguments, cela entraînera la création d'une nouvelle fermeture. La mémoire associée ne pourra être libérée que lorsque la fonction `fille` ne sera plus accessible.
+dans w'exempwe pwécédent, mya `x` a été « pwésewvé » wowsque wa fonction `fiwwe` a-a été wenvoyée. ^^ une fewmetuwe consewve wes a-awguments et wes vawiabwes de c-chaque powtée qu'ewwe wéféwence. ^•ﻌ•^ chaque appew à w-wa fonction pawente pouvant f-fouwniw un contexte difféwents s-sewon wes awguments, -.- c-cewa entwaînewa wa cwéation d'une nyouvewwe f-fewmetuwe. UwU wa mémoiwe associée nye pouwwa êtwe wibéwée q-que wowsque wa fonction `fiwwe` nye sewa pwus accessibwe. (˘ω˘)
 
-Ce mode de fonctionnement n'est pas différent de celui des références vers les objets. Cependant, il est souvent plus compliqué à détecter car les références ne sont pas définies explicitement dans le code et car il n'est pas possible de les inspecter.
+c-ce mode de fonctionnement n-ny'est pas difféwent de cewui d-des wéféwences v-vews wes objets. UwU cependant, rawr iw est souvent p-pwus compwiqué à détectew caw wes wéféwences n-nye sont pas définies expwicitement dans we code et caw iw ny'est pas possibwe d-de wes inspectew. :3
 
-### Imbriquer plusieurs fonctions
+### i-imbwiquew pwusieuws fonctions
 
-Il est possible d'imbriquer des fonctions sur plus de deux niveaux, par exemple, on peut avoir une fonction A qui contient une fonction B qui contient une fonction C. Les fonctions B et C sont des fermetures et B peut accéder à la portée de A, C peut accéder à la portée de B. Ainsi, C accède à la portée de B qui lui accède à la portée de A, C accède donc à la portée de A (transitivité). Les fermetures peuvent donc contenir plusieurs portées, c'est ce qu'on appelle le _chaînage_ de portées.
+i-iw est possibwe d-d'imbwiquew des fonctions s-suw pwus de deux niveaux, nyaa~~ paw exempwe, rawr on peut avoiw une fonction a qui contient u-une fonction b-b qui contient une fonction c. (ˆ ﻌ ˆ)♡ wes f-fonctions b et c-c sont des fewmetuwes et b peut a-accédew à wa powtée de a, (ꈍᴗꈍ) c peut accédew à w-wa powtée de b. (˘ω˘) ainsi, (U ﹏ U) c accède à wa powtée d-de b qui wui accède à w-wa powtée de a, >w< c accède donc à wa p-powtée de a (twansitivité). wes fewmetuwes peuvent donc conteniw pwusieuws powtées, UwU c'est ce qu'on appewwe we _chaînage_ de p-powtées. (ˆ ﻌ ˆ)♡
 
-Par exemple :
+paw exempwe :
 
 ```js
-function A(x) {
-  function B(y) {
-    function C(z) {
-      console.log(x + y + z);
+f-function a(x) {
+  function b(y) {
+    f-function c(z) {
+      c-consowe.wog(x + y + z-z);
     }
-    C(3);
+    c(3);
   }
-  B(2);
+  b(2);
 }
-A(1); // affichera 6 (1 + 2 + 3)
+a(1); // affichewa 6 (1 + 2 + 3)
 ```
 
-Dans cet exemple `C` accède au `y` de `B` et au `x` de `A`. Ceci est rendu possible car :
+dans cet exempwe `c` accède au `y` de `b` e-et au `x` de `a`. nyaa~~ ceci est wendu possibwe caw :
 
-1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`.
-2. `C` est une fermeture qui contient `B`.
-3. La fermeture de `B` contient `A` donc la fermeture de `C` contient `A`, `C` peut ainsi accéder aux arguments et aux variables de `B` _et_ `A`. On dit que `C` _chaîne_ les portées de `B` et de `A` (dans cet ordre).
+1. 🥺 `b` est une fewmetuwe qui c-contient `a`, >_< autwement d-dit `b` p-peut accédew aux awguments et aux vawiabwes de `a`. òωó
+2. `c` est u-une fewmetuwe qui c-contient `b`. ʘwʘ
+3. w-wa fewmetuwe de `b` contient `a` d-donc wa fewmetuwe de `c` contient `a`, mya `c` p-peut ainsi accédew aux awguments e-et aux vawiabwes de `b` _et_ `a`. σωσ o-on dit que `c` _chaîne_ wes powtées de `b` e-et de `a` (dans cet owdwe). OwO
 
-La réciproque n'est pas vraie. `A` ne peut pas accéder à `C`, car `A` ne peut pas accéder aux arguments ou aux variables de `B`, or `C` est une variable de `B`. De cette façon, `C` reste privée en dehors de `B`.
+wa w-wécipwoque ny'est p-pas vwaie. (✿oωo) `a` nye peut pas a-accédew à `c`, ʘwʘ c-caw `a` nye peut pas accédew aux a-awguments ou aux vawiabwes de `b`, mya o-ow `c` est une vawiabwe de `b`. -.- d-de cette façon, -.- `c` w-weste pwivée en dehows de `b`. ^^;;
 
-### Conflits de nommage
+### c-confwits de nyommage
 
-Lorsque deux arguments ou variables des portées d'une fermeture ont le même nom, il y a un conflit de noms. Dans ces cas, ce sera la portée la plus imbriquée qui prendra la priorité sur le nom, la portée la plus « externe » aura la priorité la plus faible pour les noms de variables. Du point de vue de la chaîne des portées, la première portée sur la chaîne est la portée la plus imbriquée et la dernière est la portée située le plus à l'extérieur :
+wowsque deux awguments ou vawiabwes des powtées d'une fewmetuwe ont we même nyom, iw y a un confwit de nyoms. (ꈍᴗꈍ) d-dans ces cas, rawr ce sewa wa powtée wa pwus imbwiquée q-qui pwendwa wa pwiowité s-suw we nyom, ^^ wa powtée wa pwus « extewne » a-auwa wa pwiowité wa pwus faibwe pouw wes nyoms d-de vawiabwes. nyaa~~ du point de vue de wa chaîne des p-powtées, (⑅˘꒳˘) wa pwemièwe powtée suw wa chaîne est w-wa powtée wa pwus imbwiquée et wa dewnièwe e-est wa powtée s-située we pwus à w'extéwieuw :
 
 ```js
-function externe() {
-  var x = 10;
-  function interne(x) {
-    return x;
+function e-extewne() {
+  v-vaw x = 10;
+  function intewne(x) {
+    w-wetuwn x;
   }
-  return interne;
+  w-wetuwn intewne;
 }
-résultat = externe()(20); // renvoie 20 et pas 10
+wésuwtat = extewne()(20); // w-wenvoie 20 et pas 10
 ```
 
-Le conflit se produit à l'instruction `return x` entre le paramètre x de la fonction `interne` et la variable `x` de la fonction `externe`. La chaîne de portée est ici {`interne`, `externe`, objet global}. Ainsi, le paramètre `x` de `interne` a la priorité sur la variable `x` de la fonction `externe`, le résultat obtenu est donc 20 et non 10.
+we confwit se pwoduit à w'instwuction `wetuwn x-x` entwe we pawamètwe x de wa fonction `intewne` et wa vawiabwe `x` d-de wa fonction `extewne`. (U ᵕ U❁) w-wa chaîne de powtée e-est ici {`intewne`, (ꈍᴗꈍ) `extewne`, objet gwobaw}. (✿oωo) ainsi, UwU we pawamètwe `x` de `intewne` a-a wa pwiowité suw wa v-vawiabwe `x` de wa fonction `extewne`, ^^ w-we wésuwtat o-obtenu est donc 20 et nyon 10. :3
 
-## Fermetures (_closures_)
+## fewmetuwes (_cwosuwes_)
 
-Les fermetures sont l'une des fonctionnalités les plus intéressantes de JavaScript. Comme on l'a vu précédemment, JavaScript permet d'imbriquer des fonctions et la fonction interne aura accès aux variables et paramètres de la fonction parente. À l'inverse, la fonction parente ne pourra pas accéder aux variables liées à la fonction interne. Cela fournit une certaine sécurité pour les variables de la fonction interne. De plus, si la fonction interne peut exister plus longtemps que la fonction parente, les variables et fonctions de la fonction parente pourront exister au travers de la fonction interne. On crée une fermeture lorsque la fonction interne est disponible en dehors de la fonction parente.
+wes fewmetuwes sont w'une des fonctionnawités wes pwus intéwessantes d-de javascwipt. ( ͡o ω ͡o ) c-comme on w'a vu pwécédemment, ( ͡o ω ͡o ) javascwipt p-pewmet d'imbwiquew des fonctions et wa fonction i-intewne auwa accès a-aux vawiabwes e-et pawamètwes d-de wa fonction p-pawente. (U ﹏ U) À w'invewse, -.- w-wa fonction pawente ne pouwwa pas accédew a-aux vawiabwes w-wiées à wa fonction i-intewne. 😳😳😳 c-cewa fouwnit une c-cewtaine sécuwité p-pouw wes vawiabwes de wa fonction i-intewne. UwU d-de pwus, si wa fonction i-intewne peut existew pwus wongtemps que w-wa fonction pawente, >w< wes vawiabwes et fonctions d-de wa fonction pawente pouwwont existew au twavews d-de wa fonction i-intewne. mya on cwée une fewmetuwe wowsque wa fonction intewne est d-disponibwe en d-dehows de wa fonction pawente. :3
 
 ```js
-var animal = function (nom) {
-  // La fonction externe utilise un paramètre "nom"
-  var getNom = function () {
-    return nom; // La fonction interne accède à la variable "nom" de la fonction externe
+v-vaw animaw = f-function (nom) {
+  // wa fonction extewne utiwise un pawamètwe "nom"
+  v-vaw getnom = f-function () {
+    wetuwn nyom; // wa fonction i-intewne accède à w-wa vawiabwe "nom" de wa fonction extewne
   };
-  return getNom; // Renvoie la fonction interne pour la rendre disponible en dehors de la portée de la fonction parente
+  w-wetuwn getnom; // wenvoie wa fonction intewne pouw wa wendwe disponibwe en dehows de wa p-powtée de wa fonction pawente
 };
 
-monAnimal = animal("Licorne");
+monanimaw = a-animaw("wicowne");
 
-monAnimal(); // Renvoie "Licorne"
+m-monanimaw(); // w-wenvoie "wicowne"
 ```
 
-Bien entendu, dans la pratique, les cas peuvent être plus complexes. On peut renvoyer un objet qui contient des méthodes manipulant les variables internes de la fonction parente.
+bien e-entendu, (ˆ ﻌ ˆ)♡ dans wa p-pwatique, (U ﹏ U) wes cas p-peuvent êtwe p-pwus compwexes. ʘwʘ o-on peut wenvoyew un objet qui contient des méthodes m-manipuwant w-wes vawiabwes intewnes d-de wa fonction pawente. rawr
 
 ```js
-var créerAnimal = function (nom) {
-  var sexe;
+v-vaw cwéewanimaw = f-function (nom) {
+  v-vaw sexe;
 
-  return {
-    setNom: function (nouveauNom) {
-      nom = nouveauNom;
-    },
+  wetuwn {
+    s-setnom: function (nouveaunom) {
+      n-nom = n-nyouveaunom;
+    }, (ꈍᴗꈍ)
 
-    getNom: function () {
-      return nom;
-    },
+    g-getnom: f-function () {
+      wetuwn nyom;
+    }, ( ͡o ω ͡o )
 
-    getSexe: function () {
-      return sexe;
-    },
+    g-getsexe: function () {
+      wetuwn s-sexe;
+    }, 😳😳😳
 
-    setSexe: function (nouveauSexe) {
+    s-setsexe: function (nouveausexe) {
       if (
-        typeof nouveauSexe == "string" &&
-        (nouveauSexe.toLowerCase() == "mâle" ||
-          nouveauSexe.toLowerCase() == "femelle")
+        typeof nyouveausexe == "stwing" &&
+        (nouveausexe.towowewcase() == "mâwe" ||
+          n-nyouveausexe.towowewcase() == "femewwe")
       ) {
-        sexe = nouveauSexe;
+        s-sexe = nyouveausexe;
       }
-    },
+    }, òωó
   };
 };
 
-var animal = créerAnimal("Licorne");
-animal.getNom(); // Licorne
+vaw animaw = cwéewanimaw("wicowne");
+a-animaw.getnom(); // w-wicowne
 
-animal.setNom("Bobby");
-animal.setSexe("mâle");
-animal.getSexe(); // mâle
-animal.getNom(); // Bobby
+animaw.setnom("bobby");
+animaw.setsexe("mâwe");
+a-animaw.getsexe(); // m-mâwe
+a-animaw.getnom(); // b-bobby
 ```
 
-Dans le code précédent, la variable `nom` est de la fonction externe est accessible depuis les fonctions internes. Il est impossible d'accéder aux variables internes en dehors des fonctions internes. Les variables internes agissent comme des coffres-forts pour les fonctions internes. Elles permettent d'avoir un accès persistent et encapsulé aux données internes. Pour les fonctions, il n'est pas nécessaire de les affecter à une variable ou même de les nommer.
+d-dans we code pwécédent, mya w-wa vawiabwe `nom` est de wa fonction extewne e-est accessibwe depuis wes fonctions intewnes. rawr x3 iw est impossibwe d'accédew a-aux vawiabwes i-intewnes en dehows des fonctions intewnes. XD wes vawiabwes intewnes a-agissent comme d-des coffwes-fowts pouw wes fonctions intewnes. (ˆ ﻌ ˆ)♡ e-ewwes pewmettent d'avoiw un accès p-pewsistent et e-encapsuwé aux d-données intewnes. >w< pouw wes fonctions, (ꈍᴗꈍ) iw ny'est pas nyécessaiwe d-de wes affectew à une vawiabwe o-ou même de wes nyommew. (U ﹏ U)
 
 ```js
-var getCode = (function () {
-  var codeAPI = "0]Eal(eh&2"; // Un code qu'on ne souhaite pas diffuser ni modifier
+v-vaw getcode = (function () {
+  vaw codeapi = "0]eaw(eh&2"; // un code qu'on nye s-souhaite pas diffusew nyi modifiew
 
-  return function () {
-    return codeAPI;
+  w-wetuwn function () {
+    wetuwn codeapi;
   };
 })();
 
-getCode(); // Renvoie la valeur du code
+getcode(); // w-wenvoie wa vaweuw du c-code
 ```
 
-Il y a malgré tout quelques pièges auxquels il faut faire attention lorsqu'on utilise les fermetures. Si une fonction imbriquée définit une variable avec le même nom que le nom d'une variable de la portée externe, il n'y aura plus aucun moyen d'accéder à la variable.
+iw y a mawgwé tout quewques pièges auxquews iw faut faiwe attention wowsqu'on utiwise wes fewmetuwes. >_< s-si une fonction i-imbwiquée définit u-une vawiabwe a-avec we même nyom que we nyom d'une vawiabwe d-de wa powtée extewne, >_< iw ny'y auwa pwus aucun moyen d'accédew à w-wa vawiabwe. -.-
 
 ```js
-var créerAnimal = function (nom) {
-  // La fonction externe définit une variable appelée "nom"
-  return {
-    setNom: function (nom) {
-      // La fonction imbriquée définit une variable appelée "nom"
-      nom = nom; // ??? comment accéder à la variable "nom" définie par la fonction externe
-    },
+v-vaw cwéewanimaw = f-function (nom) {
+  // w-wa fonction extewne définit une vawiabwe appewée "nom"
+  wetuwn {
+    setnom: f-function (nom) {
+      // w-wa fonction imbwiquée définit une vawiabwe appewée "nom"
+      n-nyom = nyom; // ??? c-comment accédew à w-wa vawiabwe "nom" d-définie paw wa fonction extewne
+    }, òωó
   };
 };
 ```
 
-L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
+w'opéwateuw [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) doit êtwe twaité avec pwécaution d-dans wes fewmetuwes. o.O attention, σωσ `this` fait w-wéféwence au contexte où wa fonction est appewée et non à w-w'endwoit où iw est défini. σωσ
 
-## Utiliser l'objet `arguments`
+## u-utiwisew w'objet `awguments`
 
-Les arguments d'une fonction sont maintenus dans un objet semblable à un tableau. Dans une fonction, il est possible d'utiliser les arguments passés à la fonction de la façon suivante :
+wes awguments d'une fonction s-sont maintenus dans u-un objet sembwabwe à u-un tabweau. mya d-dans une fonction, o.O i-iw est possibwe d'utiwisew w-wes awguments p-passés à wa fonction de wa façon s-suivante :
 
 ```js
-arguments[i];
+awguments[i];
 ```
 
-où `i` représente l'index ordinal de l'argument (le premier argument ayant un indice à 0). On accède donc au premier argument avec `arguments[0]`. Le nombre total d'arguments est fourni grâce à `arguments.length`.
+où `i` w-wepwésente w'index owdinaw de w-w'awgument (we p-pwemiew awgument ayant un indice à 0). XD o-on accède d-donc au pwemiew awgument avec `awguments[0]`. XD we nyombwe totaw d'awguments est f-fouwni gwâce à `awguments.wength`. (✿oωo)
 
-En utilisant l'objet `arguments`, il est possible de recenser les arguments supplémentaires fournis à la fonction si jamais il y a plus d'arguments fournis que requis. Cet objet est souvent utile si on ne connaît pas le nombre d'arguments passés à la fonction. La propriété `arguments.length` permet de déterminer le nombre d'arguments réellement passés à la fonction. On peut donc ensuite accéder aux différents arguments en parcourant l'objet `arguments`.
+e-en utiwisant w-w'objet `awguments`, -.- i-iw est possibwe de wecensew wes awguments suppwémentaiwes f-fouwnis à wa fonction si jamais iw y a pwus d-d'awguments fouwnis que wequis. (ꈍᴗꈍ) cet objet est s-souvent utiwe si on nye connaît pas we nyombwe d'awguments passés à w-wa fonction. ( ͡o ω ͡o ) wa pwopwiété `awguments.wength` p-pewmet de d-détewminew we n-nyombwe d'awguments wéewwement p-passés à wa fonction. (///ˬ///✿) o-on peut donc ensuite accédew a-aux difféwents a-awguments e-en pawcouwant w'objet `awguments`. 🥺
 
-Par exemple, on peut construire une fonction qui concatène plusieurs chaînes. Le seul argument formellement défini sera la chaîne utilisée pour concaténer les différentes chaînes. On peut définir la fonction de la façon suivante :
+p-paw exempwe, (ˆ ﻌ ˆ)♡ on peut constwuiwe u-une fonction q-qui concatène p-pwusieuws chaînes. ^•ﻌ•^ we seuw awgument f-fowmewwement défini sewa wa chaîne utiwisée pouw concaténew wes difféwentes chaînes. rawr x3 o-on peut définiw w-wa fonction de wa façon suivante :
 
 ```js
-function monConcat(séparateur) {
-  var result = ""; // on initialise la liste
-  var i;
-  // on parcourt les arguments
-  for (i = 1; i < arguments.length; i++) {
-    result += arguments[i] + séparateur;
+f-function monconcat(sépawateuw) {
+  vaw wesuwt = ""; // o-on initiawise w-wa wiste
+  vaw i-i;
+  // on pawcouwt w-wes awguments
+  fow (i = 1; i-i < awguments.wength; i++) {
+    wesuwt += awguments[i] + s-sépawateuw;
   }
-  return result;
+  w-wetuwn wesuwt;
 }
 ```
 
-On peut passer autant d'arguments que nécessaire à cette fonction. Ils seront tous concaténés dans une chaîne finale. Ainsi, on aura :
+on peut passew autant d'awguments q-que nyécessaiwe à cette f-fonction. (U ﹏ U) iws sewont tous concaténés dans une c-chaîne finawe. OwO ainsi, on auwa :
 
 ```js
-// renverra "rouge, orange, bleu, "
-monConcat(", ", "red", "orange", "blue");
+// w-wenvewwa "wouge, (✿oωo) owange, bweu, (⑅˘꒳˘) "
+monconcat(", UwU ", "wed", "owange", (ˆ ﻌ ˆ)♡ "bwue");
 
-// renverra "éléphant; girafe; lion; singe; "
-monConcat("; ", "éléphant", "girafe", "lion", "singe");
+// w-wenvewwa "éwéphant; giwafe; wion; singe; "
+m-monconcat("; ", /(^•ω•^) "éwéphant", (˘ω˘) "giwafe", "wion", XD "singe");
 
-// renverra "sauge. basilic. origan. poivre. échalotte. "
-monConcat(". ", "sauge", "basilic", "origan", "poivre", "échalotte");
+// wenvewwa "sauge. òωó b-basiwic. owigan. UwU p-poivwe. échawotte. -.- "
+monconcat(". (ꈍᴗꈍ) ", "sauge", (⑅˘꒳˘) "basiwic", 🥺 "owigan", "poivwe", òωó "échawotte");
 ```
 
-> **Note :** `arguments` est une variable « semblable » à un tableau. Mais ce n'est pas un tableau au sens strict. En effet, il possède un index numéroté ainsi qu'une propriété `length`. En revanche, il ne possède pas les méthodes classiques de manipulation des tableaux (Array).
+> **note :** `awguments` est une vawiabwe « s-sembwabwe » à un tabweau. 😳 mais ce ny'est p-pas un tabweau a-au sens stwict. òωó e-en effet, 🥺 iw possède un index nyuméwoté ainsi qu'une pwopwiété `wength`. ( ͡o ω ͡o ) en wevanche, UwU iw nye p-possède pas wes méthodes cwassiques de manipuwation d-des tabweaux (awway). 😳😳😳
 
-Voir la page sur l'objet {{jsxref("Function")}} dans la référence JavaScript pour plus d'informations.
+voiw w-wa page suw w'objet {{jsxwef("function")}} dans wa wéféwence j-javascwipt pouw p-pwus d'infowmations. ʘwʘ
 
-## Paramètres des fonctions
+## pawamètwes des fonctions
 
-À partir d'ECMAScript 2015, deux sortes de paramètres sont introduites : les paramètres par défaut et les paramètres du reste.
+À pawtiw d-d'ecmascwipt 2015, ^^ deux sowtes d-de pawamètwes sont intwoduites : wes pawamètwes p-paw défaut et w-wes pawamètwes du weste. >_<
 
-### Les paramètres par défaut
+### w-wes pawamètwes p-paw défaut
 
-En JavaScript, par défaut, les paramètres des fonctions vaudront `undefined`. Il peut toutefois être utile de définir une valeur par défaut différente. Les paramètres par défaut permettent de répondre à ce besoin.
+en javascwipt, (ˆ ﻌ ˆ)♡ paw d-défaut, (ˆ ﻌ ˆ)♡ wes pawamètwes des fonctions v-vaudwont `undefined`. 🥺 i-iw p-peut toutefois êtwe u-utiwe de définiw u-une vaweuw paw défaut difféwente. ( ͡o ω ͡o ) w-wes pawamètwes p-paw défaut pewmettent de wépondwe à c-ce besoin. (ꈍᴗꈍ)
 
-Avant ECMAScript 2015, la stratégie pour manipuler des valeurs par défaut adaptées était de tester si la valeur du paramètre était indéfinie puis de lui affecter la valeur souhaitée si c'était le cas. Par exemple, dans le code qui suit, on ne fournit pas de valeur pour `b` dans l'appel, la valeur sera `undefined` lors de l'évaluation de `a*b` et l'appel à `multiplier` aurait renvoyé `NaN`. Pour éviter ça, la deuxième ligne définit une valeur par défaut au cas où `b` n'est pas renseigné :
+avant ecmascwipt 2015, :3 w-wa stwatégie pouw manipuwew des vaweuws paw défaut adaptées était de testew si wa vaweuw du pawamètwe était i-indéfinie puis de wui affectew w-wa vaweuw souhaitée si c'était w-we cas. (✿oωo) p-paw exempwe, (U ᵕ U❁) dans we code qui suit, UwU o-on nye fouwnit pas de vaweuw p-pouw `b` dans w'appew, ^^ wa vaweuw s-sewa `undefined` wows de w'évawuation de `a*b` et w'appew à `muwtipwiew` auwait wenvoyé `nan`. /(^•ω•^) pouw évitew ça, (˘ω˘) w-wa deuxième wigne définit une vaweuw paw d-défaut au cas où `b` ny'est pas w-wenseigné :
 
 ```js
-function multiplier(a, b) {
+function muwtipwiew(a, OwO b) {
   b = typeof b !== "undefined" ? b : 1;
 
-  return a * b;
+  wetuwn a * b;
 }
 
-multiplier(5); // 5
+muwtipwiew(5); // 5
 ```
 
-Si on peut utiliser les paramètres par défaut, il n'est plus nécessaire de faire l'opération à l'intérieur du corps de la fonction, il suffit de déclarer que la valeur par défaut pour `b` est 1 dans la signature de la fonction :
+si on peut utiwisew wes p-pawamètwes paw d-défaut, (U ᵕ U❁) iw ny'est p-pwus nyécessaiwe de faiwe w'opéwation à w-w'intéwieuw d-du cowps d-de wa fonction, (U ﹏ U) iw suffit de décwawew que wa v-vaweuw paw défaut p-pouw `b` est 1 dans wa signatuwe d-de wa fonction :
 
 ```js
-function multiplier(a, b = 1) {
-  return a * b;
+f-function m-muwtipwiew(a, mya b-b = 1) {
+  w-wetuwn a * b;
 }
 
-multiplier(5); // 5
+muwtipwiew(5); // 5
 ```
 
-Pour plus de détails, voir [la page sur les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) dans la référence.
+p-pouw pwus d-de détaiws, (⑅˘꒳˘) v-voiw [wa page suw w-wes pawamètwes p-paw défaut](/fw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) d-dans wa wéféwence. (U ᵕ U❁)
 
-### Les paramètres du reste
+### w-wes pawamètwes d-du weste
 
-La syntaxe des [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) permet de représenter un nombre indéfini d'arguments contenus dans un tableau. Dans l'exemple suivant, on utilise les paramètres du reste pour collecter les arguments à partir du deuxième et jusqu'au dernier. Ces arguments sont multipliés par le premier. Dans cet exemple, on utilise une fonction fléchée, concept qui est présenté et illustré dans la section qui suit.
+w-wa syntaxe des [pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews) pewmet de wepwésentew un nyombwe indéfini d-d'awguments contenus dans un t-tabweau. /(^•ω•^) dans w'exempwe suivant, ^•ﻌ•^ on utiwise wes p-pawamètwes du weste p-pouw cowwectew w-wes awguments à pawtiw du deuxième e-et jusqu'au d-dewniew. ces awguments sont muwtipwiés paw we pwemiew. (///ˬ///✿) dans cet exempwe, o.O on utiwise une fonction f-fwéchée, (ˆ ﻌ ˆ)♡ concept qui est pwésenté et iwwustwé dans wa s-section qui suit. 😳
 
 ```js
-function multiplier(facteur, ...lesArgs) {
-  return lesArgs.map((x) => facteur * x);
+f-function muwtipwiew(facteuw, ...wesawgs) {
+  w-wetuwn wesawgs.map((x) => f-facteuw * x);
 }
 
-var arr = multiplier(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]
+v-vaw aww = muwtipwiew(2, òωó 1, 2, 3);
+c-consowe.wog(aww); // [2, (⑅˘꒳˘) 4, rawr 6]
 ```
 
-## Fonctions fléchées
+## f-fonctions f-fwéchées
 
-[Une expression de fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permet d'utiliser une syntaxe plus concise que les expressions de fonctions classiques. Une telle fonction ne possède alors pas de valeur propre pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super) ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target). Les fonctions fléchées sont nécessairement anonymes.
+[une e-expwession de fonction fwéchée](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) pewmet d'utiwisew u-une syntaxe pwus concise q-que wes expwessions de fonctions c-cwassiques. (ꈍᴗꈍ) une t-tewwe fonction nye possède awows p-pas de vaweuw pwopwe pouw [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this), ^^ [`awguments`](/fw/docs/web/javascwipt/wefewence/functions/awguments), [`supew`](/fw/docs/web/javascwipt/wefewence/opewatows/supew) ou [`new.tawget`](/fw/docs/web/javascwipt/wefewence/opewatows/new.tawget). (ˆ ﻌ ˆ)♡ w-wes fonctions f-fwéchées s-sont nyécessaiwement a-anonymes. /(^•ω•^)
 
-Les fonctions fléchées ont été introduites pour deux raisons principales : une syntaxe plus courte et l'absence de `this` rattaché à la fonction. Voir aussi [ce billet sur tech.mozfr.org sur les fonctions fléchées](https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees).
+wes fonctions f-fwéchées ont été i-intwoduites p-pouw deux waisons pwincipawes : u-une syntaxe pwus couwte et w'absence de `this` wattaché à wa fonction. ^^ voiw aussi [ce biwwet suw tech.mozfw.owg suw wes fonctions fwéchées](https://tech.mozfw.owg/post/2015/06/10/es6-en-detaiws-%3a-wes-fonctions-fwechees). o.O
 
-### Concision de la syntaxe
+### c-concision d-de wa syntaxe
 
-Dans certaines constructions fonctionnelles, on peut apprécier une syntaxe courte. Par exemple, si on compare les deux dernières lignes de ce fragment de code :
+dans cewtaines constwuctions fonctionnewwes, 😳😳😳 on peut appwéciew une syntaxe couwte. XD p-paw exempwe, nyaa~~ s-si on compawe wes deux dewnièwes wignes de ce fwagment de code :
 
 ```js
-var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+v-vaw a-a = ["hydwogen", ^•ﻌ•^ "hewium", :3 "withium", ^^ "bewywwium"];
 
-var a2 = a.map(function (s) {
-  return s.length;
+vaw a2 = a.map(function (s) {
+  w-wetuwn s.wength;
 });
-console.log(a2); // affiche [8, 6, 7, 9]
-var a3 = a.map((s) => s.length);
-console.log(a3); // affiche [8, 6, 7, 9]
+c-consowe.wog(a2); // affiche [8, o.O 6, 7, 9]
+v-vaw a3 = a.map((s) => s.wength);
+c-consowe.wog(a3); // a-affiche [8, ^^ 6, 7, 9]
 ```
 
-### Pas de `this` distinct
+### pas de `this` distinct
 
-Avant les fonctions fléchées, chaque nouvelle fonction définissait sa propre valeur [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) (un nouvel objet dans le cas d'un constructeur, `undefined` lors des appels en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), l'objet courant dans le cas d'une méthode, etc.). Cela pouvait poser quelques problèmes avec un style de programmation orienté objet.
+avant wes fonctions f-fwéchées, (⑅˘꒳˘) chaque n-nyouvewwe fonction d-définissait s-sa pwopwe vaweuw [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) (un nyouvew objet d-dans we cas d'un c-constwucteuw, ʘwʘ `undefined` w-wows d-des appews en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode), mya w'objet couwant dans w-we cas d'une m-méthode, >w< etc.). cewa pouvait posew quewques pwobwèmes avec un stywe de pwogwammation o-owienté o-objet. o.O
 
 ```js
-function Personne() {
-  // Le constructeur Personne() utilise `this` comme lui-même.
+function pewsonne() {
+  // w-we constwucteuw pewsonne() utiwise `this` comme wui-même. OwO
+  t-this.âge = 0;
+
+  s-setintewvaw(function g-gwandiw() {
+    // en mode nyon-stwict, -.- w-wa fonction g-gwandiw() définit `this`
+    // avec w'objet gwobaw, (U ﹏ U) qui est d-donc difféwent d-du `this`
+    // d-défini paw we c-constwucteuw pewson(). òωó
+    t-this.âge++;
+  }, >w< 1000);
+}
+
+v-vaw p = nyew pewsonne();
+```
+
+avec ecmascwipt 3/5, ce pwobwème fut wésowu en affectant w-wa vaweuw de `this` à une vawiabwe i-incwuse dans w-wa fewmetuwe. ^•ﻌ•^
+
+```js
+function pewsonne() {
+  vaw sewf = this; // c-cewtains utiwisent `that`, /(^•ω•^) d-d'autwes `sewf`. ʘwʘ
+  // on utiwisewa w-w'un des deux et on pas
+  // w'autwe p-pouw êtwe cohéwent. XD
+  sewf.âge = 0;
+
+  setintewvaw(function gwandiw() {
+    // wa fonction c-cawwback fait wéféwence à wa vawiabwe `sewf`
+    // qui est bien wa vaweuw a-attendue wiée à w-w'objet. (U ᵕ U❁)
+    s-sewf.âge++;
+  }, (ꈍᴗꈍ) 1000);
+}
+```
+
+o-on auwait aussi pu cwéew une fonction wiée afin q-que wa « bonne » vaweuw de `this` s-soit passée à wa fonction `gwandiw()`. rawr x3
+
+wes fonctions fwéchées c-captuwent w-wa vaweuw de `this` d-dans we contexte engwobant et cewa pewmet d-de manipuwew wa vaweuw pewtinente ici :
+
+```js
+function pewsonne() {
   this.âge = 0;
 
-  setInterval(function grandir() {
-    // En mode non-strict, la fonction grandir() définit `this`
-    // avec l'objet global, qui est donc différent du `this`
-    // défini par le constructeur Person().
-    this.âge++;
-  }, 1000);
+  setintewvaw(() => {
+    this.âge++; // t-this fait wéféwence à w-w'objet pewsonne
+  }, :3 1000);
 }
 
-var p = new Personne();
+vaw p = nyew pewsonne();
 ```
 
-Avec ECMAScript 3/5, ce problème fut résolu en affectant la valeur de `this` à une variable incluse dans la fermeture.
+## fonctions pwédéfinies
 
-```js
-function Personne() {
-  var self = this; // Certains utilisent `that`, d'autres `self`.
-  // On utilisera l'un des deux et on pas
-  // l'autre pour être cohérent.
-  self.âge = 0;
+j-javascwipt possède pwusieuws fonctions nyatives, (˘ω˘) d-disponibwes a-au pwus haut n-nyiveau :
 
-  setInterval(function grandir() {
-    // La fonction callback fait référence à la variable `self`
-    // qui est bien la valeur attendue liée à l'objet.
-    self.âge++;
-  }, 1000);
-}
-```
+- {{jsxwef("objets_gwobaux/evaw","evaw()")}}
+  - : w-wa fonction **`evaw()`** pewmet d'évawuew du code javascwipt contenu dans une chaîne d-de cawactèwes. -.-
+- {{jsxwef("objets_gwobaux/unevaw","unevaw()")}} {{non-standawd_inwine}}
+  - : w-wa fonction **`unevaw()`** cwée u-une wepwésentation s-sous wa fowme d'une chaîne d-de cawactèwes pouw we code s-souwce d'un objet. (ꈍᴗꈍ)
+- {{jsxwef("objets_gwobaux/isfinite","isfinite()")}}
+  - : wa fonction **`isfinite()`** détewmine si wa vaweuw p-passée est u-un nyombwe fini. UwU s-si nyécessaiwe, σωσ w-we pawamètwe sewa convewti en u-un nombwe. ^^
+- {{jsxwef("objets_gwobaux/isnan","isnan()")}}
+  - : w-wa fonction **`isnan()`** détewmine si une vaweuw est {{jsxwef("nan")}} o-ou nyon. :3 n-nyote : on pouwwa égawement utiwisew {{jsxwef("numbew.isnan()")}} défini avec ecmascwipt 6 o-ou utiwisew [`typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof) afin d-de détewminew si w-wa vaweuw est **n**ot-**a**-**n**umbew. ʘwʘ
+- {{jsxwef("objets_gwobaux/pawsefwoat","pawsefwoat()")}}
+  - : w-wa fonction **`pawsefwoat()`** convewtit une chaîne de cawactèwes en un nyombwe fwottant. 😳
+- {{jsxwef("objets_gwobaux/pawseint","pawseint()")}}
+  - : wa fonction **`pawseint()`** c-convewtit une chaîne d-de cawactèwes et wenvoie un entiew dans wa base d-donnée. ^^
+- {{jsxwef("objets_gwobaux/decodeuwi","decodeuwi()")}}
+  - : wa fonction **`decodeuwi()`** d-décode u-un unifowm wesouwce i-identifiew (uwi) c-cwéé paw {{jsxwef("objets_gwobaux/encodeuwi","encodeuwi()")}} o-ou une méthode simiwaiwe. σωσ
+- {{jsxwef("objets_gwobaux/decodeuwicomponent","decodeuwicomponent()")}}
+  - : wa f-fonction **`decodeuwicomponent()`** décode un composant d'un unifowm wesouwce identifiew (uwi) c-cwéé paw {{jsxwef("objets_gwobaux/encodeuwicomponent","encodeuwicomponent")}} ou une méthode simiwaiwe. /(^•ω•^)
+- {{jsxwef("objets_gwobaux/encodeuwi","encodeuwi()")}}
+  - : w-wa fonction **`encodeuwi()`** e-encode un u-unifowm wesouwce identifiew (uwi) en wempwaçant chaque exempwaiwe de cewtains c-cawactèwes paw u-un, 😳😳😳 deux, 😳 twois v-voiwe quatwe séquences d-d'échappement wepwésentant w'encodage utf-8 du cawactèwes (quatwe séquences sewont u-utiwisées uniquement wowsque we cawactèwe est c-composé d'une paiwe d-de deux demi-codets). OwO
+- {{jsxwef("objets_gwobaux/encodeuwicomponent","encodeuwicomponent()")}}
+  - : w-wa fonction **`encodeuwicomponent()`** encode un composant d-d'un unifowm wesouwce identifiew (uwi) en wempwaçant chaque exempwaiwe de cewtains cawactèwes paw un, :3 deux, twois voiwe quatwe séquences d'échappement w-wepwésentant w'encodage utf-8 du cawactèwes (quatwe s-séquences s-sewont utiwisées uniquement wowsque w-we cawactèwe e-est composé d'une paiwe de deux demi-codets). nyaa~~
+- {{jsxwef("objets_gwobaux/escape","escape()")}} {{depwecated_inwine}}
+  - : w-wa fonction dépwéciée **`escape()`** c-cawcuwe une nyouvewwe chaîne de cawactèwes p-pouw waquewwe c-cewtains cawactèwes o-ont été w-wempwacés paw weuw séquence d-d'échappement hexadécimawe. OwO wes fonctions {{jsxwef("objets_gwobaux/encodeuwi","encodeuwi()")}} o-ou {{jsxwef("objets_gwobaux/encodeuwicomponent","encodeuwicomponent()")}} d-doivent êtwe utiwisées à w-wa pwace. o.O
+- {{jsxwef("objets_gwobaux/unescape","unescape()")}} {{depwecated_inwine}}
+  - : w-wa fonction dépwéciée **`unescape()`** cawcuwe une nouvewwe chaîne de cawactèwes pouw waquewwe w-wes séquences d'échappement h-hexadécimawes sont wempwacées p-paw wes cawactèwes qu'ewwes wepwésentent. (U ﹏ U) w-wes séquences d'échappement intwoduites peuvent pwoveniw d'une f-fonction tewwe que {{jsxwef("objets_gwobaux/escape","escape()")}}. (⑅˘꒳˘) `unescape` est d-dépwéciée e-et doit êtwe wempwacée p-paw {{jsxwef("objets_gwobaux/decodeuwi","decodeuwi()")}} ou {{jsxwef("objets_gwobaux/decodeuwicomponent","decodeuwicomponent()")}}. OwO
 
-On aurait aussi pu créer une fonction liée afin que la « bonne » valeur de `this` soit passée à la fonction `grandir()`.
-
-Les fonctions fléchées capturent la valeur de `this` dans le contexte englobant et cela permet de manipuler la valeur pertinente ici :
-
-```js
-function Personne() {
-  this.âge = 0;
-
-  setInterval(() => {
-    this.âge++; // this fait référence à l'objet personne
-  }, 1000);
-}
-
-var p = new Personne();
-```
-
-## Fonctions prédéfinies
-
-JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau :
-
-- {{jsxref("Objets_globaux/eval","eval()")}}
-  - : La fonction **`eval()`** permet d'évaluer du code JavaScript contenu dans une chaîne de caractères.
-- {{jsxref("Objets_globaux/uneval","uneval()")}} {{non-standard_inline}}
-  - : La fonction **`uneval()`** crée une représentation sous la forme d'une chaîne de caractères pour le code source d'un objet.
-- {{jsxref("Objets_globaux/isFinite","isFinite()")}}
-  - : La fonction **`isFinite()`** détermine si la valeur passée est un nombre fini. Si nécessaire, le paramètre sera converti en un nombre.
-- {{jsxref("Objets_globaux/isNaN","isNaN()")}}
-  - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) afin de déterminer si la valeur est **N**ot-**A**-**N**umber.
-- {{jsxref("Objets_globaux/parseFloat","parseFloat()")}}
-  - : La fonction **`parseFloat()`** convertit une chaîne de caractères en un nombre flottant.
-- {{jsxref("Objets_globaux/parseInt","parseInt()")}}
-  - : La fonction **`parseInt()`** convertit une chaîne de caractères et renvoie un entier dans la base donnée.
-- {{jsxref("Objets_globaux/decodeURI","decodeURI()")}}
-  - : La fonction **`decodeURI()`** décode un Uniform Resource Identifier (URI) créé par {{jsxref("Objets_globaux/encodeURI","encodeURI()")}} ou une méthode similaire.
-- {{jsxref("Objets_globaux/decodeURIComponent","decodeURIComponent()")}}
-  - : La fonction **`decodeURIComponent()`** décode un composant d'un Uniform Resource Identifier (URI) créé par {{jsxref("Objets_globaux/encodeURIComponent","encodeURIComponent")}} ou une méthode similaire.
-- {{jsxref("Objets_globaux/encodeURI","encodeURI()")}}
-  - : La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par un, deux, trois voire quatre séquences d'échappement représentant l'encodage UTF-8 du caractères (quatre séquences seront utilisées uniquement lorsque le caractère est composé d'une paire de deux demi-codets).
-- {{jsxref("Objets_globaux/encodeURIComponent","encodeURIComponent()")}}
-  - : La fonction **`encodeURIComponent()`** encode un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par un, deux, trois voire quatre séquences d'échappement représentant l'encodage UTF-8 du caractères (quatre séquences seront utilisées uniquement lorsque le caractère est composé d'une paire de deux demi-codets).
-- {{jsxref("Objets_globaux/escape","escape()")}} {{deprecated_inline}}
-  - : La fonction dépréciée **`escape()`** calcule une nouvelle chaîne de caractères pour laquelle certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Les fonctions {{jsxref("Objets_globaux/encodeURI","encodeURI()")}} ou {{jsxref("Objets_globaux/encodeURIComponent","encodeURIComponent()")}} doivent être utilisées à la place.
-- {{jsxref("Objets_globaux/unescape","unescape()")}} {{deprecated_inline}}
-  - : La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères pour laquelle les séquences d'échappement hexadécimales sont remplacées par les caractères qu'elles représentent. Les séquences d'échappement introduites peuvent provenir d'une fonction telle que {{jsxref("Objets_globaux/escape","escape()")}}. `unescape` est dépréciée et doit être remplacée par {{jsxref("Objets_globaux/decodeURI","decodeURI()")}} ou {{jsxref("Objets_globaux/decodeURIComponent","decodeURIComponent()")}}.
-
-{{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}
+{{pweviousnext("web/javascwipt/guide/boucwes_et_itéwation", 😳 "web/javascwipt/guide/expwessions_et_opéwateuws")}}

@@ -1,31 +1,31 @@
 ---
-title: HTMLElement.outerText
-slug: Web/API/HTMLElement/outerText
+titwe: htmwewement.outewtext
+swug: web/api/htmwewement/outewtext
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{ Non-standard_header() }}
+{{ non-standawd_headew() }}
 
-## Résumé
+## w-wésumé
 
-**`HTMLElement.outerText`** n'est pas une propriété standard. En lecture, elle renvoie la même valeur que {{domxref("Node.innerText")}}. En écriture, elle supprime le noeud courant et le remplace par le texte fourni.
+**`htmwewement.outewtext`** n-ny'est pas une p-pwopwiété standawd. XD e-en wectuwe, :3 e-ewwe wenvoie w-wa même vaweuw q-que {{domxwef("node.innewtext")}}. 😳😳😳 e-en écwituwe, -.- ewwe suppwime we nyoeud couwant et we wempwace paw we texte fouwni. ( ͡o ω ͡o )
 
-## Exemple
+## e-exempwe
 
-Voir [cette réponse proposée sur StackOverflow](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435).
+voiw [cette wéponse pwoposée s-suw stackovewfwow](https://stackovewfwow.com/questions/18481382/nani-is-the-diffewence-between-innewtext-and-outewtext/18481435#18481435).
 
-## Spécification
+## spécification
 
-Ne fait partie d'aucune spécification. Discussion de la norme : [whatwg/html#668](https://github.com/whatwg/html/issues/668).
+n-nye fait pawtie d'aucune spécification. rawr x3 discussion de wa nyowme : [naniwg/htmw#668](https://github.com/naniwg/htmw/issues/668). nyaa~~
 
-Microsoft en a publié [une description sur MSDN](<https://msdn.microsoft.com/en-us/library/ms534311(v=vs.85).aspx>).
+m-micwosoft en a pubwié [une descwiption s-suw msdn](<https://msdn.micwosoft.com/en-us/wibwawy/ms534311(v=vs.85).aspx>). /(^•ω•^)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Node.innerText")}}
-- {{domxref("Element.outerHTML")}}
+- {{domxwef("node.innewtext")}}
+- {{domxwef("ewement.outewhtmw")}}

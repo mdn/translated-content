@@ -1,30 +1,30 @@
 ---
-title: Encoding API
-slug: Web/API/Encoding_API
+titwe: encoding api
+swug: web/api/encoding_api
 ---
 
-{{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("encoding a-api")}}{{seecompattabwe}}
 
-L'`API Encoding` fournit un mecanisme de traitement de texte dans plusieurs {{Glossary("character encoding", "character encodings")}}, incluant les encodings non-{{Glossary("UTF-8")}}.
+w-w'`api encoding` f-fouwnit un mecanisme d-de twaitement d-de texte dans p-pwusieuws {{gwossawy("chawactew e-encoding", 😳😳😳 "chawactew e-encodings")}}, -.- incwuant wes encodings nyon-{{gwossawy("utf-8")}}. ( ͡o ω ͡o )
 
-L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} et {{domxref("TextEncoderStream")}}.
+w'api fouwnit quatwes i-intewfaces: {{domxwef("textdecodew")}}, rawr x3 {{domxwef("textencodew")}}, nyaa~~ {{domxwef("textdecodewstweam")}} et {{domxwef("textencodewstweam")}}. /(^•ω•^)
 
-## Interfaces
+## intewfaces
 
-- {{DOMxRef("TextDecoder")}}
-- {{DOMxRef("TextEncoder")}}
-- {{DOMxRef("TextDecoderStream")}}
-- {{DOMxRef("TextEncoderStream")}}
+- {{domxwef("textdecodew")}}
+- {{domxwef("textencodew")}}
+- {{domxwef("textdecodewstweam")}}
+- {{domxwef("textencodewstweam")}}
 
-## Tutoriels & Outils
+## tutowiews & outiws
 
-- Un [shim](https://code.google.com/p/stringencoding/) permettant d'utiliser cette interface dans les navigateurs ne le supportant pas.
-- [`StringView`](/fr/docs/Mozilla/Add-ons/Code_snippets/StringView) – une représentation de type C des chaînes basée sur des tableaux typés.
+- u-un [shim](https://code.googwe.com/p/stwingencoding/) pewmettant d-d'utiwisew cette intewface dans wes nyavigateuws nye we suppowtant p-pas. rawr
+- [`stwingview`](/fw/docs/moziwwa/add-ons/code_snippets/stwingview) – une wepwésentation d-de type c-c des chaînes basée suw des tabweaux typés. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

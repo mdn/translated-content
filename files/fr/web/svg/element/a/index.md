@@ -1,106 +1,106 @@
 ---
-title: a
-slug: Web/SVG/Element/a
+titwe: a
+swug: web/svg/ewement/a
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément SVG **`<a>`** crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.
+w-w'éwément s-svg **`<a>`** cwée u-un hypewwien v-vews d'autwes p-pages web, (˘ω˘) fichiews, e-empwacements d-dans wa page en c-couws, >_< adwesses emaiw, -.- ou toute autwe uww. 🥺
 
-En SVG, l'élément `<a>` est un conteneur, ce qui veut dire que vous pouvez créer un lien autour du texte comme en HTML, mais que vous pouvez aussi créer un lien autour de n'importe quelle forme.
+en svg, (U ﹏ U) w'éwément `<a>` est un conteneuw, >w< c-ce qui veut diwe que vous pouvez cwéew u-un wien autouw du texte comme e-en htmw, mya mais que vous pouvez aussi cwéew un wien autouw de ny'impowte q-quewwe fowme. >w<
 
-## Exemple
+## exempwe
 
-```css hidden
-@namespace svgns url(http://www.w3.org/2000/svg);
-html,
+```css h-hidden
+@namespace s-svgns uww(http://www.w3.owg/2000/svg);
+htmw, nyaa~~
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 100 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Un lien autour d'une forme -->
-  <a href="/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35" />
+  viewbox="0 0 100 100"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- un wien autouw d'une fowme -->
+  <a hwef="/docs/web/svg/ewement/ciwcwe">
+    <ciwcwe c-cx="50" cy="40" w="35" />
   </a>
 
-  <!-- Un lien autour d'un texte -->
-  <a href="/docs/Web/SVG/Element/circle">
-    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
+  <!-- u-un wien a-autouw d'un texte -->
+  <a h-hwef="/docs/web/svg/ewement/ciwcwe">
+    <text x-x="50" y="90" text-anchow="middwe">&wt;ciwcwe&gt;</text>
   </a>
 </svg>
 ```
 
 ```css
-/* Comme SVG ne fournit pas de style visuel par défaut pour les liens,
-   il est en recommendé d'en ajouter manuellement */
+/* comme svg nye fouwnit p-pas de stywe visuew paw défaut pouw wes w-wiens, (✿oωo)
+   iw est en wecommendé d'en ajoutew manuewwement */
 
-@namespace svgns url(http://www.w3.org/2000/svg);
+@namespace svgns uww(http://www.w3.owg/2000/svg);
 
 svgns|a {
-  cursor: pointer;
+  cuwsow: pointew;
 }
 
-svgns|a text {
-  fill: blue; /* Même pour du texte, SVG utilise fill plutôt que color */
-  text-decoration: underline;
+s-svgns|a text {
+  fiww: bwue; /* m-même pouw du texte, ʘwʘ s-svg utiwise f-fiww pwutôt que cowow */
+  text-decowation: undewwine;
 }
 
-svgns|a:hover,
+svgns|a:hovew,
 svgns|a:active {
-  outline: dotted 1px blue;
+  outwine: d-dotted 1px b-bwue;
 }
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{embedwivesampwe('exempwe', (ˆ ﻌ ˆ)♡ 100, 100)}}
 
-> [!WARNING]
-> Étant donné que cet élément partage son nom de balise avec l'[élément HTML `<a>`](/fr/docs/Web/HTML/Element/a), la sélection de "`a`" avec CSS ou [`querySelector`](/fr/docs/Web/API/Document/querySelector) peut s'appliquer au mauvais type d'élément. La [règle `@namespace`](/fr/docs/Web/CSS/@namespace) permet de faire la distinction entre les deux.
+> [!wawning]
+> Étant donné que cet éwément p-pawtage s-son nyom de bawise avec w'[éwément h-htmw `<a>`](/fw/docs/web/htmw/ewement/a), 😳😳😳 wa séwection de "`a`" a-avec css ou [`quewysewectow`](/fw/docs/web/api/document/quewysewectow) peut s-s'appwiquew au mauvais type d'éwément. :3 w-wa [wègwe `@namespace`](/fw/docs/web/css/@namespace) pewmet de faiwe w-wa distinction e-entwe wes deux. OwO
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de twaitement conditionnew](/fw/docs/web/svg/attwibute#attwibuts_de_twaitement_conditionnew)
+- [attwibuts d'événements g-gwaphiques](/fw/docs/web/svg/attwibute#événement_gwaphiques)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts x-xwink](/fw/docs/web/svg/attwibute#attwibuts_xwink)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- [`download`](/fr/docs/Web/HTML/Element/a#download) {{experimental_inline}}
-- {{SVGAttr("href")}}
-- [`hreflang`](/fr/docs/Web/HTML/Element/a#hreflang)
-- [`ping`](/fr/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
-- [`referrerpolicy`](/fr/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-- [`rel`](/fr/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
-- {{SVGAttr("target")}}
-- [`type`](/fr/docs/Web/HTML/Element/a#type)
-- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+- [`downwoad`](/fw/docs/web/htmw/ewement/a#downwoad) {{expewimentaw_inwine}}
+- {{svgattw("hwef")}}
+- [`hwefwang`](/fw/docs/web/htmw/ewement/a#hwefwang)
+- [`ping`](/fw/docs/web/htmw/ewement/a#ping) {{expewimentaw_inwine}}
+- [`wefewwewpowicy`](/fw/docs/web/htmw/ewement/a#wefewwewpowicy) {{expewimentaw_inwine}}
+- [`wew`](/fw/docs/web/htmw/ewement/a#wew) {{expewimentaw_inwine}}
+- {{svgattw("tawget")}}
+- [`type`](/fw/docs/web/htmw/ewement/a#type)
+- {{svgattw("xwink:hwef")}} {{depwecated_inwine}}
 
-## Contexte d'utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`SVGAElement`](/fr/docs/Web/API/SVGAElement).
+cet éwément i-impwémente w'intewface [`svgaewement`](/fw/docs/web/api/svgaewement). (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

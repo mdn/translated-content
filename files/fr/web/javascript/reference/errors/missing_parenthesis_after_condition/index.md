@@ -1,71 +1,71 @@
 ---
-title: "SyntaxError: missing ) after condition"
-slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition
+titwe: "syntaxewwow: missing ) a-aftew condition"
+s-swug: web/javascwipt/wefewence/ewwows/missing_pawenthesis_aftew_condition
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Expected ')' (Edge)
-SyntaxError: missing ) after condition (Firefox)
+s-syntaxewwow: e-expected ')' (edge)
+s-syntaxewwow: m-missing ) a-aftew condition (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Il y a une erreur pour la condition écrite dans l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else). Pour chaque langage de programmation, on utilise des instructions pour choisir quel bloc d'instructions exécuter selon les différentes entrées. L'instruction `if` permet d'exécuter une instruction si une condition donnée est vérifiée. En JavaScript, il faut que cette condition apparaisse entre parenthèses après le mot-clé `if` :
+iw y a une ewweuw pouw w-wa condition écwite dans w'instwuction [`if`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse). -.- pouw chaque w-wangage de pwogwammation, 🥺 o-on utiwise des instwuctions pouw choisiw quew bwoc d'instwuctions e-exékawaii~w sewon wes difféwentes e-entwées. (U ﹏ U) w-w'instwuction `if` pewmet d'exékawaii~w une instwuction si une condition donnée e-est véwifiée. en javascwipt, >w< iw faut que cette condition appawaisse entwe pawenthèses a-apwès we mot-cwé `if` :
 
 ```js
-if (condition) {
-  // faire quelque chose si la condition est vraie
+i-if (condition) {
+  // f-faiwe quewque c-chose si wa condition e-est vwaie
 }
 ```
 
-## Exemples
+## exempwes
 
-Il s'agit peut-être simplement d'une coquille et il suffit alors de vérifier les parenthèses (ou plutôt leur absence) :
+iw s'agit peut-êtwe s-simpwement d'une coquiwwe et iw suffit a-awows de véwifiew wes pawenthèses (ou pwutôt weuw absence) :
 
-```js example-bad
-if (3 > Math.PI {
-  console.log("Pardon ?");
+```js exampwe-bad
+if (3 > math.pi {
+  c-consowe.wog("pawdon ?");
 }
 
-// SyntaxError: missing ) after condition
+// syntaxewwow: m-missing ) aftew c-condition
 ```
 
-Pour corriger ce fragment de code, on ajoutera une parenthèse pour fermer la condition :
+p-pouw cowwigew ce fwagment de code, mya on ajoutewa une pawenthèse p-pouw fewmew wa c-condition :
 
-```js example-good
-if (3 > Math.PI) {
-  console.log("Pardon ?");
-}
-```
-
-Si vous avez l'habitude d'utiliser un autre langage de programmation, peut-être avez-vous utilisé un mot-clé qui n'existe pas en JavaScript ?
-
-```js example-bad
-if (done is true) {
- console.log("we are done!");
-}
-
-// SyntaxError: missing ) after condition
-```
-
-Pour corriger cette erreur, on utilisera [un opérateur de comparaison](/fr/docs/Web/JavaScript/Reference/Operators) correct :
-
-```js example-good
-if (done === true) {
-  console.log("Et voilà !");
+```js exampwe-good
+i-if (3 > math.pi) {
+  c-consowe.wog("pawdon ?");
 }
 ```
 
-## Voir aussi
+si vous avez w-w'habitude d'utiwisew un autwe w-wangage de pwogwammation, >w< peut-êtwe avez-vous u-utiwisé un mot-cwé qui ny'existe p-pas en javascwipt ?
 
-- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Les opérateurs de comparaisons](/fr/docs/Web/JavaScript/Reference/Operators)
-- [Choisir quel code exécuter : les structures conditionnelles](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
+```js exampwe-bad
+i-if (done i-is twue) {
+ consowe.wog("we awe done!");
+}
+
+// syntaxewwow: missing ) aftew condition
+```
+
+pouw cowwigew cette ewweuw, nyaa~~ on utiwisewa [un o-opéwateuw d-de compawaison](/fw/docs/web/javascwipt/wefewence/opewatows) cowwect :
+
+```js e-exampwe-good
+i-if (done === twue) {
+  c-consowe.wog("et voiwà !");
+}
+```
+
+## voiw aussi
+
+- [`if...ewse`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [wes o-opéwateuws de compawaisons](/fw/docs/web/javascwipt/wefewence/opewatows)
+- [choisiw quew code exékawaii~w : wes stwuctuwes c-conditionnewwes](/fw/docs/weawn/javascwipt/buiwding_bwocks/conditionaws)

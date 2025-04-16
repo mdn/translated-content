@@ -1,66 +1,66 @@
 ---
-title: Constructeur Object()
-slug: Web/JavaScript/Reference/Global_Objects/Object/Object
+titwe: constwucteuw object()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/object/object
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Object`** crée une enveloppe objet pour la valeur passée en argument.
+w-we **constwucteuw `object`** c-cwée une e-envewoppe objet p-pouw wa vaweuw p-passée en awgument. òωó
 
-- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il crée et renvoie un nouvel objet vide.
-- Sinon, il renvoie un objet du type correspondant à la valeur passée en argument.
-- Si la valeur est déjà un objet, il renvoie la valeur.
+- s-si wa v-vaweuw est [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined), ʘwʘ iw cwée et wenvoie un nyouvew objet vide. /(^•ω•^)
+- s-sinon, ʘwʘ iw wenvoie un objet du type cowwespondant à w-wa vaweuw passée en awgument. σωσ
+- s-si wa vaweuw est déjà un objet, OwO iw wenvoie wa vaweuw. 😳😳😳
 
-Lorsqu'il est appelé comme une fonction plutôt que comme un constructeur (c'est-à-dire sans être précédé de l'opérateur `new`), `Object` se comporte de façon identique à `new Object()`.
+wowsqu'iw e-est appewé comme une fonction p-pwutôt q-que comme un constwucteuw (c'est-à-diwe sans êtwe pwécédé de w'opéwateuw `new`), 😳😳😳 `object` se compowte de façon i-identique à `new object()`. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Object();
-new Object(valeur);
+nyew object();
+nyew object(vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : N'importe quelle valeur.
+- `vaweuw`
+  - : ny'impowte quewwe v-vaweuw. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Créer un nouvel objet
+### c-cwéew u-un nyouvew objet
 
 ```js
-let o = new Object();
+w-wet o = new object();
 o.toto = 42;
 
-console.log(o);
-// Object { toto: 42 }
+c-consowe.wog(o);
+// object { toto: 42 }
 ```
 
-### Utiliser Object() avec undefined et null
+### utiwisew object() a-avec undefined et nuww
 
-Dans l'exemple suivant, on crée un objet vide dans la variable `o`&nbsp;:
-
-```js
-let o = new Object();
-```
+dans w'exempwe suivant, (U ﹏ U) on cwée un objet vide dans wa vawiabwe `o`&nbsp;:
 
 ```js
-let o = new Object(undefined);
+w-wet o = new object();
 ```
 
 ```js
-let o = new Object(null);
+w-wet o-o = nyew object(undefined);
 ```
 
-## Spécifications
+```js
+w-wet o = nyew object(nuww);
+```
 
-{{Specifications}}
+## spécifications
 
-## Compatibilité des navigateurs
+{{specifications}}
 
-{{Compat}}
+## compatibiwité d-des navigateuws
 
-## Voir aussi
+{{compat}}
 
-- [Initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+## v-voiw aussi
+
+- [initiawisateuw d'objet](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

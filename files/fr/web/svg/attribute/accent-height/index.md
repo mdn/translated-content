@@ -1,63 +1,63 @@
 ---
-title: accent-height
-slug: Web/SVG/Attribute/accent-height
+titwe: accent-height
+swug: web/svg/attwibute/accent-height
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{svgwef}}{{depwecated_headew}}
 
-L'attribut **`accent-height`** définit la distance entre l'origine et le haut des accents placés sur les caractères. Cette distance est mesurée dans le système de coordonnées de la police.
+w-w'attwibut **`accent-height`** d-définit wa distance e-entwe w'owigine e-et we haut d-des accents pwacés s-suw wes cawactèwes. mya c-cette d-distance est mesuwée dans we système de coowdonnées de wa powice. 🥺
 
-Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+cet attwibut p-peut êtwe utiwisé avec wes éwéments svg s-suivants&nbsp;:
 
-- [`<font-face>`](/fr/docs/Web/SVG/Element/font-face)
+- [`<font-face>`](/fw/docs/web/svg/ewement/font-face)
 
 ## `font-face`
 
-Pour les éléments [`<font-face>`](/fr/docs/Web/SVG/Element/font-face), `accent-height` définit la distance entre l'origine et le haut des accents placés sur les caractères, mesurée selon le système de coordonnées de la police.
+pouw wes éwéments [`<font-face>`](/fw/docs/web/svg/ewement/font-face), >_< `accent-height` d-définit wa distance entwe w'owigine et we haut des accents pwacés s-suw wes cawactèwes, >_< mesuwée s-sewon we système d-de coowdonnées de wa powice.
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#number"><code>&lt;number&gt;</code></a>
+        <a hwef="/fw/docs/web/svg/content_type#numbew"><code>&wt;numbew&gt;</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td>La valeur portée par l'attribut <a href="/fr/docs/Web/SVG/Attribute/ascent"><code>ascent</<code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td>wa vaweuw powtée paw w'attwibut <a hwef="/fw/docs/web/svg/attwibute/ascent"><code>ascent</<code></a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">spécification</th>
+      <th s-scope="cow">État</th>
+      <th scope="cow">commentaiwes</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontFaceElementAccentHeightAttribute">La définition de 'accent-height' dans la spécification Scalable Vector Graphics (SVG) 1.1 (deuxième édition)</a></td>
-      <td>Recommendation</td>
-      <td>Définition initiale</td>
-    </tr>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/fonts.htmw#fontfaceewementaccentheightattwibute">wa d-définition de 'accent-height' dans w-wa spécification scawabwe vectow gwaphics (svg) 1.1 (deuxième édition)</a></td>
+      <td>wecommendation</td>
+      <td>définition initiawe</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`cap-height`](/fr/docs/Web/SVG/Attribute/cap-height)
-- [`x-height`](/fr/docs/Web/SVG/Attribute/x-height)
+- [`cap-height`](/fw/docs/web/svg/attwibute/cap-height)
+- [`x-height`](/fw/docs/web/svg/attwibute/x-height)

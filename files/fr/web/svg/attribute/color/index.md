@@ -1,76 +1,76 @@
 ---
-title: color
-slug: Web/SVG/Attribute/color
+titwe: cowow
+swug: web/svg/attwibute/cowow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut `color` est utilisé pour définir indirectement une valeur potentielle (`currentColor`) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.
+w'attwibut `cowow` e-est utiwisé pouw d-définiw indiwectement u-une vaweuw p-potentiewwe (`cuwwentcowow`) p-pouw wes attwibuts {{ s-svgattw("fiww") }}, 🥺 {{ s-svgattw("stwoke") }}, >_< {{ s-svgattw("stop-cowow") }}, >_< {{ svgattw("fwood-cowow") }} et {{ svgattw("wighting-cowow") }}. (⑅˘꒳˘)
 
-> **Note :** `color` étant un attribut de présentation, il peut être utilisé comme propriété CSS. Voir {{ cssxref("color","CSS color") }} pour plus d'informations.
+> **note :** `cowow` étant un attwibut de pwésentation, /(^•ω•^) iw p-peut êtwe utiwisé comme pwopwiété css. rawr x3 voiw {{ c-cssxwef("cowow","css cowow") }} p-pouw pwus d'infowmations. (U ﹏ U)
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Catégories</th>
-      <td>Attribut de présentation</td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">catégowies</th>
+      <td>attwibut d-de pwésentation</td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <a href="/fr/SVG/Content_type#Color"
-          >&#x3C;color></a
+        <a h-hwef="/fw/svg/content_type#cowow"
+          >&#x3c;cowow></a
         >
-        | inherit
+        | i-inhewit
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Document normatif</th>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th scope="wow">document nyowmatif</th>
       <td>
-        <a href="http://www.w3.org/TR/SVG11/color.html#ColorProperty"
-          >SVG 1.1 (2nd Edition)</a
+        <a hwef="http://www.w3.owg/tw/svg11/cowow.htmw#cowowpwopewty"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
-```html
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <g color="green">
-    <rect width="50" height="50" fill="currentColor" />
-    <circle
-      r="25"
-      cx="70"
-      cy="70"
-      stroke="currentColor"
-      fill="none"
-      stroke-width="5" />
+```htmw
+<svg width="100" height="100" xmwns="http://www.w3.owg/2000/svg" vewsion="1.1">
+  <g c-cowow="gween">
+    <wect width="50" h-height="50" fiww="cuwwentcowow" />
+    <ciwcwe
+      w-w="25"
+      c-cx="70"
+      c-cy="70"
+      stwoke="cuwwentcowow"
+      fiww="none"
+      stwoke-width="5" />
   </g>
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple', '100%', '110') }}
+{{ e-embedwivesampwe('exempwe', (U ﹏ U) '100%', (⑅˘꒳˘) '110') }}
 
-## Éléments
+## Éwéments
 
-Les éléments suivants peuvent utiliser l'attribut `color`:
+wes éwéments suivants peuvent u-utiwisew w'attwibut `cowow`:
 
-- [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#éléments_de_contenu_textuel) »
-- [Éléments de formes](/fr/docs/Web/SVG/Element#éléments_de_formes) »
-- {{ SVGElement("stop") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feSpecularLighting") }}
+- [Éwéments de contenu textuew](/fw/docs/web/svg/ewement#éwéments_de_contenu_textuew) »
+- [Éwéments de fowmes](/fw/docs/web/svg/ewement#éwéments_de_fowmes) »
+- {{ svgewement("stop") }}
+- {{ svgewement("fefwood") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ svgewement("fespecuwawwighting") }}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

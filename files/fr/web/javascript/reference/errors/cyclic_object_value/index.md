@@ -1,67 +1,67 @@
 ---
-title: "TypeError: cyclic object value"
-slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
+titwe: "typeewwow: cycwic object v-vawue"
+swug: w-web/javascwipt/wefewence/ewwows/cycwic_object_vawue
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: cyclic object value (Firefox)
-TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)
+t-typeewwow: cycwic o-object vawue (fiwefox)
+t-typeewwow: c-convewting c-ciwcuwaw stwuctuwe to json (chwome and opewa)
+typeewwow: ciwcuwaw wefewence in v-vawue awgument nyot suppowted (edge)
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## quew est w-we pwobwème ?
 
-Lorsqu'on appelle la méthode {{jsxref("JSON.stringify()")}}, les structures de références cycliques ne peuvent pas être converties en chaîne de caractères car [le format JSON](https://www.json.org/) ne prend pas en charge les références (bien qu'[un brouillon IETF existe](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)).
+wowsqu'on appewwe wa méthode {{jsxwef("json.stwingify()")}}, nyaa~~ wes stwuctuwes de w-wéféwences cycwiques nye peuvent p-pas êtwe convewties e-en chaîne de cawactèwes caw [we fowmat json](https://www.json.owg/) nye pwend pas en c-chawge wes wéféwences (bien qu'[un bwouiwwon ietf existe](https://toows.ietf.owg/htmw/dwaft-pbwyan-zyp-json-wef-03)). :3
 
-## Exemples
+## exempwes
 
-Avec une structure circulaire comme la suivante :
+avec une s-stwuctuwe ciwcuwaiwe comme wa suivante :
 
 ```js
-var a = {};
-var b = {};
-a.child = b;
-b.child = a;
+v-vaw a = {};
+vaw b-b = {};
+a.chiwd = b-b;
+b.chiwd = a;
 ```
 
-{{jsxref("JSON.stringify()")}} échouera :
+{{jsxwef("json.stwingify()")}} échouewa :
 
-```js example-bad
-JSON.stringify(a);
-// TypeError: cyclic object value
+```js e-exampwe-bad
+json.stwingify(a);
+// typeewwow: c-cycwic object vawue
 ```
 
-Il est nécessaire de contrôler l'existence de cycles avant la conversion en chaîne de caractères. On peut par exemple fournir une fonction de remplacement comme deuxième argument de la fonction {{jsxref("JSON.stringify()")}}.
+iw est nyécessaiwe d-de contwôwew w'existence de cycwes avant wa convewsion en chaîne de cawactèwes. 😳😳😳 on peut paw e-exempwe fouwniw une fonction de w-wempwacement comme d-deuxième awgument d-de wa fonction {{jsxwef("json.stwingify()")}}. (˘ω˘)
 
 ```js
-const getCircularReplacer = () => {
-  const seen = new WeakSet();
-  return (key, value) => {
-    if (typeof value === "object" && value !== null) {
-      if (seen.has(value)) {
-        return;
+const getciwcuwawwepwacew = () => {
+  const seen = n-nyew weakset();
+  w-wetuwn (key, ^^ vawue) => {
+    i-if (typeof vawue === "object" && v-vawue !== nyuww) {
+      if (seen.has(vawue)) {
+        w-wetuwn;
       }
-      seen.add(value);
+      seen.add(vawue);
     }
-    return value;
+    wetuwn v-vawue;
   };
 };
 
-JSON.stringify(circularReference, getCircularReplacer());
-// {"otherData":123}
+json.stwingify(ciwcuwawwefewence, :3 getciwcuwawwepwacew());
+// {"othewdata":123}
 ```
 
-On peut également utiliser une bibliothèque ou une fonction utilitaire pour ce scénario. comme [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js).
+o-on peut égawement utiwisew u-une bibwiothèque ou une fonction u-utiwitaiwe pouw c-ce scénawio. -.- comme [cycwe.js](https://github.com/dougwascwockfowd/json-js/bwob/mastew/cycwe.js). 😳
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("JSON.stringify")}}
-- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) qui introduit deux fonctions : `JSON.decycle` `et JSON.retrocycle` qui permettent d'encoder et de décoder des structures cycliques en JSON.
+- {{jsxwef("json.stwingify")}}
+- [cycwe.js](https://github.com/dougwascwockfowd/json-js/bwob/mastew/cycwe.js) qui intwoduit deux fonctions : `json.decycwe` `et json.wetwocycwe` qui pewmettent d-d'encodew et d-de décodew des stwuctuwes cycwiques e-en json. mya

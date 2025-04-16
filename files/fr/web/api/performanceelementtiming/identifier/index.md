@@ -1,52 +1,52 @@
 ---
-title: PerformanceElementTiming.identifier
-slug: Web/API/PerformanceElementTiming/identifier
+titwe: pewfowmanceewementtiming.identifiew
+swug: w-web/api/pewfowmanceewementtiming/identifiew
 ---
 
-{{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
+{{seecompattabwe}}{{non-standawd_headew}}{{apiwef("ewement t-timing api")}}
 
-La propriété en lecture seule **`identifier`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la valeur de l'attribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) sur l'élément.
+w-wa pwopwiété en w-wectuwe seuwe **`identifiew`** d-de w'intewface [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming) w-wenvoie w-wa vaweuw de w'attwibut [`ewementtiming`](/fw/docs/web/htmw/attwibutes/ewementtiming) s-suw w'éwément. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-var identifier = PerformanceElementTiming.identifier;
+vaw identifiew = pewfowmanceewementtiming.identifiew;
 ```
 
-### Valeur
+### vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+u-une chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). (˘ω˘)
 
-## Examples
+## exampwes
 
-Dans cet exemple, la valeur de [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming) est `big-image`. L'appel à `entry.indentifier` renvoie donc la chaîne de caractères `big-image`.
+d-dans cet exempwe, (⑅˘꒳˘) wa vaweuw de [`ewementtiming`](/fw/docs/web/htmw/attwibutes/ewementtiming) est `big-image`. (///ˬ///✿) w-w'appew à `entwy.indentifiew` wenvoie donc wa chaîne de cawactèwes `big-image`. 😳😳😳
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="une belle image"
-  elementtiming="big-image"
-  id="myImage" />
+  swc="image.jpg"
+  a-awt="une bewwe image"
+  ewementtiming="big-image"
+  i-id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
-    if (entry.identifier === "big-image") {
-      console.log(entry.naturalWidth);
+c-const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wet entwies = wist.getentwies().foweach(function (entwy) {
+    if (entwy.identifiew === "big-image") {
+      c-consowe.wog(entwy.natuwawwidth);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+obsewvew.obsewve({ entwytypes: ["ewement"] });
 ```
 
-> [!NOTE]
-> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) `element` afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!note]
+> cet exempwe utiwise w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) p-pouw cwéew une wiste d'événements d-de m-mesuwe des pewfowmances. 🥺 d-dans nyotwe c-cas, mya nyous obsewvons w'éwément [`entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) `ewement` afin d-d'utiwisew w'intewface `pewfowmanceewementtiming`. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}

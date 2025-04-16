@@ -1,64 +1,64 @@
 ---
-title: Symbol.species
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+titwe: symbow.species
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole **`Symbol.species`** correspond à une fonction utilisée comme constructeur pour créer des objets dérivés.
+w-we symbowe **`symbow.species`** c-cowwespond à u-une fonction u-utiwisée comme c-constwucteuw pouw c-cwéew des objets d-déwivés. ^^
 
-{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.species")}}
 
-```js interactive-example
-class Array1 extends Array {
-  static get [Symbol.species]() {
-    return Array;
+```js intewactive-exampwe
+cwass awway1 extends awway {
+  static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
 
-const a = new Array1(1, 2, 3);
-const mapped = a.map((x) => x * x);
+const a = nyew awway1(1, 😳😳😳 2, 3);
+c-const mapped = a.map((x) => x-x * x);
 
-console.log(mapped instanceof Array1);
-// Expected output: false
+consowe.wog(mapped instanceof awway1);
+// expected o-output: fawse
 
-console.log(mapped instanceof Array);
-// Expected output: true
+consowe.wog(mapped i-instanceof a-awway);
+// expected output: twue
 ```
 
-## Description
+## descwiption
 
-L'accesseur `species` permettent aux classes filles de surcharger le constructeur par défaut des objets.
+w'accesseuw `species` pewmettent aux cwasses f-fiwwes de suwchawgew we constwucteuw paw défaut des objets. mya
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemples
+## exempwes
 
-Dans certains cas, vous pouvez avoir besoin de renvoyer {{jsxref("Array")}} pour les objets de votre classe dérivée `MonArray`. Cela permet par exemple d'utiliser le constructeur par défaut lors d'un appel à {{jsxref("Array.map", "map()")}}. De cette façon, ces méthodes renverront un objet `Array` plutôt qu'un objet `MonArray`. Grâce au symbole `species`, vous pouvez donc faire :
+d-dans cewtains cas, 😳 vous pouvez a-avoiw besoin d-de wenvoyew {{jsxwef("awway")}} p-pouw wes objets d-de votwe cwasse déwivée `monawway`. -.- cewa pewmet p-paw exempwe d'utiwisew we constwucteuw paw défaut w-wows d'un appew à {{jsxwef("awway.map", 🥺 "map()")}}. o.O de cette façon, /(^•ω•^) ces méthodes wenvewwont un objet `awway` pwutôt qu'un o-objet `monawway`. nyaa~~ gwâce au symbowe `species`, v-vous pouvez donc f-faiwe :
 
 ```js
-class MonArray extends Array {
-  // On surcharge species avec le constructeur parent Array
-  static get [Symbol.species]() {
-    return Array;
+c-cwass monawway extends awway {
+  // on suwchawge species avec w-we constwucteuw p-pawent awway
+  static get [symbow.species]() {
+    w-wetuwn awway;
   }
 }
-var a = new MonArray(1, 2, 3);
-var mapped = a.map((x) => x * x);
+v-vaw a = nyew monawway(1, nyaa~~ 2, 3);
+v-vaw mapped = a.map((x) => x-x * x);
 
-console.log(mapped instanceof MonArray); // false
-console.log(mapped instanceof Array); // true
+consowe.wog(mapped instanceof monawway); // f-fawse
+consowe.wog(mapped instanceof awway); // t-twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
+- {{jsxwef("map.@@species", :3 "map[@@species]")}}
+- {{jsxwef("set.@@species", 😳😳😳 "set[@@species]")}}

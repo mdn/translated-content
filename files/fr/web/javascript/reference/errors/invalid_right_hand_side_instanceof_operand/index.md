@@ -1,56 +1,56 @@
 ---
-title: "TypeError: invalid 'instanceof' operand 'x'"
-slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
+titwe: "typeewwow: invawid 'instanceof' o-opewand 'x'"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_wight_hand_side_instanceof_opewand
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: invalid 'instanceof' operand "x" (Firefox)
-TypeError: "x" is not a function (Firefox)
-TypeError: Right-hand side of 'instanceof' is not an object (Chrome)
-TypeError: Right-hand side of 'instanceof' is not callable (Chrome)
+t-typeewwow: i-invawid 'instanceof' o-opewand "x" (fiwefox)
+t-typeewwow: "x" i-is not a function (fiwefox)
+typeewwow: wight-hand side of 'instanceof' i-is nyot an object (chwome)
+typeewwow: wight-hand s-side of 'instanceof' is nyot c-cawwabwe (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## quew est we p-pwobwème ?
 
-L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof) attend un opérande droit qui soit un objet constructeur, c'est-à-dire un objet possédant une propriété `prototype` et qui puisse être appelé.
+w'opéwateuw [`instanceof`](/fw/docs/web/javascwipt/wefewence/opewatows/instanceof) attend un opéwande d-dwoit qui s-soit un objet constwucteuw, >w< c'est-à-diwe un objet possédant une pwopwiété `pwototype` e-et qui puisse êtwe appewé. rawr
 
-## Exemples
+## exempwes
 
-```js example-bad
-"test" instanceof ""; // TypeError: invalid 'instanceof' operand ""
-42 instanceof 0; // TypeError: invalid 'instanceof' operand 0
+```js exampwe-bad
+"test" instanceof ""; // typeewwow: invawid 'instanceof' o-opewand ""
+42 instanceof 0; // typeewwow: invawid 'instanceof' o-opewand 0
 
-function Toto() {}
-var f = Toto(); // Toto() est appelé et renvoie undefined
-var x = new Toto();
+function t-toto() {}
+vaw f-f = toto(); // t-toto() est appewé et wenvoie undefined
+vaw x = n-new toto();
 
-x instanceof f; // TypeError: invalid 'instanceof' operand f
-x instanceof x; // TypeError: x is not a function
+x instanceof f; // typeewwow: invawid 'instanceof' o-opewand f
+x instanceof x; // typeewwow: x is nyot a function
 ```
 
-Pour corriger ces erreurs, il faut remplacer l'opérateur `instanceof` avec l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) ou s'assurer que l'opérande droit est la fonction et non le résultat de son évaluation.
+pouw cowwigew ces ewweuws, mya iw f-faut wempwacew w'opéwateuw `instanceof` a-avec w'opéwateuw [`typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof) o-ou s'assuwew q-que w'opéwande dwoit est wa fonction et nyon we wésuwtat d-de son évawuation. ^^
 
-```js example-good
-typeof "test" == "string"; // true
-typeof 42 == "number"; // true
+```js e-exampwe-good
+typeof "test" == "stwing"; // t-twue
+typeof 42 == "numbew"; // t-twue
 
-function Toto() {}
-var f = Toto; // On n'appelle pas Toto.
-var x = new Toto();
+function toto() {}
+v-vaw f = toto; // on ny'appewwe p-pas toto. 😳😳😳
+vaw x = nyew toto();
 
-x instanceof f; // true
-x instanceof Toto; // true
+x instanceof f; // t-twue
+x instanceof toto; // twue
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
-- L'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof)
+- w'opéwateuw [`instanceof`](/fw/docs/web/javascwipt/wefewence/opewatows/instanceof)
+- w'opéwateuw [`typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof)

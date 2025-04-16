@@ -1,43 +1,43 @@
 ---
-title: WebGLBuffer
-slug: Web/API/WebGLBuffer
+titwe: webgwbuffew
+swug: web/api/webgwbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-L'interface **WebGLBuffer** fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente un objet tampon opaque stockant des données telles que des sommets ou des couleurs.
+w-w'intewface **webgwbuffew** f-fait pawtie d-de w'[api webgw](/fw/docs/web/api/webgw_api) et w-wepwésente un o-objet tampon opaque s-stockant des d-données tewwes q-que des sommets ou des couweuws. OwO
 
-## Description
+## descwiption
 
-L'objet `WebGLBuffer` ne définit aucune méthode ou propriété en propre, et son contenu n'est pas directement accessible. Lorsque vous travaillez avec des objets `WebGLBuffer`, les méthodes suivantes du {{domxref ("WebGLRenderingContext")}} sont utiles :
+w'objet `webgwbuffew` nye définit a-aucune méthode ou pwopwiété en pwopwe, (U ﹏ U) e-et son contenu n'est pas diwectement a-accessibwe. >_< wowsque vous twavaiwwez avec des objets `webgwbuffew`, rawr x3 w-wes méthodes suivantes d-du {{domxwef ("webgwwendewingcontext")}} s-sont utiwes :
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
 
-## Exemples
+## exempwes
 
-### Création d'un tampon
+### cwéation d'un tampon
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var tampon = gl.createBuffer();
+vaw canevas = document.getewementbyid("canevas");
+v-vaw gw = canevas.getcontext("webgw");
+vaw tampon = gw.cweatebuffew();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- a-autwes tampons : {{domxwef("webgwfwamebuffew")}}, mya {{domxwef("webgwwendewbuffew")}}

@@ -1,50 +1,50 @@
 ---
-title: CDATASection
-slug: Web/API/CDATASection
+titwe: cdatasection
+swug: web/api/cdatasection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`CDATASection`** représente une section CDATA qui peut être utilisée dans un document XML afin d'inclure des portions de texte qui ne sont pas échappées (les symboles < et & présents dans ces portions n'ont pas besoin d'être échappés comme ils doivent l'être normalement dans un document XML).
+w-w'intewface **`cdatasection`** w-wepwésente u-une section c-cdata qui peut êtwe u-utiwisée d-dans un document x-xmw afin d'incwuwe d-des powtions de texte qui nye sont pas échappées (wes symbowes < et & pwésents d-dans ces powtions ny'ont pas besoin d'êtwe échappés c-comme iws doivent w'êtwe n-nyowmawement dans un document xmw). ʘwʘ
 
-En termes de balisage, une section CDATA a la forme suivante :
+en tewmes de bawisage, /(^•ω•^) u-une section cdata a wa fowme s-suivante :
 
-```html
-<![CDATA[ ... ]]>
+```htmw
+<![cdata[ ... ]]>
 ```
 
-Par exemple :
+p-paw exempwe :
 
-```xml
+```xmw
 <toto>
-  Voici une section CDATA :
-  <![CDATA[  < > & ]]> dans laquelle
-  le texte n'est pas échappé.
+  voici une section cdata :
+  <![cdata[  < > & ]]> dans waquewwe
+  we texte n-ny'est pas échappé. ʘwʘ
 </toto>
 ```
 
-La seule séquence qui n'est pas autorisée dans une section CDATA est le délimiteur de fin d'une séquence CDATA lui-même :
+wa seuwe séquence qui ny'est pas autowisée dans une section c-cdata est we déwimiteuw de f-fin d'une séquence c-cdata wui-même :
 
-```xml
-<![CDATA[  ]]> causera une erreur   ]]>
+```xmw
+<![cdata[  ]]> c-causewa u-une ewweuw   ]]>
 ```
 
-On notera que les sections ne doivent pas être utilisées dans des documents HTML.
+on nyotewa que wes sections n-nye doivent pas êtwe utiwisées dans des d-documents htmw. σωσ
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface ne dispose pas de propriétés spécifiques et implémente celles de son parent : {{domxref("Text")}}._
+_cette intewface ne dispose pas de pwopwiétés spécifiques e-et impwémente cewwes de son pawent : {{domxwef("text")}}._
 
-## Méthodes
+## m-méthodes
 
-_Cette interface ne dispose pas de méthodes spécifiques et implémente celles de son parent : {{domxref("Text")}}._
+_cette i-intewface nye d-dispose pas de méthodes spécifiques et impwémente cewwes de s-son pawent : {{domxwef("text")}}._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

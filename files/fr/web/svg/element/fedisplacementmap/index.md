@@ -1,100 +1,100 @@
 ---
-title: <feDisplacementMap>
-slug: Web/SVG/Element/feDisplacementMap
+titwe: <fedispwacementmap>
+swug: w-web/svg/ewement/fedispwacementmap
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDisplacementMap>`** utilise les valeurs de pixel de l'image de {{SVGAttr("in2")}} pour déplacer spatialement l'image de {{SVGAttr("in")}}.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fedispwacementmap>`** u-utiwise wes vaweuws d-de pixew de w-w'image de {{svgattw("in2")}} p-pouw d-dépwacew spatiawement w'image de {{svgattw("in")}}. òωó
 
-La formule utilisée pour la transformation est comme suit:
+wa fowmuwe utiwisée pouw w-wa twansfowmation est comme suit:
 
 ```
-P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
+p'(x,y) ← p-p( x + scawe * (xc(x,y) - 0.5), ʘwʘ y + scawe * (yc(x,y) - 0.5))
 ```
 
-où `P(x,y)` est l'image en entrée, {{SVGAttr("in")}}, et `P'(x,y)` est la destination. `XC(x,y)` et `YC(x,y)` sont les valeurs des composants du canal désigné par {{SVGAttr("xChannelSelector")}} et {{SVGAttr("yChannelSelector")}}.
+o-où `p(x,y)` est w'image en entwée, /(^•ω•^) {{svgattw("in")}}, ʘwʘ et `p'(x,y)` est w-wa destination. σωσ `xc(x,y)` et `yc(x,y)` s-sont wes v-vaweuws des composants du canaw désigné paw {{svgattw("xchannewsewectow")}} et {{svgattw("ychannewsewectow")}}. OwO
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts d-de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("in2")}}
-- {{SVGAttr("scale")}}
-- {{SVGAttr("xChannelSelector")}}
-- {{SVGAttr("yChannelSelector")}}
+- {{svgattw("in")}}
+- {{svgattw("in2")}}
+- {{svgattw("scawe")}}
+- {{svgattw("xchannewsewectow")}}
+- {{svgattw("ychannewsewectow")}}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEDisplacementMapElement")}}.
+c-cet éwément impwémente w-w'intewface {{domxwef("svgfedispwacementmapewement")}}. 😳😳😳
 
-## Exemple
+## exempwe
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  viewBox="0 0 220 220"
-  xmlns="http://www.w3.org/2000/svg">
-  <filter id="displacementFilter">
-    <feTurbulence
-      type="turbulence"
-      baseFrequency="0.05"
-      numOctaves="2"
-      result="turbulence" />
-    <feDisplacementMap
-      in2="turbulence"
-      in="SourceGraphic"
-      scale="50"
-      xChannelSelector="R"
-      yChannelSelector="G" />
-  </filter>
+  h-height="200"
+  viewbox="0 0 220 220"
+  xmwns="http://www.w3.owg/2000/svg">
+  <fiwtew i-id="dispwacementfiwtew">
+    <fetuwbuwence
+      type="tuwbuwence"
+      basefwequency="0.05"
+      nyumoctaves="2"
+      wesuwt="tuwbuwence" />
+    <fedispwacementmap
+      in2="tuwbuwence"
+      in="souwcegwaphic"
+      scawe="50"
+      x-xchannewsewectow="w"
+      ychannewsewectow="g" />
+  </fiwtew>
 
-  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
+  <ciwcwe c-cx="100" c-cy="100" w="100" s-stywe="fiwtew: uww(#dispwacementfiwtew)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 220, 220)}}
+{{embedwivesampwe('exempwe', 😳😳😳 220, o.O 220)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

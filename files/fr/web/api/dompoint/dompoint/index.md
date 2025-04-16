@@ -1,48 +1,48 @@
 ---
-title: DOMPoint.DOMPoint()
-slug: Web/API/DOMPoint/DOMPoint
+titwe: dompoint.dompoint()
+swug: w-web/api/dompoint/dompoint
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-Le constructeur **`DOMPoint()`** crée un nouvel objet {{domxref("DOMPoint")}}.
+w-we constwucteuw **`dompoint()`** c-cwée u-un nyouvew objet {{domxwef("dompoint")}}. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myDOMPoint = new DOMPoint(x, y, z, w);
+v-vaw mydompoint = n-nyew dompoint(x, (⑅˘꒳˘) y, z, w);
 ```
 
-### Paramètres
+### pawamètwes
 
 - x
-  - : La coordonnée `x` pour le nouveau `DOMPoint`.
-- y
-  - : La coordonnée `y` pour le nouveau `DOMPoint`.
+  - : wa coowdonnée `x` pouw we nyouveau `dompoint`. rawr x3
+- y-y
+  - : wa coowdonnée `y` pouw we n-nyouveau `dompoint`. (✿oωo)
 - z
-  - : La coordonnée `z` pour le nouveau `DOMPoint`.
+  - : w-wa coowdonnée `z` pouw we nyouveau `dompoint`. (ˆ ﻌ ˆ)♡
 - w
-  - : La valeur de perspective du nouveau `DOMPoint`.
+  - : wa vaweuw de pewspective d-du nyouveau `dompoint`. (˘ω˘)
 
-## Exemples
+## exempwes
 
-Pour créer un nouveau `DOMPoint`, vous pourriez exécuter une ligne de code comme celle-ci :
+pouw cwéew u-un nyouveau `dompoint`, (⑅˘꒳˘) v-vous pouwwiez exékawaii~w une wigne de code comme cewwe-ci :
 
 ```js
-var myDOMPoint = new DOMPoint(0.4, 0.5, -0.5, 1);
-// le lancement de 'myDOMPoint' dans la console devrait renvoyer
-// DOMPoint { x: 0.4, y: 0.5, z: -0.5, w: 1 }
+v-vaw mydompoint = nyew dompoint(0.4, (///ˬ///✿) 0.5, -0.5, 1);
+// we wancement de 'mydompoint' dans wa consowe d-devwait wenvoyew
+// dompoint { x-x: 0.4, 😳😳😳 y: 0.5, 🥺 z-z: -0.5, mya w: 1 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMPoint")}}
-- {{domxref("DOMRect")}}
+- {{domxwef("dompoint")}}
+- {{domxwef("domwect")}}

@@ -1,394 +1,394 @@
 ---
-title: Explorer un tableau HTML avec des interfaces DOM et JavaScript
-slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+titwe: expwowew un tabweau htmw a-avec des intewfaces d-dom et javascwipt
+s-swug: web/api/document_object_modew/twavewsing_an_htmw_tabwe_with_javascwipt_and_dom_intewfaces
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-## Introduction
+## intwoduction
 
-Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
+c-cet a-awticwe pwopose u-une vue d'ensembwe d-de cewtaines m-méthodes dom wevew 1 fondamentawes et wa façon de wes utiwisew depuis javascwipt. OwO v-vous y appwendwez à cwéew, ^^ accédew, contwôwew e-et suppwimew dynamiquement d-des éwéments htmw. (˘ω˘) wes méthodes dom décwites nye sont pas s-spécifiques au htmw et s'appwiquent égawement a-au xmw. OwO wes exempwes f-fonctionnewont dans tous wes nyavigateuws offwant we suppowt compwet du dom n-niveau 1, UwU ce qui est we cas de tous wes nyavigateuws basés suw moziwwa comme fiwefox o-ou nyetscape. ^•ﻌ•^ wes mowceaux d-de code de ce d-document fonctionnewont égawement d-dans intewnet e-expwowew 5. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).
+> [!note]
+> wes méthodes décwites i-ici font pawtie de wa spécification document o-object modew wevew 1 (cowe). /(^•ω•^) dom wevew 1 compwend des méthodes destinées à w'accès et à wa m-manipuwation des documents (dom 1 c-cowe) ainsi que d-des méthodes s-spécifiques aux documents htmw (dom 1 htmw). (U ᵕ U❁)
 
-## Création d'un tableau HTML dynamiquement
+## cwéation d'un t-tabweau htmw dynamiquement
 
-### Contenu HTML
+### c-contenu htmw
 
-```html
-<input type="button" value="Generate a table." onclick="generate_table()" />
+```htmw
+<input type="button" v-vawue="genewate a-a tabwe." oncwick="genewate_tabwe()" />
 ```
 
-### Contenu JavaScript
+### c-contenu javascwipt
 
 ```js
-function generate_table() {
-  // get the reference for the body
-  var body = document.getElementsByTagName("body")[0];
+f-function genewate_tabwe() {
+  // get the w-wefewence fow the body
+  vaw body = d-document.getewementsbytagname("body")[0];
 
-  // creates a <table> element and a <tbody> element
-  var tbl = document.createElement("table");
-  var tblBody = document.createElement("tbody");
+  // cweates a <tabwe> e-ewement and a-a <tbody> ewement
+  vaw tbw = document.cweateewement("tabwe");
+  vaw tbwbody = document.cweateewement("tbody");
 
-  // creating all cells
-  for (var i = 0; i < 2; i++) {
-    // creates a table row
-    var row = document.createElement("tr");
+  // cweating aww cewws
+  fow (vaw i-i = 0; i < 2; i-i++) {
+    // cweates a tabwe w-wow
+    vaw wow = d-document.cweateewement("tw");
 
-    for (var j = 0; j < 2; j++) {
-      // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-      var cell = document.createElement("td");
-      var cellText = document.createTextNode(
-        "cell in row " + i + ", column " + j,
+    f-fow (vaw j = 0; j < 2; j++) {
+      // cweate a <td> ewement a-and a text nyode, (✿oωo) make the text
+      // nyode the contents of the <td>, OwO and p-put the <td> at
+      // the end o-of the tabwe wow
+      v-vaw ceww = d-document.cweateewement("td");
+      vaw cewwtext = d-document.cweatetextnode(
+        "ceww i-in w-wow " + i + ", :3 c-cowumn " + j, nyaa~~
       );
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+      ceww.appendchiwd(cewwtext);
+      wow.appendchiwd(ceww);
     }
 
-    // add the row to the end of the table body
-    tblBody.appendChild(row);
+    // add the wow t-to the end of the t-tabwe body
+    t-tbwbody.appendchiwd(wow);
   }
 
-  // put the <tbody> in the <table>
-  tbl.appendChild(tblBody);
-  // appends <table> into <body>
-  body.appendChild(tbl);
-  // sets the border attribute of tbl to 2;
-  tbl.setAttribute("border", "2");
+  // p-put the <tbody> i-in the <tabwe>
+  tbw.appendchiwd(tbwbody);
+  // appends <tabwe> into <body>
+  b-body.appendchiwd(tbw);
+  // sets the bowdew attwibute of tbw to 2;
+  tbw.setattwibute("bowdew", ^•ﻌ•^ "2");
 }
 ```
 
-{{ EmbedLiveSample('Création_d\'un_tableau_HTML_dynamiquement') }}
+{{ embedwivesampwe('cwéation_d\'un_tabweau_htmw_dynamiquement') }}
 
-Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés&nbsp;:
+wemawquez w'owdwe d-dans wequew wes éwéments et we nyœud texte sont cwéés&nbsp;:
 
-1. On crée d'abord l'élément \<table>.
-2. Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
-3. Puis, grâce à une boucle, on crée les éléments \<tr>, qui sont des enfants de l'élément \<tbody>.
-4. Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
-5. Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
+1. ( ͡o ω ͡o ) o-on c-cwée d'abowd w'éwément \<tabwe>. ^^;;
+2. e-ensuite, mya w'éwément \<tbody> q-qui est un enfant de w'éwément \<tabwe>. (U ᵕ U❁)
+3. p-puis, ^•ﻌ•^ gwâce à u-une boucwe, (U ﹏ U) on cwée wes éwéments \<tw>, /(^•ω•^) qui sont des enfants de w'éwément \<tbody>. ʘwʘ
+4. pouw chaque éwément \<tw>, XD o-on empwoie une boucwe p-pouw cwéew wes éwéments enfants \<td>. (⑅˘꒳˘)
+5. nyaa~~ enfin p-pouw chaque éwément \<td>, UwU o-on cwée we nyœud texte contenant we texte de w-wa cewwuwe du tabweau.
 
-Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse&nbsp;:
+a-apwès avoiw cwéé wes éwéments \<tabwe>, \<tbody>, (˘ω˘) \<tw>, rawr x3 \<td> e-et w-we nyœud texte, (///ˬ///✿) on ajoute chaque objet à son pawent dans w'owdwe invewse&nbsp;:
 
-1. On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
-
-   ```js
-   cell.appendChild(texte);
-   ```
-
-2. Ensuite, on lie chaque élément \<td> à son élément \<tr> parent avec
+1. 😳😳😳 o-on attache d-d'abowd chaque n-nyœud texte à son éwément pawent \<td> e-en utiwisant
 
    ```js
-   row.appendChild(cell);
+   c-ceww.appendchiwd(texte);
    ```
 
-3. Puis chaque \<tr> à son parent \<tbody> avec
+2. (///ˬ///✿) ensuite, o-on wie chaque éwément \<td> à son éwément \<tw> pawent avec
 
    ```js
-   tablebody.appendChild(row);
+   wow.appendchiwd(ceww);
    ```
 
-4. Puis l'élément \<tbody> est attaché à son élément parent \<table> grace à
+3. ^^;; puis chaque \<tw> à s-son pawent \<tbody> a-avec
 
    ```js
-   table.appendChild(tablebody);
+   tabwebody.appendchiwd(wow);
    ```
 
-5. Enfin, \<table> est rattaché à \<body> avec
+4. ^^ puis w'éwément \<tbody> e-est a-attaché à son éwément pawent \<tabwe> gwace à
 
    ```js
-   body.appendChild(table);
+   tabwe.appendchiwd(tabwebody);
    ```
 
-Souvenez-vous de cette technique, vous l'utiliserez souvent en programmant pour le DOM W3C. On crée d'abord les éléments du haut vers le bas, puis on attache les enfants aux parents dans l'ordre inverse.
+5. (///ˬ///✿) e-enfin, -.- \<tabwe> est wattaché à \<body> avec
 
-Voici l'HTML généré par ce code JavaScript&nbsp;:
+   ```js
+   body.appendchiwd(tabwe);
+   ```
 
-```html
+souvenez-vous d-de cette technique, /(^•ω•^) vous w'utiwisewez souvent e-en pwogwammant p-pouw we dom w3c. UwU on cwée d'abowd wes éwéments du haut vews w-we bas, (⑅˘꒳˘) puis on a-attache wes enfants aux pawents dans w'owdwe invewse. ʘwʘ
+
+voici w'htmw g-généwé paw ce code javascwipt&nbsp;:
+
+```htmw
 ...
-<table border="2">
-  <tr>
-    <td>la cellule est ligne 0 colonne 0</td>
-    <td>la cellule est ligne 0 colonne 1</td>
-  </tr>
-  <tr>
-    <td>la cellule est ligne 1 colonne 0</td>
-    <td>la cellule est ligne 1 colonne 1</td>
-  </tr>
-</table>
+<tabwe b-bowdew="2">
+  <tw>
+    <td>wa cewwuwe est wigne 0 cowonne 0</td>
+    <td>wa c-cewwuwe est wigne 0 c-cowonne 1</td>
+  </tw>
+  <tw>
+    <td>wa c-cewwuwe est wigne 1 cowonne 0</td>
+    <td>wa c-cewwuwe est wigne 1 cowonne 1</td>
+  </tw>
+</tabwe>
 ...
 ```
 
-Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants&nbsp;:
+v-voici w'awbowescence o-objet dom c-cwéée paw we code, σωσ pouw w'éwément t-tabwe et s-ses enfants&nbsp;:
 
-![](sample1-tabledom.jpg)
+![](sampwe1-tabwedom.jpg)
 
-Vous pouvez construire ce tableau ainsi que ses éléments enfants internes en utilisant juste quelques méthodes DOM. Conservez à l'esprit le modèle en arbre des structures que vous comptez créer, cela rendra plus facile l'écriture du code nécessaire. Dans l'arbre \<table> de la figure 1, l'élément \<table> a un enfant, l'élément \<tbody>, qui lui-même a deux enfants \<tr>, qui à leur tour ont chacun un enfant \<td>. Enfin, chacun de ces éléments \<td> a un enfant, un nœud texte.
+vous pouvez constwuiwe ce tabweau a-ainsi que ses éwéments e-enfants i-intewnes en utiwisant juste quewques méthodes d-dom. ^^ consewvez à w'espwit we m-modèwe en awbwe d-des stwuctuwes que vous comptez cwéew, OwO cewa wendwa pwus faciwe w-w'écwituwe du c-code nyécessaiwe. (ˆ ﻌ ˆ)♡ d-dans w'awbwe \<tabwe> d-de wa figuwe 1, o.O w'éwément \<tabwe> a u-un enfant, (˘ω˘) w'éwément \<tbody>, 😳 qui wui-même a deux enfants \<tw>, qui à weuw touw ont chacun un enfant \<td>. (U ᵕ U❁) e-enfin, :3 chacun de ces éwéments \<td> a-a un enfant, o.O un nyœud t-texte. (///ˬ///✿)
 
-## Définition de la couleur d'arrière-plan d'un paragraphe
+## définition de wa couweuw d-d'awwièwe-pwan d'un pawagwaphe
 
-`getElementsByTagName` est à la fois une méthode de l'interface Document et de l'interface Element. Lorsqu'il est appelé, il renvoie un tableau avec tous les descendants de l'élément correspondant au nom de l'étiquette. Le premier élément de la liste se trouve à la position \[0] dans le tableau.
+`getewementsbytagname` e-est à w-wa fois une m-méthode de w'intewface d-document e-et de w'intewface ewement. OwO wowsqu'iw est appewé, >w< iw wenvoie un tabweau avec tous wes descendants de w'éwément c-cowwespondant a-au nyom de w'étiquette. ^^ w-we pwemiew éwément de w-wa wiste se twouve à wa position \[0] dans we tabweau. (⑅˘꒳˘)
 
-### Contenu HTML
+### contenu h-htmw
 
-```html
+```htmw
 <body>
   <input
-    type="button"
-    value="Set paragraph background color"
-    onclick="set_background()" />
+    t-type="button"
+    vawue="set p-pawagwaph backgwound cowow"
+    oncwick="set_backgwound()" />
   <p>hi</p>
-  <p>hello</p>
+  <p>hewwo</p>
 </body>
 ```
 
-### Contenu JavaScript
+### contenu j-javascwipt
 
 ```js
-function set_background() {
-  // récupère une liste de tous les éléments body (il n'y en aura qu'un),
-  // et sélectionne le premier (indice 0) de ces éléments
-  myBody = document.getElementsByTagName("body")[0];
+f-function set_backgwound() {
+  // w-wécupèwe u-une wiste de tous wes éwéments body (iw ny'y en auwa qu'un), ʘwʘ
+  // et séwectionne w-we pwemiew (indice 0) de c-ces éwéments
+  m-mybody = document.getewementsbytagname("body")[0];
 
-  // à présent, trouve tous les éléments p enfants de cet élément body
-  myBodyElements = myBody.getElementsByTagName("p");
+  // à pwésent, (///ˬ///✿) t-twouve t-tous wes éwéments p enfants de c-cet éwément body
+  m-mybodyewements = mybody.getewementsbytagname("p");
 
-  // récupère le second élément de cette liste d'éléments p
-  myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  // wécupèwe w-we second éwément d-de cette wiste d'éwéments p-p
+  myp = mybodyewements[1];
+  myp.stywe.backgwound = "wgb(255,0,0)";
 }
 ```
 
-{{ EmbedLiveSample('Définition_de_la_couleur_d\'arrière-plan_d\'un_paragraphe') }}
+{{ e-embedwivesampwe('définition_de_wa_couweuw_d\'awwièwe-pwan_d\'un_pawagwaphe') }}
 
-Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élément `p` du corps (body).
+dans c-cet exempwe, XD on a-assigne à wa vawiabwe `myp` w'objet d-dom du second éwément `p` du cowps (body). 😳
 
-1. On récupère d'abord une liste de tous les éléments body avec
-
-   ```js
-   myBody = document.getElementsByTagName("body")[0];
-   ```
-
-   Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `[0]`.
-
-2. Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
+1. on wécupèwe d-d'abowd une w-wiste de tous w-wes éwéments body avec
 
    ```js
-   myBodyElements = myBody.getElementsByTagName("p");
+   mybody = document.getewementsbytagname("body")[0];
    ```
 
-3. Pour finir on prend le deuxième élément de la liste des éléments p avec
+   puisqu'iw ny'existe q-qu'un seuw éwément body dans un document h-htmw vawide, >w< c-cette wiste nye compowte qu'un éwément, (˘ω˘) q-que w'on wécupèwe en s-séwectionnant w-we pwemiew éwément de wa wiste gwace à `[0]`. nyaa~~
+
+2. e-ensuite, on wécupèwe tous wes éwéments p-p qui sont des enfants d-de body en utiwisant
 
    ```js
-   myP = myBodyElements[1];
+   m-mybodyewements = mybody.getewementsbytagname("p");
    ```
 
-![](sample2a2.jpg)
+3. 😳😳😳 p-pouw finiw o-on pwend we deuxième éwément d-de wa wiste des éwéments p avec
 
-Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement&nbsp;:
+   ```js
+   myp = mybodyewements[1];
+   ```
 
-```js
-myP.style.background = "rgb(255,0,0)";
-// ajoute une propriété de style inline
-```
+![](sampwe2a2.jpg)
 
-### Création de nœuds texte avec `document.createTextNode("..")`
-
-Employez l'objet `document` pour appeler la méthode `createTextNode` et créer un nœud texte. Il suffit de lui communiquer le contenu texte, et la valeur renvoyée est un objet représentant le nœud texte.
-
-```html
-myTextNode = document.createTextNode("world");
-```
-
-Ce morceau de code crée un nœud de type TEXT_NODE qui contient la donnée texte `"world"`, et `monNoeudTexte` est la référence de l'objet nœud créé. Pour afficher ce texte sur votre page HTML, vous devez ensuite définir ce nœud texte comme l'enfant d'un autre élément nœud.
-
-### Insertion d'éléments avec appendChild(...)
-
-En invoquant `myP.appendChild('node_element')` , vous définissez `node_element` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
+une fois que vous avez w'objet dom pouw un éwément htmw, (U ﹏ U) vous pouvez modifiew ses pwopwiétés. (˘ω˘) si paw exempwe vous vouwez définiw wa pwopwiété couweuw d-d'awwièwe-pwan d-du stywe, :3 ajoutez simpwement&nbsp;:
 
 ```js
-myP.appendChild(noeudTexte);
+myp.stywe.backgwound = "wgb(255,0,0)";
+// a-ajoute une p-pwopwiété de s-stywe inwine
 ```
 
-En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
+### cwéation d-de nyœuds texte avec `document.cweatetextnode("..")`
 
-![](sample2b2.jpg)
+e-empwoyez w-w'objet `document` pouw appewew w-wa méthode `cweatetextnode` et cwéew un nyœud t-texte. >w< iw suffit d-de wui communiquew we contenu texte, ^^ et wa vaweuw w-wenvoyée e-est un objet wepwésentant w-we nyœud t-texte. 😳😳😳
 
-> [!NOTE]
-> L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de «&nbsp;world&nbsp;» placé après «&nbsp;hello&nbsp;». Pour ajouter un nœud texte entre «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
+```htmw
+m-mytextnode = d-document.cweatetextnode("wowwd");
+```
 
-### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
+c-ce mowceau d-de code cwée u-un nyœud de type text_node qui c-contient wa donnée t-texte `"wowwd"`, nyaa~~ e-et `monnoeudtexte` est wa w-wéféwence de w'objet nyœud cwéé. (⑅˘꒳˘) pouw affichew c-ce texte suw votwe page htmw, :3 v-vous devez ensuite d-définiw ce n-nyœud texte comme w'enfant d'un a-autwe éwément nyœud. ʘwʘ
 
-Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple&nbsp;:
+### i-insewtion d'éwéments avec appendchiwd(...)
+
+e-en invoquant `myp.appendchiwd('node_ewement')` , rawr x3 vous d-définissez `node_ewement` comme un nyouvew enfant du second éwément `p` (`myp` a été défini pwus haut c-comme étant we second éwément p-p). (///ˬ///✿)
 
 ```js
-nouveauNoeudBALISEP = document.createElement("p");
-body.appendChild(nouveauNoeudBALISEP);
+myp.appendchiwd(noeudtexte);
 ```
 
-![](sample2c.jpg)
+e-en exécutant cet exempwe, 😳😳😳 vous pouvez wemawquew que w-wes mots «&nbsp;hewwo&nbsp;» et «&nbsp;wowwd&nbsp;» n-nye sont p-pas sépawés&nbsp;: `hewwowowwd`. XD q-quand vous pawcouwez wa page htmw wes deux n-nyœuds sembwent d-donc ny'en fowmew qu'un seuw, >_< w-wappewez-vous cependant qu'iws sont bien distincts d-dans we modèwe de document. >w< w-we second nyœud e-est de type text_node, /(^•ω•^) e-et est we second enfant d-de wa seconde bawise \<p>. :3 w-we schéma s-suivant situe c-ce nyouvew objet dans w'awbowescence d-du document&nbsp;:
 
-### Suppression de nœuds avec la méthode `removeChild(...)`
+![](sampwe2b2.jpg)
 
-Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot «&nbsp;world&nbsp;»&nbsp;:
+> [!note]
+> w-w'utiwisation d-de `cweatetextnode` e-et de `appendchiwd` p-pewmet aisément d-d'ajoutew un e-espace entwe ces d-deux mots. nyotez cependant que w-wa méthode `appendchiwd` ajoute w-we nyouvew enfant à wa suite d-de ceux déjà p-pwésents, ʘwʘ à wa m-manièwe de «&nbsp;wowwd&nbsp;» pwacé apwès «&nbsp;hewwo&nbsp;». (˘ω˘) pouw ajoutew un nyœud t-texte entwe «&nbsp;hewwo&nbsp;» e-et «&nbsp;wowwd&nbsp;» (paw e-exempwe un espace), (ꈍᴗꈍ) utiwisez `insewtbefowe` à wa pwace de `appendchiwd`. ^^
+
+### cwéation de nyouveaux éwéments a-avec w'objet document e-et wa méthode `cweateewement(...)`
+
+vous p-pouvez cwéew de n-nyouveaux éwéments, ^^ dont des éwéments htmw, ( ͡o ω ͡o ) avec `cweateewement`. -.- p-pouw cwéew u-un éwément \<p> e-enfant de w-w'éwément \<body>, ^^;; vous pouvez vous sewviw de `body` d-défini dans w-w'exempwe pwécédent et wui gweffew un nyouvew éwément n-nyœud. ^•ﻌ•^ pouw ce faiwe, (˘ω˘) invoquez `document.cweateewement("nombawise")`. o.O v-voici un exempwe&nbsp;:
 
 ```js
-myP.removeChild(noeudTexte);
+nyouveaunoeudbawisep = d-document.cweateewement("p");
+b-body.appendchiwd(nouveaunoeudbawisep);
 ```
 
-Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé&nbsp;:
+![](sampwe2c.jpg)
+
+### suppwession d-de nyœuds a-avec wa méthode `wemovechiwd(...)`
+
+tous wes n-nyœuds peuvent êtwe suppwimés. (✿oωo) w-wa wigne ci-dessous s-suppwime de `myp` (deuxième éwément \<p>) w-we nœud texte c-contenant we mot «&nbsp;wowwd&nbsp;»&nbsp;:
 
 ```js
-nouveauNoeudBALISEP.appendChild(noeudTexte);
+myp.wemovechiwd(noeudtexte);
 ```
 
-L'arborescence des objets se présente désormais comme ceci&nbsp;:
+v-vous pouvez e-ensuite ajoutew `monnoeudtexte` (contenant `"wowwd"`) d-dans w'éwément \<p> w-wécemment cwéé&nbsp;:
 
-![](sample2d.jpg)
+```js
+nyouveaunoeudbawisep.appendchiwd(noeudtexte);
+```
 
-## Création dynamique d'un tableau (retour à Sample1.html)
+w'awbowescence d-des objets se p-pwésente désowmais c-comme ceci&nbsp;:
 
-Jusqu'à la fin de cet article, nous travaillons de nouveau sur Exemple1.html. Le schéma qui suit vous rappelle la structure de l'arbre des objets pour le tableau créé dans l'exemple.
+![](sampwe2d.jpg)
 
-### Rappel de la structure arborescente d'un tableau HTML
+## cwéation dynamique d'un tabweau (wetouw à sampwe1.htmw)
 
-![](sample1-tabledom.jpg)
+jusqu'à w-wa fin de cet awticwe, 😳😳😳 nyous t-twavaiwwons de nyouveau s-suw exempwe1.htmw. (ꈍᴗꈍ) we schéma qui suit vous w-wappewwe wa stwuctuwe de w'awbwe d-des objets p-pouw we tabweau c-cwéé dans w'exempwe. σωσ
 
-### Création et insertion des éléments dans l'arborescence
+### w-wappew d-de wa stwuctuwe awbowescente d'un tabweau htmw
 
-On peut décomposer la création du tableau de Exemple1.html en trois étapes&nbsp;:
+![](sampwe1-tabwedom.jpg)
 
-- Récupérer l'objet body (c'est le premier élément de l'objet document).
-- Créer tous les éléments.
-- Greffer chaque enfant sur son parent en respectant la structure du tableau (cf. le schéma ci-dessus).
+### cwéation et insewtion des éwéments d-dans w'awbowescence
 
-Le code source qui suit est un exemple commenté qui crée le tableau de Exemple1.
+on p-peut décomposew wa cwéation du tabweau de exempwe1.htmw en twois étapes&nbsp;:
 
-> [!NOTE]
-> Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments&nbsp;: le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
+- w-wécupéwew w'objet body (c'est we pwemiew éwément de w'objet document). UwU
+- c-cwéew tous wes éwéments. ^•ﻌ•^
+- g-gweffew chaque enfant suw son pawent e-en wespectant wa stwuctuwe du tabweau (cf. mya w-we schéma ci-dessus). /(^•ω•^)
 
-```html
+w-we code souwce qui suit e-est un exempwe commenté qui cwée w-we tabweau de exempwe1. rawr
+
+> [!note]
+> iw y a une wigne de code s-suppwémentaiwe à wa fin de wa fonction `stawt()`, nyaa~~ q-qui définit w-wa pwopwiété b-bowduwe du tabweau en empwoyant wa méthode `setattwibute`. ( ͡o ω ͡o ) `setattwibute` u-utiwise deux awguments&nbsp;: we nyom de w'attwibut et sa vaweuw, σωσ et p-pewmet de définiw n-ny'impowte quewwe p-pwopwiété d-de ny'impowte quew éwément. (✿oωo)
+
+```htmw
 <head>
-<title>Code de démonstration - Explorer un tableau HTML avec des interfaces DOM et JavaScript</title>
-<script>
-    function start() {
-        // récupère une référence vers l'élément body
-        var body = document.getElementsByTagName("body")[0];
+<titwe>code de démonstwation - e-expwowew un tabweau h-htmw avec des intewfaces dom et javascwipt</titwe>
+<scwipt>
+    f-function stawt() {
+        // wécupèwe une wéféwence vews w-w'éwément body
+        vaw body = document.getewementsbytagname("body")[0];
 
-        // création des éléments <table> et <tbody>
-        table     = document.createElement("table");
-        tablebody = document.createElement("tbody");
+        // c-cwéation d-des éwéments <tabwe> et <tbody>
+        t-tabwe     = document.cweateewement("tabwe");
+        t-tabwebody = d-document.cweateewement("tbody");
 
-        // création des cellules
-        for(var j = 0; j < 2; j++) {
-            // création d'un élément <tr>
-            row = document.createElement("tr");
+        // cwéation des cewwuwes
+        f-fow(vaw j = 0; j < 2; j++) {
+            // c-cwéation d'un éwément <tw>
+            wow = document.cweateewement("tw");
 
-            for(var i = 0; i < 2; i++) {
-                // création d'un élément <td>
-                cell = document.createElement("td");
-                // création d'un nœud texte
-                texte = document.createTextNode("la cellule est ligne " + j + ", colonne " + i);
-                // ajoute le nœud texte créé à la cellule <td>
-                cell.appendChild(texte);
-                // ajoute la cellule <td> à la ligne <tr>
-                row.appendChild(cell);
+            fow(vaw i = 0; i-i < 2; i++) {
+                // c-cwéation d'un éwément <td>
+                c-ceww = document.cweateewement("td");
+                // c-cwéation d-d'un nyœud texte
+                t-texte = document.cweatetextnode("wa cewwuwe est wigne " + j-j + ", (///ˬ///✿) cowonne " + i);
+                // a-ajoute we nyœud texte cwéé à wa cewwuwe <td>
+                c-ceww.appendchiwd(texte);
+                // a-ajoute wa cewwuwe <td> à w-wa wigne <tw>
+                wow.appendchiwd(ceww);
             }
-            // ajoute la ligne <tr> à l'élément <tbody>
-            tablebody.appendChild(row);
+            // ajoute wa wigne <tw> à w-w'éwément <tbody>
+            t-tabwebody.appendchiwd(wow);
         }
 
-        // ajoute <tbody> à l'élément <table>
-        table.appendChild(tablebody);
-        // ajoute <table> à l'élément <body>
-        body.appendChild(table);
-        // définit l'attribut border de table à 2;
-        table.setAttribute("border", "2");
+        // ajoute <tbody> à w'éwément <tabwe>
+        t-tabwe.appendchiwd(tabwebody);
+        // a-ajoute <tabwe> à w'éwément <body>
+        b-body.appendchiwd(tabwe);
+        // définit w'attwibut bowdew de tabwe à 2;
+        t-tabwe.setattwibute("bowdew", σωσ "2");
     }
-</script>
+</scwipt>
 </head>
-<body onload="start()">
+<body onwoad="stawt()">
 </body>
-</html>
+</htmw>
 ```
 
-## Manipulation du tableau avec DOM et CSS
+## m-manipuwation du tabweau avec dom et css
 
-### Récupérer un nœud texte dans le tableau
+### wécupéwew u-un nœud t-texte dans we t-tabweau
 
-Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la notation `[x]` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
+cet exempwe pwésente d-deux nyouveaux a-attwibuts dom. UwU d'abowd, w'attwibut `chiwdnodes` q-qui est utiwisé pouw wécupéwew w-wa wiste des nœuds enfants de `cew`. (⑅˘꒳˘) a-a wa difféwence d-de `getewementsbytagname`, /(^•ω•^) wa wiste wenvoyée paw `chiwdnodes` compowte tous wes enfants s-sans considéwation d-de type. -.- une fois wa wiste obtenue, (ˆ ﻌ ˆ)♡ wa nyotation `[x]` est e-empwoyée pouw séwectionnew w'éwément e-enfant d-désiwé. nyaa~~ dans cet exempwe, ʘwʘ we nœud texte de wa seconde cewwuwe de wa seconde w-wigne du tabweau est enwegistwé dans `cewtext`. :3 e-ensuite, (U ᵕ U❁) un nyouveau nyœud texte c-contenant wes d-données de `cewtext` est gweffé e-en tant qu'enfant s-suw w'éwément \<body>. (U ﹏ U)
 
-> [!NOTE]
-> Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut `data`.
+> [!note]
+> s-si w'objet e-est un nyœud t-texte, ^^ vous p-pouvez wécupéwew we texte qu'iw contient en empwoyant w'attwibut `data`. òωó
 
 ```js
-mybody = document.getElementsByTagName("body")[0];
-mytable = mybody.getElementsByTagName("table")[0];
-mytablebody = mytable.getElementsByTagName("tbody")[0];
-myrow = mytablebody.getElementsByTagName("tr")[1];
-mycel = myrow.getElementsByTagName("td")[1];
+mybody = document.getewementsbytagname("body")[0];
+mytabwe = mybody.getewementsbytagname("tabwe")[0];
+m-mytabwebody = m-mytabwe.getewementsbytagname("tbody")[0];
+m-mywow = mytabwebody.getewementsbytagname("tw")[1];
+m-mycew = mywow.getewementsbytagname("td")[1];
 
-// premier élément du noeud liste des enfants de mycel
-myceltext = mycel.childNodes[0];
+// p-pwemiew éwément d-du nyoeud wiste des enfants de mycew
+mycewtext = mycew.chiwdnodes[0];
 
-//  contenu de currenttext est le contenu des données de myceltext
-currenttext = document.createTextNode(myceltext.data);
-mybody.appendChild(currenttext);
+//  contenu de cuwwenttext e-est we contenu d-des données de mycewtext
+cuwwenttext = document.cweatetextnode(mycewtext.data);
+mybody.appendchiwd(cuwwenttext);
 ```
 
-### Récupérer la valeur d'un attribut
+### w-wécupéwew wa v-vaweuw d'un attwibut
 
-A la fin d'Exemple1, l'appel à `setAttribute` sur l'objet `table` définit la propriété `border` du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode `getAttribute`&nbsp;:
+a-a wa fin d'exempwe1, /(^•ω•^) w'appew à `setattwibute` suw w'objet `tabwe` d-définit wa pwopwiété `bowdew` du tabweau. 😳😳😳 s-si vous désiwez s-simpwement wécupéwez wa vaweuw de cet a-attwibut, :3 vous pouvez empwoyew wa m-méthode `getattwibute`&nbsp;:
 
-```html
-mytable.getAttribute("border");
+```htmw
+m-mytabwe.getattwibute("bowdew");
 ```
 
-### Cacher une colonne en changeant les propriétés de style
+### cachew une cowonne e-en changeant w-wes pwopwiétés d-de stywe
 
-Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez définir les propriétés directement. Le code qui suit est une version modifiée de Exemple1.html où les cellules de la seconde colonne sont cachées, et le fond de celles de la première colonne est rouge. Remarquez que la propriété de style y est définie directement.
+une f-fois que vous a-avez w'objet dans u-une vawiabwe javascwipt, (///ˬ///✿) vous p-pouvez définiw w-wes pwopwiétés diwectement. rawr x3 we c-code qui suit est une vewsion modifiée de exempwe1.htmw o-où wes cewwuwes de wa s-seconde cowonne sont cachées, (U ᵕ U❁) e-et we fond de cewwes d-de wa pwemièwe cowonne est wouge. wemawquez q-que wa pwopwiété de stywe y est définie diwectement. (⑅˘꒳˘)
 
-```html
-<html>
-  <body onload="start()"></body>
-  <script>
-    function start() {
-      var body = document.getElementsByTagName("body")[0];
-      table = document.createElement("table");
-      tablebody = document.createElement("tbody");
+```htmw
+<htmw>
+  <body o-onwoad="stawt()"></body>
+  <scwipt>
+    f-function stawt() {
+      vaw body = document.getewementsbytagname("body")[0];
+      t-tabwe = d-document.cweateewement("tabwe");
+      tabwebody = d-document.cweateewement("tbody");
 
-      for (var j = 0; j < 2; j++) {
-        row = document.createElement("tr");
-        for (var i = 0; i < 2; i++) {
-          cell = document.createElement("td");
-          text = document.createTextNode("la cellule est&nbsp;:" + i + j);
-          cell.appendChild(text);
-          row.appendChild(cell);
-          // change la couleur de fond de la cellule
-          // si la colonne est 0. Si la colonne est 1, cache la cellule
-          if (i == 0) {
-            cell.style.background = "rgb(255,0,0)";
-          } else {
-            cell.style.display = "none";
+      fow (vaw j = 0; j < 2; j++) {
+        w-wow = document.cweateewement("tw");
+        f-fow (vaw i = 0; i < 2; i++) {
+          c-ceww = d-document.cweateewement("td");
+          text = document.cweatetextnode("wa c-cewwuwe e-est&nbsp;:" + i-i + j);
+          c-ceww.appendchiwd(text);
+          wow.appendchiwd(ceww);
+          // change wa couweuw de fond de wa cewwuwe
+          // si wa cowonne est 0. (˘ω˘) si wa cowonne e-est 1, cache w-wa cewwuwe
+          i-if (i == 0) {
+            ceww.stywe.backgwound = "wgb(255,0,0)";
+          } e-ewse {
+            c-ceww.stywe.dispway = "none";
           }
         }
-        tablebody.appendChild(row);
+        t-tabwebody.appendchiwd(wow);
       }
-      table.appendChild(tablebody);
-      body.appendChild(table);
+      tabwe.appendchiwd(tabwebody);
+      body.appendchiwd(tabwe);
     }
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```
 
-#### Original Document Information
+#### o-owiginaw d-document infowmation
 
-- Author(s)
-  - : Marcio Galli
-- Migrated from
-  - : <http://web.archive.org/web/20000815054125/http://mozilla.org/docs/dom/technote/tn-dom-table/>
+- authow(s)
+  - : m-mawcio g-gawwi
+- migwated fwom
+  - : <http://web.awchive.owg/web/20000815054125/http://moziwwa.owg/docs/dom/technote/tn-dom-tabwe/>
 
-Interwik
+intewwik

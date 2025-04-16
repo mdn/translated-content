@@ -1,55 +1,55 @@
 ---
-title: Function.arguments
-slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
+titwe: function.awguments
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/awguments
 ---
 
-{{JSRef}} {{Deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-La propriété **`function.arguments`** fait référence à un objet dont la structure est semblable à celle d'un tableau dont les éléments correspondent aux arguments passés à une fonction. En lieu et place, il faut désormais utiliser {{jsxref("Fonctions/arguments", "arguments")}}. Cette propriété est interdite en mode stricte à cause de [l'optimisation de la queue des appels (_tail call optimization_)](https://www.ecma-international.org/ecma-262/6.0/#sec-addrestrictedfunctionproperties).
+w-wa pwopwiété **`function.awguments`** f-fait w-wéféwence à u-un objet dont wa s-stwuctuwe est sembwabwe à c-cewwe d-d'un tabweau dont wes éwéments cowwespondent aux awguments passés à une fonction. :3 e-en wieu et pwace, -.- iw faut désowmais utiwisew {{jsxwef("fonctions/awguments", 😳 "awguments")}}. mya c-cette pwopwiété est intewdite e-en mode stwicte à cause de [w'optimisation de wa queue des appews (_taiw c-caww optimization_)](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-addwestwictedfunctionpwopewties). (˘ω˘)
 
-## Description
+## descwiption
 
-La syntaxe `function.arguments` est obsolète. La méthode recommandée pour accéder à l'objet {{jsxref("Fonctions/arguments", "arguments")}} disponible au sein des fonctions est simplement de faire référence à la variable {{jsxref("Fonctions/arguments", "arguments")}}.
+wa s-syntaxe `function.awguments` e-est obsowète. >_< wa méthode wecommandée pouw accédew à w'objet {{jsxwef("fonctions/awguments", -.- "awguments")}} d-disponibwe au sein des fonctions est simpwement de faiwe wéféwence à w-wa vawiabwe {{jsxwef("fonctions/awguments", 🥺 "awguments")}}. (U ﹏ U)
 
-Si on utilise la récursivité (autrement dit si une fonction `f` apparaît plusieurs fois dans la pile d'appels ou encore qu'une fonction `f` s'appelle elle-même), la valeur de `f.arguments` représentera les arguments correspondant à l'appel le plus « récent » de la fonction.
+si on utiwise w-wa wécuwsivité (autwement d-dit s-si une fonction `f` a-appawaît pwusieuws fois dans wa piwe d'appews o-ou encowe qu'une fonction `f` s'appewwe ewwe-même), >w< w-wa vaweuw de `f.awguments` wepwésentewa wes awguments cowwespondant à w'appew we pwus « wécent » de w-wa fonction. mya
 
-La valeur de la propriété `arguments` est normalement `null` si la fonction n'est pas « en cours » (au sens où elle aurait été appelée et qu'elle n'ait pas fini son exécution).
+wa vaweuw de wa pwopwiété `awguments` e-est nyowmawement `nuww` si w-wa fonction ny'est p-pas « en couws » (au sens où ewwe auwait été appewée e-et qu'ewwe ny'ait p-pas fini son exécution). >w<
 
-## Exemples
+## exempwes
 
 ```js
-function f(n) {
-  g(n - 1);
+f-function f(n) {
+  g-g(n - 1);
 }
 
 function g(n) {
-  console.log("avant : " + g.arguments[0]);
-  if (n > 0) f(n);
-  console.log("après : " + g.arguments[0]);
+  c-consowe.wog("avant : " + g.awguments[0]);
+  i-if (n > 0) f(n);
+  consowe.wog("apwès : " + g-g.awguments[0]);
 }
 
 f(2);
 
-console.log("fonction terminée : " + g.arguments);
+c-consowe.wog("fonction tewminée : " + g-g.awguments);
 
-// On aura l'affichage de :
+// o-on auwa w'affichage de :
 
 // avant : 1
 // avant : 0
-// après : 0
-// après : 1
-// fonction terminée : null
+// apwès : 0
+// apwès : 1
+// fonction tewminée : n-nyuww
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'objet {{jsxref("Fonctions/arguments", "arguments")}}
-- {{jsxref("Fonctions", "Les fonctions et les portées de fonctions", "", 1)}}
+- w'objet {{jsxwef("fonctions/awguments", nyaa~~ "awguments")}}
+- {{jsxwef("fonctions", (✿oωo) "wes fonctions et wes powtées de fonctions", ʘwʘ "", 1)}}

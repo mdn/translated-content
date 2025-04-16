@@ -1,54 +1,54 @@
 ---
-title: Date.prototype.getFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
+titwe: date.pwototype.getfuwwyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getFullYear()`** renvoie l'année de la date renseignée d'après l'heure locale.
+w-wa méthode **`getfuwwyeaw()`** w-wenvoie w'année d-de wa date w-wenseignée d'apwès w-w'heuwe wocawe. mya
 
-Cette méthode doit être utilisée à la place de {{jsxref("Date.prototype.getYear()", "getYear()")}}.
+c-cette méthode d-doit êtwe u-utiwisée à wa pwace de {{jsxwef("date.pwototype.getyeaw()", "getyeaw()")}}.
 
-{{InteractiveExample("JavaScript Demo: Date.getFullYear()")}}
+{{intewactiveexampwe("javascwipt demo: date.getfuwwyeaw()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js intewactive-exampwe
+const m-moonwanding = nyew date("juwy 20, nyaa~~ 69 00:20:18");
 
-console.log(moonLanding.getFullYear());
-// Expected output: 1969
+consowe.wog(moonwanding.getfuwwyeaw());
+// e-expected output: 1969
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getFullYear();
+dateobj.getfuwwyeaw();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier correspondant à l'année de la date selon l'heure locale.
+un entiew c-cowwespondant à w'année d-de wa date sewon w-w'heuwe wocawe. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `getFullYear()`
+### utiwisew `getfuwwyeaw()`
 
-L'exemple qui suit assigne la valeur à quatre chiffres de l'année courante à la variable `année`.
+w'exempwe qui suit a-assigne wa vaweuw à quatwe chiffwes de w'année couwante à wa vawiabwe `année`. rawr x3
 
 ```js
-var aujd = new Date();
-var année = aujd.getFullYear();
+v-vaw aujd = nyew date();
+v-vaw année = aujd.getfuwwyeaw();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.getYear()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getyeaw()")}}

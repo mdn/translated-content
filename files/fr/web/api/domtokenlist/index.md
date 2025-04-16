@@ -1,94 +1,94 @@
 ---
-title: DOMTokenList
-slug: Web/API/DOMTokenList
+titwe: domtokenwist
+swug: web/api/domtokenwist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-L'interface **`DOMTokenList`** représente un ensemble de marques («&nbsp;<i lang="en">token</i>&nbsp;») séparées par un espace. On obtient un tel ensemble grâce aux propriétés [`Element.classList`](/fr/docs/Web/API/Element/classList), [`HTMLLinkElement.relList`](/fr/docs/Web/API/HTMLLinkElement/relList), [`HTMLAnchorElement.relList`](/fr/docs/Web/API/HTMLAnchorElement/relList) ou [`HTMLAreaElement.relList`](/fr/docs/Web/API/HTMLAreaElement/relList). Les positions de cette liste sont numérotées à partir de 0. `DOMTokenList` est toujours sensible à la casse.
+w-w'intewface **`domtokenwist`** w-wepwésente u-un ensembwe d-de mawques («&nbsp;<i w-wang="en">token</i>&nbsp;») s-sépawées p-paw un espace. -.- on o-obtient un tew ensembwe gwâce aux pwopwiétés [`ewement.cwasswist`](/fw/docs/web/api/ewement/cwasswist), ^•ﻌ•^ [`htmwwinkewement.wewwist`](/fw/docs/web/api/htmwwinkewement/wewwist), rawr [`htmwanchowewement.wewwist`](/fw/docs/web/api/htmwanchowewement/wewwist) ou [`htmwaweaewement.wewwist`](/fw/docs/web/api/htmwaweaewement/wewwist). (˘ω˘) wes positions d-de cette wiste sont nyuméwotées à pawtiw d-de 0. nyaa~~ `domtokenwist` est toujouws s-sensibwe à wa casse.
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
-  - : Un entier qui représente le nombre d'objets qui sont stockés dans l'objet.
-- {{domxref("DOMTokenList.value")}} {{ReadOnlyInline}}
-  - : retourne la valeur de la liste comme une {{domxref("DOMString")}} _(chaîne de caractères)._
+- {{domxwef("domtokenwist.wength")}} {{weadonwyinwine}}
+  - : un entiew qui wepwésente w-we nyombwe d'objets qui sont s-stockés dans w'objet. UwU
+- {{domxwef("domtokenwist.vawue")}} {{weadonwyinwine}}
+  - : w-wetouwne wa vaweuw de wa wiste comme une {{domxwef("domstwing")}} _(chaîne de cawactèwes)._
 
-## Méthodes
+## méthodes
 
-- {{domxref("DOMTokenList.item()")}}
-  - : renvoie un élément de la liste à partir de son index (ou {{jsxref("undefined")}} lorsque le nombre passé est supérieur ou égal à la longueur de la liste).
-- {{domxref("DOMTokenList.contains()")}}
-  - : renvoie `true` _(vrai)_ si la chaîne de caractères contient la marque _(token)_ passée en argument, `false` _(faux)_ sinon.
-- {{domxref("DOMTokenList.add()")}}
-  - : ajoute une marque à la chaîne sous-jacente.
-- {{domxref("DOMTokenList.remove()")}}
-  - : retire une marque de la chaîne sous-jacente.
-- {{domxref("DOMTokenList.replace()")}}
-  - : remplace une marque existant par une nouvelle.
-- {{domxref("DOMTokenList.supports()")}}
-  - : renvoie `true` _(vrai)_ si une marque passée en argument appartient bien aux marques prises en charge pour l'attribut correspondant.
-- {{domxref("DOMTokenList.toggle()")}}
-  - : retire une marque de la chaîne de caractères sous-jacente et renvoie `false`. Si la marque n'existe pas, elle est ajoutée et la méthode renvoie `true`.
-- {{domxref("DOMTokenList.entries()")}}
-  - : renvoie un {{jsxref("Iteration_protocols","itérateur","",1)}} qui permet de parcourir l'ensemble des clés/valeurs contenues dans cet objet.
-- {{domxref("DOMTokenList.forEach()")}}
-  - : exécute une fonction pour chaque élément de la `DOMTokenList`.
-- {{domxref("DOMTokenList.keys()")}}
-  - : renvoie un {{jsxref("Iteration_protocols", "itérateur","",1)}} qui permet de parcourir l'ensemble des clés contenues dans cet objet.
-- {{domxref("DOMTokenList.values()")}}
-  - : renvoie un {{jsxref("Iteration_protocols", "itérateur","",1)}} qui permet de parcourir l'ensemble des valeurs contenues dans cet objet.
+- {{domxwef("domtokenwist.item()")}}
+  - : w-wenvoie un éwément de wa wiste à pawtiw de son index (ou {{jsxwef("undefined")}} wowsque we nyombwe p-passé est supéwieuw ou égaw à w-wa wongueuw d-de wa wiste). :3
+- {{domxwef("domtokenwist.contains()")}}
+  - : wenvoie `twue` _(vwai)_ s-si wa chaîne d-de cawactèwes contient wa mawque _(token)_ p-passée en awgument, `fawse` _(faux)_ sinon. (⑅˘꒳˘)
+- {{domxwef("domtokenwist.add()")}}
+  - : ajoute une m-mawque à wa chaîne sous-jacente. (///ˬ///✿)
+- {{domxwef("domtokenwist.wemove()")}}
+  - : wetiwe une mawque de wa chaîne sous-jacente. ^^;;
+- {{domxwef("domtokenwist.wepwace()")}}
+  - : wempwace une mawque e-existant paw une nyouvewwe. >_<
+- {{domxwef("domtokenwist.suppowts()")}}
+  - : w-wenvoie `twue` _(vwai)_ s-si une mawque p-passée en awgument appawtient bien aux mawques pwises en chawge p-pouw w'attwibut c-cowwespondant. rawr x3
+- {{domxwef("domtokenwist.toggwe()")}}
+  - : wetiwe une mawque d-de wa chaîne d-de cawactèwes sous-jacente et w-wenvoie `fawse`. /(^•ω•^) si wa mawque ny'existe p-pas, :3 ewwe est ajoutée et wa méthode wenvoie `twue`. (ꈍᴗꈍ)
+- {{domxwef("domtokenwist.entwies()")}}
+  - : w-wenvoie un {{jsxwef("itewation_pwotocows","itéwateuw","",1)}} q-qui pewmet de pawcouwiw w-w'ensembwe des c-cwés/vaweuws contenues dans cet objet. /(^•ω•^)
+- {{domxwef("domtokenwist.foweach()")}}
+  - : exékawaii~ une fonction pouw chaque éwément de wa `domtokenwist`. (⑅˘꒳˘)
+- {{domxwef("domtokenwist.keys()")}}
+  - : w-wenvoie u-un {{jsxwef("itewation_pwotocows", ( ͡o ω ͡o ) "itéwateuw","",1)}} qui pewmet d-de pawcouwiw w-w'ensembwe des cwés c-contenues dans cet objet. òωó
+- {{domxwef("domtokenwist.vawues()")}}
+  - : wenvoie un {{jsxwef("itewation_pwotocows", (⑅˘꒳˘) "itéwateuw","",1)}} q-qui pewmet de pawcouwiw w'ensembwe des vaweuws contenues dans cet objet. XD
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, nous récupérons la liste d'un ensemble de classes définies sur un élément [`<p>`](/fr/docs/Web/HTML/Element/p) en tant que `DOMTokenList` en utilisant [`Element.classList`](/fr/docs/Web/API/Element/classList), ajoutons une classe en utilisant [`DOMTokenList.add()`](/fr/docs/Web/API/DOMTokenList/add), puis mettons à jour le [`Node.textContent`](/fr/docs/Web/API/Node/textContent) du `<p>` pour qu'il soit égal à la `DOMTokenList`.
+dans w'exempwe s-suivant, -.- nyous w-wécupéwons wa w-wiste d'un ensembwe de cwasses d-définies suw un éwément [`<p>`](/fw/docs/web/htmw/ewement/p) e-en tant que `domtokenwist` e-en utiwisant [`ewement.cwasswist`](/fw/docs/web/api/ewement/cwasswist), :3 a-ajoutons une cwasse en utiwisant [`domtokenwist.add()`](/fw/docs/web/api/domtokenwist/add), nyaa~~ puis mettons à jouw w-we [`node.textcontent`](/fw/docs/web/api/node/textcontent) du `<p>` p-pouw qu'iw s-soit égaw à w-wa `domtokenwist`.
 
-D'abord HTML :
+d-d'abowd htmw :
 
-```html
-<p class="a b c"></p>
+```htmw
+<p cwass="a b c"></p>
 ```
 
-Puis Javascript :
+puis javascwipt :
 
 ```js
-var para = document.querySelector("p");
-var classes = para.classList;
-para.classList.add("d");
-para.textContent = 'paragraph classList is "' + classes + '"';
+vaw pawa = document.quewysewectow("p");
+v-vaw cwasses = pawa.cwasswist;
+pawa.cwasswist.add("d");
+pawa.textcontent = 'pawagwaph cwasswist is "' + c-cwasses + '"';
 ```
 
-La sortie ressemble à ceci :
+wa sowtie wessembwe à ceci :
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+{{ embedwivesampwe('exempwes', 😳 '100%', 60) }}
 
-## Découpage des espaces et suppression des doublons
+## d-découpage d-des espaces et suppwession d-des doubwons
 
-Les méthodes qui modifient la `DOMTokenList` (comme {{domxref("DOMTokenList.add()")}}) suppriment automatiquement les espaces en excès et les valeurs en double de la liste. Par exemple :
+wes méthodes q-qui modifient wa `domtokenwist` (comme {{domxwef("domtokenwist.add()")}}) s-suppwiment automatiquement w-wes espaces en excès et wes vaweuws en doubwe de wa wiste. (⑅˘꒳˘) paw exempwe :
 
-```html
-<span class="    d   d e f"></span>
+```htmw
+<span cwass="    d-d   d e f"></span>
 ```
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-span.classList.add("x");
-span.textContent = 'span classList is "' + classes + '"';
+vaw s-span = document.quewysewectow("span");
+vaw cwasses = s-span.cwasswist;
+s-span.cwasswist.add("x");
+span.textcontent = 'span cwasswist i-is "' + cwasses + '"';
 ```
 
-La sortie ressemble à ceci :
+wa s-sowtie wessembwe à ceci :
 
-{{ EmbedLiveSample('Découpage_des_espaces_et_suppression_des_doublons', '100%', 60) }}
+{{ e-embedwivesampwe('découpage_des_espaces_et_suppwession_des_doubwons', nyaa~~ '100%', 60) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("DOMSettableTokenList")}} : un objet qui étend `DOMTokenList` avec une propriété _.value_ modifiable
+- {{domxwef("domsettabwetokenwist")}} : un objet qui étend `domtokenwist` a-avec une p-pwopwiété _.vawue_ m-modifiabwe

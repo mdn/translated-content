@@ -1,35 +1,35 @@
 ---
-title: performance.memory
-slug: Web/API/Performance/memory
+titwe: pewfowmance.memowy
+swug: w-web/api/pewfowmance/memowy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{Non-standard_Header}}
+{{non-standawd_headew}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-timingInfo = performance.memory;
+t-timinginfo = p-pewfowmance.memowy;
 ```
 
-## Attributs
+## a-attwibuts
 
-- `jsHeapSizeLimit`
-  - : La taille maximale du tas, en octets, qui est disponible pour le contexte.
-- `totalJSHeapSize`
-  - : La taille totale du répertoire alloué, en octets.
-- usedJSHeapSize
-  - : Le segment actuellement actif du répertoire JS, en octets.
+- `jsheapsizewimit`
+  - : w-wa taiwwe m-maximawe du tas, 😳 e-en octets, qui est disponibwe pouw we contexte. XD
+- `totawjsheapsize`
+  - : wa taiwwe totawe du w-wépewtoiwe awwoué, :3 en octets. 😳😳😳
+- usedjsheapsize
+  - : w-we segment actuewwement a-actif du wépewtoiwe js, -.- en octets. ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-Aucune
+aucune
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'interface {{domxref("Performance")}} à laquelle il appartient.
+- w-w'intewface {{domxwef("pewfowmance")}} à waquewwe iw appawtient.

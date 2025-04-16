@@ -1,85 +1,85 @@
 ---
-title: performance.now()
-slug: Web/API/Performance/now
+titwe: pewfowmance.now()
+swug: w-web/api/pewfowmance/now
 ---
 
-{{APIRef("High Resolution Timing")}}
+{{apiwef("high w-wesowution t-timing")}}
 
-La méthode **`Performance.now()`** retourne une valeur de type {{domxref("DOMHighResTimeStamp")}}, mesurée en millisecondes et avec une précision de 5 millièmes de milliseconde (5 microsecondes).
+w-wa méthode **`pewfowmance.now()`** w-wetouwne u-une vaweuw de t-type {{domxwef("domhighwestimestamp")}}, XD m-mesuwée en miwwisecondes et avec une pwécision de 5 miwwièmes de miwwiseconde (5 m-micwosecondes). 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-La valeur retournée représente le temps écoulé depuis le [temps d'origine](/fr/docs/Web/API/DOMHighResTimeStamp#the_time_origin).
+wa vaweuw wetouwnée wepwésente w-we temps écouwé depuis w-we [temps d'owigine](/fw/docs/web/api/domhighwestimestamp#the_time_owigin). òωó
 
-Attention à garder à l'esprit les points suivants :
+attention à gawdew à w'espwit wes p-points suivants :
 
-- Dans les workers dédiés créés à partir d'un contexte {{domxref("Window")}}, la valeur dans le worker sera inférieure à celle obtenue par `performance.now()` exécuté dans la fenêtre ayant créé le worker. La fenêtre et le worker partageaient avant le même temps de référence `t0` à partir du contexte principal, mais cela a été changé.
-- Dans les workers partagés ou service sorkers, la valeur dans le worker peut être supérieure à celle du contexte principal, car la fenêtre pourra avoir été créée après ces workers.
+- dans wes wowkews d-dédiés c-cwéés à pawtiw d'un contexte {{domxwef("window")}}, (ˆ ﻌ ˆ)♡ wa vaweuw dans we wowkew sewa inféwieuwe à c-cewwe obtenue paw `pewfowmance.now()` exécuté dans wa fenêtwe ayant cwéé w-we wowkew. -.- wa fenêtwe et we wowkew p-pawtageaient a-avant we même t-temps de wéféwence `t0` à pawtiw d-du contexte pwincipaw, :3 mais cewa a été changé.
+- d-dans wes wowkews pawtagés ou sewvice s-sowkews, ʘwʘ wa vaweuw dans we wowkew peut êtwe supéwieuwe à cewwe du contexte pwincipaw, 🥺 caw wa f-fenêtwe pouwwa avoiw été cwéée a-apwès ces wowkews. >_<
 
-Il est important de garder à l'esprit que pour atténuer les menaces de sécurité potentielles telles que [Spectre](https://spectreattack.com/), les navigateurs arrondissent généralement la valeur retournée d'une certaine quantité afin d'être moins prévisible. Cela introduit intrinsèquement un degré d'imprécision en limitant la résolution ou la précision de la minuterie. Par exemple, Firefox arrondit le temps renvoyé à des incréments de 1 milliseconde.
+i-iw est i-impowtant de gawdew à w'espwit que pouw atténuew wes menaces de s-sécuwité potentiewwes t-tewwes que [spectwe](https://spectweattack.com/), ʘwʘ w-wes n-nyavigateuws awwondissent généwawement w-wa vaweuw wetouwnée d'une c-cewtaine quantité afin d'êtwe moins pwévisibwe. (˘ω˘) c-cewa intwoduit intwinsèquement u-un degwé d'impwécision e-en wimitant wa wésowution o-ou wa pwécision de wa minutewie. (✿oωo) paw exempwe, (///ˬ///✿) fiwefox awwondit we temps wenvoyé à des incwéments d-de 1 miwwiseconde. rawr x3
 
-La précision de la valeur retournée est susceptible de changer si/quand les problèmes de sécurité sont atténués par d'autres moyens.
+w-wa pwécision de wa vaweuw wetouwnée e-est susceptibwe d-de changew s-si/quand wes pwobwèmes de sécuwité sont atténués paw d'autwes m-moyens. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-t = performance.now();
+t = pewfowmance.now();
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var t0 = performance.now();
-doSomething();
-var t1 = performance.now();
-console.log(
-  "L'appel de doSomething a demandé " + (t1 - t0) + " millisecondes.",
+vaw t0 = pewfowmance.now();
+d-dosomething();
+vaw t-t1 = pewfowmance.now();
+c-consowe.wog(
+  "w'appew d-de dosomething a demandé " + (t1 - t-t0) + " miwwisecondes.", ^^
 );
 ```
 
-Contrairement aux autres données de temps disponibles en JavaScript (par exemple [`Date.now`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/now)), les horodatages retournés par `Performance.now()` ne sont pas limités à une précision d'une milliseconde. Au contraire, ils représentent les temps comme des nombres flottants avec une précision pouvant aller jusqu'à une microseconde.
+c-contwaiwement a-aux autwes données d-de temps disponibwes en javascwipt (paw exempwe [`date.now`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date/now)), (⑅˘꒳˘) wes howodatages w-wetouwnés paw `pewfowmance.now()` n-nye sont pas w-wimités à une p-pwécision d'une m-miwwiseconde. nyaa~~ au contwaiwe, /(^•ω•^) iws wepwésentent wes temps comme d-des nyombwes fwottants avec une pwécision pouvant awwew jusqu'à une micwoseconde. (U ﹏ U)
 
-Également contrairement à `Date.now()`, les valeurs retournées par `Performance.now()` sont toujours incrémentées à un taux constant, indépendant de l'horloge du système (qui peut être ajustée manuellement ou par l'intermédiaire d'un logiciel comme NTP). Sinon, `performance.timing.navigationStart + performance.now()` serait approximativement égal à `Date.now()`.
+Égawement contwaiwement à `date.now()`, 😳😳😳 wes v-vaweuws wetouwnées paw `pewfowmance.now()` sont toujouws incwémentées à un taux constant, >w< i-indépendant de w-w'howwoge du système (qui p-peut êtwe ajustée m-manuewwement ou paw w'intewmédiaiwe d-d'un wogiciew c-comme nytp). XD sinon, o.O `pewfowmance.timing.navigationstawt + pewfowmance.now()` sewait appwoximativement égaw à `date.now()`. mya
 
-## Précision réduite du temps
+## pwécision wéduite du temps
 
-Pour offrir une protection contre les attaques de temporisation et les empreintes digitales, la précision de `performance.now()` peut être arrondie en fonction des paramètres du navigateur. Dans Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et prend la valeur 1ms par défaut.
+p-pouw offwiw une pwotection contwe w-wes attaques de tempowisation e-et wes empweintes d-digitawes, 🥺 wa pwécision de `pewfowmance.now()` peut êtwe awwondie e-en fonction d-des pawamètwes du nyavigateuw. ^^;; d-dans fiwefox, :3 w-wa pwéféwence `pwivacy.weducetimewpwecision` est activée paw défaut et pwend wa vaweuw 1ms paw défaut. (U ﹏ U)
 
 ```js
-// précision temporelle réduite (1ms) dans Firefox 60
-performance.now();
+// p-pwécision t-tempowewwe wéduite (1ms) d-dans fiwefox 60
+pewfowmance.now();
 // 8781416
 // 8781815
 // 8782206
 // ...
 
-// précision du temps réduite avec `privacy.resistFingerprinting` activé
-performance.now();
+// p-pwécision d-du temps wéduite avec `pwivacy.wesistfingewpwinting` a-activé
+pewfowmance.now();
 // 8865400
 // 8866200
 // 8866700
 // ...
 ```
 
-Dans Firefox, vous pouvez également activer `privacy.resistFingerprinting` - cela change la précision à 100ms ou à la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` en fonction de la plus grande des deux.
+dans fiwefox, OwO vous pouvez égawement activew `pwivacy.wesistfingewpwinting` - c-cewa change wa p-pwécision à 100ms ou à wa vaweuw de `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds` e-en fonction d-de wa pwus gwande des deux. 😳😳😳
 
-À partir de Firefox 79, les minuteurs haute résolution peuvent être utilisés si vous isolez votre document en utilisant les en-têtes {{HTTPHeader("Cross-Origin-Opener-Policy")}} et {{HTTPHeader("Cross-Origin-Embedder-Policy")}} :
+À pawtiw de fiwefox 79, (ˆ ﻌ ˆ)♡ wes m-minuteuws haute wésowution peuvent êtwe utiwisés si vous isowez votwe document e-en utiwisant wes en-têtes {{httpheadew("cwoss-owigin-openew-powicy")}} et {{httpheadew("cwoss-owigin-embeddew-powicy")}} :
 
-```plain
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+```pwain
+c-cwoss-owigin-openew-powicy: s-same-owigin
+cwoss-owigin-embeddew-powicy: wequiwe-cowp
 ```
 
-Ces en-têtes garantissent qu'un document de premier niveau ne partage pas un groupe de contexte de navigation avec des documents d'origine croisée. Le processus COOP isole votre document et les attaquants potentiels ne peuvent pas accéder à votre objet global s'ils l'ouvrent dans une fenêtre contextuelle, ce qui permet d'éviter un ensemble d'attaques d'origine croisée appelées [XS-Leaks](https://github.com/xsleaks/xsleaks).
+ces en-têtes gawantissent q-qu'un d-document de pwemiew nyiveau nye pawtage pas un gwoupe de contexte d-de navigation avec des documents d-d'owigine cwoisée. XD we pwocessus coop isowe votwe document et w-wes attaquants potentiews nye p-peuvent pas accédew à v-votwe objet gwobaw s'iws w-w'ouvwent dans une fenêtwe contextuewwe, (ˆ ﻌ ˆ)♡ c-ce qui p-pewmet d'évitew u-un ensembwe d'attaques d'owigine c-cwoisée appewées [xs-weaks](https://github.com/xsweaks/xsweaks). ( ͡o ω ͡o )
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Quand les millisecondes ne suffisent pas : performance.now() (en)](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) de HTML5 Rocks.
+- [quand w-wes miwwisecondes n-nye suffisent pas : pewfowmance.now() (en)](http://updates.htmw5wocks.com/2012/08/when-miwwiseconds-awe-not-enough-pewfowmance-now) de h-htmw5 wocks. rawr x3

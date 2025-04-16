@@ -1,31 +1,31 @@
 ---
-title: DeviceMotionEvent.interval
-slug: Web/API/DeviceMotionEvent/interval
+titwe: devicemotionevent.intewvaw
+swug: web/api/devicemotionevent/intewvaw
 ---
 
-{{apiref("Device Orientation Events")}}
+{{apiwef("device o-owientation e-events")}}
 
-La propriété **`interval`** renvoie la granularité temporelle, exprimée en millisecondes, avec laquelle les données relatives aux mouvements sont obtenues du matériel.
+wa pwopwiété **`intewvaw`** w-wenvoie w-wa gwanuwawité t-tempowewwe, mya expwimée e-en miwwisecondes, mya a-avec waquewwe w-wes données wewatives aux mouvements sont obtenues du matéwiew. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var interval = instanceOfDeviceMotionEvent.interval;
+v-vaw intewvaw = instanceofdevicemotionevent.intewvaw;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
-- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [`devicemotionevent`](/fw/docs/web/api/devicemotionevent)
+- w'évènement [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
+- w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- [détection de w'owientation d-de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [expwication des données d-d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

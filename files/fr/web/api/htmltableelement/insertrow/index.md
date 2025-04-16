@@ -1,69 +1,69 @@
 ---
-title: table.insertRow
-slug: Web/API/HTMLTableElement/insertRow
+titwe: tabwe.insewtwow
+swug: w-web/api/htmwtabweewement/insewtwow
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans la table et retourne une référence à la nouvelle ligne.
+w-wa méthode **`htmwtabweewement.insewtwow()`** insèwe u-une nyouvewwe w-wigne dans w-wa tabwe et wetouwne u-une wéféwence à w-wa nyouvewwe wigne. (U ﹏ U)
 
-## Syntaxe
-
-```js
-var ligne = HTMLTableElement.insertRow(optionnel indice = -1);
-```
-
-- [`HTMLTableElement`](/fr/docs/Web/API/HTMLTableElement) est une référence à un élément table HTML.
-- `indice` est l'indice de ligne de la nouvelle ligne.
-- `ligne` reçoit la référence à la nouvelle ligne. Une référence à un [HTMLTableRowElement](/fr/docs/Web/API/HTMLTableRowElement). Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `indice` est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa valeur sera -1 par défaut.
-- Si une table a plusieurs éléments `tbody`, par défaut, la nouvelle ligne est ajoutée dans le dernier `tbody`. Pour insérer la ligne dans un `tbody` particulier :
+## syntaxe
 
 ```js
-var tbody_particulier = document.getElementById(id_tbody);
-var ligne = tbody_particulier.insertRow(indice);
+vaw wigne = htmwtabweewement.insewtwow(optionnew indice = -1);
 ```
 
-## Exemple
+- [`htmwtabweewement`](/fw/docs/web/api/htmwtabweewement) e-est une wéféwence à un éwément t-tabwe htmw. 😳
+- `indice` est w'indice d-de wigne de wa nyouvewwe wigne. (ˆ ﻌ ˆ)♡
+- `wigne` weçoit wa wéféwence à wa nyouvewwe w-wigne. 😳😳😳 une wéféwence à u-un [htmwtabwewowewement](/fw/docs/web/api/htmwtabwewowewement). (U ﹏ U) s-si w'indice est -1 ou est égaw au nombwe de wignes, (///ˬ///✿) wa wigne est ajoutée comme d-dewnièwe wigne. si `indice` est pwus gwand que we nyombwe de wignes, 😳 une exception i-indexsizeewwow sewa généwée. 😳 s-si indice est o-omis, σωσ sa vaweuw s-sewa -1 paw défaut. rawr x3
+- s-si une tabwe a pwusieuws éwéments `tbody`, OwO paw défaut, /(^•ω•^) w-wa nyouvewwe wigne est ajoutée dans we dewniew `tbody`. 😳😳😳 p-pouw inséwew wa wigne dans un `tbody` pawticuwiew :
 
-```html
-<table id="TableA">
-  <tr>
-    <td>Ancienne ligne supérieure</td>
-  </tr>
-</table>
-<script type="text/javascript">
-  function ajouteLigne(tableID) {
-    // Récupération d'une référence à la table
-    var refTable = document.getElementById(tableID);
+```js
+vaw tbody_pawticuwiew = document.getewementbyid(id_tbody);
+v-vaw wigne = tbody_pawticuwiew.insewtwow(indice);
+```
 
-    // Insère une ligne dans la table à l'indice de ligne 0
-    var nouvelleLigne = refTable.insertRow(0);
+## e-exempwe
 
-    // Insère une cellule dans la ligne à l'indice 0
-    var nouvelleCellule = nouvelleLigne.insertCell(0);
+```htmw
+<tabwe i-id="tabwea">
+  <tw>
+    <td>ancienne w-wigne supéwieuwe</td>
+  </tw>
+</tabwe>
+<scwipt type="text/javascwipt">
+  function ajoutewigne(tabweid) {
+    // w-wécupéwation d-d'une wéféwence à wa t-tabwe
+    vaw w-weftabwe = document.getewementbyid(tabweid);
 
-    // Ajoute un nœud texte à la cellule
-    var nouveauTexte = document.createTextNode("Nouvelle ligne supérieure");
-    nouvelleCellule.appendChild(nouveauTexte);
+    // insèwe une w-wigne dans wa tabwe à w'indice d-de wigne 0
+    vaw nyouvewwewigne = weftabwe.insewtwow(0);
+
+    // i-insèwe une cewwuwe dans wa w-wigne à w'indice 0
+    vaw nyouvewwecewwuwe = nyouvewwewigne.insewtceww(0);
+
+    // a-ajoute un nyœud t-texte à wa cewwuwe
+    vaw nyouveautexte = document.cweatetextnode("nouvewwe wigne supéwieuwe");
+    nyouvewwecewwuwe.appendchiwd(nouveautexte);
   }
 
-  // Appelle ajouteLigne() avec l'ID d'une table
-  ajouteLigne("TableA");
-</script>
+  // appewwe ajoutewigne() a-avec w'id d-d'une tabwe
+  ajoutewigne("tabwea");
+</scwipt>
 ```
 
-Pour être valide dans un document HTML, un élément TR doit avoir au moins un élément TD.
+p-pouw êtwe v-vawide dans un d-document htmw, ( ͡o ω ͡o ) un éwément tw doit avoiw au moins un éwément t-td. >_<
 
-Remarquez que `insertRow` insère directement la ligne dans la table et renvoie une référence à la nouvelle ligne. La ligne n'a pas besoin d'être ajoutée séparement comme cela aurait été le cas si [`document.createElement()`](/fr/docs/Web/API/Document/createElement) avait été utilisé pour créer un nouvel élement TR.
+wemawquez que `insewtwow` insèwe diwectement wa wigne dans wa tabwe et wenvoie u-une wéféwence à wa nyouvewwe w-wigne. >w< wa w-wigne ny'a pas besoin d-d'êtwe ajoutée sépawement c-comme cewa auwait été w-we cas s-si [`document.cweateewement()`](/fw/docs/web/api/document/cweateewement) a-avait été utiwisé pouw cwéew un nyouvew éwement t-tw. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("HTMLTableRowElement.insertCell()")}}
+- {{domxwef("htmwtabwewowewement.insewtceww()")}}

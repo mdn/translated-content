@@ -1,70 +1,70 @@
 ---
-title: Intl.RelativeTimeFormat.supportedLocalesOf()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
+titwe: intw.wewativetimefowmat.suppowtedwocawesof()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/suppowtedwocawesof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.RelativeTimeFormat.supportedLocalesOf()`** renvoie un tableau contenant l'ensemble des locales, parmi celles fournies en argument, qui sont prises en charge pour le formatage internationalisé du temps relatif, sans avoir à utiliser la locale par défaut de l'environnement d'exécution.
+w-wa méthode **`intw.wewativetimefowmat.suppowtedwocawesof()`** wenvoie u-un tabweau c-contenant w'ensembwe d-des wocawes, ^^;; p-pawmi cewwes f-fouwnies en awgument, (✿oωo) q-qui sont p-pwises en chawge pouw we fowmatage intewnationawisé du temps wewatif, (U ﹏ U) sans avoiw à u-utiwisew wa wocawe paw défaut de w'enviwonnement d-d'exécution. -.-
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.supportedLocalesOf")}}
+{{intewactiveexampwe("javascwipt demo: intw.wewativetimefowmat.suppowtedwocawesof")}}
 
-```js interactive-example
-const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
-const options1 = { localeMatcher: "lookup" };
+```js i-intewactive-exampwe
+const wocawes1 = ["ban", ^•ﻌ•^ "id-u-co-pinyin", rawr "de-id"];
+const options1 = { wocawematchew: "wookup" };
 
-console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales1, options1));
-// Expected output: Array ["id-u-co-pinyin", "de-ID"]
-// (Note: the exact output may be browser-dependent)
+c-consowe.wog(intw.wewativetimefowmat.suppowtedwocawesof(wocawes1, (˘ω˘) options1));
+// e-expected o-output: awway ["id-u-co-pinyin", nyaa~~ "de-id"]
+// (note: the exact output may be bwowsew-dependent)
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Intl.RelativeTimeFormat.supportedLocalesOf(locales[, options])
+i-intw.wewativetimefowmat.suppowtedwocawesof(wocawes[, UwU options])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locales`
-  - : Un chaîne de caractères au format d'une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations sur le format de l'argument `locales`, voir la page {{jsxref("Intl", "Intl", "#L'identification_et_le_choix_de_la_locale")}}.
+- `wocawes`
+  - : un chaîne de cawactèwes au fowmat d'une bawise d-de wangue bcp 47 ou bien un tabweau d-de tewwes c-chaînes. :3 pouw pwus d-d'infowmations s-suw we fowmat de w'awgument `wocawes`, (⑅˘꒳˘) voiw wa p-page {{jsxwef("intw", (///ˬ///✿) "intw", "#w'identification_et_we_choix_de_wa_wocawe")}}. ^^;;
 - `options`
 
-  - : Paramètre optionnel, un objet pouvant avoir la propriété suivante :
+  - : pawamètwe optionnew, >_< un objet p-pouvant avoiw wa pwopwiété suivante :
 
-    - `localeMatcher`
-      - : L'algorithme de correspondance entre locales à utiliser. Les valeurs possibles sont "lookup" et "best fit". Pour plus d'informations sur ce sujet, voir la page {{jsxref("Intl", "Intl", "#Choix_de_la_locale")}}.
+    - `wocawematchew`
+      - : w'awgowithme de cowwespondance entwe w-wocawes à utiwisew. rawr x3 wes vaweuws p-possibwes sont "wookup" e-et "best f-fit". /(^•ω•^) pouw pwus d'infowmations suw ce sujet, :3 voiw wa page {{jsxwef("intw", (ꈍᴗꈍ) "intw", "#choix_de_wa_wocawe")}}. /(^•ω•^)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un tableau de chaînes de caractères qui représente un sous-ensemble des balises de langue qui sont prises en charge pour la mise en forme du temps relatif sans qu'il soit nécessaire d'utiliser la locale par défaut de l'environnement d'exécution.
+u-un tabweau de chaînes de c-cawactèwes qui w-wepwésente un sous-ensembwe des b-bawises de wangue qui sont pwises e-en chawge pouw wa mise en fowme du temps wewatif s-sans qu'iw soit nyécessaiwe d-d'utiwisew wa wocawe paw défaut d-de w'enviwonnement d-d'exécution. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Cette méthode renvoie un tableau qui est un sous-ensemble de `locales`. Les balises de langues renvoyées sont celles supportées par l'environnement pour le formatage des temps relatifs. Ces balises sont déterminées en fonction de l'algorithme de correspondances de locale et des locales utilisées. Le tableau résultant fournit les locales qui permettent de ne pas avoir à utiliser la locale par défaut.
+cette méthode wenvoie un tabweau qui est un sous-ensembwe de `wocawes`. ( ͡o ω ͡o ) wes b-bawises de wangues w-wenvoyées sont cewwes suppowtées p-paw w'enviwonnement p-pouw w-we fowmatage des temps wewatifs. òωó ces bawises sont détewminées e-en fonction de w'awgowithme de cowwespondances de wocawe et des wocawes utiwisées. (⑅˘꒳˘) w-we tabweau wésuwtant fouwnit w-wes wocawes qui p-pewmettent de n-nye pas avoiw à utiwisew wa wocawe p-paw défaut.
 
-## Examples
+## e-exampwes
 
-### Utiliser `supportedLocalesOf()`
+### u-utiwisew `suppowtedwocawesof()`
 
-Si on dispose d'un environnement qui supporte les locales indonésienne et allemande mais pas balinaise pour le formatage des temps relatifs, `supportedLocalesOf` renverra les balises BCP 47 pour l'indonésien et l'allemand (bien que la collation pinyin ne soit pas pertinente pour les dates ni pour l'indonésien et qu'il soit peu probable qu'une variante indonésienne existe pour l'allemand). Pour l'exemple, on l'utilise l'algorithme `"lookup"`. Si on utilisait `"best fit"`, on pourrait considérer que l'indonésien est adéquat pour la locale balinaise (sachant que la plupart des balinais comprend l'indonésien) et donc également renvoyer la balise balinaise.
+s-si on dispose d'un enviwonnement qui suppowte w-wes wocawes indonésienne e-et a-awwemande mais pas b-bawinaise pouw w-we fowmatage des temps wewatifs, XD `suppowtedwocawesof` wenvewwa wes bawises bcp 47 p-pouw w'indonésien et w'awwemand (bien que wa cowwation pinyin nye soit pas pewtinente pouw w-wes dates nyi pouw w'indonésien et qu'iw soit peu pwobabwe qu'une v-vawiante indonésienne e-existe p-pouw w'awwemand). -.- pouw w'exempwe, :3 o-on w'utiwise w'awgowithme `"wookup"`. nyaa~~ s-si on utiwisait `"best f-fit"`, 😳 on pouwwait considéwew que w'indonésien est adéquat pouw wa wocawe bawinaise (sachant que wa pwupawt des b-bawinais compwend w'indonésien) e-et donc égawement wenvoyew w-wa bawise bawinaise. (⑅˘꒳˘)
 
 ```js
-var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = { localeMatcher: "lookup" };
-console.log(
-  Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(", "),
-); // → "id-u-co-pinyin, de-ID"
+v-vaw wocawes = ["ban", nyaa~~ "id-u-co-pinyin", OwO "de-id"];
+vaw o-options = { wocawematchew: "wookup" };
+c-consowe.wog(
+  intw.wewativetimefowmat.suppowtedwocawesof(wocawes, rawr x3 o-options).join(", XD "),
+); // → "id-u-co-pinyin, σωσ d-de-id"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{jsxwef("wewativetimefowmat", (U ᵕ U❁) "intw.wewativetimefowmat")}}

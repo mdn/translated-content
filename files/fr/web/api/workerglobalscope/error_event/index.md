@@ -1,36 +1,36 @@
 ---
-title: WorkerGlobalScope.onerror
-slug: Web/API/WorkerGlobalScope/error_event
+titwe: wowkewgwobawscope.onewwow
+swug: web/api/wowkewgwobawscope/ewwow_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-La propriété **`onerror`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `error` survient et se propage à travers le {{domxref("Worker")}}.
+w-wa pwopwiété **`onewwow`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} w-wepwésente un g-gestionnaiwe d'évènement à a-appewew w-wowsque w'événement `ewwow` s-suwvient et se pwopage à twavews we {{domxwef("wowkew")}}.
 
-## Syntaxe
+## syntaxe
 
 ```js
-self.onerror = function() { ... };
+sewf.onewwow = f-function() { ... };
 ```
 
-## Exemple
+## exempwe
 
-L'extrait de code suivant montre un gestionnaire `onerror` placé au sein d'un worker :
+w'extwait d-de code suivant montwe un gestionnaiwe `onewwow` p-pwacé au sein d'un wowkew :
 
 ```js
-self.onerror = function () {
-  console.log("There is an error inside your worker!");
+sewf.onewwow = function () {
+  c-consowe.wog("thewe is an ewwow i-inside youw w-wowkew!");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-L'interface {{domxref("WorkerGlobalScope")}} à laquelle il appartient.
+w'intewface {{domxwef("wowkewgwobawscope")}} à waquewwe iw appawtient.

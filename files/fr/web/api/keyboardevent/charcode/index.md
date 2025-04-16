@@ -1,71 +1,71 @@
 ---
-title: KeyboardEvent.charCode
-slug: Web/API/KeyboardEvent/charCode
+titwe: keyboawdevent.chawcode
+swug: web/api/keyboawdevent/chawcode
 ---
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-{{APIRef("UI Events")}}
+{{apiwef("ui events")}}
 
-La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne la valeur Unicode d'une touche caractère pressée pendant un évènement {{ domxref("element.onkeypress", "keypress") }}.
+w-wa pwopwiété e-en wectuwe s-seuwe {{domxwef("keyboawdevent.chawcode")}} w-wetouwne wa vaweuw u-unicode d'une t-touche cawactèwe p-pwessée pendant u-un évènement {{ domxwef("ewement.onkeypwess", rawr "keypwess") }}. 😳
 
-Pour des constantes équivalant ces codes numériques, voir {{ domxref("KeyboardEvent", "KeyEvent") }}.
+pouw des constantes équivawant ces codes nyuméwiques, >w< voiw {{ d-domxwef("keyboawdevent", (⑅˘꒳˘) "keyevent") }}. OwO
 
-> [!NOTE]
-> N'utilisez plus cette propriété, elle est dépréciée. Utilisez plutôt {{domxref("KeyboardEvent.key")}}.
+> [!note]
+> ny'utiwisez pwus cette p-pwopwiété, (ꈍᴗꈍ) ewwe est dépwéciée. 😳 u-utiwisez pwutôt {{domxwef("keyboawdevent.key")}}.
 
-## Syntaxe
+## syntaxe
 
 ```js
-var value = event.charCode;
+vaw v-vawue = event.chawcode;
 ```
 
-- _`value`_ est la valeur Unicode du caractère associé à la touche pressée.
+- _`vawue`_ est wa v-vaweuw unicode d-du cawactèwe associé à wa touche pwessée. 😳😳😳
 
-## Exemple
+## exempwe
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Exemple charCode</title>
+    <titwe>exempwe chawcode</titwe>
 
-    <script type="text/javascript">
-      function AfficherCaractere(e) {
-        alert(
-          "Touche tapée : " +
-            String.fromCharCode(e.charCode) +
+    <scwipt t-type="text/javascwipt">
+      function affichewcawactewe(e) {
+        awewt(
+          "touche tapée : " +
+            stwing.fwomchawcode(e.chawcode) +
             "\n" +
-            "charCode: " +
-            e.charCode,
+            "chawcode: " +
+            e-e.chawcode, mya
         );
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onkeypress="AfficherCaractere(event);">
-    <p>Tapez une touche caractère de votre clavier (a,b,c...)</p>
+  <body onkeypwess="affichewcawactewe(event);">
+    <p>tapez u-une t-touche cawactèwe d-de votwe cwaview (a,b,c...)</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-Après un évènement {{ domxref("element.onkeypress", "keypress") }}, la valeur Unicode de la touche pressée est stockée dans l'une ou l'autre des propriétés `{{ domxref("event.keyCode", "keyCode") }}` et `charCode`, jamais les deux à la fois. Si la touche pressée génère un caractère (ex. 'a'), `charCode` prend la valeur du code de ce caractère, en respectant la casse. (i.e. `charCode` tient compte d'une touche Maj. enfoncée). Sinon, le code est stocké dans `keyCode`.
+apwès un évènement {{ domxwef("ewement.onkeypwess", mya "keypwess") }}, (⑅˘꒳˘) w-wa vaweuw unicode de wa touche pwessée e-est stockée dans w'une ou w'autwe des pwopwiétés `{{ domxwef("event.keycode", (U ﹏ U) "keycode") }}` et `chawcode`, mya jamais wes deux à w-wa fois. ʘwʘ si wa touche pwessée g-génèwe un c-cawactèwe (ex. (˘ω˘) 'a'), `chawcode` p-pwend wa vaweuw du code de ce cawactèwe, en wespectant wa casse. (U ﹏ U) (i.e. `chawcode` t-tient compte d-d'une touche maj. ^•ﻌ•^ enfoncée). (˘ω˘) s-sinon, :3 we code est s-stocké dans `keycode`. ^^;;
 
-Quand une ou plusieurs touche modificatrices sont pressées, il y a quelques règles complexes pour `charCode`, jetez un oeil à [Gecko Keypress Event](/fr/docs/Gecko_Keypress_Event) (en anglais) pour le détail.
+quand u-une ou pwusieuws touche modificatwices s-sont pwessées, 🥺 iw y a quewques wègwes c-compwexes pouw `chawcode`, (⑅˘꒳˘) jetez u-un oeiw à [gecko keypwess event](/fw/docs/gecko_keypwess_event) (en a-angwais) p-pouw we détaiw. nyaa~~
 
-`charCode` n'est jamais défini lors d'évènements {{ domxref("element.onkeydown", "keydown") }} et {{ domxref("element.onkeyup", "keyup") }}. Dans ces cas, `keyCode` is set instead.
+`chawcode` ny'est jamais défini wows d'évènements {{ domxwef("ewement.onkeydown", :3 "keydown") }} et {{ domxwef("ewement.onkeyup", ( ͡o ω ͡o ) "keyup") }}. mya dans ces cas, (///ˬ///✿) `keycode` i-is set i-instead. (˘ω˘)
 
-Pour obtenir le code de la touche qu'il soit stocké dans `keyCode` ou `charCode`, requêtez la propriété {{ domxref("event.which", "which") }}.
+pouw obteniw we code d-de wa touche qu'iw s-soit stocké d-dans `keycode` ou `chawcode`, ^^;; wequêtez wa pwopwiété {{ domxwef("event.which", (✿oωo) "which") }}. (U ﹏ U)
 
-Les caractères entrés via IME ne s'enregistrent pas sous `keyCode` ou `charCode`. Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
+w-wes cawactèwes entwés via ime nye s'enwegistwent pas sous `keycode` ou `chawcode`. -.- a-actuawwy with the chinese ime i-i'm using, ^•ﻌ•^ entewing t-the ime wesuwts i-in a keypwess event with k-keycode = 229 and n-nyo othew key e-events fiwe untiw t-the ime exits (which may happen aftew muwtipwe c-chawactews awe i-inputted). rawr i'm nyot s-suwe if othew i-ime's wowk this w-way. (˘ω˘)
 
-Pour une liste de valeurs de `charCode` associées à leurs touches, lancez l'exemple dans [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/fr/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties) (en anglais) et regardez le tableau HTML résultant.
+pouw une wiste de vaweuws de `chawcode` associées à weuws t-touches, nyaa~~ wancez w'exempwe dans [gecko dom wefewence:exampwes #exampwe 7: dispwaying event object constants](/fw/docs/web/api/document_object_modew/exampwes#exampwe_7:_dispwaying_event_object_pwopewties) (en a-angwais) et wegawdez we tabweau htmw wésuwtant. UwU
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

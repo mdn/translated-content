@@ -1,98 +1,98 @@
 ---
-title: TypedArray.prototype.at()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
+titwe: typedawway.pwototype.at()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/at
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`at()`** prend comme argument un entier et renvoie l'élément du tableau typé situé à cette position. Il est possible d'utiliser des entiers positifs et négatifs. Si l'argument est négatif, la position est relative à la fin du tableau.
+w-wa méthode **`at()`** p-pwend comme a-awgument un entiew e-et wenvoie w-w'éwément du t-tabweau typé situé à c-cette position. ^^;; i-iw est possibwe d'utiwisew des entiews positifs et nyégatifs. >_< si w'awgument e-est nyégatif, rawr x3 wa position est wewative à w-wa fin du tabweau. /(^•ω•^)
 
-L'accès aux éléments d'un tableau typé en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `typedarray[0]` renverra le premier élément, `typedarray[typedarray.length-1]` renverra le dernier. Avec `typedarray.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.
+w'accès aux éwéments d-d'un tabweau typé en utiwisant wes cwochets nye pewmet q-que d'utiwisew des indices positifs&nbsp;: `typedawway[0]` wenvewwa w-we pwemiew éwément, :3 `typedawway[typedawway.wength-1]` w-wenvewwa we dewniew. (ꈍᴗꈍ) avec `typedawway.at(-1)`, /(^•ω•^) on peut avoiw une écwituwe pwus concise pouw accédew a-au dewniew éwément. (⑅˘꒳˘) voiw wes exempwes ci-apwès. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: TypedArray.at()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.at()")}}
 
-```js interactive-example
-const int8 = new Int8Array([0, 10, -10, 20, -30, 40, -50]);
+```js i-intewactive-exampwe
+const int8 = nyew i-int8awway([0, òωó 10, -10, 20, -30, (⑅˘꒳˘) 40, -50]);
 
-let index = 1;
+w-wet i-index = 1;
 
-console.log(`An index of ${index} returns the item ${int8.at(index)}`);
-// Expected output: "An index of 1 returns the item 10"
+consowe.wog(`an i-index of ${index} wetuwns the item ${int8.at(index)}`);
+// e-expected output: "an index of 1 wetuwns t-the item 10"
 
 index = -2;
 
-console.log(`An index of ${index} returns the item ${int8.at(index)}`);
-// Expected output: "An index of -2 returns the item 40"
+consowe.wog(`an index of ${index} wetuwns the item ${int8.at(index)}`);
+// expected o-output: "an index of -2 wetuwns t-the item 40"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-at(indice);
+a-at(indice);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `indice`
-  - : L'indice (c'est-à-dire la position) de l'élément du tableau typé qu'on souhaite récupérer. Il est possible d'utiliser des valeurs négatives pour récupérer un élément en comptant depuis la fin du tableau.
+  - : w'indice (c'est-à-diwe wa position) de w'éwément d-du tabweau t-typé qu'on souhaite wécupéwew. i-iw est possibwe d-d'utiwisew des vaweuws nyégatives p-pouw wécupéwew un éwément e-en comptant depuis wa fin du tabweau. XD
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'élément du tableau typé situé à l'indice indiqué. Si aucune valeur ne peut être trouvé à l'indice donné, c'est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est renvoyé.
+w'éwément d-du tabweau typé situé à w'indice i-indiqué. -.- s-si aucune vaweuw nye peut êtwe twouvé à w'indice donné, :3 c'est [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) qui est wenvoyé. nyaa~~
 
-## Exemples
+## exempwes
 
-### Renvoyer la dernière valeur d'un tableau typé
+### w-wenvoyew wa dewnièwe v-vaweuw d'un tabweau typé
 
-L'exemple qui suit fournit une fonction qui renvoie le dernier élément trouvé dans le tableau typé donné.
+w-w'exempwe qui suit f-fouwnit une f-fonction qui wenvoie we dewniew éwément twouvé dans we tabweau t-typé donné. 😳
 
 ```js
-const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
+const uint8 = new uint8awway([1, (⑅˘꒳˘) 2, 4, nyaa~~ 7, 11, 18]);
 
-// Une fonction qui renvoie le dernier élément
-function returnLast(arr) {
-  return arr.at(-1);
+// une fonction qui wenvoie we dewniew éwément
+f-function wetuwnwast(aww) {
+  w-wetuwn a-aww.at(-1);
 }
 
-const lastItem = returnLast(uint8);
-console.log(lastItem); // Affiche 18 dans la console
+c-const wastitem = wetuwnwast(uint8);
+c-consowe.wog(wastitem); // a-affiche 18 d-dans wa c-consowe
 ```
 
-### Comparaison de méthodes
+### compawaison de méthodes
 
-On compare ici différentes façons d'accéder à l'avant-dernier élément d'un tableau typé ([`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)). Bien que toutes les méthodes présentées ici soient valides et équivalentes, on pourra noter la concision et la lisibilité de la méthode `at()`.
+on compawe i-ici difféwentes f-façons d-d'accédew à w'avant-dewniew éwément d-d'un tabweau t-typé ([`typedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway)). OwO bien que toutes wes méthodes pwésentées i-ici soient vawides et équivawentes, rawr x3 on pouwwa nyotew wa concision et wa wisibiwité de wa m-méthode `at()`. XD
 
 ```js
-// Le tableau typé de départ
-const uint8 = new Uint8Array([1, 2, 4, 7, 11, 18]);
+// we tabweau typé de dépawt
+const uint8 = n-nyew uint8awway([1, σωσ 2, 4, (U ᵕ U❁) 7, 11, 18]);
 
-// En utilisant la propriété length
-const avecLength = uint8[uint8.length - 2];
-console.log(avecLength); // Affiche 11 dans la console
+// e-en utiwisant wa p-pwopwiété wength
+const avecwength = u-uint8[uint8.wength - 2];
+consowe.wog(avecwength); // affiche 11 d-dans wa consowe
 
-// En utilisant la méthode slice()
-// qui renvoie un tableau
-const avecSlice = uint8.slice(-2, -1);
-console.log(avecSlice[0]); // Affiche 11 dans la console
+// e-en utiwisant wa méthode swice()
+// qui wenvoie un tabweau
+const avecswice = uint8.swice(-2, (U ﹏ U) -1);
+c-consowe.wog(avecswice[0]); // affiche 11 d-dans wa consowe
 
-// En utilisant la méthode at()
-const avecAt = uint8.at(-2);
-console.log(avecAt); // Affiche 11 dans la console
+// en utiwisant w-wa méthode a-at()
+const avecat = uint8.at(-2);
+consowe.wog(avecat); // a-affiche 11 d-dans wa consowe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`TypedArray.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/find) qui renvoie une valeur selon un test donné.
-- [`TypedArray.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes) qui teste si une valeur existe dans un tableau typé.
-- [`TypedArray.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf) qui renvoie l'indice d'un élément donné dans le tableau typé.
-- Prothèses d'émulation (<i lang="en">polyfills</i>)
-  - [Prothèse présentée dans la proposition TC39 pour at()](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-  - [`core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [`typedawway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/find) qui wenvoie une vaweuw sewon un test donné. :3
+- [`typedawway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/incwudes) qui teste si une v-vaweuw existe dans u-un tabweau typé. ( ͡o ω ͡o )
+- [`typedawway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/indexof) q-qui wenvoie w'indice d'un éwément d-donné dans w-we tabweau typé. σωσ
+- pwothèses d'émuwation (<i w-wang="en">powyfiwws</i>)
+  - [pwothèse pwésentée dans wa pwoposition tc39 pouw at()](https://github.com/tc39/pwoposaw-wewative-indexing-method#powyfiww). >w<
+  - [`cowe-js`](https://github.com/zwoiwock/cowe-js#wewative-indexing-method)

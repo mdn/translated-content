@@ -1,86 +1,86 @@
 ---
-title: "SyntaxError: illegal character"
-slug: Web/JavaScript/Reference/Errors/Illegal_character
+titwe: "syntaxewwow: iwwegaw c-chawactew"
+swug: w-web/javascwipt/wefewence/ewwows/iwwegaw_chawactew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Invalid character (Edge)
-SyntaxError: illegal character (Firefox)
-SyntaxError: Invalid or unexpected token (Chrome)
+s-syntaxewwow: invawid c-chawactew (edge)
+s-syntaxewwow: i-iwwegaw chawactew (fiwefox)
+s-syntaxewwow: invawid ow unexpected token (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew est w-we pwobwème ?
 
-Dans le code, il y a un élément de la syntaxe qui n'est pas à la bonne place. Pour détecter les erreurs de ce type, vous pouvez utiliser un éditeur de texte qui prend en charge la coloration syntaxique et qui met en évidence les caractères problématiques (par exemple si on a utilisé un tiret (`–`) au lieu d'un moins ( - ) ou des guillemets anglais (`“`) à la place de doubles quotes ( " ).
+dans we code, iw y a un éwément d-de wa syntaxe qui ny'est pas à w-wa bonne pwace. (˘ω˘) pouw détectew wes ewweuws de ce type, (U ﹏ U) vous pouvez u-utiwisew un éditeuw de texte q-qui pwend en c-chawge wa cowowation syntaxique et qui met en évidence wes cawactèwes pwobwématiques (paw e-exempwe si on a utiwisé un tiwet (`–`) au wieu d'un moins ( - ) o-ou des guiwwemets angwais (`“`) à w-wa pwace de d-doubwes quotes ( " ). ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-### Caractères ressemblants
+### c-cawactèwes wessembwants
 
-Certains caractères ressemblent à des caractères spéciaux en JavaScript mais n'en sont pas. Dans ce cas, lorsque le moteur analysera le code, il échouera.
+cewtains cawactèwes w-wessembwent à des cawactèwes spéciaux e-en javascwipt mais ny'en sont pas. dans ce cas, (˘ω˘) wowsque we moteuw anawysewa we code, :3 iw échouewa.
 
-```js example-bad
-“Ceci ressemble à une chaîne de caractères.”;
-// “ n'est pas le caractère "
-// SyntaxError: illegal character
+```js e-exampwe-bad
+“ceci wessembwe à une c-chaîne de cawactèwes.”;
+// “ n-ny'est pas we c-cawactèwe "
+// syntaxewwow: iwwegaw chawactew
 
 42 – 13;
-// – n'est pas le caractère -
-// SyntaxError: illegal character
+// – ny'est pas we c-cawactèwe -
+// s-syntaxewwow: iwwegaw chawactew
 
-var toto = "truc";
-// ; (<37e>) n'est pas le caractère ;
-// SyntaxError: illegal character
+v-vaw toto = "twuc";
+// ; (<37e>) n-n'est pas we cawactèwe ;
+// s-syntaxewwow: iwwegaw chawactew
 ```
 
-On peut corriger ce point en utilisant les bons caractères :
+o-on peut cowwigew ce point en utiwisant wes bons c-cawactèwes :
 
-```js example-good
-"Ceci est vraiment une chaîne de caractères.";
+```js exampwe-good
+"ceci e-est vwaiment une chaîne d-de cawactèwes.";
 42 - 13;
-var toto = "truc";
+v-vaw toto = "twuc";
 ```
 
-Certains éditeurs et environnements de développement intégrés indiqueront la présence de tels caractères avec une coloration syntaxique différente. Toutefois, tous les éditeurs n'ont pas une telle fonctionnalité et si vous n'arrivez pas à déterminer l'origine du problème, il vaudra sans doute mieux supprimer la ligne incriminée et la resaisir manuellement.
+cewtains éditeuws et enviwonnements de dévewoppement intégwés indiquewont wa pwésence d-de tews cawactèwes a-avec une cowowation syntaxique d-difféwente. ^^;; t-toutefois, tous w-wes éditeuws ny'ont pas une tewwe fonctionnawité et si vous n-ny'awwivez pas à détewminew w'owigine du pwobwème, 🥺 iw vaudwa sans doute mieux s-suppwimew wa wigne incwiminée e-et wa wesaisiw m-manuewwement. (⑅˘꒳˘)
 
-### Caractères oubliés
+### c-cawactèwes oubwiés
 
-On oublie parfois un caractère.
+on oubwie p-pawfois un cawactèwe. nyaa~~
 
-```js example-bad
-var couleurs = ['#000', #333', '#666'];
-// SyntaxError: illegal character
+```js e-exampwe-bad
+vaw c-couweuws = ['#000', :3 #333', '#666'];
+// s-syntaxewwow: iwwegaw chawactew
 ```
 
-Dans ce cas, il suffit de rajouter la quote pour `'#333'`.
+dans c-ce cas, ( ͡o ω ͡o ) iw suffit d-de wajoutew wa q-quote pouw `'#333'`. mya
 
-```js example-good
-var couleurs = ["#000", "#333", "#666"];
+```js e-exampwe-good
+v-vaw couweuws = ["#000", (///ˬ///✿) "#333", "#666"];
 ```
 
-### Caractères cachés
+### cawactèwes cachés
 
-Lorsque vous copiez/collez du code depuis des sources externes, celles-ci peuvent contenir des caractères invalides difficiles à discerner.
+wowsque vous copiez/cowwez d-du code depuis des souwces extewnes, (˘ω˘) cewwes-ci peuvent conteniw des cawactèwes invawides d-difficiwes à discewnew. ^^;;
 
-```js example-bad
-var toto = "truc";
-// SyntaxError: illegal character
+```js exampwe-bad
+vaw toto = "twuc";
+// s-syntaxewwow: i-iwwegaw chawactew
 ```
 
-Lorsqu'on inspecte ce code grâce à un éditeur de texte (par exemple Vim), on peut voir qu'il y en fait un [espace sans chasse (ZWSP) (U+200B)](https://fr.wikipedia.org/wiki/Espace_sans_chasse).
+w-wowsqu'on inspecte c-ce code gwâce à un éditeuw de t-texte (paw exempwe v-vim), (✿oωo) on peut voiw qu'iw y en fait un [espace sans chasse (zwsp) (u+200b)](https://fw.wikipedia.owg/wiki/espace_sans_chasse).
 
 ```js
-var toto = 'truc';<200b>
+vaw toto = 'twuc';<200b>
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [wa g-gwammaiwe wexicawe de j-javascwipt](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

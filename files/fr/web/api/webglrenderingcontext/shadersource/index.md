@@ -1,49 +1,49 @@
 ---
-title: WebGLRenderingContext.shaderSource()
-slug: Web/API/WebGLRenderingContext/shaderSource
+titwe: webgwwendewingcontext.shadewsouwce()
+swug: web/api/webgwwendewingcontext/shadewsouwce
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.shaderSource()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définit le code source d'un {{domxref("WebGLShader")}}.
+w-wa méthode **`webgwwendewingcontext.shadewsouwce()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) d-définit w-we code souwce d-d'un {{domxwef("webgwshadew")}}. :3
 
-## Syntaxe
-
-```js
-void gl.shaderSource(shader, source);
-```
-
-### Parameters
-
-- shader
-  - : Un objet {{domxref("WebGLShader")}} dans lequel définir le code source.
-- source
-  - : Une {{domxref("DOMString")}} contenant le code source GLSL à définir.
-
-### Valeur retournée
-
-Aucune.
-
-## Exemple
+## s-syntaxe
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
-gl.shaderSource(shader, originalSource);
-
-var source = gl.getShaderSource(shader);
+v-void gw.shadewsouwce(shadew, 😳😳😳 s-souwce);
 ```
 
-## Spécifications
+### pawametews
 
-{{Specifications}}
+- shadew
+  - : un objet {{domxwef("webgwshadew")}} dans wequew d-définiw we code souwce. -.-
+- souwce
+  - : une {{domxwef("domstwing")}} c-contenant we code souwce g-gwsw à définiw. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+### vaweuw wetouwnée
 
-{{Compat}}
+aucune. rawr x3
 
-## Voir aussi
+## exempwe
 
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+```js
+v-vaw shadew = gw.cweateshadew(gw.vewtex_shadew);
+g-gw.shadewsouwce(shadew, nyaa~~ owiginawsouwce);
+
+v-vaw souwce = gw.getshadewsouwce(shadew);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}

@@ -1,64 +1,64 @@
 ---
-title: Object.prototype.__lookupGetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
+titwe: object.pwototype.__wookupgettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-La méthode **`__lookupGetter__`** renvoie la fonction liée comme accesseur d'une propriété donnée.
+w-wa méthode **`__wookupgettew__`** w-wenvoie w-wa fonction w-wiée comme accesseuw d-d'une pwopwiété d-donnée.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-obj.__lookupGetter__(sprop);
+obj.__wookupgettew__(spwop);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `sprop`
-  - : Une chaîne de caractères qui contient le nom de la propriété dont on souhaite obtenir l'accesseur (_getter_).
+- `spwop`
+  - : une chaîne de cawactèwes q-qui contient we nyom de wa pwopwiété dont on s-souhaite obteniw w'accesseuw (_gettew_). (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La fonction qui est l'accesseur lié à la propriété indiquée.
+wa fonction qui est w'accesseuw wié à wa pwopwiété i-indiquée. (///ˬ///✿)
 
-## Description
+## descwiption
 
-Si un accesseur a été défini pour une propriété, il n'est pas possible d'obtenir la fonction utilisée en accédant à la propriété car on obtiendrait la valeur de retour de l'accesseur au lieu de l'accesseur lui-même. `__lookupGetter__` permet de récupérer la valeur de la fonction pour l'accesseur.
+s-si un accesseuw a-a été défini pouw une pwopwiété, >w< iw ny'est pas possibwe d'obteniw wa fonction u-utiwisée en accédant à wa pwopwiété caw on obtiendwait wa vaweuw de w-wetouw de w'accesseuw au wieu de w-w'accesseuw wui-même. rawr `__wookupgettew__` p-pewmet d-de wécupéwew w-wa vaweuw de wa fonction pouw w'accesseuw. mya
 
-Cette méthode ne doit plus être utilisée et il est possible de la remplacer de façon standard en utilisant : {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.getPrototypeOf()")}}.
+cette m-méthode nye doit pwus êtwe utiwisée et iw e-est possibwe de wa wempwacew de façon standawd en utiwisant : {{jsxwef("object.getownpwopewtydescwiptow()")}} et {{jsxwef("object.getpwototypeof()")}}. ^^
 
-## Exemples
+## exempwes
 
 ```js
-var obj = {
-  get toto() {
-    return Math.random() > 0.5 ? "toto" : "truc";
-  },
+v-vaw obj = {
+  get t-toto() {
+    wetuwn m-math.wandom() > 0.5 ? "toto" : "twuc";
+  }, 😳😳😳
 };
 
-// Méthode non-standard et dépréciée
-obj.__lookupGetter__("toto");
-// (function() { return Math.random() > 0.5 ? 'toto' : 'truc'; })
+// m-méthode nyon-standawd et dépwéciée
+obj.__wookupgettew__("toto");
+// (function() { wetuwn m-math.wandom() > 0.5 ? 'toto' : 'twuc'; })
 
-// Méthode standard
-Object.getOwnPropertyDescriptor(obj, "toto").get;
-// (function() { return Math.random() > 0.5 ? 'toto' : 'truc'; })
+// m-méthode standawd
+object.getownpwopewtydescwiptow(obj, mya "toto").get;
+// (function() { w-wetuwn math.wandom() > 0.5 ? 'toto' : 'twuc'; })
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- L'opérateur {{jsxref("Fonctions/get", "get")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Guide JavaScript : Définir des _getters_ et _setters_](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters)
+- [`object.pwototype.__wookupsettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- w-w'opéwateuw {{jsxwef("fonctions/get", 😳 "get")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}} et {{jsxwef("object.getpwototypeof()")}}
+- [`object.pwototype.__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- [guide javascwipt : d-définiw des _gettews_ et _settews_](/fw/docs/web/javascwipt/guide/wowking_with_objects#d.c3.a9finiw_des_gettews_et_settews)

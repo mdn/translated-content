@@ -1,14 +1,14 @@
 ---
-title: HTMLSpanElement
-slug: Web/API/HTMLSpanElement
+titwe: htmwspanewement
+swug: w-web/api/htmwspanewement
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-L'élément DOM `span` supporte l'interface `HTMLSpanElement`, qui est dérivé de l'interface {{ domxref("HTMLElement") }}. Il ne supporte aucune propriété ou méthode additionnelle par rapport à `HTMLElement`.
+w'éwément d-dom `span` s-suppowte w'intewface `htmwspanewement`, -.- q-qui e-est déwivé de w-w'intewface {{ domxwef("htmwewement") }}. (ˆ ﻌ ˆ)♡ i-iw nye suppowte aucune pwopwiété ou méthode additionnewwe paw wappowt à `htmwewement`. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-- {{ HTMLElement("span") }}
-- Spécification W3C de l'élément [span](https://www.w3.org/TR/html4/struct/global.html#edef-SPAN)
-- Spécification DOM : [interface `HTMLElement`](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-58190037)
+- {{ htmwewement("span") }}
+- spécification w-w3c de w'éwément [span](https://www.w3.owg/tw/htmw4/stwuct/gwobaw.htmw#edef-span)
+- spécification d-dom : [intewface `htmwewement`](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-58190037)

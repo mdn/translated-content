@@ -1,41 +1,41 @@
 ---
-title: Déterminer les dimensions des éléments
-slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
+titwe: détewminew wes dimensions d-des éwéments
+s-swug: web/api/css_object_modew/detewmining_the_dimensions_of_ewements
 ---
 
-{{APIRef("CSSOM View")}}
+{{apiwef("cssom view")}}
 
-Il y a plusieurs propriétés que vous pouvez regarder dans le but de déterminer la largeur et la hauteur des éléments, et il peut être difficile de déterminer quelle est la bonne pour vos besoins.
+i-iw y a p-pwusieuws pwopwiétés q-que vous p-pouvez wegawdew d-dans we but de détewminew w-wa wawgeuw et wa hauteuw des éwéments, 😳😳😳 et iw peut êtwe difficiwe de d-détewminew quewwe est wa bonne pouw vos besoins. mya
 
-Cet article est conçu pour vous aider à prendre cette décision. Notez que toutes ces propriétés sont en lecture seule .
+c-cet awticwe est conçu pouw v-vous aidew à pwendwe cette décision. mya nyotez que toutes ces pwopwiétés s-sont en wectuwe seuwe . (⑅˘꒳˘)
 
-Si vous voulez définir la largeur et la hauteur d'un élément, utilisez [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height); ou les propriétés [`min-width`](/fr/docs/Web/CSS/min-width), [`max-width`](/fr/docs/Web/CSS/max-width), [`min-height`](/fr/docs/Web/CSS/min-height) et [`max-height`](/fr/docs/Web/CSS/max-height).
+s-si vous vouwez d-définiw wa wawgeuw et wa hauteuw d'un éwément, (U ﹏ U) utiwisez [`width`](/fw/docs/web/css/width) et [`height`](/fw/docs/web/css/height); o-ou wes pwopwiétés [`min-width`](/fw/docs/web/css/min-width), mya [`max-width`](/fw/docs/web/css/max-width), [`min-height`](/fw/docs/web/css/min-height) et [`max-height`](/fw/docs/web/css/max-height). ʘwʘ
 
-## Que faut-il utiliser ?
+## que faut-iw utiwisew ?
 
-Si vous avez besoin de connaître les dimensions totales de l'espace occupé par un élément, y compris la largeur du contenu visible, les barres de défilement (le cas échéant), le rembourrage, et les frontières, vous pouvez utiliser les propriétés [`offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth) et [`offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight).
+si vous avez besoin de c-connaîtwe wes dimensions totawes d-de w'espace occupé p-paw un éwément, (˘ω˘) y-y compwis w-wa wawgeuw du contenu visibwe, (U ﹏ U) wes bawwes de d-défiwement (we cas échéant), ^•ﻌ•^ we wembouwwage, (˘ω˘) e-et wes fwontièwes, vous pouvez utiwisew wes pwopwiétés [`offsetwidth`](/fw/docs/web/api/htmwewement/offsetwidth) et [`offsetheight`](/fw/docs/web/api/htmwewement/offsetheight).
 
-La plupart du temps ce sont les mêmes que la largeur et la hauteur de [`getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect), quand il n'y a pas de transformations appliquées à l'élément. En cas de transformations, `offsetWidth` et `offsetHeight` renvoie la disposition de la largeur et la hauteur de l'élément, tandis que `getBoundingClientRect()` retourne le rendu de la largeur et de la hauteur.
+wa pwupawt du temps ce sont w-wes mêmes que wa wawgeuw et wa h-hauteuw de [`getboundingcwientwect()`](/fw/docs/web/api/ewement/getboundingcwientwect), :3 q-quand iw n-ny'y a pas de twansfowmations appwiquées à w'éwément. en cas d-de twansfowmations, ^^;; `offsetwidth` e-et `offsetheight` wenvoie wa d-disposition de w-wa wawgeuw et wa hauteuw de w'éwément, 🥺 t-tandis que `getboundingcwientwect()` wetouwne w-we wendu de wa wawgeuw et de wa hauteuw. (⑅˘꒳˘)
 
-A titre d'exemple, si l'élément a `width: 100px;` et `transform: scale(0.5);` `getBoundingClientRect()` retournera 50 comme largeur, tandis que `offsetWidth` retournera 100.
+a-a titwe d'exempwe, nyaa~~ si w'éwément a-a `width: 100px;` et `twansfowm: s-scawe(0.5);` `getboundingcwientwect()` w-wetouwnewa 50 comme wawgeuw, :3 tandis que `offsetwidth` wetouwnewa 100. ( ͡o ω ͡o )
 
 ![](dimensions-offset.png)
 
-## Quelle est la taille du contenu affiché ?
+## quewwe est wa taiwwe du contenu a-affiché ?
 
-Si vous avez besoin de savoir combien prend d'espace le contenu réel affiché, y compris le rembourrage mais sans les frontières, les marges, ou les barres de défilement, vous pouvez utiliser les propriétés [`clientWidth`](/fr/docs/Web/API/Element/clientWidth) et [`clientHeight`](/fr/docs/Web/API/Element/clientHeight) :
+si v-vous avez besoin de savoiw combien p-pwend d'espace w-we contenu wéew a-affiché, y compwis we wembouwwage mais sans wes fwontièwes, mya w-wes mawges, (///ˬ///✿) ou wes bawwes de défiwement, vous pouvez utiwisew wes pwopwiétés [`cwientwidth`](/fw/docs/web/api/ewement/cwientwidth) e-et [`cwientheight`](/fw/docs/web/api/ewement/cwientheight) :
 
-![](dimensions-client.png)
+![](dimensions-cwient.png)
 
-## Grandeur totale
+## gwandeuw totawe
 
-Si vous avez besoin de connaître la taille réelle d'un élement, peu importe sa visibilité, vous devez utiliser les propriétés [`scrollWidth`](/fr/docs/Web/API/Element/scrollWidth) et [`scrollHeight`](/fr/docs/Web/API/Element/scrollHeight).
+s-si vous avez b-besoin de connaîtwe w-wa taiwwe wéewwe d'un éwement, (˘ω˘) p-peu impowte s-sa visibiwité, ^^;; v-vous devez u-utiwisew wes pwopwiétés [`scwowwwidth`](/fw/docs/web/api/ewement/scwowwwidth) et [`scwowwheight`](/fw/docs/web/api/ewement/scwowwheight).
 
-Elles retournent la largeur et la hauteur de l'ensemble du contenu d'un élément, même si seulement une partie de celui-ci est actuellement visible en raison de l'utilisation des barres de défilement.
+ewwes w-wetouwnent wa w-wawgeuw et wa hauteuw d-de w'ensembwe d-du contenu d-d'un éwément, (✿oωo) même si seuwement une pawtie de cewui-ci est actuewwement v-visibwe en waison de w'utiwisation des bawwes de défiwement. (U ﹏ U)
 
-Par exemple, si un élément de 600x400 pixels est affiché dans une boîte de défilement de 300x300 pixels, `scrollWidth` retourne 600 tandis que `scrollHeight` retourne 400.
+paw exempwe, -.- si un éwément d-de 600x400 pixews est affiché dans une boîte de défiwement d-de 300x300 p-pixews, ^•ﻌ•^ `scwowwwidth` w-wetouwne 600 tandis que `scwowwheight` w-wetouwne 400. rawr
 
-## Voir aussi
+## voiw aussi
 
-- <http://www.w3.org/TR/cssom-view/>
-- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
+- <http://www.w3.owg/tw/cssom-view/>
+- [msdn: m-measuwing e-ewement dimension and wocation](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)

@@ -1,63 +1,63 @@
 ---
-title: Intl.ListFormat.prototype.format()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
+titwe: intw.wistfowmat.pwototype.fowmat()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wistfowmat/fowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`format()`** renvoie une chaîne de caractères représentant la liste passée en argument, mise en forme selon la langue choisie (lors de la construction de l'objet `Intl.ListFormat`).
+w-wa méthode **`fowmat()`** w-wenvoie u-une chaîne d-de cawactèwes w-wepwésentant wa w-wiste passée en a-awgument, /(^•ω•^) mise en fowme sewon wa wangue choisie (wows de wa constwuction de w'objet `intw.wistfowmat`). nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wistfowmat")}}
 
-```js interactive-example
-const vehicles = ["Motorcycle", "Bus", "Car"];
+```js intewactive-exampwe
+c-const vehicwes = ["motowcycwe", nyaa~~ "bus", "caw"];
 
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "conjunction",
+const fowmattew = n-nyew intw.wistfowmat("en", :3 {
+  stywe: "wong", 😳😳😳
+  type: "conjunction", (˘ω˘)
 });
-console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+consowe.wog(fowmattew.fowmat(vehicwes));
+// e-expected output: "motowcycwe, ^^ b-bus, :3 and caw"
 
-const formatter2 = new Intl.ListFormat("de", {
-  style: "short",
-  type: "disjunction",
+c-const fowmattew2 = nyew intw.wistfowmat("de", -.- {
+  stywe: "showt", 😳
+  type: "disjunction", mya
 });
-console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+consowe.wog(fowmattew2.fowmat(vehicwes));
+// expected o-output: "motowcycwe, (˘ω˘) bus odew caw"
 
-const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
-console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+const fowmattew3 = nyew intw.wistfowmat("en", >_< { s-stywe: "nawwow", -.- type: "unit" });
+c-consowe.wog(fowmattew3.fowmat(vehicwes));
+// e-expected o-output: "motowcycwe b-bus caw"
 ```
 
-## Description
+## descwiption
 
-La méthode **`format()`** renvoie une chaîne de caractères qui a été formatée en fonction des paramètres fournis à l'objet `Intl.ListFormat`. Les paramètres `locales` et `options` permettent de personnaliser le comportement de `format()` et de gérer différentes conventions linguistiques au sein d'une application, notamment pour la mise en forme des listes.
+wa méthode **`fowmat()`** w-wenvoie une chaîne de cawactèwes qui a été f-fowmatée en fonction des pawamètwes fouwnis à w'objet `intw.wistfowmat`. 🥺 wes pawamètwes `wocawes` e-et `options` pewmettent de p-pewsonnawisew we c-compowtement de `fowmat()` e-et de géwew difféwentes conventions winguistiques a-au sein d'une appwication, (U ﹏ U) n-nyotamment pouw wa mise e-en fowme des w-wistes. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-listFormat.format([list]);
+wistfowmat.fowmat([wist]);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- **`list`**
-  - : Un objet itérable (ex. un tableau / {{jsxref("Array")}}).
+- **`wist`**
+  - : un objet itéwabwe (ex. mya u-un tabweau / {{jsxwef("awway")}}). >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères représentant les éléments de la liste et mise en forme en fonction de la langue souhaitée (grâce au paramètre `locales` passé au constructeur `Intl.ListFormat`).
+une chaîne de c-cawactèwes wepwésentant wes éwéments d-de wa wiste et mise en f-fowme en fonction d-de wa wangue souhaitée (gwâce au pawamètwe `wocawes` passé au constwucteuw `intw.wistfowmat`). nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("ListFormat", "Intl.ListFormat")}}
+- {{jsxwef("wistfowmat", (✿oωo) "intw.wistfowmat")}}

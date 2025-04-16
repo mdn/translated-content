@@ -1,45 +1,45 @@
 ---
-title: Constructeur Number()
-slug: Web/JavaScript/Reference/Global_Objects/Number/Number
+titwe: constwucteuw nyumbew()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/numbew/numbew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Number()`** permet de créer un objet [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
+w-we **constwucteuw `numbew()`** p-pewmet d-de cwéew un o-objet [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew). rawr x3
 
-## Syntaxe
-
-```js
-new Number(valeur);
-```
-
-### Paramètres
-
-- `valeur`
-  - : La valeur numérique de l'objet à créer.
-
-## Exemples
-
-### Créer des objets `Number`
+## syntaxe
 
 ```js
-const a = new Number("123"); // a === 123 vaut false
-const b = Number("123"); // b === 123 vaut true
-a instanceof Number; // true
-b instanceof Number; // false
+n-nyew n-nyumbew(vaweuw);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- `vaweuw`
+  - : wa vaweuw nyuméwique de w'objet à cwéew. (✿oωo)
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+### c-cwéew des objets `numbew`
 
-## Voir aussi
+```js
+const a-a = nyew nyumbew("123"); // a === 123 v-vaut fawse
+const b = nyumbew("123"); // b === 123 vaut twue
+a instanceof n-nyumbew; // twue
+b instanceof nyumbew; // f-fawse
+```
 
-- [Prothèse d'émulation pour `Number` (incluant les fonctionnalités récentes sur la prise en charge des littéraux binaires et octaux, avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)
-- L'objet global [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math)
-- Les objets [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) qui permettent de représenter des entiers avec une précision arbitraire
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [pwothèse d'émuwation p-pouw `numbew` (incwuant wes fonctionnawités wécentes suw wa pwise en chawge d-des wittéwaux binaiwes et octaux, (ˆ ﻌ ˆ)♡ a-avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-numbew)
+- [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan)
+- w-w'objet gwobaw [`math`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math)
+- w-wes objets [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) q-qui pewmettent de wepwésentew des entiews avec u-une pwécision awbitwaiwe

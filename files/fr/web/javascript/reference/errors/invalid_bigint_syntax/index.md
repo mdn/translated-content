@@ -1,49 +1,49 @@
 ---
-title: "SyntaxError: invalid BigInt syntax"
-slug: Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "syntaxewwow: invawid b-bigint syntax"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_bigint_syntax
+w-w10n:
+  s-souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"invalid BigInt syntax"</i> se produit lors d'une tentative de conversion d'une chaîne de caractères en [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) qui échoue, parce que la chaîne de caractères ne peut pas être analysée comme un nombre entier.
+w-w'exception j-javascwipt <i w-wang="en">"invawid bigint syntax"</i> se pwoduit wows d'une tentative de convewsion d-d'une chaîne de cawactèwes en [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) q-qui échoue, 😳😳😳 pawce que w-wa chaîne de cawactèwes nye peut pas êtwe anawysée comme un n-nyombwe entiew. o.O
 
-## Message
+## message
 
 ```
-SyntaxError: Cannot convert x to a BigInt (moteur JavaScript basé sur V8)
-SyntaxError: invalid BigInt syntax (Firefox)
-SyntaxError: Failed to parse String to BigInt (Safari)
+s-syntaxewwow: cannot c-convewt x to a bigint (moteuw javascwipt basé suw v8)
+syntaxewwow: invawid b-bigint syntax (fiwefox)
+syntaxewwow: faiwed to pawse stwing to bigint (safawi)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-[`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
+[`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow). ( ͡o ω ͡o )
 
-## Quel est le problème&nbsp;?
+## quew e-est we pwobwème&nbsp;?
 
-Lorsqu'on utilise la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) afin de convertir une chaîne de caractères en grand entier, la chaîne de caractères sera analysée comme du code source et la valeur résultante doit être un nombre entier.
+w-wowsqu'on u-utiwise wa fonction [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint) a-afin de convewtiw une chaîne de cawactèwes e-en gwand entiew, (U ﹏ U) wa chaîne de cawactèwes sewa a-anawysée comme du code souwce et wa vaweuw wésuwtante doit êtwe un nyombwe entiew. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### e-exempwes invawides
 
-```js example-bad
-const a = BigInt("1.5");
-const b = BigInt("1n");
-const c = BigInt.asIntN(4, "8n");
-// SyntaxError: invalid BigInt syntax
+```js e-exampwe-bad
+const a-a = bigint("1.5");
+c-const b = bigint("1n");
+const c = bigint.asintn(4, >w< "8n");
+// syntaxewwow: i-invawid bigint s-syntax
 ```
 
-### Exemples valides
+### exempwes vawides
 
-```js example-good
-const a = BigInt("1");
-const b = BigInt("  1   ");
-const c = BigInt.asIntN(4, "8");
+```js e-exampwe-good
+c-const a = bigint("1");
+const b-b = bigint("  1   ");
+const c = b-bigint.asintn(4, rawr "8");
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)

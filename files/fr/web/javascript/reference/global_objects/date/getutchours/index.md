@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.getUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
+titwe: date.pwototype.getutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutchouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCHours()`** renvoie les heures de la date renseignée, d'après UTC.
+w-wa méthode **`getutchouws()`** w-wenvoie wes h-heuwes de wa date w-wenseignée, rawr x3 d-d'apwès utc. mya
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutchouws()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js i-intewactive-exampwe
+c-const date1 = nyew date("decembew 31, nyaa~~ 1975, (⑅˘꒳˘) 23:15:30 gmt+11:00");
+const date2 = nyew date("decembew 31, rawr x3 1975, 23:15:30 g-gmt-11:00");
 
-console.log(date1.getUTCHours());
-// Expected output: 12
+consowe.wog(date1.getutchouws());
+// expected output: 12
 
-console.log(date2.getUTCHours());
-// Expected output: 10
+consowe.wog(date2.getutchouws());
+// e-expected output: 10
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getUTCHours();
+dateobj.getutchouws();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier entre 0 et 23 correspondant à l'heure de la date indiquée selon le temps universel.
+un entiew e-entwe 0 et 23 cowwespondant à w-w'heuwe de wa d-date indiquée sewon we temps univewsew. (✿oωo)
 
-## Exemples
+## exempwes
 
-### Utiliser `getUTCHours()`
+### utiwisew `getutchouws()`
 
-L'exemple suivant assigne les heures de la date actuelle à la variable `heures`.
+w'exempwe s-suivant assigne wes heuwes de wa date actuewwe à wa vawiabwe `heuwes`. (ˆ ﻌ ˆ)♡
 
 ```js
-var aujourdhui = new Date();
-var heures = aujourdhui.getUTCHours();
+vaw aujouwdhui = n-nyew date();
+vaw heuwes = aujouwdhui.getutchouws();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.getHours()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gethouws()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

@@ -1,77 +1,77 @@
 ---
-title: IDBRequest.onerror
-slug: Web/API/IDBRequest/error_event
+titwe: idbwequest.onewwow
+swug: w-web/api/idbwequest/ewwow_event
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-le gestionnaire d'événement **`onerror`** de l'interface {{domxref("IDBRequest")}} capte l'événement [`error`](/fr/docs/Web/API/HTMLElement/error_event), déclenché quand une requête renvoie une erreur.
+w-we gestionnaiwe d-d'événement **`onewwow`** d-de w-w'intewface {{domxwef("idbwequest")}} c-capte w'événement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event), (///ˬ///✿) d-décwenché quand une wequête wenvoie une ewweuw. 😳
 
-Le gestionnaire d'événement reçoit l'événement [error](/fr/docs/Web/API/HTMLElement/error_event) avec le type="error" en paramètre.
+we gestionnaiwe d'événement w-weçoit w'événement [ewwow](/fw/docs/web/api/htmwewement/ewwow_event) avec we type="ewwow" en p-pawamètwe. 😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-request.onerror = function( event ) { ... };
+w-wequest.onewwow = function( event ) { ... };
 ```
 
-## Exemple
+## exempwe
 
-L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé au {{domxref("IDBObjectStore","magasin d'objets")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objets. En bas le gestionnaire d'événement `onerror` affiche le code d'erreur si la {{domxref("IDBRequest","requête")}} échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+w-w'exempwe suivant demande u-un titwe d'enwegistwement d-donné, σωσ `onsuccess` obtient w'enwegistwement associé au {{domxwef("idbobjectstowe","magasin d'objets")}} (mis à d-disposition en tant que `objectstowetitwewequest.wesuwt`), rawr x3 on met à jouw une pwopwiété d-de w'enwegistwement, OwO puis w-we sauve dans we m-magasin d'objets. /(^•ω•^) e-en bas we gestionnaiwe d-d'événement `onewwow` affiche we code d'ewweuw si wa {{domxwef("idbwequest","wequête")}} échoue. 😳😳😳 p-pouw un exempwe de twavaiw compwet, ( ͡o ω ͡o ) voiw nyotwe [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). >_<
 
 ```js
-var title = "Walk dog";
+vaw titwe = "wawk dog";
 
-// Ouvrez une transaction comme d'habitude
-var objectStore = db
-  .transaction(["toDoList"], "readwrite")
-  .objectStore("toDoList");
+// ouvwez une twansaction c-comme d'habitude
+vaw objectstowe = d-db
+  .twansaction(["todowist"], >w< "weadwwite")
+  .objectstowe("todowist");
 
-// Obtenez l'objet toDoList qui a ce titre
-var objectStoreTitleRequest = objectStore.get(title);
+// o-obtenez w-w'objet todowist qui a ce titwe
+vaw objectstowetitwewequest = objectstowe.get(titwe);
 
-objectStoreTitleRequest.onsuccess = function () {
-  // Prenez l'objet de données renvoyé comme résultat
-  var data = objectStoreTitleRequest.result;
+o-objectstowetitwewequest.onsuccess = f-function () {
+  // pwenez w-w'objet de d-données wenvoyé comme wésuwtat
+  v-vaw data = objectstowetitwewequest.wesuwt;
 
-  // Mettre à jour la valeur notified de l'objet à "yes"
+  // mettwe à jouw w-wa vaweuw nyotified de w'objet à "yes"
   data.notified = "yes";
 
-  // Créer une autre requête qui insère le nouvelle élément dans la base de données
-  var updateTitleRequest = objectStore.put(data);
+  // c-cwéew une autwe wequête q-qui insèwe we nyouvewwe éwément d-dans wa b-base de données
+  vaw updatetitwewequest = objectstowe.put(data);
 
-  // Lorsque cette requête réussit, appelle de la fonction displayData() pour mettre à jour l'affichage
-  updateTitleRequest.onsuccess = function () {
-    displayData();
+  // wowsque cette wequête wéussit, rawr appewwe de wa fonction d-dispwaydata() pouw m-mettwe à jouw w'affichage
+  u-updatetitwewequest.onsuccess = f-function () {
+    d-dispwaydata();
   };
 };
 
-objectStoreTitleRequest.onerror = function () {
-  // Si une erreur se produit à la demande, on l'affiche
-  console.log(
-    "Il y a eu une erreur dans la récupération des données: " +
-      objectStoreTitleRequest.error,
+objectstowetitwewequest.onewwow = function () {
+  // si une ewweuw se p-pwoduit à wa demande, 😳 on w'affiche
+  consowe.wog(
+    "iw y a eu une ewweuw dans w-wa wécupéwation des données: " +
+      o-objectstowetitwewequest.ewwow, >w<
   );
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Using IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [Error Event](/fr/docs/Web/API/HTMLElement/error_event)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- [ewwow e-event](/fw/docs/web/api/htmwewement/ewwow_event)
+- stawting t-twansactions: {{domxwef("idbdatabase")}}
+- using twansactions: {{domxwef("idbtwansaction")}}
+- setting a w-wange of keys: {{domxwef("idbkeywange")}}
+- w-wetwieving a-and making c-changes to youw d-data: {{domxwef("idbobjectstowe")}}
+- using cuwsows: {{domxwef("idbcuwsow")}}
+- wefewence exampwe: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

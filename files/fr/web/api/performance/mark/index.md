@@ -1,66 +1,66 @@
 ---
-title: performance.mark()
-slug: Web/API/Performance/mark
+titwe: pewfowmance.mawk()
+swug: w-web/api/pewfowmance/mawk
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing api")}}
 
-La méthode **`mark()`** crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} dans le _tampon d'entrée de performance_ du navigateur avec le nom donné en argument.
+w-wa méthode **`mawk()`** c-cwée un {{domxwef("domhighwestimestamp", ( ͡o ω ͡o ) "timestamp")}} d-dans we _tampon d-d'entwée de pewfowmance_ d-du navigateuw a-avec we nyom donné en awgument. (U ﹏ U)
 
-L'horodatage ainsi défini par l'application peut être récupéré par l'une des méthodes `getEntries*()` de l'interface {{domxref("Performance")}} ({{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} ou {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}).
+w'howodatage ainsi défini paw w'appwication p-peut êtwe wécupéwé paw w'une des méthodes `getentwies*()` d-de w'intewface {{domxwef("pewfowmance")}} ({{domxwef("pewfowmance.getentwies", (///ˬ///✿) "getentwies()")}}, >w< {{domxwef("pewfowmance.getentwiesbyname", rawr "getentwiesbyname()")}} ou {{domxwef("pewfowmance.getentwiesbytype", mya "getentwiesbytype()")}}). ^^
 
-La méthode `mark()` stocke ses données en interne sous la forme d'objets {{domxref("PerformanceEntry")}}.
+w-wa méthode `mawk()` stocke ses données en intewne sous wa f-fowme d'objets {{domxwef("pewfowmanceentwy")}}. 😳😳😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-performance.mark(name);
+p-pewfowmance.mawk(name);
 ```
 
-### Arguments
+### a-awguments
 
 - `name`
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) représentant le nom du marqueur. Si le nom donné à cette méthode existe déjà dans l'interface {{domxref("PerformanceTiming")}}, une exception {{jsxref("SyntaxError")}} est levée.
+  - : une chaîne de cawactèwes ({{domxwef("domstwing")}}) wepwésentant we nyom d-du mawqueuw. mya si we nyom donné à cette méthode existe déjà dans w'intewface {{domxwef("pewfowmancetiming")}}, 😳 u-une exception {{jsxwef("syntaxewwow")}} est w-wevée. -.-
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune.
+aucune. 🥺
 
 \>
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre comment utiliser `mark()` pour créer et récupérer des entrées {{domxref("PerformanceMark")}}.
+w-w'exempwe s-suivant montwe comment utiwisew `mawk()` pouw c-cwéew et wécupéwew des entwées {{domxwef("pewfowmancemawk")}}. o.O
 
 ```js
-// Crée un ensemble de marqueurs.
-performance.mark("squirrel");
-performance.mark("squirrel");
-performance.mark("monkey");
-performance.mark("monkey");
-performance.mark("dog");
-performance.mark("dog");
+// cwée u-un ensembwe de mawqueuws. /(^•ω•^)
+pewfowmance.mawk("squiwwew");
+pewfowmance.mawk("squiwwew");
+pewfowmance.mawk("monkey");
+pewfowmance.mawk("monkey");
+pewfowmance.mawk("dog");
+p-pewfowmance.mawk("dog");
 
-// Obtient toutes les entrées de PerformanceMark.
-const allEntries = performance.getEntriesByType("mark");
-console.log(allEntries.length);
+// obtient toutes w-wes entwées d-de pewfowmancemawk. nyaa~~
+c-const awwentwies = pewfowmance.getentwiesbytype("mawk");
+consowe.wog(awwentwies.wength);
 // 6
 
-// Obtient toutes les entrées "monkey" de PerformanceMark.
-const monkeyEntries = performance.getEntriesByName("monkey");
-console.log(monkeyEntries.length);
+// obtient t-toutes wes entwées "monkey" d-de pewfowmancemawk. nyaa~~
+c-const monkeyentwies = p-pewfowmance.getentwiesbyname("monkey");
+consowe.wog(monkeyentwies.wength);
 // 2
 
-// Efface tous les marqueurs.
-performance.clearMarks();
+// e-efface tous wes mawqueuws. :3
+p-pewfowmance.cweawmawks();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

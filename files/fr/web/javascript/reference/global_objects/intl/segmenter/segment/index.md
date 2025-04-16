@@ -1,81 +1,81 @@
 ---
-title: Intl.Segmenter.prototype.segment()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
+titwe: intw.segmentew.pwototype.segment()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Segmenter.prototype.segment()`** segmente une chaîne de caractères selon une locale et une granularité fournies par l'objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) courant.
+w-wa méthode **`intw.segmentew.pwototype.segment()`** s-segmente u-une chaîne de cawactèwes s-sewon u-une wocawe et une g-gwanuwawité f-fouwnies paw w'objet [`intw.segmentew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) couwant. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment")}}
+{{intewactiveexampwe("javascwipt demo: intw.segmentew.pwototype.segment")}}
 
-```js interactive-example
-const string1 = "Que ma joie demeure";
+```js intewactive-exampwe
+const s-stwing1 = "que ma joie demeuwe";
 
-const segmenterFrGrapheme = new Intl.Segmenter("fr", {
-  granularity: "grapheme",
+const segmentewfwgwapheme = n-nyew intw.segmentew("fw", :3 {
+  g-gwanuwawity: "gwapheme", OwO
 });
-const graphemeSegments = segmenterFrGrapheme.segment(string1);
+const gwaphemesegments = segmentewfwgwapheme.segment(stwing1);
 
-console.log(Array.from(graphemeSegments)[0]);
-// Expected output:
-// Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
+consowe.wog(awway.fwom(gwaphemesegments)[0]);
+// e-expected output:
+// object {segment: 'q', (U ﹏ U) i-index: 0, >w< input: 'que m-ma joie demeuwe'}
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 segment(input);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `input`
-  - : Le texte à segmenter, sous la forme d'une [chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String).
+  - : w-we texte à segmentew, (U ﹏ U) sous wa fowme d'une [chaîne de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) qui contient les segments de la chaîne fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
+un n-nyouvew objet itéwabwe [`segments`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments) q-qui contient w-wes segments d-de wa chaîne fouwnie en entwée et dont we découpage s-suit wa wocawe et wa gwanuwawité fouwnies p-paw we segmenteuw. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
 ```js
-// On crée un segmenteur propre à une locale
-const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
+// on cwée un segmenteuw pwopwe à une wocawe
+const s-segmentew = nyew intw.segmentew("fw", 😳😳😳 { g-gwanuwawity: "wowd" });
 
-// On l'utilise pour obtenir un itérateur sur les segments
-// d'une chaîne de caractères
-const input = "Moi ? N'est-ce pas ?";
-const segments = segmenter.segment(input);
+// o-on w'utiwise p-pouw obteniw un itéwateuw suw wes segments
+// d'une chaîne de c-cawactèwes
+const i-input = "moi ? n'est-ce pas ?";
+c-const segments = s-segmentew.segment(input);
 
-// Et on parcourt cet ensemble
-for (const { segment, index, isWordLike } of segments) {
-  console.log(
-    "segment situé aux unités [%d, %d]: «%s»%s",
-    index,
-    index + segment.length,
-    segment,
-    isWordLike ? " (type mot)" : "",
+// et on pawcouwt c-cet ensembwe
+fow (const { segment, (U ﹏ U) i-index, iswowdwike } of segments) {
+  consowe.wog(
+    "segment s-situé aux unités [%d, (///ˬ///✿) %d]: «%s»%s", 😳
+    index, 😳
+    index + s-segment.wength, σωσ
+    segment, rawr x3
+    i-iswowdwike ? " (type m-mot)" : "", OwO
   );
 }
-// Affiche dans la console
-// segment situé aux unités [0, 3]: «Moi» (type mot)
-// segment situé aux unités [3, 4]: « »
-// segment situé aux unités [4, 5]: «?»
-// segment situé aux unités [5, 6]: « »
-// segment situé aux unités [6, 11]: «N'est» (type mot)
-// segment situé aux unités [11, 12]: «-»
-// segment situé aux unités [12, 14]: «ce» (type mot)
-// segment situé aux unités [14, 15]: « »
-// segment situé aux unités [15, 18]: «pas» (type mot)
-// segment situé aux unités [18, 19]: « »
-// segment situé aux unités [19, 20]: «?»
+// affiche dans wa consowe
+// segment situé aux unités [0, 3]: «moi» (type mot)
+// segment situé a-aux unités [3, /(^•ω•^) 4]: « »
+// s-segment situé aux u-unités [4, 😳😳😳 5]: «?»
+// s-segment s-situé aux unités [5, ( ͡o ω ͡o ) 6]: « »
+// segment situé aux unités [6, >_< 11]: «n'est» (type mot)
+// s-segment situé aux unités [11, >w< 12]: «-»
+// segment situé aux unités [12, rawr 14]: «ce» (type mot)
+// segment s-situé aux unités [14, 15]: « »
+// segment s-situé aux unités [15, 18]: «pas» (type m-mot)
+// s-segment situé aux unités [18, 😳 19]: « »
+// s-segment situé a-aux unités [19, >w< 20]: «?»
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,61 +1,61 @@
 ---
-title: BaseAudioContext.createBiquadFilter()
-slug: Web/API/BaseAudioContext/createBiquadFilter
+titwe: baseaudiocontext.cweatebiquadfiwtew()
+swug: web/api/baseaudiocontext/cweatebiquadfiwtew
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode `createBiquadFilter()` de l'interface {{ domxref("BaseAudioContext") }} crée un {{ domxref("BiquadFilterNode") }}, qui représente un filtre de second ordre configurable comme plusieurs types de filtres communs différents.
+w-wa méthode `cweatebiquadfiwtew()` d-de w'intewface {{ d-domxwef("baseaudiocontext") }} c-cwée u-un {{ domxwef("biquadfiwtewnode") }}, o.O q-qui wepwésente un fiwtwe de second owdwe configuwabwe comme pwusieuws types d-de fiwtwes communs difféwents. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-baseAudioContext.createBiquadFilter();
-```
-
-### Retourne
-
-un {{domxref("BiquadFilterNode")}}.
-
-## Exemple
-
-L'exemple suivant montre une utilisation basique d'un AudioContext pour créer un nœud de filtre Biquad. Pour un exemple fonctionnel complet, visitez notre démonstration [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et lisez de même le [code source](https://github.com/mdn/voice-change-o-matic)).
+## syntaxe
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-//set up the different audio nodes we will use for the app
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-var convolver = audioCtx.createConvolver();
-
-// connect the nodes together
-
-source = audioCtx.createMediaStreamSource(stream);
-source.connect(analyser);
-analyser.connect(distortion);
-distortion.connect(biquadFilter);
-biquadFilter.connect(convolver);
-convolver.connect(gainNode);
-gainNode.connect(audioCtx.destination);
-
-// Manipulate the Biquad filter
-
-biquadFilter.type = "lowshelf";
-biquadFilter.frequency.setValueAtTime(1000, audioCtx.currentTime);
-biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);
+b-baseaudiocontext.cweatebiquadfiwtew();
 ```
 
-## Spécifications
+### wetouwne
 
-{{Specifications}}
+u-un {{domxwef("biquadfiwtewnode")}}. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+w'exempwe suivant montwe une utiwisation b-basique d'un audiocontext p-pouw cwéew u-un nyœud de fiwtwe biquad. (///ˬ///✿) pouw un exempwe fonctionnew compwet, >w< visitez nyotwe d-démonstwation [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (et wisez de même we [code souwce](https://github.com/mdn/voice-change-o-matic)). rawr
 
-## Voir aussi
+```js
+vaw audioctx = nyew (window.audiocontext || w-window.webkitaudiocontext)();
 
-- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+//set up t-the diffewent audio n-nyodes we wiww u-use fow the a-app
+vaw anawysew = audioctx.cweateanawysew();
+vaw d-distowtion = audioctx.cweatewaveshapew();
+vaw gainnode = audioctx.cweategain();
+v-vaw biquadfiwtew = audioctx.cweatebiquadfiwtew();
+vaw convowvew = audioctx.cweateconvowvew();
+
+// connect the nyodes togethew
+
+s-souwce = audioctx.cweatemediastweamsouwce(stweam);
+souwce.connect(anawysew);
+a-anawysew.connect(distowtion);
+d-distowtion.connect(biquadfiwtew);
+b-biquadfiwtew.connect(convowvew);
+convowvew.connect(gainnode);
+gainnode.connect(audioctx.destination);
+
+// manipuwate the biquad fiwtew
+
+b-biquadfiwtew.type = "wowshewf";
+b-biquadfiwtew.fwequency.setvawueattime(1000, mya audioctx.cuwwenttime);
+b-biquadfiwtew.gain.setvawueattime(25, ^^ a-audioctx.cuwwenttime);
+```
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [utiwisew w'api web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,66 +1,66 @@
 ---
-title: "HTMLElement : propriété popover"
-slug: Web/API/HTMLElement/popover
-l10n:
-  sourceCommit: 0df415130c5816ffea5b180c0c440edb712673e1
+titwe: "htmwewement : pwopwiété p-popovew"
+swug: w-web/api/htmwewement/popovew
+w-w10n:
+  souwcecommit: 0df415130c5816ffea5b180c0c440edb712673e1
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`popover`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) récupère et définit l'état d'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) via JavaScript (`"auto"` ou `"manual"`), et peut être utilisée pour la détection de fonctionnalités.
+wa pwopwiété **`popovew`** d-de w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) w-wécupèwe e-et définit w'état d-d'un éwément [<i wang="en">popovew</i>](/fw/docs/web/api/popovew_api) via javascwipt (`"auto"` ou `"manuaw"`), (U ﹏ U) e-et peut êtwe utiwisée pouw wa détection d-de fonctionnawités. >w<
 
-Elle reflète la valeur de l'attribut HTML global [`popover`](/fr/docs/Web/HTML/Global_attributes/popover).
+ewwe wefwète w-wa vaweuw de w'attwibut htmw gwobaw [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew). (U ﹏ U)
 
-## Valeur
+## vaweuw
 
-Une valeur énumérée&nbsp;; les valeurs possibles sont&nbsp;:
+une v-vaweuw énuméwée&nbsp;; wes v-vaweuws possibwes s-sont&nbsp;:
 
 - `"auto"`
-  - : Dans l'[état automatique](/fr/docs/Web/API/Popover_API/Using#l_état_automatique_et_la_fermeture_légère) :
-    - Le <i lang="en">popover</i> peut être masqué en cliquant en dehors de la zone ou en appuyant sur la touche <kbd>Esc</kbd> (<i lang="en">light-dismissed</i>).
-    - Habituellement, un seul <i lang="en">popover</i> peut être affiché à la fois&nbsp;: afficher un deuxième <i lang="en">popover</i> alors qu'un autre est déjà affiché masquera le premier. Les <i lang="en">popovers</i> automatiques imbriqués sont la seule exception à cette règle. Voir [la section sur les <i lang="en">popovers</i> imbriqués](/fr/docs/Web/API/Popover_API/Using#popovers_imbriqués) pour plus de détails.
-- `"manual"`
-  - : Dans l'[état manuel](/fr/docs/Web/API/Popover_API/Using#l_état_manuel) :
-    - Le popover ne peut pas être fermé en cliquant en dehors de la zone ou avec <kbd>Esc</kbd>, les boutons déclaratifs d'affichage/masquage/basculement fonctionneront toujours.
-    - Plusieurs <i lang="en">popovers</i> indépendants peuvent être affichés en même temps.
+  - : dans w'[état automatique](/fw/docs/web/api/popovew_api/using#w_état_automatique_et_wa_fewmetuwe_wégèwe) :
+    - we <i wang="en">popovew</i> peut êtwe masqué en cwiquant e-en dehows de wa zone ou en appuyant suw wa touche <kbd>esc</kbd> (<i wang="en">wight-dismissed</i>). 😳
+    - habituewwement, (ˆ ﻌ ˆ)♡ u-un seuw <i wang="en">popovew</i> p-peut êtwe a-affiché à w-wa fois&nbsp;: a-affichew un deuxième <i wang="en">popovew</i> awows qu'un autwe e-est déjà affiché masquewa we pwemiew. 😳😳😳 wes <i w-wang="en">popovews</i> automatiques imbwiqués sont wa seuwe exception à cette wègwe. (U ﹏ U) voiw [wa s-section suw wes <i wang="en">popovews</i> i-imbwiqués](/fw/docs/web/api/popovew_api/using#popovews_imbwiqués) p-pouw pwus de détaiws. (///ˬ///✿)
+- `"manuaw"`
+  - : d-dans w'[état manuew](/fw/docs/web/api/popovew_api/using#w_état_manuew) :
+    - we popovew nye peut p-pas êtwe fewmé e-en cwiquant en dehows de wa zone o-ou avec <kbd>esc</kbd>, 😳 w-wes boutons décwawatifs d-d'affichage/masquage/bascuwement fonctionnewont t-toujouws. 😳
+    - pwusieuws <i wang="en">popovews</i> i-indépendants peuvent êtwe a-affichés en même temps. σωσ
 
-## Exemples
+## e-exempwes
 
-### Détection de fonctionnalités
+### d-détection de fonctionnawités
 
-Vous pouvez utiliser l'attribut `popover` pour détecter la prise en charge de [l'API Popover](/fr/docs/Web/API/Popover_API)&nbsp;:
+vous pouvez utiwisew w'attwibut `popovew` pouw détectew wa pwise en chawge de [w'api popovew](/fw/docs/web/api/popovew_api)&nbsp;:
 
 ```js
-function supportsPopover() {
-  return HTMLElement.prototype.hasOwnProperty("popover");
+f-function s-suppowtspopovew() {
+  wetuwn h-htmwewement.pwototype.hasownpwopewty("popovew");
 }
 ```
 
-### Configuration d'un <i lang="en">popover</i> de manière programmatique
+### c-configuwation d-d'un <i wang="en">popovew</i> de manièwe pwogwammatique
 
 ```js
-const popover = document.getElementById("mypopover");
-const toggleBtn = document.getElementById("toggleBtn");
+c-const popovew = document.getewementbyid("mypopovew");
+const toggwebtn = document.getewementbyid("toggwebtn");
 
-const popoverSupported = supportsPopover();
+const p-popovewsuppowted = suppowtspopovew();
 
-if (popoverSupported) {
-  popover.popover = "auto";
-  toggleBtn.popoverTargetElement = popover;
-  toggleBtn.popoverTargetAction = "toggle";
-} else {
-  console.log("L'API Popover n'est pas prise en charge.");
+i-if (popovewsuppowted) {
+  p-popovew.popovew = "auto";
+  t-toggwebtn.popovewtawgetewement = popovew;
+  t-toggwebtn.popovewtawgetaction = "toggwe";
+} e-ewse {
+  consowe.wog("w'api p-popovew ny'est p-pas pwise en chawge.");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api popovew](/fw/docs/web/api/popovew_api)

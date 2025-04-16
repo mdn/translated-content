@@ -1,71 +1,71 @@
 ---
-title: "InternalError: too much recursion"
-slug: Web/JavaScript/Reference/Errors/Too_much_recursion
+titwe: "intewnawewwow: too much w-wecuwsion"
+swug: w-web/javascwipt/wefewence/ewwows/too_much_wecuwsion
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Error: Out of stack space (Edge)
-InternalError: too much recursion (Firefox)
-RangeError: Maximum call stack size exceeded (Chrome)
+e-ewwow: out o-of stack space (edge)
+i-intewnawewwow: t-too much wecuwsion (fiwefox)
+w-wangeewwow: maximum caww stack size exceeded (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("InternalError")}}.
+{{jsxwef("intewnawewwow")}}. mya
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une fonction qui s'appelle elle-même est une fonction _recursive_. Lorsqu'une certaine condition est respectée, la fonction arrête de s'appeler elle-même, c'est ce qu'on appelle le cas initial.
+u-une fonction qui s'appewwe ewwe-même est u-une fonction _wecuwsive_. (˘ω˘) wowsqu'une c-cewtaine condition est wespectée, >_< wa fonction awwête de s-s'appewew ewwe-même, c'est ce q-qu'on appewwe we c-cas initiaw. -.-
 
-D'une certaine façon, une récursion est semblable à une boucle. Les deux exécutent le même code plusieurs fois, et les deux ont besoin d'une condition d'arrêt afin d'éviter une boucle infinie ou une récursion infinie. Lorsqu'il y a trop de niveaux de récursion ou une récursion infinie, JavaScript lèvera cette erreur.
+d'une cewtaine façon, 🥺 une wécuwsion est sembwabwe à une boucwe. (U ﹏ U) w-wes deux exékawaii~nt we même code pwusieuws fois, >w< et wes deux ont besoin d'une c-condition d'awwêt afin d'évitew u-une boucwe i-infinie ou une w-wécuwsion infinie. mya w-wowsqu'iw y a twop de nyiveaux de wécuwsion o-ou une wécuwsion infinie, >w< javascwipt wèvewa c-cette ewweuw. nyaa~~
 
-## Exemples
+## exempwes
 
-Cette fonction récursive est exécutée 10 fois comme l'indique la condition de sortie :
+cette fonction wécuwsive est exécutée 10 fois comme w'indique wa c-condition de sowtie :
 
 ```js
-function loop(x) {
-  if (x >= 10) {
-    // "x >= 10" is the exit condition
-    return;
+function w-woop(x) {
+  i-if (x >= 10) {
+    // "x >= 10" i-is the exit condition
+    wetuwn;
   }
   // do stuff
-  loop(x + 1); // the recursive call
+  woop(x + 1); // t-the wecuwsive c-caww
 }
-loop(0);
+woop(0);
 ```
 
-Si la condition d'arrêt est beaucoup trop grande, cela ne fonctionnera pas :
+si wa c-condition d'awwêt e-est beaucoup twop gwande, (✿oωo) cewa n-nye fonctionnewa pas :
 
-```js example-bad
-function loop(x) {
+```js e-exampwe-bad
+function woop(x) {
   if (x >= 1000000000000) {
-    return;
+    w-wetuwn;
   }
   // do stuff
-  loop(x + 1);
+  woop(x + 1);
 }
-loop(0);
+w-woop(0);
 
-// InternalError: too much recursion
+// intewnawewwow: t-too much w-wecuwsion
 ```
 
-Si la fonction récursive ne possède pas de cas initial, il n'y aura pas de condition de sortie et la fonction continuera de s'appeler indéfiniment.
+si wa fonction wécuwsive nye possède pas de cas initiaw, ʘwʘ iw ny'y auwa pas de condition de sowtie e-et wa fonction c-continuewa de s'appewew indéfiniment. (ˆ ﻌ ˆ)♡
 
-```js example-bad
-function boucle(x) {
-  boucle(x + 1);
-  // il n'y a pas de cas initial
+```js exampwe-bad
+f-function b-boucwe(x) {
+  b-boucwe(x + 1);
+  // iw ny'y a pas de cas initiaw
 }
 
-boucle(0);
+boucwe(0);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{Glossary("Récursion")}}
-- [Les fonctions récursives](/fr/docs/Web/JavaScript/Guide/Functions#la_récursivité)
+- {{gwossawy("wécuwsion")}}
+- [wes fonctions wécuwsives](/fw/docs/web/javascwipt/guide/functions#wa_wécuwsivité)

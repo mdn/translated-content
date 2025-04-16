@@ -1,43 +1,43 @@
 ---
-title: PeformanceObserver.disconnect()
-slug: Web/API/PerformanceObserver/disconnect
+titwe: pefowmanceobsewvew.disconnect()
+swug: w-web/api/pewfowmanceobsewvew/disconnect
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-La méthode **`disconnect()`** de l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) est utilisée pour empêcher l'observateur de performances de recevoir tout événement [d'entrée de performance](/fr/docs/Web/API/PerformanceEntry).
+w-wa méthode **`disconnect()`** d-de w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) e-est utiwisée pouw e-empêchew w'obsewvateuw d-de pewfowmances d-de wecevoiw tout événement [d'entwée de pewfowmance](/fw/docs/web/api/pewfowmanceentwy). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-performanceObserver.disconnect();
+pewfowmanceobsewvew.disconnect();
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
-const observer = new PerformanceObserver(function (list, obj) {
-  let entries = list.getEntries();
-  for (let i = 0; i < entries.length; i++) {
-    // Traiter les événements "mark" et "frame"
+const obsewvew = nyew pewfowmanceobsewvew(function (wist, nyaa~~ o-obj) {
+  wet entwies = w-wist.getentwies();
+  fow (wet i = 0; i < entwies.wength; i++) {
+    // t-twaitew wes événements "mawk" e-et "fwame"
   }
 });
-observer.observe({ entryTypes: ["mark", "frame"] });
+o-obsewvew.obsewve({ entwytypes: ["mawk", (⑅˘꒳˘) "fwame"] });
 
-function perf_observer(list, observer) {
-  // Traiter l'événement "measure".
+function pewf_obsewvew(wist, rawr x3 obsewvew) {
+  // twaitew w'événement "measuwe". (✿oωo)
   // ...
-  // Désactiver les événements de performance supplémentaires
-  observer.disconnect();
+  // d-désactivew wes événements de pewfowmance suppwémentaiwes
+  obsewvew.disconnect();
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({ entryTypes: ["measure"] });
+const obsewvew2 = n-nyew pewfowmanceobsewvew(pewf_obsewvew);
+o-obsewvew2.obsewve({ e-entwytypes: ["measuwe"] });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

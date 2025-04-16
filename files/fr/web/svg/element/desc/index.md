@@ -1,38 +1,38 @@
 ---
-title: desc
-slug: Web/SVG/Element/desc
+titwe: desc
+swug: web/svg/ewement/desc
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Tout élément graphique ou conteneur dans un dessin SVG peut définir une description en utilisant l'élément **`<desc>`**, cette description ne peut contenir que du texte.
+t-tout éwément g-gwaphique o-ou conteneuw d-dans un dessin s-svg peut définiw u-une descwiption e-en utiwisant w'éwément **`<desc>`**, >_< c-cette descwiption nye peut conteniw que du texte. >_<
 
-Quand l'élément contenant une description apparaît à l'utilisateur sous forme d'image, l'élément `<desc>` n'est pas affiché. Néanmoins, quelques moteurs de rendu peuvent, par exemple, l'afficher sous forme d'infobulle. Des représentations alternatives sont possibles, visuelles ou auditives, en remplacement des éléments graphiques. De manière générale, cet élément améliore l'accessibilité des documents SVG.
+quand w'éwément contenant u-une descwiption appawaît à w'utiwisateuw s-sous fowme d'image, (⑅˘꒳˘) w'éwément `<desc>` n-ny'est pas affiché. /(^•ω•^) néanmoins, rawr x3 quewques moteuws de w-wendu peuvent, (U ﹏ U) paw exempwe, (U ﹏ U) w'affichew s-sous fowme d-d'infobuwwe. (⑅˘꒳˘) des wepwésentations awtewnatives sont possibwes, òωó visuewwes ou auditives, ʘwʘ e-en wempwacement des éwéments gwaphiques. /(^•ω•^) de manièwe généwawe, ʘwʘ cet éwément a-améwiowe w'accessibiwité d-des documents s-svg. σωσ
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;»
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)&nbsp;»
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-_Aucun._
+_aucun._
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement).
+cet éwément impwémente w'intewface [`svgdescewement`](/fw/docs/web/api/svgdescewement). OwO
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{ SVGElement("title") }}
+- {{ svgewement("titwe") }}

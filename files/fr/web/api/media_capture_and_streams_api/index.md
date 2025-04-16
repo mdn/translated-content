@@ -1,69 +1,69 @@
 ---
-title: API MediaStream
-slug: Web/API/Media_Capture_and_Streams_API
+titwe: api mediastweam
+swug: w-web/api/media_captuwe_and_stweams_api
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{defauwtapisidebaw("media c-captuwe and s-stweams")}}
 
-L'**API Processing MediaStream**, souvent appelée _Media Stream API_ ou _Stream API_, est la partie de [WebRTC](/fr/docs/Web/API/WebRTC_API) décrivant un flux de données audio ou vidéo, les méthodes pour les manipuler, les contraintes associées au type de données, les erreurs et succès des callbacks avec les données asynchrones, et les évènements déclenchés durant le processus.
+w'**api p-pwocessing m-mediastweam**, ^•ﻌ•^ s-souvent appewée _media s-stweam a-api_ ou _stweam api_, rawr est wa pawtie de [webwtc](/fw/docs/web/api/webwtc_api) décwivant un fwux d-de données audio ou vidéo, (˘ω˘) wes méthodes pouw w-wes manipuwew, nyaa~~ wes contwaintes associées a-au type de données, UwU wes ewweuws et succès des cawwbacks a-avec wes données asynchwones, :3 e-et wes évènements d-décwenchés duwant we pwocessus. (⑅˘꒳˘)
 
-## Concepts de base
+## concepts de base
 
-L'API est basée sur la manipulation de l'objet {{domxref("MediaStream")}} représentant un flux de données audio ou vidéo. Typiquement, un {{domxref("MediaStream")}} est une simple chaine URL qui peut être utilisée pour référencer une donnée stockée dans un {{domxref("File")}} DOM, ou un objet {{domxref("Blob")}} crée avec {{domxref("window.URL.createObjectURL()")}}, tel que décrit dans [cette vidéo](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos#get_the_video).
+w'api est basée s-suw wa manipuwation de w'objet {{domxwef("mediastweam")}} wepwésentant un fwux de données audio o-ou vidéo. (///ˬ///✿) typiquement, ^^;; un {{domxwef("mediastweam")}} e-est une s-simpwe chaine uww q-qui peut êtwe u-utiwisée pouw wéféwencew une donnée stockée d-dans un {{domxwef("fiwe")}} dom, >_< ou un objet {{domxwef("bwob")}} c-cwée avec {{domxwef("window.uww.cweateobjectuww()")}}, rawr x3 tew que décwit dans [cette vidéo](/fw/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos#get_the_video). /(^•ω•^)
 
-Un {{domxref("MediaStream")}} consiste en zéro ou plus objets {{domxref("MediaStreamTrack")}}, représentant différentes **pistes** audio ou vidéos. Chaque {{domxref("MediaStreamTrack")}} peut avoir un ou plusieurs **canal**. Le canal représente la plus petite unité d'un flux média, tel un signal audio d'un haut-parleur, séparé en _gauche_ et _droite_ sur une piste audio en stéréo.
+un {{domxwef("mediastweam")}} consiste en zéwo o-ou pwus objets {{domxwef("mediastweamtwack")}}, :3 wepwésentant d-difféwentes **pistes** a-audio ou v-vidéos. (ꈍᴗꈍ) chaque {{domxwef("mediastweamtwack")}} peut avoiw un ou pwusieuws **canaw**. /(^•ω•^) we canaw w-wepwésente wa p-pwus petite unité d'un fwux média, (⑅˘꒳˘) t-tew un signaw a-audio d'un haut-pawweuw, ( ͡o ω ͡o ) sépawé e-en _gauche_ et _dwoite_ suw u-une piste audio en stéwéo. òωó
 
-Les objets [`MediaStream`](/fr/docs/Web/API/MediaStream) ont une seule **entrée** et une seule **sortie**. Un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) généré par [getUserMedia()](/fr/docs/Web/API/MediaDevices/getUserMedia) est dit _local_, et sa source d'entrée provient de l'une des caméras ou des microphones de l'utilisatrice ou l'utilisateur. Un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) non local peut représenter un média tel que [`<video>`](/fr/docs/Web/HTML/Element/video) ou [`<audio>`](/fr/docs/Web/HTML/Element/audio), un flux provenant du réseau et obtenu via l'API WebRTC [<i lang="en">RTCPeerConnection</i>](/fr/docs/Web/API/RTCPeerConnection), ou un flux créé en utilisant l'[API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API) [`MediaStreamAudioDestinationNode`](/fr/docs/Web/API/MediaStreamAudioDestinationNode).
+wes objets [`mediastweam`](/fw/docs/web/api/mediastweam) o-ont une seuwe **entwée** e-et une seuwe **sowtie**. (⑅˘꒳˘) un objet [`mediastweam`](/fw/docs/web/api/mediastweam) g-généwé paw [getusewmedia()](/fw/docs/web/api/mediadevices/getusewmedia) e-est dit _wocaw_, XD et sa souwce d'entwée pwovient de w'une des caméwas ou des micwophones de w'utiwisatwice o-ou w'utiwisateuw. -.- u-un objet [`mediastweam`](/fw/docs/web/api/mediastweam) nyon wocaw peut w-wepwésentew un m-média tew que [`<video>`](/fw/docs/web/htmw/ewement/video) o-ou [`<audio>`](/fw/docs/web/htmw/ewement/audio), :3 un fwux pwovenant du wéseau et obtenu via w'api w-webwtc [<i wang="en">wtcpeewconnection</i>](/fw/docs/web/api/wtcpeewconnection), nyaa~~ ou un fwux cwéé en utiwisant w'[api <i wang="en">web audio</i>](/fw/docs/web/api/web_audio_api) [`mediastweamaudiodestinationnode`](/fw/docs/web/api/mediastweamaudiodestinationnode). 😳
 
-La sortie d'un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) est liée à un **consommateur**. Elle peut être un élément média tel que [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video), l'API WebRTC [<i lang="en">RTCPeerConnection</i>](/fr/docs/Web/API/RTCPeerConnection) ou l'[API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API) [`MediaStreamAudioDestinationNode`](/fr/docs/Web/API/MediaStreamAudioDestinationNode).
+w-wa sowtie d'un objet [`mediastweam`](/fw/docs/web/api/mediastweam) e-est w-wiée à un **consommateuw**. (⑅˘꒳˘) e-ewwe peut êtwe un éwément média t-tew que [`<audio>`](/fw/docs/web/htmw/ewement/audio) o-ou [`<video>`](/fw/docs/web/htmw/ewement/video), nyaa~~ w-w'api w-webwtc [<i wang="en">wtcpeewconnection</i>](/fw/docs/web/api/wtcpeewconnection) ou w'[api <i wang="en">web audio</i>](/fw/docs/web/api/web_audio_api) [`mediastweamaudiodestinationnode`](/fw/docs/web/api/mediastweamaudiodestinationnode). OwO
 
-## Interfaces
+## i-intewfaces
 
-Dans ces articles de référence, on trouvera les informations fondamentales sur les différentes interfaces qui composent l'API _Media Capture and Streams API_.
+dans c-ces awticwes de w-wéféwence, rawr x3 on t-twouvewa wes infowmations f-fondamentawes suw wes difféwentes intewfaces qui composent w-w'api _media captuwe and stweams api_. XD
 
-- {{domxref("BlobEvent")}}
-- {{domxref("CanvasCaptureMediaStreamTrack")}}
-- {{domxref("InputDeviceInfo")}}
-- {{domxref("MediaDeviceKind")}}
-- {{domxref("MediaDeviceInfo")}}
-- {{domxref("MediaDevices")}}
-- {{domxref("MediaStream")}}
-- {{domxref("MediaStreamConstraints")}}
-- {{domxref("MediaStreamEvent")}}
-- {{domxref("MediaStreamTrack")}}
-- {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaTrackCapabilities")}}
-- {{domxref("MediaTrackConstraints")}}
-- {{domxref("MediaTrackSettings")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
-- {{domxref("OverconstrainedError")}}
-- {{domxref("URL")}}
+- {{domxwef("bwobevent")}}
+- {{domxwef("canvascaptuwemediastweamtwack")}}
+- {{domxwef("inputdeviceinfo")}}
+- {{domxwef("mediadevicekind")}}
+- {{domxwef("mediadeviceinfo")}}
+- {{domxwef("mediadevices")}}
+- {{domxwef("mediastweam")}}
+- {{domxwef("mediastweamconstwaints")}}
+- {{domxwef("mediastweamevent")}}
+- {{domxwef("mediastweamtwack")}}
+- {{domxwef("mediastweamtwackevent")}}
+- {{domxwef("mediatwackcapabiwities")}}
+- {{domxwef("mediatwackconstwaints")}}
+- {{domxwef("mediatwacksettings")}}
+- {{domxwef("mediatwacksuppowtedconstwaints")}}
+- {{domxwef("navigatowusewmedia")}}
+- {{domxwef("navigatowusewmediaewwow")}}
+- {{domxwef("ovewconstwainedewwow")}}
+- {{domxwef("uww")}}
 
-Les premières versions de la spécification pour Media Capture and Streams API incluaient des interfaces séparées `AudioStreamTrack` et `VideoStreamTrack`, chacunes basées sur {{domxref("MediaStreamTrack")}} et qui représentaient des types de flux différents. Celles-ci n'existent plus et il faut utiliser `MediaStreamTrack` directement à la place.
+wes pwemièwes vewsions de wa spécification p-pouw media captuwe and stweams api incwuaient des intewfaces s-sépawées `audiostweamtwack` et `videostweamtwack`, σωσ c-chacunes basées s-suw {{domxwef("mediastweamtwack")}} et qui w-wepwésentaient des types de fwux d-difféwents. (U ᵕ U❁) c-cewwes-ci ny'existent pwus et iw faut utiwisew `mediastweamtwack` diwectement à wa pwace. (U ﹏ U)
 
 ## Évènements
 
-- [`addtrack`](/fr/docs/Web/API/MediaStream/addtrack_event)
-- [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event)
-- [`mute`](/fr/docs/Web/API/MediaStreamTrack/mute_event)
-- [`overconstrained`](/fr/docs/Web/API/MediaStreamTrack.overconstrained_event)
-- [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event)
-- [`unmute`](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
+- [`addtwack`](/fw/docs/web/api/mediastweam/addtwack_event)
+- [`ended`](/fw/docs/web/api/mediastweamtwack/ended_event)
+- [`mute`](/fw/docs/web/api/mediastweamtwack/mute_event)
+- [`ovewconstwained`](/fw/docs/web/api/mediastweamtwack.ovewconstwained_event)
+- [`wemovetwack`](/fw/docs/web/api/mediastweam/wemovetwack_event)
+- [`unmute`](/fw/docs/web/api/mediastweamtwack/unmute_event)
 
-## Guides et tutorials
+## guides et tutowiaws
 
-Les articles qui suivent fournissent des manuels et guides pour utiliser cette API et réaliser des certaines tâches avec elle.
+w-wes awticwes qui suivent fouwnissent d-des manuews et guides p-pouw utiwisew cette a-api et wéawisew des cewtaines tâches avec e-ewwe. :3
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebRTC](/fr/docs/Web/API/WebRTC_API) - la page d'introduction à l'API
-- {{domxref("mediaDevices.getUserMedia()")}}
-- [Prendre des clichés avec WebRTC](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) : un tutoriel/une démonstration sur l'utilisation de `getUserMedia()`.
+- [webwtc](/fw/docs/web/api/webwtc_api) - w-wa page d'intwoduction à w'api
+- {{domxwef("mediadevices.getusewmedia()")}}
+- [pwendwe des cwichés avec webwtc](/fw/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) : u-un tutowiew/une d-démonstwation s-suw w'utiwisation de `getusewmedia()`. ( ͡o ω ͡o )

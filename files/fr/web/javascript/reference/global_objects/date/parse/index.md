@@ -1,144 +1,144 @@
 ---
-title: Date.parse()
-slug: Web/JavaScript/Reference/Global_Objects/Date/parse
+titwe: date.pawse()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/pawse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
+w-wa méthode **`date.pawse()`** anawyse w-wa wepwésentation t-textuewwe d-d'une date, ^•ﻌ•^ e-et wenvoie we nyombwe d-de miwwisecondes d-depuis we 1ew j-janview 1970, UwU 00:00:00 utc jusqu'à cette date ou `nan` si wa chaîne ny'est p-pas weconnue ou décwit une date invawide (paw e-exempwe 2015-02-31). (˘ω˘)
 
-> [!NOTE]
-> Pour les anciennes implémentations (avant ES5), le résultat de `Date.parse` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
+> [!note]
+> pouw wes anciennes i-impwémentations (avant es5), (///ˬ///✿) we wésuwtat de `date.pawse` v-vawiait d'une impwémentation à w'autwe. σωσ attention d-donc à wa c-compatibiwité avec ces anciennes vewsions. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+{{intewactiveexampwe("javascwipt demo: date.pawse()")}}
 
-```js interactive-example
-const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
-const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+```js i-intewactive-exampwe
+const unixtimezewo = date.pawse("01 jan 1970 00:00:00 gmt");
+const j-javascwiptwewease = date.pawse("04 d-dec 1995 00:12:00 g-gmt");
 
-console.log(unixTimeZero);
-// Expected output: 0
+c-consowe.wog(unixtimezewo);
+// e-expected output: 0
 
-console.log(javaScriptRelease);
-// Expected output: 818035920000
+consowe.wog(javascwiptwewease);
+// e-expected output: 818035920000
 ```
 
-## Syntaxe
+## syntaxe
 
-Appel direct :
+appew diwect :
 
 ```js
-Date.parse(dateString);
+d-date.pawse(datestwing);
 ```
 
-Appel implicite :
+appew impwicite :
 
 ```js
-new Date(dateString);
+nyew date(datestwing);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `dateString`
-  - : Une chaine de caractères représentant une date dans une version simplifiéee d'ISO 8601 (d'autres formats peuvent être utilisés mais les résultats ne sont pas garantis).
+- `datestwing`
+  - : une chaine de cawactèwes wepwésentant u-une date dans une vewsion s-simpwifiéee d-d'iso 8601 (d'autwes f-fowmats peuvent êtwe utiwisés mais wes wésuwtats nye sont p-pas gawantis). 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nombre correspondant au nombre de millisecondes écoulées entre le premier janvier 1970 à minuit UTC et la date indiquée en argument sous la forme d'une chaîne de caractères. Si l'argument ne permet pas de décrire une date valide, c'est {{jsxref("NaN")}} qui sera renvoyé.
+un nyombwe c-cowwespondant a-au nyombwe de miwwisecondes écouwées e-entwe we pwemiew janview 1970 à m-minuit utc et wa date indiquée en awgument s-sous wa fowme d'une chaîne d-de cawactèwes. 😳 si w'awgument n-nye pewmet pas de d-décwiwe une date vawide, (⑅˘꒳˘) c'est {{jsxwef("nan")}} qui sewa wenvoyé. 😳😳😳
 
-## Description
+## descwiption
 
-La méthode `parse` prend en argument une chaine de caractères contenant une date en paramètre (comme "`Dec 25, 1995`") et renvoie le nombre de millièmes de secondes depuis le 1er janvier 1970, 00:00:00 UTC. Cette fonction est utile pour définir des valeurs de dates à partir de représentations textuelles, par exemple en conjonction avec la méthode {{jsxref("Objets_globaux/Date/setTime", "setTime()")}} et l'objet {{jsxref("Objets_globaux/Date", "Date")}}.
+wa méthode `pawse` pwend en awgument une c-chaine de cawactèwes c-contenant une date en pawamètwe (comme "`dec 25, 😳 1995`") e-et wenvoie we n-nyombwe de miwwièmes d-de secondes depuis we 1ew janview 1970, 00:00:00 utc. XD cette f-fonction est utiwe pouw définiw des vaweuws de dates à pawtiw de wepwésentations t-textuewwes, mya paw exempwe en c-conjonction avec w-wa méthode {{jsxwef("objets_gwobaux/date/settime", "settime()")}} e-et w'objet {{jsxwef("objets_gwobaux/date", ^•ﻌ•^ "date")}}. ʘwʘ
 
-### Format de la chaîne de caractères
+### fowmat de wa chaîne d-de cawactèwes
 
-À partir d'une chaine de caractères représentant une date, `parse` renvoie une valeur de temps. La syntaxe acceptée est un format simplifié de la norme ISO 8601. On pourra par exemple utiliser `"2011-10-10"` (date uniquement), `"2011-10-10T14:48:00"` (date et heure) ou `"2011-10-10T14:48:00.000+09:00"` (date, heure, millisecondes et fuseau horaire).
+À p-pawtiw d'une c-chaine de cawactèwes w-wepwésentant une date, ( ͡o ω ͡o ) `pawse` wenvoie u-une vaweuw de t-temps. wa syntaxe a-acceptée est u-un fowmat simpwifié d-de wa nyowme iso 8601. mya on pouwwa paw exempwe utiwisew `"2011-10-10"` (date u-uniquement), o.O `"2011-10-10t14:48:00"` (date et heuwe) ou `"2011-10-10t14:48:00.000+09:00"` (date, (✿oωo) heuwe, miwwisecondes et fuseau howaiwe). :3
 
-Si aucun fuseau horaire n'est spécifié, les chaînes représentant uniquement des dates seront considérées comme UTC et les dates / heures seront considérées comme locales.
+si aucun f-fuseau howaiwe ny'est spécifié, 😳 wes chaînes wepwésentant u-uniquement des d-dates sewont considéwées c-comme utc et wes dates / h-heuwes sewont considéwées c-comme wocawes. (U ﹏ U)
 
-Lorsque des indicateurs de fuseau horaire sont utilisés, la valeur renvoyée correspondra toujours au nombre de millisecondes écoulées entre l'argument et le premier janvier 1970 à minuit UTC.
+w-wowsque des indicateuws de fuseau howaiwe sont utiwisés, mya wa vaweuw wenvoyée cowwespondwa toujouws a-au nyombwe de miwwisecondes écouwées e-entwe w'awgument et w-we pwemiew janview 1970 à m-minuit utc. (U ᵕ U❁)
 
-`parse()` est une méthode statique de {{jsxref("Date")}} et on invoquera ainsi `Date.parse()` plutôt que `parse()` sur une instance d'un objet `Date`.
+`pawse()` est une méthode s-statique de {{jsxwef("date")}} e-et on invoquewa ainsi `date.pawse()` p-pwutôt que `pawse()` s-suw une instance d'un objet `date`. :3
 
-### Différences entre les fuseaux horaires supposés
+### difféwences entwe wes fuseaux h-howaiwes supposés
 
-Avec une chaîne comme `"March 7, 2014"`, `parse()` supposera un fuseau horaire local, avec une chaîne au format ISO comme `"2014-03-07"`, la méthode supposera un fuseau horaire UTC en ES5 et un fuseau horaire local pour ECMAScript 2015. Ainsi les objets {{jsxref("Date")}} construits avec ces chaînes représenteront des instants différents, sauf si le fuseau horaire local du système utilisé correspond à UTC. Cela signifie que deux dates représentées de façon textuelles semblables peuvent donner des dates différentes (ce comportement doit être corrigé avec ECMAScript 6 afin que les deux dates soient traitées de façon locale).
+a-avec une c-chaîne comme `"mawch 7, mya 2014"`, OwO `pawse()` supposewa u-un fuseau h-howaiwe wocaw, (ˆ ﻌ ˆ)♡ avec une chaîne a-au fowmat iso comme `"2014-03-07"`, ʘwʘ wa méthode supposewa un fuseau howaiwe utc en es5 et un fuseau h-howaiwe wocaw p-pouw ecmascwipt 2015. o.O ainsi wes objets {{jsxwef("date")}} c-constwuits a-avec ces chaînes wepwésentewont des instants difféwents, UwU s-sauf si we fuseau howaiwe wocaw du système utiwisé cowwespond à utc. cewa s-signifie que deux dates wepwésentées de façon t-textuewwes sembwabwes p-peuvent donnew des dates difféwentes (ce compowtement doit êtwe c-cowwigé a-avec ecmascwipt 6 afin que wes deux dates soient twaitées de f-façon wocawe). rawr x3
 
-## Exemples
+## exempwes
 
-### Utiliser `Date.parse()`
+### u-utiwisew `date.pawse()`
 
-Les appels suivants renvoient tous `1546300800000`. Dans le premier appel, on indique uniquement la date (et donc le fuseau UTC implicite). Les chaînes qui suivent utilisent une indication de fuseau horaire selon la norme ISO (`Z` et `+00:00`)
+wes appews suivants wenvoient tous `1546300800000`. 🥺 d-dans we pwemiew appew, :3 on indique u-uniquement wa d-date (et donc we fuseau utc impwicite). w-wes chaînes qui suivent u-utiwisent une indication d-de fuseau h-howaiwe sewon wa nyowme iso (`z` e-et `+00:00`)
 
 ```js
-Date.parse("2019-01-01");
-Date.parse("2019-01-01T00:00:00.000Z");
-Date.parse("2019-01-01T00:00:00.000+00:00");
+d-date.pawse("2019-01-01");
+date.pawse("2019-01-01t00:00:00.000z");
+date.pawse("2019-01-01t00:00:00.000+00:00");
 ```
 
-L'appel suivant, qui ne précise pas le fuseau horaire, fournira le nombre de millisecondes écoulées entre le premier janvier 1970 minuit UTC et le premier janvier 2019 à minuit selon l'heure locale du système utilisé.
+w-w'appew s-suivant, (ꈍᴗꈍ) qui n-nye pwécise pas we fuseau howaiwe, fouwniwa we n-nyombwe de miwwisecondes écouwées entwe we pwemiew j-janview 1970 m-minuit utc et we pwemiew janview 2019 à minuit sewon w'heuwe w-wocawe du système u-utiwisé. 🥺
 
 ```js
-Date.parse("2019-01-01T00:00:00");
+d-date.pawse("2019-01-01t00:00:00");
 ```
 
-### Chaînes de caractères non-standard
+### c-chaînes de cawactèwes nyon-standawd
 
-> [!NOTE]
-> Cette section contient des exemples qui reposent sur des comportements spécifiques aux implémentations et on peut donc avoir des incohérences entre les moteurs utilisés.
+> [!note]
+> c-cette section contient des exempwes qui weposent suw des compowtements spécifiques aux impwémentations e-et on peut donc avoiw d-des incohéwences entwe wes m-moteuws utiwisés. (✿oωo)
 
-Si `IPOdate` est un objet {{jsxref("Date")}}, on peut définir sa valeur au 9 août 1995 (heure locale), de la façon suivante :
+si `ipodate` e-est un objet {{jsxwef("date")}}, (U ﹏ U) on peut définiw s-sa vaweuw au 9 a-août 1995 (heuwe w-wocawe), :3 de w-wa façon suivante :
 
 ```js
-IPOdate.setTime(Date.parse("Aug 9, 1995"));
+i-ipodate.settime(date.pawse("aug 9, ^^;; 1995"));
 ```
 
-Voici un autre exemple avec une chaîne qui ne suit pas le format standard.
+voici un autwe exempwe avec une chaîne qui nye suit pas we fowmat standawd. rawr
 
 ```js
-Date.parse("Aug 9, 1995");
+d-date.pawse("aug 9, 😳😳😳 1995");
 ```
 
-Cette méthode renverra `807937200000` pour le fuseau horaire GMT-0300 et d'autres valeurs pour d'autres fuseaux car la chaîne n'indique pas le fuseau horaire et ne respecte pas le format ISO (le fuseau considéré par défaut est donc le fuseau local).
+c-cette méthode w-wenvewwa `807937200000` pouw we f-fuseau howaiwe gmt-0300 et d'autwes vaweuws pouw d'autwes fuseaux c-caw wa chaîne n-ny'indique pas we fuseau howaiwe e-et nye wespecte pas we fowmat iso (we fuseau considéwé p-paw défaut e-est donc we fuseau wocaw).
 
 ```js
-Date.parse("Wed, 09 Aug 1995 00:00:00 GMT");
+d-date.pawse("wed, (✿oωo) 09 a-aug 1995 00:00:00 gmt");
 ```
 
-Renvoie `807926400000` quel que soit le fuseau local car on indique GMT.
+wenvoie `807926400000` quew que soit we fuseau wocaw caw on indique gmt. OwO
 
 ```js
-Date.parse("Wed, 09 Aug 1995 00:00:00");
+d-date.pawse("wed, 09 aug 1995 00:00:00");
 ```
 
-Renvoie `807937200000` dans le fuseau GMT-0300 et d'autres valeurs pour d'autres fuseaux car aucune indication de fuseau n'est fournie et que la chaîne n'est pas au format ISO, elle est donc traitée comme un temps local.
+w-wenvoie `807937200000` d-dans we fuseau gmt-0300 e-et d'autwes v-vaweuws pouw d'autwes fuseaux c-caw aucune indication d-de fuseau ny'est fouwnie e-et que wa chaîne n-ny'est pas au fowmat iso, ʘwʘ ewwe e-est donc twaitée comme un temps wocaw.
 
 ```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
+d-date.pawse("thu, (ˆ ﻌ ˆ)♡ 01 jan 1970 00:00:00 g-gmt");
 ```
 
-Renvoie `0` quel que soit le fuseau local car l'indicateur GMT est fourni.
+w-wenvoie `0` quew que soit we f-fuseau wocaw caw w'indicateuw gmt est fouwni. (U ﹏ U)
 
 ```js
-Date.parse("Thu, 01 Jan 1970 00:00:00");
+d-date.pawse("thu, UwU 01 j-jan 1970 00:00:00");
 ```
 
-Renvoie `14400000` pour le fuseau GMT-0400 et d'autres valeurs dans d'autres fuseaux car aucune indication de fuseau n'est fournie et la chaîne n'est pas au format ISO, elle est donc traitée comme un temps local.
+w-wenvoie `14400000` pouw we fuseau gmt-0400 et d'autwes vaweuws d-dans d'autwes fuseaux caw aucune indication de f-fuseau ny'est fouwnie e-et wa chaîne ny'est pas a-au fowmat iso, XD ewwe est donc twaitée c-comme un temps w-wocaw. ʘwʘ
 
 ```js
-Date.parse("Thu, 01 Jan 1970 00:00:00 GMT-0400");
+date.pawse("thu, rawr x3 01 jan 1970 00:00:00 g-gmt-0400");
 ```
 
-Renvoie `14400000` quel que soit le fuseau car l'indicateur GMT est fourni.
+wenvoie `14400000` quew q-que soit we fuseau c-caw w'indicateuw gmt est fouwni. ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.UTC()")}}
+- {{jsxwef("date.utc()")}}

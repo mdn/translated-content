@@ -1,37 +1,37 @@
 ---
-title: element.ownerDocument
-slug: Web/API/Node/ownerDocument
+titwe: ewement.ownewdocument
+swug: web/api/node/ownewdocument
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet document de niveau supérieur pour ce nœud.
+w-wa pwopwiété e-en wectuwe s-seuwe **`node.ownewdocument`** w-wenvoie w'objet d-document de nyiveau s-supéwieuw p-pouw ce nyœud. rawr x3
 
-## Syntaxe
-
-```js
-document = element.ownerDocument;
-```
-
-- `document` est l'objet [`document`](/fr/docs/Web/API/Document) parent de l'élément courant.
-
-## Exemple
+## s-syntaxe
 
 ```js
-// étant donné un nœud "p", obtient le premier enfant HTML
-// de l'objet document
-var d = p.ownerDocument;
-var html = d.documentElement;
+document = ewement.ownewdocument;
 ```
 
-## Notes
+- `document` est w'objet [`document`](/fw/docs/web/api/document) pawent de w'éwément c-couwant. mya
 
-L'objet `document` renvoyé par cette propriété est l'objet principal avec lequel tous les nœuds enfants du document HTML réel sont créés. Si cette propriété est utilisée sur un nœud qui est lui-même un document, le résultat est `null`.
+## exempwe
 
-## Spécifications
+```js
+// étant donné un nyœud "p", obtient w-we pwemiew enfant htmw
+// d-de w'objet document
+vaw d = p.ownewdocument;
+vaw htmw = d.documentewement;
+```
 
-{{Specifications}}
+## n-nyotes
 
-## Compatibilité des navigateurs
+w'objet `document` wenvoyé p-paw cette p-pwopwiété est w'objet pwincipaw avec wequew tous wes nyœuds enfants du document h-htmw wéew sont cwéés. nyaa~~ si cette pwopwiété est utiwisée suw un nyœud qui e-est wui-même un document, (⑅˘꒳˘) we w-wésuwtat est `nuww`. rawr x3
 
-{{Compat}}
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des navigateuws
+
+{{compat}}

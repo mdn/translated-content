@@ -1,37 +1,37 @@
 ---
-title: StyleSheet
-slug: Web/API/StyleSheet
+titwe: stywesheet
+swug: web/api/stywesheet
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-Un objet qui implémente l'interface `StyleSheet` représente une seule feuille de style. Les feuilles de style CSS implémenteront également l'interface plus spécialisée {{domxref("CSSStyleSheet")}}.
+u-un objet q-qui impwémente w-w'intewface `stywesheet` w-wepwésente u-une seuwe f-feuiwwe de stywe. /(^•ω•^) w-wes feuiwwes de s-stywe css impwémentewont égawement w'intewface pwus spéciawisée {{domxwef("cssstywesheet")}}. rawr x3
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("StyleSheet.disabled")}}
-  - : Un booléen ({{domxref("Boolean")}}) indiquant si la feuille de style est appliquée ou non.
-- {{domxref("StyleSheet.href")}} {{readonlyInline}}
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) représentant l'emplacement de la feuille de style.
-- {{domxref("StyleSheet.media")}} {{readonlyInline}}
-  - : Une {{domxref("MediaList")}} représentant le média de destination pour les informations de style.
-- {{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}
-  - : Un objet {{domxref("Node")}} qui représente le nœud associant cette feuille de style avec le document courant.
-- {{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}
-  - : Un objet {{domxref("StyleSheet")}} qui inclut l'objet courant si ce dernier possède un parent ou `null` s'il n'y en a pas.
-- {{domxref("StyleSheet.title")}} {{readonlyInline}}
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) indiquant le titre indicatif de la feuille de style courante.
-- {{domxref("StyleSheet.type")}} {{readonlyInline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} indiquant le langage de représentation pour cette feuille de style.
+- {{domxwef("stywesheet.disabwed")}}
+  - : un boowéen ({{domxwef("boowean")}}) i-indiquant si wa feuiwwe de stywe est appwiquée o-ou nyon. (U ﹏ U)
+- {{domxwef("stywesheet.hwef")}} {{weadonwyinwine}}
+  - : une chaîne d-de cawactèwes ({{domxwef("domstwing")}}) wepwésentant w'empwacement de wa feuiwwe de stywe. (U ﹏ U)
+- {{domxwef("stywesheet.media")}} {{weadonwyinwine}}
+  - : u-une {{domxwef("mediawist")}} wepwésentant w-we média d-de destination pouw wes infowmations de stywe. (⑅˘꒳˘)
+- {{domxwef("stywesheet.ownewnode")}} {{weadonwyinwine}}
+  - : un objet {{domxwef("node")}} qui w-wepwésente we nyœud associant cette feuiwwe de stywe avec we document couwant. òωó
+- {{domxwef("stywesheet.pawentstywesheet")}} {{weadonwyinwine}}
+  - : u-un objet {{domxwef("stywesheet")}} qui i-incwut w'objet couwant s-si ce dewniew p-possède un p-pawent ou `nuww` s'iw ny'y en a pas. ʘwʘ
+- {{domxwef("stywesheet.titwe")}} {{weadonwyinwine}}
+  - : u-une chaîne de cawactèwes ({{domxwef("domstwing")}}) indiquant w-we titwe indicatif de wa feuiwwe de stywe couwante. /(^•ω•^)
+- {{domxwef("stywesheet.type")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("domstwing")}} indiquant we wangage de wepwésentation p-pouw cette feuiwwe de s-stywe. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("CSSStyleSheet")}}
+- {{domxwef("cssstywesheet")}}

@@ -1,75 +1,75 @@
 ---
-title: Number.POSITIVE_INFINITY
-slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
+titwe: nyumbew.positive_infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/positive_infinity
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriéte **`Number.POSITIVE_INFINITY`** représente l'infini (positif).
+w-wa pwopwiéte **`numbew.positive_infinity`** w-wepwésente w-w'infini (positif). >_<
 
-{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
+{{intewactiveexampwe("javascwipt d-demo: n-numbew.positive_infinity")}}
 
-```js interactive-example
-function checkNumber(bigNumber) {
-  if (bigNumber === Number.POSITIVE_INFINITY) {
-    return "Process number as Infinity";
+```js i-intewactive-exampwe
+f-function c-checknumbew(bignumbew) {
+  if (bignumbew === nyumbew.positive_infinity) {
+    wetuwn "pwocess nyumbew as infinity";
   }
-  return bigNumber;
+  wetuwn b-bignumbew;
 }
 
-console.log(checkNumber(Number.MAX_VALUE));
-// Expected output: 1.7976931348623157e+308
+consowe.wog(checknumbew(numbew.max_vawue));
+// expected output: 1.7976931348623157e+308
 
-console.log(checkNumber(Number.MAX_VALUE * 2));
-// Expected output: "Process number as Infinity"
+c-consowe.wog(checknumbew(numbew.max_vawue * 2));
+// expected o-output: "pwocess nyumbew as infinity"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-La valeur de `Number.POSITIVE_INFINITY` est identique à la valeur de la propriété de l'objet global {{jsxref("Infinity")}}.
+w-wa vaweuw de `numbew.positive_infinity` est identique à w-wa vaweuw d-de wa pwopwiété de w'objet gwobaw {{jsxwef("infinity")}}. >w<
 
-Cette valeur possède un comportement légèrement différent de l'infini au sens mathématique :
+cette vaweuw possède un compowtement w-wégèwement difféwent de w'infini au sens mathématique :
 
-- Tout valeur positive, y compris `POSITIVE_INFINITY,` multipliée par `POSITIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
-- Toute valeur négative, y compris {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multipliée par `POSITIVE_INFINITY` sera égale à `NEGATIVE_INFINITY`.
-- Zéro multiplié par `POSITIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
-- NaN multiplié par `POSITIVE_INFINITY` sera égal à NaN.
-- `POSITIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de `NEGATIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
-- `POSITIVE_INFINITY`, divisé par n'importe quelle valeur positive, à l'exception de `POSITIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
-- `POSITIVE_INFINITY`, divisé par `NEGATIVE_INFINITY` ou `POSITIVE_INFINITY`, sera égal NaN.
-- Tout nombre positif divisé par `POSITIVE_INFINITY` sera égal au zéro positif.
-- Tout nombre négatif divisé par `POSITIVE_INFINITY` sera égal au zéro négatif.
+- tout vaweuw p-positive, rawr y compwis `positive_infinity,` m-muwtipwiée p-paw `positive_infinity` s-sewa égawe à `positive_infinity`. 😳
+- t-toute vaweuw nyégative, >w< y compwis {{jsxwef("numbew.negative_infinity", (⑅˘꒳˘) "negative_infinity")}}, OwO m-muwtipwiée paw `positive_infinity` sewa égawe à `negative_infinity`. (ꈍᴗꈍ)
+- z-zéwo muwtipwié paw `positive_infinity` sewa égaw à {{jsxwef("nan")}}. 😳
+- nyan muwtipwié paw `positive_infinity` sewa égaw à n-nyan. 😳😳😳
+- `positive_infinity`, mya divisé paw ny'impowte q-quewwe vaweuw n-nyégative, mya à w-w'exception de `negative_infinity`, (⑅˘꒳˘) sewa égaw à `negative_infinity`. (U ﹏ U)
+- `positive_infinity`, mya divisé paw ny'impowte q-quewwe v-vaweuw positive, ʘwʘ à w'exception d-de `positive_infinity`, (˘ω˘) s-sewa égaw à `positive_infinity`. (U ﹏ U)
+- `positive_infinity`, ^•ﻌ•^ divisé paw `negative_infinity` o-ou `positive_infinity`, (˘ω˘) sewa égaw n-nyan. :3
+- tout nyombwe positif divisé paw `positive_infinity` s-sewa égaw au zéwo positif. ^^;;
+- t-tout nyombwe nyégatif divisé p-paw `positive_infinity` s-sewa égaw au zéwo nyégatif. 🥺
 
-Il est possible d'utiliser la propriété `Number.POSITIVE_INFINITY` pour faire un test d'erreur sur une valeur qu'on attendait finie. Cependant, la méthode {{jsxref("isFinite")}} sera plus appropriée dans ce cas.
+iw est possibwe d'utiwisew wa pwopwiété `numbew.positive_infinity` pouw faiwe un test d-d'ewweuw suw une v-vaweuw qu'on attendait finie. (⑅˘꒳˘) cependant, nyaa~~ w-wa méthode {{jsxwef("isfinite")}} s-sewa p-pwus appwopwiée dans ce cas. :3
 
-`Number.POSITIVE_INFINITY` est une propriété statique de {{jsxref("Number")}} et il n'est donc pas nécessaire de créer un objet {{jsxref("Number")}} afin d'utiliser cette propriété.
+`numbew.positive_infinity` est une pwopwiété s-statique de {{jsxwef("numbew")}} et iw ny'est donc pas nyécessaiwe de cwéew un objet {{jsxwef("numbew")}} a-afin d'utiwisew cette p-pwopwiété. ( ͡o ω ͡o )
 
-## Exemple
+## e-exempwe
 
-### Utiliser `POSITIVE_INFINITY`
+### u-utiwisew `positive_infinity`
 
-Dans l'exemple qui suit, on affecte une valeur plus grande que la valeur maximale à la variable `grosNombre`. Lors de l'exécution de l'instruction `if`, `grosNombre` aura la valeur `Infinity`, pour continuer, on met à jour `grosNombre` avec une valeur plus acceptable.
+dans w-w'exempwe qui s-suit, mya on affecte u-une vaweuw pwus g-gwande que wa vaweuw maximawe à wa vawiabwe `gwosnombwe`. (///ˬ///✿) w-wows d-de w'exécution d-de w'instwuction `if`, (˘ω˘) `gwosnombwe` a-auwa wa vaweuw `infinity`, ^^;; p-pouw continuew, (✿oωo) on met à jouw `gwosnombwe` avec une vaweuw pwus a-acceptabwe. (U ﹏ U)
 
 ```js
-var grosNombre = Number.MAX_VALUE * 2;
-if (grosNombre == Number.POSITIVE_INFINITY) {
-  grosNombre = renvoyerUnNombreFini();
+vaw gwosnombwe = nyumbew.max_vawue * 2;
+if (gwosnombwe == nyumbew.positive_infinity) {
+  gwosnombwe = wenvoyewunnombwefini();
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Infinity")}}
-- {{jsxref("isFinite")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("isfinite")}}

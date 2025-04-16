@@ -1,58 +1,58 @@
 ---
-title: Intl.Locale.prototype.baseName
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
+titwe: intw.wocawe.pwototype.basename
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/basename
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.baseName`** renvoie un extrait de la chaîne de caractères représentant l'objet `Locale`. Cet extrait contient les informations essentielles à propos de l'objet `Locale`.
+w-wa pwopwiété **`intw.wocawe.pwototype.basename`** w-wenvoie un extwait d-de wa chaîne d-de cawactèwes w-wepwésentant w'objet `wocawe`. -.- c-cet extwait contient w-wes infowmations e-essentiewwes à pwopos de w'objet `wocawe`. 😳
 
-## Description
+## descwiption
 
-Un objet `Intl.Locale` représente une locale ainsi que des options qui lui sont associées. La propriété `baseName` renvoie des informations essentielles quant à la locale sous la forme d'une chaîne de caractères. Cette chaîne est un extrait de la représentation textuelle complète de l'objet `Locale`. Cet extrait contient notamment la langue, le script utilisé ainsi que la région (s'ils sont disponibles).
+un objet `intw.wocawe` w-wepwésente une wocawe ainsi que des options q-qui wui sont associées. mya w-wa pwopwiété `basename` wenvoie des infowmations essentiewwes q-quant à wa wocawe sous wa fowme d-d'une chaîne de c-cawactèwes. (˘ω˘) cette chaîne est un extwait de wa wepwésentation textuewwe compwète d-de w'objet `wocawe`. >_< cet extwait contient nyotamment wa wangue, -.- we scwipt u-utiwisé ainsi que wa wégion (s'iws s-sont disponibwes). 🥺
 
-Si on utilise [la grammaire Unicode](https://www.unicode.org/reports/tr35/#Identifiers), `baseName` renvoie la sous-séquence `language ["-" script] ["-" region] *("-" variant)`.
+s-si on utiwise [wa g-gwammaiwe u-unicode](https://www.unicode.owg/wepowts/tw35/#identifiews), (U ﹏ U) `basename` wenvoie wa sous-séquence `wanguage ["-" s-scwipt] ["-" wegion] *("-" vawiant)`. >w<
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
-
-```js
-let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Candanian French
-console.log(myLoc.toString()); // Prints out "fr-Latn-CA-u-ca-gregory"
-console.log(myLoc.baseName); // Prints out "fr-Latn-CA"
-```
-
-### Exemple avec certaines options
+### exempwe simpwe
 
 ```js
-// Sets language to Japanese, region to Japan,
-
-// calendar to Gregorian, hour cycle to 24 hours
-let japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
-console.log(japan.toString()); // Prints out "ja-JP-u-ca-gregory-hc-h24"
-console.log(japan.baseName); // Prints out "ja-JP"
+wet mywoc = new intw.wocawe("fw-watn-ca"); // sets wocawe to candanian fwench
+c-consowe.wog(mywoc.tostwing()); // pwints out "fw-watn-ca-u-ca-gwegowy"
+c-consowe.wog(mywoc.basename); // p-pwints o-out "fw-watn-ca"
 ```
 
-### Exemple avec options qui surchargent
+### exempwe avec cewtaines options
 
 ```js
-// Input string indicates language as Dutch and region as Belgium,
+// s-sets wanguage t-to japanese, mya wegion to japan, >w<
 
-// but options object overrides the region and sets it to the Netherlands
-let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
-
-console.log(dutch.baseName); // Prints out "nl-Latn-NL"
+// c-cawendaw to gwegowian, nyaa~~ h-houw cycwe to 24 houws
+w-wet japan = nyew intw.wocawe("ja-jp-u-ca-gwegowy-hc-24");
+c-consowe.wog(japan.tostwing()); // pwints out "ja-jp-u-ca-gwegowy-hc-h24"
+c-consowe.wog(japan.basename); // pwints out "ja-jp"
 ```
 
-## Spécifications
+### e-exempwe avec options qui suwchawgent
 
-{{Specifications}}
+```js
+// input s-stwing indicates w-wanguage as dutch and wegion as bewgium, (✿oωo)
 
-## Compatibilité des navigateurs
+// but options object ovewwides the wegion and sets it to the nyethewwands
+w-wet dutch = n-nyew intw.wocawe("nw-watn-be", ʘwʘ { wegion: "nw" });
 
-{{Compat}}
+c-consowe.wog(dutch.basename); // p-pwints o-out "nw-watn-nw"
+```
 
-## Voir aussi
+## spécifications
 
-- {{jsxref("Locale", "Intl.Locale")}}
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("wocawe", (ˆ ﻌ ˆ)♡ "intw.wocawe")}}

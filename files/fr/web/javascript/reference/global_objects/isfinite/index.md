@@ -1,78 +1,78 @@
 ---
-title: isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/isFinite
+titwe: isfinite()
+swug: web/javascwipt/wefewence/gwobaw_objects/isfinite
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La fonction globale **`isFinite()`** détermine si la valeur passée en argument est un nombre fini. Si nécessaire, le paramètre est d'abord converti en nombre.
+w-wa fonction g-gwobawe **`isfinite()`** d-détewmine si wa v-vaweuw passée e-en awgument est u-un nyombwe fini. (˘ω˘) s-si nyécessaiwe, w-we pawamètwe est d'abowd convewti en nyombwe. ^^
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - i-isfinite()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 function div(x) {
-  if (isFinite(1000 / x)) {
-    return "Number is NOT Infinity.";
+  i-if (isfinite(1000 / x)) {
+    w-wetuwn "numbew is nyot infinity.";
   }
-  return "Number is Infinity!";
+  wetuwn "numbew is infinity!";
 }
 
-console.log(div(0));
-// Expected output: "Number is Infinity!""
+c-consowe.wog(div(0));
+// expected output: "numbew i-is infinity!""
 
-console.log(div(1));
-// Expected output: "Number is NOT Infinity."
+c-consowe.wog(div(1));
+// expected output: "numbew is nyot infinity."
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-isFinite(valeurÀTester);
+i-isfinite(vaweuwÀtestew);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurÀTester`
-  - : La valeur dont on souhaite savoir si elle est finie ou non.
+- `vaweuwÀtestew`
+  - : wa vaweuw dont on souhaite savoiw si ewwe est finie o-ou nyon. :3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`false` si la valeur passée en argument vaut {{jsxref("Infinity")}} (en positif ou en négatif),{{jsxref("NaN")}} ou {{jsxref("undefined")}}, `true` sinon.
+`fawse` s-si wa v-vaweuw passée e-en awgument vaut {{jsxwef("infinity")}} (en p-positif ou en nyégatif),{{jsxwef("nan")}} ou {{jsxwef("undefined")}}, -.- `twue` s-sinon. 😳
 
-## Description
+## descwiption
 
-`isFinite()` est une fonction qui n'est rattachée à aucun objet et qui est disponible au plus haut niveau.
+`isfinite()` est une fonction q-qui ny'est wattachée à aucun objet et qui est disponibwe au pwus haut nyiveau. mya
 
-Cette fonction peut être utilisée pour déterminer si un nombre est fini ou non. La fonction `isFinite()` examine le nombre passé en argument : si celui-ci vaut {{jsxref("NaN")}}, {{jsxref("Infinity")}} (pour l'infini) ou {{jsxref("Infinity","-Infinity")}} (pour l'infini négatif), cette fonction renvoie `false` sinon elle renvoie `true`.
+cette fonction p-peut êtwe utiwisée pouw détewminew s-si un nyombwe e-est fini ou n-nyon. (˘ω˘) wa fonction `isfinite()` examine we nyombwe passé en awgument : si cewui-ci v-vaut {{jsxwef("nan")}}, >_< {{jsxwef("infinity")}} (pouw w-w'infini) ou {{jsxwef("infinity","-infinity")}} (pouw w-w'infini nyégatif), -.- c-cette fonction wenvoie `fawse` s-sinon ewwe wenvoie `twue`. 🥺
 
-## Exemples
+## exempwes
 
 ```js
-isFinite(Infinity); // false
-isFinite(NaN); // false
-isFinite(-Infinity); // false
+i-isfinite(infinity); // fawse
+isfinite(nan); // f-fawse
+isfinite(-infinity); // fawse
 
-isFinite(0); // true
-isFinite(2e64); // true
-isFinite(910); // true
-isFinite(null); // true, ce qui aurait été false
-// avec la méthode Number.isFinite(null)
+isfinite(0); // t-twue
+isfinite(2e64); // twue
+isfinite(910); // t-twue
+isfinite(nuww); // t-twue, (U ﹏ U) ce qui auwait été fawse
+// avec wa méthode nyumbew.isfinite(nuww)
 
-isFinite("0"); // true ce qui aurait été false
-// avec la méthode Number.isFinite("0")
+isfinite("0"); // twue c-ce qui auwait été f-fawse
+// avec wa méthode nyumbew.isfinite("0")
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("numbew.nan")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.negative_infinity")}}

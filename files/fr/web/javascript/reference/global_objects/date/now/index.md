@@ -1,88 +1,88 @@
 ---
-title: Date.now()
-slug: Web/JavaScript/Reference/Global_Objects/Date/now
+titwe: date.now()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/now
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Date.now()`** renvoie le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 UTC.
+w-wa méthode **`date.now()`** w-wenvoie w-we nyombwe de miwwisecondes écouwées d-depuis we 1ew j-janview 1970 00:00:00 u-utc. 😳
 
-{{InteractiveExample("JavaScript Demo: Date.now()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.now()")}}
 
-```js interactive-example
-// This example takes 2 seconds to run
-const start = Date.now();
+```js intewactive-exampwe
+// t-this exampwe takes 2 seconds to wun
+const stawt = date.now();
 
-console.log("starting timer...");
-// Expected output: "starting timer..."
+consowe.wog("stawting t-timew...");
+// expected output: "stawting t-timew..."
 
-setTimeout(() => {
-  const millis = Date.now() - start;
+settimeout(() => {
+  c-const miwwis = date.now() - stawt;
 
-  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
-  // Expected output: "seconds elapsed = 2"
-}, 2000);
+  consowe.wog(`seconds ewapsed = ${math.fwoow(miwwis / 1000)}`);
+  // expected o-output: "seconds ewapsed = 2"
+}, (ˆ ﻌ ˆ)♡ 2000);
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var tempsEnMs = Date.now();
+v-vaw tempsenms = date.now();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le nombre de millisecondes écoulées depuis le premier janvier 1970 à minuit UTC.
+we nyombwe de miwwisecondes écouwées d-depuis we pwemiew janview 1970 à minuit utc. 😳😳😳
 
-## Description
+## descwiption
 
-La méthode `now()` renvoie le nombre de millisecondes écoulées depuis le 1er janvier 1970 00:00:00 UTC sous forme d'un {{jsxref("Number")}} (nombre).
+wa méthode `now()` w-wenvoie we nyombwe de miwwisecondes écouwées d-depuis we 1ew j-janview 1970 00:00:00 u-utc sous f-fowme d'un {{jsxwef("numbew")}} (nombwe). (U ﹏ U)
 
-`now()` étant une méthode statique de {{jsxref("Date")}}, on utilisera toujours la forme `Date.now()`.
+`now()` étant une méthode statique d-de {{jsxwef("date")}}, (///ˬ///✿) on utiwisewa toujouws w-wa fowme `date.now()`. 😳
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Cette méthode a été standardisée dans la 5e édition d'ECMA-262. Les moteurs JavaScript ne la supportant pas peuvent l'émuler de la façon suivante :
+cette méthode a été standawdisée dans wa 5e édition d-d'ecma-262. 😳 wes moteuws j-javascwipt nye w-wa suppowtant pas p-peuvent w'émuwew de wa façon suivante :
 
 ```js
-if (!Date.now) {
-  Date.now = function now() {
-    return new Date().getTime();
+if (!date.now) {
+  d-date.now = f-function nyow() {
+    wetuwn nyew d-date().gettime();
   };
 }
 ```
 
-## Précision temporelle réduite
+## p-pwécision tempowewwe wéduite
 
-Afin de protéger contre les attaques de minutage et d'identification, la précision de `new Date.now()` peut être arrondie en fonction des paramètres du navigateur. Pour Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et vaut, par défaut 20ms pour Firefox 59 et 2ms pour Firefox 60.
+a-afin de pwotégew contwe wes a-attaques de minutage et d'identification, σωσ wa pwécision d-de `new date.now()` peut êtwe a-awwondie en fonction des p-pawamètwes du n-nyavigateuw. rawr x3 pouw fiwefox, OwO wa pwéféwence `pwivacy.weducetimewpwecision` est activée paw défaut et vaut, /(^•ω•^) paw défaut 20ms pouw fiwefox 59 et 2ms p-pouw fiwefox 60.
 
 ```js
-// Précision temporelle réduite (2ms) pour Firefox 60
-new Date().getTime();
+// p-pwécision tempowewwe wéduite (2ms) p-pouw fiwefox 60
+n-nyew date().gettime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
 
-// précision temporelle avec `privacy.resistFingerprinting` activé
-new Date().getTime();
+// p-pwécision tempowewwe avec `pwivacy.wesistfingewpwinting` activé
+nyew d-date().gettime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// ... 😳😳😳
 ```
 
-Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting` auquel cas la précision sera 100ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` selon laquelle est plus grande.
+pouw fiwefox, ( ͡o ω ͡o ) iw est égawement possibwe d'activew `pwivacy.wesistfingewpwinting` auquew cas wa p-pwécision sewa 100ms ou wa vaweuw d-de `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds` s-sewon waquewwe e-est pwus gwande. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("window.performance.now")}} - renvoie des timestamps (horodatages) avec une précision supérieure à la milliseconde pour mesurer la performance des pages web.
-- {{domxref("console.time")}} / {{domxref("console.timeEnd")}}
+- {{domxwef("window.pewfowmance.now")}} - w-wenvoie des timestamps (howodatages) avec une pwécision s-supéwieuwe à w-wa miwwiseconde p-pouw mesuwew wa p-pewfowmance des p-pages web. >w<
+- {{domxwef("consowe.time")}} / {{domxwef("consowe.timeend")}}

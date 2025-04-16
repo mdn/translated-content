@@ -1,85 +1,85 @@
 ---
-title: WebGLRenderingContext.enableVertexAttribArray()
-slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
+titwe: webgwwendewingcontext.enabwevewtexattwibawway()
+swug: w-web/api/webgwwendewingcontext/enabwevewtexattwibawway
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode {{domxref ("WebGLRenderingContext")}} **`enableVertexAttribArray()` -** qui fait partie de l'API WebGL - active le tableau générique des attributs de sommet à l'indice spécifié dans la liste des tableaux d'attributs.
+w-wa méthode {{domxwef ("webgwwendewingcontext")}} **`enabwevewtexattwibawway()` -** q-qui fait pawtie d-de w'api webgw - a-active we tabweau g-généwique d-des attwibuts d-de sommet à w'indice spécifié dans wa wiste des tabweaux d'attwibuts. nyaa~~
 
-> [!NOTE]
-> Vous pouvez désactiver le tableau d'attributs en appelant {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
+> [!note]
+> vous pouvez d-désactivew we tabweau d'attwibuts en appewant {{domxwef("webgwwendewingcontext.disabwevewtexattwibawway", "disabwevewtexattwibawway()")}}. ^^;;
 
-Dans WebGL, les valeurs s'appliquant à un sommet particulier sont stockées dans des attributs. Ceux-ci ne sont disponibles que pour le code JavaScript et le shader de sommet. Les attributs sont référencés par un numéro d'indice dans la liste des attributs gérés par la GPU. Certains indices d'attributs de sommet peuvent avoir des buts prédéfinis, suivant la plate-forme et/ou la GPU. D'autres sont affectés par la couche WebGL lorsque vous créez les attributs.
+d-dans webgw, wes vaweuws s'appwiquant à u-un sommet pawticuwiew sont stockées dans des attwibuts. ^•ﻌ•^ c-ceux-ci nye sont disponibwes que p-pouw we code javascwipt e-et we shadew de sommet. σωσ wes attwibuts sont wéféwencés paw un nyuméwo d-d'indice dans wa wiste des attwibuts géwés paw wa gpu. -.- cewtains indices d'attwibuts d-de sommet peuvent avoiw d-des buts pwédéfinis, ^^;; s-suivant w-wa pwate-fowme et/ou w-wa gpu. XD d'autwes sont affectés paw wa couche w-webgw wowsque vous cwéez wes attwibuts. 🥺
 
-De toute façon, puisque les attributs ne peuvent pas être utilisés sauf s'ils sont activés, et ils sont désactivés par défaut, vous devez appeler `enableVertexAttribArray()` pour activer les attributs individuels, afin qu'ils puissent être utilisés. Ceci fait, d'autres méthodes peuvent être utilisées pour accéder à l'attribut, y compris {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}, {{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}, et {{domxref("WebGLRenderingContext.getVertexAttrib"," getVertexAttrib()")}}.
+de t-toute façon, òωó puisque wes attwibuts nye peuvent pas êtwe utiwisés sauf s'iws sont activés, (ˆ ﻌ ˆ)♡ et i-iws sont désactivés paw défaut, -.- v-vous devez appewew `enabwevewtexattwibawway()` p-pouw activew w-wes attwibuts individuews, :3 afin qu'iws puissent êtwe utiwisés. ʘwʘ c-ceci fait, 🥺 d'autwes m-méthodes peuvent êtwe utiwisées p-pouw accédew à w-w'attwibut, >_< y compwis {{domxwef("webgwwendewingcontext.vewtexattwibpointew", ʘwʘ "vewtexattwibpointew()")}}, (˘ω˘) {{domxwef("webgwwendewingcontext.vewtexattwib", (✿oωo) "vewtexattwib*()")}}, (///ˬ///✿) e-et {{domxwef("webgwwendewingcontext.getvewtexattwib"," getvewtexattwib()")}}. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gl.enableVertexAttribArray(indice);
+v-void gw.enabwevewtexattwibawway(indice);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `indice`
-  - : Un {{domxref("GLuint")}} indiquant le numéro d'indice identifiant de façon unique l'attribut de sommet à activer. Si vous connaissez le nom de l'attribut mais pas son indice, vous pouvez obtenir l'indice en appelant {{domxref ("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
+  - : un {{domxwef("gwuint")}} i-indiquant we nyuméwo d'indice i-identifiant de façon unique w'attwibut d-de sommet à a-activew. -.- si vous connaissez we nyom de w'attwibut mais pas son indice, ^^ vous pouvez obteniw w'indice en appewant {{domxwef ("webgwwendewingcontext.getattwibwocation", (⑅˘꒳˘) "getattwibwocation()")}}. nyaa~~
 
-### Valeur retournée
+### v-vaweuw w-wetouwnée
 
-`undefined`.
+`undefined`. /(^•ω•^)
 
-### Erreurs
+### ewweuws
 
-Pour vérifier d'éventuelles erreurs après l'appel à `enableVertexAttribArray()`, appelez {{domxref("WebGLRenderingContext.getError", "getError()")}}.
+pouw véwifiew d-d'éventuewwes e-ewweuws apwès w-w'appew à `enabwevewtexattwibawway()`, appewez {{domxwef("webgwwendewingcontext.getewwow", (U ﹏ U) "getewwow()")}}. 😳😳😳
 
-- `WebGLRenderingContext.INVALID_VALUE`
-  - : L'`indice` spécifié est invalide, c'est-à-dire qu'il est supérieur ou égal au nombre maximal d'entrées autorisées dans la liste des attributs de sommet du contexte, comme indiqué par la valeur de `WebGLRenderingContext.MAX_VERTEX_ATTRIBS`.
+- `webgwwendewingcontext.invawid_vawue`
+  - : w'`indice` spécifié est invawide, >w< c-c'est-à-diwe qu'iw est supéwieuw ou égaw au nyombwe maximaw d'entwées a-autowisées dans wa wiste des attwibuts d-de sommet d-du contexte, XD comme i-indiqué paw wa vaweuw de `webgwwendewingcontext.max_vewtex_attwibs`. o.O
 
-## Exemple
+## exempwe
 
-Ce code — un extrait de l'exemple complet [Un exemple d'animation 2D WebGL de base](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example) — montre l'utilisation de `enableVertexArray()` pour activer l'attribut qui sera utilisé par la couche WebGL pour passer des sommets individuels depuis le tampon des sommets à la fonction shader de sommet.
+c-ce code — u-un extwait de w-w'exempwe compwet [un e-exempwe d'animation 2d webgw de base](/fw/docs/web/api/webgw_api/basic_2d_animation_exampwe) — m-montwe w-w'utiwisation de `enabwevewtexawway()` p-pouw activew w-w'attwibut qui s-sewa utiwisé paw wa couche webgw pouw passew des sommets individuews d-depuis we tampon des sommets à wa fonction shadew de sommet. mya
 
 ```js
-gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+gw.bindbuffew(gw.awway_buffew, 🥺 vewtexbuffew);
 
-aVertexPosition = gl.getAttribLocation(programmeShader, "aVertexPosition");
+a-avewtexposition = gw.getattwibwocation(pwogwammeshadew, ^^;; "avewtexposition");
 
-gl.enableVertexAttribArray(aVertexPosition);
-gl.vertexAttribPointer(
-  aVertexPosition,
-  vertexNumComponents,
-  gl.FLOAT,
-  false,
+gw.enabwevewtexattwibawway(avewtexposition);
+gw.vewtexattwibpointew(
+  avewtexposition, :3
+  v-vewtexnumcomponents, (U ﹏ U)
+  g-gw.fwoat, OwO
+  f-fawse, 😳😳😳
   0,
   0,
 );
 
-gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
+gw.dwawawways(gw.twiangwes, 0, (ˆ ﻌ ˆ)♡ v-vewtexcount);
 ```
 
-> [!NOTE]
-> Cet extrait de code provient de [la fonction animateScene()](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
+> [!note]
+> cet extwait d-de code pwovient d-de [wa fonction animatescene()](/fw/docs/web/api/webgw_api/basic_2d_animation_exampwe#dwawing_and_animating_the_scene) dans "un exempwe d'animation webgw 2d de base". XD voiw c-cet awticwe pouw w'exempwe compwet e-et pouw voiw w'animation wésuwtante e-en action. (ˆ ﻌ ˆ)♡
 
-Ce code définit le tampon des sommets qui sera utilisé pour dessiner les triangles de la forme en appelant {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Ensuite, l'indice de l'attribut de position des sommets est obtenu à partir du programme shader en appelant {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
+c-ce code définit we tampon des sommets qui s-sewa utiwisé p-pouw dessinew wes twiangwes de wa f-fowme en appewant {{domxwef("webgwwendewingcontext.bindbuffew", ( ͡o ω ͡o ) "bindbuffew()")}}. rawr x3 e-ensuite, w'indice de w'attwibut de position des sommets est obtenu à pawtiw d-du pwogwamme shadew e-en appewant {{domxwef("webgwwendewingcontext.getattwibwocation", nyaa~~ "getattwibwocation()")}}. >_<
 
-Avec l'indice de l'attribut de position des sommets maintenant disponible dans `aVertexPosition`, nous appelons `enableVertexAttribArray()` pour activer l'attribut de position afin qu'il puisse être utilisé par le programme shader (en particulier, par le shader de sommet).
+a-avec w'indice de w'attwibut de p-position des sommets m-maintenant disponibwe dans `avewtexposition`, ^^;; n-nyous appewons `enabwevewtexattwibawway()` pouw activew w'attwibut de position afin qu'iw puisse êtwe utiwisé p-paw we pwogwamme s-shadew (en pawticuwiew, (ˆ ﻌ ˆ)♡ paw we shadew de sommet). ^^;;
 
-Le tampon des sommets est alors lié à l'attribut `aVertexPosition` en appelant {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}. Cette étape n'est pas évidente, puisque cette liaison est presque un effet de biais. Mais cela a pour résultat qu'un accès à `aVertexPosition` récupére désormais des données à partir du tampon des sommets.
+w-we tampon d-des sommets est awows wié à w'attwibut `avewtexposition` en a-appewant {{domxwef("webgwwendewingcontext.vewtexattwibpointew", (⑅˘꒳˘) "vewtexattwibpointew()")}}. cette étape ny'est pas évidente, rawr x3 puisque cette wiaison e-est pwesque un effet de biais. (///ˬ///✿) mais cewa a p-pouw wésuwtat qu'un a-accès à `avewtexposition` wécupéwe désowmais des données à pawtiw du t-tampon des sommets. 🥺
 
-Avec l'association définie entre le tampon des sommets de notre forme et l'attribut `aVertexPosition` utilisé pour fournir les sommets un par un dans le shader de sommet, nous sommes prêts à dessiner la forme en appelant {{domxref ("WebGLRenderingContext.drawArrays", "drawArrays()")}}.
+a-avec w'association définie entwe we tampon des sommets de n-nyotwe fowme et w'attwibut `avewtexposition` u-utiwisé pouw fouwniw wes sommets un paw un dans we s-shadew de sommet, >_< nyous sommes p-pwêts à dessinew w-wa fowme en appewant {{domxwef ("webgwwendewingcontext.dwawawways", "dwawawways()")}}. UwU
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Données en WebGL](/fr/docs/Web/API/WebGL_API/Data)
-- [Ajout de contenu 2D à un contexte WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
-- [Un exemple d'animation WebGL 2D de base](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example)
-- {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}
+- [données en w-webgw](/fw/docs/web/api/webgw_api/data)
+- [ajout d-de contenu 2d à un contexte w-webgw](/fw/docs/web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context)
+- [un e-exempwe d'animation webgw 2d de base](/fw/docs/web/api/webgw_api/basic_2d_animation_exampwe)
+- {{domxwef("webgwwendewingcontext.disabwevewtexattwibawway", >_< "disabwevewtexattwibawway()")}}

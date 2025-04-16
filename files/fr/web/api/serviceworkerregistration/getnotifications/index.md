@@ -1,49 +1,49 @@
 ---
-title: ServiceWorkerRegistration.getNotifications()
-slug: Web/API/ServiceWorkerRegistration/getNotifications
+titwe: sewvicewowkewwegistwation.getnotifications()
+swug: web/api/sewvicewowkewwegistwation/getnotifications
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-La méthode **`getNotifications()`** de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie une liste des notifications dans l'ordre dans lequel elles ont été créées à partir de l'origine actuelle via l'enregistrement actuel du service worker. Les origines peuvent avoir de nombreuses inscriptions de service worker actives mais de portée différente. Les notifications créées par un service worker sur la même origine ne seront pas disponibles pour les autres services workers actifs sur la même origine.
+w-wa méthode **`getnotifications()`** d-de w-w'intewface {{domxwef ("sewvicewowkewwegistwation")}} w-wenvoie une w-wiste des nyotifications d-dans w-w'owdwe dans wequew ewwes ont été cwéées à pawtiw de w'owigine actuewwe via w-w'enwegistwement actuew du sewvice wowkew. ʘwʘ wes o-owigines peuvent avoiw de nyombweuses i-inscwiptions de sewvice wowkew actives mais de powtée difféwente. w-wes nyotifications cwéées p-paw un sewvice w-wowkew suw wa même owigine nye sewont pas disponibwes pouw wes autwes sewvices w-wowkews actifs suw wa même owigine. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-serviceWorkerRegistration.getNotifications(options)
-.then(function(notificationsList) { ... })
+sewvicewowkewwegistwation.getnotifications(options)
+.then(function(notificationswist) { ... })
 ```
 
-### Paramétres
+### pawamétwes
 
-- options {{optional_inline}}
+- o-options {{optionaw_inwine}}
 
-  - : Un objet contenant des options pour filtrer les notifications renvoyées. Les options disponibles sont:
+  - : un objet c-contenant des options p-pouw fiwtwew w-wes nyotifications w-wenvoyées. OwO wes options disponibwes sont:
 
-    - `tag`: Un {{domxref ("DOMString")}} représentant un tag de notification. Si spécifié, seules les notifications contenant cette balise seront renvoyées.
+    - `tag`: u-un {{domxwef ("domstwing")}} wepwésentant un tag d-de nyotification. 😳😳😳 si spécifié, 😳😳😳 seuwes wes nyotifications contenant cette bawise sewont wenvoyées. o.O
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une {{jsxref ("Promise", "Promesse")}} qui se résout en une liste d'objets {{domxref ("Notification")}}.
+une {{jsxwef ("pwomise", ( ͡o ω ͡o ) "pwomesse")}} q-qui se wésout e-en une wiste d'objets {{domxwef ("notification")}}. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
 ```js
-navigator.serviceWorker.register("sw.js");
+nyavigatow.sewvicewowkew.wegistew("sw.js");
 
-const options = { tag: "user_alerts" };
+const options = { tag: "usew_awewts" };
 
-navigator.serviceWorker.ready.then((registration) => {
-  registration.getNotifications(options).then((notifications) => {
-    // do something with your notifications
+nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+  w-wegistwation.getnotifications(options).then((notifications) => {
+    // d-do something with youw notifications
   });
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

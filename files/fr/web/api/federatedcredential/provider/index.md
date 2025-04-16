@@ -1,32 +1,32 @@
 ---
-title: FederatedCredential.provider
-slug: Web/API/FederatedCredential/provider
+titwe: fedewatedcwedentiaw.pwovidew
+swug: web/api/fedewatedcwedentiaw/pwovidew
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{seecompattabwe}}{{apiwef("")}}
 
-La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCredential")}}, fournit une chaîne de caractères {{domxref("USVString")}} qui décrit un fournisseur d'identité fédéré.
+w-wa pwopwiété **`pwovidew`**, (U ᵕ U❁) w-wattachée à w-w'intewface {{domxwef("fedewatedcwedentiaw")}}, -.- f-fouwnit une c-chaîne de cawactèwes {{domxwef("usvstwing")}} q-qui décwit un f-fouwnisseuw d'identité f-fédéwé. ^^;;
 
-## Syntaxe
-
-```js
-var provider = FederatedCredential.provider;
-```
-
-### Valeur
-
-Une chaîne de caractères {{domxref("USVString")}} identifiant un fournisseur d'identité fédéré.
-
-## Exemples
+## syntaxe
 
 ```js
-// TBD
+vaw pwovidew = fedewatedcwedentiaw.pwovidew;
 ```
 
-## Spécifications
+### vaweuw
 
-{{Specifications}}
+u-une chaîne de cawactèwes {{domxwef("usvstwing")}} identifiant u-un fouwnisseuw d'identité f-fédéwé. >_<
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+```js
+// tbd
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

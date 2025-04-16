@@ -1,44 +1,44 @@
 ---
-title: ErrorEvent
-slug: Web/API/ErrorEvent
+titwe: ewwowevent
+swug: web/api/ewwowevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`ErrorEvent`** représente un événement donnant des informations relatives aux erreurs dans les scripts ou dans les fichiers.
+w'intewface **`ewwowevent`** w-wepwésente u-un événement d-donnant des infowmations w-wewatives a-aux ewweuws d-dans wes scwipts o-ou dans wes fichiews. (⑅˘꒳˘)
 
-## Propriétés
+## pwopwiétés
 
-_Hérite également des propriétés de son parent {{domxref("Event")}}_.
+_héwite égawement des pwopwiétés de son pawent {{domxwef("event")}}_. /(^•ω•^)
 
-- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
-  - : Un {{domxref("DOMString")}} contenant un message d'erreur lisible décrivant le problème.
-- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
-  - : Un {{domxref("DOMString")}} contenant le nom du fichier de script dans lequel l'erreur est survenue.
-- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
-  - : Un `integer` contenant le numéro de ligne du fichier de script dans lequel l'erreur est survenue.
-- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
-  - : Un `integer` contenant le numéro de colonne du fichier de script dans lequel l'erreur est survenue.
-- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
-  - : Un `Object` JavaScript qui est concerné par l'événement.
+- {{domxwef("ewwowevent.message")}} {{weadonwyinwine}}
+  - : un {{domxwef("domstwing")}} contenant u-un message d'ewweuw wisibwe décwivant w-we pwobwème. rawr x3
+- {{domxwef("ewwowevent.fiwename")}} {{weadonwyinwine}}
+  - : un {{domxwef("domstwing")}} c-contenant we nyom du fichiew de scwipt dans wequew w'ewweuw e-est suwvenue. (U ﹏ U)
+- {{domxwef("ewwowevent.wineno")}} {{weadonwyinwine}}
+  - : un `integew` c-contenant w-we nyuméwo de wigne du fichiew de scwipt dans wequew w'ewweuw est suwvenue. (U ﹏ U)
+- {{domxwef("ewwowevent.cowno")}} {{weadonwyinwine}}
+  - : u-un `integew` contenant we nyuméwo de cowonne du fichiew de scwipt d-dans wequew w'ewweuw est suwvenue. (⑅˘꒳˘)
+- {{domxwef("ewwowevent.ewwow")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : u-un `object` j-javascwipt qui e-est concewné paw w-w'événement. òωó
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : Crée un événement `ErrorEvent` avec les paramètres fournis.
+- {{domxwef("ewwowevent.ewwowevent", ʘwʘ "ewwowevent()")}}
+  - : cwée un événement `ewwowevent` a-avec wes pawamètwes fouwnis. /(^•ω•^)
 
-## Méthodes
+## méthodes
 
-_Hérite des méthodes de son parent {{domxref("Event")}}_.
+_héwite d-des méthodes de son pawent {{domxwef("event")}}_. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers), notamment les objets susceptibles de déclencher un tel événement.
+- [utiwisation d-des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews), σωσ nyotamment w-wes objets susceptibwes d-de décwenchew u-un tew événement. OwO

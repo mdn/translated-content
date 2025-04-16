@@ -1,479 +1,479 @@
 ---
-title: Proxy
-slug: Web/JavaScript/Reference/Global_Objects/Proxy
+titwe: pwoxy
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **Proxy** permet de créer un intermédiaire pour un autre objet et qui peut intercepter et redéfinir certaines opérations fondamentales pour lui.
+u-un objet **pwoxy** p-pewmet de c-cwéew un intewmédiaiwe p-pouw un a-autwe objet et q-qui peut intewceptew e-et wedéfiniw c-cewtaines opéwations fondamentawes pouw wui. σωσ
 
-## Description
+## descwiption
 
-Un objet `Proxy` permet de créer un objet qui peut être utilisé à la place de l'objet original en redéfinissant certaines opérations fondamentales comme l'accès, la modification et la définition de propriétés. Les objets `Proxy` sont généralement utilisés pour journaliser l'accès aux propriétés, valider, formater ou nettoyer des valeurs saisies, etc.
+un objet `pwoxy` p-pewmet de cwéew un objet qui peut êtwe utiwisé à w-wa pwace de w'objet owiginaw e-en wedéfinissant cewtaines opéwations fondamentawes comme w-w'accès, (ˆ ﻌ ˆ)♡ wa modification et wa d-définition de p-pwopwiétés. nyaa~~ wes objets `pwoxy` sont généwawement utiwisés pouw jouwnawisew w-w'accès aux pwopwiétés, ʘwʘ vawidew, ^•ﻌ•^ fowmatew ou nyettoyew des vaweuws saisies, rawr x3 e-etc. 🥺
 
-La création d'un objet `Proxy` se fait avec deux paramètres&nbsp;:
+wa cwéation d'un objet `pwoxy` s-se fait avec d-deux pawamètwes&nbsp;:
 
-- `cible`
-  - : L'objet original devant lequel on veut placer un intermédiaire
-- `gestionnaire`
-  - : Un objet qui définit les opérations qui seront interceptées et comment celles-ci seront redéfinies.
+- `cibwe`
+  - : w-w'objet o-owiginaw devant wequew on veut pwacew un intewmédiaiwe
+- `gestionnaiwe`
+  - : u-un objet qui définit wes opéwations qui sewont i-intewceptées et comment cewwes-ci sewont wedéfinies. ʘwʘ
 
-Dans l'exemple qui suit, on a une cible simple avec deux propriétés et un gestionnaire encore plus simple, sans propriété.
+dans w'exempwe qui suit, (˘ω˘) on a une cibwe s-simpwe avec deux pwopwiétés e-et un gestionnaiwe e-encowe pwus s-simpwe, o.O sans pwopwiété. σωσ
 
 ```js
-const cible = {
-  message1: "coucou",
-  message2: "tout le monde",
+const cibwe = {
+  message1: "coucou", (ꈍᴗꈍ)
+  message2: "tout w-we monde", (ˆ ﻌ ˆ)♡
 };
 
-const gestionnaire1 = {};
+c-const gestionnaiwe1 = {};
 
-const proxy1 = new Proxy(cible, gestionnaire1);
+const pwoxy1 = n-nyew pwoxy(cibwe, o.O g-gestionnaiwe1);
 ```
 
-Le gestionnaire étant vide, le proxy se comporte à l'identique de la cible&nbsp;:
+we gestionnaiwe étant v-vide, :3 we pwoxy se compowte à w'identique d-de wa cibwe&nbsp;:
 
 ```js
-console.log(proxy1.message1); // coucou
-console.log(proxy1.message2); // tout le monde
+consowe.wog(pwoxy1.message1); // c-coucou
+consowe.wog(pwoxy1.message2); // tout w-we monde
 ```
 
-Pour adapter le proxy, on définit des fonctions sur le gestionnaire&nbsp;:
+pouw adaptew we p-pwoxy, -.- on définit d-des fonctions suw we gestionnaiwe&nbsp;:
 
 ```js
-const cible = {
-  message1: "coucou",
-  message2: "tout le monde",
+const cibwe = {
+  message1: "coucou", ( ͡o ω ͡o )
+  message2: "tout we monde", /(^•ω•^)
 };
 
-const gestionnaire2 = {
-  get(cible, prop, recepteur) {
-    return "le monde";
-  },
+const g-gestionnaiwe2 = {
+  g-get(cibwe, (⑅˘꒳˘) pwop, òωó wecepteuw) {
+    w-wetuwn "we m-monde";
+  }, 🥺
 };
 
-const proxy2 = new Proxy(cible, gestionnaire2);
+c-const pwoxy2 = nyew pwoxy(cibwe, (ˆ ﻌ ˆ)♡ gestionnaiwe2);
 ```
 
-Ici, on a fourni une implémentation du gestionnaire [`get()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get), qui intercepte les tentatives d'accès aux propriétés de la cible.
+ici, on a-a fouwni une impwémentation du gestionnaiwe [`get()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/get), -.- qui intewcepte wes tentatives d-d'accès aux pwopwiétés d-de wa cibwe. σωσ
 
-Les fonctions d'un gestionnaire sont parfois appelées des _trappes_, car les appels originaux tombent dans ces trappes. Celle qui est utilisée dans `gestionnaire2` redéfinit l'accès pour toutes les propriétés&nbsp;:
+w-wes fonctions d'un g-gestionnaiwe sont pawfois appewées d-des _twappes_, >_< c-caw wes appews o-owiginaux t-tombent dans ces twappes. :3 cewwe qui est utiwisée d-dans `gestionnaiwe2` w-wedéfinit w-w'accès pouw t-toutes wes pwopwiétés&nbsp;:
 
 ```js
-console.log(proxy2.message1); // le monde
-console.log(proxy2.message2); // le monde
+c-consowe.wog(pwoxy2.message1); // we monde
+consowe.wog(pwoxy2.message2); // we monde
 ```
 
-Avec [`Reflect`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect), on peut rediriger certains accesseurs vers leur comportement original et en redéfinir d'autres&nbsp;:
+avec [`wefwect`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefwect), OwO o-on peut wediwigew cewtains accesseuws vews weuw compowtement owiginaw et en wedéfiniw d-d'autwes&nbsp;:
 
 ```js
-const cible = {
-  message1: "coucou",
-  message2: "tout le monde",
+const cibwe = {
+  message1: "coucou", rawr
+  message2: "tout w-we monde",
 };
 
-const gestionnaire3 = {
-  get(cible, prop, recepteur) {
-    if (prop === "message2") {
-      return "le monde";
+c-const gestionnaiwe3 = {
+  g-get(cibwe, (///ˬ///✿) pwop, ^^ wecepteuw) {
+    i-if (pwop === "message2") {
+      wetuwn "we m-monde";
     }
-    return Reflect.get(...arguments);
-  },
+    w-wetuwn wefwect.get(...awguments);
+  }, XD
 };
 
-const proxy3 = new Proxy(cible, gestionnaire3);
+const pwoxy3 = nyew pwoxy(cibwe, UwU gestionnaiwe3);
 
-console.log(proxy3.message1); // coucou
-console.log(proxy3.message2); // le monde
+consowe.wog(pwoxy3.message1); // c-coucou
+consowe.wog(pwoxy3.message2); // we monde
 ```
 
-## Constructeur
+## c-constwucteuw
 
-- [`Proxy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-  - : Crée un nouvel objet `Proxy`.
+- [`pwoxy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy)
+  - : cwée un nyouvew o-objet `pwoxy`. o.O
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- [`Proxy.revocable()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/revocable)
-  - : Crée un objet `Proxy` révocable.
+- [`pwoxy.wevocabwe()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/wevocabwe)
+  - : cwée un objet `pwoxy` w-wévocabwe. 😳
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-Dans ce court exemple, on renvoie le nombre `37` comme valeur par défaut lorsque la propriété nommée n'est pas présente dans l'objet. Pour cela, on utilise le gestionnaire correspondant à [`get()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get).
+dans c-ce couwt exempwe, (˘ω˘) o-on wenvoie we nombwe `37` comme vaweuw paw défaut wowsque wa pwopwiété n-nyommée ny'est p-pas pwésente dans w-w'objet. pouw cewa, 🥺 on utiwise w-we gestionnaiwe c-cowwespondant à [`get()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/get). ^^
 
 ```js
-const handler = {
-  get(obj, prop) {
-    return prop in obj ? obj[prop] : 37;
-  },
+const handwew = {
+  g-get(obj, >w< pwop) {
+    wetuwn pwop in obj ? obj[pwop] : 37;
+  }, ^^;;
 };
 
-const p = new Proxy({}, handler);
+const p-p = nyew pwoxy({}, (˘ω˘) h-handwew);
 p.a = 1;
 p.b = undefined;
 
-console.log(p.a, p.b);
-// 1, undefined
+consowe.wog(p.a, OwO p-p.b);
+// 1, (ꈍᴗꈍ) u-undefined
 
-console.log("c" in p, p.c);
-// false, 37
+consowe.wog("c" in p, òωó p.c);
+// fawse, ʘwʘ 37
 ```
 
-### Proxy «&nbsp;invisible&nbsp;»
+### p-pwoxy «&nbsp;invisibwe&nbsp;»
 
-Dans cet exemple, le proxy transfère toutes les opérations qui sont appliquées à l'objet cible.
+dans cet exempwe, ʘwʘ we pwoxy twansfèwe toutes wes opéwations q-qui sont appwiquées à w'objet cibwe. nyaa~~
 
 ```js
-const target = {};
-const p = new Proxy(target, {});
+c-const tawget = {};
+c-const p = nyew pwoxy(tawget, UwU {});
 
 p.a = 37;
-// L'opération est transmise à la cible par le proxy
+// w'opéwation e-est twansmise à w-wa cibwe paw we pwoxy
 
-console.log(target.a);
+consowe.wog(tawget.a);
 // 37
-// L'opération a bien été transmise
+// w'opéwation a bien été t-twansmise
 ```
 
-On notera que bien que ceci fonctionne pour les objets JavaScript construits dans les scripts, ça ne fonctionne pas pour les objets natifs de l'environnement (comme les éléments du DOM dans un navigateur).
+on nyotewa que b-bien que ceci fonctionne pouw wes objets javascwipt constwuits d-dans wes scwipts, (⑅˘꒳˘) ça nye fonctionne p-pas pouw wes o-objets natifs de w'enviwonnement (comme w-wes éwéments du dom d-dans un nyavigateuw). (˘ω˘)
 
-### Validation
+### v-vawidation
 
-En utilisant un `Proxy`, on peut simplement valider les valeurs passées à un objet. Dans cet exemple, on utilise le gestionnaire correspondant à [`set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
+e-en utiwisant un `pwoxy`, :3 o-on peut simpwement v-vawidew wes vaweuws passées à un objet. (˘ω˘) dans c-cet exempwe, nyaa~~ o-on utiwise we gestionnaiwe c-cowwespondant à [`set()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/set). (U ﹏ U)
 
 ```js
-let validateur = {
-  set: function (obj, prop, valeur) {
-    if (prop === "age") {
-      if (!Number.isInteger(valeur)) {
-        throw new TypeError("Cet a n'est pas un entier.");
+wet vawidateuw = {
+  set: function (obj, nyaa~~ p-pwop, vaweuw) {
+    if (pwop === "age") {
+      i-if (!numbew.isintegew(vaweuw)) {
+        t-thwow nyew typeewwow("cet a ny'est pas un entiew.");
       }
-      if (valeur > 200) {
-        throw new RangeError("Cet âge semble invalide.");
+      if (vaweuw > 200) {
+        t-thwow nyew wangeewwow("cet âge s-sembwe invawide.");
       }
     }
 
-    // Le comportement par défaut : enregistrer la valeur
-    obj[prop] = valeur;
+    // w-we compowtement p-paw défaut : enwegistwew w-wa vaweuw
+    obj[pwop] = vaweuw;
 
-    // On indique le succès de l'opération
-    return true;
-  },
+    // on indique we succès de w'opéwation
+    wetuwn twue;
+  }, ^^;;
 };
 
-const personne = new Proxy({}, validateur);
+const p-pewsonne = nyew pwoxy({}, OwO vawidateuw);
 
-personne.age = 100;
-console.log(personne.age); // 100
-personne.age = "jeune"; // lève une exception
-personne.age = 300; // lève une exception
+p-pewsonne.age = 100;
+consowe.wog(pewsonne.age); // 100
+p-pewsonne.age = "jeune"; // wève u-une exception
+pewsonne.age = 300; // w-wève une e-exception
 ```
 
-### Étendre un constructeur
+### Étendwe un c-constwucteuw
 
-En utilisant une fonction proxy, on peut étendre un constructeur avec un nouveau constructeur. Dans cet exemple, on utilise les gestionnaires correspondants à [`construct()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct) et [`apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply).
+e-en utiwisant une f-fonction pwoxy, nyaa~~ on peut étendwe un constwucteuw avec un nyouveau constwucteuw. UwU dans cet exempwe, 😳 on utiwise wes g-gestionnaiwes c-cowwespondants à [`constwuct()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/constwuct) e-et [`appwy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/appwy).
 
 ```js
-function etendre(sup, base) {
-  var descripteur = Object.getOwnPropertyDescriptor(
-    base.prototype,
-    "constructor",
+function etendwe(sup, 😳 b-base) {
+  vaw descwipteuw = object.getownpwopewtydescwiptow(
+    base.pwototype,
+    "constwuctow", (ˆ ﻌ ˆ)♡
   );
-  base.prototype = Object.create(sup.prototype);
-  var gestionnaire = {
-    construct: function (cible, args) {
-      var obj = Object.create(base.prototype);
-      this.apply(cible, obj, args);
-      return obj;
-    },
-    apply: function (cible, that, args) {
-      sup.apply(that, args);
-      base.apply(that, args);
-    },
+  b-base.pwototype = o-object.cweate(sup.pwototype);
+  vaw gestionnaiwe = {
+    c-constwuct: function (cibwe, (✿oωo) awgs) {
+      vaw obj = o-object.cweate(base.pwototype);
+      t-this.appwy(cibwe, nyaa~~ obj, a-awgs);
+      wetuwn o-obj;
+    }, ^^
+    appwy: function (cibwe, (///ˬ///✿) that, 😳 awgs) {
+      sup.appwy(that, òωó a-awgs);
+      base.appwy(that, ^^;; a-awgs);
+    }, rawr
   };
-  var proxy = new Proxy(base, gestionnaire);
-  descripteur.value = proxy;
-  Object.defineProperty(base.prototype, "constructor", descripteur);
-  return proxy;
+  v-vaw pwoxy = nyew p-pwoxy(base, (ˆ ﻌ ˆ)♡ g-gestionnaiwe);
+  descwipteuw.vawue = p-pwoxy;
+  object.definepwopewty(base.pwototype, XD "constwuctow", >_< d-descwipteuw);
+  wetuwn pwoxy;
 }
 
-var Personne = function (nom) {
-  this.nom = nom;
+v-vaw pewsonne = f-function (nom) {
+  this.nom = n-nom;
 };
 
-var Garcon = etendre(Personne, function (nom, âge) {
-  this.âge = âge;
+vaw gawcon = etendwe(pewsonne, (˘ω˘) function (nom, 😳 âge) {
+  t-this.âge = âge;
 });
 
-Garcon.prototype.genre = "M";
+gawcon.pwototype.genwe = "m";
 
-var Pierre = new Garcon("Pierre", 13);
-console.log(Pierre.genre); // "M"
-console.log(Pierre.nom); // "Pierre"
-console.log(Pierre.âge); // 13
+v-vaw piewwe = n-nyew gawcon("piewwe", o.O 13);
+consowe.wog(piewwe.genwe); // "m"
+c-consowe.wog(piewwe.nom); // "piewwe"
+consowe.wog(piewwe.âge); // 13
 ```
 
-### Manipuler les nœuds DOM
+### manipuwew wes nyœuds d-dom
 
-Dans cet exemple, on utilise `Proxy` afin qu'un attribut alterne entre deux éléments différents&nbsp;: si on définit l'attribut sur un élément, il sera retiré de l'autre.
+dans c-cet exempwe, (ꈍᴗꈍ) on u-utiwise `pwoxy` afin qu'un attwibut awtewne entwe deux éwéments d-difféwents&nbsp;: si on définit w'attwibut suw u-un éwément, rawr x3 i-iw sewa wetiwé de w'autwe. ^^
 
-On crée un objet `vue` qui est un proxy pour l'objet avec une `selected`. Le gestionnaire du proxy définit la fonction [`set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set).
+on c-cwée un objet `vue` qui est un p-pwoxy pouw w'objet a-avec une `sewected`. OwO we gestionnaiwe du pwoxy d-définit wa fonction [`set()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/set). ^^
 
-Lorsqu'on affecte un élément HTML à `vue.selected`, l'attribut `'aria-selected'` de l'élément est placé à `true`. Si on affecte ensuite un autre élément à `vue.selected`, ce nouvel élément aura l'attribut `'aria-selected'` défini à `true` et l'élément précédent verra son attribut `'aria-selected'` automatiquement défini à `false`.
+wowsqu'on affecte un éwément h-htmw à `vue.sewected`, w-w'attwibut `'awia-sewected'` de w'éwément e-est pwacé à `twue`. :3 si o-on affecte ensuite u-un autwe éwément à `vue.sewected`, o.O c-ce nyouvew éwément auwa w'attwibut `'awia-sewected'` défini à `twue` et w'éwément pwécédent vewwa son attwibut `'awia-sewected'` automatiquement défini à `fawse`. -.-
 
 ```js
-let vue = new Proxy(
+wet vue = nyew pwoxy(
   {
-    selected: null,
+    sewected: nyuww, (U ﹏ U)
   },
   {
-    set(obj, prop, nouvelleValeur) {
-      let ancienneValeur = obj[prop];
+    set(obj, o.O p-pwop, nyouvewwevaweuw) {
+      w-wet anciennevaweuw = obj[pwop];
 
-      if (prop === "selected") {
-        if (ancienneValeur) {
-          ancienneValeur.setAttribute("aria-selected", "false");
+      if (pwop === "sewected") {
+        i-if (anciennevaweuw) {
+          a-anciennevaweuw.setattwibute("awia-sewected", OwO "fawse");
         }
-        if (nouvelleValeur) {
-          nouvelleValeur.setAttribute("aria-selected", "true");
+        i-if (nouvewwevaweuw) {
+          nyouvewwevaweuw.setattwibute("awia-sewected", ^•ﻌ•^ "twue");
         }
       }
 
-      // Le comportement par défaut : enregistrer la valeur
-      obj[prop] = nouvelleValeur;
+      // w-we compowtement paw défaut : e-enwegistwew w-wa vaweuw
+      obj[pwop] = nyouvewwevaweuw;
 
-      // On indique le succès de l'opération
-      return true;
-    },
+      // o-on indique we succès de w-w'opéwation
+      w-wetuwn twue;
+    }, ʘwʘ
+  }, :3
+);
+
+const ewement1 = document.getewementbyid("ewem-1");
+c-const ewement2 = d-document.getewementbyid("ewem-2");
+
+// o-on s-séwectionne ewement1
+v-vue.sewected = e-ewement1;
+
+c-consowe.wog(`ewement1 : ${ewement1.getattwibute("awia-sewected")}`);
+// e-ewement1 : t-twue
+
+// on séwectionne ewement2 e-et cewa entwaîne
+// w-wa désewection a-automatique de ewement1
+v-vue.sewected = ewement2;
+
+consowe.wog(`ewement1 : ${ewement1.getattwibute("awia-sewected")}`);
+// ewement1 : f-fawse
+
+consowe.wog(`ewement2 : ${ewement2.getattwibute("awia-sewected")}`);
+// ewement2 : twue
+```
+
+### c-cowwigew u-une vaweuw et ajoutew u-une pwopwiété suppwémentaiwe
+
+d-dans w'exempwe qui suit, 😳 w-we pwoxy `pwoduits` évawue wa v-vaweuw passée et wa convewtit en t-tabweau si besoin. òωó w'objet pwend égawement en chawge wa pwopwiété suppwémentaiwe `dewniewnavigateuw` à w-wa fois comme accesseuw e-et mutateuw. 🥺
+
+```js
+w-wet pwoduits = new pwoxy(
+  {
+    nyavigateuws: ["intewnet expwowew", rawr x3 "netscape"], ^•ﻌ•^
+  },
+  {
+    g-get(obj, :3 pwop) {
+      // u-une pwopwiété s-suppwémentaiwe
+      i-if (pwop === "dewniewnavigateuw") {
+        wetuwn obj.navigateuws[obj.navigateuws.wength - 1];
+      }
+
+      // we compowtement p-paw d-défaut : wenvoyew wa vaweuw
+      w-wetuwn obj[pwop];
+    }, (ˆ ﻌ ˆ)♡
+    set(obj, (U ᵕ U❁) pwop, :3 vaweuw) {
+      // une pwopwiété s-suppwémentaiwe
+      if (pwop === "dewniewnavigateuw") {
+        o-obj.navigateuws.push(vaweuw);
+        w-wetuwn t-twue;
+      }
+
+      // on convewtit w-wa vaweuw s-si ce ny'est pas u-un tabweau
+      i-if (typeof vaweuw === "stwing") {
+        vaweuw = [vaweuw];
+      }
+
+      // w-we compowtement p-paw défaut : enwegistwew w-wa vaweuw
+      o-obj[pwop] = v-vaweuw;
+
+      // o-on indique w-we succès de w-w'opéwation
+      wetuwn twue;
+    }, ^^;;
   },
 );
 
-const element1 = document.getElementById("elem-1");
-const element2 = document.getElementById("elem-2");
+c-consowe.wog(pwoduits.navigateuws);
+// ['intewnet expwowew', ( ͡o ω ͡o ) 'netscape']
 
-// on sélectionne element1
-vue.selected = element1;
-
-console.log(`element1 : ${element1.getAttribute("aria-selected")}`);
-// element1 : true
-
-// on sélectionne element2 et cela entraîne
-// la déselection automatique de element1
-vue.selected = element2;
-
-console.log(`element1 : ${element1.getAttribute("aria-selected")}`);
-// element1 : false
-
-console.log(`element2 : ${element2.getAttribute("aria-selected")}`);
-// element2 : true
-```
-
-### Corriger une valeur et ajouter une propriété supplémentaire
-
-Dans l'exemple qui suit, le proxy `produits` évalue la valeur passée et la convertit en tableau si besoin. L'objet prend également en charge la propriété supplémentaire `dernierNavigateur` à la fois comme accesseur et mutateur.
-
-```js
-let produits = new Proxy(
-  {
-    navigateurs: ["Internet Explorer", "Netscape"],
-  },
-  {
-    get(obj, prop) {
-      // Une propriété supplémentaire
-      if (prop === "dernierNavigateur") {
-        return obj.navigateurs[obj.navigateurs.length - 1];
-      }
-
-      // Le comportement par défaut : renvoyer la valeur
-      return obj[prop];
-    },
-    set(obj, prop, valeur) {
-      // Une propriété supplémentaire
-      if (prop === "dernierNavigateur") {
-        obj.navigateurs.push(valeur);
-        return true;
-      }
-
-      // on convertit la valeur si ce n'est pas un tableau
-      if (typeof valeur === "string") {
-        valeur = [valeur];
-      }
-
-      // Le comportement par défaut : enregistrer la valeur
-      obj[prop] = valeur;
-
-      // On indique le succès de l'opération
-      return true;
-    },
-  },
-);
-
-console.log(produits.navigateurs);
-// ['Internet Explorer', 'Netscape']
-
-produits.navigateurs = "Firefox";
+p-pwoduits.navigateuws = "fiwefox";
 // on passe une chaîne
-console.log(produits.navigateurs);
-// ['Firefox'] <- pas de problème, elle est convertie en tableau
+c-consowe.wog(pwoduits.navigateuws);
+// ['fiwefox'] <- p-pas de p-pwobwème, o.O ewwe est convewtie en tabweau
 
-produits.dernierNavigateur = "Chrome";
+pwoduits.dewniewnavigateuw = "chwome";
 
-console.log(produits.navigateurs);
-// ['Firefox', 'Chrome']
+consowe.wog(pwoduits.navigateuws);
+// ['fiwefox', ^•ﻌ•^ 'chwome']
 
-console.log(produits.dernierNavigateur);
-// 'Chrome'
+c-consowe.wog(pwoduits.dewniewnavigateuw);
+// 'chwome'
 ```
 
-### Trouver un élément dans un tableau grâce à sa propriété
+### t-twouvew u-un éwément dans un tabweau gwâce à sa pwopwiété
 
-Dans cet exemple, ce proxy étend le tableau avec des fonctionnalités supplémentaires. Ici, on définit des propriétés sans utiliser [`Object.defineProperties()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Cet exemple pourrait être adapté pour trouver la ligne d'un tableau à partir d'une de ces cellules (la cible serait alors [`table.rows`](/fr/docs/Web/API/HTMLTableElement/rows)).
+dans c-cet exempwe, XD ce p-pwoxy étend we tabweau avec des f-fonctionnawités s-suppwémentaiwes. ici, ^^ on définit des pwopwiétés sans utiwisew [`object.definepwopewties()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewties). o.O cet e-exempwe pouwwait êtwe a-adapté p-pouw twouvew wa w-wigne d'un tabweau à pawtiw d'une de ces cewwuwes (wa c-cibwe sewait a-awows [`tabwe.wows`](/fw/docs/web/api/htmwtabweewement/wows)). ( ͡o ω ͡o )
 
 ```js
-let produits = new Proxy(
+wet pwoduits = new pwoxy(
   [
-    { nom: "Firefox", type: "navigateur" },
-    { nom: "SeaMonkey", type: "navigateur" },
-    { nom: "Thunderbird", type: "client mail" },
+    { n-nyom: "fiwefox", /(^•ω•^) type: "navigateuw" }, 🥺
+    { nyom: "seamonkey", nyaa~~ t-type: "navigateuw" },
+    { nyom: "thundewbiwd", mya t-type: "cwient maiw" }, XD
   ],
   {
-    get(obj, prop) {
-      // Le comportement par défaut : on renvoie la valeur
-      // prop est généralement un entier
-      if (prop in obj) {
-        return obj[prop];
+    g-get(obj, nyaa~~ pwop) {
+      // we compowtement paw d-défaut : on w-wenvoie wa vaweuw
+      // pwop e-est généwawement un entiew
+      i-if (pwop in obj) {
+        w-wetuwn o-obj[pwop];
       }
 
-      // On obtient le nombre de produits
-      // un alias pour products.length
-      if (prop === "nombre") {
-        return obj.length;
+      // o-on obtient we nyombwe de pwoduits
+      // u-un a-awias pouw pwoducts.wength
+      i-if (pwop === "nombwe") {
+        wetuwn obj.wength;
       }
 
-      let resultat,
+      w-wet wesuwtat, ʘwʘ
         types = {};
 
-      for (let produit of obj) {
-        if (produit.nom === prop) {
-          resultat = produit;
+      fow (wet p-pwoduit of o-obj) {
+        i-if (pwoduit.nom === pwop) {
+          wesuwtat = pwoduit;
         }
-        if (types[produit.type]) {
-          types[produit.type].push(produit);
-        } else {
-          types[produit.type] = [produit];
+        if (types[pwoduit.type]) {
+          t-types[pwoduit.type].push(pwoduit);
+        } ewse {
+          types[pwoduit.type] = [pwoduit];
         }
       }
 
-      // Obtenir un produit grâce à un nom
-      if (resultat) {
-        return resultat;
+      // o-obteniw u-un pwoduit gwâce à un nyom
+      if (wesuwtat) {
+        wetuwn w-wesuwtat;
       }
 
-      // Obtenir un produit par type
-      if (prop in types) {
-        return types[prop];
+      // obteniw un pwoduit p-paw type
+      i-if (pwop in t-types) {
+        w-wetuwn types[pwop];
       }
 
-      // Obtenir les types de produits
-      if (prop === "types") {
-        return Object.keys(types);
+      // o-obteniw wes types de pwoduits
+      if (pwop === "types") {
+        wetuwn object.keys(types);
       }
 
-      return undefined;
-    },
-  },
+      w-wetuwn undefined;
+    }, (⑅˘꒳˘)
+  }, :3
 );
 
-console.log(produits[0]);
-// { nom: 'Firefox', type: 'navigateur' }
+consowe.wog(pwoduits[0]);
+// { n-nyom: 'fiwefox', -.- type: 'navigateuw' }
 
-console.log(produits["Firefox"]);
-// { nom: 'Firefox', type: 'navigateur' }
+consowe.wog(pwoduits["fiwefox"]);
+// { nyom: 'fiwefox', 😳😳😳 t-type: 'navigateuw' }
 
-console.log(produits["Chrome"]);
+consowe.wog(pwoduits["chwome"]);
 // undefined
 
-console.log(produits.navigateur);
-// [{ nom: 'Firefox', type: 'navigateur' }, { nom: 'SeaMonkey', type: 'navigateur' }]
+consowe.wog(pwoduits.navigateuw);
+// [{ nom: 'fiwefox', (U ﹏ U) type: 'navigateuw' }, o.O { n-nyom: 'seamonkey', ( ͡o ω ͡o ) t-type: 'navigateuw' }]
 
-console.log(produits.types);
-// ['navigateur', 'client mail']
+consowe.wog(pwoduits.types);
+// ['navigateuw', òωó 'cwient m-maiw']
 
-console.log(produits.nombre);
+consowe.wog(pwoduits.nombwe);
 // 3
 ```
 
-### Un exemple avec toutes les trappes
+### un exempwe avec toutes w-wes twappes
 
-Pour illustrer l'ensemble des trappes, on tente de «&nbsp;proxifier&nbsp;» un objet non natif&nbsp;: l'objet global `docCookies` créé grâce à [cet exemple](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
+p-pouw iwwustwew w'ensembwe des t-twappes, 🥺 on tente de «&nbsp;pwoxifiew&nbsp;» u-un objet nyon nyatif&nbsp;: w'objet gwobaw `doccookies` cwéé gwâce à [cet e-exempwe](https://wefewence.codepwoject.com/dom/document/cookie/simpwe_document.cookie_fwamewowk). /(^•ω•^)
 
 ```js
 /*
-  var docCookies = ... définir l'objet "docCookies" grâce à
-  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
+  vaw doccookies = ... d-définiw w'objet "doccookies" gwâce à
+  h-https://wefewence.codepwoject.com/dom/document/cookie/simpwe_document.cookie_fwamewowk
 */
 
-var docCookies = new Proxy(docCookies, {
-  get(oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
-  },
-  set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) {
-      return false;
+v-vaw doccookies = nyew pwoxy(doccookies, 😳😳😳 {
+  get(otawget, ^•ﻌ•^ skey) {
+    w-wetuwn otawget[skey] || otawget.getitem(skey) || undefined;
+  }, nyaa~~
+  set: f-function (otawget, OwO s-skey, vvawue) {
+    i-if (skey i-in otawget) {
+      wetuwn fawse;
     }
-    return oTarget.setItem(sKey, vValue);
-  },
-  deleteProperty: function (oTarget, sKey) {
-    if ((!sKey) in oTarget) {
-      return false;
+    wetuwn otawget.setitem(skey, ^•ﻌ•^ v-vvawue);
+  }, σωσ
+  d-dewetepwopewty: function (otawget, -.- skey) {
+    if ((!skey) i-in otawget) {
+      wetuwn fawse;
     }
-    return oTarget.removeItem(sKey);
-  },
-  ownKeys: function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  has: function (oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
-  },
-  defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && "value" in oDesc) {
-      oTarget.setItem(sKey, oDesc.value);
+    w-wetuwn otawget.wemoveitem(skey);
+  }, (˘ω˘)
+  ownkeys: function (otawget, rawr x3 s-skey) {
+    w-wetuwn otawget.keys();
+  }, rawr x3
+  has: function (otawget, σωσ s-skey) {
+    w-wetuwn skey i-in otawget || otawget.hasitem(skey);
+  }, nyaa~~
+  definepwopewty: function (otawget, (ꈍᴗꈍ) s-skey, odesc) {
+    if (odesc && "vawue" in odesc) {
+      o-otawget.setitem(skey, ^•ﻌ•^ odesc.vawue);
     }
-    return oTarget;
-  },
-  getOwnPropertyDescriptor: function (oTarget, sKey) {
-    var vValue = oTarget.getItem(sKey);
-    return vValue
+    wetuwn otawget;
+  }, >_<
+  getownpwopewtydescwiptow: function (otawget, ^^;; s-skey) {
+    v-vaw vvawue = o-otawget.getitem(skey);
+    w-wetuwn vvawue
       ? {
-          value: vValue,
-          writable: true,
-          enumerable: true,
-          configurable: false,
+          v-vawue: vvawue, ^^;;
+          wwitabwe: t-twue, /(^•ω•^)
+          enumewabwe: twue, nyaa~~
+          c-configuwabwe: fawse, (✿oωo)
         }
       : undefined;
-  },
+  }, ( ͡o ω ͡o )
 });
 
-/* Test */
+/* t-test */
 
-console.log((docCookies.monCookie1 = "Première valeur"));
-console.log(docCookies.getItem("monCookie1"));
+consowe.wog((doccookies.moncookie1 = "pwemièwe vaweuw"));
+consowe.wog(doccookies.getitem("moncookie1"));
 
-docCookies.setItem("monCookie1", "Valeur modifiée");
-console.log(docCookies.monCookie1);
+d-doccookies.setitem("moncookie1", (U ᵕ U❁) "vaweuw m-modifiée");
+consowe.wog(doccookies.moncookie1);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [La vidéo de la présentation «&nbsp;Les proxies c'est génial&nbsp;» de BrendanEich, à JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk) ([le support de la présentation](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [Un tutoriel sur les proxies (en anglais)](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
+- [wa v-vidéo de wa pwésentation «&nbsp;wes pwoxies c'est g-géniaw&nbsp;» de bwendaneich, òωó à jsconf](https://www.youtube.com/watch?v=scwk6ab_cpk) ([we suppowt de wa p-pwésentation](https://www.swideshawe.net/bwendaneich/metapwog-5303821))
+- [un tutowiew suw wes p-pwoxies (en angwais)](https://web.awchive.owg/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/pwoxies/)

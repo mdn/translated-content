@@ -1,80 +1,80 @@
 ---
-title: BaseAudioContext.createPeriodicWave()
-slug: Web/API/BaseAudioContext/createPeriodicWave
+titwe: baseaudiocontext.cweatepewiodicwave()
+swug: web/api/baseaudiocontext/cweatepewiodicwave
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer une {{domxref("PeriodicWave")}} (onde périodique), qui sert à définir une forme d'onde périodique qui peut être utilisée pour modeler la sortie d'un {{ domxref("OscillatorNode") }}.
+w-wa méthode `cweatepewiodicwave()` d-de w'intewface {{ d-domxwef("baseaudiocontext") }} e-est utiwisée p-pouw cwéew u-une {{domxwef("pewiodicwave")}} (onde péwiodique), (///ˬ///✿) qui sewt à définiw une fowme d'onde péwiodique q-qui peut êtwe utiwisée pouw modewew w-wa sowtie d'un {{ domxwef("osciwwatownode") }}. ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+vaw onde = audiocontext.cweatepewiodicwave(wéew, >_< imag[, rawr x3 constwaints]);
 ```
 
-### Retour
+### wetouw
 
-Un {{domxref("PeriodicWave")}}.
+un {{domxwef("pewiodicwave")}}. /(^•ω•^)
 
-### Paramètres
+### p-pawamètwes
 
-- `réel`
-  - : Un tableau de termes cosinus (traditionnellement les termes A).
+- `wéew`
+  - : un t-tabweau de tewmes c-cosinus (twaditionnewwement wes tewmes a). :3
 - `imag`
-  - : Un tableau de termes sinus (traditionnellement les termes B).
-- `contraintes` {{optional_inline}}
+  - : un tabweau de tewmes sinus (twaditionnewwement w-wes tewmes b). (ꈍᴗꈍ)
+- `contwaintes` {{optionaw_inwine}}
 
-  - : Un objet dictionnaire spécifiant si la normalisation doit être désactivée (si non spécifié, la normalisation est activée par défaut). Il accepte une propriété :
+  - : un objet dictionnaiwe spécifiant si wa nyowmawisation d-doit êtwe désactivée (si n-nyon spécifié, /(^•ω•^) w-wa nyowmawisation e-est a-activée paw défaut). (⑅˘꒳˘) iw accepte une pwopwiété :
 
-    - `disableNormalization`: si réglé à `true`, la normalisation est désactivée pour l'onde périodique. Sa valeur par défaut est `false`.
+    - `disabwenowmawization`: s-si wégwé à `twue`, ( ͡o ω ͡o ) wa nyowmawisation est désactivée p-pouw w'onde péwiodique. òωó sa vaweuw paw défaut est `fawse`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Si normalisée, l'onde résultante aura une valeur absolue de sommet égale à 1.
+> [!note]
+> si nyowmawisée, XD w'onde wésuwtante a-auwa une vaweuw absowue d-de sommet égawe à 1. -.-
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant illustre un usage simple de `createPeriodicWave()`, pour créer un objet {{domxref("PeriodicWave")}} contenant une simple courbe de sinus.
+w-w'exempwe suivant iwwustwe un usage simpwe de `cweatepewiodicwave()`, :3 p-pouw c-cwéew un objet {{domxwef("pewiodicwave")}} contenant u-une simpwe c-couwbe de sinus. nyaa~~
 
 ```js
-var réel = new Float32Array(2);
-var imag = new Float32Array(2);
-var contexteAudio = new AudioContext();
-var oscillateur = contexteAudio.createOscillator();
+vaw wéew = n-nyew fwoat32awway(2);
+vaw imag = n-nyew fwoat32awway(2);
+vaw contexteaudio = n-nyew audiocontext();
+vaw osciwwateuw = c-contexteaudio.cweateosciwwatow();
 
-réel[0] = 0;
-imag[0] = 0;
-réel[1] = 1;
+wéew[0] = 0;
+i-imag[0] = 0;
+w-wéew[1] = 1;
 imag[1] = 0;
 
-var onde = contexteAudio.createPeriodicWave(réel, imag, {
-  disableNormalization: true,
+vaw onde = contexteaudio.cweatepewiodicwave(wéew, 😳 imag, (⑅˘꒳˘) {
+  disabwenowmawization: twue, nyaa~~
 });
 
-oscillateur.setPeriodicWave(wave);
+osciwwateuw.setpewiodicwave(wave);
 
-oscillateur.connect(contexteAudio.destination);
+osciwwateuw.connect(contexteaudio.destination);
 
-oscillateur.start();
-oscillateur.stop(2);
+osciwwateuw.stawt();
+o-osciwwateuw.stop(2);
 ```
 
-Cela fonctionne car un son n'ayant qu'un unique harmonique est par définition une onde sinusoïdale.
+c-cewa fonctionne caw un son ny'ayant q-qu'un unique h-hawmonique est p-paw définition une onde sinusoïdawe. OwO
 
-Ici, nous créons une `PeriodicWave` avec deux valeurs. La première est le décalage DC, qui est la valeur à la quelle l'ocillateur démarre. 0 est une bonne valeur de départ ici car nous voulons commencer la courbe au milieu de l'intervalle \[-1.0; 1.0].
+ici, rawr x3 nyous cwéons une `pewiodicwave` a-avec deux vaweuws. XD wa pwemièwe est we décawage dc, σωσ qui est wa vaweuw à wa quewwe w-w'ociwwateuw démawwe. (U ᵕ U❁) 0 est u-une bonne vaweuw d-de dépawt ici c-caw nyous vouwons commencew wa c-couwbe au miwieu d-de w'intewvawwe \[-1.0; 1.0].
 
-La seconde valeur et les suivantes sont les composantes de sinus et de cosinus. Vous pouvez les voir comme le résultat d'une transformation de Fourier, où l'on obtient les valeurs du domaine de fréquence à partir de la valeur du domaine de temps. Ici, avec `createPeriodicWave()`, vous spécifiez les fréquences, et le navigateur calcule une transformation inverse de Fourier pour obtenir un tampon de domaine de temps pour la fréquence de l'oscillateur. Ici, nous définissons seulement un composant au volume maximal (1.0) sur l'harmonique fondamentale, ainsi on obtient une courbe sinusoïdale.
+w-wa seconde vaweuw e-et wes suivantes sont wes composantes de sinus e-et de cosinus. (U ﹏ U) v-vous pouvez wes v-voiw comme we wésuwtat d-d'une twansfowmation d-de fouwiew, :3 où w'on obtient wes vaweuws du domaine d-de fwéquence à pawtiw de wa vaweuw du domaine de temps. ( ͡o ω ͡o ) ici, σωσ avec `cweatepewiodicwave()`, >w< vous s-spécifiez wes fwéquences, 😳😳😳 et we nyavigateuw cawcuwe une twansfowmation i-invewse d-de fouwiew pouw o-obteniw un tampon de domaine d-de temps pouw wa fwéquence de w-w'osciwwateuw. OwO ici, n-nyous définissons seuwement un composant au vowume maximaw (1.0) suw w'hawmonique fondamentawe, 😳 a-ainsi on obtient une couwbe s-sinusoïdawe. 😳😳😳
 
-Les coefficients de la transformation de Fourier doivent être données dans un ordre _croissant_ (c'est-à-dire <math><semantics><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>i</mi></mrow></msup><mo>,</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mrow><mo>)</mo></mrow><msup><mi>e</mi><mrow><mn>3</mn><mi>i</mi></mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} , \left(f+gi\right)e^{3i}</annotation></semantics></math> etc) et peuvent être positifs ou négatifs. Une méthode simple pour obtenir manuellement de tels coefficients (bien qu'elle ne soit la meilleure) est d'utiliser une calculateur graphique.
+wes coefficients d-de wa twansfowmation d-de fouwiew doivent êtwe données dans un o-owdwe _cwoissant_ (c'est-à-diwe <math><semantics><mwow><mwow><mo>(</mo><mwow><mi>a</mi><mo>+</mo><mi>b</mi><mi>i</mi></mwow><mo>)</mo></mwow><msup><mi>e</mi><mi>i</mi></msup><mo>,</mo><mwow><mo>(</mo><mwow><mi>c</mi><mo>+</mo><mi>d</mi><mi>i</mi></mwow><mo>)</mo></mwow><msup><mi>e</mi><mwow><mn>2</mn><mi>i</mi></mwow></msup><mo>,</mo><mwow><mo>(</mo><mwow><mi>f</mi><mo>+</mo><mi>g</mi><mi>i</mi></mwow><mo>)</mo></mwow><msup><mi>e</mi><mwow><mn>3</mn><mi>i</mi></mwow></msup></mwow><annotation e-encoding="tex">\weft(a+bi\wight)e^{i} , (˘ω˘) \weft(c+di\wight)e^{2i} , ʘwʘ \weft(f+gi\wight)e^{3i}</annotation></semantics></math> etc) e-et peuvent êtwe p-positifs ou nyégatifs. ( ͡o ω ͡o ) une méthode simpwe pouw obteniw manuewwement de tews c-coefficients (bien q-qu'ewwe nye soit w-wa meiwweuwe) est d'utiwisew u-une cawcuwateuw g-gwaphique. o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w'api web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api)

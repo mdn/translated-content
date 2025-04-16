@@ -1,152 +1,152 @@
 ---
-title: Object
-slug: Web/JavaScript/Reference/Global_Objects/Object
+titwe: object
+swug: web/javascwipt/wefewence/gwobaw_objects/object
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le type **`Object`** est l'un [des types de données JavaScript](/fr/docs/Web/JavaScript/Data_structures). Il est utilisé pour stocker des ensembles de clés/valeurs et des entités plus complexes. Les objets peuvent être créés avec le constructeur [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) ou avec [la syntaxe d'initialisation d'objet littérale](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+w-we type **`object`** e-est w'un [des t-types de d-données javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes). mya i-iw est utiwisé p-pouw stockew des e-ensembwes de cwés/vaweuws e-et des entités pwus compwexes. OwO wes objets peuvent êtwe cwéés avec w-we constwucteuw [`object()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/object) ou avec [wa syntaxe d'initiawisation d-d'objet wittéwawe](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). (ˆ ﻌ ˆ)♡
 
-## Description
+## descwiption
 
-La quasi-totalité des objets en JavaScript sont des instances d'`Object`. En général, un objet hérite de propriétés (dont des méthodes) de `Object.prototype`, bien que ces propriétés puissent être surchargées. Il sera toutefois possible de créer un `Object` qui n'obéit pas à ces règles (par exemple en utilisant [`Object.create(null)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) ou de modifier un objet après sa construction afin que ces hypothèses ne soient plus vérifiées (par exemple avec [`Object.setPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)).
+w-wa quasi-totawité des objets en javascwipt sont des i-instances d'`object`. ʘwʘ en généwaw, o.O u-un objet héwite d-de pwopwiétés (dont des méthodes) de `object.pwototype`, UwU bien que ces pwopwiétés puissent êtwe s-suwchawgées. rawr x3 iw sewa toutefois possibwe de cwéew un `object` qui ny'obéit p-pas à ces wègwes (paw exempwe e-en utiwisant [`object.cweate(nuww)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) o-ou de m-modifiew un objet a-apwès sa constwuction afin que ces hypothèses n-nye soient pwus véwifiées (paw exempwe avec [`object.setpwototypeof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof)). 🥺
 
-Les modifications apportées à l'objet prototype de `Object` seront captées par **tous** les objets à travers le chaînage des prototypes, à moins que ces propriétés soient surchargées plus bas sur la chaîne des prototypes. C'est donc un moyen puissant mais également dangereux permettant de modifier le comportement des objets.
+w-wes modifications appowtées à w'objet pwototype de `object` sewont captées paw **tous** w-wes objets à twavews we chaînage d-des pwototypes, :3 à m-moins q-que ces pwopwiétés soient suwchawgées pwus bas suw wa chaîne d-des pwototypes. (ꈍᴗꈍ) c-c'est donc un moyen puissant mais égawement d-dangeweux p-pewmettant de modifiew we c-compowtement des objets. 🥺
 
-Le constructeur `Object` crée une enveloppe objet de la valeur passée en argument.
+we constwucteuw `object` c-cwée une envewoppe objet de wa vaweuw passée e-en awgument. (✿oωo)
 
-- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il créera et renverra un objet vide.
-- Si la valeur est déjà un objet, il renverra la valeur.
-- Sinon, il renverra un objet dont le type objet correspond au type primitif de la valeur fournie.
+- si wa vaweuw e-est [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined), (U ﹏ U) i-iw c-cwéewa et wenvewwa un objet vide. :3
+- si wa vaweuw est déjà un objet, iw wenvewwa wa vaweuw. ^^;;
+- sinon, iw wenvewwa u-un objet dont w-we type objet cowwespond au type p-pwimitif de wa v-vaweuw fouwnie. rawr
 
-Lorsqu'il n'est pas appelé dans un contexte constructeur (c'est-à-dire sans le mot-clé `new`), `Object` se comporte de façon identique à `new Object()`.
+w-wowsqu'iw ny'est pas appewé dans un contexte constwucteuw (c'est-à-diwe s-sans we mot-cwé `new`), 😳😳😳 `object` se compowte de façon identique à `new object()`. (✿oωo)
 
-Voir aussi [initialisateur d'objet / syntaxe de littéral](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+v-voiw aussi [initiawisateuw d'objet / s-syntaxe d-de wittéwaw](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). OwO
 
-### Supprimer une propriété d'un objet
+### s-suppwimew une pwopwiété d'un o-objet
 
-Il n'existe pas de méthode pour `Object` qui permette de supprimer une propriété propre (à l'instar de [`Map.prototype.delete()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)). Pour ce faire, il faut utiliser [l'opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
+iw ny'existe p-pas de méthode p-pouw `object` q-qui pewmette de suppwimew une pwopwiété pwopwe (à w-w'instaw d-de [`map.pwototype.dewete()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/dewete)). ʘwʘ p-pouw ce faiwe, (ˆ ﻌ ˆ)♡ iw f-faut utiwisew [w'opéwateuw `dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete). (U ﹏ U)
 
-## Constructeur
+## c-constwucteuw
 
-- [`Object()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/Object)
-  - : Crée un nouvel objet `Object` à partir de la valeur fournie.
+- [`object()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/object)
+  - : cwée un nyouvew objet `object` à pawtiw de w-wa vaweuw fouwnie. UwU
 
-## Méthodes du constructeur `Object`
+## méthodes du constwucteuw `object`
 
-- [`Object.assign()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-  - : Copie les valeurs de toutes les propriétés propres énumérables depuis un ou plusieurs objets source dans un objet cible.
-- [`Object.create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
-  - : Crée un nouvel objet avec le prototype d'objet et les propriétés indiqués.
-- [`Object.defineProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
-  - : Ajoute à un objet la propriété nommée décrite par le descripteur donné.
-- [`Object.defineProperties()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties)
-  - : Ajoute à un objet les propriétés nommées décrites par les descripteurs donnés.
-- [`Object.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-  - : Retourne un tableau contenant les paires `[clé, valeur]` des propriétés énumérables propres (c'est-à-dire directement rattachées à l'objet) de l'objet donné et dont les clés sont des chaînes de caractères.
-- [`Object.freeze()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
-  - : Gèle un objet&nbsp;: un autre code ne peut ni détruire ni changer aucune propriété.
-- [`Object.fromEntries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
-  - : Renvoie un nouvel objet à partir d'un itérable contenant des paires de clés-valeurs (l'opération duale de [`Object.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)).
-- [`Object.getOwnPropertyDescriptor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
-  - : Retourne un descripteur de propriété pour une propriété nommée d'un objet.
-- [`Object.getOwnPropertyDescriptors()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
-  - : Retourne un objet contenant tous les descripteurs des propriétés propres d'un objet.
-- [`Object.getOwnPropertyNames()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
-  - : Retourne un tableau contenant les noms de toutes les propriétés énumérables et non énumérables **propres** de l'objet donné.
-- [`Object.getOwnPropertySymbols()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
-  - : Retourne un tableau de toutes les propriétés symboles trouvées directement dans un objet donné.
-- [`Object.getPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
-  - : Retourne le prototype de l'objet indiqué.
-- [`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
-  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la _comparaison d'égalité abstraite_ et de la _comparaison d'égalité stricte_).
-- [`Object.isExtensible()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)
-  - : Détermine si l'extension d'un objet est permise.
-- [`Object.isFrozen()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)
-  - : Détermine si un objet a été gelé.
-- [`Object.isSealed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)
-  - : Détermine si un objet est scellé.
-- [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-  - : Retourne un tableau contenant les noms de toutes les propriétés énumérables **propres** de l'objet donné.
-- [`Object.preventExtensions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)
-  - : Empêche toute extension de l'objet.
-- [`Object.seal()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/seal)
-  - : Empêche un autre code de détruire les propriétés d'un objet.
-- [`Object.setPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
-  - : Définit le prototype d'un objet (c'est-à-dire, la propriété interne `[[Prototype]]`).
-- [`Object.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
-  - : Retourne le tableau des valeurs énumérables propres de l'objet donné dont les clés sont des chaînes de caractères.
+- [`object.assign()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/assign)
+  - : copie wes vaweuws de toutes wes pwopwiétés p-pwopwes énuméwabwes depuis un ou pwusieuws objets souwce d-dans un objet cibwe. XD
+- [`object.cweate()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate)
+  - : c-cwée un nyouvew o-objet avec we pwototype d'objet e-et wes pwopwiétés indiqués. ʘwʘ
+- [`object.definepwopewty()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty)
+  - : a-ajoute à u-un objet wa pwopwiété nyommée décwite paw we descwipteuw donné. rawr x3
+- [`object.definepwopewties()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewties)
+  - : ajoute à u-un objet wes pwopwiétés n-nyommées décwites paw wes descwipteuws d-donnés. ^^;;
+- [`object.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/entwies)
+  - : w-wetouwne un tabweau contenant wes paiwes `[cwé, ʘwʘ v-vaweuw]` des pwopwiétés énuméwabwes p-pwopwes (c'est-à-diwe diwectement wattachées à w-w'objet) d-de w'objet donné et dont wes cwés sont des chaînes de cawactèwes. (U ﹏ U)
+- [`object.fweeze()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/fweeze)
+  - : gèwe un objet&nbsp;: u-un autwe c-code nye peut n-nyi détwuiwe nyi changew aucune p-pwopwiété. (˘ω˘)
+- [`object.fwomentwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/fwomentwies)
+  - : w-wenvoie un nyouvew objet à p-pawtiw d'un itéwabwe contenant des paiwes de cwés-vaweuws (w'opéwation duawe d-de [`object.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/entwies)). (ꈍᴗꈍ)
+- [`object.getownpwopewtydescwiptow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptow)
+  - : w-wetouwne un descwipteuw de pwopwiété p-pouw une pwopwiété n-nyommée d'un objet. /(^•ω•^)
+- [`object.getownpwopewtydescwiptows()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtydescwiptows)
+  - : wetouwne un objet contenant tous w-wes descwipteuws des pwopwiétés pwopwes d'un objet. >_<
+- [`object.getownpwopewtynames()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames)
+  - : wetouwne u-un tabweau contenant wes nyoms de toutes w-wes pwopwiétés énuméwabwes et n-nyon énuméwabwes **pwopwes** de w'objet donné. σωσ
+- [`object.getownpwopewtysymbows()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows)
+  - : wetouwne un tabweau d-de toutes wes p-pwopwiétés symbowes twouvées diwectement dans un objet donné.
+- [`object.getpwototypeof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof)
+  - : w-wetouwne we pwototype d-de w'objet indiqué. ^^;;
+- [`object.is()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/is)
+  - : détewmine si deux vaweuws sont wa m-même vaweuw. 😳 considèwe comme égawes t-toutes wes v-vaweuws nyan (ce qui diffèwe à w-wa fois de wa _compawaison d'égawité a-abstwaite_ e-et de wa _compawaison d-d'égawité stwicte_). >_<
+- [`object.isextensibwe()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/isextensibwe)
+  - : d-détewmine s-si w'extension d'un objet est pewmise.
+- [`object.isfwozen()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/isfwozen)
+  - : d-détewmine s-si un objet a-a été gewé. -.-
+- [`object.isseawed()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/isseawed)
+  - : détewmine si un objet est scewwé.
+- [`object.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys)
+  - : w-wetouwne un tabweau c-contenant wes n-nyoms de toutes wes pwopwiétés énuméwabwes **pwopwes** de w'objet donné. UwU
+- [`object.pweventextensions()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pweventextensions)
+  - : e-empêche toute extension d-de w'objet. :3
+- [`object.seaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/seaw)
+  - : e-empêche u-un autwe code de détwuiwe w-wes pwopwiétés d'un objet. σωσ
+- [`object.setpwototypeof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof)
+  - : définit we pwototype d'un objet (c'est-à-diwe, >w< wa pwopwiété i-intewne `[[pwototype]]`).
+- [`object.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawues)
+  - : wetouwne we tabweau d-des vaweuws énuméwabwes pwopwes d-de w'objet donné dont wes c-cwés sont des chaînes de cawactèwes. (ˆ ﻌ ˆ)♡
 
-## Propriétés des instances
+## p-pwopwiétés d-des instances
 
-- [`Object.prototype.constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
-  - : Définit la fonction qui crée le prototype d'un objet.
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-  - : Pointe vers l'objet ayant été utilisé comme prototype à l'instanciation de l'objet.
+- [`object.pwototype.constwuctow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow)
+  - : d-définit w-wa fonction qui c-cwée we pwototype d'un objet. ʘwʘ
+- [`object.pwototype.__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+  - : pointe vews w'objet ayant été utiwisé comme pwototype à w'instanciation d-de w'objet. :3
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-  - : Associe une fonction à une propriété, lorsqu'on accède à cette dernière, la fonction est exécutée et la valeur de retour est renvoyée.
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-  - : Associe une fonction à une propriété, lorsqu'on modifie cette dernière, la fonction est exécutée pour modifier la propriété.
-- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-  - : Renvoie la fonction qui a été associée à la propriété indiquée avec la méthode [`__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__).
-- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-  - : Renvoie la fonction qui a été associée à la propriété indiquée avec la méthode [`__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).
-- [`Object.prototype.hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
-  - : Renvoie un booléen indiquant si un objet contient la propriété indiquée comme une propriété propre (directement rattachée à l'objet, pas héritée avec sa chaîne de prototypes).
-- [`Object.prototype.isPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)
-  - : Renvoie un booléen indiquant si l'objet courant (pour lequel est appelé cette méthode) fait partie de la chaîne de prototypes de l'objet passé en argument.
-- [`Object.prototype.propertyIsEnumerable()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-  - : Renvoie un booléen indiquant si [l'attribut interne ECMAScript `[[Enumerable]]`](/fr/docs/Web/JavaScript/Data_structures#propriétés) est fixé.
-- [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString)
-  - : Appelle la méthode [`toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
-  - : Renvoie une chaîne de caractères qui représente l'objet.
-- [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)
-  - : Renvoie la valeur primitive de l'objet indiqué.
+- [`object.pwototype.__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+  - : a-associe une fonction à une p-pwopwiété, (˘ω˘) wowsqu'on accède à cette dewnièwe, 😳😳😳 wa fonction est e-exécutée et w-wa vaweuw de wetouw est wenvoyée. rawr x3
+- [`object.pwototype.__definesettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+  - : a-associe une fonction à une pwopwiété, (✿oωo) w-wowsqu'on m-modifie cette dewnièwe, (ˆ ﻌ ˆ)♡ wa fonction e-est exécutée p-pouw modifiew wa pwopwiété. :3
+- [`object.pwototype.__wookupgettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+  - : wenvoie wa fonction qui a été associée à w-wa pwopwiété i-indiquée a-avec wa méthode [`__definegettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__). (U ᵕ U❁)
+- [`object.pwototype.__wookupsettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+  - : w-wenvoie wa fonction q-qui a été associée à wa p-pwopwiété indiquée a-avec wa méthode [`__definesettew__()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__). ^^;;
+- [`object.pwototype.hasownpwopewty()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty)
+  - : wenvoie un boowéen i-indiquant si u-un objet contient wa pwopwiété i-indiquée comme une pwopwiété pwopwe (diwectement w-wattachée à w'objet, mya pas h-héwitée avec sa c-chaîne de pwototypes). 😳😳😳
+- [`object.pwototype.ispwototypeof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/ispwototypeof)
+  - : wenvoie u-un boowéen indiquant si w'objet couwant (pouw w-wequew est a-appewé cette méthode) f-fait pawtie de wa chaîne de pwototypes de w'objet passé e-en awgument. OwO
+- [`object.pwototype.pwopewtyisenumewabwe()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwopewtyisenumewabwe)
+  - : wenvoie un boowéen indiquant si [w'attwibut i-intewne e-ecmascwipt `[[enumewabwe]]`](/fw/docs/web/javascwipt/data_stwuctuwes#pwopwiétés) est fixé. rawr
+- [`object.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing)
+  - : a-appewwe wa méthode [`tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). XD
+- [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing)
+  - : w-wenvoie u-une chaîne de cawactèwes qui wepwésente w'objet. (U ﹏ U)
+- [`object.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof)
+  - : w-wenvoie wa vaweuw pwimitive de w'objet i-indiqué. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Utilisation d'`Object` avec les types `undefined` et `null`
+### utiwisation d'`object` a-avec wes types `undefined` e-et `nuww`
 
-Les exemples suivants stockent un `Object` vide dans `o`&nbsp;:
+wes e-exempwes suivants s-stockent un `object` vide dans `o`&nbsp;:
 
 ```js
-let o = new Object();
+wet o = nyew object();
 ```
 
 ```js
-let o = new Object(undefined);
+wet o = nyew object(undefined);
 ```
 
 ```js
-let o = new Object(null);
+wet o = nyew object(nuww);
 ```
 
-### Utilisation d'`Object` pour créer des objets `Boolean`
+### utiwisation d'`object` pouw cwéew des objets `boowean`
 
-Les exemples suivants stockent des objets [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) dans `o`&nbsp;:
+wes exempwes suivants stockent des objets [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) dans `o`&nbsp;:
 
 ```js
-// Équivalent à : o = new Boolean(true);
-let o = new Object(true);
+// Équivawent à : o-o = nyew b-boowean(twue);
+wet o = nyew object(twue);
 ```
 
 ```js
-// Équivalent à : o = new Boolean(false);
-let o = new Object(Boolean());
+// Équivawent à : o = n-nyew boowean(fawse);
+w-wet o = nyew o-object(boowean());
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [initiawisateuw d-d'objet](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

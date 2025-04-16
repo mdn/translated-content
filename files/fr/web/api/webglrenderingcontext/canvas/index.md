@@ -1,59 +1,59 @@
 ---
-title: WebGLRenderingContext.canvas
-slug: Web/API/WebGLRenderingContext/canvas
+titwe: webgwwendewingcontext.canvas
+swug: web/api/webgwwendewingcontext/canvas
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La propriété `WebGLRenderingContext.canvas` est une référence en lecture seule à l'objet {{domxref("HTMLCanvasElement")}} ou {{domxref("OffscreenCanvas")}} associé au contexte. Il peut s'agir de {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}} ou à un objet {{domxref("OffscreenCanvas")}}.
+w-wa pwopwiété `webgwwendewingcontext.canvas` e-est une w-wéféwence en w-wectuwe seuwe à w-w'objet {{domxwef("htmwcanvasewement")}} o-ou {{domxwef("offscweencanvas")}} a-associé a-au contexte. 😳😳😳 iw peut s'agiw de {{jsxwef("nuww")}} s'iw ny'est pas associé à u-un éwément {{htmwewement("canvas")}} ou à un objet {{domxwef("offscweencanvas")}}. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-gl.canvas;
+gw.canvas;
 ```
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Soit un objet {{domxref("HTMLCanvasElement")}} ou {{domxref("OffscreenCanvas")}}, soit {{jsxref("null")}}.
+soit un objet {{domxwef("htmwcanvasewement")}} ou {{domxwef("offscweencanvas")}}, mya soit {{jsxwef("nuww")}}. 🥺
 
-## Exemples
+## e-exempwes
 
-### Élément canevas
+### Éwément canevas
 
-Étant donné cet élément {{HTMLElement("canvas")}} :
+Étant d-donné c-cet éwément {{htmwewement("canvas")}} :
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-Vous pouvez en récupérer une référence à partir du `WebGLRenderingContext` en utilisant la propriété `canvas` :
+vous pouvez en wécupéwew une wéféwence à p-pawtiw du `webgwwendewingcontext` en utiwisant wa pwopwiété `canvas` :
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-gl.canvas; // HTMLCanvasElement
+vaw canevas = document.getewementbyid("canevas");
+v-vaw gw = canevas.getcontext("webgw");
+gw.canvas; // h-htmwcanvasewement
 ```
 
-### Canevas hors écran
+### c-canevas h-hows écwan
 
-Exemple d'utilisation de l'objet expérimental {{domxref("OffscreenCanvas")}}.
+exempwe d-d'utiwisation de w'objet expéwimentaw {{domxwef("offscweencanvas")}}. >_<
 
 ```js
-var horsEcran = new OffscreenCanvas(256, 256);
-var gl = horsEcran.getContext("webgl");
-gl.canvas; // OffscreenCanvas
+vaw howsecwan = n-nyew offscweencanvas(256, >_< 256);
+vaw gw = howsecwan.getcontext("webgw");
+gw.canvas; // o-offscweencanvas
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("CanvasRenderingContext2D.canvas")}}
-- {{domxref("OffscreenCanvas")}}
+- {{domxwef("canvaswendewingcontext2d.canvas")}}
+- {{domxwef("offscweencanvas")}}

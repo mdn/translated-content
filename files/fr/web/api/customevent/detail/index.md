@@ -1,52 +1,52 @@
 ---
-title: CustomEvent.detail
-slug: Web/API/CustomEvent/detail
+titwe: customevent.detaiw
+swug: w-web/api/customevent/detaiw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Le **`detail`** de la propriété en lecture seule de l'interface {{domxref("CustomEvent")}} renvoie toutes les données transmises lors de l'initialisation de l'évènement.
+w-we **`detaiw`** d-de wa pwopwiété e-en wectuwe s-seuwe de w'intewface {{domxwef("customevent")}} w-wenvoie toutes w-wes données twansmises w-wows de w'initiawisation de w'évènement. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
-
-```js
-let myDetail = customEventInstance.detail;
-```
-
-### Valeur retournée
-
-Toute donnée initialisée avec l'évènement.
-
-## Exemple
+## syntaxe
 
 ```js
-// ajoute un écouteur d'évènement approprié
-obj.addEventListener("cat", function (e) {
-  process(e.detail);
-});
-
-// crée et distribue l'évènement
-let event = new CustomEvent("cat", {
-  detail: {
-    hazcheeseburger: true,
-  },
-});
-obj.dispatchEvent(event);
-
-// Retournera un objet contenant la propriété hazcheeseburger
-let myDetail = event.detail;
+wet mydetaiw = customeventinstance.detaiw;
 ```
 
-## Spécifications
+### v-vaweuw wetouwnée
 
-{{Specifications}}
+toute donnée initiawisée a-avec w'évènement. nyaa~~
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+// a-ajoute un écouteuw d'évènement appwopwié
+obj.addeventwistenew("cat", (⑅˘꒳˘) f-function (e) {
+  pwocess(e.detaiw);
+});
 
-## Voir aussi
+// c-cwée et distwibue w-w'évènement
+wet event = nyew customevent("cat", rawr x3 {
+  detaiw: {
+    hazcheesebuwgew: t-twue, (✿oωo)
+  }, (ˆ ﻌ ˆ)♡
+});
+obj.dispatchevent(event);
 
-- {{domxref("CustomEvent")}}
+// wetouwnewa un objet contenant wa pwopwiété h-hazcheesebuwgew
+wet mydetaiw = e-event.detaiw;
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## c-compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("customevent")}}

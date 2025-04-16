@@ -1,48 +1,48 @@
 ---
-title: InputEvent
-slug: Web/API/InputEvent
+titwe: inputevent
+swug: web/api/inputevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-L'interface **`InputEvent`** représente un évènement notifiant la modification d'un contenu éditable.
+w'intewface **`inputevent`** w-wepwésente u-un évènement n-nyotifiant wa m-modification d'un c-contenu éditabwe. rawr
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("InputEvent.InputEvent", "InputEvent()")}}
-  - : Crée un objet `InputEvent`.
+- {{domxwef("inputevent.inputevent", mya "inputevent()")}}
+  - : c-cwée un objet `inputevent`. ^^
 
-## Propriétés
+## pwopwiétés
 
-Cette interface hérite des propriétés de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.
+cette intewface héwite des pwopwiétés d-de ses pawents, 😳😳😳 {{domxwef("uievent")}} et {{domxwef("event")}}. mya
 
-- {{domxref("InputEvent.data")}}{{readOnlyInline}}
-  - : Retourne une {{domxref("DOMString")}} avec les caractères insérést. Cela peut être une chaîne vide si la modification n'insère pas de texte (comme la suppression de caractères, par exemple).
-- {{domxref("InputEvent.dataTransfer")}}{{readonlyinline}}
-  - : Retourne un objet {{domxref("DataTransfer")}} contenant des informations sur des données de texte riche (_richtext_) ou brut (_plaintext_) étant ajoutées ou supprimées du contenu éditable.
-- {{domxref("InputEvent.inputType")}}{{readonlyinline}}
-  - : Retourne le type de modification du le contenu éditable tel que, par exemple, l'insertion, la suppression ou le formatage de texte. Voir la page de la propriété pour une liste complète des types de modification.
-- {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
-  - : Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l'évènement est émis après [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event) et avant [`compositionend`](/fr/docs/Web/API/Element/compositionend_event).
+- {{domxwef("inputevent.data")}}{{weadonwyinwine}}
+  - : wetouwne une {{domxwef("domstwing")}} a-avec wes cawactèwes inséwést. 😳 c-cewa peut êtwe une chaîne vide si wa modification ny'insèwe p-pas de texte (comme wa suppwession d-de cawactèwes, -.- p-paw exempwe). 🥺
+- {{domxwef("inputevent.datatwansfew")}}{{weadonwyinwine}}
+  - : wetouwne un objet {{domxwef("datatwansfew")}} contenant des infowmations s-suw des données de texte wiche (_wichtext_) ou bwut (_pwaintext_) étant ajoutées o-ou suppwimées du contenu éditabwe. o.O
+- {{domxwef("inputevent.inputtype")}}{{weadonwyinwine}}
+  - : w-wetouwne w-we type de modification d-du we contenu éditabwe t-tew que, /(^•ω•^) paw exempwe, w'insewtion, nyaa~~ wa suppwession o-ou we fowmatage de texte. nyaa~~ voiw wa page de wa p-pwopwiété pouw une wiste compwète des types de modification. :3
+- {{domxwef("inputevent.iscomposing")}}{{weadonwyinwine}}
+  - : wetouwne une vaweuw {{jsxwef("boowean", 😳😳😳 "boowéenne")}} indiquant s-si w'évènement est émis apwès [`compositionstawt`](/fw/docs/web/api/ewement/compositionstawt_event) e-et avant [`compositionend`](/fw/docs/web/api/ewement/compositionend_event). (˘ω˘)
 
-## Méthodes
+## m-méthodes
 
-Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et {{domxref("Event")}}.
+c-cette intewface héwite des méthodes de ses pawents, ^^ {{domxwef("uievent")}} e-et {{domxwef("event")}}. :3
 
-- {{domxref('InputEvent.getTargetRanges()')}}
-  - : Retourne un tableau de {{domxref("Range", "ranges")}} statiques qui seront affectés par une modification du DOM si l'évènement input n'est pas annulé.
+- {{domxwef('inputevent.gettawgetwanges()')}}
+  - : w-wetouwne un tabweau de {{domxwef("wange", -.- "wanges")}} s-statiques q-qui sewont affectés paw une modification d-du dom si w'évènement i-input ny'est pas annuwé. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'évènement [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
-- L'évènement [`input`](/fr/docs/Web/API/Element/input_event)
+- w'évènement [`befoweinput`](/fw/docs/web/api/ewement/befoweinput_event)
+- w-w'évènement [`input`](/fw/docs/web/api/ewement/input_event)

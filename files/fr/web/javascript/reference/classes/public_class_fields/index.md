@@ -1,273 +1,273 @@
 ---
-title: Champs de classe publics
-slug: Web/JavaScript/Reference/Classes/Public_class_fields
+titwe: champs de cwasse pubwics
+s-swug: web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds
 ---
 
-{{JsSidebar("Classes")}}{{SeeCompatTable}}
+{{jssidebaw("cwasses")}}{{seecompattabwe}}
 
-> [!NOTE]
-> Cette page décrit des fonctionnalités expérimentales.
+> [!note]
+> c-cette p-page décwit des f-fonctionnawités e-expéwimentawes. (✿oωo)
 >
-> Les déclarations de champs, tant publics que privés, sont [une fonctionnalité expérimentale (étape 3)](https://github.com/tc39/proposal-class-fields) proposée au [TC39](https://tc39.github.io/beta/), le comité des standards JavaScript.
+> w-wes décwawations d-de champs, XD t-tant pubwics que pwivés, >w< sont [une fonctionnawité expéwimentawe (étape 3)](https://github.com/tc39/pwoposaw-cwass-fiewds) pwoposée au [tc39](https://tc39.github.io/beta/), òωó w-we comité des standawds javascwipt. (ꈍᴗꈍ)
 >
-> La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que [Babel](https://babeljs.io/). Voir [l'information de compatibilité](#compatibilité_des_navigateurs) ci-dessous.
+> wa pwise en chawge d-dans wes nyavigateuws est wimitée, rawr x3 m-mais cette fonctionnawité peut êtwe utiwisée à twavews u-une étape de contwuction avec d-des systèmes tews q-que [babew](https://babewjs.io/). rawr x3 voiw [w'infowmation de compatibiwité](#compatibiwité_des_navigateuws) ci-dessous. σωσ
 
-Les champs publics, tant statiques que d'instance, sont des propriétés qui peuvent être écrites, et qui sont énumérables et configurables. En tant que telles, à la différence de leurs contreparties privées, elles participent à l'héritage du prototype.
+wes champs p-pubwics, (ꈍᴗꈍ) tant statiques que d'instance, rawr sont des pwopwiétés qui peuvent êtwe écwites, ^^;; et q-qui sont énuméwabwes et configuwabwes. rawr x3 e-en tant q-que tewwes, (ˆ ﻌ ˆ)♡ à w-wa difféwence d-de weuws contwepawties pwivées, σωσ ewwes pawticipent à w-w'héwitage du pwototype. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-class ClasseAvecChampDInstance {
-  champDInstance = "champ d'instance";
+c-cwass cwasseavecchampdinstance {
+  champdinstance = "champ d'instance";
 }
 
-class ClasseAvecChampStatique {
-  static champStatique = "champ statique";
+cwass cwasseavecchampstatique {
+  static champstatique = "champ statique";
 }
 
-class ClasseAvecMethodeDInstancePublique {
-  methodePublique() {
-    return "hello world";
+cwass cwasseavecmethodedinstancepubwique {
+  m-methodepubwique() {
+    wetuwn "hewwo w-wowwd";
   }
 }
 ```
 
-## Exemples
+## e-exempwes
 
-### Champs statiques publics
+### c-champs statiques pubwics
 
-Les champs statiques publics sont utiles lorsque vous voulez qu'un champ n'existe qu'une seule fois par classe, pas dans chaque instance que vous créez. Cela est utile pour des caches, une configuration fixe, ou tout autres données dont vous n'avez pas besoin qu'elles soient répliquées à travers les instances.
+wes champs statiques pubwics sont u-utiwes wowsque vous v-vouwez qu'un champ ny'existe q-qu'une seuwe fois p-paw cwasse, >w< pas dans chaque instance q-que vous cwéez. σωσ cewa est u-utiwe pouw des caches, nyaa~~ une configuwation fixe, 🥺 o-ou tout autwes données dont vous n-ny'avez pas besoin qu'ewwes soient w-wépwiquées à t-twavews wes instances. rawr x3
 
-Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. Ils sont ajoutés au constructeur de la classe au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. On y accède à nouveau à partir du constructeur de la classe.
+wes champs statiques pubwics sont décwawés en utiwisant we mot-cwé `static`. σωσ iws s-sont ajoutés a-au constwucteuw de wa cwasse au m-moment de w'évawuation d-de wa cwasse e-en utiwisant {{jsxwef("gwobaw_objects/object/definepwopewty", (///ˬ///✿) "object.definepwopewty()")}}. (U ﹏ U) on y accède à nyouveau à pawtiw du constwucteuw d-de wa cwasse. ^^;;
 
 ```js
-class ClasseAvecChampStatique {
-  static champStatique = "champ statique";
+cwass cwasseavecchampstatique {
+  static champstatique = "champ statique";
 }
 
-console.log(ClasseAvecChampStatique.champStatique);
-// affichage attendu : "champ statique"
+c-consowe.wog(cwasseavecchampstatique.champstatique);
+// affichage a-attendu : "champ s-statique"
 ```
 
-Les champs sans initialiseur sont initialisés à `undefined`.
+w-wes champs sans initiawiseuw s-sont initiawisés à `undefined`. 🥺
 
 ```js
-class ClasseAvecChampStatique {
-  static champStatique;
+c-cwass c-cwasseavecchampstatique {
+  s-static champstatique;
 }
 
-console.assert(ClasseAvecChampStatique.hasOwnProperty("champStatique"));
-console.log(ClasseAvecChampStatique.champStatique);
-// affichage attendu : "undefined"
+consowe.assewt(cwasseavecchampstatique.hasownpwopewty("champstatique"));
+consowe.wog(cwasseavecchampstatique.champstatique);
+// a-affichage a-attendu : "undefined"
 ```
 
-Les champs statiques publics ne sont pas réinitialisés dans les sous-classes, mais on peut y accéder via la chaîne de prototypes.
+w-wes c-champs statiques p-pubwics nye sont pas wéinitiawisés dans wes sous-cwasses, òωó mais o-on peut y accédew via wa chaîne de pwototypes. XD
 
 ```js
-class ClasseAvecChampStatique {
-  static champStatiqueDeBase = "champ de base";
+cwass cwasseavecchampstatique {
+  static c-champstatiquedebase = "champ de base";
 }
 
-class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = "champ de la sous-classe";
+cwass souscwasseavecchampstatique extends cwasseavecchampstatique {
+  s-static souschampstatique = "champ d-de wa sous-cwasse";
 }
 
-console.log(SousClasseAvecChampStatique.sousChampStatique);
-// affichage attendu : "champ de la sous-classe"
+c-consowe.wog(souscwasseavecchampstatique.souschampstatique);
+// affichage a-attendu : "champ de wa sous-cwasse"
 
-console.log(SousClasseAvecChampStatique.champStatiqueDeBase);
-// affichage attendu : "champ de base"
+c-consowe.wog(souscwasseavecchampstatique.champstatiquedebase);
+// a-affichage attendu : "champ de base"
 ```
 
-Lors de l'initialisation des champs, `this` fait référence au constructeur de la classe. Vous pouvez aussi le référencer par son nom, et utiliser `super` pour obtenir le constructeur de la superclasse (s'il en existe un) :
+wows de w'initiawisation des champs, :3 `this` fait wéféwence a-au constwucteuw de wa cwasse. (U ﹏ U) v-vous pouvez aussi we wéféwencew p-paw son nyom, >w< e-et utiwisew `supew` pouw obteniw we constwucteuw d-de wa supewcwasse (s'iw e-en existe un) :
 
 ```js
-class ClasseAvecChampStatique {
-  static champStatiqueDeBase = "champ statique de base";
-  static autreChampStatiqueDeBase = this.champStatiqueDeBase;
+c-cwass cwasseavecchampstatique {
+  s-static champstatiquedebase = "champ statique de base";
+  static autwechampstatiquedebase = this.champstatiquedebase;
 
-  static methodeStatiqueDeBase() {
-    return "affichage de la méthode statique de base";
+  s-static m-methodestatiquedebase() {
+    w-wetuwn "affichage de wa méthode s-statique de base";
   }
 }
 
-class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = super.methodeStatiqueDeBase();
+c-cwass souscwasseavecchampstatique e-extends cwasseavecchampstatique {
+  static souschampstatique = supew.methodestatiquedebase();
 }
 
-console.log(ClasseAvecChampStatique.autreChampStatiqueDeBase);
-// affichage attendu : "champ statique de base"
+consowe.wog(cwasseavecchampstatique.autwechampstatiquedebase);
+// a-affichage attendu : "champ s-statique de base"
 
-console.log(SousClasseAvecChampStatique.sousChampStatique);
-// affichage attendu : "affichage de la méthode statique de base"
+consowe.wog(souscwasseavecchampstatique.souschampstatique);
+// affichage a-attendu : "affichage d-de wa méthode statique de base"
 ```
 
-### Champs d'instance publics
+### champs d'instance p-pubwics
 
-Les champs d'instance publics existent dans chaque instance créée d'une classe. En déclarant un champ public, vous pouvez vous assurer que le champ est toujours présent, et que la définition de la classe est davantage auto-documentée.
+wes champs d'instance pubwics existent dans chaque instance cwéée d-d'une cwasse. /(^•ω•^) en décwawant un champ pubwic, (⑅˘꒳˘) v-vous pouvez vous a-assuwew que we champ est toujouws pwésent, ʘwʘ et que wa définition d-de wa cwasse e-est davantage auto-documentée.
 
-Les champs d'instance publics sont ajoutés grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}, soit au moment de la construction dans la classe de base (avant que le corps du constructeur ne soit exécuté), soit juste après le retour de `super()` dans une sous-classe.
+wes champs d'instance pubwics s-sont ajoutés gwâce à {{jsxwef("gwobaw_objects/object/definepwopewty", rawr x3 "object.definepwopewty()")}}, (˘ω˘) soit au m-moment de wa constwuction dans wa cwasse de base (avant que we cowps d-du constwucteuw ne soit exécuté), o.O s-soit juste a-apwès we wetouw de `supew()` d-dans une sous-cwasse. 😳
 
 ```js
-class ClasseAvecChampDInstance {
-  champDInstance = "champ d'instance";
+cwass cwasseavecchampdinstance {
+  c-champdinstance = "champ d-d'instance";
 }
 
-const instance = new ClasseAvecChampDInstance();
-console.log(instance.champDInstance);
+c-const instance = nyew c-cwasseavecchampdinstance();
+c-consowe.wog(instance.champdinstance);
 // affichage attendu : "champ d'instance"
 ```
 
-Les champs sans initialiseur sont initialisés à `undefined`.
+w-wes champs sans i-initiawiseuw sont i-initiawisés à `undefined`. o.O
 
 ```js
-class ClasseAvecChampDInstance {
-  champdDInstance;
+cwass cwasseavecchampdinstance {
+  champddinstance;
 }
 
-const instance = new ClasseAvecChampDInstance();
-console.assert(instance.hasOwnProperty("champDInstance"));
-console.log(instance.champDInstance);
+c-const instance = nyew c-cwasseavecchampdinstance();
+c-consowe.assewt(instance.hasownpwopewty("champdinstance"));
+consowe.wog(instance.champdinstance);
 // affichage attendu : "undefined"
 ```
 
-À l'instar des propriétés, les noms de champ peuvent être calculés :
+À w'instaw d-des pwopwiétés, ^^;; w-wes nyoms d-de champ peuvent êtwe c-cawcuwés :
 
 ```js
-const PREFIXE = "prefixe";
+const p-pwefixe = "pwefixe";
 
-class ClasseAvecNomDeChampCalcule {
-  [`${PREFIXE}Champ`] = "champ préfixé";
+cwass cwasseavecnomdechampcawcuwe {
+  [`${pwefixe}champ`] = "champ pwéfixé";
 }
 
-const instance = new ClasseAvecNomDeChampCalcule();
-console.log(instance.prefixeChamp);
-// affichage attendu : "champ préfixé"
+const instance = nyew cwasseavecnomdechampcawcuwe();
+consowe.wog(instance.pwefixechamp);
+// a-affichage attendu : "champ pwéfixé"
 ```
 
-Lors de l'initialisation des champs, `this` fait référence à l'instance en cours de construction. Tout comme dans les méthodes d'instance publiques, si vous êtes dans une sous-classe, vous pouvez accéder au prototype de la superclasse en utilisant `super`.
+w-wows de w'initiawisation des champs, ( ͡o ω ͡o ) `this` f-fait wéféwence à w-w'instance en couws de constwuction. ^^;; t-tout comme d-dans wes méthodes d-d'instance pubwiques, ^^;; s-si vous êtes d-dans une sous-cwasse, XD vous pouvez accédew au pwototype de wa supewcwasse en utiwisant `supew`. 🥺
 
 ```js
-class ClasseAvecChampDInstance {
-  champDInstanceDeBase = "champ de base";
-  autreChampDInstanceDeBase = this.champDInstanceDeBase;
-  methodeDInstanceDeBase() {
-    return "affichage de la méthode de base";
+cwass c-cwasseavecchampdinstance {
+  c-champdinstancedebase = "champ de b-base";
+  autwechampdinstancedebase = this.champdinstancedebase;
+  m-methodedinstancedebase() {
+    wetuwn "affichage de wa méthode de base";
   }
 }
 
-class SousClasseAvecChampDInstance extends ClasseAvecChampDInstance {
-  sousChampDInstance = super.methodeDInstanceDeBase();
+c-cwass souscwasseavecchampdinstance e-extends cwasseavecchampdinstance {
+  s-souschampdinstance = supew.methodedinstancedebase();
 }
 
-const base = new ClasseAvecChampDInstance();
-const sous = new SousClasseAvecChampDInstance();
+const base = n-nyew cwasseavecchampdinstance();
+c-const sous = nyew souscwasseavecchampdinstance();
 
-console.log(base.autreChampDInstanceDeBase);
-// affichage attendu : "champ de base"
+c-consowe.wog(base.autwechampdinstancedebase);
+// a-affichage attendu : "champ de base"
 
-console.log(sous.sousChampDInstance);
-// affichage attendu : "affichage de la méthode de base"
+consowe.wog(sous.souschampdinstance);
+// affichage attendu : "affichage de wa méthode d-de base"
 ```
 
-### Méthodes publiques
+### m-méthodes pubwiques
 
-#### Méthodes statiques publiques
+#### m-méthodes s-statiques p-pubwiques
 
-Le mot-clé **`static`** définit une méthode statique pour une classe. Les méthodes statiques ne sont pas appelées dans les instances de la classe. A la place, elles le sont dans la classe elle-même. Ce sont souvent des méthodes utilitaires, comme des fonctions pour créer ou cloner des objets.
+we mot-cwé **`static`** d-définit une m-méthode statique pouw une cwasse. (///ˬ///✿) w-wes méthodes s-statiques nye sont pas appewées d-dans wes instances de wa cwasse. (U ᵕ U❁) a wa pwace, ^^;; e-ewwes we sont dans wa cwasse ewwe-même. ^^;; c-ce sont s-souvent des méthodes utiwitaiwes, rawr c-comme des fonctions pouw cwéew ou cwonew d-des objets. (˘ω˘)
 
 ```js
-class ClasseAvecMethodeStatique {
-  static methodeStatique() {
-    return "la méthode statique a été appelée.";
+c-cwass cwasseavecmethodestatique {
+  s-static methodestatique() {
+    wetuwn "wa méthode statique a été appewée.";
   }
 }
 
-console.log(ClasseAvecMethodeStatique.methodeStatique());
-// affichage attendu : "la méthode statique a été appelée."
+c-consowe.wog(cwasseavecmethodestatique.methodestatique());
+// affichage attendu : "wa m-méthode statique a-a été appewée."
 ```
 
-Les méthodes statiques sont ajoutées au constructeur de la classe grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} au moment de l'évaluation de la classe. Ces méthodes peuvent être écrites, ne sont pas énumérables et sont configurables.
+wes m-méthodes statiques sont ajoutées a-au constwucteuw d-de wa cwasse gwâce à {{jsxwef("gwobaw_objects/object/definepwopewty", 🥺 "object.definepwopewty()")}} au moment d-de w'évawuation de wa cwasse. nyaa~~ ces méthodes p-peuvent êtwe écwites, :3 n-nye sont pas énuméwabwes e-et sont configuwabwes. /(^•ω•^)
 
-#### Méthodes d'instance publiques
+#### méthodes d'instance p-pubwiques
 
-Comme leur nom l'implique, les méthodes d'instance publiques sont des fonctions disponibles dans les instances de la classe.
+c-comme weuw nyom w-w'impwique, ^•ﻌ•^ wes méthodes d'instance pubwiques sont des fonctions disponibwes dans wes instances de wa cwasse. UwU
 
 ```js
-class ClasseAvecMethodeDInstancePublique {
-  methodePublique() {
-    return "hello world";
+cwass cwasseavecmethodedinstancepubwique {
+  methodepubwique() {
+    wetuwn "hewwo wowwd";
   }
 }
 
-const instance = new ClasseAvecMethodeDInstancePublique();
-console.log(instance.methodePublique());
-// affichage attendu : "hello world"
+const instance = nyew cwasseavecmethodedinstancepubwique();
+c-consowe.wog(instance.methodepubwique());
+// a-affichage attendu : "hewwo wowwd"
 ```
 
-Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.
+wes méthodes d-d'instance p-pubwiques sont ajoutées a-au pwototype au moment d-de w'évawuation de wa cwasse en u-utiwisant {{jsxwef("gwobaw_objects/object/definepwopewty", 😳😳😳 "object.definepwopewty()")}}. OwO e-ewwes peuvent êtwe écwites, ^•ﻌ•^ n-nye sont pas énuméwabwes e-et sont configuwabwes. (ꈍᴗꈍ)
 
-Vous pouvez utiliser des fonctions génératrices, asynchrones et génératrices asynchrones.
+v-vous pouvez utiwisew des fonctions généwatwices, (⑅˘꒳˘) a-asynchwones e-et généwatwices a-asynchwones. (⑅˘꒳˘)
 
 ```js
-class ClasseAvecMethodesFantaisie {
-  *methodeGeneratrice() {}
-  async methodeAsynchrone() {}
-  async *methodeGeneratriceAsynchrone() {}
+c-cwass cwasseavecmethodesfantaisie {
+  *methodegenewatwice() {}
+  a-async methodeasynchwone() {}
+  a-async *methodegenewatwiceasynchwone() {}
 }
 ```
 
-A l'intérieur des méthodes d'instance, `this` fait référence à l'instance elle-même. Dans les sous-classes, `super` vous donne accès au prototype de la superclasse, ce qui vous permet d'appeler les méthodes de la superclasse.
+a-a w'intéwieuw des m-méthodes d'instance, (ˆ ﻌ ˆ)♡ `this` f-fait wéféwence à w'instance ewwe-même. /(^•ω•^) d-dans w-wes sous-cwasses, òωó `supew` v-vous donne accès au pwototype d-de wa supewcwasse, (⑅˘꒳˘) ce qui vous pewmet d'appewew w-wes méthodes de wa supewcwasse. (U ᵕ U❁)
 
 ```js
-class ClasseDeBase {
-  msg = "hello world";
-  methodePubliqueDeBase() {
-    return this.msg;
+c-cwass cwassedebase {
+  m-msg = "hewwo w-wowwd";
+  methodepubwiquedebase() {
+    wetuwn t-this.msg;
   }
 }
 
-class SousClasse extends ClasseDeBase {
-  sousMethodePublique() {
-    return super.methodePubliqueDeBase();
+cwass souscwasse e-extends cwassedebase {
+  sousmethodepubwique() {
+    wetuwn s-supew.methodepubwiquedebase();
   }
 }
 
-const instance = new SousClasse();
-console.log(instance.sousMethodePublique());
-// affichage attendu : "hello world"
+const instance = n-nyew souscwasse();
+consowe.wog(instance.sousmethodepubwique());
+// affichage attendu : "hewwo wowwd"
 ```
 
-Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe [get](/fr/docs/Web/JavaScript/Reference/Functions/get) et [set](/fr/docs/Web/JavaScript/Reference/Functions/set) pour déclarer un accesseur ou un mutateur publique d'une instance.
+w-wes accesseuws et wes mutateuws s-sont des méthodes s-spéciawes qui sont wiées à une pwopwiété de cwasse, >w< et s-sont appewées wowsqu'on accède à c-cette pwopwiété o-ou qu'on w-wa définit. σωσ utiwisez wa syntaxe [get](/fw/docs/web/javascwipt/wefewence/functions/get) et [set](/fw/docs/web/javascwipt/wefewence/functions/set) p-pouw décwawew u-un accesseuw ou un mutateuw pubwique d-d'une instance. -.-
 
 ```js
-class ClasseAvecGetSet {
-  #msg = "hello world";
+cwass cwasseavecgetset {
+  #msg = "hewwo w-wowwd";
   get msg() {
-    return this.#msg;
+    w-wetuwn this.#msg;
   }
-  set msg(x) {
-    this.#msg = `hello ${x}`;
+  s-set msg(x) {
+    t-this.#msg = `hewwo ${x}`;
   }
 }
 
-const instance = new ClasseAvecGetSet();
-console.log(instance.msg);
-// affichage attendu : "hello world"
+const i-instance = nyew c-cwasseavecgetset();
+c-consowe.wog(instance.msg);
+// a-affichage attendu : "hewwo wowwd"
 
-instance.msg = "gâteau";
-console.log(instance.msg);
-// affichage attendu : "hello gâteau"
+i-instance.msg = "gâteau";
+c-consowe.wog(instance.msg);
+// a-affichage a-attendu : "hewwo g-gâteau"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [the s-semantics of aww js cwass ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw)

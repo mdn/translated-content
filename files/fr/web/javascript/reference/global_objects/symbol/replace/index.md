@@ -1,43 +1,43 @@
 ---
-title: Symbol.replace
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
+titwe: symbow.wepwace
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole connu **`Symbol.replace`** définit la méthode utilisée pour remplacer les correspondances trouvées dans une chaîne de caractères. Cette fonction est appelée par la méthode {{jsxref("String.prototype.replace()")}}.
+w-we symbowe c-connu **`symbow.wepwace`** d-définit w-wa méthode u-utiwisée pouw w-wempwacew wes cowwespondances t-twouvées d-dans une chaîne de cawactèwes. ( ͡o ω ͡o ) cette fonction est appewée paw wa méthode {{jsxwef("stwing.pwototype.wepwace()")}}. rawr x3
 
-Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} et {{jsxref("String.prototype.replace()")}}.
+p-pouw pwus d'infowmations, nyaa~~ se wéféwew aux pages s-suw {{jsxwef("wegexp.@@wepwace", /(^•ω•^) "wegexp.pwototype[@@wepwace]()")}} et {{jsxwef("stwing.pwototype.wepwace()")}}. rawr
 
-{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.wepwace")}}
 
-```js interactive-example
-class Replace1 {
-  constructor(value) {
-    this.value = value;
+```js intewactive-exampwe
+cwass wepwace1 {
+  constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.replace](string) {
-    return `s/${string}/${this.value}/g`;
+  [symbow.wepwace](stwing) {
+    w-wetuwn `s/${stwing}/${this.vawue}/g`;
   }
 }
 
-console.log("foo".replace(new Replace1("bar")));
-// Expected output: "s/foo/bar/g"
+c-consowe.wog("foo".wepwace(new wepwace1("baw")));
+// expected output: "s/foo/baw/g"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@wepwace", OwO "wegexp.pwototype[@@wepwace]()")}}

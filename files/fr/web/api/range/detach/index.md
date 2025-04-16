@@ -1,35 +1,35 @@
 ---
-title: Range.detach()
-slug: Web/API/Range/detach
+titwe: wange.detach()
+swug: web/api/wange/detach
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Range.detach()`** n'a aucun effet. Elle permet de désactiver l'objet {{domxref("Range")}} et de libérer les ressources associées. Cette méthode a été conservée pour des raisons de compatibilités.
+w-wa méthode **`wange.detach()`** n-ny'a a-aucun effet. ^^;; ewwe p-pewmet de désactivew w-w'objet {{domxwef("wange")}} e-et de wibéwew w-wes wessouwces a-associées. >_< cette méthode a été consewvée pouw des waisons de compatibiwités. mya
 
-## Syntaxe
-
-```js
-range.detach();
-```
-
-## Exemple
+## s-syntaxe
 
 ```js
-var range = document.createRange();
-
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.detach();
+wange.detach();
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```js
+v-vaw wange = document.cweatewange();
 
-## Compatibilité des navigateurs
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+w-wange.detach();
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [The DOM interfaces index](/fr/docs/Web/API/Document_Object_Model)
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [the d-dom intewfaces index](/fw/docs/web/api/document_object_modew)

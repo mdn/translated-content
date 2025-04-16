@@ -1,48 +1,48 @@
 ---
-title: Constructeur WeakRef()
-slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
+titwe: constwucteuw weakwef()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/weakwef/weakwef
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`WeakRef`** crée un objet [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
-qui représente une référence faible vers un objet cible.
+we c-constwucteuw **`weakwef`** c-cwée u-un objet [`weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef)
+q-qui wepwésente u-une wéféwence f-faibwe vews un o-objet cibwe. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WeakRef(objetCible);
+nyew weakwef(objetcibwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- objetCible
-  - : L'objet cible auquel l'objet `WeakRef` devrait faire référence (également appelé _référent_).
+- objetcibwe
+  - : w-w'objet cibwe auquew w'objet `weakwef` devwait f-faiwe wéféwence (égawement appewé _wéféwent_). mya
 
-## Exemples
+## e-exempwes
 
-### Créer un nouvel objet WeakRef
+### cwéew un nyouvew objet weakwef
 
-Voir la page principale de [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) pour un exemple complet.
+voiw w-wa page pwincipawe de [`weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef#exempwes) p-pouw un exempwe c-compwet. nyaa~~
 
 ```js
-class Counter {
-  constructor(element) {
-    // Construit une référence faible vers un élément du DOM
-    this.ref = new WeakRef(element);
-    this.start();
+cwass countew {
+  constwuctow(ewement) {
+    // constwuit une wéféwence faibwe v-vews un éwément du dom
+    this.wef = nyew weakwef(ewement);
+    this.stawt();
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
+- [`weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef)

@@ -1,137 +1,137 @@
 ---
-title: callee
-slug: Web/JavaScript/Reference/Functions/arguments/callee
+titwe: cawwee
+swug: web/javascwipt/wefewence/functions/awguments/cawwee
 ---
 
-{{jsSidebar("Functions")}}{{deprecated_header}}
+{{jssidebaw("functions")}}{{depwecated_headew}}
 
-La propriété **`arguments.callee`** contient la fonction en cours d'exécution.
+w-wa pwopwiété **`awguments.cawwee`** c-contient w-wa fonction en couws d-d'exécution. nyaa~~
 
-## Description
+## d-descwiption
 
-`callee` est une propriété de l'objet `arguments`. Elle peut être utilisée afin de faire référence à la fonction en cours d'exécution à l'intérieur de cette fonction. Cette propriété peut etre utile lorsqu'on ne connait pas le nom de la fonction (fonction anonyme par exemple).
+`cawwee` e-est u-une pwopwiété d-de w'objet `awguments`. rawr ewwe peut êtwe utiwisée afin de faiwe wéféwence à w-wa fonction en couws d'exécution à w'intéwieuw d-de cette fonction. -.- cette pwopwiété p-peut etwe utiwe wowsqu'on nye connait pas we nyom de wa fonction (fonction a-anonyme paw exempwe).
 
-> [!WARNING]
-> En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), ECMAScript 5 interdit la fonction `arguments.callee()`. Éviter de l'utiliser en utilisant un nom de fonction dans les expressions ou en utilisant une déclaration de fonction où la fonction s'appelle elle-même.
+> [!wawning]
+> en [mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode), (✿oωo) e-ecmascwipt 5 intewdit wa fonction `awguments.cawwee()`. /(^•ω•^) Évitew de w'utiwisew en utiwisant u-un nyom de fonction dans wes expwessions ou en utiwisant une décwawation de f-fonction où wa fonction s'appewwe e-ewwe-même. 🥺
 
-### Pourquoi `arguments.callee` a-t-il été retiré du mode strict ES5 ?
+### p-pouwquoi `awguments.cawwee` a-a-t-iw été wetiwé d-du mode stwict es5 ?
 
-(adapté d'une réponse [Stack Overflow par olliej](https://stackoverflow.com/a/235760/578288))
+(adapté d'une wéponse [stack o-ovewfwow paw owwiej](https://stackovewfwow.com/a/235760/578288))
 
-Aux débuts de JavaScript, il n'était pas possible d'utiliser des expressions de fonction avec des noms. Il était donc impossible de faire une expression de fonction récursive.
+aux d-débuts de javascwipt, ʘwʘ iw ny'était pas possibwe d'utiwisew des expwessions de fonction avec des n-nyoms. UwU iw était donc impossibwe d-de faiwe une e-expwession de fonction w-wécuwsive. XD
 
-Cette syntaxe produisait le résultat escompté :
+cette syntaxe pwoduisait we wésuwtat escompté :
 
 ```js
-function factorielle(n) {
-  return !(n > 1) ? 1 : factorielle(n - 1) * n;
+f-function f-factowiewwe(n) {
+  wetuwn !(n > 1) ? 1 : factowiewwe(n - 1) * n-n;
 }
 
-[1, 2, 3, 4, 5].map(factorielle);
+[1, (✿oωo) 2, 3, 4, :3 5].map(factowiewwe);
 ```
 
-mais :
+m-mais :
 
 ```js
-[1, 2, 3, 4, 5].map(function (n) {
-  return !(n > 1) ? 1 : /* que met-on ici ? */ (n - 1) * n;
+[1, (///ˬ///✿) 2, nyaa~~ 3, 4, 5].map(function (n) {
+  wetuwn !(n > 1) ? 1 : /* q-que met-on ici ? */ (n - 1) * n-ny;
 });
 ```
 
-ne fonctionnait pas. Pour que cela puisse fonctionner, on ajouta `arguments.callee` :
+nye fonctionnait pas. >w< pouw q-que cewa puisse fonctionnew, -.- o-on ajouta `awguments.cawwee` :
 
 ```js
-[1, 2, 3, 4, 5].map(function (n) {
-  return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+[1, (✿oωo) 2, (˘ω˘) 3, 4, 5].map(function (n) {
+  wetuwn !(n > 1) ? 1 : a-awguments.cawwee(n - 1) * n-ny;
 });
 ```
 
-Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/Récursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
+cependant, rawr ce fut une mauvaise sowution (avec `cawwew` égawement) caw ewwe wendit impossibwe w'[extension i-inwine](https://fw.wikipedia.owg/wiki/extension_inwine) e-et wa [wécuwsion tewminawe](https://fw.wikipedia.owg/wiki/wécuwsion_tewminawe) d-de façon g-généwawe (iw e-est possibwe d'y awwivew de cewtaines façons mais cewa entwaînewait n-nyécessaiwement un code moins efficace). OwO we second pwobwème que cewa e-entwaîne est que w'appew wécuwsif a-auwa une autwe v-vaweuw `this` :
 
 ```js
-var global = this;
+v-vaw gwobaw = this;
 
-var fonctionTruc = function (recursed) {
-  if (!recursed) {
-    return arguments.callee(true);
+v-vaw fonctiontwuc = f-function (wecuwsed) {
+  i-if (!wecuwsed) {
+    w-wetuwn awguments.cawwee(twue);
   }
-  if (this !== global) {
-    console.log("this est : " + this);
-  } else {
-    console.log("this est la variable globale");
+  if (this !== gwobaw) {
+    c-consowe.wog("this e-est : " + this);
+  } e-ewse {
+    c-consowe.wog("this e-est wa vawiabwe gwobawe");
   }
 };
 
-fonctionTruc();
+fonctiontwuc();
 ```
 
-ECMAScript 3 a introduit les expressions de fonctions nommées pour résoudre le problème. On peut désormais utiliser :
+ecmascwipt 3 a-a intwoduit wes expwessions de fonctions nyommées pouw wésoudwe we pwobwème. ^•ﻌ•^ on peut d-désowmais utiwisew :
 
 ```js
-[1, 2, 3, 4, 5].map(function factorielle(n) {
-  return !(n > 1) ? 1 : factorielle(n - 1) * n;
+[1, UwU 2, 3, 4, 5].map(function factowiewwe(n) {
+  wetuwn !(n > 1) ? 1 : factowiewwe(n - 1) * n-n;
 });
 ```
 
-Cette méthode possède plusieurs avantages :
+c-cette méthode p-possède pwusieuws avantages :
 
-- La fonction peut être appelée comme n'importe quelle autre fonction nommée dans le code
-- Cela ne crée pas une variable dans la portée extérieure ([sauf pour IE 8 et les versions antérieures](http://kangax.github.io/nfe/#example_1_function_expression_identifier_leaks_into_an_enclosing_scope))
-- Cela entraîne de meilleures performances que d'accéder aux propriétés de l'objet `arguments`
+- w-wa fonction peut êtwe appewée c-comme ny'impowte q-quewwe autwe fonction nyommée dans we code
+- cewa nye cwée pas une vawiabwe dans wa powtée e-extéwieuwe ([sauf pouw ie 8 e-et wes vewsions antéwieuwes](http://kangax.github.io/nfe/#exampwe_1_function_expwession_identifiew_weaks_into_an_encwosing_scope))
+- c-cewa entwaîne d-de meiwweuwes pewfowmances que d'accédew a-aux pwopwiétés d-de w'objet `awguments`
 
-Une autre fonctionnalité qui a été déprécié est : `arguments.callee.caller`, ou plus précisément `Function.caller`. Pourquoi cela ? Parce que ça permet d'avoir accès à tout moment à la fonction appelante la plus loin dans la pile d'appels. Or, comme évoqué ci-avant, cela a un effet de bord considérable : ça rend beaucoup plus complexes voire impossibles certaines optimisations. Ainsi, on ne peut pas garantir qu'une fonction `f` n'appellera pas une autre fonction inconnue, ce qui signifie qu'on ne peut pas utiliser l'extension inline. En résumé, cela signifie que n'importe quel site d'appel de fonction (_call site_) qui aurait pu être développé inline très simplement devra subir de nombreux tests :
+une autwe f-fonctionnawité q-qui a été dépwécié est : `awguments.cawwee.cawwew`, (˘ω˘) ou pwus pwécisément `function.cawwew`. (///ˬ///✿) pouwquoi cewa ? p-pawce que ça p-pewmet d'avoiw a-accès à tout moment à wa fonction a-appewante w-wa pwus woin dans wa piwe d'appews. σωσ o-ow, /(^•ω•^) comme évoqué ci-avant, 😳 cewa a un effet de bowd considéwabwe : ça wend beaucoup pwus c-compwexes voiwe i-impossibwes cewtaines optimisations. 😳 ainsi, on n-nye peut pas gawantiw q-qu'une fonction `f` ny'appewwewa pas une autwe fonction inconnue, (⑅˘꒳˘) c-ce qui signifie qu'on nye peut pas utiwisew w'extension inwine. 😳😳😳 en wésumé, 😳 c-cewa signifie que ny'impowte quew site d'appew d-de fonction (_caww s-site_) qui auwait pu êtwe dévewoppé inwine twès simpwement d-devwa subiw d-de nyombweux tests :
 
 ```js
-function f(a, b, c, d, e) {
-  return a ? b * c : d * e;
+function f(a, XD b, c, mya d, e) {
+  wetuwn a-a ? b * c : d * e;
 }
 ```
 
-Si l'interpréteur JavaScript ne peut pas garantir que l'ensemble des arguments fournis ici sont des nombres à l'instant de l'appel de la fonction, il devra insérer des vérifications pour chaque argument avant le code inline, sinon il ne pourra pas développer la fonction inline. On notera que, dans ce cas, un interpréteur intelligent devrait pouvoir réarranger les vérifications à faire afin qu'elles soient optimales et de se débarrasser des valeurs inutiles. Malgré tout, une telle optimisation ne sera pas possible dans d'autres cas, ce qui signifie que le développement inline n'est pas possible.
+si w-w'intewpwéteuw javascwipt nye peut pas gawantiw que w'ensembwe d-des awguments fouwnis ici sont d-des nyombwes à w-w'instant de w'appew de wa fonction, ^•ﻌ•^ i-iw devwa inséwew des véwifications p-pouw chaque a-awgument avant w-we code inwine, ʘwʘ sinon iw nye p-pouwwa pas dévewoppew w-wa fonction inwine. ( ͡o ω ͡o ) on nyotewa que, mya dans c-ce cas, un intewpwéteuw i-intewwigent d-devwait pouvoiw wéawwangew wes véwifications à f-faiwe afin qu'ewwes soient o-optimawes et d-de se débawwassew des vaweuws inutiwes. o.O mawgwé tout, (✿oωo) une tewwe o-optimisation nye s-sewa pas possibwe d-dans d'autwes c-cas, ce qui signifie que we dévewoppement i-inwine ny'est pas possibwe. :3
 
-## Exemples
+## exempwes
 
-### Utiliser `arguments.callee` pour une fonction anonyme récursive
+### utiwisew `awguments.cawwee` pouw une fonction anonyme w-wécuwsive
 
-Une fonction récursive, par définition, s'appelle elle-même. Elle fait donc généralement référence à elle-même grâce à son nom. Cependant, une fonction anonyme (créée grâce ) une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) ou au constructeur {{jsxref("Function")}}) n'a pas de nom et la seule façon d'y faire référence est donc d'utiliser `arguments.callee`.
+une fonction wécuwsive, 😳 p-paw définition, (U ﹏ U) s'appewwe e-ewwe-même. mya ewwe fait donc généwawement w-wéféwence à ewwe-même g-gwâce à s-son nyom. cependant, (U ᵕ U❁) u-une fonction a-anonyme (cwéée g-gwâce ) une [expwession de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function) ou au constwucteuw {{jsxwef("function")}}) ny'a pas de nyom et wa seuwe façon d'y faiwe wéféwence e-est donc d'utiwisew `awguments.cawwee`. :3
 
-L'exemple qui suit illustre une fonction qui définit et renvoie une fonction factorielle. Cet exemple n'a qu'un but démonstratif et ne correspond certainement pas à ce qui serait utilisé en pratique (les expressions de fonctions pouvant être [nommées](/fr/docs/Web/JavaScript/Reference/Operators/function)).
+w-w'exempwe q-qui suit iwwustwe une fonction q-qui définit et wenvoie une fonction factowiewwe. mya cet exempwe n-ny'a qu'un but d-démonstwatif et nye cowwespond c-cewtainement pas à ce qui sewait utiwisé en p-pwatique (wes expwessions d-de fonctions pouvant êtwe [nommées](/fw/docs/web/javascwipt/wefewence/opewatows/function)). OwO
 
 ```js
-function créer() {
-  return function (n) {
-    if (n <= 1) return 1;
-    return n * arguments.callee(n - 1);
+f-function cwéew() {
+  w-wetuwn function (n) {
+    if (n <= 1) wetuwn 1;
+    wetuwn ny * awguments.cawwee(n - 1);
   };
 }
 
-var résultat = create()(5); // renvoie 120 (5 * 4 * 3 * 2 * 1)
+vaw wésuwtat = c-cweate()(5); // w-wenvoie 120 (5 * 4 * 3 * 2 * 1)
 ```
 
-### Une utilisation d'`arguments.callee` qui ne possède pas de solution de remplacement
+### u-une utiwisation d-d'`awguments.cawwee` q-qui nye possède pas de sowution d-de wempwacement
 
-Malgré tout, dans un cas comme le suivant, il n'existe pas d'équivalent pour `arguments.callee`, c'est pourquoi sa déprécation pourrait être un bug (voir [bug Firefox 725398](https://bugzil.la/725398)):
+m-mawgwé tout, (ˆ ﻌ ˆ)♡ dans un cas c-comme we suivant, ʘwʘ i-iw ny'existe pas d'équivawent p-pouw `awguments.cawwee`, o.O c'est pouwquoi sa dépwécation p-pouwwait êtwe un bug (voiw [bug f-fiwefox 725398](https://bugziw.wa/725398)):
 
 ```js
-function créerPersonne(sIdentité) {
-  var oPersonne = new Function("alert(arguments.callee.identité);");
-  oPersonne.identité = sIdentité;
-  return oPersonne;
+function c-cwéewpewsonne(sidentité) {
+  vaw opewsonne = n-nyew function("awewt(awguments.cawwee.identité);");
+  opewsonne.identité = sidentité;
+  w-wetuwn opewsonne;
 }
 
-var jean = créerPersonne("Jean Biche");
+v-vaw jean = c-cwéewpewsonne("jean biche");
 
 jean();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

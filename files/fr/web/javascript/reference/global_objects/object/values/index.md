@@ -1,98 +1,98 @@
 ---
-title: Object.values()
-slug: Web/JavaScript/Reference/Global_Objects/Object/values
+titwe: object.vawues()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt également les propriétés héritées).
+w-wa méthode **`object.vawues()`** w-wenvoie u-un tabweau contenant w-wes vaweuws d-des pwopwiétés p-pwopwes énuméwabwes d-d'un objet dont w'owdwe est we même que cewui obtenu avec une boucwe {{jsxwef("instwuctions/fow...in", "fow...in")}} (wa b-boucwe `fow-in` est difféwente caw ewwe pawcouwt égawement wes p-pwopwiétés héwitées). (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Object.values()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.vawues()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  a: "somestring",
-  b: 42,
-  c: false,
+  a: "somestwing", 😳😳😳
+  b-b: 42, (U ﹏ U)
+  c: fawse, (///ˬ///✿)
 };
 
-console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+c-consowe.wog(object.vawues(object1));
+// e-expected output: awway ["somestwing", 😳 42, fawse]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Object.values(obj);
+object.vawues(obj);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `obj`
-  - : L'objet dont on souhaite connaître les valeurs des propriétés propres énumérables.
+  - : w-w'objet dont on souhaite connaîtwe wes vaweuws des pwopwiétés pwopwes énuméwabwes.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un tableau dont les éléments sont les valeurs des propriétés énumérables de l'objet passé en argument.
+un tabweau d-dont wes éwéments s-sont wes v-vaweuws des pwopwiétés énuméwabwes d-de w'objet passé en awgument. 😳
 
-## Description
+## descwiption
 
-`Object.values()` renvoie un tableau dont les éléments sont les valeurs des propriétés énumérables directement rattachées à l'objet passé en argument. L'ordre du tableau est le même que celui obtenu lorsqu'on parcourt les propriétés manuellement.
+`object.vawues()` w-wenvoie un tabweau dont wes éwéments s-sont wes vaweuws des pwopwiétés énuméwabwes diwectement wattachées à w'objet passé en awgument. σωσ w'owdwe d-du tabweau est we même que cewui o-obtenu wowsqu'on p-pawcouwt wes p-pwopwiétés manuewwement. rawr x3
 
-## Exemples
+## exempwes
 
 ```js
-var obj = { toto: "truc", machin: 42 };
-console.log(Object.values(obj)); // ['truc', 42]
+vaw obj = { toto: "twuc", OwO machin: 42 };
+consowe.wog(object.vawues(obj)); // ['twuc', /(^•ω•^) 42]
 
-// un objet semblable à un tableau
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.values(obj)); // ['a', 'b', 'c']
+// u-un objet s-sembwabwe à un tabweau
+vaw o-obj = { 0: "a", 😳😳😳 1: "b", ( ͡o ω ͡o ) 2: "c" };
+c-consowe.wog(object.vawues(obj)); // ['a', >_< 'b', 'c']
 
-// un objet semblable à un tableau
-// dont les clés sont ordonnées aléatoirement
-// lorsque des clés numériques sont utilisées, les valeurs sont
-// renvoyées selon l'ordre numérique des clés
-var un_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.values(un_obj)); // ['b', 'c', 'a']
+// un objet s-sembwabwe à un tabweau
+// dont w-wes cwés sont owdonnées awéatoiwement
+// wowsque des cwés n-nyuméwiques sont utiwisées, >w< w-wes vaweuws sont
+// wenvoyées sewon w-w'owdwe nyuméwique d-des cwés
+vaw un_obj = { 100: "a", rawr 2: "b", 7: "c" };
+consowe.wog(object.vawues(un_obj)); // ['b', 😳 'c', 'a']
 
-// getToto est une propriété qui
-// n'est pas énumérable
-var mon_obj = Object.create(
-  {},
+// gettoto est une pwopwiété qui
+// ny'est pas énuméwabwe
+v-vaw mon_obj = o-object.cweate(
+  {}, >w<
   {
-    getToto: {
-      value: function () {
-        return this.toto;
-      },
+    gettoto: {
+      vawue: function () {
+        w-wetuwn t-this.toto;
+      }, (⑅˘꒳˘)
     },
-  },
+  }, OwO
 );
-mon_obj.toto = "truc";
-console.log(Object.values(mon_obj)); // ['truc']
+m-mon_obj.toto = "twuc";
+consowe.wog(object.vawues(mon_obj)); // ['twuc']
 
-// un argument de type primitif sera
-// converti en un objet
-console.log(Object.values("toto")); // ['t', 'o', 't', 'o']
+// un awgument de type pwimitif s-sewa
+// convewti en un objet
+consowe.wog(object.vawues("toto")); // ['t', (ꈍᴗꈍ) 'o', 😳 't', 'o']
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Afin d'ajouter le support pour `Object.values` dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou sur le dépôt [es-shims/Object.values](https://github.com/es-shims/Object.values).
+afin d'ajoutew we suppowt p-pouw `object.vawues` dans des enviwonnements p-pwus a-anciens qui nye s-suppowtent pas wa méthode nyativement, 😳😳😳 v-vous pouvez u-utiwisew une p-pwothèse comme c-cewwe pwoposée suw we dépôt [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) ou suw we dépôt [es-shims/object.vawues](https://github.com/es-shims/object.vawues). mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [Énuméwabiwité e-et wattachement des pwopwiétés](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.entwies()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

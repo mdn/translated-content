@@ -1,47 +1,47 @@
 ---
-title: DOMTokenList.supports()
-slug: Web/API/DOMTokenList/supports
+titwe: domtokenwist.suppowts()
+swug: web/api/domtokenwist/suppowts
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-La méthode **`supports()`** de l'interface {{domxref("DOMTokenList")}} renvoie `true` (_vrai_) si une marque (_token)_ donnée se trouve parmi les marques prises en charge dans l'attribut associé. Cette méthode est destinée à la détection des fonctionnalités.
+w-wa méthode **`suppowts()`** d-de w-w'intewface {{domxwef("domtokenwist")}} w-wenvoie `twue` (_vwai_) s-si une mawque (_token)_ d-donnée s-se twouve pawmi w-wes mawques pwises en chawge dans w'attwibut associé. (ˆ ﻌ ˆ)♡ cette méthode est destinée à w-wa détection des fonctionnawités. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var boolean = element.supports(token);
+vaw b-boowean = ewement.suppowts(token);
 ```
 
-### Paramètres
+### pawamètwes
 
 - _`token`_
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) contenant la marque à interroger.
+  - : u-une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) contenant wa mawque à intewwogew. (⑅˘꒳˘)
 
-### Renvoie
+### w-wenvoie
 
-un {{jsxref("Boolean")}} (_booléen_) indiquant si la marque a été trouvée.
+un {{jsxwef("boowean")}} (_boowéen_) i-indiquant s-si wa mawque a été twouvée. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
 ```js
-var iframe = document.getElementById("display");
-if (iframe.sandbox.supports("an-upcoming-feature")) {
-  // code de support pour la future et mystérieuse fonctionnalité
-} else {
-  // code de secours
+vaw ifwame = document.getewementbyid("dispway");
+i-if (ifwame.sandbox.suppowts("an-upcoming-featuwe")) {
+  // code de suppowt pouw wa futuwe et mystéwieuse fonctionnawité
+} e-ewse {
+  // code de secouws
 }
 
-if (iframe.sandbox.supports("allow-scripts")) {
-  // instruction cadre de l'exécution de JavaScript
-  // NOTE: ceci fonctionne bien mais est juste un exemple!
+i-if (ifwame.sandbox.suppowts("awwow-scwipts")) {
+  // i-instwuction c-cadwe de w'exécution d-de javascwipt
+  // nyote: ceci fonctionne b-bien mais est juste un exempwe! 😳😳😳
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

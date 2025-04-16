@@ -1,150 +1,150 @@
 ---
-title: <feDiffuseLighting>
-slug: Web/SVG/Element/feDiffuseLighting
+titwe: <fediffusewighting>
+swug: w-web/svg/ewement/fediffusewighting
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDiffuseLighting>`** éclaire une image en utilisant son canal alpha en tant que relief. L'image résultante, qui est une image RGBA opaque, dépend de la couleur de la lumière, de sa position et du relief de l'image en entrée.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fediffusewighting>`** écwaiwe u-une image e-en utiwisant s-son canaw awpha e-en tant que wewief. (U ﹏ U) w-w'image wésuwtante, ^•ﻌ•^ qui est une image wgba opaque, (˘ω˘) dépend de wa couweuw de w-wa wumièwe, de sa position et du wewief de w'image e-en entwée. :3
 
-La lumière crée par cette primitive de filtre peut être combinée avec une image de texture à l'aide de l'opérateur `arithmetic` de la primitive de filtre {{SVGElement("feComposite")}}. De multiples sources lumineuses peuvent être simulées en ajoutant plusieurs éléments à la texture.
+wa wumièwe cwée p-paw cette pwimitive de fiwtwe peut êtwe combinée avec une i-image de textuwe à w'aide de w'opéwateuw `awithmetic` d-de wa pwimitive d-de fiwtwe {{svgewement("fecomposite")}}. ^^;; de muwtipwes souwces wumineuses peuvent êtwe simuwées en ajoutant p-pwusieuws éwéments à wa textuwe. 🥺
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts d-de p-pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("surfaceScale")}}
-- {{SVGAttr("diffuseConstant")}}
-- {{SVGAttr("kernelUnitLength")}}
+- {{svgattw("in")}}
+- {{svgattw("suwfacescawe")}}
+- {{svgattw("diffuseconstant")}}
+- {{svgattw("kewnewunitwength")}}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGFEDiffuseLightingElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfediffusewightingewement")}}. (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre l'effet de l'élément `<feDiffuseLighting>` sur un cercle avec chaque type de lumière disponible. À chaque fois, la lumière vient du coin supérieur gauche.
+w'exempwe suivant montwe w'effet de w'éwément `<fediffusewighting>` suw un cewcwe avec chaque t-type de wumièwe disponibwe. nyaa~~ À c-chaque fois, :3 w-wa wumièwe vient d-du coin supéwieuw gauche. ( ͡o ω ͡o )
 
-```html
-<svg width="440" height="140" xmlns="http://www.w3.org/2000/svg">
-  <!-- Aucune lumière n'est appliquée -->
-  <text text-anchor="middle" x="60" y="22">No Light</text>
-  <circle cx="60" cy="80" r="50" fill="green" />
+```htmw
+<svg width="440" height="140" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- a-aucune wumièwe ny'est appwiquée -->
+  <text t-text-anchow="middwe" x-x="60" y="22">no wight</text>
+  <ciwcwe c-cx="60" cy="80" w="50" f-fiww="gween" />
 
-  <!-- La source lumineuse est un élément fePointLight -->
-  <text text-anchor="middle" x="170" y="22">fePointLight</text>
-  <filter id="lightMe1">
-    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <fePointLight x="150" y="60" z="20" />
-    </feDiffuseLighting>
+  <!-- wa souwce wumineuse e-est un éwément fepointwight -->
+  <text t-text-anchow="middwe" x="170" y="22">fepointwight</text>
+  <fiwtew i-id="wightme1">
+    <fediffusewighting i-in="souwcegwaphic" wesuwt="wight" wighting-cowow="white">
+      <fepointwight x="150" y="60" z="20" />
+    </fediffusewighting>
 
-    <feComposite
-      in="SourceGraphic"
-      in2="light"
-      operator="arithmetic"
-      k1="1"
+    <fecomposite
+      in="souwcegwaphic"
+      in2="wight"
+      opewatow="awithmetic"
+      k-k1="1"
       k2="0"
-      k3="0"
+      k-k3="0"
       k4="0" />
-  </filter>
+  </fiwtew>
 
-  <circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" />
+  <ciwcwe c-cx="170" c-cy="80" w="50" f-fiww="gween" fiwtew="uww(#wightme1)" />
 
-  <!-- La source lumineuse est un élément feDistantLight -->
-  <text text-anchor="middle" x="280" y="22">feDistantLight</text>
-  <filter id="lightMe2">
-    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <feDistantLight azimuth="240" elevation="20" />
-    </feDiffuseLighting>
+  <!-- wa souwce wumineuse est un éwément fedistantwight -->
+  <text t-text-anchow="middwe" x="280" y="22">fedistantwight</text>
+  <fiwtew id="wightme2">
+    <fediffusewighting in="souwcegwaphic" wesuwt="wight" w-wighting-cowow="white">
+      <fedistantwight azimuth="240" e-ewevation="20" />
+    </fediffusewighting>
 
-    <feComposite
-      in="SourceGraphic"
-      in2="light"
-      operator="arithmetic"
-      k1="1"
-      k2="0"
+    <fecomposite
+      i-in="souwcegwaphic"
+      i-in2="wight"
+      opewatow="awithmetic"
+      k-k1="1"
+      k-k2="0"
       k3="0"
-      k4="0" />
-  </filter>
+      k-k4="0" />
+  </fiwtew>
 
-  <circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" />
+  <ciwcwe c-cx="280" cy="80" w="50" fiww="gween" f-fiwtew="uww(#wightme2)" />
 
-  <!-- La source lumineuse est un élément feSpotLight -->
-  <text text-anchor="middle" x="390" y="22">feSpotLight</text>
-  <filter id="lightMe3">
-    <feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white">
-      <feSpotLight
+  <!-- w-wa souwce wumineuse e-est un éwément f-fespotwight -->
+  <text t-text-anchow="middwe" x="390" y="22">fespotwight</text>
+  <fiwtew id="wightme3">
+    <fediffusewighting in="souwcegwaphic" w-wesuwt="wight" wighting-cowow="white">
+      <fespotwight
         x="360"
         y="5"
         z="30"
-        limitingConeAngle="20"
-        pointsAtX="390"
-        pointsAtY="80"
-        pointsAtZ="0" />
-    </feDiffuseLighting>
+        wimitingconeangwe="20"
+        p-pointsatx="390"
+        pointsaty="80"
+        pointsatz="0" />
+    </fediffusewighting>
 
-    <feComposite
-      in="SourceGraphic"
-      in2="light"
-      operator="arithmetic"
-      k1="1"
+    <fecomposite
+      in="souwcegwaphic"
+      i-in2="wight"
+      o-opewatow="awithmetic"
+      k-k1="1"
       k2="0"
       k3="0"
-      k4="0" />
-  </filter>
+      k-k4="0" />
+  </fiwtew>
 
-  <circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" />
+  <ciwcwe cx="390" c-cy="80" w="50" f-fiww="gween" fiwtew="uww(#wightme3)" />
 </svg>
 ```
 
-Résultat attendu:
+wésuwtat attendu:
 
-![Expected rendering for the example](/files/4447/feDiffuseLighting.png)
+![expected wendewing fow the exampwe](/fiwes/4447/fediffusewighting.png)
 
-Rendu en direct:
+wendu en diwect:
 
-{{EmbedLiveSample("Exemple", 470, 170)}}
+{{embedwivesampwe("exempwe", mya 470, (///ˬ///✿) 170)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

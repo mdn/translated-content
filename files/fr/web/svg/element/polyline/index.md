@@ -1,100 +1,100 @@
 ---
-title: <polyline>
-slug: Web/SVG/Element/polyline
+titwe: <powywine>
+swug: web/svg/ewement/powywine
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément SVG **`<polyline>`** est une forme SVG basique qui crée des lignes entre plusieurs points. Un élément `polyline` est généralement utilisé pour créer des tracés ouverts car le dernier point n'est pas nécessairement connecté avec le premier. Lorsqu'on désire réaliser des formes fermées, on privilégiera l'élément {{SVGElement("polygon")}}.
+w-w'éwément s-svg **`<powywine>`** e-est une fowme s-svg basique q-qui cwée des wignes e-entwe pwusieuws p-points. rawr un éwément `powywine` e-est généwawement utiwisé pouw cwéew des twacés ouvewts caw we dewniew p-point ny'est pas nyécessaiwement connecté avec w-we pwemiew. mya wowsqu'on désiwe wéawisew d-des fowmes fewmées, ^^ on pwiviwégiewa w'éwément {{svgewement("powygon")}}. 😳😳😳
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs universels
+### a-attwibuts univewsews
 
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
-- [Attributs principaux](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs relatifs aux évènements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d%27événement_graphique)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [attwibuts d-de twaitement conditionnew](/fw/docs/web/svg/attwibute#attwibuts_de_twaitement_conditionnew)
+- [attwibuts pwincipaux](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts wewatifs aux évènements gwaphiques](/fw/docs/web/svg/attwibute#attwibuts_d%27événement_gwaphique)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("points")}}
+- {{svgattw("points")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGPolylineElement")}}.
+cet éwément impwémente w-w'intewface {{domxwef("svgpowywineewement")}}. mya
 
-## Exemples
+## exempwes
 
-### Utilisation basique
+### u-utiwisation b-basique
 
-#### SVG
+#### s-svg
 
-```html
-<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
-  <polyline fill="none" stroke="black" points="20,100 40,60 70,80 100,20" />
+```htmw
+<svg w-width="120" height="120" xmwns="http://www.w3.owg/2000/svg">
+  <powywine fiww="none" s-stwoke="bwack" points="20,100 40,60 70,80 100,20" />
 </svg>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utilisation_basique", 120, 120)}}
+{{embedwivesampwe("utiwisation_basique", 😳 120, -.- 120)}}
 
-### Escaliers
+### escawiews
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="contain-demo">
+```htmw
+<div cwass="contain-demo">
   <svg width="150" height="200">
-    <desc>Première polyligne orange avec remplissage blanc.</desc>
-    <polyline
+    <desc>pwemièwe powywigne owange avec wempwissage b-bwanc.</desc>
+    <powywine
       points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
-      fill="white"
-      stroke="#D07735"
-      stroke-width="6" />
+      f-fiww="white"
+      s-stwoke="#d07735"
+      s-stwoke-width="6" />
   </svg>
   <svg width="150" height="200">
-    <desc>Seconde polyligne orange avec remplissage jaune.</desc>
-    <polyline
-      points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
-      fill="#F9F38C"
-      stroke="#D07735"
-      stroke-width="6" />
+    <desc>seconde powywigne owange avec w-wempwissage jaune.</desc>
+    <powywine
+      p-points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+      fiww="#f9f38c"
+      s-stwoke="#d07735"
+      s-stwoke-width="6" />
   </svg>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .contain-demo {
-  margin: 25px auto;
-  text-align: center;
+  m-mawgin: 25px auto;
+  text-awign: c-centew;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Escaliers", 400, 500)}}
+{{embedwivesampwe("escawiews", 🥺 400, 500)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{SVGElement("line")}}
-- {{SVGElement("polygon")}}
+- {{svgewement("wine")}}
+- {{svgewement("powygon")}}

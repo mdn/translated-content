@@ -1,127 +1,127 @@
 ---
-title: handler.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
+titwe: handwew.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.ownKeys()`** est une trappe pour {{jsxref("Object.getOwnPropertyNames()")}}.
+w-wa m-méthode **`handwew.ownkeys()`** e-est une twappe p-pouw {{jsxwef("object.getownpwopewtynames()")}}. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.ownkeys()", (///ˬ///✿) "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  _age: 111,
-  [Symbol("secret")]: "I am scared!",
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  _age: 111, 😳
+  [symbow("secwet")]: "i am scawed!", 😳
+  eyecount: 4, σωσ
 };
 
-const handler1 = {
-  ownKeys(target) {
-    return Reflect.ownKeys(target);
+const handwew1 = {
+  o-ownkeys(tawget) {
+    wetuwn wefwect.ownkeys(tawget);
   },
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+c-const pwoxy1 = nyew pwoxy(monstew1, rawr x3 h-handwew1);
 
-for (const key of Object.keys(proxy1)) {
-  console.log(key);
-  // Expected output: "_age"
-  // Expected output: "eyeCount"
+fow (const key of object.keys(pwoxy1)) {
+  consowe.wog(key);
+  // e-expected output: "_age"
+  // expected output: "eyecount"
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  ownKeys: function (cible) {},
+v-vaw p = nyew pwoxy(cibwe, OwO {
+  ownkeys: function (cibwe) {}, /(^•ω•^)
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Le paramètre suivant est passé à la méthode `ownKeys`. `this` est lié au gestionnaire.
+we pawamètwe suivant e-est passé à wa méthode `ownkeys`. 😳😳😳 `this` est wié au gestionnaiwe. ( ͡o ω ͡o )
 
-- `cible`
-  - : L'objet cible.
+- `cibwe`
+  - : w'objet c-cibwe. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La méthode `ownKeys` doit renvoyer un objet énumérable.
+wa m-méthode `ownkeys` d-doit wenvoyew u-un objet énuméwabwe.
 
-## Description
+## d-descwiption
 
-La méthode **`handler.ownKeys()`** est une trappe pour intercepter les opérations de {{jsxref("Object.getOwnPropertyNames()")}}.
+wa méthode **`handwew.ownkeys()`** est une twappe pouw i-intewceptew wes opéwations de {{jsxwef("object.getownpwopewtynames()")}}. >w<
 
-### Interceptions
+### intewceptions
 
-Cette trappe permet d'intercepter les opérations suivantes :
+c-cette twappe pewmet d'intewceptew wes opéwations suivantes :
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.getOwnPropertySymbols()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Reflect.ownKeys()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.getownpwopewtysymbows()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("wefwect.ownkeys()")}}
 
-### Invariants
+### invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+si wes invawiants s-suivants nye sont pas wespectés, w-we pwoxy wenvewwa u-une exception {{jsxwef("typeewwow")}} :
 
-- Le résultat de `ownKeys` doit être un tableau.
-- Le type de chaque élément de ce tableau est soit une {{jsxref("String")}}, soit un {{jsxref("Symbol")}}.
-- Le tableau résultant doit contenir les clés de toutes les propriétés propres non-configurables de l'objet cible.
-- Si l'objet cible n'est pas extensible, la liste obtenue doit contenir toutes les clés pour les propriétés propres et aucune autre valeur.
+- we w-wésuwtat de `ownkeys` doit êtwe un tabweau. rawr
+- we type de chaque éwément d-de c-ce tabweau est soit une {{jsxwef("stwing")}}, 😳 soit u-un {{jsxwef("symbow")}}. >w<
+- we t-tabweau wésuwtant doit conteniw w-wes cwés de toutes wes pwopwiétés p-pwopwes nyon-configuwabwes de w'objet cibwe. (⑅˘꒳˘)
+- s-si w'objet cibwe ny'est pas e-extensibwe, OwO wa wiste obtenue d-doit conteniw toutes w-wes cwés pouw wes pwopwiétés pwopwes et aucune autwe vaweuw. (ꈍᴗꈍ)
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on intercepte l'action de {{jsxref("Object.getOwnPropertyNames()")}}.
+dans w'exempwe suivant, 😳 on intewcepte w-w'action d-de {{jsxwef("object.getownpwopewtynames()")}}. 😳😳😳
 
 ```js
-var p = new Proxy(
+vaw p = n-nyew pwoxy(
   {},
   {
-    ownKeys: function (target) {
-      console.log("appelée");
-      return ["a", "b", "c"];
-    },
-  },
+    o-ownkeys: f-function (tawget) {
+      consowe.wog("appewée");
+      wetuwn ["a", mya "b", "c"];
+    }, mya
+  }, (⑅˘꒳˘)
 );
 
-console.log(Object.getOwnPropertyNames(p)); // "appelée"
-// [ "a", "b", "c"]
+consowe.wog(object.getownpwopewtynames(p)); // "appewée"
+// [ "a", (U ﹏ U) "b", "c"]
 ```
 
-L'exemple suivant ne respecte pas l'ensemble des invariants :
+w-w'exempwe suivant nye wespecte pas w'ensembwe des invawiants :
 
-```js example-bad
-var obj = {};
-Object.defineProperty(obj, "a", {
-  configurable: false,
-  enumerable: true,
-  value: 10,
+```js exampwe-bad
+v-vaw obj = {};
+object.definepwopewty(obj, mya "a", {
+  c-configuwabwe: f-fawse, ʘwʘ
+  e-enumewabwe: twue,
+  vawue: 10, (˘ω˘)
 });
 
-var p = new Proxy(obj, {
-  ownKeys: function (cible) {
-    return [123, 12.5, true, false, undefined, null, {}, []];
-  },
+v-vaw p = nyew p-pwoxy(obj, (U ﹏ U) {
+  o-ownkeys: function (cibwe) {
+    w-wetuwn [123, ^•ﻌ•^ 12.5, twue, fawse, (˘ω˘) undefined, :3 nyuww, {}, []];
+  }, ^^;;
 });
 
-console.log(Object.getOwnPropertyNames(p));
-// TypeError est levée
+c-consowe.wog(object.getownpwopewtynames(p));
+// t-typeewwow e-est wevée
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Reflect.ownKeys()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", 🥺 "handwew")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("wefwect.ownkeys()")}}

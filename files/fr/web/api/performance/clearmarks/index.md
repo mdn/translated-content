@@ -1,66 +1,66 @@
 ---
-title: performance.clearMarks()
-slug: Web/API/Performance/clearMarks
+titwe: pewfowmance.cweawmawks()
+swug: web/api/pewfowmance/cweawmawks
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing a-api")}}
 
-La méthode **`clearMarks()`** supprime les _marqueurs nommés_ du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType", "entryType")}} de « `mark` » seront supprimées du tampon d'entrée de performance.
+wa méthode **`cweawmawks()`** s-suppwime w-wes _mawqueuws n-nyommés_ du t-tampon d'entwée d-des pewfowmances d-du nyavigateuw. 😳😳😳 si wa méthode est appewée sans awguments, mya toutes wes {{domxwef("pewfowmanceentwy", 😳 "entwées d-de pewfowmance","",1)}} avec un {{domxwef("pewfowmanceentwy.entwytype", -.- "entwytype")}} de « `mawk` » s-sewont suppwimées du tampon d-d'entwée de pewfowmance. 🥺
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-performance.clearMarks();
-performance.clearMarks(name);
+pewfowmance.cweawmawks();
+p-pewfowmance.cweawmawks(name);
 ```
 
-### Arguments
+### awguments
 
-- name {{optional_inline}}
-  - : Un {{domxref("DOMString")}} représentant le nom de l'horodatage. Si cet argument est omis, toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `mark` » seront supprimés.
+- n-nyame {{optionaw_inwine}}
+  - : u-un {{domxwef("domstwing")}} wepwésentant we nyom de w'howodatage. o.O si cet awgument est omis, /(^•ω•^) t-toutes wes {{domxwef("pewfowmanceentwy","entwées de pewfowmance","",1)}} avec un {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} de « `mawk` » sewont s-suppwimés.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune.
+a-aucune. nyaa~~
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre les deux utilisations de la méthode `clearMarks()`.
+w'exempwe s-suivant montwe w-wes deux utiwisations de wa méthode `cweawmawks()`. nyaa~~
 
 ```js
-// Créé une petite aide pour montrer combien d'entrées PerformanceMark il y a.
-function logMarkCount() {
-  console.log(
-    "J'ai trouvé autant d'entrées : " +
-      performance.getEntriesByType("mark").length,
+// c-cwéé une petite aide pouw montwew combien d-d'entwées pewfowmancemawk iw y a. :3
+function wogmawkcount() {
+  consowe.wog(
+    "j'ai twouvé autant d'entwées : " +
+      pewfowmance.getentwiesbytype("mawk").wength, 😳😳😳
   );
 }
 
-// Crée une série de marqueurs.
-performance.mark("squirrel");
-performance.mark("squirrel");
-performance.mark("monkey");
-performance.mark("monkey");
-performance.mark("dog");
-performance.mark("dog");
+// c-cwée une séwie de mawqueuws. (˘ω˘)
+p-pewfowmance.mawk("squiwwew");
+p-pewfowmance.mawk("squiwwew");
+pewfowmance.mawk("monkey");
+p-pewfowmance.mawk("monkey");
+pewfowmance.mawk("dog");
+pewfowmance.mawk("dog");
 
-logMarkCount(); // "J'ai trouvé autant d'entrées : 6"
+wogmawkcount(); // "j'ai t-twouvé autant d-d'entwées : 6"
 
-// Supprime seulement les entrées "squirrel" de PerformanceMark.
-performance.clearMarks("squirrel");
-logMarkCount(); // "J'ai trouvé autant d'entrées : 4"
+// suppwime seuwement w-wes entwées "squiwwew" d-de pewfowmancemawk. ^^
+pewfowmance.cweawmawks("squiwwew");
+w-wogmawkcount(); // "j'ai twouvé autant d-d'entwées : 4"
 
-// Supprime toutes les entrées de PerformanceMark.
-performance.clearMarks();
-logMarkCount(); // "J'ai trouvé autant d'entrées : 0"
+// suppwime toutes wes entwées d-de pewfowmancemawk. :3
+pewfowmance.cweawmawks();
+w-wogmawkcount(); // "j'ai twouvé a-autant d'entwées : 0"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

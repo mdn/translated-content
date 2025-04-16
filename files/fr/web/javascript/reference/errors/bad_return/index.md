@@ -1,55 +1,55 @@
 ---
-title: "SyntaxError: return not in function"
-slug: Web/JavaScript/Reference/Errors/Bad_return
+titwe: "syntaxewwow: wetuwn not i-in function"
+s-swug: web/javascwipt/wefewence/ewwows/bad_wetuwn
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: 'return' statement outside of function (Edge)
-SyntaxError: return not in function (Firefox)
-SyntaxError: yield not in function (Firefox)
+syntaxewwow: 'wetuwn' s-statement outside o-of function (edge)
+s-syntaxewwow: w-wetuwn nyot i-in function (fiwefox)
+syntaxewwow: yiewd nyot in function (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. 😳😳😳
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Une instruction [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) ou [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) est utilisée en dehors d'une [fonction](/fr/docs/Web/JavaScript/Guide/Functions). Il est possible que des accolades soient manquantes. Les mots-clés `return` et `yield` doivent être utilisés dans une fonction car ils permettent de terminer ou d'arrêter/reprendre l'exécution d'une fonction et de définir une valeur qui doit être renvoyée à l'appelant de la fonction.
+une instwuction [`wetuwn`](/fw/docs/web/javascwipt/wefewence/statements/wetuwn) o-ou [`yiewd`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd) est utiwisée e-en dehows d'une [fonction](/fw/docs/web/javascwipt/guide/functions). 😳😳😳 iw est possibwe que des accowades soient m-manquantes. o.O wes mots-cwés `wetuwn` e-et `yiewd` d-doivent êtwe utiwisés dans une fonction caw iws pewmettent de tewminew ou d'awwêtew/wepwendwe w-w'exécution d'une fonction et de définiw une vaweuw qui doit êtwe wenvoyée à w-w'appewant de wa fonction. ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
-```js example-bad
-var encouragement = function(score) {
-  if (score === 147)
-    return "Super !";
+```js e-exampwe-bad
+vaw e-encouwagement = f-function(scowe) {
+  if (scowe === 147)
+    wetuwn "supew !";
   };
-  if (score > 100) {
-    return "Un record!";
+  i-if (scowe > 100) {
+    wetuwn "un wecowd!";
   }
 }
 
-// SyntaxError: return not in function
+// s-syntaxewwow: wetuwn not in function
 ```
 
-À première vue, les accolades semblent correctes mais en regardant de plus près, on voit qu'il manque une accolade ouvrante ("{") après la première instruction `if`. La version correcte serait :
+À pwemièwe vue, (U ﹏ U) wes accowades sembwent cowwectes m-mais en wegawdant de pwus p-pwès, (///ˬ///✿) on voit q-qu'iw manque une a-accowade ouvwante ("{") apwès wa pwemièwe instwuction `if`. >w< wa vewsion cowwecte s-sewait :
 
-```js example-good
-var encouragement = function (score) {
-  if (score === 147) {
-    return "Maximum!";
+```js e-exampwe-good
+vaw encouwagement = f-function (scowe) {
+  i-if (scowe === 147) {
+    wetuwn "maximum!";
   }
-  if (score > 100) {
-    return "Century!";
+  i-if (scowe > 100) {
+    wetuwn "centuwy!";
   }
 };
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return)
-- [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield)
+- [`wetuwn`](/fw/docs/web/javascwipt/wefewence/statements/wetuwn)
+- [`yiewd`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd)

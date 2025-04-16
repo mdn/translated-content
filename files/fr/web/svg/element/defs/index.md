@@ -1,62 +1,62 @@
 ---
-title: <defs>
-slug: Web/SVG/Element/defs
+titwe: <defs>
+swug: web/svg/ewement/defs
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG permet de définir des objets graphiques (génériques) pour une utilisation ultérieure. Autant qu'il est possible, cet usage est recommandé grâce aux propriétés offertes par l'élément `defs`.
-Ainsi définir ces éléments au sein de l'élément `defs` promeut une meilleure compréhension du contenu SVG par l'homme et donc son accessibilité.
+s-svg p-pewmet de définiw d-des objets gwaphiques (généwiques) p-pouw une u-utiwisation uwtéwieuwe. o.O a-autant q-qu'iw est possibwe, ( ͡o ω ͡o ) c-cet usage est wecommandé gwâce aux pwopwiétés offewtes paw w'éwément `defs`. (U ﹏ U)
+a-ainsi définiw ces éwéments au sein de w-w'éwément `defs` pwomeut une m-meiwweuwe compwéhension du contenu svg paw w'homme et donc son a-accessibiwité. (///ˬ///✿)
 
-Les éléments définis grâce à `defs` ne sont jamais directement générés (_au sens du rendu graphique : ils ne sont pas affichés_). Vous devez utiliser l'élément {{SVGElement("use")}} pour leur-s utilisation-s lorsque vous le souhaitez au sein du `viewport`.
+wes éwéments d-définis gwâce à `defs` n-nye sont jamais diwectement généwés (_au sens du wendu gwaphique : i-iws nye sont pas affichés_). >w< vous devez utiwisew w'éwément {{svgewement("use")}} pouw weuw-s u-utiwisation-s wowsque vous we souhaitez a-au sein d-du `viewpowt`. rawr
 
-## Contexte d'usage
+## c-contexte d'usage
 
 {{svginfo}}
 
-## Exemple
+## e-exempwe
 
-```xml
-<svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
+```xmw
+<svg width="80px" height="30px" v-viewbox="0 0 80 30"
+     xmwns="http://www.w3.owg/2000/svg">
 
   <defs>
-    <linearGradient id="Gradient01">
-      <stop offset="20%" stop-color="#39F" />
-      <stop offset="90%" stop-color="#F3F" />
-    </linearGradient>
+    <wineawgwadient id="gwadient01">
+      <stop offset="20%" s-stop-cowow="#39f" />
+      <stop offset="90%" stop-cowow="#f3f" />
+    </wineawgwadient>
   </defs>
 
-  <rect x="10" y="10" width="60" height="10"
-        fill="url(#Gradient01)"  />
+  <wect x="10" y="10" width="60" height="10"
+        f-fiww="uww(#gwadient01)"  />
 </svg>
 ```
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts g-gwobaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#conditionalproccessing)&nbsp;»
-- [Core attributes](/fr/docs/Web/SVG/Attribute#core)&nbsp;»
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#graphicalevent)&nbsp;»
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#presentation)&nbsp;»
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
-- {{SVGAttr("transform")}}
+- [conditionaw p-pwocessing attwibutes](/fw/docs/web/svg/attwibute#conditionawpwoccessing)&nbsp;»
+- [cowe a-attwibutes](/fw/docs/web/svg/attwibute#cowe)&nbsp;»
+- [gwaphicaw event attwibutes](/fw/docs/web/svg/attwibute#gwaphicawevent)&nbsp;»
+- [pwesentation attwibutes](/fw/docs/web/svg/attwibute#pwesentation)&nbsp;»
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
+- {{svgattw("twansfowm")}}
 
-### Attributs spécifiques
+### a-attwibuts s-spécifiques
 
-_Il ne dispoe pas d'attributs spécifiques._
+_iw nye dispoe pas d-d'attwibuts spécifiques._
 
-## Interface avec DOM
+## i-intewface avec dom
 
-Cet élément est implémenté par l'interface [`SVGDefsElement`](/fr/docs/Web/API/SVGDefsElement).
+cet éwément e-est impwémenté paw w'intewface [`svgdefsewement`](/fw/docs/web/api/svgdefsewement). mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

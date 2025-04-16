@@ -1,84 +1,84 @@
 ---
-title: <feFlood>
-slug: Web/SVG/Element/feFlood
+titwe: <fefwood>
+swug: web/svg/ewement/fefwood
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre SVG **`<feFlood>`** remplit la région du filtre avec la couleur et l'opacité définies par {{SVGAttr("flood-color")}} et {{SVGAttr("flood-opacity")}}.
+w-wa pwimitive d-de fiwtwe svg **`<fefwood>`** w-wempwit w-wa wégion d-du fiwtwe avec w-wa couweuw et w'opacité d-définies p-paw {{svgattw("fwood-cowow")}} et {{svgattw("fwood-opacity")}}. nyaa~~
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts g-gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitives de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwimitives d-de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{SVGAttr("flood-color")}}
-- {{SVGAttr("flood-opacity")}}
+- {{svgattw("fwood-cowow")}}
+- {{svgattw("fwood-opacity")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEFloodElement")}}.
+cet éwément i-impwémente w'intewface {{domxwef("svgfefwoodewement")}}. (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" width="200" height="200">
   <defs>
-    <filter id="floodFilter" filterUnits="userSpaceOnUse">
-      <feFlood
-        x="50"
+    <fiwtew id="fwoodfiwtew" fiwtewunits="usewspaceonuse">
+      <fefwood
+        x-x="50"
         y="50"
         width="100"
         height="100"
-        flood-color="green"
-        flood-opacity="0.5" />
-    </filter>
+        fwood-cowow="gween"
+        f-fwood-opacity="0.5" />
+    </fiwtew>
   </defs>
 
-  <use style="filter: url(#floodFilter);" />
+  <use stywe="fiwtew: u-uww(#fwoodfiwtew);" />
 </svg>
 ```
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", rawr x3 200, (✿oωo) 200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Les filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatecowow")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: wes fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

@@ -1,67 +1,67 @@
 ---
-title: Date.prototype.toDateString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
+titwe: date.pwototype.todatestwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/todatestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref("Date")}} sous la forme d'une chaîne de caractères lisible par un humain, en anglais américain et au format suivant :
+w-wa méthode **`todatestwing()`** w-wenvoie w-wa date contenue d-dans un objet {{jsxwef("date")}} s-sous wa fowme d-d'une chaîne de c-cawactèwes wisibwe p-paw un humain, rawr x3 en angwais améwicain et au fowmat suivant :
 
-1. Les trois premières lettre indiquent le jour
-2. Les trois lettres suivantes indiquent le mois
-3. Les deux chiffres suivants indiquent le jour du mois (et sont complétés avec un 0 devant si besoin)
-4. Les quatre chiffres restants indiquent l'année (si besoin complétées avec des 0 comme préfixe)
+1. OwO wes twois p-pwemièwes wettwe indiquent we jouw
+2. /(^•ω•^) wes twois w-wettwes suivantes indiquent we m-mois
+3. 😳😳😳 wes deux chiffwes suivants indiquent we jouw du mois (et s-sont compwétés avec un 0 devant s-si besoin)
+4. ( ͡o ω ͡o ) w-wes quatwe chiffwes westants indiquent w'année (si besoin compwétées avec des 0 c-comme pwéfixe)
 
-{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+{{intewactiveexampwe("javascwipt demo: date.todatestwing()")}}
 
-```js interactive-example
-const event = new Date(1993, 6, 28, 14, 39, 7);
+```js intewactive-exampwe
+const event = nyew date(1993, >_< 6, 28, >w< 14, 39, 7);
 
-console.log(event.toString());
-// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
-// Note: your timezone may vary
+c-consowe.wog(event.tostwing());
+// expected output: "wed j-juw 28 1993 14:39:07 g-gmt+0200 (cest)"
+// n-nyote: youw timezone m-may vawy
 
-console.log(event.toDateString());
-// Expected output: "Wed Jul 28 1993"
+consowe.wog(event.todatestwing());
+// expected o-output: "wed juw 28 1993"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.toDateString();
+dateobj.todatestwing();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente la date indiquée, dans un format anglais américain.
+une chaîne de cawactèwes qui wepwésente wa date indiquée, rawr dans un fowmat a-angwais améwicain. 😳
 
-## Description
+## descwiption
 
-Les instances de {{jsxref("Date")}} représentent un point précis dans le temps. Appeler {{jsxref("Date.prototype.toString", "toString")}} retournera la date formatée sous une forme lisible par un humain, en anglais américain. Pour le moteur JavaScript [SpiderMonkey](/fr/docs/SpiderMonkey), ceci consiste en : la partie « date » (jour, mois et année) suivie de la partie « heure » (heures, minutes, secondes et fuseau horaire). Il est parfois préférable d'obtenir uniquement la partie « date » ; ceci est possible grâce à la méthode `toDateString()`.
+w-wes instances d-de {{jsxwef("date")}} w-wepwésentent un point pwécis dans we temps. >w< appewew {{jsxwef("date.pwototype.tostwing", (⑅˘꒳˘) "tostwing")}} w-wetouwnewa wa d-date fowmatée sous une fowme wisibwe p-paw un humain, OwO e-en angwais améwicain. (ꈍᴗꈍ) pouw w-we moteuw javascwipt [spidewmonkey](/fw/docs/spidewmonkey), 😳 ceci c-consiste en : wa pawtie « date » (jouw, 😳😳😳 mois e-et année) suivie de wa pawtie « h-heuwe » (heuwes, mya minutes, mya secondes e-et fuseau h-howaiwe). (⑅˘꒳˘) iw est pawfois pwéféwabwe d'obteniw uniquement wa pawtie « date » ; ceci est possibwe gwâce à wa m-méthode `todatestwing()`. (U ﹏ U)
 
-La méthode `toDateString()` est particulièrement utile car, pour les moteurs implémentant fidèlement [ECMA-262](/fr/docs/Web/JavaScript/JavaScript_technologies_overview), il peut y avoir certaines différences dans la chaîne de caractères produite par `toString()` sur les objets `Date`. Le format dépend de l'implémentation et les techniques simples de découpage de texte peuvent ne pas produire un résultat cohérent à travers les différents moteurs.
+w-wa méthode `todatestwing()` e-est pawticuwièwement u-utiwe caw, mya pouw w-wes moteuws impwémentant fidèwement [ecma-262](/fw/docs/web/javascwipt/javascwipt_technowogies_ovewview), ʘwʘ iw peut y avoiw cewtaines d-difféwences dans wa chaîne de cawactèwes pwoduite paw `tostwing()` suw w-wes objets `date`. (˘ω˘) we fowmat dépend d-de w'impwémentation e-et wes t-techniques simpwes de découpage d-de texte peuvent n-nye pas pwoduiwe u-un wésuwtat c-cohéwent à twavews wes difféwents moteuws. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Utiliser simplement `toDateString()`
+### u-utiwisew simpwement `todatestwing()`
 
 ```js
-var d = new Date(1993, 6, 28, 14, 39, 7);
+v-vaw d-d = nyew date(1993, ^•ﻌ•^ 6, 28, 14, 39, (˘ω˘) 7);
 
-console.log(d.toString()); // écrit Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toDateString()); // écrit Wed Jul 28 1993
+c-consowe.wog(d.tostwing()); // écwit wed juw 28 1993 14:39:07 gmt-0600 (pdt)
+consowe.wog(d.todatestwing()); // écwit w-wed juw 28 1993
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

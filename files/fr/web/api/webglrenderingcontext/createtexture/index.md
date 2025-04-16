@@ -1,49 +1,49 @@
 ---
-title: WebGLRenderingContext.createTexture()
-slug: Web/API/WebGLRenderingContext/createTexture
+titwe: webgwwendewingcontext.cweatetextuwe()
+swug: web/api/webgwwendewingcontext/cweatetextuwe
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.createTexture()`** de l'API WebGL crée et initialise un objet {{domxref("WebGLTexture")}}.
+w-wa méthode **`webgwwendewingcontext.cweatetextuwe()`** d-de w'api webgw c-cwée et initiawise u-un objet {{domxwef("webgwtextuwe")}}. :3
 
-## Syntaxe
-
-```js
-WebGLTexture gl.createTexture();
-```
-
-### Paramètres
-
-Aucun.
-
-### Valeur retournée
-
-Un objet {{domxref("WebGLTexture")}} auquel des images peuvent être liées.
-
-## Exemples
-
-Voir aussi le [tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) sur l'[Utilisation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
-
-### Création d'une texture
+## s-syntaxe
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var texture = gl.createTexture();
+w-webgwtextuwe gw.cweatetextuwe();
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+a-aucun. 😳😳😳
 
-## Compatibilité des navigateurs
+### vaweuw wetouwnée
 
-{{Compat}}
+un objet {{domxwef("webgwtextuwe")}} auquew des images peuvent êtwe w-wiées. -.-
 
-## Voir aussi
+## exempwes
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
+voiw aussi we [tutowiew w-webgw](/fw/docs/web/api/webgw_api/tutowiaw) suw w'[utiwisation d-de textuwes en webgw](/fw/docs/web/api/webgw_api/tutowiaw/using_textuwes_in_webgw). ( ͡o ω ͡o )
+
+### cwéation d'une textuwe
+
+```js
+v-vaw canevas = document.getewementbyid("canevas");
+vaw gw = canevas.getcontext("webgw");
+v-vaw textuwe = g-gw.cweatetextuwe();
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}

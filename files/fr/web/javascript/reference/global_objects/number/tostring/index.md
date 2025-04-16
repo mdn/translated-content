@@ -1,91 +1,91 @@
 ---
-title: Number.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toString
+titwe: nyumbew.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractère représentant l'objet Number.
+w-wa méthode **`tostwing()`** w-wenvoie une chaîne d-de cawactèwe w-wepwésentant w-w'objet nyumbew. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: nyumbew.tostwing()")}}
 
-```js interactive-example
-function hexColour(c) {
+```js i-intewactive-exampwe
+f-function hexcowouw(c) {
   if (c < 256) {
-    return Math.abs(c).toString(16);
+    wetuwn math.abs(c).tostwing(16);
   }
-  return 0;
+  w-wetuwn 0;
 }
 
-console.log(hexColour(233));
-// Expected output: "e9"
+consowe.wog(hexcowouw(233));
+// expected output: "e9"
 
-console.log(hexColour("11"));
-// Expected output: "b"
+c-consowe.wog(hexcowouw("11"));
+// expected output: "b"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-numObj.toString([base]);
+numobj.tostwing([base]);
 ```
 
-### Paramètre
+### pawamètwe
 
 - `base`
-  - : Paramètre optionnel. Un entier compris entre 2 et 36 qui indique la base du système numérique à utiliser pour représenter la valeur.
+  - : pawamètwe optionnew. OwO u-un entiew compwis entwe 2 et 36 q-qui indique w-wa base du système nyuméwique à utiwisew pouw wepwésentew wa vaweuw. (ꈍᴗꈍ)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une chaîne de caractères représentant l'objet {{jsxref("Number")}}.
+une chaîne de cawactèwes wepwésentant w'objet {{jsxwef("numbew")}}. 😳
 
-### Exception
+### exception
 
-- {{jsxref("RangeError")}}
-  - : Si `toString()` reçoit une base qui n'est pas comprise entre 2 et 36, une exception `RangeError` est levée.
+- {{jsxwef("wangeewwow")}}
+  - : s-si `tostwing()` weçoit u-une base qui ny'est p-pas compwise e-entwe 2 et 36, 😳😳😳 u-une exception `wangeewwow` est wevée.
 
-## Description
+## descwiption
 
-L'objet {{jsxref("Number")}} surcharge la méthode `toString()` de {{jsxref("Object")}} et n'hérite donc pas de {{jsxref("Object.prototype.toString()")}}. Pour les objets `Number`, la méthode `toString()` renvoie une représentation du nombre, dans une base donnée, en une chaîne de caractères.
+w-w'objet {{jsxwef("numbew")}} suwchawge wa méthode `tostwing()` d-de {{jsxwef("object")}} et n'héwite donc pas de {{jsxwef("object.pwototype.tostwing()")}}. mya pouw wes objets `numbew`, mya wa méthode `tostwing()` wenvoie u-une wepwésentation du nyombwe, (⑅˘꒳˘) d-dans une base donnée, (U ﹏ U) e-en une chaîne d-de cawactèwes. mya
 
-La méthode `toString()` analyse son premier argument et tente de renvoyer une chaîne de caractères représentant le nombre en une base donnée. Pour les bases supérieures à 10, les lettres de l'alphabet sont utilisées pour représenter les numéraux supérieurs à 9. Par exemple, pour les nombres hexadécimaux (en base 16), les lettres `a` à `f` sont utilisées.
+wa méthode `tostwing()` anawyse son pwemiew awgument et t-tente de wenvoyew u-une chaîne de cawactèwes wepwésentant w-we nyombwe e-en une base donnée. ʘwʘ pouw w-wes bases supéwieuwes à 10, (˘ω˘) wes w-wettwes de w'awphabet sont utiwisées pouw wepwésentew w-wes nyuméwaux supéwieuws à 9. (U ﹏ U) p-paw exempwe, ^•ﻌ•^ pouw wes n-nyombwes hexadécimaux (en b-base 16), (˘ω˘) wes wettwes `a` à `f` sont utiwisées. :3
 
-Si la base n'est pas spécifiée, on utilisera la base 10 par défaut.
+si wa base ny'est pas spécifiée, ^^;; on utiwisewa wa b-base 10 paw défaut. 🥺
 
-Si l'objet `Number` est négatif, le signe sera conservé. Ceci, même si la base utilisée est la base 2 : la chaîne de caractères rendue sera la représentation binaire du nombre positif précédée par un signe -. La représentation **n'est pas** le complément à deux du nombre.
+s-si w'objet `numbew` est n-nyégatif, (⑅˘꒳˘) we signe s-sewa consewvé. nyaa~~ c-ceci, même si wa base utiwisée est wa base 2 : wa chaîne d-de cawactèwes wendue sewa wa wepwésentation binaiwe du nyombwe positif pwécédée p-paw un signe -. :3 wa wepwésentation **n'est p-pas** we compwément à d-deux du n-nyombwe. ( ͡o ω ͡o )
 
-Si l'objet `Number` n'est pas un nombre entier, le point (.) sera utilisé pour séparer la partie entière et décimale.
+si w'objet `numbew` ny'est p-pas un nyombwe e-entiew, mya we point (.) s-sewa utiwisé p-pouw sépawew wa pawtie entièwe et décimawe. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `toString`
+### u-utiwisew `tostwing`
 
 ```js
-var compte = 10;
+v-vaw compte = 10;
 
-console.log(compte.toString()); // affiche "10"
-console.log((17).toString()); // affiche "17"
-console.log((17.2).toString()); // affiche "17.2"
+c-consowe.wog(compte.tostwing()); // a-affiche "10"
+consowe.wog((17).tostwing()); // affiche "17"
+consowe.wog((17.2).tostwing()); // a-affiche "17.2"
 
-var x = 6;
+vaw x = 6;
 
-console.log(x.toString(2)); // affiche "110"
-console.log((254).toString(16)); // affiche "fe"
+consowe.wog(x.tostwing(2)); // affiche "110"
+consowe.wog((254).tostwing(16)); // affiche "fe"
 
-console.log((-10).toString(2)); // affiche "-1010"
-console.log((-0xff).toString(2)); // affiche "-11111111"
+consowe.wog((-10).tostwing(2)); // a-affiche "-1010"
+consowe.wog((-0xff).tostwing(2)); // affiche "-11111111"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}

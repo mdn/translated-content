@@ -1,26 +1,26 @@
 ---
-title: Les API Web
-slug: Web/API
-l10n:
-  sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
+titwe: wes api web
+swug: web/api
+w-w10n:
+  souwcecommit: c-c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-Quand vous codez pour le Web, de nombreuses API existent. La liste ci-dessous énumère toutes les API et interfaces (c'est-à-dire les types d'objet) que vous pouvez appeler quand vous développez votre application web ou votre site.
+q-quand vous c-codez pouw we w-web, de nyombweuses a-api existent. (U ﹏ U) w-wa wiste ci-dessous énumèwe t-toutes wes api et intewfaces (c'est-à-diwe wes types d'objet) que vous pouvez a-appewew quand vous dévewoppez votwe appwication w-web ou votwe site. >_<
 
-Les API Web sont généralement utilisées avec JavaScript, même si ça n'est pas obligatoire.
+wes api web s-sont généwawement utiwisées avec javascwipt, rawr x3 même si ça ny'est p-pas obwigatoiwe. mya
 
-## Spécifications
+## spécifications
 
-Voici une liste de toutes les API disponibles.
+v-voici u-une wiste de toutes wes api disponibwes. nyaa~~
 
-{{ListGroups}}
+{{wistgwoups}}
 
-## Interfaces
+## intewfaces
 
-Voici une liste de toutes les interfaces (c'est à dire, les types d'objets) disponibles.
+voici une wiste de toutes w-wes intewfaces (c'est à diwe, (⑅˘꒳˘) wes types d'objets) disponibwes. rawr x3
 
-{{APIListAlpha}}
+{{apiwistawpha}}
 
-## Voir aussi
+## voiw aussi
 
-- [La référence des évènements des API Web](/fr/docs/Web/Events)
+- [wa w-wéféwence des évènements d-des api w-web](/fw/docs/web/events)

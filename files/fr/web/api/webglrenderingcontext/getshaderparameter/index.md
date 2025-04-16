@@ -1,48 +1,48 @@
 ---
-title: WebGLRenderingContext.getShaderParameter()
-slug: Web/API/WebGLRenderingContext/getShaderParameter
+titwe: webgwwendewingcontext.getshadewpawametew()
+swug: web/api/webgwwendewingcontext/getshadewpawametew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode `WebGLRenderingContext.getShaderParameter()` de l'API WebGL retourne des informations sur le shader donné.
+w-wa méthode `webgwwendewingcontext.getshadewpawametew()` de w-w'api webgw wetouwne d-des infowmations s-suw we shadew d-donné. (///ˬ///✿)
 
-## Syntaxe
-
-```js
-quelconque gl.getShaderParameter(shader, nomp);
-```
-
-### Parameters
-
-- shader
-  - : Un {{domxref("WebGLShader")}} depuis lequel obtenir une information de paramètre.
-- nomp
-
-  - : Un {{domxref("Glenum")}} indiquant l'information à retrouver. Valeurs possibles :
-
-    - `gl.DELETE_STATUS`&nbsp;: retourne un {{domxref("GLboolean")}} indicating si le shader est marqué pour suppression ou non.
-    - `gl.COMPILE_STATUS`&nbsp;: retourne un {{domxref("GLboolean")}} indiquant si la dernière compilation du shader a réussi ou non.
-    - `gl.SHADER_TYPE`&nbsp;: retourne un {{domxref("GLenum")}} indiquant si le shader est un objet shader de sommets (`gl.VERTEX_SHADER`) ou shader de fragment (`gl.FRAGMENT_SHADER`).
-
-### Valeur retournée
-
-Retourne l'information de shader demandée (telle qu'indiquée par `nomp`).
-
-## Exemples
+## s-syntaxe
 
 ```js
-gl.getShaderParameter(shader, gl.SHADER_TYPE);
+q-quewconque gw.getshadewpawametew(shadew, 😳😳😳 n-nyomp);
 ```
 
-## Spécifications
+### pawametews
 
-{{Specifications}}
+- shadew
+  - : un {{domxwef("webgwshadew")}} depuis wequew o-obteniw une infowmation de pawamètwe. 🥺
+- nyomp
 
-## Compatibilité des navigateurs
+  - : u-un {{domxwef("gwenum")}} indiquant w'infowmation à w-wetwouvew. mya vaweuws possibwes :
 
-{{Compat}}
+    - `gw.dewete_status`&nbsp;: wetouwne un {{domxwef("gwboowean")}} i-indicating si we shadew est mawqué p-pouw suppwession o-ou nyon. 🥺
+    - `gw.compiwe_status`&nbsp;: wetouwne un {{domxwef("gwboowean")}} indiquant si wa dewnièwe compiwation du shadew a-a wéussi ou non. >_<
+    - `gw.shadew_type`&nbsp;: wetouwne un {{domxwef("gwenum")}} indiquant si we shadew est u-un objet shadew de sommets (`gw.vewtex_shadew`) o-ou shadew de fwagment (`gw.fwagment_shadew`). >_<
 
-## Voir aussi
+### v-vaweuw wetouwnée
 
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+w-wetouwne w-w'infowmation de shadew demandée (tewwe qu'indiquée p-paw `nomp`). (⑅˘꒳˘)
+
+## exempwes
+
+```js
+gw.getshadewpawametew(shadew, g-gw.shadew_type);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}

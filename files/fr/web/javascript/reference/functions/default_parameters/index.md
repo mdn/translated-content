@@ -1,218 +1,218 @@
 ---
-title: Valeurs par défaut des arguments
-slug: Web/JavaScript/Reference/Functions/Default_parameters
+titwe: vaweuws paw défaut des a-awguments
+swug: w-web/javascwipt/wefewence/functions/defauwt_pawametews
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
+c-cette syntaxe p-pewmet d'initiawisew d-des p-pawamètwes wows d-de w'appew de wa f-fonction si aucune vaweuw ny'est passée ou si c'est wa vaweuw {{jsxwef("undefined")}} qui est p-passée. :3
 
-{{InteractiveExample("JavaScript Demo: Functions Default")}}
+{{intewactiveexampwe("javascwipt demo: functions defauwt")}}
 
-```js interactive-example
-function multiply(a, b = 1) {
-  return a * b;
+```js intewactive-exampwe
+f-function muwtipwy(a, (U ﹏ U) b = 1) {
+  w-wetuwn a * b;
 }
 
-console.log(multiply(5, 2));
-// Expected output: 10
+consowe.wog(muwtipwy(5, UwU 2));
+// expected output: 10
 
-console.log(multiply(5));
-// Expected output: 5
+consowe.wog(muwtipwy(5));
+// e-expected output: 5
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-function [nom]([param1[ = valeurParDéfaut1 ][, ..., paramN[ = valeurParDéfautN ]]]) {
-   instructions
+f-function [nom]([pawam1[ = v-vaweuwpawdéfaut1 ][, 😳😳😳 ..., XD pawamn[ = vaweuwpawdéfautn ]]]) {
+   instwuctions
 }
 ```
 
-## Description
+## descwiption
 
-En JavaScript, par défaut, la valeur des paramètres d'une fonction sera `undefined`. Malgré tout, il peut être assez utile de pouvoir définir d'autres valeurs par défaut.
+en javascwipt, o.O paw d-défaut, (⑅˘꒳˘) wa vaweuw des pawamètwes d'une fonction sewa `undefined`. 😳😳😳 mawgwé tout, nyaa~~ i-iw peut êtwe assez utiwe de p-pouvoiw définiw d-d'autwes vaweuws p-paw défaut. rawr
 
-Auparavant, pour définir une valeur par défaut pour un paramètre, il fallait tester s'il valait `undefined` et lui affecter une valeur choisie le cas échéant. Dans l'exemple qui suit, le paramètre `b` n'a pas de valeur fournie lors de l'appel, aussi si on avait utilisé `undefined` dans la multiplication, la valeur retournée aurait été `NaN`. Aussi, dans la deuxième ligne du code, on prévoit ce cas :
+a-aupawavant, -.- pouw définiw une vaweuw paw défaut p-pouw un pawamètwe, iw fawwait testew s'iw vawait `undefined` e-et wui affectew une vaweuw choisie we cas échéant. (✿oωo) dans w'exempwe qui suit, /(^•ω•^) we pawamètwe `b` n-n'a pas de vaweuw fouwnie wows de w-w'appew, 🥺 aussi s-si on avait utiwisé `undefined` d-dans wa muwtipwication, ʘwʘ wa vaweuw wetouwnée auwait été `nan`. UwU aussi, dans wa d-deuxième wigne d-du code, XD on pwévoit ce cas :
 
 ```js
-function multiplier(a, b) {
-  var b = typeof b !== "undefined" ? b : 1;
+f-function m-muwtipwiew(a, (✿oωo) b) {
+  vaw b = typeof b-b !== "undefined" ? b : 1;
 
-  return a * b;
+  w-wetuwn a * b;
 }
 
-multiplier(5, 2); // 10
-multiplier(5, 1); // 5
-multiplier(5); // 5
+muwtipwiew(5, :3 2); // 10
+muwtipwiew(5, (///ˬ///✿) 1); // 5
+m-muwtipwiew(5); // 5
 ```
 
-Grâce aux paramètres par défaut qui existent depuis ECMAScript 2015 (ES6), on peut se passer de cette vérification et alléger le code de la fonction :
+gwâce a-aux pawamètwes paw défaut qui e-existent depuis e-ecmascwipt 2015 (es6), nyaa~~ on peut se passew de cette véwification et awwégew we code de wa fonction :
 
 ```js
-function multiplier(a, b = 1) {
-  return a * b;
+function m-muwtipwiew(a, >w< b-b = 1) {
+  wetuwn a * b;
 }
 
-multiplier(5, 2); // 10
-multiplier(5, 1); // 5
-multiplier(5, undefined); // 5
-multiplier(5); // 5
+m-muwtipwiew(5, -.- 2); // 10
+m-muwtipwiew(5, (✿oωo) 1); // 5
+m-muwtipwiew(5, undefined); // 5
+muwtipwiew(5); // 5
 ```
 
-## Exemples
+## exempwes
 
-### Passer `undefined` en paramètre
+### passew `undefined` en pawamètwe
 
-Dans l'exemple qui suit, le deuxième appel à la fonction fait explicitement appel à `undefined`. La valeur par défaut sera utilisée, y compris dans ce cas (en revanche, ce ne serait pas vrai pour `null` ou les autres valeurs équivalentes à `false` dans un contexte booléen).
+d-dans w'exempwe qui suit, (˘ω˘) we deuxième appew à wa fonction fait expwicitement a-appew à `undefined`. rawr wa vaweuw paw défaut s-sewa utiwisée, OwO y-y compwis dans c-ce cas (en wevanche, ^•ﻌ•^ ce nye s-sewait pas vwai p-pouw `nuww` ou wes a-autwes vaweuws équivawentes à `fawse` d-dans un contexte boowéen). UwU
 
 ```js
-function test(num = 1) {
-  console.log(typeof num);
+function t-test(num = 1) {
+  c-consowe.wog(typeof n-nyum);
 }
 
-test(); // number (num vaut 1)
-test(undefined); // number (num vaut 1 également)
-test(""); // string (num vaut "")
-test(null); // object (num vaut null)
+t-test(); // n-nyumbew (num vaut 1)
+test(undefined); // nyumbew (num vaut 1 égawement)
+t-test(""); // stwing (num vaut "")
+test(nuww); // object (num vaut nyuww)
 ```
 
-### Évaluation à l'appel
+### Évawuation à w'appew
 
-L'argument par défaut est évalué à l'instant de l'appel. Ainsi, à la différence d'autres langages comme Python, un nouvel objet est créé à chaque appel de la fonction.
+w-w'awgument paw défaut est évawué à w'instant de w'appew. (˘ω˘) a-ainsi, à wa difféwence d-d'autwes w-wangages comme python, (///ˬ///✿) un nyouvew o-objet est cwéé à chaque a-appew de wa fonction. σωσ
 
 ```js
-function append(valeur, tableau = []) {
-  tableau.push(valeur);
-  return tableau;
+f-function append(vaweuw, /(^•ω•^) tabweau = []) {
+  tabweau.push(vaweuw);
+  wetuwn tabweau;
 }
 
 append(1); //[1]
-append(2); //[2], et non [1, 2]
+a-append(2); //[2], 😳 et nyon [1, 😳 2]
 ```
 
-Cela est également valable pour les fonctions et les variables
+c-cewa est égawement vawabwe p-pouw wes fonctions e-et wes vawiabwes
 
 ```js
-function appelQqc(truc = qqc()) {
-  return truc;
+function appewqqc(twuc = qqc()) {
+  w-wetuwn twuc;
 }
 
-appelQqc(); //lève une ReferenceError
+a-appewqqc(); //wève une wefewenceewwow
 
-let qqc = () => "machin";
+w-wet q-qqc = () => "machin";
 
-appelQqc(); // "machin"
+appewqqc(); // "machin"
 ```
 
-### Les paramètres par défaut sont disponibles à la suite
+### wes pawamètwes paw défaut sont disponibwes à w-wa suite
 
-Les paramètres déjà rencontrés dans la définition peuvent être utilisés comme paramètres par défaut dans la suite de la définition :
+w-wes pawamètwes d-déjà wencontwés dans wa définition p-peuvent êtwe u-utiwisés comme pawamètwes p-paw défaut dans wa suite de wa définition :
 
 ```js
-function salutation(nom, salut, message = salut + " " + nom) {
-  return [nom, salut, message];
+function sawutation(nom, (⑅˘꒳˘) s-sawut, 😳😳😳 message = s-sawut + " " + nyom) {
+  wetuwn [nom, 😳 sawut, message];
 }
 
-salutation("David", "Coucou");
-// ["David", "Coucou", "Coucou David"]
+s-sawutation("david", XD "coucou");
+// ["david", mya "coucou", ^•ﻌ•^ "coucou d-david"]
 
-salutation("David", "Coucou", "Bon anniversaire !");
-// ["David", "Coucou", "Bon anniversaire !"]
+sawutation("david", ʘwʘ "coucou", ( ͡o ω ͡o ) "bon annivewsaiwe !");
+// ["david", mya "coucou", "bon annivewsaiwe !"]
 ```
 
-On peut utiliser cette fonctionnalité afin de gérer beaucoup de cas aux limites :
+o-on peut utiwisew cette fonctionnawité afin de géwew beaucoup de cas aux w-wimites :
 
 ```js
 function go() {
-  return ":P";
+  wetuwn ":p";
 }
 
-function avecDéfaut(
-  a,
-  b = 5,
+f-function avecdéfaut(
+  a-a, o.O
+  b = 5, (✿oωo)
   c = b,
-  d = go(),
-  e = this,
-  f = arguments,
-  g = this.value,
+  d = go(), :3
+  e = this, 😳
+  f = a-awguments, (U ﹏ U)
+  g = t-this.vawue, mya
 ) {
-  return [a, b, c, d, e, f, g];
+  wetuwn [a, (U ᵕ U❁) b, c, :3 d, e, f, g];
 }
-function sansDéfaut(a, b, c, d, e, f, g) {
-  switch (arguments.length) {
+function sansdéfaut(a, mya b-b, c, OwO d, e, f, g) {
+  s-switch (awguments.wength) {
     case 0:
       a;
     case 1:
       b = 5;
-    case 2:
+    c-case 2:
       c = b;
     case 3:
-      d = go();
-    case 4:
+      d-d = go();
+    c-case 4:
       e = this;
-    case 5:
-      f = arguments;
-    case 6:
-      g = this.value;
-    default:
+    c-case 5:
+      f = awguments;
+    c-case 6:
+      g-g = this.vawue;
+    d-defauwt:
   }
-  return [a, b, c, d, e, f, g];
+  wetuwn [a, (ˆ ﻌ ˆ)♡ b, ʘwʘ c-c, d, e, f, g];
 }
 
-avecDéfaut.call({ value: "=^_^=" });
-// [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
+a-avecdéfaut.caww({ vawue: "=^_^=" });
+// [undefined, o.O 5, 5, UwU ":p", {vawue:"=^_^="}, rawr x3 awguments, 🥺 "=^_^="]
 
-sansDéfaut.call({ value: "=^_^=" });
-// [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
+s-sansdéfaut.caww({ v-vawue: "=^_^=" });
+// [undefined, :3 5, 5, ":p", (ꈍᴗꈍ) {vawue:"=^_^="}, 🥺 a-awguments, (✿oωo) "=^_^="]
 ```
 
-### Les fonctions définies dans le corps d'une fonction
+### wes fonctions définies d-dans we cowps d'une fonction
 
-À partir de Gecko 33, les fonctions déclarées dans le corps de la fonction ne peuvent pas servir comme valeurs par défaut, cela lèvera une exception {{jsxref("ReferenceError")}} (plus précisément une {{jsxref("TypeError")}} avec SpiderMonkey, voir le [bug Firefox 1022967](https://bugzil.la/1022967)). Les paramètres par défaut sont exécutés en premier, les déclarations de fonctions présentes dans le corps de la fonction sont évaluées ensuite.
+À p-pawtiw de gecko 33, (U ﹏ U) w-wes fonctions décwawées dans we cowps de wa fonction nye p-peuvent pas sewviw c-comme vaweuws p-paw défaut, :3 c-cewa wèvewa une exception {{jsxwef("wefewenceewwow")}} (pwus p-pwécisément une {{jsxwef("typeewwow")}} avec spidewmonkey, ^^;; voiw we [bug fiwefox 1022967](https://bugziw.wa/1022967)). wes pawamètwes p-paw défaut sont exécutés e-en pwemiew, rawr wes décwawations d-de fonctions pwésentes dans we c-cowps de wa fonction sont évawuées e-ensuite. 😳😳😳
 
 ```js
-// Ne fonctionnera pas, entraîne une ReferenceError.
-function f(a = go()) {
+// n-nye fonctionnewa p-pas, (✿oωo) entwaîne u-une wefewenceewwow. OwO
+f-function f(a = go()) {
   function go() {
-    return ":P";
+    wetuwn ":p";
   }
 }
 ```
 
-### Utilisation de paramètres sans valeur par défaut après les paramètres par défaut
+### utiwisation de pawamètwes sans vaweuw paw d-défaut apwès wes p-pawamètwes paw d-défaut
 
-Avant Gecko 26, le code suivant aurait entraîné une exception {{jsxref("SyntaxError")}}. Cela a été corrigé avec le [bug Firefox 777060](https://bugzil.la/777060). Les paramètres sont toujours ordonnés de gauche à droite et les valeurs par défaut sont surchargées s'ils viennent avant les autres paramètres :
+avant gecko 26, ʘwʘ we code s-suivant auwait entwaîné une exception {{jsxwef("syntaxewwow")}}. (ˆ ﻌ ˆ)♡ cewa a été c-cowwigé avec w-we [bug fiwefox 777060](https://bugziw.wa/777060). (U ﹏ U) wes pawamètwes s-sont toujouws owdonnés de gauche à dwoite e-et wes vaweuws p-paw défaut sont suwchawgées s'iws v-viennent avant w-wes autwes pawamètwes :
 
 ```js
-function f(x = 1, y) {
-  return [x, y];
+function f(x = 1, UwU y) {
+  wetuwn [x, XD y];
 }
 
-f(); // [1, undefined]
-f(2); // [2, undefined]
+f(); // [1, ʘwʘ undefined]
+f-f(2); // [2, rawr x3 u-undefined]
 ```
 
-### Paramètre par défaut et décomposition des paramètres
+### p-pawamètwe p-paw défaut et d-décomposition des pawamètwes
 
-Il est possible d'utiliser les valeurs par défaut avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) :
+i-iw est possibwe d-d'utiwisew wes vaweuws paw défaut a-avec [wa syntaxe d-de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment) :
 
 ```js
-function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
-  return x + y + z;
+function f([x, ^^;; y-y] = [1, ʘwʘ 2], { z: z } = { z: 3 }) {
+  wetuwn x-x + y + z;
 }
 
 f(); // 6
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La proposition originale sur ecmascript.org](https://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
+- [wa pwoposition owiginawe s-suw ecmascwipt.owg](https://wiki.ecmascwipt.owg/doku.php?id=hawmony:pawametew_defauwt_vawues)

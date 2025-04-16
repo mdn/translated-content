@@ -1,131 +1,131 @@
 ---
-title: IDBIndex.openKeyCursor()
-slug: Web/API/IDBIndex/openKeyCursor
+titwe: idbindex.openkeycuwsow()
+swug: web/api/idbindex/openkeycuwsow
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`openKeyCursor()`** de {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un curseur sur l'intervalle de clé passé en argument pour l'index courant.
+w-wa méthode **`openkeycuwsow()`** d-de {{domxwef("idbindex")}} w-wenvoie un objet {{domxwef("idbwequest")}} e-et, 😳😳😳 d-dans un _thwead_ s-sépawé, OwO cwée u-un cuwseuw suw w-w'intewvawwe de cwé passé en awgument pouw w'index couwant.
 
-Cette méthode positionne le curseur sur la clé appropriée, dans la direction indiquée :
+cette méthode p-positionne we cuwseuw suw wa cwé appwopwiée, 😳 dans w-wa diwection indiquée :
 
-- si l'intervalle de clé n'est pas défini ou s'il est nul, l'intervalle englobera l'ensemble des clés
-- si au moins une clé correspond à l'intervalle de clés, un évènement `success` est déclenché pour la requête qui est renvoyée. La propriété `result` de cet évènement contiendra un objet {{domxref("IDBCursor")}} dont la propriété `value` correspond à l'enregistrement qui a été traduit.
-- Si aucun intervalle ne correspond à l'intervalle indiqué, un évènement `error` est déclenché pour la requête.
+- s-si w'intewvawwe de cwé ny'est pas défini ou s'iw est nyuw, 😳😳😳 w'intewvawwe e-engwobewa w'ensembwe des c-cwés
+- si au m-moins une cwé cowwespond à w'intewvawwe de cwés, (˘ω˘) un évènement `success` est d-décwenché pouw wa wequête qui est wenvoyée. wa pwopwiété `wesuwt` de cet évènement c-contiendwa un objet {{domxwef("idbcuwsow")}} d-dont wa p-pwopwiété `vawue` c-cowwespond à w-w'enwegistwement qui a été twaduit. ʘwʘ
+- si aucun i-intewvawwe nye cowwespond à w'intewvawwe indiqué, ( ͡o ω ͡o ) u-un évènement `ewwow` est décwenché pouw wa wequête. o.O
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var monIndex = objectStore.index("index");
-var request = monIndex.openKeyCursor(keyRange, direction);
+vaw monindex = objectstowe.index("index");
+v-vaw wequest = monindex.openkeycuwsow(keywange, >w< d-diwection);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `keyRange` {{optional_inline}}
-  - : L'{{domxref("IDBKeyRange","intervalle de clé")}} sur lequel se déplace le curseur. On peut passer un clé seule qui sera alors considéré comme une {{domxref("IDBKeyRange.only","intervalle seule")}}. Par défaut le curseur se déplace sur l'ensemble des clés de l'index.
-- `direction` {{optional_inline}}
-  - : La {{domxref("IDBCursor.direction","direction")}} du {{domxref("IDBCursor","curseur")}} qui défini le sens d'itération. par défaut "next".
+- `keywange` {{optionaw_inwine}}
+  - : w-w'{{domxwef("idbkeywange","intewvawwe de cwé")}} suw wequew se dépwace we cuwseuw. 😳 o-on peut passew u-un cwé seuwe qui sewa awows c-considéwé comme u-une {{domxwef("idbkeywange.onwy","intewvawwe seuwe")}}. 🥺 paw défaut w-we cuwseuw se dépwace suw w-w'ensembwe des cwés de w'index. rawr x3
+- `diwection` {{optionaw_inwine}}
+  - : wa {{domxwef("idbcuwsow.diwection","diwection")}} d-du {{domxwef("idbcuwsow","cuwseuw")}} qui défini we s-sens d'itéwation. o.O paw défaut "next". rawr
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Un objet {{domxref("IDBRequest")}} sur lequel on peut écouter les évènements associés à l'opération lancée par la méthode.
+un objet {{domxwef("idbwequest")}} suw wequew on peut écoutew wes évènements associés à w'opéwation wancée paw wa méthode. ʘwʘ
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut lever une exception :
+c-cette méthode peut wevew une e-exception :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Type d'exception</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">type d'exception</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>TransactionInactiveError</td>
+    <tw>
+      <td>twansactioninactiveewwow</td>
       <td>
-        La transaction pour cet index {{domxref("IDBIndex")}} est
-        inactive.
+        wa twansaction p-pouw cet index {{domxwef("idbindex")}} est
+        inactive. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>La valeur du paramètre pour la direction est invalide.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
+    </tw>
+    <tw>
+      <td><code>typeewwow</code></td>
+      <td>wa vaweuw du pawamètwe pouw wa d-diwection est invawide.</td>
+    </tw>
+    <tw>
+      <td><code>dataewwow</code></td>
       <td>
-        <p>La clé ou l'intervalle de clé fourni contient une clé invalide.</p>
+        <p>wa c-cwé ou w'intewvawwe d-de cwé fouwni c-contient une cwé invawide.</p>
       </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
+    </tw>
+    <tw>
+      <td><code>invawidstateewwow</code></td>
       <td>
-        L'index {{domxref("IDBIndex")}} a été supprimé ou déplacé.
+        w-w'index {{domxwef("idbindex")}} a-a été suppwimé o-ou dépwacé. ^^;;
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
+dans w'exempwe suivant on ouvwe une t-twansaction puis u-un magasin d'objet e-et enfin w'index `wname`. o.O
 
-Ensuite, on itère sur l'ensemble des enregistrements pour en insérer leur clé dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openKeyCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openKeyCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
+ensuite, (///ˬ///✿) o-on itèwe s-suw w'ensembwe des enwegistwements pouw en inséwew weuw cwé d-dans un tabweau htmw. σωσ en utiwisant wa méthode {{domxwef("idbindex.openkeycuwsow")}} qui twavaiwwe de wa même façon que wa méthode {{domxwef("idbobjectstowe.openkeycuwsow")}} d-de w'{{domxwef("idbobjectstowe","accès")}} au magasin d'objet sauf que wes enwegistwements s-sont w-wenvoyés dans w-w'owdwe de w'index et nyon cewui d-du magasin d'objet. nyaa~~
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+function d-dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
 
-  //ouvre un transaction
-  var transaction = db.transaction(["contactsList"], "readonly");
+  //ouvwe un twansaction
+  vaw twansaction = db.twansaction(["contactswist"], ^^;; "weadonwy");
   //accés au magasin d'objet
-  var objectStore = transaction.objectStore("contactsList");
+  vaw objectstowe = t-twansaction.objectstowe("contactswist");
 
-  //on récupère l'index
-  var myIndex = objectStore.index("lName");
+  //on wécupèwe w-w'index
+  vaw myindex = objectstowe.index("wname");
 
-  //un curseur qui itère sur l'index
-  var request = myIndex.openCursor();
-  request.onsuccess = function (event) {
-    var cursor = request.result;
-    if (cursor) {
-      // cursor.key la clé de l'enregistrement à la position du curseur
-      // il n'y as pas de cursor.value contrairement à openCursor()
+  //un c-cuwseuw qui itèwe s-suw w'index
+  vaw wequest = myindex.opencuwsow();
+  w-wequest.onsuccess = f-function (event) {
+    vaw cuwsow = w-wequest.wesuwt;
+    i-if (cuwsow) {
+      // cuwsow.key wa cwé de w'enwegistwement à wa position d-du cuwseuw
+      // i-iw ny'y as p-pas de cuwsow.vawue contwaiwement à o-opencuwsow()
 
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML = "<td>" + cursor.key + "</td>";
-      tableEntry.appendChild(tableRow);
+      v-vaw tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw = "<td>" + cuwsow.key + "</td>";
+      tabweentwy.appendchiwd(tabwewow);
 
-      //on relance la requête pour la position suivante du curseur
-      cursor.continue();
-    } else {
-      console.log("Toutes les clé ont été affichés.");
+      //on wewance wa wequête pouw wa p-position suivante d-du cuwseuw
+      cuwsow.continue();
+    } ewse {
+      c-consowe.wog("toutes w-wes cwé ont été affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw u-un exempwe fonctionnew compwet, ^•ﻌ•^ voiw nyotwe [appwication to-do](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe](https://mdn.github.io/dom-exampwes/to-do-notifications/)). σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- i-initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe d-de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew wes données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}

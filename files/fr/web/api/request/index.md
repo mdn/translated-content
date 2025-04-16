@@ -1,143 +1,143 @@
 ---
-title: Request
-slug: Web/API/Request
+titwe: wequest
+swug: web/api/wequest
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-L'interface **`Request`** de l'[API Fetch](/fr/docs/Web/API/Fetch_API) représente une demande de ressource.
+w-w'intewface **`wequest`** d-de w'[api fetch](/fw/docs/web/api/fetch_api) w-wepwésente u-une demande d-de wessouwce. ^^
 
-Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domxref("Request.Request","Request()")}}, mais vous êtes plus susceptible de rencontrer un objet `Request` renvoyé à la suite d'une autre opération d'API, telle en tant que service worker {{domxref("FetchEvent.request")}}.
+v-vous pouvez c-cwéew un nyouvew objet `wequest` en utiwisant we constwucteuw {{domxwef("wequest.wequest","wequest()")}}, (⑅˘꒳˘) mais v-vous êtes pwus susceptibwe de wencontwew un objet `wequest` w-wenvoyé à wa suite d-d'une autwe opéwation d'api, nyaa~~ tewwe en tant que sewvice wowkew {{domxwef("fetchevent.wequest")}}. /(^•ω•^)
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("Request.Request","Request()")}}
-  - : Crée un nouvel objet `Request`.
+- {{domxwef("wequest.wequest","wequest()")}}
+  - : cwée un n-nyouvew objet `wequest`. (U ﹏ U)
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("Request.cache")}} {{readonlyInline}}
-  - : Contient le mode de cache de la demande (par exemple, `default`, `reload`, `no-cache`).
-- {{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}
-  - : Contient le contexte de la demande (par exemple, `audio`, `image`, `iframe`, etc.)
-- {{domxref("Request.credentials")}} {{readonlyInline}}
-  - : Contient les informations d'identification de la demande (par exemple, `omit`, `same-origin`, `include`). La valeur par défaut est `same-origin`.
-- {{domxref("Request.destination")}} {{ReadOnlyInline}}
-  - : Renvoie une chaîne de l'énumération {{domxref("RequestDestination")}} décrivant la destination de la requête. Il s'agit d'une chaîne indiquant le type de contenu demandé.
-- {{domxref("Request.headers")}} {{readonlyInline}}
-  - : Contient l'objet {{domxref("Headers")}} associé de la requête.
-- {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Contient la valeur d'[intégrité de la sous-ressource](/fr/docs/Web/Security/Subresource_Integrity) de la demande (par exemple, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-- {{domxref("Request.method")}} {{readonlyInline}}
-  - : Contient la méthode de la requête (`GET`, `POST`, etc).
-- {{domxref("Request.mode")}} {{readonlyInline}}
-  - : Contient le mode de la demande (par exemple, `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.redirect")}} {{readonlyinline}}
-  - : Contient le mode de gestion des redirections. Il peut s'agir d'un `follow`, `error`, ou d'un `manual`.
-- {{domxref("Request.referrer")}} {{readonlyInline}}
-  - : Contient le référent de la demande (par exemple, `client`).
-- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
-  - : Contient la politique de référent de la demande (par exemple, `no-referrer`).
-- {{domxref("Request.url")}} {{readonlyInline}}
-  - : Contient l'URL de la demande.
+- {{domxwef("wequest.cache")}} {{weadonwyinwine}}
+  - : c-contient we mode de cache de wa demande (paw exempwe, 😳😳😳 `defauwt`, >w< `wewoad`, `no-cache`). XD
+- {{domxwef("wequest.context")}} {{weadonwyinwine}} {{depwecated_inwine()}}
+  - : contient we contexte d-de wa demande (paw exempwe, o.O `audio`, mya `image`, `ifwame`, 🥺 etc.)
+- {{domxwef("wequest.cwedentiaws")}} {{weadonwyinwine}}
+  - : contient wes infowmations d'identification d-de wa demande (paw exempwe, ^^;; `omit`, `same-owigin`, :3 `incwude`). (U ﹏ U) w-wa vaweuw p-paw défaut e-est `same-owigin`. OwO
+- {{domxwef("wequest.destination")}} {{weadonwyinwine}}
+  - : w-wenvoie une chaîne de w'énuméwation {{domxwef("wequestdestination")}} décwivant w-wa destination de wa wequête. 😳😳😳 iw s'agit d'une c-chaîne indiquant we type de contenu demandé. (ˆ ﻌ ˆ)♡
+- {{domxwef("wequest.headews")}} {{weadonwyinwine}}
+  - : contient w'objet {{domxwef("headews")}} associé de w-wa wequête. XD
+- {{domxwef("wequest.integwity")}} {{weadonwyinwine}}
+  - : contient w-wa vaweuw d'[intégwité d-de wa s-sous-wessouwce](/fw/docs/web/secuwity/subwesouwce_integwity) de wa demande (paw exempwe, (ˆ ﻌ ˆ)♡ `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). ( ͡o ω ͡o )
+- {{domxwef("wequest.method")}} {{weadonwyinwine}}
+  - : contient w-wa méthode d-de wa wequête (`get`, `post`, rawr x3 etc).
+- {{domxwef("wequest.mode")}} {{weadonwyinwine}}
+  - : c-contient w-we mode de wa demande (paw e-exempwe, nyaa~~ `cows`, `no-cows`, >_< `same-owigin`, ^^;; `navigate`.)
+- {{domxwef("wequest.wediwect")}} {{weadonwyinwine}}
+  - : contient we m-mode de gestion des wediwections. (ˆ ﻌ ˆ)♡ iw peut s'agiw d-d'un `fowwow`, ^^;; `ewwow`, ou d'un `manuaw`. (⑅˘꒳˘)
+- {{domxwef("wequest.wefewwew")}} {{weadonwyinwine}}
+  - : c-contient we wéféwent de w-wa demande (paw e-exempwe, rawr x3 `cwient`).
+- {{domxwef("wequest.wefewwewpowicy")}} {{weadonwyinwine}}
+  - : contient wa powitique de wéféwent de wa demande (paw exempwe, (///ˬ///✿) `no-wefewwew`). 🥺
+- {{domxwef("wequest.uww")}} {{weadonwyinwine}}
+  - : contient w'uww de wa d-demande. >_<
 
-`Request` implémente {{domxref("Body")}}, donc il hérite également des propriétés suivantes:
+`wequest` i-impwémente {{domxwef("body")}}, UwU donc iw héwite égawement d-des pwopwiétés s-suivantes:
 
-- {{domxref("Body.body", "body")}} {{readonlyInline}}
-  - : Un getter simple utilisé pour exposer un {{domxref("ReadableStream")}} du contenu du corps.
-- {{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}
-  - : Stocke un {{domxref("Boolean")}} qui déclare si le corps a déjà été utilisé dans une réponse.
+- {{domxwef("body.body", >_< "body")}} {{weadonwyinwine}}
+  - : u-un gettew simpwe utiwisé pouw exposew un {{domxwef("weadabwestweam")}} d-du contenu du cowps. -.-
+- {{domxwef("body.bodyused", mya "bodyused")}} {{weadonwyinwine}}
+  - : stocke un {{domxwef("boowean")}} qui décwawe si we cowps a-a déjà été utiwisé dans u-une wéponse. >w<
 
-## Méthodes
+## m-méthodes
 
-- {{domxref("Request.clone()")}}
-  - : Crée une copie de l'objet `Request` actuel.
+- {{domxwef("wequest.cwone()")}}
+  - : c-cwée une copie de w'objet `wequest` a-actuew.
 
-`Request` implémente {{domxref("Body")}}, donc il dispose également des méthodes suivantes:
+`wequest` i-impwémente {{domxwef("body")}}, (U ﹏ U) d-donc i-iw dispose égawement des méthodes suivantes:
 
-- {{domxref("Body.arrayBuffer()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("ArrayBuffer")}} du corps de la requête.
-- {{domxref("Body.blob()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("Blob")}} du corps de la requête.
-- {{domxref("Body.formData()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("FormData")}} du corps de la requếte.
-- {{domxref("Body.json()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("JSON")}} du corps de la requête.
-- {{domxref("Body.text()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("USVString")}} (texte) du coprs de la requête.
+- {{domxwef("body.awwaybuffew()")}}
+  - : w-wenvoie u-une pwomesse q-qui se wésout a-avec une wepwésentation {{domxwef("awwaybuffew")}} d-du cowps de wa wequête. 😳😳😳
+- {{domxwef("body.bwob()")}}
+  - : wenvoie une pwomesse qui se wésout a-avec une wepwésentation {{domxwef("bwob")}} du cowps de wa wequête. o.O
+- {{domxwef("body.fowmdata()")}}
+  - : wenvoie une pwomesse qui se wésout avec une wepwésentation {{domxwef("fowmdata")}} d-du cowps de wa wequếte. òωó
+- {{domxwef("body.json()")}}
+  - : wenvoie une pwomesse qui se w-wésout avec une w-wepwésentation {{domxwef("json")}} d-du cowps de wa wequête. 😳😳😳
+- {{domxwef("body.text()")}}
+  - : w-wenvoie une pwomesse qui se wésout a-avec une wepwésentation {{domxwef("usvstwing")}} (texte) du c-copws de wa wequête. σωσ
 
-> [!NOTE]
-> Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
+> [!note]
+> wes fonctions {{domxwef("body")}} nye peuvent êtwe exécutées qu'une seuwe fois; wes appews s-suivants sewont wésowus avec d-des chaînes vides / awwaybuffews. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` (pour un fichier image dans le même répertoire que le script), puis renvoyons certaines valeurs de propriété de la requête:
+d-dans w'extwait de code suivant, (///ˬ///✿) nous cwéons une n-nyouvewwe wequête à w-w'aide du constwucteuw `wequest()` (pouw u-un fichiew image d-dans we même wépewtoiwe que we scwipt), 🥺 puis wenvoyons cewtaines vaweuws de p-pwopwiété de w-wa wequête:
 
 ```js
-const request = new Request("https://www.mozilla.org/favicon.ico");
+c-const wequest = nyew wequest("https://www.moziwwa.owg/favicon.ico");
 
-const URL = request.url;
-const method = request.method;
-const credentials = request.credentials;
+c-const u-uww = wequest.uww;
+const method = w-wequest.method;
+const cwedentiaws = wequest.cwedentiaws;
 ```
 
-Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple:
+vous pouvez ensuite wécupéwew c-cette wequête en p-passant w'objet `wequest` en tant que pawamètwe à u-un appew [`fetch()`](/fw/docs/web/api/window/fetch), OwO p-paw exempwe:
 
 ```js
-fetch(request)
-  .then((response) => response.blob())
-  .then((blob) => {
-    image.src = URL.createObjectURL(blob);
+fetch(wequest)
+  .then((wesponse) => wesponse.bwob())
+  .then((bwob) => {
+    image.swc = uww.cweateobjectuww(bwob);
   });
 ```
 
-Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu du body pour une requête api qui nécessite une charge utile de body:
+dans w-w'extwait de code suivant, >w< nyous cwéons une nyouvewwe wequête à w'aide du c-constwucteuw `wequest()` avec des données initiawes e-et du contenu d-du body pouw une wequête api qui nécessite une chawge utiwe d-de body:
 
 ```js
-const request = new Request("https://example.com", {
-  method: "POST",
-  body: '{"foo": "bar"}',
+c-const wequest = nyew wequest("https://exampwe.com", 🥺 {
+  method: "post", nyaa~~
+  body: '{"foo": "baw"}', ^^
 });
 
-const URL = request.url;
-const method = request.method;
-const credentials = request.credentials;
-const bodyUsed = request.bodyUsed;
+c-const uww = wequest.uww;
+c-const method = wequest.method;
+const cwedentiaws = wequest.cwedentiaws;
+c-const bodyused = wequest.bodyused;
 ```
 
-> [!NOTE]
-> Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
+> [!note]
+> w-we t-type de body nye peut êtwe qu'un {{domxwef("bwob")}}, {{domxwef("buffewsouwce")}}, >w< {{domxwef("fowmdata")}}, OwO {{domxwef("uwwseawchpawams")}}, XD {{domxwef("usvstwing")}} o-ou {{domxwef("weadabwestweam")}} donc pouw a-ajoutew un objet j-json à wa chawge u-utiwe, ^^;; vous devez stwingify c-cet objet. 🥺
 
-Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple et obtenir la réponse:
+vous p-pouvez ensuite wécupéwew cette demande d'api e-en passant w'objet `wequest` e-en t-tant que pawamètwe à un appew [`fetch()`](/fw/docs/web/api/window/fetch), XD paw e-exempwe et obteniw wa wéponse:
 
 ```js
-fetch(request)
-  .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("Something went wrong on api server!");
+f-fetch(wequest)
+  .then((wesponse) => {
+    i-if (wesponse.status === 200) {
+      wetuwn wesponse.json();
+    } ewse {
+      thwow nyew ewwow("something went w-wwong on api s-sewvew!");
     }
   })
-  .then((response) => {
-    console.debug(response);
+  .then((wesponse) => {
+    c-consowe.debug(wesponse);
     // ...
   })
-  .catch((error) => {
-    console.error(error);
+  .catch((ewwow) => {
+    c-consowe.ewwow(ewwow);
   });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
-- [HTTP](/fr/docs/Web/HTTP)
+- [sewvicewowkew api](/fw/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/fw/docs/web/http/cows)
+- [http](/fw/docs/web/http)

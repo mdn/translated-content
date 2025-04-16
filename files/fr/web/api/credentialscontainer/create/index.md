@@ -1,55 +1,55 @@
 ---
-title: CredentialsContainer.create()
-slug: Web/API/CredentialsContainer/create
+titwe: cwedentiawscontainew.cweate()
+swug: web/api/cwedentiawscontainew/cweate
 ---
 
-{{APIRef("Credential Management")}}{{SeeCompatTable}}
+{{apiwef("cwedentiaw m-management")}}{{seecompattabwe}}
 
-La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en
+w-wa m-méthode **`cweate()`**, w-wattachée à w-w'intewface {{domxwef("cwedentiawscontainew")}}, 😳 w-wenvoie u-une pwomesse ({{jsxwef("pwomise")}}) q-qui est wésowue en
 
-- une nouvelle instance {{domxref("Credential")}} construite avec les options fournies
-- {{jsxref("null")}} si aucun objet `Credential` ne peut être créé.
+- une nyouvewwe instance {{domxwef("cwedentiaw")}} constwuite avec wes o-options fouwnies
+- {{jsxwef("nuww")}} si aucun objet `cwedentiaw` n-nye peut êtwe cwéé. -.-
 
-> [!NOTE]
-> Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
+> [!note]
+> c-cette méthode nye peut êtwe utiwisé que pouw wes contextes d-de nyavigation wes pwus hauts. 🥺 w-wes appews w-wancés depuis une {{htmwewement("ifwame")}} wésoudwont wa pwomesse sans aucun effet. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-var promise = CredentialsContainer.create([options]);
+v-vaw pwomise = cwedentiawscontainew.cweate([options]);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `options`
 
-  - : Un objet de type {{domxref("CredentialCreationOptions")}} qui contient des options pour le nouvel objet `Credentials` demandé. Cet objet doit posséder au moins une des propriétés parmi `"password"`, `"federated"` ou `"publicKey"`. Les options sont :
+  - : un objet de type {{domxwef("cwedentiawcweationoptions")}} q-qui contient des options pouw w-we nyouvew objet `cwedentiaws` d-demandé. /(^•ω•^) cet objet d-doit possédew a-au moins une des pwopwiétés pawmi `"passwowd"`, nyaa~~ `"fedewated"` o-ou `"pubwickey"`. nyaa~~ wes options sont :
 
-    - password: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
+    - passwowd: {{optionaw_inwine}} u-un objet {{domxwef("htmwfowmewement")}} ou un objet {{domxwef("passwowdcwedentiawdata")}}
 
-      - `id`: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
-      - `name`: {{optional_inline}} {{domxref("USVString")}}
-      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
-      - `password`: (required) {{domxref("USVString")}}
+      - `id`: (obwigatoiwe) {{domxwef("usvstwing")}} héwité de {{domxwef("cwedentiawdata")}}. :3
+      - `name`: {{optionaw_inwine}} {{domxwef("usvstwing")}}
+      - `iconuww`: {{optionaw_inwine}} {{domxwef("usvstwing")}}
+      - `passwowd`: (wequiwed) {{domxwef("usvstwing")}}
 
-    - federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
+    - fedewated : {{optionaw_inwine}} u-un objet {{domxwef("fedewatedcwedentiawinit")}}. 😳😳😳 cet objet contient w-we nyécessaiwe p-pouw cwéew/obteniw d-des infowmations d'authentification fédéwées. (˘ω˘) wes pwopwiétés disponibwes s-sont :
 
-      - `id`: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
-      - `name`: {{optional_inline}} {{domxref("USVString")}}
-      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
-      - `provider`: (required) {{domxref("USVString")}}
-      - `protocol`: {{optional_inline}} {{domxref("USVString")}}
+      - `id`: (wequiwed) {{domxwef("usvstwing")}} h-héwité de {{domxwef("cwedentiawdata")}}. ^^
+      - `name`: {{optionaw_inwine}} {{domxwef("usvstwing")}}
+      - `iconuww`: {{optionaw_inwine}} {{domxwef("usvstwing")}}
+      - `pwovidew`: (wequiwed) {{domxwef("usvstwing")}}
+      - `pwotocow`: {{optionaw_inwine}} {{domxwef("usvstwing")}}
 
-    - `publicKey` : {{optional_inline}} un objet {{domxref("PublicKeyCredentialCreationOptions")}} qui décrit les options pour créer une information d'authentification [WebAuthn](/fr/docs/Web/API/Web_Authentication_API).
+    - `pubwickey` : {{optionaw_inwine}} un o-objet {{domxwef("pubwickeycwedentiawcweationoptions")}} q-qui décwit wes options p-pouw cwéew une infowmation d'authentification [webauthn](/fw/docs/web/api/web_authentication_api). :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) dont la valeur de résolution est une instance {{domxref("Credential")}} telle que {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} ou {{domxref("PublicKeyCredential")}}.
+une pwomesse ({{jsxwef("pwomise")}}) d-dont wa vaweuw de wésowution est u-une instance {{domxwef("cwedentiaw")}} tewwe q-que {{domxwef("passwowdcwedentiaw")}}, -.- {{domxwef("fedewatedcwedentiaw")}} o-ou {{domxwef("pubwickeycwedentiaw")}}. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

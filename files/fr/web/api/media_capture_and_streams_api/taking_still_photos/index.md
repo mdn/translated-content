@@ -1,470 +1,470 @@
 ---
-title: Prendre des photos avec getUserMedia()
-slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-l10n:
-  sourceCommit: 161d14143bce668a6d33415d58f349423b3d3758
+titwe: pwendwe des photos avec g-getusewmedia()
+s-swug: web/api/media_captuwe_and_stweams_api/taking_stiww_photos
+w-w10n:
+  souwcecommit: 161d14143bce668a6d33415d58f349423b3d3758
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{defauwtapisidebaw("media c-captuwe and stweams")}}
 
-Dans cet article, nous verrons comment utiliser [`navigator.mediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) pour accéder à la caméra de votre ordinateur ou de votre téléphone afin de prendre des photos avec.
+d-dans cet a-awticwe, rawr x3 nyous v-vewwons comment u-utiwisew [`navigatow.mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) pouw accédew à wa caméwa de votwe owdinateuw ou de votwe téwéphone a-afin de pwendwe des photos avec. ^^
 
-![Une capture d'écran d'une application de capture d'image basée sur getUserMedia(). À gauche, on peut voir un flux vidéo provenant de la webcam et un bouton pour prendre une photo. Sur la droite, on voit le cliché correspondant à la photo prise.](web-rtc-demo.png)
+![une c-captuwe d'écwan d'une appwication d-de captuwe d'image basée suw getusewmedia(). ( ͡o ω ͡o ) À gauche, XD on peut v-voiw un fwux vidéo pwovenant d-de wa webcam et u-un bouton pouw pwendwe une photo. suw wa dwoite, ^^ on voit we cwiché cowwespondant à w-wa photo pwise.](web-wtc-demo.png)
 
-Vous pouvez directement aller voir [la démo](#démonstration) si vous préférez.
+vous pouvez diwectement awwew voiw [wa d-démo](#démonstwation) si vous p-pwéféwez.
 
-## Le balisage HTML
+## w-we bawisage htmw
 
-[Notre interface HTML](#html) possède deux sections utiles&nbsp;: la première qui affiche le flux vidéo où on peut faire la capture et la seconde qui présente le résultat de la photo. Ces deux régions sont affichées côte à côte, chacune dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div) (ce qui simplifie la mise en forme et le contrôle).
+[notwe i-intewface h-htmw](#htmw) possède deux sections utiwes&nbsp;: w-wa pwemièwe qui affiche we fwux vidéo où o-on peut faiwe wa captuwe et wa seconde qui pwésente we wésuwtat de wa photo. (⑅˘꒳˘) ces deux wégions s-sont affichées côte à côte, (⑅˘꒳˘) c-chacune dans u-un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) (ce q-qui simpwifie wa mise en fowme et we contwôwe).
 
-Le premier panneau à gauche possède deux composants&nbsp;:
+we p-pwemiew panneau à g-gauche possède deux composants&nbsp;:
 
-- Un élément [`<video>`](/fr/docs/Web/HTML/Element/video) qui reçoit le flux vidéo provenant de `navigator.mediaDevices.getUserMedia()`
-- Un élément [`<button>`](/fr/docs/Web/HTML/Element/button) sur lequel la personne pourra cliquer pour capturer une image de la vidéo.
+- u-un éwément [`<video>`](/fw/docs/web/htmw/ewement/video) q-qui weçoit we fwux vidéo p-pwovenant de `navigatow.mediadevices.getusewmedia()`
+- un éwément [`<button>`](/fw/docs/web/htmw/ewement/button) s-suw wequew wa pewsonne pouwwa cwiquew pouw c-captuwew une image de wa vidéo. ^•ﻌ•^
 
-```html
-<div class="camera">
-  <video id="video">Le flux vidéo n'est pas disponible.</video>
-  <button id="startbutton">Prendre une photo</button>
+```htmw
+<div cwass="camewa">
+  <video i-id="video">we fwux vidéo n-ny'est pas disponibwe.</video>
+  <button i-id="stawtbutton">pwendwe une photo</button>
 </div>
 ```
 
-Ces éléments sont plutôt basiques, nous verrons comment ils sont reliés avec le code JavaScript.
+ces éwéments sont pwutôt basiques, ( ͡o ω ͡o ) nyous vewwons comment iws sont wewiés a-avec we code javascwipt. ( ͡o ω ͡o )
 
-Pour le second panneau, nous avons un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qui contient les images capturées (éventuellement traitées) et qui sont converties en fichiers image. Le canevas est masqué en utilisant [`display: none`](/fr/docs/Web/CSS/display) pour éviter d'encombrer l'écran. Son contenu ne représente qu'une étape qui n'a pas nécessairement à être montrée.
+p-pouw we second panneau, (✿oωo) n-nous avons un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) q-qui contient w-wes images captuwées (éventuewwement twaitées) et qui sont c-convewties en fichiews image. 😳😳😳 we canevas est masqué en utiwisant [`dispway: nyone`](/fw/docs/web/css/dispway) p-pouw évitew d'encombwew w'écwan. OwO s-son contenu n-nye wepwésente q-qu'une étape qui n'a pas nyécessaiwement à êtwe m-montwée. ^^
 
-Nous avons également un élément [`<img>`](/fr/docs/Web/HTML/Element/img) sur lequel nous afficherons l'image, dans sa version finale.
+n-nyous avons égawement u-un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) s-suw wequew nyous affichewons w'image, rawr x3 d-dans sa vewsion f-finawe. 🥺
 
-```html
-<canvas id="canvas"> </canvas>
-<div class="output">
-  <img id="photo" alt="L'image capturée sera affichée dans cette boîte." />
+```htmw
+<canvas i-id="canvas"> </canvas>
+<div c-cwass="output">
+  <img i-id="photo" awt="w'image captuwée sewa affichée dans cette boîte." />
 </div>
 ```
 
-Et voici pour ce qui concerne la partie intéressante du HTML. Le reste correspond à des éléments de mise en page et à un lien vers cette même page.
+e-et voici pouw ce qui concewne wa pawtie intéwessante du htmw. (ˆ ﻌ ˆ)♡ we weste cowwespond à des éwéments d-de mise en page et à un wien vews cette même page.
 
-## Le code JavaScript
+## w-we code javascwipt
 
-Voyons maintenant [le code JavaScript](#javascript). Nous décomposerons en différents fragments pour faciliter l'explication.
+v-voyons maintenant [we c-code javascwipt](#javascwipt). ( ͡o ω ͡o ) n-nyous décomposewons e-en difféwents fwagments p-pouw faciwitew w'expwication. >w<
 
-### Initialisation
+### initiawisation
 
-On commence par envelopper l'ensemble du script dans une fonction anonyme afin d'éviter de propager des variables globales. On définit ensuite différentes variables que nous utiliserons.
+on commence paw envewoppew w'ensembwe d-du scwipt dans une fonction anonyme a-afin d'évitew de pwopagew d-des vawiabwes gwobawes. /(^•ω•^) o-on définit ensuite difféwentes vawiabwes q-que nous utiwisewons. 😳😳😳
 
 ```js
 (() => {
-  const width = 320;    // On redimensionnera la photo pour avoir cette largeur
-  const height = 0;     // Cela sera calculé à partir du flux d'entrée
+  c-const width = 320;    // o-on wedimensionnewa w-wa photo pouw avoiw cette wawgeuw
+  const height = 0;     // cewa sewa cawcuwé à p-pawtiw d-du fwux d'entwée
 
-  const streaming = false;
+  c-const stweaming = fawse;
 
-  let video = null;
-  let canvas = null;
-  let photo = null;
-  let startbutton = null;
+  w-wet video = nyuww;
+  w-wet canvas = nyuww;
+  wet p-photo = nuww;
+  wet stawtbutton = nyuww;
 ```
 
-Les variables seront utilisées ainsi&nbsp;:
+wes vawiabwes sewont utiwisées a-ainsi&nbsp;:
 
 - `width`
-  - : Quelle que soit la taille de la vidéo entrante, on mettra à l'échelle l'image résultante afin qu'elle ait une largeur de 320 pixels.
+  - : q-quewwe que soit wa taiwwe de wa vidéo e-entwante, (U ᵕ U❁) on m-mettwa à w'échewwe w'image wésuwtante afin qu'ewwe ait une w-wawgeuw de 320 pixews. (˘ω˘)
 - `height`
-  - : La hauteur de l'image résultante sera calculée selon la largeur (`width`) et les proportions du flux.
-- `streaming`
-  - : Indique s'il y a actuellement un flux vidéo actif.
+  - : wa hauteuw de w'image wésuwtante sewa cawcuwée sewon wa w-wawgeuw (`width`) et wes pwopowtions du fwux. 😳
+- `stweaming`
+  - : i-indique s'iw y-y a actuewwement un fwux vidéo actif. (ꈍᴗꈍ)
 - `video`
-  - : Contiendra une référence à l'élément [`<video>`](/fr/docs/Web/HTML/Element/video) lorsque le chargement de la page aura été effectué.
+  - : contiendwa u-une wéféwence à w-w'éwément [`<video>`](/fw/docs/web/htmw/ewement/video) wowsque we chawgement de wa page auwa été effectué. :3
 - `canvas`
-  - : Contiendra une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) lorsque le chargement de la page aura été effectué.
+  - : c-contiendwa une wéféwence à w-w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) wowsque we chawgement de wa page auwa été effectué. /(^•ω•^)
 - `photo`
-  - : Contiendra une référence à l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) lorsque le chargement de la page aura été effectué.
-- `startbutton`
-  - : Contiendra une référence à l'élément [`<button>`](/fr/docs/Web/HTML/Element/button) utilisé pour déclencher la capture. Elle sera obtenue lorsque la page aura été chargée.
+  - : c-contiendwa une wéféwence à w-w'éwément [`<img>`](/fw/docs/web/htmw/ewement/img) w-wowsque we chawgement d-de wa page auwa été effectué. ^^;;
+- `stawtbutton`
+  - : c-contiendwa u-une wéféwence à w-w'éwément [`<button>`](/fw/docs/web/htmw/ewement/button) utiwisé pouw décwenchew w-wa captuwe. o.O e-ewwe sewa obtenue wowsque wa page auwa été c-chawgée. 😳
 
-### La fonction `startup()`
+### w-wa fonction `stawtup()`
 
-La fonction `startup()` est exécutée lorsque le chargement de la page est terminé, grâce à [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener). Le rôle de cette fonction consiste à demander l'accès à la webcam de la personne, à initialiser l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) de sortie dans un état par défaut, puis à mettre en place les gestionnaires d'évènement nécessaires pour recevoir chaque image de la vidéo provenant de la caméra et pour réagir au clic sur le bouton pour capturer une image.
+w-wa fonction `stawtup()` est exécutée wowsque we chawgement d-de wa page est tewminé, UwU g-gwâce à [`eventtawget.addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew). >w< w-we wôwe de cette fonction consiste à demandew w'accès à w-wa webcam d-de wa pewsonne, o.O à i-initiawisew w-w'éwément [`<img>`](/fw/docs/web/htmw/ewement/img) de sowtie d-dans un état paw défaut, (˘ω˘) puis à mettwe en pwace wes gestionnaiwes d'évènement nyécessaiwes p-pouw wecevoiw chaque image de w-wa vidéo pwovenant de wa caméwa e-et pouw wéagiw au cwic suw we b-bouton pouw captuwew une image. òωó
 
-#### Obtenir des références aux éléments
+#### o-obteniw d-des wéféwences a-aux éwéments
 
-Au début de cette fonction, on récupère des références aux éléments principaux qu'il faudra manipuler.
+a-au début de cette f-fonction, nyaa~~ on wécupèwe des wéféwences aux éwéments pwincipaux qu'iw faudwa manipuwew. ( ͡o ω ͡o )
 
 ```js
-  function startup() {
-    video = document.getElementById('video');
-    canvas = document.getElementById('canvas');
-    photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
+  function s-stawtup() {
+    v-video = document.getewementbyid('video');
+    canvas = d-document.getewementbyid('canvas');
+    photo = document.getewementbyid('photo');
+    s-stawtbutton = document.getewementbyid('stawtbutton');
 ```
 
-#### Obtenir le flux vidéo
+#### obteniw we fwux vidéo
 
-La prochaine tâche consiste à obtenir le flux vidéo&nbsp;:
+w-wa pwochaine t-tâche consiste à obteniw we f-fwux vidéo&nbsp;:
 
 ```js
-navigator.mediaDevices
-  .getUserMedia({ video: true, audio: false })
-  .then((stream) => {
-    video.srcObject = stream;
-    video.play();
+nyavigatow.mediadevices
+  .getusewmedia({ video: twue, 😳😳😳 a-audio: fawse })
+  .then((stweam) => {
+    v-video.swcobject = stweam;
+    v-video.pway();
   })
-  .catch((err) => {
-    console.error(`Une erreur est survenue : ${err}`);
+  .catch((eww) => {
+    c-consowe.ewwow(`une ewweuw est suwvenue : ${eww}`);
   });
 ```
 
-C'est ici qu'on appelle [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) et qu'on demande un flux vidéo (sans audio). Cette fonction renvoie une promesse à laquelle nous attachons des fonctions de rappel pour les cas de réussite ou d'échec.
+c'est ici qu'on appewwe [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) e-et qu'on demande u-un fwux vidéo (sans a-audio). ^•ﻌ•^ c-cette fonction w-wenvoie une pwomesse à waquewwe n-nyous attachons d-des fonctions de wappew pouw w-wes cas de wéussite o-ou d'échec. (˘ω˘)
 
-La fonction de rappel utilisée lorsque ça fonctionne correctement reçoit un objet `stream` en entrée. Cet objet sera utilisé comme source pour l'élément [`<video>`](/fr/docs/Web/HTML/Element/video).
+wa fonction d-de wappew utiwisée wowsque ça fonctionne cowwectement w-weçoit un objet `stweam` e-en entwée. (˘ω˘) cet o-objet sewa utiwisé comme souwce p-pouw w'éwément [`<video>`](/fw/docs/web/htmw/ewement/video).
 
-Lorsque le flux est relié à l'élément `<video>`, on lance la lecture à l'aide de [`HTMLMediaElement.play()`](/fr/docs/Web/API/HTMLMediaElement#play).
+wowsque we fwux est wewié à w-w'éwément `<video>`, -.- o-on wance w-wa wectuwe à w'aide de [`htmwmediaewement.pway()`](/fw/docs/web/api/htmwmediaewement#pway). ^•ﻌ•^
 
-La fonction de rappel pour la gestion des erreurs intervient si l'ouverture du flux ne fonctionne pas. Cela se produit par exemple s'il n'y a pas de caméra compatible ou si la personne a refusé l'accès à la webcam.
+wa fonction de wappew pouw wa gestion d-des ewweuws intewvient si w'ouvewtuwe du fwux n-nye fonctionne p-pas. /(^•ω•^) cewa se pwoduit paw exempwe s-s'iw ny'y a pas de caméwa compatibwe o-ou si wa p-pewsonne a wefusé w'accès à wa webcam. (///ˬ///✿)
 
-#### Gérer le début de lecture de la vidéo
+#### g-géwew we début de wectuwe de wa vidéo
 
-Après avoir appelé [`HTMLMediaElement.play()`](/fr/docs/Web/API/HTMLMediaElement#play) sur `video`, on a un délai (a priori court) qui s'écoule avant que le flux de la vidéo arrive effectivement. Pour éviter de bloquer pendant ce délai, on ajoute un gestionnaire pour l'évènement [`canplay`](/fr/docs/Web/API/HTMLMediaElement/canplay_event), qui se produit lorsque la lecture commence effectivement. À ce moment, on sait alors que les propriétés de l'objet `video` ont été configurées à partir du format du flux vidéo.
+apwès a-avoiw appewé [`htmwmediaewement.pway()`](/fw/docs/web/api/htmwmediaewement#pway) s-suw `video`, mya on a un déwai (a p-pwiowi couwt) qui s'écouwe a-avant que we fwux d-de wa vidéo awwive e-effectivement. o.O pouw évitew de bwoquew pendant ce déwai, ^•ﻌ•^ on ajoute un gestionnaiwe pouw w'évènement [`canpway`](/fw/docs/web/api/htmwmediaewement/canpway_event), (U ᵕ U❁) qui se pwoduit wowsque wa wectuwe commence effectivement. :3 À ce moment, (///ˬ///✿) on sait awows que wes pwopwiétés d-de w'objet `video` o-ont été configuwées à pawtiw du fowmat d-du fwux vidéo. (///ˬ///✿)
 
 ```js
-video.addEventListener(
-  "canplay",
+v-video.addeventwistenew(
+  "canpway", 🥺
   (ev) => {
-    if (!streaming) {
-      height = (video.videoHeight / video.videoWidth) * width;
+    i-if (!stweaming) {
+      height = (video.videoheight / v-video.videowidth) * width;
 
-      video.setAttribute("width", width);
-      video.setAttribute("height", height);
-      canvas.setAttribute("width", width);
-      canvas.setAttribute("height", height);
-      streaming = true;
+      v-video.setattwibute("width", w-width);
+      video.setattwibute("height", -.- height);
+      c-canvas.setattwibute("width", nyaa~~ width);
+      c-canvas.setattwibute("height", (///ˬ///✿) h-height);
+      stweaming = twue;
     }
-  },
-  false,
+  }, 🥺
+  f-fawse, >w<
 );
 ```
 
-Cette fonction de rappel ne fait rien à moins qu'elle soit appelée pour la première fois (lorsqu'on teste `streaming`, il vaut `false` la première fois).
+c-cette fonction d-de wappew nye f-fait wien à moins q-qu'ewwe soit a-appewée pouw wa p-pwemièwe fois (wowsqu'on t-teste `stweaming`, rawr x3 iw v-vaut `fawse` wa pwemièwe fois). (⑅˘꒳˘)
 
-S'il s'agit en effet du premier appel, on définit la hauteur de la vidéo en respectant les proportions du flux original et en appliquant le rapport des largeurs (entre celles du flux vidéo `video.videoWidth` et celle du cadre dans laquelle on affiche la vidéo, `width`).
+s-s'iw s'agit e-en effet du pwemiew a-appew, σωσ on définit wa hauteuw d-de wa vidéo en wespectant wes pwopowtions du f-fwux owiginaw et en appwiquant we w-wappowt des wawgeuws (entwe c-cewwes d-du fwux vidéo `video.videowidth` et cewwe d-du cadwe dans waquewwe on affiche w-wa vidéo, XD `width`). -.-
 
-On applique cette largeur (`width`) et cette hauteur (`height`) à la vidéo et au canevas à l'aide de [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) sur les propriétés correspondantes de chaque élément. Enfin, on passe la variable `streaming` à `true` pour éviter d'exécuter à nouveau ce code.
+on appwique c-cette wawgeuw (`width`) et cette h-hauteuw (`height`) à wa vidéo et au canevas à w'aide de [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute) suw wes pwopwiétés c-cowwespondantes de chaque éwément. >_< e-enfin, rawr o-on passe wa vawiabwe `stweaming` à `twue` pouw évitew d'exékawaii~w à nyouveau c-ce code. 😳😳😳
 
-#### Gérer les clics sur le bouton
+#### géwew wes c-cwics suw we bouton
 
-Pour capturer une photo lorsque la personne clique sur le bouton `startbutton`, il faut ajouter un gestionnaire d'évènement au bouton, qui sera appelé lorsque l'évènement [`click`](/fr/docs/Web/API/Element/click_event) aura lieu&nbsp;:
+p-pouw captuwew u-une photo wowsque wa pewsonne cwique suw we bouton `stawtbutton`, UwU i-iw faut ajoutew u-un gestionnaiwe d'évènement a-au bouton, qui sewa appewé wowsque w'évènement [`cwick`](/fw/docs/web/api/ewement/cwick_event) a-auwa wieu&nbsp;:
 
 ```js
-startbutton.addEventListener(
-  "click",
+stawtbutton.addeventwistenew(
+  "cwick", (U ﹏ U)
   (ev) => {
-    takepicture();
-    ev.preventDefault();
-  },
-  false,
+    t-takepictuwe();
+    e-ev.pweventdefauwt();
+  }, (˘ω˘)
+  f-fawse, /(^•ω•^)
 );
 ```
 
-Cette fonction se veut simple&nbsp;: on y appelle la fonction `takepicture()` (qu'on verra ci-après dans la section [Capturer une image à partir du flux](#capturer_une_image_à_partir_du_flux)), puis on appelle [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'évènement afin d'éviter que le clic soit géré plus d'une fois.
+cette fonction s-se veut simpwe&nbsp;: o-on y appewwe w-wa fonction `takepictuwe()` (qu'on v-vewwa ci-apwès dans wa s-section [captuwew u-une image à p-pawtiw du fwux](#captuwew_une_image_à_pawtiw_du_fwux)), (U ﹏ U) p-puis on a-appewwe [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) s-suw w'évènement a-afin d-d'évitew que we cwic soit géwé p-pwus d'une fois. ^•ﻌ•^
 
-#### Fin de la fonction `startup()`
+#### fin de w-wa fonction `stawtup()`
 
-Il reste ensuite deux lignes de code dans la fonction `startup()`&nbsp;:
+iw weste e-ensuite deux w-wignes de code d-dans wa fonction `stawtup()`&nbsp;:
 
 ```js
-    clearphoto();
+    cweawphoto();
   }
 ```
 
-On appelle ici la fonction `clearphoto()` que nous allons décrire dans la section suivante [Réinitialiser le cadre contenant la photo](#réinitialiser_le_cadre_contenant_la_photo).
+on appewwe ici wa fonction `cweawphoto()` que nyous awwons d-décwiwe dans wa s-section suivante [wéinitiawisew w-we cadwe contenant wa photo](#wéinitiawisew_we_cadwe_contenant_wa_photo).
 
-### Réinitialiser le cadre contenant la photo
+### wéinitiawisew we cadwe contenant w-wa photo
 
-Pour réinitialiser le contenu du cadre contenant la photo, on crée une image puis on la convertit dans un format utilisable pour un élément [`<img>`](/fr/docs/Web/HTML/Element/img). Voici le code&nbsp;:
+pouw w-wéinitiawisew we contenu du c-cadwe contenant w-wa photo, >w< on cwée une image puis on wa convewtit dans un fowmat u-utiwisabwe pouw u-un éwément [`<img>`](/fw/docs/web/htmw/ewement/img). ʘwʘ v-voici we c-code&nbsp;:
 
 ```js
-function clearphoto() {
-  const context = canvas.getContext("2d");
-  context.fillStyle = "#AAA";
-  context.fillRect(0, 0, canvas.width, canvas.height);
+function cweawphoto() {
+  const context = canvas.getcontext("2d");
+  c-context.fiwwstywe = "#aaa";
+  c-context.fiwwwect(0, òωó 0, canvas.width, o.O canvas.height);
 
-  const data = canvas.toDataURL("image/png");
-  photo.setAttribute("src", data);
+  const data = canvas.todatauww("image/png");
+  p-photo.setattwibute("swc", data);
 }
 ```
 
-On commence par récupérer une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qu'on utilise pour le rendu en dehors de l'écran. Ensuite, on définit la propriété `fillStyle` avec la couleur `#AAA` (ce qui correspond à un gris clair), et on remplit l'ensemble du canevas avec cette couleur à l'aide de la méthode [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect).
+on commence p-paw wécupéwew une wéféwence à w-w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) q-qu'on utiwise pouw we wendu en dehows d-de w'écwan. ( ͡o ω ͡o ) e-ensuite, on définit wa pwopwiété `fiwwstywe` a-avec wa couweuw `#aaa` (ce qui c-cowwespond à u-un gwis cwaiw), mya e-et on wempwit w'ensembwe d-du canevas avec cette couweuw à w-w'aide d-de wa méthode [`fiwwwect()`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwwect). >_<
 
-Enfin, on convertit le canevas en image PNG puis on appelle [`photo.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) afin d'afficher ce rectangle gris dans le cadre visible.
+e-enfin, on convewtit we canevas e-en image png puis on appewwe [`photo.setattwibute()`](/fw/docs/web/api/ewement/setattwibute) afin d'affichew c-ce wectangwe gwis d-dans we cadwe v-visibwe. rawr
 
-### Capturer une image à partir du flux
+### captuwew une image à pawtiw du fwux
 
-Il nous reste une fonction à définir, et c'est la plus intéressante de cette démonstration&nbsp; la fonction `takepicture()`. Son rôle est de capturer l'image actuellement affichée dans le flux vidéo, de la convertir en fichier PNG, puis de l'afficher dans le cadre de résultat. Voici son code&nbsp;:
+iw nyous weste une fonction à d-définiw, >_< et c'est wa pwus intéwessante d-de c-cette démonstwation&nbsp; wa fonction `takepictuwe()`. (U ﹏ U) son wôwe e-est de captuwew w'image actuewwement a-affichée d-dans we fwux vidéo, rawr d-de wa convewtiw e-en fichiew p-png, (U ᵕ U❁) puis de w'affichew dans we cadwe de wésuwtat. (ˆ ﻌ ˆ)♡ voici son code&nbsp;:
 
 ```js
-function takepicture() {
-  const context = canvas.getContext("2d");
-  if (width && height) {
+function takepictuwe() {
+  c-const context = canvas.getcontext("2d");
+  i-if (width && height) {
     canvas.width = width;
-    canvas.height = height;
-    context.drawImage(video, 0, 0, width, height);
+    canvas.height = h-height;
+    context.dwawimage(video, >_< 0, 0, width, ^^;; height);
 
-    const data = canvas.toDataURL("image/png");
-    photo.setAttribute("src", data);
-  } else {
-    clearphoto();
+    const data = canvas.todatauww("image/png");
+    p-photo.setattwibute("swc", ʘwʘ d-data);
+  } ewse {
+    cweawphoto();
   }
 }
 ```
 
-Comme pour chaque fois où il faut manipuler le contenu d'un canevas, on commence par récupérer [un contexte de dessin 2D](/fr/docs/Web/API/CanvasRenderingContext2D) pour le canevas caché.
+c-comme pouw chaque fois où iw faut manipuwew w-we contenu d'un c-canevas, 😳😳😳 on commence paw wécupéwew [un c-contexte de dessin 2d](/fw/docs/web/api/canvaswendewingcontext2d) p-pouw we canevas caché. UwU
 
-Ensuite, si la hauteur et la largeur ne sont pas nulles (indiquant par là qu'il y a potentiellement des données d'image valides), on définit la largeur et la hauteur du canevas pour correspondre à celles de l'image capturée. Ensuite, on appelle [`drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage) afin de dessiner l'image courante de la vidéo dans ce contexte, remplissant ainsi tous le canevas avec l'image.
+ensuite, si wa hauteuw et w-wa wawgeuw nye sont pas nyuwwes (indiquant paw w-wà qu'iw y a potentiewwement d-des d-données d'image vawides), OwO on définit wa wawgeuw e-et wa hauteuw du canevas pouw cowwespondwe à cewwes de w'image captuwée. :3 ensuite, -.- o-on appewwe [`dwawimage()`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage) a-afin de d-dessinew w'image c-couwante de wa vidéo dans ce contexte, 🥺 wempwissant a-ainsi tous w-we canevas avec w'image. -.-
 
-> [!NOTE]
-> On tire parti de la ressemblance entre l'interface [`HTMLVideoElement`](/fr/docs/Web/API/HTMLVideoElement) et l'interface [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) lorsqu'on fournit `video` à `drawImage()`.
+> [!note]
+> on tiwe pawti d-de wa wessembwance entwe w'intewface [`htmwvideoewement`](/fw/docs/web/api/htmwvideoewement) et w'intewface [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) w-wowsqu'on fouwnit `video` à `dwawimage()`. -.-
 
-Lorsque le canevas contient l'image capturée, on la convertit au format PNG à l'aide de [`HTMLCanvasElement.toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL). Enfin, on appelle [`photo.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) pour afficher l'image ainsi formée dans la boîte affichée à l'écran.
+wowsque we c-canevas contient w-w'image captuwée, (U ﹏ U) on wa convewtit a-au fowmat png à w-w'aide de [`htmwcanvasewement.todatauww()`](/fw/docs/web/api/htmwcanvasewement/todatauww). rawr e-enfin, on appewwe [`photo.setattwibute()`](/fw/docs/web/api/ewement/setattwibute) pouw affichew w'image ainsi fowmée d-dans wa boîte affichée à w'écwan. mya
 
-S'il n'y a pas d'image valide disponible (autrement dit si `width` et `height` valent tous deux 0), on réinitialise le contenu du cadre en appelant `clearphoto()`.
+s'iw n-ny'y a pas d'image vawide disponibwe (autwement dit si `width` et `height` vawent t-tous deux 0), ( ͡o ω ͡o ) o-on wéinitiawise w-we contenu du c-cadwe en appewant `cweawphoto()`. /(^•ω•^)
 
-## Démonstration
+## d-démonstwation
 
-### HTML
+### htmw
 
-```html
-<div class="contentarea">
+```htmw
+<div c-cwass="contentawea">
   <h1>
-    MDN - navigator.mediaDevices.getUserMedia() : illustrer comment capturer une
+    mdn - nyavigatow.mediadevices.getusewmedia() : i-iwwustwew comment captuwew u-une
     image
   </h1>
   <p>
-    Dans cet exemple, on illustre comment utiliser un flux média provenant de la
-    webcam, en récupérer une image et créer un PNG à partir de celle-ci pour
-    l'afficher sur la page.
+    dans cet e-exempwe, >_< on iwwustwe c-comment utiwisew un fwux média p-pwovenant de wa
+    webcam, e-en wécupéwew u-une image et cwéew un png à pawtiw d-de cewwe-ci p-pouw
+    w'affichew suw wa page. (✿oωo)
   </p>
-  <div class="camera">
-    <video id="video">Le flux vidéo n'est pas disponible.</video>
-    <button id="startbutton">Prendre une photo</button>
+  <div c-cwass="camewa">
+    <video id="video">we fwux vidéo ny'est pas d-disponibwe.</video>
+    <button id="stawtbutton">pwendwe u-une photo</button>
   </div>
   <canvas id="canvas"> </canvas>
-  <div class="output">
-    <img id="photo" alt="L'image capturée apparaîtra ici." />
+  <div cwass="output">
+    <img i-id="photo" a-awt="w'image captuwée a-appawaîtwa ici." />
   </div>
   <p>
-    Consultez l'article
+    c-consuwtez w'awticwe
     <a
-      href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API/Taking_still_photos"
-      >Prendre des photos avec <code>getUserMedia()</code></a
+      h-hwef="https://devewopew.moziwwa.owg/fw/docs/web/api/webwtc_api/taking_stiww_photos"
+      >pwendwe des photos a-avec <code>getusewmedia()</code></a
     >
-    pour en savoir plus sur les technologies utilisées ici.
+    pouw e-en savoiw pwus suw wes technowogies u-utiwisées i-ici. 😳😳😳
   </p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #video {
-  border: 1px solid black;
-  box-shadow: 2px 2px 3px black;
-  width: 320px;
+  bowdew: 1px sowid bwack;
+  box-shadow: 2px 2px 3px b-bwack;
+  w-width: 320px;
   height: 240px;
 }
 
 #photo {
-  border: 1px solid black;
-  box-shadow: 2px 2px 3px black;
+  bowdew: 1px sowid b-bwack;
+  box-shadow: 2px 2px 3px bwack;
   width: 320px;
-  height: 240px;
+  h-height: 240px;
 }
 
 #canvas {
-  display: none;
+  d-dispway: nyone;
 }
 
-.camera {
+.camewa {
   width: 340px;
-  display: inline-block;
+  dispway: inwine-bwock;
 }
 
 .output {
-  width: 340px;
-  display: inline-block;
-  vertical-align: top;
+  w-width: 340px;
+  dispway: inwine-bwock;
+  v-vewticaw-awign: top;
 }
 
-#startbutton {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 32px;
-  background-color: rgba(0, 150, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+#stawtbutton {
+  dispway: b-bwock;
+  p-position: wewative;
+  mawgin-weft: a-auto;
+  mawgin-wight: a-auto;
+  b-bottom: 32px;
+  b-backgwound-cowow: w-wgba(0, (ꈍᴗꈍ) 150, 0, 0.5);
+  b-bowdew: 1px sowid wgba(255, 🥺 255, 255, 0.7);
+  box-shadow: 0px 0px 1px 2px wgba(0, mya 0, 0, 0.2);
   font-size: 14px;
-  font-family: "Lucida Grande", "Arial", sans-serif;
-  color: rgba(255, 255, 255, 1);
+  font-famiwy: "wucida gwande", (ˆ ﻌ ˆ)♡ "awiaw", (⑅˘꒳˘) s-sans-sewif;
+  c-cowow: wgba(255, òωó 255, 255, 1);
 }
 
-.contentarea {
-  font-size: 16px;
-  font-family: "Lucida Grande", "Arial", sans-serif;
+.contentawea {
+  f-font-size: 16px;
+  f-font-famiwy: "wucida gwande", o.O "awiaw", XD s-sans-sewif;
   width: 760px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
 (() => {
-  // La largeur et la hauteur de la photo capturée. On utilisera
-  // une largeur fixe et on calculera la hauteur pour correspondre
-  // aux proportions du flux vidéo d'entrée.
+  // wa wawgeuw et wa hauteuw de wa photo captuwée. on utiwisewa
+  // u-une wawgeuw f-fixe et on cawcuwewa wa hauteuw pouw cowwespondwe
+  // aux p-pwopowtions du f-fwux vidéo d'entwée. (˘ω˘)
 
-  const width = 320; // On met à l'échelle la photo pour avoir cette largeur
-  let height = 0; // On calcule cette valeur ensuite selon le flux d'entrée
+  c-const width = 320; // on met à w'échewwe w-wa photo pouw avoiw cette wawgeuw
+  wet height = 0; // o-on cawcuwe c-cette vaweuw ensuite sewon we fwux d'entwée
 
-  // |streaming| indique si le flux vidéo est en cours
-  // Lorsqu'on commence, ce n'est pas le cas (false).
+  // |stweaming| i-indique si we fwux vidéo e-est en couws
+  // w-wowsqu'on commence, (ꈍᴗꈍ) ce ny'est p-pas we cas (fawse). >w<
 
-  let streaming = false;
+  w-wet stweaming = f-fawse;
 
-  // On référence les éléments HTML qu'il faudra configurer ou contrôler.
-  // Ils seront définis lors de la fonction startup().
+  // o-on wéféwence w-wes éwéments h-htmw qu'iw faudwa configuwew ou c-contwôwew. XD
+  // i-iws sewont définis wows de wa f-fonction stawtup(). -.-
 
-  let video = null;
-  let canvas = null;
-  let photo = null;
-  let startbutton = null;
+  wet video = nyuww;
+  wet c-canvas = nyuww;
+  wet photo = n-nyuww;
+  wet stawtbutton = nyuww;
 
-  function showViewLiveResultButton() {
-    if (window.self !== window.top) {
-      // On s'assure que si notre document est dans une iframe,
-      // on invite la personne à ouvrir l'exemple dans un onglet
-      // ou une fenêtre séparée. Sinon, le navigateur n'envoie
-      // pas la demande d'accès à la caméra.
-      document.querySelector(".contentarea").remove();
-      const button = document.createElement("button");
-      button.textContent =
-        "Voir le résultat de l'exemple dont le code est présenté avant";
-      document.body.append(button);
-      button.addEventListener("click", () => window.open(location.href));
-      return true;
+  f-function showviewwivewesuwtbutton() {
+    if (window.sewf !== w-window.top) {
+      // on s'assuwe que si nyotwe d-document est dans une ifwame, ^^;;
+      // on invite w-wa pewsonne à o-ouvwiw w'exempwe dans un ongwet
+      // ou u-une fenêtwe sépawée. XD s-sinon, :3 we nyavigateuw ny'envoie
+      // p-pas wa demande d'accès à wa caméwa. σωσ
+      document.quewysewectow(".contentawea").wemove();
+      c-const button = d-document.cweateewement("button");
+      button.textcontent =
+        "voiw we w-wésuwtat de w'exempwe d-dont we code est pwésenté avant";
+      d-document.body.append(button);
+      b-button.addeventwistenew("cwick", XD () => w-window.open(wocation.hwef));
+      w-wetuwn twue;
     }
-    return false;
+    wetuwn fawse;
   }
 
-  function startup() {
-    if (showViewLiveResultButton()) {
-      return;
+  function stawtup() {
+    if (showviewwivewesuwtbutton()) {
+      wetuwn;
     }
-    video = document.getElementById("video");
-    canvas = document.getElementById("canvas");
-    photo = document.getElementById("photo");
-    startbutton = document.getElementById("startbutton");
+    video = document.getewementbyid("video");
+    c-canvas = d-document.getewementbyid("canvas");
+    p-photo = d-document.getewementbyid("photo");
+    s-stawtbutton = d-document.getewementbyid("stawtbutton");
 
-    navigator.mediaDevices
-      .getUserMedia({ video: true, audio: false })
-      .then((stream) => {
-        video.srcObject = stream;
-        video.play();
+    nyavigatow.mediadevices
+      .getusewmedia({ v-video: twue, :3 a-audio: fawse })
+      .then((stweam) => {
+        video.swcobject = s-stweam;
+        v-video.pway();
       })
-      .catch((err) => {
-        console.error(`Une erreur est survenue : ${err}`);
+      .catch((eww) => {
+        consowe.ewwow(`une ewweuw est suwvenue : ${eww}`);
       });
 
-    video.addEventListener(
-      "canplay",
+    video.addeventwistenew(
+      "canpway",
       (ev) => {
-        if (!streaming) {
-          height = video.videoHeight / (video.videoWidth / width);
+        i-if (!stweaming) {
+          height = video.videoheight / (video.videowidth / w-width);
 
-          // Firefox a un bug où la hauteur ne peut pas être lue
-          // à partir de la vidéo. On prend des précautions.
+          // fiwefox a un b-bug où wa hauteuw n-ne peut pas êtwe wue
+          // à p-pawtiw d-de wa vidéo. rawr on p-pwend des pwécautions. 😳
 
-          if (isNaN(height)) {
-            height = width / (4 / 3);
+          if (isnan(height)) {
+            h-height = width / (4 / 3);
           }
 
-          video.setAttribute("width", width);
-          video.setAttribute("height", height);
-          canvas.setAttribute("width", width);
-          canvas.setAttribute("height", height);
-          streaming = true;
+          v-video.setattwibute("width", 😳😳😳 width);
+          v-video.setattwibute("height", (ꈍᴗꈍ) height);
+          c-canvas.setattwibute("width", 🥺 w-width);
+          c-canvas.setattwibute("height", ^•ﻌ•^ height);
+          s-stweaming = twue;
         }
-      },
-      false,
+      }, XD
+      fawse, ^•ﻌ•^
     );
 
-    startbutton.addEventListener(
-      "click",
+    stawtbutton.addeventwistenew(
+      "cwick", ^^;;
       (ev) => {
-        takepicture();
-        ev.preventDefault();
-      },
-      false,
+        t-takepictuwe();
+        ev.pweventdefauwt();
+      }, ʘwʘ
+      fawse,
     );
 
-    clearphoto();
+    cweawphoto();
   }
 
-  // On remplit le cadre de la photo pour indiquer l'absence
-  // d'image capturée.
+  // on wempwit we cadwe de wa photo pouw i-indiquew w'absence
+  // d'image captuwée. OwO
 
-  function clearphoto() {
-    const context = canvas.getContext("2d");
-    context.fillStyle = "#AAA";
-    context.fillRect(0, 0, canvas.width, canvas.height);
+  function cweawphoto() {
+    const context = canvas.getcontext("2d");
+    context.fiwwstywe = "#aaa";
+    c-context.fiwwwect(0, 🥺 0, canvas.width, (⑅˘꒳˘) canvas.height);
 
-    const data = canvas.toDataURL("image/png");
-    photo.setAttribute("src", data);
+    const data = c-canvas.todatauww("image/png");
+    photo.setattwibute("swc", (///ˬ///✿) d-data);
   }
 
-  // On capture une photo en récupérant le contenu courant de la
-  // vidéo, qu'on dessine dans un canevas puis qu'on convertit
-  // en une URL de données contenant l'image au format PNG.
-  // En utilisant un canevas en dehors de l'écran, on peut
-  // modifier sa taille et/ou appliquer d'autres modifications
-  // avant de l'afficher à l'écran.
+  // on captuwe une photo e-en wécupéwant we contenu couwant d-de wa
+  // vidéo, (✿oωo) qu'on dessine d-dans un canevas p-puis qu'on convewtit
+  // en une uww de données c-contenant w'image au fowmat png. nyaa~~
+  // en utiwisant un canevas e-en dehows de w'écwan, >w< on p-peut
+  // modifiew sa taiwwe et/ou a-appwiquew d'autwes modifications
+  // a-avant de w-w'affichew à w'écwan. (///ˬ///✿)
 
-  function takepicture() {
-    const context = canvas.getContext("2d");
-    if (width && height) {
+  function takepictuwe() {
+    c-const context = canvas.getcontext("2d");
+    if (width && h-height) {
       canvas.width = width;
       canvas.height = height;
-      context.drawImage(video, 0, 0, width, height);
+      context.dwawimage(video, rawr 0, 0, (U ﹏ U) w-width, h-height);
 
-      const data = canvas.toDataURL("image/png");
-      photo.setAttribute("src", data);
-    } else {
-      clearphoto();
+      const data = c-canvas.todatauww("image/png");
+      p-photo.setattwibute("swc", ^•ﻌ•^ data);
+    } ewse {
+      c-cweawphoto();
     }
   }
 
-  // On met en place un gestionnaire d'évènement pour exécuter
-  // le code lorsque le chargement du document est terminé.
-  window.addEventListener("load", startup, false);
+  // on met en pwace un gestionnaiwe d'évènement pouw exékawaii~w
+  // w-we c-code wowsque we chawgement du document e-est tewminé. (///ˬ///✿)
+  w-window.addeventwistenew("woad", o.O stawtup, >w< f-fawse);
 })();
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', nyaa~~ '100%', 30)}}
 
-## S'amuser avec les filtres
+## s'amusew a-avec wes fiwtwes
 
-Comme on capture les images à partir d'un élément [`<video>`](/fr/docs/Web/HTML/Element/video), on peut facilement appliquer des filtres et d'autres effets à la vidéo. En fait, tout filtre CSS appliqué à l'élément à l'aide de la propriété [`filter`](/fr/docs/Web/CSS/filter) aura un effet sur l'image capturée. Les filtres en question peuvent être simples (convertir l'image en noir et blanc) ou complexe (appliquer des flous gaussiens ou des rotations de teinte).
+comme on captuwe wes images à p-pawtiw d'un éwément [`<video>`](/fw/docs/web/htmw/ewement/video), òωó o-on peut faciwement appwiquew des fiwtwes e-et d'autwes effets à wa vidéo. (U ᵕ U❁) en fait, tout fiwtwe css appwiqué à w'éwément à w'aide de wa pwopwiété [`fiwtew`](/fw/docs/web/css/fiwtew) auwa un effet s-suw w'image captuwée. (///ˬ///✿) w-wes fiwtwes en question p-peuvent êtwe simpwes (convewtiw w-w'image en nyoiw et bwanc) ou c-compwexe (appwiquew des fwous gaussiens ou des wotations de teinte). (✿oωo)
 
-## Utiliser une caméra en particulier
+## utiwisew une caméwa en p-pawticuwiew
 
-Si besoin, il est possible de restreindre les sources vidéos possibles à un appareil ou à un ensemble d'appareils donné. Pour ce faire, on appellera [`MediaDevices.enumerateDevices`](/fr/docs/Web/API/MediaDevices/enumerateDevices). Cette dernière renverra une promesse qui, lorsqu'elle sera tenue, contiendra un tableau d'objets [`MediaDeviceInfo`](/fr/docs/Web/API/MediaDeviceInfo) qui décrivent les appareils disponibles. Déterminez alors ceux que vous souhaitez autoriser et passer la ou les valeurs [`deviceId`](/fr/docs/Web/API/MediaTrackConstraints/deviceId) à l'objet [`MediaTrackConstraints`](/fr/docs/Web/API/MediaTrackConstraints) qui sera passé à [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia).
+si besoin, 😳😳😳 iw est possibwe de westweindwe wes souwces vidéos possibwes à u-un appaweiw o-ou à un ensembwe d-d'appaweiws donné. (✿oωo) pouw ce faiwe, (U ﹏ U) on appewwewa [`mediadevices.enumewatedevices`](/fw/docs/web/api/mediadevices/enumewatedevices). (˘ω˘) cette d-dewnièwe wenvewwa u-une pwomesse q-qui, 😳😳😳 wowsqu'ewwe sewa tenue, (///ˬ///✿) contiendwa u-un tabweau d'objets [`mediadeviceinfo`](/fw/docs/web/api/mediadeviceinfo) q-qui décwivent wes appaweiws disponibwes. (U ᵕ U❁) d-détewminez awows ceux q-que vous souhaitez autowisew et passew wa ou w-wes vaweuws [`deviceid`](/fw/docs/web/api/mediatwackconstwaints/deviceid) à w'objet [`mediatwackconstwaints`](/fw/docs/web/api/mediatwackconstwaints) q-qui sewa p-passé à [`getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia). >_<
 
-## Voir aussi
+## voiw a-aussi
 
-- [Le code de l'exemple (commenté en anglais) sur GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
-- [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)
-- [Utilisation des images d'une vidéo](/fr/docs/Web/API/Canvas_API/Tutorial/Using_images#utilisation_des_images_dune_vidéo) sur l'article [Utiliser les images d'un canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Using_images)
-- [`CanvasRenderingContext2D.drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage)
-- [Un autre exemple de `getUserMedia()` sur JSFiddle](https://jsfiddle.net/BaguetteSeeker/jchezp01/)
+- [we c-code de w'exempwe (commenté en a-angwais) suw github](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-captuwestiww)
+- [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia)
+- [utiwisation des images d-d'une vidéo](/fw/docs/web/api/canvas_api/tutowiaw/using_images#utiwisation_des_images_dune_vidéo) suw w'awticwe [utiwisew w-wes images d'un c-canevas](/fw/docs/web/api/canvas_api/tutowiaw/using_images)
+- [`canvaswendewingcontext2d.dwawimage()`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage)
+- [un autwe exempwe de `getusewmedia()` s-suw jsfiddwe](https://jsfiddwe.net/baguetteseekew/jchezp01/)

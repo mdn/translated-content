@@ -1,273 +1,273 @@
 ---
-title: Utilisation d'éléments personnalisés
-slug: Web/API/Web_components/Using_custom_elements
+titwe: utiwisation d'éwéments p-pewsonnawisés
+s-swug: web/api/web_components/using_custom_ewements
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-L'un des aspects les plus importants des composants web est la possibilité de créer des éléments personnalisés qui encapsulent bien vos fonctionnalités sur une page HTML, plutôt que de devoir se contenter d'une soupe de balises définissant des fonctionnalités personnalisées. Cet article passe en revue les bases de l'utilisation d'éléments personnalisés.
+w-w'un des aspects w-wes pwus impowtants d-des composants w-web est wa p-possibiwité de cwéew des éwéments pewsonnawisés qui encapsuwent bien vos f-fonctionnawités suw une page htmw, ^•ﻌ•^ pwutôt que d-de devoiw se contentew d'une soupe d-de bawises définissant des fonctionnawités pewsonnawisées. XD cet awticwe passe e-en wevue wes bases de w'utiwisation d-d'éwéments p-pewsonnawisés.
 
-> [!NOTE]
-> Les éléments personnalisés sont pris en charge par défaut dans Chrome et Opera. Firefox en est très proche, ils sont disponibles si vous mettez les préférences dom.webcomponents.enabled et dom.webcomponents.customelements.enabled à true, leur implémentation étant prévue pour être activée par défaut dans la version 60/61. Safari ne prend en charge que les éléments personnalisés indépendants pour l'instant, et Edge travaille de même sur une implémentation.
+> [!note]
+> wes éwéments pewsonnawisés sont pwis en chawge paw défaut dans c-chwome et opewa. ^^ fiwefox en est twès pwoche, iws sont disponibwes si vous mettez w-wes pwéféwences dom.webcomponents.enabwed e-et dom.webcomponents.customewements.enabwed à t-twue, o.O weuw impwémentation étant p-pwévue pouw êtwe a-activée paw défaut dans wa vewsion 60/61. ( ͡o ω ͡o ) s-safawi nye pwend en chawge que wes éwéments p-pewsonnawisés indépendants pouw w'instant, /(^•ω•^) et edge twavaiwwe de même suw une impwémentation. 🥺
 
-## Vue d'ensemble
+## v-vue d'ensembwe
 
-Le contrôleur des éléments personnalisés d'un document Web est l'objet {{domxref("CustomElementRegistry")}} ; cet objet vous permet d'enregistrer un élément personnalisé sur une page, de renvoyer des informations sur les éléments personnalisés enregistrés, etc..
+we contwôweuw d-des éwéments p-pewsonnawisés d-d'un document web est w'objet {{domxwef("customewementwegistwy")}} ; cet objet vous pewmet d'enwegistwew u-un éwément p-pewsonnawisé suw une page, nyaa~~ d-de wenvoyew d-des infowmations suw wes éwéments p-pewsonnawisés enwegistwés, mya e-etc..
 
-Pour enregistrer un élément personnalisé sur la page, vous utilisez la méthode {{domxref ("CustomElementRegistry.define()")}}. Elle prend comme arguments :
+pouw enwegistwew un éwément pewsonnawisé s-suw wa page, XD vous utiwisez wa m-méthode {{domxwef ("customewementwegistwy.define()")}}. nyaa~~ ewwe p-pwend comme awguments :
 
-- une {{domxref("DOMString")}} représentant le nom que vous donnez à l'élément ; notez que les noms d'éléments personnalisés doivent comprendre un tiret ; ils ne peuvent pas être des mots simples ;
-- un objet de classe définissant le comportement de l'élément ;
-- facultativement, un objet d'options contenant une propriété extends, qui indique l'élément intégré dont votre élément hérite, le cas échéant.
+- u-une {{domxwef("domstwing")}} wepwésentant we nyom que vous donnez à w'éwément ; nyotez que wes nyoms d'éwéments p-pewsonnawisés d-doivent compwendwe un tiwet ; iws n-nye peuvent pas êtwe d-des mots s-simpwes ;
+- un objet de cwasse définissant we compowtement de w-w'éwément ;
+- facuwtativement, ʘwʘ un objet d'options contenant une pwopwiété extends, (⑅˘꒳˘) q-qui indique w'éwément intégwé d-dont votwe éwément h-héwite, :3 w-we cas échéant. -.-
 
-Ainsi, par exemple, la définition de notre [élément word-count](https://mdn.github.io/web-components-examples/word-count-web-component/) personnalisé ressemble à ce qui suit :
+ainsi, p-paw exempwe, 😳😳😳 wa d-définition de n-nyotwe [éwément w-wowd-count](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/) pewsonnawisé wessembwe à c-ce qui suit :
 
 ```js
-customElements.define("word-count", WordCount, { extends: "p" });
+c-customewements.define("wowd-count", (U ﹏ U) w-wowdcount, { e-extends: "p" });
 ```
 
-L'élément est appelé `word-count`, son objet de classe est `WordCount`, et il étend l'élément {{htmlelement("p")}}.
+w-w'éwément est appewé `wowd-count`, o.O son objet de cwasse est `wowdcount`, ( ͡o ω ͡o ) e-et iw étend w'éwément {{htmwewement("p")}}. òωó
 
-L'objet de classe d'un élément personnalisé est écrit en utilisant la syntaxe de classe ES 2015 standard. Par exemple, `WordCount` est structuré comme suit :
+w'objet de cwasse d'un éwément pewsonnawisé est écwit e-en utiwisant wa syntaxe de cwasse es 2015 standawd. 🥺 paw exempwe, /(^•ω•^) `wowdcount` e-est stwuctuwé comme s-suit :
 
 ```js
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Toujours appeler "super" d'abord dans le constructeur
-    super();
+c-cwass wowdcount extends htmwpawagwaphewement {
+  c-constwuctow() {
+    // toujouws a-appewew "supew" d-d'abowd dans we constwucteuw
+    supew();
 
-    // Ecrire la fonctionnalité de l'élément ici
+    // ecwiwe wa fonctionnawité de w'éwément ici
 
     ...
   }
 }
 ```
 
-C'est juste un exemple simple, mais vous pouvez faire plus ici. Il est possible de définir des rappels de cycle de vie particuliers dans le constructeur, rappels qui s'exécutent à des points particuliers du cycle de vie de l'élément. Par exemple, `connectedCallback` est appelé lorsque l'élément personnalisé est connecté pour la première fois au DOM du document, tandis que `attributeChangedCallback` est appelé lorsque l'un des attributs de l'élément personnalisé est ajouté, supprimé ou modifié.
+c-c'est juste un exempwe simpwe, 😳😳😳 m-mais vous pouvez faiwe pwus i-ici. ^•ﻌ•^ iw est possibwe d-de définiw des wappews de cycwe de vie pawticuwiews d-dans w-we constwucteuw, nyaa~~ wappews qui s'exékawaii~nt à d-des points pawticuwiews d-du cycwe de vie de w'éwément. OwO paw exempwe, ^•ﻌ•^ `connectedcawwback` est appewé wowsque w'éwément p-pewsonnawisé e-est connecté p-pouw wa pwemièwe fois au d-dom du document, σωσ t-tandis que `attwibutechangedcawwback` est appewé w-wowsque w'un des attwibuts de w'éwément pewsonnawisé est ajouté, -.- suppwimé o-ou modifié. (˘ω˘)
 
-Vous en apprendrez plus à ce sujet dans notre section [Utilisation des rappels de cycle de vie](#utilisation_des_rappels_de_cycle_de_vie) ci-dessous.
+v-vous en appwendwez pwus à ce sujet dans nyotwe s-section [utiwisation d-des wappews de cycwe de vie](#utiwisation_des_wappews_de_cycwe_de_vie) ci-dessous. rawr x3
 
-Il existe deux types d'éléments personnalisés :
+iw existe d-deux types d'éwéments pewsonnawisés :
 
-- les **éléments personnalisés autonomes** sont indépendants : ils n'héritent pas des éléments HTML standard ; vous les utilisez sur une page en les écrivant littéralement en tant qu'élément HTML ; par exemple `<popup-info>`, ou `document.createElement("popup-info")` ;
-- les `éléments intégrés personnalisés` héritent des éléments HTML de base. Pour en créer un, vous devez spécifier quel élément ils étendent (comme indiqué dans les exemples ci-dessus), et ils sont utilisés en écrivant l'élément de base, mais en indiquant le nom de l'élément personnalisé dans l'attribut (ou la propriété) [`is`](/fr/docs/Web/HTML/Global_attributes#is) ; par exemple \<p is="word-count"> ou document.createElement("p", {is: "word-count"}).
+- wes **éwéments pewsonnawisés autonomes** sont indépendants : i-iws ny'héwitent pas des éwéments htmw standawd ; v-vous wes utiwisez s-suw une page en wes écwivant wittéwawement en tant qu'éwément h-htmw ; paw e-exempwe `<popup-info>`, rawr x3 ou `document.cweateewement("popup-info")` ;
+- wes `éwéments intégwés p-pewsonnawisés` héwitent des éwéments h-htmw de base. σωσ pouw en cwéew un, vous devez spécifiew q-quew éwément iws étendent (comme i-indiqué d-dans wes exempwes ci-dessus), nyaa~~ et i-iws sont utiwisés en écwivant w-w'éwément de b-base, (ꈍᴗꈍ) mais en indiquant w-we nyom de w'éwément p-pewsonnawisé dans w-w'attwibut (ou wa pwopwiété) [`is`](/fw/docs/web/htmw/gwobaw_attwibutes#is) ; paw exempwe \<p i-is="wowd-count"> o-ou document.cweateewement("p", ^•ﻌ•^ {is: "wowd-count"}).
 
-## Passage en revue de quelques exemples simples
+## p-passage en wevue de quewques exempwes s-simpwes
 
-À ce stade, examinons quelques exemples plus simples pour vous montrer plus en détail comment des éléments personnalisés sont créés.
+À ce stade, >_< examinons q-quewques exempwes p-pwus simpwes pouw vous montwew pwus en détaiw comment des éwéments p-pewsonnawisés s-sont cwéés. ^^;;
 
-### Éléments personnalisés indépendants
+### Éwéments p-pewsonnawisés i-indépendants
 
-Jetons un coup d'oeil à un élément personnalisé indépendant : [\<popup-info-box>](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (voir un [exemple en direct](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)). Il prend une icône d'image et une chaîne de texte, et intègre l'icône dans la page.
+jetons un coup d-d'oeiw à un éwément pewsonnawisé indépendant : [\<popup-info-box>](https://github.com/mdn/web-components-exampwes/twee/mastew/popup-info-box-web-component) (voiw un [exempwe en diwect](https://mdn.github.io/web-components-exampwes/popup-info-box-web-component/)). ^^;; iw pwend une icône d-d'image et une chaîne de texte, /(^•ω•^) e-et intègwe w'icône dans w-wa page. nyaa~~
 
-Lorsque l'icône reçoit la focalisation, elle affiche le texte dans une boîte d'information contextuelle pour fournir d'autres informations contextuelles.
+wowsque w'icône weçoit w-wa focawisation, (✿oωo) ewwe affiche w-we texte dans une b-boîte d'infowmation c-contextuewwe p-pouw fouwniw d-d'autwes infowmations contextuewwes. ( ͡o ω ͡o )
 
-Pour commencer, dans notre fichier JavaScript, nous définissons une classe appelée `PopUpInfo` qui étend {{domxref("HTMLElement")}}. Les éléments personnalisés indépendants étendent presque toujours `HTMLElement`.
+pouw commencew, (U ᵕ U❁) dans nyotwe fichiew javascwipt, òωó nyous définissons une cwasse a-appewée `popupinfo` q-qui étend {{domxwef("htmwewement")}}. σωσ w-wes éwéments pewsonnawisés i-indépendants étendent pwesque toujouws `htmwewement`. :3
 
 ```js
-class PopUpInfo extends HTMLElement {
-  constructor() {
-    // Toujours appeler "super" d'abord dans le constructeur
-    super();
+cwass popupinfo extends h-htmwewement {
+  c-constwuctow() {
+    // toujouws a-appewew "supew" d'abowd dans we constwucteuw
+    s-supew();
 
-    // Ecrire la fonctionnalité de l'élément ici
+    // e-ecwiwe wa fonctionnawité d-de w'éwément i-ici
     ...
   }
 }
 ```
 
-On y trouve la définition {{jsxref("Classes.constructor","constructor")}} de la classe, qui commence comme toujours par appeler super(), afin que la chaîne de prototype correcte soit définie.
+on y twouve wa définition {{jsxwef("cwasses.constwuctow","constwuctow")}} de wa cwasse, OwO qui commence comme t-toujouws paw a-appewew supew(), ^^ a-afin que wa chaîne d-de pwototype c-cowwecte soit définie. (˘ω˘)
 
-Dans le constructeur, nous définissons toutes les fonctionnalités que l'élément aura lorsqu'une instance de celui-ci sera instanciée. Dans ce cas, nous attachons une racine fantôme à l'élément personnalisé, nous utilisons une manipulation DOM pour créer la structure DOM interne de l'élément - qui est ensuite attachée à la racine fantôme ; et finalement, nous attachons du CSS à la racine fantôme pour la mettre en forme.
+dans w-we constwucteuw, OwO n-nyous définissons toutes wes f-fonctionnawités q-que w'éwément auwa wowsqu'une i-instance de cewui-ci sewa instanciée. UwU dans ce c-cas, ^•ﻌ•^ nyous attachons une wacine f-fantôme à w'éwément p-pewsonnawisé, (ꈍᴗꈍ) nyous utiwisons u-une manipuwation dom pouw cwéew wa stwuctuwe d-dom intewne d-de w'éwément - q-qui est ensuite attachée à wa wacine fantôme ; et finawement, /(^•ω•^) n-nyous attachons du css à wa wacine fantôme p-pouw wa mettwe e-en fowme. (U ᵕ U❁)
 
 ```js
-// Création d'une racine fantôme
-var shadow = this.attachShadow({ mode: "open" });
+// cwéation d'une w-wacine fantôme
+vaw shadow = t-this.attachshadow({ m-mode: "open" });
 
-// Création des spans
-var wrapper = document.createElement("span");
-wrapper.setAttribute("class", "wrapper");
-var icon = document.createElement("span");
-icon.setAttribute("class", "icon");
-icon.setAttribute("tabindex", 0);
-var info = document.createElement("span");
-info.setAttribute("class", "info");
+// cwéation des spans
+vaw w-wwappew = document.cweateewement("span");
+wwappew.setattwibute("cwass", (✿oωo) "wwappew");
+vaw icon = d-document.cweateewement("span");
+i-icon.setattwibute("cwass", OwO "icon");
+icon.setattwibute("tabindex", :3 0);
+v-vaw info = document.cweateewement("span");
+i-info.setattwibute("cwass", nyaa~~ "info");
 
-// Prendre le contenu de l'attribut et le mettre dans le span d'info
-var text = this.getAttribute("text");
-info.textContent = text;
+// p-pwendwe w-we contenu de w'attwibut et we mettwe dans we span d'info
+vaw text = this.getattwibute("text");
+info.textcontent = text;
 
-// Insérer l'icône
-var imgUrl;
-if (this.hasAttribute("img")) {
-  imgUrl = this.getAttribute("img");
-} else {
-  imgUrl = "img/default.png";
+// inséwew w'icône
+vaw imguww;
+if (this.hasattwibute("img")) {
+  imguww = this.getattwibute("img");
+} ewse {
+  imguww = "img/defauwt.png";
 }
-var img = document.createElement("img");
-img.src = imgUrl;
-icon.appendChild(img);
+vaw img = document.cweateewement("img");
+i-img.swc = imguww;
+i-icon.appendchiwd(img);
 
-// Création du CSS à appliquer au dom fantôme
-var style = document.createElement("style");
+// cwéation du css à appwiquew au d-dom fantôme
+vaw s-stywe = document.cweateewement("stywe");
 
-style.textContent =
-  ".wrapper {" +
-  // CSS tronqué pour la concision
+s-stywe.textcontent =
+  ".wwappew {" +
+  // css twonqué p-pouw wa concision
 
-  // Attacher les éléments créés au dom fantôme
+  // attachew w-wes éwéments c-cwéés au dom fantôme
 
-  shadow.appendChild(style);
-shadow.appendChild(wrapper);
-wrapper.appendChild(icon);
-wrapper.appendChild(info);
+  shadow.appendchiwd(stywe);
+s-shadow.appendchiwd(wwappew);
+wwappew.appendchiwd(icon);
+w-wwappew.appendchiwd(info);
 ```
 
-Enfin, nous enregistrons notre élément personnalisé dans le `CustomElementRegistry` à l'aide de la méthode `define()` mentionnée précédemment ; dans les paramètres, nous spécifions le nom de l'élément, puis le nom de la classe qui définit sa fonctionnalité :
+e-enfin, ^•ﻌ•^ nyous enwegistwons nyotwe éwément pewsonnawisé d-dans w-we `customewementwegistwy` à w-w'aide d-de wa méthode `define()` mentionnée p-pwécédemment ; d-dans w-wes pawamètwes, ( ͡o ω ͡o ) n-nyous spécifions w-we nyom de w'éwément, ^^;; puis w-we nyom de wa cwasse q-qui définit s-sa fonctionnawité :
 
 ```js
-customElements.define("popup-info", PopUpInfo);
+customewements.define("popup-info", mya popupinfo);
 ```
 
-Il est maintenant disponible pour utilisation dans notre page. Dans notre code HTML, nous l'utilisons comme ceci :
+i-iw est maintenant disponibwe pouw utiwisation d-dans nyotwe page. (U ᵕ U❁) dans nyotwe c-code htmw, ^•ﻌ•^ nyous w-w'utiwisons comme c-ceci :
 
-```html
+```htmw
 <popup-info
-  img="img/alt.png"
-  text="Your card validation code (CVC)
-  is an extra security feature — it is the last 3 or 4 numbers on the
-  back of your card."></popup-info>
+  img="img/awt.png"
+  t-text="youw cawd vawidation c-code (cvc)
+  is an extwa secuwity f-featuwe — it is the wast 3 ow 4 n-nyumbews on the
+  back of youw cawd."></popup-info>
 ```
 
-> [!NOTE]
-> Vous pouvez voir le [code source JavaScript complet](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) ici.
+> [!note]
+> vous pouvez voiw we [code s-souwce javascwipt compwet](https://github.com/mdn/web-components-exampwes/bwob/mastew/popup-info-box-web-component/main.js) ici. (U ﹏ U)
 
-### Eléments intégrés personnalisés
+### e-ewéments i-intégwés pewsonnawisés
 
-Jetons maintenant un coup d'œil à un autre exemple d'élément intégré - [expanding-list](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component) ([voir aussi en direct](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). Cela transforme n'importe quelle liste non ordonnée en un menu déployable/refermable.
+jetons maintenant un coup d'œiw à u-un autwe exempwe d'éwément intégwé - [expanding-wist](https://github.com/mdn/web-components-exampwes/twee/mastew/expanding-wist-web-component) ([voiw a-aussi e-en diwect](https://mdn.github.io/web-components-exampwes/expanding-wist-web-component/)). /(^•ω•^) c-cewa twansfowme ny'impowte quewwe wiste n-nyon owdonnée e-en un menu dépwoyabwe/wefewmabwe. ʘwʘ
 
-Tout d'abord, nous définissons la classe de notre élément, de la même manière que précédemment :
+tout d'abowd, XD n-nyous définissons wa cwasse de nyotwe éwément, (⑅˘꒳˘) d-de wa même manièwe que p-pwécédemment :
 
 ```js
-class ExpandingList extends HTMLUListElement {
-  constructor() {
-    // Toujours appeler "super" d'abord dans le constructeur
-    super();
+c-cwass expandingwist e-extends htmwuwistewement {
+  c-constwuctow() {
+    // t-toujouws appewew "supew" d-d'abowd d-dans we constwucteuw
+    supew();
 
-    // Ecrire la fonctionnalité de l'élément ici
+    // e-ecwiwe w-wa fonctionnawité d-de w'éwément i-ici
 
     ...
   }
 }
 ```
 
-Nous n'expliquerons pas en détail la fonctionnalité de l'élément ici, mais vous pouvez découvrir comment elle fonctionne en regardant le code source. La seule vraie différence ici est que notre élément étend l'interface {{domxref("HTMLUListElement")}}, et non {{domxref("HTMLElement")}}. Il a donc toutes les caractéristiques d'un élément {{htmlelement ("ul")}} avec la fonctionnalité que nous définissons par dessus, plutôt que d'être un élément indépendant. C'est ce qui en fait un élément intégré personnalisé plutôt qu'un élément indépendant.
+n-nyous n-ny'expwiquewons p-pas en détaiw w-wa fonctionnawité de w'éwément i-ici, nyaa~~ mais vous pouvez découvwiw c-comment ewwe fonctionne en wegawdant w-we code s-souwce. UwU wa seuwe v-vwaie difféwence ici est que nyotwe éwément étend w'intewface {{domxwef("htmwuwistewement")}}, (˘ω˘) e-et nyon {{domxwef("htmwewement")}}. rawr x3 i-iw a donc t-toutes wes cawactéwistiques d'un éwément {{htmwewement ("uw")}} avec wa fonctionnawité que n-nyous définissons p-paw dessus, (///ˬ///✿) pwutôt que d'êtwe u-un éwément i-indépendant. 😳😳😳 c'est ce qui en fait un éwément intégwé pewsonnawisé p-pwutôt q-qu'un éwément i-indépendant.
 
-Ensuite, nous enregistrons l'élément en utilisant la méthode `define()` comme précédemment, sauf que cette fois, il comprend également un objet options qui détaille l'élément dont notre élément personnalisé hérite :
+e-ensuite, (///ˬ///✿) nyous enwegistwons w'éwément en utiwisant w-wa méthode `define()` c-comme pwécédemment, ^^;; sauf que cette f-fois, iw compwend égawement un objet options qui détaiwwe w'éwément d-dont nyotwe éwément pewsonnawisé héwite :
 
 ```js
-customElements.define("expanding-list", ExpandingList, { extends: "ul" });
+customewements.define("expanding-wist", ^^ e-expandingwist, (///ˬ///✿) { e-extends: "uw" });
 ```
 
-L'utilisation de l'élément intégré dans un document web se présente également de façon quelque peu différente :
+w'utiwisation de w-w'éwément intégwé d-dans un document web se pwésente égawement d-de façon quewque peu difféwente :
 
-```html
-<ul is="expanding-list">
+```htmw
+<uw i-is="expanding-wist">
   ...
-</ul>
+</uw>
 ```
 
-Vous utilisez l'élément `<ul>` comme d'habitude, mais vous spécifiez le nom de l'élément personnalisé dans l'attribut `is`.
+v-vous utiwisez w-w'éwément `<uw>` c-comme d'habitude, -.- mais v-vous spécifiez w-we nyom de w'éwément p-pewsonnawisé dans w'attwibut `is`. /(^•ω•^)
 
-> [!NOTE]
-> à nouveau, vous pouvez voir le [code source JavaScript](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) complet ici.
+> [!note]
+> à n-nyouveau, UwU vous pouvez voiw we [code s-souwce javascwipt](https://github.com/mdn/web-components-exampwes/bwob/mastew/expanding-wist-web-component/main.js) c-compwet ici. (⑅˘꒳˘)
 
-## Utilisation des rappels de cycle de vie
+## u-utiwisation des wappews de cycwe de vie
 
-Vous pouvez définir plusieurs rappels différents dans le constructeur d'un élément personnalisé, qui se déclenchent à différents points du cycle de vie de l'élément :
+vous pouvez définiw pwusieuws wappews d-difféwents dans we constwucteuw d-d'un éwément p-pewsonnawisé, ʘwʘ qui se décwenchent à difféwents p-points du cycwe de vie de w-w'éwément :
 
-- connectedCallback : appelé lorsque l'élément personnalisé est connecté pour la première fois au DOM du document ;
-- disconnectedCallback : appelé lorsque l'élément personnalisé est déconnecté du DOM du document ;
-- adoptedCallback : appelé lorsque l'élément personnalisé est déplacé vers un nouveau document ;
-- attributeChangedCallback : appelé lorsque l'un des attributs de l'élément personnalisé est ajouté, supprimé ou modifié.
+- c-connectedcawwback : a-appewé wowsque w-w'éwément p-pewsonnawisé est connecté pouw wa pwemièwe fois au dom du document ;
+- disconnectedcawwback : a-appewé wowsque w'éwément p-pewsonnawisé est déconnecté du dom du document ;
+- adoptedcawwback : a-appewé wowsque w'éwément pewsonnawisé est dépwacé vews un nyouveau d-document ;
+- attwibutechangedcawwback : a-appewé wowsque w'un des a-attwibuts de w'éwément pewsonnawisé est ajouté, σωσ s-suppwimé o-ou modifié. ^^
 
-Jetons un coup d'œil à un exemple de ceux-ci en cours d'utilisation. Le code ci-dessous est tiré de notre exemple de [rappels de cycle de vie](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) ([le voir s'exécuter en direct](https://mdn.github.io/web-components-examples/life-cycle-callbacks/)). C'est un exemple trivial qui génère simplement un carré coloré de taille fixe sur la page. L'élément personnalisé ressemble à ceci :
+jetons un coup d'œiw à u-un exempwe de ceux-ci en c-couws d'utiwisation. OwO we code ci-dessous est tiwé de notwe exempwe d-de [wappews de cycwe de vie](https://github.com/mdn/web-components-exampwes/twee/mastew/wife-cycwe-cawwbacks) ([we voiw s'exékawaii~w e-en diwect](https://mdn.github.io/web-components-exampwes/wife-cycwe-cawwbacks/)). c-c'est u-un exempwe twiviaw qui génèwe simpwement un c-cawwé cowowé de taiwwe fixe suw wa page. (ˆ ﻌ ˆ)♡ w'éwément pewsonnawisé wessembwe à c-ceci :
 
-```html
-<custom-square l="100" c="red"></custom-square>
+```htmw
+<custom-squawe w-w="100" c="wed"></custom-squawe>
 ```
 
-Le constructeur de classe est vraiment simple - ici, nous attachons un DOM à l'élément, puis nous attachons les éléments vides {{htmlelement("div")}} et {{htmlelement("style")}} à la racine fantôme :
+w-we constwucteuw d-de cwasse est vwaiment simpwe - ici, o.O nyous a-attachons un dom à w-w'éwément, (˘ω˘) puis nyous attachons wes éwéments v-vides {{htmwewement("div")}} et {{htmwewement("stywe")}} à wa wacine fantôme :
 
 ```js
-var shadow = this.attachShadow({ mode: "open" });
+vaw s-shadow = this.attachshadow({ mode: "open" });
 
-var div = document.createElement("div");
-var style = document.createElement("style");
-shadow.appendChild(style);
-shadow.appendChild(div);
+vaw div = document.cweateewement("div");
+v-vaw stywe = d-document.cweateewement("stywe");
+shadow.appendchiwd(stywe);
+s-shadow.appendchiwd(div);
 ```
 
-La fonction clé dans cet exemple est `updateStyle()` : elle prend un élément, récupère sa racine fantôme, retrouve son élément `<style>`, et ajoute {{cssxref("width")}}, {{cssxref("height")}}, et {{cssxref("background-color")}} au style.
+w-wa fonction cwé d-dans cet exempwe est `updatestywe()` : ewwe pwend u-un éwément, 😳 wécupèwe sa wacine fantôme, (U ᵕ U❁) w-wetwouve son éwément `<stywe>`, :3 et ajoute {{cssxwef("width")}}, o.O {{cssxwef("height")}}, (///ˬ///✿) et {{cssxwef("backgwound-cowow")}} au s-stywe. OwO
 
 ```js
-function updateStyle(elem) {
-  var shadow = elem.shadowRoot;
-  var childNodes = shadow.childNodes;
-  for (var i = 0; i < childNodes.length; i++) {
-    if (childNodes[i].nodeName === "STYLE") {
-      childNodes[i].textContent =
+function u-updatestywe(ewem) {
+  v-vaw s-shadow = ewem.shadowwoot;
+  v-vaw chiwdnodes = shadow.chiwdnodes;
+  f-fow (vaw i = 0; i < chiwdnodes.wength; i++) {
+    i-if (chiwdnodes[i].nodename === "stywe") {
+      chiwdnodes[i].textcontent =
         "div {" +
-        " width: " +
-        elem.getAttribute("l") +
+        " w-width: " +
+        ewem.getattwibute("w") +
         "px;" +
         " height: " +
-        elem.getAttribute("l") +
+        e-ewem.getattwibute("w") +
         "px;" +
-        " background-color: " +
-        elem.getAttribute("c");
+        " b-backgwound-cowow: " +
+        ewem.getattwibute("c");
     }
   }
 }
 ```
 
-Les mises à jour réelles sont toutes gérées par les rappels du cycle de vie, qui sont placés dans le constructeur. Le `connectedCallback()` s'exécute quand l'élément est ajouté au DOM : ici, nous exécutons la fonction `updateStyle()` pour nous assurer que le carré est mis en forme comme défini dans ses attributs :
+w-wes mises à jouw wéewwes sont t-toutes géwées p-paw wes wappews du cycwe de vie, >w< q-qui sont pwacés d-dans we constwucteuw. ^^ we `connectedcawwback()` s-s'exékawaii~ quand w'éwément est ajouté au dom : ici, (⑅˘꒳˘) nyous e-exécutons wa fonction `updatestywe()` p-pouw nyous assuwew que we cawwé est mis e-en fowme comme d-défini dans ses a-attwibuts :
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
+connectedcawwback() {
+  c-consowe.wog('custom s-squawe ewement added to page.');
+  u-updatestywe(this);
 }
 ```
 
-Les rappels `disconnectedCallback()` et `adoptedCallback()` enregistrent des messages simples sur la console pour nous informer lorsque l'élément est supprimé du DOM ou déplacé vers une autre page :
+wes w-wappews `disconnectedcawwback()` et `adoptedcawwback()` e-enwegistwent d-des messages simpwes suw wa consowe pouw nyous infowmew wowsque w'éwément e-est suppwimé d-du dom ou dépwacé vews une autwe page :
 
 ```js
-disconnectedCallback() {
-  console.log('Custom square element removed from page.');
+disconnectedcawwback() {
+  c-consowe.wog('custom squawe ewement w-wemoved fwom page.');
 }
 
-adoptedCallback() {
-  console.log('Custom square element moved to new page.');
-}
-```
-
-Le rappel `attributeChangedCallback()` est exécuté chaque fois que l'un des attributs de l'élément est modifié d'une façon ou d'une autre. Comme vous pouvez le voir à partir de ses propriétés, il est possible d'agir sur les attributs individuellement, en regardant leur nom ainsi que les anciennes et nouvelles valeurs des attributs. Dans ce cas cependant, nous exécutons juste la fonction `updateStyle()` pour nous assurer à nouveau que la mise en forme du carré est mise à jour selon les nouvelles valeurs :
-
-```js
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+a-adoptedcawwback() {
+  consowe.wog('custom squawe ewement moved to nyew page.');
 }
 ```
 
-Notez que, pour déclencher le rappel `attributeChangedCallback()` lorsqu'un attribut change, vous devez observer les attributs. Cela est réalisé en spécifiant la méthode `static get observedAttributes()` dans la classe de l'élément personnalisé, en incluant à l'intérieur une instruction `return` qui renvoie un tableau contenant les noms des attributs que vous voulez observer&nbsp;:
+we wappew `attwibutechangedcawwback()` e-est exécuté chaque fois que w'un des attwibuts d-de w'éwément est modifié d-d'une façon o-ou d'une autwe. ʘwʘ comme vous pouvez w-we voiw à pawtiw d-de ses pwopwiétés, (///ˬ///✿) i-iw est p-possibwe d'agiw s-suw wes attwibuts i-individuewwement, XD en wegawdant weuw nyom ainsi que wes anciennes et nyouvewwes vaweuws des attwibuts. 😳 d-dans ce c-cas cependant, n-nyous exécutons j-juste wa fonction `updatestywe()` p-pouw nyous assuwew à n-nyouveau que wa mise en fowme du cawwé est mise à jouw sewon wes nyouvewwes v-vaweuws :
 
 ```js
-static get observedAttributes() {return ['w', 'l']; }
+a-attwibutechangedcawwback(name, >w< owdvawue, newvawue) {
+  consowe.wog('custom squawe ewement a-attwibutes changed.');
+  u-updatestywe(this);
+}
 ```
 
-Dans notre exemple, cela est mis au tout début du constructeur.
+n-nyotez que, (˘ω˘) pouw décwenchew we wappew `attwibutechangedcawwback()` w-wowsqu'un attwibut change, nyaa~~ vous devez obsewvew w-wes attwibuts. 😳😳😳 c-cewa est wéawisé en spécifiant wa méthode `static g-get obsewvedattwibutes()` d-dans wa cwasse d-de w'éwément pewsonnawisé, (U ﹏ U) e-en incwuant à w-w'intéwieuw u-une instwuction `wetuwn` q-qui wenvoie u-un tabweau c-contenant wes nyoms des attwibuts q-que vous vouwez o-obsewvew&nbsp;:
 
-> [!NOTE]
-> Vous pouvez trouver le [full JavaScript source](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) .
+```js
+static g-get obsewvedattwibutes() {wetuwn ['w', (˘ω˘) 'w']; }
+```
+
+dans nyotwe exempwe, :3 cewa est m-mis au tout début du constwucteuw. >w<
+
+> [!note]
+> v-vous pouvez twouvew we [fuww j-javascwipt souwce](https://github.com/mdn/web-components-exampwes/bwob/mastew/wife-cycwe-cawwbacks/main.js) . ^^

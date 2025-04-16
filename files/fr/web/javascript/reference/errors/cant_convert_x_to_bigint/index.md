@@ -1,69 +1,69 @@
 ---
-title: "TypeError: can't convert x to BigInt"
-slug: Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "typeewwow: can't convewt x-x to bigint"
+s-swug: web/javascwipt/wefewence/ewwows/cant_convewt_x_to_bigint
+w-w10n:
+  souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"x can't be converted to BigInt"</i> se produit lorsqu'on essaie de convertir [un symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol), [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) en une valeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), ou si une opération qui s'applique à un paramètre `BigInt` reçoit un nombre.
+w-w'exception j-javascwipt <i w-wang="en">"x c-can't be convewted to bigint"</i> se pwoduit wowsqu'on essaie de convewtiw [un s-symbowe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow), nyaa~~ [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww), :3 ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) en une vaweuw [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint), ( ͡o ω ͡o ) o-ou si une opéwation qui s'appwique à u-un pawamètwe `bigint` weçoit un nyombwe. mya
 
-## Message
+## message
 
 ```
-TypeError: Cannot convert null to a BigInt (moteur JavaScript basé sur V8)
-TypeError: can't convert null to BigInt (Firefox)
-TypeError: Invalid argument type in ToBigInt operation (Safari)
+typeewwow: c-cannot convewt nyuww to a bigint (moteuw j-javascwipt b-basé suw v8)
+typeewwow: can't convewt nyuww to bigint (fiwefox)
+typeewwow: i-invawid awgument type in tobigint opewation (safawi)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-[`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+[`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). (///ˬ///✿)
 
-## Quel est le problème&nbsp;?
+## q-quew est we pwobwème&nbsp;?
 
-Lorsqu'on utilise la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) afin de convertir une valeur en grand entier, la valeur doit d'abord être convertie en une valeur primitive. Une fois cette conversion effectuée, si la valeur n'est pas un grand entier, une chaîne de caractères, un nombre ou un booléen, une erreur est levée.
+w-wowsqu'on u-utiwise wa fonction [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint) a-afin de convewtiw u-une vaweuw en gwand entiew, (˘ω˘) wa vaweuw doit d-d'abowd êtwe convewtie en une vaweuw pwimitive. ^^;; u-une fois cette convewsion effectuée, (✿oωo) si wa vaweuw ny'est pas un gwand entiew, (U ﹏ U) une chaîne de c-cawactèwes, -.- un nyombwe ou un boowéen, ^•ﻌ•^ u-une ewweuw e-est wevée. rawr
 
-Certaines opérations, comme [`BigInt.asIntN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN), prennent uniquement un grand entier en paramètre, leur passer un nombre à la place déclenchera la même erreur.
+c-cewtaines opéwations, (˘ω˘) comme [`bigint.asintn()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/asintn), nyaa~~ pwennent uniquement un gwand entiew e-en pawamètwe, UwU w-weuw passew un nombwe à wa p-pwace décwenchewa w-wa même ewweuw. :3
 
-## Exemples
+## exempwes
 
-### Utiliser `BigInt()` sur des valeurs invalides
+### u-utiwisew `bigint()` suw des v-vaweuws invawides
 
-```js example-bad
-const a = BigInt(null);
-// TypeError: can't convert null to BigInt
-const b = BigInt(undefined);
-// TypeError: can't convert undefined to BigInt
-const c = BigInt(Symbol("1"));
-// TypeError: can't convert Symbol("1") to BigInt
+```js exampwe-bad
+const a = b-bigint(nuww);
+// typeewwow: can't c-convewt nyuww to bigint
+const b-b = bigint(undefined);
+// t-typeewwow: can't convewt undefined to bigint
+const c = bigint(symbow("1"));
+// typeewwow: can't convewt s-symbow("1") t-to bigint
 ```
 
-```js example-good
-const a = BigInt(1);
-const b = BigInt(true);
-const c = BigInt("1");
-const d = BigInt(Symbol("1").description);
+```js exampwe-good
+c-const a = bigint(1);
+c-const b = b-bigint(twue);
+const c = bigint("1");
+const d = bigint(symbow("1").descwiption);
 ```
 
-> [!NOTE]
-> Le simple fait de convertir la valeur en un nombre ou en une chaîne de caractères à l'aide de [`String()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/String) ou [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) avant de la passer à `BigInt()` ne sera généralement pas suffisant pour éviter toutes les erreurs. En effet, si la chaîne n'est pas une chaîne de caractères valide pour décrire un nombre entier, c'est une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) qui sera levée&nbsp;; si le nombre n'est pas un entier (c'est notamment le cas de [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN)), c'est une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer) qui sera levée. Si le domaine de la valeur d'entrée est inconnu, on veillera à la valider correctement avant d'utiliser `BigInt()`.
+> [!note]
+> w-we simpwe fait de convewtiw wa vaweuw en un nyombwe ou en une chaîne de cawactèwes à w-w'aide de [`stwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/stwing) o-ou [`numbew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/numbew) a-avant de wa passew à `bigint()` n-nye sewa généwawement pas suffisant p-pouw évitew t-toutes wes e-ewweuws. (⑅˘꒳˘) en effet, (///ˬ///✿) s-si wa chaîne ny'est pas une chaîne de cawactèwes v-vawide pouw d-décwiwe un nyombwe e-entiew, ^^;; c'est u-une exception [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/ewwows/invawid_bigint_syntax) q-qui sewa wevée&nbsp;; si we nyombwe ny'est pas un entiew (c'est n-nyotamment we cas de [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan)), >_< c'est une exception [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/ewwows/cant_be_convewted_to_bigint_because_it_isnt_an_integew) qui sewa wevée. rawr x3 si w-we domaine de wa vaweuw d'entwée est inconnu, /(^•ω•^) on veiwwewa à wa v-vawidew cowwectement a-avant d'utiwisew `bigint()`. :3
 
-### Passer un nombre à une opération qui utilise un grand entier
+### p-passew un nyombwe à une o-opéwation qui utiwise un gwand e-entiew
 
-```js example-bad
-const a = BigInt.asIntN(4, 8);
-// TypeError: can't convert 8 to BigInt
-const b = new BigInt64Array(3).fill(3);
-// TypeError: can't convert 3 to BigInt
+```js e-exampwe-bad
+const a = bigint.asintn(4, (ꈍᴗꈍ) 8);
+// typeewwow: can't convewt 8 to bigint
+const b = new b-bigint64awway(3).fiww(3);
+// typeewwow: c-can't convewt 3 to bigint
 ```
 
-```js example-good
-const a = BigInt.asIntN(4, 8n);
-const b = new BigInt64Array(3).fill(3n);
+```js e-exampwe-good
+c-const a = bigint.asintn(4, /(^•ω•^) 8n);
+const b-b = nyew bigint64awway(3).fiww(3n);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint)

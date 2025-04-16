@@ -1,58 +1,58 @@
 ---
-title: SVGTitleElement
-slug: Web/API/SVGTitleElement
+titwe: svgtitweewement
+swug: w-web/api/svgtitweewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## Interface DOM de l'élément SVG `title`
+## i-intewface dom d-de w'éwément s-svg `titwe`
 
-L'interface `SVGTitleElement` correspond à l'élément {{ SVGElement("title") }}.
+w'intewface `svgtitweewement` c-cowwespond à w-w'éwément {{ s-svgewement("titwe") }}. nyaa~~
 
-### Aperçu de l'interface
+### a-apewçu de w'intewface
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Implémente aussi</th>
+    <tw>
+      <th scope="wow">impwémente aussi</th>
       <td>
-        {{ domxref("SVGElement") }},
-        {{ domxref("SVGLangSpace") }},
-        {{ domxref("SVGStylable") }}
+        {{ d-domxwef("svgewement") }}, /(^•ω•^)
+        {{ domxwef("svgwangspace") }}, rawr
+        {{ domxwef("svgstywabwe") }}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Metodes</th>
-      <td><em>Aucunes</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Propritiétés</th>
-      <td><em>Aucunes</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Norme</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">metodes</th>
+      <td><em>aucunes</em></td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwitiétés</th>
+      <td><em>aucunes</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">nowme</th>
       <td>
         <a
-          href="http://www.w3.org/TR/SVG11/struct.html#InterfaceSVGTitleElement"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="http://www.w3.owg/tw/svg11/stwuct.htmw#intewfacesvgtitweewement"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriétés
+## pwopwiétés
 
-L'interface `SVGTitleElement` n'a pas de propriétés spécifiques.
+w-w'intewface `svgtitweewement` ny'a pas d-de pwopwiétés s-spécifiques. OwO
 
-## Méthodes
+## méthodes
 
-L'interface `SVGTitleElement` n'a pas de métodes spécifiques.
+w'intewface `svgtitweewement` ny'a pas de métodes s-spécifiques. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

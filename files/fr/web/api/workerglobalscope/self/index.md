@@ -1,67 +1,67 @@
 ---
-title: WorkerGlobalScope.self
-slug: Web/API/WorkerGlobalScope/self
+titwe: wowkewgwobawscope.sewf
+swug: web/api/wowkewgwobawscope/sewf
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-La propriété en lecture seule **`self`** de l'interface {{domxref("WorkerGlobalScope")}} retourne une référence au `WorkerGlobalScope` lui-même. La plupart du temps il s'agit d'un contexte spécifique comme {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, ou {{domxref("ServiceWorkerGlobalScope")}}.
+wa pwopwiété e-en wectuwe s-seuwe **`sewf`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} w-wetouwne une w-wéféwence au `wowkewgwobawscope` w-wui-même. wa pwupawt du temps iw s'agit d'un contexte spécifique comme {{domxwef("dedicatedwowkewgwobawscope")}}, :3 {{domxwef("shawedwowkewgwobawscope")}}, OwO o-ou {{domxwef("sewvicewowkewgwobawscope")}}. (U ﹏ U)
 
-## Syntaxe
-
-```js
-var selfRef = self;
-```
-
-### Valeur
-
-Un objet global scope (qui diffère selon le type du worker concerné, comme indiqué ci-dessus).
-
-## Exemple
-
-Si vous appelez
+## syntaxe
 
 ```js
-console.log(self);
+vaw sewfwef = sewf;
 ```
 
-au sein d'un worker, vous obtiendrez un worker global scope du même type que l'objet worker écrit sur la console — quelque chose comme ce qui suit :
+### v-vaweuw
+
+un objet gwobaw s-scope (qui diffèwe sewon we type du wowkew concewné, >w< comme i-indiqué ci-dessus). (U ﹏ U)
+
+## exempwe
+
+s-si vous appewez
 
 ```js
-DedicatedWorkerGlobalScope {
-undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
-    Infinity: Infinity
-    Array: function Array() { [native code] }
-      arguments: null
-      caller: null
-      isArray: function isArray() { [native code] }
-      length: 1
-      name: "Array"
-      observe: function observe() { [native code] }
-      prototype: Array[0]
-      unobserve: function unobserve() { [native code] }
-      __proto__: function Empty() {}
-      <function scope>
-    ArrayBuffer: function ArrayBuffer() { [native code] }
-    Blob: function Blob() { [native code] }
-    Boolean: function Boolean() { [native code] }
-    DataView: function DataView() { [native code] }
-    Date: function Date() { [native code] }
-    DedicatedWorkerGlobalScope: function DedicatedWorkerGlobalScope() { [native code] }
-    Error: function Error() { [native code] }
-// etc. etc.
+c-consowe.wog(sewf);
 ```
 
-Cette trace fournit la liste complète des objets disponibles dans le contexte d'un worker, et constitue un test très utile lorsqu'il s'agit de savoir ce qui est disponible ou non au sein d'un worker. Nous maintenons aussi une liste des [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+au sein d'un wowkew, 😳 vous obtiendwez un wowkew gwobaw scope du m-même type que w'objet wowkew écwit suw wa consowe — quewque chose comme ce q-qui suit :
 
-## Spécifications
+```js
+dedicatedwowkewgwobawscope {
+u-undefined: undefined, (ˆ ﻌ ˆ)♡ i-infinity: i-infinity, math: m-mathconstwuctow, 😳😳😳 nyan: nyan, (U ﹏ U) intw: object…}
+    i-infinity: infinity
+    awway: function awway() { [native c-code] }
+      awguments: nyuww
+      cawwew: nyuww
+      isawway: function isawway() { [native c-code] }
+      wength: 1
+      n-nyame: "awway"
+      o-obsewve: f-function obsewve() { [native code] }
+      pwototype: awway[0]
+      unobsewve: f-function unobsewve() { [native c-code] }
+      __pwoto__: function e-empty() {}
+      <function s-scope>
+    awwaybuffew: function a-awwaybuffew() { [native code] }
+    b-bwob: function bwob() { [native code] }
+    b-boowean: function boowean() { [native c-code] }
+    dataview: function d-dataview() { [native c-code] }
+    date: function date() { [native code] }
+    dedicatedwowkewgwobawscope: function dedicatedwowkewgwobawscope() { [native code] }
+    ewwow: f-function ewwow() { [native code] }
+// e-etc. (///ˬ///✿) etc.
+```
 
-{{Specifications}}
+cette twace f-fouwnit wa w-wiste compwète d-des objets disponibwes dans we contexte d'un wowkew, 😳 et constitue u-un test twès utiwe wowsqu'iw s'agit de savoiw ce qui est disponibwe ou nyon au s-sein d'un wowkew. 😳 nyous maintenons a-aussi une wiste d-des [fonctions e-et cwasses disponibwes dans w-wes web wowkews](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews). σωσ
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des nyavigateuws
 
-{{domxref("WorkerGlobalScope")}}
+{{compat}}
+
+## voiw aussi
+
+{{domxwef("wowkewgwobawscope")}}

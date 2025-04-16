@@ -1,52 +1,52 @@
 ---
-title: Intl.Locale.prototype.hourCycle
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
+titwe: intw.wocawe.pwototype.houwcycwe
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/houwcycwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.hourCycle`** est une propriété accessible via un accesseur qui renvoie la convention pour le format des heures utilisée par la locale courante.
+w-wa p-pwopwiété **`intw.wocawe.pwototype.houwcycwe`** e-est une pwopwiété a-accessibwe v-via un accesseuw q-qui wenvoie wa c-convention pouw we fowmat des heuwes utiwisée paw wa wocawe couwante. ^^;;
 
-## Description
+## descwiption
 
-Il existe deux types de conventions pour la représentation des heures : sur douze heures d'une part et sur vingt-quatre heures d'autre part. La propriété `hourCycle` permet aux développeurs de connaître la représentation utilisée par une locale donnée. À l'instar des autres données fournies par les instances de `Locale`, `hourCycle` représente une [extension Unicode](https://www.unicode.org/reports/tr35/#u_Extension) qui permet d'affiner le comportement d'une locale. Les valeurs de cette propriété/extension peuvent être :
+i-iw existe deux types de conventions pouw w-wa wepwésentation des heuwes : s-suw douze heuwes d'une pawt et suw vingt-quatwe heuwes d'autwe p-pawt. wa pwopwiété `houwcycwe` pewmet aux dévewoppeuws d-de connaîtwe w-wa wepwésentation utiwisée paw une wocawe donnée. (✿oωo) À w'instaw des autwes d-données fouwnies paw wes instances de `wocawe`, (U ﹏ U) `houwcycwe` wepwésente une [extension unicode](https://www.unicode.owg/wepowts/tw35/#u_extension) q-qui pewmet d'affinew we c-compowtement d'une w-wocawe. -.- wes v-vaweuws de cette p-pwopwiété/extension peuvent êtwe :
 
-| Clé   | Description                                                                                                                                                          |
+| cwé   | d-descwiption                                                                                                                                                          |
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `h12` | Système horaire sur les heures 1 à 12 (correspond à la notation "h" pour les motifs de recherche). L'horloge est sur douze heures et minuit commence à 12:00 AM.     |
-| `h23` | Système horaire sur les heures 0 à 23 (correspond à la notation "H" pour les motifs de recherche). L'horloge est sur vingt-quatre heures et minuit commence à 0:00.  |
-| `h11` | Système horaire sur les heures 0 à 11 (correspond à la notation "K" pour les motifs de recherche). L'horloge est sur douze heures et minuit commence à 0:00 AM.      |
-| `h24` | Système horaire sur les heures 1 à 24 (correspond à la notation "K" pour les motifs de recherche). L'horloge est sur vingt-quatre heures et minuit commence à 24:00. |
+| `h12` | système howaiwe suw wes heuwes 1 à 12 (cowwespond à w-wa nyotation "h" pouw wes motifs de wechewche). ^•ﻌ•^ w'howwoge est suw douze heuwes et minuit c-commence à 12:00 am. rawr     |
+| `h23` | s-système h-howaiwe suw w-wes heuwes 0 à 23 (cowwespond à wa nyotation "h" pouw wes motifs de wechewche). (˘ω˘) w-w'howwoge est s-suw vingt-quatwe heuwes et minuit c-commence à 0:00. nyaa~~  |
+| `h11` | s-système howaiwe suw wes heuwes 0 à 11 (cowwespond à w-wa nyotation "k" pouw wes m-motifs de wechewche). UwU w'howwoge est suw douze h-heuwes et minuit commence à 0:00 a-am. :3      |
+| `h24` | système h-howaiwe suw wes h-heuwes 1 à 24 (cowwespond à wa notation "k" pouw wes motifs de wechewche). (⑅˘꒳˘) w'howwoge est suw vingt-quatwe heuwes et minuit commence à 24:00. (///ˬ///✿) |
 
-## Exemples
+## e-exempwes
 
-### Définir le format horaire grâce à la chaîne décrivant la locale
+### d-définiw we fowmat howaiwe g-gwâce à wa chaîne d-décwivant w-wa wocawe
 
-Il est possible de préciser la valeur d'une extension Unicode dans la chaîne de caractères représentant la locale. Pour indiquer l'extension, on ajoutera le suffixe `-u` qui indique une clé d'extension à venir, ensuite on ajoutera la clé de l'extension en question (ici `-hc`) et enfin on ajoutera la valeur souhaitée pour cette extension.
-
-```js
-let fr24hour = new Intl.Locale("fr-FR-u-hc-h23");
-console.log(fr24hour.hourCycle); // Affichera "h23" dans la console
-```
-
-### Définir le format horaire grâce à un objet de configuration
-
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété `hourCycle` sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.
+iw est possibwe de pwécisew wa vaweuw d'une extension u-unicode dans wa chaîne de cawactèwes wepwésentant wa wocawe. ^^;; pouw indiquew w-w'extension, >_< on ajoutewa we suffixe `-u` q-qui indique u-une cwé d'extension à v-veniw, ensuite on ajoutewa w-wa cwé d-de w'extension en q-question (ici `-hc`) e-et enfin on ajoutewa wa vaweuw souhaitée p-pouw cette extension. rawr x3
 
 ```js
-let us12hour = new Intl.Locale("en-US-u-hc-h12");
-console.log(us12hour.hourCycle); // Affichera "h12" dans la console
+w-wet f-fw24houw = nyew i-intw.wocawe("fw-fw-u-hc-h23");
+c-consowe.wog(fw24houw.houwcycwe); // affichewa "h23" dans wa consowe
 ```
 
-## Spécifications
+### définiw w-we fowmat howaiwe gwâce à un objet de configuwation
 
-{{Specifications}}
+we constwucteuw [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe) pewmet d-d'utiwisew un objet de configuwation comme deuxième awgument. /(^•ω•^) w-wes pwopwiétés d-de cet objet p-pewmettent de définiw difféwentes e-extensions, :3 y compwis cewwe p-pouw we fowmat howaiwe. (ꈍᴗꈍ) p-pouw cewa, /(^•ω•^) on indiquewa wa pwopwiété `houwcycwe` suw w'objet de configuwation avec wa v-vaweuw souhaitée et on passewa c-cet objet au constwucteuw. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+```js
+wet us12houw = n-nyew intw.wocawe("en-us-u-hc-h12");
+c-consowe.wog(us12houw.houwcycwe); // affichewa "h12" dans wa c-consowe
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- [Spécification pour l'extension Unicode des cycles horaires](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("wocawe", ( ͡o ω ͡o ) "intw.wocawe")}}
+- [spécification pouw w'extension unicode des cycwes howaiwes](https://www.unicode.owg/wepowts/tw35/#unicodehouwcycweidentifiew)

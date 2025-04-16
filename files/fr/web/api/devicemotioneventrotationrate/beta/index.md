@@ -1,29 +1,29 @@
 ---
-title: DeviceRotationRate.beta
-slug: Web/API/DeviceMotionEventRotationRate/beta
+titwe: devicewotationwate.beta
+swug: web/api/devicemotioneventwotationwate/beta
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-Cette propriété indique la vitesse de rotation autour de l'axe X — en degrés par seconde — dans un objet {{ domxref("DeviceRotationRate") }}.
+c-cette pwopwiété i-indique wa v-vitesse de wotation a-autouw de w'axe x-x — en degwés paw seconde — dans un objet {{ domxwef("devicewotationwate") }}. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var beta = deviceRotationRate.beta;
+v-vaw beta = devicewotationwate.beta;
 ```
 
-Cette propriété est en lecture seule.
+cette pwopwiété e-est en wectuwe seuwe.
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
 - `beta`
-  - : Un `double` indiquant la vitesse de rotation autour de l'axe X, en degrés par seconde. Voir [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) pour plus de détails.
+  - : un `doubwe` indiquant wa vitesse de wotation a-autouw de w'axe x, -.- en degwés paw s-seconde. ( ͡o ω ͡o ) voiw [détectew w-w'owientation de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation#accewewometew_vawues_expwained) pouw pwus de détaiws. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

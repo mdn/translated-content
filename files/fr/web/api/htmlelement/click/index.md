@@ -1,64 +1,64 @@
 ---
-title: HTMLElement.click()
-slug: Web/API/HTMLElement/click
+titwe: htmwewement.cwick()
+swug: w-web/api/htmwewement/cwick
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLElement.click()`** simule un clic de souris sur un élément.
+wa méthode **`htmwewement.cwick()`** s-simuwe un cwic d-de souwis suw un éwément. (U ﹏ U)
 
-Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par exemple un élément [`<input>`](/fr/docs/Web/HTML/Element/input)), elle déclenche l'évènement `click` de cet élément. L'évènement remonte alors vers les éléments situés plus haut dans l'arbre du document (ou le long de la chaîne d'évènement) et déclenche leurs évènements `click` respectifs.
+w-wowsque `cwick()` est a-appewée suw w-wes éwéments qui w-wa pwenne en chawge (paw exempwe un éwément [`<input>`](/fw/docs/web/htmw/ewement/input)), ewwe décwenche w'évènement `cwick` d-de cet éwément. (⑅˘꒳˘) w'évènement wemonte awows v-vews wes éwéments situés p-pwus haut dans w'awbwe du document (ou we wong de wa chaîne d'évènement) e-et décwenche weuws évènements `cwick` w-wespectifs. òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-click();
+cwick();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). /(^•ω•^)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris survole une case à cocher&nbsp;:
+dans cet exempwe, ʘwʘ on simuwe un cwic de souwis w-wowsque we pointeuw de wa souwis s-suwvowe une case à c-cochew&nbsp;:
 
-### HTML
+### h-htmw
 
-```html
-<form>
+```htmw
+<fowm>
   <input
-    type="checkbox"
-    id="maCaseACocher"
-    onmouseover="maFonction()"
-    onclick="console.log('un évènement click a eu lieu')" />
-</form>
+    t-type="checkbox"
+    id="macaseacochew"
+    onmouseovew="mafonction()"
+    oncwick="consowe.wog('un évènement c-cwick a eu wieu')" />
+</fowm>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-// Lorsque l'évènement mouseover est déclenché, exécuter maFonction
-function maFonction() {
-  document.getElementById("maCaseACocher").click();
+// w-wowsque w'évènement mouseovew est décwenché, σωσ exékawaii~w mafonction
+function mafonction() {
+  d-document.getewementbyid("macaseacochew").cwick();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les gestionnaires d'évènements associés&nbsp;:
-  - [`GlobalEventHandlers.onclick`](/fr/docs/Web/API/Element/click_event)
-  - [`GlobalEventHandlers.ondblclick`](/fr/docs/Web/API/Element/dblclick_event)
-  - [`GlobalEventHandlers.onauxclick`](/fr/docs/Web/API/Element/auxclick_event)
+- wes gestionnaiwes d'évènements a-associés&nbsp;:
+  - [`gwobaweventhandwews.oncwick`](/fw/docs/web/api/ewement/cwick_event)
+  - [`gwobaweventhandwews.ondbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event)
+  - [`gwobaweventhandwews.onauxcwick`](/fw/docs/web/api/ewement/auxcwick_event)

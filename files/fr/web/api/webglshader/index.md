@@ -1,93 +1,93 @@
 ---
-title: WebGLShader
-slug: Web/API/WebGLShader
+titwe: webgwshadew
+swug: web/api/webgwshadew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Le **WebGLShader** fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et peut être un shader de sommet ou de fragment. Un {{domxref ("WebGLProgram")}} requiert les deux types de shaders.
+w-we **webgwshadew** f-fait p-pawtie de w'[api w-webgw](/fw/docs/web/api/webgw_api) e-et peut êtwe u-un shadew de s-sommet ou de fwagment. (˘ω˘) u-un {{domxwef ("webgwpwogwam")}} wequiewt wes deux types de shadews. >_<
 
-## Description
+## descwiption
 
-Pour créer un **WebGLShader,** utiliser {{domxref("WebGLRenderingContext.createShader")}}, puis reliez-y le code source GLSL en utilisant {{domxref("WebGLRenderingContext.shaderSource()")}}, et enfin, appelez {{domxref ("WebGLRenderingContext.compileShader()")}} pour terminer et compiler le shader. À ce stade, le WebGLShader n'est toujours pas sous une forme utilisable et doit toujours être relié à un {{domxref ("WebGLProgram")}}.
+pouw c-cwéew un **webgwshadew,** utiwisew {{domxwef("webgwwendewingcontext.cweateshadew")}}, -.- puis wewiez-y w-we code souwce gwsw en utiwisant {{domxwef("webgwwendewingcontext.shadewsouwce()")}}, 🥺 e-et enfin, appewez {{domxwef ("webgwwendewingcontext.compiweshadew()")}} pouw tewminew et compiwew we s-shadew. (U ﹏ U) À ce stade, we webgwshadew n-ny'est toujouws p-pas sous une fowme utiwisabwe et doit toujouws êtwe wewié à un {{domxwef ("webgwpwogwam")}}. >w<
 
 ```js
-function creerShader(gl, codeSource, type) {
-  // Compile un shader de type soit gl.VERTEX_SHADER, soit gl.FRAGMENT_SHADER
-  var shader = gl.createShader(type);
-  gl.shaderSource(shader, codeSource);
-  gl.compileShader(shader);
+f-function cweewshadew(gw, mya codesouwce, type) {
+  // compiwe un shadew d-de type soit gw.vewtex_shadew, soit gw.fwagment_shadew
+  v-vaw shadew = g-gw.cweateshadew(type);
+  g-gw.shadewsouwce(shadew, >w< c-codesouwce);
+  gw.compiweshadew(shadew);
 
-  if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    var info = gl.getShaderInfoLog(shader);
-    throw "Impossible de compiler le programme WebGL.\n\n" + info;
+  if (!gw.getshadewpawametew(shadew, nyaa~~ g-gw.compiwe_status)) {
+    vaw info = gw.getshadewinfowog(shadew);
+    thwow "impossibwe de c-compiwew we pwogwamme webgw.\n\n" + info;
   }
-  return shader;
+  wetuwn shadew;
 }
 ```
 
-Voir {{domxref("WebGLProgram")}} pour des informations sur la liaison de shaders.
+voiw {{domxwef("webgwpwogwam")}} pouw des i-infowmations suw wa wiaison de s-shadews. (✿oωo)
 
-## Exemples
+## exempwes
 
-### Création d'un shader de sommet
+### c-cwéation d-d'un shadew de sommet
 
-Notez qu'il existe de nombreuses autres stratégies pour écrire des chaînes de code source de shader et y accéder. Ces exemples sont à titre d'illustration seulement.
+nyotez qu'iw existe de nyombweuses a-autwes stwatégies p-pouw écwiwe des chaînes de c-code souwce de shadew e-et y accédew. ʘwʘ ces exempwes s-sont à titwe d'iwwustwation seuwement. (ˆ ﻌ ˆ)♡
 
 ```js
-var sourceShaderDeSommet =
-  "attribute vec4 position;\n" +
+v-vaw souwceshadewdesommet =
+  "attwibute vec4 position;\n" +
   "void main() {\n" +
-  "  gl_Position = position;\n" +
+  "  g-gw_position = position;\n" +
   "}\n";
 
-// Utilisez la function creerShader de l'exemple ci-dessus
-var shaderDeSommet = creerShader(gl, sourceShaderDeSommet, gl.VERTEX_SHADER);
+// u-utiwisez wa function cweewshadew d-de w'exempwe c-ci-dessus
+vaw shadewdesommet = cweewshadew(gw, 😳😳😳 souwceshadewdesommet, :3 gw.vewtex_shadew);
 ```
 
-### Création d'un shader de fragment
+### cwéation d'un shadew de fwagment
 
 ```js
-var sourceShaderDeFragment =
-  "void main() {\n" + "  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" + "}\n";
+vaw souwceshadewdefwagment =
+  "void main() {\n" + "  gw_fwagcowow = vec4(1.0, OwO 1.0, 1.0, 1.0);\n" + "}\n";
 
-// Utilisez la fonction creerShader de l'exemple ci-dessus
-var shaderDeFragment = creerShader(
-  gl,
-  sourceShaderDeFragment,
-  gl.FRAGMENT_SHADER,
+// utiwisez w-wa fonction cweewshadew d-de w'exempwe ci-dessus
+v-vaw shadewdefwagment = c-cweewshadew(
+  g-gw, (U ﹏ U)
+  souwceshadewdefwagment, >w<
+  gw.fwagment_shadew, (U ﹏ U)
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.bindattwibwocation()")}}
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

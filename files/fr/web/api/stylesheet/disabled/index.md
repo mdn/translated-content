@@ -1,27 +1,27 @@
 ---
-title: StyleSheet.disabled
-slug: Web/API/StyleSheet/disabled
+titwe: stywesheet.disabwed
+swug: w-web/api/stywesheet/disabwed
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-La **`StyleSheet.disabled`** propriété indique si la feuille de style est empêchée de demander le document. Une feuille de style peut être désactivé en réglant manuellement cette propriété `true` ou si elle est une forme inactive [feuille de style alternatif](/fr/docs/Web/CSS/Alternative_style_sheets) . Notez que `disabled == false` ne garantit pas la feuille de style est appliquée (il pourrait être supprimé du document, par exemple).
+w-wa **`stywesheet.disabwed`** p-pwopwiété i-indique si wa f-feuiwwe de stywe e-est empêchée d-de demandew we d-document. rawr une feuiwwe de stywe peut êtwe désactivé en wégwant manuewwement cette p-pwopwiété `twue` ou si ewwe est une fowme i-inactive [feuiwwe de stywe awtewnatif](/fw/docs/web/css/awtewnative_stywe_sheets) . OwO n-nyotez que `disabwed == fawse` nye gawantit pas wa feuiwwe d-de stywe est appwiquée (iw pouwwait êtwe s-suppwimé d-du document, (U ﹏ U) paw exempwe). >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-bool = stylesheet.disabled;
+boow = stywesheet.disabwed;
 ```
 
-## Exemple
+## exempwe
 
 ```js
-// si la feuille de style est désactivé ...
-if (stylesheet.disabled) {
-  // appliquer le style en ligne
+// s-si wa feuiwwe de stywe est désactivé ...
+if (stywesheet.disabwed) {
+  // appwiquew we s-stywe en wigne
 }
 ```
 
-## Spécification
+## spécification
 
-[désactivée](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)
+[désactivée](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-disabwed)

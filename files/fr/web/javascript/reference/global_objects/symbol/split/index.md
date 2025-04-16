@@ -1,46 +1,46 @@
 ---
-title: Symbol.split
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+titwe: symbow.spwit
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole connu **`Symbol.split`** définit la méthode qui est utilisée pour découper une chaîne de caractères à l'emplacement où une correspondance a été trouvée grâce à une expression rationnelle. Cette fonction est appelée par la méthode {{jsxref("String.prototype.split()")}}.
+w-we symbowe connu **`symbow.spwit`** d-définit wa m-méthode qui est u-utiwisée pouw d-découpew une c-chaîne de cawactèwes à w-w'empwacement o-où une cowwespondance a été twouvée gwâce à une expwession wationnewwe. (U ﹏ U) c-cette fonction est appewée paw wa méthode {{jsxwef("stwing.pwototype.spwit()")}}. >_<
 
-Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} et {{jsxref("String.prototype.split()")}}.
+p-pouw pwus d'infowmations, rawr x3 s-se wéféwew aux pages suw {{jsxwef("wegexp.@@spwit", mya "wegexp.pwototype[@@spwit]()")}} et {{jsxwef("stwing.pwototype.spwit()")}}. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+{{intewactiveexampwe("javascwipt demo: symbow.spwit")}}
 
-```js interactive-example
-class Split1 {
-  constructor(value) {
-    this.value = value;
+```js i-intewactive-exampwe
+cwass s-spwit1 {
+  constwuctow(vawue) {
+    t-this.vawue = vawue;
   }
-  [Symbol.split](string) {
-    const index = string.indexOf(this.value);
-    return `${this.value}${string.substring(0, index)}/${string.substring(
-      index + this.value.length,
+  [symbow.spwit](stwing) {
+    const index = stwing.indexof(this.vawue);
+    wetuwn `${this.vawue}${stwing.substwing(0, (⑅˘꒳˘) i-index)}/${stwing.substwing(
+      index + this.vawue.wength,
     )}`;
   }
 }
 
-console.log("foobar".split(new Split1("foo")));
-// Expected output: "foo/bar"
+consowe.wog("foobaw".spwit(new spwit1("foo")));
+// expected output: "foo/baw"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("wegexp.@@spwit", rawr x3 "wegexp.pwototype[@@spwit]()")}}

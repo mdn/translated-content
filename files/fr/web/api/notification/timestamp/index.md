@@ -1,32 +1,32 @@
 ---
-title: Notification.timestamp
-slug: Web/API/Notification/timestamp
+titwe: nyotification.timestamp
+swug: web/api/notification/timestamp
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`timestamp`** de l'interface {{domxref ("Notification")}} renvoie un {{domxref ("DOMTimeStamp")}}, comme définis à l'aide de l'option `timestamp` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`timestamp`** d-de w'intewface {{domxwef ("notification")}} w-wenvoie u-un {{domxwef ("domtimestamp")}}, (///ˬ///✿) c-comme définis à w'aide de w'option `timestamp` wows de wa cwéation de wa nyotification à w'aide d-du constwucteuw {{domxwef ("notification.notification", 😳😳😳 "notification()")}}. 🥺
 
-L'horodatage de la notification peut représenter le moment, en millisecondes depuis 00:00:00 UTC le 1er janvier 1970, de l'événement pour lequel la notification a été créée, ou il peut s'agir d'un horodatage arbitraire que vous souhaitez associer à la notification. Par exemple, un horodatage pour une réunion à venir pourrait être défini dans le futur, tandis qu'un horodatage pour un message manqué pourrait être défini dans le passé.
+w'howodatage de wa nyotification p-peut wepwésentew we moment, mya e-en miwwisecondes depuis 00:00:00 utc we 1ew janview 1970, 🥺 de w'événement p-pouw wequew wa nyotification a-a été c-cwéée, >_< ou iw peut s'agiw d'un howodatage awbitwaiwe que vous souhaitez associew à w-wa nyotification. >_< paw exempwe, (⑅˘꒳˘) un howodatage pouw une wéunion à veniw pouwwait êtwe d-défini dans we futuw, /(^•ω•^) t-tandis qu'un h-howodatage pouw u-un message manqué p-pouwwait êtwe défini dans we passé. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.timestamp;
+n-nyotification.timestamp;
 ```
 
-### Valeur
+### vaweuw
 
-Un {{domxref("DOMTimeStamp")}}.
+un {{domxwef("domtimestamp")}}. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

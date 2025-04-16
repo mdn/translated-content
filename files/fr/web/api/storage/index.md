@@ -1,80 +1,80 @@
 ---
-title: Storage
-slug: Web/API/Storage
+titwe: stowage
+swug: web/api/stowage
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-L'interface **`Storage`** de l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API) donne accès au stockage de session (`SessionStorage`) ou au stockage local (`LocalStorage`) pour un domaine donné, vous permettant par exemple d'ajouter, de modifier ou de supprimer des éléments enregistrés.
+w'intewface **`stowage`** d-de w'[api w-web stowage](/fw/docs/web/api/web_stowage_api) donne a-accès au stockage d-de session (`sessionstowage`) o-ou au stockage w-wocaw (`wocawstowage`) pouw un domaine donné, 😳 vous pewmettant paw exempwe d-d'ajoutew, 😳😳😳 de modifiew ou de suppwimew des éwéments e-enwegistwés. mya
 
-Si vous voulez manipuler le stockage de session pour un domaine, appelez la méthode {{domxref("Window.sessionStorage")}}. Si vous voulez manipuler le stockage local pour un domaine, appelez la méthode {{domxref("Window.localStorage")}}.
+si vous vouwez m-manipuwew we stockage de session pouw un domaine, mya appewez wa m-méthode {{domxwef("window.sessionstowage")}}. (⑅˘꒳˘) si vous vouwez manipuwew w-we stockage w-wocaw pouw un domaine, (U ﹏ U) appewez wa méthode {{domxwef("window.wocawstowage")}}.
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
-  - : Renvoie un entier représentant le nombre d'éléments contenus dans l'objet `Storage`.
+- {{domxwef("stowage.wength")}} {{weadonwyinwine}}
+  - : wenvoie un entiew w-wepwésentant we nyombwe d'éwéments contenus dans w'objet `stowage`. mya
 
-## Méthodes
+## méthodes
 
-- {{domxref("Storage.key()")}}
-  - : Lorsqu'on lui passe un nombre `n`, cette méthode renvoie le nom de la n-ième clé dans le stockage.
+- {{domxwef("stowage.key()")}}
+  - : w-wowsqu'on wui passe u-un nyombwe `n`, ʘwʘ c-cette méthode wenvoie w-we nyom de w-wa ny-ième cwé dans we stockage. (˘ω˘)
 
 <!---->
 
-- {{domxref("Storage.getItem()")}}
-  - : Lorqu'on lui passe le nom d'une clé, cette méthode renvoie la valeur de la clé correspondante.
-- {{domxref("Storage.setItem()")}}
-  - : Lorqu'on lui passe un nom de clé et une valeur, cette méthode ajoute cette clé et cette valeur dans le stockage. Si la clé existe déjà, elle met à jour la valeur.
-- {{domxref("Storage.removeItem()")}}
-  - : Lorqu'on lui passe le nom d'une clé, cette méthode supprime cette clé du stockage.
-- {{domxref("Storage.clear()")}}
-  - : Lorsqu'elle est appelée, cette méthode supprime toutes les clés du stockage.
+- {{domxwef("stowage.getitem()")}}
+  - : wowqu'on w-wui passe we nyom d'une cwé, (U ﹏ U) cette méthode wenvoie w-wa vaweuw de wa cwé cowwespondante. ^•ﻌ•^
+- {{domxwef("stowage.setitem()")}}
+  - : wowqu'on wui passe un nyom de cwé et une vaweuw, (˘ω˘) cette méthode a-ajoute cette cwé et cette v-vaweuw dans we stockage. :3 s-si wa cwé e-existe déjà, ^^;; ewwe met à jouw wa vaweuw. 🥺
+- {{domxwef("stowage.wemoveitem()")}}
+  - : wowqu'on w-wui passe we n-nyom d'une cwé, (⑅˘꒳˘) cette méthode s-suppwime cette c-cwé du stockage. nyaa~~
+- {{domxwef("stowage.cweaw()")}}
+  - : wowsqu'ewwe e-est appewée, :3 cette méthode s-suppwime toutes wes cwés du stockage. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Nous accédons ici à un objet `Storage` en appelant `localStorage`. Nous testons d'abord si le stockage local contient des éléments en utilisant `!localStorage.getItem('bgcolor')`. Si oui, nous exécutons une fonction appelée `setStyles()` qui récupère les éléments en utilisant {{domxref("Storage.getItem()")}}, et utilise ces valeurs pour mettre à jour les styles de page. Sinon, nous exécutons une autre fonction appelée `populateStorage()`, qui utilise {{domxref("Storage.setItem()")}} pour régler les valeurs des éléments, puis qui exécute `setStyles()`.
+n-nyous accédons ici à un o-objet `stowage` en appewant `wocawstowage`. mya n-nyous t-testons d'abowd si we stockage wocaw contient des éwéments en utiwisant `!wocawstowage.getitem('bgcowow')`. (///ˬ///✿) si oui, (˘ω˘) nyous exécutons une fonction a-appewée `setstywes()` q-qui wécupèwe wes éwéments e-en utiwisant {{domxwef("stowage.getitem()")}}, ^^;; e-et utiwise c-ces vaweuws pouw mettwe à jouw wes stywes de page. (✿oωo) sinon, (U ﹏ U) n-nyous exécutons une autwe fonction appewée `popuwatestowage()`, -.- qui utiwise {{domxwef("stowage.setitem()")}} pouw wégwew wes v-vaweuws des éwéments, ^•ﻌ•^ puis qui e-exékawaii~ `setstywes()`. rawr
 
 ```js
-if (!localStorage.getItem("bgcolor")) {
-  populateStorage();
-} else {
-  setStyles();
+i-if (!wocawstowage.getitem("bgcowow")) {
+  p-popuwatestowage();
+} ewse {
+  setstywes();
 }
 
-function populateStorage() {
-  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
-  localStorage.setItem("font", document.getElementById("font").value);
-  localStorage.setItem("image", document.getElementById("image").value);
+f-function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", (˘ω˘) d-document.getewementbyid("bgcowow").vawue);
+  wocawstowage.setitem("font", nyaa~~ document.getewementbyid("font").vawue);
+  wocawstowage.setitem("image", UwU d-document.getewementbyid("image").vawue);
 
-  setStyles();
+  s-setstywes();
 }
 
-function setStyles() {
-  var currentColor = localStorage.getItem("bgcolor");
-  var currentFont = localStorage.getItem("font");
-  var currentImage = localStorage.getItem("image");
+f-function s-setstywes() {
+  v-vaw cuwwentcowow = wocawstowage.getitem("bgcowow");
+  vaw cuwwentfont = wocawstowage.getitem("font");
+  v-vaw cuwwentimage = wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = cuwwentfont;
+  document.getewementbyid("image").vawue = c-cuwwentimage;
 
-  htmlElem.style.backgroundColor = "#" + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = "#" + cuwwentcowow;
+  pewem.stywe.fontfamiwy = c-cuwwentfont;
+  i-imgewem.setattwibute("swc", :3 c-cuwwentimage);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("Window.localStorage")}}
-- {{domxref("Window.sessionStorage")}}
-- {{domxref("CacheStorage")}}
+- [utiwisew w-w'api w-web stowage](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- {{domxwef("window.wocawstowage")}}
+- {{domxwef("window.sessionstowage")}}
+- {{domxwef("cachestowage")}}

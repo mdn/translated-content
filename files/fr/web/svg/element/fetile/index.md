@@ -1,91 +1,91 @@
 ---
-title: <feTile>
-slug: Web/SVG/Element/feTile
+titwe: <fetiwe>
+swug: web/svg/ewement/fetiwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feTile>`** permet de remplir un rectangle cible avec un motif en mosaïque qui répète une image en entrée. L'effet est similaire à ce que l'on obtient avec {{SVGElement("pattern")}}.
+w-wa pwimitive de f-fiwtwe [svg](/fw/docs/web/svg) **`<fetiwe>`** pewmet d-de wempwiw u-un wectangwe cibwe a-avec un motif e-en mosaïque qui w-wépète une i-image en entwée. 🥺 w'effet est simiwaiwe à ce que w'on obtient avec {{svgewement("pattewn")}}. mya
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitives de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de p-pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwimitives de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{SVGAttr("in")}}
+- {{svgattw("in")}}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGFETileElement")}}.
+cet éwément i-impwémente w'intewface {{domxwef("svgfetiweewement")}}.
 
-## Exemple
+## exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
   width="200"
-  height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  h-height="200"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <filter id="tile" x="0" y="0" width="100%" height="100%">
-      <feTile in="SourceGraphic" x="50" y="50" width="100" height="100" />
-      <feTile />
-    </filter>
+    <fiwtew id="tiwe" x="0" y="0" w-width="100%" height="100%">
+      <fetiwe in="souwcegwaphic" x="50" y-y="50" width="100" h-height="100" />
+      <fetiwe />
+    </fiwtew>
   </defs>
 
   <image
-    xlink:href="/files/6457/mdn_logo_only_color.png"
-    x="10%"
+    x-xwink:hwef="/fiwes/6457/mdn_wogo_onwy_cowow.png"
+    x-x="10%"
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#tile);" />
+    s-stywe="fiwtew:uww(#tiwe);" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", 🥺 200, >_< 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG tutorial: Filter effects](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg tutowiaw: fiwtew effects](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

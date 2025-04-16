@@ -1,34 +1,34 @@
 ---
-title: <feConvolveMatrix>
-slug: Web/SVG/Element/feConvolveMatrix
+titwe: <feconvowvematwix>
+swug: w-web/svg/ewement/feconvowvematwix
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feConvolveMatrix>`** applique une matrice de convolution d'effet de filtre. Une convolution combine les pixels de l'image en entrée avec ceux voisins pour donner une image résultante. On peut obtenir une grande variété d'opérations d'imagerie à l'aide de convolutions, dont le flou, la détection de bord, la netteté, l'estampage et le chanfreinage.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<feconvowvematwix>`** a-appwique u-une matwice d-de convowution d-d'effet de fiwtwe. ^^;; u-une convowution combine wes pixews de w'image en entwée avec ceux voisins pouw d-donnew une image wésuwtante. >_< on peut obteniw u-une gwande vawiété d'opéwations d-d'imagewie à w'aide de convowutions, rawr x3 dont we fwou, wa détection d-de bowd, /(^•ω•^) wa nyetteté, :3 w'estampage e-et we c-chanfweinage. (ꈍᴗꈍ)
 
-Une convolution de matrice se fonde sur une matrice n par m (le noyau de convolution), qui décrit la façon dont une valeur de pixel donné de l'image en entrée est combinée avec celles des pixels de son voisinage pour aboutir à une valeur de pixel résultante. Chaque pixel du résultat est déterminé par l'application de la matrice noyau sur le pixel source correspondant et ses pixels voisins. La formule de convolution de base, appliquée à chaque valeur de couleur d'un pixel donné, est :
+une convowution de matwice se fonde suw une matwice ny paw m (we n-nyoyau de convowution), /(^•ω•^) qui décwit wa façon dont une vaweuw de pixew donné de w-w'image en entwée est combinée a-avec cewwes des p-pixews de son v-voisinage pouw aboutiw à u-une vaweuw de pixew wésuwtante. (⑅˘꒳˘) chaque p-pixew du wésuwtat est détewminé paw w'appwication d-de wa matwice nyoyau suw we pixew souwce cowwespondant et ses pixews voisins. ( ͡o ω ͡o ) wa fowmuwe d-de convowution de base, òωó appwiquée à c-chaque vaweuw d-de couweuw d'un p-pixew donné, (⑅˘꒳˘) est :
 
-COLOR<sub>X,Y</sub> = (
-SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> {
-SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> {
-SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> \* [kernelMatrix](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute)<sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1, <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub>
+cowow<sub>x,y</sub> = (
+sum <sub>i=0 to [<a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementowdewattwibute">owdewy</a>-1]</sub> {
+s-sum <sub>j=0 to [<a h-hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementowdewattwibute">owdewx</a>-1]</sub> {
+souwce <sub>x-<a h-hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementtawgetxattwibute">tawgetx</a>+j, XD y-y-<a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementtawgetyattwibute">tawgety</a>+i</sub> \* [kewnewmatwix](https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementkewnewmatwixattwibute)<sub><a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementowdewattwibute">owdewx</a>-j-1, -.- <a h-hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementowdewattwibute">owdewy</a>-i-1</sub>
 }
 }
-) / [divisor](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute) + [bias](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute) \* ALPHA<sub>X,Y</sub>
+) / [divisow](https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementdivisowattwibute) + [bias](https://www.w3.owg/tw/svg11/fiwtews.htmw#feconvowvematwixewementbiasattwibute) \* awpha<sub>x,y</sub>
 
-dans laquelle
+d-dans waquewwe
 
-- "orderX" et "orderY" représentent les valeurs X et Y pour l'attribut {{SVGAttr("order")}},
-- "targetX" représente la valeur de l'attribut {{SVGAttr("targetX")}},
-- "targetY" la valeur de l'attribut {{SVGAttr("targetY")}},
-- "kernelMatrix" celle de l'attribut {{SVGAttr("kernelMatrix")}},
-- "divisor" celle de l'attribut {{SVGAttr("divisor")}}
-- et "bias" la valeur de l'attribut {{SVGAttr("bias")}}.
+- "owdewx" et "owdewy" wepwésentent w-wes vaweuws x et y pouw w'attwibut {{svgattw("owdew")}}, :3
+- "tawgetx" w-wepwésente wa vaweuw d-de w'attwibut {{svgattw("tawgetx")}}, nyaa~~
+- "tawgety" w-wa vaweuw de w'attwibut {{svgattw("tawgety")}}, 😳
+- "kewnewmatwix" cewwe de w'attwibut {{svgattw("kewnewmatwix")}}, (⑅˘꒳˘)
+- "divisow" cewwe de w'attwibut {{svgattw("divisow")}}
+- et "bias" wa vaweuw de w'attwibut {{svgattw("bias")}}. nyaa~~
 
-Remarquez dans la formule ci-dessus que les valeurs de la matrice noyau sont appliquées de telle manière que cette matrice noyau soit tournée de 180 degrés par rapport aux images de source et de destination, pour correspondre avec la théorie de la convolution telle qu'elle est décrite dans de nombreux ouvrages sur l'infographie.
+w-wemawquez d-dans wa fowmuwe ci-dessus que wes v-vaweuws de wa m-matwice nyoyau sont a-appwiquées de tewwe manièwe que cette matwice noyau soit touwnée d-de 180 degwés paw wappowt aux images de souwce et de destination, OwO pouw c-cowwespondwe avec wa théowie de w-wa convowution t-tewwe qu'ewwe est d-décwite dans de nyombweux ouvwages s-suw w'infogwaphie. rawr x3
 
-Pour illustrer, supposons que l'on ait une image en entrée, de 5x5 pixels, dont les valeurs de couleur pour l'un des canaux de couleur sont les suivantes:
+p-pouw iwwustwew, XD s-supposons q-que w'on ait une image en entwée, σωσ de 5x5 pixews, (U ᵕ U❁) d-dont wes vaweuws d-de couweuw p-pouw w'un des c-canaux de couweuw s-sont wes suivantes:
 
 ```
 0    20  40 235 235
@@ -38,7 +38,7 @@ Pour illustrer, supposons que l'on ait une image en entrée, de 5x5 pixels, dont
 225 225 255 255 255
 ```
 
-et que l'on définit un noyau de convolution de 3x3 comme ceci:
+et que w'on définit un nyoyau de convowution d-de 3x3 comme ceci:
 
 ```
 1 2 3
@@ -46,7 +46,7 @@ et que l'on définit un noyau de convolution de 3x3 comme ceci:
 7 8 9
 ```
 
-Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colonne (la valeur du pixel source est 120). En supposant le cas le plus simple (quand le quadrillage de pixels de l'image source s'aligne parfaitement avec celui du noyau) et en supposant les valeurs par défaut des attributs `divisor`, `targetX` et `targetY`, alors la valeur de couleur résultante sera :
+concentwons-nous suw wa vaweuw de couweuw de wa deuxième wigne, (U ﹏ U) deuxième cowonne (wa v-vaweuw du pixew souwce est 120). :3 en supposant we cas we p-pwus simpwe (quand w-we quadwiwwage d-de pixews de w'image souwce s'awigne p-pawfaitement avec cewui du n-nyoyau) et en s-supposant wes vaweuws paw défaut des attwibuts `divisow`, ( ͡o ω ͡o ) `tawgetx` et `tawgety`, σωσ awows wa vaweuw de couweuw wésuwtante s-sewa :
 
 ```
 (9*  0 + 8* 20 + 7* 40 +
@@ -54,95 +54,95 @@ Concentrons-nous sur la valeur de couleur de la deuxième ligne, deuxième colon
  3*200 + 2*220 + 1*240) / (9+8+7+6+5+4+3+2+1)
 ```
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### a-attwibuts s-spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("order")}}
-- {{SVGAttr("kernelMatrix")}}
-- {{SVGAttr("divisor")}}
-- {{SVGAttr("bias")}}
-- {{SVGAttr("targetX")}}
-- {{SVGAttr("targetY")}}
-- {{SVGAttr("edgeMode")}}
-- {{SVGAttr("kernelUnitLength")}}
-- {{SVGAttr("preserveAlpha")}}
+- {{svgattw("in")}}
+- {{svgattw("owdew")}}
+- {{svgattw("kewnewmatwix")}}
+- {{svgattw("divisow")}}
+- {{svgattw("bias")}}
+- {{svgattw("tawgetx")}}
+- {{svgattw("tawgety")}}
+- {{svgattw("edgemode")}}
+- {{svgattw("kewnewunitwength")}}
+- {{svgattw("pwesewveawpha")}}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGFEConvolveMatrixElement")}}.
+cet éwément i-impwémente w'intewface {{domxwef("svgfeconvowvematwixewement")}}. >w<
 
-## Exemple
+## exempwe
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
-  viewBox="0 0 200 200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  viewbox="0 0 200 200"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <filter id="emboss">
-      <feConvolveMatrix
-        kernelMatrix="3 0 0
+    <fiwtew i-id="emboss">
+      <feconvowvematwix
+        kewnewmatwix="3 0 0
                         0 0 0
                         0 0 -3" />
-    </filter>
+    </fiwtew>
   </defs>
 
   <image
-    xlink:href="/files/12668/MDN.svg"
-    x="0"
+    x-xwink:hwef="/fiwes/12668/mdn.svg"
+    x-x="0"
     y="0"
     height="200"
     width="200"
-    style="filter:url(#emboss);" />
+    stywe="fiwtew:uww(#emboss);" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 210)}}
+{{embedwivesampwe("exempwe", 😳😳😳 200, OwO 210)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

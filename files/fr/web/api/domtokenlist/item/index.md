@@ -1,54 +1,54 @@
 ---
-title: DOMTokenList.item()
-slug: Web/API/DOMTokenList/item
+titwe: domtokenwist.item()
+swug: w-web/api/domtokenwist/item
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`item()`** de l'interface {{domxref("DOMTokenList")}} renvoie un élément de la liste par son index.
+w-wa méthode **`item()`** de w-w'intewface {{domxwef("domtokenwist")}} w-wenvoie u-un éwément de w-wa wiste paw son i-index. òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
-tokenList.item(index);
+t-tokenwist.item(index);
 ```
 
-### Paramètres
+### pawamètwes
 
 - index
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant l'index de l'élément dont on veut le retour.
+  - : une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) w-wepwésentant w'index de w'éwément dont on veut w-we wetouw. ʘwʘ
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant l'élément renvoyé. Le retour est `undefined` (_indéfini_) si le nombre est plus grand que ou égal à la longueur de la liste.
+u-une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) wepwésentant w'éwément w-wenvoyé. /(^•ω•^) we wetouw est `undefined` (_indéfini_) s-si we nombwe e-est pwus gwand que ou égaw à wa wongueuw de wa wiste. ʘwʘ
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies dans un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons le dernier élément dans la liste en utilisant _item(length-1)_ et l'écrivons dans le {{domxref("Node.textContent")}} du `<span>`.
+dans w-w'exempwe suivant, σωσ nyous wécupéwons wa wiste des cwasses définies dans un éwément {{htmwewement("span")}} e-en tant que `domtokenwist` en utiwisant {{domxwef("ewement.cwasswist")}}. OwO n-nyous w-wécupéwons we d-dewniew éwément d-dans wa wiste en utiwisant _item(wength-1)_ et w-w'écwivons dans we {{domxwef("node.textcontent")}} du `<span>`. 😳😳😳
 
-D'abord le code HTML :
+d-d'abowd we code htmw :
 
-```html
-<span class="a b c"></span>
+```htmw
+<span cwass="a b c"></span>
 ```
 
-Maintenant le JavaScript :
+maintenant we javascwipt :
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var item = classes.item(classes.length - 1);
-span.textContent = item;
+v-vaw span = document.quewysewectow("span");
+v-vaw cwasses = span.cwasswist;
+vaw i-item = cwasses.item(cwasses.wength - 1);
+s-span.textcontent = item;
 ```
 
-La sortie ressemble à ceci :
+wa sowtie wessembwe à ceci :
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+{{ embedwivesampwe('exempwes', 😳😳😳 '100%', o.O 60) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

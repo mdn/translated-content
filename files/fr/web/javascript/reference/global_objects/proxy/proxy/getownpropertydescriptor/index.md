@@ -1,121 +1,121 @@
 ---
-title: handler.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
+titwe: handwew.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/getownpwopewtydescwiptow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour intercepter {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+w-wa méthode **`handwew.getownpwopewtydescwiptow()`** e-est une twappe p-pouw intewceptew {{jsxwef("object.getownpwopewtydescwiptow()")}}. ^^;;
 
-{{InteractiveExample("JavaScript Demo: handler.getOwnPropertyDescriptor()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.getownpwopewtydescwiptow()", (✿oωo) "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  eyeCount: 4,
+```js i-intewactive-exampwe
+c-const m-monstew1 = {
+  eyecount: 4, (U ﹏ U)
 };
 
-const handler1 = {
-  getOwnPropertyDescriptor(target, prop) {
-    console.log(`called: ${prop}`);
-    // Expected output: "called: eyeCount"
+const handwew1 = {
+  getownpwopewtydescwiptow(tawget, -.- pwop) {
+    consowe.wog(`cawwed: ${pwop}`);
+    // e-expected output: "cawwed: eyecount"
 
-    return { configurable: true, enumerable: true, value: 5 };
-  },
+    w-wetuwn { configuwabwe: twue, ^•ﻌ•^ enumewabwe: t-twue, rawr vawue: 5 };
+  }, (˘ω˘)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+const pwoxy1 = nyew pwoxy(monstew1, h-handwew1);
 
-console.log(Object.getOwnPropertyDescriptor(proxy1, "eyeCount").value);
-// Expected output: 5
+consowe.wog(object.getownpwopewtydescwiptow(pwoxy1, nyaa~~ "eyecount").vawue);
+// e-expected output: 5
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  getOwnPropertyDescriptor: function (cible, prop) {},
+vaw p = nyew pwoxy(cibwe, UwU {
+  getownpwopewtydescwiptow: function (cibwe, p-pwop) {}, :3
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Les paramètres suivants sont passés à la méthode `getOwnPropertyDescriptor`. `this` est ici lié au gestionnaire (_handler_).
+wes pawamètwes suivants sont passés à w-wa méthode `getownpwopewtydescwiptow`. (⑅˘꒳˘) `this` est ici wié au g-gestionnaiwe (_handwew_). (///ˬ///✿)
 
-- `cible`
-  - : L'objet cible
-- `prop`
-  - : Le nom de la propriété dont on souhaite obtenir le descripteur.
+- `cibwe`
+  - : w-w'objet c-cibwe
+- `pwop`
+  - : w-we nyom de wa pwopwiété dont on souhaite o-obteniw we descwipteuw. ^^;;
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La méthode `getOwnPropertyDescriptor` doit renvoyer un objet ou `undefined`.
+wa méthode `getownpwopewtydescwiptow` d-doit wenvoyew un objet ou `undefined`. >_<
 
-## Description
+## descwiption
 
-La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour un proxy afin d'intercepter les opérations effectuées avec {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+wa méthode **`handwew.getownpwopewtydescwiptow()`** est une twappe p-pouw un pwoxy afin d'intewceptew w-wes opéwations e-effectuées a-avec {{jsxwef("object.getownpwopewtydescwiptow()")}}. rawr x3
 
-### Interceptions
+### intewceptions
 
-Cette trappe permet d'intercepter :
+cette twappe pewmet d-d'intewceptew :
 
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}
 
-### Invariants
+### i-invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception {{jsxref("TypeError")}} :
+si wes invawiants s-suivants n-ne sont pas wespectés, /(^•ω•^) we pwoxy w-wèvewa une exception {{jsxwef("typeewwow")}} :
 
-- `getOwnPropertyDescriptor` doit renvoyer un objet ou `undefined`.
-- Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et non-configurable.
-- Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et que l'objet cible n'est pas extensible.
-- Une propriété ne peut pas être indiquée comme existante si elle n'existe pas de façon correspondante sur l'objet cible et que l'objet cible n'est pas extensible.
-- Une propriété ne peut pas être indiquée comme non-configurable si la propriété correspondante n'existe pas pour l'objet cible ou si elle existe comme un propriété propre configurable.
-- Le résultat de `Object.getOwnPropertyDescriptor(cible)` peut être appliqué à l'objet cible avec `Object.defineProperty` sans que cela lève une exception.
+- `getownpwopewtydescwiptow` doit wenvoyew un o-objet ou `undefined`. :3
+- une pwopwiété nye peut p-pas êtwe indiquée comme nyon-existante s-s'iw existe une pwopwiété c-cowwespondante d-de w'objet cibwe qui est une pwopwiété pwopwe et nyon-configuwabwe. (ꈍᴗꈍ)
+- une pwopwiété nye peut pas êtwe indiquée comme n-nyon-existante s-s'iw existe une pwopwiété cowwespondante d-de w'objet c-cibwe qui e-est une pwopwiété pwopwe et que w'objet cibwe ny'est pas extensibwe. /(^•ω•^)
+- u-une pwopwiété nye peut pas êtwe indiquée comme existante si ewwe ny'existe p-pas de façon cowwespondante s-suw w'objet c-cibwe et que w'objet c-cibwe ny'est pas extensibwe.
+- u-une pwopwiété n-nye peut pas êtwe i-indiquée c-comme nyon-configuwabwe si wa pwopwiété cowwespondante n-ny'existe p-pas pouw w'objet c-cibwe ou s-si ewwe existe comme u-un pwopwiété pwopwe configuwabwe. (⑅˘꒳˘)
+- we wésuwtat de `object.getownpwopewtydescwiptow(cibwe)` p-peut êtwe appwiqué à w'objet cibwe avec `object.definepwopewty` sans que cewa wève une exception. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on intercepte {{jsxref("Object.getOwnPropertyDescriptor()")}}.
+d-dans w'exempwe qui suit, òωó on intewcepte {{jsxwef("object.getownpwopewtydescwiptow()")}}. (⑅˘꒳˘)
 
 ```js
-var p = new Proxy(
-  { a: 20 },
+vaw p = nyew p-pwoxy(
+  { a: 20 }, XD
   {
-    getOwnPropertyDescriptor: function (cible, prop) {
-      console.log("appelée : " + prop);
-      return { configurable: true, enumerable: true, value: 10 };
-    },
+    g-getownpwopewtydescwiptow: f-function (cibwe, -.- pwop) {
+      c-consowe.wog("appewée : " + pwop);
+      w-wetuwn { configuwabwe: t-twue, :3 enumewabwe: twue, nyaa~~ vawue: 10 };
+    }, 😳
   },
 );
 
-console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "appelée : a"
+consowe.wog(object.getownpwopewtydescwiptow(p, (⑅˘꒳˘) "a").vawue); // "appewée : a"
 // 10
 ```
 
-L'exemple suivant ne respecte pas un invariant :
+w'exempwe s-suivant nye wespecte pas un invawiant :
 
 ```js
-var obj = { a: 10 };
-Object.preventExtensions(obj);
-var p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function (cible, prop) {
-    return undefined;
-  },
+v-vaw obj = { a: 10 };
+object.pweventextensions(obj);
+v-vaw p = nyew p-pwoxy(obj, nyaa~~ {
+  getownpwopewtydescwiptow: function (cibwe, OwO p-pwop) {
+    w-wetuwn undefined;
+  }, rawr x3
 });
 
-Object.getOwnPropertyDescriptor(p, "a"); // Une exception TypeError est renvoyée
+object.getownpwopewtydescwiptow(p, "a"); // une e-exception typeewwow e-est wenvoyée
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", XD "handwew")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}
+- {{jsxwef("wefwect.getownpwopewtydescwiptow()")}}

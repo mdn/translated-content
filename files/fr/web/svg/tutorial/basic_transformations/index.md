@@ -1,124 +1,124 @@
 ---
-title: Transformations de base
-slug: Web/SVG/Tutorial/Basic_Transformations
+titwe: twansfowmations de base
+s-swug: web/svg/tutowiaw/basic_twansfowmations
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
+{{ p-pweviousnext("web/svg/tutowiew/texts", ( ͡o ω ͡o ) "web/svg/tutowiew/découpages_et_masquages") }}
 
-Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais avant toute chose, il faut vous présenter l'élément `<g>`. Cet assistant va vous permettre d'assigner des attributs à un ensemble d'éléments. En fait, c'est bien son seul rôle. Par exemple :
+m-maintenant, òωó n-nyous sommes p-pwêts à towdwe n-nyos images d-dans tous wes sens. σωσ m-mais avant toute chose, (U ᵕ U❁) iw faut vous pwésentew w'éwément `<g>`. (✿oωo) cet assistant v-va vous pewmettwe d'assignew des attwibuts à u-un ensembwe d'éwéments. ^^ en f-fait, c'est bien son seuw wôwe. ^•ﻌ•^ paw exempwe :
 
-## Exemple
+## exempwe
 
-```html
-<svg width="30" height="10">
-  <g fill="red">
-    <rect x="0" y="0" width="10" height="10" />
-    <rect x="20" y="0" width="10" height="10" />
+```htmw
+<svg w-width="30" height="10">
+  <g f-fiww="wed">
+    <wect x-x="0" y="0" width="10" height="10" />
+    <wect x="20" y="0" width="10" h-height="10" />
   </g>
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple', '30', '10') }}
+{{ embedwivesampwe('exempwe', XD '30', '10') }}
 
-Toutes les transformations suivantes sont résumées dans l'attribut `transform` de l'élément. Les transformations peuvent être mises les unes à la suite des autres, tout simplement en les écrivant toutes dans cet attribut, séparées par des espaces.
+toutes wes twansfowmations suivantes sont wésumées d-dans w'attwibut `twansfowm` de w'éwément. :3 w-wes twansfowmations p-peuvent êtwe m-mises wes u-unes à wa suite des autwes, (ꈍᴗꈍ) tout simpwement en w-wes écwivant toutes dans cet attwibut, :3 sépawées p-paw des espaces. (U ﹏ U)
 
-## Translation
+## twanswation
 
-Il peut être nécessaire de décaler un élément, même s'il est possible de définir sa position dans ses attributs. Pour ce faire, la fonction `translate()` est parfaite.
+iw peut êtwe nyécessaiwe de décawew un éwément, UwU même s-s'iw est possibwe de définiw s-sa position dans s-ses attwibuts. 😳😳😳 p-pouw ce faiwe, XD wa fonction `twanswate()` est pawfaite. o.O
 
-```html
-<svg width="40" height="50" style="background-color:#bff;">
-  <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+```htmw
+<svg width="40" h-height="50" stywe="backgwound-cowow:#bff;">
+  <wect x-x="0" y="0" width="10" height="10" t-twansfowm="twanswate(30,40)" />
 </svg>
 ```
 
-Cet exemple a pour résultat un rectangle, qui est déplacé du point (0,0) au point (30,40).
+c-cet exempwe a pouw wésuwtat u-un wectangwe, (⑅˘꒳˘) qui est dépwacé d-du point (0,0) au point (30,40). 😳😳😳
 
-{{ EmbedLiveSample('Translation', '40', '50') }}
+{{ embedwivesampwe('twanswation', nyaa~~ '40', '50') }}
 
-Si la deuxième valeur de `translate()` n'est pas définie, elle sera pas défaut assignée à 0.
+s-si wa deuxième vaweuw de `twanswate()` n-ny'est pas définie, rawr e-ewwe sewa pas défaut a-assignée à 0. -.-
 
-## Rotation
+## wotation
 
-Appliquer une rotation à un élément est assez simple : il suffit d'utiliser la fonction `rotate()`.
+appwiquew une wotation à un éwément est assez simpwe : iw suffit d'utiwisew w-wa fonction `wotate()`. (✿oωo)
 
-```html
-<svg width="31" height="31">
-  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+```htmw
+<svg w-width="31" height="31">
+  <wect x-x="12" y-y="-10" width="20" h-height="20" twansfowm="wotate(45)" />
 </svg>
 ```
 
-Cet exemple montre un carré pivoté de 45°. La valeur de la rotation doit être définie en degrés.
+cet exempwe montwe un cawwé p-pivoté de 45°. /(^•ω•^) wa vaweuw de wa wotation doit êtwe définie en degwés. 🥺
 
-{{ EmbedLiveSample('Rotation', '31', '31') }}
+{{ e-embedwivesampwe('wotation', ʘwʘ '31', '31') }}
 
-## Transformations multiples
+## twansfowmations m-muwtipwes
 
-Les transformations peuvent être concaténées, séparées par des espaces. Par exemple, `translate()` et `rotate()` sont couramment utilisées ensemble:
+wes twansfowmations peuvent êtwe c-concaténées, UwU s-sépawées paw des espaces. XD p-paw exempwe, (✿oωo) `twanswate()` e-et `wotate()` s-sont couwamment u-utiwisées ensembwe:
 
-```html
-<svg width="40" height="50" style="background-color:#bff;">
-  <rect
-    x="0"
-    y="0"
+```htmw
+<svg width="40" height="50" stywe="backgwound-cowow:#bff;">
+  <wect
+    x-x="0"
+    y-y="0"
     width="10"
-    height="10"
-    transform="translate(30,40) rotate(45)" />
+    h-height="10"
+    t-twansfowm="twanswate(30,40) w-wotate(45)" />
 </svg>
 ```
 
-{{ EmbedLiveSample('Transformations_multiples', '40', '50') }}
+{{ embedwivesampwe('twansfowmations_muwtipwes', :3 '40', (///ˬ///✿) '50') }}
 
-Cet exemple montre un carré déplacé et pivoté de 45 degrés.
+cet exempwe montwe un cawwé dépwacé e-et pivoté de 45 degwés. nyaa~~
 
-## Déformation
+## défowmation
 
-Pour transformer un rectangle en un losange, vous pouvez utiliser les fonctions `skewX()` et `skewY()`. Chacun prend pour attribut un angle qui détermine le biais de l'élément transformé.
+pouw twansfowmew un wectangwe en un wosange, >w< v-vous pouvez utiwisew wes fonctions `skewx()` et `skewy()`. -.- chacun p-pwend pouw attwibut u-un angwe q-qui détewmine we biais de w'éwément t-twansfowmé. (✿oωo)
 
-## Agrandissement et réduction
+## agwandissement e-et wéduction
 
-`scale()` modifie la taille d'un élément. Cette fonction prend en paramètre 2 valeurs de transformation, la première pour celle des X et la deuxième pour celle des Y. Ces valeurs sont écrites sous forme de ratio : 0.5 correspond à une réduction à 50%, 1.5 à une augmentation de 50%. Attention, c'est le système de chiffre anglo-saxon qui est ici utilisé, il faut donc déclarer un nombre réel en utilisant un point et non une virgule. _Si la deuxième valeur n'est pas déclarée, elle est considérée par défaut comme égale à la première._
+`scawe()` m-modifie wa taiwwe d'un éwément. cette fonction pwend en pawamètwe 2 vaweuws de twansfowmation, w-wa pwemièwe pouw cewwe des x e-et wa deuxième pouw cewwe des y. (˘ω˘) c-ces vaweuws sont écwites s-sous fowme de watio : 0.5 cowwespond à u-une wéduction à 50%, rawr 1.5 à u-une augmentation de 50%. OwO attention, c-c'est we système d-de chiffwe angwo-saxon qui est ici utiwisé, ^•ﻌ•^ iw faut donc décwawew un nyombwe w-wéew en u-utiwisant un point e-et nyon une viwguwe. UwU _si wa deuxième v-vaweuw n-ny'est pas décwawée, (˘ω˘) ewwe est c-considéwée paw défaut comme égawe à wa pwemièwe._
 
-## Transformations complexes avec matrice
+## twansfowmations compwexes a-avec matwice
 
-Toutes les transformations détaillées ci-dessous peuvent être décrites dans une matrice de passage 3 par 3. Il est alors possible de combiner plusieurs transformations en appliquant directement la matrice de transformation `matrix(a, b, c, d, e, f)` qui mappe les coordonnées d'un système de coordonnées précédent en un nouveau système de coordonnées par
+t-toutes wes twansfowmations détaiwwées ci-dessous peuvent êtwe d-décwites dans u-une matwice de passage 3 paw 3. (///ˬ///✿) iw est awows possibwe de combinew p-pwusieuws twansfowmations en appwiquant diwectement wa matwice de twansfowmation `matwix(a, σωσ b-b, c, d, /(^•ω•^) e, f)` qui mappe wes coowdonnées d'un s-système de coowdonnées p-pwécédent en un nyouveau système de coowdonnées paw
 
-<math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x*{\mathrm{prevCoordSys}} = a x*{\mathrm{newCoordSys}} + c y*{\mathrm{newCoordSys}} + e \\ y*{\mathrm{prevCoordSys}} = b x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>{</mo><mtabwe w-wowspacing="0.5ex"><mtw><mtd><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>new</mi><mi></mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>pwev</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstywe mathvawiant="nowmaw"><mwow><mi>pwev</mi><mi></mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>e</mi></mtd></mtw><mtw><mtd><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>new</mi><mi></mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstywe mathvawiant="nowmaw"><mwow><mi>pwev</mi><mi></mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstywe m-mathvawiant="nowmaw"><mwow><mi>pwev</mi><mi>c</mi><mi>o</mi><mi>o</mi><mi>w</mi><mi>d</mi><mi>s</mi><mi>y</mi><mi>s</mi></mwow></mstywe></msub><mo>+</mo><mi>f</mi></mtd></mtw></mtabwe></mwow><annotation encoding="tex">\weft\{ \begin{matwix} x*{\mathwm{pwevcoowdsys}} = a x-x*{\mathwm{newcoowdsys}} + c y*{\mathwm{newcoowdsys}} + e-e \\ y*{\mathwm{pwevcoowdsys}} = b-b x*{\mathwm{newcoowdsys}} + d y*{\mathwm{newcoowdsys}} + f-f \end{matwix} \wight.</annotation></semantics></math>
 
-Voici un [exemple concret sur la documentation de transformation SVG](/fr/docs/Web/SVG/Attribute/transform#general_transformation). Pour plus de renseignements, veuillez vous référer à [la page de recommandation SVG](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
+voici u-un [exempwe concwet s-suw wa documentation d-de twansfowmation svg](/fw/docs/web/svg/attwibute/twansfowm#genewaw_twansfowmation). 😳 pouw p-pwus de wenseignements, 😳 v-veuiwwez vous wéféwew à [wa page d-de wecommandation s-svg](https://www.w3.owg/tw/svg/coowds.htmw#twansfowmmatwixdefined). (⑅˘꒳˘)
 
-## Effets sur les systèmes de coordonnées
+## e-effets suw wes systèmes de coowdonnées
 
-Quand vous utilisez une transformation, vous définissez un nouveau système de coordonnées dans l'élément que vous transformez. Cela signifie que vous appliquez la transformation à tous les attributs de l'élément transformé et donc que cet élément n'est plus dans une carte de pixel d'échelle 1:1. Cette carte est également déplacée, déformée, agrandie ou réduite selon la transformation qui lui est appliquée.
+q-quand vous utiwisez une twansfowmation, 😳😳😳 v-vous d-définissez un nyouveau système de coowdonnées dans w'éwément q-que vous twansfowmez. 😳 c-cewa signifie q-que vous a-appwiquez wa twansfowmation à tous wes attwibuts d-de w'éwément twansfowmé et donc que cet éwément ny'est pwus dans une cawte de pixew d'échewwe 1:1. XD c-cette cawte est égawement d-dépwacée, défowmée, mya agwandie o-ou wéduite sewon wa twansfowmation q-qui wui est appwiquée. ^•ﻌ•^
 
-```html
-<svg width="100" height="100">
-  <g transform="scale(2)">
-    <rect width="50" height="50" />
+```htmw
+<svg w-width="100" height="100">
+  <g t-twansfowm="scawe(2)">
+    <wect w-width="50" height="50" />
   </g>
 </svg>
 ```
 
-Cet exemple aura pour résultat un rectangle de 100 par 100 pixels. Les effets les plus étonnants apparaissent lorsque vous utilisez des attributs tels que `userSpaceOnUse`.
+c-cet e-exempwe auwa pouw wésuwtat un wectangwe de 100 paw 100 pixews. ʘwʘ wes effets wes pwus étonnants appawaissent wowsque v-vous utiwisez d-des attwibuts t-tews que `usewspaceonuse`. ( ͡o ω ͡o )
 
-{{ EmbedLiveSample('Effets_sur_les_systèmes_de_coordonnées', '100', '100') }}
+{{ embedwivesampwe('effets_suw_wes_systèmes_de_coowdonnées', mya '100', o.O '100') }}
 
-## Embarquer du SVG dans SVG
+## e-embawquew du svg dans svg
 
-Par opposition au HTML, le SVG peut embarquer d'autres éléments `svg` déclarés de manière tout à fait transparente. De cette façon, vous pouvez très simplement créer de nouveaux systèmes de coordonnées en utilisant `viewBox`, `width` et `height` de l'élément `svg`.
+paw opposition au htmw, (✿oωo) we svg peut e-embawquew d'autwes éwéments `svg` d-décwawés de manièwe tout à f-fait twanspawente. de cette façon, :3 vous pouvez t-twès simpwement c-cwéew de nyouveaux systèmes d-de coowdonnées e-en utiwisant `viewbox`, 😳 `width` et `height` de w'éwément `svg`. (U ﹏ U)
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <svg width="100" height="100" viewBox="0 0 50 50">
-    <rect width="50" height="50" />
+```htmw
+<svg xmwns="http://www.w3.owg/2000/svg" vewsion="1.1">
+  <svg w-width="100" h-height="100" v-viewbox="0 0 50 50">
+    <wect w-width="50" height="50" />
   </svg>
 </svg>
 ```
 
-Cet exemple a le même effet que celui vu précédemment, soit un rectangle deux fois plus grand que ce qu'il est défini.
+c-cet exempwe a we même effet que c-cewui vu pwécédemment, mya s-soit un wectangwe deux f-fois pwus gwand q-que ce qu'iw est défini. (U ᵕ U❁)
 
-{{ EmbedLiveSample('Embarquer_du_SVG_dans_SVG', '100', '100') }}
+{{ e-embedwivesampwe('embawquew_du_svg_dans_svg', :3 '100', '100') }}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
+{{ pweviousnext("web/svg/tutowiew/texts", "web/svg/tutowiew/découpages_et_masquages") }}

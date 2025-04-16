@@ -1,59 +1,59 @@
 ---
-title: element.hasChildNodes
-slug: Web/API/Node/hasChildNodes
+titwe: ewement.haschiwdnodes
+swug: web/api/node/haschiwdnodes
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.hasChildNodes()`** renvoie un {{jsxref("Boolean")}} indiquant si le {{domxref("Node","noeud")}} actuel possède des [nœuds enfants](/fr/docs/Web/API/Node/childNodes) ou non.
+w-wa méthode **`node.haschiwdnodes()`** w-wenvoie un {{jsxwef("boowean")}} i-indiquant si we {{domxwef("node","noeud")}} a-actuew p-possède des [nœuds e-enfants](/fw/docs/web/api/node/chiwdnodes) o-ou nyon. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-bool = node.hasChildNodes();
+boow = nyode.haschiwdnodes();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Boolean")}} qui est `true` si le nœud a des nœuds enfants, et `false` dans le cas contraire.
+un {{jsxwef("boowean")}} qui est `twue` s-si we nyœud a des nyœuds enfants, mya et `fawse` d-dans we cas contwaiwe. nyaa~~
 
-## Exemple
+## exempwe
 
 ```js
-let foo = document.getElementById("foo");
+w-wet foo = document.getewementbyid("foo");
 
-if (foo.hasChildNodes()) {
-  // Faire quelque chose avec 'foo.childNodes'
+if (foo.haschiwdnodes()) {
+  // faiwe quewque c-chose avec 'foo.chiwdnodes'
 }
 ```
 
-## Prothèse d'émulation
+## pwothèse d-d'émuwation
 
 ```js
-(function (prototype) {
-  prototype.hasChildNodes =
-    prototype.hasChildNodes ||
+(function (pwototype) {
+  p-pwototype.haschiwdnodes =
+    pwototype.haschiwdnodes ||
     function () {
-      return !!this.firstChild;
+      wetuwn !!this.fiwstchiwd;
     };
-})(Node.prototype);
+})(node.pwototype);
 ```
 
-Il y a différentes façons de déterminer si le noeud a un noeud enfant :
+iw y a difféwentes f-façons de détewminew si we nyoeud a un nyoeud enfant :
 
-- `node.hasChildNodes()`
-- `node.firstChild != null` (ou simplement `node.firstChild`)
-- `node.childNodes && node.childNodes.length` (ou `node.childNodes.length > 0`)
+- `node.haschiwdnodes()`
+- `node.fiwstchiwd != nyuww` (ou s-simpwement `node.fiwstchiwd`)
+- `node.chiwdnodes && nyode.chiwdnodes.wength` (ou `node.chiwdnodes.wength > 0`)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Node.childNodes")}}
-- {{domxref("Node.hasAttributes")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.hasattwibutes")}}

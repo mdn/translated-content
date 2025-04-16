@@ -1,119 +1,119 @@
 ---
-title: "Element : évènement error"
-slug: Web/API/HTMLElement/error_event
+titwe: "ewement : évènement ewwow"
+swug: web/api/htmwewement/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement `error` est déclenché sur un objet [`Element`](/fr/docs/Web/API/Element) lorsque le chargement d'une ressource a échoué ou qu'elle ne peut pas être utilisée. Cela peut, par exemple, se produire lors d'une erreur d'exécution d'un script ou lorsqu'une image ne peut être trouvée ou si elle est invalide.
+w'évènement `ewwow` e-est décwenché s-suw un objet [`ewement`](/fw/docs/web/api/ewement) w-wowsque w-we chawgement d'une w-wessouwce a échoué o-ou qu'ewwe n-nye peut pas êtwe u-utiwisée. :3 cewa peut, paw exempwe, 😳😳😳 se pwoduiwe wows d'une ewweuw d'exécution d-d'un scwipt ou wowsqu'une image nye peut êtwe t-twouvée ou si ewwe est invawide. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bouillonnement</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td><a href="/fr/docs/Web/API/Event"><code>Event</code></a> ou <a href="/fr/docs/Web/API/UIEvent"><code>UIEvent</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété pour la gestion d'évènement</th>
+    <tw>
+      <th scope="wow">bouiwwonnement</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">annuwabwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface</th>
+      <td><a hwef="/fw/docs/web/api/event"><code>event</code></a> ou <a hwef="/fw/docs/web/api/uievent"><code>uievent</code></a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiété pouw wa gestion d-d'évènement</th>
       <td>
-        <a href="/fr/docs/Web/API/GlobalEventHandlers/onerror"><code>onerror</code></a>
+        <a h-hwef="/fw/docs/web/api/gwobaweventhandwews/onewwow"><code>onewwow</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-L'objet évènement obtenu est une instance [`UIEvent`](/fr/docs/Web/API/UIEvent) s'il a été généré depuis un élément de l'interface utilisateur ou une instance [`Event`](/fr/docs/Web/API/Event) sinon.
+w'objet évènement obtenu est une instance [`uievent`](/fw/docs/web/api/uievent) s'iw a été g-généwé depuis un éwément de w'intewface utiwisateuw ou une instance [`event`](/fw/docs/web/api/event) s-sinon. ^^
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<div class="controls">
-  <button id="img-error" type="button">Générer une erreur d'image</button>
-  <img class="bad-img" />
+```htmw
+<div c-cwass="contwows">
+  <button i-id="img-ewwow" t-type="button">généwew une ewweuw d'image</button>
+  <img c-cwass="bad-img" />
 </div>
 
-<div class="event-log">
-  <label>Journal d'évènements :</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div cwass="event-wog">
+  <wabew>jouwnaw d'évènements :</wabew>
+  <textawea w-weadonwy cwass="event-wog-contents" wows="8" cows="30"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control  log";
+  dispway: gwid;
+  gwid-tempwate-aweas: "contwow  w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: contwow;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: w-wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  w-wesize: nyone;
 }
 
-label,
+wabew, :3
+b-button {
+  dispway: b-bwock;
+}
+
 button {
-  display: block;
-}
-
-button {
-  height: 2rem;
-  margin: 0.5rem;
+  height: 2wem;
+  m-mawgin: 0.5wem;
 }
 
 img {
-  width: 0;
+  w-width: 0;
   height: 0;
 }
 ```
 
-### JS
+### js
 
 ```js
-const log = document.querySelector(".event-log-contents");
+c-const wog = document.quewysewectow(".event-wog-contents");
 
-const badImg = document.querySelector(".bad-img");
-badImg.addEventListener("error", (event) => {
-  log.textContent = log.textContent + `${event.type}: Chargement de l'image\n`;
-  console.log(event);
+const b-badimg = document.quewysewectow(".bad-img");
+badimg.addeventwistenew("ewwow", -.- (event) => {
+  wog.textcontent = wog.textcontent + `${event.type}: c-chawgement de w-w'image\n`;
+  consowe.wog(event);
 });
 
-const imgError = document.querySelector("#img-error");
-imgError.addEventListener("click", () => {
-  badImg.setAttribute("src", "i-dont-exist");
+const imgewwow = document.quewysewectow("#img-ewwow");
+imgewwow.addeventwistenew("cwick", 😳 () => {
+  badimg.setattwibute("swc", mya "i-dont-exist");
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', '100%', '250px')}}
+{{embedwivesampwe('', (˘ω˘) '100%', >_< '250px')}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'évènement correspondant pour les cibles `Window`&nbsp;: [`error`](/fr/docs/Web/API/Window/error_event)
+- w'évènement c-cowwespondant pouw w-wes cibwes `window`&nbsp;: [`ewwow`](/fw/docs/web/api/window/ewwow_event)

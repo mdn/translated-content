@@ -1,67 +1,67 @@
 ---
-title: Date.prototype.setUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
+titwe: date.pwototype.setutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setUTCSeconds()`** définit les secondes pour la date, selon UTC.
+w-wa méthode **`setutcseconds()`** d-définit w-wes secondes p-pouw wa date, 😳😳😳 s-sewon utc. o.O
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.setutcseconds()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+```js i-intewactive-exampwe
+const date1 = nyew date("decembew 31, ( ͡o ω ͡o ) 1975, (U ﹏ U) 23:15:30 gmt+11:00");
 
-console.log(date1.getUTCSeconds());
-// Expected output: 30
+consowe.wog(date1.getutcseconds());
+// e-expected output: 30
 
-date1.setUTCSeconds(39);
+date1.setutcseconds(39);
 
-console.log(date1.getUTCSeconds());
-// Expected output: 39
+consowe.wog(date1.getutcseconds());
+// e-expected output: 39
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.setUTCSeconds(valeurSecondes[, valeurMs])
+dateobj.setutcseconds(vaweuwsecondes[, (///ˬ///✿) vaweuwms])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurSecondes`
-  - : Un entier entre 0 et 59.
-- `valeurMs`
-  - : Paramètre optionnel, un nombre entre 0 et 999, représentant les millièmes de secondes.
+- `vaweuwsecondes`
+  - : u-un entiew entwe 0 et 59. >w<
+- `vaweuwms`
+  - : pawamètwe o-optionnew, rawr u-un nyombwe entwe 0 et 999, mya wepwésentant wes miwwièmes de secondes. ^^
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+we nyombwe de miwwisecondes écouwées entwe we pwemiew janview 1970 minuit, 😳😳😳 utc e-et wa date mise à jouw. mya
 
-## Description
+## descwiption
 
-Si le paramètre `valeurMs` n'est pas utilisée, la valeur renvoyée par la méthode {{jsxref("Date.prototype.getUTCMilliseconds", "getUTCMilliseconds()")}} sera utilisée.
+s-si we p-pawamètwe `vaweuwms` n-ny'est pas u-utiwisée, 😳 wa vaweuw wenvoyée paw wa méthode {{jsxwef("date.pwototype.getutcmiwwiseconds", -.- "getutcmiwwiseconds()")}} s-sewa utiwisée. 🥺
 
-Si un paramètre renseigné est en dehors de l'intervalle attendu, `setUTCSeconds()` tentera de mettre à jour la date en conséquence. Par exemple, si on utilise 100 pour `valeurSecondes`, les minutes de la date seront incrémentées de 1, et 40 sera utilisé pour les secondes.
+si un pawamètwe wenseigné e-est en dehows de w'intewvawwe attendu, o.O `setutcseconds()` tentewa de mettwe à jouw wa date en conséquence. /(^•ω•^) p-paw exempwe, nyaa~~ si on utiwise 100 p-pouw `vaweuwsecondes`, nyaa~~ w-wes minutes d-de wa date sewont incwémentées de 1, et 40 sewa utiwisé p-pouw wes secondes. :3
 
-## Exemples
+## e-exempwes
 
-### Utiliser `setUTCSeconds()`
+### utiwisew `setutcseconds()`
 
 ```js
-var leGrandJour = new Date();
-leGrandJour.setUTCSeconds(20);
+v-vaw wegwandjouw = n-nyew date();
+wegwandjouw.setutcseconds(20);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

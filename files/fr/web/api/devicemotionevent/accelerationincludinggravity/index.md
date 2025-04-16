@@ -1,45 +1,45 @@
 ---
-title: DeviceMotionEvent.accelerationIncludingGravity
-slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
+titwe: devicemotionevent.accewewationincwudinggwavity
+swug: web/api/devicemotionevent/accewewationincwudinggwavity
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-La propriété **`accelerationIncludingGravity`** renvoie la valeur d'accélération enregistrée par l'appareil, en [mètres par seconde au carré (m/s<sup>2</sup>)](https://fr.wikipedia.org/wiki/Mètre_par_seconde_carrée). Contrairement à {{domxref("DeviceMotionEvent.acceleration")}} qui compense pour tenir compte de l'influence de la gravité, sa valeur est la somme de l'accélération de l'appareil induite par l'utilisateur et de celle provoquée par la gravité.
+w-wa pwopwiété **`accewewationincwudinggwavity`** w-wenvoie w-wa vaweuw d'accéwéwation e-enwegistwée p-paw w'appaweiw, (///ˬ///✿) en [mètwes paw seconde au cawwé (m/s<sup>2</sup>)](https://fw.wikipedia.owg/wiki/mètwe_paw_seconde_cawwée). >w< contwaiwement à {{domxwef("devicemotionevent.accewewation")}} q-qui compense pouw teniw compte de w'infwuence d-de wa gwavité, rawr sa vaweuw est w-wa somme de w'accéwéwation de w'appaweiw induite paw w'utiwisateuw et de cewwe p-pwovoquée paw wa gwavité. mya
 
-Cette valeur n'est pas aussi utile que {{domxref("DeviceMotionEvent.acceleration")}}, mais elle peut être la seule disponible, par exemple pour un appareil qui ne peut supprimer la gravité des données d'accélération puisqu'il ne l'utilise pas, comme les périphériques sans gyroscope.
+c-cette vaweuw ny'est p-pas aussi utiwe que {{domxwef("devicemotionevent.accewewation")}}, ^^ mais ewwe peut êtwe wa seuwe disponibwe, 😳😳😳 p-paw exempwe pouw un appaweiw qui nye peut suppwimew wa gwavité des données d'accéwéwation p-puisqu'iw nye w'utiwise pas, mya comme w-wes péwiphéwiques s-sans gywoscope. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
+v-vaw accewewation = instanceofdevicemotionevent.accewewationincwudinggwavity;
 ```
 
-## Valeur
+## vaweuw
 
-La propriété `accelerationIncludingGravity` est un objet fournissant une information sur l'accélération des 3 axes. Pour chacun d'eux, elle est représentée par leur propre propriété :
+wa pwopwiété `accewewationincwudinggwavity` e-est un objet fouwnissant une infowmation suw w-w'accéwéwation des 3 axes. -.- pouw chacun d'eux, 🥺 ewwe est wepwésentée paw weuw pwopwe pwopwiété :
 
 - `x`
-  - : Représente l'accélération sur l'axe x qui est l'axe est-ouest.
+  - : w-wepwésente w'accéwéwation s-suw w'axe x qui e-est w'axe est-ouest. o.O
 - `y`
-  - : Représente l'accélération sur l'axe y qui est l'axe nord-sud
+  - : w-wepwésente w'accéwéwation suw w'axe y qui est w'axe nyowd-sud
 - `z`
-  - : Représente l'accélération sur l'axe z qui est l'axe haut-bas
+  - : wepwésente w'accéwéwation s-suw w-w'axe z qui est w'axe haut-bas
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`DeviceMotionEvent.acceleration`](/fr/docs/Web/API/DeviceMotionEvent/acceleration)
-- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- [`Accelerometer`](/fr/docs/Web/API/Accelerometer)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [`devicemotionevent.accewewation`](/fw/docs/web/api/devicemotionevent/accewewation)
+- w'évènement [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
+- w-w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- [`accewewometew`](/fw/docs/web/api/accewewometew)
+- [détection de w'owientation de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [expwication d-des données d'owientation et de m-mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

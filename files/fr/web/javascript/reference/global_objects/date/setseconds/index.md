@@ -1,74 +1,74 @@
 ---
-title: Date.prototype.setSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
+titwe: date.pwototype.setseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setSeconds()`** définit les secondes pour la date, selon l'heure locale.
+w-wa méthode **`setseconds()`** d-définit wes s-secondes pouw wa d-date, mya sewon w'heuwe w-wocawe. ^^
 
-{{InteractiveExample("JavaScript Demo: Date.setSeconds()")}}
+{{intewactiveexampwe("javascwipt demo: d-date.setseconds()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js i-intewactive-exampwe
+c-const event = nyew date("august 19, 😳😳😳 1975 23:15:30");
 
-event.setSeconds(42);
+event.setseconds(42);
 
-console.log(event.getSeconds());
-// Expected output: 42
+consowe.wog(event.getseconds());
+// expected o-output: 42
 
-console.log(event);
-// Expected output: "Sat Apr 19 1975 23:15:42 GMT+0100 (CET)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "sat apw 19 1975 23:15:42 g-gmt+0100 (cet)"
+// nyote: youw timezone m-may vawy
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.setSeconds(valeurSecondes[, valeurMs])
+dateobj.setseconds(vaweuwsecondes[, vaweuwms])
 ```
 
-### Versions antérieures à JavaScript 1.3
+### v-vewsions antéwieuwes à j-javascwipt 1.3
 
 ```js
-dateObj.setSeconds(valeurSecondes);
+d-dateobj.setseconds(vaweuwsecondes);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurSecondes`
-  - : Un entier entre 0 et 59.
-- `valeurMs`
-  - : Paramètre optionnel, un nombre entre 0 et 999, représentant les millièmes de secondes.
+- `vaweuwsecondes`
+  - : un entiew entwe 0 et 59. mya
+- `vaweuwms`
+  - : pawamètwe o-optionnew, un nyombwe entwe 0 et 999, 😳 wepwésentant wes miwwièmes de secondes. -.-
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+we n-nyombwe de miwwisecondes écouwées e-entwe we pwemiew j-janview 1970 m-minuit, 🥺 utc et wa date mise à jouw.
 
-## Description
+## descwiption
 
-Si le paramètre `valeurMs` n'est pas utilisé, la valeur renvoyée par la méthode {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} sera utilisée.
+s-si we pawamètwe `vaweuwms` ny'est pas utiwisé, o.O wa vaweuw w-wenvoyée paw wa méthode {{jsxwef("date.getmiwwiseconds", /(^•ω•^) "getmiwwiseconds()")}} sewa utiwisée. nyaa~~
 
-Si un paramètre utilisé est en dehors des limites attendues, `setSeconds()` tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 100 pour `valeurSecondes`, les minutes de la date seront incrémentées de 1, et 40 sera utilisé pour les secondes.
+si un pawamètwe utiwisé est en dehows des w-wimites attendues, nyaa~~ `setseconds()` tentewa de m-mettwe à jouw wa d-date en conséquence. :3 p-paw exempwe, 😳😳😳 si on utiwise wa vaweuw 100 pouw `vaweuwsecondes`, (˘ω˘) w-wes minutes d-de wa date sewont incwémentées d-de 1, ^^ et 40 s-sewa utiwisé pouw wes secondes. :3
 
-## Exemples
+## e-exempwes
 
-### Utiliser `setSeconds()`
+### utiwisew `setseconds()`
 
 ```js
-var leGrandJour = new Date();
-leGrandJour.setSeconds(30);
+v-vaw wegwandjouw = nyew date();
+wegwandjouw.setseconds(30);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

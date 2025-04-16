@@ -1,36 +1,36 @@
 ---
-title: WorkerGlobalScope.ononline
-slug: Web/API/WorkerGlobalScope/online_event
+titwe: wowkewgwobawscope.ononwine
+swug: web/api/wowkewgwobawscope/onwine_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-La propriété **`ononline`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `online` survient et se propage à travers le {{domxref("Worker")}}.
+w-wa pwopwiété **`ononwine`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} w-wepwésente u-un gestionnaiwe d-d'évènement à a-appewew wowsque w-w'événement `onwine` suwvient et se pwopage à twavews we {{domxwef("wowkew")}}. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-self.ononline = function() { ... };
+s-sewf.ononwine = function() { ... };
 ```
 
-## Exemple
+## exempwe
 
-L'extrait de code suivant montre un gestionnaire `ononline` placé dans un worker :
+w'extwait d-de code suivant montwe un g-gestionnaiwe `ononwine` pwacé dans un wowkew :
 
 ```js
-self.ononline = function () {
-  console.log("Your worker is now online");
+sewf.ononwine = f-function () {
+  consowe.wog("youw w-wowkew i-is nyow onwine");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-L'interface {{domxref("WorkerGlobalScope")}} à laquelle il appartient.
+w-w'intewface {{domxwef("wowkewgwobawscope")}} à waquewwe iw appawtient. ( ͡o ω ͡o )

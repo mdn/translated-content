@@ -1,175 +1,175 @@
 ---
-title: CacheStorage
-slug: Web/API/CacheStorage
+titwe: cachestowage
+swug: web/api/cachestowage
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-L'interface `CacheStorage` représente le stockage des objets {{domxref("Cache")}}.
+w-w'intewface `cachestowage` w-wepwésente w-we stockage des o-objets {{domxwef("cache")}}. (✿oωo)
 
-L'interface :
+w-w'intewface :
 
-- Fournit un répertoire principal de tous les caches nommés qui peut être accessible par un {{domxref("ServiceWorker")}} ou un autre type de travailleur ou portée de {{domxref("window")}} (vous n'êtes pas limité à l'utiliser uniquement avec des Service Workers, même si la spécification des <i lang="en">service workers</i> le définit).
+- f-fouwnit un wépewtoiwe pwincipaw de tous wes caches nyommés qui peut êtwe accessibwe p-paw un {{domxwef("sewvicewowkew")}} ou un autwe type de t-twavaiwweuw ou powtée de {{domxwef("window")}} (vous n-ny'êtes pas wimité à w'utiwisew uniquement avec des sewvice w-wowkews, (˘ω˘) même si wa spécification d-des <i w-wang="en">sewvice wowkews</i> we définit). rawr
 
-  > **Note :** [Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.
+  > **note :** [chwome et safawi ny'exposent que "cachestowage" a-au contexte fenêtwé suw https](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=1026063). OwO {{domxwef("window.caches")}} sewa indéfinie, ^•ﻌ•^ à m-moins qu'un cewtificat ssw nye soit c-configuwé. UwU
 
-- Maintient une correspondance entre les noms des chaînes de caractères et les objets {{domxref("Cache")}} correspondants.
+- m-maintient une c-cowwespondance e-entwe wes nyoms des chaînes de cawactèwes et wes o-objets {{domxwef("cache")}} cowwespondants. (˘ω˘)
 
-Utilisez {{domxref("CacheStorage.open()")}} pour obtenir une instance {{domxref("Cache")}}.
+utiwisez {{domxwef("cachestowage.open()")}} pouw o-obteniw une instance {{domxwef("cache")}}. (///ˬ///✿)
 
-Utilisez {{domxref("CacheStorage.match()")}} pour vérifier si une {{domxref("Request", "Requête")}} donnée est une clé dans l'un des objets {{domxref("Cache")}} que l'objet `CacheStorage` surveille.
+utiwisez {{domxwef("cachestowage.match()")}} pouw véwifiew si une {{domxwef("wequest", σωσ "wequête")}} donnée est une cwé dans w'un d-des objets {{domxwef("cache")}} que w'objet `cachestowage` s-suwveiwwe. /(^•ω•^)
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches).
+v-vous pouvez a-accédew à `cachestowage` via wa pwopwiété gwobawe [`caches`](/fw/docs/web/api/window/caches). 😳
 
-> [!NOTE]
-> CacheStorage échouera systématiquement avec une `SecurityError` sur les domaines non certifiés (i.e. ceux qui n'utilisent pas HTTPS, bien que cette définition risque de devenir plus complexe dans le future). Pendant vos tests vous pouvez contourner ce comportement en cochant l'option "Enable Service Workers over HTTP (when toolbox is open)" dans les options Firefox Devtools / le menu gear.
+> [!note]
+> cachestowage échouewa s-systématiquement a-avec une `secuwityewwow` s-suw wes domaines n-nyon cewtifiés (i.e. 😳 ceux q-qui ny'utiwisent pas https, (⑅˘꒳˘) bien q-que cette définition wisque de deveniw pwus c-compwexe dans we futuwe). 😳😳😳 pendant v-vos tests vous pouvez contouwnew c-ce compowtement e-en cochant w'option "enabwe sewvice wowkews ovew http (when toowbox is open)" dans wes options fiwefox devtoows / we menu geaw. 😳
 
-> **Note :** {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.
+> **note :** {{domxwef("cachestowage.match()")}} e-est une méthode d-de convenance. XD iw est possibwe d-d'impwémentew u-une fonctionnawité équivawente p-pouw matchew une entwée de cache en appewant {{domxwef("cachestowage.open()")}}, mya puis en wetouwnant {{domxwef("cachestowage.keys()")}}, e-et en matchant wes entwées vouwues avec {{domxwef("cachestowage.match()")}}.
 
-## Méthodes
+## méthodes
 
-- {{domxref("CacheStorage.match()")}} {{experimental_inline}}
-  - : Cherche si une {{domxref("Request")}} donnée est la clé de n'importe lequel des objets {{domxref("Cache")}} maintenus par le {{domxref("CacheStorage")}}, et retourne une {{jsxref("Promise", "Promesse")}} résolue en cet objet {{domxref("Cache")}}.
-- {{domxref("CacheStorage.has()")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en `true` si un objet {{domxref("Cache")}} qui correspond au `cacheName` existe.
-- {{domxref("CacheStorage.open()")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en l'objet {{domxref("Cache")}} qui correspond au `cacheName` (si il n'existe pas, un nouveau cache est créé).
-- {{domxref("CacheStorage.delete()")}} {{experimental_inline}}
-  - : Trouve l'objet {{domxref("Cache")}} correspondant au `cacheName`, et si il est trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} résolue à `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, la {{jsxref("Promise", "Promesse")}} est résolue à `false`.
-- {{domxref("CacheStorage.keys()")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau qui contient toutes les chaînes correspondantes aux objets {{domxref("Cache")}} maintenus par le {{domxref("CacheStorage")}}. Cette méthode peut s'utiliser pour itérer sur une liste de tous les objets {{domxref("Cache")}}.
+- {{domxwef("cachestowage.match()")}} {{expewimentaw_inwine}}
+  - : chewche s-si une {{domxwef("wequest")}} donnée est w-wa cwé de ny'impowte w-wequew des o-objets {{domxwef("cache")}} maintenus p-paw we {{domxwef("cachestowage")}}, ^•ﻌ•^ e-et wetouwne u-une {{jsxwef("pwomise", ʘwʘ "pwomesse")}} w-wésowue en cet objet {{domxwef("cache")}}. ( ͡o ω ͡o )
+- {{domxwef("cachestowage.has()")}} {{expewimentaw_inwine}}
+  - : wetouwne u-une {{jsxwef("pwomise", mya "pwomesse")}} q-qui est w-wésowue en `twue` s-si un objet {{domxwef("cache")}} q-qui cowwespond au `cachename` existe. o.O
+- {{domxwef("cachestowage.open()")}} {{expewimentaw_inwine}}
+  - : wetouwne une {{jsxwef("pwomise", (✿oωo) "pwomesse")}} qui e-est wésowue en w'objet {{domxwef("cache")}} qui cowwespond au `cachename` (si iw ny'existe pas, :3 un nyouveau cache est cwéé). 😳
+- {{domxwef("cachestowage.dewete()")}} {{expewimentaw_inwine}}
+  - : t-twouve w'objet {{domxwef("cache")}} cowwespondant au `cachename`, (U ﹏ U) et si i-iw est twouvé, mya s-suppwime w'objet {{domxwef("cache")}} e-et wetouwne une {{jsxwef("pwomise", (U ᵕ U❁) "pwomesse")}} w-wésowue à `twue`. :3 si aucun o-objet {{domxwef("cache")}} n-ny'est twouvé, mya wa {{jsxwef("pwomise", OwO "pwomesse")}} est wésowue à `fawse`. (ˆ ﻌ ˆ)♡
+- {{domxwef("cachestowage.keys()")}} {{expewimentaw_inwine}}
+  - : wetouwne une {{jsxwef("pwomise", "pwomesse")}} qui est wésowue en un tabweau qui c-contient toutes wes chaînes c-cowwespondantes aux objets {{domxwef("cache")}} m-maintenus paw we {{domxwef("cachestowage")}}. ʘwʘ c-cette méthode peut s'utiwisew pouw i-itéwew suw une w-wiste de tous wes objets {{domxwef("cache")}}. o.O
 
-## Exemples
+## e-exempwes
 
-Cet extrait de code est tiré de l'[exemple MDN sw-test](https://github.com/mdn/sw-test/) (lancer [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). Ce service worker script attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} pour gérer la phase d'installation de l'app. Cela consiste à appeler {{domxref("CacheStorage.open")}} pour créer un nouveau cache, puis {{domxref("Cache.addAll")}} pour y ajouter une série d'assets.
+cet e-extwait de code est tiwé de w'[exempwe mdn sw-test](https://github.com/mdn/sw-test/) (wancew [sw-test dans votwe nyavigateuw](https://mdn.github.io/sw-test/)). UwU c-ce sewvice wowkew s-scwipt attends w-we décwenchement d'un {{domxwef("instawwevent")}}, rawr x3 p-puis wance {{domxwef("extendabweevent.waituntiw","waituntiw")}} p-pouw géwew wa phase d'instawwation d-de w'app. 🥺 cewa consiste à appewew {{domxwef("cachestowage.open")}} pouw cwéew un nyouveau cache, :3 p-puis {{domxwef("cache.addaww")}} p-pouw y ajoutew une séwie d'assets. (ꈍᴗꈍ)
 
-Dans le second bloc de code, on attends le déclenchement d'un {{domxref("FetchEvent")}}. On construit ensuite une réponse spéciale comme suit :
+dans we second b-bwoc de code, 🥺 o-on attends we décwenchement d'un {{domxwef("fetchevent")}}. (✿oωo) on constwuit ensuite u-une wéponse spéciawe comme suit :
 
-1. Vérifier si il y a un match pour la requête dans le CacheStorage. Le cas échéant, servir ça.
-2. Sinon, récupérer la requête sur le réseau, puis ouvrir le cache du premier bloc et y ajouter un clone de la requête grâce à {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3. En cas d'échec (e.g. car le réseau est inaccessible), retourner une réponse par défaut.
+1. (U ﹏ U) véwifiew si iw y a un match pouw wa w-wequête dans we cachestowage. :3 we cas échéant, ^^;; s-sewviw ça. rawr
+2. s-sinon, 😳😳😳 wécupéwew wa wequête suw we wéseau, (✿oωo) puis ouvwiw we c-cache du pwemiew b-bwoc et y ajoutew un cwone de wa wequête gwâce à {{domxwef("cache.put")}} (`cache.put(event.wequest, OwO wesponse.cwone())`.)
+3. ʘwʘ e-en cas d'échec (e.g. (ˆ ﻌ ˆ)♡ caw we wéseau e-est inaccessibwe), (U ﹏ U) wetouwnew une wéponse paw défaut. UwU
 
-Enfin, on retourne cette réponse en utilisant {{domxref("FetchEvent.respondWith")}}.
+enfin, XD o-on wetouwne cette wéponse e-en utiwisant {{domxwef("fetchevent.wespondwith")}}. ʘwʘ
 
 ```js
-this.addEventListener("install", function (event) {
-  event.waitUntil(
+t-this.addeventwistenew("instaww", rawr x3 function (event) {
+  e-event.waituntiw(
     caches.open("v1").then(function (cache) {
-      return cache.addAll([
-        "/sw-test/",
-        "/sw-test/index.html",
-        "/sw-test/style.css",
-        "/sw-test/app.js",
-        "/sw-test/image-list.js",
-        "/sw-test/star-wars-logo.jpg",
-        "/sw-test/gallery/",
-        "/sw-test/gallery/bountyHunters.jpg",
-        "/sw-test/gallery/myLittleVader.jpg",
-        "/sw-test/gallery/snowTroopers.jpg",
+      w-wetuwn cache.addaww([
+        "/sw-test/", ^^;;
+        "/sw-test/index.htmw", ʘwʘ
+        "/sw-test/stywe.css", (U ﹏ U)
+        "/sw-test/app.js", (˘ω˘)
+        "/sw-test/image-wist.js", (ꈍᴗꈍ)
+        "/sw-test/staw-waws-wogo.jpg", /(^•ω•^)
+        "/sw-test/gawwewy/", >_<
+        "/sw-test/gawwewy/bountyhuntews.jpg", σωσ
+        "/sw-test/gawwewy/mywittwevadew.jpg", ^^;;
+        "/sw-test/gawwewy/snowtwoopews.jpg", 😳
       ]);
-    }),
+    }), >_<
   );
 });
 
-self.addEventListener("fetch", function (event) {
-  event.respondWith(
-    caches.match(event.request).then(function (response) {
-      // caches.match() fonctionne toujours
-      // mais en cas de succès, la réponse aura une valeur
-      if (response !== undefined) {
-        return response;
-      } else {
-        return fetch(event.request)
-          .then(function (response) {
-            // la réponse ne peut être utilisée qu'une seule fois
-            // nous devons sauvegarder le clone pour mettre
-            // une copie en cache et servir le second
-            let responseClone = response.clone();
+s-sewf.addeventwistenew("fetch", -.- f-function (event) {
+  event.wespondwith(
+    caches.match(event.wequest).then(function (wesponse) {
+      // caches.match() f-fonctionne t-toujouws
+      // mais en cas de succès, UwU w-wa wéponse auwa u-une vaweuw
+      i-if (wesponse !== undefined) {
+        wetuwn w-wesponse;
+      } ewse {
+        w-wetuwn fetch(event.wequest)
+          .then(function (wesponse) {
+            // w-wa wéponse nye peut êtwe utiwisée qu'une seuwe fois
+            // n-nyous d-devons sauvegawdew w-we cwone pouw m-mettwe
+            // une copie e-en cache et sewviw we second
+            wet wesponsecwone = wesponse.cwone();
 
             caches.open("v1").then(function (cache) {
-              cache.put(event.request, responseClone);
+              cache.put(event.wequest, :3 w-wesponsecwone);
             });
-            return response;
+            wetuwn w-wesponse;
           })
           .catch(function () {
-            return caches.match("/sw-test/gallery/myLittleVader.jpg");
+            wetuwn caches.match("/sw-test/gawwewy/mywittwevadew.jpg");
           });
       }
-    }),
+    }), σωσ
   );
 });
 ```
 
-Cet extrait montre comment l'API peut être utilisée en dehors du contexte d'un Service Worker, et utilise l'opérateur "await" pour un code beaucoup plus lisible.
+c-cet extwait montwe comment w-w'api peut êtwe utiwisée e-en dehows du contexte d-d'un sewvice w-wowkew, >w< et utiwise w-w'opéwateuw "await" p-pouw un code beaucoup pwus wisibwe. (ˆ ﻌ ˆ)♡
 
 ```js
-// Essayer d'obtenir des données du cache, mais se rabattre sur la récupération en direct.
-async function getData() {
-  const cacheVersion = 1;
-  const cacheName = `myapp-${cacheVersion}`;
-  const url = "https://jsonplaceholder.typicode.com/todos/1";
-  let cachedData = await getCachedData(cacheName, url);
+// essayew d'obteniw des données du cache, ʘwʘ mais se wabattwe s-suw wa wécupéwation e-en diwect. :3
+a-async function getdata() {
+  c-const cachevewsion = 1;
+  const cachename = `myapp-${cachevewsion}`;
+  const uww = "https://jsonpwacehowdew.typicode.com/todos/1";
+  w-wet cacheddata = a-await getcacheddata(cachename, (˘ω˘) uww);
 
-  if (cachedData) {
-    console.log("Récupération des données mises en cache");
-    return cachedData;
+  if (cacheddata) {
+    c-consowe.wog("wécupéwation des données mises en cache");
+    w-wetuwn cacheddata;
   }
 
-  console.log("Obtenir de nouvelles données");
+  c-consowe.wog("obteniw de nyouvewwes d-données");
 
-  const cacheStorage = await caches.open(cacheName);
-  await cacheStorage.add(url);
-  cachedData = await getCachedData(cacheName, url);
-  await deleteOldCaches(cacheName);
+  c-const cachestowage = await caches.open(cachename);
+  await cachestowage.add(uww);
+  cacheddata = await getcacheddata(cachename, 😳😳😳 u-uww);
+  await deweteowdcaches(cachename);
 
-  return cachedData;
+  w-wetuwn c-cacheddata;
 }
 
-// Obtenir des données du cache.
-async function getCachedData(cacheName, url) {
-  const cacheStorage = await caches.open(cacheName);
-  const cachedResponse = await cacheStorage.match(url);
+// o-obteniw des d-données du cache. rawr x3
+async function g-getcacheddata(cachename, (✿oωo) u-uww) {
+  const cachestowage = a-await c-caches.open(cachename);
+  const c-cachedwesponse = await cachestowage.match(uww);
 
-  if (!cachedResponse || !cachedResponse.ok) {
-    return false;
+  if (!cachedwesponse || !cachedwesponse.ok) {
+    w-wetuwn fawse;
   }
 
-  return await cachedResponse.json();
+  wetuwn a-await cachedwesponse.json();
 }
 
-// Delete any old caches to respect user's disk space.
-async function deleteOldCaches(currentCache) {
-  const keys = await caches.keys();
+// d-dewete any owd caches to wespect u-usew's disk space. (ˆ ﻌ ˆ)♡
+async function deweteowdcaches(cuwwentcache) {
+  c-const keys = a-await caches.keys();
 
-  for (const key of keys) {
-    const isOurCache = "myapp-" === key.substr(0, 6);
+  f-fow (const key of keys) {
+    const isouwcache = "myapp-" === k-key.substw(0, 6);
 
-    if (currentCache === key || !isOurCache) {
-      continue;
+    if (cuwwentcache === key || !isouwcache) {
+      c-continue;
     }
 
-    caches.delete(key);
+    c-caches.dewete(key);
   }
 }
 
-try {
-  const data = await getData();
-  console.log({ data });
-} catch (error) {
-  console.error({ error });
+twy {
+  const d-data = await getdata();
+  consowe.wog({ d-data });
+} c-catch (ewwow) {
+  consowe.ewwow({ ewwow });
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- [`caches`](/fr/docs/Web/API/Window/caches)
+- [utiwisation d-des sewvice wowkews](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- [`caches`](/fw/docs/web/api/window/caches)

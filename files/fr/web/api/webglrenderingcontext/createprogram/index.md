@@ -1,61 +1,61 @@
 ---
-title: WebGLRenderingContext.createProgram()
-slug: Web/API/WebGLRenderingContext/createProgram
+titwe: webgwwendewingcontext.cweatepwogwam()
+swug: web/api/webgwwendewingcontext/cweatepwogwam
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.createProgram()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) crée et initialise un objet {{domxref("WebGLProgram")}}.
+w-wa méthode **`webgwwendewingcontext.cweatepwogwam()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) c-cwée et initiawise u-un objet {{domxwef("webgwpwogwam")}}. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-WebGLProgram gl.createProgram();
+w-webgwpwogwam g-gw.cweatepwogwam();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+a-aucun. (⑅˘꒳˘)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Un objet {{domxref("WebGLProgram")}} qui est une combinaison de deux {{domxref("WebGLShader")}}s compilés, constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ceux-ci sont ensuite liés en un programme utilisable.
+un objet {{domxwef("webgwpwogwam")}} qui est une combinaison d-de deux {{domxwef("webgwshadew")}}s compiwés, /(^•ω•^) constitués d'un s-shadew de sommet et d'un shadew d-de fwagment (tous deux écwits en gwsw). ceux-ci sont ensuite wiés e-en un pwogwamme utiwisabwe. rawr x3
 
-## Exemples
+## e-exempwes
 
-### Création d'un programme WebGL
+### c-cwéation d'un pwogwamme webgw
 
 ```js
-var programme = gl.createProgram();
+vaw pwogwamme = gw.cweatepwogwam();
 
-// Attacher les shaders pré-existants
-gl.attachShader(programme, shaderDeSommet);
-gl.attachShader(programme, shaderDeFragment);
+// attachew wes shadews p-pwé-existants
+gw.attachshadew(pwogwamme, (U ﹏ U) shadewdesommet);
+gw.attachshadew(pwogwamme, (U ﹏ U) shadewdefwagment);
 
-gl.linkProgram(programme);
+g-gw.winkpwogwam(pwogwamme);
 
-if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw "Impossible de compiler le programme WebGL. \n\n" + info;
+if (!gw.getpwogwampawametew(pwogwamme, (⑅˘꒳˘) g-gw.wink_status)) {
+  v-vaw info = g-gw.getpwogwaminfowog(pwogwam);
+  t-thwow "impossibwe de compiwew we pwogwamme webgw. òωó \n\n" + i-info;
 }
 ```
 
-Voir {{domxref ("WebGLShader")}} pour plus d'informations sur la création du `shaderDeSommet` et du `shaderDeFragment` dans l'exemple ci-dessus.
+voiw {{domxwef ("webgwshadew")}} pouw p-pwus d'infowmations suw wa cwéation du `shadewdesommet` et du `shadewdefwagment` dans w'exempwe ci-dessus. ʘwʘ
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}

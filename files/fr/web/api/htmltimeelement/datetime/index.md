@@ -1,176 +1,176 @@
 ---
-title: HTMLTimeElement.dateTime
-slug: Web/API/HTMLTimeElement/dateTime
+titwe: htmwtimeewement.datetime
+swug: web/api/htmwtimeewement/datetime
 ---
 
-{{ APIRef("HTML DOM") }}La propriété **`HTMLTimeElement.dateTime`** est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`datetime`](/fr/docs/Web/HTML/Element/time#datetime), contenant une date et une heure interprétable par un ordinateur.
+{{ a-apiwef("htmw dom") }}wa p-pwopwiété **`htmwtimeewement.datetime`** e-est une {{domxwef("domstwing")}} q-qui wefwète w-w'attwibut htmw [`datetime`](/fw/docs/web/htmw/ewement/time#datetime), 😳😳😳 c-contenant u-une date et u-une heuwe intewpwétabwe paw un owdinateuw. 🥺
 
-Le format de la chaîne de caractères doit correspondre à l'une des micro-syntaxes HTML suivantes:
+we fowmat de wa chaîne de cawactèwes d-doit cowwespondwe à w'une des micwo-syntaxes h-htmw suivantes:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Microsyntaxe</th>
-      <th scope="col">Description</th>
-      <th scope="col">Exemples</th>
-    </tr>
+    <tw>
+      <th scope="cow">micwosyntaxe</th>
+      <th s-scope="cow">descwiption</th>
+      <th scope="cow">exempwes</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Mois</td>
-      <td><em>AAAA</em><code>-</code><em>MM</em></td>
+    <tw>
+      <td>mois</td>
+      <td><em>aaaa</em><code>-</code><em>mm</em></td>
       <td><code>2011-11</code>, <code>2013-05</code></td>
-    </tr>
-    <tr>
-      <td><p>Date</p></td>
+    </tw>
+    <tw>
+      <td><p>date</p></td>
       <td>
-        <em><code>AAAA</code></em
-        ><code>-</code><em>MM</em><code>-</code><em>DD</em>
+        <em><code>aaaa</code></em
+        ><code>-</code><em>mm</em><code>-</code><em>dd</em>
       </td>
       <td><code>1887-12-01</code></td>
-    </tr>
-    <tr>
-      <td>Date sans l'année</td>
-      <td><em>MM</em><code>-</code><em>DD</em></td>
+    </tw>
+    <tw>
+      <td>date sans w'année</td>
+      <td><em>mm</em><code>-</code><em>dd</em></td>
       <td><code>11-12</code></td>
-    </tr>
-    <tr>
-      <td>Heure</td>
+    </tw>
+    <tw>
+      <td>heuwe</td>
       <td>
-        <em>HH</em><code>:</code><em>MM</em><br /><em>HH</em><code>:</code
-        ><em>MM</em><code>:</code><em>SS</em><br /><em>HH</em><code>:</code
-        ><em>MM</em><code>:</code><em>SS</em><code>.</code><em>mmm</em>
+        <em>hh</em><code>:</code><em>mm</em><bw /><em>hh</em><code>:</code
+        ><em>mm</em><code>:</code><em>ss</em><bw /><em>hh</em><code>:</code
+        ><em>mm</em><code>:</code><em>ss</em><code>.</code><em>mmm</em>
       </td>
       <td>
-        <code>23:59</code><br /><code>12:15:47</code><br /><code
+        <code>23:59</code><bw /><code>12:15:47</code><bw /><code
           >12:15:52.998</code
         >
       </td>
-    </tr>
-    <tr>
-      <td>Date et heure locale</td>
+    </tw>
+    <tw>
+      <td>date et heuwe w-wocawe</td>
       <td>
-        <em>AAAA</em><code>-</code><em>MM</em><code>-</code><em>DD</em>
-        <em>HH</em><code>:</code><em>MM</em><br /><em>AAAA</em><code>-</code
-        ><em>MM</em><code>-</code><em>DD</em> <em>HH</em><code>:</code
-        ><em>MM</em><code>:</code><em>SS</em><br /><em>AAAA</em><code>-</code
-        ><em>MM</em><code>-</code><em>DD</em> <em>HH</em><code>:</code
-        ><em>MM</em><code>:</code><em>SS<code>.</code><em>mmm</em></em
-        ><br /><em>AAAA</em><code>-</code><em>MM</em><code>-</code><em>DD</em
-        ><code>T</code><em>HH</em><code>:</code><em>MM</em><br /><em>AAAA</em
-        ><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code
-        ><em>HH</em><code>:</code><em>MM</em><code>:</code><em>SS</em><br /><em
-          >AAAA</em
-        ><code>-</code><em>MM</em><code>-</code><em>DD</em><code>T</code
-        ><em>HH</em><code>:</code><em>MM</em><code>:</code
-        ><em>SS<code>.</code><em>mmm</em></em>
+        <em>aaaa</em><code>-</code><em>mm</em><code>-</code><em>dd</em>
+        <em>hh</em><code>:</code><em>mm</em><bw /><em>aaaa</em><code>-</code
+        ><em>mm</em><code>-</code><em>dd</em> <em>hh</em><code>:</code
+        ><em>mm</em><code>:</code><em>ss</em><bw /><em>aaaa</em><code>-</code
+        ><em>mm</em><code>-</code><em>dd</em> <em>hh</em><code>:</code
+        ><em>mm</em><code>:</code><em>ss<code>.</code><em>mmm</em></em
+        ><bw /><em>aaaa</em><code>-</code><em>mm</em><code>-</code><em>dd</em
+        ><code>t</code><em>hh</em><code>:</code><em>mm</em><bw /><em>aaaa</em
+        ><code>-</code><em>mm</em><code>-</code><em>dd</em><code>t</code
+        ><em>hh</em><code>:</code><em>mm</em><code>:</code><em>ss</em><bw /><em
+          >aaaa</em
+        ><code>-</code><em>mm</em><code>-</code><em>dd</em><code>t</code
+        ><em>hh</em><code>:</code><em>mm</em><code>:</code
+        ><em>ss<code>.</code><em>mmm</em></em>
       </td>
       <td>
         <code
-          >2013-12-25 11:12<br />1972-07-25 13:43:07<br />1941-03-15
-          07:06:23.678<br />2013-12-25T11:12<br />1972-07-25T13:43:07<br />1941-03-15T07:06:23.678</code
+          >2013-12-25 11:12<bw />1972-07-25 13:43:07<bw />1941-03-15
+          07:06:23.678<bw />2013-12-25t11:12<bw />1972-07-25t13:43:07<bw />1941-03-15t07:06:23.678</code
         >
       </td>
-    </tr>
-    <tr>
-      <td>Décalage horaire</td>
+    </tw>
+    <tw>
+      <td>décawage howaiwe</td>
       <td>
-        <code>Z</code><br /><code>+</code><em>HHMM<br /><code>+</code></em
-        ><em>HH</em><code>:</code><em>MM</em><br /><em
-          ><code>-</code><em>HHMM<br /><code>-</code></em
-          ><em>HH</em><code>:</code><em>MM</em></em
+        <code>z</code><bw /><code>+</code><em>hhmm<bw /><code>+</code></em
+        ><em>hh</em><code>:</code><em>mm</em><bw /><em
+          ><code>-</code><em>hhmm<bw /><code>-</code></em
+          ><em>hh</em><code>:</code><em>mm</em></em
         >
       </td>
       <td>
-        <code>Z<br />+0200<br />+04:30<br />-0300<br />-08:00</code>
+        <code>z<bw />+0200<bw />+04:30<bw />-0300<bw />-08:00</code>
       </td>
-    </tr>
-    <tr>
-      <td>date et heure globale</td>
+    </tw>
+    <tw>
+      <td>date e-et heuwe g-gwobawe</td>
       <td>
         <p>
           <em
-            >N'importe quelle combinaison de date et d'heure locale suivie d'un
-            décalage horaire</em
+            >n'impowte quewwe combinaison de date et d'heuwe wocawe suivie d'un
+            d-décawage howaiwe</em
           >
         </p>
       </td>
       <td>
         <code
-          >2013-12-25 11:12+0200<br />1972-07-25 13:43:07+04:30<br />1941-03-15
-          07:06:23.678Z<br />2013-12-25T11:12-08:00</code
+          >2013-12-25 11:12+0200<bw />1972-07-25 13:43:07+04:30<bw />1941-03-15
+          07:06:23.678z<bw />2013-12-25t11:12-08:00</code
         >
       </td>
-    </tr>
-    <tr>
-      <td>Semaine</td>
-      <td><em>AAAA</em><code>-W</code><em>WW</em></td>
-      <td><code>2013-W46</code></td>
-    </tr>
-    <tr>
-      <td><p>Quatre ou plus chiffres ASCII</p></td>
-      <td><em>AAAA</em></td>
-      <td><code>2013</code>, <code>0001</code></td>
-    </tr>
-    <tr>
-      <td>Durée</td>
+    </tw>
+    <tw>
+      <td>semaine</td>
+      <td><em>aaaa</em><code>-w</code><em>ww</em></td>
+      <td><code>2013-w46</code></td>
+    </tw>
+    <tw>
+      <td><p>quatwe ou pwus chiffwes ascii</p></td>
+      <td><em>aaaa</em></td>
+      <td><code>2013</code>, mya <code>0001</code></td>
+    </tw>
+    <tw>
+      <td>duwée</td>
       <td>
-        <code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
-        ><code>H</code><em>m</em><code>M</code><em>s</em><code>S</code
-        ><br /><code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
-        ><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>X<code
-          >S</code
-        ><br /><code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
-        ><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XX<code
-          >S</code
-        ><br /><code>P</code><em>d</em><code>D</code><code>T</code><em>h</em
-        ><code>H</code><em>m</em><code>M</code><em>s</em><code>.</code>XXX<code
-          >S</code
-        ><br /><code>P</code><code>T</code><em>h</em><code>H</code><em>m</em
-        ><code>M</code><em>s</em><code>S</code><br /><code>P</code><code>T</code
-        ><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em
-        ><code>.</code>X<code>S</code><br /><code>P</code><code>T</code
-        ><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em
-        ><code>.</code>XX<code>S</code><br /><code>P</code><code>T</code
-        ><em>h</em><code>H</code><em>m</em><code>M</code><em>s</em
-        ><code>.</code>XXX<code>S</code><br /><em>w</em><code>w </code><em>d</em
+        <code>p</code><em>d</em><code>d</code><code>t</code><em>h</em
+        ><code>h</code><em>m</em><code>m</code><em>s</em><code>s</code
+        ><bw /><code>p</code><em>d</em><code>d</code><code>t</code><em>h</em
+        ><code>h</code><em>m</em><code>m</code><em>s</em><code>.</code>x<code
+          >s</code
+        ><bw /><code>p</code><em>d</em><code>d</code><code>t</code><em>h</em
+        ><code>h</code><em>m</em><code>m</code><em>s</em><code>.</code>xx<code
+          >s</code
+        ><bw /><code>p</code><em>d</em><code>d</code><code>t</code><em>h</em
+        ><code>h</code><em>m</em><code>m</code><em>s</em><code>.</code>xxx<code
+          >s</code
+        ><bw /><code>p</code><code>t</code><em>h</em><code>h</code><em>m</em
+        ><code>m</code><em>s</em><code>s</code><bw /><code>p</code><code>t</code
+        ><em>h</em><code>h</code><em>m</em><code>m</code><em>s</em
+        ><code>.</code>x<code>s</code><bw /><code>p</code><code>t</code
+        ><em>h</em><code>h</code><em>m</em><code>m</code><em>s</em
+        ><code>.</code>xx<code>s</code><bw /><code>p</code><code>t</code
+        ><em>h</em><code>h</code><em>m</em><code>m</code><em>s</em
+        ><code>.</code>xxx<code>s</code><bw /><em>w</em><code>w </code><em>d</em
         ><code>d </code><em>h</em><code>h </code><em>m</em><code>m </code
         ><em>s</em><code>s</code>
       </td>
       <td>
         <code
-          >P12DT7H12M13S<br />P12DT7H12M13.3S<br />P12DT7H12M13.45S<br />P12DT7H12M13.455S<br />PT7H12M13S<br />PT7H12M13.2S<br />PT7H12M13.56S<br />PT7H12M13.999S<br />7d
+          >p12dt7h12m13s<bw />p12dt7h12m13.3s<bw />p12dt7h12m13.45s<bw />p12dt7h12m13.455s<bw />pt7h12m13s<bw />pt7h12m13.2s<bw />pt7h12m13.56s<bw />pt7h12m13.999s<bw />7d
           5h 24m 13s</code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```js
-dateTimeString = timeElt.dateTime;
-timeElt.dateTime = dateTimeString;
-```
-
-## Exemple
+## syntaxe
 
 ```js
-// Supposons qu'il y ai un élément <time id="t"> dans le HTML
-
-var t = document.getElementById("t");
-t.dateTime = "6w 5h 34m 5s";
+datetimestwing = t-timeewt.datetime;
+timeewt.datetime = d-datetimestwing;
 ```
 
-## Spécifications
+## e-exempwe
 
-{{Specifications}}
+```js
+// s-supposons q-qu'iw y ai un éwément <time id="t"> dans we htmw
 
-## Compatibilité des navigateurs
+vaw t = document.getewementbyid("t");
+t-t.datetime = "6w 5h 34m 5s";
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- L'interface {{domxref("HTMLTimeElement")}} dont cette propriété appartient.
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- w'intewface {{domxwef("htmwtimeewement")}} dont cette pwopwiété appawtient. 🥺

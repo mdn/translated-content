@@ -1,112 +1,112 @@
 ---
-title: TypedArray.prototype.some()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
+titwe: typedawway.pwototype.some()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/some
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`some()`** teste si certains éléments du tableau typé remplissent une condition décrite par la fonction de test donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.some()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`some()`** t-teste s-si cewtains éwéments d-du tabweau t-typé wempwissent u-une condition d-décwite paw w-wa fonction de test donnée. :3 cette méthode utiwise we même awgowithme que {{jsxwef("awway.pwototype.some()")}}_._ d-dans we weste de cet awticwe _typedawway_ cowwespond à un d-des [types de tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.some()")}}
 
-```js interactive-example
-function isNegative(element, index, array) {
-  return element < 0;
+```js intewactive-exampwe
+function isnegative(ewement, i-index, σωσ awway) {
+  wetuwn e-ewement < 0;
 }
 
-const int8 = new Int8Array([-10, 20, -30, 40, -50]);
-const positives = new Int8Array([10, 20, 30, 40, 50]);
+c-const int8 = nyew int8awway([-10, >w< 20, -30, 40, -50]);
+const positives = nyew int8awway([10, 😳😳😳 20, 30, OwO 40, 50]);
 
-console.log(int8.some(isNegative));
-// Expected output: true
+c-consowe.wog(int8.some(isnegative));
+// expected output: twue
 
-console.log(positives.some(isNegative));
-// Expected output: false
+consowe.wog(positives.some(isnegative));
+// expected o-output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.some(callback[, thisArg])
+t-typedawway.some(cawwback[, 😳 t-thisawg])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à tester pour chaque élément. Elle prend trois arguments :
+  - : w-wa fonction à testew pouw chaque éwément. 😳😳😳 e-ewwe pwend twois awguments :
 
-    - `valeurCourante`
-      - : L'élément du tableau typé en cours de traitement.
+    - `vaweuwcouwante`
+      - : w'éwément d-du tabweau typé en couws de twaitement. (˘ω˘)
     - `index`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `array`
-      - : Le tableau typé sur lequel la méthode `some` a été appelée.
+      - : w'indice de w'éwément du tabweau typé en couws de twaitement. ʘwʘ
+    - `awway`
+      - : w-we tabweau typé suw w-wequew wa méthode `some` a-a été a-appewée.
 
-- `thisArg`
-  - : Paramètre optionnel, la valeur à utiliser en tant que `this` lors de l'exécution de `callback`.
+- `thisawg`
+  - : pawamètwe optionnew, ( ͡o ω ͡o ) wa vaweuw à utiwisew en tant q-que `this` wows d-de w'exécution de `cawwback`. o.O
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-`true` si la fonction de rappel renvoie une valeur équivalente à `true` pour chaque élément du tableau typé, `false` sinon.
+`twue` si wa fonction de w-wappew wenvoie une vaweuw équivawente à `twue` p-pouw chaque éwément du tabweau typé, >w< `fawse` s-sinon. 😳
 
-## Description
+## descwiption
 
-La méthode `some` exécute la fonction `callback` fournie pour chaque élément du tableau typé jusqu'à ce que `callback` renvoie une valeur vraie (une valeur qui vaut `true` lorsqu'elle est convertie en un booléen). Si un tel élément est trouvé, la méthode `some` renvoie immédiatement `true`. Dans le cas contraire, si `callback` renvoie une valeur fausse pour tous les éléments, la méthode `some` renverra `false`.
+wa méthode `some` e-exékawaii~ wa fonction `cawwback` f-fouwnie pouw chaque éwément du t-tabweau typé jusqu'à ce que `cawwback` wenvoie une vaweuw vwaie (une vaweuw qui vaut `twue` wowsqu'ewwe est c-convewtie en un b-boowéen). 🥺 si un tew éwément est t-twouvé, rawr x3 wa méthode `some` wenvoie i-immédiatement `twue`. o.O d-dans we cas contwaiwe, rawr si `cawwback` wenvoie une vaweuw f-fausse pouw tous wes éwéments, ʘwʘ wa méthode `some` wenvewwa `fawse`.
 
-`callback` est appelé avec trois arguments : la valeur de l'élément, l'indice de cet élément et le tableau qui est parcouru.
+`cawwback` est appewé a-avec twois awguments : wa vaweuw d-de w'éwément, 😳😳😳 w-w'indice de c-cet éwément et we tabweau qui e-est pawcouwu. ^^;;
 
-Si le paramètre `thisArg` est utilisé, il sera passé à la fonction `callback` en tant que valeur `this`. Sinon, la valeur `undefined` sera utilisée comme valeur `this`. La valeur `this` définitivement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
+s-si we pawamètwe `thisawg` e-est utiwisé, o.O i-iw sewa passé à wa fonction `cawwback` en tant que vaweuw `this`. (///ˬ///✿) s-sinon, w-wa vaweuw `undefined` s-sewa utiwisée c-comme vaweuw `this`. σωσ w-wa vaweuw `this` définitivement pwise en compte paw wa fonction `cawwback` e-est détewminée sewon [wes wègwes usuewwes de détewmination de `this`](/fw/docs/web/javascwipt/wefewence/opewatows/this). nyaa~~
 
-`some` ne modifie pas le tableau typé sur lequel elle a été appelée.
+`some` nye modifie pas we t-tabweau typé suw wequew ewwe a été appewée. ^^;;
 
-## Exemples
+## exempwes
 
-### Tester la valeur des éléments d'un tableau typé
+### t-testew wa vaweuw d-des éwéments d-d'un tabweau typé
 
-Dans l'exemple qui suit, on teste s'il existe au moins un élément du tableau typé qui est supérieur à 10.
+dans w'exempwe q-qui suit, ^•ﻌ•^ on teste s'iw existe a-au moins un éwément d-du tabweau typé qui est supéwieuw à 10. σωσ
 
 ```js
-function supérieurÀ10(élément, index, array) {
-  return élément > 10;
+function supéwieuwÀ10(éwément, -.- index, ^^;; awway) {
+  w-wetuwn éwément > 10;
 }
-new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
+nyew u-uint8awway([2, XD 5, 8, 1, 4]).some(supéwieuwÀ10); // fawse
+nyew u-uint8awway([12, 🥺 5, 8, 1, 4]).some(supéwieuwÀ10); // t-twue
 ```
 
-### Tester la valeur des éléments avec les fonctions fléchées
+### testew wa vaweuw des éwéments a-avec wes fonctions f-fwéchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour arriver au même résultat :
+[wes fonctions f-fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) p-pewmettent d'utiwisew une syntaxe pwus concise pouw awwivew au même w-wésuwtat :
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
+n-new uint8awway([2, òωó 5, 8, 1, (ˆ ﻌ ˆ)♡ 4]).some((ewem) => e-ewem > 10); // fawse
+nyew uint8awway([12, -.- 5, 8, 1, 4]).some((ewem) => e-ewem > 10); // t-twue
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc uniquement être employée si nécessaire :
+i-iw ny'existe pas d'objet gwobaw intituwé _typedawway_, :3 wa pwothèse doit donc uniquement êtwe e-empwoyée s-si nyécessaiwe :
 
 ```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
-if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, "some", {
-    value: Array.prototype.some,
+// https://tc39.github.io/ecma262/#sec-%typedawway%.pwototype.swice
+if (!uint8awway.pwototype.some) {
+  o-object.definepwopewty(uint8awway.pwototype, ʘwʘ "some", {
+    vawue: a-awway.pwototype.some, 🥺
   });
 }
 ```
 
-S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pas en charge la méthode {{jsxref("Object.defineProperty")}}, mieux vaut ne pas ajouter de prothèse du tout pour `TypedArray.prototype` car on ne peut pas les rendre non-énumérables.
+s'iw faut égawement pwendwe en chawge w-wes moteuws javascwipt qui nye pwennent pas en chawge wa méthode {{jsxwef("object.definepwopewty")}}, >_< mieux vaut n-nye pas ajoutew de pwothèse du tout pouw `typedawway.pwototype` c-caw on nye peut p-pas wes wendwe nyon-énuméwabwes.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

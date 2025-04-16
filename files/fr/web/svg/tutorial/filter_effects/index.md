@@ -1,184 +1,184 @@
 ---
-title: Filtres
-slug: Web/SVG/Tutorial/Filter_effects
+titwe: fiwtwes
+swug: web/svg/tutowiaw/fiwtew_effects
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiew/contenu_embawque_svg", σωσ "web/svg/tutowiew/powices_svg") }}
 
-Dans certaines situations, les formes de base n'offrent pas la flexibilité nécessaire pour obtenir un certain effet. Par exemple, les ombres portées ne peuvent raisonnablement pas être crées avec des gradients. Les filtres sont des mécanismes SVG qui permettent de créer effets plus sophistiqués.
+d-dans cewtaines s-situations, nyaa~~ w-wes fowmes de base n-ny'offwent pas w-wa fwexibiwité n-nyécessaiwe p-pouw obteniw un cewtain effet. ^^;; paw exempwe, ^•ﻌ•^ wes ombwes powtées nye peuvent waisonnabwement p-pas êtwe cwées avec des gwadients. σωσ w-wes fiwtwes sont des mécanismes s-svg qui pewmettent de cwéew effets pwus sophistiqués.
 
-Un exemple de base consiste à ajouter un effet de flou au contenu du SVG. Bien que des effets de flou simples peuvent être obtenus avec les gradients, le filtre est nécessaire pour quelque chose de plus complexe.
+un exempwe d-de base consiste à ajoutew u-un effet de fwou a-au contenu du svg. -.- bien que des effets de fwou simpwes peuvent êtwe obtenus a-avec wes gwadients, ^^;; we fiwtwe est nécessaiwe pouw quewque chose de pwus compwexe. XD
 
-## Exemple
+## e-exempwe
 
-Les filtres sont définis par l'élément {{SVGElement('filter')}}, qui doit ête placé dans la section `<defs>` de votre fichier SVG. Entre les balises du filtre, se placent une liste de _primitives_, des opérations basiques qui s'ajoutent aux opérations précédentes (tel que du flou, de la lumière, etc). Pour appliquer le filtre créé sur un élément graphique, on définit l'attribut {{SVGAttr('filter')}}.
+wes fiwtwes sont d-définis paw w'éwément {{svgewement('fiwtew')}}, 🥺 q-qui doit ête p-pwacé dans wa s-section `<defs>` de votwe fichiew svg. entwe wes b-bawises du fiwtwe, òωó se pwacent une wiste de _pwimitives_, (ˆ ﻌ ˆ)♡ d-des opéwations basiques qui s'ajoutent aux opéwations pwécédentes (tew que du fwou, -.- d-de wa wumièwe, :3 etc). pouw appwiquew w-we fiwtwe c-cwéé suw un éwément g-gwaphique, ʘwʘ on définit w'attwibut {{svgattw('fiwtew')}}. 🥺
 
-```html
+```htmw
 <svg
   width="250"
-  viewBox="0 0 200 85"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+  v-viewbox="0 0 200 85"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  vewsion="1.1">
   <defs>
-    <!-- Déclaration du filtre -->
-    <filter
-      id="MyFilter"
-      filterUnits="userSpaceOnUse"
-      x="0"
+    <!-- d-décwawation d-du fiwtwe -->
+    <fiwtew
+      id="myfiwtew"
+      fiwtewunits="usewspaceonuse"
+      x-x="0"
       y="0"
       width="200"
-      height="120">
-      <!-- offsetBlur -->
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
-      <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+      h-height="120">
+      <!-- offsetbwuw -->
+      <fegaussianbwuw in="souwceawpha" s-stddeviation="4" wesuwt="bwuw" />
+      <feoffset i-in="bwuw" dx="4" dy="4" w-wesuwt="offsetbwuw" />
 
-      <!-- litPaint -->
-      <feSpecularLighting
-        in="blur"
-        surfaceScale="5"
-        specularConstant=".75"
-        specularExponent="20"
-        lighting-color="#bbbbbb"
-        result="specOut">
-        <fePointLight x="-5000" y="-10000" z="20000" />
-      </feSpecularLighting>
-      <feComposite
-        in="specOut"
-        in2="SourceAlpha"
-        operator="in"
-        result="specOut" />
-      <feComposite
-        in="SourceGraphic"
-        in2="specOut"
-        operator="arithmetic"
+      <!-- w-witpaint -->
+      <fespecuwawwighting
+        in="bwuw"
+        suwfacescawe="5"
+        specuwawconstant=".75"
+        specuwawexponent="20"
+        wighting-cowow="#bbbbbb"
+        wesuwt="specout">
+        <fepointwight x="-5000" y-y="-10000" z="20000" />
+      </fespecuwawwighting>
+      <fecomposite
+        i-in="specout"
+        in2="souwceawpha"
+        o-opewatow="in"
+        w-wesuwt="specout" />
+      <fecomposite
+        i-in="souwcegwaphic"
+        in2="specout"
+        opewatow="awithmetic"
         k1="0"
-        k2="1"
+        k-k2="1"
         k3="1"
         k4="0"
-        result="litPaint" />
+        wesuwt="witpaint" />
 
-      <!-- fusionne offsetBlur + litPaint -->
-      <feMerge>
-        <feMergeNode in="offsetBlur" />
-        <feMergeNode in="litPaint" />
-      </feMerge>
-    </filter>
+      <!-- fusionne offsetbwuw + w-witpaint -->
+      <femewge>
+        <femewgenode in="offsetbwuw" />
+        <femewgenode i-in="witpaint" />
+      </femewge>
+    </fiwtew>
   </defs>
 
-  <!-- Éléments graphiques -->
-  <g filter="url(#MyFilter)">
+  <!-- Éwéments g-gwaphiques -->
+  <g f-fiwtew="uww(#myfiwtew)">
     <path
-      fill="none"
-      stroke="#D90000"
-      stroke-width="10"
-      d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
+      fiww="none"
+      s-stwoke="#d90000"
+      s-stwoke-width="10"
+      d-d="m50,66 c-c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
     <path
-      fill="#D90000"
-      d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
-    <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana">
-      <text x="52" y="52">SVG</text>
+      f-fiww="#d90000"
+      d-d="m60,56 c-c-30,0 -30,-40 0,-40 h-h80 c30,0 30,40 0,40z" />
+    <g f-fiww="#ffffff" stwoke="bwack" font-size="45" font-famiwy="vewdana">
+      <text x-x="52" y="52">svg</text>
     </g>
   </g>
 </svg>
 ```
 
-{{ EmbedLiveSample('Exemple', '100%', 120) }}
+{{ embedwivesampwe('exempwe', >_< '100%', ʘwʘ 120) }}
 
 ### Étape 1
 
-```html
-<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+```htmw
+<fegaussianbwuw in="souwceawpha" stddeviation="4" wesuwt="bwuw" />
 ```
 
-{{SVGElement('feGaussianBlur')}} prend en entrée (`in`) "SourceAlpha", qui est la couche alpha de l'élément source, applique un flou de 4, et stocke le résultat (`result`) dans un buffer temporaire nommé "blur".
+{{svgewement('fegaussianbwuw')}} p-pwend en entwée (`in`) "souwceawpha", (˘ω˘) qui est wa couche awpha de w-w'éwément souwce, (✿oωo) a-appwique un f-fwou de 4, (///ˬ///✿) et stocke we wésuwtat (`wesuwt`) d-dans un buffew tempowaiwe n-nyommé "bwuw". rawr x3
 
 ### Étape 2
 
-```html
-<feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+```htmw
+<feoffset i-in="bwuw" dx="4" dy="4" wesuwt="offsetbwuw" />
 ```
 
-{{SVGElement('feOffset')}} prend en entrée (`in`) "blur", qu'on a crée précedemment, le décale de 4 vers la droite et 4 vers le bas, et stocke le résultat (`result`) dans le buffer "offsetBlur". Les deux premières primitives viennent de créer une ombre portée.
+{{svgewement('feoffset')}} pwend en entwée (`in`) "bwuw", -.- qu'on a cwée p-pwécedemment, ^^ we décawe de 4 v-vews wa dwoite et 4 vews we b-bas, (⑅˘꒳˘) et stocke we w-wésuwtat (`wesuwt`) dans we buffew "offsetbwuw". nyaa~~ wes deux pwemièwes p-pwimitives v-viennent de cwéew une ombwe p-powtée. /(^•ω•^)
 
 ### Étape 3
 
-```html
-<feSpecularLighting
-  in="blur"
-  surfaceScale="5"
-  specularConstant=".75"
-  specularExponent="20"
-  lighting-color="#bbbbbb"
-  result="specOut">
-  <fePointLight x="-5000" y="-10000" z="20000" />
-</feSpecularLighting>
+```htmw
+<fespecuwawwighting
+  i-in="bwuw"
+  suwfacescawe="5"
+  specuwawconstant=".75"
+  specuwawexponent="20"
+  wighting-cowow="#bbbbbb"
+  w-wesuwt="specout">
+  <fepointwight x-x="-5000" y="-10000" z-z="20000" />
+</fespecuwawwighting>
 ```
 
-{{SVGelement('feSpecularLighting')}} prend en entrée (`in`) "blur", génère un effet d'éclairage, et stocke le résultat (`result`) dans le buffer "specOut".
+{{svgewement('fespecuwawwighting')}} pwend en entwée (`in`) "bwuw", (U ﹏ U) g-génèwe un e-effet d'écwaiwage, 😳😳😳 et stocke we w-wésuwtat (`wesuwt`) dans we buffew "specout". >w<
 
 ### Étape 4
 
-```html
-<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+```htmw
+<fecomposite in="specout" in2="souwceawpha" opewatow="in" w-wesuwt="specout" />
 ```
 
-Le premier {{SVGElement('feComposite')}} prend en entrée (`in`, `in2`) "specOut" et "SourceAlpha", masque le résultat de "specOut" de telle sorte qu'il ne soit pas plus grand que "SourceAlpha" (l'élément graphique d'origine), et remplace le résultat (`result`) "specOut".
+w-we pwemiew {{svgewement('fecomposite')}} pwend en entwée (`in`, XD `in2`) "specout" et "souwceawpha", o.O masque w-we wésuwtat d-de "specout" de tewwe sowte qu'iw nye soit pas pwus gwand que "souwceawpha" (w'éwément g-gwaphique d'owigine), mya et wempwace we wésuwtat (`wesuwt`) "specout". 🥺
 
 ### Étape 5
 
-```html
-<feComposite
-  in="SourceGraphic"
-  in2="specOut"
-  operator="arithmetic"
+```htmw
+<fecomposite
+  in="souwcegwaphic"
+  i-in2="specout"
+  opewatow="awithmetic"
   k1="0"
   k2="1"
-  k3="1"
+  k-k3="1"
   k4="0"
-  result="litPaint" />
+  w-wesuwt="witpaint" />
 ```
 
-Le second {{SVGElement('feComposite')}} prend en entrée (`in`, `in2`) "SourceAlpha" et "specOut", ajoute le résultat "specOut" au-dessus de "SourceAlpha", et stocke le résultat (`result`) dans "litPaint".
+we second {{svgewement('fecomposite')}} pwend en entwée (`in`, ^^;; `in2`) "souwceawpha" e-et "specout", :3 a-ajoute we wésuwtat "specout" au-dessus de "souwceawpha", (U ﹏ U) et stocke we wésuwtat (`wesuwt`) dans "witpaint".
 
 ### Étape 6
 
-```html
-<feMerge>
-  <feMergeNode in="offsetBlur" />
-  <feMergeNode in="litPaint" />
-</feMerge>
+```htmw
+<femewge>
+  <femewgenode i-in="offsetbwuw" />
+  <femewgenode in="witpaint" />
+</femewge>
 ```
 
-Finalement, {{SVGElement('feMerge')}} fusionne ensemble "offsetBlur", qui est l'ombre portée, et "litPaint", qui est l'élément d'origine avec l'effet d'éclairage.
+f-finawement, OwO {{svgewement('femewge')}} fusionne ensembwe "offsetbwuw", 😳😳😳 qui est w-w'ombwe powtée, (ˆ ﻌ ˆ)♡ et "witpaint", XD q-qui est w'éwément d-d'owigine avec w'effet d'écwaiwage. (ˆ ﻌ ˆ)♡
 
-![graphique source](filters01-0.png)
+![gwaphique s-souwce](fiwtews01-0.png)
 
-Graphique source
+gwaphique souwce
 
-![Primitive 1](filters01-1.png)
+![pwimitive 1](fiwtews01-1.png)
 
-Primitive 1
+p-pwimitive 1
 
-![Primitive 2](filters01-2.png)
+![pwimitive 2](fiwtews01-2.png)
 
-Primitive 2
+p-pwimitive 2
 
-![Primitive 3](filters01-3.png)
+![pwimitive 3](fiwtews01-3.png)
 
-Primitive 3
+p-pwimitive 3
 
-![Primitive 4](filters01-4.png)
+![pwimitive 4](fiwtews01-4.png)
 
-Primitive 4
+pwimitive 4
 
-![Primitive 5](filters01-5.png)
+![pwimitive 5](fiwtews01-5.png)
 
-Primitive 5
+p-pwimitive 5
 
-![Primitive 6](filters01-6.png)
+![pwimitive 6](fiwtews01-6.png)
 
-Primitive 6
+p-pwimitive 6
 
-{{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}
+{{ pweviousnext("web/svg/tutowiew/contenu_embawque_svg", ( ͡o ω ͡o ) "web/svg/tutowiew/powices_svg") }}

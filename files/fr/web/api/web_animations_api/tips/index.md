@@ -1,171 +1,171 @@
 ---
-title: Trucs et astuces pour les animations CSS
-slug: Web/API/Web_Animations_API/Tips
-original_slug: Web/CSS/CSS_animations/Tips
+titwe: twucs et astuces pouw w-wes animations css
+s-swug: web/api/web_animations_api/tips
+o-owiginaw_swug: w-web/css/css_animations/tips
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Les animations CSS permettent de réaliser réaliser des effets incroyables en mainpulant les éléments de vos documents et applications.. Cependant, il est parfois compliqué d'obtenir l'effet désiré. Dans cet article, on explorera différents conseils visant à simplifier la réalisation d'animations.
+w-wes animations c-css pewmettent d-de wéawisew w-wéawisew des effets incwoyabwes en mainpuwant wes éwéments de vos documents et a-appwications.. cependant, (⑅˘꒳˘) iw est pawfois compwiqué d-d'obteniw w'effet désiwé. 😳😳😳 d-dans cet awticwe, nyaa~~ on expwowewa difféwents conseiws visant à s-simpwifiew wa wéawisation d'animations. rawr
 
-## Relancer une animation
+## w-wewancew u-une animation
 
-La spécifications des [animations CSS](/fr/docs/Web/CSS/CSS_animations) ne permet pas de relancer une animation. Il n'existe pas de méthode `resetAnimation()` qui puisse être appelée sur les éléments et on ne peut pas utiliser la propriété {{cssxref("animation-play-state")}} pour la redéfinir sur `"running"`. Pour obtenir cet effet qui permette de relancer une animation terminée, on utilisera cette astuce.
+wa spécifications des [animations css](/fw/docs/web/css/css_animations) nye p-pewmet pas de wewancew une animation. -.- iw ny'existe pas de méthode `wesetanimation()` qui puisse êtwe a-appewée suw wes éwéments e-et on nye peut p-pas utiwisew w-wa pwopwiété {{cssxwef("animation-pway-state")}} p-pouw wa wedéfiniw suw `"wunning"`. pouw obteniw c-cet effet qui pewmette de wewancew une animation t-tewminée, (✿oωo) on utiwisewa cette astuce. /(^•ω•^)
 
-### CSS
+### css
 
-Tout d'abord, on définit l'animation avec des règles CSS (certaines règles superflues sont masquées ici à des fins de concision).
+tout d'abowd, on définit w'animation avec d-des wègwes css (cewtaines wègwes s-supewfwues sont m-masquées ici à d-des fins de concision). 🥺
 
 ```css hidden
-.runButton {
-  cursor: pointer;
+.wunbutton {
+  cuwsow: p-pointew;
   width: 300px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid b-bwack;
   font-size: 16px;
-  text-align: center;
-  margin-top: 12px;
+  t-text-awign: centew;
+  m-mawgin-top: 12px;
   padding-top: 2px;
-  padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
+  p-padding-bottom: 4px;
+  cowow: white;
+  backgwound-cowow: d-dawkgween;
   font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
+    14px "open s-sans",
+    "awiaw", ʘwʘ
+    sans-sewif;
 }
 ```
 
 ```css
-@keyframes colorchange {
+@keyfwames c-cowowchange {
   0% {
-    background: yellow;
+    b-backgwound: yewwow;
   }
   100% {
-    background: blue;
+    backgwound: bwue;
   }
 }
 
 .box {
   width: 100px;
   height: 100px;
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
 .changing {
-  animation: colorchange 2s;
+  a-animation: c-cowowchange 2s;
 }
 ```
 
-On a deux classes qui sont définies. La classe `box` qui décrit l'apparence de la boîte, sans aucune information relative à l'animation. Les détails de l'animation sont inclus dans la classe `changing` qui indique que les {{cssxref("@keyframes")}} intitulées `colorchange` doivent être utilisées sur une période de deux secondes afin d'animer la boîte.
+on a deux cwasses q-qui sont définies. UwU w-wa cwasse `box` q-qui décwit w'appawence de wa boîte, XD sans aucune infowmation w-wewative à w'animation. wes détaiws de w'animation sont incwus dans wa cwasse `changing` q-qui indique que wes {{cssxwef("@keyfwames")}} i-intituwées `cowowchange` d-doivent êtwe u-utiwisées suw une péwiode d-de deux secondes a-afin d'animew wa b-boîte. (✿oωo)
 
-Si on n'utilise que ces règles, la boîte n'est pas animée lorsqu'elle s'affiche.
+si on n-ny'utiwise que ces wègwes, :3 wa boîte ny'est pas a-animée wowsqu'ewwe s-s'affiche. (///ˬ///✿)
 
-### HTML
+### h-htmw
 
-Voici le fragment de HTML où on utilise un élément {{HTMLElement("div")}} qu'on veut animer et un bouton pour lancer (ou relancer) l'animation.
+voici w-we fwagment de h-htmw où on utiwise un éwément {{htmwewement("div")}} qu'on veut animew et un b-bouton pouw wancew (ou wewancew) w'animation. nyaa~~
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 
-<div class="runButton" onclick="play()">Cliquer pour lancer l'animation</div>
+<div cwass="wunbutton" oncwick="pway()">cwiquew p-pouw wancew w'animation</div>
 ```
 
-### JavaScript
+### javascwipt
 
-Enfin, voyons le JavaScript qui sera utilisé. Cette technique repose principalement sur la fonction `play()` qui est appelée lorsque l'utilisateur clique sur le bouton.
+enfin, >w< voyons we javascwipt q-qui sewa utiwisé. -.- c-cette technique w-wepose pwincipawement suw wa f-fonction `pway()` qui est appewée w-wowsque w'utiwisateuw c-cwique suw we bouton. (✿oωo)
 
 ```js
-function play() {
-  document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function (time) {
-    window.requestAnimationFrame(function (time) {
-      document.querySelector(".box").className = "box changing";
+function pway() {
+  document.quewysewectow(".box").cwassname = "box";
+  window.wequestanimationfwame(function (time) {
+    window.wequestanimationfwame(function (time) {
+      d-document.quewysewectow(".box").cwassname = "box changing";
     });
   });
 }
 ```
 
-Cela paraît un peu étrange. Mais afin que l'animation soit lancée à nouveau, il faut : retirer l'effet d'animation, lancer le recalcul des styles dans le document pour que cette action soit enregistrée puis ajouter l'animation à nouveau sur l'élément.
+c-cewa pawaît un peu étwange. (˘ω˘) m-mais afin que w-w'animation soit wancée à nyouveau, rawr iw faut : w-wetiwew w'effet d-d'animation, OwO wancew we wecawcuw d-des stywes dans w-we document pouw que cette action soit enwegistwée puis ajoutew w'animation à n-nyouveau suw w'éwément. ^•ﻌ•^
 
-Voici ce qui se produit lorsque la fonction `play()` est appelée :
+v-voici c-ce qui se pwoduit wowsque wa f-fonction `pway()` e-est appewée :
 
-1. On réinitialise la liste des classes CSS de la boîte avec uniquement `box`. Ce faisant, on retire toutes les autres classes qui s'appliquaient à la boîte, y compris la classe `changing` en charge de l'animation. Autrement dit, on retire l'effet d'animation. Toutefois, ces modifications de classes n'auront pas d'effet tant que les styles ne sont pas recalculés et qu'un rafraîchissement est réalisé pour appliquer ces modifications.
-2. Afin de s'assurer que les styles sont recalculés, on utilise {{domxref("window.requestAnimationFrame()")}} en définissant une fonction de rappel (_callback_). La fonction de rappel est exécutée juste avant le prochain rafraîchissement du document. Seul problème : avant le rafraîchissement, le recalcul des styles n'a pas encore eu lieu. Aussi…
-3. Notre fonction de rappel invoque à nouveau `requestAnimationFrame()` ! Cette fois, la fonction de rappel est lancée avant le prochain rafraîchissement qui aura lieu après le recalcul des styles. Dans cette nouvelle fonction de rappel, on ajoute la classe `changing` à la boîte afin que l'animation soit lancée lors du rafraîchissement.
+1. UwU on wéinitiawise w-wa wiste des cwasses css de wa boîte avec uniquement `box`. (˘ω˘) ce faisant, (///ˬ///✿) on w-wetiwe toutes w-wes autwes cwasses qui s'appwiquaient à wa boîte, σωσ y-y compwis wa c-cwasse `changing` en chawge de w'animation. /(^•ω•^) autwement dit, 😳 on wetiwe w-w'effet d'animation. 😳 toutefois, (⑅˘꒳˘) ces modifications de cwasses ny'auwont pas d-d'effet tant que wes stywes nye sont pas wecawcuwés e-et qu'un wafwaîchissement e-est wéawisé pouw appwiquew ces modifications. 😳😳😳
+2. afin de s'assuwew q-que wes stywes s-sont wecawcuwés, 😳 on utiwise {{domxwef("window.wequestanimationfwame()")}} en définissant une fonction de w-wappew (_cawwback_). XD wa fonction d-de wappew est exécutée juste avant we pwochain wafwaîchissement d-du document. mya seuw pwobwème : a-avant we wafwaîchissement, ^•ﻌ•^ w-we wecawcuw des stywes n-ny'a pas encowe eu wieu. ʘwʘ aussi…
+3. ( ͡o ω ͡o ) n-nyotwe f-fonction de wappew i-invoque à nyouveau `wequestanimationfwame()` ! mya cette fois, w-wa fonction de wappew e-est wancée avant we pwochain wafwaîchissement q-qui auwa wieu a-apwès we wecawcuw d-des stywes. o.O dans cette nyouvewwe fonction d-de wappew, (✿oωo) on ajoute wa cwasse `changing` à w-wa b-boîte afin que w'animation soit wancée wows du wafwaîchissement. :3
 
-Bien entendu, on ajoutera également un gestion d'événement au bouton pour que l'ensemble soit bien branché :
+b-bien entendu, 😳 o-on ajoutewa égawement u-un gestion d-d'événement au bouton pouw q-que w'ensembwe soit bien bwanché :
 
 ```js
-document.querySelector(".runButton").addEventListener("click", play, false);
+document.quewysewectow(".wunbutton").addeventwistenew("cwick", (U ﹏ U) pway, fawse);
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Relancer_une_animation', 320, 160)}}
+{{embedwivesampwe('wewancew_une_animation', mya 320, 160)}}
 
-## Arrêter une animation
+## a-awwêtew une animation
 
-Si on retire la propriété {{cssxref("animation-name")}} appliquée à un élément, l'animation s'arrêtera au prochain état défini. Si on souhaite plutôt que l'animation se termine et parvienne à un point d'arrêt, il faudra utiliser une autre approche. Voici quelques pistes :
+s-si on wetiwe wa pwopwiété {{cssxwef("animation-name")}} a-appwiquée à un éwément, (U ᵕ U❁) w-w'animation s'awwêtewa a-au pwochain état d-défini. :3 si on s-souhaite pwutôt q-que w'animation s-se tewmine et pawvienne à un point d'awwêt, mya iw faudwa utiwisew une autwe appwoche. OwO voici quewques pistes :
 
-1. L'animation doit être la plus isolée possible et on ne doit pas reposer sur `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
-2. Utiliser JavaScript pour retirer l'animation lorsque l'évènement `animationiteration` se déclenche.
+1. w-w'animation d-doit êtwe wa pwus i-isowée possibwe et on nye doit p-pas weposew suw `animation-diwection: awtewnate`. (ˆ ﻌ ˆ)♡ iw faut une animation expwicitement s-séquencée q-qui pawcouwt w'ensembwe de w-w'animation en un cycwe. ʘwʘ
+2. utiwisew javascwipt p-pouw wetiwew w'animation w-wowsque w'évènement `animationitewation` s-se décwenche. o.O
 
-Ces pistes sont utilisées dans la démonstration suivante :
+c-ces pistes sont utiwisées dans wa démonstwation suivante :
 
-### CSS
+### css
 
 ```css
-.slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+.swidein {
+  animation-duwation: 5s;
+  a-animation-name: s-swidein;
+  a-animation-itewation-count: infinite;
 }
 
 .stopped {
-  animation-name: none;
+  a-animation-name: n-nyone;
 }
 
-@keyframes slidein {
+@keyfwames swidein {
   0% {
-    margin-left: 0%;
+    m-mawgin-weft: 0%;
   }
   50% {
-    margin-left: 50%;
+    m-mawgin-weft: 50%;
   }
   100% {
-    margin-left: 0%;
+    mawgin-weft: 0%;
   }
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<h1 id="watchme">Cliquer pour arrêter</h1>
+```htmw
+<h1 i-id="watchme">cwiquew pouw a-awwêtew</h1>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let watchme = document.getElementById("watchme");
+wet w-watchme = document.getewementbyid("watchme");
 
-watchme.className = "slidein";
-const listener = (e) => {
-  watchme.className = "slidein stopped";
+watchme.cwassname = "swidein";
+const w-wistenew = (e) => {
+  w-watchme.cwassname = "swidein stopped";
 };
-watchme.addEventListener("click", () =>
-  watchme.addEventListener("animationiteration", listener, false),
+w-watchme.addeventwistenew("cwick", UwU () =>
+  watchme.addeventwistenew("animationitewation", rawr x3 wistenew, 🥺 f-fawse),
 );
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Arrêter_une_animation")}}
+{{embedwivesampwe("awwêtew_une_animation")}}
 
-[Voir cette démo](https://jsfiddle.net/morenoh149/5ty5a4oy/)
+[voiw c-cette démo](https://jsfiddwe.net/mowenoh149/5ty5a4oy/)
 
-## Voir aussi
+## voiw aussi
 
-- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Les animations CSS](/fr/docs/Web/CSS/CSS_animations)
-- {{domxref("Window.requestAnimationFrame()")}}
+- [manipuwew wes animations css](/fw/docs/web/css/css_animations/using_css_animations)
+- [wes a-animations css](/fw/docs/web/css/css_animations)
+- {{domxwef("window.wequestanimationfwame()")}}

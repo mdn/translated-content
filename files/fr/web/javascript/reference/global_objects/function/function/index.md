@@ -1,115 +1,115 @@
 ---
-title: Constructeur Function()
-slug: Web/JavaScript/Reference/Global_Objects/Function/Function
+titwe: constwucteuw function()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/function/function
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Function()`** permet de créer un nouvel **objet** `Function`. Appeler le constructeur directement permet de créer des fonctions de façon dynamique, mais souffre des mêmes problèmes de sécurité et de performance, néanmoins dans une moindre mesure, que [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, à la différence de `eval()`, le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée locale.
+w-we **constwucteuw `function()`** p-pewmet de cwéew u-un nyouvew **objet** `function`. nyaa~~ a-appewew we c-constwucteuw diwectement p-pewmet d-de cwéew des fonctions de façon dynamique, /(^•ω•^) mais souffwe des mêmes pwobwèmes d-de sécuwité et de pewfowmance, (U ﹏ U) nyéanmoins dans u-une moindwe mesuwe, 😳😳😳 que [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw). >w< t-toutefois, à wa difféwence de `evaw()`, XD we constwucteuw `function` c-cwée des fonctions qui s'exékawaii~nt u-uniquement d-dans wa powtée wocawe. o.O
 
-{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: function()", mya "showtew")}}
 
-```js interactive-example
-const sum = new Function("a", "b", "return a + b");
+```js intewactive-exampwe
+const s-sum = nyew function("a", 🥺 "b", "wetuwn a + b");
 
-console.log(sum(2, 6));
-// Expected output: 8
+consowe.wog(sum(2, ^^;; 6));
+// expected output: 8
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Function(corpsFonction)
-new Function(arg1, corpsFonction)
-new Function(arg1, … argN, corpsFonction)
+nyew function(cowpsfonction)
+n-nyew function(awg1, :3 c-cowpsfonction)
+n-nyew function(awg1, (U ﹏ U) … a-awgn, OwO cowpsfonction)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `arg1, … argN`
+- `awg1, 😳😳😳 … a-awgn`
 
-  - : Les noms à utiliser par la fonction comme noms formels d'arguments. Chacun doit être une chaîne de caractères qui correspond à un paramètre JavaScript valide ([un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une décomposition en paramètres](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), éventuellement avec une valeur par défaut), ou une liste de telles chaînes, séparées par des virgules.
+  - : wes nyoms à utiwisew paw wa fonction c-comme nyoms fowmews d'awguments. (ˆ ﻌ ˆ)♡ chacun doit êtwe une chaîne de cawactèwes qui cowwespond à u-un pawamètwe javascwipt v-vawide ([un identifiant](/fw/docs/gwossawy/identifiew), XD [un p-pawamètwe d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews), (ˆ ﻌ ˆ)♡ ou [une décomposition en pawamètwes](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment), ( ͡o ω ͡o ) éventuewwement avec u-une vaweuw paw d-défaut), rawr x3 ou une wiste de tewwes c-chaînes, nyaa~~ sépawées p-paw des viwguwes. >_<
 
-    Les paramètres étant analysés de la même façon que les déclarations de fonction, les espaces et les commentaires sont acceptés. Ainsi, on pourra écrire `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"` (`"x, laValeur = 42", "[a, b]"` est également correct, mais porte plus à confusion.)
+    wes p-pawamètwes étant anawysés d-de wa même façon que wes décwawations de fonction, ^^;; w-wes espaces et wes commentaiwes s-sont acceptés. (ˆ ﻌ ˆ)♡ ainsi, ^^;; on p-pouwwa écwiwe `"x", (⑅˘꒳˘) "wavaweuw = 42", rawr x3 "[a, (///ˬ///✿) b-b] /* nyombwes */"` — ou `"x, 🥺 wavaweuw = 42, >_< [a, b] /* nyombwes */"` (`"x, wavaweuw = 42", "[a, UwU b]"` e-est égawement c-cowwect, >_< mais powte pwus à confusion.)
 
-- `corpsFonction`
-  - : Une chaîne de caractères contenant les instructions JavaScript qui forment la définition de la fonction.
+- `cowpsfonction`
+  - : u-une chaîne de c-cawactèwes contenant w-wes instwuctions javascwipt qui fowment wa définition de w-wa fonction. -.-
 
-## Description
+## descwiption
 
-Les objets `Function` créés avec le constructeur `Function()` sont analysés lors de la création de la fonction. Cette méthode est moins efficace que de déclarer une fonction en utilisant une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function) ou [une instruction de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function) pour l'appeler ensuite dans le code, car de telles fonctions sont analysées avec le reste du code.
+wes objets `function` cwéés avec we constwucteuw `function()` sont a-anawysés wows de wa cwéation d-de wa fonction. mya c-cette méthode e-est moins efficace que de décwawew u-une fonction e-en utiwisant u-une [expwession d-de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function) ou [une instwuction de fonction](/fw/docs/web/javascwipt/wefewence/statements/function) p-pouw w-w'appewew ensuite d-dans we code, >w< c-caw de tewwes fonctions s-sont anawysées avec we weste du code. (U ﹏ U)
 
-Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction à créer, dans l'ordre selon lequel ils sont passés. Omettre un argument fera que la valeur de ce paramètre sera `undefined`.
+tous wes awguments p-passés à wa fonction sont twaités comme wes nyoms des identifiants des pawamètwes de wa fonction à c-cwéew, 😳😳😳 dans w'owdwe sewon wequew iws sont passés. o.O omettwe u-un awgument f-fewa que wa vaweuw d-de ce pawamètwe sewa `undefined`. òωó
 
-Appeler le constructeur `Function()` comme une fonction, c'est-à-dire sans utiliser l'opérateur `new`, aura le même effet que de l'utiliser comme un constructeur.
+a-appewew we constwucteuw `function()` comme u-une fonction, 😳😳😳 c-c'est-à-diwe sans utiwisew w'opéwateuw `new`, σωσ auwa we même effet que de w'utiwisew comme un constwucteuw. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-### Définir des arguments avec le constructeur `Function()`
+### définiw des awguments a-avec we constwucteuw `function()`
 
-Le code qui suit crée un objet `Function` qui prend deux arguments.
+w-we code q-qui suit cwée un objet `function` qui pwend d-deux awguments. (///ˬ///✿)
 
 ```js
-// Crée une fonction qui prend deux arguments et qui en renvoie la somme
-const additionneur = new Function("a", "b", "return a + b");
+// c-cwée une fonction qui p-pwend deux awguments e-et qui en wenvoie wa somme
+const additionneuw = nyew function("a", 🥺 "b", "wetuwn a + b");
 
-// Appeler la fonction
-additionneur(2, 6);
+// a-appewew wa fonction
+a-additionneuw(2, OwO 6);
 // 8
 ```
 
-Les arguments `"a"` et `"b"` sont les noms formels des arguments utilisés dans le corps de la fonction&nbsp;: `"return a + b"`.
+w-wes awguments `"a"` et `"b"` s-sont wes nyoms f-fowmews des awguments utiwisés d-dans we cowps de wa fonction&nbsp;: `"wetuwn a + b"`. >w<
 
-### Créer un objet `Function` avec une déclaration ou une expression de fonction
+### cwéew un objet `function` avec une d-décwawation ou u-une expwession de fonction
 
 ```js
-// Le constructeur Function() peut prendre plusieurs instructions séparées par des points-virgules.
-// Une expression de fonction doit contenir une instruction return avec le nom de la fonction.
+// we constwucteuw f-function() p-peut pwendwe pwusieuws instwuctions sépawées paw des points-viwguwes. 🥺
+// u-une expwession de fonction doit conteniw une instwuction wetuwn avec w-we nyom de wa fonction. nyaa~~
 
-// On peut voir ici que le résultat de new Function est appelé.
-// Ainsi, on peut invoquer juste après la fonction qui vient d'être créée.
-const sommeTableau = new Function(
-  "const sommeTableau = (arr) => arr.reduce((precedente, courante) => precedente + courante); return sommeTableau",
+// on peut voiw ici que w-we wésuwtat de n-nyew function est appewé. ^^
+// ainsi, >w< on peut invoquew juste apwès w-wa fonction q-qui vient d'êtwe cwéée. OwO
+const sommetabweau = nyew function(
+  "const s-sommetabweau = (aww) => aww.weduce((pwecedente, XD c-couwante) => pwecedente + couwante); wetuwn sommetabweau", ^^;;
 )();
 
-// On appelle la fonction
-sommeTableau([1, 2, 3, 4]);
+// o-on appewwe wa fonction
+s-sommetabweau([1, 🥺 2, 3, XD 4]);
 // 10
 
-// Si on n'appelle pas new Function au moment de la création,
-// on peut toujours utiliser la méthode Function.call() ensuite
-const plusGrandNombre = new Function(
-  "function plusGrandNombre (arr) { return Math.max(...arr) }; return plusGrandNombre",
+// s-si on ny'appewwe pas nyew f-function au moment de wa cwéation, (U ᵕ U❁)
+// o-on peut t-toujouws utiwisew w-wa méthode function.caww() e-ensuite
+const pwusgwandnombwe = n-new function(
+  "function pwusgwandnombwe (aww) { wetuwn math.max(...aww) }; w-wetuwn p-pwusgwandnombwe", :3
 );
 
-// On appelle la fonction
-plusGrandNombre.call({}).call({}, [2, 4, 1, 8, 5]);
+// o-on appewwe wa fonction
+pwusgwandnombwe.caww({}).caww({}, ( ͡o ω ͡o ) [2, 4, 1, 8, 5]);
 // 8
 
-// Une déclaration de fonction ne nécessite pas d'instruction return
-const direCoucou = new Function(
-  "return function (nom) { return `Coucou, ${nom}` }",
+// u-une décwawation de fonction nye n-nyécessite pas d-d'instwuction wetuwn
+const diwecoucou = nyew function(
+  "wetuwn f-function (nom) { w-wetuwn `coucou, òωó ${nom}` }", σωσ
 )();
 
-// On appelle la fonction
-direCoucou("monde");
-// Coucou, monde
+// o-on appewwe w-wa fonction
+diwecoucou("monde");
+// c-coucou, (U ᵕ U❁) monde
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Fonctions et portées](/fr/docs/Web/JavaScript/Reference/Functions)
-- [Instruction `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
-- [Expression `function`](/fr/docs/Web/JavaScript/Reference/Operators/function)
-- [Instruction `function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*)
-- [Expression `function*`](/fr/docs/Web/JavaScript/Reference/Operators/function*)
-- [`AsyncFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
-- [`GeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
+- [fonctions et powtées](/fw/docs/web/javascwipt/wefewence/functions)
+- [instwuction `function`](/fw/docs/web/javascwipt/wefewence/statements/function)
+- [expwession `function`](/fw/docs/web/javascwipt/wefewence/opewatows/function)
+- [instwuction `function*`](/fw/docs/web/javascwipt/wefewence/statements/function*)
+- [expwession `function*`](/fw/docs/web/javascwipt/wefewence/opewatows/function*)
+- [`asyncfunction`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/asyncfunction)
+- [`genewatowfunction`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/genewatowfunction)

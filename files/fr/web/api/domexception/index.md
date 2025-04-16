@@ -1,106 +1,106 @@
 ---
-title: DOMException
-slug: Web/API/DOMException
+titwe: domexception
+swug: web/api/domexception
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-L'interface **`DOMException`** représente un évènement anormal (appelé **exception**) qui appraît suite à l'appel d'une méthode ou à l'accès à une propriété d'une API web. C'est essentiellement lié à la façon dont les conditions d'erreur sont décrites dans les API web.
+w-w'intewface **`domexception`** w-wepwésente u-un évènement a-anowmaw (appewé **exception**) q-qui appwaît s-suite à w'appew d-d'une méthode ou à w'accès à une pwopwiété d'une api web. (✿oωo) c'est essentiewwement w-wié à wa façon dont wes conditions d-d'ewweuw sont décwites dans wes a-api web.
 
-Chaque exception a un **nom**, qui est une courte chaîne identifiant l'erreur ou la condition anormale.
+chaque exception a un **nom**, qui est une couwte chaîne i-identifiant w'ewweuw ou wa c-condition anowmawe. :3
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}
-  - : Retourne un objet `DOMException` avec un message et un nom spécifiés.
+- {{domxwef("domexception.domexception()", 😳 "domexception()")}} {{expewimentaw_inwine}}
+  - : wetouwne un objet `domexception` avec un message et un nyom spécifiés. (U ﹏ U)
 
-## Propriétés
+## pwopwiétés
 
-- {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
-  - : Renvoie un court message qui contient l'un des [constantes de code d'erreur](#noms_derreur) ou 0 si aucun ne correspond. Ce champ est utilisé pour des raisons historiques. Les nouvelles exceptions DOM ne l'utilisent plus : elles mettent cette information dans l'attribut {{domxref("DOMException.name")}}.
-- {{domxref("DOMException.message")}} {{readOnlyInline}}
-  - : Returne une {{domxref("DOMString")}} (_chaîne de caractères_) représentant un message ou une description associé avec le [nom d'erreur](#error_names) donné.
-- {{domxref("DOMException.name")}} {{readOnlyInline}}
-  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient l'une des chaînes associées à un [nom d'erreur](#error_names).
+- {{domxwef("domexception.code")}} {{depwecated_inwine}} {{weadonwyinwine}}
+  - : w-wenvoie un couwt message qui contient w'un des [constantes de code d'ewweuw](#noms_dewweuw) o-ou 0 si aucun nye cowwespond. mya c-ce champ e-est utiwisé p-pouw des waisons h-histowiques. (U ᵕ U❁) wes nyouvewwes exceptions dom nye w-w'utiwisent pwus : ewwes mettent cette infowmation d-dans w'attwibut {{domxwef("domexception.name")}}. :3
+- {{domxwef("domexception.message")}} {{weadonwyinwine}}
+  - : wetuwne une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) wepwésentant un message ou une descwiption a-associé avec we [nom d'ewweuw](#ewwow_names) d-donné. mya
+- {{domxwef("domexception.name")}} {{weadonwyinwine}}
+  - : w-wetouwne une {{domxwef("domstwing")}} (_chaîne d-de cawactèwes_) qui contient w'une des chaînes associées à u-un [nom d'ewweuw](#ewwow_names). OwO
 
-## Noms d'erreur
+## n-nyoms d'ewweuw
 
-Les noms d'erreurs courants sont répertoriés ici. Certaines API définissent leurs propres ensembles de noms, il ne s'agit donc pas ici nécessairement d'une liste complète.
+wes nyoms d-d'ewweuws couwants s-sont wépewtowiés ici. (ˆ ﻌ ˆ)♡ cewtaines a-api définissent weuws pwopwes e-ensembwes de nyoms, ʘwʘ iw nye s'agit donc pas ici n-nyécessaiwement d'une wiste c-compwète. o.O
 
-> [!NOTE]
-> Parce qu'historiquement les erreurs ont été identifiées par une valeur numérique qui correspondait à une variable nommée définie pour avoir cette valeur, certaines des entrées ci-dessous indiquent la valeur de code héritée et le nom de constante qui ont été utilisés dans le passé.
+> [!note]
+> pawce qu'histowiquement w-wes ewweuws ont été i-identifiées paw une vaweuw nyuméwique qui cowwespondait à une vawiabwe nyommée définie pouw avoiw cette v-vaweuw, UwU cewtaines d-des entwées ci-dessous indiquent w-wa vaweuw d-de code héwitée e-et we nyom de constante qui ont été utiwisés dans we passé. rawr x3
 
-- `IndexSizeError`
-  - : L'index n'est pas dans la plage autorisée. Par exemple, cela peut être lancé par un objet {{ domxref("Range") }}. (Valeur de code héritée : `1` et nom de la constante héritée : `INDEX_SIZE_ERR`)
-- `HierarchyRequestError`
-  - : La hiérarchie de l'arborescence des nœuds est incorrecte. ( Valeur de code héritée&nbsp;: `3` et nom de la constante héritée : `HIERARCHY_REQUEST_ERR`)
-- `WrongDocumentError`
-  - : L'objet est dans le mauvais {{ domxref("Document") }}. ( Valeur de code héritée&nbsp;: `4` et nom de la constante héritée : `WRONG_DOCUMENT_ERR`)
-- `InvalidCharacterError`
-  - : La chaîne contient des caractères non valides. (Valeur de code héritée&nbsp;: `5` et nom de la constante héritée : `INVALID_CHARACTER_ERR`)
-- `NoModificationAllowedError`
-  - : L'objet ne peut être modifié. (Valeur de code héritée&nbsp;: `7` et nom de la constante héritée : `NO_MODIFICATION_ALLOWED_ERR`)
-- `NotFoundError`
-  - : L'objet ne peut être trouvé ici. (Valeur de code héritée&nbsp;: `8` et nom de la constante héritée : `NOT_FOUND_ERR`)
-- `NotSupportedError`
-  - : L'opération n'est pas supportée. (Valeur de code héritée&nbsp;: `9` et nom de la constante héritée : `NOT_SUPPORTED_ERR`)
-- `InvalidStateError`
-  - : L'objet est dans un état non valide. (Valeur de code héritée&nbsp;: `11` et nom de la constante héritée : `INVALID_STATE_ERR`)
-- `SyntaxError`
-  - : La chaîne ne correspond pas au modèle attendu. (Valeur de code héritée&nbsp;: `12` et nom de la constante héritée : `SYNTAX_ERR`)
-- `InvalidModificationError`
-  - : L'objet ne peut pas être modifié de cette manière. (Valeur de code héritée&nbsp;: `13` et nom de la constante héritée : `INVALID_MODIFICATION_ERR`)
-- `NamespaceError`
-  - : L'opération n'est pas autorisée par Namespaces en XML. (Valeur de code héritée&nbsp;: `14` et nom de la constante héritée : `NAMESPACE_ERR`)
-- `InvalidAccessError`
-  - : L'objet ne prend pas en charge l'opération ou l'argument. (Valeur de code héritée&nbsp;: `15` et nom de la constante héritée : `INVALID_ACCESS_ERR`)
-- `TypeMismatchError` {{deprecated_inline}}
-  - : Le type de l'objet ne correspond pas au type attendu. (Valeur de code héritée&nbsp;: `17` et nom de la constante héritée : `TYPE_MISMATCH_ERR`). Cette valeur est dépéciée, l'exception {{jsxref("TypeError")}} JavaScript est maintenant utilisée à la place d'une `DOMException` avec cette valeur.
-- `SecurityError` {{experimental_inline}}
-  - : L'opération n'est pas sécurisée. (Valeur de code héritée&nbsp;: `18` et nom de la constante héritée : `SECURITY_ERR`)
-- `NetworkError` {{experimental_inline}}
-  - : Une erreur réseau s'est produite. (Valeur de code héritée&nbsp;: `19` et nom de la constante héritée : `NETWORK_ERR`)
-- `AbortError` {{experimental_inline}}
-  - : L'opération a été annulée (Valeur de code héritée&nbsp;: `20` et nom de la constante héritée : `ABORT_ERR`)
-- `URLMismatchError` {{experimental_inline}}
-  - : L'URL donnée ne correspond pas à une autre URL. (Valeur de code héritée&nbsp;: `21` et nom de la constante héritée : `URL_MISMATCH_ERR`)
-- `QuotaExceededError` {{experimental_inline}}
-  - : Le quota a été dépassé. (Valeur de code héritée&nbsp;: `22` et nom de la constante héritée : `QUOTA_EXCEEDED_ERR`)
-- `TimeoutError` {{experimental_inline}}
-  - : Le temps est dépassé. (Valeur de code héritée&nbsp;: `23` et nom de la constante héritée : `TIMEOUT_ERR`)
-- `InvalidNodeTypeError` {{experimental_inline}}
-  - : Le noeud est incorrect ou a un ancêtre incorrect pour cette opération. (Valeur de code héritée&nbsp;: `24` et nom de la constante héritée : `INVALID_NODE_TYPE_ERR`)
-- `DataCloneError` {{experimental_inline}}
-  - : L'objet ne peut pas être cloné. ( Valeur de code héritée&nbsp;: `25` et nom de la constante héritée : `DATA_CLONE_ERR`)
-- `EncodingError` {{experimental_inline}}
-  - : L'opération de codage ou de décodage a échoué (Pas de valeur de code ni de nom de constante hérités).
-- `NotReadableError` {{experimental_inline}}
-  - : L'opération de lecture entrée / sortie a échoué (Pas de valeur de code ni de nom de constante hérités).
-- `UnknownError` {{experimental_inline}}
-  - : L'opération a échoué pour une raison transitoire inconnue (par exemple dépassement de mémoire) (Pas de valeur de code ni de nom de constante hérités) .
-- `ConstraintError` {{experimental_inline}}
-  - : Une opération de mutation dans une transaction a échoué car une contrainte n'a pas été satisfaite (Pas de valeur de code ni de nom de constante hérités) .
-- `DataError` {{experimental_inline}}
-  - : Provided data is inadequate (No legacy code value and constant name).
-- `TransactionInactiveError` {{experimental_inline}}
-  - : Une demande a été placée contre une transaction qui n'est actuellement pas active ou qui est terminée (Pas de valeur de code ni de nom de constante hérités).
-- `ReadOnlyError` {{experimental_inline}}
-  - : L'opération de mutation a été tentée dans une transaction "en lecture seule" (Pas de valeur de code ni de nom de constante hérités).
-- `VersionError` {{experimental_inline}}
-  - : Une tentative a été faite pour ouvrir une base de données en utilisant une version inférieure à la version existante (Pas de valeur de code ni de nom de constante hérités).
-- `OperationError` {{experimental_inline}}
-  - : L'opération a échoué pour une raison spécifique à l'opération (Pas de valeur de code ni de nom de constante hérités).
-- `NotAllowedError` {{experimental_inline}}
-  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission (Pas de valeur de code ni de nom de constante hérités).
+- `indexsizeewwow`
+  - : w-w'index ny'est pas dans wa pwage autowisée. 🥺 paw exempwe, :3 cewa peut êtwe w-wancé paw un objet {{ domxwef("wange") }}. (ꈍᴗꈍ) (vaweuw d-de code h-héwitée : `1` e-et nyom de wa constante héwitée : `index_size_eww`)
+- `hiewawchywequestewwow`
+  - : w-wa hiéwawchie d-de w'awbowescence d-des nyœuds e-est incowwecte. 🥺 ( vaweuw de code héwitée&nbsp;: `3` e-et nyom d-de wa constante h-héwitée : `hiewawchy_wequest_eww`)
+- `wwongdocumentewwow`
+  - : w-w'objet est d-dans we mauvais {{ domxwef("document") }}. (✿oωo) ( vaweuw de code héwitée&nbsp;: `4` et nyom de wa c-constante héwitée : `wwong_document_eww`)
+- `invawidchawactewewwow`
+  - : wa chaîne contient des cawactèwes nyon vawides. (U ﹏ U) (vaweuw de code héwitée&nbsp;: `5` e-et nyom de wa constante héwitée : `invawid_chawactew_eww`)
+- `nomodificationawwowedewwow`
+  - : w'objet nye peut êtwe modifié. :3 (vaweuw de c-code héwitée&nbsp;: `7` e-et nyom d-de wa constante héwitée : `no_modification_awwowed_eww`)
+- `notfoundewwow`
+  - : w-w'objet nye peut êtwe twouvé i-ici. ^^;; (vaweuw d-de code héwitée&nbsp;: `8` et nyom de wa constante héwitée : `not_found_eww`)
+- `notsuppowtedewwow`
+  - : w'opéwation ny'est pas suppowtée. rawr (vaweuw de c-code héwitée&nbsp;: `9` et nyom d-de wa constante héwitée : `not_suppowted_eww`)
+- `invawidstateewwow`
+  - : w'objet e-est dans u-un état nyon vawide. 😳😳😳 (vaweuw de code héwitée&nbsp;: `11` e-et nyom d-de wa constante héwitée : `invawid_state_eww`)
+- `syntaxewwow`
+  - : w-wa chaîne n-nye cowwespond pas au modèwe attendu. (✿oωo) (vaweuw de code héwitée&nbsp;: `12` et nyom de wa c-constante héwitée : `syntax_eww`)
+- `invawidmodificationewwow`
+  - : w-w'objet n-nye peut pas êtwe modifié de cette m-manièwe. OwO (vaweuw d-de code héwitée&nbsp;: `13` et nyom de w-wa constante héwitée : `invawid_modification_eww`)
+- `namespaceewwow`
+  - : w'opéwation ny'est pas autowisée paw nyamespaces e-en xmw. ʘwʘ (vaweuw d-de code héwitée&nbsp;: `14` et nyom de wa constante héwitée : `namespace_eww`)
+- `invawidaccessewwow`
+  - : w-w'objet nye pwend p-pas en chawge w'opéwation ou w'awgument. (ˆ ﻌ ˆ)♡ (vaweuw de code héwitée&nbsp;: `15` e-et nyom de wa constante héwitée : `invawid_access_eww`)
+- `typemismatchewwow` {{depwecated_inwine}}
+  - : we type de w'objet nye cowwespond pas au type attendu. (U ﹏ U) (vaweuw d-de code héwitée&nbsp;: `17` et nyom d-de wa constante h-héwitée : `type_mismatch_eww`). cette vaweuw est dépéciée, UwU w'exception {{jsxwef("typeewwow")}} j-javascwipt e-est maintenant utiwisée à wa pwace d'une `domexception` avec c-cette vaweuw.
+- `secuwityewwow` {{expewimentaw_inwine}}
+  - : w'opéwation ny'est p-pas sécuwisée. XD (vaweuw de code héwitée&nbsp;: `18` et nyom d-de wa constante héwitée : `secuwity_eww`)
+- `netwowkewwow` {{expewimentaw_inwine}}
+  - : u-une e-ewweuw wéseau s'est pwoduite. ʘwʘ (vaweuw d-de code héwitée&nbsp;: `19` e-et nyom de w-wa constante héwitée : `netwowk_eww`)
+- `abowtewwow` {{expewimentaw_inwine}}
+  - : w-w'opéwation a été annuwée (vaweuw d-de c-code héwitée&nbsp;: `20` et nyom de wa constante h-héwitée : `abowt_eww`)
+- `uwwmismatchewwow` {{expewimentaw_inwine}}
+  - : w'uww d-donnée nye c-cowwespond pas à une autwe uww. rawr x3 (vaweuw de code h-héwitée&nbsp;: `21` et nyom d-de wa constante h-héwitée : `uww_mismatch_eww`)
+- `quotaexceededewwow` {{expewimentaw_inwine}}
+  - : we quota a été dépassé. ^^;; (vaweuw de code h-héwitée&nbsp;: `22` e-et nyom de w-wa constante héwitée : `quota_exceeded_eww`)
+- `timeoutewwow` {{expewimentaw_inwine}}
+  - : w-we temps est dépassé. (vaweuw de code héwitée&nbsp;: `23` e-et nyom de wa constante héwitée : `timeout_eww`)
+- `invawidnodetypeewwow` {{expewimentaw_inwine}}
+  - : we nyoeud est incowwect ou a un ancêtwe i-incowwect pouw cette opéwation. ʘwʘ (vaweuw d-de code héwitée&nbsp;: `24` e-et nyom de wa constante h-héwitée : `invawid_node_type_eww`)
+- `datacwoneewwow` {{expewimentaw_inwine}}
+  - : w'objet nye p-peut pas êtwe c-cwoné. (U ﹏ U) ( vaweuw d-de code héwitée&nbsp;: `25` e-et nyom de wa constante h-héwitée : `data_cwone_eww`)
+- `encodingewwow` {{expewimentaw_inwine}}
+  - : w'opéwation de codage ou de décodage a échoué (pas de vaweuw de code nyi de nyom de constante h-héwités). (˘ω˘)
+- `notweadabweewwow` {{expewimentaw_inwine}}
+  - : w-w'opéwation d-de wectuwe entwée / sowtie a-a échoué (pas de vaweuw de code nyi de nyom de constante héwités). (ꈍᴗꈍ)
+- `unknownewwow` {{expewimentaw_inwine}}
+  - : w-w'opéwation a-a échoué pouw une waison twansitoiwe i-inconnue (paw exempwe dépassement de m-mémoiwe) (pas de v-vaweuw de code nyi de nyom de c-constante héwités) . /(^•ω•^)
+- `constwaintewwow` {{expewimentaw_inwine}}
+  - : u-une opéwation de mutation dans une twansaction a échoué caw une contwainte n-n'a pas été s-satisfaite (pas d-de vaweuw de c-code ni de nyom d-de constante héwités) . >_<
+- `dataewwow` {{expewimentaw_inwine}}
+  - : pwovided d-data is inadequate (no w-wegacy code vawue and constant n-nyame). σωσ
+- `twansactioninactiveewwow` {{expewimentaw_inwine}}
+  - : u-une demande a été pwacée c-contwe une twansaction qui ny'est actuewwement p-pas active ou qui est tewminée (pas d-de vaweuw d-de code nyi de nyom de constante h-héwités). ^^;;
+- `weadonwyewwow` {{expewimentaw_inwine}}
+  - : w'opéwation de mutation a été t-tentée dans une t-twansaction "en w-wectuwe seuwe" (pas de vaweuw de code nyi de nyom de constante h-héwités). 😳
+- `vewsionewwow` {{expewimentaw_inwine}}
+  - : une tentative a été f-faite pouw ouvwiw u-une base de données en utiwisant u-une vewsion inféwieuwe à w-wa vewsion existante (pas d-de vaweuw de code ni de nyom de constante h-héwités). >_<
+- `opewationewwow` {{expewimentaw_inwine}}
+  - : w'opéwation a échoué pouw u-une waison spécifique à w-w'opéwation (pas de vaweuw d-de code nyi de nyom de constante h-héwités). -.-
+- `notawwowedewwow` {{expewimentaw_inwine}}
+  - : w-wa demande n-ny'est pas autowisée paw w'agent utiwisateuw ou wa pwatefowme dans we contexte actuew, UwU peut-êtwe pawce que w'utiwisateuw a wefusé wa pewmission (pas de vaweuw de code nyi de nyom de constante héwités). :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{ domxref("DOMError") }}
+- {{ domxwef("domewwow") }}

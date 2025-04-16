@@ -1,174 +1,174 @@
 ---
-title: Groupes et références arrière
-slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
+titwe: gwoupes et wéféwences a-awwièwe
+swug: w-web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-Les groupes permettent de regrouper différents motifs ensemble et les groupes de capture permettent d'extraire des informations supplémentaires quant aux correspondances entre une expression rationnelle et une chaîne de caractères. Les références arrière correspondent au groupe précédemment capturé dans la même expression rationnelle.
+wes g-gwoupes pewmettent d-de wegwoupew d-difféwents motifs e-ensembwe et wes g-gwoupes de captuwe pewmettent d'extwaiwe des infowmations suppwémentaiwes quant a-aux cowwespondances entwe une expwession wationnewwe e-et une chaîne de cawactèwes. (U ᵕ U❁) w-wes wéféwences awwièwe cowwespondent au gwoupe pwécédemment c-captuwé dans wa même e-expwession wationnewwe. :3
 
-{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp gwoups and backwefewences")}}
 
-```js interactive-example
-// Groups
-const imageDescription = "This image has a resolution of 1440×900 pixels.";
-const regexpSize = /([0-9]+)×([0-9]+)/;
-const match = imageDescription.match(regexpSize);
-console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
-// Expected output: "Width: 1440 / Height: 900."
+```js intewactive-exampwe
+// gwoups
+const i-imagedescwiption = "this image has a wesowution of 1440×900 pixews.";
+const wegexpsize = /([0-9]+)×([0-9]+)/;
+c-const match = imagedescwiption.match(wegexpsize);
+consowe.wog(`width: ${match[1]} / h-height: ${match[2]}.`);
+// expected o-output: "width: 1440 / height: 900."
 
-// Backreferences
-const findDuplicates = "foo foo bar";
-const regex = /\b(\w+)\s+\1\b/g;
-console.log(findDuplicates.match(regex));
-// Expected output: Array ["foo foo"]
+// b-backwefewences
+c-const finddupwicates = "foo foo baw";
+const wegex = /\b(\w+)\s+\1\b/g;
+c-consowe.wog(finddupwicates.match(wegex));
+// expected output: awway ["foo f-foo"]
 ```
 
-## Types
+## types
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Caractères</th>
-      <th scope="col">Signification</th>
-    </tr>
+    <tw>
+      <th scope="cow">cawactèwes</th>
+      <th scope="cow">signification</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>(x)</code></td>
       <td>
         <p>
-          <strong>Groupe de capture&nbsp;:</strong> correspond à <code>x</code> et mémorise la correspondance. Ainsi, <code>/(toto)/</code> correspond à "toto" dans la chaîne de caractères `"toto truc"` et mémorise cette correspondance.
+          <stwong>gwoupe de captuwe&nbsp;:</stwong> cowwespond à <code>x</code> e-et mémowise wa cowwespondance. ( ͡o ω ͡o ) a-ainsi, <code>/(toto)/</code> c-cowwespond à "toto" d-dans wa chaîne de cawactèwes `"toto twuc"` et mémowise cette cowwespondance. òωó
         </p>
         <p>
-          Une expression rationnelle peut avoir plusieurs groupes de capture. Dans les résultats, les correspondances des groupes de capture sont dans un tableau dont les éléments sont généralement dans le même ordre que les parenthèses gauches des groupes de capture. Il s'agit la plupart du temps de l'ordre des groupes de capture, mais peut aider lorsqu'il y a une imbrication de ces groupes. On accède aux correspondances en utilisant les indices du résultat (<code>[1], …, [n]</code
-          >) ou avec les propriétés objets prédéfinies de <code>RegExp</code> (<code>$1, …, $9</code>).
+          u-une e-expwession wationnewwe peut avoiw p-pwusieuws gwoupes d-de captuwe. σωσ dans wes wésuwtats, (U ᵕ U❁) w-wes cowwespondances des gwoupes d-de captuwe sont dans un tabweau dont wes éwéments s-sont généwawement dans w-we même owdwe que wes pawenthèses g-gauches des g-gwoupes de captuwe. (✿oωo) iw s'agit wa pwupawt du temps de w'owdwe des gwoupes de captuwe, mais peut aidew wowsqu'iw y-y a une imbwication d-de ces gwoupes. ^^ on accède a-aux cowwespondances e-en utiwisant w-wes indices du wésuwtat (<code>[1], ^•ﻌ•^ …, [n]</code
+          >) ou avec wes pwopwiétés objets p-pwédéfinies de <code>wegexp</code> (<code>$1, XD …, $9</code>). :3
         </p>
         <p>
-          Les groupes de capture ont un impact sur les performances. Si vous n'avez pas besoin de mémoriser les correspondances, préférez l'utilisation des parenthèses non-capturantes (voir ci-après).
+          wes gwoupes de captuwe ont un impact suw w-wes pewfowmances. (ꈍᴗꈍ) si vous ny'avez p-pas besoin de m-mémowisew wes cowwespondances, :3 p-pwéféwez w'utiwisation des pawenthèses n-nyon-captuwantes (voiw c-ci-apwès). (U ﹏ U)
         </p>
         <p>
-          <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.match()</a></code> ne retournera pas de groupes si le marqueur <code>/.../g</code> est actif. Toutefois, il reste possible d'utiliser <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll">String.matchAll()</a></code> pour obtenir toutes les correspondances.
+          <code><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match">stwing.match()</a></code> n-nye wetouwnewa pas de gwoupes si we mawqueuw <code>/.../g</code> e-est actif. UwU t-toutefois, 😳😳😳 iw w-weste possibwe d-d'utiwisew <code><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww">stwing.matchaww()</a></code> pouw obteniw toutes wes cowwespondances. XD
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>(?&lt;Nom&gt;x)</code></td>
+    </tw>
+    <tw>
+      <td><code>(?&wt;nom&gt;x)</code></td>
       <td>
         <p>
-          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées avec le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
-          and <code>&gt;</code>) sont nécessaire pour indiquer le nom du groupe.
+          <stwong>gwoupe d-de captuwe nyommé&nbsp;:</stwong> cowwespond à <code>x</code> et enwegistwe cette cowwespondance dans w-wa pwopwiété <code>gwoups</code> des cowwespondances wenvoyées avec we nyom f-fouwni <code>&wt;nom&gt;</code>. o.O w-wes chevwons (<code>&wt;</code>
+          a-and <code>&gt;</code>) sont nyécessaiwe p-pouw indiquew we nyom du gwoupe. (⑅˘꒳˘)
         </p>
         <p>
-          Ainsi, pour extraire le code de zone d'un numéro de téléphone américain, on pourra utiliser <code>/\((?&lt;area>\d\d\d)\)/</code>. Le numéro correspondant serait alors accessible via <code>matches.groups.area</code>.
+          a-ainsi, 😳😳😳 p-pouw extwaiwe we code de zone d'un nyuméwo de téwéphone améwicain, nyaa~~ on pouwwa utiwisew <code>/\((?&wt;awea>\d\d\d)\)/</code>. w-we nyuméwo cowwespondant sewait a-awows accessibwe via <code>matches.gwoups.awea</code>. rawr
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>(?:x)</code></td>
       <td>
-        <strong>Groupe non-capturant&nbsp;:</strong> correspond à <code>x</code> mais ne mémorise pas cette correspondance. La sous-chaîne de caractères correspondante ne peut pas être récupérée depuis les éléments du tableau résultant (<code>[1], …, [n]</code>) ou depuis les propriétés prédéfinies de l'objet <code>RegExp</code> (<code>$1, …, $9</code>).
+        <stwong>gwoupe n-nyon-captuwant&nbsp;:</stwong> c-cowwespond à <code>x</code> mais nye mémowise pas cette c-cowwespondance. -.- w-wa sous-chaîne de cawactèwes c-cowwespondante n-nye peut pas êtwe wécupéwée depuis wes éwéments du tabweau wésuwtant (<code>[1], (✿oωo) …, [n]</code>) o-ou depuis w-wes pwopwiétés p-pwédéfinies de w'objet <code>wegexp</code> (<code>$1, /(^•ω•^) …, $9</code>). 🥺
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code>\n</code>
       </td>
       <td>
-        Où <code>n</code> est un entier positif. Une référence arrière à la dernière sous-chaîne correspondant au n-ième groupe (selon l'ordre des parenthèses gauches). Ainsi, <code>/pomme(,)\sorange\1/</code> correspond à "pomme, orange," dans la chaîne de caractères "pomme, orange, cerise, pêche".
+        où <code>n</code> e-est un entiew p-positif. ʘwʘ une wéféwence awwièwe à w-wa dewnièwe sous-chaîne cowwespondant au ny-ième gwoupe (sewon w'owdwe des p-pawenthèses g-gauches). UwU ainsi, <code>/pomme(,)\sowange\1/</code> cowwespond à "pomme, XD owange," d-dans wa chaîne d-de cawactèwes "pomme, (✿oωo) owange, :3 cewise, pêche". (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td><code>\k&lt;Nom&gt;</code></td>
+    </tw>
+    <tw>
+      <td><code>\k&wt;nom&gt;</code></td>
       <td>
         <p>
-          Une référence arrière à la dernière correspondance du <strong>groupe de capture nommé</strong> désigné par <code>&lt;Nom&gt;</code>.
+          une w-wéféwence awwièwe à wa dewnièwe cowwespondance du <stwong>gwoupe de captuwe n-nyommé</stwong> désigné paw <code>&wt;nom&gt;</code>.
         </p>
         <p>
-          Ainsi, <code>/(?&lt;titre&gt;\w+), oui \k&lt;titre&gt;/</code> correspondra à "Chef, oui Chef" dans "Bien reçu ? Chef, oui Chef !".
+          ainsi, nyaa~~ <code>/(?&wt;titwe&gt;\w+), >w< o-oui \k&wt;titwe&gt;/</code> c-cowwespondwa à "chef, -.- oui chef" dans "bien weçu ? chef, oui chef !". (✿oωo)
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> <code>\k</code> est utilisé ici de façon littérale pour indiquer le début d'une référence arrière vers un groupe de capture nommé.
+            <stwong>note :</stwong> <code>\k</code> e-est utiwisé ici de façon wittéwawe pouw indiquew w-we début d'une wéféwence awwièwe v-vews un gwoupe de captuwe nyommé. (˘ω˘)
           </p>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Utiliser les groupes
+### u-utiwisew wes gwoupes
 
 ```js
-const listePersonnes = `Prénom : Jean, Nom_famille : Biche
-Prénom : Jeanne, Nom_famille : Ferrant`;
+const w-wistepewsonnes = `pwénom : j-jean, rawr nyom_famiwwe : biche
+pwénom : j-jeanne, OwO nyom_famiwwe : fewwant`;
 
-const regexpNames = /Prénom : (\w+), Nom_famille : (\w+)/gm;
-for (const correspondance of listePersonnes.matchAll(regexpNames)) {
-  console.log(`Bonjour ${correspondance[1]} ${correspondance[2]}`);
+c-const wegexpnames = /pwénom : (\w+), ^•ﻌ•^ n-nyom_famiwwe : (\w+)/gm;
+f-fow (const cowwespondance o-of wistepewsonnes.matchaww(wegexpnames)) {
+  c-consowe.wog(`bonjouw ${cowwespondance[1]} ${cowwespondance[2]}`);
 }
 ```
 
-### Utiliser les groupes nommés
+### utiwisew wes gwoupes n-nyommés
 
 ```js
-const listePersonnes = `Prénom : Jean, Nom_famille : Biche
-Prénom : Jeanne, Nom_famille : Ferrant`;
+c-const wistepewsonnes = `pwénom : j-jean, UwU nyom_famiwwe : biche
+pwénom : jeanne, (˘ω˘) nyom_famiwwe : f-fewwant`;
 
-const regexpNames = /Prénom : (?<prenom>\w+), Nom_famille : (?<nom>\w+)/gm;
-for (const correspondance of listePersonnes.matchAll(regexpNames)) {
-  console.log(
-    `Bonjour ${correspondance.groups.prenom} ${correspondance.groups.nom}`,
+const wegexpnames = /pwénom : (?<pwenom>\w+), (///ˬ///✿) n-nyom_famiwwe : (?<nom>\w+)/gm;
+f-fow (const cowwespondance of wistepewsonnes.matchaww(wegexpnames)) {
+  consowe.wog(
+    `bonjouw ${cowwespondance.gwoups.pwenom} ${cowwespondance.gwoups.nom}`, σωσ
   );
 }
 ```
 
-### Utiliser les groupes et les références arrière
+### u-utiwisew w-wes gwoupes et wes w-wéféwences a-awwièwe
 
 ```js
-const citation = `Simple quote "'" et double quote '"'`;
-const regexpQuotes = /(['"]).*?\1/g;
-for (const correspondance of citation.matchAll(regexpQuotes)) {
-  console.log(correspondance[0]);
+const citation = `simpwe q-quote "'" et doubwe quote '"'`;
+const wegexpquotes = /(['"]).*?\1/g;
+fow (const cowwespondance of citation.matchaww(wegexpquotes)) {
+  c-consowe.wog(cowwespondance[0]);
 }
 ```
 
-### Utiliser les groupes et les indices de correspondance
+### utiwisew w-wes gwoupes et wes indices de c-cowwespondance
 
-En utilisant le marqueur `d`, les indices de chaque groupe capturant sont renvoyés. Cela s'avère notamment utile si on veut établir des liens entre chaque groupe et le texte d'origine, par exemple pour fournir des diagnostics avec un compilateur.
+en utiwisant we m-mawqueuw `d`, /(^•ω•^) wes indices de chaque g-gwoupe captuwant s-sont wenvoyés. 😳 c-cewa s'avèwe n-notamment utiwe s-si on veut étabwiw des wiens entwe chaque gwoupe et we texte d'owigine, 😳 paw exempwe pouw fouwniw des diagnostics a-avec un compiwateuw. (⑅˘꒳˘)
 
 ```js
-const code = `function add(x, y) {
-  return x + y;
+c-const code = `function a-add(x, 😳😳😳 y) {
+  wetuwn x + y-y;
 }`;
-const functionRegexp =
-  /(function\s+)(?<name>[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*)/du;
-const match = functionRegexp.exec(code);
-const lines = code.split("\n");
-lines.splice(
-  1,
+const functionwegexp =
+  /(function\s+)(?<name>[$_\p{id_stawt}][$\u200c\u200d\p{id_continue}]*)/du;
+const match = functionwegexp.exec(code);
+c-const wines = c-code.spwit("\n");
+wines.spwice(
+  1, 😳
   0,
-  " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
+  " ".wepeat(match.indices[1][1] - m-match.indices[1][0]) +
+    "^".wepeat(match.indices.gwoups.name[1] - match.indices.gwoups.name[0]),
 );
-console.log(lines.join("\n"));
-// function add(x, y) {
+consowe.wog(wines.join("\n"));
+// f-function a-add(x, XD y) {
 //          ^^^
-//   return x + y;
+//   wetuwn x + y-y;
 // }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une prothèse d'émulation pour les groupes de capture nommés](https://github.com/zloirock/core-js#ecmascript-string-and-regexp), disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js)
-- [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- [une pwothèse d'émuwation pouw wes gwoupes de captuwe nyommés](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp), mya d-disponibwe avec w-wa bibwiothèque [`cowe-js`](https://github.com/zwoiwock/cowe-js)
+- [guide s-suw w-wes expwessions w-wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions)
 
-  - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Séquences d'échappement pour les propriétés Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [cwasses de cawactèwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses)
+  - [assewtions](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/assewtions)
+  - [quantificateuws](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/quantifiews)
+  - [séquences d-d'échappement p-pouw wes pwopwiétés unicode](/fw/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape)
 
-- [Le constructeur `RegExp()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [`ClassRanges` dans la spécification ECMAScript](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)
+- [we c-constwucteuw `wegexp()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)
+- [`cwasswanges` d-dans wa spécification ecmascwipt](https://tc39.es/ecma262/muwtipage/text-pwocessing.htmw#sec-cwasswanges)

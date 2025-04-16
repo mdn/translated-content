@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+titwe: date.pwototype.gethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après l'heure locale.
+w-wa méthode **`gethouws()`** w-wenvoie w-w'heuwe pouw w-wa date wenseignée, >_< d-d'apwès w-w'heuwe wocawe. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.gethouws()")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js i-intewactive-exampwe
+const biwthday = nyew date("mawch 13, mya 08 04:20");
 
-console.log(birthday.getHours());
-// Expected output: 4
+consowe.wog(biwthday.gethouws());
+// expected output: 4
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getHours();
+dateobj.gethouws();
 ```
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Un entier, compris entre 0 et 23 qui indique l'heure de la date indiquée selon l'heure locale.
+un entiew, nyaa~~ compwis entwe 0 e-et 23 qui indique w'heuwe de wa date indiquée sewon w'heuwe w-wocawe.
 
-## Exemples
+## exempwes
 
-### Utiliser `getHours()`
+### utiwisew `gethouws()`
 
-La seconde instruction ci-dessous assigne la valeur 23 à la variable `heure`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
+w-wa seconde instwuction c-ci-dessous assigne wa vaweuw 23 à wa vawiabwe `heuwe`, (⑅˘꒳˘) sewon wa vaweuw de w'objet {{jsxwef("date")}} `noew95`. rawr x3
 
 ```js
-var noel95 = new Date("December 25, 1995 23:15:00");
-var heure = noel95.getHours();
+vaw n-nyoew95 = nyew date("decembew 25, (✿oωo) 1995 23:15:00");
+vaw heuwe = noew95.gethouws();
 
-console.log(heure); //23
+consowe.wog(heuwe); //23
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

@@ -1,50 +1,50 @@
 ---
-title: WebGLRenderingContext.isBuffer()
-slug: Web/API/WebGLRenderingContext/isBuffer
+titwe: webgwwendewingcontext.isbuffew()
+swug: w-web/api/webgwwendewingcontext/isbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.isBuffer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) renvoie `true` si le {{domxref ("WebGLBuffer")}} passé est valide et `false` dans le cas contraire.
+w-wa méthode **`webgwwendewingcontext.isbuffew()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) w-wenvoie `twue` s-si we {{domxwef ("webgwbuffew")}} p-passé est vawide e-et `fawse` d-dans we cas contwaiwe. ( ͡o ω ͡o )
 
-## Syntaxe
-
-```js
-GLboolean gl.isBuffer(tampon);
-```
-
-### Paramètres
-
-- tampon
-  - : Un {{domxref("WebGLBuffer")}} à vérifier.
-
-### Valeur retournée
-
-Un {{domxref("GLboolean")}} indiquant si le tampon est ou non valide.
-
-## Exemples
-
-### Création d'un tampon
+## syntaxe
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var tampon = gl.createBuffer();
-
-gl.isBuffer(tampon);
+gwboowean gw.isbuffew(tampon);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- t-tampon
+  - : un {{domxwef("webgwbuffew")}} à véwifiew. rawr x3
 
-## Compatibilité des navigateurs
+### vaweuw wetouwnée
 
-{{Compat}}
+un {{domxwef("gwboowean")}} i-indiquant si we tampon e-est ou nyon vawide. nyaa~~
 
-## Voir aussi
+## exempwes
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+### cwéation d'un tampon
+
+```js
+v-vaw canevas = document.getewementbyid("canevas");
+v-vaw gw = c-canevas.getcontext("webgw");
+vaw tampon = gw.cweatebuffew();
+
+gw.isbuffew(tampon);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- autwes tampons : {{domxwef("webgwfwamebuffew")}}, /(^•ω•^) {{domxwef("webgwwendewbuffew")}}

@@ -1,92 +1,92 @@
 ---
-title: Date.prototype.toISOString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+titwe: date.pwototype.toisostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toisostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toISOString()`** renvoie une chaîne de caractères au format ISO ([ISO 8601 Extended Format](http://en.wikipedia.org/wiki/ISO_8601)), qui peut être décrite de cette façon : **`YYYY-MM-DDTHH:mm:ss.sssZ`** (toujours longue de 24 caractères) ou de cette façon **`±YYYYYY-MM-DDTHH:mm:ss.sssZ`** (27 caractères). Le fuseau horaire est toujours UTC, comme l'indique le suffixe « Z » (pour zéro décalage avec UTC).
+w-wa méthode **`toisostwing()`** w-wenvoie une c-chaîne de cawactèwes a-au fowmat i-iso ([iso 8601 e-extended fowmat](http://en.wikipedia.owg/wiki/iso_8601)), mya q-qui p-peut êtwe décwite de cette façon : **`yyyy-mm-ddthh:mm:ss.sssz`** (toujouws wongue de 24 cawactèwes) ou de cette façon **`±yyyyyy-mm-ddthh:mm:ss.sssz`** (27 c-cawactèwes). (˘ω˘) we fuseau howaiwe est toujouws u-utc, >_< comme w'indique we suffixe « z-z » (pouw zéwo décawage avec utc). -.-
 
-{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+{{intewactiveexampwe("javascwipt demo: d-date.toisostwing()")}}
 
-```js interactive-example
-const event = new Date("05 October 2011 14:48 UTC");
-console.log(event.toString());
-// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+```js intewactive-exampwe
+const event = n-nyew date("05 octobew 2011 14:48 u-utc");
+consowe.wog(event.tostwing());
+// expected output: "wed oct 05 2011 16:48:00 gmt+0200 (cest)"
+// n-nyote: youw timezone may vawy
 
-console.log(event.toISOString());
-// Expected output: "2011-10-05T14:48:00.000Z"
+consowe.wog(event.toisostwing());
+// expected output: "2011-10-05t14:48:00.000z"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.toISOString();
+dateobj.toisostwing();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères représentant la date indiquée au format [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) selon le temps universel.
+u-une chaîne de c-cawactèwes wepwésentant w-wa date indiquée au fowmat [iso 8601](https://fw.wikipedia.owg/wiki/iso_8601) s-sewon we temps univewsew. 🥺
 
-## Exemples
+## exempwes
 
-### Utiliser `toISOString()`
+### u-utiwisew `toisostwing()`
 
 ```js
-var aujourdhui = new Date("05 October 2011 14:48 UTC");
+vaw aujouwdhui = nyew date("05 octobew 2011 14:48 utc");
 
-console.log(aujourdhui.toISOString()); // Renvoie "2011-10-05T14:48:00.000Z"
+consowe.wog(aujouwdhui.toisostwing()); // w-wenvoie "2011-10-05t14:48:00.000z"
 ```
 
-L'exemple ci-dessus analyse une chaîne de caractères non-standard, qui peut donc être incorrectement intérprété par des navigateurs n'utilisant pas Gecko.
+w'exempwe ci-dessus a-anawyse une c-chaîne de cawactèwes n-nyon-standawd, (U ﹏ U) qui peut donc êtwe incowwectement intéwpwété p-paw des n-nyavigateuws ny'utiwisant pas g-gecko. >w<
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Cette méthode fut standardisée avec la cinquième édition d'ECMAScript. Afin d'utiliser cette méthode avec les moteurs qui n'en disposent pas nativement, on pourra utiliser ce fragment de code :
+cette méthode fut s-standawdisée avec wa cinquième édition d-d'ecmascwipt. mya afin d'utiwisew cette m-méthode avec wes moteuws qui ny'en d-disposent pas nyativement, >w< o-on pouwwa utiwisew c-ce fwagment de code :
 
 ```js
-if (!Date.prototype.toISOString) {
+if (!date.pwototype.toisostwing) {
   (function () {
-    function pad(number) {
-      if (number < 10) {
-        return "0" + number;
+    function pad(numbew) {
+      if (numbew < 10) {
+        wetuwn "0" + nyumbew;
       }
-      return number;
+      w-wetuwn nyumbew;
     }
 
-    Date.prototype.toISOString = function () {
-      return (
-        this.getUTCFullYear() +
+    date.pwototype.toisostwing = f-function () {
+      wetuwn (
+        t-this.getutcfuwwyeaw() +
         "-" +
-        pad(this.getUTCMonth() + 1) +
+        pad(this.getutcmonth() + 1) +
         "-" +
-        pad(this.getUTCDate()) +
-        "T" +
-        pad(this.getUTCHours()) +
+        p-pad(this.getutcdate()) +
+        "t" +
+        p-pad(this.getutchouws()) +
         ":" +
-        pad(this.getUTCMinutes()) +
+        pad(this.getutcminutes()) +
         ":" +
-        pad(this.getUTCSeconds()) +
+        pad(this.getutcseconds()) +
         "." +
-        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        "Z"
+        (this.getutcmiwwiseconds() / 1000).tofixed(3).swice(2, nyaa~~ 5) +
+        "z"
       );
     };
   })();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

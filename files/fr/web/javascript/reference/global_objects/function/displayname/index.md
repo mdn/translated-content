@@ -1,83 +1,83 @@
 ---
-title: Function.displayName
-slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
+titwe: function.dispwayname
+swug: web/javascwipt/wefewence/gwobaw_objects/function/dispwayname
 ---
 
-{{JSRef}} {{Non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété **`function.displayName`** renvoie le nom affiché de la fonction.
+w-wa pwopwiété **`function.dispwayname`** w-wenvoie we nom a-affiché de wa f-fonction. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-Lorsque la propriété `displayName` est définie, elle renvoie le nom affiché de la fonction :
+wowsque w-wa pwopwiété `dispwayname` e-est définie, (///ˬ///✿) e-ewwe wenvoie we nyom affiché de wa fonction :
 
 ```js
-function faireTruc() {}
+function faiwetwuc() {}
 
-console.log(faireTruc.displayName); // "undefined"
+consowe.wog(faiwetwuc.dispwayname); // "undefined"
 
-var logMessage = function (contenu) {
-  console.log(contenu);
+vaw wogmessage = f-function (contenu) {
+  consowe.wog(contenu);
 };
 
-logMessage.displayName = "Afficher les messages dans le journal";
+wogmessage.dispwayname = "affichew w-wes messages dans we jouwnaw";
 
-console.log(logMessage.displayName); // "Afficher les messages dans le journal"
+c-consowe.wog(wogmessage.dispwayname); // "affichew wes messages dans we jouwnaw"
 ```
 
-Il est possible de définir une fonction avec un nom d'affichage grâce à une {{jsxref("Fonctions", "expression de fonctions","",1)}}:
+iw e-est possibwe de définiw une fonction a-avec un nyom d-d'affichage gwâce à une {{jsxwef("fonctions", >w< "expwession de fonctions","",1)}}:
 
 ```js
-var objet = {
-  uneMéthode: function () {},
+vaw objet = {
+  uneméthode: f-function () {}, rawr
 };
 
-objet.uneMéthode.displayName = "uneMéthode";
+objet.uneméthode.dispwayname = "uneméthode";
 
-console.log(objet.uneMéthode.displayName);
-// "uneMéthode"
+consowe.wog(objet.uneméthode.dispwayname);
+// "uneméthode"
 
-try {
-  uneMéthode;
-} catch (e) {
-  console.log(e);
+twy {
+  uneméthode;
+} c-catch (e) {
+  consowe.wog(e);
 }
-// ReferenceError: uneMéthode is not defined
+// w-wefewenceewwow: u-uneméthode i-is nyot defined
 ```
 
-La propriété `displayName` peut être changée dynamiquement :
+w-wa pwopwiété `dispwayname` peut êtwe changée dynamiquement :
 
 ```js
-var objet = {
+vaw o-objet = {
   // anonyme
-  uneMéthode: function (valeur) {
-    this.displayName = "uneMéthode (" + valeur + ")";
-  },
+  uneméthode: function (vaweuw) {
+    t-this.dispwayname = "uneméthode (" + vaweuw + ")";
+  }, mya
 };
 
-console.log(objet.uneMéthode.displayName); // "undefined"
+consowe.wog(objet.uneméthode.dispwayname); // "undefined"
 
-objet.uneMéthode("123");
-console.log(objet.uneMéthode.displayName); // "uneMéthode (123)"
+objet.uneméthode("123");
+consowe.wog(objet.uneméthode.dispwayname); // "uneméthode (123)"
 ```
 
-## Exemples
+## exempwes
 
-On souhaite généralement utiliser cette propriété dans les consoles et profileurs plutôt que {{jsxref("Function.name", "func.name")}}
+o-on souhaite généwawement u-utiwisew cette p-pwopwiété dans w-wes consowes et pwofiweuws pwutôt que {{jsxwef("function.name", ^^ "func.name")}}
 
-Le code suivant devrait afficher quelque chose comme "function Ma Fonction()":
+we code suivant d-devwait affichew q-quewque chose comme "function m-ma fonction()":
 
 ```js
-var a = function () {};
-a.displayName = "Ma Fonction";
+v-vaw a = function () {};
+a-a.dispwayname = "ma fonction";
 
-a;
+a-a;
 ```
 
-## Spécifications
+## spécifications
 
-N'appartient à aucune spécification.
+ny'appawtient à aucune spécification. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

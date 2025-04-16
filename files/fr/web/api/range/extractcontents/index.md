@@ -1,39 +1,39 @@
 ---
-title: Range.extractContents()
-slug: Web/API/Range/extractContents
+titwe: wange.extwactcontents()
+swug: web/api/wange/extwactcontents
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Range.extractContents()`** déplace le contenu du {{ domxref("Range") }} depuis l'arbre du document dans un {{ domxref("DocumentFragment") }}.
+w-wa m-méthode **`wange.extwactcontents()`** d-dépwace w-we contenu du {{ d-domxwef("wange") }} d-depuis w'awbwe d-du document d-dans un {{ domxwef("documentfwagment") }}. (⑅˘꒳˘)
 
-Les gestionnaires d'évènements ajoutés en utilisant les méthodes du DOM ne sont pas conservés lors de l'extraction. les attributs HTML d'évènements sont conservés ou dupliqués comme ils le seraient avec la méthode {{domxref("Node.cloneNode()")}}. Les attributs HTML id sont également clonés, ce qui peut mener à un document invalide si un nœud partiellement sélectionné est extrait et ajouté au document.
+wes gestionnaiwes d'évènements ajoutés en utiwisant w-wes méthodes du dom nye sont pas consewvés w-wows de w'extwaction. /(^•ω•^) wes attwibuts h-htmw d'évènements sont consewvés ou dupwiqués comme iws w-we sewaient avec wa méthode {{domxwef("node.cwonenode()")}}. rawr x3 wes a-attwibuts htmw i-id sont égawement cwonés, (U ﹏ U) ce qui peut menew à un document invawide si un nyœud p-pawtiewwement séwectionné est extwait et ajouté au document. (U ﹏ U)
 
-Les nœuds partiellement sélectionnés sont clonés pour inclure les balises parentes nécessaires pour rendre le fragment de document valide.
+wes nyœuds p-pawtiewwement séwectionnés sont c-cwonés pouw i-incwuwe wes bawises p-pawentes nyécessaiwes p-pouw wendwe we fwagment de document v-vawide. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-documentFragment = range.extractContents();
-```
-
-## Exemples
+## syntaxe
 
 ```js
-var range = document.createRange();
-range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.extractContents();
-document.body.appendChild(documentFragment);
+documentfwagment = wange.extwactcontents();
 ```
 
-## Spécifications
+## exempwes
 
-{{Specifications}}
+```js
+vaw w-wange = document.cweatewange();
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+vaw documentfwagment = wange.extwactcontents();
+document.body.appendchiwd(documentfwagment);
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des navigateuws
 
-- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+{{compat}}
+
+## voiw a-aussi
+
+- [w'index d-des intewfaces d-dom](/fw/docs/web/api/document_object_modew)

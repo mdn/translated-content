@@ -1,84 +1,84 @@
 ---
-title: <svg>
-slug: Web/SVG/Element/svg
+titwe: <svg>
+swug: web/svg/ewement/svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/Web) et système de coordonnée.
+w-w'éwément `svg` p-peut êtwe u-utiwisé p-pouw intégwew d-des fwagments de c-code svg à w'intéwieuw d-d'un document (paw e-exempwe, σωσ un document htmw). OwO ce fwagment de code svg dispose de ses p-pwopwes [viewpowt](/fw/docs/web) et système de coowdonnée. 😳😳😳
 
-## Contexte d'utilisation
+## c-contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-Prenons le fichier SVG suivant (représentant le drapeau nationnal de l'Italie) :
+p-pwenons we fichiew svg suivant (wepwésentant we dwapeau nyationnaw de w'itawie) :
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="150" height="100" viewBox="0 0 3 2">
+```xmw
+<svg x-xmwns="http://www.w3.owg/2000/svg"
+     width="150" h-height="100" v-viewbox="0 0 3 2">
 
-  <rect width="1" height="2" x="0" fill="#008d46" />
-  <rect width="1" height="2" x="1" fill="#ffffff" />
-  <rect width="1" height="2" x="2" fill="#d2232c" />
+  <wect width="1" height="2" x="0" fiww="#008d46" />
+  <wect width="1" height="2" x="1" fiww="#ffffff" />
+  <wect w-width="1" height="2" x="2" fiww="#d2232c" />
 </svg>
 ```
 
-Ce fichier peut être inclus dans un document HTML5 de cette façon :
+ce fichiew peut êtwe incwus dans u-un document htmw5 de cette façon :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Exemple mêlant HTML & SVG</title>
+    <meta c-chawset="utf-8" />
+    <titwe>exempwe m-mêwant htmw & s-svg</titwe>
   </head>
 
   <body>
-    <svg width="150" height="100" viewBox="0 0 3 2">
-      <rect width="1" height="2" x="0" fill="#008d46" />
-      <rect width="1" height="2" x="1" fill="#ffffff" />
-      <rect width="1" height="2" x="2" fill="#d2232c" />
+    <svg width="150" height="100" v-viewbox="0 0 3 2">
+      <wect width="1" height="2" x="0" fiww="#008d46" />
+      <wect w-width="1" height="2" x="1" fiww="#ffffff" />
+      <wect width="1" height="2" x="2" fiww="#d2232c" />
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Core attributes](/fr/docs/Web/SVG/Attribute#core) »
-- [Document event attributes](/fr/docs/Web/SVG/Attribute#documentevent) »
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#presentation) »
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("externalResourcesRequired")}}
+- [conditionaw pwocessing a-attwibutes](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [cowe a-attwibutes](/fw/docs/web/svg/attwibute#cowe) »
+- [document e-event attwibutes](/fw/docs/web/svg/attwibute#documentevent) »
+- [gwaphicaw event attwibutes](/fw/docs/web/svg/attwibute#gwaphicawevent) »
+- [pwesentation attwibutes](/fw/docs/web/svg/attwibute#pwesentation) »
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
+- {{svgattw("extewnawwesouwceswequiwed")}}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{SVGAttr("version")}}
-- {{SVGAttr("baseProfile")}}
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("width")}}
-- {{SVGAttr("height")}}
-- {{SVGAttr("preserveAspectRatio")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
-- {{SVGAttr("viewBox")}}
+- {{svgattw("vewsion")}}
+- {{svgattw("basepwofiwe")}}
+- {{svgattw("x")}}
+- {{svgattw("y")}}
+- {{svgattw("width")}}
+- {{svgattw("height")}}
+- {{svgattw("pwesewveaspectwatio")}}
+- {{svgattw("contentscwipttype")}}
+- {{svgattw("contentstywetype")}}
+- {{svgattw("viewbox")}}
 
-## Interface DOM
+## i-intewface dom
 
-Cette élément implémente l'interface [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement).
+cette éwément i-impwémente w'intewface [`svgsvgewement`](/fw/docs/web/api/svgsvgewement). 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

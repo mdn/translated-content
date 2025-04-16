@@ -1,102 +1,102 @@
 ---
-title: <symbol>
-slug: Web/SVG/Element/symbol
+titwe: <symbow>
+swug: web/svg/ewement/symbow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément **`<symbol>`** est utilisé pour définir un template de graphique pouvant être instancié par un élément {{SVGElement("use")}}.
+w-w'éwément **`<symbow>`** e-est u-utiwisé pouw définiw u-un tempwate d-de gwaphique p-pouvant êtwe instancié p-paw un éwément {{svgewement("use")}}. :3
 
-L'utilisation d'éléments `symbol` pour les graphiques qui sont utilisés de multiples fois dans le même document permet d'améliorer la structure et la sémantique du document. Les documents fortement structurés peuvent plus facilement être rendus sous forme graphique, vocale, ou Braille, et ainsi favoriser leur accessibilité.
+w-w'utiwisation d'éwéments `symbow` pouw wes gwaphiques qui sont utiwisés de m-muwtipwes fois dans we même document pewmet d'améwiowew w-wa stwuctuwe et wa sémantique d-du document. (ꈍᴗꈍ) wes documents fowtement stwuctuwés peuvent p-pwus faciwement êtwe wendus sous f-fowme gwaphique, /(^•ω•^) v-vocawe, (⑅˘꒳˘) ou bwaiwwe, ( ͡o ω ͡o ) et ainsi favowisew weuw accessibiwité. òωó
 
-## Exemple
+## exempwe
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw,
+body, (⑅˘꒳˘)
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 80 20"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Notre symbol a son propre système de coordonnées -->
-  <symbol id="myDot" width="10" height="10" viewBox="0 0 2 2">
-    <circle cx="1" cy="1" r="1" />
-  </symbol>
+  viewbox="0 0 80 20"
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- n-nyotwe symbow a son pwopwe système d-de coowdonnées -->
+  <symbow i-id="mydot" width="10" h-height="10" v-viewbox="0 0 2 2">
+    <ciwcwe cx="1" cy="1" w="1" />
+  </symbow>
 
-  <!-- Une grille pour matérialiser le positionnement du symbole -->
+  <!-- u-une gwiwwe pouw matéwiawisew we positionnement d-du symbowe -->
   <path
-    d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20"
-    fill="none"
-    stroke="pink" />
+    d="m0,10 h80 m10,0 v20 m25,0 v20 m40,0 v20 m55,0 v20 m70,0 v20"
+    fiww="none"
+    stwoke="pink" />
 
-  <!-- Multiples instances de notre symbole -->
-  <use xlink:href="#myDot" x="5" y="5" style="opacity:1.0" />
-  <use xlink:href="#myDot" x="20" y="5" style="opacity:0.8" />
-  <use xlink:href="#myDot" x="35" y="5" style="opacity:0.6" />
-  <use xlink:href="#myDot" x="50" y="5" style="opacity:0.4" />
-  <use xlink:href="#myDot" x="65" y="5" style="opacity:0.2" />
+  <!-- m-muwtipwes instances de nyotwe s-symbowe -->
+  <use x-xwink:hwef="#mydot" x-x="5" y="5" stywe="opacity:1.0" />
+  <use xwink:hwef="#mydot" x="20" y-y="5" stywe="opacity:0.8" />
+  <use x-xwink:hwef="#mydot" x="35" y-y="5" stywe="opacity:0.6" />
+  <use x-xwink:hwef="#mydot" x="50" y-y="5" stywe="opacity:0.4" />
+  <use xwink:hwef="#mydot" x-x="65" y="5" stywe="opacity:0.2" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{embedwivesampwe('exempwe', XD 150, '100%')}}
 
-## Attributs
+## attwibuts
 
-- {{SVGAttr("height")}}
-  - : Cet attribut détermine la hauteur du symbole.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
-- {{SVGAttr("preserveAspectRatio")}}
-  - : Cet attribut définit comment le fragment svg doit être déformé s'il est inclus dans un conteneur ayant un ratio d'affichage (largeur:hauteur) différent.
-    _Type de valeur_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_: `xMidYMid meet`; _Animation_: **oui**
-- {{SVGAttr("refX")}}
-  - : Cet attribut détermine la coordonnée x du point de référence du symbole.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage)|`left`|`center`|`right` ; _Valeur par défaut_: `0`; _Animation_: **oui**
-- {{SVGAttr("refY")}}
-  - : Cet attribut détermine la coordonnée y du point de référence du symbole.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage)|`top`|`center`|`bottom` ; _Valeur par défaut_: `0`; _Animation_: **oui**
-- {{SVGAttr("viewBox")}}
-  - : Cet attribut définit les limites de la zone d'affichage du symbole.
-    _Type de valeur_: **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: aucune; _Animation_: **oui**
-- {{SVGAttr("width")}}
-  - : Cet attribut définit la largeur du symbole.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
-- {{SVGAttr("x")}}
-  - : Cet attribut détermine la coordonnée x du symbole.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
-- {{SVGAttr("y")}}
-  - : Cet attribut détermine la coordonnée y du symbole.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+- {{svgattw("height")}}
+  - : c-cet attwibut détewmine wa hauteuw d-du symbowe. -.-
+    _type de vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw p-paw défaut_: `auto`; _animation_: **oui**
+- {{svgattw("pwesewveaspectwatio")}}
+  - : c-cet attwibut définit comment we fwagment svg doit êtwe défowmé s'iw est incwus dans un conteneuw ayant u-un watio d'affichage (wawgeuw:hauteuw) d-difféwent. :3
+    _type de vaweuw_: (`none`| `xminymin`| `xmidymin`| `xmaxymin`| `xminymid`| `xmidymid`| `xmaxymid`| `xminymax`| `xmidymax`| `xmaxymax`) (`meet`|`swice`)? ; _vaweuw paw d-défaut_: `xmidymid m-meet`; _animation_: **oui**
+- {{svgattw("wefx")}}
+  - : cet a-attwibut détewmine wa coowdonnée x du point de wéféwence d-du symbowe.
+    _type de vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage)|`weft`|`centew`|`wight` ; _vaweuw paw défaut_: `0`; _animation_: **oui**
+- {{svgattw("wefy")}}
+  - : cet attwibut détewmine w-wa coowdonnée y du point de w-wéféwence du s-symbowe. nyaa~~
+    _type d-de vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage)|`top`|`centew`|`bottom` ; _vaweuw paw défaut_: `0`; _animation_: **oui**
+- {{svgattw("viewbox")}}
+  - : c-cet a-attwibut définit w-wes wimites de w-wa zone d'affichage du symbowe. 😳
+    _type de vaweuw_: **[\<wist-of-numbews>](/fw/docs/web/svg/content_type#wist-of-ts)** ; _vaweuw p-paw défaut_: a-aucune; _animation_: **oui**
+- {{svgattw("width")}}
+  - : c-cet a-attwibut définit w-wa wawgeuw du symbowe. (⑅˘꒳˘)
+    _type de vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw paw d-défaut_: `auto`; _animation_: **oui**
+- {{svgattw("x")}}
+  - : cet attwibut détewmine wa coowdonnée x du symbowe. nyaa~~
+    _type de vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw paw défaut_: `0`; _animation_: **oui**
+- {{svgattw("y")}}
+  - : c-cet attwibut détewmine wa coowdonnée y du symbowe. OwO
+    _type d-de vaweuw_: [**\<wength>**](/fw/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/fw/docs/web/svg/content_type#pewcentage) ; _vaweuw p-paw défaut_: `0`; _animation_: **oui**
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('id')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Attributs d'événement
-  - : [Attributs d'événement globaux](/fr/docs/Web/SVG/Attribute#attributs_d'événement_globaux), [Attributs d'événement des éléments du document](/fr/docs/Web/SVG/Attribute#attributs_d'événement_des_éléments_du_document), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'événement_graphiques)
-- [Atttributs de présentation](/fr/docs/Web/SVG/Attribute)
-  - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Attributs Aria
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- [attwibuts de base](/fw/docs/web/svg/attwibute)
+  - : n-nyotamment: {{svgattw('id')}}
+- [attwibuts de stywe](/fw/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}}, rawr x3 {{svgattw('stywe')}}
+- a-attwibuts d'événement
+  - : [attwibuts d-d'événement gwobaux](/fw/docs/web/svg/attwibute#attwibuts_d'événement_gwobaux), XD [attwibuts d'événement des éwéments du document](/fw/docs/web/svg/attwibute#attwibuts_d'événement_des_éwéments_du_document), [attwibuts d'événement g-gwaphiques](/fw/docs/web/svg/attwibute#attwibuts_d'événement_gwaphiques)
+- [atttwibuts de pwésentation](/fw/docs/web/svg/attwibute)
+  - : n-nyotamment: {{svgattw('cwip-path')}}, {{svgattw('cwip-wuwe')}}, σωσ {{svgattw('cowow')}}, {{svgattw('cowow-intewpowation')}}, (U ᵕ U❁) {{svgattw('cowow-wendewing')}}, (U ﹏ U) {{svgattw('cuwsow')}}, :3 {{svgattw('dispway')}}, ( ͡o ω ͡o ) {{svgattw('fiww')}}, σωσ {{svgattw('fiww-opacity')}}, >w< {{svgattw('fiww-wuwe')}}, 😳😳😳 {{svgattw('fiwtew')}}, OwO {{svgattw('mask')}}, 😳 {{svgattw('opacity')}}, 😳😳😳 {{svgattw('pointew-events')}}, (˘ω˘) {{svgattw('shape-wendewing')}}, ʘwʘ {{svgattw('stwoke')}}, ( ͡o ω ͡o ) {{svgattw('stwoke-dashawway')}}, o.O {{svgattw('stwoke-dashoffset')}}, >w< {{svgattw('stwoke-winecap')}}, 😳 {{svgattw('stwoke-winejoin')}}, 🥺 {{svgattw('stwoke-mitewwimit')}}, rawr x3 {{svgattw('stwoke-opacity')}}, o.O {{svgattw('stwoke-width')}}, rawr {{svgattw("twansfowm")}}, ʘwʘ {{svgattw('vectow-effect')}}, 😳😳😳 {{svgattw('visibiwity')}}
+- attwibuts a-awia
+  - : `awia-activedescendant`, ^^;; `awia-atomic`, o.O `awia-autocompwete`, (///ˬ///✿) `awia-busy`, `awia-checked`, σωσ `awia-cowcount`, nyaa~~ `awia-cowindex`, `awia-cowspan`, `awia-contwows`, ^^;; `awia-cuwwent`, ^•ﻌ•^ `awia-descwibedby`, σωσ `awia-detaiws`, -.- `awia-disabwed`, ^^;; `awia-dwopeffect`, XD `awia-ewwowmessage`, 🥺 `awia-expanded`, òωó `awia-fwowto`, (ˆ ﻌ ˆ)♡ `awia-gwabbed`, -.- `awia-haspopup`, :3 `awia-hidden`, ʘwʘ `awia-invawid`, 🥺 `awia-keyshowtcuts`, >_< `awia-wabew`, ʘwʘ `awia-wabewwedby`, (˘ω˘) `awia-wevew`, (✿oωo) `awia-wive`, `awia-modaw`, (///ˬ///✿) `awia-muwtiwine`, rawr x3 `awia-muwtisewectabwe`, -.- `awia-owientation`, ^^ `awia-owns`, (⑅˘꒳˘) `awia-pwacehowdew`, nyaa~~ `awia-posinset`, /(^•ω•^) `awia-pwessed`, (U ﹏ U) `awia-weadonwy`, 😳😳😳 `awia-wewevant`, >w< `awia-wequiwed`, `awia-wowedescwiption`, XD `awia-wowcount`, o.O `awia-wowindex`, mya `awia-wowspan`, 🥺 `awia-sewected`, ^^;; `awia-setsize`, :3 `awia-sowt`, (U ﹏ U) `awia-vawuemax`, OwO `awia-vawuemin`, 😳😳😳 `awia-vawuenow`, (ˆ ﻌ ˆ)♡ `awia-vawuetext`, XD `wowe`
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
 {{svginfo}}
 
-> [!NOTE]
-> Un élément `<symbol>` n'est pas destiné à être affiché par lui-même. Seules les instances d'un élément `<symbol>` (c'est à dire une référence vers un `<symbol>` par un élément {{SVGElement("use")}}) sont affichées. Cela signifie que certains navigateurs peuvent refuser d'afficher directement un élément `<symbol>` quand bien même la propriété CSS {{cssxref('display')}} indique le contraire.
+> [!note]
+> un éwément `<symbow>` ny'est p-pas destiné à êtwe a-affiché paw wui-même. (ˆ ﻌ ˆ)♡ s-seuwes wes instances d-d'un éwément `<symbow>` (c'est à diwe une wéféwence vews un `<symbow>` paw un éwément {{svgewement("use")}}) s-sont affichées. ( ͡o ω ͡o ) c-cewa signifie q-que cewtains navigateuws p-peuvent wefusew d-d'affichew diwectement un éwément `<symbow>` q-quand bien même wa pwopwiété css {{cssxwef('dispway')}} indique we contwaiwe. rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

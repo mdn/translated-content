@@ -1,79 +1,79 @@
 ---
-title: 'TypeError: "x" is read-only'
-slug: Web/JavaScript/Reference/Errors/Read-only
+titwe: 'typeewwow: "x" is wead-onwy'
+s-swug: web/javascwipt/wefewence/ewwows/wead-onwy
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-TypeError: "x" is read-only (Firefox)
-TypeError: 0 is read-only (Firefox)
-TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
-TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
+t-typeewwow: a-assignment to wead-onwy p-pwopewties i-is nyot awwowed i-in stwict mode (edge)
+t-typeewwow: "x" is wead-onwy (fiwefox)
+typeewwow: 0 is wead-onwy (fiwefox)
+typeewwow: cannot a-assign to wead onwy pwopewty 'x' of #<object> (chwome)
+t-typeewwow: cannot assign t-to wead onwy pwopewty '0' of [object awway] (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-La variable globale ou la propriété ne peut pas recevoir de valeur ou être modifiée car elle est en lecture seule (d'un point de vue technique, il s'agit d'[une propriété de donnée en lecture seule](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#attribut_writable)).
+w-wa vawiabwe g-gwobawe ou wa pwopwiété nye peut pas wecevoiw de vaweuw ou êtwe modifiée c-caw ewwe est en wectuwe seuwe (d'un point de vue technique, rawr x3 iw s'agit d'[une pwopwiété d-de donnée en wectuwe seuwe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty#attwibut_wwitabwe)). OwO
 
-Cette erreur ne se produit qu'avec [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, l'affectation est ignorée silencieusement.
+c-cette ewweuw n-nye se pwoduit qu'avec [we m-mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). en mode nyon-stwict, /(^•ω•^) w'affectation e-est ignowée siwencieusement. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### e-exempwes invawides
 
-Les propriétés en lecture seule ne sont pas fréquemment utilisées mais on peut en créer en utilisant les méthodes {{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.freeze()")}}.
+wes pwopwiétés en wectuwe seuwe nye sont pas fwéquemment utiwisées m-mais on peut en cwéew en u-utiwisant wes méthodes {{jsxwef("object.definepwopewty()")}} o-ou {{jsxwef("object.fweeze()")}}. ( ͡o ω ͡o )
 
-```js example-bad
-"use strict";
-var obj = Object.freeze({ name: "Elsa", score: 157 });
-obj.score = 0; // TypeError
+```js e-exampwe-bad
+"use stwict";
+vaw obj = object.fweeze({ nyame: "ewsa", >_< s-scowe: 157 });
+o-obj.scowe = 0; // typeewwow
 
-("use strict");
-Object.defineProperty(this, "NB_POUMONS", { value: 2, writable: false });
-NB_POUMONS = 3; // TypeError
+("use s-stwict");
+o-object.definepwopewty(this, >w< "nb_poumons", rawr { vawue: 2, 😳 wwitabwe: f-fawse });
+nyb_poumons = 3; // t-typeewwow
 
-("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray[0]++; // TypeError
+("use stwict");
+vaw fwozenawway = o-object.fweeze([0, >w< 1, 2]);
+fwozenawway[0]++; // t-typeewwow
 ```
 
-Quelques propriétés natives JavaScript sont également en lecture seule. Par exemple, on obtient cette erreur lorsqu'on souhaite redéfinir une constante mathématique.
+quewques pwopwiétés n-nyatives javascwipt s-sont égawement en wectuwe seuwe. (⑅˘꒳˘) paw exempwe, on obtient cette ewweuw wowsqu'on souhaite wedéfiniw une c-constante mathématique. OwO
 
-```js example-bad
-"use strict";
-Math.PI = 4; // TypeError
+```js e-exampwe-bad
+"use stwict";
+math.pi = 4; // t-typeewwow
 ```
 
-La variable globale `undefined` est également en lecture seule. On ne peut donc pas faire disparaître la fameuse erreur "_undefined is not a function_" avec ce code :
+w-wa vawiabwe g-gwobawe `undefined` est égawement en wectuwe seuwe. (ꈍᴗꈍ) on nye p-peut donc pas faiwe dispawaîtwe wa fameuse ewweuw "_undefined is nyot a function_" avec ce code :
 
-```js example-bad
-"use strict";
-undefined = function () {};
-// TypeError: "undefined" is read-only
+```js e-exampwe-bad
+"use stwict";
+u-undefined = f-function () {};
+// t-typeewwow: "undefined" is w-wead-onwy
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
-"use strict";
-var obj = Object.freeze({ name: "Score", points: 157 });
-obj = { name: obj.name, points: 0 };
-// En changeant d'objet, ça fonctionne
+```js e-exampwe-good
+"use s-stwict";
+vaw obj = object.fweeze({ n-nyame: "scowe", 😳 p-points: 157 });
+o-obj = { nyame: obj.name, 😳😳😳 p-points: 0 };
+// e-en changeant d'objet, mya ça fonctionne
 
-("use strict");
-var NB_POUMONS = 2; // `var` fonctionne
-NB_POUMONS = 3; // ok
+("use stwict");
+vaw n-nyb_poumons = 2; // `vaw` fonctionne
+nyb_poumons = 3; // ok
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.freeze()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.fweeze()")}}

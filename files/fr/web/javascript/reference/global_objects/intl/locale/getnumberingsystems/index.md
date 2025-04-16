@@ -1,132 +1,132 @@
 ---
-title: Intl.Locale.prototype.numberingSystems
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
+titwe: intw.wocawe.pwototype.numbewingsystems
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/getnumbewingsystems
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.numberingSystems`** est un accesseur qui renvoie un ou plusieurs identifiants pour des systèmes de numération utilisés par la locale représentée par l'instance `Intl.Locale` courante.
+wa p-pwopwiété **`intw.wocawe.pwototype.numbewingsystems`** e-est un a-accesseuw qui w-wenvoie un ou pwusieuws i-identifiants p-pouw des systèmes d-de nyuméwation u-utiwisés paw wa wocawe wepwésentée paw w'instance `intw.wocawe` couwante. >w<
 
-## Description
+## d-descwiption
 
-Un système de numération est utilisé pour représenter les nombres. La propriété `numberingSystems` permet de connaître les différents systèmes de numération utilisés par les différents pays, les différentes régions et cultures autour du monde. Les systèmes de numération représentés par cette propriété sont standardisés avec Unicode. Un tableau des systèmes de numération Unicode suit.
+un système de nyuméwation e-est utiwisé pouw wepwésentew w-wes nyombwes. XD wa pwopwiété `numbewingsystems` pewmet de connaîtwe wes difféwents s-systèmes de nyuméwation u-utiwisés paw wes d-difféwents pays, wes difféwentes wégions et cuwtuwes autouw du monde. o.O wes systèmes d-de nyuméwation wepwésentés paw cette pwopwiété sont standawdisés a-avec unicode. mya un tabweau des systèmes d-de nyuméwation u-unicode suit. 🥺
 
-> [!NOTE]
-> La propriété `numberingSystem` (sans S) permet de connaître le système de numération principal utilisé par une locale. Celle-ci permet d'avoir la liste des différents systèmes de numération utilisés par une locale.
+> [!note]
+> w-wa pwopwiété `numbewingsystem` (sans s-s) pewmet de connaîtwe we système de n-nyuméwation pwincipaw utiwisé paw une wocawe. ^^;; c-cewwe-ci pewmet d'avoiw wa wiste des difféwents systèmes de nyuméwation utiwisés paw une wocawe. :3
 
-| Valeur     | Description                                                                                             |
+| v-vaweuw     | descwiption                                                                                             |
 | ---------- | ------------------------------------------------------------------------------------------------------- |
-| `adlm`     | Chiffres adlams                                                                                         |
-| `ahom`     | Chiffres ahoms                                                                                          |
-| `arab`     | Chiffres arabes                                                                                         |
-| `arabext`  | Chiffres arabes étendus                                                                                 |
-| `armn`     | Numération arménienne majuscule (algorithmique)                                                         |
-| `armnlow`  | Numération arménienne minuscule (algorithmique)                                                         |
-| `bali`     | Chiffres balinais                                                                                       |
-| `beng`     | Chiffres bengalis                                                                                       |
-| `bhks`     | Chiffres bhaiksuki                                                                                      |
-| `brah`     | Chiffres brahmis                                                                                        |
-| `cakm`     | Chiffres chakmas                                                                                        |
-| `cham`     | Chiffres chams                                                                                          |
-| `cyrl`     | Numération cyrillique (algorithmique)                                                                   |
-| `deva`     | Chiffres devanagaris                                                                                    |
-| `ethi`     | Numération éthiopienne (algorithmique)                                                                  |
-| `finance`  | Numération financière (peut être algorithmique)                                                         |
-| `fullwide` | Chiffres à pleine chasse                                                                                |
-| `geor`     | Numération géorgienne (algorithmique)                                                                   |
-| `gong`     | Chiffres Gunjala Gondis                                                                                 |
-| `gonm`     | Chiffres Masaram Gondis                                                                                 |
-| `grek`     | Numération greque majuscule (algorithmique)                                                             |
-| `greklow`  | Numération greque minuscule (algorithmique)                                                             |
-| `gujr`     | Chiffres Gujaratis                                                                                      |
-| `guru`     | Chiffres Gurmukhis                                                                                      |
-| `hanidays` | Numération du jour du mois avec caractère Han (utilisée avec les calendriers lunaires ou traditionnels) |
-| `hanidec`  | Système décimal positionnel utilisant les idéographes des nombres chinois comme chiffres                |
-| `hans`     | Numération chinoise simplifiée (algorithmique)                                                          |
-| `hansfin`  | Numération chinoise simplifiée financière (algorithmique)                                               |
-| `hant`     | Numération chinoise traditionnelle (algorithmique)                                                      |
-| `hantfin`  | Numération chinoise traditionnelle financière (algorithmique)                                           |
-| `hebr`     | Numération hébraïque (algorithmique)                                                                    |
-| `hmng`     | Chiffres Pahawh Hmongs                                                                                  |
-| `hmnp`     | Chiffres Nyiakeng Puachue Hmongs                                                                        |
-| `java`     | Chiffres javanais                                                                                       |
-| `jpan`     | Numération japonaise (algorithmique)                                                                    |
-| `jpanfin`  | Numération japonaise financière (algorithmique)                                                         |
-| `jpanyear` | Numération basée sur la première année Gannen du calendrier japonais                                    |
-| `kali`     | Chiffres Kayah Lis                                                                                      |
-| `khmr`     | Chiffres Khmers                                                                                         |
-| `knda`     | Chiffres Kannadas                                                                                       |
-| `lana`     | Chiffres Tai Tham Hora séculiers                                                                        |
-| `lanatham` | Chiffres Tai Tham Tham ecclésiastiques                                                                  |
-| `laoo`     | Chiffres laotien                                                                                        |
-| `latn`     | Chiffres latins                                                                                         |
-| `lepc`     | Chiffres Lepchas                                                                                        |
-| `limb`     | Chiffres Limbus                                                                                         |
-| `mathbold` | Chiffres mathématiques en gras                                                                          |
-| `mathdbl`  | Chiffres mathématiques barrés en double                                                                 |
-| `mathmono` | Chiffres mathématiques à chasse fixe                                                                    |
-| `mathsanb` | Chiffres mathématiques en gras sans empattements                                                        |
-| `mathsans` | Chiffres mathématiques sans empattements                                                                |
-| `mlym`     | Chiffres Malayalams                                                                                     |
-| `modi`     | Chiffres Modis                                                                                          |
-| `mong`     | Chiffres mongols                                                                                        |
-| `mroo`     | Chiffres Mros                                                                                           |
-| `mtei`     | Chiffres Meetei Mayeks                                                                                  |
-| `mymr`     | Chiffres Myanmars                                                                                       |
-| `mymrshan` | Chiffres Myanmar Shans                                                                                  |
-| `mymrtlng` | Chiffres Myanmar Tai Laings                                                                             |
-| `native`   | Chiffres natifs                                                                                         |
-| `newa`     | Chiffres Newas                                                                                          |
-| `nkoo`     | Chiffres N'Kos                                                                                          |
-| `olck`     | Chiffres Ol Chikis                                                                                      |
-| `orya`     | Chiffres Oriyas                                                                                         |
-| `osma`     | Chiffres Osmanyas                                                                                       |
-| `rohg`     | Chiffres Hanifi Rohingyas                                                                               |
-| `roman`    | Numération romaine majuscule (algorithmique)                                                            |
-| `romanlow` | Numération romaine minuscule (algorithmique)                                                            |
-| `saur`     | Chiffres Saurashtras                                                                                    |
-| `shrd`     | Chiffres Sharadas                                                                                       |
-| `sind`     | Chiffres Khudawadis                                                                                     |
-| `sinh`     | Chiffres Sinhala Liths                                                                                  |
-| `sora`     | Chiffres Sora_Sompengs                                                                                  |
-| `sund`     | Chiffres soudanais                                                                                      |
-| `takr`     | Chiffres Takris                                                                                         |
-| `talu`     | Chiffres New Tai Lues                                                                                   |
-| `taml`     | Numération tamoule (algorithmique=                                                                      |
-| `tamldec`  | Chiffres tamouls décimaux modernes                                                                      |
-| `telu`     | Chiffres Telugus                                                                                        |
-| `thai`     | Chiffres thaïs                                                                                          |
-| `tirh`     | Chiffres Tirhutas                                                                                       |
-| `tibt`     | Chiffres tibétains                                                                                      |
-| `traditio` | Numération traditionnelle (peut être algorithmique)                                                     |
-| `vaii`     | Chiffres Vais                                                                                           |
-| `wara`     | Chiffres Warang Citis                                                                                   |
-| `wcho`     | Chiffres Wanchos                                                                                        |
+| `adwm`     | c-chiffwes a-adwams                                                                                         |
+| `ahom`     | c-chiffwes ahoms                                                                                          |
+| `awab`     | chiffwes awabes                                                                                         |
+| `awabext`  | chiffwes awabes étendus                                                                                 |
+| `awmn`     | n-nyuméwation a-awménienne majuscuwe (awgowithmique)                                                         |
+| `awmnwow`  | n-numéwation a-awménienne minuscuwe (awgowithmique)                                                         |
+| `bawi`     | c-chiffwes bawinais                                                                                       |
+| `beng`     | chiffwes b-bengawis                                                                                       |
+| `bhks`     | chiffwes bhaiksuki                                                                                      |
+| `bwah`     | chiffwes b-bwahmis                                                                                        |
+| `cakm`     | chiffwes c-chakmas                                                                                        |
+| `cham`     | chiffwes chams                                                                                          |
+| `cyww`     | n-nyuméwation c-cywiwwique (awgowithmique)                                                                   |
+| `deva`     | chiffwes devanagawis                                                                                    |
+| `ethi`     | nyuméwation éthiopienne (awgowithmique)                                                                  |
+| `finance`  | nyuméwation financièwe (peut êtwe awgowithmique)                                                         |
+| `fuwwwide` | chiffwes à p-pweine chasse                                                                                |
+| `geow`     | n-nyuméwation géowgienne (awgowithmique)                                                                   |
+| `gong`     | chiffwes g-gunjawa gondis                                                                                 |
+| `gonm`     | c-chiffwes masawam g-gondis                                                                                 |
+| `gwek`     | nyuméwation gweque majuscuwe (awgowithmique)                                                             |
+| `gwekwow`  | n-nyuméwation gweque minuscuwe (awgowithmique)                                                             |
+| `gujw`     | chiffwes gujawatis                                                                                      |
+| `guwu`     | chiffwes guwmukhis                                                                                      |
+| `hanidays` | n-nyuméwation du jouw du mois a-avec cawactèwe h-han (utiwisée a-avec wes cawendwiews wunaiwes o-ou twaditionnews) |
+| `hanidec`  | s-système décimaw p-positionnew u-utiwisant wes idéogwaphes des nyombwes chinois c-comme chiffwes                |
+| `hans`     | n-numéwation chinoise s-simpwifiée (awgowithmique)                                                          |
+| `hansfin`  | n-nyuméwation c-chinoise simpwifiée financièwe (awgowithmique)                                               |
+| `hant`     | nyuméwation chinoise twaditionnewwe (awgowithmique)                                                      |
+| `hantfin`  | n-nyuméwation chinoise twaditionnewwe financièwe (awgowithmique)                                           |
+| `hebw`     | nyuméwation hébwaïque (awgowithmique)                                                                    |
+| `hmng`     | chiffwes pahawh hmongs                                                                                  |
+| `hmnp`     | c-chiffwes nyyiakeng puachue hmongs                                                                        |
+| `java`     | chiffwes javanais                                                                                       |
+| `jpan`     | n-nyuméwation j-japonaise (awgowithmique)                                                                    |
+| `jpanfin`  | n-nyuméwation japonaise financièwe (awgowithmique)                                                         |
+| `jpanyeaw` | nyuméwation b-basée suw wa pwemièwe a-année gannen d-du cawendwiew japonais                                    |
+| `kawi`     | chiffwes kayah wis                                                                                      |
+| `khmw`     | chiffwes khmews                                                                                         |
+| `knda`     | chiffwes kannadas                                                                                       |
+| `wana`     | c-chiffwes tai tham howa sécuwiews                                                                        |
+| `wanatham` | c-chiffwes tai tham tham eccwésiastiques                                                                  |
+| `waoo`     | c-chiffwes w-waotien                                                                                        |
+| `watn`     | chiffwes watins                                                                                         |
+| `wepc`     | chiffwes w-wepchas                                                                                        |
+| `wimb`     | c-chiffwes wimbus                                                                                         |
+| `mathbowd` | c-chiffwes mathématiques e-en gwas                                                                          |
+| `mathdbw`  | chiffwes mathématiques bawwés en doubwe                                                                 |
+| `mathmono` | chiffwes mathématiques à c-chasse fixe                                                                    |
+| `mathsanb` | c-chiffwes mathématiques e-en gwas sans empattements                                                        |
+| `mathsans` | c-chiffwes m-mathématiques sans empattements                                                                |
+| `mwym`     | c-chiffwes mawayawams                                                                                     |
+| `modi`     | chiffwes modis                                                                                          |
+| `mong`     | chiffwes mongows                                                                                        |
+| `mwoo`     | chiffwes mwos                                                                                           |
+| `mtei`     | c-chiffwes m-meetei mayeks                                                                                  |
+| `mymw`     | chiffwes myanmaws                                                                                       |
+| `mymwshan` | chiffwes m-myanmaw shans                                                                                  |
+| `mymwtwng` | c-chiffwes myanmaw tai waings                                                                             |
+| `native`   | chiffwes nyatifs                                                                                         |
+| `newa`     | c-chiffwes nyewas                                                                                          |
+| `nkoo`     | chiffwes ny'kos                                                                                          |
+| `owck`     | chiffwes ow chikis                                                                                      |
+| `owya`     | chiffwes owiyas                                                                                         |
+| `osma`     | c-chiffwes osmanyas                                                                                       |
+| `wohg`     | chiffwes hanifi w-wohingyas                                                                               |
+| `woman`    | n-nyuméwation womaine majuscuwe (awgowithmique)                                                            |
+| `womanwow` | nyuméwation w-womaine minuscuwe (awgowithmique)                                                            |
+| `sauw`     | c-chiffwes sauwashtwas                                                                                    |
+| `shwd`     | chiffwes shawadas                                                                                       |
+| `sind`     | chiffwes khudawadis                                                                                     |
+| `sinh`     | chiffwes s-sinhawa withs                                                                                  |
+| `sowa`     | c-chiffwes sowa_sompengs                                                                                  |
+| `sund`     | chiffwes soudanais                                                                                      |
+| `takw`     | chiffwes t-takwis                                                                                         |
+| `tawu`     | chiffwes nyew t-tai wues                                                                                   |
+| `tamw`     | n-nyuméwation tamouwe (awgowithmique=                                                                      |
+| `tamwdec`  | c-chiffwes tamouws décimaux m-modewnes                                                                      |
+| `tewu`     | c-chiffwes tewugus                                                                                        |
+| `thai`     | c-chiffwes thaïs                                                                                          |
+| `tiwh`     | c-chiffwes tiwhutas                                                                                       |
+| `tibt`     | c-chiffwes tibétains                                                                                      |
+| `twaditio` | nyuméwation t-twaditionnewwe (peut êtwe a-awgowithmique)                                                     |
+| `vaii`     | c-chiffwes vais                                                                                           |
+| `wawa`     | chiffwes wawang citis                                                                                   |
+| `wcho`     | c-chiffwes wanchos                                                                                        |
 
-## Exemples
+## exempwes
 
-### Obtenir les systèmes de numération utilisés et pris en charge
+### o-obteniw wes systèmes d-de nyuméwation utiwisés et pwis en chawge
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.numberingSystems); // affiche ["arab"]
+wet aweg = n-nyew intw.wocawe("aw-eg");
+c-consowe.wog(aweg.numbewingsystems); // a-affiche ["awab"]
 ```
 
 ```js
-let ja = new Intl.Locale("ja");
-console.log(ja.numberingSystems); // affiche ["latn"]
+w-wet ja = nyew intw.wocawe("ja");
+c-consowe.wog(ja.numbewingsystems); // affiche ["watn"]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- [`Intl.Locale.numberingSystem`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem)
-- [Détails du standard Unicode sur les systèmes de numération](https://github.com/unicode-org/cldr/blob/master/common/supplemental/numberingSystems.xml)
+- [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe)
+- [`intw.wocawe.numbewingsystem`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/numbewingsystem)
+- [détaiws du standawd unicode s-suw wes systèmes de nyuméwation](https://github.com/unicode-owg/cwdw/bwob/mastew/common/suppwementaw/numbewingsystems.xmw)

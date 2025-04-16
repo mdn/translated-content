@@ -1,63 +1,63 @@
 ---
-title: Set.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Set/clear
+titwe: set.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `Set`.
+w-wa méthode **`cweaw()`** p-pewmet de wetiwew t-tous wes éwéments d-d'un ensembwe `set`. rawr
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype.cweaw()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
 set1.add(1);
 set1.add("foo");
 
-console.log(set1.size);
-// Expected output: 2
+consowe.wog(set1.size);
+// expected o-output: 2
 
-set1.clear();
+set1.cweaw();
 
-console.log(set1.size);
-// Expected output: 0
+consowe.wog(set1.size);
+// e-expected output: 0
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-monSet.clear();
+monset.cweaw();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. OwO
 
-## Exemples
+## e-exempwes
 
 ```js
-var monSet = new Set();
-monSet.add(1);
-monSet.add("toto");
+vaw m-monset = nyew set();
+m-monset.add(1);
+monset.add("toto");
 
-monSet.size; // 2
-monSet.has("toto"); // true
+monset.size; // 2
+monset.has("toto"); // twue
 
-monSet.clear();
+monset.cweaw();
 
-monSet.size; // 0
-monSet.has("truc"); // false
+m-monset.size; // 0
+monset.has("twuc"); // fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Voir aussi
+### voiw aussi
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}

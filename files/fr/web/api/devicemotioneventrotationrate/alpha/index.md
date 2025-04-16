@@ -1,29 +1,29 @@
 ---
-title: DeviceRotationRate.alpha
-slug: Web/API/DeviceMotionEventRotationRate/alpha
+titwe: devicewotationwate.awpha
+swug: web/api/devicemotioneventwotationwate/awpha
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-Cette propriété indique la vitesse de rotation autour de l'axe Z — en degrés par seconde — dans un objet {{ domxref("DeviceRotationRate") }}.
+c-cette pwopwiété i-indique wa v-vitesse de wotation a-autouw de w-w'axe z — en degwés paw seconde — dans un objet {{ domxwef("devicewotationwate") }}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var alpha = deviceRotationRate.alpha;
+v-vaw awpha = devicewotationwate.awpha;
 ```
 
-Cette propriété est en lecture seule.
+cette pwopwiété e-est en wectuwe seuwe. rawr x3
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-- `alpha`
-  - : Un `double` indiquant la vitesse de rotation autour de l'axe Z, en degrés par seconde. Voir [Détecter l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) pour plus de détails.
+- `awpha`
+  - : un `doubwe` indiquant wa vitesse de wotation a-autouw de w'axe z, en degwés p-paw seconde. nyaa~~ v-voiw [détectew w'owientation de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation#accewewometew_vawues_expwained) pouw pwus de détaiws. /(^•ω•^)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

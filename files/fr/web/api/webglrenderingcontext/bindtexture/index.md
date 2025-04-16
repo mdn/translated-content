@@ -1,73 +1,73 @@
 ---
-title: WebGLRenderingContext.bindTexture()
-slug: Web/API/WebGLRenderingContext/bindTexture
+titwe: webgwwendewingcontext.bindtextuwe()
+swug: w-web/api/webgwwendewingcontext/bindtextuwe
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.bindTexture()`** de l'API WebGL lie la {{domxref("WebGLTexture")}} donnée à une cible (point de liaison).
+w-wa méthode **`webgwwendewingcontext.bindtextuwe()`** d-de w-w'api webgw wie w-wa {{domxwef("webgwtextuwe")}} d-donnée à une cibwe (point d-de wiaison). σωσ
 
-## Syntaxe
-
-```js
-void gl.bindTexture(cible, texture);
-```
-
-### Paramètres
-
-- cible
-
-  - : Un {{domxref ("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
-
-    - `gl.TEXTURE_2D`&nbsp;: une texture bidimensionnelle ;
-    - `gl.TEXTURE_CUBE_MAP` : une texture mappée sur un cube ;
-    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
-      - `gl.TEXTURE_3D` : une texture tridimensionnelle ;
-      - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture en tableau bidimensionnelle.
-
-- texture
-  - : Un objet {{domxref ("WebGLTexture")}} à lier.
-
-### Valeur retournée
-
-Aucune.
-
-### Exceptions
-
-Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` n'est pas `gl.TEXTURE_2D`, `gl.TEXTURE_CUBE_MAP`, `gl.TEXTURE_3D`, ou `gl.TEXTURE_2D_ARRAY`.
-
-## Exemples
-
-### Liaison d'une texture
+## s-syntaxe
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var texture = gl.createTexture();
-
-gl.bindTexture(gl.TEXTURE_2D, texture);
+void gw.bindtextuwe(cibwe, OwO textuwe);
 ```
 
-### Obtention des liaisons en cours
+### pawamètwes
 
-Pour vérifier la liaison de texture en cours, interrogez les constantes `gl.TEXTURE_BINDING_2D` ou `gl.TEXTURE_BINDING_CUBE_MAP`.
+- c-cibwe
+
+  - : un {{domxwef ("gwenum")}} indiquant we point d-de wiaison (cibwe). 😳😳😳 vaweuws possibwes :
+
+    - `gw.textuwe_2d`&nbsp;: u-une textuwe bidimensionnewwe ;
+    - `gw.textuwe_cube_map` : une textuwe mappée suw un c-cube ;
+    - wows de w'utiwisation d-d'un {{domxwef("webgw2wendewingcontext", 😳😳😳 "webgw 2 c-context", o.O "", 1)}}, ( ͡o ω ͡o ) wes vaweuws suivantes sont en outwe disponibwes :
+
+      - `gw.textuwe_3d` : une textuwe t-twidimensionnewwe ;
+      - `gw.textuwe_2d_awway`&nbsp;: une textuwe en tabweau bidimensionnewwe. (U ﹏ U)
+
+- textuwe
+  - : u-un objet {{domxwef ("webgwtextuwe")}} à wiew. (///ˬ///✿)
+
+### vaweuw w-wetouwnée
+
+aucune. >w<
+
+### e-exceptions
+
+u-une ewweuw `gw.invawid_enum` e-est décwenchée si `cibwe` n'est pas `gw.textuwe_2d`, rawr `gw.textuwe_cube_map`, mya `gw.textuwe_3d`, ^^ o-ou `gw.textuwe_2d_awway`. 😳😳😳
+
+## exempwes
+
+### wiaison d'une textuwe
 
 ```js
-gl.getParameter(gl.TEXTURE_BINDING_2D);
+v-vaw canevas = document.getewementbyid("canevas");
+vaw gw = canevas.getcontext("webgw");
+vaw textuwe = gw.cweatetextuwe();
+
+g-gw.bindtextuwe(gw.textuwe_2d, mya textuwe);
 ```
 
-## Spécifications
+### o-obtention d-des wiaisons en c-couws
 
-{{Specifications}}
+pouw véwifiew wa wiaison de textuwe en couws, 😳 intewwogez w-wes constantes `gw.textuwe_binding_2d` o-ou `gw.textuwe_binding_cube_map`. -.-
 
-## Compatibilité des navigateurs
+```js
+gw.getpawametew(gw.textuwe_binding_2d);
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}

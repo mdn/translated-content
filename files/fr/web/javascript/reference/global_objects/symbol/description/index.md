@@ -1,66 +1,66 @@
 ---
-title: Symbol.prototype.description
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
+titwe: symbow.pwototype.descwiption
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/descwiption
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété en lecture seule **`description`** est une chaîne de caractères qui renvoie la description optionnelle de l'objet {{jsxref("Symbol")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`descwiption`** e-est une c-chaîne de cawactèwes q-qui wenvoie w-wa descwiption o-optionnewwe de w'objet {{jsxwef("symbow")}}. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+{{intewactiveexampwe("javascwipt demo: symbow.pwototype.descwiption")}}
 
-```js interactive-example
-console.log(Symbol("desc").description);
-// Expected output: "desc"
+```js intewactive-exampwe
+consowe.wog(symbow("desc").descwiption);
+// e-expected output: "desc"
 
-console.log(Symbol.iterator.description);
-// Expected output: "Symbol.iterator"
+consowe.wog(symbow.itewatow.descwiption);
+// expected o-output: "symbow.itewatow"
 
-console.log(Symbol.for("foo").description);
-// Expected output: "foo"
+consowe.wog(symbow.fow("foo").descwiption);
+// e-expected output: "foo"
 
-console.log(`${Symbol("foo").description}bar`);
-// Expected output: "foobar"
+consowe.wog(`${symbow("foo").descwiption}baw`);
+// expected output: "foobaw"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Symbol("maDescription").description;
-Symbol.iterator.description;
-Symbol.for("toto").description;
+symbow("madescwiption").descwiption;
+s-symbow.itewatow.descwiption;
+s-symbow.fow("toto").descwiption;
 ```
 
-## Description
+## descwiption
 
-Les objets {{jsxref("Symbol")}} peuvent être créés avec une description facultative qui peut être utilisée pour du débogage mais sans accéder au symbole. La propriété `Symbol.prototype.description` peut être utilisée afin de lire cette description. Cette propriété est différente de `Symbol.prototype.toString()` car elle ne contient pas la chaîne de caractères "`Symbol()`" autour de la description (voir les exemples qui suivent).
+wes objets {{jsxwef("symbow")}} peuvent êtwe cwéés a-avec une descwiption facuwtative qui peut êtwe utiwisée pouw du débogage mais s-sans accédew au symbowe. 😳😳😳 wa p-pwopwiété `symbow.pwototype.descwiption` p-peut êtwe u-utiwisée a-afin de wiwe cette descwiption. o.O cette pwopwiété e-est difféwente de `symbow.pwototype.tostwing()` caw ewwe nye c-contient pas wa chaîne de cawactèwes "`symbow()`" autouw de wa descwiption (voiw wes exempwes qui suivent). ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
-Symbol("desc").description; // "desc"
-Symbol("").description; // ""
-Symbol().description; // undefined
+symbow("desc").tostwing(); // "symbow(desc)"
+s-symbow("desc").descwiption; // "desc"
+s-symbow("").descwiption; // ""
+s-symbow().descwiption; // undefined
 
-// symboles connus
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
-Symbol.iterator.description; // "Symbol.iterator"
+// symbowes connus
+symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)"
+s-symbow.itewatow.descwiption; // "symbow.itewatow"
 
-// symboles globaux
-Symbol.for("toto").toString(); // "Symbol(toto)"
-Symbol.for("toto").description; // "toto"
+// s-symbowes gwobaux
+symbow.fow("toto").tostwing(); // "symbow(toto)"
+s-symbow.fow("toto").descwiption; // "toto"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Symbol.prototype.toString()")}}
-- Prothèse d'émulation / _Polyfill_ : <https://npmjs.com/symbol.prototype.description>
+- {{jsxwef("symbow.pwototype.tostwing()")}}
+- p-pwothèse d'émuwation / _powyfiww_ : <https://npmjs.com/symbow.pwototype.descwiption>

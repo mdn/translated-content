@@ -1,62 +1,62 @@
 ---
-title: 'ReferenceError: assignment to undeclared variable "x"'
-slug: Web/JavaScript/Reference/Errors/Undeclared_var
+titwe: 'wefewenceewwow: assignment t-to undecwawed v-vawiabwe "x"'
+s-swug: web/javascwipt/wefewence/ewwows/undecwawed_vaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-ReferenceError: assignment to undeclared variable "x" (Firefox)
-ReferenceError: "x" is not defined (Chrome)
-ReferenceError: Variable undefined in strict mode (Edge)
+w-wefewenceewwow: a-assignment t-to undecwawed vawiabwe "x" (fiwefox)
+w-wefewenceewwow: "x" is nyot defined (chwome)
+wefewenceewwow: vawiabwe undefined i-in stwict mode (edge)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-Une erreur {{jsxref("ReferenceError")}}, uniquement [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+une ewweuw {{jsxwef("wefewenceewwow")}}, >_< u-uniquement [en mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). >w<
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Une valeur a été affectée à une variable non-déclarée. Autrement dit, il y a eu une affectation qui n'utilise pas le mot-clé [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var). Il existe certaines différences entre les variables déclarées et les variables non déclarées ce qui peut entraîner des résultats étranges. C'est pour cette raison que le moteur affiche une erreur en mode strict.
+une vaweuw a été affectée à u-une vawiabwe nyon-décwawée. rawr a-autwement dit, 😳 i-iw y a eu une affectation qui ny'utiwise pas we mot-cwé [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw). >w< iw existe cewtaines d-difféwences entwe wes vawiabwes décwawées et wes vawiabwes nyon décwawées c-ce qui peut entwaînew des w-wésuwtats étwanges. (⑅˘꒳˘) c-c'est pouw c-cette waison q-que we moteuw affiche une ewweuw en mode stwict. OwO
 
-Trois choses à noter lorsqu'on évoque les variables déclarées/non déclarées :
+t-twois choses à notew wowsqu'on évoque wes vawiabwes d-décwawées/non décwawées :
 
-- Les variables déclarées sont contraintes dans le contexte d'exécution dans lequel elles sont déclarées. Les variables non déclarées sont toujours globales.
-- Les variables déclarées sont créées avant que le code soit exécuté. Les variables non déclarées n'existent pas tant que le code qui leur est affecté est exécuté.
-- Les variables déclarées sont des propriétés non-configurables de leur contexte d'exécution (la fonction ou l'espace global). Les variables non-déclarées sont configurables (elles peuvent être supprimées).
+- wes vawiabwes décwawées sont contwaintes dans we contexte d-d'exécution dans wequew ewwes s-sont décwawées. (ꈍᴗꈍ) w-wes vawiabwes n-nyon décwawées sont toujouws gwobawes. 😳
+- wes vawiabwes décwawées s-sont cwéées a-avant que we code soit exécuté. 😳😳😳 w-wes vawiabwes n-nyon décwawées ny'existent p-pas tant que we code qui weuw e-est affecté est exécuté. mya
+- wes vawiabwes décwawées s-sont des pwopwiétés n-nyon-configuwabwes de weuw contexte d-d'exécution (wa f-fonction ou w'espace gwobaw). mya wes vawiabwes nyon-décwawées sont configuwabwes (ewwes peuvent êtwe suppwimées). (⑅˘꒳˘)
 
-Pour plus de détails et d'exemple, se référer à la page sur [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var).
+p-pouw pwus d-de détaiws et d'exempwe, (U ﹏ U) se w-wéféwew à wa p-page suw [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw). mya
 
-Les erreurs à propos des affectations sur les variables non déclarées se produisent uniquement [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, elles sont ignorées silencieusement.
+w-wes ewweuws à pwopos des affectations suw wes vawiabwes nyon d-décwawées se pwoduisent uniquement [en mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). ʘwʘ en mode n-nyon-stwict, (˘ω˘) ewwes sont ignowées s-siwencieusement. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Exemples invalides
+### e-exempwes invawides
 
-Ici, la variable `truc` n'est pas déclarée :
+ici, ^•ﻌ•^ w-wa vawiabwe `twuc` n-ny'est pas décwawée :
 
-```js example-bad
-function toto() {
-  "use strict";
-  truc = true;
+```js e-exampwe-bad
+function t-toto() {
+  "use stwict";
+  twuc = twue;
 }
-toto(); // ReferenceError: assignment to undeclared variable truc
+t-toto(); // wefewenceewwow: a-assignment t-to undecwawed v-vawiabwe twuc
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-Afin de déclarer `truc`, on peut ajouter le mot-clé [`var`](/fr/docs/Web/JavaScript/Reference/Statements/var) devant.
+afin de décwawew `twuc`, (˘ω˘) on peut a-ajoutew we mot-cwé [`vaw`](/fw/docs/web/javascwipt/wefewence/statements/vaw) devant. :3
 
-```js example-good
+```js exampwe-good
 function toto() {
-  "use strict";
-  var truc = true;
+  "use stwict";
+  vaw t-twuc = twue;
 }
 toto();
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
+- [we mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode)

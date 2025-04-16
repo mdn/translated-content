@@ -1,128 +1,128 @@
 ---
-title: handler.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
+titwe: handwew.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/constwuct
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Afin que l'opération `new` puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne `[[Construct]]` (autrement dit, l'instruction `new cible` doit être valide).
+w-wa méthode **`handwew.constwuct()`** e-est une t-twappe pouw w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", (⑅˘꒳˘) "new")}}. OwO a-afin q-que w'opéwation `new` p-puisse êtwe v-vawide suw we pwoxy cowwespondant, (ꈍᴗꈍ) wa cibwe utiwisée doit avoiw une méthode i-intewne `[[constwuct]]` (autwement dit, 😳 w'instwuction `new cibwe` d-doit êtwe vawide). 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.constwuct()", mya "tawwew")}}
 
-```js interactive-example
-function monster1(disposition) {
-  this.disposition = disposition;
+```js intewactive-exampwe
+function m-monstew1(disposition) {
+  this.disposition = d-disposition;
 }
 
-const handler1 = {
-  construct(target, args) {
-    console.log(`Creating a ${target.name}`);
-    // Expected output: "Creating a monster1"
+c-const handwew1 = {
+  constwuct(tawget, mya awgs) {
+    consowe.wog(`cweating a ${tawget.name}`);
+    // e-expected output: "cweating a monstew1"
 
-    return new target(...args);
-  },
+    wetuwn nyew tawget(...awgs);
+  }, (⑅˘꒳˘)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+c-const pwoxy1 = nyew pwoxy(monstew1, (U ﹏ U) h-handwew1);
 
-console.log(new proxy1("fierce").disposition);
-// Expected output: "fierce"
+c-consowe.wog(new p-pwoxy1("fiewce").disposition);
+// e-expected output: "fiewce"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  construct: function (cible, listeArguments, newTarget) {},
+v-vaw p = nyew pwoxy(cibwe, mya {
+  constwuct: f-function (cibwe, ʘwʘ wisteawguments, (˘ω˘) nyewtawget) {}, (U ﹏ U)
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Les paramètres suivants sont passés à la méthode `construct`. `this` est ici lié au gestionnaire (_handler_).
+wes pawamètwes suivants sont passés à w-wa méthode `constwuct`. ^•ﻌ•^ `this` est ici w-wié au gestionnaiwe (_handwew_). (˘ω˘)
 
-- `cible`
-  - : L'objet cible.
-- `listeArguments`
-  - : La liste des arguments passés au constructeur.
-- `newTarget`
-  - : Le constructeur originellement appelé.
+- `cibwe`
+  - : w-w'objet cibwe. :3
+- `wisteawguments`
+  - : w-wa wiste des awguments passés au constwucteuw. ^^;;
+- `newtawget`
+  - : we constwucteuw o-owiginewwement a-appewé. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La méthode `construct` doit renvoyer un objet.
+w-wa méthode `constwuct` d-doit wenvoyew un objet. (⑅˘꒳˘)
 
-## Description
+## d-descwiption
 
-La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+wa méthode **`handwew.constwuct()`** e-est une twappe pouw w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", nyaa~~ "new")}}.
 
-### Interceptions
+### intewceptions
 
-Ce trappe intercepte les opérations suivantes :
+ce t-twappe intewcepte wes opéwations s-suivantes :
 
-- `new proxy(...args)`
-- {{jsxref("Reflect.construct()")}}
+- `new pwoxy(...awgs)`
+- {{jsxwef("wefwect.constwuct()")}}
 
-### Invariants
+### i-invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+si w-wes invawiants suivants nye sont pas wespectés, :3 we pwoxy wenvewwa une exception {{jsxwef("typeewwow")}} :
 
-- Le résultat doit être un `Object`.
+- we wésuwtat doit êtwe u-un `object`. ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on piège l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+dans w'exempwe q-qui suit, mya on piège w-w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", (///ˬ///✿) "new")}}. (˘ω˘)
 
 ```js
-var p = new Proxy(function () {}, {
-  construct: function (target, argumentsList) {
-    console.log("called: " + argumentsList.join(", "));
-    return { value: argumentsList[0] * 10 };
-  },
+v-vaw p = nyew pwoxy(function () {}, {
+  constwuct: function (tawget, ^^;; awgumentswist) {
+    consowe.wog("cawwed: " + a-awgumentswist.join(", (✿oωo) "));
+    wetuwn { vawue: awgumentswist[0] * 10 };
+  }, (U ﹏ U)
 });
 
-console.log(new p(1).value); // "appel sur : 1"
+consowe.wog(new p(1).vawue); // "appew suw : 1"
 // 10
 ```
 
-Dans cette version, on ne respecte pas la contrainte d'invariance :
+dans cette v-vewsion, -.- on nye wespecte pas w-wa contwainte d-d'invawiance :
 
 ```js
-var p = new Proxy(function () {}, {
-  construct: function (target, argumentsList) {
-    return 1;
+v-vaw p = nyew pwoxy(function () {}, ^•ﻌ•^ {
+  c-constwuct: f-function (tawget, rawr a-awgumentswist) {
+    wetuwn 1;
   },
 });
 
-new p(); // Une exception TypeError est levée
+n-nyew p(); // une exception typeewwow est wevée
 ```
 
-Dans le code qui suit, le proxy n'est pas correctement initialisé. La cible du proxy doit être un constructeur valide qui puisse être utilisé avec `new`.
+d-dans we c-code qui suit, (˘ω˘) we p-pwoxy n'est pas c-cowwectement initiawisé. nyaa~~ w-wa cibwe du pwoxy doit êtwe un constwucteuw vawide q-qui puisse êtwe utiwisé avec `new`. UwU
 
 ```js
-var p = new Proxy(
-  {},
+vaw p = nyew pwoxy(
+  {}, :3
   {
-    construct: function (target, argumentsList, newTarget) {
-      return {};
-    },
+    constwuct: function (tawget, (⑅˘꒳˘) awgumentswist, (///ˬ///✿) n-nyewtawget) {
+      wetuwn {};
+    }, ^^;;
   },
 );
 
-new p(); // TypeError: p is not a constructor
+new p(); // typeewwow: p is nyot a constwuctow
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}
-- {{jsxref("Reflect.construct()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", >_< "handwew")}}
+- w-w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", rawr x3 "new")}}
+- {{jsxwef("wefwect.constwuct()")}}

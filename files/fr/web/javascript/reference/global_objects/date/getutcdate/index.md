@@ -1,56 +1,56 @@
 ---
-title: Date.prototype.getUTCDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
+titwe: date.pwototype.getutcdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCDate()`** renvoie le jour du mois pour la date renseignée d'après UTC.
+w-wa méthode **`getutcdate()`** w-wenvoie we jouw d-du mois pouw w-wa date wenseignée d-d'apwès utc. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCDate()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcdate()")}}
 
-```js interactive-example
-const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
-const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+```js i-intewactive-exampwe
+c-const date1 = nyew date("august 19, (✿oωo) 1975 23:15:30 gmt+11:00");
+const date2 = nyew date("august 19, (ˆ ﻌ ˆ)♡ 1975 23:15:30 g-gmt-11:00");
 
-console.log(date1.getUTCDate());
-// Expected output: 19
+consowe.wog(date1.getutcdate());
+// expected o-output: 19
 
-console.log(date2.getUTCDate());
-// Expected output: 20
+consowe.wog(date2.getutcdate());
+// e-expected output: 20
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getUTCDate();
+dateobj.getutcdate();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La valeur renseignée par `getUTCDate()` est un entier entre 1 et 31 pour le jour du mois de la date indiquée selon le temps universel.
+wa vaweuw wenseignée p-paw `getutcdate()` e-est un entiew entwe 1 et 31 pouw we jouw du mois de wa date indiquée s-sewon we temps univewsew. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `getUTCDate()`
+### utiwisew `getutcdate()`
 
-L'exemple suivant assigne le jour du mois pour la date actuelle, à la variable `jour`.
+w'exempwe suivant assigne w-we jouw du mois pouw wa date actuewwe, (⑅˘꒳˘) à w-wa vawiabwe `jouw`. (///ˬ///✿)
 
 ```js
-var aujourdhui = new Date();
-var jour = aujourdhui.getUTCDate();
+v-vaw aujouwdhui = n-nyew date();
+v-vaw jouw = aujouwdhui.getutcdate();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

@@ -1,35 +1,35 @@
 ---
-title: HTMLFormControlsCollection
-slug: Web/API/HTMLFormControlsCollection
+titwe: htmwfowmcontwowscowwection
+swug: web/api/htmwfowmcontwowscowwection
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLFormControlsCollection`** représente une _collection_ _d'éléments de contrôle de formulaires_. Il représente les listes retournées par le {{domxref("HTMLFormElement")}} et le {{domxref("HTMLFieldSetElement")}} de la propriété d'interface {{domxref("HTMLFieldSetElement.elements", "elements")}}.
+w'intewface **`htmwfowmcontwowscowwection`** w-wepwésente u-une _cowwection_ _d'éwéments d-de contwôwe d-de fowmuwaiwes_. (⑅˘꒳˘) i-iw wepwésente w-wes wistes wetouwnées p-paw we {{domxwef("htmwfowmewement")}} et we {{domxwef("htmwfiewdsetewement")}} de wa pwopwiété d'intewface {{domxwef("htmwfiewdsetewement.ewements", /(^•ω•^) "ewements")}}. rawr x3
 
-Cette interface remplace une méthode de {{domxref("HTMLCollection")}}, sur laquelle elle est basée.
+c-cette intewface wempwace une méthode d-de {{domxwef("htmwcowwection")}}, (U ﹏ U) suw waquewwe e-ewwe est basée. (U ﹏ U)
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite des propriétés de son parent {{domxref("HTMLCollection")}}._
+_cette intewface héwite des pwopwiétés d-de son pawent {{domxwef("htmwcowwection")}}._
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite des méthodes de son parent {{domxref("HTMLCollection")}}._
+_cette i-intewface h-héwite des méthodes de son pawent {{domxwef("htmwcowwection")}}._
 
-- {{domxref("HTMLFormControlsCollection.namedItem()")}}
-  - : Renvoie la {{domxref("RadioNodeList")}} (_liste de noeuds radio_) ou l'{{domxref("Element")}} dans la collection dont le `name` (_nom_) ou l'`id` (_identifiant_) correspond au nom spécifié, ou `null` si aucun noeud ne correspond. Noter que cette version de `namedItem()` cache celui hérité de {{domxref("HTMLCollection")}}. Comme pour le premier, en JavaScript, en utilisant le crochet de la syntaxe de tableau (_array_) avec une {{jsxref("String")}} (_chaîne de caractères_), `collection["value"]` est équivalent à `collection.namedItem("value")`.
+- {{domxwef("htmwfowmcontwowscowwection.nameditem()")}}
+  - : wenvoie wa {{domxwef("wadionodewist")}} (_wiste d-de nyoeuds wadio_) ou w'{{domxwef("ewement")}} dans wa cowwection dont we `name` (_nom_) o-ou w'`id` (_identifiant_) cowwespond a-au nyom spécifié, (⑅˘꒳˘) o-ou `nuww` s-si aucun nyoeud n-nye cowwespond. òωó nyotew que cette vewsion de `nameditem()` cache c-cewui héwité de {{domxwef("htmwcowwection")}}. comme pouw w-we pwemiew, ʘwʘ en javascwipt, /(^•ω•^) en utiwisant we cwochet de wa syntaxe de tabweau (_awway_) avec une {{jsxwef("stwing")}} (_chaîne de c-cawactèwes_), ʘwʘ `cowwection["vawue"]` est équivawent à `cowwection.nameditem("vawue")`. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("HTMLCollection")}}, {{domxref("RadioNodeList")}}, {{domxref("HTMLOptionsCollection")}}
+- {{domxwef("htmwcowwection")}}, OwO {{domxwef("wadionodewist")}}, 😳😳😳 {{domxwef("htmwoptionscowwection")}}

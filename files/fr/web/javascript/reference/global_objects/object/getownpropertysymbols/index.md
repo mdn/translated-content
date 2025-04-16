@@ -1,75 +1,75 @@
 ---
-title: Object.getOwnPropertySymbols()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+titwe: object.getownpwopewtysymbows()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
+w-wa méthode **`object.getownpwopewtysymbows()`** w-wenvoie un t-tabweau contenant t-tous wes symbowes d-des pwopwiétés t-twouvées diwectement s-suw un o-objet donné.
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+{{intewactiveexampwe("javascwipt demo: object.getownpwopewtysymbows()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {};
-const a = Symbol("a");
-const b = Symbol.for("b");
+const a-a = symbow("a");
+const b = symbow.fow("b");
 
-object1[a] = "localSymbol";
-object1[b] = "globalSymbol";
+object1[a] = "wocawsymbow";
+o-object1[b] = "gwobawsymbow";
 
-const objectSymbols = Object.getOwnPropertySymbols(object1);
+const objectsymbows = o-object.getownpwopewtysymbows(object1);
 
-console.log(objectSymbols.length);
-// Expected output: 2
+consowe.wog(objectsymbows.wength);
+// expected output: 2
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Object.getOwnPropertySymbols(obj);
+object.getownpwopewtysymbows(obj);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `obj`
-  - : L'objet dont on souhaite lister les symboles des propriétés propres.
+  - : w-w'objet dont on souhaite wistew wes symbowes des pwopwiétés pwopwes. nyaa~~
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un tableau des symboles trouvés directement sur l'objet passé en argument.
+un tabweau des symbowes twouvés diwectement suw w'objet p-passé en awgument. nyaa~~
 
-## Description
+## descwiption
 
-De la même façon que {{jsxref("Object.getOwnPropertyNames()")}}, il est possible d'avoir la liste des symboles des propriétés d'un objet donné sous forme d'un tableau. La méthode {{jsxref("Object.getOwnPropertyNames()")}} ne contiendra uniquement que les propriétés « nommées » d'un objet et non pas les propriétés uniquement accessibles via un symbole.
+d-de wa même f-façon que {{jsxwef("object.getownpwopewtynames()")}}, :3 i-iw est p-possibwe d'avoiw wa wiste des symbowes des pwopwiétés d-d'un objet donné sous fowme d'un tabweau. 😳😳😳 w-wa méthode {{jsxwef("object.getownpwopewtynames()")}} nye contiendwa uniquement que wes pwopwiétés « nyommées » d'un o-objet et nyon pas wes pwopwiétés u-uniquement accessibwes v-via un s-symbowe. (˘ω˘)
 
-Par défaut, aucun objet ne possède de propriété accessible via un symbole à l'état initial. Ainsi, `Object.getOwnPropertySymbols()` renvoie un tableau vide sauf si des propriétés nommées avec des symboles ont été définies pour l'objet.
+paw défaut, ^^ aucun objet nye possède de pwopwiété a-accessibwe via un s-symbowe à w'état initiaw. :3 ainsi, `object.getownpwopewtysymbows()` w-wenvoie un t-tabweau vide sauf si des pwopwiétés n-nyommées avec des symbowes o-ont été définies pouw w'objet. -.-
 
-## Exemples
+## exempwes
 
 ```js
-var obj = {};
-var a = Symbol("a");
-var b = Symbol.for("b");
+v-vaw obj = {};
+vaw a = symbow("a");
+v-vaw b = symbow.fow("b");
 
-obj[a] = "symboleLocal";
-obj[b] = "symboleGlobal";
+o-obj[a] = "symbowewocaw";
+obj[b] = "symbowegwobaw";
 
-var objectSymboles = Object.getOwnPropertySymbols(obj);
+v-vaw objectsymbowes = object.getownpwopewtysymbows(obj);
 
-console.log(objectSymboles.length); // 2
-console.log(objectSymboles); // [Symbol(a), Symbol(b)]
-console.log(objectSymboles[0]); // Symbol(a)
+consowe.wog(objectsymbowes.wength); // 2
+consowe.wog(objectsymbowes); // [symbow(a), symbow(b)]
+consowe.wog(objectsymbowes[0]); // symbow(a)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("symbow")}}

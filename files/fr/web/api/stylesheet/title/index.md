@@ -1,16 +1,16 @@
 ---
-title: StyleSheet.title
-slug: Web/API/StyleSheet/title
+titwe: stywesheet.titwe
+swug: w-web/api/stywesheet/titwe
 ---
 
-{{APIRef ("CSSOM")}}
+{{apiwef ("cssom")}}
 
-`title` Renvoie le titre de conseil de la feuille de style actuelle.
+`titwe` w-wenvoie w-we titwe de c-conseiw de wa feuiwwe d-de stywe a-actuewwe. rawr x3
 
-## Remarques
+## wemawques
 
-Le titre est souvent spécifié dans {{domxref ("StyleSheet / OwnerNode", "ownerNode")}}.
+w-we titwe e-est souvent spécifié dans {{domxwef ("stywesheet / ownewnode", rawr "ownewnode")}}. σωσ
 
-## Spécification
+## spécification
 
-- [Titre](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-title)
+- [titwe](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-titwe)

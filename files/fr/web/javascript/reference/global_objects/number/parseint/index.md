@@ -1,74 +1,74 @@
 ---
-title: Number.parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
+titwe: nyumbew.pawseint()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/pawseint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Number.parseInt()`** analyse et convertit une chaine de caractères, fournie en argument, en un entier dans la base souhaitée.
+w-wa méthode **`numbew.pawseint()`** anawyse e-et convewtit u-une chaine de c-cawactèwes, (///ˬ///✿) fouwnie e-en awgument, e-en un entiew d-dans wa base souhaitée. 😳
 
-{{InteractiveExample("JavaScript Demo: Number.parseInt()")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.pawseint()")}}
 
-```js interactive-example
-function roughScale(x, base) {
-  const parsed = Number.parseInt(x, base);
-  if (Number.isNaN(parsed)) {
-    return 0;
+```js intewactive-exampwe
+function woughscawe(x, 😳 b-base) {
+  const pawsed = nyumbew.pawseint(x, σωσ b-base);
+  if (numbew.isnan(pawsed)) {
+    w-wetuwn 0;
   }
-  return parsed * 100;
+  wetuwn pawsed * 100;
 }
 
-console.log(roughScale(" 0xF", 16));
-// Expected output: 1500
+consowe.wog(woughscawe(" 0xf", rawr x3 16));
+// expected output: 1500
 
-console.log(roughScale("321", 2));
-// Expected output: 0
+c-consowe.wog(woughscawe("321", OwO 2));
+// expected o-output: 0
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Number.parseInt(chaîne [, base])
+nyumbew.pawseint(chaîne [, base])
 ```
 
-### Paramètres
+### pawamètwes
 
 - `chaîne`
-  - : La valeur à convertir. Si `chaine` n'est pas une chaîne de caractères, elle sera convertie auparavant. Les blancs qui préfixent la chaîne sont ignorés.
-- `base` {{optional_inline}}
-  - : Paramètre optionnel. Un entier représentant la base dans laquelle est représentée la valeur de la chaîne. **Il faut toujours spécifier ce paramètre.** Cela permet que le code ne soit pas ambigü et permet de garantir un comportement prévisible. En effet les différentes implémentations peuvent fournir des résultats différents lorsque la base n'est pas spécifiée.
+  - : wa vaweuw à c-convewtiw. /(^•ω•^) si `chaine` ny'est pas une chaîne de cawactèwes, 😳😳😳 ewwe sewa convewtie a-aupawavant. ( ͡o ω ͡o ) wes bwancs qui pwéfixent w-wa chaîne s-sont ignowés. >_<
+- `base` {{optionaw_inwine}}
+  - : p-pawamètwe o-optionnew. >w< un entiew wepwésentant wa base dans w-waquewwe est wepwésentée wa vaweuw de wa chaîne. rawr **iw f-faut toujouws spécifiew ce pawamètwe.** cewa pewmet que we code nye soit pas ambigü e-et pewmet de gawantiw un compowtement p-pwévisibwe. 😳 e-en effet wes d-difféwentes impwémentations peuvent fouwniw des wésuwtats difféwents w-wowsque w-wa base ny'est pas spécifiée. >w<
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Un entier construit à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère ne permet pas de conversion numérique, c'est la valeur {{jsxref("NaN")}} qui sera renvoyée.
+un entiew constwuit à pawtiw d-de w'anawyse de wa chaîne d-de cawactèwes passée en awgument. (⑅˘꒳˘) si we pwemiew c-cawactèwe nye pewmet pas de c-convewsion nyuméwique, OwO c'est wa v-vaweuw {{jsxwef("nan")}} q-qui sewa wenvoyée. (ꈍᴗꈍ)
 
-## Description
+## descwiption
 
-Voir la page {{jsxref("Objets_globaux/parseInt", "parseInt()")}} pour plus de détails et d'exemples. Cette méthode se comporte de façon identique à la fonction globale {{jsxref("Objets_globaux/parseInt", "parseInt()")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales) et on aura :
+voiw wa page {{jsxwef("objets_gwobaux/pawseint", 😳 "pawseint()")}} pouw pwus de détaiws et d'exempwes. 😳😳😳 cette méthode s-se compowte d-de façon identique à wa fonction g-gwobawe {{jsxwef("objets_gwobaux/pawseint", mya "pawseint()")}} et f-fait pawtie d'ecmascwipt 2015 (dans w-we but de « moduwawisew » wes méthodes gwobawes) et on a-auwa :
 
 ```js
-Number.parseInt === parseInt; // true
+nyumbew.pawseint === pawseint; // twue
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Si on souhaite bénéficier de cette fonction dans un environnement qui n'en dispose pas, on pourra donc l'émuler de la façon suivante :
+si on souhaite b-bénéficiew de cette fonction d-dans un enviwonnement q-qui ny'en d-dispose pas, mya on pouwwa donc w'émuwew d-de wa façon s-suivante :
 
 ```js
-if (Number.parseInt === undefined) {
-  Number.parseInt = parseInt;
+i-if (numbew.pawseint === u-undefined) {
+  nyumbew.pawseint = pawseint;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'objet {{jsxref("Number")}} auquel appartient cette fonction.
-- La méthode {{jsxref("Objets_globaux/parseInt","parseInt()")}} de l'objet global.
+- w'objet {{jsxwef("numbew")}} a-auquew appawtient cette fonction. (⑅˘꒳˘)
+- wa méthode {{jsxwef("objets_gwobaux/pawseint","pawseint()")}} de w'objet g-gwobaw. (U ﹏ U)

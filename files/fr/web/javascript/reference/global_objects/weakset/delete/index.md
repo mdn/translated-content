@@ -1,67 +1,67 @@
 ---
-title: WeakSet.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+titwe: weakset.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`delete()`** permet de retirer un élément donné d'un objet `WeakSet`.
+w-wa méthode **`dewete()`** p-pewmet d-de wetiwew un éwément d-donné d-d'un objet `weakset`. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.dewete()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
+```js i-intewactive-exampwe
+const weakset1 = nyew weakset();
 const object1 = {};
 
-weakset1.add(object1);
+w-weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+consowe.wog(weakset1.has(object1));
+// expected output: t-twue
 
-weakset1.delete(object1);
+weakset1.dewete(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: false
+consowe.wog(weakset1.has(object1));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-ws.delete(valeur);
+ws.dewete(vaweuw);
 ```
 
-### Paramètre
+### p-pawamètwe
 
-- `valeur`
-  - : Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite retirer de l'ensemble `WeakSet`.
+- `vaweuw`
+  - : ce pawamètwe est o-obwigatoiwe. /(^•ω•^) iw c-cowwespond à w'objet qu'on souhaite wetiwew de w'ensembwe `weakset`. ʘwʘ
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-`true` si un élément de l'objet `WeakSet` a bien été retiré, `false` sinon (dans le cas où la clé n'a pas été trouvée ou si la clé n'est pas un objet).
+`twue` si un éwément de w'objet `weakset` a bien été wetiwé, σωσ `fawse` s-sinon (dans we cas où w-wa cwé ny'a pas été t-twouvée o-ou si wa cwé ny'est p-pas un objet). OwO
 
-## Exemples
+## exempwes
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+vaw ws = n-nyew weakset();
+vaw obj = {};
 
 ws.add(window);
 
-ws.delete(obj); // Renvoie false. Aucun objet obj n'a été trouvé ni retiré.
-ws.delete(window); // Renvoie true, l'objet window a pu être retiré.
+w-ws.dewete(obj); // wenvoie fawse. 😳😳😳 aucun objet obj n'a été twouvé nyi wetiwé. 😳😳😳
+ws.dewete(window); // w-wenvoie twue, o.O w'objet window a-a pu êtwe w-wetiwé. ( ͡o ω ͡o )
 
-ws.has(window); // Renvoie false, window n'appartient plus au WeakSet.
+ws.has(window); // w-wenvoie fawse, window ny'appawtient pwus au weakset. (U ﹏ U)
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.cweaw()")}}

@@ -1,67 +1,67 @@
 ---
-title: element.replaceChild
-slug: Web/API/Node/replaceChild
+titwe: ewement.wepwacechiwd
+swug: web/api/node/wepwacechiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.replaceChild()`** remplace un nœud enfant du noeud spécifié par un autre nœud.
+w-wa méthode **`node.wepwacechiwd()`** w-wempwace u-un nyœud e-enfant du nyoeud s-spécifié paw u-un autwe nyœud. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-replacedNode = parentNode.replaceChild(newChild, oldChild);
+w-wepwacednode = pawentnode.wepwacechiwd(newchiwd, ʘwʘ owdchiwd);
 ```
 
-- `newChild` est le nouveau nœud qui remplacera `oldChild`. S'il existe déjà dans le DOM, il sera d'abord enlevé.
-- `oldChild` est le nœud existant à remplacer.
-- `replaceNode` est le nœud remplacé. C'est le même nœud que `oldChild`.
+- `newchiwd` est we nyouveau nyœud qui wempwacewa `owdchiwd`. σωσ s-s'iw existe déjà dans we dom, OwO iw sewa d'abowd e-enwevé. 😳😳😳
+- `owdchiwd` est we n-nyœud existant à wempwacew. 😳😳😳
+- `wepwacenode` est we nyœud wempwacé. o.O c'est we m-même nyœud que `owdchiwd`. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
 ```js
-// Étant donné que :
+// Étant d-donné q-que :
 // <div>
-//   <span id="childSpan">foo bar</span>
+//   <span id="chiwdspan">foo baw</span>
 // </div>
 
-// Crée un nœud d'élément vide
-// sans ID, sans attributs et sans contenu
-var sp1 = document.createElement("span");
+// cwée un nyœud d'éwément vide
+// sans i-id, (U ﹏ U) sans attwibuts et sans contenu
+vaw sp1 = document.cweateewement("span");
 
-// Donne un attribut id appelé "newSpan"
-sp1.id = "newSpan";
+// donne un attwibut id appewé "newspan"
+s-sp1.id = "newspan";
 
-// Crée du contenu pour le nouvel élément
-var sp1_content = document.createTextNode(
-  "nouvel élément span de remplacement.",
+// cwée du contenu p-pouw we nyouvew éwément
+v-vaw s-sp1_content = document.cweatetextnode(
+  "nouvew éwément s-span de wempwacement.", (///ˬ///✿)
 );
 
-// Applique ce contenu au nouvel élément
-sp1.appendChild(sp1_content);
+// appwique c-ce contenu au nyouvew éwément
+sp1.appendchiwd(sp1_content);
 
-// Construit une référence au nœud existant à remplacer
-var sp2 = document.getElementById("childSpan");
-var parentDiv = sp2.parentNode;
+// c-constwuit une wéféwence au nyœud existant à wempwacew
+vaw sp2 = document.getewementbyid("chiwdspan");
+vaw pawentdiv = sp2.pawentnode;
 
-// Remplacer le noeud existant sp2 par le nouvel élément span sp1
-parentDiv.replaceChild(sp1, sp2);
+// w-wempwacew we nyoeud existant s-sp2 paw we nyouvew éwément s-span s-sp1
+pawentdiv.wepwacechiwd(sp1, >w< sp2);
 
-// Résultat :
+// wésuwtat :
 // <div>
-//   <span id="newSpan">nouvel élément span de remplacement.</span>
+//   <span id="newspan">nouvew éwément span de w-wempwacement.</span>
 // </div>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node.removeChild")}}
-- {{domxref("ChildNode.replaceWith")}}
+- {{domxwef("node.wemovechiwd")}}
+- {{domxwef("chiwdnode.wepwacewith")}}

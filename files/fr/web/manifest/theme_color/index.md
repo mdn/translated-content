@@ -1,41 +1,41 @@
 ---
-title: theme_color
-slug: Web/Manifest/theme_color
+titwe: theme_cowow
+swug: web/manifest/theme_cowow
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Manifest")}}
+{{quickwinkswithsubpages("/fw/docs/web/manifest")}}
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">"theme_color": "red"</pre>
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">"theme_cowow": "wed"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Le champ `theme_color` est une chaîne de caractères qui défini la couleur du thème par défaut de l'application. Cela peut parfois affecter la manière dont l'OS affiche le site (e.g., avec la bare des tâches sous Android, la couleur du thème entoure le site).
+w-we champ `theme_cowow` e-est une c-chaîne de cawactèwes qui défini wa couweuw du thème paw défaut de w'appwication. mya c-cewa peut pawfois affectew wa manièwe dont w-w'os affiche we site (e.g., a-avec wa bawe des tâches sous andwoid, 😳 wa couweuw du thème entouwe w-we site). XD
 
-## Exemples
+## exempwes
 
 ```json
-"theme_color": "red"
+"theme_cowow": "wed"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

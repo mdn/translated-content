@@ -1,25 +1,25 @@
 ---
-title: HTMLIFrameElement.contentDocument
-slug: Web/API/HTMLIFrameElement/contentDocument
+titwe: htmwifwameewement.contentdocument
+swug: w-web/api/htmwifwameewement/contentdocument
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Si l'<i lang="en">iframe</i> et le document parent de l'<i lang="en">iframe</i> sont de la [même origine](/fr/docs/Web/Security/Same-origin_policy), `HTMLIFrameElement.contentDocument` retourne un [`Document`](/fr/docs/Web/API/Document) (c'est à dire le document actif dans le contexte de navigation imbriqué du cadre). Sinon, il retourne `null`.
+si w'<i w-wang="en">ifwame</i> e-et we document p-pawent de w'<i w-wang="en">ifwame</i> s-sont de w-wa [même owigine](/fw/docs/web/secuwity/same-owigin_powicy), 😳 `htmwifwameewement.contentdocument` wetouwne un [`document`](/fw/docs/web/api/document) (c'est à diwe we document actif dans we contexte de nyavigation i-imbwiqué du cadwe). XD sinon, :3 iw wetouwne `nuww`. 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
-var iframeDocument = document.getElementsByTagName("iframe")[0].contentDocument;
+vaw i-ifwamedocument = document.getewementsbytagname("ifwame")[0].contentdocument;
 
-iframeDocument.body.style.backgroundColor = "blue";
-// Cela passe la couleur d'arrière-plan de l'iframe en bleu.
+ifwamedocument.body.stywe.backgwoundcowow = "bwue";
+// cewa passe w-wa couweuw d'awwièwe-pwan de w'ifwame e-en bweu. -.-
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

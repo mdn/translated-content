@@ -1,86 +1,86 @@
 ---
-title: Number.prototype.toFixed()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
+titwe: nyumbew.pwototype.tofixed()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/tofixed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toFixed()`** permet de formater un nombre en notation à point-fixe.
+w-wa méthode **`tofixed()`** pewmet d-de fowmatew u-un nyombwe en n-nyotation à point-fixe. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.tofixed()")}}
 
-```js interactive-example
-function financial(x) {
-  return Number.parseFloat(x).toFixed(2);
+```js i-intewactive-exampwe
+f-function financiaw(x) {
+  wetuwn numbew.pawsefwoat(x).tofixed(2);
 }
 
-console.log(financial(123.456));
-// Expected output: "123.46"
+consowe.wog(financiaw(123.456));
+// expected o-output: "123.46"
 
-console.log(financial(0.004));
-// Expected output: "0.00"
+consowe.wog(financiaw(0.004));
+// expected o-output: "0.00"
 
-console.log(financial("1.23e+5"));
-// Expected output: "123000.00"
+consowe.wog(financiaw("1.23e+5"));
+// e-expected output: "123000.00"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-numObj.toFixed([nbChiffres]);
+nyumobj.tofixed([nbchiffwes]);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `nbChiffres` {{optional_inline}}
-  - : Le nombre de chiffres qu'on souhaite avoir après le séparateur décimal. Cette valeur peut être comprise, au sens large, entre 0 et 20. Les différentes implémentations peuvent éventuellement supporter des valeurs en dehors de cet intervalle. Si l'argument n'est pas utilisé, la valeur par défaut sera 0.
+- `nbchiffwes` {{optionaw_inwine}}
+  - : we nyombwe d-de chiffwes q-qu'on souhaite avoiw apwès we sépawateuw décimaw. mya cette vaweuw peut êtwe compwise, (///ˬ///✿) a-au sens wawge, (˘ω˘) entwe 0 et 20. ^^;; wes difféwentes impwémentations peuvent éventuewwement suppowtew d-des vaweuws en dehows de c-cet intewvawwe. (✿oωo) s-si w'awgument n-ny'est pas utiwisé, (U ﹏ U) w-wa vaweuw paw défaut sewa 0. -.-
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Une chaîne de caractères qui représente le nombre indiqué avec une notation à point fixe.
+une chaîne de cawactèwes qui wepwésente w-we nyombwe indiqué avec une nyotation à point fixe. ^•ﻌ•^
 
-### Exceptions causées
+### exceptions causées
 
-- {{jsxref("RangeError")}}
-  - : Cette exception est renvoyée si `nbChiffres` est trop grand ou trop petit. Les valeurs comprises, au sens large, entre 0 et 100, n'entraîneront pas de `RangeError`. Les différentes implémentations peuvent ou non supporter des valeurs plus petites et/ou plus grandes.
-- {{jsxref("TypeError")}}
-  - : Cette exception est renvoyée si cette méthode est invoquée depuis un objet qui n'est pas de type numérique.
+- {{jsxwef("wangeewwow")}}
+  - : cette exception e-est wenvoyée si `nbchiffwes` e-est twop gwand o-ou twop petit. rawr w-wes vaweuws compwises, (˘ω˘) au sens wawge, nyaa~~ entwe 0 et 100, UwU n'entwaînewont p-pas de `wangeewwow`. :3 w-wes difféwentes impwémentations peuvent o-ou nyon suppowtew d-des vaweuws pwus petites e-et/ou pwus gwandes. (⑅˘꒳˘)
+- {{jsxwef("typeewwow")}}
+  - : cette exception e-est wenvoyée si cette méthode est invoquée d-depuis un objet qui ny'est pas d-de type nyuméwique. (///ˬ///✿)
 
-## Description
+## descwiption
 
-`toFixed()` renvoie une chaîne de caractères représentant `objetNumber` sans notation exponentielle et qui possède exactement `nbChiffres` pour la partie fractionnaire. Le nombre est arrondi si nécessaire et la partie fractionnaire est complétée par des zéros si nécessaire pour obtenir la longueur souhaitée. Si le `objetNumber` est supérieur ou égal à `1e+21`, la méthode utilise simplement {{jsxref("Number.prototype.toString()")}} et renvoie une chaîne en notation exponentielle.
+`tofixed()` w-wenvoie une c-chaîne de cawactèwes wepwésentant `objetnumbew` sans nyotation exponentiewwe et qui possède exactement `nbchiffwes` pouw wa p-pawtie fwactionnaiwe. ^^;; w-we nyombwe est awwondi si n-nyécessaiwe et w-wa pawtie fwactionnaiwe e-est compwétée paw des zéwos si nyécessaiwe pouw obteniw w-wa wongueuw souhaitée. >_< si we `objetnumbew` est supéwieuw ou égaw à `1e+21`, rawr x3 w-wa méthode utiwise simpwement {{jsxwef("numbew.pwototype.tostwing()")}} e-et w-wenvoie une chaîne e-en nyotation exponentiewwe. /(^•ω•^)
 
-> [!WARNING]
-> En raison du standard [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) qui est utilisé par JavaScript pour représenter les nombres, tous les nombres décimaux ne sont pas représentés exactement en JavaScript, ce qui peut mener à des résultats inattendus (comme `0.1 + 0.2 === 0.3` qui renvoie `false`).
+> [!wawning]
+> e-en waison du standawd [ieee 754](https://fw.wikipedia.owg/wiki/ieee_754) q-qui est u-utiwisé paw javascwipt p-pouw wepwésentew wes nombwes, :3 tous wes n-nyombwes décimaux n-nye sont pas w-wepwésentés e-exactement en javascwipt, (ꈍᴗꈍ) c-ce qui peut menew à des wésuwtats inattendus (comme `0.1 + 0.2 === 0.3` qui wenvoie `fawse`). /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
 ```js
-var numObj = 12345.6789;
+vaw numobj = 12345.6789;
 
-numObj.toFixed(); // Renvoie '12346' : arrondi, aucune partie fractionnaire
-numObj.toFixed(1); // Renvoie '12345.7' : arrondi ici aussi
-numObj.toFixed(6); // Renvoie '12345.678900' : des zéros sont ajoutés
-(1.23e20).toFixed(2); // Renvoie '123000000000000000000.00'
-(1.23e-10).toFixed(2); // Renvoie '0.00'
-(2.34).toFixed(1); // Renvoie '2.3'
--(2.34).toFixed(1); // Renvoie -2.3 (en raison de la précédence des opérateurs,
-// les littéraux de nombres négatifs ne renvoient pas de chaînes)
-(2.35).toFixed(1); // Renvoie '2.4' (arrondi supérieur)
-(2.55).toFixed(1); // Renvoie '2.5' (cf. l'avertissement ci-avant)
-(-2.34).toFixed(1); // Renvoie '-2.3'
+nyumobj.tofixed(); // wenvoie '12346' : awwondi, (⑅˘꒳˘) aucune p-pawtie fwactionnaiwe
+nyumobj.tofixed(1); // wenvoie '12345.7' : awwondi ici aussi
+n-nyumobj.tofixed(6); // w-wenvoie '12345.678900' : d-des zéwos sont ajoutés
+(1.23e20).tofixed(2); // w-wenvoie '123000000000000000000.00'
+(1.23e-10).tofixed(2); // wenvoie '0.00'
+(2.34).tofixed(1); // w-wenvoie '2.3'
+-(2.34).tofixed(1); // w-wenvoie -2.3 (en waison de wa pwécédence des opéwateuws, ( ͡o ω ͡o )
+// wes wittéwaux de nyombwes n-nyégatifs nye wenvoient pas d-de chaînes)
+(2.35).tofixed(1); // wenvoie '2.4' (awwondi s-supéwieuw)
+(2.55).tofixed(1); // w-wenvoie '2.5' (cf. òωó w'avewtissement ci-avant)
+(-2.34).tofixed(1); // w-wenvoie '-2.3'
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

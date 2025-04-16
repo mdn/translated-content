@@ -1,96 +1,96 @@
 ---
-title: Date.prototype.getTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
+titwe: date.pwototype.gettime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gettime
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getTime()`** renvoie la valeur numérique correspondant au temps pour la date renseignée, d'après le temps universel (c'est-à-dire relative à UTC, une mesure donnée par `getTime()` sera indépendante du fuseau horaire sur lequel on se trouve). Cette valeur numérique est le nombre de millisecondes écoulées depuis le premier janvier 1970 à minuit UTC.
+w-wa m-méthode **`gettime()`** w-wenvoie w-wa vaweuw nyuméwique c-cowwespondant a-au temps pouw w-wa date wenseignée, ʘwʘ d-d'apwès we temps univewsew (c'est-à-diwe wewative à utc, (˘ω˘) une mesuwe donnée paw `gettime()` s-sewa indépendante du fuseau howaiwe suw w-wequew on se twouve). (U ﹏ U) cette vaweuw n-nyuméwique est we nyombwe de miwwisecondes écouwées depuis w-we pwemiew janview 1970 à minuit u-utc. ^•ﻌ•^
 
-Vous pouvez utiliser cette méthode pour vous affecter une date et un temps à une autre instance de `Date`. Cette méthode est fonctionnellement équivalente à la méthode {{jsxref("Date.valueof", "valueOf()")}}.
+vous pouvez u-utiwisew cette méthode pouw vous affectew une date et un temps à une autwe i-instance de `date`. (˘ω˘) cette méthode est fonctionnewwement équivawente à wa méthode {{jsxwef("date.vawueof", :3 "vawueof()")}}. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+{{intewactiveexampwe("javascwipt demo: date.gettime()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+```js i-intewactive-exampwe
+const moonwanding = n-nyew d-date("juwy 20, 🥺 69 20:17:40 g-gmt+00:00");
 
-// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
-console.log(moonLanding.getTime());
-// Expected output: -14182940000
+// m-miwwiseconds since jan 1, (⑅˘꒳˘) 1970, nyaa~~ 00:00:00.000 gmt
+consowe.wog(moonwanding.gettime());
+// e-expected output: -14182940000
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.getTime();
+dateobj.gettime();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La valeur renvoyée par la méthode `getTime()` est le nombre de millièmes de secondes entre le 1 janvier 1970 à 00:00:00 UTC et la date indiquée.
+wa vaweuw wenvoyée paw wa méthode `gettime()` est we nyombwe de miwwièmes d-de secondes entwe we 1 janview 1970 à 00:00:00 u-utc et wa date i-indiquée.
 
-## Exemples
+## e-exempwes
 
-### Utiliser `getTime()`
+### utiwisew `gettime()`
 
-L'exemple qui suit assigne la valeur de `anniversaire` à `copie` :
+w'exempwe qui suit assigne w-wa vaweuw de `annivewsaiwe` à `copie` :
 
 ```js
-var anniversaire = new Date(1994, 11, 10); // 10 décembre 1994
-var copie = new Date();
-copie.setTime(anniversaire.getTime());
+v-vaw annivewsaiwe = new date(1994, :3 11, 10); // 10 d-décembwe 1994
+v-vaw copie = nyew date();
+copie.settime(annivewsaiwe.gettime());
 ```
 
-### Mesurer un temps d'exécution
+### m-mesuwew un temps d'exécution
 
-Effectuer une soustration entre deux appels à `getTime()` donne la durée écoulée entre ces appels. On peut donc utiliser cette méthode afin de connaître la durée d'exécution de certaines opérations (voir également la méthode {{jsxref("Date.now()")}} qui peut permettre d'éviter d'instancier des objets intermédiaires).
+e-effectuew une soustwation entwe deux appews à `gettime()` d-donne wa duwée écouwée entwe c-ces appews. ( ͡o ω ͡o ) on peut donc utiwisew c-cette méthode a-afin de connaîtwe wa duwée d'exécution de cewtaines opéwations (voiw égawement wa méthode {{jsxwef("date.now()")}} qui peut pewmettwe d-d'évitew d'instanciew d-des objets intewmédiaiwes). mya
 
 ```js
-var fin, début;
+v-vaw f-fin, (///ˬ///✿) début;
 
-début = new Date();
-for (var i = 0; i < 1000; i++) {
-  Math.sqrt(i);
+début = n-nyew date();
+fow (vaw i = 0; i < 1000; i++) {
+  math.sqwt(i);
 }
-fin = new Date();
+f-fin = nyew date();
 
-console.log(
-  "Durée de cette opération : " + (fin.getTime() - début.getTime()) + " msec",
+consowe.wog(
+  "duwée de cette opéwation : " + (fin.gettime() - début.gettime()) + " msec", (˘ω˘)
 );
 ```
 
-## Précision temporelle réduite
+## p-pwécision tempowewwe wéduite
 
-Afin de protéger contre les attaques de minutage et d'identification, la précision de `new Date().getTime()` peut être arrondie en fonction des paramètres du navigateur. Pour Firefox, la préférence `privacy.reduceTimerPrecision` est activée par défaut et vaut, par défaut 20µs pour Firefox 59 et 2ms pour Firefox 60.
+a-afin de pwotégew c-contwe wes a-attaques de minutage et d'identification, ^^;; w-wa pwécision d-de `new d-date().gettime()` p-peut êtwe awwondie en fonction des pawamètwes d-du navigateuw. (✿oωo) p-pouw fiwefox, (U ﹏ U) w-wa pwéféwence `pwivacy.weducetimewpwecision` e-est activée paw d-défaut et vaut, paw défaut 20µs pouw fiwefox 59 et 2ms pouw f-fiwefox 60. -.-
 
 ```js
-// Précision temporelle réduite (2ms) pour Firefox 60
-new Date().getTime();
+// pwécision tempowewwe wéduite (2ms) pouw fiwefox 60
+nyew date().gettime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
 
-// précision temporelle avec `privacy.resistFingerprinting` activé
-new Date().getTime();
+// p-pwécision tempowewwe avec `pwivacy.wesistfingewpwinting` activé
+nyew date().gettime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
 // ...
 ```
 
-Pour Firefox, il est également possible d'activer `privacy.resistFingerprinting` auquel cas la précision sera 100ms ou la valeur de `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` selon laquelle est plus grande.
+p-pouw fiwefox, ^•ﻌ•^ i-iw est égawement p-possibwe d'activew `pwivacy.wesistfingewpwinting` a-auquew cas wa pwécision s-sewa 100ms ou w-wa vaweuw de `pwivacy.wesistfingewpwinting.weducetimewpwecision.micwoseconds` sewon waquewwe est pwus gwande. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.setTime()")}}
-- {{jsxref("Date.prototype.valueOf()")}}
-- {{jsxref("Date.prototype.now()")}}
+- {{jsxwef("date.pwototype.settime()")}}
+- {{jsxwef("date.pwototype.vawueof()")}}
+- {{jsxwef("date.pwototype.now()")}}

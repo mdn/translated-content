@@ -1,65 +1,65 @@
 ---
-title: Intl.Locale.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
+titwe: intw.wocawe.pwototype.tostwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de locale complet](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier) pour la locale courante.
+w-wa m-méthode **`intw.wocawe.pwototype.tostwing()`** w-wenvoie [w'identifiant d-de wocawe c-compwet](https://www.unicode.owg/wepowts/tw35/#unicode_wocawe_identifiew) p-pouw w-wa wocawe couwante. o.O
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()")}}
+{{intewactiveexampwe("javascwipt demo: intw.wocawe.pwototype.tostwing()")}}
 
-```js interactive-example
-const french = new Intl.Locale("fr-Latn-FR", {
-  calendar: "gregory",
-  hourCycle: "h12",
+```js intewactive-exampwe
+const fwench = nyew i-intw.wocawe("fw-watn-fw", ( ͡o ω ͡o ) {
+  cawendaw: "gwegowy", (U ﹏ U)
+  houwcycwe: "h12", (///ˬ///✿)
 });
-const korean = new Intl.Locale("ko-Kore-KR", {
-  numeric: true,
-  caseFirst: "upper",
+const k-kowean = nyew intw.wocawe("ko-kowe-kw", >w< {
+  n-nyumewic: twue, rawr
+  casefiwst: "uppew", mya
 });
 
-console.log(french.toString());
-// Expected output: "fr-Latn-FR-u-ca-gregory-hc-h12"
+consowe.wog(fwench.tostwing());
+// e-expected output: "fw-watn-fw-u-ca-gwegowy-hc-h12"
 
-console.log(korean.toString());
-// Expected output: "ko-Kore-KR-u-kf-upper-kn"
+consowe.wog(kowean.tostwing());
+// e-expected output: "ko-kowe-kw-u-kf-uppew-kn"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-locale.toString();
+wocawe.tostwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La chaîne de caractères représentant l'identifiant complet de la locale.
+wa chaîne de cawactèwes wepwésentant w-w'identifiant compwet de wa wocawe. ^^
 
-## Description
+## descwiption
 
-Une instance de `Locale` est une représentation JavaScript d'une locale au sens Unicode. Les informations décrivant une locale donnée (la langue, le système d'écriture, le type de calendrier, etc.) peuvent être encodées en une chaîne de caractères qui est l'identifiant de la locale. Lorsqu'on appelle la méthode `toString()` sur une instance de `Locale`, on obtiendra l'identifiant complet de la locale.
+une instance de `wocawe` e-est une wepwésentation j-javascwipt d'une w-wocawe au sens u-unicode. wes infowmations d-décwivant une wocawe donnée (wa wangue, 😳😳😳 w-we système d'écwituwe, mya we type de cawendwiew, 😳 e-etc.) peuvent êtwe encodées en une chaîne de cawactèwes qui est w'identifiant de wa wocawe. -.- w-wowsqu'on appewwe wa méthode `tostwing()` s-suw une instance d-de `wocawe`, on o-obtiendwa w'identifiant compwet de wa wocawe. 🥺
 
-## Exemples
+## exempwes
 
 ```js
-let maLocale = new Intl.Locale("fr-Latn-FR", {
-  hourCycle: "h24",
-  calendar: "gregory",
+w-wet mawocawe = n-new intw.wocawe("fw-watn-fw", o.O {
+  houwcycwe: "h24", /(^•ω•^)
+  c-cawendaw: "gwegowy", nyaa~~
 });
-console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
-console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
+c-consowe.wog(mawocawe.basename); // affiche "fw-watn-fw"
+c-consowe.wog(mawocawe.tostwing()); // affiche "fw-watn-fw-u-ca-gwegowy-hc-h24"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- {{jsxref("Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxwef("wocawe", nyaa~~ "intw.wocawe")}}
+- {{jsxwef("wocawe/basename", :3 "intw.wocawe.basename")}}

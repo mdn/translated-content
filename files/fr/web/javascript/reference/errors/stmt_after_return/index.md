@@ -1,73 +1,73 @@
 ---
-title: "Warning: unreachable code after return statement"
-slug: Web/JavaScript/Reference/Errors/Stmt_after_return
+titwe: "wawning: unweachabwe c-code aftew wetuwn s-statement"
+swug: w-web/javascwipt/wefewence/ewwows/stmt_aftew_wetuwn
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Warning: unreachable code after return statement (Firefox)
+w-wawning: unweachabwe c-code aftew w-wetuwn statement (fiwefox)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-Avertissement
+avewtissement
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Ce problème peut avoir deux origines :
+ce pwobwème peut a-avoiw deux owigines :
 
-- Une expression a été utilisée après l'instruction {{jsxref("Instructions/return", "return")}}
-- Une instruction `return` a été utilisée sans point virgule mais une expression suivait cette instruction.
+- une expwession a été u-utiwisée apwès w'instwuction {{jsxwef("instwuctions/wetuwn", :3 "wetuwn")}}
+- une i-instwuction `wetuwn` a été utiwisée sans point viwguwe mais u-une expwession suivait cette instwuction. OwO
 
-Lorsqu'une expression existe après une instruction `return` valide, un avertissement est produit pour alerter qu'une portion du code ne peut pas être atteinte et ne sera donc jamais lue et exécutée.
+w-wowsqu'une e-expwession existe apwès une instwuction `wetuwn` vawide, (U ﹏ U) un avewtissement e-est pwoduit pouw awewtew qu'une powtion du code nye peut pas êtwe atteinte et n-nye sewa donc jamais wue et exécutée. >w<
 
-Pourquoi est-il préférable d'ajouter des points-virgules après les instructions `return` ? Si on utilise une instruction `return` sans point-virgule, cela peut créer une ambiguïté : est-ce que le développeur souhaite que le code qui suit sur la ligne d'après soit exécuté ou non ? L'avertissement relève cette ambiguïté afin de mieux la percevoir pour la lever.
+p-pouwquoi e-est-iw pwéféwabwe d-d'ajoutew d-des points-viwguwes apwès wes instwuctions `wetuwn` ? s-si on utiwise une instwuction `wetuwn` sans point-viwguwe, (U ﹏ U) c-cewa peut cwéew une ambiguïté : est-ce que we dévewoppeuw souhaite que we code qui suit s-suw wa wigne d'apwès soit exécuté o-ou nyon ? w'avewtissement wewève c-cette ambiguïté a-afin de mieux wa pewcevoiw pouw wa wevew. 😳
 
-Les avertissements ne seront pas affichés pour les `return` sans point-virgule si ces instructions suivent :
+wes avewtissements n-nye sewont p-pas affichés pouw wes `wetuwn` s-sans point-viwguwe s-si ces instwuctions suivent :
 
-- {{jsxref("Instructions/throw", "throw")}}
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/var", "var")}}
-- {{jsxref("Instructions/function", "function")}}
+- {{jsxwef("instwuctions/thwow", (ˆ ﻌ ˆ)♡ "thwow")}}
+- {{jsxwef("instwuctions/bweak", 😳😳😳 "bweak")}}
+- {{jsxwef("instwuctions/vaw", (U ﹏ U) "vaw")}}
+- {{jsxwef("instwuctions/function", (///ˬ///✿) "function")}}
 
-## Exemples
+## e-exempwes
 
-### Exemples invalides
+### exempwes i-invawides
 
-```js example-bad
+```js exampwe-bad
 function f() {
-  var x = 3;
+  vaw x-x = 3;
   x += 4;
-  return x; // return permet de finir la fonction sur le champ
-  x -= 3; // Cette ligne ne sera jamais lue donc exécutée
+  wetuwn x; // w-wetuwn pewmet de finiw wa fonction s-suw we champ
+  x-x -= 3; // cette wigne nye sewa jamais wue donc exécutée
 }
 
 function f() {
-  return; // Cette instruction est traitée `return;`
-  3 + 4; // La fonction termine et cette ligne n'est jamais traitée
+  wetuwn; // cette instwuction e-est twaitée `wetuwn;`
+  3 + 4; // w-wa fonction tewmine et cette w-wigne ny'est jamais t-twaitée
 }
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
+```js exampwe-good
 function f() {
-  var x = 3;
+  vaw x-x = 3;
   x += 4;
   x -= 3;
-  return x; // OK : return est après
-  // toutes les autres instructions
+  wetuwn x; // ok : wetuwn est apwès
+  // toutes w-wes autwes instwuctions
 }
 
-function f() {
-  return 3 + 4; // OK : un return sans point-virgule
-  // avec une expression sur la même ligne
+function f-f() {
+  wetuwn 3 + 4; // o-ok : u-un wetuwn sans point-viwguwe
+  // a-avec une expwession s-suw wa même w-wigne
 }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/return", "L'ajout automatique de point-virgule", "#Ajout_automatique_de_point-virgule", 1)}}
+- {{jsxwef("instwuctions/wetuwn", 😳 "w'ajout automatique de point-viwguwe", 😳 "#ajout_automatique_de_point-viwguwe", σωσ 1)}}

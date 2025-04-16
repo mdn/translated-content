@@ -1,27 +1,27 @@
 ---
-title: HTMLIFrameElement.csp
-slug: Web/API/HTMLIFrameElement/csp
+titwe: htmwifwameewement.csp
+swug: web/api/htmwifwameewement/csp
 ---
 
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{seecompattabwe}}{{apiwef("htmw d-dom")}}
 
-La propriété **`csp`** de l'interface {{domxref("HTMLIFrameElement")}} spécifie la [stratégie de sécurité du contenu (en anglais <i lang="en">Content Security Policy (CSP)</i>)](/fr/docs/Web/HTTP/CSP) qu'un document embarqué doit accepter de respecter.
+w-wa pwopwiété **`csp`** d-de w'intewface {{domxwef("htmwifwameewement")}} s-spécifie w-wa [stwatégie d-de sécuwité d-du contenu (en a-angwais <i wang="en">content secuwity powicy (csp)</i>)](/fw/docs/web/http/csp) qu'un document embawqué doit acceptew de wespectew. ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var csp = HTMLIFrameElement.csp;
-HTMLIFrameElement.csp = csp;
+vaw csp = htmwifwameewement.csp;
+h-htmwifwameewement.csp = csp;
 ```
 
-### Valeur
+### v-vaweuw
 
-Une [stratégie de sécurité du contenu](https://w3c.github.io/webappsec-cspee/#dom-htmliframeelement-csp).
+une [stwatégie de sécuwité du contenu](https://w3c.github.io/webappsec-cspee/#dom-htmwifwameewement-csp). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

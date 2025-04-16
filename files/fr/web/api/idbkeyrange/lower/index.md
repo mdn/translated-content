@@ -1,71 +1,71 @@
 ---
-title: IDBKeyRange.lower
-slug: Web/API/IDBKeyRange/lower
+titwe: idbkeywange.wowew
+swug: w-web/api/idbkeywange/wowew
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La propriété **`lower`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie la borne inférieure de l'intervalle de clé.
+w-wa pwopwiété **`wowew`**, >w< w-wattachée à w-w'intewface {{domxwef("idbkeywange")}}, nyaa~~ w-wenvoie w-wa bowne inféwieuwe d-de w'intewvawwe d-de cwé. (✿oωo)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-monIntervalle.lower;
+monintewvawwe.wowew;
 ```
 
-### Valeur
+### vaweuw
 
-La borne inférieure de l'intervalle de clé (qui peut être d'un type quelconque).
+wa bowne inféwieuwe d-de w'intewvawwe de cwé (qui peut êtwe d-d'un type quewconque). ʘwʘ
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on voit comment utiliser un intervalle de clé. On déclare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — ce qui correspond à intervalle qui inclut tout ce qui se trouve entre "F" et "W" mais pas ces valeurs (l'intervalle est « ouvert »). Ensuite, on ouvre une transaction grâce à {{domxref("IDBTransaction")}}, un magasin d'objet et un curseur grâce à {{domxref("IDBObjectStore.openCursor")}} pour lequel on déclare que `keyRangeValue` est l'intervalle de clé optionnel.
+d-dans w'exempwe qui suit, (ˆ ﻌ ˆ)♡ on voit comment utiwisew un intewvawwe d-de cwé. 😳😳😳 on décwawe `keywangevawue = i-idbkeywange.uppewbound("f", :3 "w", t-twue, twue);` — ce qui cowwespond à intewvawwe qui incwut tout ce q-qui se twouve entwe "f" et "w" mais pas ces vaweuws (w'intewvawwe est « ouvewt »). OwO ensuite, on o-ouvwe une twansaction gwâce à {{domxwef("idbtwansaction")}}, (U ﹏ U) u-un magasin d'objet e-et un cuwseuw g-gwâce à {{domxwef("idbobjectstowe.opencuwsow")}} p-pouw wequew on décwawe que `keywangevawue` est w'intewvawwe d-de cwé optionnew. >w<
 
-Après avoir déclaré l'intervalle de clé, on affiche la valeur de la propriété `lower` dans la console (ce qui doit donner "F").
+apwès avoiw décwawé w'intewvawwe d-de cwé, (U ﹏ U) on affiche wa vaweuw de wa pwopwiété `wowew` dans wa consowe (ce qui doit donnew "f"). 😳
 
 ```js
-function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
-  console.log(keyRangeValue.lower);
+function dispwaydata() {
+  v-vaw keywangevawue = i-idbkeywange.bound("f", (ˆ ﻌ ˆ)♡ "w", t-twue, 😳😳😳 t-twue);
+  consowe.wog(keywangevawue.wowew);
 
-  var transaction = db.transaction(["fThings"], "readonly");
-  var objectStore = transaction.objectStore("fThings");
+  vaw twansaction = db.twansaction(["fthings"], (U ﹏ U) "weadonwy");
+  vaw objectstowe = t-twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
-      list.appendChild(listItem);
+  o-objectstowe.opencuwsow(keywangevawue).onsuccess = function (event) {
+    v-vaw cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      vaw wistitem = d-document.cweateewement("wi");
+      wistitem.innewhtmw =
+        "<stwong>" + c-cuwsow.vawue.fthing + "</stwong>, (///ˬ///✿) " + cuwsow.vawue.fwating;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("Les éléments ont été affichés.");
+      c-cuwsow.continue();
+    } ewse {
+      c-consowe.wog("wes éwéments ont été affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
+> [!note]
+> p-pouw un exempwe c-compwet qui utiwise wes intewvawwes de cwé, 😳 vous pouvez consuwtew [we dépôt github idbkeywange-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbkeywange) ([ainsi que wa démonstwation a-associée](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbkeywange/)). 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew i-indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes t-twansactions : {{domxwef("idbtwansaction")}}
+- définiw un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- wécupéwew et modifiew w-wes données : {{domxwef("idbobjectstowe")}}
+- utiwisew wes c-cuwseuws {{domxwef("idbcuwsow")}}
+- e-exempwe de w-wéféwence : [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). σωσ

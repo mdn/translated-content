@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.getUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
+titwe: date.pwototype.getutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCSeconds()`** renvoie les secondes de la date renseignée, d'après UTC.
+w-wa méthode **`getutcseconds()`** w-wenvoie w-wes secondes d-de wa date wenseignée, OwO d-d'apwès u-utc. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcseconds()")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+```js intewactive-exampwe
+c-const moonwanding = nyew date("juwy 20, >_< 1969, rawr x3 20:18:04 utc");
 
-console.log(moonLanding.getUTCSeconds());
-// Expected output: 4
+consowe.wog(moonwanding.getutcseconds());
+// expected output: 4
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getUTCSeconds();
+dateobj.getutcseconds();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un entier entre 0 et 59 correspondant au nombre de secondes écoulées pour la date indiquée selon le temps universel.
+un entiew entwe 0 et 59 c-cowwespondant au nyombwe de secondes écouwées pouw wa date i-indiquée sewon we temps univewsew. mya
 
-## Exemples
+## e-exempwes
 
-### Utiliser `getUTCSeconds()`
+### u-utiwisew `getutcseconds()`
 
-L'exemple suivant assigne les secondes de la date actuelle à la variable `secondes`.
+w'exempwe suivant assigne wes secondes de wa date actuewwe à w-wa vawiabwe `secondes`. nyaa~~
 
 ```js
-var aujourdhui = new Date();
-var secondes = aujourdhui.getUTCSeconds();
+vaw aujouwdhui = nyew date();
+vaw secondes = aujouwdhui.getutcseconds();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

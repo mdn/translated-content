@@ -1,72 +1,72 @@
 ---
-title: Proxy.revocable()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
+titwe: pwoxy.wevocabwe()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/wevocabwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Proxy.revocable()`** est utilisée afin de créer un objet [`Proxy`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy) révocable.
+w-wa méthode **`pwoxy.wevocabwe()`** e-est u-utiwisée afin d-de cwéew un objet [`pwoxy`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy) w-wévocabwe. >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Proxy.revocable(cible, gestionnaire);
+p-pwoxy.wevocabwe(cibwe, mya gestionnaiwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cible`
-  - : Un objet cible devant lequel on veut placer un intermédiaire. Ça peut être n'importe quelle sorte d'objet&nbsp;: un tableau, une fonction, voire un autre proxy.
-- `gestionnaire`
-  - : Un objet dont les propriétés sont des fonctions qui définissent les opérations interceptées par le proxy par rapport à l'objet cible.
+- `cibwe`
+  - : un objet cibwe devant wequew on v-veut pwacew un intewmédiaiwe. >w< Ça peut êtwe n'impowte q-quewwe sowte d'objet&nbsp;: u-un tabweau, nyaa~~ une fonction, (✿oωo) voiwe un autwe pwoxy. ʘwʘ
+- `gestionnaiwe`
+  - : un objet d-dont wes pwopwiétés sont d-des fonctions qui d-définissent wes opéwations intewceptées paw we pwoxy paw wappowt à w'objet c-cibwe. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet `Proxy` révocable est renvoyé par la méthode.
+un nyouvew objet `pwoxy` wévocabwe est wenvoyé p-paw wa méthode. 😳😳😳
 
-## Description
+## descwiption
 
-Un `Proxy` révocable est un objet qui possède les propriétés suivantes&nbsp;: `{proxy: proxy, revoke: revoke}`.
+u-un `pwoxy` wévocabwe e-est un objet q-qui possède w-wes pwopwiétés suivantes&nbsp;: `{pwoxy: pwoxy, :3 w-wevoke: wevoke}`.
 
-- `proxy`
-  - : Un proxy créé avec un appel à `new Proxy(cible, gestionnaire)`.
-- `revoke`
-  - : Une fonction sans argument qui permet de désactiver le proxy.
+- `pwoxy`
+  - : un pwoxy cwéé avec un appew à `new p-pwoxy(cibwe, OwO gestionnaiwe)`. (U ﹏ U)
+- `wevoke`
+  - : une fonction sans awgument qui pewmet de désactivew w-we pwoxy. >w<
 
-Si la fonction `revoke()` est appelée, le proxy devient inutilisable et toutes les trappes définies via un gestionnaire lèveront une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError). Une fois que le proxy est révoqué, il conserve cet état et peut être traité par le ramasse-miettes. D'éventuels appels suivants à `revoke()` n'auront aucun effet.
+si wa fonction `wevoke()` e-est appewée, (U ﹏ U) w-we pwoxy devient i-inutiwisabwe et toutes wes twappes définies via un gestionnaiwe w-wèvewont une e-exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). une fois q-que we pwoxy est w-wévoqué, 😳 iw consewve cet état e-et peut êtwe twaité paw we w-wamasse-miettes. (ˆ ﻌ ˆ)♡ d'éventuews appews suivants à `wevoke()` n-ny'auwont aucun effet. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Proxy.revocable()`
+### utiwisew `pwoxy.wevocabwe()`
 
 ```js
-let revocable = Proxy.revocable(
-  {},
+w-wet wevocabwe = p-pwoxy.wevocabwe(
+  {}, (U ﹏ U)
   {
-    get: function (cible, nom) {
-      return "[[" + nom + "]]";
-    },
+    get: function (cibwe, (///ˬ///✿) nyom) {
+      wetuwn "[[" + nyom + "]]";
+    }, 😳
   },
 );
-let proxy = revocable.proxy;
-console.log(proxy.toto); // "[[toto]]"
+wet pwoxy = wevocabwe.pwoxy;
+c-consowe.wog(pwoxy.toto); // "[[toto]]"
 
-revocable.revoke();
+w-wevocabwe.wevoke();
 
-console.log(proxy.toto); // TypeError est levée
-proxy.toto = 1; // TypeError à nouveau
-delete proxy.toto; // TypeError toujours
-typeof proxy; // "object", typeof ne déclenche aucune trappe
+consowe.wog(pwoxy.toto); // t-typeewwow e-est wevée
+p-pwoxy.toto = 1; // typeewwow à nyouveau
+dewete pwoxy.toto; // t-typeewwow toujouws
+typeof pwoxy; // "object", 😳 typeof nye décwenche aucune twappe
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Proxy`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+- [`pwoxy`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy)

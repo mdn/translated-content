@@ -1,122 +1,122 @@
 ---
-title: IDBIndex.get()
-slug: Web/API/IDBIndex/get
+titwe: idbindex.get()
+swug: web/api/idbindex/get
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La méthode **`get()`** de l'interface {{domxref("IDBIndex")}} fait une requête ({{domxref("IDBRequest")}}) pour renvoyer le premier enregistrement correspondant à la clé ou l'intervalle de clé {{domxref("IDBKeyRange","")}} du magasin d'objet suivant l'index.
+w-wa méthode **`get()`** d-de w'intewface {{domxwef("idbindex")}} f-fait une wequête ({{domxwef("idbwequest")}}) p-pouw wenvoyew we p-pwemiew enwegistwement c-cowwespondant à w-wa cwé ou w'intewvawwe de cwé {{domxwef("idbkeywange","")}} du magasin d'objet suivant w-w'index. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-var request = myIndex.get(key);
+vaw wequest = m-myindex.get(key);
 ```
 
-## Paramètre
+## pawamètwe
 
 - `key`
-  - : la clé ou l'intervalle de clé ({{domxref("IDBKeyRange")}}) de l'enregistrement dont on cherche la valeur.
+  - : wa cwé o-ou w'intewvawwe de cwé ({{domxwef("idbkeywange")}}) de w'enwegistwement dont on c-chewche wa vaweuw. >_<
 
-## Valeur de retour
+## vaweuw d-de wetouw
 
-- Une requête ({{domxref("IDBRequest")}})
-  - : La propriété "result" ({{domxref("IDBRequest.result")}}) de cette requête renvoie en cas de succès le premier enregistrement correspondant à la clé ou à l'intervalle de clé. Le résultat contient l'enregistrement { key: la clé, value: un_clone_structuré_de_la_valeur }.
+- une w-wequête ({{domxwef("idbwequest")}})
+  - : wa pwopwiété "wesuwt" ({{domxwef("idbwequest.wesuwt")}}) de cette wequête wenvoie en cas de succès w-we pwemiew enwegistwement cowwespondant à wa cwé ou à w'intewvawwe de cwé. w-we wésuwtat contient w'enwegistwement { k-key: w-wa cwé, rawr x3 vawue: u-un_cwone_stwuctuwé_de_wa_vaweuw }. /(^•ω•^)
 
-## Exceptions
+## e-exceptions
 
-- `TransactionInactiveError`
-  - : Cette exception ( {{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet de cet index est inactive.
-- `DataError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si la clé ou l'intervalle de clé ({{domxref("IDBKeyRange")}}) est invalide.
-- `InvalidStateError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index à été supprimé.
+- `twansactioninactiveewwow`
+  - : cette exception ( {{domxwef("domexception")}}) est wevée s-si wa twansaction ({{domxwef("idbtwansaction")}}) dont dépend w'accès ({{domxwef("idbobjectstowe")}}) a-au magasin d'objet de cet index est inactive. :3
+- `dataewwow`
+  - : cette exception ({{domxwef("domexception")}}) est wevée s-si wa cwé ou w'intewvawwe de c-cwé ({{domxwef("idbkeywange")}}) e-est invawide. (ꈍᴗꈍ)
+- `invawidstateewwow`
+  - : c-cette exception ({{domxwef("domexception")}}) est wevée si w'index à été s-suppwimé. /(^•ω•^)
 
-## Exemple
+## e-exempwe
 
-Dans l'exemple suivant on ouvre une transaction puis un magasin d'objet et enfin l'index `lName`.
+dans w'exempwe s-suivant on ouvwe u-une twansaction puis un magasin d-d'objet et enfin w'index `wname`. (⑅˘꒳˘)
 
-Le code `myIndex.get('Bungle')` renvoie une requête qui cherche sur l'index un enregistrement dont la clé `lName` est `Bungle`. En cas de sucés le résultat de la requête qui contient l'enregistrement est affiché sur la console.
+w-we code `myindex.get('bungwe')` wenvoie une wequête qui chewche s-suw w'index un enwegistwement d-dont wa cwé `wname` est `bungwe`. ( ͡o ω ͡o ) e-en cas de s-sucés we wésuwtat de wa wequête qui contient w'enwegistwement est affiché suw wa consowe. òωó
 
-Finalement, on itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.
+finawement, (⑅˘꒳˘) on i-itèwe suw tous w-wes enwegistwements pouw en inséwew w-wes données d-dans un tabweau h-htmw. XD en utiwisant wa méthode {{domxwef("idbindex.opencuwsow")}} qui twavaiwwe de wa même façon q-que wa méthode {{domxwef("idbobjectstowe.opencuwsow")}} de w'accès ({{domxwef("idbobjectstowe")}}) au magasin d'objet sauf q-que wes enwegistwements sont wenvoyés d-dans w'owdwe d-de w'index e-et nyon cewui du magasin d'objet. -.-
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+f-function d-dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
 
-  //ouvre un transaction
-  var transaction = db.transaction(["contactsList"], "readonly");
-  //accés au magasin d'objet
-  var objectStore = transaction.objectStore("contactsList");
+  //ouvwe u-un twansaction
+  vaw twansaction = db.twansaction(["contactswist"], :3 "weadonwy");
+  //accés a-au m-magasin d'objet
+  v-vaw objectstowe = t-twansaction.objectstowe("contactswist");
 
-  //on récupère l'index
-  var myIndex = objectStore.index("lName");
-  //requête de recherche
-  var getRequest = myIndex.get("Bungle");
+  //on w-wécupèwe w'index
+  vaw myindex = objectstowe.index("wname");
+  //wequête de wechewche
+  v-vaw getwequest = myindex.get("bungwe");
   //en cas de succès
-  getRequest.onsuccess = function () {
-    console.log(getRequest.result);
+  getwequest.onsuccess = function () {
+    consowe.wog(getwequest.wesuwt);
   };
 
-  //un curseur qui itère sur l'index
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  //un c-cuwseuw qui itèwe suw w'index
+  myindex.opencuwsow().onsuccess = function (event) {
+    v-vaw cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      v-vaw tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        c-cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        c-cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      t-tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Tous les enregistrements ont été affichés.");
+      cuwsow.continue();
+    } e-ewse {
+      consowe.wog("tous w-wes enwegistwements o-ont été affichés.");
     }
   };
 }
 ```
 
-> [!NOTE]
-> Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!note]
+> pouw un exempwe d-de twavaiw compwet, nyaa~~ v-voiw nyotwe [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) a-app ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/)). 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew i-indexeddb")}}
+- {{domxwef("idbdatabase","débutew u-une c-connexion")}}
+- {{domxwef("idbtwansaction","utiwisé wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w-w'intewvawwe des c-cwés")}}
+- {{domxwef("idbobjectstowe","accès aux magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew w-wes cuwseuw")}}
+- exempwe de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

@@ -1,347 +1,347 @@
 ---
-title: Utiliser les promesses
-slug: Web/JavaScript/Guide/Using_promises
+titwe: utiwisew wes pwomesses
+s-swug: web/javascwipt/guide/using_pwomises
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/we_modèwe_objet_javascwipt_en_détaiws", (˘ω˘) "web/javascwipt/guide/itewateuws_et_genewateuws")}}
 
-Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.
+u-une pwomesse e-est un objet ({{jsxwef("pwomise")}}) q-qui wepwésente w-wa compwétion o-ou w'échec d-d'une opéwation asynchwone. wa pwupawt du temps, 🥺 on « consomme » des pwomesses e-et c'est donc ce que nyous vewwons dans wa p-pwemièwe pawtie de ce guide pouw e-ensuite expwiquew comment wes cwéew. ^^
 
-En résumé, une promesse est un objet qui est renvoyé et auquel on attache des _callbacks_ plutôt que de passer des _callbacks_ à une fonction. Ainsi, au lieu d'avoir une fonction qui prend deux _callbacks_ en arguments :
+en wésumé, >w< une pwomesse e-est un objet qui est wenvoyé e-et auquew on attache d-des _cawwbacks_ pwutôt que de passew des _cawwbacks_ à une fonction. ^^;; ainsi, au wieu d'avoiw u-une fonction qui pwend deux _cawwbacks_ en awguments :
 
 ```js
-function faireQqcALAncienne(successCallback, failureCallback) {
-  console.log("C'est fait");
-  // réussir une fois sur deux
-  if (Math.random() > 0.5) {
-    successCallback("Réussite");
-  } else {
-    failureCallback("Échec");
+function faiweqqcawancienne(successcawwback, (˘ω˘) faiwuwecawwback) {
+  consowe.wog("c'est f-fait");
+  // wéussiw une f-fois suw deux
+  i-if (math.wandom() > 0.5) {
+    s-successcawwback("wéussite");
+  } e-ewse {
+    faiwuwecawwback("Échec");
   }
 }
 
-function successCallback(résultat) {
-  console.log("L'opération a réussi avec le message : " + résultat);
+function successcawwback(wésuwtat) {
+  consowe.wog("w'opéwation a-a wéussi avec we message : " + wésuwtat);
 }
 
-function failureCallback(erreur) {
-  console.error("L'opération a échoué avec le message : " + erreur);
+f-function faiwuwecawwback(ewweuw) {
+  consowe.ewwow("w'opéwation a échoué avec we message : " + ewweuw);
 }
 
-faireQqcALAncienne(successCallback, failureCallback);
+faiweqqcawancienne(successcawwback, OwO faiwuwecawwback);
 ```
 
-On aura une fonction qui renvoie une promesse et on attachera les callbacks sur cette promesse :
+o-on auwa une fonction qui w-wenvoie une pwomesse e-et on attachewa w-wes cawwbacks suw cette pwomesse :
 
 ```js
-function faireQqc() {
-  return new Promise((successCallback, failureCallback) => {
-    console.log("C'est fait");
-    // réussir une fois sur deux
-    if (Math.random() > 0.5) {
-      successCallback("Réussite");
-    } else {
-      failureCallback("Échec");
+function faiweqqc() {
+  wetuwn n-new pwomise((successcawwback, (ꈍᴗꈍ) f-faiwuwecawwback) => {
+    consowe.wog("c'est f-fait");
+    // w-wéussiw une fois suw d-deux
+    if (math.wandom() > 0.5) {
+      successcawwback("wéussite");
+    } e-ewse {
+      faiwuwecawwback("Échec");
     }
   });
 }
 
-const promise = faireQqc();
-promise.then(successCallback, failureCallback);
+const pwomise = f-faiweqqc();
+pwomise.then(successcawwback, òωó faiwuwecawwback);
 ```
 
-ou encore :
+o-ou encowe :
 
 ```js
-faireQqc().then(successCallback, failureCallback);
+faiweqqc().then(successcawwback, ʘwʘ f-faiwuwecawwback);
 ```
 
-Cette dernière forme est ce qu'on appelle _un appel de fonction asynchrone_. Cette convention possède différents avantages dont le premier est _le chaînage_.
+c-cette dewnièwe fowme est ce qu'on appewwe _un appew de fonction asynchwone_. ʘwʘ cette convention possède difféwents a-avantages dont w-we pwemiew est _we chaînage_. nyaa~~
 
-## Garanties
+## g-gawanties
 
-À la différence des imbrications de _callbacks_, une promesse apporte certaines garanties :
+À w-wa difféwence d-des imbwications de _cawwbacks_, UwU une pwomesse appowte cewtaines g-gawanties :
 
-- Les _callbacks_ ne seront jamais appelés avant la fin du parcours de la boucle d'évènements JavaScript courante
-- Les _callbacks_ ajoutés grâce à `then` seront appelés, y compris après le succès ou l'échec de l'opération asynchrone
-- Plusieurs _callbacks_ peuvent être ajoutés en appelant `then` plusieurs fois, ils seront alors exécutés l'un après l'autre selon l'ordre dans lequel ils ont été insérés.
+- wes _cawwbacks_ nye sewont jamais appewés avant wa fin du pawcouws d-de wa boucwe d'évènements j-javascwipt couwante
+- w-wes _cawwbacks_ a-ajoutés gwâce à `then` s-sewont appewés, (⑅˘꒳˘) y-y compwis apwès w-we succès o-ou w'échec de w'opéwation asynchwone
+- pwusieuws _cawwbacks_ peuvent êtwe a-ajoutés e-en appewant `then` p-pwusieuws f-fois, (˘ω˘) iws sewont a-awows exécutés w'un apwès w'autwe sewon w'owdwe dans wequew i-iws ont été inséwés. :3
 
-## Chaînage des promesses
+## chaînage des pwomesses
 
-Un besoin fréquent est d'exécuter deux ou plus d'opérations asynchrones les unes à la suite des autres, avec chaque opération qui démarre lorsque la précédente a réussi et en utilisant le résultat de l'étape précédente. Ceci peut être réalisé en créant une chaîne de promesses.
+un besoin fwéquent est d'exékawaii~w d-deux ou pwus d'opéwations asynchwones wes unes à wa suite des a-autwes, (˘ω˘) avec chaque o-opéwation qui d-démawwe wowsque wa pwécédente a-a wéussi et en utiwisant we w-wésuwtat de w'étape p-pwécédente. nyaa~~ ceci peut êtwe wéawisé en cwéant une chaîne de pwomesses. (U ﹏ U)
 
-La méthode `then()` renvoie une _nouvelle_ promesse, différente de la première :
+wa méthode `then()` w-wenvoie une _nouvewwe_ p-pwomesse, nyaa~~ difféwente de wa pwemièwe :
 
 ```js
-const promise = faireQqc();
-const promise2 = promise.then(successCallback, failureCallback);
+c-const pwomise = f-faiweqqc();
+const pwomise2 = pwomise.then(successcawwback, ^^;; faiwuwecawwback);
 ```
 
-ou encore :
+o-ou encowe :
 
 ```js
-const promise2 = faireQqc().then(successCallback, failureCallback);
+c-const pwomise2 = faiweqqc().then(successcawwback, OwO f-faiwuwecawwback);
 ```
 
-La deuxième promesse (`promise2`) indique l'état de complétion, pas uniquement pour `faireQqc()` mais aussi pour le callback qui lui a été passé (`successCallback` ou `failureCallback`) qui peut aussi être une fonction asynchrone qui renvoie une promesse. Lorsque c'est le cas, tous les _callbacks_ ajoutés à `promise2` forment une file derrière la promesse renvoyée par `successCallback` ou `failureCallback`.
+w-wa deuxième pwomesse (`pwomise2`) indique w'état de compwétion, nyaa~~ pas uniquement p-pouw `faiweqqc()` m-mais aussi pouw w-we cawwback qui wui a été passé (`successcawwback` o-ou `faiwuwecawwback`) q-qui peut aussi êtwe u-une fonction asynchwone qui wenvoie une pwomesse. UwU wowsque c'est we cas, 😳 tous w-wes _cawwbacks_ a-ajoutés à `pwomise2` fowment une fiwe dewwièwe w-wa pwomesse wenvoyée p-paw `successcawwback` ou `faiwuwecawwback`. 😳
 
-Autrement dit, chaque promesse représente l'état de complétion d'une étape asynchrone au sein de cette succession d'étapes.
+autwement dit, (ˆ ﻌ ˆ)♡ chaque pwomesse w-wepwésente w'état de compwétion d'une étape asynchwone au sein de cette s-succession d'étapes. (✿oωo)
 
-Auparavant, l'enchaînement de plusieurs opérations asynchrones déclenchait une pyramide dantesque de _callbacks_ :
+aupawavant, nyaa~~ w'enchaînement d-de pwusieuws o-opéwations asynchwones décwenchait une pywamide dantesque de _cawwbacks_ :
 
 ```js
-faireQqc(function (result) {
-  faireAutreChose(
-    result,
-    function (newResult) {
-      faireUnTroisiemeTruc(
-        newResult,
-        function (finalResult) {
-          console.log("Résultat final :" + finalResult);
-        },
-        failureCallback,
+f-faiweqqc(function (wesuwt) {
+  f-faiweautwechose(
+    wesuwt, ^^
+    function (newwesuwt) {
+      faiweuntwoisiemetwuc(
+        nyewwesuwt, (///ˬ///✿)
+        f-function (finawwesuwt) {
+          consowe.wog("wésuwtat f-finaw :" + finawwesuwt);
+        }, 😳
+        faiwuwecawwback, òωó
       );
-    },
-    failureCallback,
+    }, ^^;;
+    faiwuwecawwback, rawr
   );
-}, failureCallback);
+}, f-faiwuwecawwback);
 ```
 
-Grâce à des fonctions plus modernes et aux promesses, on attache les _callbacks_ aux promesses qui sont renvoyées. On peut ainsi construire une _chaîne de promesses_ :
+gwâce à d-des fonctions p-pwus modewnes et aux pwomesses, (ˆ ﻌ ˆ)♡ o-on attache wes _cawwbacks_ a-aux pwomesses qui s-sont wenvoyées. XD o-on peut ainsi constwuiwe une _chaîne d-de pwomesses_ :
 
 ```js
-faireQqc()
-  .then(function (result) {
-    return faireAutreChose(result);
+f-faiweqqc()
+  .then(function (wesuwt) {
+    wetuwn faiweautwechose(wesuwt);
   })
-  .then(function (newResult) {
-    return faireUnTroisiemeTruc(newResult);
+  .then(function (newwesuwt) {
+    w-wetuwn faiweuntwoisiemetwuc(newwesuwt);
   })
-  .then(function (finalResult) {
-    console.log("Résultat final : " + finalResult);
+  .then(function (finawwesuwt) {
+    c-consowe.wog("wésuwtat f-finaw : " + finawwesuwt);
   })
-  .catch(failureCallback);
+  .catch(faiwuwecawwback);
 ```
 
-Les arguments passés à `then` sont optionnels. La forme `catch(failureCallback)` est un alias plus court pour `then(null, failureCallback)`. Ces chaînes de promesses sont parfois construites avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
+wes a-awguments passés à `then` sont o-optionnews. >_< wa f-fowme `catch(faiwuwecawwback)` est un awias pwus couwt pouw `then(nuww, (˘ω˘) faiwuwecawwback)`. 😳 c-ces chaînes d-de pwomesses s-sont pawfois c-constwuites avec [des fonctions f-fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) :
 
 ```js
-faireQqc()
-  .then((result) => faireAutreChose(result))
-  .then((newResult) => faireUnTroisiemeTruc(newResult))
-  .then((finalResult) => {
-    console.log("Résultat final : " + finalResult);
+faiweqqc()
+  .then((wesuwt) => faiweautwechose(wesuwt))
+  .then((newwesuwt) => faiweuntwoisiemetwuc(newwesuwt))
+  .then((finawwesuwt) => {
+    consowe.wog("wésuwtat finaw : " + f-finawwesuwt);
   })
-  .catch(failureCallback);
+  .catch(faiwuwecawwback);
 ```
 
-> [!WARNING]
-> Cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les _callbacks_ ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : `() => x` est synonyme de `() => { return x; }`).
+> [!wawning]
+> cewa impwique q-que wes fonctions asynchwones w-wenvoient toutes des pwomesses, o.O s-sinon wes _cawwbacks_ nye pouwwont êtwe c-chaînés e-et wes ewweuws n-nye sewont p-pas intewceptées (wes f-fonctions fwéchées ont une vaweuw de wetouw impwicite si wes accowades nye sont pas utiwisées : `() => x` est synonyme d-de `() => { wetuwn x-x; }`). (ꈍᴗꈍ)
 
-### Chaînage après un catch
+### c-chaînage apwès un catch
 
-Il est possible de chaîner de nouvelles actions _après_ un rejet, c'est-à-dire un `catch`. C'est utile pour accomplir de nouvelles actions après qu'une action ait échoué dans la chaine. Par exemple :
+iw e-est possibwe de chaînew de nyouvewwes actions _apwès_ un wejet, rawr x3 c-c'est-à-diwe u-un `catch`. ^^ c'est utiwe pouw accompwiw d-de nyouvewwes actions apwès qu'une action a-ait échoué dans w-wa chaine. OwO paw exempwe :
 
 ```js
-new Promise((resolve, reject) => {
-  console.log("Initial");
+n-nyew pwomise((wesowve, ^^ w-weject) => {
+  consowe.wog("initiaw");
 
-  resolve();
+  wesowve();
 })
   .then(() => {
-    throw new Error("Something failed");
+    thwow nyew ewwow("something f-faiwed");
 
-    console.log("Do this");
+    c-consowe.wog("do t-this");
   })
   .catch(() => {
-    console.error("Do that");
+    c-consowe.ewwow("do t-that");
   })
   .then(() => {
-    console.log("Do this whatever happened before");
+    consowe.wog("do t-this nyanievew h-happened befowe");
   });
 ```
 
-Cela va produire la sortie suivante :
+cewa va pwoduiwe w-wa sowtie suivante :
 
 ```
-Initial
-Do that
-Do this whatever happened before
+initiaw
+d-do that
+do this nyanievew h-happened befowe
 ```
 
-Notez que le texte "Do this" n'est pas affiché car l'erreur "Something failed" a produit un rejet.
+nyotez que we texte "do this" n-ny'est pas affiché caw w'ewweuw "something f-faiwed" a pwoduit u-un wejet. :3
 
-## Propagation des erreurs
+## pwopagation des e-ewweuws
 
-Dans les exemples précédents, `failureCallback` était présent trois fois dans la pyramide de _callbacks_ et une seule fois, à la fin, dans la chaîne des promesses :
+dans wes exempwes pwécédents, o.O `faiwuwecawwback` était pwésent twois f-fois dans wa pywamide d-de _cawwbacks_ e-et une seuwe fois, -.- à wa fin, (U ﹏ U) dans wa chaîne des pwomesses :
 
 ```js
-faireQqc()
-  .then((result) => faireAutreChose(result))
-  .then((newResult) => faireUnTroisiemeTruc(newResult))
-  .then((finalResult) => console.log("Résultat final : " + finalResult))
-  .catch(failureCallback);
+f-faiweqqc()
+  .then((wesuwt) => faiweautwechose(wesuwt))
+  .then((newwesuwt) => faiweuntwoisiemetwuc(newwesuwt))
+  .then((finawwesuwt) => c-consowe.wog("wésuwtat f-finaw : " + finawwesuwt))
+  .catch(faiwuwecawwback);
 ```
 
-En fait, dès qu'une exception est levée, la chaîne de promesses utilisera le premier `catch()` ou `onRejected` disponible. Ce fonctionnement est assez proche de ce qu'on peut trouver pour du code synchrone :
+e-en fait, o.O dès qu'une exception e-est wevée, OwO w-wa chaîne de pwomesses utiwisewa we pwemiew `catch()` o-ou `onwejected` disponibwe. ^•ﻌ•^ ce fonctionnement e-est assez pwoche d-de ce qu'on peut twouvew pouw d-du code synchwone :
 
 ```js
-try {
-  const result = syncFaireQqc();
-  const newResult = syncFaireQqcAutre(result);
-  const finalResult = syncFaireUnTroisiemeTruc(newResult);
-  console.log("Résultat final : " + finalResult);
-} catch (error) {
-  failureCallback(error);
+twy {
+  const wesuwt = s-syncfaiweqqc();
+  c-const nyewwesuwt = s-syncfaiweqqcautwe(wesuwt);
+  const finawwesuwt = syncfaiweuntwoisiemetwuc(newwesuwt);
+  consowe.wog("wésuwtat finaw : " + finawwesuwt);
+} catch (ewwow) {
+  faiwuwecawwback(ewwow);
 }
 ```
 
-Cette symétrie entre le code asynchrone et le code synchrone atteint son paroxysme avec le couple d'opérateurs [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Statements/async_function) d'ECMAScript 2017:
+cette symétwie entwe we code asynchwone et we code synchwone atteint son p-pawoxysme avec w-we coupwe d'opéwateuws [`async`/`await`](/fw/docs/web/javascwipt/wefewence/statements/async_function) d'ecmascwipt 2017:
 
 ```js
-async function toto() {
-  try {
-    const result = await faireQqc();
-    const newResult = await faireQqcAutre(result);
-    const finalResult = await faireUnTroisiemeTruc(newResult);
-    console.log("Résultat final : " + finalResult);
-  } catch (error) {
-    failureCallback(error);
+async function t-toto() {
+  twy {
+    c-const wesuwt = a-await faiweqqc();
+    const n-nyewwesuwt = await faiweqqcautwe(wesuwt);
+    c-const f-finawwesuwt = await faiweuntwoisiemetwuc(newwesuwt);
+    c-consowe.wog("wésuwtat finaw : " + f-finawwesuwt);
+  } c-catch (ewwow) {
+    faiwuwecawwback(ewwow);
   }
 }
 ```
 
-Ce fonctionnement est construit sur les promesses et `faireQqc()` est la même fonction que celle utilisée dans les exemples précédents.
+ce fonctionnement e-est constwuit s-suw wes p-pwomesses et `faiweqqc()` e-est wa m-même fonction q-que cewwe utiwisée d-dans wes exempwes p-pwécédents. ʘwʘ
 
-Les promesses permettent de résoudre les problèmes de cascades infernales de _callbacks_ notamment en interceptant les différentes erreurs (exceptions et erreurs de programmation). Ceci est essentiel pour obtenir une composition fonctionnelle des opérations asynchrones.
+w-wes pwomesses pewmettent de w-wésoudwe wes p-pwobwèmes de cascades i-infewnawes de _cawwbacks_ n-nyotamment en intewceptant wes difféwentes ewweuws (exceptions e-et ewweuws de pwogwammation). :3 ceci est essentiew p-pouw obteniw une c-composition fonctionnewwe d-des opéwations asynchwones.
 
-## Évènements liés à la rupture d'une promesse
+## Évènements w-wiés à wa wuptuwe d'une p-pwomesse
 
-Lorsqu'une promesse est rompue/rejetée, un des deux évènements suivants est envoyé au niveau de la portée globale ({{domxref("window")}} ou {{domxref("Worker")}} si le script est utilisé dans un _worker_) :
+wowsqu'une pwomesse e-est wompue/wejetée, 😳 un des deux évènements s-suivants est envoyé au nyiveau de wa powtée gwobawe ({{domxwef("window")}} ou {{domxwef("wowkew")}} si we scwipt e-est utiwisé dans un _wowkew_) :
 
-- {{domxref("Window.rejectionhandled_event","rejectionhandled")}}
-  - : Cet évènement est envoyé lorsqu'une promesse est rompue et après que le rejet ai été traité par la fonction `reject` associée à la promesse.
-- {{domxref("Window.unhandledrejection_event","unhandledrejection")}}
-  - : Cet évènement est envoyé lorsque la promesse est rompue et qu'aucune fonction n'a été définie pour gérer le rejet de la promesse.
+- {{domxwef("window.wejectionhandwed_event","wejectionhandwed")}}
+  - : c-cet évènement e-est envoyé wowsqu'une pwomesse est wompue et apwès q-que we wejet ai été twaité p-paw wa fonction `weject` a-associée à w-wa pwomesse.
+- {{domxwef("window.unhandwedwejection_event","unhandwedwejection")}}
+  - : cet évènement est envoyé wowsque w-wa pwomesse e-est wompue et qu'aucune fonction n-n'a été définie pouw géwew we wejet de wa pwomesse. òωó
 
-Dans les deux cas, l'évènement (dont le type est {{domxref("PromiseRejectionEvent")}}) aura deux propriétés :
+d-dans wes deux cas, 🥺 w'évènement (dont w-we type est {{domxwef("pwomisewejectionevent")}}) a-auwa deux pwopwiétés :
 
-- {{domxref("PromiseRejectionEvent.promise","promise")}}
-  - : La promesse qui a été rompue.
-- {{domxref("PromiseRejectionEvent.reason","reason")}}
-  - : La raison pour laquelle la promesse a été rompue.
+- {{domxwef("pwomisewejectionevent.pwomise","pwomise")}}
+  - : w-wa pwomesse qui a été w-wompue. rawr x3
+- {{domxwef("pwomisewejectionevent.weason","weason")}}
+  - : w-wa waison p-pouw waquewwe w-wa pwomesse a été wompue. ^•ﻌ•^
 
-Gérer ces évènements permet d'avoir une ultime méthode pour gérer le rejet des promesses. Cela peut notamment s'avérer utile pour le débogage. Ces évènements sont déclenchés au niveau global et permettent ainsi d'intercepter les erreurs pour chaque contexte (fenêtre ou _worker_)
+géwew c-ces évènements p-pewmet d'avoiw u-une uwtime m-méthode pouw géwew w-we wejet des p-pwomesses. :3 cewa p-peut nyotamment s-s'avéwew utiwe pouw we débogage. (ˆ ﻌ ˆ)♡ c-ces évènements sont décwenchés a-au nyiveau gwobaw et pewmettent a-ainsi d'intewceptew w-wes e-ewweuws pouw chaque contexte (fenêtwe ou _wowkew_)
 
 ```js
-window.addEventListener(
-  "unhandledrejection",
+window.addeventwistenew(
+  "unhandwedwejection", (U ᵕ U❁)
   (event) => {
-    // Examiner la ou les promesse(s) qui posent problème en debug
-    // Nettoyer ce qui doit l'être quand ça se produit en réel
-  },
-  false,
+    // e-examinew wa ou w-wes pwomesse(s) q-qui posent pwobwème en debug
+    // nyettoyew ce qui doit w'êtwe q-quand ça se p-pwoduit en wéew
+  }, :3
+  fawse, ^^;;
 );
 ```
 
-## Envelopper les _callbacks_ des API
+## e-envewoppew w-wes _cawwbacks_ des api
 
-Il est possible de créer un objet {{jsxref("Promise")}} grâce à son constructeur. Et même si, idéalement, cela ne devrait pas être nécessaire, certaines API fonctionnent toujours avec des _callbacks_ passés en arguments. C'est notamment le cas de la méthode {{domxref("WindowTimers.setTimeout", "setTimeout()")}} :
+iw est possibwe de cwéew un objet {{jsxwef("pwomise")}} g-gwâce à s-son constwucteuw. ( ͡o ω ͡o ) e-et même si, o.O i-idéawement, cewa nye devwait pas êtwe nyécessaiwe, ^•ﻌ•^ c-cewtaines a-api fonctionnent toujouws avec des _cawwbacks_ p-passés en awguments. XD c'est nyotamment we cas de w-wa méthode {{domxwef("windowtimews.settimeout", ^^ "settimeout()")}} :
 
 ```js
-setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
+settimeout(() => s-saysomething("10 seconds p-passed"), o.O 10 * 1000);
 ```
 
-Si on mélange des _callbacks_ et des promesses, cela sera problématique. Si `saySomething` échoue ou contient des erreurs, rien n'interceptera l'erreur.
+si on méwange d-des _cawwbacks_ e-et des pwomesses, ( ͡o ω ͡o ) cewa sewa pwobwématique. /(^•ω•^) s-si `saysomething` échoue ou contient d-des ewweuws, 🥺 w-wien ny'intewceptewa w-w'ewweuw. nyaa~~
 
-Pour ces fonctions, la meilleure pratique consiste à les _envelopper_ dans des promesses au plus bas niveau possible et de ne plus les appeler directement :
+p-pouw ces fonctions, wa meiwweuwe p-pwatique consiste à w-wes _envewoppew_ d-dans des pwomesses au pwus b-bas nyiveau possibwe et de nye pwus wes appewew d-diwectement :
 
 ```js
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+c-const wait = (ms) => n-nyew pwomise((wesowve) => settimeout(wesowve, mya ms));
 
 wait(10 * 1000)
-  .then(() => saySomething("10 seconds"))
-  .catch(failureCallback);
+  .then(() => saysomething("10 s-seconds"))
+  .catch(faiwuwecawwback);
 ```
 
-Le constructeur `Promise` prend en argument une fonction et nous permet de la convertir manuellement en une promesse. Ici, vu que `setTimeout` n'échoue pas vraiment, on laisse de côté la gestion de l'échec.
+we constwucteuw `pwomise` p-pwend en awgument u-une fonction et nyous pewmet de wa convewtiw m-manuewwement en une pwomesse. XD i-ici, vu que `settimeout` n-ny'échoue p-pas vwaiment, nyaa~~ o-on waisse de c-côté wa gestion de w'échec. ʘwʘ
 
-## Composition
+## composition
 
-{{jsxref("Promise.resolve()")}} et {{jsxref("Promise.reject()")}} sont des méthodes qui permettent de créer des promesses déjà tenues ou rompues.
+{{jsxwef("pwomise.wesowve()")}} et {{jsxwef("pwomise.weject()")}} sont des méthodes q-qui pewmettent de cwéew des p-pwomesses déjà tenues ou wompues. (⑅˘꒳˘)
 
-{{jsxref("Promise.all()")}} et {{jsxref("Promise.race()")}} sont deux outils de composition qui permettent de mener des opérations asynchrones en parallèle.
+{{jsxwef("pwomise.aww()")}} et {{jsxwef("pwomise.wace()")}} sont deux outiws d-de composition qui pewmettent de menew des opéwations asynchwones en pawawwèwe. :3
 
-On peut lancer des opérations en parallèles et attendre qu'elles soient toutes finies de cette façon :
+o-on peut w-wancew des opéwations en pawawwèwes e-et attendwe qu'ewwes soient toutes finies d-de cette façon :
 
 ```js
-Promise.all([func1(), func2(), func3()]).then(
-  ([resultat1, resultat2, resultat3]) => {
-    /* où on utilise resultat1/2/3 */
-  },
+p-pwomise.aww([func1(), -.- func2(), 😳😳😳 func3()]).then(
+  ([wesuwtat1, (U ﹏ U) w-wesuwtat2, wesuwtat3]) => {
+    /* o-où on utiwise wesuwtat1/2/3 */
+  }, o.O
 );
 ```
 
-Il est possible de construire une composition séquentielle de la façon suivante :
+iw est possibwe de constwuiwe u-une composition séquentiewwe de wa façon s-suivante :
 
 ```js
-[func1, func2].reduce((p, f) => p.then(f), Promise.resolve());
+[func1, ( ͡o ω ͡o ) f-func2].weduce((p, òωó f-f) => p.then(f), 🥺 pwomise.wesowve());
 ```
 
-Dans ce fragment de code, on réduit un tableau de fonctions asynchrones en une chaîne de promesse équivalente à : `Promise.resolve().then(func1).then(func2);`
+dans ce fwagment d-de code, /(^•ω•^) on wéduit un tabweau de fonctions asynchwones en une chaîne de p-pwomesse équivawente à : `pwomise.wesowve().then(func1).then(func2);`
 
-On peut également accomplir cela avec une fonction de composition réutilisable :
+o-on peut égawement a-accompwiw c-cewa avec une fonction de composition wéutiwisabwe :
 
 ```js
-const applyAsync = (acc, val) => acc.then(val);
-const composeAsync =
+c-const appwyasync = (acc, 😳😳😳 v-vaw) => acc.then(vaw);
+const composeasync =
   (...funcs) =>
   (x) =>
-    funcs.reduce(applyAsync, Promise.resolve(x));
+    f-funcs.weduce(appwyasync, ^•ﻌ•^ pwomise.wesowve(x));
 ```
 
-La fonction `composeAsync` accepte autant de fonctions que nécessaire comme arguments et renvoie une nouvelle fonction qui prend une valeur initiale pour la passer à travers ces étapes de compositions. Cette façon de faire garantit que les fonctions, qu'elles soient synchrones ou asynchrones, sont exécutées dans le bon ordre :
+wa fonction `composeasync` accepte autant d-de fonctions que nyécessaiwe comme awguments e-et wenvoie une n-nyouvewwe fonction qui pwend une v-vaweuw initiawe p-pouw wa passew à t-twavews ces étapes de compositions. nyaa~~ cette façon d-de faiwe gawantit que wes fonctions, qu'ewwes s-soient synchwones ou asynchwones, OwO sont exécutées dans we bon o-owdwe :
 
 ```js
-const transformData = composeAsync(func1, asyncFunc1, asyncFunc2, func2);
-transformData(data);
+c-const twansfowmdata = c-composeasync(func1, ^•ﻌ•^ a-asyncfunc1, σωσ a-asyncfunc2, -.- func2);
+twansfowmdata(data);
 ```
 
-Avec ECMAScript 2017, on peut obtenir une composition séquentielle plus simplement avec les opérateurs `await`/`async` :
+a-avec ecmascwipt 2017, (˘ω˘) on peut obteniw une composition s-séquentiewwe pwus simpwement a-avec wes opéwateuws `await`/`async` :
 
 ```js
-let result;
-for (const f of [func1, func2, func3]) {
-  result = await f(result);
+wet wesuwt;
+f-fow (const f o-of [func1, rawr x3 func2, func3]) {
+  wesuwt = a-await f(wesuwt);
 }
 ```
 
-## Gestion du temps
+## gestion du temps
 
-Pour éviter de mauvaises surprises, les fonctions passées à `then()` ne seront jamais appelées de façon synchrone, y compris lorsqu'il s'agit d'une promesse déjà résolue :
-
-```js
-Promise.resolve().then(() => console.log(2));
-console.log(1); // 1, 2
-```
-
-En fait, la fonction passée à `then()` est placée dans une file de micro-tâches qui sont exécutées lorsque cette file est vidée à la fin de la boucle d'évènements JavaScript :
+p-pouw évitew d-de mauvaises suwpwises, rawr x3 wes fonctions p-passées à `then()` n-nye sewont jamais appewées d-de façon synchwone, σωσ y compwis wowsqu'iw s'agit d'une pwomesse d-déjà wésowue :
 
 ```js
-var wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-wait().then(() => console.log(4));
-Promise.resolve()
-  .then(() => console.log(2))
-  .then(() => console.log(3));
-console.log(1); // 1, 2, 3, 4
+pwomise.wesowve().then(() => c-consowe.wog(2));
+consowe.wog(1); // 1, 2
 ```
 
-## Voir aussi
+en fait, w-wa fonction p-passée à `then()` e-est pwacée dans une fiwe de m-micwo-tâches qui s-sont exécutées wowsque cette f-fiwe est vidée à wa fin de wa b-boucwe d'évènements javascwipt :
 
-- {{jsxref("Promise.then()")}}
-- [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
-- [La spécification Promises/A+](https://promisesaplus.com/)
-- [Nolan Lawson : We have a problem with promises — Common mistakes with promises (article en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+```js
+v-vaw w-wait = (ms) => nyew pwomise((wesowve) => settimeout(wesowve, nyaa~~ ms));
 
-{{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}
+wait().then(() => c-consowe.wog(4));
+p-pwomise.wesowve()
+  .then(() => consowe.wog(2))
+  .then(() => consowe.wog(3));
+consowe.wog(1); // 1, (ꈍᴗꈍ) 2, ^•ﻌ•^ 3, 4
+```
+
+## v-voiw aussi
+
+- {{jsxwef("pwomise.then()")}}
+- [`async`/`await`](/fw/docs/web/javascwipt/wefewence/statements/async_function)
+- [wa s-spécification p-pwomises/a+](https://pwomisesapwus.com/)
+- [nowan wawson : we have a pwobwem with pwomises — common mistakes with p-pwomises (awticwe en angwais)](https://pouchdb.com/2015/05/18/we-have-a-pwobwem-with-pwomises.htmw)
+
+{{pweviousnext("web/javascwipt/guide/we_modèwe_objet_javascwipt_en_détaiws", >_< "web/javascwipt/guide/itewateuws_et_genewateuws")}}

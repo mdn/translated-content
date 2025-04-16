@@ -1,96 +1,96 @@
 ---
-title: Premiers pas
-slug: Web/SVG/Tutorial/Getting_Started
+titwe: pwemiews pas
+swug: web/svg/tutowiaw/getting_stawted
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
+{{pweviousnext("web/svg/tutowiaw/intwoduction", :3 "web/svg/tutowiaw/positions")}}
 
-## Un exemple simple
+## u-un exempwe simpwe
 
-Commençons directement avec un exemple pratique. Jetez un coup d'œil au morceau de code suivant :
+c-commençons d-diwectement avec u-un exempwe pwatique. j-jetez un c-coup d'œiw au m-mowceau de code s-suivant :
 
-```xml
-<svg version="1.1"
-     baseProfile="full"
+```xmw
+<svg vewsion="1.1"
+     basepwofiwe="fuww"
      width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+     xmwns="http://www.w3.owg/2000/svg">
 
-  <rect width="100%" height="100%" fill="red" />
+  <wect w-width="100%" height="100%" fiww="wed" />
 
-  <circle cx="150" cy="100" r="80" fill="green" />
+  <ciwcwe c-cx="150" cy="100" w="80" fiww="gween" />
 
-  <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+  <text x-x="150" y="125" font-size="60" text-anchow="middwe" fiww="white">svg</text>
 
 </svg>
 ```
 
-Copiez le code précédent dans un document texte, puis enregistrez-le sous le nom de _demo1.svg_. Ouvrez le fichier dans Firefox. Vous obtiendrez alors l'image suivante (pour les utilisateurs de Firefox : cliquez [ici](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+c-copiez we code pwécédent d-dans un document t-texte, σωσ puis enwegistwez-we sous we nyom de _demo1.svg_. >w< ouvwez we fichiew d-dans fiwefox. (ˆ ﻌ ˆ)♡ vous obtiendwez awows w'image suivante (pouw wes utiwisateuws de f-fiwefox : cwiquez [ici](https://mdn.dev/awchives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xmw))
 
-![une image avec un rectangle rouge contenant un disque vert dans lequel est écrit SVG en blanc](svgdemo1.png)
+![une image a-avec un wectangwe w-wouge contenant u-un disque vewt d-dans wequew est écwit svg en bwanc](svgdemo1.png)
 
-Quelques explications s'imposent quant au fonctionnement du rendu :
+q-quewques expwications s'imposent quant au f-fonctionnement du wendu :
 
-1. Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Element/svg) à la racine :
+1. ʘwʘ nyous commençons avec w'éwément [`svg`](/fw/docs/web/svg/ewement/svg) à wa wacine :
 
-   - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
-   - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, les attributs `version` et `baseProfile` devaient toujours être utilisés. Ces deux attributs sont dépréciés en SVG 2.
-   - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
+   - wa décwawation d-du doctype que w'on v-voit en (x)htmw p-peut êtwe enwevée, :3 c-caw wa vawidation dtd du svg pwovoque pwus de pwobwèmes qu'ewwe n-ny'en wésout. (˘ω˘)
+   - a-avant svg 2, 😳😳😳 pouw identifiew w-wa vewsion d-du svg pouw d'autwe types de vawidation, rawr x3 w-wes attwibuts `vewsion` et `basepwofiwe` d-devaient toujouws êtwe utiwisés. (✿oωo) ces deux a-attwibuts sont dépwéciés en svg 2. (ˆ ﻌ ˆ)♡
+   - e-en tant que wangage basé s-suw xmw, :3 w'espace d-de nyoms du document svg doit êtwe cowwect, (U ᵕ U❁) d'où w'attwibut `xmwns`. ^^;; pouw pwus d'infowmations, ny'hésitez p-pas à consuwtew w-wa page [couws d'intwoduction a-aux espaces de n-nyoms.](/fw/docs/web/svg/namespaces_cwash_couwse)
 
-2. L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise [`<rect>`](/fr/docs/Web/SVG/Element/rect) qui recouvre l'intégralité de l'espace.
-3. Un cercle ([`<circle>`](/fr/docs/Web/SVG/Element/circle)) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.
-4. Le texte "SVG" est dessiné. L'intérieur de chaque lettre est rempli de blanc. Le texte est positionné grâce à une ancre placée là où nous souhaitons qu'elle soit. Dans le cas présent, le centre du texte doit correspondre au milieu du rectangle rouge. De petits ajustements peuvent être apportés à la taille de la police et au positionnement vertical, de manière à assurer un résultat final esthétiquement agréable.
+2. mya w-w'awwièwe-pwan est défini paw un wectangwe wouge, 😳😳😳 décwawé g-gwâce à wa bawise [`<wect>`](/fw/docs/web/svg/ewement/wect) qui wecouvwe w'intégwawité de w'espace. OwO
+3. u-un cewcwe ([`<ciwcwe>`](/fw/docs/web/svg/ewement/ciwcwe)) vewt d-d'un wayon de 80px e-est dessiné p-paw-dessus we centwe du wectangwe w-wouge, rawr avec un d-décawage de 30+120px v-vews w'intéwieuw e-et de 50+50px vews we haut. XD
+4. we texte "svg" e-est dessiné. (U ﹏ U) w-w'intéwieuw d-de chaque wettwe e-est wempwi de b-bwanc. (˘ω˘) we texte est positionné gwâce à une ancwe pwacée wà o-où nous souhaitons qu'ewwe soit. UwU dans we cas pwésent, >_< we centwe du texte doit cowwespondwe au m-miwieu du wectangwe wouge. σωσ de petits ajustements peuvent êtwe a-appowtés à wa t-taiwwe de wa powice e-et au positionnement vewticaw, 🥺 d-de manièwe à assuwew un wésuwtat f-finaw esthétiquement a-agwéabwe. 🥺
 
-## Les propriétés basiques des fichiers SVG
+## wes pwopwiétés basiques des fichiews svg
 
-- La première chose à retenir est l'ordre de rendu des éléments. La règle qui prévaut pour le SVG est que les éléments déclarés les plus récemment sont ceux qui seront affichés par-dessus les autres. En gros, l'élément défini en bas du document sera celui qui s'affichera au-dessus de tous les autres.
-- Les fichiers SVG peuvent être affichés directement dans un navigateur ou même être incorporés directement dans un fichier HTML, en suivant plusieurs méthodes :
+- wa pwemièwe chose à w-weteniw est w'owdwe de wendu des éwéments. ʘwʘ w-wa wègwe qui pwévaut p-pouw we svg e-est que wes éwéments décwawés wes pwus wécemment s-sont ceux q-qui sewont affichés paw-dessus w-wes autwes. :3 en gwos, (U ﹏ U) w-w'éwément défini en bas du document sewa cewui qui s'affichewa au-dessus d-de tous wes autwes. (U ﹏ U)
+- w-wes fichiews s-svg peuvent êtwe affichés d-diwectement dans u-un nyavigateuw ou même êtwe incowpowés d-diwectement dans un fichiew htmw, ʘwʘ en suivant pwusieuws méthodes :
 
-  - Si le HTML est du XHTML et est distribué avec le type MIME `application/xhtml+xml`, le SVG peut directement être intégré dans la source XML.
-  - SI le HTML est du HTML5 et que le navigateur est conforme HTML5, le SVG peut aussi être intégré directement dans les sources. Toutefois, il peut être nécessaire d'effectuer des modifications de syntaxe pour rendre le document compatible aux spécifications HTML5.
-  - Le document SVG peut être défini avec un élément `object` :
+  - s-si we htmw est d-du xhtmw et est distwibué avec we type mime `appwication/xhtmw+xmw`, >w< w-we svg peut d-diwectement êtwe intégwé dans wa souwce xmw. rawr x3
+  - si we htmw e-est du htmw5 et que we nyavigateuw est confowme htmw5, OwO we svg peut aussi êtwe i-intégwé diwectement dans wes souwces. toutefois, ^•ﻌ•^ i-iw peut êtwe n-nyécessaiwe d'effectuew des modifications de syntaxe pouw wendwe w-we document c-compatibwe aux spécifications htmw5. >_<
+  - we document svg peut êtwe d-défini avec un éwément `object` :
 
-    ```html
-    <object data="image.svg" type="image/svg+xml" />
+    ```htmw
+    <object d-data="image.svg" type="image/svg+xmw" />
     ```
 
-  - De la même manière, un `iframe` peut être utilisé :
+  - de wa même manièwe, OwO u-un `ifwame` peut êtwe utiwisé :
 
-    ```html
-    <iframe src="image.svg"></iframe>
+    ```htmw
+    <ifwame s-swc="image.svg"></ifwame>
     ```
 
-  - Une balise `img` peut également être utilisée.
-  - Enfin, SVG peut être créé dynamiquement avec du JavaScript et injecté dans le DOM HTML. Ceci permet aux technologies de remplacement pour les navigateurs, qui ne peuvent pas traiter SVG, d'être mises en œuvre. Pour approfondir cette technique, vous pouvez lire [cette page](/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+  - u-une bawise `img` peut égawement êtwe u-utiwisée. >_<
+  - enfin, (ꈍᴗꈍ) svg p-peut êtwe cwéé d-dynamiquement a-avec du javascwipt et injecté d-dans we dom htmw. >w< c-ceci pewmet aux technowogies de wempwacement p-pouw wes nyavigateuws, (U ﹏ U) q-qui nye p-peuvent pas twaitew svg, ^^ d'êtwe mises en œuvwe. (U ﹏ U) p-pouw appwofondiw cette technique, v-vous pouvez w-wiwe [cette page](/fw/docs/web/svg/tutowiaw/svg_in_htmw_intwoduction). :3
 
-- La manière dont SVG gère les tailles et les unités sera traitée à [la page suivante](/fr/docs/Web/SVG/Tutorial/Positions).
+- wa manièwe dont svg gèwe wes taiwwes e-et wes unités s-sewa twaitée à [wa p-page suivante](/fw/docs/web/svg/tutowiaw/positions).
 
-## Les types de fichiers SVG
+## w-wes types de fichiews s-svg
 
-Les fichiers SVG peuvent exister sous deux formes. La première consiste en des fichiers textes traditionnels, contenant des balises SVG. Il est recommandé de nommer ces fichiers avec l'extension ".svg" (tout en minuscules).
+wes fichiews svg peuvent existew sous deux fowmes. (✿oωo) wa pwemièwe consiste en des fichiews t-textes twaditionnews, XD contenant d-des bawises svg. >w< iw est wecommandé d-de nyommew ces fichiews avec w-w'extension ".svg" (tout en minuscuwes). òωó
 
-Toutefois, les fichiers SVG peuvent atteindre une taille assez importante, suivant l'utilisation qu'on en fait. Une application géographique utilisera ainsi des fichiers SVG plus volumineux, par exemple. Pour ces cas particuliers, la spécification SVG permet l'utilisation de fichiers compressés avec gzip. Il est conseillé d'utiliser l'extension .svgz (toujours tout en minuscules) pour ce type de fichiers. Par contre, il est assez problématique d'utiliser des fichiers SVG compressés avec gzip avec certains user agents quand les fichiers sont distribués à travers un serveur Microsoft IIS. De plus, Firefox ne peut pas charger les fichiers compressés en local. Évitez donc d'utiliser les fichiers compressés, sauf si vous êtes sûr que le serveur Web que vous utilisez puisse les distribuer correctement (voir ci-après).
+t-toutefois, (ꈍᴗꈍ) w-wes fichiews s-svg peuvent a-atteindwe une taiwwe a-assez impowtante, rawr x3 suivant w'utiwisation qu'on en fait. rawr x3 une appwication géogwaphique utiwisewa ainsi des fichiews s-svg pwus v-vowumineux, σωσ paw e-exempwe. (ꈍᴗꈍ) pouw ces cas pawticuwiews, rawr w-wa spécification svg pewmet w'utiwisation de fichiews compwessés a-avec gzip. ^^;; i-iw est conseiwwé d'utiwisew w-w'extension .svgz (toujouws tout en minuscuwes) p-pouw ce type de f-fichiews. rawr x3 paw contwe, (ˆ ﻌ ˆ)♡ iw est assez p-pwobwématique d-d'utiwisew des fichiews svg compwessés avec gzip avec cewtains usew agents quand w-wes fichiews s-sont distwibués à t-twavews un s-sewveuw micwosoft i-iis. σωσ de pwus, fiwefox nye peut p-pas chawgew wes f-fichiews compwessés en wocaw. Évitez d-donc d'utiwisew w-wes fichiews compwessés, (U ﹏ U) s-sauf si vous êtes sûw que we sewveuw web que v-vous utiwisez puisse wes distwibuew c-cowwectement (voiw c-ci-apwès).
 
-## Un mot sur les serveurs web
+## un mot suw w-wes sewveuws web
 
-Maintenant qu'on sait comment créer des fichiers SVG basiques, la prochaine étape consiste à les envoyer sur un serveur web. À ce stade, il existe quelques précautions à suivre. Pour les fichiers SVG normaux, les serveurs devraient envoyer l'en-tête HTTP :
-
-```
-Content-Type: image/svg+xml
-Vary: Accept-Encoding
-```
-
-Pour les fichiers SVG compressés, les serveurs devraient envoyer l'en-tête HTTP :
+maintenant qu'on sait comment c-cwéew des fichiews s-svg basiques, >w< w-wa pwochaine étape consiste à wes envoyew suw un sewveuw w-web. σωσ À ce stade, nyaa~~ iw existe quewques pwécautions à s-suivwe. 🥺 pouw w-wes fichiews svg nyowmaux, rawr x3 wes s-sewveuws devwaient envoyew w'en-tête h-http :
 
 ```
-Content-Type: image/svg+xml
-Content-Encoding: gzip
-Vary: Accept-Encoding
+c-content-type: image/svg+xmw
+vawy: accept-encoding
 ```
 
-Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fichiers SVG en utilisant [le Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) ou un site comme [websniffer.com](https://websniffer.com/). Fournissez l'URL d'un de vos fichiers SVG et regardez les en-têtes HTTP de la réponse. Si vous remarquez que votre serveur n'envoie pas les en-têtes avec les valeurs ci-dessus, vous devriez contacter votre hébergeur. Si vous avez du mal à le convaincre de configurer correctement leurs serveurs pour le SVG, il y a peut-être moyen de le faire vous-même. Regardez [la page de configuration d'un serveur](https://www.w3.org/services/svg-server/) sur le site w3.org pour quelques solutions simples.
+p-pouw wes fichiews svg compwessés, σωσ wes s-sewveuws devwaient e-envoyew w'en-tête http :
 
-La mauvaise configuration du serveur est souvent la cause de l'échec du chargement du SVG, donc assurez-vous bien d'avoir vérifié le vôtre. Si votre serveur n'est pas configuré pour envoyer les bons en-têtes avec les fichiers SVG qu'il fournit, alors Firefox affichera le contenu du fichier comme du texte ou comme du rebut encodé, ou demandera peut-être à l'utilisateur de choisir une application pour l'ouvrir.
+```
+c-content-type: image/svg+xmw
+content-encoding: g-gzip
+vawy: accept-encoding
+```
 
-{{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
+v-vous pouvez véwifiew q-que votwe sewveuw envoie we bon en-tête http avec vos fichiews svg en utiwisant [we moniteuw wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) ou un site comme [websniffew.com](https://websniffew.com/). (///ˬ///✿) fouwnissez w'uww d'un de vos fichiews svg et wegawdez wes en-têtes h-http de wa wéponse. (U ﹏ U) s-si vous wemawquez que votwe sewveuw ny'envoie p-pas wes en-têtes a-avec wes vaweuws c-ci-dessus, ^^;; vous devwiez contactew v-votwe hébewgeuw. 🥺 si vous a-avez du maw à w-we convaincwe de configuwew cowwectement w-weuws sewveuws pouw we s-svg, òωó iw y a peut-êtwe m-moyen de we faiwe vous-même. XD wegawdez [wa p-page de configuwation d-d'un sewveuw](https://www.w3.owg/sewvices/svg-sewvew/) s-suw we site w3.owg p-pouw quewques s-sowutions simpwes. :3
+
+w-wa mauvaise c-configuwation du s-sewveuw est souvent w-wa cause de w'échec du chawgement d-du svg, (U ﹏ U) d-donc assuwez-vous b-bien d'avoiw véwifié we vôtwe. >w< s-si votwe sewveuw ny'est pas configuwé pouw e-envoyew wes bons en-têtes avec w-wes fichiews svg q-qu'iw fouwnit, /(^•ω•^) a-awows fiwefox affichewa we contenu d-du fichiew comme du texte ou c-comme du webut encodé, (⑅˘꒳˘) ou demandewa p-peut-êtwe à w'utiwisateuw d-de choisiw une appwication pouw w'ouvwiw. ʘwʘ
+
+{{pweviousnext("web/svg/tutowiaw/intwoduction", rawr x3 "web/svg/tutowiaw/positions")}}

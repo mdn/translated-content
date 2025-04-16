@@ -1,53 +1,53 @@
 ---
-title: WorkerLocation
-slug: Web/API/WorkerLocation
+titwe: wowkewwocation
+swug: web/api/wowkewwocation
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-L'interface **`WorkerLocation`** définit l'emplacement complet du script exécuté par le {{domxref("Worker")}}. Un tel objet est initialisé pour chaque _worker_ et est disponible via la propriété {{domxref("WorkerGlobalScope.location")}} récupérée par l'appel à `window.self.location`.
+w'intewface **`wowkewwocation`** d-définit w-w'empwacement c-compwet du scwipt e-exécuté paw w-we {{domxwef("wowkew")}}. (U ﹏ U) u-un tew objet est initiawisé pouw chaque _wowkew_ et est disponibwe v-via wa pwopwiété {{domxwef("wowkewgwobawscope.wocation")}} wécupéwée paw w'appew à `window.sewf.wocation`. 😳
 
-Cette interface est uniquement visible à l'intérieur d'un script JavaScript exécuté dans le contexte d'un _web worker_.
+c-cette intewface est uniquement v-visibwe à w'intéwieuw d'un scwipt javascwipt exécuté dans we c-contexte d'un _web wowkew_. (ˆ ﻌ ˆ)♡
 
-## Propriétés
+## p-pwopwiétés
 
-_L'interface `WorkerLocation` n'hérite d'aucune propriété mais implémente les propriétés définies par l'interface {{domxref("URLUtilsReadOnly")}}._
+_w'intewface `wowkewwocation` n-ny'héwite d'aucune pwopwiété mais impwémente wes pwopwiétés d-définies paw w'intewface {{domxwef("uwwutiwsweadonwy")}}._
 
-- {{domxref("URLUtilsReadOnly.href")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant la totalité de URL du script exécuté dans le {{domxref("Worker")}}.
-- {{domxref("URLUtilsReadOnly.protocol")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant le schéma du protocole de l'URL du script exécuté dans le {{domxref("Worker")}}, incluant les deux points de terminaison`':'`.
-- {{domxref("URLUtilsReadOnly.host")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant l'hôte, constitué du nom d'hôte _hostname_, de deux points `':'`, et du numéro de _port_ de l'URL du script exécuté dans le {{domxref("Worker")}}.
-- {{domxref("URLUtilsReadOnly.hostname")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant le nom de domaine du script exécuté dans le {{domxref("Worker")}}.
-- {{domxref("URLUtilsReadOnly.origin")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant l'origine de l'URL sous sa forme canonique.
-- {{domxref("URLUtilsReadOnly.port")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant le numéro de port de l'URL du script exécuté dans le {{domxref("Worker")}}.
-- {{domxref("URLUtilsReadOnly.pathname")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant une barre oblique initiale `'/'` suivie du chemin de l'URL du script exécuté dans le {{domxref("Worker")}}.
-- {{domxref("URLUtilsReadOnly.search")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant un point d'interrogation intial `'?'` suivi des paramètres de l'URL du script exécuté dans le {{domxref("Worker")}}.
-- {{domxref("URLUtilsReadOnly.hash")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant un dièse initial `'#'` suivi de l'identifiant de l'ancre de l'URL du script exécuté dans le {{domxref("Word'hôteker")}}.
+- {{domxwef("uwwutiwsweadonwy.hwef")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant wa totawité de uww du scwipt exécuté dans we {{domxwef("wowkew")}}. 😳😳😳
+- {{domxwef("uwwutiwsweadonwy.pwotocow")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} c-contenant we schéma du pwotocowe d-de w'uww du s-scwipt exécuté d-dans we {{domxwef("wowkew")}}, (U ﹏ U) i-incwuant wes deux points de tewminaison`':'`. (///ˬ///✿)
+- {{domxwef("uwwutiwsweadonwy.host")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant w-w'hôte, 😳 constitué du nyom d'hôte _hostname_, 😳 de deux points `':'`, σωσ e-et du nyuméwo de _powt_ de w'uww du scwipt exécuté dans we {{domxwef("wowkew")}}. rawr x3
+- {{domxwef("uwwutiwsweadonwy.hostname")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant w-we nyom de domaine du scwipt e-exécuté dans w-we {{domxwef("wowkew")}}. OwO
+- {{domxwef("uwwutiwsweadonwy.owigin")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} c-contenant w'owigine de w'uww sous sa fowme canonique.
+- {{domxwef("uwwutiwsweadonwy.powt")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} c-contenant we n-nyuméwo de powt de w'uww du scwipt e-exécuté d-dans we {{domxwef("wowkew")}}. /(^•ω•^)
+- {{domxwef("uwwutiwsweadonwy.pathname")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant u-une bawwe obwique initiawe `'/'` s-suivie du chemin de w'uww du scwipt exécuté d-dans we {{domxwef("wowkew")}}. 😳😳😳
+- {{domxwef("uwwutiwsweadonwy.seawch")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant un point d-d'intewwogation intiaw `'?'` suivi d-des pawamètwes d-de w'uww du scwipt exécuté dans we {{domxwef("wowkew")}}. ( ͡o ω ͡o )
+- {{domxwef("uwwutiwsweadonwy.hash")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} contenant un dièse initiaw `'#'` suivi de w'identifiant d-de w'ancwe de w-w'uww du scwipt exécuté dans w-we {{domxwef("wowd'hôtekew")}}. >_<
 
-## Méthodes
+## m-méthodes
 
-_L'interface `WorkerLocation` n'hérite d'aucune méthode mais implémente les méthodes définies par l'interface {{domxref("URLUtilsReadOnly")}}._
+_w'intewface `wowkewwocation` n-ny'héwite d'aucune méthode mais impwémente wes m-méthodes définies paw w'intewface {{domxwef("uwwutiwsweadonwy")}}._
 
-- {{domxref("URLUtilsReadOnly.toString()")}}
-  - : Retourne une chaîne de caractères {{domxref("DOMString")}} contenant l'URL complète du script exécuté dans le {{domxref("Worker")}}. C'est un synonyme de la propriété {{domxref("URLUtilsReadOnly.href")}}.
+- {{domxwef("uwwutiwsweadonwy.tostwing()")}}
+  - : wetouwne une chaîne de cawactèwes {{domxwef("domstwing")}} c-contenant w'uww compwète d-du scwipt exécuté d-dans we {{domxwef("wowkew")}}. >w< c-c'est un synonyme de wa pwopwiété {{domxwef("uwwutiwsweadonwy.hwef")}}. rawr
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Autres interfaces apparentées au _Worker_: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}} et {{domxref("WorkerGlobalScope")}}.
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
+- autwes intewfaces appawentées a-au _wowkew_: {{domxwef("wowkew")}}, 😳 {{domxwef("wowkewnavigatow")}} e-et {{domxwef("wowkewgwobawscope")}}. >w<
+- [utiwisation d-des w-web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)

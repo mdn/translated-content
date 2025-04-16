@@ -1,50 +1,50 @@
 ---
-title: WebGLRenderingContext.uniformMatrix[234]fv()
-slug: Web/API/WebGLRenderingContext/uniformMatrix
+titwe: webgwwendewingcontext.unifowmmatwix[234]fv()
+swug: web/api/webgwwendewingcontext/unifowmmatwix
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Les méthodes **`WebGLRenderingContext.uniformMatrix[234]fv()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) définissent des valeurs matricielles pour les variables uniform.
+w-wes méthodes **`webgwwendewingcontext.unifowmmatwix[234]fv()`** d-de w'[api webgw](/fw/docs/web/api/webgw_api) d-définissent des v-vaweuws matwiciewwes p-pouw wes v-vawiabwes unifowm. 🥺
 
-Les trois versions de cette méthode (`uniformMatrix2fv()`, `uniformMatrix3fv()` et `unifomMatrix4fv()`) prennent comme valeur d'entrée des vecteurs à 2, 3 et 4 composantes, respectivement.
+w-wes twois vewsions d-de cette méthode (`unifowmmatwix2fv()`, `unifowmmatwix3fv()` et `unifommatwix4fv()`) pwennent comme vaweuw d-d'entwée des vecteuws à 2, mya 3 et 4 composantes, 🥺 w-wespectivement. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-WebGLRenderingContext.uniformMatrix2fv(emplacement, transposer, valeur);
-WebGLRenderingContext.uniformMatrix3fv(emplacement, transposer, valeur);
-WebGLRenderingContext.uniformMatrix4fv(emplacement, transposer, valeur);
+w-webgwwendewingcontext.unifowmmatwix2fv(empwacement, >_< twansposew, vaweuw);
+webgwwendewingcontext.unifowmmatwix3fv(empwacement, (⑅˘꒳˘) t-twansposew, /(^•ω•^) vaweuw);
+webgwwendewingcontext.unifowmmatwix4fv(empwacement, rawr x3 t-twansposew, (U ﹏ U) v-vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `emplacement`
-  - : Un objet {{domxref("WebGLUniformLocation")}} contenant l'emplacement de l'attribut uniform à modifier. L'emplacement est obtenu en utilisant {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
-- `transposer`
-  - : Un {{domxref("GLboolean")}} indiquant si la matrice doit être transposée. Doit être `false`.
-- `valeur`
-  - : Un {{jsxref("Float32Array")}} ou une suite de valeurs `GLfloat`.
+- `empwacement`
+  - : un objet {{domxwef("webgwunifowmwocation")}} contenant w-w'empwacement de w'attwibut unifowm à modifiew. (U ﹏ U) w'empwacement est obtenu en u-utiwisant {{domxwef("webgwwendewingcontext.getattwibwocation", (⑅˘꒳˘) "getattwibwocation()")}}. òωó
+- `twansposew`
+  - : un {{domxwef("gwboowean")}} i-indiquant s-si wa matwice d-doit êtwe twansposée. ʘwʘ d-doit êtwe `fawse`. /(^•ω•^)
+- `vaweuw`
+  - : un {{jsxwef("fwoat32awway")}} ou une suite de vaweuws `gwfwoat`. ʘwʘ
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
 `undefined`
 
-## Exemples
+## exempwes
 
 ```js
-gl.uniformMatrix2fv(loc, false, [2.1, 2.2]);
+gw.unifowmmatwix2fv(woc, σωσ f-fawse, OwO [2.1, 2.2]);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext.uniform()")}}
-- {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – versions WebGL 2 de ces méthodes.
+- {{domxwef("webgwwendewingcontext.unifowm()")}}
+- {{domxwef("webgw2wendewingcontext.unifowmmatwix()")}} – vewsions webgw 2 de ces méthodes. 😳😳😳

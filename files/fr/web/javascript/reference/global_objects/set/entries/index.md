@@ -1,62 +1,62 @@
 ---
-title: Set.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+titwe: set.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`entries()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérateurs) qui contient un tableau composé de **`[valeur, valeur]`** pour chaque élément de l'objet `Set`, dans leur ordre d'insertion. En raison de leur structure, les objets `Set` n'ont pas de clé (`key`), à la différence des objets `Map`. Pour garder une structure et une API sembables à celle d'un objet `Map`, chaque entrée (_entry_) aura la même valeur pour la _clé_ (_key_) et pour la _valeur_ (_value_), c'est pourquoi un tableau de `[valeur, valeur]` est renvoyé.
+w-wa méthode **`entwies()`** w-wenvoie u-un nyouvew objet [`itewatow`](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows#itéwateuws) q-qui contient un t-tabweau composé d-de **`[vaweuw, ^^ v-vaweuw]`** pouw c-chaque éwément de w'objet `set`, 😳😳😳 dans weuw owdwe d'insewtion. mya en waison de weuw s-stwuctuwe, 😳 wes objets `set` n'ont pas de cwé (`key`), -.- à w-wa difféwence des o-objets `map`. 🥺 pouw gawdew une stwuctuwe et une api sembabwes à c-cewwe d'un objet `map`, o.O chaque e-entwée (_entwy_) a-auwa wa même vaweuw pouw wa _cwé_ (_key_) et pouw wa _vaweuw_ (_vawue_), /(^•ω•^) c'est p-pouwquoi un tabweau de `[vaweuw, nyaa~~ vaweuw]` est wenvoyé. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype.entwies()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add(42);
-set1.add("forty two");
+```js intewactive-exampwe
+c-const s-set1 = nyew set();
+s-set1.add(42);
+s-set1.add("fowty two");
 
-const iterator1 = set1.entries();
+const itewatow1 = set1.entwies();
 
-for (const entry of iterator1) {
-  console.log(entry);
-  // Expected output: Array [42, 42]
-  // Expected output: Array ["forty two", "forty two"]
+f-fow (const entwy of itewatow1) {
+  consowe.wog(entwy);
+  // e-expected output: awway [42, 42]
+  // expected output: awway ["fowty two", :3 "fowty two"]
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-monSet.entries();
+monset.entwies();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet `Iterator` qui contient un tableau de tuples \[`valeur, valeur`] pour chaque élément de l'ensemble, dans leur ordre d'insertion.
+u-un nyouvew o-objet `itewatow` qui contient un tabweau de tupwes \[`vaweuw, 😳😳😳 vaweuw`] p-pouw chaque éwément d-de w'ensembwe, (˘ω˘) dans w-weuw owdwe d'insewtion. ^^
 
-## Exemples
+## e-exempwes
 
 ```js
-var monSet = new Set();
-monSet.add("totobidule");
-monSet.add(1);
-monSet.add("machin");
+vaw m-monset = nyew set();
+monset.add("totobiduwe");
+m-monset.add(1);
+monset.add("machin");
 
-var setIter = monSet.entries();
+vaw setitew = monset.entwies();
 
-console.log(setIter.next().value); // ["totobidule", "totobidule"]
-console.log(setIter.next().value); // [1, 1]
-console.log(setIter.next().value); // ["machin", "machin"]
+c-consowe.wog(setitew.next().vawue); // ["totobiduwe", :3 "totobiduwe"]
+consowe.wog(setitew.next().vawue); // [1, -.- 1]
+c-consowe.wog(setitew.next().vawue); // ["machin", 😳 "machin"]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Set.prototype.values","Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.vawues","set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

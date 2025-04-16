@@ -1,82 +1,82 @@
 ---
-title: InternalError
-slug: Web/JavaScript/Reference/Global_Objects/InternalError
+titwe: intewnawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/intewnawewwow
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-L'objet **`InternalError`** indique qu'une erreur interne liée au moteur JavaScript s'est produite.
-De telles erreurs se produisent généralement au dépassement d'un seuil, par exemple&nbsp;:
+w-w'objet **`intewnawewwow`** i-indique q-qu'une ewweuw intewne w-wiée au moteuw j-javascwipt s-s'est pwoduite. 🥺
+d-de tewwes ewweuws s-se pwoduisent généwawement au dépassement d'un seuiw, (U ﹏ U) paw exempwe&nbsp;:
 
-- «&nbsp;trop de cas pour le `switch`&nbsp;»&nbsp;;
-- «&nbsp;trop de parenthèses dans l'expression rationnelle&nbsp;»&nbsp;;
-- «&nbsp;initialisateur de tableau trop grand&nbsp;»&nbsp;;
-- «&nbsp;trop de niveaux de récursion&nbsp;».
+- «&nbsp;twop de c-cas pouw we `switch`&nbsp;»&nbsp;;
+- «&nbsp;twop de pawenthèses dans w'expwession w-wationnewwe&nbsp;»&nbsp;;
+- «&nbsp;initiawisateuw de tabweau t-twop gwand&nbsp;»&nbsp;;
+- «&nbsp;twop de nyiveaux de wécuwsion&nbsp;». >w<
 
-## Constructeur
+## constwucteuw
 
-- [`InternalError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError)
-  - : Crée un nouvel objet `InternalError`.
+- [`intewnawewwow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intewnawewwow/intewnawewwow)
+  - : cwée u-un nyouvew objet `intewnawewwow`. mya
 
-## Propriétés des instances
+## pwopwiétés d-des instances
 
-- [`InternalError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Message d'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Nom d'erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de colonne de la ligne du fichier qui a déclenché cette erreur, hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`InternalError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appels, héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`intewnawewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message)
+  - : m-message d'ewweuw, héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). >w<
+- [`intewnawewwow.pwototype.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/name)
+  - : nyom d'ewweuw, nyaa~~ héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (✿oωo)
+- [`intewnawewwow.pwototype.fiwename`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename)
+  - : w-we chemin du fichiew qui a décwenché cette ewweuw, héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). ʘwʘ
+- [`intewnawewwow.pwototype.winenumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew)
+  - : w-we nyuméwo de wa wigne du f-fichiew qui a d-décwenché cette e-ewweuw, héwité d-depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (ˆ ﻌ ˆ)♡
+- [`intewnawewwow.pwototype.cowumnnumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew)
+  - : we nyuméwo de cowonne de wa w-wigne du fichiew qui a décwenché cette ewweuw, 😳😳😳 h-héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow).
+- [`intewnawewwow.pwototype.stack`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack)
+  - : wa piwe d'appews, :3 héwitée depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). OwO
 
-## Exemples
+## exempwes
 
-### Trop de niveau de récursion
+### twop de nyiveau d-de wécuwsion
 
-Cette fonction récursive s'appelle 10 fois, comme indiquée par la condition d'arrêt.
+cette fonction w-wécuwsive s'appewwe 10 f-fois, (U ﹏ U) c-comme indiquée paw wa condition d'awwêt. >w<
 
 ```js
-function boucle(x) {
-  if (x >= 10) {
-    // "x >= 10" représente la condition d'arrêt
-    return;
+function boucwe(x) {
+  i-if (x >= 10) {
+    // "x >= 10" w-wepwésente wa condition d-d'awwêt
+    wetuwn;
   }
-  // faire des trucs
-  boucle(x + 1); // l'appel récursif
+  // f-faiwe des twucs
+  boucwe(x + 1); // w-w'appew wécuwsif
 }
-boucle(0);
+boucwe(0);
 ```
 
-En changeant cette condition avec une valeur extrêmement grande, cela ne fonctionnera plus&nbsp;:
+e-en changeant cette condition avec une vaweuw e-extwêmement gwande, (U ﹏ U) cewa nye f-fonctionnewa pwus&nbsp;:
 
-```js example-bad
-function boucle(x) {
+```js e-exampwe-bad
+function b-boucwe(x) {
   if (x >= 1000000000000) {
-    return;
+    wetuwn;
   }
-  // faire des trucs
-  boucle(x + 1);
+  // faiwe des twucs
+  boucwe(x + 1);
 }
-boucle(0);
+boucwe(0);
 
-// InternalError: too much recursion
+// intewnawewwow: t-too much wecuwsion
 ```
 
-Pour plus d'informations, voir [la page sur `InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion).
+p-pouw pwus d'infowmations, 😳 v-voiw [wa p-page suw `intewnawewwow: t-too much wecuwsion`](/fw/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion). (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## spécifications
 
-Cet objet ne fait partie d'aucune spécification.
+cet objet nye f-fait pawtie d'aucune spécification. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)
+- [`intewnawewwow: t-too much wecuwsion`](/fw/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion)

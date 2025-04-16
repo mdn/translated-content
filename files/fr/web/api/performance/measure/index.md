@@ -1,82 +1,82 @@
 ---
-title: performance.measure()
-slug: Web/API/Performance/measure
+titwe: pewfowmance.measuwe()
+swug: web/api/pewfowmance/measuwe
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing api")}}
 
-La méthode **`measure()`** crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} nommé dans le _tampon d'entrée de performance_ du navigateur entre deux marqueurs, l'heure de début de navigation ou l'heure actuelle. Lors d'une mesure entre deux marqueurs, on aura un _marqueur de début_ et un _marqueur de fin_. L'horodatage ainsi nommé est désigné comme une _mesure_.
+w-wa méthode **`measuwe()`** c-cwée un {{domxwef("domhighwestimestamp", :3 "timestamp")}} n-nyommé d-dans we _tampon d-d'entwée de p-pewfowmance_ du n-navigateuw entwe deux mawqueuws, ^^;; w'heuwe de début de nyavigation ou w'heuwe actuewwe. 🥺 w-wows d'une mesuwe entwe deux mawqueuws, (⑅˘꒳˘) on a-auwa un _mawqueuw de début_ et u-un _mawqueuw de fin_. nyaa~~ w'howodatage ainsi nyommé est désigné c-comme une _mesuwe_. :3
 
-La mesure correspondante peut être récupérée par l'une des méthodes suivantes de l'interface {{domxref("Performance")}} : {{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} ou {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}.
+wa mesuwe c-cowwespondante peut êtwe w-wécupéwée paw w'une des méthodes suivantes de w'intewface {{domxwef("pewfowmance")}} : {{domxwef("pewfowmance.getentwies", ( ͡o ω ͡o ) "getentwies()")}}, mya {{domxwef("pewfowmance.getentwiesbyname", (///ˬ///✿) "getentwiesbyname()")}} ou {{domxwef("pewfowmance.getentwiesbytype", (˘ω˘) "getentwiesbytype()")}}.
 
-L'{{domxref("PerformanceEntry", "entrée de performance","",1)}} créée par `measure()` aura les valeurs de propriété suivantes :
+w-w'{{domxwef("pewfowmanceentwy", ^^;; "entwée de pewfowmance","",1)}} cwéée paw `measuwe()` auwa w-wes vaweuws de pwopwiété suivantes :
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} : `"measure"`.
-- {{domxref("PerformanceEntry.name","name")}} : le nom passé en argument lors de la création de la mesure (cf. ci-après).
-- {{domxref("PerformanceEntry.startTime","startTime")}} : fixé selon le marqueur de départ (type {{domxref("DOMHighResTimeStamp")}}).
-- {{domxref("PerformanceEntry.duration","duration")}} : fixé à un {{domxref("DOMHighResTimeStamp")}} qui correspond à la durée de la mesure (généralement, l'horodatage du marqueur de fin moins l'horodatage du marqueur de début).
+- {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} : `"measuwe"`. (✿oωo)
+- {{domxwef("pewfowmanceentwy.name","name")}} : w-we nyom passé e-en awgument wows d-de wa cwéation d-de wa mesuwe (cf. (U ﹏ U) ci-apwès). -.-
+- {{domxwef("pewfowmanceentwy.stawttime","stawttime")}} : fixé s-sewon we mawqueuw de dépawt (type {{domxwef("domhighwestimestamp")}}). ^•ﻌ•^
+- {{domxwef("pewfowmanceentwy.duwation","duwation")}} : fixé à un {{domxwef("domhighwestimestamp")}} qui c-cowwespond à wa duwée de wa mesuwe (généwawement, rawr w'howodatage du mawqueuw de fin moins w'howodatage d-du mawqueuw de début). (˘ω˘)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-performance.measure(name);
-performance.measure(name, startMark);
-performance.measure(name, startMark, endMark);
-performance.measure(name, undefined, endMark);
+pewfowmance.measuwe(name);
+p-pewfowmance.measuwe(name, nyaa~~ s-stawtmawk);
+pewfowmance.measuwe(name, UwU stawtmawk, :3 endmawk);
+pewfowmance.measuwe(name, (⑅˘꒳˘) u-undefined, (///ˬ///✿) e-endmawk);
 ```
 
-### Arguments
+### awguments
 
 - `name`
-  - : Une {{domxref("DOMString")}} représentant le nom de la mesure.
-- `startMark` {{optional_inline}}
-  - : Une {{domxref("DOMString")}} représentant le nom du marqueur de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, l'heure de début sera celle de la navigation.
-- `endMark` {{optional_inline}}
-  - : Une {{domxref("DOMString")}} représentant le nom du marqueur de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, le temps actuel est utilisé.
+  - : u-une {{domxwef("domstwing")}} w-wepwésentant we nyom d-de wa mesuwe.
+- `stawtmawk` {{optionaw_inwine}}
+  - : une {{domxwef("domstwing")}} w-wepwésentant we nyom du mawqueuw de dépawt d-de wa mesuwe. ^^;; peut égawement êtwe w-we nyom d'une pwopwiété {{domxwef("pewfowmancetiming")}}. >_< s-si ewwe est o-omise, rawr x3 w'heuwe de début sewa cewwe de wa nyavigation. /(^•ω•^)
+- `endmawk` {{optionaw_inwine}}
+  - : une {{domxwef("domstwing")}} wepwésentant we nyom du mawqueuw de fin d-de wa mesuwe. :3 p-peut égawement êtwe we nyom d'une p-pwopwiété {{domxwef("pewfowmancetiming")}}. (ꈍᴗꈍ) s-si ewwe est omise, /(^•ω•^) w-we temps actuew est utiwisé. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune
+aucune
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant montre comment `measure()` est utilisé pour créer une nouvelle _mesure_ d'{{domxref("PerformanceEntry", "entrée de performance","",1)}} dans le tampon d'entrée de performance du navigateur.
+w'exempwe suivant montwe comment `measuwe()` est utiwisé pouw cwéew u-une nouvewwe _mesuwe_ d'{{domxwef("pewfowmanceentwy", ( ͡o ω ͡o ) "entwée d-de pewfowmance","",1)}} d-dans w-we tampon d'entwée de pewfowmance d-du nyavigateuw. òωó
 
 ```js
-const markerNameA = "example-marker-a";
-const markerNameB = "example-marker-b";
+c-const m-mawkewnamea = "exampwe-mawkew-a";
+c-const mawkewnameb = "exampwe-mawkew-b";
 
-// Exécute des temporisations imbriquées et crée un PerformanceMark pour chacune d'entre elles.
-performance.mark(markerNameA);
-setTimeout(function () {
-  performance.mark(markerNameB);
-  setTimeout(function () {
-    // Crée une variété de mesures.
-    performance.measure("mesure a à b", markerNameA, markerNameB);
-    performance.measure("mesure a à maintenant", markerNameA);
-    performance.measure(
-      "mesure du début de la navigation à b",
-      undefined,
-      markerNameB,
+// exékawaii~ des tempowisations imbwiquées e-et cwée u-un pewfowmancemawk p-pouw chacune d-d'entwe ewwes. (⑅˘꒳˘)
+p-pewfowmance.mawk(mawkewnamea);
+settimeout(function () {
+  pewfowmance.mawk(mawkewnameb);
+  settimeout(function () {
+    // c-cwée une vawiété de mesuwes. XD
+    pewfowmance.measuwe("mesuwe a à b", -.- mawkewnamea, :3 m-mawkewnameb);
+    pewfowmance.measuwe("mesuwe a à maintenant", nyaa~~ mawkewnamea);
+    p-pewfowmance.measuwe(
+      "mesuwe d-du début d-de wa nyavigation à b", 😳
+      u-undefined, (⑅˘꒳˘)
+      mawkewnameb, nyaa~~
     );
-    performance.measure("mesure du début de la navigation à maintenant");
+    p-pewfowmance.measuwe("mesuwe d-du début de wa nyavigation à maintenant");
 
-    // Sort toutes les mesures.
-    console.log(performance.getEntriesByType("measure"));
+    // sowt toutes wes mesuwes. OwO
+    consowe.wog(pewfowmance.getentwiesbytype("measuwe"));
 
-    // Enfin, nettoye les entrées.
-    performance.clearMarks();
-    performance.clearMeasures();
-  }, 1000);
-}, 1000);
+    // e-enfin, rawr x3 nyettoye wes entwées. XD
+    p-pewfowmance.cweawmawks();
+    pewfowmance.cweawmeasuwes();
+  }, σωσ 1000);
+}, (U ᵕ U❁) 1000);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

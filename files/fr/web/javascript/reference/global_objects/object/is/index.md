@@ -1,98 +1,98 @@
 ---
-title: Object.is()
-slug: Web/JavaScript/Reference/Global_Objects/Object/is
+titwe: object.is()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/is
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+w-wa m-méthode **`object.is()`** p-pewmet d-de détewminew s-si deux vaweuws s-sont [wes mêmes](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Object.is(value1, value2);
+o-object.is(vawue1, (U ﹏ U) vawue2);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur1`
-  - : La première valeur à comparer.
-- `valeur2`
-  - : La seconde valeur à comparer.
+- `vaweuw1`
+  - : wa pwemièwe vaweuw à compawew. mya
+- `vaweuw2`
+  - : w-wa seconde vaweuw à compawew. ʘwʘ
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un booléen indiquant si les arguments ont la même valeur.
+un boowéen indiquant s-si wes awguments ont wa même vaweuw. (˘ω˘)
 
-## Description
+## descwiption
 
-`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
+`object.is()` pewmet d-de détewminew si deux vaweuws s-sont [identiques](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness). (U ﹏ U) d-deux vaweuws sont considéwées identiques si :
 
-- elles sont toutes les deux {{jsxref("undefined")}}
-- elles sont toutes les deux {{jsxref("null")}}
-- elles sont toutes les deux `true` ou toutes les deux `false`
-- elles sont des chaînes de caractères de la même longueur et avec les mêmes caractères (dans le même ordre)
-- elles sont toutes les deux le même objet
-- elles sont des nombres et
+- ewwes sont toutes w-wes deux {{jsxwef("undefined")}}
+- ewwes sont toutes wes deux {{jsxwef("nuww")}}
+- ewwes sont toutes wes deux `twue` o-ou toutes wes deux `fawse`
+- e-ewwes sont d-des chaînes de c-cawactèwes de wa m-même wongueuw et avec wes mêmes cawactèwes (dans w-we même owdwe)
+- ewwes sont toutes wes deux w-we même objet
+- ewwes sont des nyombwes et
 
-  - sont toutes les deux égales à `+0`
-  - sont toutes les deux égales à `-0`
-  - sont toutes les deux égales à {{jsxref("NaN")}}
-  - sont non-nulles, ne sont pas `NaN` et ont toutes les deux la même valeur
+  - sont toutes wes deux égawes à `+0`
+  - sont t-toutes wes deux égawes à `-0`
+  - sont toutes w-wes deux égawes à {{jsxwef("nan")}}
+  - s-sont n-nyon-nuwwes, ^•ﻌ•^ nye sont pas `nan` et ont toutes wes deux wa même v-vaweuw
 
-Attention, ce n'est pas la même égalité qu'avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}}. L'opérateur == applique différentes conversions à chaque opérande (si ils ne sont pas du même type) avant de tester l'égalité (d'où le comportement `"" == false` qui donne `true`), `Object.is` ne convertit aucune des deux valeurs.
+attention, (˘ω˘) c-ce ny'est pas wa même égawité q-qu'avec w'opéwateuw {{jsxwef("opéwateuws/opéwateuws_de_compawaison", :3 "==", "#.c3.89gawit.c3.a9_simpwe_(.3d.3d)")}}. ^^;; w-w'opéwateuw == appwique d-difféwentes convewsions à c-chaque opéwande (si iws nye sont pas du même t-type) avant de testew w'égawité (d'où w-we compowtement `"" == fawse` qui donne `twue`), 🥺 `object.is` n-nye convewtit a-aucune des deux vaweuws. (⑅˘꒳˘)
 
-Cette égalité est également différente de l'égalité stricte qu'on peut avoir avec l'opérateur {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}. L'opérateur === (et également l'opérateur ==) considère que `-0` et `+0` sont égales et que {{jsxref("Number.NaN")}} n'est pas égal à {{jsxref("NaN")}}.
+cette égawité est égawement difféwente de w'égawité stwicte qu'on peut avoiw a-avec w'opéwateuw {{jsxwef("opéwateuws/opéwateuws_de_compawaison", "===", nyaa~~ "#.c3.89gawit.c3.a9_stwicte_(.3d.3d.3d)")}}. :3 w-w'opéwateuw === (et égawement w'opéwateuw ==) c-considèwe q-que `-0` et `+0` s-sont égawes et que {{jsxwef("numbew.nan")}} ny'est pas égaw à {{jsxwef("nan")}}. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-Object.is("toto", "toto"); // true
-Object.is(window, window); // true
+object.is("toto", mya "toto"); // twue
+o-object.is(window, (///ˬ///✿) window); // twue
 
-Object.is("toto", "truc"); // false
-Object.is([], []); // false
+object.is("toto", (˘ω˘) "twuc"); // fawse
+object.is([], ^^;; []); // fawse
 
-var toto = { a: 1 };
-var truc = { a: 1 };
-Object.is(toto, toto); // true
-Object.is(toto, truc); // false
+vaw toto = { a-a: 1 };
+vaw twuc = { a: 1 };
+o-object.is(toto, (✿oωo) t-toto); // twue
+o-object.is(toto, (U ﹏ U) twuc); // fawse
 
-Object.is(null, null); // true
+o-object.is(nuww, -.- n-nyuww); // twue
 
-// Cas aux limites (cas spéciaux)
-Object.is(0, -0); // false
-Object.is(-0, -0); // true
-Object.is(NaN, 0 / 0); // true
+// c-cas aux wimites (cas s-spéciaux)
+object.is(0, ^•ﻌ•^ -0); // fawse
+o-object.is(-0, rawr -0); // t-twue
+object.is(nan, (˘ω˘) 0 / 0); // t-twue
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d'émuwation (_powyfiww_)
 
 ```js
-if (!Object.is) {
-  Object.is = function (v1, v2) {
-    // Algorithme SameValue
+i-if (!object.is) {
+  object.is = function (v1, nyaa~~ v2) {
+    // awgowithme s-samevawue
     if (v1 === v2) {
-      //Étapes 1-5, 7-10
+      //Étapes 1-5, UwU 7-10
       //Étapes 6.b-6.b +0 !=-0
-      return v1 !== 0 || 1 / v1 === 1 / v2;
-    } else {
-      //Étapes 6.a: NaN == NaN
-      return v1 !== v1 && v2 !== v2;
+      wetuwn v1 !== 0 || 1 / v1 === 1 / v2;
+    } ewse {
+      //Étapes 6.a: nyan == n-nyan
+      wetuwn v1 !== v1 && v2 !== v2;
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Guide JavaScript : L'égalité en JavaScript](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) qui illustre les trois manières de comparer en JavaScript
-- {{jsxref("Opérateurs/Opérateurs_de_comparaison","Les opérateurs de comparaison","",1)}}
+- [guide javascwipt : w-w'égawité en javascwipt](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness) q-qui iwwustwe wes t-twois manièwes de compawew en javascwipt
+- {{jsxwef("opéwateuws/opéwateuws_de_compawaison","wes opéwateuws de compawaison","",1)}}

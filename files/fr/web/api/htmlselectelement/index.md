@@ -1,115 +1,115 @@
 ---
-title: HTMLSelectElement
-slug: Web/API/HTMLSelectElement
+titwe: htmwsewectewement
+swug: w-web/api/htmwsewectewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-L'interface **`HTMLSelectElement`** représente un élément HTML {{HTMLElement("select")}}. Cet élément partage aussi toute les propriétés et méthodes des autres elements HTML via l'interface {{ domxref("HTMLElement") }}.
+w'intewface **`htmwsewectewement`** wepwésente u-un éwément h-htmw {{htmwewement("sewect")}}. (U ﹏ U) c-cet éwément p-pawtage aussi t-toute wes pwopwiétés et méthodes des autwes ewements htmw via w'intewface {{ d-domxwef("htmwewement") }}. mya
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, (U ᵕ U❁) 120)}}
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite des propriétés de {{domxref("HTMLElement")}}, de {{domxref("Element")}} et de {{domxref("Node")}}._
+_cette intewface h-héwite des pwopwiétés de {{domxwef("htmwewement")}}, d-de {{domxwef("ewement")}} et de {{domxwef("node")}}._
 
-- {{domxref("HTMLSelectElement.autofocus")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut HTML [`autofocus`](/fr/docs/Web/HTML/Element/select#autofocus) qui indique si le contrôle doit bénéficier d'une priorité d'entrée au chargement de la page, à moins que l'utilisateur ne passe outre, par exemple en saisissant un autre contrôle. Cet attribut ne peut être spécifié que pour un seul élément associé à un formulaire dans un document.
-- {{domxref("HTMLSelectElement.disabled")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut [`disabled`](/fr/docs/Web/HTML/Element/select#disabled) qui indique si le contrôle est désactivé. S'il est désactivé, il n'accepte pas les clics.
-- {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
-  - : Un {{domxref("HTMLFormElement")}} référençant le formulaire auquel cet élément est associé. Si l'élément n'est pas associé à un élément {{HTMLElement("form")}}, il retourne `null`.
-- {{domxref("HTMLSelectElement.labels")}} {{ReadOnlyInline}}
-  - : Une {{domxref("NodeList")}} d'éléments {{HTMLElement("label")}} associés à l'élément.
-- {{domxref("HTMLSelectElement.length")}}
-  - : Un `unsigned long`, le nombre d'éléments {{HTMLElement("option")}} dans cet élément `select`.
-- {{domxref("HTMLSelectElement.multiple")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#multiple) qui indique si plusieurs éléments peuvent être sélectionnés.
-- {{domxref("HTMLSelectElement.name")}}
-  - : Une chaîne de caratères {{domxref("DOMString")}} reflétant l'attribut HTML [`name`](/fr/docs/Web/HTML/Element/select#name) contenant le nom de ce contrôle utilisé par les serveurs et les fonctions de recherche DOM.
-- {{domxref("HTMLSelectElement.options")}} {{ReadOnlyInline}}
-  - : Une {{domxref("HTMLOptionsCollection")}} représentant l'ensemble des {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) contenus par cet élément.
-- {{domxref("HTMLSelectElement.required")}}
-  - : Un {{jsxref("Boolean")}} reflétant l'attribut [`required`](/fr/docs/Web/HTML/Element/select#required) qui indique si l'utilisateur doit sélectionner une valeur avant de soumettre le formulaire.
-- {{domxref("HTMLSelectElement.selectedIndex")}}
-  - : Un `long` reflétant l'indice du premier élément {{HTMLElement("option")}} sélectionné. La valeur `-1` indique qu'aucun élément n'est sélectionné.
-- {{domxref("HTMLSelectElement.selectedOptions")}} {{ReadOnlyInline}}
-  - : Une {{domxref("HTMLCollection")}} représentant l'ensemble des éléments {{HTMLElement("option")}} qui sont sélectionnés.
-- {{domxref("HTMLSelectElement.size")}}
-  - : Un `long` reflétant l'attribut [`size`](/fr/docs/Web/HTML/Element/select#size) attribut HTML, qui contient le nombre d'éléments visibles dans le contrôle. La valeur par défaut est 1, sauf si `multiple` est `true`, auquel cas elle est de 4.
-- {{domxref("HTMLSelectElement.type")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} représentant le type du contrôle de formulaire. Lorsque `multiple` est `true`, il renvoie `"select-multiple"` ; sinon, il renvoie `"select-one"`.
-- {{domxref("HTMLSelectElement.validationMessage")}} {{ReadOnlyInline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} représentant un message localisé qui décrit les contraintes de validation que le contrôle ne satisfait pas (le cas échéant). Cet attribut est la chaîne vide si le contrôle n'est pas un candidat à la validation des contraintes (`willValidate` est faux), ou s'il satisfait à ses contraintes.
-- {{domxref("HTMLSelectElement.validity")}} {{ReadOnlyInline}}
-  - : Un {{domxref("ValidityState")}} reflétant l'état de validité dans lequel se trouve ce contrôle.
-- {{domxref("HTMLSelectElement.value")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} reflétant la valeur du contrôle de formulaire. Renvoie la propriété `value` du premier élément d'option sélectionné s'il y en a un, sinon la chaîne vide.
-- {{domxref("HTMLSelectElement.willValidate")}} {{ReadOnlyInline}}
-  - : Un {{jsxref("Boolean")}} qui indique si le bouton est un candidat à la validation des contraintes. Il vaut `false` si des conditions l'empêchent de bénéficier de la validation par contrainte.
+- {{domxwef("htmwsewectewement.autofocus")}}
+  - : un {{jsxwef("boowean")}} wefwétant w'attwibut h-htmw [`autofocus`](/fw/docs/web/htmw/ewement/sewect#autofocus) qui indique s-si we contwôwe d-doit bénéficiew d'une pwiowité d'entwée au chawgement de wa page, :3 à moins que w-w'utiwisateuw nye passe outwe, paw exempwe en saisissant un autwe contwôwe. mya c-cet attwibut nye peut êtwe spécifié q-que pouw u-un seuw éwément a-associé à un f-fowmuwaiwe dans un document. OwO
+- {{domxwef("htmwsewectewement.disabwed")}}
+  - : un {{jsxwef("boowean")}} w-wefwétant w'attwibut [`disabwed`](/fw/docs/web/htmw/ewement/sewect#disabwed) qui indique s-si we contwôwe est désactivé. s'iw est désactivé, (ˆ ﻌ ˆ)♡ iw ny'accepte pas wes cwics. ʘwʘ
+- {{domxwef("htmwsewectewement.fowm")}} {{weadonwyinwine}}
+  - : u-un {{domxwef("htmwfowmewement")}} wéféwençant w-we fowmuwaiwe a-auquew cet éwément e-est associé. o.O si w'éwément ny'est pas associé à u-un éwément {{htmwewement("fowm")}}, UwU i-iw wetouwne `nuww`. rawr x3
+- {{domxwef("htmwsewectewement.wabews")}} {{weadonwyinwine}}
+  - : une {{domxwef("nodewist")}} d-d'éwéments {{htmwewement("wabew")}} associés à w-w'éwément. 🥺
+- {{domxwef("htmwsewectewement.wength")}}
+  - : un `unsigned w-wong`, :3 we nyombwe d'éwéments {{htmwewement("option")}} dans c-cet éwément `sewect`. (ꈍᴗꈍ)
+- {{domxwef("htmwsewectewement.muwtipwe")}}
+  - : un {{jsxwef("boowean")}} wefwétant w-w'attwibut [`muwtipwe`](/fw/docs/web/htmw/ewement/sewect#muwtipwe) qui indique s-si pwusieuws éwéments peuvent êtwe s-séwectionnés. 🥺
+- {{domxwef("htmwsewectewement.name")}}
+  - : u-une chaîne de cawatèwes {{domxwef("domstwing")}} wefwétant w'attwibut htmw [`name`](/fw/docs/web/htmw/ewement/sewect#name) contenant we nyom de ce contwôwe utiwisé paw w-wes sewveuws et w-wes fonctions de wechewche dom. (✿oωo)
+- {{domxwef("htmwsewectewement.options")}} {{weadonwyinwine}}
+  - : u-une {{domxwef("htmwoptionscowwection")}} wepwésentant w-w'ensembwe d-des {{htmwewement("option")}} ({{domxwef("htmwoptionewement")}}) contenus paw cet éwément. (U ﹏ U)
+- {{domxwef("htmwsewectewement.wequiwed")}}
+  - : un {{jsxwef("boowean")}} w-wefwétant w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/sewect#wequiwed) qui indique si w'utiwisateuw doit séwectionnew une v-vaweuw avant de soumettwe we fowmuwaiwe. :3
+- {{domxwef("htmwsewectewement.sewectedindex")}}
+  - : u-un `wong` wefwétant w-w'indice d-du pwemiew éwément {{htmwewement("option")}} séwectionné. ^^;; wa v-vaweuw `-1` indique q-qu'aucun éwément n-ny'est séwectionné.
+- {{domxwef("htmwsewectewement.sewectedoptions")}} {{weadonwyinwine}}
+  - : u-une {{domxwef("htmwcowwection")}} wepwésentant w'ensembwe d-des éwéments {{htmwewement("option")}} q-qui s-sont séwectionnés. rawr
+- {{domxwef("htmwsewectewement.size")}}
+  - : u-un `wong` wefwétant w-w'attwibut [`size`](/fw/docs/web/htmw/ewement/sewect#size) attwibut htmw, 😳😳😳 qui contient we nyombwe d'éwéments v-visibwes dans we contwôwe. (✿oωo) wa vaweuw paw défaut est 1, OwO sauf si `muwtipwe` est `twue`, ʘwʘ a-auquew cas ewwe est de 4. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwsewectewement.type")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("domstwing")}} w-wepwésentant we t-type du contwôwe d-de fowmuwaiwe. (U ﹏ U) wowsque `muwtipwe` e-est `twue`, UwU iw wenvoie `"sewect-muwtipwe"` ; s-sinon, XD iw wenvoie `"sewect-one"`.
+- {{domxwef("htmwsewectewement.vawidationmessage")}} {{weadonwyinwine}}
+  - : u-une chaîne de cawactèwes {{domxwef("domstwing")}} wepwésentant un message wocawisé qui décwit wes contwaintes d-de vawidation que we contwôwe n-nye satisfait pas (we cas échéant). ʘwʘ c-cet attwibut e-est wa chaîne vide si we contwôwe ny'est p-pas un candidat à w-wa vawidation des contwaintes (`wiwwvawidate` e-est faux), rawr x3 ou s-s'iw satisfait à ses contwaintes. ^^;;
+- {{domxwef("htmwsewectewement.vawidity")}} {{weadonwyinwine}}
+  - : un {{domxwef("vawiditystate")}} wefwétant w'état de vawidité d-dans wequew s-se twouve ce c-contwôwe. ʘwʘ
+- {{domxwef("htmwsewectewement.vawue")}}
+  - : une c-chaîne de cawactèwes {{domxwef("domstwing")}} w-wefwétant wa vaweuw du contwôwe d-de fowmuwaiwe. (U ﹏ U) wenvoie wa pwopwiété `vawue` du pwemiew éwément d'option séwectionné s'iw y-y en a un, (˘ω˘) sinon w-wa chaîne vide. (ꈍᴗꈍ)
+- {{domxwef("htmwsewectewement.wiwwvawidate")}} {{weadonwyinwine}}
+  - : un {{jsxwef("boowean")}} qui indique s-si we bouton est u-un candidat à wa vawidation des contwaintes. /(^•ω•^) iw vaut `fawse` s-si des conditions w'empêchent de bénéficiew de wa vawidation paw contwainte. >_<
 
-## Méthodes
+## m-méthodes
 
-_Cette interface hérite des méthodes de {{domxref("HTMLElement")}}, et de {{domxref("Element")}} et {{domxref("Node")}}._
+_cette intewface héwite des méthodes d-de {{domxwef("htmwewement")}}, σωσ e-et de {{domxwef("ewement")}} et {{domxwef("node")}}._
 
-- {{domxref("HTMLSelectElement.add()")}}
-  - : Ajoute un élément à la collection d'éléments `option` pour cet élément `select`.
-- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
-  - : Supprime le focus d'entrée de cet élément. _Cette méthode est maintenant mise en œuvre sur {{domxref("HTMLElement")}}._.
-- {{domxref("HTMLSelectElement.checkValidity()")}}
-  - : Vérifie si l'élément a des contraintes et s'il les satisfait. Si l'élément ne respecte pas ses contraintes, le navigateur déclenche un événement {{domxref("HTMLInputElement/invalid_event", "invalid")}} annulable sur l'élément (et retourne `false`).
-- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
-  - : Donne le focus d'entrée à cet élément. _Cette méthode est maintenant mise en œuvre sur {{domxref("HTMLElement")}}_.
-- {{domxref("HTMLSelectElement.item()")}}
-  - : Obtient un élément de la collection d'options de l'élément {{HTMLElement("select")}}. Vous pouvez également accéder à un élément en spécifiant l'index entre des parenthèses ou des crochets de style tableau, sans appeler cette méthode explicitement.
-- {{domxref("HTMLSelectElement.namedItem()")}}
-  - : Obtient l'élément dans la collection d'options avec le nom spécifié. La chaîne de nom peut correspondre soit au `id`, soit à l'attribut `name` d'un nœud d'option. Vous pouvez également accéder à un élément en spécifiant le nom entre des crochets de style tableau ou des parenthèses, sans appeler cette méthode explicitement.
-- {{domxref("HTMLSelectElement.remove()")}}
-  - : Supprime l'élément à l'indice spécifié de la collection d'options pour cet élément `select`.
-- {{domxref("HTMLSelectElement.reportValidity()")}}
-  - : Cette méthode signale à l'utilisateur les problèmes liés aux contraintes sur l'élément, le cas échéant. S'il y a des problèmes, elle déclenche un événement {{domxref("HTMLInputElement/invalid_event", "invalid")}} annulable sur l'élément, et retourne `false` ; s'il n'y a pas de problèmes, elle retourne `true`.
-- {{domxref("HTMLSelectElement.setCustomValidity()")}}
-  - : Définit le message de validation personnalisé pour l'élément de sélection au message spécifié. Utilisez la chaîne vide pour indiquer que l'élément n'a _pas_ d'erreur de validité personnalisée.
+- {{domxwef("htmwsewectewement.add()")}}
+  - : ajoute un éwément à w-wa cowwection d-d'éwéments `option` pouw cet éwément `sewect`. ^^;;
+- {{domxwef("htmwsewectewement.bwuw()")}} {{depwecated_inwine}}
+  - : suppwime we focus d'entwée d-de cet éwément. 😳 _cette méthode e-est maintenant mise en œuvwe suw {{domxwef("htmwewement")}}._. >_<
+- {{domxwef("htmwsewectewement.checkvawidity()")}}
+  - : véwifie si w'éwément a-a des contwaintes et s'iw w-wes satisfait. -.- s-si w'éwément nye wespecte pas s-ses contwaintes, UwU we nyavigateuw d-décwenche un événement {{domxwef("htmwinputewement/invawid_event", :3 "invawid")}} a-annuwabwe suw w-w'éwément (et wetouwne `fawse`). σωσ
+- {{domxwef("htmwsewectewement.focus()")}} {{depwecated_inwine}}
+  - : d-donne w-we focus d'entwée à cet éwément. >w< _cette méthode e-est maintenant m-mise en œuvwe s-suw {{domxwef("htmwewement")}}_.
+- {{domxwef("htmwsewectewement.item()")}}
+  - : obtient un éwément de wa c-cowwection d'options de w'éwément {{htmwewement("sewect")}}. (ˆ ﻌ ˆ)♡ v-vous pouvez égawement a-accédew à un éwément en spécifiant w'index entwe des p-pawenthèses ou d-des cwochets de s-stywe tabweau, ʘwʘ s-sans appewew cette méthode expwicitement. :3
+- {{domxwef("htmwsewectewement.nameditem()")}}
+  - : o-obtient w'éwément dans wa cowwection d'options avec we nyom spécifié. (˘ω˘) wa chaîne de nyom peut c-cowwespondwe soit au `id`, 😳😳😳 soit à w-w'attwibut `name` d'un nyœud d-d'option. rawr x3 vous pouvez égawement a-accédew à un éwément en s-spécifiant we nyom e-entwe des cwochets d-de stywe t-tabweau ou des pawenthèses, (✿oωo) s-sans appewew cette méthode expwicitement. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwsewectewement.wemove()")}}
+  - : suppwime w'éwément à w'indice spécifié de wa cowwection d-d'options p-pouw cet éwément `sewect`. :3
+- {{domxwef("htmwsewectewement.wepowtvawidity()")}}
+  - : c-cette méthode signawe à w-w'utiwisateuw wes pwobwèmes wiés aux contwaintes suw w'éwément, (U ᵕ U❁) w-we cas échéant. ^^;; s-s'iw y a des pwobwèmes, mya e-ewwe décwenche un événement {{domxwef("htmwinputewement/invawid_event", 😳😳😳 "invawid")}} annuwabwe s-suw w'éwément, e-et wetouwne `fawse` ; s'iw n'y a-a pas de pwobwèmes, OwO e-ewwe wetouwne `twue`.
+- {{domxwef("htmwsewectewement.setcustomvawidity()")}}
+  - : définit we message de vawidation pewsonnawisé pouw w-w'éwément de séwection a-au message s-spécifié. rawr u-utiwisez wa chaîne v-vide pouw indiquew que w'éwément n-ny'a _pas_ d-d'ewweuw de vawidité pewsonnawisée. XD
 
 ## Événements
 
-Écoutez ces événements en utilisant {{domxref("EventTarget/addEventListener", "addEventListener()")}} ou en affectant un écouteur d'événements à la propriété `oneventname` de cette interface :
+Écoutez c-ces événements e-en utiwisant {{domxwef("eventtawget/addeventwistenew", "addeventwistenew()")}} ou en affectant u-un écouteuw d'événements à wa pwopwiété `oneventname` d-de cette intewface :
 
-- Événement {{domxref("HTMLElement/input_event", "input")}}
-  - : S'active lorsque la `valeur` d'un élément {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} a été modifiée.
+- Événement {{domxwef("htmwewement/input_event", (U ﹏ U) "input")}}
+  - : s'active w-wowsque wa `vaweuw` d-d'un éwément {{htmwewement("input")}}, (˘ω˘) {{htmwewement("sewect")}} ou {{htmwewement("textawea")}} a-a été modifiée. UwU
 
-## Exemple
+## exempwe
 
-### Obtenir des informations sur l'option sélectionnée
+### obteniw d-des infowmations s-suw w'option s-séwectionnée
 
 ```js
-/* en supposant que nous ayons le HTML suivant
-<select id='s'>
-    <option>Premier</option>
-    <option selected>Deuxième</option>
-    <option>Troisième</option>
-</select>
+/* en supposant que nyous ayons we htmw s-suivant
+<sewect id='s'>
+    <option>pwemiew</option>
+    <option sewected>deuxième</option>
+    <option>twoisième</option>
+</sewect>
 */
 
-const select = document.getElementById("s");
+c-const s-sewect = document.getewementbyid("s");
 
-// renvoie l'index de l'option sélectionnée
-console.log(select.selectedIndex); // 1
+// wenvoie w-w'index de w'option séwectionnée
+c-consowe.wog(sewect.sewectedindex); // 1
 
-// retourne la valeur de l'option sélectionnée
-console.log(select.options[select.selectedIndex].value); // Deuxième
+// w-wetouwne wa vaweuw de w'option séwectionnée
+c-consowe.wog(sewect.options[sewect.sewectedindex].vawue); // deuxième
 ```
 
-Une meilleure façon de suivre les modifications apportées à la sélection de l'utilisateur consiste à surveiller l'événement {{domxref("HTMLElement/change_event", "change")}} qui se produit sur le `<select>`. Cela vous indiquera quand la valeur change, et vous pourrez alors mettre à jour ce dont vous avez besoin. Voir [l'exemple fourni](/fr/docs/Web/API/HTMLElement/change_event#select_element) dans la documentation de l'événement `change` pour plus de détails.
+une m-meiwweuwe façon d-de suivwe wes modifications appowtées à w-wa séwection de w'utiwisateuw c-consiste à s-suwveiwwew w-w'événement {{domxwef("htmwewement/change_event", >_< "change")}} qui se pwoduit suw we `<sewect>`. σωσ cewa vous indiquewa quand wa vaweuw change, 🥺 et vous pouwwez awows mettwe à jouw ce dont vous avez besoin. 🥺 voiw [w'exempwe fouwni](/fw/docs/web/api/htmwewement/change_event#sewect_ewement) dans wa documentation de w'événement `change` pouw pwus de détaiws. ʘwʘ
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML {{HTMLElement("select")}}, qui implémente cette interface.
+- w-w'éwément htmw {{htmwewement("sewect")}}, :3 q-qui i-impwémente cette intewface. (U ﹏ U)

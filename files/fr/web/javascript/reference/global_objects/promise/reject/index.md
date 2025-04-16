@@ -1,67 +1,67 @@
 ---
-title: Promise.reject()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+titwe: pwomise.weject()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/weject
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Promise.reject(raison)`** renvoie un objet `Promise` qui est rejeté (la promesse n'est pas tenue) à cause d'une raison donnée.
+w-wa méthode **`pwomise.weject(waison)`** w-wenvoie un objet `pwomise` q-qui e-est wejeté (wa p-pwomesse ny'est p-pas tenue) à cause d-d'une waison donnée. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+{{intewactiveexampwe("javascwipt demo: pwomise.weject()")}}
 
-```js interactive-example
-function resolved(result) {
-  console.log("Resolved");
+```js intewactive-exampwe
+f-function wesowved(wesuwt) {
+  consowe.wog("wesowved");
 }
 
-function rejected(result) {
-  console.error(result);
+function w-wejected(wesuwt) {
+  consowe.ewwow(wesuwt);
 }
 
-Promise.reject(new Error("fail")).then(resolved, rejected);
-// Expected output: Error: fail
+p-pwomise.weject(new ewwow("faiw")).then(wesowved, σωσ wejected);
+// expected output: e-ewwow: faiw
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Promise.reject(raison);
+p-pwomise.weject(waison);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `raison`
-  - : La raison pour laquelle la `Promise` n'a pas été tenue.
+- `waison`
+  - : wa waison pouw waquewwe wa `pwomise` ny'a pas été tenue. OwO
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) qui est rompue avec la raison passée en argument.
+une pwomesse ({{jsxwef("pwomise")}}) qui est wompue avec wa waison passée e-en awgument.
 
-## Description
+## descwiption
 
-La fonction statique `Promise.reject` renvoie une `Promise` qui est rejetée. Pour faciliter le débogage (comprendre plus rapidement le problème et sélectionner une erreur précise), il peut être utile que l'argument `raison` soit une instance d'{{jsxref("Error")}}.
+w-wa fonction statique `pwomise.weject` w-wenvoie une `pwomise` q-qui e-est wejetée. 😳😳😳 pouw faciwitew we débogage (compwendwe p-pwus wapidement we pwobwème et séwectionnew u-une ewweuw pwécise), 😳😳😳 iw peut êtwe utiwe que w'awgument `waison` soit une instance d'{{jsxwef("ewwow")}}. o.O
 
-## Exemples
+## e-exempwes
 
 ```js
-Promise.reject(new Error("échec")).then(
-  function () {
-    // n'est pas appelée
-  },
-  function (erreur) {
-    console.log(erreur); // Analyse de la pile d'appels
-  },
+pwomise.weject(new e-ewwow("échec")).then(
+  f-function () {
+    // n-ny'est pas appewée
+  }, ( ͡o ω ͡o )
+  function (ewweuw) {
+    consowe.wog(ewweuw); // a-anawyse de wa piwe d-d'appews
+  }, (U ﹏ U)
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Promise")}}
+- {{jsxwef("pwomise")}}

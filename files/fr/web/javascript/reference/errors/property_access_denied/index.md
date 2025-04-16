@@ -1,45 +1,45 @@
 ---
-title: 'Error: Permission denied to access property "x"'
-slug: Web/JavaScript/Reference/Errors/Property_access_denied
+titwe: 'ewwow: pewmission denied t-to access pwopewty "x"'
+s-swug: w-web/javascwipt/wefewence/ewwows/pwopewty_access_denied
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Error: Permission denied to access property "x"
+e-ewwow: pewmission d-denied t-to access pwopewty "x"
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("Error")}}.
+{{jsxwef("ewwow")}}. (U ﹏ U)
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Il y a eu une tentative d'accès non-autorisée à un objet sur lequel vous n'avez pas de permissions. Généralement, cela se produit lorsqu'un élément {{HTMLElement("iframe")}} est chargée depuis un domaine différent et que [la condition de même origine](/fr/docs/Web/Security/Same-origin_policy) n'est pas respectée.
+iw y a eu une tentative d'accès n-nyon-autowisée à un objet suw wequew vous ny'avez p-pas de pewmissions. >_< généwawement, rawr x3 c-cewa se pwoduit wowsqu'un éwément {{htmwewement("ifwame")}} est chawgée depuis un domaine d-difféwent et que [wa condition d-de même owigine](/fw/docs/web/secuwity/same-owigin_powicy) n-ny'est pas wespectée. mya
 
-## Exemples
+## exempwes
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <iframe
-      id="myframe"
-      src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function () {
-        console.log(frames[0].document);
-        // Error: Permission denied to access property "document"
+    <ifwame
+      id="myfwame"
+      swc="http://www1.w3c-test.owg/common/bwank.htmw"></ifwame>
+    <scwipt>
+      o-onwoad = function () {
+        consowe.wog(fwames[0].document);
+        // ewwow: pewmission denied to access p-pwopewty "document"
       };
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("iframe")}}
-- [Condition d'origine (_same-origin policy_)](/fr/docs/Web/Security/Same-origin_policy)
+- {{htmwewement("ifwame")}}
+- [condition d-d'owigine (_same-owigin p-powicy_)](/fw/docs/web/secuwity/same-owigin_powicy)

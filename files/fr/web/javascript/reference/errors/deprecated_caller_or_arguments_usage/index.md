@@ -1,77 +1,77 @@
 ---
-title: "ReferenceError: deprecated caller or arguments usage"
-slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
+titwe: "wefewenceewwow: depwecated c-cawwew ow a-awguments usage"
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_cawwew_ow_awguments_usage
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: 'arguments', 'callee' and 'caller' are restricted function properties and cannot be accessed in this context (Edge)
-Warning: ReferenceError: deprecated caller usage (Firefox)
-Warning: ReferenceError: deprecated arguments usage (Firefox)
-TypeError: 'callee' and 'caller' cannot be accessed in strict mode. (Safari)
+t-typeewwow: 'awguments', (ˆ ﻌ ˆ)♡ 'cawwee' a-and 'cawwew' a-awe westwicted f-function pwopewties and cannot be accessed in this context (edge)
+wawning: w-wefewenceewwow: depwecated cawwew usage (fiwefox)
+w-wawning: wefewenceewwow: depwecated a-awguments usage (fiwefox)
+typeewwow: 'cawwee' and 'cawwew' c-cannot be accessed in stwict m-mode. (safawi)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-Un avertissement uniquement affiché en mode strict qui prend la forme d'une {{jsxref("ReferenceError")}}. L'exécution du script JavaScript n'est pas interrompue.
+un avewtissement uniquement affiché en mode stwict qui pwend w-wa fowme d'une {{jsxwef("wefewenceewwow")}}. 😳😳😳 w'exécution du scwipt javascwipt ny'est pas intewwompue. (U ﹏ U)
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-[En mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), les propriétés {{jsxref("Function.caller")}} et/ou {{jsxref("Function.arguments")}} sont utilisées alors qu'elles ne devraient pas l'être. Ces propriétés sont dépréciées car elles font fuiter des informations sur l'appelant de la fonction et ne sont pas standards. De plus, ces propriétés rendent certaines optimisations plus complexe et peuvent nuire aux performances.
+[en m-mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode), (///ˬ///✿) w-wes pwopwiétés {{jsxwef("function.cawwew")}} e-et/ou {{jsxwef("function.awguments")}} sont u-utiwisées awows q-qu'ewwes nye devwaient pas w'êtwe. 😳 ces pwopwiétés s-sont dépwéciées caw ewwes font fuitew d-des infowmations suw w'appewant de wa fonction et nye sont pas standawds. 😳 de pwus, σωσ ces pwopwiétés w-wendent cewtaines optimisations p-pwus compwexe e-et peuvent n-nyuiwe aux pewfowmances. rawr x3
 
-## Exemples
+## exempwes
 
-### Utilisation de `function.caller` ou de `arguments.callee.caller`
+### utiwisation de `function.cawwew` o-ou de `awguments.cawwee.cawwew`
 
-{{jsxref("Function.caller")}} et [`arguments.callee.caller`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee) sont dépréciées (se référer aux articles de la référence pour plus d'informations).
+{{jsxwef("function.cawwew")}} e-et [`awguments.cawwee.cawwew`](/fw/docs/web/javascwipt/wefewence/functions/awguments/cawwee) sont dépwéciées (se wéféwew a-aux awticwes d-de wa wéféwence pouw pwus d-d'infowmations). OwO
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-function myFunc() {
-  if (myFunc.caller == null) {
-    return "La fonction a été appelée depuis la portée globale !";
-  } else {
-    return "L'appelant est " + myFunc.caller;
+function myfunc() {
+  if (myfunc.cawwew == n-nyuww) {
+    wetuwn "wa fonction a-a été appewée depuis wa powtée g-gwobawe !";
+  } e-ewse {
+    wetuwn "w'appewant est " + myfunc.cawwew;
   }
 }
 
-myFunc();
-// Warning: ReferenceError: deprecated caller usage
-// "La fonction a été appelée depuis la portée globale !"
+myfunc();
+// wawning: wefewenceewwow: depwecated cawwew usage
+// "wa fonction a été a-appewée depuis w-wa powtée gwobawe !"
 ```
 
-### `Function.arguments`
+### `function.awguments`
 
-{{jsxref("Function.arguments")}} est dépréciée (se référer à l'article sur cette propriété pour plus d'informations).
+{{jsxwef("function.awguments")}} e-est d-dépwéciée (se w-wéféwew à w'awticwe suw cette pwopwiété pouw pwus d'infowmations). /(^•ω•^)
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use stwict";
 
 function f(n) {
   g(n - 1);
 }
 
 function g(n) {
-  console.log("before: " + g.arguments[0]);
+  consowe.wog("befowe: " + g-g.awguments[0]);
   if (n > 0) {
-    f(n);
+    f-f(n);
   }
-  console.log("after: " + g.arguments[0]);
+  c-consowe.wog("aftew: " + g-g.awguments[0]);
 }
 
 f(2);
 
-console.log("returned: " + g.arguments);
-// Warning: ReferenceError: deprecated arguments usage
+consowe.wog("wetuwned: " + g-g.awguments);
+// w-wawning: wefewenceewwow: d-depwecated a-awguments usage
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Les fonctionnalités obsolètes et dépréciées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
-- {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- [wes f-fonctionnawités o-obsowètes et d-dépwéciées](/fw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)
+- [we m-mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode)
+- {{jsxwef("function.awguments")}}
+- {{jsxwef("function.cawwew")}} and [`awguments.cawwee.cawwew`](/fw/docs/web/javascwipt/wefewence/functions/awguments/cawwee)

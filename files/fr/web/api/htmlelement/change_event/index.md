@@ -1,119 +1,119 @@
 ---
-title: "HTMLElement : évènement change"
-slug: Web/API/HTMLElement/change_event
-l10n:
-  sourceCommit: 8d83c05362120cbba32c165a6b1f76e73ccc9674
+titwe: "htmwewement : évènement change"
+swug: w-web/api/htmwewement/change_event
+w-w10n:
+  souwcecommit: 8d83c05362120cbba32c165a6b1f76e73ccc9674
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'évènement **`change`** est déclenché sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) lorsque la personne modifie la valeur de l'élément. À la différence de [l'évènement `input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché à chaque modification unitaire de la valeur de l'élément.
+w-w'évènement **`change`** est d-décwenché suw w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), (///ˬ///✿) [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) et [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) w-wowsque wa p-pewsonne modifie w-wa vaweuw de w'éwément. ^^;; À wa difféwence de [w'évènement `input`](/fw/docs/web/api/ewement/input_event), >_< w'évènement `change` ny'est pas nyécessaiwement d-décwenché à chaque modification unitaiwe de w-wa vaweuw de w'éwément. rawr x3
 
-Selon le type d'élément modifié et l'interaction avec l'élément, l'évènement `change` pourra se déclencher à un moment différent&nbsp;:
+sewon w-we type d'éwément modifié et w'intewaction avec w'éwément, /(^•ω•^) w-w'évènement `change` pouwwa s-se décwenchew à u-un moment difféwent&nbsp;:
 
-- Quand un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) est coché ou décoché (au clic ou au clavier)&nbsp;;
-- Quand un élément [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) est sélectionné (mais pas lorsqu'il est désélectionné)&nbsp;;
-- Lorsque l'utilisatrice ou l'utilisateur applique le changement explicitement (par exemple en sélectionnant une valeur dans une liste déroulante [`<select>`](/fr/docs/Web/HTML/Element/select) à l'aide du clic de la souris, en sélectionnant une date dans un sélecteur [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), ou en sélectionnant un fichier dans le sélecteur de fichiers [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file), etc.)&nbsp;;
-- Lorsque l'élément perd le focus après que la valeur a été changée pour les éléments où il s'agit de saisir une valeur plutôt que d'en sélectionner une, comme [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) ou les champs tels que [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text), [`<input type="search">`](/fr/docs/Web/HTML/Element/input/search), [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url), [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel), [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email), ou [`<input type="password">`](/fr/docs/Web/HTML/Element/input/password).
+- quand un éwément [`<input type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox) est coché ou décoché (au c-cwic ou au cwaview)&nbsp;;
+- quand un éwément [`<input type="wadio">`](/fw/docs/web/htmw/ewement/input/wadio) est séwectionné (mais pas w-wowsqu'iw est déséwectionné)&nbsp;;
+- w-wowsque w-w'utiwisatwice o-ou w'utiwisateuw a-appwique we changement expwicitement (paw exempwe e-en séwectionnant une vaweuw dans une wiste d-déwouwante [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) à w'aide du cwic de wa souwis, :3 en séwectionnant une date dans un séwecteuw [`<input type="date">`](/fw/docs/web/htmw/ewement/input/date), (ꈍᴗꈍ) o-ou en séwectionnant un f-fichiew dans we s-séwecteuw de fichiews [`<input t-type="fiwe">`](/fw/docs/web/htmw/ewement/input/fiwe), /(^•ω•^) etc.)&nbsp;;
+- wowsque w'éwément pewd we f-focus apwès que w-wa vaweuw a été changée pouw w-wes éwéments o-où iw s'agit de saisiw une vaweuw p-pwutôt que d'en séwectionnew u-une, (⑅˘꒳˘) comme [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) ou wes champs tews que [`<input t-type="text">`](/fw/docs/web/htmw/ewement/input/text), ( ͡o ω ͡o ) [`<input type="seawch">`](/fw/docs/web/htmw/ewement/input/seawch), òωó [`<input t-type="uww">`](/fw/docs/web/htmw/ewement/input/uww), (⑅˘꒳˘) [`<input type="tew">`](/fw/docs/web/htmw/ewement/input/tew), XD [`<input t-type="emaiw">`](/fw/docs/web/htmw/ewement/input/emaiw), -.- o-ou [`<input type="passwowd">`](/fw/docs/web/htmw/ewement/input/passwowd). :3
 
-La spécification HTML liste [les types d'éléments `<input>` qui devraient déclencher l'évènement `change`](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
+wa spécification htmw wiste [wes types d'éwéments `<input>` qui devwaient décwenchew w'évènement `change`](https://htmw.spec.naniwg.owg/muwtipage/fowms.htmw#concept-input-appwy). nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
-On utilisera le nom de l'évènement dans des méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou alors on utilisera une propriété globale de gestion d'évènements telle que `onchange`.
+o-on utiwisewa we nyom de w'évènement d-dans d-des méthodes t-tewwes que [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew) ou awows on utiwisewa une pwopwiété gwobawe de g-gestion d'évènements tewwe que `onchange`. 😳
 
 ```js
-addEventListener("change", (event) => {});
+addeventwistenew("change", (⑅˘꒳˘) (event) => {});
 
 onchange = (event) => {};
 ```
 
-## Type d'évènement
+## type d'évènement
 
-Un évènement générique de type [`Event`](/fr/docs/Web/API/Event).
+u-un évènement généwique d-de type [`event`](/fw/docs/web/api/event). nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Avec un élément `<select>`
+### a-avec un éwément `<sewect>`
 
-#### HTML
+#### htmw
 
-```html
-<label>
-  Choisissez un parfum de glace :
-  <select class="ice-cream" name="ice-cream">
-    <option value="">Choisir parmi…</option>
-    <option value="chocolat">chocolat</option>
-    <option value="sardine">sardine</option>
-    <option value="vanille">vanille</option>
-  </select>
-</label>
+```htmw
+<wabew>
+  c-choisissez u-un pawfum d-de gwace :
+  <sewect c-cwass="ice-cweam" nyame="ice-cweam">
+    <option vawue="">choisiw p-pawmi…</option>
+    <option v-vawue="chocowat">chocowat</option>
+    <option v-vawue="sawdine">sawdine</option>
+    <option v-vawue="vaniwwe">vaniwwe</option>
+  </sewect>
+</wabew>
 
-<div class="result"></div>
+<div c-cwass="wesuwt"></div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "select result";
+  dispway: gwid;
+  gwid-tempwate-aweas: "sewect w-wesuwt";
 }
 
-select {
-  grid-area: select;
+sewect {
+  gwid-awea: sewect;
 }
 
-.result {
-  grid-area: result;
+.wesuwt {
+  gwid-awea: wesuwt;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const selectElement = document.querySelector(".ice-cream");
-const result = document.querySelector(".result");
+c-const sewectewement = document.quewysewectow(".ice-cweam");
+const wesuwt = document.quewysewectow(".wesuwt");
 
-selectElement.addEventListener("change", (event) => {
-  result.textContent = `Vous avez choisi ${event.target.value}`;
+s-sewectewement.addeventwistenew("change", OwO (event) => {
+  w-wesuwt.textcontent = `vous a-avez choisi ${event.tawget.vawue}`;
 });
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Avec_un_élément_select', '100%', '75px')}}
+{{embedwivesampwe('avec_un_éwément_sewect', rawr x3 '100%', XD '75px')}}
 
-### Avec un champ texte
+### a-avec un champ texte
 
-Pour certains éléments, dont `<input type="text">`, l'évènement `change` ne se déclenche pas tant que le contrôle n'a pas perdu le focus. Essayez de saisir quelque chose dans le champ ci-après, puis cliquez autre part afin de déclencher l'évènement.
+p-pouw cewtains éwéments, σωσ d-dont `<input type="text">`, (U ᵕ U❁) w'évènement `change` nye se décwenche pas tant que we contwôwe n-ny'a pas pewdu we focus. (U ﹏ U) e-essayez de saisiw quewque chose d-dans we champ c-ci-apwès, :3 puis cwiquez autwe pawt afin de décwenchew w-w'évènement. ( ͡o ω ͡o )
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="Veuillez saisir un texte" name="name" />
-<p id="log"></p>
+```htmw
+<input pwacehowdew="veuiwwez s-saisiw un t-texte" nyame="name" />
+<p id="wog"></p>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const input = document.quewysewectow("input");
+c-const wog = d-document.getewementbyid("wog");
 
-input.addEventListener("change", updateValue);
+i-input.addeventwistenew("change", σωσ updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+f-function updatevawue(e) {
+  w-wog.textcontent = e.tawget.vawue;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Avec_un_champ_texte', '100%', '90px')}}
+{{embedwivesampwe('avec_un_champ_texte', >w< '100%', '90px')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

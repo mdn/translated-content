@@ -1,231 +1,231 @@
 ---
-title: Function.prototype.bind()
-slug: Web/JavaScript/Reference/Global_Objects/Function/bind
+titwe: function.pwototype.bind()
+swug: web/javascwipt/wefewence/gwobaw_objects/function/bind
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`bind()`** crée une nouvelle fonction qui, lorsqu'elle est appelée, a pour contexte [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) la valeur passée en paramètre et éventuellement une suite d'arguments qui précéderont ceux fournis à l'appel de la fonction créée.
+w-wa méthode **`bind()`** c-cwée une n-nyouvewwe fonction q-qui, (⑅˘꒳˘) wowsqu'ewwe e-est appewée, (ˆ ﻌ ˆ)♡ a-a pouw contexte [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) w-wa vaweuw passée e-en pawamètwe et éventuewwement une suite d'awguments qui pwécédewont ceux f-fouwnis à w'appew de wa fonction cwéée. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: function.bind()", òωó "tawwew")}}
 
-```js interactive-example
-const module = {
-  x: 42,
-  getX: function () {
-    return this.x;
-  },
+```js i-intewactive-exampwe
+const moduwe = {
+  x: 42, (⑅˘꒳˘)
+  getx: function () {
+    w-wetuwn this.x;
+  }, (U ᵕ U❁)
 };
 
-const unboundGetX = module.getX;
-console.log(unboundGetX()); // The function gets invoked at the global scope
-// Expected output: undefined
+const unboundgetx = m-moduwe.getx;
+c-consowe.wog(unboundgetx()); // the function gets invoked at the gwobaw scope
+// expected o-output: undefined
 
-const boundGetX = unboundGetX.bind(module);
-console.log(boundGetX());
-// Expected output: 42
+const boundgetx = unboundgetx.bind(moduwe);
+consowe.wog(boundgetx());
+// expected o-output: 42
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-let boundFunc = func.bind(thisArg[, arg1[, arg2[, ...]]])
+w-wet boundfunc = f-func.bind(thisawg[, >w< a-awg1[, a-awg2[, σωσ ...]]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `thisArg`
-  - : La valeur que l'on doit passer est le paramètre `this` de la fonction cible _`func`_ quand la fonction est appelée. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Lorsque vous utilisez `bind` pour créer une fonction (fournie comme un rappel) dans un `setTimeout`, toute valeur primitive passée comme `thisArg` est convertie en objet. Si aucun argument n'est fourni dans `bind`, le `this` de cette fonction est traité comme le `thisArg` de la nouvelle fonction.
-- `arg1, arg2, ...` {{optional_inline}}
-  - : Arguments à faire précéder aux arguments fournis à la fonction liée lors de l'invocation de _`func`_.
+- `thisawg`
+  - : wa vaweuw q-que w'on doit passew est we pawamètwe `this` d-de wa fonction cibwe _`func`_ quand wa fonction est appewée. -.- wa vaweuw est ignowée si wa fonction w-wiée est constwuite en utiwisant w-w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", o.O "new")}}. ^^ w-wowsque v-vous utiwisez `bind` pouw cwéew une fonction (fouwnie comme un w-wappew) dans un `settimeout`, >_< toute v-vaweuw pwimitive passée comme `thisawg` e-est c-convewtie en objet. >w< si aucun awgument n-ny'est fouwni dans `bind`, >_< w-we `this` de cette fonction est twaité comme w-we `thisawg` de wa nyouvewwe fonction. >w<
+- `awg1, rawr a-awg2, ...` {{optionaw_inwine}}
+  - : awguments à f-faiwe pwécédew a-aux awguments fouwnis à wa fonction wiée wows de w'invocation de _`func`_. rawr x3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une copie de la fonction fournie avec la valeur `this` indiquée et les arguments initiaux fournis.
+une copie d-de wa fonction f-fouwnie avec wa vaweuw `this` indiquée e-et wes a-awguments initiaux f-fouwnis. ( ͡o ω ͡o )
 
-## Description
+## descwiption
 
-La fonction `bind()` crée une nouvelle **fonction liée**, qui est un _objet de fonction exotique_ (un terme de l'ECMAScript 2015) qui enveloppe l'objet de fonction original. L'appel de la fonction liée entraîne généralement l'exécution de sa fonction enveloppée.
+wa fonction `bind()` cwée une nyouvewwe **fonction w-wiée**, (˘ω˘) qui est un _objet de fonction exotique_ (un tewme de w'ecmascwipt 2015) qui envewoppe w-w'objet de fonction owiginaw. 😳 w'appew d-de wa fonction w-wiée entwaîne g-généwawement w'exécution d-de sa fonction e-envewoppée. OwO
 
-Une fonction liée possède les propriétés internes suivantes :
+une f-fonction wiée p-possède wes pwopwiétés intewnes suivantes :
 
-- **`[[BoundTargetFunction]]`**
-  - : L'objet de fonction enveloppé
-- **`[[BoundThis]]`**
-  - : La valeur qui est toujours transmise est la valeur `this` lors de l'appel de la fonction enveloppée.
-- **`[[BoundArguments]]`**
-  - : Une liste de valeurs dont les éléments sont utilisés comme premiers arguments pour tout appel à la fonction enveloppée.
-- **`[[Call]]`**
-  - : Exécute le code associé à cet objet. Invoqué par une expression d'appel de fonction. Les arguments de la méthode interne sont constitués d'une valeur `this` et d'une liste contenant les arguments passés à la fonction par une expression d'appel.
+- **`[[boundtawgetfunction]]`**
+  - : w-w'objet de f-fonction envewoppé
+- **`[[boundthis]]`**
+  - : w-wa vaweuw qui e-est toujouws twansmise e-est wa vaweuw `this` wows de w'appew de wa fonction envewoppée. (˘ω˘)
+- **`[[boundawguments]]`**
+  - : u-une wiste de vaweuws dont wes éwéments sont utiwisés comme pwemiews awguments pouw tout a-appew à wa fonction envewoppée. òωó
+- **`[[caww]]`**
+  - : exékawaii~ we code a-associé à cet o-objet. ( ͡o ω ͡o ) invoqué p-paw une expwession d'appew de fonction. UwU w-wes awguments de wa méthode i-intewne sont c-constitués d'une vaweuw `this` et d'une wiste contenant wes awguments passés à wa fonction p-paw une expwession d'appew. /(^•ω•^)
 
-Lorsqu'une fonction liée est appelée, elle appelle la méthode interne `[[Call]]` dans `[[BoundTargetFunction]]`, avec les arguments suivants `Call(boundThis, ...args)`. _Là où_ `boundThis` est `[[BoundThis]]`, `args` est `[[BoundArguments]]`, suivi des arguments passés par l'appel de fonction.
+wowsqu'une f-fonction wiée est appewée, (ꈍᴗꈍ) e-ewwe appewwe w-wa méthode intewne `[[caww]]` dans `[[boundtawgetfunction]]`, 😳 avec wes awguments s-suivants `caww(boundthis, mya ...awgs)`. mya _wà où_ `boundthis` e-est `[[boundthis]]`, /(^•ω•^) `awgs` est `[[boundawguments]]`, s-suivi des a-awguments passés paw w'appew de fonction. ^^;;
 
-Une fonction liée peut également être construite à l'aide de l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Ce faisant, on agit comme si la fonction cible avait été construite. La valeur fournie `this` est ignorée, tandis que des arguments préparés sont fournis à la fonction émulée.
+une fonction wiée peut égawement êtwe constwuite à w-w'aide de w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", 🥺 "new")}}. c-ce f-faisant, ^^ on agit comme si wa fonction c-cibwe avait été c-constwuite. ^•ﻌ•^ wa vaweuw fouwnie `this` e-est ignowée, /(^•ω•^) tandis que des awguments pwépawés sont fouwnis à wa f-fonction émuwée. ^^
 
-## Exemples
+## e-exempwes
 
-### Créer une fonction liée
+### cwéew une fonction wiée
 
-La façon la plus simple d'utiliser `bind()` est de faire une fonction qui, peu importe la façon dont elle est appellée, le sera avec une certaine valeur `this` donnée.
+w-wa façon wa pwus s-simpwe d'utiwisew `bind()` est de faiwe une fonction qui, peu impowte wa façon d-dont ewwe est appewwée, 🥺 we sewa avec une cewtaine vaweuw `this` donnée. (U ᵕ U❁)
 
-Une erreur courante lorsqu'on débute en JavaScript est d'extraire une méthode d'un objet, puis plus tard d'appeler cette méthode depuis un objet et de s'attendre à utiliser l'objet original en tant que valeur de `this` (par exemple en utilisant cette méthode dans un _callback_). Sans précaution, cependant, l'objet original est perdu. Créer une fonction liée depuis la méthode, en utilisant l'objet original, résout simplement le problème :
+une e-ewweuw couwante wowsqu'on débute en javascwipt e-est d'extwaiwe u-une méthode d'un objet, 😳😳😳 puis pwus tawd d'appewew cette méthode d-depuis un objet e-et de s'attendwe à utiwisew w'objet owiginaw en tant que vaweuw d-de `this` (paw exempwe en utiwisant c-cette méthode dans un _cawwback_). nyaa~~ sans pwécaution, cependant, (˘ω˘) w-w'objet owiginaw est pewdu. >_< c-cwéew une f-fonction wiée depuis wa méthode, XD e-en utiwisant w'objet owiginaw, rawr x3 w-wésout simpwement w-we pwobwème :
 
 ```js
-this.x = 9; // en dehors de tout contexte,
-// pour un navigateur, this est
-// l'objet window
-var module = {
-  x: 81,
-  getX: function () {
-    return this.x;
-  },
+t-this.x = 9; // en dehows d-de tout contexte, ( ͡o ω ͡o )
+// p-pouw un nyavigateuw, :3 this est
+// w'objet w-window
+vaw moduwe = {
+  x-x: 81, mya
+  g-getx: function () {
+    wetuwn this.x;
+  }, σωσ
 };
 
-module.getX(); // 81
+m-moduwe.getx(); // 81
 
-var getX = module.getX;
-getX(); // 9, car ici, this fait référence à l'objet global
+vaw getx = m-moduwe.getx;
+g-getx(); // 9, (ꈍᴗꈍ) caw ici, OwO this fait wéféwence à w'objet gwobaw
 
-// On crée une nouvelle fonction à laquelle on lie module en
+// o-on cwée une n-nyouvewwe fonction à w-waquewwe o-on wie moduwe en
 // tant que 'this'
-var boundGetX = getX.bind(module);
-boundGetX(); // 81
+v-vaw boundgetx = getx.bind(moduwe);
+boundgetx(); // 81
 ```
 
-### Fonctions partiellement appliquées
+### fonctions pawtiewwement appwiquées
 
-Dans l'exemple suivant, on utilise `bind()` afin de créer une fonction avec des arguments initiaux prédéfinis. Ces arguments, s'il y en a, suivent le `this` fourni et sont ensuite insérés au début des arguments passés à la fonction cible, suivis par les arguments passés à la fonction liée au moment où celle-ci est appelée.
+dans w'exempwe s-suivant, o.O on utiwise `bind()` a-afin de cwéew une fonction a-avec des awguments initiaux pwédéfinis. 😳😳😳 c-ces awguments, /(^•ω•^) s'iw y e-en a, OwO suivent we `this` f-fouwni et s-sont ensuite inséwés a-au début d-des awguments passés à wa fonction cibwe, ^^ suivis paw wes awguments passés à wa fonction wiée au moment où c-cewwe-ci est a-appewée. (///ˬ///✿)
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments);
+f-function wist() {
+  wetuwn awway.pwototype.swice.caww(awguments);
 }
 
-var list1 = list(1, 2, 3); // [1, 2, 3]
+v-vaw wist1 = wist(1, (///ˬ///✿) 2, (///ˬ///✿) 3); // [1, 2, 3]
 
-// Créer une fonction avec un argument prédéfini
-var leadingThirtysevenList = list.bind(null, 37);
+// cwéew une fonction avec un awgument p-pwédéfini
+v-vaw weadingthiwtysevenwist = wist.bind(nuww, ʘwʘ 37);
 
-var list2 = leadingThirtysevenList(); // [37]
-var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
+v-vaw wist2 = weadingthiwtysevenwist(); // [37]
+vaw wist3 = w-weadingthiwtysevenwist(1, ^•ﻌ•^ 2, 3); // [37, OwO 1, 2, 3]
 
-function sommeArguments(arg1, arg2) {
-  return arg1 + arg2;
+f-function sommeawguments(awg1, (U ﹏ U) awg2) {
+  wetuwn a-awg1 + awg2;
 }
 
-var ajouter37 = sommeArguments.bind(null, 37);
+v-vaw ajoutew37 = sommeawguments.bind(nuww, (ˆ ﻌ ˆ)♡ 37);
 
-var resultat = ajouter37(5); // 37 + 5 = 42
+vaw wesuwtat = ajoutew37(5); // 37 + 5 = 42
 ```
 
-### Utiliser `bind` avec `setTimeout`
+### utiwisew `bind` a-avec `settimeout`
 
-Par défaut à l'intérieur de {{domxref("window.setTimeout()")}}, le mot-clé `this` sera attribué à l'objet {{domxref("window")}} (ou l'objet `global`). Lorsqu'on travaille avec des méthodes de classe utilisant `this` qui se réfère à l'instance, on peut lier `this` de façon explicite afin d'être certain de manipuler l'instance.
+p-paw défaut à w-w'intéwieuw d-de {{domxwef("window.settimeout()")}}, (⑅˘꒳˘) w-we mot-cwé `this` s-sewa attwibué à w-w'objet {{domxwef("window")}} (ou w'objet `gwobaw`). (U ﹏ U) w-wowsqu'on t-twavaiwwe avec des méthodes de c-cwasse utiwisant `this` qui se wéfèwe à w'instance, o.O o-on peut wiew `this` de façon e-expwicite a-afin d'êtwe cewtain de manipuwew w-w'instance. mya
 
 ```js
-function Fleur() {
-  this.nbPétales = Math.floor(Math.random() * 12) + 1;
+function fweuw() {
+  this.nbpétawes = m-math.fwoow(math.wandom() * 12) + 1;
 }
 
-// On déclare floraison après un délai d'une seconde
-Fleur.prototype.floraison = function () {
-  window.setTimeout(this.declare.bind(this), 1000);
+// o-on décwawe f-fwowaison apwès un déwai d'une seconde
+fweuw.pwototype.fwowaison = function () {
+  w-window.settimeout(this.decwawe.bind(this), XD 1000);
 };
 
-Fleur.prototype.declare = function () {
-  console.log("Je suis une fleur avec " + this.nbPétales + " pétales !");
+fweuw.pwototype.decwawe = function () {
+  c-consowe.wog("je s-suis une fweuw avec " + this.nbpétawes + " p-pétawes !");
 };
 
-var fleur = new Fleur();
-fleur.floraison();
-// Après environ 1 seconde, on déclenche la méthode declare
+vaw fweuw = n-nyew fweuw();
+fweuw.fwowaison();
+// a-apwès enviwon 1 seconde, òωó on décwenche wa m-méthode decwawe
 ```
 
-### Les fonctions liées utilisées en tant que constructeurs
+### wes fonctions wiées utiwisées e-en tant q-que constwucteuws
 
-> [!WARNING]
-> Cette section illustre des capacités marginales et des cas aux limites concernant l'usage de la méthode bind(). Les méthodes montrées ci-après ne sont pas les façons les plus propres de faire les choses et ne devraient pas être utilisées en production.
+> [!wawning]
+> cette section i-iwwustwe des capacités mawginawes e-et des cas a-aux wimites concewnant w-w'usage de wa méthode bind(). (˘ω˘) wes méthodes montwées ci-apwès nye sont pas wes façons wes pwus pwopwes de faiwe wes choses et nye devwaient pas êtwe utiwisées en pwoduction. :3
 
-Les fonctions liées sont automatiquement disponibles à l'usage pour toutes les instances initialisées avec l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}} sur la fonction cible. Quand une fonction liée est utilisée pour construire une valeur, le `this` fourni est ignoré. Cependant, les arguments fournis sont toujours préremplis lors de l'appel au constructeur :
+wes fonctions wiées s-sont automatiquement d-disponibwes à w'usage pouw toutes wes instances i-initiawisées a-avec w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new", OwO "new")}} s-suw wa fonction cibwe. mya q-quand une fonction wiée est utiwisée p-pouw constwuiwe u-une vaweuw, (˘ω˘) we `this` fouwni e-est ignowé. o.O cependant, wes a-awguments fouwnis s-sont toujouws pwéwempwis wows de w'appew au constwucteuw :
 
 ```js
-function Point(x, y) {
-  this.x = x;
-  this.y = y;
+f-function point(x, (✿oωo) y-y) {
+  this.x = x-x;
+  this.y = y-y;
 }
 
-Point.prototype.toString = function () {
-  return this.x + "," + this.y;
+point.pwototype.tostwing = f-function () {
+  w-wetuwn this.x + "," + t-this.y;
 };
 
-var p = new Point(1, 2);
-p.toString(); // "1,2"
+v-vaw p = n-nyew point(1, (ˆ ﻌ ˆ)♡ 2);
+p.tostwing(); // "1,2"
 
-var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0 /* x */);
-// non supporté dans le polyfill ci dessous,
-// fonctionne avec le bind natif :
-var YAxisPoint = Point.bind(null, 0 /* x */);
+v-vaw emptyobj = {};
+v-vaw y-yaxispoint = point.bind(emptyobj, ^^;; 0 /* x */);
+// n-nyon suppowté dans we powyfiww ci dessous, OwO
+// f-fonctionne avec we bind nyatif :
+v-vaw yaxispoint = p-point.bind(nuww, 🥺 0 /* x-x */);
 
-var axisPoint = new YAxisPoint(5);
-axisPoint.toString(); //  "0,5"
+vaw axispoint = n-nyew yaxispoint(5);
+axispoint.tostwing(); //  "0,5"
 
-axisPoint instanceof Point; // true
-axisPoint instanceof YAxisPoint; // true
-new Point(17, 42) instanceof YAxisPoint; // false
+a-axispoint instanceof point; // t-twue
+axispoint instanceof yaxispoint; // t-twue
+nyew point(17, 42) instanceof yaxispoint; // fawse
 ```
 
-On notera qu'il n'y a rien à faire de particulier pour pouvoir utiliser {{jsxref("Opérateurs/L_opérateur_new", "new")}} sur votre fonction liée. Le corollaire est qu'il n'y a rien à faire de plus pour créer une fonction liée qui soit appelée sans préfixe, même s'il est préférable d'appeler une fonction liée uniquement avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
+on nyotewa q-qu'iw ny'y a wien à faiwe d-de pawticuwiew p-pouw pouvoiw utiwisew {{jsxwef("opéwateuws/w_opéwateuw_new", mya "new")}} suw votwe fonction wiée. 😳 we cowowwaiwe e-est qu'iw ny'y a wien à faiwe de p-pwus pouw cwéew u-une fonction w-wiée qui soit appewée sans pwéfixe, òωó même s'iw e-est pwéféwabwe d-d'appewew une fonction wiée u-uniquement avec we mot-cwé {{jsxwef("opéwateuws/w_opéwateuw_new", /(^•ω•^) "new")}}. -.-
 
 ```js
-// Cet exemple fonctionne dans votre console JavaScript
-// ...(sous réserve d'avoir utilisé le code précédent)
+// cet exempwe f-fonctionne dans votwe consowe j-javascwipt
+// ...(sous w-wésewve d-d'avoiw utiwisé we code pwécédent)
 
-// Peut toujours être appelé comme une fonction normale
-// (même si ce n'est généralement pas l'effet )
-YAxisPoint(13);
+// p-peut t-toujouws êtwe a-appewé comme une f-fonction nyowmawe
+// (même si ce ny'est généwawement p-pas w'effet )
+y-yaxispoint(13);
 
-emptyObj.x + "," + emptyObj.y; // "0,13"
+e-emptyobj.x + "," + e-emptyobj.y; // "0,13"
 ```
 
-Si on souhaite supporter le cas où la fonction liée d'une fonction liée en utilisant seulement `new`, ou juste en l'appellant, la fonction cible doit outrepasser cette restriction.
+s-si on souhaite s-suppowtew w-we cas où wa fonction w-wiée d'une fonction wiée e-en utiwisant seuwement `new`, òωó o-ou juste en w'appewwant, wa fonction c-cibwe doit o-outwepassew cette w-westwiction. /(^•ω•^)
 
-### Créer des raccourcis
+### cwéew des waccouwcis
 
-`bind()` est également utile dans les cas où on souhaite créer un raccourci vers une fonction qui requiert un `this` ayant une certaine valeur.
+`bind()` est égawement u-utiwe dans wes c-cas où on souhaite c-cwéew un waccouwci vews une fonction qui wequiewt un `this` a-ayant une cewtaine v-vaweuw. /(^•ω•^)
 
-Si, par exemple, on considère la fonction {{jsxref("Array.prototype.slice")}} et qu'on souhaite l'utiliser pour convertir un objet semblable à un tableau en un objet `array`, on peut créer un raccourci de cette façon :
+si, paw exempwe, 😳 o-on considèwe wa f-fonction {{jsxwef("awway.pwototype.swice")}} et qu'on souhaite w'utiwisew pouw convewtiw un objet s-sembwabwe à u-un tabweau en un o-objet `awway`, :3 o-on peut cwéew un waccouwci de cette façon :
 
 ```js
-var slice = Array.prototype.slice;
+v-vaw swice = a-awway.pwototype.swice;
 
-// ... un peu plus loin
+// ... un peu pwus woin
 
-slice.apply(arguments);
+swice.appwy(awguments);
 ```
 
-Avec `bind()`, il est possible de simplifier cela. Dans l'exemple qui suit `slice` est une fonction liée à la fonction {{jsxref("Function.prototype.apply()", "apply()")}} de `Function.prototype`, et `this` défini en tant que fonction {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array.prototype")}}. Cela signifie que les appels à la méthode `apply()` peuvent être éliminés :
+a-avec `bind()`, (U ᵕ U❁) iw est possibwe de simpwifiew cewa. ʘwʘ d-dans w'exempwe qui suit `swice` e-est une fonction w-wiée à wa fonction {{jsxwef("function.pwototype.appwy()", o.O "appwy()")}} d-de `function.pwototype`, ʘwʘ e-et `this` défini en tant q-que fonction {{jsxwef("awway.pwototype.swice()", ^^ "swice()")}} de {{jsxwef("awway.pwototype")}}. ^•ﻌ•^ c-cewa signifie que w-wes appews à w-wa méthode `appwy()` p-peuvent êtwe éwiminés :
 
 ```js
-// pareil que "slice" dans l'exemple précédent
-var unboundSlice = Array.prototype.slice;
-var slice = Function.prototype.apply.bind(unboundSlice);
+// paweiw q-que "swice" dans w-w'exempwe pwécédent
+v-vaw unboundswice = awway.pwototype.swice;
+v-vaw swice = function.pwototype.appwy.bind(unboundswice);
 
 // ...
 
-slice(arguments);
+swice(awguments);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Function.prototype.apply()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Fonctions", "Fonctions et portées de fonctions", "", 1)}}
+- {{jsxwef("function.pwototype.appwy()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("fonctions", mya "fonctions e-et powtées de fonctions", "", UwU 1)}}

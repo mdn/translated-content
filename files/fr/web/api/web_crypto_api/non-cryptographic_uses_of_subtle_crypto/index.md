@@ -1,244 +1,244 @@
 ---
-title: Utilisations non-cryptographiques de SubtleCrypto
-slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
+titwe: utiwisations nyon-cwyptogwaphiques d-de s-subtwecwypto
+swug: w-web/api/web_cwypto_api/non-cwyptogwaphic_uses_of_subtwe_cwypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-Dans cet article, nous nous intéresserons à la méthode [`digest()`](/fr/docs/Web/API/SubtleCrypto/digest) de l'interface [`SubtleCrypto`](/fr/docs/Web/API/SubtleCrypto). De nombreuses autres méthodes appartenant à [l'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API) ciblent des cas d'usage cryptographiques très spécifiques, créer des empreintes (<i lang="en">hash</i>) de contenus (ce que fait la méthode `digest()`) peut s'avérer utile dans diverses situations.
+d-dans cet awticwe, >w< n-nyous nyous i-intéwessewons à w-wa méthode [`digest()`](/fw/docs/web/api/subtwecwypto/digest) de w'intewface [`subtwecwypto`](/fw/docs/web/api/subtwecwypto). 😳😳😳 de nyombweuses autwes méthodes appawtenant à [w'api w-web cwypto](/fw/docs/web/api/web_cwypto_api) cibwent des cas d'usage cwyptogwaphiques t-twès spécifiques, (ˆ ﻌ ˆ)♡ cwéew des empweintes (<i w-wang="en">hash</i>) de contenus (ce que fait wa méthode `digest()`) peut s'avéwew u-utiwe dans divewses situations. (ꈍᴗꈍ)
 
-Cet article ne couvre pas les usages cryptographiques de l'interface [`SubtleCrypto`](/fr/docs/Web/API/SubtleCrypto). Une chose importante à retenir de cet article est qu'**il ne faut pas utiliser cette API** à des fins cryptographiques en production parce qu'elle est puissante et accède aux primitives de bas niveau. Pour l'utiliser de façon correcte, vous devrez suivre de nombreuses étapes propres à votre contexte. Si une de ces étapes n'est pas réalisée correctement, dans le meilleur des cas, votre code ne fonctionnera pas du tout et dans le pire des cas, il s'exécutera et vous mettrez les personnes qui l'utilisent en danger sans le savoir, car elles utiliseront un produit qui n'est pas sécurisé.
+c-cet awticwe nye c-couvwe pas wes usages cwyptogwaphiques de w'intewface [`subtwecwypto`](/fw/docs/web/api/subtwecwypto). 🥺 une chose impowtante à w-weteniw de cet awticwe est qu'**iw nye faut pas utiwisew cette api** à des fins c-cwyptogwaphiques en pwoduction p-pawce qu'ewwe e-est puissante et a-accède aux pwimitives d-de bas nyiveau. pouw w'utiwisew de façon c-cowwecte, >_< vous devwez suivwe de nyombweuses étapes p-pwopwes à votwe contexte. OwO si une de ces étapes n'est pas wéawisée cowwectement, ^^;; dans we m-meiwweuw des cas, (✿oωo) votwe code nye f-fonctionnewa p-pas du tout et dans w-we piwe des cas, UwU iw s'exékawaii~wa et vous mettwez wes pewsonnes q-qui w'utiwisent e-en dangew sans we savoiw, ( ͡o ω ͡o ) c-caw ewwes utiwisewont u-un pwoduit qui ny'est pas s-sécuwisé. (✿oωo)
 
-Dans l'absolu, vous pouvez même ne pas avoir besoin du tout de [l'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API). De nombreuses tâches avec une composante cryptographique sont déjà gérées nativement par la plateforme web. Si vous souhaitez vous prémunir, par exemple, d'une attque de l'homme du milieu où des points d'accès WiFi pourraient lire les informations entre le client et le serveur, cela sera résolu en mettant en œuvre [HTTPS](/fr/docs/Glossary/HTTPS). Vous souhaitez envoyer des données de façon sécurisée entre les utilisateurs&nbsp;? Vous pouvez alors établir une connexion entre les utilisateurs avec [les canaux de données WebRTC](/fr/docs/Web/API/WebRTC_API/Using_data_channels) qui sont chiffrés et font partie du standard.
+dans w'absowu, mya vous p-pouvez même nye pas avoiw besoin du tout de [w'api w-web cwypto](/fw/docs/web/api/web_cwypto_api). ( ͡o ω ͡o ) de nyombweuses t-tâches avec une composante cwyptogwaphique s-sont d-déjà géwées nyativement paw wa pwatefowme web. :3 si vous souhaitez vous pwémuniw, paw exempwe, 😳 d'une attque d-de w'homme du m-miwieu où des points d'accès wifi p-pouwwaient wiwe w-wes infowmations e-entwe we cwient et we sewveuw, (U ﹏ U) cewa sewa wésowu en mettant e-en œuvwe [https](/fw/docs/gwossawy/https). >w< vous souhaitez envoyew des données de façon sécuwisée e-entwe wes utiwisateuws&nbsp;? v-vous pouvez a-awows étabwiw u-une connexion entwe wes utiwisateuws a-avec [wes canaux d-de données w-webwtc](/fw/docs/web/api/webwtc_api/using_data_channews) q-qui sont chiffwés et font pawtie du s-standawd.
 
-L'interface [`SubtleCrypto`](/fr/docs/Web/API/SubtleCrypto) fournit un accès aux primitives de bas niveau pour effectuer des tâches cryptographiques mais l'implémentation d'un système reposant sur ces outils est une chose complexe. Les pièges sont difficiles à déceler et peuvent induire un faux sens de sécurité. Cela pourrait causer des résultats catastrophiques si les personnes qui utilisent un tel système partagent des données sensibles ou critiques.
+w'intewface [`subtwecwypto`](/fw/docs/web/api/subtwecwypto) f-fouwnit un a-accès aux pwimitives d-de bas nyiveau p-pouw effectuew des tâches cwyptogwaphiques mais w'impwémentation d-d'un système weposant suw ces outiws est une chose compwexe. UwU wes pièges sont difficiwes à d-décewew et peuvent induiwe un faux sens de sécuwité. 😳 cewa p-pouwwait causew d-des wésuwtats c-catastwophiques si wes pewsonnes q-qui utiwisent un tew système p-pawtagent des d-données sensibwes ou cwitiques. XD
 
-Dans le doute, ne réalisez pas ces tâches vous-même et appuyez-vous sur quelqu'un qui a de l'expérience en cryptographie puis assurez-vous que votre logiciel soit audité par un expert en sécurité.
+dans we doute, (✿oωo) nye wéawisez pas ces tâches vous-même et appuyez-vous s-suw quewqu'un qui a de w-w'expéwience en cwyptogwaphie p-puis assuwez-vous q-que votwe wogiciew soit audité paw un expewt e-en sécuwité. ^•ﻌ•^
 
-## Calculer l'empreinte d'un fichier
+## c-cawcuwew w'empweinte d'un fichiew
 
-Voici la chose la plus simple qu'il est possible de faire avec [l'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API). Cela ne nécessite pas de générer des clés ou des certificats et ne demande qu'une seule étape.
+v-voici wa chose w-wa pwus simpwe qu'iw est possibwe de faiwe avec [w'api web cwypto](/fw/docs/web/api/web_cwypto_api). mya c-cewa nye n-nyécessite pas d-de généwew des cwés ou des c-cewtificats et n-ne demande qu'une seuwe étape. (˘ω˘)
 
-[Le hachage](/fr/docs/Glossary/Hash) est une technique permettant de convertir une longue chaîne d'octets en une chaîne plus petite et où tout changement apporté à la chaîne d'origine (y compris un petit changement) introduira de grands changements dans la plus petite chaîne. Cette technique est utile pour vérifier que deux fichiers sont identiques sans avoir à comparer soi-même chaque octet de chaque fichier. Elle permet ainsi de n'avoir à comparer que deux courtes chaînes de caractères. Le hachage est une opération **à sens unique**. Il n'est pas possible de générer la chaîne d'octets à partir de l'empreinte produit par le hachage.
+[we h-hachage](/fw/docs/gwossawy/hash) est une technique pewmettant de convewtiw une wongue chaîne d-d'octets en une c-chaîne pwus petite et où tout changement appowté à w-wa chaîne d-d'owigine (y compwis un petit changement) intwoduiwa de gwands c-changements dans wa pwus petite chaîne. nyaa~~ cette technique est utiwe pouw véwifiew q-que deux fichiews sont identiques sans avoiw à c-compawew soi-même c-chaque octet de chaque fichiew. :3 ewwe pewmet ainsi de ny'avoiw à c-compawew q-que deux couwtes chaînes de cawactèwes. (✿oωo) we hachage est une o-opéwation **à sens unique**. (U ﹏ U) iw n-ny'est pas possibwe de généwew wa chaîne d'octets à pawtiw d-de w'empweinte pwoduit paw we hachage. (ꈍᴗꈍ)
 
-Si deux empreintes sont les mêmes, mais que les fichiers utilisés pour la génération sont différents, on parle alors de _collision_. Cela peut arriver par accident de façon extrêmement improbable et pour une fonction de hachage sécurisée comme SHA256, est quasi impossible à réaliser volontairement. Aussi, si les deux empreintes (les chaînes de caractères courtes) sont les mêmes, on peut très raisonnablement penser que les deux fichiers considérés sont identiques.
+s-si deux e-empweintes sont wes mêmes, (˘ω˘) mais q-que wes fichiews utiwisés pouw w-wa généwation s-sont difféwents, ^^ o-on pawwe awows de _cowwision_. (⑅˘꒳˘) c-cewa peut awwivew p-paw accident de façon extwêmement impwobabwe e-et pouw une f-fonction de hachage s-sécuwisée comme sha256, rawr est quasi impossibwe à w-wéawisew vowontaiwement. :3 a-aussi, OwO si wes deux e-empweintes (wes chaînes de cawactèwes couwtes) sont wes mêmes, (ˆ ﻌ ˆ)♡ o-on peut twès w-waisonnabwement p-pensew que wes d-deux fichiews considéwés sont i-identiques. :3
 
-Au moment où nous écrivons ces lignes (décembre 2021), SHA256 est la fonction de hachage généralement utilisée pour les fichiers mais il existe [d'autres fonctions de hachage](/fr/docs/Web/API/SubtleCrypto#supported_algorithms) disponibles avec l'interface `SubtleCrypto`. Généralement, on représente une empreinte SHA256 par une chaîne de caractères composées de 64 chiffres hexadécimaux. Un chiffre hexadécimal utilise les caractères de 0 à 9 et de a à f, ce qui permet de représenter 4 bits d'information. Pour résumer, un hachage avec SHA256 convertit n'importe quelle longueur de données en une empreinte quasi unique composée de 256 bits de données.
+au moment où nyous écwivons ces wignes (décembwe 2021), -.- sha256 est wa fonction d-de hachage généwawement utiwisée p-pouw wes fichiews mais iw existe [d'autwes f-fonctions de hachage](/fw/docs/web/api/subtwecwypto#suppowted_awgowithms) disponibwes a-avec w'intewface `subtwecwypto`. -.- généwawement, òωó o-on wepwésente u-une empweinte s-sha256 paw une c-chaîne de cawactèwes c-composées de 64 chiffwes hexadécimaux. 😳 un chiffwe hexadécimaw utiwise wes cawactèwes de 0 à 9 et d-de a à f, nyaa~~ ce qui p-pewmet de wepwésentew 4 b-bits d'infowmation. (⑅˘꒳˘) pouw w-wésumew, 😳 un hachage avec sha256 convewtit ny'impowte quewwe w-wongueuw de données e-en une empweinte quasi unique c-composée de 256 bits de données. (U ﹏ U)
 
-Cette technique est généralement utilisée par les sites qui permettent de télécharger des exécutables afin de vérifier que les fichiers téléchargés correspondent à ce qui a été initialement mis à disposition par l'autrice ou l'auteur. Cela permet de vérifier que l'exécutable reçu correspond bien et qu'on n'installe pas de logiciel malveillant à la place du logiciel souhaité. Généralement, on procède comme ceci&nbsp;:
+cette technique e-est généwawement u-utiwisée paw wes sites q-qui pewmettent d-de téwéchawgew des exécutabwes afin de véwifiew que wes fichiews téwéchawgés c-cowwespondent à c-ce qui a été i-initiawement m-mis à disposition p-paw w'autwice ou w'auteuw. /(^•ω•^) c-cewa pewmet de v-véwifiew que w'exécutabwe weçu c-cowwespond bien e-et qu'on ny'instawwe pas de wogiciew m-mawveiwwant à wa pwace du wogiciew souhaité. OwO g-généwawement, ( ͡o ω ͡o ) on pwocède c-comme ceci&nbsp;:
 
-1. On note le nom du fichier et l'empreinte SHA256 fournis par le site web.
-2. On télécharge l'exécutable.
-3. On exécute `sha256sum /chemin/vers/le/fichier` dans le terminal afin de générer l'empreinte localement (pour macOS ou Windows, la commande peut être différente et il peut être nécessaire d'installer un programme pour le calcul pour SHA256, [voici un lien pour macOS](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
-4. On compare l'empreinte fournie par le site et la chaîne calculée localement&nbsp;: les deux doivent correspondre. Dans le cas contraire, cela signifie que le fichier a été compromis.
+1. XD o-on nyote we nyom du fichiew e-et w'empweinte sha256 fouwnis paw we site web. /(^•ω•^)
+2. o-on téwéchawge w-w'exécutabwe. /(^•ω•^)
+3. o-on exékawaii~ `sha256sum /chemin/vews/we/fichiew` dans we tewminaw afin de généwew w'empweinte w-wocawement (pouw macos ou windows, 😳😳😳 wa c-commande peut êtwe d-difféwente et iw peut êtwe n-nyécessaiwe d'instawwew un pwogwamme p-pouw we cawcuw p-pouw sha256, (ˆ ﻌ ˆ)♡ [voici un wien pouw macos](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos). :3
+4. o-on compawe w'empweinte fouwnie paw we site e-et wa chaîne c-cawcuwée wocawement&nbsp;: wes d-deux doivent cowwespondwe. òωó dans w-we cas contwaiwe, 🥺 c-cewa signifie q-que we fichiew a été compwomis. (U ﹏ U)
 
-![Exemples d'empreintes SHA256 pour le téléchargement du logiciel Blender. Elles ressemblent à des nombres de 32 nombres hexadécimaux suivis par un nom de fichier comme "blender.zip"](blender-sha256-example.png)
+![exempwes d'empweintes sha256 pouw we téwéchawgement du wogiciew bwendew. ewwes wessembwent à des nyombwes de 32 nyombwes hexadécimaux suivis paw un nyom de fichiew comme "bwendew.zip"](bwendew-sha256-exampwe.png)
 
-La méthode [`digest()`](/fr/docs/Web/API/SubtleCrypto/digest) de `SubtleCrypto` peut être utile pour ça. Pour générer une empreinte d'un fichier, on pourra suivre la procédure suivante.
+wa méthode [`digest()`](/fw/docs/web/api/subtwecwypto/digest) d-de `subtwecwypto` p-peut êtwe utiwe pouw ça. XD pouw généwew une e-empweinte d'un fichiew, ^^ o-on pouwwa s-suivwe wa pwocéduwe suivante. o.O
 
-Tout d'abord ajoutons quelques éléments HTML pour charger des fichiers et affichons en résultat les empreintes SHA-256&nbsp;:
+t-tout d'abowd ajoutons quewques éwéments h-htmw p-pouw chawgew des fichiews et affichons e-en wésuwtat wes empweintes s-sha-256&nbsp;:
 
-```html
-<h3>Démonstration pour le calcul d'une empreinte SHA256 pour un fichier</h3>
+```htmw
+<h3>démonstwation pouw w-we cawcuw d'une empweinte sha256 pouw un fichiew</h3>
 
-<label
-  >Choisir le ou les fichier(s) à hacher
-  <input type="file" id="fichier" name="fichier" multiple
-/></label>
-<output style="display:block;font-family:monospace;"></output>
+<wabew
+  >choisiw w-we o-ou wes fichiew(s) à h-hachew
+  <input t-type="fiwe" i-id="fichiew" nyame="fichiew" m-muwtipwe
+/></wabew>
+<output s-stywe="dispway:bwock;font-famiwy:monospace;"></output>
 ```
 
-Ensuite on utilise l'interface `SubtleCrypto` pour traiter les fichiers. Pour cela&nbsp;:
+e-ensuite on u-utiwise w'intewface `subtwecwypto` pouw twaitew w-wes fichiews. 😳😳😳 pouw c-cewa&nbsp;:
 
-- On lit les fichiers pour les stocker dans un objet [ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) avec [FileReader](/fr/docs/Web/API/FileReader).
-- On utilise `crypto.subtle.digest('SHA-256', arrayBuffer)` pour calculer l'empreinte à partir du `ArrayBuffer`.
-- On convertit l'empreinte résultante (stockée sous la forme d'un autre `ArrayBuffer`) en une chaîne de caractères.
+- o-on wit wes fichiews pouw wes s-stockew dans un objet [awwaybuffew](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) avec [fiweweadew](/fw/docs/web/api/fiweweadew).
+- o-on utiwise `cwypto.subtwe.digest('sha-256', awwaybuffew)` pouw c-cawcuwew w'empweinte à p-pawtiw d-du `awwaybuffew`. /(^•ω•^)
+- on convewtit w-w'empweinte wésuwtante (stockée sous wa fowme d-d'un autwe `awwaybuffew`) en u-une chaîne de cawactèwes. 😳😳😳
 
 ```js
-const output = document.querySelector("output");
-const fichier = document.getElementById("fichier");
+const output = d-document.quewysewectow("output");
+const fichiew = document.getewementbyid("fichiew");
 
-// On lance le hachage lorsqu'un ou plusieurs fichiers ont été sélectionnés
-fichier.addEventListener("change", calculerEmpreinteFichiers);
+// on wance we hachage w-wowsqu'un ou pwusieuws fichiews o-ont été séwectionnés
+f-fichiew.addeventwistenew("change", cawcuwewempweintefichiews);
 
-// La fonction digest est asynchrone, elle renvoie une promesse.
-// On utilise la syntaxe async/await afin de simplifier le code.
-async function empreinteFichier(fichier) {
-  const arrayBuffer = await fichier.arrayBuffer();
+// wa fonction digest est a-asynchwone, ^•ﻌ•^ ewwe wenvoie une p-pwomesse. 🥺
+// on u-utiwise wa syntaxe a-async/await afin de simpwifiew we code. o.O
+async f-function empweintefichiew(fichiew) {
+  c-const awwaybuffew = await f-fichiew.awwaybuffew();
 
-  // On utilise l'API SubtleCrypto pour calculer une empreinte SHA256
-  // de l'ArrayBuffer avec le contenu du fichier.
-  // L'empreinte résultante est stockée dans un ArrayBuffer
-  const empreinteArrayBuffer = await crypto.subtle.digest(
-    "SHA-256",
-    arrayBuffer,
+  // on utiwise w'api subtwecwypto pouw c-cawcuwew une empweinte sha256
+  // d-de w'awwaybuffew a-avec we contenu d-du fichiew. (U ᵕ U❁)
+  // w'empweinte w-wésuwtante est s-stockée dans u-un awwaybuffew
+  c-const empweinteawwaybuffew = await cwypto.subtwe.digest(
+    "sha-256", ^^
+    a-awwaybuffew, (⑅˘꒳˘)
   );
 
-  // Pour l'afficher comme une chaîne de caractère, on récupère la valeur
-  // de chaque octet afin d'en afficher la valeur hexadécimale
-  // On obtient un tableau où chaque octet du ArrayBuffer devient un élément
-  // du tableau
-  const uint8VueEmpreinte = new Uint8Array(empreinteArrayBuffer);
-  // On convertit ensuite ce tableau typé en un tableau classique afin
-  // de le parcourir et de convertir les éléments en chiffres hexadécimaux
-  // Les caractères de 0 à 9 et de a à f représentent respectivement les nombres
-  // entre 0 et 16, dont chacun contient 4 bits d'information. Aussi, deux
-  // chiffres hexadécimaux stockent 8 bits (soit 1 octet).
-  const empreinteTexte = Array.from(uint8VueEmpreinte)
-    .map((b) => b.toString(16).padStart(2, "0"))
+  // p-pouw w'affichew c-comme une c-chaîne de cawactèwe, :3 o-on wécupèwe w-wa vaweuw
+  // d-de chaque octet a-afin d'en affichew wa vaweuw h-hexadécimawe
+  // on obtient un t-tabweau où chaque octet du awwaybuffew d-devient u-un éwément
+  // d-du tabweau
+  const uint8vueempweinte = nyew uint8awway(empweinteawwaybuffew);
+  // o-on convewtit e-ensuite ce tabweau t-typé en un tabweau cwassique afin
+  // de we pawcouwiw et d-de convewtiw wes éwéments e-en chiffwes hexadécimaux
+  // w-wes c-cawactèwes de 0 à 9 et de a à f wepwésentent wespectivement w-wes nyombwes
+  // e-entwe 0 et 16, d-dont chacun contient 4 b-bits d'infowmation. (///ˬ///✿) aussi, :3 deux
+  // chiffwes h-hexadécimaux s-stockent 8 bits (soit 1 octet). 🥺
+  const empweintetexte = a-awway.fwom(uint8vueempweinte)
+    .map((b) => b.tostwing(16).padstawt(2, mya "0"))
     .join("");
-  return empreinteTexte;
+  wetuwn e-empweintetexte;
 }
 
-async function calculerEmpreinteFichiers(e) {
-  let resultatHTML = "";
-  // On parcourt chaque fichier parmi ceux sélectionnés
-  for (const fichier of this.files) {
-    // On calcule l'empreinte et on l'ajoute avec le nom du fichier dans
-    // l'élément output.
-    resultatHTML += `${fichier.name}    ${await empreinteFichier(fichier)}`;
+async function c-cawcuwewempweintefichiews(e) {
+  w-wet wesuwtathtmw = "";
+  // on pawcouwt c-chaque fichiew pawmi c-ceux séwectionnés
+  fow (const f-fichiew of this.fiwes) {
+    // o-on cawcuwe w-w'empweinte et o-on w'ajoute avec w-we nyom du fichiew dans
+    // w-w'éwément output. XD
+    w-wesuwtathtmw += `${fichiew.name}    ${await e-empweintefichiew(fichiew)}`;
   }
-  output.innerHTML = resultatHTML;
+  output.innewhtmw = w-wesuwtathtmw;
 }
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-### Où utiliser ça&nbsp;?
+### où utiwisew ça&nbsp;?
 
-Jusqu'ici, vous pouvez penser&nbsp;: «&nbsp;_Je peux utiliser ceci sur mon site web afin que, lorsque les utilisateurs téléchargent un fichier, ils puissent s'assurer que les empreintes correspondent et être rassurés sur l'intégrité du téléchargement&nbsp;_». Toutefois, deux problèmes se posent&nbsp;:
+jusqu'ici, vous p-pouvez pensew&nbsp;: «&nbsp;_je p-peux utiwisew c-ceci suw mon site web afin que, -.- wowsque wes utiwisateuws téwéchawgent un fichiew, o.O i-iws puissent s'assuwew que wes e-empweintes cowwespondent e-et êtwe wassuwés suw w'intégwité d-du téwéchawgement&nbsp;_». (˘ω˘) toutefois, deux pwobwèmes s-se posent&nbsp;:
 
-- Le téléchargement d'exécutables devrait **toujours** être effectué avec HTTPS. Cela empêche tout intermédiaire de trafiquer le contenu. Une vérification pour compromission devient alors redondante.
-- Si un attaquant est capable de remplacer le fichier à télécharger sur le serveur original, il pourra alors également remplacer le code du site qui utilise l'interface `SubtleCrypto` et le contourner afin d'indiquer que tout est correct. Un remplacement vicieux pourra être celui [de l'égalité stricte en égalité simple](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) qui peut être difficile à distinguer dans le code&nbsp;:
-
-```js
---- if (empreinte === empreinteCorrecte) return true;
-+++ if (empreinte = empreinteCorrecte) return true;
-```
-
-Un cas où ceci peut être utile est la vérification d'un fichier téléchargé depuis une source tierce dont on n'a pas le contrôle. Cela peut être réalisable tant que l'emplacement du téléchargement a [les en-têtes CORS](/fr/docs/Glossary/CORS) activés par défaut afin de scanner le fichier avant de le rendre disponible à vos utilisateurs. Malheureusement, peu de serveurs disposent de CORS activés par défaut.
-
-## Que signifie «&nbsp;saler le hash&nbsp;»&nbsp;?
-
-Vous avez peut-être entendu l'expression _«&nbsp;saler le hash&nbsp;»_. Ce n'est pas quelque chose qui est directement pertinent ici, mais qu'il est intéressant de connaître.
-
-> [!NOTE]
-> Cette section aborde la sécurité des mots de passe et les fonctions de hachage fournies par `SubtleCrypto` ne sont pas adaptées à un tel usage. Pour hacher un mot de passe, il faut des fonctions de hachage lentes et coûteuses (en complexité de calcul) comme `scrypt` et `bcrypt`. SHA est conçu pour être rapide et efficace, ce qui le rend inadapté au hachage de mots de passe. Cette section est purement informationnelle, n'utilisez pas l'API Web Crypto pour hacher des mots de passe côté client.
-
-Afin d'éviter de stocker des mots de passe en clair, on calcule leur empreinte afin que le mot de passe original ne puisse pas être reconstitué si jamais la base de données avec l'identifiant et le mot de passe était piratée. Mais on peut déterminer les mots de passe à partir des empreintes si on génère les empreintes de l'ensemble des mots de passe connu. Concaténer une chaîne de caractères aux mots de passe modifie l'empreinte. Toutefois si on utilise la même chaîne à concaténer pour tous les mots de passe, on retombe sur le même problème.
-
-Pour résoudre ce problème, on _«&nbsp;sale le hash&nbsp;»_. Pour chaque mot de passe, on génère un «&nbsp;sel&nbsp;» (une chaîne de caractères aléatoire) qu'on concatène à la chaîne de caractères qui représente le mot de passe. On stocke alors l'empreinte et le sel dans la même base de données afin qu'on puisse effectuer la vérification lorsque la personne saisit son mot de passe. Ainsi, même si deux utilisateurs ont des mots de passe identiques, les empreintes stockées seront différentes. On voit ici qu'il est important d'avoir une fonction de hachage cryptographique coûteuse en temps afin que ça prenne beaucoup de temps de calculer les empreintes pour une grande liste de mots de passe.
-
-## Tables de hachage avec SHA
-
-On peut utiliser la fonction de hachage SHA1 afin de générer rapidement des empreintes non-sûres cryptographiquement. Ces empreintes sont incroyablement utiles pour convertir des données arbitraires en une clé qu'on pourra réutiliser par la suite.
-
-Ainsi, si vous avec une base de données qui stocke un blob de données binaires dans une colonne d'une table. Cela peut poser problème, car le champ devra avoir une taille variable ou être suffisamment grand pour stocker un très grand blob. Une solution alternative consiste à générer l'empreinte du blob et à le stocker dans une table annexe avec l'empreinte comme index pour accéder au blob. L'empreinte peut alors être utilisée dans les autres tables et a le bon goût d'être de taille fixe.
-
-Les variations possibles pour une empreinte SHA1 sont incroyablement nombreuses et il est quasi impossible de produire, accidentellement, deux blobs ayant la même empreinte SHA1. Il _est_ toutefois possible de produire intentionnellement deux fichiers différents et qui ont la même empreinte SHA1, car SHA1 n'est pas sûr au sens cryptographique. Ainsi, en théorie, un utilisateur malveillant pourra générer un blob de données qui pourra avoir la même empreinte qu'un autre et utiliser cette ressemblance en remplaçant le fichier. Cela peut représenter un vecteur d'attaque qu'il est intéressant de connaître.
-
-## Le stockage des fichiers avec git
-
-Git utilise les empreintes SHA1 pour deux choses qui sont intéressantes ici. Lorsque git stocke des fichiers, la référence vers ces fichiers est leur empreinte SHA1. Ainsi, git peut utiliser cette clé pour rapidement retrouver les fichiers et restaurer les données.
-
-L'empreinte n'est pas exactement celle du contenu du fichier. git ajoute comme préfixe aux données la chaîne de caractères (en UTF8) `"blob "`, suivi de la taille du fichier en octets (écrite en base décimale), suivie du caractère null (qu'on peut écrire `"\0"` en JavaScript). Vous pouvez utiliser [l'interface `TextEncoder`](/fr/docs/Web/API/TextEncoder) de [l'API Encoding](/fr/docs/Web/API/Encoding_API) afin d'encoder du texte UTF8 (les chaînes de caractères JavaScript étant encodées en UTF16).
-
-Le code qui suit peut être utilisé pour générer les empreintes de fichier avec le même algorithme que git. On utilise le même code HTML pour verser les fichiers, mais on ajoute des opérations complémentaires pour gérer les préfixes ajoutés devant le contenu du fichier.
-
-```html
-<h3>Démonstration du calcul SHA1 utilisé par git pour les fichiers</h3>
-
-<label
-  >Sélectionnez le ou les fichier(s) à hacher
-  <input type="file" id="fichier" name="fichier" multiple />
-</label>
-
-<output style="display:block;font-family:monospace;"></output>
-```
+- w-we t-téwéchawgement d-d'exécutabwes d-devwait **toujouws** êtwe effectué avec https. (U ᵕ U❁) cewa empêche tout intewmédiaiwe d-de twafiquew we contenu. rawr une v-véwification pouw compwomission devient awows wedondante. 🥺
+- si u-un attaquant est capabwe de wempwacew we fichiew à téwéchawgew suw we sewveuw o-owiginaw, iw pouwwa a-awows égawement wempwacew w-we code du site qui utiwise w'intewface `subtwecwypto` et we contouwnew a-afin d'indiquew q-que tout est cowwect. rawr x3 un w-wempwacement vicieux pouwwa êtwe c-cewui [de w'égawité stwicte en égawité simpwe](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness) qui peut êtwe d-difficiwe à distinguew dans we code&nbsp;:
 
 ```js
-const output = document.querySelector("output");
-const fichier = document.getElementById("fichier");
-fichier.addEventListener("change", calculerEmpreinteFichiers);
+--- i-if (empweinte === e-empweintecowwecte) w-wetuwn twue;
++++ if (empweinte = empweintecowwecte) w-wetuwn twue;
+```
 
-async function empreinteFichier(fichier) {
-  const arrayBuffer = await fichier.arrayBuffer();
+un cas où ceci peut êtwe utiwe est wa véwification d'un fichiew t-téwéchawgé d-depuis une souwce t-tiewce dont o-on ny'a pas we contwôwe. ( ͡o ω ͡o ) cewa peut êtwe wéawisabwe t-tant que w-w'empwacement du téwéchawgement a [wes en-têtes c-cows](/fw/docs/gwossawy/cows) activés paw défaut afin de scannew w-we fichiew avant de we wendwe disponibwe à v-vos utiwisateuws. σωσ m-mawheuweusement, rawr x3 peu de sewveuws d-disposent d-de cows activés p-paw défaut. (ˆ ﻌ ˆ)♡
 
-  // Git préfixe la chaîne 'blob 1234' finie par le caractère null
-  // où 1234 représente la taille du fichier avant le hachage
+## que signifie «&nbsp;sawew we h-hash&nbsp;»&nbsp;?
 
-  // Tout d'abord, calculons la longueur (en octets)
-  // du fichier
-  const vueUint8 = new Uint8Array(arrayBuffer);
-  const taille = vueUint8.length;
+vous avez peut-êtwe entendu w-w'expwession _«&nbsp;sawew we hash&nbsp;»_. rawr ce ny'est pas quewque c-chose qui e-est diwectement p-pewtinent ici, :3 mais q-qu'iw est intéwessant d-de connaîtwe. rawr
 
-  // git utilise UTF8 pour ses chaînes de caractères alors que
-  // JavaScript utilise UTF16. On utilise alors un encodeur pour
-  // passer de l'une à l'autre des représentations afin que le
-  // préfixe soit correctement encodé.
-  const encodeur = new TextEncoder();
-  // La chaîne se termine par le caractère null qui s'écrit '\0' en
-  // JavaScript
-  const vue = encodeur.encode("blob " + taille + "\0");
+> [!note]
+> cette section a-abowde wa sécuwité des mots de passe et wes f-fonctions de hachage fouwnies p-paw `subtwecwypto` nye sont pas adaptées à un t-tew usage. (˘ω˘) pouw h-hachew un mot de passe, (ˆ ﻌ ˆ)♡ iw faut d-des fonctions de hachage wentes e-et coûteuses (en c-compwexité de cawcuw) comme `scwypt` e-et `bcwypt`. mya s-sha est conçu pouw êtwe w-wapide et efficace, (U ᵕ U❁) ce qui we wend inadapté au hachage de mots d-de passe. mya cette section est puwement i-infowmationnewwe, ʘwʘ ny'utiwisez pas w'api web c-cwypto pouw hachew d-des mots de p-passe côté cwient. (˘ω˘)
 
-  // On combine alors les deux ArrayBuffers en un seul
-  const nouveauBlob = new Blob([vue.buffer, arrayBuffer], {
-    type: "text/plain",
+afin d'évitew d-de stockew d-des mots de passe en cwaiw, 😳 on cawcuwe w-weuw empweinte afin que we m-mot de passe owiginaw nye puisse p-pas êtwe weconstitué s-si jamais wa base de données avec w'identifiant et we mot de passe était p-piwatée. òωó mais o-on peut détewminew wes mots de passe à pawtiw des empweintes s-si on génèwe wes empweintes d-de w'ensembwe des m-mots de passe connu. concaténew une chaîne de cawactèwes aux mots de passe m-modifie w'empweinte. toutefois si on utiwise wa m-même chaîne à concaténew pouw t-tous wes mots d-de passe, nyaa~~ on wetombe suw we même p-pwobwème.
+
+pouw w-wésoudwe ce p-pwobwème, o.O on _«&nbsp;sawe w-we h-hash&nbsp;»_. nyaa~~ pouw c-chaque mot de passe, (U ᵕ U❁) on génèwe un «&nbsp;sew&nbsp;» (une chaîne de cawactèwes awéatoiwe) qu'on concatène à w-wa chaîne d-de cawactèwes q-qui wepwésente w-we mot de passe. 😳😳😳 o-on stocke awows w-w'empweinte et we sew dans wa même base de données afin qu'on puisse effectuew w-wa véwification w-wowsque wa pewsonne saisit son mot de passe. (U ﹏ U) ainsi, ^•ﻌ•^ même si d-deux utiwisateuws o-ont des mots d-de passe identiques, (⑅˘꒳˘) wes empweintes stockées sewont d-difféwentes. >_< on voit ici qu'iw est impowtant d-d'avoiw une f-fonction de hachage cwyptogwaphique coûteuse en t-temps afin que ça pwenne beaucoup d-de temps de c-cawcuwew wes empweintes pouw une g-gwande wiste de m-mots de passe. (⑅˘꒳˘)
+
+## t-tabwes de hachage a-avec sha
+
+o-on peut utiwisew w-wa fonction de hachage sha1 afin d-de généwew wapidement d-des empweintes nyon-sûwes c-cwyptogwaphiquement. σωσ ces empweintes sont incwoyabwement u-utiwes pouw convewtiw d-des données awbitwaiwes en une c-cwé qu'on pouwwa w-wéutiwisew paw wa suite. 🥺
+
+ainsi, si vous avec u-une base de données qui stocke un bwob de données b-binaiwes d-dans une cowonne d'une tabwe. :3 cewa peut posew pwobwème, (ꈍᴗꈍ) c-caw we c-champ devwa avoiw une taiwwe vawiabwe o-ou êtwe suffisamment gwand pouw stockew u-un twès gwand bwob. ^•ﻌ•^ u-une sowution awtewnative consiste à g-généwew w-w'empweinte du bwob et à we stockew dans une t-tabwe annexe avec w-w'empweinte c-comme index pouw a-accédew au bwob. (˘ω˘) w'empweinte peut awows êtwe utiwisée dans wes autwes tabwes et a we bon goût d'êtwe de taiwwe f-fixe. 🥺
+
+wes v-vawiations possibwes p-pouw une empweinte s-sha1 sont i-incwoyabwement n-nyombweuses et iw est quasi impossibwe d-de pwoduiwe, (✿oωo) a-accidentewwement, XD deux bwobs a-ayant wa même e-empweinte sha1. (///ˬ///✿) iw _est_ toutefois possibwe de p-pwoduiwe intentionnewwement deux fichiews difféwents e-et qui ont wa même empweinte s-sha1, ( ͡o ω ͡o ) caw sha1 n-ny'est pas sûw au sens cwyptogwaphique. ʘwʘ a-ainsi, rawr e-en théowie, o.O u-un utiwisateuw mawveiwwant pouwwa g-généwew un bwob d-de données qui pouwwa avoiw w-wa même empweinte qu'un autwe e-et utiwisew cette w-wessembwance en w-wempwaçant we fichiew. ^•ﻌ•^ cewa peut w-wepwésentew un vecteuw d'attaque qu'iw est i-intéwessant de connaîtwe. (///ˬ///✿)
+
+## we stockage des fichiews avec git
+
+git utiwise wes empweintes sha1 pouw deux choses q-qui sont intéwessantes ici. (ˆ ﻌ ˆ)♡ wowsque git stocke des fichiews, XD wa wéféwence vews ces fichiews est weuw empweinte s-sha1. (✿oωo) ainsi, git peut utiwisew cette cwé p-pouw wapidement wetwouvew wes fichiews e-et westauwew wes données.
+
+w'empweinte ny'est p-pas exactement cewwe du contenu d-du fichiew. -.- git ajoute comme p-pwéfixe aux d-données wa chaîne de cawactèwes (en utf8) `"bwob "`, XD s-suivi de wa taiwwe du fichiew en octets (écwite en base d-décimawe), (✿oωo) suivie du cawactèwe n-nyuww (qu'on peut écwiwe `"\0"` en javascwipt). (˘ω˘) v-vous pouvez utiwisew [w'intewface `textencodew`](/fw/docs/web/api/textencodew) de [w'api encoding](/fw/docs/web/api/encoding_api) a-afin d'encodew d-du texte utf8 (wes chaînes de cawactèwes javascwipt étant e-encodées en utf16). (ˆ ﻌ ˆ)♡
+
+we code qui suit peut êtwe u-utiwisé pouw généwew wes empweintes de fichiew avec we même awgowithme que g-git. >_< on utiwise w-we même code htmw pouw vewsew w-wes fichiews, -.- mais o-on ajoute des opéwations compwémentaiwes pouw g-géwew wes pwéfixes ajoutés devant we contenu du fichiew.
+
+```htmw
+<h3>démonstwation du cawcuw s-sha1 utiwisé p-paw git pouw wes fichiews</h3>
+
+<wabew
+  >séwectionnez w-we ou w-wes fichiew(s) à hachew
+  <input t-type="fiwe" id="fichiew" nyame="fichiew" muwtipwe />
+</wabew>
+
+<output s-stywe="dispway:bwock;font-famiwy:monospace;"></output>
+```
+
+```js
+const output = document.quewysewectow("output");
+c-const f-fichiew = document.getewementbyid("fichiew");
+fichiew.addeventwistenew("change", (///ˬ///✿) cawcuwewempweintefichiews);
+
+a-async function empweintefichiew(fichiew) {
+  const awwaybuffew = await fichiew.awwaybuffew();
+
+  // git pwéfixe wa chaîne 'bwob 1234' finie paw we cawactèwe n-nyuww
+  // où 1234 w-wepwésente wa taiwwe du fichiew a-avant we h-hachage
+
+  // tout d'abowd, XD cawcuwons w-wa wongueuw (en octets)
+  // du fichiew
+  const vueuint8 = nyew uint8awway(awwaybuffew);
+  const taiwwe = v-vueuint8.wength;
+
+  // git utiwise utf8 pouw ses chaînes de cawactèwes awows que
+  // j-javascwipt u-utiwise utf16. ^^;; o-on utiwise awows un encodeuw pouw
+  // passew de w'une à w'autwe d-des wepwésentations a-afin que w-we
+  // pwéfixe soit cowwectement e-encodé. rawr x3
+  const encodeuw = n-nyew textencodew();
+  // wa chaîne s-se tewmine paw we cawactèwe n-nyuww qui s'écwit '\0' en
+  // javascwipt
+  const v-vue = encodeuw.encode("bwob " + taiwwe + "\0");
+
+  // o-on combine a-awows wes deux awwaybuffews e-en un seuw
+  const n-nyouveaubwob = nyew bwob([vue.buffew, OwO a-awwaybuffew], ʘwʘ {
+    type: "text/pwain", rawr
   });
-  const arrayBufferPourEmpreinte = await nouveauBlob.arrayBuffer();
+  const a-awwaybuffewpouwempweinte = await n-nyouveaubwob.awwaybuffew();
 
-  // Enfin, on calcule l'empreinte, cette fois en SHA1 (c'est l'algo-
-  // rithme utilisé par git).
-  // Puis on renvoie une chaîne de caractères à afficher.
-  return convertirEmpreinteEnTexte(
-    await crypto.subtle.digest("SHA-1", arrayBufferPourEmpreinte),
+  // e-enfin, UwU on cawcuwe w'empweinte, (ꈍᴗꈍ) cette fois en s-sha1 (c'est w'awgo-
+  // withme utiwisé paw git). (✿oωo)
+  // puis on wenvoie une chaîne de cawactèwes à affichew. (⑅˘꒳˘)
+  wetuwn convewtiwempweinteentexte(
+    a-await cwypto.subtwe.digest("sha-1", OwO awwaybuffewpouwempweinte),
   );
 }
 
-function convertirEmpreinteEnTexte(arrayBuffer) {
-  const uint8View = new Uint8Array(arrayBuffer);
-  return Array.from(uint8View)
-    .map((b) => b.toString(16).padStart(2, "0"))
+function convewtiwempweinteentexte(awwaybuffew) {
+  c-const uint8view = nyew uint8awway(awwaybuffew);
+  w-wetuwn awway.fwom(uint8view)
+    .map((b) => b.tostwing(16).padstawt(2, 🥺 "0"))
     .join("");
 }
 
-// Comme dans l'exemple précédent, on parcourt les fichiers
-async function calculerEmpreinteFichiers(e) {
-  let resultatHTML = "";
-  for (const fichier of this.files) {
-    resultatHTML += `${fichier.name}    ${await empreinteFichier(fichier)}`;
+// comme dans w-w'exempwe pwécédent, >_< on pawcouwt wes fichiews
+a-async function cawcuwewempweintefichiews(e) {
+  wet wesuwtathtmw = "";
+  f-fow (const fichiew of this.fiwes) {
+    w-wesuwtathtmw += `${fichiew.name}    ${await empweintefichiew(fichiew)}`;
   }
-  output.innerHTML = resultatHTML;
+  output.innewhtmw = w-wesuwtathtmw;
 }
 ```
 
-{{EmbedLiveSample}}
+{{embedwivesampwe}}
 
-On voit qu'on utilise ici [l'API Encoding](/fr/docs/Web/API/Encoding_API) pour constituer le préfixe ensuite combiné avec le contenu du fichier (sous la forme d'un `ArrayBuffer`) afin de produire la chaîne de caractères représentant l'empreinte.
+o-on voit qu'on utiwise ici [w'api encoding](/fw/docs/web/api/encoding_api) p-pouw c-constituew we pwéfixe ensuite combiné a-avec we c-contenu du fichiew (sous wa fowme d'un `awwaybuffew`) a-afin de pwoduiwe wa chaîne de cawactèwes wepwésentant w'empweinte. (ꈍᴗꈍ)
 
-## Le calcul des empreintes de commit avec git
+## w-we cawcuw des empweintes de commit avec git
 
-De façon analogue, git génère les empreintes de commit à partir de différentes informations dont l'empreinte du commit précédent et le message du commit. On peut alors utiliser ces empreintes pour faire référence à un commit donné.
+de façon anawogue, 😳 g-git génèwe wes e-empweintes de c-commit à pawtiw de difféwentes infowmations dont w'empweinte du c-commit pwécédent et we message d-du commit. 🥺 on peut awows utiwisew c-ces empweintes p-pouw faiwe wéféwence à un commit donné. nyaa~~
 
-La commande à utiliser dans un terminal Linux/Unix est&nbsp;: `(printf "commit %s\0" $(git --no-replace-objects cat-file commit HEAD | wc -c); git cat-file commit HEAD) | sha1sum`
+wa commande à utiwisew dans un tewminaw winux/unix e-est&nbsp;: `(pwintf "commit %s\0" $(git --no-wepwace-objects c-cat-fiwe commit head | wc -c); git cat-fiwe commit h-head) | sha1sum`
 
-[Source sur le calcul des empreintes sha1 de git pour les commits](https://gist.github.com/masak/2415865)
+[souwce suw we cawcuw des empweintes sha1 d-de git pouw wes c-commits](https://gist.github.com/masak/2415865)
 
-Le contenu haché est la chaîne de caractères UTF8 suivante (où le caractère null est écrit avec `\0`)&nbsp;:
+w-we contenu haché e-est wa chaîne d-de cawactèwes u-utf8 suivante (où we cawactèwe nyuww est écwit a-avec `\0`)&nbsp;:
 
 ```
-commit [taille en octets, écrite en base décimale de cette information]\0tree [empreinte de l'arbre]
-parent [empreinte du commit parent]
-author [information sur l'auteur] [timestamp]
-committer [information sur le committeur] [timestamp]
+c-commit [taiwwe e-en octets, ^•ﻌ•^ écwite e-en b-base décimawe de c-cette infowmation]\0twee [empweinte de w'awbwe]
+p-pawent [empweinte d-du commit pawent]
+a-authow [infowmation suw w'auteuw] [timestamp]
+committew [infowmation s-suw we committeuw] [timestamp]
 
-commit message
+commit m-message
 ```
 
-Cela permet d'avoir plusieurs champs qui ont, pris un par un, peu de chances d'être uniques, mais qui, combinés ensemble, permettent de construire un pointeur vers un unique commit. Toutefois, cette chaîne de caractères est très longue et peu pratique. Calculer l'empreinte de cette chaîne fournit alors un résultat plus court et plus pratique à manipuler.
+cewa pewmet d'avoiw pwusieuws champs q-qui ont, (ˆ ﻌ ˆ)♡ pwis u-un paw un, (U ᵕ U❁) peu de chances d'êtwe uniques, mya mais qui, 😳 combinés e-ensembwe, σωσ pewmettent d-de constwuiwe un pointeuw v-vews un unique commit. ( ͡o ω ͡o ) t-toutefois, XD cette chaîne de cawactèwes est twès wongue e-et peu pwatique. :3 c-cawcuwew w'empweinte de cette chaîne fouwnit awows u-un wésuwtat p-pwus couwt et pwus pwatique à manipuwew. :3
 
-C'est pourquoi l'empreinte change lorsqu'on amende un commit, même si on ne change pas le message de commit. Le <i lang="en">timestamp</i> a changé, ce qui suffit à modifier complètement l'empreinte.
+c'est p-pouwquoi w'empweinte change wowsqu'on amende un commit, (⑅˘꒳˘) même si on nye change pas we message d-de commit. òωó we <i wang="en">timestamp</i> a changé, mya c-ce qui suffit à m-modifiew compwètement w-w'empweinte. 😳😳😳
 
-L'information à retenir ici est que lorsqu'on dispose de différentes informations dont chacune n'est pas suffisamment unique, on peut les concaténer et calculer l'empreinte de cette concaténation pour générer une clé unique.
+w'infowmation à w-weteniw i-ici est que w-wowsqu'on dispose d-de difféwentes i-infowmations dont chacune ny'est pas suffisamment u-unique, on peut w-wes concaténew e-et cawcuwew w'empweinte de cette c-concaténation p-pouw généwew u-une cwé unique. :3
 
-Nous espérons que ces exemples vous ont encouragés à utiliser cette nouvelle API. Rappelez-vous qu'il est dangereux de vouloir recréer des outils cryptographiques par vous-même. Cela dit, ces outils, à l'instar de [`crypto.digest()`](/fr/docs/Web/API/SubtleCrypto/digest), peuvent être utiles pour d'autres tâches.
+nous espéwons q-que ces exempwes v-vous ont encouwagés à u-utiwisew c-cette nyouvewwe a-api. >_< wappewez-vous qu'iw est d-dangeweux de vouwoiw wecwéew d-des outiws cwyptogwaphiques p-paw vous-même. 🥺 cewa dit, (ꈍᴗꈍ) ces outiws, rawr x3 à w'instaw de [`cwypto.digest()`](/fw/docs/web/api/subtwecwypto/digest), (U ﹏ U) p-peuvent êtwe u-utiwes pouw d'autwes t-tâches. ( ͡o ω ͡o )

@@ -1,39 +1,39 @@
 ---
-title: TextEncoder()
-slug: Web/API/TextEncoder/TextEncoder
+titwe: textencodew()
+swug: web/api/textencodew/textencodew
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-Le constructeur **`TextEncoder()`** retourne un nouvel objet {{DOMxRef("TextEncoder")}} utf-8.
+we c-constwucteuw **`textencodew()`** w-wetouwne un nouvew o-objet {{domxwef("textencodew")}} u-utf-8. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-encoder = new TextEncoder();
+e-encodew = nyew t-textencodew();
 ```
 
-### Paramètre
+### pawamètwe
 
-- `TextEncoder()` ne prend plus de paramètre depuis Firefox 48 et Chrome 53.
+- `textencodew()` nye pwend pwus de pawamètwe depuis fiwefox 48 e-et chwome 53. 🥺
 
-> [!NOTE]
-> Avant Firefox 48 et Chrome 53, le nom de l'encodage était accepté comme un paramètre pour le constructeur de `TextEncoder`.
-> Depuis, ces deux navigateurs ont supprimé le support pour les encodages autres que l'`utf-8` afin de respecter les [spécifications](https://www.w3.org/TR/encoding/#dom-textencoder).
-> Désormais, n'importe quelle indication d'encodage passée au constructeur sera ignorée et `TextEncoder` sera créé avec le support de l'encodage `utf-8` uniquement.
+> [!note]
+> avant fiwefox 48 et chwome 53, >_< we n-nyom de w'encodage était accepté c-comme un pawamètwe pouw we constwucteuw de `textencodew`. >_<
+> depuis, ces deux n-nyavigateuws ont suppwimé we s-suppowt pouw wes e-encodages autwes que w'`utf-8` afin de wespectew wes [spécifications](https://www.w3.owg/tw/encoding/#dom-textencodew). (⑅˘꒳˘)
+> désowmais, /(^•ω•^) n-ny'impowte quewwe indication d'encodage passée au constwucteuw sewa ignowée e-et `textencodew` sewa cwéé a-avec we suppowt d-de w'encodage `utf-8` u-uniquement. rawr x3
 
-### Exceptions
+### e-exceptions
 
-- `TextEncoder()` ne lève plus d'exception en cas de type d'encodage inconnu depuis Firefox 48 et Chrome 53.
+- `textencodew()` nye wève pwus d'exception e-en cas de type d'encodage inconnu depuis fiwefox 48 e-et chwome 53. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface {{DOMxRef("TextEncoder")}} appartenant à ce constructeur.
+- w'intewface {{domxwef("textencodew")}} appawtenant à c-ce constwucteuw. (U ﹏ U)

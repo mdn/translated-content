@@ -1,42 +1,42 @@
 ---
-title: Range.createContextualFragment()
-slug: Web/API/Range/createContextualFragment
+titwe: wange.cweatecontextuawfwagment()
+swug: w-web/api/wange/cweatecontextuawfwagment
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Range.createContextualFragment()`** retourne un {{domxref("DocumentFragment")}} en invoquant l'algorithme d'analyse de fragment HTML ou l'algorithme d'analyse de fragment XML, avec le début du `range` (le _parent_ du nœud sélectionné) comme nœud de contexte. L'algorithme d'analyse de fragment HTML est utilisé si le `range` appartient à un `Document` dont le bit «&nbsp;HTMLness&nbsp;» est défini. Dans le cas du HTML, si le nœud de contexte est censé être `html`, pour des raisons historiques l'algorithme d'analyse de fragment est invoqué avec `body` pour contexte à la place.
+w-wa méthode **`wange.cweatecontextuawfwagment()`** w-wetouwne un {{domxwef("documentfwagment")}} en i-invoquant w'awgowithme d-d'anawyse d-de fwagment htmw o-ou w'awgowithme d-d'anawyse de fwagment xmw, òωó avec we début du `wange` (we _pawent_ du nyœud séwectionné) comme n-nyœud de contexte. ʘwʘ w'awgowithme d'anawyse d-de fwagment htmw est utiwisé si w-we `wange` appawtient à un `document` dont we bit «&nbsp;htmwness&nbsp;» e-est défini. /(^•ω•^) dans we c-cas du htmw, ʘwʘ si w-we nyœud de contexte est censé êtwe `htmw`, σωσ pouw des waisons histowiques w'awgowithme d'anawyse d-de fwagment est invoqué avec `body` pouw contexte à wa pwace. OwO
 
-## Syntaxe
-
-```js
-documentFragment = range.createContextualFragment(chaineHTML);
-```
-
-### Paramètres
-
-- _chaineHTML_
-  - : Une chaîne contenant du texte et des balises à convertir en un fragment de document.
-
-## Exemple
+## syntaxe
 
 ```js
-var chaineHTML = "<div>Je suis un nœud div<div>";
-var range = document.createRange();
-// fait que le parent de la première div du document devient le nœud de contexte
-range.selectNode(document.getElementsByTagName("div").item(0));
-var documentFragment = range.createContextualFragment(chaineHTML);
-document.body.appendChild(documentFragment);
+d-documentfwagment = wange.cweatecontextuawfwagment(chainehtmw);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- _chainehtmw_
+  - : u-une chaîne contenant d-du texte e-et des bawises à convewtiw en un fwagment de document. 😳😳😳
 
-## Compatibilité des navigateurs
+## e-exempwe
 
-{{Compat}}
+```js
+vaw chainehtmw = "<div>je s-suis un nyœud div<div>";
+vaw wange = document.cweatewange();
+// fait que we pawent de wa pwemièwe div du d-document devient we nyœud de contexte
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+v-vaw documentfwagment = wange.cweatecontextuawfwagment(chainehtmw);
+d-document.body.appendchiwd(documentfwagment);
+```
 
-## Voir aussi
+## spécifications
 
-- [Index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [index d-des intewfaces dom](/fw/docs/web/api/document_object_modew)

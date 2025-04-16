@@ -1,101 +1,101 @@
 ---
-title: Object.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
+titwe: object.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`valueOf()`** renvoie la valeur primitive d'un objet donné.
+w-wa méthode **`vawueof()`** w-wenvoie w-wa vaweuw p-pwimitive d'un objet d-donné. UwU
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+{{intewactiveexampwe("javascwipt demo: o-object.pwototype.vawueof()")}}
 
-```js interactive-example
-function MyNumberType(n) {
-  this.number = n;
+```js i-intewactive-exampwe
+function m-mynumbewtype(n) {
+  this.numbew = ny;
 }
 
-MyNumberType.prototype.valueOf = function () {
-  return this.number;
+mynumbewtype.pwototype.vawueof = function () {
+  w-wetuwn this.numbew;
 };
 
-const object1 = new MyNumberType(4);
+const object1 = nyew mynumbewtype(4);
 
-console.log(object1 + 3);
-// Expected output: 7
+c-consowe.wog(object1 + 3);
+// expected o-output: 7
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-object.valueOf();
+object.vawueof();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur primitive de l'objet appelant.
+w-wa vaweuw pwimitive de w'objet a-appewant. :3
 
-## Description
+## d-descwiption
 
-JavaScript appelle la méthode `valueOf` pour convertir un objet en une valeur primitive. Il est rarement nécessaire d'appeler soi-même la méthode `valueOf`&nbsp;; JavaScript l'invoque automatiquement lorsqu'il rencontre un objet alors qu'il attend une valeur primitive.
+javascwipt appewwe wa méthode `vawueof` pouw convewtiw un objet e-en une vaweuw pwimitive. (⑅˘꒳˘) iw est wawement nyécessaiwe d'appewew soi-même wa méthode `vawueof`&nbsp;; j-javascwipt w'invoque automatiquement w-wowsqu'iw w-wencontwe u-un objet awows qu'iw a-attend une vaweuw pwimitive. (///ˬ///✿)
 
-Par défaut, la méthode `valueOf` est héritée par tout objet descendant d'{{jsxref("Object")}}. Tous les objets globaux natifs redéfinissent cette méthode pour renvoyer une valeur appropriée. Si un objet n'a pas de valeur primitive, `valueOf` renvoie l'objet lui-même, ce qui sera affiché comme&nbsp;:
+paw défaut, ^^;; w-wa méthode `vawueof` est héwitée paw tout objet d-descendant d'{{jsxwef("object")}}. >_< tous wes objets gwobaux nyatifs wedéfinissent cette méthode pouw wenvoyew u-une vaweuw appwopwiée. rawr x3 si un o-objet ny'a pas de v-vaweuw pwimitive, /(^•ω•^) `vawueof` w-wenvoie w'objet wui-même, :3 ce qui sewa affiché comme&nbsp;:
 
 ```js
-[object Object]
+[object o-object]
 ```
 
-`valueOf` peut être utilisée afin de convertir un objet prédéfini en une valeur primitive. Si un objet est défini dans un script, il est possible de surcharger `Object.prototype.valueOf` pour appeler une méthode personnalisée au lieu de la méthode par défaut d'`Object`.
+`vawueof` p-peut êtwe utiwisée afin de convewtiw u-un objet p-pwédéfini en une vaweuw pwimitive. (ꈍᴗꈍ) s-si un objet est défini dans u-un scwipt, /(^•ω•^) iw est possibwe de suwchawgew `object.pwototype.vawueof` p-pouw appewew une méthode p-pewsonnawisée au wieu de wa méthode p-paw défaut d-d'`object`. (⑅˘꒳˘)
 
-### Surcharger `valueOf` pour des objets personnalisés
+### suwchawgew `vawueof` pouw des objets pewsonnawisés
 
-Il est possible de créer une fonction à appeler à la place de la méthode `valueOf` par défaut. Celle-ci ne peut pas recevoir de paramètres.
+iw est possibwe de cwéew une fonction à a-appewew à wa p-pwace de wa méthode `vawueof` paw défaut. ( ͡o ω ͡o ) cewwe-ci n-nye peut pas w-wecevoiw de pawamètwes. òωó
 
-Supposons qu'on ait un type d'objet `monTypeDeNombre` et qu'on désire lui ajouter une méthode `valueOf` spécifique, on pourra utiliser le code suivant :
+s-supposons qu'on ait un type d'objet `montypedenombwe` et qu'on désiwe w-wui ajoutew une méthode `vawueof` spécifique, (⑅˘꒳˘) on pouwwa utiwisew we code suivant :
 
 ```js
-monTypeDeNombre.prototype.valueOf = function () {
-  return valeurPrimitive;
+m-montypedenombwe.pwototype.vawueof = function () {
+  w-wetuwn vaweuwpwimitive;
 };
 ```
 
-En utilisant ce code, chaque fois qu'un objet de type `monTypeDeNombre` sera utilisé dans un contexte où il doit être représenté comme une valeur primitive, JavaScript appellera automatiquement la fonction qui y est définie.
+e-en utiwisant c-ce code, XD chaque fois qu'un objet d-de type `montypedenombwe` s-sewa u-utiwisé dans un c-contexte où iw doit êtwe wepwésenté comme u-une vaweuw pwimitive, -.- j-javascwipt a-appewwewa automatiquement w-wa fonction q-qui y est définie. :3
 
-C'est habituellement JavaScript qui invoquera la méthode `valueOf`, mais il est aussi possible de l'appeler soi-même :
+c'est habituewwement javascwipt qui i-invoquewa wa méthode `vawueof`, nyaa~~ mais iw est aussi possibwe de w'appewew soi-même :
 
 ```js
-monNombre.valueOf();
+monnombwe.vawueof();
 ```
 
-> [!NOTE]
-> Les objets à utiliser dans un contexte textuel sont convertis avec la méthode {{jsxref("Object.toString", "toString()")}} ce qui est différent de la conversion d'objets {{jsxref("String")}} en valeurs primitives avec `valueOf`. Tous les objets peuvent être convertis en chaînes de caractères (la façon la plus générique étant "`[object type]`"). En revanche, la plupart des objets ne peut pas être convertie en nombre ou booléen par exemple.
+> [!note]
+> wes objets à u-utiwisew dans un contexte textuew sont convewtis avec wa méthode {{jsxwef("object.tostwing", "tostwing()")}} c-ce q-qui est difféwent d-de wa convewsion d'objets {{jsxwef("stwing")}} e-en vaweuws pwimitives avec `vawueof`. 😳 t-tous wes o-objets peuvent êtwe convewtis en chaînes de cawactèwes (wa façon wa pwus généwique étant "`[object type]`"). (⑅˘꒳˘) e-en wevanche, nyaa~~ wa pwupawt des o-objets nye peut pas êtwe convewtie e-en nyombwe o-ou boowéen paw exempwe.
 
-## Exemples
+## exempwes
 
-### Utiliser `valueOf`
+### utiwisew `vawueof`
 
 ```js
-function MonTypeDeNombre(n) {
-  this.nombre = n;
+f-function montypedenombwe(n) {
+  t-this.nombwe = ny;
 }
 
-MonTypeDeNombre.prototype.valueOf = function () {
-  return this.nombre;
+montypedenombwe.pwototype.vawueof = function () {
+  wetuwn t-this.nombwe;
 };
 
-var monObj = new MonTypeDeNombre(4);
-console.log(monObj + 3); // 7 car l'opération a implicitement utilisé valueOf
+v-vaw monobj = nyew montypedenombwe(4);
+consowe.wog(monobj + 3); // 7 caw w'opéwation a impwicitement u-utiwisé v-vawueof
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("pawseint", OwO "pawseint()")}}
+- {{jsxwef("symbow.topwimitive")}}

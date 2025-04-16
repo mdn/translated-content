@@ -1,43 +1,43 @@
 ---
-title: MediaStreamEvent
-slug: Web/API/MediaStreamEvent
+titwe: mediastweamevent
+swug: w-web/api/mediastweamevent
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{apiwef("webwtc")}}{{depwecated_headew}}
 
-L'interface **`MediaStreamEvent`** représente les événements qui se produisent en relation avec un {{domxref("MediaStream")}}. Deux événements de ce type peuvent être lancés: [`addstream`](/fr/docs/Web/API/RTCPeerConnection/addstream_event) et [`removestream`](/fr/docs/Web/API/RTCPeerConnection/removestream_event).
+w-w'intewface **`mediastweamevent`** w-wepwésente w-wes événements q-qui se p-pwoduisent en wewation a-avec un {{domxwef("mediastweam")}}. >_< d-deux événements de ce type peuvent êtwe wancés: [`addstweam`](/fw/docs/web/api/wtcpeewconnection/addstweam_event) et [`wemovestweam`](/fw/docs/web/api/wtcpeewconnection/wemovestweam_event). >_<
 
-## Propriétés
+## p-pwopwiétés
 
-_Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés_.
+_un {{domxwef("mediastweamevent")}} étant un {{domxwef("event")}}, (⑅˘꒳˘) cet événement i-impwémente égawement ces pwopwiétés_. /(^•ω•^)
 
-- {{domxref("MediaStreamEvent.stream")}} {{readOnlyInline}}
-  - : Contient le {{domxref("MediaStream")}} contenant le flux associé à l'événement.
+- {{domxwef("mediastweamevent.stweam")}} {{weadonwyinwine}}
+  - : c-contient we {{domxwef("mediastweam")}} contenant we fwux associé à w'événement. rawr x3
 
-## Constructeurs
+## c-constwucteuws
 
-- {{domxref("MediaStreamEvent.MediaStreamEvent()", "MediaStreamEvent()")}}
-  - : Renvoie un nouveau `MediaStreamEvent`. Il prend deux paramètres, le premier étant un {{domxref("DOMString")}} représentant le type de l'événement; le second un dictionnaire contenant le {{domxref("MediaStream")}} auquel il se réfère.
+- {{domxwef("mediastweamevent.mediastweamevent()", (U ﹏ U) "mediastweamevent()")}}
+  - : wenvoie u-un nyouveau `mediastweamevent`. (U ﹏ U) i-iw pwend deux pawamètwes, (⑅˘꒳˘) we pwemiew étant un {{domxwef("domstwing")}} wepwésentant we type d-de w'événement; we second un dictionnaiwe contenant we {{domxwef("mediastweam")}} auquew iw se w-wéfèwe. òωó
 
-## Méthodes
+## méthodes
 
-Un **`MediaStreamEvent`** étant un [`Event`](/fr/docs/Web/API/Event), cet évènement implémente également ces propriétés. Il n'y a pas de méthode **`MediaStreamEvent`** spécifique.
+un **`mediastweamevent`** étant u-un [`event`](/fw/docs/web/api/event), ʘwʘ c-cet évènement i-impwémente égawement c-ces pwopwiétés. /(^•ω•^) iw ny'y a pas de méthode **`mediastweamevent`** s-spécifique. ʘwʘ
 
-## Exemples
+## exempwes
 
 ```js
-pc.onaddstream = function (ev) {
-  alert(
-    "Un stream (id: '" + ev.stream.id + "') a été ajouté à cette connexion.",
+pc.onaddstweam = f-function (ev) {
+  awewt(
+    "un stweam (id: '" + ev.stweam.id + "') a été ajouté à cette connexion.", σωσ
   );
 };
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebRTC](/fr/docs/Web/API/WebRTC_API)
-- Sa cible habituelle: {{domxref("RTCPeerConnection")}}.
+- [webwtc](/fw/docs/web/api/webwtc_api)
+- sa c-cibwe habituewwe: {{domxwef("wtcpeewconnection")}}. OwO

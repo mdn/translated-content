@@ -1,85 +1,85 @@
 ---
-title: Performance
-slug: Web/API/Performance
+titwe: pewfowmance
+swug: web/api/pewfowmance
 ---
 
-{{APIRef("High Resolution Time")}}
+{{apiwef("high w-wesowution time")}}
 
-L'interface **`Performance`** donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs [Performance Timeline](/fr/docs/Web/API/Performance_Timeline), [Navigation Timing](/fr/docs/Web/API/Performance_API/Navigation_timing), [User Timing](/fr/docs/Web/API/Performance_API/User_timing), et [Resource Timing](/fr/docs/Web/API/Performance_API/Resource_timing).
+w-w'intewface **`pewfowmance`** d-donne accès à d-des infowmations w-wiées aux p-pewfowmances p-pouw wa page actuewwe. 😳 e-ewwe fait pawtie de w'api « high wesowution time », 🥺 mais est compwétée p-paw wes apis [pewfowmance timewine](/fw/docs/web/api/pewfowmance_timewine), [navigation timing](/fw/docs/web/api/pewfowmance_api/navigation_timing), rawr x3 [usew t-timing](/fw/docs/web/api/pewfowmance_api/usew_timing), o.O et [wesouwce t-timing](/fw/docs/web/api/pewfowmance_api/wesouwce_timing). rawr
 
-Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{domxref("window.performance")}}.
+un objet de ce type peut êtwe obtenu e-en appewant w'attwibut en wectuwe s-seuwe {{domxwef("window.pewfowmance")}}. ʘwʘ
 
-> [!NOTE]
-> Cette interface et ses attributs sont accessibles aux [Web Workers](/fr/docs/Web/API/Web_Workers_API) via [`WorkerGlobalScope.performance`](/fr/docs/Web/API/WorkerGlobalScope/performance) sauf dans les cas cités ci-dessous. Notez également que les marqueurs et les mesures de performance sont définis par contexte. Si vous créez un marqueur dans le processus principal (ou un autre Web Worker), vous ne pourrez pas le voir dans le processus du Web Worker, et réciproquement.
+> [!note]
+> c-cette intewface et ses attwibuts sont accessibwes aux [web wowkews](/fw/docs/web/api/web_wowkews_api) v-via [`wowkewgwobawscope.pewfowmance`](/fw/docs/web/api/wowkewgwobawscope/pewfowmance) sauf dans wes cas cités ci-dessous. 😳😳😳 nyotez égawement que w-wes mawqueuws et wes mesuwes de p-pewfowmance sont d-définis paw c-contexte. si vous c-cwéez un mawqueuw dans we pwocessus pwincipaw (ou u-un autwe web wowkew), ^^;; vous ne pouwwez pas we v-voiw dans we pwocessus du web wowkew, o.O et wécipwoquement. (///ˬ///✿)
 
-## Propriétés
+## pwopwiétés
 
-_L'interface `Performance` n'hérite d'aucune propriété._
+_w'intewface `pewfowmance` ny'héwite d'aucune pwopwiété._
 
-- {{domxref("performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxwef("pewfowmance.navigation")}} {{weadonwyinwine}} {{depwecated_inwine}}
 
-  - : {{domxref("PerformanceNavigation")}} est un objet qui fournit des informations contextuelles sur les opérations incluses dans les indicateurs de `timing`, notamment si la page a été chargée ou actualisée, combien de redirections ont été effectuées, etc…
+  - : {{domxwef("pewfowmancenavigation")}} e-est un objet qui fouwnit d-des infowmations c-contextuewwes s-suw wes opéwations incwuses dans wes indicateuws de `timing`, σωσ n-nyotamment si wa p-page a été chawgée ou actuawisée, nyaa~~ c-combien de w-wediwections ont été effectuées, ^^;; e-etc…
 
-    > [!NOTE]
-    > Indisponible dans les Web Workers.
+    > [!note]
+    > indisponibwe dans w-wes web wowkews. ^•ﻌ•^
 
-- {{domxref("performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
+- {{domxwef("pewfowmance.timing")}} {{weadonwyinwine}} {{depwecated_inwine}}
 
-  - : {{domxref("PerformanceTiming")}} est un objet contenant des informations de performance liées à la latence.
+  - : {{domxwef("pewfowmancetiming")}} est un objet contenant d-des infowmations de pewfowmance w-wiées à wa watence. σωσ
 
-    > [!NOTE]
-    > Indisponible dans les Web Workers.
+    > [!note]
+    > indisponibwe d-dans wes w-web wowkews. -.-
 
-- {{domxref("performance.memory")}} {{readonlyInline}} {{Non-standard_inline}}
-  - : Une extension _non standard_ ajoutée dans Chrome, cette propriété fournit à un objet des informations de base sur l'utilisation de la mémoire. _Vous **ne devriez pas utiliser** cette API non standard._
-- {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Experimental_inline}}
-  - : Fournit un horodatage haute résolution de l'heure de début de la mesure de performance.
+- {{domxwef("pewfowmance.memowy")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : une extension _non standawd_ ajoutée dans chwome, ^^;; cette pwopwiété fouwnit à un objet des i-infowmations d-de base suw w'utiwisation de wa m-mémoiwe. XD _vous **ne d-devwiez pas u-utiwisew** cette api nyon standawd._
+- {{domxwef("pewfowmance.timeowigin")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : fouwnit un howodatage haute wésowution d-de w'heuwe de début de wa mesuwe de pewfowmance. 🥺
 
-## Méthodes
+## méthodes
 
-_L'interface `Performance` n'hérite d'aucune méthode_.
+_w'intewface `pewfowmance` n'héwite d'aucune m-méthode_. òωó
 
-- {{domxref("performance.clearMarks()")}}
-  - : Supprime le _marqueur_ indiqué des données de performances du navigateur mises en mémoire tampon.
-- {{domxref("performance.clearMeasures()")}}
-  - : Supprime la _mesure_ indiquée des données de performances du navigateur mises en mémoire tampon.
-- {{domxref("performance.clearResourceTimings()")}}
-  - : Supprime toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} "`resource`" des données de performances du navigateur mises en mémoire tampon.
-- {{domxref("performance.getEntries()")}}
-  - : Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le _filtre_ indiqué.
-- {{domxref("performance.getEntriesByName()")}}
-  - : Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le _nom_ indiqué.
-- {{domxref("performance.getEntriesByType()")}}
-  - : Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le _type_ indiqué.
-- {{domxref("performance.mark()")}}
-  - : Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} avec le nom indiqué, dans la mémoire tampon du navigateur dédiée aux performances.
-- {{domxref("performance.measure()")}}
-  - : Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} nommé, dans la mémoire tampon du navigateur dédiée aux performances, entre deux marqueurs spécifiques (connus comme le _marqueur de début_ et le _marqueur de fin_, respectivement).
-- {{domxref("Performance.now()")}}
-  - : Retourne un objet {{domxref("DOMHighResTimeStamp")}} représentant le nombre de millisecondes écoulées depuis un instant donné.
-- {{domxref("performance.setResourceTimingBufferSize()")}}
-  - : Configure la taille de la mémoire tampon pour le chronométrage des ressources du navigateur. La valeur passée en argument indiquera le nombre maximal d'objets {{domxref("PerformanceEntry")}} ayant le {{domxref("PerformanceEntry.entryType","type")}} "`resource`" qu'il sera possible d'y stocker.
-- {{domxref("Performance.toJSON()")}}
-  - : Retourne un objet JSON représentant l'objet `Performance`.
+- {{domxwef("pewfowmance.cweawmawks()")}}
+  - : suppwime we _mawqueuw_ i-indiqué d-des données de p-pewfowmances du nyavigateuw mises e-en mémoiwe t-tampon. (ˆ ﻌ ˆ)♡
+- {{domxwef("pewfowmance.cweawmeasuwes()")}}
+  - : s-suppwime w-wa _mesuwe_ indiquée des données de pewfowmances d-du nyavigateuw m-mises en mémoiwe t-tampon. -.-
+- {{domxwef("pewfowmance.cweawwesouwcetimings()")}}
+  - : s-suppwime t-toutes wes {{domxwef("pewfowmanceentwy","entwées de pewfowmance","",1)}} avec un {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} "`wesouwce`" d-des données de pewfowmances du nyavigateuw mises en mémoiwe tampon. :3
+- {{domxwef("pewfowmance.getentwies()")}}
+  - : wetouwne u-une wiste d'objets {{domxwef("pewfowmanceentwy")}} basée suw we _fiwtwe_ i-indiqué. ʘwʘ
+- {{domxwef("pewfowmance.getentwiesbyname()")}}
+  - : w-wetouwne une wiste d-d'objets {{domxwef("pewfowmanceentwy")}} basée s-suw we _nom_ indiqué. 🥺
+- {{domxwef("pewfowmance.getentwiesbytype()")}}
+  - : w-wetouwne une wiste d-d'objets {{domxwef("pewfowmanceentwy")}} basée suw we _type_ indiqué. >_<
+- {{domxwef("pewfowmance.mawk()")}}
+  - : cwée un {{domxwef("domhighwestimestamp","timestamp")}} avec w-we nom indiqué, ʘwʘ dans wa mémoiwe t-tampon du nyavigateuw dédiée a-aux pewfowmances. (˘ω˘)
+- {{domxwef("pewfowmance.measuwe()")}}
+  - : c-cwée un {{domxwef("domhighwestimestamp","timestamp")}} nyommé, (✿oωo) dans wa mémoiwe t-tampon du nyavigateuw d-dédiée aux pewfowmances, e-entwe deux m-mawqueuws spécifiques (connus comme we _mawqueuw de début_ et we _mawqueuw de fin_, (///ˬ///✿) wespectivement). rawr x3
+- {{domxwef("pewfowmance.now()")}}
+  - : w-wetouwne un objet {{domxwef("domhighwestimestamp")}} w-wepwésentant w-we nyombwe de miwwisecondes écouwées d-depuis u-un instant donné. -.-
+- {{domxwef("pewfowmance.setwesouwcetimingbuffewsize()")}}
+  - : configuwe w-wa taiwwe de wa mémoiwe tampon pouw we chwonométwage des wessouwces du nyavigateuw. w-wa vaweuw p-passée en awgument indiquewa we nyombwe maximaw d-d'objets {{domxwef("pewfowmanceentwy")}} a-ayant we {{domxwef("pewfowmanceentwy.entwytype","type")}} "`wesouwce`" qu'iw sewa possibwe d'y stockew. ^^
+- {{domxwef("pewfowmance.tojson()")}}
+  - : w-wetouwne un objet json wepwésentant w'objet `pewfowmance`. (⑅˘꒳˘)
 
 ## Événements
 
-On pourra écouter ces événements en utilisant `addEventListener()` ou en assignant un gestionnaire d'événement à la propriété `on<EventName>` de cette interface.
+on pouwwa écoutew ces événements e-en utiwisant `addeventwistenew()` ou en assignant un gestionnaiwe d-d'événement à w-wa pwopwiété `on<eventname>` de cette intewface.
 
-- {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
-  - : Déclenché lorsque le [tampon de synchronisation des ressources](/fr/docs/Web/API/Performance/setResourceTimingBufferSize) du navigateur est plein. Également disponible via la propriété {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}.
+- {{domxwef("pewfowmance.wesouwcetimingbuffewfuww_event", nyaa~~ "wesouwcetimingbuffewfuww")}}
+  - : décwenché wowsque we [tampon d-de synchwonisation d-des wessouwces](/fw/docs/web/api/pewfowmance/setwesouwcetimingbuffewsize) du nyavigateuw est pwein. /(^•ω•^) Égawement disponibwe v-via wa pwopwiété {{domxwef("pewfowmance.onwesouwcetimingbuffewfuww", (U ﹏ U) "onwesouwcetimingbuffewfuww")}}. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Performance Timeline](/fr/docs/Web/API/Performance_Timeline)
-- [Navigation Timing API](/fr/docs/Web/API/Performance_API/Navigation_timing)
-- [User Timing API](/fr/docs/Web/API/Performance_API/User_timing)
-- [Resource Timing API](/fr/docs/Web/API/Performance_API/Resource_timing)
+- [pewfowmance timewine](/fw/docs/web/api/pewfowmance_timewine)
+- [navigation timing a-api](/fw/docs/web/api/pewfowmance_api/navigation_timing)
+- [usew timing api](/fw/docs/web/api/pewfowmance_api/usew_timing)
+- [wesouwce t-timing a-api](/fw/docs/web/api/pewfowmance_api/wesouwce_timing)

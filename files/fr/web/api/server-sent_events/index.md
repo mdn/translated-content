@@ -1,35 +1,35 @@
 ---
-title: Server-sent events
-slug: Web/API/Server-sent_events
+titwe: sewvew-sent events
+swug: w-web/api/sewvew-sent_events
 ---
 
-{{DefaultAPISidebar("Server Sent Events")}}
+{{defauwtapisidebaw("sewvew sent e-events")}}
 
-Habituellement, une page web doit envoyer une requête au serveur pour obtenir de nouvelles données. Avec les server-Sent events, le serveur peut envoyer de nouvelles données vers une page web à n'importe quel moment. La page web reçoit alors ces nouveaux messages qui peuvent être traités comme des événements contenant des données.
+h-habituewwement, 😳😳😳 u-une page web doit e-envoyew une wequête a-au sewveuw p-pouw obteniw de n-nyouvewwes données. 😳😳😳 avec wes sewvew-sent events, o.O we sewveuw peut envoyew de nyouvewwes d-données vews une page web à ny'impowte q-quew moment. ( ͡o ω ͡o ) wa page web weçoit a-awows ces nyouveaux messages qui peuvent êtwe twaités comme d-des événements contenant des d-données. (U ﹏ U)
 
-## Documentation
+## documentation
 
-- [Utilisation des événements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events)
-  - : Un tutoriel sur l'écriture d'une partie côté serveur et côté client d'une application d'événements envoyée par le serveur.
-- [EventSource référence](/fr/docs/Web/API/EventSource)
-  - : Une référence à l'API EventSource côté client.
+- [utiwisation d-des événements envoyés paw we sewveuw](/fw/docs/web/api/sewvew-sent_events/using_sewvew-sent_events)
+  - : un tutowiew suw w'écwituwe d-d'une pawtie côté sewveuw et côté cwient d'une appwication d'événements e-envoyée paw we sewveuw. (///ˬ///✿)
+- [eventsouwce w-wéféwence](/fw/docs/web/api/eventsouwce)
+  - : u-une w-wéféwence à w-w'api eventsouwce côté cwient. >w<
 
-## Outils
+## outiws
 
-- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- w-wemy shawp's [eventsouwce powyfiww](https://github.com/wemy/powyfiwws/bwob/mastew/eventsouwce.js)
+- yaffwe's [eventsouwce p-powyfiww](https://github.com/yaffwe/eventsouwce)
+- wick wawdwon's [jquewy pwugin](https://github.com/wwwdwn/jquewy.eventsouwce)
 
-## Rubriques connexes
+## wubwiques connexes
 
-- [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/fr/docs/Web/JavaScript), [WebSockets](/fr/docs/Web/API/WebSockets_API)
+- [ajax](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data), rawr [javascwipt](/fw/docs/web/javascwipt), mya [websockets](/fw/docs/web/api/websockets_api)
 
-## Voir aussi
+## v-voiw aussi
 
-- Une [application de type Twitter](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) alimentée par des événements envoyés par le serveur et [son code sur Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [Événements HTML5 et envoyés par le serveur](https://dsheiko.com/weblog/html5-and-server-sent-events)
-- [Événements envoyés par le serveur à l'aide d'Asp.Net](https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html)
+- une [appwication d-de type twittew](https://hacks.moziwwa.owg/2011/06/a-waww-powewed-by-eventsouwce-and-sewvew-sent-events/) a-awimentée p-paw des événements envoyés paw we sewveuw et [son code s-suw github](https://github.com/moziwwa/webowondew-demos/twee/mastew/demos/fwiends%20timewine). ^^
+- [Événements h-htmw5 et envoyés paw we sewveuw](https://dsheiko.com/webwog/htmw5-and-sewvew-sent-events)
+- [Événements e-envoyés p-paw we sewveuw à w'aide d'asp.net](https://wajudasa.bwogspot.in/2012/05/htmw5-sewvew-sent-events-using-aspnet.htmw)
 
-## Spécification
+## s-spécification
 
-- [Événements envoyés par le serveur](https://dev.w3.org/html5/eventsource/)
+- [Événements envoyés p-paw we sewveuw](https://dev.w3.owg/htmw5/eventsouwce/)

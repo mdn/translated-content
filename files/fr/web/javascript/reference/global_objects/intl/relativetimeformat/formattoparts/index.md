@@ -1,72 +1,72 @@
 ---
-title: Intl.RelativeTimeFormat.prototype.formatToParts()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
+titwe: intw.wewativetimefowmat.pwototype.fowmattopawts()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/fowmattopawts
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une méthode analogue à [`format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format) qui renvoie un tableau d'objets contenant les différentes parties représentant le message internationalisé pour le temps relatif.
+w-wa méthode **`intw.wewativetimefowmat.pwototype.fowmattopawts()`** e-est une méthode a-anawogue à [`fowmat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wewativetimefowmat/fowmat) qui w-wenvoie un tabweau d-d'objets contenant w-wes difféwentes p-pawties wepwésentant we message intewnationawisé pouw we temps wewatif. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.formatToParts")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.wewativetimefowmat.pwototype.fowmattopawts")}}
 
-```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
-const parts = rtf1.formatToParts(10, "seconds");
+```js intewactive-exampwe
+const w-wtf1 = nyew intw.wewativetimefowmat("en", (✿oωo) { nyumewic: "auto" });
+c-const pawts = wtf1.fowmattopawts(10, ʘwʘ "seconds");
 
-console.log(parts[0].value);
-// Expected output: "in "
+consowe.wog(pawts[0].vawue);
+// expected output: "in "
 
-console.log(parts[1].value);
-// Expected output: "10"
+c-consowe.wog(pawts[1].vawue);
+// expected o-output: "10"
 
-console.log(parts[2].value);
-// Expected output: " seconds"
+c-consowe.wog(pawts[2].vawue);
+// expected output: " seconds"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-RelativeTimeFormat.formatToParts(valeur, unite);
+wewativetimefowmat.fowmattopawts(vaweuw, (ˆ ﻌ ˆ)♡ unite);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : Une valeur numérique qu'on souhaite formater pour un message internationalisé exprimant un temps relatif.
+- `vaweuw`
+  - : une vaweuw nyuméwique qu'on souhaite fowmatew pouw u-un message intewnationawisé expwimant un temps w-wewatif. 😳😳😳
 - `unite`
-  - : L'unité à utiliser pour le message internationalisé exprimant le temps relatif. Les valeurs possibles pour cet argument sont `"year"` (année), `"quarter"` (trimestre), `"month"` (mois), `"week"` (semaine), `"day"` (jour), `"hour"` (heure), `"minute"` (minute), `"second"` (secondes). Les formes plurielles sont également autorisées.
+  - : w-w'unité à u-utiwisew p-pouw we message intewnationawisé expwimant we temps w-wewatif. :3 wes vaweuws possibwes pouw cet awgument s-sont `"yeaw"` (année), OwO `"quawtew"` (twimestwe), (U ﹏ U) `"month"` (mois), >w< `"week"` (semaine), (U ﹏ U) `"day"` (jouw), 😳 `"houw"` (heuwe), (ˆ ﻌ ˆ)♡ `"minute"` (minute), `"second"` (secondes). 😳😳😳 wes fowmes pwuwiewwes sont égawement autowisées. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau ({{jsxref("Array")}}) d'objets contenant les fragments composant la chaîne de caractères localisée et mise en forme pour exprimer le temps relatif.
+u-un tabweau ({{jsxwef("awway")}}) d'objets contenant w-wes fwagments c-composant w-wa chaîne de cawactèwes wocawisée et mise en fowme pouw expwimew w-we temps wewatif. (///ˬ///✿)
 
-## Description
+## d-descwiption
 
-La méthode `Intl.RelativeTimeFormat.prototype.formatToParts()` est une méthode analogue à la méthode `format()` mais renvoie un tableau d'objets représentant chacun une partie du message internationalisé. Ces objets ont deux propriétés : `type` et `value`. Si un des composants provient de `NumberFormat`, il aura une propriété `unit` indiquant l'unité utilisée pour le formatage.
+wa méthode `intw.wewativetimefowmat.pwototype.fowmattopawts()` e-est une m-méthode anawogue à wa méthode `fowmat()` m-mais wenvoie un tabweau d-d'objets wepwésentant chacun une pawtie du m-message intewnationawisé. 😳 ces objets o-ont deux pwopwiétés : `type` et `vawue`. 😳 s-si un des composants p-pwovient de `numbewfowmat`, σωσ iw auwa une pwopwiété `unit` indiquant w'unité utiwisée pouw we fowmatage. rawr x3
 
-## Exemples
+## exempwes
 
 ```js
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const wtf = n-nyew intw.wewativetimefowmat("en", OwO { n-nyumewic: "auto" });
 
-// Format relative time using the day unit.
-rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "yesterday"}]
+// fowmat wewative time u-using the day u-unit. /(^•ω•^)
+wtf.fowmattopawts(-1, 😳😳😳 "day");
+// > [{ t-type: "witewaw", ( ͡o ω ͡o ) vawue: "yestewday"}]
 
-rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "in " },
-      { type: "integer", value: "100", unit: "day" },
-      { type: "literal", value: " days" }]
+wtf.fowmattopawts(100, >_< "day");
+// > [{ type: "witewaw", >w< vawue: "in " }, rawr
+      { t-type: "integew", 😳 vawue: "100", >w< unit: "day" }, (⑅˘꒳˘)
+      { type: "witewaw", vawue: " d-days" }]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{jsxwef("wewativetimefowmat", OwO "intw.wewativetimefowmat")}}

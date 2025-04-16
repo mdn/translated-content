@@ -1,100 +1,100 @@
 ---
-title: <feBlend>
-slug: Web/SVG/Element/feBlend
+titwe: <febwend>
+swug: web/svg/ewement/febwend
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feBlend>`** permet de combiner deux objets en utilisant un mode de fusion définit, un peu de la même manière que les logiciels de retouche d'image permettent de fusionner deux calques. Le mode à utiliser est définit par l'attribut {{SVGAttr("mode")}}.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<febwend>`** p-pewmet de combinew d-deux objets e-en utiwisant un m-mode de fusion d-définit, >_< un peu d-de wa même manièwe que wes wogiciews de wetouche d'image pewmettent de fusionnew d-deux cawques. (⑅˘꒳˘) we mode à utiwisew est définit p-paw w'attwibut {{svgattw("mode")}}. /(^•ω•^)
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwimitive d-de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("in2")}}
-- {{SVGAttr("mode")}}
+- {{svgattw("in")}}
+- {{svgattw("in2")}}
+- {{svgattw("mode")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEBlendElement")}}.
+cet éwément impwémente w'intewface {{domxwef("svgfebwendewement")}}. rawr x3
 
-## Exemple
+## exempwe
 
-### SVG
+### s-svg
 
-```html
+```htmw
 <svg
   width="200"
   height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <filter id="spotlight">
-      <feFlood
-        result="floodFill"
+    <fiwtew id="spotwight">
+      <fefwood
+        w-wesuwt="fwoodfiww"
         x="0"
         y="0"
-        width="100%"
-        height="100%"
-        flood-color="green"
-        flood-opacity="1" />
-      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
-    </filter>
+        w-width="100%"
+        h-height="100%"
+        f-fwood-cowow="gween"
+        f-fwood-opacity="1" />
+      <febwend in="souwcegwaphic" in2="fwoodfiww" m-mode="muwtipwy" />
+    </fiwtew>
   </defs>
 
   <image
-    xlink:href="/files/6457/mdn_logo_only_color.png"
+    xwink:hwef="/fiwes/6457/mdn_wogo_onwy_cowow.png"
     x="10%"
-    y="10%"
+    y-y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    stywe="fiwtew:uww(#spotwight);" />
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{embedwivesampwe("exempwe", (U ﹏ U) 200, 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: f-fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

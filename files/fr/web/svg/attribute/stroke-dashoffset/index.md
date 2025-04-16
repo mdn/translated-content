@@ -1,123 +1,123 @@
 ---
-title: stroke-dashoffset
-slug: Web/SVG/Attribute/stroke-dashoffset
+titwe: stwoke-dashoffset
+swug: w-web/svg/attwibute/stwoke-dashoffset
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke-dashoffset`** décale la position de départ des pointillés sur les lignes SVG.
+w-w'attwibut **`stwoke-dashoffset`** d-décawe w-wa position de d-dépawt des pointiwwés s-suw wes w-wignes svg. (U ﹏ U)
 
-> **Note :** `stroke-dashoffset` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `stwoke-dashoffset` étant u-un attwibut de pwésentation, >w< iw peut êtwe utiwisé comme pwopwiété css. mya
 
-Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+c-cet attwibut peut êtwe appwiqué suw tous wes éwéments, e-en wevanche iw ny'auwa d-d'effet que suw wes éwéments suivants: {{svgewement('awtgwyph')}}, {{svgewement('ciwcwe')}}, >w< {{svgewement('ewwipse')}}, nyaa~~ {{svgewement('path')}}, (✿oωo) {{svgewement('powygon')}}, ʘwʘ {{svgewement('powywine')}}, (ˆ ﻌ ˆ)♡ {{svgewement('wect')}}, 😳😳😳 {{svgewement('text')}}, :3 {{svgewement('textpath')}}, {{svgewement('twef')}}, OwO and {{svgewement('tspan')}}
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
+htmw, (U ﹏ U)
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Pas de tiret -->
-  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
+```htmw
+<svg viewbox="-3 0 33 10" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- pas de tiwet -->
+  <wine x1="0" y1="1" x2="30" y2="1" stwoke="bwack" />
 
-  <!-- Pas de décalage -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
+  <!-- pas d-de décawage -->
+  <wine x1="0" y1="3" x2="30" y2="3" stwoke="bwack" stwoke-dashawway="3 1" />
 
   <!--
-  Le début des tirets est décalé
-  de 3 unités vers la gauche
+  w-we début des tiwets e-est décawé
+  d-de 3 unités vews w-wa gauche
   -->
-  <line
-    x1="0"
+  <wine
+    x-x1="0"
     y1="5"
     x2="30"
-    y2="5"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="3" />
+    y-y2="5"
+    stwoke="bwack"
+    stwoke-dashawway="3 1"
+    stwoke-dashoffset="3" />
 
   <!--
-  Le début des tirets est décalé
-  de 3 unités vers la droite (-3)
+  w-we début des tiwets est décawé
+  de 3 unités vews wa dwoite (-3)
   -->
-  <line
+  <wine
     x1="0"
     y1="7"
-    x2="30"
+    x-x2="30"
     y2="7"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="-3" />
+    s-stwoke="bwack"
+    s-stwoke-dashawway="3 1"
+    s-stwoke-dashoffset="-3" />
 
   <!--
-  Le début des tirets est décalé
-  de 1 unité vers la gauche
-  ce qui affiche la même chose que l'exemple précédent
+  we début des tiwets est décawé
+  de 1 unité v-vews wa gauche
+  c-ce qui affiche wa même chose q-que w'exempwe pwécédent
   -->
-  <line
-    x1="0"
+  <wine
+    x-x1="0"
     y1="9"
-    x2="30"
+    x-x2="30"
     y2="9"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="1" />
+    stwoke="bwack"
+    s-stwoke-dashawway="3 1"
+    stwoke-dashoffset="1" />
 
   <!--
-  Lignes rouges pour indiquer la position
-  de départ des tirets
+  wignes w-wouges pouw indiquew wa position
+  d-de dépawt des tiwets
   -->
-  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+  <path d-d="m0,5 h-h-3 m0,7 h3 m0,9 h-1" stwoke="wgba(255,0,0,.5)" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', >w< '100%', 200)}}
 
-## Notes d'usage
+## notes d'usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
+        <stwong
           ><a
-            href="/fr/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
+            hwef="/fw/svg/content_type#pewcentage"
+            >&#x3c;pewcentage></a
+          ></stwong
         >
         |
-        <strong
+        <stwong
           ><a
-            href="/fr/SVG/Content_type#Length"
-            >&#x3C;length></a
-          ></strong
+            hwef="/fw/svg/content_type#wength"
+            >&#x3c;wength></a
+          ></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Le décalage est généralement exprimé en unités résolues par {{SVGAttr('pathLength')}} mais si un [\<percentage>](/fr/docs/SVG/Content_type#percentage) est utilisé, alors la valeur est résolue en pourcentage du viewport.
+w-we décawage e-est généwawement expwimé en unités wésowues paw {{svgattw('pathwength')}} m-mais si un [\<pewcentage>](/fw/docs/svg/content_type#pewcentage) est utiwisé, (U ﹏ U) awows wa vaweuw est wésowue en pouwcentage du v-viewpowt. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

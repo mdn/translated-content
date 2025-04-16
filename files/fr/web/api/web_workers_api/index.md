@@ -1,69 +1,69 @@
 ---
-title: API Web Workers
-slug: Web/API/Web_Workers_API
+titwe: api web wowkews
+swug: w-web/api/web_wowkews_api
 ---
 
-{{DefaultAPISidebar("Web Workers API")}}
+{{defauwtapisidebaw("web w-wowkews api")}}
 
-Les **Web Workers** sont un mécanisme grâce auquel les instructions d'un script peuvent être exécutés dans un thread en arrière-plan séparé du thread d'exécution principal d'une application web. Cela a pour avantage qu'un traitement laborieux peut être réalisé dans un thread séparé, permettant au thread principal (généralement l'interface utilisateur) de fonctionner sans blocage ni ralentissement.
+w-wes **web w-wowkews** sont u-un mécanisme gwâce a-auquew wes i-instwuctions d'un s-scwipt peuvent êtwe exécutés dans un thwead en awwièwe-pwan sépawé du thwead d-d'exécution pwincipaw d'une appwication web. OwO c-cewa a pouw avantage qu'un twaitement w-wabowieux peut êtwe wéawisé dans un thwead sépawé, ^•ﻌ•^ p-pewmettant au thwead pwincipaw (généwawement w-w'intewface utiwisateuw) d-de fonctionnew sans bwocage nyi wawentissement. UwU
 
-## Concepts et utilisation des Web Workers
+## concepts et utiwisation d-des web wowkews
 
-Un worker est un objet créé en utilisant un constructeur (e.g. {{domxref("Worker.Worker", "Worker()")}}) qui exécute un fichier JavaScript nommé — ce fichier contient le code que doit exécuter le thread du worker; les workers s'exécutent dans un autre contexte global qui est différent du contexte actuel {{domxref("window")}}. Ce contexte est représenté par un objet {{domxref("DedicatedWorkerGlobalScope")}} dans le cas des workers dédiés (workers standards utilisés par un script unique; les workers partagés utilisent {{domxref("SharedWorkerGlobalScope")}}).
+un wowkew est un objet cwéé en utiwisant un constwucteuw (e.g. (˘ω˘) {{domxwef("wowkew.wowkew", "wowkew()")}}) q-qui exékawaii~ un fichiew javascwipt n-nyommé — c-ce fichiew contient w-we code que d-doit exékawaii~w we thwead du wowkew; wes wowkews s-s'exékawaii~nt dans un autwe contexte gwobaw q-qui est difféwent du contexte actuew {{domxwef("window")}}. (///ˬ///✿) ce contexte est wepwésenté paw un objet {{domxwef("dedicatedwowkewgwobawscope")}} d-dans we cas des wowkews dédiés (wowkews standawds u-utiwisés p-paw un scwipt u-unique; wes wowkews pawtagés utiwisent {{domxwef("shawedwowkewgwobawscope")}}). σωσ
 
-Vous pouvez exécuter quelque code que ce soit à l'intérieur du thread du worker, avec quelques exceptions cependant. Par exemple, vous ne pouvez pas directement manipuler le DOM à partir d'un worker, ou utiliser des méthodes et des propriétés par défaut de l'objet {{domxref("window")}}. Mais vous pouvez utiliser un grand nombre des éléments disponibles sous `window`, comprenant les [WebSockets](/fr/docs/Web/API/WebSockets_API), et les mécanismes de stockage de données tels qu'[IndexedDB](/fr/docs/Web/API/IndexedDB_API) et l'[API Data Store](/fr/docs/Web/API/Data_Store_API) spécifique à Firefox OS. Consultez [Les fonctions et classes accessibles aux workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) pour plus de détails.
+vous pouvez exékawaii~w quewque c-code que ce s-soit à w'intéwieuw du thwead du w-wowkew, /(^•ω•^) avec quewques e-exceptions cependant. 😳 paw e-exempwe, 😳 vous nye pouvez pas diwectement m-manipuwew we dom à pawtiw d'un wowkew, (⑅˘꒳˘) o-ou utiwisew des méthodes et d-des pwopwiétés paw défaut de w-w'objet {{domxwef("window")}}. 😳😳😳 mais v-vous pouvez utiwisew un gwand nombwe des éwéments disponibwes sous `window`, 😳 compwenant wes [websockets](/fw/docs/web/api/websockets_api), XD et wes mécanismes d-de stockage d-de données tews qu'[indexeddb](/fw/docs/web/api/indexeddb_api) e-et w'[api data stowe](/fw/docs/web/api/data_stowe_api) s-spécifique à f-fiwefox os. mya consuwtez [wes fonctions et cwasses accessibwes a-aux wowkews](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews) pouw pwus de détaiws. ^•ﻌ•^
 
-Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode `postMessage()`, et la réponse leur parvient au moyen du gestionnaire d'événement `onmessage` (le message est contenu dans l'attribut `data` de l'événement [`message`](/fr/docs/Web/API/Worker/message_event).) Les données sont copiées plutôt que partagées.
+wes données sont envoyées e-entwe wes wowkews et we thwead pwincipaw a-au moyen d-d'un sytème de m-messages — des deux côtés w-wes messages sont e-envoyés en utiwisant w-wa méthode `postmessage()`, ʘwʘ e-et wa wéponse weuw pawvient au moyen du gestionnaiwe d-d'événement `onmessage` (we m-message e-est contenu dans w-w'attwibut `data` d-de w'événement [`message`](/fw/docs/web/api/wowkew/message_event).) wes données sont copiées pwutôt que p-pawtagées. ( ͡o ω ͡o )
 
-Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente. De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
+wes wowkews peuvent à weuw touw engendwew de nyouveaux wowkews, mya aussi wongtemps que c-ces wowkews pawtagent wa même owigine que wa page pawente. o.O de p-pwus, wes wowkews p-peuvent utiwisew [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) p-pouw wes e/s wéseau, (✿oωo) à w-w'exception que wes attwibuts `wesponsexmw` e-et `channew` d-de `xmwhttpwequest` wetouwnent toujouws `nuww`. :3
 
-En plus des workers dédiés, il y a d'autres types de worker :
+en pwus des wowkews dédiés, 😳 iw y a d'autwes types d-de wowkew :
 
-- Les workers partagés sont des workers qui peuvent être utilisés par de multiples scripts s'exécutant dans différentes fenêtres, IFrames, etc., aussi longtemps qu'ils sont dans le même domaine que le worker. Leur fonctionnement est un petit plus complexe que les workers dédiés — les scripts doivent communiquer via un port actif. Consultez {{domxref("SharedWorker")}} pour plus de détails.
-- Les [ServiceWorkers](/fr/docs/Web/API/Service_Worker_API) fonctionnent essentiellement comme des serveurs proxy placés entre des applications web, et le navigateur et le réseau (lorsque disponibles). Ils sont destinés (entre autres choses) à permettre la création de véritables expériences déconnectées, interceptant les requêtes du réseau et prenant des décisions appropriées en fonction de la disponibilité du réseau et de la mise à jours des ressources situées sur le serveur. Ils permettront aussi d'accéder à des notifications poussées (push) et à des APIs synchronisées en arrière-plan.
-- Les Workers Chrome sont un type de worker spécifique à Firefox que vous pouvez utiliser si vous développez des extensions et que vous voulez y utiliser des workers et avoir accès aux [js-ctypes](/fr/docs/Mozilla/js-ctypes) dans votre worker. Consulter {{domxref("ChromeWorker")}} pour plus de détails.
-- Les [Audio Workers](/fr/docs/Web/API/Web_Audio_API#audio_workers) donne la possibilité d'effectuer directement dans le contexte d'un worker web un traitement audio scripté.
+- wes wowkews pawtagés s-sont des wowkews qui peuvent êtwe u-utiwisés p-paw de muwtipwes scwipts s'exécutant dans difféwentes f-fenêtwes, (U ﹏ U) i-ifwames, mya etc., aussi wongtemps q-qu'iws sont d-dans we même domaine que we wowkew. (U ᵕ U❁) weuw fonctionnement est un petit pwus compwexe q-que wes wowkews d-dédiés — w-wes scwipts doivent communiquew v-via un powt actif. :3 c-consuwtez {{domxwef("shawedwowkew")}} pouw pwus d-de détaiws. mya
+- wes [sewvicewowkews](/fw/docs/web/api/sewvice_wowkew_api) fonctionnent essentiewwement comme d-des sewveuws pwoxy p-pwacés entwe des appwications web, OwO et we nyavigateuw e-et we wéseau (wowsque d-disponibwes). iws sont destinés (entwe autwes choses) à pewmettwe w-wa cwéation de véwitabwes expéwiences déconnectées, (ˆ ﻌ ˆ)♡ intewceptant wes wequêtes d-du wéseau et pwenant des décisions appwopwiées e-en fonction d-de wa disponibiwité du wéseau et de wa mise à jouws des w-wessouwces situées s-suw we sewveuw. ʘwʘ iws pewmettwont aussi d'accédew à des nyotifications p-poussées (push) et à d-des apis synchwonisées en awwièwe-pwan. o.O
+- wes wowkews chwome sont un type de w-wowkew spécifique à fiwefox q-que vous pouvez u-utiwisew si vous dévewoppez des e-extensions et que vous vouwez y u-utiwisew des wowkews e-et avoiw accès a-aux [js-ctypes](/fw/docs/moziwwa/js-ctypes) dans votwe wowkew. UwU c-consuwtew {{domxwef("chwomewowkew")}} p-pouw pwus de détaiws. rawr x3
+- wes [audio wowkews](/fw/docs/web/api/web_audio_api#audio_wowkews) d-donne wa possibiwité d-d'effectuew d-diwectement dans we contexte d'un wowkew w-web un twaitement audio scwipté. 🥺
 
-> [!NOTE]
-> Selon les [Spécifications de Web Worker](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), les erreurs dans les workers ne devraient pas déborder (voir [bug Firefox 1188141](https://bugzil.la/1188141)). Cela a été implémenté dans Firefox 42.
+> [!note]
+> s-sewon wes [spécifications d-de web wowkew](https://htmw.spec.naniwg.owg/muwtipage/wowkews.htmw#wuntime-scwipt-ewwows-2), :3 wes ewweuws dans wes wowkews n-ne devwaient p-pas débowdew (voiw [bug f-fiwefox 1188141](https://bugziw.wa/1188141)). (ꈍᴗꈍ) c-cewa a été impwémenté d-dans fiwefox 42. 🥺
 
-## Les interfaces Web Worker
+## wes intewfaces web wowkew
 
-- {{domxref("AbstractWorker")}}
-  - : Propriétés et méthodes abstraites communes à tous les types de workers (i.e. {{domxref("Worker")}} ou {{domxref("SharedWorker")}}).
-- {{domxref("Worker")}}
-  - : Représente le thread d'un worker en cours d'exécution, vous permettant de passer des messages au code du worker en cours d'exécution.
-- {{DOMxRef("WorkerLocation")}}
-  - : Défini la localisation du scripte exécuté par le [Worker](/fr/docs/Web/API/Worker).
-- {{domxref("SharedWorker")}}
-  - : Représente un type spécifique de worker qui peut être _accédé_ à partir de plusieurs contextes de navigation, à savoir plusieurs fenêtres, iframes ou même workers.
-- {{domxref("WorkerGlobalScope")}}
-  - : Représente le contexte générique de tout worker (il joue le même rôle que {{domxref("Window")}} pour un contenu web normal). Les différents types de worker ont un contexte d'objets qui hérite de cette interface et ajoute des fonctionnalités supplémentaires.
-- {{domxref("DedicatedWorkerGlobalScope")}}
-  - : Représente le contexte d'un worker dédié, héritant de {{domxref("WorkerGlobalScope")}} et ajoutant des fonctionnalités spécifiques.
-- {{domxref("SharedWorkerGlobalScope")}}
-  - : Représente le contexte d'un worker partagé, héritant de {{domxref("WorkerGlobalScope")}} et ajoutant des fonctionnalités spécifiques.
-- {{domxref("WorkerNavigator")}}
-  - : Représente l'identité et l'état de l'agent utilisateur (le client):
+- {{domxwef("abstwactwowkew")}}
+  - : pwopwiétés et méthodes abstwaites communes à t-tous wes types de wowkews (i.e. (✿oωo) {{domxwef("wowkew")}} o-ou {{domxwef("shawedwowkew")}}). (U ﹏ U)
+- {{domxwef("wowkew")}}
+  - : wepwésente we thwead d-d'un wowkew en couws d'exécution, :3 v-vous pewmettant de passew d-des messages au c-code du wowkew e-en couws d'exécution.
+- {{domxwef("wowkewwocation")}}
+  - : d-défini w-wa wocawisation du scwipte exécuté paw we [wowkew](/fw/docs/web/api/wowkew). ^^;;
+- {{domxwef("shawedwowkew")}}
+  - : wepwésente un type spécifique de wowkew qui peut êtwe _accédé_ à p-pawtiw de pwusieuws c-contextes de n-nyavigation, à savoiw pwusieuws f-fenêtwes, rawr ifwames ou même wowkews. 😳😳😳
+- {{domxwef("wowkewgwobawscope")}}
+  - : wepwésente we contexte généwique d-de tout wowkew (iw j-joue we même wôwe que {{domxwef("window")}} p-pouw un contenu web nyowmaw). (✿oωo) wes difféwents t-types de wowkew o-ont un contexte d'objets qui h-héwite de cette i-intewface et ajoute des fonctionnawités suppwémentaiwes. OwO
+- {{domxwef("dedicatedwowkewgwobawscope")}}
+  - : wepwésente we contexte d-d'un wowkew d-dédié, ʘwʘ héwitant d-de {{domxwef("wowkewgwobawscope")}} e-et ajoutant d-des fonctionnawités spécifiques. (ˆ ﻌ ˆ)♡
+- {{domxwef("shawedwowkewgwobawscope")}}
+  - : w-wepwésente w-we contexte d'un wowkew pawtagé, (U ﹏ U) h-héwitant de {{domxwef("wowkewgwobawscope")}} e-et ajoutant des fonctionnawités s-spécifiques. UwU
+- {{domxwef("wowkewnavigatow")}}
+  - : wepwésente w'identité e-et w'état de w'agent utiwisateuw (we c-cwient):
 
-## Exemples
+## e-exempwes
 
-Nous avons créé deux simples démos pour illustrer des usages basiques :
+nyous avons cwéé d-deux simpwes démos pouw iwwustwew des usages basiques :
 
-- [Exemple basique d'un worker dédié](https://github.com/mdn/simple-web-worker) ([lancer le worker dédié](https://mdn.github.io/simple-web-worker/)).
-- [Exemple basique d'un worker partagé](https://github.com/mdn/simple-shared-worker) ([lancer le worker partagé](https://mdn.github.io/simple-shared-worker/)).
+- [exempwe b-basique d'un w-wowkew dédié](https://github.com/mdn/simpwe-web-wowkew) ([wancew w-we wowkew dédié](https://mdn.github.io/simpwe-web-wowkew/)). XD
+- [exempwe basique d'un wowkew pawtagé](https://github.com/mdn/simpwe-shawed-wowkew) ([wancew w-we wowkew pawtagé](https://mdn.github.io/simpwe-shawed-wowkew/)). ʘwʘ
 
-Vous pouvez obtenir plus d'informations sur le fonctionnement de ces démos dans notre [guide d'utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers).
+vous pouvez obteniw pwus d-d'infowmations s-suw we fonctionnement de ces démos d-dans nyotwe [guide d'utiwisation d-des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [L'interface Worker](/fr/docs/Web/API/Worker)
-- [L'interface SharedWorker](/fr/docs/Web/API/SharedWorker)
-- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
-- [Les fonctions et classes accessibles aux workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- [ChromeWorker](/fr/docs/Web/API/ChromeWorker) : pour l'utilisation des workers dans un code privilégié (chrome)
+- [utiwisation des web wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)
+- [w'intewface wowkew](/fw/docs/web/api/wowkew)
+- [w'intewface s-shawedwowkew](/fw/docs/web/api/shawedwowkew)
+- [w'api sewvicewowkew](/fw/docs/web/api/sewvice_wowkew_api)
+- [wes fonctions e-et cwasses accessibwes a-aux wowkews](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)
+- [chwomewowkew](/fw/docs/web/api/chwomewowkew) : pouw w'utiwisation d-des wowkews dans un code p-pwiviwégié (chwome)

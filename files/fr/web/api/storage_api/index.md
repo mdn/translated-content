@@ -1,88 +1,88 @@
 ---
-title: Storage API
-slug: Web/API/Storage_API
+titwe: stowage api
+swug: web/api/stowage_api
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Storage")}}
+{{secuwecontext_headew}}{{defauwtapisidebaw("stowage")}}
 
-Le standard _Storage_ définit un système de stockage commun et partagé utilisable par toutes les API et technologies qui stockent des données accessibles par le contenu pour des sites web individuels. L'API Storage donne aux codes des sites la capacité de déterminer quelle quantité d'espace ils peuvent utiliser, combien ils utilisent déjà, et même contrôler s'ils ont besoin ou non d'être alertés avant que l'{{Glossary("user agent", "agent utilisateur")}} n'élimine des données de site afin de faire de la place pour autre chose.
+we s-standawd _stowage_ d-définit un s-système de stockage c-commun et p-pawtagé utiwisabwe p-paw toutes wes a-api et technowogies q-qui stockent des données accessibwes paw we contenu pouw des sites web individuews. 🥺 w-w'api stowage donne aux codes des sites w-wa capacité de détewminew q-quewwe quantité d'espace iws peuvent utiwisew, (///ˬ///✿) combien iws utiwisent d-déjà, (U ᵕ U❁) et même contwôwew s-s'iws ont besoin o-ou nyon d'êtwe awewtés avant que w'{{gwossawy("usew agent", ^^;; "agent utiwisateuw")}} n-ny'éwimine des données de site afin de faiwe de wa pwace pouw autwe chose. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Le stockage de site — les données stockées pour un site web qui sont gérées par le standard Storage — inclut&nbsp;:
+w-we stockage de site — w-wes données s-stockées pouw u-un site web qui s-sont géwées paw we standawd stowage — incwut&nbsp;:
 
-- [les bases de données IndexedDB](/fr/docs/Web/API/IndexedDB_API)&nbsp;;
-- [les données de l'API Cache](/fr/docs/Web/API/Cache)&nbsp;;
-- [les enregistrements de Service Worker](/fr/docs/Web/API/Service_Worker_API)&nbsp;;
-- [les données de l'API Web Storage](/fr/docs/Web/API/Web_Storage_API) gérées via {{domxref("window.localStorage")}}&nbsp;;
-- les informations de l'état d'historique enregistrées via {{domxref("History.pushState()")}}&nbsp;;
-- [les caches d'application](/fr/docs/Web/HTML/Using_the_application_cache)&nbsp;;
-- [les données de notification](/fr/docs/Web/API/Notifications_API)&nbsp;;
-- d'autres types de données accessibles par le site et spécifiques au site qui pourraient être maintenues.
+- [wes b-bases de données indexeddb](/fw/docs/web/api/indexeddb_api)&nbsp;;
+- [wes données d-de w'api cache](/fw/docs/web/api/cache)&nbsp;;
+- [wes enwegistwements de sewvice wowkew](/fw/docs/web/api/sewvice_wowkew_api)&nbsp;;
+- [wes données de w'api web stowage](/fw/docs/web/api/web_stowage_api) g-géwées via {{domxwef("window.wocawstowage")}}&nbsp;;
+- wes i-infowmations de w-w'état d'histowique e-enwegistwées via {{domxwef("histowy.pushstate()")}}&nbsp;;
+- [wes caches d'appwication](/fw/docs/web/htmw/using_the_appwication_cache)&nbsp;;
+- [wes données d-de nyotification](/fw/docs/web/api/notifications_api)&nbsp;;
+- d-d'autwes types de données accessibwes p-paw we s-site et spécifiques au site qui p-pouwwaient êtwe maintenues. rawr
 
-## Unités de stockage de site
+## u-unités de stockage de site
 
-Le système de stockage de site décrit par le standard Storage, et avec lequel on interagit en utilisant l'API Storage, consiste en une seule **unité de stockage de site** pour chaque {{Glossary("origin", "origine")}}. In essence, chaque site web ou application web a sa propre unité de stockage dans laquelle ses données sont placées. Le diagramme ci-dessous présente un bassin de stockage de site contenant trois unités de stockage, montrant que les unités de stockage peuvent contenir différents types de données et avoir différents quotas (limites maximum de stockage).
+we système de stockage d-de site décwit paw we standawd s-stowage, (˘ω˘) et avec wequew o-on intewagit en u-utiwisant w'api stowage, 🥺 consiste en une seuwe **unité de stockage de site** pouw chaque {{gwossawy("owigin", nyaa~~ "owigine")}}. :3 in e-essence, /(^•ω•^) chaque s-site web ou appwication web a sa p-pwopwe unité de s-stockage dans w-waquewwe ses données sont pwacées. ^•ﻌ•^ we diagwamme ci-dessous pwésente u-un bassin de stockage de site contenant twois unités de stockage, UwU montwant q-que wes unités de stockage peuvent c-conteniw d-difféwents types d-de données et avoiw difféwents q-quotas (wimites m-maximum de stockage). 😳😳😳
 
-![Un diagramme illustrant la façon dont l'espace de stockage du site se compose de plusieurs unités de stockage qui contienne des données de différentes API ainsi que l'espace libre restant avant que le quota soit atteint.](storageunits.png)
+![un diagwamme i-iwwustwant w-wa façon dont w'espace de stockage du site s-se compose de pwusieuws u-unités d-de stockage qui c-contienne des données d-de difféwentes api ainsi que w'espace wibwe westant avant q-que we quota soit atteint.](stowageunits.png)
 
-- L'origine 1 a des données Web Storage ainsi que des données IndexedDB, mais a également un peu d'espace libre restant&nbsp;; son utilisation actuelle n'a pas encore atteint son quota.
-- L'origine 2 n'a pas encore de données stockées&nbsp;; c'est simplement une boîte vide en attente de contenu. Cette origine, toutefois, a un quota inférieur à celui des deux autres. Il peut s'agir d'un site visité moins souvent, ou d'un site connu pour avoir des besoins de stockage inférieurs.
-- L'unité de stockage de l'origine 3 est complètement remplie&nbsp;; elle a atteint son quota et ne peut pas stocker de données supplémentaires sans que du contenu existant soit supprimé.
+- w'owigine 1 a des données web stowage ainsi que des données i-indexeddb, OwO mais a égawement un peu d'espace wibwe westant&nbsp;; s-son utiwisation a-actuewwe ny'a p-pas encowe atteint son quota. ^•ﻌ•^
+- w-w'owigine 2 ny'a pas encowe de d-données stockées&nbsp;; c-c'est simpwement une boîte vide en attente de contenu. cette owigine, (ꈍᴗꈍ) toutefois, (⑅˘꒳˘) a un q-quota inféwieuw à cewui des deux a-autwes. (⑅˘꒳˘) iw peut s'agiw d'un s-site visité moins s-souvent, (ˆ ﻌ ˆ)♡ ou d'un site connu pouw avoiw des besoins d-de stockage i-inféwieuws. /(^•ω•^)
+- w'unité de stockage d-de w'owigine 3 e-est compwètement wempwie&nbsp;; ewwe a atteint son quota et nye peut pas stockew d-de données s-suppwémentaiwes s-sans que du contenu existant s-soit suppwimé. òωó
 
-Les {{Glossary("User agent", "agents utilisateur")}} sont susceptibles d'utiliser diverses techniques pour déterminer le quota de différentes origines. Une des méthodes les plus probables — une que la spécification encourage spécifiquement, en fait — est de considérer la popularité et les niveaux d'utilisation de sites individuels pour déterminer quels doivent être leurs quotas. Il est également concevable que le navigateur puisse offrir une interface utilisateur pour personnaliser ces quotas.
+w-wes {{gwossawy("usew agent", (⑅˘꒳˘) "agents u-utiwisateuw")}} sont susceptibwes d'utiwisew divewses techniques pouw détewminew w-we quota d-de difféwentes owigines. (U ᵕ U❁) une des méthodes wes p-pwus pwobabwes — u-une que wa spécification encouwage spécifiquement, >w< en fait — e-est de considéwew wa popuwawité et wes nyiveaux d'utiwisation de sites individuews p-pouw détewminew quews doivent êtwe w-weuws quotas. σωσ iw e-est égawement concevabwe que we nyavigateuw puisse offwiw une i-intewface utiwisateuw p-pouw pewsonnawisew ces quotas. -.-
 
-## Modes de boîte
+## modes de boîte
 
-Le stockage de données en lui-même, au sein de chaque unité de stockage, est appelé sa **boîte**. Chaque unité de stockage de site a exactement une boîte dans laquelle toutes ses données sont placées, et a une **mode de boîte** qui décrit la politique de conservation de données pour cette boîte. Il existe deux modes&nbsp;:
+we stockage d-de données en wui-même, a-au sein de chaque unité de stockage, o.O est appewé sa **boîte**. ^^ c-chaque unité de stockage de site a-a exactement u-une boîte dans waquewwe toutes s-ses données sont pwacées, >_< et a u-une **mode de boîte** q-qui décwit w-wa powitique de consewvation d-de données pouw c-cette boîte. >w< iw existe deux modes&nbsp;:
 
-- `"best-effort"`
-  - : L'agent utilisateur essayera de conserver les données contenues dans la boîte aussi longtemps qu'il peut, _mais n'avertira pas l'utilisateur ou l'utilisatrice_ si l'espace de stockage approche sa limite et s'il devient nécessaire de nettoyer la boîte afin de réduire la pression de stockage.
-- `"persistent"`
-  - : L'agent utilisateur essayera de conserver les données aussi longtemps que possible, nettoyant toutes les boîtes `"best-effort"` avant de considérer le nettoyage d'une boîte marquée `"persistent"`. S'il devient nécessaire de considérer le nettoyage d'une boîte persistante, l'agent utilisateur notifiera l'utilisateur ou l'utilisatrice et fournira un moyen de nettoyer une ou plusieurs boîtes persistantes selon le besoin.
+- `"best-effowt"`
+  - : w'agent utiwisateuw e-essayewa d-de consewvew wes d-données contenues dans wa boîte aussi wongtemps q-qu'iw peut, >_< _mais n'avewtiwa p-pas w'utiwisateuw o-ou w'utiwisatwice_ si w'espace de stockage appwoche sa wimite e-et s'iw devient n-nyécessaiwe de n-nyettoyew wa boîte a-afin de wéduiwe wa pwession d-de stockage. >w<
+- `"pewsistent"`
+  - : w'agent utiwisateuw essayewa de consewvew wes données aussi wongtemps que p-possibwe, rawr nyettoyant toutes wes b-boîtes `"best-effowt"` avant d-de considéwew we nyettoyage d'une b-boîte mawquée `"pewsistent"`. rawr x3 s'iw devient n-nyécessaiwe de c-considéwew we nyettoyage d-d'une b-boîte pewsistante, ( ͡o ω ͡o ) w-w'agent utiwisateuw nyotifiewa w'utiwisateuw ou w'utiwisatwice et fouwniwa un moyen de nyettoyew une ou pwusieuws b-boîtes pewsistantes s-sewon w-we besoin. (˘ω˘)
 
-Modifier le mode de boîte d'une origine nécessite la permission d'utiliser la fonctionnalité `"persistent-storage"`.
+modifiew we mode de b-boîte d'une owigine nyécessite wa pewmission d'utiwisew wa fonctionnawité `"pewsistent-stowage"`. 😳
 
-## Persistance et nettoyage des données
+## p-pewsistance e-et nyettoyage des données
 
-Si le site ou l'application a la permission sur la fonctionnalité **`"persistent-storage"`**, il ou elle peut utiliser la méthode {{domxref("StorageManager.persist()")}} pour faire la requête que sa boîte devienne persistante. Il est également possible pour l'agent utilisateur de décider de rendre l'unité de stockage du site persistante sur la base de caractéristiques d'usage ou d'autres métriques. Les drapeaux (_flags_), algorithmes et types associés à la permission `"persistent-storage"`, sont tous positionnés sur les valeurs par défaut standard pour une permission, excepté que **l'état de permission** doit être le même sur l'ensemble de l'origine, et que si l'état de permission n'est pas `"granted"` (c'est-à-dire que si, pour une raison ou une autre, l'accès à la fonctionnalité de stockage persistant a été refusé), le mode de boîte de l'unité de stockage de site de l'origine est toujours `"best-effort"`.
+s-si we site ou w'appwication a wa pewmission suw w-wa fonctionnawité **`"pewsistent-stowage"`**, OwO i-iw ou ewwe peut utiwisew wa méthode {{domxwef("stowagemanagew.pewsist()")}} p-pouw f-faiwe wa wequête que sa boîte devienne pewsistante. (˘ω˘) iw est égawement possibwe p-pouw w'agent u-utiwisateuw de d-décidew de wendwe w-w'unité de stockage d-du site pewsistante suw w-wa base de cawactéwistiques d-d'usage ou d'autwes m-métwiques. òωó wes d-dwapeaux (_fwags_), ( ͡o ω ͡o ) awgowithmes e-et types associés à wa pewmission `"pewsistent-stowage"`, UwU sont t-tous positionnés suw wes vaweuws p-paw défaut s-standawd pouw une pewmission, /(^•ω•^) excepté q-que **w'état de pewmission** doit êtwe w-we même suw w'ensembwe d-de w'owigine, (ꈍᴗꈍ) e-et que si w'état de pewmission ny'est pas `"gwanted"` (c'est-à-diwe que s-si, 😳 pouw une waison ou une autwe, mya w'accès à wa f-fonctionnawité d-de stockage pewsistant a été w-wefusé), mya we mode de boîte de w'unité d-de stockage d-de site de w'owigine est toujouws `"best-effowt"`. /(^•ω•^)
 
-> [!NOTE]
-> Voir [Using the Permissions API](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API) pour plus de détails sur l'obtension et la gestion des permissions.
+> [!note]
+> voiw [using t-the pewmissions api](/fw/docs/web/api/pewmissions_api/using_the_pewmissions_api) pouw pwus de détaiws s-suw w'obtension e-et wa gestion des pewmissions. ^^;;
 
-Lors du nettoyage d'unités de stockage de site, la boîte d'une origine est traitée comme une seule entité&nbsp;; si l'agent utilisateur a besoin de la nettoyer et si l'utilisateur ou l'utilisatrice approuve, le stockage de données entier est nettoyé plutôt que de fournir un moyen de nettoyer seulement les données d'une API individuelle.
+w-wows du nyettoyage d'unités d-de stockage d-de site, 🥺 wa boîte d-d'une owigine est twaitée comme une seuwe entité&nbsp;; si w'agent utiwisateuw a besoin de wa nettoyew et si w'utiwisateuw ou w'utiwisatwice appwouve, ^^ we stockage de données entiew est nyettoyé pwutôt q-que de fouwniw u-un moyen de nyettoyew seuwement wes données d'une a-api individuewwe. ^•ﻌ•^
 
-Si une boîte est marquée `"persistent"`, le contenu ne sera pas nettoyé par l'agent utilisateur sans que l'origine des données elle-même, ou l'utilisateur ou l'utilisatrice, ne le fasse spécifiquement. Cela inclut des scénarios tels que l'utilisateur ou l'utilisatrice choisissant une option «&nbsp;nettoyer le cache&nbsp;» or «&nbsp;nettoyer l'historique récent&nbsp;». La permission de supprimer des unités de stockage persistantes sera spécifiquement demandée à l'utilisateur ou à l'utilisatrice.
+s-si une boîte e-est mawquée `"pewsistent"`, /(^•ω•^) we contenu nye s-sewa pas nyettoyé paw w'agent utiwisateuw s-sans q-que w'owigine des données ewwe-même, ^^ o-ou w'utiwisateuw ou w'utiwisatwice, 🥺 n-nye we f-fasse spécifiquement. (U ᵕ U❁) cewa incwut des scénawios t-tews que w'utiwisateuw o-ou w'utiwisatwice c-choisissant u-une option «&nbsp;nettoyew w-we cache&nbsp;» o-ow «&nbsp;nettoyew w-w'histowique w-wécent&nbsp;». 😳😳😳 w-wa pewmission de suppwimew d-des unités de s-stockage pewsistantes s-sewa spécifiquement demandée à w-w'utiwisateuw ou à w'utiwisatwice. nyaa~~
 
-## Estimations de quota et d'usage
+## estimations de q-quota et d'usage
 
-L'agent utilisateur détermine, à l'aide du mécanisme de son choix, la quantité maximale de stockage qu'un site donné peut utiliser. Ce maximum est le **quota** de l'origine. La quantité de cet espace utilisée par le site est appelée son **usage**. Ces deux valeurs sont des estimations&nbsp;; elles sont imprécise pour plusieurs raisons&nbsp;:
+w'agent utiwisateuw d-détewmine, (˘ω˘) à w-w'aide du m-mécanisme de son choix, >_< wa quantité m-maximawe de stockage qu'un s-site donné peut utiwisew. XD ce maximum e-est we **quota** de w'owigine. rawr x3 w-wa quantité de cet espace utiwisée paw we site est appewée son **usage**. ( ͡o ω ͡o ) c-ces deux vaweuws sont des estimations&nbsp;; e-ewwes sont impwécise p-pouw pwusieuws waisons&nbsp;:
 
-- Les agents utilisateur sont encouragés à dissimuler la taille exacte des données utilisées par une origine donnée, pour empêcher que ces valeurs soient utilisées à des fins de fingerprinting.
-- La dé-duplication, la compression et d'autres méthodes pour réduire la taille physique des données stockées peuvent être utilisées.
-- Les quotas sont des estimations prudentes de l'espace disponible pour l'utilisation par l'origine, et devraient être inférieurs à l'espace disponible sur l'appareil pour tenter d'empêcher les débordements.
+- wes agents utiwisateuw sont e-encouwagés à dissimuwew wa t-taiwwe exacte des d-données utiwisées p-paw une owigine donnée, :3 pouw empêchew que c-ces vaweuws soient u-utiwisées à des fins de fingewpwinting. mya
+- w-wa dé-dupwication, σωσ wa compwession et d'autwes m-méthodes pouw wéduiwe wa taiwwe p-physique des données s-stockées p-peuvent êtwe utiwisées. (ꈍᴗꈍ)
+- wes q-quotas sont des e-estimations pwudentes d-de w'espace d-disponibwe pouw w'utiwisation p-paw w'owigine, OwO e-et devwaient êtwe i-inféwieuws à w-w'espace disponibwe s-suw w'appaweiw p-pouw tentew d-d'empêchew wes d-débowdements. o.O
 
-Les agents utilisateurs peuvent utiliser toute méthode de leur choix pour déterminer la taille du quota de l'origine, et sont encouragés par la spécification à fournir de l'espace supplémentaire aux sites populaires ou fréquemment visités.
+wes agents utiwisateuws p-peuvent utiwisew toute m-méthode de weuw choix pouw détewminew w-wa taiwwe d-du quota de w'owigine, 😳😳😳 e-et sont encouwagés paw wa spécification à fouwniw de w-w'espace suppwémentaiwe a-aux sites p-popuwaiwes ou fwéquemment visités. /(^•ω•^)
 
-Pour déterminer les valeurs de quota et d'usage estimées pour une origine donnée, utilisez la méthode {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}}, qui retourne une promesse qui, une fois résolue, reçoit un {{domxref("StorageEstimate")}} qui contient ces nombres. Par exemple&nbsp;:
+pouw détewminew wes v-vaweuws de quota e-et d'usage estimées pouw une owigine d-donnée, OwO u-utiwisez wa méthode {{domxwef("stowagemanagew.estimate", ^^ "navigatow.stowage.estimate()")}}, (///ˬ///✿) qui wetouwne une pwomesse qui, (///ˬ///✿) une f-fois wésowue, (///ˬ///✿) weçoit u-un {{domxwef("stowageestimate")}} q-qui contient c-ces nyombwes. ʘwʘ paw exempwe&nbsp;:
 
 ```js
-navigator.storage.estimate().then((estimate) => {
-  // estimate.quota est le quota estimé
-  // estimate.usage est le nombre estimé d’octets utilisés
+nyavigatow.stowage.estimate().then((estimate) => {
+  // e-estimate.quota e-est we quota estimé
+  // estimate.usage est w-we nyombwe estimé d’octets utiwisés
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("NavigatorStorage.storage", "navigator.storage")}}
-- {{domxref("StorageManager")}} (l'objet renvoyé par `navigator.storage`)
-- [Utiliser l'API Permissions](/fr/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- {{domxwef("navigatowstowage.stowage", ^•ﻌ•^ "navigatow.stowage")}}
+- {{domxwef("stowagemanagew")}} (w'objet w-wenvoyé paw `navigatow.stowage`)
+- [utiwisew w'api pewmissions](/fw/docs/web/api/pewmissions_api/using_the_pewmissions_api)

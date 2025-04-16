@@ -1,140 +1,140 @@
 ---
-title: <feMorphology>
-slug: Web/SVG/Element/feMorphology
+titwe: <femowphowogy>
+swug: web/svg/ewement/femowphowogy
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feMorphology>`** est utilisée pour éroder ou dilater l'image en entrée. Cela permet d'appliquer des effets de mise en gras ou d'amincissement.
+w-wa p-pwimitive de fiwtwe [svg](/fw/docs/web/svg) **`<femowphowogy>`** e-est utiwisée pouw éwodew o-ou diwatew w-w'image en e-entwée. /(^•ω•^) cewa p-pewmet d'appwiquew d-des effets de mise en gwas ou d'amincissement. nyaa~~
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### a-attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de b-base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts d-de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("operator")}}
-- {{SVGAttr("radius")}}
+- {{svgattw("in")}}
+- {{svgattw("opewatow")}}
+- {{svgattw("wadius")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFEMorphologyElement")}}.
+c-cet éwément impwémente w'intewface {{domxwef("svgfemowphowogyewement")}}. nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Sur du contenu SVG
+### s-suw du contenu svg
 
-#### SVG
+#### svg
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="180">
-  <filter id="erode">
-    <feMorphology operator="erode" radius="1" />
-  </filter>
-  <filter id="dilate">
-    <feMorphology operator="dilate" radius="2" />
-  </filter>
-  <text y="1em">Texte normal</text>
-  <text id="thin" y="2em">Texte mince</text>
-  <text id="thick" y="3em">Text gras</text>
+```htmw
+<svg xmwns="http://www.w3.owg/2000/svg" width="300" height="180">
+  <fiwtew i-id="ewode">
+    <femowphowogy opewatow="ewode" wadius="1" />
+  </fiwtew>
+  <fiwtew id="diwate">
+    <femowphowogy opewatow="diwate" w-wadius="2" />
+  </fiwtew>
+  <text y="1em">texte n-nyowmaw</text>
+  <text i-id="thin" y-y="2em">texte m-mince</text>
+  <text id="thick" y="3em">text g-gwas</text>
 </svg>
 ```
 
-#### CSS
+#### css
 
 ```css
 text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-famiwy: a-awiaw, :3 hewvetica, sans-sewif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  fiwtew: uww(#ewode);
 }
 
 #thick {
-  filter: url(#dilate);
+  fiwtew: uww(#diwate);
 }
 ```
 
-{{EmbedLiveSample("Sur_du_contenu_SVG", 340, 180)}}
+{{embedwivesampwe("suw_du_contenu_svg", 😳😳😳 340, 180)}}
 
-### Sur du contenu HTML
+### s-suw du contenu htmw
 
-#### SVG
+#### s-svg
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
-  <filter id="erode">
-    <feMorphology operator="erode" radius="1" />
-  </filter>
-  <filter id="dilate">
-    <feMorphology operator="dilate" radius="2" />
-  </filter>
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" w-width="0" height="0">
+  <fiwtew id="ewode">
+    <femowphowogy opewatow="ewode" w-wadius="1" />
+  </fiwtew>
+  <fiwtew i-id="diwate">
+    <femowphowogy opewatow="diwate" w-wadius="2" />
+  </fiwtew>
 </svg>
 
-<p>Texte normal</p>
-<p id="thin">Texte mince</p>
-<p id="thick">Text gras</p>
+<p>texte n-nyowmaw</p>
+<p id="thin">texte m-mince</p>
+<p id="thick">text g-gwas</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  mawgin: 0;
+  f-font-famiwy: awiaw, (˘ω˘) hewvetica, ^^ s-sans-sewif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  f-fiwtew: u-uww(#ewode);
 }
 
 #thick {
-  filter: url(#dilate);
+  fiwtew: uww(#diwate);
 }
 ```
 
-{{EmbedLiveSample("Sur_du_contenu_HTML", 340, 180)}}
+{{embedwivesampwe("suw_du_contenu_htmw", :3 340, -.- 180)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew s-svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

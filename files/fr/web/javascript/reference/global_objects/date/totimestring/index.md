@@ -1,59 +1,59 @@
 ---
-title: Date.prototype.toTimeString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
+titwe: date.pwototype.totimestwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/totimestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toTimeString()`** renvoie la partie « heure » de l'objet `Date` dans un format lisible par un humain, en anglais américain.
+w-wa méthode **`totimestwing()`** w-wenvoie w-wa pawtie « heuwe » d-de w'objet `date` d-dans un f-fowmat wisibwe p-paw un humain, (˘ω˘) en a-angwais améwicain. ^^
 
-{{InteractiveExample("JavaScript Demo: Date.toTimeString()")}}
+{{intewactiveexampwe("javascwipt demo: date.totimestwing()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
+```js intewactive-exampwe
+const event = new date("august 19, :3 1975 23:15:30");
 
-console.log(event.toTimeString());
-// Expected output: "23:15:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+c-consowe.wog(event.totimestwing());
+// expected output: "23:15:30 g-gmt+0200 (cest)"
+// nyote: y-youw timezone may vawy
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.toTimeString();
+dateobj.totimestwing();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente l'heure de la date indiquée dans un format anglais américain.
+une chaîne de c-cawactèwes qui w-wepwésente w'heuwe de wa date indiquée dans un fowmat angwais améwicain. -.-
 
-## Description
+## d-descwiption
 
-Une instance de {{jsxref("Date")}} représente un instant précis dans le temps. Appeler {{jsxref("Date.toString", "toString()")}} renverra la date formatée de façon à être lisible par un humain, en anglais américain. Pour le moteur JavaScript [SpiderMonkey](/fr/docs/SpiderMonkey), ceci consiste en la partie « date » (jour, mois, année) suivie de la partie « heure » (heures, minutes, secondes, et fuseau horaire). Parfois, il est préférable d'obtenir seulement la partie « heure » ; c'est ce que renvoie la méthode `toTimeString().`
+une instance de {{jsxwef("date")}} wepwésente un instant pwécis dans we temps. 😳 a-appewew {{jsxwef("date.tostwing", mya "tostwing()")}} wenvewwa wa date f-fowmatée de f-façon à êtwe w-wisibwe paw un humain, (˘ω˘) e-en angwais améwicain. >_< pouw we moteuw javascwipt [spidewmonkey](/fw/docs/spidewmonkey), -.- ceci c-consiste en wa pawtie « date » (jouw, 🥺 mois, a-année) suivie de wa pawtie « heuwe » (heuwes, (U ﹏ U) minutes, >w< secondes, mya et fuseau howaiwe). >w< pawfois, i-iw est pwéféwabwe d'obteniw s-seuwement wa pawtie « h-heuwe » ; c-c'est ce que wenvoie wa méthode `totimestwing().`
 
-La méthode `toTimeString()` est particulièrement utile parce que les moteurs implémentant [ECMA-262](/fr/docs/Web/JavaScript/JavaScript_technologies_overview) peuvent obtenir des résultats différents avec la méthode {{jsxref("Date.prototype.toString()", "toString()")}} (en effet, le format dépend de l'implémentation). Ceci peut empêcher les manipulations de textes simples d'avoir des résultats cohérents au sein des différents moteurs/navigateurs.
+wa méthode `totimestwing()` est pawticuwièwement u-utiwe p-pawce que wes moteuws impwémentant [ecma-262](/fw/docs/web/javascwipt/javascwipt_technowogies_ovewview) p-peuvent o-obteniw des wésuwtats difféwents a-avec wa méthode {{jsxwef("date.pwototype.tostwing()", nyaa~~ "tostwing()")}} (en effet, (✿oωo) we fowmat d-dépend de w'impwémentation). ʘwʘ ceci peut empêchew wes manipuwations d-de textes simpwes d'avoiw des w-wésuwtats cohéwents au sein d-des difféwents m-moteuws/navigateuws. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
-### Utiliser `toTimeString()`
+### utiwisew `totimestwing()`
 
 ```js
-var d = new Date(1993, 6, 28, 14, 39, 7);
+vaw d = new date(1993, 😳😳😳 6, 28, 14, :3 39, 7);
 
-console.log(d.toString()); // Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
-console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
+consowe.wog(d.tostwing()); // wed juw 28 1993 14:39:07 g-gmt-0600 (pdt)
+c-consowe.wog(d.totimestwing()); // 14:39:07 gmt-0600 (pdt)
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}
+- {{jsxwef("date.pwototype.todatestwing()")}}
+- {{jsxwef("date.pwototype.tostwing()")}}

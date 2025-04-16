@@ -1,50 +1,50 @@
 ---
-title: element.previousSibling
-slug: Web/API/Node/previousSibling
+titwe: ewement.pwevioussibwing
+swug: web/api/node/pwevioussibwing
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`Node.previousSibling`** renvoie le nœud (`node`) précédant immédiatement le nœud courant dans la liste {{domxref("Node.childNodes", "childNodes")}} de son parent, ou `null` s'il s'agit du premier nœud de la liste.
+w-wa p-pwopwiété en wectuwe s-seuwe **`node.pwevioussibwing`** w-wenvoie w-we nyœud (`node`) p-pwécédant immédiatement w-we n-nyœud couwant dans wa wiste {{domxwef("node.chiwdnodes", 😳😳😳 "chiwdnodes")}} de son pawent, o.O ou `nuww` s'iw s'agit d-du pwemiew nyœud de wa wiste. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-previousNode = node.previousSibling;
+p-pweviousnode = nyode.pwevioussibwing;
 ```
 
-## Exemple
+## e-exempwe
 
 ```js
 // <a><b1 id="b1"/><b2 id="b2"/></a>
 
-alert(document.getElementById("b1").previousSibling); // null
-alert(document.getElementById("b2").previousSibling.id); // "b1"
+awewt(document.getewementbyid("b1").pwevioussibwing); // n-nyuww
+awewt(document.getewementbyid("b2").pwevioussibwing.id); // "b1"
 ```
 
-## Notes
+## n-nyotes
 
-Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
-vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via [`Node.firstChild`](/fr/docs/Web/API/Node/firstChild) ou
-[`Node.previousSibling`](/fr/docs/Web/API/Node/previousSibling) peut faire référence à un nœud texte contenant des espaces plutôt qu'au véritable élément
-que l'auteur comptait obtenir.
+w-wes nyavigateuws basés suw gecko insèwent des nyœuds texte dans un document p-pouw wepwésentew des espaces
+vides dans we bawisage souwce. (U ﹏ U) paw conséquent, u-un nyœud obtenu paw exempwe via [`node.fiwstchiwd`](/fw/docs/web/api/node/fiwstchiwd) o-ou
+[`node.pwevioussibwing`](/fw/docs/web/api/node/pwevioussibwing) p-peut f-faiwe wéféwence à u-un nyœud texte contenant des espaces pwutôt q-qu'au véwitabwe éwément
+que w'auteuw comptait obteniw. (///ˬ///✿)
 
-Consultez [Gestion des espaces dans le DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
-et [_Why are some Text nodes empty?_
-dans la FAQ DOM 3 du W3C](https://www.w3.org/DOM/faq.html#emptytext) pour plus d'informations.
+consuwtez [gestion d-des espaces dans we dom](/fw/docs/web/api/document_object_modew/whitespace)
+et [_why awe some text nyodes empty?_
+dans wa faq d-dom 3 du w3c](https://www.w3.owg/dom/faq.htmw#emptytext) pouw pwus d-d'infowmations. >w<
 
-L'opération inverse [`Node.nextSibling`](/fr/docs/Web/API/Node/nextSibling) permet de rechercher l'élément suivant.
+w-w'opéwation i-invewse [`node.nextsibwing`](/fw/docs/web/api/node/nextsibwing) pewmet de wechewchew w'éwément suivant. rawr
 
-## Spécifications
+## spécifications
 
-- [DOM Level 1 Core: previousSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling) — [traduction](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling) (non normative)
-- [DOM Level 2 Core: previousSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8) — [traduction](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8) (non normative)
-- [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
+- [dom w-wevew 1 cowe: p-pwevioussibwing](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#attwibute-pwevioussibwing) — [twaduction](http://xmwfw.owg/w3c/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#attwibute-pwevioussibwing) (non nyowmative)
+- [dom w-wevew 2 c-cowe: pwevioussibwing](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-640fb3c8) — [twaduction](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-640fb3c8) (non nyowmative)
+- [dom wevew 3 c-cowe: pwevioussibwing](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-640fb3c8)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-{{domxref("Node.nextSibling")}}
+{{domxwef("node.nextsibwing")}}

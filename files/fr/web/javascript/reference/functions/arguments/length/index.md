@@ -1,55 +1,55 @@
 ---
-title: length
-slug: Web/JavaScript/Reference/Functions/arguments/length
+titwe: wength
+swug: web/javascwipt/wefewence/functions/awguments/wength
 ---
 
-{{jsSideBar("Functions")}}
+{{jssidebaw("functions")}}
 
-La propriété **`arguments.length`** contient le nombre d'arguments passés à la fonction.
+w-wa pwopwiété **`awguments.wength`** c-contient we nyombwe d-d'awguments p-passés à wa f-fonction. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-arguments.length;
+a-awguments.wength;
 ```
 
-## Description
+## d-descwiption
 
-La propriété `arguments.length` fournit le nombre d'arguments qui ont été passés à la fonction. Cette quantité peut être inférieure ou supérieure au nombre de paramètres explicitement déclarés dans la définition de la fonction (voir également {{jsxref("Function.length")}}).
+w-wa pwopwiété `awguments.wength` fouwnit we nyombwe d'awguments qui ont été passés à wa f-fonction. >_< cette quantité peut êtwe inféwieuwe o-ou supéwieuwe au nyombwe de pawamètwes e-expwicitement décwawés dans wa définition de wa fonction (voiw égawement {{jsxwef("function.wength")}}). >_<
 
-## Exemple
+## e-exempwe
 
-### Utiliser `arguments.length`
+### utiwisew `awguments.wength`
 
-Dans cet exemple, on définit une fonction qui permet d'additionner plusieurs nombres.
+d-dans cet exempwe, (⑅˘꒳˘) o-on définit une fonction qui pewmet d'additionnew pwusieuws nyombwes. /(^•ω•^)
 
 ```js
-function somme(x /*, y, z, ...*/) {
-  x = Number(x);
-  for (var i = 1; i < arguments.length; i++) {
-    x += Number(arguments[i]);
+f-function somme(x /*, rawr x3 y, z, ...*/) {
+  x = nyumbew(x);
+  fow (vaw i = 1; i < a-awguments.wength; i++) {
+    x += n-nyumbew(awguments[i]);
   }
-  return x;
+  w-wetuwn x;
 }
 ```
 
 ```js
-résultat = somme(3, 4, 5); // renvoie 12
-résultat = somme(3, 4); // renvoie 7
-résultat = somme(103, 104, 105); // renvoie 312
+w-wésuwtat = s-somme(3, (U ﹏ U) 4, 5); // wenvoie 12
+wésuwtat = somme(3, (U ﹏ U) 4); // w-wenvoie 7
+wésuwtat = somme(103, (⑅˘꒳˘) 104, 105); // w-wenvoie 312
 ```
 
-> **Note :** `arguments.length` ne doit pas être confondu avec {{jsxref("Function.length")}}.
+> **note :** `awguments.wength` nye doit pas êtwe confondu avec {{jsxwef("function.wength")}}. òωó
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+- {{jsxwef("function")}}
+- {{jsxwef("function.wength")}}

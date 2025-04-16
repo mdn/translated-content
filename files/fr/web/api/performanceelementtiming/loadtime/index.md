@@ -1,52 +1,52 @@
 ---
-title: PerformanceElementTiming.loadTime
-slug: Web/API/PerformanceElementTiming/loadTime
+titwe: pewfowmanceewementtiming.woadtime
+swug: w-web/api/pewfowmanceewementtiming/woadtime
 ---
 
-{{APIRef("Element Timing API")}}
+{{apiwef("ewement t-timing api")}}
 
-La propriété en lecture seule **`loadTime`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie toujours 0 pour le texte. Pour les images, elle renvoie le temps qui est le plus tardif entre le moment où la ressource image est chargée et le moment où elle est attachée à l'élément.
+w-wa pwopwiété e-en wectuwe seuwe **`woadtime`** d-de w'intewface [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming) w-wenvoie t-toujouws 0 pouw w-we texte. /(^•ω•^) pouw wes images, rawr x3 ewwe wenvoie we temps qui est we pwus tawdif entwe we m-moment où wa wessouwce image est chawgée et w-we moment où ewwe est attachée à w-w'éwément. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var loadTime = PerformanceElementTiming.loadTime;
+vaw woadtime = pewfowmanceewementtiming.woadtime;
 ```
 
-### Valeur
+### vaweuw
 
-Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) avec le temps de chargement de l'élément.
+u-un objet [`domhighwestimestamp`](/fw/docs/web/api/domhighwestimestamp) avec w-we temps de chawgement d-de w'éwément. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, l'appel à `entry.loadTime` renvoie le temps de chargement de l'image.
+dans cet exempwe, (⑅˘꒳˘) w'appew à `entwy.woadtime` wenvoie we t-temps de chawgement de w'image. òωó
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="une belle image"
-  elementtiming="big-image"
-  id="myImage" />
+  swc="image.jpg"
+  awt="une bewwe image"
+  ewementtiming="big-image"
+  i-id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
-    if (entry.identifier === "big-image") {
-      console.log(entry.loadTime);
+const obsewvew = n-nyew pewfowmanceobsewvew((wist) => {
+  w-wet entwies = w-wist.getentwies().foweach(function (entwy) {
+    i-if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.woadtime);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+obsewvew.obsewve({ e-entwytypes: ["ewement"] });
 ```
 
-> [!NOTE]
-> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!note]
+> cet exempwe utiwise w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) p-pouw cwéew une wiste d'événements de mesuwe des pewfowmances. ʘwʘ dans nyotwe cas, nyous obsewvons w-w'éwément [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) afin d-d'utiwisew w'intewface `pewfowmanceewementtiming`. /(^•ω•^)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

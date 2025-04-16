@@ -1,60 +1,60 @@
 ---
-title: DOMTokenList.add()
-slug: Web/API/DOMTokenList/add
+titwe: domtokenwist.add()
+swug: w-web/api/domtokenwist/add
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute le _token_ (_marque_) à la liste.
+w-wa méthode **`add()`** d-de w'intewface {{domxwef("domtokenwist")}} a-ajoute we _token_ (_mawque_) à w-wa wiste. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-tokenList.add(token1[, token2[, ...]]);
+t-tokenwist.add(token1[, rawr x3 t-token2[, (U ﹏ U) ...]]);
 ```
 
-### Paramètres
+### pawamètwes
 
 - token
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la marque (_token_) que vous souhaitez ajouter à la liste.
+  - : une {{domxwef("domstwing")}} (_chaîne de cawactèwes_) w-wepwésentant wa mawque (_token_) que vous s-souhaitez ajoutew à wa wiste. (U ﹏ U)
 
-### Valeur renvoyée
+### v-vaweuw wenvoyée
 
-Vide.
+vide. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, nous récupérons une liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList`, en utilisant {{domxref("Element.classList")}}. Nous ajoutons alors une nouvelle marque à la liste et écrivons la liste dans un {{domxref("Node.textContent")}} du `<span>`.
+dans w'exempwe suivant, òωó n-nyous wécupéwons une wiste d-des cwasses définies s-suw un éwément {{htmwewement("span")}} en tant que `domtokenwist`, ʘwʘ en utiwisant {{domxwef("ewement.cwasswist")}}. /(^•ω•^) nyous a-ajoutons awows une nyouvewwe mawque à wa wiste et écwivons wa wiste dans un {{domxwef("node.textcontent")}} d-du `<span>`. ʘwʘ
 
-Tout d'abord, le code HTML :
+tout d'abowd, σωσ we code h-htmw :
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-Maintenant, le JavaScript :
+m-maintenant, OwO we javascwipt :
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-classes.add("d");
-span.textContent = classes;
+vaw span = d-document.quewysewectow("span");
+vaw cwasses = span.cwasswist;
+c-cwasses.add("d");
+span.textcontent = cwasses;
 ```
 
-La sortie ressemble à ceci :
+wa sowtie wessembwe à ceci :
 
-{{ EmbedLiveSample('Exemples', '100%', 60) }}
+{{ embedwivesampwe('exempwes', 😳😳😳 '100%', 😳😳😳 60) }}
 
-Vous pouvez ajouter plusieurs _token_ :
+v-vous pouvez ajoutew pwusieuws _token_ :
 
 ```js
-span.classList.add("d", "e", "f");
+s-span.cwasswist.add("d", o.O "e", "f");
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

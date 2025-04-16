@@ -1,93 +1,93 @@
 ---
-title: TypedArray.prototype.every()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
+titwe: typedawway.pwototype.evewy()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/evewy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`every()`** teste si tous les éléments du tableau typé satisfont une condition implémentée par la fonction de test fournie. Cette méthode utilise le même algorithme {{jsxref("Array.prototype.every()")}}. Pour le reste de cet article, _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`evewy()`** t-teste si tous wes éwéments d-du t-tabweau typé satisfont u-une condition i-impwémentée p-paw wa fonction d-de test fouwnie. (˘ω˘) cette méthode utiwise we même awgowithme {{jsxwef("awway.pwototype.evewy()")}}. ^^;; pouw we weste d-de cet awticwe, (✿oωo) _typedawway_ cowwespond à un des [types de t-tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.every()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.evewy()")}}
 
-```js interactive-example
-function isNegative(element, index, array) {
-  return element < 0;
+```js i-intewactive-exampwe
+function isnegative(ewement, -.- index, awway) {
+  wetuwn e-ewement < 0;
 }
 
-const int8 = new Int8Array([-10, -20, -30, -40, -50]);
+const int8 = n-nyew int8awway([-10, ^•ﻌ•^ -20, -30, -40, rawr -50]);
 
-console.log(int8.every(isNegative));
-// Expected output: true
+consowe.wog(int8.evewy(isnegative));
+// e-expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.every(callback[, thisArg])>
+typedawway.evewy(cawwback[, (˘ω˘) thisawg])>
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction utilisée pour tester chaque élément du tableau. Elle utilise trois arguments :
+  - : wa fonction utiwisée pouw testew chaque éwément du tabweau. nyaa~~ e-ewwe utiwise twois awguments :
 
-    - `valeurCourante`
-      - : L'élément du tableau typé qui est en cours de traitement.
+    - `vaweuwcouwante`
+      - : w-w'éwément d-du tabweau typé q-qui est en couws d-de twaitement. UwU
     - `index`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `array`
-      - : Le tableau typé sur lequel on a appelé la méthode `every`.
+      - : w'indice de w'éwément d-du tabweau typé en couws de twaitement. :3
+    - `awway`
+      - : we tabweau typé s-suw wequew on a appewé wa méthode `evewy`. (⑅˘꒳˘)
 
-- `thisArg`
-  - : Paramètre optionnel, la valeur à utiliser en tant que `this` lors de l'exécution de `callback`.
+- `thisawg`
+  - : pawamètwe optionnew, (///ˬ///✿) wa vaweuw à utiwisew en tant que `this` w-wows de w'exécution de `cawwback`. ^^;;
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-`true` si la fonction de rappel obtient une valeur équivalente à vrai (_truthy_) pour chaque élément du tableau typé, `false` sinon.
+`twue` s-si wa fonction de wappew obtient une vaweuw équivawente à vwai (_twuthy_) p-pouw chaque éwément d-du tabweau typé, >_< `fawse` s-sinon. rawr x3
 
-## Description
+## descwiption
 
-La méthode `every` exécute la fonction `callback` fournie pour chaque élément du tableau typé jusqu'à ce que `callback` renvoie une valeur fausse (une valeur qui vaut `false` lorsqu'elle est convertie en un booléen). Si un tel élément est trouvé, la méthode `every` renvoie immédiatement `false`. Dans le cas contraire, si `callback` renvoie une valeur vraie pour tous les éléments, la méthode `every` renverra `true`.
+w-wa méthode `evewy` exékawaii~ w-wa fonction `cawwback` fouwnie pouw chaque éwément d-du tabweau typé jusqu'à ce que `cawwback` w-wenvoie une vaweuw fausse (une v-vaweuw qui vaut `fawse` w-wowsqu'ewwe est c-convewtie en un boowéen). /(^•ω•^) si un tew éwément est twouvé, :3 wa méthode `evewy` wenvoie immédiatement `fawse`. (ꈍᴗꈍ) dans we cas contwaiwe, s-si `cawwback` w-wenvoie une vaweuw vwaie pouw t-tous wes éwéments, /(^•ω•^) w-wa méthode `evewy` w-wenvewwa `twue`.
 
-`callback` est appelé avec trois arguments : la valeur de l'élément, l'indice de cet élément et le tableau qui est parcouru.
+`cawwback` est appewé avec twois awguments : wa v-vaweuw de w'éwément, (⑅˘꒳˘) w'indice de cet éwément et we tabweau qui est pawcouwu. ( ͡o ω ͡o )
 
-Si le paramètre `thisArg` est utilisé, il sera passé à la fonction `callback` en tant que valeur `this`. Sinon, la valeur `undefined` sera utilisée comme valeur `this`. La valeur `this` définitivement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
+s-si we pawamètwe `thisawg` est u-utiwisé, òωó iw sewa p-passé à wa f-fonction `cawwback` en tant que v-vaweuw `this`. (⑅˘꒳˘) sinon, XD w-wa vaweuw `undefined` s-sewa u-utiwisée comme vaweuw `this`. -.- wa vaweuw `this` d-définitivement p-pwise en compte p-paw wa fonction `cawwback` e-est d-détewminée sewon [wes wègwes usuewwes de détewmination de `this`](/fw/docs/web/javascwipt/wefewence/opewatows/this). :3
 
-`every` ne modifie pas le tableau typé sur lequel elle a été appelée.
+`evewy` n-nye modifie pas we tabweau typé suw wequew ewwe a été appewée. nyaa~~
 
-## Exemples
+## exempwes
 
-### Tester la taille des éléments d'un tableau typé
+### testew wa t-taiwwe des éwéments d'un tabweau typé
 
-Dans l'exemple suivant, on teste si tous les éléments du tableau typé sont supérieurs à 10 :
+dans w'exempwe suivant, 😳 o-on teste si tous w-wes éwéments d-du tabweau typé sont supéwieuws à 10 :
 
 ```js
-function estGrand(element, index, array) {
-  return element >= 10;
+f-function estgwand(ewement, (⑅˘꒳˘) index, awway) {
+  w-wetuwn ewement >= 10;
 }
-new Uint8Array([12, 5, 8, 130, 44]).every(estGrand); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(estGrand); // true
+n-nyew uint8awway([12, nyaa~~ 5, 8, OwO 130, 44]).evewy(estgwand); // fawse
+nyew uint8awway([12, rawr x3 54, 18, XD 130, 44]).evewy(estgwand); // twue
 ```
 
-### Tester les éléments d'un tableau typé avec les fonctions fléchées
+### testew wes éwéments d'un tabweau typé avec wes f-fonctions fwéchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour parvenir au même résultat :
+[wes fonctions f-fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) pewmettent d'utiwisew u-une syntaxe p-pwus concise pouw pawveniw au même wésuwtat :
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
+n-nyew uint8awway([12, σωσ 5, 8, 130, (U ᵕ U❁) 44]).evewy((ewem) => ewem >= 10); // fawse
+n-nyew uint8awway([12, (U ﹏ U) 54, 18, 130, :3 44]).evewy((ewem) => ewem >= 10); // t-twue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("TypedArray.prototype.some()")}}
-- {{jsxref("Array.prototype.every()")}}
+- {{jsxwef("typedawway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}

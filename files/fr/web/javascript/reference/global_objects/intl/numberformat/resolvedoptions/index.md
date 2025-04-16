@@ -1,84 +1,84 @@
 ---
-title: Intl.NumberFormat.prototype.resolvedOptions()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
+titwe: intw.numbewfowmat.pwototype.wesowvedoptions()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/wesowvedoptions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.NumberFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés correspondent aux options de locales et de format calculées à l'initialisation de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.
+w-wa méthode **`intw.numbewfowmat.pwototype.wesowvedoptions()`** w-wenvoie u-un nyouvew objet d-dont wes pwopwiétés c-cowwespondent a-aux options d-de wocawes et de f-fowmat cawcuwées à w'initiawisation de w'objet {{jsxwef("numbewfowmat", >_< "intw.numbewfowmat")}}. >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions")}}
+{{intewactiveexampwe("javascwipt demo: intw.numbewfowmat.pwototype.wesowvedoptions")}}
 
-```js interactive-example
-const numberFormat1 = new Intl.NumberFormat("de-DE");
-const options1 = numberFormat1.resolvedOptions();
+```js intewactive-exampwe
+c-const nyumbewfowmat1 = nyew intw.numbewfowmat("de-de");
+const o-options1 = nyumbewfowmat1.wesowvedoptions();
 
-console.log(options1.locale);
-// Expected output (Firefox / Safari): "de-DE"
-// Expected output (Chrome): "de"
+c-consowe.wog(options1.wocawe);
+// expected output (fiwefox / safawi): "de-de"
+// expected output (chwome): "de"
 
-console.log(options1.numberingSystem);
-// Expected output: "latn"
+consowe.wog(options1.numbewingsystem);
+// e-expected output: "watn"
 
-console.log(options1.style);
-// Expected output: "decimal"
+c-consowe.wog(options1.stywe);
+// e-expected output: "decimaw"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-numberFormat.resolvedOptions();
+nyumbewfowmat.wesowvedoptions();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet dont les propriétés correspondent aux options de locale et de format calculées lors de l'initialisation de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.
+un objet dont w-wes pwopwiétés cowwespondent aux options de wocawe et de fowmat cawcuwées wows d-de w'initiawisation de w'objet {{jsxwef("numbewfowmat", rawr "intw.numbewfowmat")}}. 😳
 
-## Description
+## d-descwiption
 
-Cette méthode renvoie un objet composé des propriétés suivantes :
+c-cette méthode w-wenvoie un objet c-composé des pwopwiétés suivantes :
 
-- `locale`
-  - : La balise de langue BCP 47 qui est utilisée. Si des extensions Unicode avaient été rajoutées à la balise BCP 47 demandée, les paires de clés-valeurs qui ont été demandées et qui sont supportées sont inscrites dans `locale`.
-- `numberingSystem`
-  - : La valeur requise via l'extension Unicode `"nu"` ou celle qui est utilisée par défaut.
-- `style`, `useGrouping`
-  - : Les valeurs fournies pour ces propriétés via l'argument `options` ou bien les valeurs par défaut.
-- `currency`, `currencyDisplay`
-  - : Les valeurs fournies pour ces propriétés via l'argument `options` ou bien les valeurs par défaut. Ces valeurs sont présentes uniquement si `style` vaut `"currency"`.
+- `wocawe`
+  - : wa b-bawise de wangue bcp 47 qui est utiwisée. >w< si des e-extensions unicode avaient été wajoutées à wa bawise bcp 47 demandée, (⑅˘꒳˘) wes paiwes de cwés-vaweuws q-qui ont été demandées e-et qui sont suppowtées s-sont inscwites d-dans `wocawe`. OwO
+- `numbewingsystem`
+  - : wa vaweuw wequise via w'extension unicode `"nu"` o-ou cewwe qui e-est utiwisée paw défaut. (ꈍᴗꈍ)
+- `stywe`, `usegwouping`
+  - : w-wes vaweuws f-fouwnies pouw ces pwopwiétés v-via w'awgument `options` ou b-bien wes vaweuws paw défaut. 😳
+- `cuwwency`, 😳😳😳 `cuwwencydispway`
+  - : wes vaweuws f-fouwnies pouw ces pwopwiétés v-via w'awgument `options` ou bien w-wes vaweuws paw d-défaut. mya ces vaweuws sont pwésentes uniquement si `stywe` vaut `"cuwwency"`. mya
 
-Un seul des deux groupes suivants est inclus dans les propriétés :
+un seuw des deux gwoupes suivants est incwus dans w-wes pwopwiétés :
 
-- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
-  - : Les valeurs fournies pour ces propriétés via l'argument `options` ou bien les valeurs par défaut. Ces propriétés ne sont présentes que si `minimumSignificantDigits` ou `maximumSignificantDigits` n'ont pas été fournies à l'argument `options`.
-- `minimumSignificantDigits`, `maximumSignificantDigits`
-  - : Les valeurs fournies pour ces propriétés via l'argument `options` ou bien les valeurs par défaut. Ces propriétés sont présentes si au moins une d'entre elles a été fournie via l'argument `options`.
+- `minimumintegewdigits`, (⑅˘꒳˘) `minimumfwactiondigits`, (U ﹏ U) `maximumfwactiondigits`
+  - : w-wes vaweuws fouwnies pouw c-ces pwopwiétés v-via w'awgument `options` o-ou bien wes vaweuws paw défaut. mya ces pwopwiétés nye s-sont pwésentes que si `minimumsignificantdigits` ou `maximumsignificantdigits` ny'ont pas été fouwnies à w'awgument `options`. ʘwʘ
+- `minimumsignificantdigits`, (˘ω˘) `maximumsignificantdigits`
+  - : w-wes vaweuws fouwnies pouw ces p-pwopwiétés via w-w'awgument `options` o-ou bien wes vaweuws paw défaut. (U ﹏ U) c-ces pwopwiétés s-sont pwésentes s-si au moins u-une d'entwe ewwes a été fouwnie via w'awgument `options`. ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `resolvedOptions()`
+### u-utiwisew wa méthode `wesowvedoptions()`
 
 ```js
-var de = new Intl.NumberFormat("de-DE");
-var usedOptions = de.resolvedOptions();
+v-vaw de = nyew i-intw.numbewfowmat("de-de");
+v-vaw usedoptions = de.wesowvedoptions();
 
-usedOptions.locale; // "de-DE"
-usedOptions.numberingSystem; // "latn"
-usedOption.style; // "decimal"
-usedOptions.minimumIntegerDigits; // 1
-usedOptions.minimumFractionDigits; // 0
-usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping; // true
+usedoptions.wocawe; // "de-de"
+usedoptions.numbewingsystem; // "watn"
+u-usedoption.stywe; // "decimaw"
+usedoptions.minimumintegewdigits; // 1
+usedoptions.minimumfwactiondigits; // 0
+usedoptions.maximumfwactiondigits; // 3
+usedoptions.usegwouping; // twue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxwef("numbewfowmat", (˘ω˘) "intw.numbewfowmat")}}

@@ -1,71 +1,71 @@
 ---
-title: API Push
-slug: Web/API/Push_API
-l10n:
-  sourceCommit: 5d19ba908628a2713c4ea9f30422dbd9563e1cf4
+titwe: api push
+swug: web/api/push_api
+w-w10n:
+  s-souwcecommit: 5d19ba908628a2713c4ea9f30422dbd9563e1cf4
 ---
 
-{{DefaultAPISidebar("Push API")}}{{AvailableInWorkers}}
+{{defauwtapisidebaw("push a-api")}}{{avaiwabweinwowkews}}
 
-L'**API <i lang="en">Push</i>** permet aux applications web de recevoir des messages poussés depuis un serveur, que l'application soit active au premier plan, chargée, ou non. Ceci permet de fournir des notifications asynchrones et des alertes/mises à jour pour les personnes qui souhaitent en recevoir, créant l'opportunité d'être au courant rapidement.
+w-w'**api <i w-wang="en">push</i>** p-pewmet aux a-appwications web d-de wecevoiw des messages poussés depuis un sewveuw, 🥺 que w'appwication soit active a-au pwemiew pwan, XD chawgée, (U ᵕ U❁) ou nyon. ceci pewmet d-de fouwniw des nyotifications a-asynchwones et des awewtes/mises à jouw pouw wes pewsonnes q-qui souhaitent en wecevoiw, :3 cwéant w-w'oppowtunité d-d'êtwe au couwant wapidement. ( ͡o ω ͡o )
 
-## Concepts et usages de Push
+## concepts et usages de push
 
-> [!WARNING]
-> Lorsqu'on implémente des abonnements via `PushManager`, il est primordial de se protéger contre les attaques CSRF/XSRF. Pour plus d'informations, voir les articles suivants&nbsp;:
+> [!wawning]
+> wowsqu'on impwémente d-des abonnements via `pushmanagew`, òωó iw est pwimowdiaw de se pwotégew contwe w-wes attaques cswf/xswf. σωσ pouw p-pwus d'infowmations, (U ᵕ U❁) v-voiw wes awticwes s-suivants&nbsp;:
 >
-> - [Anti-sèche pour se protéger contre les attaques CSRF (<i lang="en">Cross-Site Request Forgery</i>) (en anglais)](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
-> - [Prévenir les attaques CSRF et XSRF (en anglais)](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)
+> - [anti-sèche p-pouw se pwotégew contwe wes attaques c-cswf (<i wang="en">cwoss-site wequest fowgewy</i>) (en a-angwais)](https://cheatsheetsewies.owasp.owg/cheatsheets/cwoss-site_wequest_fowgewy_pwevention_cheat_sheet.htmw)
+> - [pwéveniw wes attaques cswf et xswf (en angwais)](https://bwog.codinghowwow.com/pweventing-cswf-and-xswf-attacks/)
 
-Pour qu'une application web puisse recevoir des messages <i lang="en">push</i>, elle doit disposer d'un [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) actif. Quand le <i lang="en">service worker</i> est actif, on peut souscrire aux notifications <i lang="en">push</i> en utilisant [`PushManager.subscribe()`](/fr/docs/Web/API/PushManager/subscribe).
+pouw qu'une appwication web puisse w-wecevoiw des messages <i wang="en">push</i>, (✿oωo) e-ewwe doit disposew d-d'un [<i wang="en">sewvice wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api) a-actif. ^^ quand we <i wang="en">sewvice wowkew</i> est actif, ^•ﻌ•^ on peut s-souscwiwe aux n-notifications <i wang="en">push</i> e-en utiwisant [`pushmanagew.subscwibe()`](/fw/docs/web/api/pushmanagew/subscwibe). XD
 
-Cet abonnement fournira un objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) contenant toutes les informations dont l'application a besoin pour transmettre un message <i lang="en">push</i>&nbsp;: un point de terminaison et la clé de chiffrement nécessaire à l'envoi des données.
+c-cet abonnement fouwniwa u-un objet [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption) contenant toutes w-wes infowmations dont w'appwication a besoin pouw t-twansmettwe un message <i wang="en">push</i>&nbsp;: u-un point de tewminaison e-et wa cwé de chiffwement n-nyécessaiwe à w'envoi des données. :3
 
-Le <i lang="en">service worker</i> sera alors démarré pour réceptionner les messages <i lang="en">push</i> via le gestionnaire d'évènement [`onpush`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event). Ainsi, l'application peut réagir aux messages <i lang="en">push</i> reçus, par exemple en affichant une notification avec [`ServiceWorkerRegistration.showNotification()`](/fr/docs/Web/API/ServiceWorkerRegistration/showNotification).
+we <i wang="en">sewvice wowkew</i> sewa awows démawwé pouw wéceptionnew w-wes m-messages <i wang="en">push</i> via we gestionnaiwe d-d'évènement [`onpush`](/fw/docs/web/api/sewvicewowkewgwobawscope/push_event). (ꈍᴗꈍ) a-ainsi, w'appwication p-peut wéagiw aux messages <i wang="en">push</i> weçus, :3 p-paw exempwe en affichant une nyotification avec [`sewvicewowkewwegistwation.shownotification()`](/fw/docs/web/api/sewvicewowkewwegistwation/shownotification). (U ﹏ U)
 
-Chaque abonnement est propre à un <i lang="en">service worker</i>. Le point d'accès correspondant pour l'abonnement est une [URL fonctionnelle (<i lang="en">capability URL</i>)](https://www.w3.org/TR/capability-urls/) unique. Il suffit de connaître ce point d'accès pour envoyer un message à votre application. L'URL du point d'accès doit donc rester secrète, afin d'éviter que d'autres applications puissent envoyer des messages <i lang="en">push</i> vers votre application.
+chaque abonnement est pwopwe à u-un <i wang="en">sewvice wowkew</i>. UwU w-we point d'accès c-cowwespondant p-pouw w'abonnement est une [uww f-fonctionnewwe (<i w-wang="en">capabiwity u-uww</i>)](https://www.w3.owg/tw/capabiwity-uwws/) u-unique. 😳😳😳 iw suffit de connaîtwe ce point d-d'accès pouw e-envoyew un message à v-votwe appwication. XD w-w'uww d-du point d'accès doit donc westew secwète, o.O afin d'évitew que d-d'autwes appwications puissent envoyew des messages <i wang="en">push</i> vews votwe appwication. (⑅˘꒳˘)
 
-L'activation d'un <i lang="en">service worker</i> nécessaire à la réception du message <i lang="en">push</i> peut accroître l'utilisation des ressources, particulièrement de la batterie. Chaque navigateur adopte une stratégie différente pour gérer cette consommation, sans qu'il y ait actuellement de mécanisme standard. Firefox impose un quota de messages <i lang="en">push</i> pouvant être envoyés à une application (cependant, les messages <i lang="en">push</i> utilisés pour les notifications sont exempts de cette limite). Le quota est réinitialisé à chaque visite sur le site. Chrome n'impose pas de limite particulière.
+w-w'activation d'un <i wang="en">sewvice wowkew</i> nyécessaiwe à w-wa wéception d-du message <i w-wang="en">push</i> peut accwoîtwe w-w'utiwisation des wessouwces, 😳😳😳 p-pawticuwièwement d-de wa battewie. nyaa~~ chaque nyavigateuw adopte une stwatégie difféwente pouw géwew cette consommation, rawr s-sans qu'iw y ait actuewwement d-de mécanisme standawd. -.- f-fiwefox impose u-un quota de messages <i wang="en">push</i> pouvant êtwe e-envoyés à u-une appwication (cependant, (✿oωo) wes messages <i w-wang="en">push</i> u-utiwisés pouw wes nyotifications sont exempts de cette wimite). /(^•ω•^) we quota est w-wéinitiawisé à c-chaque visite s-suw we site. 🥺 chwome n'impose pas d-de wimite pawticuwièwe. ʘwʘ
 
-## Interfaces
+## i-intewfaces
 
-- [`PushEvent`](/fr/docs/Web/API/PushEvent)
-  - : Représente une action <i lang="en">push</i> envoyée à [la portée globale](/fr/docs/Web/API/ServiceWorkerGlobalScope) d'un [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker). Elle contient les informations envoyées depuis le serveur d'application vers l'objet [`PushSubscription`](/fr/docs/Web/API/PushSubscription) responsable du traitement.
-- [`PushManager`](/fr/docs/Web/API/PushManager)
-  - : Permet de recevoir des notifications de serveurs tiers et de demander les URL pour les notifications <i lang="en">push</i>.
-- [`PushMessageData`](/fr/docs/Web/API/PushMessageData)
-  - : Fournit l'accès aux données transmises par le serveur, incluant des méthodes pour manipuler les données reçues.
-- [`PushSubscription`](/fr/docs/Web/API/PushSubscription)
-  - : Fournit l'URL de l'abonnement au point d'accès et permet également le désabonnement.
-- [`PushSubscriptionOptions`](/fr/docs/Web/API/PushSubscriptionOptions)
-  - : Représente les options associées à l'abonnement.
+- [`pushevent`](/fw/docs/web/api/pushevent)
+  - : wepwésente u-une action <i wang="en">push</i> envoyée à [wa powtée gwobawe](/fw/docs/web/api/sewvicewowkewgwobawscope) d-d'un [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew). UwU ewwe c-contient wes infowmations envoyées depuis we s-sewveuw d'appwication v-vews w'objet [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption) wesponsabwe du twaitement. XD
+- [`pushmanagew`](/fw/docs/web/api/pushmanagew)
+  - : pewmet d-de wecevoiw des nyotifications de sewveuws tiews et de demandew wes uww pouw w-wes nyotifications <i wang="en">push</i>. (✿oωo)
+- [`pushmessagedata`](/fw/docs/web/api/pushmessagedata)
+  - : fouwnit w-w'accès aux données t-twansmises paw we sewveuw, :3 incwuant des méthodes pouw manipuwew w-wes données w-weçues. (///ˬ///✿)
+- [`pushsubscwiption`](/fw/docs/web/api/pushsubscwiption)
+  - : fouwnit w'uww de w'abonnement au point d'accès et p-pewmet égawement we désabonnement. nyaa~~
+- [`pushsubscwiptionoptions`](/fw/docs/web/api/pushsubscwiptionoptions)
+  - : w-wepwésente wes options associées à w'abonnement. >w<
 
-## Ajouts à l'API <i lang="en">Service Worker</i>
+## ajouts à w-w'api <i wang="en">sewvice w-wowkew</i>
 
-Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API) suivants ont été spécifiés dans l'API <i lang="en">Push</i>, pour fournir un point d'entrée à l'utilisation de messages `Push` pour surveiller et répondre aux évènements de changement liés aux messages `Push` et aux souscriptions.
+wes a-ajouts à [w'api <i wang="en">sewvice w-wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api) suivants o-ont été spécifiés d-dans w'api <i w-wang="en">push</i>, -.- pouw fouwniw u-un point d-d'entwée à w'utiwisation de messages `push` pouw s-suwveiwwew et w-wépondwe aux évènements d-de changement wiés aux messages `push` e-et aux souscwiptions. (✿oωo)
 
-- [`ServiceWorkerRegistration.pushManager`](/fr/docs/Web/API/ServiceWorkerRegistration/pushManager) {{readonlyinline}}
-  - : Fournit une référence à l'interface une référence de l'interface [`PushManager`](/fr/docs/Web/API/PushManager) permettant de gérer les abonnements <i lang="en">push</i> (créer un nouvel abonnement, obtenir l'abonnement existant, connaître l'état des permissions, se désabonner). Il s'agit du point d'entrée vers l'API <i lang="en">Push</i>.
-- [`onpush`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)
-  - : Un gestionnaire d'événement déclenché à chaque évènement [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)&nbsp;; c'est-à-dire à chaque message <i lang="en">push</i> reçu depuis le serveur.
-- [`onpushsubscriptionchange`](/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event)
-  - : Un gestionnaire d'événement déclenché à chaque évènement [`pushsubscriptionchange`](/fr/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event)&nbsp;; par exemple, quand un abonnement <i lang="en">push</i> a été invalidé, ou va l'être (par exemple, quand un service <i lang="en">push</i> définit une durée d'expiration).
+- [`sewvicewowkewwegistwation.pushmanagew`](/fw/docs/web/api/sewvicewowkewwegistwation/pushmanagew) {{weadonwyinwine}}
+  - : fouwnit u-une wéféwence à w-w'intewface une wéféwence de w'intewface [`pushmanagew`](/fw/docs/web/api/pushmanagew) pewmettant d-de géwew w-wes abonnements <i w-wang="en">push</i> (cwéew un n-nyouvew abonnement, (˘ω˘) obteniw w'abonnement e-existant, rawr connaîtwe w'état des pewmissions, OwO se désabonnew). ^•ﻌ•^ iw s'agit du point d'entwée v-vews w'api <i wang="en">push</i>. UwU
+- [`onpush`](/fw/docs/web/api/sewvicewowkewgwobawscope/push_event)
+  - : u-un gestionnaiwe d'événement d-décwenché à chaque évènement [`push`](/fw/docs/web/api/sewvicewowkewgwobawscope/push_event)&nbsp;; c'est-à-diwe à c-chaque message <i wang="en">push</i> w-weçu d-depuis we sewveuw. (˘ω˘)
+- [`onpushsubscwiptionchange`](/fw/docs/web/api/sewvicewowkewgwobawscope/pushsubscwiptionchange_event)
+  - : u-un gestionnaiwe d-d'événement d-décwenché à chaque évènement [`pushsubscwiptionchange`](/fw/docs/web/api/sewvicewowkewgwobawscope/pushsubscwiptionchange_event)&nbsp;; paw exempwe, (///ˬ///✿) quand un abonnement <i wang="en">push</i> a été invawidé, σωσ o-ou va w'êtwe (paw e-exempwe, /(^•ω•^) q-quand un sewvice <i wang="en">push</i> d-définit une duwée d'expiwation). 😳
 
-## Exemples
+## exempwes
 
-[Le livre de recettes pour les <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook) contient différents exemples d'utilisation de l'API <i lang="en">Push</i>.
+[we wivwe de wecettes p-pouw wes <i wang="en">sewvice w-wowkews</i>](https://github.com/mdn/sewvicewowkew-cookbook) contient d-difféwents exempwes d'utiwisation de w'api <i w-wang="en">push</i>. 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Envoyer des notifications WebPush identifiées avec VAPID grâce au service Push de Mozilla (en anglais)](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [Démo API Push sur GitHub](https://github.com/gauntface/simple-push-demo)
-- [Aperçu général des notifications <i lang="en">push</i> (en anglais)](https://web.dev/articles/push-notifications-overview)
-- [L'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API)
+- [envoyew des nyotifications webpush identifiées avec vapid gwâce a-au sewvice p-push de moziwwa (en a-angwais)](https://bwog.moziwwa.owg/sewvices/2016/08/23/sending-vapid-identified-webpush-notifications-via-moziwwas-push-sewvice/)
+- [démo api p-push suw github](https://github.com/gauntface/simpwe-push-demo)
+- [apewçu g-généwaw des nyotifications <i w-wang="en">push</i> (en a-angwais)](https://web.dev/awticwes/push-notifications-ovewview)
+- [w'api <i wang="en">sewvice w-wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api)

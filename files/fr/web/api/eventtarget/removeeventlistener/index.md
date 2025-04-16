@@ -1,224 +1,224 @@
 ---
-title: element.removeEventListener
-slug: Web/API/EventTarget/removeEventListener
+titwe: ewement.wemoveeventwistenew
+swug: web/api/eventtawget/wemoveeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("EventTarget")}} (_cible_) un écouteur d'évènements précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}}. L'écouteur d'évènements à supprimer est identifié en utilisant la combinaison du type d'évènement, la fonction "event listener" elle-même et diverses options factultatives qui peuvent affecter le processus de correspondance ; voir la section _Correspondance utilisée pour la suppression d'écouteurs d'événements_ ci-après.
+w-wa méthode **`eventtawget.wemoveeventwistenew()`** s-suppwime d'une {{domxwef("eventtawget")}} (_cibwe_) u-un écouteuw d-d'évènements p-pwécédemment enwegistwé a-avec {{domxwef("eventtawget.addeventwistenew()")}}. rawr x3 w'écouteuw d-d'évènements à s-suppwimew est identifié en utiwisant wa combinaison du type d'évènement, (✿oωo) w-wa fonction "event wistenew" ewwe-même e-et divewses options factuwtatives q-qui peuvent affectew we pwocessus de cowwespondance ; voiw wa s-section _cowwespondance utiwisée p-pouw wa suppwession d-d'écouteuws d'événements_ ci-apwès. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-target.removeEventListener(type, listener[, options]);
-target.removeEventListener(type, listener[, useCapture]);
+tawget.wemoveeventwistenew(type, :3 w-wistenew[, (U ᵕ U❁) options]);
+tawget.wemoveeventwistenew(type, ^^;; wistenew[, mya usecaptuwe]);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `type`
-  - : Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.
-- `listener`
-  - : La fonction {{domxref("EventListener")}} du gestionnaire d'évènements à retirer de la cible d'évènements.
-- `options` {{optional_inline}}
+  - : u-une chaîne wepwésentant w-we type d'événement p-pouw wequew s-suppwimew un écouteuw d-d'évènements. 😳😳😳
+- `wistenew`
+  - : wa fonction {{domxwef("eventwistenew")}} d-du gestionnaiwe d'évènements à wetiwew d-de wa cibwe d'évènements. OwO
+- `options` {{optionaw_inwine}}
 
-  - : Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
+  - : un objet d'options qui spécifie wes cawactéwistiques de w'écouteuw d'évènements. rawr w-wes options disponibwes s-sont :
 
-    - `capture` : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au `listener` enregistré avant d'être distribués à tout `EventTarget` en-dessous dans l'arborescence du DOM.
+    - `captuwe` : u-un {{jsxwef("boowean")}} i-indiquant que wes évènements de ce type sewont envoyés au `wistenew` e-enwegistwé a-avant d'êtwe distwibués à t-tout `eventtawget` e-en-dessous dans w'awbowescence d-du dom. XD
 
-- `useCapture` {{optional_inline}}
-  - : Indique si l'[`EventListener`](/fr/docs/Web/API/EventTarget/addEventListener) à retirer a été enregistré comme un écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
+- `usecaptuwe` {{optionaw_inwine}}
+  - : indique s-si w'[`eventwistenew`](/fw/docs/web/api/eventtawget/addeventwistenew) à wetiwew a été enwegistwé c-comme un écouteuw captuwant, (U ﹏ U) o-ou nyon. (˘ω˘) si we pawamètwe est a-absent, UwU wa vaweuw p-paw défaut est `fawse` (_faux_). >_<
 
-Si un écouteur est enregistré deux fois, un avec capture et un sans, supprimez chacun séparément. La suppression d'un écouteur de capture n'affecte pas une version non capturante du même écouteur, et vice versa.
+si un écouteuw est enwegistwé deux fois, σωσ un avec captuwe et un sans, 🥺 suppwimez c-chacun s-sépawément. 🥺 wa suppwession d'un écouteuw d-de captuwe n-ny'affecte p-pas une vewsion nyon captuwante du même écouteuw, ʘwʘ et vice vewsa. :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-`undefined`. (_indéfini_)
+`undefined`. (U ﹏ U) (_indéfini_)
 
-### Correspondance utilisée pour la suppression d'écouteurs d'événements
+### cowwespondance utiwisée pouw wa suppwession d-d'écouteuws d'événements
 
-Étant donné qu'un écouteur d'événements a déjà été ajouté en appelant {{domxref("EventTarget.addEventListener","addEventListener()")}}, vous pouvez éventuellement arriver à un point auquel vous devez le supprimer. Vous devez alors spécifier le même `type` et les mêmes paramètres `listener` pour `removeEventListener()`, mais qu'en est-il des paramètres `options` ou `useCapture` ?
+Étant d-donné q-qu'un écouteuw d-d'événements a déjà été a-ajouté en appewant {{domxwef("eventtawget.addeventwistenew","addeventwistenew()")}}, (U ﹏ U) v-vous pouvez éventuewwement a-awwivew à un p-point auquew vous devez we suppwimew. ʘwʘ vous devez a-awows spécifiew w-we même `type` e-et wes mêmes p-pawamètwes `wistenew` p-pouw `wemoveeventwistenew()`, >w< mais qu'en est-iw des pawamètwes `options` ou `usecaptuwe` ?
 
-Alors que `addEventListener()` vous permet d'ajouter le même écouteur plus d'une fois pour le même type si les options sont différentes, la seule option que `removeEventListener()` vérifie est l'indicateur `capture` / `useCapture`. Sa valeur doit correspondre pour que `removeEventListener()` corresponde, mais pas les autres valeurs.
+a-awows que `addeventwistenew()` vous pewmet d'ajoutew we même écouteuw pwus d'une fois pouw we même type s-si wes options sont difféwentes, rawr x3 wa seuwe option que `wemoveeventwistenew()` véwifie e-est w'indicateuw `captuwe` / `usecaptuwe`. OwO s-sa vaweuw doit c-cowwespondwe pouw que `wemoveeventwistenew()` c-cowwesponde, ^•ﻌ•^ mais pas wes autwes v-vaweuws. >_<
 
-Par exemple, considérons l'appel de `addEventListener()` :
+paw exempwe, OwO c-considéwons w'appew de `addeventwistenew()` :
 
 ```js
-element.addEventListener("mousedown", handleMouseDown, true);
+ewement.addeventwistenew("mousedown", >_< handwemousedown, (ꈍᴗꈍ) twue);
 ```
 
-Maintenant, voyons chacun des deux appels de `removeEventListener()` :
+maintenant, >w< voyons c-chacun des deux appews de `wemoveeventwistenew()` :
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false); // Fails
-element.removeEventListener("mousedown", handleMouseDown, true);
+ewement.wemoveeventwistenew("mousedown", (U ﹏ U) h-handwemousedown, ^^ fawse); // f-faiws
+ewement.wemoveeventwistenew("mousedown", (U ﹏ U) h-handwemousedown, :3 twue);
 ```
 
-Le premier appel échoue parce que la valeur de `useCapture` ne correspond pas. Le second réussit puisqu'il correspond pour `useCapture`.
+we pwemiew appew échoue p-pawce que w-wa vaweuw de `usecaptuwe` nye c-cowwespond pas. (✿oωo) w-we second wéussit puisqu'iw cowwespond pouw `usecaptuwe`. XD
 
-Maintenant, observez ceci :
+maintenant, >w< obsewvez c-ceci :
 
 ```js
-element.addEventListener("mousedown", handleMouseDown, { passive: true });
+e-ewement.addeventwistenew("mousedown", òωó h-handwemousedown, (ꈍᴗꈍ) { passive: t-twue });
 ```
 
-Ici, nous spécifions un objet `options` dans lequel `passive` est défini à `true`, tandis que les autres options sont laissées à la valeur par défaut de `false`.
+i-ici, rawr x3 nyous spécifions un objet `options` d-dans wequew `passive` est défini à `twue`, rawr x3 tandis que wes autwes options sont waissées à w-wa vaweuw p-paw défaut de `fawse`. σωσ
 
-Maintenant, regardez chacun de ces appels successifs à `removeEventListener()`. N'importe lequel d'entre eux dans lequel `capture` ou `useCapture` est `true` (_vrai_) échoue ; tous les autres réussissent. Seul le paramètre de `capture` est important pour `removeEventListener()`.
+maintenant, (ꈍᴗꈍ) wegawdez chacun d-de ces appews s-successifs à `wemoveeventwistenew()`. rawr ny'impowte wequew d'entwe eux dans wequew `captuwe` ou `usecaptuwe` est `twue` (_vwai_) échoue ; t-tous wes autwes wéussissent. ^^;; seuw we pawamètwe de `captuwe` est impowtant p-pouw `wemoveeventwistenew()`. rawr x3
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Échoue
-element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, false); // Réussit
-element.removeEventListener("mousedown", handleMouseDown, true); // Échoue
+ewement.wemoveeventwistenew("mousedown", (ˆ ﻌ ˆ)♡ handwemousedown, σωσ { p-passive: t-twue }); // wéussit
+ewement.wemoveeventwistenew("mousedown", (U ﹏ U) handwemousedown, >w< { captuwe: fawse }); // w-wéussit
+e-ewement.wemoveeventwistenew("mousedown", σωσ handwemousedown, nyaa~~ { captuwe: twue }); // Échoue
+ewement.wemoveeventwistenew("mousedown", 🥺 h-handwemousedown, rawr x3 { passive: f-fawse }); // wéussit
+ewement.wemoveeventwistenew("mousedown", σωσ handwemousedown, (///ˬ///✿) fawse); // wéussit
+e-ewement.wemoveeventwistenew("mousedown", (U ﹏ U) handwemousedown, ^^;; twue); // Échoue
 ```
 
-Il est à noter que certaines versions du navigateur ont été incohérentes à ce sujet, et sauf si vous avez des raisons spécifiques, il est probablement sage d'utiliser les mêmes valeurs que pour l'appel à `addEventListener()` lors de l'appel de `removeEventListener()`.
+i-iw est à n-nyotew que cewtaines vewsions du n-nyavigateuw ont été incohéwentes à c-ce sujet, 🥺 e-et sauf si vous a-avez des waisons spécifiques, òωó i-iw est pwobabwement s-sage d'utiwisew wes mêmes vaweuws que pouw w-w'appew à `addeventwistenew()` w-wows de w'appew d-de `wemoveeventwistenew()`. XD
 
-## Notes
+## nyotes
 
-Si un {{domxref("EventListener")}} est retiré d'un {{domxref("EventTarget")}} alors qu'il est en train de traiter un événement, il ne sera pas déclenché par les actions courantes. Les {{domxref("EventListener")}} ne peuvent jamais être invoqués après avoir été retirés.
+si un {{domxwef("eventwistenew")}} est w-wetiwé d'un {{domxwef("eventtawget")}} awows qu'iw e-est en twain d-de twaitew un événement, :3 iw nye sewa pas décwenché paw wes a-actions couwantes. (U ﹏ U) w-wes {{domxwef("eventwistenew")}} n-nye peuvent j-jamais êtwe invoqués apwès avoiw été w-wetiwés. >w<
 
-L'appel de `removeEventListener()` avec des paramètres n'identifiant aucun {{domxref("EventListener")}} actuellement enregistré sur l'`EventTarget` n'a aucun effet.
+w'appew de `wemoveeventwistenew()` avec des pawamètwes ny'identifiant aucun {{domxwef("eventwistenew")}} actuewwement enwegistwé s-suw w'`eventtawget` ny'a a-aucun effet. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-Cet exemple montre comment ajouter un écouteur d'évènements basé sur `click` et supprimer un écouteur d'évènements basé sur `mouseover`.
+cet e-exempwe montwe comment ajoutew un écouteuw d-d'évènements basé s-suw `cwick` et s-suppwimew un écouteuw d-d'évènements b-basé suw `mouseovew`. (⑅˘꒳˘)
 
 ```js
-var body = document.querySelector("body"),
-  clickTarget = document.getElementById("click-target"),
-  mouseOverTarget = document.getElementById("mouse-over-target"),
-  toggle = false;
+v-vaw body = document.quewysewectow("body"), ʘwʘ
+  cwicktawget = document.getewementbyid("cwick-tawget"), rawr x3
+  mouseovewtawget = document.getewementbyid("mouse-ovew-tawget"), (˘ω˘)
+  toggwe = fawse;
 
-function makeBackgroundYellow() {
-  "use strict";
+function makebackgwoundyewwow() {
+  "use s-stwict";
 
-  if (toggle) {
-    body.style.backgroundColor = "white";
-  } else {
-    body.style.backgroundColor = "yellow";
+  i-if (toggwe) {
+    b-body.stywe.backgwoundcowow = "white";
+  } ewse {
+    b-body.stywe.backgwoundcowow = "yewwow";
   }
 
-  toggle = !toggle;
+  toggwe = !toggwe;
 }
 
-clickTarget.addEventListener("click", makeBackgroundYellow, false);
+cwicktawget.addeventwistenew("cwick", o.O makebackgwoundyewwow, 😳 f-fawse);
 
-mouseOverTarget.addEventListener("mouseover", function () {
-  "use strict";
+m-mouseovewtawget.addeventwistenew("mouseovew", o.O function () {
+  "use stwict";
 
-  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
+  c-cwicktawget.wemoveeventwistenew("cwick", ^^;; makebackgwoundyewwow, ( ͡o ω ͡o ) fawse);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Prothèse (_polyfill_) pour la prise en charge des navigateurs anciens
+## pwothèse (_powyfiww_) p-pouw wa pwise e-en chawge des nyavigateuws anciens
 
-`addEventListener()` et `removeEventListener()` ne sont pas présents dans les anciens navigateurs. Vous pouvez contourner ce problème en insérant le code suivant au début de vos scripts, permettant l'utilisation de `addEventListener()` et `removeEventListener()` dans les implémentations qui ne le supportent pas nativement. Toutefois, cette méthode ne fonctionnera pas sur Internet Explorer 7 ou version antérieure, car l'extension du fichier Element.prototype n'a pas été prise en charge jusqu'à Internet Explorer 8.
+`addeventwistenew()` et `wemoveeventwistenew()` nye sont pas pwésents dans w-wes anciens nyavigateuws. ^^;; v-vous pouvez c-contouwnew c-ce pwobwème en i-inséwant we code suivant au début d-de vos scwipts, ^^;; p-pewmettant w'utiwisation de `addeventwistenew()` e-et `wemoveeventwistenew()` d-dans wes impwémentations qui nye w-we suppowtent pas nyativement. XD toutefois, 🥺 cette m-méthode nye fonctionnewa pas s-suw intewnet expwowew 7 o-ou vewsion antéwieuwe, (///ˬ///✿) c-caw w'extension du fichiew ewement.pwototype ny'a p-pas été pwise e-en chawge jusqu'à i-intewnet expwowew 8. (U ᵕ U❁)
 
 ```js
-if (!Element.prototype.addEventListener) {
-  var oListeners = {};
-  function runListeners(oEvent) {
-    if (!oEvent) {
-      oEvent = window.event;
+if (!ewement.pwototype.addeventwistenew) {
+  vaw owistenews = {};
+  function wunwistenews(oevent) {
+    i-if (!oevent) {
+      oevent = window.event;
     }
-    for (
-      var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type];
-      iElId < oEvtListeners.aEls.length;
-      iElId++
+    fow (
+      vaw i-iwstid = 0, ^^;; iewid = 0, o-oevtwistenews = owistenews[oevent.type];
+      i-iewid < oevtwistenews.aews.wength;
+      iewid++
     ) {
-      if (oEvtListeners.aEls[iElId] === this) {
-        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
-          oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
+      if (oevtwistenews.aews[iewid] === t-this) {
+        f-fow (iwstid; iwstid < oevtwistenews.aevts[iewid].wength; iwstid++) {
+          o-oevtwistenews.aevts[iewid][iwstid].caww(this, ^^;; oevent);
         }
-        break;
+        bweak;
       }
     }
   }
-  Element.prototype.addEventListener = function (
-    sEventType,
-    fListener /*, useCapture (will be ignored!) */,
+  ewement.pwototype.addeventwistenew = function (
+    s-seventtype, rawr
+    f-fwistenew /*, (˘ω˘) usecaptuwe (wiww b-be ignowed!) */, 🥺
   ) {
-    if (oListeners.hasOwnProperty(sEventType)) {
-      var oEvtListeners = oListeners[sEventType];
-      for (
-        var nElIdx = -1, iElId = 0;
-        iElId < oEvtListeners.aEls.length;
-        iElId++
+    i-if (owistenews.hasownpwopewty(seventtype)) {
+      v-vaw oevtwistenews = owistenews[seventtype];
+      f-fow (
+        vaw nyewidx = -1, nyaa~~ iewid = 0;
+        iewid < oevtwistenews.aews.wength;
+        iewid++
       ) {
-        if (oEvtListeners.aEls[iElId] === this) {
-          nElIdx = iElId;
-          break;
+        if (oevtwistenews.aews[iewid] === this) {
+          nyewidx = iewid;
+          bweak;
         }
       }
-      if (nElIdx === -1) {
-        oEvtListeners.aEls.push(this);
-        oEvtListeners.aEvts.push([fListener]);
-        this["on" + sEventType] = runListeners;
-      } else {
-        var aElListeners = oEvtListeners.aEvts[nElIdx];
-        if (this["on" + sEventType] !== runListeners) {
-          aElListeners.splice(0);
-          this["on" + sEventType] = runListeners;
+      if (newidx === -1) {
+        oevtwistenews.aews.push(this);
+        oevtwistenews.aevts.push([fwistenew]);
+        t-this["on" + s-seventtype] = wunwistenews;
+      } ewse {
+        v-vaw aewwistenews = o-oevtwistenews.aevts[newidx];
+        i-if (this["on" + seventtype] !== w-wunwistenews) {
+          aewwistenews.spwice(0);
+          t-this["on" + s-seventtype] = wunwistenews;
         }
-        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
-          if (aElListeners[iLstId] === fListener) {
-            return;
+        f-fow (vaw iwstid = 0; iwstid < a-aewwistenews.wength; i-iwstid++) {
+          if (aewwistenews[iwstid] === fwistenew) {
+            w-wetuwn;
           }
         }
-        aElListeners.push(fListener);
+        a-aewwistenews.push(fwistenew);
       }
-    } else {
-      oListeners[sEventType] = { aEls: [this], aEvts: [[fListener]] };
-      this["on" + sEventType] = runListeners;
+    } e-ewse {
+      o-owistenews[seventtype] = { a-aews: [this], :3 a-aevts: [[fwistenew]] };
+      t-this["on" + s-seventtype] = w-wunwistenews;
     }
   };
-  Element.prototype.removeEventListener = function (
-    sEventType,
-    fListener /*, useCapture (will be ignored!) */,
+  ewement.pwototype.wemoveeventwistenew = f-function (
+    s-seventtype, /(^•ω•^)
+    f-fwistenew /*, ^•ﻌ•^ usecaptuwe (wiww b-be ignowed!) */, UwU
   ) {
-    if (!oListeners.hasOwnProperty(sEventType)) {
-      return;
+    if (!owistenews.hasownpwopewty(seventtype)) {
+      wetuwn;
     }
-    var oEvtListeners = oListeners[sEventType];
-    for (
-      var nElIdx = -1, iElId = 0;
-      iElId < oEvtListeners.aEls.length;
-      iElId++
+    v-vaw oevtwistenews = owistenews[seventtype];
+    f-fow (
+      v-vaw nyewidx = -1, 😳😳😳 i-iewid = 0;
+      iewid < oevtwistenews.aews.wength;
+      i-iewid++
     ) {
-      if (oEvtListeners.aEls[iElId] === this) {
-        nElIdx = iElId;
-        break;
+      if (oevtwistenews.aews[iewid] === t-this) {
+        nyewidx = iewid;
+        b-bweak;
       }
     }
-    if (nElIdx === -1) {
-      return;
+    if (newidx === -1) {
+      w-wetuwn;
     }
-    for (
-      var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx];
-      iLstId < aElListeners.length;
-      iLstId++
+    fow (
+      vaw iwstid = 0, OwO aewwistenews = oevtwistenews.aevts[newidx];
+      iwstid < aewwistenews.wength;
+      i-iwstid++
     ) {
-      if (aElListeners[iLstId] === fListener) {
-        aElListeners.splice(iLstId, 1);
+      if (aewwistenews[iwstid] === f-fwistenew) {
+        a-aewwistenews.spwice(iwstid, ^•ﻌ•^ 1);
       }
     }
   };
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("EventTarget.addEventListener")}}
-- {{non-standard_inline}}{{domxref("EventTarget.detachEvent()")}}.
+- {{domxwef("eventtawget.addeventwistenew")}}
+- {{non-standawd_inwine}}{{domxwef("eventtawget.detachevent()")}}. (ꈍᴗꈍ)

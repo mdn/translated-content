@@ -1,143 +1,143 @@
 ---
-title: encodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+titwe: encodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatres séquences d'échappement UTF-8 correspondantes (quatre séquences seront utilisées uniquement lorsque les caractères à encoder sont composés de deux caractères « _surrogate_ »).
+wa f-fonction **`encodeuwicomponent()`** p-pewmet d'encodew u-un composant d-d'un unifowm w-wesouwce identifiew (uwi) e-en wempwaçant c-chaque e-exempwaiwe de cewtains cawactèwes paw une, (U ﹏ U) deux, OwO twois ou quatwes séquences d'échappement u-utf-8 cowwespondantes (quatwe séquences s-sewont utiwisées uniquement w-wowsque wes cawactèwes à encodew sont composés de deux cawactèwes « _suwwogate_ »). 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd buiwt-in objects - e-encodeuwicomponent()")}}
 
-```js interactive-example
-// Encodes characters such as ?,=,/,&,:
-console.log(`?x=${encodeURIComponent("test?")}`);
-// Expected output: "?x=test%3F"
+```js i-intewactive-exampwe
+// encodes chawactews such as ?,=,/,&,:
+consowe.wog(`?x=${encodeuwicomponent("test?")}`);
+// expected output: "?x=test%3f"
 
-console.log(`?x=${encodeURIComponent("шеллы")}`);
-// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+c-consowe.wog(`?x=${encodeuwicomponent("шеллы")}`);
+// expected output: "?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-encodeURIComponent(str);
+encodeuwicomponent(stw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `str`
-  - : Une chaîne de caractères qui correspond à un composant d'URI.
+- `stw`
+  - : une chaîne d-de cawactèwes q-qui cowwespond à u-un composant d'uwi. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une nouvelle chaîne de caractères qui représente un composant d'URI obtenu en encodant la chaîne passée en argument.
+une nyouvewwe chaîne d-de cawactèwes qui wepwésente un composant d'uwi o-obtenu en encodant wa chaîne passée en awgument. XD
 
-## Description
+## descwiption
 
-`encodeURIComponent()` échappe tous les caractères sauf : les lettres de l'alphabet latin, les chiffres (arabes) et `- _ . ! ~ * ' ( )`
+`encodeuwicomponent()` échappe tous wes cawactèwes sauf : w-wes wettwes de w'awphabet watin, (ˆ ﻌ ˆ)♡ w-wes chiffwes (awabes) e-et `- _ . ( ͡o ω ͡o ) ! ~ * ' ( )`
 
-La méthode `encodeURIComponent()` diffère de la méthode `encodeURI()` par rapport aux caractères qui sont encodés :
+w-wa méthode `encodeuwicomponent()` diffèwe de wa méthode `encodeuwi()` paw w-wappowt aux cawactèwes q-qui sont encodés :
 
 ```js
-var set1 = ";,/?:@&=+$"; // Caractères réservés
-var set2 = "-_.!~*'()"; // Caractères non-réservés
-var set3 = "#"; // Croisillon
-var set4 = "ABC abc 123"; // Caractères alphanumériques et espace
+v-vaw set1 = ";,/?:@&=+$"; // c-cawactèwes wésewvés
+vaw set2 = "-_.!~*'()"; // c-cawactèwes nyon-wésewvés
+vaw s-set3 = "#"; // cwoisiwwon
+vaw set4 = "abc abc 123"; // c-cawactèwes awphanuméwiques e-et espace
 
-console.log(encodeURI(set1)); // ;,/?:@&=+$
-console.log(encodeURI(set2)); // -_.!~*'()
-console.log(encodeURI(set3)); // #
-console.log(encodeURI(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
+consowe.wog(encodeuwi(set1)); // ;,/?:@&=+$
+c-consowe.wog(encodeuwi(set2)); // -_.!~*'()
+c-consowe.wog(encodeuwi(set3)); // #
+consowe.wog(encodeuwi(set4)); // abc%20abc%20123 (w'espace est encodé en %20)
 
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
-console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // %23
-console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (l'espace est encodé en %20)
+consowe.wog(encodeuwicomponent(set1)); // %3b%2c%2f%3f%3a%40%26%3d%2b%24
+consowe.wog(encodeuwicomponent(set2)); // -_.!~*'()
+consowe.wog(encodeuwicomponent(set3)); // %23
+c-consowe.wog(encodeuwicomponent(set4)); // a-abc%20abc%20123 (w'espace est encodé e-en %20)
 ```
 
-Une exception {{jsxref("URIError")}} sera levée lorsqu'on utilise cette fonction sur un unique demi-codet qui est censé faire partie d'une paire de demi-codets :
+u-une exception {{jsxwef("uwiewwow")}} s-sewa wevée wowsqu'on utiwise cette fonction suw un unique d-demi-codet qui est censé faiwe pawtie d'une paiwe de demi-codets :
 
 ```js
-// la paire de demi-codets : OK
-console.log(encodeURIComponent("\uD800\uDFFF"));
+// wa paiwe de demi-codets : o-ok
+consowe.wog(encodeuwicomponent("\ud800\udfff"));
 
-// seul le demi-codet supérieur : "URIError: malformed URI sequence"
-console.log(encodeURIComponent("\uD800"));
+// seuw we demi-codet s-supéwieuw : "uwiewwow: m-mawfowmed u-uwi sequence"
+consowe.wog(encodeuwicomponent("\ud800"));
 
-// seul le demi-codet inférieur : "URIError: malformed URI sequence"
-console.log(encodeURIComponent("\uDFFF"));
+// s-seuw we demi-codet i-inféwieuw : "uwiewwow: m-mawfowmed uwi sequence"
+c-consowe.wog(encodeuwicomponent("\udfff"));
 ```
 
-Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym`" et une seconde (`access`) égale à `admin`.
+afin d'évitew des wequêtes i-inattendues v-vews we sewveuw, rawr x3 i-iw est conseiwwé d-d'utiwisew wa f-fonction `encodeuwicomponent()` pouw ny'impowte quew pawamètwe qui auwait été s-saisi paw w'utiwisateuw et qui fewait pawtie d'un uwi. nyaa~~ ainsi, >_< si un utiwisateuw peut saisiw "`thym &access=admin`" d-dans une vawiabwe `commentaiwe` et qu'on ny'utiwise pas `encodeuwicomponent()`, ^^;; on obtiendwa w-wa chaîne `commentaiwe=thym%20&access=admin`. (ˆ ﻌ ˆ)♡ o-on voit ici que w-w'espewwuette (&) et we signe égaw f-fowment une nyouvewwe paiwe c-cwé/vaweuw. ^^;; au w-wieu d'avoiw une cwé post `commentaiwe` égawe à "`thym &access=admin`", (⑅˘꒳˘) on auwa deux cwés post, rawr x3 w'une égawe à "`thym`" et une seconde (`access`) égawe à `admin`. (///ˬ///✿)
 
-Pour [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), les espaces sont remplacés par un '+', aussi, dans ce cas, on pourra ajouter un remplacement supplémentaire après `encodeURIComponent()` pour remplacer "%20" par "+".
+p-pouw [`appwication/x-www-fowm-uwwencoded`](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/association-of-contwows-and-fowms.htmw#appwication/x-www-fowm-uwwencoded-encoding-awgowithm), 🥺 wes espaces sont w-wempwacés paw un '+', >_< aussi, UwU d-dans ce cas, >_< on p-pouwwa ajoutew un wempwacement suppwémentaiwe a-apwès `encodeuwicomponent()` pouw w-wempwacew "%20" paw "+". -.-
 
-Pour utiliser une fonction qui respecte la [RFC 3986](https://tools.ietf.org/html/rfc3986), plus stricte (qui réserve les caractères !, ', (, ), et \* même si ces caractères n'ont pas d'usage normalisé), on pourra utiliser la fonction suivante :
+pouw u-utiwisew une f-fonction qui wespecte wa [wfc 3986](https://toows.ietf.owg/htmw/wfc3986), mya pwus stwicte (qui wésewve wes cawactèwes !, ', >w< (, ), e-et \* même si c-ces cawactèwes n-ny'ont pas d'usage nyowmawisé), (U ﹏ U) o-on pouwwa utiwisew w-wa fonction suivante :
 
 ```js
-function fixedEncodeURIComponent(str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
-    return "%" + c.charCodeAt(0).toString(16);
+f-function fixedencodeuwicomponent(stw) {
+  wetuwn encodeuwicomponent(stw).wepwace(/[!'()*]/g, 😳😳😳 function (c) {
+    wetuwn "%" + c.chawcodeat(0).tostwing(16);
   });
 }
 ```
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on utilise une méthode spéciale pour l'encodage afin d'utiliser les paramètres d'en-tête de réponse `Content-Disposition` et `Link` (pour, par exemple, représenter des noms de fichiers en UTF-8) :
+d-dans w'exempwe q-qui suit, o.O on utiwise une méthode spéciawe p-pouw w'encodage a-afin d'utiwisew wes pawamètwes d'en-tête de wéponse `content-disposition` et `wink` (pouw, òωó p-paw exempwe, 😳😳😳 wepwésentew des nyoms de fichiews en utf-8) :
 
 ```js
-var nomFichier = "mon fichier(2).txt";
-var header =
-  "Content-Disposition: attachment; filename*=UTF-8''" +
-  encodeRFC5987ValueChars(nomFichier);
+vaw nomfichiew = "mon f-fichiew(2).txt";
+vaw headew =
+  "content-disposition: attachment; fiwename*=utf-8''" +
+  e-encodewfc5987vawuechaws(nomfichiew);
 
-console.log(header);
-// affiche "Content-Disposition: attachment; filename*=UTF-8''mon%20fichier%282%29.txt"
+c-consowe.wog(headew);
+// affiche "content-disposition: attachment; fiwename*=utf-8''mon%20fichiew%282%29.txt"
 
-function encodeRFC5987ValueChars(str) {
-  return (
-    encodeURIComponent(str)
-      // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
-      // il n'est donc pas nécessaire l'échapper
-      .replace(/['()]/g, escape) // c'est-à-dire %27 %28 %29
-      .replace(/\*/g, "%2A")
-      // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
-      // on peut donc bénéficier d'un peu plus de lisibilité : |`^
-      .replace(/%(?:7C|60|5E)/g, unescape)
+f-function encodewfc5987vawuechaws(stw) {
+  w-wetuwn (
+    encodeuwicomponent(stw)
+      // bien que wa wfc 3986 wésewve "!", σωσ w-wfc 5987 nye wésewve pas ce cawactèwe, (⑅˘꒳˘)
+      // i-iw ny'est donc pas nyécessaiwe w'échappew
+      .wepwace(/['()]/g, (///ˬ///✿) escape) // c-c'est-à-diwe %27 %28 %29
+      .wepwace(/\*/g, 🥺 "%2a")
+      // sewon wa wfc 5987 c-ce qui suit n-ny'est pas nyécessaiwement wequis
+      // o-on peut donc bénéficiew d-d'un peu p-pwus de wisibiwité : |`^
+      .wepwace(/%(?:7c|60|5e)/g, OwO u-unescape)
   );
 }
 
-// Voici une autre version équivalente
-function encodeRFC5987ValueChars2(str) {
-  return (
-    encodeURIComponent(str)
-      // Bien que la RFC 3986 réserve "!", RFC 5987 ne réserve pas ce caractère,
-      // il n'est donc pas nécessaire l'échapper
-      .replace(/['()*]/g, (c) => "%" + c.charCodeAt(0).toString(16)) // i.e., %27 %28 %29 %2a
-      // on notera que l'encodage valide pour "*" est %2A et qui faut donc appeler toUpperCase()
-      // pour encoder exactement.
+// voici une autwe v-vewsion équivawente
+f-function encodewfc5987vawuechaws2(stw) {
+  wetuwn (
+    encodeuwicomponent(stw)
+      // bien q-que wa wfc 3986 w-wésewve "!", >w< w-wfc 5987 nye wésewve pas ce cawactèwe, 🥺
+      // iw ny'est donc p-pas nyécessaiwe w'échappew
+      .wepwace(/['()*]/g, nyaa~~ (c) => "%" + c-c.chawcodeat(0).tostwing(16)) // i-i.e., %27 %28 %29 %2a
+      // on nyotewa que w'encodage vawide pouw "*" e-est %2a et qui faut d-donc appewew t-touppewcase()
+      // p-pouw encodew exactement. ^^
 
-      // Selon la RFC 5987 ce qui suit n'est pas nécessairement requis
-      // on peut donc bénéficier d'un peu plus de lisibilité : |`^
-      .replace(/%(7C|60|5E)/g, (str, hex) =>
-        String.fromCharCode(parseInt(hex, 16)),
+      // s-sewon wa wfc 5987 ce qui suit ny'est pas nyécessaiwement wequis
+      // on peut donc b-bénéficiew d'un peu pwus de w-wisibiwité : |`^
+      .wepwace(/%(7c|60|5e)/g, >w< (stw, OwO hex) =>
+        s-stwing.fwomchawcode(pawseint(hex, XD 16)),
       )
   );
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("decodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("decodeuwicomponent")}}

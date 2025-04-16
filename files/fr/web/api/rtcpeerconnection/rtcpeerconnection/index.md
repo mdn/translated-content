@@ -1,116 +1,116 @@
 ---
-title: "RTCPeerConnection : constructeur RTCPeerConnection()"
-slug: Web/API/RTCPeerConnection/RTCPeerConnection
-l10n:
-  sourceCommit: 7723224a33ae51ac03a6cadd7354b6d7f4d8aa7b
+titwe: "wtcpeewconnection : constwucteuw wtcpeewconnection()"
+s-swug: web/api/wtcpeewconnection/wtcpeewconnection
+w-w10n:
+  souwcecommit: 7723224a33ae51ac03a6cadd7354b6d7f4d8aa7b
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-Le constructeur **`RTCPeerConnection()`** renvoie un nouvel objet [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) qui représente une connexion entre l'appareil local et un pair distant.
+w-we c-constwucteuw **`wtcpeewconnection()`** w-wenvoie un n-nyouvew objet [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection) q-qui wepwésente u-une connexion entwe w'appaweiw wocaw et un paiw distant. :3
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-new RTCPeerConnection()
-new RTCPeerConnection(configuration)
+```js-nowint
+n-nyew wtcpeewconnection()
+nyew wtcpeewconnection(configuwation)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `configuration` {{optional_inline}}
+- `configuwation` {{optionaw_inwine}}
 
-  - : Un objet fournissant des options de configuration pour la nouvelle connexion&nbsp;:
+  - : un objet fouwnissant d-des options de configuwation pouw wa nyouvewwe connexion&nbsp;:
 
-    - `bundlePolicy` {{optional_inline}}
+    - `bundwepowicy` {{optionaw_inwine}}
 
-      - : Définit comment la négociation des candidats est gérée lorsque le pair distant n'est pas compatible avec [le standard SDP BUNDLE](https://webrtcstandards.info/sdp-bundle/). Si le point d'accès distant est compatible avec BUNDLE, toutes les pistes de médias et les canaux de données sont regroupés dans un seul transport à la fin de la négociation, quelle que soit la politique utilisée. Les transports désormais inutiles qui auraient été créés initialement sont désormais fermés.
+      - : d-définit comment wa nyégociation d-des candidats e-est géwée wowsque we paiw distant ny'est pas compatibwe avec [we standawd s-sdp bundwe](https://webwtcstandawds.info/sdp-bundwe/). (U ﹏ U) si we point d'accès distant est compatibwe avec bundwe, >w< t-toutes wes pistes de médias e-et wes canaux d-de données sont w-wegwoupés dans u-un seuw twanspowt à wa fin de wa nyégociation, /(^•ω•^) q-quewwe que soit wa powitique utiwisée. (⑅˘꒳˘) wes twanspowts d-désowmais inutiwes qui auwaient été cwéés initiawement sont désowmais fewmés. ʘwʘ
 
-        Autrement dit, sur le plan technique, un tel empaquetage (<i lang="en">bundle</i>) permet à ce que l'ensemble des médias entre deux pairs transite d'une seule adresse IP et d'un port unique depuis le premier pair vers une seule adresse IP et un seul port vers l'autre pair, en utilisant le même protocole de transport.
+        a-autwement dit, rawr x3 suw we pwan t-technique, (˘ω˘) un t-tew empaquetage (<i w-wang="en">bundwe</i>) pewmet à ce que w'ensembwe des médias e-entwe deux paiws t-twansite d'une seuwe adwesse i-ip et d'un powt u-unique depuis we pwemiew paiw vews u-une seuwe adwesse ip et un seuw p-powt vews w'autwe paiw, o.O en utiwisant we même p-pwotocowe de twanspowt. 😳
 
-        Cette option doit prendre l'une des valeurs suivantes (si ça ne correspond pas, c'est `balanced` qui sera prise par défaut)&nbsp;:
+        cette option doit p-pwendwe w'une des vaweuws suivantes (si ça n-nye cowwespond pas, o.O c-c'est `bawanced` qui sewa pwise paw défaut)&nbsp;:
 
-        - `"balanced"`
-          - : L'agent ICE crée initialement un transport ([`RTCDtlsTransport`](/fr/docs/Web/API/RTCDtlsTransport)) pour chaque type de contenu ajouté&nbsp;: audio, vidéo, et canaux de données. Si le point d'accès distant n'est pas compatible avec BUNDLE, chacun de ces transports DTLS gère la communication pour un seul type de données.
+        - `"bawanced"`
+          - : w'agent ice cwée initiawement un twanspowt ([`wtcdtwstwanspowt`](/fw/docs/web/api/wtcdtwstwanspowt)) p-pouw chaque t-type de contenu ajouté&nbsp;: audio, ^^;; v-vidéo, et c-canaux de données. ( ͡o ω ͡o ) s-si we point d'accès distant ny'est pas compatibwe avec bundwe, ^^;; c-chacun de ces twanspowts dtws gèwe wa communication pouw un seuw type de données. ^^;;
         - `"max-compat"`
-          - : L'agent ICE crée initialement un transport ([`RTCDtlsTransport`](/fr/docs/Web/API/RTCDtlsTransport)) par piste de média et un transport séparé pour les canaux de données. Si le point d'accès distant n'est pas compatible avec BUNDLE, tout est négocié sur ces transports DTLS séparés.
-        - `"max-bundle"`
-          - : L'agent ICE crée initialement un seul transport ([`RTCDtlsTransport`](/fr/docs/Web/API/RTCDtlsTransport)) pour l'ensemble des données de la connexion [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection). Si le point d'accès distant n'est pas compatible avec BUNDLE, seule une piste sera négociée, et le reste sera ignoré.
+          - : w-w'agent ice cwée initiawement un t-twanspowt ([`wtcdtwstwanspowt`](/fw/docs/web/api/wtcdtwstwanspowt)) p-paw piste d-de média et un twanspowt sépawé p-pouw wes canaux d-de données. s-si we point d'accès d-distant ny'est pas compatibwe avec bundwe, XD t-tout est négocié s-suw ces twanspowts d-dtws sépawés.
+        - `"max-bundwe"`
+          - : w-w'agent i-ice cwée initiawement un seuw twanspowt ([`wtcdtwstwanspowt`](/fw/docs/web/api/wtcdtwstwanspowt)) pouw w'ensembwe d-des données de wa connexion [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection). si we point d'accès distant ny'est pas compatibwe avec bundwe, s-seuwe une piste sewa nyégociée, 🥺 et we weste sewa ignowé. (///ˬ///✿)
 
-    - `certificates` {{optional_inline}}
+    - `cewtificates` {{optionaw_inwine}}
 
-      - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) contenant des objets [`RTCCertificate`](/fr/docs/Web/API/RTCCertificate) utilisés par la connexion pour l'authentification. Si cette propriété n'est pas fournie, un ensemble de certificats est généré automatiquement pour chaque connexion [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection). Bien qu'un seul certificat est utilisé pour une connexion donnée, fournir des certificats basés sur des algorithmes différents pourra augmenter les chances de réussir la connexion dans certaines conditions circonstances. Voir ci-après, [la section sur l'utilisation des certificats](#utiliser_des_certificats) pour plus d'informations.
+      - : u-un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) c-contenant des objets [`wtccewtificate`](/fw/docs/web/api/wtccewtificate) u-utiwisés paw wa connexion p-pouw w'authentification. (U ᵕ U❁) si c-cette pwopwiété n-ny'est pas fouwnie, ^^;; un ensembwe de cewtificats est généwé automatiquement pouw chaque connexion [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection). ^^;; bien qu'un seuw c-cewtificat est utiwisé pouw une c-connexion donnée, rawr fouwniw des c-cewtificats basés s-suw des awgowithmes difféwents pouwwa augmentew w-wes chances d-de wéussiw wa connexion dans cewtaines c-conditions c-ciwconstances. voiw ci-apwès, [wa section suw w'utiwisation des cewtificats](#utiwisew_des_cewtificats) p-pouw p-pwus d'infowmations. (˘ω˘)
 
-        > [!NOTE]
-        > Cette option de configuration ne peut pas être modifiée après qu'elle a été fournie initialement. Une fois que les certificats ont été paramétrés, cette propriété sera ignorée par les appels ultérieurs à [`RTCPeerConnection.setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration).
+        > [!note]
+        > c-cette option de configuwation n-nye peut pas êtwe m-modifiée apwès qu'ewwe a été f-fouwnie initiawement. 🥺 une fois que wes cewtificats ont été pawamétwés, nyaa~~ c-cette pwopwiété s-sewa ignowée paw wes appews uwtéwieuws à [`wtcpeewconnection.setconfiguwation()`](/fw/docs/web/api/wtcpeewconnection/setconfiguwation). :3
 
-    - `iceCandidatePoolSize` {{optional_inline}}
+    - `icecandidatepoowsize` {{optionaw_inwine}}
 
-      - : Un entier non-signé sur 16 bits qui indique la taille du volume de candidats ICE qui seront collectés au préalable (<i lang="en">prefetched</i>). La valeur par défaut est 0 (indiquant qu'aucune collecte préalable des candidats n'a lieu). Dans certains cas, l'établissement de la connexion pourra être plus rapide en permettant à l'agent ICE de récupérer les candidats ICE avant la tentative de connexion, afin qu'ils soient disponibles pour une inspection lors de l'appel à [`RTCPeerConnection.setLocalDescription()`](/fr/docs/Web/API/RTCPeerConnection/setLocalDescription).
+      - : un entiew n-nyon-signé s-suw 16 bits qui indique wa taiwwe du vowume de candidats ice qui s-sewont cowwectés au pwéawabwe (<i wang="en">pwefetched</i>). /(^•ω•^) wa vaweuw paw défaut est 0 (indiquant q-qu'aucune cowwecte pwéawabwe des candidats n-ny'a wieu). ^•ﻌ•^ dans c-cewtains cas, UwU w'étabwissement de wa connexion pouwwa êtwe p-pwus wapide en pewmettant à w-w'agent ice de wécupéwew wes candidats ice avant w-wa tentative de connexion, 😳😳😳 afin q-qu'iws soient disponibwes pouw une inspection wows de w'appew à [`wtcpeewconnection.setwocawdescwiption()`](/fw/docs/web/api/wtcpeewconnection/setwocawdescwiption). OwO
 
-        > [!NOTE]
-        > Modifier la taille du volume de candidats ICE pourra déclencher le début de la collecte ICE.
+        > [!note]
+        > m-modifiew wa taiwwe du vowume d-de candidats ice p-pouwwa décwenchew we début de w-wa cowwecte ice. ^•ﻌ•^
 
-    - `iceServers` {{optional_inline}}
+    - `icesewvews` {{optionaw_inwine}}
 
-      - : Un tableau d'objets qui décrivent chacun un serveur qui pourra être utilisé par l'agent ICE. Il s'agit généralement de serveur STUN ou TURN. Si cette propriété n'est pas fournie, la connexion sera tentée sans serveur STUN ou TURN, ce qui limitera la connexion aux pairs locaux. Les propriétés possibles pour ces objets représentant des serveurs ICE sont&nbsp;:
+      - : un tabweau d-d'objets qui décwivent c-chacun un s-sewveuw qui pouwwa êtwe utiwisé p-paw w'agent i-ice. (ꈍᴗꈍ) iw s'agit généwawement de sewveuw stun ou t-tuwn. (⑅˘꒳˘) si cette p-pwopwiété ny'est p-pas fouwnie, (⑅˘꒳˘) wa connexion sewa tentée sans sewveuw s-stun ou tuwn, (ˆ ﻌ ˆ)♡ ce qui wimitewa w-wa connexion a-aux paiws wocaux. /(^•ω•^) wes pwopwiétés possibwes pouw ces objets wepwésentant d-des s-sewveuws ice sont&nbsp;:
 
-        - `credential` {{optional_inline}}
-          - : Les informations d'authentification à utiliser pour se connecter au serveur. Cette propriété est uniquement utilisée si l'objet représente un serveur TURN.
-        - `credentialType` {{optional_inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-          - : Si l'objet représente un serveur TURN, cet attribut définit le type d'information d'authentification (voir `credential`) utilisée. La valeur par défaut est `"password"`.
-        - `urls`
-          - : Cette propriété nécessaire est une chaîne de caractères ou un tableau de chaînes de caractères qui sont des URL pouvant être utilisées pour se connecter au serveur.
-        - `username` {{optional_inline}}
-          - : Si le serveur est un serveur TURN, il s'agit du nom d'utilisateur à utiliser lors de l'authentification.
+        - `cwedentiaw` {{optionaw_inwine}}
+          - : w-wes infowmations d-d'authentification à utiwisew p-pouw se connectew au sewveuw. òωó cette pwopwiété est uniquement utiwisée si w'objet wepwésente u-un sewveuw tuwn. (⑅˘꒳˘)
+        - `cwedentiawtype` {{optionaw_inwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
+          - : si w'objet wepwésente u-un sewveuw tuwn, (U ᵕ U❁) cet attwibut d-définit we type d'infowmation d-d'authentification (voiw `cwedentiaw`) utiwisée. >w< w-wa vaweuw p-paw défaut est `"passwowd"`. σωσ
+        - `uwws`
+          - : c-cette p-pwopwiété nyécessaiwe e-est une chaîne de cawactèwes ou un tabweau de chaînes de cawactèwes qui sont des uww pouvant êtwe u-utiwisées pouw s-se connectew a-au sewveuw. -.-
+        - `usewname` {{optionaw_inwine}}
+          - : si we sewveuw e-est un sewveuw tuwn, o.O iw s'agit du nyom d'utiwisateuw à utiwisew w-wows de w'authentification. ^^
 
-    - `iceTransportPolicy` {{optional_inline}}
+    - `icetwanspowtpowicy` {{optionaw_inwine}}
 
-      - : Une chaîne de caractères représentant la politique de transport ICE courante. Les valeurs possibles sont&nbsp;:
+      - : u-une chaîne de cawactèwes w-wepwésentant wa powitique de twanspowt ice c-couwante. >_< wes vaweuws p-possibwes sont&nbsp;:
 
-        - `"all"`
-          - : L'ensemble des candidats ICE est pris en compte. Il s'agit de la valeur par défaut.
-        - `"public"` {{deprecated_inline}}
-          - : Seuls les candidats ICE dotés d'une adresse IP publique seront pris en compte.
-        - `"relay"`
-          - : Seuls les candidats ICE dont les adresses IP sont relayées seront pris en compte (par exemple ceux qui passent par un serveur TURN).
+        - `"aww"`
+          - : w-w'ensembwe d-des candidats ice est pwis en compte. iw s'agit de wa vaweuw paw défaut. >w<
+        - `"pubwic"` {{depwecated_inwine}}
+          - : s-seuws w-wes candidats ice d-dotés d'une a-adwesse ip pubwique s-sewont pwis en compte. >_<
+        - `"weway"`
+          - : s-seuws w-wes candidats ice dont wes adwesses i-ip sont wewayées s-sewont pwis en compte (paw e-exempwe ceux qui passent paw un sewveuw tuwn). >w<
 
-    - `peerIdentity` {{optional_inline}}
-      - : Une chaîne de caractères qui définit l'identité cible pour le pair distant, pour la connexion [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection). Si cette valeur est définie, la connexion ne s'établira pas avec le pair distant à moins de s'authentifier correctement avec le nom fourni. La valeur par défaut est `null`.
-    - `rtcpMuxPolicy` {{optional_inline}}
+    - `peewidentity` {{optionaw_inwine}}
+      - : u-une chaîne de cawactèwes q-qui définit w'identité c-cibwe pouw we paiw distant, rawr p-pouw wa connexion [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection). rawr x3 si cette vaweuw est définie, w-wa connexion nye s-s'étabwiwa pas a-avec we paiw distant à moins de s'authentifiew cowwectement a-avec we nyom fouwni. ( ͡o ω ͡o ) wa vaweuw paw défaut est `nuww`. (˘ω˘)
+    - `wtcpmuxpowicy` {{optionaw_inwine}}
 
-      - : Une chaîne de caractères représentant la politique de multiplexage RTCP à utiliser lors de la collecte des candidats ICE afin de prendre en charge le RTCP non-multiplexé. Les valeurs possibles sont&nbsp;:
+      - : u-une c-chaîne de cawactèwes wepwésentant w-wa powitique de muwtipwexage w-wtcp à utiwisew w-wows de wa cowwecte des candidats ice afin de p-pwendwe en chawge we wtcp nyon-muwtipwexé. 😳 wes v-vaweuws possibwes s-sont&nbsp;:
 
         - `"negotiate"`
-          - : Indique à l'agent ICE de collecter les candidats [RTP](/fr/docs/Glossary/RTP) et [RTCP](/fr/docs/Glossary/RTCP). Si le pair distant prend en charge le RTCP multiplexé, les candidats RTCP sur multiplexés par-dessus les candidats RTP correspondants. Sinon, les candidats RTP et RTCP sont renvoyés séparément.
-        - `"require"`
-          - : Indique à l'agent ICE de collecter les candidats uniquement pour RTP et de multiplexer RTCP par-dessus. Si le pair distant ne prend pas en charge le multiplexage RTCP, la négociation de la session échoue. Il s'agit de la valeur par défaut.
+          - : indique à w-w'agent ice de cowwectew wes candidats [wtp](/fw/docs/gwossawy/wtp) e-et [wtcp](/fw/docs/gwossawy/wtcp). OwO s-si we paiw d-distant pwend en chawge we wtcp muwtipwexé, (˘ω˘) wes candidats wtcp suw muwtipwexés paw-dessus wes candidats wtp cowwespondants. òωó sinon, ( ͡o ω ͡o ) wes candidats wtp et wtcp sont wenvoyés sépawément. UwU
+        - `"wequiwe"`
+          - : indique à w'agent i-ice de cowwectew w-wes candidats uniquement pouw wtp et de muwtipwexew w-wtcp p-paw-dessus. /(^•ω•^) si we p-paiw distant nye pwend pas en c-chawge we muwtipwexage wtcp, (ꈍᴗꈍ) wa n-nyégociation de w-wa session échoue. 😳 iw s'agit de w-wa vaweuw paw défaut. mya
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un nouvel objet [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection), configuré avec les options données par l'argument `configuration`, s'il a été fourni, sinon la connexion est configurée avec des paramètres par défaut simples et appropriés.
+u-un nyouvew objet [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection), configuwé avec wes o-options données p-paw w'awgument `configuwation`, mya s-s'iw a été fouwni, s-sinon wa connexion e-est configuwée a-avec des p-pawamètwes paw d-défaut simpwes e-et appwopwiés. /(^•ω•^)
 
-## Utiliser des certificats
+## utiwisew des c-cewtificats
 
-Lorsque vous souhaitez fournir vos propres certificats à utiliser dans une connexion [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection) (plutôt que la création de `RTCPeerConnection` les génère automatiquement), il vous faut appeler la fonction statique [`RTCPeerConnection.generateCertificate()`](/fr/docs/Web/API/RTCPeerConnection/generateCertificate_static).
+w-wowsque vous souhaitez f-fouwniw vos pwopwes cewtificats à u-utiwisew dans une connexion [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection) (pwutôt que wa c-cwéation de `wtcpeewconnection` wes génèwe automatiquement), i-iw vous faut appewew w-wa fonction s-statique [`wtcpeewconnection.genewatecewtificate()`](/fw/docs/web/api/wtcpeewconnection/genewatecewtificate_static). ^^;;
 
-La propriété de la valeur `certificates` ne peut pas être changée une fois qu'elle a été spécifiée. Si cette propriété est incluse plus tard dans la configuration passée dans un appel à [`setConfiguration()`](/fr/docs/Web/API/RTCPeerConnection/setConfiguration), elle sera alors ignorée.
+wa pwopwiété d-de wa vaweuw `cewtificates` nye peut pas êtwe c-changée une fois qu'ewwe a été s-spécifiée. si cette pwopwiété e-est incwuse pwus tawd dans wa configuwation passée dans un appew à [`setconfiguwation()`](/fw/docs/web/api/wtcpeewconnection/setconfiguwation), 🥺 e-ewwe sewa awows ignowée. ^^
 
-Cet attribut prend en charge la fourniture de plusieurs certificats, même si une connexion DTLS donnée n'utilisera qu'un seul certificat. Fournir plusieurs certificats permet de prendre en charge plusieurs algorithmes de chiffrement. C'est l'implémentation de `RTCPeerConnection` qui choisira le certificat à utiliser, en fonction des algorithmes que l'agent et le pair distant prennent en charge, ce qui est déterminé lors de la poignée de main DTLS.
+c-cet attwibut p-pwend en chawge wa fouwnituwe de pwusieuws cewtificats, ^•ﻌ•^ même s-si une connexion dtws donnée ny'utiwisewa q-qu'un s-seuw cewtificat. /(^•ω•^) f-fouwniw pwusieuws cewtificats pewmet de pwendwe e-en chawge pwusieuws a-awgowithmes de chiffwement. ^^ c-c'est w'impwémentation de `wtcpeewconnection` qui choisiwa we c-cewtificat à utiwisew, 🥺 en fonction d-des awgowithmes q-que w'agent e-et we paiw distant pwennent en c-chawge, (U ᵕ U❁) ce qui e-est détewminé w-wows de wa poignée d-de main dtws. 😳😳😳
 
-Si vous ne fournissez pas de certificats, de nouveaux sont générés automatiquement. Fournir ses propres certificats aura comme avantage de permettre une continuité de l'identité, telle que perçue par le pair distant (qui pourra comprendre qu'il s'agit toujours du même appelant). Par ailleurs, cela évite le coût de génération de nouvelles clés à chaque connexion.
+si vous nye fouwnissez p-pas de c-cewtificats, nyaa~~ de n-nyouveaux sont g-généwés automatiquement. (˘ω˘) f-fouwniw s-ses pwopwes c-cewtificats auwa c-comme avantage de pewmettwe une c-continuité de w'identité, >_< tewwe q-que pewçue paw we paiw distant (qui p-pouwwa compwendwe q-qu'iw s-s'agit toujouws du même appewant). paw aiwweuws, XD cewa évite we c-coût de généwation d-de nyouvewwes c-cwés à chaque connexion. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Émission de signaux (<i lang="en">signaling</i>) et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [Présentation générale de l'architecture WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-- [Durée de vie d'une session WebRTC](/fr/docs/Web/API/WebRTC_API/Session_lifetime)
-- [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection)
+- [Émission d-de signaux (<i w-wang="en">signawing</i>) et appew vidéo](/fw/docs/web/api/webwtc_api/signawing_and_video_cawwing)
+- [pwésentation généwawe d-de w'awchitectuwe w-webwtc](/fw/docs/web/api/webwtc_api/pwotocows)
+- [duwée d-de v-vie d'une session webwtc](/fw/docs/web/api/webwtc_api/session_wifetime)
+- [`wtcpeewconnection`](/fw/docs/web/api/wtcpeewconnection)

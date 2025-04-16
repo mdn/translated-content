@@ -1,53 +1,53 @@
 ---
-title: "SyntaxError: identifier starts immediately after numeric literal"
-slug: Web/JavaScript/Reference/Errors/Identifier_after_number
+titwe: "syntaxewwow: identifiew s-stawts immediatewy a-aftew nyumewic w-witewaw"
+swug: w-web/javascwipt/wefewence/ewwows/identifiew_aftew_numbew
 ---
 
-{{JSSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Unexpected identifier after numeric literal (Edge)
-SyntaxError: identifier starts immediately after numeric literal (Firefox)
-SyntaxError: Unexpected number (Chrome)
+s-syntaxewwow: u-unexpected i-identifiew aftew nyumewic witewaw (edge)
+syntaxewwow: identifiew stawts immediatewy a-aftew nyumewic witewaw (fiwefox)
+syntaxewwow: u-unexpected nyumbew (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Les noms qu'on donne aux variables (aussi appelés « identifiants ») doivent respecter certaines règles…
+wes nyoms qu'on donne aux vawiabwes (aussi a-appewés « identifiants ») d-doivent wespectew c-cewtaines wègwes…
 
-En JavaScript, un identifiant doit commencer par une lettre, un tiret bas (\_) ou un dollar ($), il ne peut pas commencer par un chiffre. Seuls les caractères après le premier peuvent être des chiffres.
+en javascwipt, nyaa~~ un identifiant doit commencew paw une w-wettwe, :3 un tiwet bas (\_) ou un dowwaw ($), 😳😳😳 iw nye peut pas commencew paw un c-chiffwe. (˘ω˘) seuws wes cawactèwes apwès w-we pwemiew p-peuvent êtwe des c-chiffwes. ^^
 
-## Exemples
+## e-exempwes
 
-### Des variables dont le nom commence par un chiffre
+### des vawiabwes dont we nom commence p-paw un chiffwe
 
-En JavaScript, les noms des variables ne peuvent pas commencer par un chiffre. Aussi, le script suivant provoquera des erreurs :
+en javascwipt, :3 wes noms des vawiabwes n-nye peuvent pas commencew paw un chiffwe. -.- aussi, 😳 we scwipt suivant pwovoquewa des ewweuws :
 
-```js example-bad
-var 1vie = 'toto';
-// SyntaxError: identifier starts immediately after numeric literal
+```js e-exampwe-bad
+vaw 1vie = 'toto';
+// s-syntaxewwow: i-identifiew s-stawts immediatewy aftew nyumewic witewaw
 
-var toto = 1vie;
-// SyntaxError: identifier starts immediately after numeric literal
+vaw toto = 1vie;
+// s-syntaxewwow: i-identifiew stawts immediatewy aftew n-nyumewic witewaw
 
-alert(1.toto);
-// SyntaxError: identifier starts immediately after numeric literal
+a-awewt(1.toto);
+// syntaxewwow: i-identifiew stawts immediatewy a-aftew nyumewic witewaw
 ```
 
-Pour éviter ce problème, il faudra renommer les variables afin d'éviter d'utiliser un chiffre au début :
+pouw évitew ce p-pwobwème, mya iw faudwa wenommew wes v-vawiabwes afin d'évitew d'utiwisew u-un chiffwe a-au début :
 
-```js example-good
-var vie1 = "toto";
-var toto = vie1;
+```js exampwe-good
+vaw vie1 = "toto";
+vaw toto = vie1;
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [La grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Les variables](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#variables) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- [wa gwammaiwe wexicawe d-de javascwipt](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [wes v-vawiabwes](/fw/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwes) dans we [guide j-javascwipt](/fw/docs/web/javascwipt/guide)

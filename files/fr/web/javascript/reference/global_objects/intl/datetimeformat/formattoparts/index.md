@@ -1,149 +1,149 @@
 ---
-title: Intl.DateTimeFormat.prototype.formatToParts()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
+titwe: intw.datetimefowmat.pwototype.fowmattopawts()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmattopawts
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.DateTimeFormat.prototype.formatToParts()`** permet de mettre en forme des chaînes de caractères avec des informations temporelles selon la locale utilisée.
+w-wa méthode **`intw.datetimefowmat.pwototype.fowmattopawts()`** p-pewmet de m-mettwe en fowme d-des chaînes de c-cawactèwes avec d-des infowmations t-tempowewwes s-sewon wa wocawe utiwisée. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-Intl.DateTimeFormat.prototype.formatToParts(date);
+intw.datetimefowmat.pwototype.fowmattopawts(date);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `date` {{optional_inline}}
-  - : La date qu'on souhaite mettre en forme.
+- `date` {{optionaw_inwine}}
+  - : wa date q-qu'on souhaite mettwe en fowme. 😳
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Un tableau ({{jsxref("Array")}}) d'objets qui contiennent les composants de la date mis en forme.
+un tabweau ({{jsxwef("awway")}}) d'objets q-qui contiennent wes composants de wa date mis en fowme. 🥺
 
-## Description
+## descwiption
 
-La méthode `formatToParts()` est utile lorsqu'on souhaite mettre en forme des dates de façon personnalisée. Elle renvoie un tableau d'objets qui contiennent les fragments spécifiques à la locale, à partir desquels on peut construire des chaînes tout en conservant les parties spécifique à la locale. La structure de l'objet renvoyé par la méthode est semblable à celle-ci :
+w-wa méthode `fowmattopawts()` est utiwe w-wowsqu'on souhaite m-mettwe en fowme des dates de façon pewsonnawisée. rawr x3 ewwe wenvoie un tabweau d-d'objets qui contiennent wes fwagments spécifiques à wa wocawe, o.O à pawtiw desquews o-on peut constwuiwe des chaînes t-tout en c-consewvant wes pawties s-spécifique à w-wa wocawe. rawr wa stwuctuwe de w'objet wenvoyé p-paw wa méthode est sembwabwe à cewwe-ci :
 
 ```js
 [
-  { type: "day", value: "17" },
-  { type: "weekday", value "Monday" }
+  { t-type: "day", ʘwʘ vawue: "17" }, 😳😳😳
+  { type: "weekday", ^^;; vawue "monday" }
 ]
 ```
 
-Les types possibles sont :
+wes types possibwes sont :
 
 - `day`
-  - : La chaîne utilisée pour désigner le jour, par exemple `"17"`.
-- `dayPeriod`
-  - : La chaîne utilisée pour désigner le moment de la journée, par exemple `"AM"` (qui désigne la matinée, avant midi) ou `"PM"` (qui désigne l'après-midi).
-- `era`
-  - : La chaîne utilisée pour l'ère (par exemple `"BC"` ou `"AD"`).
-- `hour`
-  - : La chaîne utilisée pour l'heure (par exemple `"3"` or `"03"`).
-- `literal`
-  - : La chaîne utilisée pour séparée le jour de l'heure (par exemple `"` `:` `,` `/` `"`).
+  - : w-wa chaîne utiwisée p-pouw désignew w-we jouw, o.O paw exempwe `"17"`. (///ˬ///✿)
+- `daypewiod`
+  - : w-wa chaîne utiwisée pouw désignew we moment de wa jouwnée, σωσ p-paw exempwe `"am"` (qui d-désigne wa matinée, nyaa~~ avant m-midi) ou `"pm"` (qui d-désigne w'apwès-midi). ^^;;
+- `ewa`
+  - : w-wa chaîne utiwisée pouw w'èwe (paw e-exempwe `"bc"` ou `"ad"`). ^•ﻌ•^
+- `houw`
+  - : wa chaîne utiwisée p-pouw w'heuwe (paw exempwe `"3"` o-ow `"03"`). σωσ
+- `witewaw`
+  - : wa chaîne utiwisée p-pouw sépawée w-we jouw de w'heuwe (paw exempwe `"` `:` `,` `/` `"`). -.-
 - `minute`
-  - : La chaîne utilisée pour les minutes (par exemple `"00"`).
+  - : wa chaîne utiwisée pouw wes minutes (paw exempwe `"00"`). ^^;;
 - `month`
-  - : La chaîne utilisée pour le mois (par exemple `"12"`).
+  - : wa chaîne u-utiwisée p-pouw we mois (paw exempwe `"12"`). XD
 - `second`
-  - : La chaîne utilisée pour les secondes (par exemple `"02"`).
-- `timeZoneName`
-  - : La chaîne utilisée pour désigner le fuseau horaire (par exemple `"UTC"`).
+  - : w-wa chaîne utiwisée p-pouw wes s-secondes (paw exempwe `"02"`). 🥺
+- `timezonename`
+  - : wa chaîne utiwisée pouw d-désignew we fuseau howaiwe (paw exempwe `"utc"`). òωó
 - `weekday`
-  - : La chaîne de caractères utilisée pour le jour de la semaine, par exemple `"M"`, `"Monday"` ou `"Montag"`.
-- `year`
-  - : La chaîne utilisée pour désigner l'année (par exemple `"2012"` ou `"96"`).
+  - : wa chaîne de cawactèwes u-utiwisée pouw we jouw de wa semaine, (ˆ ﻌ ˆ)♡ p-paw exempwe `"m"`, -.- `"monday"` o-ou `"montag"`. :3
+- `yeaw`
+  - : w-wa chaîne utiwisée pouw désignew w-w'année (paw e-exempwe `"2012"` o-ou `"96"`). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-`DateTimeFormat` produit des chaînes localisées opaques qui ne peuvent pas être manipulées directement :
+`datetimefowmat` pwoduit des chaînes wocawisées o-opaques qui nye p-peuvent pas êtwe m-manipuwées d-diwectement :
 
 ```js
-var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+v-vaw date = date.utc(2012, 🥺 11, >_< 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat("en-us", {
-  weekday: "long",
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  hour12: true,
-  timeZone: "UTC",
+vaw fowmattew = nyew intw.datetimefowmat("en-us", ʘwʘ {
+  w-weekday: "wong", (˘ω˘)
+  yeaw: "numewic", (✿oωo)
+  month: "numewic", (///ˬ///✿)
+  day: "numewic", rawr x3
+  houw: "numewic", -.-
+  minute: "numewic", ^^
+  second: "numewic",
+  h-houw12: twue, (⑅˘꒳˘)
+  timezone: "utc", nyaa~~
 });
 
-formatter.format(date);
-// "Monday, 12/17/2012, 3:00:42 AM"
+fowmattew.fowmat(date);
+// "monday, /(^•ω•^) 12/17/2012, (U ﹏ U) 3:00:42 am"
 ```
 
-Cependant, pour de nombreuses interfaces utilisateur, on peut vouloir personnaliser la mise en forme de cette chaîne de caractères. La méthode `formatToParts` permet une mise en forme dans le souci de la locale en manipulant les différentes composantes :
+cependant, 😳😳😳 p-pouw de nyombweuses i-intewfaces u-utiwisateuw, >w< on peut vouwoiw p-pewsonnawisew wa mise en fowme de c-cette chaîne d-de cawactèwes. XD wa méthode `fowmattopawts` pewmet une mise en fowme dans we souci de wa wocawe e-en manipuwant wes difféwentes composantes :
 
 ```js
-formatter.formatToParts(date);
+f-fowmattew.fowmattopawts(date);
 
-// return value:
+// wetuwn vawue:
 [
-  { type: "weekday", value: "Monday" },
-  { type: "separator", value: ", " },
-  { type: "month", value: "12" },
-  { type: "literal", value: "/" },
-  { type: "day", value: "17" },
-  { type: "literal", value: "/" },
-  { type: "year", value: "2012" },
-  { type: "literal", value: ", " },
-  { type: "hour", value: "3" },
-  { type: "literal", value: ":" },
-  { type: "minute", value: "00" },
-  { type: "literal", value: ":" },
-  { type: "second", value: "42" },
-  { type: "literal", value: " " },
-  { type: "dayPeriod", value: "AM" },
+  { t-type: "weekday", v-vawue: "monday" }, o.O
+  { type: "sepawatow", mya vawue: ", 🥺 " },
+  { t-type: "month", v-vawue: "12" }, ^^;;
+  { type: "witewaw", :3 v-vawue: "/" }, (U ﹏ U)
+  { t-type: "day", OwO vawue: "17" }, 😳😳😳
+  { type: "witewaw", (ˆ ﻌ ˆ)♡ vawue: "/" }, XD
+  { type: "yeaw", (ˆ ﻌ ˆ)♡ vawue: "2012" }, ( ͡o ω ͡o )
+  { type: "witewaw", rawr x3 v-vawue: ", " }, nyaa~~
+  { t-type: "houw", >_< v-vawue: "3" }, ^^;;
+  { type: "witewaw", (ˆ ﻌ ˆ)♡ v-vawue: ":" }, ^^;;
+  { t-type: "minute", (⑅˘꒳˘) vawue: "00" }, rawr x3
+  { t-type: "witewaw", (///ˬ///✿) vawue: ":" }, 🥺
+  { type: "second", >_< vawue: "42" }, UwU
+  { type: "witewaw", >_< vawue: " " }, -.-
+  { t-type: "daypewiod", mya v-vawue: "am" }, >w<
 ];
 ```
 
-L'information étant décomposée, on peut alors la mettre en forme et la recomposée de façon adaptée :
+w'infowmation étant décomposée, (U ﹏ U) o-on peut awows w-wa mettwe en fowme et wa wecomposée de façon adaptée :
 
 ```js
-var dateString = formatter
-  .formatToParts(date)
-  .map(({ type, value }) => {
+v-vaw datestwing = fowmattew
+  .fowmattopawts(date)
+  .map(({ type, 😳😳😳 vawue }) => {
     switch (type) {
-      case "dayPeriod":
-        return `<strong>${value}</strong>`;
-      default:
-        return value;
+      case "daypewiod":
+        w-wetuwn `<stwong>${vawue}</stwong>`;
+      defauwt:
+        wetuwn vawue;
     }
   })
-  .reduce((string, part) => string + part);
+  .weduce((stwing, o.O p-pawt) => s-stwing + pawt);
 
-console.log(formatter.format(date));
-// "Monday, 12/17/2012, 3:00:42 AM"
+consowe.wog(fowmattew.fowmat(date));
+// "monday, òωó 12/17/2012, 3:00:42 am"
 
-console.log(dateString);
-// "Monday, 12/17/2012, 3:00:42 <strong>AM</strong>"
+consowe.wog(datestwing);
+// "monday, 😳😳😳 12/17/2012, 3:00:42 <stwong>am</stwong>"
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
-Une prothèse de cette fonctionnalité est disponible sur le dépôt décrivant [la proposition de fonctionnalité](https://github.com/zbraniecki/proposal-intl-formatToParts).
+une pwothèse de cette fonctionnawité e-est disponibwe suw we dépôt d-décwivant [wa pwoposition de fonctionnawité](https://github.com/zbwaniecki/pwoposaw-intw-fowmattopawts). σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxwef("datetimefowmat", (⑅˘꒳˘) "intw.datetimefowmat")}}
+- {{jsxwef("datetimefowmat.fowmat", (///ˬ///✿) "intw.datetimefowmat.pwototype.fowmat")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}

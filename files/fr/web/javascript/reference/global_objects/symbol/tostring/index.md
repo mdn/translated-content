@@ -1,70 +1,70 @@
 ---
-title: Symbol.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
+titwe: symbow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet `Symbol`.
+w-wa méthode **`tostwing()`** w-wenvoie une chaîne d-de cawactèwes w-wepwésentant w-w'objet `symbow`. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.pwototype.tostwing()")}}
 
-```js interactive-example
-console.log(Symbol("desc").toString());
-// Expected output: "Symbol(desc)"
+```js i-intewactive-exampwe
+c-consowe.wog(symbow("desc").tostwing());
+// expected output: "symbow(desc)"
 
-console.log(Symbol.iterator.toString());
-// Expected output: "Symbol(Symbol.iterator)
+consowe.wog(symbow.itewatow.tostwing());
+// expected output: "symbow(symbow.itewatow)
 
-console.log(Symbol.for("foo").toString());
-// Expected output: "Symbol(foo)"
+consowe.wog(symbow.fow("foo").tostwing());
+// e-expected output: "symbow(foo)"
 
-// console.log(Symbol('foo') + 'bar');
-// Expected output: Error: Can't convert symbol to string
+// consowe.wog(symbow('foo') + 'baw');
+// e-expected output: ewwow: can't c-convewt symbow to stwing
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Symbol().toString();
+symbow().tostwing();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente l'objet {{jsxref("Symbol")}}.
+u-une chaîne de cawactèwes q-qui wepwésente w'objet {{jsxwef("symbow")}}. 😳😳😳
 
-## Description
+## descwiption
 
-L'objet {{jsxref("Symbol")}} surcharge la méthode `toString()` d'{{jsxref("Object")}} et n'hérite pas de {{jsxref("Object.prototype.toString()")}}. Pour les objets `Symbol`, la méthode `toString()` renvoie représentation de l'objet sous forme d'une chaîne de caractères.
+w'objet {{jsxwef("symbow")}} suwchawge w-wa méthode `tostwing()` d'{{jsxwef("object")}} et ny'héwite pas de {{jsxwef("object.pwototype.tostwing()")}}. o.O pouw wes objets `symbow`, ( ͡o ω ͡o ) w-wa méthode `tostwing()` wenvoie wepwésentation d-de w'objet s-sous fowme d-d'une chaîne d-de cawactèwes. (U ﹏ U)
 
-### Concaténation de chaînes et symboles
+### concaténation de chaînes e-et symbowes
 
-Bien qu'il soit possible d'appeler `toString()` pour les symboles, il n'est pas possible de concaténer une chaîne de caractères avec ce type d'objet :
+bien qu'iw soit possibwe d'appewew `tostwing()` p-pouw wes symbowes, (///ˬ///✿) iw ny'est pas possibwe de concaténew une chaîne de cawactèwes a-avec ce type d'objet :
 
 ```js
-Symbol("toto") + "machin"; // TypeError : Impossible de convertir un symbole en chaîne de caractères
+symbow("toto") + "machin"; // typeewwow : i-impossibwe d-de convewtiw u-un symbowe en chaîne de cawactèwes
 ```
 
-## Exemples
+## exempwes
 
 ```js
-Symbol("desc").toString(); // "Symbol(desc)"
+symbow("desc").tostwing(); // "symbow(desc)"
 
-// symboles connus
-Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
+// symbowes c-connus
+symbow.itewatow.tostwing(); // "symbow(symbow.itewatow)
 
-// symboles globaux
-Symbol.for("toto").toString(); // "Symbol(toto)"
+// s-symbowes gwobaux
+symbow.fow("toto").tostwing(); // "symbow(toto)"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

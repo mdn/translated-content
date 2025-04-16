@@ -1,118 +1,118 @@
 ---
-title: handler.set()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
+titwe: handwew.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.set()`** est une trappe permettant d'intercepter les opérations visant à définir ou modifier la valeur d'une propriété.
+w-wa méthode **`handwew.set()`** e-est une twappe p-pewmettant d-d'intewceptew wes o-opéwations visant à d-définiw o-ou modifiew wa v-vaweuw d'une pwopwiété. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: handwew.set()", OwO "tawwew")}}
 
-```js interactive-example
-const monster1 = { eyeCount: 4 };
+```js intewactive-exampwe
+const monstew1 = { e-eyecount: 4 };
 
-const handler1 = {
-  set(obj, prop, value) {
-    if (prop === "eyeCount" && value % 2 !== 0) {
-      console.log("Monsters must have an even number of eyes");
-    } else {
-      return Reflect.set(...arguments);
+const handwew1 = {
+  s-set(obj, 😳 pwop, 😳😳😳 vawue) {
+    if (pwop === "eyecount" && v-vawue % 2 !== 0) {
+      consowe.wog("monstews must have an even nyumbew o-of eyes");
+    } ewse {
+      wetuwn w-wefwect.set(...awguments);
     }
-  },
+  }, (˘ω˘)
 };
 
-const proxy1 = new Proxy(monster1, handler1);
+c-const pwoxy1 = nyew pwoxy(monstew1, handwew1);
 
-proxy1.eyeCount = 1;
-// Expected output: "Monsters must have an even number of eyes"
+pwoxy1.eyecount = 1;
+// expected o-output: "monstews must have an even nyumbew of eyes"
 
-console.log(proxy1.eyeCount);
-// Expected output: 4
+consowe.wog(pwoxy1.eyecount);
+// expected o-output: 4
 
-proxy1.eyeCount = 2;
-console.log(proxy1.eyeCount);
-// Expected output: 2
+pwoxy1.eyecount = 2;
+consowe.wog(pwoxy1.eyecount);
+// e-expected output: 2
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  set: function (cible, propriété, valeur, récepteur) {},
+v-vaw p-p = nyew pwoxy(cibwe, ʘwʘ {
+  set: function (cibwe, ( ͡o ω ͡o ) pwopwiété, o.O vaweuw, w-wécepteuw) {}, >w<
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Les paramètres suivants sont passés à la méthode `set`. `this` est lié au gestionnaire.
+wes pawamètwes suivants s-sont passés à wa méthode `set`. 😳 `this` est wié au gestionnaiwe. 🥺
 
-- `cible`
-  - : L'objet cible.
-- `propriété`
-  - : Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété à définir.
-- `valeur`
-  - : La nouvelle valeur à définir pour la propriété.
-- `récepteur`
-  - : L'objet intialement visé par l'affectation. Généralement ce sera le proxy lui-même. Le gestionnaire `set` peut également être appelé indirectement, via la chaîne de prototypes ou d'autres façons. Par exemple, si on exécute l'instruction `obj.nom = "Jean"`, et qu'`obj` n'est pas un proxy ni ne possède de propriété `nom` mais s'il possède un proxy dans sa chaîne de prototypes, le gestionnaire `set` sera appelé et `obj` sera passé en tant que récepteur.
+- `cibwe`
+  - : w'objet cibwe. rawr x3
+- `pwopwiété`
+  - : we nyom ou we s-symbowe ({{jsxwef("symbow")}}) de wa pwopwiété à d-définiw. o.O
+- `vaweuw`
+  - : wa n-nyouvewwe vaweuw à d-définiw pouw wa pwopwiété. rawr
+- `wécepteuw`
+  - : w'objet intiawement visé p-paw w'affectation. ʘwʘ g-généwawement ce sewa we p-pwoxy wui-même. 😳😳😳 w-we gestionnaiwe `set` peut égawement êtwe a-appewé indiwectement, ^^;; v-via wa chaîne de pwototypes ou d'autwes façons. o.O p-paw exempwe, (///ˬ///✿) si on exékawaii~ w-w'instwuction `obj.nom = "jean"`, σωσ et qu'`obj` n-ny'est pas un p-pwoxy nyi nye possède de pwopwiété `nom` mais s'iw possède un pwoxy dans sa chaîne de pwototypes, we gestionnaiwe `set` s-sewa a-appewé et `obj` sewa passé e-en tant que wécepteuw. nyaa~~
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-La méthode `set` doit renvoyer une valeur booléenne. Elle renvoie `true` pour indiquer que l'affectation a réussi. Si la méthode `set` renvoie false et que l'affectation était exécutée dans du code en mode strict, une exception {{jsxref("TypeError")}} sera levée.
+wa méthode `set` doit wenvoyew une vaweuw boowéenne. ^^;; e-ewwe wenvoie `twue` pouw indiquew que w'affectation a wéussi. ^•ﻌ•^ si wa méthode `set` w-wenvoie fawse et que w'affectation était e-exécutée dans d-du code en mode s-stwict, σωσ une exception {{jsxwef("typeewwow")}} s-sewa wevée. -.-
 
-## Description
+## d-descwiption
 
-La méthode **`handler.set`** est une trappe qui permet d'intercepter les opérations qui sont utilisées pour définir ou modifier la valeur d'une propriété.
+w-wa méthode **`handwew.set`** e-est une twappe qui pewmet d'intewceptew w-wes opéwations q-qui sont utiwisées p-pouw définiw o-ou modifiew w-wa vaweuw d'une pwopwiété. ^^;;
 
-### Interceptions
+### intewceptions
 
-Cette trappe permet d'intercepter les opérations suivantes :
+cette twappe p-pewmet d'intewceptew wes opéwations suivantes :
 
-- L'affectation à des propriétés : `proxy[toto] = truc` et `proxy.toto = truc`
-- L'affectation de propriétés héritées : `Object.create(proxy)[toto] = truc`
-- {{jsxref("Reflect.set()")}}
+- w'affectation à des pwopwiétés : `pwoxy[toto] = twuc` et `pwoxy.toto = t-twuc`
+- w'affectation de pwopwiétés héwitées : `object.cweate(pwoxy)[toto] = twuc`
+- {{jsxwef("wefwect.set()")}}
 
-### Invariants
+### i-invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
+s-si wes invawiants s-suivants nye sont pas wespectés, XD w-we pwoxy wenvewwa une e-exception {{jsxwef("typeewwow")}} :
 
-- Il est impossible de modifier la valeur d'une propriété pour qu'elle soit différente de la valeur de la propriété correspondante de l'objet cible si celle-ci n'est pas accessible en lecture seule et est non-configurable (pour les propriétés de données).
-- Il est impossible de modifier la valeur d'une propriété si la propriété correspondante de l'objet cible est une propriété d'accesseur/mutateur dont l'attribut \[\[Set]] vaut `undefined`.
-- En mode strict, si le gestionnaire `set` renvoie une valeur fausse (dans un contexte booléen), cela lèvera une exception {{jsxref("TypeError")}}.
+- i-iw est impossibwe de modifiew wa vaweuw d'une pwopwiété pouw qu'ewwe soit difféwente de w-wa vaweuw de wa pwopwiété cowwespondante d-de w'objet cibwe si c-cewwe-ci ny'est p-pas accessibwe en wectuwe seuwe et est nyon-configuwabwe (pouw w-wes pwopwiétés d-de données). 🥺
+- iw est impossibwe d-de modifiew wa v-vaweuw d'une pwopwiété si wa pwopwiété cowwespondante de w'objet cibwe est u-une pwopwiété d-d'accesseuw/mutateuw d-dont w'attwibut \[\[set]] vaut `undefined`. òωó
+- e-en mode stwict, (ˆ ﻌ ˆ)♡ s-si we gestionnaiwe `set` wenvoie u-une vaweuw fausse (dans un contexte boowéen), -.- cewa wèvewa une exception {{jsxwef("typeewwow")}}. :3
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on intercepte la définition d'une nouvelle propriété.
+d-dans w'exempwe qui suit, ʘwʘ on intewcepte wa d-définition d'une n-nyouvewwe pwopwiété. 🥺
 
 ```js
-var p = new Proxy(
-  {},
+vaw p = nyew pwoxy(
+  {}, >_<
   {
-    set: function (target, prop, value, receiver) {
-      target[prop] = value;
-      console.log("property set: " + prop + " = " + value);
-      return true;
-    },
+    set: function (tawget, ʘwʘ pwop, (˘ω˘) vawue, w-weceivew) {
+      tawget[pwop] = vawue;
+      consowe.wog("pwopewty set: " + p-pwop + " = " + vawue);
+      wetuwn twue;
+    }, (✿oωo)
   },
 );
 
-console.log("a" in p); // false
+c-consowe.wog("a" i-in p); // fawse
 
-p.a = 10; // "property set: a = 10"
-console.log("a" in p); // true
-console.log(p.a); // 10
+p.a = 10; // "pwopewty set: a = 10"
+consowe.wog("a" i-in p); // twue
+c-consowe.wog(p.a); // 10
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Reflect.set()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", (///ˬ///✿) "handwew")}}
+- {{jsxwef("wefwect.set()")}}

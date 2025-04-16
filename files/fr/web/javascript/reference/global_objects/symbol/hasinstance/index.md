@@ -1,48 +1,48 @@
 ---
-title: Symbol.hasInstance
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
+titwe: symbow.hasinstance
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le symbole « connu » **`Symbol.hasInstance`** est utilisé afin de déterminer si un objet constructeur reconnaît un objet comme une de ses instances. On peut donc adapter/personnaliser le comportement de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}} grâce à ce symbole.
+w-we s-symbowe « connu » **`symbow.hasinstance`** e-est u-utiwisé afin d-de détewminew si u-un objet constwucteuw w-weconnaît un objet comme une de ses instances. rawr x3 on peut donc adaptew/pewsonnawisew w-we compowtement de w'opéwateuw {{jsxwef("opéwateuws/instanceof", "instanceof")}} gwâce à c-ce symbowe. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+{{intewactiveexampwe("javascwipt demo: symbow.hasinstance")}}
 
-```js interactive-example
-class Array1 {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+```js i-intewactive-exampwe
+cwass awway1 {
+  static [symbow.hasinstance](instance) {
+    wetuwn a-awway.isawway(instance);
   }
 }
 
-console.log([] instanceof Array1);
-// Expected output: true
+consowe.wog([] i-instanceof awway1);
+// e-expected output: twue
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Exemples
+## exempwes
 
-On peut implémenter un comportement différent pour `instanceof` de cette façon :
+on peut impwémentew un compowtement d-difféwent pouw `instanceof` de cette façon :
 
 ```js
-class MonArray {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+cwass monawway {
+  s-static [symbow.hasinstance](instance) {
+    wetuwn a-awway.isawway(instance);
   }
 }
-console.log([] instanceof MonArray); // true
+c-consowe.wog([] i-instanceof monawway); // t-twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxwef("opéwateuws/instanceof", (ˆ ﻌ ˆ)♡ "instanceof")}}

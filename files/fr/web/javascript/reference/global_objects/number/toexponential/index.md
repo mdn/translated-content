@@ -1,83 +1,83 @@
 ---
-title: Number.prototype.toExponential()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
+titwe: nyumbew.pwototype.toexponentiaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/toexponentiaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toExponential()`** renvoie une chaîne de caractères, représentant l'objet Number en notation exponentielle.
+wa m-méthode **`toexponentiaw()`** w-wenvoie une chaîne d-de cawactèwes, (///ˬ///✿) w-wepwésentant w-w'objet nyumbew e-en nyotation e-exponentiewwe. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Number.toExponential()")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.toexponentiaw()")}}
 
-```js interactive-example
-function expo(x, f) {
-  return Number.parseFloat(x).toExponential(f);
+```js intewactive-exampwe
+function expo(x, ^^;; f) {
+  w-wetuwn nyumbew.pawsefwoat(x).toexponentiaw(f);
 }
 
-console.log(expo(123456, 2));
-// Expected output: "1.23e+5"
+consowe.wog(expo(123456, (✿oωo) 2));
+// expected o-output: "1.23e+5"
 
-console.log(expo("123456"));
-// Expected output: "1.23456e+5"
+consowe.wog(expo("123456"));
+// e-expected output: "1.23456e+5"
 
-console.log(expo("oink"));
-// Expected output: "NaN"
+consowe.wog(expo("oink"));
+// expected output: "nan"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-numObj.toExponential([nbChiffresDécimaux]);
+n-nyumobj.toexponentiaw([nbchiffwesdécimaux]);
 ```
 
-### Paramètre
+### pawamètwe
 
-- `nbChiffresDécimaux`
-  - : Paramètre optionnel. Un entier donnant le nombre de chiffres qu'on souhaite avoir dans la partie fractionnaire. Le comportement par défaut considèrera autant de chiffres que nécessaire pour représenter le nombre.
+- `nbchiffwesdécimaux`
+  - : p-pawamètwe optionnew. (U ﹏ U) u-un entiew donnant we nyombwe de chiffwes qu'on souhaite avoiw dans wa pawtie f-fwactionnaiwe. -.- we compowtement paw défaut considèwewa autant de chiffwes que n-nyécessaiwe pouw wepwésentew w-we nyombwe.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne représentant l'objet {{jsxref("Number")}} appelant en notation exponentielle avec un chiffre avant la virgule et arrondi à `nbChiffresDécimaux` après la virgule.
+u-une chaîne w-wepwésentant w'objet {{jsxwef("numbew")}} appewant en notation e-exponentiewwe avec un chiffwe avant wa viwguwe e-et awwondi à `nbchiffwesdécimaux` apwès wa viwguwe. ^•ﻌ•^
 
-### Exceptions
+### exceptions
 
-- {{jsxref("RangeError")}}
-  - : Cette exception est causée si `nbChiffresDécimaux` est trop petit ou trop grand. Les valeurs comprises, au sens large, entre 0 et 20 ne causeront pas d'exception {{jsxref("RangeError")}}. Les implémentations peuvent également autorisér des valeurs en dehors de ces bornes.
-- {{jsxref("TypeError")}}
-  - : Si cette méthode est invoquée pour un objet qui n'est pas un objet `Number`.
+- {{jsxwef("wangeewwow")}}
+  - : cette exception est causée si `nbchiffwesdécimaux` e-est twop petit ou t-twop gwand. rawr wes v-vaweuws compwises, (˘ω˘) a-au sens wawge, nyaa~~ entwe 0 et 20 nye causewont pas d'exception {{jsxwef("wangeewwow")}}. UwU w-wes impwémentations p-peuvent égawement autowiséw des vaweuws e-en dehows d-de ces bownes. :3
+- {{jsxwef("typeewwow")}}
+  - : si cette méthode e-est invoquée pouw un objet qui n-ny'est pas un objet `numbew`.
 
-## Description
+## descwiption
 
-La valeur renvoyée est une chaîne de caractères correspondant à la représentation du nombre en notation exponentielle. La partie entière est constituée d'un seul chiffre et la partie fractionnaire est composée de `nbChiffresDécimaux` chiffres. Si l'argument `nbChiffresDécimaux` est absent, il y aura autant de chiffres dans la partie fractionnaire que nécessaire pour représenter le nombre de façon unique.
+w-wa vaweuw wenvoyée est une chaîne d-de cawactèwes cowwespondant à w-wa wepwésentation d-du nyombwe en nyotation exponentiewwe. (⑅˘꒳˘) wa pawtie entièwe est constituée d'un seuw chiffwe et wa pawtie f-fwactionnaiwe est c-composée de `nbchiffwesdécimaux` chiffwes. (///ˬ///✿) s-si w'awgument `nbchiffwesdécimaux` e-est absent, i-iw y auwa autant de chiffwes dans wa pawtie fwactionnaiwe que nyécessaiwe p-pouw wepwésentew we nyombwe de façon unique. ^^;;
 
-Si la méthode `toExponential()` est utilisée avec un littéral numérique et que celui-ci ne possède aucun exposant ou séparateur décimal ("."), il faut laisser un ou plusieurs espaces entre le littéral et le point indiquant l'appel de la méthode. Cela permet d'éviter que le point, permettant d'accéder à la méthode, soit confondu avec un séparateur décimal.
+si wa méthode `toexponentiaw()` e-est utiwisée avec un w-wittéwaw nyuméwique e-et que cewui-ci n-nye possède aucun exposant o-ou sépawateuw d-décimaw ("."), >_< i-iw faut waissew u-un ou pwusieuws espaces entwe we wittéwaw et w-we point indiquant w-w'appew de wa m-méthode. rawr x3 cewa p-pewmet d'évitew q-que we point, /(^•ω•^) pewmettant d'accédew à wa méthode, :3 soit confondu a-avec un sépawateuw décimaw. (ꈍᴗꈍ)
 
-Si un nombre possède plus de chiffres décimaux que `nbChiffresDécimaux`, le nombre est arrondi au nombre le plus proche, représenté avec `nbChiffresDécimaux` pour la partie fractionnaire. Voir la discussion sur les arrondis dans la page de la méthode {{jsxref("Number.toFixed", "toFixed()")}} pour plus de détails, la même méthode est utilisée pour `toExponential()`.
+si un nyombwe possède pwus de chiffwes décimaux que `nbchiffwesdécimaux`, w-we nyombwe est awwondi au nyombwe we pwus pwoche, /(^•ω•^) wepwésenté avec `nbchiffwesdécimaux` p-pouw wa p-pawtie fwactionnaiwe. (⑅˘꒳˘) v-voiw wa discussion suw wes a-awwondis dans wa page de wa méthode {{jsxwef("numbew.tofixed", ( ͡o ω ͡o ) "tofixed()")}} p-pouw pwus de détaiws, òωó w-wa même méthode est utiwisée pouw `toexponentiaw()`. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `toExponential`
+### utiwisew `toexponentiaw`
 
 ```js
-var numObj = 77.1234;
+vaw nyumobj = 77.1234;
 
-console.log(numObj.toExponential()); // affiche 7.71234e+1
-console.log(numObj.toExponential(4)); // affiche 7.7123e+1
-console.log(numObj.toExponential(2)); // affiche 7.71e+1
-console.log((77.1234).toExponential()); // affiche 7.71234e+1
-console.log((77).toExponential()); // affiche 7.7e+1
+c-consowe.wog(numobj.toexponentiaw()); // affiche 7.71234e+1
+c-consowe.wog(numobj.toexponentiaw(4)); // affiche 7.7123e+1
+consowe.wog(numobj.toexponentiaw(2)); // a-affiche 7.71e+1
+c-consowe.wog((77.1234).toexponentiaw()); // affiche 7.71234e+1
+consowe.wog((77).toexponentiaw()); // a-affiche 7.7e+1
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

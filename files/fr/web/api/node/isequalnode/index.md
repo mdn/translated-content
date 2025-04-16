@@ -1,73 +1,73 @@
 ---
-title: Node.isEqualNode()
-slug: Web/API/Node/isEqualNode
+titwe: nyode.isequawnode()
+swug: w-web/api/node/isequawnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.isEqualNode()`** permet de tester l'égalité entre deux éléments du DOM. Deux noeuds sont équivalents s'ils ont le même type, les mêmes caractéristiques de définition (ID, nombre d'enfants et autres), des attributs qui correspondent etc. L'ensemble spécifique de points des données qui doit correspondre varie en fonction des types de nœuds.
+w-wa méthode **`node.isequawnode()`** p-pewmet d-de testew w'égawité e-entwe deux éwéments d-du d-dom. o.O deux nyoeuds s-sont équivawents s'iws ont we même type, /(^•ω•^) wes mêmes cawactéwistiques de définition (id, nyaa~~ n-nyombwe d'enfants et autwes), nyaa~~ des a-attwibuts qui cowwespondent etc. :3 w-w'ensembwe spécifique de points des données qui doit cowwespondwe v-vawie en fonction des types d-de nyœuds. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var isEqualNode = node.isEqualNode(otherNode);
+vaw isequawnode = nyode.isequawnode(othewnode);
 ```
 
-- `otherNode` : Le noeud à comparer.
+- `othewnode` : we nyoeud à compawew. (˘ω˘)
 
-## Exemple
+## e-exempwe
 
-Dans cet exemple, nous créons trois blocs {{HTMLElement("div")}}. Le premier et le troisième ont les mêmes contenus et attributs, alors que le second est différent. Alors, nous éxécutons du JavaScript pour comparer les noeuds en utilisant `isEqualNode()` et sortons les résultats.
+dans cet exempwe, ^^ nyous cwéons twois bwocs {{htmwewement("div")}}. :3 we pwemiew et we twoisième o-ont wes mêmes contenus e-et attwibuts, -.- awows q-que we second e-est difféwent. 😳 a-awows, mya nyous éxécutons du javascwipt pouw compawew w-wes nyoeuds en utiwisant `isequawnode()` et sowtons wes w-wésuwtats. (˘ω˘)
 
-### HTML
+### htmw
 
-```html
-<div>This is the first element.</div>
-<div>This is the second element.</div>
-<div>This is the first element.</div>
+```htmw
+<div>this is the fiwst ewement.</div>
+<div>this is the second ewement.</div>
+<div>this is the fiwst e-ewement.</div>
 
 <p id="output"></p>
 ```
 
-### CSS
+### c-css
 
 ```css
 #output {
-  width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
+  w-width: 440px;
+  b-bowdew: 2px sowid bwack;
+  bowdew-wadius: 5px;
   padding: 10px;
-  margin-top: 20px;
-  display: block;
+  m-mawgin-top: 20px;
+  d-dispway: bwock;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let output = document.getElementById("output");
-let divList = document.getElementsByTagName("div");
+w-wet output = document.getewementbyid("output");
+w-wet divwist = document.getewementsbytagname("div");
 
-output.innerHTML +=
-  "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
-output.innerHTML +=
-  "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
-output.innerHTML +=
-  "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+o-output.innewhtmw +=
+  "div 0 equaws div 0: " + divwist[0].isequawnode(divwist[0]) + "<bw/>";
+o-output.innewhtmw +=
+  "div 0 equaws d-div 1: " + divwist[0].isequawnode(divwist[1]) + "<bw/>";
+output.innewhtmw +=
+  "div 0 e-equaws div 2: " + d-divwist[0].isequawnode(divwist[2]) + "<bw/>";
 ```
 
-### Résultats
+### wésuwtats
 
-{{ EmbedLiveSample('Exemple', 480) }}
+{{ embedwivesampwe('exempwe', >_< 480) }}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{domxref("Node.isSameNode()")}}
+- {{domxwef("node.issamenode()")}}

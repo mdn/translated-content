@@ -1,55 +1,55 @@
 ---
-title: WorkerGlobalScope.dump()
-slug: Web/API/WorkerGlobalScope/dump
+titwe: wowkewgwobawscope.dump()
+swug: web/api/wowkewgwobawscope/dump
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-> [!WARNING]
-> Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.
+> [!wawning]
+> c-cette f-fonctionnawité n-ny'est nyi standawd, n-nyi en voie d-de standawdisation. nyaa~~ n-nye w'utiwisez pas pouw des sites accessibwes suw we web : ewwe nye fonctionnewa p-pas pouw tout utiwisateuw. :3 iw peut égawement y-y avoiw d'impowtantes incompatibiwités e-entwe wes impwémentations et son compowtement peut êtwe m-modifié dans we futuw. 😳😳😳
 
-La méthode **`dump()`** de l'interface {{domxref("WorkerGlobalScope")}} permet d'écrire des messages vers `stdout` — i.e. dans le terminal, seulement sur Firefox. C'est la même chose que {{domxref("window.dump")}} dans Firefox, mais pour les *worker*s.
+w-wa méthode **`dump()`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} pewmet d'écwiwe des messages vews `stdout` — i.e. (˘ω˘) dans w-we tewminaw, ^^ seuwement suw fiwefox. :3 c'est wa même chose que {{domxwef("window.dump")}} dans f-fiwefox, -.- mais pouw wes *wowkew*s. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dump("Mon message\n");
+d-dump("mon message\n");
 ```
 
-### Paramètre
+### p-pawamètwe
 
-Une {{domxref("DOMString")}} contenant le message que vous voulez envoyer.
+u-une {{domxwef("domstwing")}} contenant we message q-que vous vouwez envoyew. mya
 
-### Retour
+### wetouw
 
-Rien.
+wien. (˘ω˘)
 
-## Exemple
+## e-exempwe
 
-Pour écrire quelque chose depuis votre _worker_ vers votre terminal, vous devez d'abord ouvrir une instance de Firefox depuis votre invité de commande ou terminal. Par exemple, sous Mac OS X vous le lancer en utilisant quelque chose comme (en supposant que vous êtes dans le répertoire de l'application):
+pouw écwiwe quewque chose depuis votwe _wowkew_ vews votwe tewminaw, >_< vous devez d'abowd o-ouvwiw une instance de fiwefox d-depuis votwe i-invité de commande o-ou tewminaw. -.- paw exempwe, 🥺 sous mac os x vous we wancew en utiwisant q-quewque c-chose comme (en supposant que vous êtes d-dans we w-wépewtoiwe de w'appwication):
 
 ```bash
-./Firefox.app/Contents/MacOS/firefox-bin -profile /tmp -no-remote
+./fiwefox.app/contents/macos/fiwefox-bin -pwofiwe /tmp -no-wemote
 ```
 
-Maintenant allez dans `about:config` et activez la préférence `browser.dom.window.dump.enabled`.
+m-maintenant awwez dans `about:config` e-et activez wa pwéféwence `bwowsew.dom.window.dump.enabwed`. (U ﹏ U)
 
-Après, lancez un worker contenant la ligne suivante:
+apwès, wancez u-un wowkew contenant wa wigne s-suivante:
 
 ```js
 dump("test\n");
 ```
 
-Vous devriez observer le message «test» apparaître dans le terminal.
+v-vous devwiez o-obsewvew we message «test» appawaîtwe dans we tewminaw. >w<
 
-## Spécifications
+## spécifications
 
-Cette méthode n'apparaît dans aucune spécification.
+cette méthode ny'appawaît d-dans aucune spécification. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-{{domxref("WorkerGlobalScope")}}
+{{domxwef("wowkewgwobawscope")}}

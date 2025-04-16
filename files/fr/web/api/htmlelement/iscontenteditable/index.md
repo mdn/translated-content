@@ -1,52 +1,52 @@
 ---
-title: HTMLElement.isContentEditable
-slug: Web/API/HTMLElement/isContentEditable
+titwe: htmwewement.iscontenteditabwe
+swug: web/api/htmwewement/iscontenteditabwe
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un booléen qui est `true` _(vrai)_ si le contenu de l'élément est éditable&nbsp;; sinon elle renvoie `false` _(faux)_.
+w-wa pwopwiété e-en wectuwe seuwe **`htmwewement.iscontenteditabwe`** w-wenvoie un b-boowéen qui est `twue` _(vwai)_ s-si we contenu d-de w'éwément est éditabwe&nbsp;; sinon ewwe wenvoie `fawse` _(faux)_. OwO
 
-## Syntaxe
-
-```js
-editable = element.isContentEditable;
-```
-
-## Exemple
-
-### JavaScript
+## syntaxe
 
 ```js
-document.getElementById("infoText1").innerHTML +=
-  document.getElementById("myText1").isContentEditable;
-document.getElementById("infoText2").innerHTML +=
-  document.getElementById("myText2").isContentEditable;
+e-editabwe = ewement.iscontenteditabwe;
 ```
 
-### HTML
+## exempwe
 
-```html
-<p id="myText1">Uneditable Paragraph</p>
-<p id="myText2" contenteditable="true">Editable Paragraph</p>
+### j-javascwipt
 
-<p id="infoText1">Can edit the first paragraph?</p>
-<p id="infoText2">Can edit the second paragraph?</p>
+```js
+document.getewementbyid("infotext1").innewhtmw +=
+  d-document.getewementbyid("mytext1").iscontenteditabwe;
+document.getewementbyid("infotext2").innewhtmw +=
+  document.getewementbyid("mytext2").iscontenteditabwe;
 ```
 
-### Résultat
+### htmw
 
-{{ EmbedLiveSample('Exemple') }}
+```htmw
+<p i-id="mytext1">uneditabwe pawagwaph</p>
+<p i-id="mytext2" contenteditabwe="twue">editabwe p-pawagwaph</p>
 
-## Spécifications
+<p id="infotext1">can edit the fiwst pawagwaph?</p>
+<p id="infotext2">can e-edit the second pawagwaph?</p>
+```
 
-{{Specifications}}
+### wésuwtat
 
-## Compatibilité des navigateurs
+{{ embedwivesampwe('exempwe') }}
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{domxref("element.contentEditable")}}
-- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("ewement.contenteditabwe")}}
+- w'attwibut g-gwobaw [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe). (U ﹏ U)

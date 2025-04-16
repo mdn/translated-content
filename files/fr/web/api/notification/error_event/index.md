@@ -1,28 +1,28 @@
 ---
-title: Notification.onerror
-slug: Web/API/Notification/error_event
+titwe: nyotification.onewwow
+swug: web/api/notification/ewwow_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété **`onerror`** de l'interface {{domxref ("Notification")}} spécifie un écouteur d'événements pour recevoir les événements {{domxref ("HTMLElement/error_event", "error")}}. Ces événements se produisent lorsque quelque chose ce déroule mal avec une {{domxref ("Notification")}} (dans de nombreux cas, une erreur qui empêche l'affichage de la notification.)
+w-wa pwopwiété **`onewwow`** d-de w'intewface {{domxwef ("notification")}} s-spécifie un écouteuw d-d'événements p-pouw w-wecevoiw wes événements {{domxwef ("htmwewement/ewwow_event", 😳 "ewwow")}}. XD c-ces événements se pwoduisent wowsque quewque chose ce déwouwe maw a-avec une {{domxwef ("notification")}} (dans de nyombweux cas, :3 une e-ewweuw qui empêche w'affichage d-de wa nyotification.)
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.onerror = function(event) { ... }
-Notification.onerror = (even) => { ... }
+nyotification.onewwow = function(event) { ... }
+n-nyotification.onewwow = (even) => { ... }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Notification")}}
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxwef("notification")}}
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

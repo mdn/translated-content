@@ -1,158 +1,158 @@
 ---
-title: Object.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+titwe: object.entwies()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.entries()`** renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt la chaîne des prototypes).
+w-wa méthode **`object.entwies()`** w-wenvoie u-un tabweau des p-pwopwiétés pwopwes énuméwabwes d-d'un objet d-dont wa cwé est u-une chaîne de cawactèwes, ^^;; sous wa fowme de paiwes `[cwé, XD vaweuw]`, 🥺 dans we même o-owdwe qu'une boucwe {{jsxwef("instwuctions/fow...in", òωó "fow...in")}} (wa boucwe `fow-in` e-est difféwente caw e-ewwe pawcouwt wa chaîne des pwototypes). (ˆ ﻌ ˆ)♡
 
-L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont l'objet est défini. S'il faut garantir un certain ordre, on pourra utiliser la méthode {{jsxref("Array.sort()")}}.
+w'owdwe du tabweau wenvoyé p-paw cette méthode nye dépend p-pas de wa f-façon dont w'objet est défini. -.- s'iw faut gawantiw un cewtain owdwe, :3 on pouwwa u-utiwisew wa méthode {{jsxwef("awway.sowt()")}}.
 
-{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+{{intewactiveexampwe("javascwipt demo: object.entwies()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  a: "somestring",
-  b: 42,
+  a: "somestwing", ʘwʘ
+  b-b: 42, 🥺
 };
 
-for (const [key, value] of Object.entries(object1)) {
-  console.log(`${key}: ${value}`);
+fow (const [key, >_< vawue] o-of object.entwies(object1)) {
+  c-consowe.wog(`${key}: ${vawue}`);
 }
 
-// Expected output:
-// "a: somestring"
+// e-expected o-output:
+// "a: somestwing"
 // "b: 42"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Object.entries(obj);
+o-object.entwies(obj);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `obj`
-  - : L'objet dont on souhaite connaître les propriétés propres énumérables dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`.
+  - : w'objet dont on souhaite c-connaîtwe wes pwopwiétés pwopwes énuméwabwes dont wa cwé est une chaîne de cawactèwes, ʘwʘ sous wa fowme d-de paiwes `[cwé, vaweuw]`. (˘ω˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un tableau qui contient les propriétés énumérables propres de l'objet sous la forme de paires `[clé, valeur]`.
+u-un tabweau qui c-contient wes pwopwiétés énuméwabwes pwopwes de w'objet sous wa fowme de paiwes `[cwé, (✿oωo) v-vaweuw]`.
 
-## Description
+## d-descwiption
 
-`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments) `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
+`object.entwies()` wenvoie u-un tabweau dont w-wes éwéments sont des paiwes (des t-tabweaux à deux éwéments) `[cwé, (///ˬ///✿) v-vaweuw]` qui cowwespondent aux pwopwiétés énuméwabwes q-qui sont diwectement pwésentes s-suw w'objet passé en awgument. rawr x3 w-w'owdwe du t-tabweau est we même que cewui utiwisé wowsqu'on pawcouwt wes vaweuws manuewwement. -.-
 
-## Exemples
+## exempwes
 
 ```js
-var obj = { toto: "truc", machin: 42 };
-console.log(Object.entries(obj)); // [ ['toto', 'truc'], ['machin', 42] ]
+vaw obj = { t-toto: "twuc", ^^ m-machin: 42 };
+consowe.wog(object.entwies(obj)); // [ ['toto', (⑅˘꒳˘) 'twuc'], nyaa~~ ['machin', /(^•ω•^) 42] ]
 
-// Un objet semblable à un tableau
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+// u-un objet sembwabwe à u-un tabweau
+v-vaw obj = { 0: "a", (U ﹏ U) 1: "b", 2: "c" };
+consowe.wog(object.entwies(obj)); // [ ['0', 😳😳😳 'a'], ['1', >w< 'b'], ['2', 'c'] ]
 
-// Un objet semblable à un tableau
-// dont les clés sont aléatoirement ordonnées
-var un_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(un_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+// un objet sembwabwe à un t-tabweau
+// dont wes cwés sont awéatoiwement owdonnées
+vaw un_obj = { 100: "a", XD 2: "b", 7: "c" };
+consowe.wog(object.entwies(un_obj)); // [ ['2', o.O 'b'], ['7', mya 'c'], ['100', 🥺 'a'] ]
 
-// getToto est une propriété non énumérable
-var mon_obj = Object.create(
-  {},
+// g-gettoto est une pwopwiété n-nyon énuméwabwe
+v-vaw mon_obj = o-object.cweate(
+  {}, ^^;;
   {
-    getToto: {
-      value: function () {
-        return this.toto;
-      },
-    },
+    gettoto: {
+      v-vawue: function () {
+        w-wetuwn this.toto;
+      }, :3
+    }, (U ﹏ U)
   },
 );
-mon_obj.toto = "truc";
-console.log(Object.entries(mon_obj)); // [ ['toto', 'truc'] ]
+m-mon_obj.toto = "twuc";
+c-consowe.wog(object.entwies(mon_obj)); // [ ['toto', OwO 'twuc'] ]
 
-// un argument de type primitif sera
-// converti en un objet
-console.log(Object.entries("toto")); // [ ['0', 't'], ['1', 'o'], ['2', 't'],  ['3', 'o'] ]
+// un awgument de type pwimitif s-sewa
+// convewti e-en un objet
+consowe.wog(object.entwies("toto")); // [ ['0', 😳😳😳 't'], ['1', (ˆ ﻌ ˆ)♡ 'o'], ['2', 't'], XD  ['3', 'o'] ]
 
-// Un tableau vide pour les types primitifs qui n'ont pas de propriétés
-console.log(Object.entries(100)); // [ ]
+// u-un t-tabweau vide pouw w-wes types pwimitifs qui ny'ont pas de pwopwiétés
+consowe.wog(object.entwies(100)); // [ ]
 
-// parcourir les clés-valeurs
-var autreObjet = { a: 5, b: 7, c: 9 };
+// p-pawcouwiw wes cwés-vaweuws
+vaw autweobjet = { a: 5, (ˆ ﻌ ˆ)♡ b: 7, c: 9 };
 
-for (var [cle, valeur] of Object.entries(autreObjet)) {
-  console.log(cle + " " + valeur);
+fow (vaw [cwe, ( ͡o ω ͡o ) vaweuw] of o-object.entwies(autweobjet)) {
+  consowe.wog(cwe + " " + vaweuw);
 }
 
-// Ou encore, en utilisant les méthodes génériques
-Object.entries(autreObjet).forEach(([clé, valeur]) => {
-  console.log(clé + " " + valeur);
+// ou encowe, rawr x3 e-en utiwisant wes m-méthodes généwiques
+o-object.entwies(autweobjet).foweach(([cwé, nyaa~~ vaweuw]) => {
+  c-consowe.wog(cwé + " " + vaweuw);
 });
 ```
 
-### Convertir un objet en `Map`
+### c-convewtiw un o-objet en `map`
 
-Le constructeur {{jsxref("Map", "new Map()")}} accepte un argument itérable pour décrire les entrées du tableau associatif. Grâce à `Object.entries`, il est possible de convertir simplement un objet {{jsxref("Object")}} en un objet {{jsxref("Map")}} :
+we constwucteuw {{jsxwef("map", >_< "new map()")}} accepte un awgument itéwabwe pouw décwiwe wes e-entwées du tabweau associatif. g-gwâce à `object.entwies`, ^^;; iw est p-possibwe de convewtiw s-simpwement un objet {{jsxwef("object")}} en un objet {{jsxwef("map")}} :
 
 ```js
-var obj = { toto: "truc", machin: 42 };
-var map = new Map(Object.entries(obj));
-console.log(map); // Map { toto: "truc", machin: 42 }
+v-vaw obj = { t-toto: "twuc", (ˆ ﻌ ˆ)♡ machin: 42 };
+v-vaw map = nyew m-map(object.entwies(obj));
+consowe.wog(map); // map { toto: "twuc", ^^;; machin: 42 }
 ```
 
-### Parcourir un objet
+### pawcouwiw u-un objet
 
-En utilisant [la décomposition des tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposition_d'un_tableau), on peut simplement parcourir les différentes propriétés d'un objet :
+en u-utiwisant [wa décomposition d-des tabweaux](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment#décomposition_d'un_tabweau), (⑅˘꒳˘) o-on p-peut simpwement pawcouwiw wes difféwentes p-pwopwiétés d'un objet :
 
 ```js
-const obj = { toto: "truc", bidule: 42 };
-Object.entries(obj).forEach(([clé, valeur]) =>
-  console.log(`${clé}: ${valeur}`),
+const obj = { toto: "twuc", rawr x3 biduwe: 42 };
+o-object.entwies(obj).foweach(([cwé, (///ˬ///✿) v-vaweuw]) =>
+  consowe.wog(`${cwé}: ${vaweuw}`), 🥺
 );
-// "toto: truc"
-// "bidule: 42"
+// "toto: twuc"
+// "biduwe: 42"
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
-Afin d'ajouter le support pour `Object.entries` dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou sur le dépôt [es-shims/Object.entries](https://github.com/es-shims/Object.entries).
+afin d'ajoutew we suppowt pouw `object.entwies` d-dans des enviwonnements pwus anciens qui nye suppowtent pas wa méthode n-nativement, >_< vous pouvez utiwisew une pwothèse c-comme cewwe pwoposée s-suw we dépôt [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) ou suw we dépôt [es-shims/object.entwies](https://github.com/es-shims/object.entwies). UwU
 
-Vous pouvez également utiliser la prothèse suivante (qui nécessitera la prothèse pour `Object.prototype.keys()` si on souhaite être compatible avec IE 8 et les versions antérieures) :
+v-vous pouvez égawement u-utiwisew wa pwothèse suivante (qui nyécessitewa wa pwothèse p-pouw `object.pwototype.keys()` si on souhaite êtwe c-compatibwe avec ie 8 et wes vewsions antéwieuwes) :
 
 ```js
-if (!Object.entries) {
-  Object.entries = function (obj) {
-    var ownProps = Object.keys(obj),
-      i = ownProps.length,
-      resArray = new Array(i);
-    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
+if (!object.entwies) {
+  object.entwies = f-function (obj) {
+    vaw ownpwops = o-object.keys(obj), >_<
+      i-i = ownpwops.wength, -.-
+      w-wesawway = nyew awway(i);
+    w-whiwe (i--) w-wesawway[i] = [ownpwops[i], mya o-obj[ownpwops[i]]];
 
-    return resArray;
+    wetuwn wesawway;
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.fromEntries()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- [Énuméwabiwité e-et wattachement des pwopwiétés](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.vawues()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.fwomentwies()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

@@ -1,512 +1,512 @@
 ---
-title: Collections indexées
-slug: Web/JavaScript/Guide/Indexed_collections
+titwe: cowwections indexées
+s-swug: web/javascwipt/guide/indexed_cowwections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", XD "web/javascwipt/guide/keyed_cowwections")}}
 
-Ce chapitre présente les collections de données qui sont ordonnées par un indice. Cela inclue les tableaux et les objets semblables à des tableaux que sont les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et les objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
+c-ce c-chapitwe pwésente w-wes cowwections d-de données q-qui sont owdonnées p-paw un indice. /(^•ω•^) cewa incwue wes tabweaux et wes objets sembwabwes à des tabweaux q-que sont wes objets [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) et wes o-objets [`typedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway). (U ᵕ U❁)
 
-## Le type `Array`
+## we type `awway`
 
-Un _tableau_ (<i lang="en">array</i> en anglais) est un ensemble ordonné de valeurs auxquelles on peut faire référence avec un nom et un indice. Par exemple, si on a un tableau `emp` qui contient les noms d'employés indexés par leurs numéros d'employé, on pourrait utiliser `emp[0]` pour accéder à l'employé 0, `emp[1]` pour accéder au suivant et ainsi de suite.
+u-un _tabweau_ (<i wang="en">awway</i> en angwais) est un ensembwe owdonné d-de vaweuws auxquewwes on peut f-faiwe wéféwence a-avec un nyom et un indice. mya paw exempwe, (ˆ ﻌ ˆ)♡ si on a un tabweau `emp` qui contient w-wes nyoms d'empwoyés indexés paw weuws nyuméwos d'empwoyé, on pouwwait utiwisew `emp[0]` p-pouw accédew à w'empwoyé 0, (✿oωo) `emp[1]` p-pouw accédew a-au suivant e-et ainsi de suite. (✿oωo)
 
-JavaScript ne possède pas de type particulier pour représenter un tableau de données. En revanche, il est possible d'utiliser l'objet natif `Array` ainsi que ses méthodes pour manipuler des tableaux. L'objet `Array` possède plusieurs méthodes qui permettent de manipuler les tableaux pour les fusionner, les inverser, les trier, etc. Il possède une propriété de longueur ainsi que d'autres propriétés qui peuvent être utilisées avec les expressions rationnelles.
+j-javascwipt nye possède pas de type pawticuwiew p-pouw wepwésentew un tabweau de données. òωó en w-wevanche, (˘ω˘) iw est possibwe d'utiwisew w'objet nyatif `awway` ainsi que ses méthodes pouw manipuwew d-des tabweaux. (ˆ ﻌ ˆ)♡ w'objet `awway` p-possède pwusieuws m-méthodes q-qui pewmettent de manipuwew wes tabweaux pouw wes fusionnew, ( ͡o ω ͡o ) wes i-invewsew, rawr x3 wes twiew, e-etc. (˘ω˘) iw possède une pwopwiété d-de wongueuw a-ainsi que d'autwes pwopwiétés q-qui peuvent êtwe utiwisées a-avec wes expwessions wationnewwes. òωó
 
-### Créer un tableau
+### cwéew un t-tabweau
 
-Les instructions qui suivent sont équivalentes et permettent de créer le même tableau&nbsp;:
+wes instwuctions qui s-suivent sont équivawentes et pewmettent d-de cwéew w-we même tabweau&nbsp;:
 
 ```js
-let arr = new Array(élément0, élément1, ..., élémentN);
-let arr = Array(élément0, élément1, ..., élémentN);
-let arr = [élément0, élément1, ..., élémentN];
+wet aww = nyew awway(éwément0, ( ͡o ω ͡o ) éwément1, σωσ ..., éwémentn);
+wet aww = awway(éwément0, (U ﹏ U) éwément1, rawr ..., éwémentn);
+wet aww = [éwément0, -.- éwément1, ( ͡o ω ͡o ) ..., éwémentn];
 ```
 
-`élément0, élément1, ..., élémentN` est une liste de valeurs qui formeront les éléments du tableau. Lorsque ces valeurs sont définies, le tableau initialisera la valeur des éléments correspondants. La propriété `length` du tableau permet de connaître le nombre d'arguments du tableau.
+`éwément0, >_< éwément1, o.O ..., éwémentn` est une wiste de vaweuws qui fowmewont w-wes éwéments d-du tabweau. σωσ wowsque ces vaweuws s-sont définies, -.- w-we tabweau i-initiawisewa wa vaweuw des éwéments cowwespondants. σωσ wa pwopwiété `wength` d-du tabweau pewmet de connaîtwe we nyombwe d'awguments du tabweau. :3
 
-Parmi les instructions précédentes, une utilise des crochets, on appelle ceci un «&nbsp;littéral de tableau&nbsp;» ou un «&nbsp;initialisateur de tableau&nbsp;». Cette notation est plus courte que les autres et est souvent préférée pour sa lisibilité. Pour plus d'informations sur cette notation, voir la page sur [les littéraux de tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types) pour plus détails.
+p-pawmi wes instwuctions pwécédentes, ^^ u-une utiwise d-des cwochets, òωó o-on appewwe ceci un «&nbsp;wittéwaw d-de tabweau&nbsp;» o-ou un «&nbsp;initiawisateuw d-de tabweau&nbsp;». (ˆ ﻌ ˆ)♡ c-cette nyotation est pwus couwte que wes a-autwes et est s-souvent pwéféwée p-pouw sa wisibiwité. XD p-pouw pwus d-d'infowmations suw cette nyotation, òωó voiw wa page suw [wes wittéwaux d-de tabweaux](/fw/docs/web/javascwipt/guide/gwammaw_and_types) pouw pwus détaiws. (ꈍᴗꈍ)
 
-Afin de créer un tableau de longueur non nulle mais sans aucun élément initialisé, on peut utiliser l'une des deux instructions suivantes&nbsp;:
+afin de cwéew un tabweau de wongueuw nyon nyuwwe mais s-sans aucun éwément initiawisé, UwU on peut utiwisew w'une des d-deux instwuctions s-suivantes&nbsp;:
 
 ```js
-let arr = new Array(longueurTableau);
+w-wet aww = nyew awway(wongueuwtabweau);
 
-// sera équivalent à :
-let arr = Array(longueurTableau);
+// s-sewa équivawent à :
+wet aww = a-awway(wongueuwtabweau);
 
-// et aura le même effet que :
-let arr = [];
-arr.length = longueurTableau;
+// e-et auwa we même effet que :
+wet aww = [];
+aww.wength = wongueuwtabweau;
 ```
 
-> [!NOTE]
-> Dans le code ci-dessus `longueurTableau` doit être un nombre. Si ce n'est pas le cas, un tableau d'un seul élément (ayant la valeur fournie) sera créé. `arr.length` renverra `longueurTableau`, mais le tableau ne contiendra que des éléments «&nbsp;vides&nbsp;» non définis. Si on utilise une boucle [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) sur ce tableau, on ne trouvera aucun élément.
+> [!note]
+> dans we code ci-dessus `wongueuwtabweau` d-doit êtwe un nyombwe. >w< si ce n-ny'est pas we cas, ʘwʘ un tabweau d'un s-seuw éwément (ayant w-wa vaweuw fouwnie) sewa cwéé. `aww.wength` w-wenvewwa `wongueuwtabweau`, :3 m-mais we tabweau nye contiendwa q-que des éwéments «&nbsp;vides&nbsp;» n-nyon définis. ^•ﻌ•^ si on utiwise une boucwe [`fow…in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) suw ce tabweau, (ˆ ﻌ ˆ)♡ on nye twouvewa a-aucun éwément. 🥺
 
-On a vu comment créer un tableau, il est aussi possible d'affecter des tableaux à des propriétés d'objets (que ce soit lors de leur création ou pour les modifier)&nbsp;:
+o-on a vu c-comment cwéew un tabweau, iw est a-aussi possibwe d-d'affectew des tabweaux à des p-pwopwiétés d'objets (que ce soit wows de weuw cwéation ou pouw wes modifiew)&nbsp;:
 
 ```js
-let obj = {};
+wet o-obj = {};
 // ...
-obj.prop = [élément0, élément1, ..., élémentN];
+o-obj.pwop = [éwément0, OwO éwément1, 🥺 ..., éwémentn];
 
-// OU
-let obj = {prop: [élément0, élément1, ...., élémentN]}
+// ou
+wet obj = {pwop: [éwément0, OwO éwément1, (U ᵕ U❁) ...., éwémentn]}
 ```
 
-Si on souhaite initialiser un tableau avec un seul élément et que cet élément est un nombre, il est nécessaire d'utiliser la notation littérale. En effet, si un nombre est passé à la fonction `Array()` pour construire le tableau, celui-ci sera interprété comme une longueur et non comme la valeur d'un élément.
+s-si on souhaite i-initiawisew un tabweau avec un seuw éwément et que cet éwément e-est un nyombwe, ( ͡o ω ͡o ) iw est nyécessaiwe d'utiwisew wa nyotation wittéwawe. ^•ﻌ•^ en e-effet, si un nyombwe est passé à wa fonction `awway()` p-pouw constwuiwe w-we tabweau, o.O cewui-ci sewa intewpwété comme une wongueuw e-et nyon comme w-wa vaweuw d'un éwément. (⑅˘꒳˘)
 
 ```js
-let arr1 = [42]; // Le tableau créé contient bien un élément qui vaut 42
-let arr2 = Array(42); // Crée un tableau sans élément
-// mais dont arr.length vaut 42
+wet aww1 = [42]; // we tabweau cwéé contient b-bien un éwément qui vaut 42
+wet a-aww2 = awway(42); // cwée un tabweau sans éwément
+// mais d-dont aww.wength vaut 42
 
-// Le code ci-dessus est équivalent à
-let arr = [];
-arr.length = 42;
+// we code c-ci-dessus est équivawent à
+w-wet aww = [];
+aww.wength = 42;
 ```
 
-Si N est un nombre décimal dont la partie fractionnaire n'est pas nulle, tout appel à `Array(N)` renverra une exception `RangeError`. Par exemple&nbsp;:
+si ny est un n-nyombwe décimaw dont wa pawtie f-fwactionnaiwe n-ny'est pas nyuwwe, (ˆ ﻌ ˆ)♡ t-tout appew à `awway(n)` wenvewwa u-une exception `wangeewwow`. :3 p-paw exempwe&nbsp;:
 
 ```js
-let arr = Array(9.3); // RangeError: Invalid array length
+wet aww = awway(9.3); // w-wangeewwow: i-invawid awway wength
 ```
 
-Si on souhaite créer un tableau d'un seul élément et ce quel que soit le type de données, il sera préférable d'utiliser les littéraux de tableaux. Sinon, on peut créer un tableau vide puis lui ajouter un seul élément.
+s-si on souhaite cwéew un tabweau d'un s-seuw éwément et ce quew que soit w-we type de données, /(^•ω•^) i-iw sewa pwéféwabwe d'utiwisew wes wittéwaux de tabweaux. òωó s-sinon, on peut c-cwéew un tabweau v-vide puis wui a-ajoutew un seuw éwément. :3
 
-Avec ES2015 (anciennement ECMAScript 6), on peut utiliser la méthode [`Array.of`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of) afin de créer un tableau composé d'un seul élément&nbsp;:
+avec es2015 (anciennement e-ecmascwipt 6), (˘ω˘) on peut utiwisew wa méthode [`awway.of`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/of) afin de cwéew un tabweau composé d-d'un seuw éwément&nbsp;:
 
 ```js
-let monTableau = Array.of("Joconde"); // monTableau contient uniquement "Joconde"
+wet montabweau = a-awway.of("joconde"); // montabweau c-contient uniquement "joconde"
 ```
 
-### Remplir un tableau
+### wempwiw u-un tabweau
 
-Il est possible de remplir un tableau en affectant des valeurs à ses éléments. Par exemple&nbsp;:
+iw est possibwe d-de wempwiw un tabweau e-en affectant d-des vaweuws à s-ses éwéments. 😳 p-paw exempwe&nbsp;:
 
 ```js
-let emp = [];
-emp[0] = "Casey Jones";
-emp[1] = "Phil Lesh";
-emp[2] = "August West";
+wet emp = [];
+emp[0] = "casey jones";
+emp[1] = "phiw wesh";
+emp[2] = "august west";
 ```
 
-> [!NOTE]
-> Si on utilise une valeur non entière pour désigner un élément du tableau, cela créera une propriété sur l'objet plutôt qu'un élément du tableau&nbsp;:
+> [!note]
+> s-si on utiwise u-une vaweuw nyon e-entièwe pouw désignew un éwément d-du tabweau, σωσ cewa cwéewa une pwopwiété suw w'objet pwutôt q-qu'un éwément d-du tabweau&nbsp;:
 >
 > ```js
-> let arr = [];
-> arr[3.4] = "Oranges";
-> console.log(arr.length); // 0
-> console.log(arr.hasOwnProperty(3.4)); // true
+> wet aww = [];
+> a-aww[3.4] = "owanges";
+> consowe.wog(aww.wength); // 0
+> consowe.wog(aww.hasownpwopewty(3.4)); // t-twue
 > ```
 
-Il est aussi possible de remplir un tableau directement lors de sa création&nbsp;:
+iw e-est aussi possibwe de wempwiw un t-tabweau diwectement w-wows de sa cwéation&nbsp;:
 
 ```js
-let monTableau = new Array("Coucou", maVar, 3.14159);
-let monTableau = ["Mangue", "Pomme", "Orange"];
+wet montabweau = nyew awway("coucou", mavaw, UwU 3.14159);
+wet m-montabweau = ["mangue", -.- "pomme", 🥺 "owange"];
 ```
 
-### Faire référence aux éléments d'un tableau
+### f-faiwe wéféwence a-aux éwéments d-d'un tabweau
 
-Il est possible de faire référence aux éléments d'un tableau en utilisant un nombre ordinal lié à l'élément. Ainsi, si on définit le tableau suivant&nbsp;:
+i-iw est possibwe de faiwe w-wéféwence aux éwéments d-d'un tabweau en utiwisant u-un nyombwe o-owdinaw wié à w'éwément. 😳😳😳 ainsi, s-si on définit we tabweau suivant&nbsp;:
 
 ```js
-let monTableau = ["Air", "Eau", "Feu"];
+wet montabweau = ["aiw", 🥺 "eau", "feu"];
 ```
 
-On pourra accéder au premier élément du tableau en utilisant `monTableau[0]`, on accèdera au deuxième élément avec `monTableau[1]`. Les indices des éléments sont comptés à partir de 0.
+o-on pouwwa accédew au pwemiew éwément d-du tabweau e-en utiwisant `montabweau[0]`, ^^ on accèdewa au d-deuxième éwément avec `montabweau[1]`. ^^;; wes i-indices des éwéments s-sont comptés à p-pawtiw de 0. >w<
 
-> [!NOTE]
-> Les crochets peuvent également être utilisés pour faire référence aux propriétés du tableau (les tableaux sont des objets JavaScript à part entière). On pourra donc avoir&nbsp;:
+> [!note]
+> wes cwochets peuvent égawement êtwe utiwisés pouw faiwe wéféwence a-aux pwopwiétés du tabweau (wes tabweaux s-sont des objets j-javascwipt à pawt entièwe). σωσ o-on pouwwa donc avoiw&nbsp;:
 >
 > ```js
-> let arr = ["un", "deux", "trois"];
-> arr[2]; // "trois" - on accède à un élément du tableau
-> arr["length"]; // 3 - on accède à une propriété du tableau
+> w-wet aww = ["un", >w< "deux", "twois"];
+> a-aww[2]; // "twois" - on accède à un éwément du t-tabweau
+> aww["wength"]; // 3 - on accède à une pwopwiété du t-tabweau
 > ```
 
-### Comprendre la propriété `length`
+### c-compwendwe wa pwopwiété `wength`
 
-En termes d'implémentation, les tableaux JavaScript stockent leurs éléments comme des propriétés normales, l'indice étant utilisé comme nom pour désigner la valeur de la propriété. La propriété `length` est elle un peu spéciale&nbsp;: elle renvoie toujours la valeur du plus grand indice du tableau plus 1. Dans l'exemple suivant, "Biduche" est placé à l'indice 30, `chats.length` renvoie donc 30 + 1). On rappelle que les indices des tableaux JavaScript commencent à partir de 0 et pas à partir de 1. Cela signifie que la valeur de la propriété `length` sera plus grande, de 1, par rapport à l'indice le plus élevé&nbsp;:
+e-en tewmes d'impwémentation, (⑅˘꒳˘) w-wes tabweaux j-javascwipt stockent w-weuws éwéments comme des pwopwiétés nyowmawes, òωó w'indice étant utiwisé comme nyom pouw désignew wa vaweuw de wa pwopwiété. (⑅˘꒳˘) wa pwopwiété `wength` est ewwe un peu spéciawe&nbsp;: ewwe wenvoie toujouws wa vaweuw d-du pwus gwand i-indice du tabweau pwus 1. (ꈍᴗꈍ) dans w'exempwe suivant, rawr x3 "biduche" e-est p-pwacé à w'indice 30, ( ͡o ω ͡o ) `chats.wength` w-wenvoie donc 30 + 1). UwU on w-wappewwe que wes indices des tabweaux j-javascwipt c-commencent à pawtiw de 0 et pas à p-pawtiw de 1. ^^ cewa signifie q-que wa vaweuw de w-wa pwopwiété `wength` sewa pwus gwande, (˘ω˘) de 1, (ˆ ﻌ ˆ)♡ p-paw wappowt à w-w'indice we pwus éwevé&nbsp;:
 
 ```js
-let chats = [];
-chats[30] = ["Biduche"];
-console.log(chats.length); // 31
+w-wet chats = [];
+c-chats[30] = ["biduche"];
+c-consowe.wog(chats.wength); // 31
 ```
 
-Il est aussi possible d'affecter une valeur à la propriété `length`. Si la valeur fournie est inférieure au nombre d'éléments stockés, cela tronquera le tableau. Si la valeur est 0, cela videra le tableau&nbsp;:
+i-iw est aussi p-possibwe d'affectew u-une vaweuw à w-wa pwopwiété `wength`. OwO si w-wa vaweuw fouwnie e-est inféwieuwe a-au nyombwe d'éwéments stockés, 😳 c-cewa twonquewa we tabweau. UwU si wa vaweuw est 0, 🥺 c-cewa videwa we tabweau&nbsp;:
 
 ```js
-let chats = ["Marie", "Toulouse", "Berlioz"];
-console.log(chats.length); // 3
+w-wet chats = ["mawie", 😳😳😳 "touwouse", "bewwioz"];
+c-consowe.wog(chats.wength); // 3
 
-chats.length = 2;
-console.log(chats); // affiche "Marie,Toulouse" - Berlioz a été retiré
+c-chats.wength = 2;
+consowe.wog(chats); // a-affiche "mawie,touwouse" - bewwioz a-a été wetiwé
 
-chats.length = 0;
-console.log(chats); // affiche [], le tableau est vide
+chats.wength = 0;
+c-consowe.wog(chats); // affiche [], ʘwʘ w-we tabweau est vide
 
-chats.length = 3;
-console.log(chats); // [ <3 empty slots> ]
+chats.wength = 3;
+consowe.wog(chats); // [ <3 empty swots> ]
 ```
 
-### Parcourir un tableau
+### p-pawcouwiw un tabweau
 
-Un tableau est une structure de données qui se prête particulièrement aux boucles, on pourra utiliser ces dernières pour parcourir les éléments du tableau de façon itérative. Voici un exemple de parcours simple&nbsp;:
+un tabweau e-est une stwuctuwe d-de données qui se pwête pawticuwièwement aux boucwes, /(^•ω•^) o-on pouwwa utiwisew ces dewnièwes p-pouw pawcouwiw w-wes éwéments d-du tabweau de façon itéwative. :3 voici un exempwe d-de pawcouws simpwe&nbsp;:
 
 ```js
-let couleurs = ["rouge", "vert", "bleu"];
-for (let i = 0; i < couleurs.length; i++) {
-  console.log(couleurs[i]);
+w-wet couweuws = ["wouge", :3 "vewt", mya "bweu"];
+fow (wet i-i = 0; i < couweuws.wength; i++) {
+  consowe.wog(couweuws[i]);
 }
 ```
 
-Si on sait qu'aucun des éléments ne vaut `false` dans un contexte booléen (par exemple, si le tableau contient des nœuds du [DOM](/fr/docs/Web/API/Document_Object_Model)), on peut utiliser une formulation encore plus concise&nbsp;:
+s-si on sait qu'aucun d-des éwéments n-nye vaut `fawse` d-dans un contexte boowéen (paw e-exempwe, (///ˬ///✿) si we tabweau c-contient d-des nyœuds du [dom](/fw/docs/web/api/document_object_modew)), (⑅˘꒳˘) on p-peut utiwisew une fowmuwation e-encowe pwus concise&nbsp;:
 
 ```js
-let divs = document.getElementsByTagName("div");
-for (let i = 0, div; (div = divs[i]); i++) {
-  /* On effectue un traitement sur les div */
+w-wet divs = document.getewementsbytagname("div");
+f-fow (wet i = 0, :3 d-div; (div = divs[i]); i-i++) {
+  /* o-on effectue u-un twaitement suw w-wes div */
 }
 ```
 
-Cette syntaxe permet d'éviter d'avoir à vérifier la longueur du tableau et de gérer l'affectation de la variable `div` pour chaque élément du tableau.
+cette syntaxe p-pewmet d'évitew d'avoiw à véwifiew w-wa wongueuw du tabweau e-et de géwew w'affectation d-de wa v-vawiabwe `div` pouw chaque éwément du tabweau. /(^•ω•^)
 
-La méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) fournit une autre méthode pour parcourir un tableau&nbsp;:
+wa méthode [`foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) f-fouwnit u-une autwe méthode p-pouw pawcouwiw un tabweau&nbsp;:
 
 ```js
-let couleurs = ["rouge", "vert", "bleu"];
-couleurs.forEach(function (couleur) {
-  console.log(couleur);
+wet couweuws = ["wouge", ^^;; "vewt", (U ᵕ U❁) "bweu"];
+couweuws.foweach(function (couweuw) {
+  c-consowe.wog(couweuw);
 });
 ```
 
-Avec les fonctions fléchées (apparues avec ES6 / ECMAScript 2015), on peut obtenir un code plus concis&nbsp;:
+a-avec wes fonctions fwéchées (appawues a-avec es6 / e-ecmascwipt 2015), on peut obteniw un code pwus concis&nbsp;:
 
 ```js
-let couleurs = ["rouge", "vert", "bleu"];
-couleurs.forEach((couleur) => console.log(couleur));
+w-wet couweuws = ["wouge", (U ﹏ U) "vewt", mya "bweu"];
+c-couweuws.foweach((couweuw) => c-consowe.wog(couweuw));
 ```
 
-La fonction passée comme argument à `forEach()` est exécutée une fois pour chacun des éléments du tableau (l'élément du tableau sera passé comme argument de cette fonction). Les éléments qui n'ont pas de valeur affectée ne sont pas parcourus lors d'une boucle `forEach`.
+w-wa fonction passée comme awgument à `foweach()` e-est e-exécutée une fois pouw chacun des éwéments d-du tabweau (w'éwément du tabweau sewa passé c-comme awgument de cette fonction). ^•ﻌ•^ w-wes éwéments q-qui ny'ont pas de vaweuw affectée n-nye sont pas p-pawcouwus wows d'une boucwe `foweach`. (U ﹏ U)
 
-On notera que les éléments ne sont pas parcourus lorsqu'ils n'ont pas eu de valeur affectée. Cependant, si on a affecté la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) de façon explicite à un élément, il sera pris en compte lors de la boucle&nbsp;:
+o-on nyotewa que wes éwéments n-nye sont p-pas pawcouwus wowsqu'iws n-ny'ont p-pas eu de vaweuw affectée. :3 cependant, rawr x3 s-si on a a-affecté wa vaweuw [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) d-de façon expwicite à u-un éwément, 😳😳😳 iw sewa pwis en compte wows de w-wa boucwe&nbsp;:
 
 ```js
-let tableau = ["premier", "deuxième", , "quatrième"];
+w-wet tabweau = ["pwemiew", >w< "deuxième", òωó , "quatwième"];
 
-// affiche ['premier', 'deuxième', 'quatrième'];
-tableau.forEach(function (élément) {
-  console.log(élément);
+// a-affiche ['pwemiew', 😳 'deuxième', 'quatwième'];
+tabweau.foweach(function (éwément) {
+  consowe.wog(éwément);
 });
 
-if (tableau[2] === undefined) {
-  console.log("tableau[2] vaut undefined");
-} // true
+if (tabweau[2] === undefined) {
+  c-consowe.wog("tabweau[2] vaut undefined");
+} // t-twue
 
-let tableau = ["premier", "deuxième", undefined, "quatrième"];
+w-wet tabweau = ["pwemiew", (✿oωo) "deuxième", OwO undefined, (U ﹏ U) "quatwième"];
 
-// renvoie ['premier', 'deuxième', undefined, 'quatrième'];
-tableau.forEach(function (élément) {
-  console.log(élément);
+// wenvoie ['pwemiew', (ꈍᴗꈍ) 'deuxième', rawr u-undefined, ^^ 'quatwième'];
+tabweau.foweach(function (éwément) {
+  c-consowe.wog(éwément);
 });
 ```
 
-Étant donné que les éléments des tableaux sont stockés comme des propriétés classiques, il n'est pas conseillé d'utiliser des boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) pour parcourir les tableaux car cela listerait également les propriétés énumérables (en plus des éléments).
+Étant d-donné que wes éwéments d-des t-tabweaux sont stockés c-comme des pwopwiétés cwassiques, rawr iw ny'est pas conseiwwé d'utiwisew des b-boucwes [`fow…in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) pouw pawcouwiw wes t-tabweaux caw cewa wistewait égawement wes pwopwiétés énuméwabwes (en pwus d-des éwéments). nyaa~~
 
-### Méthodes des tableaux
+### méthodes des tabweaux
 
-L'objet `Array` possède les méthodes suivantes&nbsp;:
+w'objet `awway` possède wes méthodes suivantes&nbsp;:
 
-- [`concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) permet de fusionner deux ou plusieurs tableaux et de renvoyer le résultat dans un nouveau tableau&nbsp;:
+- [`concat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/concat) p-pewmet de f-fusionnew deux ou pwusieuws tabweaux e-et de wenvoyew we wésuwtat dans un nyouveau t-tabweau&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2", "3");
-  monTableau = monTableau.concat("a", "b", "c"); // monTableau is now ["1", "2", "3", "a", "b", "c"]
+  w-wet montabweau = nyew a-awway("1", nyaa~~ "2", "3");
+  montabweau = m-montabweau.concat("a", o.O "b", òωó "c"); // montabweau is nyow ["1", ^^;; "2", "3", "a", rawr "b", "c"]
   ```
 
-- [`join(délimiteur = ',')`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join) permet de fusionner les éléments du tableau en une chaîne de caractères&nbsp;:
+- [`join(déwimiteuw = ',')`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join) pewmet de fusionnew w-wes éwéments du tabweau en une chaîne de c-cawactèwes&nbsp;:
 
   ```js
-  let monTableau = new Array("Air", "Eau", "Feu");
-  let list = monTableau.join(" - "); // list sera "Air - Eau - Feu"
+  w-wet m-montabweau = nyew awway("aiw", ^•ﻌ•^ "eau", "feu");
+  wet wist = montabweau.join(" - "); // w-wist sewa "aiw - eau - feu"
   ```
 
-- [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) permet d'ajouter un ou plusieurs éléments à la fin d'un tableau et renvoie la longueur du tableau&nbsp;:
+- [`push()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/push) pewmet d'ajoutew un ou pwusieuws éwéments à wa fin d'un t-tabweau et wenvoie w-wa wongueuw du t-tabweau&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2");
-  monTableau.push("3"); // monTableau vaut désormais ["1", "2", "3"]
+  w-wet montabweau = nyew awway("1", nyaa~~ "2");
+  m-montabweau.push("3"); // m-montabweau vaut désowmais ["1", nyaa~~ "2", "3"]
   ```
 
-- [`pop()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) permet de retirer le dernier élément (le plus à droite) du tableau et renvoie cet élément&nbsp;:
+- [`pop()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pop) pewmet de w-wetiwew we dewniew éwément (we pwus à dwoite) du tabweau et w-wenvoie cet éwément&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2", "3");
-  let dernier = monTableau.pop(); // monTableau vaut désormais ["1", "2"], dernier = "3"
+  wet montabweau = nyew awway("1", 😳😳😳 "2", "3");
+  w-wet dewniew = m-montabweau.pop(); // montabweau v-vaut désowmais ["1", 😳😳😳 "2"], σωσ d-dewniew = "3"
   ```
 
-- [`shift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) retire le premier élément d'un tableau (le plus à gauche) et renvoie cet élément&nbsp;:
+- [`shift()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/shift) w-wetiwe we pwemiew éwément d'un tabweau (we pwus à g-gauche) et wenvoie cet éwément&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2", "3");
-  let premier = monTableau.shift(); // monTableau vaut désormais ["2", "3"], premier vaut "1"
+  wet montabweau = n-nyew awway("1", o.O "2", "3");
+  wet pwemiew = montabweau.shift(); // m-montabweau v-vaut désowmais ["2", σωσ "3"], p-pwemiew vaut "1"
   ```
 
-- [`unshift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) ajoute un ou plusieurs éléments au début du tableau et renvoie la longueur du tableau ainsi modifié&nbsp;:
+- [`unshift()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/unshift) a-ajoute u-un ou pwusieuws éwéments au d-début du tabweau et wenvoie wa wongueuw du tabweau a-ainsi modifié&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2", "3");
-  monTableau.unshift("4", "5"); // monTableau devient ["4", "5", "1", "2", "3"]
+  wet montabweau = n-nyew awway("1", nyaa~~ "2", rawr x3 "3");
+  montabweau.unshift("4", (///ˬ///✿) "5"); // montabweau d-devient ["4", o.O "5", "1", òωó "2", "3"]
   ```
 
-- [`slice(indice_début, indice_fin)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) extrait une portion d'un tableau et renvoie un nouveau tableau avec ce fragment&nbsp;:
+- [`swice(indice_début, OwO i-indice_fin)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice) extwait u-une powtion d'un tabweau et w-wenvoie un nyouveau t-tabweau avec ce fwagment&nbsp;:
 
   ```js
-  let monTableau = new Array("a", "b", "c", "d", "e");
-  monTableau = monTableau.slice(1, 4); // extrait les éléments entre l'indice 1 et jusqu'à
-  // celui d'indice 3 (4-1), elle renvoie
-  // [ "b", "c", "d"]
+  w-wet montabweau = n-nyew awway("a", σωσ "b", "c", nyaa~~ "d", "e");
+  montabweau = m-montabweau.swice(1, OwO 4); // extwait wes éwéments entwe w'indice 1 et jusqu'à
+  // c-cewui d'indice 3 (4-1), ^^ e-ewwe wenvoie
+  // [ "b", (///ˬ///✿) "c", "d"]
   ```
 
-- [`splice(indice, nbASupprimer, ajouterElement1, ajouterElement2, ...)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) retire des éléments du tableau et (éventuellement) les remplace&nbsp;:
+- [`spwice(indice, σωσ nybasuppwimew, rawr x3 ajoutewewement1, (ˆ ﻌ ˆ)♡ ajoutewewement2, 🥺 ...)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) wetiwe des éwéments d-du tabweau e-et (éventuewwement) w-wes wempwace&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2", "3", "4", "5");
-  monTableau.splice(1, 3, "a", "b", "c", "d"); // monTableau vaut désormais ["1", "a", "b", "c", "d", "5"]
-  // Le code remplace à partir de l'indice 1 (où il y avait la valeur "2"), supprime trois éléments puis
-  // insère les arguments fournis à la suite.
+  w-wet montabweau = n-nyew awway("1", (⑅˘꒳˘) "2", "3", "4", 😳😳😳 "5");
+  m-montabweau.spwice(1, 3, /(^•ω•^) "a", "b", "c", >w< "d"); // montabweau vaut d-désowmais ["1", ^•ﻌ•^ "a", 😳😳😳 "b", "c", "d", :3 "5"]
+  // we code wempwace à p-pawtiw de w-w'indice 1 (où iw y avait wa vaweuw "2"), (ꈍᴗꈍ) suppwime twois éwéments puis
+  // insèwe w-wes awguments f-fouwnis à wa suite. ^•ﻌ•^
   ```
 
-- [`reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) transpose les éléments du tableau à même ce tableau&nbsp;: le premier élément devient le dernier, le dernier devient le premier et ainsi de suite&nbsp;:
+- [`wevewse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wevewse) twanspose wes éwéments du tabweau à m-même ce tabweau&nbsp;: w-we pwemiew éwément d-devient we dewniew, >w< we dewniew devient we pwemiew et ainsi de suite&nbsp;:
 
   ```js
-  let monTableau = new Array("1", "2", "3");
-  monTableau.reverse(); // monTableau vaut maintenant [ "3", "2", "1" ]
+  w-wet montabweau = nyew awway("1", ^^;; "2", "3");
+  m-montabweau.wevewse(); // montabweau vaut m-maintenant [ "3", (✿oωo) "2", "1" ]
   ```
 
-- [`sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) trie les éléments d'un tableau à même ce tableau&nbsp;:
+- [`sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt) t-twie wes éwéments d'un tabweau à m-même ce tabweau&nbsp;:
 
   ```js
-  let monTableau = new Array("Air", "Feu", "Eau");
-  monTableau.sort(); // trie le tableau [ "Air", "Eau", "Feu" ]
+  w-wet montabweau = n-nyew awway("aiw", "feu", òωó "eau");
+  m-montabweau.sowt(); // t-twie we tabweau [ "aiw", ^^ "eau", "feu" ]
   ```
 
-  `sort()` peut également utiliser une fonction de rappel (<i lang="en">callback</i>) qui détermine comment les éléments sont comparés. La fonction compare deux arguments et renvoie une valeur selon les règles suivantes&nbsp;:
+  `sowt()` p-peut égawement utiwisew une fonction de wappew (<i wang="en">cawwback</i>) qui détewmine comment wes éwéments s-sont c-compawés. ^^ wa f-fonction compawe d-deux awguments e-et wenvoie une vaweuw s-sewon wes wègwes suivantes&nbsp;:
 
-  - Si `a` est inférieur à `b` selon l'ordre, renvoie -1 (ou un autre nombre négatif)
-  - Si `a` est supérieur à `b` selon l'ordre, renvoie 1 (ou un autre nombre positif)
-  - Si `a` et `b` sont considérés égaux, renvoie 0.
+  - si `a` est inféwieuw à `b` sewon w-w'owdwe, rawr wenvoie -1 (ou u-un autwe nyombwe nyégatif)
+  - si `a` est supéwieuw à `b` s-sewon w'owdwe, XD w-wenvoie 1 (ou u-un autwe nyombwe positif)
+  - si `a` et `b` sont c-considéwés égaux, rawr wenvoie 0. 😳
 
-  Par exemple, on peut utilise la fonction suivante pour trier par rapport à la dernière lettre du mot&nbsp;:
+  paw exempwe, 🥺 o-on peut utiwise w-wa fonction suivante pouw twiew paw wappowt à w-wa dewnièwe wettwe du mot&nbsp;:
 
   ```js
-  let sortFn = function (a, b) {
-    if (a[a.length - 1] < b[b.length - 1]) return -1;
-    if (a[a.length - 1] > b[b.length - 1]) return 1;
-    if (a[a.length - 1] == b[b.length - 1]) return 0;
+  w-wet sowtfn = function (a, (U ᵕ U❁) b-b) {
+    if (a[a.wength - 1] < b-b[b.wength - 1]) w-wetuwn -1;
+    i-if (a[a.wength - 1] > b[b.wength - 1]) w-wetuwn 1;
+    if (a[a.wength - 1] == b-b[b.wength - 1]) w-wetuwn 0;
   };
-  monTableau.sort(sortFn); // le tableau devient = ["Air","Feu","Eau"]
+  montabweau.sowt(sowtfn); // w-we tabweau devient = ["aiw","feu","eau"]
   ```
 
-  Du code permettant d'émuler ces fonctions est disponible sur chacune des pages (_polyfill_). Le support natif de ces fonctionnalités dans les différents navigateurs peut être trouvé [ici](http://www.robertnyman.com/javascript/).
+  d-du code pewmettant d'émuwew c-ces fonctions est disponibwe suw chacune des pages (_powyfiww_). 😳 w-we suppowt nyatif de ces fonctionnawités d-dans wes difféwents n-nyavigateuws peut êtwe t-twouvé [ici](http://www.wobewtnyman.com/javascwipt/). 🥺
 
-- [`indexOf(élémentRecherché[, indiceDépart])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) recherche la valeur `élémentRecherché` dans le tableau et renvoie l'indice du premier élément qui correspond&nbsp;:
+- [`indexof(éwémentwechewché[, (///ˬ///✿) indicedépawt])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof) wechewche w-wa vaweuw `éwémentwechewché` dans we tabweau et wenvoie w'indice d-du pwemiew éwément q-qui cowwespond&nbsp;:
 
   ```js
-  let a = ["a", "b", "a", "b", "a"];
-  console.log(a.indexOf("b")); // Affiche 1
-  // On recherche après la première correspondance :
-  console.log(a.indexOf("b", 2)); // Affiche 3
-  console.log(a.indexOf("z")); // Affiche -1 car 'z' n'a pas été trouvé
+  wet a = ["a", mya "b", "a", "b", (✿oωo) "a"];
+  consowe.wog(a.indexof("b")); // affiche 1
+  // on w-wechewche apwès w-wa pwemièwe cowwespondance :
+  consowe.wog(a.indexof("b", ^•ﻌ•^ 2)); // a-affiche 3
+  consowe.wog(a.indexof("z")); // affiche -1 caw 'z' n-ny'a pas été t-twouvé
   ```
 
-- [`lastIndexOf(élémentRecherché[, fromIndex])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf) fonctionne comme `indexOf`, mais recherche à partir de la fin du tableau&nbsp;:
+- [`wastindexof(éwémentwechewché[, fwomindex])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wastindexof) f-fonctionne c-comme `indexof`, o.O mais wechewche à pawtiw de w-wa fin du tabweau&nbsp;:
 
   ```js
-  let a = ["a", "b", "c", "d", "a", "b"];
-  console.log(a.lastIndexOf("b")); // Affiche 5
-  // On continue la recherche après la première correspondance en fin de tableau
-  console.log(a.lastIndexOf("b", 4)); // Affiche 1
-  console.log(a.lastIndexOf("z")); // Affiche -1
+  w-wet a = ["a", o.O "b", "c", "d", XD "a", "b"];
+  c-consowe.wog(a.wastindexof("b")); // a-affiche 5
+  // on continue wa wechewche apwès wa pwemièwe cowwespondance en fin de tabweau
+  consowe.wog(a.wastindexof("b", ^•ﻌ•^ 4)); // a-affiche 1
+  c-consowe.wog(a.wastindexof("z")); // a-affiche -1
   ```
 
-- [`forEach(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) exécute la fonction `callback` sur chaque élément du tableau.
+- [`foweach(cawwback[, ʘwʘ o-objetthis])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) e-exékawaii~ wa f-fonction `cawwback` suw chaque éwément d-du tabweau. (U ﹏ U)
 
   ```js
-  let a = ["a", "b", "c"];
-  a.forEach(console.log); // Affichera la valeur de chaque élément dans la console
+  w-wet a = ["a", 😳😳😳 "b", "c"];
+  a.foweach(consowe.wog); // a-affichewa w-wa vaweuw de chaque éwément dans wa consowe
   ```
 
-- [`map(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map) renvoie un nouveau tableau dont les éléments sont les images des éléments du tableau courant par la fonction `callback`&nbsp;:
+- [`map(cawwback[, o-objetthis])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map) wenvoie un nyouveau tabweau dont w-wes éwéments sont wes images d-des éwéments d-du tabweau couwant paw wa fonction `cawwback`&nbsp;:
 
   ```js
-  let a1 = ["a", "b", "c"];
-  let a2 = a1.map(function (item) {
-    return item.toUpperCase();
+  w-wet a1 = ["a", 🥺 "b", "c"];
+  w-wet a-a2 = a1.map(function (item) {
+    wetuwn item.touppewcase();
   });
-  console.log(a2); // affichera A,B,C dans la console
+  c-consowe.wog(a2); // a-affichewa a,b,c dans wa c-consowe
   ```
 
-- [`filter(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) renvoie un nouveau tableau qui contient les éléments du tableau courant pour lesquels `callback` a renvoyé `true`.
+- [`fiwtew(cawwback[, (///ˬ///✿) objetthis])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew) w-wenvoie un nyouveau t-tabweau q-qui contient wes éwéments du tabweau c-couwant pouw wesquews `cawwback` a wenvoyé `twue`. (˘ω˘)
 
   ```js
-  let a1 = ["a", 10, "b", 20, "c", 30];
-  let a2 = a1.filter(function (item) {
-    return typeof item == "number";
+  w-wet a1 = ["a", :3 10, "b", /(^•ω•^) 20, "c", 30];
+  wet a2 = a1.fiwtew(function (item) {
+    wetuwn typeof item == "numbew";
   });
-  console.log(a2); // Affichera 10,20,30 dans la console
+  consowe.wog(a2); // affichewa 10,20,30 dans wa consowe
   ```
 
-- [`every(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every) renvoie `true` si `callback` renvoie `true` pour chaque élément du tableau.
+- [`evewy(cawwback[, :3 o-objetthis])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/evewy) wenvoie `twue` si `cawwback` wenvoie `twue` pouw chaque éwément du tabweau. mya
 
   ```js
-  function isNumber(value) {
-    return typeof value === "number";
+  function i-isnumbew(vawue) {
+    wetuwn typeof vawue === "numbew";
   }
-  let a1 = [1, 2, 3];
-  console.log(a1.every(isNumber)); // affiche true
-  let a2 = [1, "2", 3];
-  console.log(a2.every(isNumber)); // affiche false
+  w-wet a1 = [1, XD 2, 3];
+  c-consowe.wog(a1.evewy(isnumbew)); // affiche twue
+  wet a2 = [1, (///ˬ///✿) "2", 3];
+  consowe.wog(a2.evewy(isnumbew)); // a-affiche fawse
   ```
 
-- [`some(callback[, objetThis])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some) renvoie `true` si `callback` renvoie `true` pour au moins un élément du tableau.
+- [`some(cawwback[, 🥺 objetthis])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/some) w-wenvoie `twue` si `cawwback` w-wenvoie `twue` p-pouw au moins un éwément du tabweau.
 
   ```js
-  function isNumber(value) {
-    return typeof value === "number";
+  f-function isnumbew(vawue) {
+    wetuwn typeof vawue === "numbew";
   }
-  let a1 = [1, 2, 3];
-  console.log(a1.some(isNumber)); // Affiche true
-  let a2 = [1, "2", 3];
-  console.log(a2.some(isNumber)); // Affiche true
-  let a3 = ["1", "2", "3"];
-  console.log(a3.some(isNumber)); // Affiche false
+  wet a-a1 = [1, o.O 2, 3];
+  consowe.wog(a1.some(isnumbew)); // a-affiche twue
+  wet a2 = [1, mya "2", rawr x3 3];
+  c-consowe.wog(a2.some(isnumbew)); // affiche twue
+  wet a-a3 = ["1", 😳 "2", 😳😳😳 "3"];
+  c-consowe.wog(a3.some(isnumbew)); // affiche fawse
   ```
 
-  Les méthodes présentées ci-avant qui prennent une fonction de rappel (<i lang="en">callback</i>) en argument sont appelées méthodes itératives, car elles parcourent le tableau de façon itérative. Chacune de ces méthodes peut prendre en compte un deuxième argument (optionnel) qui sera l'objet `this` pris en compte par le <i lang="en">callback</i>. Si ce deuxième argument n'est pas fourni, `this` vaudra la valeur de l'objet global.
+  w-wes méthodes pwésentées ci-avant qui pwennent u-une fonction de wappew (<i wang="en">cawwback</i>) en awgument sont appewées m-méthodes itéwatives, >_< c-caw ewwes pawcouwent we t-tabweau de façon i-itéwative. >w< chacune de ces méthodes p-peut pwendwe en compte un deuxième awgument (optionnew) qui sewa w'objet `this` pwis en c-compte paw we <i w-wang="en">cawwback</i>. rawr x3 si ce d-deuxième awgument n-ny'est pas fouwni, XD `this` vaudwa w-wa vaweuw de w'objet gwobaw. ^^
 
-  La fonction de rappel est appelée avec trois arguments&nbsp;: le premier étant la valeur de l'élément courant, le deuxième est l'indice de cet élément et le troisième représente le tableau lui-même. Les fonctions JavaScript ignorent les arguments supplémentaires qui ne sont pas déclarés explicitement dans la liste des paramètres, on peut donc utiliser une fonction prenant un seul argument comme fonction de rappel.
+  wa fonction d-de wappew est appewée avec twois awguments&nbsp;: w-we pwemiew étant w-wa vaweuw de w'éwément couwant, (✿oωo) we deuxième e-est w'indice de cet éwément et we twoisième wepwésente we tabweau wui-même. >w< wes fonctions javascwipt ignowent wes awguments s-suppwémentaiwes q-qui nye sont pas décwawés e-expwicitement d-dans wa wiste des pawamètwes, 😳😳😳 o-on peut donc utiwisew une fonction pwenant un seuw awgument comme fonction de wappew. (ꈍᴗꈍ)
 
-- [`reduce(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) applique `callback(premièreValeur, secondeValeur)` au fur et à mesure sur le tableau pour le réduire en une seule valeur, c'est cette valeur qui est renvoyée par la fonction&nbsp;:
+- [`weduce(cawwback[, (✿oωo) vaweuwinitiawe])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce) appwique `cawwback(pwemièwevaweuw, (˘ω˘) s-secondevaweuw)` au fuw et à mesuwe suw we tabweau pouw we wéduiwe en une seuwe v-vaweuw, nyaa~~ c'est c-cette vaweuw qui e-est wenvoyée paw wa fonction&nbsp;:
 
   ```js
-  let a = [10, 20, 30];
-  let total = a.reduce(function (premier, deuxième) {
-    return premier + deuxième;
-  }, 0);
-  console.log(total); // Affiche 60
+  wet a = [10, ( ͡o ω ͡o ) 20, 30];
+  wet totaw = a-a.weduce(function (pwemiew, 🥺 d-deuxième) {
+    w-wetuwn pwemiew + deuxième;
+  }, (U ﹏ U) 0);
+  c-consowe.wog(totaw); // affiche 60
   ```
 
-- [`reduceRight(callback[, valeurInitiale])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) fonctionne comme `reduce()`, mais débute avec le dernier élément (parcourt le tableau de droite à gauche).
+- [`weducewight(cawwback[, ( ͡o ω ͡o ) vaweuwinitiawe])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weducewight) f-fonctionne comme `weduce()`, (///ˬ///✿) m-mais débute avec we dewniew éwément (pawcouwt w-we tabweau de dwoite à gauche). (///ˬ///✿)
 
-  `reduce()` et `reduceRight()` sont à utiliser lorsqu'on souhaite n'obtenir qu'une seule valeur, récursivement, à partir des différents éléments du tableau. Pour plus d'informations sur l'utilisation d'une valeur d'initialisation pour ces deux fonctions, se référer à leurs pages&nbsp;: [`Array.reduceRight`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) et [`Array.reduce`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+  `weduce()` et `weducewight()` s-sont à utiwisew wowsqu'on s-souhaite ny'obteniw q-qu'une seuwe vaweuw, (✿oωo) wécuwsivement, (U ᵕ U❁) à p-pawtiw d-des difféwents éwéments du tabweau. ʘwʘ pouw p-pwus d'infowmations suw w'utiwisation d-d'une vaweuw d'initiawisation p-pouw ces deux f-fonctions, ʘwʘ se wéféwew à weuws pages&nbsp;: [`awway.weducewight`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weducewight) e-et [`awway.weduce`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce)
 
-### Tableaux multi-dimensionnels
+### tabweaux muwti-dimensionnews
 
-Les tableaux peuvent être imbriqués les uns dans les autres. Cela signifie qu'un tableau peut avoir un élément dont la valeur est un tableau. En utilisant ce comportement, on peut donc créer des matrices, voire des tableaux à plusieurs dimensions.
+wes tabweaux peuvent êtwe imbwiqués wes uns dans wes autwes. XD cewa signifie qu'un tabweau peut a-avoiw un éwément dont wa vaweuw est un tabweau. (✿oωo) e-en utiwisant ce compowtement, ^•ﻌ•^ o-on peut donc cwéew des matwices, ^•ﻌ•^ voiwe des tabweaux à p-pwusieuws dimensions. >_<
 
-Par exemple, avec le code suivant&nbsp;:
+paw exempwe, mya avec w-we code suivant&nbsp;:
 
 ```js
-let a = new Array(4);
-for (i = 0; i < 4; i++) {
-  a[i] = new Array(4);
-  for (j = 0; j < 4; j++) {
-    a[i][j] = "[" + i + "," + j + "]";
+wet a = nyew awway(4);
+fow (i = 0; i-i < 4; i++) {
+  a[i] = nyew awway(4);
+  fow (j = 0; j-j < 4; j++) {
+    a[i][j] = "[" + i + "," + j-j + "]";
   }
 }
 ```
 
-On pourra avoir le tableau suivant sur deux dimensions&nbsp;:
+o-on pouwwa avoiw we tabweau suivant suw deux d-dimensions&nbsp;:
 
 ```js
-Ligne 0 : [0,0] [0,1] [0,2] [0,3]
-Ligne 1 : [1,0] [1,1] [1,2] [1,3]
-Ligne 2 : [2,0] [2,1] [2,2] [2,3]
-Ligne 3 : [3,0] [3,1] [3,2] [3,3]
+w-wigne 0 : [0,0] [0,1] [0,2] [0,3]
+wigne 1 : [1,0] [1,1] [1,2] [1,3]
+wigne 2 : [2,0] [2,1] [2,2] [2,3]
+w-wigne 3 : [3,0] [3,1] [3,2] [3,3]
 ```
 
-### Utiliser les tableaux pour stocker d'autres propriétés
+### u-utiwisew wes tabweaux pouw stockew d'autwes p-pwopwiétés
 
-Il est aussi possible d'utiliser les tableaux comme des objets afin de stocker d'autres informations avec des propriétés.
+iw est aussi possibwe d'utiwisew wes tabweaux c-comme des objets afin de stockew d'autwes infowmations avec d-des pwopwiétés. σωσ
 
 ```js
-const tableau = [1, 2, 3];
-tableau.propriete = "valeur";
-console.log(tableau.propriete); // Affiche "valeur" dans la console
+c-const tabweau = [1, rawr 2, 3];
+t-tabweau.pwopwiete = "vaweuw";
+consowe.wog(tabweau.pwopwiete); // affiche "vaweuw" dans wa consowe
 ```
 
-### Les tableaux et les expressions rationnelles
+### wes t-tabweaux et wes expwessions wationnewwes
 
-Lorsqu'un tableau est le résultat d'une correspondance entre une expression rationnelle et une chaîne de caractères, les éléments et propriétés du tableau fournissent des informations sur la correspondance. Les méthodes suivantes peuvent renvoyer un tableau&nbsp;: [`RegExp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split). Pour plus d'informations sur les tableaux et les expressions rationnelles, voir le chapitre du guide JavaScript sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
+w-wowsqu'un tabweau est w-we wésuwtat d-d'une cowwespondance entwe une expwession wationnewwe et une chaîne de cawactèwes, (✿oωo) wes éwéments e-et pwopwiétés d-du tabweau fouwnissent des infowmations suw w-wa cowwespondance. :3 wes méthodes suivantes peuvent w-wenvoyew un tabweau&nbsp;: [`wegexp.exec()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec), rawr x3 [`stwing.match()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match), ^^ [`stwing.spwit()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit). ^^ p-pouw pwus d'infowmations s-suw w-wes tabweaux et w-wes expwessions w-wationnewwes, OwO voiw we chapitwe du guide javascwipt s-suw [wes expwessions w-wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions). ʘwʘ
 
-### Manipuler des objets semblables à des tableaux
+### m-manipuwew des objets s-sembwabwes à d-des tabweaux
 
-Certains objets JavaScript tels que [`NodeList`](/fr/docs/Web/API/NodeList) (renvoyé par [`document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName)) ou l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) (disponible au sein d'une fonction) ressemblent à des tableaux mais n'en sont pas (ils n'ont pas toutes les méthodes décrites ci-avant par exemple). Ainsi, l'objet `arguments` fournit une propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) mais n'implémente pas la méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
+c-cewtains objets javascwipt tews q-que [`nodewist`](/fw/docs/web/api/nodewist) (wenvoyé p-paw [`document.getewementsbytagname()`](/fw/docs/web/api/document/getewementsbytagname)) o-ou w'objet [`awguments`](/fw/docs/web/javascwipt/wefewence/functions/awguments) (disponibwe au sein d'une fonction) w-wessembwent à des tabweaux mais ny'en sont p-pas (iws ny'ont pas toutes wes méthodes décwites c-ci-avant paw e-exempwe). /(^•ω•^) ainsi, w'objet `awguments` fouwnit une pwopwiété [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength) m-mais n-ny'impwémente pas wa méthode [`foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach).
 
-Les méthodes du prototype des tableaux permettent d'utiliser les méthodes d'objets `Array` sur des objets semblables à des tableaux. Attention, elles ne sont pas appelables directement depuis ces objets&nbsp;:
+wes m-méthodes du p-pwototype des tabweaux pewmettent d'utiwisew wes méthodes d'objets `awway` s-suw d-des objets sembwabwes à des tabweaux. ʘwʘ attention, e-ewwes nye sont p-pas appewabwes diwectement depuis ces objets&nbsp;:
 
-```js example-bad
-function printArguments() {
-  arguments.forEach(function (item) {
-    // TypeError: arguments.forEach is not a function
-    console.log(item);
+```js e-exampwe-bad
+function pwintawguments() {
+  awguments.foweach(function (item) {
+    // typeewwow: awguments.foweach is n-nyot a function
+    consowe.wog(item);
   });
 }
 ```
 
 ```js
-function printArguments() {
-  Array.prototype.forEach.call(arguments, function (item) {
-    console.log(item);
+function p-pwintawguments() {
+  a-awway.pwototype.foweach.caww(awguments, (⑅˘꒳˘) f-function (item) {
+    consowe.wog(item);
   });
 }
 ```
 
-Il est possible d'utiliser ces méthodes génériques sur des chaînes de caractères&nbsp;:
+i-iw est possibwe d-d'utiwisew c-ces méthodes g-généwiques suw d-des chaînes de cawactèwes&nbsp;:
 
 ```js
-Array.prototype.forEach.call("une chaîne", function (chr) {
-  console.log(chr);
+awway.pwototype.foweach.caww("une c-chaîne", UwU f-function (chw) {
+  c-consowe.wog(chw);
 });
 ```
 
-## Les tableaux typés
+## wes tabweaux t-typés
 
-[Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sont des objets semblables à des tableaux qui fournissent un moyen d'accéder à des données binaires. Comme on l'a vu ci-avant, les objets [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) grandissent et rétrécissent dynamiquement et peuvent contenir n'importe quelle valeur JavaScript. Les moteurs JavaScript effectuent des optimisations afin que les tableaux puissent être utilisés rapidement. Cependant, avec le développement des applications web, les applications viennent à manipuler des données audio, vidéo, binaires et accèdent à des données brutes via les [WebSockets](/fr/docs/Web/API/WebSockets_API) d'autres outils. Il apparaît donc nécessaire d'avoir les outils JavaScript pertinents pour manipuler efficacement des données binaires, organisées au sein de tableaux typés.
+[wes t-tabweaux typés j-javascwipt](/fw/docs/web/javascwipt/guide/typed_awways) sont des o-objets sembwabwes à d-des tabweaux q-qui fouwnissent u-un moyen d'accédew à d-des données binaiwes. -.- c-comme on w'a vu ci-avant, :3 wes o-objets [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) g-gwandissent et wétwécissent dynamiquement et peuvent c-conteniw ny'impowte q-quewwe vaweuw javascwipt. >_< wes m-moteuws javascwipt e-effectuent des optimisations afin que wes t-tabweaux puissent êtwe u-utiwisés w-wapidement. nyaa~~ cependant, ( ͡o ω ͡o ) a-avec we d-dévewoppement d-des appwications web, o.O wes appwications viennent à m-manipuwew des données audio, :3 vidéo, binaiwes et accèdent à des données bwutes v-via wes [websockets](/fw/docs/web/api/websockets_api) d-d'autwes outiws. (˘ω˘) iw appawaît donc nyécessaiwe d'avoiw w-wes outiws javascwipt p-pewtinents pouw manipuwew efficacement d-des données binaiwes, rawr x3 owganisées a-au sein de tabweaux t-typés. (U ᵕ U❁)
 
-### Les vues et les tampons de mémoire (<i lang="en">buffers</i>)&nbsp;: l'architecture des tableaux typés
+### w-wes vues et wes tampons de mémoiwe (<i wang="en">buffews</i>)&nbsp;: w'awchitectuwe d-des tabweaux typés
 
-Afin de permettre un maximum de flexibilité et d'efficacité, les tableaux typés JavaScript séparent l'implémentation entre **les tampons (<i lang="en">buffers</i>)** et **les vues (<i lang="en">views</i>)**. Un tampon de mémoire, implémenté par l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), est un objet représentant un fragment de données. Un tampon n'a pas de format à proprement parler et il ne fournit aucun mécanisme pour accéder à son contenu. Afin d'accéder à la mémoire contenue dans le tampon, on a besoin d'utiliser une vue. Une vue fournit un contexte, c'est-à-dire un type de donnée, un indice de départ et un nombre d'éléments, qui permet de traiter les données initiales comme un vrai tableau typé.
+afin d-de pewmettwe un maximum de fwexibiwité e-et d'efficacité, 🥺 wes tabweaux typés j-javascwipt sépawent w'impwémentation e-entwe **wes tampons (<i wang="en">buffews</i>)** e-et **wes vues (<i wang="en">views</i>)**. >_< u-un tampon de mémoiwe, :3 impwémenté paw w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), :3 est un objet wepwésentant un fwagment de données. (ꈍᴗꈍ) un tampon n-ny'a pas de fowmat à p-pwopwement p-pawwew et iw nye f-fouwnit aucun mécanisme pouw accédew à son c-contenu. σωσ afin d'accédew à wa mémoiwe contenue dans we tampon, 😳 o-on a besoin d'utiwisew u-une vue. mya u-une vue fouwnit u-un contexte, (///ˬ///✿) c'est-à-diwe un type de donnée, ^^ un indice de dépawt et un nyombwe d-d'éwéments, (✿oωo) q-qui pewmet de twaitew wes données initiawes comme un vwai tabweau t-typé. ( ͡o ω ͡o )
 
-![Tableaux typés dans un ArrayBuffer](typed_arrays.png)
+![tabweaux typés dans u-un awwaybuffew](typed_awways.png)
 
-### `ArrayBuffer`
+### `awwaybuffew`
 
-Le type [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) est un type de donnée utilisé pour représenter un tampon de données binaire générique dont la longueur est fixée. Un tampon de données ne peut pas être manipulé directement. Pour manipuler les données, il faut créer une vue sur le tableau typé ou un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) qui représente le tampon dans un format spécifique et qui pourra être utilisé pour lire et écrire des informations du tampon.
+w-we type [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) e-est un type de donnée utiwisé pouw wepwésentew un tampon de données binaiwe généwique dont w-wa wongueuw est fixée. ^^;; un tampon d-de données nye peut pas êtwe manipuwé diwectement. :3 pouw manipuwew w-wes données, 😳 iw faut cwéew u-une vue suw we tabweau typé ou un objet [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) q-qui wepwésente w-we tampon d-dans un fowmat spécifique e-et qui p-pouwwa êtwe utiwisé pouw wiwe e-et écwiwe des i-infowmations du tampon. XD
 
-### Les vues sur les tableaux typés
+### wes v-vues suw wes tabweaux typés
 
-Les vues de tableaux typés possèdent des noms explicites et fournissent des vues pour les types numériques usuels tels que `Int8`, `Uint32`, `Float64` et ainsi de suite. Il existe un type de vue spécial qui est `Uint8ClampedArray`. Ce type ramène les différentes valeurs exploitées entre 0 et 255. Cela peut notamment être utile pour [le traitement des données d'un canvas](/fr/docs/Web/API/ImageData).
+wes vues de tabweaux t-typés possèdent des nyoms e-expwicites et fouwnissent d-des vues pouw wes types n-nyuméwiques u-usuews tews que `int8`, (///ˬ///✿) `uint32`, o.O `fwoat64` et ainsi de suite. o.O iw existe un type d-de vue spéciaw q-qui est `uint8cwampedawway`. XD c-ce t-type wamène wes difféwentes vaweuws expwoitées entwe 0 et 255. ^^;; c-cewa peut nyotamment êtwe utiwe pouw [we twaitement d-des données d'un canvas](/fw/docs/web/api/imagedata). 😳😳😳
 
-| Type                                                                                      | Intervalle de valeurs                                               | Taille exprimée en octets | Description                                                                        | Type Web IDL          | Type équivalent en C            |
+| type                                                                                      | i-intewvawwe de vaweuws                                               | taiwwe expwimée en octets | d-descwiption                                                                        | type web idw          | t-type équivawent en c-c            |
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)                 | `-128` à `127`                                                      | 1                         | Entier signé avec complément à deux sur 8 bits                                     | `byte`                | `int8_t`                        |
-| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)               | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bits                                                        | `octet`               | `uint8_t`                       |
-| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bit (écrété)                                                | `octet`               | `uint8_t`                       |
-| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)               | `-32768` à `32767`                                                  | 2                         | Entier signé avec complément à deux sur 16 bits                                    | `short`               | `int16_t`                       |
-| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)             | `0` à `65535`                                                       | 2                         | Entier non-signé sur 16 bits                                                       | `unsigned short`      | `uint16_t`                      |
-| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)               | `-2147483648` à `2147483647`                                        | 4                         | Entier signé avec complément à deux sur 32 bits                                    | `long`                | `int32_t`                       |
-| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)             | `0` à `4294967295`                                                  | 4                         | Entier non-signé sur 32 bits                                                       | `unsigned long`       | `uint32_t`                      |
-| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | `-3.4E38` à `3.4E38` et `1.2E-38` est le plus petit nombre positif  | 4                         | Nombre flottant sur 32 bits IEEE 754 (7 chiffres significatifs, ex. `1.123456`)    | `unrestricted float`  | `float`                         |
-| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)           | `-1.8E308` à `1.8E308` et `5E-324` est le plus petit nombre positif | 8                         | Nombre flottant sur 64 bits IEEE 754 (16 chiffres significatifs, ex. `1.123...15`) | `unrestricted double` | `double`                        |
-| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                                | 8                         | Entier signé avec complément à deux sur 64 bits                                    | `bigint`              | `int64_t (signed long long)`    |
-| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                    | 8                         | Entier non-signé sur 64 bits                                                       | `bigint`              | `uint64_t (unsigned long long)` |
+| [`int8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int8awway)                 | `-128` à `127`                                                      | 1                         | e-entiew signé avec compwément à d-deux suw 8 bits                                     | `byte`                | `int8_t`                        |
+| [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)               | `0` à `255`                                                         | 1                         | e-entiew nyon-signé suw 8 bits                                                        | `octet`               | `uint8_t`                       |
+| [`uint8cwampedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway) | `0` à `255`                                                         | 1                         | e-entiew nyon-signé s-suw 8 bit (écwété)                                                | `octet`               | `uint8_t`                       |
+| [`int16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int16awway)               | `-32768` à `32767`                                                  | 2                         | e-entiew s-signé avec compwément à deux s-suw 16 bits                                    | `showt`               | `int16_t`                       |
+| [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway)             | `0` à `65535`                                                       | 2                         | e-entiew n-nyon-signé suw 16 bits                                                       | `unsigned showt`      | `uint16_t`                      |
+| [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway)               | `-2147483648` à `2147483647`                                        | 4                         | e-entiew signé avec compwément à deux suw 32 bits                                    | `wong`                | `int32_t`                       |
+| [`uint32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint32awway)             | `0` à `4294967295`                                                  | 4                         | entiew nyon-signé suw 32 bits                                                       | `unsigned wong`       | `uint32_t`                      |
+| [`fwoat32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat32awway)           | `-3.4e38` à `3.4e38` e-et `1.2e-38` e-est we pwus petit nyombwe positif  | 4                         | n-nyombwe fwottant suw 32 bits ieee 754 (7 chiffwes s-significatifs, (U ᵕ U❁) e-ex. /(^•ω•^) `1.123456`)    | `unwestwicted f-fwoat`  | `fwoat`                         |
+| [`fwoat64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway)           | `-1.8e308` à `1.8e308` e-et `5e-324` est we pwus p-petit nyombwe positif | 8                         | nyombwe f-fwottant suw 64 b-bits ieee 754 (16 chiffwes significatifs, 😳😳😳 ex. `1.123...15`) | `unwestwicted doubwe` | `doubwe`                        |
+| [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway)         | `-2^63` à `2^63 - 1`                                                | 8                         | e-entiew signé avec compwément à d-deux suw 64 bits                                    | `bigint`              | `int64_t (signed wong wong)`    |
+| [`biguint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway)       | `0` à `2^64 - 1`                                                    | 8                         | e-entiew nyon-signé suw 64 b-bits                                                       | `bigint`              | `uint64_t (unsigned wong wong)` |
 
-Pour plus d'informations sur les tableaux typés, voir [l'article de la référence](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sur les différents objets [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray).
+pouw pwus d'infowmations s-suw wes tabweaux typés, rawr x3 v-voiw [w'awticwe de wa wéféwence](/fw/docs/web/javascwipt/guide/typed_awways) suw w-wes difféwents o-objets [`typedawway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway). ʘwʘ
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
+{{pweviousnext("web/javascwipt/guide/weguwaw_expwessions", UwU "web/javascwipt/guide/keyed_cowwections")}}

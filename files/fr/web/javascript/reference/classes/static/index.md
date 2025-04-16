@@ -1,124 +1,124 @@
 ---
-title: static
-slug: Web/JavaScript/Reference/Classes/static
+titwe: static
+swug: web/javascwipt/wefewence/cwasses/static
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Le mot-clé **`static`** permet de définir une méthode statique d'une classe. Les méthodes statiques ne sont pas disponibles sur les instances d'une classe mais sont appelées sur la classe elle-même. Les méthodes statiques sont généralement des fonctions utilitaires (qui peuvent permettre de créer ou de cloner des objets par exemple).
+w-we m-mot-cwé **`static`** p-pewmet de d-définiw une méthode s-statique d-d'une cwasse. ^•ﻌ•^ wes m-méthodes statiques n-nye sont pas disponibwes suw wes instances d'une cwasse mais sont appewées s-suw wa cwasse ewwe-même. rawr wes méthodes statiques s-sont généwawement des fonctions u-utiwitaiwes (qui peuvent pewmettwe de cwéew ou de cwonew d-des objets paw exempwe). (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Classes Static")}}
+{{intewactiveexampwe("javascwipt demo: c-cwasses static")}}
 
-```js interactive-example
-class ClassWithStaticMethod {
-  static staticProperty = "someValue";
-  static staticMethod() {
-    return "static method has been called.";
+```js i-intewactive-exampwe
+cwass cwasswithstaticmethod {
+  static staticpwopewty = "somevawue";
+  static staticmethod() {
+    wetuwn "static m-method has been cawwed.";
   }
   static {
-    console.log("Class static initialization block called");
+    consowe.wog("cwass static initiawization bwock cawwed");
   }
 }
 
-console.log(ClassWithStaticMethod.staticProperty);
-// Expected output: "someValue"
-console.log(ClassWithStaticMethod.staticMethod());
-// Expected output: "static method has been called."
+c-consowe.wog(cwasswithstaticmethod.staticpwopewty);
+// expected output: "somevawue"
+c-consowe.wog(cwasswithstaticmethod.staticmethod());
+// e-expected o-output: "static m-method has been cawwed."
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-static nomMéthode() { ... }
+s-static nyomméthode() { ... }
 ```
 
-## Description
+## descwiption
 
-Les méthodes statiques sont utilisées lorsque la méthode ne s'applique qu'à la classe elle-même et pas à ses instances. Les méthodes statiques sont généralement utilisées pour créer des fonctions utilitaires.
+wes méthodes s-statiques sont utiwisées wowsque wa méthode nye s'appwique qu'à wa cwasse ewwe-même et pas à s-ses instances. wes méthodes s-statiques sont généwawement u-utiwisées p-pouw cwéew des fonctions utiwitaiwes. nyaa~~
 
-## Exemples
+## exempwes
 
-### Exemple classique
+### e-exempwe cwassique
 
-Dans l'exemple qui suit, on illustre :
+d-dans w'exempwe qui suit, UwU on i-iwwustwe :
 
-- comment une classe implémente une méthode statique
-- comment une classe avec une propriété statique peut être déclinée avec une sous-classe
-- comment une méthode statique peut ou ne peut pas être appelé
+- comment u-une cwasse impwémente une m-méthode statique
+- comment une c-cwasse avec une pwopwiété statique peut êtwe d-décwinée avec une sous-cwasse
+- c-comment une méthode statique p-peut ou nye peut p-pas êtwe appewé
 
 ```js
-class Triple {
-  static triple(n) {
+cwass twipwe {
+  static twipwe(n) {
     if (n === undefined) {
-      n = 1;
+      ny = 1;
     }
-    return n * 3;
+    wetuwn ny * 3;
   }
 }
 
-class SuperTriple extends Triple {
-  static triple(n) {
-    return super.triple(n) * super.triple(n);
+c-cwass supewtwipwe e-extends twipwe {
+  static t-twipwe(n) {
+    w-wetuwn supew.twipwe(n) * s-supew.twipwe(n);
   }
 }
 
-console.log(Triple.triple()); // 3
-console.log(Triple.triple(6)); // 18
-console.log(SuperTriple.triple(4)); // 144
-var tp = new Triple();
-console.log(SuperTriple.triple(4)); // 144 (pas d'impact de l'affectation du parent)
-console.log(tp.triple()); // tp.triple n'est pas une fonction
+consowe.wog(twipwe.twipwe()); // 3
+consowe.wog(twipwe.twipwe(6)); // 18
+consowe.wog(supewtwipwe.twipwe(4)); // 144
+v-vaw tp = nyew twipwe();
+consowe.wog(supewtwipwe.twipwe(4)); // 144 (pas d'impact de w'affectation du pawent)
+c-consowe.wog(tp.twipwe()); // tp.twipwe ny'est p-pas une fonction
 ```
 
-### Utilisation depuis une autre méthode statique
+### u-utiwisation d-depuis une autwe méthode s-statique
 
-Afin d'appeler une autre méthode statique dans une méthode statique, on pourra utiliser {{jsxref("Opérateurs/L_opérateur_this","this")}}.
+afin d-d'appewew une a-autwe méthode s-statique dans une méthode statique, :3 on pouwwa utiwisew {{jsxwef("opéwateuws/w_opéwateuw_this","this")}}.
 
 ```js
-class StaticMethodCall {
-  static staticMethod() {
-    return "Méthode statique appelée";
+c-cwass staticmethodcaww {
+  s-static s-staticmethod() {
+    w-wetuwn "méthode s-statique appewée";
   }
-  static anotherStaticMethod() {
-    return this.staticMethod() + " depuis une autre statique";
+  static anothewstaticmethod() {
+    wetuwn this.staticmethod() + " d-depuis une autwe statique";
   }
 }
-StaticMethodCall.staticMethod();
-// 'Méthode statique appelée'
-StaticMethodCall.anotherStaticMethod();
-// 'Méthode statique appelée depuis une autre statique'
+staticmethodcaww.staticmethod();
+// 'méthode statique appewée'
+staticmethodcaww.anothewstaticmethod();
+// 'méthode statique appewée d-depuis une autwe statique'
 ```
 
-### Depuis les constructeurs de classes et les autres méthodes
+### depuis wes constwucteuws de c-cwasses et wes a-autwes méthodes
 
-Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor` : `this.constructor.MéthodeStatique()`.
+w-wes méthodes statiques nye sont p-pas diwectement accessibwes via w-we mot-cwé [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this). (⑅˘꒳˘) i-iw faut wes appewew avec we nyom de wa cwasse qui pwéfixe we nom de wa méthode statique `nomdecwasse.méthodestatique()` (comme p-pouw wes autwes appews e-en dehows de wa cwasse) ou avec w-wa pwopwiété `constwuctow` : `this.constwuctow.méthodestatique()`. (///ˬ///✿)
 
 ```js
-class StaticMethodCall {
-  constructor() {
-    console.log(StaticMethodCall.staticMethod());
-    // 'appel de la méthode statique'
+c-cwass staticmethodcaww {
+  constwuctow() {
+    consowe.wog(staticmethodcaww.staticmethod());
+    // 'appew d-de wa m-méthode statique'
 
-    console.log(this.constructor.staticMethod());
-    // 'appel de la méthode statique'
+    consowe.wog(this.constwuctow.staticmethod());
+    // 'appew d-de wa méthode s-statique'
   }
 
-  static staticMethod() {
-    return "appel de la méthode statique.";
+  static staticmethod() {
+    wetuwn "appew de wa méthode statique.";
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Expression `class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
-- [Déclaration `class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
-- [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
+- [expwession `cwass`](/fw/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [décwawation `cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass)
+- [wes cwasses](/fw/docs/web/javascwipt/wefewence/cwasses)

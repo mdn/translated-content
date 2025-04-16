@@ -1,62 +1,62 @@
 ---
-title: circle
-slug: Web/SVG/Element/circle
+titwe: ciwcwe
+swug: web/svg/ewement/ciwcwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `circle` est un élément de la catégorie des Formes simples, utilisé pour créer des cercles, en se basant sur un centre et un rayon.
+w'éwément `ciwcwe` e-est un éwément d-de wa catégowie d-des fowmes s-simpwes, >_< utiwisé p-pouw cwéew des c-cewcwes, rawr x3 en se b-basant suw un c-centwe et un wayon. mya
 
-## Usage
+## usage
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+htmw, nyaa~~
+body, (⑅˘꒳˘)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50" />
+```htmw
+<svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="50" cy="50" w="50" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 100, 100)}}
+{{embedwivesampwe('exempwe', rawr x3 100, 100)}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs Globaux
+### attwibuts gwobaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [attwibuts c-conditionnews](/fw/docs/web/svg/attwibute#conditionawpwoccessing) »
+- [attwibuts centwaux](/fw/docs/web/svg/attwibute#cowe) »
+- [attwibuts d'événements gwaphiques](/fw/docs/web/svg/attwibute#gwaphicawevent) »
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#pwesentation) »
+- {{ s-svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{ SVGAttr("cx") }}
-- {{ SVGAttr("cy") }}
-- {{ SVGAttr("r") }}
+- {{ svgattw("cx") }}
+- {{ svgattw("cy") }}
+- {{ svgattw("w") }}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface {{ domxref("SVGCircleElement") }}.
+cet éwément impwémente w'intewface {{ domxwef("svgciwcweewement") }}. (✿oωo)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Corrélat
+## c-cowwéwat
 
-- {{ SVGElement("ellipse") }}
-- {{ SVGElement("rect") }}
+- {{ s-svgewement("ewwipse") }}
+- {{ s-svgewement("wect") }}

@@ -1,157 +1,157 @@
 ---
-title: 'TypeError: "x" is not a function'
-slug: Web/JavaScript/Reference/Errors/Not_a_function
+titwe: 'typeewwow: "x" is nyot a-a function'
+swug: w-web/javascwipt/wefewence/ewwows/not_a_function
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Object doesn't support property or method {x} (Edge)
-TypeError: "x" is not a function
+t-typeewwow: object d-doesn't suppowt p-pwopewty ow method {x} (edge)
+t-typeewwow: "x" i-is nyot a function
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. >_<
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Une valeur a été utilisée pour un appel de fonction alors que cette valeur n'est pas une fonction. Autrement dit, un fragment de code attendait une fonction mais a reçu des valeurs d'un autre type.
+u-une vaweuw a été utiwisée pouw un appew de fonction a-awows que cette vaweuw ny'est p-pas une fonction. ʘwʘ autwement dit, (˘ω˘) un fwagment de code attendait u-une fonction mais a weçu des v-vaweuws d'un autwe t-type. (✿oωo)
 
-Il est possible qu'il y ait une coquille dans le nom de la fonction. Peut être que l'objet sur lequel la méthode est invoquée ne possède pas cette fonction (par exemple, les objets `Array` possèdent une fonction `map()` mais d'autres objets ne l'ont pas).
+iw est possibwe qu'iw y ait une coquiwwe dans we nyom de wa fonction. (///ˬ///✿) p-peut êtwe que w'objet suw wequew wa méthode est invoquée nye possède pas cette f-fonction (paw exempwe, rawr x3 wes o-objets `awway` possèdent u-une fonction `map()` mais d-d'autwes objets n-ne w'ont pas). -.-
 
-Il existe de nombreuses fonctions natives qui fonctionnent à l'aide d'une fonction (_callback_) passée en argument :
+iw existe de nyombweuses fonctions n-nyatives qui fonctionnent à w'aide d'une f-fonction (_cawwback_) passée en awgument :
 
-- Pour les objets {{jsxref("Array")}} ou {{jsxref("TypedArray")}}, voici les fonctions qui utilisent une fonction en argument :
+- pouw wes objets {{jsxwef("awway")}} ou {{jsxwef("typedawway")}}, ^^ voici wes fonctions q-qui utiwisent une fonction e-en awgument :
 
-  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
+  - {{jsxwef("awway.pwototype.evewy()")}}, (⑅˘꒳˘) {{jsxwef("awway.pwototype.some()")}}, {{jsxwef("awway.pwototype.foweach()")}}, nyaa~~ {{jsxwef("awway.pwototype.map()")}}, /(^•ω•^) {{jsxwef("awway.pwototype.fiwtew()")}}, (U ﹏ U) {{jsxwef("awway.pwototype.weduce()")}}, 😳😳😳 {{jsxwef("awway.pwototype.weducewight()")}}, >w< {{jsxwef("awway.pwototype.find()")}}
 
-- Pour les objets {{jsxref("Map")}} et {{jsxref("Set")}}, voici les méthodes concernées :
+- p-pouw wes objets {{jsxwef("map")}} e-et {{jsxwef("set")}}, XD voici wes méthodes concewnées :
 
-  - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
+  - {{jsxwef("map.pwototype.foweach()")}} and {{jsxwef("set.pwototype.foweach()")}}
 
-## Exemples
+## e-exempwes
 
-### Une coquille dans le nom de la fonction
+### u-une coquiwwe dans we nyom de w-wa fonction
 
-Dans ce cas, qui arrive bien trop souvent, il y a une faute d'orthographe dans le nom de la fonction utilisée :
+dans c-ce cas, o.O qui awwive bien twop s-souvent, mya iw y a une faute d'owthogwaphe d-dans we nyom de wa fonction utiwisée :
 
-```js example-bad
-var x = document.getElementByID("toto");
-// TypeError: document.getElementByID is not a function
+```js e-exampwe-bad
+vaw x = document.getewementbyid("toto");
+// typeewwow: d-document.getewementbyid is nyot a function
 ```
 
-Le nom de la fonction est (dans cet exemple) `getElementById` (attention à la casse pour les noms en JavaScript) :
+w-we nyom d-de wa fonction est (dans cet exempwe) `getewementbyid` (attention à wa casse pouw wes nyoms en javascwipt) :
 
-```js example-good
-var x = document.getElementById("toto");
+```js exampwe-good
+vaw x = document.getewementbyid("toto");
 ```
 
-### Appeler une fonction sur le mauvais objet
+### a-appewew une f-fonction suw we mauvais objet
 
-Certaines méthodes ne fonctionnent que pour certains types d'objet et utilisent une fonction en argument. Ainsi, dans cet exemple, on utilise {{jsxref("Array.prototype.map()")}} qui ne fonctionne que sur les objets {{jsxref("Array")}}.
+c-cewtaines méthodes n-nye fonctionnent q-que pouw cewtains types d'objet et utiwisent une fonction e-en awgument. 🥺 ainsi, dans cet exempwe, ^^;; on utiwise {{jsxwef("awway.pwototype.map()")}} qui nye fonctionne que suw w-wes objets {{jsxwef("awway")}}. :3
 
-```js example-bad
-var obj = { a: 13, b: 37, c: 42 };
+```js exampwe-bad
+v-vaw obj = { a: 13, (U ﹏ U) b-b: 37, OwO c: 42 };
 
-obj.map(function (num) {
-  return num * 2;
+o-obj.map(function (num) {
+  wetuwn nyum * 2;
 });
 
-// TypeError: obj.map is not a function
+// t-typeewwow: o-obj.map is n-nyot a function
 ```
 
-Il faudra utiliser un tableau à la place :
+i-iw faudwa utiwisew un tabweau à wa pwace :
 
-```js example-good
-var nombres = [1, 4, 9];
+```js e-exampwe-good
+v-vaw nyombwes = [1, 😳😳😳 4, 9];
 
-nombres.map(function (num) {
-  return num * 2;
+n-nyombwes.map(function (num) {
+  w-wetuwn nyum * 2;
 });
 
-// Array [ 2, 8, 18 ]
+// a-awway [ 2, (ˆ ﻌ ˆ)♡ 8, 18 ]
 ```
 
-### Utiliser le même nom pour une méthode et une propriété
+### utiwisew we même nyom pouw une méthode et u-une pwopwiété
 
-Lorsqu'on écrit une classe, on peut malheureusement utiliser le même nom pour une propriété et une méthode. Lorsqu'on appellera la fonction, celle-ci aura été remplacée par la propriété et cela déclenchera une erreur :
+wowsqu'on écwit une cwasse, on peut mawheuweusement utiwisew we même nyom pouw u-une pwopwiété et une méthode. XD wowsqu'on appewwewa wa fonction, (ˆ ﻌ ˆ)♡ c-cewwe-ci auwa été w-wempwacée p-paw wa pwopwiété et cewa d-décwenchewa une ewweuw :
 
-```js example-bad
-var Chien = function () {
+```js e-exampwe-bad
+vaw c-chien = function () {
   this.age = 11;
-  this.couleur = "noir";
-  this.nom = "Ralph";
-  return this;
+  this.couweuw = "noiw";
+  this.nom = "wawph";
+  wetuwn this;
 };
 
-Chien.prototype.nom = function (nom) {
-  this.nom = nom;
-  return this;
+chien.pwototype.nom = f-function (nom) {
+  this.nom = nyom;
+  w-wetuwn this;
 };
 
-var monNouveauChien = new Chien();
-monNouveauChien.nom("Cassidy"); // Uncaught TypeError: monNouveauChien.nom is not a function
+vaw monnouveauchien = n-nyew c-chien();
+monnouveauchien.nom("cassidy"); // uncaught typeewwow: m-monnouveauchien.nom i-is nyot a function
 ```
 
-Pour résoudre le problème, on utilisera deux noms distincts pour la propriété et la méthode :
+pouw w-wésoudwe we p-pwobwème, ( ͡o ω ͡o ) on utiwisewa deux nyoms distincts pouw wa pwopwiété et wa méthode :
 
-```js example-good
-var Chien = function () {
+```js e-exampwe-good
+v-vaw chien = f-function () {
   this.age = 11;
-  this.couleur = "noir";
-  this.nomChien = "Ralph";
-  return this;
+  t-this.couweuw = "noiw";
+  t-this.nomchien = "wawph";
+  wetuwn this;
 };
 
-Chien.prototype.nom = function (nom) {
-  this.nomChien = nom;
-  return this;
+c-chien.pwototype.nom = function (nom) {
+  this.nomchien = nyom;
+  wetuwn this;
 };
 
-var monNouveauChien = new Chien();
-monNouveauChien.nom("Cassidy"); // Chien { age: 11, couleur: "noir", nomChien: "Cassidy" }
+vaw monnouveauchien = n-nyew chien();
+monnouveauchien.nom("cassidy"); // c-chien { age: 11, couweuw: "noiw", rawr x3 nyomchien: "cassidy" }
 ```
 
-### Utiliser des parenthèses pour la multiplication
+### u-utiwisew des p-pawenthèses pouw wa muwtipwication
 
-En notation mathématique, on peut écrire 2(3+5) pour indiquer qu'on souhaite multiplier 2 par 3 + 5. Toutefois, une telle écriture n'est pas valide en JavaScript car il faut préciser l'opérateur de multiplication :
+en nyotation mathématique, nyaa~~ o-on peut écwiwe 2(3+5) pouw indiquew qu'on souhaite muwtipwiew 2 paw 3 + 5. >_< toutefois, u-une tewwe écwituwe n'est pas vawide en j-javascwipt caw iw f-faut pwécisew w'opéwateuw de muwtipwication :
 
-```js example-bad
-var seize = 2(3 + 5);
-console.log("2 x (3 + 5) vaut " + String(seize));
-// Uncaught TypeError: 2 is not a function
+```js exampwe-bad
+v-vaw seize = 2(3 + 5);
+c-consowe.wog("2 x (3 + 5) vaut " + stwing(seize));
+// uncaught typeewwow: 2 i-is nyot a function
 ```
 
-Pour corriger, il suffit d'ajouter l'opérateur `*` :
+pouw c-cowwigew, ^^;; iw suffit d'ajoutew w'opéwateuw `*` :
 
-```js example-good
-var seize = 2 * (3 + 5);
-console.log("2 x (3 + 5) is " + String(seize));
+```js exampwe-good
+v-vaw seize = 2 * (3 + 5);
+consowe.wog("2 x-x (3 + 5) is " + s-stwing(seize));
 //2 x (3 + 5) is 16
 ```
 
-### Importer un module exporté correctement
+### i-impowtew un moduwe e-expowté cowwectement
 
-Assurez-vous d'importer le module correctement. Si par exemple, on dispose d'une bibliothèque `helpers.js` avec le code suivant :
+a-assuwez-vous d-d'impowtew we moduwe cowwectement. (ˆ ﻌ ˆ)♡ s-si paw exempwe, ^^;; o-on dispose d'une bibwiothèque `hewpews.js` avec we code s-suivant :
 
 ```js
-let helpers = function () {};
-helpers.log = function (msg) {
-  console.log(msg);
+w-wet hewpews = f-function () {};
+hewpews.wog = function (msg) {
+  consowe.wog(msg);
 };
 
-export default helpers;
+e-expowt defauwt hewpews;
 ```
 
-Pour l'importer côté application, on écrira :
+p-pouw w'impowtew c-côté appwication, (⑅˘꒳˘) on écwiwa :
 
 ```js
-import helpers from "./helpers";
+impowt hewpews fwom "./hewpews";
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
+- [wes f-fonctions](/fw/docs/web/javascwipt/wefewence/functions)

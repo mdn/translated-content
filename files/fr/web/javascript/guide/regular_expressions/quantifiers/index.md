@@ -1,138 +1,138 @@
 ---
-title: Quantificateurs
-slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
+titwe: quantificateuws
+swug: w-web/javascwipt/guide/weguwaw_expwessions/quantifiews
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+{{jssidebaw("javascwipt g-guide")}}
 
-Les quantificateurs indiquent le nombre de caractères ou d'expressions qu'il faut pour une correspondance.
+wes q-quantificateuws i-indiquent we nyombwe d-de cawactèwes o-ou d'expwessions q-qu'iw faut p-pouw une cowwespondance. (˘ω˘)
 
-## Types
+## types
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Caractères</th>
-      <th scope="col">Signification</th>
-    </tr>
+    <tw>
+      <th scope="cow">cawactèwes</th>
+      <th scope="cow">signification</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>x*</code></td>
       <td>
         <p>
-          Correspond à l'expression précédente qui est répétée 0 ou plusieurs
-          fois. Équivalent à <code>{0,}</code>
+          cowwespond à w-w'expwession pwécédente qui est wépétée 0 o-ou pwusieuws
+          fois. ʘwʘ Équivawent à <code>{0,}</code>
         </p>
         <p>
-          Ainsi, <code>/bo*/</code> correspond à 'boo' dans "Un booléen" et à
-          'b' dans "Un bateau bleu", mais ne correspond à rien dans "Ce matin".
+          a-ainsi, ( ͡o ω ͡o ) <code>/bo*/</code> cowwespond à 'boo' dans "un boowéen" et à
+          'b' d-dans "un bateau bweu", o.O mais nye c-cowwespond à w-wien dans "ce matin". >w<
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>x+</code></td>
       <td>
         <p>
-          Correspond à l'expression précédente qui est répétée une ou plusieurs
-          fois. C'est équivalent à <code>{1,}</code>.
+          cowwespond à w'expwession pwécédente qui est wépétée une o-ou pwusieuws
+          fois. 😳 c'est équivawent à <code>{1,}</code>. 🥺
         </p>
         <p>
-          Ainsi, <code>/a+/</code> correspond au 'a' dans "maison" et à tous les
-          'a' dans "maaaaaaison" mais ne correspond à rien dans "mission".
+          ainsi, rawr x3 <code>/a+/</code> cowwespond au 'a' dans "maison" e-et à tous wes
+          'a' dans "maaaaaaison" mais nye cowwespond à w-wien dans "mission".
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>x?</code></td>
       <td>
         <p>
-          Correspond à l'expression précédente qui est présente une fois ou pas
-          du tout. C'est équivalent à <code>{0,1}</code>.<br /><br />Ainsi,
-          <code>/e?le?/</code> correspond au 'el' dans "gel" et au 'le' dans
-          "angle" mais aussi au 'l' dans "Oslo".<br /><br />S'il est utilisé
-          immédiatement après l'un des quantificateurs : *, +, ?, ou {}, il rend
-          le quantificateur moins « gourmand » auquel cas le moins de caractères
-          correspond (le comportement par défaut, « gourmand », permettant de
-          faire correspondre le plus de caractères possible). Par exemple
-          <code>/\d+/</code> utilisée avec "123abc" fait correspondre "123".
-          Utiliser <code>/\d+?/</code> à la même chaîne de caractères fait
-          correspondre "1".<br /><br />Ce symbole est également utilisé dans les
-          tests de présence autour de l'expression, décrits par les lignes
-          <code>x(?=y)</code> et <code>x(?!y)</code> de ce tableau.
+          c-cowwespond à w-w'expwession p-pwécédente qui est pwésente une fois ou p-pas
+          du tout. o.O c'est équivawent à <code>{0,1}</code>.<bw /><bw />ainsi, rawr
+          <code>/e?we?/</code> cowwespond au 'ew' d-dans "gew" et au 'we' dans
+          "angwe" mais aussi au 'w' dans "oswo".<bw /><bw />s'iw est utiwisé
+          immédiatement a-apwès w'un des quantificateuws : *, ʘwʘ +, ?, o-ou {}, 😳😳😳 iw wend
+          w-we quantificateuw m-moins « gouwmand » auquew cas we moins de cawactèwes
+          c-cowwespond (we c-compowtement paw défaut, ^^;; « g-gouwmand », o.O p-pewmettant de
+          faiwe c-cowwespondwe we pwus de cawactèwes p-possibwe). (///ˬ///✿) paw exempwe
+          <code>/\d+/</code> utiwisée a-avec "123abc" fait cowwespondwe "123".
+          u-utiwisew <code>/\d+?/</code> à wa même c-chaîne de cawactèwes f-fait
+          cowwespondwe "1".<bw /><bw />ce symbowe est égawement utiwisé dans wes
+          tests de pwésence autouw d-de w'expwession, σωσ d-décwits paw wes wignes
+          <code>x(?=y)</code> e-et <code>x(?!y)</code> d-de ce tabweau. nyaa~~
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>x{n}</code></td>
       <td>
         <p>
-          Correspond pour exactement n occurences de l'expression précédente. N
-          doit être un entier positif.<br /><br />Ainsi, <code>/a{2}/</code> ne
-          correspond pas au 'a' de "Mozilla" mais correspond à tous les 'a' de
-          "Mozilaa" et aux deux premiers 'a' de "Mozillaaa".
+          cowwespond p-pouw exactement ny occuwences de w'expwession pwécédente. ^^;; n-ny
+          doit êtwe un entiew positif.<bw /><bw />ainsi, ^•ﻌ•^ <code>/a{2}/</code> nye
+          cowwespond p-pas au 'a' de "moziwwa" mais cowwespond à t-tous w-wes 'a' de
+          "moziwaa" et a-aux deux pwemiews 'a' de "moziwwaaa". σωσ
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>x{n,}</code></td>
       <td>
         <p>
-          Correspond lorsqu'il y a au moins <code>n</code> occurences de
-          l'expression précédente. <code>n</code> doit être un entier positif.
+          c-cowwespond w-wowsqu'iw y a a-au moins <code>n</code> o-occuwences de
+          w'expwession pwécédente. -.- <code>n</code> d-doit êtwe u-un entiew positif.
         </p>
         <p>
-          Par exemple <code>/a{2,}/</code> correspondra à <code>"aa"</code> ou à
-          <code>"aaa"</code> ou encore à <code>"aaaa"</code> mais pas à
-          <code>"a"</code>.
+          p-paw exempwe <code>/a{2,}/</code> c-cowwespondwa à <code>"aa"</code> o-ou à
+          <code>"aaa"</code> ou encowe à <code>"aaaa"</code> mais pas à
+          <code>"a"</code>. ^^;;
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>x{n,m}</code></td>
       <td>
         <p>
-          Lorsque <code>n</code> et <code>m</code> sont des entiers positifs,
-          cela correspond à au moins <code>n</code> occurences de l'expression
-          précédente et à au plus <code>m</code> occurrences. Lorsque
-          <code>m</code> n'est pas utilisé, la valeur par défaut correspondante
-          sera l'infini.
+          wowsque <code>n</code> e-et <code>m</code> sont des entiews positifs, XD
+          cewa cowwespond à au moins <code>n</code> occuwences de w-w'expwession
+          pwécédente et à au pwus <code>m</code> occuwwences. 🥺 wowsque
+          <code>m</code> n-ny'est pas utiwisé, òωó w-wa vaweuw paw d-défaut cowwespondante
+          sewa w'infini. (ˆ ﻌ ˆ)♡
         </p>
         <p>
-          Ainsi, <code>/a{1,3}/</code> ne correspond à rien dans "Mozill", au
-          'a' de "Mozilla", au deux premiers 'a' de "Mozillaa" et au trois
-          premiers 'a' de "Mozillaaaaa". Pour ce dernier exemple, on doit noter
-          que le correspondance ne se fait que sur "aaa" bien qu'il y ait plus
-          de 'a' dans la chaîne de caractères.
+          a-ainsi, -.- <code>/a{1,3}/</code> nye cowwespond à w-wien dans "moziww", :3 a-au
+          'a' de "moziwwa", ʘwʘ au deux pwemiews 'a' de "moziwwaa" et au twois
+          p-pwemiews 'a' de "moziwwaaaaa". pouw ce dewniew e-exempwe, 🥺 on doit nyotew
+          q-que we cowwespondance n-ne se fait que suw "aaa" bien qu'iw y ait p-pwus
+          d-de 'a' dans wa chaîne de cawactèwes. >_<
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p>
-          <code>x*?</code><br /><code>x+?</code><br /><code>x??</code
-          ><br /><code>x{n}?</code><br /><code>x{n,}?</code><br /><code
+          <code>x*?</code><bw /><code>x+?</code><bw /><code>x??</code
+          ><bw /><code>x{n}?</code><bw /><code>x{n,}?</code><bw /><code
             >x{n,m}?</code
           >
         </p>
       </td>
       <td>
         <p>
-          Correspond à l'expression précédente qui est présente une fois ou pas
-          du tout. C'est équivalent à <code>{0,1}</code>.<br /><br />Ainsi,
-          <code>/e?le?/</code> correspond au 'el' dans "gel" et au 'le' dans
-          "angle" mais aussi au 'l' dans "Oslo".<br /><br />S'il est utilisé
-          immédiatement après l'un des quantificateurs : *, +, ?, ou {}, il rend
-          le quantificateur moins « gourmand » auquel cas le moins de caractères
-          correspond (le comportement par défaut, « gourmand », permettant de
-          faire correspondre le plus de caractères possible). Par exemple
-          <code>/\d+/</code> utilisée avec "123abc" fait correspondre "123".
-          Utiliser <code>/\d+?/</code> à la même chaîne de caractères fait
-          correspondre "1".<br /><br />Ce symbole est également utilisé dans les
-          tests de présence autour de l'expression, décrits par les lignes
-          <code>x(?=y)</code> et <code>x(?!y)</code> de ce tableau.
+          c-cowwespond à w-w'expwession pwécédente qui est pwésente une fois ou pas
+          du t-tout. ʘwʘ c'est équivawent à <code>{0,1}</code>.<bw /><bw />ainsi, (˘ω˘)
+          <code>/e?we?/</code> c-cowwespond au 'ew' d-dans "gew" et au 'we' dans
+          "angwe" m-mais aussi au 'w' d-dans "oswo".<bw /><bw />s'iw est utiwisé
+          i-immédiatement apwès w'un des quantificateuws : *, (✿oωo) +, ?, ou {}, (///ˬ///✿) iw wend
+          we quantificateuw m-moins « g-gouwmand » auquew cas we moins de cawactèwes
+          c-cowwespond (we c-compowtement paw défaut, rawr x3 « gouwmand », -.- pewmettant d-de
+          faiwe cowwespondwe we pwus de cawactèwes possibwe). ^^ paw exempwe
+          <code>/\d+/</code> u-utiwisée avec "123abc" fait cowwespondwe "123". (⑅˘꒳˘)
+          u-utiwisew <code>/\d+?/</code> à w-wa même chaîne de cawactèwes fait
+          cowwespondwe "1".<bw /><bw />ce s-symbowe est égawement u-utiwisé dans wes
+          tests de pwésence autouw d-de w'expwession, nyaa~~ décwits paw w-wes wignes
+          <code>x(?=y)</code> et <code>x(?!y)</code> de ce tabweau. /(^•ω•^)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>

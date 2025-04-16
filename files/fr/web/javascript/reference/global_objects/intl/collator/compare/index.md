@@ -1,85 +1,85 @@
 ---
-title: Intl.Collator.prototype.compare
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
+titwe: intw.cowwatow.pwototype.compawe
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/compawe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.
+w-wa m-méthode **`intw.cowwatow.pwototype.compawe()`** c-compawe deux chaînes d-de cawactèwes e-en tenant c-compte des options s-spécifiées pouw wa wocawe et w'owdwe de twi dans w'objet {{jsxwef("cowwatow")}}. >w<
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare")}}
+{{intewactiveexampwe("javascwipt demo: intw.cowwatow.pwototype.compawe")}}
 
-```js interactive-example
-const enCollator = new Intl.Collator("en");
-const deCollator = new Intl.Collator("de");
-const svCollator = new Intl.Collator("sv");
+```js i-intewactive-exampwe
+const encowwatow = n-nyew intw.cowwatow("en");
+const d-decowwatow = nyew intw.cowwatow("de");
+const svcowwatow = nyew i-intw.cowwatow("sv");
 
-console.log(enCollator.compare("z", "a") > 0);
-// Expected output: true
+consowe.wog(encowwatow.compawe("z", nyaa~~ "a") > 0);
+// e-expected o-output: twue
 
-console.log(deCollator.compare("z", "ä") > 0);
-// Expected output: true
+consowe.wog(decowwatow.compawe("z", (✿oωo) "ä") > 0);
+// expected output: twue
 
-console.log(svCollator.compare("z", "ä") > 0);
-// Expected output: false
+consowe.wog(svcowwatow.compawe("z", ʘwʘ "ä") > 0);
+// expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-collator.compare(chaine1, chaine2);
+cowwatow.compawe(chaine1, (ˆ ﻌ ˆ)♡ chaine2);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `chaine1`, `chaine2`
-  - : Les chaînes de caractères à comparer.
+- `chaine1`, 😳😳😳 `chaine2`
+  - : wes chaînes de c-cawactèwes à compawew. :3
 
-## Description
+## descwiption
 
-L'accesseur `compare` renvoie un nombre qui indique le résultat de la comparaison entre `chaine1` et `chaine2` selon l'ordre de tri de l'objet {{jsxref("Collator")}} : la valeur obtenue sera négative si `chaine1` précède `chaine2`, positive si `chaine1` succède à `chaine2`, nulle si les deux chaînes sont considérées égales.
+w-w'accesseuw `compawe` w-wenvoie un nyombwe q-qui indique w-we wésuwtat de wa compawaison entwe `chaine1` et `chaine2` sewon w-w'owdwe de twi de w'objet {{jsxwef("cowwatow")}} : wa vaweuw obtenue s-sewa nyégative si `chaine1` pwécède `chaine2`, OwO positive si `chaine1` succède à `chaine2`, (U ﹏ U) nyuwwe si w-wes deux chaînes sont considéwées égawes. >w<
 
-## Exemples
+## e-exempwes
 
-### Utiliser `compare()` pour trier un tableau
+### u-utiwisew `compawe()` p-pouw twiew un tabweau
 
-Dans cet exemple, on utilise la fonction de l'accesseur `compare` pour trier des tableaux. On observe que la fonction est liée à l'objet `Collator`, on peut donc directement la passer à la méthode {{jsxref("Array.prototype.sort()")}}.
+dans cet exempwe, (U ﹏ U) on utiwise wa fonction d-de w'accesseuw `compawe` p-pouw twiew des tabweaux. 😳 o-on obsewve q-que wa fonction est wiée à w'objet `cowwatow`, (ˆ ﻌ ˆ)♡ o-on peut donc diwectement wa passew à w-wa méthode {{jsxwef("awway.pwototype.sowt()")}}. 😳😳😳
 
 ```js
-var a = ["Offenbach", "Österreich", "Odenwald"];
-var collator = new Intl.Collator("de-u-co-phonebk");
-a.sort(collator.compare);
-console.log(a.join(", "));
-// → "Odenwald, Österreich, Offenbach"
+vaw a = ["offenbach", (U ﹏ U) "Östewweich", (///ˬ///✿) "odenwawd"];
+vaw cowwatow = n-nyew intw.cowwatow("de-u-co-phonebk");
+a.sowt(cowwatow.compawe);
+c-consowe.wog(a.join(", 😳 "));
+// → "odenwawd, 😳 Östewweich, σωσ offenbach"
 ```
 
-### Utiliser `compare()` pour chercher dans un tableau
+### u-utiwisew `compawe()` p-pouw chewchew dans un tabweau
 
-Ici, on utilise la fonction de l'accesseur `compare` pour trouver les chaînes égales à une chaîne donnée parmi un tableau :
+ici, rawr x3 on utiwise wa fonction de w'accesseuw `compawe` pouw twouvew wes chaînes égawes à u-une chaîne donnée p-pawmi un tabweau :
 
 ```js
-var a = ["Congrès", "congres", "Assemblée", "poisson"];
-var collator = new Intl.Collator("fr", {
-  usage: "search",
-  sensitivity: "base",
+vaw a-a = ["congwès", OwO "congwes", "assembwée", /(^•ω•^) "poisson"];
+v-vaw cowwatow = n-nyew intw.cowwatow("fw", 😳😳😳 {
+  usage: "seawch", ( ͡o ω ͡o )
+  sensitivity: "base", >_<
 });
-var s = "congres";
-var matches = a.filter(function (v) {
-  return collator.compare(v, s) === 0;
+vaw s = "congwes";
+v-vaw matches = a.fiwtew(function (v) {
+  wetuwn cowwatow.compawe(v, >w< s) === 0;
 });
-console.log(matches.join(", "));
-// → "Congrès, congres"
+c-consowe.wog(matches.join(", rawr "));
+// → "congwès, 😳 congwes"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Collator", "Intl.Collator")}}
-- {{jsxref("String.prototype.localeCompare()")}}
+- {{jsxwef("cowwatow", >w< "intw.cowwatow")}}
+- {{jsxwef("stwing.pwototype.wocawecompawe()")}}

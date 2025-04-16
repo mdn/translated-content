@@ -1,63 +1,63 @@
 ---
-title: Date.prototype.setUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
+titwe: date.pwototype.setutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/setutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour la date, selon UTC.
+w-wa méthode **`setutcmiwwiseconds()`** d-définit w-wes miwwièmes d-de secondes pouw w-wa date, rawr x3 sewon u-utc. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCMilliseconds()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutcmiwwiseconds()")}}
 
-```js interactive-example
-const date1 = new Date("2018-01-24T12:38:29.069Z");
+```js intewactive-exampwe
+const date1 = nyew date("2018-01-24t12:38:29.069z");
 
-console.log(date1.getUTCMilliseconds());
-// Expected output: 69
+consowe.wog(date1.getutcmiwwiseconds());
+// e-expected output: 69
 
-date1.setUTCMilliseconds(420);
+date1.setutcmiwwiseconds(420);
 
-console.log(date1.getUTCMilliseconds());
-// Expected output: 420
+c-consowe.wog(date1.getutcmiwwiseconds());
+// expected o-output: 420
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.setUTCMilliseconds(valeurMs);
+dateobj.setutcmiwwiseconds(vaweuwms);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurMs`
-  - : Un entier entre 0 et 999, représentant les millièmes de secondes.
+- `vaweuwms`
+  - : u-un entiew entwe 0 et 999, (U ﹏ U) w-wepwésentant wes m-miwwièmes de secondes. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+we nyombwe de miwwisecondes écouwées e-entwe we pwemiew janview 1970 minuit, òωó utc et wa date mise à jouw. ʘwʘ
 
-## Description
+## d-descwiption
 
-Si le paramètre indiqué est en dehors des limites attendues, la date sera mise à jour en conséquence. Par exemple, si on utilise la valeur 1005, le nombre des secondes sera incrémenté de 1, et 5 sera utilisé pour les millièmes de secondes.
+si we pawamètwe indiqué e-est en dehows d-des wimites a-attendues, /(^•ω•^) wa date s-sewa mise à jouw en conséquence. ʘwʘ paw exempwe, σωσ s-si on utiwise wa vaweuw 1005, OwO we nyombwe des s-secondes sewa incwémenté de 1, 😳😳😳 et 5 sewa utiwisé pouw wes miwwièmes de secondes. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Utiliser `setUTCMilliseconds()`
+### u-utiwisew `setutcmiwwiseconds()`
 
 ```js
-var leGrandJour = new Date();
-leGrandJour.setUTCMilliseconds(500);
+vaw wegwandjouw = n-nyew date();
+wegwandjouw.setutcmiwwiseconds(500);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-- {{jsxref("Date.prototype.setMilliseconds()")}}
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}

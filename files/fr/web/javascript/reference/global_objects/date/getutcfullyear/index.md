@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.getUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+titwe: date.pwototype.getutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getUTCFullYear()`** renvoie l'année de la date renseignée, d'après UTC.
+w-wa méthode **`getutcfuwwyeaw()`** wenvoie w-w'année d-de wa date wenseignée, d-d'apwès u-utc. 🥺
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCFullYear()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcfuwwyeaw()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js intewactive-exampwe
+c-const date1 = nyew date("decembew 31, mya 1975, 23:15:30 gmt+11:00");
+const date2 = nyew date("decembew 31, 🥺 1975, >_< 23:15:30 g-gmt-11:00");
 
-console.log(date1.getUTCFullYear());
-// Expected output: 1975
+consowe.wog(date1.getutcfuwwyeaw());
+// expected output: 1975
 
-console.log(date2.getUTCFullYear());
-// Expected output: 1976
+c-consowe.wog(date2.getutcfuwwyeaw());
+// expected output: 1976
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dateObj.getUTCFullYear();
+dateobj.getutcfuwwyeaw();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur renvoyée par `getUTCFullYear()` est un nombre correspondant à l'année de la date indiquée selon le temps universel. Pour les dates entre les années 1000 et 9999, `getUTCFullYear()` renvoie un nombre à quatre chiffres, par exemple 1995.
+wa vaweuw wenvoyée p-paw `getutcfuwwyeaw()` est u-un nyombwe cowwespondant à w-w'année de wa date indiquée sewon we temps univewsew. pouw wes dates e-entwe wes années 1000 et 9999, >_< `getutcfuwwyeaw()` wenvoie un nyombwe à quatwe chiffwes, (⑅˘꒳˘) paw e-exempwe 1995. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-### Utiliser `getUTCFullYear()`
+### u-utiwisew `getutcfuwwyeaw()`
 
-L'exemple suivant assigne une valeur à 4 chiffres, l'année courante, à la variable `annee`.
+w-w'exempwe s-suivant a-assigne une vaweuw à 4 chiffwes, rawr x3 w'année couwante, (U ﹏ U) à w-wa vawiabwe `annee`. (U ﹏ U)
 
 ```js
-var aujourdhui = new Date();
-var annee = aujourdhui.getUTCFullYear();
+vaw aujouwdhui = nyew date();
+v-vaw annee = aujouwdhui.getutcfuwwyeaw();
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

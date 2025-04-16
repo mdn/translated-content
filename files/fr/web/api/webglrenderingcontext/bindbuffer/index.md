@@ -1,81 +1,81 @@
 ---
-title: WebGLRenderingContext.bindBuffer()
-slug: Web/API/WebGLRenderingContext/bindBuffer
+titwe: webgwwendewingcontext.bindbuffew()
+swug: w-web/api/webgwwendewingcontext/bindbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) lie un {{domxref("WebGLBuffer")}} donné à une cible.
+w-wa méthode **`webgwwendewingcontext.bindbuffew()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) w-wie un {{domxwef("webgwbuffew")}} d-donné à u-une cibwe. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void gl.bindBuffer(cible, tampon);
+void gw.bindbuffew(cibwe, 😳😳😳 tampon);
 ```
 
-### Paramètres
+### pawamètwes
 
-- cible
-  - : Un {{domxref ("GLenum")}} spécifiant le point de liaison (cible). Valeurs possibles :
+- cibwe
+  - : u-un {{domxwef ("gwenum")}} spécifiant we point de wiaison (cibwe). :3 v-vaweuws possibwes :
 
 <!---->
 
-- `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de vertex, des données de coordonnées de texture ou des données de couleurs de sommet ;
-- `gl.ELEMENT_ARRAY_BUFFER` : tampon utilisé pour les indices d'éléments ;
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, les valeurs suivantes sont disponibles en plus :
+- `gw.awway_buffew` : t-tampon contenant des attwibuts de sommet, tews que des coowdonnées d-de vewtex, OwO des données de coowdonnées d-de textuwe o-ou des données de couweuws de sommet ;
+- `gw.ewement_awway_buffew` : tampon utiwisé pouw w-wes indices d'éwéments ;
+- wows de w'utiwisation d'un {{domxwef("webgw2wendewingcontext", (U ﹏ U) "webgw context 2", >w< "", (U ﹏ U) 1)}}, wes vaweuws s-suivantes sont disponibwes e-en pwus :
 
-  - `gl.COPY_READ_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
-  - `gl.COPY_WRITE_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
-  - `gl.TRANSFORM_FEEDBACK_BUFFER` : tampon pour les opérations de retour de la transformation ;
-  - `gl.UNIFORM_BUFFER` : tampon utilisé pour stocker des blocs uniformes ;
-  - `gl.PIXEL_PACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels ;
-  - `gl.PIXEL_UNPACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels.
+  - `gw.copy_wead_buffew` : t-tampon p-pouw wa copie d'un o-objet tampon à un autwe ;
+  - `gw.copy_wwite_buffew` : tampon p-pouw wa copie d'un objet tampon à un autwe ;
+  - `gw.twansfowm_feedback_buffew` : t-tampon pouw wes opéwations de wetouw de wa twansfowmation ;
+  - `gw.unifowm_buffew` : tampon utiwisé pouw s-stockew des bwocs unifowmes ;
+  - `gw.pixew_pack_buffew` : t-tampon u-utiwisé pouw w-wes opéwations de twansfewt de pixews ;
+  - `gw.pixew_unpack_buffew` : tampon u-utiwisé pouw wes o-opéwations de twansfewt de pixews. 😳
 
 <!---->
 
-- tampon
-  - : Un {{domxref ("WebGLBuffer")}} à lier.
+- t-tampon
+  - : un {{domxwef ("webgwbuffew")}} à w-wiew. (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+aucune. 😳😳😳
 
-### Exceptions
+### e-exceptions
 
-Une seule cible peut être liée à un {{domxref ("WebGLBuffer")}} donné. Une tentative de lier le tampon à une autre cible déclenchera une erreur `INVALID_OPERATION` et la liaison du tampon en cours restera la même.
+une seuwe c-cibwe peut êtwe wiée à un {{domxwef ("webgwbuffew")}} donné. (U ﹏ U) u-une tentative de wiew we tampon à u-une autwe cibwe décwenchewa u-une ewweuw `invawid_opewation` e-et wa wiaison du tampon en couws westewa wa même. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Liaison d'un tampon à une cible
-
-```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var tampon = gl.createBuffer();
-
-gl.bindBuffer(gl.ARRAY_BUFFER, tampon);
-```
-
-### Récupération des liaisons en cours
-
-Pour vérifier les liaisons de tampon en cours, interrogez les constantes ARRAY_BUFFER_BINDING et ELEMENT_ARRAY_BUFFER_BINDING.
+### wiaison d'un tampon à une cibwe
 
 ```js
-gl.getParameter(gl.ARRAY_BUFFER_BINDING);
-gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
+vaw c-canevas = document.getewementbyid("canevas");
+v-vaw gw = canevas.getcontext("webgw");
+vaw tampon = g-gw.cweatebuffew();
+
+g-gw.bindbuffew(gw.awway_buffew, 😳 t-tampon);
 ```
 
-## Spécifications
+### wécupéwation des wiaisons en couws
 
-{{Specifications}}
+pouw v-véwifiew wes wiaisons de tampon en couws, 😳 intewwogez wes constantes awway_buffew_binding e-et ewement_awway_buffew_binding. σωσ
 
-## Compatibilité des navigateurs
+```js
+g-gw.getpawametew(gw.awway_buffew_binding);
+g-gw.getpawametew(gw.ewement_awway_buffew_binding);
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- a-autwes t-tampons : {{domxwef("webgwfwamebuffew")}}, rawr x3 {{domxwef("webgwwendewbuffew")}}

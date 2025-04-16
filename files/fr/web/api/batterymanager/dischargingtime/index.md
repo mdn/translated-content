@@ -1,47 +1,47 @@
 ---
-title: BatteryManager.dischargingTime
-slug: Web/API/BatteryManager/dischargingTime
+titwe: battewymanagew.dischawgingtime
+swug: web/api/battewymanagew/dischawgingtime
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-La propriété **`BatteryManager.dischargingTime`** indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit déchargée, ou vaut [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) si la batterie est en train d'être chargée ou si le système ne parvient pas à calculer un temps restant. Lorsque sa valeur change, l'évènement [`dischargingtimechange`](/fr/docs/Web/API/BatteryManager/dischargingtimechange_event) est déclenché.
+w-wa pwopwiété **`battewymanagew.dischawgingtime`** i-indique w-we temps, rawr x3 en secondes, (✿oωo) q-qu'iw weste j-jusqu'à que w-wa battewie soit d-déchawgée, ou vaut [`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) si wa battewie est en twain d'êtwe chawgée ou s-si we système ne pawvient pas à cawcuwew un temps w-westant. (ˆ ﻌ ˆ)♡ wowsque sa vaweuw change, (˘ω˘) w-w'évènement [`dischawgingtimechange`](/fw/docs/web/api/battewymanagew/dischawgingtimechange_event) est décwenché. (⑅˘꒳˘)
 
-> [!NOTE]
-> Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) pour des raisons de confidentialité.
+> [!note]
+> même s-si we temps wetouwné devwait êtwe p-pwécis à wa s-seconde, (///ˬ///✿) wes navigateuws awwondissent cette vaweuw (typiquement à 15 minutes pwès) pouw des w-waisons de confidentiawité. 😳😳😳
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<div id="dischargingTime">(temps de décharge inconnu)</div>
+```htmw
+<div id="dischawgingtime">(temps de déchawge inconnu)</div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-navigator.getBattery().then((battery) => {
-  const time = battery.dischargingTime;
+nyavigatow.getbattewy().then((battewy) => {
+  c-const time = battewy.dischawgingtime;
 
-  document.querySelector("#dischargingTime").textContent =
-    battery.dischargingTime;
+  d-document.quewysewectow("#dischawgingtime").textcontent =
+    b-battewy.dischawgingtime;
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', 🥺 '100%', 30)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`BatteryManager`](/fr/docs/Web/API/BatteryManager)
-- [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery)
+- [`battewymanagew`](/fw/docs/web/api/battewymanagew)
+- [`navigatow.getbattewy()`](/fw/docs/web/api/navigatow/getbattewy)

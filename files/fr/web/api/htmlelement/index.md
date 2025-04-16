@@ -1,176 +1,176 @@
 ---
-title: HTMLElement
-slug: Web/API/HTMLElement
+titwe: htmwewement
+swug: web/api/htmwewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-L'interface **`HTMLElement`** représente n'importe quel élément [HTML](/fr/docs/Web/HTML). Certains éléments implémentent directement cette interface tandis que d'autres implémentent une interface qui hérite de celle-ci.
+w'intewface **`htmwewement`** w-wepwésente n-ny'impowte q-quew éwément [htmw](/fw/docs/web/htmw). σωσ c-cewtains éwéments i-impwémentent diwectement c-cette i-intewface tandis que d'autwes impwémentent une intewface qui héwite de cewwe-ci. -.-
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), et implémente celles du mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers)._
+_héwite d-des pwopwiétés de son pawent, o.O [`ewement`](/fw/docs/web/api/ewement), ^^ et i-impwémente cewwes du mixin [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews)._
 
-- [`HTMLElement.accessKey`](/fr/docs/Web/API/HTMLElement/accessKey)
-  - : Une chaîne de caractères qui représente la touche d'accès affecté à l'élément.
-- [`HTMLElement.accessKeyLabel`](/fr/docs/Web/API/HTMLElement/accessKeyLabel) {{ReadOnlyInline}}
-  - : Renvoie une chaîne de caractères contenant la touche d'accès affectée à l'élément.
-- [`HTMLElement.attributeStyleMap`](/fr/docs/Web/API/HTMLElement/attributeStyleMap) {{ReadOnlyInline}}
-  - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style) de l'élément.
-- [`HTMLElement.contentEditable`](/fr/docs/Web/API/HTMLElement/contentEditable)
-  - : Une chaîne de caractères qui, si elle vaut `true` indique que l'élément est éditable et qui, si elle vaut `false` indique que l'élément n'est pas éditable.
-- [`HTMLElement.isContentEditable`](/fr/docs/Web/API/HTMLElement/isContentEditable) {{ReadOnlyInline}}
-  - : Renvoie une valeur booléenne indiquant si le contenu de l'élément peut être édité.
-- [`HTMLElement.contextMenu`](/fr/docs/Web/API/HTMLElement/contextMenu) {{Deprecated_Inline}}
-  - : Un objet [`HTMLMenuElement`](/fr/docs/Web/API/HTMLMenuElement) qui représente le menu contextuel associé à l'élément. Il peut valoir `null`.
-- [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) {{ReadOnlyInline}}
-  - : Renvoie un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec lequel il est possible de lire et d'écrire [les attributs de données spécifiques](/fr/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`).
-- [`HTMLElement.dir`](/fr/docs/Web/API/HTMLElement/dir)
-  - : Une chaîne de caractères reflétant l'attribut universel `dir` et qui représente le sens d'écriture de l'élément. Les valeurs possibles sont `"ltr"` (gauche à droite), `"rtl"` (droite à gauche), et `"auto"`.
-- [`HTMLElement.draggable`](/fr/docs/Web/API/HTMLElement/draggable)
-  - : Une valeur booléenne indiquant si l'élément peut être déplacé.
-- [`HTMLElement.enterkeyhint`](/fr/docs/Web/API/HTMLElement/enterkeyhint)
-  - : Une chaîne de caractères qui définit le libellé (ou l'icône) à présenter comme libellé d'action pour la touche <kbd>Entrée</kdb> des claviers virtuels.
-- [`HTMLElement.hidden`](/fr/docs/Web/API/HTMLElement/hidden)
-  - : Une valeur booléenne indiquant si l'élément est caché.
-- [`HTMLElement.inert`](/fr/docs/Web/API/HTMLElement/inert)
-  - : Une valeur booléenne indiquant si l'agent utilisateur doit agir comme si le nœud donné était absent en ce qui concerne les évènements d'interaction, les recherches de texte dans la page, et la sélection de texte.
-- [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText)
-  - : Représente le contenu du texte rendu d'un nœud et de ses descendants. Comme accesseur, il approxime le texte qu'une personne aurait en surlignant le contenu de l'élément avec le curseur et en copiant ceci dans un presse-papier. Comme mutateur, il remplace le contenu à l'intérieur de l'élément sélectionné, convertissant tout saut de ligne en élément [`<br>`](/fr/docs/Web/HTML/Element/br).
-- [`HTMLElement.lang`](/fr/docs/Web/API/HTMLElement/lang)
-  - : Une chaîne de caractères représentant la langue du contenu, du texte et des attributs d'un élément.
-- [`HTMLElement.noModule`](/fr/docs/Web/API/HTMLElement/noModule)
-  - : Une valeur booléenne indiquant si un script d'import peut être exécuté par les agents utilisateur qui prennent en charge les modules de script.
-- [`HTMLElement.nonce`](/fr/docs/Web/API/HTMLElement/nonce)
-  - : Renvoie le nonce cryptographique utilisé par la politique de sécurité du contenu afin de déterminer si le traitement d'une récupération de ressource est autorisé.
-- [`HTMLElement.offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double` contenant la hauteur de l'élément, relativement à la disposition.
-- [`HTMLElement.offsetLeft`](/fr/docs/Web/API/HTMLElement/offsetLeft) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double` indiquant la distance entre la bordure gauche de cet élément et la bordure gauche de son élément `offsetParent`.
-- [`HTMLElement.offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent) {{ReadOnlyInline}}
-  - : Un objet [`Element`](/fr/docs/Web/API/Element) représentant l'élément de référence par rapport auquel tous les calculs de décalage sont effectués.
-- [`HTMLElement.offsetTop`](/fr/docs/Web/API/HTMLElement/offsetTop) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double`, indiquant la distance entre la bordure haute de cet élément et la bordure haute de son élément `offsetParent`.
-- [`HTMLElement.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth) {{ReadOnlyInline}}
-  - : Renvoie une valeur numérique `double` contenant la largeur de l'élément, relativement à la disposition.
-- [`HTMLElement.outerText`](/fr/docs/Web/API/HTMLElement/outerText)
-  - : Représente le texte rendu du contenu d'un nœud et de ses descendants. Comme accesseur, il se comporte comme [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText) (il représente le contenu texte d'un élément et de ses descendants). Comme mutateur, il remplace le nœud sélectionné et son contenu avec la valeur fournie, convertissant au passage tout saut de ligne en éléments [`<br>`](/fr/docs/Web/HTML/Element/br).
-- [`HTMLElement.properties`](/fr/docs/Web/API/HTMLElement/properties) {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Renvoi un objet [`HTMLPropertiesCollection`](/fr/docs/Web/API/HTMLPropertiesCollection).
-- [`HTMLElement.spellcheck`](/fr/docs/Web/API/HTMLElement/spellcheck)
-  - : Une valeur booléenne reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
-- [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style)
-  - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style) de l'élément.
-- [`HTMLElement.tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex)
-  - : Une valeur numérique `long` représentant la position de l'élément dans l'ordre de tabulation.
-- [`HTMLElement.title`](/fr/docs/Web/API/HTMLElement/title)
-  - : Une chaîne de caractères contenant le texte apparaissant dans la bulle d'information affichée lorsque la souris survole l'élément.
-- [`HTMLElement.translate`](/fr/docs/Web/API/HTMLElement/translate) {{Experimental_Inline}}
-  - : Une valeur booléenne représentant la traduction.
+- [`htmwewement.accesskey`](/fw/docs/web/api/htmwewement/accesskey)
+  - : u-une chaîne de cawactèwes qui wepwésente wa touche d'accès a-affecté à w'éwément. >_<
+- [`htmwewement.accesskeywabew`](/fw/docs/web/api/htmwewement/accesskeywabew) {{weadonwyinwine}}
+  - : w-wenvoie une c-chaîne de cawactèwes contenant wa touche d'accès affectée à w'éwément. >w<
+- [`htmwewement.attwibutestywemap`](/fw/docs/web/api/htmwewement/attwibutestywemap) {{weadonwyinwine}}
+  - : u-un objet [`stywepwopewtymap`](/fw/docs/web/api/stywepwopewtymap) qui wepwésente wes décwawations contenues dans w'attwibut [`stywe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-stywe) d-de w'éwément. >_<
+- [`htmwewement.contenteditabwe`](/fw/docs/web/api/htmwewement/contenteditabwe)
+  - : une chaîne d-de cawactèwes q-qui, >w< si ewwe v-vaut `twue` indique q-que w'éwément est éditabwe et qui, rawr si ewwe v-vaut `fawse` indique que w'éwément ny'est pas éditabwe. rawr x3
+- [`htmwewement.iscontenteditabwe`](/fw/docs/web/api/htmwewement/iscontenteditabwe) {{weadonwyinwine}}
+  - : w-wenvoie une vaweuw boowéenne indiquant si we contenu de w'éwément peut êtwe édité.
+- [`htmwewement.contextmenu`](/fw/docs/web/api/htmwewement/contextmenu) {{depwecated_inwine}}
+  - : u-un objet [`htmwmenuewement`](/fw/docs/web/api/htmwmenuewement) qui wepwésente w-we menu contextuew a-associé à w-w'éwément. ( ͡o ω ͡o ) iw peut vawoiw `nuww`. (˘ω˘)
+- [`htmwewement.dataset`](/fw/docs/web/api/htmwewement/dataset) {{weadonwyinwine}}
+  - : wenvoie un objet [`domstwingmap`](/fw/docs/web/api/domstwingmap) avec wequew i-iw est possibwe d-de wiwe et d'écwiwe [wes attwibuts d-de données s-spécifiques](/fw/docs/weawn/htmw/howto/use_data_attwibutes) (`data-*`). 😳
+- [`htmwewement.diw`](/fw/docs/web/api/htmwewement/diw)
+  - : une chaîne d-de cawactèwes wefwétant w'attwibut u-univewsew `diw` et qui wepwésente we sens d-d'écwituwe de w'éwément. OwO wes v-vaweuws possibwes sont `"wtw"` (gauche à d-dwoite), (˘ω˘) `"wtw"` (dwoite à g-gauche), òωó et `"auto"`. ( ͡o ω ͡o )
+- [`htmwewement.dwaggabwe`](/fw/docs/web/api/htmwewement/dwaggabwe)
+  - : une vaweuw boowéenne indiquant si w'éwément peut êtwe dépwacé. UwU
+- [`htmwewement.entewkeyhint`](/fw/docs/web/api/htmwewement/entewkeyhint)
+  - : u-une c-chaîne de cawactèwes qui définit w-we wibewwé (ou w-w'icône) à p-pwésentew comme wibewwé d'action pouw wa touche <kbd>entwée</kdb> des cwaviews v-viwtuews. /(^•ω•^)
+- [`htmwewement.hidden`](/fw/docs/web/api/htmwewement/hidden)
+  - : une vaweuw boowéenne indiquant si w'éwément est caché. (ꈍᴗꈍ)
+- [`htmwewement.inewt`](/fw/docs/web/api/htmwewement/inewt)
+  - : u-une vaweuw boowéenne indiquant s-si w'agent utiwisateuw d-doit agiw c-comme si we nyœud donné était a-absent en ce qui c-concewne wes évènements d-d'intewaction, 😳 w-wes wechewches de texte dans wa page, mya e-et wa séwection d-de texte. mya
+- [`htmwewement.innewtext`](/fw/docs/web/api/htmwewement/innewtext)
+  - : w-wepwésente w-we contenu du t-texte wendu d'un nœud et de ses descendants. /(^•ω•^) comme accesseuw, ^^;; i-iw appwoxime we texte qu'une pewsonne auwait en suwwignant we contenu de w'éwément avec we cuwseuw e-et en copiant ceci dans un pwesse-papiew. 🥺 comme mutateuw, ^^ iw w-wempwace we contenu à w-w'intéwieuw d-de w'éwément séwectionné, ^•ﻌ•^ c-convewtissant tout saut de wigne e-en éwément [`<bw>`](/fw/docs/web/htmw/ewement/bw). /(^•ω•^)
+- [`htmwewement.wang`](/fw/docs/web/api/htmwewement/wang)
+  - : u-une chaîne de cawactèwes wepwésentant wa wangue du contenu, ^^ du texte et des attwibuts d-d'un éwément. 🥺
+- [`htmwewement.nomoduwe`](/fw/docs/web/api/htmwewement/nomoduwe)
+  - : une vaweuw b-boowéenne indiquant si un s-scwipt d'impowt p-peut êtwe exécuté paw wes agents utiwisateuw q-qui pwennent en c-chawge wes moduwes de scwipt. (U ᵕ U❁)
+- [`htmwewement.nonce`](/fw/docs/web/api/htmwewement/nonce)
+  - : w-wenvoie we nyonce c-cwyptogwaphique utiwisé paw wa powitique de sécuwité du contenu afin de détewminew s-si we t-twaitement d'une w-wécupéwation de wessouwce est a-autowisé. 😳😳😳
+- [`htmwewement.offsetheight`](/fw/docs/web/api/htmwewement/offsetheight) {{weadonwyinwine}}
+  - : wenvoie u-une vaweuw nyuméwique `doubwe` c-contenant wa hauteuw de w'éwément, nyaa~~ wewativement à wa disposition. (˘ω˘)
+- [`htmwewement.offsetweft`](/fw/docs/web/api/htmwewement/offsetweft) {{weadonwyinwine}}
+  - : wenvoie u-une vaweuw nyuméwique `doubwe` i-indiquant wa distance entwe wa bowduwe gauche d-de cet éwément e-et wa bowduwe gauche de son éwément `offsetpawent`. >_<
+- [`htmwewement.offsetpawent`](/fw/docs/web/api/htmwewement/offsetpawent) {{weadonwyinwine}}
+  - : un objet [`ewement`](/fw/docs/web/api/ewement) wepwésentant w-w'éwément de wéféwence paw wappowt auquew tous wes cawcuws de décawage s-sont effectués. XD
+- [`htmwewement.offsettop`](/fw/docs/web/api/htmwewement/offsettop) {{weadonwyinwine}}
+  - : wenvoie une vaweuw numéwique `doubwe`, i-indiquant w-wa distance entwe wa bowduwe haute de cet éwément et wa bowduwe h-haute de son éwément `offsetpawent`. rawr x3
+- [`htmwewement.offsetwidth`](/fw/docs/web/api/htmwewement/offsetwidth) {{weadonwyinwine}}
+  - : w-wenvoie une vaweuw nyuméwique `doubwe` contenant w-wa wawgeuw de w'éwément, ( ͡o ω ͡o ) wewativement à w-wa disposition. :3
+- [`htmwewement.outewtext`](/fw/docs/web/api/htmwewement/outewtext)
+  - : wepwésente we texte wendu du contenu d'un n-nyœud et de ses descendants. mya comme a-accesseuw, σωσ iw s-se compowte comme [`htmwewement.innewtext`](/fw/docs/web/api/htmwewement/innewtext) (iw wepwésente w-we contenu texte d'un éwément e-et de ses d-descendants). (ꈍᴗꈍ) comme m-mutateuw, OwO iw wempwace we nyœud s-séwectionné e-et son contenu avec wa vaweuw fouwnie, o.O convewtissant a-au passage t-tout saut de wigne e-en éwéments [`<bw>`](/fw/docs/web/htmw/ewement/bw). 😳😳😳
+- [`htmwewement.pwopewties`](/fw/docs/web/api/htmwewement/pwopewties) {{expewimentaw_inwine}}{{weadonwyinwine}}
+  - : wenvoi un objet [`htmwpwopewtiescowwection`](/fw/docs/web/api/htmwpwopewtiescowwection). /(^•ω•^)
+- [`htmwewement.spewwcheck`](/fw/docs/web/api/htmwewement/spewwcheck)
+  - : une vaweuw b-boowéenne wefwétant w'attwibut h-htmw [`spewwcheck`](/fw/docs/web/htmw/gwobaw_attwibutes/spewwcheck). OwO c-cette pwopwiété est pwésente suw tous wes éwéments htmw m-même si ewwe n-ny'a pas d'effet p-pouw tous. ^^
+- [`htmwewement.stywe`](/fw/docs/web/api/htmwewement/stywe)
+  - : u-un objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation) qui wepwésente w-wes décwawations contenues dans w'attwibut [`stywe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-stywe) de w'éwément. (///ˬ///✿)
+- [`htmwewement.tabindex`](/fw/docs/web/api/htmwewement/tabindex)
+  - : une vaweuw n-nyuméwique `wong` wepwésentant w-wa position de w'éwément dans w-w'owdwe de tabuwation. (///ˬ///✿)
+- [`htmwewement.titwe`](/fw/docs/web/api/htmwewement/titwe)
+  - : une chaîne d-de cawactèwes contenant we t-texte appawaissant d-dans wa buwwe d-d'infowmation a-affichée wowsque w-wa souwis suwvowe w'éwément. (///ˬ///✿)
+- [`htmwewement.twanswate`](/fw/docs/web/api/htmwewement/twanswate) {{expewimentaw_inwine}}
+  - : une vaweuw boowéenne wepwésentant wa twaduction. ʘwʘ
 
-### Gestionnaires d'évènements
+### gestionnaiwes d'évènements
 
-La plupart des propriétés pour la gestion d'évènements, de la forme `onXYZ`, sont définies par l'interface [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers) et implémentées par `HTMLElement`. Voici les gestionnaires d'évènements spécifiques à `HTMLElement`.
+w-wa pwupawt d-des pwopwiétés p-pouw wa gestion d'évènements, ^•ﻌ•^ d-de wa fowme `onxyz`, OwO sont définies paw w'intewface [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews) et impwémentées p-paw `htmwewement`. (U ﹏ U) v-voici wes gestionnaiwes d-d'évènements spécifiques à `htmwewement`. (ˆ ﻌ ˆ)♡
 
-- [`TouchEventHandlers.ontouchstart`](/fr/docs/Web/API/TouchEventHandlers/ontouchstart) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchstart`](/fr/docs/Web/API/Element/touchstart_event).
-- [`TouchEventHandlers.ontouchend`](/fr/docs/Web/API/TouchEventHandlers/ontouchend) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchend`](/fr/docs/Web/API/Element/touchend_event).
-- [`TouchEventHandlers.ontouchmove`](/fr/docs/Web/API/TouchEventHandlers/ontouchmove) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchmove`](/fr/docs/Web/API/Element/touchmove_event).
-- [`TouchEventHandlers.ontouchcancel`](/fr/docs/Web/API/TouchEventHandlers/ontouchcancel) {{Non-standard_Inline}}
-  - : Renvoie le code de gestion d'évènement pour l'évènement [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event).
+- [`toucheventhandwews.ontouchstawt`](/fw/docs/web/api/toucheventhandwews/ontouchstawt) {{non-standawd_inwine}}
+  - : wenvoie w-we code de gestion d-d'évènement pouw w'évènement [`touchstawt`](/fw/docs/web/api/ewement/touchstawt_event). (⑅˘꒳˘)
+- [`toucheventhandwews.ontouchend`](/fw/docs/web/api/toucheventhandwews/ontouchend) {{non-standawd_inwine}}
+  - : w-wenvoie we code d-de gestion d'évènement pouw w'évènement [`touchend`](/fw/docs/web/api/ewement/touchend_event). (U ﹏ U)
+- [`toucheventhandwews.ontouchmove`](/fw/docs/web/api/toucheventhandwews/ontouchmove) {{non-standawd_inwine}}
+  - : wenvoie we code de gestion d-d'évènement p-pouw w'évènement [`touchmove`](/fw/docs/web/api/ewement/touchmove_event). o.O
+- [`toucheventhandwews.ontouchcancew`](/fw/docs/web/api/toucheventhandwews/ontouchcancew) {{non-standawd_inwine}}
+  - : w-wenvoie we c-code de gestion d-d'évènement pouw w'évènement [`touchcancew`](/fw/docs/web/api/ewement/touchcancew_event). mya
 
-## Méthodes
+## m-méthodes
 
-_Hérite des méthodes de son parent, [`Element`](/fr/docs/Web/API/Element), et implémente celles du mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers)._
+_héwite d-des méthodes de son pawent, XD [`ewement`](/fw/docs/web/api/ewement), òωó e-et impwémente c-cewwes du mixin [`gwobaweventhandwews`](/fw/docs/web/api/gwobaweventhandwews)._
 
-- [`HTMLElement.attachInternals()`](/fr/docs/Web/API/HTMLElement/attachInternals) {{Experimental_Inline}}
-  - : Renvoie un objet [`ElementInternals`](/fr/docs/Web/API/ElementInternals) et active la participation d'un élément personnalisé aux formulaires HTML.
-- [`HTMLElement.blur()`](/fr/docs/Web/API/HTMLElement/blur)
-  - : Retire le focus clavier de l'élément qui a le focus.
-- [`HTMLElement.click()`](/fr/docs/Web/API/HTMLElement/click)
-  - : Envoie un évènement de clic de souris à l'élément.
-- [`HTMLElement.focus()`](/fr/docs/Web/API/HTMLElement/focus)
-  - : Passe le focus clavier à l'élément courant.
+- [`htmwewement.attachintewnaws()`](/fw/docs/web/api/htmwewement/attachintewnaws) {{expewimentaw_inwine}}
+  - : w-wenvoie un objet [`ewementintewnaws`](/fw/docs/web/api/ewementintewnaws) et active wa p-pawticipation d'un éwément pewsonnawisé a-aux f-fowmuwaiwes htmw. (˘ω˘)
+- [`htmwewement.bwuw()`](/fw/docs/web/api/htmwewement/bwuw)
+  - : wetiwe we focus c-cwaview de w'éwément qui a we focus. :3
+- [`htmwewement.cwick()`](/fw/docs/web/api/htmwewement/cwick)
+  - : e-envoie un évènement d-de cwic de s-souwis à w'éwément. OwO
+- [`htmwewement.focus()`](/fw/docs/web/api/htmwewement/focus)
+  - : passe we focus cwaview à w'éwément c-couwant. mya
 
 ## Évènements
 
-On écoutera ces évènements à l'aide de `addEventListener()` ou en affectant un gestionnaire d'évènement à la propriété `onnomevenement` de cette interface.
+on écoutewa ces évènements à w-w'aide d-de `addeventwistenew()` ou e-en affectant un gestionnaiwe d'évènement à w-wa p-pwopwiété `onnomevenement` de cette intewface. (˘ω˘)
 
-- [`copy`](/fr/docs/Web/API/HTMLElement/copy_event)
-  - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de copier via l'interface du navigateur.
-- [`cut`](/fr/docs/Web/API/HTMLElement/cut_event)
-  - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de couper via l'interface du navigateur.
-- [`paste`](/fr/docs/Web/API/HTMLElement/paste_event)
-  - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de coller via l'interface du navigateur.
-- [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event)
-  - : Déclenché lorsqu'un élément ne respecte pas les contraintes pendant la validation de contrainte. Également disponible via la propriété [`onvalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event).
+- [`copy`](/fw/docs/web/api/htmwewement/copy_event)
+  - : d-décwenché wowsque w'utiwisatwice o-ou w'utiwisateuw i-initie une action de copiew via w-w'intewface du nyavigateuw. o.O
+- [`cut`](/fw/docs/web/api/htmwewement/cut_event)
+  - : d-décwenché w-wowsque w'utiwisatwice o-ou w'utiwisateuw initie une action de coupew via w'intewface du nyavigateuw. (✿oωo)
+- [`paste`](/fw/docs/web/api/htmwewement/paste_event)
+  - : décwenché wowsque w'utiwisatwice ou w'utiwisateuw initie une action de cowwew via w'intewface du nyavigateuw. (ˆ ﻌ ˆ)♡
+- [`invawid`](/fw/docs/web/api/htmwinputewement/invawid_event)
+  - : décwenché w-wowsqu'un éwément n-nye wespecte pas wes contwaintes pendant wa v-vawidation de c-contwainte. ^^;; Égawement d-disponibwe via wa pwopwiété [`onvawid`](/fw/docs/web/api/htmwinputewement/invawid_event). OwO
 
-### Évènements relatifs aux animations
+### Évènements w-wewatifs aux animations
 
-- [`animationcancel`](/fr/docs/Web/API/Element/animationcancel_event)
-  - : Déclenché lorsqu'une animation se termine de manière inattendue. Également disponible via la propriété [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event).
-- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
-  - : Déclenché lorsqu'une animation se termine normalement. Également disponible via la propriété [`onanimationend`](/fr/docs/Web/API/Element/animationend_event).
-- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
-  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible via la propriété [`onanimationiteration`](/fr/docs/Web/API/Element/animationiteration_event).
-- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
-  - : Déclenché lorsqu'une animation démarre. Également disponible via la propriété [`onanimationstart`](/fr/docs/Web/API/Element/animationstart_event).
+- [`animationcancew`](/fw/docs/web/api/ewement/animationcancew_event)
+  - : d-décwenché w-wowsqu'une animation se tewmine d-de manièwe inattendue. 🥺 Égawement d-disponibwe v-via wa pwopwiété [`onanimationcancew`](/fw/docs/web/api/ewement/animationcancew_event). mya
+- [`animationend`](/fw/docs/web/api/ewement/animationend_event)
+  - : décwenché wowsqu'une animation s-se tewmine n-nyowmawement. 😳 Égawement d-disponibwe v-via wa pwopwiété [`onanimationend`](/fw/docs/web/api/ewement/animationend_event). òωó
+- [`animationitewation`](/fw/docs/web/api/ewement/animationitewation_event)
+  - : d-décwenché w-wowsqu'une i-itéwation d'une a-animation est t-tewminée. /(^•ω•^) Égawement disponibwe v-via wa pwopwiété [`onanimationitewation`](/fw/docs/web/api/ewement/animationitewation_event). -.-
+- [`animationstawt`](/fw/docs/web/api/ewement/animationstawt_event)
+  - : d-décwenché w-wowsqu'une animation démawwe. òωó Égawement d-disponibwe via wa pwopwiété [`onanimationstawt`](/fw/docs/web/api/ewement/animationstawt_event). /(^•ω•^)
 
 ### Évènements de saisie
 
-- [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) est sur le point d'être modifiée.
-- [`input`](/fr/docs/Web/API/Element/input_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a été modifiée. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/Element/input_event).
-- [`change`](/fr/docs/Web/API/HTMLElement/change_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a été modifiée et validée par l'utilisatrice ou l'utilisateur. À la différence de l'évènement [`input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché pour chaque altération de la valeur de l'élément.
+- [`befoweinput`](/fw/docs/web/api/ewement/befoweinput_event)
+  - : d-décwenché wowsque wa vaweuw d-d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input), /(^•ω•^) [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), 😳 o-ou [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) e-est suw we point d'êtwe modifiée.
+- [`input`](/fw/docs/web/api/ewement/input_event)
+  - : d-décwenché wowsque wa vaweuw d-d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input), :3 [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), (U ᵕ U❁) ou [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) a-a été modifiée. ʘwʘ Égawement disponibwe via w-wa pwopwiété [`oninput`](/fw/docs/web/api/ewement/input_event).
+- [`change`](/fw/docs/web/api/htmwewement/change_event)
+  - : décwenché wowsque wa vaweuw d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input), o.O [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), ʘwʘ ou [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) a été modifiée e-et vawidée paw w'utiwisatwice o-ou w'utiwisateuw. ^^ À w-wa difféwence de w'évènement [`input`](/fw/docs/web/api/ewement/input_event), ^•ﻌ•^ w'évènement `change` n'est pas nyécessaiwement d-décwenché pouw chaque a-awtéwation de w-wa vaweuw de w'éwément. mya
 
-### Évènements de pointeur
+### Évènements d-de pointeuw
 
-- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
-  - : Déclenché lorsqu'un élément capture un pointeur à l'aide de [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible via la propriété [`ongotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event).
-- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
-  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est relâché. Également disponible via la propriété [`onlostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event).
-- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
-  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible via la propriété [`onpointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
-- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
-  - : Déclenché lorsqu'un pointeur devient actif. Également disponible via la propriété [`onpointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
-- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
-  - : Déclenché lorsqu'un pointeur est déplacé dans la zone de contact d'un élément ou d'un de ses descendants. Également disponible via la propriété [`onpointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
-- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément. Également disponible via la propriété [`onpointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
-- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
-  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible via la propriété [`onpointermove`](/fr/docs/Web/API/Element/pointermove_event).
-- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément (entre autres). Également disponible via la propriété [`onpointerout`](/fr/docs/Web/API/Element/pointerout_event).
-- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
-  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur de la zone de contact d'un élément. Également disponible via la propriété [`onpointerover`](/fr/docs/Web/API/Element/pointerover_event).
-- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
-  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible via la propriété [`onpointerup`](/fr/docs/Web/API/Element/pointerup_event).
+- [`gotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - : décwenché w-wowsqu'un éwément c-captuwe un pointeuw à w-w'aide de [`setpointewcaptuwe()`](/fw/docs/web/api/ewement/setpointewcaptuwe). UwU Égawement disponibwe via wa pwopwiété [`ongotpointewcaptuwe`](/fw/docs/web/api/ewement/gotpointewcaptuwe_event). >_<
+- [`wostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - : d-décwenché wowsqu'un [pointeuw c-captuwé](/fw/docs/web/api/pointew_events#pointew_captuwe) e-est wewâché. /(^•ω•^) Égawement d-disponibwe via wa pwopwiété [`onwostpointewcaptuwe`](/fw/docs/web/api/ewement/wostpointewcaptuwe_event).
+- [`pointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event)
+  - : d-décwenché w-wowsqu'un évènement d-de pointeuw est a-annuwé. òωó Égawement disponibwe via w-wa pwopwiété [`onpointewcancew`](/fw/docs/web/api/ewement/pointewcancew_event). σωσ
+- [`pointewdown`](/fw/docs/web/api/ewement/pointewdown_event)
+  - : d-décwenché w-wowsqu'un pointeuw d-devient a-actif. ( ͡o ω ͡o ) Égawement d-disponibwe via w-wa pwopwiété [`onpointewdown`](/fw/docs/web/api/ewement/pointewdown_event). nyaa~~
+- [`pointewentew`](/fw/docs/web/api/ewement/pointewentew_event)
+  - : d-décwenché wowsqu'un pointeuw e-est dépwacé dans wa zone de c-contact d'un éwément ou d'un d-de ses descendants. :3 Égawement d-disponibwe via wa p-pwopwiété [`onpointewentew`](/fw/docs/web/api/ewement/pointewentew_event). UwU
+- [`pointewweave`](/fw/docs/web/api/ewement/pointewweave_event)
+  - : décwenché wowsqu'un pointeuw est dépwacé e-en dehows de wa z-zone de contact d-d'un éwément. o.O Égawement disponibwe via wa pwopwiété [`onpointewweave`](/fw/docs/web/api/ewement/pointewweave_event). (ˆ ﻌ ˆ)♡
+- [`pointewmove`](/fw/docs/web/api/ewement/pointewmove_event)
+  - : décwenché wowsqu'un p-pointeuw change d-de coowdonnées. ^^;; Égawement disponibwe via w-wa pwopwiété [`onpointewmove`](/fw/docs/web/api/ewement/pointewmove_event). ʘwʘ
+- [`pointewout`](/fw/docs/web/api/ewement/pointewout_event)
+  - : d-décwenché wowsqu'un pointeuw est dépwacé en dehows de wa zone d-de contact d'un éwément (entwe a-autwes). σωσ Égawement d-disponibwe v-via wa pwopwiété [`onpointewout`](/fw/docs/web/api/ewement/pointewout_event). ^^;;
+- [`pointewovew`](/fw/docs/web/api/ewement/pointewovew_event)
+  - : décwenché wowsqu'un pointeuw e-est dépwacé à w-w'intéwieuw de wa zone de contact d'un éwément. Égawement d-disponibwe via wa pwopwiété [`onpointewovew`](/fw/docs/web/api/ewement/pointewovew_event). ʘwʘ
+- [`pointewup`](/fw/docs/web/api/ewement/pointewup_event)
+  - : décwenché wowsqu'un p-pointeuw ny'est pwus actif. ^^ Égawement disponibwe v-via wa p-pwopwiété [`onpointewup`](/fw/docs/web/api/ewement/pointewup_event). nyaa~~
 
-### Évènements de transition
+### Évènements de twansition
 
-- [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est annulée. Également disponible via la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
-- [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est terminée. Également disponible via la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
-- [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est initialement créée. Également disponible via la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
-- [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a effectivement démarré. Également disponible via la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
+- [`twansitioncancew`](/fw/docs/web/api/ewement/twansitioncancew_event)
+  - : d-décwenché w-wowsqu'une [twansition css](/fw/docs/web/css/css_twansitions/using_css_twansitions) e-est annuwée. (///ˬ///✿) Égawement disponibwe via wa p-pwopwiété [`ontwansitioncancew`](/fw/docs/web/api/ewement/twansitioncancew_event). XD
+- [`twansitionend`](/fw/docs/web/api/ewement/twansitionend_event)
+  - : décwenché w-wowsqu'une [twansition c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions) est t-tewminée. :3 Égawement disponibwe v-via wa pwopwiété [`ontwansitionend`](/fw/docs/web/api/ewement/twansitionend_event). òωó
+- [`twansitionwun`](/fw/docs/web/api/ewement/twansitionwun_event)
+  - : d-décwenché wowsqu'une [twansition c-css](/fw/docs/web/css/css_twansitions/using_css_twansitions) est initiawement c-cwéée. Égawement disponibwe via wa pwopwiété [`ontwansitionwun`](/fw/docs/web/api/gwobaweventhandwews/ontwansitionwun). ^^
+- [`twansitionstawt`](/fw/docs/web/api/ewement/twansitionstawt_event)
+  - : d-décwenché w-wowsqu'une [twansition css](/fw/docs/web/css/css_twansitions/using_css_twansitions) a-a effectivement démawwé. ^•ﻌ•^ Égawement disponibwe via wa pwopwiété [`ontwansitionstawt`](/fw/docs/web/api/gwobaweventhandwews/ontwansitionstawt). σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Element`](/fr/docs/Web/API/Element)
+- [`ewement`](/fw/docs/web/api/ewement)

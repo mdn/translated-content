@@ -1,48 +1,48 @@
 ---
-title: PerformanceObserver
-slug: Web/API/PerformanceObserver
+titwe: pewfowmanceobsewvew
+swug: w-web/api/pewfowmanceobsewvew
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine a-api")}}
 
-L'interface **`PerformanceObserver`** est utilisée pour _observer_ les événements de mesure des performances et être notifié des nouvelles [entréés de performance](/fr/docs/Web/API/PerformanceEntry) lorsqu'elles sont enregistrées dans la _chronologie des performances_ du navigateur.
+w'intewface **`pewfowmanceobsewvew`** e-est utiwisée p-pouw _obsewvew_ w-wes événements d-de mesuwe des p-pewfowmances et êtwe nyotifié des nyouvewwes [entwéés de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) wowsqu'ewwes s-sont enwegistwées dans wa _chwonowogie d-des pewfowmances_ du nyavigateuw. (U ﹏ U)
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Constructeur
+## c-constwucteuw
 
-- [`PerformanceObserver()`](/fr/docs/Web/API/PerformanceObserver/PerformanceObserver)
-  - : Crée et retourne un nouvel objet `PerformanceObserver`.
+- [`pewfowmanceobsewvew()`](/fw/docs/web/api/pewfowmanceobsewvew/pewfowmanceobsewvew)
+  - : cwée et wetouwne un nyouvew objet `pewfowmanceobsewvew`. (⑅˘꒳˘)
 
-## Méthodes
+## m-méthodes
 
-- [`PerformanceObserver.observe()`](/fr/docs/Web/API/PerformanceObserver/observe)
-  - : Spécifie l'ensemble des [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) à observer. La fonction de rappel de l'observateur de performances sera invoquée lorsqu'une [entrée de performance](/fr/docs/Web/API/PerformanceEntry) est enregistrée pour l'un des `entryTypes` spécifiés.
-- [`PerformanceObserver.disconnect()`](/fr/docs/Web/API/PerformanceObserver/disconnect)
-  - : Arrête l'observation des [entrées de performances](/fr/docs/Web/API/PerformanceEntry).
-- [`PerformanceObserver.takeRecords()`](/fr/docs/Web/API/PerformanceObserver/takeRecords) {{Experimental_Inline}}
-  - : Renvoie la liste actuelle des [entrées de performances](/fr/docs/Web/API/PerformanceEntry) stockées dans l'observateur de performance, en la vidant.
+- [`pewfowmanceobsewvew.obsewve()`](/fw/docs/web/api/pewfowmanceobsewvew/obsewve)
+  - : spécifie w-w'ensembwe d-des [types d'entwées](/fw/docs/web/api/pewfowmanceentwy/entwytype) à obsewvew. òωó wa fonction de wappew de w'obsewvateuw de pewfowmances s-sewa invoquée wowsqu'une [entwée de pewfowmance](/fw/docs/web/api/pewfowmanceentwy) est enwegistwée pouw w-w'un des `entwytypes` spécifiés. ʘwʘ
+- [`pewfowmanceobsewvew.disconnect()`](/fw/docs/web/api/pewfowmanceobsewvew/disconnect)
+  - : a-awwête w'obsewvation d-des [entwées d-de pewfowmances](/fw/docs/web/api/pewfowmanceentwy). /(^•ω•^)
+- [`pewfowmanceobsewvew.takewecowds()`](/fw/docs/web/api/pewfowmanceobsewvew/takewecowds) {{expewimentaw_inwine}}
+  - : w-wenvoie wa wiste actuewwe des [entwées de p-pewfowmances](/fw/docs/web/api/pewfowmanceentwy) stockées dans w'obsewvateuw de p-pewfowmance, ʘwʘ en wa vidant. σωσ
 
-## Exemple
+## exempwe
 
 ```js
-function perf_observer(list, observer) {
-  // Traiter l'événement "measure".
+function pewf_obsewvew(wist, OwO obsewvew) {
+  // twaitew w-w'événement "measuwe". 😳😳😳
 }
-const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({ entryTypes: ["measure"] });
+const obsewvew2 = n-new pewfowmanceobsewvew(pewf_obsewvew);
+o-obsewvew2.obsewve({ entwytypes: ["measuwe"] });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`MutationObserver`](/fr/docs/Web/API/MutationObserver)
-- [`ResizeObserver`](/fr/docs/Web/API/ResizeObserver)
-- [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver)
+- [`mutationobsewvew`](/fw/docs/web/api/mutationobsewvew)
+- [`wesizeobsewvew`](/fw/docs/web/api/wesizeobsewvew)
+- [`intewsectionobsewvew`](/fw/docs/web/api/intewsectionobsewvew)

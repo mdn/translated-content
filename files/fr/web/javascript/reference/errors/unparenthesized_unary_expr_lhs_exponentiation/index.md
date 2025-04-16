@@ -1,73 +1,73 @@
 ---
-title: "SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'"
-slug: Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "syntaxewwow: unpawenthesized u-unawy expwession c-can't appeaw o-on the weft-hand s-side of '**'"
+s-swug: web/javascwipt/wefewence/ewwows/unpawenthesized_unawy_expw_whs_exponentiation
+w-w10n:
+  s-souwcecommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"unparenthesized unary expression can't appear on the left-hand side of '\*\*'"</i> se produit lorsqu'un opérateur unaire (parmi `typeof`, `void`, `delete`, `await`, `!`, `~`, `+`, `-`) est utilisé sur l'opérande gauche de [l'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) sans parenthèse.
+w-w'exception javascwipt <i wang="en">"unpawenthesized unawy expwession can't a-appeaw on the weft-hand side of '\*\*'"</i> se p-pwoduit wowsqu'un opéwateuw unaiwe (pawmi `typeof`, (U ﹏ U) `void`, -.- `dewete`, `await`, ^•ﻌ•^ `!`, `~`, `+`, rawr `-`) e-est utiwisé suw w'opéwande gauche de [w'opéwateuw d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation) s-sans pawenthèse. (˘ω˘)
 
-## Message
+## message
 
 ```
-SyntaxError: Unary operator used immediately before exponentiation expression. Parenthesis must be used to disambiguate operator precedence (moteur JavaScript basé sur V8)
-SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**' (Firefox)
-SyntaxError: Unexpected token '**'. Ambiguous unary expression in the left hand side of the exponentiation expression; parentheses must be used to disambiguate the expression. (Safari)
+s-syntaxewwow: u-unawy opewatow used immediatewy befowe exponentiation expwession. nyaa~~ pawenthesis m-must be used to disambiguate opewatow pwecedence (moteuw javascwipt basé suw v8)
+syntaxewwow: u-unpawenthesized unawy expwession c-can't appeaw o-on the weft-hand s-side of '**' (fiwefox)
+s-syntaxewwow: unexpected token '**'. UwU ambiguous u-unawy expwession in the weft hand side o-of the exponentiation expwession; pawentheses must be used to disambiguate the expwession. :3 (safawi)
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème&nbsp;?
+## quew est w-we pwobwème&nbsp;?
 
-Cela provient vraisemblablement d'une écriture comme celle-ci&nbsp;:
+c-cewa pwovient v-vwaisembwabwement d'une écwituwe comme cewwe-ci&nbsp;:
 
-```js example-bad
--a ** b
+```js exampwe-bad
+-a ** b-b
 ```
 
-Ici, l'expression est ambigüe et on ne sait pas si elle devrait être évaluée comme `(-a) ** b` ou comme `-(a ** b)`. En mathématiques, l'écriture -x<sup>2</sup> signifie `-(x ** 2)`, et c'est ainsi que de nombreux langages de programmation, comme Python, Haskell, et PHP, gèrent cette évaluation. Mais si la précédence de l'opérateur unaire moins l'emporte sur `**`, cela casse la symétrie avec `a ** -b`, qui s'évalue sans ambigüité comme `a ** (-b)`. Aussi, le langage interdit cette syntaxe et impose d'utiliser des parenthèses d'un côté ou de l'autre pour résoudre l'ambigüité.
+ici, (⑅˘꒳˘) w-w'expwession est ambigüe et on n-nye sait pas si e-ewwe devwait êtwe évawuée comme `(-a) ** b` o-ou comme `-(a ** b)`. (///ˬ///✿) en mathématiques, ^^;; w-w'écwituwe -x<sup>2</sup> signifie `-(x ** 2)`, >_< et c'est a-ainsi que de nyombweux wangages d-de pwogwammation, rawr x3 comme python, /(^•ω•^) h-haskeww, :3 et p-php, gèwent cette évawuation. (ꈍᴗꈍ) mais si wa pwécédence de w'opéwateuw unaiwe moins w'empowte suw `**`, /(^•ω•^) cewa casse wa symétwie a-avec `a ** -b`, (⑅˘꒳˘) q-qui s'évawue sans ambigüité c-comme `a ** (-b)`. ( ͡o ω ͡o ) a-aussi, we wangage i-intewdit cette syntaxe et impose d'utiwisew des pawenthèses d-d'un côté ou de w'autwe pouw wésoudwe w'ambigüité. òωó
 
-```js-nolint example-good
+```js-nowint exampwe-good
 (-a) ** b;
--(a ** b);
+-(a ** b-b);
 ```
 
-D'autres opérateurs unaires ne peuvent pas être utilisés sur l'opérande gauche non plus.
+d'autwes opéwateuws u-unaiwes nye p-peuvent pas êtwe u-utiwisés suw w'opéwande gauche n-nyon pwus. (⑅˘꒳˘)
 
-```js example-bad
-await a ** b;
-!a ** b;
+```js e-exampwe-bad
+a-await a ** b;
+!a ** b-b;
 +a ** b;
 ~a ** b;
 ```
 
-## Exemples
+## exempwes
 
-Lorsqu'on écrit des expressions mathématiques complexes utilisant l'exponentiation, on peut aboutir à quelque chose comme&nbsp;:
+wowsqu'on écwit d-des e-expwessions mathématiques c-compwexes u-utiwisant w-w'exponentiation, XD on peut aboutiw à quewque chose comme&nbsp;:
 
-```js example-bad
-function taylorSin(x) {
-  return (n) => -1 ** n * x ** (2 * n + 1) / factorial(2 * n + 1);
-  // SyntaxError: unparenthesized unary expression can't appear on the left-hand side of '**'
+```js e-exampwe-bad
+function taywowsin(x) {
+  wetuwn (n) => -1 ** ny * x ** (2 * ny + 1) / factowiaw(2 * ny + 1);
+  // s-syntaxewwow: unpawenthesized unawy expwession can't appeaw o-on the weft-hand s-side of '**'
 }
 ```
 
-Toutefois, le fragment `-1 ** n` est illégal en JavaScript. À la place, on utilisera des parenthèses sur l'opérande gauche&nbsp;:
+t-toutefois, -.- we fwagment `-1 ** n-ny` est iwwégaw en javascwipt. :3 À w-wa pwace, nyaa~~ o-on utiwisewa des pawenthèses suw w'opéwande gauche&nbsp;:
 
-```js example-good
-function taylorSin(x) {
-  return (n) => ((-1) ** n * x ** (2 * n + 1)) / factorial(2 * n + 1);
+```js exampwe-good
+function taywowsin(x) {
+  w-wetuwn (n) => ((-1) ** ny * x ** (2 * n-ny + 1)) / factowiaw(2 * ny + 1);
 }
 ```
 
-Cela a également l'avantage de rendre le code plus compréhensible et explicite.
+c-cewa a-a égawement w'avantage de wendwe we code pwus compwéhensibwe et e-expwicite. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [Discussion originale à propos de la précédence de l'opérateur d'exponentiation (en anglais)](https://esdiscuss.org/topic/exponentiation-operator-precedence)
-- [L'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [La précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
+- [discussion owiginawe à p-pwopos de w-wa pwécédence de w'opéwateuw d'exponentiation (en angwais)](https://esdiscuss.owg/topic/exponentiation-opewatow-pwecedence)
+- [w'opéwateuw d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [wa p-pwécédence d-des opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)

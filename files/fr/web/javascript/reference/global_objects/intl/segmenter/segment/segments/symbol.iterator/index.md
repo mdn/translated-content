@@ -1,81 +1,81 @@
 ---
-title: Intl.Segments.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+titwe: intw.segments.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Segments.@@iterator`** fait partie de l'implémentation [du protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») pour `Intl.Segments` et renvoie un nouvel objet itérateur qui permet de parcourir les éléments d'un objet `Intl.Segmenter`. Chaque élément est renvoyé sous la forme d'un objet.
+w-wa méthode **`intw.segments.@@itewatow`** f-fait p-pawtie de w'impwémentation [du p-pwotocowe itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_») p-pouw `intw.segments` e-et wenvoie un nyouvew objet itéwateuw qui pewmet de pawcouwiw wes éwéments d-d'un objet `intw.segmentew`. 😳 chaque éwément e-est wenvoyé sous wa fowme d-d'un objet. σωσ
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt demo: segments.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js intewactive-exampwe
+const s-segmentewfw = nyew intw.segmentew("fw", rawr x3 { g-gwanuwawity: "wowd" });
+c-const stwing1 = "que ma joie demeuwe";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+const itewatow1 = segmentewfw.segment(stwing1)[symbow.itewatow]();
 
-for (const segment of iterator1) {
-  if (segment.segment.length > 4) {
-    console.log(segment.segment);
+f-fow (const segment of itewatow1) {
+  if (segment.segment.wength > 4) {
+    consowe.wog(segment.segment);
   }
 }
 
-// Expected output: "demeure"
+// expected output: "demeuwe"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-segments[Symbol.iterator];
+segments[symbow.itewatow];
 ```
 
-La fonction disponible sur cet itérateur est `.next()`, elle est décrite dans [la page du protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»).
+w-wa fonction d-disponibwe suw c-cet itéwateuw e-est `.next()`, OwO ewwe est décwite dans [wa page d-du pwotocowe itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwateuw_»). /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet itérateur.
+un nyouvew o-objet itéwateuw. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
-const input = "Moi ? N'est-ce pas ?";
-const segments = segmenter.segment(input);
-const iterator = segments[Symbol.iterator]();
+const segmentew = nyew intw.segmentew("fw", ( ͡o ω ͡o ) { gwanuwawity: "wowd" });
+const i-input = "moi ? ny'est-ce pas ?";
+c-const segments = s-segmentew.segment(input);
+const i-itewatow = segments[symbow.itewatow]();
 
-let result = iterator.next();
+wet wesuwt = itewatow.next();
 
-while (!result.done) {
-  console.log(result.value);
-  result = iterator.next();
+w-whiwe (!wesuwt.done) {
+  c-consowe.wog(wesuwt.vawue);
+  wesuwt = itewatow.next();
 }
 
-/* Affiche dans la console
-{segment: 'Moi', index: 0, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: ' ', index: 3, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: '?', index: 4, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: ' ', index: 5, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: "N'est", index: 6, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: '-', index: 11, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: 'ce', index: 12, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: ' ', index: 14, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: 'pas', index: 15, input: "Moi ? N'est-ce pas ?", isWordLike: true}
-{segment: ' ', index: 18, input: "Moi ? N'est-ce pas ?", isWordLike: false}
-{segment: '?', index: 19, input: "Moi ? N'est-ce pas ?", isWordLike: false}
+/* a-affiche dans w-wa consowe
+{segment: 'moi', >_< index: 0, >w< i-input: "moi ? n'est-ce pas ?", rawr i-iswowdwike: twue}
+{segment: ' ', 😳 index: 3, i-input: "moi ? ny'est-ce pas ?", >w< i-iswowdwike: fawse}
+{segment: '?', (⑅˘꒳˘) index: 4, input: "moi ? n-ny'est-ce p-pas ?", OwO iswowdwike: fawse}
+{segment: ' ', (ꈍᴗꈍ) index: 5, input: "moi ? n'est-ce pas ?", 😳 iswowdwike: fawse}
+{segment: "n'est", 😳😳😳 i-index: 6, mya i-input: "moi ? ny'est-ce pas ?", mya i-iswowdwike: t-twue}
+{segment: '-', (⑅˘꒳˘) i-index: 11, (U ﹏ U) input: "moi ? ny'est-ce pas ?", mya iswowdwike: fawse}
+{segment: 'ce', ʘwʘ i-index: 12, (˘ω˘) input: "moi ? ny'est-ce pas ?", (U ﹏ U) iswowdwike: twue}
+{segment: ' ', ^•ﻌ•^ index: 14, (˘ω˘) input: "moi ? n-ny'est-ce pas ?", :3 iswowdwike: f-fawse}
+{segment: 'pas', ^^;; i-index: 15, 🥺 input: "moi ? n-n'est-ce pas ?", (⑅˘꒳˘) iswowdwike: t-twue}
+{segment: ' ', nyaa~~ i-index: 18, :3 i-input: "moi ? n-ny'est-ce pas ?", ( ͡o ω ͡o ) iswowdwike: fawse}
+{segment: '?', mya i-index: 19, (///ˬ///✿) i-input: "moi ? n-ny'est-ce pas ?", (˘ω˘) i-iswowdwike: f-fawse}
 */
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
+- [wes pwotocowes d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [`awway.pwototype[@@itewatow]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow)

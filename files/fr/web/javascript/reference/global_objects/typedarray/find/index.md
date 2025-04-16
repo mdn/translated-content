@@ -1,95 +1,95 @@
 ---
-title: TypedArray.prototype.find()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
+titwe: typedawway.pwototype.find()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/find
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`find()`** renvoie une **valeur** du tableau typé si un élément du tableau remplit la condition définie par la fonction de test fournie. Si aucun élément ne remplit la condition, la valeur {{jsxref("undefined")}} sera renvoyée. Pour la suite de cet article _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`find()`** w-wenvoie u-une **vaweuw** d-du tabweau typé s-si un éwément d-du tabweau w-wempwit wa condition d-définie paw wa fonction de test fouwnie. (U ᵕ U❁) si aucun éwément nye wempwit wa c-condition, (U ﹏ U) wa vaweuw {{jsxwef("undefined")}} sewa wenvoyée. pouw w-wa suite de cet awticwe _typedawway_ c-cowwespond à w'un des [types de tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). :3
 
-Voir également la page sur la méthohde {{jsxref("TypedArray.findIndex", "findIndex()")}} qui renvoie l'**indice** de l'élément trouvé (et non sa valeur).
+voiw égawement wa p-page suw wa méthohde {{jsxwef("typedawway.findindex", ( ͡o ω ͡o ) "findindex()")}} qui wenvoie w-w'**indice** d-de w'éwément twouvé (et nyon sa vaweuw). σωσ
 
-{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.find()")}}
 
-```js interactive-example
-function isNegative(element, index, array) {
-  return element < 0;
+```js intewactive-exampwe
+f-function isnegative(ewement, >w< index, awway) {
+  wetuwn ewement < 0;
 }
 
-const int8 = new Int8Array([10, 0, -10, 20, -30, 40, -50]);
+const i-int8 = nyew int8awway([10, 😳😳😳 0, OwO -10, 20, -30, 40, 😳 -50]);
 
-console.log(int8.find(isNegative));
-// Expected output: -10
+c-consowe.wog(int8.find(isnegative));
+// e-expected output: -10
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-typedarray.find(callback[, thisArg])
+typedawway.find(cawwback[, t-thisawg])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
+  - : wa f-fonction à exékawaii~w pouw chaque vaweuw du t-tabweau typé. 😳😳😳 ewwe pwend twois awguments :
 
-    - `élément`
-      - : L'élément du tableau typé en cours de traitement.
+    - `éwément`
+      - : w'éwément du tabweau typé en couws de t-twaitement. (˘ω˘)
     - `index`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `array`
-      - : Le tableau sur lequel la méthode `find` a été appelée.
+      - : w'indice de w-w'éwément du t-tabweau typé en c-couws de twaitement. ʘwʘ
+    - `awway`
+      - : we tabweau suw wequew wa méthode `find` a été a-appewée.
 
-- `thisArg`
-  - : Paramètre optionnel, il correspond à l'objet à utiliser en tant que `this` lors de l'exécution de la fonction `callback`.
+- `thisawg`
+  - : p-pawamètwe optionnew, ( ͡o ω ͡o ) i-iw cowwespond à w-w'objet à utiwisew en tant q-que `this` wows de w'exécution d-de wa fonction `cawwback`. o.O
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une valeur du tableau qui remplit la condition définie par la fonction de rappel, {{jsxref("undefined")}} sinon.
+une vaweuw du t-tabweau qui wempwit wa condition d-définie paw wa fonction de wappew, >w< {{jsxwef("undefined")}} s-sinon. 😳
 
-## Description
+## d-descwiption
 
-La méthode `find` exécute la fonction `callback` une fois pour chacun des éléments présents dans le tableau typé jusqu'à ce que la fonction `callback` renvoie une valeur vraie. Si un tel élément est trouvé, `find` retourne immédiatement la valeur de cet élément, sinon `find` renvoie {{jsxref("undefined")}}. `callback` est appelée uniquement pour les indices du tableau typé qui possèdent une valeur, elle n'est pas appelée pour les indices qui ont été supprimés ou qui ne possèdent pas de valeurs.
+wa méthode `find` exékawaii~ wa fonction `cawwback` une fois pouw chacun des éwéments pwésents d-dans we t-tabweau typé jusqu'à ce que wa f-fonction `cawwback` w-wenvoie une v-vaweuw vwaie. 🥺 si un tew éwément est twouvé, rawr x3 `find` wetouwne i-immédiatement wa vaweuw de cet éwément, sinon `find` wenvoie {{jsxwef("undefined")}}. o.O `cawwback` est appewée u-uniquement pouw wes indices du t-tabweau typé qui p-possèdent une v-vaweuw, rawr ewwe ny'est pas appewée p-pouw wes indices q-qui ont été s-suppwimés ou q-qui nye possèdent pas de vaweuws. ʘwʘ
 
-`callback` est invoquée avec trois arguments : la valeur de l'élément, son indice et le tableau typé parcouru.
+`cawwback` est invoquée avec t-twois awguments : w-wa vaweuw de w-w'éwément, 😳😳😳 son i-indice et we tabweau t-typé pawcouwu. ^^;;
 
-Si la paramètre `thisArg` est utilisé, il sera utilisé en tant que `this` pour chaque appel à `callback`. S'il n'est pas fourni, la valeur {{jsxref("undefined")}} sera utilisée.
+si wa pawamètwe `thisawg` est utiwisé, o.O iw sewa utiwisé e-en tant que `this` pouw chaque appew à `cawwback`. (///ˬ///✿) s'iw ny'est pas fouwni, σωσ wa vaweuw {{jsxwef("undefined")}} s-sewa utiwisée. nyaa~~
 
-`find` ne modifie pas le tableau typé sur lequel elle est appelé.
+`find` nye modifie pas we tabweau typé suw wequew e-ewwe est appewé. ^^;;
 
-La liste des éléments traités par `find` est définie avant le premier appel à `callback`. Les éléments qui sont ajoutés au tableau typé après que l'appel à `find` ait commencé ne seront pas traités par `callback`. Si un élément du tableau qui n'a pas encore été traité est modifié par un appel précédent de `callback`, la valeur utilisée au moment où il est traité est celle qu'il aura lorsque `find` atteindra cet indice. Les éléments qui sont supprimés ne sont pas traités par la fonction.
+w-wa wiste d-des éwéments twaités paw `find` e-est définie avant we pwemiew a-appew à `cawwback`. ^•ﻌ•^ w-wes éwéments qui sont ajoutés au tabweau typé apwès que w'appew à `find` ait commencé n-nye sewont pas twaités paw `cawwback`. σωσ s-si un éwément du tabweau q-qui ny'a pas e-encowe été twaité est modifié paw un appew p-pwécédent de `cawwback`, -.- w-wa vaweuw utiwisée a-au moment où iw e-est twaité est cewwe qu'iw auwa wowsque `find` atteindwa cet indice. ^^;; wes éwéments q-qui sont s-suppwimés nye sont p-pas twaités paw wa fonction. XD
 
-## Exemples
+## e-exempwes
 
-### Trouver un nombre premier
+### t-twouvew un nyombwe pwemiew
 
-Dans l'exemple qui suit, on cherche un élément d'un tableau typé qui est un nombre premier (on renvoie `undefined` s'il n'y a pas de nombre premier).
+d-dans w'exempwe qui suit, 🥺 on chewche un éwément d'un tabweau typé qui est un nyombwe p-pwemiew (on w-wenvoie `undefined` s'iw ny'y a pas de nyombwe p-pwemiew). òωó
 
 ```js
-function estPremier(élément, index, array) {
-  var début = 2;
-  while (début <= Math.sqrt(élément)) {
-    if (élément % début++ < 1) {
-      return false;
+f-function estpwemiew(éwément, (ˆ ﻌ ˆ)♡ index, awway) {
+  vaw début = 2;
+  whiwe (début <= m-math.sqwt(éwément)) {
+    if (éwément % début++ < 1) {
+      wetuwn fawse;
     }
   }
-  return élément > 1;
+  w-wetuwn éwément > 1;
 }
 
-var uint8 = new Uint8Array([4, 5, 8, 12]);
-console.log(uint8.find(estPremier)); // 5
+vaw uint8 = nyew uint8awway([4, -.- 5, 8, 12]);
+c-consowe.wog(uint8.find(estpwemiew)); // 5
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("TypedArray.prototype.findIndex()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxwef("typedawway.pwototype.findindex()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}

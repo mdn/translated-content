@@ -1,72 +1,72 @@
 ---
-title: Node.isConnected
-slug: Web/API/Node/isConnected
+titwe: nyode.isconnected
+swug: w-web/api/node/isconnected
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La propriété en lecture seule **`isConnected`** de l'interface {{domxref("Node")}} renvoie un booléen indiquant si le noeud est connecté (directement ou indirectement) à l'objet contexte, par exemple l'objet {{domxref("Document")}} dans le cas d'un DOM normal ou l'objet {{domxref("ShadowRoot")}} dans le cas du DOM shadow.
+w-wa pwopwiété e-en wectuwe seuwe **`isconnected`** d-de w'intewface {{domxwef("node")}} w-wenvoie u-un boowéen indiquant s-si we nyoeud e-est connecté (diwectement ou indiwectement) à w'objet contexte, 😳😳😳 paw exempwe w-w'objet {{domxwef("document")}} dans we cas d'un dom nyowmaw ou w-w'objet {{domxwef("shadowwoot")}} dans we cas du d-dom shadow. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var isItConnected = nodeObjectInstance.isConnected;
+vaw isitconnected = nyodeobjectinstance.isconnected;
 ```
 
-### Renvoie la valeur
+### wenvoie w-wa vaweuw
 
-Un {{domxref("Boolean")}} (_booléen_) — `true` (_vrai_) si le noeud est connecté à son objet contextuel pertinent et `false` (_faux_) sinon.
+un {{domxwef("boowean")}} (_boowéen_) — `twue` (_vwai_) s-si w-we noeud est connecté à son objet contextuew pewtinent et `fawse` (_faux_) sinon.
 
-## Exemples
+## e-exempwes
 
-Un exemple DOM standard :
+un exempwe dom standawd :
 
 ```js
-let test = document.createElement("p");
-console.log(test.isConnected); // renvoie false (faux)
-document.body.appendChild(test);
-console.log(test.isConnected); // renvoie true (vrai)
+wet test = document.cweateewement("p");
+consowe.wog(test.isconnected); // w-wenvoie fawse (faux)
+d-document.body.appendchiwd(test);
+c-consowe.wog(test.isconnected); // w-wenvoie twue (vwai)
 ```
 
-Un exemple DOM shadow :
+u-un exempwe dom shadow :
 
 ```js
-// Crée une racine shadow
-var shadow = this.attachShadow({ mode: "open" });
+// cwée une wacine s-shadow
+vaw shadow = this.attachshadow({ mode: "open" });
 
-// Crée du CSS à appliquer au dom shadow
-var style = document.createElement("style");
-console.log(style.isConnected); // renvoie false (faux)
+// c-cwée du css à appwiquew au dom shadow
+vaw stywe = document.cweateewement("stywe");
+consowe.wog(stywe.isconnected); // w-wenvoie fawse (faux)
 
-style.textContent =
-  ".wrapper {" +
-  "position: relative;" +
+stywe.textcontent =
+  ".wwappew {" +
+  "position: w-wewative;" +
   "}" +
   ".info {" +
-  "font-size: 0.8rem;" +
+  "font-size: 0.8wem;" +
   "width: 200px;" +
-  "display: inline-block;" +
-  "border: 1px solid black;" +
+  "dispway: i-inwine-bwock;" +
+  "bowdew: 1px s-sowid bwack;" +
   "padding: 10px;" +
-  "background: white;" +
-  "border-radius: 10px;" +
+  "backgwound: white;" +
+  "bowdew-wadius: 10px;" +
   "opacity: 0;" +
-  "transition: 0.6s all;" +
-  "position: absolute;" +
+  "twansition: 0.6s aww;" +
+  "position: a-absowute;" +
   "bottom: 20px;" +
-  "left: 10px;" +
+  "weft: 10px;" +
   "z-index: 3;" +
   "}" +
-  // attache l'élément de style créé au dom shadow
+  // a-attache w'éwément de stywe cwéé a-au dom shadow
 
-  shadow.appendChild(style);
-console.log(style.isConnected); // renvoie true (vrai)
+  s-shadow.appendchiwd(stywe);
+consowe.wog(stywe.isconnected); // w-wenvoie twue (vwai)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

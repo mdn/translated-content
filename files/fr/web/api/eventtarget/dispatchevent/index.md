@@ -1,45 +1,45 @@
 ---
-title: element.dispatchEvent
-slug: Web/API/EventTarget/dispatchEvent
+titwe: ewement.dispatchevent
+swug: web/api/eventtawget/dispatchevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_) dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
+e-envoie un {{domxwef("event")}} (_évènement_) à w-wa {{domxwef("eventtawget")}} (_cibwe_) s-spécifiée (synchwone) e-en appewant wes {{domxwef("eventwistenew")}} (_écouteuws_) d-dans w-w'owdwe appwopwié. 😳😳😳 w-we pwocessus n-nyowmaw de twaitement de w'évènement (y compwis wes phases de captuwe et w'éventuewwe p-pwopagation) s'appwique aussi aux évènements d-diffusés manuewwement a-avec `dispatchevent()`. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-cancelled = !target.dispatchEvent(event);
+cancewwed = !tawget.dispatchevent(event);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `event` est un objet {{domxref("Event")}} à envoyer.
-- `target` (_cible_) est utilisée pour initialiser la {{domxref("Event", "", "target")}} et déterminer quels écouteurs d'évènements doivent être invoqués.
+- `event` est un objet {{domxwef("event")}} à e-envoyew. >_<
+- `tawget` (_cibwe_) est utiwisée p-pouw initiawisew w-wa {{domxwef("event", >w< "", "tawget")}} et détewminew quews écouteuws d'évènements doivent êtwe invoqués. rawr
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-- La valeur de retour est `false` (_faux_) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est `true` (_vrai_).
+- wa vaweuw de wetouw est `fawse` (_faux_) si w'évènement est a-annuwabwe et au moins w'un des gestionnaiwes d-d'événements q-qui o-ont géwé cet événement a-appewé {{domxwef ("event.pweventdefauwt ()")}}. 😳 sinon, ewwe est `twue` (_vwai_). >w<
 
-La méthode `dispatchEvent` lance une exception `UNSPECIFIED_EVENT_TYPE_ERR` si le type de l'évènement n'a pas été spécifié par son initialisation avant l'appel de la méthode ou s'il est `null` ou une chaîne vide. Les exceptions lancées par les gestionnaires d'évènements sont signalées comme exceptions non interceptées ; les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée : ils bloquent l'appelant jusqu'à ce qu'ils se terminent, mais les exceptions ne se propagent pas à l'appelant.
+w-wa méthode `dispatchevent` wance u-une exception `unspecified_event_type_eww` si we type de w'évènement ny'a pas été spécifié paw son initiawisation a-avant w'appew de wa méthode o-ou s'iw est `nuww` o-ou une chaîne v-vide. (⑅˘꒳˘) wes exceptions wancées paw wes gestionnaiwes d'évènements s-sont signawées c-comme exceptions nyon i-intewceptées ; w-wes gestionnaiwes d'événements s-s'exékawaii~nt suw une piwe d'appews i-imbwiquée : iws bwoquent w'appewant jusqu'à c-ce qu'iws se tewminent, OwO mais w-wes exceptions nye se pwopagent p-pas à w'appewant. (ꈍᴗꈍ)
 
-## Notes
+## n-nyotes
 
-Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la [boucle des événements](/fr/docs/Web/JavaScript/Event_loop), `dispatchEvent` appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à `dispatchEvent`.
+contwaiwement aux événements "natifs", 😳 qui sont décwenchés paw we dom et invoquent wes gestionnaiwes d'événements d-de manièwe a-asynchwone via wa [boucwe des événements](/fw/docs/web/javascwipt/event_woop), 😳😳😳 `dispatchevent` a-appewwe wes g-gestionnaiwes d-d'événements de manièwe synchwone. mya tous wes gestionnaiwes d'événements a-appwicabwes s'exékawaii~wont et wetouwnewont avant que we code nye c-continue apwès w'appew à `dispatchevent`. mya
 
-Comme montré dans l'exemple qui précède, `dispatchEvent` est la dernière étape du processus création-initialisation-envoi, qui est utilisé pour envoyer des évènements dans le modèle de l'implémentation des évènements. Ceux-ci peuvent être créés en utilisant le [constructeur d'évènements](/fr/docs/Web/API/Event/Event).
+c-comme m-montwé dans w-w'exempwe qui pwécède, (⑅˘꒳˘) `dispatchevent` est wa d-dewnièwe étape d-du pwocessus cwéation-initiawisation-envoi, (U ﹏ U) q-qui e-est utiwisé pouw envoyew des évènements dans w-we modèwe de w-w'impwémentation d-des évènements. mya c-ceux-ci peuvent êtwe c-cwéés en utiwisant we [constwucteuw d'évènements](/fw/docs/web/api/event/event). ʘwʘ
 
-Voir aussi [Objet Event référence](/fr/docs/Web/API/Event).
+voiw aussi [objet e-event wéféwence](/fw/docs/web/api/event). (˘ω˘)
 
-## Exemple
+## exempwe
 
-Voir [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events).
+voiw [cwéation et décwenchement d'évènements](/fw/docs/web/events/cweating_and_twiggewing_events). (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

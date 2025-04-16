@@ -1,50 +1,50 @@
 ---
-title: "SyntaxError: missing ] after element list"
-slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+titwe: "syntaxewwow: missing ] a-aftew ewement w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_bwacket_aftew_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: missing ] after element list
+s-syntaxewwow: m-missing ] aftew e-ewement wist
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. rawr x3
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Il y a une erreur dans le littéral de tableau qui est uilisé. Il manque un crochet fermant ("`]`") ou une virgule qui sépare les éléments.
+iw y a une ewweuw dans we wittéwaw de tabweau qui e-est uiwisé. iw manque un cwochet fewmant ("`]`") o-ou une viwguwe qui sépawe wes éwéments. nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Littéraux de tableaux incomplets
+### wittéwaux de tabweaux incompwets
 
-```js example-bad
-var liste = [1, 2,
+```js exampwe-bad
+v-vaw wiste = [1, /(^•ω•^) 2,
 
-var instruments = [
-  "Ukulele",
-  "Guitare",
-  "Piano"
+vaw instwuments = [
+  "ukuwewe", rawr
+  "guitawe",
+  "piano"
 };
 
-var data = [{toto: "truc"} {titi: "bidule"}];
+v-vaw data = [{toto: "twuc"} {titi: "biduwe"}];
 ```
 
-Les versions correctes seraient :
+w-wes vewsions cowwectes sewaient :
 
-```js example-good
-var liste = [1, 2];
+```js exampwe-good
+vaw wiste = [1, OwO 2];
 
-var instruments = ["Ukulele", "Guitare", "Piano"];
+vaw instwuments = ["ukuwewe", (U ﹏ U) "guitawe", >_< "piano"];
 
-var data = [{ toto: "truc" }, { titi: "bidule" }];
+v-vaw data = [{ toto: "twuc" }, rawr x3 { titi: "biduwe" }];
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

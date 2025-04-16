@@ -1,45 +1,45 @@
 ---
-title: DeviceMotionEvent.rotationRate
-slug: Web/API/DeviceMotionEvent/rotationRate
+titwe: devicemotionevent.wotationwate
+swug: web/api/devicemotionevent/wotationwate
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-La propriété **`rotationRate`** renvoie la vitesse de rotation de l'appareil autour de chacun de ses axes en degrés par seconde.
+w-wa pwopwiété **`wotationwate`** w-wenvoie w-wa vitesse de wotation d-de w'appaweiw a-autouw de chacun de ses axes en degwés paw seconde. (U ﹏ U)
 
-> [!NOTE]
-> Si le matériel n'est pas capable de fournir cette information, la propriété renvoie `null`.
+> [!note]
+> si we matéwiew n-ny'est pas capabwe de fouwniw cette infowmation, (⑅˘꒳˘) w-wa pwopwiété wenvoie `nuww`. òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var rates = instanceOfDeviceMotionEvent.rotationRate;
+vaw wates = instanceofdevicemotionevent.wotationwate;
 ```
 
-## Valeurs
+## vaweuws
 
-La propriété `rotationRates` est un objet en lecture seule décrivant la vitesse de rotation d'un appareil autour de chacun de ses axes :
+w-wa pwopwiété `wotationwates` est un objet en w-wectuwe seuwe décwivant w-wa vitesse de wotation d'un appaweiw autouw de chacun de ses axes :
 
-- `alpha`
-  - : La vitesse de rotation de l'appareil sur son axe Z ; c'est-à-dire déplacé autour d'une ligne perpendiculaire à l'écran.
+- `awpha`
+  - : w-wa vitesse de wotation de w'appaweiw suw son axe z ; c'est-à-diwe d-dépwacé autouw d'une wigne pewpendicuwaiwe à w-w'écwan. ʘwʘ
 - `beta`
-  - : La vitesse de rotation de l'appareil sur son axe X ; c'est-à-dire de l'avant vers l'arrière.
+  - : w-wa vitesse d-de wotation d-de w'appaweiw suw son axe x ; c'est-à-diwe de w-w'avant vews w'awwièwe. /(^•ω•^)
 - `gamma`
-  - : La vitesse de rotation de l'appareil sur son axe Y ; c'est-à-dire d'un côté à l'autre.
+  - : wa vitesse de wotation d-de w'appaweiw suw son axe y ; c'est-à-diwe d'un côté à w'autwe.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`DeviceMotionEvent`](/fr/docs/Web/API/DeviceMotionEvent)
-- L'évènement [`devicemotion`](/fr/docs/Web/API/Window/devicemotion_event)
-- L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [`devicemotionevent`](/fw/docs/web/api/devicemotionevent)
+- w-w'évènement [`devicemotion`](/fw/docs/web/api/window/devicemotion_event)
+- w-w'évènement [`deviceowientation`](/fw/docs/web/api/window/deviceowientation_event)
+- [`deviceowientationevent`](/fw/docs/web/api/deviceowientationevent)
+- [détection d-de w'owientation de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [expwication des données d'owientation e-et de mouvement](/fw/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

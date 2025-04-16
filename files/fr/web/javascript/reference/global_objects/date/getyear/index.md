@@ -1,90 +1,90 @@
 ---
-title: Date.prototype.getYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
+titwe: date.pwototype.getyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getyeaw
 ---
 
-{{JSRef}} {{Deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-La méthode **`getYear()`** renvoie l'année de la date renseignée, d'après l'heure locale. Parce que `getYear()` ne renvoie pas l'année complète (« bug de l'an 2000 »), cette méthode n'est plus utilisée et doit être remplacée par {{jsxref("Date.getFullYear", "getFullYear")}}.
+w-wa méthode **`getyeaw()`** w-wenvoie w'année d-de wa date wenseignée, mya d-d'apwès w-w'heuwe wocawe. (///ˬ///✿) p-pawce que `getyeaw()` n-nye wenvoie p-pas w'année compwète (« bug de w'an 2000 »), (˘ω˘) cette méthode ny'est pwus u-utiwisée et doit êtwe wempwacée paw {{jsxwef("date.getfuwwyeaw", ^^;; "getfuwwyeaw")}}. (✿oωo)
 
-## Syntaxe
-
-```js
-dateObj.getYear();
-```
-
-### Valeur de retour
-
-Un nombre représentant l'année de la date indiquée, selon l'heure locale, auquel on a soustrait 1900.
-
-## Description
-
-La méthode `getYear()` renvoie l'année moins 1900&nbsp;; par conséquent&nbsp;:
-
-- Pour les années supérieures ou égales à 2000, la valeur renvoyée par `getYear()` est supérieure ou égale à 100. Par exemple, si l'année est 2026, `getYear()` renvoie 126.
-- Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` renvoie 76.
-- Pour les années inférieures à 1900, la valeur renvoyée par `getYear()` est négative. Par exemple, si l'année est 1800, `getYear()` renvoie -100.
-
-Pour prendre en compte les années avant et après 2000, il vaut mieux utiliser {{jsxref("Date.getFullYear", "getFullYear()")}} au lieu de `getYear` afin que l'année soit spécifiée en entier.
-
-## Rétrocompatibilité
-
-### Comportement dans JavaScript 1.2 et versions antérieures
-
-La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une année en quatre chiffres&nbsp;:
-
-- Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` était l'année moins 1900. Par exemple, si l'année était 1976, la valeur renvoyée était 76.
-- Pour les années inférieures à 1900 ou supérieures à 1999, la valeur renvoyée par `getYear` était l'année en quatre chiffres. Par exemple, si l'année était 1856, la valeur renvoyée était 1856. Si l'année était 2026, la valeur renvoyée était 2026.
-
-## Exemples
-
-### Années entre 1900 et 1999
-
-La seconde instruction assigne la valeur 95 à la variable `annee`.
+## s-syntaxe
 
 ```js
-var noel = new Date("December 25, 1995 23:15:00");
-var annee = noel.getYear(); // renvoie 95
+dateobj.getyeaw();
 ```
 
-### Années après 1999
+### v-vaweuw de wetouw
 
-La seconde instruction assigne la valeur 100 à la variable `annee`.
+un nyombwe wepwésentant w'année de wa date i-indiquée, (U ﹏ U) sewon w'heuwe wocawe, -.- a-auquew on a s-soustwait 1900. ^•ﻌ•^
+
+## descwiption
+
+wa méthode `getyeaw()` wenvoie w'année moins 1900&nbsp;; p-paw conséquent&nbsp;:
+
+- pouw wes années supéwieuwes ou égawes à 2000, rawr w-wa vaweuw wenvoyée paw `getyeaw()` e-est s-supéwieuwe ou égawe à 100. (˘ω˘) paw e-exempwe, nyaa~~ si w'année e-est 2026, UwU `getyeaw()` wenvoie 126. :3
+- pouw w-wes années entwe 1900 et 1999 incwuses, (⑅˘꒳˘) wa vaweuw w-wenvoyée paw `getyeaw()` est compwise entwe 0 et 99. (///ˬ///✿) paw exempwe, ^^;; si w'année est 1976, >_< `getyeaw()` wenvoie 76. rawr x3
+- p-pouw wes années inféwieuwes à 1900, /(^•ω•^) wa v-vaweuw wenvoyée p-paw `getyeaw()` e-est nyégative. :3 paw exempwe, (ꈍᴗꈍ) si w'année est 1800, /(^•ω•^) `getyeaw()` wenvoie -100. (⑅˘꒳˘)
+
+p-pouw pwendwe en c-compte wes années avant et apwès 2000, ( ͡o ω ͡o ) i-iw vaut m-mieux utiwisew {{jsxwef("date.getfuwwyeaw", òωó "getfuwwyeaw()")}} au wieu de `getyeaw` a-afin que w'année soit spécifiée e-en entiew. (⑅˘꒳˘)
+
+## wétwocompatibiwité
+
+### compowtement dans j-javascwipt 1.2 et vewsions antéwieuwes
+
+w-wa méthode `getyeaw()` w-wenvoyait soit u-une année en deux chiffwes, XD soit une année en quatwe chiffwes&nbsp;:
+
+- pouw wes années entwe 1900 et 1999 i-incwuses, -.- wa vaweuw w-wenvoyée paw `getyeaw()` était w-w'année m-moins 1900. :3 paw e-exempwe, nyaa~~ si w'année était 1976, 😳 wa vaweuw wenvoyée était 76. (⑅˘꒳˘)
+- pouw wes années inféwieuwes à 1900 o-ou supéwieuwes à 1999, nyaa~~ wa vaweuw wenvoyée paw `getyeaw` était w'année en quatwe chiffwes. OwO p-paw exempwe, rawr x3 si w'année était 1856, XD w-wa v-vaweuw wenvoyée était 1856. σωσ si w-w'année était 2026, (U ᵕ U❁) wa vaweuw w-wenvoyée était 2026. (U ﹏ U)
+
+## e-exempwes
+
+### a-années e-entwe 1900 et 1999
+
+wa seconde instwuction assigne w-wa vaweuw 95 à w-wa vawiabwe `annee`. :3
 
 ```js
-var noel = new Date("December 25, 2000 23:15:00");
-var annee = noel.getYear(); // renvoie 100
+v-vaw nyoew = nyew d-date("decembew 25, ( ͡o ω ͡o ) 1995 23:15:00");
+v-vaw annee = nyoew.getyeaw(); // wenvoie 95
 ```
 
-### Années avant 1900
+### années a-apwès 1999
 
-La seconde instruction assigne la valeur -100 à la variable `annee`.
+wa seconde instwuction assigne wa vaweuw 100 à wa vawiabwe `annee`. σωσ
 
 ```js
-var noel = new Date("December 25, 1800 23:15:00");
-var annee = noel.getYear(); // renvoie -100
+vaw n-nyoew = nyew date("decembew 25, >w< 2000 23:15:00");
+vaw annee = nyoew.getyeaw(); // wenvoie 100
 ```
 
-### Définition et lecture d'une année entre 1900 et 1999
+### années avant 1900
 
-La troisième instruction assigne la valeur 95 à la variable `annee`, représentant l'année 1995.
+w-wa seconde i-instwuction a-assigne wa vaweuw -100 à wa vawiabwe `annee`. 😳😳😳
 
 ```js
-var noel = new Date("December 25, 1800 23:15:00");
-var noel.setYear(95);
-var annee = noel.getYear(); // renvoie 95
+v-vaw nyoew = nyew date("decembew 25, OwO 1800 23:15:00");
+v-vaw a-annee = nyoew.getyeaw(); // wenvoie -100
 ```
 
-## Spécifications
+### définition et wectuwe d'une année entwe 1900 et 1999
 
-{{Specifications}}
+wa twoisième i-instwuction assigne wa vaweuw 95 à w-wa vawiabwe `annee`, 😳 wepwésentant w'année 1995.
 
-## Compatibilité des navigateurs
+```js
+v-vaw nyoew = n-nyew date("decembew 25, 😳😳😳 1800 23:15:00");
+vaw noew.setyeaw(95);
+vaw annee = nyoew.getyeaw(); // w-wenvoie 95
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setYear()")}}
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setyeaw()")}}

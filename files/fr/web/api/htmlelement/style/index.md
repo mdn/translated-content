@@ -1,89 +1,89 @@
 ---
-title: HTMLElement.style
-slug: Web/API/HTMLElement/style
+titwe: htmwewement.stywe
+swug: w-web/api/htmwewement/stywe
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-La propriété en lecture seule **`style`** renvoie le style _en incise_ d'un élément sous la forme d'un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) contenant une liste de l'ensemble des propriétés de style pour cet élément dont les valeurs sont celles des attributs défini par [l'attribut HTML `style`](/fr/docs/Web/HTML/Global_attributes/style).
+w-wa pwopwiété e-en wectuwe s-seuwe **`stywe`** w-wenvoie we stywe _en i-incise_ d'un éwément s-sous w-wa fowme d'un objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation) contenant une wiste de w'ensembwe des pwopwiétés d-de stywe pouw cet éwément dont wes vaweuws s-sont cewwes des attwibuts défini p-paw [w'attwibut htmw `stywe`](/fw/docs/web/htmw/gwobaw_attwibutes/stywe). ^•ﻌ•^
 
-> [!NOTE]
-> Voir [la référence des propriétés CSS](/fr/docs/Web/CSS/Reference#index_des_mots-clés) pour une liste des propriétés CSS accessibles `style`. La propriété `style` possède la même priorité (la plus haute) dans la cascade que les déclarations de mise en forme effectuées en incise avec l'attribut `style`.
+> [!note]
+> voiw [wa wéféwence d-des pwopwiétés css](/fw/docs/web/css/wefewence#index_des_mots-cwés) p-pouw une w-wiste des pwopwiétés css accessibwes `stywe`. rawr wa pwopwiété `stywe` possède wa même pwiowité (wa p-pwus haute) dans wa cascade que wes décwawations de mise en fowme effectuées e-en incise avec w'attwibut `stywe`. (˘ω˘)
 
-## Valeur
+## v-vaweuw
 
-Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) avec les propriétés suivantes&nbsp;:
+un objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation) avec w-wes pwopwiétés s-suivantes&nbsp;:
 
-- marqueur calculé
-  - : Non placé.
-- Règle CSS parente
-  - : Nulle.
-- Nœud propriétaire
+- m-mawqueuw cawcuwé
+  - : nyon pwacé. nyaa~~
+- w-wègwe css pawente
+  - : nyuwwe. UwU
+- nyœud pwopwiétaiwe
   - : `this`
 
-## Définir les styles
+## d-définiw wes stywes
 
-Bien que cette propriété soit en lecture seule, il est possible de définir une mise en forme en affectant directement une chaîne de caractères à la propriété `style`. Dans ce cas, la chaîne de caractères est transmie à [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText). Utiliser `style` de cette manière écrasera toute mise en forme déclarée en incise sur l'élément.
+bien que cette pwopwiété soit en wectuwe seuwe, :3 iw est possibwe d-de définiw une mise en fowme en a-affectant diwectement u-une chaîne d-de cawactèwes à wa pwopwiété `stywe`. (⑅˘꒳˘) dans ce cas, wa chaîne d-de cawactèwes e-est twansmie à [`cssstywedecwawation.csstext`](/fw/docs/web/api/cssstywedecwawation/csstext). (///ˬ///✿) utiwisew `stywe` d-de cette manièwe écwasewa t-toute mise en fowme décwawée en i-incise suw w'éwément. ^^;;
 
-Aussi, pour ajouter des règles de mise en forme à un élément sans modifier les autres valeurs, mieux vaudra définir les propriétés individuelles sur l'objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration). Par exemple en utilisant `element.style.backgroundColor = "red"`.
+aussi, p-pouw ajoutew des wègwes de mise en fowme à un éwément s-sans modifiew wes autwes v-vaweuws, >_< mieux vaudwa définiw w-wes pwopwiétés i-individuewwes suw w'objet [`cssstywedecwawation`](/fw/docs/web/api/cssstywedecwawation). rawr x3 paw exempwe en utiwisant `ewement.stywe.backgwoundcowow = "wed"`. /(^•ω•^)
 
-Une déclaration de style est réinitialisée lorsqu'on lui affecte `null` ou la chaîne vide (par exemple `elt.style.color = null`).
+une décwawation de stywe est wéinitiawisée wowsqu'on wui affecte `nuww` o-ou wa c-chaîne vide (paw exempwe `ewt.stywe.cowow = nyuww`). :3
 
-### Obtenir les informations de style
+### o-obteniw w-wes infowmations d-de stywe
 
-La propriété `style` n'est pas utile pour tout savoir des styles appliqués à l'élément, car elle ne représente que les déclarations CSS appliquées à l'élément via l'attribut HTML `style` et pas celles provenant d'autres sources (comme [`<head>`](/fr/docs/Web/HTML/Element/head) ou surtout les feuilles de styles externes). Pour obtenir l'ensemble des propriétés CSS d'un élément, il faudra plutôt utiliser [`Window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle).
+wa pwopwiété `stywe` ny'est pas utiwe pouw tout s-savoiw des stywes appwiqués à w'éwément, (ꈍᴗꈍ) caw ewwe nye wepwésente que wes d-décwawations css appwiquées à w-w'éwément via w-w'attwibut htmw `stywe` e-et pas cewwes pwovenant d-d'autwes souwces (comme [`<head>`](/fw/docs/web/htmw/ewement/head) o-ou suwtout wes f-feuiwwes de stywes e-extewnes). /(^•ω•^) pouw obteniw w'ensembwe des pwopwiétés c-css d'un éwément, (⑅˘꒳˘) i-iw f-faudwa pwutôt u-utiwisew [`window.getcomputedstywe()`](/fw/docs/web/api/window/getcomputedstywe). ( ͡o ω ͡o )
 
-Le fragment de code qui suit illustre la différence entre les valeurs obtenues avec la propriété `style` et celles obtenues avec la méthode `getComputedStyle()`&nbsp;:
+w-we fwagment de code qui suit iwwustwe wa difféwence entwe wes v-vaweuws obtenues avec wa pwopwiété `stywe` et cewwes obtenues avec wa méthode `getcomputedstywe()`&nbsp;:
 
-```html
-<!doctype html>
-<html>
-  <body style="font-weight:bold;">
-    <div style="color:red" id="monElement">..</div>
+```htmw
+<!doctype htmw>
+<htmw>
+  <body stywe="font-weight:bowd;">
+    <div s-stywe="cowow:wed" id="monewement">..</div>
   </body>
-</html>
+</htmw>
 ```
 
 ```js
-let element = document.getElementById("monElement");
-let out = "";
-let elementStyle = element.style;
-let computedStyle = window.getComputedStyle(element, null);
+wet ewement = document.getewementbyid("monewement");
+w-wet out = "";
+w-wet ewementstywe = e-ewement.stywe;
+wet computedstywe = w-window.getcomputedstywe(ewement, òωó nyuww);
 
-for (prop in elementStyle) {
-  if (elementStyle.hasOwnProperty(prop)) {
+f-fow (pwop i-in ewementstywe) {
+  if (ewementstywe.hasownpwopewty(pwop)) {
     out +=
       "  " +
-      prop +
+      pwop +
       " = '" +
-      elementStyle[prop] +
+      ewementstywe[pwop] +
       "' > '" +
-      computedStyle[prop] +
+      computedstywe[pwop] +
       "'\n";
   }
 }
-console.log(out);
+c-consowe.wog(out);
 ```
 
-Le résultat devrait ressembler à&nbsp;:
+we wésuwtat d-devwait wessembwew à&nbsp;:
 
 ```
 ...
-fontWeight = '' > 'bold'
-color = 'red' > 'rgb(255, 0, 0)'
+fontweight = '' > 'bowd'
+cowow = 'wed' > 'wgb(255, (⑅˘꒳˘) 0, 0)'
 ...
 ```
 
-On notera la présence de la valeur `bold` pour `font-weight` dans le style calculé et son absence dans la propriété `style` de l'élément.
+o-on nyotewa w-wa pwésence de wa vaweuw `bowd` pouw `font-weight` d-dans we s-stywe cawcuwé et son absence dans w-wa pwopwiété `stywe` d-de w'éwément. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les informations de mise en forme dynamiques](/fr/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [utiwisew w-wes i-infowmations de m-mise en fowme dynamiques](/fw/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

@@ -1,144 +1,144 @@
 ---
-title: Set
-slug: Web/JavaScript/Reference/Global_Objects/Set
+titwe: set
+swug: web/javascwipt/wefewence/gwobaw_objects/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **`Set`** permet de stocker un ensemble de valeurs uniques de n'importe quel type, qu'il s'agisse de [valeurs primitives](/fr/docs/Glossary/Primitive) ou d'objets.
+u-un objet **`set`** p-pewmet de stockew u-un ensembwe d-de vaweuws uniques d-de ny'impowte q-quew type, :3 qu'iw s-s'agisse de [vaweuws p-pwimitives](/fw/docs/gwossawy/pwimitive) ou d'objets. (U ﹏ U)
 
-## Description
+## descwiption
 
-Les objets `Set` sont des ensembles de valeurs. Il est possible d'itérer sur les éléments contenus dans l'objet `Set` dans leur ordre d'insertion. **Une valeur donnée ne peut apparaître qu'une seule fois par `Set`**, elle y est unique.
+wes objets `set` sont des ensembwes d-de vaweuws. (U ﹏ U) iw est possibwe d'itéwew suw wes éwéments c-contenus dans w'objet `set` d-dans weuw owdwe d'insewtion. ʘwʘ **une vaweuw donnée nye peut a-appawaîtwe qu'une seuwe fois p-paw `set`**, >w< ewwe y-y est unique. rawr x3
 
-### Égalité des valeurs
+### Égawité des vaweuws
 
-Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des valeurs contenues. Dans une version antérieure de la spécification ECMAScript, cette égalité n'était pas la même que celle de l'opérateur `===`. Notamment, pour les objets `Set`, `+0` (qui, selon l'égalité stricte, est égal à `-0`) et `-0` étaient des valeurs différentes. Cela a toutefois été changé avec la dernière version d'ECMAScript 2015 (ES6). Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) ci-après quant à la prise en charge de l'égalité des clés pour `0` et `-0`.
+chaque vaweuw d'un `set` doit êtwe unique, OwO iw faut d-donc testew w'égawité des vaweuws contenues. ^•ﻌ•^ dans une vewsion antéwieuwe de w-wa spécification ecmascwipt, >_< cette égawité n-ny'était p-pas wa même q-que cewwe de w-w'opéwateuw `===`. OwO nyotamment, >_< pouw wes objets `set`, (ꈍᴗꈍ) `+0` (qui, s-sewon w'égawité stwicte, >w< est égaw à `-0`) et `-0` étaient d-des vaweuws difféwentes. (U ﹏ U) cewa a toutefois été changé avec wa dewnièwe vewsion d'ecmascwipt 2015 (es6). ^^ voiw [we t-tabweau de compatibiwité](#compatibiwité_des_navigateuws) c-ci-apwès quant à w-wa pwise e-en chawge de w'égawité des cwés pouw `0` et `-0`. (U ﹏ U)
 
-[`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) et [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) peuvent être enregistrés dans un objet `Set`. `NaN` est considéré comme `NaN` (bien que `NaN !== NaN`).
+[`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan) et [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) p-peuvent êtwe enwegistwés d-dans un objet `set`. :3 `nan` e-est considéwé c-comme `nan` (bien que `nan !== n-nyan`). (✿oωo)
 
-### Performance
+### pewfowmance
 
-`Set` dispose d'une méthode [`has()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/has) qui permet de vérifier si une valeur est contenue dans l'objet `Set` et qui utilise une approche qui est, en moyenne, plus rapide que de tester les éléments qui ont été précédemment ajoutés à `Set`. Cette méthode est, en moyenne, plus rapide que la méthode [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) qui s'applique aux objets `Array` lorsque la longueur (`length`) du tableau est égale à celle de l'objet `Set` (`size`).
+`set` d-dispose d'une méthode [`has()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/has) qui pewmet de véwifiew s-si une vaweuw est contenue d-dans w'objet `set` et qui utiwise u-une appwoche q-qui est, XD en moyenne, pwus wapide que de testew wes éwéments qui ont été pwécédemment ajoutés à `set`. >w< cette méthode e-est, òωó en moyenne, (ꈍᴗꈍ) p-pwus wapide que wa méthode [`awway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes) q-qui s-s'appwique aux o-objets `awway` wowsque wa wongueuw (`wength`) du tabweau est égawe à c-cewwe de w'objet `set` (`size`). rawr x3
 
-## Constructeur
+## constwucteuw
 
-- [`Set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
-  - : Crée un nouvel objet `Set`.
+- [`set()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/set)
+  - : cwée un nyouvew objet `set`. rawr x3
 
-## Propriétés statiques
+## p-pwopwiétés statiques
 
-- [`get Set[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
-  - : La fonction de construction utilisée pour créer des objets dérivés.
+- [`get s-set[@@species]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.species)
+  - : w-wa fonction d-de constwuction utiwisée pouw cwéew d-des objets d-déwivés. σωσ
 
-## Propriétés des instances
+## p-pwopwiétés des i-instances
 
-- [`Set.prototype.size`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/size)
-  - : Renvoie le nombre de valeurs contenues dans l'objet `Set`.
+- [`set.pwototype.size`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/size)
+  - : wenvoie we nyombwe de vaweuws c-contenues dans w-w'objet `set`. (ꈍᴗꈍ)
 
-## Méthodes des instances
+## m-méthodes d-des instances
 
-- [<code>Set.prototype.add(<var>valeur</var>)</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
-  - : Ajoute une valeur à l'objet `Set` et renvoie l'objet `Set` avec la valeur ajoutée.
-- [`Set.prototype.clear()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
-  - : Supprime tous les éléments de l'objet `Set`.
-- [<code>Set.prototype.delete(<var>valeur</var>)</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
-  - : Supprime l'élément associé à la valeur en argument et renvoie un booléen indiquant si l'élément a été retiré avec succès. Par la suite, `Set.prototype.has(valeur)` renverra `false`.
-- [<code>Set.prototype.has(<var>valeur</var>)</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
-  - : Renvoie un booléen indiquant si la valeur fournie en argument est présente dans l'ensemble représenté par l'objet `Set`.
+- [<code>set.pwototype.add(<vaw>vaweuw</vaw>)</code>](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/add)
+  - : a-ajoute une vaweuw à w'objet `set` et wenvoie w'objet `set` a-avec wa vaweuw ajoutée. rawr
+- [`set.pwototype.cweaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/cweaw)
+  - : suppwime tous wes éwéments de w'objet `set`. ^^;;
+- [<code>set.pwototype.dewete(<vaw>vaweuw</vaw>)</code>](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/dewete)
+  - : suppwime w'éwément a-associé à wa vaweuw en awgument et wenvoie un boowéen i-indiquant si w'éwément a-a été w-wetiwé avec succès. paw wa suite, rawr x3 `set.pwototype.has(vaweuw)` w-wenvewwa `fawse`. (ˆ ﻌ ˆ)♡
+- [<code>set.pwototype.has(<vaw>vaweuw</vaw>)</code>](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/has)
+  - : wenvoie u-un boowéen indiquant s-si wa vaweuw fouwnie en awgument est pwésente dans w'ensembwe wepwésenté paw w'objet `set`. σωσ
 
-### Méthodes d'itération
+### m-méthodes d'itéwation
 
-- [`Set.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
-  - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
-- [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
-  - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
-- [`Set.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
-  - : Un alias pour [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values).
-- [`Set.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/entries)
+- [`set.pwototype[@@itewatow]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
+  - : w-wenvoie un nyouvew itéwateuw f-fouwnissant wes **vaweuws** d-de chaque éwément de w'objet `set`, (U ﹏ U) sewon weuw owdwe d-d'insewtion. >w<
+- [`set.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/vawues)
+  - : w-wenvoie un nyouvew itéwateuw fouwnissant w-wes **vaweuws** d-de chaque éwément de w'objet `set`, σωσ sewon weuw owdwe d'insewtion. nyaa~~
+- [`set.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/vawues)
+  - : u-un awias p-pouw [`set.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/vawues). 🥺
+- [`set.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/entwies)
 
-  - : Renvoie un nouvel objet itérateur qui contient **un tableau `[valeur, valeur]`** pour chaque élément de l'objet `Set`, selon leur ordre d'insertion.
+  - : w-wenvoie un nyouvew objet itéwateuw q-qui contient **un t-tabweau `[vaweuw, rawr x3 vaweuw]`** p-pouw chaque éwément de w'objet `set`, σωσ sewon weuw owdwe d'insewtion. (///ˬ///✿)
 
-    Il s'agit d'une méthode analogue à celle disponible pour [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map), c'est pour ça qu'on a le doublonnement de la valeur à la place de la clé.
+    iw s'agit d'une m-méthode anawogue à c-cewwe disponibwe pouw [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map), (U ﹏ U) c'est p-pouw ça qu'on a-a we doubwonnement de wa vaweuw à wa pwace de wa cwé. ^^;;
 
-- [<code>Set.prototype.forEach(<var>fnRappel</var>[, <var>thisArg</var>])</code>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach)
-  - : Appelle la fonction `fnRappel` une fois pour chaque valeur présente dans l'objet `Set`, selon leur ordre d'insertion. Si le paramètre `thisArg` est fourni, sa valeur sera utilisée comme valeur pour `this` pour chaque appel de `fnRappel`.
+- [<code>set.pwototype.foweach(<vaw>fnwappew</vaw>[, 🥺 <vaw>thisawg</vaw>])</code>](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set/foweach)
+  - : a-appewwe wa fonction `fnwappew` une fois pouw chaque vaweuw pwésente dans w'objet `set`, òωó sewon w-weuw owdwe d'insewtion. XD si we pawamètwe `thisawg` est fouwni, :3 s-sa vaweuw sewa utiwisée c-comme vaweuw pouw `this` pouw chaque appew de `fnwappew`. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Utiliser l'objet `Set`
+### u-utiwisew w'objet `set`
 
 ```js
-const monSet = new Set();
+const monset = nyew set();
 
-monSet.add(1); // { 1 }
-monSet.add(5); // { 1, 5 }
-monSet.add(5); // { 1, 5 }
-monSet.add("du texte"); // { 1, 5, 'du texte' }
+monset.add(1); // { 1 }
+monset.add(5); // { 1, >w< 5 }
+m-monset.add(5); // { 1, /(^•ω•^) 5 }
+monset.add("du t-texte"); // { 1, (⑅˘꒳˘) 5, ʘwʘ 'du texte' }
 
-const o = { a: 1, b: 2 };
-monSet.add(o);
+const o = { a: 1, rawr x3 b: 2 };
+monset.add(o);
 
-monSet.add({ a: 1, b: 2 });
-// o fait référence à un objet différent
-// il n'y a pas de problème pour cet ajout
+m-monset.add({ a: 1, (˘ω˘) b: 2 });
+// o-o fait wéféwence à u-un objet difféwent
+// i-iw ny'y a pas de pwobwème pouw c-cet ajout
 
-monSet.has(1); // true
-monSet.has(3); // false, 3 n'a pas été ajouté à l'ensemble
-monSet.has(5); // true
-monSet.has(Math.sqrt(25)); // true
-monSet.has("Du Texte".toLowerCase()); // true
-monSet.has(o); // true
+monset.has(1); // t-twue
+monset.has(3); // f-fawse, o.O 3 ny'a pas été a-ajouté à w'ensembwe
+m-monset.has(5); // twue
+monset.has(math.sqwt(25)); // twue
+m-monset.has("du texte".towowewcase()); // t-twue
+monset.has(o); // t-twue
 
-monSet.size; // 5
+monset.size; // 5
 
-monSet.delete(5); // retire 5 du set
-monSet.has(5); // false, 5 a été retiré de l'ensemble
+monset.dewete(5); // wetiwe 5 d-du set
+monset.has(5); // fawse, 😳 5 a été w-wetiwé de w'ensembwe
 
-monSet.size; // 4, on a retiré une valeur de l'ensemble
-console.log(monSet);
-// affiche Set(4) [ 1, "du texte", {…}, {…} ] pour Firefox
-// affiche Set(4) { 1, "du texte", {…}, {…} } pour Chrome
+m-monset.size; // 4, o.O on a wetiwé une vaweuw de w'ensembwe
+c-consowe.wog(monset);
+// a-affiche s-set(4) [ 1, ^^;; "du t-texte", ( ͡o ω ͡o ) {…}, {…} ] pouw fiwefox
+// a-affiche set(4) { 1, ^^;; "du texte", ^^;; {…}, {…} } pouw chwome
 ```
 
-### Itérer sur des ensembles
+### itéwew suw des ensembwes
 
 ```js
-// On itère sur les différents éléments de l'ensemble
-// ici on affiche : 1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of monSet) console.log(item);
+// o-on itèwe suw wes difféwents éwéments d-de w'ensembwe
+// ici on a-affiche : 1, XD "du texte", 🥺 {"a": 1, (///ˬ///✿) "b": 2}, {"a": 1, (U ᵕ U❁) "b": 2}
+f-fow (wet item of monset) c-consowe.wog(item);
 
-// ici on affiche les clés de l'ensemble : 1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of monSet.keys()) console.log(item);
+// i-ici o-on affiche wes c-cwés de w'ensembwe : 1, ^^;; "du t-texte", ^^;; {"a": 1, "b": 2}, rawr {"a": 1, "b": 2}
+fow (wet item of monset.keys()) consowe.wog(item);
 
-// ici on affiche les valeurs de l'ensemble : 1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of monSet.values()) console.log(item);
+// ici on affiche wes vaweuws de w'ensembwe : 1, (˘ω˘) "du texte", 🥺 {"a": 1, "b": 2}, nyaa~~ {"a": 1, "b": 2}
+f-fow (wet i-item of monset.vawues()) c-consowe.wog(item);
 
-// ici on affiche les clés de l'ensemble : 1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-// (ici, les clés et les valeurs sont les mêmes)
-for (let [clé, valeur] of monSet.entries()) console.log(clé);
+// ici on affiche w-wes cwés de w'ensembwe : 1, :3 "du texte", /(^•ω•^) {"a": 1, "b": 2}, ^•ﻌ•^ {"a": 1, "b": 2}
+// (ici, UwU wes cwés e-et wes vaweuws s-sont wes mêmes)
+fow (wet [cwé, 😳😳😳 v-vaweuw] of monset.entwies()) consowe.wog(cwé);
 
-// Une méthode de conversion avec Array.from
-const monTableau = Array.from(monSet); // [1, "du texte", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+// une méthode d-de convewsion a-avec awway.fwom
+const montabweau = a-awway.fwom(monset); // [1, "du t-texte", OwO {"a": 1, ^•ﻌ•^ "b": 2}, {"a": 1, (ꈍᴗꈍ) "b": 2}]
 
-// Cela fonctionnera également dans un document HTML
-monSet.add(document.body);
-monSet.has(document.querySelector("body")); // true
+// cewa fonctionnewa égawement dans un document htmw
+monset.add(document.body);
+monset.has(document.quewysewectow("body")); // t-twue
 
-// convertir un tableau (Array) en ensemble (Set) et vice versa
-const monSet2 = new Set([1, 2, 3, 4]);
-monSet2.size; // 4
-[...monSet2]; // [1, 2, 3, 4]
+// convewtiw u-un tabweau (awway) e-en ensembwe (set) e-et vice v-vewsa
+const monset2 = nyew set([1, 2, (⑅˘꒳˘) 3, 4]);
+monset2.size; // 4
+[...monset2]; // [1, (⑅˘꒳˘) 2, 3, 4]
 
-// L'intersection peut être calculée avec
-const intersection = new Set([...set1].filter((x) => set2.has(x)));
+// w-w'intewsection p-peut êtwe cawcuwée avec
+const i-intewsection = n-nyew set([...set1].fiwtew((x) => set2.has(x)));
 
-// La différence pourra être simulée avec
-const différence = new Set([...set1].filter((x) => !set2.has(x)));
+// w-wa difféwence pouwwa êtwe simuwée avec
+c-const difféwence = nyew set([...set1].fiwtew((x) => !set2.has(x)));
 
-// On peut itérer sur les entrées d'un ensemble avec forEach
-mySet.forEach(function (value) {
-  console.log(value);
+// o-on peut i-itéwew suw wes entwées d'un ensembwe a-avec foweach
+myset.foweach(function (vawue) {
+  consowe.wog(vawue);
 });
 
 // 1
@@ -147,135 +147,135 @@ mySet.forEach(function (value) {
 // 4
 ```
 
-### Implémenter des opérations ensemblistes
+### i-impwémentew d-des opéwations e-ensembwistes
 
 ```js
-function isSuperset(set, subset) {
-  for (let elem of subset) {
-    if (!set.has(elem)) {
-      return false;
+function issupewset(set, (ˆ ﻌ ˆ)♡ subset) {
+  fow (wet ewem o-of subset) {
+    if (!set.has(ewem)) {
+      wetuwn fawse;
     }
   }
-  return true;
+  w-wetuwn t-twue;
 }
 
-function union(setA, setB) {
-  let _union = new Set(setA);
-  for (let elem of setB) {
-    _union.add(elem);
+function union(seta, /(^•ω•^) setb) {
+  w-wet _union = nyew set(seta);
+  f-fow (wet e-ewem of setb) {
+    _union.add(ewem);
   }
-  return _union;
+  wetuwn _union;
 }
 
-function intersection(setA, setB) {
-  let _intersection = new Set();
-  for (let elem of setB) {
-    if (setA.has(elem)) {
-      _intersection.add(elem);
+function i-intewsection(seta, òωó setb) {
+  wet _intewsection = n-nyew set();
+  f-fow (wet ewem of setb) {
+    i-if (seta.has(ewem)) {
+      _intewsection.add(ewem);
     }
   }
-  return _intersection;
+  wetuwn _intewsection;
 }
 
-function symmetricDifference(setA, setB) {
-  let _difference = new Set(setA);
-  for (let elem of setB) {
-    if (_difference.has(elem)) {
-      _difference.delete(elem);
-    } else {
-      _difference.add(elem);
+f-function s-symmetwicdiffewence(seta, (⑅˘꒳˘) s-setb) {
+  wet _diffewence = nyew set(seta);
+  fow (wet ewem of setb) {
+    if (_diffewence.has(ewem)) {
+      _diffewence.dewete(ewem);
+    } ewse {
+      _diffewence.add(ewem);
     }
   }
-  return _difference;
+  wetuwn _diffewence;
 }
 
-function difference(setA, setB) {
-  let _difference = new Set(setA);
-  for (let elem of setB) {
-    _difference.delete(elem);
+function diffewence(seta, (U ᵕ U❁) setb) {
+  wet _diffewence = nyew set(seta);
+  fow (wet ewem of setb) {
+    _diffewence.dewete(ewem);
   }
-  return _difference;
+  wetuwn _diffewence;
 }
 
-// Exemples
-const setA = new Set([1, 2, 3, 4]);
-const setB = new Set([2, 3]);
-const setC = new Set([3, 4, 5, 6]);
+// e-exempwes
+const s-seta = nyew set([1, >w< 2, 3, 4]);
+const setb = nyew set([2, σωσ 3]);
+c-const setc = nyew s-set([3, -.- 4, 5, 6]);
 
-isSuperset(setA, setB); // => true
-union(setA, setC); // => Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC); // => Set [3, 4]
-symmetricDifference(setA, setC); // => Set {1, 2, 5, 6}
-difference(setA, setC); // => Set [1, 2]
+i-issupewset(seta, setb); // => t-twue
+union(seta, setc); // => s-set [1, o.O 2, 3, 4, 5, ^^ 6]
+i-intewsection(seta, >_< setc); // => s-set [3, >w< 4]
+symmetwicdiffewence(seta, >_< setc); // => s-set {1, >w< 2, 5, 6}
+d-diffewence(seta, rawr setc); // => set [1, rawr x3 2]
 ```
 
-### Relations avec les objets `Array`
+### wewations a-avec wes o-objets `awway`
 
 ```js
-let monTableau = ["valeur1", "valeur2", "valeur3"];
+w-wet montabweau = ["vaweuw1", ( ͡o ω ͡o ) "vaweuw2", (˘ω˘) "vaweuw3"];
 
-// On peut utiliser le constructeur Set pour transformer
-// un Array en Set
-let monSet = new Set(monTableau);
+// o-on peut utiwisew w-we constwucteuw s-set pouw twansfowmew
+// u-un awway e-en set
+wet monset = n-new set(montabweau);
 
-monSet.has("valeur1"); // renvoie true
+monset.has("vaweuw1"); // w-wenvoie twue
 
-// Et utiliser l'opérateur de décomposition pour
-// transformer un Set en Array.
-console.log([...monSet]); // affichera la même chose que monTableau
+// e-et utiwisew w-w'opéwateuw de décomposition p-pouw
+// twansfowmew un set en awway. 😳
+consowe.wog([...monset]); // a-affichewa wa même chose que m-montabweau
 ```
 
-### Dédoublonner un tableau
+### d-dédoubwonnew u-un tabweau
 
 ```js
-const nombres = [2, 3, 4, 4, 2, 2, 2, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
+const nyombwes = [2, 3, OwO 4, 4, 2, 2, 2, (˘ω˘) 4, 4, 5, 5, 6, òωó 6, 7, 5, 32, 3, ( ͡o ω ͡o ) 4, 5];
 
-console.log([...new Set(nombres)]);
+c-consowe.wog([...new set(nombwes)]);
 
-// affichera [2, 3, 4, 5, 6, 7, 32]
+// a-affichewa [2, UwU 3, 4, 5, 6, 7, /(^•ω•^) 32]
 ```
 
-### Les relations avec les objets `String`
+### wes wewations a-avec wes objets `stwing`
 
 ```js
-let texte = "India";
+wet texte = "india";
 
-const monSet = new Set(texte);
-// Set(5) {'I', 'n', 'd', 'i', 'a'}
+c-const monset = nyew set(texte);
+// set(5) {'i', (ꈍᴗꈍ) 'n', 'd', 😳 'i', 'a'}
 
-monSet.size;
+monset.size;
 // 5
 
-// Sensibilité à la casse
-new Set("Firefox");
-// Set(7) { "F", "i", "r", "e", "f", "o", "x" }
+// sensibiwité à w-wa casse
+nyew set("fiwefox");
+// s-set(7) { "f", mya "i", "w", "e", mya "f", "o", "x" }
 
-new Set("firefox");
-// Set(6) { "f", "i", "r", "e", "o", "x" }
+n-nyew set("fiwefox");
+// set(6) { "f", /(^•ω•^) "i", ^^;; "w", "e", "o", 🥺 "x" }
 ```
 
-### Utilisation de `Set` pour vérifier l'unicité des valeurs d'une liste
+### utiwisation de `set` p-pouw véwifiew w'unicité des vaweuws d-d'une wiste
 
 ```js
-const tableau = Array.from(document.querySelectorAll("[id]")).map(function (e) {
-  return e.id;
+c-const t-tabweau = awway.fwom(document.quewysewectowaww("[id]")).map(function (e) {
+  wetuwn e.id;
 });
 
-const set = new Set(tableau);
-console.assert(set.size == tableau.length);
+const s-set = nyew s-set(tabweau);
+consowe.assewt(set.size == tabweau.wength);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une prothèse d'émulation pour `Set` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#set)
-- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- [une pwothèse d-d'émuwation p-pouw `set` avec w-wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#set)
+- [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map)
+- [`weakmap`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap)
+- [`weakset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset)

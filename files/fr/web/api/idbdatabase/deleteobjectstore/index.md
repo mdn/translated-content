@@ -1,98 +1,98 @@
 ---
-title: IDBDatabase.deleteObjectStore()
-slug: Web/API/IDBDatabase/deleteObjectStore
+titwe: idbdatabase.deweteobjectstowe()
+swug: w-web/api/idbdatabase/deweteobjectstowe
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`deleteObjectStore()`** de l'interface {{domxref("IDBDatabase")}} supprime un magasin d'objet et ses index de la base de données.
+w-wa méthode **`deweteobjectstowe()`** d-de w'intewface {{domxwef("idbdatabase")}} s-suppwime un m-magasin d'objet e-et ses index de w-wa base de données. -.-
 
-Comme la méthode {{domxref("IDBDatabase.createObjectStore")}}, cette méthode doit être appelée _uniquement_ lors d'une transaction en mode [`versionchange`](/fr/docs/Web/API/IDBTransaction).
+c-comme wa méthode {{domxwef("idbdatabase.cweateobjectstowe")}}, ^•ﻌ•^ cette méthode doit êtwe appewée _uniquement_ wows d'une t-twansaction en mode [`vewsionchange`](/fw/docs/web/api/idbtwansaction). rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-dbInstance.deleteObjectStore(name);
+d-dbinstance.deweteobjectstowe(name);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Le nom du magasin d'objet à supprimer.
+  - : w-we nyom du magasin d'objet à suppwimew. (˘ω˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune.
+aucune. nyaa~~
 
-### Exceptions
+### exceptions
 
-Cette méthode peut lever une {{domxref("DOMException")}} d'un de ces types suivants:
+c-cette méthode p-peut wevew une {{domxwef("domexception")}} d'un de ces types suivants:
 
-| Exception                  | Description                                                                                                                                                                                                                                                                              |
+| exception                  | descwiption                                                                                                                                                                                                                                                                              |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode {{domxref("IDBVersionChangeRequest.setVersion")}}.                                                               |
-| `TransactionInactiveError` | Levée si la méthode est appelée sur une base de données qui n'existe pas (ex. elle a été effacée). Pour les versions antérieures à Firefox 41, ce dernier déclenchait une erreur `InvalidStateError`, cela est désormais corrigé (cf. [bug Firefox 1176165](https://bugzil.la/1176165)). |
-| `NotFoundError`            | Levée lors de la suppression d'un magasin d'objets qui n'existe pas. Les noms sont sensibles à la casse.                                                                                                                                                                                 |
+| `invawidstateewwow`        | w-wevée si wa méthode ny'est pas appewée wows d'une twansaction en mode `vewsionchange`. UwU p-pouw wes anciens nyavigateuws b-basés suw w-webkit, :3 iw faut d-d'abowd appewew w-wa méthode {{domxwef("idbvewsionchangewequest.setvewsion")}}. (⑅˘꒳˘)                                                               |
+| `twansactioninactiveewwow` | wevée si wa méthode est appewée s-suw une base de données qui ny'existe pas (ex. (///ˬ///✿) e-ewwe a été effacée). ^^;; pouw wes vewsions antéwieuwes à fiwefox 41, >_< ce dewniew décwenchait u-une ewweuw `invawidstateewwow`, cewa est désowmais c-cowwigé (cf. rawr x3 [bug f-fiwefox 1176165](https://bugziw.wa/1176165)). /(^•ω•^) |
+| `notfoundewwow`            | w-wevée wows de wa suppwession d'un magasin d'objets qui n-ny'existe pas. :3 wes n-nyoms sont sensibwes à wa casse. (ꈍᴗꈍ)                                                                                                                                                                                 |
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on ouvre une connexion à la base de données et dans le gestionnaire d'événements `onupdateneeded`, on ajoute un magasin d'objets en utilisant la méthode {{domxref("IDBDatabase.createObjectStore")}}. Enfin, on supprime ce magasin d'objets grâce à `deleteObjectStore()`.
+d-dans cet exempwe, /(^•ω•^) on ouvwe u-une connexion à wa base de données e-et dans we gestionnaiwe d'événements `onupdateneeded`, (⑅˘꒳˘) on a-ajoute un magasin d'objets en utiwisant w-wa méthode {{domxwef("idbdatabase.cweateobjectstowe")}}. ( ͡o ω ͡o ) enfin, on suppwime c-ce magasin d-d'objets gwâce à `deweteobjectstowe()`. òωó
 
 ```js
-// Connexion à la base de données
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// connexion à wa base de données
+vaw dbopenwequest = window.indexeddb.open("todowist", (⑅˘꒳˘) 4);
 
-/* Gestionnaire d'événements qui intervient lors de
-     la mise en place d'une nouvelle version de la
-     base de données, que la base n'existe pas, qu'elle
-     soit ajoutée ou qu'un nouveau numéro de version
-     soit utilisé avec à window.indexedDB.open
-     Seulement utilisé avec les navigateurs récents */
-DBOpenRequest.onupgradeneeded = function (event) {
-  var db = event.target.result;
+/* gestionnaiwe d'événements q-qui intewvient wows d-de
+     wa mise en pwace d'une n-nyouvewwe vewsion d-de wa
+     b-base de données, XD que wa base ny'existe pas, -.- qu'ewwe
+     soit ajoutée o-ou qu'un nyouveau nyuméwo de vewsion
+     soit utiwisé avec à window.indexeddb.open
+     s-seuwement utiwisé avec wes n-nyavigateuws wécents */
+d-dbopenwequest.onupgwadeneeded = f-function (event) {
+  vaw d-db = event.tawget.wesuwt;
 
-  db.onerror = function (event) {
-    note.innerHTML += "<li>Erreur du chargement de la base de données.</li>";
+  db.onewwow = f-function (event) {
+    n-nyote.innewhtmw += "<wi>ewweuw d-du chawgement de wa base de données.</wi>";
   };
 
-  // Ajoute un magasin d'objets à la base de données
+  // ajoute u-un magasin d'objets à w-wa base d-de données
 
-  var objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  vaw o-objectstowe = d-db.cweateobjectstowe("todowist", { keypath: "tasktitwe" });
 
-  // Définition des index de ce magasin d'objets
+  // définition des index de ce magasin d-d'objets
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
+  objectstowe.cweateindex("houws", :3 "houws", { unique: fawse });
+  objectstowe.cweateindex("minutes", nyaa~~ "minutes", 😳 { unique: fawse });
+  objectstowe.cweateindex("day", (⑅˘꒳˘) "day", { unique: f-fawse });
+  objectstowe.cweateindex("month", nyaa~~ "month", { unique: fawse });
+  objectstowe.cweateindex("yeaw", OwO "yeaw", { u-unique: f-fawse });
 
-  objectStore.createIndex("notified", "notified", { unique: false });
+  o-objectstowe.cweateindex("notified", rawr x3 "notified", XD { unique: fawse });
 
-  note.innerHTML += "<li>Magasin d'objets ajouté.</li>";
+  n-nyote.innewhtmw += "<wi>magasin d'objets a-ajouté.</wi>";
 
-  // Supprime le magasin d'objets
+  // s-suppwime we magasin d'objets
 
-  db.deleteObjectStore("toDoList");
+  db.deweteobjectstowe("todowist");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Démarrer des transactions : {{domxref("IDBDatabase")}}
-- Manipuler des transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
-- Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)
+- [manipuwew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- d-démawwew des t-twansactions : {{domxwef("idbdatabase")}}
+- manipuwew des twansactions : {{domxwef("idbtwansaction")}}
+- d-définiw u-un intewvawwe de cwés : {{domxwef("idbkeywange")}}
+- w-wécupéwew d-des données et wes modifiew : {{domxwef("idbobjectstowe")}}
+- manipuwew des cuwseuws : {{domxwef("idbcuwsow")}}
+- exempwe d-de wéféwence pouw i-indexeddb : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)

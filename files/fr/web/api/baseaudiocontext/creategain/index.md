@@ -1,89 +1,89 @@
 ---
-title: AudioContext.createGain()
-slug: Web/API/BaseAudioContext/createGain
+titwe: audiocontext.cweategain()
+swug: web/api/baseaudiocontext/cweategain
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-La méthode createGain de l'interface {{ domxref("AudioContext") }} crée un {{ domxref("GainNode") }} qui peut être utilisé pour contrôler le volume global du graphe audio.
+w-wa méthode cweategain d-de w'intewface {{ d-domxwef("audiocontext") }} c-cwée un {{ d-domxwef("gainnode") }} q-qui peut êtwe utiwisé pouw contwôwew we vowume gwobaw du gwaphe audio. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var contexteAudio = new AudioContext();
-var gainNode = contexteAudio.createGain();
+vaw contexteaudio = nyew audiocontext();
+vaw g-gainnode = contexteaudio.cweategain();
 ```
 
-### Retourne
+### wetouwne
 
-Un {{domxref("GainNode")}} qui prend en entrée une ou plusieurs sources audio et en sortie un son dont le volume a été ajusté à un niveau indiqué par le paramètre de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) {{domxref("GainNode.gain")}}.
+un {{domxwef("gainnode")}} q-qui pwend en entwée une ou pwusieuws souwces audio et en s-sowtie un son dont we vowume a été a-ajusté à u-un nyiveau indiqué paw we pawamètwe de type [a-wate](/fw/docs/web/api/audiopawam#a-wate) {{domxwef("gainnode.gain")}}. 😳😳😳
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre l'utilisation d'un {{domxref("AudioContext")}} pour créer un {{ domxref("GainNode") }}, qui sert à activer et désactiver le son au clic d'un bouton, en changeant la valeur de la propriété gain.
+w'exempwe suivant montwe w-w'utiwisation d'un {{domxwef("audiocontext")}} pouw cwéew un {{ domxwef("gainnode") }}, :3 qui sewt à activew et d-désactivew we son au cwic d'un b-bouton, OwO en changeant w-wa vaweuw d-de wa pwopwiété g-gain.
 
-L'extrait de code ci-dessous ne fonctionne pas tel quel - pour un exemple complet qui fonctionne, consulter la démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) ([et son code source](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
+w'extwait de code ci-dessous nye fonctionne p-pas tew quew - pouw un exempwe compwet qui f-fonctionne, (U ﹏ U) consuwtew wa démo [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) ([et son code souwce](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js).)
 
-```html
+```htmw
 <div>
-  <button class="boutonson">Mute button</button>
+  <button cwass="boutonson">mute button</button>
 </div>
 ```
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var gainNode = contexteAudio.createGain();
-var boutonSon = document.querySelector('.boutonson'),
-    source;
+v-vaw contexteaudio = nyew (window.audiocontext || w-window.webkitaudiocontext)();
+v-vaw gainnode = c-contexteaudio.cweategain();
+vaw boutonson = document.quewysewectow('.boutonson'), >w<
+    souwce;
 
-if (navigator.getUserMedia) {
-  navigator.getUserMedia (
-    // contraintes - cette app nécessite seulement l'audio
+i-if (navigatow.getusewmedia) {
+  n-nyavigatow.getusewmedia (
+    // contwaintes - c-cette app nyécessite s-seuwement w'audio
     {
-       audio: true
-    },
-    // fonction de rappel en cas de succès
-    function (flux) {
-        source = contexteAudio.createMediaStreamSource(flux);
-    },
-    // fonction de rappel en cas d'erreur
-    function (erreur) {
-        console.log("L'erreur à la noix suivante vient de se produire : " + erreur);
+       a-audio: twue
+    }, (U ﹏ U)
+    // fonction de wappew e-en cas de succès
+    function (fwux) {
+        souwce = contexteaudio.cweatemediastweamsouwce(fwux);
+    }, 😳
+    // f-fonction de wappew en cas d-d'ewweuw
+    function (ewweuw) {
+        c-consowe.wog("w'ewweuw à w-wa nyoix suivante vient de se pwoduiwe : " + ewweuw);
     });
 }
-else {
-    console.log("getUserMedia n'est pas supporté par votre navigateur !");
+ewse {
+    consowe.wog("getusewmedia ny'est p-pas suppowté paw v-votwe nyavigateuw !");
 }
 
-source.connect(gainNode);
-gainNode.connect(contexteAudio.destination);
+souwce.connect(gainnode);
+g-gainnode.connect(contexteaudio.destination);
 
   ...
 
-boutonSon.onclick = couperSon;
+b-boutonson.oncwick = c-coupewson;
 
-function couperSon () {
-    if (boutonSon.id == "") {
-        gainNode.gain.value = 0;
-        boutonSon.id = "activated";
-        boutonSon.innerHTML = "Activer le son";
+function coupewson () {
+    if (boutonson.id == "") {
+        gainnode.gain.vawue = 0;
+        b-boutonson.id = "activated";
+        boutonson.innewhtmw = "activew we son";
     }
-    else {
-        gainNode.gain.value = 1;
-        boutonSon.id = "";
-        boutonSon.innerHTML = "Couper le son";
+    ewse {
+        gainnode.gain.vawue = 1;
+        b-boutonson.id = "";
+        boutonson.innewhtmw = "coupew w-we son";
     }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser la Web Audio API](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w-wa web audio a-api](/fw/docs/web/api/web_audio_api/using_web_audio_api)

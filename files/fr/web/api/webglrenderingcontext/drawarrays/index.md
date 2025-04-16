@@ -1,67 +1,67 @@
 ---
-title: WebGLRenderingContext.drawArrays()
-slug: Web/API/WebGLRenderingContext/drawArrays
+titwe: webgwwendewingcontext.dwawawways()
+swug: w-web/api/webgwwendewingcontext/dwawawways
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) dessine des primitives à partir de données tabulaires.
+w-wa méthode **`webgwwendewingcontext.dwawawways()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) d-dessine d-des pwimitives à p-pawtiw de données t-tabuwaiwes. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gl.drawArrays(mode, premier, compte);
+void gw.dwawawways(mode, 😳😳😳 pwemiew, 😳😳😳 compte);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `mode`
 
-  - : Un {{domxref ("GLenum")}} indiquant la primitive de type à dessiner. Les valeurs possibles sont :
+  - : un {{domxwef ("gwenum")}} indiquant wa pwimitive d-de type à dessinew. o.O wes vaweuws p-possibwes sont :
 
-    - `gl.POINTS`&nbsp;: dessine un seul point ;
-    - `gl.LINE_STRIP`&nbsp;: dessine une ligne droite jusqu'au sommet suivant ;
-    - `gl.LINE_LOOP`&nbsp;: dessine une ligne droite jusqu'au sommet suivant, et relie le dernier sommet au premier ;
-    - `gl.LINES`&nbsp;: dessine une ligne entre une paire de sommets ;
-    - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
-    - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
-    - `gl.TRIANGLES`&nbsp;: dessine un triangle pour un groupe de trois sommets.
+    - `gw.points`&nbsp;: dessine un seuw point ;
+    - `gw.wine_stwip`&nbsp;: d-dessine une wigne dwoite j-jusqu'au sommet s-suivant ;
+    - `gw.wine_woop`&nbsp;: dessine une wigne dwoite jusqu'au sommet suivant, ( ͡o ω ͡o ) et wewie w-we dewniew sommet au pwemiew ;
+    - `gw.wines`&nbsp;: dessine une wigne entwe une paiwe de sommets ;
+    - [`gw.twiangwe_stwip`](https://en.wikipedia.owg/wiki/twiangwe_stwip)
+    - [`gw.twiangwe_fan`](https://en.wikipedia.owg/wiki/twiangwe_fan)
+    - `gw.twiangwes`&nbsp;: d-dessine un twiangwe pouw un gwoupe d-de twois sommets. (U ﹏ U)
 
-- `premier`
-  - : Un {{domxref("GLint")}} indiquant de l'indice de départ dans le tableau des points des vecteurs.
+- `pwemiew`
+  - : u-un {{domxwef("gwint")}} i-indiquant de w-w'indice de dépawt dans we tabweau des points des v-vecteuws. (///ˬ///✿)
 - `compte`
-  - : Un {{domxref("GLsizei")}} indiquant le nombre d'indices à dessiner.
+  - : un {{domxwef("gwsizei")}} indiquant w-we nyombwe d'indices à dessinew.
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+nyone. >w<
 
-### Exceptions
+### exceptions
 
-- Si `mode` n'est pas l'une des valeurs acceptables, une erreur `gl.INVALID_ENUM` est déclenchée.
-- Si `premier` ou `compte` sont négatifs, une erreur `gl.INVALID_VALUE` est déclenchée.
-- Si `gl.CURRENT_PROGRAM` est {{jsxref("null")}}, une erreur `gl.INVALID_OPERATION` est déclenchée.
+- si `mode` n-ny'est pas w'une des vaweuws acceptabwes, rawr u-une ewweuw `gw.invawid_enum` e-est décwenchée. mya
+- s-si `pwemiew` ou `compte` sont nyégatifs, ^^ une ewweuw `gw.invawid_vawue` e-est décwenchée. 😳😳😳
+- s-si `gw.cuwwent_pwogwam` est {{jsxwef("nuww")}}, mya une ewweuw `gw.invawid_opewation` e-est décwenchée. 😳
 
-## Exemples
+## exempwes
 
 ```js
-gl.drawArrays(gl.POINTS, 0, 8);
+gw.dwawawways(gw.points, -.- 0, 8);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebGLRenderingContext.drawElements()")}}
-- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
-- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
-- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
-- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
+- {{domxwef("webgwwendewingcontext.dwawewements()")}}
+- {{domxwef("angwe_instanced_awways.dwawawwaysinstancedangwe()", "ext.dwawawwaysinstancedangwe()")}}
+- {{domxwef("angwe_instanced_awways.dwawewementsinstancedangwe()", 🥺 "ext.dwawewementsinstancedangwe()")}}
+- {{domxwef("angwe_instanced_awways.vewtexattwibdivisowangwe()", o.O "ext.vewtexattwibdivisowangwe()")}}
+- {{domxwef("webgw2wendewingcontext.dwawawwaysinstanced()")}}
+- {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()")}}
+- {{domxwef("webgw2wendewingcontext.vewtexattwibdivisow()")}}

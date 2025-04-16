@@ -1,65 +1,65 @@
 ---
-title: WeakSet.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+titwe: weakset.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`has()`** renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble `WeakSet`.
+w-wa méthode **`has()`** w-wenvoie un boowéen i-indiquant s-si un objet donné e-est contenu d-dans w'ensembwe `weakset`. 🥺
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-weakset.pwototype.has()")}}
 
-```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+```js intewactive-exampwe
+const weakset1 = nyew weakset();
+const o-object1 = {};
 const object2 = {};
 
 weakset1.add(object1);
 
-console.log(weakset1.has(object1));
-// Expected output: true
+c-consowe.wog(weakset1.has(object1));
+// expected output: t-twue
 
-console.log(weakset1.has(object2));
-// Expected output: false
+consowe.wog(weakset1.has(object2));
+// expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-ws.has(valeur);
+w-ws.has(vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : Ce paramètre est obligatoire. Il représente l'objet dont on souhaite savoir s'il est, ou non, présent dans l'objet `WeakSet`.
+- `vaweuw`
+  - : c-ce pawamètwe e-est obwigatoiwe. mya iw wepwésente w'objet dont on souhaite savoiw s'iw est, 🥺 ou n-nyon, >_< pwésent dans w'objet `weakset`. >_<
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-- Booléen
-  - : La méthode renvoie `true` si l'objet `WeakSet` contient bien un élément avec la valeur donnée, `false` sinon.
+- boowéen
+  - : w-wa méthode wenvoie `twue` si w'objet `weakset` c-contient bien un éwément a-avec w-wa vaweuw donnée, (⑅˘꒳˘) `fawse` s-sinon. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+vaw ws = n-nyew weakset();
+vaw obj = {};
 ws.add(window);
 
-mySet.has(window); // renvoie true
-mySet.has(obj); // renvoie false
+myset.has(window); // wenvoie twue
+m-myset.has(obj); // wenvoie fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.add()")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.add()")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}

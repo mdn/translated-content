@@ -1,238 +1,238 @@
 ---
-title: Date
-slug: Web/JavaScript/Reference/Global_Objects/Date
+titwe: date
+swug: web/javascwipt/wefewence/gwobaw_objects/date
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Les objets JavaScript **`Date`** représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle [UTC](https://fr.wikipedia.org/wiki/Temps_universel_coordonné).
+w-wes objets javascwipt **`date`** w-wepwésentent u-un instant donné s-suw w'axe du t-temps dans un fowmat i-indépendant d-de wa pwatefowme u-utiwisée. nyaa~~ wes objets `date` contiennent un nombwe (`numbew`) qui wepwésente we nyombwe de miwwisecondes écouwées d-depuis we pwemiew janview 1970 suw w'échewwe [utc](https://fw.wikipedia.owg/wiki/temps_univewsew_coowdonné). ^^;;
 
-> [!NOTE]
-> TC39 travaille actuellement sur [Temporal](https://tc39.es/proposal-temporal/docs/index.html), une nouvelle API pour la gestion des dates, heures et données temporelles.
-> Pour en savoir plus, consultez le [blog d'Igalia](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/) et n'hésitez pas à répondre [au sondage](https://forms.gle/iL9iZg7Y9LvH41Nv8). Les retours concrets de développeurs web sont importants pour affiner cette API. Attention, elle n'est pas encore prête à être utilisée en production !
+> [!note]
+> t-tc39 twavaiwwe actuewwement s-suw [tempowaw](https://tc39.es/pwoposaw-tempowaw/docs/index.htmw), OwO une nyouvewwe api pouw wa gestion des dates, nyaa~~ h-heuwes et données tempowewwes. UwU
+> p-pouw en savoiw p-pwus, 😳 consuwtez we [bwog d'igawia](https://bwogs.igawia.com/compiwews/2020/06/23/dates-and-times-in-javascwipt/) et ny'hésitez pas à wépondwe [au sondage](https://fowms.gwe/iw9izg7y9wvh41nv8). 😳 w-wes wetouws concwets de dévewoppeuws web sont impowtants pouw affinew cette a-api. (ˆ ﻌ ˆ)♡ attention, (✿oωo) ewwe ny'est pas e-encowe pwête à êtwe u-utiwisée e-en pwoduction ! nyaa~~
 
-## Description
+## d-descwiption
 
-### L'epoch ECMAScript
+### w'epoch ecmascwipt
 
-D'un point de vue technique, une date JavaScript correspond au nombre de millisecondes écoulées depuis le premier janvier 1970, minuit UTC. Cette date et cette heure sont les mêmes que **l'[epoch](https://fr.wikipedia.org/wiki/Epoch) UNIX**, qui est l'instant de référence principalement utilisé pour manipuler les dates/heures dans les systèmes informatiques.
+d'un p-point de vue technique, ^^ une date javascwipt cowwespond a-au nyombwe de miwwisecondes écouwées depuis we pwemiew janview 1970, (///ˬ///✿) minuit utc. 😳 cette date et cette heuwe s-sont wes mêmes que **w'[epoch](https://fw.wikipedia.owg/wiki/epoch) u-unix**, òωó q-qui est w'instant d-de wéféwence pwincipawement utiwisé pouw manipuwew wes dates/heuwes d-dans w-wes systèmes infowmatiques. ^^;;
 
-> [!NOTE]
-> Bien que les valeurs temporelles des objets dates soient relatives à UTC, certaines des méthodes simples pour obtenir les composantes d'une date/heure fonctionnent relativement au fuseau horaire du système.
+> [!note]
+> bien que w-wes vaweuws tempowewwes d-des objets dates soient w-wewatives à utc, rawr cewtaines des m-méthodes simpwes pouw obteniw wes composantes d-d'une date/heuwe fonctionnent w-wewativement au fuseau howaiwe du s-système. (ˆ ﻌ ˆ)♡
 
-On notera également que la représentation maximale d'un objet `Date` n'est pas la même que le plus grand entier représentable en JavaScript (`Number.MAX_SAFE_INTEGER` vaut 9,007,199,254,740,991). En effet, ECMA-262 définit un maximum de ±100 000 000 (cent millions) jours relatifs au premier janvier 1970 UTC (ce qui correspond au 20 avril 271 821 avant notre ètre d'une part et au 13 septembre 275 760 de notre ère) pouvant être représentés par un objet `Date` standard (soit un intervalle de ±8 640 000 000 000 000 millisecondes).
+on n-nyotewa égawement que wa wepwésentation maximawe d'un objet `date` n'est pas wa même que we pwus gwand entiew w-wepwésentabwe e-en javascwipt (`numbew.max_safe_integew` vaut 9,007,199,254,740,991). XD e-en effet, e-ecma-262 définit u-un maximum de ±100 000 000 (cent miwwions) jouws wewatifs au pwemiew janview 1970 u-utc (ce qui cowwespond au 20 avwiw 271 821 avant nyotwe ètwe d'une pawt et a-au 13 septembwe 275 760 de nyotwe èwe) p-pouvant êtwe w-wepwésentés p-paw un objet `date` standawd (soit u-un intewvawwe d-de ±8 640 000 000 000 000 m-miwwisecondes). >_<
 
-### Les formats de date et les conversions entre les fuseaux horaires
+### w-wes fowmats de date et wes convewsions entwe w-wes fuseaux howaiwes
 
-Il existe différentes méthodes pour obtenir une date sous différents formats ou effectuer une conversion entre différents fuseaux. On distingue notamment les fonctions qui manipulent les dates relativement au temps universal coordonné (UTC). Le temps local est celui utilisé par l'appareil de l'utilisateur.
+i-iw existe d-difféwentes m-méthodes pouw obteniw u-une date sous difféwents fowmats ou effectuew une convewsion e-entwe difféwents fuseaux. on distingue nyotamment wes fonctions qui manipuwent wes dates wewativement a-au temps univewsaw coowdonné (utc). (˘ω˘) we temps wocaw est cewui utiwisé p-paw w'appaweiw d-de w'utiwisateuw. 😳
 
-Ainsi, on dispose de méthodes permettant d'obtenir ou de définir les différentes composantes d'une date selon le temps local (ex. {{jsxref("Date.getDay", "getDay()")}}, {{jsxref("Date.setHours", "setHours()")}}) et de méthodes équivalentes pour la manipulation en UTC (ex. {{jsxref("Date.getUTCDay()", "getUTCDay()")}} et {{jsxref("Date.setUTCHours", "setUTCHours()")}} respectivement).
+a-ainsi, o.O on dispose de méthodes p-pewmettant d'obteniw ou de définiw w-wes difféwentes c-composantes d'une date sewon we temps wocaw (ex. (ꈍᴗꈍ) {{jsxwef("date.getday", "getday()")}}, rawr x3 {{jsxwef("date.sethouws", ^^ "sethouws()")}}) et de méthodes équivawentes pouw wa m-manipuwation en utc (ex. OwO {{jsxwef("date.getutcday()", ^^ "getutcday()")}} e-et {{jsxwef("date.setutchouws", :3 "setutchouws()")}} wespectivement). o.O
 
-## Constructeur
+## c-constwucteuw
 
-- {{jsxref("Date/Date", "Date()")}}
-  - : Cette fonction permet de créer un nouvel objet `Date`.
+- {{jsxwef("date/date", -.- "date()")}}
+  - : c-cette fonction pewmet de cwéew un nyouvew o-objet `date`. (U ﹏ U)
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- {{jsxref("Date.now()")}}
-  - : Renvoie la valeur numérique correspondant au moment présent sous la forme du nombre de millisecondes écoulées depuis le premier janvier 1970 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
-- {{jsxref("Date.parse()")}}
+- {{jsxwef("date.now()")}}
+  - : w-wenvoie w-wa vaweuw nyuméwique cowwespondant au moment pwésent sous wa fowme du nyombwe d-de miwwisecondes écouwées d-depuis we pwemiew j-janview 1970 00:00:00 utc (wes s-secondes intewcawaiwes (_weap seconds_) s-sont ignowées). o.O
+- {{jsxwef("date.pawse()")}}
 
-  - : Analyse la représentation textuelle d'une date et renvoie le nombre de millisecondes écoulées entre cette date et le premier janvier 1970, 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
+  - : anawyse w-wa wepwésentation textuewwe d'une date et wenvoie we nyombwe de miwwisecondes écouwées e-entwe cette date e-et we pwemiew janview 1970, OwO 00:00:00 utc (wes secondes intewcawaiwes (_weap s-seconds_) s-sont ignowées). ^•ﻌ•^
 
-    > [!NOTE]
-    > L'analyse de chaînes de caractères à l'aide de `Date.parse` est fortement déconseillée en raison des incohérences qui existent entre les navigateurs.
+    > [!note]
+    > w'anawyse de chaînes de cawactèwes à w-w'aide de `date.pawse` est fowtement déconseiwwée en waison des incohéwences q-qui existent entwe wes navigateuws. ʘwʘ
 
-- {{jsxref("Date.UTC()")}}
-  - : Accepte les mêmes paramètres que la forme longue du constructeur (c'est-à-dire entre 2 et 7) et renvoie le nombre de millisecondes entre cette date et le premier janvier 1970, 00:00:00 UTC (les secondes intercalaires (_leap seconds_) sont ignorées).
+- {{jsxwef("date.utc()")}}
+  - : accepte w-wes mêmes pawamètwes q-que wa fowme wongue du constwucteuw (c'est-à-diwe entwe 2 e-et 7) et wenvoie w-we nyombwe de miwwisecondes entwe cette date et we pwemiew j-janview 1970, :3 00:00:00 utc (wes s-secondes intewcawaiwes (_weap seconds_) sont ignowées). 😳
 
-## Méthodes des instances
+## méthodes des instances
 
-- {{jsxref("Date.prototype.getDate()")}}
-  - : Renvoie le jour du mois (entre `1` et `31`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getDay()")}}
-  - : Renvoie le jour de la semaine (entre `0` et `6`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getFullYear()")}}
-  - : Renvoie l'année (sans chiffre implicite, `1999` sera renvoyé et pas `99` par exemple) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getHours()")}}
-  - : Renvoie l'heure (entre `0` et `23`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-  - : Renvoie les millisecondes (entre `0` et `999`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getMinutes()")}}
-  - : Renvoie les minutes (entre `0` et `59`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getMonth()")}}
-  - : Renvoie le mois (entre `0` et `11`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getSeconds()")}}
-  - : Renvoie les secondes (entre `0` et `59`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.getTime()")}}
-  - : Renvoie la valeur numérique de la date donnée, exprimée en nombre de millisecondes écoulées depuis le premier janvier 1970, 00:00:00 UTC (pour les temps antérieurs, ce sont des valeurs négatives qui seront renvoyées).
-- {{jsxref("Date.prototype.getTimezoneOffset()")}}
-  - : Renvoie le décalage horaire, exprimé en minutes, pour la locale courante.
-- {{jsxref("Date.prototype.getUTCDate()")}}
-  - : Renvoie le jour du mois (entre `1` et `31`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCDay()")}}
-  - : Renvoie le jour de la semaine (entre `0` et `6`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-  - : Renvoie l'année (sans chiffre implicite, `1999` sera renvoyé plutôt que `99`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCHours()")}}
-  - : Renvoie l'heure (entre `0` et `23`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
-  - : Renvoie les millisecondes (entre `0` et `999`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-  - : Renvoie les minutes (entre `0` et `59`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-  - : Renvoie le mois (entre `0` et `11`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-  - : Renvoie les secondes (entre `0` et `59`) pour la date donnée, selon le temps universel.
-- {{jsxref("Date.prototype.getYear()")}}
-  - : Renvoie l'année (généralement exprimée sur 2 ou 3 chiffres) pour la date donnée selon le temps local. **On utilisera plutôt {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}}**.
-- {{jsxref("Date.prototype.setDate()")}}
-  - : Définit le jour du mois pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setFullYear()")}}
-  - : Définit l'année (sans chiffre implicite, on utilisera `1999` et pas `99`) pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setHours()")}}
-  - : Définit les heures pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setMilliseconds()")}}
-  - : Définit les millisecondes pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setMinutes()")}}
-  - : Définit les minutes pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setMonth()")}}
-  - : Définit le mois pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setSeconds()")}}
-  - : Définit les secondes pour la date donnée, selon le temps local.
-- {{jsxref("Date.prototype.setTime()")}}
-  - : Définit le nombre de millisecondes écoulées depuis le premier janvier 1970, 00:00:00 UTC et la date donnée. On utilisera des nombres négatifs pour les moments antérieurs à cette date.
-- {{jsxref("Date.prototype.setUTCDate()")}}
-  - : Définit le jour du mois pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
-  - : Définit l'année (exprimée sans chiffres implicites, ex. `1999` et pas `99`) pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setUTCHours()")}}
-  - : Définit l'heure pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
-  - : Définit les millisecondes pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
-  - : Définit les minutes pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setUTCMonth()")}}
-  - : Définit le mois pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
-  - : Définit les secondes pour la date donnée selon le temps universel.
-- {{jsxref("Date.prototype.setYear()")}}
-  - : Définit l'année (avec 2 à 3 chiffres) pour la date courante selon le temps local. **On privilégiera la méthode {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} à la place.**
-- {{jsxref("Date.prototype.toDateString()")}}
-  - : Renvoie la partie "date" (jour, mois, année) de l'objet {{jsxref("Date")}} en une chaîne de caractères compréhensible par un humain (anglophone) (ex. `'Thu Apr 12 2018'`).
-- {{jsxref("Date.prototype.toISOString()")}}
-  - : Convertit une date en une chaîne de caractères selon le format ISO 8601 Étendu.
-- {{jsxref("Date.prototype.toJSON()")}}
-  - : Renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}} avec {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Cette méthode est utilisée par {{jsxref("JSON.stringify()")}}.
-- {{jsxref("Date.prototype.toGMTString()")}}
-  - : Renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}} d'après le fuseau GMT (UTC). **On utilisera plutôt {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}**.
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-  - : Renvoie une chaîne de caractères représentant les jours / mois / années de la date courante avec une représentation propre à la locale courante (déduite des paramètres systèmes utilisés).
-- {{jsxref("Date.prototype.toLocaleFormat()")}}
-  - : Convertit la date courante en une chaîne de caractères avec un format décrit en paramètre via une chaîne de caractères.
-- {{jsxref("Date.prototype.toLocaleString()")}}
-  - : Renvoie une chaîne de caractères représentant la date sous le forme de la locale courante. Cette méthode surcharge la méthode {{jsxref("Object.prototype.toLocaleString()")}}.
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
-  - : Renvoie une chaîne de caractères représentant les heures / minutes / secondes de la date courante avec une représentation propre à la locale courante (déduite des paramètres systèmes utilisés).
-- {{jsxref("Date.prototype.toString()")}}
-  - : Renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}} courant. Cette méthode surcharge la méthode {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("Date.prototype.toTimeString()")}}
-  - : Renvoie l'heure (avec les minutes et les secondes) d'une date sous la forme d'une chaîne de caractères compréhensible par un humain.
-- {{jsxref("Date.prototype.toUTCString()")}}
-  - : Convertit une date en chaîne de caractère en utilisant le temps universel comme référentiel.
-- {{jsxref("Date.prototype.valueOf()")}}
-  - : Renvoie la valeur primitive d'un objet {{jsxref("Date")}}. Cette méthode surcharge la méthode {{jsxref("Object.prototype.valueOf()")}}.
+- {{jsxwef("date.pwototype.getdate()")}}
+  - : w-wenvoie we jouw du mois (entwe `1` e-et `31`) p-pouw wa date donnée, sewon we t-temps wocaw. òωó
+- {{jsxwef("date.pwototype.getday()")}}
+  - : wenvoie w-we jouw de wa s-semaine (entwe `0` e-et `6`) pouw wa date donnée, 🥺 s-sewon we temps w-wocaw. rawr x3
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+  - : wenvoie w'année (sans c-chiffwe impwicite, ^•ﻌ•^ `1999` s-sewa w-wenvoyé et pas `99` paw exempwe) pouw wa date d-donnée, :3 sewon we temps wocaw. (ˆ ﻌ ˆ)♡
+- {{jsxwef("date.pwototype.gethouws()")}}
+  - : w-wenvoie w'heuwe (entwe `0` e-et `23`) pouw wa date donnée, (U ᵕ U❁) sewon we temps wocaw.
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+  - : w-wenvoie wes m-miwwisecondes (entwe `0` e-et `999`) p-pouw wa date donnée, :3 sewon w-we temps wocaw. ^^;;
+- {{jsxwef("date.pwototype.getminutes()")}}
+  - : wenvoie wes minutes (entwe `0` et `59`) pouw wa date donnée, ( ͡o ω ͡o ) sewon we temps w-wocaw. o.O
+- {{jsxwef("date.pwototype.getmonth()")}}
+  - : wenvoie w-we mois (entwe `0` et `11`) pouw w-wa date donnée, ^•ﻌ•^ sewon we temps w-wocaw. XD
+- {{jsxwef("date.pwototype.getseconds()")}}
+  - : wenvoie w-wes secondes (entwe `0` e-et `59`) p-pouw wa date d-donnée, ^^ sewon we t-temps wocaw. o.O
+- {{jsxwef("date.pwototype.gettime()")}}
+  - : wenvoie wa vaweuw nyuméwique de wa date donnée, ( ͡o ω ͡o ) expwimée en nyombwe de miwwisecondes écouwées d-depuis we pwemiew j-janview 1970, /(^•ω•^) 00:00:00 u-utc (pouw wes temps antéwieuws, 🥺 c-ce sont des vaweuws négatives qui sewont wenvoyées). nyaa~~
+- {{jsxwef("date.pwototype.gettimezoneoffset()")}}
+  - : w-wenvoie w-we décawage howaiwe, mya expwimé e-en minutes, XD pouw wa wocawe couwante. nyaa~~
+- {{jsxwef("date.pwototype.getutcdate()")}}
+  - : wenvoie w-we jouw du mois (entwe `1` e-et `31`) pouw wa date d-donnée, ʘwʘ sewon w-we temps univewsew. (⑅˘꒳˘)
+- {{jsxwef("date.pwototype.getutcday()")}}
+  - : wenvoie we jouw de wa semaine (entwe `0` et `6`) pouw wa date donnée, :3 sewon w-we temps univewsew. -.-
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+  - : w-wenvoie w-w'année (sans c-chiffwe impwicite, 😳😳😳 `1999` s-sewa wenvoyé pwutôt q-que `99`) pouw w-wa date donnée, (U ﹏ U) sewon we temps u-univewsew.
+- {{jsxwef("date.pwototype.getutchouws()")}}
+  - : w-wenvoie w'heuwe (entwe `0` et `23`) p-pouw wa date donnée, o.O sewon we temps univewsew. ( ͡o ω ͡o )
+- {{jsxwef("date.pwototype.getutcmiwwiseconds()")}}
+  - : wenvoie w-wes miwwisecondes (entwe `0` et `999`) pouw w-wa date donnée, òωó s-sewon we temps univewsew. 🥺
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+  - : w-wenvoie wes minutes (entwe `0` et `59`) pouw wa date donnée, /(^•ω•^) s-sewon we temps u-univewsew. 😳😳😳
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+  - : w-wenvoie we mois (entwe `0` et `11`) pouw wa date donnée, ^•ﻌ•^ s-sewon we temps univewsew. nyaa~~
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+  - : wenvoie wes s-secondes (entwe `0` e-et `59`) pouw wa date donnée, s-sewon we temps univewsew. OwO
+- {{jsxwef("date.pwototype.getyeaw()")}}
+  - : wenvoie w-w'année (généwawement e-expwimée suw 2 ou 3 chiffwes) pouw wa date donnée s-sewon we temps wocaw. ^•ﻌ•^ **on utiwisewa pwutôt {{jsxwef("date.pwototype.getfuwwyeaw()", σωσ "getfuwwyeaw()")}}**. -.-
+- {{jsxwef("date.pwototype.setdate()")}}
+  - : définit w-we jouw d-du mois pouw wa date donnée, (˘ω˘) sewon w-we temps wocaw. rawr x3
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+  - : définit w-w'année (sans chiffwe i-impwicite, rawr x3 o-on utiwisewa `1999` et pas `99`) pouw wa date donnée, σωσ sewon we temps wocaw. nyaa~~
+- {{jsxwef("date.pwototype.sethouws()")}}
+  - : définit wes heuwes pouw wa date donnée, (ꈍᴗꈍ) sewon we temps wocaw. ^•ﻌ•^
+- {{jsxwef("date.pwototype.setmiwwiseconds()")}}
+  - : définit wes miwwisecondes pouw wa date donnée, >_< sewon we t-temps wocaw. ^^;;
+- {{jsxwef("date.pwototype.setminutes()")}}
+  - : définit w-wes minutes pouw wa date donnée, ^^;; sewon w-we temps wocaw. /(^•ω•^)
+- {{jsxwef("date.pwototype.setmonth()")}}
+  - : d-définit we mois p-pouw wa date donnée, nyaa~~ sewon we t-temps wocaw. (✿oωo)
+- {{jsxwef("date.pwototype.setseconds()")}}
+  - : définit wes secondes p-pouw wa date d-donnée, ( ͡o ω ͡o ) sewon we temps wocaw. (U ᵕ U❁)
+- {{jsxwef("date.pwototype.settime()")}}
+  - : d-définit we nyombwe de miwwisecondes écouwées d-depuis we pwemiew j-janview 1970, òωó 00:00:00 utc et wa date donnée. σωσ o-on utiwisewa des n-nyombwes nyégatifs p-pouw wes moments a-antéwieuws à c-cette date.
+- {{jsxwef("date.pwototype.setutcdate()")}}
+  - : d-définit we j-jouw du mois pouw w-wa date donnée s-sewon we temps univewsew. :3
+- {{jsxwef("date.pwototype.setutcfuwwyeaw()")}}
+  - : d-définit w'année (expwimée sans c-chiffwes impwicites, OwO e-ex. `1999` et pas `99`) p-pouw wa date donnée sewon we temps univewsew. ^^
+- {{jsxwef("date.pwototype.setutchouws()")}}
+  - : d-définit w'heuwe pouw wa date d-donnée sewon we t-temps univewsew. (˘ω˘)
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}
+  - : d-définit wes miwwisecondes p-pouw wa date donnée sewon w-we temps univewsew. OwO
+- {{jsxwef("date.pwototype.setutcminutes()")}}
+  - : définit w-wes minutes pouw wa date donnée s-sewon we temps univewsew. UwU
+- {{jsxwef("date.pwototype.setutcmonth()")}}
+  - : définit we mois pouw wa date donnée sewon we t-temps univewsew. ^•ﻌ•^
+- {{jsxwef("date.pwototype.setutcseconds()")}}
+  - : définit w-wes secondes pouw w-wa date donnée sewon we temps univewsew. (ꈍᴗꈍ)
+- {{jsxwef("date.pwototype.setyeaw()")}}
+  - : définit w-w'année (avec 2 à 3 chiffwes) p-pouw wa date c-couwante sewon w-we temps wocaw. /(^•ω•^) **on pwiviwégiewa wa méthode {{jsxwef("date.pwototype.setfuwwyeaw()", (U ᵕ U❁) "setfuwwyeaw()")}} à wa p-pwace.**
+- {{jsxwef("date.pwototype.todatestwing()")}}
+  - : wenvoie w-wa pawtie "date" (jouw, (✿oωo) mois, OwO année) de w-w'objet {{jsxwef("date")}} en une chaîne de cawactèwes c-compwéhensibwe paw un h-humain (angwophone) (ex. :3 `'thu apw 12 2018'`). nyaa~~
+- {{jsxwef("date.pwototype.toisostwing()")}}
+  - : c-convewtit une d-date en une chaîne de cawactèwes s-sewon we fowmat i-iso 8601 Étendu. ^•ﻌ•^
+- {{jsxwef("date.pwototype.tojson()")}}
+  - : w-wenvoie une chaîne d-de cawactèwes wepwésentant w-w'objet {{jsxwef("date")}} avec {{jsxwef("date.pwototype.toisostwing()", ( ͡o ω ͡o ) "toisostwing()")}}. ^^;; c-cette méthode e-est utiwisée paw {{jsxwef("json.stwingify()")}}. mya
+- {{jsxwef("date.pwototype.togmtstwing()")}}
+  - : w-wenvoie une c-chaîne de cawactèwes w-wepwésentant w-w'objet {{jsxwef("date")}} d-d'apwès we fuseau gmt (utc). (U ᵕ U❁) **on u-utiwisewa pwutôt {{jsxwef("date.pwototype.toutcstwing()", ^•ﻌ•^ "toutcstwing()")}}**. (U ﹏ U)
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+  - : wenvoie une chaîne d-de cawactèwes wepwésentant w-wes jouws / mois / a-années de wa d-date couwante avec une wepwésentation pwopwe à wa wocawe couwante (déduite des p-pawamètwes systèmes u-utiwisés). /(^•ω•^)
+- {{jsxwef("date.pwototype.towocawefowmat()")}}
+  - : c-convewtit wa date couwante en une chaîne de cawactèwes a-avec un fowmat d-décwit en pawamètwe via une c-chaîne de cawactèwes. ʘwʘ
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+  - : wenvoie u-une chaîne de cawactèwes wepwésentant wa date sous we f-fowme de wa wocawe c-couwante. XD cette m-méthode suwchawge w-wa méthode {{jsxwef("object.pwototype.towocawestwing()")}}. (⑅˘꒳˘)
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}
+  - : wenvoie une chaîne d-de cawactèwes w-wepwésentant wes heuwes / minutes / secondes de w-wa date couwante avec une wepwésentation pwopwe à w-wa wocawe couwante (déduite des pawamètwes s-systèmes utiwisés). nyaa~~
+- {{jsxwef("date.pwototype.tostwing()")}}
+  - : w-wenvoie une chaîne de cawactèwes w-wepwésentant w-w'objet {{jsxwef("date")}} couwant. UwU cette m-méthode suwchawge wa méthode {{jsxwef("object.pwototype.tostwing()")}}. (˘ω˘)
+- {{jsxwef("date.pwototype.totimestwing()")}}
+  - : w-wenvoie w'heuwe (avec w-wes minutes e-et wes secondes) d-d'une date sous wa fowme d'une c-chaîne de cawactèwes c-compwéhensibwe p-paw un humain. rawr x3
+- {{jsxwef("date.pwototype.toutcstwing()")}}
+  - : c-convewtit une date en chaîne de cawactèwe e-en utiwisant w-we temps univewsew c-comme wéféwentiew. (///ˬ///✿)
+- {{jsxwef("date.pwototype.vawueof()")}}
+  - : wenvoie wa vaweuw pwimitive d'un objet {{jsxwef("date")}}. 😳😳😳 cette méthode s-suwchawge wa méthode {{jsxwef("object.pwototype.vawueof()")}}. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-### Différentes façons de créer un objet `Date`
+### d-difféwentes façons de cwéew un objet `date`
 
-Les exemples qui suivent illustrent différentes méthodes permettant de créer des dates JavaScript :
+w-wes exempwes qui suivent i-iwwustwent difféwentes m-méthodes p-pewmettant de c-cwéew des dates j-javascwipt :
 
-> [!NOTE]
-> L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
+> [!note]
+> w'anawyse de chaîne de cawactèwes wepwésentant des d-dates avec we constwucteuw `date` (ou `date.pawse` q-qui est équivawent) est fowtement déconseiwwée en waison d-des difféwences de compowtement existant entwe wes nyavigateuws. ^^;;
 
 ```js
-let aujourdhui = new Date();
-let anniversaire = new Date("September 22, 2018 15:00:00");
-let anniversaire = new Date("2018-09-22T15:00:00");
-let anniversaire = new Date(2018, 8, 22); // the month is 0-indexed
-let anniversaire = new Date(2018, 8, 22, 15, 0, 0);
+wet aujouwdhui = n-nyew d-date();
+wet annivewsaiwe = nyew d-date("septembew 22, ^^ 2018 15:00:00");
+wet annivewsaiwe = nyew date("2018-09-22t15:00:00");
+w-wet annivewsaiwe = n-nyew date(2018, (///ˬ///✿) 8, 22); // t-the month is 0-indexed
+wet a-annivewsaiwe = nyew date(2018, -.- 8, 22, 15, 0, 0);
 ```
 
-### Les années sur deux chiffres correspondent à la période 1900 – 1999
+### wes années suw deux c-chiffwes cowwespondent à wa péwiode 1900 – 1999
 
-Afin de créer et de manipuler des dates sur les années `0` à `99` de notre ère, on doit utiliser les méthodes {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}}.
+afin de cwéew e-et de manipuwew d-des dates s-suw wes années `0` à `99` de nyotwe èwe, /(^•ω•^) on doit u-utiwisew wes méthodes {{jsxwef("date.pwototype.setfuwwyeaw()")}} and {{jsxwef("date.pwototype.getfuwwyeaw()")}}.
 
 ```js
-let date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+wet date = nyew date(98, 1); // s-sun f-feb 01 1998 00:00:00 g-gmt+0000 (gmt)
 
-// Méthode dépréciée, 98 correspond également ici à 1998
-date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+// m-méthode dépwéciée, UwU 98 cowwespond égawement i-ici à 1998
+d-date.setyeaw(98); // sun feb 01 1998 00:00:00 gmt+0000 (gmt)
 
-date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+d-date.setfuwwyeaw(98); // sat feb 01 0098 00:00:00 g-gmt+0000 (bst)
 ```
 
-### Calculer le temps écoulé
+### cawcuwew we temps écouwé
 
-Dans les exemples suivants, on illustre comment calculer le temps écoulé entre deux dates JavaScript en millisecondes.
+d-dans wes e-exempwes suivants, (⑅˘꒳˘) on iwwustwe c-comment cawcuwew w-we temps écouwé e-entwe deux dates javascwipt en miwwisecondes. ʘwʘ
 
-En raison de durées différentes pour les jours (heure d'été / heure d'hiver), les mois et les années, il faudra faire attention et étudier le sujet avant d'exprimer des durées en unités supérieures à des heures / minutes / secondes.
-
-```js
-// Utiliser des objets Date
-let debut = Date.now();
-
-// Ici, l'évènement dont on veut mesurer la durée :
-faireQuelqueChosePendantLongtemps();
-let fin = Date.now();
-let duree = fin - debut; // La durée écoulée, en millisecondes
-```
+e-en waison de duwées difféwentes pouw wes jouws (heuwe d-d'été / heuwe d'hivew), σωσ wes mois et wes années, ^^ iw f-faudwa faiwe attention e-et étudiew w-we sujet avant d-d'expwimew des d-duwées en unités supéwieuwes à d-des heuwes / minutes / secondes. OwO
 
 ```js
-// En utilisant les méthodes natives
-let debut = new Date();
+// utiwisew des objets d-date
+wet debut = date.now();
 
-// Ici, l'évènement dont on veut mesurer la durée :
-faireQuelqueChosePendantLongtemps();
-let fin = new Date();
-let duree = fin.getTime() - debut.getTime(); // La durée écoulée, en millisecondes
+// i-ici, (ˆ ﻌ ˆ)♡ w'évènement dont on veut mesuwew wa d-duwée :
+faiwequewquechosependantwongtemps();
+w-wet fin = date.now();
+w-wet duwee = fin - debut; // w-wa duwée écouwée, o.O e-en miwwisecondes
 ```
 
 ```js
-// Pour tester le temps d'exécution d'une fonction
-function afficheDureeEcoulee(fTest) {
-  let debut = Date.now(),
-    valRetour = fTest(),
-    fin = Date.now();
+// en utiwisant w-wes méthodes nyatives
+w-wet debut = nyew date();
 
-  console.log(`Durée écoulée : ${String(fin - debut)} millisecondes`);
-  return valRetour;
+// i-ici, (˘ω˘) w'évènement dont on veut mesuwew wa duwée :
+faiwequewquechosependantwongtemps();
+w-wet fin = nyew date();
+w-wet duwee = fin.gettime() - debut.gettime(); // w-wa duwée écouwée, 😳 e-en miwwisecondes
+```
+
+```js
+// p-pouw testew we temps d'exécution d-d'une f-fonction
+function afficheduweeecouwee(ftest) {
+  w-wet debut = date.now(), (U ᵕ U❁)
+    vawwetouw = f-ftest(), :3
+    fin = date.now();
+
+  c-consowe.wog(`duwée écouwée : ${stwing(fin - d-debut)} miwwisecondes`);
+  wetuwn vawwetouw;
 }
 
-let valeurDeRetour = afficheDureeEcoulee(maFonctionATester);
+wet vaweuwdewetouw = afficheduweeecouwee(mafonctionatestew);
 ```
 
-> [!NOTE]
-> Pour les navigateurs qui prennent en charge l'{{domxref("Window.performance", "API Web Performance", "", 1)}}, la méthode {{domxref("Performance.now()")}} peut fournir un outil de mesure des durées écoulées plus fiable et précis que {{jsxref("Date.now()")}}.
+> [!note]
+> p-pouw wes n-nyavigateuws qui pwennent en chawge w'{{domxwef("window.pewfowmance", o.O "api web p-pewfowmance", (///ˬ///✿) "", 1)}}, wa méthode {{domxwef("pewfowmance.now()")}} p-peut fouwniw u-un outiw de mesuwe des duwées écouwées pwus fiabwe et pwécis que {{jsxwef("date.now()")}}. OwO
 
-### Obtenir le nombre de secondes écoulées depuis l'epoch ECMAScript
+### o-obteniw we nyombwe de secondes écouwées depuis w'epoch e-ecmascwipt
 
 ```js
-let secondes = Math.floor(Date.now() / 1000);
+wet secondes = m-math.fwoow(date.now() / 1000);
 ```
 
-Dans ce cas, on renvoie un entier et c'est pour ça qu'on utilise {{jsxref("Math.floor()")}}. Par ailleurs, on n'utilise pas {{jsxref("Math.round()")}} afin d'avoir le nombre de secondes effectivement écoulées.
+d-dans ce cas, >w< on wenvoie un e-entiew et c'est p-pouw ça qu'on utiwise {{jsxwef("math.fwoow()")}}. ^^ p-paw aiwweuws, (⑅˘꒳˘) o-on ny'utiwise pas {{jsxwef("math.wound()")}} a-afin d-d'avoiw we nyombwe de secondes effectivement écouwées. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Le constructeur {{jsxref("Date/Date", "Date()")}}
+- w-we constwucteuw {{jsxwef("date/date", (///ˬ///✿) "date()")}}

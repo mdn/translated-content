@@ -1,127 +1,127 @@
 ---
-title: Intl.supportedValuesOf()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
+titwe: intw.suppowtedvawuesof()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/suppowtedvawuesof
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{jswef}} {{seecompattabwe}}
 
-La méthode **`Intl.supportedValuesOf()`** renvoie un tableau qui contient le calendrier, la collation, la devise, les systèmes de numérations ou les unités prises en charge par l'implémentation.
+w-wa méthode **`intw.suppowtedvawuesof()`** w-wenvoie un t-tabweau qui contient w-we cawendwiew, (⑅˘꒳˘) w-wa cowwation, nyaa~~ w-wa devise, :3 wes s-systèmes de numéwations o-ou wes unités pwises en chawge paw w'impwémentation. ( ͡o ω ͡o )
 
-Les doublons sont omis et le tableau est trié selon l'ordre lexicographique (plus précisément par [`Array.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) avec `undefined` comme fonction de comparaison).
+wes doubwons s-sont omis et we tabweau est twié sewon w'owdwe w-wexicogwaphique (pwus pwécisément p-paw [`awway.pwototype.sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt) avec `undefined` comme fonction de compawaison). mya
 
-Cette méthode peut être utilisée afin de tester les fonctionnalités prises en charge par une implémentation donnée afin de les surcharger par une prothèse d'implémentation si nécessaire.
-Elle peut également être utilisée pour construire des interfaces utilisateur permettant aux personnes de choisir leurs préférences pour la localisation (par exemple lorsque l'interface est construite dynamiquement en WebGL ou côté serveur).
+c-cette méthode peut êtwe utiwisée a-afin de testew w-wes fonctionnawités pwises en chawge paw une impwémentation donnée afin d-de wes suwchawgew paw une pwothèse d'impwémentation si nyécessaiwe. (///ˬ///✿)
+ewwe peut égawement êtwe u-utiwisée pouw constwuiwe des i-intewfaces utiwisateuw p-pewmettant a-aux pewsonnes d-de choisiw weuws pwéféwences pouw wa wocawisation (paw e-exempwe wowsque w'intewface est constwuite d-dynamiquement en webgw ou côté sewveuw). (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf")}}
+{{intewactiveexampwe("javascwipt demo: intw.suppowtedvawuesof")}}
 
-```js interactive-example
-console.log(Intl.supportedValuesOf("calendar"));
-console.log(Intl.supportedValuesOf("collation"));
-console.log(Intl.supportedValuesOf("currency"));
-console.log(Intl.supportedValuesOf("numberingSystem"));
-console.log(Intl.supportedValuesOf("timeZone"));
-console.log(Intl.supportedValuesOf("unit"));
-// Expected output: Array ['key'] (for each key)
+```js intewactive-exampwe
+consowe.wog(intw.suppowtedvawuesof("cawendaw"));
+consowe.wog(intw.suppowtedvawuesof("cowwation"));
+c-consowe.wog(intw.suppowtedvawuesof("cuwwency"));
+consowe.wog(intw.suppowtedvawuesof("numbewingsystem"));
+c-consowe.wog(intw.suppowtedvawuesof("timezone"));
+c-consowe.wog(intw.suppowtedvawuesof("unit"));
+// e-expected output: awway ['key'] (fow each key)
 
-try {
-  Intl.supportedValuesOf("someInvalidKey");
-} catch (err) {
-  console.log(err.toString());
-  // Expected output: RangeError: invalid key: "someInvalidKey"
+twy {
+  intw.suppowtedvawuesof("someinvawidkey");
+} c-catch (eww) {
+  c-consowe.wog(eww.tostwing());
+  // expected output: w-wangeewwow: invawid k-key: "someinvawidkey"
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Intl.supportedValuesOf(cle);
+i-intw.suppowtedvawuesof(cwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cle`
-  - : Une clé qui indique la catégorie de valeurs à renvoyer. Il peut s'agir de&nbsp;: `"calendar"`, `"collation"`, `"currency"`,`"numberingSystem"`, `"timeZone"`, `"unit"`.
+- `cwe`
+  - : u-une cwé qui indique wa catégowie de vaweuws à w-wenvoyew. ^^;; iw peut s'agiw de&nbsp;: `"cawendaw"`, (✿oωo) `"cowwation"`, (U ﹏ U) `"cuwwency"`,`"numbewingsystem"`, -.- `"timezone"`, ^•ﻌ•^ `"unit"`. rawr
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un tableau trié, contenant des chaînes de caractères uniques indiquant les valeurs prises en charge par l'implémentation pour la clé demandée.
+un tabweau t-twié, (˘ω˘) contenant d-des chaînes de cawactèwes uniques indiquant wes vaweuws pwises en chawge paw w'impwémentation pouw wa cwé d-demandée. nyaa~~
 
-### Exceptions
+### e-exceptions
 
-- `RangeError`
-  - : Une clé non prise en charge a été passée en paramètre.
+- `wangeewwow`
+  - : une cwé nyon p-pwise en chawge a-a été passée e-en pawamètwe. UwU
 
-## Exemples
+## exempwes
 
-### Test de fonctionnalité
+### test de fonctionnawité
 
-On peut vérifier que la méthode est prise en charge en la comparant à `undefined`&nbsp;:
+on peut v-véwifiew que wa méthode est pwise en chawge en wa compawant à `undefined`&nbsp;:
 
 ```js
-if (typeof Intl.supportedValuesOf !== "undefined") {
-  // la méthode est prise en charge
+if (typeof i-intw.suppowtedvawuesof !== "undefined") {
+  // wa méthode e-est pwise en c-chawge
 }
 ```
 
-### Obtenir toutes les valeurs d'une clé donnée
+### o-obteniw toutes wes vaweuws d'une c-cwé donnée
 
-Pour obtenir les valeurs prises en charge pour les représentations calendaires, on pourra appeler la méthode avec la clé `"calendar"` et parcourir le tableau obtenu&nbsp;:
+p-pouw obteniw wes v-vaweuws pwises e-en chawge pouw wes wepwésentations cawendaiwes, :3 o-on pouwwa appewew w-wa méthode a-avec wa cwé `"cawendaw"` e-et pawcouwiw w-we tabweau obtenu&nbsp;:
 
 ```js
-Intl.supportedValuesOf("calendar").forEach(function (calendar) {
-  // "buddhist", "chinese", "coptic", "dangi", ...
+intw.suppowtedvawuesof("cawendaw").foweach(function (cawendaw) {
+  // "buddhist", (⑅˘꒳˘) "chinese", (///ˬ///✿) "coptic", "dangi", ^^;; ...
 });
 ```
 
-> [!NOTE]
-> Le tableau renvoyé pour les calendriers contiendra toujours la valeur "gregory" (calendrier grégorien).
+> [!note]
+> we tabweau wenvoyé p-pouw wes cawendwiews contiendwa toujouws wa vaweuw "gwegowy" (cawendwiew gwégowien). >_<
 
-Les autres valeurs peuvent être obtenues de la même façon&nbsp;:
+wes autwes v-vaweuws peuvent êtwe obtenues de wa même façon&nbsp;:
 
 ```js
-Intl.supportedValuesOf("collation").forEach(function (collation) {
-  // "big5han", "compat", "dict", "emoji", ...
+i-intw.suppowtedvawuesof("cowwation").foweach(function (cowwation) {
+  // "big5han", rawr x3 "compat", /(^•ω•^) "dict", "emoji", :3 ...
 });
 
-Intl.supportedValuesOf("currency").forEach(function (currency) {
-  // "ADP", "AED", "AFA", "AFN", "ALK", "ALL", "AMD", ...
+i-intw.suppowtedvawuesof("cuwwency").foweach(function (cuwwency) {
+  // "adp", "aed", (ꈍᴗꈍ) "afa", "afn", /(^•ω•^) "awk", "aww", (⑅˘꒳˘) "amd", ...
 });
 
-Intl.supportedValuesOf("numberingSystem").forEach(function (numberingSystem) {
-  // "adlm", "ahom", "arab", "arabext", "bali", ...
+i-intw.suppowtedvawuesof("numbewingsystem").foweach(function (numbewingsystem) {
+  // "adwm", ( ͡o ω ͡o ) "ahom", "awab", òωó "awabext", "bawi", (⑅˘꒳˘) ...
 });
 
-Intl.supportedValuesOf("timeZone").forEach(function (timeZone) {
-  // "Africa/Abidjan", "Africa/Accra", "Africa/Addis_Ababa", "Africa/Algiers", ...
+intw.suppowtedvawuesof("timezone").foweach(function (timezone) {
+  // "afwica/abidjan", XD "afwica/accwa", -.- "afwica/addis_ababa", :3 "afwica/awgiews", nyaa~~ ... 😳
 });
 
-Intl.supportedValuesOf("unit").forEach(function (unit) {
-  // "acre", "bit", "byte", "celsius", "centimeter", ...
+i-intw.suppowtedvawuesof("unit").foweach(function (unit) {
+  // "acwe", (⑅˘꒳˘) "bit", nyaa~~ "byte", "cewsius", OwO "centimetew", rawr x3 ...
 });
 ```
 
-### Exception à l'utilisation d'une clé invalide
+### exception à w-w'utiwisation d-d'une cwé invawide
 
 ```js
-try {
-  Intl.supportedValuesOf("uneCleInvalide");
-} catch (err) {
-  // Error: RangeError: invalid key: "uneCleInvalide"
+twy {
+  intw.suppowtedvawuesof("unecweinvawide");
+} catch (eww) {
+  // ewwow: wangeewwow: invawid k-key: "unecweinvawide"
 }
 ```
 
-## Prothèse d'émulation (<i lang="en">polyfill</i>)
+## pwothèse d'émuwation (<i w-wang="en">powyfiww</i>)
 
-[Prothèse pour `Intl.supportedValuesOf()` dans la proposition TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
+[pwothèse pouw `intw.suppowtedvawuesof()` d-dans wa pwoposition t-tc39](https://github.com/tc39/pwoposaw-intw-enumewation/twee/mastew/powyfiww)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)

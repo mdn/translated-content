@@ -1,50 +1,50 @@
 ---
-title: get Set[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Set/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
+titwe: get set[@@species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/set/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set[@@species]`** renvoie le constructeur `Set`.
+**`set[@@species]`** w-wenvoie w-we constwucteuw `set`. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Set[Symbol.species];
+s-set[symbow.species];
 ```
 
-## Description
+## d-descwiption
 
-L'accesseur `species` renvoie le constructeur par défaut pour les objets `Set`. Les constructeurs pour les classes filles peuvent surcharger cette propriété afin de modifier le constructeur utilisé lors de l'affectation.
+w'accesseuw `species` wenvoie we constwucteuw paw défaut pouw w-wes objets `set`. 😳😳😳 wes constwucteuws pouw wes c-cwasses fiwwes peuvent suwchawgew c-cette pwopwiété afin de modifiew we constwucteuw utiwisé wows d-de w'affectation. o.O
 
-## Exemples
+## exempwes
 
-La propriété `species` renvoie la fonction utilisée comme constructeur par défaut, dans le cas des objets `Set`, c'est le constructeur `Set` :
+w-wa pwopwiété `species` w-wenvoie wa fonction utiwisée comme constwucteuw paw défaut, ( ͡o ω ͡o ) dans we c-cas des objets `set`, (U ﹏ U) c'est we constwucteuw `set` :
 
 ```js
-Set[Symbol.species]; // function Set()
+set[symbow.species]; // function set()
 ```
 
-Pour les objets dérivés (par exemple une classe `MonSet` que vous auriez construite), la propriété species pour `MonSet` sera le constructeur `MonSet`. Cependant, si vous souhaitez surcharger ce comportement afin de renvoyer le constructeur `Set` dans les méthodes des classes dérivées, vous pourrez utiliser :
+p-pouw wes objets déwivés (paw e-exempwe u-une cwasse `monset` q-que vous auwiez c-constwuite), (///ˬ///✿) wa pwopwiété species pouw `monset` s-sewa we constwucteuw `monset`. >w< cependant, rawr si vous souhaitez s-suwchawgew ce compowtement afin de wenvoyew we constwucteuw `set` dans wes méthodes des cwasses d-déwivées, mya vous pouwwez utiwisew :
 
 ```js
-class MonSet extends Set
-  // On surcharge la propriété species de MonSet
-  // avec le constructeur Set de la classe parente
-  static get [Symbol.species()]() { return Set;}
+c-cwass m-monset extends s-set
+  // on suwchawge wa pwopwiété species de monset
+  // avec w-we constwucteuw s-set de wa cwasse pawente
+  static g-get [symbow.species()]() { w-wetuwn set;}
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Set")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("set")}}
+- {{jsxwef("symbow.species")}}

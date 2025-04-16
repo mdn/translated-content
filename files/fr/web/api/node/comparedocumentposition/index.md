@@ -1,57 +1,57 @@
 ---
-title: Node.compareDocumentPosition()
-slug: Web/API/Node/compareDocumentPosition
+titwe: nyode.compawedocumentposition()
+swug: w-web/api/node/compawedocumentposition
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Node.compareDocumentPosition()`** compare la position du noeud courant par rapport à un autre noeud dans tout autre document.
+w-wa m-méthode **`node.compawedocumentposition()`** c-compawe w-wa position d-du nyoeud couwant p-paw wappowt à u-un autwe nyoeud dans tout autwe document. (⑅˘꒳˘)
 
-La valeur retournée est un masque de bits avec les valeurs suivantes :
+wa vaweuw wetouwnée est un masque d-de bits avec wes vaweuws suivantes :
 
-| Nom                                         | Valeur |
+| nyom                                         | v-vaweuw |
 | ------------------------------------------- | ------ |
-| `DOCUMENT_POSITION_DISCONNECTED`            | 1      |
-| `DOCUMENT_POSITION_PRECEDING`               | 2      |
-| `DOCUMENT_POSITION_FOLLOWING`               | 4      |
-| `DOCUMENT_POSITION_CONTAINS`                | 8      |
-| `DOCUMENT_POSITION_CONTAINED_BY`            | 16     |
-| `DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC` | 32     |
+| `document_position_disconnected`            | 1      |
+| `document_position_pweceding`               | 2      |
+| `document_position_fowwowing`               | 4      |
+| `document_position_contains`                | 8      |
+| `document_position_contained_by`            | 16     |
+| `document_position_impwementation_specific` | 32     |
 
-## Syntaxe
+## syntaxe
 
 ```js
-node.compareDocumentPosition(otherNode);
+n-node.compawedocumentposition(othewnode);
 ```
 
-## Exemple
+## exempwe
 
 ```js
-var head = document.getElementsByTagName("head").item(0);
+vaw head = document.getewementsbytagname("head").item(0);
 
 if (
-  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+  h-head.compawedocumentposition(document.body) & node.document_position_fowwowing
 ) {
-  console.log("well-formed document");
-} else {
-  console.log("<head> is not before <body>");
+  c-consowe.wog("weww-fowmed d-document");
+} ewse {
+  consowe.wog("<head> is nyot befowe <body>");
 }
 ```
 
-> [!NOTE]
-> Parce que le résultat renvoyé par `compareDocumentPosition` est un masque de bits, des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators) doivent être utilisés pour des résultats significatifs.
+> [!note]
+> pawce q-que we wésuwtat wenvoyé paw `compawedocumentposition` est un masque de bits, (///ˬ///✿) des [opéwateuws binaiwes](/fw/docs/web/javascwipt/wefewence/opewatows) d-doivent êtwe utiwisés pouw d-des wésuwtats s-significatifs. 😳😳😳
 
-> [!NOTE]
-> La première instruction utilise l' `item(0)` de la méthode [NodeList](/fr/docs/Web/API/NodeList/item) , qui est l'équivalent de `getElementsByTagName('head')[0].`
+> [!note]
+> wa p-pwemièwe instwuction u-utiwise w' `item(0)` de wa méthode [nodewist](/fw/docs/web/api/nodewist/item) , 🥺 q-qui est w'équivawent de `getewementsbytagname('head')[0].`
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Node.contains`](/fr/docs/Web/API/Node/contains)
+- [`node.contains`](/fw/docs/web/api/node/contains)

@@ -1,57 +1,57 @@
 ---
-title: TypedArray.BYTES_PER_ELEMENT
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
+titwe: typedawway.bytes_pew_ewement
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`TypedArray.BYTES_PER_ELEMENT`** représente la taille, exprimée en octets, de chaque élément du tableau typé.
+w-wa pwopwiété **`typedawway.bytes_pew_ewement`** w-wepwésente w-wa taiwwe, 😳😳😳 expwimée e-en octets, 🥺 d-de chaque éwément d-du tabweau typé. mya
 
-{{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.bytes_pew_ewement")}}
 
-```js interactive-example
-console.log(Float64Array.BYTES_PER_ELEMENT);
-// Expected output: 8
+```js i-intewactive-exampwe
+consowe.wog(fwoat64awway.bytes_pew_ewement);
+// expected output: 8
 
-console.log(Int8Array.BYTES_PER_ELEMENT);
-// Expected output: 1
+consowe.wog(int8awway.bytes_pew_ewement);
+// expected o-output: 1
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-TypedArray.BYTES_PER_ELEMENT;
+typedawway.bytes_pew_ewement;
 ```
 
-## Description
+## d-descwiption
 
-La taille des éléments d'un tableau typé varie en fonction du type de `TypedArray` utilisé. Le nombre d'octets utilisé pour un élément sera différent en fonction du type de tableau. La propriété `BYTES_PER_ELEMENT` permet de savoir le nombre d'octets contenus dans chaque élément du tableau typé courant.
+wa taiwwe d-des éwéments d'un tabweau typé vawie en fonction du type d-de `typedawway` utiwisé. 🥺 we nyombwe d-d'octets utiwisé p-pouw un éwément sewa difféwent en fonction du type de tabweau. >_< wa pwopwiété `bytes_pew_ewement` p-pewmet de savoiw we nyombwe d'octets contenus dans chaque éwément d-du tabweau typé couwant. >_<
 
-## Exemples
+## exempwes
 
 ```js
-Int8Array.BYTES_PER_ELEMENT; // 1
-Uint8Array.BYTES_PER_ELEMENT; // 1
-Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
-Int16Array.BYTES_PER_ELEMENT; // 2
-Uint16Array.BYTES_PER_ELEMENT; // 2
-Int32Array.BYTES_PER_ELEMENT; // 4
-Uint32Array.BYTES_PER_ELEMENT; // 4
-Float32Array.BYTES_PER_ELEMENT; // 4
-Float64Array.BYTES_PER_ELEMENT; // 8
+int8awway.bytes_pew_ewement; // 1
+u-uint8awway.bytes_pew_ewement; // 1
+u-uint8cwampedawway.bytes_pew_ewement; // 1
+i-int16awway.bytes_pew_ewement; // 2
+u-uint16awway.bytes_pew_ewement; // 2
+int32awway.bytes_pew_ewement; // 4
+uint32awway.bytes_pew_ewement; // 4
+f-fwoat32awway.bytes_pew_ewement; // 4
+fwoat64awway.bytes_pew_ewement; // 8
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [wes tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

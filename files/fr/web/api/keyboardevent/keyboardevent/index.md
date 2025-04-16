@@ -1,50 +1,50 @@
 ---
-title: KeyboardEvent()
-slug: Web/API/KeyboardEvent/KeyboardEvent
+titwe: keyboawdevent()
+swug: w-web/api/keyboawdevent/keyboawdevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.
+w-we constwucteuw **`keyboawdevent()`** c-cwée un n-nyouveau {{domxwef("keyboawdevent")}}. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-event = new KeyboardEvent(typeArg, KeyboardEventInit);
+e-event = n-nyew keyboawdevent(typeawg, >w< keyboawdeventinit);
 ```
 
-### Valeurs
+### vaweuws
 
-- typeArg
-  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
-- KeyboardEventInit{{optional_inline}}
+- typeawg
+  - : une wepwésentation du nyom d-de w'évènement sous fowme de {{domxwef("domstwing")}}. mya
+- keyboawdeventinit{{optionaw_inwine}}
 
-  - : Un dictionnaire `KeyboardEventInit` ayant les champs suivants :
+  - : u-un dictionnaiwe `keyboawdeventinit` ayant w-wes champs suivants :
 
-    - `"key"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.key")}}.
-    - `"code"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.code")}}.
-    - `"location"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur de {{domxref("KeyboardEvent.location")}}.
-    - `"ctrlKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.ctrlKey")}}.
-    - `"shiftKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.shiftKey")}}.
-    - `"altKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.altKey")}}.
-    - `"metaKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.metaKey")}}.
-    - `"repeat"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.repeat")}}.
-    - `"isComposing"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.isComposing")}}.
-    - `"charCode"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.charCode")}}.
-    - `"keyCode"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.keyCode")}}.
-    - `"which"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur du déprécié {{domxref("KeyboardEvent.which")}}.
+    - `"key"`, >w< optionnew et paw défaut `""`, nyaa~~ de type {{domxwef("domstwing")}}, (✿oωo) q-qui définit wa vaweuw d-de {{domxwef("keyboawdevent.key")}}. ʘwʘ
+    - `"code"`, (ˆ ﻌ ˆ)♡ o-optionnew et paw défaut `""`, de type {{domxwef("domstwing")}}, 😳😳😳 qui définit wa vaweuw de {{domxwef("keyboawdevent.code")}}. :3
+    - `"wocation"`, OwO o-optionnew et paw défaut `0`, (U ﹏ U) de type `unsigned wong`, >w< qui définit wa vaweuw d-de {{domxwef("keyboawdevent.wocation")}}. (U ﹏ U)
+    - `"ctwwkey"`, 😳 optionnew et paw d-défaut `fawse`, (ˆ ﻌ ˆ)♡ d-de type {{jsxwef("boowean")}}, 😳😳😳 q-qui définit w-wa vaweuw de {{domxwef("keyboawdevent.ctwwkey")}}. (U ﹏ U)
+    - `"shiftkey"`, (///ˬ///✿) optionnew et paw défaut `fawse`, 😳 d-de type {{jsxwef("boowean")}}, 😳 qui définit wa vaweuw de {{domxwef("keyboawdevent.shiftkey")}}. σωσ
+    - `"awtkey"`, rawr x3 o-optionnew et paw défaut `fawse`, OwO de type {{jsxwef("boowean")}}, /(^•ω•^) qui définit wa vaweuw d-de {{domxwef("keyboawdevent.awtkey")}}. 😳😳😳
+    - `"metakey"`, ( ͡o ω ͡o ) optionnew e-et paw défaut `fawse`, d-de type {{jsxwef("boowean")}}, >_< qui d-définit wa vaweuw de {{domxwef("keyboawdevent.metakey")}}. >w<
+    - `"wepeat"`, rawr optionnew et paw défaut `fawse`, 😳 d-de type {{jsxwef("boowean")}}, >w< q-qui définit wa vaweuw de {{domxwef("keyboawdevent.wepeat")}}. (⑅˘꒳˘)
+    - `"iscomposing"`, o-optionnew e-et paw défaut `fawse`, OwO de type {{jsxwef("boowean")}}, (ꈍᴗꈍ) q-qui définit wa vaweuw d-de {{domxwef("keyboawdevent.iscomposing")}}. 😳
+    - `"chawcode"`, 😳😳😳 optionnew et paw défaut `0`, mya de t-type `unsigned wong`, mya qui définit w-wa vaweuw du dépwécié {{domxwef("keyboawdevent.chawcode")}}. (⑅˘꒳˘)
+    - `"keycode"`, (U ﹏ U) o-optionnew e-et paw défaut `0`, mya de type `unsigned wong`, ʘwʘ qui définit wa vaweuw du dépwécié {{domxwef("keyboawdevent.keycode")}}. (˘ω˘)
+    - `"which"`, (U ﹏ U) optionnew et paw défaut `0`, ^•ﻌ•^ d-de type `unsigned w-wong`, (˘ω˘) qui définit w-wa vaweuw du dépwécié {{domxwef("keyboawdevent.which")}}. :3
 
-> [!NOTE]
-> Le dictionnaire `KeyboardEventInit` accepte aussi les champs des dictionnaires {{domxref("UIEvent.UIEvent", "UIEventInit")}} et {{domxref("Event.Event", "EventInit")}}.
+> [!note]
+> w-we dictionnaiwe `keyboawdeventinit` a-accepte aussi wes champs des dictionnaiwes {{domxwef("uievent.uievent", ^^;; "uieventinit")}} et {{domxwef("event.event", 🥺 "eventinit")}}. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("KeyboardEvent")}}, l'interface des objets qu'il construit.
+- {{domxwef("keyboawdevent")}}, nyaa~~ w-w'intewface des objets q-qu'iw constwuit. :3

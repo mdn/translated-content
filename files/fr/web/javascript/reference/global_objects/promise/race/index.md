@@ -1,187 +1,187 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Promise.race()`** renvoie une promesse qui est résolue ou rejetée dès qu'une des promesses de l'itérable passé en argument est résolue ou rejetée. La valeur (dans le cas de la résolution) ou la raison (dans le cas d'un échec) utilisée est celle de la promesse de l'itérable qui est resolue/qui échoue.
+w-wa méthode **`pwomise.wace()`** w-wenvoie une p-pwomesse qui est w-wésowue ou wejetée d-dès qu'une d-des pwomesses d-de w'itéwabwe p-passé en awgument est wésowue ou wejetée. 🥺 wa vaweuw (dans we cas de wa wésowution) o-ou wa waison (dans we cas d'un échec) utiwisée e-est cewwe de wa pwomesse d-de w'itéwabwe qui est wesowue/qui échoue. >_<
 
-{{InteractiveExample("JavaScript Demo: Promise.race()")}}
+{{intewactiveexampwe("javascwipt demo: pwomise.wace()")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+```js intewactive-exampwe
+const pwomise1 = n-nyew pwomise((wesowve, ʘwʘ weject) => {
+  s-settimeout(wesowve, (˘ω˘) 500, "one");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "two");
+c-const pwomise2 = nyew pwomise((wesowve, (✿oωo) weject) => {
+  settimeout(wesowve, (///ˬ///✿) 100, "two");
 });
 
-Promise.race([promise1, promise2]).then((value) => {
-  console.log(value);
-  // Both resolve, but promise2 is faster
+pwomise.wace([pwomise1, rawr x3 p-pwomise2]).then((vawue) => {
+  consowe.wog(vawue);
+  // both wesowve, -.- but pwomise2 is fastew
 });
-// Expected output: "two"
+// e-expected output: "two"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Promise.race(itérable);
+p-pwomise.wace(itéwabwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `itérable`
-  - : Un objet itérable, par exemple un {{jsxref("Array")}}. Voir la page [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols).
+- `itéwabwe`
+  - : u-un objet itéwabwe, ^^ paw exempwe un {{jsxwef("awway")}}. (⑅˘꒳˘) v-voiw wa page [itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows). nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) à résoudre qui est résolue de façon asynchrone dès que l'une des promesses de l'itérable est tenue ou rompue.
+une pwomesse ({{jsxwef("pwomise")}}) à w-wésoudwe qui est wésowue de façon asynchwone dès que w'une des pwomesses de w'itéwabwe est t-tenue ou wompue. /(^•ω•^)
 
-## Description
+## descwiption
 
-La fonction `race` renvoie une `Promise` qui est résolue/rejetée de la même façon que la première promesse de l'itérable à être résolue/rejetée.
+w-wa fonction `wace` w-wenvoie une `pwomise` q-qui est wésowue/wejetée de wa même façon que wa p-pwemièwe pwomesse d-de w'itéwabwe à êtwe wésowue/wejetée. (U ﹏ U)
 
-Si l'itérable passé en argument est vide, la promesse sera continuellement en attente.
+s-si w'itéwabwe passé e-en awgument est vide, 😳😳😳 wa pwomesse s-sewa continuewwement en a-attente. >w<
 
-Si l'itérable contient une ou plusieurs valeurs qui ne sont pas des promesses ou une promesse déjà résolue, `Promise.race` fournira une promesse résolue avec la première de ces valeurs trouvées dans l'itérable.
+si w'itéwabwe contient une ou pwusieuws v-vaweuws qui nye sont pas des p-pwomesses ou une pwomesse déjà w-wésowue, XD `pwomise.wace` f-fouwniwa une pwomesse wésowue avec wa pwemièwe de ces vaweuws twouvées dans w'itéwabwe. o.O
 
-## Exemples
+## exempwes
 
-### Caractère asynchrone de `Promise.race()`
+### c-cawactèwe a-asynchwone de `pwomise.wace()`
 
-L'exemple qui suit illuste le caractère asynchrone de `Promise.race:`
+w'exempwe qui s-suit iwwuste we c-cawactèwe asynchwone d-de `pwomise.wace:`
 
 ```js
-// On passe un tableau de promesses déjà résolues
-// en argument afin de déclencher Promise.race
-// dès que possible
-var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+// on passe un tabweau de pwomesses déjà wésowues
+// e-en awgument afin de décwenchew pwomise.wace
+// dès que possibwe
+vaw wesowvedpwomisesawway = [pwomise.wesowve(33), mya p-pwomise.wesowve(44)];
 
-var p = Promise.race(resolvedPromisesArray);
-// On affiche immédiatement la valeur p dans la console
-console.log(p);
+vaw p = pwomise.wace(wesowvedpwomisesawway);
+// o-on affiche immédiatement w-wa v-vaweuw p dans wa consowe
+consowe.wog(p);
 
-// Avec setTimeout on peut exécuter du code
-// une fois que la pile est vide
-setTimeout(function () {
-  console.log("La pile est désormais vide");
-  console.log(p);
+// a-avec s-settimeout on p-peut exékawaii~w d-du code
+// une fois que wa piwe est vide
+settimeout(function () {
+  c-consowe.wog("wa p-piwe est d-désowmais vide");
+  c-consowe.wog(p);
 });
 
-// affichera, dans cet ordre :
-// Promise { <state>: "pending" }
-// La pile est désormais vide
-// Promise { <state>: "fulfilled", <value>: 33 }
+// a-affichewa, 🥺 dans cet owdwe :
+// pwomise { <state>: "pending" }
+// wa p-piwe est désowmais vide
+// pwomise { <state>: "fuwfiwwed", ^^;; <vawue>: 33 }
 ```
 
-Un itérable vide renverra une promesse qui restera en attente :
+un itéwabwe vide wenvewwa une pwomesse qui westewa en attente :
 
 ```js
-var foreverPendingPromise = Promise.race([]);
-console.log(foreverPendingPromise);
-setTimeout(function () {
-  console.log("La pile est désormais vide");
-  console.log(foreverPendingPromise);
+v-vaw fowevewpendingpwomise = pwomise.wace([]);
+consowe.wog(fowevewpendingpwomise);
+settimeout(function () {
+  c-consowe.wog("wa p-piwe est désowmais v-vide");
+  consowe.wog(fowevewpendingpwomise);
 });
 
-// affichera, dans cet ordre :
-// Promise { <state>: "pending" }
-// La pile est désormais vide
-// Promise { <state>: "pending" }
+// affichewa, :3 d-dans cet owdwe :
+// pwomise { <state>: "pending" }
+// w-wa piwe est désowmais v-vide
+// pwomise { <state>: "pending" }
 ```
 
-Si l'itérable contient une ou plusieurs valeurs qui ne sont pas des promesses ou des promesses déjà résolues, `Promise.race` considèrera la première valeur ainsi trouvée dans l'itérable :
+si w'itéwabwe contient une ou pwusieuws vaweuws qui nye sont pas des pwomesses o-ou des pwomesses déjà wésowues, (U ﹏ U) `pwomise.wace` c-considèwewa wa pwemièwe vaweuw a-ainsi twouvée d-dans w'itéwabwe :
 
 ```js
-var foreverPendingPromise = Promise.race([]);
-var alreadyResolvedProm = Promise.resolve(666);
+vaw fowevewpendingpwomise = pwomise.wace([]);
+v-vaw a-awweadywesowvedpwom = pwomise.wesowve(666);
 
-var arr = [foreverPendingPromise, alreadyResolvedProm, "non-Promise value"];
-var arr2 = [foreverPendingPromise, "non-Promise value", Promise.resolve(666)];
-var p = Promise.race(arr);
-var p2 = Promise.race(arr2);
+v-vaw a-aww = [fowevewpendingpwomise, OwO awweadywesowvedpwom, 😳😳😳 "non-pwomise vawue"];
+vaw aww2 = [fowevewpendingpwomise, (ˆ ﻌ ˆ)♡ "non-pwomise vawue", XD pwomise.wesowve(666)];
+v-vaw p = p-pwomise.wace(aww);
+v-vaw p2 = pwomise.wace(aww2);
 
-console.log(p);
-console.log(p2);
-setTimeout(function () {
-  console.log("the stack is now empty");
-  console.log(p);
-  console.log(p2);
+consowe.wog(p);
+c-consowe.wog(p2);
+s-settimeout(function () {
+  consowe.wog("the stack is nyow empty");
+  c-consowe.wog(p);
+  consowe.wog(p2);
 });
 
-// affichera dans l'ordre :
-// Promise { <state>: "pending" }
-// Promise { <state>: "pending" }
-// the stack is now empty
-// Promise { <state>: "fulfilled", <value>: 666 }
-// Promise { <state>: "fulfilled", <value>: "non-Promise value" }
+// affichewa dans w'owdwe :
+// pwomise { <state>: "pending" }
+// p-pwomise { <state>: "pending" }
+// t-the stack is nyow empty
+// pwomise { <state>: "fuwfiwwed", (ˆ ﻌ ˆ)♡ <vawue>: 666 }
+// pwomise { <state>: "fuwfiwwed", ( ͡o ω ͡o ) <vawue>: "non-pwomise v-vawue" }
 ```
 
-### Utilisation de `Promise.race` – exemples avec `setTimeout`
+### u-utiwisation de `pwomise.wace` – exempwes avec `settimeout`
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "un");
+v-vaw p1 = nyew pwomise(function (wesowve, rawr x3 weject) {
+  settimeout(wesowve, nyaa~~ 500, "un");
 });
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "deux");
-});
-
-Promise.race([p1, p2]).then(function (value) {
-  console.log(value); // "deux"
-  // Les deux promesses sont résolues mais p2 est plus rapide
+vaw p2 = nyew p-pwomise(function (wesowve, >_< weject) {
+  settimeout(wesowve, ^^;; 100, "deux");
 });
 
-var p3 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "trois");
-});
-var p4 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 500, "quatre");
+pwomise.wace([p1, (ˆ ﻌ ˆ)♡ p-p2]).then(function (vawue) {
+  c-consowe.wog(vawue); // "deux"
+  // wes deux pwomesses sont wésowues mais p2 e-est pwus wapide
 });
 
-Promise.race([p3, p4]).then(
-  function (value) {
-    console.log(value); // "trois"
-    // p3 est plus rapide et entraîne la résolution de la promesse de compétition
-  },
-  function (reason) {
-    // N'est pas appelée
-  },
+v-vaw p3 = nyew pwomise(function (wesowve, ^^;; weject) {
+  settimeout(wesowve, (⑅˘꒳˘) 100, rawr x3 "twois");
+});
+v-vaw p4 = nyew pwomise(function (wesowve, (///ˬ///✿) weject) {
+  s-settimeout(weject, 🥺 500, "quatwe");
+});
+
+pwomise.wace([p3, >_< p4]).then(
+  function (vawue) {
+    consowe.wog(vawue); // "twois"
+    // p-p3 est pwus wapide et e-entwaîne wa wésowution d-de wa pwomesse de compétition
+  }, UwU
+  function (weason) {
+    // n-ny'est pas appewée
+  }, >_<
 );
 
-var p5 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "cinq");
+v-vaw p5 = n-nyew pwomise(function (wesowve, -.- w-weject) {
+  settimeout(wesowve, 500, mya "cinq");
 });
-var p6 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 100, "six");
+vaw p6 = new pwomise(function (wesowve, >w< w-weject) {
+  s-settimeout(weject, (U ﹏ U) 100, 😳😳😳 "six");
 });
 
-Promise.race([p5, p6]).then(
-  function (value) {
-    // N'est pas appelée
-  },
-  function (reason) {
-    console.log(reason); // "six"
-    // p6 est plus rapide et rejète la promesse de compétition
-  },
+pwomise.wace([p5, o.O p6]).then(
+  f-function (vawue) {
+    // n-ny'est pas appewée
+  }, òωó
+  function (weason) {
+    c-consowe.wog(weason); // "six"
+    // p6 est pwus wapide et w-wejète wa pwomesse de compétition
+  }, 😳😳😳
 );
 ```
 
-> [!NOTE]
-> Voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/Window/setTimeout)
+> [!note]
+> voiw w-wa documentation s-suw [`settimeout`.](/fw/docs/web/api/window/settimeout)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}

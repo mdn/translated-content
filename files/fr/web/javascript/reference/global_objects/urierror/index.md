@@ -1,78 +1,78 @@
 ---
-title: URIError
-slug: Web/JavaScript/Reference/Global_Objects/URIError
+titwe: uwiewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/uwiewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`URIError`** représente une erreur renvoyée lorsqu'une fonction de manipulation d'URI a été utilisée de façon inappropriée.
+w-w'objet **`uwiewwow`** w-wepwésente une e-ewweuw wenvoyée w-wowsqu'une fonction d-de manipuwation d-d'uwi a été u-utiwisée de f-façon inappwopwiée. 😳😳😳
 
-## Constructeur
+## constwucteuw
 
-- [`URIError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/URIError/URIError)
-  - : Crée un nouvel objet `URIError`.
+- [`uwiewwow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uwiewwow/uwiewwow)
+  - : cwée un nyouvew objet `uwiewwow`. 😳😳😳
 
-## Propriétés des instances
+## pwopwiétés d-des instances
 
-- [`URIError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Le message d'erreur.
-- [`URIError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Le nom de l'erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`URIError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin du fichier qui a déclenché l'erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`URIError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne dans le fichier qui a déclenché l'erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`URIError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de la colonne dans la ligne du fichier qui a déclenché l'erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`URIError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appel. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`uwiewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message)
+  - : we message d'ewweuw. o.O
+- [`uwiewwow.pwototype.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/name)
+  - : w-we nyom de w'ewweuw. ( ͡o ω ͡o ) héwitée d-de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (U ﹏ U)
+- [`uwiewwow.pwototype.fiwename`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename)
+  - : we chemin du fichiew qui a décwenché w'ewweuw. (///ˬ///✿) h-héwitée de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). >w<
+- [`uwiewwow.pwototype.winenumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew)
+  - : we nyuméwo de wa w-wigne dans we f-fichiew qui a décwenché w'ewweuw. héwitée de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow).
+- [`uwiewwow.pwototype.cowumnnumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew)
+  - : we nyuméwo de wa cowonne dans w-wa wigne du fichiew qui a décwenché w'ewweuw. rawr héwitée de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). mya
+- [`uwiewwow.pwototype.stack`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack)
+  - : wa piwe d'appew. ^^ h-héwitée de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Intercepter une exception `URIError`
+### i-intewceptew u-une exception `uwiewwow`
 
 ```js
-try {
-  decodeURIComponent("%");
+t-twy {
+  decodeuwicomponent("%");
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  consowe.wog(e i-instanceof uwiewwow); // twue
+  consowe.wog(e.message); // "mawfowmed u-uwi sequence"
+  consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Créer une instance de `URIError`
+### cwéew u-une instance de `uwiewwow`
 
 ```js
-try {
-  throw new URIError("Coucou", "unFichier.js", 10);
-} catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+t-twy {
+  thwow n-nyew uwiewwow("coucou", mya "unfichiew.js", 😳 10);
+} c-catch (e) {
+  consowe.wog(e instanceof uwiewwow); // twue
+  consowe.wog(e.message); // "coucou"
+  c-consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "unfichiew.js"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`decodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
-- [`decodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
-- [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
-- [`encodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)
+- [`decodeuwi()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwi)
+- [`decodeuwicomponent()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent)
+- [`encodeuwi()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi)
+- [`encodeuwicomponent()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent)

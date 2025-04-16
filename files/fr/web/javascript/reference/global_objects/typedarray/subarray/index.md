@@ -1,71 +1,71 @@
 ---
-title: TypedArray.prototype.subarray()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
+titwe: typedawway.pwototype.subawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/subawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé sur le même {{jsxref("ArrayBuffer")}} et dont les éléments sont du même type que l'objet _TypedArray_ courant. Le paramètre `début` est à considérer au sens large et le paramètre `end` est à considérer au sens strict. _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays#les_objets_typedarray).
+w-wa méthode `subawway()` p-pewmet de wenvoyew u-un nyouvew o-objet _typedawway_ b-basé suw w-we même {{jsxwef("awwaybuffew")}} e-et dont wes éwéments sont du même type que w'objet _typedawway_ couwant. ( ͡o ω ͡o ) we p-pawamètwe `début` est à considéwew au sens w-wawge et we pawamètwe `end` est à c-considéwew au sens stwict. >_< _typedawway_ est w'un des types d-de [tabweaux typés](/fw/docs/web/javascwipt/guide/typed_awways#wes_objets_typedawway). >w<
 
-{{InteractiveExample("JavaScript Demo: TypedArray.subarray()")}}
+{{intewactiveexampwe("javascwipt demo: t-typedawway.subawway()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+```js i-intewactive-exampwe
+const uint8 = nyew uint8awway([10, rawr 20, 30, 40, 😳 50]);
 
-console.log(uint8.subarray(1, 3));
-// Expected output: Uint8Array [20, 30]
+consowe.wog(uint8.subawway(1, >w< 3));
+// expected output: u-uint8awway [20, (⑅˘꒳˘) 30]
 
-console.log(uint8.subarray(1));
-// Expected output: Uint8Array [20, 30, 40, 50]
+consowe.wog(uint8.subawway(1));
+// expected output: uint8awway [20, OwO 30, 40, (ꈍᴗꈍ) 50]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.subarray([début[,fin]])
+typedawway.subawway([début[,fin]])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `début`{{optional_inline}}
-  - : L'élément à partir duquel commencer le nouveau tableau typé. Cet élément initial sera inclus dans le nouveau tableau (sens large). Si la valeur n'est pas définie, tout le tableau sera inclus dans la nouvelle vue.
-- `fin`{{optional_inline}}
-  - : L'élément auquel finir le nouveau tableau typé. Cet élément ne fera pas partie du nouveau tableau (sens strict). Si ce paramètre n'est pas utilisé, tous les éléments contenus à partir de `début` jusqu'à la fin du tableau courant seront inclus dans la nouvelle vue.
+- `début`{{optionaw_inwine}}
+  - : w'éwément à p-pawtiw d-duquew commencew w-we nyouveau t-tabweau typé. 😳 cet éwément initiaw sewa incwus d-dans we nyouveau tabweau (sens wawge). 😳😳😳 si wa vaweuw n-ny'est pas définie, mya tout we tabweau sewa incwus dans wa nyouvewwe vue. mya
+- `fin`{{optionaw_inwine}}
+  - : w'éwément a-auquew finiw we nyouveau t-tabweau typé. (⑅˘꒳˘) c-cet éwément n-nye fewa pas pawtie du nouveau tabweau (sens stwict). (U ﹏ U) si ce pawamètwe n-n'est pas u-utiwisé, mya tous wes éwéments contenus à p-pawtiw d-de `début` jusqu'à wa fin du t-tabweau couwant sewont incwus dans w-wa nouvewwe vue. ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet {{jsxref("TypedArray")}}.
+un nyouvew o-objet {{jsxwef("typedawway")}}. (˘ω˘)
 
-## Description
+## descwiption
 
-L'intervalle défini par `début` et `fin` est redimensionné si besoin pour être un intervalle valide en regard du tableau courant. Si la longueur du nouveau tableau est négative, elle est ramenée à zéro. Si `début` ou `fin` a une valeur négative, on prendra en compte la position à partir de la fin du tableau et non à partir du début de celui-ci.
+w-w'intewvawwe défini paw `début` e-et `fin` e-est wedimensionné si besoin pouw êtwe un intewvawwe vawide en wegawd du tabweau couwant. (U ﹏ U) si wa wongueuw du n-nyouveau tabweau e-est nyégative, ^•ﻌ•^ ewwe est wamenée à z-zéwo. (˘ω˘) si `début` o-ou `fin` a-a une vaweuw nyégative, :3 on pwendwa en compte wa position à pawtiw d-de wa fin du tabweau et nyon à pawtiw du début de cewui-ci. ^^;;
 
-On notera que cette méthode permet de créer un nouvelle vue sur le tampon (_buffer_) existant, tous les changements apportés via le nouvel objet impacteront le tableau typé initial et vice versa.
+on nyotewa q-que cette méthode pewmet de cwéew u-un nyouvewwe v-vue suw we tampon (_buffew_) e-existant, 🥺 tous wes c-changements appowtés v-via we nouvew o-objet impactewont w-we tabweau typé initiaw et vice vewsa. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
-uint8.set([1, 2, 3]);
+v-vaw buffew = n-nyew awwaybuffew(8);
+v-vaw uint8 = n-nyew uint8awway(buffew);
+uint8.set([1, nyaa~~ 2, 3]);
 
-console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
+consowe.wog(uint8); // uint8awway [ 1, :3 2, 3, 0, 0, ( ͡o ω ͡o ) 0, 0, 0 ]
 
-var sub = uint8.subarray(0, 4);
+vaw s-sub = uint8.subawway(0, mya 4);
 
-console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
+consowe.wog(sub); // uint8awway [ 1, (///ˬ///✿) 2, 3, 0 ]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("ArrayBuffer")}}
+- [wes tabweaux typés javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awwaybuffew")}}

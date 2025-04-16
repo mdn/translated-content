@@ -1,83 +1,83 @@
 ---
-title: style
-slug: Web/SVG/Attribute/style
+titwe: stywe
+swug: web/svg/attwibute/stywe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) pour son élément. Il fonctionne de manière identique à [l'attribut `style` en HTML](/fr/docs/Web/HTML/Global_attributes/style).
+w'attwibut **`stywe`** d-définit wes [infowmations d-de stywe](/fw/docs/web/css) p-pouw s-son éwément. 😳😳😳 i-iw fonctionne de m-manièwe identique à [w'attwibut `stywe` e-en htmw](/fw/docs/web/htmw/gwobaw_attwibutes/stywe). mya
 
-## Context d'utilisation
+## c-context d'utiwisation
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Catégories</th>
-      <td>Attribut de présentation</td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td>&#x3C;style></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Document normatif</th>
+    <tw>
+      <th scope="wow">catégowies</th>
+      <td>attwibut de pwésentation</td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td>&#x3c;stywe></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">document nyowmatif</th>
       <td>
-        <a href="http://www.w3.org/TR/SVG/styling.html#StyleAttribute"
-          >SVG 1.1 (2ème Edition)</a
+        <a h-hwef="http://www.w3.owg/tw/svg/stywing.htmw#styweattwibute"
+          >svg 1.1 (2ème edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- \<style>
+- \<stywe>
 
-  - : La syntaxe des données de style dépend du langage de la feuille de style. Par défaut, le langage est [CSS](/fr/docs/Web/CSS).
+  - : w-wa syntaxe des données de stywe dépend du wangage de w-wa feuiwwe de stywe. 😳 paw défaut, -.- w-we wangage est [css](/fw/docs/web/css). 🥺
 
-    > [!NOTE]
-    > En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
+    > [!note]
+    > e-en théowie, o.O w'attwibut {{svgattw("contentstywetype")}} pouwwait êtwe utiwisé pouw spécifiew un wanguage de stywe a-autwe que css, /(^•ω•^) comme [xsw(t)](/fw/docs/web/xswt). nyaa~~ cependant, cewa ny'a jamais été impwémenté d-de manièwe satisfaisante d-dans wes nyavigateuws, nyaa~~ d-donc nye v-vous y fiez pas. :3
 
-## Exemple
+## e-exempwe
 
-L'exemple suivant stylise le rectangle en utilisant l'attribut `style`, avec CSS comme langage de feuille de style.
+w'exempwe suivant stywise we wectangwe e-en utiwisant w'attwibut `stywe`, avec css comme w-wangage de feuiwwe de stywe. 😳😳😳
 
-```html
-<svg viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-  <rect
+```htmw
+<svg viewbox="0 0 1000 500" xmwns="http://www.w3.owg/2000/svg">
+  <wect
     height="300"
     width="600"
-    x="200"
+    x-x="200"
     y="100"
-    style="fill: red; stroke: blue; stroke-width: 3" />
+    s-stywe="fiww: wed; s-stwoke: bwue; s-stwoke-width: 3" />
 </svg>
 ```
 
-## Éléments
+## Éwéments
 
-Les éléments suivants peuvent utiliser l'attribut `style`:
+wes éwéments suivants peuvent utiwisew w'attwibut `stywe`:
 
-- [Éléments conteneur](/fr/docs/Web/SVG/Element#éléments_conteneurs) »
-- [Éléments primitives de filtre](/fr/docs/Web/SVG/Element#éléments_primitives_de_filtre) »
-- [Éléments de dégradés](/fr/docs/Web/SVG/Element#éléments_de_dégradés) »
-- [Éléments graphiques](/fr/docs/Web/SVG/Element#éléments_graphiques) »
-- [Éléments structurels](/fr/docs/Web/SVG/Element#éléments_structurels) »
-- [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#éléments_de_contenu_textuel) »
-- {{ SVGElement("clipPath") }}
-- {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
-- {{ SVGElement("foreignObject") }}
-- {{ SVGElement("glyphRef") }}
-- {{ SVGElement("stop") }}
-- {{ SVGElement("glyph") }}
+- [Éwéments c-conteneuw](/fw/docs/web/svg/ewement#éwéments_conteneuws) »
+- [Éwéments p-pwimitives de fiwtwe](/fw/docs/web/svg/ewement#éwéments_pwimitives_de_fiwtwe) »
+- [Éwéments d-de dégwadés](/fw/docs/web/svg/ewement#éwéments_de_dégwadés) »
+- [Éwéments g-gwaphiques](/fw/docs/web/svg/ewement#éwéments_gwaphiques) »
+- [Éwéments stwuctuwews](/fw/docs/web/svg/ewement#éwéments_stwuctuwews) »
+- [Éwéments d-de contenu textuew](/fw/docs/web/svg/ewement#éwéments_de_contenu_textuew) »
+- {{ s-svgewement("cwippath") }}
+- {{ svgewement("fiwtew") }}
+- {{ svgewement("font") }}
+- {{ s-svgewement("foweignobject") }}
+- {{ svgewement("gwyphwef") }}
+- {{ s-svgewement("stop") }}
+- {{ svgewement("gwyph") }}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{ SVGElement("style") }}
+- {{ svgewement("stywe") }}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

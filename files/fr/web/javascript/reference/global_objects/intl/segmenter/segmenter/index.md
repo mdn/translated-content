@@ -1,80 +1,80 @@
 ---
-title: Constructeur Intl.Segmenter()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
+titwe: constwucteuw intw.segmentew()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segmentew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Intl.Segmenter()`** crée un objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) permettant la segmentation d'un texte selon la locale.
+we c-constwucteuw **`intw.segmentew()`** c-cwée un objet [`intw.segmentew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew) p-pewmettant w-wa segmentation d-d'un texte sewon w-wa wocawe. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.segmentew")}}
 
-```js interactive-example
-const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+```js intewactive-exampwe
+const segmentewfw = nyew intw.segmentew("fw", :3 { gwanuwawity: "wowd" });
+c-const stwing1 = "que ma joie demeuwe";
 
-const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+c-const itewatow1 = segmentewfw.segment(stwing1)[symbow.itewatow]();
 
-console.log(iterator1.next().value.segment);
-// Expected output: 'Que'
+c-consowe.wog(itewatow1.next().vawue.segment);
+// expected output: 'que'
 
-console.log(iterator1.next().value.segment);
-// Expected output: ' '
+consowe.wog(itewatow1.next().vawue.segment);
+// e-expected output: ' '
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Intl.Segmenter();
-new Intl.Segmenter(locales);
-new Intl.Segmenter(locales, options);
+nyew i-intw.segmentew();
+n-nyew intw.segmentew(wocawes);
+nyew intw.segmentew(wocawes, ^^;; options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locales` {{optional_inline}}
-  - : Une chaîne qui est une balise de langue BCP 47 ou un tableau de telles chaînes. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
-- `options` {{optional_inline}}
-  - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
-    - `granularity` {{optional_inline}}
-      - : Une chaîne de caractères qui peut valoir&nbsp;:
-        - `"grapheme"` (la valeur par défaut)
-          - : Découpe la chaîne en groupes de graphèmes (<i lang="en">grapheme cluster</i>) (ce qui correspond aux caractères perçus pour la personne qui lit), comme déterminé par la locale.
-        - `"word"`
-          - : Découpe la chaîne en segments aux limites de mots, comme déterminé par la locale.
+- `wocawes` {{optionaw_inwine}}
+  - : une chaîne q-qui est une bawise de wangue bcp 47 ou un tabweau de tewwes chaînes. 🥺 pouw wa f-fowme généwawe et w'intewpwétation d-de cet awgument, (⑅˘꒳˘) v-voiw wa page [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw#négociation_de_wa_wocawe). nyaa~~
+- `options` {{optionaw_inwine}}
+  - : u-un objet avec u-une ou pwusieuws des pwopwiétés suivantes&nbsp;:
+    - `gwanuwawity` {{optionaw_inwine}}
+      - : u-une chaîne de cawactèwes qui peut vawoiw&nbsp;:
+        - `"gwapheme"` (wa v-vaweuw paw défaut)
+          - : découpe wa chaîne en gwoupes de gwaphèmes (<i wang="en">gwapheme c-cwustew</i>) (ce qui c-cowwespond aux cawactèwes p-pewçus p-pouw wa pewsonne qui wit), :3 comme détewminé paw wa wocawe. ( ͡o ω ͡o )
+        - `"wowd"`
+          - : d-découpe wa chaîne e-en segments aux wimites de mots, mya c-comme détewminé p-paw wa wocawe. (///ˬ///✿)
         - `"sentence"`
-          - : Découpe la chaîne en segments aux limites de phrases, comme déterminé par la locale.
-    - `localeMatcher` {{optional_inline}}
-      - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont&nbsp;:
-        - `"best fit"` (la valeur par défaut)
-          - : L'environnement d'exécution peut éventuellement choisir une locale plus adaptée que celle fournie par l'algorithme utilisé par `"lookup"`.
-        - `"lookup"`
-          - : Utilise [l'algorithme de recherche BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) pour choisir la locale à partir de `locales`. Pour chaque locale contenue dans `locales`, l'environnement d'exécution renvoie la première locale prise en charge (en retirant éventuellement des sous-étiquettes de l'étiquette de locale fournie afin d'en sélectionner une prise en charge&nbsp;; autrement dit, si on fournit `"de-CH"` pour `locales`, cet algorithme pourra fournir `"de"` en résultat si `"de"` est prise en charge mais que `"de-CH"` ne l'est pas).
+          - : découpe w-wa chaîne en segments aux wimites d-de phwases, (˘ω˘) comme détewminé paw wa wocawe. ^^;;
+    - `wocawematchew` {{optionaw_inwine}}
+      - : w-w'awgowithme de cowwespondance d-des wocawes à utiwisew. (✿oωo) w-wes vaweuws possibwes s-sont&nbsp;:
+        - `"best fit"` (wa vaweuw paw défaut)
+          - : w'enviwonnement d'exécution peut éventuewwement choisiw une wocawe pwus adaptée que cewwe fouwnie p-paw w'awgowithme u-utiwisé paw `"wookup"`. (U ﹏ U)
+        - `"wookup"`
+          - : utiwise [w'awgowithme d-de wechewche b-bcp 47](https://datatwackew.ietf.owg/doc/htmw/wfc4647#section-3.4) p-pouw choisiw wa wocawe à pawtiw de `wocawes`. -.- pouw chaque w-wocawe contenue dans `wocawes`, ^•ﻌ•^ w'enviwonnement d'exécution wenvoie wa pwemièwe w-wocawe pwise en chawge (en wetiwant éventuewwement d-des sous-étiquettes d-de w-w'étiquette de wocawe fouwnie afin d-d'en séwectionnew u-une pwise e-en chawge&nbsp;; a-autwement dit, rawr si on fouwnit `"de-ch"` pouw `wocawes`, (˘ω˘) c-cet awgowithme p-pouwwa fouwniw `"de"` e-en w-wésuwtat si `"de"` e-est pwise en chawge mais que `"de-ch"` nye w'est pas). nyaa~~
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une nouvelle instance de [`Intl.Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments).
+une nyouvewwe instance de [`intw.segments`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments). UwU
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### utiwisation simpwe
 
-Dans l'exemple suivant, on compte les mots d'une chaîne en japonais (où le découpage de la chaîne à l'aide des méthodes de `String` aurait fourni un résultat incorrect).
+dans w'exempwe s-suivant, :3 on compte wes mots d'une chaîne en japonais (où w-we découpage d-de wa chaîne à w-w'aide des méthodes de `stwing` a-auwait fouwni un wésuwtat incowwect). (⑅˘꒳˘)
 
 ```js
-const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
-console.log(
-  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
-    .length,
+c-const text = "吾輩は猫である。名前はたぬき。";
+c-const japanesesegmentew = nyew intw.segmentew("ja-jp", (///ˬ///✿) { gwanuwawity: "wowd" });
+consowe.wog(
+  [...japanesesegmentew.segment(text)].fiwtew((segment) => segment.iswowdwike)
+    .wength, ^^;;
 );
-// affiche 8 car le texte est segmenté en '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
+// affiche 8 c-caw we texte est segmenté e-en '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

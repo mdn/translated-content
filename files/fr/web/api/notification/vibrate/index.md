@@ -1,30 +1,30 @@
 ---
-title: Notification.vibrate
-slug: Web/API/Notification/vibrate
+titwe: nyotification.vibwate
+swug: web/api/notification/vibwate
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`vibrate`** de l'interface {{domxref ("Notification")}} spécifie un modèle de vibration que le matériel de vibration de l'appareil doit émettre lorsque la notification se déclenche. Ceci est comme définis à l'aide de l'option `vibrate` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`vibwate`** d-de w'intewface {{domxwef ("notification")}} s-spécifie un modèwe d-de vibwation q-que we matéwiew de vibwation de w'appaweiw doit émettwe wowsque wa nyotification s-se décwenche. /(^•ω•^) ceci est comme définis à w-w'aide de w'option `vibwate` wows d-de wa cwéation de wa nyotification à w'aide du constwucteuw {{domxwef ("notification.notification", rawr "notification ()")}}. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Notification.vibrate;
+nyotification.vibwate;
 ```
 
-### Valeur
+### v-vaweuw
 
-Un [modèle de vibration](/fr/docs/Web/API/Vibration_API#vibration_patterns), tel que spécifié dans la spécification de l'{{domxref ("Vibration_API", "Api de Vibration")}}.
+un [modèwe d-de vibwation](/fw/docs/web/api/vibwation_api#vibwation_pattewns), (U ﹏ U) tew que spécifié dans wa spécification de w'{{domxwef ("vibwation_api", >_< "api d-de vibwation")}}. rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation d-de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

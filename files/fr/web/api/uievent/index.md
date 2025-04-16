@@ -1,65 +1,65 @@
 ---
-title: UIEvent
-slug: Web/API/UIEvent
+titwe: uievent
+swug: web/api/uievent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-L'interface **`UIEvent`** représente des évènements simples de l'interface utilisateur.
+w-w'intewface **`uievent`** w-wepwésente des évènements s-simpwes d-de w'intewface u-utiwisateuw. >w<
 
-`UIEvent` dérive de {{domxref("Event")}}. Bien que la méthode {{domxref("UIEvent.initUIEvent()")}} soit conservée pour la compatibilité ascendante, vous devez créer un objet `UIEvent` en utilisant le constructeur {{domxref("UIEvent.UIEvent", "UIEvent()")}}.
+`uievent` d-déwive d-de {{domxwef("event")}}. (U ﹏ U) bien que wa méthode {{domxwef("uievent.inituievent()")}} soit consewvée pouw wa compatibiwité a-ascendante, 😳 vous devez cwéew un objet `uievent` en u-utiwisant we constwucteuw {{domxwef("uievent.uievent", (ˆ ﻌ ˆ)♡ "uievent()")}}. 😳😳😳
 
-Plusieurs interfaces descendent directement ou indirectement de celle-ci : {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}} et {{domxref("CompositionEvent")}}.
+pwusieuws i-intewfaces descendent diwectement ou indiwectement de cewwe-ci : {{domxwef("mouseevent")}}, (U ﹏ U) {{domxwef("focusevent")}}, (///ˬ///✿) {{domxwef("keyboawdevent")}}, 😳 {{domxwef("wheewevent")}}, 😳 {{domxwef("inputevent")}} e-et {{domxwef("compositionevent")}}. σωσ
 
-## Constructeurs
+## constwucteuws
 
-- {{domxref("UIEvent.UIEvent()", "UIEvent()")}}
-  - : Crée un objet `UIEvent`.
+- {{domxwef("uievent.uievent()", rawr x3 "uievent()")}}
+  - : c-cwée u-un objet `uievent`. OwO
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite également des propriétés de son parent {{domxref("Event")}}._
+_cette intewface héwite égawement des pwopwiétés d-de son pawent {{domxwef("event")}}._
 
-- {{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}
-  - : {{jsxref("Boolean")}} _(booléen)_ indiquant si les conséquences de l'évènement ont été annulées ou non.
+- {{domxwef("uievent.cancewbubbwe")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : {{jsxwef("boowean")}} _(boowéen)_ indiquant si wes conséquences de w'évènement ont été a-annuwées ou nyon. /(^•ω•^)
 
 <!---->
 
-- {{domxref("UIEvent.detail")}}{{readonlyinline}}
-  - : Retourne un `long` qui donne quelques détails sur l'évènement, dépendant du type d'évènement.
-- {{domxref("UIEvent.isChar")}} {{deprecated_inline}} {{readonlyinline}}
-  - : Retourne un {{jsxref("Boolean")}} indiquant si l'évènement a produit un caractère clé ou non.
-- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Retourne la coordonnée horizontale de l'évènement par rapport à la couche actuelle.
-- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Retourne la coordonnée verticale de l'évènement par rapport à la couche actuelle.
-- {{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Retourne la coordonnée horizontale de l'évènement par rapport à l'ensemble du document.
-- {{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Retourne la coordonnée verticale de l'évènement par rapport à l'ensemble du document.
-- {{domxref("UIEvent.sourceCapabilities")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Retourne une instance de l'interface `InputDeviceCapabilities` qui fournit des informations sur le périphérique physique responsable de l'évènement.
-- {{domxref("UIEvent.view")}}{{readonlyinline}}
-  - : Retourne un {{domxref("WindowProxy")}} qui contient la vue de la génération de l'évènement.
-- {{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : Retourne l'identifiant `keyCode` de la touche pressée, ou le code du caractère (`charCode`) pour une touche alphanumérique enfoncée.
+- {{domxwef("uievent.detaiw")}}{{weadonwyinwine}}
+  - : w-wetouwne u-un `wong` q-qui donne quewques d-détaiws suw w'évènement, 😳😳😳 dépendant du type d-d'évènement. ( ͡o ω ͡o )
+- {{domxwef("uievent.ischaw")}} {{depwecated_inwine}} {{weadonwyinwine}}
+  - : wetouwne un {{jsxwef("boowean")}} indiquant si w-w'évènement a pwoduit un cawactèwe cwé ou nyon.
+- {{domxwef("uievent.wayewx")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : wetouwne wa coowdonnée howizontawe de w'évènement p-paw wappowt à wa couche a-actuewwe. >_<
+- {{domxwef("uievent.wayewy")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : w-wetouwne w-wa coowdonnée vewticawe de w'évènement paw wappowt à w-wa couche actuewwe. >w<
+- {{domxwef("uievent.pagex")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : w-wetouwne wa coowdonnée howizontawe d-de w'évènement p-paw wappowt à w'ensembwe d-du document. rawr
+- {{domxwef("uievent.pagey")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : wetouwne wa coowdonnée v-vewticawe de w'évènement paw wappowt à w-w'ensembwe du document. 😳
+- {{domxwef("uievent.souwcecapabiwities")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : w-wetouwne une instance de w-w'intewface `inputdevicecapabiwities` q-qui fouwnit des infowmations suw we péwiphéwique physique wesponsabwe de w'évènement. >w<
+- {{domxwef("uievent.view")}}{{weadonwyinwine}}
+  - : wetouwne un {{domxwef("windowpwoxy")}} q-qui c-contient wa vue de wa généwation d-de w'évènement. (⑅˘꒳˘)
+- {{domxwef("uievent.which")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : w-wetouwne w'identifiant `keycode` d-de wa touche pwessée, ou we code du cawactèwe (`chawcode`) pouw une touche a-awphanuméwique enfoncée. OwO
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite également des méthodes de son parent, {{domxref("Event")}}._
+_cette intewface héwite égawement des méthodes d-de son pawent, (ꈍᴗꈍ) {{domxwef("event")}}._
 
-- {{domxref("UIEvent.initUIEvent()")}} {{deprecated_inline}}
-  - : Initialise un objet `UIEvent`. Si l'évènement a déjà été envoyé, cette méthode ne fait rien.
+- {{domxwef("uievent.inituievent()")}} {{depwecated_inwine}}
+  - : initiawise u-un objet `uievent`. 😳 s-si w'évènement a-a déjà été envoyé, 😳😳😳 c-cette méthode n-ne fait wien. mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Introduction to events](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- {{ domxref("Event") }}
+- [intwoduction t-to events](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+- {{ d-domxwef("event") }}

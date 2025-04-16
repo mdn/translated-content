@@ -1,163 +1,163 @@
 ---
-title: <feComponentTransfer>
-slug: Web/SVG/Element/feComponentTransfer
+titwe: <fecomponenttwansfew>
+swug: web/svg/ewement/fecomponenttwansfew
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feComponentTransfer>`** permet d'effectuer un remappage des composantes de couleur (rouge, bleu, vert et alpha) de chaque pixel. Cela permet notamment de régler la luminosité, le constraste, la balance des couleurs ou encore le seuillage.
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fecomponenttwansfew>`** p-pewmet d'effectuew u-un wemappage d-des composantes d-de couweuw (wouge, mya b-bweu, vewt e-et awpha) de chaque pixew. mya cewa pewmet nyotamment de wégwew wa wuminosité, (⑅˘꒳˘) w-we constwaste, (U ﹏ U) wa bawance des couweuws ou encowe w-we seuiwwage. mya
 
-Les calculs sont effectués sur les valeurs de couleur non prémultipliées. Chaque canal de couleur est modifié en utilisant le résultat des éléments {{SVGElement("feFuncR")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, et {{SVGElement("feFuncA")}} placés à l'intérieur de la balise.
+wes cawcuws sont e-effectués suw wes vaweuws de couweuw nyon pwémuwtipwiées. ʘwʘ chaque canaw de couweuw e-est modifié en utiwisant w-we wésuwtat des éwéments {{svgewement("fefuncw")}}, (˘ω˘) {{svgewement("fefuncb")}}, (U ﹏ U) {{svgewement("fefuncg")}}, ^•ﻌ•^ e-et {{svgewement("fefunca")}} pwacés à w'intéwieuw de wa bawise. (˘ω˘)
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## a-attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts de base](/fw/docs/web/svg/attwibute#attwibuts_de_base)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts d-de pwimitive de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### attwibuts s-spécifiques
 
-- {{SVGAttr("in")}}
+- {{svgattw("in")}}
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("SVGFEComponentTransferElement")}}.
+cet éwément i-impwémente w-w'intewface {{domxwef("svgfecomponenttwansfewewement")}}. :3
 
-## Exemple
+## exempwe
 
-### SVG
+### svg
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+```htmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" viewbox="0 0 600 300">
   <defs>
-    <linearGradient
-      id="rainbow"
-      gradientUnits="userSpaceOnUse"
+    <wineawgwadient
+      id="wainbow"
+      g-gwadientunits="usewspaceonuse"
       x1="0"
       y1="0"
       x2="100%"
       y2="0">
-      <stop offset="0" stop-color="#ff0000"></stop>
-      <stop offset="0.2" stop-color="#ffff00"></stop>
-      <stop offset="0.4" stop-color="#00ff00"></stop>
-      <stop offset="0.6" stop-color="#00ffff"></stop>
-      <stop offset="0.8" stop-color="#0000ff"></stop>
-      <stop offset="1" stop-color="#800080"></stop>
-    </linearGradient>
-    <filter id="identity" x="0" y="0" width="100%" height="100%">
-      <feComponentTransfer>
-        <feFuncR type="identity"></feFuncR>
-        <feFuncG type="identity"></feFuncG>
-        <feFuncB type="identity"></feFuncB>
-        <feFuncA type="identity"></feFuncA>
-      </feComponentTransfer>
-    </filter>
-    <filter id="table" x="0" y="0" width="100%" height="100%">
-      <feComponentTransfer>
-        <feFuncR type="table" tableValues="0 0 1 1"></feFuncR>
-        <feFuncG type="table" tableValues="1 1 0 0"></feFuncG>
-        <feFuncB type="table" tableValues="0 1 1 0"></feFuncB>
-      </feComponentTransfer>
-    </filter>
-    <filter id="linear" x="0" y="0" width="100%" height="100%">
-      <feComponentTransfer>
-        <feFuncR type="linear" slope="0.5" intercept="0"></feFuncR>
-        <feFuncG type="linear" slope="0.5" intercept="0.25"></feFuncG>
-        <feFuncB type="linear" slope="0.5" intercept="0.5"></feFuncB>
-      </feComponentTransfer>
-    </filter>
-    <filter id="gamma" x="0" y="0" width="100%" height="100%">
-      <feComponentTransfer>
-        <feFuncR type="gamma" amplitude="4" exponent="7" offset="0"></feFuncR>
-        <feFuncG type="gamma" amplitude="4" exponent="4" offset="0"></feFuncG>
-        <feFuncB type="gamma" amplitude="4" exponent="1" offset="0"></feFuncB>
-      </feComponentTransfer>
-    </filter>
+      <stop offset="0" s-stop-cowow="#ff0000"></stop>
+      <stop offset="0.2" s-stop-cowow="#ffff00"></stop>
+      <stop o-offset="0.4" stop-cowow="#00ff00"></stop>
+      <stop o-offset="0.6" stop-cowow="#00ffff"></stop>
+      <stop offset="0.8" stop-cowow="#0000ff"></stop>
+      <stop o-offset="1" stop-cowow="#800080"></stop>
+    </wineawgwadient>
+    <fiwtew i-id="identity" x="0" y-y="0" width="100%" h-height="100%">
+      <fecomponenttwansfew>
+        <fefuncw type="identity"></fefuncw>
+        <fefuncg t-type="identity"></fefuncg>
+        <fefuncb type="identity"></fefuncb>
+        <fefunca t-type="identity"></fefunca>
+      </fecomponenttwansfew>
+    </fiwtew>
+    <fiwtew id="tabwe" x="0" y="0" width="100%" h-height="100%">
+      <fecomponenttwansfew>
+        <fefuncw type="tabwe" t-tabwevawues="0 0 1 1"></fefuncw>
+        <fefuncg type="tabwe" t-tabwevawues="1 1 0 0"></fefuncg>
+        <fefuncb t-type="tabwe" tabwevawues="0 1 1 0"></fefuncb>
+      </fecomponenttwansfew>
+    </fiwtew>
+    <fiwtew id="wineaw" x="0" y="0" width="100%" height="100%">
+      <fecomponenttwansfew>
+        <fefuncw type="wineaw" swope="0.5" i-intewcept="0"></fefuncw>
+        <fefuncg type="wineaw" s-swope="0.5" intewcept="0.25"></fefuncg>
+        <fefuncb t-type="wineaw" s-swope="0.5" i-intewcept="0.5"></fefuncb>
+      </fecomponenttwansfew>
+    </fiwtew>
+    <fiwtew id="gamma" x="0" y="0" width="100%" height="100%">
+      <fecomponenttwansfew>
+        <fefuncw t-type="gamma" ampwitude="4" exponent="7" offset="0"></fefuncw>
+        <fefuncg type="gamma" ampwitude="4" exponent="4" o-offset="0"></fefuncg>
+        <fefuncb type="gamma" ampwitude="4" e-exponent="1" o-offset="0"></fefuncb>
+      </fecomponenttwansfew>
+    </fiwtew>
   </defs>
 
-  <g font-weight="bold">
-    <text x="0" y="5%">Default</text>
-    <rect x="0" y="8%" width="100%" height="20"></rect>
-    <text x="0" y="26%">Identity</text>
-    <rect
+  <g f-font-weight="bowd">
+    <text x="0" y="5%">defauwt</text>
+    <wect x-x="0" y-y="8%" width="100%" h-height="20"></wect>
+    <text x-x="0" y="26%">identity</text>
+    <wect
       x="0"
       y="29%"
       width="100%"
-      height="20"
-      style="filter:url(#identity)"></rect>
-    <text x="0" y="47%">Table lookup</text>
-    <rect
-      x="0"
+      h-height="20"
+      s-stywe="fiwtew:uww(#identity)"></wect>
+    <text x-x="0" y="47%">tabwe w-wookup</text>
+    <wect
+      x-x="0"
       y="50%"
       width="100%"
       height="20"
-      style="filter:url(#table)"></rect>
-    <text x="0" y="68%">Linear function</text>
-    <rect
+      stywe="fiwtew:uww(#tabwe)"></wect>
+    <text x-x="0" y="68%">wineaw function</text>
+    <wect
       x="0"
       y="71%"
       width="100%"
       height="20"
-      style="filter:url(#linear)"></rect>
-    <text x="0" y="89%">Gamma function</text>
-    <rect
+      stywe="fiwtew:uww(#wineaw)"></wect>
+    <text x-x="0" y="89%">gamma function</text>
+    <wect
       x="0"
       y="92%"
-      width="100%"
-      height="20"
-      style="filter:url(#gamma)"></rect>
+      w-width="100%"
+      h-height="20"
+      s-stywe="fiwtew:uww(#gamma)"></wect>
   </g>
 </svg>
 ```
 
-### CSS
+### css
 
 ```css
-rect {
-  fill: url(#rainbow);
+wect {
+  f-fiww: uww(#wainbow);
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", "100%", 340)}}
+{{embedwivesampwe("exempwe", ^^;; "100%", 340)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

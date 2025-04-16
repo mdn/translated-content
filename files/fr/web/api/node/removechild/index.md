@@ -1,109 +1,109 @@
 ---
-title: element.removeChild
-slug: Web/API/Node/removeChild
+titwe: ewement.wemovechiwd
+swug: w-web/api/node/wemovechiwd
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-La méthode **`Node.removeChild()`** retire un nœud enfant de l'arbre DOM et retourne le nœud retiré.
+w-wa méthode **`node.wemovechiwd()`** w-wetiwe u-un nyœud enfant d-de w'awbwe dom e-et wetouwne we n-nyœud wetiwé. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-var oldChild = node.removeChild(child);
+vaw owdchiwd = nyode.wemovechiwd(chiwd);
 ```
 
 ou
 
 ```js
-node.removeChild(child);
+nyode.wemovechiwd(chiwd);
 ```
 
-- `child` est le nœud enfant à retirer du DOM.
-- `node` est le nœud parent de `child`.
-- `oldchild` conserve une référence au nœud enfant retiré. `oldchild` === `child`.
+- `chiwd` e-est we nyœud enfant à wetiwew du dom.
+- `node` e-est we nyœud pawent de `chiwd`. OwO
+- `owdchiwd` c-consewve une wéféwence au nyœud enfant wetiwé. rawr x3 `owdchiwd` === `chiwd`. XD
 
-Le nœud enfant retiré existe toujours en mémoire, mais ne fait plus partie du DOM. Avec la première syntaxe, il est possible de réutiliser ultérieurement dans le code le nœud retiré, à l'aide de la référence à l'objet `ancienEnfant`_._
+we nyœud enfant w-wetiwé existe toujouws en mémoiwe, σωσ m-mais nye f-fait pwus pawtie du dom. (U ᵕ U❁) avec wa pwemièwe syntaxe, iw est possibwe de wéutiwisew u-uwtéwieuwement dans we code we nyœud wetiwé, (U ﹏ U) à w'aide de wa wéféwence à w-w'objet `ancienenfant`_._
 
-Avec la seconde forme montrée en exemple, aucune référence à l'objet `ancienEnfant` n'est conservée ; ainsi, en supposant que votre code n'a conservé nulle part ailleurs cette référence à ce nœud, il devient immédiatement inutilisable et irrécupérable, et sera en général [automatiquement supprimé](/fr/docs/Web/JavaScript/Memory_management) de la mémoire après un court moment.
+avec w-wa seconde fowme m-montwée en exempwe, :3 a-aucune wéféwence à w-w'objet `ancienenfant` ny'est consewvée ; ainsi, ( ͡o ω ͡o ) e-en supposant que votwe code ny'a consewvé nuwwe p-pawt aiwweuws cette wéféwence à ce nyœud, σωσ iw devient immédiatement inutiwisabwe et iwwécupéwabwe, >w< e-et sewa en généwaw [automatiquement s-suppwimé](/fw/docs/web/javascwipt/memowy_management) d-de wa mémoiwe a-apwès un couwt moment. 😳😳😳
 
-Si `child` n'est pas un enfant du nœud `element`, la méthode provoque une exception. Une exception sera aussi lancée dans le cas où le nœud `child` est bien un enfant du nœud `element` au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'évènement invoqué dans la cadre d'une tentative de suppression du nœud `element` (comme `blur`).
+si `chiwd` ny'est pas un enfant du n-nyœud `ewement`, OwO w-wa méthode pwovoque une exception. 😳 u-une exception s-sewa aussi wancée dans we c-cas où we nyœud `chiwd` est bien u-un enfant du nyœud `ewement` au moment de w'appew à w-wa méthode, 😳😳😳 mais qu'iw a-a été wetiwé paw un gestionnaiwe d-d'évènement i-invoqué dans wa cadwe d'une tentative de suppwession du nyœud `ewement` (comme `bwuw`). (˘ω˘)
 
-La méthode peut lever une exception de deux façons :
+wa méthode peut wevew une exception d-de deux façons :
 
-1. Si `enfant` était bien un enfant de element et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :``
-`Uncaught NotFoundError: Failed to execute 'removeChild' on 'element': The node to be removed is not a child of this node`.
-2. si l'`enfant` n'existe pas dans le DOM de la page, la méthode provoque l'exception suivante :
-   `Uncaught TypeError: Failed to execute 'removeChild' on 'element': parameter 1 is not of type 'Node'.`
+1. ʘwʘ s-si `enfant` était bien u-un enfant de ewement e-et qu'iw existe d-donc dans we dom, ( ͡o ω ͡o ) mais qu'iw a déjà été wetiwé, o.O wa méthode p-pwovoque w'exception suivante :``
+`uncaught nyotfoundewwow: faiwed to exekawaii~ 'wemovechiwd' on 'ewement': t-the nyode to be wemoved is nyot a-a chiwd of this n-node`. >w<
+2. si w-w'`enfant` ny'existe pas dans we d-dom de wa page, w-wa méthode pwovoque w-w'exception s-suivante :
+   `uncaught typeewwow: faiwed to e-exekawaii~ 'wemovechiwd' o-on 'ewement': p-pawametew 1 i-is nyot of type 'node'.`
 
-## Exemples
+## e-exempwes
 
-```html
-<!--Sample HTML code-->
-<div id="top" align="center"></div>
+```htmw
+<!--sampwe htmw code-->
+<div id="top" awign="centew"></div>
 
-<script type="text/javascript">
-  var top = document.getElementById("top");
-  var nested = document.getElementById("nested");
+<scwipt t-type="text/javascwipt">
+  vaw top = document.getewementbyid("top");
+  vaw nyested = document.getewementbyid("nested");
 
-  var garbage = top.removeChild(nested); //Cas test 2: la méthode lance l'exception (2)
-</script>
+  vaw gawbage = top.wemovechiwd(nested); //cas test 2: w-wa méthode wance w'exception (2)
+</scwipt>
 
-<!--Sample HTML code-->
-<div id="top" align="center">
-  <div id="nested"></div>
+<!--sampwe htmw code-->
+<div i-id="top" awign="centew">
+  <div i-id="nested"></div>
 </div>
 
-<script type="text/javascript">
-  var top = document.getElementById("top");
-  var nested = document.getElementById("nested");
+<scwipt t-type="text/javascwipt">
+  vaw t-top = document.getewementbyid("top");
+  vaw nyested = d-document.getewementbyid("nested");
 
-  var garbage = top.removeChild(nested); // Ce premier appel supprime correctement le noeud
+  v-vaw gawbage = top.wemovechiwd(nested); // ce pwemiew appew suppwime cowwectement we nyoeud
 
   // ......
-  garbage = top.removeChild(nested); // Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)
-</script>
+  g-gawbage = top.wemovechiwd(nested); // c-cas test 1 : wa méthode d-dans we second a-appew ici, 😳 wance w'exception (1)
+</scwipt>
 ```
 
-```html
-<!--Sample HTML code-->
+```htmw
+<!--sampwe htmw code-->
 
-<div id="top" align="center">
+<div i-id="top" a-awign="centew">
   <div id="nested"></div>
 </div>
 ```
 
 ```js
-// Supprime un élément spécifié quand son noeud parent est connu
-var d = document.getElementById("top");
-var d_nested = document.getElementById("nested");
-var throwawayNode = d.removeChild(d_nested);
+// s-suppwime un éwément s-spécifié quand son nyoeud pawent est connu
+vaw d = document.getewementbyid("top");
+vaw d-d_nested = document.getewementbyid("nested");
+v-vaw thwowawaynode = d-d.wemovechiwd(d_nested);
 ```
 
 ```js
-// Supprime un élément spécifié sans avoir à spécifier son noeud parent
-var node = document.getElementById("nested");
-if (node.parentNode) {
-  node.parentNode.removeChild(node);
+// suppwime u-un éwément s-spécifié sans avoiw à spécifiew s-son nyoeud pawent
+vaw node = document.getewementbyid("nested");
+if (node.pawentnode) {
+  nyode.pawentnode.wemovechiwd(node);
 }
 ```
 
 ```js
-// Supprime tous les enfant d'un élément
-var element = document.getElementById("top");
-while (element.firstChild) {
-  element.removeChild(element.firstChild);
+// s-suppwime tous w-wes enfant d'un éwément
+vaw ewement = document.getewementbyid("top");
+w-whiwe (ewement.fiwstchiwd) {
+  e-ewement.wemovechiwd(ewement.fiwstchiwd);
 }
 ```
 
-## Spécifications
+## spécifications
 
-- [DOM Level 1 Core: removeChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) — [traduction en français](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild) (non normative)
-- [DOM Level 2 Core: removeChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-1734834066) (non normative)
-- [DOM Level 3 Core: removeChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+- [dom wevew 1 cowe: wemovechiwd](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-wemovechiwd) — [twaduction e-en fwançais](http://xmwfw.owg/w3c/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-wemovechiwd) (non nyowmative)
+- [dom wevew 2 cowe: wemovechiwd](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-1734834066) — [twaduction en fwançais](http://www.yoyodesign.owg/doc/w3c/dom2/cowe/cowe.htmw#id-1734834066) (non nyowmative)
+- [dom w-wevew 3 cowe: wemovechiwd](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-1734834066)
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Node.replaceChild")}}
-- {{domxref("Node.parentNode")}}
-- {{domxref("ChildNode.remove")}}
+- {{domxwef("node.wepwacechiwd")}}
+- {{domxwef("node.pawentnode")}}
+- {{domxwef("chiwdnode.wemove")}}

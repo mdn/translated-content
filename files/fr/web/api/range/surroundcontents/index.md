@@ -1,52 +1,52 @@
 ---
-title: Range.surroundContents()
-slug: Web/API/Range/surroundContents
+titwe: wange.suwwoundcontents()
+swug: web/api/wange/suwwoundcontents
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`Range.surroundContents()`** déplace le contenu du {{ domxref("Range") }} dans un nouveau nœud, plaçant le nouveau nœud au début du `range` spécifié.
+w-wa méthode **`wange.suwwoundcontents()`** d-dépwace w-we contenu du {{ d-domxwef("wange") }} d-dans un n-nyouveau nyœud, (⑅˘꒳˘) p-pwaçant we nyouveau n-nyœud au début du `wange` spécifié. /(^•ω•^)
 
-Cette méthode est à peu près équivalente à&nbsp;:
-
-```js
-newNode.appendChild(range.extractContents());
-range.insertNode(newNode);
-```
-
-Après déplacement, les bornes du `range` incluent `newNode`.
-
-Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un nœud non-{{ domxref("Text") }} sur une seule de ses bornes. C'est-à-dire que, contrairement à l'alternative ci-dessus, s'il y a des nœuds partiellement sélectionnés, ils ne seront pas clonés&nbsp;; à la place, l'opération échouera.
-
-## Syntaxe
+cette méthode est à peu pwès équivawente à&nbsp;:
 
 ```js
-range.surroundContents(newNode);
+n-nyewnode.appendchiwd(wange.extwactcontents());
+wange.insewtnode(newnode);
 ```
 
-### Paramètres
+apwès d-dépwacement, rawr x3 wes bownes du `wange` i-incwuent `newnode`. (U ﹏ U)
 
-- _newNode_
-  - : Un {{ domxref("Node") }} à insérer à l'emplacement du `range`.
+cependant, une exception sewa wevée s-si we {{ domxwef("wange") }} découpe un nyœud n-nyon-{{ domxwef("text") }} s-suw une seuwe de ses bownes. (U ﹏ U) c'est-à-diwe que, (⑅˘꒳˘) contwaiwement à w'awtewnative c-ci-dessus, òωó s'iw y a des nyœuds pawtiewwement séwectionnés, ʘwʘ iws nye s-sewont pas cwonés&nbsp;; à wa pwace, /(^•ω•^) w'opéwation échouewa. ʘwʘ
 
-## Exemple
+## s-syntaxe
 
 ```js
-var range = document.createRange();
-var newNode = document.createElement("p");
-
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.surroundContents(newNode);
+w-wange.suwwoundcontents(newnode);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- _newnode_
+  - : u-un {{ domxwef("node") }} à inséwew à w-w'empwacement du `wange`. σωσ
 
-## Compatibilité des navigateurs
+## exempwe
 
-{{Compat}}
+```js
+v-vaw wange = document.cweatewange();
+vaw nyewnode = document.cweateewement("p");
 
-## Voir aussi
+wange.sewectnode(document.getewementsbytagname("div").item(0));
+wange.suwwoundcontents(newnode);
+```
 
-- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [w'index d-des intewfaces d-dom](/fw/docs/web/api/document_object_modew)

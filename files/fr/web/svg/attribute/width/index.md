@@ -1,737 +1,737 @@
 ---
-title: width
-slug: Web/SVG/Attribute/width
+titwe: width
+swug: web/svg/attwibute/width
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`width`** définit la longueur horizontale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.
+w'attwibut **`width`** d-définit wa w-wongueuw howizontawe d-d'un éwément d-dans we système d-des coowdonnées d-de w'utiwisatwice o-ou w'utiwisateuw. OwO
 
-Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
+c-cet attwibut peut êtwe utiwisé avec wes éwéments svg suivants&nbsp;:
 
-- [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend)
-- [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix)
-- [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer)
-- [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite)
-- [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix)
-- [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting)
-- [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap)
-- [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow)
-- [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood)
-- [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur)
-- [`<feImage>`](/fr/docs/Web/SVG/Element/feImage)
-- [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge)
-- [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology)
-- [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset)
-- [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting)
-- [`<feTile>`](/fr/docs/Web/SVG/Element/feTile)
-- [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence)
-- [`<filter>`](/fr/docs/Web/SVG/Element/filter)
-- [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject)
-- [`<image>`](/fr/docs/Web/SVG/Element/image)
-- [`<mask>`](/fr/docs/Web/SVG/Element/mask)
-- [`<pattern>`](/fr/docs/Web/SVG/Element/pattern)
-- [`<rect>`](/fr/docs/Web/SVG/Element/rect)
-- [`<svg>`](/fr/docs/Web/SVG/Element/svg)
-- [`<use>`](/fr/docs/Web/SVG/Element/use)
+- [`<febwend>`](/fw/docs/web/svg/ewement/febwend)
+- [`<fecowowmatwix>`](/fw/docs/web/svg/ewement/fecowowmatwix)
+- [`<fecomponenttwansfew>`](/fw/docs/web/svg/ewement/fecomponenttwansfew)
+- [`<fecomposite>`](/fw/docs/web/svg/ewement/fecomposite)
+- [`<feconvowvematwix>`](/fw/docs/web/svg/ewement/feconvowvematwix)
+- [`<fediffusewighting>`](/fw/docs/web/svg/ewement/fediffusewighting)
+- [`<fedispwacementmap>`](/fw/docs/web/svg/ewement/fedispwacementmap)
+- [`<fedwopshadow>`](/fw/docs/web/svg/ewement/fedwopshadow)
+- [`<fefwood>`](/fw/docs/web/svg/ewement/fefwood)
+- [`<fegaussianbwuw>`](/fw/docs/web/svg/ewement/fegaussianbwuw)
+- [`<feimage>`](/fw/docs/web/svg/ewement/feimage)
+- [`<femewge>`](/fw/docs/web/svg/ewement/femewge)
+- [`<femowphowogy>`](/fw/docs/web/svg/ewement/femowphowogy)
+- [`<feoffset>`](/fw/docs/web/svg/ewement/feoffset)
+- [`<fespecuwawwighting>`](/fw/docs/web/svg/ewement/fespecuwawwighting)
+- [`<fetiwe>`](/fw/docs/web/svg/ewement/fetiwe)
+- [`<fetuwbuwence>`](/fw/docs/web/svg/ewement/fetuwbuwence)
+- [`<fiwtew>`](/fw/docs/web/svg/ewement/fiwtew)
+- [`<foweignobject>`](/fw/docs/web/svg/ewement/foweignobject)
+- [`<image>`](/fw/docs/web/svg/ewement/image)
+- [`<mask>`](/fw/docs/web/svg/ewement/mask)
+- [`<pattewn>`](/fw/docs/web/svg/ewement/pattewn)
+- [`<wect>`](/fw/docs/web/svg/ewement/wect)
+- [`<svg>`](/fw/docs/web/svg/ewement/svg)
+- [`<use>`](/fw/docs/web/svg/ewement/use)
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
-body,
+h-htmw, o.O
+body, 😳😳😳
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Avec une largeur de 0 ou inférieure, rien ne sera affichée -->
-  <rect x="0" y="0" width="0" height="90" />
-  <rect x="0" y="100" width="60" height="90" />
-  <rect x="0" y="200" width="100%" height="90" />
+```htmw
+<svg viewbox="0 0 100 300" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- avec u-une wawgeuw de 0 ou inféwieuwe, /(^•ω•^) wien nye sewa affichée -->
+  <wect x-x="0" y="0" width="0" height="90" />
+  <wect x-x="0" y="100" w-width="60" height="90" />
+  <wect x="0" y="200" width="100%" height="90" />
 </svg>
 ```
 
-{{EmbedLiveSample("", '100%', 200)}}
+{{embedwivesampwe("", OwO '100%', ^^ 200)}}
 
-## `<feBlend>`
+## `<febwend>`
 
-Pour [`<feBlend>`](/fr/docs/Web/SVG/Element/feBlend), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<febwend>`](/fw/docs/web/svg/ewement/febwend), (///ˬ///✿) `width` définit w-wa wongueuw howizontawe de wa zone de wendu de wa pwimitive. (///ˬ///✿)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw d-défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feColorMatrix>`
+## `<fecowowmatwix>`
 
-Pour [`<feColorMatrix>`](/fr/docs/Web/SVG/Element/feColorMatrix), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+p-pouw [`<fecowowmatwix>`](/fw/docs/web/svg/ewement/fecowowmatwix), (///ˬ///✿) `width` définit wa wongueuw howizontawe d-de wa zone de wendu de wa pwimitive. ʘwʘ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feComponentTransfer>`
+## `<fecomponenttwansfew>`
 
-Pour [`<feComponentTransfer>`](/fr/docs/Web/SVG/Element/feComponentTransfer), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+p-pouw [`<fecomponenttwansfew>`](/fw/docs/web/svg/ewement/fecomponenttwansfew), `width` définit wa wongueuw howizontawe de wa zone d-de wendu de wa pwimitive.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feComposite>`
+## `<fecomposite>`
 
-Pour [`<feComposite>`](/fr/docs/Web/SVG/Element/feComposite), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+p-pouw [`<fecomposite>`](/fw/docs/web/svg/ewement/fecomposite), ^•ﻌ•^ `width` définit wa wongueuw howizontawe d-de wa zone de wendu de wa pwimitive. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feConvolveMatrix>`
+## `<feconvowvematwix>`
 
-Pour [`<feConvolveMatrix>`](/fr/docs/Web/SVG/Element/feConvolveMatrix), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<feconvowvematwix>`](/fw/docs/web/svg/ewement/feconvowvematwix), (U ﹏ U) `width` définit w-wa wongueuw h-howizontawe de wa zone de wendu d-de wa pwimitive. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feDiffuseLighting>`
+## `<fediffusewighting>`
 
-Pour [`<feDiffuseLighting>`](/fr/docs/Web/SVG/Element/feDiffuseLighting), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fediffusewighting>`](/fw/docs/web/svg/ewement/fediffusewighting), (⑅˘꒳˘) `width` définit wa wongueuw howizontawe d-de wa zone de wendu de w-wa pwimitive. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feDisplacementMap>`
+## `<fedispwacementmap>`
 
-Pour [`<feDisplacementMap>`](/fr/docs/Web/SVG/Element/feDisplacementMap), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fedispwacementmap>`](/fw/docs/web/svg/ewement/fedispwacementmap), o.O `width` d-définit w-wa wongueuw howizontawe d-de wa zone d-de wendu de wa p-pwimitive. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feDropShadow>`
+## `<fedwopshadow>`
 
-Pour [`<feDropShadow>`](/fr/docs/Web/SVG/Element/feDropShadow), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fedwopshadow>`](/fw/docs/web/svg/ewement/fedwopshadow), XD `width` d-définit wa wongueuw howizontawe de wa zone de wendu de wa p-pwimitive.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feFlood>`
+## `<fefwood>`
 
-Pour [`<feFlood>`](/fr/docs/Web/SVG/Element/feFlood), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fefwood>`](/fw/docs/web/svg/ewement/fefwood), òωó `width` définit wa wongueuw howizontawe de wa zone d-de wendu de wa pwimitive. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feGaussianBlur>`
+## `<fegaussianbwuw>`
 
-Pour [`<feGaussianBlur>`](/fr/docs/Web/SVG/Element/feGaussianBlur), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fegaussianbwuw>`](/fw/docs/web/svg/ewement/fegaussianbwuw), :3 `width` définit w-wa wongueuw h-howizontawe de wa zone de wendu de wa pwimitive. OwO
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feImage>`
+## `<feimage>`
 
-Pour [`<feImage>`](/fr/docs/Web/SVG/Element/feImage), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+p-pouw [`<feimage>`](/fw/docs/web/svg/ewement/feimage), mya `width` définit w-wa wongueuw howizontawe de wa zone de wendu de wa pwimitive. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feMerge>`
+## `<femewge>`
 
-Pour [`<feMerge>`](/fr/docs/Web/SVG/Element/feMerge), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<femewge>`](/fw/docs/web/svg/ewement/femewge), o.O `width` définit wa wongueuw h-howizontawe de wa zone de wendu de wa pwimitive. (✿oωo)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feMorphology>`
+## `<femowphowogy>`
 
-Pour [`<feMorphology>`](/fr/docs/Web/SVG/Element/feMorphology), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<femowphowogy>`](/fw/docs/web/svg/ewement/femowphowogy), (ˆ ﻌ ˆ)♡ `width` définit wa wongueuw howizontawe d-de wa z-zone de wendu de wa pwimitive. ^^;;
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feOffset>`
+## `<feoffset>`
 
-Pour [`<feOffset>`](/fr/docs/Web/SVG/Element/feOffset), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<feoffset>`](/fw/docs/web/svg/ewement/feoffset), OwO `width` définit w-wa wongueuw howizontawe de w-wa zone de wendu d-de wa pwimitive. 🥺
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feSpecularLighting>`
+## `<fespecuwawwighting>`
 
-Pour [`<feSpecularLighting>`](/fr/docs/Web/SVG/Element/feSpecularLighting), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+p-pouw [`<fespecuwawwighting>`](/fw/docs/web/svg/ewement/fespecuwawwighting), mya `width` définit wa wongueuw h-howizontawe de w-wa zone de wendu d-de wa pwimitive. 😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feTile>`
+## `<fetiwe>`
 
-Pour [`<feTile>`](/fr/docs/Web/SVG/Element/feTile), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fetiwe>`](/fw/docs/web/svg/ewement/fetiwe), òωó `width` d-définit w-wa wongueuw h-howizontawe de wa z-zone de wendu de wa pwimitive. /(^•ω•^)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<feTurbulence>`
+## `<fetuwbuwence>`
 
-Pour [`<feTurbulence>`](/fr/docs/Web/SVG/Element/feTurbulence), `width` définit la longueur horizontale de la zone de rendu de la primitive.
+pouw [`<fetuwbuwence>`](/fw/docs/web/svg/ewement/fetuwbuwence), -.- `width` d-définit wa wongueuw howizontawe d-de wa zone de wendu de w-wa pwimitive. òωó
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><code>100%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<filter>`
+## `<fiwtew>`
 
-Pour [`<filter>`](/fr/docs/Web/SVG/Element/filter), `width` définit la longueur horizontale de la zone de rendu du filtre.
+pouw [`<fiwtew>`](/fw/docs/web/svg/ewement/fiwtew), /(^•ω•^) `width` définit wa wongueuw howizontawe de wa zone de wendu du fiwtwe. /(^•ω•^)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>120%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<foreignObject>`
+## `<foweignobject>`
 
-Pour [`<foreignObject>`](/fr/docs/Web/SVG/Element/foreignObject), `width` définit la longueur horizontale de la zone de rendu pour le document référencé.
+pouw [`<foweignobject>`](/fw/docs/web/svg/ewement/foweignobject), 😳 `width` définit wa wongueuw h-howizontawe d-de wa zone de wendu pouw we d-document wéféwencé. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code>|<stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>0</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>auto</code> (twaité c-comme <code>0</code>)</td>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour `<foreignObject>`.
+> [!note]
+> À pawtiw de svg2, (U ᵕ U❁) `width` est une pwopwiété _géométwique_, ʘwʘ ce qui signifie q-que cet attwibut p-peut aussi êtwe u-utiwisé comme u-une pwopwiété c-css pouw `<foweignobject>`. o.O
 
 ## `<image>`
 
-Pour [`<image>`](/fr/docs/Web/SVG/Element/image), `width` définit la longueur horizontale de l'image.
+pouw [`<image>`](/fw/docs/web/svg/ewement/image), ʘwʘ `width` d-définit wa w-wongueuw howizontawe de w'image. ^^
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <code>auto</code> | <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code> | <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme la hauteur intrinsèque de l'image)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
+      <td><code>auto</code> (twaité c-comme wa hauteuw intwinsèque d-de w'image)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS pour les images.
+> [!note]
+> À p-pawtiw de svg2, ^•ﻌ•^ `width` est une pwopwiété _géométwique_, c-ce qui signifie q-que cet attwibut p-peut égawement êtwe utiwisé comme pwopwiété css pouw wes i-images. mya
 
 ## `<mask>`
 
-Pour [`<mask>`](/fr/docs/Web/SVG/Element/mask), `width` définit la longueur horizontale de sa zone d'effet. L'effet exact de cet attribut est influencé par l'attribut [`maskUnits`](/fr/docs/Web/SVG/Attribute/maskUnits).
+pouw [`<mask>`](/fw/docs/web/svg/ewement/mask), UwU `width` définit wa wongueuw h-howizontawe d-de sa zone d'effet. >_< w'effet exact d-de cet attwibut est infwuencé p-paw w'attwibut [`maskunits`](/fw/docs/web/svg/attwibute/maskunits). /(^•ω•^)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw d-défaut</th>
       <td><code>120%</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<pattern>`
+## `<pattewn>`
 
-Pour [`<pattern>`](/fr/docs/Web/SVG/Element/pattern), `width` définit la longueur horizontale du motif répété. L'effet exact de cet attribut est influencé par les attributs [`patternUnits`](/fr/docs/Web/SVG/Attribute/patternUnits) et [`patternTransform`](/fr/docs/Web/SVG/Attribute/patternTransform).
+p-pouw [`<pattewn>`](/fw/docs/web/svg/ewement/pattewn), òωó `width` définit wa wongueuw h-howizontawe d-du motif wépété. w-w'effet exact de cet attwibut est infwuencé paw wes attwibuts [`pattewnunits`](/fw/docs/web/svg/attwibute/pattewnunits) et [`pattewntwansfowm`](/fw/docs/web/svg/attwibute/pattewntwansfowm). σωσ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>
+        <stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## `<rect>`
+## `<wect>`
 
-Pour [`<rect>`](/fr/docs/Web/SVG/Element/rect), `width` définit la longueur horizontale du rectangle.
+pouw [`<wect>`](/fw/docs/web/svg/ewement/wect), ( ͡o ω ͡o ) `width` définit w-wa wongueuw howizontawe d-du wectangwe. nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>0</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
+      <td><code>auto</code> (twaité comme <code>0</code>)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut aussi être utilisé comme une propriété CSS pour les rectangles.
+> [!note]
+> À p-pawtiw de svg2, `width` e-est une pwopwiété _géométwique_, :3 c-ce qui signifie que cet attwibut p-peut aussi êtwe u-utiwisé comme une pwopwiété css pouw wes wectangwes. UwU
 
 ## `<svg>`
 
-Pour [`<svg>`](/fr/docs/Web/SVG/Element/svg), `width` définit la longueur horizontale de la zone de rendu de la zone d'affichage SVG.
+p-pouw [`<svg>`](/fw/docs/web/svg/ewement/svg), o.O `width` d-définit w-wa wongueuw h-howizontawe de w-wa zone de wendu d-de wa zone d'affichage s-svg. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Dans un document HTML, si les deux attributs [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) et `width` sont absents, [l'élément SVG sera rendu avec une hauteur de `150px`](https://svgwg.org/specs/integration/#svg-css-sizing).
+> [!note]
+> d-dans u-un document htmw, ^^;; si wes deux attwibuts [`viewbox`](/fw/docs/web/svg/attwibute/viewbox) e-et `width` s-sont absents, ʘwʘ [w'éwément svg s-sewa wendu avec une hauteuw de `150px`](https://svgwg.owg/specs/integwation/#svg-css-sizing). σωσ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code>|<stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a h-hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>100%</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
+      <td><code>auto</code> (twaité c-comme <code>100%</code>)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">peut êtwe animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_ et peut donc être utilisée comme propriété CSS pour `<svg>`.
+> [!note]
+> À p-pawtiw de svg2, ^^;; `width` est une p-pwopwiété _géométwique_ et peut d-donc êtwe utiwisée comme pwopwiété c-css pouw `<svg>`. ʘwʘ
 
 ## `<use>`
 
-Pour [`<use>`](/fr/docs/Web/SVG/Element/use), `width` définit la longueur horizontale de l'élément référencé.
+pouw [`<use>`](/fw/docs/web/svg/ewement/use), ^^ `width` définit wa wongueuw howizontawe de w'éwément w-wéféwencé. nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <code>auto</code>|<strong><a href="/fr/docs/Web/SVG/Content_type#Length"><code>&lt;length&gt;</code></a></strong>|<strong><a href="/fr/docs/Web/SVG/Content_type#Percentage"><code>&lt;percentage&gt;</code></a></strong>
+        <code>auto</code>|<stwong><a hwef="/fw/docs/web/svg/content_type#wength"><code>&wt;wength&gt;</code></a></stwong>|<stwong><a hwef="/fw/docs/web/svg/content_type#pewcentage"><code>&wt;pewcentage&gt;</code></a></stwong>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>auto</code> (traité comme <code>0</code>)</td>
-    </tr>
-    <tr>
-      <th scope="row">Peut être animé</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
+      <td><code>auto</code> (twaité comme <code>0</code>)</td>
+    </tw>
+    <tw>
+      <th scope="wow">peut êtwe a-animé</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `width` n'a pas d'effet sur les éléments `<use>`, à moins que l'élément référencé ait un attribut [`viewbox`](/fr/docs/Web/SVG/Attribute/viewBox), c'est-à-dire que leur effet s'applique uniquement si `use` fait référence à un élément `<svg>` ou `<symbol>`.
+> **note :** `width` n'a pas d'effet s-suw wes éwéments `<use>`, (///ˬ///✿) à moins q-que w'éwément w-wéféwencé ait un attwibut [`viewbox`](/fw/docs/web/svg/attwibute/viewbox), XD c'est-à-diwe q-que weuw effet s-s'appwique uniquement si `use` fait w-wéféwence à un éwément `<svg>` ou `<symbow>`. :3
 
-> [!NOTE]
-> À partir de SVG2, `width` est une propriété _géométrique_, ce qui signifie que cet attribut peut également être utilisé comme propriété CSS sur les éléments utilisés.
+> [!note]
+> À p-pawtiw de svg2, òωó `width` est u-une pwopwiété _géométwique_, ^^ c-ce qui signifie q-que cet attwibut peut égawement êtwe u-utiwisé c-comme pwopwiété c-css suw wes éwéments u-utiwisés. ^•ﻌ•^
 
-## Spécifications
+## spécifications
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">spécification</th>
+      <th s-scope="cow">État</th>
+      <th s-scope="cow">commentaiwes</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width">Filter Effects Module Level 1 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Version de travail</td>
-      <td>Définition de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width">Filter Effects Module Level 1 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Version de travail</td>
-      <td>Définition des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width">CSS Masking Module Level&nbsp;1 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/geometry.html#Sizing">Scalable Vector Graphics (SVG) 2 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition en tant que propriété géométrique</td>
-    </tr>
-    <tr>
-      <td><a href="https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 2 — La définition de 'width' dans cette spécification.</a></td>
-      <td>Candidat au statut de recommandation</td>
-      <td>Définition de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;foreignObject&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a>
+    <tw>
+      <td><a h-hwef="https://dwafts.fxtf.owg/fiwtew-effects/#ewement-attwdef-fiwtew-width">fiwtew e-effects moduwe w-wevew 1 — w-wa définition de 'width' dans c-cette spécification.</a></td>
+      <td>vewsion de twavaiw</td>
+      <td>définition d-de <code>&wt;fiwtew&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://dwafts.fxtf.owg/fiwtew-effects/#ewement-attwdef-fiwtew-pwimitive-width">fiwtew e-effects m-moduwe wevew 1 — w-wa définition de 'width' dans cette spécification.</a></td>
+      <td>vewsion de twavaiw</td>
+      <td>définition d-des pwimitives d-de fiwtwe</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://dwafts.fxtf.owg/css-masking-1/#ewement-attwdef-mask-width">css masking moduwe wevew&nbsp;1 — wa définition d-de 'width' dans c-cette spécification.</a></td>
+      <td>candidat au statut d-de wecommandation</td>
+      <td>définition d-de <code>&wt;mask&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://svgwg.owg/svg2-dwaft/geometwy.htmw#sizing">scawabwe vectow gwaphics (svg) 2 — wa définition de 'width' d-dans cette s-spécification.</a></td>
+      <td>candidat a-au s-statut de wecommandation</td>
+      <td>définition en tant que pwopwiété géométwique</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://svgwg.owg/svg2-dwaft/psewvews.htmw#pattewnewementwidthattwibute">scawabwe v-vectow gwaphics (svg) 2 — wa définition de 'width' dans c-cette spécification.</a></td>
+      <td>candidat au statut de wecommandation</td>
+      <td>définition d-de <code>&wt;pattewn&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/extend.htmw#foweignobjectewementwidthattwibute">scawabwe v-vectow g-gwaphics (svg) 1.1 (second edition) — w-wa définition d-de 'width' dans cette s-spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe d-de <code>&wt;foweignobject&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/psewvews.htmw#pattewnewementwidthattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second e-edition) — wa définition d-de 'width' d-dans cette spécification.</a>
       </td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;pattern&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;image&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;svg&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;use&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;filter&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterPrimitiveWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale des primitives de filtre</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;mask&gt;</code></td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElementWidthAttribute">Scalable Vector Graphics (SVG) 1.1 (Second Edition) — La définition de 'width' dans cette spécification.</a></td>
-      <td>Recommandation</td>
-      <td>Définition initiale de <code>&lt;rect&gt;</code></td>
-    </tr>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;pattewn&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/stwuct.htmw#imageewementwidthattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second edition) — wa définition de 'width' d-dans cette s-spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;image&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/stwuct.htmw#svgewementwidthattwibute">scawabwe vectow gwaphics (svg) 1.1 (second edition) — wa définition de 'width' d-dans cette spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;svg&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/stwuct.htmw#useewementwidthattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa définition d-de 'width' d-dans cette spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe d-de <code>&wt;use&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#fiwtewewementwidthattwibute">scawabwe vectow gwaphics (svg) 1.1 (second edition) — wa définition d-de 'width' dans cette spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition i-initiawe de <code>&wt;fiwtew&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/fiwtews.htmw#fiwtewpwimitivewidthattwibute">scawabwe vectow gwaphics (svg) 1.1 (second e-edition) — wa définition de 'width' dans cette spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe des pwimitives d-de fiwtwe</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="https://www.w3.owg/tw/svg11/masking.htmw#maskewementwidthattwibute">scawabwe vectow g-gwaphics (svg) 1.1 (second edition) — wa définition d-de 'width' d-dans cette spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe d-de <code>&wt;mask&gt;</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="https://www.w3.owg/tw/svg11/shapes.htmw#wectewementwidthattwibute">scawabwe v-vectow gwaphics (svg) 1.1 (second edition) — wa définition d-de 'width' dans cette spécification.</a></td>
+      <td>wecommandation</td>
+      <td>définition initiawe d-de <code>&wt;wect&gt;</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

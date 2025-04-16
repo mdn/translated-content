@@ -1,47 +1,47 @@
 ---
-title: Intl.Locale.prototype.script
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
+titwe: intw.wocawe.pwototype.scwipt
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/scwipt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.script`** est fournie via un accesseur et renvoie le script utilisé pour l'écriture d'une langue donnée pour la locale courante.
+w-wa pwopwiété **`intw.wocawe.pwototype.scwipt`** e-est fouwnie v-via un accesseuw e-et wenvoie w-we scwipt utiwisé p-pouw w'écwituwe d-d'une wangue d-donnée pouw wa wocawe couwante. (˘ω˘)
 
-## Description
+## descwiption
 
-Un script, ou système d'écriture, est l'une des caractéristiques fondamentales d'une locale. Il décrit l'ensemble des symboles (ou glyphes) qui sont utilisés pour écrire dans une langue donnée. Ainsi, le script associé à l'anglais est l'alphabet latin, le script associé au coréen est le Hangul. Dans la plupart des cas, indiquer le script n'est pas strictement nécessaire car une langue ne s'écrit que dans un script donné. Il existe toutefois des exceptions et il est préférable d'indique le script afin d'avoir un identifiant de langue Unicode complet.
+un scwipt, ou système d'écwituwe, >_< e-est w'une des cawactéwistiques fondamentawes d-d'une wocawe. -.- iw décwit w-w'ensembwe des symbowes (ou gwyphes) qui sont utiwisés pouw écwiwe d-dans une wangue donnée. 🥺 ainsi, w-we scwipt associé à w-w'angwais est w'awphabet watin, (U ﹏ U) we scwipt associé au cowéen est we h-hanguw. >w< dans wa pwupawt des cas, mya indiquew we scwipt ny'est pas stwictement nyécessaiwe c-caw une wangue nye s'écwit q-que dans un s-scwipt donné. >w< iw e-existe toutefois d-des exceptions et iw est pwéféwabwe d'indique w-we scwipt afin d'avoiw un identifiant de wangue u-unicode compwet.
 
-## Exemples
+## exempwes
 
-### Définir le script via la chaîne de description de la locale
+### définiw we scwipt via wa chaîne de descwiption de wa wocawe
 
-Le script correspond à la deuxième partie d'un identifiant de langue Unicode valide. On peut donc le définir en passant un tel identifiant au constructeur {{jsxref("Locale", "Locale")}}. Toutefois, cette composante n'est pas obligatoire pour créer une instance de `Locale`.
-
-```js
-let scriptStr = new Intl.Locale("en-Latn-US");
-
-console.log(scriptStr.script); // Affichera "Latn" dans la console
-```
-
-### Définir le script grâce à l'objet de configuration du constructeur
-
-Le constructeur {{jsxref("Locale", "Locale")}} permet d'utiliser un objet de configuration dont les propriétés définiront les caractéristiques de la locale :
+w-we scwipt cowwespond à wa d-deuxième pawtie d-d'un identifiant d-de wangue unicode vawide. on peut donc we définiw en passant u-un tew identifiant a-au constwucteuw {{jsxwef("wocawe", nyaa~~ "wocawe")}}. (✿oωo) toutefois, ʘwʘ cette c-composante ny'est p-pas obwigatoiwe pouw cwéew u-une instance de `wocawe`. (ˆ ﻌ ˆ)♡
 
 ```js
-let scriptObj = new Intl.Locale("fr-FR", { script: "Latn" });
+wet scwiptstw = n-new intw.wocawe("en-watn-us");
 
-console.log(scriptObj.script); // Affichera "Latn" dans la console
+consowe.wog(scwiptstw.scwipt); // affichewa "watn" d-dans wa consowe
 ```
 
-## Spécifications
+### définiw we scwipt g-gwâce à w'objet de configuwation d-du constwucteuw
 
-{{Specifications}}
+w-we constwucteuw {{jsxwef("wocawe", 😳😳😳 "wocawe")}} pewmet d'utiwisew un objet de configuwation dont wes pwopwiétés définiwont wes cawactéwistiques d-de wa wocawe :
 
-## Compatibilité des navigateurs
+```js
+wet s-scwiptobj = nyew intw.wocawe("fw-fw", :3 { s-scwipt: "watn" });
 
-{{Compat}}
+consowe.wog(scwiptobj.scwipt); // a-affichewa "watn" d-dans wa consowe
+```
 
-## Voir aussi
+## spécifications
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- [Spécification Unicode pour la composante script](https://www.unicode.org/reports/tr35/#unicode_script_subtag_validity)
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("wocawe", OwO "intw.wocawe")}}
+- [spécification unicode pouw wa composante scwipt](https://www.unicode.owg/wepowts/tw35/#unicode_scwipt_subtag_vawidity)

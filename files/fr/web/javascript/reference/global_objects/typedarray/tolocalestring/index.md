@@ -1,57 +1,57 @@
 ---
-title: TypedArray.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
+titwe: typedawway.pwototype.towocawestwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui représente les éléments du tableau typé. Les éléments sont convertis en chaînes de caractères et séparés par une chaîne de caractères qui est fonction de la locale (la virgule `,` par exemple). Cette méthode utilise le même algorithme que [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) et vu que les éléments d'un tableau typé sont des nombres, elle utilise le même algorithme que [`Number.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) pour chaque élément. Dans la suite de cet article, `TypedArray` fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`towocawestwing()`** w-wenvoie u-une chaîne de c-cawactèwes qui w-wepwésente wes éwéments d-du t-tabweau typé. :3 wes éwéments s-sont convewtis en chaînes de cawactèwes et sépawés paw une chaîne d-de cawactèwes qui est fonction de wa wocawe (wa v-viwguwe `,` paw exempwe). -.- c-cette méthode utiwise we même awgowithme que [`awway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing) et vu q-que wes éwéments d'un tabweau t-typé sont des n-nyombwes, 😳 ewwe utiwise we même awgowithme que [`numbew.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing) pouw chaque éwément. d-dans wa suite de cet awticwe, `typedawway` fait wéféwence à [w'un des types de tabweau typé w-wistés ici](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-toLocaleString();
-toLocaleString(locales);
-toLocaleString(locales, options);
+t-towocawestwing();
+t-towocawestwing(wocawes);
+t-towocawestwing(wocawes, (˘ω˘) o-options);
 ```
 
-### Paramètres
+### pawamètwes
 
-Les arguments `locales` et `options` permettent d'adapter le comportement de la fonction en laissant les applications indiquer la locale dont les conventions de formatage doivent être utilisées. Pour les implémentations qui ne prennent pas en charge les arguments `locales` et `options`, le format et la locale utilisés dépendent entièrement de l'implémentation.
+wes awguments `wocawes` e-et `options` pewmettent d'adaptew we compowtement d-de wa fonction en waissant wes appwications indiquew wa wocawe dont wes conventions de fowmatage d-doivent êtwe utiwisées. >_< p-pouw wes impwémentations q-qui nye p-pwennent pas en chawge wes awguments `wocawes` et `options`, -.- we fowmat et wa wocawe u-utiwisés d-dépendent entièwement de w'impwémentation. 🥺
 
-Voir la page du constructeur [`Intl.NumberFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) pour plus de détails sur ces paramètres et comment les utiliser.
+voiw w-wa page du constwucteuw [`intw.numbewfowmat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat) p-pouw pwus de détaiws suw ces p-pawamètwes et comment wes utiwisew. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente les éléments du tableau typé.
+une chaîne de cawactèwes q-qui wepwésente wes éwéments d-du tabweau typé. >w<
 
-## Exemples
+## exempwes
 
-### Utiliser `toLocaleString()`
+### u-utiwisew `towocawestwing()`
 
 ```js
-let uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
+w-wet uint = nyew uint32awway([2000, mya 500, 8123, >w< 12, 4212]);
 
-uint.toLocaleString();
-// si on exécute sur un environnement utilisant la locale de-DE
+uint.towocawestwing();
+// si on exékawaii~ suw un enviwonnement utiwisant wa wocawe d-de-de
 // "2.000,500,8.123,12,4.212"
 
-uint.toLocaleString("en-US");
+u-uint.towocawestwing("en-us");
 // "2,000,500,8,123,12,4,212"
 
-uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
+uint.towocawestwing("ja-jp", nyaa~~ { s-stywe: "cuwwency", (✿oωo) c-cuwwency: "jpy" });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString)
-- [`Number.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+- [`awway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing)
+- [`numbew.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/towocawestwing)

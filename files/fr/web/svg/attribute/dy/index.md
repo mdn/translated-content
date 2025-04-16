@@ -1,285 +1,285 @@
 ---
-title: dy
-slug: Web/SVG/Attribute/dy
+titwe: dy
+swug: web/svg/attwibute/dy
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`dy`** indique un décalage sur l'axe y de la position d'un élément ou de son contenu.
+w-w'attwibut **`dy`** i-indique u-un décawage s-suw w'axe y de w-wa position d'un éwément o-ou de s-son contenu. OwO
 
-Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feOffset')}}, {{SVGElement('glyphRef')}}, {{SVGElement('text')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+s-sept éwéments utiwisent cet attwibut: {{svgewement('awtgwyph')}}, XD {{svgewement('fedwopshadow')}}, ^^;; {{svgewement('feoffset')}}, {{svgewement('gwyphwef')}}, 🥺 {{svgewement('text')}}, XD {{svgewement('twef')}}, (U ᵕ U❁) et {{svgewement('tspan')}}
 
-## Exemple
+## exempwe
 
 ```css hidden
-html,
+h-htmw, :3
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lignes indiquant la position des glyphes -->
-  <line x1="10%" x2="10%" y1="0" y2="100%" />
-  <line x1="0" x2="100%" y1="30%" y2="30%" />
-  <line x1="0" x2="100%" y1="80%" y2="80%" />
+```htmw
+<svg viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- wignes i-indiquant wa position des gwyphes -->
+  <wine x1="10%" x2="10%" y-y1="0" y2="100%" />
+  <wine x1="0" x-x2="100%" y1="30%" y-y2="30%" />
+  <wine x1="0" x2="100%" y1="80%" y2="80%" />
 
-  <!-- Un texte de référence -->
-  <text x="10%" y="30%" fill="grey">SVG</text>
+  <!-- un texte d-de wéféwence -->
+  <text x="10%" y="30%" fiww="gwey">svg</text>
 
-  <!-- Le même texte avec un décalage sur l'axe y -->
-  <text dy="50%" x="10%" y="30%">SVG</text>
+  <!-- we même texte avec un d-décawage suw w'axe y -->
+  <text d-dy="50%" x="10%" y-y="30%">svg</text>
 </svg>
 ```
 
 ```css
-line {
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 3px;
+w-wine {
+  s-stwoke: wed;
+  stwoke-width: 0.5px;
+  stwoke-dashawway: 3px;
 }
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', ( ͡o ω ͡o ) '100%', òωó 200)}}
 
-## altGlyph
+## a-awtgwyph
 
-> [!WARNING]
-> Depuis {{SVGElement('altGlyph')}} est déprécié et ne devrait pas être utilisé.
+> [!wawning]
+> depuis {{svgewement('awtgwyph')}} est dépwécié e-et nye devwait pas êtwe utiwisé. σωσ
 
-Pour {{SVGElement('altGlyph')}}, s'il ne contient qu'une seule valeur, `dy` définit un décalge sur l'axe y pour tous les glyphes.
+pouw {{svgewement('awtgwyph')}}, (U ᵕ U❁) s'iw nye contient qu'une seuwe vaweuw, (✿oωo) `dy` d-définit un décawge suw w'axe y-y pouw tous wes g-gwyphes. ^^
 
-S'il a plusieurs valeurs, `dy` définit un décalage sur l'axe y individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent la valeur `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs restantes sont ignorées.
+s'iw a-a pwusieuws vaweuws, ^•ﻌ•^ `dy` définit un décawage suw w'axe y individuewwement pouw c-chaque gwyphe, XD w-wewativement au gwyphe pwécédent. :3 s-s'iw y a m-moins de vaweuws qu'iw ny'y a de g-gwyphes, (ꈍᴗꈍ) wes gwyphes westants utiwisent w-wa vaweuw `0`. :3 s'iw y a pwus de vaweuws q-qu'iw ny'y a de gwyphes, (U ﹏ U) wes vaweuws w-westantes sont ignowées. UwU
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        wiste de
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#wength">&#x3c;wength></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feDropShadow
+## fedwopshadow
 
-Pour {{SVGElement('feDropShadow')}}, `dy` définit le décalage x de l'ombre portée. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
+pouw {{svgewement('fedwopshadow')}}, `dy` d-définit w-we décawage x de w'ombwe p-powtée. 😳😳😳 w'unité u-utiwisée pouw w-wésoudwe wa vaweuw est définie paw w'attwibut {{svgattw('pwimitiveunits')}} de w'éwément {{svgewement('fiwtew')}}. XD
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        <stwong
+          ><a hwef="/docs/web/svg/content_type#numbew">&#x3c;numbew></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## feOffset
+## feoffset
 
-Pour {{SVGElement('feOffset')}}, `dy` définit le décalage x de l'élément source du filtre. L'unité utilisée pour résoudre la valeur est définie par l'attribut {{SVGAttr('primitiveUnits')}} de l'élément {{SVGElement('filter')}}.
+p-pouw {{svgewement('feoffset')}}, o.O `dy` d-définit w-we décawage x de w'éwément s-souwce du fiwtwe. (⑅˘꒳˘) w-w'unité utiwisée p-pouw wésoudwe w-wa vaweuw est définie paw w'attwibut {{svgattw('pwimitiveunits')}} d-de w'éwément {{svgewement('fiwtew')}}. 😳😳😳
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#numbew">&#x3c;numbew></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## glyphRef
+## gwyphwef
 
-> [!WARNING]
-> Depuis SVG2 {{SVGElement('glyphRef')}} est déprécié et ne devrait pas être utilisé.
+> [!wawning]
+> depuis s-svg2 {{svgewement('gwyphwef')}} est dépwécié et nye devwait pas êtwe utiwisé. nyaa~~
 
-Pour {{SVGElement('glyphRef')}}, `dy` définit le décalage x du glyphe, dans le système métrique de la police.
+pouw {{svgewement('gwyphwef')}}, rawr `dy` définit we décawage x-x du gwyphe, -.- dans we système métwique de wa powice. (✿oωo)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#numbew">&#x3c;numbew></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## text
 
-Pour {{SVGElement('text')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
+pouw {{svgewement('text')}}, /(^•ω•^) s-s'iw nye contient q-qu'une seuwe vaweuw, 🥺 `dx` définit un décawage suw w'axe x pouw tous wes gwyphes. ʘwʘ
 
-S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
+s'iw a pwusieuws v-vaweuws, UwU `dx` définit u-un décawage suw w'axe x individuewwement p-pouw chaque g-gwyphe, XD wewativement au gwyphe pwécédent. (✿oωo) s-s'iw y a moins d-de vaweuws qu'iw ny'y a de gwyphes, :3 w-wes gwyphes w-westants utiwisent une vaweuw de `0`. (///ˬ///✿) s'iw y a pwus de vaweuws qu'iw n'y a de gwyphes, nyaa~~ w-wes vaweuws s-suppwémentaiwes s-sont ignowées. >w<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        w-wiste de
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#wength">&#x3c;wength></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw défaut</th>
       <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Exemple
+### e-exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, -.-
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lignes horizontales -->
-  <line x1="0" x2="100%" y1="30" y2="30" />
-  <line x1="0" x2="100%" y1="40" y2="40" />
-  <line x1="0" x2="100%" y1="50" y2="50" />
-  <line x1="0" x2="100%" y1="60" y2="60" />
+```htmw
+<svg v-viewbox="0 0 150 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- wignes howizontawes -->
+  <wine x1="0" x-x2="100%" y1="30" y2="30" />
+  <wine x1="0" x2="100%" y1="40" y2="40" />
+  <wine x1="0" x2="100%" y-y1="50" y2="50" />
+  <wine x1="0" x2="100%" y1="60" y-y2="60" />
 
-  <!-- Lignes verticales -->
-  <line x1="10" x2="10" y1="0" y2="100%" />
-  <line x1="50" x2="50" y1="0" y2="100%" />
-  <line x1="90" x2="90" y1="0" y2="100%" />
+  <!-- w-wignes vewticawes -->
+  <wine x1="10" x2="10" y1="0" y2="100%" />
+  <wine x-x1="50" x2="50" y-y1="0" y2="100%" />
+  <wine x1="90" x2="90" y1="0" y2="100%" />
 
-  <!-- Le comportement change en fonction du nombre de valeurs de l'attribut -->
-  <text dy="20" x="10" y="30">SVG</text>
-  <text dy="0 10" x="50" y="30">SVG</text>
-  <text dy="0 10 20" x="90" y="30">SVG</text>
+  <!-- we compowtement c-change en fonction du n-nyombwe de vaweuws de w'attwibut -->
+  <text dy="20" x="10" y="30">svg</text>
+  <text d-dy="0 10" x="50" y="30">svg</text>
+  <text d-dy="0 10 20" x="90" y-y="30">svg</text>
 </svg>
 ```
 
 ```css
-line {
-  stroke: red;
-  stroke-width: 0.5px;
-  stroke-dasharray: 3px;
+wine {
+  s-stwoke: wed;
+  stwoke-width: 0.5px;
+  s-stwoke-dashawway: 3px;
 }
 ```
 
-{{EmbedLiveSample('text', '100%', 100)}}
+{{embedwivesampwe('text', (✿oωo) '100%', (˘ω˘) 100)}}
 
-## tref
+## t-twef
 
-> [!WARNING]
-> Depuis SVG2 {{SVGElement('tref')}} est déprécié et ne devrait pas être utilisé.
+> [!wawning]
+> d-depuis svg2 {{svgewement('twef')}} e-est d-dépwécié et nye devwait pas êtwe utiwisé. rawr
 
-Pour {{SVGElement('tref')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
+p-pouw {{svgewement('twef')}}, OwO s-s'iw n-nye contient qu'une seuwe vaweuw, ^•ﻌ•^ `dx` définit u-un décawage suw w'axe x pouw t-tous wes gwyphes. UwU
 
-S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
+s-s'iw a pwusieuws vaweuws, (˘ω˘) `dx` définit un décawage suw w'axe x-x individuewwement p-pouw chaque g-gwyphe, wewativement a-au gwyphe pwécédent. (///ˬ///✿) s'iw y-y a moins de vaweuws qu'iw ny'y a de gwyphes, σωσ wes gwyphes westants utiwisent une vaweuw de `0`. /(^•ω•^) s-s'iw y a pwus de vaweuws qu'iw n-ny'y a de gwyphes, 😳 wes vaweuws s-suppwémentaiwes sont ignowées. 😳
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        wiste d-de
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#wength">&#x3c;wength></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## tspan
 
-Pour {{SVGElement('tspan')}}, s'il ne contient qu'une seule valeur, `dx` définit un décalage sur l'axe x pour tous les glyphes.
+pouw {{svgewement('tspan')}}, (⑅˘꒳˘) s'iw nye contient qu'une seuwe vaweuw, 😳😳😳 `dx` définit un décawage suw w-w'axe x pouw tous w-wes gwyphes. 😳
 
-S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellement pour chaque glyphe, relativement au glyphe précédent. S'il y a moins de valeurs qu'il n'y a de glyphes, les glyphes restants utilisent une valeur de `0`. S'il y a plus de valeurs qu'il n'y a de glyphes, les valeurs supplémentaires sont ignorées.
+s-s'iw a pwusieuws vaweuws, XD `dx` d-définit un décawage suw w'axe x individuewwement pouw chaque g-gwyphe, mya wewativement a-au gwyphe pwécédent. ^•ﻌ•^ s'iw y-y a moins de vaweuws qu'iw n'y a de gwyphes, ʘwʘ wes g-gwyphes westants u-utiwisent une vaweuw de `0`. ( ͡o ω ͡o ) s-s'iw y a pwus de v-vaweuws qu'iw ny'y a de gwyphes, mya wes vaweuws suppwémentaiwes sont ignowées. o.O
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        Liste de
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        w-wiste de
+        <stwong
+          ><a h-hwef="/docs/web/svg/content_type#wength">&#x3c;wength></a></stwong
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
       <td><em>aucune</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}

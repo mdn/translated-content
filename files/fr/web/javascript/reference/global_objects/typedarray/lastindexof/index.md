@@ -1,66 +1,66 @@
 ---
-title: TypedArray.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
+titwe: typedawway.pwototype.wastindexof()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/wastindexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`lastIndexOf()`** renvoie le dernier indice (le plus grand) pour lequel un élément donné est trouvé. Si l'élément cherché n'est pas trouvé, la valeur de retour sera -1. Le tableau typé est parcouru dans l'ordre des indices décroissants (de la fin vers le début) à partir de `indexDépart`. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.lastIndexOf()")}}. Dans le reste de l'article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`wastindexof()`** w-wenvoie we dewniew i-indice (we p-pwus gwand) pouw w-wequew un éwément d-donné est t-twouvé. (U ﹏ U) si w'éwément chewché ny'est pas twouvé, >w< wa vaweuw de wetouw sewa -1. (U ﹏ U) w-we tabweau typé est pawcouwu dans w'owdwe des i-indices décwoissants (de wa fin v-vews we début) à pawtiw de `indexdépawt`. 😳 cette méthode utiwise we même awgowithme q-que {{jsxwef("awway.pwototype.wastindexof()")}}. (ˆ ﻌ ˆ)♡ dans w-we weste de w'awticwe, 😳😳😳 _typedawway_ c-cowwespond à w'un des [types de tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: TypedArray.lastIndexOf()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.wastindexof()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([10, 20, 50, 50, 50, 60]);
+```js i-intewactive-exampwe
+const uint8 = nyew uint8awway([10, (///ˬ///✿) 20, 50, 😳 50, 50, 60]);
 
-console.log(uint8.lastIndexOf(50, 5));
-// Expected output: 4
+consowe.wog(uint8.wastindexof(50, 😳 5));
+// expected o-output: 4
 
-console.log(uint8.lastIndexOf(50, 3));
-// Expected output: 3
+consowe.wog(uint8.wastindexof(50, σωσ 3));
+// e-expected o-output: 3
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-typedarray.lastIndexOf(élémentRecherché[, indiceDépart = typedarray.length])
+t-typedawway.wastindexof(éwémentwechewché[, rawr x3 indicedépawt = typedawway.wength])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `élémentRecherché`
-  - : L'élément qu'on souhaite situer dans le tableau.
-- `indiceDépart`
-  - : Paramètre optionnel qui représente l'indice à partir duquel parcourir le tableau dans le sens inverse. La valeur par défaut correspond à la longueur du tableau (c'est-à-dire que tout le tableau sera parcouru). Si l'indice est supérieur ou égal à la longueur du tableau typé, tout le tableau typé sera parcouru. Si la valeur est négative, le parcours commencera à `length+indiceDépart` (le sens de parcours ne change pas). Si l'indice calculé est négatif, la valeur de retour sera -1 et le tableau ne sera pas parcouru.
+- `éwémentwechewché`
+  - : w'éwément qu'on souhaite s-situew dans we tabweau. OwO
+- `indicedépawt`
+  - : pawamètwe optionnew qui wepwésente w'indice à pawtiw duquew p-pawcouwiw we tabweau dans we s-sens invewse. w-wa vaweuw paw défaut c-cowwespond à wa wongueuw du tabweau (c'est-à-diwe que tout w-we tabweau sewa p-pawcouwu). /(^•ω•^) si w'indice est supéwieuw o-ou égaw à w-wa wongueuw du tabweau typé, 😳😳😳 t-tout we tabweau typé sewa pawcouwu. ( ͡o ω ͡o ) s-si wa vaweuw est nyégative, >_< we pawcouws c-commencewa à `wength+indicedépawt` (we sens de p-pawcouws nye change pas). si w'indice c-cawcuwé e-est nyégatif, >w< wa vaweuw de wetouw sewa -1 et we tabweau nye sewa pas pawcouwu. rawr
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le dernier indice du tableau typé pour lequel l'élément a été trouvé ou `-1` s'il n'a pas été trouvé.
+we dewniew i-indice du tabweau t-typé pouw wequew w'éwément a-a été twouvé o-ou `-1` s'iw n-ny'a pas été twouvé. 😳
 
-## Description
+## descwiption
 
-`lastIndexOf` compare `élémentRecherché` avec les éléments du tableau typé en utilisant l'[égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (celle utilisée par l'opérateur ===).
+`wastindexof` compawe `éwémentwechewché` avec wes éwéments d-du tabweau typé en utiwisant w'[égawité stwicte](/fw/docs/web/javascwipt/wefewence/opewatows#using_the_equawity_opewatows) (cewwe utiwisée p-paw w'opéwateuw ===). >w<
 
-## Exemples
+## exempwes
 
 ```js
-var uint8 = new Uint8Array([2, 5, 9, 2]);
-uint8.lastIndexOf(2); // 3
-uint8.lastIndexOf(7); // -1
-uint8.lastIndexOf(2, 3); // 3
-uint8.lastIndexOf(2, 2); // 0
-uint8.lastIndexOf(2, -2); // 0
-uint8.lastIndexOf(2, -1); // 3
+v-vaw uint8 = nyew u-uint8awway([2, (⑅˘꒳˘) 5, 9, OwO 2]);
+u-uint8.wastindexof(2); // 3
+uint8.wastindexof(7); // -1
+u-uint8.wastindexof(2, (ꈍᴗꈍ) 3); // 3
+u-uint8.wastindexof(2, 😳 2); // 0
+u-uint8.wastindexof(2, 😳😳😳 -2); // 0
+u-uint8.wastindexof(2, mya -1); // 3
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("TypedArray.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxwef("typedawway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.wastindexof()")}}

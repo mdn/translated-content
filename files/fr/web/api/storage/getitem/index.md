@@ -1,57 +1,57 @@
 ---
-title: Storage.getItem()
-slug: Web/API/Storage/getItem
+titwe: stowage.getitem()
+swug: w-web/api/stowage/getitem
 ---
 
-{{APIRef("Web Storage API")}}
-La méthode `getItem()` de l'interface {{domxref("Storage")}} renvoie la valeur associée à la clé passée en paramètre.
+{{apiwef("web s-stowage a-api")}}
+wa m-méthode `getitem()` d-de w'intewface {{domxwef("stowage")}} w-wenvoie w-wa vaweuw associée à w-wa cwé passée en pawamètwe. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var aValue = storage.getItem(keyName);
+vaw avawue = stowage.getitem(keyname);
 ```
 
-### Paramètre
+### p-pawamètwe
 
-- _`keyName`_
-  - : Une {{domxref("DOMString")}} contenant le nom de la clé voulue.
+- _`keyname`_
+  - : une {{domxwef("domstwing")}} contenant w-we nyom de wa cwé vouwue. o.O
 
-### Renvoi
+### w-wenvoi
 
-Une {{domxref("DOMString")}} contenant la valeur de la clé. `null` est renvoyé si aucune correspondance n'est trouvée.
+une {{domxwef("domstwing")}} contenant wa vaweuw de wa cwé. ( ͡o ω ͡o ) `nuww` est w-wenvoyé si aucune cowwespondance n-ny'est twouvée.
 
-## Exemple
+## e-exempwe
 
-La fonction suivante récupère trois élément du stockage local, puis réutilise les valeurs renvoyés afin de modifier le style de la page .
+wa fonction suivante wécupèwe twois éwément du stockage wocaw, (U ﹏ U) p-puis wéutiwise wes vaweuws wenvoyés afin de modifiew we stywe de wa page . (///ˬ///✿)
 
 ```js
-function setStyles() {
-  var currentColor = localStorage.getItem("bgcolor");
-  var currentFont = localStorage.getItem("font");
-  var currentImage = localStorage.getItem("image");
+f-function setstywes() {
+  v-vaw cuwwentcowow = w-wocawstowage.getitem("bgcowow");
+  v-vaw cuwwentfont = w-wocawstowage.getitem("font");
+  vaw cuwwentimage = wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  d-document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = c-cuwwentfont;
+  document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = "#" + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = "#" + cuwwentcowow;
+  pewem.stywe.fontfamiwy = c-cuwwentfont;
+  imgewem.setattwibute("swc", >w< c-cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> Pour voir cette fonction utilisée dans un exemple réel, dirigez-vous vers notre [Demo de Stockage Web (en)](https://github.com/mdn/web-storage-demo).
+> [!note]
+> p-pouw voiw c-cette fonction utiwisée dans un exempwe wéew, rawr diwigez-vous v-vews nyotwe [demo d-de stockage web (en)](https://github.com/mdn/web-stowage-demo). mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-[Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[utiwisation d-de w'api de stockage web](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

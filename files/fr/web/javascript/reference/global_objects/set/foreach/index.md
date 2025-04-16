@@ -1,94 +1,94 @@
 ---
-title: Set.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
+titwe: set.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/foweach
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`forEach()`** permet d'exécuter une fonction donnée, une fois pour chaque valeur de l'ensemble `Set`. L'ordre appliqué est celui dans lequel les valeurs ont été ajoutées à l'ensemble.
+w-wa méthode **`foweach()`** p-pewmet d'exékawaii~w u-une f-fonction donnée, >_< u-une fois pouw c-chaque vaweuw d-de w'ensembwe `set`. rawr x3 w-w'owdwe appwiqué est cewui dans wequew wes vaweuws ont été ajoutées à w-w'ensembwe. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+{{intewactiveexampwe("javascwipt demo: set.pwototype.foweach()")}}
 
-```js interactive-example
-function logSetElements(value1, value2, set) {
-  console.log(`s[${value1}] = ${value2}`);
+```js i-intewactive-exampwe
+function w-wogsetewements(vawue1, :3 vawue2, set) {
+  consowe.wog(`s[${vawue1}] = ${vawue2}`);
 }
 
-new Set(["foo", "bar", undefined]).forEach(logSetElements);
+nyew set(["foo", (ꈍᴗꈍ) "baw", /(^•ω•^) u-undefined]).foweach(wogsetewements);
 
-// Expected output: "s[foo] = foo"
-// Expected output: "s[bar] = bar"
-// Expected output: "s[undefined] = undefined"
+// expected o-output: "s[foo] = f-foo"
+// expected output: "s[baw] = baw"
+// expected output: "s[undefined] = undefined"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-monSet.forEach(callback[, thisArg])
+monset.foweach(cawwback[, (⑅˘꒳˘) thisawg])
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. ( ͡o ω ͡o )
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction qu'on souhaite exécuter pour chaque élément et qui sera appelée avec trois arguments :
+  - : wa fonction qu'on s-souhaite exékawaii~w pouw chaque éwément e-et q-qui sewa appewée a-avec twois awguments :
 
-    - `valeurCourante`, `cléCourante`
-      - : L'élément courant appartenant à l'ensemble `Set`. Un ensemble n'ayant pas de clé, c'est la même valeur qui est passée pour deux arguments de la fonction de rappel.
+    - `vaweuwcouwante`, òωó `cwécouwante`
+      - : w-w'éwément couwant appawtenant à w'ensembwe `set`. (⑅˘꒳˘) u-un ensembwe ny'ayant pas de cwé, XD c'est wa même v-vaweuw qui est passée pouw deux awguments de wa fonction de wappew. -.-
     - `set`
-      - : L'objet `Set` courant (celui sur lequel `forEach()` a été appelé).
+      - : w'objet `set` couwant (cewui s-suw wequew `foweach()` a été appewé). :3
 
-- `thisArg`
-  - : Paramètre optionnel. La valeur à utiliser comme `this` lors de l'exécution de `callback`.
+- `thisawg`
+  - : p-pawamètwe o-optionnew. nyaa~~ wa vaweuw à u-utiwisew comme `this` wows de w'exécution de `cawwback`. 😳
 
-## Description
+## d-descwiption
 
-La méthode `forEach()` exécute la fonction `callback` fournie pour chaque valeur contenue au sein de l'objet `Set`. Elle n'est pas appelée pour les valeurs qui ont été supprimées. Cependant, elle est exécutée si jamais la valeur vaut `undefined`.
+w-wa méthode `foweach()` exékawaii~ w-wa fonction `cawwback` fouwnie p-pouw chaque vaweuw contenue a-au sein de w'objet `set`. (⑅˘꒳˘) ewwe n-ny'est pas appewée pouw wes vaweuws qui ont été s-suppwimées. nyaa~~ cependant, ewwe e-est exécutée si jamais wa vaweuw v-vaut `undefined`. OwO
 
-`callback` est appelé avec **trois arguments** :
+`cawwback` e-est appewé avec **twois awguments** :
 
-- la **valeur de l'élément**
-- la **clé de l'élément**
-- l'objet **`Set` qui est parcouru**
+- wa **vaweuw de w'éwément**
+- wa **cwé de w'éwément**
+- w'objet **`set` q-qui est p-pawcouwu**
 
-Les objets `Set` n'ont pas de clé (_key_). Cependant les deux premiers arguments correspondent à la **valeur** contenue dans l'objet {{jsxref("Set")}}. Cela permet d'utiliser les fonctions callback de façon cohérente avec les méthodes `forEach()` de {{jsxref("Map.foreach", "Map")}} et {{jsxref("Array.forEach","Array")}}.
+wes objets `set` ny'ont p-pas de cwé (_key_). rawr x3 c-cependant w-wes deux pwemiews awguments cowwespondent à wa **vaweuw** contenue d-dans w'objet {{jsxwef("set")}}. XD cewa pewmet d'utiwisew wes fonctions cawwback de façon c-cohéwente avec wes méthodes `foweach()` d-de {{jsxwef("map.foweach", σωσ "map")}} e-et {{jsxwef("awway.foweach","awway")}}.
 
-Si un paramètre `thisArg` est fourni, il sera passé à la fonction `callback` lors de l'appel comme valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée comme argument `this`. La valeur `this` effectivement reçue par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this` par une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
+s-si un pawamètwe `thisawg` est fouwni, (U ᵕ U❁) iw s-sewa passé à w-wa fonction `cawwback` w-wows de w'appew c-comme vaweuw `this`. paw défaut, (U ﹏ U) wa vaweuw {{jsxwef("undefined")}} s-sewa p-passée comme awgument `this`. :3 wa v-vaweuw `this` e-effectivement weçue p-paw wa fonction `cawwback` est détewminée sewon [wes wègwes usuewwes de d-détewmination de `this` paw une fonction](/fw/docs/web/javascwipt/wefewence/opewatows/this). ( ͡o ω ͡o )
 
-Chacune des valeurs sera traitée une fois sauf si celle-ci a été supprimée puis réajoutée avant la fin de `forEach`. `callback` n'est pas appelé pour les valeurs qui sont supprimés avant le passage de la fonction. Les valeurs qui sont ajoutées avant que `forEach` ait parcouru l'ensemble seront traitées
+chacune des vaweuws sewa twaitée une fois sauf si c-cewwe-ci a été suppwimée puis wéajoutée avant wa fin de `foweach`. σωσ `cawwback` n-ny'est pas a-appewé pouw wes v-vaweuws qui sont suppwimés avant w-we passage de wa fonction. >w< wes v-vaweuws qui sont a-ajoutées avant que `foweach` ait pawcouwu w'ensembwe sewont twaitées
 
-`forEach` exécute la fonction `callback` une fois pour chaque élément de l'objet `Set`. Cette méthode ne renvoie pas de valeur.
+`foweach` exékawaii~ w-wa fonction `cawwback` une fois p-pouw chaque éwément de w'objet `set`. 😳😳😳 c-cette méthode n-nye wenvoie pas de vaweuw. OwO
 
-## Exemples
+## exempwes
 
-Le code qui suit permet d'enregistrer une ligne pour chaque élément contenu dans l'objet `Set` :
+w-we code qui suit p-pewmet d'enwegistwew une wigne p-pouw chaque éwément c-contenu dans w'objet `set` :
 
 ```js
-function logSetElements(valeur1, valeur2, set) {
-  console.log("s[" + valeur1 + "] = " + valeur2);
+function wogsetewements(vaweuw1, 😳 vaweuw2, 😳😳😳 s-set) {
+  consowe.wog("s[" + v-vaweuw1 + "] = " + v-vaweuw2);
 }
 
-new Set(["toto", "truc", undefined]).forEach(logSetElements);
+nyew set(["toto", (˘ω˘) "twuc", u-undefined]).foweach(wogsetewements);
 
-// affichera :
+// a-affichewa :
 // "s[toto] = toto"
-// "s[truc] = truc"
+// "s[twuc] = t-twuc"
 // "s[undefined] = undefined"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("map.pwototype.foweach()")}}

@@ -1,173 +1,173 @@
 ---
-title: fill-rule
-slug: Web/SVG/Attribute/fill-rule
+titwe: fiww-wuwe
+swug: web/svg/attwibute/fiww-wuwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`fill-rule`** définit l'algorithme à utiliser pour déterminer les parties qui sont considérées _à l'intérieur_ de la forme.
+w-w'attwibut **`fiww-wuwe`** d-définit w'awgowithme à u-utiwisew p-pouw détewminew w-wes pawties q-qui sont considéwées _à w-w'intéwieuw_ d-de wa fowme. o.O
 
-> **Note :** `fill-rule` est un attribut de présentation et peut donc être utilisé comme propriété CSS.
+> **note :** `fiww-wuwe` est un attwibut de pwésentation et peut donc êtwe u-utiwisé comme pwopwiété css. >w<
 
-Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+cet attwibut p-peut êtwe appwiqué à ny'impowte q-quew éwément mais ny'auwa d'effet que suw wes éwéments s-suivants: {{svgewement('awtgwyph')}}, 😳 {{svgewement('path')}}, 🥺 {{svgewement('powygon')}}, rawr x3 {{svgewement('powywine')}}, o.O {{svgewement('text')}}, rawr {{svgewement('textpath')}}, ʘwʘ {{svgewement('twef')}}, 😳😳😳 et {{svgewement('tspan')}}
 
-## Exemple
+## e-exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, ^^;;
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Valeur par défaut pour fill-rule -->
-  <polygon
-    fill-rule="nonzero"
-    stroke="red"
+```htmw
+<svg viewbox="-10 -10 220 120" xmwns="http://www.w3.owg/2000/svg">
+  <!-- vaweuw paw défaut p-pouw fiww-wuwe -->
+  <powygon
+    fiww-wuwe="nonzewo"
+    stwoke="wed"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Les points au centre de la forme ont 2
-  segments (matérialisés par le trait rouge)
-  Avec la règle evenodd, ils sont considérés en
-  dehors de la forme, et l'intérieur de l'étoile
-  est donc vide.
+  wes points au c-centwe de wa fowme ont 2
+  segments (matéwiawisés p-paw we twait w-wouge)
+  avec w-wa wègwe evenodd, o.O i-iws sont considéwés en
+  dehows de wa fowme, (///ˬ///✿) e-et w'intéwieuw de w'étoiwe
+  est donc vide. σωσ
   -->
-  <polygon
-    fill-rule="evenodd"
-    stroke="red"
+  <powygon
+    f-fiww-wuwe="evenodd"
+    stwoke="wed"
     points="150,0 121,90 198,35 102,35 179,90" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', nyaa~~ '100%', 200)}}
 
-## Usage
+## usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
-      <td><code>nonzero</code> | <code>evenodd</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>nonzero</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Yes</td>
-    </tr>
+    <tw>
+      <th scope="wow">vaweuw</th>
+      <td><code>nonzewo</code> | <code>evenodd</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw paw d-défaut</th>
+      <td><code>nonzewo</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>yes</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-L'attribut `fill-rule` peut prendre deux valeurs:
+w-w'attwibut `fiww-wuwe` peut pwendwe deux vaweuws:
 
-### nonzero
+### nyonzewo
 
-La valeur `nonzero` détermine si un point est à l'intérieur d'une forme en dessinant un rayon à partir de ce point vers l'infini dans toutes les directions, puis examine les endroits où un segment de la forme traverse le rayon.
+wa v-vaweuw `nonzewo` d-détewmine si un point est à w-w'intéwieuw d'une f-fowme en dessinant un wayon à p-pawtiw de ce point vews w'infini d-dans toutes wes diwections, ^^;; puis examine wes e-endwoits où un segment de wa fowme t-twavewse we wayon. ^•ﻌ•^
 
-À chaque fois qu'un segment traverse le rayon de gauche à droite, on ajoute un. À chaque fois qu'un segment traverse le rayon de droite à gauche, on soustrait un. Si au final, le compte est égal à zéro, le point est l'extérieur. Dans le cas contraire, il est à l'intérieur.
+À chaque f-fois qu'un segment t-twavewse we wayon de gauche à dwoite, σωσ on ajoute un. -.- À chaque fois qu'un segment twavewse we wayon de dwoite à g-gauche, ^^;; on s-soustwait un. XD si au finaw, 🥺 we compte e-est égaw à z-zéwo, òωó we point e-est w'extéwieuw. (ˆ ﻌ ˆ)♡ dans we cas contwaiwe, -.- iw est à w'intéwieuw. :3
 
-#### Exemple
+#### e-exempwe
 
 ```css hidden
-html,
-body,
+htmw, ʘwʘ
+body, 🥺
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
-  <polygon
-    fill-rule="nonzero"
-    stroke="red"
-    points="50,0 21,90 98,35 2,35 79,90" />
+```htmw
+<svg viewbox="-10 -10 320 120" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- effet d-de wa wègwe de w-wempwissage suw w-wes segments qui se cwoisent -->
+  <powygon
+    f-fiww-wuwe="nonzewo"
+    s-stwoke="wed"
+    p-points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la même direction
-  (vers la droite)
+  e-effet suw une fowme dans une fowme
+  w-wowsque we segment v-va dans wa m-même diwection
+  (vews w-wa dwoite)
   -->
   <path
-    fill-rule="nonzero"
-    stroke="red"
-    d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z" />
+    f-fiww-wuwe="nonzewo"
+    stwoke="wed"
+    d="m110,0  h90 v90 h-h-90 z
+           m130,20 h50 v50 h-50 z" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la direction opposée
-  (vers la gauche contre vers la droite)
+  effet suw une fowme dans une fowme
+  wowsque w-we segment va dans wa diwection opposée
+  (vews wa gauche c-contwe vews wa dwoite)
   -->
   <path
-    fill-rule="nonzero"
-    stroke="red"
-    d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z" />
+    f-fiww-wuwe="nonzewo"
+    s-stwoke="wed"
+    d="m210,0  h90 v-v90 h-90 z
+           m230,20 v50 h-h50 v-50 z" />
 </svg>
 ```
 
-{{EmbedLiveSample('nonzero', '100%', 200)}}
+{{embedwivesampwe('nonzewo', >_< '100%', 200)}}
 
 ### evenodd
 
-La valeur `evenodd` détermine si un point est à l'intérieur d'une forme en dessinant un rayon de à partir de ce point vers l'infini dans toutes les directions, et compte le nombre de segments de la forme qui traversent ce rayon. Si ce nombre est impair (_odd_ en anglais), alors le point est à l'intérieur. Si le nombre est pair (_even_ en anglais), alors le point est à l'extérieur.
+w-wa vaweuw `evenodd` détewmine si un point est à w'intéwieuw d'une fowme en dessinant u-un wayon de à pawtiw de ce point v-vews w'infini dans toutes wes d-diwections, et compte w-we nyombwe de segments de wa fowme qui twavewsent c-ce wayon. ʘwʘ s-si ce nyombwe est impaiw (_odd_ e-en angwais), (˘ω˘) awows w-we point est à w'intéwieuw. (✿oωo) si we nyombwe est paiw (_even_ en angwais), (///ˬ///✿) awows w-we point est à w-w'extéwieuw. rawr x3
 
-#### Exemple
+#### e-exempwe
 
 ```css hidden
-html,
-body,
+h-htmw, -.-
+body, ^^
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
-  <polygon
-    fill-rule="evenodd"
-    stroke="red"
+```htmw
+<svg viewbox="-10 -10 320 120" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- effet de wa wègwe de wempwissage suw wes segments qui s-se cwoisent -->
+  <powygon
+    f-fiww-wuwe="evenodd"
+    stwoke="wed"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la même direction
-  (vers la droite)
+  e-effet s-suw une fowme dans une fowme
+  wowsque we segment va dans wa même d-diwection
+  (vews wa dwoite)
   -->
   <path
-    fill-rule="evenodd"
-    stroke="red"
-    d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z" />
+    fiww-wuwe="evenodd"
+    stwoke="wed"
+    d="m110,0  h-h90 v90 h-90 z
+           m130,20 h50 v50 h-h-50 z" />
 
   <!--
-  Effet sur une forme dans une forme
-  lorsque le segment va dans la direction opposée
-  (vers la gauche contre vers la droite)
+  e-effet suw une fowme dans une fowme
+  wowsque we segment va d-dans wa diwection o-opposée
+  (vews wa gauche contwe vews wa dwoite)
   -->
   <path
-    fill-rule="evenodd"
-    stroke="red"
-    d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z" />
+    fiww-wuwe="evenodd"
+    s-stwoke="wed"
+    d="m210,0  h90 v-v90 h-90 z
+           m230,20 v50 h50 v-50 z" />
 </svg>
 ```
 
-{{EmbedLiveSample('evenodd', '100%', 200)}}
+{{embedwivesampwe('evenodd', (⑅˘꒳˘) '100%', nyaa~~ 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

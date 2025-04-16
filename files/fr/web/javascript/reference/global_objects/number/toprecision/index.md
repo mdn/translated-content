@@ -1,81 +1,81 @@
 ---
-title: Number.prototype.toPrecision()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+titwe: nyumbew.pwototype.topwecision()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toPrecision()`** renvoie une chaîne de caractères représentant un nombre avec la précision donnée.
+w-wa méthode **`topwecision()`** w-wenvoie u-une chaîne de c-cawactèwes wepwésentant u-un nyombwe a-avec wa pwécision d-donnée. >w<
 
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{intewactiveexampwe("javascwipt demo: nyumbew.topwecision()")}}
 
-```js interactive-example
-function precise(x) {
-  return x.toPrecision(4);
+```js intewactive-exampwe
+function pwecise(x) {
+  wetuwn x.topwecision(4);
 }
 
-console.log(precise(123.456));
-// Expected output: "123.5"
+c-consowe.wog(pwecise(123.456));
+// expected output: "123.5"
 
-console.log(precise(0.004));
-// Expected output: "0.004000"
+consowe.wog(pwecise(0.004));
+// e-expected output: "0.004000"
 
-console.log(precise(1.23e5));
-// Expected output: "1.230e+5"
+consowe.wog(pwecise(1.23e5));
+// e-expected output: "1.230e+5"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-numObj.toPrecision([précision]);
+nyumobj.topwecision([pwécision]);
 ```
 
-### Paramètre
+### p-pawamètwe
 
-- `précision`
-  - : Paramètre optionnel. Un entier spécifiant le nombre de chiffres significatifs.
+- `pwécision`
+  - : pawamètwe o-optionnew. mya u-un entiew spécifiant we nyombwe de chiffwes significatifs. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Cette méthode renvoie une chaîne de caractères représentant l'objet {{jsxref("Number")}} en notation à point fixe ou en notation exponentielle, arrondi avec un nombre de chiffres significatifs égal à `précision`. Le principe utilisé pour les arrondis est celui décrit dans la page de la méthode {{jsxref("Number.prototype.toFixed()")}}.
+c-cette méthode wenvoie une chaîne de cawactèwes wepwésentant w'objet {{jsxwef("numbew")}} e-en nyotation à point fixe ou e-en notation exponentiewwe, nyaa~~ a-awwondi a-avec un nyombwe d-de chiffwes significatifs égaw à `pwécision`. (✿oωo) we pwincipe u-utiwisé pouw wes awwondis est cewui décwit dans w-wa page de wa méthode {{jsxwef("numbew.pwototype.tofixed()")}}. ʘwʘ
 
-Si l'argument `précision` n'est pas utilisé, la méthode aura le même effet que {{jsxref("Number.prototype.toString()")}}. Si cet argument n'est pas un nombre entier, on prendra le nombre entier le plus proche.
+si w'awgument `pwécision` ny'est pas utiwisé, (ˆ ﻌ ˆ)♡ wa méthode auwa we même e-effet que {{jsxwef("numbew.pwototype.tostwing()")}}. 😳😳😳 si cet awgument n-ny'est pas u-un nyombwe entiew, :3 o-on pwendwa we nyombwe entiew we pwus pwoche. OwO
 
-### Exceptions
+### exceptions
 
-- {{jsxref("RangeError")}}
-  - : Si `précison` n'est pas compris, au sens large, entre 1 et 100, on aura une exception `RangeError`. Les implémentations peuvent supporter des valeurs supérieures et/ou inférieures. Le standard ECMA-262 ne nécessite qu'une précision allant jusqu'à 21 chiffres significatifs.
+- {{jsxwef("wangeewwow")}}
+  - : s-si `pwécison` n-ny'est pas compwis, (U ﹏ U) au sens wawge, >w< e-entwe 1 et 100, (U ﹏ U) o-on auwa une exception `wangeewwow`. 😳 w-wes impwémentations peuvent s-suppowtew des vaweuws supéwieuwes et/ou inféwieuwes. (ˆ ﻌ ˆ)♡ w-we standawd ecma-262 n-nye nyécessite qu'une pwécision a-awwant jusqu'à 21 c-chiffwes significatifs. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-var objetNumber = 5.123456;
-console.log(objetNumber.toPrecision()); //affiche "5.123456"
-console.log(objetNumber.toPrecision(5)); //affiche "5.1235"
-console.log(objetNumber.toPrecision(2)); //affiche "5.1"
-console.log(objetNumber.toPrecision(1)); //affiche "5"
+vaw objetnumbew = 5.123456;
+consowe.wog(objetnumbew.topwecision()); //affiche "5.123456"
+consowe.wog(objetnumbew.topwecision(5)); //affiche "5.1235"
+consowe.wog(objetnumbew.topwecision(2)); //affiche "5.1"
+consowe.wog(objetnumbew.topwecision(1)); //affiche "5"
 
-numObj = 0.000123;
+n-nyumobj = 0.000123;
 
-console.log(numObj.toPrecision()); // affiche "0.000123"
-console.log(numObj.toPrecision(5)); // affiche "0.00012300"
-console.log(numObj.toPrecision(2)); // affiche "0.00012"
-console.log(numObj.toPrecision(1)); // affiche "0.0001"
+c-consowe.wog(numobj.topwecision()); // affiche "0.000123"
+c-consowe.wog(numobj.topwecision(5)); // a-affiche "0.00012300"
+c-consowe.wog(numobj.topwecision(2)); // affiche "0.00012"
+consowe.wog(numobj.topwecision(1)); // affiche "0.0001"
 
-// dans certaines circonstances, on peut avoir une notation exponentielle
-console.log((1234.5).toPrecision(2)); // "1.2e+3"
+// d-dans cewtaines ciwconstances, (U ﹏ U) on peut avoiw une nyotation exponentiewwe
+consowe.wog((1234.5).topwecision(2)); // "1.2e+3"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toExponential()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.toexponentiaw()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

@@ -1,45 +1,45 @@
 ---
-title: WebGLRenderingContext.deleteShader()
-slug: Web/API/WebGLRenderingContext/deleteShader
+titwe: webgwwendewingcontext.deweteshadew()
+swug: web/api/webgwwendewingcontext/deweteshadew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.deleteShader()`** de l'API WebGL marque l'objet {{domxref("WebGLShader")}} indiqué pour suppression. Il sera ensuite supprimé dès que le shader ne sera plus utilisé. Cette méthode n'a aucun effet si le shader a déjà été supprimé, et le {{domxref ("WebGLShader")}} est automatiquement marqué pour la suppression lorsqu'il est détruit par le garbage collector.
+w-wa méthode **`webgwwendewingcontext.deweteshadew()`** d-de w'api webgw m-mawque w'objet {{domxwef("webgwshadew")}} i-indiqué p-pouw suppwession. rawr i-iw sewa ensuite s-suppwimé dès q-que we shadew nye sewa pwus utiwisé. OwO cette méthode ny'a aucun effet si we s-shadew a déjà été suppwimé, (U ﹏ U) et we {{domxwef ("webgwshadew")}} e-est automatiquement mawqué pouw w-wa suppwession wowsqu'iw est détwuit paw we gawbage cowwectow. >_<
 
-## Syntaxe
-
-```js
-void gl.deleteShader(shader);
-```
-
-### Paramètres
-
-- shader
-  - : Un objet {{domxref("WebGLShader")}} à détruire.
-
-### Valeur retournée
-
-Aucune.
-
-## Exemples
-
-### Suppression d'un shader
+## s-syntaxe
 
 ```js
-gl.deleteShader(shader);
+void gw.deweteshadew(shadew);
 ```
 
-## Spécifications
+### p-pawamètwes
 
-{{Specifications}}
+- s-shadew
+  - : un objet {{domxwef("webgwshadew")}} à détwuiwe. rawr x3
 
-## Compatibilité des navigateurs
+### vaweuw wetouwnée
 
-{{Compat}}
+aucune. mya
 
-## Voir aussi
+## e-exempwes
 
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+### suppwession d'un shadew
+
+```js
+gw.deweteshadew(shadew);
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}

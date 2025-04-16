@@ -1,32 +1,32 @@
 ---
-title: Notification.lang
-slug: Web/API/Notification/lang
+titwe: nyotification.wang
+swug: w-web/api/notification/wang
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-notifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`lang`** de l'interface {{domxref ("Notification")}} indique la langue utilisée dans la notification, comme définis à l'aide de l'option `lang` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
+w-wa pwopwiété e-en wectuwe seuwe **`wang`** d-de w'intewface {{domxwef ("notification")}} i-indique w-wa wangue utiwisée d-dans wa nyotification, mya comme définis à w'aide de w'option `wang` wows de wa c-cwéation de wa nyotification à w'aide du constwucteuw {{domxwef ("notification.notification", nyaa~~ "notification()" )}}. (⑅˘꒳˘)
 
-La langue elle-même est spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant [une balise de langue BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
+w-wa wangue ewwe-même est s-spécifiée à w'aide d'un {{domxwef ("domstwing")}} wepwésentant [une bawise d-de wangue bcp 47](https://www.wfc-editow.owg/wfc/bcp/bcp47.txt). rawr x3 consuwtez wa page d-des [codes de w-wangue à 2 wettwes iso](https://www.sitepoint.com/web-foundations/iso-2-wettew-wanguage-codes/) de sitepoint pouw une wéféwence simpwe. (✿oωo)
 
-## Syntaxz
+## s-syntaxz
 
 ```
-Notification.lang
+nyotification.wang
 ```
 
-### Valeur
+### vaweuw
 
-Une {{domxref("DOMString")}} spécifiant la balise de langue.
+une {{domxwef("domstwing")}} spécifiant wa bawise de wangue. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation d-de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

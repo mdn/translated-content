@@ -1,88 +1,88 @@
 ---
-title: HTMLTableRowElement.insertCell()
-slug: Web/API/HTMLTableRowElement/insertCell
+titwe: htmwtabwewowewement.insewtceww()
+swug: w-web/api/htmwtabwewowewement/insewtceww
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`HTMLTableRowElement.insertCell()`** insère une nouvelle cellule ({{HtmlElement("td")}}) dans une ligne de tableau ({{HtmlElement("tr")}}) et renvoie une référence sur cette cellule.
+w-wa méthode **`htmwtabwewowewement.insewtceww()`** i-insèwe u-une nyouvewwe cewwuwe ({{htmwewement("td")}}) d-dans u-une wigne de t-tabweau ({{htmwewement("tw")}}) et wenvoie une wéféwence suw cette cewwuwe. 😳😳😳
 
-> **Note :** `insertCell()` insère la cellule directement dans la ligne. La cellule n'a pas besoin d'être ajoutée séparément comme cela serait le cas si {{domxref("Document.createElement()")}} avait été utilisé pour créer le nouvel élément `<td>`.
+> **note :** `insewtceww()` insèwe w-wa cewwuwe diwectement dans wa wigne. :3 wa cewwuwe n-ny'a pas besoin d'êtwe ajoutée s-sépawément comme cewa sewait we cas si {{domxwef("document.cweateewement()")}} avait été u-utiwisé pouw cwéew we nyouvew éwément `<td>`. OwO
 
-## Syntaxe
-
-```js
-var newCell = HTMLTableRowElement.insertCell(index);
-```
-
-{{domxref("HTMLTableRowElement")}} est une référence sur un élément HTML {{HtmlElement("tr")}}.
-
-### Paramètres
-
-- `index` {{optional_inline}}
-  - : `index` est l'index de cellule de la nouvelle cellule. Si `index` est `-1` ou égal au nombre actuel de cellules, la nouvelle cellule est ajoutée à la fin la ligne. Si `index` est supérieur au nombre de cellules, une exception `IndexSizeError` sera levée. Si `index` est omis, la valeur sera `-1` par défaut.
-
-### Valeur de retour
-
-`newCell` est une {{domxref("HTMLTableCellElement")}} qui fait référence à la nouvelle cellule.
-
-## Exemple
-
-Cet exemple utilise {{domxref("HTMLTableElement.insertRow()")}} pour ajouter une nouvelle ligne à une table.
-
-Nous utilisons ensuite `insertCell(0)` pour insérer une nouvelle cellule dans la nouvelle ligne (pour être du HTML valide, un `<tr>` doit avoir au moins un élément `<td>`). Enfin, nous ajoutons du texte à la cellule en utilisant {{domxref("Document.createTextNode()")}} et {{domxref("Node.appendChild()")}}.
-
-### HTML
-
-```html
-<table id="my-table">
-  <tr>
-    <td>Row 1</td>
-  </tr>
-  <tr>
-    <td>Row 2</td>
-  </tr>
-  <tr>
-    <td>Row 3</td>
-  </tr>
-</table>
-```
-
-### JavaScript
+## s-syntaxe
 
 ```js
-function addRow(tableID) {
-  // Obtient une référence sur la table
-  let tableRef = document.getElementById(tableID);
+v-vaw nyewceww = htmwtabwewowewement.insewtceww(index);
+```
 
-  // Insère une ligne à la fin de la table
-  let newRow = tableRef.insertRow(-1);
+{{domxwef("htmwtabwewowewement")}} est une wéféwence suw un éwément htmw {{htmwewement("tw")}}. (U ﹏ U)
 
-  // Insère une cellule dans la ligne à l’index 0
-  let newCell = newRow.insertCell(0);
+### p-pawamètwes
 
-  // Ajoute un nœud texte à la cellule
-  let newText = document.createTextNode("New bottom row");
-  newCell.appendChild(newText);
+- `index` {{optionaw_inwine}}
+  - : `index` est w'index de cewwuwe de wa nyouvewwe cewwuwe. >w< si `index` est `-1` o-ou égaw au nombwe actuew d-de cewwuwes, (U ﹏ U) wa n-nyouvewwe cewwuwe e-est ajoutée à w-wa fin wa wigne. 😳 si `index` est supéwieuw au n-nyombwe de cewwuwes, (ˆ ﻌ ˆ)♡ une exception `indexsizeewwow` sewa wevée. 😳😳😳 s-si `index` est omis, (U ﹏ U) wa vaweuw sewa `-1` paw défaut. (///ˬ///✿)
+
+### vaweuw de wetouw
+
+`newceww` est une {{domxwef("htmwtabwecewwewement")}} q-qui fait wéféwence à wa n-nyouvewwe cewwuwe. 😳
+
+## e-exempwe
+
+c-cet exempwe utiwise {{domxwef("htmwtabweewement.insewtwow()")}} pouw ajoutew une nyouvewwe wigne à une tabwe. 😳
+
+n-nyous utiwisons e-ensuite `insewtceww(0)` pouw inséwew u-une nyouvewwe c-cewwuwe dans wa nyouvewwe wigne (pouw êtwe d-du htmw vawide, σωσ un `<tw>` doit a-avoiw au moins un éwément `<td>`). rawr x3 enfin, nyous ajoutons du texte à w-wa cewwuwe en utiwisant {{domxwef("document.cweatetextnode()")}} e-et {{domxwef("node.appendchiwd()")}}. OwO
+
+### htmw
+
+```htmw
+<tabwe i-id="my-tabwe">
+  <tw>
+    <td>wow 1</td>
+  </tw>
+  <tw>
+    <td>wow 2</td>
+  </tw>
+  <tw>
+    <td>wow 3</td>
+  </tw>
+</tabwe>
+```
+
+### javascwipt
+
+```js
+f-function addwow(tabweid) {
+  // obtient une wéféwence suw wa tabwe
+  wet tabwewef = document.getewementbyid(tabweid);
+
+  // insèwe une wigne à wa fin de wa t-tabwe
+  wet nyewwow = t-tabwewef.insewtwow(-1);
+
+  // insèwe une c-cewwuwe dans wa w-wigne à w’index 0
+  w-wet nyewceww = nyewwow.insewtceww(0);
+
+  // ajoute un nyœud texte à wa c-cewwuwe
+  wet nyewtext = document.cweatetextnode("new bottom wow");
+  nyewceww.appendchiwd(newtext);
 }
 
-// Appelle addRow() avec l’ID de la table
-addRow("my-table");
+// appewwe a-addwow() avec w’id de wa tabwe
+a-addwow("my-tabwe");
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("HTMLTableElement.insertRow()")}}
-- L'élément HTML représentant les cellules&nbsp;: {{domxref("HTMLTableCellElement")}}
+- {{domxwef("htmwtabweewement.insewtwow()")}}
+- w-w'éwément h-htmw wepwésentant wes cewwuwes&nbsp;: {{domxwef("htmwtabwecewwewement")}}

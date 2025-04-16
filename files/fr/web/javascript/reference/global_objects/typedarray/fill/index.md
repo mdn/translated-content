@@ -1,79 +1,79 @@
 ---
-title: TypedArray.prototype.fill()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
+titwe: typedawway.pwototype.fiww()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/fiww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`fill()`** remplit les éléments d'un tableau typé contenu entre un indice de début et un indice de fin avec une valeur statique. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.fill()")}}. Dans le reste de cet article, _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays#les_objets_typedarray).
+w-wa méthode **`fiww()`** w-wempwit w-wes éwéments d-d'un tabweau t-typé contenu entwe u-un indice de d-début et un indice d-de fin avec une vaweuw statique. 😳😳😳 cette méthode utiwise we même awgowithme q-que {{jsxwef("awway.pwototype.fiww()")}}. (U ﹏ U) dans we weste de cet a-awticwe, (///ˬ///✿) _typedawway_ cowwespond à w-w'un des [types de tabweaux typés](/fw/docs/web/javascwipt/guide/typed_awways#wes_objets_typedawway). 😳
 
-{{InteractiveExample("JavaScript Demo: TypedArray.fill()")}}
+{{intewactiveexampwe("javascwipt demo: t-typedawway.fiww()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([0, 0, 0, 0]);
-// Value, start position, end position
-uint8.fill(4, 1, 3);
+```js intewactive-exampwe
+c-const uint8 = n-nyew uint8awway([0, 😳 0, 0, 0]);
+// vawue, σωσ stawt position, rawr x3 end position
+uint8.fiww(4, OwO 1, 3);
 
-console.log(uint8);
-// Expected output: Uint8Array [0, 4, 4, 0]
+consowe.wog(uint8);
+// expected output: u-uint8awway [0, /(^•ω•^) 4, 4, 0]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.fill(valeur[, début = 0[, fin = this.length]])
+typedawway.fiww(vaweuw[, 😳😳😳 début = 0[, ( ͡o ω ͡o ) fin = this.wength]])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : La valeur avec laquelle on souhaite remplir le tableau.
+- `vaweuw`
+  - : wa vaweuw a-avec waquewwe o-on souhaite wempwiw w-we tabweau. >_<
 - `début`
-  - : Paramètre optionnel qui représente l'indice à partir duquel remplir le tableau. La valeur par défaut est 0.
+  - : p-pawamètwe optionnew qui wepwésente w'indice à p-pawtiw duquew wempwiw we tabweau. >w< wa vaweuw paw d-défaut est 0. rawr
 - `fin`
-  - : Paramètre optionnel qui représente l'indice jusqu'auquel remplir le tableau. La valeur par défaut est la longueur du tableau (`this.length`).
+  - : pawamètwe optionnew qui wepwésente w'indice jusqu'auquew wempwiw we tabweau. 😳 wa v-vaweuw paw défaut est wa wongueuw d-du tabweau (`this.wength`).
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le tableau typé, modifié par la fonction.
+w-we tabweau typé, >w< modifié paw wa fonction. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-L'intervalle d'éléments à modifier est \[`début`, `fin`).
+w-w'intewvawwe d-d'éwéments à modifiew est \[`début`, OwO `fin`).
 
-La méthode **`fill`** utilise jusqu'à trois arguments : `valeur`, `début` et `fin`. `début` et `fin` sont optionnels, leurs valeurs par défaut respectives sont `0` et la valeur de la propriété `length` de l'objet `this`.
+w-wa méthode **`fiww`** u-utiwise jusqu'à twois a-awguments : `vaweuw`, (ꈍᴗꈍ) `début` et `fin`. 😳 `début` e-et `fin` sont optionnews, 😳😳😳 weuws vaweuws paw défaut w-wespectives sont `0` et wa v-vaweuw de wa pwopwiété `wength` de w'objet `this`. mya
 
-Si `début` est négatif, on le traite comme `length+début` où `length` représente la longueur du tableau. Si `fin` est négative, on le traite comme `length+fin`.
+s-si `début` e-est nyégatif, mya on we twaite comme `wength+début` où `wength` wepwésente wa wongueuw du tabweau. (⑅˘꒳˘) si `fin` e-est nyégative, (U ﹏ U) o-on we twaite comme `wength+fin`. mya
 
-## Exemples
+## exempwes
 
 ```js
-new Uint8Array([1, 2, 3]).fill(4); // Uint8Array [4, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1); // Uint8Array [1, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1, 2); // Uint8Array [1, 4, 3]
-new Uint8Array([1, 2, 3]).fill(4, 1, 1); // Uint8Array [1, 2, 3]
-new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
+n-nyew uint8awway([1, ʘwʘ 2, 3]).fiww(4); // u-uint8awway [4, (˘ω˘) 4, 4]
+n-nyew uint8awway([1, (U ﹏ U) 2, 3]).fiww(4, ^•ﻌ•^ 1); // uint8awway [1, (˘ω˘) 4, 4]
+nyew uint8awway([1, :3 2, 3]).fiww(4, ^^;; 1, 2); // uint8awway [1, 🥺 4, (⑅˘꒳˘) 3]
+n-nyew uint8awway([1, nyaa~~ 2, 3]).fiww(4, :3 1, 1); // uint8awway [1, ( ͡o ω ͡o ) 2, 3]
+nyew uint8awway([1, mya 2, 3]).fiww(4, (///ˬ///✿) -3, -2); // uint8awway [4, (˘ω˘) 2, 3]
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Il n'existe pas d'objet global avec le nom _TypedArray_, la prothèse doit donc être appliquée uniquement si nécessaire, aussi {{jsxref("Array.prototype.fill()")}} pourra éventuellement être utilisé (voire la prothèse de cette dernière).
+iw ny'existe p-pas d'objet gwobaw avec we nyom _typedawway_, ^^;; w-wa pwothèse doit d-donc êtwe appwiquée u-uniquement si nyécessaiwe, a-aussi {{jsxwef("awway.pwototype.fiww()")}} pouwwa éventuewwement êtwe u-utiwisé (voiwe w-wa pwothèse d-de cette dewnièwe). (✿oωo)
 
 ```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
-if (!Uint8Array.prototype.fill) {
-  Uint8Array.prototype.fill = Array.prototype.fill;
+// https://tc39.github.io/ecma262/#sec-%typedawway%.pwototype.fiww
+i-if (!uint8awway.pwototype.fiww) {
+  u-uint8awway.pwototype.fiww = a-awway.pwototype.fiww;
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.fill()")}}
+- {{jsxwef("awway.pwototype.fiww()")}}

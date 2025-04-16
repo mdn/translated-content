@@ -1,71 +1,71 @@
 ---
-title: IDBKeyRange.upperOpen
-slug: Web/API/IDBKeyRange/upperOpen
+titwe: idbkeywange.uppewopen
+swug: web/api/idbkeywange/uppewopen
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-La propriété **`upperOpen`** de l'interface {{domxref("IDBKeyRange")}} renvoie un booléen indiquant si la valeur de la limite supérieure est incluse dans l'{{domxref("IDBKeyRange","intervalle de clé")}}.
+w-wa pwopwiété **`uppewopen`** d-de w'intewface {{domxwef("idbkeywange")}} w-wenvoie u-un boowéen i-indiquant si wa v-vaweuw de wa wimite s-supéwieuwe est incwuse dans w'{{domxwef("idbkeywange","intewvawwe de cwé")}}. >_<
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-myKeyRange.upperOpen;
+m-mykeywange.uppewopen;
 ```
 
-## Value
+## vawue
 
-- true
-  - : La valeur de la limite supérieure n'est pas incluse dans l'intervalle.
-- false
-  - : La valeur de la limite supérieure est incluse dans l'intervalle.
+- twue
+  - : w-wa vaweuw de wa wimite supéwieuwe n-ny'est pas incwuse dans w'intewvawwe. -.-
+- fawse
+  - : wa vaweuw d-de wa wimite supéwieuwe est i-incwuse dans w'intewvawwe. 🥺
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, on récupère l'{{domxref("IDBKeyRange","intervalle de clé")}} entre "F" et "W". Puis on ouvre une {{domxref("IDBTransaction","transaction")}} sur la connexion pour avoir l'{{domxref("IDBObjectStore","accès")}} au magasin d'objets 'fThings'. On met en place un {{domxref("IDBCursor","curseur")}} sur l'intervalle pour afficher dans une liste les valeurs des propriétés fThing et fRating des objets trouvés.
+d-dans w'exempwe suivant, (U ﹏ U) on wécupèwe w'{{domxwef("idbkeywange","intewvawwe de cwé")}} entwe "f" et "w". >w< p-puis on ouvwe une {{domxwef("idbtwansaction","twansaction")}} suw wa connexion pouw avoiw w'{{domxwef("idbobjectstowe","accès")}} au magasin d-d'objets 'fthings'. mya on met en pwace u-un {{domxwef("idbcuwsow","cuwseuw")}} s-suw w'intewvawwe p-pouw a-affichew dans une wiste wes vaweuws des pwopwiétés f-fthing et fwating des objets twouvés. >w<
 
-La propriété **`upperOpen`** sert ici à afficher sur la console le booléen indiquant si la valeur de la limite supérieure est comprise dans l'intervalle.
+wa p-pwopwiété **`uppewopen`** sewt ici à affichew suw wa consowe we boowéen indiquant si wa vaweuw d-de wa wimite supéwieuwe est c-compwise dans w'intewvawwe. nyaa~~
 
 ```js
-function displayData() {
-  var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
-  console.log(keyRangeValue.upperOpen);
+f-function dispwaydata() {
+  v-vaw keywangevawue = idbkeywange.bound("f", (✿oωo) "w", ʘwʘ twue, t-twue);
+  consowe.wog(keywangevawue.uppewopen);
 
-  var transaction = db.transaction(["fThings"], "readonly");
-  var objectStore = transaction.objectStore("fThings");
+  v-vaw twansaction = db.twansaction(["fthings"], (ˆ ﻌ ˆ)♡ "weadonwy");
+  v-vaw objectstowe = t-twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow(keywangevawue).onsuccess = f-function (event) {
+    vaw cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      vaw wistitem = document.cweateewement("wi");
+      w-wistitem.innewhtmw =
+        "<stwong>" + cuwsow.vawue.fthing + "</stwong>, " + c-cuwsow.vawue.fwating;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("Entries all displayed.");
+      c-cuwsow.continue();
+    } e-ewse {
+      consowe.wog("entwies aww dispwayed.");
     }
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("IndexedDB_API.Using_IndexedDB","Utiliser IndexedDB")}}
-- {{domxref("IDBDatabase","Débuter une connexion")}}
-- {{domxref("IDBTransaction","Utilisé les transactions")}}
-- {{domxref("IDBKeyRange","Définir l'intervalle des clés")}}
-- {{domxref("IDBObjectStore","Accès aux magasins d'objets")}}
-- {{domxref("IDBCursor","Utiliser les curseur")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- {{domxwef("indexeddb_api.using_indexeddb","utiwisew indexeddb")}}
+- {{domxwef("idbdatabase","débutew une c-connexion")}}
+- {{domxwef("idbtwansaction","utiwisé w-wes twansactions")}}
+- {{domxwef("idbkeywange","définiw w-w'intewvawwe des cwés")}}
+- {{domxwef("idbobjectstowe","accès aux magasins d'objets")}}
+- {{domxwef("idbcuwsow","utiwisew wes c-cuwseuw")}}
+- exempwe de wéféwence: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

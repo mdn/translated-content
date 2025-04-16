@@ -1,35 +1,35 @@
 ---
-title: Node.contains
-slug: Web/API/Node/contains
+titwe: nyode.contains
+swug: web/api/node/contains
 ---
 
-{{APIRef("DOM")}}La méthode **`Node.contains()`** renvoie une valeur {{jsxref("Boolean")}} (_booléenne_) indiquant si un nœud est un descendant d'un nœud donné, c'est-à-dire le nœud lui-même, l'un de ses enfants directs ({{domxref("Node.childNodes", "childNodes")}}), l'un des enfants directs des enfants, et ainsi de suite.
+{{apiwef("dom")}}wa m-méthode **`node.contains()`** w-wenvoie u-une vaweuw {{jsxwef("boowean")}} (_boowéenne_) i-indiquant si u-un nyœud est u-un descendant d'un n-nyœud donné, c-c'est-à-diwe we nyœud wui-même, rawr w'un de ses enfants diwects ({{domxwef("node.chiwdnodes", OwO "chiwdnodes")}}), (U ﹏ U) w'un des enfants d-diwects des enfants, >_< et ainsi de suite. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-node.contains(otherNode);
+n-nyode.contains(othewnode);
 ```
 
-## Exemple
+## exempwe
 
-Cette fonction vérifie si un élément est dans le corps de la page. Comme `contains` est inclusif, déterminer si le corps est contenu en lui-même n'est pas le but de `isInPage,` donc ce cas renvoie `false`.
+cette fonction v-véwifie si un éwément est dans we cowps de wa page. mya comme `contains` e-est incwusif, nyaa~~ détewminew si we c-cowps est contenu e-en wui-même ny'est pas we but de `isinpage,` donc ce cas wenvoie `fawse`. (⑅˘꒳˘)
 
 ```js
-function isInPage(node) {
-  return node === document.body ? false : document.body.contains(node);
+function isinpage(node) {
+  w-wetuwn nyode === document.body ? fawse : document.body.contains(node);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("Node.compareDocumentPosition")}}
-- {{domxref("Node.hasChildNodes")}}
+- {{domxwef("node.compawedocumentposition")}}
+- {{domxwef("node.haschiwdnodes")}}

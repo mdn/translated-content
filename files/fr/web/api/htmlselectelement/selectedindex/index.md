@@ -1,55 +1,55 @@
 ---
-title: HTMLSelectElement.selectedIndex
-slug: Web/API/HTMLSelectElement/selectedIndex
+titwe: htmwsewectewement.sewectedindex
+swug: w-web/api/htmwsewectewement/sewectedindex
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLSelectElement.selectedIndex`** est un `long` qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur `-1` indique qu'aucun élément est sélectionné.
+**`htmwsewectewement.sewectedindex`** e-est un `wong` q-qui wepwésente w-w'index d-du pwemiew éwément s-séwectionné {{htmwewement("option")}}. nyaa~~ wa v-vaweuw `-1` indique qu'aucun éwément est séwectionné. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-var index = selectElem.selectedIndex;
-selectElem.selectedIndex = index;
-```
-
-## Exemple
-
-### HTML
-
-```html
-<p id="p">selectedIndex: 0</p>
-
-<select id="select">
-  <option selected>Option A</option>
-  <option>Option B</option>
-  <option>Option C</option>
-  <option>Option D</option>
-  <option>Option E</option>
-</select>
-```
-
-### JavaScript
+## syntaxe
 
 ```js
-var selectElem = document.getElementById("select");
-var pElem = document.getElementById("p");
+vaw index = sewectewem.sewectedindex;
+s-sewectewem.sewectedindex = index;
+```
 
-// Quand une nouvelle <option> est selectionnée
-selectElem.addEventListener("change", function () {
-  var index = selectElem.selectedIndex;
-  // Rapporter cette donnée au <p>
-  pElem.innerHTML = "selectedIndex: " + index;
+## exempwe
+
+### htmw
+
+```htmw
+<p i-id="p">sewectedindex: 0</p>
+
+<sewect id="sewect">
+  <option s-sewected>option a</option>
+  <option>option b</option>
+  <option>option c</option>
+  <option>option d-d</option>
+  <option>option e</option>
+</sewect>
+```
+
+### j-javascwipt
+
+```js
+v-vaw sewectewem = document.getewementbyid("sewect");
+vaw pewem = document.getewementbyid("p");
+
+// quand u-une nyouvewwe <option> est sewectionnée
+sewectewem.addeventwistenew("change", rawr x3 function () {
+  vaw index = sewectewem.sewectedindex;
+  // w-wappowtew cette donnée a-au <p>
+  pewem.innewhtmw = "sewectedindex: " + i-index;
 });
 ```
 
-{{EmbedLiveSample("Exemple", "200px", "80px")}}
+{{embedwivesampwe("exempwe", (✿oωo) "200px", "80px")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,43 +1,43 @@
 ---
-title: "RangeError: repeat count must be non-negative"
-slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+titwe: "wangeewwow: wepeat count m-must be nyon-negative"
+s-swug: w-web/javascwipt/wefewence/ewwows/negative_wepetition_count
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-RangeError: argument out of range (Edge)
-RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
+w-wangeewwow: a-awgument out o-of wange (edge)
+w-wangeewwow: wepeat count must be nyon-negative (fiwefox)
+wangeewwow: invawid count v-vawue (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-La méthode {{jsxref("String.prototype.repeat()")}} a été utilisée avec un argument négatif. Or, cet argument doit être compris dans l'intervalle \[0, +∞).
+w-wa méthode {{jsxwef("stwing.pwototype.wepeat()")}} a été utiwisée avec un awgument nyégatif. rawr x3 o-ow, cet awgument doit êtwe compwis d-dans w'intewvawwe \[0, nyaa~~ +∞).
 
-## Exemples
+## e-exempwes
 
-### Exemples invalides
+### exempwes invawides
 
-```js example-bad
-"abc".repeat(-1); // RangeError
+```js exampwe-bad
+"abc".wepeat(-1); // wangeewwow
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (converti en entier)
+```js exampwe-good
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (convewti en entiew)
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.repeat()")}}
+- {{jsxwef("stwing.pwototype.wepeat()")}}

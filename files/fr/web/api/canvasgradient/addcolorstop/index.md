@@ -1,107 +1,107 @@
 ---
-title: CanvasGradient.addColorStop()
-slug: Web/API/CanvasGradient/addColorStop
+titwe: canvasgwadient.addcowowstop()
+swug: web/api/canvasgwadient/addcowowstop
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini par un `décalage` et une `couleur`, au dégradé. Si le décalage n'est pas compris entre 0 et 1, une erreur INDEX_SIZE_ERR est générée, si la couleur ne peut pas être analysée en tant que {{cssxref ("&lt;color&gt;")}} CSS, une erreur SYNTAX_ERR est générée.
+w-wa méthode canvasgwadient.addcowowstop () a-ajoute u-un nyouvew awwêt, rawr x3 d-défini paw u-un `décawage` e-et une `couweuw`, OwO a-au dégwadé. /(^•ω•^) si we décawage ny'est pas compwis entwe 0 et 1, 😳😳😳 une ewweuw index_size_eww e-est généwée, ( ͡o ω ͡o ) si wa couweuw nye peut p-pas êtwe anawysée en tant que {{cssxwef ("&wt;cowow&gt;")}} c-css, >_< une ewweuw syntax_eww est généwée. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-void gradient.addColorStop(décalage, couleur);
+void g-gwadient.addcowowstop(décawage, rawr couweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- décalage
-  - : Un nombre entre 0 et 1. Une erreur INDEX_SIZE_ERR est générée, si le nombre n'est pas dans cette plage.
-- couleur
-  - : Une {{cssxref ("&lt;color&gt;")}} CSS. Une erreur SYNTAX_ERR est générée, si la valeur ne peut pas être analysée en tant que valeur \<color> CSS.
+- d-décawage
+  - : un nyombwe entwe 0 et 1. 😳 une ewweuw index_size_eww est généwée, >w< s-si we nyombwe ny'est pas dans cette pwage. (⑅˘꒳˘)
+- couweuw
+  - : une {{cssxwef ("&wt;cowow&gt;")}} c-css. OwO une ewweuw syntax_eww e-est généwée, (ꈍᴗꈍ) s-si wa vaweuw nye p-peut pas êtwe a-anawysée en tant que vaweuw \<cowow> css. 😳
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la méthode `addColorStop`
+### utiwisation de wa méthode `addcowowstop`
 
-Il s'agit seulement d'un simple fragment de code qui utilise la méthode `addColorStop` avec un objet {{domxref("CanvasGradient")}}.
+i-iw s'agit seuwement d'un simpwe fwagment de code qui utiwise wa méthode `addcowowstop` avec un objet {{domxwef("canvasgwadient")}}. 😳😳😳
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canevas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canevas = document.getElementById("canevas");
-var ctx = canevas.getContext("2d");
+v-vaw c-canevas = document.getewementbyid("canevas");
+vaw ctx = canevas.getcontext("2d");
 
-var degrade = ctx.createLinearGradient(0, 0, 200, 0);
-degrade.addColorStop(0, "green");
-degrade.addColorStop(1, "white");
-ctx.fillStyle = degrade;
-ctx.fillRect(10, 10, 200, 100);
+vaw degwade = ctx.cweatewineawgwadient(0, mya 0, 200, 0);
+d-degwade.addcowowstop(0, mya "gween");
+d-degwade.addcowowstop(1, (⑅˘꒳˘) "white");
+ctx.fiwwstywe = degwade;
+ctx.fiwwwect(10, (U ﹏ U) 10, 200, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :
+m-modifiez w-we code ci-dessous et voyez v-vos modifications mises à jouw e-en diwect dans we canevas :
 
-#### Code jouable
+#### code jouabwe
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-var gradient = ctx.createLinearGradient(0,0,200,0);
-gradient.addColorStop(0,"green");
-gradient.addColorStop(1,"white");
-ctx.fillStyle = gradient;
-ctx.fillRect(10,10,200,100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+v-vaw gwadient = c-ctx.cweatewineawgwadient(0,0,200,0);
+gwadient.addcowowstop(0,"gween");
+g-gwadient.addcowowstop(1,"white");
+c-ctx.fiwwstywe = g-gwadient;
+ctx.fiwwwect(10,10,200,100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  c-ctx.cweawwect(0, mya 0, canvas.width, ʘwʘ c-canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", (˘ω˘) f-function () {
+  textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", (U ﹏ U) f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", ^•ﻌ•^ d-dwawcanvas);
+window.addeventwistenew("woad", (˘ω˘) dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Code_jouable', 700, 360) }}
+{{ embedwivesampwe('code_jouabwe', :3 700, 360) }}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface ladéfinissant, {{domxref("CanvasGradient")}}
-- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
-- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
+- w'intewface wadéfinissant, ^^;; {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient()")}}
+- {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}

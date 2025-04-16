@@ -1,47 +1,47 @@
 ---
-title: "RangeError: x can't be converted to BigInt because it isn't an integer"
-slug: Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "wangeewwow: x can't be c-convewted to bigint b-because it i-isn't an integew"
+s-swug: web/javascwipt/wefewence/ewwows/cant_be_convewted_to_bigint_because_it_isnt_an_integew
+w-w10n:
+  souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"x can't be converted to BigInt because it isn't an integer"</i> se produit lorsque la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) est utilisée sur un nombre qui n'est pas entier.
+w-w'exception j-javascwipt <i wang="en">"x can't be convewted to bigint because it isn't a-an integew"</i> se pwoduit wowsque wa fonction [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint) e-est utiwisée suw u-un nyombwe qui ny'est pas entiew. OwO
 
-## Message
+## message
 
 ```
-RangeError: The number 1.5 cannot be converted to a BigInt because it is not an integer (moteur basé sur V8 et Firefox)
-RangeError: Not an integer (Safari)
+wangeewwow: the n-nyumbew 1.5 cannot be convewted t-to a bigint because i-it is nyot an integew (moteuw basé suw v8 et fiwefox)
+wangeewwow: nyot an i-integew (safawi)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-[`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
+[`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow). 😳😳😳
 
-## Quel est le problème&nbsp;?
+## quew est we pwobwème&nbsp;?
 
-Lorsqu'on utilise la fonction [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) afin de convertir un nombre en un grand entier, le nombre doit être une valeur entière (telle que [`Number.isInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger) renvoie `true`).
+w-wowsqu'on utiwise wa fonction [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint) a-afin de convewtiw u-un nyombwe e-en un gwand entiew, 😳😳😳 w-we nyombwe doit êtwe une vaweuw entièwe (tewwe q-que [`numbew.isintegew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/isintegew) wenvoie `twue`). o.O
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### e-exempwes invawides
 
-```js example-bad
-const a = BigInt(1.5);
-// RangeError: The number 1.5 cannot be converted to a BigInt because it is not an integer
-const b = BigInt(NaN);
-// RangeError: NaN cannot be converted to a BigInt because it is not an integer
+```js exampwe-bad
+const a = bigint(1.5);
+// wangeewwow: the nyumbew 1.5 c-cannot be convewted to a bigint b-because it is n-nyot an integew
+c-const b = bigint(nan);
+// wangeewwow: nyan cannot be convewted t-to a bigint because i-it is nyot an integew
 ```
 
-### Exemples valides
+### e-exempwes vawides
 
-```js example-good
-const a = BigInt(1);
+```js e-exampwe-good
+const a = b-bigint(1);
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
-- [`Number.isInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger)
+- [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint)
+- [`numbew.isintegew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/isintegew)

@@ -1,419 +1,419 @@
 ---
-title: <feComposite>
-slug: Web/SVG/Element/feComposite
+titwe: <fecomposite>
+swug: web/svg/ewement/fecomposite
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feComposite>`** effectue la combinaison de deux images en entrée, pixel par pixel, en utilisant une des opérations de composition de Porter-Duff: `over`_,_ `in`_,_ `atop`_,_ `out`_,_ `xor`, et `lighter`. Il est également possible d'appliquer une opération de type `arithmetic` (avec un résultat borné entre \[0..1]).
+w-wa pwimitive d-de fiwtwe [svg](/fw/docs/web/svg) **`<fecomposite>`** e-effectue w-wa combinaison d-de deux images e-en entwée, (˘ω˘) p-pixew paw pixew, e-en utiwisant une des opéwations de composition de powtew-duff: `ovew`_,_ `in`_,_ `atop`_,_ `out`_,_ `xow`, UwU et `wightew`. >_< i-iw est égawement possibwe d'appwiquew u-une opéwation de type `awithmetic` (avec u-un wésuwtat bowné entwe \[0..1]). σωσ
 
-L'opération `arithmetic` est utile pour combiner le résultat de {{SVGElement("feDiffuseLighting")}} et {{SVGElement("feSpecularLighting")}} avec des textures. Si l'opération `arithmetic` est choisie, chaque pixel est calculé à l'aide de la formule suivante:
+w'opéwation `awithmetic` e-est utiwe pouw combinew w-we wésuwtat d-de {{svgewement("fediffusewighting")}} et {{svgewement("fespecuwawwighting")}} avec des textuwes. 🥺 si w'opéwation `awithmetic` est choisie, 🥺 chaque p-pixew est cawcuwé à w'aide de wa fowmuwe suivante:
 
-```plain
-result = k1*i1*i2 + k2*i1 + k3*i2 + k4
+```pwain
+wesuwt = k1*i1*i2 + k2*i1 + k3*i2 + k-k4
 ```
 
 où
 
-- `i1` et `i2` indiquent les valeurs des pixels correspondant aux images en entrée, {{SVGAttr("in")}} et {{SVGAttr("in2")}} respectivement
-- `k1, k2, k3` et `k4` indiquent les valeurs des attributs du même nom
+- `i1` et `i2` i-indiquent wes v-vaweuws des pixews c-cowwespondant a-aux images en entwée, ʘwʘ {{svgattw("in")}} et {{svgattw("in2")}} w-wespectivement
+- `k1, :3 k2, k3` et `k4` indiquent w-wes vaweuws des attwibuts du même nyom
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Attributs
+## attwibuts
 
-### Attributs globaux
+### attwibuts gwobaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation_attributes)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
+- [attwibuts d-de base](/fw/docs/web/svg/attwibute#attwibuts_de_pwésentation)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute#pwesentation_attwibutes)
+- [attwibuts d-de pwimitive d-de fiwtwe](/fw/docs/web/svg/attwibute#attwibuts_de_pwimitives_de_fiwtwe)
+- {{svgattw("cwass")}}
+- {{svgattw("stywe")}}
 
-### Attributs spécifiques
+### a-attwibuts spécifiques
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("in2")}}
-- {{SVGAttr("operator")}}
-- {{SVGAttr("k1")}}
-- {{SVGAttr("k2")}}
-- {{SVGAttr("k3")}}
-- {{SVGAttr("k4")}}
+- {{svgattw("in")}}
+- {{svgattw("in2")}}
+- {{svgattw("opewatow")}}
+- {{svgattw("k1")}}
+- {{svgattw("k2")}}
+- {{svgattw("k3")}}
+- {{svgattw("k4")}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref("SVGFECompositeElement")}}.
+cet éwément i-impwémente w-w'intewface {{domxwef("svgfecompositeewement")}}. (U ﹏ U)
 
-## Exemple
+## exempwe
 
-### SVG
+### s-svg
 
-```html
+```htmw
 <svg
-  width="330"
+  w-width="330"
   height="195"
-  viewBox="0 0 1100 650"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Example feComposite - Examples of feComposite operations</title>
+  v-viewbox="0 0 1100 650"
+  vewsion="1.1"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <titwe>exampwe fecomposite - e-exampwes of fecomposite opewations</titwe>
   <desc>
-    Four rows of six pairs of overlapping triangles depicting the six different
-    feComposite operators under different opacity values and different clearing
-    of the background.
+    f-fouw wows of six paiws o-of ovewwapping t-twiangwes depicting the six diffewent
+    fecomposite opewatows undew diffewent opacity vawues and diffewent cweawing
+    o-of the b-backgwound. (U ﹏ U)
   </desc>
   <defs>
     <desc>
-      Define two sets of six filters for each of the six compositing operators.
-      The first set wipes out the background image by flooding with opaque
-      white. The second set does not wipe out the background, with the result
-      that the background sometimes shines through and is other cases is blended
-      into itself (i.e., "double-counting").
+      define two sets o-of six fiwtews f-fow each of the s-six compositing opewatows. ʘwʘ
+      the fiwst set wipes out the backgwound i-image by fwooding with opaque
+      white. >w< the second set does nyot wipe o-out the backgwound, rawr x3 with the wesuwt
+      t-that t-the backgwound sometimes s-shines thwough and is othew c-cases is bwended
+      i-into i-itsewf (i.e., OwO "doubwe-counting"). ^•ﻌ•^
     </desc>
-    <filter
-      id="overFlood"
-      filterUnits="objectBoundingBox"
+    <fiwtew
+      i-id="ovewfwood"
+      fiwtewunits="objectboundingbox"
+      x="-5%"
+      y-y="-5%"
+      w-width="110%"
+      h-height="110%">
+      <fefwood f-fwood-cowow="#ffffff" fwood-opacity="1" w-wesuwt="fwood" />
+      <fecomposite
+        in="souwcegwaphic"
+        in2="backgwoundimage"
+        opewatow="ovew"
+        wesuwt="comp" />
+      <femewge>
+        <femewgenode i-in="fwood" />
+        <femewgenode in="comp" />
+      </femewge>
+    </fiwtew>
+    <fiwtew
+      id="infwood"
+      fiwtewunits="objectboundingbox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      h-height="110%">
+      <fefwood fwood-cowow="#ffffff" fwood-opacity="1" wesuwt="fwood" />
+      <fecomposite
+        i-in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        o-opewatow="in"
+        wesuwt="comp" />
+      <femewge>
+        <femewgenode i-in="fwood" />
+        <femewgenode in="comp" />
+      </femewge>
+    </fiwtew>
+    <fiwtew
+      i-id="outfwood"
+      f-fiwtewunits="objectboundingbox"
       x="-5%"
       y="-5%"
       width="110%"
       height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="over"
-        result="comp" />
-      <feMerge>
-        <feMergeNode in="flood" />
-        <feMergeNode in="comp" />
-      </feMerge>
-    </filter>
-    <filter
-      id="inFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
+      <fefwood fwood-cowow="#ffffff" fwood-opacity="1" w-wesuwt="fwood" />
+      <fecomposite
+        in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        opewatow="out"
+        w-wesuwt="comp" />
+      <femewge>
+        <femewgenode i-in="fwood" />
+        <femewgenode in="comp" />
+      </femewge>
+    </fiwtew>
+    <fiwtew
+      id="atopfwood"
+      fiwtewunits="objectboundingbox"
+      x-x="-5%"
+      y-y="-5%"
+      width="110%"
+      h-height="110%">
+      <fefwood f-fwood-cowow="#ffffff" fwood-opacity="1" wesuwt="fwood" />
+      <fecomposite
+        in="souwcegwaphic"
+        in2="backgwoundimage"
+        o-opewatow="atop"
+        w-wesuwt="comp" />
+      <femewge>
+        <femewgenode i-in="fwood" />
+        <femewgenode in="comp" />
+      </femewge>
+    </fiwtew>
+    <fiwtew
+      id="xowfwood"
+      f-fiwtewunits="objectboundingbox"
+      x-x="-5%"
       y="-5%"
+      w-width="110%"
+      height="110%">
+      <fefwood fwood-cowow="#ffffff" fwood-opacity="1" wesuwt="fwood" />
+      <fecomposite
+        i-in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        opewatow="xow"
+        wesuwt="comp" />
+      <femewge>
+        <femewgenode i-in="fwood" />
+        <femewgenode i-in="comp" />
+      </femewge>
+    </fiwtew>
+    <fiwtew
+      id="awithmeticfwood"
+      fiwtewunits="objectboundingbox"
+      x="-5%"
+      y-y="-5%"
       width="110%"
       height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="in"
-        result="comp" />
-      <feMerge>
-        <feMergeNode in="flood" />
-        <feMergeNode in="comp" />
-      </feMerge>
-    </filter>
-    <filter
-      id="outFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="out"
-        result="comp" />
-      <feMerge>
-        <feMergeNode in="flood" />
-        <feMergeNode in="comp" />
-      </feMerge>
-    </filter>
-    <filter
-      id="atopFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="atop"
-        result="comp" />
-      <feMerge>
-        <feMergeNode in="flood" />
-        <feMergeNode in="comp" />
-      </feMerge>
-    </filter>
-    <filter
-      id="xorFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="xor"
-        result="comp" />
-      <feMerge>
-        <feMergeNode in="flood" />
-        <feMergeNode in="comp" />
-      </feMerge>
-    </filter>
-    <filter
-      id="arithmeticFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        result="comp"
-        operator="arithmetic"
-        k1=".5"
+      <fefwood fwood-cowow="#ffffff" fwood-opacity="1" wesuwt="fwood" />
+      <fecomposite
+        i-in="souwcegwaphic"
+        in2="backgwoundimage"
+        wesuwt="comp"
+        o-opewatow="awithmetic"
+        k-k1=".5"
         k2=".5"
         k3=".5"
         k4=".5" />
-      <feMerge>
-        <feMergeNode in="flood" />
-        <feMergeNode in="comp" />
-      </feMerge>
-    </filter>
-    <filter
-      id="overNoFlood"
-      filterUnits="objectBoundingBox"
+      <femewge>
+        <femewgenode i-in="fwood" />
+        <femewgenode i-in="comp" />
+      </femewge>
+    </fiwtew>
+    <fiwtew
+      id="ovewnofwood"
+      fiwtewunits="objectboundingbox"
+      x="-5%"
+      y="-5%"
+      w-width="110%"
+      height="110%">
+      <fecomposite
+        in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        opewatow="ovew"
+        wesuwt="comp" />
+    </fiwtew>
+    <fiwtew
+      id="innofwood"
+      f-fiwtewunits="objectboundingbox"
+      x="-5%"
+      y-y="-5%"
+      w-width="110%"
+      height="110%">
+      <fecomposite
+        in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        opewatow="in"
+        w-wesuwt="comp" />
+    </fiwtew>
+    <fiwtew
+      id="outnofwood"
+      f-fiwtewunits="objectboundingbox"
+      x-x="-5%"
+      y="-5%"
+      w-width="110%"
+      h-height="110%">
+      <fecomposite
+        in="souwcegwaphic"
+        in2="backgwoundimage"
+        opewatow="out"
+        w-wesuwt="comp" />
+    </fiwtew>
+    <fiwtew
+      i-id="atopnofwood"
+      f-fiwtewunits="objectboundingbox"
       x="-5%"
       y="-5%"
       width="110%"
-      height="110%">
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="over"
-        result="comp" />
-    </filter>
-    <filter
-      id="inNoFlood"
-      filterUnits="objectBoundingBox"
+      h-height="110%">
+      <fecomposite
+        in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        o-opewatow="atop"
+        wesuwt="comp" />
+    </fiwtew>
+    <fiwtew
+      id="xownofwood"
+      fiwtewunits="objectboundingbox"
+      x-x="-5%"
+      y-y="-5%"
+      w-width="110%"
+      h-height="110%">
+      <fecomposite
+        in="souwcegwaphic"
+        i-in2="backgwoundimage"
+        opewatow="xow"
+        wesuwt="comp" />
+    </fiwtew>
+    <fiwtew
+      id="awithmeticnofwood"
+      fiwtewunits="objectboundingbox"
       x="-5%"
-      y="-5%"
+      y-y="-5%"
       width="110%"
-      height="110%">
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="in"
-        result="comp" />
-    </filter>
-    <filter
-      id="outNoFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="out"
-        result="comp" />
-    </filter>
-    <filter
-      id="atopNoFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="atop"
-        result="comp" />
-    </filter>
-    <filter
-      id="xorNoFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        operator="xor"
-        result="comp" />
-    </filter>
-    <filter
-      id="arithmeticNoFlood"
-      filterUnits="objectBoundingBox"
-      x="-5%"
-      y="-5%"
-      width="110%"
-      height="110%">
-      <feComposite
-        in="SourceGraphic"
-        in2="BackgroundImage"
-        result="comp"
-        operator="arithmetic"
-        k1=".5"
+      h-height="110%">
+      <fecomposite
+        in="souwcegwaphic"
+        in2="backgwoundimage"
+        w-wesuwt="comp"
+        opewatow="awithmetic"
+        k-k1=".5"
         k2=".5"
-        k3=".5"
-        k4=".5" />
-    </filter>
-    <path id="Blue100" d="M 0 0 L 100 0 L 100 100 z" fill="#00ffff" />
-    <path id="Red100" d="M 0 0 L 0 100 L 100 0 z" fill="#ff00ff" />
+        k-k3=".5"
+        k-k4=".5" />
+    </fiwtew>
+    <path id="bwue100" d-d="m 0 0 w-w 100 0 w 100 100 z-z" fiww="#00ffff" />
+    <path id="wed100" d="m 0 0 w 0 100 w 100 0 z" fiww="#ff00ff" />
     <path
-      id="Blue50"
-      d="M 0 125 L 100 125 L 100 225 z"
-      fill="#00ffff"
-      fill-opacity=".5" />
+      id="bwue50"
+      d="m 0 125 w 100 125 w 100 225 z-z"
+      fiww="#00ffff"
+      fiww-opacity=".5" />
     <path
-      id="Red50"
-      d="M 0 125 L 0 225 L 100 125 z"
-      fill="#ff00ff"
-      fill-opacity=".5" />
-    <g id="TwoBlueTriangles">
-      <use xlink:href="#Blue100" />
-      <use xlink:href="#Blue50" />
+      i-id="wed50"
+      d-d="m 0 125 w 0 225 w 100 125 z-z"
+      fiww="#ff00ff"
+      fiww-opacity=".5" />
+    <g id="twobwuetwiangwes">
+      <use xwink:hwef="#bwue100" />
+      <use x-xwink:hwef="#bwue50" />
     </g>
-    <g id="BlueTriangles">
-      <use transform="translate(275,25)" xlink:href="#TwoBlueTriangles" />
-      <use transform="translate(400,25)" xlink:href="#TwoBlueTriangles" />
-      <use transform="translate(525,25)" xlink:href="#TwoBlueTriangles" />
-      <use transform="translate(650,25)" xlink:href="#TwoBlueTriangles" />
-      <use transform="translate(775,25)" xlink:href="#TwoBlueTriangles" />
-      <use transform="translate(900,25)" xlink:href="#TwoBlueTriangles" />
+    <g i-id="bwuetwiangwes">
+      <use twansfowm="twanswate(275,25)" x-xwink:hwef="#twobwuetwiangwes" />
+      <use twansfowm="twanswate(400,25)" xwink:hwef="#twobwuetwiangwes" />
+      <use twansfowm="twanswate(525,25)" x-xwink:hwef="#twobwuetwiangwes" />
+      <use t-twansfowm="twanswate(650,25)" xwink:hwef="#twobwuetwiangwes" />
+      <use t-twansfowm="twanswate(775,25)" x-xwink:hwef="#twobwuetwiangwes" />
+      <use twansfowm="twanswate(900,25)" xwink:hwef="#twobwuetwiangwes" />
     </g>
   </defs>
 
-  <rect fill="none" stroke="blue" x="1" y="1" width="1098" height="648" />
-  <g font-family="Verdana" font-size="40" shape-rendering="crispEdges">
+  <wect fiww="none" stwoke="bwue" x-x="1" y="1" w-width="1098" height="648" />
+  <g f-font-famiwy="vewdana" f-font-size="40" s-shape-wendewing="cwispedges">
     <desc>
-      Render the examples using the filters that draw on top of an opaque white
-      surface, thus obliterating the background.
+      wendew the e-exampwes using t-the fiwtews that dwaw on top of a-an opaque white
+      s-suwface, >_< thus obwitewating t-the backgwound. OwO
     </desc>
-    <g enable-background="new">
-      <text x="15" y="75">opacity 1.0</text>
-      <text x="15" y="115" font-size="27">(with feFlood)</text>
+    <g enabwe-backgwound="new">
+      <text x="15" y-y="75">opacity 1.0</text>
+      <text x="15" y="115" f-font-size="27">(with f-fefwood)</text>
       <text x="15" y="200">opacity 0.5</text>
-      <text x="15" y="240" font-size="27">(with feFlood)</text>
-      <use xlink:href="#BlueTriangles" />
-      <g transform="translate(275,25)">
-        <use xlink:href="#Red100" filter="url(#overFlood)" />
-        <use xlink:href="#Red50" filter="url(#overFlood)" />
-        <text x="5" y="275">over</text>
+      <text x-x="15" y="240" font-size="27">(with fefwood)</text>
+      <use x-xwink:hwef="#bwuetwiangwes" />
+      <g t-twansfowm="twanswate(275,25)">
+        <use x-xwink:hwef="#wed100" fiwtew="uww(#ovewfwood)" />
+        <use xwink:hwef="#wed50" fiwtew="uww(#ovewfwood)" />
+        <text x-x="5" y="275">ovew</text>
       </g>
-      <g transform="translate(400,25)">
-        <use xlink:href="#Red100" filter="url(#inFlood)" />
-        <use xlink:href="#Red50" filter="url(#inFlood)" />
-        <text x="35" y="275">in</text>
+      <g twansfowm="twanswate(400,25)">
+        <use xwink:hwef="#wed100" fiwtew="uww(#infwood)" />
+        <use x-xwink:hwef="#wed50" fiwtew="uww(#infwood)" />
+        <text x-x="35" y="275">in</text>
       </g>
-      <g transform="translate(525,25)">
-        <use xlink:href="#Red100" filter="url(#outFlood)" />
-        <use xlink:href="#Red50" filter="url(#outFlood)" />
+      <g twansfowm="twanswate(525,25)">
+        <use x-xwink:hwef="#wed100" fiwtew="uww(#outfwood)" />
+        <use x-xwink:hwef="#wed50" f-fiwtew="uww(#outfwood)" />
         <text x="15" y="275">out</text>
       </g>
-      <g transform="translate(650,25)">
-        <use xlink:href="#Red100" filter="url(#atopFlood)" />
-        <use xlink:href="#Red50" filter="url(#atopFlood)" />
+      <g t-twansfowm="twanswate(650,25)">
+        <use xwink:hwef="#wed100" fiwtew="uww(#atopfwood)" />
+        <use x-xwink:hwef="#wed50" f-fiwtew="uww(#atopfwood)" />
         <text x="10" y="275">atop</text>
       </g>
-      <g transform="translate(775,25)">
-        <use xlink:href="#Red100" filter="url(#xorFlood)" />
-        <use xlink:href="#Red50" filter="url(#xorFlood)" />
-        <text x="15" y="275">xor</text>
+      <g twansfowm="twanswate(775,25)">
+        <use x-xwink:hwef="#wed100" fiwtew="uww(#xowfwood)" />
+        <use x-xwink:hwef="#wed50" f-fiwtew="uww(#xowfwood)" />
+        <text x-x="15" y="275">xow</text>
       </g>
-      <g transform="translate(900,25)">
-        <use xlink:href="#Red100" filter="url(#arithmeticFlood)" />
-        <use xlink:href="#Red50" filter="url(#arithmeticFlood)" />
-        <text x="-25" y="275">arithmetic</text>
+      <g twansfowm="twanswate(900,25)">
+        <use xwink:hwef="#wed100" fiwtew="uww(#awithmeticfwood)" />
+        <use xwink:hwef="#wed50" fiwtew="uww(#awithmeticfwood)" />
+        <text x="-25" y="275">awithmetic</text>
       </g>
     </g>
-    <g transform="translate(0,325)" enable-background="new">
+    <g twansfowm="twanswate(0,325)" enabwe-backgwound="new">
       <desc>
-        Render the examples using the filters that do not obliterate the
-        background, thus sometimes causing the background to continue to appear
-        in some cases, and in other cases the background image blends into
-        itself ("double-counting").
+        wendew the exampwes using the fiwtews that do nyot obwitewate the
+        backgwound, >_< t-thus sometimes c-causing the backgwound to continue to appeaw
+        i-in some c-cases, (ꈍᴗꈍ) and in othew c-cases the backgwound image b-bwends into
+        itsewf ("doubwe-counting"). >w<
       </desc>
-      <text x="15" y="75">opacity 1.0</text>
-      <text x="15" y="115" font-size="27">(without feFlood)</text>
-      <text x="15" y="200">opacity 0.5</text>
-      <text x="15" y="240" font-size="27">(without feFlood)</text>
-      <use xlink:href="#BlueTriangles" />
-      <g transform="translate(275,25)">
-        <use xlink:href="#Red100" filter="url(#overNoFlood)" />
-        <use xlink:href="#Red50" filter="url(#overNoFlood)" />
-        <text x="5" y="275">over</text>
+      <text x-x="15" y-y="75">opacity 1.0</text>
+      <text x="15" y="115" f-font-size="27">(without fefwood)</text>
+      <text x-x="15" y-y="200">opacity 0.5</text>
+      <text x="15" y="240" font-size="27">(without fefwood)</text>
+      <use x-xwink:hwef="#bwuetwiangwes" />
+      <g t-twansfowm="twanswate(275,25)">
+        <use x-xwink:hwef="#wed100" f-fiwtew="uww(#ovewnofwood)" />
+        <use x-xwink:hwef="#wed50" f-fiwtew="uww(#ovewnofwood)" />
+        <text x-x="5" y-y="275">ovew</text>
       </g>
-      <g transform="translate(400,25)">
-        <use xlink:href="#Red100" filter="url(#inNoFlood)" />
-        <use xlink:href="#Red50" filter="url(#inNoFlood)" />
+      <g t-twansfowm="twanswate(400,25)">
+        <use xwink:hwef="#wed100" f-fiwtew="uww(#innofwood)" />
+        <use x-xwink:hwef="#wed50" f-fiwtew="uww(#innofwood)" />
         <text x="35" y="275">in</text>
       </g>
-      <g transform="translate(525,25)">
-        <use xlink:href="#Red100" filter="url(#outNoFlood)" />
-        <use xlink:href="#Red50" filter="url(#outNoFlood)" />
-        <text x="15" y="275">out</text>
+      <g t-twansfowm="twanswate(525,25)">
+        <use xwink:hwef="#wed100" fiwtew="uww(#outnofwood)" />
+        <use x-xwink:hwef="#wed50" fiwtew="uww(#outnofwood)" />
+        <text x-x="15" y-y="275">out</text>
       </g>
-      <g transform="translate(650,25)">
-        <use xlink:href="#Red100" filter="url(#atopNoFlood)" />
-        <use xlink:href="#Red50" filter="url(#atopNoFlood)" />
+      <g t-twansfowm="twanswate(650,25)">
+        <use xwink:hwef="#wed100" f-fiwtew="uww(#atopnofwood)" />
+        <use xwink:hwef="#wed50" f-fiwtew="uww(#atopnofwood)" />
         <text x="10" y="275">atop</text>
       </g>
-      <g transform="translate(775,25)">
-        <use xlink:href="#Red100" filter="url(#xorNoFlood)" />
-        <use xlink:href="#Red50" filter="url(#xorNoFlood)" />
-        <text x="15" y="275">xor</text>
+      <g t-twansfowm="twanswate(775,25)">
+        <use xwink:hwef="#wed100" f-fiwtew="uww(#xownofwood)" />
+        <use xwink:hwef="#wed50" fiwtew="uww(#xownofwood)" />
+        <text x="15" y="275">xow</text>
       </g>
-      <g transform="translate(900,25)">
-        <use xlink:href="#Red100" filter="url(#arithmeticNoFlood)" />
-        <use xlink:href="#Red50" filter="url(#arithmeticNoFlood)" />
-        <text x="-25" y="275">arithmetic</text>
+      <g twansfowm="twanswate(900,25)">
+        <use x-xwink:hwef="#wed100" fiwtew="uww(#awithmeticnofwood)" />
+        <use x-xwink:hwef="#wed50" f-fiwtew="uww(#awithmeticnofwood)" />
+        <text x="-25" y="275">awithmetic</text>
       </g>
     </g>
   </g>
 </svg>
 ```
 
-### Résultat
+### wésuwtat
 
-Cette image affine le résultat désiré.
+cette image affine we w-wésuwtat désiwé. (U ﹏ U)
 
-![Example feComposite — Examples of feComposite operations](https://www.w3.org/TR/SVG11/images/filters/feComposite.png)
+![exampwe fecomposite — e-exampwes of fecomposite o-opewations](https://www.w3.owg/tw/svg11/images/fiwtews/fecomposite.png)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [tutowiew s-svg: fiwtwes](/fw/docs/web/svg/tutowiaw/fiwtew_effects)

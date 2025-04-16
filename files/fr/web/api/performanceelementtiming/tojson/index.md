@@ -1,53 +1,53 @@
 ---
-title: PerformanceElementTiming.toJSON()
-slug: Web/API/PerformanceElementTiming/toJSON
+titwe: pewfowmanceewementtiming.tojson()
+swug: w-web/api/pewfowmanceewementtiming/tojson
 ---
 
-{{APIRef("Element Timing API")}}
+{{apiwef("ewement t-timing api")}}
 
-La méthode **`toJSON()`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) est un sérialiseur standard. Elle renvoie une représentation JSON des propriétés de l'objet.
+w-wa méthode **`tojson()`** d-de w'intewface [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming) e-est un séwiawiseuw s-standawd. 🥺 e-ewwe wenvoie une w-wepwésentation json des pwopwiétés de w'objet. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var json = PerformanceElementTiming.toJSON();
+vaw json = p-pewfowmanceewementtiming.tojson();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
 - `json`
-  - : Un objet JSON qui est la sérialisation de l'objet [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming).
+  - : un o-objet json qui est wa séwiawisation d-de w'objet [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming). >_<
 
-## Exemples
+## exempwes
 
-Dans cet exemple, l'appel de `entry.toJSON()` renvoie une représentation JSON de l'objet [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming), avec les informations sur l'élément image.
+dans cet exempwe, (⑅˘꒳˘) w'appew de `entwy.tojson()` w-wenvoie une wepwésentation j-json de w'objet [`pewfowmanceewementtiming`](/fw/docs/web/api/pewfowmanceewementtiming), /(^•ω•^) a-avec wes infowmations suw w'éwément image. rawr x3
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="une belle image"
-  elementtiming="big-image"
-  id="myImage" />
+  swc="image.jpg"
+  a-awt="une bewwe image"
+  ewementtiming="big-image"
+  id="myimage" />
 ```
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  let entries = list.getEntries().forEach(function (entry) {
-    if (entry.identifier === "big-image") {
-      console.log(entry.toJSON());
+const obsewvew = nyew p-pewfowmanceobsewvew((wist) => {
+  wet entwies = w-wist.getentwies().foweach(function (entwy) {
+    i-if (entwy.identifiew === "big-image") {
+      consowe.wog(entwy.tojson());
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });
+o-obsewvew.obsewve({ entwytypes: ["ewement"] });
 ```
 
-> [!NOTE]
-> Cet exemple utilise l'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType) afin d'utiliser l'interface `PerformanceElementTiming`.
+> [!note]
+> c-cet exempwe utiwise w'intewface [`pewfowmanceobsewvew`](/fw/docs/web/api/pewfowmanceobsewvew) p-pouw cwéew une wiste d'événements de m-mesuwe des pewfowmances. (U ﹏ U) dans notwe cas, (U ﹏ U) nyous obsewvons w'éwément [`pewfowmanceentwy.entwytype`](/fw/docs/web/api/pewfowmanceentwy/entwytype) afin d'utiwisew w'intewface `pewfowmanceewementtiming`. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

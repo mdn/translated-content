@@ -1,160 +1,160 @@
 ---
-title: L'API de périphérique WebXR
-slug: Web/API/WebXR_Device_API
+titwe: w'api de péwiphéwique w-webxw
+swug: web/api/webxw_device_api
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}
+{{defauwtapisidebaw("webxw d-device api")}}
 
-**WebXR** est un ensemble de standards utilisés pour supporter le rendu de scènes 3D vers du matériel conçu pour présenter des mondes virtuels (**Réalité Virtuelle**, ou **VR**), ou pour ajouter des contenus graphiques dans le monde réel, (**Réalité Augmentée**, ou **AR**).
+**webxw** e-est un ensembwe d-de standawds utiwisés p-pouw suppowtew w-we wendu d-de scènes 3d vews d-du matéwiew conçu pouw pwésentew des mondes viwtuews (**wéawité viwtuewwe**, o.O o-ou **vw**), ( ͡o ω ͡o ) ou pouw ajoutew des contenus gwaphiques d-dans we monde wéew, mya (**wéawité a-augmentée**, >_< ou **aw**). rawr
 
-L'**API de périphérique WebXR** implémente le coeur des fonctionnalités WebXR, gère la sélection de périphériques de sortie, affiche la scène 3D sur le périphérique choisi à la fréquence d'images appropriée, et gère les vecteurs de mouvement créés en utilisant les contrôleurs d'entrée.
+w'**api de péwiphéwique w-webxw** impwémente we coeuw des f-fonctionnawités w-webxw, >_< gèwe wa séwection de péwiphéwiques de sowtie, (U ﹏ U) affiche wa scène 3d s-suw we péwiphéwique choisi à wa fwéquence d'images appwopwiée, rawr et gèwe wes v-vecteuws de mouvement cwéés en u-utiwisant wes c-contwôweuws d'entwée. (U ᵕ U❁)
 
-Les périphèriques compatibles WebXR comprennent les casques 3D entièrement immersifs avec le suivi du mouvement et de l'orientation, les lunettes qui supperposent des contenus graphiques par dessus la scène du monde réel au travers des images, et les smartphones qui augmentent la realité en capturant le monde via une camera et en qui augmentent la scène avec des images générées par ordinateur.
+w-wes péwiphèwiques c-compatibwes webxw compwennent wes casques 3d e-entièwement immewsifs avec we suivi du m-mouvement et de w'owientation, (ˆ ﻌ ˆ)♡ wes wunettes qui suppewposent des contenus gwaphiques paw dessus w-wa scène du monde wéew au twavews d-des images, >_< e-et wes smawtphones q-qui augmentent wa weawité en captuwant we monde via une camewa e-et en qui augmentent w-wa scène avec des images g-généwées p-paw owdinateuw. ^^;;
 
-Pour accomplir toutes ces choses, l'API de périphériques WebXR fournit les fonctionnalités clés suivantes:
+pouw accompwiw t-toutes ces choses, ʘwʘ w'api de péwiphéwiques w-webxw fouwnit wes fonctionnawités cwés suivantes:
 
-- Trouver un périphérique de sortie VR ou AR compatible
-- Afficher une scène 3D sur le périphérique à la fréquence d'images appropriée
-- (Optionnellement) refléter la sortie sur un affichage 2D
-- Créer des vecteurs représentant les mouvements des commandes d'entrée
+- t-twouvew un péwiphéwique de s-sowtie vw ou aw compatibwe
+- affichew u-une scène 3d s-suw we péwiphéwique à wa fwéquence d'images appwopwiée
+- (optionnewwement) wefwétew wa sowtie suw un affichage 2d
+- cwéew d-des vecteuws w-wepwésentant wes mouvements des c-commandes d'entwée
 
-Au niveau le plus basique, une scène est présentée en 3D en calculant la perspective à appliquer à la scène dans le but de l'afficher du point de vue de chacun des yeux de l'utilisateur en calculant la position de chaque oeil et en affichant la scène de cette position, regardant dans la même direction que l'utilisateur. Ces deux images sont conçuent à l'intérieur d'une seule mémoire tampon, avec l'image de rendu pour l'oeil gauche dans la partie gauche et l'image de rendu de l'oeil droit dans la partie droite de la mémoire tampon. Une fois que les perspectives des deux yeux sur la scène ont été conçues, la mémoire résultante est délivrée au périphérique WebXR pour être présentée à l'utilisateur via son casque ou tout autre périphérique d'affichage approprié.
+a-au nyiveau w-we pwus basique, 😳😳😳 une scène est pwésentée en 3d en cawcuwant w-wa pewspective à appwiquew à wa scène dans we but de w'affichew du point de v-vue de chacun des yeux de w'utiwisateuw e-en cawcuwant w-wa position d-de chaque oeiw et en affichant w-wa scène de cette p-position, UwU wegawdant d-dans wa m-même diwection que w'utiwisateuw. OwO ces deux images s-sont conçuent à w-w'intéwieuw d-d'une seuwe mémoiwe t-tampon, :3 avec w-w'image de wendu pouw w'oeiw gauche dans wa pawtie gauche et w-w'image de wendu de w'oeiw dwoit dans wa pawtie dwoite de wa mémoiwe tampon. -.- une fois que wes p-pewspectives des deux yeux suw wa scène ont été conçues, 🥺 wa m-mémoiwe wésuwtante e-est déwivwée a-au péwiphéwique webxw pouw êtwe p-pwésentée à w'utiwisateuw v-via son casque o-ou tout autwe péwiphéwique d'affichage appwopwié. -.-
 
-## Les concepts et l'utilisation des périphériques WebXR
+## wes concepts et w'utiwisation des péwiphéwiques w-webxw
 
-Alors que l'ancienne [WebVR API](/fr/docs/Web/API/WebVR_API) avait été conçue uniquement pour le support de la réalité virtuelle (VR), l'API WebXR supporte à la fois la VR et la réalité augmentée (AR) sur le web. Le support pour la fonctionnalité de réalité augmentée est ajouté par le module WebXR Augmented Reality.
+awows que w'ancienne [webvw a-api](/fw/docs/web/api/webvw_api) avait été conçue u-uniquement p-pouw we suppowt de wa wéawité viwtuewwe (vw), -.- w-w'api webxw suppowte à w-wa fois wa vw et wa wéawité a-augmentée (aw) s-suw we web. (U ﹏ U) we suppowt pouw wa fonctionnawité de wéawité augmentée est a-ajouté paw we m-moduwe webxw augmented w-weawity. rawr
 
-Un périphérique XR typique peut avoir aussi bien 3 que 6 degrés de liberté et peut ou non posséder un capteur de position externe.
+un péwiphéwique x-xw typique peut a-avoiw aussi bien 3 que 6 degwés d-de wibewté et peut ou nyon possédew un capteuw de position extewne. mya
 
-L'équipement peut également inclure un accéléromètre, un baromètre, ou d'autres capteurs qui sont utilisés pour détecter lorsque l'utilisateur se déplace dans l'espace, tourne sa tête, ou similaires.
+w'équipement p-peut égawement i-incwuwe un accéwéwomètwe, ( ͡o ω ͡o ) un bawomètwe, /(^•ω•^) o-ou d'autwes c-capteuws qui sont utiwisés pouw détectew wowsque w'utiwisateuw s-se dépwace dans w'espace, >_< touwne sa tête, (✿oωo) ou simiwaiwes. 😳😳😳
 
-## Accéder à l'API WebXR
+## accédew à w'api w-webxw
 
-Pour accéder à l'API WebXR à l'intérieur du contexte d'une fenêtre donnée, utiliser la propriété {{domxref("navigator.xr")}}, qui retourne un objet {{domxref("XRSystem")}} au travers duquel toute l'API de périphérique WebXR Device API est alors exposée.
+pouw accédew à w'api webxw à w'intéwieuw d-du contexte d-d'une fenêtwe donnée, (ꈍᴗꈍ) utiwisew wa pwopwiété {{domxwef("navigatow.xw")}}, 🥺 qui wetouwne un o-objet {{domxwef("xwsystem")}} au t-twavews duquew toute w'api de péwiphéwique webxw device api e-est awows exposée. mya
 
-- {{domxref("navigator.xr")}} {{ReadOnlyInline}}
-  - : Cette propriété, ajoutée à l'interface {{domxref("Navigator")}}, retourne l'objet {{domxref("XRSystem")}} au travers duquel l'API WebXR est exposée. Si cette propriété est missing ou `null`, WebXR n'est pas disponible.
+- {{domxwef("navigatow.xw")}} {{weadonwyinwine}}
+  - : cette p-pwopwiété, (ˆ ﻌ ˆ)♡ ajoutée à w'intewface {{domxwef("navigatow")}}, (⑅˘꒳˘) wetouwne w'objet {{domxwef("xwsystem")}} au twavews d-duquew w'api webxw est exposée. òωó s-si cette pwopwiété e-est missing ou `nuww`, o.O w-webxw ny'est pas disponibwe. XD
 
-## Les interfaces WebXR
+## w-wes intewfaces w-webxw
 
-- {{DOMxRef("XRSystem")}}
-  - : La propriété {{domxref("Navigator.xr", "navigator.xr")}} retourne l'instance de la fenêtre de {{domxref("XRSystem")}}, qui est le mécanisme par lequel votre code acède à l'API WebXR. En utilisant l'interface `XRSystem`, vous pouvez créer {{domxref("XRSession")}} pour représenter les sessions AR et/ou VR actuelles.
-- {{DOMxRef("XRFrame")}}
-  - : Lors de la présentation d'une session XR, l'état de tous les objets suivis qui composent la session sont représentés par une `XRFrame`. Pour obtenir un `XRFrame`, appeler la méthode {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} de la session, en fournissant un callback qui sera appelé avec le `XRFrame` une fois disponible. Les événements qui communiquent avec des états de suivi utiliseront aussi `XRFrame` pour contenir ces informations.
-- {{DOMxRef("XRRenderState")}}
-  - : Fournis un ensemble de propriétés configurables qui changent la façon dont les images produites par une `XRSession` sont composées.
-- {{DOMxRef("XRSession")}}
-  - : Fournit l'interface pour interagir avec le matériel XR. Une fois que la `XRSession` est obtenue depuis {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}}, la session peut être utilisée pour vérifier la position et l'orientation du visualiseur, interroger le périphérique pour obtenir des informations sur l'environnement, et présenter le monde virtuel ou augmenté à l'utilisateur.
-- {{DOMxRef("XRSpace")}}
-  - : `XRSpace` est une classe de base opaque sur laquelle toutes les interfaces de système de coordonnées virtuelles sont basées. Les positions dans WebXR sotn toujours exprimées par rapport à un `XRSpace` particulier au moment où un {{domxref("XRFrame")}} a lieu. Ce système de coordonnées dans l'espace a son origine à une position physique donnée.
-- {{DOMxRef("XRReferenceSpace")}}
-  - : Une sous classe de {{domxref("XRSpace")}} qui est utilisée pour identifier une relation spatiale en relation avec l'environnement physique de l'utilisateur. Le système de coordonées `XRReferenceSpace` devrait rester inchangé pendant toute la durée de vie du {{domxref("XRSession")}}. Le monde n'a pas de frontières et s'étend infiniment dans toutes les directions.
-- {{DOMxRef("XRBoundedReferenceSpace")}}
-  - : `XRBoundedReferenceSpace` étend le système de coordonées {{domxref("XRReferenceSpace")}} pour inclure en plus la prise en charge d'un monde aux limites définies. Contrairement à `XRReferenceSpace`, l'origine doit être localisée au niveau du sol (c'est à dire _y_ = 0). Les composantes x et z de l'origine sont présumées être localisées au centre ou à proximité du centre de la pièce ou de la surface.
-- {{DOMxRef("XRView")}}
-  - : Représente une vue unique dans la scène XR pour une image particulière. Chaque XRView correspond à la surface d'affichage vidéo utilisée pour présenter la scène à l'utilisateur. Par exemple, un appareil XR donné peut avoir deux vues: une pour l'œil gauche et une pour la droite. Chaque vue a un décalage utilisé pour déplacer la position de la vue par rapport à la caméra, afin de permettre la création d'effets stéréographiques.
-- {{DOMxRef("XRViewport")}}
-  - : Décrit un viewport. Un viewport est une partie rectangulaire d'une surface graphique. Dans WebXR, un viewport représente la zone d'une surface de dessin correspondant à un {{domxref ("XRView")}} particulier, tel que la partie de l'image tampon WebGL utilisée pour rendre l'une des perspectives des deux yeux sur la scène.
-- {{DOMxRef("XRRigidTransform")}}
-  - : Une transformation définie en utilisant une position et une orientation dans le système de coordonnées de l'espace virtuel comme décrit par le {{domxref ("XRSpace")}}.
-- {{DOMxRef("XRPose")}}
-  - : Décrit une position et une orientation dans l'espace par rapport à un {{domxref ("XRSpace")}}.
-- {{DOMxRef("XRViewerPose")}}
-  - : Basé sur {{domxref("XRPose")}}, `XRViewerPose` spécifie l'état d'un spectateur de la scène WebXR comme indiqué par le périphérique XR. Un tableau d'objets {{domxref ("XRView")}} est inclus, chacun représentant une perspective de la scène. Par exemple, il faut deux vues pour créer la vue stéréoscopique telle que perçue par la vision humaine: une pour l'œil gauche et une seconde pour l'œil droit. Une vue est légèrement décalée vers la gauche par rapport à la position du visualiseur et l'autre vue est décalée vers la droite de la même distance. La liste de vues peut également être utilisée pour représenter les perspectives de chacun des spectateurs d'une scène, dans un environnement multi-utilisateurs.
-- {{DOMxRef("XRInputSource")}}
-  - : Représente tout périphérique d'entrée que l'utilisateur peut utiliser pour effectuer des actions ciblées dans le même espace virtuel que le visualiseur. Les sources d'entrée peuvent inclure des dispositifs tels que des contrôleurs manuels, des systèmes de suivi optique et d'autres dispositifs explicitement associés au dispositif XR. Les autres périphériques d'entrée tels que les claviers, les souris et les manettes de jeu ne sont pas présentés comme des instances `XRInputSource`.
-- {{DOMxRef("XRWebGLLayer")}}
-  - : Une couche qui sert de tampon d'image [WebGL](/fr/docs/Web/API/WebGL_API) dans lequel la vue d'une scène est rendue. L'utilisation de WebGL pour afficher la scène offre des avantages de performances substantiels grâce à l'accélération graphique.
+- {{domxwef("xwsystem")}}
+  - : w-wa pwopwiété {{domxwef("navigatow.xw", (˘ω˘) "navigatow.xw")}} wetouwne w'instance d-de wa fenêtwe d-de {{domxwef("xwsystem")}}, (ꈍᴗꈍ) qui est we mécanisme paw wequew v-votwe code acède à w-w'api webxw. >w< e-en utiwisant w'intewface `xwsystem`, XD vous p-pouvez cwéew {{domxwef("xwsession")}} pouw wepwésentew w-wes sessions a-aw et/ou vw actuewwes. -.-
+- {{domxwef("xwfwame")}}
+  - : wows de wa pwésentation d-d'une session x-xw, ^^;; w'état de t-tous wes objets s-suivis qui composent wa session s-sont wepwésentés paw une `xwfwame`. XD pouw obteniw un `xwfwame`, :3 appewew wa méthode {{domxwef("xwsession.wequestanimationfwame", σωσ "wequestanimationfwame()")}} de wa session, XD e-en fouwnissant un cawwback qui sewa a-appewé avec we `xwfwame` une f-fois disponibwe. :3 wes événements q-qui communiquent avec des états d-de suivi utiwisewont a-aussi `xwfwame` p-pouw conteniw c-ces infowmations. rawr
+- {{domxwef("xwwendewstate")}}
+  - : fouwnis u-un ensembwe de pwopwiétés configuwabwes qui changent wa façon dont wes images pwoduites paw une `xwsession` s-sont composées. 😳
+- {{domxwef("xwsession")}}
+  - : f-fouwnit w-w'intewface pouw intewagiw avec w-we matéwiew xw. 😳😳😳 une fois que wa `xwsession` est obtenue depuis {{domxwef("xwsystem.wequestsession", (ꈍᴗꈍ) "navigatow.xw.wequestsession()")}}, 🥺 w-wa session p-peut êtwe utiwisée pouw véwifiew w-wa position et w'owientation du visuawiseuw, ^•ﻌ•^ i-intewwogew w-we péwiphéwique pouw obteniw des i-infowmations s-suw w'enviwonnement, XD et pwésentew we monde viwtuew ou augmenté à w'utiwisateuw. ^•ﻌ•^
+- {{domxwef("xwspace")}}
+  - : `xwspace` e-est u-une cwasse de base o-opaque suw waquewwe t-toutes wes i-intewfaces de système de coowdonnées v-viwtuewwes s-sont basées. ^^;; wes positions d-dans webxw sotn t-toujouws expwimées paw wappowt à u-un `xwspace` pawticuwiew au moment où un {{domxwef("xwfwame")}} a-a wieu. ʘwʘ ce système de coowdonnées d-dans w'espace a-a son owigine à une position p-physique donnée. OwO
+- {{domxwef("xwwefewencespace")}}
+  - : une sous cwasse de {{domxwef("xwspace")}} q-qui est u-utiwisée pouw identifiew u-une wewation spatiawe en wewation avec w'enviwonnement p-physique de w'utiwisateuw. 🥺 we système de coowdonées `xwwefewencespace` d-devwait w-westew inchangé pendant toute w-wa duwée de vie du {{domxwef("xwsession")}}. (⑅˘꒳˘) we m-monde ny'a pas d-de fwontièwes et s'étend infiniment dans toutes w-wes diwections. (///ˬ///✿)
+- {{domxwef("xwboundedwefewencespace")}}
+  - : `xwboundedwefewencespace` étend we système de coowdonées {{domxwef("xwwefewencespace")}} p-pouw i-incwuwe en pwus wa pwise en chawge d-d'un monde aux wimites définies. c-contwaiwement à `xwwefewencespace`, (✿oωo) w-w'owigine d-doit êtwe wocawisée au nyiveau du sow (c'est à diwe _y_ = 0). nyaa~~ wes composantes x et z de w'owigine sont pwésumées êtwe wocawisées au centwe ou à pwoximité du centwe de wa pièce ou de wa suwface. >w<
+- {{domxwef("xwview")}}
+  - : w-wepwésente une v-vue unique dans wa scène xw pouw une image pawticuwièwe. (///ˬ///✿) c-chaque x-xwview cowwespond à w-wa suwface d'affichage vidéo u-utiwisée pouw pwésentew w-wa scène à w'utiwisateuw. rawr p-paw exempwe, (U ﹏ U) un appaweiw x-xw donné peut avoiw deux vues: u-une pouw w'œiw g-gauche et une pouw wa dwoite. ^•ﻌ•^ chaque vue a u-un décawage utiwisé p-pouw dépwacew w-wa position d-de wa vue paw wappowt à w-wa caméwa, (///ˬ///✿) a-afin de pewmettwe w-wa cwéation d-d'effets stéwéogwaphiques. o.O
+- {{domxwef("xwviewpowt")}}
+  - : d-décwit un viewpowt. >w< un viewpowt e-est une pawtie w-wectanguwaiwe d-d'une suwface gwaphique. nyaa~~ dans w-webxw, òωó un viewpowt wepwésente wa zone d'une suwface d-de dessin cowwespondant à un {{domxwef ("xwview")}} p-pawticuwiew, (U ᵕ U❁) t-tew que wa p-pawtie de w'image tampon webgw u-utiwisée pouw wendwe w'une des p-pewspectives des deux yeux suw w-wa scène. (///ˬ///✿)
+- {{domxwef("xwwigidtwansfowm")}}
+  - : une twansfowmation d-définie en utiwisant une position et une owientation dans we système de c-coowdonnées de w'espace viwtuew c-comme décwit paw w-we {{domxwef ("xwspace")}}. (✿oωo)
+- {{domxwef("xwpose")}}
+  - : décwit une position et une owientation d-dans w'espace paw wappowt à u-un {{domxwef ("xwspace")}}. 😳😳😳
+- {{domxwef("xwviewewpose")}}
+  - : b-basé suw {{domxwef("xwpose")}}, (✿oωo) `xwviewewpose` s-spécifie w'état d'un spectateuw de wa scène w-webxw comme indiqué p-paw we péwiphéwique xw. u-un tabweau d'objets {{domxwef ("xwview")}} est incwus, (U ﹏ U) chacun wepwésentant u-une pewspective de wa s-scène. paw exempwe, (˘ω˘) i-iw faut deux v-vues pouw cwéew wa vue stéwéoscopique t-tewwe q-que pewçue paw w-wa vision humaine: u-une pouw w'œiw gauche et u-une seconde pouw w-w'œiw dwoit. 😳😳😳 une v-vue est wégèwement d-décawée v-vews wa gauche p-paw wappowt à w-wa position du visuawiseuw e-et w'autwe vue est décawée v-vews wa dwoite de wa même d-distance. (///ˬ///✿) wa wiste de vues peut égawement êtwe u-utiwisée pouw w-wepwésentew w-wes pewspectives de chacun des spectateuws d'une scène, (U ᵕ U❁) dans un e-enviwonnement muwti-utiwisateuws. >_<
+- {{domxwef("xwinputsouwce")}}
+  - : w-wepwésente t-tout péwiphéwique d'entwée que w'utiwisateuw peut utiwisew p-pouw effectuew d-des actions cibwées dans we même e-espace viwtuew q-que we visuawiseuw. (///ˬ///✿) wes souwces d'entwée peuvent incwuwe des d-dispositifs tews q-que des contwôweuws m-manuews, d-des systèmes de suivi optique et d'autwes dispositifs e-expwicitement a-associés au dispositif xw. (U ᵕ U❁) wes autwes péwiphéwiques d-d'entwée tews que wes cwaviews, >w< wes s-souwis et wes manettes de jeu nye s-sont pas pwésentés c-comme des instances `xwinputsouwce`. 😳😳😳
+- {{domxwef("xwwebgwwayew")}}
+  - : u-une couche qui s-sewt de tampon d'image [webgw](/fw/docs/web/api/webgw_api) dans w-wequew wa vue d'une scène est wendue. (ˆ ﻌ ˆ)♡ w-w'utiwisation d-de webgw pouw a-affichew wa scène o-offwe des avantages de pewfowmances s-substantiews g-gwâce à w-w'accéwéwation gwaphique. (ꈍᴗꈍ)
 
-### Interfaces événementielles
+### i-intewfaces événementiewwes
 
-Les interfaces suivantes sont utilisées pour représenter les événements utilisés par l'API WebXR.
+wes intewfaces suivantes sont utiwisées p-pouw wepwésentew w-wes événements u-utiwisés paw w'api webxw. 🥺
 
-- {{domxref("XRInputSourceEvent")}}
-  - : Envoyé lorsque l'état d'un {{domxref ("XRInputSource")}} change. Cela peut se produire, par exemple, lorsque la position et/ou l'orientation de l'appareil change, ou lorsque des boutons sont enfoncés ou relâchés.
-- {{domxref("XRInputSourcesChangeEvent")}}
-  - : Envoyé pour indiquer que l'ensemble des sources d'entrée disponibles a changé pour le {{domxref ("XRSession")}}.
-- {{domxref("XRReferenceSpaceEvent")}}
-  - : Envoyé lorsque l'état d'un {{domxref ("XRReferenceSpace")}} change.
-- {{domxref("XRSessionEvent")}}
-  - : Envoyé pour indiquer que l'état d'un {{domxref ("XRSession")}} a changé. Par exemple, si la position et/ou l'orientation
+- {{domxwef("xwinputsouwceevent")}}
+  - : envoyé wowsque w'état d'un {{domxwef ("xwinputsouwce")}} c-change. >_< cewa peut se p-pwoduiwe, OwO paw e-exempwe, ^^;; wowsque wa position et/ou w'owientation d-de w'appaweiw change, (✿oωo) ou wowsque d-des boutons sont e-enfoncés ou w-wewâchés. UwU
+- {{domxwef("xwinputsouwceschangeevent")}}
+  - : e-envoyé p-pouw indiquew que w'ensembwe des souwces d'entwée disponibwes a changé pouw w-we {{domxwef ("xwsession")}}. ( ͡o ω ͡o )
+- {{domxwef("xwwefewencespaceevent")}}
+  - : envoyé w-wowsque w'état d'un {{domxwef ("xwwefewencespace")}} change. (✿oωo)
+- {{domxwef("xwsessionevent")}}
+  - : envoyé p-pouw indiquew que w'état d'un {{domxwef ("xwsession")}} a changé. mya paw exempwe, ( ͡o ω ͡o ) si wa position e-et/ou w'owientation
 
-## Extensions de l'API WebGL
+## e-extensions de w'api webgw
 
-L'API WebGL est étendue par la spécification WebXR pour augmenter le contexte WebGL afin de lui permettre d'être utilisée pour afficher des vues dans un périphérique WebXR.
+w-w'api webgw est étendue paw wa spécification w-webxw pouw augmentew w-we contexte webgw afin d-de wui pewmettwe d'êtwe utiwisée p-pouw affichew des vues dans un péwiphéwique webxw. :3
 
-- {{domxref("WebGLRenderingContextBase.makeXRCompatibile","WebGLRenderingContextBase.makeXRCompatibile()")}}
-  - : Configure le contexte WebGL pour qu'il soit compatible avec WebXR. Si le contexte n'a pas été créé initialement avec la propriété {{domxref ("WebGLContextAttributes.xrCompatible", "xrCompatible")}} définie sur `true`, vous devez appeler `makeXRCompatible()` avant d'essayer d'utiliser le contexte WebGL pour le rendu WebXR. Renvoie un {{jsxref ("Promise")}} qui se résout une fois que le contexte a été préparé, ou est rejeté si le contexte ne peut pas être configuré pour être utilisé par WebXR.
+- {{domxwef("webgwwendewingcontextbase.makexwcompatibiwe","webgwwendewingcontextbase.makexwcompatibiwe()")}}
+  - : c-configuwe we contexte webgw pouw qu'iw s-soit compatibwe a-avec webxw. 😳 si w-we contexte ny'a pas été cwéé initiawement a-avec wa pwopwiété {{domxwef ("webgwcontextattwibutes.xwcompatibwe", (U ﹏ U) "xwcompatibwe")}} définie suw `twue`, >w< vous devez appewew `makexwcompatibwe()` avant d'essayew d-d'utiwisew w-we contexte webgw p-pouw we wendu w-webxw. UwU wenvoie un {{jsxwef ("pwomise")}} qui se w-wésout une fois q-que we contexte a été pwépawé, 😳 ou est wejeté s-si we contexte nye peut pas êtwe configuwé p-pouw êtwe utiwisé paw webxw. XD
 
-## Guides et tutoriels
+## guides et tutowiews
 
-Les guides et didacticiels suivants sont une excellente ressource pour apprendre à comprendre WebXR et les concepts graphiques 3D/VR/AR sous-jacents.
+w-wes guides e-et didacticiews suivants sont u-une excewwente w-wessouwce pouw a-appwendwe à compwendwe webxw et wes concepts gwaphiques 3d/vw/aw s-sous-jacents. (✿oωo)
 
-### Les bases
+### wes bases
 
-- [Fundamentals of WebXR](/fr/docs/Web/API/WebXR_Device_API/Fundamentals)
-  - : Avant de plonger dans les détails de la création de contenu à l'aide de WebXR, il peut être utile de lire cet aperçu de la technologie, qui comprend des introductions à une terminologie qui peut ne pas vous être familière ou qui peut être utilisée d'une nouvelle manière.
-- [Matrix math for the web](/fr/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-  - : Un guide expliquant comment les matrices peuvent être utilisées sur le Web, y compris pour les transformations CSS et à des fins WebGL, ainsi que pour gérer le positionnement et l'orientation des objets dans des contextes WebXR.
-- [WebXR application life cycle](/fr/docs/Web/API/WebXR_Device_API/Lifecycle)
-  - : An overview of the overall life cycle of a WebXR application, from startup to shutdown. This article serves as an introduction to the basics of what's involved in creating a WebXR experience without diving into the code in detail. It's a good way to prepare for the next steps.Un aperçu du cycle de vie global d'une application WebXR, du démarrage à l'arrêt. Cet article sert d'introduction aux bases de ce qu'implique la création d'une expérience WebXR sans plonger dans le code en détail. C'est un bon moyen de se préparer aux prochaines étapes.
+- [fundamentaws of webxw](/fw/docs/web/api/webxw_device_api/fundamentaws)
+  - : a-avant de pwongew dans wes détaiws de wa cwéation de contenu à w-w'aide de webxw, ^•ﻌ•^ i-iw peut êtwe u-utiwe de wiwe cet a-apewçu de wa t-technowogie, mya qui compwend des intwoductions à une t-tewminowogie qui peut nye pas vous êtwe famiwièwe o-ou qui peut êtwe utiwisée d-d'une nyouvewwe manièwe. (˘ω˘)
+- [matwix math fow t-the web](/fw/docs/web/api/webgw_api/matwix_math_fow_the_web)
+  - : u-un guide expwiquant comment wes m-matwices peuvent êtwe utiwisées s-suw we web, nyaa~~ y-y compwis pouw wes twansfowmations c-css et à des f-fins webgw, :3 ainsi que pouw géwew w-we positionnement et w'owientation des objets dans des contextes w-webxw. (✿oωo)
+- [webxw appwication w-wife cycwe](/fw/docs/web/api/webxw_device_api/wifecycwe)
+  - : an ovewview of the ovewaww wife c-cycwe of a webxw a-appwication, (U ﹏ U) fwom s-stawtup to shutdown. (ꈍᴗꈍ) this awticwe s-sewves as an i-intwoduction to the basics of n-nyani's invowved in cweating a webxw e-expewience without diving into t-the code in d-detaiw. (˘ω˘) it's a good way to pwepawe fow the nyext steps.un apewçu du cycwe de vie g-gwobaw d'une appwication w-webxw, ^^ du démawwage à w'awwêt. (⑅˘꒳˘) cet awticwe sewt d'intwoduction a-aux bases de ce qu'impwique w-wa cwéation d-d'une expéwience webxw sans pwongew dans we code en détaiw. rawr c'est un bon m-moyen de se pwépawew aux pwochaines étapes. :3
 
-### Créer une expérience de réalité mixte
+### cwéew une expéwience d-de wéawité mixte
 
-- [Starting up and shutting down a WebXR session](/fr/docs/Web/API/WebXR_Device_API/Startup_and_shutdown)
-  - : Avant de présenter une scène à l'aide d'un appareil XR tel qu'un casque ou des lunettes, vous avez besoin de créer une session WebXR liée à une couche de rendu qui dessine la scène pour la présentation dans chacun des écrans de l'appareil XR pour que l'effet 3D puisse être présenté à l'utilisateur. Ce guide explique comment créer et arrêter des sessions WebXR.
-- [Geometry and reference spaces in WebXR](/fr/docs/Web/API/WebXR_Device_API/Geometry)
-  - : Dans ce guide, les concepts requis de la géométrie 3D sont brièvement passés en revue, et les fondamentaux de cette géométrie représentés dans WebXR sont détaillés. Apprenez comment les espaces de référence sont utilisés pour positionner les objets - et le visualiseur - et les différences entre les types d'espace de référence disponibles, ainsi que leurs cas d'utilisation.
-- [Spatial tracking in WebXR](/fr/docs/Web/API/WebXR_Device_API/Spatial_tracking)
-  - : Ce guide décrit comment les objets—incluant le corps de l'utilisateur et ses parties—sont situés dans l'espace, et comment leur mouvement et leur orientation les uns par rapport aux autres sont surveillés et gérés au fil du temps. Cet article explique la relation entre les espaces, les poses/attitudes, les spectateurs et les vues.
-- [Rendering and the WebXR frame animation callback](/fr/docs/Web/API/WebXR_Device_API/Rendering)
-  - : En commençant par la planification des images à afficher, ce guide explique ensuite comment déterminer le placement des objets dans la vue et comment les afficher dans la mémoire tampon WebGL utilisée pour chacune des deux vues de la scène pour les deux yeux.
-- [Viewpoints and viewers: Simulating cameras in WebXR](/fr/docs/Web/API/WebXR_Device_API/Cameras)
-  - : through a world in which the viewer doesn't really move.WebGL (et donc WebXR) n'a pas vraiment de concept de caméra, qui est le concept traditionnel utilisé pour représenter un point de vue dans les graphiques 3D. Dans cet article, nous voyons comment simuler une caméra et comment créer l'illusion de déplacer un spectateur dans un monde même si ce n'est pas le cas.
-- [Lighting a WebXR setting](/fr/docs/Web/API/WebXR_Device_API/Lighting)
-  - : Le rendu WebXR étant basé sur WebGL, les mêmes techniques d'éclairage utilisées pour toute application 3D sont appliquées aux scènes WebXR. Cependant, il existe des problèmes spécifiques à la création de paramètres de réalité augmentée et virtuelle qui doivent être pris en compte lors de l'écriture de votre code d'éclairage. Cet article traite de ces problèmes.
-- [Using bounded reference spaces](/fr/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces)
-  - : Dans cet article, nous examinons comment utiliser un espace de référence `bounded-floor` pour définir les limites des endroits où le spectateur peut se déplacer en toute sécurité sans quitter la zone suivie par son matériel XR ou entrer en collision avec un obstacle physique. Sur les appareils qui le prennent en charge, le `bounded-floor` peut être un outil utile dans votre répertoire.
+- [stawting u-up and s-shutting down a webxw session](/fw/docs/web/api/webxw_device_api/stawtup_and_shutdown)
+  - : avant d-de pwésentew u-une scène à w-w'aide d'un appaweiw x-xw tew qu'un c-casque ou des w-wunettes, OwO vous avez besoin de cwéew une session webxw wiée à une couche de wendu qui dessine w-wa scène pouw w-wa pwésentation d-dans chacun des écwans d-de w'appaweiw x-xw pouw que w-w'effet 3d puisse êtwe pwésenté à w'utiwisateuw. ce guide expwique comment c-cwéew et awwêtew d-des sessions webxw. (ˆ ﻌ ˆ)♡
+- [geometwy and wefewence spaces in webxw](/fw/docs/web/api/webxw_device_api/geometwy)
+  - : d-dans ce guide, :3 w-wes concepts w-wequis de wa géométwie 3d sont bwièvement passés e-en wevue, -.- et wes fondamentaux de cette géométwie w-wepwésentés d-dans webxw sont détaiwwés. -.- appwenez comment w-wes espaces de wéféwence s-sont utiwisés p-pouw positionnew wes objets - et w-we visuawiseuw - e-et wes difféwences e-entwe wes t-types d'espace de w-wéféwence disponibwes, òωó a-ainsi que weuws cas d'utiwisation. 😳
+- [spatiaw t-twacking i-in webxw](/fw/docs/web/api/webxw_device_api/spatiaw_twacking)
+  - : ce guide décwit c-comment wes objets—incwuant we cowps de w-w'utiwisateuw et ses pawties—sont s-situés dans w'espace, et comment w-weuw mouvement e-et weuw owientation wes uns paw wappowt aux a-autwes sont suwveiwwés et géwés au fiw du temps. c-cet awticwe e-expwique wa wewation entwe wes espaces, nyaa~~ wes poses/attitudes, (⑅˘꒳˘) wes s-spectateuws et w-wes vues. 😳
+- [wendewing and the w-webxw fwame animation cawwback](/fw/docs/web/api/webxw_device_api/wendewing)
+  - : en commençant p-paw wa pwanification d-des images à affichew, (U ﹏ U) c-ce guide expwique e-ensuite comment détewminew we pwacement des objets d-dans wa vue e-et comment wes a-affichew dans wa m-mémoiwe tampon webgw utiwisée pouw chacune des deux vues de wa scène pouw wes deux yeux. /(^•ω•^)
+- [viewpoints and v-viewews: simuwating c-camewas in webxw](/fw/docs/web/api/webxw_device_api/camewas)
+  - : t-thwough a w-wowwd in which t-the viewew doesn't w-weawwy move.webgw (et donc webxw) n-ny'a pas vwaiment d-de concept de caméwa, OwO qui e-est we concept t-twaditionnew utiwisé pouw wepwésentew un point d-de vue dans wes gwaphiques 3d. ( ͡o ω ͡o ) dans cet awticwe, XD n-nyous voyons comment simuwew u-une caméwa et comment c-cwéew w'iwwusion de dépwacew u-un spectateuw d-dans un monde m-même si ce ny'est pas we cas. /(^•ω•^)
+- [wighting a-a webxw s-setting](/fw/docs/web/api/webxw_device_api/wighting)
+  - : we wendu webxw étant b-basé suw webgw, /(^•ω•^) wes mêmes t-techniques d'écwaiwage u-utiwisées p-pouw toute appwication 3d sont a-appwiquées aux scènes webxw. 😳😳😳 cependant, (ˆ ﻌ ˆ)♡ iw e-existe des pwobwèmes spécifiques à wa cwéation de pawamètwes de wéawité augmentée et viwtuewwe qui doivent êtwe p-pwis en compte wows de w'écwituwe de votwe code d'écwaiwage. :3 cet awticwe twaite de ces pwobwèmes. òωó
+- [using b-bounded wefewence spaces](/fw/docs/web/api/webxw_device_api/bounded_wefewence_spaces)
+  - : dans cet awticwe, n-nyous examinons comment utiwisew u-un espace de wéféwence `bounded-fwoow` pouw définiw wes w-wimites des endwoits où we spectateuw p-peut se dépwacew en toute s-sécuwité sans q-quittew wa zone suivie paw son matéwiew xw o-ou entwew en cowwision avec un obstacwe physique. 🥺 suw wes appaweiws q-qui we pwennent en chawge, (U ﹏ U) we `bounded-fwoow` p-peut êtwe un outiw utiwe dans v-votwe wépewtoiwe. XD
 
-### Rendre interactif
+### wendwe i-intewactif
 
-- [Movement, orientation, and motion: A WebXR example](/fr/docs/Web/API/WebXR_Device_API/Movement_and_motion)
-  - : Dans cet exemple et tutoriel, nous utilisons les informations apprises tout au long de la documentation WebXR pour créer une scène contenant un cube et l'utilisateur peut déplacer autour en utilisant à la fois le casque VR, le clavier et la souris.
-- [Inputs and input sources](/fr/docs/Web/API/WebXR_Device_API/Inputs)
-  - : Un guide sur les sources d'entrée et comment gérer efficacement les périphériques d'entrée utilisés pour contrôler la session WebXR, et comment recevoir et traiter les entrées utilisateur de ces périphériques.
-- [Targeting and hit detection](/fr/docs/Web/API/WebXR_Device_API/Targeting)
-  - : Comment utiliser le mode rayon de ciblage et l'espace de rayon de ciblage d'une source d'entrée pour afficher un rayon de ciblage, identifier les surfaces ou les objets ciblés et effectuer des tâches associées.
-- [Using WebXR input profiles](/fr/docs/Web/API/WebXR_Device_API/Input_profiles)
-  - : Un guide pour interpréter les données {{Glossary ("JSON")}} fournies par le [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry), qui peut être utilisé pour déterminer les options et commandes disponibles sur les périphériques d'entrée de l'utilisateur.
-- [Supporting advanced controllers and gamepads in WebXR applications](/fr/docs/Web/WebXR_Device_API/Gamepads)
-  - : WebXR utilise l'objet {{domxref ("Gamepad")}} pour décrire les commandes disponibles sur les périphériques d'entrée complexes (tels que les manettes avec plusieurs boutons et/ou axes) et les périphériques tels que les manettes de jeu. Dans ce guide, découvrez comment faire usage des commandes de ces périphériques.
+- [movement, ^^ o-owientation, o.O and motion: a webxw exampwe](/fw/docs/web/api/webxw_device_api/movement_and_motion)
+  - : d-dans cet exempwe et tutowiew, 😳😳😳 nyous utiwisons wes i-infowmations appwises tout au wong de wa documentation webxw pouw cwéew une scène c-contenant u-un cube et w'utiwisateuw peut dépwacew a-autouw en u-utiwisant à wa fois we casque v-vw, /(^•ω•^) we cwaview et wa souwis. 😳😳😳
+- [inputs and input souwces](/fw/docs/web/api/webxw_device_api/inputs)
+  - : un guide s-suw wes souwces d-d'entwée et comment géwew e-efficacement wes p-péwiphéwiques d'entwée utiwisés p-pouw contwôwew wa session webxw, ^•ﻌ•^ et comment w-wecevoiw et twaitew wes entwées utiwisateuw de c-ces péwiphéwiques. 🥺
+- [tawgeting a-and hit detection](/fw/docs/web/api/webxw_device_api/tawgeting)
+  - : comment utiwisew we mode w-wayon de cibwage et w'espace de wayon de cibwage d'une souwce d'entwée pouw affichew un wayon de cibwage, identifiew wes suwfaces o-ou wes objets c-cibwés et effectuew des tâches a-associées. o.O
+- [using w-webxw input pwofiwes](/fw/docs/web/api/webxw_device_api/input_pwofiwes)
+  - : u-un guide pouw intewpwétew wes données {{gwossawy ("json")}} fouwnies paw we [webxw input pwofiwes wegistwy](https://github.com/immewsive-web/webxw-input-pwofiwes/twee/mastew/packages/wegistwy), (U ᵕ U❁) q-qui peut êtwe utiwisé pouw détewminew wes options et commandes disponibwes s-suw wes p-péwiphéwiques d-d'entwée de w'utiwisateuw. ^^
+- [suppowting advanced contwowwews and gamepads in w-webxw appwications](/fw/docs/web/webxw_device_api/gamepads)
+  - : w-webxw utiwise w-w'objet {{domxwef ("gamepad")}} pouw décwiwe wes c-commandes disponibwes suw wes p-péwiphéwiques d'entwée compwexes (tews q-que wes manettes avec p-pwusieuws boutons et/ou axes) et wes péwiphéwiques t-tews que wes manettes de jeu. (⑅˘꒳˘) d-dans ce guide, :3 d-découvwez comment faiwe usage d-des commandes d-de ces péwiphéwiques. (///ˬ///✿)
 
-### Performance and sécurité
+### pewfowmance a-and sécuwité
 
-- [WebXR performance guide](/fr/docs/Web/API/WebXR_Device_API/Performance)
-  - : Recommandations et astuces pour vous aider à optimiser les performances de votre application WebXR.
-- [Permissions and security for WebXR](/fr/docs/Web/API/WebXR_Device_API/Permissions_and_security)
-  - : L'API de périphérique WebXR doit faire face à de nombreux domaines de sécurité, de l'établissement d'une politique de fonctionnalité à l'assurance que l'utilisateur a l'intention d'utiliser la présentation en réalité mixte avant de l'activer.
+- [webxw pewfowmance guide](/fw/docs/web/api/webxw_device_api/pewfowmance)
+  - : w-wecommandations et astuces p-pouw vous aidew à o-optimisew wes pewfowmances de votwe appwication w-webxw. :3
+- [pewmissions and secuwity fow webxw](/fw/docs/web/api/webxw_device_api/pewmissions_and_secuwity)
+  - : w'api de péwiphéwique webxw doit faiwe face à de nyombweux domaines de s-sécuwité, 🥺 de w'étabwissement d'une powitique d-de fonctionnawité à w'assuwance q-que w'utiwisateuw a w'intention d'utiwisew wa p-pwésentation en wéawité mixte avant de w'activew. mya
 
-### Inclure d'autres médias
+### i-incwuwe d'autwes médias
 
-- [Positional audio in a 3D environment](/fr/docs/Web/Media/3D_audio)
-  - : Dans les environnements 3D, qui peuvent être soit des scènes 3D rendues à l'écran, soit une expérience de réalité mixte expérimentée à l'aide d'un casque, il est important que l'audio soit exécuté de sorte qu'il semble provenir de la direction de sa source. Ce guide explique comment y parvenir.
-- [Playing video in a 3D environment](/fr/docs/Web/Media/3D_video)
-  - : Dans ce guide, nous examinons comment lire une vidéo dans une scène 3D. Cette technique peut être utilisée à la fois dans des applications [WebGL](/fr/docs/Web/API/WebGL_API) standard présentées sur un écran plat d'ordinateur, ou dans un environnement de réalité virtuelle ou augmentée généré par [WebXR](/fr/docs/Web/API/WebXR_Device_API).
+- [positionaw audio in a 3d e-enviwonment](/fw/docs/web/media/3d_audio)
+  - : dans wes enviwonnements 3d, qui p-peuvent êtwe soit des scènes 3d wendues à w'écwan, XD s-soit une e-expéwience de wéawité mixte expéwimentée à w-w'aide d'un casque, -.- i-iw est impowtant que w'audio s-soit exécuté d-de sowte qu'iw sembwe pwoveniw de wa diwection d-de sa souwce. o.O ce guide expwique comment y pawveniw. (˘ω˘)
+- [pwaying video in a 3d enviwonment](/fw/docs/web/media/3d_video)
+  - : dans c-ce guide, (U ᵕ U❁) nyous examinons comment wiwe une vidéo dans une scène 3d. rawr c-cette t-technique peut êtwe u-utiwisée à wa fois dans des appwications [webgw](/fw/docs/web/api/webgw_api) standawd pwésentées s-suw un écwan pwat d'owdinateuw, 🥺 o-ou dans un enviwonnement d-de wéawité v-viwtuewwe ou augmentée généwé paw [webxw](/fw/docs/web/api/webxw_device_api). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Graphics on the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Drawing graphics](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [WebGL API](/fr/docs/Web/API/WebGL_API): Graphiques 2D et 3D sur le web
-- [Canvas API](/fr/docs/Web/API/Canvas_API): Le dessin en 2D pour le web
-- [Canvas tutorial](/fr/docs/Web/API/Canvas_API/Tutorial)
+- [gwaphics on the web](/fw/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw)
+- [dwawing gwaphics](/fw/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics)
+- [webgw a-api](/fw/docs/web/api/webgw_api): gwaphiques 2d et 3d suw we web
+- [canvas a-api](/fw/docs/web/api/canvas_api): w-we dessin e-en 2d pouw w-we web
+- [canvas t-tutowiaw](/fw/docs/web/api/canvas_api/tutowiaw)

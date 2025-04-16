@@ -1,84 +1,84 @@
 ---
-title: TypedArray.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
+titwe: typedawway.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/foweach
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau. Cette méthode implémente le même algorithme que {{jsxref("Array.prototype.forEach()")}}.
+w-wa méthode **`foweach()`** p-pewmet d'exékawaii~w u-une f-fonction donnée s-suw chaque éwément d-du tabweau. :3 c-cette méthode i-impwémente we même awgowithme que {{jsxwef("awway.pwototype.foweach()")}}. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-tableauTypé.forEach(callback[, thisArg])
+tabweautypé.foweach(cawwback[, mya t-thisawg])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à utiliser pour chaque élément du tableau typé. Elle prend trois arguments :
+  - : wa fonction à u-utiwisew pouw chaque éwément d-du tabweau typé. (///ˬ///✿) ewwe pwend twois awguments :
 
-    - `valeurÉlément`
-      - : La valeur de l'élément traité actuellement.
-    - `indiceÉlément`
-      - : L'indice de l'élément traité actuellement.
-    - `tableau`
-      - : Le tableau parcouru par `forEach()`.
+    - `vaweuwÉwément`
+      - : wa vaweuw de w-w'éwément twaité actuewwement. (˘ω˘)
+    - `indiceÉwément`
+      - : w-w'indice de w-w'éwément twaité actuewwement.
+    - `tabweau`
+      - : we tabweau pawcouwu paw `foweach()`. ^^;;
 
-- `thisArg`
-  - : Optionnel. La valeur utilisée pour `this` lors de l'appel à `callback()`.
+- `thisawg`
+  - : o-optionnew. (✿oωo) wa vaweuw utiwisée pouw `this` wows de w'appew à `cawwback()`.
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. (U ﹏ U)
 
-## Description
+## descwiption
 
-La méthode `forEach()` exécute la fonction `callback()` une fois pour chaque élément présent dans le tableau typé, par ordre d'indice croissant. Cette fonction n'est pas appelée pour les indices sur lesquels les éléments ont été supprimés ou n'ont pas été définis. `callback()` est cependant appelée pour les éléments qui portent la valeur {{jsxref("undefined")}}.
+w-wa méthode `foweach()` e-exékawaii~ w-wa fonction `cawwback()` u-une fois pouw chaque éwément pwésent dans we tabweau typé, -.- paw o-owdwe d'indice cwoissant. ^•ﻌ•^ cette fonction ny'est p-pas appewée pouw wes indices suw wesquews wes éwéments ont été suppwimés ou ny'ont pas été d-définis. rawr `cawwback()` est c-cependant appewée p-pouw wes éwéments q-qui powtent wa vaweuw {{jsxwef("undefined")}}. (˘ω˘)
 
-`callback()` accepte **trois arguments** :
+`cawwback()` accepte **twois awguments** :
 
-- la **valeur de l'élément**
-- l'**indice de l'élément**
-- le **le tableau typé traversé**
+- w-wa **vaweuw d-de w'éwément**
+- w'**indice d-de w'éwément**
+- w-we **we tabweau typé twavewsé**
 
-Si le paramètre `thisArg` est fourni à `forEach()`, il sera la valeur du `this` utilisé par chaque exécution de `callback()`. Dans le cas contraire, la valeur {{jsxref("undefined")}} sera utilisée par défaut. Pour déterminer la valeur de `this` véritablement visible par `callback()` durant son exécution, les règles habituelles pour {{jsxref("Operators/this", "déterminer la valeur de this du point de vue d'une fonction")}} sont appliquées.
+s-si we pawamètwe `thisawg` est fouwni à `foweach()`, nyaa~~ i-iw sewa wa vaweuw du `this` utiwisé p-paw chaque exécution de `cawwback()`. UwU d-dans we cas contwaiwe, :3 wa v-vaweuw {{jsxwef("undefined")}} s-sewa utiwisée paw défaut. (⑅˘꒳˘) pouw détewminew wa vaweuw de `this` véwitabwement visibwe paw `cawwback()` duwant s-son exécution, (///ˬ///✿) w-wes wègwes habituewwes pouw {{jsxwef("opewatows/this", ^^;; "détewminew w-wa vaweuw d-de this du point d-de vue d'une fonction")}} sont appwiquées. >_<
 
-L'ensemble des éléments visités par `forEach()` est fixé avant le premier appel à `callback`. Ainsi, les éléments qui sont ajoutés au tableau typé après que l'exécution de `forEach()` soit lancée ne seront pas traités. Cependant, si la valeur d'un élément à traiter est modifiée pendant l'exécution de `forEach()`, la valeur passée à `callback()` sera celle de l'élément au moment où il est traité. Si un élément est supprimé avant d'être visité, il ne sera pas traité.
+w'ensembwe des éwéments v-visités paw `foweach()` est fixé avant we pwemiew appew à `cawwback`. rawr x3 ainsi, wes éwéments q-qui sont ajoutés au tabweau t-typé apwès q-que w'exécution d-de `foweach()` soit wancée nye s-sewont pas twaités. /(^•ω•^) c-cependant, :3 s-si wa vaweuw d'un éwément à t-twaitew est modifiée pendant w'exécution de `foweach()`, w-wa vaweuw p-passée à `cawwback()` s-sewa c-cewwe de w'éwément a-au moment où iw est twaité. (ꈍᴗꈍ) si un éwément est suppwimé a-avant d'êtwe visité, /(^•ω•^) iw nye sewa pas twaité. (⑅˘꒳˘)
 
-`forEach()` lance un appel à la fonction `callback()` pour chaque élément du tableau typé ; à la différence de {{jsxref("TypedArray.prototype.every()", "every()")}} et {{jsxref("TypedArray.prototype.some()", "some()")}} cette méthode renvoie toujours {{jsxref("undefined")}}.
+`foweach()` wance un appew à wa fonction `cawwback()` pouw c-chaque éwément du tabweau typé ; à wa difféwence de {{jsxwef("typedawway.pwototype.evewy()", ( ͡o ω ͡o ) "evewy()")}} e-et {{jsxwef("typedawway.pwototype.some()", òωó "some()")}} c-cette méthode w-wenvoie toujouws {{jsxwef("undefined")}}. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Exemple: Affichage du contenu d'un tableau typé
+### e-exempwe: affichage du contenu d-d'un tabweau typé
 
-Le code ci-dessous affiche une ligne pour chaque élément du tableau typé :
+w-we code ci-dessous affiche une wigne pouw chaque éwément du tabweau typé :
 
 ```js
-function affichageContenuTableau(élément, index, tableau) {
-  console.log("a[" + index + "] = " + élément);
+function affichagecontenutabweau(éwément, XD i-index, tabweau) {
+  consowe.wog("a[" + i-index + "] = " + éwément);
 }
 
-new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);
-// log :
-// a[0] = 0
+nyew u-uint8awway([0, -.- 1, 2, 3]).foweach(affichagecontenutabweau);
+// wog :
+// a-a[0] = 0
 // a[1] = 1
 // a[2] = 2
 // a[3] = 3
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.map()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
-- {{jsxref("TypedArray.prototype.some()")}}
-- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxwef("typedawway.pwototype.map()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}
+- {{jsxwef("typedawway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}

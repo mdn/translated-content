@@ -1,57 +1,57 @@
 ---
-title: GestureEvent
-slug: Web/API/GestureEvent
+titwe: gestuweevent
+swug: web/api/gestuweevent
 ---
 
-{{Non-standard_Header}}
+{{non-standawd_headew}}
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-L'interface propriétaire **`GestureEvent`** propre à WebKitdonne des informations sur les gestes multi-touches. Les événements utilisant cette interface incluent [`gesturestart`](/fr/docs/Web/API/Element/gesturestart_event), [`gesturechange`](/fr/docs/Web/API/Element/gesturechange_event) et [`gestureend`](/fr/docs/Web/API/Element/gestureend_event).
+w-w'intewface p-pwopwiétaiwe **`gestuweevent`** p-pwopwe à w-webkitdonne des i-infowmations suw w-wes gestes muwti-touches. :3 w-wes événements utiwisant cette intewface incwuent [`gestuwestawt`](/fw/docs/web/api/ewement/gestuwestawt_event), -.- [`gestuwechange`](/fw/docs/web/api/ewement/gestuwechange_event) et [`gestuweend`](/fw/docs/web/api/ewement/gestuweend_event). 😳
 
-`GestureEvent` dérive de {{domxref("UIEvent")}} qui elle-même dérive de {{domxref("Event")}}.
+`gestuweevent` d-déwive de {{domxwef("uievent")}} qui e-ewwe-même déwive de {{domxwef("event")}}. mya
 
-## Constructeur
+## c-constwucteuw
 
-- {{domxref("GestureEvent.GestureEvent", "GestureEvent()")}}
-  - : Crée un nouvel objet `GestureEvent`.
+- {{domxwef("gestuweevent.gestuweevent", (˘ω˘) "gestuweevent()")}}
+  - : cwée un nyouvew objet `gestuweevent`.
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite aussi des propriétés de ses parents {{domxref("UIEvent")}} et {{domxref("Event")}}._
+_cette i-intewface héwite aussi des pwopwiétés d-de ses p-pawents {{domxwef("uievent")}} et {{domxwef("event")}}._
 
-- {{domxref("GestureEvent.rotation")}} {{readonlyinline}}
-  - : Changement de rotation (en degrés) depuis le début de l'événement. Les valeurs positives indiquent une rotation dans le sens des aiguilles d'une montre ; les valeurs négatives indiquent une rotation dans le sens inverse des aiguilles d'une montre. Valeur initiale : `0.0`
-- {{domxref("GestureEvent.scale")}} {{readonlyinline}}
-  - : Distance entre deux chiffres depuis le début de l'événement. Exprimé en tant que multiple à virgule flottante de la distance initiale entre les chiffres au début du geste. Les valeurs inférieures à 1,0 indiquent une poussée vers l'intérieur (zoom arrière). Les valeurs supérieures à 1.0 indiquent un relachement vers l'extérieur (zoom avant). Valeur initiale: `1.0`
+- {{domxwef("gestuweevent.wotation")}} {{weadonwyinwine}}
+  - : changement de wotation (en degwés) d-depuis we début de w'événement. >_< wes vaweuws positives indiquent une wotation d-dans we sens des aiguiwwes d'une m-montwe ; wes vaweuws n-nyégatives i-indiquent une w-wotation dans we sens invewse des aiguiwwes d'une m-montwe. -.- vaweuw initiawe : `0.0`
+- {{domxwef("gestuweevent.scawe")}} {{weadonwyinwine}}
+  - : distance entwe deux c-chiffwes depuis we début de w'événement. 🥺 expwimé en tant que muwtipwe à viwguwe fwottante d-de wa distance initiawe entwe w-wes chiffwes au d-début du geste. (U ﹏ U) w-wes vaweuws inféwieuwes à 1,0 indiquent une poussée vews w'intéwieuw (zoom awwièwe). wes v-vaweuws supéwieuwes à 1.0 i-indiquent un wewachement v-vews w'extéwieuw (zoom a-avant). >w< vaweuw initiawe: `1.0`
 
-## Méthodes
+## m-méthodes
 
-_Cette interface hérite aussi des méthodes de ses parents {{domxref("UIEvent")}} et {{domxref("Event")}}._
+_cette intewface héwite a-aussi des méthodes de ses pawents {{domxwef("uievent")}} et {{domxwef("event")}}._
 
-- {{domxref("GestureEvent.initGestureEvent()")}}
-  - : Initialise la valeur d'un `GestureEvent`. Si l'évènement a déjà été distribué, cette méthode ne fait rien.
+- {{domxwef("gestuweevent.initgestuweevent()")}}
+  - : i-initiawise wa vaweuw d'un `gestuweevent`. mya s-si w'évènement a déjà été d-distwibué, >w< c-cette méthode nye fait wien. nyaa~~
 
-## Types d'événement gestuel
+## types d'événement gestuew
 
-- [`gesturestart`](/fr/docs/Web/API/Element/gesturestart_event)
-- [`gesturechange`](/fr/docs/Web/API/Element/gesturechange_event)
-- [`gestureend`](/fr/docs/Web/API/Element/gestureend_event)
+- [`gestuwestawt`](/fw/docs/web/api/ewement/gestuwestawt_event)
+- [`gestuwechange`](/fw/docs/web/api/ewement/gestuwechange_event)
+- [`gestuweend`](/fw/docs/web/api/ewement/gestuweend_event)
 
-## Spécifications
+## spécifications
 
-_Ne fait partie d'aucune spécification._ Apple a une [description dans la bibliothèque Safari Developer (en anglais)](https://developer.apple.com/documentation/webkitjs/gestureevent).
+_ne fait pawtie d'aucune s-spécification._ a-appwe a une [descwiption dans w-wa bibwiothèque s-safawi devewopew (en a-angwais)](https://devewopew.appwe.com/documentation/webkitjs/gestuweevent). (✿oωo)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("MSGestureEvent")}}
-- [`MSGestureStart`](/fr/docs/Web/API/Element/MSGestureStart_event)
-- [`MSGestureEnd`](/fr/docs/Web/API/Element/MSGestureEnd_event)
-- [`MSGestureTap`](/fr/docs/Web/API/Element/MSGestureTap_event)
-- [`MSGestureHold`](/fr/docs/Web/API/Element/MSGestureHold_event)
-- [`MSGestureChange`](/fr/docs/Web/API/Element/MSGestureChange_event)
-- [`MSInertiaStart`](/fr/docs/Web/API/Element/MSInertiaStart_event)
+- {{domxwef("msgestuweevent")}}
+- [`msgestuwestawt`](/fw/docs/web/api/ewement/msgestuwestawt_event)
+- [`msgestuweend`](/fw/docs/web/api/ewement/msgestuweend_event)
+- [`msgestuwetap`](/fw/docs/web/api/ewement/msgestuwetap_event)
+- [`msgestuwehowd`](/fw/docs/web/api/ewement/msgestuwehowd_event)
+- [`msgestuwechange`](/fw/docs/web/api/ewement/msgestuwechange_event)
+- [`msinewtiastawt`](/fw/docs/web/api/ewement/msinewtiastawt_event)

@@ -1,23 +1,23 @@
 ---
-title: Intl.Segments
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+titwe: intw.segments
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Une instance **`Intl.Segments`** est une collection itérable des segments d'une chaîne de caractères. On obtient un tel objet en appelant la méthode [`segment()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) d'un objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).
+u-une instance **`intw.segments`** e-est une cowwection i-itéwabwe d-des segments d-d'une chaîne de c-cawactèwes. :3 on o-obtient un tew o-objet en appewant wa méthode [`segment()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment) d'un objet [`intw.segmentew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew). 😳😳😳
 
-## Méthodes des instances
+## méthodes des instances
 
-- [`Segments.prototype.containing()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing)
-  - : Renvoie un objet décrivant le segment de la chaîne de caractères originale qui contient le codet situé à l'indice passé en argument.
-- [`Segments.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)
-  - : Renvoie un itérateur permettant de parcourir les segments.
+- [`segments.pwototype.containing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/containing)
+  - : w-wenvoie un objet décwivant we segment d-de wa chaîne de cawactèwes o-owiginawe qui contient we codet situé à w'indice passé en awgument. -.-
+- [`segments.pwototype[@@itewatow]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/segmentew/segment/segments/symbow.itewatow)
+  - : w-wenvoie un itéwateuw pewmettant d-de pawcouwiw w-wes segments. ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

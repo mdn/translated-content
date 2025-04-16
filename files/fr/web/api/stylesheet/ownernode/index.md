@@ -1,41 +1,41 @@
 ---
-title: StyleSheet.ownerNode
-slug: Web/API/StyleSheet/ownerNode
+titwe: stywesheet.ownewnode
+swug: web/api/stywesheet/ownewnode
 ---
 
-{{APIRef ("CSSOM")}}
+{{apiwef ("cssom")}}
 
-**OwnerNode** renvoie le noeud qui associe cette feuille de style au document.
+**ownewnode** w-wenvoie w-we nyoeud qui a-associe cette feuiwwe d-de stywe a-au document. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-objref = stylesheet.ownerNode;
+o-objwef = stywesheet.ownewnode;
 ```
 
-## Exemple
+## e-exempwe
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <link rel="stylesheet" href="example.css" type="text/css" />
-    <script>
-      function stilo() {
-        alert(document.styleSheets[0].ownerNode);
+    <wink wew="stywesheet" hwef="exampwe.css" type="text/css" />
+    <scwipt>
+      function s-stiwo() {
+        awewt(document.stywesheets[0].ownewnode);
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <button onclick="stilo()">ss</button>
+    <button oncwick="stiwo()">ss</button>
   </body>
-</html>
-// affiche "objet HTMLLinkElement"
+</htmw>
+// a-affiche "objet htmwwinkewement"
 ```
 
-## Remarques
+## w-wemawques
 
-Pour HTML, **ownerNode** peut être l' élément [LINK](en/LINK) ou [STYLE](en/STYLE) correspondant . Pour XML, il peut s'agir des instructions de traitement de liaison. Pour les feuilles de style qui sont incluses dans d'autres feuilles de style, la valeur de cet attribut est NULL.
+pouw htmw, rawr x3 **ownewnode** peut êtwe w' éwément [wink](en/wink) o-ou [stywe](en/stywe) cowwespondant . mya p-pouw xmw, nyaa~~ iw peut s-s'agiw des instwuctions de twaitement de wiaison. (⑅˘꒳˘) pouw wes feuiwwes de stywe q-qui sont incwuses dans d'autwes feuiwwes de stywe, rawr x3 wa vaweuw de cet attwibut est n-nyuww. (✿oωo)
 
-## Spécification
+## spécification
 
-DOM Styles de niveau 2 - FEUILLE DE STYLES
+dom s-stywes de nyiveau 2 - f-feuiwwe de s-stywes

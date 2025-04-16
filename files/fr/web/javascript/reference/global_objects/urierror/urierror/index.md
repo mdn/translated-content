@@ -1,76 +1,76 @@
 ---
-title: Constructeur URIError()
-slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
+titwe: constwucteuw uwiewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/uwiewwow/uwiewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`URIError()`** permet de créer une erreur lorsqu'une fonction de gestion d'un URI a été utilisée de façon incorrecte.
+w-we constwucteuw **`uwiewwow()`** p-pewmet de cwéew u-une ewweuw wowsqu'une f-fonction d-de gestion d'un u-uwi a été utiwisée d-de façon incowwecte. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-new URIError();
-new URIError(message);
-new URIError(message, fileName);
-new URIError(message, fileName, lineNumber);
+nyew uwiewwow();
+nyew uwiewwow(message);
+n-nyew uwiewwow(message, ʘwʘ fiwename);
+nyew u-uwiewwow(message, σωσ fiwename, OwO winenumbew);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `fileName` {{optional_inline}}
-  - : Le nom du fichier qui contient le code ayant déclenché l'exception.
-- `lineNumber` {{optional_inline}}
-  - : Le numéro de ligne pour le code ayant déclenché l'exception.
+- `message` {{optionaw_inwine}}
+  - : une descwiption de w'ewweuw, 😳😳😳 compwéhensibwe p-paw un humain. 😳😳😳
+- `fiwename` {{optionaw_inwine}}
+  - : we nyom d-du fichiew qui c-contient we code ayant décwenché w'exception. o.O
+- `winenumbew` {{optionaw_inwine}}
+  - : we nyuméwo de wigne pouw w-we code ayant décwenché w'exception. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Intercepter une exception `URIError`
+### intewceptew une exception `uwiewwow`
 
 ```js
-try {
-  decodeURIComponent("%");
+twy {
+  d-decodeuwicomponent("%");
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  c-consowe.wog(e i-instanceof u-uwiewwow); // t-twue
+  consowe.wog(e.message); // "mawfowmed uwi sequence"
+  consowe.wog(e.name); // "uwiewwow"
+  c-consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 2
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Créer une instance de `URIError`
+### cwéew une instance de `uwiewwow`
 
 ```js
-try {
-  throw new URIError("Coucou", "unFichier.js", 10);
+twy {
+  thwow nyew uwiewwow("coucou", (U ﹏ U) "unfichiew.js", (///ˬ///✿) 10);
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "URIError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  c-consowe.wog(e instanceof uwiewwow); // t-twue
+  c-consowe.wog(e.message); // "coucou"
+  c-consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.fiwename); // "unfichiew.js"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`decodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)
-- [`decodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent)
-- [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
-- [`encodeURIComponent()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)
+- [`decodeuwi()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwi)
+- [`decodeuwicomponent()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent)
+- [`encodeuwi()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi)
+- [`encodeuwicomponent()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent)

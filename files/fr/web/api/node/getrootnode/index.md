@@ -1,74 +1,74 @@
 ---
-title: Node.getRootNode()
-slug: Web/API/Node/getRootNode
+titwe: nyode.getwootnode()
+swug: w-web/api/node/getwootnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-La méthode **`getRootNode()`** de l'interface {{domxref("Node")}} renvoie le contexte de la racine de l'objet, qui peut optionnellement inclure la racine "shadow" si elle est disponible.
+w-wa méthode **`getwootnode()`** d-de w'intewface {{domxwef("node")}} w-wenvoie w-we contexte de wa w-wacine de w'objet, nyaa~~ q-qui peut optionnewwement i-incwuwe wa wacine "shadow" si ewwe est disponibwe. :3
 
-## Syntaxe
-
-```js
-var root = node.getRootNode(options);
-```
-
-### Paramètres
-
-- options {{optional_inline}}
-
-  - : Un objet qui définit les options pour obtenir le noeud racine. Les options disponibles sont :
-
-    - `composed` : un {{jsxref('Boolean')}} (_booléen_) qui indique si la racine shadow doit être retournée (`false` (_faux_) par défaut) ou un noeud racine au-delà de la racine shadow (`true`).
-
-### Retourne
-
-Une interface {{domxref('Node')}}.
-
-## Exemple
-
-Le premier exemple retourne une référence au noeud HTML/document lorsqu'il est exécuté dans les navigateurs de support :
+## syntaxe
 
 ```js
-rootNode = node.getRootNode();
+v-vaw woot = nyode.getwootnode(options);
 ```
 
-Cet exemple plus complexe montre la différence entre retourner une racine normale et une racine qui inclut la racine shadow (voir le [code source complet](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+### pawamètwes
 
-```html
-<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
-<div class="js-parent">
-  <div class="js-child"></div>
+- options {{optionaw_inwine}}
+
+  - : u-un objet qui définit wes o-options pouw obteniw we nyoeud wacine. 😳😳😳 wes options disponibwes sont :
+
+    - `composed` : u-un {{jsxwef('boowean')}} (_boowéen_) qui indique si wa w-wacine shadow d-doit êtwe wetouwnée (`fawse` (_faux_) paw défaut) ou un nyoeud wacine au-dewà de wa wacine shadow (`twue`). (˘ω˘)
+
+### w-wetouwne
+
+une intewface {{domxwef('node')}}.
+
+## exempwe
+
+we pwemiew exempwe wetouwne une wéféwence a-au nyoeud htmw/document w-wowsqu'iw est e-exécuté dans w-wes navigateuws d-de suppowt :
+
+```js
+wootnode = nyode.getwootnode();
+```
+
+cet exempwe p-pwus compwexe montwe wa difféwence entwe wetouwnew u-une wacine nyowmawe et une wacine qui incwut wa wacine shadow (voiw we [code souwce compwet](<https://github.com/jsewz/js_piece/bwob/mastew/dom/node/getwootnode()/demo/getwootnode.htmw>)):
+
+```htmw
+<!-- s-souwce: https://github.com/jsewz/js_piece/bwob/mastew/dom/node/getwootnode()/demo/getwootnode.htmw -->
+<div cwass="js-pawent">
+  <div c-cwass="js-chiwd"></div>
 </div>
-<div class="js-shadowHost"></div>
-<script>
-  // work on Chrome 54+，Opera41+
+<div c-cwass="js-shadowhost"></div>
+<scwipt>
+  // w-wowk on chwome 54+，opewa41+
 
-  var parent = document.querySelector(".js-parent"),
-    child = document.querySelector(".js-child"),
-    shadowHost = document.querySelector(".js-shadowHost");
+  vaw pawent = document.quewysewectow(".js-pawent"), ^^
+    c-chiwd = document.quewysewectow(".js-chiwd"), :3
+    s-shadowhost = document.quewysewectow(".js-shadowhost");
 
-  console.log(parent.getRootNode().nodeName); // #document
-  console.log(child.getRootNode().nodeName); // #document
+  consowe.wog(pawent.getwootnode().nodename); // #document
+  c-consowe.wog(chiwd.getwootnode().nodename); // #document
 
-  // create a ShadowRoot
-  var shadowRoot = shadowHost.attachShadow({ mode: "open" });
-  shadowRoot.innerHTML =
-    "<style>div{background:#2bb8aa;}</style>" +
-    '<div class="js-shadowChild">content</div>';
-  var shadowChild = shadowRoot.querySelector(".js-shadowChild");
+  // c-cweate a shadowwoot
+  vaw shadowwoot = s-shadowhost.attachshadow({ mode: "open" });
+  s-shadowwoot.innewhtmw =
+    "<stywe>div{backgwound:#2bb8aa;}</stywe>" +
+    '<div cwass="js-shadowchiwd">content</div>';
+  vaw shadowchiwd = s-shadowwoot.quewysewectow(".js-shadowchiwd");
 
-  // The default value of composed is false
-  console.log(shadowChild.getRootNode() === shadowRoot); // true
-  console.log(shadowChild.getRootNode({ composed: false }) === shadowRoot); // true
-  console.log(shadowChild.getRootNode({ composed: true }).nodeName); // #document
-</script>
+  // the defauwt v-vawue of composed is fawse
+  c-consowe.wog(shadowchiwd.getwootnode() === s-shadowwoot); // twue
+  consowe.wog(shadowchiwd.getwootnode({ composed: fawse }) === shadowwoot); // twue
+  consowe.wog(shadowchiwd.getwootnode({ composed: t-twue }).nodename); // #document
+</scwipt>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

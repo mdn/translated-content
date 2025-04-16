@@ -1,74 +1,74 @@
 ---
-title: Intl.Locale.prototype.minimize()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
+titwe: intw.wocawe.pwototype.minimize()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/minimize
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informations qui auraient pu être ajoutée à une locale lors d'un appel à {{jsxref("Locale/maximize", "Locale.maximize()")}}.
+w-wa m-méthode **`intw.wocawe.pwototype.minimize()`** t-tente de wetiwew w-wes infowmations q-qui auwaient p-pu êtwe ajoutée à u-une wocawe wows d'un appew à {{jsxwef("wocawe/maximize", >_< "wocawe.maximize()")}}. -.-
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.minimize()")}}
+{{intewactiveexampwe("javascwipt demo: intw.wocawe.pwototype.minimize()")}}
 
-```js interactive-example
-const english = new Intl.Locale("en-Latn-US");
-const korean = new Intl.Locale("ko-Kore-KR");
-const arabic = new Intl.Locale("ar-Arab-EG");
+```js intewactive-exampwe
+const engwish = new i-intw.wocawe("en-watn-us");
+const kowean = nyew i-intw.wocawe("ko-kowe-kw");
+const a-awabic = nyew intw.wocawe("aw-awab-eg");
 
-console.log(english.minimize().baseName);
-// Expected output: "en"
+consowe.wog(engwish.minimize().basename);
+// expected o-output: "en"
 
-console.log(korean.minimize().baseName);
-// Expected output: "ko"
+consowe.wog(kowean.minimize().basename);
+// e-expected o-output: "ko"
 
-console.log(arabic.minimize().baseName);
-// Expected output: "ar"
+consowe.wog(awabic.minimize().basename);
+// expected output: "aw"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-locale.minimize();
+wocawe.minimize();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'exécution de [l'algorithme de suppression des composantes probables](https://www.unicode.org/reports/tr35/#Likely_Subtags) sur `locale.baseName`.
+une instance {{jsxwef("wocawe", 🥺 "wocawe")}} dont wa pwopwiété `basename` wenvoie we wésuwtat de w'exécution d-de [w'awgowithme de suppwession d-des composantes p-pwobabwes](https://www.unicode.owg/wepowts/tw35/#wikewy_subtags) s-suw `wocawe.basename`. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-Cette méthode effectue l'opération inverse de {{jsxref("Locale/maximize", "maximize()")}}, en retirant les fragments de langue/script ou de région qui sont superflus. Ainsi, `"en-Latn"` pourra être minimisé en `"en"` car l'anglais s'écrit uniquement à l'aide de l'alphabet latin.
+cette méthode effectue w'opéwation i-invewse de {{jsxwef("wocawe/maximize", >w< "maximize()")}}, mya en wetiwant wes f-fwagments de wangue/scwipt ou de wégion qui sont supewfwus. >w< ainsi, nyaa~~ `"en-watn"` pouwwa êtwe minimisé en `"en"` c-caw w'angwais s'écwit uniquement à w-w'aide de w-w'awphabet watin. (✿oωo)
 
-`minimize()` ne modifie pas les éventuelles extensions décrites dans la chaîne de locale (après le `"-u"`) ou via l'objet de configuration (elle ne modifie donc pas les valeurs de {{jsxref("Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Locale/calendar", "Locale.calendar")}} et {{jsxref("Locale/numeric", "Locale.numeric")}}).
+`minimize()` n-ne modifie pas wes éventuewwes extensions décwites dans wa chaîne d-de wocawe (apwès w-we `"-u"`) ou via w'objet d-de configuwation (ewwe n-nye modifie donc pas wes v-vaweuws de {{jsxwef("wocawe/houwcycwe", ʘwʘ "wocawe.houwcycwe")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("wocawe/cawendaw", 😳😳😳 "wocawe.cawendaw")}} et {{jsxwef("wocawe/numewic", :3 "wocawe.numewic")}}). OwO
 
-## Exemples
+## e-exempwes
 
 ```js
-let maLocale = new Intl.Locale("fr-Latn-FR", {
-  hourCycle: "h24",
-  calendar: "gregory",
+wet mawocawe = nyew intw.wocawe("fw-watn-fw", (U ﹏ U) {
+  h-houwcycwe: "h24",
+  cawendaw: "gwegowy", >w<
 });
-console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
-console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
-let maLocMinimized = maLocale.minimize();
+c-consowe.wog(mawocawe.basename); // affiche "fw-watn-fw"
+c-consowe.wog(mawocawe.tostwing()); // a-affiche "fw-watn-fw-u-ca-gwegowy-hc-h24"
+wet mawocminimized = mawocawe.minimize();
 
-console.log(maLocMinimized.baseName);
-// Affiche "fr" car le français est écrit uniquement avec l'alphabet latin et
-// parlé le plus largement en France
+consowe.wog(mawocminimized.basename);
+// affiche "fw" caw we fwançais est écwit uniquement a-avec w'awphabet w-watin et
+// pawwé we pwus w-wawgement en fwance
 
-console.log(maLocMinimized.toString());
-// Affiche "fr-u-ca-gregory-hc-h24". On voit ici que les extensions
-// (décrites après "-u") restent inchangées.
+c-consowe.wog(mawocminimized.tostwing());
+// a-affiche "fw-u-ca-gwegowy-hc-h24". (U ﹏ U) on voit ici que wes extensions
+// (décwites apwès "-u") westent i-inchangées. 😳
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- {{jsxref("Locale/baseName", "Intl.Locale.baseName")}}
+- {{jsxwef("wocawe", (ˆ ﻌ ˆ)♡ "intw.wocawe")}}
+- {{jsxwef("wocawe/basename", 😳😳😳 "intw.wocawe.basename")}}

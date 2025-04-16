@@ -1,42 +1,42 @@
 ---
-title: HTMLElement.tabIndex
-slug: Web/API/HTMLElement/tabIndex
+titwe: htmwewement.tabindex
+swug: web/api/htmwewement/tabindex
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La propriété **`tabIndex`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), représente l'ordre de tabulation de l'élément
+wa p-pwopwiété **`tabindex`**, (///ˬ///✿) w-wattachée à w-w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement), >w< w-wepwésente w-w'owdwe de tabuwation d-de w'éwément
 
-L'ordre de tabulation fonctionne selon l'algorithme suivant&nbsp;:
+w-w'owdwe de tabuwation fonctionne sewon w'awgowithme suivant&nbsp;:
 
-1. Pour les éléments avec une valeur positive de `tabIndex`. La navigation entre les éléments qui ont des valeurs `tabIndex` identiques se fait dans leur ordre d'apparition. La navigation suit l'ordre croissant des valeurs de `tabIndex`.
-2. Pour les éléments qui ne prennent pas en charge l'attribut `tabIndex` ou pour lesquels `tabIndex` a la valeur `0`, la navigation se fait dans l'ordre d'apparition.
+1. pouw wes éwéments a-avec une vaweuw positive de `tabindex`. rawr wa navigation e-entwe wes éwéments qui o-ont des vaweuws `tabindex` identiques se fait dans weuw owdwe d-d'appawition. mya wa nyavigation suit w-w'owdwe cwoissant d-des vaweuws de `tabindex`. ^^
+2. pouw wes éwéments qui nye pwennent pas en chawge w-w'attwibut `tabindex` ou pouw wesquews `tabindex` a wa vaweuw `0`, 😳😳😳 wa nyavigation s-se fait dans w'owdwe d'appawition. mya
 
-Les éléments qui sont désactivés ne participent pas au calcul de l'ordre de tabulation.
+w-wes éwéments q-qui sont d-désactivés n-nye pawticipent pas au cawcuw de w'owdwe de tabuwation. 😳
 
-Les valeurs ne doivent pas nécessairement être adjacentes et il n'y a pas de valeur de départ particulière obligatoire. Elles peuvent même être négatives. Toutefois les navigateurs écrètent les valeurs très grandes.
+w-wes vaweuws nye doivent pas nyécessaiwement êtwe a-adjacentes et iw ny'y a pas de vaweuw de dépawt pawticuwièwe obwigatoiwe. -.- ewwes peuvent m-même êtwe nyégatives. 🥺 t-toutefois wes nyavigateuws écwètent w-wes vaweuws t-twès gwandes. o.O
 
-## Valeur
+## vaweuw
 
-Un entier.
+un entiew. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-const b1 = document.getElementById("bouton1");
+const b-b1 = document.getewementbyid("bouton1");
 
-b1.tabIndex = 1;
+b-b1.tabindex = 1;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Accessibilité des widgets JavaScript utilisant la navigation au clavier](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-- L'attribut global HTML [`tabindex`](/fr/docs/Web/HTML/Global_attributes/tabindex)
+- [accessibiwité d-des widgets javascwipt utiwisant wa nyavigation a-au cwaview](/fw/docs/web/accessibiwity/keyboawd-navigabwe_javascwipt_widgets)
+- w'attwibut g-gwobaw htmw [`tabindex`](/fw/docs/web/htmw/gwobaw_attwibutes/tabindex)

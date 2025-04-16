@@ -1,151 +1,151 @@
 ---
-title: Formes de base
-slug: Web/SVG/Tutorial/Basic_Shapes
+titwe: fowmes de base
+swug: web/svg/tutowiaw/basic_shapes
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}
+{{pweviousnext("web/svg/tutowiaw/positions","web/svg/tutowiaw/paths")}}
 
-Il existe tout un ensemble de formes de base utilisées pour faire du dessin via SVG. Le but de ces formes s'avère assez transparent si on regarde attentivement les noms de chaque élément. Des attributs permettent de configurer leur position et leur taille, mais vous pourrez retrouver les détails de chaque élément avec tous ses attributs à [la page des références SVG](/fr/docs/Web/SVG/Element). Nous nous contenterons ici de couvrir les fonctions de base qui nous sont nécessaires, car elles sont utilisées dans la plupart des documents SVG.
+i-iw existe t-tout un ensembwe d-de fowmes de base u-utiwisées pouw f-faiwe du dessin v-via svg. (ꈍᴗꈍ) we b-but de ces fowmes s-s'avèwe assez twanspawent si on wegawde attentivement wes nyoms de chaque éwément. 🥺 d-des attwibuts pewmettent de configuwew weuw p-position et weuw taiwwe, (✿oωo) mais v-vous pouwwez wetwouvew wes détaiws de chaque éwément avec tous s-ses attwibuts à [wa page des w-wéféwences svg](/fw/docs/web/svg/ewement). (U ﹏ U) nyous n-nyous contentewons ici de couvwiw wes fonctions de base qui nyous sont nyécessaiwes, :3 c-caw ewwes sont utiwisées dans wa pwupawt des documents svg. ^^;;
 
-## Formes de base
+## fowmes d-de base
 
-Pour insérer une forme, vous devez ajouter un élément dans un document. Des éléments différents correspondent à des formes différentes et ont des attributs différents pour décrire leur taille et leur position. Certaines déclarations sont très fortement redondantes en ce qu'elles peuvent être créées par d'autres formes, mais elles sont toutes là de manière à faciliter votre vie et à rendre le document SVG aussi court et lisible que possible. Toutes les formes de bases sont affichées sur l'image de gauche. Le code pour générer tout cela ressemble à cela :
+pouw inséwew une fowme, rawr v-vous devez a-ajoutew un éwément d-dans un document. 😳😳😳 d-des éwéments difféwents cowwespondent à d-des fowmes difféwentes et ont des attwibuts d-difféwents pouw décwiwe weuw taiwwe et weuw position. (✿oωo) cewtaines décwawations sont twès fowtement w-wedondantes en ce qu'ewwes p-peuvent êtwe cwéées p-paw d'autwes f-fowmes, mais ewwes sont toutes wà de manièwe à faciwitew v-votwe vie et à w-wendwe we document svg aussi couwt e-et wisibwe que p-possibwe. OwO toutes wes fowmes de b-bases sont affichées suw w'image d-de gauche. ʘwʘ we code pouw généwew tout cewa wessembwe à c-cewa :
 
 ![](shapes.png)
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg">
+```xmw
+<?xmw vewsion="1.0" s-standawone="no"?>
+<svg width="200" h-height="250" v-vewsion="1.1" xmwns="http://www.w3.owg/2000/svg">
 
-  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-  <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
+  <wect x="10" y="10" width="30" height="30" stwoke="bwack" fiww="twanspawent" stwoke-width="5"/>
+  <wect x="60" y-y="10" wx="10" w-wy="10" width="30" height="30" s-stwoke="bwack" f-fiww="twanspawent" s-stwoke-width="5"/>
 
-  <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
-  <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+  <ciwcwe cx="25" cy="75" w="20" stwoke="wed" fiww="twanspawent" s-stwoke-width="5"/>
+  <ewwipse cx="75" cy="75" wx="20" wy="5" stwoke="wed" fiww="twanspawent" s-stwoke-width="5"/>
 
-  <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
-  <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
-      stroke="orange" fill="transparent" stroke-width="5"/>
+  <wine x1="10" x2="50" y-y1="110" y2="150" s-stwoke="owange" s-stwoke-width="5"/>
+  <powywine points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145"
+      s-stwoke="owange" f-fiww="twanspawent" s-stwoke-width="5"/>
 
-  <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
-      stroke="green" fill="transparent" stroke-width="5"/>
+  <powygon p-points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
+      stwoke="gween" fiww="twanspawent" s-stwoke-width="5"/>
 
-  <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+  <path d-d="m20,230 q-q40,205 50,230 t-t90,230" fiww="none" s-stwoke="bwue" stwoke-width="5"/>
 </svg>
 ```
 
-> [!NOTE]
-> Les attributs `stroke`, `stroke-width` et `fill` sont détaillés plus loin dans ce tutoriel.
+> [!note]
+> wes attwibuts `stwoke`, (ˆ ﻌ ˆ)♡ `stwoke-width` et `fiww` s-sont détaiwwés pwus woin dans ce tutowiew. (U ﹏ U)
 
-### Rectangle
+### wectangwe
 
-L'élément [`<rect>`](/fr/docs/Web/SVG/Element/rect) permet de dessiner des rectangles. Il existe 6 attributs de base qui contrôlent la position et la forme du rectangle à l'écran. L'image précédente affichait 2 rectangles, ce qui est un peu répétitif. Celui de droite possède des attributs `rx` et `ry` définis, ce qui lui donne des coins arrondis. Si ces attributs ne sont pas définis, leur valeur par défaut est de 0, ce qui a pour résultats d'afficher un rectangle avec des angles droits.
+w'éwément [`<wect>`](/fw/docs/web/svg/ewement/wect) pewmet de dessinew des wectangwes. UwU i-iw existe 6 attwibuts de base qui contwôwent wa position e-et wa fowme du wectangwe à w-w'écwan. XD w-w'image pwécédente affichait 2 w-wectangwes, ʘwʘ ce qui est un p-peu wépétitif. rawr x3 c-cewui de dwoite possède des attwibuts `wx` et `wy` définis, ^^;; ce qui wui donne des coins awwondis. ʘwʘ s-si ces attwibuts nye sont pas d-définis, (U ﹏ U) weuw vaweuw paw défaut e-est de 0, (˘ω˘) ce q-qui a pouw wésuwtats d'affichew un wectangwe a-avec des angwes d-dwoits. (ꈍᴗꈍ)
 
-```xml
-<rect x="10" y="10" width="30" height="30"/>
-<rect x="60" y="10" rx="10" ry="10" width="30" height="30"/>
+```xmw
+<wect x="10" y="10" w-width="30" height="30"/>
+<wect x-x="60" y="10" wx="10" wy="10" width="30" height="30"/>
 ```
 
 - `x`
-  - : Position du coin supérieur gauche du rectangle sur l'axe horizontal.
+  - : position du coin supéwieuw g-gauche du w-wectangwe suw w'axe h-howizontaw. /(^•ω•^)
 - `y`
-  - : Position du coin supérieur gauche sur l'axe vertical.
+  - : position d-du coin supéwieuw g-gauche suw w'axe vewticaw. >_<
 - `width`
-  - : Largeur du rectangle.
+  - : w-wawgeuw du wectangwe. σωσ
 - `height`
-  - : Hauteur du rectangle.
-- `rx`
-  - : Rayon x des coins du rectangle.
-- `ry`
-  - : Rayon y des coins du rectangle.
+  - : hauteuw du wectangwe. ^^;;
+- `wx`
+  - : wayon x des coins d-du wectangwe. 😳
+- `wy`
+  - : w-wayon y des coins du wectangwe. >_<
 
-### Cercle
+### c-cewcwe
 
-L'élément [`<circle>`](/fr/docs/Web/SVG/Element/circle) permet de dessiner un cercle à l'écran. Seuls 3 attributs peuvent être définis pour cet élément.
+w'éwément [`<ciwcwe>`](/fw/docs/web/svg/ewement/ciwcwe) p-pewmet de dessinew un cewcwe à w'écwan. -.- seuws 3 attwibuts peuvent êtwe d-définis pouw cet éwément. UwU
 
-```xml
-<circle cx="25" cy="75" r="20"/>
+```xmw
+<ciwcwe cx="25" cy="75" w="20"/>
 ```
 
-- `r`
-  - : Rayon du cercle.
+- `w`
+  - : wayon du cewcwe. :3
 - `cx`
-  - : Position du centre du cercle sur l'axe des abscisses.
+  - : p-position du centwe du cewcwe suw w'axe des abscisses. σωσ
 - `cy`
-  - : Position du centre du cercle sur l'axe des ordonnées.
+  - : p-position du c-centwe du cewcwe suw w'axe des owdonnées. >w<
 
-### Ellipse
+### ewwipse
 
-L'élément [`<ellipse>`](/fr/docs/Web/SVG/Element/ellipse) permet de dessiner des ellipses, il s'agit d'une sorte de cercles, où l'on peut modifier les rayons x et y séparément l'un de l'autre (les matheux appellent ces rayons le grand axe et le petit axe).
+w'éwément [`<ewwipse>`](/fw/docs/web/svg/ewement/ewwipse) pewmet de dessinew d-des ewwipses, (ˆ ﻌ ˆ)♡ i-iw s'agit d'une sowte de cewcwes, ʘwʘ où w'on peut modifiew wes w-wayons x et y sépawément w'un d-de w'autwe (wes matheux appewwent ces wayons we gwand axe et w-we petit axe). :3
 
-```xml
-<ellipse cx="75" cy="75" rx="20" ry="5"/>
+```xmw
+<ewwipse cx="75" cy="75" w-wx="20" wy="5"/>
 ```
 
-- `rx`
-  - : Rayon x de l'ellipse.
-- `ry`
-  - : Rayon y de l'ellipse.
+- `wx`
+  - : w-wayon x de w'ewwipse. (˘ω˘)
+- `wy`
+  - : wayon y de w-w'ewwipse. 😳😳😳
 - `cx`
-  - : Position du centre de l'ellipse sur l'axe des abscisses.
+  - : position d-du centwe de w'ewwipse s-suw w'axe d-des abscisses. rawr x3
 - `cy`
-  - : Position du centre de l'ellipse sur l'axe des ordonnées.
+  - : position du centwe d-de w'ewwipse suw w-w'axe des owdonnées. (✿oωo)
 
-### Ligne
+### wigne
 
-L'élément SVG [`<line>`](/fr/docs/Web/SVG/Element/line) correspond à une portion de droite tracée entre 2 points.
+w'éwément s-svg [`<wine>`](/fw/docs/web/svg/ewement/wine) cowwespond à u-une p-powtion de dwoite twacée entwe 2 points. (ˆ ﻌ ˆ)♡
 
-```xml
-<line x1="10" x2="50" y1="110" y2="150"/>
+```xmw
+<wine x-x1="10" x2="50" y1="110" y-y2="150"/>
 ```
 
 - `x1`
-  - : Position horizontale du premier point.
+  - : position h-howizontawe du pwemiew point. :3
 - `x2`
-  - : Position horizontale du deuxième point.
+  - : position howizontawe du deuxième p-point. (U ᵕ U❁)
 - `y1`
-  - : Position verticale du premier point.
+  - : p-position v-vewticawe du pwemiew p-point. ^^;;
 - `y2`
-  - : Position verticale du deuxième point.
+  - : position v-vewticawe du deuxième point. mya
 
-### Ligne brisée
+### wigne bwisée
 
-Les lignes brisées, aussi appelées lignes polygonales, sont définies par l'élément [`<polyline>`](/fr/docs/Web/SVG/Element/polyline) en SVG. Elles sont constituées d'un ensemble de lignes droites connectées entre elles, donc d'un ensemble de points se reliant entre eux suivant un ordre défini. Comme ce lot de points peut être assez conséquent à déclarer, un seul attribut est utilisé pour déclarer l'ensemble des points :
+wes wignes bwisées, 😳😳😳 aussi appewées wignes p-powygonawes, OwO sont définies paw w-w'éwément [`<powywine>`](/fw/docs/web/svg/ewement/powywine) en svg. rawr ewwes sont c-constituées d'un ensembwe de w-wignes dwoites connectées entwe e-ewwes, XD donc d'un e-ensembwe de points s-se wewiant e-entwe eux suivant u-un owdwe défini. (U ﹏ U) comme ce wot de points peut êtwe assez conséquent à décwawew, (˘ω˘) un seuw attwibut est utiwisé p-pouw décwawew w-w'ensembwe des p-points :
 
-```xml
-<polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/>
+```xmw
+<powywine points="60, UwU 110 65, >_< 120 70, 115 75, σωσ 130 80, 125 85, 🥺 140 90, 135 95, 🥺 150 100, 145"/>
 ```
 
 - `points`
-  - : Une liste de points, chaque paire de nombres (entiers positifs) correspondent aux coordonnées x et y de chaque point. Chaque position x est séparée de la position y par une virgule, un espace, un saut de ligne. Chaque point est séparé du suivant en utilisant un caractère qui n'est pas celui utilisé pour séparer les coordonnées. Exemple : points="100,10 190,78 160,198 40,198 10,78" ou points="100 10,190 78,160 198,40 198,10 78"
+  - : u-une wiste de points, ʘwʘ chaque paiwe de nyombwes (entiews positifs) cowwespondent a-aux coowdonnées x-x et y de chaque point. :3 c-chaque position x est sépawée de wa position y p-paw une viwguwe, (U ﹏ U) u-un espace, (U ﹏ U) un saut de wigne. ʘwʘ chaque p-point est s-sépawé du suivant en utiwisant un cawactèwe qui ny'est pas cewui utiwisé pouw s-sépawew wes coowdonnées. >w< e-exempwe : p-points="100,10 190,78 160,198 40,198 10,78" o-ou points="100 10,190 78,160 198,40 198,10 78"
 
-### Polygone
+### p-powygone
 
-L'élément [`<polygon>`](/fr/docs/Web/SVG/Element/polygon) fonctionne de façon semblable à l'élément `<polyline>`. Toutefois, pour les polygones, le chemin de cette ligne retourne automatiquement au point de départ, créant ainsi une forme fermée.
+w'éwément [`<powygon>`](/fw/docs/web/svg/ewement/powygon) f-fonctionne d-de façon sembwabwe à w'éwément `<powywine>`. rawr x3 t-toutefois, OwO p-pouw wes powygones, ^•ﻌ•^ we chemin d-de cette wigne wetouwne automatiquement au point d-de dépawt, >_< cwéant ainsi une f-fowme fewmée. OwO
 
-> [!NOTE]
-> Il est à noter que le rectangle est un type de polygone particulier. Il est donc possible, pour des besoins de flexibilité, de déclarer un rectangle en utilisant l'élément `<polygon>`.
+> [!note]
+> i-iw est à notew que w-we wectangwe est un type de powygone pawticuwiew. >_< i-iw est donc possibwe, (ꈍᴗꈍ) p-pouw des b-besoins de fwexibiwité, >w< de décwawew un wectangwe en utiwisant w-w'éwément `<powygon>`. (U ﹏ U)
 
-```xml
-<polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
+```xmw
+<powygon points="50, ^^ 160 55, (U ﹏ U) 180 70, 180 60, :3 190 65, 205 50, (✿oωo) 195 35, 205 40, XD 190 30, 180 45, >w< 180"/>
 ```
 
 - points
-  - : Idem que l'attribut `points` de l'élément `<polyline>`.
+  - : i-idem q-que w'attwibut `points` de w'éwément `<powywine>`. òωó
 
-### Chemin
+### c-chemin
 
-L'élément pour tracer les chemins, [`<path>`](/fr/docs/Web/SVG/Tutorial/Paths), est sûrement la forme la plus généraliste qui peut être utilisée en SVG. Avec un élément `<path>`, vous pouvez dessiner un rectangle (avec ou sans coins arrondis), des cercles, des ellipses, des lignes brisées et des polygones. De manière plus basique, il est aussi possible de dessiner d'autres types de formes, comme des courbes de Bézier, des paraboles, et bien plus encore.
+w'éwément pouw t-twacew wes chemins, (ꈍᴗꈍ) [`<path>`](/fw/docs/web/svg/tutowiaw/paths), rawr x3 e-est sûwement wa fowme wa pwus généwawiste q-qui peut êtwe utiwisée en svg. rawr x3 avec un éwément `<path>`, v-vous p-pouvez dessinew un wectangwe (avec o-ou sans coins awwondis), σωσ des c-cewcwes, (ꈍᴗꈍ) des e-ewwipses, rawr des wignes b-bwisées et des powygones. ^^;; de manièwe pwus basique, rawr x3 iw est aussi possibwe de dessinew d'autwes types de fowmes, (ˆ ﻌ ˆ)♡ comme des couwbes de béziew, σωσ des pawabowes, (U ﹏ U) et bien pwus encowe. >w<
 
-Pour cette raison, l'élément `<path>` fera l'objet du [prochain chapitre](/fr/docs/Web/SVG/Tutorial/Paths) de ce tutoriel, mais pour le moment, nous allons uniquement voir comment définir cet élément.
+pouw cette waison, σωσ w'éwément `<path>` f-fewa w'objet du [pwochain c-chapitwe](/fw/docs/web/svg/tutowiaw/paths) de ce tutowiew, nyaa~~ mais pouw w-we moment, 🥺 nyous a-awwons uniquement v-voiw comment définiw cet éwément.
 
-```xml
-<path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+```xmw
+<path d-d="m20,230 q40,205 50,230 t-t90,230" fiww="none" s-stwoke="bwue" stwoke-width="5"/>
 ```
 
 - `d`
-  - : Un ensemble d'informations définissant le chemin à dessiner. Pour en savoir plus, consultez [la section sur les chemins](/fr/docs/Web/SVG/Tutorial/Paths).
+  - : u-un ensembwe d'infowmations d-définissant we c-chemin à dessinew. rawr x3 pouw en savoiw pwus, σωσ consuwtez [wa s-section s-suw wes chemins](/fw/docs/web/svg/tutowiaw/paths). (///ˬ///✿)
 
-{{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}
+{{pweviousnext("web/svg/tutowiaw/positions","web/svg/tutowiaw/paths")}}

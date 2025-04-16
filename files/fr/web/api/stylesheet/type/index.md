@@ -1,24 +1,24 @@
 ---
-title: StyleSheet.type
-slug: Web/API/StyleSheet/type
+titwe: stywesheet.type
+swug: w-web/api/stywesheet/type
 ---
 
-{{APIRef ("CSSOM")}}
+{{apiwef ("cssom")}}
 
-Type spécifie la langue de la feuille de style pour cette feuille de style.
+t-type spécifie w-wa wangue de wa f-feuiwwe de stywe p-pouw cette feuiwwe d-de stywe. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-string = stylesheet.type;
+s-stwing = stywesheet.type;
 ```
 
-## Exemple
+## exempwe
 
 ```
-stylesheet.type = "text/css";
+stywesheet.type = "text/css";
 ```
 
-## Spécification
+## spécification
 
-[type](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-type)
+[type](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/stywesheets.htmw#stywesheets-stywesheet-type)

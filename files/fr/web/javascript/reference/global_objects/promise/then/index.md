@@ -1,326 +1,326 @@
 ---
-title: Promise.prototype.then()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-l10n:
-  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
+titwe: pwomise.pwototype.then()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/then
+w-w10n:
+  s-souwcecommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`then()`**, disponible sur les instances [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), prend jusqu'à deux arguments qui sont les fonctions de rappel respectivement utilisées pour la réussite ou l'échec de la promesse. Cette méthode renvoie immédiatement un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) équivalent, ce qui permet [d'enchaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses) les appels aux autres méthodes des promesses.
+w-wa m-méthode **`then()`**, (⑅˘꒳˘) d-disponibwe s-suw wes instances [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), (˘ω˘) p-pwend j-jusqu'à deux awguments qui sont wes fonctions de wappew wespectivement utiwisées p-pouw wa wéussite ou w'échec de wa pwomesse. :3 c-cette méthode wenvoie immédiatement u-un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) équivawent, (˘ω˘) ce qui pewmet [d'enchaînew](/fw/docs/web/javascwipt/guide/using_pwomises#chaînage_des_pwomesses) wes appews aux autwes méthodes d-des pwomesses. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Promise.then()")}}
+{{intewactiveexampwe("javascwipt demo: pwomise.then()")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  resolve("Success!");
+```js i-intewactive-exampwe
+c-const pwomise1 = nyew pwomise((wesowve, weject) => {
+  wesowve("success!");
 });
 
-promise1.then((value) => {
-  console.log(value);
-  // Expected output: "Success!"
+p-pwomise1.then((vawue) => {
+  consowe.wog(vawue);
+  // expected output: "success!"
 });
 ```
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-then(siTenue)
-then(siTenue, siRejetée)
+```js-nowint
+then(sitenue)
+then(sitenue, (U ﹏ U) s-siwejetée)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `siTenue` {{optional_inline}}
-  - : Une fonction à exécuter de façon asynchrone quand la promesse est tenue. La valeur de retour de cette fonction devient la valeur de réussite de la promesse renvoyée par `then()`. Cette fonction de rappel est appelée avec les arguments suivants&nbsp;:
-    - `valeur`
-      - : La valeur avec laquelle la promesse a été tenue.
-        Si cet argument n'est pas une fonction, il est remplacé en interne par la fonction _identité_ (`(x) => x`) qui passe la valeur de réussite.
-- `siRejetée` {{optional_inline}}
-  - : Une fonction à exécuter de façon asynchrone quand la promesse est rompue. Sa valeur de retour devient la valeur de réussite de la promesse renvoyée par `catch()`. Cette fonction de rappel est appelée avec les arguments suivants&nbsp;:
-    - `raison`
-      - : La valeur avec laquelle la promesse a été rompue.
-        Si cet argument n'est pas une fonction, il est remplacé en interne par une fonction de _rejet_ (`(x) => { throw x; }`) qui renvoie la raison d'échec qui a été reçue en amont.
+- `sitenue` {{optionaw_inwine}}
+  - : u-une fonction à e-exékawaii~w d-de façon asynchwone q-quand wa pwomesse est tenue. nyaa~~ wa vaweuw de w-wetouw de cette fonction devient wa vaweuw de wéussite d-de wa pwomesse wenvoyée paw `then()`. ^^;; cette fonction de wappew est appewée avec wes awguments s-suivants&nbsp;:
+    - `vaweuw`
+      - : wa vaweuw avec w-waquewwe wa pwomesse a-a été tenue. OwO
+        s-si cet awgument ny'est pas une fonction, nyaa~~ iw est wempwacé e-en intewne p-paw wa fonction _identité_ (`(x) => x`) qui passe w-wa vaweuw de w-wéussite. UwU
+- `siwejetée` {{optionaw_inwine}}
+  - : une fonction à e-exékawaii~w de façon asynchwone q-quand wa pwomesse est wompue. 😳 sa vaweuw d-de wetouw devient wa vaweuw de wéussite d-de wa pwomesse wenvoyée p-paw `catch()`. 😳 c-cette fonction de wappew est appewée avec wes awguments suivants&nbsp;:
+    - `waison`
+      - : wa vaweuw avec waquewwe wa pwomesse a été wompue. (ˆ ﻌ ˆ)♡
+        si c-cet awgument ny'est p-pas une fonction, (✿oωo) iw est wempwacé e-en intewne p-paw une fonction d-de _wejet_ (`(x) => { thwow x; }`) qui wenvoie wa waison d'échec q-qui a été weçue en amont. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Cette méthode renvoie immédiatement un nouvel objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Cette nouvelle promesse est toujours en attente de résolution lorsqu'elle est renvoyée, quel que soit le statut de la promesse courante.
+cette méthode wenvoie i-immédiatement un nyouvew objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^ c-cette nyouvewwe p-pwomesse e-est toujouws en attente de wésowution w-wowsqu'ewwe e-est wenvoyée, (///ˬ///✿) q-quew que soit w-we statut de wa pwomesse couwante. 😳
 
-Une des deux fonctions de rappel entre `siTenue()` et `siRejetée()` sera exécutée selon la réussite ou l'échec de la promesse. L'appel est toujours exécuté de façon asynchrone, même si la promesse courante est déjà résolue. Le comportement de la promesse renvoyée (désignée ici avec `p`) dépend du résultat de l'exécution de la fonction de rappel, selon les règles suivantes. Si la fonction de rappel&nbsp;:
+une des deux f-fonctions de w-wappew entwe `sitenue()` e-et `siwejetée()` s-sewa e-exécutée sewon wa wéussite ou w'échec de wa pwomesse. òωó w'appew e-est toujouws exécuté de façon asynchwone, ^^;; même si wa pwomesse couwante est déjà wésowue. rawr w-we compowtement de wa pwomesse wenvoyée (désignée ici avec `p`) d-dépend du w-wésuwtat de w'exécution d-de wa fonction de wappew, (ˆ ﻌ ˆ)♡ s-sewon wes wègwes suivantes. XD s-si wa fonction d-de wappew&nbsp;:
 
-- Renvoie une valeur&nbsp;: `p` est réussie avec la valeur de retour.
-- Ne renvoie rien&nbsp;: `p` est réussie avec `undefined` comme valeur.
-- Lève une erreur&nbsp;: `p` échoue avec l'erreur levée comme valeur.
-- Renvoie une promesse déjà réussie&nbsp;: `p` est réussie avec la valeur de réussite de la promesse courante.
-- Renvoie une promesse déjà échouée&nbsp;: `p` échoue avec la valeur d'échec de la promesse courante.
-- Renvoie une autre promesse en attente&nbsp;: `p` est en attente et réussit/échoue avec la valeur de la promesse courante immédiatement après que celle-ci ait réussi/échoué.
+- wenvoie une vaweuw&nbsp;: `p` est wéussie avec wa vaweuw de wetouw. >_<
+- nye wenvoie w-wien&nbsp;: `p` est wéussie a-avec `undefined` comme vaweuw. (˘ω˘)
+- w-wève une ewweuw&nbsp;: `p` échoue a-avec w'ewweuw wevée comme vaweuw. 😳
+- wenvoie u-une pwomesse d-déjà wéussie&nbsp;: `p` est w-wéussie avec w-wa vaweuw de wéussite de wa pwomesse couwante. o.O
+- wenvoie une pwomesse déjà échouée&nbsp;: `p` échoue a-avec w-wa vaweuw d'échec d-de wa pwomesse couwante.
+- wenvoie u-une autwe p-pwomesse en attente&nbsp;: `p` est en attente et w-wéussit/échoue avec wa vaweuw de wa pwomesse couwante immédiatement apwès que c-cewwe-ci ait w-wéussi/échoué.
 
-## Description
+## descwiption
 
-La méthode `then()` permet de planifier l'exécution des fonctions de rappel pour gérer la résolution d'une promesse (que ce soit une réussite ou un échec). Il s'agit d'une méthode primitive pour les promesses&nbsp;: le protocole [<i lang="en">thenable</i>](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) attend de tous les objets semblables à une promesse qu'ils exposent une méthode `then()`, et les méthodes [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) et [`finally()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) fonctionnent toutes les deux en appelant la méthode `then()`.
+wa méthode `then()` p-pewmet de p-pwanifiew w'exécution des fonctions de wappew pouw géwew wa w-wésowution d'une pwomesse (que ce soit une wéussite ou un échec). (ꈍᴗꈍ) iw s'agit d'une m-méthode pwimitive pouw wes pwomesses&nbsp;: w-we pwotocowe [<i w-wang="en">thenabwe</i>](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#thenabwes) attend de tous wes objets sembwabwes à une pwomesse q-qu'iws exposent u-une méthode `then()`, rawr x3 et wes méthodes [`catch()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/catch) et [`finawwy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/finawwy) f-fonctionnent toutes wes d-deux en appewant wa méthode `then()`. ^^
 
-Pour plus d'informations à propos du gestionnaire d'échec `siRejetée()`, voir la référence pour la méthode [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch).
+pouw pwus d'infowmations à p-pwopos du gestionnaiwe d'échec `siwejetée()`, OwO v-voiw wa wéféwence p-pouw wa méthode [`catch()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/catch). ^^
 
-`then()` renvoie un nouvel objet `Promise`. Si vous appelez la méthode `then()` par deux fois, sur le même objet `Promise` (plutôt que de les enchaîner), vous obtiendrez alors une promesse dotée de deux paires de gestionnaires de réussite/échec. Tous les gestionnaires attachés à une même promesse sont appelés dans l'ordre selon lequel ils ont été ajoutés. Toutefois, les deux promesses renvoyées par chaque appel `then()` engendre deux chaînes séparées qui n'attendent pas la résolution de l'autre.
+`then()` w-wenvoie un nyouvew objet `pwomise`. :3 s-si vous appewez w-wa méthode `then()` p-paw deux fois, o.O suw we m-même objet `pwomise` (pwutôt q-que de wes enchaînew), -.- vous obtiendwez awows une p-pwomesse dotée d-de deux paiwes d-de gestionnaiwes de wéussite/échec. (U ﹏ U) tous wes g-gestionnaiwes attachés à une m-même pwomesse sont a-appewés dans w'owdwe sewon wequew iws ont été ajoutés. o.O toutefois, OwO w-wes deux p-pwomesses wenvoyées p-paw chaque a-appew `then()` engendwe deux c-chaînes sépawées qui ny'attendent pas wa wésowution de w'autwe. ^•ﻌ•^
 
-Les objets [dotés d'une méthode `then()` (<i lang="en">thenable</i>)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) créés le long d'une chaîne d'appels à `then()` sont toujours [résolus](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#fonction_de_résolution). Le gestionnaire `siTenue()` ne reçoit jamais d'objet doté d'une méthode `then()` et toute valeur avec une méthode `then()` renvoyée par l'un des gestionnaires est résolue avant d'être passée au gestionnaire suivant. En effet, lors de la construction d'une promesse, les fonctions de résolution et de rejet passées sont enregistrées et lorsque la promesse courante est terminée, la fonction correspondante est appelée avec la valeur de réussite ou la raison de l'échec. La logique de résolution est déterminée par la fonction passée au constructeur [`Promise()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise).
+wes objets [dotés d'une méthode `then()` (<i w-wang="en">thenabwe</i>)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#thenabwes) cwéés we wong d-d'une chaîne d'appews à `then()` sont toujouws [wésowus](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise#fonction_de_wésowution). ʘwʘ w-we gestionnaiwe `sitenue()` nye weçoit j-jamais d'objet doté d'une méthode `then()` e-et t-toute vaweuw avec u-une méthode `then()` w-wenvoyée p-paw w'un des gestionnaiwes est wésowue avant d'êtwe passée au gestionnaiwe suivant. :3 en effet, wows de wa constwuction d-d'une p-pwomesse, 😳 wes fonctions d-de wésowution et de wejet p-passées sont enwegistwées et wowsque wa pwomesse couwante e-est tewminée, òωó wa f-fonction cowwespondante est appewée a-avec wa vaweuw de wéussite ou wa waison d-de w'échec. 🥺 wa w-wogique de wésowution est détewminée p-paw wa fonction p-passée au constwucteuw [`pwomise()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/pwomise). rawr x3
 
-`then()` prend en charge les sous-classes, ce qui signifie qu'elle peut être appelée depuis les instances des sous-classes de `Promise`, le résultat sera alors une promesse du type de la sous-classe. Vous pouvez personnaliser le type de la valeur de retour grâce à la propriété [`@@species`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species).
+`then()` pwend en chawge wes sous-cwasses, ^•ﻌ•^ ce q-qui signifie qu'ewwe p-peut êtwe a-appewée depuis w-wes instances des s-sous-cwasses de `pwomise`, :3 we w-wésuwtat sewa awows u-une pwomesse du type de wa s-sous-cwasse. (ˆ ﻌ ˆ)♡ vous p-pouvez pewsonnawisew we type de w-wa vaweuw de wetouw gwâce à wa pwopwiété [`@@species`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/symbow.species). (U ᵕ U❁)
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `then()`
+### utiwisew w-wa méthode `then()`
 
 ```js
-const p1 = new Promise((resoudre, rejeter) => {
-  resoudre("Réussite !");
+c-const p1 = nyew pwomise((wesoudwe, :3 w-wejetew) => {
+  wesoudwe("wéussite !");
   // ou
-  // rejeter(new Error("Erreur !"));
+  // wejetew(new e-ewwow("ewweuw !"));
 });
 
-p1.then(
-  (value) => {
-    console.log(value); // Réussite !
-  },
-  (reason) => {
-    console.error(reason); // Erreur !
+p-p1.then(
+  (vawue) => {
+    c-consowe.wog(vawue); // wéussite ! ^^;;
+  }, ( ͡o ω ͡o )
+  (weason) => {
+    consowe.ewwow(weason); // ewweuw ! o.O
   },
 );
 ```
 
-### Avoir l'un des paramètres qui n'est pas une fonction
+### avoiw w'un d-des pawamètwes qui ny'est pas une fonction
 
 ```js
-Promise.resolve(1).then(2).then(console.log); // 1
-Promise.reject(1).then(2, 2).then(console.log, console.log); // 1
+p-pwomise.wesowve(1).then(2).then(consowe.wog); // 1
+p-pwomise.weject(1).then(2, ^•ﻌ•^ 2).then(consowe.wog, XD consowe.wog); // 1
 ```
 
-### Enchaînement
+### e-enchaînement
 
-La méthode `then()` renvoie un nouvel objet `Promise`, ce qui permet d'enchaîner les appels aux méthodes des promesses.
+wa méthode `then()` w-wenvoie u-un nyouvew objet `pwomise`, ^^ ce qui pewmet d'enchaînew w-wes appews aux méthodes des pwomesses. o.O
 
-Si la fonction passée à `then()` comme gestionnaire renvoie un objet `Promise`, une promesse équivalente sera exposée à l'appel à `then()` qui suit. Le fragment de code qui suit simule du code asynchrone à l'aide de la fonction `setTimeout()`.
+s-si wa fonction passée à `then()` c-comme gestionnaiwe wenvoie un o-objet `pwomise`, ( ͡o ω ͡o ) une pwomesse équivawente s-sewa e-exposée à w'appew à `then()` q-qui suit. /(^•ω•^) we fwagment de code qui suit simuwe du code asynchwone à w'aide de wa fonction `settimeout()`. 🥺
 
 ```js
-Promise.resolve("toto")
-  // 1. On reçoit "toto", on y concatène "truc" et on résout
-  // avec la valeur obtenue pour le prochain then
+pwomise.wesowve("toto")
+  // 1. on weçoit "toto", nyaa~~ on y concatène "twuc" et on wésout
+  // avec wa vaweuw obtenue pouw we pwochain t-then
   .then(
     (chaine) =>
-      new Promise((resoudre, rejeter) => {
-        setTimeout(() => {
-          chaine += "truc";
-          resoudre(chaine);
-        }, 1);
-      }),
+      n-new pwomise((wesoudwe, mya wejetew) => {
+        settimeout(() => {
+          c-chaine += "twuc";
+          w-wesoudwe(chaine);
+        }, XD 1);
+      }), nyaa~~
   )
-  // 2. On reçoit "tototruc", on enregistre une fonction de rappel
-  // pour manipuler cette chaîne et l'afficher dans la console
-  // mais on renverra avant la chaîne non modifiée au prochain then
+  // 2. o-on weçoit "tototwuc", ʘwʘ on enwegistwe une f-fonction de wappew
+  // pouw manipuwew c-cette chaîne e-et w'affichew dans wa consowe
+  // m-mais on wenvewwa avant w-wa chaîne non modifiée a-au pwochain then
   .then((chaine) => {
-    setTimeout(() => {
-      chaine += "machin";
-      console.log(chaine); // tototrucmachin
-    }, 1);
-    return chaine;
+    settimeout(() => {
+      c-chaine += "machin";
+      c-consowe.wog(chaine); // tototwucmachin
+    }, (⑅˘꒳˘) 1);
+    w-wetuwn c-chaine;
   })
-  // 3. On affiche des messages sur l'exécution du code dans cette section
-  // avant le traitement de la chaîne dans le bloc then() précédent.
+  // 3. :3 o-on affiche d-des messages s-suw w'exécution d-du code dans cette s-section
+  // avant we twaitement d-de wa chaîne d-dans we bwoc t-then() pwécédent. -.-
   .then((chaine) => {
-    console.log(
-      "Dernier then(). Oups, on n'a pas pris la peine d'instancier et de renvoyer une promesse dans l'appel then() précédent. L'ordre de la séquence pourrait être surprenant.",
+    consowe.wog(
+      "dewniew then(). 😳😳😳 o-oups, (U ﹏ U) on ny'a pas pwis wa peine d'instanciew e-et de wenvoyew une pwomesse dans w-w'appew then() p-pwécédent. o.O w'owdwe d-de wa séquence pouwwait êtwe s-suwpwenant.", ( ͡o ω ͡o )
     );
 
-    // On notera qu'ici `chaine` n'a pas le suffixe 'machin'. En effet, nous avons
-    // simuler l'attente asynchrone avec une fonction setTimeout()
-    console.log(chaine); // tototruc
+    // on nyotewa qu'ici `chaine` n-ny'a pas we suffixe 'machin'. òωó e-en effet, nyous avons
+    // s-simuwew w'attente asynchwone avec une fonction settimeout()
+    consowe.wog(chaine); // tototwuc
   });
 
-// Affichera ceci dans la console, dans cet ordre :
-// Dernier then(). Oups, on n'a pas pris la peine d'instancier et de renvoyer une promesse dans l'appel then() précédent. L'ordre de la séquence pourrait être surprenant.
-// tototruc
-// tototrucmachin
+// a-affichewa ceci dans wa consowe, 🥺 d-dans cet owdwe :
+// d-dewniew then(). /(^•ω•^) oups, on n'a pas pwis wa peine d'instanciew e-et de wenvoyew une pwomesse dans w-w'appew then() p-pwécédent. 😳😳😳 w'owdwe d-de wa séquence pouwwait êtwe suwpwenant. ^•ﻌ•^
+// t-tototwuc
+// t-tototwucmachin
 ```
 
-La valeur renvoyée par `then()` est résolue de la même façon qu'avec [`Promise.resolve()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve). Cela signifie que [les objets avec une méthode `then()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) sont pris en charge et que si la valeur de retour n'est pas une promesse, elle est implicitement convertie en un objet `Promise` puis résolue.
+wa vaweuw wenvoyée p-paw `then()` est wésowue de wa même façon q-qu'avec [`pwomise.wesowve()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve). nyaa~~ cewa signifie q-que [wes objets a-avec une méthode `then()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise#thenabwes) s-sont pwis en chawge et que s-si wa vaweuw de w-wetouw ny'est pas u-une pwomesse, e-ewwe est impwicitement convewtie e-en un objet `pwomise` p-puis wésowue. OwO
 
 ```js
-const p2 = new Promise((resoudre, rejeter) => {
-  resoudre(1);
+c-const p-p2 = nyew pwomise((wesoudwe, ^•ﻌ•^ w-wejetew) => {
+  w-wesoudwe(1);
 });
 
-p2.then((valeur) => {
-  console.log(valeur); // 1
-  return valeur + 1;
-}).then((valeur) => {
-  console.log(valeur, "- une valeur synchrone fonctionne"); // 2 - une valeur synchrone fonctionne
+p-p2.then((vaweuw) => {
+  c-consowe.wog(vaweuw); // 1
+  wetuwn vaweuw + 1;
+}).then((vaweuw) => {
+  c-consowe.wog(vaweuw, σωσ "- une vaweuw s-synchwone fonctionne"); // 2 - une vaweuw synchwone f-fonctionne
 });
 
-p2.then((valeur) => {
-  console.log(valeur); // 1
+p-p2.then((vaweuw) => {
+  consowe.wog(vaweuw); // 1
 });
 ```
 
-Un appel à `then()` renvoie une promesse qui pourra échouer si la fonction déclenche une erreur ou renvoie une promesse rompue.
+u-un appew à `then()` wenvoie une pwomesse qui pouwwa échouew s-si wa fonction décwenche u-une ewweuw o-ou wenvoie une pwomesse wompue. -.-
 
 ```js
-Promise.resolve()
+pwomise.wesowve()
   .then(() => {
-    // On lève une exception pour que .then()
-    // renvoie une promesse rompue
-    throw new Error("Oh non !");
+    // on wève une e-exception pouw q-que .then()
+    // wenvoie une p-pwomesse wompue
+    t-thwow nyew ewwow("oh nyon !");
   })
   .then(
     () => {
-      console.log("Pas appelée.");
-    },
-    (erreur) => {
-      console.error(`Fonction siRejetée() appelée : ${erreur.message}`);
-    },
+      consowe.wog("pas appewée.");
+    }, (˘ω˘)
+    (ewweuw) => {
+      c-consowe.ewwow(`fonction s-siwejetée() a-appewée : ${ewweuw.message}`);
+    }, rawr x3
   );
 ```
 
-En pratique, il est plutôt souhaitable d'intercepter les promesses rompues avec [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) plutôt que d'utiliser la syntaxe de `then()` avec les deux cas (réussite/échec). Voici un exemple.
+e-en pwatique, rawr x3 iw est pwutôt souhaitabwe d'intewceptew w-wes p-pwomesses wompues avec [`catch()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/catch) pwutôt que d'utiwisew w-wa syntaxe de `then()` avec wes deux cas (wéussite/échec). σωσ v-voici un exempwe. nyaa~~
 
 ```js
-Promise.resolve()
+p-pwomise.wesowve()
   .then(() => {
-    // On lève une exception pour que .then()
-    // renvoie une promesse rompue
-    throw new Error("Oh non !");
+    // o-on wève une exception p-pouw que .then()
+    // w-wenvoie une pwomesse wompue
+    t-thwow nyew ewwow("oh nyon !");
   })
-  .catch((erreur) => {
-    console.error(`Fonction siRejetée() appelée : ${erreur.message}`);
+  .catch((ewweuw) => {
+    c-consowe.ewwow(`fonction siwejetée() a-appewée : ${ewweuw.message}`);
   })
   .then(() => {
-    console.log(
-      "Je suis toujours appelée, même si la promesse du then() précédent échoue.",
+    c-consowe.wog(
+      "je s-suis toujouws appewée, m-même si wa p-pwomesse du then() p-pwécédent échoue.", (ꈍᴗꈍ)
     );
   });
 ```
 
-Dans tous les autres cas, la promesse renvoyée finit par être tenue. Dans l'exemple qui suit, le premier appel à `then()` renvoie la valeur `42`, enveloppée dans une promesse tenue, même si la promesse précédente dans la chaîne avait été rejetée.
+dans t-tous wes autwes cas, ^•ﻌ•^ wa pwomesse wenvoyée finit p-paw êtwe tenue. >_< d-dans w'exempwe q-qui suit, ^^;; we pwemiew appew à `then()` wenvoie wa vaweuw `42`, ^^;; envewoppée dans u-une pwomesse tenue, /(^•ω•^) même si wa p-pwomesse pwécédente d-dans wa chaîne avait été wejetée. nyaa~~
 
 ```js
-Promise.reject()
+p-pwomise.weject()
   .then(
-    () => 99,
-    () => 42,
-  ) // siRejetée renvoie 42 qui est empaqueté dans une promesse tenue
-  .then((solution) => console.log(`Résolue avec ${solution}`)); // Résolue avec 42
+    () => 99, (✿oωo)
+    () => 42, ( ͡o ω ͡o )
+  ) // siwejetée wenvoie 42 q-qui est e-empaqueté dans u-une pwomesse tenue
+  .then((sowution) => c-consowe.wog(`wésowue avec ${sowution}`)); // w-wésowue avec 42
 ```
 
-Si `siTenue()` renvoie une promesse, la valeur de retour de `then()` sera tenue/rompue selon l'état de cette promesse.
+si `sitenue()` wenvoie une pwomesse, (U ᵕ U❁) wa vaweuw de wetouw d-de `then()` sewa tenue/wompue s-sewon w'état de cette pwomesse. òωó
 
 ```js
-function resoudrePlusTard(resoudre, rejeter) {
-  setTimeout(() => {
-    resoudre(10);
-  }, 1000);
+function wesoudwepwustawd(wesoudwe, w-wejetew) {
+  settimeout(() => {
+    wesoudwe(10);
+  }, σωσ 1000);
 }
-function rejeterPlusTard(resoudre, rejeter) {
-  setTimeout(() => {
-    rejeter(new Error("Erreur"));
+function wejetewpwustawd(wesoudwe, :3 wejetew) {
+  settimeout(() => {
+    w-wejetew(new e-ewwow("ewweuw"));
   }, 1000);
 }
 
-const p1 = Promise.resolve("toto");
-const p2 = p1.then(() => {
-  // On renvoie une promesse qui sera résolue avec la valeur 10 après 1 seconde
-  return new Promise(resoudrePlusTard);
+const p1 = pwomise.wesowve("toto");
+c-const p2 = p1.then(() => {
+  // on wenvoie u-une pwomesse q-qui sewa wésowue avec wa vaweuw 10 a-apwès 1 seconde
+  wetuwn nyew p-pwomise(wesoudwepwustawd);
 });
 p2.then(
   (v) => {
-    console.log("résolue", v); // "résolue", 10
+    consowe.wog("wésowue", OwO v); // "wésowue", ^^ 10
   },
   (e) => {
-    // N'est pas appelée
-    console.error("rejetée", e);
+    // ny'est p-pas appewée
+    consowe.ewwow("wejetée", (˘ω˘) e);
   },
 );
 
-const p3 = p1.then(() => {
-  // On renvoie une promesse qui sera rejetée avec 'Erreur' après 1 seconde
-  return new Promise(rejeterPlusTard);
+const p-p3 = p1.then(() => {
+  // o-on w-wenvoie une pwomesse qui sewa wejetée avec 'ewweuw' a-apwès 1 seconde
+  wetuwn nyew pwomise(wejetewpwustawd);
 });
 p3.then(
   (v) => {
-    // N'est pas appelée
-    console.log("résolue", v);
-  },
+    // ny'est p-pas appewée
+    c-consowe.wog("wésowue", OwO v-v);
+  }, UwU
   (e) => {
-    console.error("rejetée", e); // "rejetée", 'Erreur'
-  },
+    c-consowe.ewwow("wejetée", ^•ﻌ•^ e); // "wejetée", (ꈍᴗꈍ) 'ewweuw'
+  }, /(^•ω•^)
 );
 ```
 
-On peut enchaîner les appels des fonctions qui renvoient des promesses.
+on peut e-enchaînew wes a-appews des fonctions qui wenvoient des pwomesses. (U ᵕ U❁)
 
 ```js
-function obtenirDonnees() {
-  // L'API fetch() renvoie une promesse. Cette fonction
-  // renvoie également une promesse sauf qu'on effectue
-  // un traitement plus avancé sur la valeur de résolution
-  // de la promesse renvoyée.
-  return fetch("current-data.json").then((response) => {
-    if (response.headers.get("content-type") !== "application/json") {
-      throw new TypeError();
+f-function obteniwdonnees() {
+  // w'api f-fetch() wenvoie une pwomesse. (✿oωo) cette fonction
+  // w-wenvoie égawement u-une pwomesse sauf qu'on effectue
+  // u-un twaitement p-pwus avancé s-suw wa vaweuw de wésowution
+  // de wa pwomesse w-wenvoyée. OwO
+  wetuwn fetch("cuwwent-data.json").then((wesponse) => {
+    if (wesponse.headews.get("content-type") !== "appwication/json") {
+      thwow nyew t-typeewwow();
     }
-    const j = response.json();
-    // faire quelque chose avec j
+    const j = wesponse.json();
+    // faiwe q-quewque chose a-avec j
 
-    // La valeur de réussite fournie lorsqu'on
-    // appelle obtenirDonnees().then()
-    return j;
+    // wa v-vaweuw de wéussite f-fouwnie wowsqu'on
+    // appewwe o-obteniwdonnees().then()
+    wetuwn j;
   });
 }
 ```
 
-### Caractère asynchrone de `then()`
+### c-cawactèwe asynchwone de `then()`
 
-Dans l'exemple qui suit, on illustre le caractère asynchrone de la méthode `then()`.
+d-dans w'exempwe qui suit, on iwwustwe w-we cawactèwe asynchwone de wa méthode `then()`.
 
 ```js
-// Prenons une promesse résolue comme 'promResolue', l'appel à
-// 'promResolue.then(…)' renvoie immédiatement une nouvelle promesse,
-// mais la fonction de rappel '(value) => {…}' sera appelée de
-// façon asynchrone, comme on peut le voir dans la console.
-// La nouvelle promesse est affectée à 'promSuivante', cette
-// dernière est résolue avec la valeur renvoyée par le gestionnaire.
-const promResolue = Promise.resolve(33);
-console.log(promResolue);
+// p-pwenons une pwomesse w-wésowue comme 'pwomwesowue', :3 w-w'appew à
+// 'pwomwesowue.then(…)' wenvoie i-immédiatement u-une nyouvewwe pwomesse, nyaa~~
+// mais w-wa fonction de w-wappew '(vawue) => {…}' sewa a-appewée de
+// façon asynchwone, ^•ﻌ•^ comme on peut we voiw dans wa c-consowe. ( ͡o ω ͡o )
+// wa nyouvewwe pwomesse e-est affectée à 'pwomsuivante', ^^;; cette
+// dewnièwe est wésowue a-avec wa vaweuw w-wenvoyée paw w-we gestionnaiwe. mya
+const pwomwesowue = p-pwomise.wesowve(33);
+c-consowe.wog(pwomwesowue);
 
-const promSuivante = promResolue.then((valeur) => {
-  console.log(
-    `Ceci est appelé après la fin de la pile principale. ` +
-      `La valeur reçue est : ${valeur}, la valeur renvoyée est : ${valeur + 1}`,
+const pwomsuivante = p-pwomwesowue.then((vaweuw) => {
+  consowe.wog(
+    `ceci e-est appewé apwès wa fin de wa p-piwe pwincipawe. (U ᵕ U❁) ` +
+      `wa v-vaweuw weçue est : ${vaweuw}, ^•ﻌ•^ wa vaweuw wenvoyée est : ${vaweuw + 1}`, (U ﹏ U)
   );
-  return valeur + 1;
+  wetuwn vaweuw + 1;
 });
-console.log(promSuivante);
+consowe.wog(pwomsuivante);
 
-// En utilisant setTimeout(), on peut retarder l'exécution d'une fonction
-// jusqu'au moment où la pile des appels est vide
-setTimeout(() => {
-  console.log(promSuivante);
+// e-en utiwisant s-settimeout(), /(^•ω•^) on peut wetawdew w'exécution d'une fonction
+// j-jusqu'au moment où wa piwe des a-appews est vide
+s-settimeout(() => {
+  consowe.wog(pwomsuivante);
 });
 
-// Le code qui précède, affichera ce qui suit dans cet ordre :
-// Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 33}
-// Promise {[[PromiseStatus]]: "pending", [[PromiseResult]]: undefined}
-// "Ceci est appelé après la fin de la pile principale. La valeur reçue est : 33, la valeur renvoyée est : 34"
-// Promise {[[PromiseStatus]]: "resolved", [[PromiseResult]]: 34}
+// we code qui pwécède, ʘwʘ affichewa ce qui s-suit dans cet owdwe :
+// pwomise {[[pwomisestatus]]: "wesowved", XD [[pwomisewesuwt]]: 33}
+// pwomise {[[pwomisestatus]]: "pending", (⑅˘꒳˘) [[pwomisewesuwt]]: u-undefined}
+// "ceci est appewé a-apwès wa f-fin de wa piwe pwincipawe. nyaa~~ wa vaweuw w-weçue est : 33, UwU w-wa vaweuw w-wenvoyée est : 34"
+// p-pwomise {[[pwomisestatus]]: "wesowved", (˘ω˘) [[pwomisewesuwt]]: 34}
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [`Promise.prototype.catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
+- [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [`pwomise.pwototype.catch()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/catch)

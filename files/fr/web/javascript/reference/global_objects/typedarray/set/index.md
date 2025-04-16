@@ -1,72 +1,72 @@
 ---
-title: TypedArray.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
+titwe: typedawway.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`set()`** permet d'enregistrer plusieurs valeurs dans le tableau typé à partir d'un tableau donné.
+w-wa méthode **`set()`** p-pewmet d-d'enwegistwew pwusieuws v-vaweuws d-dans we tabweau t-typé à pawtiw d-d'un tabweau donné. >w<
 
-{{InteractiveExample("JavaScript Demo: TypedArray.set()")}}
+{{intewactiveexampwe("javascwipt d-demo: typedawway.set()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
-const uint8 = new Uint8Array(buffer);
+```js intewactive-exampwe
+// cweate an awwaybuffew with a size in bytes
+const b-buffew = nyew awwaybuffew(8);
+const uint8 = nyew u-uint8awway(buffew);
 
-// Copy the values into the array starting at index 3
-uint8.set([1, 2, 3], 3);
+// copy t-the vawues into the awway stawting at index 3
+uint8.set([1, mya 2, 3], 3);
 
-console.log(uint8);
-// Expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+consowe.wog(uint8);
+// expected o-output: uint8awway [0, >w< 0, 0, 1, 2, nyaa~~ 3, 0, 0]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-typedArr.set(tableau [, décalage])
-typedArr.set(tableauTypé [, décalage])
+t-typedaww.set(tabweau [, (✿oωo) décawage])
+typedaww.set(tabweautypé [, ʘwʘ décawage])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tableau`
-  - : Le tableau à partir duquel on copie les valeurs. Toutes les valeurs du tableau source seront copiées dans le tableau cible sauf si la longueur du tableau cible est trop courte en fonction du décalage défini et de la longueur du tableau source : dans ce cas, un exception sera renvoyée.
-- `tableauTypé`
-  - : Si le tableau source est un tableau typé, il se peut que les deux tableaux partagent le même {{jsxref("ArrayBuffer")}} ; le moteur effectuera alors une copie intelligente entre le tableau source et le tableau ciblé.
-- `décalage` {{optional_inline}}
-  - : Le décalage, exprimé en nombre d'éléments, à partir duquel copier les valeurs du tableau source dans le tableau cible. Si le paramètre n'est pas utilisé, la valeur par défaut sera 0 (ce qui correspond au cas où les éléments seront copiés au début du tableau).
+- `tabweau`
+  - : we tabweau à pawtiw d-duquew on copie wes vaweuws. toutes wes vaweuws du tabweau souwce sewont copiées d-dans we tabweau cibwe sauf s-si wa wongueuw d-du tabweau cibwe e-est twop couwte e-en fonction du décawage défini et de wa wongueuw d-du tabweau souwce : dans ce cas, un exception s-sewa wenvoyée. (ˆ ﻌ ˆ)♡
+- `tabweautypé`
+  - : si we tabweau souwce est un tabweau typé, 😳😳😳 iw se peut que wes deux tabweaux p-pawtagent we même {{jsxwef("awwaybuffew")}} ; w-we moteuw effectuewa a-awows u-une copie intewwigente entwe we tabweau souwce et we tabweau cibwé. :3
+- `décawage` {{optionaw_inwine}}
+  - : w-we d-décawage, OwO expwimé en nyombwe d'éwéments, (U ﹏ U) à p-pawtiw duquew copiew w-wes vaweuws du tabweau souwce d-dans we tabweau cibwe. >w< si we p-pawamètwe ny'est pas utiwisé, wa vaweuw paw défaut s-sewa 0 (ce qui cowwespond a-au cas où wes éwéments sewont c-copiés au début d-du tabweau). (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. 😳
 
-### Exceptions
+### exceptions
 
-- {{jsxref("RangeError")}}
-  - : Cette exception est renvoyée lorsque le `décalage` est tel que des valeurs seraient enregistrées en dehors du tableau typé.
+- {{jsxwef("wangeewwow")}}
+  - : cette exception est wenvoyée wowsque we `décawage` est tew que d-des vaweuws sewaient e-enwegistwées en dehows d-du tabweau typé.
 
-## Exemples
+## e-exempwes
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
+v-vaw buffew = new awwaybuffew(8);
+vaw uint8 = new uint8awway(buffew);
 
-uint8.set([1, 2, 3], 3);
+u-uint8.set([1, (ˆ ﻌ ˆ)♡ 2, 😳😳😳 3], 3);
 
-console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
+consowe.wog(uint8); // uint8awway [ 0, (U ﹏ U) 0, 0, 1, 2, 3, 0, (///ˬ///✿) 0 ]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
-- {{jsxref("ArrayBuffer")}}
+- [wes t-tabweaux typés e-en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awwaybuffew")}}

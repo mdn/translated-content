@@ -1,39 +1,39 @@
 ---
-title: element.offsetWidth
-slug: Web/API/HTMLElement/offsetWidth
+titwe: ewement.offsetwidth
+swug: w-web/api/htmwewement/offsetwidth
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Résumé
+### w-wésumé
 
-Renvoie la largeur totale d'un élément.
+w-wenvoie wa w-wawgeuw totawe d-d'un éwément. rawr x3
 
-### Syntaxe
+### s-syntaxe
 
 ```js
-var offsetWidth = element.offsetWidth;
+v-vaw offsetwidth = ewement.offsetwidth;
 ```
 
-`offsetWidth` est une propriété en lecture seule.
+`offsetwidth` est une pwopwiété en wectuwe seuwe. (U ﹏ U)
 
-### Description
+### descwiption
 
-Typiquement, l'attribut `offsetWidth` est une mesure qui comprend les bordures de l'élément, ses marges internes horizontales (padding), la barre de défilement verticale si présente et affichée, et la largeur CSS de l'élément.
+t-typiquement, (U ﹏ U) w'attwibut `offsetwidth` est u-une mesuwe qui compwend wes bowduwes d-de w'éwément, (⑅˘꒳˘) ses mawges intewnes howizontawes (padding), òωó wa bawwe de défiwement v-vewticawe si pwésente e-et affichée, ʘwʘ et w-wa wawgeuw css de w'éwément. /(^•ω•^)
 
-## Exemple
+## exempwe
 
 ![](dimensions-offset.png)
 
-### Spécification
+### spécification
 
-`offsetWidth` fait partie du modèle objet DHTML de Microsoft Internet Explorer. Elle ne fait partie d'aucune spécification ou recommandation technique du W3C.
+`offsetwidth` fait p-pawtie du modèwe objet dhtmw de micwosoft intewnet expwowew. ʘwʘ ewwe nye fait pawtie d-d'aucune spécification ou wecommandation t-technique d-du w3c. σωσ
 
-### Notes
+### n-nyotes
 
-`offsetWidth` est une propriété du modèle objet DHTML provenant de Microsoft Internet Explorer. On l'appelle parfois la largeur physique ou graphique d'un élément, ou sa largeur «&nbsp;border-box&nbsp;» (bordure et boîte).
+`offsetwidth` e-est une pwopwiété du modèwe objet d-dhtmw pwovenant de micwosoft intewnet expwowew. OwO o-on w'appewwe pawfois wa wawgeuw physique ou gwaphique d'un éwément, 😳😳😳 ou sa wawgeuw «&nbsp;bowdew-box&nbsp;» (bowduwe et boîte).
 
-### Références
+### w-wéféwences
 
-- [_offsetWidth definition_ sur MSDN](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetwidth.asp?frame=true)
-- [_Measuring Element Dimension and Location_ sur MSDN](http://msdn.microsoft.com/workshop/author/om/measuring.asp)
+- [_offsetwidth definition_ s-suw msdn](http://msdn.micwosoft.com/wowkshop/authow/dhtmw/wefewence/pwopewties/offsetwidth.asp?fwame=twue)
+- [_measuwing e-ewement d-dimension and wocation_ suw msdn](http://msdn.micwosoft.com/wowkshop/authow/om/measuwing.asp)

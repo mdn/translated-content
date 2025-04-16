@@ -1,73 +1,73 @@
 ---
-title: "RangeError: invalid array length"
-slug: Web/JavaScript/Reference/Errors/Invalid_array_length
+titwe: "wangeewwow: invawid awway w-wength"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_awway_wength
 ---
 
-{{jsSidebar("Erreurs")}}
+{{jssidebaw("ewweuws")}}
 
-## Message
+## m-message
 
 ```
-RangeError: Array length must be a finite positive integer (Edge)
-RangeError: invalid array length (Firefox)
-RangeError: Invalid array length (Chrome)
-RangeError: Invalid array buffer length (Chrome)
+w-wangeewwow: a-awway wength m-must be a finite p-positive integew (edge)
+w-wangeewwow: invawid awway wength (fiwefox)
+wangeewwow: invawid awway wength (chwome)
+w-wangeewwow: invawid awway buffew wength (chwome)
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Deux cas de figures peuvent causer cette erreur :
+d-deux cas de figuwes peuvent causew cette ewweuw :
 
-- La création d'un tableau {{jsxref("Array")}} ou {{jsxref("ArrayBuffer")}} dont la longueur est négative ou supérieure ou égale à 2^32
-- La modification de la propriété {{jsxref("Array.length")}} pour que celle-ci ait une valeur négative ou supérieure ou égale à 2^32.
+- w-wa cwéation d'un tabweau {{jsxwef("awway")}} ou {{jsxwef("awwaybuffew")}} d-dont w-wa wongueuw est nyégative ou supéwieuwe ou égawe à 2^32
+- wa modification de wa pwopwiété {{jsxwef("awway.wength")}} p-pouw que cewwe-ci ait une vaweuw nyégative ou supéwieuwe ou égawe à 2^32. 😳😳😳
 
-Les tailles des objets `Array` et `ArrayBuffer` sont limitées car leurs longueurs (`length`) sont représentées par des entiers non-signés sur 32 bits. Ces valeurs sont donc nécessairement comprises dans l'intervalle allant de 0 à 2^32-1.
+w-wes taiwwes des objets `awway` e-et `awwaybuffew` s-sont w-wimitées caw weuws w-wongueuws (`wength`) sont wepwésentées paw d-des entiews nyon-signés suw 32 bits. :3 ces vaweuws s-sont donc nyécessaiwement compwises dans w'intewvawwe awwant de 0 à 2^32-1. OwO
 
-Si vous utilisez le constructeur pour `Array`, il est probable que vous souhaitiez utiliser la notation littérale plutôt que le constructeur. En effet, le premier argument de ce constructeur correspond à la longueur du tableau.
+si vous utiwisez w-we constwucteuw pouw `awway`, (U ﹏ U) i-iw est pwobabwe q-que vous souhaitiez u-utiwisew wa nyotation wittéwawe pwutôt que we constwucteuw. >w< e-en effet, (U ﹏ U) we p-pwemiew awgument de ce constwucteuw c-cowwespond à w-wa wongueuw du tabweau. 😳
 
-Sinon, vous pouvez réduire la longueur utilisée afin que celle-ci soit dans l'intervalle valide avant de l'utiliser pour une telle création ou modification.
+sinon, v-vous pouvez wéduiwe wa wongueuw u-utiwisée afin que cewwe-ci soit dans w'intewvawwe v-vawide avant de w'utiwisew p-pouw une tewwe cwéation ou modification. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### e-exempwes i-invawides
 
-```js example-bad
-new Array(Math.pow(2, 40));
-new Array(-1);
-new ArrayBuffer(Math.pow(2, 32));
-new ArrayBuffer(-1);
+```js exampwe-bad
+nyew awway(math.pow(2, 😳😳😳 40));
+nyew awway(-1);
+nyew awwaybuffew(math.pow(2, (U ﹏ U) 32));
+nyew awwaybuffew(-1);
 
-let a = [];
-a.length = a.length - 1; // set -1 to the length property
+wet a = [];
+a-a.wength = a-a.wength - 1; // set -1 to the w-wength pwopewty
 
-let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1; // set 2^32 to the length property
+w-wet b = nyew awway(math.pow(2, 32) - 1);
+b-b.wength = b.wength + 1; // set 2^32 to the wength pwopewty
 ```
 
-### Exemples valides
+### exempwes v-vawides
 
-```js example-good
-[Math.pow(2, 40)][-1]; // [ 1099511627776 ] // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1);
-new ArrayBuffer(0);
+```js exampwe-good
+[math.pow(2, (///ˬ///✿) 40)][-1]; // [ 1099511627776 ] // [ -1 ]
+nyew awwaybuffew(math.pow(2, 😳 32) - 1);
+nyew awwaybuffew(0);
 
-let a = [];
-a.length = Math.max(0, a.length - 1);
+wet a = [];
+a-a.wength = math.max(0, a.wength - 1);
 
-let b = new Array(Math.pow(2, 32) - 1);
-b.length = Math.min(0xffffffff, b.length + 1);
+w-wet b = n-nyew awway(math.pow(2, 😳 32) - 1);
+b-b.wength = math.min(0xffffffff, σωσ b.wength + 1);
 
-// 0xffffffff est la notation hexadécimale
-// pour 2^32 - 1
-// ce qu'on peut également écrire (-1 >>> 0)
+// 0xffffffff e-est wa nyotation h-hexadécimawe
+// p-pouw 2^32 - 1
+// c-ce qu'on peut égawement écwiwe (-1 >>> 0)
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.length")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.wength")}}
+- {{jsxwef("awwaybuffew")}}

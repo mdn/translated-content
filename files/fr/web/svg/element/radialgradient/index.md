@@ -1,156 +1,156 @@
 ---
-title: <radialGradient>
-slug: Web/SVG/Element/radialGradient
+titwe: <wadiawgwadient>
+swug: w-web/svg/ewement/wadiawgwadient
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément SVG **`<radialGradient>`** permet de définir des dégradés radiaux qui peuvent être appliqués aux éléments de remplissage ou de contour des éléments graphiques.
+w-w'éwément svg **`<wadiawgwadient>`** p-pewmet de d-définiw des dégwadés w-wadiaux q-qui peuvent êtwe a-appwiqués aux éwéments d-de wempwissage ou de contouw des éwéments gwaphiques. σωσ
 
-> [!NOTE]
-> Il ne faut pas confondre cet élément avec la fonction CSS [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient). En effet, les dégradés CSS s'appliquent uniquement aux éléments HTML, là où les dégradés SVG s'appliquent uniquement aux éléments SVG.
+> [!note]
+> iw nye faut pas c-confondwe cet éwément avec wa fonction css [`wadiaw-gwadient()`](/fw/docs/web/css/gwadient/wadiaw-gwadient). -.- e-en effet, wes dégwadés css s'appwiquent u-uniquement aux éwéments htmw, ^^;; wà où wes dégwadés s-svg s'appwiquent uniquement aux éwéments s-svg. XD
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
-body,
+htmw,
+body, 🥺
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 10 10"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  viewbox="0 0 10 10"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <radialGradient id="monDegrade">
-      <stop offset="10%" stop-color="gold" />
-      <stop offset="95%" stop-color="red" />
-    </radialGradient>
+    <wadiawgwadient id="mondegwade">
+      <stop offset="10%" stop-cowow="gowd" />
+      <stop o-offset="95%" stop-cowow="wed" />
+    </wadiawgwadient>
   </defs>
 
-  <!-- on utilise le dégradé radial déclaré plus haut -->
-  <circle cx="5" cy="5" r="4" fill="url('#monDegrade')" />
+  <!-- o-on u-utiwise we dégwadé w-wadiaw décwawé p-pwus haut -->
+  <ciwcwe cx="5" cy="5" w="4" fiww="uww('#mondegwade')" />
 </svg>
 ```
 
-{{EmbedLiveSample('', 150, '100%')}}
+{{embedwivesampwe('', òωó 150, '100%')}}
 
-## Attributs
+## a-attwibuts
 
-- [`cx`](/fr/docs/Web/SVG/Attribute/cx)
-  - : Cet attribut définit l'abscisse du cercle extérieur pour le dégradé radial.
-    - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
-    - Valeur par défaut
+- [`cx`](/fw/docs/web/svg/attwibute/cx)
+  - : cet attwibut définit w-w'abscisse du cewcwe extéwieuw pouw we dégwadé wadiaw. (ˆ ﻌ ˆ)♡
+    - type de vaweuw
+      - : [`<wength>`](/fw/docs/web/svg/content_type#wength)
+    - vaweuw paw d-défaut
       - : `50%`
-    - Peut être animé
-      - : Oui
-- [`cy`](/fr/docs/Web/SVG/Attribute/cy)
-  - : Cet attribut définit l'ordonnée du cercle extérieur pour le dégradé radial.
-    - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
-    - Valeur par défaut
+    - peut êtwe animé
+      - : o-oui
+- [`cy`](/fw/docs/web/svg/attwibute/cy)
+  - : c-cet a-attwibut définit w'owdonnée du cewcwe extéwieuw pouw we dégwadé w-wadiaw. -.-
+    - t-type de vaweuw
+      - : [`<wength>`](/fw/docs/web/svg/content_type#wength)
+    - vaweuw paw d-défaut
       - : `50%`
-    - Peut être animé
-      - : Oui
-- [`fr`](/fr/docs/Web/SVG/Attribute/fr)
-  - : Cet attribut définit le rayon du cercle intérieur du dégradé radial. Le dégradé sera dessiné de tel façon à ce que [l'arrêt de dégradé (`<stop>`)](/fr/docs/Web/SVG/Element/stop) situé au niveau 0% corresponde au périmètre du cercle intérieur.
-    - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
-    - Valeur par défaut
+    - peut êtwe a-animé
+      - : oui
+- [`fw`](/fw/docs/web/svg/attwibute/fw)
+  - : c-cet attwibut définit w-we wayon du cewcwe intéwieuw du dégwadé wadiaw. :3 w-we dégwadé sewa dessiné d-de tew façon à ce que [w'awwêt d-de dégwadé (`<stop>`)](/fw/docs/web/svg/ewement/stop) s-situé au nyiveau 0% cowwesponde au péwimètwe du cewcwe intéwieuw. ʘwʘ
+    - type de vaweuw
+      - : [`<wength>`](/fw/docs/web/svg/content_type#wength)
+    - vaweuw p-paw défaut
       - : `0%`
-    - Peut être animé
-      - : Oui
-- [`fx`](/fr/docs/Web/SVG/Attribute/fx)
-  - : Cet attribut définit l'abscisse du cercle intérieur pour le dégradé radial.
-    - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
-    - Valeur par défaut
-      - : La même que celle de `cx`
-    - Peut être animé
-      - : Oui
-- [`fy`](/fr/docs/Web/SVG/Attribute/fy)
-  - : Cet attribut définit l'ordonnée du cercle intérieur pour le dégradé radial.
-    - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
-    - Valeur par défaut
-      - : La même que celle de `cy`
-    - Peut être animé
-      - : Oui
-- [`gradientUnits`](/fr/docs/Web/SVG/Attribute/gradientUnits)
-  - : Cet attribut définit le système de coordonnées pour les attributs `cx`, `cy`, `r`, `fx`, `fy`, et `fr`.
-    - Type de valeur
-      - : `userSpaceOnUse`|`objectBoundingBox`
-    - Valeur par défaut
-      - : `objectBoundingBox`
-    - Peut être animé
-      - : Oui
-- [`gradientTransform`](/fr/docs/Web/SVG/Attribute/gradientTransform)
-  - : Cet attribut fournit des [transformations](/fr/docs/Web/SVG/Attribute/transform) supplémentaires au système de coordonnées utilisé par le dégradé.
-    - Type de valeur
-      - : [`<transform-list>`](/fr/docs/Web/SVG/Content_type#transform-list)
-    - Valeur par défaut
-      - : La transformation identité
-    - Peut être animé
-      - : Oui
-- [`href`](/fr/docs/Web/SVG/Attribute/href)
-  - : Cet attribut définit une référence à un autre élément `<radialGradient>` qui sera utilisé comme modèle.
-    - Type de valeur
-      - : [`<URL>`](/fr/docs/Web/SVG/Content_type#url)
-    - Valeur par défaut
-      - : Aucune
-    - Peut être animé
-      - : Oui
-- [`r`](/fr/docs/Web/SVG/Attribute/r)
-  - : Cet attribut définit le rayon du cercle extérieur du dégradé radial. Le dégradé sera dessiné de tel façon à ce que [l'arrêt de dégradé (`<stop>`)](/fr/docs/Web/SVG/Element/stop) situé au niveau 100% corresponde au périmètre du cercle extérieur.
-    - Type de valeur
-      - : [`<length>`](/fr/docs/Web/SVG/Content_type#length)
-    - Valeur par défaut
+    - p-peut êtwe animé
+      - : oui
+- [`fx`](/fw/docs/web/svg/attwibute/fx)
+  - : cet a-attwibut définit w-w'abscisse d-du cewcwe intéwieuw pouw we dégwadé wadiaw. 🥺
+    - type de vaweuw
+      - : [`<wength>`](/fw/docs/web/svg/content_type#wength)
+    - v-vaweuw paw défaut
+      - : wa même que cewwe de `cx`
+    - peut êtwe a-animé
+      - : oui
+- [`fy`](/fw/docs/web/svg/attwibute/fy)
+  - : c-cet attwibut d-définit w'owdonnée d-du cewcwe intéwieuw pouw we d-dégwadé wadiaw. >_<
+    - t-type de v-vaweuw
+      - : [`<wength>`](/fw/docs/web/svg/content_type#wength)
+    - v-vaweuw paw défaut
+      - : wa même q-que cewwe de `cy`
+    - p-peut êtwe a-animé
+      - : o-oui
+- [`gwadientunits`](/fw/docs/web/svg/attwibute/gwadientunits)
+  - : c-cet attwibut définit we système de coowdonnées p-pouw wes attwibuts `cx`, ʘwʘ `cy`, `w`, (˘ω˘) `fx`, `fy`, et `fw`. (✿oωo)
+    - type de vaweuw
+      - : `usewspaceonuse`|`objectboundingbox`
+    - vaweuw paw défaut
+      - : `objectboundingbox`
+    - peut êtwe animé
+      - : o-oui
+- [`gwadienttwansfowm`](/fw/docs/web/svg/attwibute/gwadienttwansfowm)
+  - : cet attwibut fouwnit des [twansfowmations](/fw/docs/web/svg/attwibute/twansfowm) suppwémentaiwes a-au système d-de coowdonnées u-utiwisé paw we dégwadé. (///ˬ///✿)
+    - t-type de vaweuw
+      - : [`<twansfowm-wist>`](/fw/docs/web/svg/content_type#twansfowm-wist)
+    - vaweuw paw d-défaut
+      - : w-wa twansfowmation identité
+    - peut êtwe animé
+      - : oui
+- [`hwef`](/fw/docs/web/svg/attwibute/hwef)
+  - : cet attwibut d-définit une wéféwence à u-un autwe éwément `<wadiawgwadient>` qui sewa u-utiwisé comme modèwe. rawr x3
+    - t-type de vaweuw
+      - : [`<uww>`](/fw/docs/web/svg/content_type#uww)
+    - vaweuw p-paw défaut
+      - : a-aucune
+    - peut êtwe animé
+      - : o-oui
+- [`w`](/fw/docs/web/svg/attwibute/w)
+  - : c-cet attwibut définit we wayon du cewcwe extéwieuw du dégwadé wadiaw. -.- we dégwadé s-sewa dessiné d-de tew façon à c-ce que [w'awwêt de dégwadé (`<stop>`)](/fw/docs/web/svg/ewement/stop) s-situé a-au nyiveau 100% cowwesponde a-au péwimètwe du cewcwe extéwieuw.
+    - type de vaweuw
+      - : [`<wength>`](/fw/docs/web/svg/content_type#wength)
+    - vaweuw p-paw défaut
       - : `50%`
-    - Peut être animé
-      - : Oui
-- [`srpeadMethod`](/fr/docs/Web/SVG/Attribute/spreadMethod)
-  - : Cet attribut indique la façon dont le dégradé se comporte s'il démarre ou finit à l'intérieur des limites de la forme contenant le dégradé.
-    - Type de valeur
-      - : `pad`|`reflect`|`repeat`
-    - Valeur par défaut
+    - p-peut êtwe animé
+      - : oui
+- [`swpeadmethod`](/fw/docs/web/svg/attwibute/spweadmethod)
+  - : c-cet attwibut i-indique wa façon dont we dégwadé se compowte s'iw démawwe o-ou finit à w'intéwieuw des wimites de wa fowme contenant we dégwadé. ^^
+    - t-type de vaweuw
+      - : `pad`|`wefwect`|`wepeat`
+    - vaweuw paw défaut
       - : `pad`
-    - Peut être animé
-      - : Oui
-- [`href`](/fr/docs/Web/SVG/Attribute/href)
-  - : {{Deprecated_Header}} Une référence [`<IRI>`](/fr/docs/Web/SVG/Content_type#iri) à un autre élément `<radialGradient>` qui pourra être utilisé comme modèle.
-    - Type de valeur
-      - : [`<IRI>`](/fr/docs/Web/SVG/Content_type#iri)
-    - Valeur par défaut
-      - : none
-    - Peut être animé
-      - : Oui
+    - p-peut êtwe animé
+      - : o-oui
+- [`hwef`](/fw/docs/web/svg/attwibute/hwef)
+  - : {{depwecated_headew}} une wéféwence [`<iwi>`](/fw/docs/web/svg/content_type#iwi) à un autwe éwément `<wadiawgwadient>` q-qui pouwwa êtwe u-utiwisé comme modèwe. (⑅˘꒳˘)
+    - type de vaweuw
+      - : [`<iwi>`](/fw/docs/web/svg/content_type#iwi)
+    - vaweuw p-paw défaut
+      - : nyone
+    - p-peut êtwe animé
+      - : oui
 
-### Attributs universels
+### attwibuts univewsews
 
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute)
-  - : Notamment [`id`](/fr/docs/Web/SVG/Attribute/id)
-- [Attributs de mise en forme](/fr/docs/Web/SVG/Attribute)
-  - : [`class`](/fr/docs/Web/SVG/Attribute/class), [`style`](/fr/docs/Web/SVG/Attribute/style)
-- Attributs pour les évènements
-  - : [Attributs d'évènements universels](/fr/docs/Web/SVG/Attribute#global_event_attributes), [attributs relatifs aux évènements du document](/fr/docs/Web/SVG/Attribute#document_element_event_attributes)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
-  - : Notamment [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path), [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule), [`color`](/fr/docs/Web/SVG/Attribute/color), [`color-interpolation`](/fr/docs/Web/SVG/Attribute/color-interpolation), [`color-rendering`](/fr/docs/Web/SVG/Attribute/color-rendering), [`cursor`](/fr/docs/Web/SVG/Attribute/cursor), [`display`](/fr/docs/Web/SVG/Attribute/display), [`fill`](/fr/docs/Web/SVG/Attribute/fill), [`fill-opacity`](/fr/docs/Web/SVG/Attribute/fill-opacity), [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule), [`filter`](/fr/docs/Web/SVG/Attribute/filter), [`mask`](/fr/docs/Web/SVG/Attribute/mask), [`opacity`](/fr/docs/Web/SVG/Attribute/opacity), [`pointer-events`](/fr/docs/Web/SVG/Attribute/pointer-events), [`shape-rendering`](/fr/docs/Web/SVG/Attribute/shape-rendering), [`stroke`](/fr/docs/Web/SVG/Attribute/stroke), [`stroke-dasharray`](/fr/docs/Web/SVG/Attribute/stroke-dasharray), [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset), [`stroke-linecap`](/fr/docs/Web/SVG/Attribute/stroke-linecap), [`stroke-linejoin`](/fr/docs/Web/SVG/Attribute/stroke-linejoin), [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit), [`stroke-opacity`](/fr/docs/Web/SVG/Attribute/stroke-opacity), [`stroke-width`](/fr/docs/Web/SVG/Attribute/stroke-width), [`transform`](/fr/docs/Web/SVG/Attribute/transform), [`vector-effect`](/fr/docs/Web/SVG/Attribute/vector-effect), [`visibility`](/fr/docs/Web/SVG/Attribute/visibility)
-- Attributs `xlink`
-  - : [`xlink:href`](/fr/docs/Web/SVG/Attribute/xlink:href), [`xlink:title`](/fr/docs/Web/SVG/Attribute/xlink:title)
+- [attwibuts f-fondamentaux](/fw/docs/web/svg/attwibute)
+  - : nyotamment [`id`](/fw/docs/web/svg/attwibute/id)
+- [attwibuts d-de mise e-en fowme](/fw/docs/web/svg/attwibute)
+  - : [`cwass`](/fw/docs/web/svg/attwibute/cwass), nyaa~~ [`stywe`](/fw/docs/web/svg/attwibute/stywe)
+- attwibuts p-pouw wes évènements
+  - : [attwibuts d'évènements u-univewsews](/fw/docs/web/svg/attwibute#gwobaw_event_attwibutes), /(^•ω•^) [attwibuts w-wewatifs a-aux évènements du document](/fw/docs/web/svg/attwibute#document_ewement_event_attwibutes)
+- [attwibuts d-de pwésentation](/fw/docs/web/svg/attwibute)
+  - : n-nyotamment [`cwip-path`](/fw/docs/web/svg/attwibute/cwip-path), (U ﹏ U) [`cwip-wuwe`](/fw/docs/web/svg/attwibute/cwip-wuwe), 😳😳😳 [`cowow`](/fw/docs/web/svg/attwibute/cowow), >w< [`cowow-intewpowation`](/fw/docs/web/svg/attwibute/cowow-intewpowation), XD [`cowow-wendewing`](/fw/docs/web/svg/attwibute/cowow-wendewing), o.O [`cuwsow`](/fw/docs/web/svg/attwibute/cuwsow), mya [`dispway`](/fw/docs/web/svg/attwibute/dispway), 🥺 [`fiww`](/fw/docs/web/svg/attwibute/fiww), ^^;; [`fiww-opacity`](/fw/docs/web/svg/attwibute/fiww-opacity), :3 [`fiww-wuwe`](/fw/docs/web/svg/attwibute/fiww-wuwe), (U ﹏ U) [`fiwtew`](/fw/docs/web/svg/attwibute/fiwtew), OwO [`mask`](/fw/docs/web/svg/attwibute/mask), 😳😳😳 [`opacity`](/fw/docs/web/svg/attwibute/opacity), (ˆ ﻌ ˆ)♡ [`pointew-events`](/fw/docs/web/svg/attwibute/pointew-events), XD [`shape-wendewing`](/fw/docs/web/svg/attwibute/shape-wendewing), (ˆ ﻌ ˆ)♡ [`stwoke`](/fw/docs/web/svg/attwibute/stwoke), ( ͡o ω ͡o ) [`stwoke-dashawway`](/fw/docs/web/svg/attwibute/stwoke-dashawway), rawr x3 [`stwoke-dashoffset`](/fw/docs/web/svg/attwibute/stwoke-dashoffset), nyaa~~ [`stwoke-winecap`](/fw/docs/web/svg/attwibute/stwoke-winecap), >_< [`stwoke-winejoin`](/fw/docs/web/svg/attwibute/stwoke-winejoin), ^^;; [`stwoke-mitewwimit`](/fw/docs/web/svg/attwibute/stwoke-mitewwimit), (ˆ ﻌ ˆ)♡ [`stwoke-opacity`](/fw/docs/web/svg/attwibute/stwoke-opacity), ^^;; [`stwoke-width`](/fw/docs/web/svg/attwibute/stwoke-width), (⑅˘꒳˘) [`twansfowm`](/fw/docs/web/svg/attwibute/twansfowm), rawr x3 [`vectow-effect`](/fw/docs/web/svg/attwibute/vectow-effect), (///ˬ///✿) [`visibiwity`](/fw/docs/web/svg/attwibute/visibiwity)
+- attwibuts `xwink`
+  - : [`xwink:hwef`](/fw/docs/web/svg/attwibute/xwink:hwef), 🥺 [`xwink:titwe`](/fw/docs/web/svg/attwibute/xwink:titwe)
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
 {{svginfo}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

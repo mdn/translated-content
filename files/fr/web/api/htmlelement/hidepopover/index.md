@@ -1,79 +1,79 @@
 ---
-title: "HTMLElement : méthode hidePopover()"
-slug: Web/API/HTMLElement/hidePopover
-l10n:
-  sourceCommit: a3afc20137b6ada89203f18bc7d4d4c236cacb92
+titwe: "htmwewement : méthode h-hidepopovew()"
+s-swug: web/api/htmwewement/hidepopovew
+w-w10n:
+  souwcecommit: a-a3afc20137b6ada89203f18bc7d4d4c236cacb92
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-La méthode **`hidePopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) masque un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) en le supprimant de [la couche supérieure](/fr/docs/Glossary/Top_layer) et en le stylisant avec `display: none`.
+w-wa méthode **`hidepopovew()`** d-de w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) m-masque un éwément [<i wang="en">popovew</i>](/fw/docs/web/api/popovew_api) (c'est-à-diwe un éwément qui a un attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew) v-vawide) en we suppwimant de [wa couche supéwieuwe](/fw/docs/gwossawy/top_wayew) e-et en we stywisant avec `dispway: n-nyone`. rawr
 
-Lorsque `hidePopover()` est appelée sur un élément affiché avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)&nbsp;:
+wowsque `hidepopovew()` est appewée suw un éwément a-affiché avec w'attwibut [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew)&nbsp;:
 
-1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
-2. Le <i lang="en">popover</i> est masqué.
-3. L'évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est déclenché.
+1. mya u-un évènement [`befowetoggwe`](/fw/docs/web/api/htmwewement/befowetoggwe_event) e-est décwenché. ^^
+2. we <i wang="en">popovew</i> est masqué. 😳😳😳
+3. w'évènement [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event) est décwenché. mya
 
-Si l'élément est déjà masqué, une erreur est lancée.
+s-si w'éwément est déjà masqué, 😳 une ewweuw est wancée. -.-
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-hidePopover()
+```js-nowint
+hidepopovew()
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. 🥺
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+a-aucune ([`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)). o.O
 
-### Exceptions
+### e-exceptions
 
-- `InvalidStateError` [`DOMException`](/fr/docs/Web/API/DOMException)
-  - : Lancée si le popover est déjà masqué.
+- `invawidstateewwow` [`domexception`](/fw/docs/web/api/domexception)
+  - : w-wancée si we popovew est déjà masqué. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-L'exemple suivant définit un comportement pour masquer un <i lang="en">popover</i> en appuyant sur une touche particulière du clavier.
+w'exempwe suivant définit un compowtement p-pouw masquew un <i wang="en">popovew</i> en appuyant suw une touche pawticuwièwe du cwaview. nyaa~~
 
-### HTML
+### h-htmw
 
-```html
-<button popovertarget="mypopover">Basculer l'affichage du popover</button>
-<div id="mypopover" popover="manual">
-  Vous pouvez appuyer sur la touche <kbd>h</kbd> de votre clavier pour fermer le
-  popover.
+```htmw
+<button popovewtawget="mypopovew">bascuwew w-w'affichage du p-popovew</button>
+<div i-id="mypopovew" popovew="manuaw">
+  vous pouvez appuyew suw w-wa touche <kbd>h</kbd> d-de votwe cwaview pouw fewmew w-we
+  popovew. nyaa~~
 </div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const popover = document.getElementById("mypopover");
+const popovew = d-document.getewementbyid("mypopovew");
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "h") {
-    popover.hidePopover();
+document.addeventwistenew("keydown", :3 (event) => {
+  i-if (event.key === "h") {
+    popovew.hidepopovew();
   }
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("","100%",100)}}
+{{embedwivesampwe("","100%",100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'API Popover](/fr/docs/Web/API/Popover_API)
+- [w'api p-popovew](/fw/docs/web/api/popovew_api)

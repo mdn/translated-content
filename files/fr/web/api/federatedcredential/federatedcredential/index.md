@@ -1,32 +1,32 @@
 ---
-title: FederatedCredential
-slug: Web/API/FederatedCredential/FederatedCredential
+titwe: fedewatedcwedentiaw
+swug: w-web/api/fedewatedcwedentiaw/fedewatedcwedentiaw
 ---
 
-{{APIRef("")}}{{Non-standard_header}}
+{{apiwef("")}}{{non-standawd_headew}}
 
-Le constructeur **`FederatedCredential`** permet de créer un nouvel objet {{domxref("FederatedCredential")}}.
+w-we constwucteuw **`fedewatedcwedentiaw`** p-pewmet d-de cwéew un nyouvew o-objet {{domxwef("fedewatedcwedentiaw")}}. ( ͡o ω ͡o )
 
-Pour les navigateurs qui le prennent en charge, une instance de cette classe pourra être passée comme propriété `credential` pour l'objet `init` utilisé comme argument pour {{domxref('fetch')}}.
+p-pouw wes nyavigateuws q-qui we pwennent e-en chawge, rawr x3 une instance de cette cwasse pouwwa êtwe passée comme pwopwiété `cwedentiaw` p-pouw w'objet `init` utiwisé comme awgument pouw {{domxwef('fetch')}}. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var mesCredentials = new FederatedCredential(init);
+vaw m-mescwedentiaws = nyew fedewatedcwedentiaw(init);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `init`
 
-  - : Les propriétés de cet objet sont :
+  - : wes pwopwiétés d-de cet objet sont :
 
-    - `provider` : une chaîne de caractères {{domxref("USVString")}} identifiant le fournisseur d'information d'authentification.
+    - `pwovidew` : u-une chaîne de c-cawactèwes {{domxwef("usvstwing")}} identifiant we fouwnisseuw d'infowmation d'authentification. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

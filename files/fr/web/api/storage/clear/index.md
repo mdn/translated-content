@@ -1,47 +1,47 @@
 ---
-title: Storage.clear()
-slug: Web/API/Storage/clear
+titwe: stowage.cweaw()
+swug: w-web/api/stowage/cweaw
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-La méthode `clear()` de l'interface {{domxref("Storage")}}, lorsqu'elle est invoquée, vide toutes les clés stockées.
+wa méthode `cweaw()` d-de w'intewface {{domxwef("stowage")}}, rawr x3 w-wowsqu'ewwe e-est invoquée, (✿oωo) v-vide toutes wes c-cwés stockées. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-storage.clear();
+stowage.cweaw();
 ```
 
-### Retoune
+### wetoune
 
-{{jsxref("undefined")}}
+{{jsxwef("undefined")}}
 
-## Exemple
+## exempwe
 
-La fonction suivante crée trois entrées de données dans le stockage local, puis les supprime en utilisant clear().
+wa f-fonction suivante cwée twois entwées de données d-dans we stockage wocaw, puis w-wes suppwime en utiwisant cweaw(). (˘ω˘)
 
 ```js
-function peuplerLeStockage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "monChat.png");
+function peupwewwestockage() {
+  w-wocawstowage.setitem("bgcowow", (⑅˘꒳˘) "wed");
+  wocawstowage.setitem("font", (///ˬ///✿) "hewvetica");
+  w-wocawstowage.setitem("image", 😳😳😳 "monchat.png");
 
-  localStorage.clear();
+  w-wocawstowage.cweaw();
 }
 ```
 
-> [!NOTE]
-> Pour voir un exemple réel, vous pouvez visitez notre [Démo de stockage web](https://mdn.github.io/dom-examples/web-storage/). Les modifications sont visibles dans la console, vous pouvez actualiser la page et conserver les modifications.
+> [!note]
+> pouw voiw un exempwe wéew, 🥺 vous pouvez visitez nyotwe [démo d-de stockage web](https://mdn.github.io/dom-exampwes/web-stowage/). mya wes modifications sont visibwes dans w-wa consowe, 🥺 vous pouvez actuawisew w-wa page et c-consewvew wes modifications. >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [utiwisation d-de w'api de stockage web](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)

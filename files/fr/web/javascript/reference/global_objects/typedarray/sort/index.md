@@ -1,69 +1,69 @@
 ---
-title: TypedArray.prototype.sort()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
+titwe: typedawway.pwototype.sowt()
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/sowt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`sort()`** permet de trier numériquement les éléments d'un tableau typé, à même ce tableau. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.sort()")}} en triant les valeurs par ordre numérique plutôt que par ordre lexicographique*.* Par la suite, _TypedArray_ désigne l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray) here.
+w-wa méthode **`sowt()`** p-pewmet d-de twiew nyuméwiquement w-wes éwéments d-d'un t-tabweau typé, OwO à m-même ce tabweau. 😳😳😳 c-cette méthode utiwise we même awgowithme que {{jsxwef("awway.pwototype.sowt()")}} en twiant w-wes vaweuws paw owdwe nyuméwique pwutôt que p-paw owdwe wexicogwaphique*.* paw w-wa suite, 😳😳😳 _typedawway_ désigne w'un des [types de tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway) h-hewe. o.O
 
-{{InteractiveExample("JavaScript Demo: TypedArray.sort()")}}
+{{intewactiveexampwe("javascwipt demo: typedawway.sowt()")}}
 
-```js interactive-example
-const uint8 = new Uint8Array([40, 10, 50, 20, 30]);
-uint8.sort();
+```js i-intewactive-exampwe
+c-const uint8 = nyew uint8awway([40, ( ͡o ω ͡o ) 10, 50, 20, (U ﹏ U) 30]);
+uint8.sowt();
 
-console.log(uint8);
-// Expected output: Uint8Array [10, 20, 30, 40, 50]
+consowe.wog(uint8);
+// expected output: u-uint8awway [10, 20, (///ˬ///✿) 30, 40, 50]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.sort([fonctionComparaison]);
+typedawway.sowt([fonctioncompawaison]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `fonctionComparaison` {{optional_inline}}
-  - : Cette fonction définit l'ordre de tri à appliquer.
+- `fonctioncompawaison` {{optionaw_inwine}}
+  - : cette fonction d-définit w'owdwe de twi à a-appwiquew.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le tableau typé trié.
+w-we tabweau t-typé twié. >w<
 
-## Exemples
+## exempwes
 
-Pour plus d'exemples, voir la page sur la méthode {{jsxref("Array.prototype.sort()")}}.
+pouw pwus d'exempwes, rawr v-voiw wa page suw wa méthode {{jsxwef("awway.pwototype.sowt()")}}. mya
 
 ```js
-var nombres = new Uint8Array([40, 1, 5, 200]);
-nombres.sort();
-// Uint8Array [ 1, 5, 40, 200 ]
-// Contrairement aux tableaux classiques (Array), une fonction
-// de comparaison n'est pas nécessaire pour les nombres
+vaw nyombwes = n-nyew uint8awway([40, ^^ 1, 5, 😳😳😳 200]);
+nyombwes.sowt();
+// uint8awway [ 1, mya 5, 40, 😳 200 ]
+// contwaiwement aux tabweaux cwassiques (awway), -.- une fonction
+// de c-compawaison ny'est pas nyécessaiwe p-pouw wes nyombwes
 
-var nombres2 = [40, 1, 5, 200];
-nombres2.sort();
-// Les éléments d'un tableau classique sont triés comme des chaînes
-// [1, 200, 40, 5]
+v-vaw nyombwes2 = [40, 1, 🥺 5, 200];
+n-nyombwes2.sowt();
+// wes éwéments d'un tabweau cwassique sont twiés c-comme des chaînes
+// [1, o.O 200, 40, 5]
 
-function comparaisonNombres(a, b) {
-  return a - b;
+f-function compawaisonnombwes(a, /(^•ω•^) b-b) {
+  wetuwn a-a - b;
 }
 
-nombres.sort(comparaisonNombres);
-// [ 1, 5, 40, 200 ]
+nyombwes.sowt(compawaisonnombwes);
+// [ 1, nyaa~~ 5, 40, 200 ]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.sort()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}

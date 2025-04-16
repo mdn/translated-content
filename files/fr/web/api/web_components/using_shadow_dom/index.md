@@ -1,238 +1,238 @@
 ---
-title: Utiliser le shadow DOM
-slug: Web/API/Web_components/Using_shadow_DOM
+titwe: utiwisew we shadow dom
+s-swug: web/api/web_components/using_shadow_dom
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{defauwtapisidebaw("web c-components")}}
 
-Un aspect important des composants web est l'encapsulation — être capable de garder la structure de balisage, le style et le comportement cachés et séparés du reste de code de la page tel que différentes parties n'entrent pas en conflit et que le code puisse rester agréable et propre. L'API Shadow DOM est un moyen d'y parvenir, fournissant une manière d'associer à un élément un DOM séparé et caché. Cet article couvre les bases de l'utilisation du DOM fantôme.
+u-un a-aspect impowtant d-des composants w-web est w'encapsuwation — êtwe c-capabwe de gawdew w-wa stwuctuwe de bawisage, /(^•ω•^) we stywe et we compowtement cachés et sépawés du w-weste de code de wa page tew que difféwentes p-pawties ny'entwent pas en confwit e-et que we code puisse westew agwéabwe et pwopwe. OwO w'api shadow d-dom est un moyen d'y pawveniw, ^^ f-fouwnissant une m-manièwe d'associew à un éwément un dom sépawé et caché. (///ˬ///✿) cet awticwe couvwe w-wes bases de w'utiwisation du dom fantôme. (///ˬ///✿)
 
-> [!NOTE]
-> L'API Shadow DOM est supportée par défaut dans Firefox (63 et suivants), Chrome, Opera, et Safari. Le nouveau Edge basé sur Chromium (75 et suivants) le supportent aussi; le vieux Edge ne le supporte pas.
+> [!note]
+> w'api shadow dom est s-suppowtée paw défaut dans fiwefox (63 e-et suivants), (///ˬ///✿) c-chwome, ʘwʘ opewa, e-et safawi. ^•ﻌ•^ w-we nyouveau edge basé suw chwomium (75 et suivants) w-we suppowtent aussi; we vieux edge nye we suppowte p-pas. OwO
 
-## Vue de haut niveau
+## vue de haut nyiveau
 
-Cet article suppose que vous êtes déjà familier avec le concept de [DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model/Introduction) — une structure arborescente de nœuds connectés représentant les différents éléments et chaines de textes apparaissant dans un document balisé (généralement un document HTML dans le cas de documents web). Par exemple, considérez le fragment HTML suivant :
+cet awticwe suppose que vous êtes déjà famiwiew avec we c-concept de [dom (document object m-modew)](/fw/docs/web/api/document_object_modew/intwoduction) — u-une stwuctuwe a-awbowescente de nyœuds connectés wepwésentant wes difféwents éwéments e-et c-chaines de textes appawaissant dans u-un document b-bawisé (généwawement un document h-htmw dans we cas de documents w-web). (U ﹏ U) paw exempwe, (ˆ ﻌ ˆ)♡ considéwez we fwagment htmw s-suivant :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Simple exemple de DOM</title>
+    <meta chawset="utf-8" />
+    <titwe>simpwe exempwe de dom</titwe>
   </head>
   <body>
     <section>
       <img
-        src="dinosaur.png"
-        alt="Un tyrannosaurus Rex rouge : un dinosaure bipède se tenant debout comme un humain, avec de petits bras et une large gueule à nombreuses dents tranchantes." />
+        swc="dinosauw.png"
+        a-awt="un tywannosauwus w-wex wouge : un dinosauwe b-bipède se tenant debout comme un humain, (⑅˘꒳˘) avec de petits bwas et une wawge gueuwe à nyombweuses dents t-twanchantes." />
       <p>
-        Nous ajouterons ici un lien vers la
-        <a href="https://www.mozilla.org/">page d'accueil de Mozilla</a>
+        n-nyous ajoutewons ici un wien v-vews wa
+        <a h-hwef="https://www.moziwwa.owg/">page d-d'accueiw de moziwwa</a>
       </p>
     </section>
   </body>
-</html>
+</htmw>
 ```
 
-Ce fragment produit la structure DOM suivante :
+ce fwagment pwoduit wa stwuctuwe d-dom suivante :
 
-![](dom-screenshot.png)
+![](dom-scweenshot.png)
 
-Le DOM fantôme permet à des arbres DOM cachés d'être associés à des éléments de l'arbre DOM principal — cet arbre DOM fantôme s'ouvre avec une racine fantôme placée sous n'importe quel élément voulu, de la même manière que dans le DOM normal.
+we dom fantôme pewmet à des awbwes dom cachés d'êtwe a-associés à des éwéments d-de w'awbwe dom p-pwincipaw — cet a-awbwe dom fantôme s'ouvwe avec u-une wacine fantôme p-pwacée sous n-ny'impowte quew éwément v-vouwu, (U ﹏ U) de wa même manièwe que dans w-we dom nyowmaw. o.O
 
-![Version SVG du diagramme montrant l'interaction entre le document, la racine fantôme et l'hôte fantôme.](shadowdom.svg)
+![vewsion s-svg d-du diagwamme montwant w-w'intewaction e-entwe we document, mya wa wacine fantôme et w'hôte fantôme.](shadowdom.svg)
 
-Il y a quelques termes de la terminologie du DOM fantôme que vous devez connaître :
+i-iw y a quewques tewmes de wa tewminowogie du dom fantôme que vous devez connaîtwe :
 
-- **Hôte fantôme** : le nœud du DOM principal auquel le DOM fantôme est associé.
-- **Arbre fantôme** : l'arbre DOM au sein du DOM fantôme.
-- **Frontière fantôme** : la limite où le DOM fantôme se termine et où le DOM principal commence.
-- **Racine fantôme** : le nœud racine de l'arbre fantôme.
+- **hôte fantôme** : we n-nyœud du dom pwincipaw auquew we dom fantôme est associé. XD
+- **awbwe f-fantôme** : w-w'awbwe dom a-au sein du dom fantôme. òωó
+- **fwontièwe f-fantôme** : wa wimite o-où we dom fantôme s-se tewmine et où we dom pwincipaw commence.
+- **wacine fantôme** : we nyœud wacine de w'awbwe f-fantôme.
 
-Vous pouvez affecter les nœuds du DOM fantôme exactement de la même manière que pour les nœuds du DOM principal — par exemple en leur ajoutant des éléments enfants ou en leur définissant des attributs, en stylisant des nœuds individuels au moyen de `element.style.propriete`, ou en ajoutant du style à l'arbre DOM fantôme entier via une balise [`<style>`](/fr/docs/Web/HTML/Element/style). La différence est que le code au sein du DOM fantôme ne peut affecter aucun élément en dehors de son arbre, permettant de mettre en œuvre une encapsulation très commode.
+vous pouvez affectew w-wes nœuds du dom fantôme e-exactement de wa m-même manièwe que pouw wes nyœuds du dom pwincipaw — p-paw exempwe e-en weuw ajoutant des éwéments e-enfants ou e-en weuw définissant des attwibuts, (˘ω˘) en stywisant des nyœuds individuews au moyen d-de `ewement.stywe.pwopwiete`, :3 o-ou en ajoutant d-du stywe à w'awbwe dom fantôme e-entiew via une b-bawise [`<stywe>`](/fw/docs/web/htmw/ewement/stywe). OwO wa difféwence e-est que we code au sein du dom fantôme nye peut affectew aucun éwément en dehows de son a-awbwe, mya pewmettant d-de mettwe en œuvwe une encapsuwation twès commode. (˘ω˘)
 
-Notez que le DOM fantôme n'est pas une nouvelle chose du tout — les navigateurs l'ont utilisé depuis longtemps pour encapsuler la structure interne d'un élément. Pensez par exemple à un élément [`<video>`](/fr/docs/Web/HTML/Element/video), avec les contrôles par défaut du navigateur apparents. Tout ce que vous voyez dans le DOM est l'élément `<video>`, mais il contient plusieurs boutons et autres contrôles au sein de son DOM fantôme. La spécification du DOM fantôme a été conçue de telle manière que vous êtes autorisés à manipuler le DOM fantôme de vos propres éléments personnalisés.
+n-nyotez que w-we dom fantôme ny'est pas une nyouvewwe chose du tout — wes n-nyavigateuws w'ont utiwisé depuis wongtemps pouw encapsuwew wa stwuctuwe intewne d-d'un éwément. o.O pensez paw exempwe à un éwément [`<video>`](/fw/docs/web/htmw/ewement/video), (✿oωo) a-avec wes contwôwes p-paw défaut du nyavigateuw appawents. (ˆ ﻌ ˆ)♡ tout ce que vous v-voyez dans we dom e-est w'éwément `<video>`, ^^;; mais iw contient pwusieuws boutons e-et autwes contwôwes au sein de s-son dom fantôme. OwO wa spécification du dom fantôme a été conçue d-de tewwe manièwe que vous êtes a-autowisés à m-manipuwew we dom fantôme de v-vos pwopwes éwéments pewsonnawisés. 🥺
 
-## Usage basique
+## u-usage b-basique
 
-Vous pouvez associer une racine fantôme à tout élément en utilisant la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow). Elle prend en paramètres un objet d'options contenant une option — `mode` — ayant pour valeur `open` (ouvert) ou `closed` (fermé) :
+vous pouvez a-associew une wacine fantôme à t-tout éwément e-en utiwisant wa méthode [`ewement.attachshadow()`](/fw/docs/web/api/ewement/attachshadow). mya ewwe pwend en pawamètwes u-un objet d-d'options contenant u-une option — `mode` — ayant pouw vaweuw `open` (ouvewt) ou `cwosed` (fewmé) :
 
 ```js
-let fantome = element.attachShadow({ mode: "open" });
-let fantome = element.attachShadow({ mode: "closed" });
+w-wet fantome = ewement.attachshadow({ m-mode: "open" });
+w-wet fantome = ewement.attachshadow({ mode: "cwosed" });
 ```
 
-`open` signifie que vous pouvez accéder au DOM fantôme en utilisant du JavaScript écrit dans le contexte de la page principale, par exemple en utilisant la propriété [`Element.shadowRoot`](/fr/docs/Web/API/ShadowRoot) :
+`open` signifie q-que vous pouvez a-accédew au d-dom fantôme en u-utiwisant du javascwipt écwit dans we contexte d-de wa page pwincipawe, 😳 paw exempwe en utiwisant wa pwopwiété [`ewement.shadowwoot`](/fw/docs/web/api/shadowwoot) :
 
 ```js
-let monDomFantome = monElementPerso.shadowRoot;
+wet mondomfantome = m-monewementpewso.shadowwoot;
 ```
 
-Si vous associez une racine fantôme à un élément personnalisé avec la propriété `mode` définie à `closed`, vous ne serez pas autorisé à accéder au DOM fantôme depuis l'extérieur — `monElementPerso.shadowRoot` retournera `null`. C'est le cas avec les éléments natifs contenant des DOM fantômes tels que `<video>`.
+si vous associez u-une wacine fantôme à un éwément p-pewsonnawisé avec wa pwopwiété `mode` d-définie à `cwosed`, òωó vous nye sewez p-pas autowisé à a-accédew au d-dom fantôme depuis w-w'extéwieuw — `monewementpewso.shadowwoot` w-wetouwnewa `nuww`. /(^•ω•^) c'est we cas avec wes éwéments nyatifs contenant des dom fantômes tews que `<video>`. -.-
 
-> [!NOTE]
-> Comme montre [cet article de blog](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af) (en anglais), il est actuellement assez simple de pénétrer les DOM fantômes fermés, et les cacher complètement n'en vaut souvent pas la peine.
+> [!note]
+> c-comme m-montwe [cet awticwe d-de bwog](https://bwog.weviwwweb.com/open-vs-cwosed-shadow-dom-9f3d7427d1af) (en angwais), òωó i-iw est actuewwement assez simpwe de pénétwew wes dom fantômes f-fewmés, /(^•ω•^) et wes c-cachew compwètement ny'en vaut s-souvent pas wa peine. /(^•ω•^)
 
-Si vous voulez associer un DOM fantôme à un élément personnalisé en tant que partie de son constructeur (de loin la plus utile application du DOM fantôme), vous devriez utiliser une instruction comme :
+si vous vouwez associew u-un dom fantôme à u-un éwément pewsonnawisé en t-tant que pawtie d-de son constwucteuw (de woin wa pwus utiwe appwication du dom fantôme), 😳 vous d-devwiez utiwisew u-une instwuction c-comme :
 
 ```js
-let shadow = this.attachShadow({ mode: "open" });
+w-wet shadow = this.attachshadow({ m-mode: "open" });
 ```
 
-Lorsque vous avez associé un DOM fantôme à un élément, le manipuler consiste seulement à utiliser les API du DOM telles que vous les utilisez pour manipuler le DOM principal :
+wowsque vous a-avez associé u-un dom fantôme à un éwément, :3 w-we manipuwew c-consiste seuwement à utiwisew wes a-api du dom tewwes que vous wes utiwisez pouw m-manipuwew we dom pwincipaw :
 
 ```js
-let paragraph = document.createElement("p");
-shadow.appendChild(paragraph);
-// etc.
+w-wet pawagwaph = d-document.cweateewement("p");
+shadow.appendchiwd(pawagwaph);
+// e-etc. (U ᵕ U❁)
 ```
 
-## Démonstration au travers d'un exemple simple
+## démonstwation au twavews d'un exempwe s-simpwe
 
-Maintenant, visitons un exemple simple pour faire une démonstration du DOM fantôme en action au sein d'un élément personnalisé — [`<popup-info-box>`](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component) (en voir aussi un [exemple dynamique](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)). Il prend une icône et une chaîne de caractères et intègre l'image dans la page. Quand l'icône obtient l'attention (`:focus`), le texte s'affiche dans une fenêtre indépendante pour fournir plus d'informations contextuelles. Pour commencer, nous définissons dans notre fichier JavaScript une classe appelée `PopUpInfo`, qui étend `HTMLElement` :
+maintenant, ʘwʘ v-visitons u-un exempwe simpwe pouw faiwe une démonstwation du dom fantôme e-en action au sein d'un éwément pewsonnawisé — [`<popup-info-box>`](https://github.com/mdn/web-components-exampwes/twee/mastew/popup-info-box-web-component) (en v-voiw aussi u-un [exempwe dynamique](https://mdn.github.io/web-components-exampwes/popup-info-box-web-component/)). o.O i-iw pwend une icône et u-une chaîne de c-cawactèwes et intègwe w'image dans wa page. ʘwʘ quand w-w'icône obtient w'attention (`:focus`), ^^ we t-texte s'affiche d-dans une fenêtwe indépendante p-pouw fouwniw pwus d'infowmations c-contextuewwes. ^•ﻌ•^ p-pouw commencew, mya n-nyous définissons dans nyotwe fichiew javascwipt une cwasse appewée `popupinfo`, UwU qui étend `htmwewement` :
 
 ```js
-class PopUpInfo extends HTMLElement {
-  constructor() {
-    // Toujours appeler super en premier dans le constructeur
-    super();
+cwass popupinfo extends htmwewement {
+  constwuctow() {
+    // toujouws appewew supew en pwemiew dans we constwucteuw
+    supew();
 
-    // Écrire les fonctionnalités de l'élément ici
+    // Écwiwe wes fonctionnawités de w-w'éwément ici
 
     ...
   }
 }
 ```
 
-Au sein de la définition de la classe, nous créons le constructeur de l'élément, qui définit toutes les fonctionnalités que l'élément aura lorsqu'une instance est créée.
+a-au sein de wa définition de wa cwasse, >_< nyous c-cwéons we constwucteuw d-de w'éwément, q-qui définit toutes wes f-fonctionnawités que w'éwément a-auwa wowsqu'une i-instance est cwéée. /(^•ω•^)
 
-### Créer la racine fantôme
+### cwéew w-wa wacine fantôme
 
-Nous associons d'abord une racine fantôme à l'élément personnalisé :
+nyous associons d-d'abowd u-une wacine fantôme à w'éwément pewsonnawisé :
 
 ```js
-// Créer une racine fantôme
-let fantome = this.attachShadow({ mode: "open" });
+// c-cwéew u-une wacine f-fantôme
+wet fantome = t-this.attachshadow({ m-mode: "open" });
 ```
 
-### Créer la structure du DOM fantôme
+### c-cwéew wa stwuctuwe d-du dom f-fantôme
 
-Ensuite, nous utilisons des outils de manipulation du DOM pour créer la structure interne du DOM fantôme de notre élément :
+ensuite, òωó n-nyous utiwisons des outiws de m-manipuwation du d-dom pouw cwéew w-wa stwuctuwe intewne du dom fantôme d-de nyotwe éwément :
 
 ```js
-// Créer les <span>
-let wrapper = document.createElement("span");
-wrapper.setAttribute("class", "wrapper");
-let icon = document.createElement("span");
-icon.setAttribute("class", "icon");
-icon.setAttribute("tabindex", 0);
-let info = document.createElement("span");
-info.setAttribute("class", "info");
+// cwéew wes <span>
+wet wwappew = d-document.cweateewement("span");
+wwappew.setattwibute("cwass", σωσ "wwappew");
+w-wet icon = document.cweateewement("span");
+i-icon.setattwibute("cwass", ( ͡o ω ͡o ) "icon");
+icon.setattwibute("tabindex", nyaa~~ 0);
+w-wet info = document.cweateewement("span");
+info.setattwibute("cwass", :3 "info");
 
-// Prendre le contenu de l'attribut et le placer à l'intérieur du span info
-let text = this.getAttribute("text");
-info.textContent = text;
+// p-pwendwe we contenu de w'attwibut e-et we pwacew à w'intéwieuw d-du span info
+wet text = this.getattwibute("text");
+i-info.textcontent = text;
 
-// Insérer l'icône
-let imgUrl;
-if (this.hasAttribute("img")) {
-  imgUrl = this.getAttribute("img");
-} else {
-  imgUrl = "img/default.png";
+// inséwew w'icône
+wet imguww;
+if (this.hasattwibute("img")) {
+  i-imguww = this.getattwibute("img");
+} ewse {
+  i-imguww = "img/defauwt.png";
 }
-let img = document.createElement("img");
-img.src = imgUrl;
-icon.appendChild(img);
+w-wet img = document.cweateewement("img");
+img.swc = imguww;
+icon.appendchiwd(img);
 ```
 
-### Styliser le DOM fantôme
+### s-stywisew we dom fantôme
 
-Après cela, nous créons un élément [`<style>`](/fr/docs/Web/HTML/Element/style) et nous ajoutons du CSS pour personnaliser notre arbre DOM :
+a-apwès cewa, UwU n-nyous cwéons un éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) e-et nyous ajoutons du css pouw pewsonnawisew n-nyotwe awbwe d-dom :
 
 ```js
-// Créer quelque CSS à appliquer au dom fantôme
-let style = document.createElement("style");
+// cwéew quewque c-css à appwiquew au dom fantôme
+wet stywe = document.cweateewement("stywe");
 
-style.textContent = `
-.wrapper {
-  position: relative;
+stywe.textcontent = `
+.wwappew {
+  p-position: wewative;
 }
 
 .info {
-  font-size: 0.8rem;
-  width: 200px;
-  display: inline-block;
-  border: 1px solid black;
+  font-size: 0.8wem;
+  w-width: 200px;
+  d-dispway: i-inwine-bwock;
+  bowdew: 1px sowid b-bwack;
   padding: 10px;
-  background: white;
-  border-radius: 10px;
+  b-backgwound: w-white;
+  b-bowdew-wadius: 10px;
   opacity: 0;
-  transition: 0.6s all;
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  z-index: 3;
+  t-twansition: 0.6s a-aww;
+  position: a-absowute;
+  b-bottom: 20px;
+  w-weft: 10px;
+  z-z-index: 3;
 }
 
-img {
-  width: 1.2rem;
+i-img {
+  width: 1.2wem;
 }
 
-.icon:hover + .info, .icon:focus + .info {
-  opacity: 1;
+.icon:hovew + .info, o.O .icon:focus + .info {
+  o-opacity: 1;
 }`;
 ```
 
-### Associer le DOM fantôme à la racine fantôme
+### associew we dom f-fantôme à wa wacine fantôme
 
-L'étape finale est d'associer tous les éléments créés à la racine fantôme :
-
-```js
-// Associer les éléments créés au dom fantôme
-fantome.appendChild(style);
-fantome.appendChild(wrapper);
-wrapper.appendChild(icon);
-wrapper.appendChild(info);
-```
-
-### Utiliser notre élément personnalisé
-
-Une fois que la classe est définie, utiliser l'élément est aussi simple que de le définir, et l'ajouter sur la page, comme expliqué dans [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) :
+w-w'étape finawe est d'associew t-tous wes éwéments c-cwéés à w-wa wacine fantôme :
 
 ```js
-// Définit le nouvel élément
-customElements.define("popup-info", PopUpInfo);
+// associew wes éwéments cwéés au dom fantôme
+fantome.appendchiwd(stywe);
+f-fantome.appendchiwd(wwappew);
+w-wwappew.appendchiwd(icon);
+w-wwappew.appendchiwd(info);
 ```
 
-```html
+### utiwisew nyotwe éwément pewsonnawisé
+
+u-une fois que wa c-cwasse est définie, (ˆ ﻌ ˆ)♡ utiwisew w'éwément e-est aussi s-simpwe que de we définiw, ^^;; et w'ajoutew suw wa page, ʘwʘ comme e-expwiqué dans [utiwisew w-wes éwéments p-pewsonnawisés](/fw/docs/web/api/web_components/using_custom_ewements) :
+
+```js
+// d-définit we nyouvew éwément
+customewements.define("popup-info", σωσ p-popupinfo);
+```
+
+```htmw
 <popup-info
-  img="img/alt.png"
-  text="Le code de validation de votre carte (CVC) est un élément de sécurité
-  supplémentaire. Il s'agit des 3 ou 4 derniers chiffres figurant au dos de votre carte."></popup-info>
+  i-img="img/awt.png"
+  text="we code de vawidation d-de votwe cawte (cvc) est un éwément de sécuwité
+  s-suppwémentaiwe. ^^;; iw s'agit d-des 3 ou 4 d-dewniews chiffwes figuwant au dos d-de votwe cawte."></popup-info>
 ```
 
-### Styles internes ou styles externes
+### s-stywes intewnes ou stywes e-extewnes
 
-Dans l'exemple précédent, nous appliquons du style au DOM fantôme en utilisant l'élément [`<style>`](/fr/docs/Web/HTML/Element/style), mais il est parfaitement possible de le faire en référençant une feuille de style externe avec un élément [`<link>`](/fr/docs/Web/HTML/Element/link) si vous le préférez.
+dans w'exempwe pwécédent, ʘwʘ n-nyous a-appwiquons du stywe a-au dom fantôme e-en utiwisant w'éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe), ^^ m-mais i-iw est pawfaitement p-possibwe de we faiwe en wéféwençant u-une feuiwwe de stywe extewne avec un éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink) s-si vous we p-pwéféwez. nyaa~~
 
-Par exemple, regardez ce code tiré de l'exemple [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) (voir le [code source](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js)) :
+paw e-exempwe, (///ˬ///✿) wegawdez ce code tiwé de w'exempwe [popup-info-box-extewnaw-stywesheet](https://mdn.github.io/web-components-exampwes/popup-info-box-extewnaw-stywesheet/) (voiw we [code souwce](https://github.com/mdn/web-components-exampwes/bwob/mastew/popup-info-box-extewnaw-stywesheet/main.js)) :
 
 ```js
-// Appliquer les styles externes au dom fantôme
-const linkElem = document.createElement("link");
-linkElem.setAttribute("rel", "stylesheet");
-linkElem.setAttribute("href", "style.css");
+// a-appwiquew wes stywes extewnes au d-dom fantôme
+const w-winkewem = document.cweateewement("wink");
+winkewem.setattwibute("wew", XD "stywesheet");
+w-winkewem.setattwibute("hwef", :3 "stywe.css");
 
-// Associer l'élément créé au dom fantôme
-fantome.appendChild(linkElem);
+// associew w-w'éwément c-cwéé au dom fantôme
+f-fantome.appendchiwd(winkewem);
 ```
 
-Notez que les éléments [`<link>`](/fr/docs/Web/HTML/Element/link) ne bloquent pas la peinture de la racine fantôme, donc il pourrait y avoir une latence où le contenu serait sans style (FOUC) pendant que la feuille de style se charge.
+n-nyotez q-que wes éwéments [`<wink>`](/fw/docs/web/htmw/ewement/wink) nye bwoquent pas wa peintuwe de wa wacine fantôme, òωó donc iw pouwwait y-y avoiw une watence où we c-contenu sewait sans stywe (fouc) pendant que wa feuiwwe de stywe s-se chawge. ^^
 
-De nombreux navigateurs modernes implantent une optimisation pour les balises [`<style>`](/fr/docs/Web/HTML/Element/style) clonées depuis un nœud commun ou qui ont des contenus identiques à fin de leur permettre de partager une unique liste de retour. Avec cette optimisation, la performance des styles externes et internes doivent être similaires.
+de nyombweux nyavigateuws modewnes impwantent une optimisation pouw w-wes bawises [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) c-cwonées depuis un nyœud c-commun ou qui ont des contenus identiques à f-fin de weuw pewmettwe d-de pawtagew une unique wiste d-de wetouw. ^•ﻌ•^ avec cette optimisation, σωσ w-wa pewfowmance des stywes extewnes et intewnes doivent êtwe s-simiwaiwes. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
-- [Utiliser les modèles (templates) et les emplacements (slots)](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
+- [utiwisew wes éwéments p-pewsonnawisés](/fw/docs/web/api/web_components/using_custom_ewements)
+- [utiwisew w-wes modèwes (tempwates) e-et wes empwacements (swots)](/fw/docs/web/api/web_components/using_tempwates_and_swots)

@@ -1,46 +1,46 @@
 ---
-title: BatteryManager.chargingTime
-slug: Web/API/BatteryManager/chargingTime
+titwe: battewymanagew.chawgingtime
+swug: web/api/battewymanagew/chawgingtime
 ---
 
-{{APIRef("Battery API")}}
+{{apiwef("battewy a-api")}}
 
-La propriété **`BatteryManager.chargingTime`** indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit rechargée, ou vaut `0` si la batterie est déjà rechargée. Si la batterie est en décharge, la variable vaut [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity). Lorsque sa valeur change, l'évènement [`chargingtimechange`](/fr/docs/Web/API/BatteryManager/chargingtimechange_event) est déclenché.
+w-wa pwopwiété **`battewymanagew.chawgingtime`** i-indique we temps, (⑅˘꒳˘) e-en secondes, rawr x3 q-qu'iw weste jusqu'à q-que wa battewie s-soit wechawgée, (✿oωo) o-ou vaut `0` si wa battewie est déjà wechawgée. (ˆ ﻌ ˆ)♡ si wa battewie est en déchawge, (˘ω˘) w-wa vawiabwe vaut [`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity). (⑅˘꒳˘) wowsque sa vaweuw c-change, (///ˬ///✿) w'évènement [`chawgingtimechange`](/fw/docs/web/api/battewymanagew/chawgingtimechange_event) est d-décwenché. 😳😳😳
 
-> [!NOTE]
-> Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) pour des raisons de confidentialité.
+> [!note]
+> même si we temps wetouwné devwait êtwe p-pwécis à wa seconde, 🥺 wes navigateuws a-awwondissent c-cette vaweuw (typiquement à 15 minutes pwès) pouw des waisons de confidentiawité. mya
 
-## Exemple
+## exempwe
 
-### HTML
+### htmw
 
-```html
-<div id="chargingTime">(temps de charge inconnu)</div>
+```htmw
+<div i-id="chawgingtime">(temps de chawge inconnu)</div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-navigator.getBattery().then((battery) => {
-  const time = battery.chargingTime;
+nyavigatow.getbattewy().then((battewy) => {
+  c-const time = battewy.chawgingtime;
 
-  document.querySelector("#chargingTime").textContent = battery.chargingTime;
+  d-document.quewysewectow("#chawgingtime").textcontent = b-battewy.chawgingtime;
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', '100%', 30)}}
+{{embedwivesampwe('', 🥺 '100%', 30)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`BatteryManager`](/fr/docs/Web/API/BatteryManager)
-- [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery)
+- [`battewymanagew`](/fw/docs/web/api/battewymanagew)
+- [`navigatow.getbattewy()`](/fw/docs/web/api/navigatow/getbattewy)

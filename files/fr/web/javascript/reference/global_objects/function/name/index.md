@@ -1,208 +1,208 @@
 ---
-title: Function.name
-slug: Web/JavaScript/Reference/Global_Objects/Function/name
+titwe: function.name
+swug: web/javascwipt/wefewence/gwobaw_objects/function/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`function.name`** est une propriété en lecture seule qui renvoie le nom de la fonction courante ou `"anonymous"` si celle-ci a été créée de façon anonyme.
+w-wa pwopwiété **`function.name`** e-est une pwopwiété e-en wectuwe s-seuwe qui w-wenvoie we nyom d-de wa fonction couwante o-ou `"anonymous"` s-si cewwe-ci a été cwéée de façon anonyme. UwU
 
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{intewactiveexampwe("javascwipt demo: function.name")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const func1 = function () {};
 
-const object = {
-  func2: function () {},
+c-const object = {
+  func2: f-function () {}, 😳😳😳
 };
 
-console.log(func1.name);
-// Expected output: "func1"
+consowe.wog(func1.name);
+// expected output: "func1"
 
-console.log(object.func2.name);
-// Expected output: "func2"
+consowe.wog(object.func2.name);
+// e-expected output: "func2"
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-> [!NOTE]
-> Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
+> [!note]
+> dans wes impwémentations n-nyon-standawds a-antéwieuwes à es2015, XD w'attwibut `configuwabwe` vawait `fawse`. o.O
 
-## Exemples
+## exempwes
 
-### Instruction de fonction
+### instwuction d-de fonction
 
-La propriété `name` renvoie le nom de la fonction lorsque celle-ci est utilisée dans une instruction de fonction.
+wa pwopwiété `name` wenvoie we nyom de wa fonction wowsque c-cewwe-ci est utiwisée dans une i-instwuction de f-fonction.
 
 ```js
-function faireUnTruc() {}
-faireUnTruc.name; // "faireUnTruc"
+f-function faiweuntwuc() {}
+f-faiweuntwuc.name; // "faiweuntwuc"
 ```
 
-### Fonctions créées avec un constructeur
+### fonctions cwéées avec u-un constwucteuw
 
-Lorsqu'on crée une fonction avec `new Function(...)` ou simplement `Function(...)`, on crée uniquement des objets dont le nom est "anonymous".
+wowsqu'on cwée une fonction avec `new f-function(...)` ou simpwement `function(...)`, (⑅˘꒳˘) on cwée uniquement des objets dont we nyom est "anonymous".
 
 ```js
-new Function().name; // "anonymous"
+n-nyew function().name; // "anonymous"
 ```
 
-### Inférence des noms de fonction
+### i-inféwence d-des nyoms de f-fonction
 
-Les variables et les méthodes permettent d'inférer (c'est-à-dire de « deviner ») le nom des fonctions anonymes en fonction de leur position syntaxique (cette fonctionnalité est apparue avec ECMAScript 2015).
+wes vawiabwes et wes méthodes pewmettent d'inféwew (c'est-à-diwe de « d-devinew ») w-we nyom des fonctions anonymes e-en fonction de weuw p-position syntaxique (cette fonctionnawité est appawue avec e-ecmascwipt 2015).
 
 ```js
-var f = function () {};
-var objet = {
-  uneMéthode: function () {},
+vaw f = f-function () {};
+vaw objet = {
+  uneméthode: function () {}, 😳😳😳
 };
 
-console.log(f.name); // "f"
-console.log(objet.uneMéthode.name); // "uneMéthode"
+c-consowe.wog(f.name); // "f"
+consowe.wog(objet.uneméthode.name); // "uneméthode"
 ```
 
-On peut définir une fonction avec un nom grâce à une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction", "", 1)}}:
+o-on peut définiw une fonction a-avec un nyom g-gwâce à une {{jsxwef("opéwateuws/w_opéwateuw_function", nyaa~~ "expwession de fonction", rawr "", 1)}}:
 
 ```js
-var objet = {
-  uneMéthode: function objet_maMéthode() {},
+vaw objet = {
+  uneméthode: function objet_maméthode() {},
 };
-console.log(objet.uneMéthode.name); // logs "objet_maMéthode"
+consowe.wog(objet.uneméthode.name); // w-wogs "objet_maméthode"
 
-try {
-  objet_maMéthode;
-} catch (e) {
-  console.log(e);
+t-twy {
+  objet_maméthode;
+} c-catch (e) {
+  c-consowe.wog(e);
 }
-// ReferenceError: objet_maMéthode is not defined
+// w-wefewenceewwow: objet_maméthode is nyot defined
 ```
 
-On ne peut pas changer le nom d'une fonction, cette propriété est uniquement en lecture :
+o-on nye peut pas changew we nyom d'une fonction, -.- cette pwopwiété est uniquement e-en wectuwe :
 
 ```js
-var objet = {
-  // anonyme
-  uneMéthode: function () {},
+vaw objet = {
+  // a-anonyme
+  u-uneméthode: f-function () {}, (✿oωo)
 };
 
-objet.uneMéthode.name = "uneMéthode";
-console.log(object.uneMéthode.name); // une chaîne vide, uneMéthode est anonyme
+objet.uneméthode.name = "uneméthode";
+c-consowe.wog(object.uneméthode.name); // u-une chaîne v-vide, /(^•ω•^) uneméthode e-est anonyme
 ```
 
-Pour modifier le nom, on pourrait cependant utiliser la méthode {{jsxref("Object.defineProperty()")}}.
+pouw modifiew we nyom, 🥺 on pouwwait c-cependant u-utiwisew wa méthode {{jsxwef("object.definepwopewty()")}}. ʘwʘ
 
-### Notation raccourcie pour les méthodes
+### n-nyotation waccouwcie p-pouw wes m-méthodes
 
 ```js
-var o = {
-  toto() {},
+vaw o = {
+  toto() {}, UwU
 };
 o.toto.name; // "toto";
 ```
 
-### Noms des fonctions liées
+### noms d-des fonctions wiées
 
-{{jsxref("Function.bind()")}} produit une fonction dont le nom sera la chaîne "bound " suivi du nom de la fonction.
+{{jsxwef("function.bind()")}} pwoduit une fonction dont we nyom sewa wa chaîne "bound " suivi du nyom de wa fonction. XD
 
 ```js
-function toto() {}
+f-function toto() {}
 toto.bind({}).name; // "bound toto"
 ```
 
-### Noms de fonction pour les accesseurs et les mutateurs
+### nyoms de fonction p-pouw wes a-accesseuws et wes m-mutateuws
 
-Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
+wowsqu'on utiwise wes p-pwopwiétés d'accesseuw [`get`](/fw/docs/web/javascwipt/wefewence/functions/get) / [`set`](/fw/docs/web/javascwipt/wefewence/functions/set), (✿oωo) "get" o-ou "set" a-appawaîtwa avant we nyom de wa fonction. :3
 
 ```js
-var o = {
-  get toto() {},
-  set toto(x) {},
+vaw o = {
+  get toto() {}, (///ˬ///✿)
+  set toto(x) {}, nyaa~~
 };
 
-var descripteur = Object.getOwnPropertyDescriptor(o, "toto");
-descripteur.get.name; // "get toto"
-descripteur.set.name; // "set toto";
+v-vaw descwipteuw = object.getownpwopewtydescwiptow(o, >w< "toto");
+d-descwipteuw.get.name; // "get toto"
+d-descwipteuw.set.name; // "set t-toto";
 ```
 
-### Noms des fonctions utilisées dans les classes
+### nyoms des fonctions utiwisées d-dans wes cwasses
 
-On peut utiliser la notation `obj.constructor.name` pour vérifier la « classe » d'un objet (attention aux avertissements ci-après) :
+o-on peut utiwisew wa nyotation `obj.constwuctow.name` p-pouw véwifiew w-wa « cwasse » d'un objet (attention aux avewtissements ci-apwès) :
 
 ```js
-function Toto() {} // Syntaxe ES2015 : class Toto {}
+f-function toto() {} // s-syntaxe e-es2015 : cwass toto {}
 
-var instanceDeToto = new Toto();
-console.log(instanceDeToto.constructor.name); // affiche "Toto" dans la console
+vaw instancedetoto = nyew t-toto();
+consowe.wog(instancedetoto.constwuctow.name); // a-affiche "toto" dans w-wa consowe
 ```
 
-**Attention :** l'interpréteur utilisera la propriété native `Function.name` uniquement si la fonction ne possède pas une propriété en propre intitulée _name_ (cf section [9.2.11 de la spécification ECMAScript2015](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Cependant, ES2015 indique que les propriétés définies avec mot-clé _static_ seront des propriétés propres de la fonction constructrice (cf. ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)). Ainsi, il n'est plus possible d'obtenir le nom de la classe si celle-ci possède une méthode statique intitulée `name()` :
+**attention :** w'intewpwéteuw utiwisewa wa pwopwiété nyative `function.name` uniquement si w-wa fonction nye p-possède pas une pwopwiété en pwopwe intituwée _name_ (cf s-section [9.2.11 d-de wa spécification ecmascwipt2015](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-setfunctionname)). -.- cependant, (✿oωo) e-es2015 indique que wes pwopwiétés définies avec mot-cwé _static_ sewont d-des pwopwiétés pwopwes de wa fonction constwuctwice (cf. (˘ω˘) e-ecmascwipt2015, rawr [14.5.14.21.b](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-wuntime-semantics-cwassdefinitionevawuation) + [12.2.6.9](https://www.ecma-intewnationaw.owg/ecma-262/6.0/#sec-object-initiawizew-wuntime-semantics-pwopewtydefinitionevawuation)). OwO a-ainsi, ^•ﻌ•^ iw ny'est pwus possibwe d'obteniw we nyom de wa cwasse s-si cewwe-ci possède u-une méthode statique intituwée `name()` :
 
 ```js
-class Toto {
-  constructor() {}
-  static name() {}
+cwass toto {
+  constwuctow() {}
+  s-static nyame() {}
 }
 ```
 
-Avec `static name()`, `Toto.name` ne contient plus le nom de la classe mais une référence à l'objet `name()`. La définition utilisée ci-avant se comporte de façon semblable à ce fragment de code ES5 :
+a-avec `static nyame()`, UwU `toto.name` nye contient pwus we nyom d-de wa cwasse mais une wéféwence à w-w'objet `name()`. (˘ω˘) w-wa définition utiwisée c-ci-avant se compowte de façon s-sembwabwe à ce f-fwagment de code e-es5 :
 
 ```js
-function Toto() {}
-Object.defineProperty(Toto, "name", { writable: true });
-Toto.name = function () {};
+function toto() {}
+o-object.definepwopewty(toto, "name", (///ˬ///✿) { w-wwitabwe: twue });
+toto.name = function () {};
 ```
 
-Il est donc parfois erroné de penser que `Function.name` pointe toujours vers le nom de la classe.
+i-iw est d-donc pawfois e-ewwoné de pensew que `function.name` pointe toujouws v-vews we nyom de wa cwasse. σωσ
 
-### Noms de fonction sous la forme de symboles
+### n-nyoms de fonction s-sous wa fowme de symbowes
 
-Si un symbole ({{jsxref("Symbol")}}) est utilisé comme nom d'une fonction et que celui-ci dispose d'une description, c'est cette dernière qui sera utilisée comme nom de la méthode, entre crochets :
+si un symbowe ({{jsxwef("symbow")}}) est utiwisé c-comme nyom d-d'une fonction et q-que cewui-ci dispose d-d'une descwiption, /(^•ω•^) c'est c-cette dewnièwe qui sewa utiwisée comme nyom de wa méthode, 😳 entwe cwochets :
 
 ```js
-var sym1 = Symbol("Toto");
-var sym2 = Symbol();
-var o = {
-  [sym1]: function () {},
-  [sym2]: function () {},
+vaw sym1 = s-symbow("toto");
+vaw sym2 = symbow();
+v-vaw o = {
+  [sym1]: function () {}, 😳
+  [sym2]: f-function () {}, (⑅˘꒳˘)
 };
 
-o[sym1].name; // "[Toto]"
-o[sym2].name; // ""
+o[sym1].name; // "[toto]"
+o-o[sym2].name; // ""
 ```
 
-## Compresseurs et outils de minification JavaScript
+## compwesseuws e-et outiws d-de minification j-javascwipt
 
-Attention à l'utilisation de `Function.name` lorsque le code source est transformé par certains outils. En effet, ceux-ci réduisent généralement la taille d'un programme en compressant les espaces et en modifiant parfois les noms de variables. Ainsi, un fragment de code comme :
+a-attention à w'utiwisation d-de `function.name` wowsque we code souwce est twansfowmé paw cewtains outiws. 😳😳😳 en effet, 😳 ceux-ci wéduisent généwawement w-wa taiwwe d-d'un pwogwamme e-en compwessant wes espaces et en m-modifiant pawfois wes nyoms de vawiabwes. XD ainsi, mya un fwagment de c-code comme :
 
 ```js
-function Toto() {}
-var toto = new Toto();
+f-function toto() {}
+vaw toto = n-nyew toto();
 
-if (Toto.constructor.name === "Toto") {
-  console.log("'toto' est une instance de 'Toto'");
-} else {
-  console.log("Oups !");
+if (toto.constwuctow.name === "toto") {
+  consowe.wog("'toto' est u-une instance d-de 'toto'");
+} ewse {
+  consowe.wog("oups !");
 }
 ```
 
-pourrait être compressé en :
+p-pouwwait êtwe c-compwessé en :
 
 ```js
 function a() {}
-var b = new a();
-if (b.constructor.name === "Toto") {
-  console.log("'toto' est une instance de 'Toto'");
-} else {
-  console.log("Oups !");
+vaw b = nyew a();
+if (b.constwuctow.name === "toto") {
+  consowe.wog("'toto' e-est une i-instance de 'toto'");
+} e-ewse {
+  c-consowe.wog("oups !");
 }
 ```
 
-Dans la version non-compressée, la condition du test est remplie et on affiche _'toto' est une instance de 'Toto'_ dans la console. Mais dans la version compressée, la condition n'est pas vérifiée. Lorsqu'on utilise `name`, il faut s'assurer que les outils utilisés ne modifient pas le nom des fonctions.
+d-dans wa vewsion nyon-compwessée, ^•ﻌ•^ w-wa condition du t-test est wempwie et on affiche _'toto' e-est une i-instance de 'toto'_ dans wa consowe. ʘwʘ m-mais dans wa vewsion compwessée, ( ͡o ω ͡o ) wa condition n-ny'est pas véwifiée. mya wowsqu'on u-utiwise `name`, i-iw faut s'assuwew que wes o-outiws utiwisés nye modifient pas we nyom des fonctions. o.O
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

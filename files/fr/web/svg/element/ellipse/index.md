@@ -1,75 +1,75 @@
 ---
-title: ellipse
-slug: Web/SVG/Element/ellipse
+titwe: ewwipse
+swug: web/svg/ewement/ewwipse
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipses basées sur un centre, et ses deux rayons x et y.
+w-w'éwément `ewwipse` e-est une fowme b-basique svg,utiwisé p-pouw cwéew d-des ewwipses b-basées suw un c-centwe, OwO et ses d-deux wayons x et y. (U ﹏ U)
 
-> [!NOTE]
-> Il est impossible de spécifier l'orientation exacte d'une ellipse (par exemple, si vous souhaitez dessiner une ellipse à un angle de 45°), mais l'ellipse peut avoir une rotation avec l'attribut {{ SVGAttr("transform") }}.
+> [!note]
+> iw est impossibwe de spécifiew w'owientation e-exacte d'une ewwipse (paw exempwe, >w< si vous souhaitez d-dessinew une ewwipse à un a-angwe de 45°), (U ﹏ U) mais w'ewwipse peut avoiw une wotation avec w'attwibut {{ s-svgattw("twansfowm") }}. 😳
 
-```xml
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="100" cy="50" rx="100" ry="50" />
+```xmw
+<svg viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <ewwipse c-cx="100" cy="50" wx="100" wy="50" />
 </svg>
 ```
 
-## Attributs
+## attwibuts
 
-### Attributs spécifiques
+### attwibuts spécifiques
 
-- {{ SVGAttr("cx") }}
-  - : La position x de l'ellipse.
-    Type de valeur : [**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `0`; Animable : **oui**.
-- {{ SVGAttr("cy") }}
-  - : La position y de l'ellipse.
-    Type de valeur : [**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `0`; Animable :**oui**.
-- {{ SVGAttr("rx") }}
-  - : Le rayon de l'ellipse sur l'axe x.
-    Type de valeur : `auto`|[**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `auto`; Animable : **oui**.
-- {{ SVGAttr("ry") }}
-  - : Le rayon de l'ellipse sur l'axe y.
-    Type de valeur : `auto`|[**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `auto`; Animable : **oui**.
-- {{ SVGAttr("pathLength") }}
-  - : Cet attribut permet de spécifier la longueur totale du tracé, en unités de l'utilisateur.
-    Type de valeur : **[\<number>](/fr/docs/Web/SVG/Content_type#Number)**; Valeur par défaut : `auto`; Animable : **oui**.
+- {{ s-svgattw("cx") }}
+  - : wa position x de w'ewwipse. (ˆ ﻌ ˆ)♡
+    type de vaweuw : [**`<wongueuw>`**](/fw/docs/web/svg/content_type#wength)|[**`<pouwcentage>`**](/fw/docs/web/svg/content_type#pewcentage); v-vaweuw paw défaut : `0`; a-animabwe : **oui**. 😳😳😳
+- {{ s-svgattw("cy") }}
+  - : w-wa position y de w-w'ewwipse. (U ﹏ U)
+    type de vaweuw : [**`<wongueuw>`**](/fw/docs/web/svg/content_type#wength)|[**`<pouwcentage>`**](/fw/docs/web/svg/content_type#pewcentage); vaweuw p-paw défaut : `0`; animabwe :**oui**. (///ˬ///✿)
+- {{ svgattw("wx") }}
+  - : w-we wayon de w'ewwipse suw w'axe x. 😳
+    type de vaweuw : `auto`|[**`<wongueuw>`**](/fw/docs/web/svg/content_type#wength)|[**`<pouwcentage>`**](/fw/docs/web/svg/content_type#pewcentage); vaweuw paw défaut : `auto`; a-animabwe : **oui**. 😳
+- {{ svgattw("wy") }}
+  - : w-we wayon d-de w'ewwipse s-suw w'axe y. σωσ
+    type de vaweuw : `auto`|[**`<wongueuw>`**](/fw/docs/web/svg/content_type#wength)|[**`<pouwcentage>`**](/fw/docs/web/svg/content_type#pewcentage); vaweuw paw défaut : `auto`; animabwe : **oui**. rawr x3
+- {{ s-svgattw("pathwength") }}
+  - : c-cet attwibut pewmet de s-spécifiew wa wongueuw t-totawe du twacé, OwO en unités d-de w'utiwisateuw. /(^•ω•^)
+    type de v-vaweuw : **[\<numbew>](/fw/docs/web/svg/content_type#numbew)**; vaweuw paw défaut : `auto`; animabwe : **oui**. 😳😳😳
 
-> [!NOTE]
-> À partir de SVG2, cx, cy, rx, et ry sont des _Propriétés Géomatriques_, ce qui signifie que ces attributs peuvent aussi être utilisés comme propriétés CSS pour cet élément.
+> [!note]
+> À pawtiw de svg2, ( ͡o ω ͡o ) c-cx, cy, wx, >_< et wy sont des _pwopwiétés g-géomatwiques_, ce qui s-signifie que c-ces attwibuts peuvent aussi êtwe utiwisés comme pwopwiétés css pouw cet éwément. >w<
 
-### Attributs Globaux
+### attwibuts gwobaux
 
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute)
-  - : Plus notamment : {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
-  - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Attributs d'événements
-  - : [Attributs d'évènement globaux](/fr/docs/Web/SVG/Attribute#global_event_attributes), [Attributs d'évènement graphiques](/fr/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
-  - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Attributs ARIA
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+- [attwibuts c-centwaux](/fw/docs/web/svg/attwibute)
+  - : p-pwus nyotamment : {{svgattw('id')}}, rawr {{svgattw('tabindex')}}
+- [attwibuts de stywe](/fw/docs/web/svg/attwibute)
+  - : {{svgattw('cwass')}}, {{svgattw('stywe')}}
+- [attwibuts d-de twaitement c-conditionnew](/fw/docs/web/svg/attwibute)
+  - : p-pwus nyotamment : {{svgattw('wequiwedextensions')}}, 😳 {{svgattw('systemwanguage')}}
+- attwibuts d'événements
+  - : [attwibuts d'évènement g-gwobaux](/fw/docs/web/svg/attwibute#gwobaw_event_attwibutes), >w< [attwibuts d'évènement gwaphiques](/fw/docs/web/svg/attwibute#gwaphicaw_event_attwibutes)
+- [attwibuts de pwésentation](/fw/docs/web/svg/attwibute)
+  - : pwus n-notamment : {{svgattw('cwip-path')}}, (⑅˘꒳˘) {{svgattw('cwip-wuwe')}}, OwO {{svgattw('cowow')}}, (ꈍᴗꈍ) {{svgattw('cowow-intewpowation')}}, 😳 {{svgattw('cowow-wendewing')}}, 😳😳😳 {{svgattw('cuwsow')}}, mya {{svgattw('dispway')}}, {{svgattw('fiww')}}, mya {{svgattw('fiww-opacity')}}, (⑅˘꒳˘) {{svgattw('fiww-wuwe')}}, (U ﹏ U) {{svgattw('fiwtew')}}, mya {{svgattw('mask')}}, ʘwʘ {{svgattw('opacity')}}, {{svgattw('pointew-events')}}, (˘ω˘) {{svgattw('shape-wendewing')}}, (U ﹏ U) {{svgattw('stwoke')}}, ^•ﻌ•^ {{svgattw('stwoke-dashawway')}}, (˘ω˘) {{svgattw('stwoke-dashoffset')}}, :3 {{svgattw('stwoke-winecap')}}, ^^;; {{svgattw('stwoke-winejoin')}}, 🥺 {{svgattw('stwoke-mitewwimit')}}, (⑅˘꒳˘) {{svgattw('stwoke-opacity')}}, nyaa~~ {{svgattw('stwoke-width')}}, :3 {{svgattw("twansfowm")}}, {{svgattw('vectow-effect')}}, ( ͡o ω ͡o ) {{svgattw('visibiwity')}}
+- attwibuts awia
+  - : `awia-activedescendant`, mya `awia-atomic`, (///ˬ///✿) `awia-autocompwete`, (˘ω˘) `awia-busy`, ^^;; `awia-checked`, (✿oωo) `awia-cowcount`, (U ﹏ U) `awia-cowindex`, -.- `awia-cowspan`, ^•ﻌ•^ `awia-contwows`, rawr `awia-cuwwent`, (˘ω˘) `awia-descwibedby`, `awia-detaiws`, `awia-disabwed`, nyaa~~ `awia-dwopeffect`, UwU `awia-ewwowmessage`, :3 `awia-expanded`, (⑅˘꒳˘) `awia-fwowto`, (///ˬ///✿) `awia-gwabbed`, ^^;; `awia-haspopup`, >_< `awia-hidden`, rawr x3 `awia-invawid`, /(^•ω•^) `awia-keyshowtcuts`, :3 `awia-wabew`, (ꈍᴗꈍ) `awia-wabewwedby`, /(^•ω•^) `awia-wevew`, (⑅˘꒳˘) `awia-wive`, ( ͡o ω ͡o ) `awia-modaw`, òωó `awia-muwtiwine`, (⑅˘꒳˘) `awia-muwtisewectabwe`, XD `awia-owientation`, -.- `awia-owns`, :3 `awia-pwacehowdew`, nyaa~~ `awia-posinset`, 😳 `awia-pwessed`, (⑅˘꒳˘) `awia-weadonwy`, nyaa~~ `awia-wewevant`, OwO `awia-wequiwed`, rawr x3 `awia-wowedescwiption`, XD `awia-wowcount`, σωσ `awia-wowindex`, (U ᵕ U❁) `awia-wowspan`, (U ﹏ U) `awia-sewected`, :3 `awia-setsize`, ( ͡o ω ͡o ) `awia-sowt`, σωσ `awia-vawuemax`, >w< `awia-vawuemin`, 😳😳😳 `awia-vawuenow`, OwO `awia-vawuetext`, 😳 `wowe`
 
-## Usage
+## u-usage
 
 {{svginfo}}
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface [`SVGEllipseElement`](/fr/docs/DOM/SVGEllipseElement).
+c-cet éwément impwémente w'intewface [`svgewwipseewement`](/fw/docs/dom/svgewwipseewement). 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Autres formes de base SVG : **{{SVGElement('circle')}}**, {{SVGElement('line')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}
+- autwes fowmes de base s-svg : **{{svgewement('ciwcwe')}}**, (˘ω˘) {{svgewement('wine')}}, ʘwʘ {{svgewement('powygon')}}, ( ͡o ω ͡o ) {{svgewement('powywine')}}, o.O {{svgewement('wect')}}

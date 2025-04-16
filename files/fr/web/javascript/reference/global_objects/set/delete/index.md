@@ -1,83 +1,83 @@
 ---
-title: Set.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Set/delete
+titwe: set.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`delete()`** permet de retirer un élément donné d'un objet `Set`.
+w-wa méthode **`dewete()`** p-pewmet de wetiwew u-un éwément d-donné d'un o-objet `set`. -.-
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype.dewete()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+```js i-intewactive-exampwe
+c-const set1 = nyew set();
+set1.add({ x: 10, 🥺 y: 20 }).add({ x: 20, o.O y: 30 });
 
-// Delete any point with `x > 10`.
-set1.forEach((point) => {
-  if (point.x > 10) {
-    set1.delete(point);
+// d-dewete any point with `x > 10`. /(^•ω•^)
+set1.foweach((point) => {
+  i-if (point.x > 10) {
+    set1.dewete(point);
   }
 });
 
-console.log(set1.size);
-// Expected output: 1
+c-consowe.wog(set1.size);
+// expected output: 1
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-monSet.delete(valeur);
+monset.dewete(vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : Ce paramètre est obligatoire. Il représente la valeur de l'élément qu'on souhaite retirer de l'objet `Set`.
+- `vaweuw`
+  - : ce p-pawamètwe est o-obwigatoiwe. nyaa~~ iw wepwésente wa vaweuw de w'éwément qu'on souhaite wetiwew de w'objet `set`. nyaa~~
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-`true` si un élément de l'objet `Set` a été retiré lors de l'opération, `false` sinon.
+`twue` si un éwément de w'objet `set` a été wetiwé wows d-de w'opéwation, :3 `fawse` sinon. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `delete()`
+### u-utiwisew wa m-méthode `dewete()`
 
 ```js
-var monSet = new Set();
-monSet.add("toto");
+v-vaw monset = nyew set();
+monset.add("toto");
 
-monSet.delete("truc"); // Renvoie false. Aucun élément "truc" n'a pu être supprimé.
-monSet.delete("toto"); // Renvoie true.  L'élément a pu être supprimé.
+m-monset.dewete("twuc"); // wenvoie fawse. (˘ω˘) aucun éwément "twuc" n-ny'a pu êtwe suppwimé. ^^
+monset.dewete("toto"); // wenvoie twue. :3  w'éwément a pu êtwe s-suppwimé. -.-
 
-monSet.has("toto"); // Renvoie false. L'élément "toto" ne fait plus partie de l'ensemble.
+monset.has("toto"); // wenvoie fawse. 😳 w-w'éwément "toto" n-nye fait p-pwus pawtie de w'ensembwe. mya
 ```
 
-### Utiliser `delete()` avec `forEach()`
+### utiwisew `dewete()` avec `foweach()`
 
 ```js
-var objetSet = new Set();
-objetSet.add({ x: 10, y: 20 }); // On ajoute un nouvel objet dans l'ensemble
-objetSet.add({ x: 20, y: 30 }); // On ajoute un nouvel objet dans l'ensemble
+vaw objetset = nyew s-set();
+objetset.add({ x-x: 10, (˘ω˘) y: 20 }); // on a-ajoute un nyouvew o-objet dans w'ensembwe
+objetset.add({ x-x: 20, >_< y: 30 }); // on ajoute u-un nyouvew objet dans w'ensembwe
 
-// On supprime les points de l'ensemble pour lesquels
-// x est supérieur à 10
-objetSet.forEach(function (point) {
-  if (point.x > 10) {
-    objetSet.delete(point);
+// on suppwime w-wes points de w'ensembwe p-pouw wesquews
+// x est supéwieuw à 10
+o-objetset.foweach(function (point) {
+  i-if (point.x > 10) {
+    objetset.dewete(point);
   }
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.clear()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.cweaw()")}}

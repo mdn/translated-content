@@ -1,30 +1,30 @@
 ---
-title: Notification.renotify
-slug: Web/API/Notification/renotify
+titwe: nyotification.wenotify
+swug: web/api/notification/wenotify
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews}}{{secuwecontext_headew}}
 
-La propriété en lecture seule **`renotify`** de l'interface {{domxref ("Notification")}} spécifie si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne, comme spécifié comme définis à l'aide de l'option `renotify` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.
+w-wa pwopwiété e-en wectuwe s-seuwe **`wenotify`** d-de w'intewface {{domxwef ("notification")}} s-spécifie si w-w'utiwisateuw d-doit êtwe nyotifié apwès qu'une nyouvewwe nyotification wempwace w'ancienne, c-comme spécifié comme définis à w'aide de w'option `wenotify` w-wows de wa cwéation de wa nyotification à w-w'aide du constwucteuw {{domxwef ("notification.notification"," nyotification()")}}. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-Notification.renotify;
+n-nyotification.wenotify;
 ```
 
-### Valeur
+### vaweuw
 
-Un {{domxref("Boolean")}}. `false` est la valeur par défaut; `true` oblige la notification à renotifier l'utilisateur.
+un {{domxwef("boowean")}}. nyaa~~ `fawse` e-est wa vaweuw paw d-défaut; `twue` obwige wa nyotification à wenotifiew w'utiwisateuw. /(^•ω•^)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation de l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [utiwisation de w'api nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api)

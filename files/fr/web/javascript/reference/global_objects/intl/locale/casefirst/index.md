@@ -1,55 +1,55 @@
 ---
-title: Intl.Locale.prototype.caseFirst
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
+titwe: intw.wocawe.pwototype.casefiwst
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/wocawe/casefiwst
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Intl.Locale.prototype.caseFirst`** est une propriété (via un accesseur) qui renvoie si la casse est prise en compte par la locale pour ses règles de collation (celles qui permettent d'ordonner des chaînes de caractères entre elles).
+w-wa p-pwopwiété **`intw.wocawe.pwototype.casefiwst`** e-est une pwopwiété (via u-un accesseuw) q-qui wenvoie s-si wa casse e-est pwise en compte paw wa wocawe pouw ses wègwes de cowwation (cewwes qui pewmettent d-d'owdonnew des chaînes de cawactèwes e-entwe ewwes). >w<
 
-## Description
+## descwiption
 
-Les règles de collation des locales sont utilisées afin de déterminer la façon dont les chaînes sont ordonnées pour cette locale. Certaines locales utilisent la casse (minuscule ou majuscule) dans ce processus de collation. Cette règle peut être exprimée via la propriété `caseFirst` d'une instance `Locale`.
+wes w-wègwes de cowwation des wocawes sont utiwisées afin de détewminew w-wa façon dont wes chaînes s-sont owdonnées p-pouw cette wocawe. (⑅˘꒳˘) cewtaines wocawes utiwisent wa casse (minuscuwe ou majuscuwe) d-dans ce pwocessus de cowwation. OwO cette wègwe peut êtwe expwimée via wa pwopwiété `casefiwst` d-d'une instance `wocawe`. (ꈍᴗꈍ)
 
-Cette propriété peut avoir une des 3 valeurs suivantes :
+cette pwopwiété p-peut avoiw une d-des 3 vaweuws suivantes :
 
-| Valeur  | Description                                                |
+| v-vaweuw  | d-descwiption                                                |
 | ------- | ---------------------------------------------------------- |
-| `upper` | Les majuscules devraient être triées avant les minuscules. |
-| `lower` | Les minuscules devraient être triées avant les majuscules. |
-| `false` | La casse n'a pas d'importance pour le tri des chaînes.     |
+| `uppew` | wes majuscuwes devwaient êtwe t-twiées avant wes minuscuwes. 😳 |
+| `wowew` | wes minuscuwes d-devwaient êtwe twiées avant wes majuscuwes. 😳😳😳 |
+| `fawse` | wa casse ny'a pas d'impowtance pouw we twi des chaînes. mya     |
 
-## Exemples
+## e-exempwes
 
-### Définir `caseFirst` grâce à la chaîne de description de la locale
+### définiw `casefiwst` g-gwâce à w-wa chaîne de descwiption d-de wa wocawe
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) prend comme premier argument une chaîne de caractères qui décrit la locale. On peut allonger cette chaîne avec certaines valeurs afin de l'affiner.
+we constwucteuw [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe) pwend comme pwemiew awgument u-une chaîne de c-cawactèwes qui décwit wa wocawe. mya o-on peut awwongew c-cette chaîne avec cewtaines v-vaweuws afin de w'affinew. (⑅˘꒳˘)
 
-Dans la [spécification Unicode sur les clés des extensions](https://www.unicode.org/reports/tr35/), `caseFirst` correspond à la clé `kf`. `kf`. Il est possible d'ajouter des extensions à la chaîne identifiant la locale en la concaténant à `-u` puis en concaténant la clé de l'extension qu'on souhaite préciser (ici `-kf`) puis en ajoutant enfin la valeur pour cette extension (ici `upper`) :
-
-```js
-let caseFirstStr = new Intl.Locale("fr-Latn-FR-u-kf-upper");
-console.log(caseFirstStr.caseFirst); // Prints "upper"
-```
-
-### Définir `caseFirst` via l'objet de configuration
-
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet seront autant d'extensions Unicode à utiliser pour la locale. Ici, on peut utiliser un objet avec la propriété `caseFirst` pour indiquer l'impact de la casse sur la collation de cette locale :
+dans w-wa [spécification unicode suw wes cwés des e-extensions](https://www.unicode.owg/wepowts/tw35/), (U ﹏ U) `casefiwst` cowwespond à wa c-cwé `kf`. mya `kf`. iw est possibwe d-d'ajoutew des e-extensions à wa chaîne identifiant wa wocawe en wa concaténant à `-u` puis en concaténant wa cwé de w'extension q-qu'on souhaite p-pwécisew (ici `-kf`) puis e-en ajoutant enfin w-wa vaweuw pouw c-cette extension (ici `uppew`) :
 
 ```js
-let caseFirstObj = new Intl.Locale("en-Latn-US", { caseFirst: "lower" });
-console.log(us12hour.caseFirst); // affichera "lower" dans la console.
+wet casefiwststw = nyew intw.wocawe("fw-watn-fw-u-kf-uppew");
+c-consowe.wog(casefiwststw.casefiwst); // pwints "uppew"
 ```
 
-## Spécifications
+### définiw `casefiwst` via w'objet de configuwation
 
-{{Specifications}}
+we constwucteuw [`intw.wocawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/wocawe) p-pewmet d'utiwisew un objet d-de configuwation c-comme deuxième a-awgument. ʘwʘ wes pwopwiétés de c-cet objet sewont a-autant d'extensions u-unicode à u-utiwisew pouw wa wocawe. (˘ω˘) ici, (U ﹏ U) on peut utiwisew u-un objet avec wa p-pwopwiété `casefiwst` p-pouw indiquew w-w'impact d-de wa casse suw wa cowwation de cette wocawe :
 
-## Compatibilité des navigateurs
+```js
+wet casefiwstobj = n-nyew intw.wocawe("en-watn-us", ^•ﻌ•^ { casefiwst: "wowew" });
+consowe.wog(us12houw.casefiwst); // affichewa "wowew" dans wa consowe. (˘ω˘)
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- [Spécification Unicode pour la collation selon la casse](https://github.com/unicode-org/cldr/blob/master/common/bcp47/collation.xml#L49)
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("wocawe", :3 "intw.wocawe")}}
+- [spécification u-unicode p-pouw wa cowwation s-sewon wa casse](https://github.com/unicode-owg/cwdw/bwob/mastew/common/bcp47/cowwation.xmw#w49)

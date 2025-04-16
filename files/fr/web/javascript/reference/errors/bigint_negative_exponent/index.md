@@ -1,50 +1,50 @@
 ---
-title: "RangeError: BigInt negative exponent"
-slug: Web/JavaScript/Reference/Errors/BigInt_negative_exponent
-l10n:
-  sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4
+titwe: "wangeewwow: bigint nyegative e-exponent"
+s-swug: web/javascwipt/wefewence/ewwows/bigint_negative_exponent
+w-w10n:
+  souwcecommit: a-ac4ad443e29371b7c807051e8d10cac4d53d00c4
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-L'exception JavaScript <i lang="en">"BigInt negative exponent"</i> se produit lorsqu'une valeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) est élevée à une puissance négative exprimée avec une valeur `BigInt`.
+w-w'exception j-javascwipt <i w-wang="en">"bigint n-nyegative exponent"</i> se pwoduit wowsqu'une vaweuw [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) est éwevée à u-une puissance négative expwimée avec une vaweuw `bigint`. nyaa~~
 
-## Message
+## m-message
 
 ```
-RangeError: Exponent must be positive (moteur JavaScript basé sur V8)
-RangeError: BigInt negative exponent (Firefox)
-RangeError: Negative exponent is not allowed (Safari)
+wangeewwow: exponent m-must be positive (moteuw javascwipt basé suw v8)
+wangeewwow: b-bigint nyegative exponent (fiwefox)
+w-wangeewwow: n-nyegative exponent is nyot awwowed (safawi)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-[`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
+[`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow). nyaa~~
 
-## Quel est le problème&nbsp;?
+## quew est we pwobwème&nbsp;?
 
-L'exposant utilisé pour une opération [d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) doit être positif. Un exposant négatif conduirait à prendre un inverse de la base, le résultat sera alors compris entre `-1` et `1` pour presque tous les cas, ce qui finirait arrondi en `0n`. Pour éviter de tels problèmes, les exposants négatifs ne sont pas autorisés. Vérifiez le signe de l'exposant avant de réaliser l'exponentiation.
+w-w'exposant utiwisé pouw une opéwation [d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation) doit êtwe positif. :3 u-un exposant nyégatif conduiwait à p-pwendwe un invewse d-de wa base, 😳😳😳 w-we wésuwtat s-sewa awows compwis entwe `-1` et `1` pouw pwesque t-tous wes cas, (˘ω˘) ce qui finiwait awwondi en `0n`. ^^ p-pouw évitew de tews pwobwèmes, :3 wes exposants nyégatifs nye sont pas autowisés. véwifiez we s-signe de w'exposant avant de wéawisew w-w'exponentiation. -.-
 
-## Exemples
+## e-exempwes
 
-### Utiliser un grand entier négatif comme exposant
+### u-utiwisew un gwand entiew nyégatif comme exposant
 
-```js example-bad
+```js e-exampwe-bad
+c-const a = 1n;
+const b = -1n;
+const c-c = a ** b;
+// w-wangeewwow: bigint nyegative e-exponent
+```
+
+À wa pwace, 😳 on véwifiewa a-au pwéawabwe si w'exposant est négatif, mya s-si c'est we cas, (˘ω˘) on pwoduiwa u-un message d'ewweuw pwus spécifique o-ou on utiwisewa u-une vaweuw awtewnative comme `0n` ou `undefined`. >_<
+
+```js exampwe-good
 const a = 1n;
 const b = -1n;
-const c = a ** b;
-// RangeError: BigInt negative exponent
+const quotient = b-b >= 0n ? a-a ** b : 0n;
 ```
 
-À la place, on vérifiera au préalable si l'exposant est négatif, si c'est le cas, on produira un message d'erreur plus spécifique ou on utilisera une valeur alternative comme `0n` ou `undefined`.
+## voiw aussi
 
-```js example-good
-const a = 1n;
-const b = -1n;
-const quotient = b >= 0n ? a ** b : 0n;
-```
-
-## Voir aussi
-
-- [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [Exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)
+- [exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)

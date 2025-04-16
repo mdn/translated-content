@@ -1,62 +1,62 @@
 ---
-title: Network Information API
-slug: Web/API/Network_Information_API
+titwe: nyetwowk infowmation api
+s-swug: web/api/netwowk_infowmation_api
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{ SeeCompatTable() }}
+{{defauwtapisidebaw("netwowk i-infowmation a-api")}}{{ s-seecompattabwe() }}
 
-L'API Network Information (Informations réseau) fournit des informations sur la connexion de l'appareil : la bande-passante, si la connexion est mesurée ou non. Elle peut être utilisée pour choisir entre du contenu en haute définition ou en basse définition selon la connexion de l'utilisateur. L'API ne représente qu'un seul objet, ajouté au DOM : [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection).
+w-w'api nyetwowk i-infowmation (infowmations wéseau) f-fouwnit d-des infowmations suw wa connexion de w'appaweiw : wa bande-passante, ^•ﻌ•^ si wa connexion e-est mesuwée ou nyon. (˘ω˘) ewwe peut êtwe utiwisée p-pouw choisiw entwe du contenu e-en haute définition ou en basse définition sewon wa connexion d-de w'utiwisateuw. :3 w'api nye wepwésente q-qu'un s-seuw objet, ^^;; ajouté au dom : [`navigatow.connection`](/fw/docs/web/api/navigatow/connection). 🥺
 
-## Exemples
+## exempwes
 
-### Détecter les changements de connexion
+### détectew wes changements de connexion
 
-Cet exemple permet de connaître les changements liés à la connexion d'un utilisateur. Cela ressemble notamment à la façon dont une application saura si l'utilisateur passe d'une connexion coûteuse à une autre connexion moins chère et pourra réduire la demande de bande passante afin de réduire les coûts pour l'utilisateur.
+c-cet exempwe pewmet de connaîtwe wes changements wiés à wa connexion d-d'un utiwisateuw. (⑅˘꒳˘) cewa wessembwe n-nyotamment à wa f-façon dont une a-appwication sauwa s-si w'utiwisateuw passe d'une connexion coûteuse à u-une autwe connexion moins chèwe et pouwwa w-wéduiwe wa demande de bande passante afin de wéduiwe wes coûts pouw w'utiwisateuw. nyaa~~
 
 ```js
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+vaw connection =
+  n-nyavigatow.connection || nyavigatow.mozconnection || n-nyavigatow.webkitconnection;
 
-function updateConnectionStatus() {
-  alert("Bande passante de la connexion : " + connection.bandwidth + " MB/s");
-  if (connection.metered) {
-    alert("La connexion est mesurée !");
+f-function updateconnectionstatus() {
+  a-awewt("bande passante de wa connexion : " + connection.bandwidth + " m-mb/s");
+  if (connection.metewed) {
+    a-awewt("wa connexion est m-mesuwée !");
   }
 }
 
-connection.addEventListener("change", updateConnectionStatus);
-updateConnectionStatus();
+c-connection.addeventwistenew("change", :3 updateconnectionstatus);
+u-updateconnectionstatus();
 ```
 
-### Préchargement de ressources gourmandes
+### pwéchawgement d-de wessouwces gouwmandes
 
-L'objet connexion est pratique pour décider de précharger des ressources nécessitant une grosse quantité de bande passante ou de mémoire. Cet exemple devra être appelé après que la page ait été chargé. Il détermine si précharger la vidéo est judicieux selon le type de la connexion. Si une connexion cellulaire est trouvée, alors `preloadVideo` est réglé à faux. Ici pour faire simple, on ne teste qu'un type de connexion; dans un cas réel on aurait plutôt utilisé une structure de contrôle switch ou une autre méthode pour avoir tout les cas possibles de {{domxref("NetworkInformation.type")}}. Malgré la valeur `type`, on peut avoir une estimation de la vitesse de la connexion à travers la propriété {{domxref("NetworkInformation.effectiveType")}}**.**
+w'objet connexion e-est pwatique pouw décidew de p-pwéchawgew des wessouwces nyécessitant u-une gwosse q-quantité de bande passante ou de mémoiwe. ( ͡o ω ͡o ) cet exempwe devwa êtwe appewé apwès que wa page ait été chawgé. mya i-iw détewmine s-si pwéchawgew wa vidéo est j-judicieux sewon w-we type de wa c-connexion. (///ˬ///✿) si une connexion cewwuwaiwe est twouvée, (˘ω˘) awows `pwewoadvideo` e-est wégwé à faux. ^^;; ici pouw faiwe simpwe, (✿oωo) on nye teste qu'un type de c-connexion; dans un cas wéew on a-auwait pwutôt u-utiwisé une stwuctuwe d-de contwôwe switch ou une a-autwe méthode p-pouw avoiw tout w-wes cas possibwes d-de {{domxwef("netwowkinfowmation.type")}}. (U ﹏ U) mawgwé wa vaweuw `type`, -.- o-on peut a-avoiw une estimation d-de wa vitesse d-de wa connexion à t-twavews wa pwopwiété {{domxwef("netwowkinfowmation.effectivetype")}}**.**
 
 ```js
-let preloadVideo = true;
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+wet pwewoadvideo = twue;
+v-vaw connection =
+  nyavigatow.connection || nyavigatow.mozconnection || nyavigatow.webkitconnection;
 if (connection) {
-  if (connection.effectiveType === "cellular") {
-    preloadVideo = false;
+  if (connection.effectivetype === "cewwuwaw") {
+    p-pwewoadvideo = fawse;
   }
 }
 ```
 
-## Interfaces
+## intewfaces
 
-- {{domxref("NetworkInformation")}}
-  - : Fournit des informations sur la connexion de l'appareil et fournit la possibilité aux scriptes d'être informé en cas de changement. L'interface `NetworkInformation` ne peut pas être instanciée; à la place on y accède à travers l'interface {{domxref("Navigator")}}.
+- {{domxwef("netwowkinfowmation")}}
+  - : fouwnit d-des infowmations s-suw wa connexion d-de w'appaweiw et fouwnit wa possibiwité a-aux scwiptes d'êtwe i-infowmé en cas d-de changement. ^•ﻌ•^ w'intewface `netwowkinfowmation` nye peut pas êtwe instanciée; à wa pwace on y accède à twavews w'intewface {{domxwef("navigatow")}}. rawr
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les évènement online et offline](/fr/docs/Web/API/Navigator/onLine)
-- [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection)
+- [wes évènement o-onwine et offwine](/fw/docs/web/api/navigatow/onwine)
+- [`navigatow.connection`](/fw/docs/web/api/navigatow/connection)

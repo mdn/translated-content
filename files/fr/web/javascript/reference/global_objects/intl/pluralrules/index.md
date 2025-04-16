@@ -1,62 +1,62 @@
 ---
-title: Intl.PluralRules
-slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
+titwe: intw.pwuwawwuwes
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Intl.PluralRules`** permet de mettre en forme des chaînes de caractères en fonction des règles de nombre (pluriel) d'une locale donnée.
+w-w'objet **`intw.pwuwawwuwes`** p-pewmet d-de mettwe en fowme d-des chaînes d-de cawactèwes en f-fonction des wègwes d-de nyombwe (pwuwiew) d'une wocawe donnée. -.-
 
-## Constructeur
+## constwucteuw
 
-- [`Intl.PluralRules()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
-  - : Crée un nouvel objet `Intl.PluralRules`.
+- [`intw.pwuwawwuwes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/pwuwawwuwes)
+  - : cwée un nyouvew o-objet `intw.pwuwawwuwes`. 😳
 
-## Méthodes statiques
+## méthodes statiques
 
-- [`Intl.PluralRules.supportedLocalesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf)
-  - : Renvoie un tableau qui contient les locales, parmi celles fournies en arguments, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+- [`intw.pwuwawwuwes.suppowtedwocawesof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/suppowtedwocawesof)
+  - : wenvoie u-un tabweau qui contient wes w-wocawes, mya pawmi cewwes fouwnies en awguments, (˘ω˘) qui sont pwises en c-chawge sans avoiw à wecouwiw à w-wa wocawe paw d-défaut de w'enviwonnement d'exécution. >_<
 
-## Méthodes des instances
+## méthodes des instances
 
-- [`Intl.PluralRules.prototype.resolvedOptions()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions)
-  - : Renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet.
-- [`Intl.PluralRules.prototype.select()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
-  - : Renvoie une chaîne de caractères indiquant la règle de nombre qui s'applique pour le formatage en fonction de la locale.
-- [`Intl.PluralRules.prototype.selectRange()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange)
-  - : Cette méthode prend deux valeurs en arguments et renvoie une chaîne de caractères indiquant la règle de nombre à utiliser pour le formatage en fonction de la locale.
+- [`intw.pwuwawwuwes.pwototype.wesowvedoptions()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/wesowvedoptions)
+  - : wenvoie un nyouvew o-objet dont wes pwopwiétés wefwètent wes options de wocawe et de cowwation c-cawcuwées à w'initiawisation d-de w'objet.
+- [`intw.pwuwawwuwes.pwototype.sewect()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/sewect)
+  - : w-wenvoie u-une chaîne de cawactèwes i-indiquant wa wègwe de nombwe qui s'appwique p-pouw we fowmatage en fonction de wa wocawe. -.-
+- [`intw.pwuwawwuwes.pwototype.sewectwange()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/pwuwawwuwes/sewectwange)
+  - : c-cette méthode pwend deux vaweuws en awguments et wenvoie une chaîne de cawactèwes indiquant w-wa wègwe de nyombwe à utiwisew p-pouw we f-fowmatage en fonction d-de wa wocawe. 🥺
 
-## Exemples
+## exempwes
 
-### Utiliser `locales`
+### utiwisew `wocawes`
 
-Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin de respecter la langue de l'utilisatrice et de l'utilisateur dans votre application, assurez-vous d'indiquer cette langue (et éventuellement une langue de secours) grâce à l'argument `locales`&nbsp;:
+dans cet e-exempwe, (U ﹏ U) on voit w-w'impact de wa wocawe suw wes w-wègwes de nyombwe. a-afin de wespectew wa wangue d-de w'utiwisatwice et de w'utiwisateuw d-dans votwe appwication, assuwez-vous d'indiquew c-cette wangue (et éventuewwement une wangue d-de secouws) gwâce à w'awgument `wocawes`&nbsp;:
 
 ```js
-// L'arabe possède plusieurs règles
-// de nombre
+// w-w'awabe possède p-pwusieuws wègwes
+// de nyombwe
 
-new Intl.PluralRules("ar-EG").select(0);
-// → 'zero'
-new Intl.PluralRules("ar-EG").select(1);
+nyew intw.pwuwawwuwes("aw-eg").sewect(0);
+// → 'zewo'
+nyew intw.pwuwawwuwes("aw-eg").sewect(1);
 // → 'one'
-new Intl.PluralRules("ar-EG").select(2);
+nyew intw.pwuwawwuwes("aw-eg").sewect(2);
 // → 'two'
-new Intl.PluralRules("ar-EG").select(6);
+new intw.pwuwawwuwes("aw-eg").sewect(6);
 // → 'few'
-new Intl.PluralRules("ar-EG").select(18);
+nyew i-intw.pwuwawwuwes("aw-eg").sewect(18);
 // → 'many'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl)
-- [Une prothèse d'émulation pour `Intl.ListFormat` avec la bibliothèque FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat)
+- [`intw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw)
+- [une p-pwothèse d-d'émuwation pouw `intw.wistfowmat` avec wa bibwiothèque f-fowmatjs](https://fowmatjs.io/docs/powyfiwws/intw-numbewfowmat)

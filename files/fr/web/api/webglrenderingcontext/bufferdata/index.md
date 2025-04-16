@@ -1,107 +1,107 @@
 ---
-title: WebGLRenderingContext.bufferData()
-slug: Web/API/WebGLRenderingContext/bufferData
+titwe: webgwwendewingcontext.buffewdata()
+swug: w-web/api/webgwwendewingcontext/buffewdata
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) initialise et crée le magasin de données de l'objet tampon.
+w-wa méthode **`webgwwendewingcontext.buffewdata()`** d-de w'[api w-webgw](/fw/docs/web/api/webgw_api) i-initiawise e-et cwée we magasin d-de données d-de w'objet tampon. o.O
 
-## Syntaxe
-
-```js
-// WebGL1:
-void gl.bufferData(cible, taille, utilisation);
-void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
-void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
-
-// WebGL2:
-void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
-```
-
-### Paramètres
-
-- cible
-
-  - : Un {{domxref ("GLenum")}} spécifiant le point de liaison (cible). Valeurs possibles :
-
-    - `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de sommet, des données de coordonnées de texture ou des données de couleurs de sommet ;
-    - `gl.ELEMENT_ARRAY_BUFFER` : tampon utilisé pour les indices d'éléments ;
-    - lors de l'utilisation d'un {{domxref ("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
-      - `gl.COPY_READ_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
-      - `gl.COPY_WRITE_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
-      - `gl.TRANSFORM_FEEDBACK_BUFFER` : tampon pour les opérations de retour de transformation ;
-      - `gl.UNIFORM_BUFFER` : tampon utilisé pour stocker des blocs uniform&nbsp;;
-      - `gl.PIXEL_PACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels ;
-      - `gl.PIXEL_UNPACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels.
-
-- taille
-  - : Un {{domxref("GLsizeiptr")}} définissant la taille du magasin de données de l'objet tampon.
-- donneesSrc {{optional_inline}}
-  - : Un {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}} ou l'un des types de tableau typés {{domxref("ArrayBufferView")}} à copier dans le magasin de données. Si `null`, un magasin de données est quand même créé, mais son contenu n'est ni initialisé, ni défini.
-- utilisation
-
-  - : Un {{domxref("GLenum")}} indiquant le modèle d'utilisation du magasin de données. Valeurs possibles :
-
-    - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
-    - `gl.DYNAMIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
-    - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent&nbsp;; du contenu est écrit dans le tampon, mais non lu ;
-    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
-      - `gl.STATIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
-      - `gl.DYNAMIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
-      - `gl.STREAM_READ`&nbsp;: le contenu du tampon est susceptible de ne pas être utilisé souvent ; du contenu est lu depuis le tampon, mais non écrit ;
-      - `gl.STATIC_COPY` : le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur ;
-      - `gl.DYNAMIC_COPY`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur ;
-      - `gl.STREAM_COPY`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur.
-
-- decalageSrc
-  - : Un {{domxref("GLuint")}} indiquant le décalage d'indice d'élément où commencer à lire dans le tampon.
-- `longueur` {{optional_inline}}
-  - : Un {{domxref("GLuint")}} valant 0 par défaut.
-
-### Valeur retournée
-
-Aucune.
-
-### Exceptions
-
-- Une erreur `gl.OUT_OF_MEMORY` est déclenchée si le contexte ne peut pas créer un magasin de données de la `taille` indiquée.
-- Une erreur `gl.INVALID_VALUE` est déclenchée si `taille` est négative.
-- Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` ou `utilisation` ne sont pas l'un des enums autorisés.
-
-## Exemples
-
-### Utilisation de `bufferData`
+## syntaxe
 
 ```js
-var canevas = document.getElementById("canevas");
-var gl = canevas.getContext("webgl");
-var tampon = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, tampon);
-gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);
+// webgw1:
+void gw.buffewdata(cibwe, mya taiwwe, 🥺 u-utiwisation);
+void gw.buffewdata(cibwe, awwaybuffew? d-donneesswc, ^^;; utiwisation);
+v-void gw.buffewdata(cibwe, :3 awwaybuffewview donneesswc, (U ﹏ U) utiwisation);
+
+// webgw2:
+void gw.buffewdata(cibwe, OwO awwaybuffewview donneesswc, 😳😳😳 u-utiwisation, decawageswc, (ˆ ﻌ ˆ)♡ w-wongueuw);
 ```
 
-### Récupération de l'information de tampon
+### p-pawamètwes
 
-Pour vérifier l'utilisation du tampon en cours et la taille du tampon, utiliser la méthode {{domxref("WebGLRenderingContext.getBufferParameter()")}}.
+- cibwe
+
+  - : un {{domxwef ("gwenum")}} spécifiant we point de wiaison (cibwe). XD v-vaweuws possibwes :
+
+    - `gw.awway_buffew` : tampon contenant des attwibuts de sommet, (ˆ ﻌ ˆ)♡ t-tews que des coowdonnées de sommet, ( ͡o ω ͡o ) d-des données d-de coowdonnées d-de textuwe ou d-des données de couweuws de sommet ;
+    - `gw.ewement_awway_buffew` : tampon utiwisé p-pouw wes indices d'éwéments ;
+    - wows d-de w'utiwisation d'un {{domxwef ("webgw2wendewingcontext", rawr x3 "webgw context 2", nyaa~~ "", >_< 1)}}, wes vaweuws suivantes sont en outwe disponibwes :
+
+      - `gw.copy_wead_buffew` : t-tampon pouw wa copie d-d'un objet tampon à u-un autwe ;
+      - `gw.copy_wwite_buffew` : t-tampon pouw wa copie d'un objet tampon à un autwe ;
+      - `gw.twansfowm_feedback_buffew` : t-tampon pouw wes o-opéwations de wetouw de twansfowmation ;
+      - `gw.unifowm_buffew` : t-tampon u-utiwisé pouw stockew des bwocs u-unifowm&nbsp;;
+      - `gw.pixew_pack_buffew` : tampon utiwisé p-pouw wes opéwations de twansfewt de pixews ;
+      - `gw.pixew_unpack_buffew` : t-tampon utiwisé pouw wes opéwations d-de twansfewt de pixews. ^^;;
+
+- t-taiwwe
+  - : un {{domxwef("gwsizeiptw")}} d-définissant wa taiwwe du magasin de données de w'objet tampon. (ˆ ﻌ ˆ)♡
+- donneesswc {{optionaw_inwine}}
+  - : un {{jsxwef("awwaybuffew")}}, ^^;; {{jsxwef("shawedawwaybuffew")}} ou w'un des types d-de tabweau typés {{domxwef("awwaybuffewview")}} à c-copiew dans we magasin de d-données. (⑅˘꒳˘) si `nuww`, rawr x3 u-un magasin d-de données est quand même cwéé, (///ˬ///✿) mais son contenu ny'est nyi i-initiawisé, 🥺 nyi défini.
+- utiwisation
+
+  - : un {{domxwef("gwenum")}} indiquant we modèwe d'utiwisation d-du magasin de données. >_< v-vaweuws possibwes :
+
+    - `gw.static_dwaw`&nbsp;: w-we contenu d-du tampon est susceptibwe d'êtwe u-utiwisé souvent m-mais de nye p-pas changew souvent ; d-du contenu est écwit dans we tampon, UwU mais n-non wu ;
+    - `gw.dynamic_dwaw`&nbsp;: w-we contenu d-du tampon e-est susceptibwe d-d'êtwe souvent utiwisé et de changew souvent ; du contenu est écwit d-dans we tampon, >_< mais nyon wu ;
+    - `gw.stweam_dwaw` : we contenu du tampon est susceptibwe de nye pas êtwe u-utiwisé souvent&nbsp;; du contenu est écwit dans we tampon, -.- m-mais nyon wu ;
+    - w-wows de w-w'utiwisation d'un {{domxwef("webgw2wendewingcontext", mya "webgw 2 context", >w< "", 1)}}, w-wes vaweuws suivantes sont en o-outwe disponibwes :
+
+      - `gw.static_wead`&nbsp;: w-we contenu du tampon est susceptibwe d'êtwe utiwisé souvent et de nye pas changew souvent ; d-du contenu est wu depuis we t-tampon, (U ﹏ U) mais nyon écwit ;
+      - `gw.dynamic_wead`&nbsp;: we c-contenu du tampon e-est susceptibwe d'êtwe utiwisé souvent et de c-changew souvent ; d-du contenu est wu depuis we tampon, 😳😳😳 m-mais nyon écwit ;
+      - `gw.stweam_wead`&nbsp;: w-we contenu du tampon est susceptibwe de nye pas êtwe utiwisé souvent ; d-du contenu est w-wu depuis we tampon, o.O m-mais nyon écwit ;
+      - `gw.static_copy` : we contenu d-du tampon est susceptibwe d-d'êtwe utiwisé souvent e-et de nye pas changew souvent ; aucun contenu ny'est écwit ou wu paw w'utiwisateuw ;
+      - `gw.dynamic_copy`&nbsp;: w-we contenu d-du tampon est susceptibwe d'êtwe utiwisé s-souvent et de changew s-souvent ; aucun contenu ny'est écwit ou wu paw w'utiwisateuw ;
+      - `gw.stweam_copy`&nbsp;: w-we contenu du tampon est susceptibwe d'êtwe utiwisé souvent et de nye pas c-changew souvent ; aucun contenu ny'est écwit o-ou wu paw w'utiwisateuw. òωó
+
+- d-decawageswc
+  - : un {{domxwef("gwuint")}} indiquant we décawage d'indice d-d'éwément o-où commencew à wiwe dans we tampon. 😳😳😳
+- `wongueuw` {{optionaw_inwine}}
+  - : un {{domxwef("gwuint")}} v-vawant 0 paw défaut. σωσ
+
+### v-vaweuw wetouwnée
+
+aucune. (⑅˘꒳˘)
+
+### exceptions
+
+- une ewweuw `gw.out_of_memowy` e-est décwenchée si we contexte n-ne peut pas cwéew u-un magasin de données de wa `taiwwe` i-indiquée. (///ˬ///✿)
+- une ewweuw `gw.invawid_vawue` e-est décwenchée s-si `taiwwe` e-est nyégative. 🥺
+- une ewweuw `gw.invawid_enum` e-est décwenchée s-si `cibwe` ou `utiwisation` nye sont pas w'un des e-enums autowisés. OwO
+
+## e-exempwes
+
+### u-utiwisation de `buffewdata`
 
 ```js
-gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
-gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
+vaw canevas = d-document.getewementbyid("canevas");
+vaw g-gw = canevas.getcontext("webgw");
+v-vaw tampon = gw.cweatebuffew();
+gw.bindbuffew(gw.awway_buffew, >w< tampon);
+gw.buffewdata(gw.awway_buffew, 🥺 1024, gw.static_dwaw);
 ```
 
-## Spécifications
+### wécupéwation d-de w'infowmation d-de tampon
 
-{{Specifications}}
+p-pouw véwifiew w-w'utiwisation du tampon en couws e-et wa taiwwe du tampon, nyaa~~ utiwisew wa méthode {{domxwef("webgwwendewingcontext.getbuffewpawametew()")}}. ^^
 
-## Compatibilité des navigateurs
+```js
+gw.getbuffewpawametew(gw.awway_buffew, >w< gw.buffew_size);
+gw.getbuffewpawametew(gw.awway_buffew, OwO g-gw.buffew_usage);
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.bufferSubData()")}}
-- Autres tampons : {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.buffewsubdata()")}}
+- autwes tampons : {{domxwef("webgwfwamebuffew")}}, XD {{domxwef("webgwwendewbuffew")}}

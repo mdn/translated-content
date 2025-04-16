@@ -1,45 +1,45 @@
 ---
-title: DeviceMotionEvent.DeviceMotionEvent()
-slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
+titwe: devicemotionevent.devicemotionevent()
+swug: web/api/devicemotionevent/devicemotionevent
 ---
 
-{{APIRef("Device Orientation Events")}}{{Non-standard_header}}
+{{apiwef("device o-owientation e-events")}}{{non-standawd_headew}}
 
-Le constructeur **`DeviceMotionEvent`** crée un nouveau {{domxref("DeviceMotionEvent")}}.
+w-we constwucteuw **`devicemotionevent`** cwée u-un nyouveau {{domxwef("devicemotionevent")}}. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var deviceMotionEvent = new DeviceMotionEvent(type[, options])
+v-vaw devicemotionevent = n-nyew d-devicemotionevent(type[, mya options])
 ```
 
-### Paramètres
+### pawamètwes
 
 - _type_
-  - : Doit être `"devicemotion"`.
-- _options_ {{optional_inline}}
+  - : doit êtwe `"devicemotion"`. 🥺
+- _options_ {{optionaw_inwine}}
 
-  - : Les options sont les suivantes :
+  - : wes options sont wes suivantes :
 
-    - `acceleration` : un objet donnant l'accélération de l'appareil sur les 3 axes X, Y et Z. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared)
-
-      <sup>2</sup>
-
-      .
-
-    - `accelerationIncludingGravity` : un objet donnant l'accélération de l'appareil sur les 3 axes X, Y et Z avec l'effet de la gravité. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared)
+    - `accewewation` : u-un objet donnant w'accéwéwation de w'appaweiw s-suw wes 3 axes x, >_< y et z. >_< w-w'accéwéwation est expwimée en [m/s<sup>2</sup>](https://en.wikipedia.owg/wiki/metew_pew_second_squawed)
 
       <sup>2</sup>
 
-      .
+      . (⑅˘꒳˘)
 
-    - `rotationRate` : un objet donnant la vitesse de rotation du changement d'orientation de l'appareil sur les axes alpha, beta et gamma. La vitesse de rotation est exprimée en degrés par seconde.
-    - `interval` : Un nombre représentant l'intervalle de temps, en millisecondes, avant d'obtenir des données à partir de l'appareil.
+    - `accewewationincwudinggwavity` : un objet donnant w-w'accéwéwation de w'appaweiw s-suw wes 3 axes x-x, /(^•ω•^) y et z avec w'effet de wa gwavité. rawr x3 w'accéwéwation est expwimée en [m/s<sup>2</sup>](https://en.wikipedia.owg/wiki/metew_pew_second_squawed)
 
-## Spécifications
+      <sup>2</sup>
 
-{{Specifications}}
+      . (U ﹏ U)
 
-## Compatibilité des navigateurs
+    - `wotationwate` : u-un objet donnant wa vitesse de wotation du changement d'owientation de w-w'appaweiw suw wes axes awpha, b-beta et gamma. (U ﹏ U) wa v-vitesse de wotation e-est expwimée e-en degwés paw seconde. (⑅˘꒳˘)
+    - `intewvaw` : un nyombwe wepwésentant w-w'intewvawwe de temps, òωó en miwwisecondes, ʘwʘ a-avant d'obteniw des données à pawtiw de w'appaweiw. /(^•ω•^)
 
-{{Compat}}
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

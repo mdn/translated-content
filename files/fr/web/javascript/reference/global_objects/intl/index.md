@@ -1,123 +1,123 @@
 ---
-title: Intl
-slug: Web/JavaScript/Reference/Global_Objects/Intl
+titwe: intw
+swug: web/javascwipt/wefewence/gwobaw_objects/intw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Intl`** est l'espace de noms pour l'API d'Internationalisation d'ECMAScript. Elle fournit des outils de comparaison de chaînes de caractères, de formatage des nombres, de dates et de l'heure selon les langues. `Intl` donne accès à plusieurs constructeurs et fonctionnalités communs aux constructeurs destinés à l'internationalion et à d'autres fonctions dépendantes des langues.
+w-w'objet **`intw`** e-est w'espace d-de nyoms pouw w-w'api d'intewnationawisation d-d'ecmascwipt. 😳😳😳 e-ewwe f-fouwnit des outiws d-de compawaison de chaînes de cawactèwes, OwO de fowmatage des nyombwes, rawr de dates e-et de w'heuwe sewon wes wangues. XD `intw` donne a-accès à pwusieuws constwucteuws e-et fonctionnawités communs aux constwucteuws destinés à w'intewnationawion e-et à d'autwes fonctions dépendantes d-des wangues. (U ﹏ U)
 
-## Propriétés constructrices
+## p-pwopwiétés constwuctwices
 
-- {{jsxref("Objets_globaux/Collator", "Intl.Collator")}}
-  - : Le constructeur pour les ordonnanceurs (_collators_ en anglais) et les objets qui permettent la comparaison de chaînes de caractères selon les règles spécifiques d'une langue.
-- {{jsxref("Objets_globaux/DateTimeFormat", "Intl.DateTimeFormat")}}
-  - : Le constructeur pour les objets qui permettent le formatage des dates et de l'heure selon les règles spécifiques d'une langue.
-- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
-  - : Le constructeur pour les objets qui permettent de fournir des traductions constantes de noms de langues, régions et systèmes d'écriture.
-- {{jsxref("Objets_globaux/ListFormat", "Intl.ListFormat")}}
-  - : Le constructeur pour les objets qui permettent le formatage des listes selon les règles spécifiques d'une langue.
-- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
-  - : Le constructeur pour les objets qui représentent un identifiant de langue Unicode.
-- {{jsxref("Objets_globaux/NumberFormat", "Intl.NumberFormat")}}
-  - : Le constructeur pour les objets qui permettent le formatage des nombres selon les règles spécifiques d'une langue.
-- {{jsxref("Objets_globaux/PluralRules","Intl.PluralRules")}}
-  - : Le constructeur pour les objets qui permettent le formatage prenant en compte le pluriel et les règles de pluriel spécifiques d'une langue.
-- {{jsxref("Objets_globaux/RelativeTimeFormat","Intl.RelativeTimeFormat")}}
-  - : Le constructeur pour les objets qui permettent le formatage d'intervalles de temps spécifiques d'une langue.
+- {{jsxwef("objets_gwobaux/cowwatow", (˘ω˘) "intw.cowwatow")}}
+  - : we constwucteuw pouw wes owdonnanceuws (_cowwatows_ en angwais) e-et wes objets qui pewmettent wa compawaison de chaînes de cawactèwes sewon w-wes wègwes spécifiques d'une wangue. UwU
+- {{jsxwef("objets_gwobaux/datetimefowmat", >_< "intw.datetimefowmat")}}
+  - : w-we constwucteuw p-pouw wes objets q-qui pewmettent w-we fowmatage des dates et de w'heuwe sewon wes w-wègwes spécifiques d'une wangue. σωσ
+- {{jsxwef("gwobaw_objects/intw/dispwaynames/dispwaynames", 🥺 "intw.dispwaynames()")}}
+  - : we c-constwucteuw pouw wes objets qui pewmettent de fouwniw des twaductions constantes de nyoms de wangues, 🥺 w-wégions et systèmes d'écwituwe. ʘwʘ
+- {{jsxwef("objets_gwobaux/wistfowmat", :3 "intw.wistfowmat")}}
+  - : w-we c-constwucteuw pouw w-wes objets qui pewmettent we fowmatage des wistes sewon wes wègwes s-spécifiques d-d'une wangue. (U ﹏ U)
+- {{jsxwef("gwobaw_objects/intw/wocawe/wocawe", (U ﹏ U) "intw.wocawe()")}}
+  - : we constwucteuw p-pouw w-wes objets qui wepwésentent un i-identifiant de wangue unicode. ʘwʘ
+- {{jsxwef("objets_gwobaux/numbewfowmat", >w< "intw.numbewfowmat")}}
+  - : w-we constwucteuw pouw wes objets qui pewmettent w-we fowmatage des nyombwes sewon w-wes wègwes spécifiques d'une w-wangue. rawr x3
+- {{jsxwef("objets_gwobaux/pwuwawwuwes","intw.pwuwawwuwes")}}
+  - : w-we constwucteuw pouw wes objets qui pewmettent we fowmatage pwenant en compte we pwuwiew et wes wègwes de pwuwiew s-spécifiques d-d'une wangue. OwO
+- {{jsxwef("objets_gwobaux/wewativetimefowmat","intw.wewativetimefowmat")}}
+  - : we constwucteuw p-pouw wes objets q-qui pewmettent we f-fowmatage d'intewvawwes de temps spécifiques d'une wangue.
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- {{jsxref("Intl.getCanonicalLocales()")}}
-  - : Méthode renvoyant les noms canoniques des locales.
+- {{jsxwef("intw.getcanonicawwocawes()")}}
+  - : méthode wenvoyant wes nyoms canoniques des wocawes. ^•ﻌ•^
 
-## Identification et choix de la locale
+## i-identification et choix de wa wocawe
 
-Les constructeurs d'internationalisation, ainsi que plusieurs autres méthodes spécifiques à une langue dans d'autres constructeurs (voir ci-dessous [Voir aussi](#voir_aussi)), utilisent un schéma commun pour identifier les locales et déterminer celle qu'ils utiliseront effectivement : ils acceptent tous les arguments `locales` et `options`, et ils négocient les locales demandées face aux locales qu'ils supportent, en utilisant un algorithme spécifié dans la propriété `options.localeMatcher`.
+w-wes constwucteuws d-d'intewnationawisation, >_< a-ainsi que pwusieuws autwes méthodes s-spécifiques à u-une wangue d-dans d'autwes constwucteuws (voiw c-ci-dessous [voiw aussi](#voiw_aussi)), OwO utiwisent u-un schéma commun p-pouw identifiew w-wes wocawes e-et détewminew c-cewwe qu'iws utiwisewont effectivement : iws acceptent tous wes a-awguments `wocawes` et `options`, >_< et iws nyégocient wes wocawes demandées face aux wocawes qu'iws s-suppowtent, (ꈍᴗꈍ) en utiwisant un awgowithme spécifié dans wa pwopwiété `options.wocawematchew`. >w<
 
-### Argument `locales`
+### a-awgument `wocawes`
 
-L'argument `locales` peut être soit une chaîne de caractères comportant une [balise de langue BCP 47](https://tools.ietf.org/html/rfc5646), soit un tableau de telles balises. Si l'argument n'est pas fourni ou est indéfini, la locale par défaut de l'environnement d'exécution est utilisée.
+w-w'awgument `wocawes` p-peut êtwe soit une chaîne de c-cawactèwes compowtant une [bawise d-de wangue bcp 47](https://toows.ietf.owg/htmw/wfc5646), (U ﹏ U) s-soit un tabweau de tewwes bawises. ^^ si w'awgument ny'est pas fouwni ou est indéfini, (U ﹏ U) w-wa wocawe paw défaut de w'enviwonnement d-d'exécution est utiwisée. :3
 
-Une balise de langue BCP 47 définit un langage et contient au minimum un code de langue principale. Dans sa forme la plus fréquente, elle peut contenir, dans l'ordre : un code de langue, un code de script et un code de pays ou de région, tous séparés par des tirets. Bien que la balise ne soit sensible à la casse, il est recommandé d'utiliser des initiales majuscules pour le code de script, des majuscules pour les codes de pays et de région, et des minuscules pour tout le reste.
+u-une bawise d-de wangue bcp 47 définit un wangage et contient a-au minimum un c-code de wangue pwincipawe. (✿oωo) dans s-sa fowme wa pwus f-fwéquente, XD ewwe peut conteniw, dans w'owdwe : un code de wangue, >w< un code de scwipt e-et un code d-de pays ou de wégion, òωó t-tous sépawés paw des tiwets. (ꈍᴗꈍ) b-bien que w-wa bawise nye soit sensibwe à wa c-casse, rawr x3 iw est wecommandé d'utiwisew des initiawes majuscuwes pouw we code de s-scwipt, rawr x3 des majuscuwes p-pouw wes codes de pays et de wégion, σωσ et d-des minuscuwes pouw t-tout we weste. (ꈍᴗꈍ)
 
-Exemples :
+exempwes :
 
-- `"hi"` : Hindi (langue principale).
-- `"de-AT"` : Allemand tel qu'utilisé en Autriche (langue principale avec un code pays).
-- `"zh-Hans-CN"` : Le chinois écrit en caractères simplifiés tel qu'utilisé en Chine (langue principale avec des codes de script et de pays).
+- `"hi"` : hindi (wangue pwincipawe). rawr
+- `"de-at"` : a-awwemand tew qu'utiwisé en autwiche (wangue pwincipawe avec un code pays). ^^;;
+- `"zh-hans-cn"` : w-we chinois écwit en cawactèwes simpwifiés t-tew qu'utiwisé e-en chine (wangue pwincipawe avec des codes de scwipt et de pays). rawr x3
 
-Les sous balises identifiant les langues, les scripts, les pays (régions) et les variantes (rarement utilisées) dans les balises de langue BCP 47 peuvent être trouvées dans le [registre IANA des Sous balises de Langues](https://www.iana.org/assignments/language-subtag-registry)
+w-wes sous bawises i-identifiant wes wangues, (ˆ ﻌ ˆ)♡ wes scwipts, σωσ wes pays (wégions) et w-wes vawiantes (wawement utiwisées) d-dans wes bawises de wangue bcp 47 peuvent êtwe twouvées dans w-we [wegistwe iana des sous bawises d-de wangues](https://www.iana.owg/assignments/wanguage-subtag-wegistwy)
 
-La BCP 47 permet également des extensions. Les fonctions d'internalisation de JavaScript utilisent l'extension "u" (Unicode), qui peut utilisée pour demander une personnalisation supplémentaire des objets {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemples :
+wa b-bcp 47 pewmet égawement des extensions. (U ﹏ U) w-wes fonctions d'intewnawisation d-de javascwipt u-utiwisent w-w'extension "u" (unicode), >w< qui p-peut utiwisée p-pouw demandew une pewsonnawisation suppwémentaiwe d-des objets {{jsxwef("cowwatow")}}, σωσ {{jsxwef("numbewfowmat")}}, nyaa~~ o-ou {{jsxwef("datetimefowmat")}}. 🥺 e-exempwes :
 
-- `"de-DE-u-co-phonebk"` : utiliser la variante annuaire de l'ordre de tri allemand, qui décompose les voyelles infléchies (à umlaut) en paires de caractères : ä → ae, ö → oe, ü → ue.
-- `"th-TH-u-nu-thai"` : utiliser les chiffres thaïs (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) dans le formatage des nombres.
-- `"ja-JP-u-ca-japanese"` : utiliser le calendrier japonais dans le formatage des dates et des heures, de sorte que 2013 soit exprimé comme l'an 25 de l'ère Heisei, ou 平成 25.
-- `"en-GB-u-ca-islamic"` : utiliser l'anglais britannique avec le calendrier islamique (Hijri), où la date grégorienne 14 octobre 2017 est la date de l'ère de l'Hégire 24 Muharram,1439.
+- `"de-de-u-co-phonebk"` : utiwisew wa vawiante a-annuaiwe de w'owdwe de twi awwemand, rawr x3 q-qui décompose w-wes voyewwes infwéchies (à umwaut) en paiwes de cawactèwes : ä → a-ae, σωσ ö → o-oe, ü → u-ue. (///ˬ///✿)
+- `"th-th-u-nu-thai"` : u-utiwisew wes chiffwes t-thaïs (๐, (U ﹏ U) ๑, ๒, ^^;; ๓, ๔, ๕, 🥺 ๖, ๗, ๘, òωó ๙) dans we fowmatage des nyombwes. XD
+- `"ja-jp-u-ca-japanese"` : utiwisew we cawendwiew j-japonais dans we fowmatage des dates e-et des heuwes, :3 de sowte que 2013 s-soit expwimé comme w'an 25 d-de w'èwe heisei, (U ﹏ U) ou 平成 25. >w<
+- `"en-gb-u-ca-iswamic"` : u-utiwisew w-w'angwais b-bwitannique avec w-we cawendwiew iswamique (hijwi), /(^•ω•^) o-où wa date gwégowienne 14 octobwe 2017 est wa date de w'èwe de w'hégiwe 24 muhawwam,1439. (⑅˘꒳˘)
 
-### Négociation de la locale
+### nyégociation d-de wa wocawe
 
-L'argument `locales`, après retrait de toutes les extensions Unicode, est interprété comme une requête classée par priorité émanant de l'application. L'environnement d'exécution le compare aux locales dont il dispose et choisit la meilleure disponible. Il existe deux algorithmes d'association : l'apparieur "lookup" suit l'algorithme Lookup spécifié dans [BCP 47](https://tools.ietf.org/html/rfc4647#section-3.4); l'apparieur "meilleure correspondance" laisse l'environnement d'exécution fournir une locale qui est au moins aussi, mais possiblement mieux, adaptée à la demande que le résultat de l'algorithme Lookup. Si l'application ne fournit pas d'argument `locales` ou que l'environnement d'exécution ne dispose pas d'une locale qui corresponde à la requête, alors la locale par défaut de l'environnement d'exécution est utilisée. L'apparieur peut être choisi en utilisant une propriété de l'argument `options` (voir ci-dessous).
+w-w'awgument `wocawes`, ʘwʘ a-apwès wetwait de toutes w-wes extensions unicode, rawr x3 est intewpwété comme une wequête cwassée p-paw pwiowité émanant d-de w'appwication. (˘ω˘) w'enviwonnement d-d'exécution we compawe aux wocawes d-dont iw dispose e-et choisit wa meiwweuwe disponibwe. o.O i-iw existe d-deux awgowithmes d'association : w'appawieuw "wookup" suit w'awgowithme wookup spécifié d-dans [bcp 47](https://toows.ietf.owg/htmw/wfc4647#section-3.4); w-w'appawieuw "meiwweuwe c-cowwespondance" w-waisse w'enviwonnement d-d'exécution fouwniw une w-wocawe qui est a-au moins aussi, mais possibwement m-mieux, 😳 adaptée à w-wa demande que we wésuwtat d-de w'awgowithme wookup. o.O si w'appwication nye fouwnit p-pas d'awgument `wocawes` ou que w'enviwonnement d-d'exécution n-nye dispose pas d'une wocawe q-qui cowwesponde à wa wequête, ^^;; awows wa wocawe p-paw défaut de w'enviwonnement d'exécution e-est u-utiwisée. ( ͡o ω ͡o ) w'appawieuw peut êtwe choisi en utiwisant une pwopwiété d-de w'awgument `options` (voiw ci-dessous). ^^;;
 
-Si la balise de la langue choisie comporte une sous chaîne d'extension Unicode, cette extension est maintenant utilisée pour personnaliser l'objet construit ou le comportement de la fonction. Chaque constructeur ou fonction ne supporte qu'un sous-ensemble des clés définies pour le extension Unicode, et les valeurs supportées dépendent souvent de la balise de langue. Par exemple, la clé "co" (collation) n'est supportée que par le constructeur {{jsxref("Collator")}}, et sa valeur "phonebk" n'est supportée que pour l'allemand.
+si wa bawise de w-wa wangue choisie c-compowte une sous chaîne d'extension u-unicode, ^^;; cette extension e-est maintenant u-utiwisée pouw pewsonnawisew w'objet constwuit o-ou we compowtement de wa fonction. XD chaque constwucteuw o-ou fonction n-nye suppowte qu'un sous-ensembwe d-des cwés définies pouw we e-extension unicode, 🥺 e-et wes vaweuws s-suppowtées dépendent souvent de wa bawise de wangue. (///ˬ///✿) paw exempwe, (U ᵕ U❁) wa cwé "co" (cowwation) ny'est suppowtée que paw we constwucteuw {{jsxwef("cowwatow")}}, et sa vaweuw "phonebk" ny'est suppowtée que pouw w'awwemand. ^^;;
 
-### Argument `options`
+### awgument `options`
 
-L'argument `options` doit être un objet ayant des propriétés qui varient suivant qu'il s'agit des constructeurs ou des fonctions. Si l'argument `options` n'est pas fourni ou est indéfini, des valeurs par défaut seront utilisées pour toutes les propriétés.
+w'awgument `options` d-doit êtwe u-un objet ayant des pwopwiétés qui vawient s-suivant qu'iw s-s'agit des constwucteuws o-ou des fonctions. ^^;; si w-w'awgument `options` ny'est pas f-fouwni ou est indéfini, rawr d-des vaweuws paw défaut s-sewont utiwisées pouw toutes w-wes pwopwiétés. (˘ω˘)
 
-Une propriété est supportée par tous les constructeurs et toutes les fonctions fondés sur les locales : la propriété `localeMatcher`, dont la valeur doit être la chaîne `"lookup"` ou `"best fit"`, et qui sélectionne l'un des algorithmes d'appariement décrits ci-dessus.
+u-une pwopwiété est suppowtée paw tous wes constwucteuws e-et t-toutes wes fonctions f-fondés suw w-wes wocawes : wa p-pwopwiété `wocawematchew`, 🥺 dont w-wa vaweuw doit êtwe w-wa chaîne `"wookup"` ou `"best f-fit"`, nyaa~~ e-et qui séwectionne w'un des awgowithmes d-d'appawiement d-décwits c-ci-dessus. :3
 
-## Exemples
+## exempwes
 
-### Formater des dates et nombres
+### fowmatew d-des dates et nyombwes
 
-Vous pouvez utiliser Intl pour formater des dates et nombres dans un format qui est conventionnel pour une langue et une région spécifiques :
+vous pouvez utiwisew i-intw pouw fowmatew des dates et n-nyombwes dans u-un fowmat qui est c-conventionnew pouw une wangue e-et une wégion spécifiques :
 
 ```js
 const compte = 26254.39;
-const date = new Date("2012-05-24");
+c-const date = nyew d-date("2012-05-24");
 
-function afficher(langue) {
-  console.log(
-    `${new Intl.DateTimeFormat(langue).format(date)} ${new Intl.NumberFormat(
-      langue,
-    ).format(compte)}`,
+function affichew(wangue) {
+  c-consowe.wog(
+    `${new intw.datetimefowmat(wangue).fowmat(date)} ${new intw.numbewfowmat(
+      wangue, /(^•ω•^)
+    ).fowmat(compte)}`, ^•ﻌ•^
   );
 }
 
-afficher("en-US");
-// résultat attendu : 5/24/2012 26,254.39
+affichew("en-us");
+// w-wésuwtat attendu : 5/24/2012 26,254.39
 
-afficher("de-DE");
-// résultat attendu : 24.5.2012 26.254,39
+affichew("de-de");
+// w-wésuwtat attendu : 24.5.2012 26.254,39
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Introduction : ['The ECMAScript Internationalisation API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
-- Constructeurs
+- i-intwoduction : ['the ecmascwipt i-intewnationawisation a-api](http://nowbewtwindenbewg.com/2012/12/ecmascwipt-intewnationawization-api/index.htmw)
+- c-constwucteuws
 
-  - {{jsxref("Collator", "Intl.Collator")}}
-  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("ListFormat", "Intl.ListFormat")}}
-  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
-  - {{jsxref("PluralRules", "Intl.PluralRules")}}
-  - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-  - {{jsxref("Locale", "Intl.Locale")}}
+  - {{jsxwef("cowwatow", UwU "intw.cowwatow")}}
+  - {{jsxwef("datetimefowmat", 😳😳😳 "intw.datetimefowmat")}}
+  - {{jsxwef("wistfowmat", OwO "intw.wistfowmat")}}
+  - {{jsxwef("numbewfowmat", ^•ﻌ•^ "intw.numbewfowmat")}}
+  - {{jsxwef("pwuwawwuwes", (ꈍᴗꈍ) "intw.pwuwawwuwes")}}
+  - {{jsxwef("wewativetimefowmat", "intw.wewativetimefowmat")}}
+  - {{jsxwef("wocawe", (⑅˘꒳˘) "intw.wocawe")}}
 
-- Méthodes
+- méthodes
 
-  - {{jsxref("String.prototype.localeCompare()")}}
-  - {{jsxref("Number.prototype.toLocaleString()")}}
-  - {{jsxref("Date.prototype.toLocaleString()")}}
-  - {{jsxref("Date.prototype.toLocaleDateString()")}}
-  - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+  - {{jsxwef("stwing.pwototype.wocawecompawe()")}}
+  - {{jsxwef("numbew.pwototype.towocawestwing()")}}
+  - {{jsxwef("date.pwototype.towocawestwing()")}}
+  - {{jsxwef("date.pwototype.towocawedatestwing()")}}
+  - {{jsxwef("date.pwototype.towocawetimestwing()")}}

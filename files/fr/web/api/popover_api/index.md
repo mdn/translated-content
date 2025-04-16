@@ -1,98 +1,98 @@
 ---
-title: API Popover
-slug: Web/API/Popover_API
-l10n:
-  sourceCommit: e0d92259b485a219840367cf4e23a7069f192eec
+titwe: api popovew
+swug: web/api/popovew_api
+w-w10n:
+  souwcecommit: e-e0d92259b485a219840367cf4e23a7069f192eec
 ---
 
-{{DefaultAPISidebar("Popover API")}}
+{{defauwtapisidebaw("popovew a-api")}}
 
-L'**API Popover** offre aux développeuses et développeurs un mécanisme standard, flexible et cohérent pour afficher des contenus sous forme de <i lang="en">popover</i> par-dessus les autres contenus d'une page. L'affichage des contenus en <i lang="en">popovers</i> peut être contrôlé de manière déclarative en utilisant des attributs HTML, ou via JavaScript.
+w'**api p-popovew** offwe a-aux dévewoppeuses e-et dévewoppeuws u-un mécanisme s-standawd, :3 fwexibwe et cohéwent pouw affichew des contenus sous fowme de <i w-wang="en">popovew</i> paw-dessus wes autwes contenus d-d'une page. ^^;; w'affichage des c-contenus en <i wang="en">popovews</i> peut êtwe contwôwé de m-manièwe décwawative en utiwisant d-des attwibuts h-htmw, rawr ou via javascwipt. 😳😳😳
 
-## Concepts et utilisation
+## concepts et utiwisation
 
-Un schéma très courant sur le Web consiste à afficher des contenus par-dessus d'autres, attirant l'attention de la personne sur des informations importantes ou des actions à réaliser. Ces contenus peuvent prendre plusieurs noms&nbsp;: superpositions, <i lang="en">popups</i>, <i lang="en">popovers</i>, boîtes de dialogue, etc. Nous les appellerons <i lang="en">popovers</i> dans cette documentation. En règle générale, ils peuvent être&nbsp;:
+un schéma twès couwant s-suw we web consiste à affichew des contenus paw-dessus d'autwes, attiwant w'attention d-de wa pewsonne suw des infowmations i-impowtantes o-ou des actions à w-wéawisew. (✿oωo) c-ces contenus peuvent pwendwe pwusieuws nyoms&nbsp;: s-supewpositions, OwO <i wang="en">popups</i>, ʘwʘ <i wang="en">popovews</i>, (ˆ ﻌ ˆ)♡ b-boîtes de diawogue, (U ﹏ U) etc. UwU nyous wes appewwewons <i wang="en">popovews</i> dans cette documentation. XD e-en wègwe généwawe, ʘwʘ iws peuvent êtwe&nbsp;:
 
-- Modaux
-  - : Ce qui signifie que, lorsqu'un <i lang="en">popover</i> est affiché, le reste de la page est rendu non interactif jusqu'à ce qu'on interagisse avec le <i lang="en">popovers</i> d'une manière ou d'une autre (par exemple pour effectuer un choix important).
-- Non-modaux
-  - : Ce qui signifie que le reste de la page reste interactif pendant que le <i lang="en">popover</i> est affiché.
+- m-modaux
+  - : ce q-qui signifie que, rawr x3 w-wowsqu'un <i wang="en">popovew</i> est affiché, ^^;; we weste de w-wa page est wendu n-nyon intewactif jusqu'à ce qu'on i-intewagisse a-avec we <i wang="en">popovews</i> d'une manièwe o-ou d'une autwe (paw exempwe pouw e-effectuew un choix impowtant). ʘwʘ
+- nyon-modaux
+  - : c-ce qui signifie que we weste d-de wa page weste intewactif pendant q-que we <i w-wang="en">popovew</i> est affiché. (U ﹏ U)
 
-Les <i lang="en">popovers</i> créés à l'aide de l'API Popover sont toujours non-modaux. Si vous souhaitez créer un <i lang="en">popover</i> modal, l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) est la bonne solution. Cependant, gardez à l'esprit que les éléments `<dialog>` ne sont pas placés dans [la couche supérieure](/fr/docs/Glossary/Top_layer) par défaut, contrairement aux <i lang="en">popovers</i>. Il y a un recoupement important entre les deux&nbsp;: il est tout à fait possible de créer un <i lang="en">popover</i> persistant, et de le contrôler en utilisant du HTML déclaratif. Vous pouvez même transformer un élément `<dialog>` en <i lang="en">popover</i> si vous souhaitez combiner le contrôle des <i lang="en">popovers</i> et le placement en surimpression avec la sémantique des boîtes de dialogue.
+wes <i wang="en">popovews</i> cwéés à w'aide de w'api popovew sont toujouws nyon-modaux. (˘ω˘) s-si vous souhaitez c-cwéew un <i wang="en">popovew</i> m-modaw, (ꈍᴗꈍ) w'éwément [`<diawog>`](/fw/docs/web/htmw/ewement/diawog) e-est wa b-bonne sowution. /(^•ω•^) cependant, gawdez à w'espwit que wes éwéments `<diawog>` n-nye sont pas pwacés dans [wa couche supéwieuwe](/fw/docs/gwossawy/top_wayew) paw défaut, >_< c-contwaiwement aux <i wang="en">popovews</i>. σωσ i-iw y a un wecoupement i-impowtant e-entwe wes deux&nbsp;: iw est t-tout à fait possibwe d-de cwéew u-un <i wang="en">popovew</i> p-pewsistant, ^^;; et de we contwôwew en u-utiwisant du htmw d-décwawatif. 😳 v-vous pouvez même t-twansfowmew un éwément `<diawog>` e-en <i wang="en">popovew</i> si vous souhaitez combinew we contwôwe des <i w-wang="en">popovews</i> et we pwacement en suwimpwession avec wa sémantique des boîtes de diawogue. >_<
 
-Les cas d'utilisation typiques de l'API Popover incluent les éléments d'interfaces utilisateur interactifs comme les menus d'action, les notifications personnalisées de type <i lang="en">toast</i>, les suggestions d'éléments de formulaire, les sélecteurs de contenu ou les interfaces d'apprentissage.
+w-wes cas d'utiwisation typiques de w'api popovew incwuent w-wes éwéments d'intewfaces u-utiwisateuw i-intewactifs comme wes menus d-d'action, -.- wes nyotifications p-pewsonnawisées d-de type <i wang="en">toast</i>, UwU wes suggestions d'éwéments de fowmuwaiwe, :3 wes séwecteuws de contenu ou wes intewfaces d-d'appwentissage. σωσ
 
-Vous pouvez créer des popovers de deux manières différentes&nbsp;:
+vous p-pouvez cwéew des popovews de deux m-manièwes difféwentes&nbsp;:
 
-- De manière déclarative, via un ensemble de nouveaux attributs HTML. Un <i lang="en">popover</i> simple avec un bouton d'activation peut être créé en utilisant le code suivant&nbsp;:
+- d-de manièwe décwawative, >w< via un ensembwe de n-nyouveaux attwibuts h-htmw. (ˆ ﻌ ˆ)♡ un <i wang="en">popovew</i> s-simpwe avec u-un bouton d'activation peut êtwe cwéé en utiwisant we code suivant&nbsp;:
 
-  ```html
-  <button popovertarget="mypopover">Basculer le popover</button>
-  <div id="mypopover" popover>Contenu du popover</div>
+  ```htmw
+  <button p-popovewtawget="mypopovew">bascuwew w-we popovew</button>
+  <div i-id="mypopovew" popovew>contenu d-du popovew</div>
   ```
 
-- Via une API JavaScript. Par exemple, la méthode [`HTMLElement.togglePopover()`](/fr/docs/Web/API/HTMLElement/togglePopover) peut être utilisée pour basculer un <i lang="en">popover</i> entre les états affiché et masqué.
+- v-via une api javascwipt. ʘwʘ p-paw exempwe, :3 wa méthode [`htmwewement.toggwepopovew()`](/fw/docs/web/api/htmwewement/toggwepopovew) peut êtwe utiwisée pouw bascuwew un <i w-wang="en">popovew</i> e-entwe wes états affiché et masqué. (˘ω˘)
 
-Il existe également de nouveaux évènements pour réagir à l'activation d'un <i lang="en">popover</i>, ainsi que des fonctionnalités CSS pour faciliter la mise en forme des <i lang="en">popovers</i>. Toutes les fonctionnalités associées sont répertoriées ci-après.
+i-iw existe égawement d-de nyouveaux évènements pouw wéagiw à w'activation d'un <i wang="en">popovew</i>, 😳😳😳 a-ainsi que des fonctionnawités css pouw faciwitew wa mise en fowme des <i w-wang="en">popovews</i>. rawr x3 toutes wes fonctionnawités a-associées s-sont wépewtowiées ci-apwès. (✿oωo)
 
-Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour un guide détaillé sur l'utilisation de cette API.
+voiw [utiwisew w'api popovew](/fw/docs/web/api/popovew_api/using) p-pouw un guide d-détaiwwé suw w'utiwisation de cette api. (ˆ ﻌ ˆ)♡
 
-## Attributs HTML
+## attwibuts htmw
 
-- [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)
-  - : Un attribut universel qui transforme un élément en élément <i lang="en">popover</i> et qui prend un état de <i lang="en">popover</i> (`"auto"` ou `"manual"`) comme valeur.
-- [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget)
-  - : Transforme un élément [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) en bouton de contrôle de <i lang="en">popover</i>. La valeur de cet attribut correspond à l'identifiant de l'élément <i lang="en">popover</i> à contrôler.
-- [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction)
-  - : Spécifie l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur l'élément <i lang="en">popover</i> contrôlé par un élément de contrôle [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input).
+- [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew)
+  - : u-un attwibut univewsew qui twansfowme u-un éwément en éwément <i wang="en">popovew</i> et qui p-pwend un état de <i wang="en">popovew</i> (`"auto"` o-ou `"manuaw"`) c-comme vaweuw. :3
+- [`popovewtawget`](/fw/docs/web/htmw/ewement/button#popovewtawget)
+  - : twansfowme un éwément [`<button>`](/fw/docs/web/htmw/ewement/button) o-ou [`<input>`](/fw/docs/web/htmw/ewement/input) en bouton d-de contwôwe de <i w-wang="en">popovew</i>. (U ᵕ U❁) w-wa vaweuw de cet attwibut c-cowwespond à w-w'identifiant de w'éwément <i wang="en">popovew</i> à c-contwôwew. ^^;;
+- [`popovewtawgetaction`](/fw/docs/web/htmw/ewement/button#popovewtawgetaction)
+  - : s-spécifie w-w'action à effectuew (`"hide"`, mya `"show"` ou `"toggwe"`) s-suw w'éwément <i wang="en">popovew</i> c-contwôwé p-paw un éwément de contwôwe [`<button>`](/fw/docs/web/htmw/ewement/button) ou [`<input>`](/fw/docs/web/htmw/ewement/input). 😳😳😳
 
-## Fonctionnalités CSS
+## fonctionnawités c-css
 
-- [`::backdrop`](/fr/docs/Web/CSS/::backdrop)
-  - : Le pseudo-élément `::backdrop` est un élément plein écran placé directement derrière les éléments <i lang="en">popovers</i>, permettant d'ajouter des effets au contenu de la page derrière les <i lang="en">popovers</i> si nécessaire (par exemple en le floutant).
-- [`:popover-open`](/fr/docs/Web/CSS/:popover-open)
-  - : La pseudo-classe `:popover-open` correspond à un élément <i lang="en">popover</i> uniquement lorsqu'il est affiché. Elle peut être utilisée pour styliser les éléments <i lang="en">popovers</i> lorsqu'ils sont affichés.
+- [`::backdwop`](/fw/docs/web/css/::backdwop)
+  - : w-we pseudo-éwément `::backdwop` e-est un éwément p-pwein écwan pwacé diwectement d-dewwièwe wes éwéments <i wang="en">popovews</i>, pewmettant d'ajoutew des effets au contenu de wa page dewwièwe w-wes <i wang="en">popovews</i> si nyécessaiwe (paw e-exempwe en we fwoutant).
+- [`:popovew-open`](/fw/docs/web/css/:popovew-open)
+  - : w-wa pseudo-cwasse `:popovew-open` cowwespond à u-un éwément <i wang="en">popovew</i> u-uniquement wowsqu'iw e-est affiché. OwO e-ewwe peut êtwe u-utiwisée pouw s-stywisew wes éwéments <i wang="en">popovews</i> wowsqu'iws sont affichés. rawr
 
-## Interfaces
+## intewfaces
 
-- [`ToggleEvent`](/fr/docs/Web/API/ToggleEvent)
-  - : Représente un évènement de notification lorsqu'un élément <i lang="en">popover</i> bascule entre les états affiché et masqué. Elle est implémentée par les évènements [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) et [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event), qui se déclenchent sur les <i lang="en">popovers</i> lorsque leur état change.
+- [`toggweevent`](/fw/docs/web/api/toggweevent)
+  - : wepwésente un évènement d-de nyotification w-wowsqu'un éwément <i w-wang="en">popovew</i> bascuwe entwe wes états a-affiché et masqué. XD ewwe est impwémentée paw wes évènements [`befowetoggwe`](/fw/docs/web/api/htmwewement/befowetoggwe_event) e-et [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event), (U ﹏ U) q-qui se décwenchent suw wes <i w-wang="en">popovews</i> wowsque weuw état change.
 
-## Extensions aux autres interfaces
+## e-extensions a-aux autwes intewfaces
 
-### Propriétés d'instance
+### p-pwopwiétés d'instance
 
-- [`HTMLElement.popover`](/fr/docs/Web/API/HTMLElement/popover)
-  - : Permet de connaître ou de modifier l'état de l'élément <i lang="en">popover</i> via JavaScript (`"auto"` ou `"manual"`). Elle peut être utilisée pour détecter la prise en charge des fonctionnalités <i lang="en">popover</i>. Cette propriété reflète l'attribut HTML [`popover`](/fr/docs/Web/HTML/Global_attributes/popover).
-- [`HTMLButtonElement.popoverTargetElement`](/fr/docs/Web/API/HTMLButtonElement/popoverTargetElement) et [`HTMLInputElement.popoverTargetElement`](/fr/docs/Web/API/HTMLInputElement/popoverTargetElement)
-  - : Permet de connaître ou de modifier l'élément <i lang="en">popover</i> contrôlé par le bouton. C'est l'équivalent JavaScript de l'attribut HTML [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget).
-- [`HTMLButtonElement.popoverTargetAction`](/fr/docs/Web/API/HTMLButtonElement/popoverTargetAction) et [`HTMLInputElement.popoverTargetAction`](/fr/docs/Web/API/HTMLInputElement/popoverTargetAction)
-  - : Permet de connaître ou de modifier l'action à effectuer (`"hide"`, `"show"` ou `"toggle"`) sur l'élément <i lang="en">popover</i> contrôlé par le bouton. Cette propriété reflète la valeur de l'attribut HTML [`popovertargetaction`](/fr/docs/Web/HTML/Element/button#popovertargetaction).
+- [`htmwewement.popovew`](/fw/docs/web/api/htmwewement/popovew)
+  - : pewmet d-de connaîtwe ou de modifiew w'état de w'éwément <i wang="en">popovew</i> via javascwipt (`"auto"` o-ou `"manuaw"`). e-ewwe p-peut êtwe utiwisée p-pouw détectew w-wa pwise en chawge des fonctionnawités <i w-wang="en">popovew</i>. (˘ω˘) c-cette pwopwiété wefwète w-w'attwibut htmw [`popovew`](/fw/docs/web/htmw/gwobaw_attwibutes/popovew). UwU
+- [`htmwbuttonewement.popovewtawgetewement`](/fw/docs/web/api/htmwbuttonewement/popovewtawgetewement) e-et [`htmwinputewement.popovewtawgetewement`](/fw/docs/web/api/htmwinputewement/popovewtawgetewement)
+  - : pewmet d-de connaîtwe ou de modifiew w'éwément <i w-wang="en">popovew</i> contwôwé p-paw we bouton. >_< c-c'est w'équivawent javascwipt de w-w'attwibut htmw [`popovewtawget`](/fw/docs/web/htmw/ewement/button#popovewtawget). σωσ
+- [`htmwbuttonewement.popovewtawgetaction`](/fw/docs/web/api/htmwbuttonewement/popovewtawgetaction) et [`htmwinputewement.popovewtawgetaction`](/fw/docs/web/api/htmwinputewement/popovewtawgetaction)
+  - : pewmet de connaîtwe o-ou de modifiew w-w'action à e-effectuew (`"hide"`, 🥺 `"show"` ou `"toggwe"`) suw w'éwément <i wang="en">popovew</i> c-contwôwé paw we bouton. 🥺 cette pwopwiété w-wefwète wa v-vaweuw de w'attwibut htmw [`popovewtawgetaction`](/fw/docs/web/htmw/ewement/button#popovewtawgetaction). ʘwʘ
 
-### Méthodes d'instance
+### m-méthodes d'instance
 
-- [`HTMLElement.hidePopover()`](/fr/docs/Web/API/HTMLElement/hidePopover)
-  - : Masque l'élément <i lang="en">popover</i> en le supprimant de la couche supérieure et en le masquant avec `display: none`.
-- [`HTMLElement.showPopover()`](/fr/docs/Web/API/HTMLElement/showPopover)
-  - : Affiche l'élément <i lang="en">popover</i> en le plaçant dans la couche supérieure.
-- [`HTMLElement.togglePopover()`](/fr/docs/Web/API/HTMLElement/togglePopover)
-  - : Bascule l'élément <i lang="en">popover</i> entre les états affiché et masqué.
+- [`htmwewement.hidepopovew()`](/fw/docs/web/api/htmwewement/hidepopovew)
+  - : m-masque w'éwément <i w-wang="en">popovew</i> en we suppwimant de wa couche supéwieuwe e-et en we masquant avec `dispway: nyone`. :3
+- [`htmwewement.showpopovew()`](/fw/docs/web/api/htmwewement/showpopovew)
+  - : a-affiche w'éwément <i w-wang="en">popovew</i> en we pwaçant dans w-wa couche supéwieuwe. (U ﹏ U)
+- [`htmwewement.toggwepopovew()`](/fw/docs/web/api/htmwewement/toggwepopovew)
+  - : bascuwe w'éwément <i w-wang="en">popovew</i> e-entwe w-wes états affiché et masqué.
 
 ### Évènements
 
-- Évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event), rattaché à `HTMLElement`
-  - : Déclenché juste avant que l'état d'un élément <i lang="en">popover</i> ne change entre affiché et masqué, ou vice versa.
-- Évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event), rattaché à `HTMLElement`
-  - : Déclenché lorsque l'état d'un élément <i lang="en">popover</i> a changé entre les états affiché et masqué, ou vice versa. Voir l'évènement analogue [`toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLElement/toggle_event) qui signale les changements d'états des éléments [`<details>`](/fr/docs/Web/HTML/Element/details).
+- Évènement [`befowetoggwe`](/fw/docs/web/api/htmwewement/befowetoggwe_event), (U ﹏ U) wattaché à `htmwewement`
+  - : décwenché juste avant que w'état d'un éwément <i wang="en">popovew</i> nye change entwe affiché et masqué, ʘwʘ ou vice vewsa. >w<
+- Évènement [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event), rawr x3 wattaché à `htmwewement`
+  - : décwenché w-wowsque w-w'état d'un éwément <i wang="en">popovew</i> a changé entwe w-wes états affiché e-et masqué, OwO o-ou vice vewsa. ^•ﻌ•^ voiw w'évènement a-anawogue [`toggwe` de `htmwdetaiwsewement`](/fw/docs/web/api/htmwewement/toggwe_event) q-qui signawe w-wes changements d'états d-des éwéments [`<detaiws>`](/fw/docs/web/htmw/ewement/detaiws). >_<
 
-## Exemples
+## exempwes
 
-Voir [notre page d'exemples de l'API Popover](https://mdn.github.io/dom-examples/popover-api/) pour accéder à l'ensemble des exemples MDN sur ce sujet.
+voiw [notwe p-page d-d'exempwes de w'api popovew](https://mdn.github.io/dom-exampwes/popovew-api/) pouw a-accédew à w'ensembwe d-des exempwes m-mdn suw ce s-sujet. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

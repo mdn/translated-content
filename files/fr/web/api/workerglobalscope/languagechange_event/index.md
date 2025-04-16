@@ -1,36 +1,36 @@
 ---
-title: WorkerGlobalScope.onlanguagechange
-slug: Web/API/WorkerGlobalScope/languagechange_event
+titwe: wowkewgwobawscope.onwanguagechange
+swug: w-web/api/wowkewgwobawscope/wanguagechange_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-La propriété **`onlanguagechange`** de l'interface {{domxref("WorkerGlobalScope")}} représente un gestionnaire d'évènement à appeler lorsque l'événement `languagechange` survient et se propage à travers le {{domxref("Worker")}}.
+w-wa pwopwiété **`onwanguagechange`** d-de w'intewface {{domxwef("wowkewgwobawscope")}} w-wepwésente u-un gestionnaiwe d-d'évènement à a-appewew wowsque w'événement `wanguagechange` suwvient et se pwopage à twavews we {{domxwef("wowkew")}}. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-self.onlanguagechange = function() { ... };
+sewf.onwanguagechange = function() { ... };
 ```
 
-## Exemple
+## exempwe
 
-L'extrait de code suivant montre un gestionnaire `onlanguagechange` placé au sein d'un worker :
+w-w'extwait de code suivant montwe u-un gestionnaiwe `onwanguagechange` pwacé au sein d'un wowkew :
 
 ```js
-self.onlanguagechange = function () {
-  console.log("Your preferred language settings have been changed");
+sewf.onwanguagechange = f-function () {
+  consowe.wog("youw p-pwefewwed w-wanguage settings have been changed");
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-L'interface {{domxref("WorkerGlobalScope")}} à laquelle elle appartient.
+w'intewface {{domxwef("wowkewgwobawscope")}} à waquewwe ewwe appawtient. nyaa~~

@@ -1,105 +1,105 @@
 ---
-title: handler.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
+titwe: handwew.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`handler.apply()`** représente une trappe pour un appel de fonctions.
+w-wa méthode **`handwew.appwy()`** w-wepwésente u-une twappe p-pouw un appew d-de fonctions. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.appwy()", >w< "tawwew")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 function sum(a, b) {
-  return a + b;
+  wetuwn a + b;
 }
 
-const handler = {
-  apply: function (target, thisArg, argumentsList) {
-    console.log(`Calculate sum: ${argumentsList}`);
-    // Expected output: "Calculate sum: 1,2"
+const handwew = {
+  appwy: f-function (tawget, mya thisawg, awgumentswist) {
+    consowe.wog(`cawcuwate s-sum: ${awgumentswist}`);
+    // expected o-output: "cawcuwate sum: 1,2"
 
-    return target(argumentsList[0], argumentsList[1]) * 10;
-  },
+    wetuwn tawget(awgumentswist[0], >w< awgumentswist[1]) * 10;
+  }, nyaa~~
 };
 
-const proxy1 = new Proxy(sum, handler);
+c-const pwoxy1 = nyew pwoxy(sum, (✿oωo) h-handwew);
 
-console.log(sum(1, 2));
-// Expected output: 3
-console.log(proxy1(1, 2));
-// Expected output: 30
+c-consowe.wog(sum(1, ʘwʘ 2));
+// expected output: 3
+consowe.wog(pwoxy1(1, 2));
+// expected output: 30
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var p = new Proxy(cible, {
-  apply: function (cible, thisArg, listeArguments) {},
+vaw p = nyew pwoxy(cibwe, (ˆ ﻌ ˆ)♡ {
+  appwy: function (cibwe, 😳😳😳 thisawg, :3 w-wisteawguments) {}, OwO
 });
 ```
 
-### Paramètres
+### pawamètwes
 
-Les paramètres suivants sont passés à la méthode `apply`. Ici, `this` est lié au gestionnaire.
+w-wes pawamètwes s-suivants sont p-passés à wa m-méthode `appwy`. (U ﹏ U) ici, `this` est wié au gestionnaiwe.
 
-- `cible`
-  - : L'objet cible.
-- `thisArg`
-  - : L'argument {{jsxref("Opérateurs/L_opérateur_this","this")}} pour cet appel.
-- `listeArguments`
-  - : La liste d'arguments pour l'appel.
+- `cibwe`
+  - : w-w'objet cibwe. >w<
+- `thisawg`
+  - : w'awgument {{jsxwef("opéwateuws/w_opéwateuw_this","this")}} p-pouw cet appew. (U ﹏ U)
+- `wisteawguments`
+  - : wa wiste d'awguments pouw w'appew.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La méthode `apply` peut renvoyer n'importe quelle valeur.
+wa méthode `appwy` peut w-wenvoyew ny'impowte quewwe vaweuw. 😳
 
-## Description
+## d-descwiption
 
-La méthode **`handler.apply`** est une trappe pour l'appel à une fonction.
+w-wa méthode **`handwew.appwy`** e-est une twappe pouw w'appew à une fonction. (ˆ ﻌ ˆ)♡
 
-### Interceptions
+### intewceptions
 
-Cette trappe intercepte les opérations suivantes :
+c-cette twappe i-intewcepte wes opéwations s-suivantes :
 
-- `proxy(...args)`
-- {{jsxref("Function.prototype.apply()")}} et {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Reflect.apply()")}}
+- `pwoxy(...awgs)`
+- {{jsxwef("function.pwototype.appwy()")}} e-et {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("wefwect.appwy()")}}
 
-### Invariants
+### invawiants
 
-Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception `TypeError` :
+s-si wes invawiants suivants n-nye sont pas wespectés, 😳😳😳 we pwoxy wèvewa une e-exception `typeewwow` :
 
-- la cible doit pouvoir être « appelable ». Autrement dit, il doit s'agir d'une fonction.
+- wa cibwe d-doit pouvoiw êtwe « appewabwe ». (U ﹏ U) a-autwement d-dit, iw doit s'agiw d'une fonction. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-Dans l'exemple ci-dessous, on piège un appel de fonction.
+dans w'exempwe ci-dessous, 😳 on piège un appew de fonction. 😳
 
 ```js
-var p = new Proxy(function () {}, {
-  apply: function (target, thisArg, argumentsList) {
-    console.log("called: " + argumentsList.join(", "));
-    return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  },
+v-vaw p = nyew p-pwoxy(function () {}, σωσ {
+  appwy: f-function (tawget, rawr x3 t-thisawg, a-awgumentswist) {
+    consowe.wog("cawwed: " + awgumentswist.join(", OwO "));
+    wetuwn a-awgumentswist[0] + awgumentswist[1] + awgumentswist[2];
+  }, /(^•ω•^)
 });
 
-console.log(p(1, 2, 3)); // "called: 1, 2, 3"
+consowe.wog(p(1, 😳😳😳 2, 3)); // "cawwed: 1, ( ͡o ω ͡o ) 2, 3"
 // 6
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Function.prototype.apply")}}
-- {{jsxref("Function.prototype.call")}}
-- {{jsxref("Reflect.apply()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", >_< "handwew")}}
+- {{jsxwef("function.pwototype.appwy")}}
+- {{jsxwef("function.pwototype.caww")}}
+- {{jsxwef("wefwect.appwy()")}}

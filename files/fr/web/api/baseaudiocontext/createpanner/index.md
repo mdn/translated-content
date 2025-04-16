@@ -1,129 +1,129 @@
 ---
-title: BaseAudioContext.createPanner()
-slug: Web/API/BaseAudioContext/createPanner
+titwe: baseaudiocontext.cweatepannew()
+swug: w-web/api/baseaudiocontext/cweatepannew
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-La méthode `createPanner()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{domxref("PannerNode")}}, qui sert à spatialiser dans un environnement 3D un flux audio entrant.
+wa méthode `cweatepannew()` d-de w'intewface {{ d-domxwef("baseaudiocontext") }} e-est utiwisée p-pouw cwéew un nyouveau {{domxwef("pannewnode")}}, -.- qui sewt à spatiawisew dans un enviwonnement 3d u-un fwux audio entwant. ^^
 
-Le _panner node_ est spatialisé en relation avec l'{{domxref("AudioListener") }} de l'AudioContext (défini par l'attribut {{domxref("AudioContext.listener") }}), qui représente la position et l'orientation de la personne écoutant le flux audio.
+we _pannew nyode_ e-est spatiawisé en wewation a-avec w'{{domxwef("audiowistenew") }} de w'audiocontext (défini paw w'attwibut {{domxwef("audiocontext.wistenew") }}), (⑅˘꒳˘) qui wepwésente w-wa position et w'owientation d-de wa pewsonne écoutant w-we fwux audio. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-baseAudioCtx.createPanner();
+baseaudioctx.cweatepannew();
 ```
 
-### Retourne
+### wetouwne
 
-Un {{domxref("PannerNode")}}.
+un {{domxwef("pannewnode")}}. /(^•ω•^)
 
-## Exemple
+## exempwe
 
-Dans l'exemple suivant, vous pouvez voir comment la méthode `createPanner()`, l'{{domxref("AudioListener")}} et le {{domxref("PannerNode")}} peuvent être utilisés pour contrôler la spatialisation d'un flux audio. Généralement, vous définirez la position dans un espace 3D que votre écouteur et votre _panner_ (source) occupaient initialement, puis ajuster la position de l'un ou des deux au fur et à mesure de l'utilisation. Vous pourriez par exemple vouloir déplacer un personnage dans un monde de jeu vidéo, et vouloir que le rendu audio change de manière réaliste tandis que le personnage s'approche ou s'éloigne d'un diffuseur audio tel qu'une chaîne stéréo. Dans cet exemple, vous pouvez voir ceci contrôlé par les fonctions `moveRight()`, `moveLeft()`, etc., qui définissent de nouvelles valeurs pour la position du _panner_ via la fonction `PositionPanner()`.
+dans w'exempwe s-suivant, vous pouvez voiw comment wa méthode `cweatepannew()`, (U ﹏ U) w'{{domxwef("audiowistenew")}} et we {{domxwef("pannewnode")}} p-peuvent êtwe utiwisés p-pouw contwôwew w-wa spatiawisation d-d'un fwux audio. 😳😳😳 g-généwawement, >w< vous définiwez wa position dans u-un espace 3d que votwe écouteuw et votwe _pannew_ (souwce) o-occupaient initiawement, XD puis ajustew wa position de w'un ou des deux au fuw et à mesuwe de w'utiwisation. o.O v-vous pouwwiez paw exempwe v-vouwoiw dépwacew u-un pewsonnage d-dans un monde de jeu vidéo, mya et vouwoiw que we wendu audio c-change de manièwe w-wéawiste tandis que we pewsonnage s-s'appwoche o-ou s'éwoigne d'un diffuseuw audio t-tew qu'une chaîne stéwéo. d-dans cet exempwe, 🥺 vous pouvez voiw ceci contwôwé p-paw wes fonctions `movewight()`, ^^;; `moveweft()`, :3 etc., qui définissent d-de nyouvewwes vaweuws p-pouw wa position d-du _pannew_ via wa fonction `positionpannew()`. (U ﹏ U)
 
-Pour voir une implantation complète, visitez notre [exemple de panner-node](https://mdn.github.io/webaudio-examples/panner-node/) ([lisez le code source aussi !](https://github.com/mdn/webaudio-examples/tree/master/panner-node)) – cette démonstration vous transporte dans un environnement 2.5D appelé "Pièce de métal", où vous pouvez jouer un morceau sur une boom box et vous déplacer autour de celle-ci pour entendre comment le son change !
+pouw voiw une impwantation compwète, OwO visitez nyotwe [exempwe de pannew-node](https://mdn.github.io/webaudio-exampwes/pannew-node/) ([wisez we c-code souwce aussi !](https://github.com/mdn/webaudio-exampwes/twee/mastew/pannew-node)) – c-cette démonstwation v-vous twanspowte d-dans un enviwonnement 2.5d a-appewé "pièce de métaw", 😳😳😳 où vous pouvez jouew u-un mowceau suw une boom box et vous dépwacew autouw de cewwe-ci pouw entendwe comment w-we son change ! (ˆ ﻌ ˆ)♡
 
-Notez la manière dont nous avons utilisé la détection de fonctionnalité pour soit donner au navigateur les nouvelles valeurs des propriétés (comme {{domxref("AudioListener.forwardX")}}) pour définir la position, etc. s'il le permet, ou d'anciennes méthodes (comme {{domxref("AudioListener.setOrientation()")}}) s'il les permet aussi mais non les nouvelles propriétés.
+nyotez wa m-manièwe dont n-nyous avons utiwisé w-wa détection de fonctionnawité p-pouw soit d-donnew au nyavigateuw w-wes nyouvewwes v-vaweuws des pwopwiétés (comme {{domxwef("audiowistenew.fowwawdx")}}) pouw d-définiw wa position, XD e-etc. (ˆ ﻌ ˆ)♡ s'iw w-we pewmet, ( ͡o ω ͡o ) ou d'anciennes m-méthodes (comme {{domxwef("audiowistenew.setowientation()")}}) s-s'iw wes pewmet aussi mais nyon wes nyouvewwes pwopwiétés. rawr x3
 
 ```js
-// set up listener and panner position information
-var WIDTH = window.innerWidth;
-var HEIGHT = window.innerHeight;
+// s-set up wistenew and pannew position infowmation
+vaw width = window.innewwidth;
+vaw height = window.innewheight;
 
-var xPos = Math.floor(WIDTH / 2);
-var yPos = Math.floor(HEIGHT / 2);
-var zPos = 295;
+vaw xpos = math.fwoow(width / 2);
+v-vaw ypos = math.fwoow(height / 2);
+vaw zpos = 295;
 
-// define other variables
+// define o-othew vawiabwes
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+v-vaw audiocontext = w-window.audiocontext || window.webkitaudiocontext;
+v-vaw audioctx = nyew audiocontext();
 
-var panner = audioCtx.createPanner();
-panner.panningModel = "HRTF";
-panner.distanceModel = "inverse";
-panner.refDistance = 1;
-panner.maxDistance = 10000;
-panner.rolloffFactor = 1;
-panner.coneInnerAngle = 360;
-panner.coneOuterAngle = 0;
-panner.coneOuterGain = 0;
+v-vaw p-pannew = audioctx.cweatepannew();
+pannew.panningmodew = "hwtf";
+pannew.distancemodew = "invewse";
+pannew.wefdistance = 1;
+pannew.maxdistance = 10000;
+pannew.wowwofffactow = 1;
+p-pannew.coneinnewangwe = 360;
+pannew.coneoutewangwe = 0;
+pannew.coneoutewgain = 0;
 
-if (panner.orientationX) {
-  panner.orientationX.setValueAtTime(1, audioCtx.currentTime);
-  panner.orientationY.setValueAtTime(0, audioCtx.currentTime);
-  panner.orientationZ.setValueAtTime(0, audioCtx.currentTime);
-} else {
-  panner.setOrientation(1, 0, 0);
+i-if (pannew.owientationx) {
+  pannew.owientationx.setvawueattime(1, nyaa~~ a-audioctx.cuwwenttime);
+  p-pannew.owientationy.setvawueattime(0, >_< audioctx.cuwwenttime);
+  pannew.owientationz.setvawueattime(0, ^^;; a-audioctx.cuwwenttime);
+} ewse {
+  p-pannew.setowientation(1, (ˆ ﻌ ˆ)♡ 0, 0);
 }
 
-var listener = audioCtx.listener;
+vaw wistenew = a-audioctx.wistenew;
 
-if (listener.forwardX) {
-  listener.forwardX.setValueAtTime(0, audioCtx.currentTime);
-  listener.forwardY.setValueAtTime(0, audioCtx.currentTime);
-  listener.forwardZ.setValueAtTime(-1, audioCtx.currentTime);
-  listener.upX.setValueAtTime(0, audioCtx.currentTime);
-  listener.upY.setValueAtTime(1, audioCtx.currentTime);
-  listener.upZ.setValueAtTime(0, audioCtx.currentTime);
-} else {
-  listener.setOrientation(0, 0, -1, 0, 1, 0);
+i-if (wistenew.fowwawdx) {
+  wistenew.fowwawdx.setvawueattime(0, ^^;; audioctx.cuwwenttime);
+  wistenew.fowwawdy.setvawueattime(0, (⑅˘꒳˘) audioctx.cuwwenttime);
+  w-wistenew.fowwawdz.setvawueattime(-1, rawr x3 a-audioctx.cuwwenttime);
+  w-wistenew.upx.setvawueattime(0, (///ˬ///✿) audioctx.cuwwenttime);
+  w-wistenew.upy.setvawueattime(1, 🥺 a-audioctx.cuwwenttime);
+  wistenew.upz.setvawueattime(0, >_< a-audioctx.cuwwenttime);
+} ewse {
+  wistenew.setowientation(0, UwU 0, -1, 0, >_< 1, 0);
 }
 
-var source;
+vaw souwce;
 
-var play = document.querySelector(".play");
-var stop = document.querySelector(".stop");
+vaw pway = document.quewysewectow(".pway");
+v-vaw stop = d-document.quewysewectow(".stop");
 
-var boomBox = document.querySelector(".boom-box");
+vaw boombox = document.quewysewectow(".boom-box");
 
-var listenerData = document.querySelector(".listener-data");
-var pannerData = document.querySelector(".panner-data");
+v-vaw wistenewdata = d-document.quewysewectow(".wistenew-data");
+vaw pannewdata = document.quewysewectow(".pannew-data");
 
-leftBound = -xPos + 50;
-rightBound = xPos - 50;
+weftbound = -xpos + 50;
+w-wightbound = xpos - 50;
 
-xIterator = WIDTH / 150;
+xitewatow = width / 150;
 
-// listener will always be in the same place for this demo
+// wistenew wiww awways be in the same p-pwace fow this demo
 
-if (listener.positionX) {
-  listener.positionX.setValueAtTime(xPos, audioCtx.currentTime);
-  listener.positionY.setValueAtTime(yPos, audioCtx.currentTime);
-  listener.positionZ.setValueAtTime(300, audioCtx.currentTime);
-} else {
-  listener.setPosition(xPos, yPos, 300);
+if (wistenew.positionx) {
+  wistenew.positionx.setvawueattime(xpos, -.- a-audioctx.cuwwenttime);
+  w-wistenew.positiony.setvawueattime(ypos, mya audioctx.cuwwenttime);
+  wistenew.positionz.setvawueattime(300, >w< audioctx.cuwwenttime);
+} e-ewse {
+  w-wistenew.setposition(xpos, (U ﹏ U) ypos, 300);
 }
 
-listenerData.innerHTML =
-  "Listener data: X " + xPos + " Y " + yPos + " Z " + 300;
+wistenewdata.innewhtmw =
+  "wistenew data: x " + xpos + " y-y " + ypos + " z " + 300;
 
-// panner will move as the boombox graphic moves around on the screen
-function positionPanner() {
-  if (panner.positionX) {
-    panner.positionX.setValueAtTime(xPos, audioCtx.currentTime);
-    panner.positionY.setValueAtTime(yPos, audioCtx.currentTime);
-    panner.positionZ.setValueAtTime(zPos, audioCtx.currentTime);
-  } else {
-    panner.setPosition(xPos, yPos, zPos);
+// p-pannew wiww move as the boombox gwaphic moves awound on the scween
+f-function positionpannew() {
+  if (pannew.positionx) {
+    pannew.positionx.setvawueattime(xpos, 😳😳😳 a-audioctx.cuwwenttime);
+    p-pannew.positiony.setvawueattime(ypos, o.O audioctx.cuwwenttime);
+    p-pannew.positionz.setvawueattime(zpos, òωó audioctx.cuwwenttime);
+  } e-ewse {
+    pannew.setposition(xpos, 😳😳😳 y-ypos, zpos);
   }
-  pannerData.innerHTML = "Panner data: X " + xPos + " Y " + yPos + " Z " + zPos;
+  p-pannewdata.innewhtmw = "pannew data: x " + x-xpos + " y " + y-ypos + " z " + zpos;
 }
 ```
 
-> [!NOTE]
-> In terms of working out what position values to apply to the listener and panner, to make the sound appropriate to what the visuals are doing on screen, there is quite a bit of math involved, but you will soon get used to it with a bit of experimentation.
+> [!note]
+> in tewms o-of wowking out n-nyani position v-vawues to appwy to the wistenew and pannew, σωσ to m-make the sound appwopwiate to nyani t-the visuaws a-awe doing on scween, (⑅˘꒳˘) thewe is quite a bit of math invowved, (///ˬ///✿) but y-you wiww soon get u-used to it with a-a bit of expewimentation. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [utiwisew w'api web audio](/fw/docs/web/api/web_audio_api/using_web_audio_api)

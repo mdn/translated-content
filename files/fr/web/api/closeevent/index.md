@@ -1,212 +1,212 @@
 ---
-title: CloseEvent
-slug: Web/API/CloseEvent
+titwe: cwoseevent
+swug: web/api/cwoseevent
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-Un évènement `CloseEvent` est envoyé au client utilisant une [WebSocket](/fr/docs/Glossary/WebSockets) lorsque la connexion est fermée. Cet évènement est envoyé au `listener` indiqué par l'attribut `onclose` de la `WebSocket`.
+u-un évènement `cwoseevent` e-est e-envoyé au cwient u-utiwisant une [websocket](/fw/docs/gwossawy/websockets) w-wowsque w-wa connexion e-est fewmée. (˘ω˘) cet évènement est envoyé au `wistenew` indiqué paw w'attwibut `oncwose` d-de wa `websocket`. ʘwʘ
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
-  - : Construit un nouvel événement `CloseEvent`.
+- {{domxwef("cwoseevent.cwoseevent", ( ͡o ω ͡o ) "cwoseevent()")}}
+  - : constwuit u-un nyouvew événement `cwoseevent`. o.O
 
-## Propriétés
+## pwopwiétés
 
-_Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
+_cette i-intewface héwite égawement des pwopwiétés de sa mèwe, >w< {{domxwef("event")}}._
 
-- {{domxref("CloseEvent.code")}} {{readOnlyInline}}
+- {{domxwef("cwoseevent.code")}} {{weadonwyinwine}}
 
-  - : Retourne un `unsigned short` contenant le code de fermeture envoyé par le serveur. Les valeurs possibles sont données ci-dessous.
+  - : wetouwne un `unsigned s-showt` contenant we code d-de fewmetuwe envoyé p-paw we sewveuw. 😳 wes vaweuws possibwes sont données ci-dessous. 🥺
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td class="header">Status code</td>
-          <td class="header">Nom</td>
-          <td class="header">Description</td>
-        </tr>
-        <tr>
+        <tw>
+          <td c-cwass="headew">status code</td>
+          <td cwass="headew">nom</td>
+          <td cwass="headew">descwiption</td>
+        </tw>
+        <tw>
           <td><code>0</code>–<code>999</code></td>
           <td></td>
-          <td><strong>Reservé et inutilisé.</strong></td>
-        </tr>
-        <tr>
+          <td><stwong>wesewvé et inutiwisé.</stwong></td>
+        </tw>
+        <tw>
           <td><code>1000</code></td>
-          <td><code>CLOSE_NORMAL</code></td>
-          <td>Fermeture normale ; la connexion s'est terminée normalement.</td>
-        </tr>
-        <tr>
+          <td><code>cwose_nowmaw</code></td>
+          <td>fewmetuwe n-nyowmawe ; wa connexion s-s'est tewminée n-nyowmawement.</td>
+        </tw>
+        <tw>
           <td><code>1001</code></td>
-          <td><code>CLOSE_GOING_AWAY</code></td>
+          <td><code>cwose_going_away</code></td>
           <td>
             <p>
-              Reçu lorsque une erreur est apparue sur le serveur ou le navigateur
-              quitte la page ayant ouvert la connexion.
+              w-weçu wowsque u-une ewweuw est appawue suw we sewveuw ou we nyavigateuw
+              q-quitte wa page ayant ouvewt wa connexion. rawr x3
             </p>
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1002</code></td>
-          <td><code>CLOSE_PROTOCOL_ERROR</code></td>
+          <td><code>cwose_pwotocow_ewwow</code></td>
           <td>
-            L'autre partie de la connexion termine la connexion à cause d'une erreur
-            de protocole.
+            w-w'autwe pawtie de wa connexion tewmine wa connexion à cause d'une ewweuw
+            de pwotocowe. o.O
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1003</code></td>
-          <td><code>CLOSE_UNSUPPORTED</code></td>
+          <td><code>cwose_unsuppowted</code></td>
           <td>
-            La connexion est terminée car le serveur à reçu des données d'un type
-            qu'il ne peut pas accepter (par exemple des données binaire plutôt que
-            du texte).
+            w-wa connexion est tewminée caw w-we sewveuw à w-weçu des données d-d'un type
+            qu'iw nye peut pas acceptew (paw exempwe d-des données b-binaiwe pwutôt que
+            d-du texte). rawr
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1004</code></td>
           <td></td>
           <td>
-            <strong>Réservé.</strong> Une utilisation pourrait être définie dans le
-            futur.
+            <stwong>wésewvé.</stwong> u-une utiwisation pouwwait êtwe d-définie dans we
+            f-futuw. ʘwʘ
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1005</code></td>
-          <td><code>CLOSE_NO_STATUS</code></td>
+          <td><code>cwose_no_status</code></td>
           <td>
-            <strong>Réservé.</strong> Indique qu'aucun code n'est donné bien qu'un
-            code était attendu.
+            <stwong>wésewvé.</stwong> indique qu'aucun code ny'est donné b-bien qu'un
+            code était a-attendu. 😳😳😳
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1006</code></td>
-          <td><code>CLOSE_ABNORMAL</code></td>
+          <td><code>cwose_abnowmaw</code></td>
           <td>
-            <strong>Réservé.</strong> Utilisé pour indiquer que la connexion a été
-            terminée anormalement (sans paquet indiquant la fermeture).
+            <stwong>wésewvé.</stwong> utiwisé pouw i-indiquew que w-wa connexion a été
+            tewminée anowmawement (sans paquet indiquant wa fewmetuwe). ^^;;
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1007</code></td>
           <td></td>
           <td>
-            Le serveur termine la connexion car un message contenant des données
-            incohérentes a été reçu (e.g., des données qui ne sont pas au format
-            UTF-8 dans un message texte).
+            we sewveuw tewmine wa connexion caw u-un message contenant d-des données
+            incohéwentes a été w-weçu (e.g., o.O d-des données q-qui nye sont pas au fowmat
+            utf-8 dans un message texte). (///ˬ///✿)
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1008</code></td>
           <td></td>
           <td>
-            Le serveur termine la connexion car un message ne respectant pas la
-            politique du serveur est reçu. C'est un code d'état générique qui est
-            utilisé lorsque les codes 1003 et 1009 ne correspondent pas à la
-            situation.
+            w-we sewveuw tewmine wa connexion caw un message nye wespectant pas wa
+            p-powitique du sewveuw est weçu. σωσ c-c'est un code d-d'état généwique q-qui est
+            utiwisé w-wowsque wes c-codes 1003 et 1009 n-nye cowwespondent p-pas à wa
+            situation. nyaa~~
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1009</code></td>
-          <td><code>CLOSE_TOO_LARGE</code></td>
+          <td><code>cwose_too_wawge</code></td>
           <td>
-            Le serveur termine la connexion car les données reçues sont trop
-            grosses.
+            we sewveuw tewmine w-wa connexion c-caw wes données w-weçues sont twop
+            g-gwosses. ^^;;
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1010</code></td>
           <td></td>
           <td>
-            Le client termine la connexion car il souhaitait négocier une ou
-            plusieurs extensions mais le serveur ne l'a pas fait.
+            w-we cwient tewmine wa connexion caw iw souhaitait nyégociew u-une ou
+            pwusieuws extensions mais we sewveuw nye w'a pas fait. ^•ﻌ•^
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1011</code></td>
           <td></td>
           <td>
-            Le serveur termine la connexion car il a rencontré un problème qui
-            l'empêche de traiter la requête.
+            we s-sewveuw tewmine wa connexion caw iw a wencontwé un pwobwème qui
+            w-w'empêche d-de twaitew w-wa wequête. σωσ
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td>–<code>1014</code></td>
           <td></td>
           <td>
-            <strong
-              >Réservé pour une utilisation future par le standard
-              WebSocket.</strong
+            <stwong
+              >wésewvé pouw une utiwisation f-futuwe paw we standawd
+              w-websocket.</stwong
             >
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1015</code></td>
           <td></td>
           <td>
-            <strong>Réservé.</strong> Indique que la connexion a été fermée à cause
-            d'une erreur durant le handshake TLS (e.g., le certificat du serveur ne
-            peut pas être vérifié).
+            <stwong>wésewvé.</stwong> i-indique que wa connexion a été fewmée à cause
+            d'une ewweuw duwant we handshake t-tws (e.g., we cewtificat d-du sewveuw nye
+            peut p-pas êtwe véwifié). -.-
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>1016</code>–<code>1999</code></td>
           <td></td>
           <td>
-            <strong
-              >Réservé pour une utilisation future par le standard
-              WebSocket.</strong
+            <stwong
+              >wésewvé p-pouw une utiwisation futuwe paw we standawd
+              w-websocket.</stwong
             >
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>2000</code>–<code>2999</code></td>
           <td></td>
           <td>
-            <strong
-              >Réservé pour une utilisation future par le standard
-              WebSocket.</strong
+            <stwong
+              >wésewvé p-pouw une utiwisation f-futuwe paw we standawd
+              w-websocket.</stwong
             >
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>3000</code>–<code>3999</code></td>
           <td></td>
           <td>
-            Disponible pour être utilisé par des bibliothèques ou des frameworks.
-            Ces codes <strong>ne doivent pas</strong> être utilisés par des
-            applications.
+            disponibwe pouw êtwe utiwisé paw des bibwiothèques ou d-des fwamewowks. ^^;;
+            c-ces c-codes <stwong>ne doivent pas</stwong> êtwe u-utiwisés p-paw des
+            appwications. XD
           </td>
-        </tr>
-        <tr>
+        </tw>
+        <tw>
           <td><code>4000</code>–<code>4999</code></td>
           <td></td>
-          <td>Disponible pour être utilisés par des applications.</td>
-        </tr>
+          <td>disponibwe p-pouw êtwe utiwisés paw des appwications.</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-- {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retourne un {{ domxref("DOMString") }} qui indique la raison pour laquelle le serveur a fermé la connexion. Ce message est spécifique au serveur et au sous-protocole utilisé.
-- {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
-  - : Retourne un {{jsxref("Boolean")}} qui indique si la connexion a été correctement fermée ou non.
+- {{domxwef("cwoseevent.weason")}} {{weadonwyinwine}}
+  - : wetouwne un {{ domxwef("domstwing") }} q-qui indique w-wa waison pouw waquewwe we sewveuw a fewmé w-wa connexion. 🥺 ce m-message est spécifique au sewveuw et au sous-pwotocowe utiwisé. òωó
+- {{domxwef("cwoseevent.wascwean")}} {{weadonwyinwine}}
+  - : w-wetouwne un {{jsxwef("boowean")}} qui indique si wa connexion a été cowwectement fewmée ou n-nyon. (ˆ ﻌ ˆ)♡
 
-## Méthodes
+## méthodes
 
-_Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
+_cette intewface héwite égawement d-des pwopwiétés d-de sa mèwe, -.- {{domxwef("event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
-  - : Initialise la valeur d'un `CloseEvent`. Si l'événement a déjà été envoyé, cette méthode ne fait rien.
+- {{domxwef("cwoseevent.initcwoseevent()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : initiawise wa vaweuw d'un `cwoseevent`. :3 s-si w'événement a-a déjà été envoyé, ʘwʘ cette méthode nye fait wien. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{domxref("WebSocket")}}
+- {{domxwef("websocket")}}

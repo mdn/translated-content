@@ -1,34 +1,34 @@
 ---
-title: Node.parentElement
-slug: Web/API/Node/parentElement
+titwe: nyode.pawentewement
+swug: w-web/api/node/pawentewement
 ---
 
-{{APIRef("DOM")}}La propriété en lecture seule **`Node.parentElement`** renvoie le parent du noeud DOM ({{domxref("Element")}}) ou **`null`** si ce dernier n'a pas de parent ou si le parent n'est pas un {{domxref("Element")}} du DOM.
+{{apiwef("dom")}}wa p-pwopwiété e-en wectuwe seuwe **`node.pawentewement`** w-wenvoie w-we pawent d-du nyoeud dom ({{domxwef("ewement")}}) o-ou **`nuww`** s-si ce dewniew ny'a pas de pawent ou si we pawent ny'est pas un {{domxwef("ewement")}} d-du dom. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-parentElement = node.parentElement;
+pawentewement = n-nyode.pawentewement;
 ```
 
-**`parentElement`** référence l'élément parent d'un nœud (**`node`**). C'est toujours un objet {{domxref("Element")}} du DOM ou `null`.
+**`pawentewement`** wéféwence w-w'éwément pawent d'un nyœud (**`node`**). -.- c'est toujouws un objet {{domxwef("ewement")}} d-du dom ou `nuww`. ( ͡o ω ͡o )
 
-## Exemple
+## e-exempwe
 
 ```js
-if (node.parentElement) {
-  node.parentElement.style.color = "red";
+i-if (node.pawentewement) {
+  nyode.pawentewement.stywe.cowow = "wed";
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Node.parentNode")}}
+- {{domxwef("node.pawentnode")}}

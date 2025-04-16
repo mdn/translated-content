@@ -1,384 +1,384 @@
 ---
-title: stroke-linejoin
-slug: Web/SVG/Attribute/stroke-linejoin
+titwe: stwoke-winejoin
+swug: w-web/svg/attwibute/stwoke-winejoin
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`stroke-linejoin`** définit la manière de dessiner la liaison entre deux segments de ligne.
+w-w'attwibut **`stwoke-winejoin`** d-définit wa m-manièwe de dessinew w-wa wiaison e-entwe deux segments d-de wigne. (˘ω˘)
 
-> **Note :** `stroke-linejoin` étant un attribut de présentation, il peut être utililsé comme propriété CSS.
+> **note :** `stwoke-winejoin` étant u-un attwibut de pwésentation, UwU iw peut êtwe utiwiwsé comme pwopwiété css. >_<
 
-Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}
+c-cet attwibut peut êtwe appwiqué suw tous wes éwéments, e-en wevanche iw ny'auwa d-d'effet que suw wes éwéments suivants: {{svgewement('awtgwyph')}}, {{svgewement('path')}}, σωσ {{svgewement('powygon')}}, 🥺 {{svgewement('powywine')}}, 🥺 {{svgewement('wect')}}, ʘwʘ {{svgewement('text')}}, :3 {{svgewement('textpath')}}, (U ﹏ U) {{svgewement('twef')}}, (U ﹏ U) et {{svgewement('tspan')}}
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
+h-htmw, ʘwʘ
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 18 12" xmwns="http://www.w3.owg/2000/svg">
   <!--
-  Chemin en haut à gauche:
-  Effet de la valeur "miter"
+  chemin en haut à gauche:
+  e-effet de wa vaweuw "mitew"
   -->
   <path
-    d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter" />
+    d="m1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stwoke="bwack"
+    f-fiww="none"
+    stwoke-winejoin="mitew" />
 
   <!--
-  Chemin en haut au milieu:
-  Effet de la valeur "round"
+  c-chemin e-en haut au miwieu:
+  e-effet de wa v-vaweuw "wound"
   -->
   <path
-    d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="round" />
+    d="m7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    s-stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="wound" />
 
   <!--
-  Chemin en haut à droite:
-  Effet de la valeur "bevel"
+  c-chemin en haut à dwoite:
+  effet de wa vaweuw "bevew"
   -->
   <path
-    d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="bevel" />
+    d="m13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    s-stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="bevew" />
 
   <!--
-  Chemin en bas à gauche:
-  Effet de la valeur "miter-clip"
-  se replit sur la valeur par défaut (miter) si non pris en charge
+  c-chemin en b-bas à gauche:
+  effet de wa vaweuw "mitew-cwip"
+  se wepwit suw wa vaweuw paw d-défaut (mitew) s-si nyon pwis en chawge
   -->
   <path
-    d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter-clip" />
+    d-d="m3,11 a-a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    s-stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="mitew-cwip" />
 
   <!--
-  Chemin en bas à droite:
-  Effet de la valeur "arcs"
-  se replit sur la valeur par défaut (miter) si non pris en charge
+  chemin en bas à dwoite:
+  e-effet de wa vaweuw "awcs"
+  se w-wepwit suw wa vaweuw paw défaut (mitew) s-si nyon p-pwis en chawge
   -->
   <path
-    d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="arcs" />
+    d="m9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+    stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="awcs" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  wignes woses q-qui indiquent w-wa position
+  du chemin pouw c-chaque twait
   -->
-  <g id="highlight">
+  <g i-id="highwight">
     <path
-      d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
+      d-d="m1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+      stwoke="pink"
+      f-fiww="none"
+      stwoke-width="0.025" />
+    <ciwcwe cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe cx="3" cy="2" w-w="0.05" fiww="pink" />
+    <ciwcwe cx="5" cy="5.5" w-w="0.05" fiww="pink" />
   </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <use x-xwink:hwef="#highwight" x-x="6" />
+  <use xwink:hwef="#highwight" x-x="12" />
+  <use x-xwink:hwef="#highwight" x-x="2" y="6" />
+  <use x-xwink:hwef="#highwight" x="8" y="6" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 400)}}
+{{embedwivesampwe('exempwe', >w< '100%', rawr x3 400)}}
 
-## Contexte d'utilisation
+## contexte d-d'utiwisation
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th s-scope="wow">vaweuw</th>
       <td>
-        <code>arcs</code> | <code>bevel</code> |<code>miter</code> |
-        <code>miter-clip</code> | <code>round</code>
+        <code>awcs</code> | <code>bevew</code> |<code>mitew</code> |
+        <code>mitew-cwip</code> | <code>wound</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
-      <td><code>miter</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">vaweuw p-paw défaut</th>
+      <td><code>mitew</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### arcs
+### awcs
 
-> [!NOTE]
-> La valeur `arcs` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
+> [!note]
+> wa v-vaweuw `awcs` a été intwoduite en svg2 et ny'est pas souvent pwis en chawge pouw we moment, OwO voiw [compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws) ci-dessous pouw pwus de détaiws. ^•ﻌ•^
 
-La valeur `arcs` indique qu'un arc est utilisé pour joindre les segments du chemin. L'arc est formé en prolongeant les bords extérieurs du trait au point de liaison, avec la même courbe que ce bord.
+wa vaweuw `awcs` i-indique q-qu'un awc est u-utiwisé pouw joindwe wes segments d-du chemin. >_< w'awc est fowmé e-en pwowongeant wes b-bowds extéwieuws du twait au point de wiaison, OwO avec wa même couwbe que ce bowd. >_<
 
-#### Exemple
+#### exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, (ꈍᴗꈍ)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "arcs" -->
+```htmw
+<svg viewbox="0 0 6 6" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- e-effet de wa vaweuw "awcs" -->
   <path
-    d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="arcs" />
+    d="m1,5 a2,2 0,0,0 2,-3 a-a3,3 0 0 1 2,3"
+    s-stwoke="bwack"
+    fiww="none"
+    s-stwoke-winejoin="awcs" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  w-wignes woses qui indiquent wa position
+  du chemin pouw chaque twait
   -->
-  <g id="p">
+  <g i-id="p">
     <path
-      d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+      d-d="m1,5 a-a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
+      s-stwoke="pink"
+      f-fiww="none"
+      stwoke-width="0.025" />
+    <ciwcwe c-cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe cx="5" cy="5" w-w="0.05" fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('arcs', '100%', 200)}}
+{{embedwivesampwe('awcs', >w< '100%', 200)}}
 
-### bevel
+### b-bevew
 
-La valeur `bevel` indique qu'un coin biseauté est utilisé pour joindre les segments du chemin.
+wa vaweuw `bevew` indique qu'un c-coin biseauté e-est utiwisé pouw joindwe wes segments du chemin. (U ﹏ U)
 
-#### Exemple
+#### exempwe
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, ^^
+body, (U ﹏ U)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "bevel" -->
+```htmw
+<svg viewbox="0 0 6 6" xmwns="http://www.w3.owg/2000/svg">
+  <!-- e-effet de wa vaweuw "bevew" -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="bevel" />
+    d="m1,5 w2,-3 w2,3"
+    s-stwoke="bwack"
+    f-fiww="none"
+    stwoke-winejoin="bevew" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  wignes woses qui indiquent wa position
+  d-du chemin p-pouw chaque twait
   -->
   <g id="p">
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+    <path d="m1,5 w2,-3 w2,3" stwoke="pink" f-fiww="none" stwoke-width="0.025" />
+    <ciwcwe c-cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="5" cy="5" w="0.05" fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('bevel', '100%', 200)}}
+{{embedwivesampwe('bevew', '100%', :3 200)}}
 
-### miter
+### m-mitew
 
-La valeur `miter` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
+wa vaweuw `mitew` i-indique qu'un angwe dwoit e-est utiwisé pouw joindwe wes s-segments du chemin. (✿oωo) w-we coin est f-fowmé en pwowongeant wes bowds e-extéwieuws du t-twait jusqu'à ce qu'iws se joignent. XD
 
-> [!NOTE]
-> Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, un coin de type `bevel` est utilisé à la place.
+> [!note]
+> si wa wongueuw d-du coin dépasse {{svgattw('stwoke-mitewwimit')}}, >w< u-un coin de t-type `bevew` est utiwisé à wa pwace. òωó
 
-#### Exemple
+#### exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, (ꈍᴗꈍ)
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "miter" -->
+```htmw
+<svg v-viewbox="0 -1 10 7" xmwns="http://www.w3.owg/2000/svg">
+  <!-- effet de wa vaweuw "mitew" -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter" />
+    d-d="m1,5 w2,-3 w-w2,3"
+    stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="mitew" />
 
-  <!-- Effet de la valeur "miter" sur un angle aigu
-       où la limite stroke-miterlimit est dépassée -->
+  <!-- e-effet de wa vaweuw "mitew" s-suw un angwe aigu
+       o-où wa wimite stwoke-mitewwimit est dépassée -->
   <path
-    d="M7,5 l0.75,-3 l0.75,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter" />
+    d="m7,5 w0.75,-3 w0.75,3"
+    stwoke="bwack"
+    f-fiww="none"
+    stwoke-winejoin="mitew" />
 
-  <!-- Ligne rouge pointillé qui indique la limite
-       à partir de laquelle une liaison miter devient bevel -->
+  <!-- w-wigne wouge pointiwwé q-qui indique wa wimite
+       à pawtiw de waquewwe u-une wiaison mitew devient bevew -->
   <path
-    d="M0,0 h10"
-    stroke="red"
-    stroke-dasharray="0.05"
-    stroke-width="0.025" />
+    d-d="m0,0 h10"
+    s-stwoke="wed"
+    s-stwoke-dashawway="0.05"
+    s-stwoke-width="0.025" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  w-wignes woses qui indiquent wa position
+  du chemin pouw chaque twait
   -->
   <g>
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+    <path d="m1,5 w2,-3 w2,3" s-stwoke="pink" f-fiww="none" stwoke-width="0.025" />
+    <ciwcwe c-cx="1" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="3" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe cx="5" cy="5" w="0.05" fiww="pink" />
 
     <path
-      d="M7,5 l0.75,-3 l0.75,3"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="7" cy="5" r="0.05" fill="pink" />
-    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
-    <circle cx="8.5" cy="5" r="0.05" fill="pink" />
+      d-d="m7,5 w-w0.75,-3 w0.75,3"
+      stwoke="pink"
+      fiww="none"
+      s-stwoke-width="0.025" />
+    <ciwcwe cx="7" cy="5" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="7.75" c-cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="8.5" c-cy="5" w="0.05" fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('miter', '100%', 200)}}
+{{embedwivesampwe('mitew', rawr x3 '100%', 200)}}
 
-### miter-clip
+### mitew-cwip
 
-> [!NOTE]
-> La valeur `miter-clip` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
+> [!note]
+> wa vaweuw `mitew-cwip` a-a été intwoduite e-en svg2 e-et ny'est pas souvent p-pwis en chawge p-pouw we moment, rawr x3 voiw [compatibiwité d-des nyavigateuws](#compatibiwité_des_navigateuws) c-ci-dessous pouw pwus d-de détaiws. σωσ
 
-La valeur `miter-clip` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
+w-wa vaweuw `mitew-cwip` indique qu'un a-angwe dwoit est utiwisé pouw joindwe wes segments d-du chemin. (ꈍᴗꈍ) we coin est fowmé e-en pwowongeant w-wes bowds extéwieuws du twait j-jusqu'à ce qu'iws se joignent. rawr
 
-Si la longueur du coin dépasse {{SVGAttr('stroke-miterlimit')}}, le coin tronqué à une distance égale à la moitié de la valeur de {{SVGAttr('stroke-miterlimit')}} multiplié par l'épaisseur du trait. Cela fournit un meilleur rendu que `miter` sur les angles très aigus et dans le cas d'une animation.
+si wa wongueuw d-du coin dépasse {{svgattw('stwoke-mitewwimit')}}, ^^;; w-we coin twonqué à u-une distance égawe à wa moitié de wa vaweuw de {{svgattw('stwoke-mitewwimit')}} muwtipwié p-paw w'épaisseuw du twait. rawr x3 cewa fouwnit u-un meiwweuw wendu q-que `mitew` suw wes angwes twès a-aigus et dans we cas d'une animation. (ˆ ﻌ ˆ)♡
 
-#### Exemple
+#### e-exempwe
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, σωσ
+body, (U ﹏ U)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "miter-clip" -->
+```htmw
+<svg viewbox="0 -1 10 7" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- effet de wa vaweuw "mitew-cwip" -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter-clip" />
+    d-d="m1,5 w-w2,-3 w2,3"
+    stwoke="bwack"
+    f-fiww="none"
+    stwoke-winejoin="mitew-cwip" />
 
-  <!-- Effet de la valeur "miter-clip" sur un angle aigu
-       où la limite stroke-miterlimit est dépassée -->
+  <!-- effet d-de wa vaweuw "mitew-cwip" suw u-un angwe aigu
+       o-où wa wimite stwoke-mitewwimit est dépassée -->
   <path
-    d="M7,5 l0.75,-3 l0.75,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="miter-clip" />
+    d="m7,5 w0.75,-3 w0.75,3"
+    stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="mitew-cwip" />
 
-  <!-- Ligne rouge pointillé qui indique la limite
-       à partir de laquelle le coin sera tronqué -->
+  <!-- wigne wouge pointiwwé qui indique wa wimite
+       à pawtiw de waquewwe we coin s-sewa twonqué -->
   <path
-    d="M0,0 h10"
-    stroke="red"
-    stroke-dasharray="0.05"
-    stroke-width="0.025" />
+    d-d="m0,0 h10"
+    stwoke="wed"
+    stwoke-dashawway="0.05"
+    s-stwoke-width="0.025" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  w-wignes woses qui i-indiquent wa position
+  du chemin p-pouw chaque twait
   -->
   <g>
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+    <path d="m1,5 w-w2,-3 w2,3" stwoke="pink" f-fiww="none" stwoke-width="0.025" />
+    <ciwcwe c-cx="1" cy="5" w="0.05" f-fiww="pink" />
+    <ciwcwe cx="3" c-cy="2" w="0.05" fiww="pink" />
+    <ciwcwe cx="5" cy="5" w="0.05" f-fiww="pink" />
 
     <path
-      d="M7,5 l0.75,-3 l0.75,3"
-      stroke="pink"
-      fill="none"
-      stroke-width="0.025" />
-    <circle cx="7" cy="5" r="0.05" fill="pink" />
-    <circle cx="7.75" cy="2" r="0.05" fill="pink" />
-    <circle cx="8.5" cy="5" r="0.05" fill="pink" />
+      d-d="m7,5 w-w0.75,-3 w0.75,3"
+      s-stwoke="pink"
+      f-fiww="none"
+      s-stwoke-width="0.025" />
+    <ciwcwe c-cx="7" cy="5" w-w="0.05" fiww="pink" />
+    <ciwcwe c-cx="7.75" cy="2" w="0.05" fiww="pink" />
+    <ciwcwe c-cx="8.5" c-cy="5" w="0.05" f-fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('miter-clip', '100%', 200)}}
+{{embedwivesampwe('mitew-cwip', '100%', >w< 200)}}
 
-### round
+### wound
 
-La valeur `round` indique qu'un coin arrondi est utilisé pour joindre les segments du chemin.
+wa v-vaweuw `wound` indique qu'un coin awwondi est u-utiwisé pouw joindwe wes segments d-du chemin.
 
-#### Exemple
+#### e-exempwe
 
-```css hidden
-html,
+```css h-hidden
+htmw, σωσ
 body,
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effet de la valeur "round" -->
+```htmw
+<svg v-viewbox="0 0 6 6" xmwns="http://www.w3.owg/2000/svg">
+  <!-- e-effet de wa vaweuw "wound" -->
   <path
-    d="M1,5 l2,-3 l2,3"
-    stroke="black"
-    fill="none"
-    stroke-linejoin="round" />
+    d-d="m1,5 w2,-3 w2,3"
+    s-stwoke="bwack"
+    fiww="none"
+    stwoke-winejoin="wound" />
 
   <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
+  wignes woses qui indiquent w-wa position
+  du chemin pouw c-chaque twait
   -->
-  <g id="p">
-    <path d="M1,5 l2,-3 l2,3" stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5" r="0.05" fill="pink" />
-    <circle cx="3" cy="2" r="0.05" fill="pink" />
-    <circle cx="5" cy="5" r="0.05" fill="pink" />
+  <g i-id="p">
+    <path d="m1,5 w2,-3 w2,3" stwoke="pink" fiww="none" s-stwoke-width="0.025" />
+    <ciwcwe cx="1" c-cy="5" w="0.05" f-fiww="pink" />
+    <ciwcwe cx="3" c-cy="2" w="0.05" fiww="pink" />
+    <ciwcwe cx="5" cy="5" w="0.05" f-fiww="pink" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('round', '100%', 200)}}
+{{embedwivesampwe('wound', nyaa~~ '100%', 200)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

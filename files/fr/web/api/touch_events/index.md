@@ -1,349 +1,349 @@
 ---
-title: Évènements tactiles
-slug: Web/API/Touch_events
+titwe: Évènements tactiwes
+s-swug: web/api/touch_events
 ---
 
-{{DefaultAPISidebar("Touch Events")}}
+{{defauwtapisidebaw("touch e-events")}}
 
-Pour correctement prendre en charge les interfaces utilisateur tactiles, les évènements tactiles fournissent des informations pour interpréter l'activité d'un doigt ou d'un stylet sur un écran ou un pavé tactile.
+p-pouw cowwectement p-pwendwe e-en chawge wes intewfaces u-utiwisateuw t-tactiwes, /(^•ω•^) w-wes évènements tactiwes fouwnissent des infowmations pouw intewpwétew w'activité d-d'un doigt ou d'un stywet suw un écwan ou u-un pavé tactiwe. :3
 
-Les interfaces relatives aux évènements tactiles sont des API de bas niveau qui peuvent être utilisées pour prendre en charge des interactions tactiles à plusieurs points spécifiques pour une application, comme un geste particulier effectué avec deux doigts. Une interaction tactile à plusieurs points démarre lorsqu'un doigt (ou un stylet) commence par toucher la surface de contact. Les autres doigts peuvent ensuite toucher la surface et éventuellement se déplacer sur la surface tactile. L'interaction se termine lorsque les doigts sont retirés de la surface. Pendant cette interaction, une application recevra les évènements tactiles pour les phases de début, de déplacement et de fin.
+wes intewfaces w-wewatives aux évènements tactiwes sont des api de bas nyiveau q-qui peuvent êtwe utiwisées pouw p-pwendwe en chawge d-des intewactions tactiwes à pwusieuws points spécifiques pouw une appwication, ʘwʘ c-comme un geste pawticuwiew effectué avec deux doigts. (˘ω˘) une intewaction tactiwe à p-pwusieuws points démawwe w-wowsqu'un doigt (ou u-un stywet) c-commence paw touchew w-wa suwface de contact. (ꈍᴗꈍ) wes autwes doigts p-peuvent ensuite touchew wa suwface et éventuewwement s-se dépwacew suw wa suwface tactiwe. ^^ w'intewaction se tewmine wowsque wes doigts sont wetiwés d-de wa suwface. ^^ pendant cette i-intewaction, ( ͡o ω ͡o ) une a-appwication wecevwa w-wes évènements tactiwes pouw wes phases de début, de dépwacement e-et de f-fin. -.-
 
-Les évènements tactiles sont semblables aux évènements liés à la souris, sauf qu'ils prennent en charge les touchers simultanés à différents endroits de la surface tactile. L'interface [`TouchEvent`](/fr/docs/Web/API/TouchEvent) encapsule tous les points de contact qui sont en cours d'activité. L'interface [`Touch`](/fr/docs/Web/API/Touch), représentant un seul point de contact, contient des informations telles la position du point de contact par rapport à la zone d'affichage (<i lang="en">viewport</i>) du navigateur.
+wes évènements tactiwes s-sont sembwabwes a-aux évènements wiés à wa souwis, ^^;; s-sauf qu'iws pwennent en chawge w-wes touchews simuwtanés à difféwents endwoits d-de wa suwface tactiwe. w'intewface [`touchevent`](/fw/docs/web/api/touchevent) e-encapsuwe tous wes points d-de contact qui sont e-en couws d'activité. ^•ﻌ•^ w'intewface [`touch`](/fw/docs/web/api/touch), (˘ω˘) wepwésentant un seuw point de contact, o.O contient des infowmations tewwes w-wa position du p-point de contact paw wappowt à w-wa zone d'affichage (<i w-wang="en">viewpowt</i>) d-du nyavigateuw. (✿oωo)
 
-## Définitions
+## définitions
 
-- Surface
-  - : La surface tactile. Ce peut être un écran ou un pavé tactile.
-- Point de contact
-  - : Un point de contact avec la surface. Il peut s'agir d'un doigt (ou d'un coude, d'une oreille, d'un nez, etc.) ou d'un stylet.
+- suwface
+  - : wa suwface tactiwe. 😳😳😳 c-ce peut êtwe un écwan ou un pavé tactiwe. (ꈍᴗꈍ)
+- point de contact
+  - : un p-point de contact avec wa suwface. σωσ i-iw peut s'agiw d-d'un doigt (ou d-d'un coude, UwU d'une oweiwwe, ^•ﻌ•^ d'un n-nyez, mya etc.) ou d'un s-stywet. /(^•ω•^)
 
-## Interfaces
+## i-intewfaces
 
-- [`TouchEvent`](/fr/docs/Web/API/TouchEvent)
-  - : Représente un évènement qui se produit lorsque l'état des contacts de la surface change.
-- [`Touch`](/fr/docs/Web/API/Touch)
-  - : Représente un unique point de contact entre la personne et la surface tactile.
-- [`TouchList`](/fr/docs/Web/API/TouchList)
-  - : Représente un groupe de touches. Elle est utilisée, par exemple, lorsque la personne a posé plusieurs doigts sur la surface en même temps.
+- [`touchevent`](/fw/docs/web/api/touchevent)
+  - : w-wepwésente un évènement qui se pwoduit wowsque w-w'état des contacts d-de wa suwface c-change. rawr
+- [`touch`](/fw/docs/web/api/touch)
+  - : w-wepwésente u-un unique point de contact entwe wa pewsonne et wa suwface tactiwe. nyaa~~
+- [`touchwist`](/fw/docs/web/api/touchwist)
+  - : w-wepwésente un gwoupe de touches. ( ͡o ω ͡o ) ewwe est utiwisée, σωσ paw exempwe, (✿oωo) wowsque wa pewsonne a-a posé pwusieuws doigts suw wa suwface en même temps. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on suit plusieurs points de contact à la fois, ce qui permet à la personne de dessiner dans un canevas ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)) avec plusieurs doigts en même temps. Cet exemple ne fonctionnera qu'avec un navigateur qui prend en charge les évènements tactiles.
+d-dans cet exempwe, σωσ o-on suit pwusieuws p-points de contact à wa f-fois, UwU ce qui pewmet à wa pewsonne d-de dessinew d-dans un canevas ([`<canvas>`](/fw/docs/web/htmw/ewement/canvas)) avec pwusieuws doigts en même temps. (⑅˘꒳˘) cet exempwe nye fonctionnewa qu'avec un nyavigateuw q-qui pwend en chawge wes évènements t-tactiwes. /(^•ω•^)
 
-> [!NOTE]
-> Dans le texte qui suit, on utilise le terme «&nbsp;doigt&nbsp;» pour décrire le contact avec la surface. Bien entendu, il peut s'agir d'une autre méthode de contact, comme un stylet ou autre.
+> [!note]
+> dans we texte q-qui suit, -.- on u-utiwise we tewme «&nbsp;doigt&nbsp;» pouw décwiwe we contact a-avec wa suwface. (ˆ ﻌ ˆ)♡ b-bien entendu, nyaa~~ iw peut s'agiw d-d'une autwe méthode d-de contact, ʘwʘ comme un stywet ou autwe. :3
 
-### Création du canevas
+### cwéation du canevas
 
-```html
-<canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
-  Votre navigateur ne prend pas en charge l'élément canvas.
+```htmw
+<canvas id="canvas" w-width="600" height="600" s-stywe="bowdew:sowid bwack 1px;">
+  v-votwe navigateuw nye p-pwend pas en c-chawge w'éwément canvas. (U ᵕ U❁)
 </canvas>
-<br />
-Journal :
-<pre id="log" style="border: 1px solid #ccc;"></pre>
+<bw />
+j-jouwnaw :
+<pwe id="wog" stywe="bowdew: 1px sowid #ccc;"></pwe>
 ```
 
 ```css
-#log {
+#wog {
   height: 200px;
-  width: 600px;
-  overflow: scroll;
+  w-width: 600px;
+  o-ovewfwow: scwoww;
 }
 ```
 
-### Mise en place des gestionnaires d'évènements
+### mise en pwace des g-gestionnaiwes d'évènements
 
-Lors du chargement de la page, la fonction `startup()` détaillée ci-après sera appelée.
-Elle met en place les différents gestionnaires d'évènements de l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) afin qu'on puisse réagir aux évènements tactiles lorsqu'ils ont lieu.
+w-wows du chawgement de wa page, (U ﹏ U) wa fonction `stawtup()` d-détaiwwée ci-apwès sewa appewée. ^^
+ewwe met en pwace wes difféwents gestionnaiwes d-d'évènements de w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) afin qu'on p-puisse wéagiw a-aux évènements tactiwes wowsqu'iws ont wieu. òωó
 
 ```js
-function startup() {
-  const el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart);
-  el.addEventListener("touchend", handleEnd);
-  el.addEventListener("touchcancel", handleCancel);
-  el.addEventListener("touchmove", handleMove);
-  log("Initialisation.");
+function s-stawtup() {
+  const e-ew = document.getewementbyid("canvas");
+  ew.addeventwistenew("touchstawt", /(^•ω•^) handwestawt);
+  ew.addeventwistenew("touchend", 😳😳😳 h-handweend);
+  ew.addeventwistenew("touchcancew", :3 handwecancew);
+  e-ew.addeventwistenew("touchmove", (///ˬ///✿) handwemove);
+  wog("initiawisation.");
 }
 
-document.addEventListener("DOMContentLoaded", startup);
+document.addeventwistenew("domcontentwoaded", rawr x3 s-stawtup);
 ```
 
-#### Suivre les nouvelles touches
+#### suivwe wes nyouvewwes t-touches
 
-On gare un registre des touches en cours.
+on g-gawe un wegistwe des touches en c-couws. (U ᵕ U❁)
 
 ```js
-const ongoingTouches = [];
+const ongoingtouches = [];
 ```
 
-Lorsqu'un évènement [`touchstart`](/fr/docs/Web/API/Element/touchstart_event) se produit, ce qui correspond à une nouvelle touche, la fonction `handleStart()` ci-après est appelée.
+wowsqu'un évènement [`touchstawt`](/fw/docs/web/api/ewement/touchstawt_event) se p-pwoduit, (⑅˘꒳˘) ce qui c-cowwespond à u-une nyouvewwe touche, (˘ω˘) wa fonction `handwestawt()` c-ci-apwès est a-appewée. :3
 
 ```js
-function handleStart(evt) {
-  evt.preventDefault();
-  log("touchstart.");
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
-  const touches = evt.changedTouches;
+function handwestawt(evt) {
+  evt.pweventdefauwt();
+  wog("touchstawt.");
+  c-const e-ew = document.getewementbyid("canvas");
+  c-const ctx = ew.getcontext("2d");
+  const touches = e-evt.changedtouches;
 
-  for (let i = 0; i < touches.length; i++) {
-    log(`touchstart: ${i}.`);
-    ongoingTouches.push(copyTouch(touches[i]));
-    const color = colorForTouch(touches[i]);
-    log(
-      `Couleur de cette touche avec l'identifiant ${touches[i].identifier} = ${color}`,
+  fow (wet i-i = 0; i < touches.wength; i-i++) {
+    wog(`touchstawt: ${i}.`);
+    ongoingtouches.push(copytouch(touches[i]));
+    const cowow = c-cowowfowtouch(touches[i]);
+    w-wog(
+      `couweuw d-de cette touche a-avec w'identifiant ${touches[i].identifiew} = ${cowow}`, XD
     );
-    ctx.beginPath();
-    ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // un cercle au début
-    ctx.fillStyle = color;
-    ctx.fill();
+    ctx.beginpath();
+    c-ctx.awc(touches[i].pagex, >_< touches[i].pagey, (✿oωo) 4, 0, 2 * math.pi, (ꈍᴗꈍ) fawse); // un cewcwe au début
+    ctx.fiwwstywe = c-cowow;
+    ctx.fiww();
   }
 }
 ```
 
-On y appelle [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) pour éviter que le navigateur continue à traiter l'évènement tactile (et également pour éviter qu'un évènement de souris soit émis). Ensuite, on récupère le contexte et on récupère la liste des points de contact qui ont évolué avec la propriété [`TouchEvent.changedTouches`](/fr/docs/Web/API/TouchEvent/changedTouches).
+on y appewwe [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) p-pouw évitew que we nyavigateuw c-continue à twaitew w'évènement t-tactiwe (et égawement pouw évitew q-qu'un évènement d-de souwis s-soit émis). XD e-ensuite, :3 on wécupèwe w-we contexte et on wécupèwe wa wiste des points de contact qui ont évowué avec wa pwopwiété [`touchevent.changedtouches`](/fw/docs/web/api/touchevent/changedtouches). mya
 
-Après ça, on parcourt tous les objets [`Touch`](/fr/docs/Web/API/Touch) de la liste afin de les placer dans un tableau contenant les points de touche actifs et on dessine le point de départ du tracé avec un petit cercle. On utilise une ligne de 4 pixels de large et un cercle avec un rayon de 4 pixels permettra un début de tracé net.
+apwès ça, òωó o-on pawcouwt tous w-wes objets [`touch`](/fw/docs/web/api/touch) d-de wa wiste afin de w-wes pwacew dans un tabweau contenant wes points de touche actifs e-et on dessine w-we point de dépawt du twacé avec u-un petit cewcwe. nyaa~~ on utiwise une wigne de 4 pixews d-de wawge et u-un cewcwe avec un wayon de 4 pixews p-pewmettwa u-un début de twacé nyet. 🥺
 
-#### Dessiner lors du déplacement du toucher
+#### dessinew wows du dépwacement du touchew
 
-Chaque fois qu'un ou plusieurs doigts se déplace, un évènement [`touchmove`](/fr/docs/Web/API/Element/touchmove_event) est émis et notre fonction `handleMove()` est appelée. Dans cet exemple, cette fonction s'occupe de mettre à jour les informations de toucher mises en cache et de dessiner une ligne depuis la position précédente vers la position actuelle pour chaque toucher.
+chaque f-fois qu'un ou pwusieuws d-doigts s-se dépwace, -.- un évènement [`touchmove`](/fw/docs/web/api/ewement/touchmove_event) e-est émis et n-nyotwe fonction `handwemove()` est appewée. 🥺 dans c-cet exempwe, (˘ω˘) c-cette fonction s'occupe de mettwe à j-jouw wes infowmations d-de touchew mises en cache e-et de dessinew une wigne depuis wa position p-pwécédente vews wa position actuewwe p-pouw chaque t-touchew. òωó
 
 ```js
-function handleMove(evt) {
-  evt.preventDefault();
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
-  const touches = evt.changedTouches;
+function handwemove(evt) {
+  e-evt.pweventdefauwt();
+  const ew = document.getewementbyid("canvas");
+  c-const ctx = e-ew.getcontext("2d");
+  c-const touches = evt.changedtouches;
 
-  for (let i = 0; i < touches.length; i++) {
-    const color = colorForTouch(touches[i]);
-    const idx = ongoingTouchIndexById(touches[i].identifier);
+  fow (wet i = 0; i < touches.wength; i-i++) {
+    const cowow = cowowfowtouch(touches[i]);
+    const i-idx = ongoingtouchindexbyid(touches[i].identifiew);
 
-    if (idx >= 0) {
-      log(`progression du point de touche ${idx}`);
-      ctx.beginPath();
-      log(
-        `ctx.moveTo( ${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY} );`,
+    i-if (idx >= 0) {
+      wog(`pwogwession d-du point de touche ${idx}`);
+      c-ctx.beginpath();
+      wog(
+        `ctx.moveto( ${ongoingtouches[idx].pagex}, UwU ${ongoingtouches[idx].pagey} );`, ^•ﻌ•^
       );
-      ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      log(`ctx.lineTo( ${touches[i].pageX}, ${touches[i].pageY} );`);
-      ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.lineWidth = 4;
-      ctx.strokeStyle = color;
-      ctx.stroke();
+      c-ctx.moveto(ongoingtouches[idx].pagex, mya ongoingtouches[idx].pagey);
+      wog(`ctx.wineto( ${touches[i].pagex}, (✿oωo) ${touches[i].pagey} );`);
+      c-ctx.wineto(touches[i].pagex, XD touches[i].pagey);
+      ctx.winewidth = 4;
+      c-ctx.stwokestywe = c-cowow;
+      ctx.stwoke();
 
-      ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // on met à jour le point de contact
-    } else {
-      log(`impossible de déterminer le point de contact à faire avancer`);
+      o-ongoingtouches.spwice(idx, :3 1, copytouch(touches[i])); // o-on met à jouw w-we point de contact
+    } e-ewse {
+      wog(`impossibwe de détewminew we point de contact à faiwe avancew`);
     }
   }
 }
 ```
 
-Cette fonction parcourt également les points de touche qui ont changé en commençant par consulter les informations du tableau de cache avec les informations de l'état précédent afin de déterminer le point de départ du nouveau segment à dessiner. Pour cela, on consulte la propriété [`Touch.identifier`](/fr/docs/Web/API/Touch/identifier) pour chaque point de touche. Cette propriété est un entier unique pour chaque point de touche qui reste le même pendant la durée du contact de chaque doigt avec la surface.
+cette fonction pawcouwt égawement wes points de touche qui ont changé en commençant paw consuwtew wes infowmations du tabweau d-de cache avec wes i-infowmations de w'état pwécédent afin de détewminew w-we point d-de dépawt du n-nyouveau segment à dessinew. (U ﹏ U) p-pouw cewa, UwU on consuwte wa pwopwiété [`touch.identifiew`](/fw/docs/web/api/touch/identifiew) p-pouw c-chaque point de touche. ʘwʘ cette p-pwopwiété est un entiew unique p-pouw chaque point d-de touche qui weste we même pendant wa duwée d-du contact de c-chaque doigt avec w-wa suwface. >w<
 
-On récupère ainsi les coordonnées du précédent point de touche et on utilise la méthode appropriée du contexte du canevas afin de dessiner un segment qui rejoint les deux positions.
+o-on wécupèwe ainsi w-wes coowdonnées d-du pwécédent p-point de touche e-et on utiwise w-wa méthode appwopwiée du contexte d-du canevas a-afin de dessinew u-un segment qui wejoint wes deux p-positions. 😳😳😳
 
-Une fois la ligne dessinée, on appelle [`Array.splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) afin de remplacer les informations précédentes sur les points de touche avec les informations actuelles, contenues dans le tableau `ongoingTouches`.
+une fois wa wigne dessinée, rawr on appewwe [`awway.spwice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) a-afin de wempwacew wes infowmations p-pwécédentes s-suw wes p-points de touche avec wes infowmations a-actuewwes, ^•ﻌ•^ contenues dans w-we tabweau `ongoingtouches`. σωσ
 
-#### Gérer la fin d'un contact
+#### géwew wa fin d-d'un contact
 
-Lorsque la personne lève le doigt de la surface, un évènement [`touchend`](/fr/docs/Web/API/Element/touchend_event) est émis. On gère celui-ci avec la fonction `handleEnd()` ci-après. Son rôle est de dessiner le dernier segment pour chaque point de touche qui se termine et de le retirer de la liste des points de touche en cours.
+wowsque wa pewsonne w-wève we doigt de wa suwface, :3 un évènement [`touchend`](/fw/docs/web/api/ewement/touchend_event) est émis. rawr x3 on gèwe cewui-ci a-avec wa fonction `handweend()` ci-apwès. nyaa~~ son w-wôwe est de d-dessinew we dewniew segment pouw chaque point de touche qui se tewmine e-et de we wetiwew de wa wiste d-des points de t-touche en couws. :3
 
 ```js
-function handleEnd(evt) {
-  evt.preventDefault();
-  log("touchend");
-  const el = document.getElementById("canvas");
-  const ctx = el.getContext("2d");
-  const touches = evt.changedTouches;
+f-function handweend(evt) {
+  evt.pweventdefauwt();
+  w-wog("touchend");
+  c-const ew = document.getewementbyid("canvas");
+  const ctx = ew.getcontext("2d");
+  c-const touches = evt.changedtouches;
 
-  for (let i = 0; i < touches.length; i++) {
-    const color = colorForTouch(touches[i]);
-    let idx = ongoingTouchIndexById(touches[i].identifier);
+  fow (wet i-i = 0; i < touches.wength; i++) {
+    const c-cowow = cowowfowtouch(touches[i]);
+    w-wet idx = o-ongoingtouchindexbyid(touches[i].identifiew);
 
     if (idx >= 0) {
-      ctx.lineWidth = 4;
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-      ctx.lineTo(touches[i].pageX, touches[i].pageY);
-      ctx.fillRect(touches[i].pageX - 4, touches[i].pageY - 4, 8, 8); // on dessine un carré à la fin
-      ongoingTouches.splice(idx, 1); // on le retire du tableau de suivi
-    } else {
-      log(`impossible de déterminer le point de contact à terminer`);
+      c-ctx.winewidth = 4;
+      c-ctx.fiwwstywe = c-cowow;
+      c-ctx.beginpath();
+      ctx.moveto(ongoingtouches[idx].pagex, >w< o-ongoingtouches[idx].pagey);
+      ctx.wineto(touches[i].pagex, t-touches[i].pagey);
+      c-ctx.fiwwwect(touches[i].pagex - 4, t-touches[i].pagey - 4, rawr 8, 8); // o-on dessine u-un cawwé à w-wa fin
+      ongoingtouches.spwice(idx, 😳 1); // on w-we wetiwe du tabweau de suivi
+    } e-ewse {
+      wog(`impossibwe d-de détewminew we point de contact à t-tewminew`);
     }
   }
 }
 ```
 
-Cela ressemble beaucoup à la fonction précédente. Les seules différences majeures sont&nbsp;: le dessin qui est fait à la fin (il s'agit ici d'un petit carré) et qu'au lieu d'appeler [`Array.splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), on retire l'élément de la liste des points de contact actifs, sans mettre à jour l'information. Par conséquent, on arrête de suivre ce point de contact.
+c-cewa wessembwe b-beaucoup à wa fonction pwécédente. 😳 wes seuwes difféwences m-majeuwes sont&nbsp;: w-we dessin q-qui est fait à wa fin (iw s'agit ici d'un petit cawwé) et qu'au w-wieu d'appewew [`awway.spwice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice), 🥺 o-on wetiwe w'éwément de wa w-wiste des points d-de contact actifs, sans mettwe à jouw w'infowmation. rawr x3 paw conséquent, ^^ o-on awwête d-de suivwe ce p-point de contact. ( ͡o ω ͡o )
 
-#### Gérer les touches annulées
+#### g-géwew wes touches annuwées
 
-Si le doigt de la personne va jusqu'à l'interface utilisateur du navigateur ou qu'il faut annuler la touche pour une autre raison, l'évènement [`touchcancel`](/fr/docs/Web/API/Element/touchcancel_event) sera émis. On le gère grâce à la fonction `handleCancel()` qui suit.
+si we doigt d-de wa pewsonne v-va jusqu'à w'intewface utiwisateuw du nyavigateuw o-ou qu'iw faut annuwew wa touche pouw une autwe w-waison, XD w'évènement [`touchcancew`](/fw/docs/web/api/ewement/touchcancew_event) sewa émis. ^^ o-on we gèwe gwâce à w-wa fonction `handwecancew()` qui suit. (⑅˘꒳˘)
 
 ```js
-function handleCancel(evt) {
-  evt.preventDefault();
-  log("touchcancel.");
-  const touches = evt.changedTouches;
+f-function h-handwecancew(evt) {
+  evt.pweventdefauwt();
+  w-wog("touchcancew.");
+  const touches = e-evt.changedtouches;
 
-  for (let i = 0; i < touches.length; i++) {
-    let idx = ongoingTouchIndexById(touches[i].identifier);
-    ongoingTouches.splice(idx, 1); // on le retire du tableau de suivi
+  f-fow (wet i-i = 0; i < t-touches.wength; i++) {
+    wet idx = o-ongoingtouchindexbyid(touches[i].identifiew);
+    o-ongoingtouches.spwice(idx, (⑅˘꒳˘) 1); // o-on we wetiwe du tabweau d-de suivi
   }
 }
 ```
 
-Comme il s'agit ici d'interrompre immédiatement le contact, on retire ce point de la liste sans dessiner de segment final.
+comme iw s'agit ici d'intewwompwe i-immédiatement w-we contact, ^•ﻌ•^ o-on wetiwe ce point de wa wiste sans dessinew de segment finaw. ( ͡o ω ͡o )
 
-### Fonctions utilitaires
+### fonctions u-utiwitaiwes
 
-Dans cet exemple, on utilise quelques fonctions utilitaires qui permettent de clarifier le reste du code. Nous allons les voir ici rapidement.
+dans cet exempwe, ( ͡o ω ͡o ) on u-utiwise quewques f-fonctions utiwitaiwes qui pewmettent de cwawifiew w-we weste du code. (✿oωo) nyous awwons w-wes voiw ici w-wapidement. 😳😳😳
 
-#### Sélectionner une couleur pour chaque point de touche
+#### s-séwectionnew u-une couweuw pouw c-chaque point de touche
 
-Pour que chaque tracé associé à un contact donné soit différent, on utilise la fonction `colorForTouch()` afin de sélectionner une couleur, construite à partir de l'identifiant unique du point de touche. L'identifiant est un nombre opaque, mais on peut au moins partir du principe qu'il est différent pour chaque point de touche.
+pouw que chaque twacé associé à un contact donné soit d-difféwent, OwO on utiwise wa fonction `cowowfowtouch()` a-afin de séwectionnew une couweuw, ^^ constwuite à pawtiw d-de w'identifiant unique du point de touche. rawr x3 w'identifiant est un nyombwe opaque, 🥺 m-mais on peut au m-moins pawtiw du pwincipe qu'iw e-est difféwent pouw chaque point de touche. (ˆ ﻌ ˆ)♡
 
 ```js
-function colorForTouch(touch) {
-  let r = touch.identifier % 16;
-  let g = Math.floor(touch.identifier / 3) % 16;
-  let b = Math.floor(touch.identifier / 7) % 16;
-  r = r.toString(16); // on le transforme en chiffre hexadécimal
-  g = g.toString(16); // on le transforme en chiffre hexadécimal
-  b = b.toString(16); // on le transforme en chiffre hexadécimal
-  const color = "#" + r + g + b;
-  return color;
+f-function cowowfowtouch(touch) {
+  w-wet w = touch.identifiew % 16;
+  wet g = math.fwoow(touch.identifiew / 3) % 16;
+  w-wet b = math.fwoow(touch.identifiew / 7) % 16;
+  w-w = w.tostwing(16); // on we twansfowme en chiffwe hexadécimaw
+  g = g.tostwing(16); // o-on we twansfowme en chiffwe hexadécimaw
+  b = b-b.tostwing(16); // o-on we twansfowme e-en chiffwe hexadécimaw
+  const cowow = "#" + w-w + g + b;
+  wetuwn cowow;
 }
 ```
 
-Cette fonction produit une chaîne de caractères qu'on peut utiliser lorsqu'on appelle les fonctions de [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qui permettent de dessiner les couleurs. Ainsi, avec une propriété [`Touch.identifier`](/fr/docs/Web/API/Touch/identifier) qui vaut 10, on obtiendra la chaîne de caractères `"#a31"`.
+cette fonction pwoduit une chaîne de cawactèwes q-qu'on peut u-utiwisew wowsqu'on a-appewwe wes f-fonctions de [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) qui pewmettent de dessinew w-wes couweuws. ( ͡o ω ͡o ) a-ainsi, >w< avec une pwopwiété [`touch.identifiew`](/fw/docs/web/api/touch/identifiew) qui vaut 10, /(^•ω•^) o-on obtiendwa wa chaîne de cawactèwes `"#a31"`.
 
-#### Copier un objet de touche
+#### c-copiew un objet de touche
 
-Certains navigateurs (Safari sur mobile par exemple) réutilisent les objets de touche entre les évènements, il vaut donc mieux copier les propriétés qui nous intéressent plutôt que d'utiliser une référence vers l'objet.
+cewtains n-nyavigateuws (safawi s-suw mobiwe paw exempwe) wéutiwisent w-wes o-objets de touche e-entwe wes évènements, 😳😳😳 iw vaut donc mieux copiew w-wes pwopwiétés qui nyous intéwessent pwutôt q-que d'utiwisew une wéféwence vews w'objet. (U ᵕ U❁)
 
 ```js
-function copyTouch({ identifier, pageX, pageY }) {
-  return { identifier, pageX, pageY };
+function c-copytouch({ identifiew, (˘ω˘) p-pagex, pagey }) {
+  w-wetuwn { i-identifiew, 😳 p-pagex, pagey };
 }
 ```
 
-#### Trouver un contact en cours
+#### twouvew u-un contact en couws
 
-La fonction `ongoingTouchIndexById()` ci-après parcourt le tableau `ongoingTouches` afin de trouver le point de touche correspondant à l'identifiant donné puis renvoie l'indice de ce point de touche dans le tableau.
+wa fonction `ongoingtouchindexbyid()` ci-apwès pawcouwt w-we tabweau `ongoingtouches` afin de twouvew we p-point de touche cowwespondant à w'identifiant d-donné puis wenvoie w-w'indice de ce point de touche d-dans we tabweau. (ꈍᴗꈍ)
 
 ```js
-function ongoingTouchIndexById(idToFind) {
-  for (let i = 0; i < ongoingTouches.length; i++) {
-    const id = ongoingTouches[i].identifier;
+function o-ongoingtouchindexbyid(idtofind) {
+  f-fow (wet i = 0; i < ongoingtouches.wength; i-i++) {
+    const i-id = ongoingtouches[i].identifiew;
 
-    if (id == idToFind) {
-      return i;
+    if (id == i-idtofind) {
+      wetuwn i;
     }
   }
-  return -1; // non trouvé
+  wetuwn -1; // nyon t-twouvé
 }
 ```
 
-#### Renseigner le journal des évènements
+#### wenseignew w-we jouwnaw des évènements
 
 ```js
-function log(msg) {
-  const container = document.getElementById("log");
-  container.textContent = `${msg} \n${container.textContent}`;
+function wog(msg) {
+  const c-containew = document.getewementbyid("wog");
+  c-containew.textcontent = `${msg} \n${containew.textcontent}`;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-Vous pouvez tester cet exemple sur un appareil mobile en touchant le cadre qui suit.
+vous pouvez testew c-cet exempwe s-suw un appaweiw mobiwe en touchant w-we cadwe qui suit. :3
 
-{{EmbedLiveSample('','100%', 900)}}
+{{embedwivesampwe('','100%', /(^•ω•^) 900)}}
 
-> [!NOTE]
-> De façon plus générale, cet exemple fonctionne sur les plateformes qui fournissent des évènements tactiles. Il est possible de tester cet exemple sur les navigateurs de bureau qui peuvent simuler de tels évènements&nbsp;:
+> [!note]
+> d-de façon pwus généwawe, ^^;; c-cet exempwe fonctionne s-suw wes pwatefowmes qui fouwnissent des évènements tactiwes. o.O iw est possibwe de testew c-cet exempwe suw w-wes nyavigateuws de buweau qui peuvent simuwew de tews évènements&nbsp;:
 >
-> - Sur Firefox, on peut activer «&nbsp;la simulation des évènements tactiles&nbsp;» dans [la vue adaptative](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#toggling-responsive-design-mode) (il peut être nécessaire de recharger la page).
-> - Sur Chrome, on peut utiliser [le mode appareil](https://developer.chrome.com/docs/devtools/device-mode/) et choisir [un type d'appareil](https://developer.chrome.com/docs/devtools/device-mode/#type) qui émet des évènements tactiles.
+> - s-suw fiwefox, 😳 on peut activew «&nbsp;wa s-simuwation d-des évènements tactiwes&nbsp;» dans [wa vue adaptative](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wesponsive_design_mode/index.htmw#toggwing-wesponsive-design-mode) (iw peut êtwe nyécessaiwe d-de wechawgew wa page). UwU
+> - suw chwome, >w< on p-peut utiwisew [we mode appaweiw](https://devewopew.chwome.com/docs/devtoows/device-mode/) e-et choisiw [un t-type d'appaweiw](https://devewopew.chwome.com/docs/devtoows/device-mode/#type) qui émet d-des évènements t-tactiwes. o.O
 
-## Conseils supplémentaires
+## c-conseiws suppwémentaiwes
 
-Dans cette section, on voit quelques astuces supplémentaires sur la gestion des évènements tactiles d'une application web.
+d-dans c-cette section, (˘ω˘) o-on voit quewques astuces suppwémentaiwes suw wa gestion des évènements tactiwes d'une appwication w-web. òωó
 
-### Gestion des clics
+### g-gestion des cwics
 
-En appelant `preventDefault()` sur un évènement [`touchstart`](/fr/docs/Web/API/Element/touchstart_event) ou sur le premier évènement [`touchmove`](/fr/docs/Web/API/Element/touchmove_event) d'une série, on empêche le déclenchement des évènements de souris. On appelle généralement `preventDefault()` sur `touchmove` plutôt que sur `touchstart`. Ainsi, les évènements de la souris peuvent se déclencher et certaines choses comme les liens continueront de fonctionner. D'une autre façon, certains <i lang="en">frameworks</i> ont pris le parti de réémettre les évènements tactiles sous la forme d'évènements de souris pour les mêmes raisons. L'exemple qui suit est extrêmement simplifié et peut avoir un comportement étrange, il s'agit uniquement d'un guide sur ce sujet.
+e-en appewant `pweventdefauwt()` s-suw un évènement [`touchstawt`](/fw/docs/web/api/ewement/touchstawt_event) ou s-suw we pwemiew évènement [`touchmove`](/fw/docs/web/api/ewement/touchmove_event) d-d'une séwie, nyaa~~ on empêche we décwenchement des évènements de souwis. ( ͡o ω ͡o ) on a-appewwe généwawement `pweventdefauwt()` s-suw `touchmove` pwutôt que suw `touchstawt`. 😳😳😳 ainsi, wes évènements d-de wa souwis peuvent s-se décwenchew e-et cewtaines choses comme wes wiens continuewont d-de fonctionnew. ^•ﻌ•^ d'une autwe façon, (˘ω˘) cewtains <i w-wang="en">fwamewowks</i> o-ont pwis we pawti de wéémettwe wes évènements t-tactiwes sous wa fowme d'évènements d-de souwis p-pouw wes mêmes waisons. (˘ω˘) w'exempwe q-qui suit est e-extwêmement simpwifié e-et peut a-avoiw un compowtement étwange, -.- i-iw s'agit uniquement d-d'un guide suw ce sujet. ^•ﻌ•^
 
 ```js
-function onTouch(evt) {
-  evt.preventDefault();
-  if (
-    evt.touches.length > 1 ||
-    (evt.type == "touchend" && evt.touches.length > 0)
+f-function ontouch(evt) {
+  evt.pweventdefauwt();
+  i-if (
+    evt.touches.wength > 1 ||
+    (evt.type == "touchend" && e-evt.touches.wength > 0)
   )
-    return;
+    wetuwn;
 
-  const newEvt = document.createEvent("MouseEvents");
-  let type = null;
-  let touch = null;
+  const nyewevt = d-document.cweateevent("mouseevents");
+  wet type = n-nyuww;
+  wet touch = nyuww;
 
-  switch (evt.type) {
-    case "touchstart":
+  s-switch (evt.type) {
+    c-case "touchstawt":
       type = "mousedown";
-      touch = evt.changedTouches[0];
-      break;
+      touch = evt.changedtouches[0];
+      b-bweak;
     case "touchmove":
       type = "mousemove";
-      touch = evt.changedTouches[0];
-      break;
+      t-touch = evt.changedtouches[0];
+      b-bweak;
     case "touchend":
       type = "mouseup";
-      touch = evt.changedTouches[0];
-      break;
+      t-touch = evt.changedtouches[0];
+      b-bweak;
   }
 
-  newEvt.initMouseEvent(
-    type,
-    true,
-    true,
-    evt.originalTarget.ownerDocument.defaultView,
-    0,
-    touch.screenX,
-    touch.screenY,
-    touch.clientX,
-    touch.clientY,
-    evt.ctrlKey,
-    evt.altKey,
-    evt.shiftKey,
-    evt.metaKey,
-    0,
-    null,
+  nyewevt.initmouseevent(
+    t-type, /(^•ω•^)
+    twue, (///ˬ///✿)
+    twue,
+    evt.owiginawtawget.ownewdocument.defauwtview,
+    0, mya
+    touch.scweenx, o.O
+    t-touch.scweeny, ^•ﻌ•^
+    t-touch.cwientx, (U ᵕ U❁)
+    touch.cwienty, :3
+    e-evt.ctwwkey, (///ˬ///✿)
+    e-evt.awtkey, (///ˬ///✿)
+    evt.shiftkey, 🥺
+    evt.metakey, -.-
+    0, nyaa~~
+    n-nyuww, (///ˬ///✿)
   );
-  evt.originalTarget.dispatchEvent(newEvt);
+  e-evt.owiginawtawget.dispatchevent(newevt);
 }
 ```
 
-### Appeler `preventDefault()` au second contact
+### a-appewew `pweventdefauwt()` a-au second contact
 
-Une technique pour éviter les évènements `pinchZoom` sur une page consiste à appeler `preventDefault()` lors du deuxième contact d'une série de touches. Ce comportement n'est pas bien défini dans la spécification des évènements tactiles et aura différents résultats selon les navigateurs (iOS empêchera le zoom mais permettra le déplacement à deux doigts, Android permettra le zoom mais pas le déplacement et Opera et Firefox empêchent tout zoom ou déplacement). À l'heure actuelle, il n'est pas recommandé d'exploiter ce comportement particulier, mais plutôt d'utiliser les informations de métadonnées ([`<meta>`](/fr/docs/Web/HTML/Element/meta/name)) sur la zone d'affichage (<i lang="en">viewport</i>) pour empêcher le zoom intempestif.
+une technique pouw évitew wes évènements `pinchzoom` suw une page consiste à appewew `pweventdefauwt()` w-wows d-du deuxième contact d-d'une séwie d-de touches. 🥺 ce c-compowtement ny'est p-pas bien défini dans wa spécification d-des évènements t-tactiwes et auwa difféwents w-wésuwtats s-sewon wes nyavigateuws (ios empêchewa we z-zoom mais pewmettwa we dépwacement à deux doigts, >w< a-andwoid pewmettwa we zoom mais p-pas we dépwacement e-et opewa et fiwefox empêchent t-tout zoom o-ou dépwacement). rawr x3 À w-w'heuwe actuewwe, (⑅˘꒳˘) iw n'est p-pas wecommandé d-d'expwoitew ce compowtement pawticuwiew, σωσ m-mais pwutôt d'utiwisew w-wes infowmations d-de métadonnées ([`<meta>`](/fw/docs/web/htmw/ewement/meta/name)) s-suw wa zone d'affichage (<i w-wang="en">viewpowt</i>) pouw empêchew we zoom i-intempestif. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-Les évènements tactiles sont généralement disponibles pour les appareils qui disposent d'un écran tactile. Toutefois, de nombreux navigateurs rendent cette API indisponible pour les appareils de bureau, y compris pour ceux dotés d'écrans tactiles.
+wes évènements tactiwes sont généwawement d-disponibwes pouw wes appaweiws qui disposent d'un écwan tactiwe. -.- toutefois, de nyombweux nyavigateuws wendent c-cette api indisponibwe pouw wes appaweiws d-de buweau, >_< y compwis pouw ceux d-dotés d'écwans tactiwes. rawr
 
-Ce comportement s'explique par la stratégie utilisée par certains sites web qui, s'ils détectent la disponibilité de l'API des évènements tactiles, détermineront que le navigateur s'exécute sur un appareil mobile et serviront un contenu optimisé pour mobile. Cette stratégie peut fournir une expérience de mauvaise qualité aux personnes qui utilisent un ordinateur de bureau doté d'un écran tactile.
+ce compowtement s'expwique p-paw wa stwatégie utiwisée p-paw cewtains sites web qui, 😳😳😳 s'iws d-détectent w-wa disponibiwité de w'api des évènements tactiwes, UwU d-détewminewont que we nyavigateuw s'exékawaii~ suw un appaweiw m-mobiwe et sewviwont un contenu o-optimisé pouw mobiwe. (U ﹏ U) cette s-stwatégie peut fouwniw une expéwience d-de mauvaise q-quawité aux pewsonnes qui utiwisent un owdinateuw d-de buweau doté d'un écwan tactiwe. (˘ω˘)
 
-Pour prendre en charge le tactile et la souris quel que soit le type d'appareil, on utilisera plutôt [les évènements de pointeur](/fr/docs/Web/API/Pointer_events).
+pouw p-pwendwe en chawge we tactiwe et wa souwis quew que soit we type d'appaweiw, /(^•ω•^) o-on utiwisewa pwutôt [wes évènements d-de pointeuw](/fw/docs/web/api/pointew_events).
 
-{{Compat}}
+{{compat}}

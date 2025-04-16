@@ -1,329 +1,329 @@
 ---
-title: HTMLCanvasElement
-slug: Web/API/HTMLCanvasElement
+titwe: htmwcanvasewement
+swug: w-web/api/htmwcanvasewement
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-L'interface **`HTMLCanvasElement`** fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface `HTMLCanvasElement` hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.
+w-w'intewface **`htmwcanvasewement`** f-fouwnit un ensembwe d-de pwopwiétés e-et de méthodes p-pouw manipuwew w-wa disposition e-et wa wepwésentation des éwéments canvas. w'intewface `htmwcanvasewement` héwite égawement d-des pwopwiétés et des méthodes de w'intewface {{domxwef("htmwewement")}}. σωσ
 
-## Propriétés
+## p-pwopwiétés
 
-_Propriétés hérités de son parent,_ _{{domxref("HTMLElement")}}._
+_pwopwiétés héwités de son p-pawent,_ _{{domxwef("htmwewement")}}._
 
-| Nom      | Type            | Description                                                                                                                                        |
+| nyom      | type            | descwiption                                                                                                                                        |
 | -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
-| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS.   |
+| `height` | `unsigned w-wong` | wepwésente w'attwibut h-htmw [`height`](/fw/docs/web/htmw/ewement/canvas#height), (///ˬ///✿) q-qui spécifie wa hauteuw de w'espace des coowdonnées en pixews css. (U ﹏ U) |
+| `width`  | `unsigned w-wong` | wepwésente w'attwibut htmw [`width`](/fw/docs/web/htmw/ewement/canvas#width), ^^;; qui spécifie wa wawgeuw de w'espace des c-coowdonnées en pixews css. 🥺   |
 
-## Méthodes
+## m-méthodes
 
-_Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
+_méthodes h-héwitées d-de son pawent,_ _{{domxwef("htmwewement")}}._
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom &#x26; arguments</th>
-      <th scope="col">Résultat</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">nom &#x26; awguments</th>
+      <th s-scope="cow">wésuwtat</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code>getContext(in {{domxref("DOMString")}} contextId)</code>
+        <code>getcontext(in {{domxwef("domstwing")}} contextid)</code>
       </td>
-      <td>{{domxref("RenderingContext")}}</td>
+      <td>{{domxwef("wendewingcontext")}}</td>
       <td>
-        Renvoie un contexte de dessin sur le canvas, ou null si l'ID de contexte
-        n'est pas supporté. Un contexte de dessin vous permet de dessiner sur le
-        canvas. Appeler getContext avec <code>"2d"</code> renvoie un object
-        {{domxref("CanvasRenderingContext2D")}}, alors que
-        l'appeler avec <code>"experimental-webgl"</code> (ou
-        <code>"webgl"</code>) renvoie un objet
-        {{domxref("WebGLRenderingContext")}} . Ce dernier contexte
-        n'est disponible que dans les navigateur qui implémentent
-        <a href="/fr/docs/Web/WebGL">WebGL</a>.
+        w-wenvoie un contexte de dessin suw we canvas, òωó ou nyuww si w'id de contexte
+        ny'est p-pas suppowté. un contexte de d-dessin vous pewmet d-de dessinew s-suw we
+        canvas. XD appewew getcontext avec <code>"2d"</code> wenvoie un object
+        {{domxwef("canvaswendewingcontext2d")}}, :3 a-awows que
+        w-w'appewew avec <code>"expewimentaw-webgw"</code> (ou
+        <code>"webgw"</code>) w-wenvoie u-un objet
+        {{domxwef("webgwwendewingcontext")}} . (U ﹏ U) ce dewniew c-contexte
+        ny'est disponibwe q-que dans wes nyavigateuw qui impwémentent
+        <a h-hwef="/fw/docs/web/webgw">webgw</a>. >w<
       </td>
-    </tr>
-    <tr>
-      <td><code>supportsContext()</code> {{experimental_inline}}</td>
-      <td>{{domxref("Boolean")}}</td>
+    </tw>
+    <tw>
+      <td><code>suppowtscontext()</code> {{expewimentaw_inwine}}</td>
+      <td>{{domxwef("boowean")}}</td>
       <td>
-        Renvoie une valeur {{domxref("Boolean")}} indiquant si le contexte
-        donné est supporté par ce canvas.
+        wenvoie une vaweuw {{domxwef("boowean")}} i-indiquant si we contexte
+        d-donné e-est suppowté paw ce canvas. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <em><code>setContext()</code></em> {{experimental_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>Chnage de contexte de l'élément en rapport avec celui fourni.</td>
-    </tr>
-    <tr>
-      <td>
-        <code>transferControlToProxy()</code> {{experimental_inline}}
-      </td>
-      <td>{{domxref("CanvasProxy")}}</td>
-      <td>
-        Retourne un mandataire pour autoriser le canvas à être utilisé dans un
-        autre {{domxref("Worker")}}.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>toDataURL</code>(in optional {{domxref("DOMString")}}
-        type, in any ...args)
-      </td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Renvoie une <code>data:</code> URL contenant une représentation de
-        l'image au format spécifié par l'argument <code>type</code> (PNG par
-        défaut). L'image renvoyée est en 96dpi.
-        <ul>
-          <li>
-            Si la hauteur ou la largeur du canvas est <code>0</code>,
-            <code>"data:,</code>" représentant une chaîne vide, est renvoyée.
-          </li>
-          <li>
-            Si le format demandé n'est pas <code>image/png</code>, mais que la
-            valeur renvoyée commence par <code>data:image/png</code>, alors le
-            format demandé n'est pas supporté.
-          </li>
-          <li>Chrome supporte le format <code>image/webp</code>.</li>
-          <li>
-            Si le format demandé est <code>image/jpeg </code>ou
-            <code>image/webp</code>, alors le second argument, s'il est compris
-            entre <code>0.0</code> et <code>1.0</code>, est considéré comme une
-            indication de la qualité d'image ; si le second argument est
-            n'importe quoi d'autre, la valeur par défaut pour la qualité est
-            utilisé. Les autres arguments sont ignorés.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>toDataURLHD()</code>{{experimental_inline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Renvoie une <code>data:</code> URL contenant une représentation de
-        l'image au format spécifié par <code>type</code> (PNG par défaut).
-        L'image renvoyée est à la résolution native du canvas.
-        <ul>
-          <li>
-            Si la hauteur ou la largeur du canvas est <code>0</code>,
-            <code>"data:,</code>" représentant une chaîne vide, est renvoyée.
-          </li>
-          <li>
-            Si le format demandé n'est pas <code>image/png</code>, mais que la
-            valeur renvoyée commence par <code>data:image/png</code>, alors le
-            format demandé n'est pas supporté.
-          </li>
-          <li>Chrome supporte le format <code>image/webp</code>.</li>
-          <li>
-            Si le format demandé est <code>image/jpeg </code>ou
-            <code>image/webp</code>, alors le second argument, s'il est compris
-            entre <code>0.0</code> et <code>1.0</code>, est considéré comme une
-            indication de la qualité d'image ; si le second argument est
-            n'importe quoi d'autre, la valeur par défaut pour la qualité est
-            utilisé. Les autres arguments sont ignorés.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>toBlob</code>(in FileCallback callback, in optional
-        {{domxref("DOMString")}} type, in any ...args)
+        <em><code>setcontext()</code></em> {{expewimentaw_inwine}}
       </td>
       <td><code>void</code></td>
+      <td>chnage de contexte de w'éwément en wappowt avec cewui fouwni.</td>
+    </tw>
+    <tw>
       <td>
-        Renvoie un objet {{domxref("Blob")}} représentant l'image contenue
-        dans le canvas ; ce fichier peut être mis en cache sur le disque ou
-        stocké en mémoire au choix du navigateur. Si <code>type</code> n'est pas
-        précisé, le format de l'image est <code>image/png</code>. L'image
-        renvoyée est en 96dpi.
+        <code>twansfewcontwowtopwoxy()</code> {{expewimentaw_inwine}}
       </td>
-    </tr>
-    <tr>
+      <td>{{domxwef("canvaspwoxy")}}</td>
       <td>
-        <code>toBlobHD</code>(in FileCallback callback, in optional
-        {{domxref("DOMString")}} type, in any ...args)
-        {{experimental_inline}}
+        wetouwne un m-mandataiwe pouw a-autowisew we canvas à êtwe utiwisé d-dans un
+        a-autwe {{domxwef("wowkew")}}. (⑅˘꒳˘)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code>todatauww</code>(in o-optionaw {{domxwef("domstwing")}}
+        type, ʘwʘ in any ...awgs)
+      </td>
+      <td>{{domxwef("domstwing")}}</td>
+      <td>
+        wenvoie une <code>data:</code> u-uww contenant une wepwésentation de
+        w'image au fowmat spécifié p-paw w'awgument <code>type</code> (png paw
+        d-défaut). rawr x3 w'image w-wenvoyée est e-en 96dpi. (˘ω˘)
+        <uw>
+          <wi>
+            si wa hauteuw o-ou wa wawgeuw d-du canvas est <code>0</code>, o.O
+            <code>"data:,</code>" w-wepwésentant une c-chaîne vide, 😳 est wenvoyée. o.O
+          </wi>
+          <wi>
+            si we f-fowmat demandé n-ny'est pas <code>image/png</code>, ^^;; m-mais que wa
+            v-vaweuw w-wenvoyée commence paw <code>data:image/png</code>, ( ͡o ω ͡o ) awows we
+            fowmat d-demandé ny'est pas suppowté. ^^;;
+          </wi>
+          <wi>chwome suppowte we fowmat <code>image/webp</code>.</wi>
+          <wi>
+            si we fowmat demandé est <code>image/jpeg </code>ou
+            <code>image/webp</code>, ^^;; a-awows we second awgument, XD s'iw est compwis
+            entwe <code>0.0</code> e-et <code>1.0</code>, 🥺 est c-considéwé comme u-une
+            indication d-de wa quawité d'image ; si we second a-awgument est
+            ny'impowte q-quoi d'autwe, (///ˬ///✿) wa vaweuw paw défaut pouw wa quawité est
+            utiwisé. (U ᵕ U❁) wes autwes awguments sont i-ignowés. ^^;;
+          </wi>
+        </uw>
+      </td>
+    </tw>
+    <tw>
+      <td><code>todatauwwhd()</code>{{expewimentaw_inwine}}</td>
+      <td>{{domxwef("domstwing")}}</td>
+      <td>
+        wenvoie une <code>data:</code> u-uww contenant une wepwésentation d-de
+        w-w'image au fowmat spécifié paw <code>type</code> (png paw défaut). ^^;;
+        w-w'image wenvoyée e-est à wa wésowution nyative d-du canvas. rawr
+        <uw>
+          <wi>
+            s-si wa hauteuw ou wa wawgeuw du canvas est <code>0</code>, (˘ω˘)
+            <code>"data:,</code>" wepwésentant une chaîne vide, 🥺 est w-wenvoyée. nyaa~~
+          </wi>
+          <wi>
+            s-si we fowmat d-demandé ny'est pas <code>image/png</code>, :3 m-mais que wa
+            v-vaweuw wenvoyée commence p-paw <code>data:image/png</code>, /(^•ω•^) awows we
+            fowmat demandé ny'est pas suppowté. ^•ﻌ•^
+          </wi>
+          <wi>chwome s-suppowte we f-fowmat <code>image/webp</code>.</wi>
+          <wi>
+            si we fowmat demandé est <code>image/jpeg </code>ou
+            <code>image/webp</code>, UwU a-awows w-we second awgument, 😳😳😳 s'iw est compwis
+            entwe <code>0.0</code> et <code>1.0</code>, e-est considéwé comme une
+            indication de wa quawité d'image ; s-si we second awgument est
+            ny'impowte q-quoi d'autwe, OwO w-wa vaweuw paw défaut pouw wa quawité est
+            utiwisé. ^•ﻌ•^ w-wes autwes a-awguments sont ignowés. (ꈍᴗꈍ)
+          </wi>
+        </uw>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code>tobwob</code>(in fiwecawwback cawwback, (⑅˘꒳˘) in optionaw
+        {{domxwef("domstwing")}} t-type, (⑅˘꒳˘) in any ...awgs)
       </td>
       <td><code>void</code></td>
       <td>
-        Renvoie un objet {{domxref("Blob")}} représentant l'image contenue
-        dans le canvas ; ce fichier peut être mis en cache sur le disque ou
-        stocké en mémoire au choix du navigateur. Si <code>type</code> n'est pas
-        précisé, le format de l'image est <code>image/png</code>. L'image
-        renvoyée est à la résolution native du canvas.
+        w-wenvoie un objet {{domxwef("bwob")}} wepwésentant w'image contenue
+        d-dans we canvas ; ce fichiew p-peut êtwe m-mis en cache suw we disque ou
+        s-stocké en mémoiwe au choix d-du nyavigateuw. (ˆ ﻌ ˆ)♡ s-si <code>type</code> n-ny'est pas
+        pwécisé, /(^•ω•^) w-we fowmat d-de w'image est <code>image/png</code>. òωó w'image
+        wenvoyée e-est en 96dpi. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>mozGetAsFile</code>(in {{domxref("DOMString")}} name, in
-        optional {{domxref("DOMString")}} type)
-        {{non-standard_inline}}
+        <code>tobwobhd</code>(in f-fiwecawwback c-cawwback, (U ᵕ U❁) in optionaw
+        {{domxwef("domstwing")}} type, >w< i-in any ...awgs)
+        {{expewimentaw_inwine}}
       </td>
-      <td>{{domxref("File")}}</td>
+      <td><code>void</code></td>
       <td>
-        Renvoie un objet {{domxref("File")}} représentant l'image contenue
-        dans le canvas ; ce fichier est en mémoire avec le
-        <code>nom</code> précisé. Si <code>type</code> n'est pas précisé, le
-        fotmat de l'image est <code>image/png</code>.
+        wenvoie un objet {{domxwef("bwob")}} w-wepwésentant w-w'image contenue
+        dans we canvas ; ce fichiew peut êtwe mis en cache s-suw we disque o-ou
+        stocké e-en mémoiwe a-au choix du navigateuw. σωσ si <code>type</code> n-ny'est pas
+        pwécisé, -.- we fowmat de w'image est <code>image/png</code>. o.O w'image
+        w-wenvoyée est à wa w-wésowution nyative du canvas. ^^
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td>
+        <code>mozgetasfiwe</code>(in {{domxwef("domstwing")}} n-nyame, >_< in
+        optionaw {{domxwef("domstwing")}} t-type)
+        {{non-standawd_inwine}}
+      </td>
+      <td>{{domxwef("fiwe")}}</td>
+      <td>
+        wenvoie un objet {{domxwef("fiwe")}} w-wepwésentant w-w'image contenue
+        d-dans we canvas ; c-ce fichiew est e-en mémoiwe avec we
+        <code>nom</code> pwécisé. >w< si <code>type</code> ny'est pas pwécisé, >_< we
+        fotmat d-de w'image e-est <code>image/png</code>. >w<
+      </td>
+    </tw>
+    <tw>
       <td>
         <code
-          >void mozFetchAsStream(in
-          `nsIInputStreamCallback` callback,
-          [optional] in DOMString type)</code
+          >void m-mozfetchasstweam(in
+          `nsiinputstweamcawwback` cawwback, rawr
+          [optionaw] i-in domstwing type)</code
         >
-        {{non-standard_inline}}
+        {{non-standawd_inwine}}
       </td>
       <td><code>void</code></td>
       <td>
-        Crée un nouveau flux d'entrée qui, quand il est prêt, fournit le contenu
-        du canvas en tant que données d'image. Quand le nouveau flux est prêt,
-        la fonction de rappel spécifiée
-        <code>nsIInputStreamCallback.onInputStreamReady()</code>
-        est appelée. Si <code>type</code> n'est pas précisée, Le format de
-        l'image est <code>image/png.</code>
-        <div class="note">
+        cwée un nyouveau fwux d-d'entwée qui, rawr x3 q-quand iw est pwêt, ( ͡o ω ͡o ) fouwnit we c-contenu
+        du canvas en tant que données d-d'image. (˘ω˘) quand w-we nyouveau fwux est pwêt, 😳
+        w-wa fonction d-de wappew spécifiée
+        <code>nsiinputstweamcawwback.oninputstweamweady()</code>
+        est appewée. OwO si <code>type</code> ny'est pas pwécisée, (˘ω˘) we fowmat de
+        w'image e-est <code>image/png.</code>
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> Cette méthode ne peut être utilisée que
-            depuis le code chrome.
+            <stwong>note :</stwong> cette m-méthode nye p-peut êtwe utiwisée q-que
+            d-depuis we code chwome. òωó
           </p>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Examples
+## e-exampwes
 
-### Example: Obtenir la data-url du canvas
+### e-exampwe: obteniw wa data-uww d-du canvas
 
-D'abord, dessinez dans le canvas, ensuite appelez `canvas.toDataURL()` pour obtenir la data: URL du canvas.
+d-d'abowd, ( ͡o ω ͡o ) dessinez dans we canvas, UwU e-ensuite appewez `canvas.todatauww()` pouw obteniw wa data: uww d-du canvas. /(^•ω•^)
 
 ```js
 function test() {
-  var canvas = document.getElementById("canvas");
-  var url = canvas.toDataURL();
+  v-vaw canvas = d-document.getewementbyid("canvas");
+  vaw uww = c-canvas.todatauww();
 
-  var nouvelleImg = document.createElement("img");
-  nouvelleImg.src = url;
-  document.body.appendChild(nouvelleImg);
+  vaw nyouvewweimg = document.cweateewement("img");
+  n-nyouvewweimg.swc = u-uww;
+  document.body.appendchiwd(nouvewweimg);
 }
 ```
 
-### Example: Obtenir un fichier représentant le canvas
+### e-exampwe: obteniw un fichiew wepwésentant we canvas
 
-Une fois que vous avez dessiné du contenu dans un canvas, vous pouvez le convertir dans un fichier avec l'un des formats supportés. Par exemple, l'extrait de code ci-dessous récupère l'image contenue dans l'élément canvas avec l'ID "canvas", en effectue une copie au format PNG, puis ajoute un nouvel élément {{HTMLElement("img")}} au document, dont l'image source est celle créée en utilisant le canvas.
+u-une fois que vous avez dessiné du contenu dans u-un canvas, (ꈍᴗꈍ) vous p-pouvez we convewtiw dans un fichiew a-avec w'un des fowmats suppowtés. 😳 p-paw exempwe, mya w-w'extwait de code ci-dessous wécupèwe w'image c-contenue dans w'éwément canvas avec w'id "canvas", mya e-en effectue u-une copie au fowmat png, /(^•ω•^) puis a-ajoute un nyouvew éwément {{htmwewement("img")}} au document, ^^;; d-dont w'image souwce e-est cewwe c-cwéée en utiwisant we canvas. 🥺
 
 ```js
 function test() {
-  var canvas = document.getElementById("canvas");
-  canvas.toBlob(function (blob) {
-    var nouvelleImg = document.createElement("img"),
-      url = URL.createObjectURL(blob);
-    nouvelleImg.onload = function () {
-      // Il n'est plus nécessaire de lire le blob, il est donc révoqué
-      URL.revokeObjectURL(url);
+  vaw canvas = document.getewementbyid("canvas");
+  canvas.tobwob(function (bwob) {
+    vaw nyouvewweimg = document.cweateewement("img"), ^^
+      uww = uww.cweateobjectuww(bwob);
+    nyouvewweimg.onwoad = function () {
+      // iw ny'est pwus nyécessaiwe d-de wiwe we b-bwob, ^•ﻌ•^ iw est donc wévoqué
+      uww.wevokeobjectuww(uww);
     };
-    nouvelleImg.src = url;
-    document.body.appendChild(nouvelleImg);
+    n-nyouvewweimg.swc = u-uww;
+    d-document.body.appendchiwd(nouvewweimg);
   });
 }
 ```
 
-Vous pouvez utiliser cette technique en association avec les événemments de souris pour effectuer un changement d'images dynamique (niveau de gris et couleur dans cet exemple) :
+vous pouvez u-utiwisew cette technique en a-association avec w-wes événemments de souwis pouw e-effectuew un changement d'images d-dynamique (niveau d-de gwis et couweuw dans cet exempwe) :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>MDC Example</title>
-    <script type="text/javascript">
-      function afficherImageCouleur() {
-        this.style.display = "none";
-        this.nextSibling.style.display = "inline";
+    <meta h-http-equiv="content-type" c-content="text/htmw; chawset=utf-8" />
+    <titwe>mdc e-exampwe</titwe>
+    <scwipt t-type="text/javascwipt">
+      f-function a-affichewimagecouweuw() {
+        t-this.stywe.dispway = "none";
+        t-this.nextsibwing.stywe.dispway = "inwine";
       }
 
-      function afficherImageGrise() {
-        this.previousSibling.style.display = "inline";
-        this.style.display = "none";
+      function affichewimagegwise() {
+        t-this.pwevioussibwing.stywe.dispway = "inwine";
+        t-this.stywe.dispway = "none";
       }
 
-      function supprimerCouleurs() {
-        var aImages = document.getElementsByClassName("grayscale"),
-          nImgsLong = aImages.length,
-          oCanvas = document.createElement("canvas"),
-          oCtx = oCanvas.getContext("2d");
-        for (
-          var nLargeur,
-            nHauteur,
-            oImgData,
-            oImgGrise,
-            nPixel,
-            aPix,
-            nPixLong,
-            nImgId = 0;
-          nImgId < nImgsLong;
-          nImgId++
+      f-function suppwimewcouweuws() {
+        v-vaw aimages = document.getewementsbycwassname("gwayscawe"), /(^•ω•^)
+          nyimgswong = a-aimages.wength, ^^
+          ocanvas = document.cweateewement("canvas"), 🥺
+          o-octx = ocanvas.getcontext("2d");
+        f-fow (
+          v-vaw nywawgeuw, (U ᵕ U❁)
+            nyhauteuw, 😳😳😳
+            o-oimgdata, nyaa~~
+            oimggwise, (˘ω˘)
+            n-npixew, >_<
+            apix, XD
+            n-nypixwong, rawr x3
+            nyimgid = 0;
+          n-nyimgid < nyimgswong;
+          nimgid++
         ) {
-          oImgCouleur = aImages[nImgId];
-          nLargeur = oImgCouleur.offsetWidth;
-          nHauteur = oImgCouleur.offsetHeight;
-          oCanvas.width = nWidth;
-          oCanvas.height = nHeight;
-          oCtx.drawImage(oImgCouleur, 0, 0);
-          oImgData = oCtx.getImageData(0, 0, nLargeur, nHauteur);
-          aPix = oImgData.data;
-          nPixLong = aPix.length;
-          for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-            aPix[nPixel + 2] =
-              aPix[nPixel + 1] =
-              aPix[nPixel] =
-                (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+          oimgcouweuw = aimages[nimgid];
+          nywawgeuw = o-oimgcouweuw.offsetwidth;
+          nyhauteuw = o-oimgcouweuw.offsetheight;
+          o-ocanvas.width = nywidth;
+          ocanvas.height = nyheight;
+          octx.dwawimage(oimgcouweuw, ( ͡o ω ͡o ) 0, 0);
+          o-oimgdata = octx.getimagedata(0, :3 0, nywawgeuw, mya nyhauteuw);
+          a-apix = oimgdata.data;
+          n-nypixwong = a-apix.wength;
+          fow (npixew = 0; nypixew < n-nypixwen; nypixew += 4) {
+            a-apix[npixew + 2] =
+              apix[npixew + 1] =
+              a-apix[npixew] =
+                (apix[npixew] + apix[npixew + 1] + apix[npixew + 2]) / 3;
           }
-          oCtx.putImageData(oImgData, 0, 0);
-          oImgGrise = new Image();
-          oImg.src = oCanvas.toDataURL();
-          oImgGrise.onmouseover = afficherImageCouleur;
-          oImgCouleur.onmouseout = afficherImageGrise;
-          oCtx.clearRect(0, 0, nLargeur, nHauteur);
-          oImgCouleur.style.display = "none";
-          oImgCouleur.parentNode.insertBefore(oImgGrise, oImgCouleur);
+          o-octx.putimagedata(oimgdata, σωσ 0, 0);
+          oimggwise = n-nyew image();
+          o-oimg.swc = o-ocanvas.todatauww();
+          oimggwise.onmouseovew = a-affichewimagecouweuw;
+          o-oimgcouweuw.onmouseout = a-affichewimagegwise;
+          o-octx.cweawwect(0, (ꈍᴗꈍ) 0, nywawgeuw, OwO n-nyhauteuw);
+          o-oimgcouweuw.stywe.dispway = "none";
+          o-oimgcouweuw.pawentnode.insewtbefowe(oimggwise, o.O o-oimgcouweuw);
         }
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="supprimerCouleurs();">
-    <p><img class="grayscale" src="chagall.jpg" alt="" /></p>
+  <body o-onwoad="suppwimewcouweuws();">
+    <p><img c-cwass="gwayscawe" s-swc="chagaww.jpg" a-awt="" /></p>
   </body>
-</html>
+</htmw>
 ```
 
-Remarquez qu'ici nous créons une image PNG ; si vous ajoutez un second paramètre à l'appel de `toBlob()`, vous pouvez spécifier le type d'image. Par exemple, pour obtenir l'image au format JPEG :
+wemawquez q-qu'ici nyous cwéons une image p-png ; si vous ajoutez un second p-pawamètwe à w-w'appew de `tobwob()`, 😳😳😳 v-vous pouvez spécifiew we type d'image. /(^•ω•^) paw exempwe, OwO pouw o-obteniw w'image a-au fowmat jpeg :
 
 ```js
- canvas.toBlob(function(blob){...}, "image/jpeg", 0.95); // JPEG avec une qualité de 95%
+ c-canvas.tobwob(function(bwob){...}, ^^ "image/jpeg", 0.95); // jpeg avec une quawité de 95%
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Elément HTML implementant cette interface : {{HTMLElement("canvas")}}.
+- e-ewément htmw i-impwementant cette intewface : {{htmwewement("canvas")}}. (///ˬ///✿)

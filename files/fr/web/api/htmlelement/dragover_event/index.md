@@ -1,172 +1,172 @@
 ---
-title: dragover
-slug: Web/API/HTMLElement/dragover_event
+titwe: dwagovew
+swug: web/api/htmwewement/dwagovew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-L'événement **dragover** est déclenché lorsqu'un élément ou une sélection de texte est glissé jusqu'à une cible de dépôt valide (toutes les 100ms)
+w-w'événement **dwagovew** e-est décwenché w-wowsqu'un éwément o-ou une s-séwection de t-texte est gwissé j-jusqu'à une c-cibwe de dépôt vawide (toutes wes 100ms)
 
-## Informations générales
+## infowmations généwawes
 
-- Interface
-  - : [`DragEvent`](/fr/docs/Web/API/DragEvent)
-- Propagation
-  - : Oui
-- Annulable
-  - : Oui
-- Cible
-  - : {{domxref("Document")}}, {{domxref("Element")}}
-- Action par défaut
-  - : Reset l'opération de glissement courante à "none"
+- intewface
+  - : [`dwagevent`](/fw/docs/web/api/dwagevent)
+- p-pwopagation
+  - : oui
+- annuwabwe
+  - : oui
+- cibwe
+  - : {{domxwef("document")}}, 😳😳😳 {{domxwef("ewement")}}
+- a-action paw défaut
+  - : weset w-w'opéwation de gwissement couwante à "none"
 
-## Properties
+## pwopewties
 
-| Property                           | Type                                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                          |
+| pwopewty                           | t-type                                                                   | descwiption                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | [`EventTarget`](/fr/docs/Web/API/EventTarget)                          | The element that was underneath the element being dragged.                                                                                                                                                                                                                                                                                                                                                           |
-| `type` {{readonlyInline}}          | [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `bubbles` {{readonlyInline}}       | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not                                                                                                                                                                                                                                                                                                                                                                            |
-| `cancelable` {{readonlyInline}}    | [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not?                                                                                                                                                                                                                                                                                                                                                                             |
-| `view` {{readonlyInline}}          | [`WindowProxy`](/fr/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/fr/docs/Web/API/Document/defaultView) (`window` of the document)                                                                                                                                                                                                                                                                                                                           |
-| `detail` {{readonlyInline}}        | `long` (`float`)                                                       | 0.                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| `dataTransfer`                     | DataTransfer                                                           | The data that underlies a drag-and-drop operation, known as the [drag data store](/fr/docs/Web/API/DataTransfer). Protected mode.                                                                                                                                                                                                                                                                                    |
-| `currentTarget` {{readonlyInline}} | EventTarget                                                            | The node that had the event listener attached.                                                                                                                                                                                                                                                                                                                                                                       |
-| `relatedTarget` {{readonlyInline}} | EventTarget                                                            | For `mouseover`, `mouseout`, `mouseenter` and `mouseleave` events: the target of the complementary event (the `mouseleave` target in the case of a `mouseenter` event). `null` otherwise.                                                                                                                                                                                                                            |
-| `screenX` {{readonlyInline}}       | long                                                                   | The X coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                |
-| `screenY` {{readonlyInline}}       | long                                                                   | The Y coordinate of the mouse pointer in global (screen) coordinates.                                                                                                                                                                                                                                                                                                                                                |
-| `clientX` {{readonlyInline}}       | long                                                                   | The X coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                            |
-| `clientY` {{readonlyInline}}       | long                                                                   | The Y coordinate of the mouse pointer in local (DOM content) coordinates.                                                                                                                                                                                                                                                                                                                                            |
-| `button` {{readonlyInline}}        | unsigned short                                                         | The button number that was pressed when the mouse event was fired: Left button=0, middle button=1 (if present), right button=2. For mice configured for left handed use in which the button actions are reversed the values are instead read from right to left.                                                                                                                                                     |
-| `buttons` {{readonlyInline}}       | unsigned short                                                         | The buttons being pressed when the mouse event was fired: Left button=1, Right button=2, Middle (wheel) button=4, 4th button (typically, "Browser Back" button)=8, 5th button (typically, "Browser Forward" button)=16. If two or more buttons are pressed, returns the logical sum of the values. E.g., if Left button and Right button are pressed, returns 3 (=1 \| 2). [More info](/fr/docs/Web/API/MouseEvent). |
-| `mozPressure` {{readonlyInline}}   | float                                                                  | The amount of pressure applied to a touch or tabdevice when generating the event; this value ranges between 0.0 (minimum pressure) and 1.0 (maximum pressure).                                                                                                                                                                                                                                                       |
-| `ctrlKey` {{readonlyInline}}       | boolean                                                                | `true` if the control key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                      |
-| `shiftKey` {{readonlyInline}}      | boolean                                                                | `true` if the shift key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                        |
-| `altKey` {{readonlyInline}}        | boolean                                                                | `true` if the alt key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                          |
-| `metaKey` {{readonlyInline}}       | boolean                                                                | `true` if the meta key was down when the event was fired. `false` otherwise.                                                                                                                                                                                                                                                                                                                                         |
+| `tawget` {{weadonwyinwine}}        | [`eventtawget`](/fw/docs/web/api/eventtawget)                          | t-the e-ewement that was undewneath the ewement being dwagged. (ˆ ﻌ ˆ)♡                                                                                                                                                                                                                                                                                                                                                           |
+| `type` {{weadonwyinwine}}          | [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | the type of e-event. XD                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `bubbwes` {{weadonwyinwine}}       | [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | whethew the event nyowmawwy bubbwes ow nyot                                                                                                                                                                                                                                                                                                                                                                            |
+| `cancewabwe` {{weadonwyinwine}}    | [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | w-whethew the event is cancewwabwe o-ow nyot?                                                                                                                                                                                                                                                                                                                                                                             |
+| `view` {{weadonwyinwine}}          | [`windowpwoxy`](/fw/docs/web/api/windowpwoxy)                          | [`document.defauwtview`](/fw/docs/web/api/document/defauwtview) (`window` o-of the document)                                                                                                                                                                                                                                                                                                                           |
+| `detaiw` {{weadonwyinwine}}        | `wong` (`fwoat`)                                                       | 0. (ˆ ﻌ ˆ)♡                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `datatwansfew`                     | d-datatwansfew                                                           | t-the data that undewwies a dwag-and-dwop o-opewation, ( ͡o ω ͡o ) known as the [dwag data stowe](/fw/docs/web/api/datatwansfew). rawr x3 p-pwotected mode. nyaa~~                                                                                                                                                                                                                                                                                    |
+| `cuwwenttawget` {{weadonwyinwine}} | eventtawget                                                            | the nyode that had the event wistenew attached. >_<                                                                                                                                                                                                                                                                                                                                                                       |
+| `wewatedtawget` {{weadonwyinwine}} | e-eventtawget                                                            | fow `mouseovew`, ^^;; `mouseout`, (ˆ ﻌ ˆ)♡ `mouseentew` a-and `mouseweave` e-events: the t-tawget of the compwementawy event (the `mouseweave` tawget in the case of a `mouseentew` e-event). ^^;; `nuww` o-othewwise. (⑅˘꒳˘)                                                                                                                                                                                                                            |
+| `scweenx` {{weadonwyinwine}}       | wong                                                                   | t-the x coowdinate o-of the mouse pointew in gwobaw (scween) c-coowdinates. rawr x3                                                                                                                                                                                                                                                                                                                                                |
+| `scweeny` {{weadonwyinwine}}       | wong                                                                   | the y coowdinate o-of the mouse pointew in gwobaw (scween) c-coowdinates.                                                                                                                                                                                                                                                                                                                                                |
+| `cwientx` {{weadonwyinwine}}       | wong                                                                   | the x-x coowdinate of the mouse pointew i-in wocaw (dom c-content) coowdinates. (///ˬ///✿)                                                                                                                                                                                                                                                                                                                                            |
+| `cwienty` {{weadonwyinwine}}       | wong                                                                   | the y coowdinate of the mouse pointew in wocaw (dom content) coowdinates. 🥺                                                                                                                                                                                                                                                                                                                                            |
+| `button` {{weadonwyinwine}}        | u-unsigned showt                                                         | t-the button nyumbew t-that was pwessed w-when the mouse e-event was fiwed: weft button=0, >_< middwe button=1 (if pwesent), wight b-button=2. UwU fow mice configuwed fow weft handed use in which the button actions a-awe wevewsed the vawues awe instead w-wead fwom w-wight to weft. >_<                                                                                                                                                     |
+| `buttons` {{weadonwyinwine}}       | u-unsigned showt                                                         | t-the buttons b-being pwessed when t-the mouse event w-was fiwed: weft button=1, -.- wight button=2, mya middwe (wheew) b-button=4, >w< 4th b-button (typicawwy, (U ﹏ U) "bwowsew b-back" button)=8, 😳😳😳 5th b-button (typicawwy, o.O "bwowsew f-fowwawd" button)=16. òωó if two ow mowe buttons awe pwessed, 😳😳😳 w-wetuwns the wogicaw sum of the vawues. σωσ e.g., if weft button and wight button awe pwessed, (⑅˘꒳˘) wetuwns 3 (=1 \| 2). [mowe i-info](/fw/docs/web/api/mouseevent). (///ˬ///✿) |
+| `mozpwessuwe` {{weadonwyinwine}}   | fwoat                                                                  | the amount of pwessuwe a-appwied to a t-touch ow tabdevice w-when genewating the event; this v-vawue wanges between 0.0 (minimum p-pwessuwe) and 1.0 (maximum p-pwessuwe). 🥺                                                                                                                                                                                                                                                       |
+| `ctwwkey` {{weadonwyinwine}}       | boowean                                                                | `twue` if the contwow key was down when the event was fiwed. OwO `fawse` o-othewwise. >w<                                                                                                                                                                                                                                                                                                                                      |
+| `shiftkey` {{weadonwyinwine}}      | boowean                                                                | `twue` i-if the shift key was down when t-the event was fiwed. 🥺 `fawse` o-othewwise. nyaa~~                                                                                                                                                                                                                                                                                                                                        |
+| `awtkey` {{weadonwyinwine}}        | boowean                                                                | `twue` if the awt k-key was down w-when the event was fiwed. ^^ `fawse` o-othewwise. >w<                                                                                                                                                                                                                                                                                                                                          |
+| `metakey` {{weadonwyinwine}}       | boowean                                                                | `twue` if t-the meta key was down when the event was fiwed. `fawse` othewwise. OwO                                                                                                                                                                                                                                                                                                                                         |
 
-## Exemple
+## exempwe
 
-```html
-<div class="dropzone">
+```htmw
+<div c-cwass="dwopzone">
   <div
-    id="draggable"
-    draggable="true"
-    ondragstart="event.dataTransfer.setData('text/plain',null)">
-    This div is draggable
+    i-id="dwaggabwe"
+    d-dwaggabwe="twue"
+    ondwagstawt="event.datatwansfew.setdata('text/pwain',nuww)">
+    this d-div is dwaggabwe
   </div>
 </div>
-<div class="dropzone"></div>
-<div class="dropzone"></div>
-<div class="dropzone"></div>
+<div c-cwass="dwopzone"></div>
+<div cwass="dwopzone"></div>
+<div c-cwass="dwopzone"></div>
 
-<style>
-  #draggable {
+<stywe>
+  #dwaggabwe {
     width: 200px;
     height: 20px;
-    text-align: center;
-    background: white;
+    text-awign: centew;
+    b-backgwound: w-white;
   }
 
-  .dropzone {
+  .dwopzone {
     width: 200px;
     height: 20px;
-    background: blueviolet;
-    margin-bottom: 10px;
+    b-backgwound: bwueviowet;
+    m-mawgin-bottom: 10px;
     padding: 10px;
   }
-</style>
+</stywe>
 
-<script>
-  var dragged;
+<scwipt>
+  vaw dwagged;
 
-  /* Les événements sont déclenchés sur les objets glissables */
-  document.addEventListener("drag", function (event) {}, false);
+  /* wes événements s-sont décwenchés suw wes objets gwissabwes */
+  document.addeventwistenew("dwag", XD function (event) {}, ^^;; f-fawse);
 
-  document.addEventListener(
-    "dragstart",
+  document.addeventwistenew(
+    "dwagstawt", 🥺
     function (event) {
-      // Stocke une référence sur l'objet glissable
-      dragged = event.target;
-      // transparence 50%
-      event.target.style.opacity = 0.5;
-    },
-    false,
+      // s-stocke une wéféwence s-suw w'objet gwissabwe
+      dwagged = event.tawget;
+      // twanspawence 50%
+      e-event.tawget.stywe.opacity = 0.5;
+    }, XD
+    f-fawse,
   );
 
-  document.addEventListener(
-    "dragend",
+  document.addeventwistenew(
+    "dwagend", (U ᵕ U❁)
     function (event) {
-      // reset de la transparence
-      event.target.style.opacity = "";
-    },
-    false,
+      // weset de wa twanspawence
+      e-event.tawget.stywe.opacity = "";
+    }, :3
+    fawse, ( ͡o ω ͡o )
   );
 
-  /* Les événements sont déclenchés sur les cibles du drop */
-  document.addEventListener(
-    "dragover",
-    function (event) {
-      // Empêche default d'autoriser le drop
-      event.preventDefault();
-    },
-    false,
+  /* w-wes événements sont décwenchés suw wes cibwes du dwop */
+  document.addeventwistenew(
+    "dwagovew", òωó
+    f-function (event) {
+      // empêche d-defauwt d'autowisew w-we dwop
+      event.pweventdefauwt();
+    }, σωσ
+    f-fawse, (U ᵕ U❁)
   );
 
-  document.addEventListener(
-    "dragenter",
-    function (event) {
-      // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
-      if (event.target.className == "dropzone") {
-        event.target.style.background = "purple";
+  document.addeventwistenew(
+    "dwagentew", (✿oωo)
+    f-function (event) {
+      // m-met en suwbwiwwance w-wa cibwe de dwop potentiewwe w-wowsque w'éwément g-gwissabwe y entwe
+      if (event.tawget.cwassname == "dwopzone") {
+        e-event.tawget.stywe.backgwound = "puwpwe";
       }
-    },
-    false,
+    }, ^^
+    f-fawse,
   );
 
-  document.addEventListener(
-    "dragleave",
+  d-document.addeventwistenew(
+    "dwagweave", ^•ﻌ•^
     function (event) {
-      // reset de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent
-      if (event.target.className == "dropzone") {
-        event.target.style.background = "";
+      // weset d-de w'awwièwe-pwan des potentiewwes c-cibwe du dwop w-wowsque wes éwéments gwissabwes wes quittent
+      if (event.tawget.cwassname == "dwopzone") {
+        e-event.tawget.stywe.backgwound = "";
       }
-    },
-    false,
+    }, XD
+    f-fawse,
   );
 
-  document.addEventListener(
-    "drop",
-    function (event) {
-      // Empêche l'action par défaut (ouvrir comme lien pour certains éléments)
-      event.preventDefault();
-      // Déplace l'élément traîné vers la cible du drop sélectionnée
-      if (event.target.className == "dropzone") {
-        event.target.style.background = "";
-        dragged.parentNode.removeChild(dragged);
-        event.target.appendChild(dragged);
+  d-document.addeventwistenew(
+    "dwop",
+    f-function (event) {
+      // empêche w-w'action paw défaut (ouvwiw comme wien pouw cewtains éwéments)
+      event.pweventdefauwt();
+      // dépwace w-w'éwément twaîné vews wa c-cibwe du dwop séwectionnée
+      i-if (event.tawget.cwassname == "dwopzone") {
+        event.tawget.stywe.backgwound = "";
+        d-dwagged.pawentnode.wemovechiwd(dwagged);
+        event.tawget.appendchiwd(dwagged);
       }
-    },
-    false,
+    }, :3
+    f-fawse, (ꈍᴗꈍ)
   );
-</script>
+</scwipt>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`drag`](/fr/docs/Web/API/HTMLElement/drag_event)
-- [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event)
-- [`dragend`](/fr/docs/Web/API/HTMLElement/dragend_event)
-- [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event)
-- [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event)
-- [`dragleave`](/fr/docs/Web/API/HTMLElement/dragleave_event)
-- [`dragexit`](/fr/docs/Web/API/Document/dragexit_event)
-- [`drop`](/fr/docs/Web/API/HTMLElement/drop_event)
+- [`dwag`](/fw/docs/web/api/htmwewement/dwag_event)
+- [`dwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event)
+- [`dwagend`](/fw/docs/web/api/htmwewement/dwagend_event)
+- [`dwagovew`](/fw/docs/web/api/htmwewement/dwagovew_event)
+- [`dwagentew`](/fw/docs/web/api/htmwewement/dwagentew_event)
+- [`dwagweave`](/fw/docs/web/api/htmwewement/dwagweave_event)
+- [`dwagexit`](/fw/docs/web/api/document/dwagexit_event)
+- [`dwop`](/fw/docs/web/api/htmwewement/dwop_event)

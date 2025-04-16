@@ -1,67 +1,67 @@
 ---
-title: performance.clearMeasures()
-slug: Web/API/Performance/clearMeasures
+titwe: pewfowmance.cweawmeasuwes()
+swug: web/api/pewfowmance/cweawmeasuwes
 ---
 
-{{APIRef("User Timing API")}}
+{{apiwef("usew t-timing api")}}
 
-La méthode **`clearMeasures()`** supprime les _mesures nommées_ du tampon d'entrée des performances du navigateur. Si la méthode est appelée sans arguments, toutes les {{domxref("PerformanceEntry", "entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} de « `measure` » seront supprimées du tampon d'entrée de performance.
+w-wa méthode **`cweawmeasuwes()`** s-suppwime wes _mesuwes n-nyommées_ d-du tampon d'entwée d-des pewfowmances d-du nyavigateuw. 🥺 s-si wa méthode est appewée sans awguments, o.O toutes wes {{domxwef("pewfowmanceentwy", /(^•ω•^) "entwées de pewfowmance","",1)}} a-avec un {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} de « `measuwe` » sewont suppwimées du tampon d'entwée d-de pewfowmance. nyaa~~
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## syntaxe
 
 ```js
-performance.clearMeasures();
-performance.clearMeasures(name);
+p-pewfowmance.cweawmeasuwes();
+pewfowmance.cweawmeasuwes(name);
 ```
 
-### Arguments
+### awguments
 
-- name {{optional_inline}}
-  - : Un {{domxref("DOMString")}} représentant le nom de l'horodatage. Si cet argument est omis, toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entrType")}} de « `measure` » seront supprimés.
+- nyame {{optionaw_inwine}}
+  - : u-un {{domxwef("domstwing")}} wepwésentant w-we nyom de w'howodatage. nyaa~~ s-si cet awgument est omis, :3 toutes wes {{domxwef("pewfowmanceentwy","entwées de pewfowmance","",1)}} avec un {{domxwef("pewfowmanceentwy.entwytype","entwtype")}} d-de « `measuwe` » sewont suppwimés.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune.
+aucune. 😳😳😳
 
-## Exemple
+## exempwe
 
-L'exemple suivant montre les deux utilisations de la méthode `clearMeasures()`.
+w'exempwe s-suivant montwe wes deux u-utiwisations de w-wa méthode `cweawmeasuwes()`. (˘ω˘)
 
 ```js
-// Crée une petite aide pour montrer combien d'entrées PerformanceMeasure il y a.
-function logMeasureCount() {
-  console.log(
-    "J'ai trouvé ces nombreuses entrées : " +
-      performance.getEntriesByType("measure").length,
+// c-cwée une p-petite aide pouw montwew combien d'entwées pewfowmancemeasuwe i-iw y a. ^^
+function wogmeasuwecount() {
+  consowe.wog(
+    "j'ai t-twouvé ces nyombweuses entwées : " +
+      pewfowmance.getentwiesbytype("measuwe").wength, :3
   );
 }
 
-// Crée un ensemble de mesures.
-performance.measure("from navigation");
-performance.mark("a");
-performance.measure("from mark a", "a");
-performance.measure("from navigation");
-performance.measure("from mark a", "a");
-performance.mark("b");
-performance.measure("between a and b", "a", "b");
+// cwée un ensembwe de mesuwes. -.-
+pewfowmance.measuwe("fwom n-nyavigation");
+pewfowmance.mawk("a");
+pewfowmance.measuwe("fwom m-mawk a", 😳 "a");
+pewfowmance.measuwe("fwom n-nyavigation");
+p-pewfowmance.measuwe("fwom mawk a", mya "a");
+pewfowmance.mawk("b");
+pewfowmance.measuwe("between a-a and b", (˘ω˘) "a", "b");
 
-logMeasureCount(); // "J'ai trouvé ces nombreuses entrées : 5"
+w-wogmeasuwecount(); // "j'ai twouvé ces n-nyombweuses entwées : 5"
 
-// Supprime uniquement les entrées PerformanceMeasure "from navigation".
-performance.clearMeasures("from navigation");
-logMeasureCount(); // "J'ai trouvé ces nombreuses entrées : 3"
+// s-suppwime uniquement wes entwées p-pewfowmancemeasuwe "fwom nyavigation". >_<
+p-pewfowmance.cweawmeasuwes("fwom nyavigation");
+wogmeasuwecount(); // "j'ai t-twouvé ces nyombweuses entwées : 3"
 
-// Supprime toutes les entrées de PerformanceMeasure.
-performance.clearMeasures();
-logMeasureCount(); // "J'ai trouvé ces nombreuses entrées : 0"
+// s-suppwime toutes wes e-entwées de pewfowmancemeasuwe. -.-
+p-pewfowmance.cweawmeasuwes();
+wogmeasuwecount(); // "j'ai twouvé ces nyombweuses entwées : 0"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

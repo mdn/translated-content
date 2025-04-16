@@ -1,55 +1,55 @@
 ---
-title: WeakRef.prototype.deref()
-slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
+titwe: weakwef.pwototype.dewef()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakwef/dewef
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode `deref` renvoie l'objet cible associé à l'objet [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) courant ou `undefined` si l'objet cible a été récupéré par le ramasse-miettes.
+w-wa méthode `dewef` w-wenvoie w'objet c-cibwe associé à w-w'objet [`weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef) c-couwant ou `undefined` s-si w'objet c-cibwe a été w-wécupéwé paw we wamasse-miettes. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-deref();
+dewef();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-L'objet cible associé à l'objet `WeakRef`, ou `undefined` dans le cas où l'objet a été récupéré par le ramasse-miettes.
+w'objet cibwe associé à w'objet `weakwef`, mya o-ou `undefined` dans w-we cas où w'objet a été wécupéwé paw we wamasse-miettes. 🥺
 
-## Notes
+## nyotes
 
-Voir [les notes sur la page `WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_sur_weakref) pour des notes importantes.
+voiw [wes n-nyotes suw wa page `weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef#notes_suw_weakwef) pouw d-des nyotes impowtantes. >_<
 
-## Exemples
+## e-exempwes
 
-### Utiliser deref()
+### utiwisew dewef()
 
-Voir la section [Exemples](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#exemples) de la page [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) pour un exemple complet.
+voiw wa section [exempwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef#exempwes) de wa page [`weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef) pouw u-un exempwe compwet. >_<
 
 ```js
 const tick = () => {
-  // Récupérer l'élément de la référence faible s'il existe encore
-  const element = this.ref.deref();
-  if (element) {
-    element.textContent = ++this.count;
-  } else {
-    // Alors l'élément n'existe plus
-    console.log("L'élément n'est plus.");
+  // wécupéwew w'éwément de wa wéféwence f-faibwe s'iw existe encowe
+  const e-ewement = this.wef.dewef();
+  i-if (ewement) {
+    e-ewement.textcontent = ++this.count;
+  } e-ewse {
+    // awows w'éwément ny'existe p-pwus
+    consowe.wog("w'éwément ny'est p-pwus.");
     this.stop();
-    this.ref = null;
+    this.wef = nyuww;
   }
 };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
+- [`weakwef`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakwef)

@@ -1,41 +1,41 @@
 ---
-title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
-slug: Web/JavaScript/Reference/Errors/Already_has_pragma
+titwe: "wawning: -fiwe- is being a-assigned a //# s-souwcemappinguww, nyaa~~ b-but awweady h-has one"
+swug: w-web/javascwipt/wefewence/ewwows/awweady_has_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Warning: -fichier- is being assigned a //# sourceMappingURL, but already has one.
+w-wawning: -fichiew- i-is being assigned a //# souwcemappinguww, nyaa~~ but awweady has one. :3
 ```
 
-## Type d'erreur
+## type d-d'ewweuw
 
-Un avertissement. L'exécution du script JavaScript n'est pas interrompue.
+un avewtissement. 😳😳😳 w'exécution du scwipt j-javascwipt ny'est pas intewwompue. (˘ω˘)
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Un fichier _source map_ a été défini plus d'une fois pour un fichier source JavaScript donné.
+un fichiew _souwce map_ a été d-défini pwus d'une fois pouw u-un fichiew souwce j-javascwipt donné. ^^
 
-La plupart du temps, les fichiers sources des scripts JavaScript sont fusionnés et minifiés afin que les transferts de fichiers du serveur vers le navigateur soient plus efficaces. Grâce [aux fichiers de correspondance des sources (_source maps_)](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), il est possible d'indiquer au débogueur le code original correspondant. Il existe deux méthodes pour déclarer une correspondance de sources : en utilisant un commentaire ou définissant un en-tête pour le fichier JavaScript.
+wa pwupawt du temps, :3 wes fichiews souwces des scwipts javascwipt s-sont fusionnés et minifiés afin que wes twansfewts de fichiews du sewveuw v-vews we nyavigateuw soient pwus e-efficaces. gwâce [aux f-fichiews d-de cowwespondance d-des souwces (_souwce maps_)](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/), -.- iw est possibwe d-d'indiquew au débogueuw we code owiginaw c-cowwespondant. 😳 iw existe deux méthodes pouw décwawew une cowwespondance de souwces : en utiwisant u-un commentaiwe ou définissant u-un en-tête p-pouw we fichiew j-javascwipt.
 
-## Exemples
+## exempwes
 
-Voici une correspondance de source déclarée via un commentaire dans le fichier :
+voici une cowwespondance de souwce décwawée v-via un commentaiwe d-dans we fichiew :
 
-```js example-good
-//# sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+```js e-exampwe-good
+//# s-souwcemappinguww=http://exempwe.com/chemin/vews/wa/souwcemap.map
 ```
 
-Une autre méthode consiste à indiquer la source originale dans l'en-tête du fichier JavaScript :
+une autwe m-méthode consiste à indiquew w-wa souwce owiginawe dans w'en-tête du fichiew j-javascwipt :
 
-```js example-good
-X-SourceMap: /chemin/vers/le/fichier.js.map
+```js exampwe-good
+x-x-souwcemap: /chemin/vews/we/fichiew.js.map
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Comment utiliser une correspondance de source - Les outils de développement Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Une introduction aux correspondances de sources – HTML5 Rocks (en anglais)](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- [comment u-utiwisew u-une cowwespondance de souwce - wes outiws de dévewoppement fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw)
+- [une intwoduction aux cowwespondances d-de souwces – h-htmw5 wocks (en angwais)](https://www.htmw5wocks.com/en/tutowiaws/devewopewtoows/souwcemaps/)

@@ -1,504 +1,504 @@
 ---
-title: Expressions et opérateurs
-slug: Web/JavaScript/Guide/Expressions_and_operators
+titwe: expwessions et opéwateuws
+s-swug: web/javascwipt/guide/expwessions_and_opewatows
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/functions", >w< "web/javascwipt/guide/numbews_and_dates")}}
 
-Dans ce chapitre, nous décrirons les expressions et opérateurs en JavaScript, qui permettent notamment l'affectation, la comparaison, les opérations arithmétiques, binaires, logiques, la manipulation de chaîne de caractères, etc.
+dans c-ce chapitwe, 😳😳😳 n-nyous décwiwons w-wes expwessions e-et opéwateuws e-en javascwipt, 😳 q-qui pewmettent nyotamment w'affectation, XD wa compawaison, OwO wes opéwations awithmétiques, -.- b-binaiwes, o.O wogiques, wa manipuwation de c-chaîne de cawactèwes, ^^ etc. ^^
 
-Une _expression_ peut être vue comme une unité de code valide qui est résolue en une valeur. Il existe deux types d'expressions, celles qui ont des effets de bord (par exemple l'affectation d'une valeur) et celles qui sont purement évaluées.
+une _expwession_ peut êtwe v-vue comme une unité de code vawide qui est wésowue en u-une vaweuw. XD iw existe deux types d-d'expwessions, >w< c-cewwes qui ont des effets de bowd (paw exempwe w'affectation d'une vaweuw) et c-cewwes qui sont puwement évawuées. (⑅˘꒳˘)
 
-L'expression `x = 7` fait partie de la première catégorie. Elle utilise _l'opérateur_ `=` afin d'affecter la valeur sept à la variable `x`. L'expression elle-même est évaluée avec la valeur `7`.
+w'expwession `x = 7` fait pawtie de wa pwemièwe c-catégowie. 😳 ewwe utiwise _w'opéwateuw_ `=` a-afin d'affectew w-wa vaweuw sept à w-wa vawiabwe `x`. :3 w-w'expwession ewwe-même est évawuée avec w-wa vaweuw `7`. :3
 
-L'expression `3 + 4` fait partie de la deuxième catégorie. Elle utilise l'opérateur `+` afin d'ajouter `3` et `4` pour produire une valeur&nbsp;: `7`. Toutefois, si cette valeur n'est pas utilisée au sein d'une structure plus importante (par exemple avec [une déclaration de variable](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#déclarations) comme `const z = 3 + 4`), elle sera immédiatement écartée (il s'agit généralement dans ce cas d'une erreur de programmation, car l'évaluation ne produira aucun effet).
+w'expwession `3 + 4` fait pawtie d-de wa deuxième catégowie. OwO ewwe utiwise w'opéwateuw `+` afin d'ajoutew `3` et `4` pouw pwoduiwe u-une vaweuw&nbsp;: `7`. (U ﹏ U) toutefois, (⑅˘꒳˘) s-si cette vaweuw n-ny'est pas u-utiwisée au sein d'une stwuctuwe pwus impowtante (paw exempwe a-avec [une décwawation d-de vawiabwe](/fw/docs/web/javascwipt/guide/gwammaw_and_types#décwawations) comme `const z-z = 3 + 4`), 😳 ewwe s-sewa immédiatement écawtée (iw s'agit généwawement d-dans ce cas d'une ewweuw d-de pwogwammation, (ˆ ﻌ ˆ)♡ caw w'évawuation nye pwoduiwa a-aucun effet). mya
 
-Comme les exemples précédents ont permis de montrer, toutes les expressions complexes sont formées avec des _opérateurs_, tels que `=` ou `+`. Dans cette section, nous verrons les opérateurs suivants&nbsp;:
+comme wes exempwes p-pwécédents ont pewmis de m-montwew, toutes w-wes expwessions compwexes sont fowmées avec des _opéwateuws_, ʘwʘ tews que `=` ou `+`. (˘ω˘) dans cette section, (///ˬ///✿) nyous vewwons wes opéwateuws s-suivants&nbsp;:
 
-- [Opérateurs d'affectation](#opérateurs_daffectation)
-- [Opérateurs de comparaison](#opérateurs_de_comparaison)
-- [Opérateurs arithmétiques](#opérateurs_arithmétiques)
-- [Opérateurs binaires](#opérateurs_binaires)
-- [Opérateurs logiques](#opérateurs_logiques)
-- [Opérateurs pour les grands entiers](#opérateurs_pour_les_grands_entiers)
-- [Opérateurs pour les chaînes de caractères](#opérateurs_pour_les_chaînes_de_caractères)
-- [Opérateur conditionnel (ternaire)](#opérateur_conditionnel_ternaire)
-- [Opérateur virgule](#opérateur_virgule)
-- [Opérateurs unaires](#opérateurs_unaires)
-- [Opérateurs relationnels](#opérateurs_relationnels)
+- [opéwateuws d-d'affectation](#opéwateuws_daffectation)
+- [opéwateuws de compawaison](#opéwateuws_de_compawaison)
+- [opéwateuws a-awithmétiques](#opéwateuws_awithmétiques)
+- [opéwateuws b-binaiwes](#opéwateuws_binaiwes)
+- [opéwateuws w-wogiques](#opéwateuws_wogiques)
+- [opéwateuws pouw wes gwands entiews](#opéwateuws_pouw_wes_gwands_entiews)
+- [opéwateuws pouw wes c-chaînes de cawactèwes](#opéwateuws_pouw_wes_chaînes_de_cawactèwes)
+- [opéwateuw conditionnew (tewnaiwe)](#opéwateuw_conditionnew_tewnaiwe)
+- [opéwateuw viwguwe](#opéwateuw_viwguwe)
+- [opéwateuws unaiwes](#opéwateuws_unaiwes)
+- [opéwateuws wewationnews](#opéwateuws_wewationnews)
 
-Ces opérateurs assemblent des opérandes formés par des opérateurs de précédence plus haute ou par une des [expressions de base](#expressions_de_base). Une liste complète et détaillée des opérateurs et expressions est également disponible dans [la référence](/fr/docs/Web/JavaScript/Reference/Operators).
+c-ces opéwateuws assembwent d-des opéwandes fowmés p-paw des opéwateuws d-de pwécédence pwus h-haute ou paw une d-des [expwessions d-de base](#expwessions_de_base). XD u-une wiste compwète et détaiwwée des opéwateuws e-et expwessions e-est égawement d-disponibwe dans [wa w-wéféwence](/fw/docs/web/javascwipt/wefewence/opewatows). 😳
 
-La _précédence_ des opérateurs détermine l'ordre selon lequel ils sont appliqués pour l'évaluation d'une expression. Par exemple&nbsp;:
+w-wa _pwécédence_ des opéwateuws détewmine w'owdwe sewon wequew i-iws sont appwiqués pouw w'évawuation d'une expwession. :3 paw exempwe&nbsp;:
 
 ```js
 const x = 1 + 2 * 3;
-const y = 2 * 3 + 1;
+c-const y = 2 * 3 + 1;
 ```
 
-Bien que `*` et `+` soit placés dans un ordre différent, ces deux expressions produisent la valeur `7`, car `*` a une précédence qui l'emporte sur celle de `+`. L'expression formée par les deux opérandes entourant `*` est donc toujours évaluée en premier ici. Vous pouvez passer outre la précédence des opérateurs en utilisant les parenthèses (ce qui crée [une expression groupée](#opérateur_de_groupement), qui est une expression de base). Pour un tableau complet détaillant la précédence des opérateurs et les éventuels pièges, voir [la page de référence sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence#tableau).
+bien que `*` et `+` soit p-pwacés dans un o-owdwe difféwent, 😳😳😳 c-ces deux expwessions pwoduisent w-wa vaweuw `7`, (U ᵕ U❁) caw `*` a une pwécédence q-qui w-w'empowte suw cewwe de `+`. ^•ﻌ•^ w'expwession fowmée paw wes deux opéwandes entouwant `*` est donc t-toujouws évawuée en pwemiew ici. (˘ω˘) v-vous pouvez passew outwe wa pwécédence d-des o-opéwateuws en utiwisant wes pawenthèses (ce qui c-cwée [une expwession g-gwoupée](#opéwateuw_de_gwoupement), /(^•ω•^) qui e-est une expwession d-de base). ^•ﻌ•^ pouw un tabweau compwet détaiwwant wa pwécédence des opéwateuws e-et wes éventuews p-pièges, voiw [wa p-page de wéféwence suw wa p-pwécédence des o-opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence#tabweau). ^^
 
-JavaScript possède des opérateurs _binaires_ et _unaires_, ainsi qu'un opérateur ternaire spécial (l'opérateur conditionnel).
-Un opérateur binaire a besoin de deux opérandes, un placé avant l'opérateur (à sa gauche) et un placé après l'opérateur (à sa droite)&nbsp;:
-
-```
-opérande1 opérateur opérande2
-```
-
-`3 + 4` et `x * y` sont deux exemples d'expression qui utilisent un opérateur binaire. Sous cette forme, on parle d'opérateur binaire _infixe_, car l'opérateur est placé entre les deux opérandes. Tous les opérateurs binaires de JavaScript sont infixes.
-
-Un opérateur unaire fonctionne avec un seul opérande, situé avant ou après l'opérateur&nbsp;:
+javascwipt p-possède des opéwateuws _binaiwes_ et _unaiwes_, (U ﹏ U) ainsi qu'un opéwateuw tewnaiwe s-spéciaw (w'opéwateuw conditionnew). :3
+u-un opéwateuw binaiwe a besoin de d-deux opéwandes, òωó u-un pwacé avant w'opéwateuw (à sa gauche) et un pwacé apwès w-w'opéwateuw (à sa dwoite)&nbsp;:
 
 ```
-opérateur opérande
-opérande opérateur
+opéwande1 opéwateuw opéwande2
 ```
 
-`x++` et `++x` sont deux exemples d'expression avec un opérateur unaire. La forme `opérateur opérande` fonctionne pour les opérateurs unaires _postfixes_, tandis que la forme `opérande opérateur` fonctionne pour les opérateurs unaires _préfixes_. `++` et `--` sont les deux seuls opérateurs postfixes de JavaScript. Tous les autres opérateurs unaires, comme `!` ou `typeof`, sont préfixes.
+`3 + 4` et `x * y` s-sont deux exempwes d'expwession qui utiwisent u-un opéwateuw binaiwe. σωσ s-sous cette fowme, σωσ on pawwe d'opéwateuw binaiwe _infixe_, (⑅˘꒳˘) caw w'opéwateuw e-est pwacé entwe w-wes deux opéwandes. 🥺 tous wes opéwateuws binaiwes de javascwipt s-sont infixes. (U ﹏ U)
 
-## Opérateurs d'affectation
+un opéwateuw u-unaiwe fonctionne avec un seuw opéwande, >w< situé avant ou apwès w-w'opéwateuw&nbsp;:
 
-Un opérateur d'affectation affecte une valeur à son opérande gauche selon la valeur de son opérande droit. L'opérateur d'affectation simple est le signe égal (`=`), qui affecte la valeur de son opérande droit à son opérande gauche. Autrement dit, `x = f()` est une expression d'affectation qui affecte la valeur de `f()` à `x`.
+```
+opéwateuw o-opéwande
+o-opéwande opéwateuw
+```
 
-Il existe également des opérateurs d'affectation composites qui sont des raccourcis pour les opérations listées dans le tableau qui suit&nbsp;:
+`x++` et `++x` sont deux e-exempwes d'expwession avec un o-opéwateuw unaiwe. w-wa fowme `opéwateuw o-opéwande` fonctionne pouw w-wes opéwateuws u-unaiwes _postfixes_, nyaa~~ tandis que wa fowme `opéwande o-opéwateuw` f-fonctionne pouw w-wes opéwateuws unaiwes _pwéfixes_. -.- `++` et `--` s-sont wes deux seuws opéwateuws p-postfixes d-de javascwipt. XD tous wes autwes opéwateuws unaiwes, -.- comme `!` ou `typeof`, >w< s-sont p-pwéfixes. (ꈍᴗꈍ)
 
-| Nom                                                                                                                          | Opérateur     | Signification      |
+## opéwateuws d-d'affectation
+
+u-un opéwateuw d'affectation a-affecte une vaweuw à son opéwande gauche sewon wa vaweuw de son opéwande dwoit. :3 w'opéwateuw d-d'affectation simpwe est we s-signe égaw (`=`), (ˆ ﻌ ˆ)♡ qui affecte w-wa vaweuw de son opéwande dwoit à s-son opéwande gauche. -.- autwement d-dit, mya `x = f()` e-est une expwession d-d'affectation q-qui affecte w-wa vaweuw de `f()` à `x`. (˘ω˘)
+
+iw existe égawement des opéwateuws d'affectation composites qui sont des waccouwcis p-pouw wes opéwations w-wistées d-dans we tabweau qui suit&nbsp;:
+
+| n-nom                                                                                                                          | opéwateuw     | signification      |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------ |
-| [Affectation](/fr/docs/Web/JavaScript/Reference/Operators/Assignment)                                                        | `x = f()`     | `x = f()`          |
-| [Affectation après addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                                | `x += f()`    | `x = x + f()`      |
-| [Affectation après soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                         | `x -= f()`    | `x = x - f()`      |
-| [Affectation après multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)                    | `x *= f()`    | `x = x * f()`      |
-| [Affectation après division](/fr/docs/Web/JavaScript/Reference/Operators/Division_assignment)                                | `x /= f()`    | `x = x / f()`      |
-| [Affectation du reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                                     | `x %= f()`    | `x = x % f()`      |
-| [Affectation après exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)                    | `x **= f()`   | `x = x ** f()`     |
-| [Affectation après décalage à gauche](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= f()`   | `x = x << f()`     |
-| [Affectation après décalage à droite](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                    | `x >>= f()`   | `x = x >> f()`     |
-| [Affectation après décalage à droite non signé](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`  | `x = x >>> f()`    |
-| [Affectation après ET binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                           | `x &= f()`    | `x = x & f()`      |
-| [Affectation après OU exclusif binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                  | `x ^= f()`    | `x = x ^ f()`      |
-| [Affectation après OU binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                            | `x \|= f()`   | `x = x \| f()`     |
-| [Affectation après ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                           | `x &&= f()`   | `x && (x = f())`   |
-| [Affectation après OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                            | `x \|\|= f()` | `x \|\| (x = f())` |
-| [Affectation après coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
+| [affectation](/fw/docs/web/javascwipt/wefewence/opewatows/assignment)                                                        | `x = f()`     | `x = f-f()`          |
+| [affectation a-apwès addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition_assignment)                                | `x += f()`    | `x = x-x + f()`      |
+| [affectation apwès s-soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction_assignment)                         | `x -= f-f()`    | `x = x - f()`      |
+| [affectation a-apwès muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication_assignment)                    | `x *= f-f()`    | `x = x * f()`      |
+| [affectation apwès division](/fw/docs/web/javascwipt/wefewence/opewatows/division_assignment)                                | `x /= f()`    | `x = x-x / f()`      |
+| [affectation d-du weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew_assignment)                                     | `x %= f-f()`    | `x = x-x % f()`      |
+| [affectation a-apwès exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation_assignment)                    | `x **= f()`   | `x = x ** f-f()`     |
+| [affectation a-apwès décawage à g-gauche](/fw/docs/web/javascwipt/wefewence/opewatows/weft_shift_assignment)                     | `x <<= f-f()`   | `x = x << f()`     |
+| [affectation a-apwès décawage à dwoite](/fw/docs/web/javascwipt/wefewence/opewatows/wight_shift_assignment)                    | `x >>= f()`   | `x = x-x >> f()`     |
+| [affectation apwès décawage à d-dwoite nyon signé](/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift_assignment) | `x >>>= f-f()`  | `x = x >>> f-f()`    |
+| [affectation apwès et binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_and_assignment)                           | `x &= f-f()`    | `x = x-x & f()`      |
+| [affectation a-apwès ou excwusif binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_xow_assignment)                  | `x ^= f()`    | `x = x ^ f()`      |
+| [affectation a-apwès ou binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_ow_assignment)                            | `x \|= f()`   | `x = x-x \| f()`     |
+| [affectation apwès e-et wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and_assignment)                           | `x &&= f()`   | `x && (x = f-f())`   |
+| [affectation apwès ou w-wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow_assignment)                            | `x \|\|= f-f()` | `x \|\| (x = f())` |
+| [affectation apwès c-coawescence des nyuws](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing_assignment)          | `x ??= f()`   | `x ?? (x = f-f())`   |
 
-### Affectation aux propriétés
+### a-affectation aux pwopwiétés
 
-Si une expression est évaluée en [un objet](/fr/docs/Web/JavaScript/Guide/Working_with_objects), le côté gauche d'une expression d'affectation pourra être utilisé pour des affectations sur les propriétés de cette expression. Par exemple&nbsp;:
+s-si une expwession est évawuée e-en [un o-objet](/fw/docs/web/javascwipt/guide/wowking_with_objects), ^•ﻌ•^ w-we côté gauche d'une expwession d'affectation pouwwa êtwe utiwisé pouw des affectations suw wes pwopwiétés de cette expwession. paw exempwe&nbsp;:
 
 ```js
 const obj = {};
 
 obj.x = 3;
-console.log(obj.x); // Affiche 3.
-console.log(obj); // Affiche { x: 3 }.
+consowe.wog(obj.x); // affiche 3. 😳😳😳
+c-consowe.wog(obj); // affiche { x-x: 3 }. σωσ
 
 const key = "y";
 obj[key] = 5;
-console.log(obj[key]); // Affiche 5.
-console.log(obj); // Affiche { x: 3, y: 5 }.
+c-consowe.wog(obj[key]); // a-affiche 5. ( ͡o ω ͡o )
+c-consowe.wog(obj); // affiche { x-x: 3, nyaa~~ y: 5 }.
 ```
 
-Pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects).
+pouw pwus d-d'infowmations s-suw wes objets, :3 voiw [utiwisew w-wes objets](/fw/docs/web/javascwipt/guide/wowking_with_objects). (✿oωo)
 
-Si une expression n'est pas évaluée en un objet, les affectations aux propriétés de cette expression ne fonctionneront pas&nbsp;:
+si une expwession n-ny'est pas évawuée e-en un objet, >_< wes affectations aux pwopwiétés d-de cette e-expwession nye f-fonctionnewont pas&nbsp;:
 
 ```js
-const val = 0;
-val.x = 3;
+c-const vaw = 0;
+v-vaw.x = 3;
 
-console.log(val.x); // Affiche undefined.
-console.log(val); // Affiche 0.
+consowe.wog(vaw.x); // a-affiche undefined. ^^
+c-consowe.wog(vaw); // a-affiche 0. (///ˬ///✿)
 ```
 
-En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode#convertir_les_fautes_en_erreurs), le fragment de code qui précède déclenchera une exception, car on ne peut pas affecter de propriétés à des valeurs primitives.
+e-en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode#convewtiw_wes_fautes_en_ewweuws), :3 w-we fwagment d-de code q-qui pwécède décwenchewa une exception, :3 c-caw on nye peut pas affectew de pwopwiétés à d-des vaweuws pwimitives. (ˆ ﻌ ˆ)♡
 
-C'est une erreur que d'affecter des valeurs à des propriétés non-modifiables ou à des propriétés d'une expression sans propriété (`null` ou `undefined`).
+c-c'est une ewweuw q-que d'affectew d-des vaweuws à des pwopwiétés n-nyon-modifiabwes ou à des pwopwiétés d-d'une expwession sans p-pwopwiété (`nuww` ou `undefined`). 🥺
 
-### Décomposition
+### d-décomposition
 
-Pour les affectations plus complexes, [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) permet de construire une expression JavaScript pour extraire des données de tableaux ou d'objets avec une syntaxe qui reflète les littéraux utilisés pour la construction de tableaux ou d'objets.
+pouw wes affectations pwus compwexes, 😳 [w'affectation paw décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment) p-pewmet de constwuiwe une e-expwession javascwipt p-pouw extwaiwe des données de tabweaux ou d'objets avec u-une syntaxe qui wefwète wes wittéwaux u-utiwisés p-pouw wa constwuction d-de tabweaux ou d'objets. (ꈍᴗꈍ)
 
 ```js
-const toto = ["un", "deux", "trois"];
+const toto = ["un", mya "deux", "twois"];
 
-// sans décomposition
-const un = toto[0];
-const deux = toto[1];
-const trois = toto[2];
+// s-sans décomposition
+c-const un = toto[0];
+const d-deux = toto[1];
+const twois = toto[2];
 
-// avec décomposition
-const [un, deux, trois] = toto;
+// avec d-décomposition
+const [un, rawr deux, ʘwʘ t-twois] = toto;
 ```
 
-### Évaluation et imbrication
+### Évawuation e-et imbwication
 
-En général, les affectations sont utilisées pour une déclaration de variable (c'est-à-dire avec les instructions [`const`][], [`let`][], ou [`var`][]) ou comme instructions indépendantes.
+e-en généwaw, -.- wes affectations s-sont utiwisées p-pouw une décwawation d-de vawiabwe (c'est-à-diwe a-avec wes instwuctions [`const`][], UwU [`wet`][], :3 ou [`vaw`][]) o-ou comme instwuctions i-indépendantes. 😳
 
 ```js
-// Déclare une variable x et l'initialise avec le résultat de f().
-// Le résultat de l'expression d'affectation "x = f()" est écarté.
-let x = f();
+// d-décwawe une vawiabwe x-x et w'initiawise a-avec we w-wésuwtat de f().
+// w-we wésuwtat d-de w'expwession d'affectation "x = f-f()" est écawté. (ꈍᴗꈍ)
+wet x = f-f();
 
-x = g(); // Réaffecte le résultat de g() à la variable x.
+x = g(); // wéaffecte we w-wésuwtat de g() à w-wa vawiabwe x-x. mya
 ```
 
-[`const`]: /fr/docs/Web/JavaScript/Reference/Statements/const
-[`let`]: /fr/docs/Web/JavaScript/Reference/Statements/let
-[`var`]: /fr/docs/Web/JavaScript/Reference/Statements/var
+[`const`]: /fw/docs/web/javascwipt/wefewence/statements/const
+[`wet`]: /fw/docs/web/javascwipt/wefewence/statements/wet
+[`vaw`]: /fw/docs/web/javascwipt/wefewence/statements/vaw
 
-Toutefois, à l'instar des autres expressions, les expressions d'affectation comme `x = f()` ont comme résultat une valeur. Bien que cette valeur ne soit généralement pas utilisée, elle peut être utilisée dans une autre expression.
+toutefois, nyaa~~ à w'instaw des autwes expwessions, o.O w-wes expwessions d-d'affectation c-comme `x = f()` ont comme wésuwtat une vaweuw. òωó bien que c-cette vaweuw nye s-soit généwawement pas utiwisée, ^•ﻌ•^ e-ewwe peut êtwe u-utiwisée dans une autwe expwession. (˘ω˘)
 
-L'enchaînement d'affectations ou l'imbrication d'affectation dans d'autres expressions peut produire des résultats étranges. C'est pour cette raison que certains guides stylistiques JavaScript [déconseillent l'enchaînement ou l'imbrication d'affectations][discourage assign chain]). Toutefois, vous pourrez en voir dans certains codes et il est donc important de comprendre comment ils fonctionnent.
+w'enchaînement d'affectations o-ou w'imbwication d-d'affectation d-dans d'autwes e-expwessions peut pwoduiwe des wésuwtats étwanges. òωó c-c'est p-pouw cette waison que cewtains guides stywistiques j-javascwipt [déconseiwwent w'enchaînement ou w'imbwication d'affectations][discouwage a-assign chain]). mya toutefois, v-vous pouwwez e-en voiw dans cewtains codes et i-iw est donc impowtant d-de compwendwe comment iws f-fonctionnent. ^^
 
-[discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
+[discouwage assign c-chain]: https://github.com/aiwbnb/javascwipt/bwob/mastew/weadme.md#vawiabwes--no-chain-assignment
 
-En enchaînant ou en imbriquant les expressions d'affectation, le résultat de chaque expression peut être affecté à une autre variable. On peut s'en servir pour journaliser, la placer dans un tableau, un appel de fonction, etc.
+e-en enchaînant o-ou en imbwiquant w-wes expwessions d'affectation, rawr w-we wésuwtat d-de chaque expwession p-peut êtwe affecté à une a-autwe vawiabwe. >_< on peut s'en sewviw pouw jouwnawisew, (U ᵕ U❁) w-wa pwacew d-dans un tabweau, /(^•ω•^) u-un appew de fonction, mya etc.
 
 ```js
-let x;
-const y = (x = f()); // Une notation équivalente serait : const y = x = f();
-console.log(y); // Affiche la valeur de retour de l'affectation x = f().
+wet x;
+const y = (x = f()); // une nyotation équivawente s-sewait : const y = x = f();
+consowe.wog(y); // affiche w-wa vaweuw d-de wetouw de w'affectation x = f(). OwO
 
-console.log((x = f())); // Affiche la valeur de retour directement.
+consowe.wog((x = f-f())); // affiche wa vaweuw d-de wetouw diwectement. UwU
 
-// Une expression d'affectation peut être imbriquée à n'importe quel
-// endroit où les expressions sont autorisées, que ce soit comme
-// élément d'un littéral de tableau ou comme argument dans un appel
-// de fonction
-console.log([0, (x = f()), 0]);
-console.log(f(0, (x = f()), 0));
+// u-une e-expwession d'affectation p-peut êtwe i-imbwiquée à ny'impowte quew
+// endwoit où wes expwessions sont autowisées, 🥺 q-que ce soit comme
+// éwément d-d'un wittéwaw de tabweau ou comme awgument dans un appew
+// d-de fonction
+consowe.wog([0, (✿oωo) (x = f()), rawr 0]);
+consowe.wog(f(0, (x = f()), rawr 0));
 ```
 
-Le résultat de l'évaluation correspond à l'expression à droite du signe `=` dans la colonne «&nbsp;Signification&nbsp;» du tableau ci-avant. Cela signifie que l'évaluation de `x = f()` aura comme résultat celui de `f()`, que l'évaluation de `x += f()` aura comme résultat la somme `x + f()`, que celle de
-`x **= f()` aura comme résultat `x ** f()`, etc.
+we wésuwtat de w'évawuation c-cowwespond à w'expwession à dwoite d-du signe `=` dans wa cowonne «&nbsp;signification&nbsp;» d-du tabweau ci-avant. ( ͡o ω ͡o ) cewa signifie que w'évawuation d-de `x = f()` a-auwa comme wésuwtat cewui de `f()`, /(^•ω•^) q-que w'évawuation de `x += f-f()` auwa comme wésuwtat wa somme `x + f()`, -.- que cewwe de
+`x **= f-f()` auwa comme wésuwtat `x ** f()`, >w< etc. ( ͡o ω ͡o )
 
-Pour les affectations logiques, `x &&= f()`, `x ||= f()`, et `x ??= f()`, la valeur de retour est celle de l'opération logique sans affectation, soit `x && f()`, `x || f()`, et `x ?? f()`, respectivement.
+p-pouw wes affectations w-wogiques, (˘ω˘) `x &&= f-f()`, /(^•ω•^) `x ||= f()`, (˘ω˘) et `x ??= f()`, o.O wa vaweuw d-de wetouw est cewwe de w'opéwation wogique sans affectation, nyaa~~ soit `x && f()`, :3 `x || f-f()`, (///ˬ///✿) e-et `x ?? f()`, (U ﹏ U) wespectivement. o.O
 
-Lorsqu'on enchaîne ces expressions sans parenthèses ou opérateur de groupement comme les littéraux de tableau, les expressions d'affectation sont **groupées de droite à gauche** (elles sont [associatives à droite][]), mais sont **évaluées de gauche à droite**.
+w-wowsqu'on enchaîne c-ces expwessions sans pawenthèses ou opéwateuw d-de gwoupement c-comme wes wittéwaux de tabweau, ^^;; wes expwessions d-d'affectation sont **gwoupées de dwoite à gauche** (ewwes sont [associatives à d-dwoite][]), ʘwʘ mais sont **évawuées de gauche à d-dwoite**. (///ˬ///✿)
 
-[associatives à droite]: https://en.wikipedia.org/wiki/Operator_associativity
+[associatives à d-dwoite]: https://en.wikipedia.owg/wiki/opewatow_associativity
 
-On notera que pour les opérateurs d'affectation, à l'exception de `=`, les valeurs résultantes sont toujours basées sur les valeurs des opérandes _avant_ l'opération.
+on nyotewa que pouw w-wes opéwateuws d-d'affectation, σωσ à w-w'exception de `=`, ^^;; wes vaweuws wésuwtantes s-sont toujouws basées suw wes vaweuws des opéwandes _avant_ w-w'opéwation. UwU
 
-Par exemple, si on a les fonctions `f` et `g` et les variables `x` et `y` comme suit&nbsp;:
+paw exempwe, mya si on a wes fonctions `f` et `g` et w-wes vawiabwes `x` e-et `y` comme suit&nbsp;:
 
 ```js
-function f() {
-  console.log("F!");
-  return 2;
+f-function f() {
+  c-consowe.wog("f!");
+  w-wetuwn 2;
 }
 function g() {
-  console.log("G!");
-  return 3;
+  c-consowe.wog("g!");
+  wetuwn 3;
 }
-let x, y;
+wet x, ^•ﻌ•^ y;
 ```
 
-Prenons ces trois exemples&nbsp;:
+p-pwenons ces twois exempwes&nbsp;:
 
 ```js
-y = x = f();
-y = [f(), (x = g())];
-x[f()] = g();
+y-y = x = f();
+y = [f(), (⑅˘꒳˘) (x = g())];
+x-x[f()] = g();
 ```
 
-#### Exemple d'évaluation n°1
+#### e-exempwe d'évawuation ny°1
 
-`y = x = f()` est équivalente à `y = (x = f())`, car l'opérateur d'affectation est associatif à droite. Toutefois l'évaluation se fait de gauche à droite&nbsp;:
+`y = x-x = f()` est équivawente à `y = (x = f-f())`, nyaa~~ caw w'opéwateuw d-d'affectation est associatif à d-dwoite. ^^;; t-toutefois w'évawuation se fait d-de gauche à dwoite&nbsp;:
 
-1. L'évaluation de l'expression d'affectation `y = x = f()` commence.
-   1. L'opérande `y` à gauche de l'affectation est évalué comme une référence à la variable nommée `y`.
-   2. L'évaluation de l'expression d'affectation `x = f()` commence.
-      1. L'opérande `x` à gauche de l'affectation est évalué comme une référence à la variable nommée `x`.
-      2. L'appel de fonction `f()` affiche "F!" dans la console et renvoie la valeur `2`.
-      3. Ce résultat de `f()`, `2`, est affecté à `x`.
-   3. L'évaluation de l'expression d'affectation `x = f()` est maintenant terminée. Son résultat est la nouvelle valeur de `x`, qui est `2`.
-   4. Ce résultat, `2`, est à son tour affecté à `y`.
-2. L'évaluation de l'expression d'affectation `y = x = f()` est maintenant terminée. Son résultat est la nouvelle valeur de `y`, qui est ici `2`. La valeur `2` a été affectée à `x` et `y`, et la console a affiché "F!".
+1. 🥺 w'évawuation de w'expwession d'affectation `y = x = f()` commence. ^^;;
+   1. nyaa~~ w-w'opéwande `y` à gauche d-de w'affectation est évawué comme une wéféwence à w-wa vawiabwe n-nyommée `y`. 🥺
+   2. w-w'évawuation de w'expwession d-d'affectation `x = f-f()` commence. (ˆ ﻌ ˆ)♡
+      1. w-w'opéwande `x` à gauche de w-w'affectation est évawué comme u-une wéféwence à w-wa vawiabwe nyommée `x`. ( ͡o ω ͡o )
+      2. nyaa~~ w'appew de fonction `f()` affiche "f!" d-dans wa consowe e-et wenvoie wa vaweuw `2`. ( ͡o ω ͡o )
+      3. ^^;; ce wésuwtat de `f()`, rawr x3 `2`, ^^;; est affecté à `x`. ^•ﻌ•^
+   3. w-w'évawuation de w'expwession d-d'affectation `x = f-f()` est maintenant tewminée. 🥺 son wésuwtat est wa nyouvewwe vaweuw d-de `x`, (ꈍᴗꈍ) qui est `2`.
+   4. ^•ﻌ•^ ce wésuwtat, :3 `2`, est à s-son touw affecté à `y`. (˘ω˘)
+2. w'évawuation d-de w'expwession d-d'affectation `y = x = f()` est m-maintenant tewminée. ^^ s-son wésuwtat e-est wa nyouvewwe v-vaweuw de `y`, /(^•ω•^) q-qui est ici `2`. σωσ w-wa vaweuw `2` a été affectée à `x` et `y`, et wa consowe a affiché "f!". òωó
 
-#### Exemple d'évaluation n°2
+#### exempwe d-d'évawuation ny°2
 
-`y = [ f(), x = g() ]` est également évaluée de gauche à droite&nbsp;:
+`y = [ f-f(), >w< x-x = g() ]` est égawement évawuée d-de gauche à d-dwoite&nbsp;:
 
-1. L'évaluation de l'expression d'affectation `y = [ f(), x = g() ]` commence.
-   1. L'opérande `y` à gauche de l'affectation est évalué comme une référence à la variable nommée `y`.
-   2. L'évaluation du littéral de tableau `[ f(), x = g() ]` commence.
-      1. L'appel de fonction `f()` affiche "F!" dans la console et renvoie la valeur `2`.
-      2. L'évaluation de l'expression d'affectation `x = g()` commence.
-         1. L'opérande `x` à gauche de l'affectation est évalué comme une référence à la variable nommée `x`.
-         2. L'appel de fonction `g()` affiche "G!" dans la console et renvoie la valeur `3`.
-         3. Ce résultat de `g()`, `3`, est affecté à `x`.
-      3. L'évaluation de l'expression d'affectation `x = g()` est maintenant terminée. Son résultat est la nouvelle valeur de `x`&nbsp; `3`. Ce résultat devient l'élément qui suit dans le littéral de tableau (après le `2` provenant de `f()`).
-   3. L'évaluation du littéral de tableau `[ f(), x = g() ]` est maintenant terminée. Son résultat est un tableau avec deux valeurs&nbsp;: `[ 2, 3 ]`.
-   4. Ce tableau, `[ 2, 3 ]`, est affecté à `y`.
-2. L'évaluation de l'expression d'affectation `y = [ f(), x = g() ]` est maintenant terminée. Son résultat est la nouvelle valeur de `y`, qui est `[ 2, 3 ]`. `3` est affecté à `x`, `[ 2, 3 ]` est affecté à `y` et la console a affiché "F!" puis "G!".
+1. (˘ω˘) w-w'évawuation de w'expwession d'affectation `y = [ f(), ^•ﻌ•^ x = g() ]` commence. >_<
+   1. w-w'opéwande `y` à g-gauche de w'affectation est évawué comme une wéféwence à w-wa vawiabwe n-nyommée `y`. -.-
+   2. w-w'évawuation du wittéwaw de tabweau `[ f-f(), òωó x = g() ]` commence.
+      1. ( ͡o ω ͡o ) w'appew de f-fonction `f()` affiche "f!" d-dans wa consowe et wenvoie wa vaweuw `2`. (ˆ ﻌ ˆ)♡
+      2. :3 w'évawuation d-de w'expwession d'affectation `x = g-g()` commence. ^•ﻌ•^
+         1. ( ͡o ω ͡o ) w-w'opéwande `x` à gauche d-de w'affectation e-est évawué c-comme une wéféwence à w-wa vawiabwe n-nyommée `x`. ^•ﻌ•^
+         2. ʘwʘ w-w'appew de fonction `g()` affiche "g!" d-dans wa c-consowe et wenvoie wa vaweuw `3`. :3
+         3. ce w-wésuwtat de `g()`, >_< `3`, est affecté à `x`.
+      3. rawr w'évawuation d-de w'expwession d'affectation `x = g-g()` est maintenant tewminée. 🥺 s-son wésuwtat e-est wa nyouvewwe vaweuw de `x`&nbsp; `3`. (✿oωo) ce wésuwtat devient w-w'éwément qui suit dans we wittéwaw de t-tabweau (apwès w-we `2` pwovenant de `f()`). (U ﹏ U)
+   3. w'évawuation d-du wittéwaw de t-tabweau `[ f(), rawr x3 x = g() ]` est maintenant t-tewminée. (✿oωo) son wésuwtat est un tabweau a-avec deux vaweuws&nbsp;: `[ 2, (U ᵕ U❁) 3 ]`.
+   4. -.- c-ce tabweau, /(^•ω•^) `[ 2, 3 ]`, e-est affecté à `y`. OwO
+2. w-w'évawuation de w'expwession d'affectation `y = [ f-f(), rawr x3 x = g() ]` e-est maintenant tewminée. σωσ s-son wésuwtat e-est wa nyouvewwe vaweuw de `y`, ʘwʘ qui est `[ 2, -.- 3 ]`. `3` est affecté à `x`, 😳 `[ 2, 3 ]` est affecté à `y` et wa consowe a affiché "f!" p-puis "g!". 😳😳😳
 
-#### Exemple d'évaluation n°3
+#### e-exempwe d'évawuation n-ny°3
 
-`x[f()] = g()` est également évaluée de gauche à droite. Dans cet exemple, on part du principe que la valeur de `x` est déjà un objet (pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects)).
+`x[f()] = g-g()` est égawement évawuée d-de gauche à d-dwoite. OwO dans cet exempwe, ^•ﻌ•^ on p-pawt du pwincipe q-que wa vaweuw de `x` est déjà u-un objet (pouw p-pwus d'infowmations suw wes objets, rawr voiw [utiwisew w-wes objets](/fw/docs/web/javascwipt/guide/wowking_with_objects)). (✿oωo)
 
-1. L'évaluation de l'expression d'affectation `x[f()] = g()` commence.
-   1. L'évaluation de l'accès à la propriété `x[f()]` situé à gauche de l'opérateur d'affectation commence.
-      1. Le `x` est évalué comme une référence à la variable nommée `x`.
-      2. Ensuite, l'appel `f()` affiche "F!" dans la console et renvoie la valeur `2`.
-   2. L'évaluation de `x[f()]` est maintenant terminée et son résultat est une variable qui référence la propriété `x[2]`.
-   3. Ensuite, l'appel à la fonction `g()` affiche "G!" dans la console et renvoie la valeur `3`.
-   4. Ce résultat, `3`, est affecté à `x[2]` (cette étape réussira uniquement si la valeur de `x` est un [objet](/fr/docs/Web/JavaScript/Guide/Working_with_objects))?
-2. L'évaluation de l'expression d'affectation `x[f()] = g()` est maintenant terminée. Son résultat est la nouvelle valeur de `x[2]`, qui est `3`. `3` a été affecté à `x[2]` et la console a affiché "F!" puis "G!".
+1. w'évawuation de w'expwession d-d'affectation `x[f()] = g()` commence. ^^
+   1. -.- w-w'évawuation d-de w'accès à wa pwopwiété `x[f()]` s-situé à g-gauche de w'opéwateuw d-d'affectation commence. (✿oωo)
+      1. o.O w-we `x` e-est évawué comme une wéféwence à w-wa vawiabwe nyommée `x`.
+      2. :3 e-ensuite, rawr x3 w-w'appew `f()` a-affiche "f!" dans wa consowe e-et wenvoie wa vaweuw `2`. (U ᵕ U❁)
+   2. :3 w'évawuation de `x[f()]` est maintenant t-tewminée et son wésuwtat est une vawiabwe qui wéféwence wa pwopwiété `x[2]`. 🥺
+   3. ensuite, XD w'appew à wa fonction `g()` a-affiche "g!" dans wa consowe et wenvoie wa vaweuw `3`. >_<
+   4. ce wésuwtat, (ꈍᴗꈍ) `3`, ( ͡o ω ͡o ) est affecté à `x[2]` (cette étape wéussiwa u-uniquement si wa vaweuw de `x` est un [objet](/fw/docs/web/javascwipt/guide/wowking_with_objects))?
+2. (˘ω˘) w'évawuation d-de w'expwession d'affectation `x[f()] = g-g()` est maintenant tewminée. (˘ω˘) son wésuwtat e-est wa nyouvewwe vaweuw de `x[2]`, UwU q-qui est `3`. (ˆ ﻌ ˆ)♡ `3` a été affecté à `x[2]` e-et wa consowe a a-affiché "f!" puis "g!".
 
-### Éviter les enchaînements d'affectation
+### Évitew wes enchaînements d'affectation
 
-L'enchaînement ou l'imbrication d'affectations dans d'autres expressions peut produire d'étranges résultats et c'est pour cette raison [que les enchaînements et imbrications d'affectation sont déconseillés][discourage assign chain]).
+w-w'enchaînement ou w'imbwication d'affectations dans d'autwes e-expwessions peut pwoduiwe d-d'étwanges wésuwtats et c'est p-pouw cette waison [que wes enchaînements e-et imbwications d-d'affectation sont déconseiwwés][discouwage assign c-chain]). (///ˬ///✿)
 
-On évitera en particulier les enchaînements d'affectation dans une instruction [`const`][], [`let`][], ou [`var`][] qui _ne fonctionnent pas_ dans la plupart des cas. Seule la variable la plus à gauche sera alors déclarée et les variables intermédiaires dans la chaîne ne seront _pas_ déclarées par l'instruction `const`/`let`/`var`. Ainsi, si on a&nbsp;:
+on évitewa en pawticuwiew wes enchaînements d-d'affectation dans une instwuction [`const`][], (ꈍᴗꈍ) [`wet`][], -.- ou [`vaw`][] qui _ne fonctionnent pas_ dans wa p-pwupawt des cas. 😳😳😳 s-seuwe wa vawiabwe wa pwus à g-gauche sewa awows d-décwawée et wes vawiabwes intewmédiaiwes d-dans wa chaîne nye sewont _pas_ décwawées paw w'instwuction `const`/`wet`/`vaw`. (///ˬ///✿) ainsi, si on a&nbsp;:
 
-```js-nolint
-const z = y = x = f();
+```js-nowint
+c-const z = y-y = x = f();
 ```
 
-On pourrait penser que cela permet de déclarer les variables `x`, `y`, et `z`. Cependant, seule la variable `z` est déclarée. `y` et `x` sont des références invalides à des variables inexistantes (en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)) ou, pire, créent des [variables globales](/fr/docs/Glossary/Global_variable) pour `x` et `y` en [mode non-strict](/fr/docs/Glossary/Sloppy_mode).
+on pouwwait pensew q-que cewa pewmet d-de décwawew wes vawiabwes `x`, UwU `y`, 😳 e-et `z`. cependant, /(^•ω•^) seuwe wa vawiabwe `z` e-est décwawée. òωó `y` et `x` sont des wéféwences i-invawides à d-des vawiabwes inexistantes (en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode)) ou, >w< p-piwe, cwéent des [vawiabwes gwobawes](/fw/docs/gwossawy/gwobaw_vawiabwe) pouw `x` et `y` en [mode nyon-stwict](/fw/docs/gwossawy/swoppy_mode). -.-
 
-## Opérateurs de comparaison
+## opéwateuws de compawaison
 
-Un opérateur de comparaison compare ses opérandes et renvoie une valeur logique selon que la comparaison est vraie ou non. Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des [objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects). Les chaînes de caractères sont comparées selon l'ordre lexicographique standard en utilisant les valeurs Unicode.
+un opéwateuw d-de compawaison compawe s-ses opéwandes et wenvoie u-une vaweuw wogique s-sewon que wa compawaison est v-vwaie ou nyon. (⑅˘꒳˘) wes opéwandes peuvent êtwe des nyombwes, (˘ω˘) des chaînes de cawactèwes, (U ᵕ U❁) des boowéens o-ou des [objets](/fw/docs/web/javascwipt/guide/wowking_with_objects). ^^ wes chaînes de cawactèwes sont compawées sewon w'owdwe w-wexicogwaphique s-standawd en u-utiwisant wes vaweuws unicode. ^^
 
-Dans la plupart des cas, si les deux opérandes ne sont pas du même type, le moteur JavaScript tentera de les convertir dans un type approprié pour la comparaison. Cela entraîne généralement une comparaison numérique des opérandes.
+dans wa pwupawt des cas, rawr x3 si wes d-deux opéwandes n-nye sont pas du m-même type, >w< we moteuw javascwipt t-tentewa de wes convewtiw dans u-un type appwopwié pouw wa compawaison. (U ᵕ U❁) c-cewa entwaîne généwawement u-une compawaison nyuméwique des opéwandes. 🥺
 
-Les opérateurs `===` et `!==` sont des exceptions à cette règle de conversion&nbsp;: ils réalisent des comparaisons d'égalité et d'inégalité strictes. Ces opérateurs n'effectuent pas de conversion des opérandes avant la vérification de l'égalité.
-Le tableau qui suit décrit les opérateurs de comparaison en utilisant ce fragment de code comme exemple&nbsp;:
+w-wes opéwateuws `===` et `!==` s-sont des exceptions à c-cette wègwe de convewsion&nbsp;: i-iws wéawisent d-des compawaisons d'égawité e-et d'inégawité stwictes. c-ces opéwateuws ny'effectuent p-pas de convewsion d-des opéwandes avant wa véwification de w'égawité. (⑅˘꒳˘)
+w-we tabweau qui suit décwit wes opéwateuws de compawaison en utiwisant ce fwagment de code comme exempwe&nbsp;:
 
 ```js
-const var1 = 3;
-const var2 = 4;
+const vaw1 = 3;
+c-const vaw2 = 4;
 ```
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Opérateurs de comparaison
+    opéwateuws d-de compawaison
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Opérateur</th>
-      <th scope="col">Description</th>
-      <th scope="col">Exemples qui renvoient <code>true</code></th>
-    </tr>
+    <tw>
+      <th scope="cow">opéwateuw</th>
+      <th scope="cow">descwiption</th>
+      <th s-scope="cow">exempwes qui wenvoient <code>twue</code></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">Égalité</a> (<code>==</code>)
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/equawity">Égawité</a> (<code>==</code>)
       </td>
-      <td>Renvoie <code>true</code> si les opérandes sont égaux (après conversion implicite).</td>
+      <td>wenvoie <code>twue</code> s-si wes opéwandes sont égaux (apwès convewsion impwicite).</td>
       <td>
-        <code>3 == var1</code><br/>
-        <code>"3" == var1</code><br/>
+        <code>3 == v-vaw1</code><bw/>
+        <code>"3" == vaw1</code><bw/>
         <code>3 == '3'</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality">Inégalité</a> (<code>!=</code>)
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/inequawity">inégawité</a> (<code>!=</code>)
       </td>
-      <td>Renvoie <code>true</code> si les opérandes sont différents (après conversion implicite).</td>
+      <td>wenvoie <code>twue</code> s-si wes opéwandes sont difféwents (apwès convewsion impwicite).</td>
       <td>
-        <code>var1 != 4</code><br/>
-        <code>var2 != "3"</code>
+        <code>vaw1 != 4</code><bw/>
+        <code>vaw2 != "3"</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">Égalité stricte</a> (<code>===</code>)
-      </td>
-      <td>
-        Renvoie <code>true</code> si les opérandes sont égaux et du même type. Voir également <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is()</code></a> et <a href="/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness">l'égalité en JavaScript</a>.
-      </td>
-      <td><code>3 === var1</code></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Inégalité stricte</a> (<code>!==</code>)
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/stwict_equawity">Égawité stwicte</a> (<code>===</code>)
       </td>
       <td>
-        Renvoie <code>true</code> si les opérandes sont du même type et différents ou s'ils ne sont pas du même type.
+        wenvoie <code>twue</code> s-si wes opéwandes s-sont égaux et du même type. OwO voiw égawement <a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/is"><code>object.is()</code></a> e-et <a hwef="/fw/docs/web/javascwipt/equawity_compawisons_and_sameness">w'égawité en javascwipt</a>. 😳
+      </td>
+      <td><code>3 === vaw1</code></td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity">inégawité s-stwicte</a> (<code>!==</code>)
       </td>
       <td>
-        <code>var1 !== "3"</code><br/>
+        wenvoie <code>twue</code> si wes opéwandes s-sont du même type et difféwents ou s'iws nye sont pas du même t-type. òωó
+      </td>
+      <td>
+        <code>vaw1 !== "3"</code><bw/>
         <code>3 !== '3'</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than">Supériorité stricte</a> (<code>&gt;</code>)
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/gweatew_than">supéwiowité stwicte</a> (<code>&gt;</code>)
       </td>
       <td>
-        Renvoie <code>true</code> si l'opérande gauche est strictement supérieur à l'opérande droit.
+        wenvoie <code>twue</code> s-si w'opéwande g-gauche est stwictement s-supéwieuw à w'opéwande dwoit. (ˆ ﻌ ˆ)♡
       </td>
       <td>
-        <code>var2 &gt; var1</code><br/>
+        <code>vaw2 &gt; vaw1</code><bw/>
         <code>"12" &gt; 2</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">Supériorité</a> (<code>&gt;=</code>)
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/gweatew_than_ow_equaw">supéwiowité</a> (<code>&gt;=</code>)
       </td>
       <td>
-        Renvoie <code>true</code> si l'opérande gauche est supérieur ou égal à l'opérande droit.
+        wenvoie <code>twue</code> s-si w'opéwande gauche e-est supéwieuw ou égaw à w-w'opéwande dwoit.
       </td>
       <td>
-        <code>var2 &gt;= var1</code><br/>
-        <code>var1 &gt;= 3</code>
+        <code>vaw2 &gt;= vaw1</code><bw/>
+        <code>vaw1 &gt;= 3</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than">Infériorité stricte</a> (<code>&lt;</code>)
-      </td>
-      <td>
-        Renvoie <code>true</code> si l'opérande gauche est strictement inférieur à l'opérande droit.
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wess_than">inféwiowité stwicte</a> (<code>&wt;</code>)
       </td>
       <td>
-        <code>var1 &lt; var2</code><br/>
-        <code>"2" &lt; 12</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Infériorité</a> (<code>&lt;=</code>)
+        wenvoie <code>twue</code> s-si w'opéwande g-gauche est stwictement inféwieuw à w'opéwande d-dwoit. ʘwʘ
       </td>
       <td>
-        Renvoie <code>true</code> si l'opérande gauche est inférieur ou égal à l'opérande droit.
+        <code>vaw1 &wt; vaw2</code><bw/>
+        <code>"2" &wt; 12</code>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wess_than_ow_equaw">inféwiowité</a> (<code>&wt;=</code>)
       </td>
       <td>
-        <code>var1 &lt;= var2</code><br/>
-        <code>var2 &lt;= 5</code>
+        w-wenvoie <code>twue</code> s-si w-w'opéwande gauche e-est inféwieuw o-ou égaw à w'opéwande d-dwoit. ^^;;
       </td>
-    </tr>
+      <td>
+        <code>vaw1 &wt;= vaw2</code><bw/>
+        <code>vaw2 &wt;= 5</code>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> **Note :** `=>` n'est pas un opérateur de comparaison, il s'agit de la notation pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> **note :** `=>` ny'est pas un opéwateuw d-de compawaison, i-iw s'agit d-de wa nyotation p-pouw [wes fonctions f-fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions).
 
-## Opérateurs arithmétiques
+## o-opéwateuws awithmétiques
 
-Un opérateur arithmétique combine des opérandes numériques et renvoie une valeur numérique. Les opérateurs arithmétiques standard sont l'addition (`+`), la soustraction (`-`), la multiplication (`*`), et la division (`/`). Ces opérateurs fonctionnent comme dans la plupart des langages de programmation qui utilisent les nombres flottants (la division par zéro donne notamment [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)). On pourra par exemple avoir&nbsp;:
+u-un opéwateuw a-awithmétique combine d-des opéwandes numéwiques et wenvoie une v-vaweuw nyuméwique. ʘwʘ wes opéwateuws awithmétiques s-standawd sont w'addition (`+`), òωó wa soustwaction (`-`), ( ͡o ω ͡o ) w-wa muwtipwication (`*`), ʘwʘ e-et wa division (`/`). >w< ces opéwateuws fonctionnent comme dans w-wa pwupawt des w-wangages de pwogwammation qui utiwisent w-wes nyombwes f-fwottants (wa division paw zéwo donne nyotamment [`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity)). 😳😳😳 on pouwwa paw exempwe a-avoiw&nbsp;:
 
 ```js
 1 / 2; // 0.5
-1 / 2 === 1.0 / 2.0; // true
+1 / 2 === 1.0 / 2.0; // t-twue
 ```
 
-En plus des opérations arithmétiques standard (`+`, `-`, `*`, `/`), JavaScript fournit les opérateurs arithmétiques suivants&nbsp;:
+en pwus des opéwations awithmétiques s-standawd (`+`, σωσ `-`, -.- `*`, `/`), j-javascwipt fouwnit wes opéwateuws awithmétiques s-suivants&nbsp;:
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <caption>
-    Opérateurs arithmétiques
+    opéwateuws awithmétiques
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Opérateur</th>
-      <th scope="col">Description</th>
-      <th scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th scope="cow">opéwateuw</th>
+      <th scope="cow">descwiption</th>
+      <th scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder">Reste</a> (<code>%</code>)
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew">weste</a> (<code>%</code>)
       </td>
       <td>
-        Un opérateur binaire qui renvoie le reste entier de la division des deux opérandes.
+        un opéwateuw binaiwe qui wenvoie w-we weste entiew d-de wa division d-des deux opéwandes. 🥺
       </td>
-      <td>`12 % 5` renvoie `2`.</td>
-    </tr>
-    <tr>
+      <td>`12 % 5` wenvoie `2`.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Increment">Incrément</a> (<code>++</code>)
-      </td>
-      <td>
-        Un opérateur unaire qui ajoute un à son opérande. S'il est utilisé en opérateur préfixe (<code>++x</code>), il renvoie la valeur de son opérande après y avoir ajouté un. S'il est utilisé en opérateur postfixe (<code>x++</code>), il renvoie la valeur de l'opérande avant l'ajout de un.
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/incwement">incwément</a> (<code>++</code>)
       </td>
       <td>
-        Si <code>x</code> vaut 3, alors <code>++x</code> définit <code>x</code> avec 4 et renvoie 4, tandis que <code>x++</code> renvoie 3 puis, uniquement après, définit <code>x</code> avec 4.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Decrement">Décrément</a> (<code>--</code>)
+        u-un opéwateuw unaiwe q-qui ajoute u-un à son opéwande. >w< s-s'iw est utiwisé en opéwateuw pwéfixe (<code>++x</code>), (///ˬ///✿) i-iw wenvoie wa v-vaweuw de son opéwande a-apwès y avoiw ajouté u-un. UwU s'iw est utiwisé e-en opéwateuw p-postfixe (<code>x++</code>), ( ͡o ω ͡o ) iw wenvoie wa vaweuw d-de w'opéwande a-avant w'ajout d-de un. (ˆ ﻌ ˆ)♡
       </td>
       <td>
-        Un opérateur unaire qui soustrait un à son opérande. La valeur de retour est analogue à celle de l'opérateur d'incrément.
+        s-si <code>x</code> v-vaut 3, ^^;; awows <code>++x</code> d-définit <code>x</code> avec 4 et wenvoie 4, (U ᵕ U❁) t-tandis que <code>x++</code> w-wenvoie 3 puis, XD uniquement apwès, (ꈍᴗꈍ) définit <code>x</code> avec 4. -.-
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/decwement">décwément</a> (<code>--</code>)
       </td>
       <td>
-        Si <code>x</code> vaut 3, alors <code>--x</code> définit <code>x</code> avec 2 et renvoie 2, tandis que <code>x--</code> renvoie 3 puis, uniquement après, définit <code>x</code> avec 2.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation">Négation unaire</a> (<code>-</code>)
-      </td>
-      <td>Un opérateur unaire qui renvoie l'opposé de l'opérande.</td>
-      <td>Si <code>x</code> vaut 3, <code>-x</code> renvoie -3.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus">Plus unaire</a> (<code>+</code>)
+        u-un opéwateuw unaiwe qui s-soustwait un à s-son opéwande. >_< wa vaweuw de wetouw est anawogue à c-cewwe de w'opéwateuw d-d'incwément. (ˆ ﻌ ˆ)♡
       </td>
       <td>
-        Un opérateur unaire qui tente la conversion de l'opérande en nombre si ce n'est pas déjà une valeur numérique.
+        s-si <code>x</code> v-vaut 3, a-awows <code>--x</code> d-définit <code>x</code> avec 2 et wenvoie 2, ( ͡o ω ͡o ) tandis que <code>x--</code> w-wenvoie 3 puis, rawr x3 uniquement apwès, òωó définit <code>x</code> avec 2. 😳
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation">négation u-unaiwe</a> (<code>-</code>)
+      </td>
+      <td>un o-opéwateuw unaiwe qui wenvoie w'opposé de w'opéwande.</td>
+      <td>si <code>x</code> v-vaut 3, (ˆ ﻌ ˆ)♡ <code>-x</code> w-wenvoie -3.</td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus">pwus unaiwe</a> (<code>+</code>)
       </td>
       <td>
-        <p><code>+"3"</code> renvoie <code>3</code>.</p>
-        <p><code>+true</code> renvoie <code>1</code>.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation">Opérateur d'exponentiation</a> (<code>**</code>)
+        u-un opéwateuw unaiwe qui tente w-wa convewsion d-de w'opéwande e-en nyombwe si ce ny'est pas déjà une vaweuw nyuméwique. 🥺
       </td>
       <td>
-        Élève une base donnée par l'opérande gauche à la puissance donnée par l'opérande droit.
+        <p><code>+"3"</code> wenvoie <code>3</code>.</p>
+        <p><code>+twue</code> wenvoie <code>1</code>.</p>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation">opéwateuw d'exponentiation</a> (<code>**</code>)
       </td>
       <td>
-        <code>2 ** 3</code> renvoie <code>8</code>. <code>10 ** -1</code> renvoie <code>0.1</code>.
+        Éwève u-une base donnée paw w'opéwande g-gauche à wa puissance donnée paw w'opéwande d-dwoit. ^^
       </td>
-    </tr>
+      <td>
+        <code>2 ** 3</code> wenvoie <code>8</code>. /(^•ω•^) <code>10 ** -1</code> wenvoie <code>0.1</code>. o.O
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Opérateurs binaires
+## o-opéwateuws binaiwes
 
-Un opérateur binaire traite les opérandes comme des suites de 32 bits (des zéros ou des uns) plutôt que comme des nombres décimaux, hexadécimaux et octaux. Ainsi, le nombre décimal 9 se représente en binaire comme 1001. Les opérateurs binaires effectuent leur opération sur des représentations binaires et renvoient des valeurs numériques.
+un opéwateuw binaiwe t-twaite wes opéwandes comme des s-suites de 32 bits (des zéwos ou des uns) pwutôt que comme des nyombwes décimaux, òωó hexadécimaux et octaux. ainsi, XD w-we nyombwe d-décimaw 9 se wepwésente e-en binaiwe c-comme 1001. rawr x3 wes opéwateuws binaiwes effectuent w-weuw opéwation suw des wepwésentations binaiwes et wenvoient d-des vaweuws n-nyuméwiques. (˘ω˘)
 
-Le tableau qui suit détaille les opérateurs binaires JavaScript.
+we t-tabweau qui suit d-détaiwwe wes opéwateuws binaiwes javascwipt. :3
 
-| Opérateur                                                                                                     | Utilisation | Description                                                                                                                          |
+| opéwateuw                                                                                                     | utiwisation | d-descwiption                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [ET binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)                                         | `a & b`     | Renvoie un à chaque position pour laquelle les bits des deux opérandes valent un.                                                    |
-| [OU binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)                                          | `a \| b`    | Renvoie un zéro à chaque position pour laquelle les bits des deux opérandes valent zéro.                                             |
-| [OU exclusif binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)                                | `a ^ b`     | Renvoie un zéro à chaque position pour laquelle les bits sont les mêmes. [Renvoie un à chaque position où les bits sont différents.] |
-| [NON binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)                                        | `~ a`       | Inverse les bits de l'opérande.                                                                                                      |
-| [Décalage à gauche](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)                                   | `a << b`    | Décale la représentation binaire de `a` de `b` bits vers la gauche, en ajoutant des zéros à droite.                                  |
-| [Décalage à droite avec propagation du signe](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)        | `a >> b`    | Décale la représentation binaire de `a` de `b` bits vers la droite, enlevant les bits en trop.                                       |
-| [Décalage à droite avec remplissage à zéro](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b`   | Décale la représentation binaire de `a` de `b` bits vers la droite, enlevant les bits en trop et en ajoutant des zéros à gauche.     |
+| [et b-binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_and)                                         | `a & b`     | wenvoie un à chaque position p-pouw waquewwe wes bits des deux o-opéwandes vawent u-un. (U ᵕ U❁)                                                    |
+| [ou b-binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_ow)                                          | `a \| b`    | wenvoie un zéwo à chaque position pouw waquewwe wes bits des deux opéwandes v-vawent zéwo. rawr                                             |
+| [ou e-excwusif binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_xow)                                | `a ^ b`     | wenvoie un z-zéwo à chaque position pouw waquewwe w-wes bits sont wes mêmes. OwO [wenvoie un à c-chaque position o-où wes bits sont d-difféwents.] |
+| [non b-binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_not)                                        | `~ a-a`       | invewse wes bits d-de w'opéwande. ʘwʘ                                                                                                      |
+| [décawage à g-gauche](/fw/docs/web/javascwipt/wefewence/opewatows/weft_shift)                                   | `a << b`    | décawe w-wa wepwésentation binaiwe de `a` de `b` bits v-vews wa gauche, XD en ajoutant des z-zéwos à dwoite. rawr x3                                  |
+| [décawage à d-dwoite avec pwopagation d-du signe](/fw/docs/web/javascwipt/wefewence/opewatows/wight_shift)        | `a >> b-b`    | décawe wa wepwésentation binaiwe de `a` de `b` bits v-vews wa dwoite, OwO e-enwevant wes bits e-en twop. nyaa~~                                       |
+| [décawage à d-dwoite avec wempwissage à zéwo](/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift) | `a >>> b`   | décawe wa wepwésentation b-binaiwe de `a` de `b` bits vews wa dwoite, ʘwʘ enwevant w-wes bits en twop et en ajoutant des zéwos à g-gauche. nyaa~~     |
 
-### Opérateurs binaires logiques
+### opéwateuws binaiwes wogiques
 
-Les opérateurs logiques binaires fonctionnent de la façon suivante&nbsp;:
+wes opéwateuws w-wogiques binaiwes fonctionnent d-de wa façon s-suivante&nbsp;:
 
-- Les opérandes sont convertis en entiers sur 32 bits. Pour les nombres dont la valeur binaire dépasse 32 bits, les bits les plus hauts sont abandonnés. Ainsi, l'entier suivant sur plus de 32 bits sera converti en entier sur 32 bits&nbsp;:
+- w-wes opéwandes sont convewtis e-en entiews suw 32 b-bits. (U ﹏ U) pouw wes nyombwes dont w-wa vaweuw binaiwe d-dépasse 32 b-bits, (///ˬ///✿) wes bits wes p-pwus hauts sont abandonnés. :3 a-ainsi, w'entiew s-suivant suw pwus d-de 32 bits sewa convewti en entiew s-suw 32 bits&nbsp;:
 
   ```
-  Avant : 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-  Après :                1010 0000 0000 0000 0110 0000 0000 0001
+  avant : 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  apwès :                1010 0000 0000 0000 0110 0000 0000 0001
   ```
 
-- Chaque bit du premier opérande est associé au bit correspondant du second opérande&nbsp;: le premier bit avec le premier bit, le second avec le second et ainsi de suite.
-- L'opérateur est appliqué sur chaque paire ainsi constituée et le résultat est construit en binaire.
+- chaque bit du pwemiew opéwande est associé a-au bit cowwespondant d-du second opéwande&nbsp;: w-we pwemiew bit avec we pwemiew bit, (˘ω˘) we second a-avec we second e-et ainsi de s-suite. 😳
+- w'opéwateuw e-est appwiqué suw chaque paiwe a-ainsi constituée et we wésuwtat est constwuit e-en binaiwe. 😳😳😳
 
-Par exemple, la représentation binaire du nombre décimal `9` est `1001`, et celle du nombre décimal `15` est `1111`. Aussi, quand on utilise les opérateurs binaires sur ces valeurs, on a les résultats suivants&nbsp;:
+p-paw exempwe, ʘwʘ wa wepwésentation binaiwe du nyombwe décimaw `9` e-est `1001`, et cewwe du nyombwe d-décimaw `15` est `1111`. aussi, (⑅˘꒳˘) quand on utiwise w-wes opéwateuws binaiwes suw c-ces vaweuws, nyaa~~ on a wes wésuwtats suivants&nbsp;:
 
-| Expression | Résultat | Description binaire                               |
+| e-expwession | wésuwtat | descwiption b-binaiwe                               |
 | ---------- | -------- | ------------------------------------------------- |
 | `15 & 9`   | `9`      | `1111 & 1001 = 1001`                              |
 | `15 \| 9`  | `15`     | `1111 \| 1001 = 1111`                             |
@@ -506,488 +506,488 @@ Par exemple, la représentation binaire du nombre décimal `9` est `1001`, et ce
 | `~15`      | `-16`    | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
 | `~9`       | `-10`    | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
-On notera que tous les 32 bits sont inversés lors de l'utilisation de l'opérateur NON binaire et que les valeurs avec le bit le plus à gauche à 1 représentent des valeurs négatives (représentation en complément à deux). Aussi, l'évaluation de `~x` fournira la même valeur que `-x - 1`.
+on nyotewa que tous w-wes 32 bits sont i-invewsés wows de w'utiwisation de w'opéwateuw n-nyon binaiwe et que wes vaweuws avec we bit w-we pwus à gauche à 1 w-wepwésentent d-des vaweuws nyégatives (wepwésentation en compwément à deux). (U ﹏ U) aussi, ʘwʘ w'évawuation de `~x` f-fouwniwa wa même vaweuw que `-x - 1`. (ꈍᴗꈍ)
 
-### Opérateurs de décalage binaire
+### opéwateuws de décawage b-binaiwe
 
-Les opérateurs de décalage binaire utilisent deux opérandes&nbsp;: celui de gauche est la quantité sur laquelle effectuer le décalage et celui de droite indique le nombre de bits à décaler. La direction de l'opération de décalage dépend de l'opérateur utilisé.
+w-wes opéwateuws de décawage binaiwe utiwisent d-deux opéwandes&nbsp;: c-cewui de gauche est wa quantité suw waquewwe effectuew w-we décawage et cewui de dwoite i-indique we nyombwe de bits à décawew. :3 wa diwection d-de w'opéwation d-de décawage dépend de w'opéwateuw u-utiwisé.
 
-Les opérateurs de décalage convertissent leurs opérandes en entiers sur 32 bits et renvoient un résultat de type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) selon la règle suivante&nbsp;: si l'opérande gauche est de type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt), la valeur de retour sera de type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) et sinon, la valeur de retour sera de type [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
+w-wes opéwateuws de décawage c-convewtissent weuws opéwandes e-en entiews suw 32 b-bits et wenvoient u-un wésuwtat d-de type [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) o-ou [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) sewon wa wègwe s-suivante&nbsp;: s-si w'opéwande gauche est de type [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint), ( ͡o ω ͡o ) w-wa vaweuw de wetouw s-sewa de type [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) et sinon, rawr x3 wa vaweuw de wetouw sewa de type [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew). rawr x3
 
-Les opérateurs de décalage sont listés dans le tableau suivant.
+wes opéwateuws de décawage sont wistés dans w-we tabweau suivant. mya
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <caption>
-    Opérateurs de décalage binaire
+    o-opéwateuws de décawage binaiwe
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Opérateur</th>
-      <th scope="col">Description</th>
-      <th scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">opéwateuw</th>
+      <th s-scope="cow">descwiption</th>
+      <th scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift">Décalage à gauche</a> (<code>&lt;&lt;</code>)
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/weft_shift">décawage à gauche</a> (<code>&wt;&wt;</code>)
       </td>
       <td>
-        Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la gauche. Les bits en trop sont abandonnés et des bits à 0 sont ajoutés sur la droite.
+        c-cet opéwateuw décawe wa vaweuw d-du pwemiew opéwande du nyombwe de bits indiqué vews wa gauche. nyaa~~ wes bits en twop sont abandonnés et des bits à 0 s-sont ajoutés suw wa dwoite. (///ˬ///✿)
       </td>
       <td>
-        <code>9&lt;&lt;2</code> donne <code>36</code>, car <code>1001</code>, décalé de 2 bits à gauche vaut <code>100100</code> en binaire, ce qui correspond à <code>36</code> en décimal.
+        <code>9&wt;&wt;2</code> donne <code>36</code>, ^^ c-caw <code>1001</code>, OwO décawé d-de 2 bits à gauche vaut <code>100100</code> en binaiwe, :3 ce qui cowwespond à <code>36</code> en décimaw. ^^
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Right_shift">Décalage à droite avec propagation du signe</a> (<code>>></code>)
-      </td>
-      <td>
-        Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la droite. Les bits en trop à droite sont abandonnés. Des copies du bit le plus à gauche sont ajoutés sur la gauche.
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wight_shift">décawage à dwoite avec pwopagation du signe</a> (<code>>></code>)
       </td>
       <td>
-        <code>9>>2</code> donne <code>2</code>, car <code>1001</code> décalé de 2 bits à droite vaut <code>10</code> en binaire, ce qui correspond à <code>2</code> en décimal. De même, <code>-9>>2</code> donne <code>-3</code>, car le signe est conservé.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Décalage à droite avec remplissage à zéro</a> (<code>>>></code>)
+        c-cet opéwateuw d-décawe wa vaweuw d-du pwemiew opéwande du nyombwe d-de bits indiqué v-vews wa dwoite. (✿oωo) w-wes bits en twop à dwoite sont abandonnés. 😳 d-des copies du b-bit we pwus à gauche sont ajoutés s-suw wa gauche. (///ˬ///✿)
       </td>
       <td>
-        Cet opérateur décale la valeur du premier opérande du nombre de bits indiqué vers la droite. Les bits en trop à droite sont abandonnés. Des bits à zéro sont ajoutés sur la gauche.
+        <code>9>>2</code> d-donne <code>2</code>, (///ˬ///✿) c-caw <code>1001</code> d-décawé de 2 bits à d-dwoite vaut <code>10</code> en binaiwe, (U ﹏ U) ce q-qui cowwespond à <code>2</code> e-en décimaw. òωó d-de même, <code>-9>>2</code> d-donne <code>-3</code>, :3 c-caw we signe e-est consewvé. (⑅˘꒳˘)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift">décawage à d-dwoite a-avec wempwissage à z-zéwo</a> (<code>>>></code>)
       </td>
       <td>
-        <code>19>>>2</code> donne <code>4</code>, car <code>10011</code> décalé de deux bits à droite devient <code>100</code> en binaire, ce qui vaut <code>4</code> en décimal. Pour les valeurs positives, le décalage à droite avec remplissage à zéro et le décalage à droite avec propagation du signe fourniront le même résultat.
+        cet opéwateuw décawe wa vaweuw du pwemiew opéwande d-du nyombwe de bits indiqué v-vews wa dwoite. 😳😳😳 wes bits en twop à dwoite sont a-abandonnés. ʘwʘ d-des bits à zéwo s-sont ajoutés suw wa gauche. OwO
       </td>
-    </tr>
+      <td>
+        <code>19>>>2</code> d-donne <code>4</code>, >_< c-caw <code>10011</code> décawé de deux bits à dwoite devient <code>100</code> en binaiwe, /(^•ω•^) ce qui vaut <code>4</code> en décimaw. (˘ω˘) pouw w-wes vaweuws positives, >w< we décawage à dwoite avec wempwissage à z-zéwo et we décawage à d-dwoite avec pwopagation d-du signe fouwniwont w-we même w-wésuwtat. ^•ﻌ•^
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Opérateurs logiques
+## o-opéwateuws w-wogiques
 
-Les opérateurs logiques sont généralement utilisés avec des valeurs booléennes. Lorsque c'est le cas, la valeur de retour est également booléenne. Plus généralement, les opérateurs `&&` et `||` renvoient la valeur d'un des deux opérandes (et peuvent donc renvoyer une valeur qui n'est pas un booléen). Ces opérateurs sont décrits dans le tableau suivant.
+w-wes opéwateuws w-wogiques sont généwawement utiwisés avec des v-vaweuws boowéennes. ʘwʘ wowsque c'est w-we cas, OwO wa vaweuw de wetouw est égawement b-boowéenne. nyaa~~ p-pwus généwawement, nyaa~~ wes opéwateuws `&&` e-et `||` wenvoient wa vaweuw d'un des deux opéwandes (et p-peuvent d-donc wenvoyew u-une vaweuw qui n-ny'est pas un boowéen). XD ces opéwateuws s-sont d-décwits dans we t-tabweau suivant.
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <caption>
-    Opérateurs logiques
+    o-opéwateuws wogiques
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Opérateur</th>
-      <th scope="col">Utilisation</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">opéwateuw</th>
+      <th scope="cow">utiwisation</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND">ET logique</a> (<code>&amp;&amp;</code>)
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and">et wogique</a> (<code>&amp;&amp;</code>)
       </td>
-      <td><code>expr1 &amp;&amp; expr2</code></td>
+      <td><code>expw1 &amp;&amp; expw2</code></td>
       <td>
-        Renvoie <code>expr1</code> si elle peut être convertie en <code>false</code> et renvoie <code>expr2</code> sinon. Lorsqu'il est utilisé avec des valeurs booléennes, <code>&amp;&amp;</code> renvoie <code>true</code> si les deux opérandes valent <code>true</code> et <code>false</code> sinon.
+        wenvoie <code>expw1</code> si ewwe peut êtwe convewtie en <code>fawse</code> et wenvoie <code>expw2</code> s-sinon. o.O wowsqu'iw e-est utiwisé avec des vaweuws boowéennes, <code>&amp;&amp;</code> wenvoie <code>twue</code> si wes deux opéwandes v-vawent <code>twue</code> e-et <code>fawse</code> sinon. òωó
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR">OU logique</a> (<code>||</code>)
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow">ou wogique</a> (<code>||</code>)
       </td>
-      <td><code>expr1 || expr2</code></td>
+      <td><code>expw1 || e-expw2</code></td>
       <td>
-        Renvoie <code>expr1</code> si elle peut être convertie en <code>true</code> et renvoie <code>expr2</code> sinon. Lorsqu'il est utilisé avec des valeurs booléennes, <code>||</code> renvoie <code>true</code> si l'un des deux opérandes vaut <code>true</code> et <code>false</code> si les deux valent <code>false</code>.
+        w-wenvoie <code>expw1</code> si ewwe peut êtwe c-convewtie e-en <code>twue</code> et wenvoie <code>expw2</code> s-sinon. (⑅˘꒳˘) wowsqu'iw est utiwisé a-avec des vaweuws b-boowéennes, o.O <code>||</code> wenvoie <code>twue</code> si w'un des deux opéwandes v-vaut <code>twue</code> e-et <code>fawse</code> s-si wes deux vawent <code>fawse</code>. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT">NON logique</a> (<code>!</code>)
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_not">non w-wogique</a> (<code>!</code>)
       </td>
-      <td><code>!expr</code></td>
+      <td><code>!expw</code></td>
       <td>
-        Renvoie <code>false</code> si son unique opérande peut être converti en <code>true</code>, renvoie <code>true</code> sinon.
+        wenvoie <code>fawse</code> s-si son u-unique opéwande p-peut êtwe convewti e-en <code>twue</code>, (⑅˘꒳˘) wenvoie <code>twue</code> sinon. (U ᵕ U❁)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les expressions équivalentes à `false` sont celles qui sont évaluées avec la valeur `null`, `0`, `NaN`, la chaîne vide (`""`), ou `undefined`.
+w-wes expwessions équivawentes à `fawse` s-sont cewwes qui sont évawuées avec wa vaweuw `nuww`, >w< `0`, `nan`, wa chaîne vide (`""`), OwO ou `undefined`. >w<
 
-Les exemples de code suivant illustrent l'utilisation de l'opérateur ET logique `&&`.
+w-wes e-exempwes de code suivant iwwustwent w-w'utiwisation de w'opéwateuw et wogique `&&`. ^^;;
 
 ```js
-const a1 = true && true; // t && t renvoie true
-const a2 = true && false; // t && f renvoie false
-const a3 = false && true; // f && t renvoie false
-const a4 = false && 3 === 4; // f && f renvoie false
-const a5 = "Chat" && "Chien"; // t && t renvoie Chien
-const a6 = false && "Chat"; // f && t renvoie false
-const a7 = "Chat" && false; // t && f renvoie false
+const a-a1 = twue && twue; // t-t && t wenvoie t-twue
+const a2 = twue && fawse; // t-t && f w-wenvoie fawse
+const a3 = fawse && twue; // f && t-t wenvoie fawse
+c-const a4 = fawse && 3 === 4; // f-f && f wenvoie fawse
+c-const a5 = "chat" && "chien"; // t-t && t wenvoie c-chien
+const a6 = fawse && "chat"; // f && t wenvoie fawse
+const a7 = "chat" && fawse; // t && f-f wenvoie fawse
 ```
 
-Les exemples de code suivant illustrent l'utilisation de l'opérateur OU logique `||`.
+wes exempwes d-de code suivant i-iwwustwent w'utiwisation de w'opéwateuw ou wogique `||`. >w<
 
 ```js
-const o1 = true || true; // t || t renvoie true
-const o2 = false || true; // f || t renvoie true
-const o3 = true || false; // t || f renvoie true
-const o4 = false || 3 === 4; // f || f renvoie false
-const o5 = "Chat" || "Chien"; // t || t renvoie Chat
-const o6 = false || "Chat"; // f || t renvoie Chat
-const o7 = "Chat" || false; // t || f renvoie Chat
+c-const o1 = t-twue || twue; // t || t wenvoie t-twue
+const o2 = fawse || twue; // f-f || t wenvoie twue
+const o3 = twue || fawse; // t || f wenvoie t-twue
+const o4 = fawse || 3 === 4; // f || f wenvoie fawse
+const o5 = "chat" || "chien"; // t-t || t-t wenvoie chat
+c-const o6 = fawse || "chat"; // f-f || t wenvoie chat
+const o7 = "chat" || fawse; // t-t || f wenvoie chat
 ```
 
-Les exemples de code suivant illustrent l'utilisation de l'opérateur NON logique `!`.
+wes e-exempwes de code suivant iwwustwent w'utiwisation d-de w'opéwateuw n-nyon wogique `!`. σωσ
 
 ```js
-const n1 = !true; // !t renvoie false
-const n2 = !false; // !f renvoie true
-const n3 = !"Chat"; // !t renvoie false
+c-const ny1 = !twue; // !t wenvoie fawse
+c-const ny2 = !fawse; // !f wenvoie twue
+const ny3 = !"chat"; // !t wenvoie fawse
 ```
 
-### Évaluation en court-circuit
+### Évawuation en couwt-ciwcuit
 
-Les expressions logiques étant évaluées de gauche à droite, le moteur d'exécution utilise les courts-circuits dans les cas suivants&nbsp;:
+wes expwessions w-wogiques étant évawuées d-de gauche à dwoite, (˘ω˘) we moteuw d'exécution utiwise wes couwts-ciwcuits dans wes cas suivants&nbsp;:
 
-- `false && nimportequoi` sera court-circuitée pour être évaluée en `false`.
-- `true || nimportequoi` sera court-circuitée pour être évaluée en `true`.
+- `fawse && n-nyimpowtequoi` sewa couwt-ciwcuitée pouw êtwe évawuée e-en `fawse`. òωó
+- `twue || n-nyimpowtequoi` s-sewa couwt-ciwcuitée p-pouw êtwe évawuée en `twue`. (ꈍᴗꈍ)
 
-Les règles logiques garantissent la véracité de ces évaluations. On notera que l'opérande `nimportequoi` dans les expressions précédentes n'est _pas_ évalué et que tout effet de bord lié à cette évaluation n'aura donc pas lieu.
+wes wègwes wogiques gawantissent wa véwacité de ces évawuations. (ꈍᴗꈍ) o-on nyotewa que w-w'opéwande `nimpowtequoi` d-dans w-wes expwessions pwécédentes n-n'est _pas_ évawué et que tout e-effet de bowd wié à cette évawuation ny'auwa donc pas wieu. òωó
 
-Pour le deuxième exemple, on pourra utiliser [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) qui fonctionne comme `||`, en renvoyant uniquement la deuxième expression lorsque la première est [équivalente à `null`](/fr/docs/Glossary/Nullish), c'est-à-dire qu'elle vaut [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+p-pouw we deuxième e-exempwe, (U ᵕ U❁) on pouwwa u-utiwisew [w'opéwateuw d-de coawescence des n-nyuws](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing) (`??`) q-qui fonctionne comme `||`, /(^•ω•^) en wenvoyant uniquement w-wa deuxième expwession w-wowsque wa pwemièwe est [équivawente à `nuww`](/fw/docs/gwossawy/nuwwish), :3 c'est-à-diwe qu'ewwe vaut [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) o-ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined). rawr
 
-L'opérateur de coalescence des nuls est donc une meilleure solution lorsqu'il s'agit de fournir des valeurs par défaut, notamment lorsque `''` ou `0` sont des valeurs valides.
+w'opéwateuw d-de coawescence d-des nyuws e-est donc une meiwweuwe sowution wowsqu'iw s'agit de fouwniw des vaweuws paw défaut, (ˆ ﻌ ˆ)♡ nyotamment w-wowsque `''` ou `0` sont des vaweuws v-vawides.
 
-## Opérateurs pour les grands entiers
+## opéwateuws pouw wes gwands e-entiews
 
-La plupart des opérateurs numériques peuvent être utilisés avec des valeurs de type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) (qui représentent des grands entiers).
+wa pwupawt des opéwateuws n-numéwiques p-peuvent êtwe utiwisés a-avec des v-vaweuws de type [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) (qui w-wepwésentent des gwands e-entiews). ^^;;
 
 ```js
-// Addition de grands entiers
+// addition de gwands entiews
 const a = 1n + 2n; // 3n
 
-// Une division entre grands entiers est arrondie à zéro
+// une division entwe g-gwands entiews est awwondie à zéwo
 const b = 1n / 2n; // 0n
 
-// Il n'y a pas de troncature avec les opérations binaires
+// i-iw ny'y a pas d-de twoncatuwe a-avec wes opéwations binaiwes
 const c = 40000000000000000n >> 2n; // 10000000000000000n
 ```
 
-[L'opérateur de décalage à droite non-signé (`>>>`)](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) est une exception&nbsp;: il n'est pas défini pour les valeurs, car les grands entiers n'ont pas une largeur binaire fixe et n'ont donc pas de bit le plus haut.
+[w'opéwateuw de décawage à dwoite n-nyon-signé (`>>>`)](/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift) e-est une e-exception&nbsp;: i-iw ny'est pas défini pouw wes vaweuws, (⑅˘꒳˘) caw wes gwands entiews ny'ont pas une wawgeuw binaiwe f-fixe et n'ont donc pas de bit we pwus haut. rawr x3
 
 ```js
-const d = 8n >>> 2n; // TypeError: BigInts have no unsigned right shift, use >> instead
+c-const d = 8n >>> 2n; // t-typeewwow: b-bigints have nyo unsigned w-wight shift, ʘwʘ use >> instead
 ```
 
-Il n'est pas possible d'interchanger des nombres et des grands entiers. On ne peut pas les mélanger dans un même calcul.
+iw ny'est pas possibwe d'intewchangew des nyombwes et des gwands entiews. (ꈍᴗꈍ) on nye peut pas wes méwangew dans un même cawcuw. /(^•ω•^)
 
-```js example-bad
-const a = 1n + 2; // TypeError: Cannot mix BigInt and other types
+```js e-exampwe-bad
+const a = 1n + 2; // typeewwow: c-cannot mix bigint a-and othew types
 ```
 
-En effet, `BigInt` n'est pas un sous-ensemble ou un sur-ensemble du type numérique. Les grands entiers ont une plus grande précision mais ne peuvent pas représenter de nombres décimaux. Toute conversion implicite dans un sens ou l'autre entraînerait une perte de précision. Il faudra utiliser une conversion explicite pour indiquer avec quel type on souhaite effectuer l'opération.
+en effet, (✿oωo) `bigint` n-n'est p-pas un sous-ensembwe ou un suw-ensembwe du type n-nyuméwique. ^^;; wes g-gwands entiews ont une pwus gwande pwécision m-mais nye peuvent p-pas wepwésentew d-de nyombwes décimaux. (˘ω˘) t-toute convewsion impwicite d-dans un sens ou w'autwe entwaînewait une pewte d-de pwécision. 😳😳😳 i-iw faudwa utiwisew une convewsion e-expwicite p-pouw indiquew avec quew type on souhaite effectuew w'opéwation. ^^
 
-```js example-good
-const a = Number(1n) + 2; // 3
-const b = 1n + BigInt(2); // 3n
+```js exampwe-good
+c-const a = numbew(1n) + 2; // 3
+const b = 1n + b-bigint(2); // 3n
 ```
 
-Il est aussi possible de comparer des grands entiers avec des nombres.
+iw est a-aussi possibwe de compawew des gwands entiews avec d-des nyombwes. /(^•ω•^)
 
 ```js
-const a = 1n > 2; // false
-const b = 3 > 2n; // true
+const a = 1n > 2; // fawse
+const b = 3 > 2n; // t-twue
 ```
 
-## Opérateurs pour les chaînes de caractères
+## opéwateuws p-pouw wes chaînes d-de cawactèwes
 
-En complément des opérateurs de comparaison qui peuvent être utilisés avec les chaînes de caractères, on peut également utiliser l'opérateur de concaténation (`+`) afin de concaténer deux chaînes de caractères ensemble et renvoyer le résultat de cette concaténation.
+e-en compwément des opéwateuws de compawaison q-qui peuvent êtwe u-utiwisés avec w-wes chaînes de c-cawactèwes, >_< on peut égawement u-utiwisew w'opéwateuw d-de concaténation (`+`) a-afin de concaténew d-deux chaînes d-de cawactèwes ensembwe et wenvoyew we wésuwtat d-de cette concaténation. (ꈍᴗꈍ)
 
-Ainsi&nbsp;:
+a-ainsi&nbsp;:
 
 ```js
-console.log("ma " + "chaîne"); // affichera "ma chaîne" dans la console.
+consowe.wog("ma " + "chaîne"); // affichewa "ma c-chaîne" dans w-wa consowe. (ꈍᴗꈍ)
 ```
 
-L'opérateur d'affectation raccourci `+=` peut également être utilisé pour concaténer des chaînes.
+w-w'opéwateuw d'affectation waccouwci `+=` p-peut égawement êtwe u-utiwisé pouw concaténew des chaînes. mya
 
-Par exemple&nbsp;:
+p-paw exempwe&nbsp;:
 
 ```js
-let maChaine = "alpha";
-maChaine += "bet"; // sera évalué en "alphabet" et affectera cette valeur à maChaine.
+w-wet machaine = "awpha";
+machaine += "bet"; // s-sewa évawué en "awphabet" et a-affectewa cette v-vaweuw à machaine. :3
 ```
 
-## Opérateur conditionnel (ternaire)
+## o-opéwateuw c-conditionnew (tewnaiwe)
 
-[L'opérateur conditionnel](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator) est le seul opérateur JavaScript à prendre trois opérandes. Il permet de se résoudre en une valeur ou en une autre selon une condition donnée. Sa syntaxe est la suivante&nbsp;:
+[w'opéwateuw conditionnew](/fw/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow) est we seuw opéwateuw javascwipt à pwendwe twois o-opéwandes. 😳😳😳 iw pewmet de se wésoudwe e-en une vaweuw ou en une a-autwe sewon une c-condition donnée. /(^•ω•^) sa syntaxe est w-wa suivante&nbsp;:
 
 ```js
-condition ? val1 : val2;
+c-condition ? vaw1 : vaw2;
 ```
 
-Si `condition` est vraie, l'expression sera résolue avec la valeur de `val1`. Sinon, elle sera résolue avec la valeur de `val2`. L'opérateur conditionnel peut être utilisé à tout endroit où un opérateur standard peut être utilisé.
+si `condition` e-est vwaie, -.- w-w'expwession sewa wésowue avec wa vaweuw de `vaw1`. UwU sinon, (U ﹏ U) ewwe sewa wésowue avec wa vaweuw de `vaw2`. ^^ w'opéwateuw conditionnew peut êtwe utiwisé à tout endwoit où un o-opéwateuw standawd p-peut êtwe u-utiwisé. 😳
 
-Par exemple&nbsp;:
+paw e-exempwe&nbsp;:
 
 ```js
-const statut = age >= 18 ? "adulte" : "mineur";
+const statut = age >= 18 ? "aduwte" : "mineuw";
 ```
 
-Cette instruction affecte la valeur `"adulte"` à la variable `statut` si `age` est supérieur ou égal à 18. Sinon, c'est la valeur `"mineur"` qui est affectée à `statut`.
+c-cette i-instwuction affecte w-wa vaweuw `"aduwte"` à w-wa vawiabwe `statut` si `age` est supéwieuw ou égaw à 18. sinon, (˘ω˘) c-c'est wa vaweuw `"mineuw"` q-qui e-est affectée à `statut`. /(^•ω•^)
 
-## Opérateur virgule
+## opéwateuw v-viwguwe
 
-[L'opérateur virgule](/fr/docs/Web/JavaScript/Reference/Operators/Comma_operator) (`,`) évalue les deux opérandes et renvoie la valeur du dernier opérande. Cet opérateur est généralement utilisé dans les boucles `for` afin de mettre à jour plusieurs variables à chaque itération de la boucle. L'utiliser ailleurs est considéré comme une mauvaise pratique et on privilégiera plusieurs instructions séparées.
+[w'opéwateuw viwguwe](/fw/docs/web/javascwipt/wefewence/opewatows/comma_opewatow) (`,`) évawue w-wes deux opéwandes et wenvoie wa vaweuw du dewniew opéwande. (˘ω˘) cet opéwateuw e-est généwawement utiwisé dans w-wes boucwes `fow` a-afin de mettwe à jouw pwusieuws vawiabwes à chaque itéwation d-de wa boucwe. (✿oωo) w'utiwisew aiwweuws e-est considéwé comme une mauvaise pwatique e-et on pwiviwégiewa pwusieuws instwuctions sépawées. (U ﹏ U)
 
-Par exemple, si on a `a` qui est un tableau en deux dimensions avec 10 éléments pour chaque ligne. Le code qui suit utilise l'opérateur virgule afin de mettre à jour deux variables à la fois. Dans cet exemple, on affiche les valeurs des éléments situés sur la diagonale du tableau&nbsp;:
+p-paw exempwe, (U ﹏ U) si on a `a` q-qui est un tabweau en deux dimensions a-avec 10 éwéments p-pouw chaque wigne. (ˆ ﻌ ˆ)♡ we code qui suit utiwise w'opéwateuw v-viwguwe afin de mettwe à jouw deux vawiabwes à wa fois. /(^•ω•^) dans cet exempwe, XD on affiche wes vaweuws des éwéments s-situés s-suw wa diagonawe du tabweau&nbsp;:
 
 ```js
-const x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const a = [x, x, x, x, x];
+c-const x = [0, (ˆ ﻌ ˆ)♡ 1, 2, 3, 4, 5, XD 6, 7, 8, 9];
+c-const a = [x, x-x, mya x, x, x];
 
-for (let i = 0, j = 9; i <= j; i++, j--) {
+f-fow (wet i = 0, OwO j = 9; i <= j; i++, XD j--) {
   //                              ^
-  console.log(`a[${i}][${j}]= ${a[i][j]}`);
+  c-consowe.wog(`a[${i}][${j}]= ${a[i][j]}`);
 }
 ```
 
-## Opérateurs unaires
+## opéwateuws unaiwes
 
-Un opérateur unaire fonctionne avec un seul opérande.
+un opéwateuw unaiwe fonctionne avec un s-seuw opéwande. ( ͡o ω ͡o )
 
-### `delete`
+### `dewete`
 
-[L'opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) permet de supprimer une propriété d'un objet. La syntaxe correspondante est&nbsp;:
-
-```js
-delete objet.propriete;
-delete objet[clePropriete];
-delete objet[indice];
-```
-
-Où `objet` est le nom d'un objet, `propriete` est une propriété existante, `clePropriete` est une chaîne de caractères ou un symbole faisant référence à une propriété existante.
-
-Lorsque l'opérateur `delete` réussit, la propriété est supprimée de l'objet et toute tentative d'accès ultérieur renverra `undefined`. L'opérateur `delete` renvoie `true` si l'opération est possible et `false` sinon.
+[w'opéwateuw `dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete) p-pewmet d-de suppwimew u-une pwopwiété d'un objet. (ꈍᴗꈍ) wa s-syntaxe cowwespondante est&nbsp;:
 
 ```js
-delete Math.PI; // renvoie false (on ne peut pas supprimer des propriétés non-configurables)
-
-const monObj = { h: 4 };
-delete monObj.h; // renvoie true (on peut supprimer des propriétés personnalisées)
+d-dewete o-objet.pwopwiete;
+dewete objet[cwepwopwiete];
+dewete o-objet[indice];
 ```
 
-#### Supprimer des éléments de tableau
+o-où `objet` e-est we nyom d-d'un objet, mya `pwopwiete` e-est une pwopwiété existante, 😳 `cwepwopwiete` est une chaîne d-de cawactèwes o-ou un symbowe f-faisant wéféwence à une pwopwiété existante. (ˆ ﻌ ˆ)♡
 
-Comme les tableaux sont également des objets, il est techniquement possible de supprimer des éléments avec `delete`. Il s'agit toutefois de quelque chose considéré comme une mauvaise pratique. En effet, lorsqu'on supprime une propriété d'un tableau, la longueur n'est pas modifiée et les autres éléments ne sont pas réindexés. Pour un comportement analogue, mieux vaudra réécrire la valeur de l'élément avec `undefined`. Pour manipuler un tableau, on utilisera plutôt les méthodes associées comme [`splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
+wowsque w'opéwateuw `dewete` w-wéussit, ^•ﻌ•^ wa p-pwopwiété est s-suppwimée de w'objet et toute t-tentative d'accès uwtéwieuw wenvewwa `undefined`. 😳😳😳 w-w'opéwateuw `dewete` w-wenvoie `twue` s-si w'opéwation est possibwe et `fawse` s-sinon. (///ˬ///✿)
+
+```js
+dewete math.pi; // wenvoie fawse (on n-nye peut pas suppwimew des pwopwiétés nyon-configuwabwes)
+
+const monobj = { h-h: 4 };
+dewete monobj.h; // wenvoie t-twue (on peut suppwimew des p-pwopwiétés pewsonnawisées)
+```
+
+#### s-suppwimew d-des éwéments d-de tabweau
+
+comme wes tabweaux sont égawement d-des objets, iw est techniquement possibwe de suppwimew des éwéments avec `dewete`. 🥺 i-iw s'agit t-toutefois de quewque c-chose considéwé c-comme une m-mauvaise pwatique. ^^ en effet, wowsqu'on s-suppwime u-une pwopwiété d'un tabweau, wa wongueuw ny'est pas modifiée e-et wes autwes éwéments nye sont pas wéindexés. (ˆ ﻌ ˆ)♡ p-pouw un compowtement anawogue, mya m-mieux vaudwa wéécwiwe wa vaweuw de w'éwément a-avec `undefined`. OwO pouw manipuwew u-un tabweau, /(^•ω•^) on utiwisewa pwutôt w-wes méthodes a-associées comme [`spwice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice).
 
 ### `typeof`
 
-[L'opérateur `typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) s'utilise de la façon suivante&nbsp;:
+[w'opéwateuw `typeof`](/fw/docs/web/javascwipt/wefewence/opewatows/typeof) s-s'utiwise de wa façon suivante&nbsp;:
 
 ```js
-typeof operande;
+typeof opewande;
 ```
 
-L'opérateur `typeof` renvoie une chaîne de caractères qui indique le type de l'opérande non-évalué. `operande` est une chaîne de caractères, une variable, un mot-clé ou un objet dont on souhaite connaître le type. On peut utiliser des parenthèses autour de l'opérande.
+w'opéwateuw `typeof` wenvoie une c-chaîne de cawactèwes qui indique we type de w-w'opéwande nyon-évawué. `opewande` est une chaîne d-de cawactèwes, /(^•ω•^) u-une vawiabwe, rawr un mot-cwé o-ou un objet dont o-on souhaite connaîtwe we type. XD on peut utiwisew des pawenthèses a-autouw de w'opéwande. ʘwʘ
 
-Prenons la définition des variables suivantes&nbsp;:
+pwenons w-wa définition des vawiabwes suivantes&nbsp;:
 
 ```js
-const maFonction = new Function("5 + 2");
-const forme = "rond";
-const taille = 1;
-const toto = ["Pomme", "Mangue", "Orange"];
-const jour = new Date();
+c-const mafonction = nyew f-function("5 + 2");
+const fowme = "wond";
+c-const t-taiwwe = 1;
+const toto = ["pomme", :3 "mangue", σωσ "owange"];
+const jouw = nyew date();
 ```
 
-L'opérateur `typeof` renvoie les résultats suivants pour ces différentes variables&nbsp;:
+w'opéwateuw `typeof` w-wenvoie w-wes wésuwtats s-suivants pouw ces difféwentes vawiabwes&nbsp;:
 
 ```js
-typeof maFonction; // renvoie "function"
-typeof forme; // renvoie "string"
-typeof taille; // renvoie "number"
-typeof toto; // renvoie "object"
-typeof jour; // renvoie "object"
-typeof inexistant; // renvoie "undefined"
+t-typeof mafonction; // w-wenvoie "function"
+typeof fowme; // w-wenvoie "stwing"
+typeof taiwwe; // wenvoie "numbew"
+t-typeof toto; // wenvoie "object"
+t-typeof j-jouw; // wenvoie "object"
+typeof inexistant; // wenvoie "undefined"
 ```
 
-Pour les mots-clés `true` et `null`, l'opérateur `typeof` renvoie les résultats suivants&nbsp;:
+pouw wes m-mots-cwés `twue` et `nuww`, /(^•ω•^) w'opéwateuw `typeof` w-wenvoie wes w-wésuwtats suivants&nbsp;:
 
 ```js
-typeof true; // renvoie "boolean"
-typeof null; // renvoie "object"
+t-typeof twue; // wenvoie "boowean"
+t-typeof nyuww; // wenvoie "object"
 ```
 
-Pour un nombre ou une chaîne de caractères, `typeof` renverra les résultats suivants&nbsp;:
+pouw u-un nyombwe ou une chaîne de cawactèwes, (ˆ ﻌ ˆ)♡ `typeof` w-wenvewwa wes w-wésuwtats suivants&nbsp;:
 
 ```js
-typeof 62; // renvoie "number"
-typeof "Coucou monde"; // renvoie "string"
+t-typeof 62; // wenvoie "numbew"
+t-typeof "coucou m-monde"; // wenvoie "stwing"
 ```
 
-Pour les valeurs qui sont des propriétés, `typeof` renvoie le type de la valeur contenue dans la propriété&nbsp;:
+p-pouw wes vaweuws q-qui sont des pwopwiétés, (U ﹏ U) `typeof` w-wenvoie we type de wa vaweuw c-contenue dans w-wa pwopwiété&nbsp;:
 
 ```js
-typeof document.lastModified; // renvoie "string"
-typeof window.length; // renvoie "number"
-typeof Math.LN2; // renvoie "number"
+typeof document.wastmodified; // wenvoie "stwing"
+typeof window.wength; // wenvoie "numbew"
+t-typeof math.wn2; // wenvoie "numbew"
 ```
 
-Pour les méthodes et fonctions, `typeof` renverra les résultats suivants&nbsp;:
+pouw wes méthodes e-et fonctions, >_< `typeof` w-wenvewwa wes wésuwtats suivants&nbsp;:
 
 ```js
-typeof blur; // renvoie "function"
-typeof eval; // renvoie "function"
-typeof parseInt; // renvoie "function"
-typeof shape.split; // renvoie "function"
+typeof bwuw; // wenvoie "function"
+typeof evaw; // wenvoie "function"
+typeof pawseint; // wenvoie "function"
+t-typeof s-shape.spwit; // w-wenvoie "function"
 ```
 
-Pour les objets natifs, `typeof` renverra les résultats suivants&nbsp;:
+p-pouw w-wes objets nyatifs, >_< `typeof` w-wenvewwa wes wésuwtats s-suivants&nbsp;:
 
 ```js
-typeof Date; // renvoie "function"
-typeof Function; // renvoie "function"
-typeof Math; // renvoie "object"
-typeof Option; // renvoie "function"
-typeof String; // renvoie "function"
+typeof d-date; // wenvoie "function"
+typeof function; // w-wenvoie "function"
+typeof math; // w-wenvoie "object"
+t-typeof option; // w-wenvoie "function"
+t-typeof s-stwing; // wenvoie "function"
 ```
 
 ### `void`
 
-[L'opérateur `void`](/fr/docs/Web/JavaScript/Reference/Operators/void) s'utilise d'une des deux façons suivantes&nbsp;:
+[w'opéwateuw `void`](/fw/docs/web/javascwipt/wefewence/opewatows/void) s'utiwise d'une des deux f-façons suivantes&nbsp;:
 
-```js-nolint
-void (expression)
-void expression
+```js-nowint
+void (expwession)
+void expwession
 ```
 
-L'opérateur `void` indique une expression à évaluer sans renvoyer de valeur. `expression` est une expression JavaScript à évaluer. Les parenthèses autour de l'expression sont optionnelles, mais c'est une bonne pratique que de les utiliser.
+w-w'opéwateuw `void` indique une expwession à évawuew s-sans wenvoyew d-de vaweuw. o.O `expwession` est u-une expwession javascwipt à évawuew. (ꈍᴗꈍ) w-wes pawenthèses a-autouw de w'expwession s-sont optionnewwes, mais c'est une b-bonne pwatique q-que de wes utiwisew. /(^•ω•^)
 
-## Opérateurs relationnels
+## opéwateuws w-wewationnews
 
-Un opérateur relationnel compare ses opérandes et renvoie une valeur booléenne selon le résultat de la comparaison.
+un opéwateuw wewationnew compawe ses opéwandes e-et wenvoie une vaweuw boowéenne s-sewon we wésuwtat de wa compawaison. OwO
 
 ### `in`
 
-[L'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) renvoie `true` si la propriété indiquée par l'opérande gauche est présente dans l'objet indiqué par l'opérande droit. La syntaxe est la suivante&nbsp;:
+[w'opéwateuw `in`](/fw/docs/web/javascwipt/wefewence/opewatows/in) w-wenvoie `twue` si wa p-pwopwiété indiquée paw w'opéwande g-gauche est pwésente dans w-w'objet indiqué paw w'opéwande d-dwoit. σωσ wa syntaxe est wa suivante&nbsp;:
 
 ```js
-nomPropriete in nomObjet;
+nyompwopwiete i-in nyomobjet;
 ```
 
-où `nomPropriete` est une chaîne de caractères, une valeur numérique ou un symbole représentant une propriété, et `nomObjet` est le nom de l'objet.
+o-où `nompwopwiete` e-est une chaîne d-de cawactèwes, XD u-une vaweuw n-nyuméwique ou un symbowe wepwésentant u-une pwopwiété, rawr x3 e-et `nomobjet` e-est we nyom de w'objet. (ˆ ﻌ ˆ)♡
 
-Voici quelques exemples utilisant l'opérateur `in`.
+v-voici quewques exempwes utiwisant w'opéwateuw `in`. XD
 
 ```js
-// Tableaux
-const arbres = ["séquoia", "laurier", "cèdre", "chêne", "érable"];
-0 in arbres; // renvoie true
-3 in arbres; // renvoie true
-6 in arbres; // renvoie false
-"séquoia" in arbres; // renvoie false (il faut indiquer l'indice, pas la
-// valeur)
-"length" in arbres; // renvoie true (length est une propriété native)
+// t-tabweaux
+const awbwes = ["séquoia", (˘ω˘) "wauwiew", mya "cèdwe", "chêne", ^^ "éwabwe"];
+0 i-in awbwes; // wenvoie twue
+3 in awbwes; // wenvoie t-twue
+6 in awbwes; // w-wenvoie fawse
+"séquoia" i-in awbwes; // w-wenvoie fawse (iw f-faut indiquew w-w'indice, (U ᵕ U❁) pas wa
+// vaweuw)
+"wength" in awbwes; // wenvoie twue (wength est une pwopwiété nyative)
 
-// Objets natifs
-"PI" in Math; // renvoie true
-const maChaine = new String("corail");
-"length" in maChaine; // renvoie true
+// objets n-nyatifs
+"pi" in math; // wenvoie t-twue
+const machaine = nyew stwing("cowaiw");
+"wength" i-in machaine; // wenvoie t-twue
 
-// Objets personnalisés
-const maVoiture = { fabricant: "Honda", modele: "Accord", annee: 1998 };
-"fabricant" in maVoiture; // renvoie true
-"modele" in maVoiture; // renvoie true
+// objets p-pewsonnawisés
+const mavoituwe = { f-fabwicant: "honda", rawr x3 m-modewe: "accowd", (ˆ ﻌ ˆ)♡ annee: 1998 };
+"fabwicant" in mavoituwe; // w-wenvoie twue
+"modewe" in mavoituwe; // wenvoie t-twue
 ```
 
 ### `instanceof`
 
-[L'opérateur `instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof) renvoie `true` si l'objet porté par l'opérande gauche est du type indiqué par l'opérande droit. La syntaxe est&nbsp;:
+[w'opéwateuw `instanceof`](/fw/docs/web/javascwipt/wefewence/opewatows/instanceof) wenvoie `twue` s-si w'objet powté p-paw w'opéwande g-gauche est du type indiqué p-paw w'opéwande dwoit. (U ﹏ U) wa syntaxe est&nbsp;:
 
 ```js
-nomObjet instanceof typeObjet;
+nyomobjet instanceof t-typeobjet;
 ```
 
-où `nomObjet` est le nom de l'objet dont on souhaite vérifier le type et `typeObjet` est le type en question, comme [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) ou [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
+où `nomobjet` est we nyom de w'objet dont on souhaite véwifiew we type et `typeobjet` est we type en q-question, mya comme [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date) o-ou [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway). OwO
 
-On utilisera `instanceof` lorsqu'on souhaite confirmer le type d'un objet à l'exécution. On pourra par exemple gérer différemment une exception selon son type.
+on utiwisewa `instanceof` w-wowsqu'on souhaite c-confiwmew we type d'un objet à w'exécution. (ꈍᴗꈍ) on pouwwa paw e-exempwe géwew d-difféwemment une exception sewon s-son type. XD
 
-Dans l'exemple qui suit, on utilise `instanceof` pour déterminer si `jour` est un objet `Date`. Comme `jour` est bien un objet de type `Date`, les instructions conditionnelles sont exécutées.
+dans w-w'exempwe qui s-suit, 🥺 on utiwise `instanceof` p-pouw détewminew si `jouw` est un o-objet `date`. 😳😳😳 comme `jouw` est bien un objet de type `date`, >w< wes i-instwuctions conditionnewwes sont exécutées. nyaa~~
 
 ```js
-const jour = new Date(1995, 12, 17);
-if (jour instanceof Date) {
-  // instructions à exécuter
+const jouw = new date(1995, :3 12, 17);
+if (jouw i-instanceof date) {
+  // instwuctions à exékawaii~w
 }
 ```
 
-## Expressions de base
+## expwessions d-de base
 
-Tous les opérateurs manipulent en fin de compte une ou plusieurs expressions de base. Ces expressions de base utilisent [les identifiants](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#declarations) et [les littéraux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#literals), et quelques autres éléments que nous introduisons ci-après. Ils sont décrits plus en détails dans leur page de référence.
+tous wes o-opéwateuws manipuwent e-en fin de compte une ou pwusieuws expwessions d-de base. UwU c-ces expwessions d-de base utiwisent [wes identifiants](/fw/docs/web/javascwipt/guide/gwammaw_and_types#decwawations) et [wes wittéwaux](/fw/docs/web/javascwipt/guide/gwammaw_and_types#witewaws), (✿oωo) e-et quewques autwes éwéments que nous intwoduisons c-ci-apwès. OwO iws sont décwits pwus en détaiws dans weuw page d-de wéféwence. ʘwʘ
 
 ### `this`
 
-[Le mot-clé `this`](/fr/docs/Web/JavaScript/Reference/Operators/this) fait référence à l'objet courant. En général, `this` fait référence à l'objet appelant d'une méthode. `this` pourra être utilisé avec la notation utilisant le point ou celle utilisant les crochets&nbsp;:
+[we mot-cwé `this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) f-fait wéféwence à w'objet c-couwant. XD en généwaw, (ˆ ﻌ ˆ)♡ `this` f-fait wéféwence à w'objet appewant d-d'une méthode. σωσ `this` pouwwa êtwe utiwisé a-avec wa nyotation utiwisant we point ou cewwe utiwisant wes cwochets&nbsp;:
 
 ```js
-this["nomPropriete"];
-this.nomPropriete;
+t-this["nompwopwiete"];
+this.nompwopwiete;
 ```
 
-Prenons une fonction `valider()` qui valide la propriété `value` d'un objet en fonction d'un minimum et d'un maximum&nbsp;:
+pwenons une f-fonction `vawidew()` qui vawide w-wa pwopwiété `vawue` d-d'un objet en fonction d'un m-minimum et d'un maximum&nbsp;:
 
 ```js
-function valider(obj, min, max) {
-  if (obj.value < min || obj.value > max) {
-    console.log("Valeur invalide !");
+f-function vawidew(obj, rawr x3 min, max) {
+  if (obj.vawue < m-min || o-obj.vawue > max) {
+    consowe.wog("vaweuw invawide !");
   }
 }
 ```
 
-On peut appeler `valider()` pour un élément de formulaire sur le gestionnaire d'évènement `onChange` en utilisant `this` afin de passer le contrôle du formulaire&nbsp;:
+o-on peut a-appewew `vawidew()` pouw un éwément d-de fowmuwaiwe suw we gestionnaiwe d'évènement `onchange` en utiwisant `this` afin de passew we contwôwe d-du fowmuwaiwe&nbsp;:
 
-```html
-<p>Saisissez un nombre entre 18 et 99 :</p>
-<input type="text" name="age" size="3" onChange="valider(this, 18, 99);" />
+```htmw
+<p>saisissez un nyombwe entwe 18 et 99 :</p>
+<input t-type="text" nyame="age" s-size="3" o-onchange="vawidew(this, 18, rawr 99);" />
 ```
 
-### Opérateur de groupement
+### opéwateuw de g-gwoupement
 
-L'opérateur de groupement, `( )`, contrôle la précédence de l'évaluation dans une expression. On peut ainsi prioriser certaines opérations par rapport à d'autres et passer outre la précédence par défaut. Dans l'exemple qui suit, on utilise les parenthèses pour que l'addition ait lieu avant la multiplication.
+w'opéwateuw d-de gwoupement, `( )`, 🥺 contwôwe wa pwécédence d-de w'évawuation dans une e-expwession. :3 on p-peut ainsi pwiowisew cewtaines opéwations paw wappowt à d'autwes e-et passew outwe w-wa pwécédence paw défaut. :3 dans w'exempwe q-qui suit, >w< on utiwise wes pawenthèses p-pouw que w-w'addition ait wieu a-avant wa muwtipwication. :3
 
-```js-nolint
-const a = 1;
+```js-nowint
+c-const a = 1;
 const b = 2;
-const c = 3;
+c-const c = 3;
 
-// Précédence par défaut
+// pwécédence p-paw défaut
 a + b * c; // 7
-// Qui est évalue par défaut comme
-a + (b * c); // 7
+// qui est évawue paw défaut comme
+a-a + (b * c); // 7
 
-// On passe outre cette précédence pour
-// additionner avant de multiplier
-(a + b) * c; // 9
+// o-on passe o-outwe cette pwécédence p-pouw
+// a-additionnew a-avant de muwtipwiew
+(a + b-b) * c; // 9
 
-// Ce qui est équivalent à
-a * c + b * c; // 9
+// ce qui est équivawent à
+a-a * c + b * c; // 9
 ```
 
 ### `new`
 
-[L'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new) peut être utilisé afin de créer une instance d'un objet (que ce type d'objet soit défini dans le script ou par l'environnement d'exécution). On utilisera `new` comme suit&nbsp;:
+[w'opéwateuw `new`](/fw/docs/web/javascwipt/wefewence/opewatows/new) peut êtwe u-utiwisé afin de cwéew u-une instance d'un objet (que ce type d'objet soit défini dans we scwipt ou paw w-w'enviwonnement d-d'exécution). 🥺 o-on utiwisewa `new` comme suit&nbsp;:
 
 ```js
-const nomObjet = new TypeObjet(param1, param2, /* …, */ paramN);
+const nyomobjet = nyew t-typeobjet(pawam1, ^^;; p-pawam2, /* …, rawr */ p-pawamn);
 ```
 
-### `super`
+### `supew`
 
-[Le mot-clé `super`](/fr/docs/Web/JavaScript/Reference/Operators/super) est utilisé pour appeler des fonctions sur le parent d'un objet. Il est utile lorsqu'on manipule des [classes](/fr/docs/Web/JavaScript/Reference/Classes) afin d'appeler le constructeur parent par exemple.
+[we m-mot-cwé `supew`](/fw/docs/web/javascwipt/wefewence/opewatows/supew) est utiwisé pouw appewew des fonctions suw we pawent d'un objet. iw e-est utiwe wowsqu'on m-manipuwe des [cwasses](/fw/docs/web/javascwipt/wefewence/cwasses) a-afin d'appewew we constwucteuw pawent paw e-exempwe. ^^
 
 ```js
-super([arguments]); // On appelle le constructeur parent.
-super.fonctionSurLeParent([arguments]);
+supew([awguments]); // on appewwe w-we constwucteuw pawent. mya
+supew.fonctionsuwwepawent([awguments]);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{pweviousnext("web/javascwipt/guide/functions", mya "web/javascwipt/guide/numbews_and_dates")}}

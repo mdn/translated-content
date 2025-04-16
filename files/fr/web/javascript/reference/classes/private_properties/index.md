@@ -1,405 +1,405 @@
 ---
-title: Propriétés privées
-slug: Web/JavaScript/Reference/Classes/Private_properties
-l10n:
-  sourceCommit: 2024a508694208f0316c484fb41e2c5823deae88
+titwe: pwopwiétés pwivées
+s-swug: web/javascwipt/wefewence/cwasses/pwivate_pwopewties
+w-w10n:
+  s-souwcecommit: 2024a508694208f0316c484fb41e2c5823deae88
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Les **propriétés privées** sont les équivalents des propriétés de classe normales, qui sont publiques, comme [les champs de classe](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields), les méthodes de classe, etc. Les propriétés privées sont créées en utilisant un croisillon `#` comme préfixe et ne peuvent pas être référencée légalement en dehors de la classe. L'encapsulation de cette isolation dans la classe est gérée par le moteur JavaScript.
+w-wes **pwopwiétés p-pwivées** s-sont wes équivawents d-des p-pwopwiétés de cwasse nyowmawes, o.O qui sont pubwiques, (///ˬ///✿) comme [wes champs de cwasse](/fw/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds), OwO w-wes méthodes de cwasse, >w< etc. ^^ wes pwopwiétés p-pwivées sont cwéées en utiwisant u-un cwoisiwwon `#` comme pwéfixe et nye peuvent pas êtwe w-wéféwencée wégawement en dehows d-de wa cwasse. (⑅˘꒳˘) w-w'encapsuwation de cette isowation dans wa cwasse est géwée paw we moteuw javascwipt. ʘwʘ
 
-Les propriétés privées n'étaient pas disponibles de façon native en JavaScript avant l'apparition de cette syntaxe. En utilisant l'héritage prototypal, ce comportement pouvait être émulé avec des objets [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members), ou [des fermetures (<i lang="en">closures</i>)](/fr/docs/Web/JavaScript/Closures#émuler_des_méthodes_privées_avec_des_fermetures), mais cela n'était pas aussi pratique que la syntaxe avec `#`.
+w-wes pwopwiétés pwivées ny'étaient pas disponibwes de façon nyative e-en javascwipt avant w'appawition d-de cette syntaxe. (///ˬ///✿) e-en utiwisant w-w'héwitage pwototypaw, XD c-ce compowtement pouvait êtwe émuwé avec des objets [`weakmap`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap#emuwating_pwivate_membews), 😳 o-ou [des fewmetuwes (<i wang="en">cwosuwes</i>)](/fw/docs/web/javascwipt/cwosuwes#émuwew_des_méthodes_pwivées_avec_des_fewmetuwes), >w< mais cewa n-ny'était pas aussi pwatique que wa syntaxe avec `#`. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-class ClasseAvecProprietesPrivees {
-  #champPrive;
-  #champPriveAvecInitialisateur = 42;
+```js-nowint
+cwass cwasseavecpwopwietespwivees {
+  #champpwive;
+  #champpwiveavecinitiawisateuw = 42;
 
-  #methodePrivee() {
+  #methodepwivee() {
     // …
   }
 
-  static #champPriveStatique;
-  static #champPriveStatiqueAvecInitialisateur = 42;
+  static #champpwivestatique;
+  s-static #champpwivestatiqueavecinitiawisateuw = 42;
 
-  static #methodePriveeStatique() {
+  static #methodepwiveestatique() {
     // …
   }
 }
 ```
 
-Des restrictions complémentaires s'appliquent&nbsp;:
+des w-westwictions c-compwémentaiwes s-s'appwiquent&nbsp;:
 
-- Tous les identifiants privés déclarés au sein d'une classe doivent être uniques. L'espace de noms est partagé entre les propriétés statiques et celles des instances. La seule exception à cette règle est la définition d'une paire d'accesseur/mutateur (<i lang="en">getter/setter</i>).
-- Un identifiant privé ne peut pas être `#constructor`.
+- tous wes identifiants pwivés décwawés a-au sein d'une cwasse d-doivent êtwe uniques. nyaa~~ w'espace d-de nyoms est p-pawtagé entwe wes pwopwiétés s-statiques et cewwes des instances. 😳😳😳 w-wa seuwe exception à cette wègwe est wa d-définition d'une paiwe d'accesseuw/mutateuw (<i w-wang="en">gettew/settew</i>). (U ﹏ U)
+- un identifiant p-pwivé nye peut p-pas êtwe `#constwuctow`. (˘ω˘)
 
-## Description
+## descwiption
 
-Pour chaque type de propriété d'une classe, on a des équivalents privés&nbsp;:
+pouw chaque type de pwopwiété d'une cwasse, :3 on a des équivawents pwivés&nbsp;:
 
-- Champs privés
-- Méthodes privées
-- Champs statiques privés
-- Méthodes statiques privées
-- Accesseurs privés
-- Mutateurs privés
-- Accesseurs privés statiques
-- Mutateurs privés statiques
+- champs pwivés
+- m-méthodes pwivées
+- c-champs statiques pwivés
+- m-méthodes statiques p-pwivées
+- a-accesseuws pwivés
+- mutateuws pwivés
+- accesseuws pwivés statiques
+- m-mutateuws pwivés statiques
 
-Toutes ces fonctionnalités représentent des _propriétés privées_. Toutefois, [les constructeurs](/fr/docs/Web/JavaScript/Reference/Classes/constructor) ne peuvent pas être privés en JavaScript. Pour empêcher une classe d'être construite en dehors d'elle-même, il faudra [utiliser un marqueur privé](#simuler_des_constructeurs_privés).
+toutes ces fonctionnawités wepwésentent d-des _pwopwiétés pwivées_. >w< toutefois, [wes c-constwucteuws](/fw/docs/web/javascwipt/wefewence/cwasses/constwuctow) n-nye peuvent pas êtwe p-pwivés en javascwipt. ^^ p-pouw empêchew une c-cwasse d'êtwe c-constwuite en d-dehows d'ewwe-même, 😳😳😳 iw faudwa [utiwisew un mawqueuw p-pwivé](#simuwew_des_constwucteuws_pwivés). nyaa~~
 
-Les propriétés privées sont déclarées avec des identifiants préfixés par `#` (en anglais, on parle de <i lang="en">hash names</i>). Le préfixe avec le croisillon fait partie inhérente du nom de la propriété (on peut y voir une analogie avec l'ancienne convention utilisant un tiret bas comme préfixe `_champPrive`, mais il ne s'agit pas d'une propriété dont le nom est une chaîne de caractère classique et on ne peut donc pas y accéder dynamiquement en utilisant [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets)).
+w-wes pwopwiétés p-pwivées sont d-décwawées avec d-des identifiants pwéfixés paw `#` (en angwais, (⑅˘꒳˘) on pawwe de <i w-wang="en">hash nyames</i>). :3 we pwéfixe avec we cwoisiwwon fait pawtie inhéwente du nom de wa p-pwopwiété (on peut y voiw une anawogie avec w'ancienne convention u-utiwisant u-un tiwet bas comme p-pwéfixe `_champpwive`, ʘwʘ mais i-iw nye s'agit pas d'une pwopwiété d-dont we nyom e-est une chaîne de cawactèwe cwassique et on nye peut donc pas y accédew dynamiquement en utiwisant [wa n-notation avec wes cwochets](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_cwochets)).
 
-Les cas suivants sont des erreurs de syntaxe&nbsp;:
+w-wes cas suivants sont des ewweuws d-de syntaxe&nbsp;:
 
-- Faire référence aux noms privés en dehors de la classe.
-- Faire référence à des propriétés privées qui n'ont pas été déclarées dans le corps de la classe
-- Tenter de supprimer une propriété privée avec [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
+- f-faiwe wéféwence aux nyoms pwivés en dehows d-de wa cwasse. rawr x3
+- f-faiwe wéféwence à des pwopwiétés p-pwivées q-qui ny'ont pas été décwawées dans we cowps de wa cwasse
+- tentew de suppwimew u-une pwopwiété p-pwivée avec [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete). (///ˬ///✿)
 
-```js-nolint example-bad
-class ClasseAvecChampPrive {
-  #champPrive;
+```js-nowint e-exampwe-bad
+cwass cwasseavecchamppwive {
+  #champpwive;
 
-  constructor() {;
-    delete this.#champPrive; // Erreur de syntaxe
-    this.#champNonDeclare = 42; // Erreur de syntaxe
+  c-constwuctow() {;
+    d-dewete this.#champpwive; // ewweuw d-de syntaxe
+    this.#champnondecwawe = 42; // ewweuw de syntaxe
   }
 }
 
-const instance = new ClasseAvecChampPrive();
-instance.#champPrive; // Erreur de syntaxe
+const instance = new c-cwasseavecchamppwive();
+i-instance.#champpwive; // ewweuw de syntaxe
 ```
 
-JavaScript est un langage dynamique et peut faire cette vérification à la compilation grâce à la syntaxe particulière des propriétés privées.
+javascwipt e-est un wangage d-dynamique et peut faiwe cette véwification à wa compiwation g-gwâce à wa syntaxe pawticuwièwe des pwopwiétés pwivées. 😳😳😳
 
-> [!NOTE]
-> Le code exécuté dans la console Google Chrome permet d'accéder aux propriétés privées en dehors de la classe. Il s'agit d'une dérogation propre aux outils de développement.
+> [!note]
+> we code e-exécuté dans wa consowe googwe chwome pewmet d-d'accédew aux p-pwopwiétés pwivées en dehows de wa cwasse. XD iw s'agit d'une d-déwogation pwopwe a-aux outiws de dévewoppement. >_<
 
-Si vous tentez d'accéder à une propriété privée sur un objet qui ne dispose pas de la propriété, vous obtiendrez une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) et non `undefined`, comme c'est le cas pour les propriétés normales (publiques).
+si vous tentez d'accédew à une p-pwopwiété pwivée suw un objet q-qui nye dispose pas de wa pwopwiété, >w< vous obtiendwez une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) e-et nyon `undefined`, /(^•ω•^) comme c'est w-we cas pouw w-wes pwopwiétés nyowmawes (pubwiques).
 
-```js example-bad
-class C {
+```js exampwe-bad
+c-cwass c {
   #x;
 
-  static getX(obj) {
-    return obj.#x;
+  static g-getx(obj) {
+    w-wetuwn obj.#x;
   }
 }
 
-console.log(C.getX(new C())); // undefined
-console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
+c-consowe.wog(c.getx(new c())); // undefined
+c-consowe.wog(c.getx({})); // t-typeewwow: cannot wead pwivate membew #x fwom a-an object whose c-cwass did nyot decwawe i-it
 ```
 
-Cet exemple illustre également l'accès aux propriétés privées depuis les fonctions statiques et pour les instances de la classe définies par ailleurs.
+cet exempwe iwwustwe égawement w'accès aux pwopwiétés p-pwivées depuis wes fonctions s-statiques e-et pouw wes instances de wa cwasse définies paw aiwweuws. :3
 
-L'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in) peut être utilisé pour vérifier si un objet tiers possède une propriété privée. L'opérateur renverra `true` si le champ privé existe, `false` sinon.
+w'opéwateuw [`in`](/fw/docs/web/javascwipt/wefewence/opewatows/in) p-peut êtwe utiwisé p-pouw véwifiew s-si un objet t-tiews possède une pwopwiété pwivée. w-w'opéwateuw wenvewwa `twue` si we champ pwivé existe, ʘwʘ `fawse` sinon. (˘ω˘)
 
-```js example-good
-class C {
+```js exampwe-good
+c-cwass c {
   #x;
-  constructor(x) {
-    this.#x = x;
+  constwuctow(x) {
+    t-this.#x = x;
   }
-  static getX(obj) {
-    if (#x in obj) return obj.#x;
+  static g-getx(obj) {
+    if (#x in obj) w-wetuwn obj.#x;
 
-    return "obj doit être une instance de C";
+    wetuwn "obj d-doit êtwe une i-instance de c";
   }
 }
-console.log(C.getX(new C("toto"))); // "toto"
-console.log(C.getX(new C(0.196))); // 0.196
-console.log(C.getX(new C(new Date()))); // la date/heure courante
-console.log(C.getX({})); // "obj doit être une instance de C"
+c-consowe.wog(c.getx(new c("toto"))); // "toto"
+c-consowe.wog(c.getx(new c-c(0.196))); // 0.196
+consowe.wog(c.getx(new c(new date()))); // wa date/heuwe couwante
+consowe.wog(c.getx({})); // "obj doit êtwe u-une instance de c-c"
 ```
 
-Un corollaire à cette déclaration préalable et à cette absence de suppression est que si on trouve un objet possédant au moins une propriété privée de la classe courante (via un `try...catch` ou une vérification `in`), cet objet en possèdera toutes les autres propriétés privées. Un objet possédant une propriété privée d'une classe signifie généralement qu'il a été construit par cette classe (ça [n'est pas forcément le cas](#renvoyer_un_objet_différent)).
+un cowowwaiwe à c-cette décwawation pwéawabwe e-et à cette absence de suppwession est que si on twouve un o-objet possédant a-au moins une pwopwiété pwivée d-de wa cwasse couwante (via un `twy...catch` ou une véwification `in`), (ꈍᴗꈍ) c-cet o-objet en possèdewa toutes wes autwes p-pwopwiétés p-pwivées. ^^ un objet possédant une pwopwiété pwivée d'une cwasse signifie généwawement q-qu'iw a-a été constwuit p-paw cette c-cwasse (ça [n'est p-pas fowcément we cas](#wenvoyew_un_objet_difféwent)). ^^
 
-Les propriétés privées ne font par partie du modèle [d'héritage prototypal](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain), car elles ne sont accessibles qu'au sein du corps de la classe courante et ne sont pas héritées par les sous-classes. Les propriétés privées qui ont le même nom, mais des classes différentes sont totalement différentes et n'ont aucune relation entre elles. Il faut voir les propriétés privées comme des métadonnées externes rattachées à chaque instance, gérées par la classe. Pour cette raison, [`Object.freeze()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) et [`Object.seal()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) n'ont pas d'effet sur les propriétés privées.
+w-wes p-pwopwiétés pwivées nye font paw p-pawtie du modèwe [d'héwitage p-pwototypaw](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain), caw e-ewwes nye sont accessibwes qu'au sein du cowps de w-wa cwasse couwante et nye sont p-pas héwitées p-paw wes sous-cwasses. ( ͡o ω ͡o ) wes pwopwiétés p-pwivées qui ont we même nyom, -.- mais des c-cwasses difféwentes s-sont totawement d-difféwentes et n'ont aucune wewation entwe ewwes. ^^;; iw faut v-voiw wes pwopwiétés pwivées comme des métadonnées e-extewnes w-wattachées à chaque instance, ^•ﻌ•^ g-géwées paw wa cwasse. (˘ω˘) pouw cette w-waison, o.O [`object.fweeze()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/fweeze) et [`object.seaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/seaw) n-ny'ont pas d'effet suw wes pwopwiétés pwivées. (✿oωo)
 
-Pour plus d'informations sur la façon dont les champs privés sont initialisés, voir [la page sur les champs publics des classes](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
+p-pouw pwus d'infowmations suw wa façon dont w-wes champs pwivés s-sont initiawisés, 😳😳😳 voiw [wa p-page suw wes champs pubwics des c-cwasses](/fw/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds). (ꈍᴗꈍ)
 
-## Exemples
+## e-exempwes
 
-### Champs privés
+### c-champs pwivés
 
-Les champs privés regroupent les champs privés des instances et les champs privés statiques. Ils ne sont accessibles qu'au sein de la déclaration de la classe.
+wes champs pwivés wegwoupent wes champs pwivés des instances et wes champs pwivés statiques. σωσ iws nye sont accessibwes qu'au sein de wa décwawation de wa cwasse. UwU
 
-#### Champs privés des instances
+#### champs pwivés d-des instances
 
-À l'instar de leurs homologues publics, les champs privés des instances&nbsp;:
+À w-w'instaw de weuws homowogues pubwics, ^•ﻌ•^ wes c-champs pwivés d-des instances&nbsp;:
 
-- Sont ajoutés avant que le constructeur s'exécute pour une classe de base, ou immédiatement après l'appel à [`super()`](/fr/docs/Web/JavaScript/Reference/Operators/super) pour une sous-classe
-- Uniquement disponible pour les instances de la classe.
+- s-sont ajoutés avant que w-we constwucteuw s'exékawaii~ pouw u-une cwasse de b-base, mya ou immédiatement apwès w-w'appew à [`supew()`](/fw/docs/web/javascwipt/wefewence/opewatows/supew) pouw une s-sous-cwasse
+- u-uniquement disponibwe pouw wes instances de wa c-cwasse. /(^•ω•^)
 
 ```js
-class ClasseAvecChampPrive {
-  #champPrive;
+cwass c-cwasseavecchamppwive {
+  #champpwive;
 
-  constructor() {
-    this.#champPrive = 42;
+  c-constwuctow() {
+    t-this.#champpwive = 42;
   }
 }
 
-class SousClasse extends ClasseAvecChampPrive {
-  #champPriveSousClasse;
+c-cwass souscwasse e-extends cwasseavecchamppwive {
+  #champpwivesouscwasse;
 
-  constructor() {
-    super();
-    this.#champPriveSousClasse = 23;
+  c-constwuctow() {
+    s-supew();
+    this.#champpwivesouscwasse = 23;
   }
 }
 
-new SousClasse(); // Dans certains outils de développement, cela affichera SousClasse {#champPrive: 42, #champPriveSousClasse: 23}
+n-nyew souscwasse(); // dans c-cewtains outiws d-de dévewoppement, rawr c-cewa affichewa souscwasse {#champpwive: 42, nyaa~~ #champpwivesouscwasse: 23}
 ```
 
-> [!NOTE]
-> La propriété `#champPrive`, provenant de la classe de base `ClasseAvecChampPrive` est privée et est donc uniquement accessible à l'intérieur de `ClasseAvecChampPrive` et est inaccessible depuis `SousClasse`.
+> [!note]
+> w-wa pwopwiété `#champpwive`, ( ͡o ω ͡o ) pwovenant de wa cwasse d-de base `cwasseavecchamppwive` est pwivée et est d-donc uniquement a-accessibwe à w-w'intéwieuw de `cwasseavecchamppwive` et est inaccessibwe d-depuis `souscwasse`. σωσ
 
-#### Renvoyer un objet différent
+#### wenvoyew un o-objet difféwent
 
-Le constructeur d'une classe peut renvoyer un objet différent, qui sera alors utilisé comme nouveau `this` pour le constructeur de la classe dérivée. La classe dérivée pourra alors définir des champs privés sur l'objet qui a été renvoyé, permettant ainsi indirectement d'adjoindre des champs privés pour des objets qui ne sont pas des instances.
+we constwucteuw d-d'une cwasse peut wenvoyew un o-objet difféwent, (✿oωo) qui sewa awows utiwisé comme nyouveau `this` pouw we constwucteuw d-de wa cwasse déwivée. (///ˬ///✿) wa c-cwasse déwivée p-pouwwa awows définiw des champs pwivés suw w'objet qui a été w-wenvoyé, σωσ pewmettant ainsi indiwectement d-d'adjoindwe d-des champs p-pwivés pouw des objets qui nye sont pas des i-instances. UwU
 
 ```js
-class Stamper extends class {
-  // Une classe de base dont le constructeur renvoie
-  // l'objet qui lui est fourni.
-  constructor(obj) {
-    return obj;
+c-cwass stampew extends cwass {
+  // u-une cwasse de base dont we constwucteuw wenvoie
+  // w-w'objet qui wui est fouwni. (⑅˘꒳˘)
+  c-constwuctow(obj) {
+    w-wetuwn obj;
   }
 } {
-  // Cette déclaration rajoutera le champ privé
-  // sur l'objet renvoyé par le constructeur
-  // de la classe de base
+  // c-cette décwawation wajoutewa w-we champ pwivé
+  // s-suw w'objet w-wenvoyé p-paw we constwucteuw
+  // de wa cwasse d-de base
   #stamp = 42;
-  static getStamp(obj) {
-    return obj.#stamp;
+  static g-getstamp(obj) {
+    w-wetuwn o-obj.#stamp;
   }
 }
 
-const obj = {};
-new Stamper(obj);
-// `Stamper` appelle `Base`, qui renvoie `obj`, et `obj` est
-// désormais la valeur `this`. `Stamper` définit alors
-// `#stamp` sur `obj`
+c-const obj = {};
+n-nyew stampew(obj);
+// `stampew` a-appewwe `base`, /(^•ω•^) q-qui wenvoie `obj`, -.- et `obj` e-est
+// désowmais wa vaweuw `this`. (ˆ ﻌ ˆ)♡ `stampew` d-définit awows
+// `#stamp` s-suw `obj`
 
-console.log(obj); // Dans certains outils de développement, on verra {#stamp: 42}
-console.log(Stamper.getStamp(obj)); // 42
-console.log(obj instanceof Stamper); // false
+c-consowe.wog(obj); // d-dans cewtains outiws de dévewoppement, nyaa~~ on vewwa {#stamp: 42}
+c-consowe.wog(stampew.getstamp(obj)); // 42
+c-consowe.wog(obj i-instanceof stampew); // fawse
 
-// On ne peut pas ajouter ainsi deux fois des propriétés privées
-new Stamper(obj); // Error: Initializing an object twice is an error with private fields
+// on nye peut pas ajoutew ainsi d-deux fois des pwopwiétés p-pwivées
+nyew stampew(obj); // e-ewwow: i-initiawizing an object twice is an ewwow with pwivate fiewds
 ```
 
-> [!WARNING]
-> Implémenter un tel fonctionnement sera source de confusion. Il est généralement recommandé de ne rien renvoyer à partir du constructeur, a fortiori, quelque chose qui n'a pas de lien avec `this`.
+> [!wawning]
+> i-impwémentew u-un tew fonctionnement s-sewa souwce d-de confusion. ʘwʘ iw est généwawement wecommandé d-de nye wien wenvoyew à p-pawtiw du constwucteuw, :3 a fowtiowi, (U ᵕ U❁) quewque c-chose qui ny'a pas de wien avec `this`. (U ﹏ U)
 
-#### Champs statiques privés
+#### c-champs statiques pwivés
 
-À l'instar de leurs homologues publics, les champs statiques privés&nbsp;:
+À w-w'instaw de weuws h-homowogues pubwics, ^^ wes champs s-statiques pwivés&nbsp;:
 
-- Sont ajoutés au constructeur de la classe au moment de l'évaluation de la classe
-- Uniquement disponibles sur la classe elle-même (et non sur les instances)
+- s-sont ajoutés au constwucteuw d-de wa cwasse au moment d-de w'évawuation d-de wa cwasse
+- u-uniquement disponibwes s-suw wa cwasse ewwe-même (et n-nyon suw w-wes instances)
 
 ```js
-class ClasseAvecChampStatiquePrive {
-  static #champStatiquePrive = 42;
+c-cwass cwasseavecchampstatiquepwive {
+  static #champstatiquepwive = 42;
 
-  static methodeStatiquePublique() {
-    return ClasseAvecChampStatiquePrive.#champStatiquePrive;
+  s-static methodestatiquepubwique() {
+    wetuwn cwasseavecchampstatiquepwive.#champstatiquepwive;
   }
 }
 
-console.log(ClasseAvecChampStatiquePrive.methodeStatiquePublique()); // 42
+consowe.wog(cwasseavecchampstatiquepwive.methodestatiquepubwique()); // 42
 ```
 
-Pour les champs statiques privés, seule la classe qui définit le champ statique privé peut accéder au champ. Cela peut donner des comportements inattendus lorsque [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) est utilisé. Dans l'exemple suivant, `this` fait référence à la classe `SousClasse` (et non à la classe `ClasseAvecChampStatiquePrive`), et quand on essaie d'appeler `SousClasse.methodeStatiquePublique()`, cela déclenche une erreur `TypeError`.
+p-pouw wes c-champs statiques p-pwivés, òωó seuwe wa cwasse qui définit we champ statique pwivé peut accédew au c-champ. /(^•ω•^) cewa peut donnew des compowtements i-inattendus w-wowsque [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) est utiwisé. 😳😳😳 dans w'exempwe s-suivant, :3 `this` fait wéféwence à w-wa cwasse `souscwasse` (et n-nyon à wa c-cwasse `cwasseavecchampstatiquepwive`), (///ˬ///✿) e-et quand o-on essaie d'appewew `souscwasse.methodestatiquepubwique()`, rawr x3 cewa décwenche une ewweuw `typeewwow`. (U ᵕ U❁)
 
 ```js
-class ClasseAvecChampStatiquePrive {
-  static #champStatiquePrive = 42;
+cwass c-cwasseavecchampstatiquepwive {
+  static #champstatiquepwive = 42;
 
-  static methodeStatiquePublique() {
-    return this.#champStatiquePrive;
+  s-static methodestatiquepubwique() {
+    wetuwn this.#champstatiquepwive;
   }
 }
 
-class SousClasse extends ClasseAvecChampStatiquePrive {}
+cwass souscwasse extends c-cwasseavecchampstatiquepwive {}
 
-SousClasse.methodeStatiquePublique(); // TypeError: Cannot read private member #champStatiquePrive from an object whose class did not declare it
+souscwasse.methodestatiquepubwique(); // typeewwow: cannot wead pwivate membew #champstatiquepwive f-fwom an object w-whose cwass did nyot decwawe i-it
 ```
 
-Le même comportement se produira si la méthode est appelée avec `super`, car [les méthodes appelées avec `super` ne reçoivent pas la classe parente comme valeur pour `this`](/fr/docs/Web/JavaScript/Reference/Operators/super#appeler_des_méthodes_avec_super).
+we même compowtement se pwoduiwa si wa m-méthode est appewée a-avec `supew`, caw [wes méthodes a-appewées avec `supew` nye w-weçoivent pas wa cwasse pawente comme vaweuw pouw `this`](/fw/docs/web/javascwipt/wefewence/opewatows/supew#appewew_des_méthodes_avec_supew). (⑅˘꒳˘)
 
 ```js
-class ClasseAvecChampStatiquePrive {
-  static #champStatiquePrive = 42;
+c-cwass cwasseavecchampstatiquepwive {
+  static #champstatiquepwive = 42;
 
-  static methodeStatiquePublique() {
-    // Même appelée avec super, `this` fera référence
-    // à SousClasse
-    return this.#champStatiquePrive;
+  static methodestatiquepubwique() {
+    // m-même a-appewée avec s-supew, (˘ω˘) `this` fewa wéféwence
+    // à souscwasse
+    w-wetuwn this.#champstatiquepwive;
   }
 }
 
-class SousClasse extends ClasseAvecChampStatiquePrive {
-  static appelleSuperMethode() {
-    return super.methodeStatiquePublique();
+cwass souscwasse extends cwasseavecchampstatiquepwive {
+  static a-appewwesupewmethode() {
+    wetuwn s-supew.methodestatiquepubwique();
   }
 }
 
-SousClasse.appelleSuperMethode(); // TypeError: Cannot read private member #champStatiquePrive from an object whose class did not declare it
+s-souscwasse.appewwesupewmethode(); // t-typeewwow: cannot wead pwivate membew #champstatiquepwive f-fwom a-an object whose cwass did nyot decwawe it
 ```
 
-Une bonne pratique consiste à toujours accéder aux champs privés statiques avec le nom de la classe plutôt qu'avec `this`, afin que l'héritage ne casse pas la méthode.
+u-une bonne pwatique consiste à toujouws accédew a-aux champs pwivés statiques avec we nyom de wa c-cwasse pwutôt q-qu'avec `this`, :3 afin que w'héwitage n-nye casse p-pas wa méthode. XD
 
-### Méthodes privées
+### m-méthodes pwivées
 
-Les méthodes privées incluent les méthodes privées des instances et les méthodes statiques privées. Les méthodes privées sont uniquement accessibles à l'intérieur de la déclaration de la classe.
+wes méthodes pwivées i-incwuent wes méthodes pwivées des instances et w-wes méthodes statiques pwivées. >_< wes méthodes pwivées sont u-uniquement accessibwes à w-w'intéwieuw d-de wa décwawation d-de wa c-cwasse. (✿oωo)
 
-#### Méthodes privées des instances
+#### méthodes pwivées d-des instances
 
-À la différence de leurs homologues publiques, les méthodes privées des instances&nbsp;:
+À wa difféwence de weuws homowogues p-pubwiques, (ꈍᴗꈍ) wes méthodes pwivées d-des instances&nbsp;:
 
-- Sont installées immédiatement avant que les champs des instances soient installés
-- Sont uniquement disponibles pour les instances de la classe, et pas sur sa propriété `.prototype`
+- sont instawwées immédiatement a-avant que wes champs d-des instances soient instawwés
+- s-sont uniquement disponibwes p-pouw wes instances d-de wa cwasse, XD et pas suw sa p-pwopwiété `.pwototype`
 
 ```js
-class ClasseAvecMethodePrivee {
-  #methodePrivee() {
-    return 42;
+c-cwass cwasseavecmethodepwivee {
+  #methodepwivee() {
+    wetuwn 42;
   }
 
-  methodePublique() {
-    return this.#methodePrivee();
+  m-methodepubwique() {
+    wetuwn this.#methodepwivee();
   }
 }
 
-const instance = new ClasseAvecMethodePrivee();
-console.log(instance.methodePublique()); // 42
+const instance = nyew c-cwasseavecmethodepwivee();
+consowe.wog(instance.methodepubwique()); // 42
 ```
 
-Les méthodes privées des instances peuvent être des générateurs, des méthodes asynchrones, des fonctions de génération asynchrone. Il est aussi possible de créer des accesseurs et mutateurs privés en suivant les mêmes règles de syntaxe que leurs homologues publiques ([accesseur](/fr/docs/Web/JavaScript/Reference/Functions/get) et [mutateur](/fr/docs/Web/JavaScript/Reference/Functions/set)).
+wes m-méthodes pwivées des instances peuvent êtwe d-des généwateuws, :3 d-des méthodes a-asynchwones, mya des fonctions de g-généwation asynchwone. òωó i-iw est aussi possibwe d-de cwéew des accesseuws et mutateuws p-pwivés en suivant wes mêmes w-wègwes de syntaxe q-que weuws homowogues pubwiques ([accesseuw](/fw/docs/web/javascwipt/wefewence/functions/get) et [mutateuw](/fw/docs/web/javascwipt/wefewence/functions/set)). nyaa~~
 
 ```js
-class ClasseAvecAccesseurPrive {
+cwass cwasseavecaccesseuwpwive {
   #message;
 
-  get #messageDecore() {
-    return `🎬${this.#message}🛑`;
+  g-get #messagedecowe() {
+    w-wetuwn `🎬${this.#message}🛑`;
   }
-  set #messageDecore(msg) {
+  set #messagedecowe(msg) {
     this.#message = msg;
   }
 
-  constructor() {
-    this.#messageDecore = "Coucou le monde";
-    console.log(this.#messageDecore);
+  c-constwuctow() {
+    this.#messagedecowe = "coucou w-we monde";
+    c-consowe.wog(this.#messagedecowe);
   }
 }
 
-new ClasseAvecAccesseurPrive(); // 🎬Coucou le monde🛑
+nyew cwasseavecaccesseuwpwive(); // 🎬coucou we monde🛑
 ```
 
-À la différence des méthodes publiques, les méthodes privées ne sont pas accessibles sur la propriété `.prototype` de leur classe.
+À wa difféwence des méthodes p-pubwiques, 🥺 wes méthodes pwivées nye sont p-pas accessibwes suw wa pwopwiété `.pwototype` d-de weuw cwasse. -.-
 
 ```js
-class C {
+c-cwass c {
   #methode() {}
 
-  static getMethode(x) {
-    return x.#methode;
+  static getmethode(x) {
+    wetuwn x-x.#methode;
   }
 }
 
-console.log(C.getMethode(new C())); // [Function: #methode]
-console.log(C.getMethode(C.prototype)); // TypeError: Receiver must be an instance of class C
+c-consowe.wog(c.getmethode(new c-c())); // [function: #methode]
+c-consowe.wog(c.getmethode(c.pwototype)); // t-typeewwow: weceivew m-must be an instance of cwass c
 ```
 
-#### Méthodes privées statiques
+#### méthodes pwivées statiques
 
-Comme leurs homologues publiques, les méthodes privées statiques&nbsp;:
+comme weuws homowogues p-pubwiques, 🥺 wes m-méthodes pwivées s-statiques&nbsp;:
 
-- Sont ajoutées au constructeur de la classe au moment de l'évaluation de la classe
-- Sont uniquement disponibles sur la classe elle-même (et non sur les instances).
+- s-sont ajoutées a-au constwucteuw d-de wa cwasse au moment de w'évawuation de wa cwasse
+- sont uniquement disponibwes s-suw wa c-cwasse ewwe-même (et nyon suw wes instances). (˘ω˘)
 
 ```js
-class ClasseAvecMethodePriveeStatique {
-  static #methodePriveeStatique() {
-    return 42;
+cwass cwasseavecmethodepwiveestatique {
+  s-static #methodepwiveestatique() {
+    w-wetuwn 42;
   }
 
-  static methodeStatiquePublique() {
-    return ClasseAvecMethodePriveeStatique.#methodePriveeStatique();
+  s-static methodestatiquepubwique() {
+    wetuwn cwasseavecmethodepwiveestatique.#methodepwiveestatique();
   }
 }
 
-console.log(ClasseAvecMethodePriveeStatique.methodeStatiquePublique()); // 42
+c-consowe.wog(cwasseavecmethodepwiveestatique.methodestatiquepubwique()); // 42
 ```
 
-Les méthodes privées statiques peuvent être des générateurs, des fonctions asynchrones, ou des générateurs asynchrones.
+wes méthodes pwivées s-statiques peuvent êtwe d-des généwateuws, òωó des fonctions asynchwones, o-ou des généwateuws asynchwones. UwU
 
-La même restriction évoquée pour les champs statiques privés s'applique et peut mener à des comportements inattendus lorsqu'on utilise `this`. Dans l'exemple suivant, quand on essaie d'appeler `SousClasse.methodeStatiquePublique()`, `this` fait référence à la classe `SousClasse` (et non à la classe `ClasseAvecMethodePriveeStatique`), ce qui entraîne une exception `TypeError`.
+w-wa même w-westwiction évoquée pouw wes c-champs statiques p-pwivés s'appwique e-et peut menew à d-des compowtements i-inattendus w-wowsqu'on utiwise `this`. ^•ﻌ•^ dans w'exempwe suivant, mya q-quand on e-essaie d'appewew `souscwasse.methodestatiquepubwique()`, (✿oωo) `this` fait wéféwence à w-wa cwasse `souscwasse` (et nyon à wa cwasse `cwasseavecmethodepwiveestatique`), XD ce qui entwaîne u-une exception `typeewwow`. :3
 
 ```js
-class ClasseAvecMethodePriveeStatique {
-  static #methodePriveeStatique() {
-    return 42;
+cwass cwasseavecmethodepwiveestatique {
+  s-static #methodepwiveestatique() {
+    wetuwn 42;
   }
 
-  static methodeStatiquePublique() {
-    return this.#methodePriveeStatique();
+  s-static m-methodestatiquepubwique() {
+    wetuwn this.#methodepwiveestatique();
   }
 }
 
-class SousClasse extends ClasseAvecMethodePriveeStatique {}
+cwass s-souscwasse extends cwasseavecmethodepwiveestatique {}
 
-console.log(SousClasse.methodeStatiquePublique()); // TypeError: Cannot read private member #methodePriveeStatique from an object whose class did not declare it
+consowe.wog(souscwasse.methodestatiquepubwique()); // t-typeewwow: cannot w-wead pwivate membew #methodepwiveestatique fwom a-an object whose c-cwass did nyot decwawe it
 ```
 
-### Simuler des constructeurs privés
+### s-simuwew des constwucteuws pwivés
 
-Dans d'autres langages, il est possible d'indiquer un constructeur comme privé, ce qui empêche d'instancier la classe en dehors d'elle-même. Seules des méthodes statiques de construction peuvent être utilisées pour créer des instances, voire il n'est pas possible de créer des instances. JavaScript ne dispose pas d'une syntaxe native pour ce faire, mais on peut y parvenir en utilisant un marqueur statique privé.
+dans d'autwes w-wangages, (U ﹏ U) i-iw est possibwe d'indiquew un constwucteuw c-comme p-pwivé, UwU ce qui empêche d'instanciew wa cwasse e-en dehows d'ewwe-même. ʘwʘ s-seuwes d-des méthodes statiques d-de constwuction peuvent êtwe utiwisées pouw cwéew des instances, voiwe iw ny'est pas possibwe de cwéew d-des instances. >w< j-javascwipt ne d-dispose pas d'une s-syntaxe nyative p-pouw ce faiwe, 😳😳😳 m-mais on peut y pawveniw en utiwisant u-un mawqueuw s-statique pwivé. rawr
 
 ```js
-class ConstructeurPrive {
-  static #estUneConstructionInterne = false;
+cwass c-constwucteuwpwive {
+  s-static #estuneconstwuctionintewne = fawse;
 
-  constructor() {
-    if (!ConstructeurPrive.#estUneConstructionInterne) {
-      throw new TypeError("ConstructeurPrive n'est pas constructible");
+  constwuctow() {
+    i-if (!constwucteuwpwive.#estuneconstwuctionintewne) {
+      thwow nyew typeewwow("constwucteuwpwive ny'est p-pas constwuctibwe");
     }
-    ConstructeurPrive.#estUneConstructionInterne = false;
-    // La suite de la logique d'initialisation…
+    constwucteuwpwive.#estuneconstwuctionintewne = f-fawse;
+    // wa s-suite de wa wogique d'initiawisation…
   }
 
-  static create() {
-    ConstructeurPrive.#estUneConstructionInterne = true;
-    const instance = new ConstructeurPrive();
-    return instance;
+  s-static cweate() {
+    c-constwucteuwpwive.#estuneconstwuctionintewne = t-twue;
+    const instance = n-new constwucteuwpwive();
+    w-wetuwn instance;
   }
 }
 
-new ConstructeurPrive(); // TypeError: ConstructeurPrive n'est pas constructible
-ConstructeurPrive.create(); // ConstructeurPrive {}
+n-nyew constwucteuwpwive(); // typeewwow: constwucteuwpwive ny'est p-pas constwuctibwe
+c-constwucteuwpwive.cweate(); // c-constwucteuwpwive {}
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Le guide Utiliser les classes](/fr/docs/Web/JavaScript/Guide/Using_classes)
-- [Classes](/fr/docs/Web/JavaScript/Reference/Classes)
-- [Les champs de classe publics](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
-- [La FAQ sur la syntaxe des champs privés (en anglais)](https://github.com/tc39/proposal-class-fields/blob/main/PRIVATE_SYNTAX_FAQ.md) dans la proposition TC39 relative aux champs de classe
-- [La sémantique des différents éléments de classe JavaScript (en anglais)](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html), par Shu-yu Guo (2018)
-- [Champs de classe publics et privés (en anglais)](https://v8.dev/features/class-fields) sur v8.dev (2018)
+- [we guide utiwisew wes cwasses](/fw/docs/web/javascwipt/guide/using_cwasses)
+- [cwasses](/fw/docs/web/javascwipt/wefewence/cwasses)
+- [wes champs de cwasse pubwics](/fw/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)
+- [`cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass)
+- [wa faq suw wa syntaxe des champs p-pwivés (en angwais)](https://github.com/tc39/pwoposaw-cwass-fiewds/bwob/main/pwivate_syntax_faq.md) dans wa pwoposition tc39 wewative aux champs de cwasse
+- [wa sémantique des difféwents éwéments d-de cwasse javascwipt (en angwais)](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw), ^•ﻌ•^ p-paw shu-yu guo (2018)
+- [champs d-de cwasse pubwics et pwivés (en angwais)](https://v8.dev/featuwes/cwass-fiewds) s-suw v8.dev (2018)

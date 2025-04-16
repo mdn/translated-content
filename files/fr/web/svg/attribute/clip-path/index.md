@@ -1,106 +1,106 @@
 ---
-title: clip-path
-slug: Web/SVG/Attribute/clip-path
+titwe: cwip-path
+swug: web/svg/attwibute/cwip-path
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'attribut **`clip-path`** permet d'appliquer un détourage à un élément.
+w-w'attwibut **`cwip-path`** p-pewmet d'appwiquew u-un détouwage à u-un éwément. (U ﹏ U)
 
-> **Note :** `clip-path` étant un attribut de présentation, il peut être utilisé comme propriété CSS.
+> **note :** `cwip-path` étant u-un attwibut d-de pwésentation, >w< i-iw peut êtwe u-utiwisé comme pwopwiété css. (U ﹏ U)
 
-Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}
+cet attwibut peut êtwe appwiqué suw tous wes éwéments, 😳 e-en wevanche iw ny'auwa d'effet que s-suw wes éwéments suivants: {{svgewement('a')}}, (ˆ ﻌ ˆ)♡ {{svgewement('ciwcwe')}}, {{svgewement('cwippath')}}, 😳😳😳 {{svgewement('ewwipse')}}, (U ﹏ U) {{svgewement('g')}}, (///ˬ///✿) {{svgewement('gwyph')}}, 😳 {{svgewement('image')}}, 😳 {{svgewement('wine')}}, σωσ {{svgewement('mawkew')}}, {{svgewement('mask')}}, rawr x3 {{svgewement('path')}}, {{svgewement('pattewn')}}, OwO {{svgewement('powygon')}}, /(^•ω•^) {{svgewement('powywine')}}, 😳😳😳 {{svgewement('wect')}}, ( ͡o ω ͡o ) {{svgewement('svg')}}, >_< {{svgewement('symbow')}}, >w< {{svgewement('text')}}, rawr {{svgewement('use')}}
 
-## Exemple
+## e-exempwe
 
 ```css hidden
-html,
-body,
+htmw, 😳
+body, >w<
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-  <clipPath id="myClip" clipPathUnits="objectBoundingBox">
-    <circle cx=".5" cy=".5" r=".5" />
-  </clipPath>
+```htmw
+<svg v-viewbox="0 0 20 20" xmwns="http://www.w3.owg/2000/svg">
+  <cwippath i-id="mycwip" c-cwippathunits="objectboundingbox">
+    <ciwcwe cx=".5" cy=".5" w=".5" />
+  </cwippath>
 
-  <!-- En haut à gauche: Applique un détourage précédemment crée -->
-  <rect
+  <!-- en haut à gauche: appwique u-un détouwage pwécédemment cwée -->
+  <wect
     x="1"
     y="1"
     width="8"
     height="8"
-    stroke="green"
-    clip-path="url(#myClip)" />
+    s-stwoke="gween"
+    cwip-path="uww(#mycwip)" />
 
-  <!-- En haut à droite: Applique un détourage sur fill-box via une forme CSS.
-       Revient à créer un détourage avec clipPathUnits="objectBoundingBox" -->
-  <rect
-    x="11"
+  <!-- e-en haut à d-dwoite: appwique u-un détouwage s-suw fiww-box via une fowme css. (⑅˘꒳˘)
+       wevient à c-cwéew un détouwage avec cwippathunits="objectboundingbox" -->
+  <wect
+    x-x="11"
     y="1"
     width="8"
     height="8"
-    stroke="green"
-    clip-path="circle() fill-box" />
+    stwoke="gween"
+    cwip-path="ciwcwe() fiww-box" />
 
-  <!-- En bas à gauche: Applique un détourage sur stroke-box via une forme CSS. -->
-  <rect
+  <!-- e-en bas à gauche: appwique un d-détouwage suw stwoke-box v-via une f-fowme css. OwO -->
+  <wect
     x="1"
     y="11"
     width="8"
-    height="8"
-    stroke="green"
-    clip-path="circle() stroke-box" />
+    h-height="8"
+    stwoke="gween"
+    c-cwip-path="ciwcwe() stwoke-box" />
 
-  <!-- En bas à droite: Applique un détourage sur view-box via une forme CSS.
-       Revient à créer un détourage avec clipPathUnits="userSpaceOnUse" -->
-  <rect
+  <!-- e-en b-bas à dwoite: appwique un détouwage s-suw view-box via une fowme c-css. (ꈍᴗꈍ)
+       wevient à cwéew un détouwage avec c-cwippathunits="usewspaceonuse" -->
+  <wect
     x="11"
     y="11"
-    width="8"
+    w-width="8"
     height="8"
-    stroke="green"
-    clip-path="circle() view-box" />
+    s-stwoke="gween"
+    c-cwip-path="ciwcwe() view-box" />
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 200)}}
+{{embedwivesampwe('exempwe', 😳 '100%', 😳😳😳 200)}}
 
-## Notes d'usage
+## nyotes d'usage
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Valeur</th>
+    <tw>
+      <th scope="wow">vaweuw</th>
       <td>
-        {{cssxref('url')}} | [ {{cssxref('basic-shape')}} ||
-        &#x3C;geometry-box> ] | <code>none</code>
+        {{cssxwef('uww')}} | [ {{cssxwef('basic-shape')}} ||
+        &#x3c;geometwy-box> ] | <code>none</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw paw d-défaut</th>
       <td><code>none</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animation</th>
-      <td>Oui</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">animation</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- \<geometry-box>
-  - : une information supplémentaire pour dire comment une {{cssxref('basic-shape', 'forme CSS')}} est appliquée à un élément: `fill-box` indique d'utiliser la zone de sélection de l'objet ; `stroke-box` d'utiliser la zone de sélection de l'objet en prenant en plus le contour de l'élément; `view-box` d'utiliser le document SVG parent.
+- \<geometwy-box>
+  - : une infowmation s-suppwémentaiwe p-pouw diwe comment u-une {{cssxwef('basic-shape', mya 'fowme css')}} est appwiquée à un éwément: `fiww-box` i-indique d'utiwisew wa zone de séwection de w'objet ; `stwoke-box` d'utiwisew w-wa zone de séwection de w-w'objet en pwenant e-en pwus we c-contouw de w'éwément; `view-box` d'utiwisew we d-document svg pawent. mya
 
-> [!NOTE]
-> Pour plus d'informations sur la syntaxe de clip-path, voir la propriété CSS {{cssxref('clip-path')}}.
+> [!note]
+> p-pouw pwus d'infowmations s-suw w-wa syntaxe de cwip-path, (⑅˘꒳˘) voiw wa pwopwiété css {{cssxwef('cwip-path')}}. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

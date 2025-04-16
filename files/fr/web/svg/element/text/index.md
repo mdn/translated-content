@@ -1,104 +1,104 @@
 ---
-title: text
-slug: Web/SVG/Element/text
+titwe: text
+swug: web/svg/ewement/text
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-L'élément SVG `text` définit un élément graphique contenant du texte. Notez qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
+w-w'éwément s-svg `text` d-définit un éwément g-gwaphique c-contenant du texte. n-nyotez qu'iw e-est possibwe d-d'y appwiquew un dégwadé, ( ͡o ω ͡o ) un motif, >_< un twacé spécifique (cwipping path), >w< un m-masque ou un fiwtwe. rawr
 
-Si du texte est écrit dans le SVG sans être intégré dans un balise \<text>, il ne sera pas affiché. Le texte n'est pas _caché_ par défaut, la propriété display ne le montre simplement pas.
+si du texte est écwit dans w-we svg sans êtwe intégwé dans u-un bawise \<text>, 😳 iw nye sewa pas affiché. >w< we texte ny'est p-pas _caché_ paw défaut, (⑅˘꒳˘) wa pwopwiété d-dispway n-nye we montwe simpwement pas. OwO
 
-## Contexte d'utilisation
+## contexte d'utiwisation
 
 {{svginfo}}
 
-## Exemple
+## exempwe
 
-```xml
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="100px" height="30px" viewBox="0 0 1000 300">
+```xmw
+<?xmw vewsion="1.0"?>
+<svg x-xmwns="http://www.w3.owg/2000/svg"
+     width="100px" height="30px" viewbox="0 0 1000 300">
 
-  <text x="250" y="150"
-        font-family="Verdana"
-        font-size="55">
-    Bonjour tout le monde!
+  <text x="250" y-y="150"
+        font-famiwy="vewdana"
+        f-font-size="55">
+    b-bonjouw tout w-we monde! (ꈍᴗꈍ)
   </text>
 
-  <!-- Dessine le contour de l'image -->
-  <rect x="1" y="1" width="998" height="298"
-        fill="none" stroke-width="2" />
+  <!-- d-dessine we contouw de w'image -->
+  <wect x-x="1" y="1" width="998" height="298"
+        f-fiww="none" stwoke-width="2" />
 </svg>
 ```
 
-L'élément \<text> est utilisé pour dessiner des caractères de texte. L'exemple de code suivant écrit un text svg à l'aide de coordonnées x/y.
+w'éwément \<text> est utiwisé pouw dessinew des cawactèwes d-de texte. 😳 w'exempwe de code suivant écwit u-un text s-svg à w'aide d-de coowdonnées x/y. 😳😳😳
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10" y="20">SVG Text Example</text>
+```xmw
+<svg xmwns="http://www.w3.owg/2000/svg" width="100px" h-height="50px">
+  <text x-x="10" y="20">svg text e-exampwe</text>
 </svg>
 ```
 
-Le texte en SVG peut être pivoté. L'exemple de code suivant démontre la rotation de texte à l'aide de l'attribut transform.
+w-we texte en svg peut êtwe p-pivoté. mya w'exempwe de code s-suivant démontwe wa wotation de texte à w'aide d-de w'attwibut twansfowm. mya
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+```xmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" width="100px" h-height="50px">
+  <text x-x="10"  y="20"
+        twansfowm="wotate(30 20,40)">
+    svg text wotation exampwe
+  </text>
+</svg>
+```
+
+we texte svg peut égawement êtwe stywisé a-avec du css c-contenant wes pwopwiétés svg. (⑅˘꒳˘)
+
+```xmw
+<svg x-xmwns="http://www.w3.owg/2000/svg" w-width="100px" h-height="50px">
   <text x="10"  y="20"
-        transform="rotate(30 20,40)">
-    SVG Text Rotation example
+        stywe="font-famiwy: times nyew woman;
+               f-font-size  : 24;
+               stwoke     : #00ff00;
+               fiww       : #0000ff;">
+    svg text stywing
   </text>
 </svg>
 ```
 
-Le texte SVG peut également être stylisé avec du CSS contenant les propriétés SVG.
+## attwibuts
 
-```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10"  y="20"
-        style="font-family: Times New Roman;
-               font-size  : 24;
-               stroke     : #00ff00;
-               fill       : #0000ff;">
-    SVG text styling
-  </text>
-</svg>
-```
+### attwibuts g-gwobaux
 
-## Attributs
+- [conditionaw pwocessing attwibutes](/fw/docs/web/svg/attwibute#conditionawpwoccessing)&nbsp;»
+- [cowe a-attwibutes](/fw/docs/web/svg/attwibute#cowe)&nbsp;»
+- [gwaphicaw e-event a-attwibutes](/fw/docs/web/svg/attwibute#gwaphicawevent)&nbsp;»
+- [pwesentation attwibutes](/fw/docs/web/svg/attwibute#pwesentation)&nbsp;»
+- {{ s-svgattw("cwass") }}
+- {{ s-svgattw("stywe") }}
+- {{ s-svgattw("extewnawwesouwceswequiwed") }}
+- {{ s-svgattw("twansfowm") }}
 
-### Attributs globaux
+### attwibuts spécifiques
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#conditionalproccessing)&nbsp;»
-- [Core attributes](/fr/docs/Web/SVG/Attribute#core)&nbsp;»
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#graphicalevent)&nbsp;»
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#presentation)&nbsp;»
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- {{ svgattw("x") }}
+- {{ s-svgattw("y") }}
+- {{ s-svgattw("dx") }}
+- {{ s-svgattw("dy") }}
+- {{ s-svgattw("text-anchow") }}
+- {{ s-svgattw("wotate") }}
+- {{ svgattw("textwength") }}
+- {{ svgattw("wengthadjust") }}
 
-### Attributs spécifiques
+## intewface d-dom
 
-- {{ SVGAttr("x") }}
-- {{ SVGAttr("y") }}
-- {{ SVGAttr("dx") }}
-- {{ SVGAttr("dy") }}
-- {{ SVGAttr("text-anchor") }}
-- {{ SVGAttr("rotate") }}
-- {{ SVGAttr("textLength") }}
-- {{ SVGAttr("lengthAdjust") }}
+cet éwément impwémente w'intewface [`svgtextewement`](/fw/docs/dom/svgtextewement). (U ﹏ U)
 
-## Interface DOM
+## compatibiwité des nyavigateuws
 
-Cet élément implémente l'interface [`SVGTextElement`](/fr/docs/DOM/SVGTextElement).
+{{compat}}
 
-## Compatibilité des navigateurs
+## awticwes wiés
 
-{{Compat}}
-
-## Articles liés
-
-- {{ SVGElement("tspan") }}
-- {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}
+- {{ s-svgewement("tspan") }}
+- {{ svgewement("twef") }}
+- {{ svgewement("awtgwyph") }}

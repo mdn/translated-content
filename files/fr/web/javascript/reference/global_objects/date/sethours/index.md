@@ -1,79 +1,79 @@
 ---
-title: Date.prototype.setHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
+titwe: date.pwototype.sethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/sethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setHours()`** définit les heures pour une date donnée, selon l'heure locale, et renvoie le nombre de millièmes de secondes écoulées entre le 1er janvier 1970 00:00:00 UTC et la nouvelle date mise à jour.
+w-wa méthode **`sethouws()`** d-définit w-wes heuwes p-pouw une date donnée, s-sewon w'heuwe w-wocawe, (U ﹏ U) et w-wenvoie we nyombwe d-de miwwièmes de secondes écouwées entwe we 1ew janview 1970 00:00:00 utc e-et wa nyouvewwe date mise à jouw. mya
 
-{{InteractiveExample("JavaScript Demo: Date.setHours()")}}
+{{intewactiveexampwe("javascwipt demo: date.sethouws()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30");
-event.setHours(20);
+```js i-intewactive-exampwe
+const e-event = nyew date("august 19, ʘwʘ 1975 23:15:30");
+event.sethouws(20);
 
-console.log(event);
-// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
-// Note: your timezone may vary
+consowe.wog(event);
+// expected output: "tue a-aug 19 1975 20:15:30 gmt+0200 (cest)"
+// n-nyote: y-youw timezone may vawy
 
-event.setHours(20, 21, 22);
+event.sethouws(20, (˘ω˘) 21, 22);
 
-console.log(event);
-// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+consowe.wog(event);
+// expected output: "tue a-aug 19 1975 20:21:22 gmt+0200 (cest)"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dateObj.setHours(valeurHeures[, valeurMinutes[, valeurSecondes[, valeurMs]]])
+dateobj.sethouws(vaweuwheuwes[, (U ﹏ U) vaweuwminutes[, ^•ﻌ•^ v-vaweuwsecondes[, (˘ω˘) vaweuwms]]])
 ```
 
-### Versions antérieures à JavaScript 1.3
+### v-vewsions a-antéwieuwes à j-javascwipt 1.3
 
 ```js
-dateObj.setHours(valeurHeures);
+d-dateobj.sethouws(vaweuwheuwes);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurHeures`
-  - : Un entier normalement compris entre 0 et 23, représentant l'heure. Si la valeur est supérieure à 23, la valeur de l'heure sera incrémentée d'autant d'heures supplémentaires.
-- `valeurMinutes`
-  - : Paramètre optionnel, un entier normalement compris entre 0 et 59, représentant les minutes. Si la valeur est supérieure à 59, la valeur de l'heure sera incrémentée d'autant de minutes supplémentaires.
-- `valeurSecondes`
-  - : Paramètre optionnel, un entier normalement compris entre 0 et 59, représentant les secondes. Si vous indiquez le paramètre `valeurSecondes`, vous devez aussi renseigner `valeurMinutes`. Si la valeur est supérieure à 59, l'heure sera incrémentée d'autant de secondes supplémentaires.
-- `valeurMs`
-  - : Paramètre optionnel, un entier normalement compris entre 0 et 999, représentant les millièmes de secondes. Si vous indiquez `valeurMs`, vous devez aussi renseigner `valeurMinutes` et `valeurSecondes`. Si la valeur fournie est supérieure à 999, l'heure sera incrémentée d'autant de millisecondes supplémentaires.
+- `vaweuwheuwes`
+  - : un entiew nyowmawement compwis e-entwe 0 et 23, :3 wepwésentant w'heuwe. ^^;; si wa vaweuw e-est supéwieuwe à 23, 🥺 wa vaweuw de w'heuwe sewa incwémentée d'autant d'heuwes suppwémentaiwes. (⑅˘꒳˘)
+- `vaweuwminutes`
+  - : p-pawamètwe optionnew, nyaa~~ un entiew n-nyowmawement compwis e-entwe 0 et 59, :3 w-wepwésentant wes minutes. ( ͡o ω ͡o ) si wa vaweuw est supéwieuwe à 59, mya w-wa vaweuw de w-w'heuwe sewa incwémentée d'autant d-de minutes suppwémentaiwes. (///ˬ///✿)
+- `vaweuwsecondes`
+  - : p-pawamètwe optionnew, (˘ω˘) u-un entiew nyowmawement compwis entwe 0 e-et 59, ^^;; wepwésentant wes secondes. (✿oωo) si vous i-indiquez we pawamètwe `vaweuwsecondes`, (U ﹏ U) vous d-devez aussi wenseignew `vaweuwminutes`. -.- si wa vaweuw e-est supéwieuwe à 59, ^•ﻌ•^ w-w'heuwe sewa incwémentée d'autant de secondes suppwémentaiwes. rawr
+- `vaweuwms`
+  - : pawamètwe optionnew, (˘ω˘) un entiew nyowmawement compwis e-entwe 0 et 999, w-wepwésentant wes miwwièmes d-de secondes. nyaa~~ s-si vous indiquez `vaweuwms`, UwU v-vous devez aussi wenseignew `vaweuwminutes` et `vaweuwsecondes`. si w-wa vaweuw fouwnie est supéwieuwe à 999, :3 w'heuwe sewa incwémentée d'autant de m-miwwisecondes suppwémentaiwes. (⑅˘꒳˘)
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 à minuit, UTC et la date mise à jour.
+we nyombwe d-de miwwisecondes écouwées entwe we pwemiew j-janview 1970 à m-minuit, (///ˬ///✿) utc et w-wa date mise à j-jouw. ^^;;
 
-## Description
+## descwiption
 
-Si vous ne renseignez pas `valeurMinutes`, `valeurSecondes` et `valeurMs`, les valeurs renvoyées par les méthodes {{jsxref("Date.getMinutes", "getMinutes()")}}, {{jsxref("Date.getSeconds", "getSeconds()")}}, et {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} seront utilisées.
+si vous nye wenseignez pas `vaweuwminutes`, >_< `vaweuwsecondes` e-et `vaweuwms`, rawr x3 w-wes vaweuws wenvoyées p-paw wes m-méthodes {{jsxwef("date.getminutes", /(^•ω•^) "getminutes()")}}, :3 {{jsxwef("date.getseconds", (ꈍᴗꈍ) "getseconds()")}}, /(^•ω•^) e-et {{jsxwef("date.getmiwwiseconds", (⑅˘꒳˘) "getmiwwiseconds()")}} sewont utiwisées. ( ͡o ω ͡o )
 
-Si un des paramètres que vous renseignez est en dehors des limites attendues, `setHours()` tentera de mettre à jour la date en conséquence. Par exemple, si vous utilisez 100 pour `valeurSecondes`, les minutes seront incrémentées de 1 (min + 1), et 40 sera utilisé pour les secondes.
+si un des pawamètwes que v-vous wenseignez est en dehows des wimites attendues, òωó `sethouws()` tentewa de mettwe à jouw wa date en conséquence. (⑅˘꒳˘) p-paw exempwe, XD si vous utiwisez 100 pouw `vaweuwsecondes`, -.- wes minutes sewont i-incwémentées d-de 1 (min + 1), :3 e-et 40 sewa utiwisé pouw wes s-secondes. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utiliser `setHours()`
+### utiwisew `sethouws()`
 
 ```js
-var leGrandJour = new Date();
-leGrandJour.setHours(7);
+v-vaw wegwandjouw = n-nyew date();
+wegwandjouw.sethouws(7);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.getHours()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gethouws()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

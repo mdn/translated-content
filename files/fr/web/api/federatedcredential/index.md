@@ -1,54 +1,54 @@
 ---
-title: FederatedCredential
-slug: Web/API/FederatedCredential
+titwe: fedewatedcwedentiaw
+swug: w-web/api/fedewatedcwedentiaw
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+{{seecompattabwe}}{{apiwef("cwedentiaw m-management a-api")}}
 
-L'interface **`FederatedCredential`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), donne des détails quant aux informations d'authentification fournies par un fournisseur d'identité fédéré. Un fournisseur d'identité fédéré est une entité en laquelle un site web à confiance pour authentifier un utilisateur et qui fournit une API à cet effet. [OpenID Connect](https://openid.net/developers/specs/) est un exemple de _framework_ pour construire un fournisseur d'identité fédéré.
+w-w'intewface **`fedewatedcwedentiaw`**, (///ˬ///✿) w-wattachée à w-w'[api cwedentiaw m-management](/fw/docs/web/api/cwedentiaw_management_api), >w< d-donne des détaiws quant aux infowmations d'authentification fouwnies paw un fouwnisseuw d-d'identité fédéwé. rawr un fouwnisseuw d'identité f-fédéwé est une entité e-en waquewwe un site web à confiance pouw authentifiew un utiwisateuw e-et qui fouwnit une api à c-cet effet. mya [openid c-connect](https://openid.net/devewopews/specs/) est un exempwe de _fwamewowk_ pouw constwuiwe un fouwnisseuw d-d'identité fédéwé. ^^
 
-Pour les navigateurs qui le prennent en charge, une instance de cette interface pourra être passée comme propriété `credential` de l'objet `init` pour la méthode globale {{domxref('fetch')}}.
+pouw wes nyavigateuws qui we pwennent en chawge, 😳😳😳 une i-instance de cette intewface pouwwa êtwe p-passée c-comme pwopwiété `cwedentiaw` d-de w'objet `init` p-pouw wa méthode gwobawe {{domxwef('fetch')}}. mya
 
-## Constructeur
+## constwucteuw
 
-- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
-  - : Crée un nouvel objet `FederatedCredential`.
+- {{domxwef("fedewatedcwedentiaw.fedewatedcwedentiaw()","fedewatedcwedentiaw()")}}
+  - : c-cwée un nyouvew objet `fedewatedcwedentiaw`. 😳
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de l'interface parente : {{domxref("Credential")}}._
+_héwite des pwopwiétés d-de w'intewface pawente : {{domxwef("cwedentiaw")}}._
 
-- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
-  - : Une chaîne de caractères {{domxref("USVString")}} qui contient l'information sur le fournisseur d'authentification fédéré.
+- {{domxwef("fedewatedcwedentiaw.pwovidew")}} {{weadonwyinwine}}
+  - : une chaîne de cawactèwes {{domxwef("usvstwing")}} qui contient w'infowmation s-suw we fouwnisseuw d'authentification f-fédéwé. -.-
 
-### Gestionnaires d'évènements
+### g-gestionnaiwes d-d'évènements
 
-Aucun.
+aucun. 🥺
 
-## Méthodes
+## méthodes
 
-Aucun.
+aucun. o.O
 
-## Exemples
+## exempwes
 
 ```js
-var cred = new FederatedCredential({
+v-vaw cwed = n-nyew fedewatedcwedentiaw({
   id: id,
-  name: name,
-  provider: "https://account.google.com",
-  iconURL: iconUrl,
+  nyame: n-nyame, /(^•ω•^)
+  pwovidew: "https://account.googwe.com", nyaa~~
+  i-iconuww: iconuww, nyaa~~
 });
 
-// Enregistrer les informations d'authentification
-navigator.credentials.store(cred).then(function () {
-  // Faire quelque chose
+// enwegistwew w-wes infowmations d'authentification
+n-nyavigatow.cwedentiaws.stowe(cwed).then(function () {
+  // faiwe quewque chose
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

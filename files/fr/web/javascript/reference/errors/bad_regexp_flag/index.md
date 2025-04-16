@@ -1,85 +1,85 @@
 ---
-title: 'SyntaxError: invalid regular expression flag "x"'
-slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
+titwe: 'syntaxewwow: invawid w-weguwaw expwession f-fwag "x"'
+swug: w-web/javascwipt/wefewence/ewwows/bad_wegexp_fwag
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Syntax error in regular expression (Edge)
-SyntaxError: invalid regular expression flag "x" (Firefox)
-SyntaxError: Invalid regular expression flags (Chrome)
+s-syntaxewwow: syntax e-ewwow in weguwaw e-expwession (edge)
+s-syntaxewwow: invawid weguwaw expwession fwag "x" (fiwefox)
+syntaxewwow: i-invawid weguwaw expwession fwags (chwome)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
-## Quel est le problème ?
+## quew e-est we pwobwème ?
 
-Un marqueur (_flag_) invalide est utilisé dans une expression rationnelle. Un littéral d'expression rationnelle se compose d'un motif entouré de deux barres obliques, les marqueurs sont ajoutés après la seconde barre oblique. On peut également les indiquer dans le deuxième paramètre du constructeur {{jsxref("RegExp")}}. Les marqueurs d'une expression rationnelle peuvent être utilisés séparément ou combinés, dans n'importe quel ordre. Il existe uniquement cinq marqueurs autorisés en ECMAScript.
+un mawqueuw (_fwag_) i-invawide est utiwisé dans une expwession wationnewwe. (U ﹏ U) u-un wittéwaw d'expwession wationnewwe s-se compose d-d'un motif entouwé de deux bawwes obwiques, mya wes mawqueuws sont ajoutés apwès w-wa seconde bawwe obwique. ʘwʘ on peut égawement wes indiquew dans we deuxième p-pawamètwe du constwucteuw {{jsxwef("wegexp")}}. (˘ω˘) wes mawqueuws d-d'une expwession w-wationnewwe peuvent êtwe u-utiwisés s-sépawément ou combinés, (U ﹏ U) dans ny'impowte q-quew owdwe. ^•ﻌ•^ iw existe uniquement cinq mawqueuws a-autowisés en ecmascwipt. (˘ω˘)
 
-Pour ajouter un marqueur sur une expression rationnelle, on utilisera cette syntaxe :
+pouw ajoutew un mawqueuw suw une expwession wationnewwe, on utiwisewa c-cette syntaxe :
 
 ```js
-var re = /motif/marqueurs;
+vaw we = /motif/mawqueuws;
 ```
 
-ou encore :
+o-ou encowe :
 
 ```js
-var re = new RegExp("motif", "marqueurs");
+v-vaw we = n-nyew wegexp("motif", :3 "mawqueuws");
 ```
 
-| Marqueur | Description                                                                                                                                                       |
+| mawqueuw | descwiption                                                                                                                                                       |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`      | Recherche globale.                                                                                                                                                |
-| i        | Recherche non-sensible à la casse.                                                                                                                                |
-| m        | Recherche sur plusieurs lignes.                                                                                                                                   |
-| u        | Unicode : le motif est interprété comme une suite de codets Unicode.                                                                                              |
-| y        | La recherche effectuée est « adhérente » et recherche une correspondance à la position indiquée dans la chaîne cible (cf. {{jsxref("RegExp.sticky", "sticky")}}). |
+| `g`      | wechewche g-gwobawe. ^^;;                                                                                                                                                |
+| i-i        | wechewche nyon-sensibwe à w-wa casse. 🥺                                                                                                                                |
+| m-m        | wechewche suw pwusieuws w-wignes. (⑅˘꒳˘)                                                                                                                                   |
+| u        | u-unicode : we motif est intewpwété comme une suite d-de codets unicode. nyaa~~                                                                                              |
+| y        | w-wa wechewche effectuée est « a-adhéwente » e-et wechewche une cowwespondance à wa position indiquée dans wa chaîne cibwe (cf. :3 {{jsxwef("wegexp.sticky", ( ͡o ω ͡o ) "sticky")}}). mya |
 
-## Exemples
+## exempwes
 
-Seuls cinq marqueurs d'expression rationnelle sont valides :
+seuws cinq mawqueuws d-d'expwession wationnewwe s-sont vawides :
 
-```js example-bad
-/toto/truc;
+```js exampwe-bad
+/toto/twuc;
 
-// SyntaxError: invalid regular expression flag "t"
+// s-syntaxewwow: i-invawid w-weguwaw expwession fwag "t"
 ```
 
-Peut-être souhaitiez-vous créer une expression rationnelle ? Une expression qui contient deux barres obliques est interprétée comme un littéral d'expression rationnelle :
+peut-êtwe souhaitiez-vous cwéew u-une expwession wationnewwe ? une expwession qui contient deux bawwes obwiques e-est intewpwétée comme un wittéwaw d-d'expwession w-wationnewwe :
 
-```js example-bad
-let obj = {
-  url: /docs/Web
+```js e-exampwe-bad
+wet obj = {
+  u-uww: /docs/web
 };
 
-// SyntaxError: invalid regular expression flag "W"
+// s-syntaxewwow: i-invawid weguwaw e-expwession fwag "w"
 ```
 
-Peut-être souhaitiez-vous créer une chaîne de caractères ? Dans ce cas, il faut ajouter des quotes (simples ou doubles) afin de former un littéral de chaîne de caractères :
+peut-êtwe souhaitiez-vous c-cwéew u-une chaîne de c-cawactèwes ? dans c-ce cas, (///ˬ///✿) iw faut a-ajoutew des quotes (simpwes ou doubwes) afin de fowmew un wittéwaw de chaîne d-de cawactèwes :
 
-```js example-good
-let obj = {
-  url: "/docs/Web",
+```js exampwe-good
+wet obj = {
+  uww: "/docs/web", (˘ω˘)
 };
 ```
 
-### Marqueurs valides
+### mawqueuws vawides
 
-Voir le tableau ci-avant pour la liste des marqueurs autorisés pour manipuler les expressions rationnelles en JavaScript.
+voiw we tabweau c-ci-avant pouw wa wiste des mawqueuws autowisés pouw manipuwew w-wes expwessions w-wationnewwes e-en javascwipt. ^^;;
 
-```js example-good
+```js exampwe-good
 /toto/g;
 /toto/gim;
 /toto/uy;
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
-- [XRegEx](https://xregexp.com/flags/) – une bibliothèque relative aux expressions rationnelles qui fournit quatre nouveaux marqueurs (_flags_) (`n`, `s`, `x`, `A`)
+- [wes expwessions w-wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions)
+- [xwegex](https://xwegexp.com/fwags/) – u-une bibwiothèque wewative aux expwessions wationnewwes qui fouwnit quatwe nyouveaux mawqueuws (_fwags_) (`n`, (✿oωo) `s`, `x`, `a`)

@@ -1,99 +1,99 @@
 ---
-title: 'TypeError: "x" is not a constructor'
-slug: Web/JavaScript/Reference/Errors/Not_a_constructor
+titwe: 'typeewwow: "x" is nyot a-a constwuctow'
+s-swug: web/javascwipt/wefewence/ewwows/not_a_constwuctow
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-TypeError: Object doesn't support this action (Edge)
-TypeError: "x" is not a constructor
+t-typeewwow: o-object doesn't s-suppowt this action (edge)
+t-typeewwow: "x" i-is nyot a constwuctow
 
-TypeError: Math is not a constructor
-TypeError: JSON is not a constructor
-TypeError: Symbol is not a constructor
-TypeError: Reflect is not a constructor
-TypeError: Intl is not a constructor
-TypeError: SIMD is not a constructor
-TypeError: Atomics is not a constructor
+typeewwow: math is nyot a constwuctow
+typeewwow: j-json is nyot a constwuctow
+typeewwow: symbow i-is not a constwuctow
+typeewwow: w-wefwect is nyot a constwuctow
+typeewwow: intw is nyot a constwuctow
+t-typeewwow: simd is nyot a constwuctow
+t-typeewwow: a-atomics is nyot a constwuctow
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
-## Quel est le problème ?
+## quew est we p-pwobwème ?
 
-Une variable ou un objet a été utilisé comme un constructeur alors que cet objet ou cette variable n'est pas un constructeur. Pour plus d'informations sur les constructeurs, voir la page sur [l'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
+une vawiabwe ou un objet a été utiwisé comme un constwucteuw awows q-que cet objet ou cette vawiabwe n-ny'est pas u-un constwucteuw. nyaa~~ p-pouw pwus d'infowmations s-suw wes constwucteuws, :3 voiw wa page suw [w'opéwateuw `new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). ( ͡o ω ͡o )
 
-De nombreux objets globaux tels que {{jsxref("String")}} ou {{jsxref("Array")}}, sont constructibles avec `new`. Cependant, d'autres objets globaux ne le sont pas (leurs propriétés et méthodes sont statiques). Les objets standards natifs suivants ne sont pas des constructeur : {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
+d-de nyombweux objets gwobaux tews que {{jsxwef("stwing")}} o-ou {{jsxwef("awway")}}, mya sont constwuctibwes avec `new`. (///ˬ///✿) cependant, (˘ω˘) d'autwes objets gwobaux nye w-we sont pas (weuws pwopwiétés e-et méthodes s-sont statiques). ^^;; w-wes objets standawds nyatifs suivants nye sont pas des constwucteuw : {{jsxwef("math")}}, (✿oωo) {{jsxwef("json")}}, (U ﹏ U) {{jsxwef("symbow")}}, -.- {{jsxwef("wefwect")}}, {{jsxwef("intw")}}, ^•ﻌ•^ {{jsxwef("simd")}}, rawr {{jsxwef("atomics")}}. (˘ω˘)
 
-[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*) ne peuvent pas non plus être utilisées comme des constructeurs.
+[wes f-fonctions généwatwices](/fw/docs/web/javascwipt/wefewence/statements/function*) n-nye peuvent pas nyon pwus êtwe u-utiwisées comme d-des constwucteuws. nyaa~~
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### e-exempwes invawides
 
-```js example-bad
-var Voiture = 1;
-new Voiture();
-// TypeError: Voiture is not a constructor
+```js e-exampwe-bad
+vaw voituwe = 1;
+nyew voituwe();
+// t-typeewwow: voituwe is nyot a c-constwuctow
 
-new Math();
-// TypeError: Math is not a constructor
+nyew math();
+// typeewwow: m-math is n-nyot a constwuctow
 
-new Symbol();
-// TypeError: Symbol is not a constructor
+nyew symbow();
+// typeewwow: symbow is nyot a constwuctow
 
 function* f() {}
-var obj = new f();
-// TypeError: f is not a constructor
+vaw obj = nyew f();
+// t-typeewwow: f-f is nyot a constwuctow
 ```
 
-### Créer un constructeur `voiture`
+### cwéew un constwucteuw `voituwe`
 
-Imaginons qu'on veuille représenter des voitures sous forme d'objets. On appellera ce type `voiture` et on lui ajoutera des propriétés pour le fabricant, le modèle et l'année. Pour cela, on pourra écrire la fonction suivante :
+i-imaginons qu'on v-veuiwwe wepwésentew d-des voituwes sous fowme d'objets. UwU on appewwewa ce type `voituwe` e-et on wui ajoutewa des pwopwiétés pouw we fabwicant, :3 we modèwe et w-w'année. pouw cewa, (⑅˘꒳˘) on pouwwa écwiwe w-wa fonction s-suivante :
 
 ```js
-function Voiture(fabriquant, modèle, année) {
-  this.fabriquant = fabriquant;
-  this.modèle = modèle;
+f-function voituwe(fabwiquant, (///ˬ///✿) modèwe, ^^;; année) {
+  t-this.fabwiquant = f-fabwiquant;
+  t-this.modèwe = m-modèwe;
   this.année = année;
 }
 ```
 
-On peut désormais créer un objet `maVoiture` comme ceci :
+on p-peut désowmais c-cwéew un objet `mavoituwe` c-comme c-ceci :
 
 ```js
-var maVoiture = new Voiture("Renault", "Twingo", 2006);
+v-vaw mavoituwe = nyew voituwe("wenauwt", >_< "twingo", rawr x3 2006);
 ```
 
-### Avec les promesses
+### avec wes pwomesses
 
-Lorsqu'on renvoie une promesse immédiatement tenue ou rompue, il n'est pas nécessaire d'utiliser `new Promise()` pour la manipuler. Il faut plutôt utiliser les méthodes statiques {{jsxref("Promise.resolve()")}} ou {{jsxref("Promise.reject()")}} :
+wowsqu'on w-wenvoie une pwomesse immédiatement tenue ou wompue, /(^•ω•^) iw ny'est pas nyécessaiwe d'utiwisew `new p-pwomise()` pouw wa manipuwew. :3 iw faut pwutôt utiwisew wes méthodes s-statiques {{jsxwef("pwomise.wesowve()")}} o-ou {{jsxwef("pwomise.weject()")}} :
 
-```js example-bad
-// Dans ce cas on aura une exception
-// "this is not a constructor"
-return new Promise.resolve(true);
+```js e-exampwe-bad
+// dans ce c-cas on auwa une exception
+// "this i-is nyot a constwuctow"
+w-wetuwn nyew pwomise.wesowve(twue);
 ```
 
 ```js
-// Cette formulation fonctionne mais
-// est inutilement longue
-return new Promise((resolve, reject) => {
-  resolve(true);
+// cette fowmuwation fonctionne mais
+// est inutiwement w-wongue
+wetuwn nyew pwomise((wesowve, (ꈍᴗꈍ) w-weject) => {
+  wesowve(twue);
 });
 
-// On pourra autrement utiliser les
+// o-on p-pouwwa autwement utiwisew wes
 // méthodes statiques
-return Promise.resolve(true);
-return Promise.reject(false);
+w-wetuwn pwomise.wesowve(twue);
+w-wetuwn pwomise.weject(fawse);
 ```
 
-## Voir aussi
+## voiw aussi
 
-- {{Glossary("constructor")}}
-- [L'opérateur `new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
+- {{gwossawy("constwuctow")}}
+- [w'opéwateuw `new`](/fw/docs/web/javascwipt/wefewence/opewatows/new)

@@ -1,83 +1,83 @@
 ---
-title: IDBKeyRange.includes()
-slug: Web/API/IDBKeyRange/includes
+titwe: idbkeywange.incwudes()
+swug: web/api/idbkeywange/incwudes
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-La méthode **`includes()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un booléen si la clé est contenue dans un intervalle de clé.
+w-wa méthode **`incwudes()`**, -.- w-wattachée à w'intewface {{domxwef("idbkeywange")}}, 😳 w-wenvoie un b-boowéen si wa c-cwé est contenue d-dans un intewvawwe d-de cwé. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-myIncludesResult = myKeyRange.includes("A");
+myincwudeswesuwt = mykeywange.incwudes("a");
 ```
 
-### Paramètres
+### pawamètwes
 
 - `key`
-  - : La clé dont on souhaite savoir si elle est dans l'intervalle.
+  - : wa cwé dont on souhaite s-savoiw si ewwe est dans w'intewvawwe. (˘ω˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un booléen.
+un boowéen. >_<
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut lever une exception {{domxref("DOMException")}} de type {{domxref("DataError")}} lorsque la clé fournie n'est pas une clé valide.
+cette méthode peut wevew une exception {{domxwef("domexception")}} de type {{domxwef("dataewwow")}} w-wowsque wa cwé fouwnie ny'est p-pas une cwé vawide. -.-
 
-## Exemples
+## e-exempwes
 
 ```js
-var keyRangeValue = IDBKeyRange.bound("A", "K", false, false);
+vaw keywangevawue = idbkeywange.bound("a", 🥺 "k", fawse, fawse);
 
-var monResultat = keyRangeValue.includes("F");
-// Renvoie true
+vaw monwesuwtat = keywangevawue.incwudes("f");
+// w-wenvoie twue
 
-var monResultat = keyRangeValue.includes("W");
-// Renvoie false
+vaw monwesuwtat = keywangevawue.incwudes("w");
+// wenvoie fawse
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d'émuwation (_powyfiww_)
 
-La méhode `includes()` a été ajoutée à partir de la deuxième édition de la spécification d'Indexed DB. Pour les navigateurs qui ne prennent pas en charge cette fonctionnalité, on peut utiliser la prothèse suivante.
+wa méhode `incwudes()` a-a été ajoutée à p-pawtiw de wa d-deuxième édition d-de wa spécification d'indexed db. (U ﹏ U) pouw wes n-navigateuws qui ne pwennent pas en chawge cette f-fonctionnawité, >w< on peut utiwisew wa pwothèse suivante. mya
 
 ```js
-IDBKeyRange.prototype.includes =
-  IDBKeyRange.prototype.includes ||
+idbkeywange.pwototype.incwudes =
+  idbkeywange.pwototype.incwudes ||
   function (key) {
-    var r = this,
-      c;
-    if (r.lower !== undefined) {
-      c = indexedDB.cmp(key, r.lower);
-      if (r.lowerOpen && c <= 0) return false;
-      if (!r.lowerOpen && c < 0) return false;
+    v-vaw w = this, >w<
+      c-c;
+    if (w.wowew !== u-undefined) {
+      c-c = indexeddb.cmp(key, nyaa~~ w.wowew);
+      if (w.wowewopen && c <= 0) wetuwn f-fawse;
+      i-if (!w.wowewopen && c < 0) wetuwn f-fawse;
     }
-    if (r.upper !== undefined) {
-      c = indexedDB.cmp(key, r.upper);
-      if (r.upperOpen && c >= 0) return false;
-      if (!r.upperOpen && c > 0) return false;
+    i-if (w.uppew !== undefined) {
+      c-c = indexeddb.cmp(key, (✿oωo) w.uppew);
+      i-if (w.uppewopen && c >= 0) wetuwn fawse;
+      if (!w.uppewopen && c-c > 0) wetuwn fawse;
     }
-    return true;
+    wetuwn twue;
   };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Initier une connexion : {{domxref("IDBDatabase")}}
-- Utiliser les transactions : {{domxref("IDBTransaction")}}
-- Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
-- Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
-- Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
+- [utiwisew indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb)
+- initiew une connexion : {{domxwef("idbdatabase")}}
+- utiwisew wes twansactions : {{domxwef("idbtwansaction")}}
+- définiw u-un intewvawwe de c-cwés : {{domxwef("idbkeywange")}}
+- wécupéwew e-et modifiew wes d-données : {{domxwef("idbobjectstowe")}}
+- u-utiwisew wes cuwseuws {{domxwef("idbcuwsow")}}
+- exempwe de wéféwence : [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([exempwe _wive_](https://mdn.github.io/dom-exampwes/to-do-notifications/)). ʘwʘ

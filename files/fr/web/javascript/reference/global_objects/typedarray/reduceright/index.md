@@ -1,76 +1,76 @@
 ---
-title: TypedArray.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
+titwe: typedawway.pwototype.weducewight()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/typedawway/weducewight
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la droite vers la gauche) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduceRight()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
+w-wa méthode **`weducewight()`** a-appwique une fonction s-suw un accumuwateuw e-et chaque v-vaweuw du t-tabweau typé (de w-wa dwoite vews wa gauche) afin de wéduiwe we tabweau en une seuwe vaweuw. 🥺 cette m-méthode utiwise we même awgowithme que {{jsxwef("awway.pwototype.weducewight()")}}. (⑅˘꒳˘) d-dans we weste de cet awticwe _typedawway_ c-cowwespond à un des [types de tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#wes_objets_typedawway). nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-typedarray.reduceRight(callback[, valeurInitiale])
+t-typedawway.weducewight(cawwback[, :3 vaweuwinitiawe])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à exécuter sur chaque valeur du tableau typé. Elle utilise quatre arguments :
+  - : w-wa fonction à exékawaii~w suw chaque vaweuw du tabweau typé. ( ͡o ω ͡o ) ewwe utiwise q-quatwe awguments :
 
-    - `valeurPrécédente`
-      - : La valeur renvoyée précédemment par l'appel précédent à `callback`. Dans le cadre du premier élément, ce sera `valeurInitiale` si ce paramètre est fourni (voir ci-après).
-    - `valeurCourante`
-      - : L'élément du tableau typé en cours de traitement
+    - `vaweuwpwécédente`
+      - : wa vaweuw wenvoyée pwécédemment paw w'appew pwécédent à `cawwback`. mya d-dans we cadwe du pwemiew éwément, (///ˬ///✿) c-ce sewa `vaweuwinitiawe` s-si ce pawamètwe e-est fouwni (voiw c-ci-apwès). (˘ω˘)
+    - `vaweuwcouwante`
+      - : w'éwément du tabweau typé e-en couws de twaitement
     - `index`
-      - : L'indice de l'élément du tableau typé en cours de traitement.
-    - `array`
-      - : Le tableau typé pour lequel `reduceRight` a été appelée.
+      - : w'indice de w'éwément du tabweau t-typé en couws de twaitement. ^^;;
+    - `awway`
+      - : we tabweau typé pouw wequew `weducewight` a été appewée. (✿oωo)
 
-- `valeurInitiale`
-  - : Paramètre optionnel qui correspond à l'objet à utiliser en tant que premier argument pour le premier appel à `callback`.
+- `vaweuwinitiawe`
+  - : pawamètwe optionnew q-qui cowwespond à w'objet à u-utiwisew en tant q-que pwemiew awgument p-pouw we pwemiew appew à `cawwback`.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur obtenue à partir de la réduction du tableau typé.
+wa vaweuw obtenue à p-pawtiw de w-wa wéduction du tabweau typé. (U ﹏ U)
 
-## Description
+## d-descwiption
 
-La méthode `reduceRight` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau typé (les éléments vides ou supprimés ne sont pas traités). La fonction `callback` utilise quatre arguments : la valeur initiale ou la valeur précédemment calculée, la valeur de l'élément courant, l'indice de l'élément courant et le tableau typé qui est parcouru.
+w-wa méthode `weducewight` exékawaii~ w-wa fonction `cawwback` une fois pouw chaque éwément pwésent d-dans we tabweau typé (wes éwéments vides o-ou suppwimés nye sont pas twaités). -.- w-wa fonction `cawwback` utiwise quatwe a-awguments : wa vaweuw i-initiawe ou wa vaweuw pwécédemment cawcuwée, ^•ﻌ•^ wa vaweuw de w'éwément couwant, w'indice de w'éwément c-couwant et we tabweau t-typé qui est pawcouwu. rawr
 
-L'appel à `reduceRight` utilisant la fonction `callback` ressemble à :
+w'appew à `weducewight` u-utiwisant w-wa fonction `cawwback` w-wessembwe à :
 
 ```js
-typedarray.reduceRight(
-  function (valeurPrécédente, valeurCourante, index, typedarray) {
+typedawway.weducewight(
+  function (vaweuwpwécédente, (˘ω˘) vaweuwcouwante, nyaa~~ index, typedawway) {
     // ...
-  },
+  }, UwU
 );
 ```
 
-Lors du premier appel à la fonction callback, `valeurPrécédente` et `valeurCourante` peuvent être un ou deux valeurs différentes. Si `valeurInitiale` est fournie, `valeurPrécédente` sera alors égale à `valeurInitiale` et `valeurCourante` sera égale à la première valeur du tableau. Si le paramètre `valeurInitiale` n'est pas utilisé, `valeurPrécédente` sera égale au premier élément du tableau typé et `valeurCourante` sera égale au second élément.
+w-wows du pwemiew appew à wa fonction cawwback, :3 `vaweuwpwécédente` et `vaweuwcouwante` peuvent êtwe u-un ou deux vaweuws difféwentes. (⑅˘꒳˘) s-si `vaweuwinitiawe` est f-fouwnie, (///ˬ///✿) `vaweuwpwécédente` s-sewa awows égawe à `vaweuwinitiawe` et `vaweuwcouwante` s-sewa égawe à w-wa pwemièwe v-vaweuw du t-tabweau. ^^;; si we pawamètwe `vaweuwinitiawe` ny'est p-pas utiwisé, >_< `vaweuwpwécédente` s-sewa égawe a-au pwemiew éwément d-du tabweau t-typé et `vaweuwcouwante` sewa égawe au second éwément. rawr x3
 
-Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été fourni, une exception {{jsxref("TypeError")}} sera levée. SI le tableau typé ne possède qu'un seul élément et que `valeurInitiale` n'a pas été fourni (ou que `valeurInitiale` a été utilisée mais que le tableau typé est vide), la valeur unique sera renvoyée et `callback` ne sera pas appelée.
+si w-we tabweau typé est vide et que we pawamètwe `vaweuwinitiawe` n'a pas été fouwni, /(^•ω•^) une exception {{jsxwef("typeewwow")}} sewa w-wevée. :3 si we tabweau typé nye possède qu'un seuw éwément e-et que `vaweuwinitiawe` n-ny'a pas été f-fouwni (ou que `vaweuwinitiawe` a-a été utiwisée mais que w-we tabweau typé e-est vide), (ꈍᴗꈍ) wa vaweuw unique sewa wenvoyée et `cawwback` nye sewa pas appewée. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function (a, b) {
-  return a + b;
+v-vaw totaw = nyew uint8awway([0, (⑅˘꒳˘) 1, 2, 3]).weducewight(function (a, ( ͡o ω ͡o ) b-b) {
+  wetuwn a + b;
 });
-// total == 6
+// t-totaw == 6
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.reduce()")}}
-- {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxwef("typedawway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.weducewight()")}}

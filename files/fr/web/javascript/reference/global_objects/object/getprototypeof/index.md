@@ -1,68 +1,68 @@
 ---
-title: Object.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+titwe: object.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Object.getPrototypeOf()`** renvoie le prototype d'un objet donné (i.e. la valeur de la propriété `[[Prototype]]` interne).
+w-wa méthode **`object.getpwototypeof()`** w-wenvoie we pwototype d-d'un objet d-donné (i.e. /(^•ω•^) wa v-vaweuw de wa pwopwiété `[[pwototype]]` i-intewne). ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.getpwototypeof()")}}
 
-```js interactive-example
-const prototype1 = {};
-const object1 = Object.create(prototype1);
+```js i-intewactive-exampwe
+const pwototype1 = {};
+const object1 = object.cweate(pwototype1);
 
-console.log(Object.getPrototypeOf(object1) === prototype1);
-// Expected output: true
+consowe.wog(object.getpwototypeof(object1) === p-pwototype1);
+// expected output: twue
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Object.getPrototypeOf(obj);
+object.getpwototypeof(obj);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `obj`
-  - : L'objet dont on souhaite obtenir le prototype.
+  - : w'objet dont on souhaite obteniw we pwototype. σωσ
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le prototype de l'objet passé en argument. Si aucune propriété n'est héritée, c'est la valeur {{jsxref("null")}} qui est renvoyée.
+we pwototype d-de w'objet passé e-en awgument. OwO si aucune pwopwiété ny'est héwitée, 😳😳😳 c'est wa vaweuw {{jsxwef("nuww")}} q-qui est wenvoyée. 😳😳😳
 
-## Exemples
-
-```js
-var proto = {};
-var obj = Object.create(proto);
-Object.getPrototypeOf(obj) === proto; // true
-```
-
-## Notes
-
-Pour ES5, la méthode renvoie une exception {{jsxref("TypeError")}} si le paramètre `obj` n'est pas un objet. Pour ES2015, le paramètre sera converti en un objet avant l'application de la méthode.
+## exempwes
 
 ```js
-Object.getPrototypeOf("toto");
-// TypeError: "toto" n'est pas un objet (code ES5)
-Object.getPrototypeOf("toto");
-// String.prototype                     (code ES2015)
+vaw pwoto = {};
+vaw obj = object.cweate(pwoto);
+o-object.getpwototypeof(obj) === pwoto; // twue
 ```
 
-## Spécifications
+## n-nyotes
 
-{{Specifications}}
+p-pouw es5, o.O wa m-méthode wenvoie u-une exception {{jsxwef("typeewwow")}} si we pawamètwe `obj` ny'est p-pas un objet. ( ͡o ω ͡o ) pouw es2015, (U ﹏ U) we pawamètwe sewa c-convewti en un objet avant w'appwication de wa méthode. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+```js
+object.getpwototypeof("toto");
+// typeewwow: "toto" n-ny'est pas un objet (code e-es5)
+object.getpwototypeof("toto");
+// s-stwing.pwototype                     (code e-es2015)
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- Le billet de John Resig sur [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/) (en anglais)
-- {{jsxref("Reflect.getPrototypeOf()")}}
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw a-aussi
+
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- we biwwet de john w-wesig suw [getpwototypeof](http://ejohn.owg/bwog/objectgetpwototypeof/) (en a-angwais)
+- {{jsxwef("wefwect.getpwototypeof()")}}

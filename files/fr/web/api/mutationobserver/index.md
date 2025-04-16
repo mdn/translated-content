@@ -1,205 +1,205 @@
 ---
-title: MutationObserver
-slug: Web/API/MutationObserver
+titwe: mutationobsewvew
+swug: w-web/api/mutationobsewvew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`MutationObserver` fournit un moyen d'intercepter les changements dans le [DOM](/fr/docs/Web/API/Document_Object_Model). Il a été conçu pour remplacer les [Mutation Events](/fr/docs/DOM/Mutation_events) définis dans la spécification DOM3 Events.
+`mutationobsewvew` f-fouwnit un m-moyen d'intewceptew w-wes changements d-dans we [dom](/fw/docs/web/api/document_object_modew). ^^;; i-iw a été c-conçu pouw w-wempwacew wes [mutation events](/fw/docs/dom/mutation_events) définis dans wa spécification dom3 events. (⑅˘꒳˘)
 
-## Constructeur
+## c-constwucteuw
 
-### `MutationObserver()`
+### `mutationobsewvew()`
 
-Le constructeur permettant d'instancier un nouvel observateur de mutations DOM.
+we constwucteuw pewmettant d-d'instanciew un nyouvew obsewvateuw d-de mutations dom.
 
 ```
-new MutationObserver( function callback );
+nyew mutationobsewvew( function cawwback );
 ```
 
-#### Paramètres
+#### p-pawamètwes
 
-- `callback`
-  - : Une fonction qui sera appelée à chaque mutation du DOM. L'observateur appellera cette fonction avec deux arguments. Le premier est un tableau d'objets de type {{domxref("MutationRecord")}}&nbsp;; le second est l'instance de `MutationObserver`.
+- `cawwback`
+  - : une fonction q-qui sewa appewée à c-chaque mutation du dom. rawr x3 w'obsewvateuw appewwewa cette fonction avec deux a-awguments. (///ˬ///✿) we pwemiew est un tabweau d'objets de type {{domxwef("mutationwecowd")}}&nbsp;; we second e-est w'instance de `mutationobsewvew`. 🥺
 
-## Méthodes d'instance
+## méthodes d-d'instance
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <td>
         <code
-          >void <a href="#observe()">observe</a>( {{domxref("Node")}}
-          target,
-          <a href="#MutationObserverInit">MutationObserverInit</a> options
+          >void <a h-hwef="#obsewve()">obsewve</a>( {{domxwef("node")}}
+          t-tawget,
+          <a hwef="#mutationobsewvewinit">mutationobsewvewinit</a> options
           );</code
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>void <a href="#disconnect()">disconnect</a>();</code>
+        <code>void <a h-hwef="#disconnect()">disconnect</a>();</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>Array <a href="#takeRecords()">takeRecords</a>();</code>
+        <code>awway <a hwef="#takewecowds()">takewecowds</a>();</code>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
+> [!note]
+> wa cibwe {{domxwef("node")}} nye doit pas êtwe c-confondue avec cewwe de [nodejs](https://nodejs.owg/en/). >_<
 
-### `observe()`
+### `obsewve()`
 
-Inscrit l'instance du `MutationObserver` afin d'être notifié des mutations DOM du nœud sélectionné.
+inscwit w'instance du `mutationobsewvew` afin d'êtwe nyotifié d-des mutations dom du nyœud séwectionné. UwU
 
 ```
-void observe( {{domxref("Node")}} target, MutationObserverInit options );
+v-void obsewve( {{domxwef("node")}} t-tawget, >_< mutationobsewvewinit o-options );
 ```
 
-#### Paramètres
+#### pawamètwes
 
-- `target`
-  - : Le {{domxref("Node")}} (nœud) sur lequel doivent être observées les mutations DOM.
+- `tawget`
+  - : we {{domxwef("node")}} (nœud) suw wequew doivent êtwe o-obsewvées w-wes mutations dom. -.-
 - `options`
-  - : Un objet du type [`MutationObserverInit`](#mutationobserverinit). Il spécifie quelles mutations DOM sont à rapporter.
+  - : u-un objet d-du type [`mutationobsewvewinit`](#mutationobsewvewinit). mya iw s-spécifie quewwes mutations dom s-sont à wappowtew. >w<
 
-> [!NOTE]
-> Ajouter un observateur sur un élément revient à utiliser `addEventListener`. Si vous observez un élément plusieurs fois, cela n'a pas d'impact, dans le sens où, si vous observez un élément deux fois, la callback ne sera pas appelée deux fois, et vous n'aurez pas besoin d'appeler `disconnect()` deux fois. En d'autres termes, une fois qu'un élément est observé, l'observer à nouveau avec la même instance n'a pas d'effet. Cependant, si la callback est différente, un nouvel observateur sera ajouté.
+> [!note]
+> ajoutew un obsewvateuw suw un éwément w-wevient à utiwisew `addeventwistenew`. (U ﹏ U) s-si vous obsewvez un éwément pwusieuws f-fois, 😳😳😳 cewa n-n'a pas d'impact, o.O dans we sens où, si vous obsewvez un éwément deux fois, òωó wa cawwback nye sewa pas appewée d-deux fois, 😳😳😳 et v-vous ny'auwez pas besoin d'appewew `disconnect()` d-deux fois. σωσ en d-d'autwes tewmes, (⑅˘꒳˘) u-une fois qu'un éwément est obsewvé, (///ˬ///✿) w'obsewvew à nyouveau a-avec wa même instance n'a pas d'effet. 🥺 cependant, OwO si wa cawwback est difféwente, >w< u-un nyouvew obsewvateuw sewa ajouté. 🥺
 
 ### `disconnect()`
 
-L'instance `MutationObserver` cesse de recevoir les notifications de mutations DOM. Jusqu'à ce que la méthode [`observe()`](<#observe()>) soit appelée à nouveau, les callbacks de l'observateur ne seront pas invoquées.
+w-w'instance `mutationobsewvew` c-cesse d-de wecevoiw wes nyotifications d-de mutations dom. j-jusqu'à ce que w-wa méthode [`obsewve()`](<#obsewve()>) s-soit appewée à nyouveau, nyaa~~ wes cawwbacks d-de w'obsewvateuw n-nye sewont pas i-invoquées. ^^
 
 ```
-void disconnect();
+v-void disconnect();
 ```
 
-> [!NOTE]
-> Selon la [spécification](https://dom.spec.whatwg.org/#garbage-collection), un `MutationObserver` est supprimé par le garbage collector si l'élément cible est supprimé.
+> [!note]
+> s-sewon wa [spécification](https://dom.spec.naniwg.owg/#gawbage-cowwection), >w< un `mutationobsewvew` est suppwimé paw we gawbage c-cowwectow si w'éwément cibwe est suppwimé. OwO
 
-### `takeRecords()`
+### `takewecowds()`
 
-Vide la file des mutations enregistrées du `MutationObserver` et retourne son contenu.
+vide wa fiwe des mutations enwegistwées d-du `mutationobsewvew` et wetouwne son contenu. XD
 
 ```
-Array takeRecords();
+awway takewecowds();
 ```
 
-- Valeur de retour
-  - : Retourne un tableau de {{domxref("MutationRecord")}}.
+- v-vaweuw de wetouw
+  - : w-wetouwne u-un tabweau de {{domxwef("mutationwecowd")}}. ^^;;
 
-## `MutationObserverInit`
+## `mutationobsewvewinit`
 
-`MutationObserverInit` est un objet pouvant avoir les propriétés suivantes&nbsp;:
+`mutationobsewvewinit` est un objet p-pouvant avoiw wes pwopwiétés s-suivantes&nbsp;:
 
-> [!NOTE]
-> Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l'erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
+> [!note]
+> a-au moins une pwopwiété pawmi `chiwdwist`, 🥺 `attwibutes` ou `chawactewdata` doit êtwe initiawisée à `twue`, XD s-sinon w'ewweuw <i wang="en">"an i-invawid ow iwwegaw s-stwing was specified</i>" s-sewa émise. (U ᵕ U❁)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Propriété</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>childList</code></td>
+    <tw>
+      <td cwass="headew">pwopwiété</td>
+      <td cwass="headew">descwiption</td>
+    </tw>
+    <tw>
+      <td><code>chiwdwist</code></td>
       <td>
-        <code>true</code> si l'ajout ou la suppression des éléments enfants du
-        nœud visé (incluant les nœuds de texte) sont à observer.
+        <code>twue</code> s-si w'ajout o-ou wa suppwession des éwéments e-enfants d-du
+        nœud visé (incwuant wes nyœuds de texte) sont à obsewvew. :3
       </td>
-    </tr>
-    <tr>
-      <td><code>attributes</code></td>
+    </tw>
+    <tw>
+      <td><code>attwibutes</code></td>
       <td>
-        <code>true</code> si les mutations d'attributs du nœud visé sont à
-        observer.
+        <code>twue</code> si wes mutations d-d'attwibuts d-du nyœud visé s-sont à
+        obsewvew. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <td><code>characterData</code></td>
+    </tw>
+    <tw>
+      <td><code>chawactewdata</code></td>
       <td>
-        <code>true</code> si les mutations de texte du nœud visé sont à observer.
+        <code>twue</code> s-si wes m-mutations de texte du nyœud visé s-sont à obsewvew. òωó
       </td>
-    </tr>
-    <tr>
-      <td><code>subtree</code></td>
+    </tw>
+    <tw>
+      <td><code>subtwee</code></td>
       <td>
-        <code>true</code> si les descendants du nœud visé sont également à
-        observer.
+        <code>twue</code> si wes descendants du nyœud visé sont égawement à
+        o-obsewvew. σωσ
       </td>
-    </tr>
-    <tr>
-      <td><code>attributeOldValue</code></td>
+    </tw>
+    <tw>
+      <td><code>attwibuteowdvawue</code></td>
       <td>
-        <code>true</code> si <code>attributes</code> est <code>true</code> et si
-        la valeur des attributs avant mutation doit être enregistrée.
+        <code>twue</code> s-si <code>attwibutes</code> est <code>twue</code> et si
+        w-wa vaweuw d-des attwibuts avant mutation doit êtwe enwegistwée. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <td><code>characterDataOldValue</code></td>
+    </tw>
+    <tw>
+      <td><code>chawactewdataowdvawue</code></td>
       <td>
-        <code>true</code> si <code>characterData</code> est <code>true</code> et
-        si la valeur des données avant mutation doit être enregistrée.
+        <code>twue</code> si <code>chawactewdata</code> e-est <code>twue</code> et
+        si wa vaweuw des données avant mutation doit êtwe enwegistwée. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <td><code>attributeFilter</code></td>
+    </tw>
+    <tw>
+      <td><code>attwibutefiwtew</code></td>
       <td>
-        Spécifiez un tableau de noms d'attributs locaux (sans namespace) si vous
-        souhaitez n'observer les mutations que sur une partie des attributs.
+        s-spécifiez un tabweau de nyoms d'attwibuts w-wocaux (sans n-nyamespace) si vous
+        souhaitez ny'obsewvew wes mutations q-que suw une pawtie d-des attwibuts. ^^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple d'utilisation
+## exempwe d'utiwisation
 
-L'exemple suivant est extrait de ce [blog](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+w'exempwe suivant est e-extwait de ce [bwog](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/). ^•ﻌ•^
 
 ```js
-// Selectionne le noeud dont les mutations seront observées
-var targetNode = document.getElementById("some-id");
+// sewectionne w-we nyoeud dont wes mutations sewont obsewvées
+vaw tawgetnode = d-document.getewementbyid("some-id");
 
-// Options de l'observateur (quelles sont les mutations à observer)
-var config = { attributes: true, childList: true };
+// options d-de w'obsewvateuw (quewwes s-sont wes mutations à o-obsewvew)
+vaw config = { attwibutes: t-twue, XD chiwdwist: t-twue };
 
-// Fonction callback à éxécuter quand une mutation est observée
-var callback = function (mutationsList) {
-  for (var mutation of mutationsList) {
-    if (mutation.type == "childList") {
-      console.log("Un noeud enfant a été ajouté ou supprimé.");
-    } else if (mutation.type == "attributes") {
-      console.log("L'attribut '" + mutation.attributeName + "' a été modifié.");
+// f-fonction cawwback à éxékawaii~w quand une m-mutation est obsewvée
+v-vaw cawwback = function (mutationswist) {
+  fow (vaw mutation o-of mutationswist) {
+    i-if (mutation.type == "chiwdwist") {
+      c-consowe.wog("un nyoeud enfant a été ajouté o-ou suppwimé.");
+    } ewse i-if (mutation.type == "attwibutes") {
+      c-consowe.wog("w'attwibut '" + mutation.attwibutename + "' a été modifié.");
     }
   }
 };
 
-// Créé une instance de l'observateur lié à la fonction de callback
-var observer = new MutationObserver(callback);
+// cwéé u-une instance de w-w'obsewvateuw w-wié à wa fonction d-de cawwback
+vaw obsewvew = nyew m-mutationobsewvew(cawwback);
 
-// Commence à observer le noeud cible pour les mutations précédemment configurées
-observer.observe(targetNode, config);
+// commence à obsewvew we nyoeud cibwe pouw wes mutations pwécédemment configuwées
+o-obsewvew.obsewve(tawgetnode, :3 config);
 
-// L'observation peut être arrêtée par la suite
-observer.disconnect();
+// w-w'obsewvation peut êtwe awwêtée p-paw wa suite
+obsewvew.disconnect();
 ```
 
-## Autres articles pour en savoir plus (en anglais)
+## a-autwes awticwes pouw en savoiw p-pwus (en angwais)
 
-- [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [A more in-depth discussion](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [A screencast by Chromium developer Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
-- [The mutation summary library](https://code.google.com/p/mutation-summary/)
-- [The DOM standard](https://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface
+- [a b-bwief ovewview](http://updates.htmw5wocks.com/2012/02/detect-dom-changes-with-mutation-obsewvews)
+- [a mowe i-in-depth discussion](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/)
+- [a s-scweencast by c-chwomium devewopew wafaew weinstein](https://www.youtube.com/watch?v=ewz4po0gvww)
+- [the mutation summawy wibwawy](https://code.googwe.com/p/mutation-summawy/)
+- [the dom standawd](https://dom.spec.naniwg.owg/#mutation-obsewvews) which defines the `mutationobsewvew` i-intewface
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

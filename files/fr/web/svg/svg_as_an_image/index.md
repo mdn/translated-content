@@ -1,40 +1,40 @@
 ---
-title: SVG en tant qu'image
-slug: Web/SVG/SVG_as_an_Image
+titwe: svg en tant qu'image
+swug: w-web/svg/svg_as_an_image
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Le format SVG peut être utilisé en tant qu'image dans de nombreux contextes. Beaucoup de navigateurs prennent en charge les images au format SVG avec :
+w-we f-fowmat svg peut êtwe u-utiwisé e-en tant qu'image d-dans de nyombweux c-contextes. 🥺 beaucoup d-de nyavigateuws pwennent en chawge wes images au fowmat svg avec :
 
-- les balises HTML {{HTMLElement("img")}} ou {{HTMLElement("svg")}}
-- l'attribut CSS {{cssxref("background-image")}}
+- wes b-bawises htmw {{htmwewement("img")}} ou {{htmwewement("svg")}}
+- w'attwibut css {{cssxwef("backgwound-image")}}
 
-## Contexte spécifique à Gecko
+## c-contexte spécifique à gecko
 
-De plus, Gecko 2.0 prend en charge l'usage du format [SVG](/fr/docs/Web/SVG) dans ces contextes:
+d-de pwus, o.O gecko 2.0 pwend en chawge w'usage du fowmat [svg](/fw/docs/web/svg) d-dans ces contextes:
 
-- la propriété CSS {{cssxref("list-style-image")}}
-- la propriété CSS {{cssxref("content")}}
-- l'élément SVG {{SVGElement("image")}}
-- l'élément SVG {{SVGElement("feImage")}}
-- la fonction Canvas [`drawImage`](/fr/docs/HTML/Canvas/Tutorial/Using_images#drawImage)
+- wa pwopwiété c-css {{cssxwef("wist-stywe-image")}}
+- w-wa pwopwiété css {{cssxwef("content")}}
+- w'éwément svg {{svgewement("image")}}
+- w'éwément svg {{svgewement("feimage")}}
+- w-wa fonction canvas [`dwawimage`](/fw/docs/htmw/canvas/tutowiaw/using_images#dwawimage)
 
-### Restrictions
+### westwictions
 
-Pour plusieurs raisons, Gecko fixe quelques restrictions sur le format SVG lorsqu'il est utilisé en tant qu'image :
+pouw pwusieuws waisons, /(^•ω•^) g-gecko fixe quewques westwictions s-suw we fowmat svg w-wowsqu'iw est u-utiwisé en tant q-qu'image :
 
-- [JavaScript](/fr/docs/Web/JavaScript) est désactivé.
-- Les ressources externes (p. ex. images, stylesheets) ne peuvent pas être chargées, cependant elles peuvent être utilisées en étant déclaré à travers des URLs de données.
-- Les liens stylistiques {{cssxref(":visited")}} ne sont pas interprété.
-- Les widgets stylistiques natifs aux plateformes (basés sur le thème de l'OS) sont désactivés.
+- [javascwipt](/fw/docs/web/javascwipt) est désactivé. nyaa~~
+- wes wessouwces e-extewnes (p. nyaa~~ ex. :3 images, stywesheets) nye p-peuvent pas êtwe chawgées, 😳😳😳 cependant ewwes peuvent êtwe utiwisées en étant décwawé à twavews d-des uwws de données. (˘ω˘)
+- wes w-wiens stywistiques {{cssxwef(":visited")}} n-nye s-sont pas intewpwété. ^^
+- wes widgets stywistiques nyatifs aux p-pwatefowmes (basés s-suw we thème de w'os) sont d-désactivés. :3
 
-A noter que les restrictions précédentes sont spécifiques à l'usage de SVG en tant qu'image; elles ne s'appliquent pas lorsque le contenu SVG est vu directement, ou lorsque il est embarqué en tant que document via les éléments {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, ou {{HTMLElement("embed")}}
+a n-nyotew que wes westwictions pwécédentes s-sont spécifiques à w-w'usage de svg en tant qu'image; ewwes nye s'appwiquent p-pas wowsque we contenu svg e-est vu diwectement, -.- ou wowsque i-iw est embawqué e-en tant que document via wes éwéments {{htmwewement("ifwame")}}, 😳 {{htmwewement("object")}}, mya ou {{htmwewement("embed")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [Introduction à SVG dans HTML](/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)
+- [intwoduction à svg dans htmw](/fw/docs/web/svg/tutowiaw/svg_in_htmw_intwoduction)

@@ -1,33 +1,33 @@
 ---
-title: HTMLTimeElement
-slug: Web/API/HTMLTimeElement
+titwe: htmwtimeewement
+swug: w-web/api/htmwtimeewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-L'interface **`HTMLTimeElement`** fournit des propriétés spéciales (en plus de celles fournies en héritage par l'interface {{domxref("HTMLElement")}}) pour manipuler les éléments {{HTMLElement("time")}}.
+w-w'intewface **`htmwtimeewement`** f-fouwnit d-des pwopwiétés s-spéciawes (en p-pwus de cewwes f-fouwnies en héwitage paw w'intewface {{domxwef("htmwewement")}}) pouw manipuwew wes éwéments {{htmwewement("time")}}. OwO
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, (U ﹏ U) 120)}}
 
-## Propriétés
+## pwopwiétés
 
-_Hérite des propriétés de {{domxref("HTMLElement")}}._
+_héwite des pwopwiétés d-de {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLTimeElement.dateTime")}}
-  - : C'est une {{domxref("DOMString")}} qui reflète l'attribut [`datetime`](/fr/docs/Web/HTML/Element/time#datetime) de l'élément HTML correspondant, dans une forme interprétable par un ordinateur de la date et de l'heure.
+- {{domxwef("htmwtimeewement.datetime")}}
+  - : c'est une {{domxwef("domstwing")}} qui wefwète w-w'attwibut [`datetime`](/fw/docs/web/htmw/ewement/time#datetime) de w'éwément h-htmw cowwespondant, >_< dans une fowme intewpwétabwe paw un o-owdinateuw de wa date et de w'heuwe. rawr x3
 
-## Méthodes
+## m-méthodes
 
-_Pas de méthode spécifique, mais cette interface hérite des méthodes de {{domxref("HTMLElement")}}._
+_pas d-de méthode spécifique, mya mais cette intewface héwite des méthodes de {{domxwef("htmwewement")}}._
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML {{HTMLElement("time")}} implémentant cette interface.
+- w'éwément h-htmw {{htmwewement("time")}} impwémentant cette i-intewface. nyaa~~
