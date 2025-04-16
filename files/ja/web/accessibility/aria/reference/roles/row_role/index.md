@@ -30,7 +30,7 @@ original_slug: Web/Accessibility/ARIA/Roles/row_role
 
 ## 説明
 
-行ロール (`role="row"`) 要素は、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)) 内の行であり、任意で行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)) 内の行です。 行は、静的な表構造内の 1 つ以上のセル ([`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role))、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role))、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role))、行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)) のコンテナーです。 可能な限り、ネイティブな [HTML の `<tr>`](/ja/docs/Web/HTML/Element/tr) 要素を使用することを強く推奨します。
+行ロール (`role="row"`) 要素は、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)) 内の行であり、任意で行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)) 内の行です。 行は、静的な表構造内の 1 つ以上のセル ([`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role))、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role))、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role))、行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)) のコンテナーです。 可能な限り、ネイティブな [HTML の `<tr>`](/ja/docs/Web/HTML/Reference/Elements/tr) 要素を使用することを強く推奨します。
 
 ARIA の行を作成するには、コンテナー要素に行ロール (`role="row"`) を追加します。 その行は、グリッド、表、ツリーグリッド内にネストするべきです。 行のグループは、グリッド、表、ツリーグリッド内に直接ネストすることも、これらのコンテナー内の行グループ内にネストすることもできます。 それぞれの行には子のセルが含まれています。 これらのセルには、列や行のヘッダー、グリッドや普通のセルとさまざまな種類のセルがあります。
 
@@ -206,6 +206,6 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 ## 関連情報
 
-- [HTML の表の行要素](/ja/docs/Web/HTML/Element/tr)
+- [HTML の表の行要素](/ja/docs/Web/HTML/Reference/Elements/tr)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

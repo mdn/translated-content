@@ -1,17 +1,13 @@
 ---
 title: 軸
 slug: Web/XML/XPath/Reference/Axes
-original_slug: Web/XPath/Reference/Axes
 l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-[XPath](/ja/docs/Web/XML/XPath) 仕様では 13 種類の軸 (Axis) が定められています。軸はコンテキストノードとの関連性を表し、ツリー上でのノードのコンテキストノードからの相対的な位置を示すのに用いられます。
 [XPath](/ja/docs/Web/XML/XPath) 仕様では 13 種類の軸 (Axis) が定められています。軸はコンテキストノードとの関連性を表し、ツリー上でのノードのコンテキストノードからの相対的な位置を示すのに用いられます。
 
-XPath 式の使用に関するより詳しい情報は、 [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)の記事の最後の[さらなる読み物](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#さらなる読み物)の節を参照してください。また、[XPath 仕様書の 'axes' の節](https://www.w3.org/TR/xpath-30/#axes)も参照してください。
+XPath 式の使用に関するより詳しい情報は、 [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)ガイドの[参考文献](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading)の節を参照してください。また、[XPath 仕様書の 'axes' の節](https://www.w3.org/TR/xpath-30/#axes)も参照してください。
 
 - `ancestor`
   - : コンテキストノードの親ノードからルートノードまでのすべての祖先を示します。

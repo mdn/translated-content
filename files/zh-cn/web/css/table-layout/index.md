@@ -161,4 +161,4 @@ td {
 
 ## 参见
 
-- [`<table>`](/zh-CN/docs/Web/HTML/Element/table)
+- [`<table>`](/zh-CN/docs/Web/HTML/Reference/Elements/table)

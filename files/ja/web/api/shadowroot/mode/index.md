@@ -13,7 +13,7 @@ l10n:
 
 シャドウルートの `mode` が "`closed`" であった場合、シャドウルートの内部的な実装は JavaScript からアクセスできず、変更できなくなります。例えば、 {{HTMLElement("video")}} の内部の実装は JavaScript からアクセスも変更もできないのと同様になります。
 
-このプロパティ値を設定するには、{{domxref("Element.attachShadow()")}} に渡すオブジェクトの `options.mode` プロパティを使用するか、シャドウルートを宣言的に作成する場合は、[`<template>`](/ja/docs/Web/HTML/Element/template) 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Element/template#shadowrootmode) 属性を使用します。
+このプロパティ値を設定するには、{{domxref("Element.attachShadow()")}} に渡すオブジェクトの `options.mode` プロパティを使用するか、シャドウルートを宣言的に作成する場合は、[`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) 要素の [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性を使用します。
 
 ### 値
 

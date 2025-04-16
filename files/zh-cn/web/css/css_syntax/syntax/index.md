@@ -41,7 +41,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 ![css syntax - ruleset.png](ruleset.png)
 
-一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 [层叠（cascade)](/zh-CN/docs/CSS/Getting_Started/Cascading_and_inheritance) 算法。
+一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为[层叠（cascade）](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)算法。
 
 _有一点需要注意的是，尽管用一组选择器来定义的单个规则集，比用多个单一选择器来定义的多个规则集更加简洁，但这却不适用于规则集的有效性。_
 

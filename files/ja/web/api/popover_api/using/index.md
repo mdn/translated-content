@@ -11,7 +11,7 @@ l10n:
 
 ## 宣言的なポップオーバーの作成
 
-最も単純な形では、ポップオーバーのコンテンツを含む HTML 要素に [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を追加すれば、ポップオーバーが作成されます。また、ポップオーバーとそのコントロールを関連付けるために `id` が必要です。
+最も単純な形では、ポップオーバーのコンテンツを含む HTML 要素に [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を追加すれば、ポップオーバーが作成されます。また、ポップオーバーとそのコントロールを関連付けるために `id` が必要です。
 
 ```html
 <div id="mypopover" popover>ポップオーバーコンテンツ</div>
@@ -20,7 +20,7 @@ l10n:
 > [!NOTE]
 > 値なしで `popover` 属性を追加すると、 `popover="auto"` を設定するのと同じになります。
 
-この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、いくつかの制御ボタンを追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することすることにより、ポップオーバー制御ボタンに設定することができます。
+この属性を追加すると、{{cssxref("display", "display: none")}} をその要素に設定することで、ページ読み込み時に非表示にすることができます。ポップオーバーの表示・非表示を切り替えるには、いくつかの制御ボタンを追加する必要があります。{{htmlelement("button")}}（または {{htmlelement("input")}} の `type="button"`）に [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を、制御するポップオーバーの ID を値として設定することすることにより、ポップオーバー制御ボタンに設定することができます。
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>
@@ -29,7 +29,7 @@ l10n:
 
 既定では、ボタンはトグルボタンになっています。繰り返し押すと、ポップオーバーの表示と非表示が切り替わります。
 
-この動作を変更したい場合は、 [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を使用します - これは `"hide"`、`"show"`、`"toggle"` の何れかの値を取ります。例えば、表示ボタンと非表示ボタンを別個に作成するには、次のようにします。
+この動作を変更したい場合は、 [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を使用します - これは `"hide"`、`"show"`、`"toggle"` の何れかの値を取ります。例えば、表示ボタンと非表示ボタンを別個に作成するには、次のようにします。
 
 ```html
 <button popovertarget="mypopover" popovertargetaction="show">
@@ -80,7 +80,7 @@ l10n:
 
 JavaScript API を使用してポップオーバーを制御することもできます。
 
-{{domxref("HTMLElement.popover")}} プロパティを使用して、[`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性を取得したり設定したりすることができます。これを使用して JavaScript でポップオーバーを作成することができ、機能検出にも利用できます。例えばこのようになります。
+{{domxref("HTMLElement.popover")}} プロパティを使用して、[`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を取得したり設定したりすることができます。これを使用して JavaScript でポップオーバーを作成することができ、機能検出にも利用できます。例えばこのようになります。
 
 ```js
 function supportsPopover() {
@@ -90,8 +90,8 @@ function supportsPopover() {
 
 同様に、
 
-- {{domxref("HTMLButtonElement.popoverTargetElement")}} と {{domxref("HTMLInputElement.popoverTargetElement")}} は [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性に相当し、ポップオーバーに対する制御ボタンの設定を行うことができますが、プロパティ値としては制御すべきポップオーバーの DOM 要素の参照を取ります。
-- {{domxref("HTMLButtonElement.popoverTargetAction")}} と {{domxref("HTMLInputElement.popoverTargetAction")}} は HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) グローバル属性に相当し、制御ボタンがもたらすアクションを指定することができるようにします。
+- {{domxref("HTMLButtonElement.popoverTargetElement")}} と {{domxref("HTMLInputElement.popoverTargetElement")}} は [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当し、ポップオーバーに対する制御ボタンの設定を行うことができますが、プロパティ値としては制御すべきポップオーバーの DOM 要素の参照を取ります。
+- {{domxref("HTMLButtonElement.popoverTargetAction")}} と {{domxref("HTMLInputElement.popoverTargetAction")}} は HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) グローバル属性に相当し、制御ボタンがもたらすアクションを指定することができるようにします。
 
 この 3 つを組み合わせると、次のようにポップオーバーとその制御ボタンをプログラム的に設定することができます。
 
@@ -328,7 +328,7 @@ CSSのトランジションでポップオーバーをアニメーションさ�
 
 #### HTML
 
-この HTML では、 {{htmlelement("div")}} 要素がポップオーバーになるよう、グローバル属性の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) で宣言されており、 {{htmlelement("button")}} 要素をポップオーバーの表示コントロールとして指定されています。
+この HTML では、 {{htmlelement("div")}} 要素がポップオーバーになるよう、グローバル属性の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) で宣言されており、 {{htmlelement("button")}} 要素をポップオーバーの表示コントロールとして指定されています。
 
 ```html-nolint
 <button popovertarget="mypopover">ポップオーバーを表示</button>

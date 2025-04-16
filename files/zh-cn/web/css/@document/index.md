@@ -37,7 +37,7 @@ l10n:
 
 提供给 `regexp()` 函数的正则表达式中的转义字符必须再次进行一次 CSS 转义。例如，一个句号（`.`）在正则表达式中匹配任何字符。如果想要匹配一个真正的句号，必须首先按照正则表达式的规则转义一次（变为 `\.`）然后再使用 CSS 规则对该字符串进行转义（转换为 `\\.`）。
 
-`@document` 目前只在 Firefox 火狐浏览器中支持。如果你想在非 Firefox 火狐浏览器中使用此功能，你可以尝试使用由 @An-Error94 提供的 [polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill)，它使用了用户脚本、[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)和[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)的组合。
+`@document` 目前只在 Firefox 火狐浏览器中支持。如果你想在非 Firefox 火狐浏览器中使用此功能，你可以尝试使用由 @An-Error94 提供的 [polyfill](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill)，它使用了用户脚本、[data-\* 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)和[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)的组合。
 
 > [!NOTE]
 > 这个属性还有一个带有 `-moz-` 的前缀版本——`@-moz-document`。在 Firefox 火狐浏览器 59 的 Nightly 和 Beta 版本中，此版本已被限制仅在用户和 UA 样式表中使用——这是一个旨在减轻潜在的 CSS 注入攻击的实验性特性。（请参阅 [Firefox bug 1035091](https://bugzil.la/1035091)）。

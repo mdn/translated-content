@@ -55,7 +55,7 @@ slug: Web/API/Web_components
 
   - : &#x20;
 
-    - Глобальный атрибут HTML [`is`](/ru/docs/Web/HTML/Global_attributes#is): позволяет указать, что стандартный элемент HTML должен вести себя как зарегистрированный встроенный пользовательский элемент.
+    - Глобальный атрибут HTML [`is`](/ru/docs/Web/HTML/Reference/Global_attributes#is): позволяет указать, что стандартный элемент HTML должен вести себя как зарегистрированный встроенный пользовательский элемент.
     - Параметр «is» метода {{domxref("Document.createElement()")}}: позволяет создать экземпляр стандартного HTML-элемента, который ведёт себя как заданный зарегистрированный настраиваемый встроенный элемент.
 
 - Псевдоклассы CSS
@@ -71,7 +71,7 @@ slug: Web/API/Web_components
 
   - : Псевдоэлементы, относящиеся конкретно к настраиваемым элементам:
 
-    - {{cssxref("::part")}}: Представляет любой элемент в [теневом дереве](/ru/docs/Web/API/Web_components/Using_shadow_DOM), имеющий соответствующий атрибут [`part`](/ru/docs/Web/HTML/Global_attributes#part).
+    - {{cssxref("::part")}}: Представляет любой элемент в [теневом дереве](/ru/docs/Web/API/Web_components/Using_shadow_DOM), имеющий соответствующий атрибут [`part`](/ru/docs/Web/HTML/Reference/Global_attributes#part).
 
 ### Shadow DOM
 

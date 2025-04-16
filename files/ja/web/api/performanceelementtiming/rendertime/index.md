@@ -22,7 +22,7 @@ l10n:
 
 ### `renderTime` のログ出力
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.renderTime` を呼び出すと、画像要素のレンダリング時刻を返します。
+この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.renderTime` を呼び出すと、画像要素のレンダリング時刻を返します。
 
 ```html
 <img

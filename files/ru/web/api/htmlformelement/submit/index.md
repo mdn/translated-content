@@ -10,7 +10,7 @@ slug: Web/API/HTMLFormElement/submit
 Этот метод похож, но не идентичен кнопке {{HtmlElement("button")}}. , который активирует отправку формы. Однако при непосредственном вызове этого метода:
 
 - Событие [`submit`](/ru/docs/Web/API/HTMLFormElement/submit_event) не инициировано. В частности, обработчик события {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} для данной формы не запускается.
-- [Проверка ограничений](/ru/docs/Web/HTML/Constraint_validation) не запускается.
+- [Проверка ограничений](/ru/docs/Web/HTML/Guides/Constraint_validation) не запускается.
 
 Метод {{domxref("HTMLFormElement.requestSubmit()")}} идентичен кнопке {{HtmlElement("button")}} , которая активирует отправку формы и не имеет различий, указанных выше.
 

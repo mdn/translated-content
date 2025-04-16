@@ -22,7 +22,7 @@ slug: Mozilla/Firefox/Releases/96
 - {{CSSxRef("counter-reset")}} プロパティで、_逆順の_ [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) を生成する `reversed()` 関数をサポートしました。これは、降順の番号つき要素を意図するものです。
   これは `list-item` カウンターと合わせて、番号つきリストを自動的に、リスト内の要素の数から始まる逆順にするために使用します。
   (`list-item` は {{HTMLElement("ol")}} を使用して生成したリストのような番号つきリストへ自動的に適用されるカウンターです)。
-  Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Element/ol#attr-reversed) をサポートするため内部的に使用しています
+  Firefox はこの機能を、`<ol>` の [`reversed` 属性](/ja/docs/Web/HTML/Reference/Elements/ol#attr-reversed) をサポートするため内部的に使用しています
   ([Firefox バグ 1706346](https://bugzil.la/1706346))。
 
 ### JavaScript

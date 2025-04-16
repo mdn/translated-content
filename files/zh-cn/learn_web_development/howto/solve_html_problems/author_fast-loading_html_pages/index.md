@@ -130,13 +130,13 @@ CDN 是一个分布在不同地理位置的服务器网络，它们协同工作�
 table-layout: fixed;
 ```
 
-并且用用 [`<col>`](/zh-CN/docs/Web/HTML/Element/col) 和 [`<colgroup>`](/zh-CN/docs/Web/HTML/Element/colgroup) 元素来指定列宽。
+并且用用 [`<col>`](/zh-CN/docs/Web/HTML/Reference/Elements/col) 和 [`<colgroup>`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup) 元素来指定列宽。
 
 ### 对图片使用懒加载
 
 默认情况下，图片是**立即**加载的；也就是说，一旦图片在 HTML 中被处理，就会立即获取并渲染。所有立即加载的图片都会在窗口的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件发送之前得到渲染。如果改用懒加载图像，浏览器就会暂缓加载图像，直到需要绘制{{Glossary("visual viewport","可视视口")}}时再加载。
 
-要将图片标记为“懒加载”，可指定其 [`loading`](/zh-CN/docs/Web/HTML/Element/img#loading) 属性的值为 `lazy`。这样设置后，只有在需要时才会加载图片。
+要将图片标记为“懒加载”，可指定其 [`loading`](/zh-CN/docs/Web/HTML/Reference/Elements/img#loading) 属性的值为 `lazy`。这样设置后，只有在需要时才会加载图片。
 
 ```html
 <img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
@@ -154,7 +154,7 @@ table-layout: fixed;
 
 ### 尽可能使用 async 和 defer
 
-确保 JavaScript 脚本兼容 [async](/zh-CN/docs/Web/HTML/Element/script#%e5%b1%9e%e6%80%a7) 和 [defer](/zh-CN/docs/Web/HTML/Element/script#%e5%b1%9e%e6%80%a7)，任何时候都要尽可能使用 [async](/zh-CN/docs/Web/HTML/Element/script#%e5%b1%9e%e6%80%a7)，特别是当你有较多的 script 标签时。
+确保 JavaScript 脚本兼容 [async](/zh-CN/docs/Web/HTML/Reference/Elements/script#%e5%b1%9e%e6%80%a7) 和 [defer](/zh-CN/docs/Web/HTML/Reference/Elements/script#%e5%b1%9e%e6%80%a7)，任何时候都要尽可能使用 [async](/zh-CN/docs/Web/HTML/Reference/Elements/script#%e5%b1%9e%e6%80%a7)，特别是当你有较多的 script 标签时。
 
 这样在加载 JavaScript 的过程中页面就不会重新绘制，否则，浏览器在不具有这些特性的 script 标签后就不会重绘任何东西。
 

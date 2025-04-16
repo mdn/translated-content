@@ -133,13 +133,13 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 table-layout: fixed;
 ```
 
-そして、 [`<col>`](/ja/docs/Web/HTML/Element/col) 要素および [`<colgroup>`](/ja/docs/Web/HTML/Element/colgroup) 要素を用いて列の幅を指定しましょう。
+そして、 [`<col>`](/ja/docs/Web/HTML/Reference/Elements/col) 要素および [`<colgroup>`](/ja/docs/Web/HTML/Reference/Elements/colgroup) 要素を用いて列の幅を指定しましょう。
 
 ### 画像の遅延読み込みを使用する
 
 既定では、画像は**熱心に**読み込まれます。つまり、 HTML で処理されると同時に画像が読み込まれ、表示されます。熱心に読み込まれた画像は、ウィンドウの [`load`](/ja/docs/Web/API/Window/load_event) イベントが送られる前に表示されます。画像の遅延読み込みに切り替えるとブラウザーは、{{Glossary("visual viewport", "視覚的ビューポート")}}の描画に必要になるまで、画像の読み込みを保留します。
 
-画像に遅延読み込みのマークを付けるには、 [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性に `lazy` という値を指定してください。この設定により、画像は必要なときにのみ読み込まれます。
+画像に遅延読み込みのマークを付けるには、 [`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性に `lazy` という値を指定してください。この設定により、画像は必要なときにのみ読み込まれます。
 
 ```html
 <img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
@@ -157,7 +157,7 @@ table-layout: fixed;
 
 ### 可能なら async や defer を使用する
 
-[async](/ja/docs/Web/HTML/Element/script#属性) と [defer](/ja/docs/Web/HTML/Element/script#属性) 属性の両方と互換性のある JavaScript を使用し、特に、複数の script 要素がある場合、可能ならば [async](/ja/docs/Web/HTML/Element/script#属性) をいつでも使用してください。
+[async](/ja/docs/Web/HTML/Reference/Elements/script#属性) と [defer](/ja/docs/Web/HTML/Reference/Elements/script#属性) 属性の両方と互換性のある JavaScript を使用し、特に、複数の script 要素がある場合、可能ならば [async](/ja/docs/Web/HTML/Reference/Elements/script#属性) をいつでも使用してください。
 
 これにより、ページで JavaScript が読み込み中である間はレンダリングを中断できます。さもなければ、ブラウザーはこれらの属性を持たない script 要素の後にあるコンテンツをレンダリングしないでしょう。
 

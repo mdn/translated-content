@@ -36,7 +36,7 @@ toDataURL(type, quality)
 
 包含請求的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
 
-如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Element/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
+如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Reference/Elements/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
 
 ### 例外
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-**`shadowRootClonable`** プロパティは、関連付けられた [`<template>`](/ja/docs/Web/HTML/Element/template) 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性の値を反映します。
+**`shadowRootClonable`** プロパティは、関連付けられた [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性の値を反映します。
 
 このプロパティは開発者にとって有用ではないことに注意してください。
 `<template>` 要素を使用して宣言的に [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) を作成する場合は、このオブジェクトおよびプロパティは存在しません。
@@ -16,7 +16,7 @@ l10n:
 
 ## 値
 
-関連付けられた [`<template>`](/ja/docs/Web/HTML/Element/template) 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性の値を反映します。
+関連付けられた [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性の値を反映します。
 
 ## 仕様書
 
@@ -28,5 +28,5 @@ l10n:
 
 ## 関連情報
 
-- [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable)（`<template>` 要素の属性）
+- [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable)（`<template>` 要素の属性）
 - [`ShadowRoot.clonable`](/ja/docs/Web/API/ShadowRoot/clonable)

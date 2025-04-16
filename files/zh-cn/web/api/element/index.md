@@ -40,7 +40,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 - {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
   - : 返回代表元素内部宽度的数值。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : 一个字符串，反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Attributes/elementtiming) 属性，该属性在 {{domxref("PerformanceElementTiming")}} API 中标记了一个观察元素。
+  - : 一个字符串，反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) 属性，该属性在 {{domxref("PerformanceElementTiming")}} API 中标记了一个观察元素。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : 返回此元素的第一个子元素。
 - {{DOMxRef("Element.id")}}
@@ -286,7 +286,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 - {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
   - : 执行脚本时触发此事件。
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : 浏览器在（处于[_被找到前隐藏_](/zh-CN/docs/Web/HTML/Global_attributes/hidden)状态的）元素因用户已通过“在页面中查找”功能或片段导航找到了该内容而即将显示时触发。
+  - : 浏览器在（处于[_被找到前隐藏_](/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden)状态的）元素因用户已通过“在页面中查找”功能或片段导航找到了该内容而即将显示时触发。
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : 脚本即将执行时触发此事件。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}

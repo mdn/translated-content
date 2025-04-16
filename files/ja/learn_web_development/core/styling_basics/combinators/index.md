@@ -244,7 +244,7 @@ ul > li[class="a"] {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors)を参照してください。
 
 ## まとめ
 

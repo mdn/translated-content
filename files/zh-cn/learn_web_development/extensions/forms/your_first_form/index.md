@@ -67,7 +67,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 <form action="/my-handling-form-page" method="post"></form>
 ```
 
-这个元素正式定义了一个表单。就像 {{HTMLelement("section")}} 元素或 {{HTMLelement("footer")}} 元素，它是一个容器元素，但它也支持一些特定的属性来配置表单的行为方式。它的所有属性都是可选的，但实践中最好至少要设置 [`action`](/zh-CN/docs/Web/HTML/Element/form#attr-action) 属性和 [`method`](/zh-CN/docs/Web/HTML/Element/form#attr-method) 属性。
+这个元素正式定义了一个表单。就像 {{HTMLelement("section")}} 元素或 {{HTMLelement("footer")}} 元素，它是一个容器元素，但它也支持一些特定的属性来配置表单的行为方式。它的所有属性都是可选的，但实践中最好至少要设置 [`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#attr-action) 属性和 [`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#attr-method) 属性。
 
 - `action` 属性定义了在提交表单时，应该把所收集的数据送给谁（URL）去处理。
 - `method` 属性定义了发送数据的 HTTP 方法（通常是 `get` 或 `post`）。
@@ -108,7 +108,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 
 更新你的表单代码，使其看起来像上面的代码。
 
-使用 {{HTMLelement("li")}} 元素可以使我们更加方便地构造我们自己的代码，并且更容易样式化（参见本文后面的内容）。为了可用性和无障碍，我们为每个表单控件包含一个明确的标签。注意在所有 {{HTMLElement("label")}} 元素上使用 [`for`](/zh-CN/docs/Web/HTML/Attributes/for) 属性；它是将标签链接到表单控件的一种正规方式。这个属性引用对应的表单控件的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)。
+使用 {{HTMLelement("li")}} 元素可以使我们更加方便地构造我们自己的代码，并且更容易样式化（参见本文后面的内容）。为了可用性和无障碍，我们为每个表单控件包含一个明确的标签。注意在所有 {{HTMLElement("label")}} 元素上使用 [`for`](/zh-CN/docs/Web/HTML/Reference/Attributes/for) 属性；它是将标签链接到表单控件的一种正规方式。这个属性引用对应的表单控件的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)。
 
 这样做有一些好处。最明显的一个好处是允许用户单击标签以激活相应的表单控件，它还有助于使用屏幕阅读器的用户读取名称。如果你想更好地理解这个属性的其他好处，你可以找到[如何构造 web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)的详细信息。
 
@@ -117,7 +117,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 - 在我们的简单示例中，我们使用值 {{HTMLelement("input/text", "text")}} 作为第一个输入——这个属性的默认值。它表示一个基本的单行文本字段，接受任何类型的文本输入。
 - 对于第二个输入，我们使用值 {{HTMLelement("input/email", "email")}}，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，你将了解到更多关于[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)的信息。
 
-最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性，如下所示：
+最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性，如下所示：
 
 ```html
 <input type="text" value="by default this element is filled with this text" />
@@ -241,7 +241,7 @@ button {
 
 ## 向你的 web 服务器发送表单数据
 
-最后一部分，也许是最棘手的部分，是在服务器端处理表单数据。{{HTMLelement("form")}} 元素通过 [`action`](/zh-CN/docs/Web/HTML/Element/form#attr-action) 属性和 [`method`](/zh-CN/docs/Web/HTML/Element/form#attr-method) 属性来定义发送数据的位置和方式。
+最后一部分，也许是最棘手的部分，是在服务器端处理表单数据。{{HTMLelement("form")}} 元素通过 [`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#attr-action) 属性和 [`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#attr-method) 属性来定义发送数据的位置和方式。
 
 但这还不够。我们需要为每个表单控件提供 `name` 属性。这些名称对客户端和服务端都很重要：在浏览器端，它告诉浏览器给每个数据的名称，在服务器端，它允许服务器按名称处理每个数据块。表单数据以**名称/值对**的形式发送到服务器。
 

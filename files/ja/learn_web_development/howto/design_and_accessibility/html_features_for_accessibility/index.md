@@ -58,7 +58,7 @@ l10n:
 
 ## 画像の alt 属性
 
-すべての画像には [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性を設定すべきです。画像が純粋に装飾であり、文書のコンテンツやコンテキストに何の意味も与えない場合、 `alt` 属性は空ですが存在する必要があります。オプションとして、 [`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) を追加することもできます。それ以外の画像にはすべて `alt` 属性を設定し、他のコンテンツは読めても画像が見えないユーザーに役立つ方法で[画像を説明する代替テキスト](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)を提供すべきです。画像を読み込むことができない人に、画像をどのように説明するかを考えてみてください。それが `alt` 属性の値として記載すべき情報です。
+すべての画像には [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性を設定すべきです。画像が純粋に装飾であり、文書のコンテンツやコンテキストに何の意味も与えない場合、 `alt` 属性は空ですが存在する必要があります。オプションとして、 [`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) を追加することもできます。それ以外の画像にはすべて `alt` 属性を設定し、他のコンテンツは読めても画像が見えないユーザーに役立つ方法で[画像を説明する代替テキスト](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)を提供すべきです。画像を読み込むことができない人に、画像をどのように説明するかを考えてみてください。それが `alt` 属性の値として記載すべき情報です。
 
 ```html
 <!-- 装飾的な画像 -->
@@ -69,7 +69,7 @@ l10n:
   role="img" />
 ```
 
-同じコンテンツに対する `alt` 属性であっても、文脈によって異なるかもしれません。次の例では、 HTML の [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素の使い方を開発者に教える文書のページ読み込みの進捗を表示するために、進捗バーの代わりにアニメーション gif が使われています。
+同じコンテンツに対する `alt` 属性であっても、文脈によって異なるかもしれません。次の例では、 HTML の [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素の使い方を開発者に教える文書のページ読み込みの進捗を表示するために、進捗バーの代わりにアニメーション gif が使われています。
 
 ```html
 <img alt="20% complete" src="load-progress.gif" />

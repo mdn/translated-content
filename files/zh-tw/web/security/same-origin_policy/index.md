@@ -52,9 +52,9 @@ document.domain = "company.com";
 - CSS 的 `<link rel="stylesheet" href="...">`，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622939(v=vs.85)>)、[Firefox](https://www.mozilla.org/security/advisories/mfsa2010-46/)、[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=9877)、[Safari](https://support.apple.com/zh-tw/104158)（請至 CVE-2010-0051），以及 [Opera](https://www.opera.com/support/kb/view/943/)。
 - {{htmlelement("img")}}的影像；支援格式有 PNG, JPEG, GIF, BMP, SVG 等等
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
-- [`<object>`](/zh-TW/docs/Web/HTML/Element/object), [`<embed>`](/zh-TW/docs/Web/HTML/Element/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
+- [`<object>`](/zh-TW/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/zh-TW/docs/Web/HTML/Reference/Elements/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
 - [`@font-face`](/zh-TW/docs/Web/CSS/@font-face) 的字型；有些瀏覽器允許跨來源字型，有些則不。
-- [`<frame>`](/zh-TW/docs/Web/HTML/Element/frame)以及[`<iframe>`](/zh-TW/docs/Web/HTML/Element/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/Web/HTTP/Reference/Headers/X-Frame-Options)標頭避免。
+- [`<frame>`](/zh-TW/docs/Web/HTML/Reference/Elements/frame)以及[`<iframe>`](/zh-TW/docs/Web/HTML/Reference/Elements/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/Web/HTTP/Reference/Headers/X-Frame-Options)標頭避免。
 
 ### 如何允許跨來源存取
 

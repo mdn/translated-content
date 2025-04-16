@@ -863,7 +863,7 @@ function insertAtCaret(text) {
 
 ## 技能测试！
 
-你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[技能测试：条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals)。
+你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[技能测试：条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals)。
 
 ## 总结
 

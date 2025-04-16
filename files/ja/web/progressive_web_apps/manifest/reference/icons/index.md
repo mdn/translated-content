@@ -67,7 +67,7 @@ l10n:
         SVG のようなベクター形式では、拡大縮小が可能であることをを示すために `any` を使用することができます。
         sizes` を指定しない場合、アイコンの選択と表示は、ブラウザーの実装によって異なる場合があります。
 
-        なお、 `sizes` の書式は HTML の `<link>` 要素の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性と似ています。
+        なお、 `sizes` の書式は HTML の `<link>` 要素の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性と似ています。
 
     - `type` {{Optional_Inline}}
 

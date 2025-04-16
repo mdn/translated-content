@@ -45,8 +45,8 @@ l10n:
 
   以下の HTML グローバル属性をサポートしました:
 
-  - [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget)
-  - [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction)
+  - [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget)
+  - [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
   ([Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993))
 
@@ -62,7 +62,7 @@ l10n:
   - `contentlost` が発生した後、ブラウザーはデフォルトで失われたコンテキストの再開を試みますが、コードでイベントをキャンセルするとこの動作を抑止できます。
   - オフスクリーンキャンバスも同じ方法で監視できますが、[`OffScreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) の [`contextlost`](/ja/docs/Web/API/OffscreenCanvas/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/OffscreenCanvas/contextrestored_event) イベントを [`OffscreenCanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D#context) とともに使用します。
 
-- `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性、およびこれを反映して `HTMLTemplateElement` インターフェイスの [`shadowRootClonable`](/ja/docs/Web/API/HTMLTemplateElement/shadowRootClonable) プロパティをサポートしました。
+- `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性、およびこれを反映して `HTMLTemplateElement` インターフェイスの [`shadowRootClonable`](/ja/docs/Web/API/HTMLTemplateElement/shadowRootClonable) プロパティをサポートしました。
   これらは、[`<template>`] 要素を使用して宣言的に作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティを設定します
   ([Firefox bug 1880188](https://bugzil.la/1880188))。
 
@@ -115,7 +115,7 @@ l10n:
 
 - **区分コンテンツ内の `<h1>` のユーザーエージェントスタイル:** `layout.css.h1-in-section-ua-styles.enabled`。
 
-  [区分要素](/ja/docs/Web/HTML/Content_categories#sectioning_content) `<article>`、`<aside>`、`<nav>`、`<section>` の内部にある `<h1>` 見出しのフォントサイズは小さくなりません。HTML 仕様書からアウトラインのアルゴリズムが [削除された](https://github.com/whatwg/html/pull/7829) ため、区分要素の内部にある `<h1>` のユーザーエージェントスタイルは適切でなくなりました ([Firefox bug 1883896](https://bugzil.la/1883896))。
+  [区分要素](/ja/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`、`<aside>`、`<nav>`、`<section>` の内部にある `<h1>` 見出しのフォントサイズは小さくなりません。HTML 仕様書からアウトラインのアルゴリズムが [削除された](https://github.com/whatwg/html/pull/7829) ため、区分要素の内部にある `<h1>` のユーザーエージェントスタイルは適切でなくなりました ([Firefox bug 1883896](https://bugzil.la/1883896))。
 
   > **注記:** この機能の設定は逆に機能します。Nightly ビルドでは `false` に設定しており、区分要素の内部にある見出しのユーザーエージェントスタイルを削除します。その他すべてのチャンネルでは `true` に設定しており、入れ子になった見出し用の既存のユーザーエージェントスタイルを維持します。
 

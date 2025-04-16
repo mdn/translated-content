@@ -23,8 +23,6 @@ console.log(x === y);
 // Expected output: true
 ```
 
-La fuente de este ejemplo interactivo está almacenada en GitHub. Si quieres contribuir al proyecto de ejmplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un 'pull request'.
-
 {{js_property_attributes(0, 0, 0)}}
 
 ## Descripción

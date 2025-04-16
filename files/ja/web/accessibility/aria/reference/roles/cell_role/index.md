@@ -43,11 +43,11 @@ l10n:
 - [role="row"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : `role="row"` の要素は、表形式構造内のセルの行です。 行には、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role))、ツリーグリッド (`treegrid`) 内において、そして任意で行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)) 内において、1 つ以上のセル、グリッドセル、列ヘッダー、行ヘッダーが含まれます。
 - [role="rowgroup"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
-  - : 行はセルの親として必須です。 行グループ (`rowgroup`) は、任意のコンテキスト上の行の親で、子孫となる行との間に関係を確立します。 これは、[HTML 表 (`table`)](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) 要素の [`thead`](/ja/docs/Web/HTML/Element/thead), [`tfoot`](/ja/docs/Web/HTML/Element/tfoot), [`tbody`](/ja/docs/Web/HTML/Element/tbody) 要素と構造的に同等です。
+  - : 行はセルの親として必須です。 行グループ (`rowgroup`) は、任意のコンテキスト上の行の親で、子孫となる行との間に関係を確立します。 これは、[HTML 表 (`table`)](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) 要素の [`thead`](/ja/docs/Web/HTML/Reference/Elements/thead), [`tfoot`](/ja/docs/Web/HTML/Reference/Elements/tfoot), [`tbody`](/ja/docs/Web/HTML/Reference/Elements/tbody) 要素と構造的に同等です。
 - [role="table"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-  - : セルを含む行を見つけることができる、グリッド (`grid`) とツリーグリッド (`treegrid`) と共に 3 つの可能なコンテキストのうちの 1 つ。 表 (`table`) は、セルを、ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Element/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として識別します。
+  - : セルを含む行を見つけることができる、グリッド (`grid`) とツリーグリッド (`treegrid`) と共に 3 つの可能なコンテキストのうちの 1 つ。 表 (`table`) は、セルを、ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として識別します。
 - [role="grid"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-  - : セル (`cell`) とグリッドセル (`gridcell`) を含む行を見つけることができる、表 (`table`) とツリーグリッド (`treegrid`) と共に 3 つの可能なコンテキストのうちの 1 つ。 グリッド (`grid`) は、セルを、ネイティブな HTML [`<table>`](/ja/docs/Web/HTML/Element/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブかもしれない表構造の一部として識別します。
+  - : セル (`cell`) とグリッドセル (`gridcell`) を含む行を見つけることができる、表 (`table`) とツリーグリッド (`treegrid`) と共に 3 つの可能なコンテキストのうちの 1 つ。 グリッド (`grid`) は、セルを、ネイティブな HTML [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブかもしれない表構造の一部として識別します。
 - [role="treegrid"](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
   - : グリッド (`grid`) に似ていますが、ツリー (`tree`) と同じ方法で展開や折りたたみができる行があります。
 
@@ -56,16 +56,16 @@ l10n:
 - [role="gridcell"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
   - : グリッド (`grid`) やツリーグリッド (`treegrid`) 内の行内のセル。
 - [role="columnheader"](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-  - : 列スコープを持つ HTML [`<th>`](/ja/docs/Web/HTML/Element/th) 要素と構造的に同等なヘッダーセル。 プレーンなセルとは異なり、列ヘッダー (`columnheader`) ロールは、対応する列の全てのセルとの関係を確立します。
+  - : 列スコープを持つ HTML [`<th>`](/ja/docs/Web/HTML/Reference/Elements/th) 要素と構造的に同等なヘッダーセル。 プレーンなセルとは異なり、列ヘッダー (`columnheader`) ロールは、対応する列の全てのセルとの関係を確立します。
 - [role="rowheader"](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-  - : 行スコープを持つ HTML [`<th>`](/ja/docs/Web/HTML/Element/th) 要素と構造的に同等なヘッダーセル。 プレーンなセルとは異なり、行ヘッダー (`rowheader`) ロールは、対応する行の全てのセルとの関係を確立します。
+  - : 行スコープを持つ HTML [`<th>`](/ja/docs/Web/HTML/Reference/Elements/th) 要素と構造的に同等なヘッダーセル。 プレーンなセルとは異なり、行ヘッダー (`rowheader`) ロールは、対応する行の全てのセルとの関係を確立します。
 
 #### ステートとプロパティ
 
 - [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
-  - : HTML の [`<th>`](/ja/docs/Web/HTML/Element/th) と [`<td>` 要素の `colspan` 属性](/ja/docs/Web/HTML/Element/td)と同様に、セルにまたがる列数を定義します。
+  - : HTML の [`<th>`](/ja/docs/Web/HTML/Reference/Elements/th) と [`<td>` 要素の `colspan` 属性](/ja/docs/Web/HTML/Reference/Elements/td)と同様に、セルにまたがる列数を定義します。
 - [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-  - : HTML の [`<th>`](/ja/docs/Web/HTML/Element/th) と [`<td>` 要素の `rowspan` 属性](/ja/docs/Web/HTML/Element/td)と同様に、セルにまたがる行数を定義します。
+  - : HTML の [`<th>`](/ja/docs/Web/HTML/Reference/Elements/th) と [`<td>` 要素の `rowspan` 属性](/ja/docs/Web/HTML/Reference/Elements/td)と同様に、セルにまたがる行数を定義します。
 - [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性
   - : `aria-colindex` 属性は、列が DOM から隠されている場合にのみ必要です。 この属性は、値として 1 から表 (`table`)、グリッド (`grid`)、ツリーグリッド (`treegrid`) 内の総列数の間の整数をとります。 `aria-colindex` は、行内の総列数に対する要素の列インデックスまたは位置を定義します。 全ての列が DOM 内にある場合、この属性は必要ありません。
 - [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性
@@ -181,8 +181,8 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 
 - [role="row"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [`role="gridcell"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [HTML `<td>` 要素](/ja/docs/Web/HTML/Element/td)
-- [HTML `<th>` 要素](/ja/docs/Web/HTML/Element/th)
+- [HTML `<td>` 要素](/ja/docs/Web/HTML/Reference/Elements/td)
+- [HTML `<th>` 要素](/ja/docs/Web/HTML/Reference/Elements/th)
 - [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 - [HTML の表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 

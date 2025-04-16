@@ -5,7 +5,7 @@ slug: Web/CSS/:indeterminate
 
 {{CSSRef}}
 
-**`:indeterminate`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、未確定の状態にあるフォーム要素を表します。例えばチェックボックスで HTML の [`indeterminate`](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性が `true` に設定されたもの、ラジオボタンでグループ内がすべて選択されていないもの、 {{HTMLElement("progress")}} 要素で中間の状態などです。
+**`:indeterminate`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、未確定の状態にあるフォーム要素を表します。例えばチェックボックスで HTML の [`indeterminate`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性が `true` に設定されたもの、ラジオボタンでグループ内がすべて選択されていないもの、 {{HTMLElement("progress")}} 要素で中間の状態などです。
 
 ```css
 /* 未確定の状態にある <input> をすべて選択 */
@@ -16,8 +16,8 @@ input:indeterminate {
 
 このセレクターが対象とする要素は以下の通りです。
 
-- [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 要素で、[JavaScript](/ja/docs/Web/JavaScript) によって `indeterminate` プロパティが `true` に設定されている場合
-- [`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio) 要素で、フォーム内の同じ `name` の値を持つすべてのラジオボタンが未選択である場合
+- [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) 要素で、[JavaScript](/ja/docs/Web/JavaScript) によって `indeterminate` プロパティが `true` に設定されている場合
+- [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio) 要素で、フォーム内の同じ `name` の値を持つすべてのラジオボタンが未選択である場合
 - {{HTMLElement("progress")}} 要素で、中間の状態の場合
 
 ## 構文
@@ -129,6 +129,6 @@ progress:indeterminate {
 
 - [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn_web_development/Extensions/Forms)
 - [ウェブフォームの整形](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 要素の [`indeterminate`](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性
+- [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) 要素の [`indeterminate`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性
 - {{HTMLElement("input")}} およびそれを実装している {{domxref("HTMLInputElement")}} インターフェイス
 - {{cssxref(":checked")}} セレクターは、チェックボックスがチェックされているかどうかでスタイル付けすることができます

@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Content-Language
 
 **`Content-Language`** は {{Glossary("entity header", "エンティティヘッダー")}} で、ユーザが自分の好みの言語に応じて区別できるように、オーディエンス向けの言語を記述するために使用されます。
 
-たとえば、"`Content-Language: de-DE`" が設定されている場合、その文書はドイツ語のスピーカーを対象としてます (ただし、文書がドイツ語で記述されていることを示すわけではありません。 たとえば、ドイツ語スピーカーのための語学コースの一部としての英語が書かれているかもしれません。文書が記述されている言語を示す場合は、代わりに [`lang` 属性](/ja/docs/Web/HTML/Global_attributes/lang)を使用します)。
+たとえば、"`Content-Language: de-DE`" が設定されている場合、その文書はドイツ語のスピーカーを対象としてます (ただし、文書がドイツ語で記述されていることを示すわけではありません。 たとえば、ドイツ語スピーカーのための語学コースの一部としての英語が書かれているかもしれません。文書が記述されている言語を示す場合は、代わりに [`lang` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)を使用します)。
 
 `Content-Language` が指定されていない場合、既定ではコンテンツがすべての言語のオーディエンスを対象としています。`Content-Language` ヘッダーをテキスト形式の文書やさまざまな種類のメディアに適用するだけでなく、複数の言語タグを使用することもできます。
 
@@ -64,7 +64,7 @@ Content-Language: de-DE, en-CA
 
 ### 文書が書かれている言語を示す
 
-グローバル [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性は、HTML 要素全体またはその一部の言語を示すために HTML 要素で使用されます。
+グローバル [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性は、HTML 要素全体またはその一部の言語を示すために HTML 要素で使用されます。
 
 ```html
 <html lang="de"></html>
@@ -99,4 +99,4 @@ Content-Language: de, en
 
 - {{HTTPHeader("Accept-Language")}}
 - [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)
-- [HTML の `lang` 属性](/ja/docs/Web/HTML/Global_attributes/lang)
+- [HTML の `lang` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)

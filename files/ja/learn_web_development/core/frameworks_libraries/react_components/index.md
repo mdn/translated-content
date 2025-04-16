@@ -60,7 +60,7 @@ function Todo() {}
 export default Todo;
 ```
 
-ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！`src/App.js` に戻って、最初の [`<li>`](/ja/docs/Web/HTML/Element/li) をコピーし、 `Todo.js` に貼り付けると、以下のようになります。
+ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！`src/App.js` に戻って、最初の [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) をコピーし、 `Todo.js` に貼り付けると、以下のようになります。
 
 ```jsx
 function Todo() {
@@ -191,8 +191,8 @@ export default Todo;
 
 現在、`<Todo />` コンポーネントはすべてのタスクに `todo-0` という `id` 属性を与えています。これは悪い HTML です。
 
-- [id 属性](/ja/docs/Web/HTML/Global_attributes/id) は一意でなければなりません（CSS や JavaScript などで文書フラグメントの一意な識別子として使用されます）。
-- `id` が一意ではない場合、 [label 要素](/ja/docs/Web/HTML/Element/label) の機能が動作しなくなります。
+- [id 属性](/ja/docs/Web/HTML/Reference/Global_attributes/id) は一意でなければなりません（CSS や JavaScript などで文書フラグメントの一意な識別子として使用されます）。
+- `id` が一意ではない場合、 [label 要素](/ja/docs/Web/HTML/Reference/Elements/label) の機能が動作しなくなります。
 
 2 つ目の問題は、このアプリに影響を与えています。 2 つ目のチェックボックスの隣にある "Sleep" という単語をクリックすると、 "Eat" チェックボックスが "Sleep" チェックボックスの代わりに切り替わっていることに気づくでしょう。これは、すべてのチェックボックスの `<label>` 要素が `todo-0` の `htmlFor` 属性を持っているためです。 `<label>` は指定された `id` 属性を持つ最初の要素のみを認識するため、他のラベルをクリックしたときに問題が発生します。
 

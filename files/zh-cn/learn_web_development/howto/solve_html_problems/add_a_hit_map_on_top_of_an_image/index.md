@@ -49,9 +49,9 @@ slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an
 - 图片必须明确指出热点的开始和结束位置。
 - 在任何尺寸的视口下，热点都需要足够大，方便用户可以点击。多大足够呢？[72 × 72 CSS pixels 是一个推荐的最小尺寸，](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) 包括触摸目标之间额外的间隙。在 [50languages.com](http://www.goethe-verlag.com/book2/) (as of time of writing) 上的世界地图可以完美诠释这一点。用户点击 Russia 或 North America 要比 Albania 或 Estonia 容易得多。
 
-插入图片的方式 [和通常一样](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage) (用 {{htmlelement("img")}} 标签 和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本). 如果图片只是用作导航容器，你可以设置图片的 `alt=""`，改在后面 {{htmlelement('area')}} 的 [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt) 中提供合适的文本。
+插入图片的方式 [和通常一样](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage) (用 {{htmlelement("img")}} 标签 和 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本). 如果图片只是用作导航容器，你可以设置图片的 `alt=""`，改在后面 {{htmlelement('area')}} 的 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/area#alt) 中提供合适的文本。
 
-你将需要一个特殊的 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性。为图像映射提供一个唯一标识，这个标识不能包含空格。将这个标识 (preceded by a hash) 作为 `usemap` 属性的值：
+你将需要一个特殊的 [`usemap`](/zh-CN/docs/Web/HTML/Reference/Elements/img#usemap) 属性。为图像映射提供一个唯一标识，这个标识不能包含空格。将这个标识 (preceded by a hash) 作为 `usemap` 属性的值：
 
 ```html
 <img src="image-map.png" alt="" usemap="#example-map-1" />
@@ -59,7 +59,7 @@ slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an
 
 ### 步骤 2: 激活你的热点
 
-在这一步中，将所有代码放置 {{htmlelement('map')}} 标签中。`<map>` 只需要一个属性，设置 [`name`](/zh-CN/docs/Web/HTML/Element/map#name) 和上面 `usemap` 属性一样的 map 值：
+在这一步中，将所有代码放置 {{htmlelement('map')}} 标签中。`<map>` 只需要一个属性，设置 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/map#name) 和上面 `usemap` 属性一样的 map 值：
 
 ```html
 <map name="example-map-1"> </map>
@@ -69,7 +69,7 @@ slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an
 
 `<area>` 元素是空元素，但是需要包含 4 个属性：
 
-- [`shape`](/zh-CN/docs/Web/HTML/Element/area#shape) [`coords`](/zh-CN/docs/Web/HTML/Element/area#coords)
+- [`shape`](/zh-CN/docs/Web/HTML/Reference/Elements/area#shape) [`coords`](/zh-CN/docs/Web/HTML/Reference/Elements/area#coords)
 
   - : `shape` 有 4 个值：`circle`, `rect`, `poly`, and `default`. ( `default` `<area>` 表示除去你定义的其他热点的剩余空间.) 根据你选择的形状需要在 `coords` 中提供对应的坐标信息。
 
@@ -81,9 +81,9 @@ slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an
 
     In case of overlap, source order carries the day.
 
-- [`href`](/zh-CN/docs/Web/HTML/Element/area#href)
+- [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/area#href)
   - : 你需要链接的资源地址。如果你不希望当前区域链接到任何地方 (比方说，如果你正在创建一个空心圆)，你可以将这个属性保留为空。
-- [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt)
+- [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/area#alt)
   - : 一个必选属性，告诉用户链接的指向或功能说明。`alt` 文本仅在图像不可用时显示。请参阅我们的[guidelines for writing accessible link text](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#writing_accessible_link_text)。如果 `href` 属性为空并且整个图像已经具备了 `alt` 属性，则可以设置 `alt=""`。
 
 ```html

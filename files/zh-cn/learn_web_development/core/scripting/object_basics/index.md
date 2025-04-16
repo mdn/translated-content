@@ -401,7 +401,7 @@ const myNotification = new Notification("你好！");
 
 ## 技能测试！
 
-你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“技能测试：对象基础”](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics)。
+你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“技能测试：对象基础”](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Object_basics)。
 
 ## 总结
 

@@ -27,5 +27,5 @@ l10n:
 - {{domxref("HTMLTextAreaElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("textarea")}}
-- HTML の [`form`](/ja/docs/Web/HTML/Element/textarea#form) 属性
+- HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/textarea#form) 属性
 - [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
