@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
 ---
 
-**`br`** 语句跳转到循环标签、块标签或 if 标签。
+**`br`** 语句跳转到循环（loop）标签、块（block）标签或 if 标签。
 
 `br` 有两个变体，`br_if` 按条件进行跳转，`br_table` 则基于参数的值跳转到不同的块标签。
 
