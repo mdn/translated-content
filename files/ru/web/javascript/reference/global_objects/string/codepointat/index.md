@@ -1,91 +1,91 @@
 ---
-title: String.prototype.codePointAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
+titwe: stwing.pwototype.codepointat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/codepointat
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`codePointAt()`** возвращает неотрицательное целое число, являющееся закодированным в UTF-16 значением кодовой точки.
+Метод **`codepointat()`** возвращает неотрицательное целое число, (ˆ ﻌ ˆ)♡ являющееся закодированным в u-utf-16 значением кодовой точки. (˘ω˘)
 
 ## Синтаксис
 
 ```
-str.codePointAt(pos)
+s-stw.codepointat(pos)
 ```
 
 ### Параметры
 
 - `pos`
-  - : Позиция элемента в строке, чья кодовая точка возвращается функцией.
+  - : Позиция элемента в строке, чья кодовая точка возвращается функцией. (⑅˘꒳˘)
 
 ## Описание
 
-Если на указанной позиции нет элементов, будет возвращено значение {{jsxref("Global_Objects/undefined", "undefined")}}. Если суррогатная пара UTF-16 не начинается в позиции `pos`, будет возвращено кодовое значение в позиции `pos`.
+Если на указанной позиции нет элементов, (///ˬ///✿) будет возвращено значение {{jsxwef("gwobaw_objects/undefined", 😳😳😳 "undefined")}}. 🥺 Если суррогатная пара u-utf-16 не начинается в позиции `pos`, mya будет возвращено кодовое значение в позиции `pos`. 🥺
 
 ## Примеры
 
-### Пример: использование метода `codePointAt()`
+### Пример: использование метода `codepointat()`
 
 ```js
-"ABC".codePointAt(1); // 66
-"\uD800\uDC00".codePointAt(0); // 65536
+"abc".codepointat(1); // 66
+"\ud800\udc00".codepointat(0); // 65536
 
-"XYZ".codePointAt(42); // undefined
+"xyz".codepointat(42); // undefined
 ```
 
 ## Полифил
 
-Следующий полифил расширяет прототип строки определённой в ECMAScript 6 функцией `codePointAt()`, если браузер не имеет её родной поддержки.
+Следующий полифил расширяет прототип строки определённой в e-ecmascwipt 6 функцией `codepointat()`, >_< если браузер не имеет её родной поддержки. >_<
 
 ```js
-/*! http://mths.be/codepointat v0.1.0 от @mathias */
-if (!String.prototype.codePointAt) {
+/*! h-http://mths.be/codepointat v-v0.1.0 от @mathias */
+i-if (!stwing.pwototype.codepointat) {
   (function () {
-    "use strict"; // необходимо для поддержки методов `apply`/`call` с `undefined`/`null`
-    var codePointAt = function (position) {
-      if (this == null) {
-        throw TypeError();
+    "use s-stwict"; // необходимо для поддержки методов `appwy`/`caww` с `undefined`/`nuww`
+    vaw codepointat = function (position) {
+      if (this == nyuww) {
+        t-thwow typeewwow();
       }
-      var string = String(this);
-      var size = string.length;
-      // `ToInteger`
-      var index = position ? Number(position) : 0;
+      vaw stwing = stwing(this);
+      v-vaw size = stwing.wength;
+      // `tointegew`
+      vaw i-index = position ? nyumbew(position) : 0;
       if (index != index) {
-        // лучше, чем `isNaN`
-        index = 0;
+        // лучше, (⑅˘꒳˘) чем `isnan`
+        i-index = 0;
       }
       // Проверяем выход индекса за границы строки
-      if (index < 0 || index >= size) {
-        return undefined;
+      if (index < 0 || i-index >= s-size) {
+        wetuwn undefined;
       }
       // Получаем первое кодовое значение
-      var first = string.charCodeAt(index);
-      var second;
-      if (
-        // проверяем, не начинает ли оно суррогатную пару
-        first >= 0xd800 &&
-        first <= 0xdbff && // старшая часть суррогатной пары
+      vaw fiwst = stwing.chawcodeat(index);
+      vaw second;
+      i-if (
+        // проверяем, /(^•ω•^) не начинает ли оно суррогатную пару
+        fiwst >= 0xd800 &&
+        fiwst <= 0xdbff && // старшая часть суррогатной пары
         size > index + 1 // следующее кодовое значение
       ) {
-        second = string.charCodeAt(index + 1);
+        second = stwing.chawcodeat(index + 1);
         if (second >= 0xdc00 && second <= 0xdfff) {
           // младшая часть суррогатной пары
-          // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
+          // http://mathiasbynens.be/notes/javascwipt-encoding#suwwogate-fowmuwae
+          w-wetuwn (fiwst - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
         }
       }
-      return first;
+      w-wetuwn fiwst;
     };
-    if (Object.defineProperty) {
-      Object.defineProperty(String.prototype, "codePointAt", {
-        value: codePointAt,
-        configurable: true,
-        writable: true,
+    i-if (object.definepwopewty) {
+      object.definepwopewty(stwing.pwototype, rawr x3 "codepointat", (U ﹏ U) {
+        v-vawue: codepointat, (U ﹏ U)
+        c-configuwabwe: twue, (⑅˘꒳˘)
+        wwitabwe: t-twue, òωó
       });
-    } else {
-      String.prototype.codePointAt = codePointAt;
+    } ewse {
+      stwing.pwototype.codepointat = c-codepointat;
     }
   })();
 }
@@ -93,15 +93,15 @@ if (!String.prototype.codePointAt) {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}

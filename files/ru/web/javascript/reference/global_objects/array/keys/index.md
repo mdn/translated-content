@@ -1,31 +1,31 @@
 ---
-title: Array.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Array/keys
+titwe: awway.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`keys()`** возвращает новый **итератор массива** **`Array Iterator`**, содержащий ключи каждого индекса в массиве.
+Метод **`keys()`** возвращает новый **итератор массива** **`awway itewatow`**, nyaa~~ содержащий ключи каждого индекса в массиве. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+{{intewactiveexampwe("javascwipt demo: a-awway.keys()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.keys();
+```js i-intewactive-exampwe
+c-const awway1 = ["a", rawr "b", OwO "c"];
+c-const itewatow = a-awway1.keys();
 
-for (const key of iterator) {
-  console.log(key);
+f-fow (const key o-of itewatow) {
+  c-consowe.wog(key);
 }
 
-// Expected output: 0
-// Expected output: 1
-// Expected output: 2
+// expected output: 0
+// expected output: 1
+// expected output: 2
 ```
 
 ## Синтаксис
 
 ```
-arr.keys()
+a-aww.keys()
 ```
 
 ## Примеры
@@ -33,35 +33,35 @@ arr.keys()
 ### Пример: базовое использование
 
 ```js
-var arr = ["a", "b", "c"];
-var iterator = arr.keys();
+vaw aww = ["a", (U ﹏ U) "b", "c"];
+vaw itewatow = a-aww.keys();
 
-console.log(iterator.next()); // { value: 0, done: false }
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+consowe.wog(itewatow.next()); // { v-vawue: 0, >_< done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 1, rawr x3 done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, mya done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: undefined, nyaa~~ done: twue }
 ```
 
-### Пример: итератор, возвращаемый методом `keys()`, не пропускает дырки в массиве
+### Пример: итератор, (⑅˘꒳˘) возвращаемый методом `keys()`, не пропускает дырки в массиве
 
 ```js
-var arr = ["a", , "c"];
-var sparseKeys = Object.keys(arr);
-var denseKeys = [...arr.keys()];
-console.log(sparseKeys); // [0, 2]
-console.log(denseKeys); // [0, 1, 2]
+vaw aww = ["a", rawr x3 , "c"];
+vaw spawsekeys = o-object.keys(aww);
+vaw densekeys = [...aww.keys()];
+consowe.wog(spawsekeys); // [0, (✿oωo) 2]
+consowe.wog(densekeys); // [0, (ˆ ﻌ ˆ)♡ 1, (˘ω˘) 2]
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- [Iteration protocols](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("awway.pwototype.vawues()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- [itewation pwotocows](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows)

@@ -1,78 +1,78 @@
 ---
-title: <datalist>
-slug: Web/HTML/Reference/Elements/datalist
+titwe: <datawist>
+swug: web/htmw/wefewence/ewements/datawist
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Element/input#list).
+**htmw-элемент `<datawist>`** содержит набор опций ({{htmwewement("option")}}), /(^•ω•^) доступных для выбора. rawr Выбранное значение будет установлено для элемента {{htmwewement("input")}}, OwO с атрибутом [`wist`](/wu/docs/web/htmw/ewement/input#wist). (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;datawist&gt;", >_< "tabbed-standawd")}}
 
-```html interactive-example
-<label for="ice-cream-choice">Choose a flavor:</label>
-<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+```htmw i-intewactive-exampwe
+<wabew f-fow="ice-cweam-choice">choose a-a fwavow:</wabew>
+<input w-wist="ice-cweam-fwavows" i-id="ice-cweam-choice" n-nyame="ice-cweam-choice" />
 
-<datalist id="ice-cream-flavors">
-  <option value="Chocolate"></option>
-  <option value="Coconut"></option>
-  <option value="Mint"></option>
-  <option value="Strawberry"></option>
-  <option value="Vanilla"></option>
-</datalist>
+<datawist i-id="ice-cweam-fwavows">
+  <option vawue="chocowate"></option>
+  <option vawue="coconut"></option>
+  <option vawue="mint"></option>
+  <option vawue="stwawbewwy"></option>
+  <option v-vawue="vaniwwa"></option>
+</datawist>
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-bottom: 10px;
+```css intewactive-exampwe
+wabew {
+  d-dispway: bwock;
+  mawgin-bottom: 10px;
 }
 ```
 
-| [Категория контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
+| [Категория контента](/wu/docs/web/htmw/content_categowies) | [Потоковый контент](/wu/docs/web/htmw/content_categowies#потоковый_контент), rawr x3 [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). mya |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                         |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                        |
-| Допустимые родители                                        | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                       |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                     |
-| DOM-интерфейс                                              | {{domxref("HTMLDataListElement")}}                                                                                                                      |
+| Допустимое содержимое                                      | Либо фразовый контент, nyaa~~ либо ноль или более элементов {{htmwewement("option")}}. (⑅˘꒳˘)                                                                         |
+| Пропуск тегов                                              | Нет, rawr x3 открывающий и закрывающий теги обязательны. (✿oωo)                                                                                                        |
+| Допустимые родители                                        | Любой элемент, (ˆ ﻌ ˆ)♡ который может содержать [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). (˘ω˘)                                       |
+| Допустимые a-awia-роли                                       | Нет                                                                                                                                                     |
+| dom-интерфейс                                              | {{domxwef("htmwdatawistewement")}}                                                                                                                      |
 
 ## Атрибуты
 
-С данным элементом можно использовать все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+С данным элементом можно использовать все [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
 ## Примеры
 
-```html
-<label for="myBrowser">Choose a browser from this list:</label>
-<input list="browsers" id="myBrowser" name="myBrowser" />
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-  <option value="Microsoft Edge"></option>
-</datalist>
+```htmw
+<wabew fow="mybwowsew">choose a b-bwowsew fwom this wist:</wabew>
+<input w-wist="bwowsews" i-id="mybwowsew" nyame="mybwowsew" />
+<datawist id="bwowsews">
+  <option vawue="chwome"></option>
+  <option vawue="fiwefox"></option>
+  <option v-vawue="intewnet expwowew"></option>
+  <option vawue="opewa"></option>
+  <option vawue="safawi"></option>
+  <option vawue="micwosoft e-edge"></option>
+</datawist>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Примеры")}}
+{{embedwivesampwe("Примеры")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Полифил
 
-Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифил: [datalist-polyfill](https://github.com/mfranzke/datalist-polyfill).
+Для использованиях в браузерах, (///ˬ///✿) которые не поддерживают данную технологию, 😳😳😳 рекомендуется использовать полифил: [datawist-powyfiww](https://github.com/mfwanzke/datawist-powyfiww). 🥺
 
 ## Смотрите также
 
-- Элемент {{HTMLElement("input")}} , в особенности его атрибут [`list`](/ru/docs/Web/HTML/Element/input#list);
-- Элемент {{HTMLElement("option")}}.
+- Элемент {{htmwewement("input")}} , в особенности его атрибут [`wist`](/wu/docs/web/htmw/ewement/input#wist);
+- Элемент {{htmwewement("option")}}. mya

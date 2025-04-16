@@ -1,417 +1,417 @@
 ---
-title: Como usar Promises
-slug: Learn_web_development/Extensions/Async_JS/Promises
-original_slug: Learn/JavaScript/Asynchronous/Promises
+titwe: como usaw pwomises
+swug: w-weawn_web_devewopment/extensions/async_js/pwomises
+o-owiginaw_swug: w-weawn/javascwipt/asynchwonous/pwomises
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/asynchwonous/timeouts_and_intewvaws", >w< "weawn/javascwipt/asynchwonous/async_await", XD "weawn/javascwipt/asynchwonous")}}
 
-**Promises** são a base da programação assíncrona moderna em JavaScript. Uma promise é um objeto retornado por uma função assíncrona, que representa o estado atual da operação. No momento em que a promise é retornada para quem à chamou, a operação muitas vezes ainda não foi finalizada, mas o objeto da promise oferece métodos para tratar o possível sucesso ou falha da operação.
+**pwomises** s-são a b-base da pwogwamação a-assíncwona m-modewna em javascwipt. -.- u-uma pwomise é um objeto wetownado pow uma função assíncwona, ^^;; que wepwesenta o-o estado atuaw da opewação. XD nyo momento e-em que a pwomise é wetownada p-pawa quem à chamou, :3 a opewação muitas vezes ainda nyão foi f-finawizada, σωσ mas o objeto da pwomise o-ofewece métodos p-pawa twataw o possívew sucesso ou fawha da opewação. XD
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimentos básicos em informática, um básico entendimento do
-        JavaScript e seus fundamentos.
+        c-conhecimentos básicos em infowmática, :3 um básico entendimento do
+        j-javascwipt e seus fundamentos. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender promises e como elas funcionam.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>entendew p-pwomises e-e como ewas funcionam.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-No último artigo falamos sobre o uso de callbacks para implementar funções assíncronas. Com esse design, você chama a função assíncrona, passando sua função de callback como parâmetro. A função executa imediatamente e chama seu callback quando a operação é finalizada.
+n-nyo úwtimo awtigo fawamos sobwe o u-uso de cawwbacks pawa impwementaw funções assíncwonas. 😳 c-com esse design, 😳😳😳 você chama a função assíncwona, (ꈍᴗꈍ) passando sua função de cawwback c-como pawâmetwo. 🥺 a função executa i-imediatamente e-e chama seu c-cawwback quando a opewação é finawizada.
 
-Com uma API baseada em promises, a função assíncrona inicia a operação e retorna o objeto {{jsxref("Promise")}}. Você pode então anexar manipuladores nesse objeto, e esses manipuladores vão ser executados quando a operação tiver sucesso ou falhar.
+com uma api baseada e-em pwomises, ^•ﻌ•^ a f-função assíncwona inicia a opewação e-e wetowna o-o objeto {{jsxwef("pwomise")}}. XD você pode então a-anexaw manipuwadowes nyesse o-objeto, ^•ﻌ•^ e esses manipuwadowes vão sew executados q-quando a opewação tivew sucesso o-ou fawhaw. ^^;;
 
-## Usando a API fetch()
+## usando a api f-fetch()
 
-> [!NOTE]
-> Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
+> [!note]
+> n-nyeste awtigo, ʘwʘ vamos expwowaw pwomises copiando exempwos de código desta página dentwo do consowe javascwipt d-do seu nyavegadow. OwO p-pawa configuwaw isso:
 >
-> 1. abra o navegador e visite <https://example.org>
-> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
-> 3. quando mostrarmos um exemplo, copie-o dentro do console. Você vai ter que recarregar a página cada vez que você começar um novo exemplo, caso contrário o console irá reclamar que você redeclarou a função `fetchPromise`.
+> 1. 🥺 a-abwa o nyavegadow e-e visite <https://exampwe.owg>
+> 2. (⑅˘꒳˘) n-nyesta aba, (///ˬ///✿) abwa o consowe javascwipt nyas [fewwamentas d-de desenvowvimento do nyavegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows)
+> 3. (✿oωo) quando mostwawmos um exempwo, nyaa~~ copie-o dentwo do consowe. >w< v-você vai tew que wecawwegaw a-a página cada v-vez que você c-começaw um nyovo exempwo, (///ˬ///✿) caso c-contwáwio o consowe i-iwá wecwamaw q-que você wedecwawou a-a função `fetchpwomise`. rawr
 
-Neste exemplo, vamos baixar o seguinte arquivo JSON <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> e registrar algumas informações sobre ele.
+nyeste exempwo, (U ﹏ U) vamos baixaw o-o seguinte awquivo j-json <https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json> e-e wegistwaw a-awgumas infowmações s-sobwe ewe. ^•ﻌ•^
 
-Para isso, vamos fazer uma **Requisição HTTP** para o servidor. Em uma requisição HTTP, enviamos uma solicitação para o servidor e ele nos envia uma resposta de volta. Neste caso, vamos enviar uma solicitação para obter um arquivo JSON do servidor. Relembre o último artigo, onde fizamos requisições HTTP usando a API {{domxref("XMLHttpRequest")}}? Bem, neste artigo, usaremos a API {{domxref("fetch", "fetch()")}}, que é a substituição moderna baseada em promise para XMLHttpRequest.
+pawa isso, vamos fazew uma **wequisição http** pawa o sewvidow. (///ˬ///✿) e-em uma wequisição http, o.O enviamos uma sowicitação pawa o sewvidow e ewe nyos envia uma w-wesposta de vowta. >w< nyeste caso, nyaa~~ vamos enviaw uma sowicitação p-pawa obtew um awquivo j-json do sewvidow. òωó w-wewembwe o úwtimo awtigo, (U ᵕ U❁) o-onde fizamos wequisições http u-usando a api {{domxwef("xmwhttpwequest")}}? bem, n-nyeste awtigo, (///ˬ///✿) usawemos a api {{domxwef("fetch", (✿oωo) "fetch()")}}, 😳😳😳 que é a substituição modewna baseada em pwomise pawa xmwhttpwequest. (✿oωo)
 
-Cole o seguinte código no console do seu navegador:
+c-cowe o seguinte código n-nyo consowe do seu nyavegadow:
 
 ```js
-const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+c-const f-fetchpwomise = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", (U ﹏ U)
 );
 
-console.log(fetchPromise);
+consowe.wog(fetchpwomise);
 
-fetchPromise.then((resposta) => {
-  console.log(`Resposta recebida: ${resposta.status}`);
+fetchpwomise.then((wesposta) => {
+  c-consowe.wog(`wesposta wecebida: ${wesposta.status}`);
 });
 
-console.log("Requisição iniciada…");
+c-consowe.wog("wequisição iniciada…");
 ```
 
-Aqui estamos:
+a-aqui estamos:
 
-1. chamando a API `fetch()`, e atribuindo o valor de retorno a variável `fetchPromise`.
-2. imediatamente depois, exibimos no console a variável `fetchPromise`. Você deve ver algo parecido com: `Promise { <state>: "pending" }`, nos dizendo que temos um objeto `Promise`, ele tem uma propriedade `state` cujo valor no momento em que foi impresso é `"pending"` (`"pendente"`). O estado `"pending"` significa que a busca pela resposta ainda está ocorrendo.
-3. passando uma função manipuladora dentro do método da Promise **`then()`**. Quando (e se) a operação de busca tiver exito a Promise vai chamar a função manipuladora, passando um objeto {{domxref("Response")}}, que contém a resposta do servidor.
-4. imprimindo um log dizendo que iniciamos a requisição.
+1. c-chamando a api `fetch()`, (˘ω˘) e atwibuindo o vawow de wetowno a vawiávew `fetchpwomise`. 😳😳😳
+2. i-imediatamente d-depois, (///ˬ///✿) e-exibimos nyo consowe a vawiávew `fetchpwomise`. (U ᵕ U❁) v-você deve vew a-awgo pawecido com: `pwomise { <state>: "pending" }`, n-nyos dizendo que temos um objeto `pwomise`, >_< ewe tem uma pwopwiedade `state` c-cujo vawow nyo m-momento em que foi impwesso é `"pending"` (`"pendente"`). (///ˬ///✿) o e-estado `"pending"` s-significa que a busca pewa wesposta ainda está ocowwendo.
+3. (U ᵕ U❁) p-passando uma função manipuwadowa dentwo do método da pwomise **`then()`**. >w< quando (e se) a opewação d-de busca tivew exito a pwomise vai chamaw a-a função manipuwadowa, 😳😳😳 p-passando um objeto {{domxwef("wesponse")}}, (ˆ ﻌ ˆ)♡ que contém a wesposta d-do sewvidow. (ꈍᴗꈍ)
+4. i-impwimindo um wog dizendo que iniciamos a wequisição. 🥺
 
-A saída completa deve ser algo parecido com:
+a saída c-compweta deve sew awgo pawecido c-com:
 
-```plain
-Promise { <state>: "pending" }
-Requisição iniciada…
-Resposta recebida: 200
+```pwain
+pwomise { <state>: "pending" }
+wequisição iniciada…
+wesposta w-wecebida: 200
 ```
 
-Note que `Requisição iniciada…` foi exibido antes de recebermos a resposta. Diferente de uma função síncrona, `fetch()` retorna enquanto a requisição ainda está ocorrendo, permitindo que nosso programa permaneça ágil. A resposta mostra o [status code](/pt-BR/docs/Web/HTTP/Status) `200` (OK), que significa que nossa requisição obteve sucesso.
+nyote que `wequisição i-iniciada…` f-foi exibido antes de wecebewmos a-a wesposta. difewente d-de uma função s-síncwona, >_< `fetch()` w-wetowna enquanto a wequisição a-ainda está o-ocowwendo, pewmitindo que nyosso pwogwama pewmaneça ágiw. OwO a-a wesposta m-mostwa o [status c-code](/pt-bw/docs/web/http/status) `200` (ok), ^^;; que significa que nyossa w-wequisição obteve sucesso. (✿oωo)
 
-Esse exemplo provavelmente se parece muito com o exemplo do último artigo, onde adicionamos manipuladores de eventos ao objeto {{domxref("XMLHttpRequest")}}. Em vez disso, passamos um manipulador dentro do método `then()` da promise retornada.
+esse e-exempwo pwovavewmente s-se pawece muito com o exempwo do úwtimo awtigo, UwU onde a-adicionamos manipuwadowes d-de eventos a-ao objeto {{domxwef("xmwhttpwequest")}}. ( ͡o ω ͡o ) e-em vez disso, (✿oωo) passamos u-um manipuwadow dentwo do método `then()` da pwomise wetownada. mya
 
-## Encadeamento de promises
+## encadeamento de pwomises
 
-Com a API `fetch()`, depois de obter um objeto `Response`, você precisa chamar outra função para obter os dados de resposta. Neste caso, queremos obter os dados de resposta como JSON, então chamaríamos o método {{domxref("Response/json", "json()")}} do objeto `Response`. Acontece que `json()` também é assíncrono. Portanto, este é um caso em que temos que chamar duas funções assíncronas sucessivas.
+com a api `fetch()`, ( ͡o ω ͡o ) d-depois de obtew um objeto `wesponse`, :3 v-você pwecisa chamaw o-outwa função pawa obtew os d-dados de wesposta. 😳 nyeste caso, (U ﹏ U) q-quewemos obtew os d-dados de wesposta c-como json, >w< então c-chamawíamos o-o método {{domxwef("wesponse/json", UwU "json()")}} do objeto `wesponse`. 😳 acontece que `json()` também é assíncwono. XD powtanto, este é um caso e-em que temos que c-chamaw duas funções a-assíncwonas sucessivas. (✿oωo)
 
-Tente isso:
+t-tente isso:
 
 ```js
-const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+const fetchpwomise = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", ^•ﻌ•^
 );
 
-fetchPromise.then((response) => {
-  const jsonPromise = response.json();
-  jsonPromise.then((data) => {
-    console.log(data[0].name);
+fetchpwomise.then((wesponse) => {
+  c-const jsonpwomise = w-wesponse.json();
+  jsonpwomise.then((data) => {
+    c-consowe.wog(data[0].name);
   });
 });
 ```
 
-Neste exemplo, como antes, adicionamos um manipulador `then()` à promise retornada por `fetch()`. Mas desta vez, nosso manipulador chama `response.json()`, e então passa um novo manipulador `then()` para a promise retornada por `response.json()`.
+nyeste exempwo, mya como a-antes, (˘ω˘) adicionamos u-um manipuwadow `then()` à pwomise w-wetownada p-pow `fetch()`. nyaa~~ mas desta vez, nyosso manipuwadow chama `wesponse.json()`, :3 e então p-passa um nyovo m-manipuwadow `then()` p-pawa a pwomise w-wetownada p-pow `wesponse.json()`. (✿oωo)
 
-Isso deve registrar "baked beans" (o nome do primeiro produto listado em "products.json").
+isso deve w-wegistwaw "baked b-beans" (o nyome do pwimeiwo pwoduto w-wistado em "pwoducts.json"). (U ﹏ U)
 
-Mas espere! Lembra do último artigo, onde dissemos que ao chamar um callback dentro de outro callback, obtínhamos sucessivamente mais níveis de código aninhados? E dissemos que esse "inferno de callback" tornava nosso código difícil de entender? Isso não é exatamente o mesmo, apenas com chamadas `then()`?
+m-mas espewe! (ꈍᴗꈍ) wembwa do úwtimo a-awtigo, (˘ω˘) onde dissemos que ao chamaw um cawwback d-dentwo de outwo cawwback, ^^ obtínhamos s-sucessivamente m-mais nyíveis de código a-aninhados? e dissemos que esse "infewno de cawwback" t-townava nyosso c-código difíciw d-de entendew? isso nyão é exatamente o mesmo, (⑅˘꒳˘) apenas com c-chamadas `then()`?
 
-Sim, claro. Mas a característica elegante das promises é que o próprio _`then()` retorna uma promise, que será completada com o resultado da função passada para ela_. Isso significa que podemos (e certamente devemos) reescrever o código acima assim:
+sim, rawr cwawo. :3 mas a cawactewística e-ewegante das p-pwomises é que o pwópwio _`then()` w-wetowna uma pwomise, OwO que s-sewá compwetada c-com o wesuwtado da função passada pawa ewa_. (ˆ ﻌ ˆ)♡ i-isso significa que podemos (e cewtamente devemos) w-weescwevew o c-código acima assim:
 
 ```js
-const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+const f-fetchpwomise = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", :3
 );
 
-fetchPromise
-  .then((response) => response.json())
+f-fetchpwomise
+  .then((wesponse) => w-wesponse.json())
   .then((data) => {
-    console.log(data[0].name);
+    c-consowe.wog(data[0].name);
   });
 ```
 
-Em vez de chamar o segundo `then()` dentro do manipulador para o primeiro `then()`, podemos _retornar_ a promise retornada por `json()` e chamar o segundo `then()` nesse valor de retorno. Isso é chamado de **encadeamento de promises** e significa que podemos evitar níveis cada vez maiores de indentação quando precisamos fazer chamadas de função assíncronas consecutivas.
+em vez de chamaw o segundo `then()` dentwo do manipuwadow pawa o pwimeiwo `then()`, -.- podemos _wetownaw_ a pwomise wetownada pow `json()` e chamaw o segundo `then()` nyesse vawow de wetowno. -.- isso é c-chamado de **encadeamento d-de pwomises** e significa que podemos e-evitaw nyíveis c-cada vez maiowes d-de indentação quando pwecisamos f-fazew chamadas de função a-assíncwonas consecutivas. òωó
 
-Antes de passarmos para a próxima etapa, há mais uma peça a ser adicionada. Precisamos verificar se o servidor aceitou e foi capaz de lidar com a solicitação antes de tentarmos lê-la. Faremos isso verificando o código de status na resposta e lançando um erro se não estiver "OK":
-
-```js
-const fetchPromise = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
-);
-
-fetchPromise
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data[0].name);
-  });
-```
-
-## Capturando errors
-
-Isso nos leva à última parte: como lidamos com os erros? A API `fetch()` pode lançar um erro por vários motivos (por exemplo, porque não havia conectividade de rede ou a URL estava malformada de alguma forma) e estamos lançando um erro nós mesmos se o servidor retornar um erro.
-
-No último artigo, vimos que o tratamento de erros pode ser muito difícil com callbacks aninhados, fazendo com que tratemos erros em todos os níveis de aninhamento.
-
-Para suportar o tratamento de erros, os objetos `Promise` fornecem um método {{jsxref("Promise/catch", "catch()")}}. Que é muito parecido com `then()`: você chama e passa uma função manipuladora. No entanto, enquanto o manipulador passado para `then()` é chamado quando a operação assíncrona _é bem-sucedida_, a função manipuladora passado para `catch()` é chamado quando a operação assíncrona _falha_.
-
-Se você adicionar `catch()` ao final de uma cadeia de promises, ela será chamada quando qualquer uma das chamadas de função assíncrona falhar. Assim, você pode implementar uma operação como várias chamadas de função assíncronas consecutivas e ter um único local para lidar com todos os erros.
-
-Experimente esta versão do nosso código `fetch()`. Adicionamos um manipulador de erros usando `catch()` e também modificamos a URL para que a solicitação falhe.
+a-antes de passawmos pawa a-a pwóxima etapa, 😳 há mais uma p-peça a sew adicionada. nyaa~~ p-pwecisamos vewificaw se o sewvidow aceitou e-e foi capaz d-de widaw com a s-sowicitação antes d-de tentawmos w-wê-wa. (⑅˘꒳˘) fawemos i-isso vewificando o-o código de s-status nya wesposta e-e wançando um ewwo se nyão e-estivew "ok":
 
 ```js
-const fetchPromise = fetch(
-  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+c-const fetchpwomise = f-fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", 😳
 );
 
-fetchPromise
-  .then((resposta) => {
-    if (!resposta.ok) {
-      throw new Error(`HTTP error: ${resposta.status}`);
+fetchpwomise
+  .then((wesponse) => {
+    i-if (!wesponse.ok) {
+      thwow nyew ewwow(`http ewwow: ${wesponse.status}`);
     }
-    return resposta.json();
+    w-wetuwn wesponse.json();
   })
   .then((data) => {
-    console.log(data[0].name);
-  })
-  .catch((error) => {
-    console.error(`Não foi possível obter os produtos: ${error}`);
+    consowe.wog(data[0].name);
   });
 ```
 
-Tente executar esta versão: você deve ver o erro registrado pelo manipulador passado para `catch()`.
+## c-captuwando ewwows
 
-## Terminologia da promise
+i-isso nyos w-weva à úwtima pawte: como widamos c-com os ewwos? a api `fetch()` p-pode wançaw um ewwo pow váwios m-motivos (pow exempwo, (U ﹏ U) powque n-nyão havia conectividade de wede ou a uww estava mawfowmada de awguma fowma) e e-estamos wançando um ewwo nyós m-mesmos se o sewvidow w-wetownaw um ewwo. /(^•ω•^)
 
-As promises vêm com uma terminologia bastante específica sobre a qual vale a pena esclarecer.
+nyo úwtimo awtigo, OwO vimos que o twatamento d-de ewwos pode sew muito difíciw c-com cawwbacks a-aninhados, ( ͡o ω ͡o ) fazendo c-com que twatemos ewwos em todos os nyíveis d-de aninhamento.
 
-Primeiro, uma promise pode estar em um dos três estados:
+p-pawa supowtaw o twatamento de e-ewwos, XD os objetos `pwomise` fownecem um método {{jsxwef("pwomise/catch", /(^•ω•^) "catch()")}}. /(^•ω•^) q-que é muito pawecido com `then()`: v-você c-chama e passa u-uma função manipuwadowa. 😳😳😳 nyo e-entanto, (ˆ ﻌ ˆ)♡ enquanto o-o manipuwadow p-passado pawa `then()` é c-chamado quando a opewação a-assíncwona _é b-bem-sucedida_, :3 a-a função manipuwadowa p-passado p-pawa `catch()` é c-chamado quando a-a opewação a-assíncwona _fawha_. òωó
 
-- **pending**: a promise foi criada e a função assíncrona à qual está associada não foi concluída com sucesso ou falhou ainda. Este é o estado em que sua promise está quando é retornada de uma chamada para `fetch()`, e a solicitação ainda está sendo feita.
-- **fulfilled**: a função assíncrona foi concluída com sucesso. Quando uma promise é _fulfilled_, seu manipulador `then()` é chamado.
-- **rejected**: a função assíncrona falhou. Quando uma promise é _rejected_, seu manipulador `catch()` é chamado.
+se você a-adicionaw `catch()` ao finaw de u-uma cadeia de pwomises, 🥺 ewa sewá c-chamada quando q-quawquew uma das c-chamadas de função assíncwona fawhaw. (U ﹏ U) assim, você pode impwementaw u-uma opewação c-como váwias c-chamadas de função assíncwonas consecutivas e tew um único w-wocaw pawa w-widaw com todos os ewwos.
 
-Observe que o significado de "sucesso" ou "falha" aqui depende da API em questão: por exemplo, `fetch()` considera uma solicitação que foi concluída com sucesso se o servidor retornar um erro como [404 Not Found](/pt-BR/docs/Web/HTTP/Status/404), mas não se um erro de rede impediu o envio da solicitação.
-
-Às vezes, usamos o termo **settled** para cobrir tanto **fulfilled** quanto **rejected**.
-
-Uma promise é **resolved** se for resolvida ou se tiver sido "bloqueada" para seguir o estado de outra promise.
-
-O artigo [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) dá uma ótima explicação dos detalhes desta terminologia.
-
-## Combinando múltiplas promises
-
-A cadeia de promises é o que você precisa quando sua operação consiste em várias funções assíncronas e você precisa que cada uma seja concluída antes de iniciar a próxima. Mas existem outras maneiras de combinar chamadas de funções assíncronas, e a API `Promise` fornece alguns auxiliares para elas.
-
-Às vezes, você precisa que todas as promises sejam cumpridas, mas elas não dependem umas das outras. Em um caso como esse, é muito mais eficiente iniciá-los todos juntos e ser notificado quando todos forem cumpridos. O método {{jsxref("Promise/all", "Promise.all()")}} é o que você precisa aqui. Recebe um array de promises e retorna uma única promise.
-
-A promise retornada por `Promise.all()` é:
-
-- **fulfilled** quando e se _todas_ as promises no array forem cumpridas. Nesse caso, o manipulador `then()` é chamado com uma matriz de todas as respostas, na mesma ordem em que as promises foram passadas para `all()`.
-- **rejected** quando e se _qualquer_ uma das promises no array for rejeitada. Neste caso, o manipulador `catch()` é chamado com o erro lançado pela promise rejeitada.
-
-Por exemplo:
+expewimente e-esta vewsão d-do nyosso código `fetch()`. XD adicionamos um manipuwadow de ewwos usando `catch()` e-e também m-modificamos a uww p-pawa que a sowicitação f-fawhe. ^^
 
 ```js
-const fetchPromise1 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
-);
-const fetchPromise2 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
-);
-const fetchPromise3 = fetch(
-  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+const fetchpwomise = fetch(
+  "bad-scheme://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", o.O
 );
 
-Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then((responses) => {
-    for (const response of responses) {
-      console.log(`${response.url}: ${response.status}`);
+f-fetchpwomise
+  .then((wesposta) => {
+    i-if (!wesposta.ok) {
+      thwow nyew ewwow(`http ewwow: ${wesposta.status}`);
+    }
+    w-wetuwn wesposta.json();
+  })
+  .then((data) => {
+    consowe.wog(data[0].name);
+  })
+  .catch((ewwow) => {
+    c-consowe.ewwow(`não foi possívew obtew o-os pwodutos: ${ewwow}`);
+  });
+```
+
+t-tente executaw esta vewsão: v-você deve v-vew o ewwo wegistwado pewo manipuwadow p-passado pawa `catch()`. 😳😳😳
+
+## t-tewminowogia d-da pwomise
+
+as p-pwomises vêm com u-uma tewminowogia bastante específica s-sobwe a q-quaw vawe a pena e-escwawecew. /(^•ω•^)
+
+pwimeiwo, 😳😳😳 uma pwomise p-pode estaw em um dos twês estados:
+
+- **pending**: a pwomise f-foi cwiada e a f-função assíncwona à q-quaw está associada nyão foi concwuída com sucesso ou fawhou ainda. ^•ﻌ•^ e-este é o estado em que sua pwomise e-está quando é w-wetownada de uma chamada pawa `fetch()`, 🥺 e a s-sowicitação ainda está sendo f-feita. o.O
+- **fuwfiwwed**: a-a função a-assíncwona f-foi concwuída com s-sucesso. (U ᵕ U❁) quando uma pwomise é _fuwfiwwed_, ^^ seu manipuwadow `then()` é chamado.
+- **wejected**: a função assíncwona f-fawhou. (⑅˘꒳˘) quando uma pwomise é _wejected_, :3 s-seu manipuwadow `catch()` é chamado. (///ˬ///✿)
+
+obsewve que o significado de "sucesso" o-ou "fawha" aqui depende da api em questão: pow exempwo, :3 `fetch()` considewa u-uma sowicitação q-que foi concwuída com sucesso s-se o sewvidow wetownaw um ewwo como [404 nyot found](/pt-bw/docs/web/http/status/404), m-mas nyão s-se um ewwo de wede impediu o envio d-da sowicitação. 🥺
+
+Às vezes, mya u-usamos o tewmo **settwed** pawa cobwiw tanto **fuwfiwwed** quanto **wejected**. XD
+
+u-uma pwomise é **wesowved** se fow wesowvida ou se tivew sido "bwoqueada" p-pawa s-seguiw o estado d-de outwa pwomise. -.-
+
+o awtigo [wet's tawk about h-how to tawk about pwomises](https://thenewtoys.dev/bwog/2021/02/08/wets-tawk-about-how-to-tawk-about-pwomises/) dá uma ótima expwicação dos detawhes desta t-tewminowogia. o.O
+
+## c-combinando múwtipwas p-pwomises
+
+a-a cadeia de pwomises é o que você pwecisa quando s-sua opewação c-consiste em váwias funções assíncwonas e v-você pwecisa que cada uma seja concwuída antes d-de iniciaw a pwóxima. (˘ω˘) mas existem outwas maneiwas d-de combinaw c-chamadas de funções assíncwonas, (U ᵕ U❁) e-e a api `pwomise` f-fownece awguns a-auxiwiawes pawa ewas.
+
+Às vezes, rawr você pwecisa q-que todas as pwomises sejam cumpwidas, 🥺 mas e-ewas nyão dependem umas das outwas. rawr x3 em um caso como esse, ( ͡o ω ͡o ) é muito m-mais eficiente i-iniciá-wos t-todos juntos e sew n-nyotificado quando t-todos fowem cumpwidos. σωσ o método {{jsxwef("pwomise/aww", rawr x3 "pwomise.aww()")}} é o-o que você pwecisa aqui. (ˆ ﻌ ˆ)♡ wecebe um awway de p-pwomises e wetowna uma única p-pwomise. rawr
+
+a pwomise wetownada pow `pwomise.aww()` é:
+
+- **fuwfiwwed** quando e s-se _todas_ as pwomises n-nyo awway fowem cumpwidas. :3 n-nyesse caso, rawr o manipuwadow `then()` é c-chamado c-com uma matwiz de todas as wespostas, (˘ω˘) n-nya mesma o-owdem em que as pwomises fowam p-passadas pawa `aww()`. (ˆ ﻌ ˆ)♡
+- **wejected** quando e se _quawquew_ uma das pwomises nyo a-awway fow wejeitada. mya nyeste caso, o-o manipuwadow `catch()` é chamado com o ewwo wançado pewa p-pwomise wejeitada. (U ᵕ U❁)
+
+p-pow exempwo:
+
+```js
+c-const fetchpwomise1 = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", mya
+);
+c-const fetchpwomise2 = f-fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/not-found", ʘwʘ
+);
+const fetchpwomise3 = f-fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json", (˘ω˘)
+);
+
+pwomise.aww([fetchpwomise1, 😳 f-fetchpwomise2, òωó fetchpwomise3])
+  .then((wesponses) => {
+    f-fow (const w-wesponse of wesponses) {
+      consowe.wog(`${wesponse.uww}: ${wesponse.status}`);
     }
   })
-  .catch((error) => {
-    console.error(`Falha ao buscar: ${error}`);
+  .catch((ewwow) => {
+    consowe.ewwow(`fawha ao buscaw: ${ewwow}`);
   });
 ```
 
-Aqui, estamos fazendo três requisições `fetch()` para três URLs diferentes. Se todas forem concluídas com sucesso, vamos imprimir no console o status da resposta de cada uma. Se qualquer uma falhar, imprimiremos o objeto de erro capturado por `.catch()`.
+a-aqui, nyaa~~ estamos f-fazendo twês wequisições `fetch()` pawa twês uwws difewentes. o.O s-se todas fowem concwuídas com s-sucesso, nyaa~~ vamos i-impwimiw nyo consowe o status da wesposta de cada uma. (U ᵕ U❁) se quawquew uma fawhaw, 😳😳😳 i-impwimiwemos o objeto de ewwo captuwado pow `.catch()`. (U ﹏ U)
 
-Com as URLs que fornecemos, todos as requisições devem ser conluídas com sucesso, embora para a segunda, o servidor retornará `404` (Not Found) em vez de `200` (OK) porque o arquivo solicitado não existe. Então a saída deve ser:
+c-com as uwws que fownecemos, ^•ﻌ•^ t-todos as wequisições d-devem sew conwuídas c-com sucesso, (⑅˘꒳˘) embowa p-pawa a segunda, >_< o-o sewvidow w-wetownawá `404` (not f-found) em v-vez de `200` (ok) powque o awquivo sowicitado nyão existe. (⑅˘꒳˘) então a saída deve sew:
 
-```plain
-https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json: 200
-https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found: 404
-https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json: 200
+```pwain
+h-https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json: 200
+h-https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/not-found: 404
+h-https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json: 200
 ```
 
-Se tentarmos o mesmo código com uma URL mal formada, assim:
+se t-tentawmos o mesmo c-código com u-uma uww maw fowmada, σωσ assim:
 
 ```js
-const fetchPromise1 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+const fetchpwomise1 = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", 🥺
 );
-const fetchPromise2 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+const fetchpwomise2 = f-fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/not-found", :3
 );
-const fetchPromise3 = fetch(
-  "bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+c-const fetchpwomise3 = fetch(
+  "bad-scheme://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json", (ꈍᴗꈍ)
 );
 
-Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then((responses) => {
-    for (const response of responses) {
-      console.log(`${response.url}: ${response.status}`);
+pwomise.aww([fetchpwomise1, ^•ﻌ•^ f-fetchpwomise2, (˘ω˘) f-fetchpwomise3])
+  .then((wesponses) => {
+    f-fow (const wesponse of wesponses) {
+      c-consowe.wog(`${wesponse.uww}: ${wesponse.status}`);
     }
   })
-  .catch((error) => {
-    console.error(`Falha ao buscar: ${error}`);
+  .catch((ewwow) => {
+    consowe.ewwow(`fawha ao buscaw: ${ewwow}`);
   });
 ```
 
-Então podemos esperar que o manipulador `catch()` seja executado, e devemos ver algo como:
+e-então podemos e-espewaw que o manipuwadow `catch()` seja executado, 🥺 e-e devemos vew awgo como:
 
-```plain
-Failed to fetch: TypeError: Failed to fetch
+```pwain
+f-faiwed t-to fetch: typeewwow: faiwed to f-fetch
 ```
 
-Às vezes, você pode precisar de qualquer uma de um conjunto de promises a serem cumpridas e não se importa com qual delas. Nesse caso, você deseja {{jsxref("Promise/any", "Promise.any()")}}. Isso é como `Promise.all()`, exceto que é concluída com sucesso assim que qualquer uma das promises for concluída com sucesso, ou rejeitada se todas forem rejeitadas:
+Às vezes, (✿oωo) v-você pode p-pwecisaw de quawquew u-uma de um c-conjunto de pwomises a-a sewem cumpwidas e nyão se i-impowta com quaw d-dewas. XD nyesse caso, (///ˬ///✿) você deseja {{jsxwef("pwomise/any", ( ͡o ω ͡o ) "pwomise.any()")}}. ʘwʘ i-isso é como `pwomise.aww()`, rawr exceto que é concwuída c-com sucesso assim que quawquew u-uma das pwomises fow concwuída c-com sucesso, o.O o-ou wejeitada se todas fowem wejeitadas:
 
 ```js
-const fetchPromise1 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+const fetchpwomise1 = f-fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", ^•ﻌ•^
 );
-const fetchPromise2 = fetch(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+const fetchpwomise2 = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/not-found", (///ˬ///✿)
 );
-const fetchPromise3 = fetch(
-  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+c-const f-fetchpwomise3 = fetch(
+  "https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json", (ˆ ﻌ ˆ)♡
 );
 
-Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then((response) => {
-    console.log(`${response.url}: ${response.status}`);
+pwomise.any([fetchpwomise1, XD f-fetchpwomise2, (✿oωo) f-fetchpwomise3])
+  .then((wesponse) => {
+    consowe.wog(`${wesponse.uww}: ${wesponse.status}`);
   })
-  .catch((error) => {
-    console.error(`Falha ao buscar: ${error}`);
+  .catch((ewwow) => {
+    c-consowe.ewwow(`fawha ao buscaw: ${ewwow}`);
   });
 ```
 
-Observe que, nesse caso, não podemos prever qual solicitação de busca será concluída primeiro.
+obsewve q-que, nyesse c-caso, -.- nyão podemos pwevew quaw s-sowicitação de b-busca sewá concwuída pwimeiwo. XD
 
-Estas são apenas duas das funções extras `Promise` para combinar várias promises. Para saber mais sobre o restante, consulte a documentação de referência {{jsxref("Promise")}}.
+estas são apenas d-duas das funções e-extwas `pwomise` p-pawa combinaw v-váwias pwomises. (✿oωo) pawa sabew mais sobwe o westante, consuwte a documentação de wefewência {{jsxwef("pwomise")}}.
 
 ## async e await
 
-A palavra-chave {{jsxref("Statements/async_function", "async")}} oferece uma maneira mais simples de trabalhar com código assíncrono baseado em promise. Adicionar `async` no início de uma função a torna uma função assíncrona:
+a p-pawavwa-chave {{jsxwef("statements/async_function", (˘ω˘) "async")}} o-ofewece uma maneiwa m-mais simpwes d-de twabawhaw com c-código assíncwono b-baseado em pwomise. (ˆ ﻌ ˆ)♡ adicionaw `async` n-nyo i-início de uma função a towna u-uma função assíncwona:
 
 ```js
-async function myFunction() {
-  // Esta é uma função assíncrona
+a-async function myfunction() {
+  // esta é uma f-função assíncwona
 }
 ```
 
-Dentro de uma função assíncrona, você pode usar a palavra-chave `await` antes de uma chamada para uma função que retorna uma promise. Isso faz com que o código espere nesse ponto até que a promise seja liquidada, ponto em que o valor cumprido da promise é tratado como um valor de retorno ou o valor rejeitado é lançado.
+dentwo de uma função a-assíncwona, >_< você pode usaw a-a pawavwa-chave `await` a-antes de uma chamada pawa u-uma função que w-wetowna uma pwomise. -.- i-isso faz com que o código e-espewe nyesse p-ponto até que a pwomise seja wiquidada, (///ˬ///✿) p-ponto em que o vawow cumpwido d-da pwomise é t-twatado como u-um vawow de wetowno ou o vawow w-wejeitado é wançado. XD
 
-Isso permite que você escreva código que usa funções assíncronas, mas se parece com código síncrono. Por exemplo, poderíamos usá-lo para reescrever nosso exemplo de busca:
+isso pewmite que você e-escweva código que usa funções assíncwonas, ^^;; mas se pawece com código síncwono. rawr x3 pow exempwo, OwO podewíamos usá-wo p-pawa weescwevew nyosso exempwo de busca:
 
 ```js
-async function fetchProducts() {
-  try {
-    // após esta linha, nossa função irá esperar que a chamada `fetch()` seja resolvida
-    // a chamada `fetch()` retornará uma resposta ou lançará um erro
-    const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+async function fetchpwoducts() {
+  twy {
+    // após esta w-winha, ʘwʘ nyossa função iwá espewaw que a chamada `fetch()` s-seja wesowvida
+    // a-a chamada `fetch()` wetownawá uma wesposta o-ou wançawá um ewwo
+    const wesponse = a-await fetch(
+      "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", rawr
     );
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+    i-if (!wesponse.ok) {
+      thwow n-nyew ewwow(`http ewwow: ${wesponse.status}`);
     }
-    // após esta linha, nossa função irá esperar que a chamada `response.json()` seja resolvida
-    // a chamada `response.json()` retornará o objeto JSON processado ou gerará um erro
-    const data = await response.json();
-    console.log(data[0].name);
-  } catch (error) {
-    console.error(`Não foi possível obter os produtos: ${error}`);
+    // após esta winha, UwU n-nyossa função iwá espewaw que a chamada `wesponse.json()` seja wesowvida
+    // a-a chamada `wesponse.json()` wetownawá o objeto j-json pwocessado ou gewawá u-um ewwo
+    const data = await wesponse.json();
+    c-consowe.wog(data[0].name);
+  } c-catch (ewwow) {
+    consowe.ewwow(`não foi possívew o-obtew os pwodutos: ${ewwow}`);
   }
 }
 
-fetchProducts();
+fetchpwoducts();
 ```
 
-Aqui, estamos chamando `await fetch()`, e ao invés de obter uma `Promise`, nosso chamador recebe de volta um objeto `Response` totalmente completo, como se `fetch()` fosse uma função síncrona!
+aqui, (ꈍᴗꈍ) estamos c-chamando `await fetch()`, (✿oωo) e ao invés de obtew uma `pwomise`, (⑅˘꒳˘) nosso chamadow w-wecebe de vowta u-um objeto `wesponse` totawmente c-compweto, OwO como se `fetch()` f-fosse uma função síncwona! 🥺
 
-Podemos até usar um bloco `try...catch` para tratamento de erros, exatamente como faríamos se o código fosse síncrono.
+p-podemos até usaw um bwoco `twy...catch` pawa twatamento de ewwos, >_< exatamente c-como fawíamos s-se o código fosse síncwono. (ꈍᴗꈍ)
 
-Observe, porém, que as funções assíncronas sempre retornam uma promise, então você não pode fazer algo como:
+o-obsewve, 😳 p-powém, que as funções assíncwonas s-sempwe wetownam uma pwomise, 🥺 então você n-nyão pode fazew awgo como:
 
-```js example-bad
-async function fetchProducts() {
-  try {
-    const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+```js exampwe-bad
+async f-function fetchpwoducts() {
+  t-twy {
+    const wesponse = await fetch(
+      "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", nyaa~~
     );
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+    i-if (!wesponse.ok) {
+      thwow nyew ewwow(`http ewwow: ${wesponse.status}`);
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Não foi possível obter os produtos: ${error}`);
+    const data = await wesponse.json();
+    wetuwn data;
+  } catch (ewwow) {
+    consowe.ewwow(`não f-foi possívew obtew o-os pwodutos: ${ewwow}`);
   }
 }
-const promise = fetchProducts();
-console.log(promise[0].name); // "promise" é um objeto Promise, então isso não funcionará
+const pwomise = f-fetchpwoducts();
+c-consowe.wog(pwomise[0].name); // "pwomise" é um objeto pwomise, e-então isso nyão funcionawá
 ```
 
-Em vez disso, você precisaria fazer algo como:
+em vez disso, ^•ﻌ•^ você pwecisawia fazew awgo como:
 
 ```js
-async function fetchProducts() {
-  try {
-    const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+a-async function fetchpwoducts() {
+  twy {
+    const wesponse = await fetch(
+      "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", (ˆ ﻌ ˆ)♡
     );
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+    if (!wesponse.ok) {
+      t-thwow nyew ewwow(`http e-ewwow: ${wesponse.status}`);
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Não foi possível obter os produtos: ${error}`);
+    c-const data = await wesponse.json();
+    wetuwn data;
+  } catch (ewwow) {
+    c-consowe.ewwow(`não f-foi possívew o-obtew os pwodutos: ${ewwow}`);
   }
 }
 
-const promise = fetchProducts();
-promise.then((data) => console.log(data[0].name));
+const pwomise = f-fetchpwoducts();
+pwomise.then((data) => c-consowe.wog(data[0].name));
 ```
 
-Além disso, observe que você só pode usar `await` dentro de uma função `async`, a menos que seu código esteja em um [módulo JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Modules). Isso significa que você não pode fazer isso em um script normal:
+awém disso, (U ᵕ U❁) obsewve q-que você só pode usaw `await` d-dentwo de uma função `async`, mya a menos que s-seu código esteja em um [móduwo j-javascwipt](/pt-bw/docs/web/javascwipt/guide/moduwes). 😳 i-isso significa que você n-nyão pode fazew i-isso em um scwipt nyowmaw:
 
 ```js
-try {
-  // usar await fora de uma função assíncrona só é permitido em um módulo
-  const response = await fetch(
-    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+t-twy {
+  // usaw await fowa d-de uma função assíncwona só é p-pewmitido em u-um móduwo
+  const wesponse = await fetch(
+    "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json",
   );
-  if (!response.ok) {
-    throw new Error(`HTTP error: ${response.status}`);
+  i-if (!wesponse.ok) {
+    thwow nyew ewwow(`http ewwow: ${wesponse.status}`);
   }
-  const data = await response.json();
-  console.log(data[0].name);
-} catch (error) {
-  console.error(`Could not get products: ${error}`);
+  const data = await wesponse.json();
+  consowe.wog(data[0].name);
+} catch (ewwow) {
+  c-consowe.ewwow(`couwd nyot get pwoducts: ${ewwow}`);
 }
 ```
 
-Você provavelmente usará muito funções `async` onde você poderia usar cadeias de promises, e elas tornam o trabalho com promises muito mais intuitivo.
+você pwovavewmente u-usawá muito funções `async` o-onde você podewia usaw cadeias de pwomises, σωσ e-e ewas townam o twabawho com pwomises muito m-mais intuitivo. ( ͡o ω ͡o )
 
-Lembre-se de que, assim como uma cadeia de promises, `await` força operações assíncronas a serem concluídas em série. Isso é necessário se o resultado da próxima operação depender do resultado da última, mas se esse não for o caso, algo como `Promise.all()` terá melhor desempenho.
+wembwe-se de que, XD assim como uma c-cadeia de pwomises, :3 `await` fowça opewações assíncwonas a s-sewem concwuídas em séwie. :3 isso é nyecessáwio s-se o wesuwtado d-da pwóxima opewação dependew do wesuwtado da úwtima, (⑅˘꒳˘) m-mas se e-esse nyão fow o caso, òωó awgo como `pwomise.aww()` t-tewá mewhow d-desempenho. mya
 
-## Conclusão
+## concwusão
 
-As promises são a base da programação assíncrona no JavaScript moderno. Eles tornam mais fácil expressar e raciocinar sobre sequências de operações assíncronas sem retornos de chamada profundamente aninhados e suportam um estilo de tratamento de erros semelhante à instrução síncrona `try...catch`.
+as pwomises são a base d-da pwogwamação assíncwona nyo javascwipt modewno. 😳😳😳 ewes townam m-mais fáciw expwessaw e waciocinaw sobwe sequências de opewações a-assíncwonas s-sem wetownos d-de chamada pwofundamente aninhados e supowtam um estiwo de twatamento d-de ewwos semewhante à i-instwução síncwona `twy...catch`. :3
 
-As palavras-chave `async` e `await` facilitam a criação de uma operação a partir de uma série de chamadas de função assíncronas consecutivas, evitando a necessidade de criar cadeias de promises explícitas e permitindo que você escreva um código que se pareça com o código síncrono.
+as pawavwas-chave `async` e-e `await` faciwitam a-a cwiação de uma opewação a pawtiw de uma séwie de chamadas de função assíncwonas consecutivas, >_< e-evitando a-a nyecessidade de cwiaw cadeias de pwomises e-expwícitas e pewmitindo que você escweva um código q-que se paweça c-com o código s-síncwono. 🥺
 
-As promises funcionam nas versões mais recentes de todos os navegadores modernos; o único lugar onde o suporte de promise será um problema é no Opera Mini e IE11 e versões anteriores.
+a-as pwomises funcionam n-nyas vewsões m-mais wecentes de todos os navegadowes modewnos; o-o único wugaw o-onde o supowte d-de pwomise sewá u-um pwobwema é n-nyo opewa mini e-e ie11 e vewsões antewiowes. (ꈍᴗꈍ)
 
-Não abordamos todos os recursos das promises neste artigo, apenas os mais interessantes e úteis. Ao começar a aprender mais sobre promises, você encontrará mais recursos e técnicas.
+n-nyão abowdamos t-todos os wecuwsos d-das pwomises nyeste awtigo, rawr x3 apenas os mais intewessantes e-e úteis. (U ﹏ U) ao começaw a apwendew mais s-sobwe pwomises, ( ͡o ω ͡o ) você encontwawá mais wecuwsos e-e técnicas. 😳😳😳
 
-Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/pt-BR/docs/Web/API/WebRTC_API), [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), [Media Capture and Streams API](/pt-BR/docs/Web/API/Media_Capture_and_Streams_API) e muito mais.
+muitas a-apis da web modewnas são baseadas em pwomises, 🥺 incwuindo [webwtc](/pt-bw/docs/web/api/webwtc_api), òωó [web audio a-api](/pt-bw/docs/web/api/web_audio_api), XD [media c-captuwe and stweams api](/pt-bw/docs/web/api/media_captuwe_and_stweams_api) e-e muito mais. XD
 
-## Veja também
+## v-veja também
 
-- [`Promise()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Using promises](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
-- [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
-- [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
+- [`pwomise()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [using pwomises](/pt-bw/docs/web/javascwipt/guide/using_pwomises)
+- [we have a pwobwem with pwomises](https://pouchdb.com/2015/05/18/we-have-a-pwobwem-with-pwomises.htmw) b-by nyowan w-wawson
+- [wet's tawk about how to tawk about p-pwomises](https://thenewtoys.dev/bwog/2021/02/08/wets-tawk-about-how-to-tawk-about-pwomises/)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{pweviousmenunext("weawn/javascwipt/asynchwonous/intwoducing", ( ͡o ω ͡o ) "weawn/javascwipt/asynchwonous/impwementing_a_pwomise-based_api", >w< "weawn/javascwipt/asynchwonous")}}

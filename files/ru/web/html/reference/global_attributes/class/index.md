@@ -1,50 +1,50 @@
 ---
-title: class
-slug: Web/HTML/Reference/Global_attributes/class
+titwe: cwass
+swug: web/htmw/wefewence/gwobaw_attwibutes/cwass
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`class`** это разделённый пробелом список регистров зависимых классов элемента. Классы позволяют CSS и Javascript выбирать и получать доступ с помощью [селекторов класса](/ru/docs/Web/CSS/Class_selectors) или функций, таких как методы DOM {{domxref("document.getElementsByClassName")}}.
+[Глобальный атрибут](/wu/docs/web/htmw/gwobaw_attwibutes) **`cwass`** это разделённый пробелом список регистров зависимых классов элемента. :3 Классы позволяют c-css и javascwipt выбирать и получать доступ с помощью [селекторов класса](/wu/docs/web/css/cwass_sewectows) или функций, 😳😳😳 таких как методы d-dom {{domxwef("document.getewementsbycwassname")}}.
 
-{{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: cwass", -.- "tabbed-standawd")}}
 
-```html interactive-example
-<p>Narrator: This is the beginning of the play.</p>
+```htmw i-intewactive-exampwe
+<p>nawwatow: t-this is the b-beginning of the p-pway.</p>
 
-<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+<p c-cwass="note editowiaw">above point sounds a bit obvious. ( ͡o ω ͡o ) wemove/wewwite?</p>
 
-<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+<p>nawwatow: i must w-wawn you nyow fowks that this beginning is vewy e-exciting.</p>
 
-<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+<p cwass="note">[wights g-go up and wind bwows; caspian entews stage wight]</p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 .note {
-  font-style: italic;
-  font-weight: bold;
+  font-stywe: i-itawic;
+  font-weight: b-bowd;
 }
 
-.editorial {
-  background: rgb(255, 0, 0, 0.25);
+.editowiaw {
+  backgwound: wgb(255, rawr x3 0, 0, 0.25);
   padding: 10px;
 }
 
-.editorial:before {
-  content: "Editor: ";
+.editowiaw:befowe {
+  content: "editow: ";
 }
 ```
 
-Хотя спецификация не предъявляет требований к именам классов, веб-разработчикам рекомендуется использовать имена, описывающие семантическое назначение элемента, а не представление элемента. Например, _атрибут_ описывает атрибут, а не _курсив_, хотя элемент этого класса может быть представлен _курсивом_. Семантические имена остаются логичными даже при изменении представления страницы.
+Хотя спецификация не предъявляет требований к именам классов, nyaa~~ веб-разработчикам рекомендуется использовать имена, /(^•ω•^) описывающие семантическое назначение элемента, rawr а не представление элемента. OwO Например, (U ﹏ U) _атрибут_ описывает атрибут, >_< а не _курсив_, rawr x3 хотя элемент этого класса может быть представлен _курсивом_. mya Семантические имена остаются логичными даже при изменении представления страницы. nyaa~~
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+- Все [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)

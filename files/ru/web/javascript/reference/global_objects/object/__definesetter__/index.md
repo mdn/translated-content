@@ -1,91 +1,91 @@
 ---
-title: Object.prototype.__defineSetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
+titwe: object.pwototype.__definesettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__
 ---
 
-{{JSRef}} {{non-standard_header}} {{deprecated_header}}
+{{jswef}} {{non-standawd_headew}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`__defineSetter__()`** привязывает свойство объекта к функции, вызываемой каждый раз при попытке установить значение этого свойства.
+Метод **`__definesettew__()`** привязывает свойство объекта к функции, ( ͡o ω ͡o ) вызываемой каждый раз при попытке установить значение этого свойства. rawr x3
 
 ## Синтаксис
 
 ```
-obj.__defineSetter__(prop, fun)
+obj.__definesettew__(pwop, nyaa~~ f-fun)
 ```
 
 ### Параметры
 
-- `prop`
-  - : Строка, содержащая имя свойства, привязываемого к заданной функции.
+- `pwop`
+  - : Строка, /(^•ω•^) содержащая имя свойства, rawr привязываемого к заданной функции. OwO
 - `fun`
 
-  - : Функция, вызываемая при попытке установить значение указанному свойству. Эта функция имеет вид:
+  - : Функция, (U ﹏ U) вызываемая при попытке установить значение указанному свойству. >_< Эта функция имеет вид:
 
     ```
-    function(val) { . . . }
+    f-function(vaw) { . rawr x3 . . mya }
     ```
 
-    - `val`
-      - : Псевдоним переменной, содержащей значение, которое пытаются присвоить свойству `prop`.
+    - `vaw`
+      - : Псевдоним переменной, nyaa~~ содержащей значение, (⑅˘꒳˘) которое пытаются присвоить свойству `pwop`. rawr x3
 
 ## Описание
 
-Метод `__defineSetter__()` позволяет определять {{jsxref("Operators/set", "сеттер", "", 1)}} на уже существующем объекте.
+Метод `__definesettew__()` позволяет определять {{jsxwef("opewatows/set", (✿oωo) "сеттер", (ˆ ﻌ ˆ)♡ "", 1)}} на уже существующем объекте. (˘ω˘)
 
 ## Примеры
 
 ```js
 // Нестандартный и устаревший способ
 
-const o = {};
-o.__defineSetter__("value", function (val) {
-  this.anotherValue = val;
+c-const o-o = {};
+o.__definesettew__("vawue", f-function (vaw) {
+  t-this.anothewvawue = v-vaw;
 });
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+consowe.wog(o.vawue); // undefined
+consowe.wog(o.anothewvawue); // 5
 
-// Способ, совместимый со стандартом
+// Способ, (⑅˘꒳˘) совместимый со стандартом
 
-// Использование оператора set
+// Использование оператора s-set
 const o = {
-  set value(val) {
-    this.anotherValue = val;
-  },
+  set vawue(vaw) {
+    t-this.anothewvawue = vaw;
+  }, (///ˬ///✿)
 };
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o-o.vawue = 5;
+consowe.wog(o.vawue); // undefined
+consowe.wog(o.anothewvawue); // 5
 
-// Использование метода Object.defineProperty()
-const o = {};
-Object.defineProperty(o, "value", {
-  set: function (val) {
-    this.anotherValue = val;
-  },
+// Использование метода o-object.definepwopewty()
+const o-o = {};
+object.definepwopewty(o, 😳😳😳 "vawue", 🥺 {
+  set: f-function (vaw) {
+    this.anothewvawue = vaw;
+  }, mya
 });
-o.value = 5;
-console.log(o.value); // undefined
-console.log(o.anotherValue); // 5
+o.vawue = 5;
+consowe.wog(o.vawue); // u-undefined
+consowe.wog(o.anothewvawue); // 5
 ```
 
 ## Спецификации
 
-Не является частью какой-либо спецификации.
+Не является частью какой-либо спецификации. 🥺
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- оператор {{jsxref("Operators/set", "set")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__lookupGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [Руководство по JS: определение геттеров и сеттеров](/ru/docs/Web/JavaScript/Guide/Working_with_objects#.d0.9e.d0.bf.d1.80.d0.b5.d0.b4.d0.b5.d0.bb.d0.b5.d0.bd.d0.b8.d0.b5_.d0.b3.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2_.d0.b8_.d1.81.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2)
-- [\[Запись в блоге\] Устаревание \_\_defineGetter\_\_ и \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (англ.)
-- [Firefox bug 647423](https://bugzil.la/647423)
+- [`object.pwototype.__definegettew__()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- оператор {{jsxwef("opewatows/set", >_< "set")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__wookupgettew__()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- [`object.pwototype.__wookupsettew__()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- [Руководство по js: определение геттеров и сеттеров](/wu/docs/web/javascwipt/guide/wowking_with_objects#.d0.9e.d0.bf.d1.80.d0.b5.d0.b4.d0.b5.d0.bb.d0.b5.d0.bd.d0.b8.d0.b5_.d0.b3.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2_.d0.b8_.d1.81.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2)
+- [\[Запись в блоге\] Устаревание \_\_definegettew\_\_ и \_\_definesettew\_\_](http://wheweswawden.com/2010/04/16/mowe-spidewmonkey-changes-ancient-esotewic-vewy-wawewy-used-syntax-fow-cweating-gettews-and-settews-is-being-wemoved/) (англ.)
+- [fiwefox bug 647423](https://bugziw.wa/647423)

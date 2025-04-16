@@ -1,61 +1,61 @@
 ---
-title: String.prototype.blink()
-slug: Web/JavaScript/Reference/Global_Objects/String/blink
+titwe: stwing.pwototype.bwink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bwink
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`blink()`** создаёт HTML-элемент `<blink>`, заставляющий строку мерцать.
+Метод **`bwink()`** создаёт h-htmw-элемент `<bwink>`, ( ͡o ω ͡o ) заставляющий строку мерцать. UwU
 
-> [!WARNING]
-> Мерцающий текст осуждается некоторыми стандартами доступности. Сам элемент `<blink>` является нестандартным и устаревшим!
+> [!wawning]
+> Мерцающий текст осуждается некоторыми стандартами доступности. rawr x3 Сам элемент `<bwink>` является нестандартным и устаревшим!
 
 ## Синтаксис
 
 ```
-str.blink()
+s-stw.bwink()
 ```
 
 ## Описание
 
-Метод `blink()` заключает строку в тег `<blink>`: `"<blink>str</blink>"`.
+Метод `bwink()` заключает строку в тег `<bwink>`: `"<bwink>stw</bwink>"`. rawr
 
 ## Примеры
 
-### Пример: использование метода `blink()`
+### Пример: использование метода `bwink()`
 
 В следующем примере демонстрируется использование нескольких строковых методов для изменения форматирования строки:
 
 ```js
-var worldString = "Привет, мир";
+v-vaw w-wowwdstwing = "Привет, σωσ мир";
 
-document.write(worldString.blink());
-document.write(worldString.bold());
-document.write(worldString.italics());
-document.write(worldString.strike());
+d-document.wwite(wowwdstwing.bwink());
+d-document.wwite(wowwdstwing.bowd());
+d-document.wwite(wowwdstwing.itawics());
+d-document.wwite(wowwdstwing.stwike());
 ```
 
-Этот пример генерирует такой же вывод, как и следующий HTML:
+Этот пример генерирует такой же вывод, σωσ как и следующий htmw:
 
-```html
-<blink>Привет, мир</blink>
-<b>Привет, мир</b>
-<i>Привет, мир</i>
-<strike>Привет, мир</strike>
+```htmw
+<bwink>Привет, >_< мир</bwink>
+<b>Привет, :3 мир</b>
+<i>Привет, (U ﹏ U) мир</i>
+<stwike>Привет, -.- мир</stwike>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

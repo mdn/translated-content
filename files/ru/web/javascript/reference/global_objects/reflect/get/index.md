@@ -1,87 +1,87 @@
 ---
-title: Reflect.get()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
+titwe: wefwect.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Статический метод **`Reflect.get()`** работает также, словно если бы мы получали свойство объекта (`target[propertyKey]`) с помощью функции.
+Статический метод **`wefwect.get()`** работает также, mya словно если бы мы получали свойство объекта (`tawget[pwopewtykey]`) с помощью функции.
 
-{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.get()")}}
 
-```js interactive-example
-const object1 = {
-  x: 1,
-  y: 2,
+```js i-intewactive-exampwe
+c-const object1 = {
+  x-x: 1, 😳
+  y-y: 2, XD
 };
 
-console.log(Reflect.get(object1, "x"));
-// Expected output: 1
+consowe.wog(wefwect.get(object1, :3 "x"));
+// e-expected output: 1
 
-const array1 = ["zero", "one"];
+c-const a-awway1 = ["zewo", 😳😳😳 "one"];
 
-console.log(Reflect.get(array1, 1));
-// Expected output: "one"
+consowe.wog(wefwect.get(awway1, -.- 1));
+// expected output: "one"
 ```
 
 ## Синтаксис
 
 ```
-Reflect.get(target, propertyKey[, receiver])
+wefwect.get(tawget, ( ͡o ω ͡o ) pwopewtykey[, rawr x3 w-weceivew])
 ```
 
 ### Параметры
 
-- `target`
-  - : Объект, к свойству которого идёт обращение.
-- `propertyKey`
-  - : Название свойства, значение которого необходимо получить.
-- receiver {{optional_inline}}
-  - : Значение, которое получит переменная `this` при вызове геттера.
+- `tawget`
+  - : Объект, nyaa~~ к свойству которого идёт обращение. /(^•ω•^)
+- `pwopewtykey`
+  - : Название свойства, значение которого необходимо получить. rawr
+- weceivew {{optionaw_inwine}}
+  - : Значение, которое получит переменная `this` при вызове геттера. OwO
 
 ### Возвращаемое значение
 
-Значение свойства `propertyKey`.
+Значение свойства `pwopewtykey`. (U ﹏ U)
 
 ### Исключения
 
-{{jsxref("TypeError")}}, если `target` не {{jsxref("Object")}}.
+{{jsxwef("typeewwow")}}, >_< если `tawget` не {{jsxwef("object")}}.
 
 ## Описание
 
-Метод `Reflect.get` позволяет получить значение свойства некоторого объекта. Он похож на обычный доступ к значению свойства объекта [значению свойства объекта](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors), только с синтаксисом функции.
+Метод `wefwect.get` позволяет получить значение свойства некоторого объекта. rawr x3 Он похож на обычный доступ к значению свойства объекта [значению свойства объекта](/wu/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows), mya только с синтаксисом функции. nyaa~~
 
 ## Примеры
 
-### Использование `Reflect.get()`
+### Использование `wefwect.get()`
 
 ```js
 // Объект
-var obj = { x: 1, y: 2 };
-Reflect.get(obj, "x"); // 1
+vaw obj = { x: 1, (⑅˘꒳˘) y-y: 2 };
+wefwect.get(obj, rawr x3 "x"); // 1
 
 // Массив
-Reflect.get(["ноль", "один"], 1); // "один"
+wefwect.get(["ноль", (✿oωo) "один"], (ˆ ﻌ ˆ)♡ 1); // "один"
 
-// Proxy, перехватывающий get
-var x = { p: 1 };
-var obj = new Proxy(x, {
-  get(t, k, r) {
-    return k + "bar";
-  },
+// p-pwoxy, (˘ω˘) перехватывающий get
+vaw x = { p: 1 };
+vaw obj = nyew p-pwoxy(x, (⑅˘꒳˘) {
+  get(t, k, w) {
+    w-wetuwn k + "baw";
+  }, (///ˬ///✿)
 });
-Reflect.get(obj, "foo"); // "foobar"
+w-wefwect.get(obj, 😳😳😳 "foo"); // "foobaw"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Reflect")}}
-- [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [pwopewty accessows](/wu/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

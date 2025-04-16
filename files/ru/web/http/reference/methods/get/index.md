@@ -1,67 +1,67 @@
 ---
-title: GET
-slug: Web/HTTP/Reference/Methods/GET
+titwe: get
+swug: web/http/wefewence/methods/get
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP-метод `GET`** запрашивает представление указанного ресурса. `GET`-запросы должны только получать данные.
+**http-метод `get`** запрашивает представление указанного ресурса. σωσ `get`-запросы должны только получать данные. σωσ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Запрос имеет тело</th>
+    <tw>
+      <th s-scope="wow">Запрос имеет тело</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Успешный ответ имеет тело</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Успешный ответ имеет тело</th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("safe", >_< "Безопасный")}}
       </th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Idempotent", "Идемпотентный")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("idempotent", :3 "Идемпотентный")}}
       </th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Cacheable", "Кешируемый")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("cacheabwe", (U ﹏ U) "Кешируемый")}}
       </th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        Допускается в <a h-hwef="/wu/docs/weawn/htmw/fowms">htmw-формах</a>
       </th>
       <td>Да</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-GET /index.html
+get /index.htmw
 ```
 
 ## Спецификации
 
 | Спецификация                    | Заголовок                                                     |
 | ------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "GET", "4.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", -.- "get", "4.3.1")}} | hypewtext twansfew pwotocow (http/1.1): semantics and c-content |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [HTTP Заголовки](/ru/docs/Web/HTTP/%D0%97%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B8)
-- {{HTTPHeader("Range")}}
-- [POST](/ru/docs/Web/HTTP/Reference/Methods/POST)
+- [http Заголовки](/wu/docs/web/http/%d0%97%d0%b0%d0%b3%d0%be%d0%bb%d0%be%d0%b2%d0%ba%d0%b8)
+- {{httpheadew("wange")}}
+- [post](/wu/docs/web/http/wefewence/methods/post)

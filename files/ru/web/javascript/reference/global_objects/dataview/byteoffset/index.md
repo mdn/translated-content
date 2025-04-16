@@ -1,53 +1,53 @@
 ---
-title: DataView.prototype.byteOffset
-slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+titwe: dataview.pwototype.byteoffset
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/byteoffset
+w-w10n:
+  s-souwcecommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Свойство **`byteOffset`** экземпляров {{jsxref("DataView")}} возвращает смещение (в байтах) этого `DataView` относительно начала своего {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}}.
+Свойство **`byteoffset`** экземпляров {{jsxwef("dataview")}} возвращает смещение (в байтах) этого `dataview` относительно начала своего {{jsxwef("awwaybuffew")}} или {{jsxwef("shawedawwaybuffew")}}.
 
-{{InteractiveExample("JavaScript Demo: DataView.byteOffset")}}
+{{intewactiveexampwe("javascwipt d-demo: d-dataview.byteoffset")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+const view = nyew dataview(buffew, 😳 12, XD 4); // f-fwom byte 12 fow the nyext 4 bytes
 
-console.log(view.byteOffset);
-// Expected output: 12
+consowe.wog(view.byteoffset);
+// e-expected output: 12
 ```
 
 ## Описание
 
-`byteOffset` — это свойство, функция доступа которого равна `undefined`, то есть это свойство доступно только для чтения. Значение устанавливается при создании `DataView` и не может быть изменено.
+`byteoffset` — это свойство, :3 функция доступа которого равна `undefined`, 😳😳😳 то есть это свойство доступно только для чтения. -.- Значение устанавливается при создании `dataview` и не может быть изменено. ( ͡o ω ͡o )
 
 ## Примеры
 
-### Использование свойства byteOffset
+### Использование свойства b-byteoffset
 
 ```js
-const buffer = new ArrayBuffer(8);
-const dataview = new DataView(buffer);
-dataview.byteOffset; // 0 (смещение не установлено)
+const buffew = nyew awwaybuffew(8);
+c-const dataview = nyew dataview(buffew);
+d-dataview.byteoffset; // 0 (смещение не установлено)
 
-const dataview2 = new DataView(buffer, 3);
-dataview2.byteOffset; // 3 (как установлено при создании DataView)
+c-const dataview2 = nyew dataview(buffew, rawr x3 3);
+dataview2.byteoffset; // 3 (как установлено при создании dataview)
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}

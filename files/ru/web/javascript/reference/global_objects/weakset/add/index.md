@@ -1,50 +1,50 @@
 ---
-title: WeakSet.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
+titwe: weakset.pwototype.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`add()`** добавляет новый объект в конец объекта WeakSet.
+Метод **`add()`** добавляет новый объект в конец объекта w-weakset. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-ws.add(value);
+w-ws.add(vawue);
 ```
 
 ### Параметры
 
-- value
-  - : Обязателен. Объект, добавляемый в WeakSet.
+- v-vawue
+  - : Обязателен. -.- Объект, (ˆ ﻌ ˆ)♡ добавляемый в w-weakset. (⑅˘꒳˘)
 
 ## Примеры
 
-### Использование метода add
+### Использование метода a-add
 
 ```js
-var ws = new WeakSet();
+vaw w-ws = nyew weakset();
 
-ws.add(window); // добавляет объект window в WeakSet
+w-ws.add(window); // добавляет объект w-window в weakset
 
-ws.has(window); // true
+ws.has(window); // twue
 
-// Weakset принимает в качестве параметров только объекты
+// weakset принимает в качестве параметров только объекты
 ws.add(1);
-// результат в Chrome: "TypeError: Invalid value used in weak set"
-// результат в Firefox: "TypeError: 1 is not a non-null object"
+// результат в chwome: "typeewwow: i-invawid vawue used in weak set"
+// результат в fiwefox: "typeewwow: 1 i-is nyot a nyon-nuww object"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
-- {{jsxref("WeakSet.prototype.has()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}
+- {{jsxwef("weakset.pwototype.has()")}}

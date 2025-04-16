@@ -1,14 +1,14 @@
 ---
-title: Stacking context
-slug: Glossary/Stacking_context
+titwe: stacking context
+swug: g-gwossawy/stacking_context
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Stacking context** refere-se refere a como elementos de uma página se empilham sobre outros elementos, assim como você pode organizar cards em cima de sua mesa, lado a lado ou sobrepostas.
+**stacking c-context** wefewe-se w-wefewe a como e-ewementos de uma p-página se empiwham s-sobwe outwos e-ewementos, (U ﹏ U) assim c-como você pode owganizaw cawds em cima de sua mesa, -.- wado a wado ou sobwepostas. (ˆ ﻌ ˆ)♡
 
-## Leia mais
+## w-weia mais
 
-### General knowledge
+### genewaw knowwedge
 
-- [Further explanation and example](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [fuwthew e-expwanation and exampwe](/pt-bw/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context)

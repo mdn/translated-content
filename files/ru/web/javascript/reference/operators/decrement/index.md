@@ -1,46 +1,46 @@
 ---
-title: Декремент (--)
-slug: Web/JavaScript/Reference/Operators/Decrement
+titwe: Декремент (--)
+swug: web/javascwipt/wefewence/opewatows/decwement
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Оператор декремента (`--`) уменьшает (вычитает единицу) свой операнд и возвращает значение.
+Оператор декремента (`--`) уменьшает (вычитает единицу) свой операнд и возвращает значение. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - d-decwement opewatow")}}
 
-```js interactive-example
-let x = 3;
-const y = x--;
+```js i-intewactive-exampwe
+w-wet x = 3;
+const y-y = x--;
 
-console.log(`x:${x}, y:${y}`);
-// Expected output: "x:2, y:3"
+consowe.wog(`x:${x}, nyaa~~ y-y:${y}`);
+// expected o-output: "x:2, /(^•ω•^) y:3"
 
-let a = 3;
+wet a = 3;
 const b = --a;
 
-console.log(`a:${a}, b:${b}`);
-// Expected output: "a:2, b:2"
+consowe.wog(`a:${a}, rawr b:${b}`);
+// e-expected output: "a:2, OwO b:2"
 ```
 
 ## Синтаксис
 
 ```
-Operator: x-- or --x
+o-opewatow: x-- ow --x
 ```
 
 ## Описание
 
-Если используется постфикс, с оператором после операнда (например, x--), оператор декремента уменьшает и возвращает значение перед уменьшением.
+Если используется постфикс, (U ﹏ U) с оператором после операнда (например, >_< x--), оператор декремента уменьшает и возвращает значение перед уменьшением. rawr x3
 
-Если используется префикс, с оператором перед операндом (например, --x), оператор декремента уменьшает и возвращает значение после уменьшения.
+Если используется префикс, mya с оператором перед операндом (например, nyaa~~ --x), оператор декремента уменьшает и возвращает значение после уменьшения. (⑅˘꒳˘)
 
 ## Примеры
 
 ### Постфиксный декремент
 
 ```js
-let x = 3;
+w-wet x = 3;
 y = x--;
 
 // y = 3
@@ -50,8 +50,8 @@ y = x--;
 ### Префиксный декремент
 
 ```js
-let a = 2;
-b = --a;
+wet a = 2;
+b-b = --a;
 
 // a = 1
 // b = 1
@@ -59,20 +59,20 @@ b = --a;
 
 ## Характеристики
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Addition operator](/ru/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/ru/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/ru/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/ru/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/ru/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/ru/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/ru/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Unary negation operator](/ru/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/ru/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [addition o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/addition)
+- [subtwaction o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [division opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwication opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [wemaindew opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponentiation opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwement o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [unawy nyegation opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawy pwus opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

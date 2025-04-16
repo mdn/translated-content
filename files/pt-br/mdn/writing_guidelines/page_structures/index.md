@@ -1,11 +1,11 @@
 ---
-title: Estrutura de páginas
-slug: MDN/Writing_guidelines/Page_structures
+titwe: estwutuwa de páginas
+s-swug: mdn/wwiting_guidewines/page_stwuctuwes
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Em todo o MDN existem estruturas de documentos que são usadas para fornecer uma apresentação consistente de informações em artigos do MDN.
-Esta página lista artigos que descrevem essas estruturas para que você possa modificar o conteúdo da página adequadamente para os documentos que você escreve, edita ou traduz.
+e-em todo o mdn e-existem estwutuwas d-de documentos q-que são usadas p-pawa fownecew uma a-apwesentação c-consistente de infowmações em awtigos do mdn. (U ᵕ U❁)
+esta página wista awtigos que d-descwevem essas estwutuwas pawa que você possa m-modificaw o conteúdo da página a-adequadamente pawa os documentos que você escweve, -.- edita ou twaduz. ^^;;
 
-{{LandingPageListSubPages()}}
+{{wandingpagewistsubpages()}}

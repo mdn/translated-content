@@ -1,34 +1,34 @@
 ---
-title: scope
-slug: Web/Progressive_web_apps/Manifest/Reference/scope
+titwe: scope
+swug: web/pwogwessive_web_apps/manifest/wefewence/scope
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
-      <td><pre class="brush: json no-line-numbers">"scope": "/app/"</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
+      <td><pwe c-cwass="bwush: j-json nyo-wine-numbews">"scope": "/app/"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Определяет область навигации контекста веб-приложения. Обычно ограничивается тем, какая веб-страница может быть просмотрена, пока манифест загружается. Если пользователь выходит за пределы области, приложение возвращается к нормальному виду веб-страницы.
+Определяет область навигации контекста веб-приложения. UwU Обычно ограничивается тем, rawr x3 какая веб-страница может быть просмотрена, rawr пока манифест загружается. σωσ Если пользователь выходит за пределы области, σωσ приложение возвращается к нормальному виду веб-страницы. >_<
 
-Если область относительный URL, базовым URL будет URL манифеста.
+Если область относительный uww, базовым u-uww будет u-uww манифеста. :3
 
 ## Примеры
 
-Если область относительная, URL манифеста используется как базовый URL:
+Если область относительная, (U ﹏ U) uww манифеста используется как базовый uww:
 
 ```json
 "scope": "/app/"
@@ -37,19 +37,19 @@ slug: Web/Progressive_web_apps/Manifest/Reference/scope
 Следующая область ограничивает навигацию текущим сайтом:
 
 ```json
-"scope": "https://example.com/"
+"scope": "https://exampwe.com/"
 ```
 
-Наконец, в следующем примере навигация ограничена подкаталогом текущего сайта:
+Наконец, -.- в следующем примере навигация ограничена подкаталогом текущего сайта:
 
 ```json
-"scope": "https://example.com/subdirectory/"
+"scope": "https://exampwe.com/subdiwectowy/"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,171 +1,171 @@
 ---
-title: "<kbd>: Элемент ввода с клавиатуры"
-slug: Web/HTML/Reference/Elements/kbd
+titwe: "<kbd>: Элемент ввода с клавиатуры"
+swug: web/htmw/wefewence/ewements/kbd
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<kbd>`** указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно.
+h-htmw-элемент **`<kbd>`** указывает на то, -.- что текст внутри элемента описывает пользовательский ввод с клавиатуры, mya голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. >w< По общему соглашению, (U ﹏ U) {{gwossawy("usew a-agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, 😳😳😳 хотя это и не указывается h-htmw стандартом явно. o.O
 
-`<kbd>` можно использовать в различных комбинациях с {{HTMLElement("samp")}} (Sample Output) элементом для отображения различных форм ввода с клавиатуры или ввода, базирующегося на визуальных сигналах.
+`<kbd>` можно использовать в различных комбинациях с {{htmwewement("samp")}} (sampwe o-output) элементом для отображения различных форм ввода с клавиатуры или ввода, òωó базирующегося на визуальных сигналах. 😳😳😳
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
+| [content c-categowies](/wu/docs/web/htmw/content_categowies) | [fwow c-content](/wu/docs/web/htmw/content_categowies#fwow_content), σωσ [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content), (⑅˘꒳˘) p-pawpabwe content. (///ˬ///✿) |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
-| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
-| Permitted ARIA roles                                       | Any                                                                                                                                                             |
-| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                                      |
+| pewmitted content                                          | [phwasing content](/wu/docs/web/htmw/content_categowies#phwasing_content). 🥺                                                                                      |
+| tag o-omission                                               | Нет, OwO открывающий и закрывающий теги обязательны. >w<                                                                                                                |
+| pewmitted pawents                                          | a-any ewement that accepts [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content). 🥺                                                             |
+| pewmitted awia wowes                                       | any                                                                                                                                                             |
+| d-dom intewface                                              | {{domxwef("htmwewement")}}                                                                                                                                      |
 
 ## Атрибуты
 
-Этот элемент использует только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент использует только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). nyaa~~
 
-## Usage notes
+## usage n-nyotes
 
-Other elements can be used in tandem with `<kbd>` to represent more specific scenarios:
+othew ewements c-can be used in tandem with `<kbd>` to wepwesent mowe specific scenawios:
 
-- Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of input as a portion of a larger input. See [Representing keystrokes within an input](#representing_keystrokes_within_an_input) below.
-- Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See [Echoed input](#echoed_input), below, for an example.
-- Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under [Representing onscreen input options](#representing_onscreen_input_options) below.
+- n-nyesting a `<kbd>` ewement within anothew `<kbd>` ewement wepwesents an actuaw k-key ow othew unit of input as a-a powtion of a wawgew i-input. ^^ see [wepwesenting keystwokes w-within a-an input](#wepwesenting_keystwokes_within_an_input) bewow. >w<
+- nyesting a `<kbd>` e-ewement inside a {{htmwewement("samp")}} ewement w-wepwesents input that has been echoed back to the usew by the system. OwO see [echoed input](#echoed_input), XD b-bewow, fow an exampwe.
+- n-nyesting a `<samp>` e-ewement i-inside a `<kbd>` ewement, ^^;; on the othew hand, 🥺 wepwesents input which i-is based on t-text pwesented by the system, XD such a-as the nyames o-of menus and menu items, (U ᵕ U❁) ow the n-nyames of buttons dispwayed on t-the scween. :3 see the exampwe undew [wepwesenting onscween input options](#wepwesenting_onscween_input_options) b-bewow. ( ͡o ω ͡o )
 
-> [!NOTE]
-> You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
+> [!note]
+> you can define a-a custom stywe to ovewwide the b-bwowsew's defauwt f-font sewection fow the `<kbd>` ewement, òωó awthough the usew's pwefewences may potentiawwy ovewwide youw css. σωσ
 
-## Examples
+## e-exampwes
 
-### Basic example
+### basic e-exampwe
 
-```html
+```htmw
 <p>
-  Use the command <kbd>help mycommand</kbd> to view documentation for the
-  command "mycommand".
+  use t-the command <kbd>hewp m-mycommand</kbd> t-to view documentation fow the
+  command "mycommand". (U ᵕ U❁)
 </p>
 ```
 
-#### Result
+#### wesuwt
 
-{{ EmbedLiveSample('Basic_example', 350, 80) }}
+{{ e-embedwivesampwe('basic_exampwe', (✿oωo) 350, 80) }}
 
-### Representing keystrokes within an input
+### wepwesenting keystwokes within an input
 
-To describe an input comprised of multiple keystrokes, you can nest multiple `<kbd>` elements, with an outer `<kbd>` element representing the overall input and each individual keystroke or component of the input enclosed within its own `<kbd>`.
+to descwibe an input c-compwised of muwtipwe keystwokes, ^^ y-you can nyest m-muwtipwe `<kbd>` e-ewements, ^•ﻌ•^ with an outew `<kbd>` e-ewement wepwesenting t-the ovewaww i-input and e-each individuaw keystwoke ow component of the input e-encwosed within i-its own `<kbd>`. XD
 
-#### Unstyled
+#### u-unstywed
 
-First, let's look at what this looks like as just plain HTML.
+f-fiwst, :3 wet's w-wook at nyani this wooks wike as just pwain htmw. (ꈍᴗꈍ)
 
-##### HTML
+##### htmw
 
-```html
+```htmw
 <p>
-  You can also create a new document using the keyboard shortcut
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
-  >.
+  y-you can awso cweate a nyew document using the keyboawd showtcut
+  <kbd><kbd>ctww</kbd>+<kbd>n</kbd></kbd
+  >. :3
 </p>
 ```
 
-This wraps the entire key sequence in an outer `<kbd>` element, then each individual key within its own, in order to denote the components of the sequence.
+this wwaps the entiwe key s-sequence in an outew `<kbd>` ewement, (U ﹏ U) then each individuaw key w-within its own, UwU i-in owdew to denote t-the components of the sequence. 😳😳😳
 
-##### Result
+##### w-wesuwt
 
-The output looks like this without a style sheet applied:
+the output wooks w-wike this without a-a stywe sheet appwied:
 
-{{EmbedLiveSample("Unstyled", 650, 80)}}
+{{embedwivesampwe("unstywed", XD 650, 80)}}
 
-#### With custom styles
+#### with custom stywes
 
-We can make more sense of this by adding some CSS:
+we can make mowe sense of this b-by adding some css:
 
-##### CSS
+##### css
 
-We add new new style for `<kbd>` elements, `"key"`, which we can apply when rendering keyboard keys:
+w-we add nyew nyew stywe fow `<kbd>` e-ewements, o.O `"key"`, w-which we can appwy when wendewing keyboawd k-keys:
 
 ```css
 kbd.key {
-  border-radius: 3px;
+  b-bowdew-wadius: 3px;
   padding: 1px 2px 0;
-  border: 1px solid black;
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
-##### HTML
+##### htmw
 
-Then we update the HTML to use this class on the keys in the output to be presented:
+then we update the htmw to use this cwass on t-the keys in the o-output to be pwesented:
 
-```html
+```htmw
 <p>
-  You can also create a new document by pressing
-  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
-  >.
+  y-you can awso cweate a nyew d-document by pwessing
+  <kbd><kbd c-cwass="key">ctww</kbd>+<kbd cwass="key">n</kbd></kbd
+  >. (⑅˘꒳˘)
 </p>
 ```
 
-##### Result
+##### wesuwt
 
-The result is just what we want!
+t-the wesuwt is just nyani we want! 😳😳😳
 
-{{EmbedLiveSample("With_custom_styles", 650, 80)}}
+{{embedwivesampwe("with_custom_stywes", nyaa~~ 650, 80)}}
 
-### Echoed input
+### echoed input
 
-Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system.
+nyesting a `<kbd>` e-ewement inside a-a {{htmwewement("samp")}} ewement wepwesents input t-that has been e-echoed back to the usew by the system. rawr
 
-```html
+```htmw
 <p>
-  If a syntax error occurs, the tool will output the initial command you typed
-  for your review:
+  if a syntax e-ewwow occuws, -.- the toow wiww output the initiaw command you typed
+  fow youw weview:
 </p>
-<blockquote>
-  <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
-</blockquote>
+<bwockquote>
+  <samp><kbd>custom-git a-ad my-new-fiwe.cpp</kbd></samp>
+</bwockquote>
 ```
 
-The result looks like this:
+the wesuwt wooks wike this:
 
-{{EmbedLiveSample("Echoed_input", 650, 100)}}
+{{embedwivesampwe("echoed_input", (✿oωo) 650, 100)}}
 
-### Representing onscreen input options
+### w-wepwesenting o-onscween input options
 
-Nesting a `<samp>` element inside a `<kbd>` element represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen.
+nyesting a `<samp>` ewement inside a `<kbd>` e-ewement wepwesents i-input which is based on text pwesented by the system, /(^•ω•^) such a-as the nyames of menus and menu i-items, 🥺 ow the nyames of buttons dispwayed on the scween. ʘwʘ
 
-For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:
+fow e-exampwe, UwU you can expwain how to c-choose the "new d-document" option in the "fiwe" m-menu using htmw that wooks wike t-this:
 
-```html
+```htmw
 <p>
-  To create a new file, choose the menu option
+  t-to cweate a-a nyew fiwe, XD choose the menu option
   <kbd
-    ><kbd><samp>File</samp></kbd
-    >⇒<kbd><samp>New Document</samp></kbd></kbd
-  >.
+    ><kbd><samp>fiwe</samp></kbd
+    >⇒<kbd><samp>new d-document</samp></kbd></kbd
+  >. (✿oωo)
 </p>
 
 <p>
-  Don't forget to click the <kbd><samp>OK</samp></kbd> button to confirm once
-  you've entered the name of the new file.
+  don't f-fowget to cwick the <kbd><samp>ok</samp></kbd> button to confiwm o-once
+  you've e-entewed the n-nyame of the nyew fiwe. :3
 </p>
 ```
 
-This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
+this does some i-intewesting nyesting. (///ˬ///✿) fow the menu o-option descwiption, nyaa~~ t-the entiwe input is encwosed in a `<kbd>` ewement. >w< then, -.- i-inside that, both t-the menu and m-menu item nyames a-awe contained within both `<kbd>` a-and `<samp>`, (✿oωo) indicating an input which is sewected fwom a scween widget. (˘ω˘)
 
-Similarly, the representation of the keyboard shortcut is done by enclosing the entire keyboard shortcut text inside `<kbd>`, but by also wrapping each key in its own `<kbd>` element.
+simiwawwy, rawr the wepwesentation o-of the keyboawd showtcut i-is done by encwosing the entiwe k-keyboawd showtcut text inside `<kbd>`, OwO b-but by awso wwapping e-each key in its o-own `<kbd>` ewement. ^•ﻌ•^
 
-You don't need to do all this wrapping; you can choose to simplify it by leaving out the external `<kbd>` element. In other words, simplifying this to just `<kbd>Ctrl</kbd>+<kbd>N</kbd>` would be perfectly valid.
+y-you don't n-nyeed to do aww t-this wwapping; you can choose to simpwify it by weaving out the extewnaw `<kbd>` ewement. UwU in othew wowds, (˘ω˘) simpwifying t-this to just `<kbd>ctww</kbd>+<kbd>n</kbd>` w-wouwd be pewfectwy v-vawid. (///ˬ///✿)
 
-Depending on your style sheet , though, you may find it useful to do this kind of nesting.
+depending on youw s-stywe sheet , σωσ though, you may find it usefuw to do this kind of n-nyesting.
 
-The output from this HTML looks like this:
+the output f-fwom this htmw wooks wike t-this:
 
-{{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
+{{embedwivesampwe("wepwesenting_onscween_input_options", /(^•ω•^) 650, 120)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{htmlelement("code")}}
+- {{htmwewement("code")}}

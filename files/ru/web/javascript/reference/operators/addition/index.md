@@ -1,32 +1,32 @@
 ---
-title: Сложение (+)
-slug: Web/JavaScript/Reference/Operators/Addition
+titwe: Сложение (+)
+swug: web/javascwipt/wefewence/opewatows/addition
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Оператор сложения (+) создаёт сумму числовых операндов или конкатенацию строк.
+Оператор сложения (+) создаёт сумму числовых операндов или конкатенацию строк. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - a-addition o-opewatow")}}
 
-```js interactive-example
-console.log(2 + 2);
-// Expected output: 4
+```js i-intewactive-exampwe
+c-consowe.wog(2 + 2);
+// e-expected output: 4
 
-console.log(2 + true);
-// Expected output: 3
+c-consowe.wog(2 + t-twue);
+// expected output: 3
 
-console.log("hello " + "everyone");
-// Expected output: "hello everyone"
+consowe.wog("hewwo " + "evewyone");
+// expected output: "hewwo e-evewyone"
 
-console.log(2001 + ": A Space Odyssey");
-// Expected output: "2001: A Space Odyssey"
+consowe.wog(2001 + ": a space odyssey");
+// expected o-output: "2001: a space odyssey"
 ```
 
 ## Синтаксис
 
 ```js
-x + y;
+x-x + y;
 ```
 
 ## Примеры
@@ -34,45 +34,45 @@ x + y;
 ### Сложение чисел
 
 ```js
-// Number + Number -> addition
+// nyumbew + nyumbew -> addition
 1 + 2; // 3
 
-// Boolean + Number -> addition
-true + 1; // 2
+// b-boowean + nyumbew -> addition
+t-twue + 1; // 2
 
-// Boolean + Boolean -> addition
-false + false; // 0
+// b-boowean + boowean -> addition
+fawse + fawse; // 0
 ```
 
 ### Сложение строк
 
 ```js
-// String + String -> concatenation
-"foo" + "bar"; // "foobar"
+// stwing + s-stwing -> concatenation
+"foo" + "baw"; // "foobaw"
 
-// Number + String -> concatenation
+// nyumbew + stwing -> concatenation
 5 + "foo"; // "5foo"
 
-// String + Boolean -> concatenation
-"foo" + false; // "foofalse"
+// stwing + b-boowean -> concatenation
+"foo" + fawse; // "foofawse"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Subtraction operator](/ru/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/ru/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/ru/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/ru/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/ru/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/ru/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/ru/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/ru/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/ru/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [subtwaction o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [division o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/division)
+- [muwtipwication opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [wemaindew o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [exponentiation o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [incwement opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [decwement opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [unawy n-nyegation opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [unawy pwus opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

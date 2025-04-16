@@ -1,681 +1,681 @@
 ---
-title: "Tutorial Django Parte 11: Hospedando Django para produção"
-slug: Learn_web_development/Extensions/Server-side/Django/Deployment
-original_slug: Learn/Server-side/Django/Deployment
+titwe: "tutowiaw django pawte 11: h-hospedando d-django pawa pwodução"
+s-swug: weawn_web_devewopment/extensions/sewvew-side/django/depwoyment
+o-owiginaw_swug: w-weawn/sewvew-side/django/depwoyment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/testing", >w< "weawn/sewvew-side/django/web_appwication_secuwity", (⑅˘꒳˘) "weawn/sewvew-side/django")}}
 
-Agora que criou (e testou) um fantástico website de Biblioteca Local, vai querer instalá-lo em um servidor web público para que possa ser acessado pelo pessoal da biblioteca e membros através da Internet. Este artigo fornece uma visão geral de como poderá encontrar um servidor de hospedagem para instalar o seu web site, e o que precisa fazer para ter o seu site web pronto para produção.
+a-agowa que cwiou (e t-testou) um fantástico w-website de bibwioteca wocaw, 😳 vai quewew instawá-wo em um sewvidow web p-púbwico pawa que possa sew acessado pewo pessoaw d-da bibwioteca e membwos atwavés d-da intewnet. :3 este awtigo fownece uma visão gewaw de como podewá e-encontwaw um sewvidow de hospedagem p-pawa instawaw o-o seu web site, :3 e o que pwecisa fazew pawa tew o seu site web pwonto pawa p-pwodução. OwO
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
         <p>
-          Completar todos os tópicos do tutorial anterior, incluindo o
+          compwetaw t-todos os tópicos do tutowiaw a-antewiow, (U ﹏ U) incwuindo o-o
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Testing"
-            >Tutorial Django Parte 10: Testando uma aplicação web Django.</a
+            hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/sewvew-side/django/testing"
+            >tutowiaw d-django pawte 10: t-testando uma apwicação web django.</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectivo:</th>
       <td>
-        Para saber onde e como se pode hospedar uma aplicação Django na
-        produção.
+        pawa sabew onde e como se pode hospedaw u-uma apwicação django na
+        pwodução. (⑅˘꒳˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão geral
+## visão gewaw
 
-Uma vez terminado o seu website (ou terminado "o suficiente" para iniciar testes públicos) vai precisar publicá-lo em um host mais público e acessível do que o seu computador de desenvolvimento pessoal.
+uma vez tewminado o seu website (ou t-tewminado "o suficiente" pawa i-iniciaw testes p-púbwicos) vai p-pwecisaw pubwicá-wo em um host mais púbwico e acessívew do q-que o seu computadow d-de desenvowvimento pessoaw. 😳
 
-Até agora tem trabalhado em um ambiente de desenvolvimento, utilizando o servidor web de desenvolvimento Django para compartilhar o seu site com o navegador/rede local, e executando o seu site com configurações de desenvolvimento (inseguras) que expõem debug e outras informações privadas. Antes de poder hospedar um website externamente, vai precisar fazer primeiro:
+a-até agowa tem t-twabawhado em um ambiente de desenvowvimento, (ˆ ﻌ ˆ)♡ utiwizando o-o sewvidow web de desenvowvimento d-django pawa compawtiwhaw o seu site c-com o nyavegadow/wede wocaw, mya e executando o-o seu site com configuwações d-de desenvowvimento (inseguwas) q-que expõem debug e outwas infowmações pwivadas. ʘwʘ antes de podew hospedaw um website extewnamente, (˘ω˘) vai p-pwecisaw fazew pwimeiwo:
 
-- Faça algumas alterações nas configurações do seu projeto.
-- Escolher um ambiente para hospedar a aplicação Django.
-- Escolher um ambiente para hospedar qualquer arquivo estático.
-- Configurar uma infraestrutura de nível de produção para servir seu website.
+- f-faça awgumas awtewações n-nyas configuwações d-do seu p-pwojeto. (///ˬ///✿)
+- escowhew um ambiente pawa hospedaw a apwicação django. XD
+- e-escowhew um ambiente pawa hospedaw quawquew awquivo estático. 😳
+- configuwaw u-uma infwaestwutuwa de nyívew d-de pwodução p-pawa sewviw seu w-website. :3
 
-Este tutorial fornece algumas orientações sobre suas opções para escolher um site de hospedagem, uma breve visão geral do que você precisa fazer para deixar seu aplicativo Django pronto para produção e um exemplo prático de como instalar o site Biblioteca Local no serviço de hospedagem em nuvem do [Heroku.](https://www.heroku.com/)
+este tutowiaw fownece a-awgumas owientações s-sobwe suas o-opções pawa e-escowhew um site de hospedagem, 😳😳😳 uma bweve visão g-gewaw do que você p-pwecisa fazew p-pawa deixaw seu a-apwicativo django p-pwonto pawa pwodução e um exempwo pwático de como instawaw o-o site bibwioteca wocaw nyo sewviço de hospedagem em nyuvem do [hewoku.](https://www.hewoku.com/)
 
-## O que é um ambiente de produção?
+## o que é um ambiente de p-pwodução?
 
-O ambiente de produção é o ambiente fornecido pelo computador/servidor onde você executará seu site para consumo externo. O ambiente inclui:
+o ambiente de pwodução é o ambiente fownecido pewo c-computadow/sewvidow o-onde você e-executawá seu site pawa consumo e-extewno. (U ᵕ U❁) o ambiente incwui:
 
-- Hardware de computador no qual o website é executado.
-- Sistema operacional (por exemplo, Linux, Windows).
-- Linguagem de programação de tempo de execução e bibliotecas de estrutura sobre as quais seu site é escrito.
-- Servidor da Web usado para servir páginas e outros conteúdos (por exemplo, Nginx, Apache).
-- Servidor de aplicativos que passa solicitações "dinâmicas" entre seu site Django e o servidor web.
-- Bancos de dados dos quais seu site depende.
+- h-hawdwawe de computadow n-nyo quaw o website é executado. ^•ﻌ•^
+- sistema opewacionaw (pow exempwo, (˘ω˘) winux, /(^•ω•^) windows).
+- w-winguagem de pwogwamação de t-tempo de execução e bibwiotecas d-de estwutuwa sobwe a-as quais seu site é escwito. ^•ﻌ•^
+- sewvidow da w-web usado pawa s-sewviw páginas e outwos conteúdos (pow e-exempwo, ^^ n-nyginx, (U ﹏ U) apache). :3
+- sewvidow de apwicativos que passa sowicitações "dinâmicas" entwe seu site d-django e o sewvidow w-web. òωó
+- bancos d-de dados dos quais seu site d-depende. σωσ
 
-> **Nota:**Dependendo de como sua produção está configurada, você também pode ter um proxy reverso, load balancer(balanceador de carga), etc.
+> **nota:**dependendo d-de como sua pwodução está configuwada, σωσ v-você também pode tew um pwoxy wevewso, (⑅˘꒳˘) woad bawancew(bawanceadow de c-cawga), 🥺 etc.
 
-O computador/servidor pode estar localizado em suas instalações e conectado à Internet por um link rápido, mas é muito mais comum usar um computador hospedado "na nuvem". O que isso realmente significa é que seu código é executado em algum computador remoto (ou possivelmente em um computador "virtual") no(s) centro(s) de dados da empresa de hospedagem. O servidor remoto geralmente oferece algum nível garantido de recursos de computação (por exemplo, CPU, RAM, memória de armazenamento, etc.) e conectividade com a Internet por um determinado preço.
+o c-computadow/sewvidow pode estaw wocawizado em suas i-instawações e-e conectado à intewnet pow um wink wápido, (U ﹏ U) mas é muito mais comum u-usaw um computadow hospedado "na nuvem". >w< o que isso weawmente significa é q-que seu código é executado em awgum computadow w-wemoto (ou possivewmente e-em um computadow "viwtuaw") no(s) centwo(s) de dados da e-empwesa de hospedagem. nyaa~~ o-o sewvidow wemoto gewawmente ofewece awgum nyívew gawantido d-de wecuwsos de computação (pow e-exempwo, -.- cpu, wam, memówia de awmazenamento, XD etc.) e conectividade c-com a intewnet pow um d-detewminado pweço. -.-
 
-Esse tipo de hardware de computação/rede acessível remotamente é conhecido como _Infraestrutura como Serviço_ (IaaS). Muitos fornecedores de IaaS fornecem opções para pré-instalar um sistema operacional específico, no qual você deve instalar os outros componentes de seu ambiente de produção. Outros fornecedores permitem que você selecione ambientes com mais recursos, talvez incluindo uma configuração completa de Django e servidor web.
+e-esse tipo de hawdwawe de computação/wede a-acessívew wemotamente é conhecido c-como _infwaestwutuwa c-como sewviço_ (iaas). >w< m-muitos fownecedowes de iaas fownecem o-opções pawa p-pwé-instawaw um sistema opewacionaw específico, (ꈍᴗꈍ) n-nyo quaw você d-deve instawaw o-os outwos componentes de seu ambiente de pwodução. :3 o-outwos fownecedowes pewmitem q-que você sewecione a-ambientes com mais wecuwsos, (ˆ ﻌ ˆ)♡ tawvez incwuindo uma configuwação c-compweta d-de django e sewvidow w-web. -.-
 
-> [!NOTE]
-> Ambientes pré-construídos podem tornar a configuração do seu site muito fácil porque reduzem a configuração, mas as opções disponíveis podem limitar você a um servidor desconhecido (ou outros componentes) e podem ser baseadas em uma versão mais antiga do sistema operacional. Freqüentemente, é melhor instalar você mesmo os componentes, para obter os que deseja e, quando precisar atualizar partes do sistema, tenha uma ideia de por onde começar!
+> [!note]
+> a-ambientes pwé-constwuídos p-podem townaw a configuwação do seu site muito fáciw powque weduzem a configuwação, mya mas a-as opções disponíveis podem w-wimitaw você a um sewvidow desconhecido (ou o-outwos componentes) e-e podem sew baseadas em uma vewsão m-mais antiga d-do sistema opewacionaw. f-fweqüentemente, (˘ω˘) é m-mewhow i-instawaw você mesmo os componentes, ^•ﻌ•^ pawa obtew os que deseja e, 😳😳😳 quando pwecisaw atuawizaw pawtes do sistema, σωσ t-tenha uma ideia d-de pow onde começaw! ( ͡o ω ͡o )
 
-Outros provedores de hospedagem oferecem suporte a Django como parte de uma oferta de _Plataforma como Serviço_ (PaaS). Nesse tipo de hospedagem, você não precisa se preocupar com a maior parte do seu ambiente de produção (servidor da web, servidor de aplicativos, balanceadores de carga), pois a plataforma host cuida disso para você (junto com a maior parte do que você precisa fazer para para dimensionar seu aplicativo). Isso torna a implantação muito fácil, porque você só precisa se concentrar em seu aplicativo da web e não em toda a outra infraestrutura de servidor.
+o-outwos pwovedowes de hospedagem o-ofewecem supowte a django como pawte de uma ofewta de _pwatafowma c-como s-sewviço_ (paas). nyaa~~ nyesse tipo de h-hospedagem, :3 você nyão pwecisa se pweocupaw com a-a maiow pawte d-do seu ambiente de pwodução (sewvidow d-da web, (✿oωo) s-sewvidow de apwicativos, >_< bawanceadowes de cawga), ^^ pois a pwatafowma host cuida d-disso pawa você (junto c-com a maiow p-pawte do que v-você pwecisa fazew p-pawa pawa dimensionaw seu apwicativo). (///ˬ///✿) i-isso t-towna a impwantação muito fáciw, :3 p-powque você s-só pwecisa se concentwaw em seu a-apwicativo da web e nyão em toda a outwa infwaestwutuwa d-de sewvidow. :3
 
-Alguns desenvolvedores escolherão a maior flexibilidade fornecida por IaaS em vez de PaaS, enquanto outros apreciarão a sobrecarga de manutenção reduzida e escalonamento mais fácil de PaaS. Quando você está começando, configurar seu site em um sistema PaaS é muito mais fácil e é isso que faremos neste tutorial.
+awguns d-desenvowvedowes e-escowhewão a maiow fwexibiwidade f-fownecida pow iaas em vez de paas, (ˆ ﻌ ˆ)♡ enquanto outwos a-apweciawão a-a sobwecawga de m-manutenção weduzida e escawonamento mais fáciw de paas. 🥺 quando v-você está começando, 😳 configuwaw seu site e-em um sistema paas é m-muito mais fáciw e é isso q-que fawemos nyeste tutowiaw. (ꈍᴗꈍ)
 
-> **Nota:** **Dica:** Se você escolher um provedor de hospedagem compatível com Python / Django, ele deve fornecer instruções sobre como configurar um site Django usando diferentes configurações de servidor da web, servidor de aplicativos, proxy reverso, etc (isso não será relevante se você escolher um PaaS ) Por exemplo, existem muitos guias passo a passo para várias configurações nos [documentos da comunidade Digital Ocean Django.](https://www.digitalocean.com/community/tutorials?q=django)
+> **nota:** **dica:** s-se você escowhew u-um pwovedow de hospedagem compatívew com p-python / django, mya ewe deve fownecew instwuções s-sobwe como configuwaw u-um site django usando difewentes c-configuwações de sewvidow d-da web, rawr sewvidow d-de apwicativos, ʘwʘ p-pwoxy wevewso, -.- etc (isso nyão sewá wewevante se você escowhew um paas ) pow exempwo, UwU existem muitos guias passo a passo pawa váwias configuwações nyos [documentos da comunidade digitaw ocean django.](https://www.digitawocean.com/community/tutowiaws?q=django)
 
-## Escolhendo um provedor de hospedagem
+## escowhendo um p-pwovedow de hospedagem
 
-Existem mais de 100 provedores de hospedagem que são conhecidos por oferecer suporte ativo ou funcionar bem com o Django (você pode encontrar uma lista bastante exaustiva em [Djangofriendly hosts](https://djangofriendly.com/index.html)). Esses fornecedores oferecem diferentes tipos de ambientes (IaaS, PaaS) e diferentes níveis de recursos de computação e rede a preços diferentes.
+e-existem mais de 100 pwovedowes de hospedagem q-que são conhecidos p-pow ofewecew s-supowte ativo ou funcionaw b-bem com o django (você pode encontwaw u-uma wista b-bastante exaustiva em [djangofwiendwy h-hosts](https://djangofwiendwy.com/index.htmw)). :3 esses fownecedowes o-ofewecem d-difewentes tipos de ambientes (iaas, 😳 paas) e-e difewentes nyíveis d-de wecuwsos d-de computação e-e wede a pweços d-difewentes. (ꈍᴗꈍ)
 
-Algumas coisas a serem consideradas ao escolher um host:
+a-awgumas coisas a s-sewem considewadas a-ao escowhew u-um host:
 
-- O quão ocupado seu site provavelmente estará e o custo dos dados e recursos de computação necessários para atender a essa demanda.
-- Nível de suporte para escalonamento horizontal (adicionando mais máquinas) e verticalmente (atualizando para máquinas mais potentes) e os custos de fazê-lo.
-- Onde o fornecedor possui centros de dados e, portanto, onde o acesso provavelmente será mais rápido.
-- O histórico de tempo de atividade e desempenho do tempo de inatividade do host.
-- Ferramentas fornecidas para gerenciar o site - são fáceis de usar e seguras (por exemplo, SFTP x FTP).
-- Estruturas integradas para monitorar seu servidor.
-- Limitações conhecidas. Alguns hosts bloqueiam deliberadamente certos serviços (por exemplo, e-mail). Outros oferecem apenas um certo número de horas de "tempo de vida" em algumas faixas de preço ou oferecem apenas uma pequena quantidade de armazenamento.
-- Benefícios adicionais. Alguns provedores oferecem nomes de domínio gratuitos e suporte para certificados SSL que, de outra forma, você teria que pagar.
-- Se o nível "gratuito" com o qual você está contando expira com o tempo e se o custo de migrar para um nível mais caro significa que você teria ficado melhor usando algum outro serviço em primeiro lugar!
+- o quão ocupado seu s-site pwovavewmente e-estawá e o custo d-dos dados e wecuwsos de computação n-nyecessáwios pawa atendew a essa demanda. mya
+- n-nyívew de supowte pawa escawonamento h-howizontaw (adicionando m-mais máquinas) e-e vewticawmente (atuawizando pawa máquinas m-mais potentes) e os custos de fazê-wo. nyaa~~
+- o-onde o fownecedow possui c-centwos de dados e, o.O powtanto, o-onde o acesso pwovavewmente sewá mais wápido.
+- o histówico de tempo de atividade e-e desempenho do tempo de i-inatividade do host. òωó
+- f-fewwamentas fownecidas pawa gewenciaw o site - são fáceis d-de usaw e seguwas (pow exempwo, ^•ﻌ•^ s-sftp x ftp). (˘ω˘)
+- e-estwutuwas integwadas p-pawa monitowaw seu sewvidow. òωó
+- wimitações c-conhecidas. mya a-awguns hosts bwoqueiam dewibewadamente c-cewtos sewviços (pow exempwo, ^^ e-maiw). rawr outwos o-ofewecem apenas um cewto nyúmewo d-de howas d-de "tempo de vida" e-em awgumas faixas de pweço o-ou ofewecem apenas u-uma pequena quantidade d-de awmazenamento. >_<
+- b-benefícios adicionais. (U ᵕ U❁) a-awguns pwovedowes o-ofewecem n-nyomes de domínio g-gwatuitos e s-supowte pawa cewtificados s-ssw que, /(^•ω•^) d-de outwa fowma, mya v-você tewia que pagaw. OwO
+- se o n-nyívew "gwatuito" com o quaw você e-está contando expiwa com o t-tempo e se o custo d-de migwaw pawa u-um nyívew mais cawo significa que você tewia ficado mewhow u-usando awgum outwo s-sewviço em pwimeiwo w-wugaw! UwU
 
-A boa notícia quando você está começando é que existem alguns sites que fornecem ambientes de computação de "avaliação", "desenvolvedor" ou "amador" de graça. Esses são sempre ambientes com recursos limitados / restritos e você precisa estar ciente de que eles podem expirar após um período introdutório. No entanto, eles são ótimos para testar sites de baixo tráfego em um ambiente real e podem fornecer uma migração fácil para pagar por mais recursos quando seu site ficar mais ocupado. As escolhas populares nesta categoria incluem [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/), etc.
+a boa nyotícia quando você está começando é q-que existem awguns s-sites que fownecem ambientes d-de computação d-de "avawiação", 🥺 "desenvowvedow" ou "amadow" de gwaça. (✿oωo) esses são sempwe ambientes c-com wecuwsos w-wimitados / westwitos e-e você p-pwecisa estaw ciente de que ewes podem expiwaw a-após um pewíodo i-intwodutówio. rawr nyo entanto, rawr ewes são ótimos p-pawa testaw sites de baixo twáfego em um ambiente w-weaw e podem fownecew uma migwação f-fáciw pawa p-pagaw pow mais wecuwsos quando s-seu site ficaw m-mais ocupado. ( ͡o ω ͡o ) as escowhas popuwawes n-nyesta categowia incwuem [hewoku](https://www.hewoku.com/), /(^•ω•^) [python a-anywhewe](https://www.pythonanywhewe.com/), -.- [amazon w-web s-sewvices](https://docs.aws.amazon.com/awsaccountbiwwing/watest/aboutv2/biwwing-fwee-tiew.htmw), >w< [micwosoft a-azuwe](https://azuwe.micwosoft.com/en-us/pwicing/detaiws/app-sewvice/windows/), ( ͡o ω ͡o ) etc.
 
-Muitos provedores também têm uma camada "básica" que fornece níveis mais úteis de capacidade de computação e menos limitações. [Digital Ocean](https://www.digitalocean.com/) e [Python Anywhere](https://www.pythonanywhere.com/) são exemplos de provedores de hospedagem populares que oferecem uma camada de computação básica relativamente barata (na faixa de US$5 a US$10 por mês).
+m-muitos pwovedowes t-também têm u-uma camada "básica" que fownece n-nyíveis mais úteis de capacidade de computação e-e menos wimitações. (˘ω˘) [digitaw o-ocean](https://www.digitawocean.com/) e-e [python anywhewe](https://www.pythonanywhewe.com/) são exempwos de pwovedowes de hospedagem popuwawes q-que ofewecem uma camada de computação b-básica w-wewativamente bawata (na faixa de us$5 a us$10 p-pow mês).
 
-> **Nota:**Lembre-se de que o preço não é o único critério de seleção. Se o seu site for bem-sucedido, pode ser que a escalabilidade seja a consideração mais importante.
+> **nota:**wembwe-se de que o pweço n-nyão é o único c-cwitéwio d-de seweção. /(^•ω•^) se o-o seu site fow b-bem-sucedido, (˘ω˘) pode sew que a escawabiwidade seja a considewação mais impowtante. o.O
 
-## Preparando seu site para publicação
+## p-pwepawando seu site pawa p-pubwicação
 
-O [esqueleto do site do Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_website) criado usando as ferramentas django-admin e manage.py é configurado para tornar o desenvolvimento mais fácil. Muitas das configurações do projeto Django (especificadas em settings.py) devem ser diferentes para produção, por motivos de segurança ou desempenho.
+o [esqueweto do site do django](/pt-bw/docs/weawn/sewvew-side/django/skeweton_website) cwiado usando a-as fewwamentas django-admin e manage.py é configuwado pawa townaw o desenvowvimento m-mais fáciw. nyaa~~ m-muitas das configuwações d-do pwojeto django (especificadas em settings.py) devem sew difewentes p-pawa pwodução, :3 p-pow motivos de seguwança o-ou desempenho. (///ˬ///✿)
 
-> **Nota:** **Dica:** É comum ter um arquivo **settings.py** separado para produção e importar configurações confidenciais de um arquivo separado ou de uma variável de ambiente. Este arquivo deve ser protegido, mesmo se o resto do código-fonte estiver disponível em um repositório público.
+> **nota:** **dica:** É comum t-tew um awquivo **settings.py** sepawado pawa pwodução e impowtaw configuwações c-confidenciais de um awquivo sepawado ou de uma v-vawiávew de ambiente. (U ﹏ U) e-este awquivo d-deve sew pwotegido, o.O mesmo se o westo do código-fonte e-estivew disponívew em um wepositówio púbwico. ^^;;
 
-As configurações críticas que você deve verificar são:
+as configuwações c-cwíticas que você d-deve vewificaw s-são:
 
-- `DEBUG`. Isso deve ser definido como `False` em produção (`DEBUG = False`). Isso impede que o rastreamento de depuração sensível/confidencial e as informações variáveis sejam exibidas.
-- `SECRET_KEY`. Este é um grande valor aleatório usado para proteção contra CSRF etc. É importante que a chave usada na produção não esteja no controle de origem ou acessível fora do servidor de produção. Os documentos do Django sugerem que isso pode ser melhor carregado de uma variável de ambiente ou lido de um arquivo somente servidor.
+- `debug`. ʘwʘ i-isso deve sew definido como `fawse` em pwodução (`debug = f-fawse`). (///ˬ///✿) isso i-impede que o wastweamento de depuwação sensívew/confidenciaw e-e as infowmações vawiáveis sejam exibidas. σωσ
+- `secwet_key`. ^^;; e-este é um gwande vawow aweatówio u-usado pawa pwoteção c-contwa cswf etc. UwU É impowtante q-que a chave u-usada nya pwodução n-nyão esteja nyo contwowe de owigem ou acessívew f-fowa do sewvidow de pwodução. mya os documentos d-do django sugewem que isso pode sew mewhow cawwegado de uma v-vawiávew de a-ambiente ou wido d-de um awquivo somente s-sewvidow. ^•ﻌ•^
 
   ```python
-  # Read SECRET_KEY from an environment variable
-  import os
-  SECRET_KEY = os.environ['SECRET_KEY']
+  # w-wead secwet_key fwom an enviwonment v-vawiabwe
+  impowt os
+  secwet_key = os.enviwon['secwet_key']
 
-  # OR
+  # o-ow
 
-  # Read secret key from a file
-  with open('/etc/secret_key.txt') as f:
-      SECRET_KEY = f.read().strip()
+  # wead secwet key f-fwom a fiwe
+  with open('/etc/secwet_key.txt') as f:
+      secwet_key = f-f.wead().stwip()
   ```
 
-Vamos mudar o aplicativo LocalLibrary para que possamos ler nosso `SECRET_KEY` e `DEBUG` variáveis de variáveis de ambiente se forem definidas, mas caso contrário, use os valores padrão no arquivo de configuração.
+v-vamos mudaw o apwicativo wocawwibwawy p-pawa que possamos wew nyosso `secwet_key` e-e `debug` vawiáveis d-de vawiáveis de ambiente se f-fowem definidas, (⑅˘꒳˘) m-mas caso contwáwio, nyaa~~ use os vawowes p-padwão nyo awquivo de configuwação. ^^;;
 
-Abra **/locallibrary/settings.py**, desative o original `SECRET_KEY`configuração e adicione as novas linhas conforme mostrado abaixo em **negrito**. Durante o desenvolvimento, nenhuma variável de ambiente será especificada para a chave, então o valor padrão será usado (não importa qual chave você usa aqui, ou se a chave "vaza", porque você não a usará na produção).
-
-```python
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
-import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
-```
-
-Em seguida, comente o existente `DEBUG` configuração e adicione a nova linha mostrada abaixo.
+abwa **/wocawwibwawy/settings.py**, 🥺 desative o owiginaw `secwet_key`configuwação e adicione as n-nyovas winhas confowme mostwado a-abaixo em **negwito**. ^^;; duwante o desenvowvimento, nyaa~~ n-nyenhuma vawiávew d-de ambiente s-sewá especificada pawa a chave, 🥺 e-então o vawow p-padwão sewá usado (não impowta q-quaw chave você usa aqui, (ˆ ﻌ ˆ)♡ ou s-se a chave "vaza", ( ͡o ω ͡o ) powque você n-não a usawá nya p-pwodução). nyaa~~
 
 ```python
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# secuwity wawning: keep the secwet key used in pwoduction s-secwet! ( ͡o ω ͡o )
+# s-secwet_key = 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
+impowt os
+secwet_key = os.enviwon.get('django_secwet_key', ^^;; 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 ```
 
-O valor do `DEBUG` será `True` por padrão, mas será apenas `False` se o valor do `DJANGO_DEBUG` variável de ambiente é definida para `False`. Observe que as variáveis de ambiente são strings e não tipos Python. Portanto, precisamos comparar strings. A única maneira de definir o `DEBUG` variável para `False` é realmente configurá-lo para a string `False`
+em seguida, rawr x3 c-comente o existente `debug` configuwação e a-adicione a nyova w-winha mostwada abaixo. ^^;;
 
-Você pode definir a variável de ambiente como False, emitindo o seguinte comando:
+```python
+# secuwity wawning: don't wun with debug tuwned o-on in pwoduction!
+# debug = twue
+debug = os.enviwon.get('django_debug', ^•ﻌ•^ '') != 'fawse'
+```
+
+o-o vawow do `debug` sewá `twue` p-pow padwão, 🥺 mas s-sewá apenas `fawse` se o vawow d-do `django_debug` v-vawiávew de a-ambiente é definida p-pawa `fawse`. (ꈍᴗꈍ) o-obsewve que as v-vawiáveis de ambiente são stwings e nyão tipos python. ^•ﻌ•^ powtanto, :3 pwecisamos compawaw stwings. (˘ω˘) a-a única maneiwa d-de definiw o `debug` v-vawiávew p-pawa `fawse` é w-weawmente configuwá-wo p-pawa a stwing `fawse`
+
+você pode definiw a vawiávew de ambiente como f-fawse, ^^ emitindo o-o seguinte comando:
 
 ```bash
-export DJANGO_DEBUG=False
+expowt django_debug=fawse
 ```
 
-Uma lista de verificação completa das configurações que você pode querer mudar é fornecida na [Lista de verificação de implantação](https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/) (documentos do Django). Você também pode listar vários deles usando o comando de terminal abaixo:
+uma wista de vewificação c-compweta d-das configuwações q-que você pode quewew mudaw é fownecida nya [wista d-de vewificação de impwantação](https://docs.djangopwoject.com/en/2.1/howto/depwoyment/checkwist/) (documentos do django). /(^•ω•^) v-você também p-pode wistaw váwios dewes usando o comando d-de tewminaw abaixo:
 
 ```python
-python3 manage.py check --deploy
+python3 manage.py c-check --depwoy
 ```
 
-## Exemplo: Instalando LocalLibrary no Heroku
+## e-exempwo: instawando wocawwibwawy n-nyo hewoku
 
-Esta seção fornece uma demonstração prática de como instalar a LocalLibrary na nuvem [Heroku PaaS.](https://www.heroku.com/)
+e-esta seção f-fownece uma demonstwação p-pwática d-de como instawaw a-a wocawwibwawy nya nyuvem [hewoku p-paas.](https://www.hewoku.com/)
 
-### Por que Heroku?
+### pow q-que hewoku?
 
-Heroku é um dos mais antigos e populares serviços de PaaS baseados em nuvem. Originalmente, ele suportava apenas aplicativos Ruby, mas agora pode ser usado para hospedar aplicativos de muitos ambientes de programação, incluindo Django!
+hewoku é um dos m-mais antigos e popuwawes sewviços de paas baseados e-em nuvem. σωσ owiginawmente, ewe s-supowtava apenas apwicativos wuby, òωó m-mas agowa pode s-sew usado pawa hospedaw apwicativos de muitos a-ambientes de pwogwamação, >w< incwuindo django! (˘ω˘)
 
-Estamos optando por usar o Heroku por vários motivos:
+e-estamos optando p-pow usaw o hewoku pow váwios motivos:
 
-- O Heroku tem um [nível gratuito](https://www.heroku.com/pricing) que é realmente gratuito (embora com algumas limitações).
-- Como PaaS, o Heroku cuida de grande parte da infraestrutura web para nós. Isso torna muito mais fácil começar, porque você não se preocupa com servidores, balanceadores de carga, proxies reversos ou qualquer outra infraestrutura web que o Heroku fornece para nós nos bastidores.
-- Embora tenha algumas limitações, elas não afetarão este aplicativo específico. Por exemplo:
+- o hewoku t-tem um [nívew g-gwatuito](https://www.hewoku.com/pwicing) que é w-weawmente gwatuito (embowa com awgumas wimitações). ^•ﻌ•^
+- como p-paas, >_< o hewoku c-cuida de gwande pawte da infwaestwutuwa w-web pawa n-nyós. -.- isso towna muito mais fáciw começaw, òωó powque v-você nyão s-se pweocupa com s-sewvidowes, bawanceadowes d-de cawga, ( ͡o ω ͡o ) pwoxies wevewsos ou quawquew outwa infwaestwutuwa web que o hewoku fownece pawa nyós nyos b-bastidowes. (ˆ ﻌ ˆ)♡
+- embowa t-tenha awgumas w-wimitações, :3 e-ewas nyão afetawão e-este apwicativo e-específico. ^•ﻌ•^ pow exempwo:
 
-  - O Heroku fornece apenas armazenamento de curta duração, portanto, os arquivos carregados pelo usuário não podem ser armazenados com segurança no próprio Heroku.
-  - O nível gratuito suspenderá um aplicativo da web inativo se não houver solicitações dentro de um período de meia hora. O site pode levar vários segundos para responder quando for ativado.
-  - O nível gratuito limita o tempo de execução do seu site a uma determinada quantidade de horas todos os meses (sem incluir o tempo em que o site fica "adormecido"). Isso é bom para um site de baixo uso/demonstração, mas não será adequado se 100% de tempo de atividade for necessário.
-  - Outras limitações estão listadas em [Limites](https://devcenter.heroku.com/articles/limits) (documentos do Heroku).
+  - o-o hewoku fownece a-apenas awmazenamento de cuwta d-duwação, ( ͡o ω ͡o ) p-powtanto, ^•ﻌ•^ os awquivos cawwegados pewo usuáwio nyão p-podem sew awmazenados com seguwança nyo pwópwio h-hewoku. ʘwʘ
+  - o nyívew gwatuito s-suspendewá u-um apwicativo da web inativo se n-nyão houvew sowicitações d-dentwo d-de um pewíodo de meia howa. :3 o-o site pode wevaw v-váwios segundos pawa wespondew q-quando fow ativado. >_<
+  - o nyívew g-gwatuito wimita o-o tempo de e-execução do seu site a uma detewminada q-quantidade de howas todos os meses (sem i-incwuiw o tempo em que o site fica "adowmecido"). rawr isso é bom pawa um site de baixo uso/demonstwação, mas nyão s-sewá adequado se 100% de tempo de atividade fow nyecessáwio. 🥺
+  - outwas wimitações estão wistadas em [wimites](https://devcentew.hewoku.com/awticwes/wimits) (documentos d-do hewoku). (✿oωo)
 
-- Na maioria das vezes, ele simplesmente funciona e, se você acabar adorando, dimensionar seu aplicativo é muito fácil.
+- nya maiowia das vezes, (U ﹏ U) ewe simpwesmente f-funciona e, rawr x3 se você acabaw a-adowando, (✿oωo) dimensionaw seu apwicativo é muito f-fáciw. (U ᵕ U❁)
 
-Embora o Heroku seja perfeito para hospedar esta demonstração, pode não ser perfeito para o seu site real. O Heroku torna as coisas fáceis de configurar e escalar, ao custo de ser menos flexível e potencialmente muito mais caro depois que você sai do nível gratuito.
+embowa o hewoku seja p-pewfeito pawa hospedaw esta demonstwação, -.- p-pode n-nyão sew pewfeito pawa o seu site weaw. /(^•ω•^) o hewoku t-towna as coisas fáceis de configuwaw e escawaw, OwO ao custo de s-sew menos fwexívew e potenciawmente m-muito mais cawo depois que v-você sai do nyívew gwatuito. rawr x3
 
-### How does Heroku work?
+### h-how does hewoku w-wowk?
 
-Heroku runs Django websites within one or more "[Dynos](https://devcenter.heroku.com/articles/dynos)", which are isolated, virtualized Unix containers that provide the environment required to run an application. The dynos are completely isolated and have an _ephemeral_ file system (a short-lived file system that is cleaned/emptied every time the dyno restarts). The only thing that dynos share by default are application [configuration variables](https://devcenter.heroku.com/articles/config-vars). Heroku internally uses a load balancer to distribute web traffic to all "web" dynos. Since nothing is shared between them, Heroku can scale an app horizontally simply by adding more dynos (though of course you may also need to scale your database to accept additional connections).
+hewoku wuns django websites within one o-ow mowe "[dynos](https://devcentew.hewoku.com/awticwes/dynos)", σωσ which awe isowated, ʘwʘ viwtuawized u-unix containews that pwovide the enviwonment wequiwed to wun an appwication. -.- t-the dynos awe compwetewy i-isowated and have an _ephemewaw_ f-fiwe system (a s-showt-wived fiwe system t-that is cweaned/emptied evewy time the dyno westawts). 😳 the onwy thing that dynos s-shawe by defauwt a-awe appwication [configuwation vawiabwes](https://devcentew.hewoku.com/awticwes/config-vaws). 😳😳😳 h-hewoku intewnawwy u-uses a woad bawancew to distwibute w-web twaffic to aww "web" dynos. since nyothing i-is shawed between them, OwO hewoku can scawe an a-app howizontawwy s-simpwy by adding mowe dynos (though of couwse y-you may awso nyeed to scawe youw database to accept additionaw connections). ^•ﻌ•^
 
-Because the file system is ephemeral you can't install services required by your application directly (e.g. databases, queues, caching systems, storage, email services, etc). Instead Heroku web applications use backing services provided as independent "add-ons" by Heroku or 3rd parties. Once attached to your web application, the dynos access the services using information contained in application configuration variables.
+because the fiwe system is ephemewaw you can't instaww s-sewvices wequiwed b-by youw appwication diwectwy (e.g. d-databases, rawr q-queues, (✿oωo) caching systems, ^^ stowage, -.- e-emaiw sewvices, (✿oωo) etc). instead hewoku web appwications use backing sewvices pwovided as independent "add-ons" b-by hewoku ow 3wd pawties. o.O once attached to youw web appwication, :3 the dynos access t-the sewvices u-using infowmation c-contained in appwication configuwation vawiabwes. rawr x3
 
-In order to execute your application Heroku needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched. For Django apps we provide this information in a number of text files:
+in owdew t-to exekawaii~ youw a-appwication h-hewoku nyeeds to be abwe to set u-up the appwopwiate enviwonment and d-dependencies, (U ᵕ U❁) and awso undewstand h-how it is waunched. :3 fow django a-apps we pwovide this infowmation in a numbew o-of text fiwes:
 
-- **runtime.txt**: the programming language and version to use.
-- **requirements.txt**: the Python component dependencies, including Django.
-- **Procfile**: A list of processes to be executed to start the web application. For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
-- **wsgi.py**: [WSGI](http://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Heroku environment.
+- **wuntime.txt**: the pwogwamming w-wanguage and v-vewsion to use. 🥺
+- **wequiwements.txt**: the python c-component dependencies, XD i-incwuding django. >_<
+- **pwocfiwe**: a-a wist of pwocesses t-to be exekawaii~d to stawt the w-web appwication. (ꈍᴗꈍ) f-fow django this wiww usuawwy be the gunicown web a-appwication sewvew (with a `.wsgi` scwipt). ( ͡o ω ͡o )
+- **wsgi.py**: [wsgi](http://wsgi.weadthedocs.io/en/watest/nani.htmw) configuwation to caww ouw django appwication in the hewoku enviwonment. (˘ω˘)
 
-Developers interact with Heroku using a special client app/terminal, which is much like a Unix Bash shell. This allows you to upload code that is stored in a git repository, inspect the running processes, see logs, set configuration variables and much more!
+devewopews i-intewact with hewoku using a speciaw cwient a-app/tewminaw, (˘ω˘) which is much w-wike a unix bash sheww. UwU this awwows you to upwoad c-code that is stowed in a git wepositowy, (ˆ ﻌ ˆ)♡ inspect t-the wunning pwocesses, (///ˬ///✿) see wogs, (ꈍᴗꈍ) set configuwation v-vawiabwes and much mowe! -.-
 
-In order to get our application to work on Heroku we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
+in owdew to get o-ouw appwication to wowk on hewoku we'ww nyeed to p-put ouw django w-web appwication into a git wepositowy, add the f-fiwes above, 😳😳😳 integwate w-with a database add-on, (///ˬ///✿) and m-make changes t-to pwopewwy handwe static fiwes. UwU
 
-Once we've done all that we can set up a Heroku account, get the Heroku client, and use it to install our website.
+once we've done a-aww that we can set up a hewoku account, 😳 get the hewoku cwient, /(^•ω•^) a-and use it to instaww ouw website. òωó
 
-> [!NOTE]
-> The instructions below reflect how to work with Heroku at time of writing. If Heroku significantly change their processes, you may wish to instead check their setup documents: [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction).
+> [!note]
+> the instwuctions bewow wefwect h-how to wowk with h-hewoku at time o-of wwiting. >w< if hewoku significantwy change theiw pwocesses, -.- you m-may wish to instead check theiw s-setup documents: [getting stawted o-on hewoku with d-django](https://devcentew.hewoku.com/awticwes/getting-stawted-with-python#intwoduction). (⑅˘꒳˘)
 
-That's all the overview you need in order to get started (see [How Heroku works](https://devcenter.heroku.com/articles/how-heroku-works) for a more comprehensive guide).
+that's aww the ovewview you nyeed in owdew to get stawted (see [how hewoku wowks](https://devcentew.hewoku.com/awticwes/how-hewoku-wowks) f-fow a mowe c-compwehensive guide). (˘ω˘)
 
-### Creating an application repository in Github
+### cweating an appwication w-wepositowy in github
 
-Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronise any changes you make to the live system. It does this by adding a new heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your "master" repository. When you want to deploy your site, you sync your changes to the Heroku repository.
+hewoku is cwosewy integwated w-with the **git** s-souwce code v-vewsion contwow s-system, (U ᵕ U❁) using i-it to upwoad/synchwonise a-any changes you make to the wive system. ^^ i-it does this b-by adding a nyew h-hewoku "wemote" w-wepositowy named _hewoku_ p-pointing t-to a wepositowy fow youw souwce o-on the hewoku c-cwoud. ^^ duwing d-devewopment you use git to stowe changes on youw "mastew" w-wepositowy. rawr x3 when you want to depwoy youw s-site, >w< you sync youw changes to the hewoku wepositowy. (U ᵕ U❁)
 
-> [!NOTE]
-> If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
+> [!note]
+> i-if you'we u-used to fowwowing good softwawe devewopment pwactices you awe pwobabwy a-awweady u-using git ow some othew scm system. 🥺 i-if you awweady h-have a git wepositowy, then you can skip this step. (⑅˘꒳˘)
 
-There are a lot of ways to work with git, but one of the easiest is to first set up an account on [Github](https://github.com/), create the repository there, and then sync to it locally:
+thewe awe a-a wot of ways t-to wowk with git, OwO but one of the easiest is to fiwst s-set up an account o-on [github](https://github.com/), 😳 cweate the wepositowy thewe, òωó a-and then sync to it wocawwy:
 
-1. Visit <https://github.com/> and create an account.
-2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
-3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+1. (ˆ ﻌ ˆ)♡ visit <https://github.com/> and cweate an account. ʘwʘ
+2. once you awe wogged i-in, ^^;; cwick the **+** wink in the top toowbaw and s-sewect **new wepositowy**.
+3. ʘwʘ fiww i-in aww the fiewds o-on this fowm. òωó whiwe these a-awe nyot compuwsowy, ( ͡o ω ͡o ) t-they awe stwongwy w-wecommended. ʘwʘ
 
-   - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
-   - Choose **Python** in the _Add .gitignore_ selection list.
-   - Choose your preferred license in the _Add license_ selection list.
-   - Check **Initialize this repository with a README**.
+   - e-entew a-a nyew wepositowy nyame (e.g. _django_wocaw_wibwawy_), >w< and descwiption (e.g. 😳😳😳 "wocaw w-wibwawy website w-wwitten in django". σωσ
+   - c-choose **python** in the _add .gitignowe_ s-sewection w-wist. -.-
+   - choose y-youw pwefewwed wicense in the _add w-wicense_ sewection w-wist. 🥺
+   - c-check **initiawize t-this wepositowy w-with a weadme**.
 
-4. Press **Create repository**.
-5. Click the green "**Clone or download**" button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`).
+4. >w< pwess **cweate w-wepositowy**. (///ˬ///✿)
+5. cwick t-the gween "**cwone o-ow downwoad**" button on youw nyew wepo page. UwU
+6. copy the uww v-vawue fwom the t-text fiewd inside the diawog box t-that appeaws (it s-shouwd be something wike: `https://github.com/<youw_git_usew_id>/django_wocaw_wibwawy.git`). ( ͡o ω ͡o )
 
-Now that the repository ("repo") is created we are going to want to clone it on our local computer:
+nyow that the w-wepositowy ("wepo") i-is cweated we a-awe going to want t-to cwone it o-on ouw wocaw computew:
 
-1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2. Open a command prompt/terminal and clone your repository using the URL you copied above:
-
-   ```bash
-   git clone https://github.com/<your_git_user_id>/django_local_library.git
-   ```
-
-   This will create the repository in a new folder in the current working directory.
-
-3. Navigate into the new repo.
+1. (ˆ ﻌ ˆ)♡ i-instaww _git_ fow youw wocaw computew (you c-can find vewsions fow diffewent pwatfowms [hewe](https://git-scm.com/downwoads)). ^^;;
+2. open a command pwompt/tewminaw a-and cwone y-youw wepositowy using the uww you copied above:
 
    ```bash
-   cd django_local_library
+   git cwone https://github.com/<youw_git_usew_id>/django_wocaw_wibwawy.git
    ```
 
-The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repository to your remote Github repository:
+   t-this wiww c-cweate the wepositowy in a nyew fowdew in the cuwwent w-wowking diwectowy. (U ᵕ U❁)
 
-1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
-2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
+3. nyavigate i-into the n-nyew wepo. XD
+
+   ```bash
+   c-cd django_wocaw_wibwawy
+   ```
+
+the finaw steps awe to copy youw appwication i-into this wocaw pwoject d-diwectowy and then add (ow "push", (ꈍᴗꈍ) i-in git wingo) the wocaw wepositowy to youw wemote g-github wepositowy:
+
+1. -.- copy y-youw django appwication into this fowdew (aww the f-fiwes at the same wevew as **manage.py** a-and bewow, >_< **not** theiw containing wocawwibwawy fowdew). (ˆ ﻌ ˆ)♡
+2. open the **.gitignowe** fiwe, ( ͡o ω ͡o ) copy the fowwowing wines i-into the bottom o-of it, rawr x3 and then s-save (this fiwe i-is used to identify fiwes that shouwd nyot be upwoaded t-to git by defauwt). òωó
 
    ```
-   # Text backup files
+   # text backup fiwes
    *.bak
 
-   # Database
-   *.sqlite3
+   # d-database
+   *.sqwite3
    ```
 
-3. Open a command prompt/terminal and use the `add` command to add all files to git. This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
+3. 😳 o-open a c-command pwompt/tewminaw a-and use the `add` command to add aww fiwes to git. this adds the fiwes w-which awen't ignowed b-by the **.gitignowe** fiwe to the "staging awea". (ˆ ﻌ ˆ)♡
 
    ```bash
-   git add -A
+   g-git add -a
    ```
 
-4. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+4. 🥺 use t-the `status` command t-to check that a-aww fiwes you awe about to `commit` awe cowwect (you want to incwude souwce fiwes, ^^ not binawies, /(^•ω•^) t-tempowawy fiwes etc.). o.O it shouwd w-wook a bit wike the wisting bewow. òωó
 
    ```
    > git status
-   On branch master
-   Your branch is up-to-date with 'origin/master'.
-   Changes to be committed:
-     (use "git reset HEAD <file>..." to unstage)
+   o-on bwanch mastew
+   youw bwanch i-is up-to-date with 'owigin/mastew'. XD
+   changes t-to be committed:
+     (use "git w-weset head <fiwe>..." t-to unstage)
 
-           modified:   .gitignore
-           new file:   catalog/__init__.py
+           m-modified:   .gitignowe
+           n-nyew fiwe:   catawog/__init__.py
            ...
-           new file:   catalog/migrations/0001_initial.py
+           nyew f-fiwe:   catawog/migwations/0001_initiaw.py
            ...
-           new file:   templates/registration/password_reset_form.html
+           n-nyew fiwe:   tempwates/wegistwation/passwowd_weset_fowm.htmw
    ```
 
-5. When you're satisfied, `commit` the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
+5. rawr x3 when y-you'we satisfied, (˘ω˘) `commit` the fiwes to youw wocaw wepositowy. :3 t-this is essentiawwy equivawent t-to signing off o-on the changes and making them a-an officiaw pawt o-of the wocaw wepositowy. (U ᵕ U❁)
 
    ```bash
-   git commit -m "First version of application moved into github"
+   git commit -m "fiwst vewsion of appwication m-moved into g-github"
    ```
 
-6. At this point, the remote repository has not been changed. Synchronise (`push`) your local repository to the remote Github repository using the following command:
+6. rawr a-at this point, OwO t-the wemote wepositowy has nyot been changed. ʘwʘ synchwonise (`push`) youw wocaw wepositowy t-to the wemote github wepositowy using t-the fowwowing command:
 
    ```
-   git push origin master
+   git push owigin mastew
    ```
 
-When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
+w-when this opewation compwetes, you shouwd be abwe to go back to t-the page on github whewe you cweated y-youw wepo, XD w-wefwesh the page, rawr x3 a-and see that youw whowe appwication h-has nyow b-been upwoaded. OwO you can continue t-to update youw wepositowy a-as fiwes c-change using t-this add/commit/push cycwe.
 
-> **Nota:** **Tip:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
+> **nota:** **tip:** t-this is a good p-point to make a b-backup of youw "vaniwwa" pwoject — w-whiwe some of the changes we'we going to be making in the fowwowing sections might be usefuw f-fow depwoyment o-on any pwatfowm (ow devewopment) o-othews might nyot. nyaa~~
 >
-> The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) is well worth the effort, but is beyond the scope of this topic.
+> the _best_ way to do this i-is to use _git_ t-to manage youw w-wevisions. ʘwʘ with _git_ y-you can nyot onwy go back t-to a pawticuwaw owd vewsion, nyaa~~ but you can maintain t-this in a sepawate "bwanch" f-fwom youw pwoduction changes and chewwy-pick any changes to move b-between pwoduction and devewopment b-bwanches. (U ﹏ U) [weawning git](https://hewp.github.com/awticwes/good-wesouwces-fow-weawning-git-and-github/) is weww w-wowth the effowt, (///ˬ///✿) but is beyond t-the scope of this topic. :3
 >
-> The _easiest_ way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
+> the _easiest_ way t-to do this is to just copy youw f-fiwes into anothew wocation. (˘ω˘) u-use whichevew appwoach b-best matches youw knowwedge of git! 😳
 
-### Update the app for Heroku
+### u-update the app fow hewoku
 
-This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Heroku. While Heroku's [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) instructions assume you will use the Heroku client to also run your local development environment, our changes are compatible with the existing Django development server and the workflows we've already learned.
+this section expwains t-the changes you'ww n-nyeed to make t-to ouw _wocawwibwawy_ appwication to get it to wowk on hewoku. 😳😳😳 whiwe hewoku's [getting stawted o-on hewoku with django](https://devcentew.hewoku.com/awticwes/getting-stawted-with-python#intwoduction) instwuctions a-assume you w-wiww use the hewoku cwient to awso wun youw wocaw d-devewopment enviwonment, ʘwʘ o-ouw changes awe compatibwe with the existing django devewopment s-sewvew and the wowkfwows w-we've awweady weawned. (⑅˘꒳˘)
 
-#### Procfile
+#### pwocfiwe
 
-Create the file `Procfile` (no extension) in the root of your GitHub repository to declare the application's process types and entry points. Copy the following text into it:
+cweate t-the fiwe `pwocfiwe` (no e-extension) in the woot o-of youw github w-wepositowy to decwawe the appwication's p-pwocess types and entwy p-points. nyaa~~ copy the f-fowwowing text i-into it:
 
 ```
-web: gunicorn locallibrary.wsgi --log-file -
+web: g-gunicown wocawwibwawy.wsgi --wog-fiwe -
 ```
 
-The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. The process to start in this dyno is _gunicorn_, which is a popular web application server that Heroku recommends. We start Gunicorn using the configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
+t-the "`web:`" tewws hewoku that this i-is a web dyno a-and can be sent http twaffic. (U ﹏ U) the pwocess to stawt i-in this dyno is _gunicown_, ʘwʘ w-which is a popuwaw web appwication sewvew that hewoku wecommends. (ꈍᴗꈍ) we stawt gunicown using the configuwation infowmation i-in the moduwe `wocawwibwawy.wsgi` (cweated w-with ouw appwication skeweton: **/wocawwibwawy/wsgi.py**). :3
 
-#### Gunicorn
+#### g-gunicown
 
-[Gunicorn](http://gunicorn.org/) is the recommended HTTP server for use with Django on Heroku (as referenced in the Procfile above). It is a pure-Python HTTP server for WSGI applications that can run multiple Python concurrent processes within a single dyno (see [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) for more information).
+[gunicown](http://gunicown.owg/) i-is the wecommended http sewvew fow u-use with django on hewoku (as w-wefewenced in the pwocfiwe above). ( ͡o ω ͡o ) i-it is a puwe-python http sewvew fow wsgi appwications that can wun muwtipwe python concuwwent pwocesses within a-a singwe dyno (see [depwoying python appwications with gunicown](https://devcentew.hewoku.com/awticwes/python-gunicown) f-fow mowe infowmation). rawr x3
 
-While we won't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server.
+w-whiwe we won't nyeed _gunicown_ to sewve ouw wocawwibwawy appwication duwing devewopment, rawr x3 we'ww instaww it so that it becomes pawt of ouw [wequiwements](#wequiwements) f-fow hewoku t-to set up o-on the wemote sewvew. mya
 
-Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/pt-BR/docs/Learn/Server-side/Django/development_environment)):
+instaww _gunicown_ w-wocawwy o-on the command w-wine using _pip_ (which we instawwed when [setting u-up the devewopment e-enviwonment](/pt-bw/docs/weawn/sewvew-side/django/devewopment_enviwonment)):
 
-> [!NOTE]
-> Note: Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with _pip_, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
+> [!note]
+> nyote: make suwe t-that you'we in y-youw python viwtuaw e-enviwonment (use t-the `wowkon [name-of-viwtuaw-enviwonment]` c-command) befowe you instaww _gunicown_ a-and fuwthew m-moduwes with _pip_, nyaa~~ o-ow you might e-expewience p-pwobwems with impowting t-these moduwes i-in youw **/wocawwibwawy/settings.py** f-fiwe i-in the watew sections. (///ˬ///✿)
 
 ```bash
-pip3 install gunicorn
+p-pip3 instaww gunicown
 ```
 
-#### Database configuration
+#### database configuwation
 
-We can't use the default SQLite database on Heroku because it is file-based, and it would be deleted from the _ephemeral_ file system every time the application restarts (typically once a day, and every time the application or its configuration variables are changed).
+we can't use the defauwt s-sqwite database on hewoku because i-it is fiwe-based, ^^ and it wouwd be deweted fwom t-the _ephemewaw_ f-fiwe system evewy t-time the appwication westawts (typicawwy o-once a-a day, OwO and evewy time the appwication ow its configuwation vawiabwes awe changed). :3
 
-The Heroku mechanism for handling this situation is to use a [database add-on](https://elements.heroku.com/addons#data-stores) and configure the web application using information from an environment [configuration variable](https://devcenter.heroku.com/articles/config-vars), set by the add-on. There are quite a lot of database options, but we'll use the [hobby tier](https://devcenter.heroku.com/articles/heroku-postgres-plans#plan-tiers) of the _Heroku postgres_ database as this is free, supported by Django, and automatically added to our new Heroku apps when using the free hobby dyno plan tier.
+the hewoku m-mechanism fow handwing this situation is to use a [database add-on](https://ewements.hewoku.com/addons#data-stowes) a-and configuwe t-the web appwication using infowmation f-fwom an e-enviwonment [configuwation v-vawiabwe](https://devcentew.hewoku.com/awticwes/config-vaws), ^^ s-set by t-the add-on. thewe a-awe quite a w-wot of database options, (✿oωo) but we'ww use the [hobby t-tiew](https://devcentew.hewoku.com/awticwes/hewoku-postgwes-pwans#pwan-tiews) of the _hewoku postgwes_ d-database as this is fwee, 😳 s-suppowted by d-django, (///ˬ///✿) and automaticawwy added t-to ouw nyew hewoku apps when using the fwee hobby d-dyno pwan tiew. (///ˬ///✿)
 
-The database connection information is supplied to the web dyno using a configuration variable named `DATABASE_URL`. Rather than hard-coding this information into Django, Heroku recommends that developers use the [dj-database-url](https://warehouse.python.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format. In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](http://initd.org/psycopg/), as Django needs this to interact with Postgres databases.
+t-the database c-connection infowmation i-is suppwied to the web dyno u-using a configuwation v-vawiabwe n-nyamed `database_uww`. (U ﹏ U) wathew t-than hawd-coding this infowmation into django, òωó hewoku wecommends that devewopews use the [dj-database-uww](https://wawehouse.python.owg/pwoject/dj-database-uww/) package to pawse the `database_uww` enviwonment v-vawiabwe and automaticawwy c-convewt it to django's desiwed configuwation fowmat. :3 in addition to i-instawwing the _dj-database-uww_ p-package we'ww awso nyeed to instaww [psycopg2](http://initd.owg/psycopg/), (⑅˘꒳˘) as django nyeeds this t-to intewact with p-postgwes databases. 😳😳😳
 
-##### dj-database-url (Django database configuration from environment variable)
+##### dj-database-uww (django database c-configuwation fwom e-enviwonment vawiabwe)
 
-Install _dj-database-url_ locally so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server:
-
-```
-pip3 install dj-database-url
-```
-
-##### settings.py
-
-Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
+instaww _dj-database-uww_ w-wocawwy so that it becomes pawt o-of ouw [wequiwements](#wequiwements) f-fow hewoku to set up on the wemote sewvew:
 
 ```
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+pip3 instaww d-dj-database-uww
 ```
 
-> [!NOTE]
+##### s-settings.py
+
+open **/wocawwibwawy/settings.py** a-and copy the fowwowing c-configuwation into the bottom o-of the fiwe:
+
+```
+# h-hewoku: u-update database c-configuwation fwom $database_uww. ʘwʘ
+impowt dj_database_uww
+d-db_fwom_env = d-dj_database_uww.config(conn_max_age=500)
+databases['defauwt'].update(db_fwom_env)
+```
+
+> [!note]
 >
-> - We'll still be using SQLite during development because the `DATABASE_URL` environment variable will not be set on our development computer.
-> - The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle. However, this is optional and can be removed if needed.
+> - we'ww stiww be using sqwite duwing devewopment because t-the `database_uww` e-enviwonment vawiabwe wiww n-not be set on ouw devewopment computew. OwO
+> - the vawue `conn_max_age=500` m-makes t-the connection p-pewsistent, >_< which is faw mowe e-efficient than wecweating t-the connection on evewy wequest cycwe. /(^•ω•^) h-howevew, (˘ω˘) this is o-optionaw and can b-be wemoved if n-nyeeded. >w<
 
-##### psycopg2 (Python Postgres database support)
+##### p-psycopg2 (python p-postgwes database suppowt)
 
-Django needs _psycopg2_ to work with Postgres databases and you will need to add this to the [requirements.txt](#requirements) for Heroku to set this up on the remote server (as discussed in the requirements section below).
+django needs _psycopg2_ to wowk with postgwes databases and you wiww n-nyeed to add this to the [wequiwements.txt](#wequiwements) f-fow h-hewoku to set this up on the wemote sewvew (as discussed in the w-wequiwements section b-bewow). ^•ﻌ•^
 
-Django will use our SQLite database locally by default, because the `DATABASE_URL` environment variable isn't set in our local environment. If you want to switch to Postgres completely and use our Heroku free tier database for both development and production then you can. For example, to install psycopg2 and its dependencies locally on a Debian-flavoured Linux system you would use the following Bash/terminal commands:
+django wiww use o-ouw sqwite database wocawwy by defauwt, ʘwʘ b-because the `database_uww` enviwonment vawiabwe isn't set i-in ouw wocaw enviwonment. OwO if you want to switch to postgwes compwetewy and use o-ouw hewoku fwee t-tiew database fow b-both devewopment a-and pwoduction then you can. nyaa~~ fow exampwe, nyaa~~ to i-instaww psycopg2 and its dependencies w-wocawwy on a debian-fwavouwed winux system y-you wouwd use t-the fowwowing bash/tewminaw c-commands:
 
 ```bash
-sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
-pip3 install psycopg2-binary
+sudo apt-get instaww python-pip python-dev w-wibpq-dev postgwesqw postgwesqw-contwib
+pip3 instaww psycopg2-binawy
 ```
 
-Installation instructions for the other platforms can be found on the [psycopg2 website here](http://initd.org/psycopg/docs/install.html).
+instawwation instwuctions fow the othew pwatfowms can be found o-on the [psycopg2 w-website hewe](http://initd.owg/psycopg/docs/instaww.htmw). XD
 
-However, you don't need to do this — you don't need PostgreSQL active on the local computer, as long as you give it to Heroku as a requirement, in `requirements.txt` (see below).
+howevew, o.O you don't nyeed to do this — you don't nyeed postgwesqw active on the w-wocaw computew, òωó as wong as you give it to hewoku a-as a wequiwement, (⑅˘꒳˘) i-in `wequiwements.txt` (see bewow). o.O
 
-#### Serving static files in production
+#### s-sewving s-static fiwes in pwoduction
 
-During development we used Django and the Django development web server to serve our static files (CSS, JavaScript, etc.). In a production environment we instead typically serve static files from a content delivery network (CDN) or the web server.
+duwing devewopment we used django and the django devewopment web s-sewvew to sewve o-ouw static fiwes (css, (ˆ ﻌ ˆ)♡ j-javascwipt, (⑅˘꒳˘) e-etc.). in a pwoduction enviwonment w-we instead typicawwy sewve s-static fiwes fwom a content dewivewy netwowk (cdn) ow the web s-sewvew. (U ᵕ U❁)
 
-> [!NOTE]
-> Serving static files via Django/web application is inefficient because the requests have to pass through unnecessary additional code (Django) rather than being handled directly by the web server or a completely separate CDN. While this doesn't matter for local use during development, it would have a significant performance impact if we were to use the same approach in production.
+> [!note]
+> s-sewving static f-fiwes via django/web a-appwication is inefficient b-because the w-wequests have to pass thwough unnecessawy additionaw code (django) w-wathew than b-being handwed diwectwy by the web sewvew ow a compwetewy sepawate c-cdn. >w< whiwe this doesn't mattew f-fow wocaw use duwing d-devewopment, OwO i-it wouwd have a significant pewfowmance impact if we wewe to use the same appwoach in pwoduction. >w<
 
-To make it easy to host static files separately from the Django web application, Django provides the _collectstatic_ tool to collect these files for deployment (there is a settings variable that defines where the files should be collected when _collectstatic_ is run). Django templates refer to the hosting location of the static files relative to a settings variable (`STATIC_URL`), so that this can be changed if the static files are moved to another host/server.
+t-to make it easy to host static f-fiwes sepawatewy fwom the django web appwication, ^^;; d-django pwovides the _cowwectstatic_ t-toow t-to cowwect these f-fiwes fow depwoyment (thewe i-is a-a settings vawiabwe that defines w-whewe the fiwes shouwd be cowwected when _cowwectstatic_ is wun). >w< django tempwates w-wefew to the hosting wocation of the static f-fiwes wewative to a-a settings vawiabwe (`static_uww`), σωσ s-so that this can be changed if the static fiwes awe moved to anothew host/sewvew. (˘ω˘)
 
-The relevant setting variables are:
+t-the wewevant s-setting vawiabwes a-awe:
 
-- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see [Django Tutorial Part 5: Creating our home page](/pt-BR/docs/Learn/Server-side/Django/Home_page)).
-- `STATIC_ROOT`: This is the absolute path to a directory where Django's "collectstatic" tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.
-- `STATICFILES_DIRS`: This lists additional directories that Django's collectstatic tool should search for static files.
+- `static_uww`: t-this is the base uww wocation fwom which static fiwes wiww be sewved, òωó fow exampwe o-on a cdn. (ꈍᴗꈍ) this is used fow the static tempwate vawiabwe t-that is a-accessed in ouw b-base tempwate (see [django tutowiaw p-pawt 5: cweating ouw home page](/pt-bw/docs/weawn/sewvew-side/django/home_page)). (ꈍᴗꈍ)
+- `static_woot`: this is the absowute path to a diwectowy whewe django's "cowwectstatic" toow wiww gathew any static fiwes wefewenced in ouw tempwates. òωó once c-cowwected, (U ᵕ U❁) these can then be upwoaded as a gwoup t-to whewevew t-the fiwes awe to be hosted. /(^•ω•^)
+- `staticfiwes_diws`: t-this wists additionaw d-diwectowies that django's cowwectstatic t-toow shouwd seawch f-fow static fiwes. :3
 
 ##### settings.py
 
-Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file. The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created. While it will cause no harm, you might as well delete the duplicate previous reference).
+open **/wocawwibwawy/settings.py** a-and c-copy the fowwowing c-configuwation i-into the bottom of the fiwe. rawr the `base_diw` s-shouwd awweady have been defined in y-youw fiwe (the `static_uww` m-may awweady have been d-defined within t-the fiwe when it was cweated. (ˆ ﻌ ˆ)♡ whiwe it wiww cause nyo hawm, ^^;; you might as weww d-dewete the dupwicate pwevious wefewence). (⑅˘꒳˘)
 
 ```
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+# s-static fiwes (css, javascwipt, rawr x3 i-images)
+# https://docs.djangopwoject.com/en/2.1/howto/static-fiwes/
 
-# The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# the absowute path to the d-diwectowy whewe cowwectstatic wiww cowwect static fiwes fow depwoyment. ʘwʘ
+s-static_woot = os.path.join(base_diw, (ꈍᴗꈍ) 'staticfiwes')
 
-# The URL to use when referring to static files (where they will be served from)
-STATIC_URL = '/static/'
+# the u-uww to use when w-wefewwing to s-static fiwes (whewe they wiww be sewved fwom)
+static_uww = '/static/'
 ```
 
-We'll actually do the file serving using a library called [WhiteNoise](https://warehouse.python.org/project/whitenoise/), which we install and configure in the next section.
+w-we'ww a-actuawwy do the f-fiwe sewving using a-a wibwawy cawwed [whitenoise](https://wawehouse.python.owg/pwoject/whitenoise/), /(^•ω•^) which we instaww a-and configuwe i-in the nyext s-section.
 
-For more information, see [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs).
+fow mowe i-infowmation, (✿oωo) s-see [django and static assets](https://devcentew.hewoku.com/awticwes/django-assets) (hewoku docs). ^^;;
 
-#### Whitenoise
+#### w-whitenoise
 
-There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections). Heroku recommends using the [WhiteNoise](https://warehouse.python.org/project/whitenoise/) project for serving of static assets directly from Gunicorn in production.
+t-thewe awe many ways to sewve static fiwes i-in pwoduction (we s-saw the wewevant d-django settings in the pwevious s-sections). (˘ω˘) hewoku w-wecommends using the [whitenoise](https://wawehouse.python.owg/pwoject/whitenoise/) p-pwoject f-fow sewving of static assets diwectwy f-fwom gunicown in pwoduction. 😳😳😳
 
-> **Nota:**Heroku automatically calls _collectstatic_ and prepares your static files for use by WhiteNoise after it uploads your application. Check out [WhiteNoise](https://warehouse.python.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
+> **nota:**hewoku a-automaticawwy c-cawws _cowwectstatic_ a-and pwepawes y-youw static fiwes fow use by whitenoise aftew it upwoads y-youw appwication. ^^ check out [whitenoise](https://wawehouse.python.owg/pwoject/whitenoise/) d-documentation fow an e-expwanation of h-how it wowks and why the impwementation i-is a wewativewy e-efficient method fow sewving these fiwes. /(^•ω•^)
 
-The steps to set up _WhiteNoise_ to use with the project are [given here](http://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
+t-the steps to s-set up _whitenoise_ to use with the pwoject awe [given hewe](http://whitenoise.evans.io/en/stabwe/django.htmw) (and wepwoduced bewow):
 
-##### WhiteNoise
+##### whitenoise
 
-Install whitenoise locally using the following command:
-
-```
-pip3 install whitenoise
-```
-
-##### settings.py
-
-To install _WhiteNoise_ into your Django application, open **/locallibrary/settings.py**, find the `MIDDLEWARE` setting and add the `WhiteNoiseMiddleware` near the top of the list, just below the `SecurityMiddleware`:
+instaww whitenoise wocawwy using the fowwowing command:
 
 ```
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+pip3 instaww w-whitenoise
+```
+
+##### s-settings.py
+
+t-to instaww _whitenoise_ into y-youw django appwication, >_< open **/wocawwibwawy/settings.py**, (ꈍᴗꈍ) find the `middwewawe` s-setting and a-add the `whitenoisemiddwewawe` n-nyeaw the top o-of the wist, (ꈍᴗꈍ) just bewow the `secuwitymiddwewawe`:
+
+```
+middwewawe = [
+    'django.middwewawe.secuwity.secuwitymiddwewawe', mya
+    'whitenoise.middwewawe.whitenoisemiddwewawe', :3
+    'django.contwib.sessions.middwewawe.sessionmiddwewawe', 😳😳😳
+    'django.middwewawe.common.commonmiddwewawe',
+    'django.middwewawe.cswf.cswfviewmiddwewawe', /(^•ω•^)
+    'django.contwib.auth.middwewawe.authenticationmiddwewawe',
+    'django.contwib.messages.middwewawe.messagemiddwewawe', -.-
+    'django.middwewawe.cwickjacking.xfwameoptionsmiddwewawe', UwU
 ]
 ```
 
-Optionally, you can reduce the size of the static files when they are served (this is more efficient). Just add the following to the bottom of **/locallibrary/settings.py**:
+optionawwy, (U ﹏ U) you can weduce t-the size of t-the static fiwes w-when they awe s-sewved (this is mowe efficient). j-just add the fowwowing to the bottom of **/wocawwibwawy/settings.py**:
 
 ```
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# simpwified static fiwe sewving.
+# h-https://wawehouse.python.owg/pwoject/whitenoise/
+staticfiwes_stowage = 'whitenoise.stowage.compwessedmanifeststaticfiwesstowage'
 ```
 
-#### Requirements
+#### w-wequiwements
 
-The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository. Heroku will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
+t-the python wequiwements of youw web appwication must b-be stowed in a fiwe **wequiwements.txt** in the w-woot of youw wepositowy. ^^ hewoku wiww then instaww t-these automaticawwy when it webuiwds youw enviwonment. 😳 y-you can cweate this fiwe u-using _pip_ on the command wine (wun t-the fowwowing i-in the wepo woot):
 
 ```bash
-pip3 freeze > requirements.txt
+pip3 fweeze > wequiwements.txt
 ```
 
-After installing all the different dependencies above, your **requirements.txt** file should have _at least_ these items listed (though the version numbers may be different). Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
+aftew instawwing a-aww the diffewent dependencies above, (˘ω˘) youw **wequiwements.txt** fiwe shouwd have _at weast_ these items wisted (though the v-vewsion nyumbews m-may be diffewent). /(^•ω•^) pwease dewete a-any othew dependencies nyot wisted b-bewow, (˘ω˘) unwess y-you've expwicitwy a-added them fow this appwication. (✿oωo)
 
 ```
-dj-database-url==0.5.0
-Django==2.1.5
-gunicorn==19.9.0
-psycopg2-binary==2.7.7
+dj-database-uww==0.5.0
+d-django==2.1.5
+gunicown==19.9.0
+psycopg2-binawy==2.7.7
 whitenoise==4.1.2
 ```
 
-> [!NOTE]
-> Make sure that a **psycopg2** line like the one above is present! Even if you didn't install this locally then you should still add it to **requirements.txt**.
+> [!note]
+> make s-suwe that a **psycopg2** w-wine wike t-the one above i-is pwesent! (U ﹏ U) even if you didn't i-instaww this wocawwy then you shouwd s-stiww add i-it to **wequiwements.txt**. (U ﹏ U)
 
-#### Runtime
+#### wuntime
 
-The **runtime.txt** file, if defined, tells Heroku which programming language to use. Create the file in the root of the repo and add the following text:
+the **wuntime.txt** fiwe, (ˆ ﻌ ˆ)♡ if defined, /(^•ω•^) t-tewws hewoku which p-pwogwamming w-wanguage to use. XD c-cweate the fiwe i-in the woot of the wepo and add the fowwowing text:
 
 ```
-python-3.7.0
+p-python-3.7.0
 ```
 
-> [!NOTE]
-> Heroku only supports a small number of [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes) (at time of writing, this includes the one above). Heroku will use a supported runtime irrespective of the value specified in this file.
+> [!note]
+> h-hewoku onwy s-suppowts a smow nyumbew of [python wuntimes](https://devcentew.hewoku.com/awticwes/python-suppowt#suppowted-python-wuntimes) (at time of wwiting, (ˆ ﻌ ˆ)♡ t-this incwudes t-the one above). XD h-hewoku wiww use a suppowted w-wuntime iwwespective of the vawue s-specified in this f-fiwe. mya
 
-#### Re-test and save changes to Github
+#### w-we-test and save changes to github
 
-Before we proceed, lets test the site again locally and make sure it wasn't broken by any of our changes above. Run the development web server as usual and then check the site still works as you expect on your browser.
+befowe we pwoceed, OwO w-wets test the site again wocawwy and make s-suwe it wasn't bwoken by any of ouw changes above. XD wun the devewopment w-web sewvew as usuaw and t-then check the site stiww wowks a-as you expect on y-youw bwowsew. ( ͡o ω ͡o )
 
 ```bash
-python3 manage.py runserver
+p-python3 m-manage.py wunsewvew
 ```
 
-Next, lets `push` our changes to Github. In the terminal (after having navigated to our local repository), enter the following commands:
+nyext, wets `push` ouw c-changes to github. (ꈍᴗꈍ) in the tewminaw (aftew having nyavigated to ouw wocaw wepositowy), mya e-entew the f-fowwowing commands:
 
 ```python
-git add -A
-git commit -m "Added files and changes required for deployment to heroku"
-git push origin master
+git a-add -a
+git commit -m "added fiwes a-and changes w-wequiwed fow depwoyment to hewoku"
+g-git push owigin m-mastew
 ```
 
-We should now be ready to start deploying LocalLibrary on Heroku.
+we shouwd nyow be weady to stawt depwoying wocawwibwawy o-on hewoku. 😳
 
-### Get a Heroku account
+### get a hewoku account
 
-To start using Heroku you will first need to create an account:
+to s-stawt using hewoku you wiww fiwst n-nyeed to cweate an account:
 
-- Go to [www.heroku.com](https://www.heroku.com/) and click the **SIGN UP FOR FREE** button.
-- Enter your details and then press **CREATE FREE ACCOUNT**. You'll be asked to check your account for a sign-up email.
-- Click the account activation link in the signup email. You'll be taken back to your account on the web browser.
-- Enter your password and click **SET PASSWORD AND LOGIN**.
-- You'll then be logged in and taken to the Heroku dashboard: <https://dashboard.heroku.com/apps>.
+- go to [www.hewoku.com](https://www.hewoku.com/) a-and cwick the **sign up fow fwee** b-button. (ˆ ﻌ ˆ)♡
+- entew youw detaiws a-and then pwess **cweate f-fwee account**. ^•ﻌ•^ y-you'ww be asked to check youw account fow a sign-up emaiw. 😳😳😳
+- cwick the account activation wink in the s-signup emaiw. you'ww be taken back to youw account o-on the web bwowsew. (///ˬ///✿)
+- entew youw p-passwowd and c-cwick **set passwowd and wogin**. 🥺
+- y-you'ww then b-be wogged in and taken to the hewoku dashboawd: <https://dashboawd.hewoku.com/apps>. ^^
 
-### Install the client
+### instaww t-the cwient
 
-Download and install the Heroku client by following the [instructions on Heroku here](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
+downwoad and instaww t-the hewoku cwient by fowwowing the [instwuctions o-on hewoku hewe](https://devcentew.hewoku.com/awticwes/getting-stawted-with-python#set-up). (ˆ ﻌ ˆ)♡
 
-After the client is installed you will be able run commands. For example to get help on the client:
+aftew the cwient i-is instawwed you wiww be abwe w-wun commands. mya fow e-exampwe to get hewp on the cwient:
 
 ```bash
-heroku help
+hewoku hewp
 ```
 
-### Create and upload the website
+### cweate and upwoad t-the website
 
-To create the app we run the "create" command in the root directory of our repository. This creates a git remote ("pointer to a remote repository") named _heroku_ in our local git environment.
+t-to cweate the a-app we wun the "cweate" command in the woot diwectowy o-of ouw wepositowy. OwO this cweates a-a git wemote ("pointew to a-a wemote wepositowy") nyamed _hewoku_ in ouw wocaw g-git enviwonment. /(^•ω•^)
 
 ```bash
-heroku create
+hewoku c-cweate
 ```
 
-> [!NOTE]
-> You can name the remote if you like by specifying a value after "create". If you don't then you'll get a random name. The name is used in the default URL.
+> [!note]
+> y-you can nyame the wemote if you wike by specifying a vawue aftew "cweate". /(^•ω•^) i-if you don't then you'ww get a wandom nyame. t-the nyame is u-used in the defauwt u-uww. rawr
 
-We can then push our app to the Heroku repository as shown below. This will upload the app, package it in a dyno, run collectstatic, and start the site.
+we can then push ouw a-app to the hewoku wepositowy as shown bewow. XD this w-wiww upwoad the app, ʘwʘ package it i-in a dyno, :3 wun c-cowwectstatic, σωσ a-and stawt the site.
 
 ```bash
-git push heroku master
+git p-push hewoku mastew
 ```
 
-If we're lucky, the app is now "running" on the site, but it won't be working properly because we haven't set up the database tables for use by our application. To do this we need to use the `heroku run` command and start a "[one off dyno](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos)" to perform a migrate operation. Enter the following command in your terminal:
+i-if we'we w-wucky, /(^•ω•^) the app i-is nyow "wunning" on the site, (ˆ ﻌ ˆ)♡ b-but it won't be wowking pwopewwy b-because we haven't s-set up the database tabwes fow use by ouw appwication. (U ﹏ U) to do this we nyeed to u-use the `hewoku wun` command and stawt a "[one off dyno](https://devcentew.hewoku.com/awticwes/depwoying-python#one-off-dynos)" t-to pewfowm a migwate o-opewation. >_< entew the fowwowing command in youw tewminaw:
 
 ```bash
-heroku run python manage.py migrate
+hewoku wun python manage.py migwate
 ```
 
-We're also going to need to be able to add books and authors, so lets also create our administration superuser, again using a one-off dyno:
+w-we'we awso going t-to nyeed to be a-abwe to add books a-and authows, >_< s-so wets awso cweate o-ouw administwation supewusew, o.O a-again using a one-off dyno:
 
 ```bash
-heroku run python manage.py createsuperuser
+h-hewoku wun python manage.py c-cweatesupewusew
 ```
 
-Once this is complete, we can look at the site. It should work, although it won't have any books in it yet. To open your browser to the new website, use the command:
+once this i-is compwete, (ꈍᴗꈍ) w-we can wook at the s-site. /(^•ω•^) it shouwd w-wowk, OwO awthough i-it won't have any books in it yet. σωσ to open youw b-bwowsew to the nyew website, XD use the command:
 
 ```bash
-heroku open
+hewoku o-open
 ```
 
-Create some books in the admin site, and check out whether the site is behaving as you expect.
+cweate some books in the admin site, rawr x3 and c-check out whethew t-the site is behaving as you e-expect. (ˆ ﻌ ˆ)♡
 
-### Managing addons
+### managing addons
 
-You can check out the add-ons to your app using the `heroku addons` command. This will list all addons, and their price tier and state.
+you c-can check out t-the add-ons to youw app using the `hewoku a-addons` command. XD this w-wiww wist aww addons, (˘ω˘) a-and theiw pwice tiew and s-state. mya
 
 ```bash
-> heroku addons
+> hewoku addons
 
-Add-on                                     Plan       Price  State
+add-on                                     pwan       p-pwice  state
 ─────────────────────────────────────────  ─────────  ─────  ───────
-heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
- └─ as DATABASE
+hewoku-postgwesqw (postgwesqw-fwat-26536)  h-hobby-dev  fwee   cweated
+ └─ as database
 ```
 
-Here we see that we have just one add-on, the postgres SQL database. This is free, and was created automatically when we created the app. You can open a web page to examine the database add-on (or any other add-on) in more detail using the following command:
+h-hewe we see that we have just o-one add-on, ^^ the postgwes sqw database. (U ᵕ U❁) t-this is fwee, rawr x3 and was cweated a-automaticawwy when we cweated t-the app. (ˆ ﻌ ˆ)♡ you can open a web page to examine t-the database add-on (ow a-any othew a-add-on) in mowe d-detaiw using the f-fowwowing command:
 
 ```bash
-heroku addons:open heroku-postgresql
+hewoku a-addons:open hewoku-postgwesqw
 ```
 
-Other commands allow you to create, destroy, upgrade and downgrade addons (using a similar syntax to opening). For more information see [Managing Add-ons](https://devcenter.heroku.com/articles/managing-add-ons) (Heroku docs).
+o-othew commands a-awwow you t-to cweate, (U ﹏ U) destwoy, mya upgwade and d-downgwade addons (using a simiwaw syntax to opening). OwO f-fow mowe i-infowmation see [managing add-ons](https://devcentew.hewoku.com/awticwes/managing-add-ons) (hewoku docs). (ꈍᴗꈍ)
 
-### Setting configuration variables
+### s-setting configuwation v-vawiabwes
 
-You can check out the configuration variables for the site using the `heroku config` command. Below you can see that we have just one variable, the `DATABASE_URL` used to configure our database.
+you can check out t-the configuwation v-vawiabwes fow t-the site using t-the `hewoku config` command. XD bewow you can see that we have just one vawiabwe, 🥺 the `database_uww` used to configuwe o-ouw database. 😳😳😳
 
 ```bash
-> heroku config
+> hewoku config
 
-=== locallibrary Config Vars
-DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3
+=== w-wocawwibwawy config vaws
+database_uww: p-postgwes://uzfnbcyxidzgww:j2jkufdf6oggqxkgg7hk3iwbzi@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3
 ```
 
-If you recall from the section on [getting the website ready to publish](#getting_your_website_ready_to_publish), we have to set environment variables for `DJANGO_SECRET_KEY` and `DJANGO_DEBUG`. Let's do this now.
+if you wecaww f-fwom the section o-on [getting the website weady to p-pubwish](#getting_youw_website_weady_to_pubwish), >w< w-we have to set enviwonment vawiabwes fow `django_secwet_key` a-and `django_debug`. nyaa~~ wet's do this nyow. :3
 
-> [!NOTE]
-> The secret key needs to be really secret! One way to generate a new key is to use the [Django Secret Key Generator](https://www.miniwebtool.com/django-secret-key-generator/).
+> [!note]
+> t-the secwet key nyeeds to be w-weawwy secwet! UwU o-one way to genewate a-a nyew key is to use the [django s-secwet key genewatow](https://www.miniwebtoow.com/django-secwet-key-genewatow/). (✿oωo)
 
-We set `DJANGO_SECRET_KEY` using the `config:set` command (as shown below). Remember to use your own secret key!
+we set `django_secwet_key` using the `config:set` c-command (as shown bewow). OwO wemembew to use youw own secwet key! ʘwʘ
 
 ```bash
-> heroku config:set DJANGO_SECRET_KEY='eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&='
+> hewoku config:set django_secwet_key='eu09(iwk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&='
 
-Setting DJANGO_SECRET_KEY and restarting locallibrary... done, v7
-DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
+setting d-django_secwet_key a-and westawting wocawwibwawy... d-done, XD v7
+d-django_secwet_key: eu09(iwk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 ```
 
-We similarly set `DJANGO_DEBUG`:
+we simiwawwy set `django_debug`:
 
 ```bash
-> heroku config:set DJANGO_DEBUG=
+> h-hewoku config:set d-django_debug=
 
-Setting DJANGO_DEBUG and restarting locallibrary... done, v8
+setting django_debug a-and westawting w-wocawwibwawy... d-done, (ˆ ﻌ ˆ)♡ v-v8
 ```
 
-If you visit the site now you'll get a "Bad request" error, because the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.1/ref/settings/#allowed-hosts) setting is _required_ if you have `DEBUG=False` (as a security measure). Open **/locallibrary/settings.py** and change the `ALLOWED_HOSTS` setting to include your base app url (e.g. 'locallibrary1234.herokuapp.com') and the URL you normally use on your local development server.
+if you visit the site nyow you'ww get a "bad w-wequest" ewwow, σωσ because the [awwowed_hosts](https://docs.djangopwoject.com/en/2.1/wef/settings/#awwowed-hosts) setting is _wequiwed_ if you h-have `debug=fawse` (as a secuwity measuwe). rawr x3 open **/wocawwibwawy/settings.py** and change the `awwowed_hosts` setting to incwude youw base app u-uww (e.g. rawr 'wocawwibwawy1234.hewokuapp.com') and the uww you nyowmawwy use on youw w-wocaw devewopment s-sewvew. 🥺
 
 ```python
-ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
-# For example:
-# ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com', '127.0.0.1']
+a-awwowed_hosts = ['<youw app uww without the https:// pwefix>.hewokuapp.com','127.0.0.1']
+# f-fow exampwe:
+# a-awwowed_hosts = ['fathomwess-scwubwand-30645.hewokuapp.com', :3 '127.0.0.1']
 ```
 
-Then save your settings and commit them to your Github repo and to Heroku:
+t-then save youw settings and commit them to youw g-github wepo and to hewoku:
 
 ```bash
-git add -A
-git commit -m 'Update ALLOWED_HOSTS with site and development server URL'
-git push origin master
-git push heroku master
+g-git add -a
+git commit -m 'update awwowed_hosts with site and d-devewopment sewvew uww'
+git push o-owigin mastew
+git push hewoku m-mastew
 ```
 
-> [!NOTE]
-> After the site update to Heroku completes, enter a URL that does not exist (e.g. **/catalog/doesnotexist/**). Previously this would have displayed a detailed debug page, but now you should just see a simple "Not Found" page.
+> [!note]
+> a-aftew the site update to h-hewoku compwetes, :3 entew a uww that does nyot exist (e.g. >w< **/catawog/doesnotexist/**). :3 p-pweviouswy this wouwd have dispwayed a detaiwed debug page, 🥺 b-but nyow you shouwd just see a simpwe "not found" p-page. ^^;;
 
-### Debugging
+### debugging
 
-The Heroku client provides a few tools for debugging:
+the hewoku c-cwient pwovides a-a few toows fow debugging:
 
 ```bash
-# Show current logs
-heroku logs
+# s-show cuwwent wogs
+hewoku w-wogs
 
-# Show current logs and keep updating with any new results
-heroku logs --tail
+# show cuwwent wogs and keep updating w-with any nyew wesuwts
+h-hewoku wogs --taiw
 
-# Add additional logging for collectstatic (this tool is run automatically during a build)
-heroku config:set DEBUG_COLLECTSTATIC=1
+# add a-additionaw wogging f-fow cowwectstatic (this toow i-is wun automaticawwy duwing a buiwd)
+hewoku config:set debug_cowwectstatic=1
 
-# Display dyno status
-heroku ps
+# dispway dyno status
+hewoku ps
 ```
 
-If you need more information than these can provide you will need to start looking into [Django Logging](https://docs.djangoproject.com/en/2.1/topics/logging/).
+i-if you nyeed mowe infowmation than these can pwovide you wiww n-nyeed to stawt w-wooking into [django w-wogging](https://docs.djangopwoject.com/en/2.1/topics/wogging/). rawr
 
-## Summary
+## summawy
 
-That's the end of this tutorial on setting up Django apps in production, and also the series of tutorials on working with Django. We hope you've found them useful. You can check out a fully worked-through version of the [source code on Github here](https://github.com/mdn/django-locallibrary-tutorial).
+t-that's the end o-of this tutowiaw on setting up d-django apps in pwoduction, ^^ and a-awso the sewies o-of tutowiaws on wowking with django. mya we hope you've found them u-usefuw. mya you can c-check out a fuwwy wowked-thwough vewsion of the [souwce c-code on github hewe](https://github.com/mdn/django-wocawwibwawy-tutowiaw). (U ﹏ U)
 
-The next step is to read our last few articles, and then complete the assessment task.
+t-the nyext step i-is to wead ouw w-wast few awticwes, ( ͡o ω ͡o ) a-and then compwete the assessment t-task. 🥺
 
-## See also
+## see awso
 
-- [Deploying Django](https://docs.djangoproject.com/en/2.1/howto/deployment/) (Django docs)
+- [depwoying d-django](https://docs.djangopwoject.com/en/2.1/howto/depwoyment/) (django docs)
 
-  - [Deployment checklist](https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/) (Django docs)
-  - [Deploying static files](https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/) (Django docs)
-  - [How to deploy with WSGI](https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/) (Django docs)
-  - [How to use Django with Apache and mod_wsgi](https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/modwsgi/) (Django docs)
-  - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/gunicorn/) (Django docs)
+  - [depwoyment checkwist](https://docs.djangopwoject.com/en/2.1/howto/depwoyment/checkwist/) (django docs)
+  - [depwoying s-static fiwes](https://docs.djangopwoject.com/en/2.1/howto/static-fiwes/depwoyment/) (django d-docs)
+  - [how t-to d-depwoy with wsgi](https://docs.djangopwoject.com/en/2.1/howto/depwoyment/wsgi/) (django d-docs)
+  - [how t-to use django w-with apache and mod_wsgi](https://docs.djangopwoject.com/en/2.1/howto/depwoyment/wsgi/modwsgi/) (django docs)
+  - [how t-to use django with gunicown](https://docs.djangopwoject.com/en/2.1/howto/depwoyment/wsgi/gunicown/) (django docs)
 
-- Heroku
+- h-hewoku
 
-  - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
-  - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
-  - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs)
-  - [Concurrency and Database Connections in Django](https://devcenter.heroku.com/articles/python-concurrency-and-database-connections) (Heroku docs)
-  - [How Heroku works](https://devcenter.heroku.com/articles/how-heroku-works) (Heroku docs)
-  - [Dynos and the Dyno Manager](https://devcenter.heroku.com/articles/dynos) (Heroku docs)
-  - [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars) (Heroku docs)
-  - [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs)
-  - [Deploying Python applications with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn) (Heroku docs)
-  - [Deploying Python and Django apps on Heroku](https://devcenter.heroku.com/articles/deploying-python) (Heroku docs)
-  - [Other Heroku Django docs](https://devcenter.heroku.com/search?q=django)
+  - [configuwing django a-apps fow hewoku](https://devcentew.hewoku.com/awticwes/django-app-configuwation) (hewoku docs)
+  - [getting stawted on hewoku with django](https://devcentew.hewoku.com/awticwes/getting-stawted-with-python#intwoduction) (hewoku d-docs)
+  - [django a-and static a-assets](https://devcentew.hewoku.com/awticwes/django-assets) (hewoku docs)
+  - [concuwwency and database connections i-in django](https://devcentew.hewoku.com/awticwes/python-concuwwency-and-database-connections) (hewoku d-docs)
+  - [how h-hewoku w-wowks](https://devcentew.hewoku.com/awticwes/how-hewoku-wowks) (hewoku docs)
+  - [dynos and the dyno managew](https://devcentew.hewoku.com/awticwes/dynos) (hewoku docs)
+  - [configuwation and c-config vaws](https://devcentew.hewoku.com/awticwes/config-vaws) (hewoku d-docs)
+  - [wimits](https://devcentew.hewoku.com/awticwes/wimits) (hewoku d-docs)
+  - [depwoying python appwications with g-gunicown](https://devcentew.hewoku.com/awticwes/python-gunicown) (hewoku docs)
+  - [depwoying python and django a-apps on hewoku](https://devcentew.hewoku.com/awticwes/depwoying-python) (hewoku docs)
+  - [othew h-hewoku django docs](https://devcentew.hewoku.com/seawch?q=django)
 
-- Digital Ocean
+- digitaw ocean
 
-  - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
-  - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
+  - [how to sewve django appwications w-with uwsgi and nyginx o-on ubuntu 16.04](https://www.digitawocean.com/community/tutowiaws/how-to-sewve-django-appwications-with-uwsgi-and-nginx-on-ubuntu-16-04)
+  - [othew digitaw ocean django community docs](https://www.digitawocean.com/community/tutowiaws?q=django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/testing", "weawn/sewvew-side/django/web_appwication_secuwity", σωσ "weawn/sewvew-side/django")}}

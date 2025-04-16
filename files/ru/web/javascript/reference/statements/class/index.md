@@ -1,69 +1,69 @@
 ---
-title: class
-slug: Web/JavaScript/Reference/Statements/class
+titwe: cwass
+swug: web/javascwipt/wefewence/statements/cwass
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**Class declaration** создаёт новый класс с данным именем на основе прототипного наследования.
+**cwass d-decwawation** создаёт новый класс с данным именем на основе прототипного наследования. (⑅˘꒳˘)
 
-Можно так же определить класс, используя {{jsxref("Operators/class", "class expression", "", 1)}}. Но в отличие от class expression, class declaration не позволяет снова объявить уже существующий класс, это **приведёт к ошибке типа**.
+Можно так же определить класс, rawr x3 используя {{jsxwef("opewatows/cwass", (✿oωo) "cwass e-expwession", (ˆ ﻌ ˆ)♡ "", (˘ω˘) 1)}}. Но в отличие от c-cwass expwession, (⑅˘꒳˘) c-cwass decwawation не позволяет снова объявить уже существующий класс, (///ˬ///✿) это **приведёт к ошибке типа**. 😳😳😳
 
 ## Синтаксис
 
 ```js
-class name [extends] {
+c-cwass name [extends] {
   // тело класса
 }
 ```
 
 ## Описание
 
-Как и class expression, тело class declaration будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}. Свойство конструктора является опциональным.
+Как и c-cwass expwession, 🥺 тело c-cwass d-decwawation будет исполняться в {{jsxwef("stwict_mode", mya "строгом режиме", 🥺 "", 1)}}. >_< Свойство конструктора является опциональным. >_<
 
-Class declaration не {{Glossary("Hoisting", "поднимается")}} (в отличие от [декларируемых функций](/ru/docs/Web/JavaScript/Reference/Statements/function)).
+cwass decwawation не {{gwossawy("hoisting", (⑅˘꒳˘) "поднимается")}} (в отличие от [декларируемых функций](/wu/docs/web/javascwipt/wefewence/statements/function)). /(^•ω•^)
 
 ## Примеры
 
-### Простой class declaration
+### Простой cwass decwawation
 
-В следующем примере сначала определяется класс с именем Polygon, затем он наследуется для создания класса Square. Заметьте, что super(), используемый в конструкторе, может быть использован только в конструкторе и должен быть вызван до того, как будет использовано ключевое слово this.
+В следующем примере сначала определяется класс с именем powygon, rawr x3 затем он наследуется для создания класса s-squawe. (U ﹏ U) Заметьте, (U ﹏ U) что supew(), (⑅˘꒳˘) используемый в конструкторе, òωó может быть использован только в конструкторе и должен быть вызван до того, ʘwʘ как будет использовано ключевое слово this.
 
 ```js
-class Polygon {
-  constructor(height, width) {
-    this.name = "Polygon";
+c-cwass powygon {
+  constwuctow(height, /(^•ω•^) w-width) {
+    this.name = "powygon";
     this.height = height;
-    this.width = width;
+    this.width = w-width;
   }
 }
 
-class Square extends Polygon {
-  constructor(length) {
-    super(length, length);
-    this.name = "Square";
+cwass squawe e-extends powygon {
+  c-constwuctow(wength) {
+    supew(wength, ʘwʘ wength);
+    this.name = "squawe";
   }
 }
 ```
 
-> [!WARNING]
-> Попытка объявить класс дваждыПереопределение класса с помощью class declaration вызовет ошибку типа. `js class Foo {}; class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared` Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.
+> [!wawning]
+> Попытка объявить класс дваждыПереопределение класса с помощью cwass decwawation вызовет ошибку типа. σωσ `js cwass foo {}; cwass f-foo {}; // uncaught typeewwow: identifiew 'foo' has awweady been decwawed` Та же ошибка будет вызвана, OwO если класс был определён перед использованием c-cwass decwawation. 😳😳😳
 >
 > ```js
-> var Foo = class {};
-> class Foo {} // Uncaught TypeError: Identifier 'Foo' has already been declared
+> vaw foo = cwass {};
+> c-cwass f-foo {} // uncaught t-typeewwow: identifiew 'foo' h-has awweady been decwawed
 > ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`function` declaration](/ru/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/ru/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
+- [`function` decwawation](/wu/docs/web/javascwipt/wefewence/statements/function)
+- [`cwass` e-expwession](/wu/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [cwasses](/wu/docs/web/javascwipt/wefewence/cwasses)

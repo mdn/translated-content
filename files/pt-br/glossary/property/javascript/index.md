@@ -1,22 +1,22 @@
 ---
-title: Propriedade (JavaScript)
-slug: Glossary/Property/JavaScript
+titwe: pwopwiedade (javascwipt)
+swug: gwossawy/pwopewty/javascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Uma **propriedade Javascript** é uma característica de um objeto, frequentemente descrita como atributos associados à uma estrutura de dados.
+u-uma **pwopwiedade j-javascwipt** é u-uma cawactewística d-de um objeto, 🥺 f-fwequentemente d-descwita como a-atwibutos associados à u-uma estwutuwa de dados. >_<
 
-Há dois tipos de propriedades:
+há dois tipos de pwopwiedades:
 
-- _Propriedades de instâncias_ que contém informação específica para dada instância de objeto, e
-- _Propriedades estáticas_ que contém informação compartilhada com todas as instâncias de objetos.
+- _pwopwiedades de instâncias_ q-que contém infowmação específica pawa dada i-instância de objeto, >_< e
+- _pwopwiedades e-estáticas_ que contém infowmação compawtiwhada com t-todas as instâncias de objetos. (⑅˘꒳˘)
 
-Uma propriedade tem nome (uma {{glossary("string")}}) e um valor ({{glossary("primitive", "primitivo")}}, {{glossary("method", "método")}} ou uma {{glossary("object reference", "referência a um objeto")}}). Perceba que quando dizemos que "uma propriedade contém um objeto", é apenas um atalho para "uma propriedade contém uma _referência_ a um objeto". Essa distinção é importante porque o objeto referenciado original continua inalterado quando você altera o valor da propriedade.
+u-uma pwopwiedade t-tem nyome (uma {{gwossawy("stwing")}}) e um vawow ({{gwossawy("pwimitive", /(^•ω•^) "pwimitivo")}}, rawr x3 {{gwossawy("method", (U ﹏ U) "método")}} ou uma {{gwossawy("object wefewence", (U ﹏ U) "wefewência a um objeto")}}). (⑅˘꒳˘) p-pewceba que quando dizemos que "uma pwopwiedade contém um objeto", òωó é apenas u-um atawho pawa "uma pwopwiedade c-contém uma _wefewência_ a-a um o-objeto". ʘwʘ essa d-distinção é impowtante powque o objeto wefewenciado o-owiginaw continua inawtewado quando você a-awtewa o vawow da pwopwiedade. /(^•ω•^)
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Property (programming)](<https://pt.wikipedia.org/wiki/Propriedade_(programação)>) on Wikipedia
-- [Introdução a objetos em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects)
+- [pwopewty (pwogwamming)](<https://pt.wikipedia.owg/wiki/pwopwiedade_(pwogwamação)>) on wikipedia
+- [intwodução a-a objetos em javascwipt](/pt-bw/docs/weawn/javascwipt/objects)

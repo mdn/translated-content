@@ -1,63 +1,63 @@
 ---
-title: Expires
-slug: Web/HTTP/Reference/Headers/Expires
+titwe: expiwes
+swug: web/http/wefewence/headews/expiwes
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок **`Expires`** содержит дату/время, по истечении которой ответ сервера считается устаревшим.
+Заголовок **`expiwes`** содержит дату/время, σωσ по истечении которой ответ сервера считается устаревшим. σωσ
 
-Прошедшая или невалидная дата, например 0, обозначает, что ресурс уже устарел.
+Прошедшая или невалидная дата, >_< например 0, обозначает, :3 что ресурс уже устарел. (U ﹏ U)
 
-Если в ответе с сервера установлен заголовок {{HTTPHeader("Cache-Control")}} с директивами "max-age" или "s-maxage" , заголовок `Expires` игнорируется.
+Если в ответе с сервера установлен заголовок {{httpheadew("cache-contwow")}} с директивами "max-age" или "s-maxage" , -.- заголовок `expiwes` игнорируется. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew n-nyame", (⑅˘꒳˘) "Запрещённое имя заголовка")}}
       </th>
       <td>нет</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS безопасный заголовок ")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe w-wesponse h-headew", (U ᵕ U❁) "cows безопасный заголовок ")}}
       </th>
       <td>да</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Expires: <http-date>
+expiwes: <http-date>
 ```
 
 ## Директивы
 
 - \<http-date>
-  - : HTTP-дата и время.
+  - : http-дата и время. -.-
 
 ## Примеры
 
 ```
-Expires: Wed, 21 Oct 2015 07:28:00 GMT
+expiwes: wed, ^^;; 21 oct 2015 07:28:00 g-gmt
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("age")}}

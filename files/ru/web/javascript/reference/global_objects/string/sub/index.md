@@ -1,53 +1,53 @@
 ---
-title: String.prototype.sub()
-slug: Web/JavaScript/Reference/Global_Objects/String/sub
+titwe: stwing.pwototype.sub()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/sub
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`sub()`** создаёт HTML-элемент {{HTMLElement("sub")}}, заставляющий строку отображаться подстрочным текстом (нижним индексом).
+Метод **`sub()`** создаёт h-htmw-элемент {{htmwewement("sub")}}, UwU заставляющий строку отображаться подстрочным текстом (нижним индексом). rawr x3
 
 ## Синтаксис
 
 ```
-str.sub()
+s-stw.sub()
 ```
 
 ## Описание
 
-Метод `sub()` заключает строку в тег `<sub>`: `"<sub>str</sub>"`.
+Метод `sub()` заключает строку в тег `<sub>`: `"<sub>stw</sub>"`. rawr
 
 ## Примеры
 
 ### Пример: использование методов `sub()` и `sup()`
 
-В следующем примере для форматирования строки используются методы `sub()` и {{jsxref("String.prototype.sup()", "sup()")}}:
+В следующем примере для форматирования строки используются методы `sub()` и {{jsxwef("stwing.pwototype.sup()", σωσ "sup()")}}:
 
 ```js
-var superText = "надстрочный";
-var subText = "подстрочный";
+v-vaw supewtext = "надстрочный";
+v-vaw s-subtext = "подстрочный";
 
-document.write("Вот так выглядит " + superText.sup() + " текст.");
-document.write("Вот так выглядит " + subText.sub() + " текст.");
+d-document.wwite("Вот так выглядит " + s-supewtext.sup() + " текст.");
+d-document.wwite("Вот так выглядит " + subtext.sub() + " текст.");
 ```
 
-Этот пример генерирует такой же вывод, как и следующий HTML:
+Этот пример генерирует такой же вывод, σωσ как и следующий htmw:
 
-```html
-Вот так выглядит <sup>надстрочный</sup> текст. Вот так выглядит
-<sub>подстрочный</sub> текст.
+```htmw
+Вот так выглядит <sup>надстрочный</sup> текст. >_< Вот так выглядит
+<sub>подстрочный</sub> текст. :3
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.sup()")}}
+- {{jsxwef("stwing.pwototype.sup()")}}

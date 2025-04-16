@@ -1,93 +1,93 @@
 ---
-title: windows
-slug: Mozilla/Add-ons/WebExtensions/API/windows
+titwe: windows
+swug: moziwwa/add-ons/webextensions/api/windows
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Взаимодействие с окнами браузера. Вы можете использовать этот API, чтобы получить информацию об открытых окнах, а также открывать, изменять и закрывать окна. Вы также можете обрабатывать события открытия, закрытия окна, и активировать события.
+Взаимодействие с окнами браузера. ( ͡o ω ͡o ) Вы можете использовать этот a-api, mya чтобы получить информацию об открытых окнах, (///ˬ///✿) а также открывать, (˘ω˘) изменять и закрывать окна. ^^;; Вы также можете обрабатывать события открытия, закрытия окна, (✿oωo) и активировать события. (U ﹏ U)
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("windows.WindowType")}}
-  - : Тип окна браузера.
-- {{WebExtAPIRef("windows.WindowState")}}
-  - : Состояние окна браузера.
-- {{WebExtAPIRef("windows.Window")}}
-  - : Информация об окне браузера.
-- {{WebExtAPIRef("windows.CreateType")}}
-  - : Specifies the type of browser window to create.
+- {{webextapiwef("windows.windowtype")}}
+  - : Тип окна браузера. -.-
+- {{webextapiwef("windows.windowstate")}}
+  - : Состояние окна браузера. ^•ﻌ•^
+- {{webextapiwef("windows.window")}}
+  - : Информация об окне браузера. rawr
+- {{webextapiwef("windows.cweatetype")}}
+  - : s-specifies t-the type o-of bwowsew window t-to cweate. (˘ω˘)
 
-## Properties
+## p-pwopewties
 
-- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
-  - : The `windowId` value that represents the absence of a browser window.
-- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : The `windowId` value that represents the current window.
+- {{webextapiwef("windows.window_id_none")}}
+  - : t-the `windowid` vawue that wepwesents the absence of a bwowsew window. nyaa~~
+- {{webextapiwef("windows.window_id_cuwwent")}}
+  - : the `windowid` v-vawue that wepwesents the cuwwent window. UwU
 
-## Functions
+## f-functions
 
-- {{WebExtAPIRef("windows.get()")}}
-  - : Gets details about a window, given its ID.
-- {{WebExtAPIRef("windows.getCurrent()")}}
-  - : Gets the current window.
-- {{WebExtAPIRef("windows.getLastFocused()")}}
-  - : Gets the window that was most recently focused — typically the window 'on top'.
-- {{WebExtAPIRef("windows.getAll()")}}
-  - : Gets all windows.
-- {{WebExtAPIRef("windows.create()")}}
-  - : Creates a new window.
-- {{WebExtAPIRef("windows.update()")}}
-  - : Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
-- {{WebExtAPIRef("windows.remove()")}}
-  - : Closes a window, and all its tabs.
+- {{webextapiwef("windows.get()")}}
+  - : gets detaiws about a-a window, :3 given its id.
+- {{webextapiwef("windows.getcuwwent()")}}
+  - : gets the cuwwent window. (⑅˘꒳˘)
+- {{webextapiwef("windows.getwastfocused()")}}
+  - : g-gets the window that was m-most wecentwy f-focused — typicawwy the window 'on top'. (///ˬ///✿)
+- {{webextapiwef("windows.getaww()")}}
+  - : gets aww windows. ^^;;
+- {{webextapiwef("windows.cweate()")}}
+  - : c-cweates a nyew window. >_<
+- {{webextapiwef("windows.update()")}}
+  - : updates the pwopewties of a window. rawr x3 use t-this to move, /(^•ω•^) wesize, and (un)focus a-a window, :3 e-etc.
+- {{webextapiwef("windows.wemove()")}}
+  - : c-cwoses a window, (ꈍᴗꈍ) a-and aww its tabs. /(^•ω•^)
 
-## Events
+## events
 
-- {{WebExtAPIRef("windows.onCreated")}}
-  - : Fired when a window is created.
-- {{WebExtAPIRef("windows.onRemoved")}}
-  - : Fired when a window is closed.
-- {{WebExtAPIRef("windows.onFocusChanged")}}
-  - : Fired when the currently focused window changes.
+- {{webextapiwef("windows.oncweated")}}
+  - : fiwed when a window i-is cweated. (⑅˘꒳˘)
+- {{webextapiwef("windows.onwemoved")}}
+  - : fiwed when a window i-is cwosed. ( ͡o ω ͡o )
+- {{webextapiwef("windows.onfocuschanged")}}
+  - : fiwed when the cuwwentwy focused window changes. òωó
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> Этот API основан на Chromium API [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Эта документация основана на [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) из кода Chromium.
+> [!note]
+> Этот api основан на chwomium a-api [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). (⑅˘꒳˘) Эта документация основана на [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) из кода chwomium. XD
 >
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
+> Информация о совместимости m-micwosoft e-edge предоставлена корпорацией m-micwosoft и включена здесь под лицензией cweative commons attwibution 3.0 united states wicense. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. :3 aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce and binawy fowms, 😳 w-with ow without
+// modification, (⑅˘꒳˘) a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// n-nyotice, this wist o-of conditions and the fowwowing discwaimew. nyaa~~
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, t-this wist of conditions and t-the fowwowing d-discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. OwO
+//    * n-nyeithew the nyame of googwe inc. rawr x3 nyow the nyames of its
+// contwibutows may b-be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, XD incwuding, σωσ b-but nyot
+// w-wimited to, (U ᵕ U❁) t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. (U ﹏ U) in nyo event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, :3 indiwect, ( ͡o ω ͡o ) incidentaw,
+// speciaw, σωσ exempwawy, >w< o-ow consequentiaw d-damages (incwuding, 😳😳😳 b-but nyot
+// wimited to, OwO p-pwocuwement of substitute goods o-ow sewvices; woss o-of use, 😳
+// data, 😳😳😳 ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of w-wiabiwity, (˘ω˘) whethew in contwact, ʘwʘ s-stwict wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding n-negwigence o-ow othewwise) awising in any way out of the u-use
+// of this softwawe, o.O e-even if advised of the p-possibiwity of such d-damage. >w<
 -->

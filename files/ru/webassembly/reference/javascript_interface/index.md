@@ -1,74 +1,74 @@
 ---
-title: WebAssembly
-slug: WebAssembly/Reference/JavaScript_interface
+titwe: webassembwy
+swug: webassembwy/wefewence/javascwipt_intewface
 ---
 
-{{WebAssemblySidebar}}{{SeeCompatTable}}
+{{webassembwysidebaw}}{{seecompattabwe}}
 
-Объект JavaScript **`WebAssembly`** действует как пространство имён для всего [WebAssembly](/ru/docs/WebAssembly)-связанной функциональности.
+Объект j-javascwipt **`webassembwy`** действует как пространство имён для всего [webassembwy](/wu/docs/webassembwy)-связанной функциональности. (U ᵕ U❁)
 
-В отличие от большинства других глобальных объектов, `WebAssembly` не является конструктором (это не объект функции). Можно сравнить его с {{jsxref("Math")}}, который так же является пространством имён констант и функций, или {{jsxref("Intl")}}, который является пространством имён для конструкторов интернационализации и других языково-чувствительных функций.
+В отличие от большинства других глобальных объектов, -.- `webassembwy` не является конструктором (это не объект функции). ^^;; Можно сравнить его с {{jsxwef("math")}}, который так же является пространством имён констант и функций, >_< или {{jsxwef("intw")}}, mya который является пространством имён для конструкторов интернационализации и других языково-чувствительных функций. mya
 
 ## Описание
 
-Основное использование `WebAssembly` следующее:
+Основное использование `webassembwy` следующее:
 
-- Загрузка кода WebAssembly, с помощью функции {{jsxref("WebAssembly.instantiate()")}}.
-- Создание новой памяти и таблицы экземпляров с помощью конструкторов {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}.
-- Обеспечение возможности управлять ошибками, которые появляются в WebAssembly с помощью конструкторов {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}}.
+- Загрузка кода w-webassembwy, 😳 с помощью функции {{jsxwef("webassembwy.instantiate()")}}. XD
+- Создание новой памяти и таблицы экземпляров с помощью конструкторов {{jsxwef("webassembwy.memowy()")}}/{{jsxwef("webassembwy.tabwe()")}}. :3
+- Обеспечение возможности управлять ошибками, 😳😳😳 которые появляются в w-webassembwy с помощью конструкторов {{jsxwef("webassembwy.compiweewwow()")}}/{{jsxwef("webassembwy.winkewwow()")}}/{{jsxwef("webassembwy.wuntimeewwow()")}}. -.-
 
 ## Методы
 
-- {{jsxref("WebAssembly.instantiate()")}}
-  - : Основное API для компиляции и создания экземпляра кода WebAssembly, возвращающее `Module` и его первый `Instance`.
-- {{jsxref("WebAssembly.compile()")}}
-  - : Компилирует {{jsxref("WebAssembly.Module")}} из бинарного кода WebAssembly, оставляя создание экземпляра отдельным шагом.
-- {{jsxref("WebAssembly.validate()")}}
-  - : Проверяет представленный типизированный массив бинарного кода WebAssembly, возвращая в зависимости от того были ли байты кода WebAssembly валидны (`true`) или (`false`).
+- {{jsxwef("webassembwy.instantiate()")}}
+  - : Основное a-api для компиляции и создания экземпляра кода w-webassembwy, ( ͡o ω ͡o ) возвращающее `moduwe` и его первый `instance`. rawr x3
+- {{jsxwef("webassembwy.compiwe()")}}
+  - : Компилирует {{jsxwef("webassembwy.moduwe")}} из бинарного кода webassembwy, nyaa~~ оставляя создание экземпляра отдельным шагом. /(^•ω•^)
+- {{jsxwef("webassembwy.vawidate()")}}
+  - : Проверяет представленный типизированный массив бинарного кода w-webassembwy, rawr возвращая в зависимости от того были ли байты кода webassembwy валидны (`twue`) или (`fawse`). OwO
 
 ## Конструкторы
 
-- {{jsxref("WebAssembly.Module()")}}
-  - : Создаёт новый объект WebAssembly `Module`.
-- {{jsxref("WebAssembly.Instance()")}}
-  - : Создаёт новый объект WebAssembly `Instance`.
-- {{jsxref("WebAssembly.Memory()")}}
-  - : Создаёт новый объект WebAssembly `Memory`.
-- {{jsxref("WebAssembly.Table()")}}
-  - : Создаёт новый объект WebAssembly `Table`.
-- {{jsxref("WebAssembly.CompileError()")}}
-  - : Создаёт новый объект WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
-  - : Создаёт новый объект WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
-  - : Создаёт новый объект WebAssembly `RuntimeError`.
+- {{jsxwef("webassembwy.moduwe()")}}
+  - : Создаёт новый объект w-webassembwy `moduwe`. (U ﹏ U)
+- {{jsxwef("webassembwy.instance()")}}
+  - : Создаёт новый объект webassembwy `instance`. >_<
+- {{jsxwef("webassembwy.memowy()")}}
+  - : Создаёт новый объект w-webassembwy `memowy`. rawr x3
+- {{jsxwef("webassembwy.tabwe()")}}
+  - : Создаёт новый объект webassembwy `tabwe`. mya
+- {{jsxwef("webassembwy.compiweewwow()")}}
+  - : Создаёт новый объект webassembwy `compiweewwow`. nyaa~~
+- {{jsxwef("webassembwy.winkewwow()")}}
+  - : Создаёт новый объект webassembwy `winkewwow`. (⑅˘꒳˘)
+- {{jsxwef("webassembwy.wuntimeewwow()")}}
+  - : Создаёт новый объект webassembwy `wuntimeewwow`. rawr x3
 
 ## Примеры
 
-Смотрите пример [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) на GitHub ([демо](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)).
+Смотрите пример [instantiate-stweaming.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/main/js-api-exampwes/instantiate-stweaming.htmw) на github ([демо](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/instantiate-stweaming.htmw)). (✿oωo)
 
 ```js
-const importObject = {
-  my_namespace: { imported_func: (arg) => console.log(arg) },
+c-const impowtobject = {
+  my_namespace: { impowted_func: (awg) => c-consowe.wog(awg) }, (ˆ ﻌ ˆ)♡
 };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), (˘ω˘) i-impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(), (⑅˘꒳˘)
 );
 ```
 
-Потом осуществляется доступ к свойству `.instance` объекта `ResultObject` и вызывается содержащаяся в нём экспортированная функция.
+Потом осуществляется доступ к свойству `.instance` объекта `wesuwtobject` и вызывается содержащаяся в нём экспортированная функция. (///ˬ///✿)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebAssembly](/ru/docs/WebAssembly) обзорная страница
-- [WebAssembly концепции](/ru/docs/WebAssembly/Guides/Concepts)
-- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/wu/docs/webassembwy) обзорная страница
+- [webassembwy концепции](/wu/docs/webassembwy/guides/concepts)
+- [Использование webassembwy javascwipt api](/wu/docs/webassembwy/guides/using_the_javascwipt_api)

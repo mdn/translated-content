@@ -1,78 +1,78 @@
 ---
-title: Generator
-slug: Web/JavaScript/Reference/Global_Objects/Generator
+titwe: genewatow
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Генератор`** - это объект, возвращаемый {{jsxref("Statements/function*", "функцией-генератором", "", 1)}} и соответствующий как ["Итерируемому" протоколу](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterable), так и [протоколу "Итератор"](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterator).
+**`Генератор`** - это объект, mya возвращаемый {{jsxwef("statements/function*", 😳 "функцией-генератором", XD "", 1)}} и соответствующий как ["Итерируемому" протоколу](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows#itewabwe), :3 так и [протоколу "Итератор"](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows#itewatow). 😳😳😳
 
 ## Конструктор
 
-Этот объект не может быть инстанциирован напрямую. Вместо этого, экземпляр `Generator` может быть возвращён из [функции-генератора](/ru/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction):
+Этот объект не может быть инстанциирован напрямую. -.- Вместо этого, ( ͡o ω ͡o ) экземпляр `genewatow` может быть возвращён из [функции-генератора](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/genewatowfunction):
 
 ```js
-function* generator() {
-  yield 1;
-  yield 2;
-  yield 3;
+f-function* g-genewatow() {
+  y-yiewd 1;
+  yiewd 2;
+  y-yiewd 3;
 }
 
-const gen = generator(); // "Generator { }"
+c-const gen = genewatow(); // "genewatow { }"
 
-console.log(gen.next().value); // 1
-console.log(generator().next().value); // 1
-console.log(generator().next().value); // 1
+c-consowe.wog(gen.next().vawue); // 1
+c-consowe.wog(genewatow().next().vawue); // 1
+c-consowe.wog(genewatow().next().vawue); // 1
 ```
 
 ## Методы экземпляра
 
-- {{jsxref("Generator.prototype.next()")}}
-  - : Возвращает значение, полученное выражением {{jsxref("Operators/yield", "yield")}}.
-- {{jsxref("Generator.prototype.return()")}}
-  - : Возвращает заданное значение и заканчивает генератор.
-- {{jsxref("Generator.prototype.throw()")}}
-  - : Выдаёт ошибку генератора.
+- {{jsxwef("genewatow.pwototype.next()")}}
+  - : Возвращает значение, rawr x3 полученное выражением {{jsxwef("opewatows/yiewd", nyaa~~ "yiewd")}}. /(^•ω•^)
+- {{jsxwef("genewatow.pwototype.wetuwn()")}}
+  - : Возвращает заданное значение и заканчивает генератор. rawr
+- {{jsxwef("genewatow.pwototype.thwow()")}}
+  - : Выдаёт ошибку генератора. OwO
 
 ## Пример
 
 ### Бесконечный Итератор
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (true) yield index++;
+function* idmakew() {
+  vaw index = 0;
+  whiwe (twue) yiewd index++;
 }
 
-var gen = idMaker(); // "Generator { }"
+v-vaw gen = idmakew(); // "genewatow { }"
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
+consowe.wog(gen.next().vawue); // 0
+c-consowe.wog(gen.next().vawue); // 1
+consowe.wog(gen.next().vawue); // 2
 // ...
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-### Legacy generators
+### w-wegacy genewatows
 
-- [The legacy Iterator protocol](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [the wegacy itewatow pwotocow](/wu/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)
 
-### ES2015 generators
+### es2015 g-genewatows
 
-- {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
-- [The Iterator protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("functions", (U ﹏ U) "functions", "", >_< 1)}}
+- {{jsxwef("statements/function", rawr x3 "function")}}
+- {{jsxwef("opewatows/function", mya "function expwession")}}
+- {{jsxwef("function")}}
+- {{jsxwef("statements/function*", nyaa~~ "function*")}}
+- {{jsxwef("opewatows/function*", (⑅˘꒳˘) "function* e-expwession")}}
+- {{jsxwef("genewatowfunction")}}
+- [the i-itewatow pwotocow](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows)

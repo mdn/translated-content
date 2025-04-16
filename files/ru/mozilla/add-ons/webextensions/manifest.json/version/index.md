@@ -1,40 +1,40 @@
 ---
-title: ключ version
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
+titwe: ключ vewsion
+swug: m-moziwwa/add-ons/webextensions/manifest.json/vewsion
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Тип</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Обязательный</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">Тип</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Обязательный</th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">Пример</th>
-      <td><pre class="brush: json no-line-numbers">"version": "0.1"</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">Пример</th>
+      <td><pwe c-cwass="bwush: json nyo-wine-numbews">"vewsion": "0.1"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Версия дополнения, отформатированная как числа и символы ASCII, разделённые точками. Подробнее о формате версий смотрите страницу [Version format](/ru/docs/Toolkit_version_format).
+Версия дополнения, :3 отформатированная как числа и символы ascii, (U ﹏ U) разделённые точками. -.- Подробнее о формате версий смотрите страницу [vewsion fowmat](/wu/docs/toowkit_vewsion_fowmat). (ˆ ﻌ ˆ)♡
 
-Обратите внимание, что [синтаксис ключа `version` для Chrome](https://developer.chrome.com/docs/extensions/reference/manifest/version) более ограниченный, чем у Firefox:
+Обратите внимание, (⑅˘꒳˘) что [синтаксис ключа `vewsion` для chwome](https://devewopew.chwome.com/docs/extensions/wefewence/manifest/vewsion) более ограниченный, (U ᵕ U❁) чем у f-fiwefox:
 
-- значения `version` которые действительны для Chrome, всегда будут действительны для Firefox
-- значения `version` которые действительны для Firefox, могут быть не действительны для Chrome
+- значения `vewsion` которые действительны для chwome, -.- всегда будут действительны для fiwefox
+- значения `vewsion` которые действительны для fiwefox, могут быть не действительны для c-chwome
 
 ## Пример
 
 ```json
-"version": "0.1"
+"vewsion": "0.1"
 ```
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

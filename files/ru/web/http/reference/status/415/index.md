@@ -1,28 +1,28 @@
 ---
-title: 415 Unsupported Media Type
-slug: Web/HTTP/Reference/Status/415
+titwe: 415 unsuppowted media t-type
+swug: web/http/wefewence/status/415
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код ответа на ошибку клиента HTTP **415 Unsupported Media Type** указывает, что сервер отказывается принять запрос, потому что формат содержимого не поддерживается сервером.
+Код ответа на ошибку клиента h-http **415 unsuppowted m-media t-type** указывает, σωσ что сервер отказывается принять запрос, σωσ потому что формат содержимого не поддерживается сервером. >_<
 
-Проблема формата может быть связана с указанным запросом {{HTTPHeader("Content-Type")}} или {{HTTPHeader("Content-Encoding")}} или в результате непосредственного контроля данных.
+Проблема формата может быть связана с указанным запросом {{httpheadew("content-type")}} или {{httpheadew("content-encoding")}} или в результате непосредственного контроля данных. :3
 
-## Status
+## s-status
 
 ```
-415 Unsupported Media Type
+415 u-unsuppowted m-media type
 ```
 
 ## Спецификации
 
 | Спецификация                                             | Название                                                      |
 | -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "415 Unsupported Media Type" , "6.5.13")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", "415 u-unsuppowted media type" , (U ﹏ U) "6.5.13")}} | hypewtext twansfew pwotocow (http/1.1): semantics a-and content |
 
 ## Смотрите также
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Encoding")}}
-- {{HTTPHeader("Accept")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-encoding")}}
+- {{httpheadew("accept")}}

@@ -1,206 +1,206 @@
 ---
-title: Дополнения
-slug: Mozilla/Add-ons
+titwe: Дополнения
+swug: moziwwa/add-ons
 ---
 
-{{AddonSidebarMain}}
+{{addonsidebawmain}}
 
-Дополнения добавляют новые функциональные возможности в [Gecko](/ru/docs/Mozilla/Gecko)-приложения, такие, как Firefox, SeaMonkey и Thunderbird. Есть два основных типа дополнений: [расширения](#extensions), которые добавляют новые функции в приложение, и [темы](#themes), изменяющие пользовательский интерфейс приложения.
+Дополнения добавляют новые функциональные возможности в [gecko](/wu/docs/moziwwa/gecko)-приложения, такие, >w< как f-fiwefox, rawr seamonkey и t-thundewbiwd. mya Есть два основных типа дополнений: [расширения](#extensions), ^^ которые добавляют новые функции в приложение, 😳😳😳 и [темы](#themes), mya изменяющие пользовательский интерфейс приложения. 😳
 
-> Для расширений и тем в Mozilla работает хранилище на [addons.mozilla.org](https://addons.mozilla.org/), также известное как AMO. Когда вы [помещаете дополнения на AMO](/ru/docs/Mozilla/Add-ons/Submitting_an_add-on_to_AMO), они рассматриваются, и после этого становятся доступны для пользователей. Вы не обязаны загружать свои дополнения в AMO, но если вы это сделаете, пользователи могут быть уверены в том, что они были предварительно проверены и будут знать, что ваше дополнение действительно полезно.
+> Для расширений и тем в m-moziwwa работает хранилище на [addons.moziwwa.owg](https://addons.moziwwa.owg/), -.- также известное как a-amo. 🥺 Когда вы [помещаете дополнения на amo](/wu/docs/moziwwa/add-ons/submitting_an_add-on_to_amo), o.O они рассматриваются, /(^•ω•^) и после этого становятся доступны для пользователей. nyaa~~ Вы не обязаны загружать свои дополнения в a-amo, но если вы это сделаете, nyaa~~ пользователи могут быть уверены в том, :3 что они были предварительно проверены и будут знать, 😳😳😳 что ваше дополнение действительно полезно. (˘ω˘)
 
-Дополнение может существенно повлиять на поведение приложения, на которое оно устанавливается. Мы разработали [список советов](/ru/docs/Mozilla/Add-ons/Add-on_guidelines), которые помогут вам удостовериться, что ваше дополнение будет приятным в использовании. Эти правила применяются для всех видов надстроек, независимо от того, размещены они на [addons.mozilla.org](https://addons.mozilla.org/) или нет.
+Дополнение может существенно повлиять на поведение приложения, ^^ на которое оно устанавливается. :3 Мы разработали [список советов](/wu/docs/moziwwa/add-ons/add-on_guidewines), -.- которые помогут вам удостовериться, что ваше дополнение будет приятным в использовании. Эти правила применяются для всех видов надстроек, 😳 независимо от того, размещены они на [addons.moziwwa.owg](https://addons.moziwwa.owg/) или нет.
 
 ---
 
 ## Расширения
 
-Расширения добавляют новые функции к приложениям Mozilla, например таким как Firefox и Thunderbird. С их помощью можно изменить стандартное поведение браузера, например реализовать другой способ организации и управления вкладками. Можно даже изменять содержимое отображаемого веб приложения, чтобы улучшить удобство использования или например повысить безопасность определённых сайтов.
+Расширения добавляют новые функции к приложениям m-moziwwa, mya например таким как f-fiwefox и t-thundewbiwd. (˘ω˘) С их помощью можно изменить стандартное поведение браузера, >_< например реализовать другой способ организации и управления вкладками. -.- Можно даже изменять содержимое отображаемого веб приложения, 🥺 чтобы улучшить удобство использования или например повысить безопасность определённых сайтов. (U ﹏ U)
 
-Существует 3 различных способа сборки расширений: restartless-расширения на основе Add-on SDK, restartless-расширения с реализацией этого механизма вручную (manually bootstrapped restartless extensions), и расширения с использованием технологии Overlay.
+Существует 3 различных способа сборки расширений: westawtwess-расширения на основе add-on sdk, >w< westawtwess-расширения с реализацией этого механизма вручную (manuawwy bootstwapped w-westawtwess extensions), mya и расширения с использованием технологии ovewway. >w<
 
-- [Restartless-расширения на основе Add-on SDK](/ru/docs/Mozilla/Add-ons/SDK)
-  Разработка restartless расширений с помощью высокоуровневого JavaScript API.
-- [Restartless-расширения с реализацией этого механизма вручную](/ru/docs/Mozilla/Add-ons/Bootstrapped_extensions)
-  Разработка расширений с самостоятельной реализацией механизма restartless.
-- [Расширения с использованием технологии Overlay Extensions](/ru/docs/Mozilla/Add-ons/Overlay_Extensions)
-  Устаревшей способ разработки расширений, при котором требуется перезапуск браузера. Основан на механизме наложения XUL.
+- [westawtwess-расширения на основе a-add-on sdk](/wu/docs/moziwwa/add-ons/sdk)
+  Разработка w-westawtwess расширений с помощью высокоуровневого javascwipt api. nyaa~~
+- [westawtwess-расширения с реализацией этого механизма вручную](/wu/docs/moziwwa/add-ons/bootstwapped_extensions)
+  Разработка расширений с самостоятельной реализацией механизма westawtwess. (✿oωo)
+- [Расширения с использованием технологии ovewway extensions](/wu/docs/moziwwa/add-ons/ovewway_extensions)
+  Устаревшей способ разработки расширений, ʘwʘ при котором требуется перезапуск браузера. (ˆ ﻌ ˆ)♡ Основан на механизме наложения x-xuw. 😳😳😳
 
-> **Примечание:** **Технология WebExtensions**
+> **Примечание:** **Технология webextensions**
 >
-> В данный момент мы разрабатываем систему под названием WebExtensions, которая будет новым способом разработки расширений для браузера Firefox, эта система будет гораздо более совместима с браузерами Chrome и Opera.
+> В данный момент мы разрабатываем систему под названием webextensions, :3 которая будет новым способом разработки расширений для браузера f-fiwefox, OwO эта система будет гораздо более совместима с браузерами c-chwome и opewa. (U ﹏ U)
 >
-> В будущем она станет наиболее предпочтительной при разработке новых проектов для браузера Firefox.
+> В будущем она станет наиболее предпочтительной при разработке новых проектов для браузера fiwefox. >w<
 >
-> В данный момент она является экспериментальной, но несмотря на это вы можете [ознакомиться с документацией](/ru/docs/Mozilla/Add-ons/WebExtensions), если хотите её опробовать.
+> В данный момент она является экспериментальной, (U ﹏ U) но несмотря на это вы можете [ознакомиться с документацией](/wu/docs/moziwwa/add-ons/webextensions), 😳 если хотите её опробовать. (ˆ ﻌ ˆ)♡
 
-Где это возможно, рекомендуется выбирать Add-On SDK, который использует механизм расширения без необходимости перезапуска браузера (restartless extensions), а также упрощает разработку и убирает за собой. Если вам недостаточно возможностей комплекта средств разработки Add-on SDK для реализации ваших идей, механизм restartless вы можете осуществить самостоятельно. Технология Overlay extensions в целом устарела и не рекомендуется при разработке новых расширений.
+Где это возможно, 😳😳😳 рекомендуется выбирать add-on sdk, (U ﹏ U) который использует механизм расширения без необходимости перезапуска браузера (westawtwess e-extensions), (///ˬ///✿) а также упрощает разработку и убирает за собой. 😳 Если вам недостаточно возможностей комплекта средств разработки add-on sdk для реализации ваших идей, 😳 механизм westawtwess вы можете осуществить самостоятельно. σωσ Технология ovewway extensions в целом устарела и не рекомендуется при разработке новых расширений. rawr x3
 
-Для получения дополнительной информации о том, какой способ использовать, прочтите это [сравнение](/ru/docs/Mozilla/Add-ons/Comparing_Extension_Toolchains).
+Для получения дополнительной информации о том, OwO какой способ использовать, /(^•ω•^) прочтите это [сравнение](/wu/docs/moziwwa/add-ons/compawing_extension_toowchains). 😳😳😳
 
 ### Рекомендуемые практики
 
-Вне зависимости от того, каким способом вы разрабатываете расширение, имеются общие рекомендации, следуя которым вы гарантируете пользователю максимально приятную работу с вашим расширением.
+Вне зависимости от того, ( ͡o ω ͡o ) каким способом вы разрабатываете расширение, >_< имеются общие рекомендации, >w< следуя которым вы гарантируете пользователю максимально приятную работу с вашим расширением. rawr
 
-- [Производительность](/ru/docs/Mozilla/Add-ons/Performance_best_practices_in_extensions)
-  - : Убедитесь в том, что ваше расширение обладает хорошей производительностью. Оно должно быть достаточно быстрым, иметь отзывчивый интерфейс и потреблять минимальный объем памяти.
-- [Безопасность](/ru/docs/Mozilla/Add-ons/Security_best_practices_in_extensions)
-  - : Убедитесь в том, что ваше приложение не подвергает пользователя опасности на вредоносных веб сайтах.
-- [Этикет](/ru/docs/Mozilla/Add-ons/Extension_etiquette)
-  - : Убедитесь в том, что ваше расширение не конфликтует с другими расширениями.
+- [Производительность](/wu/docs/moziwwa/add-ons/pewfowmance_best_pwactices_in_extensions)
+  - : Убедитесь в том, 😳 что ваше расширение обладает хорошей производительностью. >w< Оно должно быть достаточно быстрым, (⑅˘꒳˘) иметь отзывчивый интерфейс и потреблять минимальный объем памяти. OwO
+- [Безопасность](/wu/docs/moziwwa/add-ons/secuwity_best_pwactices_in_extensions)
+  - : Убедитесь в том, (ꈍᴗꈍ) что ваше приложение не подвергает пользователя опасности на вредоносных веб сайтах. 😳
+- [Этикет](/wu/docs/moziwwa/add-ons/extension_etiquette)
+  - : Убедитесь в том, 😳😳😳 что ваше расширение не конфликтует с другими расширениями. mya
 
 ### Специфика разработки для различных приложений
 
-Большая часть документации предполагает, что вы разрабатываете для десктопной версии Firefox. Если вы разрабатываете для других основанных на движке Gecko приложений, то существуют некоторые отличия, о которых вам следует знать.
+Большая часть документации предполагает, mya что вы разрабатываете для десктопной версии f-fiwefox. (⑅˘꒳˘) Если вы разрабатываете для других основанных на движке gecko приложений, (U ﹏ U) то существуют некоторые отличия, mya о которых вам следует знать. ʘwʘ
 
-- [Thunderbird](/ru/docs/Mozilla/Add-ons/Thunderbird)
-  - : Разработка расширений для почтового клиента Thunderbird.
-- [Firefox для Андроид](/ru/docs/Mozilla/Add-ons/Firefox_for_Android)
-  - : Разработка расширений для Firefox под Андроид.
-- [SeaMonkey](/ru/docs/Mozilla/Add-ons/SeaMonkey_2)
-  - : Разработка расширений для [SeaMonkey](https://www.seamonkey-project.org/).
+- [thundewbiwd](/wu/docs/moziwwa/add-ons/thundewbiwd)
+  - : Разработка расширений для почтового клиента t-thundewbiwd. (˘ω˘)
+- [fiwefox для Андроид](/wu/docs/moziwwa/add-ons/fiwefox_fow_andwoid)
+  - : Разработка расширений для f-fiwefox под Андроид. (U ﹏ U)
+- [seamonkey](/wu/docs/moziwwa/add-ons/seamonkey_2)
+  - : Разработка расширений для [seamonkey](https://www.seamonkey-pwoject.owg/). ^•ﻌ•^
 
 ---
 
 ## Темы
 
-Темы это дополнения, которые изменяют внешний вид пользовательского интерфейса. Существуют два вида тем: легковесные темы и полные темы.
+Темы это дополнения, (˘ω˘) которые изменяют внешний вид пользовательского интерфейса. Существуют два вида тем: легковесные темы и полные темы. :3
 
-[Легковесные темы](https://addons.mozilla.org/en-US/developers/docs/themes) значительно легче создать, чем полные, но их возможности ограничены.
+[Легковесные темы](https://addons.moziwwa.owg/en-us/devewopews/docs/themes) значительно легче создать, ^^;; чем полные, 🥺 но их возможности ограничены. (⑅˘꒳˘)
 
-С помощью [полных тем](/ru/docs/Themes) вы можете гораздо глубже менять UI приложения. Документация к полным темам устарела, но приведена здесь в качестве возможной основы для обновлённой документации.
+С помощью [полных тем](/wu/docs/themes) вы можете гораздо глубже менять u-ui приложения. nyaa~~ Документация к полным темам устарела, :3 но приведена здесь в качестве возможной основы для обновлённой документации. ( ͡o ω ͡o )
 
 ---
 
 ## Другие типы дополнений
 
-[Поисковые плагины](/ru/docs/Web/OpenSearch) являются простыми и очень специфическими типами дополнений: они добавляют новые поисковые системы для поиска в строке браузера.
+[Поисковые плагины](/wu/docs/web/openseawch) являются простыми и очень специфическими типами дополнений: они добавляют новые поисковые системы для поиска в строке браузера. mya
 
-**[Плагины](/ru/docs/Glossary/Plugin)** (не путать с расширением и дополнением) помогают приложению понять содержание, которое не имеет встроенной поддержки. NPAPI-плагины являются устаревшей технологией и новые сайты не будут её использовать. Как правило, такие плагины не доступны для использования на большинстве современных мобильных систем, и веб-сайты должны избегать их использования
+**[Плагины](/wu/docs/gwossawy/pwugin)** (не путать с расширением и дополнением) помогают приложению понять содержание, (///ˬ///✿) которое не имеет встроенной поддержки. (˘ω˘) n-nypapi-плагины являются устаревшей технологией и новые сайты не будут её использовать. ^^;; Как правило, (✿oωo) такие плагины не доступны для использования на большинстве современных мобильных систем, (U ﹏ U) и веб-сайты должны избегать их использования
 
 ## Смотрите также
 
-1. [Restartless extensions](/ru/docs/Mozilla/Add-ons/Bootstrapped_extensions)
-2. [Legacy extensions](/ru/docs/Mozilla/Add-ons/Overlay_Extensions)
-3. [Дополнения на основе SDK](/ru/docs/Mozilla/Add-ons/SDK)
-4. [Techniques](/ru/docs/Mozilla/Add-ons/Techniques)
+1. -.- [westawtwess extensions](/wu/docs/moziwwa/add-ons/bootstwapped_extensions)
+2. ^•ﻌ•^ [wegacy extensions](/wu/docs/moziwwa/add-ons/ovewway_extensions)
+3. rawr [Дополнения на основе s-sdk](/wu/docs/moziwwa/add-ons/sdk)
+4. (˘ω˘) [techniques](/wu/docs/moziwwa/add-ons/techniques)
 
-   1. [Promises](/ru/docs/Mozilla/Add-ons/Techniques/Promises)
+   1. nyaa~~ [pwomises](/wu/docs/moziwwa/add-ons/techniques/pwomises)
 
-5. [Рекомендуемая практика](/ru/docs/Mozilla/Add-ons)
+5. UwU [Рекомендуемая практика](/wu/docs/moziwwa/add-ons)
 
-   1. [Производительность](/ru/docs/Mozilla/Add-ons/Performance_best_practices_in_extensions)
-   2. [Безопасность](/ru/docs/Mozilla/Add-ons/Security_best_practices_in_extensions)
-   3. [Этикет](/ru/docs/Mozilla/Add-ons/Extension_etiquette)
+   1. :3 [Производительность](/wu/docs/moziwwa/add-ons/pewfowmance_best_pwactices_in_extensions)
+   2. (⑅˘꒳˘) [Безопасность](/wu/docs/moziwwa/add-ons/secuwity_best_pwactices_in_extensions)
+   3. (///ˬ///✿) [Этикет](/wu/docs/moziwwa/add-ons/extension_etiquette)
 
-6. [Темы](/ru/docs/Mozilla/Add-ons)
+6. ^^;; [Темы](/wu/docs/moziwwa/add-ons)
 
-   1. [Легковесные темы](/docs/Mozilla/Add-ons/Themes/Background)
-   2. [Легковесные темы FAQ](/docs/Mozilla/Add-ons/Themes/Background/FAQ)
-   3. [Полные темы](/ru/docs/Themes)
+   1. >_< [Легковесные темы](/docs/moziwwa/add-ons/themes/backgwound)
+   2. rawr x3 [Легковесные темы faq](/docs/moziwwa/add-ons/themes/backgwound/faq)
+   3. /(^•ω•^) [Полные темы](/wu/docs/themes)
 
-7. [Legacy Plugins](/ru/docs/Mozilla/Add-ons)
+7. :3 [wegacy pwugins](/wu/docs/moziwwa/add-ons)
 
-   1. [Plug-in Basics](/ru/docs/Glossary/Plugin)
-   2. [Plug-in Development Overview](/ru/docs/Glossary/Plugin)
-   3. [Initialization and Destruction](/ru/docs/Glossary/Plugin)
-   4. [Drawing and Event Handling](/ru/docs/Glossary/Plugin)
-   5. [Streams](/ru/docs/Glossary/Plugin)
-   6. [URLs](/ru/docs/Glossary/Plugin)
-   7. [Memory](/ru/docs/Glossary/Plugin)
-   8. [Version, UI, and Status Information](/ru/docs/Glossary/Plugin)
-   9. [Plug-in side Plug-in API](/ru/docs/Glossary/Plugin)
+   1. (ꈍᴗꈍ) [pwug-in b-basics](/wu/docs/gwossawy/pwugin)
+   2. [pwug-in devewopment ovewview](/wu/docs/gwossawy/pwugin)
+   3. /(^•ω•^) [initiawization and destwuction](/wu/docs/gwossawy/pwugin)
+   4. [dwawing and event handwing](/wu/docs/gwossawy/pwugin)
+   5. (⑅˘꒳˘) [stweams](/wu/docs/gwossawy/pwugin)
+   6. ( ͡o ω ͡o ) [uwws](/wu/docs/gwossawy/pwugin)
+   7. òωó [memowy](/wu/docs/gwossawy/pwugin)
+   8. (⑅˘꒳˘) [vewsion, XD u-ui, and status infowmation](/wu/docs/gwossawy/pwugin)
+   9. -.- [pwug-in s-side pwug-in a-api](/wu/docs/gwossawy/pwugin)
 
-      1. [NPP_Destroy](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Destroy)
-      2. [NPP_DestroyStream](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_DestroyStream)
-      3. [NPP_GetValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_GetValue)
-      4. [NP_GetValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NP_GetValue)
-      5. [NPP_HandleEvent](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_HandleEvent)
-      6. [NP_Initialize](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NP_Initialize)
-      7. [NPP_New](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_New)
-      8. [NPP_NewStream](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_NewStream)
-      9. [NPP_Print](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Print)
-      10. [NPP_SetValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_SetValue)
-      11. [NPP_SetWindow](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_SetWindow)
-      12. [NP_Shutdown](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NP_Shutdown)
-      13. [NPP_StreamAsFile](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_StreamAsFile)
-      14. [NPP_URLNotify](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_URLNotify)
-      15. [NPP_Write](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Write)
-      16. [NPP_WriteReady](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_WriteReady)
+      1. :3 [npp_destwoy](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_destwoy)
+      2. nyaa~~ [npp_destwoystweam](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_destwoystweam)
+      3. 😳 [npp_getvawue](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_getvawue)
+      4. (⑅˘꒳˘) [np_getvawue](/wu/docs/moziwwa/add-ons/pwugins/wefewence/np_getvawue)
+      5. nyaa~~ [npp_handweevent](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_handweevent)
+      6. OwO [np_initiawize](/wu/docs/moziwwa/add-ons/pwugins/wefewence/np_initiawize)
+      7. rawr x3 [npp_new](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_new)
+      8. XD [npp_newstweam](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_newstweam)
+      9. [npp_pwint](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_pwint)
+      10. σωσ [npp_setvawue](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_setvawue)
+      11. (U ᵕ U❁) [npp_setwindow](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_setwindow)
+      12. (U ﹏ U) [np_shutdown](/wu/docs/moziwwa/add-ons/pwugins/wefewence/np_shutdown)
+      13. :3 [npp_stweamasfiwe](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_stweamasfiwe)
+      14. ( ͡o ω ͡o ) [npp_uwwnotify](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_uwwnotify)
+      15. [npp_wwite](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_wwite)
+      16. σωσ [npp_wwiteweady](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npp_wwiteweady)
 
-   10. [Browser Side Plug-in API](/ru/docs/Glossary/Plugin)
+   10. [bwowsew s-side pwug-in api](/wu/docs/gwossawy/pwugin)
 
-       1. [NPN_DestroyStream](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_DestroyStream)
-       2. [NPN_ForceRedraw](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ForceRedraw)
-       3. [NPN_GetAuthenticationInfo](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetAuthenticationInfo)
-       4. [NPN_GetURL](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL)
-       5. [NPN_GetURLNotify](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURLNotify)
-       6. [NPN_GetValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetValue)
-       7. [NPN_GetValueForURL](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetValueForURL)
-       8. [NPN_InvalidateRect](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_InvalidateRect)
-       9. [NPN_InvalidateRegion](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_InvalidateRegion)
-       10. [NPN_MemAlloc](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemAlloc)
-       11. [NPN_MemFlush](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFlush)
-       12. [NPN_MemFree](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFree)
-       13. [NPN_NewStream](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_NewStream)
-       14. [NPN_PluginThreadAsyncCall](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_PluginThreadAsyncCall)
-       15. [NPN_PostURL](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_PostURL)
-       16. [NPN_PostURLNotify](/en-US/Add-ons/Plugins/Reference_NPN_PostURLNotify)
-       17. [NPN_ReloadPlugins](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins)
-       18. [NPN_RequestRead](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RequestRead)
-       19. [NPN_SetValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetValue)
-       20. [NPN_SetValueForURL](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetValueForURL)
-       21. [NPN_Status](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Status)
-       22. [NPN_UserAgent](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UserAgent)
-       23. [NPN_Version](/ru/docs/Mozilla/Add-ons/Plugins/Reference/docs/NPN_Version)
-       24. [NPN_Write](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Write)
+       1. >w< [npn_destwoystweam](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_destwoystweam)
+       2. 😳😳😳 [npn_fowcewedwaw](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_fowcewedwaw)
+       3. OwO [npn_getauthenticationinfo](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getauthenticationinfo)
+       4. 😳 [npn_getuww](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getuww)
+       5. [npn_getuwwnotify](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getuwwnotify)
+       6. 😳😳😳 [npn_getvawue](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getvawue)
+       7. (˘ω˘) [npn_getvawuefowuww](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getvawuefowuww)
+       8. ʘwʘ [npn_invawidatewect](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_invawidatewect)
+       9. ( ͡o ω ͡o ) [npn_invawidatewegion](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_invawidatewegion)
+       10. o.O [npn_memawwoc](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_memawwoc)
+       11. >w< [npn_memfwush](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_memfwush)
+       12. 😳 [npn_memfwee](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_memfwee)
+       13. 🥺 [npn_newstweam](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_newstweam)
+       14. rawr x3 [npn_pwuginthweadasynccaww](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_pwuginthweadasynccaww)
+       15. o.O [npn_postuww](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_postuww)
+       16. rawr [npn_postuwwnotify](/en-us/add-ons/pwugins/wefewence_npn_postuwwnotify)
+       17. ʘwʘ [npn_wewoadpwugins](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_wewoadpwugins)
+       18. 😳😳😳 [npn_wequestwead](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_wequestwead)
+       19. ^^;; [npn_setvawue](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_setvawue)
+       20. o.O [npn_setvawuefowuww](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_setvawuefowuww)
+       21. [npn_status](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_status)
+       22. (///ˬ///✿) [npn_usewagent](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_usewagent)
+       23. σωσ [npn_vewsion](/wu/docs/moziwwa/add-ons/pwugins/wefewence/docs/npn_vewsion)
+       24. nyaa~~ [npn_wwite](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_wwite)
 
-   11. [Scripting plugins](/ru/docs/Glossary/Plugin)
+   11. ^^;; [scwipting pwugins](/wu/docs/gwossawy/pwugin)
 
-       1. [NPString](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPString)
-       2. [NPVariant](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPVariant)
-       3. [NPN_ReleaseVariantValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseVariantValue)
-       4. [NPN_GetStringIdentifier](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetStringIdentifier)
-       5. [NPN_GetStringIdentifiers](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetStringIdentifiers)
-       6. [NPN_GetIntIdentifier](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetIntIdentifier)
-       7. [NPN_IdentifierIsString](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_IdentifierIsString)
-       8. [NPN_UTF8FromIdentifier](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UTF8FromIdentifier)
-       9. [NPN_IntFromIdentifier](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_IntFromIdentifier)
-       10. [NPObject](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPObject)
-       11. [NPN_CreateObject](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_CreateObject)
-       12. [NPN_RetainObject](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RetainObject)
-       13. [NPN_ReleaseObject](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseObject)
-       14. [NPN_Invoke](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Invoke)
-       15. [NPN_InvokeDefault](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_InvokeDefault)
-       16. [NPN_Evaluate](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Evaluate)
-       17. [NPN_GetProperty](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetProperty)
-       18. [NPN_SetProperty](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetProperty)
-       19. [NPN_RemoveProperty](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RemoveProperty)
-       20. [NPN_HasProperty](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_HasProperty)
-       21. [NPN_HasMethod](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_HasMethod)
-       22. [NPN_SetException](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_SetException)
-       23. [NPClass](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPClass)
+       1. ^•ﻌ•^ [npstwing](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npstwing)
+       2. σωσ [npvawiant](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npvawiant)
+       3. -.- [npn_weweasevawiantvawue](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_weweasevawiantvawue)
+       4. ^^;; [npn_getstwingidentifiew](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getstwingidentifiew)
+       5. XD [npn_getstwingidentifiews](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getstwingidentifiews)
+       6. 🥺 [npn_getintidentifiew](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getintidentifiew)
+       7. òωó [npn_identifiewisstwing](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_identifiewisstwing)
+       8. (ˆ ﻌ ˆ)♡ [npn_utf8fwomidentifiew](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_utf8fwomidentifiew)
+       9. -.- [npn_intfwomidentifiew](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_intfwomidentifiew)
+       10. [npobject](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npobject)
+       11. :3 [npn_cweateobject](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_cweateobject)
+       12. ʘwʘ [npn_wetainobject](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_wetainobject)
+       13. 🥺 [npn_weweaseobject](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_weweaseobject)
+       14. >_< [npn_invoke](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_invoke)
+       15. ʘwʘ [npn_invokedefauwt](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_invokedefauwt)
+       16. (˘ω˘) [npn_evawuate](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_evawuate)
+       17. (✿oωo) [npn_getpwopewty](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_getpwopewty)
+       18. (///ˬ///✿) [npn_setpwopewty](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_setpwopewty)
+       19. rawr x3 [npn_wemovepwopewty](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_wemovepwopewty)
+       20. -.- [npn_haspwopewty](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_haspwopewty)
+       21. ^^ [npn_hasmethod](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_hasmethod)
+       22. (⑅˘꒳˘) [npn_setexception](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npn_setexception)
+       23. nyaa~~ [npcwass](/wu/docs/moziwwa/add-ons/pwugins/wefewence/npcwass)
 
-   12. [Structures](/ru/docs/Glossary/Plugin)
-   13. [Constants](/ru/docs/Glossary/Plugin)
-   14. [External Resources](/ru/docs/Mozilla/Add-ons/Plugins/External_resources_for_plugin_creation)
+   12. /(^•ω•^) [stwuctuwes](/wu/docs/gwossawy/pwugin)
+   13. (U ﹏ U) [constants](/wu/docs/gwossawy/pwugin)
+   14. 😳😳😳 [extewnaw wesouwces](/wu/docs/moziwwa/add-ons/pwugins/extewnaw_wesouwces_fow_pwugin_cweation)
 
-8. [Publishing add-ons](/ru/docs/Mozilla/Add-ons)
+8. >w< [pubwishing a-add-ons](/wu/docs/moziwwa/add-ons)
 
-   1. [Signing and distributing your add-on](/ru/docs/Mozilla/Add-ons/Distribution)
-   2. [Submit a new add-on](https://addons.mozilla.org/developers/addon/submit/)
-   3. [Policies](https://extensionworkshop.com/documentation/publish/add-on-policies/)
+   1. XD [signing a-and distwibuting youw add-on](/wu/docs/moziwwa/add-ons/distwibution)
+   2. o.O [submit a-a nyew add-on](https://addons.moziwwa.owg/devewopews/addon/submit/)
+   3. mya [powicies](https://extensionwowkshop.com/documentation/pubwish/add-on-powicies/)
 
-      1. [Developer Agreement](/ru/docs/Mozilla/Add-ons/AMO/Policy/Agreement)
-      2. [Review Process](/ru/docs/Mozilla/Add-ons/AMO/Policy/Reviews)
-      3. [Add-on guidelines](/ru/docs/Mozilla/Add-ons/Add-on_guidelines)
-      4. [Featured Add-ons](/ru/docs/Mozilla/Add-ons/AMO/Policy/Featured)
-      5. [Contacting Us](/ru/docs/Mozilla/Add-ons/AMO/Policy/Contact)
+      1. 🥺 [devewopew a-agweement](/wu/docs/moziwwa/add-ons/amo/powicy/agweement)
+      2. ^^;; [weview pwocess](/wu/docs/moziwwa/add-ons/amo/powicy/weviews)
+      3. :3 [add-on g-guidewines](/wu/docs/moziwwa/add-ons/add-on_guidewines)
+      4. (U ﹏ U) [featuwed add-ons](/wu/docs/moziwwa/add-ons/amo/powicy/featuwed)
+      5. OwO [contacting u-us](/wu/docs/moziwwa/add-ons/amo/powicy/contact)
 
-9. [Community and Support](/ru/docs/Mozilla/Add-ons)
+9. 😳😳😳 [community and suppowt](/wu/docs/moziwwa/add-ons)
 
-   1. [Add-ons Blog](https://blog.mozilla.org/addons)
-   2. [Add-on Forums](https://forums.mozilla.org/addons)
-   3. [Stack Overflow](https://stackoverflow.com/questions/tagged/firefox-addon)
-   4. [Development Newsgroup](https://groups.google.com/forum/#!forum/mozilla.dev.extensions)
-   5. [IRC Channel](irc://irc.mozilla.org/extdev)
+   1. (ˆ ﻌ ˆ)♡ [add-ons bwog](https://bwog.moziwwa.owg/addons)
+   2. XD [add-on f-fowums](https://fowums.moziwwa.owg/addons)
+   3. [stack ovewfwow](https://stackovewfwow.com/questions/tagged/fiwefox-addon)
+   4. (ˆ ﻌ ˆ)♡ [devewopment n-nyewsgwoup](https://gwoups.googwe.com/fowum/#!fowum/moziwwa.dev.extensions)
+   5. ( ͡o ω ͡o ) [iwc channew](iwc://iwc.moziwwa.owg/extdev)

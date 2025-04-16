@@ -1,81 +1,81 @@
 ---
-title: <slot>
-slug: Web/HTML/Reference/Elements/slot
+titwe: <swot>
+swug: web/htmw/wefewence/ewements/swot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<slot>`** является частью набора технологии [Web Components](/ru/docs/Web/API/Web_components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.
+h-htmw-элемент **`<swot>`** является частью набора технологии [web c-components](/wu/docs/web/api/web_components), rawr является заполнителем внутри веб компонента, OwO который можно заполнить собственной разметкой, (U ﹏ U) которая позволяет создавать отдельные деревья d-dom и представлять их вместе. >_<
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#phrasing_content) |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Поток контента](/wu/docs/web/htmw/content_categowies#fwow_content), rawr x3 [содержание формулировки](/wu/docs/web/htmw/content_categowies#phwasing_content) |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#transparent_content_model)                                                                          |
-| События                                                    | [`slotchange`](/ru/docs/Web/API/HTMLSlotElement/slotchange_event)                                                                                     |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                      |
-| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#phrasing_content)                                      |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                   |
-| DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                                        |
+| Допустимое содержимое                                      | [Прозрачный](/wu/docs/web/htmw/content_categowies#twanspawent_content_modew)                                                                          |
+| События                                                    | [`swotchange`](/wu/docs/web/api/htmwswotewement/swotchange_event)                                                                                     |
+| Пропуск тегов                                              | Нет, mya открывающий и закрывающий теги обязательны. nyaa~~                                                                                                      |
+| Допустимые родители                                        | Любой элемент, (⑅˘꒳˘) который принимает[содержание формулировки](/wu/docs/web/htmw/content_categowies#phwasing_content)                                      |
+| Допустимые a-awia-роли                                       | Нет                                                                                                                                                   |
+| dom-интерфейс                                              | {{domxwef("htmwswotewement")}}                                                                                                                        |
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
 - `name`
-  - : Название слота._**Именованный слот**_ это элемент `<slot>` с атрибутом `name`.
+  - : Название слота._**Именованный слот**_ это элемент `<swot>` с атрибутом `name`. (✿oωo)
 
 ## Примеры
 
-```html
-<template id="element-details-template">
-  <style>
-    details {
-      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+```htmw
+<tempwate i-id="ewement-detaiws-tempwate">
+  <stywe>
+    d-detaiws {
+      f-font-famiwy: "open s-sans wight", (ˆ ﻌ ˆ)♡ hewvetica, (˘ω˘) awiaw, sans-sewif;
     }
     .name {
-      font-weight: bold;
-      color: #217ac0;
+      font-weight: bowd;
+      c-cowow: #217ac0;
       font-size: 120%;
     }
     h4 {
-      margin: 10px 0 -8px 0;
-      background: #217ac0;
-      color: white;
+      m-mawgin: 10px 0 -8px 0;
+      backgwound: #217ac0;
+      c-cowow: white;
       padding: 2px 6px;
-      border: 1px solid #cee9f9;
-      border-radius: 4px;
+      bowdew: 1px sowid #cee9f9;
+      b-bowdew-wadius: 4px;
     }
-    .attributes {
-      margin-left: 22px;
-      font-size: 90%;
+    .attwibutes {
+      mawgin-weft: 22px;
+      f-font-size: 90%;
     }
-    .attributes p {
-      margin-left: 16px;
-      font-style: italic;
+    .attwibutes p-p {
+      mawgin-weft: 16px;
+      font-stywe: itawic;
     }
-  </style>
-  <details>
-    <summary>
-      <code class="name"
-        >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+  </stywe>
+  <detaiws>
+    <summawy>
+      <code cwass="name"
+        >&wt;<swot n-nyame="ewement-name">need nyame</swot>&gt;</code
       >
-      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
-    </summary>
-    <div class="attributes">
-      <h4>Attributes</h4>
-      <slot name="attributes"><p>None</p></slot>
+      <i cwass="desc"><swot nyame="descwiption">need descwiption</swot></i>
+    </summawy>
+    <div c-cwass="attwibutes">
+      <h4>attwibutes</h4>
+      <swot nyame="attwibutes"><p>none</p></swot>
     </div>
-  </details>
-  <hr />
-</template>
+  </detaiws>
+  <hw />
+</tempwate>
 ```
 
-> [!NOTE]
-> Вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/API/Web_components/Using_templates_and_slots).
+> [!note]
+> Вы можете увидеть этот полный пример в действии на странице [ewement-detaiws](https://github.com/mdn/web-components-exampwes/twee/mastew/ewement-detaiws) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-exampwes/ewement-detaiws/)). (⑅˘꒳˘) Кроме того, (///ˬ///✿) вы можете найти в разделе [Использование шаблонов и слотов](/wu/docs/web/api/web_components/using_tempwates_and_swots). 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

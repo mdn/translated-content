@@ -1,85 +1,85 @@
 ---
-title: Reflect.deleteProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+titwe: wefwect.dewetepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/dewetepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Статический метод **`Reflect.deleteProperty()`** позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
+Статический метод **`wefwect.dewetepwopewty()`** позволяет удалять свойства из объекта. 😳😳😳 Реализация данной функции схожа с оператором [`dewete`](/wu/docs/web/javascwipt/wefewence/opewatows/dewete). -.-
 
-{{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.dewetepwopewty()", ( ͡o ω ͡o ) "tawwew")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+const o-object1 = {
+  p-pwopewty1: 42, rawr x3
 };
 
-Reflect.deleteProperty(object1, "property1");
+w-wefwect.dewetepwopewty(object1, "pwopewty1");
 
-console.log(object1.property1);
-// Expected output: undefined
+c-consowe.wog(object1.pwopewty1);
+// e-expected o-output: undefined
 
-const array1 = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(array1, "3");
+const awway1 = [1, nyaa~~ 2, 3, 4, 5];
+wefwect.dewetepwopewty(awway1, /(^•ω•^) "3");
 
-console.log(array1);
-// Expected output: Array [1, 2, 3, undefined, 5]
+consowe.wog(awway1);
+// expected output: a-awway [1, rawr 2, OwO 3, undefined, 5]
 ```
 
 ## Синтаксис
 
 ```
-Reflect.deleteProperty(target, propertyKey)
+wefwect.dewetepwopewty(tawget, (U ﹏ U) p-pwopewtykey)
 ```
 
 ### Параметры
 
-- `target`
-  - : Целевой объект в котором будет удалено свойство.
-- `propertyKey`
-  - : Имя удаляемого свойства.
+- `tawget`
+  - : Целевой объект в котором будет удалено свойство. >_<
+- `pwopewtykey`
+  - : Имя удаляемого свойства. rawr x3
 
 ### Возвращаемое значение
 
-{{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено.
+{{jsxwef("boowean")}} указывающий, mya было ли свойство успешно удалено. nyaa~~
 
 ### Исключения
 
-Исключение {{jsxref("TypeError")}}, если `target` не является {{jsxref("Object")}}.
+Исключение {{jsxwef("typeewwow")}}, (⑅˘꒳˘) если `tawget` не является {{jsxwef("object")}}.
 
 ## Описание
 
-Метод `Reflect.deleteProperty` позволяет вам удалить свойство объекта. Он возвращает {{jsxref("Boolean")}} указывающий, было ли свойство успешно удалено. Он так же идентичен оператору [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete) без использования строгого режима.
+Метод `wefwect.dewetepwopewty` позволяет вам удалить свойство объекта. rawr x3 Он возвращает {{jsxwef("boowean")}} указывающий, (✿oωo) было ли свойство успешно удалено. (ˆ ﻌ ˆ)♡ Он так же идентичен оператору [`dewete`](/wu/docs/web/javascwipt/wefewence/opewatows/dewete) без использования строгого режима. (˘ω˘)
 
 ## Примеры
 
-### Использования `Reflect.deleteProperty()`
+### Использования `wefwect.dewetepwopewty()`
 
 ```js
-var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, "x"); // true
+vaw obj = { x: 1, (⑅˘꒳˘) y-y: 2 };
+wefwect.dewetepwopewty(obj, (///ˬ///✿) "x"); // twue
 obj; // { y: 2 }
 
-var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, "3"); // true
-arr; // [1, 2, 3, , 5]
+vaw aww = [1, 😳😳😳 2, 3, 🥺 4, 5];
+wefwect.dewetepwopewty(aww, mya "3"); // t-twue
+aww; // [1, 🥺 2, 3, , 5]
 
-// Возвращает true даже если такого свойства не существует
-Reflect.deleteProperty({}, "foo"); // true
+// Возвращает twue даже если такого свойства не существует
+w-wefwect.dewetepwopewty({}, >_< "foo"); // t-twue
 
-// Возвращает false если такое свойство ненастраиваемое
-Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
+// Возвращает fawse если такое свойство ненастраиваемое
+wefwect.dewetepwopewty(object.fweeze({ foo: 1 }), >_< "foo"); // fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Reflect")}}
-- [`delete` operator](/ru/docs/Web/JavaScript/Reference/Operators/delete)
+- {{jsxwef("wefwect")}}
+- [`dewete` o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/dewete)

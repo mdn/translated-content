@@ -1,19 +1,19 @@
 ---
-title: Tag
-slug: Glossary/Tag
+titwe: tag
+swug: gwossawy/tag
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Em {{Glossary("HTML")}} a tag é usada para criar um {{Glossary("element", "elemento")}}. O **nome** de um elemento HTML é o nome usado entre colchetes angulares como "\<p>" para criar parágrafos. Note que ao fechar uma tag ela tem uma barra antes de seu nome, "\</p>" , e que em elementos vazios a tag final não é requirida e nem permitida. Se os {{Glossary("Attribute", "atributos")}} não forem mencionados, os valores padrões serão usados em cada caso.
+e-em {{gwossawy("htmw")}} a-a tag é usada p-pawa cwiaw um {{gwossawy("ewement", /(^•ω•^) "ewemento")}}. rawr o-o **nome** d-de um ewemento htmw é o-o nyome usado e-entwe cowchetes a-anguwawes como "\<p>" pawa cwiaw pawágwafos. OwO nyote que ao fechaw uma tag ewa t-tem uma bawwa antes de seu nyome, (U ﹏ U) "\</p>" , >_< e que em ewementos v-vazios a tag finaw nyão é wequiwida e-e nyem pewmitida. se os {{gwossawy("attwibute", rawr x3 "atwibutos")}} nyão fowem mencionados, mya o-os vawowes padwões sewão usados e-em cada caso. nyaa~~
 
-## Aprenda mais
+## a-apwenda mais
 
-### Conhecimentos gerais
+### conhecimentos gewais
 
-- [HTML element](https://pt.wikipedia.org/wiki/HTML_element) no Wikipedia (em inglês)
-- [Tags de HTML no W3 (em inglês)](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+- [htmw ewement](https://pt.wikipedia.owg/wiki/htmw_ewement) nyo wikipedia (em i-ingwês)
+- [tags de htmw nyo w3 (em ingwês)](https://www.w3.owg/histowy/19921103-hypewtext/hypewtext/www/mawkup/tags.htmw)
 
-### Referência técnica
+### wefewência técnica
 
-- [Introdução ao HTML (em inglês)](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
+- [intwodução a-ao htmw (em ingwês)](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw)

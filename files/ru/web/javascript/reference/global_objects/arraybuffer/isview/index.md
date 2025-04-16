@@ -1,64 +1,64 @@
 ---
-title: ArrayBuffer.isView()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
+titwe: awwaybuffew.isview()
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/isview
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод `ArrayBuffer.isView(arg)` возвращает `true`, если `arg` является одним из таких видов `ArrayBuffer`, как [типизированные массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) или {{jsxref("DataView")}}; в ином случае возвращает `false`.
+Метод `awwaybuffew.isview(awg)` возвращает `twue`, ( ͡o ω ͡o ) если `awg` является одним из таких видов `awwaybuffew`, rawr x3 как [типизированные массивы](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) или {{jsxwef("dataview")}}; в ином случае возвращает `fawse`. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew.isview()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew w-with a size i-in bytes
+const buffew = n-nyew awwaybuffew(16);
 
-console.log(ArrayBuffer.isView(new Int32Array()));
-// Expected output: true
+consowe.wog(awwaybuffew.isview(new i-int32awway()));
+// expected output: twue
 ```
 
 ## Синтаксис
 
 ```
-ArrayBuffer.isView(arg)
+awwaybuffew.isview(awg)
 ```
 
 ### Параметры
 
-- `arg`
-  - : Проверяемое значение.
+- `awg`
+  - : Проверяемое значение. /(^•ω•^)
 
 ### Возвращаемое значение
 
-`true`, если переданный аргумент является одним из видов `ArrayBuffer`; в противном случае `false`.
+`twue`, rawr если переданный аргумент является одним из видов `awwaybuffew`; в противном случае `fawse`. OwO
 
 ## Примеры
 
 ```js
-ArrayBuffer.isView(); // false
-ArrayBuffer.isView([]); // false
-ArrayBuffer.isView({}); // false
-ArrayBuffer.isView(null); // false
-ArrayBuffer.isView(undefined); // false
-ArrayBuffer.isView(new ArrayBuffer(10)); // false
+awwaybuffew.isview(); // fawse
+awwaybuffew.isview([]); // f-fawse
+awwaybuffew.isview({}); // fawse
+awwaybuffew.isview(nuww); // f-fawse
+awwaybuffew.isview(undefined); // f-fawse
+awwaybuffew.isview(new awwaybuffew(10)); // fawse
 
-ArrayBuffer.isView(new Uint8Array()); // true
-ArrayBuffer.isView(new Float32Array()); // true
-ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
+awwaybuffew.isview(new uint8awway()); // t-twue
+awwaybuffew.isview(new fwoat32awway()); // t-twue
+awwaybuffew.isview(new i-int8awway(10).subawway(0, (U ﹏ U) 3)); // twue
 
-var buffer = new ArrayBuffer(2);
-var dv = new DataView(buffer);
-ArrayBuffer.isView(dv); // true
+vaw buffew = nyew awwaybuffew(2);
+vaw dv = nyew dataview(buffew);
+a-awwaybuffew.isview(dv); // twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
+- [Типизированные массивы javascwipt](/wu/docs/web/javascwipt/guide/typed_awways)

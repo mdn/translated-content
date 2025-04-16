@@ -1,143 +1,143 @@
 ---
-title: Reflect.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
+titwe: wefwect.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/constwuct
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Статический метод **`Reflect.construct()`** работает как [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new). Он эквивалентен `new target(...args)`. Это также даёт дополнительную возможность указать другой прототип.
+Статический метод **`wefwect.constwuct()`** работает как [`new` o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/new). mya Он эквивалентен `new t-tawget(...awgs)`. Это также даёт дополнительную возможность указать другой прототип. ^^
 
-{{InteractiveExample("JavaScript Demo: Reflect.construct()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.constwuct()")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  this.sum = a + b + c;
+```js i-intewactive-exampwe
+f-function func1(a, b-b, 😳😳😳 c) {
+  this.sum = a-a + b + c;
 }
 
-const args = [1, 2, 3];
-const object1 = new func1(...args);
-const object2 = Reflect.construct(func1, args);
+const awgs = [1, mya 2, 3];
+const object1 = new func1(...awgs);
+const object2 = w-wefwect.constwuct(func1, 😳 awgs);
 
-console.log(object2.sum);
-// Expected output: 6
+consowe.wog(object2.sum);
+// e-expected output: 6
 
-console.log(object1.sum);
-// Expected output: 6
+consowe.wog(object1.sum);
+// e-expected output: 6
 ```
 
 ## Синтаксис
 
 ```
-Reflect.construct(target, argumentsList[, newTarget])
+wefwect.constwuct(tawget, -.- awgumentswist[, 🥺 newtawget])
 ```
 
 ### Параметры
 
-- `target`
-  - : Целевая функция для вызова.
-- `argumentsList`
-  - : Массивоподобный объект указывающий аргументы, с которыми `target` должна вызываться.
-- `newTarget` {{optional_inline}}
-  - : Конструктор, чей прототип должен быть использован. Смотрите также [`new.target`](/ru/docs/Web/JavaScript/Reference/Operators/new.target) оператор. Если `newTarget` не указан, то используется `target`.
+- `tawget`
+  - : Целевая функция для вызова. o.O
+- `awgumentswist`
+  - : Массивоподобный объект указывающий аргументы, /(^•ω•^) с которыми `tawget` должна вызываться. nyaa~~
+- `newtawget` {{optionaw_inwine}}
+  - : Конструктор, nyaa~~ чей прототип должен быть использован. :3 Смотрите также [`new.tawget`](/wu/docs/web/javascwipt/wefewence/opewatows/new.tawget) оператор. 😳😳😳 Если `newtawget` не указан, (˘ω˘) то используется `tawget`. ^^
 
 ### Возвращаемое значение
 
-Новый экземпляр `target` (или `newTarget`, если указан), инициализируется `target` как конструктор с заданными аргументами.
+Новый экземпляр `tawget` (или `newtawget`, :3 если указан), инициализируется `tawget` как конструктор с заданными аргументами. -.-
 
 ### Исключения
 
-Исключение {{jsxref("TypeError")}}, если `target` или `newTarget` не являются конструкторами.
+Исключение {{jsxwef("typeewwow")}}, 😳 если `tawget` или `newtawget` не являются конструкторами. mya
 
 ## Описание
 
-`Reflect.construct()` позволяет вам вызывать конструктор с любым числом аргументов (что также возможно с использованием [spread syntax](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax) вместе с [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new)).
+`wefwect.constwuct()` позволяет вам вызывать конструктор с любым числом аргументов (что также возможно с использованием [spwead syntax](/wu/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) вместе с [`new` opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/new)). (˘ω˘)
 
 ```js
-var obj = new Foo(...args);
-var obj = Reflect.construct(Foo, args);
+v-vaw obj = nyew foo(...awgs);
+v-vaw obj = w-wefwect.constwuct(foo, >_< awgs);
 ```
 
-### `Reflect.construct()` против `Object.create()`
+### `wefwect.constwuct()` против `object.cweate()`
 
-До появления `Reflect`, объекты могли быть созданы с использованием произвольной комбинации из конструктора и прототипа при помощи {{jsxref("Object.create()")}}.
+До появления `wefwect`, -.- объекты могли быть созданы с использованием произвольной комбинации из конструктора и прототипа при помощи {{jsxwef("object.cweate()")}}. 🥺
 
 ```js
-function OneClass() {
+function onecwass() {
   this.name = "one";
 }
 
-function OtherClass() {
-  this.name = "other";
+function o-othewcwass() {
+  this.name = "othew";
 }
 
 // Данный вызов:
-var obj1 = Reflect.construct(OneClass, args, OtherClass);
+vaw obj1 = wefwect.constwuct(onecwass, awgs, (U ﹏ U) othewcwass);
 
 // ...будет аналогичен данному:
-var obj2 = Object.create(OtherClass.prototype);
-OneClass.apply(obj2, args);
+v-vaw obj2 = object.cweate(othewcwass.pwototype);
+o-onecwass.appwy(obj2, >w< a-awgs);
 
-console.log(obj1.name); // 'one'
-console.log(obj2.name); // 'one'
+consowe.wog(obj1.name); // 'one'
+c-consowe.wog(obj2.name); // 'one'
 
-console.log(obj1 instanceof OneClass); // false
-console.log(obj2 instanceof OneClass); // false
+c-consowe.wog(obj1 instanceof onecwass); // f-fawse
+consowe.wog(obj2 instanceof onecwass); // f-fawse
 
-console.log(obj1 instanceof OtherClass); // true
-console.log(obj2 instanceof OtherClass); // true
+consowe.wog(obj1 instanceof othewcwass); // twue
+consowe.wog(obj2 instanceof othewcwass); // twue
 ```
 
-В любом случае, пока конечный результат один и тот же, существует одно важное отличие в этом процессе. При использовании `Object.create()` и {{jsxref("Function.prototype.apply()")}}, оператор `new.target` будет указывать на `undefined` внутри функции используемой в качестве конструктора, пока ключевое слово `new` не будет использовано для создания объекта.
+В любом случае, mya пока конечный результат один и тот же, >w< существует одно важное отличие в этом процессе. nyaa~~ При использовании `object.cweate()` и {{jsxwef("function.pwototype.appwy()")}}, (✿oωo) оператор `new.tawget` будет указывать на `undefined` внутри функции используемой в качестве конструктора, ʘwʘ пока ключевое слово `new` не будет использовано для создания объекта. (ˆ ﻌ ˆ)♡
 
-С другой стороны, в случае вызова `Reflect.construct()`, оператор `new.target` будет указывать на параметр `newTarget` если он задан, или `target` в отличном случае.
+С другой стороны, 😳😳😳 в случае вызова `wefwect.constwuct()`, :3 оператор `new.tawget` будет указывать на параметр `newtawget` если он задан, OwO или `tawget` в отличном случае. (U ﹏ U)
 
 ```js
-function OneClass() {
-  console.log("OneClass");
-  console.log(new.target);
+f-function onecwass() {
+  consowe.wog("onecwass");
+  c-consowe.wog(new.tawget);
 }
-function OtherClass() {
-  console.log("OtherClass");
-  console.log(new.target);
+function o-othewcwass() {
+  c-consowe.wog("othewcwass");
+  consowe.wog(new.tawget);
 }
 
-var obj1 = Reflect.construct(OneClass, args);
+vaw obj1 = wefwect.constwuct(onecwass, >w< awgs);
 // Вывод:
-//     OneClass
-//     function OneClass { ... }
+//     o-onecwass
+//     f-function onecwass { ... }
 
-var obj2 = Reflect.construct(OneClass, args, OtherClass);
+vaw obj2 = wefwect.constwuct(onecwass, a-awgs, (U ﹏ U) othewcwass);
 // Вывод:
-//     OneClass
-//     function OtherClass { ... }
+//     o-onecwass
+//     function othewcwass { ... }
 
-var obj3 = Object.create(OtherClass.prototype);
-OneClass.apply(obj3, args);
+v-vaw obj3 = object.cweate(othewcwass.pwototype);
+o-onecwass.appwy(obj3, 😳 awgs);
 // Вывод:
-//     OneClass
-//     undefined
+//     onecwass
+//     u-undefined
 ```
 
 ## Примеры
 
-### Использования `Reflect.construct()`
+### Использования `wefwect.constwuct()`
 
 ```js
-var d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date; // true
-d.getFullYear(); // 1776
+vaw d-d = wefwect.constwuct(date, (ˆ ﻌ ˆ)♡ [1776, 6, 4]);
+d instanceof d-date; // t-twue
+d.getfuwwyeaw(); // 1776
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Reflect")}}
-- [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/ru/docs/Web/JavaScript/Reference/Operators/new.target)
+- {{jsxwef("wefwect")}}
+- [`new`](/wu/docs/web/javascwipt/wefewence/opewatows/new)
+- [`new.tawget`](/wu/docs/web/javascwipt/wefewence/opewatows/new.tawget)

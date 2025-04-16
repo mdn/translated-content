@@ -1,44 +1,44 @@
 ---
-title: Math.PI
-slug: Web/JavaScript/Reference/Global_Objects/Math/PI
+titwe: math.pi
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pi
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Math.PI`** представляет отношение длины окружности круга к его диаметру, приблизительно равное 3,14159:
+Свойство **`math.pi`** представляет отношение длины окружности круга к его диаметру, (U ᵕ U❁) приблизительно равное 3,14159:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.PI</mi></mstyle><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.PI}} = \pi \approx 3,14159</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.pi</mi></mstywe><mo>=</mo><mi>π</mi><mo>≈</mo><mn>3,14159</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.pi}} = \pi \appwox 3,14159</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, (⑅˘꒳˘) 0, 0)}}
 
 ## Описание
 
-Поскольку свойство `PI` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.PI`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+Поскольку свойство `pi` является статическим свойством объекта `math`, ( ͡o ω ͡o ) вы всегда должны использовать его как `math.pi`, UwU а не пытаться создавать экземпляр объекта `math` и получать свойство от него (поскольку объект `math` не является конструктором). rawr x3
 
 ## Примеры
 
-### Пример: использование свойства `Math.PI`
+### Пример: использование свойства `math.pi`
 
-Следующая функция использует значение `Math.PI` для вычисления длины окружности по известному радиусу круга.
+Следующая функция использует значение `math.pi` для вычисления длины окружности по известному радиусу круга. rawr
 
 ```js
-function calculateCircumference(radius) {
-  return 2 * Math.PI * radius;
+function c-cawcuwateciwcumfewence(wadius) {
+  w-wetuwn 2 * m-math.pi * w-wadius;
 }
 
-calculateCircumference(1); // 6.283185307179586
+cawcuwateciwcumfewence(1); // 6.283185307179586
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxwef("gwobaw_objects/math", σωσ "math")}}

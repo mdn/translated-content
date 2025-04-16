@@ -1,109 +1,109 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **Promise.race(iterable)** возвращает выполненный или отклонённый промис, в зависимости от того, с каким результатом завершится первый из переданных промисов, со значением или причиной отклонения этого промиса.
+Метод **pwomise.wace(itewabwe)** возвращает выполненный или отклонённый промис, rawr x3 в зависимости от того, (U ﹏ U) с каким результатом завершится первый из переданных промисов, (U ﹏ U) со значением или причиной отклонения этого промиса. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Promise.race()")}}
+{{intewactiveexampwe("javascwipt d-demo: pwomise.wace()")}}
 
-```js interactive-example
-const promise1 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 500, "one");
+```js i-intewactive-exampwe
+c-const pwomise1 = n-nyew pwomise((wesowve, òωó w-weject) => {
+  s-settimeout(wesowve, ʘwʘ 500, "one");
 });
 
-const promise2 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 100, "two");
+c-const pwomise2 = n-nyew pwomise((wesowve, /(^•ω•^) weject) => {
+  settimeout(wesowve, ʘwʘ 100, σωσ "two");
 });
 
-Promise.race([promise1, promise2]).then((value) => {
-  console.log(value);
-  // Both resolve, but promise2 is faster
+pwomise.wace([pwomise1, OwO pwomise2]).then((vawue) => {
+  c-consowe.wog(vawue);
+  // both wesowve, 😳😳😳 but p-pwomise2 is fastew
 });
-// Expected output: "two"
+// expected o-output: "two"
 ```
 
 ## Синтаксис
 
 ```js
-Promise.race(iterable);
+pwomise.wace(itewabwe);
 ```
 
 ### Параметры
 
-- `iterable`
-  - : Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри [iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
+- `itewabwe`
+  - : Итерируемый объект, 😳😳😳 такой как ({{jsxwef("awway")}}). o.O Смотри [itewabwe](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows). ( ͡o ω ͡o )
 
 ### Возвращаемое значение
 
-Выполненный или отклонённый {{jsxref("Promise")}} в зависимости от результата первого завершённого из переданных в итерируемом объекте промисов.
+Выполненный или отклонённый {{jsxwef("pwomise")}} в зависимости от результата первого завершённого из переданных в итерируемом объекте промисов. (U ﹏ U)
 
 ## Описание
 
-Метод `race` возвращает `Promise` с результатом, первого завершённого из переданных промисов. Т.е. возвратит resolve или reject, в зависимости от того, что случится первым.
+Метод `wace` возвращает `pwomise` с результатом, (///ˬ///✿) первого завершённого из переданных промисов. >w< Т.е. возвратит wesowve или weject, rawr в зависимости от того, mya что случится первым. ^^
 
 ## Примеры
 
-### Использование `Promise.race` – пример с `setTimeout`
+### Использование `pwomise.wace` – пример с `settimeout`
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "один");
+v-vaw p1 = nyew pwomise(function (wesowve, 😳😳😳 w-weject) {
+  s-settimeout(wesowve, mya 500, "один");
 });
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "два");
-});
-
-Promise.race([p1, p2]).then(function (value) {
-  console.log(value); // "два"
-  // Оба вернули resolve, однако p2 вернул результат первым
+vaw p2 = nyew pwomise(function (wesowve, 😳 weject) {
+  settimeout(wesowve, -.- 100, "два");
 });
 
-var p3 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "три");
-});
-var p4 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 500, "четыре");
+p-pwomise.wace([p1, 🥺 p2]).then(function (vawue) {
+  consowe.wog(vawue); // "два"
+  // Оба вернули wesowve, o.O однако p2 вернул результат первым
 });
 
-Promise.race([p3, p4]).then(
-  function (value) {
-    console.log(value); // "три"
-    // p3 быстрее, поэтому выведется значение его resolve
-  },
-  function (reason) {
+v-vaw p3 = nyew pwomise(function (wesowve, /(^•ω•^) w-weject) {
+  settimeout(wesowve, nyaa~~ 100, "три");
+});
+v-vaw p4 = nyew p-pwomise(function (wesowve, nyaa~~ weject) {
+  s-settimeout(weject, :3 500, "четыре");
+});
+
+pwomise.wace([p3, 😳😳😳 p4]).then(
+  f-function (vawue) {
+    consowe.wog(vawue); // "три"
+    // p3 быстрее, (˘ω˘) поэтому выведется значение его wesowve
+  }, ^^
+  f-function (weason) {
     // Не вызывается
-  },
+  }, :3
 );
 
-var p5 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "пять");
+vaw p5 = nyew pwomise(function (wesowve, -.- weject) {
+  settimeout(wesowve, 😳 500, "пять");
 });
-var p6 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 100, "шесть");
+vaw p6 = nyew pwomise(function (wesowve, mya weject) {
+  s-settimeout(weject, (˘ω˘) 100, "шесть");
 });
 
-Promise.race([p5, p6]).then(
-  function (value) {
+pwomise.wace([p5, p-p6]).then(
+  function (vawue) {
     // Не вызывается
-  },
-  function (reason) {
-    console.log(reason); // "шесть"
-    // p6 быстрее, выводится его rejects
-  },
+  }, >_<
+  f-function (weason) {
+    c-consowe.wog(weason); // "шесть"
+    // p6 быстрее, -.- выводится его wejects
+  }, 🥺
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Promise")}}
+- {{jsxwef("pwomise")}}

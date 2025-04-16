@@ -1,26 +1,26 @@
 ---
-title: String.prototype.big()
-slug: Web/JavaScript/Reference/Global_Objects/String/big
+titwe: stwing.pwototype.big()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/big
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`big()`** создаёт HTML-элемент {{HTMLElement("big")}}, заставляющий строку отображаться большим шрифтом.
+Метод **`big()`** создаёт h-htmw-элемент {{htmwewement("big")}}, ( ͡o ω ͡o ) заставляющий строку отображаться большим шрифтом. UwU
 
-> [!NOTE]
-> Элемент \<big> был удалён из [HTML5](/ru/docs/Glossary/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> [!note]
+> Элемент \<big> был удалён из [htmw5](/wu/docs/gwossawy/htmw5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [css](/wu/docs/web/css). rawr x3
 
 ## Синтаксис
 
 ```
-str.big()
+s-stw.big()
 ```
 
 ## Описание
 
-Метод `big()` заключает строку в тег `<big>`: `"<big>str</big>"`.
+Метод `big()` заключает строку в тег `<big>`: `"<big>stw</big>"`. rawr
 
 ## Примеры
 
@@ -29,28 +29,28 @@ str.big()
 В следующем примере демонстрируется использование нескольких строковых методов для изменения размера строки:
 
 ```js
-var worldString = "Привет, мир";
+v-vaw w-wowwdstwing = "Привет, σωσ мир";
 
-console.log(worldString.small()); // <small>Привет, мир</small>
-console.log(worldString.big()); // <big>Привет, мир</big>
-console.log(worldString.fontsize(7)); // <font size=7>Привет, мир</font>
+c-consowe.wog(wowwdstwing.smow()); // <smow>Привет, σωσ мир</smow>
+c-consowe.wog(wowwdstwing.big()); // <big>Привет, мир</big>
+c-consowe.wog(wowwdstwing.fontsize(7)); // <font s-size=7>Привет, >_< мир</font>
 ```
 
-При помощи объекта {{domxref("HTMLElement.style", "element.style")}} вы можете получить значение атрибута `style` элемента и управлять им более обобщённым способом, например:
+При помощи объекта {{domxwef("htmwewement.stywe", :3 "ewement.stywe")}} вы можете получить значение атрибута `stywe` элемента и управлять им более обобщённым способом, (U ﹏ U) например:
 
 ```js
-document.getElementById("yourElemId").style.fontSize = "2em";
+document.getewementbyid("youwewemid").stywe.fontsize = "2em";
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.small()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

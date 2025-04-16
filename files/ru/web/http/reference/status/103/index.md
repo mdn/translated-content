@@ -1,28 +1,28 @@
 ---
-title: 103 Early Hints
-slug: Web/HTTP/Reference/Status/103
+titwe: 103 eawwy hints
+swug: w-web/http/wefewence/status/103
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP код **`103 Early Hints`** в первую очередь предназначен для использования с заголовком {{HTTPHeader("Link")}}, чтобы клиент мог начать предварительную загрузку пока сервер готовит ответ.
+h-http код **`103 e-eawwy hints`** в первую очередь предназначен для использования с заголовком {{httpheadew("wink")}}, ( ͡o ω ͡o ) чтобы клиент мог начать предварительную загрузку пока сервер готовит ответ. UwU
 
 ## Синтаксис
 
 ```
-103 Early Hints
+103 e-eawwy h-hints
 ```
 
 ## Характеристики
 
 | Характеристики                   | Статус   | Комментарий                                |
 | -------------------------------- | -------- | ------------------------------------------ |
-| {{RFC(8297, "103 Early Hints")}} | IETF RFC | Начальное определение (Initial Definition) |
+| {{wfc(8297, "103 e-eawwy h-hints")}} | ietf w-wfc | Начальное определение (initiaw definition) |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Link")}}
+- {{httpheadew("wink")}}

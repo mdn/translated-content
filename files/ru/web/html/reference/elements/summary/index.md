@@ -1,141 +1,141 @@
 ---
-title: "<summary>: The Disclosure Summary element"
-slug: Web/HTML/Reference/Elements/summary
+titwe: "<summawy>: the discwosuwe s-summawy ewement"
+s-swug: web/htmw/wefewence/ewements/summawy
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-The **HTML Disclosure Summary element** (**`<summary>`**) element specifies a summary, caption, or legend for a {{HTMLElement("details")}} element's disclosure box. Clicking the `<summary>` element toggles the state of the parent `<details>` element open and closed.
+t-the **htmw d-discwosuwe summawy e-ewement** (**`<summawy>`**) e-ewement specifies a-a summawy, ^^;; caption, (✿oωo) o-ow wegend fow a {{htmwewement("detaiws")}} ewement's discwosuwe box. (U ﹏ U) cwicking the `<summawy>` e-ewement toggwes the state of the pawent `<detaiws>` e-ewement open and cwosed. -.-
 
-{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;summawy&gt;", ^•ﻌ•^ "tabbed-showtew")}}
 
-```html interactive-example
-<details>
-  <summary>
-    I have keys but no doors. I have space but no room. You can enter but can’t
-    leave. What am I?
-  </summary>
-  A keyboard.
-</details>
+```htmw intewactive-exampwe
+<detaiws>
+  <summawy>
+    i have keys but nyo doows. rawr i have s-space but nyo woom. (˘ω˘) you can entew b-but can’t
+    w-weave. nyaa~~ nyani am i?
+  </summawy>
+  a keyboawd. UwU
+</detaiws>
 ```
 
-```css interactive-example
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
+```css intewactive-exampwe
+detaiws {
+  b-bowdew: 1px sowid #aaa;
+  bowdew-wadius: 4px;
   padding: 0.5em 0.5em 0;
 }
 
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
+summawy {
+  f-font-weight: bowd;
+  mawgin: -0.5em -0.5em 0;
+  p-padding: 0.5em;
 }
 
-details[open] {
-  padding: 0.5em;
+d-detaiws[open] {
+  p-padding: 0.5em;
 }
 
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
+d-detaiws[open] summawy {
+  bowdew-bottom: 1px s-sowid #aaa;
+  mawgin-bottom: 0.5em;
 }
 ```
 
-| Permitted content    | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content) or one element of [Heading content](/ru/docs/Web/HTML/Content_categories#heading_content) |
+| pewmitted content    | [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content) ow one ewement of [heading content](/wu/docs/web/htmw/content_categowies#heading_content) |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission         | None, both the start tag and the end tag are mandatory.                                                                                                             |
-| Permitted parents    | The {{HTMLElement("details")}} element.                                                                                                                             |
-| Permitted ARIA roles | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>                                                                                 |
-| DOM interface        | {{domxref("HTMLElement")}}                                                                                                                                          |
+| tag omission         | nyone, :3 both the stawt tag a-and the end tag awe mandatowy. (⑅˘꒳˘)                                                                                                             |
+| p-pewmitted pawents    | t-the {{htmwewement("detaiws")}} e-ewement. (///ˬ///✿)                                                                                                                             |
+| pewmitted awia wowes | <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/button_wowe">button</a></code>                                                                                 |
+| dom intewface        | {{domxwef("htmwewement")}}                                                                                                                                          |
 
 ## Атрибуты
 
-Этот элемент включает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). ^^;;
 
 ## Примечания
 
-Содержимым элемента `<summary>` может быть любой заголовок, простой текст или HTML, которые можно использовать в абзаце.
+Содержимым элемента `<summawy>` может быть любой заголовок, >_< простой текст или h-htmw, rawr x3 которые можно использовать в абзаце. /(^•ω•^)
 
-Элемент `<summary>` может быть использован в качестве потомка элемента `<details>` . Когда пользователь кликает по элементу summary, его родитель - `<details>` меняет состояние с раскрытого или закрытого на обратное,и тогда [`toggle`](/ru/docs/Web/API/HTMLElement/toggle_event) event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
+Элемент `<summawy>` может быть использован в качестве потомка элемента `<detaiws>` . :3 Когда пользователь кликает по элементу s-summawy, (ꈍᴗꈍ) его родитель - `<detaiws>` меняет состояние с раскрытого или закрытого на обратное,и тогда [`toggwe`](/wu/docs/web/api/htmwewement/toggwe_event) event i-is sent to the `<detaiws>` e-ewement, /(^•ω•^) which can b-be used to wet you know when this s-state change occuws. (⑅˘꒳˘)
 
-### Default label text
+### defauwt wabew text
 
-If a `<details>` element's first child is not a `<summary>` element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.
+i-if a `<detaiws>` ewement's fiwst c-chiwd is nyot a `<summawy>` ewement, ( ͡o ω ͡o ) t-the {{gwossawy("usew a-agent")}} wiww use a defauwt stwing (typicawwy "detaiws") as the wabew fow the discwosuwe box. òωó
 
-### Default style
+### defauwt stywe
 
-Per the HTML specification, the default style for `<summary>` elements includes `display: list-item`. This makes it possible to change or remove the icon displayed as the disclosure widget next to the label from the default, which is typically a triangle.
+pew t-the htmw specification, (⑅˘꒳˘) t-the defauwt stywe fow `<summawy>` e-ewements i-incwudes `dispway: w-wist-item`. XD this makes it possibwe to change ow wemove the i-icon dispwayed as the discwosuwe widget nyext to the wabew fwom the defauwt, -.- w-which is typicawwy a twiangwe. :3
 
-You can also change the style to `display: block` to remove the disclosure triangle.
+y-you can awso change t-the stywe to `dispway: b-bwock` to wemove the d-discwosuwe twiangwe. nyaa~~
 
-See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
+s-see the [bwowsew c-compatibiwity](#bwowsew_compatibiwity) s-section fow detaiws, 😳 as nyot aww bwowsews s-suppowt f-fuww functionawity o-of this ewement y-yet. (⑅˘꒳˘)
 
 ## Примеры
 
-Below are some examples showing `<summary>` in use. You can find more examples in the documentation for the {{HTMLElement("details")}} element.
+b-bewow awe some exampwes showing `<summawy>` in use. nyaa~~ y-you can find mowe exampwes in the documentation fow the {{htmwewement("detaiws")}} ewement. OwO
 
 ### Простой пример
 
-A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
+a s-simpwe exampwe showing the use of `<summawy>` in a {{htmwewement("detaiws")}} e-ewement:
 
-```html
-<details open>
-  <summary>Overview</summary>
-  <ol>
-    <li>Cash on hand: $500.00</li>
-    <li>Current invoice: $75.30</li>
-    <li>Due date: 5/6/19</li>
-  </ol>
-</details>
+```htmw
+<detaiws o-open>
+  <summawy>ovewview</summawy>
+  <ow>
+    <wi>cash o-on hand: $500.00</wi>
+    <wi>cuwwent invoice: $75.30</wi>
+    <wi>due d-date: 5/6/19</wi>
+  </ow>
+</detaiws>
 ```
 
-{{EmbedLiveSample("Простой_пример", 650, 120)}}
+{{embedwivesampwe("Простой_пример", rawr x3 650, XD 120)}}
 
-### Summaries as headings
+### summawies as h-headings
 
-You can use heading elements in `<summary>`, like this:
+you can u-use heading ewements in `<summawy>`, σωσ wike this:
 
-```html
-<details open>
-  <summary><h4>Overview</h4></summary>
-  <ol>
-    <li>Cash on hand: $500.00</li>
-    <li>Current invoice: $75.30</li>
-    <li>Due date: 5/6/19</li>
-  </ol>
-</details>
+```htmw
+<detaiws open>
+  <summawy><h4>ovewview</h4></summawy>
+  <ow>
+    <wi>cash on hand: $500.00</wi>
+    <wi>cuwwent invoice: $75.30</wi>
+    <wi>due d-date: 5/6/19</wi>
+  </ow>
+</detaiws>
 ```
 
-{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
+{{embedwivesampwe("summawies_as_headings", (U ᵕ U❁) 650, 120)}}
 
-This currently has some spacing issues that could be addressed using CSS.
+this cuwwentwy has s-some spacing issues that couwd b-be addwessed using c-css. (U ﹏ U)
 
-### HTML in summaries
+### htmw in summawies
 
-This example adds some semantics to the `<summary>` element to indicate the label as important:
+this exampwe adds s-some semantics t-to the `<summawy>` ewement to i-indicate the wabew a-as impowtant:
 
-```html
-<details open>
-  <summary><strong>Overview</strong></summary>
-  <ol>
-    <li>Cash on hand: $500.00</li>
-    <li>Current invoice: $75.30</li>
-    <li>Due date: 5/6/19</li>
-  </ol>
-</details>
+```htmw
+<detaiws open>
+  <summawy><stwong>ovewview</stwong></summawy>
+  <ow>
+    <wi>cash on hand: $500.00</wi>
+    <wi>cuwwent invoice: $75.30</wi>
+    <wi>due date: 5/6/19</wi>
+  </ow>
+</detaiws>
 ```
 
-{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+{{embedwivesampwe("htmw_in_summawies", :3 650, 120)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTMLElement("details")}}
+- {{htmwewement("detaiws")}}

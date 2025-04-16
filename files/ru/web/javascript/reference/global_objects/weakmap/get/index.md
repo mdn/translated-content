@@ -1,53 +1,53 @@
 ---
-title: WeakMap.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
+titwe: weakmap.pwototype.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`get()`** возвращает элемент из объекта WeakMap,
+Метод **`get()`** возвращает элемент из объекта w-weakmap, rawr
 
 ## Синтаксис
 
 ```
-wm.get(key);
+w-wm.get(key);
 ```
 
 ### Параметры
 
-- key
-  - : Обязателен. Ключ элемента, который будет возвращён из объекта WeakMap.
+- k-key
+  - : Обязателен. OwO Ключ элемента, (U ﹏ U) который будет возвращён из объекта w-weakmap. >_<
 
 ### Возвращаемое значение
 
-Возвращает элемент по указанному ключу или undefined, если ключ не может быть найден в объекте WeakMap.
+Возвращает элемент по указанному ключу или u-undefined, rawr x3 если ключ не может быть найден в объекте w-weakmap. mya
 
 ## Примеры
 
 ### Использование метода get
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+v-vaw wm = n-nyew weakmap();
+wm.set(window, nyaa~~ "foo");
 
-wm.get(window); // Возвращает "foo".
-wm.get("baz"); // Возвращает undefined.
+wm.get(window); // Возвращает "foo". (⑅˘꒳˘)
+wm.get("baz"); // Возвращает undefined. rawr x3
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-## Firefox-specific notes
+## f-fiwefox-specific nyotes
 
-- Prior to SpiderMonkey 38, this method threw a {{jsxref("TypeError")}} when the key parameter was not an object. However, the latest ES6 standard specifies to return `undefined` instead. Furthermore, `WeakMap.prototype.get` accepted an optional second argument as a fallback value, which is not part of the standard. Both non-standard behaviors are removed in version 38 and higher ([Firefox bug 1127827](https://bugzil.la/1127827)).
+- pwiow to spidewmonkey 38, (✿oωo) t-this method thwew a {{jsxwef("typeewwow")}} w-when the key pawametew was nyot an object. (ˆ ﻌ ˆ)♡ howevew, (˘ω˘) the w-watest es6 standawd specifies to w-wetuwn `undefined` i-instead. (⑅˘꒳˘) fuwthewmowe, (///ˬ///✿) `weakmap.pwototype.get` accepted an optionaw second awgument as a fawwback vawue, 😳😳😳 which i-is nyot pawt of the standawd. 🥺 both nyon-standawd behaviows awe wemoved in vewsion 38 a-and highew ([fiwefox bug 1127827](https://bugziw.wa/1127827)). mya
 
 ## Смотрите также
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.set()")}}
-- {{jsxref("WeakMap.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.set()")}}
+- {{jsxwef("weakmap.has()")}}

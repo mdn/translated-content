@@ -1,104 +1,104 @@
 ---
-title: Sobre o MDN
-slug: MDN/Writing_guidelines
+titwe: sobwe o mdn
+swug: mdn/wwiting_guidewines
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-A Rede de Desenvolvedores da Mozilla (MDN) é uma plataforma de aprendizagem em evolução para tecnologias da Web e o software que alimenta a Web, incluindo:
+a-a wede de d-desenvowvedowes d-da moziwwa (mdn) é u-uma pwatafowma d-de apwendizagem e-em evowução p-pawa tecnowogias d-da web e o softwawe que awimenta a web, OwO incwuindo:
 
-- Padrões web como [CSS](/pt-BR/docs/Web/CSS), [HTML](/pt-BR/docs/Web/HTML), e [JavaScript](/pt-BR/docs/Web/JavaScript)
-- [Open Web app development](/pt-BR/docs/Web/Progressive_web_apps)
-- [Firefox add-on development](/pt-BR/docs/Mozilla/Add-ons)
+- padwões web como [css](/pt-bw/docs/web/css), o.O [htmw](/pt-bw/docs/web/htmw), 😳😳😳 e-e [javascwipt](/pt-bw/docs/web/javascwipt)
+- [open web app devewopment](/pt-bw/docs/web/pwogwessive_web_apps)
+- [fiwefox add-on d-devewopment](/pt-bw/docs/moziwwa/add-ons)
 
-## Nossa missão
+## nyossa missão
 
-A missão da MDN é simples: prover uma completa, exata e útil documentação para tudo sobre a open Web, sendo ele construído, suportado ou não pela Mozilla. Se é uma tecnologia aberta e Web, queremos documentá-lo.
+a-a missão da mdn é simpwes: pwovew uma compweta, /(^•ω•^) exata e útiw d-documentação pawa tudo sobwe a-a open web, OwO sendo e-ewe constwuído, ^^ supowtado ou nyão pewa moziwwa. (///ˬ///✿) se é uma tecnowogia abewta e-e web, (///ˬ///✿) quewemos documentá-wo.
 
-Além disso, podemos fornecer a documentação sobre como [desenvolver e contribuir com os projetos da Mozilla](/pt-BR/docs/Mozilla), [Firefox OS](/pt-BR/Firefox_OS) e [desenvolvimento de Web app](/pt-BR/docs/Apps).
+awém disso, (///ˬ///✿) podemos fownecew a documentação s-sobwe como [desenvowvew e contwibuiw c-com os pwojetos d-da moziwwa](/pt-bw/docs/moziwwa), ʘwʘ [fiwefox o-os](/pt-bw/fiwefox_os) e-e [desenvowvimento de web app](/pt-bw/docs/apps). ^•ﻌ•^
 
-Se você não tem certeza se um tópico específico deve ser abordado no MDN leia: [Isso pertence ao MDN?](/pt-BR/docs/Project:MDN/Contributing/Does_this_belong)
+s-se você nyão tem cewteza se um tópico e-específico deve sew abowdado nyo mdn weia: [isso pewtence ao mdn?](/pt-bw/docs/pwoject:mdn/contwibuting/does_this_bewong)
 
-## Como você pode ajudar
+## como você pode a-ajudaw
 
-Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Community/Contributing/Getting_started), baseada em seus interesses e na sua quantidade de tempo livre.
+você nyão pwecisa s-sew capaz de pwogwamaw - o-ow escwevew - p-pawa podew ajudaw a mdn! OwO nyós temos muitos caminhos pow o-onde você pode a-ajudaw, de uma wevisão de awtigos p-pawa tew cewteza q-que fazem sentido, (U ﹏ U) até contwibuindo c-com texto, (ˆ ﻌ ˆ)♡ adicionando c-códigos de exempwo. (⑅˘꒳˘) na vewdade existem tantas fowmas d-de ajudaw que nyós temos u-uma [fewwamenta pawa ajudá-wo a e-escowhew tawefas p-pawa ajudaw](/pt-bw/docs/mdn/community/contwibuting/getting_stawted), baseada em seus intewesses e nya sua quantidade de tempo wivwe.
 
-## A comunidade MDN
+## a comunidade mdn
 
-Nossa comunidade é global! Nós temos contribuidores incríveis ao redor do mundo todo, em muitos idiomas. Se você gostaria de descobrir mais sobre nós, ou se precisa de qualquer tipo de ajuda com a MDN, fique livre para checar nosso fórum de discussões ou canal IRC!
+nyossa c-comunidade é g-gwobaw! (U ﹏ U) nyós temos contwibuidowes i-incwíveis a-ao wedow do mundo t-todo, o.O em muitos idiomas. mya se você gostawia de descobwiw mais s-sobwe nyós, XD ou se pwecisa de quawquew tipo de ajuda com a mdn, òωó fique wivwe pawa c-checaw nyosso fówum de discussões o-ou canaw iwc! (˘ω˘)
 
-## Licenças e cópias de direito
+## w-wicenças e-e cópias de diweito
 
-Os documentos wiki da MDN foram preparados com as contribuições de muitos autores, de dentro e de fora da Mozilla Foundation. A menos que seja indicado, o conteúdo está disponível sob os termos da [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 ou qualquer versão mais recente. Por favor, atribua "Mozilla Contributors" e inclua um hyperlink (online) ou URL (impresso) para a página da wiki específica do conteúdo referenciado. Por exemplo, para atribuir a este artigo, você pode escrever:
+os documentos w-wiki da mdn f-fowam pwepawados c-com as contwibuições d-de muitos autowes, de dentwo e de fowa d-da moziwwa foundation. :3 a-a menos que s-seja indicado, OwO o-o conteúdo está d-disponívew sob os tewmos da [cweative commons attwibution-shaweawike w-wicense](https://cweativecommons.owg/wicenses/by-sa/2.5/) (cc-by-sa), v2.5 ou quawquew vewsão mais wecente. mya pow favow, (˘ω˘) atwibua "moziwwa contwibutows" e-e incwua um hypewwink (onwine) ou uww (impwesso) pawa a página da wiki específica d-do conteúdo w-wefewenciado. o.O p-pow exempwo, (✿oωo) pawa atwibuiw a este a-awtigo, (ˆ ﻌ ˆ)♡ você pode escwevew:
 
-> [About MDN](/pt-BR/docs/MDN/Writing_guidelines) por [Mozilla Contributors](/pt-BR/docs/MDN/About$history) está licenciado sob [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/).
+> [about m-mdn](/pt-bw/docs/mdn/wwiting_guidewines) p-pow [moziwwa contwibutows](/pt-bw/docs/mdn/about$histowy) está wicenciado sob [cc-by-sa 2.5](https://cweativecommons.owg/wicenses/by-sa/2.5/).
 
-Note que nesse exemplo, "Mozilla Contributors" leva para a história da página citada. Veja [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) para explicações mais detalhadas.
+nyote que nyesse exempwo, ^^;; "moziwwa contwibutows" w-weva pawa a histówia da página c-citada. OwO veja [best pwactices f-fow attwibution](http://wiki.cweativecommons.owg/mawking/usews) p-pawa expwicações mais detawhadas. 🥺
 
-> [!NOTE]
-> Veja [MDN content on WebPlatform.org](/pt-BR/docs/MDN_content_on_WebPlatform.org) para informações sobre como reutilizar e atribuir conteúdo da MDN naquele site.
+> [!note]
+> veja [mdn content o-on webpwatfowm.owg](/pt-bw/docs/mdn_content_on_webpwatfowm.owg) p-pawa infowmações sobwe como w-weutiwizaw e a-atwibuiw conteúdo da mdn nyaquewe site. mya
 
-Amostras de código adicionadas a esta wiki antes de 20 de agosto de 2010 estão disponíveis sob a [MIT license](http://www.opensource.org/licenses/mit-license.php); você deveria inserir a seguinte informação de atribuição no template MIT: "© \<data da última revisão da página da wiki> \<nome da pessoa que a inseriu na wiki>".
+amostwas de código adicionadas a esta w-wiki antes de 20 d-de agosto de 2010 e-estão disponíveis sob a [mit w-wicense](http://www.opensouwce.owg/wicenses/mit-wicense.php); v-você devewia insewiw a seguinte i-infowmação de atwibuição nyo tempwate mit: "© \<data da úwtima wevisão d-da página da wiki> \<nome d-da pessoa que a insewiu nya wiki>". 😳
 
-Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](https://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. <http://creativecommons.org/publicdomain/zero/1.0/>".
+a-amostwas de código a-adicionadas no dia 20 de agosto de 2010 ou depois estão nyo [pubwic d-domain](https://cweativecommons.owg/pubwicdomain/zewo/1.0/). òωó nyão é nyecessáwio um aviso de wicença, /(^•ω•^) mas se você pwecisa d-de um, -.- você pode utiwizaw: "quawquew diweito d-de cópia é d-dedicado ao domínio púbwico. òωó <http://cweativecommons.owg/pubwicdomain/zewo/1.0/>". /(^•ω•^)
 
-Se você deseja contribuir para esta wiki, você deve tornar sua documentação disponível pela licença Attribution-ShareAlike (ou ocasionalmente uma licença alternativa já especificada pela página que você está editando), e suas amostras de código disponívels sob a [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) (uma dedicação de Domínio Público). Acrescentar a esta wiki significa que você concorda que suas contribuições serão feitas sob estas licenças.
+se você deseja contwibuiw p-pawa esta wiki, /(^•ω•^) v-você deve townaw sua documentação disponívew pewa wicença a-attwibution-shaweawike (ou ocasionawmente u-uma wicença awtewnativa já especificada pewa página q-que você está editando), 😳 e s-suas amostwas de c-código disponívews sob a [cweative c-commons cc-0](https://cweativecommons.owg/pubwicdomain/zewo/1.0/) (uma dedicação d-de domínio p-púbwico). :3 a-acwescentaw a esta wiki significa q-que você concowda q-que suas contwibuições sewão feitas sob e-estas wicenças. (U ᵕ U❁)
 
-Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block).
+a-awguns conteúdos m-mais antigos fowam disponibiwizados sob uma w-wicença difewente das citadas acima; e-estas são i-indicadas nyo finaw de cada página em um [awtewnate wicense bwock](/pwoject:en/exampwes/awtewnate_wicense_bwock). ʘwʘ
 
-> **Aviso:** **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
+> **aviso:** **impowtante:** n-nyenhuma nyova p-página deve sew c-cwiada usando w-wicenças awtewnativas.
 
-Os direitos de cópia para materiais de contribuição permanecem com o(a) autor(a), a menos que ele(a) os atribua a outra pessoa.
+os diweitos d-de cópia pawa matewiais de contwibuição pewmanecem com o(a) autow(a), o.O a menos que ewe(a) o-os atwibua a outwa pessoa. ʘwʘ
 
-Se você tem perguntas ou dúvidas sobre algo exposto aqui, por favor contate [Eric Shepherd](mailto:eshepherd@mozilla.com).
+se v-você tem pewguntas ou dúvidas s-sobwe awgo exposto aqui, ^^ pow favow c-contate [ewic shephewd](maiwto:eshephewd@moziwwa.com). ^•ﻌ•^
 
 ---
 
-Os direitos das marcas, logos, marcas de serviço da Mozilla Foundation, bem como o visual e estrutura deste site, não estão licenciados pela Creative Commons, e enquanto são trabalhos autorais (como logos e design gráfico), eles não estão inclusos no trabalho que está licenciado nesses termos. Se você utilizar o texto de documentos, e quiser também usar qualquer um destes direitos, ou se tem outras perguntas sobre cumprir com nossos termos de licença para esta coleção, você deve contatar a Mozilla Foundation aqui: <licensing@mozilla.org>.
+o-os diweitos das m-mawcas, mya wogos, UwU mawcas d-de sewviço d-da moziwwa foundation, >_< b-bem como o visuaw e estwutuwa deste site, /(^•ω•^) nyão estão wicenciados pewa cweative commons, òωó e enquanto são t-twabawhos autowais (como w-wogos e-e design gwáfico), σωσ ewes nyão e-estão incwusos nyo twabawho que está wicenciado nyesses tewmos. ( ͡o ω ͡o ) s-se você utiwizaw o-o texto de documentos, nyaa~~ e quisew t-também usaw quawquew um destes diweitos, :3 ou s-se tem outwas p-pewguntas sobwe cumpwiw com nyossos t-tewmos de wicença p-pawa esta coweção, UwU você deve contataw a moziwwa foundation aqui: <wicensing@moziwwa.owg>. o.O
 
-## Baixar conteúdo
+## b-baixaw conteúdo
 
-Você pode baixar o conteúdo de uma página individual na MDN adicionando [document parameters](/pt-BR/docs/Project:MDN/Kuma/API#Document_parameters) à URL para especificar qual formato deseja.
+v-você p-pode baixaw o conteúdo d-de uma página i-individuaw nya mdn adicionando [document p-pawametews](/pt-bw/docs/pwoject:mdn/kuma/api#document_pawametews) à u-uww pawa especificaw quaw fowmato d-deseja. (ˆ ﻌ ˆ)♡
 
-Se você quiser baixar um dump SQL completo e anonimizado da base de dados da MDN — isto é, uma cópia da base de dados com todas as informações privadas de usuários removidas, nós também fornecemos isso. Esse dump é atualizado no primeiro dia de todo mês.
+s-se você quisew baixaw um dump sqw c-compweto e anonimizado da base de dados da mdn — i-isto é, ^^;; uma cópia da base d-de dados com todas a-as infowmações pwivadas de u-usuáwios wemovidas, ʘwʘ nyós também fownecemos i-isso. σωσ esse dump é a-atuawizado nyo p-pwimeiwo dia de todo mês. ^^;;
 
-Existem três arquivos que compreendem o dump mensal anonimizado da MDN:
+existem twês awquivos que compweendem o-o dump mensaw anonimizado da mdn:
 
-- `<date>.sanitized.devmo_sanitize.sql.gz`
-  - : O dump de banco de dados MySQL sanitizado de todo o conteúdo da MDN, registros de datas, e assim por diante. Inclui todo o conteúdo de artigos, registros de histórico, e assim por diante. Todas as informações pessoais de usuários são retiradas (como endereços de email).
-- `attachments-<date>.tar.gz`
-  - : Esse arquivo contém todos os uploads de arquivos anexos feitos para a wiki.
-- `uploads-<date>.tar.gz`
-  - : Esse arquivo (muito grande!) contém os uploads de arquivos para o Demo Studio. Se você tem interesse apenas no conteúdo da wiki, você não precisa baixar isso.
+- `<date>.sanitized.devmo_sanitize.sqw.gz`
+  - : o-o dump d-de banco de dados mysqw sanitizado d-de todo o conteúdo da mdn, ʘwʘ wegistwos d-de datas, ^^ e-e assim pow diante. nyaa~~ incwui todo o conteúdo de a-awtigos, (///ˬ///✿) wegistwos de histówico, XD e assim pow d-diante. :3 todas as i-infowmações pessoais de usuáwios s-são wetiwadas (como endeweços d-de emaiw). òωó
+- `attachments-<date>.taw.gz`
+  - : e-esse awquivo c-contém todos os upwoads de awquivos anexos feitos pawa a wiki. ^^
+- `upwoads-<date>.taw.gz`
+  - : esse awquivo (muito gwande!) contém os upwoads de awquivos pawa o demo studio. ^•ﻌ•^ se você tem intewesse apenas nyo conteúdo da wiki, σωσ você nyão p-pwecisa baixaw i-isso. (ˆ ﻌ ˆ)♡
 
-[Visite o aterro da MDN](https://developer.allizom.org/landfill/) para baixar esses arquivos.
+[visite o atewwo da mdn](https://devewopew.awwizom.owg/wandfiww/) pawa baixaw e-esses awquivos. nyaa~~
 
-### Ferramentas de terceiros
+### f-fewwamentas d-de tewceiwos
 
-Você também pode visualizar o conteúdo da MDN via ferramentas de terceiros como o [Dash](http://kapeli.com/dash) (para Mac OS) e [Zeal](http://zealdocs.org/) (para Linux e Windows).
+você também p-pode visuawizaw o conteúdo da m-mdn via fewwamentas d-de tewceiwos como o [dash](http://kapewi.com/dash) (pawa mac o-os) e [zeaw](http://zeawdocs.owg/) (pawa winux e-e windows).
 
-## Informando problemas com a MDN
+## i-infowmando pwobwemas com a mdn
 
-De vez em quando, você pode encontrar problemas usando a MDN. Seja um problema com a infraestrutura do site ou um erro no conteúdo da documentação, você pode tentar consertar sozinho ou reportar o problema. Enquanto a primeira opção é preferida, a última é às vezes o melhor que você consegue fazer, e tudo bem com isso também.
+de vez em quando, ʘwʘ v-você pode encontwaw p-pwobwemas u-usando a mdn. ^•ﻌ•^ s-seja um pwobwema c-com a infwaestwutuwa d-do site ou u-um ewwo nyo conteúdo d-da documentação, rawr x3 v-você pode tentaw consewtaw s-sozinho ou w-wepowtaw o pwobwema. 🥺 e-enquanto a pwimeiwa opção é p-pwefewida, ʘwʘ a úwtima é às vezes o mewhow q-que você consegue fazew, (˘ω˘) e tudo b-bem com isso também. o.O
 
-### Erros na documentação
+### e-ewwos n-nya documentação
 
-Obviamente, já que a MDN é uma wiki, a melhor coisa que você pode fazer é consertar problemas que você encontrar sozinho. Mas talvez você não saiba a resposta, ou esteja no meio de uma correria para o hospital ou algo assim, e precise anotar o problema pra que alguém possa olhar depois.
+obviamente, σωσ j-já que a mdn é uma wiki, (ꈍᴗꈍ) a m-mewhow coisa que você pode fazew é c-consewtaw pwobwemas que você e-encontwaw sozinho. (ˆ ﻌ ˆ)♡ mas tawvez você nyão saiba a wesposta, o.O ou esteja nyo meio d-de uma cowwewia pawa o hospitaw o-ou awgo assim, :3 e-e pwecise anotaw o pwobwema pwa que awguém possa owhaw depois. -.-
 
-Como tudo o que é Mozilla, você pode reportar um problema na documentação registrando um bug. É aí que entra o registro de um [documentation request bug](https://bugzilla.mozilla.org/form.doc). Nosso útil formulário de solicitação de documentação reunirá as informações necessárias para que possamos começar a consertar o problema.
+c-como tudo o que é moziwwa, ( ͡o ω ͡o ) você p-pode wepowtaw u-um pwobwema nya d-documentação wegistwando um bug. /(^•ω•^) É aí que e-entwa o wegistwo d-de um [documentation wequest bug](https://bugziwwa.moziwwa.owg/fowm.doc). (⑅˘꒳˘) n-nyosso útiw fowmuwáwio de sowicitação d-de documentação weuniwá a-as infowmações n-nyecessáwias pawa q-que possamos começaw a consewtaw o-o pwobwema. òωó
 
-Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma mais rápida de ver um problema de documentação resolvido é consertá-lo você mesmo. Veja [Criando e editando páginas](/pt-BR/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) para detalhes.
+n-nyatuwawmente, n-nyossa comunidade d-de escwita é atawefada, 🥺 então às v-vezes a f-fowma mais wápida d-de vew um pwobwema d-de documentação w-wesowvido é c-consewtá-wo v-você mesmo. (ˆ ﻌ ˆ)♡ veja [cwiando e-e editando páginas](/pt-bw/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting) p-pawa detawhes. -.-
 
-### Bugs do site ou solicitar recursos
+### bugs do s-site ou sowicitaw wecuwsos
 
-[Kuma](/pt-BR/docs/Project:MDN/Kuma), a plataforma desenvolvida pela Mozilla usada para o web site da MDN, está em um constante estado de desenvolvimento. Nossos desenvolvedores—assim como vários contribuidores voluntários—estão constantemente fazendo melhorias. Se você encontrar um bug, ou tiver um problema com o site, ou ainda tiver uma sugestão para algo que poderia tornar o software mais incrível, você pode usar o [Kuma bug form](https://bugzilla.mozilla.org/form.mdn) para preencher um relatório.
+[kuma](/pt-bw/docs/pwoject:mdn/kuma), σωσ a-a pwatafowma d-desenvowvida pewa m-moziwwa usada pawa o web site da mdn, >_< está em um constante estado d-de desenvowvimento. :3 n-nossos d-desenvowvedowes—assim como váwios contwibuidowes vowuntáwios—estão c-constantemente f-fazendo mewhowias. OwO se você e-encontwaw um b-bug, rawr ou tivew um pwobwema com o site, (///ˬ///✿) ou ainda tivew uma sugestão p-pawa awgo que p-podewia townaw o-o softwawe mais i-incwívew, ^^ você pode usaw o [kuma bug fowm](https://bugziwwa.moziwwa.owg/fowm.mdn) p-pawa pweenchew u-um wewatówio. XD
 
-## História da MDN
+## histówia da mdn
 
-O projeto Mozilla Developer Network (a.k.a. Mozilla Developer Center (MDC), a.k.a. _Devmo_) começou no início de 2005, quando a [Mozilla Foundation](http://www.mozillafoundation.org) obteve uma licença da AOL para utilizar o conteúdo original [DevEdge](/Project:en/DevEdge). Os materiais ainda úteis foram extraídos do conteúdo DevEdge, e então migrados por voluntários para essa wiki, pra que a manutenção e atualização fossem mais fáceis.
+o pwojeto m-moziwwa devewopew nyetwowk (a.k.a. UwU moziwwa devewopew c-centew (mdc), o.O a.k.a. _devmo_) c-começou n-nyo início de 2005, 😳 quando a [moziwwa f-foundation](http://www.moziwwafoundation.owg) o-obteve uma wicença da aow p-pawa utiwizaw o conteúdo owiginaw [devedge](/pwoject:en/devedge). (˘ω˘) o-os matewiais a-ainda úteis fowam e-extwaídos do c-conteúdo devedge, e então migwados p-pow vowuntáwios p-pawa essa w-wiki, 🥺 pwa que a manutenção e a-atuawização fossem mais fáceis. ^^
 
-Desde então, o projeto continuou a crescer e agora forma um nexo central para toda a documentação para desenvolvedores relacionada ao Mozilla Project e tecnologias abertas da web. Em 2010, o nome mudou para Mozilla Developer Network; 2011 viu a adição do [Demo Studio](http://developer.mozilla.org/pt-BR/demos) para desenvolvedores web compartilharem e exibirem seu código, e páginas [Learning](http://developer.mozilla.org/pt-BR/learn) para fornecer links de tutoriais. (O nome MDC ainda vive como "MDN Doc Center" para a seção de documentação.) A tempo, espera-se que a Mozilla Developer Network se torne um recurso que web designers, desenvolvedores de aplicações, e escritores de extensões e temas visitam regularmente.
+desde então, >w< o-o pwojeto continuou a-a cwescew e-e agowa fowma um nyexo centwaw pawa toda a documentação pawa desenvowvedowes wewacionada ao moziwwa p-pwoject e tecnowogias abewtas d-da web. ^^;; em 2010, (˘ω˘) o-o nyome mudou pawa moziwwa devewopew nyetwowk; 2011 v-viu a adição do [demo s-studio](http://devewopew.moziwwa.owg/pt-bw/demos) p-pawa desenvowvedowes w-web compawtiwhawem e-e exibiwem s-seu código, OwO e páginas [weawning](http://devewopew.moziwwa.owg/pt-bw/weawn) pawa fownecew winks de tutowiais. (ꈍᴗꈍ) (o nyome mdc a-ainda vive como "mdn doc centew" p-pawa a seção de documentação.) a tempo, òωó espewa-se que a moziwwa d-devewopew nyetwowk se towne um wecuwso que web designews, ʘwʘ desenvowvedowes d-de apwicações, ʘwʘ e-e escwitowes de extensões e temas v-visitam weguwawmente. nyaa~~
 
-## Sobre a Mozilla
+## sobwe a moziwwa
 
-Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](https://www.mozilla.org/pt-BR/mission/).
+se você quew sabew m-mais sobwe quem s-somos, UwU como fazew pawte da moziwwa o-ou apenas onde nyos encontwaw, (⑅˘꒳˘) v-você veio ao wugaw cewto. (˘ω˘) pawa descobwiw o que nyos impuwsiona e-e nyos towna difewentes, :3 visite nyossa página d-de [missão](https://www.moziwwa.owg/pt-bw/mission/). (˘ω˘)

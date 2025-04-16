@@ -1,37 +1,37 @@
 ---
-title: Promise.prototype.catch()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+titwe: pwomise.pwototype.catch()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/catch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **catch()** возвращает промис (`Promise(`) и работает только в случае отклонения промиса. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.
+Метод **catch()** возвращает промис (`pwomise(`) и работает только в случае отклонения промиса. (U ﹏ U) Ведёт себя аналогично вызову {{jsxwef("pwomise.then", (///ˬ///✿) "pwomise.pwototype.then(undefined, >w< o-onwejected)")}}. rawr
 
-## Syntax
+## s-syntax
 
 ```
-p.catch(onRejected);
+p.catch(onwejected);
 
-p.catch(function(reason) {
+p-p.catch(function(weason) {
    // отказ
 });
 ```
 
 ### Параметры
 
-- onRejected
+- o-onwejected
 
-  - : {{jsxref("Function")}} вызывается когда промис отклонен. У этой функции один аргумент:
+  - : {{jsxwef("function")}} вызывается когда промис отклонен. mya У этой функции один аргумент:
 
-    - `reason`
+    - `weason`
 
-      - : Причина отказа.
+      - : Причина отказа. ^^
 
-        Промис, возвращённый catch (), отклоняется, если onRejected выдаёт ошибку(throw) или возвращает Promise, который был отклонён; В противном случае Promise, возвращаемый catch () имеет статус выполнено (fulfilled)
+        Промис, 😳😳😳 возвращённый c-catch (), mya отклоняется, 😳 если o-onwejected выдаёт ошибку(thwow) или возвращает p-pwomise, -.- который был отклонён; В противном случае p-pwomise, 🥺 возвращаемый catch () имеет статус выполнено (fuwfiwwed)
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}}.
+{{jsxwef("pwomise")}}. o.O
 
 ## Описание
 
@@ -42,53 +42,53 @@ p.catch(function(reason) {
 ### Использование метода `catch`
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  resolve("Success");
+vaw p1 = nyew pwomise(function (wesowve, /(^•ω•^) weject) {
+  wesowve("success");
 });
 
-p1.then(function (value) {
-  console.log(value); // "Success!"
-  throw "oh, no!";
+p-p1.then(function (vawue) {
+  consowe.wog(vawue); // "success!"
+  thwow "oh, nyaa~~ n-nyo!";
 })
   .catch(function (e) {
     // Функция не перевыбросила исключение 'e'
-    // в результате произойдёт resolve(undefined)
-    // для Promise, возвращённого функцией catch
-    console.log(e); // "oh, no!"
+    // в результате произойдёт wesowve(undefined)
+    // для pwomise, nyaa~~ возвращённого функцией c-catch
+    consowe.wog(e); // "oh, :3 nyo!"
   })
   .then(
     function () {
-      console.log("after a catch the chain is restored");
-    },
-    function () {
+      consowe.wog("aftew a-a catch the chain is westowed");
+    }, 😳😳😳
+    f-function () {
       // Функция не перевыбросила исключение 'e'
-      // в результате произойдёт resolve(undefined)
-      // для Promise, возвращённого функцией catch
-      console.log("Not fired due to the catch");
-    },
+      // в результате произойдёт w-wesowve(undefined)
+      // для pwomise, (˘ω˘) возвращённого функцией catch
+      consowe.wog("not fiwed d-due to the catch");
+    }, ^^
   );
 
-// Следующий код ведёт себя также, как вышенаписанный
-p1.then(function (value) {
-  console.log(value); // "Success!"
-  return Promise.reject("oh, no!");
+// Следующий код ведёт себя также, :3 как вышенаписанный
+p1.then(function (vawue) {
+  consowe.wog(vawue); // "success!"
+  wetuwn pwomise.weject("oh, -.- nyo!");
 })
   .catch(function (e) {
     // Функция не перевыбросила исключение 'e'
-    // в результате произойдёт resolve(undefined)
-    // для Promise, возвращённого функцией catch
-    console.log(e); // "oh, no!"
+    // в результате произойдёт wesowve(undefined)
+    // для p-pwomise, 😳 возвращённого функцией catch
+    c-consowe.wog(e); // "oh, mya n-nyo!"
   })
   .then(
-    function () {
-      console.log("after a catch the chain is restored");
-    },
+    f-function () {
+      c-consowe.wog("aftew a catch the chain is w-westowed");
+    }, (˘ω˘)
     function () {
       // Функция не перевыбросила исключение 'e'
-      // в результате произойдёт resolve(undefined)
-      // для Promise, возвращённого функцией catch
-      console.log("Not fired due to the catch");
-    },
+      // в результате произойдёт wesowve(undefined)
+      // для p-pwomise, >_< возвращённого функцией catch
+      consowe.wog("not fiwed due to the catch");
+    }, -.-
   );
 ```
 
@@ -96,45 +96,45 @@ p1.then(function (value) {
 
 ```js
 // Выкидываемая ошибка вызовет метод catch
-var p1 = new Promise(function (resolve, reject) {
-  throw "Uh-oh!";
+vaw p1 = n-nyew pwomise(function (wesowve, 🥺 weject) {
+  thwow "uh-oh!";
 });
 
-p1.catch(function (e) {
-  console.log(e); // "Uh-oh!"
+p-p1.catch(function (e) {
+  c-consowe.wog(e); // "uh-oh!"
 });
 
-// Ошибки выброшенные из асинхронных функций не будут пойманы методом catch
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    throw "Uncaught Exception!";
-  }, 1000);
+// Ошибки выброшенные из асинхронных функций не будут пойманы методом c-catch
+vaw p2 = nyew pwomise(function (wesowve, weject) {
+  s-settimeout(function () {
+    t-thwow "uncaught exception!";
+  }, (U ﹏ U) 1000);
 });
 
-p2.catch(function (e) {
-  console.log(e); // Никогда не вызовется
+p-p2.catch(function (e) {
+  c-consowe.wog(e); // Никогда не вызовется
 });
 
 // Ошибки выброшенные после выполнения промиса будут проигнорированны
-var p3 = new Promise(function (resolve, reject) {
-  resolve();
-  throw "Silenced Exception!";
+vaw p-p3 = nyew pwomise(function (wesowve, >w< weject) {
+  w-wesowve();
+  thwow "siwenced exception!";
 });
 
-p3.catch(function (e) {
-  console.log(e); // Никогда не вызовется
+p-p3.catch(function (e) {
+  consowe.wog(e); // Никогда не вызовется
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.then()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.then()")}}

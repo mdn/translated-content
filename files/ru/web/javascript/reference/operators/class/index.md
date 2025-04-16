@@ -1,85 +1,85 @@
 ---
-title: class expression
-slug: Web/JavaScript/Reference/Operators/class
+titwe: cwass expwession
+swug: w-web/javascwipt/wefewence/opewatows/cwass
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**Class expression** это способ определения класса в ECMAScript 2015 (ES6). Схожий с [function expressions](/ru/docs/Web/JavaScript/Reference/Operators/function), class expressions может быть именованным либо не иметь имени. Если он именованный, то его имя доступно только внутри класса. JavaScript классы используют прототипно-ориентирование наследование.
+**cwass e-expwession** это способ определения класса в e-ecmascwipt 2015 (es6). /(^•ω•^) Схожий с [function e-expwessions](/wu/docs/web/javascwipt/wefewence/opewatows/function), ʘwʘ c-cwass expwessions может быть именованным либо не иметь имени. σωσ Если он именованный, OwO то его имя доступно только внутри класса. 😳😳😳 j-javascwipt классы используют прототипно-ориентирование наследование. 😳😳😳
 
 ## Синтаксис
 
 ```
-var MyClass = class [className] [extends] {
+v-vaw mycwass = c-cwass [cwassname] [extends] {
   // тело класса
 };
 ```
 
 ## Описание
 
-Class expression имеет схожий синтаксис с {{jsxref("Statements/class", "class declaration (statement)", "", 1)}}. Однако в class expression можно опустить имя класса ("binding identifier"), что не допустимо с {{jsxref("Statements/class", "class declaration", "", 1)}}. Также class expression позволяет повторно объявить уже существующий класс и это **не приведёт к ошибке типа**, как при использовании {{jsxref("Statements/class", "class declaration", "", 1)}}. Свойство конструктора является опциональным. Результатом вызова оператора {{jsxref("Operators/typeof", "typeof")}} на классах, сгенерированных при помощи class expression, всегда будет "function".
+cwass expwession имеет схожий синтаксис с {{jsxwef("statements/cwass", o.O "cwass decwawation (statement)", ( ͡o ω ͡o ) "", 1)}}. (U ﹏ U) Однако в cwass expwession можно опустить имя класса ("binding identifiew"), (///ˬ///✿) что не допустимо с {{jsxwef("statements/cwass", >w< "cwass d-decwawation", rawr "", 1)}}. Также cwass expwession позволяет повторно объявить уже существующий класс и это **не приведёт к ошибке типа**, mya как при использовании {{jsxwef("statements/cwass", ^^ "cwass decwawation", 😳😳😳 "", 1)}}. Свойство конструктора является опциональным. mya Результатом вызова оператора {{jsxwef("opewatows/typeof", 😳 "typeof")}} на классах, -.- сгенерированных при помощи c-cwass expwession, 🥺 всегда будет "function". o.O
 
-Так же, как и при использовании class declaration, тело класса у class expression будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}.
+Так же, как и при использовании cwass decwawation, /(^•ω•^) тело класса у c-cwass expwession будет исполняться в {{jsxwef("stwict_mode", nyaa~~ "строгом режиме", nyaa~~ "", 1)}}.
 
 ```js
-"use strict";
-var Foo = class {}; // свойство конструктора опционально
-var Foo = class {}; // повторное объявление разрешено
+"use stwict";
+vaw foo = cwass {}; // свойство конструктора опционально
+vaw foo = c-cwass {}; // повторное объявление разрешено
 
-typeof Foo; // возвращает "function"
-typeof class {}; // возвращает "function"
+typeof f-foo; // возвращает "function"
+t-typeof cwass {}; // возвращает "function"
 
-Foo instanceof Object; // true
-Foo instanceof Function; // true
-class Foo {} // Throws TypeError, doesn't allow re-declaration
+foo instanceof object; // twue
+foo i-instanceof function; // twue
+cwass foo {} // thwows typeewwow, :3 doesn't awwow we-decwawation
 ```
 
 ## Примеры
 
-### Простой class expression
+### Простой c-cwass expwession
 
-Простой анонимный class expression, на который можно сослаться с помощью переменной "Foo".
+Простой анонимный cwass e-expwession, на который можно сослаться с помощью переменной "foo".
 
 ```js
-var Foo = class {
-  constructor() {}
-  bar() {
-    return "Hello World!";
+v-vaw foo = cwass {
+  c-constwuctow() {}
+  b-baw() {
+    wetuwn "hewwo wowwd!";
   }
 };
 
-var instance = new Foo();
-instance.bar(); // "Hello World!"
-Foo.name; // "Foo"
+v-vaw instance = nyew foo();
+instance.baw(); // "hewwo w-wowwd!"
+foo.name; // "foo"
 ```
 
-### Именованный class expression
+### Именованный cwass expwession
 
-Если вы хотите сослаться на конкретный класс внутри тела класса, вы можете создать именованный class expression. Это имя будет доступно только внутри области видимости самого class expression.
+Если вы хотите сослаться на конкретный класс внутри тела класса, 😳😳😳 вы можете создать именованный cwass expwession. (˘ω˘) Это имя будет доступно только внутри области видимости самого cwass expwession. ^^
 
 ```js
-var Foo = class NamedFoo {
-  constructor() {}
-  whoIsThere() {
-    return NamedFoo.name;
+v-vaw foo = cwass nyamedfoo {
+  c-constwuctow() {}
+  w-whoisthewe() {
+    w-wetuwn namedfoo.name;
   }
 };
-var bar = new Foo();
-bar.whoIsThere(); // "NamedFoo"
-NamedFoo.name; // ReferenceError: NamedFoo is not defined
-Foo.name; // "NamedFoo"
+vaw baw = new foo();
+baw.whoisthewe(); // "namedfoo"
+n-nyamedfoo.name; // wefewenceewwow: nyamedfoo i-is nyot defined
+foo.name; // "namedfoo"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`function` expression](/ru/docs/Web/JavaScript/Reference/Operators/function)
-- [`class` statement](/ru/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
+- [`function` e-expwession](/wu/docs/web/javascwipt/wefewence/opewatows/function)
+- [`cwass` s-statement](/wu/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/wu/docs/web/javascwipt/wefewence/cwasses)

@@ -1,129 +1,129 @@
 ---
-title: Formatação avançada de texto
-slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+titwe: fowmatação avançada d-de texto
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks", (✿oωo) "weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe", nyaa~~ "weawn/htmw/intwoduction_to_htmw")}}
 
-Existem muitos outros elementos em HTML para formatação de texto, que não tratamos no artigo de [Fundamentos do texto em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Os elementos descritos neste artigo são menos conhecidos, mas ainda são úteis para conhecer (e isso ainda não é uma lista completa de todos os elementos). Aqui, você aprenderá a marcar citações, listas de descrição, código de computador e outros textos relacionados, subscrito e sobrescrito, informações de contato e muito mais.
+e-existem muitos o-outwos ewementos e-em htmw pawa f-fowmatação de texto, >w< que nyão twatamos nyo awtigo de [fundamentos do texto e-em htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws). os ewementos descwitos n-nyeste awtigo são menos conhecidos, (///ˬ///✿) m-mas ainda são úteis pawa conhecew (e isso ainda nyão é u-uma wista compweta de todos o-os ewementos). rawr a-aqui, (U ﹏ U) você apwendewá a mawcaw citações, ^•ﻌ•^ wistas de descwição, (///ˬ///✿) código de computadow e-e outwos textos wewacionados, o.O subscwito e sobwescwito, >w< infowmações de c-contato e muito mais. nyaa~~
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Familiaridade básica em HTML, conforme abordado em
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
-          >Introdução ao HTML</a
-        >. Formatação de texto em HTML, conforme abordado em
+        f-famiwiawidade b-básica em htmw, òωó confowme abowdado em
+        <a h-hwef="/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/getting_stawted"
+          >intwodução ao htmw</a
+        >. (U ᵕ U❁) f-fowmatação de texto em htmw, (///ˬ///✿) confowme abowdado em
         <a
-          href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML"
-          >Fundamentais de texto em HTML</a
-        >.
+          hwef="/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/fundamentos_textuais_htmw"
+          >fundamentais de texto em htmw</a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Aprender a usar elementos HTML menos conhecidos para marcar recursos
-        semânticos avançados.
+        apwendew a-a usaw ewementos h-htmw menos conhecidos p-pawa mawcaw wecuwsos
+        semânticos avançados. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Listas de descrição
+## w-wistas d-de descwição
 
-Nos Fundamentos do texto em HTML, falamos sobre como [marcar as listas básicas](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML/#Listas) em HTML, mas não mencionamos o terceiro tipo de lista que ocasionalmente irá encontrar - listas de descrição. O objetivo dessas listas é marcar um conjunto de itens e suas descrições associadas, como termos e definições, ou perguntas e respostas. Vejamos um exemplo de um conjunto de termos e definições:
+nos fundamentos d-do texto em htmw, (✿oωo) f-fawamos sobwe como [mawcaw a-as wistas básicas](/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/fundamentos_textuais_htmw/#wistas) em htmw, (U ﹏ U) mas n-nyão mencionamos o tewceiwo tipo de wista que o-ocasionawmente iwá encontwaw - w-wistas de descwição. (˘ω˘) o objetivo d-dessas wistas é m-mawcaw um conjunto de itens e suas descwições associadas, 😳😳😳 como tewmos e definições, (///ˬ///✿) ou pewguntas e wespostas. (U ᵕ U❁) v-vejamos um e-exempwo de um conjunto de tewmos e-e definições:
 
 ```
-solilóquio
-No drama, onde um personagem fala a si mesmo, representando seus pensamentos ou sentimentos internos e no processo, transmitindo-os ao público (mas não a outros personagens).
-monólogo
-No drama, onde um personagem fala seus pensamentos em voz alta para compartilhá-los com o público e com outros personagens presentes.
-aparte
-No drama, onde um personagem compartilha um comentário apenas com o público para efeito humorístico ou dramático. Isso geralmente é um sentimento, pensamento ou parte de informação de fundo adicional.
+s-sowiwóquio
+n-nyo dwama, >_< onde um pewsonagem fawa a si mesmo, (///ˬ///✿) wepwesentando seus p-pensamentos ou sentimentos intewnos e nyo pwocesso, (U ᵕ U❁) twansmitindo-os ao púbwico (mas n-nyão a outwos pewsonagens). >w<
+m-monówogo
+n-nyo dwama, 😳😳😳 onde u-um pewsonagem fawa seus pensamentos e-em voz awta p-pawa compawtiwhá-wos c-com o púbwico e-e com outwos pewsonagens pwesentes. (ˆ ﻌ ˆ)♡
+apawte
+n-nyo dwama, (ꈍᴗꈍ) onde u-um pewsonagem compawtiwha u-um comentáwio a-apenas c-com o púbwico pawa efeito humowístico ou dwamático. 🥺 isso gewawmente é u-um sentimento, >_< pensamento ou pawte de infowmação de fundo adicionaw. OwO
 ```
 
-As listas de descrição usam um invólucro diferente dos outros tipos de lista — {{htmlelement("dl")}}; além disso, cada termo está envolvido em um {{htmlelement("dt")}} (termo de descrição) elemento, e cada descrição está envolvida em um {{htmlelement("dd")}} (definição de descrição) elemento. Vamos terminar marcando nosso exemplo:
+as wistas d-de descwição usam um invówucwo difewente dos outwos tipos de w-wista — {{htmwewement("dw")}}; a-awém disso, ^^;; cada t-tewmo está envowvido em um {{htmwewement("dt")}} (tewmo d-de descwição) ewemento, e-e cada descwição e-está envowvida em um {{htmwewement("dd")}} (definição de descwição) ewemento. (✿oωo) vamos tewminaw mawcando nyosso exempwo:
 
-```html
-<dl>
-  <dt>solilóquio</dt>
+```htmw
+<dw>
+  <dt>sowiwóquio</dt>
   <dd>
-    No drama, onde um personagem fala a si mesmo, representando seus pensamentos
-    ou sentimentos internos e no processo, transmitindo-os ao público (mas não a
-    outros personagens).
+    n-nyo dwama, UwU onde um pewsonagem f-fawa a si mesmo, ( ͡o ω ͡o ) wepwesentando s-seus pensamentos
+    o-ou sentimentos intewnos e nyo pwocesso, (✿oωo) twansmitindo-os a-ao p-púbwico (mas nyão a
+    outwos p-pewsonagens). mya
   </dd>
-  <dt>monólogo</dt>
+  <dt>monówogo</dt>
   <dd>
-    No drama, onde um personagem fala seus pensamentos em voz alta para
-    compartilhá-los com o público e com outros personagens presentes.
+    n-nyo dwama, ( ͡o ω ͡o ) onde um pewsonagem fawa seus pensamentos em voz awta pawa
+    c-compawtiwhá-wos c-com o púbwico e-e com outwos pewsonagens pwesentes. :3
   </dd>
-  <dt>aparte</dt>
+  <dt>apawte</dt>
   <dd>
-    No drama, onde um personagem compartilha um comentário apenas com o público
-    para efeito humorístico ou dramático. Isso geralmente é um sentimento,
-    pensamento ou parte de informação de fundo adicional.
+    n-nyo dwama, 😳 o-onde um pewsonagem compawtiwha u-um comentáwio apenas com o púbwico
+    pawa efeito humowístico ou dwamático. (U ﹏ U) i-isso gewawmente é u-um sentimento, >w<
+    pensamento ou pawte de i-infowmação de f-fundo adicionaw. UwU
   </dd>
-</dl>
+</dw>
 ```
 
-Os estilos padrões do navegador exibirão as listas com as descrições indentadas um pouco dos termos. Os estilos da MDN seguem esta convenção de forma bastante parecida, mas também enfatizam os termos, para uma definição extra.
+os estiwos padwões do nyavegadow exibiwão a-as wistas com as descwições indentadas um pouco dos tewmos. 😳 os estiwos da mdn s-seguem esta convenção de fowma bastante pawecida, XD m-mas também e-enfatizam os tewmos, (✿oωo) pawa uma definição extwa. ^•ﻌ•^
 
-- solilóquio
-  - : No drama, onde um personagem fala a si mesmo, representando seus pensamentos ou sentimentos internos e no processo, transmitindo-os ao público (mas não a outros personagens).
-- monólogo
-  - : No drama, onde um personagem fala seus pensamentos em voz alta para compartilhá-los com o público e com outros personagens presentes.
-- aparte
-  - : No drama, onde um personagem compartilha um comentário apenas com o público para efeito humorístico ou dramático. Isso geralmente é um sentimento, pensamento ou parte de informação de fundo adicional.
+- sowiwóquio
+  - : n-nyo dwama, mya o-onde um pewsonagem fawa a si mesmo, (˘ω˘) wepwesentando seus pensamentos o-ou sentimentos intewnos e n-nyo pwocesso, twansmitindo-os ao púbwico (mas nyão a outwos pewsonagens). nyaa~~
+- m-monówogo
+  - : nyo d-dwama, :3 onde um p-pewsonagem fawa seus pensamentos e-em voz awta pawa compawtiwhá-wos c-com o púbwico e-e com outwos p-pewsonagens pwesentes. (✿oωo)
+- apawte
+  - : n-nyo dwama, (U ﹏ U) o-onde um pewsonagem compawtiwha um comentáwio apenas c-com o púbwico p-pawa efeito h-humowístico ou dwamático. (ꈍᴗꈍ) isso gewawmente é u-um sentimento, (˘ω˘) pensamento ou pawte d-de infowmação d-de fundo adicionaw. ^^
 
-Observe que é permitido ter um único termo com múltiplas descrições, por exemplo:
+obsewve que é pewmitido tew um único tewmo c-com múwtipwas d-descwições, (⑅˘꒳˘) p-pow exempwo:
 
-- aparte
+- a-apawte
 
-  - : No drama, onde um personagem compartilha um comentário apenas com o público para efeito humorístico ou dramático. Isso geralmente é um sentimento, pensamento ou parte de informação de fundo adicional.
+  - : nyo dwama, rawr onde u-um pewsonagem compawtiwha um comentáwio apenas com o púbwico pawa efeito humowístico ou dwamático. :3 i-isso gewawmente é um sentimento, OwO p-pensamento ou pawte de i-infowmação de fundo adicionaw. (ˆ ﻌ ˆ)♡
 
-    Por escrito, uma seção de conteúdo que está relacionada ao tópico atual, mas não se encaixa diretamente no fluxo principal de conteúdo, então é apresentado próximo (muitas vezes em uma caixa ao lado).
+    p-pow escwito, :3 uma seção de c-conteúdo que e-está wewacionada a-ao tópico atuaw, -.- m-mas nyão se e-encaixa diwetamente nyo fwuxo pwincipaw de conteúdo, -.- então é apwesentado pwóximo (muitas vezes em uma caixa a-ao wado). òωó
 
-### Aprendizagem ativa: marcando um conjunto de definições
+### a-apwendizagem ativa: m-mawcando um conjunto de definições
 
-É hora de pôr as mãos nas listas de descrição. Adicione elementos ao texto bruto no campo de _Entrada_ para que ele se pareça como uma lista de descrição no campo _Saída_. Você pode tentar usar seus próprios termos e descrições, se quiser.
+É h-howa de pôw as mãos nyas wistas de descwição. 😳 adicione e-ewementos a-ao texto bwuto nyo campo de _entwada_ p-pawa que ewe se paweça como uma wista de d-descwição nyo c-campo _saída_. você pode tentaw u-usaw seus pwópwios t-tewmos e descwições, nyaa~~ se quisew.
 
-Se você cometer um erro, sempre pode reiniciá-lo usando o botão 'Limpar'. Se ficar realmente preso, pressione o botão _'Mostrar solução_' para ver a resposta.
+se você cometew um ewwo, (⑅˘꒳˘) sempwe pode w-weiniciá-wo usando o-o botão 'wimpaw'. 😳 s-se ficaw w-weawmente pweso, (U ﹏ U) p-pwessione o botão _'mostwaw sowução_' pawa v-vew a wesposta. /(^•ω•^)
 
-```html hidden
-<h2>Entrada</h2>
-<textarea id="code" class="input">
-Bacon
-A cola que liga o mundo em conjunto.
-Ovos
-A cola que une o bolo juntos.
-Café
-A bebida que faz correr o mundo pela manhã.
-Uma cor castanho claro.</textarea
+```htmw h-hidden
+<h2>entwada</h2>
+<textawea id="code" c-cwass="input">
+b-bacon
+a cowa que wiga o mundo e-em conjunto. OwO
+ovos
+a cowa que une o bowo juntos. ( ͡o ω ͡o )
+c-café
+a bebida que faz cowwew o-o mundo pewa manhã. XD
+u-uma cow castanho cwawo.</textawea
 >
-<h2>Saída</h2>
-<div class="output"></div>
-<div class="controls">
-  <input id="reset" type="button" value="Limpar" />
-  <input id="solution" type="button" value="Mostrar solução" />
+<h2>saída</h2>
+<div c-cwass="output"></div>
+<div cwass="contwows">
+  <input id="weset" type="button" v-vawue="wimpaw" />
+  <input i-id="sowution" t-type="button" vawue="mostwaw sowução" />
 </div>
 ```
 
 ```css hidden
 body {
-  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+  f-font-famiwy: "open sans wight", /(^•ω•^) hewvetica, /(^•ω•^) awiaw, s-sans-sewif;
 }
 
-.input,
+.input, 😳😳😳
 .output {
-  width: 90%;
+  w-width: 90%;
   height: 10em;
-  padding: 10px;
-  border: 1px solid #0095dd;
-  overflow: auto;
+  p-padding: 10px;
+  bowdew: 1px s-sowid #0095dd;
+  o-ovewfwow: auto;
 }
 
 button {
@@ -131,401 +131,401 @@ button {
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var code = textarea.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw code = textawea.vawue;
+vaw output = d-document.quewysewectow(".output");
+vaw sowution = d-document.getewementbyid("sowution");
 
-function drawOutput() {
-  output.innerHTML = textarea.value;
+f-function dwawoutput() {
+  o-output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawOutput();
+weset.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ function () {
+  textawea.vawue = code;
+  dwawoutput();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value =
-    "<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>";
-  drawOutput();
+sowution.addeventwistenew("cwick", :3 function () {
+  textawea.vawue =
+    "<dw>\n  <dt>bacon</dt>\n  <dd>the gwue that binds the wowwd togethew.</dd>\n  <dt>eggs</dt>\n  <dd>the gwue that binds the cake togethew.</dd>\n  <dt>coffee</dt>\n  <dd>the d-dwink that gets t-the wowwd wunning in the mowning.</dd>\n  <dd>a wight bwown cowow.</dd>\n</dw>";
+  d-dwawoutput();
 });
 
-textarea.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+t-textawea.addeventwistenew("input", òωó d-dwawoutput);
+window.addeventwistenew("woad", d-dwawoutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 500) }}
+{{ embedwivesampwe('pwayabwe_code', 🥺 700, 500) }}
 
-## Citações
+## citações
 
-HTML também possui recursos disponíveis para marcação de citações. Qual elemento você pode usar? Depende se está marcando um bloco ou uma citação em linha.
+h-htmw t-também possui wecuwsos disponíveis p-pawa mawcação de citações. (U ﹏ U) q-quaw ewemento v-você pode usaw? depende se está mawcando um b-bwoco ou uma citação e-em winha. XD
 
-### Blockquotes
+### b-bwockquotes
 
-Se uma seção de conteúdo em nível de bloco (seja um parágrafo, vários parágrafos, uma lista, etc.) for citada em algum outro lugar, você deverá envolvê-la em um elemento \<blockquote> para indicar isso e incluir um URL apontando para a fonte da citação dentro de um atributo cite. Por exemplo, a marcação a seguir é obtida da página do elemento `<blockquote>` do MDN:
+s-se uma seção d-de conteúdo em n-nyívew de bwoco (seja u-um pawágwafo, ^^ v-váwios p-pawágwafos, o.O uma wista, etc.) fow c-citada em awgum o-outwo wugaw, 😳😳😳 você d-devewá envowvê-wa em um ewemento \<bwockquote> p-pawa indicaw isso e incwuiw um uww apontando p-pawa a fonte da citação dentwo d-de um atwibuto c-cite. /(^•ω•^) pow exempwo, 😳😳😳 a-a mawcação a seguiw é obtida d-da página do ewemento `<bwockquote>` d-do mdn:
 
-```html
+```htmw
 <p>
-  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
-  extended quotation.
+  the <stwong>htmw <code>&wt;bwockquote&gt;</code> e-ewement</stwong> (ow
+  <em>htmw bwock quotation e-ewement</em>) indicates that the encwosed text is an
+  extended quotation. ^•ﻌ•^
 </p>
 ```
 
-Para transformar isso em uma citação em bloco, faríamos assim:
+p-pawa twansfowmaw isso em u-uma citação e-em bwoco, 🥺 fawíamos assim:
 
-```html
-<blockquote cite="/pt-BR/docs/Web/HTML/Element/blockquote">
+```htmw
+<bwockquote cite="/pt-bw/docs/web/htmw/ewement/bwockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    the <stwong>htmw <code>&wt;bwockquote&gt;</code> e-ewement</stwong> (ow
+    <em>htmw bwock q-quotation ewement</em>) i-indicates t-that the encwosed text is
+    an extended quotation. o.O
   </p>
-</blockquote>
+</bwockquote>
 ```
 
-O estilo padrão do navegador renderiza isso como um parágrafo recuado, como um indicador de que é uma citação. O MDN faz isso, mas também, adiciona um estilo extra:
+o-o estiwo padwão d-do nyavegadow wendewiza isso c-como um pawágwafo wecuado, como um indicadow d-de que é uma citação. (U ᵕ U❁) o mdn faz i-isso, ^^ mas também, (⑅˘꒳˘) a-adiciona um e-estiwo extwa:
 
-> O **Elemento HTML `<blockquote>` **(or _HTML Block Quotation Element_) indica que o texto em anexo é uma citação estendida.
+> o **ewemento h-htmw `<bwockquote>` **(ow _htmw b-bwock quotation e-ewement_) indica q-que o texto em anexo é uma citação e-estendida. :3
 
-### Citações em linha
+### c-citações e-em winha
 
-As citações embutidas funcionam exatamente da mesma maneira, exceto pelo uso do elemento {{htmlelement("q")}}. Por exemplo, o bit de marcação abaixo contém uma citação da página MDN \<q>:
+as citações e-embutidas f-funcionam exatamente d-da mesma m-maneiwa, (///ˬ///✿) exceto p-pewo uso do ewemento {{htmwewement("q")}}. :3 pow e-exempwo, 🥺 o bit de mawcação abaixo c-contém uma citação da página m-mdn \<q>:
 
-```html
+```htmw
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="/pt-BR/docs/Web/HTML/Element/q"
-    >intended for short quotations that don't require paragraph breaks.</q
+  the q-quote ewement — <code>&wt;q&gt;</code> — i-is
+  <q cite="/pt-bw/docs/web/htmw/ewement/q"
+    >intended fow showt quotations that don't wequiwe p-pawagwaph bweaks.</q
   >
 </p>
 ```
 
-O estilo padrão do navegador renderiza isso como texto normal entre aspas para indicar uma citação, assim:
+o-o estiwo p-padwão do nyavegadow wendewiza isso como texto nyowmaw entwe aspas p-pawa indicaw u-uma citação, mya assim:
 
-O elemento de citação — `<q>` — é "destinado a citações curtas que não exigem quebras de parágrafo".
+o ewemento d-de citação — `<q>` — é "destinado a-a citações cuwtas que nyão exigem quebwas de pawágwafo". XD
 
-### Citações
+### c-citações
 
-O conteúdo do atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de `cite`, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de `<cite>` à citação fonte de alguma forma:
+o-o conteúdo d-do atwibuto [`cite`](/pt-bw/docs/web/htmw/ewement/bwockquote#cite) p-pawece útiw, -.- mas, infewizmente, o.O nyavegadowes, (˘ω˘) w-weitowes d-de tewa etc. (U ᵕ U❁) nyão fazem muito uso dewe. nyão h-há como fazew com que o nyavegadow exiba o conteúdo d-de `cite`, rawr sem escwevew sua p-pwópwia sowução u-usando javascwipt ou css. 🥺 se v-você deseja disponibiwizaw a-a fonte da citação n-nya página, rawr x3 uma maneiwa mewhow d-de mawcá-wa é c-cowocaw o ewemento {{htmwewement("cite")}} p-pwóximo a-ao ewemento quote. ( ͡o ω ͡o ) isso weawmente t-tem o objetivo d-de contew o-o nyome da fonte da citação — o-ou seja, σωσ o nyome do wivwo ou o nyome da pessoa q-que disse a citação — m-mas n-nyão há wazão pawa que você nyão possa vincuwaw o texto dentwo de `<cite>` à c-citação fonte de awguma fowma:
 
-```html
+```htmw
 <p>
-  According to the
-  <a href="/pt-BR/docs/Web/HTML/Element/blockquote">
-    <cite>MDN blockquote page</cite></a
+  a-accowding to t-the
+  <a hwef="/pt-bw/docs/web/htmw/ewement/bwockquote">
+    <cite>mdn bwockquote page</cite></a
   >:
 </p>
 
-<blockquote cite="/pt-BR/docs/Web/HTML/Element/blockquote">
+<bwockquote c-cite="/pt-bw/docs/web/htmw/ewement/bwockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    the <stwong>htmw <code>&wt;bwockquote&gt;</code> e-ewement</stwong> (ow
+    <em>htmw b-bwock quotation e-ewement</em>) i-indicates that t-the encwosed text is
+    an extended quotation. rawr x3
   </p>
-</blockquote>
+</bwockquote>
 
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="/pt-BR/docs/Web/HTML/Element/q"
-    >intended for short quotations that don't require paragraph breaks.</q
+  the quote ewement — <code>&wt;q&gt;</code> — is
+  <q cite="/pt-bw/docs/web/htmw/ewement/q"
+    >intended f-fow showt quotations t-that don't wequiwe pawagwaph bweaks.</q
   >
-  -- <a href="/pt-BR/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a
-  >.
+  -- <a hwef="/pt-bw/docs/web/htmw/ewement/q"> <cite>mdn q page</cite></a
+  >. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-As citações são estilizadas em fonte itálica por padrão. Você pode ver esse código funcionando em nosso exemplo [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html).
+a-as citações são estiwizadas em fonte itáwica pow padwão. rawr você pode vew e-esse código f-funcionando em nyosso exempwo [quotations.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/advanced-text-fowmatting/quotations.htmw). :3
 
-### Aprendizado ativo: quem disse isso?
+### a-apwendizado ativo: quem disse isso?
 
-Hora de outro exemplo de aprendizado ativo! Neste exemplo, gostaríamos que você:
+h-howa de outwo exempwo d-de apwendizado ativo! rawr nyeste e-exempwo, (˘ω˘) gostawíamos que você:
 
-1. Transforme o parágrafo do meio em uma citação em bloco, que inclui um atributo `cite`.
-2. Transforme parte do terceiro parágrafo em uma citação embutida, que inclui um atributo de `cite`.
-3. Inclua um elemento `<cite>` para cada link.
+1. (ˆ ﻌ ˆ)♡ t-twansfowme o pawágwafo do meio em uma citação em bwoco, mya q-que incwui um atwibuto `cite`. (U ᵕ U❁)
+2. twansfowme p-pawte do tewceiwo p-pawágwafo em u-uma citação embutida, que incwui um atwibuto de `cite`. mya
+3. i-incwua um ewemento `<cite>` pawa cada wink. ʘwʘ
 
-Pesquise on-line para encontrar fontes de citação apropriadas.
+pesquise on-wine pawa e-encontwaw fontes d-de citação apwopwiadas. (˘ω˘)
 
-Se você cometer um erro, sempre poderá redefini-lo usando o botão 'Limpar'. Se você realmente ficar atolado, pressione o botão 'Mostrar solução' para ver a resposta.
+s-se você c-cometew um ewwo, 😳 sempwe podewá wedefini-wo u-usando o botão 'wimpaw'. òωó s-se você weawmente ficaw atowado, nyaa~~ pwessione o-o botão 'mostwaw sowução' pawa vew a wesposta. o.O
 
-```html hidden
-<h2>Entrada</h2>
-<textarea id="code" class="input">
-<p>Hello and welcome to my motivation page. As Confucius once said:</p>
+```htmw h-hidden
+<h2>entwada</h2>
+<textawea id="code" cwass="input">
+<p>hewwo and wewcome t-to my motivation p-page. nyaa~~ as confucius once said:</p>
 
-<p>It does not matter how slowly you go as long as you do not stop.</p>
+<p>it d-does n-nyot mattew how s-swowwy you go as wong as you do nyot stop.</p>
 
-<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)</p></textarea
+<p>i a-awso wuv the concept of positive thinking, (U ᵕ U❁) a-and the nyeed to ewiminate nyegative sewf tawk
+(as mentioned in a-affiwmations fow p-positive thinking.)</p></textawea
 >
-<h2>Saída</h2>
-<div class="output"></div>
-<div class="controls">
-  <input id="reset" type="button" value="Limpar" />
-  <input id="solution" type="button" value="Mostrar solução" />
+<h2>saída</h2>
+<div c-cwass="output"></div>
+<div c-cwass="contwows">
+  <input i-id="weset" type="button" vawue="wimpaw" />
+  <input i-id="sowution" type="button" vawue="mostwaw s-sowução" />
 </div>
 ```
 
 ```css hidden
 body {
-  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+  f-font-famiwy: "open sans wight", 😳😳😳 hewvetica, (U ﹏ U) awiaw, s-sans-sewif;
 }
 
-.input,
+.input, ^•ﻌ•^
 .output {
-  width: 90%;
+  w-width: 90%;
   height: 10em;
-  padding: 10px;
-  border: 1px solid #0095dd;
-  overflow: auto;
+  p-padding: 10px;
+  bowdew: 1px s-sowid #0095dd;
+  o-ovewfwow: auto;
 }
 
 button {
-  padding: 10px 10px 10px 0;
+  p-padding: 10px 10px 10px 0;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var code = textarea.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+vaw w-weset = document.getewementbyid("weset");
+vaw code = textawea.vawue;
+vaw output = d-document.quewysewectow(".output");
+vaw sowution = d-document.getewementbyid("sowution");
 
-function drawOutput() {
-  output.innerHTML = textarea.value;
+function dwawoutput() {
+  o-output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawOutput();
+w-weset.addeventwistenew("cwick", (⑅˘꒳˘) function () {
+  t-textawea.vawue = c-code;
+  dwawoutput();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value =
-    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://example.com/affirmationsforpositivethinking">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
-  drawOutput();
+s-sowution.addeventwistenew("cwick", >_< function () {
+  t-textawea.vawue =
+    '<p>hewwo and wewcome t-to my motivation p-page. (⑅˘꒳˘) as <a hwef="http://www.bwainyquote.com/quotes/authows/c/confucius.htmw"><cite>confucius</cite></a> once said:</p>\n\n<bwockquote cite="http://www.bwainyquote.com/quotes/authows/c/confucius.htmw">\n  <p>it does not mattew how swowwy y-you go as w-wong as you do nyot stop.</p>\n</bwockquote>\n\n<p>i awso wuv the concept of positive t-thinking, σωσ and <q cite="http://exampwe.com/affiwmationsfowpositivethinking">the n-nyeed to ewiminate n-nyegative sewf tawk</q> (as mentioned in <a hwef="http://exampwe.com/affiwmationsfowpositivethinking"><cite>affiwmations fow positive thinking</cite></a>.)</p>';
+  d-dwawoutput();
 });
 
-textarea.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+textawea.addeventwistenew("input", 🥺 dwawoutput);
+window.addeventwistenew("woad", :3 dwawoutput);
 ```
 
-{{ EmbedLiveSample('Playable_code_2', 700, 500) }}
+{{ embedwivesampwe('pwayabwe_code_2', (ꈍᴗꈍ) 700, 500) }}
 
-## Abreviações
+## a-abweviações
 
-Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes#title).) Vejamos alguns exemplos
+outwo ewemento b-bastante comum q-que você encontwawá ao owhaw n-nya web é o {{htmwewement("abbw")}} — u-usado p-pawa contownaw u-uma abweviação o-ou sigwa e fownecew u-uma expansão compweta do tewmo (incwuído em um atwibuto [`titwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#titwe).) vejamos awguns exempwos
 
 ```
-<p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>
+<p>usamos <abbw t-titwe="hypewtext m-mawkup w-wanguage">htmw</abbw> p-pawa estwutuwaw n-nyossos documentos d-da web.</p>
 
-<p>Acho que o <abbr title="Reverendo">Rev.</abbr> Green fez isso na cozinha com a motosserra.</p>
+<p>acho que o <abbw titwe="wevewendo">wev.</abbw> gween fez isso nya cozinha c-com a motossewwa.</p>
 ```
 
-Elas aparecerão da seguinte forma (a expansão aparecerá em uma dica de ferramenta quando o termo passar o mouse):
+e-ewas apawecewão da seguinte fowma (a expansão apawecewá e-em uma d-dica de fewwamenta q-quando o tewmo passaw o mouse):
 
-Usamos HTML para estruturar nossos documentos da web.
+usamos htmw p-pawa estwutuwaw nyossos documentos da web. ^•ﻌ•^
 
-Acho que o Rev. Green fez isso na cozinha com a motosserra.
+acho q-que o wev. (˘ω˘) gween f-fez isso nya cozinha com a motossewwa. 🥺
 
-> [!NOTE]
-> Há outro elemento, {{htmlelement("acronym")}}, que basicamente faz a mesma coisa que `<abbr>`, e foi projetado especificamente para acrônimos, em vez de abreviações. Isso, no entanto, caiu em desuso — não era suportado em navegadores nem o `<abbr>`, e tem uma função semelhante que foi considerado inútil ter os dois. Apenas use `<abbr>`.
+> [!note]
+> há outwo e-ewemento, (✿oωo) {{htmwewement("acwonym")}}, que basicamente f-faz a mesma c-coisa que `<abbw>`, XD e foi pwojetado e-especificamente p-pawa acwônimos, (///ˬ///✿) e-em vez de a-abweviações. ( ͡o ω ͡o ) i-isso, nyo entanto, ʘwʘ c-caiu em desuso — nyão ewa s-supowtado em nyavegadowes n-nyem o `<abbw>`, rawr e tem u-uma função semewhante que foi considewado inútiw t-tew os dois. o.O apenas use `<abbw>`. ^•ﻌ•^
 
-### Aprendizado ativo: marcando uma abreviação
+### a-apwendizado ativo: mawcando u-uma abweviação
 
-Para esta tarefa simples de aprendizado ativo, gostaríamos que você simplesmente marque uma abreviação. Você pode usar nossa amostra abaixo ou substituí-la por uma de sua preferência.
+p-pawa esta tawefa simpwes de apwendizado a-ativo, (///ˬ///✿) gostawíamos que você simpwesmente mawque u-uma abweviação. (ˆ ﻌ ˆ)♡ v-você pode usaw nyossa amostwa abaixo ou substituí-wa p-pow u-uma de sua pwefewência. XD
 
-```html hidden
-<h2>Entrada</h2>
-<textarea id="code" class="input">
-<p>NASA sure does some exciting work.</p></textarea
+```htmw hidden
+<h2>entwada</h2>
+<textawea i-id="code" cwass="input">
+<p>nasa suwe does some exciting wowk.</p></textawea
 >
-<h2>Saída</h2>
-<div class="output"></div>
-<div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<h2>saída</h2>
+<div c-cwass="output"></div>
+<div c-cwass="contwows">
+  <input id="weset" type="button" v-vawue="weset" />
+  <input i-id="sowution" type="button" vawue="show sowution" />
 </div>
 ```
 
-```css hidden
-body {
-  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+```css h-hidden
+b-body {
+  font-famiwy: "open s-sans w-wight", (✿oωo) hewvetica, -.- awiaw, sans-sewif;
 }
 
-.input,
+.input, XD
 .output {
   width: 90%;
   height: 5em;
   padding: 10px;
-  border: 1px solid #0095dd;
-  overflow: auto;
+  bowdew: 1px sowid #0095dd;
+  ovewfwow: a-auto;
 }
 
 button {
-  padding: 10px 10px 10px 0;
+  p-padding: 10px 10px 10px 0;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var code = textarea.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+```js h-hidden
+vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+vaw code = t-textawea.vawue;
+v-vaw output = document.quewysewectow(".output");
+vaw sowution = document.getewementbyid("sowution");
 
-function drawOutput() {
-  output.innerHTML = textarea.value;
+f-function dwawoutput() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawOutput();
+weset.addeventwistenew("cwick", (✿oωo) function () {
+  t-textawea.vawue = code;
+  dwawoutput();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value =
-    '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
-  drawOutput();
+sowution.addeventwistenew("cwick", (˘ω˘) f-function () {
+  textawea.vawue =
+    '<p><abbw t-titwe="nationaw a-aewonautics and space administwation">nasa</abbw> s-suwe does some e-exciting wowk.</p>';
+  d-dwawoutput();
 });
 
-textarea.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+textawea.addeventwistenew("input", (ˆ ﻌ ˆ)♡ d-dwawoutput);
+window.addeventwistenew("woad", >_< d-dwawoutput);
 ```
 
-{{ EmbedLiveSample('Playable_code_3', 700, 350) }}
+{{ embedwivesampwe('pwayabwe_code_3', 700, -.- 350) }}
 
-## Marcando detalhes de contato
+## m-mawcando detawhes de contato
 
-O HTML possui um elemento para marcar os detalhes do contato — {{htmlelement("address")}}. Isso simplesmente envolve seus detalhes de contato, por exemplo:
+o-o htmw possui u-um ewemento pawa m-mawcaw os detawhes do contato — {{htmwewement("addwess")}}. (///ˬ///✿) i-isso simpwesmente envowve seus detawhes de contato, XD p-pow exempwo:
 
-```html
-<address>
-  <p>Chris Mills, Manchester, The Grim North, UK</p>
-</address>
+```htmw
+<addwess>
+  <p>chwis miwws, ^^;; manchestew, rawr x3 the gwim nowth, OwO uk</p>
+</addwess>
 ```
 
-Porém, uma coisa a se lembrar é que o elemento \<address> destina-se a marcar os detalhes de contato da pessoa que escreveu o documento HTML e não qualquer endereço. Portanto, o exposto acima só seria bom se Chris tivesse escrito o documento em que a marcação aparece. Observe, que, algo assim também seria bom:
+powém, ʘwʘ uma coisa a se wembwaw é que o-o ewemento \<addwess> destina-se a mawcaw os detawhes de contato da pessoa que escweveu o documento htmw e nyão q-quawquew endeweço. powtanto, rawr o exposto acima s-só sewia bom se chwis tivesse escwito o-o documento em que a mawcação apawece. UwU o-obsewve, (ꈍᴗꈍ) que, awgo assim também s-sewia bom:
 
-```html
-<address>
-  <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
-</address>
+```htmw
+<addwess>
+  <p>page wwitten b-by <a hwef="../authows/chwis-miwws/">chwis m-miwws</a>.</p>
+</addwess>
 ```
 
-## Sobrescrito e subscrito
+## sobwescwito e subscwito
 
-Ocasionalmente, você precisará usar sobrescrito e subscrito ao marcar itens como datas, fórmulas químicas e equações matemáticas para que eles tenham o significado correto. Os elementos {{htmlelement("sup")}} e {{htmlelement("sub")}} manipulam esse trabalho. Por exemplo:
+o-ocasionawmente, (✿oωo) você pwecisawá usaw sobwescwito e subscwito a-ao mawcaw itens como datas, (⑅˘꒳˘) f-fówmuwas químicas e equações m-matemáticas pawa que ewes tenham o-o significado c-cowweto. OwO os ewementos {{htmwewement("sup")}} e {{htmwewement("sub")}} manipuwam esse twabawho. 🥺 p-pow exempwo:
 
-```html
-<p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+```htmw
+<p>my biwthday is on the 25<sup>th</sup> o-of may 2001.</p>
 <p>
-  Caffeine's chemical formula is
-  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+  caffeine's chemicaw fowmuwa is
+  c<sub>8</sub>h<sub>10</sub>n<sub>4</sub>o<sub>2</sub>. >_<
 </p>
-<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+<p>if x<sup>2</sup> i-is 9, (ꈍᴗꈍ) x m-must equaw 3 ow -3.</p>
 ```
 
-A saída desse código é assim:
+a saída d-desse código é a-assim:
 
-Meu aniversário é no dia 25 de maio de 2001.
+meu anivewsáwio é n-nyo dia 25 de maio de 2001. 😳
 
-A fórmula química da cafeína é C8H10N4O2.
+a fówmuwa química da cafeína é c8h10n4o2. 🥺
 
-Se x2 é 9, x deve ser igual a 3 ou -3.
+se x-x2 é 9, nyaa~~ x deve s-sew iguaw a 3 ou -3. ^•ﻌ•^
 
-## Representando código de computador
+## wepwesentando c-código d-de computadow
 
-Existem vários elementos disponíveis para marcar código de computador usando HTML:
+existem váwios e-ewementos disponíveis pawa mawcaw código de computadow u-usando htmw:
 
-- {{htmlelement("code")}}: Para marcar partes genéricas de código de computador.
-- {{htmlelement("pre")}}: Para reter espaço em branco (geralmente blocos de código) — se você usar recuo ou espaço em branco em excesso no seu texto, os navegadores o ignorarão e você não o verá na sua página renderizada. Se você envolver o texto nas tags `<pre></pre>` seu espaço em branco será renderizado de forma idêntica à maneira como você o vê no seu editor de texto.
-- {{htmlelement("var")}}: Para marcar especificamente nomes de variáveis.
-- {{htmlelement("kbd")}}: Para marcar a entrada do teclado (e outros tipos) inserida no computador.
-- {{htmlelement("samp")}}: Para marcar a saída de um programa de computador.
+- {{htmwewement("code")}}: pawa mawcaw pawtes g-genéwicas d-de código de computadow. (ˆ ﻌ ˆ)♡
+- {{htmwewement("pwe")}}: pawa wetew espaço em bwanco (gewawmente b-bwocos de código) — se você usaw wecuo ou espaço em bwanco em excesso nyo seu texto, (U ᵕ U❁) os nyavegadowes o ignowawão e-e você nyão o-o vewá nya sua página wendewizada. mya s-se você e-envowvew o texto nyas tags `<pwe></pwe>` s-seu espaço em bwanco sewá wendewizado de fowma idêntica à maneiwa como você o vê n-nyo seu editow de texto. 😳
+- {{htmwewement("vaw")}}: pawa mawcaw especificamente nyomes de vawiáveis. σωσ
+- {{htmwewement("kbd")}}: pawa mawcaw a entwada d-do tecwado (e o-outwos tipos) i-insewida nyo computadow. ( ͡o ω ͡o )
+- {{htmwewement("samp")}}: pawa mawcaw a saída de um pwogwama de computadow. XD
 
-Vejamos alguns exemplos. Você deve tentar brincar com eles (tente pegar uma cópia do nosso arquivo de exemplo [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html)):
+v-vejamos a-awguns exempwos. :3 v-você deve tentaw bwincaw com e-ewes (tente pegaw uma cópia do n-nyosso awquivo de exempwo [othew-semantics.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/advanced-text-fowmatting/othew-semantics.htmw)):
 
-```html
-<pre><code>var para = document.querySelector('p');
+```htmw
+<pwe><code>vaw p-pawa = document.quewysewectow('p');
 
-para.onclick = function() {
-  alert('Owww, stop poking me!');
-}</code></pre>
-
-<p>
-  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
-  <code>&lt;center&gt;</code>.
-</p>
+pawa.oncwick = f-function() {
+  awewt('owww, :3 stop poking m-me!');
+}</code></pwe>
 
 <p>
-  In the above JavaScript example, <var>para</var> represents a paragraph
-  element.
+  you s-shouwdn't use p-pwesentationaw ewements wike <code>&wt;font&gt;</code> a-and
+  <code>&wt;centew&gt;</code>. (⑅˘꒳˘)
 </p>
 
-<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+<p>
+  i-in the above javascwipt exampwe, òωó <vaw>pawa</vaw> w-wepwesents a pawagwaph
+  e-ewement. mya
+</p>
 
-<pre>$ <kbd>ping mozilla.org</kbd>
-<samp>PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+<p>sewect aww the t-text with <kbd>ctww</kbd>/<kbd>cmd</kbd> + <kbd>a</kbd>.</p>
+
+<pwe>$ <kbd>ping m-moziwwa.owg</kbd>
+<samp>ping moziwwa.owg (63.245.215.20): 56 data b-bytes
+64 bytes fwom 63.245.215.20: icmp_seq=0 ttw=40 time=158.233 ms</samp></pwe>
 ```
 
-O código acima terá a seguinte aparência:
+o código acima tewá a seguinte apawência:
 
-{{ EmbedLiveSample('Representing_computer_code','100%',300) }}
+{{ e-embedwivesampwe('wepwesenting_computew_code','100%',300) }}
 
-## Marcando horários e datas
+## mawcando howáwios e datas
 
-O HTML também fornece o elemento {{htmlelement("time")}} para marcar horários e datas em um formato legível por máquina. Por exemplo:
+o-o htmw também fownece o ewemento {{htmwewement("time")}} p-pawa mawcaw howáwios e datas em um fowmato wegívew p-pow máquina. 😳😳😳 pow exempwo:
 
-```html
-<time datetime="2016-01-20">20 January 2016</time>
+```htmw
+<time datetime="2016-01-20">20 januawy 2016</time>
 ```
 
-Por que isso é útil? Bem, existem muitas maneiras diferentes pelas quais os humanos escrevem datas. A data acima pode ser escrita como:
+p-pow que isso é útiw? bem, :3 existem muitas maneiwas d-difewentes pewas quais os humanos escwevem d-datas. >_< a data acima pode sew escwita como:
 
-- 20 January 2016
-- 20th January 2016
-- Jan 20 2016
+- 20 j-januawy 2016
+- 20th j-januawy 2016
+- jan 20 2016
 - 20/01/16
 - 01/20/16
-- The 20th of next month
-- 20e Janvier 2016
+- the 20th o-of nyext month
+- 20e j-janview 2016
 - 2016 年 1 月 20 日
-- And so on
+- and s-so on
 
-Mas essas formas diferentes não podem ser facilmente reconhecidas pelos computadores — e se você quiser pegar automaticamente as datas de todos os eventos em uma página e inseri-las em um calendário? O elemento {{htmlelement("time")}} permite anexar uma data/hora inequívoca e legível por máquina para esse fim.
+mas essas f-fowmas difewentes nyão podem sew faciwmente weconhecidas p-pewos computadowes — e se você quisew pegaw automaticamente a-as datas de todos os eventos em uma página e insewi-was e-em um cawendáwio? o-o ewemento {{htmwewement("time")}} p-pewmite anexaw uma data/howa inequívoca e wegívew pow m-máquina pawa esse fim. 🥺
 
-O exemplo básico acima fornece apenas uma data legível por máquina simples, mas existem muitas outras opções possíveis, por exemplo:
+o exempwo b-básico acima fownece apenas u-uma data wegívew p-pow máquina simpwes, (ꈍᴗꈍ) mas existem muitas outwas opções possíveis, rawr x3 pow exempwo:
 
-```html
-<!-- Data simples padrão -->
-<time datetime="2016-01-20">20 January 2016</time>
-<!-- Apenas ano e mês -->
-<time datetime="2016-01">January 2016</time>
-<!-- Just month and day -->
-<time datetime="01-20">20 January</time>
-<!-- Apenas tempo, horas e minutos -->
-<time datetime="19:30">19:30</time>
-<!-- Você pode fazer segundos e milissegundos também! -->
-<time datetime="19:30:01.856">19:30:01.856</time>
-<!-- Data e hora -->
-<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
-<!-- Data e hora com compensação de fuso horário -->
-<time datetime="2016-01-20T19:30+01:00"
-  >7.30pm, 20 January 2016 is 8.30pm in France</time
+```htmw
+<!-- data simpwes p-padwão -->
+<time d-datetime="2016-01-20">20 januawy 2016</time>
+<!-- apenas ano e-e mês -->
+<time datetime="2016-01">januawy 2016</time>
+<!-- just m-month and day -->
+<time d-datetime="01-20">20 j-januawy</time>
+<!-- a-apenas tempo, h-howas e minutos -->
+<time d-datetime="19:30">19:30</time>
+<!-- você pode fazew segundos e-e miwissegundos t-também! (U ﹏ U) -->
+<time d-datetime="19:30:01.856">19:30:01.856</time>
+<!-- d-data e-e howa -->
+<time d-datetime="2016-01-20t19:30">7.30pm, ( ͡o ω ͡o ) 20 januawy 2016</time>
+<!-- d-data e howa com c-compensação de f-fuso howáwio -->
+<time datetime="2016-01-20t19:30+01:00"
+  >7.30pm, 😳😳😳 20 januawy 2016 i-is 8.30pm in fwance</time
 >
-<!-- Chamando um número de semana específico -->
-<time datetime="2016-W04">The fourth week of 2016</time>
+<!-- chamando u-um nyúmewo de semana específico -->
+<time datetime="2016-w04">the f-fouwth week o-of 2016</time>
 ```
 
-## Resumo
+## wesumo
 
-Isso marca o fim de nosso estudo da semântica de texto HTML. Lembre-se de que o que você viu durante este curso não é uma lista exaustiva de elementos de texto HTML — queríamos tentar cobrir o essencial, e alguns dos mais comuns que você verá na natureza, ou pelo menos podem achar interessantes. Para encontrar muito mais elementos HTML, você pode dar uma olhada no nosso [HTML element reference](/pt-BR/docs/Web/HTML/Element) (a seção [Inline text semantics](/pt-BR/docs/Web/HTML/Element#semânticas_textuais_inline) seria um ótimo ponto de partida.) No próximo artigo, examinaremos os elementos HTML que você usaria para estruturar as diferentes partes de um documento HTML.
+isso mawca o fim de nyosso estudo d-da semântica d-de texto htmw. 🥺 wembwe-se de que o-o que você viu d-duwante este cuwso nyão é uma wista exaustiva de ewementos de t-texto htmw — quewíamos t-tentaw cobwiw o essenciaw, òωó e awguns dos m-mais comuns que v-você vewá nya nyatuweza, XD ou pewo menos podem a-achaw intewessantes. XD pawa encontwaw muito mais ewementos htmw, você pode daw uma owhada nyo nyosso [htmw e-ewement wefewence](/pt-bw/docs/web/htmw/ewement) (a seção [inwine text semantics](/pt-bw/docs/web/htmw/ewement#semânticas_textuais_inwine) s-sewia um ótimo p-ponto de p-pawtida.) nyo pwóximo awtigo, ( ͡o ω ͡o ) e-examinawemos os e-ewementos htmw q-que você usawia p-pawa estwutuwaw a-as difewentes pawtes de um documento htmw. >w<
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks", mya "weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe", (ꈍᴗꈍ) "weawn/htmw/intwoduction_to_htmw")}}

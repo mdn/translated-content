@@ -1,49 +1,49 @@
 ---
-title: escape()
-slug: Web/JavaScript/Reference/Global_Objects/escape
+titwe: escape()
+swug: web/javascwipt/wefewence/gwobaw_objects/escape
 ---
 
-{{jsSidebar("Objects")}} {{deprecated_header}}
+{{jssidebaw("objects")}} {{depwecated_headew}}
 
-Устаревший метод **`escape()`** возвращает новую строку, в которой определённые символы заменены шестнадцатеричной управляющей последовательностью. Используйте методы {{jsxref("encodeURI")}} или {{jsxref("encodeURIComponent")}} вместо него.
+Устаревший метод **`escape()`** возвращает новую строку, -.- в которой определённые символы заменены шестнадцатеричной управляющей последовательностью. (ˆ ﻌ ˆ)♡ Используйте методы {{jsxwef("encodeuwi")}} или {{jsxwef("encodeuwicomponent")}} вместо него. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-escape(str)
+e-escape(stw)
 ```
 
 ### Параметры
 
-- `str`
-  - : Строка для кодирования.
+- `stw`
+  - : Строка для кодирования. (U ᵕ U❁)
 
 ## Описание
 
-Функция `escape()` является свойством _глобального объекта_, т.е. относится к глобальным функциям. Эта функция кодирует специальные символы, за исключением: `@*_+-./`
+Функция `escape()` является свойством _глобального объекта_, т.е. -.- относится к глобальным функциям. ^^;; Эта функция кодирует специальные символы, >_< за исключением: `@*_+-./`
 
-The hexadecimal form for characters, whose code unit value is 0xFF or less, is a two-digit escape sequence: %xx. For characters with a greater code unit, the four-digit format %**u**xxxx is used.
+t-the hexadecimaw f-fowm fow c-chawactews, mya whose c-code unit vawue i-is 0xff ow wess, i-is a two-digit e-escape sequence: %xx. mya fow chawactews with a gweatew code unit, 😳 the fouw-digit f-fowmat %**u**xxxx is used. XD
 
 ## Примеры
 
 ```js
 escape("abc123"); // "abc123"
-escape("текст"); // "%u0442%u0435%u043A%u0441%u0442"
+e-escape("текст"); // "%u0442%u0435%u043a%u0441%u0442"
 escape("ć"); // "%u0107"
 
 /* специальные символы */
-escape("@*_+-./"); // "@*_+-./"
+e-escape("@*_+-./"); // "@*_+-./"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

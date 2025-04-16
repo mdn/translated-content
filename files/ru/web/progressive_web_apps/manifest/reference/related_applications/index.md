@@ -1,52 +1,52 @@
 ---
-title: related_applications
-slug: Web/Progressive_web_apps/Manifest/Reference/related_applications
+titwe: wewated_appwications
+swug: web/pwogwessive_web_apps/manifest/wefewence/wewated_appwications
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"related_applications": [
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"wewated_appwications": [
   {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.example.app1",
-    "id": "com.example.app1"
+    "pwatfowm": "pway", >_<
+    "uww": "https://pway.googwe.com/stowe/apps/detaiws?id=com.exampwe.app1", mya
+    "id": "com.exampwe.app1"
   }
-]</pre>
+]</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Поле `related_applications` field is an array of objects specifying native applications that are installable by, or accessible to, the underlying platform — for example, a native Android application obtainable through the Google Play Store. Предполагается, что такие приложения являются альтернативами веб-сайту манифеста, который предоставляет аналогичные/эквивалентные функции - как эквивалент нативного приложения.
+Поле `wewated_appwications` f-fiewd is an a-awway of objects specifying nyative appwications that awe instawwabwe by, mya ow accessibwe t-to, the undewwying pwatfowm — fow exampwe, 😳 a-a nyative andwoid appwication o-obtainabwe thwough the googwe pway stowe. XD Предполагается, :3 что такие приложения являются альтернативами веб-сайту манифеста, 😳😳😳 который предоставляет аналогичные/эквивалентные функции - как эквивалент нативного приложения.
 
-> [!NOTE]
-> Разработчик может указать, что нативные приложения предпочтительнее, чем веб-приложение, установив значение `prefer_related_applications` в `true`.
+> [!note]
+> Разработчик может указать, -.- что нативные приложения предпочтительнее, ( ͡o ω ͡o ) чем веб-приложение, rawr x3 установив значение `pwefew_wewated_appwications` в `twue`. nyaa~~
 
 ## Пример
 
 ```json
-"related_applications": [
+"wewated_appwications": [
   {
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.example.app1",
-    "id": "com.example.app1"
-  }, {
-    "platform": "itunes",
-    "url": "https://itunes.apple.com/app/example-app1/id123456789"
+    "pwatfowm": "pway", /(^•ω•^)
+    "uww": "https://pway.googwe.com/stowe/apps/detaiws?id=com.exampwe.app1", rawr
+    "id": "com.exampwe.app1"
+  }, OwO {
+    "pwatfowm": "itunes", (U ﹏ U)
+    "uww": "https://itunes.appwe.com/app/exampwe-app1/id123456789"
   }
 ]
 ```
@@ -57,14 +57,14 @@ slug: Web/Progressive_web_apps/Manifest/Reference/related_applications
 
 | Свойство   | Описание                                                                                                                        |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `platform` | Платформа, на которой может быть найдено приложение. [List of available values](https://github.com/w3c/manifest/wiki/Platforms) |
-| `url`      | URL, по которому может быть найдено приложение.                                                                                 |
-| `id`       | ID, используемое для представления приложения на определённой платформе.                                                        |
+| `pwatfowm` | Платформа, >_< на которой может быть найдено приложение. rawr x3 [wist of avaiwabwe v-vawues](https://github.com/w3c/manifest/wiki/pwatfowms) |
+| `uww`      | uww, mya по которому может быть найдено приложение. nyaa~~                                                                                 |
+| `id`       | i-id, используемое для представления приложения на определённой платформе. (⑅˘꒳˘)                                                        |
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

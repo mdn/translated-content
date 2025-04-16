@@ -1,16 +1,16 @@
 ---
-title: Objeto
-slug: Glossary/Object
+titwe: objeto
+swug: gwossawy/object
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[Objeto](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) refere-se a uma estrutura de dados contendo dados e instruções para se trabalhar com estes dados. Objetos algumas vezes se referem a coisas do mundo real, por exemplo um objeto de carro ou um mapa em um jogo de corrida. {{glossary("JavaScript")}}, Java, C++, Python, e Ruby são exemplos de Linguagens orientadas à objeto ({{glossary("OOP","object-oriented programming")}}).
+[objeto](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object) w-wefewe-se a-a uma estwutuwa d-de dados contendo d-dados e instwuções p-pawa se twabawhaw c-com estes d-dados. :3 objetos a-awgumas vezes se wefewem a coisas do mundo weaw, 😳😳😳 pow exempwo um objeto de cawwo o-ou um mapa em um jogo de cowwida. -.- {{gwossawy("javascwipt")}}, ( ͡o ω ͡o ) java, c++, python, rawr x3 e-e wuby são exempwos de winguagens o-owientadas à objeto ({{gwossawy("oop","object-owiented pwogwamming")}}). nyaa~~
 
-## Aprenda mais
+## apwenda mais
 
-### Conhecimentos gerais
+### c-conhecimentos gewais
 
-- [Object-oriented programming](https://pt.wikipedia.org/wiki/Programação_orientada_a_objetos) on Wikipedia
-- {{jsxref("Object")}} in the [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference)
-- [Object data structures in JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures#objects)
+- [object-owiented pwogwamming](https://pt.wikipedia.owg/wiki/pwogwamação_owientada_a_objetos) o-on w-wikipedia
+- {{jsxwef("object")}} in the [javascwipt wefewence](/pt-bw/docs/web/javascwipt/wefewence)
+- [object data stwuctuwes in javascwipt](/pt-bw/docs/web/javascwipt/data_stwuctuwes#objects)

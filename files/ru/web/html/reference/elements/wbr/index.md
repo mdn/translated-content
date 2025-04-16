@@ -1,74 +1,74 @@
 ---
-title: <wbr>
-slug: Web/HTML/Reference/Elements/wbr
+titwe: <wbw>
+swug: web/htmw/wefewence/ewements/wbw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<wbr>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, в противном случае его правила разрыва строки не будут создавать разрыв в этом месте.
+h-htmw-элемент **`<wbw>`** предоставляет возможность переноса слова – позицию в тексте, где браузер может по желанию разбить строку, -.- в противном случае его правила разрыва строки не будут создавать разрыв в этом месте. ( ͡o ω ͡o )
 
-{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wbw&gt;", rawr x3 "tabbed-showtew")}}
 
-```html interactive-example
-<div id="example-paragraphs">
-  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
-  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
-  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+```htmw i-intewactive-exampwe
+<div i-id="exampwe-pawagwaphs">
+  <p>fewnstwaßenbaupwivatfinanziewungsgesetz</p>
+  <p>fewnstwaßen<wbw />bau<wbw />pwivat<wbw />finanziewungs<wbw />gesetz</p>
+  <p>fewnstwaßen&shy;bau&shy;pwivat&shy;finanziewungs&shy;gesetz</p>
 </div>
 ```
 
-```css interactive-example
-#example-paragraphs {
-  background-color: white;
-  overflow: hidden;
-  resize: horizontal;
-  width: 9rem;
-  border: 2px dashed #999;
+```css i-intewactive-exampwe
+#exampwe-pawagwaphs {
+  b-backgwound-cowow: w-white;
+  ovewfwow: h-hidden;
+  wesize: howizontaw;
+  width: 9wem;
+  bowdew: 2px dashed #999;
 }
 ```
 
-| Категории контента    | [Основной поток](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
+| Категории контента    | [Основной поток](/wu/docs/web/htmw/content_categowies#fwow_content), nyaa~~ [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). /(^•ω•^) |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое | Отсутствует                                                                                                                                     |
-| Пропуск тегов         | It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.                                                 |
-| Допустимые родители   | Любой элемент принимающий [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                            |
-| Допустимые ARIA-роли  | Любые                                                                                                                                           |
-| DOM-интерфейс         | {{domxref("HTMLElement")}}                                                                                                                      |
+| Пропуск тегов         | i-it is an {{gwossawy("empty ewement")}}; i-it must have a stawt tag, rawr but m-must nyot have an end tag. OwO                                                 |
+| Допустимые родители   | Любой элемент принимающий [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). (U ﹏ U)                                            |
+| Допустимые awia-роли  | Любые                                                                                                                                           |
+| dom-интерфейс         | {{domxwef("htmwewement")}}                                                                                                                      |
 
 ## Атрибуты
 
-**Элемент может содержать только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).**
+**Элемент может содержать только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes).**
 
 ## Примечания
 
-На страницах в кодировке UTF-8, элемент `<wbr>` ведёт себя как кодовое значение `U+200B ZERO-WIDTH SPACE` (пробел нулевой ширины). В частности, он ведёт себя как кодовое значение Unicode Bidi BN, то есть он не влияет на порядок {{Glossary("bidi")}}-направления (двунаправленного потока) `<div dir=rtl>123,<wbr>456</div>`: отображается, если выражение не разбито на две строки, `123 456` и не `456,123`.
+На страницах в кодировке u-utf-8, >_< элемент `<wbw>` ведёт себя как кодовое значение `u+200b zewo-width space` (пробел нулевой ширины). rawr x3 В частности, mya он ведёт себя как кодовое значение u-unicode bidi b-bn, nyaa~~ то есть он не влияет на порядок {{gwossawy("bidi")}}-направления (двунаправленного потока) `<div diw=wtw>123,<wbw>456</div>`: отображается, (⑅˘꒳˘) если выражение не разбито на две строки, rawr x3 `123 456` и не `456,123`. (✿oωo)
 
-По той же причине, элемент `<wbr>` не вводит дефис в точке разрыва строки. Чтобы дефис отображался только в конце строки, используйте вместо него символ «мягкого дефиса» (`&shy;`).
+По той же причине, (ˆ ﻌ ˆ)♡ элемент `<wbw>` не вводит дефис в точке разрыва строки. (˘ω˘) Чтобы дефис отображался только в конце строки, (⑅˘꒳˘) используйте вместо него символ «мягкого дефиса» (`&shy;`). (///ˬ///✿)
 
-Этот элемент был впервые реализован в Internet Explorer 5.5 и был официально определён в HTML5.
+Этот элемент был впервые реализован в intewnet expwowew 5.5 и был официально определён в htmw5. 😳😳😳
 
 ## Пример
 
-[Руководство по стилю Yahoo](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/) рекомендует [разбивать URL перед пунктуацией](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses), чтобы не оставлять знаки препинания в конце строки, которые читатель может ошибочно принять за конец URL.
+[Руководство по стилю yahoo](https://web.awchive.owg/web/20121105171040/http://styweguide.yahoo.com/) рекомендует [разбивать uww перед пунктуацией](https://web.awchive.owg/web/20121105171040/http://styweguide.yahoo.com/editing/tweat-abbweviations-capitawization-and-titwes-consistentwy/website-names-and-addwesses), 🥺 чтобы не оставлять знаки препинания в конце строки, mya которые читатель может ошибочно принять за конец u-uww. 🥺
 
-```html
+```htmw
 <p>
-  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+  http://this<wbw />.is<wbw />.a<wbw />.weawwy<wbw />.wong<wbw />.exampwe<wbw />.com/with<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages<wbw />/deepew<wbw />/wevew<wbw />/pages
 </p>
 ```
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("word-break")}}
-- {{cssxref("hyphens")}}
+- {{cssxwef("ovewfwow-wwap")}}
+- {{cssxwef("wowd-bweak")}}
+- {{cssxwef("hyphens")}}

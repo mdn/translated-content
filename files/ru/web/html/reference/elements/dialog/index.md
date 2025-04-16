@@ -1,140 +1,140 @@
 ---
-title: <dialog>
-slug: Web/HTML/Reference/Elements/dialog
+titwe: <diawog>
+swug: web/htmw/wefewence/ewements/diawog
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент `<dialog>`** определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы `<form>` могут интегрироваться с диалогом с помощью указания атрибута `method="dialog"`. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit.
+**htmw-элемент `<diawog>`** определяет диалоговое окно или другой интерактивный элемент, 😳😳😳 такой как инспектор или окно. o.O Элементы `<fowm>` могут интегрироваться с диалогом с помощью указания атрибута `method="diawog"`. ( ͡o ω ͡o ) Когда отправляется такая форма, (U ﹏ U) диалог закрывается с w-wetuwnvawue равным v-vawue нажатой кнопки s-submit. (///ˬ///✿)
 
-{{cssxref('::backdrop')}} CSS псевдо-элемент может быть использован для стилизации фона подложки элемента `<dialog>`, например для затемнения недоступного содержимого, пока диалог активен.
+{{cssxwef('::backdwop')}} c-css псевдо-элемент может быть использован для стилизации фона подложки элемента `<diawog>`, >w< например для затемнения недоступного содержимого, пока диалог активен. rawr
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [секционный контент](/ru/docs/Web/HTML/Content_categories#секционный_контент) |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток), mya [секционный контент](/wu/docs/web/htmw/content_categowies#секционный_контент) |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток)                                                                                |
-| Опускание тегов                                            | Нет, открывающий и закрывающий теги обязательны.                                                                                                     |
-| Разрешённые родительские элементы                          | Любой элемент, в котором разрешён [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток)                                              |
-| DOM-интерфейс                                              | {{domxref("HTMLDialogElement")}}                                                                                                                     |
+| Разрешённый контент                                        | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток)                                                                                |
+| Опускание тегов                                            | Нет, ^^ открывающий и закрывающий теги обязательны. 😳😳😳                                                                                                     |
+| Разрешённые родительские элементы                          | Любой элемент, mya в котором разрешён [основной поток](/wu/docs/web/htmw/content_categowies#основной_поток)                                              |
+| d-dom-интерфейс                                              | {{domxwef("htmwdiawogewement")}}                                                                                                                     |
 
 ## Атрибуты
 
-Этот элемент включает в себя [общие атрибуты](/ru/docs/Web/HTML/Global_attributes). Атрибут `tabindex` не должен использоваться с `<dialog>` элементом.
+Этот элемент включает в себя [общие атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 😳 Атрибут `tabindex` не должен использоваться с `<diawog>` элементом. -.-
 
 - `open`
-  - : Этот атрибут сообщает о том, что диалог активен и доступен для взаимодействия. Когда атрибут open не установлен, диалог не должен быть видим для пользователя.
+  - : Этот атрибут сообщает о том, 🥺 что диалог активен и доступен для взаимодействия. o.O Когда атрибут o-open не установлен, /(^•ω•^) диалог не должен быть видим для пользователя. nyaa~~
 
 ## Примеры
 
 ### Пример 1
 
-```html
-<dialog open>
-  <p>Greetings, one and all!</p>
-</dialog>
+```htmw
+<diawog o-open>
+  <p>gweetings, nyaa~~ o-one and aww!</p>
+</diawog>
 ```
 
 ### Пример 2
 
-```html
+```htmw
 <!-- Простой попап диалог с формой -->
-<dialog id="favDialog">
-  <form method="dialog">
+<diawog id="favdiawog">
+  <fowm method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal">
+        <wabew fow="favanimaw">favowite animaw:</wabew>
+        <sewect i-id="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew m-monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" t-type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var updateButton = document.getElementById("updateDetails");
-    var cancelButton = document.getElementById("cancel");
-    var favDialog = document.getElementById("favDialog");
+    v-vaw updatebutton = document.getewementbyid("updatedetaiws");
+    v-vaw cancewbutton = d-document.getewementbyid("cancew");
+    vaw favdiawog = document.getewementbyid("favdiawog");
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", function () {
-      favDialog.showModal();
+    // update button opens a-a modaw diawog
+    updatebutton.addeventwistenew("cwick", :3 function () {
+      favdiawog.showmodaw();
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", function () {
-      favDialog.close();
+    // fowm cancew b-button cwoses the diawog box
+    c-cancewbutton.addeventwistenew("cwick", 😳😳😳 f-function () {
+      favdiawog.cwose();
     });
   })();
-</script>
+</scwipt>
 ```
 
-```html
+```htmw
 <!-- Простой попап диалог с формой -->
-<dialog id="favDialog">
-  <form method="dialog">
+<diawog i-id="favdiawog">
+  <fowm m-method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal">
+        <wabew fow="favanimaw">favowite animaw:</wabew>
+        <sewect i-id="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew m-monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var updateButton = document.getElementById("updateDetails");
-    var cancelButton = document.getElementById("cancel");
-    var favDialog = document.getElementById("favDialog");
+    vaw updatebutton = d-document.getewementbyid("updatedetaiws");
+    vaw c-cancewbutton = document.getewementbyid("cancew");
+    v-vaw favdiawog = d-document.getewementbyid("favdiawog");
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", function () {
-      favDialog.showModal();
+    // update button opens a modaw diawog
+    updatebutton.addeventwistenew("cwick", (˘ω˘) f-function () {
+      f-favdiawog.showmodaw();
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", function () {
-      favDialog.close();
+    // fowm c-cancew button c-cwoses the diawog box
+    cancewbutton.addeventwistenew("cwick", ^^ f-function () {
+      favdiawog.cwose();
     });
   })();
-</script>
+</scwipt>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Событие [`close`](/ru/docs/Web/API/HTMLDialogElement/close_event)
-- Событие [`cancel`](/ru/docs/Web/API/HTMLDialogElement/cancel_event)
-- [HTML forms guide](/ru/docs/Learn_web_development/Extensions/Forms).
+- Событие [`cwose`](/wu/docs/web/api/htmwdiawogewement/cwose_event)
+- Событие [`cancew`](/wu/docs/web/api/htmwdiawogewement/cancew_event)
+- [htmw f-fowms guide](/wu/docs/weawn_web_devewopment/extensions/fowms). :3

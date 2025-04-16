@@ -1,293 +1,293 @@
 ---
-title: Iniciando com Vue
-slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
+titwe: iniciando com vue
+swug: w-weawn_web_devewopment/cowe/fwamewowks_wibwawies/vue_getting_stawted
+o-owiginaw_swug: w-weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_getting_stawted
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_wesouwces","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_fiwst_component", ( ͡o ω ͡o ) "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}
 
-Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examinaremos um pouco do histórico do Vue, aprenderemos como instalá-lo e criar um novo projeto, estudaremos a estrutura de alto nível de todo o projeto e um componente individual, veremos como executar o projeto localmente e o deixaremos preparado para começar a construir o nosso exemplo.
+a-agowa vamos a-apwesentaw o v-vue, mya o nyosso tewceiwo f-fwamewowks. >_< n-nyeste awtigo, rawr examinawemos um pouco do histówico do vue, >_< apwendewemos como i-instawá-wo e cwiaw um nyovo pwojeto, (U ﹏ U) estudawemos a-a estwutuwa de awto nyívew de t-todo o pwojeto e um componente individuaw, rawr vewemos como executaw o-o pwojeto wocawmente e o deixawemos p-pwepawado p-pawa começaw a constwuiw o nyosso exempwo. (U ᵕ U❁)
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
         <p>
-          Conhecimento com as liguagens
-          <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
-          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
+          conhecimento com as wiguagens
+          <a hwef="/pt-bw/docs/weawn/htmw">htmw</a>, (ˆ ﻌ ˆ)♡
+          <a hwef="/pt-bw/docs/weawn/css">css</a>, >_< e-e
+          <a hwef="/pt-bw/docs/weawn/javascwipt">javascwipt</a>, c-conhecimento do
           <a
-            href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >terminal/command line</a
-          >.
+            h-hwef="/pt-bw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine"
+            >tewminaw/command wine</a
+          >. ^^;;
         </p>
         <p>
-          Os componentes do Vue são escritos como uma combinação de objetos
-          JavaScript que gerenciam os dados do aplicativo e uma sintaxe de
-          modelo baseada em HTML que é mapeada para a estrutura DOM subjacente.
-          Para a instalação e para usar alguns dos recursos mais avançados do
-          Vue (como simples Componentes de arquivo ou funções de renderização),
-          você precisará de um terminal com node + npm instalados.
+          o-os componentes d-do vue são escwitos como uma combinação d-de objetos
+          javascwipt que gewenciam os d-dados do apwicativo e uma sintaxe de
+          modewo baseada em htmw que é mapeada pawa a estwutuwa d-dom subjacente. ʘwʘ
+          pawa a instawação e-e pawa usaw a-awguns dos wecuwsos m-mais avançados do
+          vue (como simpwes componentes d-de awquivo ou funções d-de wendewização), 😳😳😳
+          você pwecisawá d-de um tewminaw c-com nyode + nypm instawados.
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Para configurar um ambiente de desenvolvimento local do Vue, crie um
-        aplicativo inicial e entenda o básico de como ele funciona.
+        pawa configuwaw u-um ambiente de desenvowvimento wocaw do v-vue, UwU cwie um
+        apwicativo i-iniciaw e entenda o básico de como e-ewe funciona. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Um Vue mais claro
+## u-um vue mais cwawo
 
-O Vue é uma estrutura JavaScript moderna que fornece recursos úteis para aprimoramento progressivo - ao contrário de muitos outros frameworks, você pode usar o Vue para aprimorar o HTML existente. Isso permite que você use o Vue como um substituto para uma biblioteca como o [JQuery](/pt-BR/docs/Glossary/jQuery).
+o vue é uma estwutuwa javascwipt modewna que fownece wecuwsos úteis pawa apwimowamento pwogwessivo - a-ao contwáwio d-de muitos outwos fwamewowks, :3 v-você pode u-usaw o vue pawa a-apwimowaw o htmw existente. -.- isso pewmite que você use o vue como u-um substituto pawa uma bibwioteca como o [jquewy](/pt-bw/docs/gwossawy/jquewy). 🥺
 
-Dito isto, você também pode usar o Vue para escrever aplicativos de página única (Single Page Applications - SPAs) inteiros. Isso permite criar marcações gerenciadas inteiramente pelo Vue, o que pode melhorar a experiência e o desempenho do desenvolvedor ao lidar com aplicativos complexos. Também permite tirar proveito das bibliotecas para roteamento do lado do cliente (client-side) e gerenciamento de estado quando necessário. Além disso, o Vue adota uma abordagem "intermediária" das ferramentas, como roteamento do lado do cliente e gerenciamento de estado. Embora a equipe mantenedora do Vue sugira bibliotecas para essas funções, elas não são agrupadas diretamente no Vue. Isso permite que você selecione bibliotecas de gerenciamento de estado/roteamento diferentes, se elas se ajustarem melhor ao seu aplicativo.
+dito isto, -.- você também pode u-usaw o vue pawa escwevew apwicativos d-de página única (singwe p-page appwications - s-spas) inteiwos. isso pewmite c-cwiaw mawcações g-gewenciadas inteiwamente p-pewo v-vue, -.- o que pode mewhowaw a expewiência e o desempenho d-do desenvowvedow a-ao widaw c-com apwicativos c-compwexos. (U ﹏ U) também p-pewmite tiwaw pwoveito das bibwiotecas pawa woteamento do wado d-do cwiente (cwient-side) e gewenciamento de estado quando nyecessáwio. rawr awém disso, mya o vue adota u-uma abowdagem "intewmediáwia" das fewwamentas, ( ͡o ω ͡o ) como woteamento do wado do c-cwiente e gewenciamento d-de estado. /(^•ω•^) e-embowa a equipe mantenedowa do v-vue sugiwa bibwiotecas pawa essas f-funções, >_< ewas n-nyão são agwupadas diwetamente nyo vue. (✿oωo) isso pewmite que você sewecione bibwiotecas de gewenciamento d-de estado/woteamento difewentes, 😳😳😳 se e-ewas se ajustawem mewhow ao seu a-apwicativo.
 
-Além de permitir a integração progressiva do Vue em seus aplicativos, o Vue também fornece uma abordagem progressiva para escrever marcações. Como a maioria dos frameworks, o Vue permite criar blocos reutilizáveis de marcação por meio de componentes. Na maioria das vezes, os componentes do Vue são gravados usando uma sintaxe de modelo HTML especial. Quando você precisar de mais controle do que a sintaxe HTML permite, poderá escrever funções JSX ou JavaScript simples para definir seus componentes.
+awém d-de pewmitiw a integwação pwogwessiva do vue e-em seus apwicativos, (ꈍᴗꈍ) o-o vue também fownece uma a-abowdagem pwogwessiva p-pawa escwevew mawcações. 🥺 como a maiowia dos fwamewowks, mya o vue pewmite cwiaw b-bwocos weutiwizáveis d-de mawcação p-pow meio de componentes. (ˆ ﻌ ˆ)♡ n-nya maiowia das v-vezes, os componentes do vue são g-gwavados usando uma sintaxe de modewo htmw especiaw. (⑅˘꒳˘) quando você pwecisaw de m-mais contwowe do q-que a sintaxe htmw pewmite, òωó podewá escwevew funções j-jsx ou j-javascwipt simpwes pawa definiw seus componentes. o.O
 
-À medida que você trabalha neste tutorial, convém manter o [guia do Vue](https://vuejs.org/v2/guide/) e a [documentação da API](https://vuejs.org/v2/api/) abertos em outras guias, para poder consultar um item se quiser obter mais informações sobre qualquer subtópico.
-Para uma boa comparação (mas potencialmente tendenciosa) entre o Vue e muitos outros frameworks, consulte [Vue Docs: Comparação com outros frameworks](https://vuejs.org/v2/guide/comparison.html).
+À medida que v-você twabawha nyeste tutowiaw, XD convém mantew o [guia do vue](https://vuejs.owg/v2/guide/) e a [documentação d-da api](https://vuejs.owg/v2/api/) abewtos em outwas guias, (˘ω˘) pawa p-podew consuwtaw u-um item se quisew obtew mais infowmações sobwe quawquew subtópico. (ꈍᴗꈍ)
+p-pawa uma b-boa compawação (mas potenciawmente tendenciosa) entwe o vue e m-muitos outwos fwamewowks, >w< consuwte [vue d-docs: compawação com outwos fwamewowks](https://vuejs.owg/v2/guide/compawison.htmw). XD
 
-## Installation
+## instawwation
 
-To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
+t-to use vue in an existing site, -.- y-you can dwop one o-of the fowwowing [`<scwipt>`](/pt-bw/docs/web/htmw/ewement/scwipt) ewements onto a-a page. ^^;; this awwows you to stawt u-using vue on e-existing sites, w-which is why vue pwides itsewf o-on being a pwogwessive f-fwamewowk. XD this is a gweat option when migwating a-an existing p-pwoject using a-a wibwawy wike jquewy to vue. :3 with this method, σωσ y-you can use a wot of the cowe f-featuwes of vue, s-such as the attwibutes, XD custom components, :3 and data-management. rawr
 
-- Development Script (Unoptimized, but includes console warnings. Great for development
-
-  ```vue
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  ```
-
-- Production Script (Optimized version, minimal console warnings. It is recommended that you specify a version number when including Vue on your site so that any framework updates do not break your live site without you knowing.)
+- d-devewopment s-scwipt (unoptimized, 😳 b-but incwudes c-consowe wawnings. 😳😳😳 gweat fow devewopment
 
   ```vue
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <scwipt swc="https://cdn.jsdewivw.net/npm/vue/dist/vue.js"></scwipt>
   ```
 
-However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
+- p-pwoduction scwipt (optimized vewsion, (ꈍᴗꈍ) minimaw consowe wawnings. 🥺 it is wecommended that you s-specify a vewsion nyumbew when incwuding v-vue on youw site so that a-any fwamewowk updates do nyot b-bweak youw wive site without you k-knowing.)
 
-1. Node.js 8.11+ installed.
-2. npm or yarn.
+  ```vue
+  <scwipt swc="https://cdn.jsdewivw.net/npm/vue@2"></scwipt>
+  ```
 
-> [!NOTE]
-> If you don't have the above installed, find out [more about installing npm and Node.js](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
+h-howevew, ^•ﻌ•^ t-this appwoach h-has some wimitations. t-to buiwd mowe compwex apps, XD you'ww want to use the [vue nypm package](https://www.npmjs.com/package/vue). ^•ﻌ•^ this wiww wet you use advanced featuwes o-of vue and t-take advantage o-of bundwews wike webpack. ^^;; to make b-buiwding apps with vue easiew, ʘwʘ thewe is a cwi to stweamwine t-the devewopment p-pwocess. OwO to use the nypm package & t-the cwi you wiww nyeed:
 
-To install the CLI, run the following command in your terminal:
+1. 🥺 nyode.js 8.11+ instawwed. (⑅˘꒳˘)
+2. n-nypm o-ow yawn. (///ˬ///✿)
+
+> [!note]
+> if you don't h-have the above i-instawwed, find out [mowe about instawwing nypm and nyode.js](/pt-bw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine#adding_powewups) hewe. (✿oωo)
+
+to instaww t-the cwi, nyaa~~ wun t-the fowwowing c-command in youw t-tewminaw:
 
 ```bash
-npm install --global @vue/cli
+n-nypm instaww --gwobaw @vue/cwi
 ```
 
-Or if you'd prefer to use yarn:
+ow if you'd p-pwefew to use y-yawn:
 
 ```bash
-yarn global add @vue/cli
+yawn gwobaw add @vue/cwi
 ```
 
-Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run `vue create <project-name>`. The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more.
+o-once i-instawwed, >w< to initiawize a nyew p-pwoject you can then open a tewminaw in the diwectowy y-you want to cweate the p-pwoject in, (///ˬ///✿) and w-wun `vue cweate <pwoject-name>`. rawr the cwi wiww then g-give you a wist of pwoject configuwations you c-can use. (U ﹏ U) thewe a-awe a few pweset o-ones, ^•ﻌ•^ and you can make youw own. (///ˬ///✿) these options wet you configuwe t-things wike typescwipt, winting, o.O vue-woutew, >w< testing, a-and mowe. nyaa~~
 
-We'll look at using this below.
+w-we'ww wook at using this bewow. òωó
 
-## Initializing a new project
+## i-initiawizing a new pwoject
 
-To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using the Vue CLI to create a new app framework to build our app into. Follow the steps below:
+t-to expwowe vawious f-featuwes of vue, (U ᵕ U❁) we wiww be buiwding up a s-sampwe todo wist app. (///ˬ///✿) we'ww begin by using the vue c-cwi to cweate a-a nyew app fwamewowk to buiwd ouw a-app into. (✿oωo) fowwow the steps bewow:
 
-1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
-2. Use the arrow keys and
+1. 😳😳😳 i-in tewminaw, `cd` t-to whewe y-you'd wike to cweate youw sampwe app, (✿oωo) then wun `vue cweate moz-todo-vue`. (U ﹏ U)
+2. use the awwow keys and
 
-   <kbd>Enter</kbd>
+   <kbd>entew</kbd>
 
-   to select the "Manually select features" option.
+   to sewect the "manuawwy sewect featuwes" option.
 
-3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press
+3. (˘ω˘) the fiwst menu you'ww be pwesented with awwows you to choose w-which featuwes y-you want to incwude in youw pwoject. 😳😳😳 make suwe t-that "babew" and "wintew / f-fowmattew" a-awe sewected. (///ˬ///✿) if they awe n-nyot, (U ᵕ U❁) use the awwow keys and the s-space baw to toggwe t-them on. >_< once they awe sewected, (///ˬ///✿) p-pwess
 
-   <kbd>Enter</kbd>
+   <kbd>entew</kbd>
 
-   to proceed.
+   to pwoceed. (U ᵕ U❁)
 
-4. Next you'll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit
+4. n-nyext you'ww s-sewect a config fow the wintew / fowmattew. >w< nyavigate t-to "eswint w-with ewwow pwevention o-onwy" a-and hit
 
-   <kbd>Enter</kbd>
+   <kbd>entew</kbd>
 
-   again. This will help us catch common errors, but not be overly opinionated.
+   a-again. 😳😳😳 this wiww h-hewp us catch c-common ewwows, (ˆ ﻌ ˆ)♡ but n-nyot be ovewwy o-opinionated. (ꈍᴗꈍ)
 
-5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit
+5. nyext you awe a-asked to configuwe n-nyani kind of a-automated winting we want. 🥺 sewect "wint o-on save". >_< this wiww check fow ewwows when w-we save a fiwe inside the pwoject. OwO h-hit
 
-   <kbd>Enter</kbd>
+   <kbd>entew</kbd>
 
-   to continue.
+   t-to continue. ^^;;
 
-6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push
+6. n-nyow, (✿oωo) you wiww sewect how we w-want youw config fiwes to be managed. "in d-dedicated config fiwes" w-wiww put youw config settings f-fow things wike eswint into theiw own, UwU dedicated fiwes. ( ͡o ω ͡o ) the othew option, (✿oωo) "in p-package.json", mya wiww put aww of youw c-config settings i-into the app's `package.json` fiwe. ( ͡o ω ͡o ) sewect "in dedicated config fiwes" and push
 
-   <kbd>Enter</kbd>
+   <kbd>entew</kbd>
 
-   .
+   . :3
 
-7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type
+7. f-finawwy, 😳 you awe asked if you w-want to save this a-as a pweset fow f-futuwe options. (U ﹏ U) this is entiwewy up to you. >w< if y-you wike these s-settings ovew the existing pwesets a-and want to use them again, UwU type
 
    <kbd>y</kbd>
 
-   , otherwise type
+   , 😳 o-othewwise type
 
    <kbd>n</kbd>
 
-   .
+   . XD
 
-The CLI will now begin scaffolding out your project, and installing all of your dependencies.
+t-the cwi wiww n-nyow begin scaffowding o-out youw pwoject, (✿oωo) and instawwing a-aww of youw d-dependencies.
 
-If you've never run the Vue CLI before, you'll get one more question — you'll be asked to choose a package manager. You can use the arrow keys to select which one you prefer. The Vue CLI will default to this package manager from now on. If you need to use a different package manager after this, you can pass in a flag `--packageManager=<package-manager>`, when you run `vue create`. So if you wanted to create the `moz-todo-vue` project with npm and you'd previously chosen yarn, you'd run `vue create moz-todo-vue --packageManager=npm`.
+i-if you've nyevew w-wun the vue cwi befowe, ^•ﻌ•^ you'ww g-get one mowe q-question — you'ww b-be asked to c-choose a package m-managew. mya you can u-use the awwow k-keys to sewect which o-one you pwefew. (˘ω˘) the vue cwi w-wiww defauwt to this package managew f-fwom nyow on. nyaa~~ if you nyeed t-to use a diffewent p-package managew a-aftew this, :3 you can pass in a fwag `--packagemanagew=<package-managew>`, (✿oωo) when y-you wun `vue cweate`. (U ﹏ U) s-so if you w-wanted to cweate the `moz-todo-vue` pwoject with nypm and you'd p-pweviouswy chosen y-yawn, you'd wun `vue cweate m-moz-todo-vue --packagemanagew=npm`. (ꈍᴗꈍ)
 
-> [!NOTE]
-> We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
+> [!note]
+> w-we've nyot gone ovew aww of the options hewe, (˘ω˘) but you can [find m-mowe infowmation o-on the cwi](https://cwi.vuejs.owg) i-in the vue d-docs. ^^
 
-## Project structure
+## pwoject stwuctuwe
 
-If everything went successfully, the CLI should have created a series of files and directories for your project. The most significant ones are as follows:
+if evewything went s-successfuwwy, (⑅˘꒳˘) the c-cwi shouwd have cweated a sewies of fiwes and d-diwectowies fow youw pwoject. rawr the most significant o-ones awe as fowwows:
 
-- `.eslintrc.js`: This is a config file for [eslint](https://eslint.org/). You can use this to manage your linting rules.
-- `babel.config.js`: This is the config file for [Babel](https://babeljs.io/), which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
-- `.browserslistrc`: This is a config for [Browserslist](https://github.com/browserslist/browserslist). You can use this to control which browsers your tooling optimizes for.
-- `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; `index.html` gets some processing).
+- `.eswintwc.js`: this i-is a config fiwe f-fow [eswint](https://eswint.owg/). :3 you can use t-this to manage youw w-winting wuwes. OwO
+- `babew.config.js`: this is t-the config fiwe fow [babew](https://babewjs.io/), (ˆ ﻌ ˆ)♡ w-which twansfowms m-modewn javascwipt f-featuwes being u-used in devewopment code into o-owdew syntax that i-is mowe cwoss-bwowsew c-compatibwe in pwoduction c-code. :3 you can wegistew additionaw babew pwugins i-in this fiwe. -.-
+- `.bwowsewswistwc`: t-this is a c-config fow [bwowsewswist](https://github.com/bwowsewswist/bwowsewswist). -.- you can use this to contwow which bwowsews youw toowing o-optimizes fow. òωó
+- `pubwic`: this d-diwectowy contains s-static assets that awe pubwished, 😳 but nyot pwocessed b-by [webpack](https://webpack.js.owg/) duwing buiwd (with o-one exception; `index.htmw` g-gets s-some pwocessing). nyaa~~
 
-  - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
-  - `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
+  - `favicon.ico`: t-this is t-the favicon fow youw app. (⑅˘꒳˘) cuwwentwy, 😳 it's the vue wogo. (U ﹏ U)
+  - `index.htmw`: this i-is the tempwate fow youw app. /(^•ω•^) youw v-vue app is wun fwom this htmw page, OwO and you can use wodash tempwate s-syntax to intewpowate vawues into it. ( ͡o ω ͡o )
 
-    > [!NOTE]
-    > this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
+    > [!note]
+    > this is nyot the tempwate fow m-managing the wayout o-of youw appwication — this t-tempwate is fow managing static htmw that sits o-outside of youw v-vue app. XD editing this fiwe typicawwy o-onwy occuws in advanced use c-cases. /(^•ω•^)
 
-- `src`: This directory contains the core of your Vue app.
+- `swc`: this diwectowy contains the cowe of youw vue app. /(^•ω•^)
 
-  - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the `index.html` file your app should be attached to. This file is often where you register global components or additional Vue libraries.
-  - `App.vue`: this is the top-level component in your Vue app. See below for more explanation of Vue components.
-  - `components`: this directory is where you keep your components. Currently it just has one example component.
-  - `assets`: This directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like [Sass/SCSS](https://sass-lang.com/) or [Stylus](https://stylus-lang.com/).
+  - `main.js`: t-this is the entwy point to youw appwication. 😳😳😳 c-cuwwentwy, this f-fiwe initiawizes y-youw vue appwication and signifies which htmw e-ewement in the `index.htmw` fiwe youw app shouwd be attached to. (ˆ ﻌ ˆ)♡ this fiwe is often w-whewe you wegistew g-gwobaw components o-ow additionaw v-vue wibwawies. :3
+  - `app.vue`: this is the top-wevew component i-in youw vue a-app. òωó see bewow fow mowe expwanation of vue components. 🥺
+  - `components`: t-this diwectowy is whewe you keep youw c-components. (U ﹏ U) cuwwentwy it just has one exampwe component. XD
+  - `assets`: t-this diwectowy i-is fow stowing static assets w-wike css and i-images. ^^ because t-these fiwes awe in the souwce diwectowy, o.O they can b-be pwocessed by webpack. 😳😳😳 this means you can use p-pwe-pwocessows wike [sass/scss](https://sass-wang.com/) ow [stywus](https://stywus-wang.com/). /(^•ω•^)
 
-> [!NOTE]
-> Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
+> [!note]
+> depending o-on the options y-you sewect w-when cweating a-a nyew pwoject, t-thewe might be othew diwectowies p-pwesent (fow exampwe, 😳😳😳 if you choose a woutew, ^•ﻌ•^ you w-wiww awso have a `views` diwectowy). 🥺
 
-## .vue files (single file components)
+## .vue f-fiwes (singwe fiwe components)
 
-Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.
+wike in many fwont-end f-fwamewowks, o.O c-components awe a centwaw pawt o-of buiwding apps in vue. (U ᵕ U❁) these c-components wet y-you bweak a wawge appwication into d-discwete buiwding b-bwocks that can be cweated a-and managed sepawatewy, and twansfew data between each othew as w-wequiwed. ^^ these smow bwocks can h-hewp you weason about and test youw code. (⑅˘꒳˘)
 
-While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components](https://vuejs.org/v2/guide/single-file-components.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
+whiwe s-some fwamewowks e-encouwage you to s-sepawate youw tempwate, :3 wogic, (///ˬ///✿) a-and stywing code i-into sepawate fiwes, :3 vue takes t-the opposite appwoach. using [singwe f-fiwe components](https://vuejs.owg/v2/guide/singwe-fiwe-components.htmw), 🥺 vue wets you gwoup y-youw tempwates, mya c-cowwesponding scwipt, XD and css aww togethew in a singwe fiwe ending in `.vue`. -.- t-these fiwes awe p-pwocessed by a js buiwd toow (such as webpack), o.O which means you c-can take advantage of buiwd-time t-toowing in youw p-pwoject. (˘ω˘) this awwows you to use toows wike babew, (U ᵕ U❁) typescwipt, rawr scss and mowe to c-cweate mowe sophisticated components. 🥺
 
-As a bonus, projects created with the Vue CLI are configured to use `.vue` files with Webpack out of the box. In fact, if you look inside the `src` folder in the project we created with the CLI, you'll see your first `.vue` file: `App.vue`.
+as a bonus, p-pwojects cweated with the vue c-cwi awe configuwed t-to use `.vue` fiwes with webpack o-out of the b-box. rawr x3 in fact, ( ͡o ω ͡o ) if y-you wook inside t-the `swc` fowdew i-in the pwoject w-we cweated with the cwi, σωσ you'ww see youw fiwst `.vue` fiwe: `app.vue`. rawr x3
 
-Let's explore this now.
+wet's expwowe this nyow. (ˆ ﻌ ˆ)♡
 
-### App.vue
+### a-app.vue
 
-Open your `App.vue` file — you'll see that it has three parts: `<template>`, `<script>`, and `<style>`, which contain the component's template, scripting, and styling information. All Single File Components share this same basic structure.
+o-open youw `app.vue` f-fiwe — you'ww s-see that it h-has thwee pawts: `<tempwate>`, rawr `<scwipt>`, :3 a-and `<stywe>`, rawr which contain the component's tempwate, (˘ω˘) scwipting, (ˆ ﻌ ˆ)♡ and s-stywing infowmation. mya a-aww singwe fiwe components shawe this same basic stwuctuwe. (U ᵕ U❁)
 
-`<template>` contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.
+`<tempwate>` c-contains aww the m-mawkup stwuctuwe a-and dispway wogic of youw component. mya youw tempwate c-can contain any vawid htmw, ʘwʘ as weww as some v-vue-specific syntax t-that we'ww covew watew. (˘ω˘)
 
-> [!NOTE]
-> By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
+> [!note]
+> by setting t-the `wang` attwibute on the `<tempwate>` tag, 😳 y-you can use p-pug tempwate syntax instead of standawd h-htmw — `<tempwate w-wang="pug">`. òωó w-we'ww s-stick to standawd h-htmw thwough this t-tutowiaw, nyaa~~ but it is wowth knowing t-that this i-is possibwe. o.O
 
-`<script>` contains all of the non-display logic of your component. Most importantly, your `<script>` tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a `render()` function.
+`<scwipt>` contains a-aww of the nyon-dispway wogic of youw component. nyaa~~ m-most impowtantwy, (U ᵕ U❁) youw `<scwipt>` t-tag needs to have a defauwt e-expowted js object. 😳😳😳 t-this object is whewe you wocawwy wegistew components, (U ﹏ U) d-define component inputs (pwops), ^•ﻌ•^ handwe w-wocaw state, (⑅˘꒳˘) d-define methods, >_< and mowe. (⑅˘꒳˘) youw buiwd step wiww pwocess t-this object a-and twansfowm it (with youw tempwate) i-into a vue component with a `wendew()` f-function.
 
-In the case of `App.vue`, our default export sets the name of the component to `app` and registers the `HelloWorld` component by adding it into the `components` property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.
+in the c-case of `app.vue`, σωσ ouw defauwt e-expowt sets the n-nyame of the component to `app` and wegistews the `hewwowowwd` c-component by adding i-it into the `components` p-pwopewty. 🥺 w-when you wegistew a component in this way, :3 you'we wegistewing it wocawwy. (ꈍᴗꈍ) wocawwy wegistewed components can o-onwy be used i-inside the components t-that wegistew t-them, ^•ﻌ•^ so you n-nyeed to impowt a-and wegistew them in evewy component f-fiwe that u-uses them. (˘ω˘) this can be usefuw fow b-bundwe spwitting/twee s-shaking since nyot evewy page in youw app n-nyecessawiwy nyeeds evewy component. 🥺
 
 ```jsx
-import HelloWorld from "./components/HelloWorld.vue";
+impowt hewwowowwd f-fwom "./components/hewwowowwd.vue";
 
-export default {
-  name: "app",
-  components: {
-    //You can register components locally here.
-    HelloWorld,
+expowt defauwt {
+  n-nyame: "app", (✿oωo)
+  c-components: {
+    //you can wegistew components w-wocawwy h-hewe. XD
+    hewwowowwd, (///ˬ///✿)
   },
 };
 ```
 
-> [!NOTE]
-> If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
+> [!note]
+> i-if you want to use [typescwipt](https://www.typescwiptwang.owg/) syntax, ( ͡o ω ͡o ) you nyeed t-to set the `wang` a-attwibute on the `<scwipt>` t-tag to signify to the compiwew t-that you'we using t-typescwipt — `<scwipt w-wang="ts">`. ʘwʘ
 
-`<style>` is where you write your CSS for the component. If you add a `scoped` attribute — `<style scoped>` — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.
+`<stywe>` is whewe you wwite y-youw css fow the component. rawr if you add a `scoped` a-attwibute — `<stywe scoped>` — vue wiww scope the stywes to the contents of youw sfc. o.O this wowks simiwaw t-to css-in-js sowutions, ^•ﻌ•^ but awwows you to just wwite pwain css. (///ˬ///✿)
 
-> [!NOTE]
-> If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed by Webpack at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
+> [!note]
+> if you sewect a css pwe-pwocessow when cweating t-the pwoject via the cwi, (ˆ ﻌ ˆ)♡ you can add a `wang` attwibute t-to the `<stywe>` tag so t-that the contents can be pwocessed by webpack at b-buiwd time. XD fow exampwe, (✿oωo) `<stywe w-wang="scss">` wiww awwow you t-to use scss syntax i-in youw stywing infowmation. -.-
 
-## Running the app locally
+## wunning the a-app wocawwy
 
-The Vue CLI comes with a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a `serve` command to the project's `package.json` file as an npm script, so you can easily run it.
+the vue cwi comes with a buiwt-in devewopment sewvew. XD t-this awwows you to wun youw app w-wocawwy so you can test it easiwy w-without nyeeding to configuwe a-a sewvew youwsewf. (✿oωo) t-the cwi adds a `sewve` command to the pwoject's `package.json` f-fiwe as an nypm scwipt, (˘ω˘) so you can easiwy wun i-it. (ˆ ﻌ ˆ)♡
 
-In your terminal, try running `npm run serve` (or `yarn serve` if you prefer yarn). Your terminal should output something like the following:
+in youw tewminaw, twy wunning `npm wun sewve` (ow `yawn sewve` if you pwefew yawn). >_< youw t-tewminaw shouwd o-output something wike the fowwowing:
 
 ```
-INFO  Starting development server...
-98% after emitting CopyPlugin
+i-info  s-stawting devewopment sewvew...
+98% a-aftew emitting copypwugin
 
- DONE  Compiled successfully in 18121ms
+ done  compiwed successfuwwy in 18121ms
 
-  App running at:
-  - Local:   <http://localhost:8080/>
-  - Network: <http://192.168.1.9:8080/>
+  app wunning a-at:
+  - wocaw:   <http://wocawhost:8080/>
+  - n-nyetwowk: <http://192.168.1.9:8080/>
 
-  Note that the development build is not optimized.
-  To create a production build, run npm run build.
+  nyote t-that the devewopment b-buiwd is nyot optimized. -.-
+  t-to cweate a pwoduction buiwd, (///ˬ///✿) wun nypm wun buiwd. XD
 ```
 
-If you navigate to the "local" address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
+i-if you nyavigate to the "wocaw" addwess i-in a nyew bwowsew t-tab (this shouwd be something wike `http://wocawhost:8080` a-as stated above, ^^;; but may vawy based on youw setup), rawr x3 you shouwd see youw app. OwO wight nyow, ʘwʘ it shouwd contain a wewcome m-message, a wink t-to the vue documentation, rawr winks t-to the pwugins y-you added when you initiawized t-the app with youw cwi, UwU and some othew usefuw winks to the vue community and ecosystem. (ꈍᴗꈍ)
 
-![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
+![defauwt vue app wendew, (✿oωo) w-with vue wogo, wewcome message, (⑅˘꒳˘) and some documentation winks](vue-defauwt-app.png)
 
-## Making a couple of changes
+## making a-a coupwe of changes
 
-Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element from the template section:
+w-wet's make o-ouw fiwst change to the app — we'ww dewete the vue wogo. open t-the `app.vue` fiwe, OwO a-and dewete t-the [`<img>`](/pt-bw/docs/web/htmw/ewement/img) ewement fwom the t-tempwate section:
 
 ```vue
-<img alt="Vue logo" src="./assets/logo.png" />
+<img awt="vue wogo" swc="./assets/wogo.png" />
 ```
 
-If your server is still running, you should see the logo removed from the rendered site almost instantly. Let's also remove the `HelloWorld` component from our template.
+if y-youw sewvew is stiww wunning, 🥺 y-you shouwd see the wogo wemoved f-fwom the wendewed site awmost instantwy. >_< wet's awso w-wemove the `hewwowowwd` component f-fwom ouw tempwate. (ꈍᴗꈍ)
 
-First of all delete this line:
+f-fiwst of aww dewete this w-wine:
 
 ```vue
-<HelloWorld msg="Welcome to Your Vue.js App" />
+<hewwowowwd m-msg="wewcome to youw v-vue.js app" />
 ```
 
-If you save your `App.vue` file now, the rendered app will throw an error because we've registered the component but are not using it. We also need to remove the lines from inside the `<script>` element that import and register the component:
+if you save y-youw `app.vue` fiwe nyow, 😳 the w-wendewed app wiww t-thwow an ewwow because we've wegistewed the component b-but awe nyot using it. 🥺 we awso nyeed to wemove the wines fwom inside the `<scwipt>` ewement that impowt and wegistew the c-component:
 
-Delete these lines now:
+dewete these wines nyow:
 
 ```js
-import HelloWorld from "./components/HelloWorld.vue";
+impowt h-hewwowowwd fwom "./components/hewwowowwd.vue";
 ```
 
 ```js
 components: {
-  HelloWorld;
+  h-hewwowowwd;
 }
 ```
 
-Your rendered app should no longer show an error, just a blank page, as we currently have no visible content inside `<template>`.
+youw wendewed app shouwd nyo wongew s-show an ewwow, nyaa~~ just a bwank page, ^•ﻌ•^ as we cuwwentwy h-have nyo visibwe content inside `<tempwate>`. (ˆ ﻌ ˆ)♡
 
-Let's add a new `<h1>` inside `<div id="app">`. Since we're going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:
+w-wet's add a nyew `<h1>` inside `<div id="app">`. (U ᵕ U❁) s-since we'we going to be cweating a todo wist a-app bewow, mya wet's s-set ouw headew text to "to-do wist". 😳 add it w-wike so:
 
 ```vue
-<template>
-  <div id="app">
-    <h1>To-Do List</h1>
+<tempwate>
+  <div i-id="app">
+    <h1>to-do wist</h1>
   </div>
-</template>
+</tempwate>
 ```
 
-`App.vue` will now show our heading, as you'd expect.
+`app.vue` w-wiww nyow s-show ouw heading, σωσ as you'd expect. ( ͡o ω ͡o )
 
-## Summary
+## summawy
 
-Let's leave this here for now. We've learnt about some of the ideas behind Vue, created some scaffolding for our example app to live inside, inspected it, and made a few preliminary changes.
+w-wet's weave this hewe fow nyow. XD we've weawnt about some of the i-ideas behind vue, :3 cweated some scaffowding fow ouw exampwe app t-to wive inside, :3 i-inspected it, (⑅˘꒳˘) a-and made a few pwewiminawy changes. òωó
 
-With a basic introduction out of the way, we'll now go further and build up our sample app, a basic Todo list application that allows us to store a list of items, check them off when done, and filter the list by all, complete, and incomplete todos.
+with a basic intwoduction out o-of the way, mya we'ww nyow go fuwthew a-and buiwd up ouw sampwe app, a-a basic todo wist a-appwication that awwows us to stowe a wist of items, 😳😳😳 check them off when done, :3 and fiwtew the w-wist by aww, >_< compwete, a-and incompwete todos. 🥺
 
-In the next article we'll build our first custom component, and look at some important concepts such as passing props into it and saving its data state.
+in the nyext awticwe w-we'ww buiwd ouw fiwst custom component, (ꈍᴗꈍ) and w-wook at some impowtant c-concepts s-such as passing p-pwops into it and s-saving its data s-state. rawr x3
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_wesouwces","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_fiwst_component", (U ﹏ U) "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}

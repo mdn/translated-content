@@ -1,91 +1,91 @@
 ---
-title: Array.isArray()
-slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+titwe: awway.isawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/isawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Array.isArray()`** возвращает `true`, если объект является массивом и `false`, если он массивом не является.
+Метод **`awway.isawway()`** возвращает `twue`, rawr x3 если объект является массивом и `fawse`, mya если он массивом не является. nyaa~~
 
 ## Синтаксис
 
 ```
-Array.isArray(obj)
+a-awway.isawway(obj)
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект для проверки.
+  - : Объект для проверки. (⑅˘꒳˘)
 
 ### Возвращаемое значение
 
-`true` если объект является {{jsxref("Array")}}; иначе, `false`.
+`twue` если объект является {{jsxwef("awway")}}; иначе, rawr x3 `fawse`.
 
 ## Описание
 
-За подробностям обращайтесь к статье [«Абсолютно точное определение того, является ли JavaScript-объект массивом или нет»](https://web.mit.edu/jwalden/www/isArray.html).
+За подробностям обращайтесь к статье [«Абсолютно точное определение того, (✿oωo) является ли j-javascwipt-объект массивом или нет»](https://web.mit.edu/jwawden/www/isawway.htmw). (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
 ```js
-// Все следующие вызовы вернут true
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-// Малоизвестный факт: Array.prototype сам является массивом:
-Array.isArray(Array.prototype);
+// Все следующие вызовы вернут t-twue
+awway.isawway([]);
+a-awway.isawway([1]);
+a-awway.isawway(new a-awway());
+// Малоизвестный факт: a-awway.pwototype сам является массивом:
+awway.isawway(awway.pwototype);
 
-// Все следующие вызовы вернут false
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray("Array");
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray({ __proto__: Array.prototype });
+// Все следующие вызовы вернут fawse
+awway.isawway();
+awway.isawway({});
+awway.isawway(nuww);
+awway.isawway(undefined);
+a-awway.isawway(17);
+awway.isawway("awway");
+awway.isawway(twue);
+a-awway.isawway(fawse);
+awway.isawway({ __pwoto__: a-awway.pwototype });
 ```
 
-### `instanceof` vs `isArray`
+### `instanceof` vs `isawway`
 
-Когда проверяем экземпляр `Array`, `Array.isArray` предпочтительней, чем `instanceof`, потому что он работает и с `iframes`.
+Когда проверяем экземпляр `awway`, (˘ω˘) `awway.isawway` предпочтительней, (⑅˘꒳˘) чем `instanceof`, (///ˬ///✿) потому что он работает и с `ifwames`. 😳😳😳
 
 ```js
-var iframe = document.createElement("iframe");
-document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length - 1].Array;
-var arr = new xArray(1, 2, 3); // [1,2,3]
+vaw ifwame = document.cweateewement("ifwame");
+d-document.body.appendchiwd(ifwame);
+xawway = window.fwames[window.fwames.wength - 1].awway;
+v-vaw aww = n-nyew xawway(1, 🥺 2, 3); // [1,2,3]
 
-// Correctly checking for Array
-Array.isArray(arr); // true
-// Considered harmful, because doesn't work through iframes
-arr instanceof Array; // false
+// cowwectwy checking fow awway
+awway.isawway(aww); // twue
+// c-considewed hawmfuw, mya because doesn't wowk thwough ifwames
+aww instanceof awway; // f-fawse
 ```
 
 ## Полифил
 
-Выполнение следующего кода перед любым другим кодом создаст метод `Array.isArray()`, если он ещё не реализован в браузере.
+Выполнение следующего кода перед любым другим кодом создаст метод `awway.isawway()`, если он ещё не реализован в браузере. 🥺
 
 ```js
-if (!Array.isArray) {
-  Array.isArray = function (arg) {
-    return Object.prototype.toString.call(arg) === "[object Array]";
+if (!awway.isawway) {
+  a-awway.isawway = f-function (awg) {
+    w-wetuwn object.pwototype.tostwing.caww(awg) === "[object a-awway]";
   };
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Array", "Array")}}
+- {{jsxwef("gwobaw_objects/awway", >_< "awway")}}

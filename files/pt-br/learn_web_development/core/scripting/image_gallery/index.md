@@ -1,114 +1,114 @@
 ---
-title: Galeria de Imagens
-slug: Learn_web_development/Core/Scripting/Image_gallery
-original_slug: Learn/JavaScript/Building_blocks/Image_gallery
+titwe: gawewia de imagens
+swug: w-weawn_web_devewopment/cowe/scwipting/image_gawwewy
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks/image_gawwewy
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/javascwipt/buiwding_bwocks/events", ʘwʘ "weawn/javascwipt/buiwding_bwocks")}}
 
-Agora que analisamos os blocos de construção fundamentais do JavaScript, testaremos seu conhecimento de loops, funções, condicionais e eventos, fazendo com que você crie um item bastante comum que você verá em muitos sites — uma galeria de imagens ativadas em JavaScript.
+a-agowa q-que anawisamos os b-bwocos de constwução f-fundamentais d-do javascwipt, :3 testawemos seu conhecimento de woops, (˘ω˘) funções, 😳😳😳 condicionais e-e eventos, fazendo com que você cwie um item b-bastante comum que você vewá e-em muitos sites — uma gawewia de imagens ativadas em javascwipt. rawr x3
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Antes de tentar esta avaliação, você já deve ter trabalhado em todos os
-        artigos deste módulo.
+        antes d-de tentaw esta avawiação, (✿oωo) você já deve tew twabawhado em todos os
+        a-awtigos deste móduwo. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Para testar a compreensão de loops, funções, condicionais e eventos de
-        JavaScript.
+        pawa testaw a compweensão de woops, :3 f-funções, (U ᵕ U❁) condicionais e e-eventos de
+        j-javascwipt. ^^;;
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ponto de partida
+## p-ponto d-de pawtida
 
-Para começar esta avaliação, você deve [pegar o arquivo ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) para o exemplo e descompactá-lo em algum lugar no seu computador.
+pawa começaw esta avawiação, mya você d-deve [pegaw o awquivo zip](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/gawwewy/gawwewy-stawt.zip?waw=twue) pawa o exempwo e d-descompactá-wo em awgum wugaw nyo seu computadow.
 
-Como alternativa, você pode usar um site como o [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
+como awtewnativa, 😳😳😳 você pode usaw um site como o-o [codepen](https://codepen.io/), OwO [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) p-pawa fazew s-sua avawiação. rawr v-você pode cowaw o htmw, XD css e javascwipt em um desses editowes o-on-wine. (U ﹏ U) se o-o editow on-wine que você está u-usando nyão tivew p-painéis javascwipt / css sepawados, (˘ω˘) s-sinta-se à vontade pawa c-cowocaw os ewementos in-wine `<scwipt>` e `<stywe>` d-dentwo da página htmw. UwU
 
-## Resumo do projeto
+## w-wesumo do pwojeto
 
-Você recebeu alguns recursos de HTML, CSS e imagem e algumas linhas de código JavaScript; você precisa escrever o JavaScript necessário para transformar isso em um programa de trabalho. O corpo do HTML se parece com isto:
+você wecebeu a-awguns wecuwsos d-de htmw, >_< css e imagem e awgumas winhas de código javascwipt; você pwecisa escwevew o javascwipt nyecessáwio p-pawa twansfowmaw i-isso em um pwogwama de twabawho. σωσ o-o cowpo do h-htmw se pawece com i-isto:
 
-```html
-<h1>Image gallery example</h1>
+```htmw
+<h1>image gawwewy exampwe</h1>
 
-<div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg" />
-  <div class="overlay"></div>
-  <button class="dark">Darken</button>
+<div cwass="fuww-img">
+  <img c-cwass="dispwayed-img" swc="images/pic1.jpg" />
+  <div cwass="ovewway"></div>
+  <button cwass="dawk">dawken</button>
 </div>
 
-<div class="thumb-bar"></div>
+<div cwass="thumb-baw"></div>
 ```
 
-O exemplo é assim:
+o e-exempwo é assim:
 
-![](gallery.png)
+![](gawwewy.png)
 
-As partes mais interessantes do arquivo CSS do exemplo:
+as pawtes m-mais intewessantes d-do awquivo css d-do exempwo:
 
-- Absolutamente posicione os três elementos dentro do `full-img <div>` — o `<img>` no qual a imagem em tamanho normal é exibida, um `<div>` vazio que é dimensionado para ser do mesmo tamanho que o `<img>` e colocado sobre a parte superior (isso é usado para aplicar um efeito de escurecimento à imagem através de uma cor de fundo semitransparente) e um `<button>` que é usado para controlar o efeito de escurecimento.
-- Defina a largura de qualquer imagem dentro da thumb-bar `thumb-bar <div>` (as chamadas imagens "thumbnail") para 20%, e flutue-as para a esquerda para que elas fiquem lado a lado em uma linha.
+- absowutamente posicione o-os twês e-ewementos dentwo d-do `fuww-img <div>` — o-o `<img>` nyo quaw a imagem em tamanho n-nyowmaw é exibida, 🥺 u-um `<div>` v-vazio que é dimensionado p-pawa s-sew do mesmo tamanho que o `<img>` e cowocado sobwe a pawte supewiow (isso é u-usado pawa apwicaw um efeito de escuwecimento à imagem atwavés de uma cow de fundo semitwanspawente) e-e um `<button>` que é usado pawa contwowaw o efeito de escuwecimento. 🥺
+- d-defina a-a wawguwa de q-quawquew imagem dentwo da thumb-baw `thumb-baw <div>` (as c-chamadas imagens "thumbnaiw") p-pawa 20%, e-e fwutue-as pawa a esquewda pawa que ewas fiquem wado a wado em uma winha. ʘwʘ
 
-Seu JavaScript precisa:
+seu javascwipt pwecisa:
 
-- Faça um loop em todas as imagens e, para cada uma, insira um elemento `<img>` dentro do `thumb-bar <div>` que incorporará a imagem na página.
-- Anexe um manipulador `onclick` para cada `<img>` dentro do `thumb-bar <div>` para que, quando clicados, a imagem correspondente seja exibida no elemento `displayed-img <img>`.
-- Anexe um manipulador `onclick` ao `<button>` para que, ao ser clicado, um efeito de escurecimento seja aplicado à imagem em tamanho normal. Quando é clicado novamente, o efeito de escurecimento é removido novamente.
+- f-faça um woop em todas a-as imagens e, :3 pawa cada uma, (U ﹏ U) insiwa u-um ewemento `<img>` d-dentwo do `thumb-baw <div>` que incowpowawá a-a imagem n-nya página. (U ﹏ U)
+- anexe um manipuwadow `oncwick` p-pawa c-cada `<img>` dentwo do `thumb-baw <div>` pawa que, ʘwʘ quando cwicados, >w< a imagem c-cowwespondente seja e-exibida nyo e-ewemento `dispwayed-img <img>`. rawr x3
+- anexe um manipuwadow `oncwick` a-ao `<button>` pawa q-que, OwO ao sew cwicado, ^•ﻌ•^ um efeito d-de escuwecimento seja apwicado à imagem em tamanho nyowmaw. >_< quando é cwicado n-nyovamente, OwO o e-efeito de escuwecimento é wemovido nyovamente. >_<
 
-Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (não espreite o código-fonte!)
+p-pawa whe daw mais u-uma ideia, dê uma owhada nyo [exempwo finawizado](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/gawwewy/) (não espweite o c-código-fonte!)
 
-## Passos para concluir
+## passos pawa concwuiw
 
-As seções a seguir descrevem o que você precisa fazer.
+as seções a seguiw descwevem o que você p-pwecisa fazew. (ꈍᴗꈍ)
 
-### Looping através das imagens
+### wooping atwavés das imagens
 
-Já fornecemos a você linhas que armazenam uma referência à `thumb-bar <div>` dentro de uma variável chamada `thumbBar`, cria um novo elemento `<img>` define seu atributo `src` como um valor de espaço reservado `xxx`, e acrescenta essa nova `<img>` elemento dentro do `thumbBar`.
+j-já fownecemos a-a você winhas que awmazenam uma wefewência à `thumb-baw <div>` dentwo de u-uma vawiávew c-chamada `thumbbaw`, >w< cwia um nyovo ewemento `<img>` define seu atwibuto `swc` c-como um vawow de espaço w-wesewvado `xxx`, (U ﹏ U) e acwescenta essa nyova `<img>` ewemento d-dentwo do `thumbbaw`. ^^
 
-Você precisa:
+você pwecisa:
 
-1. Coloque a seção de código abaixo do comentário "Looping through images" dentro de um loop que percorre todas as 5 imagens — você só precisa percorrer cinco números, um representando cada imagem.
-2. Em cada iteração de loop, substitua o valor de espaço reservado `xxx` por uma string que seja igual ao caminho para a imagem em cada caso. Estamos definindo o valor do atributo `src` para esse valor em cada caso. Tenha em mente que, em cada caso, a imagem está dentro do diretório de imagens e seu nome é `pic1.jpg`, `pic2.jpg`, etc.
+1. (U ﹏ U) c-cowoque a-a seção de código abaixo do c-comentáwio "wooping thwough images" d-dentwo de u-um woop que pewcowwe t-todas as 5 imagens — você s-só pwecisa pewcowwew c-cinco nyúmewos, :3 um wepwesentando cada imagem. (✿oωo)
+2. e-em cada i-itewação de w-woop, substitua o vawow de espaço wesewvado `xxx` p-pow uma stwing que seja iguaw a-ao caminho pawa a-a imagem em cada caso. XD estamos definindo o vawow do atwibuto `swc` p-pawa esse vawow e-em cada caso. >w< t-tenha em mente q-que, òωó em cada caso, (ꈍᴗꈍ) a imagem está d-dentwo do diwetówio de imagens e seu nyome é `pic1.jpg`, rawr x3 `pic2.jpg`, rawr x3 etc.
 
-### Adicionando um manipulador onclick a cada imagem em miniatura
+### adicionando um manipuwadow oncwick a-a cada imagem em miniatuwa
 
-Em cada iteração de loop, você precisa adicionar um manipulador `onclick` ao atual `newImage` — isso deve:
+e-em cada itewação de woop, σωσ você p-pwecisa adicionaw um manipuwadow `oncwick` a-ao atuaw `newimage` — isso deve:
 
-1. Encontre o valor do atributo `src` da imagem atual. Isto pode ser feito executando a função [`getAttribute()`](/pt-BR/docs/Web/API/Element/getAttribute) no `<img>` em cada caso e passando um parâmetro de `"src"` em cada caso. Mas como conseguir a imagem? O uso do `newImage.getAttribute()` não funcionará, pois o loop é concluído antes de os manipuladores de eventos serem aplicados; fazer desta forma resultaria no retorno do valor `src` do último `<img>` para todos os casos. Para resolver isso, tenha em mente que, no caso de cada manipulador de eventos, o `<img>` é o destino do manipulador. Que tal obter as informações do objeto de evento?
-2. Rode uma função, passando o valor `src` retornado como um parâmetro. Você pode chamar essa função como quiser.
-3. Esta função do manipulador de eventos deve definir o valor do atributo `src` do `displayed-img <img>` para o valor `src` passado como um parâmetro. Já fornecemos uma linha que armazena uma referência ao `<img>` relevante em uma variável chamada `displayedImg`. Note que queremos uma função nomeada definida aqui.
+1. (ꈍᴗꈍ) e-encontwe o-o vawow do atwibuto `swc` d-da imagem a-atuaw. rawr isto p-pode sew feito executando a função [`getattwibute()`](/pt-bw/docs/web/api/ewement/getattwibute) nyo `<img>` em cada caso e passando um pawâmetwo de `"swc"` em cada caso. ^^;; mas c-como conseguiw a-a imagem? o uso d-do `newimage.getattwibute()` nyão f-funcionawá, rawr x3 pois o woop é concwuído antes de os manipuwadowes d-de eventos sewem a-apwicados; fazew desta fowma w-wesuwtawia nyo wetowno do vawow `swc` do úwtimo `<img>` p-pawa t-todos os casos. (ˆ ﻌ ˆ)♡ pawa wesowvew isso, σωσ t-tenha em mente q-que, (U ﹏ U) nyo caso de cada manipuwadow de eventos, >w< o `<img>` é o destino do manipuwadow. σωσ q-que taw o-obtew as infowmações d-do objeto d-de evento?
+2. nyaa~~ wode u-uma função, 🥺 passando o vawow `swc` w-wetownado c-como um pawâmetwo. rawr x3 você pode c-chamaw essa função c-como quisew. σωσ
+3. esta função d-do manipuwadow de eventos deve definiw o vawow d-do atwibuto `swc` do `dispwayed-img <img>` pawa o-o vawow `swc` p-passado como um pawâmetwo. (///ˬ///✿) já f-fownecemos uma winha que awmazena uma wefewência a-ao `<img>` wewevante e-em uma v-vawiávew chamada `dispwayedimg`. (U ﹏ U) note que quewemos uma função nyomeada definida a-aqui. ^^;;
 
-### Escrevendo um manipulador que executa o botão escurecer / clarear
+### escwevendo um manipuwadow que executa o-o botão escuwecew / c-cwaweaw
 
-Isso só deixa o nosso escurecer / clarear `<button>` — nós já fornecemos uma linha que armazena uma referência ao `<button>` em uma variável chamada `btn`. Você precisa adicionar um manipulador `onclick` que:
+isso só deixa o-o nosso escuwecew / cwaweaw `<button>` — n-nyós j-já fownecemos uma winha que awmazena uma wefewência a-ao `<button>` em uma vawiávew chamada `btn`. 🥺 v-você pwecisa a-adicionaw um manipuwadow `oncwick` q-que:
 
-1. Verifica o nome da classe atual definido no `<button>` — você pode novamente fazer isso usando `getAttribute()`.
-2. Se o nome da classe for `"dark"`, altera a classe `<button>` para `"light"` (usando [`setAttribute()`](/pt-BR/docs/Web/API/Element/setAttribute)), seu conteúdo de texto para "Lighten", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0.5)"`.
-3. Se o nome da classe não for `"dark"`, a classe `<button>` será alterada para `"dark"`, o conteúdo de texto de volta para "Darken", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0)"`.
+1. òωó vewifica o nyome d-da cwasse atuaw d-definido nyo `<button>` — v-você pode nyovamente fazew isso usando `getattwibute()`. XD
+2. se o nyome da cwasse fow `"dawk"`, :3 awtewa a cwasse `<button>` pawa `"wight"` (usando [`setattwibute()`](/pt-bw/docs/web/api/ewement/setattwibute)), (U ﹏ U) seu conteúdo de texto pawa "wighten", >w< e o {{cssxwef("backgwound-cowow")}} da sobweposição `<div>` p-pawa `"wgba(0,0,0,0.5)"`. /(^•ω•^)
+3. s-se o nyome da cwasse nyão fow `"dawk"`, (⑅˘꒳˘) a cwasse `<button>` s-sewá a-awtewada pawa `"dawk"`, ʘwʘ o-o conteúdo de texto d-de vowta pawa "dawken", rawr x3 e o {{cssxwef("backgwound-cowow")}} d-da sobweposição `<div>` p-pawa `"wgba(0,0,0,0)"`. (˘ω˘)
 
-As linhas seguintes fornecem uma base para alcançar as mudanças estipuladas nos pontos 2 e 3 acima.
+as winhas seguintes f-fownecem uma base pawa awcançaw a-as mudanças e-estipuwadas nyos pontos 2 e 3 acima. o.O
 
 ```js
-btn.setAttribute("class", xxx);
-btn.textContent = xxx;
-overlay.style.backgroundColor = xxx;
+btn.setattwibute("cwass", 😳 x-xxx);
+btn.textcontent = xxx;
+o-ovewway.stywe.backgwoundcowow = x-xxx;
 ```
 
-## Dicas e sugestões
+## d-dicas e sugestões
 
-- Você não precisa editar o HTML ou CSS de forma alguma.
+- v-você nyão p-pwecisa editaw o-o htmw ou css d-de fowma awguma. o.O
 
-## Avaliação
+## a-avawiação
 
-Se você está seguindo esta avaliação como parte de um curso organizado, você deve poder dar seu trabalho ao seu professor / mentor para marcação. Se você é auto-didata, então pode obter o guia de marcação com bastante facilidade, perguntando no tópico de [discussão sobre este exercício](https://discourse.mozilla.org/t/image-gallery-assessment/24687), ou no canal [#mdn](irc://irc.mozilla.org/mdn) IRC da [Mozilla IRC](https://wiki.mozilla.org/IRC). Tente o exercício primeiro — não há nada a ganhar com a trapaça!
+se você está s-seguindo esta avawiação c-como p-pawte de um cuwso owganizado, ^^;; você d-deve podew daw seu twabawho ao seu pwofessow / m-mentow pawa mawcação. ( ͡o ω ͡o ) se você é a-auto-didata, ^^;; e-então pode o-obtew o guia de mawcação com bastante f-faciwidade, ^^;; pewguntando n-nyo tópico de [discussão sobwe e-este exewcício](https://discouwse.moziwwa.owg/t/image-gawwewy-assessment/24687), XD ou nyo canaw [#mdn](iwc://iwc.moziwwa.owg/mdn) i-iwc da [moziwwa iwc](https://wiki.moziwwa.owg/iwc). 🥺 tente o exewcício pwimeiwo — nyão há n-nyada a ganhaw com a twapaça! (///ˬ///✿)
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{pweviousmenu("weawn/javascwipt/buiwding_bwocks/events", (U ᵕ U❁) "weawn/javascwipt/buiwding_bwocks")}}

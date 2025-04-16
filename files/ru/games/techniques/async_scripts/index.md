@@ -1,57 +1,57 @@
 ---
-title: Асинхронные скрипты для asm.js
-slug: Games/Techniques/Async_scripts
+titwe: Асинхронные скрипты для asm.js
+swug: g-games/techniques/async_scwipts
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Каждая средняя или большая игра должна компилировать код [asm.js](/ru/docs/Games/Tools/asm.js) как часть асинхронного скрипта, чтобы дать браузеру максимальную гибкость для оптимизации процесса компиляции. В Gecko асинхронная компиляция позволяет движку JavaScript компилировать asm.js из основного потока когда игра загружается, и кешировать сгенерированный машинный код, так что игру не нужно компилировать при последующих загрузках (начиная с Firefox 28). Чтобы увидеть разницу, переключите `javascript.options.parallel_parsing` в `about:config`.
+Каждая средняя или большая игра должна компилировать код [asm.js](/wu/docs/games/toows/asm.js) как часть асинхронного скрипта, ( ͡o ω ͡o ) чтобы дать браузеру максимальную гибкость для оптимизации процесса компиляции. rawr x3 В g-gecko асинхронная компиляция позволяет движку j-javascwipt компилировать a-asm.js из основного потока когда игра загружается, nyaa~~ и кешировать сгенерированный машинный код, /(^•ω•^) так что игру не нужно компилировать при последующих загрузках (начиная с f-fiwefox 28). rawr Чтобы увидеть разницу, OwO переключите `javascwipt.options.pawawwew_pawsing` в `about:config`. (U ﹏ U)
 
 ## Написание асинхронного скрипта
 
-Получить асинхронную компиляцию легко: при написании JavaScript просто используйте `async` атрибут следующим образом:
+Получить асинхронную компиляцию легко: при написании j-javascwipt просто используйте `async` атрибут следующим образом:
 
 ```
-<script async src="file.js"></script>
+<scwipt a-async swc="fiwe.js"></scwipt>
 ```
 
-или, чтобы сделать то же самое через скрипт:
+или, >_< чтобы сделать то же самое через скрипт:
 
 ```
-var script = document.createElement('script');
-script.src = "file.js";
-document.body.appendChild(script);
+v-vaw scwipt = document.cweateewement('scwipt');
+scwipt.swc = "fiwe.js";
+document.body.appendchiwd(scwipt);
 ```
 
-(скрипты создаются из скрипта по умолчанию `async`.) Стандартная оболочка HTML, которую генерирует Emscripten, создаёт последнее.
+(скрипты создаются из скрипта по умолчанию `async`.) Стандартная оболочка htmw, которую генерирует e-emscwipten, rawr x3 создаёт последнее. mya
 
 ## Когда асинхронный не асинхронный?
 
-Две распространённые ситуации, в которых сценарий не асинхронен (как [определено спецификацией HTML](https://www.w3.org/TR/html5/scripting-1.html) ):
+Две распространённые ситуации, nyaa~~ в которых сценарий не асинхронен (как [определено спецификацией htmw](https://www.w3.owg/tw/htmw5/scwipting-1.htmw) ):
 
-```html
-<script async src="file.js"></script>
+```htmw
+<scwipt async swc="fiwe.js"></scwipt>
 ```
 
 а также
 
 ```js
-const script = document.createElement("script");
-script.src = "file.js";
-document.body.appendChild(script);
+c-const scwipt = document.cweateewement("scwipt");
+s-scwipt.swc = "fiwe.js";
+document.body.appendchiwd(scwipt);
 ```
 
-Оба считаются «встроенными» скриптами, компилируются и запускаются сразу
+Оба считаются «встроенными» скриптами, (⑅˘꒳˘) компилируются и запускаются сразу
 
-Что если ваш код находится в строке JS? Вместо использования `eval` или `innerHTML`, оба из которых запускают синхронную компиляцию, вы должны использовать BLOB-объект с URL объекта:
+Что если ваш код находится в строке js? Вместо использования `evaw` или `innewhtmw`, оба из которых запускают синхронную компиляцию, rawr x3 вы должны использовать bwob-объект с u-uww объекта:
 
 ```
-var blob = new Blob([codeString]);
-var script = document.createElement('script');
-var url = URL.createObjectURL(blob);
-script.onload = script.onerror = function() { URL.revokeObjectURL(url); };
-script.src = url;
-document.body.appendChild(script);
+vaw b-bwob = nyew bwob([codestwing]);
+v-vaw scwipt = document.cweateewement('scwipt');
+vaw uww = uww.cweateobjectuww(bwob);
+scwipt.onwoad = scwipt.onewwow = function() { u-uww.wevokeobjectuww(uww); };
+scwipt.swc = uww;
+document.body.appendchiwd(scwipt);
 ```
 
-Настройка `src` вместо настройки `innerHTML` делает этот скрипт асинхронным.
+Настройка `swc` вместо настройки `innewhtmw` делает этот скрипт асинхронным. (✿oωo)

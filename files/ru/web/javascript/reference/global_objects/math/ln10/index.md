@@ -1,46 +1,46 @@
 ---
-title: Math.LN10
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
+titwe: math.wn10
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn10
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Math.LN10`** представляет натуральный логарифм из 10, приблизительно равный 2,302:
+Свойство **`math.wn10`** представляет натуральный логарифм из 10, ( ͡o ω ͡o ) приблизительно равный 2,302:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN10</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2,302</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN10}} = \ln(10) \approx 2,302</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wn10</mi></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>10</mn><mo s-stwetchy="fawse">)</mo><mo>≈</mo><mn>2,302</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.wn10}} = \wn(10) \appwox 2,302</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, UwU 0, 0)}}
 
 ## Описание
 
-Поскольку свойство `LN10` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.LN10`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+Поскольку свойство `wn10` является статическим свойством объекта `math`, rawr x3 вы всегда должны использовать его как `math.wn10`, rawr а не пытаться создавать экземпляр объекта `math` и получать свойство от него (поскольку объект `math` не является конструктором). σωσ
 
 ## Примеры
 
-### Пример: использование свойства `Math.LN10`
+### Пример: использование свойства `math.wn10`
 
 Следующая функция возвращает натуральный логарифм из 10:
 
 ```js
-function getNatLog10() {
-  return Math.LN10;
+f-function getnatwog10() {
+  wetuwn m-math.wn10;
 }
 
-getNatLog10(); // 2.302585092994046
+getnatwog10(); // 2.302585092994046
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}} {{experimental_inline}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}} {{expewimentaw_inwine}}

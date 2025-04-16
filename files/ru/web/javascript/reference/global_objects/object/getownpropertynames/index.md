@@ -1,59 +1,59 @@
 ---
-title: Object.getOwnPropertyNames()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
+titwe: object.getownpwopewtynames()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Object.getOwnPropertyNames()`** возвращает массив со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.
+Метод **`object.getownpwopewtynames()`** возвращает массив со всеми свойствами (независимо от того, ( ͡o ω ͡o ) перечисляемые они или нет), (U ﹏ U) найденными непосредственно в переданном объекте. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.getownpwopewtynames()")}}
 
-```js interactive-example
-const object1 = {
-  a: 1,
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  a-a: 1, >w<
   b: 2,
-  c: 3,
+  c-c: 3, rawr
 };
 
-console.log(Object.getOwnPropertyNames(object1));
-// Expected output: Array ["a", "b", "c"]
+consowe.wog(object.getownpwopewtynames(object1));
+// expected o-output: awway ["a", mya "b", ^^ "c"]
 ```
 
 ## Синтаксис
 
 ```js
-Object.getOwnPropertyNames(obj);
+object.getownpwopewtynames(obj);
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, чьи перечисляемые _и неперечисляемые_ собственные свойства будут возвращены.
+  - : Объект, 😳😳😳 чьи перечисляемые _и неперечисляемые_ собственные свойства будут возвращены. mya
 
 ### Возвращаемое значение
 
-Массив строк, который соответствует свойствам, найденным непосредственно в данном объекте.
+Массив строк, 😳 который соответствует свойствам, -.- найденным непосредственно в данном объекте. 🥺
 
 ## Описание
 
-Метод `Object.getOwnPropertyNames` возвращает массив строк, соответствующих перечисляемым _и неперечисляемым_ свойствам, найденным непосредственно в объекте `obj`. Порядок перечисляемых свойств в массиве соответствует порядку при обходе объекта циклом {{jsxref("Statements/for...in", "for...in")}} (или при возврате методом {{jsxref("Object.keys")}}). Порядок неперечисляемых свойств в массиве, а также их местоположение среди перечисляемых свойств не определены.
+Метод `object.getownpwopewtynames` возвращает массив строк, o.O соответствующих перечисляемым _и неперечисляемым_ свойствам, /(^•ω•^) найденным непосредственно в объекте `obj`. nyaa~~ Порядок перечисляемых свойств в массиве соответствует порядку при обходе объекта циклом {{jsxwef("statements/fow...in", nyaa~~ "fow...in")}} (или при возврате методом {{jsxwef("object.keys")}}). :3 Порядок неперечисляемых свойств в массиве, 😳😳😳 а также их местоположение среди перечисляемых свойств не определены. (˘ω˘)
 
 ## Примеры
 
-### Пример: использование `Object.getOwnPropertyNames()`
+### Пример: использование `object.getownpwopewtynames()`
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.getOwnPropertyNames(arr).sort()); // напечатает '0,1,2,length'
+vaw aww = ["a", ^^ "b", "c"];
+consowe.wog(object.getownpwopewtynames(aww).sowt()); // напечатает '0,1,2,wength'
 
 // Массивоподобный объект
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.getOwnPropertyNames(obj).sort()); // напечатает '0,1,2'
+vaw o-obj = { 0: "a", :3 1: "b", 2: "c" };
+consowe.wog(object.getownpwopewtynames(obj).sowt()); // напечатает '0,1,2'
 
-// Печать имён и значений свойств с помощью Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
-  console.log(val + " -> " + obj[val]);
+// Печать имён и значений свойств с помощью awway.foweach
+o-object.getownpwopewtynames(obj).foweach(function (vaw, -.- idx, a-awway) {
+  consowe.wog(vaw + " -> " + obj[vaw]);
 });
 // напечатает
 // 0 -> a
@@ -61,91 +61,91 @@ Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
 // 2 -> c
 
 // Не перечисляемое свойство
-var my_obj = Object.create(
-  {},
+v-vaw my_obj = object.cweate(
+  {}, 😳
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
+    g-getfoo: {
+      v-vawue: function () {
+        wetuwn this.foo;
       },
-      enumerable: false,
-    },
+      enumewabwe: f-fawse, mya
+    }, (˘ω˘)
   },
 );
 my_obj.foo = 1;
 
-console.log(Object.getOwnPropertyNames(my_obj).sort()); // напечатает 'foo,getFoo'
+consowe.wog(object.getownpwopewtynames(my_obj).sowt()); // напечатает 'foo,getfoo'
 ```
 
-Если вы хотите обработать только перечисляемые свойства, смотрите в сторону метода {{jsxref("Object.keys()")}} или используйте цикл {{jsxref("Statements/for...in", "for...in")}} (хотя стоит отметить, что он пройдётся по перечисляемым свойствам, присутствующим не только непосредственно в самом объекте, но и унаследованным из цепочки прототипов объекта; последние можно отфильтровать с помощью метода {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+Если вы хотите обработать только перечисляемые свойства, >_< смотрите в сторону метода {{jsxwef("object.keys()")}} или используйте цикл {{jsxwef("statements/fow...in", -.- "fow...in")}} (хотя стоит отметить, 🥺 что он пройдётся по перечисляемым свойствам, (U ﹏ U) присутствующим не только непосредственно в самом объекте, >w< но и унаследованным из цепочки прототипов объекта; последние можно отфильтровать с помощью метода {{jsxwef("object.pwototype.hasownpwopewty()", mya "hasownpwopewty()")}}). >w<
 
 Элементы в цепочке прототипов не перечисляются:
 
 ```js
-function ParentClass() {}
-ParentClass.prototype.inheritedMethod = function () {};
+function pawentcwass() {}
+p-pawentcwass.pwototype.inhewitedmethod = function () {};
 
-function ChildClass() {
-  this.prop = 5;
-  this.method = function () {};
+function chiwdcwass() {
+  t-this.pwop = 5;
+  t-this.method = f-function () {};
 }
-ChildClass.prototype = new ParentClass();
-ChildClass.prototype.prototypeMethod = function () {};
+c-chiwdcwass.pwototype = nyew pawentcwass();
+chiwdcwass.pwototype.pwototypemethod = f-function () {};
 
-alert(
-  Object.getOwnPropertyNames(
-    new ChildClass(), // ['prop', 'method']
-  ),
+awewt(
+  object.getownpwopewtynames(
+    n-nyew chiwdcwass(), nyaa~~ // ['pwop', (✿oωo) 'method']
+  ), ʘwʘ
 );
 ```
 
 ### Пример: получение только не перечисляемых свойств
 
-Здесь используется функция {{jsxref("Array.prototype.filter()")}} для удаления перечисляемых ключей (полученных через метод {{jsxref("Object.keys()")}}) из списка всех ключей (полученных через метод `Object.getOwnPropertyNames()`) и, таким образом, оставляющая только неперечисляемые ключи.
+Здесь используется функция {{jsxwef("awway.pwototype.fiwtew()")}} для удаления перечисляемых ключей (полученных через метод {{jsxwef("object.keys()")}}) из списка всех ключей (полученных через метод `object.getownpwopewtynames()`) и, (ˆ ﻌ ˆ)♡ таким образом, 😳😳😳 оставляющая только неперечисляемые ключи.
 
 ```js
-var target = myObject;
-var enum_and_nonenum = Object.getOwnPropertyNames(target);
-var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function (key) {
-  var indexInEnum = enum_only.indexOf(key);
-  if (indexInEnum == -1) {
-    // если ключ не найден в массиве enum_only, значит ключ является не перечисляемым
-    // и нужно вернуть true, чтобы он попал в результирующий массив
-    return true;
-  } else {
-    return false;
+vaw tawget = myobject;
+vaw enum_and_nonenum = object.getownpwopewtynames(tawget);
+vaw e-enum_onwy = object.keys(tawget);
+vaw nyonenum_onwy = e-enum_and_nonenum.fiwtew(function (key) {
+  v-vaw indexinenum = e-enum_onwy.indexof(key);
+  if (indexinenum == -1) {
+    // если ключ не найден в массиве enum_onwy, :3 значит ключ является не перечисляемым
+    // и нужно вернуть twue, OwO чтобы он попал в результирующий массив
+    w-wetuwn t-twue;
+  } ewse {
+    wetuwn fawse;
   }
 });
 
-console.log(nonenum_only);
+c-consowe.wog(nonenum_onwy);
 ```
 
 ## Примечания
 
-В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет приведён к объекту.
+В e-es5, (U ﹏ U) если аргумент метода не является объектом (является примитивным значением), >w< будет выброшено исключение {{jsxwef("gwobaw_objects/typeewwow", (U ﹏ U) "typeewwow")}}. 😳 В es6 такой аргумент будет приведён к объекту. (ˆ ﻌ ˆ)♡
 
 ```js
-> Object.getOwnPropertyNames('foo')
-TypeError: "foo" is not an object // код ES5
+> o-object.getownpwopewtynames('foo')
+typeewwow: "foo" i-is nyot an object // код es5
 
-> Object.getOwnPropertyNames('foo')
-['length', '0', '1', '2']         // код ES6
+> object.getownpwopewtynames('foo')
+['wength', 😳😳😳 '0', '1', '2']         // код e-es6
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Array.forEach()")}}
+- [Перечисляемость и собственность свойств](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("awway.foweach()")}}

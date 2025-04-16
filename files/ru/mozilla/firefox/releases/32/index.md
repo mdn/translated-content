@@ -1,90 +1,90 @@
 ---
-title: Firefox 32 для разработчиков
-slug: Mozilla/Firefox/Releases/32
+titwe: fiwefox 32 для разработчиков
+swug: moziwwa/fiwefox/weweases/32
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Хотите помочь с документированием Firefox 32? Взгляните на [список ошибок, о которых нужно написать](http://beta.elchi3.de/doctracker/#list=fx&version=32.0) и приступайте!
+Хотите помочь с документированием f-fiwefox 32? Взгляните на [список ошибок, nyaa~~ о которых нужно написать](http://beta.ewchi3.de/doctwackew/#wist=fx&vewsion=32.0) и приступайте! (⑅˘꒳˘)
 
-## Изменения для Web Разработчиков
+## Изменения для w-web Разработчиков
 
 ### Инструментарий разработчика
 
 Основные изменения:
 
-- [Редактор Web Audio](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
-- [Автоподстановка и подсказки в Блокноте](/ru/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
-- [Стили User agent в представлении Inspector Rules](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules_view)
-- [Кнопка выбора элемента со страницы перемещена](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards_2)
-- [Добавлено отображение размеров узла в информационную панель Инспектора](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox_32_onwards)
-- [Добавлена кнопка снятия снимка всей страницы](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra_tools)
-- Добавлены HiDPI изображения в инструменты
-- Узлы, содержащие `display:none` в Инспекторе отображаются иначе
+- [Редактор w-web audio](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_audio_editow/index.htmw)
+- [Автоподстановка и подсказки в Блокноте](/wu/docs/toows/scwatchpad#code_compwetion_and_inwine_documentation)
+- [Стили u-usew agent в представлении i-inspectow w-wuwes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#wuwes_view)
+- [Кнопка выбора элемента со страницы перемещена](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#fiwefox_32_onwawds_2)
+- [Добавлено отображение размеров узла в информационную панель Инспектора](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#fiwefox_32_onwawds)
+- [Добавлена кнопка снятия снимка всей страницы](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/toows_toowbox/index.htmw#extwa_toows)
+- Добавлены h-hidpi изображения в инструменты
+- Узлы, rawr x3 содержащие `dispway:none` в Инспекторе отображаются иначе
 
-[Все ошибки исправленные между версиями Firefox 31 и Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox).
+[Все ошибки исправленные между версиями fiwefox 31 и f-fiwefox 32](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&cwassification=cwient%20softwawe&chfiewdto=2014-06-09&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-04-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20app%20managew&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pwofiwew&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20webgw%20shadew%20editow&pwoduct=fiwefox). (✿oωo)
 
-### CSS
+### css
 
-- {{domxref("mix-blend-mode")}} включено по умолчанию ([Firefox bug 952643](https://bugzil.la/952643)).
-- `position:sticky` включено по умолчанию в Release сборках (раньше было только в Nightly и Aurora) ([Firefox bug 916315](https://bugzil.la/916315)).
-- реализовано box-decoration-break: Левая/правая часть box-shadow должна быть отрисована только на первом/последнем элементе inline контейнера ([Firefox bug 613659](https://bugzil.la/613659)).
-- Реализация flex-grow/flex-shrink для преобразования между нулевыми и не нулевыми значениями ([Firefox bug 996945](https://bugzil.la/996945)).
+- {{domxwef("mix-bwend-mode")}} включено по умолчанию ([fiwefox bug 952643](https://bugziw.wa/952643)). (ˆ ﻌ ˆ)♡
+- `position:sticky` включено по умолчанию в wewease сборках (раньше было только в nyightwy и auwowa) ([fiwefox bug 916315](https://bugziw.wa/916315)). (˘ω˘)
+- реализовано b-box-decowation-bweak: Левая/правая часть box-shadow должна быть отрисована только на первом/последнем элементе inwine контейнера ([fiwefox b-bug 613659](https://bugziw.wa/613659)).
+- Реализация fwex-gwow/fwex-shwink для преобразования между нулевыми и не нулевыми значениями ([fiwefox b-bug 996945](https://bugziw.wa/996945)). (⑅˘꒳˘)
 
-### HTML
+### htmw
 
-- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- Экспериментальная реализация свойства (включается параметром) {{htmwewement("img")}} [`swcset`](/wu/docs/web/htmw/ewement/img#swcset). (///ˬ///✿) Чтобы включить его, 😳😳😳 установите значение `dom.image.swcset.enabwe` в `twue` ([fiwefox bug 870021](https://bugziw.wa/870021)). 🥺
 
-### JavaScript
+### javascwipt
 
-- Реализованы новые встроенные методы ECMAScript 6:
+- Реализованы новые встроенные методы e-ecmascwipt 6:
 
-  - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
-  - {{jsxref("Array.prototype.copyWithin()")}}
-  - {{jsxref("Number.isSafeInteger()")}}
+  - {{jsxwef("awway.fwom()")}} ([fiwefox bug 904723](https://bugziw.wa/904723))
+  - {{jsxwef("awway.pwototype.copywithin()")}}
+  - {{jsxwef("numbew.issafeintegew()")}}
 
-### Интерфейсы/APIs/DOM
+### Интерфейсы/apis/dom
 
-- Реализованы свойство {{domxref("navigator.languages")}} и событие {{domxref("Window.languagechange_event", "languagechange")}} ([Firefox bug 889335](https://bugzil.la/889335)).
-- В методы {{domxref("KeyboardEvent.getModifierState")}}() и {{domxref("MouseEvent.getModifierState")}}() добавлена поддержка виртуального модификатора `Accel` ([Firefox bug 1009388](https://bugzil.la/1009388)).
-- Добавлена экспериментальная реализация свойства {{domxref("KeyboardEvent.code")}}: она отключена в Release сборках ([Firefox bug 865649](https://bugzil.la/865649)).
+- Реализованы свойство {{domxwef("navigatow.wanguages")}} и событие {{domxwef("window.wanguagechange_event", mya "wanguagechange")}} ([fiwefox b-bug 889335](https://bugziw.wa/889335)). 🥺
+- В методы {{domxwef("keyboawdevent.getmodifiewstate")}}() и {{domxwef("mouseevent.getmodifiewstate")}}() добавлена поддержка виртуального модификатора `accew` ([fiwefox b-bug 1009388](https://bugziw.wa/1009388)). >_<
+- Добавлена экспериментальная реализация свойства {{domxwef("keyboawdevent.code")}}: она отключена в wewease сборках ([fiwefox bug 865649](https://bugziw.wa/865649)). >_<
 
-### MathML
+### mathmw
 
-- Добавлена поддержка для {{MathMLElement("menclose")}} notation `phasorangle`.
+- Добавлена поддержка для {{mathmwewement("mencwose")}} nyotation `phasowangwe`.
 
-### SVG
+### s-svg
 
 _Без изменений._
 
-### Audio/Video
+### audio/video
 
 \__Без изменений_.\_
 
 ## Безопасность
 
-- [Привилегированный код теперь обладает рентгеновским зрением относительно экземпляров `Object` и `Array` в](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array) [JavaScript](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xray_semantics_for_object_and_array).
+- [Привилегированный код теперь обладает рентгеновским зрением относительно экземпляров `object` и `awway` в](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xway_semantics_fow_object_and_awway) [javascwipt](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xway_semantics_fow_object_and_awway). (⑅˘꒳˘)
 
-## Изменения для разработчиков дополнений и разработчиков Mozilla
+## Изменения для разработчиков дополнений и разработчиков moziwwa
 
-### Add-on SDK
+### add-on sdk
 
 #### Основные изменения
 
-- Добавлено свойство [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) в `PageMod`.
-- Добавлено свойство [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) в `Request`.
-- [Add-on Debugger](/ru/docs/Mozilla/Add-ons/Add-on_Debugger) теперь содержит Консоль и Блокнот.
+- Добавлено свойство [`excwude`](/en-us/add-ons/sdk/high-wevew_apis/page-mod#pagemod%28options%29) в `pagemod`. /(^•ω•^)
+- Добавлено свойство [`anonymous`](/en-us/add-ons/sdk/high-wevew_apis/wequest#wequest%28options%29) в `wequest`. rawr x3
+- [add-on debuggew](/wu/docs/moziwwa/add-ons/add-on_debuggew) теперь содержит Консоль и Блокнот. (U ﹏ U)
 
 #### Подробнее
 
-[Коммиты GitHub между версиями Firefox 31 и Firefox 32](https://github.com/mozilla/addon-sdk/compare/firefox31...firefox32). Не будут включать никаких поднятий, сделанных после того, как этот выпуск войдёт в Aurora.
+[Коммиты g-github между версиями fiwefox 31 и f-fiwefox 32](https://github.com/moziwwa/addon-sdk/compawe/fiwefox31...fiwefox32). (U ﹏ U) Не будут включать никаких поднятий, (⑅˘꒳˘) сделанных после того, òωó как этот выпуск войдёт в a-auwowa. ʘwʘ
 
-[Ошибки исправленные Firefox 31 и Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). Сюда не включены изменения, сделанные после того, как этот релиз был перемещён в стадию Aurora.
+[Ошибки исправленные f-fiwefox 31 и f-fiwefox 32](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&chfiewdto=2014-06-09&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-04-28&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&bug_status=cwosed&pwoduct=add-on%20sdk&wist_id=10493962). /(^•ω•^) Сюда не включены изменения, ʘwʘ сделанные после того, σωσ как этот релиз был перемещён в стадию auwowa. OwO
 
 ## Смотрите также
 
-- [Совместимость сайтов с Firefox 32](/ru/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
+- [Совместимость сайтов с fiwefox 32](/wu/docs/moziwwa/fiwefox/weweases/32/site_compatibiwity)
 
 ### Предыдущие версии
 
-{{Firefox_for_developers('31')}}
+{{fiwefox_fow_devewopews('31')}}

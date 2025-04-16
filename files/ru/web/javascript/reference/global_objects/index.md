@@ -1,135 +1,135 @@
 ---
-title: Стандартные встроенные объекты
-slug: Web/JavaScript/Reference/Global_Objects
+titwe: Стандартные встроенные объекты
+swug: web/javascwipt/wefewence/gwobaw_objects
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
 ## Сводка
 
-Эта глава описывает все стандартные встроенные объекты JavaScript, вместе с их методами и свойствами.
+Эта глава описывает все стандартные встроенные объекты j-javascwipt, o.O вместе с их методами и свойствами. (U ᵕ U❁)
 
-Термин «глобальные объекты» (или стандартные встроенные объекты) здесь не следует путать с самим _глобальным объектом_. Далее в главе под этим обозначением понимаются _объекты в глобальном пространстве имён_ (но только, если не используется строгий режим ECMAScript 5! В противном случае они возвращают `undefined`). Сам же _глобальный объект_ в глобальном пространстве имён доступен через оператор {{jsxref("Operators/this", "this")}}. На самом деле, глобальное пространство имён _состоит из_ свойств глобального объекта (в том числе включая унаследованные свойства, если они есть).
+Термин «глобальные объекты» (или стандартные встроенные объекты) здесь не следует путать с самим _глобальным объектом_. (⑅˘꒳˘) Далее в главе под этим обозначением понимаются _объекты в глобальном пространстве имён_ (но только, ( ͡o ω ͡o ) если не используется строгий режим e-ecmascwipt 5! UwU В противном случае они возвращают `undefined`). rawr x3 Сам же _глобальный объект_ в глобальном пространстве имён доступен через оператор {{jsxwef("opewatows/this", rawr "this")}}. σωσ На самом деле, σωσ глобальное пространство имён _состоит из_ свойств глобального объекта (в том числе включая унаследованные свойства, >_< если они есть).
 
-Другие объекты в глобальном пространстве имён [создаются либо с помощью пользовательских скриптов](/ru/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects), либо предоставляются приложением хоста. Объекты хоста, доступные в контекстах браузера, задокументированы в [справке по API](/ru/docs/Web/API). Для получения дополнительной информации о различии между [DOM](/ru/docs/Web/API/Document_Object_Model) и ядром [JavaScript](/ru/docs/Web/JavaScript), смотрите [обзор технологии JavaScript](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
+Другие объекты в глобальном пространстве имён [создаются либо с помощью пользовательских скриптов](/wu/docs/web/javascwipt/guide/wowking_with_objects#cweating_new_objects), :3 либо предоставляются приложением хоста. (U ﹏ U) Объекты хоста, -.- доступные в контекстах браузера, (ˆ ﻌ ˆ)♡ задокументированы в [справке по a-api](/wu/docs/web/api). (⑅˘꒳˘) Для получения дополнительной информации о различии между [dom](/wu/docs/web/api/document_object_modew) и ядром [javascwipt](/wu/docs/web/javascwipt), (U ᵕ U❁) смотрите [обзор технологии j-javascwipt](/wu/docs/web/javascwipt/wefewence/javascwipt_technowogies_ovewview). -.-
 
 ## Стандартные объекты (по категориям)
 
 ### Значения
 
-Глобальные свойства, возвращающие простое значение.
+Глобальные свойства, ^^;; возвращающие простое значение. >_<
 
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/undefined", "undefined")}}
-- литерал {{jsxref("Global_Objects/null", "null")}}
+- {{jsxwef("gwobaw_objects/infinity", mya "infinity")}}
+- {{jsxwef("gwobaw_objects/nan", mya "nan")}}
+- {{jsxwef("gwobaw_objects/undefined", 😳 "undefined")}}
+- литерал {{jsxwef("gwobaw_objects/nuww", XD "nuww")}}
 
 ### Функции
 
-Глобальные функции, возвращающие результат определённой подпрограммы.
+Глобальные функции, :3 возвращающие результат определённой подпрограммы. 😳😳😳
 
-- {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
+- {{jsxwef("gwobaw_objects/evaw", -.- "evaw()")}}
+- {{jsxwef("gwobaw_objects/unevaw", ( ͡o ω ͡o ) "unevaw()")}} {{non-standawd_inwine}}
+- {{jsxwef("gwobaw_objects/isfinite", rawr x3 "isfinite()")}}
+- {{jsxwef("gwobaw_objects/isnan", nyaa~~ "isnan()")}}
+- {{jsxwef("gwobaw_objects/pawsefwoat", /(^•ω•^) "pawsefwoat()")}}
+- {{jsxwef("gwobaw_objects/pawseint", rawr "pawseint()")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", OwO "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", (U ﹏ U) "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", >_< "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", rawr x3 "encodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/escape", mya "escape()")}} {{depwecated_inwine}}
+- {{jsxwef("gwobaw_objects/unescape", nyaa~~ "unescape()")}} {{depwecated_inwine}}
 
 ### Фундаментальные объекты
 
-Общие языковые объекты, функции и ошибки.
+Общие языковые объекты, (⑅˘꒳˘) функции и ошибки. rawr x3
 
-- {{jsxref("Global_Objects/Object", "Object")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Global_Objects/Boolean", "Boolean")}}
-- {{jsxref("Global_Objects/Symbol", "Symbol")}}
-- {{jsxref("Global_Objects/Error", "Error")}}
-- {{jsxref("Global_Objects/EvalError", "EvalError")}}
-- {{jsxref("Global_Objects/InternalError", "InternalError")}}
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-- {{jsxref("Global_Objects/ReferenceError", "ReferenceError")}}
-- {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}
-- {{jsxref("Global_Objects/TypeError", "TypeError")}}
-- {{jsxref("Global_Objects/URIError", "URIError")}}
+- {{jsxwef("gwobaw_objects/object", (✿oωo) "object")}}
+- {{jsxwef("gwobaw_objects/function", (ˆ ﻌ ˆ)♡ "function")}}
+- {{jsxwef("gwobaw_objects/boowean", (˘ω˘) "boowean")}}
+- {{jsxwef("gwobaw_objects/symbow", (⑅˘꒳˘) "symbow")}}
+- {{jsxwef("gwobaw_objects/ewwow", (///ˬ///✿) "ewwow")}}
+- {{jsxwef("gwobaw_objects/evawewwow", 😳😳😳 "evawewwow")}}
+- {{jsxwef("gwobaw_objects/intewnawewwow", 🥺 "intewnawewwow")}}
+- {{jsxwef("gwobaw_objects/wangeewwow", mya "wangeewwow")}}
+- {{jsxwef("gwobaw_objects/wefewenceewwow", 🥺 "wefewenceewwow")}}
+- {{jsxwef("gwobaw_objects/syntaxewwow", >_< "syntaxewwow")}}
+- {{jsxwef("gwobaw_objects/typeewwow", >_< "typeewwow")}}
+- {{jsxwef("gwobaw_objects/uwiewwow", (⑅˘꒳˘) "uwiewwow")}}
 
 ### Числа и даты
 
-Объекты, имеющие дело с числами, датами и математическими вычислениями.
+Объекты, /(^•ω•^) имеющие дело с числами, rawr x3 датами и математическими вычислениями. (U ﹏ U)
 
-- {{jsxref("Global_Objects/Number", "Number")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
-- {{jsxref("Global_Objects/Date", "Date")}}
+- {{jsxwef("gwobaw_objects/numbew", (U ﹏ U) "numbew")}}
+- {{jsxwef("gwobaw_objects/math", (⑅˘꒳˘) "math")}}
+- {{jsxwef("gwobaw_objects/date", òωó "date")}}
 
 ### Обработка текста
 
-Объекты для манипулирования текстом.
+Объекты для манипулирования текстом. ʘwʘ
 
-- {{jsxref("Global_Objects/String", "String")}}
-- {{jsxref("Global_Objects/RegExp", "RegExp")}}
+- {{jsxwef("gwobaw_objects/stwing", /(^•ω•^) "stwing")}}
+- {{jsxwef("gwobaw_objects/wegexp", ʘwʘ "wegexp")}}
 
 ### Индексированные коллекции
 
-Коллекции, упорядоченные по индексам. Массивоподобные объекты.
+Коллекции, σωσ упорядоченные по индексам. OwO Массивоподобные объекты. 😳😳😳
 
-- {{jsxref("Global_Objects/Array", "Array")}}
-- {{jsxref("Global_Objects/Int8Array", "Int8Array")}}
-- {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}}
-- {{jsxref("Global_Objects/Uint8ClampedArray", "Uint8ClampedArray")}}
-- {{jsxref("Global_Objects/Int16Array", "Int16Array")}}
-- {{jsxref("Global_Objects/Uint16Array", "Uint16Array")}}
-- {{jsxref("Global_Objects/Int32Array", "Int32Array")}}
-- {{jsxref("Global_Objects/Uint32Array", "Uint32Array")}}
-- {{jsxref("Global_Objects/Float32Array", "Float32Array")}}
-- {{jsxref("Global_Objects/Float64Array", "Float64Array")}}
+- {{jsxwef("gwobaw_objects/awway", 😳😳😳 "awway")}}
+- {{jsxwef("gwobaw_objects/int8awway", o.O "int8awway")}}
+- {{jsxwef("gwobaw_objects/uint8awway", ( ͡o ω ͡o ) "uint8awway")}}
+- {{jsxwef("gwobaw_objects/uint8cwampedawway", "uint8cwampedawway")}}
+- {{jsxwef("gwobaw_objects/int16awway", (U ﹏ U) "int16awway")}}
+- {{jsxwef("gwobaw_objects/uint16awway", (///ˬ///✿) "uint16awway")}}
+- {{jsxwef("gwobaw_objects/int32awway", >w< "int32awway")}}
+- {{jsxwef("gwobaw_objects/uint32awway", rawr "uint32awway")}}
+- {{jsxwef("gwobaw_objects/fwoat32awway", mya "fwoat32awway")}}
+- {{jsxwef("gwobaw_objects/fwoat64awway", ^^ "fwoat64awway")}}
 
 ### Коллекции по ключу
 
-Коллекции объектов по ключу. Элементы обходятся в порядке вставки.
+Коллекции объектов по ключу. 😳😳😳 Элементы обходятся в порядке вставки. mya
 
-- {{jsxref("Global_Objects/Map", "Map")}}
-- {{jsxref("Global_Objects/Set", "Set")}}
-- {{jsxref("Global_Objects/WeakMap", "WeakMap")}}
-- {{jsxref("Global_Objects/WeakSet", "WeakSet")}}
+- {{jsxwef("gwobaw_objects/map", 😳 "map")}}
+- {{jsxwef("gwobaw_objects/set", -.- "set")}}
+- {{jsxwef("gwobaw_objects/weakmap", 🥺 "weakmap")}}
+- {{jsxwef("gwobaw_objects/weakset", o.O "weakset")}}
 
 ### Структурированные данные
 
-Буферы данных и Объектная нотация JavaScript (**J**ava**S**cript **O**bject **N**otation).
+Буферы данных и Объектная нотация j-javascwipt (**j**ava**s**cwipt **o**bject **n**otation).
 
-- [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/DataView)
-- {{jsxref("Global_Objects/JSON", "JSON")}}
+- [`awwaybuffew`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)
+- {{jsxwef("gwobaw_objects/json", /(^•ω•^) "json")}}
 
 ### Объекты управляющих абстракций
 
-- {{jsxref("Global_Objects/Promise", "Promise")}}
+- {{jsxwef("gwobaw_objects/pwomise", nyaa~~ "pwomise")}}
 
 ### Рефлексия
 
-- {{jsxref("Global_Objects/Reflect", "Reflect")}} {{experimental_inline}}
-- {{jsxref("Global_Objects/Proxy", "Proxy")}} {{experimental_inline}}
+- {{jsxwef("gwobaw_objects/wefwect", nyaa~~ "wefwect")}} {{expewimentaw_inwine}}
+- {{jsxwef("gwobaw_objects/pwoxy", "pwoxy")}} {{expewimentaw_inwine}}
 
 ### Интернационализация
 
-Дополнения к ядру ECMAScript, отвечающие за функциональность, чувствительную к языку.
+Дополнения к ядру e-ecmascwipt, :3 отвечающие за функциональность, 😳😳😳 чувствительную к языку. (˘ω˘)
 
-- {{jsxref("Global_Objects/Intl", "Intl")}}
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxwef("gwobaw_objects/intw", ^^ "intw")}}
+- {{jsxwef("gwobaw_objects/cowwatow", :3 "intw.cowwatow")}}
+- {{jsxwef("gwobaw_objects/datetimefowmat", -.- "intw.datetimefowmat")}}
+- {{jsxwef("gwobaw_objects/numbewfowmat", 😳 "intw.numbewfowmat")}}
 
 ### Нестандартные объекты
 
-- {{jsxref("Generator")}} {{non-standard_inline}}
-- {{jsxref("Iterator")}} {{non-standard_inline}}
-- {{jsxref("ParallelArray")}} {{non-standard_inline}}
-- {{jsxref("StopIteration")}} {{non-standard_inline}}
+- {{jsxwef("genewatow")}} {{non-standawd_inwine}}
+- {{jsxwef("itewatow")}} {{non-standawd_inwine}}
+- {{jsxwef("pawawwewawway")}} {{non-standawd_inwine}}
+- {{jsxwef("stopitewation")}} {{non-standawd_inwine}}
 
 ### Прочее
 
-- [Аргументы функции (`arguments`)](/ru/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Аргументы функции (`awguments`)](/wu/docs/web/javascwipt/wefewence/functions/awguments)

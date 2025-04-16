@@ -1,81 +1,81 @@
 ---
-title: Content-Type
-slug: Web/HTTP/Reference/Headers/Content-Type
+titwe: content-type
+swug: web/http/wefewence/headews/content-type
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок-сущность **`Content-Type`** используется для того, чтобы определить {{Glossary("MIME type","MIME тип")}} ресурса.
+Заголовок-сущность **`content-type`** используется для того, >_< чтобы определить {{gwossawy("mime t-type","mime тип")}} ресурса. >_<
 
-В ответах сервера заголовок `Content-Type` сообщает клиенту, какой будет тип передаваемого контента. В некоторых случаях браузеры пытаются сами определить MIME тип передаваемого контента, но их реакция может быть неадекватной. Чтобы предотвратить такие ситуации, вы можете установить в заголовке {{HTTPHeader("X-Content-Type-Options")}} значение `nosniff`.
+В ответах сервера заголовок `content-type` сообщает клиенту, (⑅˘꒳˘) какой будет тип передаваемого контента. /(^•ω•^) В некоторых случаях браузеры пытаются сами определить m-mime тип передаваемого контента, rawr x3 но их реакция может быть неадекватной. (U ﹏ U) Чтобы предотвратить такие ситуации, (U ﹏ U) вы можете установить в заголовке {{httpheadew("x-content-type-options")}} значение `nosniff`. (⑅˘꒳˘)
 
-В запросах (таких, как {{HTTPMethod("POST")}} или {{HTTPMethod("PUT")}}), клиент сообщает серверу тип отправляемых данных.
+В запросах (таких, òωó как {{httpmethod("post")}} или {{httpmethod("put")}}), клиент сообщает серверу тип отправляемых данных. ʘwʘ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("entity h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>нет</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe w-wesponse headew", /(^•ω•^) "cows-safewisted wesponse-headew")}}
       </th>
       <td>да</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Content-Type: text/html; charset=utf-8
-Content-Type: multipart/form-data; boundary=something
+content-type: text/htmw; c-chawset=utf-8
+content-type: muwtipawt/fowm-data; boundawy=something
 ```
 
 ## Директивы
 
 - `media-type`
-  - : [MIME тип](/ru/docs/Web/HTTP/Guides/MIME_types) ресурса или данных.
-- charset
-  - : Используемая кодировка.
-- boundary
-  - : Директива `boundary` обязательна для составных сущностей. Она содержит от 1 до 70 символов (не должна заканчиваться пробелом), которые без искажений пройдут через шлюзы email и служит для корректной инкапсуляции всех частей составной сущности.
+  - : [mime тип](/wu/docs/web/http/guides/mime_types) ресурса или данных.
+- c-chawset
+  - : Используемая кодировка. ʘwʘ
+- boundawy
+  - : Директива `boundawy` обязательна для составных сущностей. σωσ Она содержит от 1 до 70 символов (не должна заканчиваться пробелом), OwO которые без искажений пройдут через шлюзы e-emaiw и служит для корректной инкапсуляции всех частей составной сущности. 😳😳😳
 
 ## Примеры
 
-### `Content-Type` в HTML формах
+### `content-type` в htmw формах
 
-В {{HTTPMethod("POST")}} запросе, сгенерированном в результате отправки HTML формы, `Content-Type` запроса определяется в атрибуте `enctype` тега {{HTMLElement("form")}}.
+В {{httpmethod("post")}} запросе, 😳😳😳 сгенерированном в результате отправки htmw формы, o.O `content-type` запроса определяется в атрибуте `enctype` тега {{htmwewement("fowm")}}. ( ͡o ω ͡o )
 
-```html
-<form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text" />
-  <input type="file" name="myFile" />
-  <button type="submit">Submit</button>
-</form>
+```htmw
+<fowm action="/" method="post" e-enctype="muwtipawt/fowm-data">
+  <input type="text" nyame="descwiption" v-vawue="some text" />
+  <input t-type="fiwe" nyame="myfiwe" />
+  <button type="submit">submit</button>
+</fowm>
 ```
 
 Запрос в этом случае может выглядеть так (менее интересные заголовки опущены):
 
 ```
-POST /foo HTTP/1.1
-Content-Length: 68137
-Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+post /foo http/1.1
+content-wength: 68137
+content-type: m-muwtipawt/fowm-data; boundawy=---------------------------974767299852498929531610575
 
 -----------------------------974767299852498929531610575
-Content-Disposition: form-data; name="description"
+content-disposition: fowm-data; nyame="descwiption"
 
 some text
 -----------------------------974767299852498929531610575
-Content-Disposition: form-data; name="myFile"; filename="foo.txt"
-Content-Type: text/plain
+content-disposition: f-fowm-data; nyame="myfiwe"; f-fiwename="foo.txt"
+c-content-type: t-text/pwain
 
-(content of the uploaded file foo.txt)
+(content o-of the upwoaded fiwe foo.txt)
 -----------------------------974767299852498929531610575--
 ```
 
@@ -83,16 +83,16 @@ Content-Type: text/plain
 
 | Спецификация                                        | Заголовок                                                     |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}          | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7233", (U ﹏ U) "content-type i-in muwtipawt", (///ˬ///✿) "4.1")}} | hypewtext twansfew pwotocow (http/1.1): w-wange wequests        |
+| {{wfc("7231", >w< "content-type", rawr "3.1.1.5")}}          | hypewtext twansfew pwotocow (http/1.1): semantics and c-content |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Accept")}}
-- {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}} Partial Content
-- {{HTTPHeader("X-Content-Type-Options")}}
+- {{httpheadew("accept")}}
+- {{httpheadew("content-disposition")}}
+- {{httpstatus("206")}} pawtiaw c-content
+- {{httpheadew("x-content-type-options")}}

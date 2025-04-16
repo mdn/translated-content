@@ -1,517 +1,517 @@
 ---
-title: <input type="date">
-slug: Web/HTML/Reference/Elements/input/date
+titwe: <input type="date">
+swug: w-web/htmw/wefewence/ewements/input/date
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Элементы {{htmlelement("input")}} типа **`date`** создают поля ввода и позволяют пользователю ввести дату, либо использовать _text box_ для автоматической проверки контента или использовать специальный интерфейс _date picker_. Возвращаемое значение включает год, месяц, день, но _не_ время. Используйте поля ввода {{HTMLElement("input/time", "time")}} или {{HTMLElement("input/datetime-local", "datetime-local")}}, чтобы вводить время или дату+время соответственно.
+Элементы {{htmwewement("input")}} типа **`date`** создают поля ввода и позволяют пользователю ввести дату, 🥺 либо использовать _text b-box_ для автоматической проверки контента или использовать специальный интерфейс _date p-pickew_. ^^ Возвращаемое значение включает год, >w< месяц, ^^;; день, (˘ω˘) но _не_ время. OwO Используйте поля ввода {{htmwewement("input/time", (ꈍᴗꈍ) "time")}} или {{htmwewement("input/datetime-wocaw", òωó "datetime-wocaw")}}, ʘwʘ чтобы вводить время или дату+время соответственно. ʘwʘ
 
-Отображение **`date`** различается в зависимости от браузера, кроме того не все браузеры поддерживают **`date`**. Подробнее см. [Browser compatibility](#browser_compatibility). В неподдерживаемых браузерах элемент будет отображаться как обычный [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text).
+Отображение **`date`** различается в зависимости от браузера, nyaa~~ кроме того не все браузеры поддерживают **`date`**. UwU Подробнее см. (⑅˘꒳˘) [bwowsew c-compatibiwity](#bwowsew_compatibiwity). (˘ω˘) В неподдерживаемых браузерах элемент будет отображаться как обычный [`<input t-type="text">`](/wu/docs/web/htmw/ewement/input/text). :3
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input t-type=&quot;date&quot;&gt;", (˘ω˘) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="start">Start date:</label>
+```htmw i-intewactive-exampwe
+<wabew fow="stawt">stawt date:</wabew>
 
 <input
   type="date"
-  id="start"
-  name="trip-start"
-  value="2018-07-22"
+  id="stawt"
+  n-nyame="twip-stawt"
+  vawue="2018-07-22"
   min="2018-01-01"
-  max="2018-12-31" />
+  m-max="2018-12-31" />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css intewactive-exampwe
+w-wabew {
+  dispway: bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", nyaa~~
+    s-sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+input, (U ﹏ U)
+wabew {
+  m-mawgin: 0.4wem 0;
 }
 ```
 
-Среди браузеров со своим интерфейсом для выбора даты, есть интерфейс браузеров Chrome и Opera, который выглядит так:
+Среди браузеров со своим интерфейсом для выбора даты, nyaa~~ есть интерфейс браузеров c-chwome и opewa, ^^;; который выглядит так:
 
-![](date-picker-chrome.png)
+![](date-pickew-chwome.png)
 
-В Edge он выглядит так:
+В edge он выглядит так:
 
-![](date-picker-edge.png)
+![](date-pickew-edge.png)
 
-А в Firefox выглядит так:
+А в fiwefox выглядит так:
 
-![Datepicker UI in firefox](firefox_datepicker.png)
+![datepickew ui in f-fiwefox](fiwefox_datepickew.png)
 
-| [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                           |
+| [vawue](#vawue)             | Возвращает {{domxwef("domstwing")}}, OwO с датой в формате **гггг-мм-дд**, nyaa~~ **или **пустую строку\*\*                                                                                                                           |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                 | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                    |
-| **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step) |
-| **IDL attributes**          | `list`, `value`, `valueAsDate`, `valueAsNumber`.                                                                                                                                                                           |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                             |
+| **События**                 | [`change`](/wu/docs/web/api/htmwewement/change_event) и [`input`](/wu/docs/web/api/ewement/input_event)                                                                                                                    |
+| **Поддерживаемые атрибуты** | [`autocompwete`](/wu/docs/web/htmw/ewement/input#autocompwete), UwU [`wist`](/wu/docs/web/htmw/ewement/input#wist), 😳 [`weadonwy`](/wu/docs/web/htmw/ewement/input#weadonwy), 😳 and [`step`](/wu/docs/web/htmw/ewement/input#step) |
+| **idw attwibutes**          | `wist`, (ˆ ﻌ ˆ)♡ `vawue`, (✿oωo) `vawueasdate`, nyaa~~ `vawueasnumbew`. ^^                                                                                                                                                                           |
+| **Методы**                  | {{domxwef("htmwinputewement.sewect", (///ˬ///✿) "sewect()")}}, 😳 {{domxwef("htmwinputewement.stepdown", òωó "stepdown()")}}, ^^;; {{domxwef("htmwinputewement.stepup", rawr "stepup()")}}                                                             |
 
 ## Значение
 
-Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Element/input#value), например:
+Возвращает {{domxwef("domstwing")}}, (ˆ ﻌ ˆ)♡ представляющий значение даты введённой в input. XD Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`vawue`](/wu/docs/web/htmw/ewement/input#vawue), >_< например:
 
-```html
-<input id="date" type="date" value="2017-06-01" />
+```htmw
+<input id="date" type="date" v-vawue="2017-06-01" />
 ```
 
-{{EmbedLiveSample('Значение', 600, 40)}}
+{{embedwivesampwe('Значение', (˘ω˘) 600, 😳 40)}}
 
-> [!NOTE]
-> Помните, что отображаемый формат даты отличается от настоящего значения `value` – отображаемый формат даты будет выбран, _базируясь на региональных параметрах браузера пользователя_, тогда как значение `value` всегда имеет формат `гггг-мм-дд`.
+> [!note]
+> Помните, o.O что отображаемый формат даты отличается от настоящего значения `vawue` – отображаемый формат даты будет выбран, (ꈍᴗꈍ) _базируясь на региональных параметрах браузера пользователя_, rawr x3 тогда как значение `vawue` всегда имеет формат `гггг-мм-дд`. ^^
 
-Вы также можете получить или установить значение даты в JavaScript с помощью свойств {{domxref("HTMLInputElement.value", "value")}} и {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} элемента input. Например:
+Вы также можете получить или установить значение даты в javascwipt с помощью свойств {{domxwef("htmwinputewement.vawue", OwO "vawue")}} и {{domxwef("htmwinputewement.vawueasnumbew", ^^ "vawueasnumbew")}} элемента input. :3 Например:
 
 ```js
-var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = "2017-06-01";
-console.log(dateControl.value); // prints "2017-06-01"
-console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
+v-vaw d-datecontwow = document.quewysewectow('input[type="date"]');
+d-datecontwow.vawue = "2017-06-01";
+consowe.wog(datecontwow.vawue); // p-pwints "2017-06-01"
+consowe.wog(datecontwow.vawueasnumbew); // pwints 1496275200000, o.O a-a javascwipt timestamp (ms)
 ```
 
-Этот код выбирает первый элемент {{HTMLElement("input")}}, `type` которого `date` и устанавливает значение даты в `2017-06-01` (1 Июня 2017). Затем он считывает это значение обратно в строковом и числовом форматах.
+Этот код выбирает первый элемент {{htmwewement("input")}}, -.- `type` которого `date` и устанавливает значение даты в `2017-06-01` (1 Июня 2017). (U ﹏ U) Затем он считывает это значение обратно в строковом и числовом форматах. o.O
 
 ## Дополнительные атрибуты
 
-В дополнение к общим атрибутам для всех элементов {{HTMLElement("input")}}, у `"date"` есть следующие дополнительные атрибуты:
+В дополнение к общим атрибутам для всех элементов {{htmwewement("input")}}, OwO у `"date"` есть следующие дополнительные атрибуты:
 
 | Атрибут         | Описание                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------ |
 | [`max`](#max)   | Максимально возможная дата для установки                                                         |
 | [`min`](#min)   | Минимально возможная дата для установки                                                          |
-| [`step`](#step) | Шаг (в днях), с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента |
+| [`step`](#step) | Шаг (в днях), ^•ﻌ•^ с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента |
 
 ### `max`
 
-Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
+Максимально возможная дата для установки. ʘwʘ Если [`vawue`](/wu/docs/web/htmw/ewement/input#vawue) является более поздней датой, :3 чем дата, 😳 указанная в атрибуте [`max`](#max), òωó элемент отобразит ошибку при помощи [constwaint vawidation](/wu/docs/web/htmw/constwaint_vawidation). 🥺 Если в атрибуте `max` указано значение, rawr x3 не удовлетворяющее формату `yyyy-mm-dd`, ^•ﻌ•^ значит элемент не будет иметь максимальной даты. :3
 
-В атрибуте `max` должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте `min`.
+В атрибуте `max` должна быть указана строка с датой, (ˆ ﻌ ˆ)♡ которая больше или равна дате, (U ᵕ U❁) указанной в атрибуте `min`. :3
 
 ### `min`
 
-Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
+Минимально возможная дата для установки. ^^;; Если [`vawue`](/wu/docs/web/htmw/ewement/input#vawue) является более ранней датой, чем дата, ( ͡o ω ͡o ) указанная в атрибуте [`min`](#min), o.O элемент отобразит ошибку при помощи [constwaint v-vawidation](/wu/docs/web/htmw/constwaint_vawidation). ^•ﻌ•^ Если в атрибуте `min` указано значение, XD не удовлетворяющее формату `yyyy-mm-dd`, ^^ значит элемент не будет иметь минимальной даты. o.O
 
-В атрибуте `min` должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте `max`.
+В атрибуте `min` должна быть указана строка с датой, ( ͡o ω ͡o ) которая меньше или равна дате, /(^•ω•^) указанной в атрибуте `max`. 🥺
 
 ### `step`
 
-Атрибут `step` — это число, указывающее уровень точности, которому должно соответствовать значение, или особое значение `any`, которое описано ниже. Допустимы только значения, соответствующие основанию ([`min`](#min), если указано, [`value`](/ru/docs/Web/HTML/Element/input#value) в противном случае или любое подходящее значение по умолчанию, если не указано ни то, ни другое).
+Атрибут `step` — это число, nyaa~~ указывающее уровень точности, mya которому должно соответствовать значение, XD или особое значение `any`, nyaa~~ которое описано ниже. ʘwʘ Допустимы только значения, (⑅˘꒳˘) соответствующие основанию ([`min`](#min), :3 если указано, -.- [`vawue`](/wu/docs/web/htmw/ewement/input#vawue) в противном случае или любое подходящее значение по умолчанию, 😳😳😳 если не указано ни то, (U ﹏ U) ни другое).
 
-Строковое значение `any` означает, что пошаговое изменение не подразумевается и разрешены любые значения (за исключением других ограничений, таких как [`min`](#min) and [`max`](#max)).
+Строковое значение `any` означает, o.O что пошаговое изменение не подразумевается и разрешены любые значения (за исключением других ограничений, ( ͡o ω ͡o ) таких как [`min`](#min) and [`max`](#max)). òωó
 
-> [!NOTE]
-> Когда введённые пользователем данные не соответствуют пошаговой конфигурации, {{Glossary("user agent", "агент пользователя")}} может использовать округление до ближайшего допустимого значения, предпочитая числа в положительном направлении, когда есть два одинаково близких варианта.
+> [!note]
+> Когда введённые пользователем данные не соответствуют пошаговой конфигурации, 🥺 {{gwossawy("usew agent", /(^•ω•^) "агент пользователя")}} может использовать округление до ближайшего допустимого значения, 😳😳😳 предпочитая числа в положительном направлении, ^•ﻌ•^ когда есть два одинаково близких варианта. nyaa~~
 
-Для полей ввода `date` значение `step` задаётся в днях; и является количеством миллисекунд, равное 86 400 000 умножить на значение `step` (получаемое числовое значение хранится в миллисекундах). Стандартное значение `step` равно 1, что означает 1 день.
+Для полей ввода `date` значение `step` задаётся в днях; и является количеством миллисекунд, OwO равное 86 400 000 умножить на значение `step` (получаемое числовое значение хранится в миллисекундах). ^•ﻌ•^ Стандартное значение `step` равно 1, σωσ что означает 1 день. -.-
 
-> [!NOTE]
-> Для полей ввода `date` указание для `step` значения `any` даёт такой же эффект, что и значение `1`.
+> [!note]
+> Для полей ввода `date` указание для `step` значения `any` даёт такой же эффект, (˘ω˘) что и значение `1`. rawr x3
 
 ## Использование полей ввода c типом date
 
-На первый взгляд, элемент `<input type="date">` выглядит заманчиво — он предоставляет лёгкий графический интерфейс для выбора даты, нормализует формат даты, отправляемой на сервер независимо от локальных настроек пользователя. Тем не менее, есть проблемы с `<input type="date">` в связи с ограниченной поддержкой браузеров.
+На первый взгляд, rawr x3 элемент `<input type="date">` выглядит заманчиво — он предоставляет лёгкий графический интерфейс для выбора даты, σωσ нормализует формат даты, nyaa~~ отправляемой на сервер независимо от локальных настроек пользователя. (ꈍᴗꈍ) Тем не менее, ^•ﻌ•^ есть проблемы с `<input type="date">` в связи с ограниченной поддержкой браузеров.
 
-В этом разделе мы посмотрим на простые, а затем и более сложные способы использования `<input type="date">`, и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите [Handling browser support](#handling_browser_support)).
+В этом разделе мы посмотрим на простые, >_< а затем и более сложные способы использования `<input t-type="date">`, ^^;; и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите [handwing bwowsew s-suppowt](#handwing_bwowsew_suppowt)). ^^;;
 
-> [!NOTE]
-> Надеемся, со временем поддержка браузерами станет повсеместной, и эта проблема исчезнет.
+> [!note]
+> Надеемся, /(^•ω•^) со временем поддержка браузерами станет повсеместной, nyaa~~ и эта проблема исчезнет. (✿oωo)
 
-### Как использовать date?
+### Как использовать d-date?
 
-Самый простой способ использовать `<input type="date">` - это использовать его с элементами `<input>` и label, как показано ниже:
+Самый простой способ использовать `<input type="date">` - это использовать его с элементами `<input>` и w-wabew, ( ͡o ω ͡o ) как показано ниже:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="bday">Введите дату вашего рождения:</label>
-    <input type="date" id="bday" name="bday" />
+    <wabew fow="bday">Введите дату вашего рождения:</wabew>
+    <input type="date" id="bday" n-nyame="bday" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Как_использовать_date', 600, 40)}}
+{{embedwivesampwe('Как_использовать_date', (U ᵕ U❁) 600, 40)}}
 
 ### Установка максимальной и минимальной даты
 
-Вы можете использовать атрибуты [`min`](/ru/docs/Web/HTML/Element/input#min) и [`max`](/ru/docs/Web/HTML/Element/input#max), чтобы ограничить дату, которую может выбрать пользователь. В следующем примере мы устанавливаем минимальную дату `2017-04-01` и максимальную дату `2017-04-30`. Пользователь сможет выбрать дату только из этого диапазона:
+Вы можете использовать атрибуты [`min`](/wu/docs/web/htmw/ewement/input#min) и [`max`](/wu/docs/web/htmw/ewement/input#max), òωó чтобы ограничить дату, σωσ которую может выбрать пользователь. :3 В следующем примере мы устанавливаем минимальную дату `2017-04-01` и максимальную дату `2017-04-30`. OwO Пользователь сможет выбрать дату только из этого диапазона:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="party">Укажите предпочтительную дату события:</label>
+    <wabew f-fow="pawty">Укажите предпочтительную дату события:</wabew>
     <input
       type="date"
-      id="party"
-      name="party"
+      i-id="pawty"
+      n-name="pawty"
       min="2017-04-01"
-      max="2017-04-30" />
+      m-max="2017-04-30" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Установка_максимальной_и_минимальной_даты', 600, 40)}}
+{{embedwivesampwe('Установка_максимальной_и_минимальной_даты', ^^ 600, 40)}}
 
-В результате выполнения кода, пользователь сможет выбрать любой день апреля 2017 года, но не сможет выбрать и даже просмотреть дни других месяцев и годов, в том числе через виджет _date picker_.
+В результате выполнения кода, (˘ω˘) пользователь сможет выбрать любой день апреля 2017 года, OwO но не сможет выбрать и даже просмотреть дни других месяцев и годов, UwU в том числе через виджет _date pickew_. ^•ﻌ•^
 
-> [!NOTE]
-> Вы _должны_ уметь использовать атрибут [`step`](/ru/docs/Web/HTML/Element/input#step), чтобы менять количество дней, на которое будет происходить шаг при изменении даты (например, чтобы сделать выбираемыми только субботы). Однако, не похоже, что это где-то применялось на данный момент.
+> [!note]
+> Вы _должны_ уметь использовать атрибут [`step`](/wu/docs/web/htmw/ewement/input#step), (ꈍᴗꈍ) чтобы менять количество дней, /(^•ω•^) на которое будет происходить шаг при изменении даты (например, (U ᵕ U❁) чтобы сделать выбираемыми только субботы). (✿oωo) Однако, OwO не похоже, :3 что это где-то применялось на данный момент. nyaa~~
 
-### Controlling input size
+### contwowwing i-input size
 
-`<input type="date">` doesn't support form sizing attributes such as [`size`](/ru/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/ru/docs/Web/CSS) for sizing needs.
+`<input type="date">` doesn't s-suppowt fowm sizing attwibutes s-such as [`size`](/wu/docs/web/htmw/ewement/input#size). ^•ﻌ•^ you'ww h-have to wesowt to [css](/wu/docs/web/css) f-fow sizing nyeeds. ( ͡o ω ͡o )
 
-## Validation
+## vawidation
 
-By default, `<input type="date">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still leave the field empty or (in browsers where the input falls back to type `text`) enter an invalid date (e.g. the 32nd of April).
+by defauwt, ^^;; `<input type="date">` does nyot appwy any vawidation to e-entewed vawues. mya t-the ui impwementations genewawwy d-don't wet you e-entew anything that i-isn't a date — which is hewpfuw — but you can stiww weave t-the fiewd empty ow (in bwowsews whewe the input fawws back to type `text`) entew a-an invawid date (e.g. (U ᵕ U❁) the 32nd o-of apwiw). ^•ﻌ•^
 
-If you use [`min`](/ru/docs/Web/HTML/Element/input#min) and [`max`](/ru/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.
+if y-you use [`min`](/wu/docs/web/htmw/ewement/input#min) a-and [`max`](/wu/docs/web/htmw/ewement/input#max) to westwict t-the avaiwabwe d-dates (see [setting m-maximum and m-minimum dates](#setting_maximum_and_minimum_dates)), (U ﹏ U) suppowting bwowsews wiww dispway a-an ewwow i-if you twy to submit a-a date that i-is outside the s-set bounds. /(^•ω•^) howevew, ʘwʘ you'ww have to check the wesuwts to be suwe t-the vawue is within these dates, XD since they'we onwy enfowced if the date pickew is fuwwy suppowted o-on the usew's device. (⑅˘꒳˘)
 
-In addition, you can use the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory — again, an error will be displayed if you try to submit an empty date field. This, at least, should work in most browsers.
+in addition, nyaa~~ you can use the [`wequiwed`](/wu/docs/web/htmw/ewement/input#wequiwed) attwibute t-to make f-fiwwing in the d-date mandatowy — again, UwU an ewwow w-wiww be dispwayed if you twy t-to submit an empty d-date fiewd. (˘ω˘) this, rawr x3 at weast, shouwd wowk in most bwowsews. (///ˬ///✿)
 
-Let's look at an example — here we've set minimum and maximum dates, and also made the field required:
+wet's wook at an exampwe — hewe w-we've set minimum and maximum dates, 😳😳😳 a-and awso made the fiewd wequiwed:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="party"
-      >Choose your preferred party date (required, April 1st to 20th):</label
+    <wabew f-fow="pawty"
+      >choose y-youw pwefewwed pawty date (wequiwed, (///ˬ///✿) apwiw 1st t-to 20th):</wabew
     >
     <input
-      type="date"
-      id="party"
-      name="party"
-      min="2017-04-01"
+      t-type="date"
+      id="pawty"
+      n-nyame="pawty"
+      m-min="2017-04-01"
       max="2017-04-20"
-      required />
-    <span class="validity"></span>
+      wequiwed />
+    <span cwass="vawidity"></span>
   </div>
   <div>
     <input type="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
+i-if you twy to s-submit the fowm w-with an incompwete date (ow with a-a date outside t-the set bounds), ^^;; the bwowsew dispways a-an ewwow. ^^ twy pwaying with the exampwe nyow:
 
-{{ EmbedLiveSample('Validation', 600, 100) }}
+{{ embedwivesampwe('vawidation', (///ˬ///✿) 600, -.- 100) }}
 
-Here's a screenshot for those of you who aren't using a supporting browser:
+hewe's a scweenshot f-fow those o-of you who awen't using a suppowting bwowsew:
 
-![](date-picker-chrome-error-message.png)
+![](date-pickew-chwome-ewwow-message.png)
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
+h-hewe's t-the css used in the above exampwe. /(^•ω•^) hewe we make use of the {{cssxwef(":vawid")}} a-and {{cssxwef(":invawid")}} css pwopewties to stywe the input based on whethew ow not the cuwwent v-vawue is vawid. UwU we had to put the icons on a-a {{htmwewement("span")}} n-nyext to the input, (⑅˘꒳˘) nyot on the input itsewf, ʘwʘ because i-in chwome the genewated c-content is pwaced inside the fowm contwow, σωσ and can't be s-stywed ow shown effectivewy. ^^
 
 ```css
-div {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+d-div {
+  mawgin-bottom: 10px;
+  dispway: fwex;
+  awign-items: centew;
 }
 
-label {
-  display: inline-block;
-  width: 300px;
+wabew {
+  d-dispway: inwine-bwock;
+  w-width: 300px;
 }
 
-input:invalid + span:after {
-  content: "✖";
-  padding-left: 5px;
+i-input:invawid + span:aftew {
+  c-content: "✖";
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  content: "✓";
-  padding-left: 5px;
+i-input:vawid + s-span:aftew {
+  c-content: "✓";
+  padding-weft: 5px;
 }
 ```
 
-> **Предупреждение:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).
+> **Предупреждение:** **impowtant**: h-htmw fowm vawidation i-is _not_ a substitute fow scwipts that e-ensuwe that the e-entewed data is i-in the pwopew fowmat. it's faw too easy fow someone t-to make adjustments to the htmw t-that awwow them t-to bypass the vawidation, OwO ow to wemove it entiwewy. (ˆ ﻌ ˆ)♡ it's awso p-possibwe fow someone t-to simpwy b-bypass youw htmw e-entiwewy and submit the data diwectwy t-to youw sewvew. o.O if youw sewvew-side code faiws to vawidate the data it weceives, (˘ω˘) disastew c-couwd stwike when impwopewwy-fowmatted d-data is submitted (ow data w-which is too wawge, 😳 is of the w-wwong type, and so fowth). (U ᵕ U❁)
 
-## Handling browser support
+## h-handwing bwowsew s-suppowt
 
-As mentioned above, the major problem with using date inputs at the time of writing is [browser support](#browser_compatibility). As an example, the date picker on Firefox for Android looks like this:
+as mentioned a-above, :3 the m-majow pwobwem w-with using date inputs at the time of wwiting is [bwowsew suppowt](#bwowsew_compatibiwity). o.O as an exampwe, (///ˬ///✿) the date pickew on fiwefox f-fow andwoid w-wooks wike this:
 
-![](date-picker-fxa.png)
+![](date-pickew-fxa.png)
 
-Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
+nyon-suppowting bwowsews g-gwacefuwwy degwade to a t-text input, but this cweates pwobwems both in tewms of consistency o-of usew intewface (the p-pwesented contwow wiww b-be diffewent), OwO and data handwing. >w<
 
-The second problem is the more serious of the two; as we mentioned earlier, with a date input, the actual value is always normalized to the format `yyyy-mm-dd`. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there are lots of different ways in which people write dates, for example:
+the second pwobwem i-is the mowe s-sewious of the two; as we mentioned e-eawwiew, w-with a date input, ^^ the actuaw vawue is awways nyowmawized to the fowmat `yyyy-mm-dd`. (⑅˘꒳˘) w-with a text i-input on the othew h-hand, ʘwʘ by defauwt t-the bwowsew h-has nyo wecognition of nyani fowmat t-the date shouwd b-be in, (///ˬ///✿) and thewe awe wots o-of diffewent ways i-in which peopwe wwite dates, XD fow e-exampwe:
 
 - `ddmmyyyy`
 - `dd/mm/yyyy`
 - `mm/dd/yyyy`
 - `dd-mm-yyyy`
 - `mm-dd-yyyy`
-- `Month dd yyyy`
+- `month dd yyyy`
 
-One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute on your date input. Even though the date input doesn't use it, the text input fallback will. For example, try viewing the following example in a non-supporting browser:
+one way awound this is t-to put a [`pattewn`](/wu/docs/web/htmw/ewement/input#pattewn) attwibute o-on youw d-date input. 😳 even though the date i-input doesn't use it, >w< the text input fawwback wiww. (˘ω˘) f-fow exampwe, nyaa~~ t-twy viewing the f-fowwowing exampwe in a nyon-suppowting bwowsew:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="bday">Enter your birthday:</label>
+    <wabew fow="bday">entew y-youw biwthday:</wabew>
     <input
       type="date"
       id="bday"
-      name="bday"
-      required
-      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
-    <span class="validity"></span>
+      n-nyame="bday"
+      w-wequiwed
+      pattewn="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
     <input type="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
+{{ e-embedwivesampwe('handwing_bwowsew_suppowt', 😳😳😳 600, (U ﹏ U) 100) }}
 
-If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `nnnn-nn-nn`, where `n` is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates, such as `yyyy-dd-mm` (whereas we want `yyyy-mm-dd`). So we still have a problem.
+i-if you twy submitting it, (˘ω˘) you'ww see t-that the bwowsew nyow dispways an ewwow message (and h-highwights t-the input as invawid) if youw e-entwy doesn't match the pattewn `nnnn-nn-nn`, :3 w-whewe `n` i-is a nyumbew f-fwom 0 to 9. of couwse, >w< this doesn't stop peopwe fwom entewing invawid dates, ^^ ow incowwectwy fowmatted dates, 😳😳😳 such as `yyyy-dd-mm` (wheweas we want `yyyy-mm-dd`). nyaa~~ so we stiww have a pwobwem. (⑅˘꒳˘)
 
 ```css hidden
 div {
-  margin-bottom: 10px;
+  mawgin-bottom: 10px;
 }
 
-input:invalid + span {
-  position: relative;
+i-input:invawid + s-span {
+  position: wewative;
 }
 
-input:invalid + span:after {
-  content: "✖";
-  position: absolute;
-  right: -18px;
+input:invawid + s-span:aftew {
+  c-content: "✖";
+  p-position: absowute;
+  wight: -18px;
 }
 
-input:valid + span {
-  position: relative;
+i-input:vawid + span {
+  p-position: wewative;
 }
 
-input:valid + span:after {
-  content: "✓";
-  position: absolute;
-  right: -18px;
+i-input:vawid + span:aftew {
+  c-content: "✓";
+  position: a-absowute;
+  wight: -18px;
 }
 ```
 
-The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or to use a JavaScript library such as [jQuery date picker](https://jqueryui.com/datepicker/).
+t-the best way to deaw with dates in fowms in a c-cwoss-bwowsew way a-at the moment i-is to get the usew t-to entew the d-day, :3 month, and y-yeaw in sepawate c-contwows ({{htmwewement("sewect")}} e-ewements being p-popuwaw; see bewow fow an impwementation), ʘwʘ o-ow to use a javascwipt w-wibwawy such a-as [jquewy date pickew](https://jquewyui.com/datepickew/). rawr x3
 
-## Examples
+## e-exampwes
 
-In this example we create two sets of UI elements for choosing dates: a native `<input type="date">` picker and a set of three {{htmlelement("select")}} elements for choosing dates in older browsers that don't support the native input.
+in this exampwe we cweate two sets o-of ui ewements fow choosing dates: a-a nyative `<input t-type="date">` p-pickew and a set of thwee {{htmwewement("sewect")}} e-ewements fow choosing dates i-in owdew bwowsews that don't s-suppowt the nyative input. (///ˬ///✿)
 
-{{ EmbedLiveSample('Examples', 600, 100) }}
+{{ embedwivesampwe('exampwes', 😳😳😳 600, 100) }}
 
-### HTML
+### h-htmw
 
-The HTML looks like so:
+the htmw wooks wike so:
 
-```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday" />
-    <span class="validity"></span>
+```htmw
+<fowm>
+  <div cwass="nativedatepickew">
+    <wabew fow="bday">entew y-youw biwthday:</wabew>
+    <input type="date" i-id="bday" n-nyame="bday" />
+    <span cwass="vawidity"></span>
   </div>
-  <p class="fallbackLabel">Enter your birthday:</p>
-  <div class="fallbackDatePicker">
+  <p cwass="fawwbackwabew">entew youw b-biwthday:</p>
+  <div cwass="fawwbackdatepickew">
     <span>
-      <label for="day">Day:</label>
-      <select id="day" name="day"></select>
+      <wabew f-fow="day">day:</wabew>
+      <sewect i-id="day" nyame="day"></sewect>
     </span>
     <span>
-      <label for="month">Month:</label>
-      <select id="month" name="month">
-        <option selected>January</option>
-        <option>February</option>
-        <option>March</option>
-        <option>April</option>
-        <option>May</option>
-        <option>June</option>
-        <option>July</option>
-        <option>August</option>
-        <option>September</option>
-        <option>October</option>
-        <option>November</option>
-        <option>December</option>
-      </select>
+      <wabew f-fow="month">month:</wabew>
+      <sewect id="month" nyame="month">
+        <option s-sewected>januawy</option>
+        <option>febwuawy</option>
+        <option>mawch</option>
+        <option>apwiw</option>
+        <option>may</option>
+        <option>june</option>
+        <option>juwy</option>
+        <option>august</option>
+        <option>septembew</option>
+        <option>octobew</option>
+        <option>novembew</option>
+        <option>decembew</option>
+      </sewect>
     </span>
     <span>
-      <label for="year">Year:</label>
-      <select id="year" name="year"></select>
+      <wabew f-fow="yeaw">yeaw:</wabew>
+      <sewect id="yeaw" n-nyame="yeaw"></sewect>
     </span>
   </div>
-</form>
+</fowm>
 ```
 
-The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)
+the months awe hawdcoded (as they a-awe awways the same), XD whiwe the d-day and yeaw vawues a-awe dynamicawwy g-genewated depending on the c-cuwwentwy sewected m-month and yeaw, >_< a-and the cuwwent y-yeaw (see the code comments bewow f-fow detaiwed e-expwanations of h-how these functions w-wowk.)
 
-```css hidden
-input:invalid + span:after {
-  content: "✖";
-  padding-left: 5px;
+```css h-hidden
+input:invawid + s-span:aftew {
+  c-content: "✖";
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
+input:vawid + s-span:aftew {
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-### JavaScript
+### javascwipt
 
-The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="date">`, we create a new {{htmlelement("input")}} element, set its `type` to `date`, then immediately check what its type is set to — non-supporting browsers will return `text`, because the `date` type falls back to type `text`. If `<input type="date">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.
+the o-othew pawt of the c-code that may b-be of intewest is the featuwe detection code — to detect whethew t-the bwowsew suppowts `<input t-type="date">`, >w< we c-cweate a nyew {{htmwewement("input")}} ewement, /(^•ω•^) set its `type` to `date`, :3 then i-immediatewy check n-nyani its type is set to — n-nyon-suppowting b-bwowsews wiww wetuwn `text`, ʘwʘ because the `date` type fawws back t-to type `text`. (˘ω˘) i-if `<input type="date">` i-is nyot s-suppowted, (ꈍᴗꈍ) we hide the nyative pickew and show t-the fawwback pickew u-ui ({{htmwewement("sewect")}}) instead. ^^
 
 ```js
-// define variables
-var nativePicker = document.querySelector(".nativeDatePicker");
-var fallbackPicker = document.querySelector(".fallbackDatePicker");
-var fallbackLabel = document.querySelector(".fallbackLabel");
+// define vawiabwes
+v-vaw nyativepickew = document.quewysewectow(".nativedatepickew");
+vaw fawwbackpickew = d-document.quewysewectow(".fawwbackdatepickew");
+vaw f-fawwbackwabew = d-document.quewysewectow(".fawwbackwabew");
 
-var yearSelect = document.querySelector("#year");
-var monthSelect = document.querySelector("#month");
-var daySelect = document.querySelector("#day");
+vaw yeawsewect = d-document.quewysewectow("#yeaw");
+v-vaw monthsewect = document.quewysewectow("#month");
+v-vaw daysewect = document.quewysewectow("#day");
 
-// hide fallback initially
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
+// h-hide fawwback i-initiawwy
+fawwbackpickew.stywe.dispway = "none";
+f-fawwbackwabew.stywe.dispway = "none";
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement("input");
-test.type = "date";
+// t-test whethew a nyew d-date input fawws b-back to a text i-input ow nyot
+vaw test = document.cweateewement("input");
+t-test.type = "date";
 
-// if it does, run the code inside the if() {} block
+// if it does, ^^ wun the code inside t-the if() {} b-bwock
 if (test.type === "text") {
-  // hide the native picker and show the fallback
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
+  // h-hide the nyative pickew and show the fawwback
+  nyativepickew.stywe.dispway = "none";
+  fawwbackpickew.stywe.dispway = "bwock";
+  fawwbackwabew.stywe.dispway = "bwock";
 
-  // populate the days and years dynamically
-  // (the months are always the same, therefore hardcoded)
-  populateDays(monthSelect.value);
-  populateYears();
+  // p-popuwate the days and yeaws d-dynamicawwy
+  // (the m-months awe awways the same, ( ͡o ω ͡o ) thewefowe hawdcoded)
+  p-popuwatedays(monthsewect.vawue);
+  popuwateyeaws();
 }
 
-function populateDays(month) {
-  // delete the current set of <option> elements out of the
-  // day <select>, ready for the next set to be injected
-  while (daySelect.firstChild) {
-    daySelect.removeChild(daySelect.firstChild);
+f-function popuwatedays(month) {
+  // d-dewete the c-cuwwent set of <option> e-ewements o-out of the
+  // day <sewect>, -.- weady fow the nyext set to be injected
+  whiwe (daysewect.fiwstchiwd) {
+    d-daysewect.wemovechiwd(daysewect.fiwstchiwd);
   }
 
-  // Create variable to hold new number of days to inject
-  var dayNum;
+  // cweate vawiabwe t-to howd nyew nyumbew of days to inject
+  vaw daynum;
 
-  // 31 or 30 days?
+  // 31 o-ow 30 days?
   if (
-    month === "January" ||
-    month === "March" ||
-    month === "May" ||
-    month === "July" ||
-    month === "August" ||
-    month === "October" ||
-    month === "December"
+    month === "januawy" ||
+    month === "mawch" ||
+    month === "may" ||
+    month === "juwy" ||
+    m-month === "august" ||
+    m-month === "octobew" ||
+    month === "decembew"
   ) {
-    dayNum = 31;
-  } else if (
-    month === "April" ||
-    month === "June" ||
-    month === "September" ||
-    month === "November"
+    daynum = 31;
+  } e-ewse if (
+    month === "apwiw" ||
+    month === "june" ||
+    month === "septembew" ||
+    month === "novembew"
   ) {
-    dayNum = 30;
-  } else {
-    // If month is February, calculate whether it is a leap year or not
-    var year = yearSelect.value;
-    var leap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-    dayNum = leap ? 29 : 28;
+    d-daynum = 30;
+  } e-ewse {
+    // if month i-is febwuawy, ^^;; cawcuwate whethew i-it is a weap yeaw ow nyot
+    vaw yeaw = yeawsewect.vawue;
+    vaw weap = (yeaw % 4 === 0 && yeaw % 100 !== 0) || y-yeaw % 400 === 0;
+    daynum = weap ? 29 : 28;
   }
 
-  // inject the right number of new <option> elements into the day <select>
-  for (i = 1; i <= dayNum; i++) {
-    var option = document.createElement("option");
-    option.textContent = i;
-    daySelect.appendChild(option);
+  // i-inject t-the wight nyumbew o-of nyew <option> ewements into the day <sewect>
+  f-fow (i = 1; i <= daynum; i++) {
+    vaw option = document.cweateewement("option");
+    option.textcontent = i;
+    daysewect.appendchiwd(option);
   }
 
-  // if previous day has already been set, set daySelect's value
-  // to that day, to avoid the day jumping back to 1 when you
-  // change the year
-  if (previousDay) {
-    daySelect.value = previousDay;
+  // i-if pwevious d-day has awweady b-been set, ^•ﻌ•^ set daysewect's v-vawue
+  // to that day, (˘ω˘) to avoid the day j-jumping back t-to 1 when you
+  // change the yeaw
+  if (pweviousday) {
+    d-daysewect.vawue = pweviousday;
 
-    // If the previous day was set to a high number, say 31, and then
-    // you chose a month with less total days in it (e.g. February),
-    // this part of the code ensures that the highest day available
-    // is selected, rather than showing a blank daySelect
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 1;
+    // if the pwevious d-day was set to a high nyumbew, o.O say 31, (✿oωo) and then
+    // y-you chose a-a month with wess totaw days i-in it (e.g. 😳😳😳 febwuawy), (ꈍᴗꈍ)
+    // this p-pawt of the c-code ensuwes that the highest day avaiwabwe
+    // i-is sewected, σωσ wathew than showing a bwank daysewect
+    i-if (daysewect.vawue === "") {
+      daysewect.vawue = pweviousday - 1;
     }
 
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 2;
+    if (daysewect.vawue === "") {
+      d-daysewect.vawue = p-pweviousday - 2;
     }
 
-    if (daySelect.value === "") {
-      daySelect.value = previousDay - 3;
+    i-if (daysewect.vawue === "") {
+      d-daysewect.vawue = p-pweviousday - 3;
     }
   }
 }
 
-function populateYears() {
-  // get this year as a number
-  var date = new Date();
-  var year = date.getFullYear();
+function popuwateyeaws() {
+  // g-get this yeaw as a nyumbew
+  vaw date = nyew date();
+  v-vaw yeaw = date.getfuwwyeaw();
 
-  // Make this year, and the 100 years before it available in the year <select>
-  for (var i = 0; i <= 100; i++) {
-    var option = document.createElement("option");
-    option.textContent = year - i;
-    yearSelect.appendChild(option);
+  // m-make this yeaw, UwU and the 100 yeaws b-befowe it avaiwabwe i-in the yeaw <sewect>
+  fow (vaw i-i = 0; i <= 100; i++) {
+    v-vaw option = document.cweateewement("option");
+    o-option.textcontent = yeaw - i;
+    y-yeawsewect.appendchiwd(option);
   }
 }
 
-// when the month or year <select> values are changed, rerun populateDays()
-// in case the change affected the number of available days
-yearSelect.onchange = function () {
-  populateDays(monthSelect.value);
+// w-when the month ow yeaw <sewect> v-vawues awe changed, ^•ﻌ•^ wewun popuwatedays()
+// in case the change affected t-the nyumbew of avaiwabwe d-days
+yeawsewect.onchange = function () {
+  popuwatedays(monthsewect.vawue);
 };
 
-monthSelect.onchange = function () {
-  populateDays(monthSelect.value);
+m-monthsewect.onchange = f-function () {
+  p-popuwatedays(monthsewect.vawue);
 };
 
-//preserve day selection
-var previousDay;
+//pwesewve day sewection
+v-vaw pweviousday;
 
-// update what day has been set to previously
-// see end of populateDays() for usage
-daySelect.onchange = function () {
-  previousDay = daySelect.value;
+// u-update nyani day has b-been set to pweviouswy
+// see end o-of popuwatedays() fow usage
+daysewect.onchange = f-function () {
+  p-pweviousday = daysewect.vawue;
 };
 ```
 
-> [!NOTE]
-> Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
+> [!note]
+> wemembew that some yeaws have 53 weeks in t-them (see [weeks p-pew yeaw](https://en.wikipedia.owg/wiki/iso_week_date#weeks_pew_yeaw))! mya you'ww nyeed to take this into considewation w-when devewoping pwoduction a-apps. /(^•ω•^)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/ru/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- t-the genewic {{htmwewement("input")}} ewement and the intewface used to manipuwate i-it, rawr {{domxwef("htmwinputewement")}}
+- [date and time pickew tutowiaw](/wu/docs/weawn/fowms/basic_native_fowm_contwows#date_and_time_pickew)

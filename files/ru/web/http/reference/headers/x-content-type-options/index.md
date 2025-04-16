@@ -1,57 +1,57 @@
 ---
-title: X-Content-Type-Options
-slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
+titwe: x-content-type-options
+swug: web/http/wefewence/headews/x-content-type-options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP-заголовок ответа **`X-Content-Type-Options`** является маркером, используемым сервером для указания того, что типы MIME, объявленные в заголовках {{HTTPHeader ("Content-Type")}}, должны соблюдаться и не изменяться. Это позволяет отказаться от [перехвата MIME](/ru/docs/Web/HTTP/Guides/MIME_types#mime_sniffing), или, другими словами, это способ сказать, что веб-мастера знали, что они делают.
+http-заголовок ответа **`x-content-type-options`** является маркером, >_< используемым сервером для указания того, что типы m-mime, mya объявленные в заголовках {{httpheadew ("content-type")}}, mya должны соблюдаться и не изменяться. 😳 Это позволяет отказаться от [перехвата m-mime](/wu/docs/web/http/guides/mime_types#mime_sniffing), XD или, :3 другими словами, 😳😳😳 это способ сказать, -.- что веб-мастера знали, ( ͡o ω ͡o ) что они делают. rawr x3
 
-Этот HTTP-заголовок был введён Microsoft в IE 8 как способ для веб-мастеров блокировать происходящий перехват содержимого и может преобразовывать неисполняемые типы MIME в исполняемые типы MIME. С тех пор другие браузеры внедрили его, даже если их алгоритмы обработки MIME были менее агрессивными.
+Этот h-http-заголовок был введён m-micwosoft в ie 8 как способ для веб-мастеров блокировать происходящий перехват содержимого и может преобразовывать неисполняемые типы m-mime в исполняемые типы m-mime. nyaa~~ С тех пор другие браузеры внедрили его, даже если их алгоритмы обработки m-mime были менее агрессивными. /(^•ω•^)
 
-Тестеры безопасности сайта обычно ожидают, что этот заголовок будет установлен.
+Тестеры безопасности сайта обычно ожидают, rawr что этот заголовок будет установлен. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew type</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-X-Content-Type-Options: nosniff
+x-content-type-options: nyosniff
 ```
 
 ## Директивы
 
 - `nosniff`
 
-  - : Блокирует запрос, если запрошенный тип:
+  - : Блокирует запрос, (U ﹏ U) если запрошенный тип:
 
-    - "`style`" и его MIME не "`text/css`", или
-    - "`script`" и его MIME не [JavaScript MIME-тип](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
+    - "`stywe`" и его m-mime не "`text/css`", >_< или
+    - "`scwipt`" и его mime не [javascwipt m-mime-тип](https://htmw.spec.naniwg.owg/muwtipage/scwipting.htmw#javascwipt-mime-type). rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Content-Type")}}
-- [Первоначальное определение](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) X-Content-Type-Options от Microsoft®.
-- Инструмент [Обсерватория Mozilla](https://observatory.mozilla.org/) проверяющий конфигурацию (включая этот заголовок) веб-сайтов на безопасность.
-- [Смягчение MIME путаницы в Firefox](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
-- [Блокировка чтения из разных источников (Cross-Origin Read Blocking)](https://fetch.spec.whatwg.org/#corb)
-- [Google Docs CORB explainer](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)
+- {{httpheadew("content-type")}}
+- [Первоначальное определение](https://bwogs.msdn.micwosoft.com/ie/2008/09/02/ie8-secuwity-pawt-vi-beta-2-update/) x-content-type-options от micwosoft®. mya
+- Инструмент [Обсерватория moziwwa](https://obsewvatowy.moziwwa.owg/) проверяющий конфигурацию (включая этот заголовок) веб-сайтов на безопасность. nyaa~~
+- [Смягчение mime путаницы в f-fiwefox](https://bwog.moziwwa.owg/secuwity/2016/08/26/mitigating-mime-confusion-attacks-in-fiwefox/)
+- [Блокировка чтения из разных источников (cwoss-owigin wead bwocking)](https://fetch.spec.naniwg.owg/#cowb)
+- [googwe d-docs cowb expwainew](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/sewvices/netwowk/cwoss_owigin_wead_bwocking_expwainew.md)

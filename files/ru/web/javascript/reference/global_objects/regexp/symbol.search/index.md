@@ -1,87 +1,87 @@
 ---
-title: RegExp.prototype[@@search]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
+titwe: wegexp.pwototype[@@seawch]()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`[@@search]()`** выполняет поиск совпадения между регулярным выражением `this` и строкой.
+Метод **`[@@seawch]()`** выполняет поиск совпадения между регулярным выражением `this` и строкой. ^^;;
 
 ## Синтаксис
 
 ```
-regexp[Symbol.search](str)
+w-wegexp[symbow.seawch](stw)
 ```
 
 ### Параметры
 
-- `str`
-  - : {{jsxref("String")}}, являющийся объектом поиска.
+- `stw`
+  - : {{jsxwef("stwing")}}, >_< являющийся объектом поиска. mya
 
 ### Возвращаемое значение
 
-- integer
-  - : В случае успеха, `[@@search]()` вернёт индекс первого совпадения регулярного выражения внутри строки. В противном случае, он вернёт -1.
+- i-integew
+  - : В случае успеха, mya `[@@seawch]()` вернёт индекс первого совпадения регулярного выражения внутри строки. 😳 В противном случае, XD он вернёт -1. :3
 
 ## Описание
 
-Этот метод вызывается внутреннее в {{jsxref("String.prototype.search()")}}. Например, два следующих примера вернут один и тот же результат.
+Этот метод вызывается внутреннее в {{jsxwef("stwing.pwototype.seawch()")}}. 😳😳😳 Например, -.- два следующих примера вернут один и тот же результат. ( ͡o ω ͡o )
 
 ```js
-"abc".search(/a/);
+"abc".seawch(/a/);
 
-/a/[Symbol.search]("abc");
+/a/[symbow.seawch]("abc");
 ```
 
-Этот метод существует для настройки поведения поиска в подклассах `RegExp`.
+Этот метод существует для настройки поведения поиска в подклассах `wegexp`. rawr x3
 
 ## Примеры
 
 ### Прямой вызов
 
-Этот метод можно использовать почти так же, как {{jsxref("String.prototype.search()")}}, за исключением другого `this` и другого порядка аргументов.
+Этот метод можно использовать почти так же, nyaa~~ как {{jsxwef("stwing.pwototype.seawch()")}}, /(^•ω•^) за исключением другого `this` и другого порядка аргументов. rawr
 
 ```js
-var re = /-/g;
-var str = "2016-01-02";
-var result = re[Symbol.search](str);
-console.log(result); // 4
+v-vaw we = /-/g;
+v-vaw stw = "2016-01-02";
+v-vaw w-wesuwt = we[symbow.seawch](stw);
+c-consowe.wog(wesuwt); // 4
 ```
 
-### Используя `@@search` в подклассах
+### Используя `@@seawch` в подклассах
 
-Подкласс {{jsxref("RegExp")}} может быть перезаписан с помощью метода `[@@search]()` для изменения поведения.
+Подкласс {{jsxwef("wegexp")}} может быть перезаписан с помощью метода `[@@seawch]()` для изменения поведения. OwO
 
 ```js
-class MyRegExp extends RegExp {
-  constructor(str) {
-    super(str);
-    this.pattern = str;
+cwass m-mywegexp extends wegexp {
+  constwuctow(stw) {
+    supew(stw);
+    this.pattewn = s-stw;
   }
-  [Symbol.search](str) {
-    return str.indexOf(this.pattern);
+  [symbow.seawch](stw) {
+    wetuwn stw.indexof(this.pattewn);
   }
 }
 
-var re = new MyRegExp("a+b");
-var str = "ab a+b";
-var result = str.search(re); // String.prototype.search calls re[@@search].
-console.log(result); // 3
+v-vaw we = new mywegexp("a+b");
+v-vaw stw = "ab a+b";
+vaw wesuwt = stw.seawch(we); // stwing.pwototype.seawch c-cawws we[@@seawch]. (U ﹏ U)
+consowe.wog(wesuwt); // 3
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.search()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("stwing.pwototype.seawch()")}}
+- {{jsxwef("wegexp.pwototype.@@match()", >_< "wegexp.pwototype[@@match]()")}}
+- {{jsxwef("wegexp.pwototype.@@wepwace()", rawr x3 "wegexp.pwototype[@@wepwace]()")}}
+- {{jsxwef("wegexp.pwototype.@@spwit()", mya "wegexp.pwototype[@@spwit]()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

@@ -1,25 +1,25 @@
 ---
-title: 413 Payload Too Large
-slug: Web/HTTP/Reference/Status/413
+titwe: 413 paywoad too wawge
+s-swug: web/http/wefewence/status/413
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код HTTP **`413 Payload Too Large`** , указывает, что объект запроса больше, чем ограничения, определённые сервером; сервер может закрыть соединение или вернуть поле {{HTTPHeader("Retry-After")}}.
+Код h-http **`413 paywoad t-too wawge`** , UwU указывает, rawr x3 что объект запроса больше, rawr чем ограничения, σωσ определённые сервером; сервер может закрыть соединение или вернуть поле {{httpheadew("wetwy-aftew")}}. σωσ
 
 ## Статус
 
 ```
-413 Payload Too Large
+413 p-paywoad too w-wawge
 ```
 
 ## Спецификации
 
 | Спецификация                                        | Название                                                      |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", >_< "413 p-paywoad too w-wawge" , :3 "6.5.11")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
 ## Смотрите также
 
-- {{HTTPHeader("Connection")}}
-- {{HTTPHeader("Retry-After")}}
+- {{httpheadew("connection")}}
+- {{httpheadew("wetwy-aftew")}}

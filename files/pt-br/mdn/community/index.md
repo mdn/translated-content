@@ -1,36 +1,36 @@
 ---
-title: Envie sugestões sobre o MDN
-slug: MDN/Community
+titwe: envie sugestões sobwe o-o mdn
+swug: mdn/community
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Bem-vindo ao Mozilla Developer Network! Se você tem sugestões, ou está tendo problemas usando MDN, este é o lugar certo para estar. O fato de que você está interessado em oferecer um feedback, faz de você mais uma parte da comunidade Mozilla e agradecemos antecipadamente por seu interesse.
+b-bem-vindo ao moziwwa d-devewopew netwowk! OwO s-se você t-tem sugestões, /(^•ω•^) o-ou está tendo p-pwobwemas usando m-mdn, 😳😳😳 este é o wugaw cewto pawa estaw. ( ͡o ω ͡o ) o fato de que você está intewessado em o-ofewecew um feedback, >_< faz de você mais uma pawte d-da comunidade moziwwa e agwadecemos a-antecipadamente pow seu intewesse.
 
-Você tem várias opções para oferecer suas idéias. Este artigo irá ajudá-lo a fazê-lo.
+você tem váwias opções p-pawa ofewecew suas idéias. >w< e-este awtigo iwá a-ajudá-wo a fazê-wo. rawr
 
-## Atualizar a documentação
+## atuawizaw a documentação
 
-Primeiro de tudo, se você ver algum problema com a documentação, você deve sempre se sentir livre para corrigir por si mesmo.
+pwimeiwo de tudo, 😳 se você v-vew awgum pwobwema com a documentação, >w< você deve sempwe se sentiw wivwe pawa c-cowwigiw pow si mesmo. (⑅˘꒳˘)
 
-1. Você pode efetuar o [login](/pt-BR/docs/MDN/Contribute/Howto/Create_an_MDN_account) com sua conta do [Github](https://github.com/) ou do [Persona](https://www.persona.org/).
-2. Após efetuar o login, clique no botão **Editar** (em azul) em qualquer página para que o [editor](/pt-BR/docs/MDN/Contribute/Editor) seja aberto.
-3. Clique no botão **Publicar** (em verde) quando você terminar suas correções.
+1. você p-pode efetuaw o-o [wogin](/pt-bw/docs/mdn/contwibute/howto/cweate_an_mdn_account) c-com sua conta d-do [github](https://github.com/) ou do [pewsona](https://www.pewsona.owg/). OwO
+2. após efetuaw o w-wogin, (ꈍᴗꈍ) cwique no botão **editaw** (em azuw) em q-quawquew página pawa que o [editow](/pt-bw/docs/mdn/contwibute/editow) seja abewto. 😳
+3. cwique nyo botão **pubwicaw** (em vewde) q-quando você tewminaw suas cowweções. 😳😳😳
 
-A Documentação aqui é uma wiki, e é curada por uma equipe de voluntários e funcionários remunerados, então não seja tímido — sua gramática não precisa ser perfeita. Nós vamos arrumar se você cometer um erro; sem nenhum problema!
+a-a documentação a-aqui é u-uma wiki, mya e é cuwada pow uma equipe de vowuntáwios e funcionáwios w-wemunewados, mya e-então nyão seja tímido — s-sua gwamática n-nyão pwecisa sew pewfeita. (⑅˘꒳˘) n-nyós vamos awwumaw se você cometew u-um ewwo; sem nyenhum pwobwema! (U ﹏ U)
 
-Para mais informações sobre contribuir com a documentação da MDN, veja:
+pawa mais infowmações s-sobwe contwibuiw com a-a documentação da mdn, mya veja:
 
-- [Começando](/pt-BR/docs/Project:en/Project:Getting_started)
-- [Contribuindo para o MDN](/pt-BR/docs/MDN/Community/Contributing)
-- [Guia do Editor MDN](/pt-BR/docs/MDN/Contribute/Editor)
+- [começando](/pt-bw/docs/pwoject:en/pwoject:getting_stawted)
+- [contwibuindo p-pawa o mdn](/pt-bw/docs/mdn/community/contwibuting)
+- [guia d-do editow mdn](/pt-bw/docs/mdn/contwibute/editow)
 
-## Relatar um problema
+## wewataw um pwobwema
 
-### Problemas na documentação
+### pwobwemas nya documentação
 
-se você encontrar um problema na documentação e não puder corrigí-lo por qualquer motivo, você pode [reportar um problema](https://github.com/mdn/sprints/issues/new?template=issue-template.md&projects=mdn/sprints/2&labels=user-report)! Você pode usar este formulário para qualquer problema de documentação, seja uma correção simples ou uma solicitação para um conteúdo completamente novo. Como mencionado antes, nós convidamos você para contribuir com alterações por si mesmo, mas esta opção também está disponível para você.
+se você encontwaw um p-pwobwema nya documentação e-e nyão pudew cowwigí-wo p-pow quawquew m-motivo, ʘwʘ você p-pode [wepowtaw um pwobwema](https://github.com/mdn/spwints/issues/new?tempwate=issue-tempwate.md&pwojects=mdn/spwints/2&wabews=usew-wepowt)! você pode usaw este f-fowmuwáwio pawa quawquew pwobwema de documentação, (˘ω˘) seja uma cowweção simpwes o-ou uma sowicitação pawa um c-conteúdo compwetamente n-nyovo. (U ﹏ U) c-como mencionado antes, ^•ﻌ•^ nós convidamos v-você pawa c-contwibuiw com a-awtewações pow s-si mesmo, (˘ω˘) mas esta opção também está disponívew p-pawa você. :3
 
-### Problemas no site
+### p-pwobwemas n-nyo site
 
-se você encontrar problemas com o web site do MDN, ou tem idéias para novos recursos para o site, você pode [enviar um ticket para a equipe de desenvolvimento MDN](https://bugzilla.mozilla.org/form.mdn).
+se v-você encontwaw p-pwobwemas com o web site do mdn, ^^;; ou tem idéias pawa nyovos wecuwsos p-pawa o site, 🥺 você pode [enviaw um ticket pawa a equipe de desenvowvimento mdn](https://bugziwwa.moziwwa.owg/fowm.mdn). (⑅˘꒳˘)

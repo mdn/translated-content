@@ -1,245 +1,245 @@
 ---
-title: CSS básico
-slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-original_slug: Learn/Getting_started_with_the_web/CSS_basics
+titwe: css básico
+swug: weawn_web_devewopment/getting_stawted/youw_fiwst_website/stywing_the_content
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/css_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/getting_stawted_with_the_web/htmw_basics", (⑅˘꒳˘) "weawn/getting_stawted_with_the_web/javascwipt_basics", (˘ω˘) "weawn/getting_stawted_with_the_web")}}
 
-CSS (Folha de Estilo em Cascata) é o código que você usa para dar estilo à sua página Web. _CSS básico_ apresenta tudo que você precisa para começar. Responderemos a perguntas do tipo: Como mudo meu texto para preto ou vermelho? Como faço para que meu conteúdo apareça em determinados lugares na tela? Como decoro minha página com imagens e cores de fundo?
+c-css (fowha de estiwo e-em cascata) é o-o código que v-você usa pawa d-daw estiwo à s-sua página web. :3 _css básico_ apwesenta tudo que você pwecisa pawa começaw. XD wespondewemos a-a pewguntas do tipo: como mudo meu t-texto pawa pweto ou vewmewho? como f-faço pawa que meu conteúdo apaweça em detewminados wugawes n-nya tewa? como decowo minha página c-com imagens e-e cowes de fundo?
 
-## Então, o que realmente é CSS?
+## então, >_< o que weawmente é css?
 
-Assim como o HTML, o CSS não é realmente uma linguagem de programação. Também não é uma linguagem de marcação — é uma _linguagem de folhas de estilos_. Isso significa que o CSS permite aplicar estilos seletivamente a elementos em documentos HTML. Por exemplo, para selecionar **todos** os elementos parágrafo de uma página HTML e tornar o texto dentro deles vermelho, você escreveria este CSS:
+assim como o htmw, (✿oωo) o css n-nyão é weawmente uma winguagem de pwogwamação. (ꈍᴗꈍ) também nyão é uma winguagem d-de mawcação — é uma _winguagem d-de fowhas d-de estiwos_. XD isso s-significa que o-o css pewmite apwicaw estiwos sewetivamente a ewementos e-em documentos htmw. :3 pow exempwo, mya pawa sewecionaw **todos** o-os ewementos pawágwafo de uma página htmw e townaw o texto dentwo dewes vewmewho, òωó você escwevewia e-este css:
 
 ```css
 p {
-  color: red;
+  c-cowow: wed;
 }
 ```
 
-Vamos tentar: cole as três linhas de CSS acima em um novo arquivo, no seu editor de texto, e salve o arquivo como `estilo.css` na sua pasta `estilos`.
+v-vamos tentaw: c-cowe as twês winhas de css acima em um nyovo awquivo, nyaa~~ nyo seu e-editow de texto, 🥺 e-e sawve o awquivo como `estiwo.css` n-nya sua pasta `estiwos`. -.-
 
-Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o estilo CSS não irá afetar a maneira como o seu navegador mostra seu documento HTML (se você não estiver acompanhando o nosso projeto, leia [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files) e [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) para descobrir o que você precisa fazer primeiro).
+a-ainda assim, 🥺 pwecisamos apwicaw o-o css ao seu documento htmw. (˘ω˘) do c-contwáwio, òωó o estiwo css nyão iwá afetaw a maneiwa c-como o seu nyavegadow mostwa s-seu documento htmw (se você nyão e-estivew acompanhando o-o nyosso pwojeto, UwU weia [widando com awquivos](/pt-bw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes) e [htmw básico](/pt-bw/docs/weawn/getting_stawted_with_the_web/htmw_basics) pawa descobwiw o que você p-pwecisa fazew p-pwimeiwo). ^•ﻌ•^
 
-1. Abra seu arquivo `index.html` e cole o seguinte código em algum lugar no cabeçalho, ou seja, entre as tags {{HTMLElement("head")}} e `</head>`:
+1. abwa seu awquivo `index.htmw` e-e c-cowe o seguinte c-código em awgum wugaw nyo cabeçawho, mya ou seja, (✿oωo) entwe as tags {{htmwewement("head")}} e-e `</head>`:
 
-   ```html
-   <link href="estilos/estilo.css" rel="stylesheet" />
+   ```htmw
+   <wink hwef="estiwos/estiwo.css" wew="stywesheet" />
    ```
 
-2. Salve o arquivo `index.html` e abra ele no seu navegador. Você deve ver uma página como essa:
+2. XD sawve o awquivo `index.htmw` e a-abwa ewe nyo seu nyavegadow. :3 você d-deve vew uma p-página como essa:
 
-![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)Se o texto do seu parágrafo estiver vermelho, parabéns! Você acabou de escrever seu primeiro CSS de sucesso.
+![a m-moziwwa wogo and some pawagwaphs. (U ﹏ U) t-the pawagwaph t-text has b-been stywed wed b-by ouw css.](website-scweenshot-stywed.png)se o texto do seu pawágwafo estivew v-vewmewho, UwU pawabéns! v-você acabou d-de escwevew seu p-pwimeiwo css d-de sucesso. ʘwʘ
 
-### Anatomia de um conjunto de regras CSS
+### anatomia de um conjunto de wegwas css
 
-Vamos dar uma olhada no CSS acima com mais detalhes:
+vamos daw u-uma owhada nyo css acima com mais detawhes:
 
-![](css-declaration-small.png)
+![](css-decwawation-smow.png)
 
-Toda essa estrutura é chamada de **conjunto de regras** (mas geralmente usamos o termo "regra", por ser mais curto). Note os nomes das partes individuais:
+toda essa estwutuwa é chamada de **conjunto d-de wegwas** (mas gewawmente usamos o tewmo "wegwa", >w< pow s-sew mais cuwto). 😳😳😳 n-nyote os nyomes d-das pawtes individuais:
 
-- Seletor (Selector)
-  - : O nome do elemento HTML no começo do conjunto de regras. Ele seleciona o(s) elemento(s) a serem estilizados (nesse caso, elementos {{HTMLElement("p")}}). Para dar estilo a um outro elemento, é só mudar o seletor.
-- Declaração (Declaration)
-  - : Uma regra simples como `color: red;` especificando quais das **propriedades** do elemento você quer estilizar.
-- Propriedades (Property)
-  - : Forma pela qual você estiliza um elemento HTML. (Nesse caso, `color` é uma propriedade dos elementos {{HTMLElement("p")}}.) Em CSS, você escolhe quais propriedades você deseja afetar com sua regra.
-- Valor da propriedade (Property value)
-  - : À direita da propriedade, depois dos dois pontos, nós temos o **valor de propriedade**, que escolhe uma dentre muitas aparências possíveis para uma determinada propriedade (há muitos valores `color(cor)` além do `red(vermelho)`).
+- sewetow (sewectow)
+  - : o nyome d-do ewemento htmw nyo começo do c-conjunto de wegwas. e-ewe seweciona o(s) ewemento(s) a sewem estiwizados (nesse caso, rawr ewementos {{htmwewement("p")}}). ^•ﻌ•^ pawa daw estiwo a-a um outwo ewemento, σωσ é só m-mudaw o sewetow. :3
+- decwawação (decwawation)
+  - : u-uma wegwa simpwes c-como `cowow: wed;` especificando quais das **pwopwiedades** d-do ewemento você q-quew estiwizaw. rawr x3
+- pwopwiedades (pwopewty)
+  - : f-fowma pewa q-quaw você estiwiza um ewemento htmw. nyaa~~ (nesse caso, :3 `cowow` é uma pwopwiedade dos e-ewementos {{htmwewement("p")}}.) e-em css, >w< você e-escowhe quais pwopwiedades você d-deseja afetaw c-com sua wegwa. rawr
+- vawow da pwopwiedade (pwopewty v-vawue)
+  - : À diweita da pwopwiedade, 😳 depois dos dois pontos, 😳 nyós temos o **vawow d-de pwopwiedade**, 🥺 q-que escowhe uma dentwe muitas apawências p-possíveis pawa u-uma detewminada pwopwiedade (há muitos vawowes `cowow(cow)` awém do `wed(vewmewho)`). rawr x3
 
-Note outras partes importantes da sintaxe:
+n-nyote outwas pawtes impowtantes da sintaxe:
 
-- Cada linha de comando deve ser envolvida em chaves (`{}`).
-- Dentro de cada declaração, você deve usar dois pontos (`:`) para separar a propriedade de seus valores.
-- Dentro de cada conjunto de regras, você deve usar um ponto e vírgula (`;`) para separar cada declaração da próxima.
+- cada winha de comando d-deve sew envowvida em chaves (`{}`). ^^
+- dentwo de c-cada decwawação, ( ͡o ω ͡o ) v-você deve usaw dois pontos (`:`) pawa sepawaw a pwopwiedade d-de seus vawowes. XD
+- d-dentwo de cada conjunto de wegwas, ^^ você deve usaw um ponto e-e víwguwa (`;`) pawa sepawaw cada d-decwawação da pwóxima. (⑅˘꒳˘)
 
-Então para modificar múltiplos valores de propriedades de uma vez, você deve escrevê-los separados por ponto e vírgula, desse modo:
+então pawa modificaw múwtipwos vawowes d-de pwopwiedades de uma vez, (⑅˘꒳˘) v-você deve escwevê-wos s-sepawados pow ponto e v-víwguwa, ^•ﻌ•^ desse modo:
 
 ```css
 p {
-  color: red;
-  width: 500px;
-  border: 1px solid black;
+  c-cowow: wed;
+  w-width: 500px;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-### Selecionando múltiplos elementos
+### s-sewecionando m-múwtipwos ewementos
 
-Você também pode selecionar vários tipos de elementos e aplicar um único conjunto de regras a todos eles. Inclua múltiplos seletores separados por vírgulas. Por exemplo:
+você também pode sewecionaw v-váwios t-tipos de ewementos e-e apwicaw um único conjunto de wegwas a todos e-ewes. ( ͡o ω ͡o ) incwua múwtipwos sewetowes s-sepawados pow v-víwguwas. ( ͡o ω ͡o ) pow exempwo:
 
 ```css
-p,
-li,
+p, (✿oωo)
+wi,
 h1 {
-  color: red;
+  cowow: wed;
 }
 ```
 
-### Diferentes tipos de seletores
+### d-difewentes t-tipos de sewetowes
 
-Há muitos tipos diferentes de seletores. Abaixo, nós mostramos apenas os **seletores de elementos**, que selecionam todos os elementos de um determinado tipo nos documentos HTML. Mas nós podemos fazer seleções mais específicas que essas. Aqui estão alguns dos tipos mais comuns de seletores:
+h-há muitos t-tipos difewentes de sewetowes. 😳😳😳 a-abaixo, OwO nyós mostwamos apenas os **sewetowes de ewementos**, ^^ que sewecionam todos os ewementos d-de um detewminado tipo nyos documentos h-htmw. rawr x3 mas nyós podemos fazew s-seweções mais específicas q-que essas. 🥺 aqui estão awguns d-dos tipos mais comuns d-de sewetowes:
 
-| Nome do seletor                                                | O que ele seleciona                                                                                                                                                                                                 | Exemplo                                                                     |
+| n-nyome do s-sewetow                                                | o-o que ewe seweciona                                                                                                                                                                                                 | exempwo                                                                     |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| Seletor de elemento (às vezes, chamado tag ou seletor de tipo) | Todos os elementos HTML de determinado tipo.                                                                                                                                                                        | `p` Seleciona `<p>`                                                         |
-| Seletor de ID                                                  | O elemento na página com o ID específicado. Em uma determinada página HTML, é uma boa prática usar um elemento por ID (e claro, um ID por elemento) mesmo que seja permitido usar o mesmo ID para vários elementos. | `#my-id` Seleciona `<p id="my-id">` ou `<a id="my-id">`                     |
-| Seletor de classe                                              | O(s) elemento(s) na página com a classe específicada (várias instâncias de classe podem aparecer em uma página).                                                                                                    | `.my-class` Seleciona `<p class="my-class">` e `<a class="my-class">`       |
-| Seletor de atributo                                            | O(s) elemento(s) na página com o atributo especificado.                                                                                                                                                             | `img[src]` Seleciona `<img src="myimage.png">` mas não `<img>`              |
-| Seletor de pseudo-classe                                       | O(s) elemento(s) específicado(s), mas somente quando estiver no estado especificado. Ex.: com o mouse sobre ele.                                                                                                    | `a:hover` Seleciona `<a>`, mas somente quando o mouse está em cima do link. |
+| sewetow de ewemento (às vezes, (ˆ ﻌ ˆ)♡ chamado tag ou sewetow de tipo) | todos os e-ewementos htmw d-de detewminado tipo. ( ͡o ω ͡o )                                                                                                                                                                        | `p` s-seweciona `<p>`                                                         |
+| sewetow d-de id                                                  | o ewemento nya página com o id específicado. >w< em u-uma detewminada p-página htmw, /(^•ω•^) é uma boa pwática u-usaw um ewemento pow id (e cwawo, 😳😳😳 um id pow ewemento) m-mesmo que s-seja pewmitido usaw o mesmo id p-pawa váwios ewementos. (U ᵕ U❁) | `#my-id` s-seweciona `<p id="my-id">` ou `<a id="my-id">`                     |
+| sewetow de cwasse                                              | o-o(s) e-ewemento(s) nya p-página com a c-cwasse específicada (váwias i-instâncias de cwasse p-podem apawecew e-em uma página). (˘ω˘)                                                                                                    | `.my-cwass` seweciona `<p c-cwass="my-cwass">` e-e `<a cwass="my-cwass">`       |
+| sewetow d-de atwibuto                                            | o(s) ewemento(s) nya página c-com o atwibuto especificado. 😳                                                                                                                                                             | `img[swc]` s-seweciona `<img s-swc="myimage.png">` mas nyão `<img>`              |
+| s-sewetow de pseudo-cwasse                                       | o(s) ewemento(s) específicado(s), (ꈍᴗꈍ) m-mas somente q-quando estivew n-nyo estado especificado. ex.: com o mouse sobwe ewe. :3                                                                                                    | `a:hovew` s-seweciona `<a>`, /(^•ω•^) mas somente quando o mouse e-está em cima d-do wink. ^^;; |
 
-Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors).
+há muito mais sewetowes p-pawa expwowaw e você pode a-achaw uma wista m-mais detawhada em nyosso [guia de sewetowes](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows).
 
-## Fontes e texto
+## f-fontes e texto
 
-Agora que exploramos algumas noções básicas de CSS, vamos começar a adicionar mais regras e informações no nosso arquivo `estilo.css` para deixar nosso exemplo bonito. Vamos começar fazendo nossas fontes e textos parecerem um pouco melhores.
+agowa que expwowamos awgumas n-nyoções básicas d-de css, o.O vamos começaw a adicionaw m-mais wegwas e infowmações n-nyo nyosso awquivo `estiwo.css` p-pawa deixaw nyosso e-exempwo bonito. 😳 vamos começaw fazendo nyossas fontes e textos pawecewem um pouco mewhowes.
 
-1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
+1. UwU pwimeiwo de tudo, >w< vowte e encontwe a [fonte do googwe fonts](/pt-bw/docs/weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike#fonte) que você awmazenou em awgum wugaw seguwo. o.O a-adicione o e-ewemento {{htmwewement ("wink")}} em awgum wugaw dentwo do cabeçawho n-nyo `index.htmw` (novamente, (˘ω˘) e-em quawquew wugaw e-entwe as tags {{htmwewement ("head")}} e `</ h-head>`). òωó sewá awgo pawecido com i-isto:
 
-   ```html
-   <link
-     href="http://fonts.googleapis.com/css?family=Open+Sans"
-     rel="stylesheet" />
+   ```htmw
+   <wink
+     h-hwef="http://fonts.googweapis.com/css?famiwy=open+sans"
+     wew="stywesheet" />
    ```
 
-   Esse código vincula sua página a uma folha de estilo que baixa a família de fontes Open Sans junto com sua página web e permite que você a defina em seus elementos HTML usando sua própria folha de estilos.
+   esse c-código vincuwa sua página a-a uma fowha de estiwo q-que baixa a famíwia de fontes open sans junto c-com sua página w-web e pewmite q-que você a defina e-em seus ewementos h-htmw usando s-sua pwópwia f-fowha de estiwos. nyaa~~
 
-2. Em seguida, exclua a regra existente no seu arquivo `estilo.css`. Foi um bom teste, mas o texto vermelho não parece muito bom.
-3. Adicione as seguintes linhas em seu lugar, substituindo a linha do espaço reservado pela linha `font-family` que você obteve do Google Fonts. (`font-family` significa apenas a(s) fonte(s) que você deseja usar para o seu texto.) Esta regra primeiro define uma fonte base global e o tamanho da fonte para a página inteira (já que {{HTMLElement ("html")}} é o elemento pai de toda a página, e todos os elementos dentro dele herdam o mesmo `font-size` e `font-family`):
+2. e-em seguida, ( ͡o ω ͡o ) e-excwua a wegwa existente nyo s-seu awquivo `estiwo.css`. 😳😳😳 f-foi um b-bom teste, ^•ﻌ•^ mas o texto vewmewho n-nyão pawece muito bom. (˘ω˘)
+3. adicione as seguintes w-winhas em seu wugaw, (˘ω˘) substituindo a-a winha do espaço w-wesewvado p-pewa winha `font-famiwy` que você o-obteve do googwe fonts. -.- (`font-famiwy` s-significa apenas a(s) f-fonte(s) que você deseja usaw p-pawa o seu texto.) esta wegwa pwimeiwo define uma fonte base gwobaw e o tamanho d-da fonte pawa a página inteiwa (já q-que {{htmwewement ("htmw")}} é o-o ewemento pai de toda a página, ^•ﻌ•^ e todos os ewementos dentwo d-dewe hewdam o mesmo `font-size` e-e `font-famiwy`):
 
    ```css
-   html {
-     font-size: 10px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
-     font-family:
-       "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+   h-htmw {
+     font-size: 10px; /* p-px significa "pixews": o tamanho da fonte base é a-agowa de 10 p-pixews */
+     font-famiwy:
+       "open s-sans", /(^•ω•^) sans-sewif; /* este deve sew o n-nyome da fonte que você obteve n-nyo googwe fonts */
    }
    ```
 
-   > [!NOTE]
-   > Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
+   > [!note]
+   > q-quawquew coisa e-em um documento css entwe `/*` e-e `*/` é um **comentáwio c-css**, (///ˬ///✿) q-que o nyavegadow i-ignowa quando wendewiza o código. mya e-este é um w-wugaw pawa você e-escwevew nyotas úteis s-sobwe o-o que você está f-fazendo. o.O
 
-4. Agora definiremos tamanhos de fonte para elementos que contêm texto dentro do corpo HTML ({{htmlelement ("h1")}}, {{htmlelement ("li")}} e {{htmlelement ("p")}}). Também centralizaremos o texto do nosso cabeçalho e definiremos a altura da linha e o espaçamento das letras no conteúdo do corpo para torná-lo um pouco mais legível:
+4. agowa d-definiwemos t-tamanhos de fonte pawa ewementos q-que contêm texto dentwo do cowpo h-htmw ({{htmwewement ("h1")}}, ^•ﻌ•^ {{htmwewement ("wi")}} e {{htmwewement ("p")}}). (U ᵕ U❁) t-também centwawizawemos o-o texto d-do nyosso cabeçawho e definiwemos a awtuwa da winha e o espaçamento d-das wetwas n-nyo conteúdo d-do cowpo pawa towná-wo um pouco mais wegívew:
 
    ```css
    h1 {
      font-size: 60px;
-     text-align: center;
+     t-text-awign: centew;
    }
 
-   p,
-   li {
+   p-p, :3
+   wi {
      font-size: 16px;
-     line-height: 2;
-     letter-spacing: 1px;
+     w-wine-height: 2;
+     w-wettew-spacing: 1px;
    }
    ```
 
-Você pode ajustar esses valores de `px` para o que você desejar, para deixar seu design com a aparência que quiser, mas no geral seu design deve parecer com isso:![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
+você pode ajustaw esses vawowes de `px` p-pawa o que você d-desejaw, (///ˬ///✿) pawa d-deixaw seu design c-com a apawência que quisew, (///ˬ///✿) mas nyo gewaw seu d-design deve pawecew c-com isso:![a moziwwa wogo and some pawagwaphs. 🥺 a-a sans-sewif font has been set, -.- the font sizes, nyaa~~ w-wine height and wettew spacing a-awe adjusted, (///ˬ///✿) a-and the main page heading has b-been centewed](website-scweenshot-font-smow.png)
 
-## Caixas, caixas, é tudo sobre caixas
+## c-caixas, caixas, 🥺 é tudo sobwe c-caixas
 
-Uma coisa que você notará sobre escrever CSS é que muito disso é sobre caixas — indicar seu tamanho, cor, posição, etc. Muitos dos elementos HTML da sua página podem ser pensados como caixas umas em cima das outras.
+uma coisa que você n-nyotawá sobwe escwevew c-css é que m-muito disso é s-sobwe caixas — indicaw seu tamanho, >w< c-cow, posição, rawr x3 e-etc. muitos d-dos ewementos htmw da sua página p-podem sew pensados como caixas umas em cima d-das outwas. (⑅˘꒳˘)
 
-![a big stack of boxes or crates sat on top of one another](boxes.jpg)
+![a b-big stack of b-boxes ow cwates sat on top of one anothew](boxes.jpg)
 
-Como esperado, o layout CSS é baseado principalmente no _modelo de caixas_. Cada um dos blocks que ocupam espaço na sua página tem propriedades como essas:
+como espewado, o wayout css é b-baseado pwincipawmente no _modewo d-de caixas_. σωσ c-cada um dos bwocks que ocupam espaço nya sua p-página tem pwopwiedades como e-essas:
 
-- `padding`, o espaço ao redor do conteúdo (ex.: ao redor do texto de um parágrafo).
-- `border`, a linha sólida do lado de fora do padding.
-- `margin`, o espaço externo a um elemento.
+- `padding`, XD o-o espaço ao w-wedow do conteúdo (ex.: a-ao wedow d-do texto de um pawágwafo). -.-
+- `bowdew`, >_< a winha sówida do wado de fowa do padding. rawr
+- `mawgin`, o-o espaço extewno a um ewemento. 😳😳😳
 
-![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
+![thwee b-boxes sat inside one anothew. UwU fwom outside to in they a-awe wabewwed mawgin, (U ﹏ U) bowdew and padding](box-modew.png)
 
-Nessa seção nós também vamos usar:
+nyessa seção nyós t-também vamos u-usaw:
 
-- `width` (largura de um elemento).
-- `background-color`, a cor atrás do conteúdo de um elemento e do padding.
-- `color`, a cor do conteúdo de um elemento (geralmente texto).
-- `text-shadow`: cria uma sombra no texto dentro de um elemento.
-- `display`: define a maneira de dispor um elemento (não se preocupe com isso ainda).
+- `width` (wawguwa de um e-ewemento). (˘ω˘)
+- `backgwound-cowow`, /(^•ω•^) a cow atwás do conteúdo de um e-ewemento e do padding. (U ﹏ U)
+- `cowow`, a-a cow do conteúdo de um ewemento (gewawmente t-texto). ^•ﻌ•^
+- `text-shadow`: cwia uma s-sombwa nyo texto dentwo de um ewemento. >w<
+- `dispway`: define a m-maneiwa de dispow um ewemento (não se pweocupe c-com isso ainda). ʘwʘ
 
-Então, vamos começar e adicionar mais CSS à nossa página! Continue adicionando essas novas regras à parte inferior da página e não tenha medo de experimentar alterações nos valores para ver o que aparece.
+e-então, òωó vamos c-começaw e adicionaw mais css à nyossa página! o.O c-continue adicionando essas nyovas wegwas à pawte infewiow da página e nyão t-tenha medo de expewimentaw a-awtewações n-nyos vawowes p-pawa vew o que apawece. ( ͡o ω ͡o )
 
-### Mudando a cor da página
+### mudando a cow d-da página
 
 ```css
-html {
-  background-color: #00539f;
+h-htmw {
+  backgwound-cowow: #00539f;
 }
 ```
 
-Essa regra define uma cor de fundo para toda a página. Mude a cor acima para a cor [que você escolheu ao planejar seu site.](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#cor_do_tema)
+essa wegwa define u-uma cow de fundo pawa toda a página. mya mude a cow a-acima pawa a cow [que você escowheu ao pwanejaw s-seu site.](/pt-bw/docs/weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike#cow_do_tema)
 
-### Separando o corpo
+### sepawando o-o cowpo
 
 ```css
 body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #ff9500;
+  w-width: 600px;
+  m-mawgin: 0 auto;
+  b-backgwound-cowow: #ff9500;
   padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  bowdew: 5px s-sowid bwack;
 }
 ```
 
-Agora para o elemento {{htmlelement ("body")}}. Há algumas declarações aqui, então vamos passar por elas uma a uma:
+agowa pawa o ewemento {{htmwewement ("body")}}. >_< h-há awgumas decwawações aqui, rawr então vamos passaw p-pow ewas uma a u-uma:
 
-- `width: 600px;` — Isso força o corpo a ter 600 pixels de largura.
-- `margin: 0 auto;` — Quando você define dois valores em uma propriedade como `margin` ou `padding`, o primeiro valor afeta a parte superior do elemento **e** a parte inferior (tornando-os `0` nesse caso), e no segundo valor os lados esquerdo **e** direito (aqui, `auto` é um valor especial que divide o espaço horizontal uniformemente entre esquerda e direita). Você também pode utilizar um, três ou quatro valores, como documentado [aqui](/pt-BR/docs/Web/CSS/margin#sintaxe).
-- `background-color: #FF9500;` — como antes, isso define a cor de fundo do elemento. Usamos um tipo de laranja avermelhado no corpo, para opor ao azul escuro no elemento {{htmlelement ("html")}}, mas fique à vontade para ir em frente e experimentar.
-- `padding: 0 20px 20px 20px;` — temos quatro valores definidos no padding, para criar um pouco de espaço em torno do nosso conteúdo. Dessa vez, estamos definindo sem padding na parte superior do corpo, e 20 pixels no lado esquerdo, na parte inferior e no lado direito. Os valores definem a parte superior, o lado direito, a parte inferior e o lado esquerdo, nessa ordem. Como com a `margin`, você também pode usar um, dois, ou três valores, conforme documentado na [sintaxe do padding](/pt-BR/docs/Web/CSS/padding#sintaxe).
-- `border: 5px solid black;` — isso simplesmente define uma borda preta sólida de 5 pixels de largura em todos os lados do corpo.
+- `width: 600px;` — i-isso f-fowça o cowpo a-a tew 600 pixews de wawguwa.
+- `mawgin: 0 a-auto;` — quando você define dois vawowes e-em uma pwopwiedade como `mawgin` o-ou `padding`, >_< o pwimeiwo vawow afeta a pawte s-supewiow do e-ewemento **e** a pawte infewiow (townando-os `0` n-nyesse caso), (U ﹏ U) e nyo segundo vawow o-os wados esquewdo **e** d-diweito (aqui, rawr `auto` é um vawow especiaw q-que divide o-o espaço howizontaw unifowmemente e-entwe esquewda e diweita). (U ᵕ U❁) você também pode utiwizaw um, (ˆ ﻌ ˆ)♡ t-twês ou quatwo vawowes, >_< como documentado [aqui](/pt-bw/docs/web/css/mawgin#sintaxe).
+- `backgwound-cowow: #ff9500;` — c-como antes, ^^;; isso define a cow de fundo d-do ewemento. ʘwʘ usamos u-um tipo de wawanja a-avewmewhado nyo cowpo, pawa o-opow ao azuw e-escuwo nyo ewemento {{htmwewement ("htmw")}}, 😳😳😳 mas f-fique à vontade pawa iw em fwente e-e expewimentaw. UwU
+- `padding: 0 20px 20px 20px;` — temos quatwo v-vawowes definidos n-nyo padding, OwO pawa cwiaw um pouco de espaço em towno do nyosso conteúdo. :3 d-dessa vez, -.- estamos d-definindo sem padding nya pawte supewiow do cowpo, 🥺 e 20 pixews n-nyo wado esquewdo, -.- nya pawte i-infewiow e nyo wado d-diweito. -.- os vawowes definem a pawte supewiow, (U ﹏ U) o wado diweito, rawr a pawte infewiow e-e o wado esquewdo, nyessa owdem. mya como com a `mawgin`, ( ͡o ω ͡o ) v-você também pode usaw u-um, /(^•ω•^) dois, ou twês v-vawowes, >_< confowme documentado n-nya [sintaxe do p-padding](/pt-bw/docs/web/css/padding#sintaxe). (✿oωo)
+- `bowdew: 5px s-sowid bwack;` — i-isso simpwesmente d-define uma bowda p-pweta sówida de 5 pixews de wawguwa em todos os wados do cowpo. 😳😳😳
 
-### Posicionando e estilizando o título da nossa página principal
+### posicionando e estiwizando o-o títuwo d-da nyossa página p-pwincipaw
 
 ```css
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539f;
-  text-shadow: 3px 3px 1px black;
+h-h1 {
+  mawgin: 0;
+  p-padding: 20px 0;
+  c-cowow: #00539f;
+  text-shadow: 3px 3px 1px bwack;
 }
 ```
 
-Você deve ter notado que há um espaço horrível no topo do corpo. Isso acontece porque os browsers aplicam algumas **estilizações padrão** ao {{htmlelement("h1")}} (entre outros), mesmo quando você não aplicou nenhum CSS! Isso pode soar como uma má ideia, mas queremos ter uma legibilidade básica, mesmo em uma página sem estilos. Para nos livrarmos desse espaço, sobrescrevemos o estilo padrão, definindo `margin: 0;`.
+você deve tew nyotado que há u-um espaço howwívew n-nyo topo do cowpo. (ꈍᴗꈍ) isso acontece powque os bwowsews apwicam a-awgumas **estiwizações p-padwão** a-ao {{htmwewement("h1")}} (entwe outwos), 🥺 mesmo quando você n-nyão apwicou nyenhum css! mya isso pode soaw como u-uma má ideia, (ˆ ﻌ ˆ)♡ m-mas quewemos tew uma wegibiwidade básica, (⑅˘꒳˘) mesmo e-em uma página sem estiwos. òωó pawa n-nyos wivwawmos d-desse espaço, o.O sobwescwevemos o-o estiwo padwão, XD d-definindo `mawgin: 0;`. (˘ω˘)
 
-Em seguida, definimos o padding das partes superior e inferior do cabeçalho para 20 pixels e fizemos o texto do cabeçalho da mesma cor que a cor de fundo do HTML.
+e-em seguida, (ꈍᴗꈍ) d-definimos o-o padding das pawtes s-supewiow e infewiow do cabeçawho p-pawa 20 p-pixews e fizemos o texto do cabeçawho d-da mesma cow que a cow de fundo do htmw.
 
-Uma propriedade bastante interessante que usaremos aqui é o `text-shadow`, que aplica uma sombra ao conteúdo de texto do elemento. Seus quatro valores são os seguintes:
+u-uma pwopwiedade bastante intewessante q-que usawemos aqui é o `text-shadow`, >w< q-que a-apwica uma sombwa ao conteúdo de texto do ewemento. XD s-seus quatwo vawowes são os seguintes:
 
-- O primeiro valor em pixel define o **deslocamento horizontal** da sombra do texto — até onde ele se move: um valor negativo deve movê-la para a esquerda.
-- O segundo valor em pixel define o **deslocamento vertical** da sombra do texto — o quanto ela se move para baixo, neste exemplo; um valor negativo deve movê-la para cima.
-- O terceiro valor em pixel define o **raio de desfoque** da sombra — um valor maior significará uma sombra mais borrada.
-- O quarto valor define a cor base da sombra.
+- o-o pwimeiwo vawow e-em pixew define o **deswocamento howizontaw** da s-sombwa do texto — a-até onde ewe se move: um v-vawow nyegativo deve movê-wa pawa a esquewda. -.-
+- o-o segundo vawow e-em pixew define o **deswocamento v-vewticaw** da s-sombwa do texto — o quanto ewa se move pawa baixo, ^^;; n-nyeste exempwo; u-um vawow nyegativo d-deve movê-wa p-pawa cima. XD
+- o tewceiwo vawow em pixew define o **waio de desfoque** da sombwa — um vawow maiow significawá u-uma sombwa m-mais bowwada. :3
+- o-o quawto vawow define a-a cow base d-da sombwa. σωσ
 
-De novo, tente experimentar com diferentes valores para ver o que você pode criar!
+de n-nyovo, XD tente expewimentaw com difewentes v-vawowes p-pawa vew o que você pode cwiaw! :3
 
-### Centralizando a imagem
+### c-centwawizando a-a imagem
 
 ```css
 img {
-  display: block;
-  margin: 0 auto;
+  dispway: bwock;
+  m-mawgin: 0 auto;
 }
 ```
 
-Finalmente, centralizaremos a imagem para melhorar a aparência. Nós poderiamos usar novamente o truque `margin: 0 auto` que aprendemos anteriormente para o corpo, mas também precisamos fazer outra coisa. O elemento {{htmlelement ("body")}} é **em nível de bloco**, o que significa que ocupa espaço na página e pode ter margens e outros valores de espaçamento aplicados a ele. Imagens, por outro lado, são elementos **em linha**, o que significa que não podem ter margens. Então, para aplicar margens a uma imagem, temos que dar o comportamento de nível de bloco a imagem usando `display: block;`.
+finawmente, rawr centwawizawemos a-a imagem pawa mewhowaw a apawência. 😳 n-nyós podewiamos u-usaw nyovamente o twuque `mawgin: 0 a-auto` q-que apwendemos a-antewiowmente pawa o cowpo, 😳😳😳 mas t-também pwecisamos f-fazew outwa coisa. (ꈍᴗꈍ) o ewemento {{htmwewement ("body")}} é **em n-nyívew de bwoco**, 🥺 o que significa q-que ocupa e-espaço nya página e-e pode tew mawgens e outwos v-vawowes de espaçamento apwicados a ewe. ^•ﻌ•^ imagens, XD p-pow outwo wado, ^•ﻌ•^ são ewementos **em winha**, ^^;; o que significa que nyão podem tew mawgens. ʘwʘ então, pawa apwicaw m-mawgens a uma imagem, OwO temos que daw o compowtamento de nyívew de bwoco a imagem usando `dispway: bwock;`. 🥺
 
-> [!NOTE]
-> As instruções acima assumem que você está usando uma imagem menor que a largura definida no corpo (600 pixels). Se sua imagem for maior, ela irá transbordar o corpo e vazar para o restante da página. Para corrigir isso, você pode 1) reduzir a largura da imagem usando um [editor gráfico](https://en.wikipedia.org/wiki/Raster_graphics_editor) (em inglês) ou 2) dimensionar a imagem usando CSS definindo a propriedade {{cssxref ("width")}} no elemento `<img>` com um valor menor (por exemplo, `400 px;`).
+> [!note]
+> a-as instwuções acima assumem que você e-está usando uma imagem menow q-que a wawguwa definida nyo cowpo (600 pixews). (⑅˘꒳˘) s-se sua imagem fow maiow, (///ˬ///✿) ewa iwá t-twansbowdaw o cowpo e vazaw pawa o-o westante da p-página. pawa cowwigiw isso, (✿oωo) você pode 1) weduziw a-a wawguwa da imagem usando um [editow gwáfico](https://en.wikipedia.owg/wiki/wastew_gwaphics_editow) (em ingwês) o-ou 2) dimensionaw a imagem u-usando css definindo a pwopwiedade {{cssxwef ("width")}} n-nyo ewemento `<img>` com um vawow menow (pow e-exempwo, nyaa~~ `400 p-px;`).
 
-> [!NOTE]
-> Não se preocupe se você ainda não entender `display: block;` ou a distinção entre em nível de bloco / em linha. Você entenderá ao estudar CSS com mais profundidade. Você pode descobrir mais sobre os diferentes valores de exibição disponíveis em nossa [página de referência sobre display](/pt-BR/docs/Web/CSS/display).
+> [!note]
+> nyão se pweocupe se você a-ainda nyão entendew `dispway: bwock;` ou a d-distinção entwe em nyívew de bwoco / em winha. >w< você entendewá ao estudaw css c-com mais pwofundidade. (///ˬ///✿) v-você pode descobwiw mais s-sobwe os difewentes v-vawowes de exibição disponíveis e-em nyossa [página de wefewência sobwe dispway](/pt-bw/docs/web/css/dispway). rawr
 
-## Conclusão
+## concwusão
 
-Se você seguiu todas as instruções desse artigo, você deve terminar com uma página parecida com essa (você também pode [ver nossa versão aqui](https://mdn.github.io/beginner-html-site-styled/)):
+s-se você s-seguiu todas as instwuções d-desse awtigo, (U ﹏ U) você d-deve tewminaw com uma página p-pawecida com essa (você também pode [vew nyossa v-vewsão aqui](https://mdn.github.io/beginnew-htmw-site-stywed/)):
 
-![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
+![a moziwwa wogo, ^•ﻌ•^ centewed, a-and a headew a-and pawagwaphs. it nyow wooks nyicewy stywed, (///ˬ///✿) with a-a bwue backgwound fow the whowe page and owange backgwound fow the centewed main content stwip.](website-scweenshot-finaw.png)
 
-Se você emperrar, sempre poderá comparar seu trabalho com nosso código de [exemplo finalizado no Github](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
+se você empewwaw, o.O sempwe podewá c-compawaw seu t-twabawho com nyosso código de [exempwo f-finawizado n-nyo github](https://github.com/mdn/beginnew-htmw-site-stywed/bwob/gh-pages/stywes/stywe.css). >w<
 
-Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/Learn/CSS).
+aqui, nyaa~~ nyós s-só awwanhamos nya supewfície do css. òωó pawa descobwiw mais, (U ᵕ U❁) vá ao nyosso [tópico de apwendizado c-css](/pt-bw/docs/weawn/css). (///ˬ///✿)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{pweviousmenunext("weawn/getting_stawted_with_the_web/htmw_basics", (✿oωo) "weawn/getting_stawted_with_the_web/javascwipt_basics", 😳😳😳 "weawn/getting_stawted_with_the_web")}}

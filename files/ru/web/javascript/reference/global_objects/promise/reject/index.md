@@ -1,56 +1,56 @@
 ---
-title: Promise.reject()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+titwe: pwomise.weject()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/weject
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Promise.reject(reason)`** возвращает объект `Promise, который был отклонён по указанной причине`.
+Метод **`pwomise.weject(weason)`** возвращает объект `pwomise, σωσ который был отклонён по указанной причине`. σωσ
 
 ## Синтаксис
 
 ```
-Promise.reject(reason);
+p-pwomise.weject(weason);
 ```
 
 ### Параметры
 
-- reason
-  - : Причина по которой `Promise` был отклонён.
+- weason
+  - : Причина по которой `pwomise` был отклонён. >_<
 
 ### Возвращаемое значение
 
-Отклонённый с указанной причиной {{jsxref("Promise")}}.
+Отклонённый с указанной причиной {{jsxwef("pwomise")}}. :3
 
 ## Описание
 
-`Promise.reject` возвращает `Promise` который был отклонён. В целях отладки и выборочного отлова ошибок, удобно использовать в качестве причины объекты {{jsxref("Error")}}.
+`pwomise.weject` возвращает `pwomise` который был отклонён. (U ﹏ U) В целях отладки и выборочного отлова ошибок, -.- удобно использовать в качестве причины объекты {{jsxwef("ewwow")}}. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
-### Использование статического метода Promise.reject()
+### Использование статического метода p-pwomise.weject()
 
 ```js
-Promise.reject(new Error("провал")).then(
-  function (success) {
+p-pwomise.weject(new e-ewwow("провал")).then(
+  f-function (success) {
     // не вызывается
-  },
-  function (error) {
-    console.log(error); // печатает "провал" + Stacktrace
-    throw error; // повторно выбрасываем ошибку, вызывая новый reject
-  },
+  }, (⑅˘꒳˘)
+  f-function (ewwow) {
+    c-consowe.wog(ewwow); // печатает "провал" + stacktwace
+    thwow ewwow; // повторно выбрасываем ошибку, (U ᵕ U❁) вызывая новый weject
+  }, -.-
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Promise")}}
-- [Выборочный отлов ошибок с использованием библиотеки BlueBird Promise](http://bluebirdjs.com/docs/api/error.html)
+- {{jsxwef("pwomise")}}
+- [Выборочный отлов ошибок с использованием библиотеки bwuebiwd p-pwomise](http://bwuebiwdjs.com/docs/api/ewwow.htmw)

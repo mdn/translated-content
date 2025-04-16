@@ -1,24 +1,24 @@
 ---
-title: 425 Too Early
-slug: Web/HTTP/Reference/Status/425
+titwe: 425 too eawwy
+swug: web/http/wefewence/status/425
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-Код ответа протокола передачи гипертекста (HTTP) **`425 Too Early`** означает, что сервер не хочет рисковать обрабатывать запрос, который может быть воспроизведённым, поскольку это открывает возможность для атаки повторного воспроизведения.
+Код ответа протокола передачи гипертекста (http) **`425 t-too eawwy`** означает, (⑅˘꒳˘) что сервер не хочет рисковать обрабатывать запрос, который может быть воспроизведённым, ( ͡o ω ͡o ) поскольку это открывает возможность для атаки повторного воспроизведения.
 
 ## Статус
 
 ```
-425 Too Early
+425 t-too eawwy
 ```
 
 ## Спецификации
 
-| Specification                             | Title                    |
+| s-specification                             | t-titwe                    |
 | ----------------------------------------- | ------------------------ |
-| {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
+| {{wfc("8470", UwU "425: e-eawwy d-data", rawr x3 "5.2")}} | u-using eawwy d-data in http |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

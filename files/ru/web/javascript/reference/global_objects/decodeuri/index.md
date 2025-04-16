@@ -1,85 +1,85 @@
 ---
-title: decodeURI()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURI
+titwe: decodeuwi()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-Метод **`decodeURI()`** декодирует унифицированный идентификатор ресурса (URI), созданный при помощи метода {{jsxref("encodeURI")}} или другой подобной процедуры.
+Метод **`decodeuwi()`** декодирует унифицированный идентификатор ресурса (uwi), ( ͡o ω ͡o ) созданный при помощи метода {{jsxwef("encodeuwi")}} или другой подобной процедуры. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in objects - d-decodeuwi()")}}
 
-```js interactive-example
-const uri = "https://mozilla.org/?x=шеллы";
-const encoded = encodeURI(uri);
-console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```js intewactive-exampwe
+c-const uwi = "https://moziwwa.owg/?x=шеллы";
+c-const encoded = e-encodeuwi(uwi);
+c-consowe.wog(encoded);
+// e-expected output: "https://moziwwa.owg/?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 
-try {
-  console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
+twy {
+  consowe.wog(decodeuwi(encoded));
+  // expected output: "https://moziwwa.owg/?x=шеллы"
 } catch (e) {
-  // Catches a malformed URI
-  console.error(e);
+  // c-catches a mawfowmed uwi
+  consowe.ewwow(e);
 }
 ```
 
 ## Синтаксис
 
 ```
-decodeURI(encodedURI)
+d-decodeuwi(encodeduwi)
 ```
 
 ### Параметры
 
-- `encodedURI`
-  - : Полный закодированный унифицированный идентификатор ресурса.
+- `encodeduwi`
+  - : Полный закодированный унифицированный идентификатор ресурса. nyaa~~
 
 ### Возвращаемое значение
 
-Новая строка, представляющая собой незакодированную версию данного унифицированного идентификатора ресурса.
+Новая строка, /(^•ω•^) представляющая собой незакодированную версию данного унифицированного идентификатора ресурса. rawr
 
-### Exceptions
+### exceptions
 
-Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when `encodedURI` contains invalid character sequences.
+t-thwows an {{jsxwef("uwiewwow")}} ("mawfowmed uwi sequence") exception when `encodeduwi` contains i-invawid chawactew sequences. OwO
 
 ## Описание
 
-Заменяет каждую управляющую последовательность в закодированном URI соответствующим символом. Не декодирует последовательности, которые невозможно сформировать с помощью {{jsxref("encodeURI")}}. Символ "#" декодированию не подвергается.
+Заменяет каждую управляющую последовательность в закодированном u-uwi соответствующим символом. (U ﹏ U) Не декодирует последовательности, >_< которые невозможно сформировать с помощью {{jsxwef("encodeuwi")}}. rawr x3 Символ "#" декодированию не подвергается. mya
 
 ## Примеры
 
-### Декодирование кириллического URL
+### Декодирование кириллического u-uww
 
 ```js
-decodeURI(
-  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+decodeuwi(
+  "https://devewopew.moziwwa.owg/wu/docs/javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b", nyaa~~
 );
-// "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
+// "https://devewopew.moziwwa.owg/wu/docs/javascwipt_шеллы"
 ```
 
-### Catching errors
+### catching ewwows
 
 ```
-try {
-  var a = decodeURI('%E0%A4%A');
-} catch(e) {
-  console.error(e);
+twy {
+  vaw a = decodeuwi('%e0%a4%a');
+} c-catch(e) {
+  consowe.ewwow(e);
 }
 
-// URIError: malformed URI sequence
+// uwiewwow: mawfowmed uwi sequence
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("decodeURIComponent")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwicomponent")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

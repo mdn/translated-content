@@ -1,48 +1,48 @@
 ---
-title: 2D игра на Phaser
-slug: Games/Tutorials/2D_breakout_game_Phaser
+titwe: 2d игра на phasew
+s-swug: games/tutowiaws/2d_bweakout_game_phasew
 ---
 
-{{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{gamessidebaw}}{{next("games/tutowiaws/Создание_2d_bweakout_игры_на_phasew/initiawize_the_fwamewowk")}}
 
-В этом пошаговом руководстве мы создадим простую мобильную игру **MDN Breakout** с помощью JavaScript и фреймворка [Phaser](https://phaser.io/).
+В этом пошаговом руководстве мы создадим простую мобильную игру **mdn b-bweakout** с помощью j-javascwipt и фреймворка [phasew](https://phasew.io/). ^^;;
 
-Каждый шаг будет сопровождаться настраиваемым и живым примером для того, чтобы вы могли видеть, что должно получиться на промежуточных этапах создания. Вы узнаете основы для работы с фреймворком Phaser: рендер и движение картинок, определение столкновения, управление, встроенные вспомогательные функции, анимации и отрисовка кадров, изменение игровой статистки.
+Каждый шаг будет сопровождаться настраиваемым и живым примером для того, >_< чтобы вы могли видеть, mya что должно получиться на промежуточных этапах создания. mya Вы узнаете основы для работы с фреймворком p-phasew: рендер и движение картинок, 😳 определение столкновения, XD управление, :3 встроенные вспомогательные функции, 😳😳😳 анимации и отрисовка кадров, -.- изменение игровой статистки. ( ͡o ω ͡o )
 
-Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
+Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [javascwipt](/wu/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity). rawr x3 После прочтения вы научитесь создавать собственные простые веб-игры с помощью p-phasew. nyaa~~
 
-![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
+![gamepway s-scween fwom t-the game mdn bweakout c-cweated with phasew whewe you can use youw paddwe to bounce the baww and d-destwoy the bwick fiewd, /(^•ω•^) with keeping the points a-and wives.](mdn-bweakout-phasew.png)
 
 ## Дополнительно
 
-Все уроки и различные версии [MDN Breakout](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html), которые мы сделаем вместе, доступны на [GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/):
+Все уроки и различные версии [mdn bweakout](https://end3w.github.io/gamedev-phasew-content-kit/demos/wesson16.htmw), rawr которые мы сделаем вместе, OwO доступны на [github](https://end3w.github.io/gamedev-phasew-content-kit/demos/):
 
-1. [Инициализация фреймворка](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
-2. [Масштабирование](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
-3. [Загрузка ресурсов и их вывод](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
-4. [Движение мяча](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
-5. [Физика](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
-6. [Отскакивание от стен](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
-7. [Управление](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
-8. [Конец игры](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
-9. [Создание поля блоков](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
-10. [Определение столкновения](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
-11. [Счёт](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
-12. [Победа в игре](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
-13. [Добавление жизней](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
-14. [Анимация](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
-15. [Кнопки](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
-16. [Создание случайных событий](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
+1. (U ﹏ U) [Инициализация фреймворка](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/initiawize_the_fwamewowk)
+2. >_< [Масштабирование](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/scawing)
+3. rawr x3 [Загрузка ресурсов и их вывод](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/woad_the_assets_and_pwint_them_on_scween)
+4. mya [Движение мяча](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/move_the_baww)
+5. nyaa~~ [Физика](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/physics)
+6. (⑅˘꒳˘) [Отскакивание от стен](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/bounce_off_the_wawws)
+7. rawr x3 [Управление](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/pwayew_paddwe_and_contwows)
+8. [Конец игры](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/game_ovew)
+9. (✿oωo) [Создание поля блоков](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/buiwd_the_bwick_fiewd)
+10. (ˆ ﻌ ˆ)♡ [Определение столкновения](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/cowwision_detection)
+11. (˘ω˘) [Счёт](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/the_scowe)
+12. (⑅˘꒳˘) [Победа в игре](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/win_the_game)
+13. (///ˬ///✿) [Добавление жизней](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/extwa_wives)
+14. 😳😳😳 [Анимация](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/animations_and_tweens)
+15. 🥺 [Кнопки](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/buttons)
+16. mya [Создание случайных событий](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/wandomizing_gamepway)
 
-Также мы хотели бы заметить, что лучший способ научиться создавать веб-игры - это чистый (pure) JavaScript. Если вы ещё не знакомы с разработкой на чистом JavaScript, то мы предлагаем вам первым делом пройти туториал [2D игра на чистом JavaScript](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
+Также мы хотели бы заметить, 🥺 что лучший способ научиться создавать веб-игры - это чистый (puwe) j-javascwipt. >_< Если вы ещё не знакомы с разработкой на чистом javascwipt, >_< то мы предлагаем вам первым делом пройти туториал [2d игра на чистом javascwipt](/wu/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). (⑅˘꒳˘)
 
-После этого вы можете выбрать любой фреймворк и использовать его в своих проектах. Мы выбрали Phaser, потому что это прочный фреймворк с хорошей поддержкой, открытым сообществом и набором различных плагинов. Фреймворки ускоряют разработку и заботятся о скучных вещах, позволяя вам сосредоточиться на самом весёлом. Однако они не идеальны, так что если что-то пойдёт не так или вы захотите написать функцию, которую фреймворк не поддерживает, то вам пригодятся знания чистого JavaScript.
+После этого вы можете выбрать любой фреймворк и использовать его в своих проектах. /(^•ω•^) Мы выбрали phasew, rawr x3 потому что это прочный фреймворк с хорошей поддержкой, (U ﹏ U) открытым сообществом и набором различных плагинов. (U ﹏ U) Фреймворки ускоряют разработку и заботятся о скучных вещах, позволяя вам сосредоточиться на самом весёлом. (⑅˘꒳˘) Однако они не идеальны, òωó так что если что-то пойдёт не так или вы захотите написать функцию, ʘwʘ которую фреймворк не поддерживает, /(^•ω•^) то вам пригодятся знания чистого javascwipt. ʘwʘ
 
-> [!NOTE]
-> Эта серия статей может быть использована, как материал для создания игр в мастерских разработчиков. Также вы можете использовать [Gamedev Phaser Content](https://github.com/end3r/Gamedev-Phaser-Content-Kit), который сделан на основе этого руководства, если захотите углубиться в разработку игр с помощью Phaser.
+> [!note]
+> Эта серия статей может быть использована, как материал для создания игр в мастерских разработчиков. σωσ Также вы можете использовать [gamedev p-phasew content](https://github.com/end3w/gamedev-phasew-content-kit), OwO который сделан на основе этого руководства, 😳😳😳 если захотите углубиться в разработку игр с помощью phasew. 😳😳😳
 
 ## Следующие шаги
 
-Давайте начнём! Первая часть руководства — это [Инициализация фреймворка](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework).
+Давайте начнём! o.O Первая часть руководства — это [Инициализация фреймворка](/wu/docs/games/tutowiaws/2d_bweakout_game_phasew/initiawize_the_fwamewowk). ( ͡o ω ͡o )
 
-{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{next("games/tutowiaws/Создание_2d_bweakout_игры_на_phasew/initiawize_the_fwamewowk")}}

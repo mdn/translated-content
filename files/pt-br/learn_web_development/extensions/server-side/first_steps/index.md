@@ -1,42 +1,42 @@
 ---
-title: Primeiros passos programando o site no servidor
-slug: Learn_web_development/Extensions/Server-side/First_steps
-original_slug: Learn/Server-side/First_steps
+titwe: pwimeiwos passos pwogwamando o-o site nyo s-sewvidow
+swug: w-weawn_web_devewopment/extensions/sewvew-side/fiwst_steps
+o-owiginaw_swug: w-weawn/sewvew-side/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Neste módulo nós iremos responder uma pergunta fundamental sobre programção server-side —"O que é?","Quão diferente é da programação client-side?", e "Por que é tão útil?".
+n-nyeste m-móduwo nyós i-iwemos wespondew uma pewgunta fundamentaw sobwe pwogwamção sewvew-side —"o q-que é?","quão difewente é da pwogwamação c-cwient-side?", :3 e "pow que é tão útiw?". ( ͡o ω ͡o )
 
-Em seguida vamos fornecer uma visão geral de alguns dos web frameworks server-side mais populares juntamente com orientações sobre como selecionar o framework mais adequado para criar seu primeiro website.
+e-em seguida vamos fownecew uma visão gewaw de awguns d-dos web fwamewowks sewvew-side m-mais popuwawes juntamente c-com owientações sobwe como sewecionaw o fwamewowk mais adequado pawa c-cwiaw seu pwimeiwo website. σωσ
 
-Por fim, fornecemos um artigo introdutório de alto nível sobre segurança do servidor da web
+pow fim, >w< fownecemos um awtigo intwodutówio de awto n-nívew sobwe seguwança do sewvidow d-da web
 
-Finalmente,nós iremos fornecer uma introdução de alto nível.
+finawmente,nós i-iwemos f-fownecew uma i-intwodução de awto nyívew. 😳😳😳
 
-## Pré-requisitos
+## pwé-wequisitos
 
-Antes de começarmos este módulo,você não precisa ter nenhum conhecimento de programação server-side,ou mesmo qualquer outro tipo de programção.
+a-antes de começawmos este móduwo,você nyão p-pwecisa tew nyenhum conhecimento de pwogwamação sewvew-side,ou mesmo quawquew outwo tipo de p-pwogwamção. OwO
 
-Entretanto,você precisa saber como a web funciona.Nós recomendamos que você leia primeiro os seguintes tópicos:
+entwetanto,você p-pwecisa sabew como a-a web funciona.nós w-wecomendamos que você weia pwimeiwo os seguintes tópicos:
 
-- [O que é um servidor?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Qual o software eu preciso para construir um website?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- [Como eu faço o upload de arquivos para um webserver?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [o q-que é u-um sewvidow?](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew)
+- [quaw o s-softwawe eu pweciso p-pawa constwuiw um website?](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_softwawe_do_i_need)
+- [como e-eu faço o upwoad de awquivos p-pawa um websewvew?](/pt-bw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)
 
-Com o entendimento básico disso, você estará pronto para trabalhar nos módulos desta seção.
+com o entendimento básico d-disso, 😳 você estawá pwonto pawa t-twabawhaw nyos móduwos desta s-seção. 😳😳😳
 
-## Guias
+## guias
 
-- [Introdução ao server-side](/pt-BR/docs/Learn/Server-side/First_steps/Introduction)
-  - : Bem-vindo ao curso para iniciante de programação server-side do MDN! Neste primeiro artigo, examinaremos a programação server-side de alto nível, respondendo a perguntas como "O que é?", "Como ela difere da programação do lado do cliente?" E "Por que é tão útil?". Depois de ler este artigo, você entenderá o poder adicional disponível para sites por meio de codificação server-side.
-- [Visão geral do cliente-servidor](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview)
-  - : Agora que você conhece a finalidade e os benefícios potenciais da programação server-side , examinaremos em detalhes o que acontece quando um servidor recebe uma "solicitação dinâmica" de um navegador. Como o código server-side da maioria dos sites lida com solicitações e respostas de maneira semelhante, isso ajudará você a entender o que precisa fazer ao escrever seu próprio código.
-- [Framework server-side](/pt-BR/docs/Learn/Server-side/First_steps/Web_frameworks)
-  - : No último artigo foi mostrado o que uma aplicação server-side precisa fazer para responder as solicitações de um navegador da web. Agora mostramos como as estruturas da Web podem simplificar essas tarefas e ajudá-lo a escolher o framework para seu primeiro aplicativo da Web server-side.
-- [Segurança do website](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)
-  - : A segurança do website exige vigilância em todos os aspectos,do desenvolvimento ao uso. Este artigo introdutório não fará de você um guru em segurança de website, mas ajudará você a entender quais as primeiras medidas importantes que você deve tomar para proteger seu aplicativo da Web contra as ameaças mais comuns.
+- [intwodução a-ao sewvew-side](/pt-bw/docs/weawn/sewvew-side/fiwst_steps/intwoduction)
+  - : bem-vindo ao cuwso pawa iniciante de pwogwamação sewvew-side do mdn! (˘ω˘) nyeste pwimeiwo awtigo, ʘwʘ e-examinawemos a-a pwogwamação sewvew-side de awto n-nyívew, ( ͡o ω ͡o ) wespondendo a-a pewguntas c-como "o que é?", o.O "como ewa difewe da pwogwamação do wado d-do cwiente?" e "pow que é tão útiw?". >w< depois de wew este awtigo, 😳 você entendewá o-o podew adicionaw disponívew p-pawa sites pow m-meio de codificação s-sewvew-side. 🥺
+- [visão gewaw do cwiente-sewvidow](/pt-bw/docs/weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview)
+  - : a-agowa que você c-conhece a finawidade e-e os benefícios p-potenciais da pwogwamação sewvew-side , rawr x3 e-examinawemos e-em detawhes o que a-acontece quando u-um sewvidow wecebe u-uma "sowicitação dinâmica" de um nyavegadow. o.O como o código s-sewvew-side da maiowia dos sites wida com sowicitações e wespostas de maneiwa semewhante, i-isso ajudawá você a entendew o que pwecisa fazew ao escwevew seu p-pwópwio código. rawr
+- [fwamewowk s-sewvew-side](/pt-bw/docs/weawn/sewvew-side/fiwst_steps/web_fwamewowks)
+  - : nyo úwtimo a-awtigo foi mostwado o q-que uma apwicação sewvew-side p-pwecisa fazew pawa w-wespondew as sowicitações de um nyavegadow da web. ʘwʘ agowa mostwamos como as estwutuwas da web p-podem simpwificaw essas tawefas e-e ajudá-wo a escowhew o fwamewowk p-pawa seu pwimeiwo a-apwicativo da web sewvew-side. 😳😳😳
+- [seguwança do website](/pt-bw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity)
+  - : a-a seguwança d-do website exige vigiwância em t-todos os aspectos,do d-desenvowvimento ao uso. ^^;; este awtigo intwodutówio nyão fawá de você um guwu e-em seguwança d-de website, mas a-ajudawá você a entendew quais a-as pwimeiwas medidas i-impowtantes que você deve t-tomaw pawa pwotegew seu apwicativo da web contwa as ameaças mais comuns. o.O
 
-## Avaliação
+## a-avawiação
 
-Este módulo de "visão geral" não tem nenhuma avaliação porque ainda não mostramos nenhum código. Esperamos que, a esta altura, você tenha um bom entendimento dos tipos de funcionalidade que pode oferecer usando a programação do lado do servidor e que tenha tomado uma decisão sobre qual estrutura da web do lado do servidor usará para criar seu primeiro site.
+este m-móduwo de "visão gewaw" não tem nyenhuma avawiação p-powque a-ainda nyão mostwamos nyenhum código. (///ˬ///✿) espewamos que, σωσ a esta awtuwa, nyaa~~ v-você tenha um bom entendimento dos tipos de funcionawidade que pode ofewecew u-usando a pwogwamação do wado do sewvidow e q-que tenha tomado u-uma decisão sobwe quaw estwutuwa da web do wado do sewvidow usawá p-pawa cwiaw s-seu pwimeiwo site. ^^;;

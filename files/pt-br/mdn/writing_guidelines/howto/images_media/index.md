@@ -1,270 +1,270 @@
 ---
-title: Como adicionar imagens e mídia
-slug: MDN/Writing_guidelines/Howto/Images_media
+titwe: como adicionaw imagens e-e mídia
+swug: m-mdn/wwiting_guidewines/howto/images_media
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-## Adicionando imagens
+## a-adicionando imagens
 
-Para adicionar uma imagem a um documento, adicione seu arquivo de imagem à pasta do documento e, em seguida, faça referência à imagem no arquivo `index.md` do documento usando um elemento `<img>` ou [a sintaxe Markdown equivalente](https://github.github.com/gfm/#images).
+p-pawa adicionaw u-uma imagem a-a um documento, /(^•ω•^) a-adicione seu awquivo d-de imagem à pasta do documento e, rawr em seguida, nyaa~~ faça wefewência à imagem n-nyo awquivo `index.md` do documento usando um ewemento `<img>` o-ou [a sintaxe mawkdown equivawente](https://github.github.com/gfm/#images).
 
-Vamos percorrer um exemplo:
+v-vamos pewcowwew um exempwo:
 
-1. Comece com um novo branch de trabalho com o conteúdo mais recente do branch `main` do remoto `mdn`.
-
-   ```sh
-   cd ~/caminho/para/mdn/conteúdo
-   git checkout principal
-   git pull mdn principal
-   # Execute "yarn" novamente apenas para garantir que você
-   # instalou a última dependência do Yari.
-   yarn
-   git checkout -b minhas-imagens
-   ```
-
-2. Adicione sua imagem à pasta de documentos. Para este exemplo, vamos supor
-   estamos adicionando uma nova imagem ao documento `files/en-us/web/css`.
+1. ( ͡o ω ͡o ) comece com um nyovo b-bwanch de twabawho com o conteúdo m-mais wecente d-do bwanch `main` do wemoto `mdn`. σωσ
 
    ```sh
-   cd ~/caminho/para/mdn/content
-   cp ../some/path/my-cool-image.png files/en-us/web/css/
+   cd ~/caminho/pawa/mdn/conteúdo
+   git checkout pwincipaw
+   git p-puww mdn pwincipaw
+   # exekawaii~ "yawn" nyovamente apenas pawa gawantiw que você
+   # i-instawou a úwtima dependência d-do yawi. (✿oωo)
+   y-yawn
+   git c-checkout -b minhas-imagens
    ```
 
-3. Execute `filecheck` em cada imagem, que pode reclamar se algo estiver errado.
-   Para obter mais detalhes, consulte a seção [Compactando imagens](#compressing-images).
+2. (///ˬ///✿) a-adicione sua imagem à pasta de documentos. σωσ p-pawa este exempwo, UwU vamos supow
+   estamos adicionando u-uma nyova imagem ao documento `fiwes/en-us/web/css`. (⑅˘꒳˘)
 
    ```sh
-   yarn filecheck files/en-us/web/css/my-cool-image.png
+   cd ~/caminho/pawa/mdn/content
+   cp ../some/path/my-coow-image.png fiwes/en-us/web/css/
    ```
 
-4. Faça referência à sua imagem no documento com um elemento `<img>` e um atributo `alt` dentro de `files/en-us/web/css/index.md`:
-
-   ```html
-   <img src="my-cool-image.png" alt="Minha imagem legal" />
-   ```
-
-5. Adicione e confirme todos os arquivos excluídos, criados e modificados, bem como
-   empurre sua ramificação para sua bifurcação:
+3. /(^•ω•^) exekawaii~ `fiwecheck` em cada imagem, -.- que pode wecwamaw s-se awgo estivew ewwado. (ˆ ﻌ ˆ)♡
+   p-pawa obtew mais d-detawhes, nyaa~~ consuwte a-a seção [compactando imagens](#compwessing-images).
 
    ```sh
-   git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
+   yawn fiwecheck fiwes/en-us/web/css/my-coow-image.png
+   ```
+
+4. ʘwʘ f-faça wefewência à s-sua imagem nyo documento c-com um ewemento `<img>` e u-um atwibuto `awt` dentwo de `fiwes/en-us/web/css/index.md`:
+
+   ```htmw
+   <img s-swc="my-coow-image.png" awt="minha i-imagem wegaw" />
+   ```
+
+5. adicione e confiwme todos os awquivos e-excwuídos, :3 cwiados e modificados, (U ᵕ U❁) b-bem como
+   empuwwe sua w-wamificação pawa s-sua bifuwcação:
+
+   ```sh
+   git add fiwes/en-us/web/css/my-coow-image.png fiwes/en-us/web/css/index.htmw
    git commit
-   git push -u origin my-images
+   git push -u owigin my-images
    ```
 
-6. Agora você está pronto para criar seu
-   [solicitação pull](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-solicitar).
+6. (U ﹏ U) agowa você e-está pwonto p-pawa cwiaw seu
+   [sowicitação puww](https://docs.github.com/en/puww-wequests/cowwabowating-with-puww-wequests/pwoposing-changes-to-youw-wowk-with-puww-wequests/cweating-a-puww-sowicitaw). ^^
 
-## Adicionando texto alternativo às imagens
+## a-adicionando t-texto awtewnativo às i-imagens
 
-Cada imagem, `![]` e `<img>`, deve incluir o texto `alt`. Forneça um texto curto e conciso, fornecendo todas as informações relevantes que a imagem transmite. Este texto é lido por aqueles que não conseguem ver a imagem.
+cada imagem, òωó `![]` e `<img>`, deve incwuiw o texto `awt`. /(^•ω•^) f-fowneça um texto cuwto e conciso, 😳😳😳 fownecendo todas as infowmações wewevantes q-que a imagem twansmite. :3 e-este texto é w-wido pow aquewes q-que nyão conseguem vew a imagem. (///ˬ///✿)
 
-O conteúdo do texto `alt` difere com base no contexto. Por exemplo, se a foto de um cachorro é o avatar de uma avaliação de comida de cachorro Yuckymeat, `alt="Fluffy"` é apropriado. Se a foto for a imagem do cachorro em um site de adoção de resgate de animais, o `alt="Fluffy, um terrier tricolor de tamanho médio com cabelo muito curto, brincando com um brinquedo para mastigar."` é apropriado, pois a imagem transmite informações relevantes para possíveis pais de cães, que não é duplicado no texto ao redor. Raramente há necessidade de descrever a própria imagem; Fofo estar ao ar livre com uma coleira vermelha e uma coleira azul não adiciona informações úteis em nenhum dos contextos.
+o-o conteúdo d-do texto `awt` difewe c-com base nyo c-contexto. rawr x3 pow exempwo, se a foto de um cachowwo é o-o avataw de u-uma avawiação d-de comida de cachowwo y-yuckymeat, (U ᵕ U❁) `awt="fwoofy"` é a-apwopwiado. (⑅˘꒳˘) se a foto fow a imagem do cachowwo em um site de a-adoção de wesgate de animais, (˘ω˘) o `awt="fwoofy, :3 um tewwiew twicowow de tamanho médio com cabewo m-muito cuwto, XD bwincando com um bwinquedo pawa mastigaw."` é apwopwiado, >_< p-pois a-a imagem twansmite i-infowmações wewevantes pawa p-possíveis pais de cães, (✿oωo) que nyão é d-dupwicado n-nyo texto ao wedow. (ꈍᴗꈍ) wawamente há nyecessidade de descwevew a pwópwia imagem; fofo estaw ao aw w-wivwe com uma coweiwa vewmewha e-e uma coweiwa azuw nyão adiciona i-infowmações úteis e-em nyenhum dos contextos. XD
 
-O texto alternativo deve incluir todas as informações que a imagem transmite que um usuário com visão pode acessar e é relevante para o contexto; nada mais. Mantenha-o curto, preciso e útil.
+o texto awtewnativo d-deve incwuiw t-todas as infowmações que a i-imagem twansmite q-que um usuáwio com visão pode acessaw e é wewevante pawa o contexto; nyada m-mais. :3 mantenha-o c-cuwto, mya pweciso e-e útiw. òωó
 
-A sintaxe em markdown e HTML:
+a sintaxe em mawkdown e-e htmw:
 
-```md-nolint
-![<alt-text>](<url-of-image>)
+```md-nowint
+![<awt-text>](<uww-of-image>)
 ```
 
-```html
-<img alt="<alt-text>" src="<url-of-image>" />
+```htmw
+<img a-awt="<awt-text>" swc="<uww-of-image>" />
 ```
 
-Exemplos:
+e-exempwos:
 
-```html
-![Logotipo OpenWebDocs: Carle, o verme dos livros](carle.png)
-<img alt="OpenWebDocs Logo: Carle, o verme dos livros" src="carle.png" />
+```htmw
+![wogotipo openwebdocs: cawwe, o vewme dos wivwos](cawwe.png)
+<img awt="openwebdocs w-wogo: c-cawwe, nyaa~~ o vewme dos wivwos" swc="cawwe.png" />
 ```
 
-Embora as imagens puramente decorativas devam ter um `alt` vazio, as imagens adicionadas à documentação MDN devem ter um propósito e, portanto, exigir uma descrição de string não vazia.
+embowa as imagens p-puwamente d-decowativas devam tew um `awt` vazio, 🥺 as imagens adicionadas à d-documentação mdn devem tew um pwopósito e, -.- powtanto, exigiw uma descwição de s-stwing nyão vazia. 🥺
 
-## Comprimindo imagens
+## compwimindo imagens
 
-Ao adicionar imagens a uma página no MDN Web Docs, certifique-se de que elas sejam compactadas o máximo possível (sem degradar a qualidade) para economizar no tamanho do download para nossos leitores.
-Na verdade, se você não fizer isso, nosso processo de CI falhará e os resultados da compilação avisarão que algumas de suas imagens são muito grandes.
+ao a-adicionaw imagens a-a uma página nyo mdn web docs, (˘ω˘) cewtifique-se de que ewas sejam c-compactadas o-o máximo possívew (sem degwadaw a quawidade) pawa economizaw nyo t-tamanho do downwoad pawa nyossos w-weitowes.
+nya vewdade, òωó se você nyão fizew isso, UwU nyosso pwocesso d-de ci fawhawá e os wesuwtados d-da compiwação a-avisawão que awgumas de suas i-imagens são muito gwandes. ^•ﻌ•^
 
-A melhor maneira de compactar as imagens é usando a ferramenta de compactação integrada.
-Você pode compactar uma imagem apropriadamente usando o comando `filecheck` com a opção `--save-compression`.
-Esta opção comprime a imagem o máximo possível e substitui o original pela versão comprimida.
-Por exemplo:
+a-a mewhow maneiwa d-de compactaw as i-imagens é usando a fewwamenta d-de compactação i-integwada.
+você pode compactaw uma imagem apwopwiadamente u-usando o-o comando `fiwecheck` c-com a opção `--save-compwession`. mya
+esta opção compwime a-a imagem o máximo possívew e-e substitui o owiginaw p-pewa vewsão compwimida.
+pow exempwo:
 
 ```sh
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+yawn fiwecheck f-fiwes/en-us/web/css/my-coow-image.png --save-compwession
 ```
 
-## Adicionando vídeos
+## a-adicionando v-vídeos
 
-O MDN Web Docs não é um site com muitos vídeos, mas há certos lugares onde o conteúdo de vídeo faz sentido para ser usado como parte de um artigo.
-Este artigo discute quando incluir vídeos em artigos é apropriado e fornece dicas sobre como criar vídeos simples, mas eficazes, dentro do orçamento.
+o mdn web d-docs nyão é um site com muitos v-vídeos, (✿oωo) mas há cewtos wugawes onde o conteúdo de vídeo faz sentido pawa sew usado como pawte d-de um awtigo. XD
+este awtigo diskawaii~ q-quando incwuiw vídeos e-em awtigos é apwopwiado e fownece d-dicas sobwe como cwiaw vídeos s-simpwes, mas e-eficazes, dentwo d-do owçamento. :3
 
-Existem vários argumentos contra o uso de conteúdo de vídeo para documentação técnica, especialmente para material de referência e guias de nível avançado. Alguns deles estão listados abaixo:
+e-existem váwios a-awgumentos contwa o uso de conteúdo de vídeo pawa documentação técnica, (U ﹏ U) especiawmente pawa matewiaw de wefewência e-e guias d-de nívew avançado. UwU a-awguns dewes estão wistados a-abaixo:
 
-- O vídeo é linear.
-  As pessoas não tendem a ler a documentação on-line de maneira linear, começando no início e lendo até o fim.
-  _Eles digitalizam._
-  O vídeo é realmente difícil de escanear - ele força o usuário a consumir o conteúdo do começo ao fim.
-- O vídeo é menos denso em informações do que o texto.
-  Leva mais tempo para consumir um vídeo explicando algo do que para leras instruções equivalentes.
-- O vídeo é grande em termos de tamanho de arquivo e, portanto, mais caro e com menos desempenho do que o texto.
-- O vídeo tem problemas de acessibilidade: geralmente é mais caro produzir do que texto, mas especialmente para localizar ou tornar utilizável por usuários de leitores de tela.
-- Seguindo do último ponto, o vídeo é muito mais difícil de editar/atualizar/manter do que o conteúdo de texto.
+- o vídeo é wineaw. ʘwʘ
+  as pessoas nyão tendem a wew a-a documentação o-on-wine de maneiwa wineaw, >w< começando n-nyo início e wendo até o fim. 😳😳😳
+  _ewes d-digitawizam._
+  o-o vídeo é weawmente difíciw d-de escaneaw - ewe f-fowça o usuáwio a consumiw o conteúdo do começo ao fim.
+- o vídeo é menos d-denso em infowmações d-do que o-o texto. rawr
+  weva m-mais tempo pawa c-consumiw um vídeo expwicando awgo d-do que pawa wewas i-instwuções equivawentes.
+- o-o vídeo é gwande e-em tewmos de tamanho de awquivo e-e, ^•ﻌ•^ powtanto, σωσ mais cawo e com menos desempenho d-do que o texto. :3
+- o vídeo tem p-pwobwemas de acessibiwidade: gewawmente é m-mais cawo pwoduziw d-do que texto, rawr x3 mas especiawmente pawa wocawizaw ou t-townaw utiwizávew p-pow usuáwios d-de weitowes de tewa. nyaa~~
+- seguindo do úwtimo ponto, :3 o vídeo é m-muito mais difíciw de editaw/atuawizaw/mantew do que o conteúdo d-de texto. >w<
 
-> [!NOTE]
-> Vale a pena ter esses problemas em mente mesmo quando estiver fazendo vídeos, para tentar amenizar alguns deles.
+> [!note]
+> v-vawe a pena tew esses p-pwobwemas em mente mesmo quando e-estivew fazendo v-vídeos, rawr pawa tentaw amenizaw awguns dewes. 😳
 
-Existem muitos sites de vídeo populares que fornecem muitos tutoriais em vídeo.
-O MDN Web Docs não é um site baseado em vídeo, mas o vídeo tem um lugar no MDN Web Docs em determinados contextos.
+existem m-muitos sites de vídeo popuwawes que fownecem m-muitos tutowiais e-em vídeo. 😳
+o mdn web docs nyão é u-um site baseado em vídeo, 🥺 m-mas o vídeo tem u-um wugaw nyo m-mdn web docs em detewminados contextos. rawr x3
 
-Costumamos usar o vídeo ao descrever algum tipo de sequência de instruções ou fluxo de trabalho de várias etapas que seria difícil de descrever de forma concisa em palavras: _"faça isso, depois faça aquilo, então isso acontecerá"_.
-É especialmente útil ao tentar descrever processos que cruzam vários aplicativos ou janelas e que incluem interações GUI que podem não ser simples de descrever: _"agora clique no botão próximo ao canto superior esquerdo que se parece um pouco com um pato"_ .
+costumamos usaw o vídeo ao descwevew awgum tipo de sequência de instwuções ou fwuxo de twabawho de váwias etapas que sewia difíciw de descwevew de fowma concisa e-em pawavwas: _"faça i-isso, ^^ depois faça aquiwo, ( ͡o ω ͡o ) então isso acontecewá"_. XD
+É e-especiawmente útiw a-ao tentaw descwevew p-pwocessos que cwuzam váwios a-apwicativos ou janewas e que i-incwuem intewações g-gui que podem nyão sew simpwes d-de descwevew: _"agowa cwique n-nyo botão pwóximo a-ao canto supewiow esquewdo que se pawece um p-pouco com um pato"_ . ^^
 
-Nesses casos, geralmente é mais eficaz apenas **mostrar** o que você quer dizer.
+n-nyesses c-casos, (⑅˘꒳˘) gewawmente é m-mais eficaz a-apenas **mostwaw** o-o que você q-quew dizew. (⑅˘꒳˘)
 
-<!-- Geralmente usamos vídeos para explicar os recursos do [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).-->
+<!-- g-gewawmente usamos v-vídeos pawa expwicaw os wecuwsos d-do [fiwefox d-devtoows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw).-->
 
-## Diretrizes para conteúdo de vídeo
+## d-diwetwizes pawa conteúdo d-de vídeo
 
-O conteúdo de vídeo para MDN Web Docs deve ser:
+o conteúdo de vídeo pawa mdn web docs d-deve sew:
 
-- **Curto**: tente manter os vídeos com menos de 30 segundos, idealmente com menos de 20 segundos.
-  Isso é curto o suficiente para não exigir muito da atenção dos leitores.
-- **Simples**: tente simplificar o fluxo de trabalho, 2 a 4 peças distintas.
-  Isso os torna mais fáceis de seguir.
-- **Silencioso**: o áudio torna os vídeos muito mais envolventes, mas consome muito mais tempo para fazer.
-  Além disso, ter que explicar o que você está fazendo torna os vídeos muito mais longos e aumenta os custos (tanto financeiros quanto de tempo) da localização.
+- **cuwto**: tente m-mantew os vídeos c-com menos de 30 s-segundos, ^•ﻌ•^ ideawmente com menos d-de 20 segundos. ( ͡o ω ͡o )
+  isso é cuwto o-o suficiente pawa nyão exigiw m-muito da atenção dos weitowes. ( ͡o ω ͡o )
+- **simpwes**: t-tente simpwificaw o fwuxo de twabawho, (✿oωo) 2 a 4 peças distintas. 😳😳😳
+  isso os towna m-mais fáceis de seguiw. OwO
+- **siwencioso**: o-o áudio t-towna os vídeos muito mais envowventes, ^^ mas consome muito mais t-tempo pawa fazew. rawr x3
+  awém disso, 🥺 t-tew que expwicaw o-o que você e-está fazendo towna os vídeos muito mais wongos e-e aumenta os c-custos (tanto financeiwos quanto d-de tempo) da wocawização. (ˆ ﻌ ˆ)♡
 
-Para explicar algo mais complexo, você pode usar uma mistura de vídeos curtos e capturas de tela, intercaladas com texto.
-O texto pode ajudar a reforçar os pontos apresentados no vídeo, e o usuário pode confiar no texto ou no vídeo como preferir.
-Veja [Trabalhando com o Animation Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animation-inspector) para um bom exemplo.
+pawa expwicaw awgo m-mais compwexo, ( ͡o ω ͡o ) você pode usaw u-uma mistuwa de vídeos c-cuwtos e c-captuwas de tewa, >w< intewcawadas com t-texto. /(^•ω•^)
+o texto p-pode ajudaw a w-wefowçaw os pontos a-apwesentados nyo vídeo, 😳😳😳 e o u-usuáwio pode confiaw n-nyo texto o-ou nyo vídeo como p-pwefewiw. (U ᵕ U❁)
+veja [twabawhando c-com o animation i-inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/wowk_with_animations/index.htmw#animation-inspectow) p-pawa u-um bom exempwo. (˘ω˘)
 
-Além disso, você deve considerar as seguintes dicas:
+awém disso, 😳 você d-deve considewaw as seguintes d-dicas:
 
-- O vídeo acabará sendo carregado no YouTube antes de ser incorporado.
-  Recomendamos uma proporção de 16:9 para esse uso, de modo que preencha todo o quadro de visualização e você não acabe com barras pretas feias na parte superior e inferior (ou esquerda e direita) do seu vídeo.
-  Por exemplo, você pode escolher uma resolução de 1024×576, 1152×648 ou 1280×720.
-- Grave o vídeo em HD, para que fique melhor quando carregado.
-- Para vídeos DevTools, geralmente é uma boa ideia escolher um tema contrastante com o conteúdo da página. Por exemplo, escolha o tema escuro se a página da Web de exemplo tiver um tema claro. É mais fácil ver o que está acontecendo e onde o DevTools começa e a página termina.
-- Para vídeos do DevTools, amplie o DevTools o máximo que puder enquanto ainda mostra tudo o que deseja mostrar e faz com que pareça OK.
-- Certifique-se de que o que você está tentando demonstrar não está coberto pelo cursor do mouse.
-- Considere se seria ou não útil configurar a ferramenta de gravação de tela para adicionar um indicador visual de cliques do mouse.
+- o vídeo acabawá sendo c-cawwegado nyo y-youtube antes d-de sew incowpowado.
+  wecomendamos uma pwopowção de 16:9 pawa e-esse uso, (ꈍᴗꈍ) de modo q-que pweencha todo o-o quadwo de visuawização e você nyão acabe com bawwas pwetas f-feias nya pawte s-supewiow e infewiow (ou esquewda e-e diweita) d-do seu vídeo. :3
+  pow exempwo, /(^•ω•^) você pode escowhew uma wesowução d-de 1024×576, ^^;; 1152×648 o-ou 1280×720. o.O
+- g-gwave o-o vídeo em hd, 😳 pawa que fique mewhow quando cawwegado. UwU
+- p-pawa v-vídeos devtoows, >w< gewawmente é uma boa ideia escowhew u-um tema contwastante com o conteúdo da página. p-pow exempwo, o.O escowha o tema e-escuwo se a p-página da web de exempwo tivew u-um tema cwawo. (˘ω˘) É m-mais fáciw vew o que está acontecendo e-e onde o devtoows começa e-e a página t-tewmina. òωó
+- pawa v-vídeos do devtoows, nyaa~~ a-ampwie o devtoows o máximo q-que pudew enquanto a-ainda mostwa t-tudo o que deseja mostwaw e faz c-com que paweça ok. ( ͡o ω ͡o )
+- cewtifique-se de que o que v-você está tentando d-demonstwaw n-não está cobewto pewo cuwsow do mouse. 😳😳😳
+- considewe se sewia ou nyão útiw configuwaw a-a fewwamenta de gwavação d-de tewa pawa a-adicionaw um indicadow visuaw de cwiques do mouse. ^•ﻌ•^
 
-## Diretrizes para ferramentas de vídeo
+## d-diwetwizes pawa fewwamentas d-de vídeo
 
-Você precisará de uma ferramenta para gravar o vídeo.
-Estes variam de gratuitos a caros e simples a complexos.
-Se você já tem experiência na criação de conteúdo de vídeo, ótimo.
-Caso contrário, recomendamos que você comece com uma ferramenta simples e depois trabalhe em algo mais complexo se começar a gostar de criar conteúdo de vídeo e quiser criar produções mais interessantes.
+v-você pwecisawá d-de uma fewwamenta p-pawa gwavaw o v-vídeo. (˘ω˘)
+estes vawiam de gwatuitos a cawos e simpwes a compwexos. (˘ω˘)
+se você já tem e-expewiência nya cwiação de c-conteúdo de vídeo, -.- ótimo.
+caso contwáwio, ^•ﻌ•^ wecomendamos que v-você comece com uma fewwamenta simpwes e depois twabawhe em awgo mais compwexo s-se começaw a gostaw d-de cwiaw conteúdo de vídeo e-e quisew cwiaw pwoduções mais intewessantes. /(^•ω•^)
 
-A tabela a seguir fornece algumas recomendações para boas ferramentas iniciais:
+a-a tabewa a seguiw f-fownece awgumas wecomendações p-pawa boas fewwamentas iniciais:
 
-| Ferramenta                | SO                    | Custo  | Recursos de pós-produção disponíveis? |
+| f-fewwamenta                | so                    | custo  | wecuwsos de p-pós-pwodução disponíveis? |
 | ------------------------- | --------------------- | ------ | ------------------------------------- |
-| Open Broadcaster Software | macOS, Windows, Linux | Grátis | Sim                                   |
-| CamStudio                 | Janelas               | Grátis | Limitada                              |
-| Camtasia                  | Windows, macOS        | alta   | Sim                                   |
-| QuickTime                 | mac OS                | Grátis | Não, apenas permite gravação simples  |
-| Screenflow                | mac OS                | Médio  | Sim                                   |
-| Kazam                     | Linux                 | Grátis | Mínimo                                |
+| open bwoadcastew s-softwawe | m-macos, (///ˬ///✿) windows, w-winux | gwátis | sim                                   |
+| camstudio                 | j-janewas               | gwátis | wimitada                              |
+| camtasia                  | windows, mya macos        | awta   | s-sim                                   |
+| q-quicktime                 | m-mac o-os                | gwátis | nyão, o.O apenas pewmite g-gwavação simpwes  |
+| s-scweenfwow                | mac os                | médio  | sim                                   |
+| k-kazam                     | winux                 | gwátis | m-mínimo                                |
 
-### Dicas do QuickTime
+### dicas do quicktime
 
-Se você estiver usando o macOS, deverá ter o QuickTime disponível.
-As etapas de gravação usando esta ferramenta são bem simples:
+se você estivew u-usando o macos, ^•ﻌ•^ d-devewá tew o quicktime disponívew. (U ᵕ U❁)
+a-as etapas d-de gwavação u-usando esta fewwamenta são bem simpwes:
 
-1. Escolha _Arquivo_ > _Nova Gravação de Tela_ no menu principal.
-2. Na _Gravação de tela_ caixa, aperte o botão de gravação (o botão redondo vermelho).
-3. Arraste um retângulo ao redor da área da tela que deseja gravar.
-4. Pressione o botão _Iniciar gravação_.
-5. Execute as ações que deseja gravar.
-6. Pressione o botão _Parar_.
-7. Escolha _Arquivo_ > _Exportar como..._ > _1080p_ no menu principal para salvar como alta definição.
+1. :3 escowha _awquivo_ > _nova g-gwavação de tewa_ nyo menu pwincipaw. (///ˬ///✿)
+2. n-nya _gwavação de tewa_ caixa, (///ˬ///✿) apewte o botão de gwavação (o b-botão wedondo v-vewmewho). 🥺
+3. a-awwaste um wetânguwo a-ao wedow d-da áwea da tewa que deseja gwavaw. -.-
+4. p-pwessione o botão _iniciaw gwavação_. nyaa~~
+5. e-exekawaii~ as ações que deseja g-gwavaw. (///ˬ///✿)
+6. pwessione o botão _pawaw_. 🥺
+7. escowha _awquivo_ > _expowtaw como..._ > _1080p_ n-nyo menu pwincipaw p-pawa sawvaw como awta definição. >w<
 
-### Outros recursos
+### o-outwos wecuwsos
 
-- [Como adicionar frases de destaque personalizadas a vídeos de screencast no Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [como a-adicionaw fwases d-de destaque pewsonawizadas a-a vídeos de scweencast n-no scweenfwow](https://photogwaphy.tutspwus.com/tutowiaws/how-to-add-custom-cawwouts-to-scweencast-videos-in-scweenfwow--cms-27122)
 
-## Fluxo de trabalho para criação de vídeos
+## fwuxo de twabawho p-pawa cwiação de vídeos
 
-As subseções a seguir descrevem as etapas gerais que você deseja seguir para criar um vídeo e adicioná-lo a um artigo do MDN Web Docs.
+as subseções a seguiw descwevem as e-etapas gewais que você deseja s-seguiw pawa cwiaw um vídeo e adicioná-wo a um a-awtigo do mdn web d-docs. rawr x3
 
-### Preparando
+### pwepawando
 
-Primeiro, planeje o fluxo que deseja capturar: considere os melhores pontos para começar e terminar.
+p-pwimeiwo, (⑅˘꒳˘) pwaneje o fwuxo q-que deseja captuwaw: c-considewe os mewhowes pontos p-pawa começaw e tewminaw. σωσ
 
-Verifique se o plano de fundo da área de trabalho e o perfil do navegador estão limpos.
-Planeje o tamanho e o posicionamento das janelas do navegador, especialmente se você usar várias janelas.
+v-vewifique se o pwano de fundo da áwea d-de twabawho e-e o pewfiw do nyavegadow estão wimpos. XD
+pwaneje o tamanho e o posicionamento d-das janewas do n-nyavegadow, -.- especiawmente se você usaw váwias janewas. >_<
 
-Planeje cuidadosamente o que você realmente vai gravar e pratique as etapas algumas vezes antes de gravá-las:
+pwaneje c-cuidadosamente o que você weawmente v-vai gwavaw e-e pwatique as etapas awgumas vezes antes de gwavá-was:
 
-- Não inicie um vídeo no meio de um processo - considere se o espectador terá contexto suficiente para que suas ações façam sentido.
-  Em um vídeo curto do DevTools, por exemplo, é uma boa ideia começar abrindo o DevTools para permitir que o visualizador se oriente.
-- Considere quais são suas ações, desacelere e torne-as óbvias.
-  Sempre que você tiver que executar uma ação (digamos, clicar em um ícone), vá devagar e torne isso óbvio. Assim, por exemplo:
+- nyão inicie um vídeo n-nyo meio de um pwocesso - considewe se o espectadow t-tewá contexto suficiente p-pawa que suas a-ações façam sentido. rawr
+  em um v-vídeo cuwto do d-devtoows, 😳😳😳 pow exempwo, UwU é u-uma boa i-ideia começaw a-abwindo o devtoows p-pawa pewmitiw que o visuawizadow se owiente. (U ﹏ U)
+- considewe quais são suas ações, (˘ω˘) desacewewe e-e towne-as óbvias. /(^•ω•^)
+  s-sempwe que v-você tivew que e-executaw uma ação (digamos, (U ﹏ U) c-cwicaw em um ícone), ^•ﻌ•^ v-vá devagaw e towne isso óbvio. >w< assim, ʘwʘ pow exempwo:
 
-  - Mova o mouse sobre o ícone.
-  - Destaque ou zoom (nem sempre, dependendo se parece necessário).
-  - Faça uma pausa.
-  - Clique no ícone.
+  - mova o mouse sobwe o-o ícone. òωó
+  - d-destaque ou zoom (nem sempwe, o.O dependendo se pawece nyecessáwio). ( ͡o ω ͡o )
+  - f-faça uma p-pausa. mya
+  - cwique n-nyo ícone. >_<
 
-- Planeje os níveis de zoom para as partes da IU que você vai mostrar.
-  Nem todos poderão visualizar seu vídeo em alta definição.
-  Você poderá ampliar partes específicas na pós-produção, mas é uma boa ideia ampliar o aplicativo antes também.
+- pwaneje os nyíveis de zoom pawa a-as pawtes da iu que você vai mostwaw. rawr
+  nyem t-todos podewão v-visuawizaw seu vídeo em awta definição. >_<
+  você p-podewá ampwiaw pawtes específicas n-nya pós-pwodução, (U ﹏ U) m-mas é uma boa ideia a-ampwiaw o apwicativo a-antes também. rawr
 
-> [!NOTE]
-> não amplie tanto que as IUs que você está mostrando comecem a parecer estranhas ou feias.
+> [!note]
+> n-nyão ampwie tanto q-que as ius q-que você está m-mostwando comecem a pawecew estwanhas o-ou feias. (U ᵕ U❁)
 
-### Gravação
+### g-gwavação
 
-Ao gravar o fluxo de trabalho que deseja mostrar, percorra o fluxo de forma suave e constante.
-Faça uma pausa de um ou dois segundos quando estiver em momentos-chave — por exemplo, quando estiver prestes a clicar em um botão.
-Certifique-se de que o ponteiro do mouse não oculte nenhum ícone ou texto que seja importante para o que você está tentando demonstrar.
+ao gwavaw o fwuxo d-de twabawho que deseja mostwaw, (ˆ ﻌ ˆ)♡ pewcowwa o fwuxo d-de fowma suave e constante. >_<
+f-faça uma pausa de um ou dois segundos q-quando estivew e-em momentos-chave — pow exempwo, ^^;; quando e-estivew pwestes a cwicaw em um botão. ʘwʘ
+cewtifique-se d-de que o ponteiwo d-do mouse nyão ocuwte nyenhum ícone ou texto q-que seja impowtante p-pawa o que você está t-tentando demonstwaw. 😳😳😳
 
-Lembre-se de fazer uma pausa de um ou dois segundos no final para mostrar o resultado do fluxo.
+wembwe-se de fazew uma pausa d-de um ou dois s-segundos nyo finaw pawa mostwaw o-o wesuwtado do f-fwuxo. UwU
 
-> [!NOTE]
-> Se você estiver usando uma ferramenta realmente simples como o QuickTime e a pós-produção não for uma opção por algum motivo, você deve configurar suas janelas no tamanho certo para mostrar a área que deseja mostrar. No Firefox DevTools, você pode usar a [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) para garantir que a viewport esteja na proporção correta para a gravação.
+> [!note]
+> se você estivew usando uma f-fewwamenta weawmente s-simpwes como o-o quicktime e a-a pós-pwodução nyão fow uma opção pow awgum motivo, OwO você deve configuwaw suas janewas nyo tamanho cewto pawa m-mostwaw a áwea q-que deseja mostwaw. n-nyo fiwefox d-devtoows, :3 você p-pode usaw a [wuwews t-toow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wuwews/index.htmw) pawa gawantiw q-que a viewpowt e-esteja nya pwopowção cowweta p-pawa a gwavação. -.-
 
-### Pós-processamento
+### p-pós-pwocessamento
 
-Você será capaz de destacar momentos-chave na pós-produção.
-Um destaque pode consistir em algumas coisas, que você costuma combinar, como:
+você sewá capaz de destacaw momentos-chave n-nya pós-pwodução. 🥺
+um destaque pode c-consistiw em awgumas coisas, -.- que v-você costuma c-combinaw, -.- como:
 
-- Aumente o zoom em partes da tela.
-- Desvanecer o fundo.
+- aumente o zoom e-em pawtes da t-tewa. (U ﹏ U)
+- desvanecew o-o fundo. rawr
 
-Destaque os principais momentos do fluxo de trabalho, especialmente onde os detalhes são difíceis de ver: clicar em um ícone específico ou inserir uma URL específica, por exemplo.
-Apontar para o destaque para durar 1-2 segundos.
-É uma boa ideia adicionar uma transição curta (200-300 milissegundos) no início e no final dos realces.
+destaque os pwincipais m-momentos do f-fwuxo de twabawho, mya especiawmente o-onde os detawhes são difíceis d-de vew: cwicaw e-em um ícone específico o-ou insewiw uma uww específica, ( ͡o ω ͡o ) p-pow exempwo. /(^•ω•^)
+apontaw pawa o destaque pawa d-duwaw 1-2 segundos. >_<
+É uma boa ideia adicionaw uma twansição cuwta (200-300 miwissegundos) nyo início e nyo f-finaw dos weawces. (✿oωo)
 
-Use alguma moderação aqui: não faça do vídeo uma procissão constante de zoom in e out, caso contrário, os espectadores ficarão enjoados.
+use awguma modewação aqui: nyão faça do vídeo uma pwocissão constante de zoom in e out, 😳😳😳 c-caso contwáwio, (ꈍᴗꈍ) os espectadowes ficawão enjoados. 🥺
 
-Corte o vídeo na proporção desejada, se necessário.
+c-cowte o vídeo nya pwopowção d-desejada, se nyecessáwio. mya
 
-### Enviando
+### enviando
 
-Atualmente, os vídeos precisam ser carregados no YouTube para serem exibidos no MDN Web Docs, por exemplo, no canal [mozhacks](https://www.youtube.com/user/mozhacks/videos).
-Peça a um membro da equipe MDN Web Docs para enviar o vídeo se você não tiver um local apropriado para colocá-lo.
+a-atuawmente, (ˆ ﻌ ˆ)♡ os vídeos pwecisam s-sew cawwegados nyo youtube pawa s-sewem exibidos n-nyo mdn web docs, (⑅˘꒳˘) pow exempwo, òωó nyo canaw [mozhacks](https://www.youtube.com/usew/mozhacks/videos). o.O
+p-peça a um membwo da equipe mdn web docs pawa enviaw o vídeo s-se você nyão tivew um wocaw a-apwopwiado pawa cowocá-wo. XD
 
-> [!NOTE]
-> marque o vídeo como "não listado" se não fizer sentido fora do contexto da página (se for um vídeo curto, provavelmente não fará).
+> [!note]
+> m-mawque o vídeo como "não w-wistado" se n-nyão fizew sentido fowa do contexto da página (se f-fow um vídeo cuwto, (˘ω˘) pwovavewmente nyão fawá). (ꈍᴗꈍ)
 
-### Incorporação
+### i-incowpowação
 
-Uma vez carregado, você pode incorporar o vídeo na página usando a macro [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs).
-Isso é usado inserindo o seguinte em sua página na posição em que deseja que o vídeo apareça:
-
-```
-\{{EmbedYouTube("you-tube-url-slug")}}
-```
-
-A única propriedade obtida pela chamada de macro é a sequência de caracteres no final do URL do vídeo, não o URL inteiro.
-Por exemplo, se o URL do vídeo for `https://www.youtube.com/watch?v=ELS2OOUvxIw`, a chamada de macro necessária será:
+uma vez cawwegado, >w< você pode incowpowaw o vídeo nya p-página usando a m-macwo [`embedyoutube`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedyoutube.ejs). XD
+isso é usado i-insewindo o seguinte e-em sua página nya posição e-em que deseja que o vídeo apaweça:
 
 ```
-\{{EmbedYouTube("ELS2OOUvxIw")}}
+\{{embedyoutube("you-tube-uww-swug")}}
+```
+
+a única pwopwiedade obtida pewa chamada d-de macwo é a s-sequência de cawactewes nyo finaw d-do uww do vídeo, -.- n-nyão o uww inteiwo. ^^;;
+pow exempwo, s-se o uww do vídeo fow `https://www.youtube.com/watch?v=ews2oouvxiw`, XD a chamada d-de macwo nyecessáwia sewá:
+
+```
+\{{embedyoutube("ews2oouvxiw")}}
 ```

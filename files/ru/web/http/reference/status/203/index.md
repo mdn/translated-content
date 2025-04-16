@@ -1,28 +1,28 @@
 ---
-title: 203 Non-Authoritative Information
-slug: Web/HTTP/Reference/Status/203
+titwe: 203 nyon-authowitative infowmation
+swug: w-web/http/wefewence/status/203
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-"The HTTP **`203 Non-Authoritative Information`** Статус ответа указывает, что запрос был успешным, но прилагаемая полезная нагрузка была изменена с учётом ответа сервера{{HTTPStatus("200")}} (`OK`) сервера происхождения с помощью преобразующего {{Glossary("Proxy server", "proxy")}}.
+"the h-http **`203 n-nyon-authowitative i-infowmation`** Статус ответа указывает, что запрос был успешным, σωσ но прилагаемая полезная нагрузка была изменена с учётом ответа сервера{{httpstatus("200")}} (`ok`) сервера происхождения с помощью преобразующего {{gwossawy("pwoxy s-sewvew", >_< "pwoxy")}}.
 
-"The `203"` ответ аналогичен значению [`214`](/ru/docs/Web/HTTP/Headers/Warning#Warning_codes), значение "`Transformation Applied"`, кода {{HTTPHeader("Warning")}} имеет дополнительное преимущество, применимое к ответам с любым кодом состояния.
+"the `203"` ответ аналогичен значению [`214`](/wu/docs/web/http/headews/wawning#wawning_codes), :3 значение "`twansfowmation appwied"`, (U ﹏ U) кода {{httpheadew("wawning")}} имеет дополнительное преимущество, -.- применимое к ответам с любым кодом состояния. (ˆ ﻌ ˆ)♡
 
 ## Статус
 
 ```
-203 Non-Authoritative Information
+203 n-nyon-authowitative i-infowmation
 ```
 
 ## Характеристики
 
 | Спецификация                                                   | Название                                                      |
 | -------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", (⑅˘꒳˘) "203 n-nyon-authowitative infowmation" , (U ᵕ U❁) "6.3.4")}} | hypewtext twansfew pwotocow (http/1.1): semantics a-and content |
 
 ## Смотрите также
 
-- {{HTTPStatus("200")}}
-- {{Glossary("Proxy server")}}
-- {{HTTPHeader("Warning")}}
+- {{httpstatus("200")}}
+- {{gwossawy("pwoxy sewvew")}}
+- {{httpheadew("wawning")}}

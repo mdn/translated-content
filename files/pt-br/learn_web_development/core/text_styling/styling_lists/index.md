@@ -1,258 +1,258 @@
 ---
-title: Manipulando Listas
-slug: Learn_web_development/Core/Text_styling/Styling_lists
-original_slug: Learn/CSS/Styling_text/Styling_lists
+titwe: manipuwando wistas
+swug: w-weawn_web_devewopment/cowe/text_stywing/stywing_wists
+o-owiginaw_swug: w-weawn/css/stywing_text/stywing_wists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/stywing_text/fundamentaws", (U ﹏ U) "weawn/css/stywing_text/stywing_winks", >w< "weawn/css/stywing_text")}}
 
-Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Learn/CSS/First_steps) tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
+e-este é o 10º s-seção do [css i-intwodução](/pt-bw/docs/weawn/css/fiwst_steps) t-tutowiaw; ewe descweve c-como você pode usaw css pawa especificaw o apawecimento de wistas. σωσ você c-cwia um nyovo documento de amostwa contendo wistas, nyaa~~ e-e um nyovo estiwo que os estiwos d-das wistas. 🥺
 
-## Informação: Lists
+## infowmação: wists
 
-Se você aceitou o desafio na [última](/pt-BR/docs/Learn/CSS/Howto/Generated_content) seção, em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.
+se você aceitou o desafio n-nya [úwtima](/pt-bw/docs/weawn/css/howto/genewated_content) seção, rawr x3 em s-seguida, σωσ você viu c-como você pode adicionaw conteúdo antes de quawquew ewemento pawa exibi-wo c-como um item da wista. (///ˬ///✿)
 
-CSS proporciona propriedades especiais que são projetados para listas. Geralmente é mais conveniente usar estas propriedades sempre que puder.
+css pwopowciona pwopwiedades especiais que são pwojetados p-pawa wistas. gewawmente é mais c-conveniente usaw e-estas pwopwiedades s-sempwe que p-pudew. (U ﹏ U)
 
-Para especificar o estilo para uma lista, use o {{cssxref ("list-style")}} propriedade para especificar o tipo de marcador.
+pawa especificaw o estiwo pawa uma wista, ^^;; u-use o {{cssxwef ("wist-stywe")}} pwopwiedade pawa especificaw o-o tipo de mawcadow. 🥺
 
-O seletor na sua regra de CSS pode selecionar os elementos de item de lista (por exemplo, {{HTMLElement ("li")}}), ou pode selecionar o elemento primário da lista (por exemplo, {{HTMLElement ("ul")}}) de modo a que os elementos da lista herdam o modelo.
+o sewetow nya sua wegwa de css pode sewecionaw os ewementos de item de wista (pow e-exempwo, {{htmwewement ("wi")}}), òωó ou pode s-sewecionaw o e-ewemento pwimáwio d-da wista (pow exempwo, XD {{htmwewement ("uw")}}) de modo a que os ewementos da w-wista hewdam o modewo. :3
 
-### Listas não ordenadas
+### w-wistas não owdenadas
 
-Em uma lista _desordenada_, cada item da lista é marcado da mesma forma.
+e-em uma wista _desowdenada_, (U ﹏ U) cada i-item da wista é mawcado da m-mesma fowma. >w<
 
-CSS tem três tipos de marcadores, e aqui está como seu navegador exibe-os:
+css tem twês tipos d-de mawcadowes, /(^•ω•^) e aqui está como seu nyavegadow e-exibe-os:
 
 - `disc`
-- `circle`
-- `square`
+- `ciwcwe`
+- `squawe`
 
-none
+nyone
 
-Alternativamente, você pode especificar o URL de uma imagem.
+a-awtewnativamente, (⑅˘꒳˘) você pode e-especificaw o uww d-de uma imagem. ʘwʘ
 
-Exemplo
+exempwo
 
-Essas regras especificam diferentes marcadores para diferentes classes de item da lista:
-
-```css
-li.open {
-  list-style: circle;
-}
-li.closed {
-  list-style: disc;
-}
-```
-
-Quando estas classes são usadas em uma lista, que distinguir entre os itens abertos e fechados (por exemplo, em uma lista de tarefas):
-
-```html
-<ul>
-  <li class="open">Lorem ipsum</li>
-  <li class="closed">dolor sit</li>
-  <li class="closed">Amet consectetuer</li>
-  <li class="open">Magna aliquam</li>
-  <li class="closed">Autem veleum</li>
-</ul>
-```
-
-O resultado pode parecer:
-
-{{EmbedLiveSample ('Listas_não_ordenadas', '', '', '')}}
-
-### Listas ordenadas
-
-Em uma lista*ordenada* , cada item da lista é marcado diferentemente para mostrar a sua posição na sequência.
-
-Use a propriedade {{cssxref ("list-style")}} para especificar o tipo de marcador:
-
-- `decimal`
-- `lower-roman`
-- `upper-roman`
-- `lower-latin`
-- `upper-latin`
-
-Exemplo
-
-Esta regra especifica que em {{HTMLElement ("OL")}} elementos com a classe `informações, os itens são identificados com letras maiúsculas.`
-
-```
-<ol class="info">
-  <li>Lorem ipsum</li>
-  <li>Dolor sit</li>
-  <li>Amet consectetuer</li>
-  <li>Magna aliquam</li>
-  <li>Autem veleum</li>
-</ol>
-```
+essas wegwas especificam difewentes mawcadowes pawa difewentes cwasses de item da wista:
 
 ```css
-ol.info {
-  list-style: upper-latin;
+w-wi.open {
+  w-wist-stywe: ciwcwe;
+}
+wi.cwosed {
+  w-wist-stywe: d-disc;
 }
 ```
 
-O {{HTMLElement ("LI")}} elementos da lista herdam esse estilo:
+q-quando estas cwasses são usadas em uma wista, rawr x3 que distinguiw e-entwe os itens abewtos e fechados (pow exempwo, (˘ω˘) em uma wista de tawefas):
 
-{{EmbedLiveSample ('Listas_ordenadas', '', '', '')}}
+```htmw
+<uw>
+  <wi c-cwass="open">wowem ipsum</wi>
+  <wi c-cwass="cwosed">dowow s-sit</wi>
+  <wi c-cwass="cwosed">amet consectetuew</wi>
+  <wi c-cwass="open">magna a-awiquam</wi>
+  <wi c-cwass="cwosed">autem v-veweum</wi>
+</uw>
+```
 
-Mais detalhes
+o wesuwtado pode pawecew:
 
-O {{cssxref ("list-style")}} propriedade é uma propriedade taquigrafia. Em folhas de estilo complexas você pode preferir usar propriedades separadas para definir valores separados. Para obter links para essas propriedades separadas, e mais detalhes de como CSS especifica listas, consulte o {{cssxref ("list-style")}} página de referência.
+{{embedwivesampwe ('wistas_não_owdenadas', o.O '', '', '')}}
 
-Se você estiver usando uma linguagem de marcação como HTML que fornece etiquetas convencionais para não-ordenada ({{HTMLElement ("ul")}}) e ordenou ({{HTMLElement ("ol")}}) listas, então é uma boa prática para usar as marcas na forma como eles se destinam. No entanto, você pode usar CSS para fazer {{HTMLElement ("ul")}} exibição ordenada e {{HTMLElement ("ol")}} visualização não ordenada, se desejar.
+### w-wistas owdenadas
 
-Browsers diferem na maneira de implementar os estilos para listas. Não espere que sua folha de estilo dê resultados idênticos em todos os navegadores.
+e-em uma wista*owdenada* , 😳 c-cada i-item da wista é m-mawcado difewentemente pawa mostwaw a sua posição nya sequência. o.O
 
-### Contadores
+u-use a pwopwiedade {{cssxwef ("wist-stywe")}} pawa especificaw o tipo de mawcadow:
 
-**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](https://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](https://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference) neste local também têm tabelas de compatibilidade do navegador.
+- `decimaw`
+- `wowew-woman`
+- `uppew-woman`
+- `wowew-watin`
+- `uppew-watin`
 
-Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.
+exempwo
 
-Para especificar a numeração, você precisa de um _contador_ com um nome que você especificar.
+esta wegwa especifica q-que em {{htmwewement ("ow")}} ewementos com a cwasse `infowmações, ^^;; os itens s-são identificados c-com wetwas m-maiúscuwas.`
 
-Em alguns elementos antes da contagem é começar, reinicie o contador com a propriedade {{cssxref ("counter-reset")}} eo nome do seu contador. O pai dos elementos que você estiver contando é um bom lugar para fazer isso, mas você pode usar qualquer elemento que vem antes os itens da lista.
-
-Em cada elemento que o contador é incrementado, use a propriedade {{cssxref ("contra-incremento")}} eo nome do seu contador.
-
-Para mostrar seu contador, adicione {{cssxref (":: before")}} ou {{cssxref (":: after")}} para o selector e usar o `conteúdo` da propriedade (como você fez na página anterior, Conteúdo) .
-
-No valor do `conteúdo` de propriedade, especifique `counter ()` com o nome de seu contador. Opcionalmente especifique um tipo. Os tipos são os mesmos que na **lista ordenada** secção acima.
-
-Normalmente, o elemento que apresenta o contador também incrementa-lo.
-
-Exemplo
-
-Esta regra inicializa um contador para cada {{HTMLElement ("h3")}} elemento com a classe numeradas:
+```
+<ow cwass="info">
+  <wi>wowem i-ipsum</wi>
+  <wi>dowow sit</wi>
+  <wi>amet consectetuew</wi>
+  <wi>magna a-awiquam</wi>
+  <wi>autem v-veweum</wi>
+</ow>
+```
 
 ```css
-h3.numbered {
-  counter-reset: mynum;
+ow.info {
+  wist-stywe: uppew-watin;
 }
 ```
 
-Esta regra mostra e incrementa o contador para cada {{HTMLElement ("p")}} elemento com a classe numeradas:
+o {{htmwewement ("wi")}} ewementos da wista hewdam e-esse estiwo:
 
-```html
-<p class="numbered">Lorem ipsum</p>
-<p class="numbered">dolor sit</p>
-<p class="numbered">Amet consectetuer</p>
-<p class="numbered">Magna aliquam</p>
-<p class="numbered">Autem veleum</p>
+{{embedwivesampwe ('wistas_owdenadas', ( ͡o ω ͡o ) '', '', '')}}
+
+mais detawhes
+
+o-o {{cssxwef ("wist-stywe")}} pwopwiedade é u-uma pwopwiedade t-taquigwafia. ^^;; em fowhas de estiwo compwexas você p-pode pwefewiw u-usaw pwopwiedades sepawadas pawa d-definiw vawowes s-sepawados. ^^;; pawa obtew winks pawa essas pwopwiedades sepawadas, XD e mais detawhes d-de como css especifica w-wistas, 🥺 c-consuwte o {{cssxwef ("wist-stywe")}} página de w-wefewência. (///ˬ///✿)
+
+se v-você estivew usando uma winguagem d-de mawcação como htmw que fownece etiquetas convencionais pawa não-owdenada ({{htmwewement ("uw")}}) e-e owdenou ({{htmwewement ("ow")}}) w-wistas, (U ᵕ U❁) então é uma boa pwática pawa usaw as m-mawcas nya fowma c-como ewes se destinam. ^^;; nyo entanto, ^^;; você pode usaw css pawa fazew {{htmwewement ("uw")}} e-exibição owdenada e {{htmwewement ("ow")}} visuawização nyão owdenada, rawr se desejaw. (˘ω˘)
+
+b-bwowsews difewem nya maneiwa de impwementaw o-os estiwos pawa w-wistas. 🥺 nyão espewe que sua fowha de estiwo dê wesuwtados idênticos e-em todos o-os nyavegadowes. nyaa~~
+
+### contadowes
+
+**nota:** awguns nyavegadowes n-nyão supowtam contadowes. :3 o [conteúdo c-css e compatibiwidade do nyavegadow](https://www.quiwksmode.owg/css/contents.htmw) página n-nyo [site de modo quiwks](https://www.quiwksmode.owg/) c-contém u-um gwáfico detawhado de compatibiwidade d-do nyavegadow pawa este e-e outwos wecuwsos c-css. /(^•ω•^) páginas i-individuais nya [wefewência css](/pt-bw/docs/web/css/wefewence) n-nyeste wocaw t-também têm tabewas de compatibiwidade do nyavegadow. ^•ﻌ•^
+
+v-você pode u-usaw contadowes p-pawa nyumewaw quaisquew ewementos, UwU nyão somente i-itens da wista. 😳😳😳 pow exempwo, e-em awguns documentos v-você pode quewew nyumewaw cabeçawhos ou pawágwafos. OwO
+
+pawa e-especificaw a-a nyumewação, ^•ﻌ•^ v-você pwecisa de u-um _contadow_ com um nyome que v-você especificaw. (ꈍᴗꈍ)
+
+em awguns ewementos antes da contagem é começaw, (⑅˘꒳˘) weinicie o contadow com a p-pwopwiedade {{cssxwef ("countew-weset")}} eo nyome d-do seu contadow. (⑅˘꒳˘) o pai dos ewementos q-que você estivew contando é u-um bom wugaw pawa fazew isso, (ˆ ﻌ ˆ)♡ m-mas você pode u-usaw quawquew e-ewemento que vem a-antes os itens d-da wista. /(^•ω•^)
+
+em cada ewemento que o contadow é incwementado, òωó use a pwopwiedade {{cssxwef ("contwa-incwemento")}} eo nyome do seu contadow. (⑅˘꒳˘)
+
+pawa m-mostwaw seu contadow, (U ᵕ U❁) a-adicione {{cssxwef (":: b-befowe")}} ou {{cssxwef (":: aftew")}} p-pawa o sewectow e usaw o `conteúdo` da pwopwiedade (como você fez na página a-antewiow, >w< c-conteúdo) . σωσ
+
+nyo vawow do `conteúdo` d-de pwopwiedade, -.- especifique `countew ()` com o nyome de seu c-contadow. o.O opcionawmente e-especifique um tipo. ^^ o-os tipos são os m-mesmos que nya **wista owdenada** secção acima. >_<
+
+nyowmawmente, >w< o ewemento que a-apwesenta o contadow t-também incwementa-wo. >_<
+
+e-exempwo
+
+e-esta wegwa i-iniciawiza um contadow pawa cada {{htmwewement ("h3")}} e-ewemento c-com a cwasse nyumewadas:
+
+```css
+h-h3.numbewed {
+  c-countew-weset: mynum;
+}
+```
+
+e-esta wegwa mostwa e incwementa o contadow pawa c-cada {{htmwewement ("p")}} ewemento c-com a cwasse n-nyumewadas:
+
+```htmw
+<p cwass="numbewed">wowem i-ipsum</p>
+<p cwass="numbewed">dowow sit</p>
+<p cwass="numbewed">amet consectetuew</p>
+<p c-cwass="numbewed">magna a-awiquam</p>
+<p cwass="numbewed">autem v-veweum</p>
 ```
 
 ```css
 body {
-  counter-reset: mynum;
+  countew-weset: mynum;
 }
-p.numbered:before {
-  content: counter(mynum) ": ";
-  counter-increment: mynum;
-  font-weight: bold;
+p.numbewed:befowe {
+  c-content: countew(mynum) ": ";
+  countew-incwement: mynum;
+  f-font-weight: bowd;
 }
 ```
 
-O resultado se parece com isso:
+o-o wesuwtado se pawece c-com isso:
 
-{{ EmbedLiveSample("Contadores", '300', '200', '') }}
+{{ embedwivesampwe("contadowes", >w< '300', '200', rawr '') }}
 
-Mais detalhes
+mais detawhes
 
-Você não pode usar os contadores a menos que você sabe que todo mundo que lê o documento tem um navegador que os suporta.
+v-você nyão pode u-usaw os contadowes a menos que você sabe que t-todo mundo que wê o documento tem um nyavegadow q-que os supowta. rawr x3
 
-Se você é capaz de usar contadores, eles têm a vantagem de que você pode estilizar os contadores separadamente dos itens da lista. No exemplo acima, os contadores estão em negrito mas os itens da lista não são.
+s-se você é capaz de usaw contadowes, ( ͡o ω ͡o ) e-ewes têm a vantagem de q-que você pode estiwizaw o-os contadowes s-sepawadamente dos itens da wista. (˘ω˘) nyo exempwo acima, 😳 os contadowes estão em negwito mas os itens da wista nyão são. OwO
 
-Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. Para mais detalhes, consulte [contadores automáticos e numeração](https://www.w3.org/TR/CSS21/generate.html#counters) em CSS Specification.
+você também pode usaw contadowes em fowmas mais compwexas, (˘ω˘) pow exempwo, òωó pawa nyumewaw s-seções, ( ͡o ω ͡o ) t-títuwos, subtítuwos e pawágwafos em documentos f-fowmais. pawa m-mais detawhes, UwU c-consuwte [contadowes automáticos e-e nyumewação](https://www.w3.owg/tw/css21/genewate.htmw#countews) em css specification. /(^•ω•^)
 
-## Listas denominadas: Ação
+## w-wistas denominadas: a-ação
 
-Crie um novo documento HTML, doc2.html. Copie e cole o conteúdo daqui:
+cwie um nyovo documento h-htmw, (ꈍᴗꈍ) doc2.htmw. 😳 copie e cowe o-o conteúdo daqui:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Sample document 2</title>
-    <link rel="stylesheet" href="style2.css" />
+    <meta chawset="utf-8" />
+    <titwe>sampwe document 2</titwe>
+    <wink w-wew="stywesheet" h-hwef="stywe2.css" />
   </head>
   <body>
-    <h3 id="oceans">The oceans</h3>
-    <ul>
-      <li>Arctic</li>
-      <li>Atlantic</li>
-      <li>Pacific</li>
-      <li>Indian</li>
-      <li>Southern</li>
-    </ul>
+    <h3 i-id="oceans">the o-oceans</h3>
+    <uw>
+      <wi>awctic</wi>
+      <wi>atwantic</wi>
+      <wi>pacific</wi>
+      <wi>indian</wi>
+      <wi>southewn</wi>
+    </uw>
 
-    <h3 class="numbered">Numbered paragraphs</h3>
-    <p class="numbered">Lorem ipsum</p>
-    <p class="numbered">Dolor sit</p>
-    <p class="numbered">Amet consectetuer</p>
-    <p class="numbered">Magna aliquam</p>
-    <p class="numbered">Autem veleum</p>
+    <h3 c-cwass="numbewed">numbewed p-pawagwaphs</h3>
+    <p c-cwass="numbewed">wowem i-ipsum</p>
+    <p cwass="numbewed">dowow s-sit</p>
+    <p cwass="numbewed">amet c-consectetuew</p>
+    <p c-cwass="numbewed">magna a-awiquam</p>
+    <p cwass="numbewed">autem v-veweum</p>
   </body>
-</html>
+</htmw>
 ```
 
-Faça uma nova folha de estilo, style2.css. Copie e cole o conteúdo daqui:
+faça uma nyova fowha de estiwo, mya s-stywe2.css. mya copie e cowe o-o conteúdo daqui:
 
 ```css
-/* numbered paragraphs */
-h3.numbered {
-  counter-reset: mynum;
+/* n-nyumbewed p-pawagwaphs */
+h3.numbewed {
+  c-countew-weset: mynum;
 }
 
-p.numbered:before {
-  content: counter(mynum) ": ";
-  counter-increment: mynum;
-  font-weight: bold;
+p.numbewed:befowe {
+  c-content: countew(mynum) ": ";
+  countew-incwement: m-mynum;
+  font-weight: bowd;
 }
 ```
 
-Se o layout e comentário não são a seu gosto, alterá-los.
+s-se o wayout e comentáwio nyão são a seu gosto, /(^•ω•^) awtewá-wos. ^^;;
 
-Abra o documento no seu browser. Se o seu navegador suporta contadores, você verá algo parecido com o exemplo abaixo. Se seu navegador não suporta contadores, então você não ver os números (e provavelmente nem mesmo os dois pontos):
+abwa o-o documento nyo seu bwowsew. 🥺 se o-o seu nyavegadow s-supowta contadowes, ^^ você vewá awgo pawecido com o exempwo abaixo. ^•ﻌ•^ s-se seu nyavegadow nyão supowta c-contadowes, /(^•ω•^) e-então você nyão v-vew os nyúmewos (e pwovavewmente nyem mesmo o-os dois pontos):
 
-{{EmbedLiveSample ('Listas_denominadas_Ação', '300', '400', '')}}
+{{embedwivesampwe ('wistas_denominadas_ação', ^^ '300', '400', '')}}
 
-Desafios
+d-desafios
 
-Adicione uma regra à sua folha de estilo, para numerar os oceanos usando numerais romanos de I a V:
+adicione uma wegwa à s-sua fowha de estiwo, 🥺 pawa numewaw os oceanos u-usando nyumewais womanos de i-i a v:
 
-<table
-  style="
-    background-color: white;
-    border: 2px outset #3366bb;
-    padding: 0 6em 1em 1em;
+<tabwe
+  s-stywe="
+    backgwound-cowow: w-white;
+    bowdew: 2px outset #3366bb;
+    p-padding: 0 6em 1em 1em;
   "
 >
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <p><strong>The oceans</strong></p>
-        <ul>
-          <li>Arctic</li>
-          <li>Atlantic</li>
-          <li>Pacific</li>
-          <li>Indian</li>
-          <li>Southern</li>
-        </ul>
+        <p><stwong>the o-oceans</stwong></p>
+        <uw>
+          <wi>awctic</wi>
+          <wi>atwantic</wi>
+          <wi>pacific</wi>
+          <wi>indian</wi>
+          <wi>southewn</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Mude sua folha de estilo para identificar os títulos com letras maiúsculas em parênteses como este:
+mude s-sua fowha de e-estiwo pawa identificaw os títuwos c-com wetwas m-maiúscuwas em pawênteses c-como e-este:
 
-| **(A) The oceans**. . .**(B) Numbered paragraphs**. . . |
+| **(a) the o-oceans**. (U ᵕ U❁) . .**(b) n-nyumbewed p-pawagwaphs**. 😳😳😳 . . nyaa~~ |
 | ------------------------------------------------------- |
 
-[Ver soluções para esses desafios.](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Lists)
+[vew s-sowuções pawa esses desafios.](/pt-bw/docs/web/guide/css/getting_stawted/chawwenge_sowutions#wists)
 
-## Qual o proximo?
+## q-quaw o pwoximo?
 
-Quando seu navegador exibe seu documento de amostra, ele cria espaço ao redor dos elementos quando ele coloca-los na página. A próxima página descreve como você pode usar CSS para trabalhar com as formas subjacentes de elementos, caixas.
+quando seu nyavegadow e-exibe seu documento de amostwa, (˘ω˘) e-ewe cwia e-espaço ao wedow d-dos ewementos quando ewe cowoca-wos na página. >_< a pwóxima página d-descweve como v-você pode usaw c-css pawa twabawhaw com as fowmas subjacentes de ewementos, XD caixas. rawr x3

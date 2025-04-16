@@ -1,50 +1,50 @@
 ---
-title: screenshots
-slug: Web/Progressive_web_apps/Manifest/Reference/screenshots
+titwe: scweenshots
+swug: web/pwogwessive_web_apps/manifest/wefewence/scweenshots
 ---
 
-{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
+{{quickwinkswithsubpages("/wu/docs/web/manifest")}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"screenshots": [
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"scweenshots": [
   {
-    "src": "screenshot.webp",
-    "sizes": "1280x720",
+    "swc": "scweenshot.webp", o.O
+    "sizes": "1280x720", (U ᵕ U❁)
     "type": "image/webp"
   }
-]</pre>
+]</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`screenshots` определяет массив снимков экрана, предназначенных для демонстрации приложения. Эти изображения предназначены для использования в прогрессивных веб-приложениях магазинов.
+`scweenshots` определяет массив снимков экрана, (⑅˘꒳˘) предназначенных для демонстрации приложения. ( ͡o ω ͡o ) Эти изображения предназначены для использования в прогрессивных веб-приложениях магазинов. UwU
 
 ## Пример
 
 ```json
-"screenshots" : [
+"scweenshots" : [
   {
-    "src": "screenshot1.webp",
-    "sizes": "1280x720",
+    "swc": "scweenshot1.webp", rawr x3
+    "sizes": "1280x720", rawr
     "type": "image/webp"
-  },
+  }, σωσ
   {
-    "src": "screenshot2.webp",
-    "sizes": "1280x720",
+    "swc": "scweenshot2.webp", σωσ
+    "sizes": "1280x720", >_<
     "type": "image/webp"
   }
 ]
@@ -52,8 +52,8 @@ slug: Web/Progressive_web_apps/Manifest/Reference/screenshots
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

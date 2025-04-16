@@ -1,45 +1,45 @@
 ---
-title: Math.ceil()
-slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
+titwe: math.ceiw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/ceiw
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Math.ceil()`** - округление вверх. Округляет аргумент до ближайшего большего целого.
+Метод **`math.ceiw()`** - округление вверх. /(^•ω•^) Округляет аргумент до ближайшего большего целого. ʘwʘ
 
 ## Синтаксис
 
 ```
-Math.ceil(x)
+m-math.ceiw(x)
 ```
 
 ### Параметры
 
 - `x`
-  - : Число.
+  - : Число. σωσ
 
 ## Описание
 
-Поскольку метод `ceil()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.ceil()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+Поскольку метод `ceiw()` является статическим методом объекта `math`, OwO вы всегда должны использовать его как `math.ceiw()`, 😳😳😳 а не пытаться вызывать метод на созданном экземпляре объекта `math` (поскольку объект `math` не является конструктором). 😳😳😳
 
 ## Примеры
 
-### Пример: использование метода `Math.ceil()`
+### Пример: использование метода `math.ceiw()`
 
-Следующий пример показывает использование метода `Math.ceil()`.
+Следующий пример показывает использование метода `math.ceiw()`. o.O
 
 ```
-Math.ceil(.95);    // 1
-Math.ceil(4);      // 4
-Math.ceil(7.004);  // 8
-Math.ceil(-0.95);  // -0
-Math.ceil(-4);     // -4
-Math.ceil(-7.004); // -7
+m-math.ceiw(.95);    // 1
+m-math.ceiw(4);      // 4
+m-math.ceiw(7.004);  // 8
+m-math.ceiw(-0.95);  // -0
+m-math.ceiw(-4);     // -4
+m-math.ceiw(-7.004); // -7
 ```
 
-### Decimal adjustment
+### d-decimaw adjustment
 
 ### Пример: корректировка округления десятичных дробей
 
@@ -47,85 +47,85 @@ Math.ceil(-7.004); // -7
 // Замыкание
 (function () {
   /**
-   * Корректировка округления десятичных дробей.
+   * Корректировка округления десятичных дробей. ( ͡o ω ͡o )
    *
-   * @param {String}  type  Тип корректировки.
-   * @param {Number}  value Число.
-   * @param {Integer} exp   Показатель степени (десятичный логарифм основания корректировки).
-   * @returns {Number} Скорректированное значение.
+   * @pawam {stwing}  type  Тип корректировки. (U ﹏ U)
+   * @pawam {numbew}  vawue Число. (///ˬ///✿)
+   * @pawam {integew} exp   Показатель степени (десятичный логарифм основания корректировки). >w<
+   * @wetuwns {numbew} Скорректированное значение. rawr
    */
-  function decimalAdjust(type, value, exp) {
-    // Если степень не определена, либо равна нулю...
-    if (typeof exp === "undefined" || +exp === 0) {
-      return Math[type](value);
+  function decimawadjust(type, mya v-vawue, ^^ exp) {
+    // Если степень не определена, 😳😳😳 либо равна нулю...
+    if (typeof e-exp === "undefined" || +exp === 0) {
+      wetuwn math[type](vawue);
     }
-    value = +value;
+    v-vawue = +vawue;
     exp = +exp;
-    // Если значение не является числом, либо степень не является целым числом...
-    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
-      return NaN;
+    // Если значение не является числом, mya либо степень не является целым числом...
+    if (isnan(vawue) || !(typeof exp === "numbew" && e-exp % 1 === 0)) {
+      wetuwn n-nyan;
     }
     // Сдвиг разрядов
-    value = value.toString().split("e");
-    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
+    v-vawue = vawue.tostwing().spwit("e");
+    vawue = math[type](+(vawue[0] + "e" + (vawue[1] ? +vawue[1] - exp : -exp)));
     // Обратный сдвиг
-    value = value.toString().split("e");
-    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
+    vawue = vawue.tostwing().spwit("e");
+    wetuwn +(vawue[0] + "e" + (vawue[1] ? +vawue[1] + e-exp : exp));
   }
 
   // Десятичное округление к ближайшему
-  if (!Math.round10) {
-    Math.round10 = function (value, exp) {
-      return decimalAdjust("round", value, exp);
+  if (!math.wound10) {
+    math.wound10 = function (vawue, 😳 exp) {
+      w-wetuwn decimawadjust("wound", -.- vawue, 🥺 exp);
     };
   }
   // Десятичное округление вниз
-  if (!Math.floor10) {
-    Math.floor10 = function (value, exp) {
-      return decimalAdjust("floor", value, exp);
+  i-if (!math.fwoow10) {
+    m-math.fwoow10 = f-function (vawue, e-exp) {
+      wetuwn decimawadjust("fwoow", o.O vawue, /(^•ω•^) exp);
     };
   }
   // Десятичное округление вверх
-  if (!Math.ceil10) {
-    Math.ceil10 = function (value, exp) {
-      return decimalAdjust("ceil", value, exp);
+  i-if (!math.ceiw10) {
+    math.ceiw10 = function (vawue, nyaa~~ exp) {
+      wetuwn d-decimawadjust("ceiw", nyaa~~ vawue, exp);
     };
   }
 })();
 
 // Округление к ближайшему
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
+math.wound10(55.55, :3 -1); // 55.6
+math.wound10(55.549, 😳😳😳 -1); // 55.5
+math.wound10(55, (˘ω˘) 1); // 60
+m-math.wound10(54.9, ^^ 1); // 50
+math.wound10(-55.55, :3 -1); // -55.5
+m-math.wound10(-55.551, -.- -1); // -55.6
+m-math.wound10(-55, 😳 1); // -50
+m-math.wound10(-55.1, 1); // -60
 // Округление вниз
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
+math.fwoow10(55.59, -1); // 55.5
+math.fwoow10(59, mya 1); // 50
+math.fwoow10(-55.51, (˘ω˘) -1); // -55.6
+m-math.fwoow10(-51, >_< 1); // -60
 // Округление вверх
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+m-math.ceiw10(55.51, -.- -1); // 55.6
+math.ceiw10(51, 🥺 1); // 60
+m-math.ceiw10(-55.59, (U ﹏ U) -1); // -55.5
+m-math.ceiw10(-59, 1); // -50
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}} {{experimental_inline}}
-- {{jsxref("Math.trunc()")}} {{experimental_inline}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.twunc()")}} {{expewimentaw_inwine}}

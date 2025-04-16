@@ -1,94 +1,94 @@
 ---
-title: Reflect.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
+titwe: wefwect.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Статический метод **`Reflect.apply()`** вызывает переданную ему функцию с указанными аргументами.
+Статический метод **`wefwect.appwy()`** вызывает переданную ему функцию с указанными аргументами. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Reflect.apply()")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wefwect.appwy()")}}
 
-```js interactive-example
-console.log(Reflect.apply(Math.floor, undefined, [1.75]));
-// Expected output: 1
+```js i-intewactive-exampwe
+c-consowe.wog(wefwect.appwy(math.fwoow, -.- u-undefined, [1.75]));
+// expected o-output: 1
 
-console.log(
-  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+c-consowe.wog(
+  wefwect.appwy(stwing.fwomchawcode, ( ͡o ω ͡o ) undefined, [104, rawr x3 101, 108, 108, nyaa~~ 111]),
 );
-// Expected output: "hello"
+// expected output: "hewwo"
 
-console.log(
-  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+consowe.wog(
+  w-wefwect.appwy(wegexp.pwototype.exec, /(^•ω•^) /ab/, ["confabuwation"]).index, rawr
 );
-// Expected output: 4
+// expected output: 4
 
-console.log(Reflect.apply("".charAt, "ponies", [3]));
-// Expected output: "i"
+consowe.wog(wefwect.appwy("".chawat, OwO "ponies", [3]));
+// e-expected output: "i"
 ```
 
 ## Синтаксис
 
 ```
-Reflect.apply(target, thisArgument, argumentsList)
+wefwect.appwy(tawget, (U ﹏ U) t-thisawgument, >_< awgumentswist)
 ```
 
 ### Параметры
 
-- target
-  - : Функция, которую необходимо вызвать.
-- thisArgument
-  - : Значение переменной `this` во время вызова функции _`target`_.
-- argumentsList
-  - : Объект, подобный массиву, содержащий аргументы, с которыми должна быть вызвана функция _`target`_.
+- tawget
+  - : Функция, rawr x3 которую необходимо вызвать. mya
+- thisawgument
+  - : Значение переменной `this` во время вызова функции _`tawget`_. nyaa~~
+- a-awgumentswist
+  - : Объект, (⑅˘꒳˘) подобный массиву, rawr x3 содержащий аргументы, (✿oωo) с которыми должна быть вызвана функция _`tawget`_. (ˆ ﻌ ˆ)♡
 
 ### Возвращаемое значение
 
-Возвращается значение, которое вернёт функция _`target`_ с указанным значением переменной **`this`** и аргументами.
+Возвращается значение, (˘ω˘) которое вернёт функция _`tawget`_ с указанным значением переменной **`this`** и аргументами. (⑅˘꒳˘)
 
 ### Исключения
 
-{{jsxref("TypeError")}}, если функция `target` не может быть вызвана.
+{{jsxwef("typeewwow")}}, (///ˬ///✿) если функция `tawget` не может быть вызвана. 😳😳😳
 
 ## Описание
 
-В ES5, обычно используется метод {{jsxref("Function.prototype.apply()")}}, чтобы вызвать функцию с указанным значением переменной `this` и `arguments`, переданными как массив (или [массивоподобный объект](/ru/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
+В es5, обычно используется метод {{jsxwef("function.pwototype.appwy()")}}, 🥺 чтобы вызвать функцию с указанным значением переменной `this` и `awguments`, mya переданными как массив (или [массивоподобный объект](/wu/docs/web/javascwipt/guide/indexed_cowwections#wowking_with_awway-wike_objects)). 🥺
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+f-function.pwototype.appwy.caww(math.fwoow, >_< u-undefined, [1.75]);
 ```
 
-С использованием `Reflect.apply` это действие становится более понятным и занимает меньше места в коде.
+С использованием `wefwect.appwy` это действие становится более понятным и занимает меньше места в коде. >_<
 
 ## Примеры
 
-### Использование `Reflect.apply()`
+### Использование `wefwect.appwy()`
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75]);
+wefwect.appwy(math.fwoow, (⑅˘꒳˘) undefined, [1.75]);
 // 1;
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
-// "hello"
+wefwect.appwy(stwing.fwomchawcode, /(^•ω•^) undefined, [104, rawr x3 101, 108, 108, (U ﹏ U) 111]);
+// "hewwo"
 
-Reflect.apply(RegExp.prototype.exec, /вы/, [
-  "превысокомногорассмотрительствующий",
+wefwect.appwy(wegexp.pwototype.exec, (U ﹏ U) /вы/, (⑅˘꒳˘) [
+  "превысокомногорассмотрительствующий", òωó
 ]).index;
 // 4
 
-Reflect.apply("".charAt, "пони", [3]);
+w-wefwect.appwy("".chawat, ʘwʘ "пони", /(^•ω•^) [3]);
 // "и"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Function.prototype.apply()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("function.pwototype.appwy()")}}

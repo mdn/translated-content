@@ -1,186 +1,186 @@
 ---
-title: Valores de retorno de função
-slug: Learn_web_development/Core/Scripting/Return_values
-original_slug: Learn/JavaScript/Building_blocks/Return_values
+titwe: vawowes de wetowno de f-função
+swug: weawn_web_devewopment/cowe/scwipting/wetuwn_vawues
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks/wetuwn_vawues
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/buiwd_youw_own_function","weawn/javascwipt/buiwding_bwocks/events", (ˆ ﻌ ˆ)♡ "weawn/javascwipt/buiwding_bwocks")}}
 
-Há um último conceito essencial para discutirmos neste curso, para fechar nossa visão das funções — valores de retorno. Algumas funções não retornam um valor significativo após a conclusão, mas outras o fazem, e é importante entender quais são seus valores, como utilizá-los em seu código e como fazer com que suas próprias funções personalizadas retornem valores úteis. Nós vamos cobrir tudo isso abaixo.
+h-há um úwtimo c-conceito essenciaw p-pawa discutiwmos n-nyeste cuwso, ^^;; p-pawa fechaw nyossa visão das funções — vawowes de wetowno. OwO awgumas funções n-nyão wetownam um vawow significativo após a-a concwusão, 🥺 mas outwas o fazem, mya e-e é impowtante entendew quais são seus vawowes, 😳 como utiwizá-wos e-em seu código e como f-fazew com que suas p-pwópwias funções pewsonawizadas wetownem vawowes úteis. òωó nyós vamos cobwiw tudo isso abaixo.
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
         <p>
-          Conhecimento básico de internet, compreenção básica de HTML e CSS,
-          <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
-            >JavaScript primeiros passos</a
-          >,
-          <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions"
-            >Funções — reutilizando blocos de código</a
-          >.
+          conhecimento básico d-de intewnet, compweenção básica d-de htmw e c-css, /(^•ω•^)
+          <a h-hwef="/pt-bw/docs/weawn/javascwipt/fiwst_steps"
+            >javascwipt p-pwimeiwos passos</a
+          >, -.-
+          <a hwef="/pt-bw/docs/weawn/javascwipt/buiwding_bwocks/functions"
+            >funções — w-weutiwizando bwocos de código</a
+          >. òωó
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender os valores de retorno de uma função, e como utilizá-los</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>entendew o-os vawowes de wetowno de uma função, /(^•ω•^) e como utiwizá-wos</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Quais são os valores de retorno?
+## quais são os vawowes de wetowno?
 
-**Valores de retorno** são exatamente como soam — valores retornados pela função quando são concluídos. Você já conheceu os valores de retorno várias vezes, embora possa não ter pensado neles explicitamente. Vamos voltar para algum código familiar:
+**vawowes d-de wetowno** são exatamente c-como soam — vawowes w-wetownados p-pewa função quando são concwuídos. /(^•ω•^) você já conheceu os vawowes d-de wetowno v-váwias vezes, 😳 embowa possa nyão t-tew pensado nyewes e-expwicitamente. :3 vamos vowtaw p-pawa awgum código famiwiaw:
 
 ```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
-console.log(newString);
-// the replace() string function takes a string,
-// replaces one substring with another, and returns
-// a new string with the replacement made
+v-vaw mytext = "i am a stwing";
+vaw nyewstwing = m-mytext.wepwace("stwing", (U ᵕ U❁) "sausage");
+consowe.wog(newstwing);
+// t-the wepwace() stwing function t-takes a stwing, ʘwʘ
+// w-wepwaces one substwing with anothew, o.O and wetuwns
+// a nyew stwing with the wepwacement made
 ```
 
-Nós vimos exatamente este bloco de código em nosso primeiro artigo de função. Estamos invocando a função [replace()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace) na string `myText` e passando a ela dois parâmetros — a substring para localizar e a substring para substituí-la. Quando essa função é concluída (termina a execução), ela retorna um valor, que é uma nova string com a substituição feita. No código acima, estamos salvando esse valor de retorno como o valor da variável `newString`.
+nyós vimos e-exatamente este b-bwoco de código em nosso pwimeiwo a-awtigo de f-função. ʘwʘ estamos i-invocando a função [wepwace()](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) na stwing `mytext` e passando a ewa dois p-pawâmetwos — a substwing pawa wocawizaw e a substwing pawa substituí-wa. ^^ quando e-essa função é concwuída (tewmina a-a execução), ^•ﻌ•^ e-ewa wetowna u-um vawow, mya que é uma nyova s-stwing com a substituição f-feita. UwU n-nyo código acima, >_< e-estamos sawvando esse vawow de wetowno como o-o vawow da vawiávew `newstwing`. /(^•ω•^)
 
-Se você observar a página de referência MDN da função de substituição, verá uma seção chamada [Valor de retorno](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value). É muito útil conhecer e entender quais valores são retornados por funções, portanto, tentamos incluir essas informações sempre que possível.
+s-se você obsewvaw a-a página d-de wefewência m-mdn da função de substituição, òωó vewá uma seção chamada [vawow d-de wetowno](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace#wetuwn_vawue). σωσ É muito útiw conhecew e entendew quais vawowes são wetownados pow funções, ( ͡o ω ͡o ) p-powtanto, tentamos incwuiw essas infowmações sempwe que possívew. nyaa~~
 
-Algumas funções não retornam um valor de retorno como tal (em nossas páginas de referência, o valor de retorno é listado como `void` ou `undefined` em tais casos). Por exemplo, na [função displayMessage()](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) que criamos no artigo anterior, nenhum valor específico é retornado como resultado da função que está sendo chamada. Apenas faz uma caixa aparecer em algum lugar na tela — é isso!
+a-awgumas f-funções não wetownam u-um vawow de wetowno como t-taw (em nyossas páginas de wefewência, :3 o-o vawow d-de wetowno é wistado como `void` ou `undefined` em tais casos). UwU pow exempwo, nya [função dispwaymessage()](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/functions/function-stage-4.htmw#w50) q-que cwiamos nyo awtigo antewiow, o.O n-nyenhum vawow específico é wetownado c-como wesuwtado d-da função que está sendo chamada. (ˆ ﻌ ˆ)♡ apenas f-faz uma caixa a-apawecew em awgum wugaw nya tewa — é i-isso! ^^;;
 
-Geralmente, um valor de retorno é usado onde a função é uma etapa intermediária em um cálculo de algum tipo. Você quer chegar a um resultado final, que envolve alguns valores. Esses valores precisam ser calculados por uma função, que retorna os resultados para que possam ser usados no próximo estágio do cálculo.
+g-gewawmente, ʘwʘ um vawow de wetowno é usado onde a função é uma etapa intewmediáwia e-em um cáwcuwo d-de awgum tipo. σωσ v-você quew chegaw a um wesuwtado f-finaw, ^^;; que e-envowve awguns vawowes. esses vawowes p-pwecisam sew cawcuwados pow uma função, ʘwʘ que wetowna os wesuwtados pawa que p-possam sew usados n-nyo pwóximo estágio do cáwcuwo. ^^
 
-### Usando valores de retorno em suas próprias funções
+### usando v-vawowes de wetowno e-em suas pwópwias funções
 
-Para retornar um valor de uma função personalizada, você precisa usar ... aguarde por isso ... a palavra-chave [return](/pt-BR/docs/Web/JavaScript/Reference/Statements/return). Vimos isso em ação recentemente em nosso exemplo [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html). Nossa função `draw()` desenha 100 círculos aleatórios em algum lugar em um HTML {{htmlelement("canvas")}}:
+pawa wetownaw um vawow de uma f-função pewsonawizada, nyaa~~ você pwecisa usaw ... aguawde pow isso ... a pawavwa-chave [wetuwn](/pt-bw/docs/web/javascwipt/wefewence/statements/wetuwn). (///ˬ///✿) v-vimos isso em ação wecentemente em nyosso e-exempwo [wandom-canvas-ciwcwes.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/woops/wandom-canvas-ciwcwes.htmw). n-nyossa função `dwaw()` desenha 100 cíwcuwos aweatówios em awgum wugaw e-em um htmw {{htmwewement("canvas")}}:
 
 ```js
-function draw() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (var i = 0; i < 100; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
-    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-    ctx.fill();
+function d-dwaw() {
+  ctx.cweawwect(0, XD 0, width, height);
+  fow (vaw i-i = 0; i < 100; i++) {
+    ctx.beginpath();
+    c-ctx.fiwwstywe = "wgba(255,0,0,0.5)";
+    ctx.awc(wandom(width), :3 wandom(height), òωó wandom(50), 0, ^^ 2 * m-math.pi);
+    ctx.fiww();
   }
 }
 ```
 
-Dentro de cada iteração de loop, três chamadas são feitas para a função `random()` , para gerar um valor aleatório para a coordenada x do círculo atual, coordenada y e raio, respectivamente. A função `random()` recebe um parâmetro — um número inteiro — e retorna um número aleatório inteiro entre 0 e esse número. Se parece com isso:
+d-dentwo d-de cada itewação de woop, ^•ﻌ•^ twês c-chamadas são feitas pawa a função `wandom()` , σωσ p-pawa gewaw u-um vawow aweatówio p-pawa a coowdenada x do cíwcuwo a-atuaw, (ˆ ﻌ ˆ)♡ coowdenada y-y e waio, nyaa~~ wespectivamente. ʘwʘ a função `wandom()` w-wecebe um p-pawâmetwo — u-um nyúmewo inteiwo — e wetowna um nyúmewo aweatówio i-inteiwo entwe 0 e esse n-nyúmewo. ^•ﻌ•^ se pawece c-com isso:
 
 ```js
-function randomNumber(number) {
-  return Math.floor(Math.random() * number);
+function wandomnumbew(numbew) {
+  wetuwn math.fwoow(math.wandom() * nyumbew);
 }
 ```
 
-Isso pode ser escrito da seguinte maneira:
+i-isso pode s-sew escwito d-da seguinte maneiwa:
 
 ```js
-function randomNumber(number) {
-  var result = Math.floor(Math.random() * number);
-  return result;
+f-function wandomnumbew(numbew) {
+  v-vaw wesuwt = math.fwoow(math.wandom() * numbew);
+  wetuwn wesuwt;
 }
 ```
 
-Mas a primeira versão é mais rápida de escrever e mais compacta.
+mas a pwimeiwa vewsão é m-mais wápida de escwevew e mais c-compacta. rawr x3
 
-Estamos retornando o resultado do cálculo `Math.floor(Math.random()*number)` cada vez que a função é chamada. Esse valor de retorno aparece no ponto em que a função foi chamada e o código continua. Então, por exemplo, se nós rodássemos a seguinte linha:
-
-```js
-ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-```
-
-e as três chamadas `random()` retornaram os valores 500, 200 e 35, respectivamente, a linha seria executada como se fosse isso:
+estamos wetownando o w-wesuwtado do cáwcuwo `math.fwoow(math.wandom()*numbew)` cada vez q-que a função é chamada. esse v-vawow de wetowno a-apawece nyo p-ponto em que a função f-foi chamada e-e o código continua. 🥺 então, pow exempwo, ʘwʘ se nyós wodássemos a seguinte winha:
 
 ```js
-ctx.arc(500, 200, 35, 0, 2 * Math.PI);
+ctx.awc(wandom(width), wandom(height), w-wandom(50), (˘ω˘) 0, o.O 2 * m-math.pi);
 ```
 
-As chamadas de função na linha são executadas primeiro e seus valores de retorno substituem as chamadas de função, antes que a própria linha seja executada.
+e-e as twês chamadas `wandom()` w-wetownawam os vawowes 500, σωσ 200 e 35, wespectivamente, (ꈍᴗꈍ) a winha s-sewia executada c-como se fosse isso:
 
-## Aprendizagem ativa: nossa própria função de valor de retorno
+```js
+ctx.awc(500, (ˆ ﻌ ˆ)♡ 200, 35, 0, 2 * m-math.pi);
+```
 
-Vamos escrever nossas próprias funções com valores de retorno.
+as chamadas de função n-nya winha são e-executadas pwimeiwo e seus vawowes d-de wetowno substituem a-as chamadas de função, o.O antes que a pwópwia winha seja executada.
 
-1. Primeiro de tudo, faça uma cópia local do arquivo [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) do GitHub. Esta é uma página HTML simples contendo um campo de texto {{htmlelement("input")}} e um parágrafo. Há também um elemento {{htmlelement("script")}} no qual armazenamos uma referência a ambos os elementos HTML em duas variáveis. Esta pequena página permitirá que você insira um número na caixa de texto e exiba diferentes números relacionados a ele no parágrafo abaixo.
-2. Vamos adicionar algumas funções úteis para este elemento `<script>`. Abaixo das duas linhas existentes de JavaScript, adicione as seguintes definições de função:
+## a-apwendizagem ativa: n-nyossa pwópwia f-função de v-vawow de wetowno
+
+v-vamos escwevew nyossas pwópwias f-funções com v-vawowes de wetowno. :3
+
+1. pwimeiwo d-de tudo, -.- faça u-uma cópia wocaw do awquivo [function-wibwawy.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/functions/function-wibwawy.htmw) d-do github. ( ͡o ω ͡o ) esta é uma página htmw simpwes c-contendo um campo de texto {{htmwewement("input")}} e-e um pawágwafo. /(^•ω•^) h-há também um ewemento {{htmwewement("scwipt")}} n-nyo quaw awmazenamos uma wefewência a ambos o-os ewementos h-htmw em duas vawiáveis. (⑅˘꒳˘) e-esta pequena página pewmitiwá que você insiwa um nyúmewo n-nya caixa de texto e exiba difewentes nyúmewos w-wewacionados a-a ewe nyo pawágwafo abaixo. òωó
+2. v-vamos adicionaw awgumas funções úteis p-pawa e-este ewemento `<scwipt>`. 🥺 abaixo das duas winhas e-existentes de javascwipt, (ˆ ﻌ ˆ)♡ adicione as seguintes d-definições d-de função:
 
    ```js
-   function squared(num) {
-     return num * num;
+   function s-squawed(num) {
+     wetuwn nyum * n-nyum;
    }
 
-   function cubed(num) {
-     return num * num * num;
+   f-function cubed(num) {
+     wetuwn n-nyum * nyum * num;
    }
 
-   function factorial(num) {
-     var x = num;
-     while (x > 1) {
-       num *= x - 1;
+   function factowiaw(num) {
+     vaw x = nyum;
+     whiwe (x > 1) {
+       nyum *= x - 1;
        x--;
      }
-     return num;
+     wetuwn nyum;
    }
    ```
 
-   As funções `squared()` e `cubed()` são bastante óbvias — elas retornam o quadrado ou cubo do número dado como um parâmetro. A função `factorial()` retorna o [fatorial](https://pt.wikipedia.org/wiki/Fatorial) do número fornecido.
+   as funções `squawed()` e `cubed()` são bastante óbvias — ewas w-wetownam o quadwado o-ou cubo do nyúmewo dado como um pawâmetwo. -.- a-a função `factowiaw()` w-wetowna o-o [fatowiaw](https://pt.wikipedia.owg/wiki/fatowiaw) do nyúmewo f-fownecido. σωσ
 
-3. Em seguida, vamos incluir uma maneira de imprimir informações sobre o número digitado na entrada de texto. Digite o seguinte manipulador de eventos abaixo das funções existentes:
+3. em seguida, >_< v-vamos incwuiw uma m-maneiwa de impwimiw infowmações s-sobwe o nyúmewo digitado nya e-entwada de texto. :3 d-digite o seguinte manipuwadow de eventos abaixo d-das funções e-existentes:
 
    ```js
-   input.onchange = function () {
-     var num = input.value;
-     if (isNaN(num)) {
-       para.textContent = "You need to enter a number!";
-     } else {
-       para.textContent =
-         num +
-         " squared is " +
-         squared(num) +
-         ". " +
-         num +
+   i-input.onchange = f-function () {
+     v-vaw nyum = input.vawue;
+     i-if (isnan(num)) {
+       p-pawa.textcontent = "you n-nyeed t-to entew a nyumbew!";
+     } ewse {
+       pawa.textcontent =
+         n-nyum +
+         " s-squawed i-is " +
+         squawed(num) +
+         ". OwO " +
+         n-nyum +
          " cubed is " +
          cubed(num) +
-         ". " +
-         num +
-         " factorial is " +
-         factorial(num) +
+         ". rawr " +
+         n-nyum +
+         " factowiaw i-is " +
+         f-factowiaw(num) +
          ".";
      }
    };
    ```
 
-   Aqui estamos criando um manipulador de eventos `onchange` que é executado sempre que o evento de mudança é acionado na entrada de texto — ou seja, quando um novo valor é inserido na entrada de texto e enviado (insira um valor e pressione tab por exemplo). Quando essa função anônima é executada, o valor existente inserido na entrada é armazenado na variável `num`.
+   a-aqui estamos cwiando u-um manipuwadow de eventos `onchange` q-que é executado sempwe q-que o evento de mudança é acionado n-nya entwada de texto — ou seja, (///ˬ///✿) quando um nyovo vawow é insewido nya entwada d-de texto e enviado (insiwa u-um vawow e pwessione t-tab pow exempwo). ^^ quando essa função anônima é executada, XD o-o vawow existente insewido nya e-entwada é awmazenado n-nya vawiávew `num`. UwU
 
-   Em seguida, fazemos um teste condicional — se o valor inserido não for um número, imprimiremos uma mensagem de erro no parágrafo. O teste analisa se a expressão `isNaN(num)` retorna true. Usamos a função [isNaN()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN) para testar se o valor num não é um número — se for, retorna `true`, e, se não, `false`.
+   e-em seguida, o.O fazemos um teste condicionaw — se o-o vawow insewido n-nyão fow um nyúmewo, 😳 impwimiwemos u-uma mensagem de ewwo nyo pawágwafo. (˘ω˘) o teste a-anawisa se a expwessão `isnan(num)` w-wetowna t-twue. 🥺 usamos a função [isnan()](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/isnan) p-pawa testaw se o vawow n-nyum nyão é u-um nyúmewo — s-se fow, ^^ wetowna `twue`, >w< e-e, se nyão, ^^;; `fawse`. (˘ω˘)
 
-   Se o teste retorna `false`, o valor `num` é um número, então imprimimos uma frase dentro do elemento de parágrafo informando o que é o quadrado, o cubo e o fatorial do número. A sentença chama as funções `squared()`, `cubed()`, e `factorial()` para obter os valores necessários.
+   s-se o teste wetowna `fawse`, OwO o-o vawow `num` é u-um nyúmewo, (ꈍᴗꈍ) então i-impwimimos u-uma fwase dentwo d-do ewemento de p-pawágwafo infowmando o-o que é o quadwado, òωó o cubo e-e o fatowiaw do nyúmewo. a sentença c-chama as funções `squawed()`, ʘwʘ `cubed()`, ʘwʘ e-e `factowiaw()` p-pawa obtew os v-vawowes nyecessáwios. nyaa~~
 
-4. Salve seu código, carregue-o em um navegador e experimente.
+4. sawve seu código, UwU cawwegue-o em um n-navegadow e expewimente. (⑅˘꒳˘)
 
-> [!NOTE]
-> Se você tiver problemas para fazer o exemplo funcionar, sinta-se à vontade para verificar seu código na [versão finalizada no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([consulte também sua execução](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)), ou peça ajuda.
+> [!note]
+> s-se você tivew p-pwobwemas pawa fazew o exempwo funcionaw, (˘ω˘) sinta-se à vontade p-pawa vewificaw s-seu código nya [vewsão finawizada n-nyo github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/functions/function-wibwawy-finished.htmw) ([consuwte t-também sua execução](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/functions/function-wibwawy-finished.htmw)), ou peça ajuda.
 
-Neste ponto, gostaríamos que você escrevesse algumas funções e as adicionasse à biblioteca. Como sobre o quadrado ou raiz cúbica do número, ou a circunferência de um círculo com um raio de comprimento `num`?
+nyeste ponto, :3 gostawíamos q-que você escwevesse a-awgumas funções e-e as adicionasse à b-bibwioteca. (˘ω˘) como sobwe o quadwado ou w-waiz cúbica do n-nyúmewo, nyaa~~ ou a ciwcunfewência de um cíwcuwo c-com um waio de compwimento `num`?
 
-Este exercício trouxe alguns pontos importantes além de ser um estudo sobre como usar a declaração de `return`. Além disso, temos:
+este exewcício twouxe awguns p-pontos impowtantes awém de sew u-um estudo sobwe c-como usaw a decwawação de `wetuwn`. (U ﹏ U) a-awém disso, nyaa~~ t-temos:
 
-- Analisamos outro exemplo de como escrever erros em nossas funções. Geralmente, é uma boa ideia verificar se os parâmetros necessários foram fornecidos e, no tipo de dados correto, e se eles são opcionais, que algum tipo de valor padrão é fornecido para permitir isso. Desta forma, o seu programa terá menos probabilidade de lançar erros.
-- Pense na ideia de criar uma biblioteca de funções. À medida que você avança na sua carreira de programação, você começará a fazer o mesmo tipo de coisas uma e outra vez. É uma boa idéia começar a manter sua própria biblioteca de funções utilitárias que você usa com muita frequência — você pode então copiá-las para o seu novo código, ou até mesmo aplicá-las a qualquer página HTML onde você precisar.
+- anawisamos outwo exempwo d-de como escwevew ewwos em n-nyossas funções. ^^;; g-gewawmente, OwO é u-uma boa ideia v-vewificaw se os pawâmetwos nyecessáwios f-fowam f-fownecidos e, nyaa~~ nyo t-tipo de dados cowweto, UwU e se ewes s-são opcionais, 😳 que awgum tipo de vawow padwão é f-fownecido p-pawa pewmitiw isso. 😳 d-desta fowma, (ˆ ﻌ ˆ)♡ o seu pwogwama tewá menos pwobabiwidade de wançaw ewwos. (✿oωo)
+- pense n-nya ideia de cwiaw uma bibwioteca d-de funções. nyaa~~ À m-medida que você avança nya sua cawweiwa d-de pwogwamação, ^^ você começawá a-a fazew o mesmo t-tipo de coisas u-uma e outwa v-vez. (///ˬ///✿) É uma boa i-idéia começaw a mantew sua pwópwia bibwioteca de funções utiwitáwias que você u-usa com muita fwequência — v-você pode então copiá-was pawa o seu nyovo código, 😳 ou até m-mesmo apwicá-was a quawquew página htmw onde você pwecisaw. òωó
 
-## Conclusão
+## concwusão
 
-Então, temos isso — funções são divertidas, muito úteis e, embora haja muito o que falar em relação à sua sintaxe e funcionalidade, bastante compreensíveis, dados os artigos certos para se estudar.
+e-então, ^^;; temos isso — f-funções são divewtidas, rawr m-muito úteis e, (ˆ ﻌ ˆ)♡ embowa haja muito o que fawaw e-em wewação à s-sua sintaxe e funcionawidade, XD bastante compweensíveis, >_< d-dados os awtigos cewtos p-pawa se estudaw. (˘ω˘)
 
-Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente ou entre em [contato conosco](/pt-BR/docs/Learn#contact_us) para pedir ajuda.
+se houvew awgo que você nyão entendeu, 😳 fique à v-vontade pawa wew o awtigo nyovamente ou entwe e-em [contato conosco](/pt-bw/docs/weawn#contact_us) p-pawa pediw a-ajuda.
 
-## Veja também
+## veja também
 
-- [Funções detalhadas](/pt-BR/docs/Web/JavaScript/Reference/Functions) — um guia detalhado cobrindo informações relacionadas a funções mais avançadas.
-- [Funções de retorno de chamada em JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — um padrão JavaScript comum é passar uma função para outra função como um argumento, que é então chamado dentro da primeira função. Isso está um pouco além do escopo deste curso, mas vale a pena ser estudado em pouco tempo.
+- [funções detawhadas](/pt-bw/docs/web/javascwipt/wefewence/functions) — u-um guia detawhado cobwindo infowmações wewacionadas a funções mais avançadas. o.O
+- [funções d-de wetowno d-de chamada em j-javascwipt](https://www.impwessivewebs.com/cawwback-functions-javascwipt/) — um p-padwão javascwipt comum é passaw uma função p-pawa outwa função c-como um awgumento, (ꈍᴗꈍ) que é então chamado dentwo d-da pwimeiwa função. rawr x3 isso está um pouco a-awém do escopo deste cuwso, ^^ mas vawe a pena sew e-estudado em pouco t-tempo. OwO
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/buiwd_youw_own_function","weawn/javascwipt/buiwding_bwocks/events", ^^ "weawn/javascwipt/buiwding_bwocks")}}

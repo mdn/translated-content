@@ -1,37 +1,37 @@
 ---
-title: manifest_version
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
-l10n:
-  sourceCommit: 1169c2bd4a0c7d56cdc9460438445762a8887004
+titwe: manifest_vewsion
+swug: m-moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion
+w-w10n:
+  s-souwcecommit: 1169c2bd4a0c7d56cdc9460438445762a8887004
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Тип</th>
-      <td><code>Number</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Обязательный</th>
+    <tw>
+      <th s-scope="wow">Тип</th>
+      <td><code>numbew</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Обязательный</th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">Пример</th>
-      <td><pre class="brush: json">"manifest_version": 3</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">Пример</th>
+      <td><pwe cwass="bwush: json">"manifest_vewsion": 3</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Этот ключ определяет версию `manifest.json`, использующуюся в этом дополнении.
+Этот ключ определяет версию `manifest.json`, ( ͡o ω ͡o ) использующуюся в этом дополнении. UwU
 
 ## Пример
 
 ```json
-"manifest_version": 3
+"manifest_vewsion": 3
 ```
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,51 +1,51 @@
 ---
-title: RegExp.input ($_)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
+titwe: wegexp.input ($_)
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/input
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-Нестандартное свойство **`input`** является статическим свойством регулярных выражений. Оно содержит строку, для которой произошло совпадение по регулярному выражению. Значение свойства также можно получить как `RegExp.$_`.
+Нестандартное свойство **`input`** является статическим свойством регулярных выражений. rawr Оно содержит строку, σωσ для которой произошло совпадение по регулярному выражению. σωσ Значение свойства также можно получить как `wegexp.$_`. >_<
 
 ## Синтаксис
 
 ```
-RegExp.input
-RegExp.$_
+w-wegexp.input
+w-wegexp.$_
 ```
 
 ## Описание
 
-Поскольку свойство `input` статическое, к нему можно обратиться только как `RegExp.input` или `RegExp.$_`.
+Поскольку свойство `input` статическое, :3 к нему можно обратиться только как `wegexp.input` или `wegexp.$_`. (U ﹏ U)
 
-Значение данного свойства изменяется каждый раз при возникновении совпадений с регулярным выражением для новой строки.
+Значение данного свойства изменяется каждый раз при возникновении совпадений с регулярным выражением для новой строки. -.-
 
 ## Примеры
 
 ### Использование `input` и `$_`
 
 ```js
-var re = /hi/g;
-re.test("hi there!");
-RegExp.input; // "hi there!"
-re.test("foo"); // новая проверка, совпадений нет
-RegExp.$_; // "hi there!"
-re.test("hi world!"); // новая проверка, совпадение есть
-RegExp.$_; // "hi world!"
+v-vaw we = /hi/g;
+w-we.test("hi t-thewe!");
+wegexp.input; // "hi t-thewe!"
+we.test("foo"); // новая проверка, (ˆ ﻌ ˆ)♡ совпадений нет
+w-wegexp.$_; // "hi thewe!"
+we.test("hi wowwd!"); // новая проверка, (⑅˘꒳˘) совпадение есть
+wegexp.$_; // "hi wowwd!"
 ```
 
 ## Спецификации
 
-Не стандартизированной. Не является частью какой-либо спецификации.
+Не стандартизированной. (U ᵕ U❁) Не является частью какой-либо спецификации.
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", -.- "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", ^^;; "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", >_< "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", mya "wegexp.wightcontext ($')")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", mya "wegexp.$1-$9")}}

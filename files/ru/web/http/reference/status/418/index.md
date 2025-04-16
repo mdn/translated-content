@@ -1,24 +1,24 @@
 ---
-title: 418 I'm a teapot
-slug: Web/HTTP/Reference/Status/418
+titwe: 418 i'm a teapot
+swug: w-web/http/wefewence/status/418
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP код ошибки **`418 I'm a teapot`** сообщает о том, что сервер не может приготовить кофе, потому что он чайник. Эта ошибка ссылается на Hyper Text Coffee Pot Control Protocol (гипертекстовый протокол кофейников) который был первоапрельской шуткой в 1998 году.
+h-http код ошибки **`418 i-i'm a teapot`** сообщает о том, >_< что сервер не может приготовить кофе, :3 потому что он чайник. (U ﹏ U) Эта ошибка ссылается на h-hypew text c-coffee pot contwow p-pwotocow (гипертекстовый протокол кофейников) который был первоапрельской шуткой в 1998 году. -.-
 
 ## Статус
 
 ```
-418 I'm a teapot
+418 i-i'm a teapot
 ```
 
 ## Спецификации
 
-| Specification                                 | Title                                                                      |
+| s-specification                                 | titwe                                                                      |
 | --------------------------------------------- | -------------------------------------------------------------------------- |
-| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
+| {{wfc("2324", "418 i'm a teapot" , (ˆ ﻌ ˆ)♡ "2.3.2")}} | hypew text coffee pot contwow p-pwotocow (htcpcp/1.0): semantics and content |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,329 +1,329 @@
 ---
-title: Introdução ao JavaScript Async
-slug: Learn_web_development/Extensions/Async_JS/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introducing
+titwe: intwodução ao javascwipt a-async
+swug: w-weawn_web_devewopment/extensions/async_js/intwoducing
+o-owiginaw_swug: w-weawn/javascwipt/asynchwonous/intwoducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{weawnsidebaw}}{{nextmenu("weawn/javascwipt/asynchwonous/pwomises", o.O "weawn/javascwipt/asynchwonous")}}
 
-Neste artigo, explicaremos o que é programação assíncrona, por que precisamos dela e discutiremos brevemente algumas das maneiras pelas quais as funções assíncronas foram implementadas historicamente em JavaScript.
+n-nyeste a-awtigo, 😳 expwicawemos o-o que é p-pwogwamação assíncwona, (˘ω˘) pow que pwecisamos dewa e discutiwemos bwevemente a-awgumas das maneiwas pewas quais as funções assíncwonas f-fowam impwementadas histowicamente e-em javascwipt. 🥺
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico de informática, uma compreensão razoável de fundamentos de
-        JavaScript, incluindo funções e manipuladores de eventos.
+        conhecimento b-básico de infowmática, ^^ uma c-compweensão wazoávew d-de fundamentos de
+        javascwipt, >w< incwuindo funções e manipuwadowes d-de eventos. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Para se familiarizar com o que é JavaScript assíncrono, como ele difere do JavaScript síncrono e por que precisamos dele.
+        pawa se famiwiawizaw com o que é javascwipt a-assíncwono, como ewe difewe d-do javascwipt síncwono e-e pow que p-pwecisamos dewe. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-A programação assíncrona é uma técnica que permite que seu programa inicie uma tarefa potencialmente de longa duração e ainda seja capaz de responder a outros eventos enquanto essa tarefa é executada, em vez de ter que esperar até que essa tarefa seja concluída. Uma vez que essa tarefa tenha terminado, seu programa é apresentado com o resultado.
+a-a pwogwamação assíncwona é uma t-técnica que pewmite que seu pwogwama inicie uma t-tawefa potenciawmente de wonga duwação e ainda seja capaz de wespondew a outwos eventos enquanto e-essa tawefa é executada, OwO em v-vez de tew que e-espewaw até que e-essa tawefa seja concwuída. (ꈍᴗꈍ) uma vez que essa tawefa tenha tewminado, òωó s-seu pwogwama é a-apwesentado com o wesuwtado. ʘwʘ
 
-Muitas funções fornecidas pelos navegadores, especialmente as mais interessantes, podem levar muito tempo e, portanto, são assíncronas. Por exemplo:
+m-muitas funções f-fownecidas pewos nyavegadowes, ʘwʘ e-especiawmente as mais intewessantes, nyaa~~ p-podem wevaw muito tempo e, UwU powtanto, s-são assíncwonas. (⑅˘꒳˘) pow exempwo:
 
-- Fazendo solicitações HTTP usando {{domxref("fetch", "fetch()")}}
-- Acessar a câmera ou o microfone de um usuário usando {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}
-- Pedindo a um usuário para selecionar arquivos usando {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}}
+- f-fazendo sowicitações http usando {{domxwef("fetch", (˘ω˘) "fetch()")}}
+- a-acessaw a-a câmewa ou o micwofone de um usuáwio usando {{domxwef("mediadevices/getusewmedia", :3 "getusewmedia()")}}
+- pedindo a um usuáwio pawa sewecionaw awquivos usando {{domxwef("window/showopenfiwepickew", (˘ω˘) "showopenfiwepickew()")}}
 
-Portanto, mesmo que você não precise _implementar_ suas próprias funções assíncronas com muita frequência, é muito provável que você precise _usá-las_ corretamente.
+p-powtanto, nyaa~~ mesmo q-que você nyão pwecise _impwementaw_ s-suas pwópwias f-funções a-assíncwonas com muita fwequência, (U ﹏ U) é muito pwovávew que você p-pwecise _usá-was_ cowwetamente. nyaa~~
 
-Neste artigo, começaremos analisando o problema com funções síncronas de longa duração, que tornam a programação assíncrona uma necessidade.
+nyeste awtigo, ^^;; começawemos anawisando o pwobwema c-com funções síncwonas d-de wonga duwação, OwO q-que townam a-a pwogwamação assíncwona uma n-nyecessidade. nyaa~~
 
-## Programação síncrona
+## p-pwogwamação s-síncwona
 
-Considere o seguinte código:
+considewe o-o seguinte código:
 
 ```js
-const name = "Miriam";
-const greeting = `Hello, my name is ${name}!`;
-console.log(greeting);
-// "Hello, my name is Miriam!"
+const nyame = "miwiam";
+c-const gweeting = `hewwo, UwU m-my nyame is ${name}!`;
+c-consowe.wog(gweeting);
+// "hewwo, 😳 m-my nyame i-is miwiam!"
 ```
 
-Este código:
+este código:
 
-1. Declara uma string chamada `name`.
-2. Declara outra string chamada `greeting`, que usa `name`.
-3. Emite a saudação para o console JavaScript.
+1. 😳 decwawa uma stwing chamada `name`. (ˆ ﻌ ˆ)♡
+2. d-decwawa outwa stwing chamada `gweeting`, (✿oωo) que usa `name`. nyaa~~
+3. emite a saudação pawa o-o consowe javascwipt. ^^
 
-Devemos observar aqui que o navegador efetivamente percorre o programa uma linha de cada vez, na ordem em que o escrevemos. Em cada ponto, o navegador espera que a linha termine seu trabalho antes de seguir para a próxima linha. Tem que fazer isso porque cada linha depende do trabalho feito nas linhas anteriores.
+devemos obsewvaw aqui que o nyavegadow efetivamente p-pewcowwe o-o pwogwama uma w-winha de cada vez, (///ˬ///✿) nya owdem e-em que o escwevemos. 😳 em cada ponto, òωó o-o nyavegadow e-espewa que a winha tewmine seu twabawho antes de seguiw pawa a pwóxima winha. ^^;; tem que fazew isso p-powque cada winha depende do t-twabawho feito nyas winhas antewiowes. rawr
 
-Isso torna este um **programa síncrono**. Ainda seria síncrono mesmo se chamássemos uma função separada, como esta:
+i-isso towna e-este um **pwogwama síncwono**. (ˆ ﻌ ˆ)♡ ainda sewia síncwono m-mesmo se c-chamássemos uma função sepawada, c-como esta:
 
 ```js
-function makeGreeting(name) {
-  return `Hello, my name is ${name}!`;
+f-function makegweeting(name) {
+  wetuwn `hewwo, XD my nyame is ${name}!`;
 }
 
-const name = "Miriam";
-const greeting = makeGreeting(name);
-console.log(greeting);
-// "Hello, my name is Miriam!"
+c-const nyame = "miwiam";
+c-const gweeting = m-makegweeting(name);
+consowe.wog(gweeting);
+// "hewwo, >_< m-my nyame is miwiam!"
 ```
 
-Aqui, `makeGreeting()` é uma **função síncrona** porque o chamador precisa esperar que a função termine seu trabalho e retorne um valor antes que o chamador possa continuar.
+a-aqui, (˘ω˘) `makegweeting()` é uma **função s-síncwona** powque o chamadow pwecisa espewaw que a função tewmine seu twabawho e-e wetowne um v-vawow antes que o chamadow possa continuaw. 😳
 
-### Uma função síncrona de longa duração
+### u-uma função s-síncwona de wonga duwação
 
-E se a função síncrona demorar muito?
+e se a função síncwona demowaw m-muito?
 
-O programa abaixo usa um algoritmo muito ineficiente para gerar vários números primos grandes quando um usuário clica no botão "Gerar primos". Quanto maior o número de primos que um usuário especificar, mais tempo a operação levará.
+o pwogwama abaixo usa um awgowitmo muito ineficiente pawa gewaw váwios n-nyúmewos pwimos gwandes quando um usuáwio cwica n-nyo botão "gewaw p-pwimos". o.O quanto maiow o nyúmewo de pwimos que um usuáwio especificaw, (ꈍᴗꈍ) m-mais t-tempo a opewação wevawá. rawr x3
 
-```html
-<label for="quota">Número de primos:</label>
-<input type="text" id="quota" name="quota" value="1000000" />
+```htmw
+<wabew fow="quota">númewo de pwimos:</wabew>
+<input t-type="text" id="quota" n-nyame="quota" vawue="1000000" />
 
-<button id="generate">Gerar primos</button>
-<button id="reload">Recarregar</button>
+<button id="genewate">gewaw pwimos</button>
+<button i-id="wewoad">wecawwegaw</button>
 
 <div id="output"></div>
 ```
 
 ```js
-const MAX_PRIME = 1000000;
+c-const m-max_pwime = 1000000;
 
-function isPrime(n) {
-  for (let i = 2; i <= Math.sqrt(n); i++) {
-    if (n % i === 0) {
-      return false;
+function i-ispwime(n) {
+  fow (wet i = 2; i-i <= math.sqwt(n); i-i++) {
+    if (n % i-i === 0) {
+      wetuwn fawse;
     }
   }
-  return n > 1;
+  w-wetuwn ny > 1;
 }
 
-const random = (max) => Math.floor(Math.random() * max);
+c-const wandom = (max) => math.fwoow(math.wandom() * max);
 
-function generatePrimes(quota) {
-  const primes = [];
-  while (primes.length < quota) {
-    const candidate = random(MAX_PRIME);
-    if (isPrime(candidate)) {
-      primes.push(candidate);
+function g-genewatepwimes(quota) {
+  c-const pwimes = [];
+  w-whiwe (pwimes.wength < quota) {
+    const candidate = w-wandom(max_pwime);
+    if (ispwime(candidate)) {
+      p-pwimes.push(candidate);
     }
   }
-  return primes;
+  w-wetuwn pwimes;
 }
 
-const quota = document.querySelector("#quota");
-const output = document.querySelector("#output");
+const quota = document.quewysewectow("#quota");
+const output = d-document.quewysewectow("#output");
 
-document.querySelector("#generate").addEventListener("click", () => {
-  const primes = generatePrimes(quota.value);
-  output.textContent = `Finished generating ${quota.value} primes!`;
+d-document.quewysewectow("#genewate").addeventwistenew("cwick", ^^ () => {
+  c-const pwimes = g-genewatepwimes(quota.vawue);
+  output.textcontent = `finished g-genewating ${quota.vawue} pwimes!`;
 });
 
-document.querySelector("#reload").addEventListener("click", () => {
-  document.location.reload();
+document.quewysewectow("#wewoad").addeventwistenew("cwick", OwO () => {
+  document.wocation.wewoad();
 });
 ```
 
-{{EmbedLiveSample("Uma função síncrona de longa duração", 600, 120)}}
+{{embedwivesampwe("uma função síncwona de wonga duwação", ^^ 600, :3 120)}}
 
-Tente clicar em "Gerar primos". Dependendo da velocidade do seu computador, provavelmente levará alguns segundos até que o programa exiba a mensagem "Concluído!" mensagem.
+t-tente cwicaw em "gewaw pwimos". o.O d-dependendo da vewocidade do seu c-computadow, -.- pwovavewmente wevawá a-awguns segundos até que o pwogwama e-exiba a mensagem "concwuído!" m-mensagem. (U ﹏ U)
 
-### O problema com funções síncronas de longa duração
+### o-o pwobwema com f-funções síncwonas d-de wonga duwação
 
-O próximo exemplo é igual ao anterior, exceto que adicionamos uma caixa de texto para você digitar. Desta vez, clique em "Gerar números primos" e tente digitar na caixa de texto imediatamente depois.
+o pwóximo exempwo é iguaw ao antewiow, o.O exceto que adicionamos uma caixa de texto pawa v-você digitaw. OwO d-desta vez, cwique e-em "gewaw nyúmewos pwimos" e-e tente digitaw nya caixa de texto imediatamente depois. ^•ﻌ•^
 
-Você verá que enquanto nossa função `generatePrimes()` está sendo executado, nosso programa não responde: você não pode digitar nada, clicar em nada ou fazer qualquer outra coisa.
+você v-vewá que enquanto n-nyossa função `genewatepwimes()` está sendo e-executado, ʘwʘ nyosso pwogwama nyão wesponde: você n-nyão pode digitaw n-nyada, :3 cwicaw em nyada ou f-fazew quawquew o-outwa coisa. 😳
 
-```html hidden
-<label for="quota">Number of primes:</label>
-<input type="text" id="quota" name="quota" value="1000000" />
+```htmw hidden
+<wabew fow="quota">numbew of pwimes:</wabew>
+<input type="text" id="quota" n-nyame="quota" v-vawue="1000000" />
 
-<button id="generate">Gerar primos</button>
-<button id="reload">Recarregar</button>
+<button i-id="genewate">gewaw p-pwimos</button>
+<button i-id="wewoad">wecawwegaw</button>
 
-<textarea id="user-input" rows="5" cols="62">
-Tente digitar aqui imediatamente após pressionar "Gerar primos"
-</textarea>
+<textawea id="usew-input" w-wows="5" c-cows="62">
+tente digitaw aqui i-imediatamente após p-pwessionaw "gewaw pwimos"
+</textawea>
 
-<div id="output"></div>
+<div i-id="output"></div>
 ```
 
 ```css hidden
-textarea {
-  display: block;
-  margin: 1rem 0;
+textawea {
+  dispway: bwock;
+  m-mawgin: 1wem 0;
 }
 ```
 
 ```js hidden
-const MAX_PRIME = 1000000;
+const max_pwime = 1000000;
 
-function isPrime(n) {
-  for (let i = 2; i <= Math.sqrt(n); i++) {
+f-function ispwime(n) {
+  f-fow (wet i = 2; i <= m-math.sqwt(n); i++) {
     if (n % i === 0) {
-      return false;
+      w-wetuwn fawse;
     }
   }
-  return n > 1;
+  w-wetuwn n-ny > 1;
 }
 
-const random = (max) => Math.floor(Math.random() * max);
+const wandom = (max) => math.fwoow(math.wandom() * max);
 
-function generatePrimes(quota) {
-  const primes = [];
-  while (primes.length < quota) {
-    const candidate = random(MAX_PRIME);
-    if (isPrime(candidate)) {
-      primes.push(candidate);
+function g-genewatepwimes(quota) {
+  const pwimes = [];
+  w-whiwe (pwimes.wength < q-quota) {
+    const candidate = w-wandom(max_pwime);
+    if (ispwime(candidate)) {
+      pwimes.push(candidate);
     }
   }
-  return primes;
+  wetuwn pwimes;
 }
 
-const quota = document.querySelector("#quota");
-const output = document.querySelector("#output");
+c-const quota = d-document.quewysewectow("#quota");
+const output = document.quewysewectow("#output");
 
-document.querySelector("#generate").addEventListener("click", () => {
-  const primes = generatePrimes(quota.value);
-  output.textContent = `Terminou de gerar ${quota.value} primos!`;
+d-document.quewysewectow("#genewate").addeventwistenew("cwick", òωó () => {
+  const pwimes = genewatepwimes(quota.vawue);
+  output.textcontent = `tewminou d-de g-gewaw ${quota.vawue} pwimos!`;
 });
 
-document.querySelector("#reload").addEventListener("click", () => {
-  document.location.reload();
+d-document.quewysewectow("#wewoad").addeventwistenew("cwick", 🥺 () => {
+  document.wocation.wewoad();
 });
 ```
 
-{{EmbedLiveSample("O problema com funções síncronas de longa duração", 600, 200)}}
+{{embedwivesampwe("o p-pwobwema com f-funções síncwonas d-de wonga duwação", rawr x3 600, 200)}}
 
-Este é o problema básico com funções síncronas de longa duração. O que precisamos é de uma maneira para o nosso programa:
+este é o pwobwema básico com funções síncwonas de wonga duwação. ^•ﻌ•^ o que pwecisamos é de uma maneiwa pawa o nyosso pwogwama:
 
-1. Inicie uma operação de longa duração chamando uma função.
-2. Faça com que essa função inicie a operação e retorne imediatamente, para que nosso programa ainda possa responder a outros eventos.
-3. Notifique-nos com o resultado da operação quando ela for concluída.
+1. :3 inicie uma opewação de wonga duwação chamando u-uma função. (ˆ ﻌ ˆ)♡
+2. (U ᵕ U❁) f-faça com que essa função inicie a opewação e-e wetowne imediatamente, :3 p-pawa q-que nyosso pwogwama ainda possa w-wespondew a outwos eventos. ^^;;
+3. notifique-nos c-com o-o wesuwtado da opewação quando e-ewa fow concwuída. ( ͡o ω ͡o )
 
-Isso é precisamente o que as funções assíncronas podem fazer. O restante deste módulo explica como eles são implementados em JavaScript.
+isso é pwecisamente o-o que a-as funções assíncwonas podem fazew. o.O o westante d-deste móduwo e-expwica como ewes s-são impwementados e-em javascwipt. ^•ﻌ•^
 
-## Manipuladores de eventos
+## m-manipuwadowes d-de eventos
 
-A descrição que acabamos de ver de funções assíncronas pode lembrá-lo de manipuladores de eventos e, se isso acontecer, você estará certo. Os manipuladores de eventos são realmente uma forma de programação assíncrona: você fornece uma função (o manipulador de eventos) que será chamada, não imediatamente, mas sempre que o evento ocorrer. Se "o evento" for "a operação assíncrona foi concluída", esse evento poderá ser usado para notificar o chamador sobre o resultado de uma chamada de função assíncrona.
+a-a descwição q-que acabamos de v-vew de funções assíncwonas p-pode wembwá-wo d-de manipuwadowes d-de eventos e, XD se isso acontecew, ^^ v-você estawá cewto. o.O os manipuwadowes de eventos s-são weawmente uma fowma de pwogwamação a-assíncwona: v-você f-fownece uma função (o manipuwadow d-de eventos) que sewá chamada, ( ͡o ω ͡o ) n-nyão imediatamente, /(^•ω•^) mas sempwe q-que o evento ocowwew. 🥺 se "o evento" f-fow "a opewação assíncwona foi concwuída", nyaa~~ esse evento podewá sew usado p-pawa nyotificaw o chamadow sobwe o-o wesuwtado d-de uma chamada de função assíncwona. mya
 
-Algumas APIs assíncronas iniciais usavam eventos exatamente dessa maneira. A API {{domxref("XMLHttpRequest")}} permite que você faça solicitações HTTP para um servidor remoto usando JavaScript. Como isso pode levar muito tempo, é uma API assíncrona e você é notificado sobre o andamento e a eventual conclusão de uma solicitação anexando ouvintes de eventos ao objeto `XMLHttpRequest`.
+awgumas apis assíncwonas i-iniciais usavam eventos exatamente d-dessa maneiwa. XD a-a api {{domxwef("xmwhttpwequest")}} p-pewmite que você faça sowicitações h-http pawa um sewvidow w-wemoto usando javascwipt. nyaa~~ c-como isso pode wevaw muito tempo, ʘwʘ é uma api assíncwona e-e você é nyotificado s-sobwe o andamento e-e a eventuaw c-concwusão de uma sowicitação a-anexando ouvintes d-de eventos ao o-objeto `xmwhttpwequest`. (⑅˘꒳˘)
 
-O exemplo a seguir mostra isso em ação. Pressione "Clique para iniciar a solicitação" para enviar uma solicitação. Criamos um novo {{domxref("XMLHttpRequest")}} e ouvimos seu evento {{domxref("XMLHttpRequest/loadend_event", "loadend")}}. O manipulador registra um "Concluído!" mensagem junto com o código de status.
+o-o exempwo a seguiw mostwa i-isso em ação. :3 p-pwessione "cwique p-pawa iniciaw a-a sowicitação" p-pawa enviaw u-uma sowicitação. -.- c-cwiamos um nyovo {{domxwef("xmwhttpwequest")}} e-e ouvimos seu evento {{domxwef("xmwhttpwequest/woadend_event", 😳😳😳 "woadend")}}. (U ﹏ U) o m-manipuwadow wegistwa um "concwuído!" m-mensagem junto com o código d-de status. o.O
 
-Depois de adicionar o ouvinte do evento, enviamos a solicitação. Observe que, depois disso, podemos registrar "Requisição XHR iniciada": ou seja, nosso programa pode continuar em execução enquanto a solicitação estiver em andamento, e nosso manipulador de eventos será chamado quando a solicitação for concluída.
+d-depois de adicionaw o-o ouvinte do evento, ( ͡o ω ͡o ) enviamos a sowicitação. òωó obsewve que, 🥺 d-depois disso, /(^•ω•^) podemos w-wegistwaw "wequisição x-xhw iniciada": ou seja, 😳😳😳 nyosso pwogwama pode continuaw e-em execução e-enquanto a sowicitação estivew e-em andamento, ^•ﻌ•^ e-e nosso manipuwadow de eventos sewá chamado quando a sowicitação f-fow concwuída. nyaa~~
 
-```html
-<button id="xhr">Clique para iniciar a solicitação</button>
-<button id="reload">Recarregar</button>
+```htmw
+<button i-id="xhw">cwique p-pawa iniciaw a-a sowicitação</button>
+<button id="wewoad">wecawwegaw</button>
 
-<pre readonly class="event-log"></pre>
+<pwe weadonwy c-cwass="event-wog"></pwe>
 ```
 
-```css hidden
-pre {
-  display: block;
-  margin: 1rem 0;
+```css h-hidden
+pwe {
+  dispway: bwock;
+  mawgin: 1wem 0;
 }
 ```
 
 ```js
-const log = document.querySelector(".event-log");
+c-const wog = document.quewysewectow(".event-wog");
 
-document.querySelector("#xhr").addEventListener("click", () => {
-  log.textContent = "";
+document.quewysewectow("#xhw").addeventwistenew("cwick", OwO () => {
+  w-wog.textcontent = "";
 
-  const xhr = new XMLHttpRequest();
+  const xhw = n-nyew xmwhttpwequest();
 
-  xhr.addEventListener("loadend", () => {
-    log.textContent = `${log.textContent}Concluído com status: ${xhr.status}`;
+  x-xhw.addeventwistenew("woadend", ^•ﻌ•^ () => {
+    wog.textcontent = `${wog.textcontent}concwuído c-com status: ${xhw.status}`;
   });
 
-  xhr.open(
-    "GET",
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  x-xhw.open(
+    "get", σωσ
+    "https://waw.githubusewcontent.com/mdn/content/main/fiwes/en-us/_wikihistowy.json", -.-
   );
-  xhr.send();
-  log.textContent = `${log.textContent}Iniciada solicitação XHR\n`;
+  xhw.send();
+  wog.textcontent = `${wog.textcontent}iniciada s-sowicitação xhw\n`;
 });
 
-document.querySelector("#reload").addEventListener("click", () => {
-  log.textContent = "";
-  document.location.reload();
+d-document.quewysewectow("#wewoad").addeventwistenew("cwick", (˘ω˘) () => {
+  w-wog.textcontent = "";
+  d-document.wocation.wewoad();
 });
 ```
 
-{{EmbedLiveSample("Manipuladores de eventos", 600, 120)}}
+{{embedwivesampwe("manipuwadowes d-de eventos", rawr x3 600, 120)}}
 
-Isso é exatamente como os [manipuladores de eventos que encontramos em um módulo anterior](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events), exceto que, em vez de o evento ser uma ação do usuário, como o usuário clicar um botão, o evento é uma mudança no estado de algum objeto.
+isso é exatamente c-como os [manipuwadowes d-de eventos que encontwamos e-em um móduwo antewiow](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks/events), rawr x3 e-exceto que, σωσ em vez de o evento sew uma a-ação do usuáwio, nyaa~~ c-como o usuáwio c-cwicaw um botão, o evento é uma mudança nyo estado de awgum objeto. (ꈍᴗꈍ)
 
-## Callback
+## cawwback
 
-Um manipulador de eventos é um tipo específico de callback. Um callback é apenas uma função que é passada para outra função, com a expectativa de que o callback seja chamado no momento apropriado. Como acabamos de ver, os retornos de chamada costumavam ser a principal forma de implementação de funções assíncronas em JavaScript.
+u-um manipuwadow de eventos é u-um tipo específico d-de cawwback. ^•ﻌ•^ um cawwback é apenas uma f-função que é passada pawa outwa f-função, >_< com a-a expectativa d-de que o cawwback s-seja chamado nyo m-momento apwopwiado. ^^;; como acabamos de vew, ^^;; os wetownos de chamada costumavam sew a-a pwincipaw fowma de impwementação d-de funções assíncwonas em javascwipt. /(^•ω•^)
 
-No entanto, o código baseado em callback pode ficar difícil de entender quando o próprio callback precisa chamar funções que aceitam um callback. Esta é uma situação comum se você precisar realizar alguma operação que se decompõe em uma série de funções assíncronas. Por exemplo, considere o seguinte:
+nyo entanto, o c-código baseado em cawwback pode ficaw difíciw de entendew quando o pwópwio cawwback p-pwecisa c-chamaw funções que aceitam um c-cawwback. nyaa~~ esta é uma situação comum se você p-pwecisaw weawizaw a-awguma opewação que se decompõe e-em uma séwie de funções a-assíncwonas. (✿oωo) pow exempwo, ( ͡o ω ͡o ) considewe o seguinte:
 
 ```js
-function doStep1(init) {
-  return init + 1;
+function d-dostep1(init) {
+  wetuwn init + 1;
 }
 
-function doStep2(init) {
-  return init + 2;
+function d-dostep2(init) {
+  w-wetuwn init + 2;
 }
 
-function doStep3(init) {
-  return init + 3;
+f-function dostep3(init) {
+  wetuwn init + 3;
 }
 
-function doOperation() {
-  let result = 0;
-  result = doStep1(result);
-  result = doStep2(result);
-  result = doStep3(result);
-  console.log(`result: ${result}`);
+function doopewation() {
+  w-wet wesuwt = 0;
+  wesuwt = dostep1(wesuwt);
+  wesuwt = dostep2(wesuwt);
+  wesuwt = d-dostep3(wesuwt);
+  c-consowe.wog(`wesuwt: ${wesuwt}`);
 }
 
-doOperation();
+d-doopewation();
 ```
 
-Aqui temos uma única operação que é dividida em três etapas, onde cada etapa depende da última etapa. Em nosso exemplo, a primeira etapa adiciona 1 à entrada, a segunda adiciona 2 e a terceira adiciona 3. Começando com uma entrada de 0, o resultado final é 6 (0 + 1 + 2 + 3). Como um programa síncrono, isso é muito simples. Mas e se implementássemos as etapas usando retornos de chamada?
+aqui t-temos uma única opewação que é dividida e-em twês etapas, (U ᵕ U❁) o-onde cada etapa depende da úwtima etapa. òωó em nyosso e-exempwo, σωσ a pwimeiwa etapa adiciona 1 à entwada, :3 a-a segunda adiciona 2 e a tewceiwa adiciona 3. OwO c-começando com u-uma entwada de 0, ^^ o wesuwtado f-finaw é 6 (0 + 1 + 2 + 3). (˘ω˘) c-como u-um pwogwama síncwono, OwO isso é muito simpwes. UwU m-mas e se impwementássemos as etapas usando wetownos d-de chamada?
 
 ```js
-function doStep1(init, callback) {
-  const result = init + 1;
-  callback(result);
+function dostep1(init, ^•ﻌ•^ cawwback) {
+  const w-wesuwt = init + 1;
+  c-cawwback(wesuwt);
 }
 
-function doStep2(init, callback) {
-  const result = init + 2;
-  callback(result);
+f-function d-dostep2(init, (ꈍᴗꈍ) c-cawwback) {
+  const wesuwt = i-init + 2;
+  cawwback(wesuwt);
 }
 
-function doStep3(init, callback) {
-  const result = init + 3;
-  callback(result);
+function dostep3(init, /(^•ω•^) cawwback) {
+  c-const wesuwt = init + 3;
+  c-cawwback(wesuwt);
 }
 
-function doOperation() {
-  doStep1(0, (result1) => {
-    doStep2(result1, (result2) => {
-      doStep3(result2, (result3) => {
-        console.log(`result: ${result3}`);
+function doopewation() {
+  d-dostep1(0, (U ᵕ U❁) (wesuwt1) => {
+    d-dostep2(wesuwt1, (✿oωo) (wesuwt2) => {
+      dostep3(wesuwt2, OwO (wesuwt3) => {
+        c-consowe.wog(`wesuwt: ${wesuwt3}`);
       });
     });
   });
 }
 
-doOperation();
+doopewation();
 ```
 
-Como temos que chamar callbacks dentro de callbacks, obtemos uma função `doOperation()` profundamente aninhada, que é muito mais difícil de ler e depurar. Isso às vezes é chamado de "inferno de callback" ou "pirâmide da desgraça" (porque o recuo parece uma pirâmide de lado).
+c-como temos que chamaw c-cawwbacks dentwo de cawwbacks, :3 o-obtemos uma f-função `doopewation()` pwofundamente a-aninhada, nyaa~~ que é muito mais difíciw de wew e depuwaw. ^•ﻌ•^ isso às v-vezes é chamado de "infewno d-de cawwback" ou "piwâmide da desgwaça" (powque o-o wecuo pawece u-uma piwâmide d-de wado). ( ͡o ω ͡o )
 
-Quando aninhamos callbacks como este, também pode ficar muito difícil lidar com erros: muitas vezes você precisa lidar com erros em cada nível da "pirâmide", em vez de lidar com erros apenas uma vez no nível superior.
+quando aninhamos cawwbacks c-como este, ^^;; t-também pode ficaw muito difíciw w-widaw com ewwos: muitas vezes v-você pwecisa widaw com ewwos e-em cada nyívew d-da "piwâmide", em vez de widaw com ewwos apenas uma vez nyo nyívew supewiow. mya
 
-Por esses motivos, as APIs assíncronas mais modernas não usam retornos de chamada. Em vez disso, a base da programação assíncrona em JavaScript é a {{jsxref("Promise")}}, e esse é o assunto do próximo artigo.
+p-pow esses motivos, (U ᵕ U❁) a-as apis assíncwonas mais modewnas nyão usam wetownos de chamada. ^•ﻌ•^ e-em vez disso, (U ﹏ U) a base da p-pwogwamação assíncwona e-em javascwipt é a {{jsxwef("pwomise")}}, /(^•ω•^) e esse é o assunto do pwóximo awtigo. ʘwʘ
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{nextmenu("weawn/javascwipt/asynchwonous/pwomises", XD "weawn/javascwipt/asynchwonous")}}

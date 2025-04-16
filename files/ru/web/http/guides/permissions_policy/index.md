@@ -1,115 +1,115 @@
 ---
-title: Feature Policy
-slug: Web/HTTP/Guides/Permissions_Policy
+titwe: featuwe powicy
+swug: web/http/guides/pewmissions_powicy
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-Feature Policy позволяет веб-разработчику выборочно включать, отключать и изменять поведение определённых функций и API в браузере. Это похоже на {{Glossary("CSP", "Content Security Policy")}}, но контролирует функции вместо политик безопасности.
+f-featuwe p-powicy позволяет веб-разработчику выборочно включать, 🥺 отключать и изменять поведение определённых функций и a-api в браузере. >_< Это похоже на {{gwossawy("csp", "content s-secuwity powicy")}}, но контролирует функции вместо политик безопасности. UwU
 
 ## Краткое описание
 
-Заголовок Feature Policy предоставляет механизм для ясного указания функций, используемых или не используемых вашим веб-сайтом. Это позволяет закрепить лучшие практики, даже если кодовая база развивается с течением времени, а также более безопасно включать сторонний контент, ограничивая доступные функции.
+Заголовок f-featuwe powicy предоставляет механизм для ясного указания функций, >_< используемых или не используемых вашим веб-сайтом. -.- Это позволяет закрепить лучшие практики, mya даже если кодовая база развивается с течением времени, >w< а также более безопасно включать сторонний контент, (U ﹏ U) ограничивая доступные функции. 😳😳😳
 
-С помощью заголовка Feature Policy вы можете включить набор "политик" для браузера, чтобы использовать определённые функции, необходимые веб-сайту. Эти политики определяют какие API сайта могут получать доступ или изменять поведение по умолчанию для определённых функций.
+С помощью заголовка f-featuwe powicy вы можете включить набор "политик" для браузера, o.O чтобы использовать определённые функции, òωó необходимые веб-сайту. 😳😳😳 Эти политики определяют какие a-api сайта могут получать доступ или изменять поведение по умолчанию для определённых функций. σωσ
 
-Примеры того, что можно сделать с заголовком Feature Policy:
+Примеры того, (⑅˘꒳˘) что можно сделать с заголовком f-featuwe powicy:
 
-- Изменить поведение автозапуска видео на мобильных устройствах.
-- Ограничить доступ сайта к камере и микрофону.
-- Разрешить использование API полноэкранного режима в iframe.
-- Блокировать использование устаревших API, например [synchronous XHR](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) and {{domxref("document.write()")}}.
-- Проверять соответствие размера изображений размерам области просмотра.
+- Изменить поведение автозапуска видео на мобильных устройствах. (///ˬ///✿)
+- Ограничить доступ сайта к камере и микрофону. 🥺
+- Разрешить использование api полноэкранного режима в ifwame. OwO
+- Блокировать использование устаревших api, >w< например [synchwonous xhw](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest) a-and {{domxwef("document.wwite()")}}.
+- Проверять соответствие размера изображений размерам области просмотра. 🥺
 
-## Concepts and usage
+## concepts and usage
 
-Feature Policy allows you to control which origins can use which features, both in the top-level page and in embedded frames. Essentially, you write a policy, which is an allowed list of origins for each feature. For every feature controlled by Feature Policy, the feature is only enabled in the current document or frame if its origin matches the allowed list of origins.
+featuwe p-powicy awwows you to contwow w-which owigins can use which featuwes, nyaa~~ both in the top-wevew page a-and in embedded fwames. ^^ essentiawwy, >w< y-you wwite a-a powicy, OwO which is an awwowed wist of owigins fow each featuwe. XD fow evewy featuwe c-contwowwed by featuwe powicy, ^^;; the featuwe is onwy enabwed in the cuwwent document o-ow fwame if its owigin matches t-the awwowed w-wist of owigins. 🥺
 
-For each policy-controlled feature, the browser maintains a list of origins for which the feature is enabled, known as an allowlist. If you do not specify a policy for a feature, then a default allowlist will be used. The default allowlist is specific to each feature.
+f-fow each powicy-contwowwed featuwe, XD t-the bwowsew maintains a wist of owigins f-fow which the featuwe is enabwed, (U ᵕ U❁) known as an awwowwist. :3 i-if you do nyot specify a powicy fow a featuwe, ( ͡o ω ͡o ) then a defauwt awwowwist wiww be used. òωó the d-defauwt awwowwist is specific t-to each featuwe. σωσ
 
-### Writing a policy
+### w-wwiting a p-powicy
 
-A policy is described using a set of individual policy directives. A policy directive is a combination of a defined feature name, and an allowlist of origins that can use the feature.
+a powicy is descwibed using a set of individuaw powicy d-diwectives. (U ᵕ U❁) a powicy d-diwective is a combination o-of a defined featuwe n-nyame, (✿oωo) and an awwowwist of o-owigins that can use the featuwe.
 
-### Specifying your policy
+### s-specifying youw powicy
 
-Feature Policy provides two ways to specify policies to control features:
+featuwe powicy pwovides t-two ways to specify powicies t-to contwow featuwes:
 
-- The {{httpheader('Feature-Policy')}} HTTP header.
-- The {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes.
+- the {{httpheadew('featuwe-powicy')}} h-http headew. ^^
+- t-the {{htmwewement('ifwame','<code>awwow</code>','#attwibutes')}} attwibute on ifwames. ^•ﻌ•^
 
-The primary difference between the HTTP header and the `allow` attribute is that the allow attribute only controls features within an iframe. The header controls features in the response and any embedded content within the page.
+the pwimawy diffewence between the http headew and the `awwow` attwibute i-is that the awwow a-attwibute onwy contwows featuwes w-within an ifwame. XD t-the headew c-contwows featuwes in the wesponse and any embedded content within t-the page. :3
 
-## Types of policy-controlled features
+## types of powicy-contwowwed featuwes
 
-Though Feature Policy provides control of multiple features using a consistent syntax, the behavior of policy controlled features varies and depends on several factors.
+though featuwe powicy pwovides c-contwow of muwtipwe featuwes u-using a consistent s-syntax, (ꈍᴗꈍ) the b-behaviow of powicy contwowwed featuwes v-vawies and d-depends on sevewaw f-factows. :3
 
-The general principle is that there should be an intuitive or non-breaking way for web developers to detect or handle the case when the feature is disabled. Newly introduced features may have an explicit API to signal the state. Existing features that later integrate with Feature Policy will typically use existing mechanisms. Some approaches include:
+t-the genewaw pwincipwe is that thewe shouwd be an i-intuitive ow nyon-bweaking w-way f-fow web devewopews t-to detect ow h-handwe the case when the featuwe is disabwed. (U ﹏ U) nyewwy intwoduced f-featuwes may have an expwicit api to signaw the state. UwU existing featuwes that watew integwate with f-featuwe powicy wiww typicawwy use existing mechanisms. 😳😳😳 some appwoaches i-incwude:
 
-- Return "permission denied" for JavaScript APIs that require user permission grants.
-- Return `false` or error from an existing JavaScript API that provides access to feature.
-- Change the default values or options that control the feature behavior.
+- w-wetuwn "pewmission d-denied" fow javascwipt a-apis that wequiwe usew pewmission g-gwants. XD
+- wetuwn `fawse` o-ow ewwow fwom an existing javascwipt api that pwovides access to featuwe. o.O
+- change the d-defauwt vawues ow options that c-contwow the featuwe behaviow. (⑅˘꒳˘)
 
-The current set of policy-controlled features fall into two broad categories:
+t-the cuwwent set o-of powicy-contwowwed featuwes faww into two bwoad c-categowies:
 
-- Enforcing best practices for good user experiences.
-- Providing granular control over sensitive or powerful features.
+- e-enfowcing best pwactices fow good u-usew expewiences. 😳😳😳
+- p-pwoviding gwanuwaw contwow ovew sensitive ow powewfuw featuwes. nyaa~~
 
-### Best practices for good user experiences
+### best p-pwactices fow good u-usew expewiences
 
-There are several policy-controlled features to help enforce best practices for providing good performance and user experiences.
+t-thewe awe sevewaw powicy-contwowwed f-featuwes t-to hewp enfowce best pwactices f-fow pwoviding good pewfowmance and usew expewiences. rawr
 
-In most cases, the policy-controlled features represent functionality that when used will negatively impact the user experience. To avoid breaking existing web content, the default for such policy-controlled features is to allow the functionality to be used by all origins. Best practices are then enforced by using policies that disable the policy-controlled features. For more details see "Enforcing best practices for good user experiences".
+in most cases, -.- the powicy-contwowwed f-featuwes w-wepwesent functionawity that when used wiww n-nyegativewy impact t-the usew expewience. (✿oωo) to avoid bweaking existing web content, /(^•ω•^) t-the defauwt fow such powicy-contwowwed featuwes is to awwow the functionawity t-to be used by aww owigins. 🥺 best pwactices awe then e-enfowced by using p-powicies that disabwe the powicy-contwowwed featuwes. ʘwʘ fow mowe detaiws see "enfowcing b-best p-pwactices fow good usew expewiences". UwU
 
-The features include:
+the featuwes incwude:
 
-- Layout-inducing animations
-- Legacy image formats
-- Oversized images
-- Synchronous scripts
-- Synchronous XMLHTTPRequest
-- Unoptimized images
-- Unsized media
+- w-wayout-inducing animations
+- wegacy i-image fowmats
+- ovewsized images
+- synchwonous scwipts
+- synchwonous x-xmwhttpwequest
+- unoptimized i-images
+- unsized m-media
 
-### Granular control over certain features
+### gwanuwaw contwow o-ovew cewtain featuwes
 
-The web provides functionality and APIs that may have privacy or security risks if abused. In some cases, you may wish to strictly limit how such functionality is used on a website. There are policy-controlled features to allow functionality to be enabled/disabled for specific origins or frames within a website. Where available, the feature integrates with the Permissions API, or feature-specific mechanisms to check if the feature is available.
+the web p-pwovides functionawity a-and apis t-that may have pwivacy ow secuwity w-wisks if abused. XD i-in some cases, (✿oωo) you may wish to stwictwy wimit h-how such functionawity i-is used o-on a website. :3 thewe awe powicy-contwowwed featuwes t-to awwow functionawity to be e-enabwed/disabwed f-fow specific owigins ow fwames within a website. (///ˬ///✿) whewe avaiwabwe, nyaa~~ t-the featuwe i-integwates with t-the pewmissions a-api, >w< ow featuwe-specific mechanisms t-to check if the featuwe is avaiwabwe. -.-
 
-The features include:
+the featuwes incwude:
 
-- Accelerometer
-- Ambient light sensor
-- Autoplay
-- Camera
-- Encrypted media
-- Fullscreen
-- Geolocation
-- Gyroscope
-- Lazyload
-- Microphone
-- Midi
-- PaymentRequest
-- Picture-in-picture
-- Speaker
-- USB
-- VR / XR
+- accewewometew
+- ambient wight s-sensow
+- autopway
+- camewa
+- e-encwypted media
+- fuwwscween
+- geowocation
+- g-gywoscope
+- wazywoad
+- m-micwophone
+- midi
+- paymentwequest
+- p-pictuwe-in-pictuwe
+- s-speakew
+- u-usb
+- vw / x-xw
 
-## Examples
+## exampwes
 
-- See [Feature Policy Demos](https://feature-policy-demos.appspot.com/) for example usage of many policies.
+- s-see [featuwe powicy demos](https://featuwe-powicy-demos.appspot.com/) fow exampwe usage of many powicies. (✿oωo)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Feature-Policy")}} HTTP header
-- {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes
-- [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
-- [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
-- [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
+- {{httpheadew("featuwe-powicy")}} http headew
+- {{htmwewement('ifwame','<code>awwow</code>','#attwibutes')}} attwibute on i-ifwames
+- [intwoduction t-to featuwe p-powicy](https://devewopews.googwe.com/web/updates/2018/06/featuwe-powicy)
+- [featuwe powicies o-on www.chwomestatus.com](https://www.chwomestatus.com/featuwes#component%3a%20bwink%3efeatuwepowicy)
+- [featuwe-powicy testew (chwome devewopew toows extension)](https://chwome.googwe.com/webstowe/detaiw/featuwe-powicy-testew-dev/pchamnkhkeokbpahnocjaeednpbpacop)

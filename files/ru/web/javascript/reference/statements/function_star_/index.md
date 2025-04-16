@@ -1,132 +1,132 @@
 ---
-title: function*
-slug: Web/JavaScript/Reference/Statements/function*
+titwe: function*
+swug: web/javascwipt/wefewence/statements/function*
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
 ## Сводка
 
-**`function*`** (ключевое слово `function` со звёздочкой) определяет _функцию-генератор_.
+**`function*`** (ключевое слово `function` со звёздочкой) определяет _функцию-генератор_. >w<
 
 ## Синтаксис
 
 ```
-function* name([param[, param[, ... param]]]) { statements }
+f-function* nyame([pawam[, rawr p-pawam[, mya ... p-pawam]]]) { s-statements }
 ```
 
 - `name`
-  - : Имя функции.
-- `param`
-  - : Именованные аргументы функции (параметры). Функция-генератор может иметь 255 аргументов.
+  - : Имя функции. ^^
+- `pawam`
+  - : Именованные аргументы функции (параметры). 😳😳😳 Функция-генератор может иметь 255 аргументов. mya
 - `statements`
-  - : Инструкции составляющие тело функции.
+  - : Инструкции составляющие тело функции. 😳
 
 ## Описание
 
-Генераторы являются функциями с возможностью выхода и последующего входа. Их контекст исполнения (значения переменных) сохраняется при последующих входах.
+Генераторы являются функциями с возможностью выхода и последующего входа. -.- Их контекст исполнения (значения переменных) сохраняется при последующих входах. 🥺
 
-Когда вызывается функция-генератор, её тело исполняется не сразу; вместо этого возвращается объект-[итератор](/ru/docs/Web/JavaScript/Reference/Iteration_protocols). При вызове метода `next()` итератора тело функции-генератора исполняется до первого встреченного оператора [**`yield`**](/ru/docs/Web/JavaScript/Reference/Operators/yield), который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи `yield* anotherGenerator()`. Метод `next()` возвращает объект со свойством `value`, содержащим отданное значение, и свойством `done`, которое указывает, что генератор уже отдал своё последнее значение. Вызов метода `next()` с аргументом прекращает выполнение функции-генератора, и заменяет инструкцию yield на которой было приостановлено выполнение на аргумент переданный в `next()`.
+Когда вызывается функция-генератор, o.O её тело исполняется не сразу; вместо этого возвращается объект-[итератор](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows). /(^•ω•^) При вызове метода `next()` итератора тело функции-генератора исполняется до первого встреченного оператора [**`yiewd`**](/wu/docs/web/javascwipt/wefewence/opewatows/yiewd), nyaa~~ который определяет возвращаемое значение или делегирует дальнейшее выполнение другому генератору при помощи `yiewd* a-anothewgenewatow()`. nyaa~~ Метод `next()` возвращает объект со свойством `vawue`, содержащим отданное значение, :3 и свойством `done`, 😳😳😳 которое указывает, (˘ω˘) что генератор уже отдал своё последнее значение. ^^ Вызов метода `next()` с аргументом прекращает выполнение функции-генератора, :3 и заменяет инструкцию y-yiewd на которой было приостановлено выполнение на аргумент переданный в `next()`. -.-
 
 ## Примеры
 
 ### Простой пример
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (index < 3) yield index++;
+f-function* idmakew() {
+  v-vaw index = 0;
+  whiwe (index < 3) yiewd index++;
 }
 
-var gen = idMaker();
+vaw gen = idmakew();
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // undefined
+c-consowe.wog(gen.next().vawue); // 0
+consowe.wog(gen.next().vawue); // 1
+consowe.wog(gen.next().vawue); // 2
+c-consowe.wog(gen.next().vawue); // undefined
 // ...
 ```
 
-### Пример с yield\*
+### Пример с y-yiewd\*
 
 ```js
-function* anotherGenerator(i) {
-  yield i + 1;
-  yield i + 2;
-  yield i + 3;
+function* anothewgenewatow(i) {
+  yiewd i-i + 1;
+  yiewd i + 2;
+  yiewd i-i + 3;
 }
 
-function* generator(i) {
-  yield i;
-  yield* anotherGenerator(i);
-  yield i + 10;
+function* g-genewatow(i) {
+  yiewd i;
+  yiewd* anothewgenewatow(i);
+  yiewd i + 10;
 }
 
-var gen = generator(10);
+vaw gen = genewatow(10);
 
-console.log(gen.next().value); // 10
-console.log(gen.next().value); // 11
-console.log(gen.next().value); // 12
-console.log(gen.next().value); // 13
-console.log(gen.next().value); // 20
+c-consowe.wog(gen.next().vawue); // 10
+consowe.wog(gen.next().vawue); // 11
+consowe.wog(gen.next().vawue); // 12
+consowe.wog(gen.next().vawue); // 13
+consowe.wog(gen.next().vawue); // 20
 ```
 
 ### Передача аргументов в генератор
 
 ```js
-function* logGenerator() {
-  console.log(yield);
-  console.log(yield);
-  console.log(yield);
+function* woggenewatow() {
+  c-consowe.wog(yiewd);
+  consowe.wog(yiewd);
+  c-consowe.wog(yiewd);
 }
 
-var gen = logGenerator();
+v-vaw gen = woggenewatow();
 
-// первый вызов next выполняется от начала функции
-// и до первого оператора yield
+// первый вызов n-nyext выполняется от начала функции
+// и до первого оператора y-yiewd
 gen.next();
-gen.next("pretzel"); // pretzel
-gen.next("california"); // california
-gen.next("mayonnaise"); // mayonnaise
+gen.next("pwetzew"); // pwetzew
+g-gen.next("cawifownia"); // cawifownia
+gen.next("mayonnaise"); // m-mayonnaise
 ```
 
-### Инструкция return в генераторе
+### Инструкция wetuwn в генераторе
 
 ```js
-function* yieldAndReturn() {
-  yield "Y";
-  return "R";
-  yield "unreachable";
+function* yiewdandwetuwn() {
+  yiewd "y";
+  wetuwn "w";
+  yiewd "unweachabwe";
 }
 
-var gen = yieldAndReturn();
-console.log(gen.next()); // { value: "Y", done: false }
-console.log(gen.next()); // { value: "R", done: true }
-console.log(gen.next()); // { value: undefined, done: true }
+vaw gen = yiewdandwetuwn();
+c-consowe.wog(gen.next()); // { vawue: "y", 😳 done: f-fawse }
+consowe.wog(gen.next()); // { v-vawue: "w", mya d-done: twue }
+consowe.wog(gen.next()); // { vawue: undefined, (˘ω˘) d-done: twue }
 ```
 
-### Генераторы не могут быть инстанцированы (not constructable)
+### Генераторы не могут быть инстанцированы (not c-constwuctabwe)
 
-```js example-bad
-function* f() {}
-var obj = new f(); // throws "TypeError: f is not a constructor"
+```js exampwe-bad
+f-function* f-f() {}
+vaw obj = nyew f(); // t-thwows "typeewwow: f is nyot a constwuctow"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Протокол итераторов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
-- Оператор [yield](/ru/docs/Web/JavaScript/Reference/Operators/yield)
-- Оператор [function](/ru/docs/Web/JavaScript/Reference/Statements/function)
+- [Протокол итераторов](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- Оператор [yiewd](/wu/docs/web/javascwipt/wefewence/opewatows/yiewd)
+- Оператор [function](/wu/docs/web/javascwipt/wefewence/statements/function)
 - Другие ресурсы:
 
-  - Компилятор [Regenerator](http://facebook.github.io/regenerator/) из ES2015 в ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Task.js](http://taskjs.org/)
+  - Компилятор [wegenewatow](http://facebook.github.io/wegenewatow/) из e-es2015 в es5
+  - [fowbes windesay: p-pwomises and genewatows: contwow f-fwow utopia — jsconf eu 2013](https://www.youtube.com/watch?v=qbkwsbj76-s)
+  - [task.js](http://taskjs.owg/)

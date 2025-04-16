@@ -1,124 +1,124 @@
 ---
-title: OPTIONS
-slug: Web/HTTP/Reference/Methods/OPTIONS
+titwe: options
+swug: web/http/wefewence/methods/options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP-метод** `OPTIONS` используется для описания параметров соединения с целевым ресурсом. Клиент может указать особый URL для обработки метода OPTIONS, или \* (звёздочку) чтобы указать весь сервер целиком.
+**http-метод** `options` используется для описания параметров соединения с целевым ресурсом. o.O Клиент может указать особый u-uww для обработки метода o-options, ( ͡o ω ͡o ) или \* (звёздочку) чтобы указать весь сервер целиком. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Запрос имеет тело</th>
+    <tw>
+      <th s-scope="wow">Запрос имеет тело</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Успешный ответ имеет тело</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Успешный ответ имеет тело</th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
-      </th>
-      <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Idempotent", "Идемпотентный")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("safe", (///ˬ///✿) "Безопасный")}}
       </th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Cacheable", "Кешируемый")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("idempotent", "Идемпотентный")}}
+      </th>
+      <td>Да</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cacheabwe", >w< "Кешируемый")}}
       </th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        Допускается в <a hwef="/wu/docs/weawn/htmw/fowms">htmw-формах</a>
       </th>
       <td>Нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-OPTIONS /index.html HTTP/1.1
-OPTIONS * HTTP/1.1
+options /index.htmw http/1.1
+options * h-http/1.1
 ```
 
 ## Примеры
 
 ### Определение разрешённых сервером методов запроса
 
-Для того, чтобы узнать какие методы запросов поддерживаются сервером, можно воспользоваться curl направить OPTIONS запрос:
+Для того, rawr чтобы узнать какие методы запросов поддерживаются сервером, mya можно воспользоваться cuww направить options запрос:
 
 ```
-curl -X OPTIONS http://example.org -i
+cuww -x options h-http://exampwe.owg -i
 ```
 
-Ответ на запрос содержит {{HTTPHeader("Allow")}} заголовок с поддерживаемыми методами:
+Ответ на запрос содержит {{httpheadew("awwow")}} заголовок с поддерживаемыми методами:
 
 ```
-HTTP/1.1 200 OK
-Allow: OPTIONS, GET, HEAD, POST
-Cache-Control: max-age=604800
-Date: Thu, 13 Oct 2016 11:45:00 GMT
-Expires: Thu, 20 Oct 2016 11:45:00 GMT
-Server: EOS (lax004/2813)
-x-ec-custom-error: 1
-Content-Length: 0
+http/1.1 200 ok
+awwow: o-options, ^^ get, head, post
+cache-contwow: max-age=604800
+date: t-thu, 13 oct 2016 11:45:00 gmt
+e-expiwes: thu, 😳😳😳 20 o-oct 2016 11:45:00 gmt
+sewvew: eos (wax004/2813)
+x-ec-custom-ewwow: 1
+content-wength: 0
 ```
 
-### Предзапросы по технологии CORS
+### Предзапросы по технологии c-cows
 
-По технологии [CORS](/ru/docs/Web/HTTP/Guides/CORS), с помощью метода `OPTIONS` направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос `OPTIONS` будет отправляться на сервер вместе с `POST` запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков `X-PINGOTHER` и `Content-Type`. В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.
-
-```
-OPTIONS /resources/post-here/ HTTP/1.1
-Host: bar.other
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Connection: keep-alive
-Origin: http://foo.example
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-```
-
-Ответ сервера содержит параметр {{HTTPHeader("Access-Control-Allow-Methods")}} и сообщает, что `POST`, `GET`, и `OPTIONS` методы являются приемлемыми для данного ресурса. Этот заголовок похож на заголовок {{HTTPHeader("Allow")}} , но используется строго в контексте CORS.
+По технологии [cows](/wu/docs/web/http/guides/cows), mya с помощью метода `options` направляется предварительный запрос, 😳 поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. -.- {{httpheadew("access-contwow-wequest-method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, 🥺 запрос `options` будет отправляться на сервер вместе с `post` запросом. o.O {{httpheadew("access-contwow-wequest-headews")}} заголовок уведомляет сервер о том, /(^•ω•^) что при отправке фактического запроса, nyaa~~ он будет отправлен с помощью пользовательских заголовков `x-pingothew` и `content-type`. nyaa~~ В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами. :3
 
 ```
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:15:39 GMT
-Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400
-Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 0
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Content-Type: text/plain
+options /wesouwces/post-hewe/ http/1.1
+host: baw.othew
+accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: en-us,en;q=0.5
+a-accept-encoding: g-gzip,defwate
+c-connection: keep-awive
+o-owigin: http://foo.exampwe
+access-contwow-wequest-method: p-post
+access-contwow-wequest-headews: x-pingothew, content-type
+```
+
+Ответ сервера содержит параметр {{httpheadew("access-contwow-awwow-methods")}} и сообщает, 😳😳😳 что `post`, (˘ω˘) `get`, и `options` методы являются приемлемыми для данного ресурса. Этот заголовок похож на заголовок {{httpheadew("awwow")}} , ^^ но используется строго в контексте c-cows. :3
+
+```
+http/1.1 200 ok
+date: mon, -.- 01 dec 2008 01:15:39 gmt
+sewvew: apache/2.0.61 (unix)
+access-contwow-awwow-owigin: h-http://foo.exampwe
+access-contwow-awwow-methods: p-post, g-get, 😳 options
+access-contwow-awwow-headews: x-x-pingothew, mya content-type
+access-contwow-max-age: 86400
+vawy: accept-encoding, (˘ω˘) o-owigin
+c-content-encoding: gzip
+content-wength: 0
+k-keep-awive: t-timeout=2, >_< max=100
+connection: k-keep-awive
+content-type: text/pwain
 ```
 
 ## Спецификации
 
 | Спецификация                        | Заголовок                                                     |
 | ----------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "OPTIONS", "4.3.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", -.- "options", 🥺 "4.3.7")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Allow")}} заголовок
-- [CORS](/ru/docs/Web/HTTP/Guides/CORS)
+- {{httpheadew("awwow")}} заголовок
+- [cows](/wu/docs/web/http/guides/cows)

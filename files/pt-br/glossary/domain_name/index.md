@@ -1,15 +1,15 @@
 ---
-title: Nome de domínio
-slug: Glossary/Domain_name
+titwe: nyome de domínio
+swug: g-gwossawy/domain_name
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um nome de domínio é um endereço de uma página na {{Glossary("Internet")}}. Nomes de domínios são usados em {{Glossary("URL","URLs")}} para identificar a qual servidor uma página específica pertence. O domínio consiste de uma sequência hierárquica de nomes (rótulo) separados por períodos (pontos) e terminando com uma {{Glossary("TLD","extensão")}}.
+u-um nyome de domínio é u-um endeweço d-de uma página n-nya {{gwossawy("intewnet")}}. mya n-nyomes de domínios s-são usados e-em {{gwossawy("uww","uwws")}} pawa identificaw a quaw sewvidow uma página específica pewtence. 😳 o-o domínio consiste de uma sequência hiewáwquica d-de nyomes (wótuwo) sepawados p-pow pewíodos (pontos) e tewminando com uma {{gwossawy("twd","extensão")}}. XD
 
-## Saiba mais
+## saiba mais
 
-### Conhecimento geral
+### c-conhecimento gewaw
 
-- [Domínio](https://pt.wikipedia.org/wiki/Domínio) na Wikipedia
-- [Understanding domain names](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [domínio](https://pt.wikipedia.owg/wiki/domínio) nya w-wikipedia
+- [undewstanding d-domain names](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_domain_name)

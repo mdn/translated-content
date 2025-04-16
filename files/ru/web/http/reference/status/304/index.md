@@ -1,34 +1,34 @@
 ---
-title: 304 Not Modified
-slug: Web/HTTP/Reference/Status/304
+titwe: 304 nyot modified
+swug: w-web/http/wefewence/status/304
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код "HTTP **304 Not Modified**" клиента указывает, что нет необходимости повторно передавать запрошенные ресурсы. Это неявное перенаправление на кешированный ресурс. Это происходит, когда метод {{glossary("safe")}}, например {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}} запрос или когда запрос является условным и использует {{HTTPHeader("If-None-Match")}} или {{HTTPHeader("If-Modified-Since")}}.
+Код "http **304 n-nyot modified**" клиента указывает, UwU что нет необходимости повторно передавать запрошенные ресурсы. rawr x3 Это неявное перенаправление на кешированный ресурс. rawr Это происходит, σωσ когда метод {{gwossawy("safe")}}, σωσ например {{httpmethod("get")}} или {{httpmethod("head")}} запрос или когда запрос является условным и использует {{httpheadew("if-none-match")}} или {{httpheadew("if-modified-since")}}. >_<
 
-Если эквивалентный ответ {{HTTPStatus("200")}} `OK` включал {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}} и {{HTTPHeader("Vary")}}.
+Если эквивалентный ответ {{httpstatus("200")}} `ok` включал {{httpheadew("cache-contwow")}}, :3 {{httpheadew("content-wocation")}}, (U ﹏ U) {{httpheadew("date")}}, -.- {{httpheadew("etag")}}, (ˆ ﻌ ˆ)♡ {{httpheadew("expiwes")}} и {{httpheadew("vawy")}}. (⑅˘꒳˘)
 
-> [!NOTE]
-> Многие [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) браузеров создают посторонние запросы, приводящие к 304 ответам, так что доступ к локальному кешу виден разработчикам.
+> [!note]
+> Многие [devewopew t-toows' n-nyetwowk panews](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) браузеров создают посторонние запросы, (U ᵕ U❁) приводящие к 304 ответам, -.- так что доступ к локальному кешу виден разработчикам. ^^;;
 
 ## Статус
 
 ```
-304 Not Modified
+304 n-nyot modified
 ```
 
 ## Характеристики
 
 | Спецификации                                | Название                                                     |
 | ------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", >_< "304 n-nyot modified" , mya "4.1")}} | h-hypewtext twansfew p-pwotocow (http/1.1): conditionaw wequests |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-None-Match")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-none-match")}}

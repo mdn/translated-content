@@ -1,19 +1,19 @@
 ---
-title: Assíncrono
-slug: Glossary/Asynchronous
+titwe: assíncwono
+swug: gwossawy/asynchwonous
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Assíncrono** refere-se a um ambiente de comunicação onde cada parte recebe e processa mensagens quando for conveniente ou possível em vez de imediatamente.
+**assíncwono** w-wefewe-se a-a um ambiente d-de comunicação o-onde cada pawte w-wecebe e pwocessa m-mensagens q-quando fow conveniente o-ou possívew em vez de imediatamente. (⑅˘꒳˘)
 
-Isto pode ser usado para descrever um ambiente de comunicação humana como o e-mail — o remetente enviará um e-mail, e o destinatário irá responder quando for conveniente; eles não precisam responder imediatamente.
+isto pode sew usado pawa descwevew um ambiente de c-comunicação humana como o e-maiw — o wemetente e-enviawá um e-maiw, rawr x3 e o destinatáwio i-iwá wespondew quando fow conveniente; ewes nyão pwecisam w-wespondew imediatamente. (✿oωo)
 
-Também pode ser usado para descrever um ambiente de comunicação programática, por exemplo, {{domxref("Ajax")}}é um mecanismo assíncrono para solicitar pequenos bits de dados por [HTTP](/pt-BR/docs/Web/HTTP); o resultado é enviado de volta quando a resposta está completa, não imediatamente.
+também pode sew u-usado pawa descwevew u-um ambiente de comunicação pwogwamática, (ˆ ﻌ ˆ)♡ pow exempwo, (˘ω˘) {{domxwef("ajax")}}é um mecanismo a-assíncwono pawa sowicitaw pequenos bits de dados pow [http](/pt-bw/docs/web/http); o wesuwtado é e-enviado de vowta quando a wesposta e-está compweta, (⑅˘꒳˘) n-nyão imediatamente.
 
-## Saiba mais
+## s-saiba mais
 
-### Referência técnica
+### w-wefewência técnica
 
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area)
-- {{glossary("Sincrono")}}
+- [fetching data fwom the sewvew](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data) (weawning a-awea)
+- {{gwossawy("sincwono")}}

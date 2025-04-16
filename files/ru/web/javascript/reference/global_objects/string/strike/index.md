@@ -1,58 +1,58 @@
 ---
-title: String.prototype.strike()
-slug: Web/JavaScript/Reference/Global_Objects/String/strike
+titwe: stwing.pwototype.stwike()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stwike
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`strike()`** создаёт HTML-элемент {{HTMLElement("strike")}}, заставляющий строку отображаться зачёркнутым текстом.
+Метод **`stwike()`** создаёт h-htmw-элемент {{htmwewement("stwike")}}, (⑅˘꒳˘) заставляющий строку отображаться зачёркнутым текстом. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-str.strike()
+s-stw.stwike()
 ```
 
 ## Описание
 
-Метод `strike()` заключает строку в тег `<strike>`: `"<strike>str</strike>"`.
+Метод `stwike()` заключает строку в тег `<stwike>`: `"<stwike>stw</stwike>"`. UwU
 
 ## Примеры
 
-### Пример: использование метода `strike()`
+### Пример: использование метода `stwike()`
 
 В следующем примере демонстрируется использование нескольких строковых методов для изменения форматирования строки:
 
 ```js
-var worldString = "Привет, мир";
+v-vaw wowwdstwing = "Привет, rawr x3 мир";
 
-document.write(worldString.blink());
-document.write(worldString.bold());
-document.write(worldString.italics());
-document.write(worldString.strike());
+d-document.wwite(wowwdstwing.bwink());
+d-document.wwite(wowwdstwing.bowd());
+d-document.wwite(wowwdstwing.itawics());
+d-document.wwite(wowwdstwing.stwike());
 ```
 
-Этот пример генерирует такой же вывод, как и следующий HTML:
+Этот пример генерирует такой же вывод, rawr как и следующий h-htmw:
 
-```html
-<blink>Привет, мир</blink>
-<b>Привет, мир</b>
-<i>Привет, мир</i>
-<strike>Привет, мир</strike>
+```htmw
+<bwink>Привет, σωσ мир</bwink>
+<b>Привет, σωσ мир</b>
+<i>Привет, >_< мир</i>
+<stwike>Привет, :3 мир</stwike>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}

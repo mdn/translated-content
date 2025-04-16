@@ -1,41 +1,41 @@
 ---
-title: RegExp.prototype.source
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
+titwe: wegexp.pwototype.souwce
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/souwce
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`source`** возвращает {{jsxref("Global_Objects/String", "строку", "", 1)}}, содержащую текст шаблона регулярного выражения без прямых слешей с обеих сторон и без флагов регулярного выражения.
+Свойство **`souwce`** возвращает {{jsxwef("gwobaw_objects/stwing", rawr x3 "строку", rawr "", 1)}}, содержащую текст шаблона регулярного выражения без прямых слешей с обеих сторон и без флагов регулярного выражения. σωσ
 
 ## Примеры
 
-### Пример: использование свойства `source`
+### Пример: использование свойства `souwce`
 
 ```js
-var regex = /fooBar/gi;
+v-vaw wegex = /foobaw/gi;
 
-console.log(regex.source); // 'fooBar', не содержит прямые слеши /.../ и флаги 'ig'.
+c-consowe.wog(wegex.souwce); // 'foobaw', σωσ не содержит прямые слеши /.../ и флаги 'ig'. >_<
 ```
 
-Начиная с ECMAScript 5, свойство `source` больше не возвращает пустую строку для пустых регулярных выражений. Вместо этого, возвращается строка" (?:)". Кроме того, теперь экранируются символы окончания строк (такие как, "\n").
+Начиная с e-ecmascwipt 5, :3 свойство `souwce` больше не возвращает пустую строку для пустых регулярных выражений. (U ﹏ U) Вместо этого, -.- возвращается строка" (?:)". (ˆ ﻌ ˆ)♡ Кроме того, (⑅˘꒳˘) теперь экранируются символы окончания строк (такие как, (U ᵕ U❁) "\n").
 
 ```
-new RegExp().source; // "(?:)"
+n-nyew w-wegexp().souwce; // "(?:)"
 
-new RegExp('\n').source === '\n';  // true, до появления ES5
-new RegExp('\n').source === '\\n'; // true, начиная с ES5
+n-nyew w-wegexp('\n').souwce === '\n';  // t-twue, -.- до появления es5
+nyew wegexp('\n').souwce === '\\n'; // twue, ^^;; начиная с es5
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("RegExp.prototype.flags")}}
+- {{jsxwef("wegexp.pwototype.fwags")}}

@@ -1,47 +1,47 @@
 ---
-title: Boolean.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
+titwe: boowean.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.
+Метод **`vawueof()`** возвращает примитивное значение объекта {{jsxwef("gwobaw_objects/boowean", (U ᵕ U❁) "boowean")}}. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-bool.valueOf()
+b-boow.vawueof()
 ```
 
 ### Параметры
 
-Нет.
+Нет. ( ͡o ω ͡o )
 
 ## Описание
 
-Метод `valueOf` объекта {{jsxref("Global_Objects/Boolean", "Boolean")}} возвращает примитивное значение объекта или литерала логического типа.
+Метод `vawueof` объекта {{jsxwef("gwobaw_objects/boowean", UwU "boowean")}} возвращает примитивное значение объекта или литерала логического типа. rawr x3
 
-Этот метод обычно вызывается внутри движка JavaScript, а не явно в коде.
+Этот метод обычно вызывается внутри движка j-javascwipt, rawr а не явно в коде. σωσ
 
 ## Примеры
 
-### Пример: использование `valueOf`
+### Пример: использование `vawueof`
 
 ```js
-x = new Boolean();
-myVar = x.valueOf(); // присваивает false переменной myVar
+x-x = nyew b-boowean();
+myvaw = x-x.vawueof(); // присваивает f-fawse переменной m-myvaw
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

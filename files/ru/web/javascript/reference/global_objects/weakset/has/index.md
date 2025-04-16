@@ -1,51 +1,51 @@
 ---
-title: WeakSet.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
+titwe: weakset.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`has()`** определяет, содержит ли WeakSet определённый элемент, возвращая в зависимости от этого true или false.
+Метод **`has()`** определяет, >_< содержит ли weakset определённый элемент, возвращая в зависимости от этого t-twue или f-fawse. :3
 
 ## Синтаксис
 
 ```
-ws.has(value);
+w-ws.has(vawue);
 ```
 
 ### Параметры
 
-- value
-  - : Обязателен. Искомый объект.
+- v-vawue
+  - : Обязателен. (U ﹏ U) Искомый объект. -.-
 
 ### Возвращаемое значение
 
-- Boolean
-  - : Если объект был найден в WeakSet вернёт true, иначе false.
+- b-boowean
+  - : Если объект был найден в w-weakset вернёт t-twue, (ˆ ﻌ ˆ)♡ иначе f-fawse. (⑅˘꒳˘)
 
 ## Примеры
 
 ### Использование метода `has`
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+vaw ws = nyew weakset();
+vaw obj = {};
 ws.add(window);
 
-mySet.has(window); // вернёт true
-mySet.has(obj); // вернёт false
+myset.has(window); // вернёт t-twue
+myset.has(obj); // вернёт fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.add()")}}
-- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.add()")}}
+- {{jsxwef("weakset.pwototype.dewete()")}}

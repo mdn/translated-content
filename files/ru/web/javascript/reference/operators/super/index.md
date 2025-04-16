@@ -1,160 +1,160 @@
 ---
-title: super
-slug: Web/JavaScript/Reference/Operators/super
+titwe: supew
+swug: web/javascwipt/wefewence/opewatows/supew
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Ключевое слово **super** используется для вызова функций, принадлежащих родителю объекта.
+Ключевое слово **supew** используется для вызова функций, 🥺 принадлежащих родителю объекта. o.O
 
-Выражения `super.prop` и `super[expr]` действительны в любом [определении метода](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions) в [классах](/ru/docs/Web/JavaScript/Reference/Classes) и в [литералах объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+Выражения `supew.pwop` и `supew[expw]` действительны в любом [определении метода](/wu/docs/web/javascwipt/wefewence/functions/method_definitions) в [классах](/wu/docs/web/javascwipt/wefewence/cwasses) и в [литералах объекта](/wu/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). /(^•ω•^)
 
 ## Синтаксис
 
 ```js
-super([arguments]); // вызов родительского конструктора.
-super.functionOnParent([arguments]);
+s-supew([awguments]); // вызов родительского конструктора. nyaa~~
+supew.functiononpawent([awguments]);
 ```
 
 ## Описание
 
-В конструкторе ключевое слово `super()` используется как функция, вызывающая родительский конструктор. Её необходимо вызвать до первого обращения к ключевому слову `this` в теле конструктора. Ключевое слово `super` также может быть использовано для вызова функций родительского объекта.
+В конструкторе ключевое слово `supew()` используется как функция, nyaa~~ вызывающая родительский конструктор. :3 Её необходимо вызвать до первого обращения к ключевому слову `this` в теле конструктора. 😳😳😳 Ключевое слово `supew` также может быть использовано для вызова функций родительского объекта.
 
 ## Пример
 
-### Использование super в классах
+### Использование supew в классах
 
-Этот фрагмент кода взят из [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([демонстрация](https://googlechrome.github.io/samples/classes-es6/index.html)). В этом примере `super()` вызывается, чтобы не повторять части конструктора, одинаковые для классов `Rectangle` и `Square`.
+Этот фрагмент кода взят из [cwasses s-sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([демонстрация](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)). (˘ω˘) В этом примере `supew()` вызывается, ^^ чтобы не повторять части конструктора, :3 одинаковые для классов `wectangwe` и `squawe`.
 
 ```js
-class Rectangle {
-  constructor(height, width) {
-    this.name = "Rectangle";
-    this.height = height;
+c-cwass wectangwe {
+  c-constwuctow(height, -.- w-width) {
+    t-this.name = "wectangwe";
+    t-this.height = h-height;
     this.width = width;
   }
-  sayName() {
-    console.log("Hi, I am a ", this.name + ".");
+  sayname() {
+    consowe.wog("hi, 😳 i am a ", mya t-this.name + ".");
   }
-  get area() {
-    return this.height * this.width;
+  get awea() {
+    wetuwn t-this.height * this.width;
   }
-  set area(value) {
-    this._area = value;
+  s-set awea(vawue) {
+    this._awea = vawue;
   }
 }
 
-class Square extends Rectangle {
-  constructor(length) {
-    this.height; // ReferenceError, super должен быть вызван первым!
+cwass squawe e-extends wectangwe {
+  constwuctow(wength) {
+    t-this.height; // w-wefewenceewwow, (˘ω˘) supew должен быть вызван первым! >_<
 
-    // Здесь вызывается конструктор родительского класса с длинами,
-    // указанными для ширины и высоты класса Rectangle
-    super(length, length);
+    // Здесь вызывается конструктор родительского класса с длинами, -.-
+    // указанными для ширины и высоты класса wectangwe
+    supew(wength, 🥺 wength);
 
-    // Примечание: в производных классах super() необходимо вызывать, прежде чем
-    // использовать 'this'. Если этого не сделать, произойдет ошибка ReferenceError.
-    this.name = "Square";
+    // Примечание: в производных классах supew() необходимо вызывать, (U ﹏ U) прежде чем
+    // использовать 'this'. >w< Если этого не сделать, mya произойдет ошибка w-wefewenceewwow.
+    this.name = "squawe";
   }
 }
 ```
 
-### Вызов статических методов через super
+### Вызов статических методов через supew
 
-Вы также можете вызывать super для [статических](/ru/docs/Web/JavaScript/Reference/Classes/static) методов.
+Вы также можете вызывать supew для [статических](/wu/docs/web/javascwipt/wefewence/cwasses/static) методов. >w<
 
 ```js
-class Rectangle {
-  static logNbSides() {
-    return "У меня 4 стороны";
+cwass w-wectangwe {
+  static wognbsides() {
+    w-wetuwn "У меня 4 стороны";
   }
 }
 
-class Square extends Rectangle {
-  static logDescription() {
-    return super.logNbSides() + ", равные между собой";
+c-cwass squawe e-extends wectangwe {
+  s-static wogdescwiption() {
+    wetuwn supew.wognbsides() + ", nyaa~~ равные между собой";
   }
 }
-Square.logDescription(); // 'У меня 4 стороны, равные между собой'
+s-squawe.wogdescwiption(); // 'У меня 4 стороны, (✿oωo) равные между собой'
 ```
 
-### Удаление свойств через super вызывает ошибку
+### Удаление свойств через supew вызывает ошибку
 
-Вы не можете использовать [оператор delete](/ru/docs/Web/JavaScript/Reference/Operators/delete) и `super.prop` или `super[expr]` для удаления свойств родительского класса, он выдаст: {{jsxref("ReferenceError")}}.
+Вы не можете использовать [оператор dewete](/wu/docs/web/javascwipt/wefewence/opewatows/dewete) и `supew.pwop` или `supew[expw]` для удаления свойств родительского класса, ʘwʘ он выдаст: {{jsxwef("wefewenceewwow")}}. (ˆ ﻌ ˆ)♡
 
 ```js
-class Base {
-  constructor() {}
+c-cwass base {
+  constwuctow() {}
   foo() {}
 }
-class Derived extends Base {
-  constructor() {}
-  delete() {
-    delete super.foo; // это плохо
+cwass dewived extends base {
+  constwuctow() {}
+  d-dewete() {
+    dewete supew.foo; // это плохо
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+n-nyew dewived().dewete(); // w-wefewenceewwow: i-invawid dewete invowving 'supew'. 😳😳😳
 ```
 
-### `super.prop` не может переопределять свойства, защищённые от записи
+### `supew.pwop` не может переопределять свойства, :3 защищённые от записи
 
-При определении незаписываемых свойств с помощью, например, {{jsxref("Object.defineProperty")}}, `super` не может перезаписать значение свойства.
+При определении незаписываемых свойств с помощью, OwO например, (U ﹏ U) {{jsxwef("object.definepwopewty")}}, >w< `supew` не может перезаписать значение свойства. (U ﹏ U)
 
 ```js
-class X {
-  constructor() {
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
+cwass x {
+  constwuctow() {
+    o-object.definepwopewty(this, 😳 "pwop", (ˆ ﻌ ˆ)♡ {
+      c-configuwabwe: twue, 😳😳😳
+      w-wwitabwe: fawse, (U ﹏ U)
+      v-vawue: 1, (///ˬ///✿)
     });
   }
 }
 
-class Y extends X {
-  constructor() {
-    super();
+cwass y extends x-x {
+  constwuctow() {
+    supew();
   }
-  foo() {
-    super.prop = 2; // Невозможно перезаписать значение.
+  f-foo() {
+    supew.pwop = 2; // Невозможно перезаписать значение. 😳
   }
 }
 
-var y = new Y();
-y.foo(); // TypeError: "prop" доступен только для чтения
-console.log(y.prop); // 1
+vaw y = nyew y();
+y-y.foo(); // typeewwow: "pwop" доступен только для чтения
+consowe.wog(y.pwop); // 1
 ```
 
-### Использование `super.prop` в объектных литералах
+### Использование `supew.pwop` в объектных литералах
 
-Super также можно использовать в [объекте инициализатора / литерала](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer). В этом примере метод определяют два объекта. Во втором объекте `super` вызывает метод первого объекта. Это работает благодаря {{jsxref("Object.setPrototypeOf()")}}, с помощью которого мы можем установить прототип для `obj2` в `obj1`, так что `super` может найти `method1` в `obj1`.
+s-supew также можно использовать в [объекте инициализатора / литерала](/wu/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). 😳 В этом примере метод определяют два объекта. σωσ Во втором объекте `supew` вызывает метод первого объекта. rawr x3 Это работает благодаря {{jsxwef("object.setpwototypeof()")}}, OwO с помощью которого мы можем установить прототип для `obj2` в `obj1`, /(^•ω•^) так что `supew` может найти `method1` в `obj1`.
 
 ```js
-var obj1 = {
-  method1() {
-    console.log("method 1");
-  },
+vaw obj1 = {
+  m-method1() {
+    c-consowe.wog("method 1");
+  }, 😳😳😳
 };
 
-var obj2 = {
+vaw obj2 = {
   method2() {
-    super.method1();
-  },
+    supew.method1();
+  }, ( ͡o ω ͡o )
 };
 
-Object.setPrototypeOf(obj2, obj1);
+object.setpwototypeof(obj2, >_< obj1);
 obj2.method2(); // выведет "method 1"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Классы](/ru/docs/Web/JavaScript/Reference/Classes)
+- [Классы](/wu/docs/web/javascwipt/wefewence/cwasses)

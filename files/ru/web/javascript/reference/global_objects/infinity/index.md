@@ -1,65 +1,65 @@
 ---
-title: Infinity
-slug: Web/JavaScript/Reference/Global_Objects/Infinity
-l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+titwe: infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/infinity
+w-w10n:
+  s-souwcecommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-Глобальное свойство **`Infinity`** является числовым значением, представляющим бесконечность.
+Глобальное свойство **`infinity`** является числовым значением, -.- представляющим бесконечность.
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - i-infinity")}}
 
-```js interactive-example
-const maxNumber = Math.pow(10, 1000); // Max positive number
+```js i-intewactive-exampwe
+c-const maxnumbew = math.pow(10, ( ͡o ω ͡o ) 1000); // max positive nyumbew
 
-if (maxNumber === Infinity) {
-  console.log("Let's call it Infinity!");
-  // Expected output: "Let's call it Infinity!"
+if (maxnumbew === infinity) {
+  c-consowe.wog("wet's caww it infinity!");
+  // e-expected output: "wet's caww i-it infinity!"
 }
 
-console.log(1 / maxNumber);
-// Expected output: 0
+consowe.wog(1 / maxnumbew);
+// expected output: 0
 ```
 
 ## Значение
 
-Такое же числовое значение, как у {{jsxref("Number.POSITIVE_INFINITY")}}.
+Такое же числовое значение, rawr x3 как у {{jsxwef("numbew.positive_infinity")}}. nyaa~~
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, /(^•ω•^) 0, 0)}}
 
 ## Описание
 
-`Infinity` является свойством _глобального объекта_, то есть, это переменная в глобальной области видимости.
+`infinity` является свойством _глобального объекта_, rawr то есть, OwO это переменная в глобальной области видимости. (U ﹏ U)
 
-Значение `Infinity` (положительная бесконечность) больше, чем любое другое число.
+Значение `infinity` (положительная бесконечность) больше, >_< чем любое другое число.
 
-Это значение ведет себя несколько иначе, чем математическая бесконечность, смотрите подробности в {{jsxref("Number.POSITIVE_INFINITY")}}.
+Это значение ведет себя несколько иначе, rawr x3 чем математическая бесконечность, mya смотрите подробности в {{jsxwef("numbew.positive_infinity")}}. nyaa~~
 
 ## Примеры
 
-### Использование Infinity
+### Использование i-infinity
 
 ```js
-console.log(Infinity); /* Infinity */
-console.log(Infinity + 1); /* Infinity */
-console.log(Math.pow(10, 1000)); /* Infinity */
-console.log(Math.log(0)); /* -Infinity */
-console.log(1 / Infinity); /* 0 */
-console.log(1 / 0); /* Infinity */
+consowe.wog(infinity); /* i-infinity */
+c-consowe.wog(infinity + 1); /* infinity */
+consowe.wog(math.pow(10, (⑅˘꒳˘) 1000)); /* infinity */
+consowe.wog(math.wog(0)); /* -infinity */
+consowe.wog(1 / infinity); /* 0 */
+c-consowe.wog(1 / 0); /* infinity */
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.isFinite")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.isfinite")}}

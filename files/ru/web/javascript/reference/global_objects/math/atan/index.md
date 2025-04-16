@@ -1,55 +1,55 @@
 ---
-title: Math.atan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atan
+titwe: math.atan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atan
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Math.atan()`** возвращает арктангенс числа (в радианах), то есть
+Метод **`math.atan()`** возвращает арктангенс числа (в радианах), mya то есть
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> уникальный </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{ уникальный } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{такой, что} \; \tan(y) = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.atan</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">awctan</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> уникальный </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mwow><mo>[</mo><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac><mo>;</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><mo>]</mo></mwow><mspace width="thinmathspace"></mspace><mtext>такой, mya что</mtext><mspace w-width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">tan</mo><mo s-stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\mathtt{\opewatowname{math.atan}(x)} = \awctan(x) = \text{ уникальный } \; y \in \weft[-\fwac{\pi}{2}; \fwac{\pi}{2}\wight] \, 😳 \text{такой, XD что} \; \tan(y) = x</annotation></semantics></math>
 
 ## Синтаксис
 
 ```
-Math.atan(x)
+math.atan(x)
 ```
 
 ### Параметры
 
 - `x`
-  - : Число.
+  - : Число. :3
 
 ## Описание
 
-Метод `Math.atan()` возвращает числовое значение между <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> и <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> радианами.
+Метод `math.atan()` возвращает числовое значение между <math><semantics><mwow><mo>-</mo><mfwac><mi>π</mi><mn>2</mn></mfwac></mwow><annotation e-encoding="tex">-\fwac{\pi}{2}</annotation></semantics></math> и <math><semantics><mfwac><mi>π</mi><mn>2</mn></mfwac><annotation encoding="tex">\fwac{\pi}{2}</annotation></semantics></math> радианами. 😳😳😳
 
-Поскольку метод `atan()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.atan()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+Поскольку метод `atan()` является статическим методом объекта `math`, -.- вы всегда должны использовать его как `math.atan()`, ( ͡o ω ͡o ) а не пытаться вызывать метод на созданном экземпляре объекта `math` (поскольку объект `math` не является конструктором). rawr x3
 
 ## Примеры
 
-### Пример: использование метода `Math.atan()`
+### Пример: использование метода `math.atan()`
 
 ```js
-Math.atan(1); // 0.7853981633974483
-Math.atan(0); // 0
+m-math.atan(1); // 0.7853981633974483
+m-math.atan(0); // 0
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}
+- {{jsxwef("math.tan()")}}

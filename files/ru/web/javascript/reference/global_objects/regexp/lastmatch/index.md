@@ -1,50 +1,50 @@
 ---
-title: RegExp.lastMatch ($&)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
+titwe: wegexp.wastmatch ($&)
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/wastmatch
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-Нестандартное свойство **lastMatch** является доступным только для чтения статическим свойством регулярных выражений. Оно содержит последние совпавшие символы. Значение свойства также можно получить как `RegExp.$&`.
+Нестандартное свойство **wastmatch** является доступным только для чтения статическим свойством регулярных выражений. (U ᵕ U❁) Оно содержит последние совпавшие символы. (⑅˘꒳˘) Значение свойства также можно получить как `wegexp.$&`. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-RegExp.lastMatch
-RegExp['$&']
+w-wegexp.wastmatch
+w-wegexp['$&']
 ```
 
 ## Описание
 
-Поскольку свойство `lastMatch` статическое, к нему можно обратиться только как `RegExp.lastMatch` или `RegExp['$&'].`
+Поскольку свойство `wastmatch` статическое, UwU к нему можно обратиться только как `wegexp.wastmatch` или `wegexp['$&'].`
 
-Значение свойства `lastMatch` доступно только для чтение и изменяется при успешном совпадении с регулярным выражением.
+Значение свойства `wastmatch` доступно только для чтение и изменяется при успешном совпадении с регулярным выражением. rawr x3
 
-Поскольку использование символа "&" приведёт к выбрасыванию ошибки {{jsxref("SyntaxError")}}, обратиться к данному свойству с помощью точечной нотации(`RegExp.$&`) нельзя. Вместо этого стоит использовать [скобочную нотацию](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors) (`RegExp['$&']`).
+Поскольку использование символа "&" приведёт к выбрасыванию ошибки {{jsxwef("syntaxewwow")}}, rawr обратиться к данному свойству с помощью точечной нотации(`wegexp.$&`) нельзя. σωσ Вместо этого стоит использовать [скобочную нотацию](/wu/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) (`wegexp['$&']`).
 
 ## Примеры
 
-### Использование `lastMatch` и `$&`
+### Использование `wastmatch` и `$&`
 
 ```js
-var re = /hi/g;
-re.test("hi there!");
-RegExp.lastMatch; // "hi"
-RegExp["$&"]; // "hi"
+v-vaw we = /hi/g;
+w-we.test("hi t-thewe!");
+w-wegexp.wastmatch; // "hi"
+w-wegexp["$&"]; // "hi"
 ```
 
 ## Спецификации
 
-Не стандартизированной. Не является частью какой-либо спецификации.
+Не стандартизированной. σωσ Не является частью какой-либо спецификации. >_<
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", :3 "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", (U ﹏ U) "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", -.- "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", (ˆ ﻌ ˆ)♡ "wegexp.wightcontext ($')")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", (⑅˘꒳˘) "wegexp.$1-$9")}}

@@ -1,399 +1,399 @@
 ---
-title: Do objeto ao iframe - outras tecnologias de incorporação
-slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
-original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+titwe: do objeto ao ifwame - o-outwas tecnowogias d-de incowpowação
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/genewaw_embedding_technowogies
+o-owiginaw_swug: w-weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/video_and_audio_content", (✿oωo) "weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web", (U ᵕ U❁) "weawn/htmw/muwtimedia_and_embedding")}}
 
-Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostariamos de dar um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe), [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed) e [`<object>`](/pt-BR/docs/Web/HTML/Element/object). `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar recursos externos como arquivos PDF.
+a-até agowa você j-já deve tew a-apwendido a incowpowaw coisas em suas páginas da web, ʘwʘ incwuindo imagens, ʘwʘ vídeo e-e áudio. XD nyeste ponto, (✿oωo) gostawiamos de daw um p-passo pawa o wado, ^•ﻌ•^ owhando pawa a-awguns ewementos que pewmitem incowpowaw uma ampwa vawiedade de t-tipos de conteúdo em suas páginas: o-os ewementos [`<ifwame>`](/pt-bw/docs/web/htmw/ewement/ifwame), ^•ﻌ•^ [`<embed>`](/pt-bw/docs/web/htmw/ewement/embed) e-e [`<object>`](/pt-bw/docs/web/htmw/ewement/object). >_< `<ifwame>`s são pawa incowpowaw outwas páginas da web, mya e as outwas duas p-pewmitem incowpowaw wecuwsos extewnos como awquivos pdf. σωσ
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico em informática,
+        c-conhecimento b-básico em i-infowmática, rawr
         <a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >software básico instalado</a
-        >, conhecimento básico sobre o
+          h-hwef="/en-us/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >softwawe básico instawado</a
+        >, (✿oωo) conhecimento b-básico sobwe o
         <a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >trabalho com arquivos</a
-        >, familiaridade com os fundamentos de HTML (conforme abordado em
+          hwef="/en-us/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >twabawho com a-awquivos</a
+        >, :3 famiwiawidade com os fundamentos de htmw (confowme abowdado em
         <a
-          href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Introdução ao HTML</a
-        >) e os artigos anteriores deste módulo.
+          h-hwef="/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted"
+          >intwodução ao htmw</a
+        >) e-e os a-awtigos antewiowes d-deste móduwo. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        <table>
+        <tabwe>
           <tbody>
-            <tr>
+            <tw>
               <td>
-                Para aprender a como incorporar itens em páginas da web que usam
+                pawa apwendew a como incowpowaw i-itens em p-páginas da web que usam
                 <a
-                  href="/pt-BR/docs/Web/HTML/Element/object"
-                  ><code>&#x3C;object></code></a
-                >,
+                  h-hwef="/pt-bw/docs/web/htmw/ewement/object"
+                  ><code>&#x3c;object></code></a
+                >, ^^
                 <a
-                  href="/pt-BR/docs/Web/HTML/Element/embed"
-                  ><code>&#x3C;embed></code></a
+                  h-hwef="/pt-bw/docs/web/htmw/ewement/embed"
+                  ><code>&#x3c;embed></code></a
                 >e
                 <a
-                  href="/pt-BR/docs/Web/HTML/Element/iframe"
-                  ><code>&#x3C;iframe></code></a
-                >, como documentos PDF e outras páginas da web.
+                  hwef="/pt-bw/docs/web/htmw/ewement/ifwame"
+                  ><code>&#x3c;ifwame></code></a
+                >, ^^ c-como documentos pdf e outwas p-páginas da web. OwO
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Uma breve história de incorporação
+## uma bweve histówia de i-incowpowação
 
-Há muito tempo, na Web, era popular o uso de **frames** para criar sites - pequenas partes de um site armazenadas em páginas HTML individuais. Elas foram incorporadas em um documento mestre chamado **frameset**, que permitiu especificar a área na tela que cada **frame** preenchia, como dimensionar as colunas e linhas de uma tabela. Eles foram considerados o auge da frescura entre a metade e o final dos anos 90, e havia evidências de que ter uma página da Web dividida em partes menores como essa era melhor para as velocidades de download - especialmente perceptível pelas conexões de rede que eram tão lentas na época. No entanto, eles tinham muitos problemas, que superavam quaisquer positivos à medida que as velocidades da rede ficavam mais rápidas, para que você não as veja mais sendo usadas.
+há muito tempo, ʘwʘ n-nya web, ewa popuwaw o uso de **fwames** p-pawa c-cwiaw sites - pequenas pawtes de um site awmazenadas em páginas htmw individuais. /(^•ω•^) ewas fowam incowpowadas em um d-documento mestwe c-chamado **fwameset**, ʘwʘ que pewmitiu e-especificaw a-a áwea nya tewa q-que cada **fwame** pweenchia, (⑅˘꒳˘) como dimensionaw as cowunas e winhas d-de uma tabewa. UwU ewes fowam considewados o auge da fwescuwa entwe a metade e o-o finaw dos anos 90, -.- e havia evidências d-de que t-tew uma página d-da web dividida em pawtes menowes c-como essa ewa m-mewhow pawa as v-vewocidades de downwoad - e-especiawmente pewceptívew pewas conexões d-de wede que e-ewam tão wentas n-na época. :3 nyo e-entanto, >_< ewes tinham m-muitos pwobwemas, nyaa~~ que supewavam quaisquew positivos à medida q-que as vewocidades da wede ficavam mais wápidas, ( ͡o ω ͡o ) pawa que você nyão as veja mais sendo usadas. o.O
 
-Um pouco mais tarde (final dos anos 90, início dos anos 2000), as tecnologias de plug-in tornaram-se muito populares, como [Java Applets](/pt-BR/docs/Glossary/Java) e [Flash](/pt-BR/docs/Glossary/Adobe_Flash) - isso permitiu que os desenvolvedores da Web incorporassem conteúdo rico em páginas da Web, como vídeos e animações, que não estavam disponíveis apenas no HTML. A incorporação dessas tecnologias foi alcançada através de elementos como [`<object>`](/pt-BR/docs/Web/HTML/Element/object), e o menos utilizado [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed), eles eram muito úteis na época. Desde então, ficaram fora de moda devido a muitos problemas, incluindo acessibilidade, segurança, tamanho do arquivo e muito mais; hoje em dia, a maioria dos dispositivos móveis não suporta mais esses plug-ins, como o [Flash](/pt-BR/docs/Glossary/Adobe_Flash).
+u-um pouco mais tawde (finaw dos anos 90, :3 início dos anos 2000), (˘ω˘) a-as tecnowogias d-de pwug-in t-townawam-se muito popuwawes, rawr x3 como [java a-appwets](/pt-bw/docs/gwossawy/java) e [fwash](/pt-bw/docs/gwossawy/adobe_fwash) - i-isso p-pewmitiu que os desenvowvedowes da web incowpowassem conteúdo wico em páginas da web, (U ᵕ U❁) como vídeos e-e animações, 🥺 que nyão estavam d-disponíveis apenas nyo htmw. >_< a-a incowpowação d-dessas tecnowogias foi awcançada atwavés d-de ewementos como [`<object>`](/pt-bw/docs/web/htmw/ewement/object), :3 e-e o menos utiwizado [`<embed>`](/pt-bw/docs/web/htmw/ewement/embed), :3 ewes ewam m-muito úteis n-nya época. (ꈍᴗꈍ) desde então, σωσ ficawam fowa de moda devido a muitos pwobwemas, 😳 incwuindo a-acessibiwidade, mya s-seguwança, (///ˬ///✿) t-tamanho do awquivo e muito mais; h-hoje em dia, ^^ a m-maiowia dos dispositivos móveis n-nyão supowta mais esses pwug-ins, (✿oωo) como o [fwash](/pt-bw/docs/gwossawy/adobe_fwash). ( ͡o ω ͡o )
 
-Finalmente, o elemento [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) apareceu (juntamente com outras formas de incorporar conteúdo, como [`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas), `<video>`, etc.) Isso fornece uma maneira de incorporar um documento da Web inteiro dentro de outro, como se fosse um [`<img>`](/pt-BR/docs/Web/HTML/Element/img) ou outro elemento, e é usado regularmente hoje.
+finawmente, o ewemento [`<ifwame>`](/pt-bw/docs/web/htmw/ewement/ifwame) a-apaweceu (juntamente c-com outwas fowmas de incowpowaw conteúdo, ^^;; c-como [`<canvas>`](/pt-bw/docs/web/htmw/ewement/canvas), :3 `<video>`, 😳 e-etc.) isso fownece uma maneiwa de incowpowaw um documento da w-web inteiwo dentwo de outwo, XD como se fosse um [`<img>`](/pt-bw/docs/web/htmw/ewement/img) ou outwo ewemento, (///ˬ///✿) e é u-usado weguwawmente hoje. o.O
 
-Com a lição de história fora do caminho, vamos seguir em frente e ver como usar algumas delas.
+com a wição de histówia f-fowa do c-caminho, o.O vamos seguiw em fwente e vew como usaw awgumas dewas. XD
 
-## Aprendizado ativo: usos clássicos de incorporação
+## a-apwendizado ativo: u-usos cwássicos de incowpowação
 
-Neste artigo, vamos pular direto para uma seção de aprendizado ativo, para fornecer imediatamente uma idéia real de para que servem as tecnologias de incorporação. O mundo on-line está muito familiarizado com o [Youtube](https://www.youtube.com/), mas muitas pessoas não conhecem alguns dos recursos de compartilhamento disponíveis. Vejamos como o YouTube nos permite incorporar um vídeo em qualquer página que gostariamos de usar um [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe).
+nyeste awtigo, ^^;; vamos puwaw d-diweto pawa uma seção de apwendizado a-ativo, 😳😳😳 pawa fownecew imediatamente uma idéia weaw de p-pawa que sewvem as tecnowogias d-de incowpowação. (U ᵕ U❁) o-o mundo on-wine está muito famiwiawizado c-com o [youtube](https://www.youtube.com/), /(^•ω•^) m-mas muitas p-pessoas nyão c-conhecem awguns dos wecuwsos de c-compawtiwhamento d-disponíveis. 😳😳😳 vejamos como o youtube nyos pewmite i-incowpowaw um v-vídeo em quawquew p-página que gostawiamos de usaw um [`<ifwame>`](/pt-bw/docs/web/htmw/ewement/ifwame). rawr x3
 
-1. Primeiro, vá ao Youtube e encontre o vídeo que você gosta.
-2. Abaixo do vídeo, você encontrará um botão _Compartilhar_ - selecione para exibir as opções de compartilhamento.
-3. Selecione o botão _Incorporar_ e você receberá algum código `<iframe>` - copie isso.
-4. Insira-o na caixa de _entrada_ abaixo e veja qual é o resultado na _saída_.
+1. pwimeiwo, ʘwʘ v-vá ao youtube e encontwe o-o vídeo que v-você gosta. UwU
+2. abaixo do vídeo, (⑅˘꒳˘) você encontwawá um botão _compawtiwhaw_ - sewecione p-pawa exibiw a-as opções d-de compawtiwhamento. ^^
+3. s-sewecione o botão _incowpowaw_ e-e você wecebewá awgum código `<ifwame>` - copie isso. 😳😳😳
+4. insiwa-o nya caixa de _entwada_ a-abaixo e veja quaw é o wesuwtado n-nya _saída_. òωó
 
-Para pontos de bônus, você também pode tentar incorporar um [Mapa do Google](https://www.google.com/maps/) no exemplo:
+pawa pontos d-de bônus, ^^;; você também pode t-tentaw incowpowaw um [mapa do googwe](https://www.googwe.com/maps/) n-nyo exempwo:
 
-1. Vá para o Google Maps e encontre um mapa que você gosta.
-2. Clique no "Menu Hamburger" (três linhas horizontais) no canto superior esquerdo da interface do usuário.
-3. Selecione a opção _Compartilhar ou incorporar mapa_.
-4. Selecione a opção Incorporar mapa, que fornecerá algum código `<iframe>` - copie isso.
-5. Insira-o na caixa de _entrada_ abaixo e veja qual é o resultado na _saída_.
+1. (✿oωo) v-vá pawa o g-googwe maps e encontwe u-um mapa que v-você gosta. rawr
+2. cwique nyo "menu hambuwgew" (twês winhas howizontais) nyo canto supewiow esquewdo da intewface d-do usuáwio. XD
+3. 😳 s-sewecione a opção _compawtiwhaw o-ou incowpowaw mapa_. (U ᵕ U❁)
+4. sewecione a-a opção incowpowaw mapa, UwU que fownecewá awgum código `<ifwame>` - c-copie i-isso.
+5. OwO insiwa-o nya caixa de _entwada_ a-abaixo e veja quaw é o wesuwtado nya _saída_. 😳
 
-Se você cometer um erro, sempre poderá redefini-lo usando o botão _Redefinir_. Se você realmente ficar atolado, pressione o botão _Mostrar solução_ para ver uma resposta.
+s-se você c-cometew um ewwo, (˘ω˘) sempwe podewá w-wedefini-wo u-usando o botão _wedefiniw_. se você weawmente ficaw atowado, òωó pwessione o botão _mostwaw s-sowução_ p-pawa vew u-uma wesposta. OwO
 
-```html hidden
-<h2>Live output</h2>
+```htmw h-hidden
+<h2>wive o-output</h2>
 
-<div class="output" style="min-height: 250px;"></div>
+<div cwass="output" s-stywe="min-height: 250px;"></div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+<h2>editabwe c-code</h2>
+<p cwass="a11y-wabew">
+  p-pwess e-esc to move focus away fwom the c-code awea (tab insewts a tab chawactew).
 </p>
 
-<textarea
+<textawea
   id="code"
-  class="input"
-  style="width: 95%;min-height: 100px;"></textarea>
+  c-cwass="input"
+  stywe="width: 95%;min-height: 100px;"></textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="weset" type="button" vawue="weset" />
+  <input i-id="sowution" type="button" vawue="show sowution" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+h-htmw {
+  font-famiwy: s-sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  m-mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-let code = textarea.value;
-let userEntry = textarea.value;
+```js h-hidden
+const textawea = document.getewementbyid("code");
+const w-weset = document.getewementbyid("weset");
+const s-sowution = document.getewementbyid("sowution");
+const output = d-document.quewysewectow(".output");
+wet code = textawea.vawue;
+w-wet usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+function updatecode() {
+  o-output.innewhtmw = textawea.vawue;
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
+w-weset.addeventwistenew("cwick", (✿oωo) f-function () {
+  t-textawea.vawue = code;
+  usewentwy = textawea.vawue;
+  sowutionentwy = htmwsowution;
+  sowution.vawue = "show sowution";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+sowution.addeventwistenew("cwick", (⑅˘꒳˘) function () {
+  if (sowution.vawue === "show sowution") {
+    textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "hide s-sowution";
+  } ewse {
+    textawea.vawue = u-usewentwy;
+    s-sowution.vawue = "show s-sowution";
   }
-  updateCode();
+  updatecode();
 });
 
-const htmlSolution =
-  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
-let solutionEntry = htmlSolution;
+const htmwsowution =
+  '<ifwame w-width="420" height="315" swc="https://www.youtube.com/embed/qh2-tguwwu4" f-fwamebowdew="0" a-awwowfuwwscween>\n</ifwame>\n\n<ifwame swc="https://www.googwe.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3a0xf82fddd1e49fc0a1!2sthe+wowwy!5e0!3m2!1sen!2suk!4v1518171785211" w-width="600" height="450" fwamebowdew="0" s-stywe="bowdew:0" a-awwowfuwwscween>\n</ifwame>';
+wet sowutionentwy = htmwsowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", /(^•ω•^) u-updatecode);
+window.addeventwistenew("woad", 🥺 u-updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// s-stop t-tab key tabbing o-out of textawea a-and
+// make it w-wwite a tab at t-the cawet position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = f-function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  const caretPos = textarea.selectionStart;
+function i-insewtatcawet(text) {
+  const scwowwpos = t-textawea.scwowwtop;
+  c-const cawetpos = t-textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  const f-fwont = textawea.vawue.substwing(0, -.- cawetpos);
+  c-const back = textawea.vawue.substwing(
+    textawea.sewectionend,
+    t-textawea.vawue.wength, ( ͡o ω ͡o )
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = f-fwont + text + back;
+  cawetpos = cawetpos + text.wength;
+  textawea.sewectionstawt = cawetpos;
+  t-textawea.sewectionend = cawetpos;
+  textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// update the saved usewcode evewy time the u-usew updates the text awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+t-textawea.onkeyup = f-function () {
+  // w-we onwy want to save the state when the u-usew code is being s-shown, 😳😳😳
+  // nyot the sowution, (˘ω˘) s-so that sowution is nyot saved ovew the usew c-code
+  if (sowution.vawue === "show sowution") {
+    u-usewentwy = t-textawea.vawue;
+  } e-ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 600, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('pwayabwe_code', ^^ 700, 600, "", "", σωσ "hide-codepen-jsfiddwe") }}
 
-## Iframes em detalhes
+## i-ifwames em detawhes
 
-Então, isso foi fácil e divertido, certo? Os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) foram projetados para permitir que você incorpore outros documentos da Web ao documento atual. Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não querer implementar sua própria versão - como vídeo de fornecedores de vídeo on-line, sistemas de comentários como [Disqus](https://disqus.com/), mapas de fornecedores de mapas on-line, banners publicitários, etc. Os exemplos editáveis ao vivo que você está usando neste curso são implementados usando `<iframe>`s.
+então, 🥺 i-isso foi fáciw e-e divewtido, 🥺 cewto? o-os ewementos [`<ifwame>`](/pt-bw/docs/web/htmw/ewement/ifwame) f-fowam pwojetados p-pawa pewmitiw q-que você incowpowe o-outwos documentos d-da web ao documento atuaw. /(^•ω•^) i-isso é ótimo pawa incowpowaw c-conteúdo de tewceiwos em seu s-site sobwe o quaw v-você pode nyão t-tew contwowe diweto e nyão quewew impwementaw sua pwópwia vewsão - c-como vídeo d-de fownecedowes d-de vídeo on-wine, (⑅˘꒳˘) sistemas de comentáwios como [disqus](https://disqus.com/), -.- m-mapas de fownecedowes d-de mapas on-wine, 😳 bannews p-pubwicitáwios, 😳😳😳 e-etc. >w< os exempwos editáveis ao vivo que você está usando n-nyeste cuwso são i-impwementados u-usando `<ifwame>`s. UwU
 
-Existem algumas sérias [Preocupações com segurança](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#preocupa%C3%A7%C3%B5es_com_seguran%C3%A7a) a serem consideradas com `<iframe>`s, como discutiremos abaixo, mas isso não significa que você não deve usá-las em seus sites - apenas requer algum conhecimento e pensamento cuidadoso. Vamos explorar o código um pouco mais detalhadamente. Digamos que você queira incluir o glossário MDN em uma de suas páginas da web - você pode tentar algo como isto:
+e-existem awgumas séwias [pweocupações com s-seguwança](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies#pweocupa%c3%a7%c3%b5es_com_seguwan%c3%a7a) a-a sewem considewadas com `<ifwame>`s, /(^•ω•^) como d-discutiwemos abaixo, 🥺 mas isso nyão significa que v-você não deve usá-was em seus s-sites - apenas w-wequew awgum conhecimento e pensamento c-cuidadoso. >_< v-vamos expwowaw o código um p-pouco mais detawhadamente. rawr digamos q-que você queiwa i-incwuiw o gwossáwio m-mdn em u-uma de suas páginas da web - você p-pode tentaw a-awgo como isto:
 
-```html
+```htmw
 <head>
-  <style>
-    iframe {
-      border: none;
+  <stywe>
+    i-ifwame {
+      bowdew: n-nyone;
     }
-  </style>
+  </stywe>
 </head>
 <body>
-  <iframe
-    src="https://developer.mozilla.org/pt-BR/docs/Glossary"
+  <ifwame
+    swc="https://devewopew.moziwwa.owg/pt-bw/docs/gwossawy"
     width="100%"
-    height="500"
-    allowfullscreen
-    sandbox>
+    h-height="500"
+    a-awwowfuwwscween
+    s-sandbox>
     <p>
-      <a href="/pt-BR/docs/Glossary">
-        Link alternativo para navegadores que não suportam iframes
+      <a hwef="/pt-bw/docs/gwossawy">
+        wink awtewnativo pawa nyavegadowes que n-nyão supowtam ifwames
       </a>
     </p>
-  </iframe>
+  </ifwame>
 </body>
 ```
 
-Se você olhar para o console do seu navegador, verá uma mensagem de erro parecida com a seguinte:
+s-se você owhaw p-pawa o consowe do seu navegadow, (ꈍᴗꈍ) vewá uma m-mensagem de ewwo pawecida com a s-seguinte:
 
-```plain
-Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
+```pwain
+w-wefused to dispway 'https://devewopew.moziwwa.owg/' i-in a fwame b-because it set 'x-fwame-options' t-to 'deny'. -.-
 ```
 
-A seção [Preocupações com segurança](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#preocupa%C3%A7%C3%B5es_com_seguran%C3%A7a) abaixo entra em mais detalhes sobre o motivo pelo qual você vê esse erro, mas primeiro, vamos dar uma olhada no que nosso código está fazendo.
+a seção [pweocupações com seguwança](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/othew_embedding_technowogies#pweocupa%c3%a7%c3%b5es_com_seguwan%c3%a7a) abaixo entwa e-em mais detawhes sobwe o motivo p-pewo quaw você vê esse ewwo, ( ͡o ω ͡o ) mas pwimeiwo, vamos daw uma owhada n-nyo que nyosso código está fazendo. (⑅˘꒳˘)
 
-Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`:
+este exempwo incwui os fundamentos básicos n-nyecessáwios p-pawa usaw um `<ifwame>`:
 
-- [`border: none`](/pt-BR/docs/Web/CSS/border)
-  - : Se usado, o `<iframe>` é mostrado sem um borda ao seu redor. Caso contrário, por padrão, navegadores mostram o `<iframe>` com uma borda ao seu redor (o que é geralmente indesejável).
-- [`allowfullscreen`](/pt-BR/docs/Web/HTML/Element/iframe#allowfullscreen)
-  - : Se definido, o `<iframe>` poderá ser colocado no modo de tela cheia usando a [Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API) (um pouco além do escopo deste artigo).
-- [`src`](/pt-BR/docs/Web/HTML/Element/iframe#src)
-  - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Element/video) / [`<img>`](/pt-BR/docs/Web/HTML/Element/img), contém um caminho apontando para o URL do documento a ser incorporado.
-- [`width`](/pt-BR/docs/Web/HTML/Element/iframe#width) e [`height`](/pt-BR/docs/Web/HTML/Element/iframe#height)
-  - : Esses atributos especificam a largura e a altura que você deseja no iframe.
-- [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox)
-  - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos recursos `<iframe>` (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
+- [`bowdew: n-nyone`](/pt-bw/docs/web/css/bowdew)
+  - : se usado, mya o `<ifwame>` é m-mostwado sem um b-bowda ao seu wedow. caso contwáwio, rawr x3 p-pow padwão, nyavegadowes mostwam o-o `<ifwame>` com uma bowda ao seu wedow (o que é gewawmente i-indesejávew). (ꈍᴗꈍ)
+- [`awwowfuwwscween`](/pt-bw/docs/web/htmw/ewement/ifwame#awwowfuwwscween)
+  - : se definido, ʘwʘ o `<ifwame>` podewá s-sew cowocado n-nyo modo de tewa c-cheia usando a [fuwwscween api](/pt-bw/docs/web/api/fuwwscween_api) (um pouco a-awém do escopo deste awtigo). :3
+- [`swc`](/pt-bw/docs/web/htmw/ewement/ifwame#swc)
+  - : este atwibuto, o.O como [`<video>`](/pt-bw/docs/web/htmw/ewement/video) / [`<img>`](/pt-bw/docs/web/htmw/ewement/img), /(^•ω•^) contém u-um caminho a-apontando pawa o u-uww do documento a-a sew incowpowado. OwO
+- [`width`](/pt-bw/docs/web/htmw/ewement/ifwame#width) e [`height`](/pt-bw/docs/web/htmw/ewement/ifwame#height)
+  - : esses a-atwibutos especificam a-a wawguwa e a awtuwa que você deseja nyo i-ifwame. σωσ
+- [`sandbox`](/pt-bw/docs/web/htmw/ewement/ifwame#sandbox)
+  - : esse atwibuto, (ꈍᴗꈍ) que funciona e-em nyavegadowes um pouco mais modewnos que o-o westante dos w-wecuwsos `<ifwame>` (pow exempwo, i-ie 10 e supewiow), ( ͡o ω ͡o ) w-wequew configuwações d-de seguwança mais ewevadas; fawawemos m-mais sobwe isso na pwóxima seção. rawr x3
 
-> [!NOTE]
-> Para melhorar a velocidade, é uma boa ideia definir o atributo `src` do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
+> [!note]
+> pawa mewhowaw a-a vewocidade, UwU é uma boa ideia definiw o atwibuto `swc` do ifwame c-com javascwipt a-após o cawwegamento d-do conteúdo p-pwincipaw. o.O i-isso towna sua página utiwizávew m-mais cedo e diminui o tempo de cawwegamento d-da página oficiaw (uma impowtante m-métwica de [seo](/pt-bw/docs/gwossawy/seo) ). OwO
 
-### Preocupações com segurança
+### pweocupações com seguwança
 
-Acima, mencionamos preocupações de segurança - vamos abordar isso com mais detalhes agora. Não esperamos que você entenda todo esse conteúdo perfeitamente da primeira vez; queremos apenas que você fique ciente dessa preocupação e forneça uma referência para retornar à medida que for mais experiente e começar a considerar o uso de `<iframe>`s em seus experimentos e trabalhos. Além disso, não há necessidade de ter medo e não usar `<iframe>`s - você só precisa ter cuidado. Leia...
+a-acima, o.O mencionamos p-pweocupações de seguwança - v-vamos abowdaw isso com mais d-detawhes agowa. ^^;; n-nyão espewamos que você entenda t-todo esse c-conteúdo pewfeitamente da pwimeiwa v-vez; quewemos apenas que você fique ciente dessa pweocupação e-e fowneça uma wefewência pawa w-wetownaw à medida que fow mais expewiente e c-começaw a considewaw o-o uso de `<ifwame>`s e-em seus expewimentos e-e twabawhos. (⑅˘꒳˘) awém d-disso, (ꈍᴗꈍ) nyão há necessidade d-de tew medo e nyão usaw `<ifwame>`s - v-você só pwecisa tew cuidado. o.O w-weia...
 
-Fabricantes de navegadores e desenvolvedores da Web descobriram da maneira mais difícil que iframes são um alvo comum (termo oficial: **attack vector** ) para pessoas más na Web (geralmente chamadas de **hackers** ou, mais precisamente, **crackers** ) atacarem se estiverem tentando modificar maliciosamente sua página da web ou induzir as pessoas a fazer algo que não desejam, como revelar informações confidenciais como nomes de usuário e senhas. Por esse motivo, engenheiros de especificações e desenvolvedores de navegadores desenvolveram vários mecanismos de segurança para tornár os `<iframe>` mais seguros, e também existem práticas recomendadas a serem consideradas - abordaremos algumas delas abaixo.
+f-fabwicantes de nyavegadowes e desenvowvedowes da web descobwiwam da maneiwa mais d-difíciw que ifwames s-são um awvo comum (tewmo oficiaw: **attack vectow** ) pawa p-pessoas más nya web (gewawmente c-chamadas de **hackews** o-ou, (///ˬ///✿) mais pwecisamente, 😳😳😳 **cwackews** ) atacawem se estivewem tentando modificaw mawiciosamente s-sua página da web ou induziw as pessoas a-a fazew awgo que nyão desejam, UwU c-como wevewaw infowmações c-confidenciais como n-nyomes de usuáwio e-e senhas. nyaa~~ pow e-esse motivo, (✿oωo) engenheiwos d-de especificações e-e d-desenvowvedowes de nyavegadowes desenvowvewam váwios mecanismos de seguwança pawa townáw os `<ifwame>` m-mais seguwos, -.- e-e também e-existem pwáticas w-wecomendadas a-a sewem considewadas - a-abowdawemos awgumas dewas abaixo. :3
 
-> [!NOTE] [Clickjacking](https://pt.wikipedia.org/wiki/Clickjacking) é um tipo comum de ataque iframe, no qual hackers incorporam um iframe invisível ao documento (ou incorporam o documento ao próprio site malicioso) e o usam para capturar as interações dos usuários. Essa é uma maneira comum de enganar os usuários ou roubar dados confidenciais.
+> [!note] [cwickjacking](https://pt.wikipedia.owg/wiki/cwickjacking) é um tipo comum de ataque ifwame, (⑅˘꒳˘) n-nyo quaw hackews i-incowpowam um ifwame invisívew ao documento (ou incowpowam o-o documento ao pwópwio s-site mawicioso) e-e o usam pawa captuwaw as intewações dos u-usuáwios. >_< essa é uma maneiwa comum de enganaw o-os usuáwios o-ou woubaw dados confidenciais. UwU
 
-Um primeiro exemplo rápido - tente carregar o exemplo anterior que mostramos acima em seu navegador - você pode [encontrá-lo ao vivo no Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ( [consulte o código-fonte](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) também.) Na verdade, você não verá nada exibido na página e se olhar para o _console_ nas [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) do [navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), você verá uma mensagem informando o motivo. No Firefox, você será informado sobre o _Carregamento negado pelo X-Frame-Options: "https\://developer.mozilla.org/pt-BR/docs/Glossary" não permite o enquadramento_. Isso ocorre porque os desenvolvedores que criaram o MDN incluíram uma configuração no servidor que serve as páginas do site para impedir que elas sejam incorporadas dentro de `<iframe>`s (consulte [Configurar diretivas CSP](#Configure_CSP_directives), abaixo.) Isso faz sentido - uma página MDN inteira não faz sentido para ser incorporada em outras páginas, a menos que você queira fazer algo como incorporá-las ao seu site e reivindicá-las como suas - ou tentar roubar dados via clickjacking, que são coisas muito ruins para se fazer. Além disso, se todos começassem a fazer isso, toda a largura de banda adicional começaria a custar muito dinheiro à Mozilla.
+um pwimeiwo exempwo w-wápido - tente cawwegaw o exempwo a-antewiow q-que mostwamos acima em seu nyavegadow - v-você pode [encontwá-wo a-ao vivo nyo github](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/othew-embedding-technowogies/ifwame-detaiw.htmw) ( [consuwte o-o código-fonte](https://github.com/mdn/weawning-awea/bwob/gh-pages/htmw/muwtimedia-and-embedding/othew-embedding-technowogies/ifwame-detaiw.htmw) t-também.) n-nya vewdade, rawr você n-nyão vewá nada exibido nya p-página e se owhaw p-pawa o _consowe_ nyas [fewwamentas d-de desenvowvedow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) do [navegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows), (ꈍᴗꈍ) você vewá uma m-mensagem infowmando o motivo. ^•ﻌ•^ n-nyo fiwefox, ^^ você sewá infowmado s-sobwe o _cawwegamento n-nyegado pewo x-fwame-options: "https\://devewopew.moziwwa.owg/pt-bw/docs/gwossawy" nyão p-pewmite o enquadwamento_. XD isso ocowwe powque o-os desenvowvedowes q-que cwiawam o mdn incwuíwam uma configuwação n-nyo sewvidow q-que sewve as páginas do site pawa i-impediw que ewas sejam incowpowadas dentwo de `<ifwame>`s (consuwte [configuwaw d-diwetivas csp](#configuwe_csp_diwectives), (///ˬ///✿) a-abaixo.) isso faz s-sentido - uma página m-mdn inteiwa nyão faz sentido pawa sew incowpowada e-em outwas p-páginas, σωσ a menos q-que você queiwa f-fazew awgo como incowpowá-was ao seu site e weivindicá-was como suas - ou tentaw woubaw dados via cwickjacking, :3 q-que são c-coisas muito wuins p-pawa se fazew. >w< a-awém disso, (ˆ ﻌ ˆ)♡ s-se todos começassem a-a fazew isso, (U ᵕ U❁) toda a wawguwa d-de banda adicionaw c-começawia a custaw muito dinheiwo à m-moziwwa. :3
 
-#### Incorporar somente quando necessário
+#### i-incowpowaw somente quando nyecessáwio
 
-Às vezes, faz sentido incorporar conteúdo de terceiros - como vídeos e mapas do youtube - mas você pode economizar muitas dores de cabeça se incorporar apenas conteúdo de terceiros quando completamente necessário. Uma boa regra geral para a segurança da Web é _"Você nunca pode ser muito cauteloso. Se você fez isso, verifique-o de qualquer maneira. Se alguém o fez, assuma que é perigoso até provar o contrário"._
+Às v-vezes, ^^ faz sentido incowpowaw conteúdo de t-tewceiwos - como vídeos e mapas d-do youtube - mas v-você pode economizaw muitas d-dowes de cabeça s-se incowpowaw apenas c-conteúdo de tewceiwos quando c-compwetamente n-nyecessáwio. ^•ﻌ•^ uma boa wegwa gewaw p-pawa a seguwança da web é _"você n-nyunca pode s-sew muito cautewoso. (///ˬ///✿) s-se você fez isso, 🥺 vewifique-o d-de quawquew maneiwa. ʘwʘ se awguém o fez, (✿oωo) assuma q-que é pewigoso até pwovaw o contwáwio"._
 
-Além da segurança, você também deve estar ciente dos problemas de propriedade intelectual. A maioria dos conteúdos tem direitos autorais, offline e online, mesmo o conteúdo que você não pode esperar (por exemplo, a maioria das imagens no [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) ). Nunca exiba conteúdo em sua página da Web, a menos que você seja o proprietário ou os proprietários tenham lhe dado uma permissão inequívoca por escrito. As penalidades por violação de direitos autorais são severas. Novamente, você nunca pode ser muito cauteloso.
+awém da seguwança, rawr você também deve estaw ciente dos pwobwemas d-de pwopwiedade intewectuaw. OwO a maiowia dos conteúdos tem diweitos autowais, ^^ offwine e onwine, ʘwʘ mesmo o conteúdo q-que você nyão pode espewaw (pow exempwo, σωσ a-a maiowia das imagens nyo [wikimedia c-commons](https://commons.wikimedia.owg/wiki/main_page) ). (⑅˘꒳˘) nyunca exiba conteúdo em sua página d-da web, (ˆ ﻌ ˆ)♡ a menos que você s-seja o pwopwietáwio ou os pwopwietáwios t-tenham w-whe dado uma pewmissão inequívoca pow escwito. :3 a-as penawidades pow viowação de diweitos autowais são sevewas. ʘwʘ n-nyovamente, (///ˬ///✿) você nyunca pode s-sew muito cautewoso. (ˆ ﻌ ˆ)♡
 
-Se o conteúdo for licenciado, você deverá obedecer aos termos da licença. Por exemplo, o conteúdo no MDN é [licenciado sob CC-BY-SA](/pt-BR/docs/MDN/Writing_guidelines#copyrights_and_licenses). Isso significa que você deve [creditar-nos adequadamente](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution) quando citar nosso conteúdo, mesmo que faça alterações substanciais.
+se o conteúdo f-fow wicenciado, 🥺 você devewá o-obedecew aos t-tewmos da wicença. rawr pow exempwo, (U ﹏ U) o conteúdo nyo m-mdn é [wicenciado sob cc-by-sa](/pt-bw/docs/mdn/wwiting_guidewines#copywights_and_wicenses). ^^ isso significa que v-você deve [cweditaw-nos adequadamente](https://wiki.cweativecommons.owg/wiki/best_pwactices_fow_attwibution) quando citaw nyosso conteúdo, σωσ mesmo que faça a-awtewações substanciais. :3
 
-#### Use HTTPS
+#### u-use https
 
-{{Glossary("HTTPS")}} é a versão criptografada do {{Glossary("HTTP")}}. Você deve utilizar HTTPS em seus websites sempre que possível:
+{{gwossawy("https")}} é a vewsão cwiptogwafada d-do {{gwossawy("http")}}. ^^ v-você deve utiwizaw https e-em seus websites sempwe que possívew:
 
-1. HTTPS reduz a chance de que conteúdo remoto tenha sido adulterado no caminho.
-2. HTTPS previne que o conteúdo que tenha incorporado ao site acesse conteúdo em seu documento de origem, e vice-versa.
+1. (✿oωo) https weduz a chance de que conteúdo w-wemoto tenha sido a-aduwtewado nyo caminho. òωó
+2. (U ᵕ U❁) https p-pwevine que o-o conteúdo que tenha incowpowado a-ao site acesse conteúdo em seu documento de owigem, ʘwʘ e-e vice-vewsa. ( ͡o ω ͡o )
 
-Utilizar HTTPS requer um certificado de segurança, que pode ser bem caro (apesar que o [Let's Encrypt](https://letsencrypt.org/) deixe as coisas mais fáceis) — se você não puder obter um certificado, você deve fornecer seus documentos com HTTP. Contudo, por conta do segundo benefício do HTTPS descrito acima, _não importa o custo, você nunca deve incorporar conteúdo de terceiros em HTTP._ (No caso do melhor cenário, o navegador de seu usuário irá mostra-lo um aviso assustador.) Todas as empresas com boa reputação irão fornecer conteúdo para ser incoporado por meio do `<iframe>` disponível através de HTTPS — veja a URLs dentro do `<iframe>` no atributo `src`, quando você está incorporando conteúdo do Google Maps ou Youtube, por exemplo.
+utiwizaw https wequew um cewtificado d-de seguwança, σωσ q-que pode sew bem cawo (apesaw que o [wet's e-encwypt](https://wetsencwypt.owg/) deixe as coisas mais fáceis) — se você nyão pudew obtew um cewtificado, (ˆ ﻌ ˆ)♡ você deve fownecew seus documentos c-com http. (˘ω˘) c-contudo, 😳 pow conta do segundo b-benefício do https d-descwito acima, ^•ﻌ•^ _não impowta o-o custo, σωσ você nyunca deve incowpowaw conteúdo de tewceiwos em http._ (no caso do mewhow cenáwio, 😳😳😳 o-o nyavegadow de seu usuáwio iwá mostwa-wo um aviso assustadow.) todas as e-empwesas com boa w-weputação iwão f-fownecew conteúdo pawa sew incopowado pow meio do `<ifwame>` d-disponívew atwavés d-de https — v-veja a uwws dentwo do `<ifwame>` n-nyo atwibuto `swc`, rawr quando v-você está incowpowando conteúdo d-do googwe maps ou youtube, >_< pow e-exempwo. ʘwʘ
 
-> [!NOTE] [Páginas do Github](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) permitem que conteúdo seja fornecido via HTTPS por padrão, então é útil para hospedar conteúdo. Se você está utilizando uma hospedagem diferente e não tem certeza do mesmo, pergunte sobre com o seu provedor de hospedagem.
+> [!note] [páginas do github](/pt-bw/docs/weawn/common_questions/toows_and_setup/using_github_pages) pewmitem que c-conteúdo seja fownecido via https p-pow padwão, (ˆ ﻌ ˆ)♡ e-então é útiw pawa hospedaw conteúdo. ^^;; s-se você e-está utiwizando uma hospedagem d-difewente e nyão tem cewteza d-do mesmo, σωσ pewgunte sobwe com o seu p-pwovedow de hospedagem. rawr x3
 
-#### Sempre utilize o atributo `sandbox`
+#### s-sempwe utiwize o atwibuto `sandbox`
 
-Você deseja que os atacantes tenham a menor quantidade possível de poder para causar danos ao seu website, portanto, você deve dar ao conteúdo incorporado _apenas a permissão para fazer o seu trabalho._ É claro, isto se aplica ao seu próprio conteúdo, também. Um container para código onde ele possa ser utilizado apropriadamente — ou para testes — mas não pode causar nenhum dano ao resto do código base (tanto acidental quanto malicioso) é chamado [sandbox](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>).
+você deseja q-que os atacantes tenham a menow quantidade possívew de podew pawa causaw danos ao seu website, 😳 powtanto, 😳😳😳 você deve daw ao conteúdo i-incowpowado _apenas a pewmissão pawa fazew o-o seu twabawho._ É cwawo, 😳😳😳 i-isto se apwica ao seu pwópwio conteúdo, ( ͡o ω ͡o ) também. u-um containew pawa código onde ewe possa sew u-utiwizado apwopwiadamente — ou pawa testes — m-mas nyão pode causaw nyenhum dano ao westo do c-código base (tanto acidentaw quanto mawicioso) é c-chamado [sandbox](<https://en.wikipedia.owg/wiki/sandbox_(computew_secuwity)>). rawr x3
 
-Conteúdo fora de uma sandbox pode fazer muito mais que o esperado (executar JavaScript, submeter forms, criar novas janelas no navegador, etc.) Por padrão, você deve impor todas as restrições disponíveis utilizando o atributo `sandbox` sem parâmetros, como mostrado em nosso exemplo anterior.
+c-conteúdo fowa de uma sandbox pode fazew muito m-mais que o espewado (executaw j-javascwipt, σωσ submetew fowms, (˘ω˘) cwiaw n-nyovas janewas n-nyo nyavegadow, >w< etc.) pow padwão, UwU você deve i-impow todas as westwições disponíveis utiwizando o atwibuto `sandbox` s-sem pawâmetwos, XD como mostwado em nyosso exempwo antewiow. (U ﹏ U)
 
-Se absolutamente necessário, você pode adicionar permissões uma a uma (dentro do valor do atributo `sandbox=""`) — veja em [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) as referências de entrada para todas as opções disponíveis. Uma nota importante é que você _nunca_ deve adicionar ambos `allow-scripts` e `allow-same-origin` no atributo sandbox — neste caso, conteúdo incorporado pode burlar a política de segurança de mesmo destino que impede sites de executarem scripts, e utilizar JavaScript para desativar o sandboxing completamente.
+s-se absowutamente n-nyecessáwio, (U ᵕ U❁) v-você pode adicionaw pewmissões uma a uma (dentwo do vawow d-do atwibuto `sandbox=""`) — veja e-em [`sandbox`](/pt-bw/docs/web/htmw/ewement/ifwame#sandbox) as wefewências de e-entwada pawa todas a-as opções disponíveis. (ˆ ﻌ ˆ)♡ uma nyota impowtante é que você _nunca_ deve adicionaw ambos `awwow-scwipts` e-e `awwow-same-owigin` n-nyo atwibuto sandbox — nyeste caso, conteúdo i-incowpowado pode buwwaw a powítica de seguwança d-de mesmo destino q-que impede s-sites de executawem s-scwipts, òωó e u-utiwizaw javascwipt p-pawa desativaw o sandboxing compwetamente. ^•ﻌ•^
 
-> **Nota:** Sandboxing não fornece nenhuma proteção se atacantes puderem enganar os usuários para que visitem conteúdo malicioso diretamete (fora de um `iframe`). Se existir qualquer chance que certo conteúdo possa ser malicioso (exemplo, conteúdo gerado por usuários), por favor forneça-o em um {{glossary("domain")}} diferente de seu site principal.
+> **nota:** s-sandboxing n-nyão fownece n-nyenhuma pwoteção s-se atacantes p-pudewem enganaw o-os usuáwios pawa que visitem c-conteúdo mawicioso d-diwetamete (fowa d-de um `ifwame`). (///ˬ///✿) se existiw quawquew chance q-que cewto conteúdo possa sew mawicioso (exempwo, c-conteúdo gewado pow usuáwios), -.- pow favow f-fowneça-o em u-um {{gwossawy("domain")}} difewente de seu site pwincipaw. >w<
 
-#### Configure diretivas CSP
+#### c-configuwe diwetivas c-csp
 
-{{Glossary("CSP")}} significa **[política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP)** e fornece um [conjunto de cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) (metadados enviados junto com suas páginas da web quando são veiculados de um servidor da web) projetados para melhorar a segurança do seu documento HTML. Quando se trata de proteger `<iframe>`s, você pode _[configurar seu servidor para enviar um cabeçalho `X-Frame-Options` apropriado](/pt-BR/docs/Web/HTTP/Headers/X-Frame-Options)_. Isso pode impedir que outros sites incorporem seu conteúdo em suas páginas da Web (o que habilitaria o [clickjacking](https://pt.wikipedia.org/wiki/clickjacking) e vários outros ataques), exatamente o que os desenvolvedores do MDN fizeram, como vimos anteriormente.
+{{gwossawy("csp")}} significa **[powítica de seguwança d-de conteúdo](/pt-bw/docs/web/http/csp)** e-e fownece um [conjunto de cabeçawhos http](/pt-bw/docs/web/http/headews/content-secuwity-powicy) (metadados e-enviados j-junto com suas páginas da web quando são veicuwados d-de um s-sewvidow da web) pwojetados pawa mewhowaw a seguwança d-do seu documento htmw. òωó quando se twata de pwotegew `<ifwame>`s, σωσ você pode _[configuwaw seu sewvidow pawa e-enviaw um cabeçawho `x-fwame-options` apwopwiado](/pt-bw/docs/web/http/headews/x-fwame-options)_. mya isso pode impediw q-que outwos s-sites incowpowem s-seu conteúdo em suas páginas d-da web (o que habiwitawia o-o [cwickjacking](https://pt.wikipedia.owg/wiki/cwickjacking) e-e váwios o-outwos ataques), òωó e-exatamente o que os desenvowvedowes do mdn fizewam, 🥺 c-como vimos a-antewiowmente. (U ﹏ U)
 
-> [!NOTE]
-> Você pode ler a publicação de Frederik Braun [X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obter mais informações sobre este tópico. Obviamente, está fora do escopo uma explicação completa neste artigo.
+> [!note]
+> v-você pode wew a pubwicação d-de fwedewik b-bwaun [x-fwame-options secuwity h-headew](https://bwog.moziwwa.owg/secuwity/2013/12/12/on-the-x-fwame-options-secuwity-headew/) pawa obtew m-mais infowmações s-sobwe este tópico. (ꈍᴗꈍ) o-obviamente, (˘ω˘) e-está fowa do e-escopo uma expwicação compweta n-neste awtigo. (✿oωo)
 
-## The \<embed> and \<object> elements
+## the \<embed> a-and \<object> e-ewements
 
-The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding multiple types of external content, which include plugin technologies like Java Applets and Flash, PDF (which can be shown in a browser with a PDF plugin), and even content like videos, SVG and images!
+the {{htmwewement("embed")}} and {{htmwewement("object")}} ewements sewve a diffewent f-function to {{htmwewement("ifwame")}} — t-these ewements awe genewaw p-puwpose embedding t-toows fow embedding muwtipwe types of extewnaw c-content, -.- which i-incwude pwugin t-technowogies w-wike java appwets a-and fwash, (ˆ ﻌ ˆ)♡ pdf (which c-can be shown in a bwowsew with a pdf pwugin), (✿oωo) a-and even content wike videos, ʘwʘ svg and images! (///ˬ///✿)
 
-> [!NOTE]
-> A **plugin**, in this context, refers to software that provides access to content the browser cannot read natively.
+> [!note]
+> a **pwugin**, rawr in this context, 🥺 w-wefews to softwawe t-that pwovides access to content the bwowsew cannot wead nyativewy. mya
 
-However, you are unlikely to use these elements very much — Applets haven't been used for years, Flash is no longer very popular, due to a number of reasons (see [The case against plugins](#the_case_against_plugins), below), PDFs tend to be better linked to than embedded, and other content such as images and video have much better, easier elements to handle those. Plugins and these embedding methods are really a legacy technology, and we are mainly mentioning them in case you come across them in certain circumstances like intranets, or enterprise projects.
+h-howevew, mya y-you awe unwikewy to use these ewements vewy much — a-appwets haven't been used f-fow yeaws, mya fwash i-is no wongew vewy p-popuwaw, due to a nyumbew of weasons (see [the case against pwugins](#the_case_against_pwugins), (⑅˘꒳˘) b-bewow), (✿oωo) pdfs tend to be bettew w-winked to than embedded, 😳 and o-othew content such as images and video have much b-bettew, OwO easiew ewements to handwe t-those. (˘ω˘) pwugins and these embedding methods awe w-weawwy a wegacy technowogy, (✿oωo) and w-we awe mainwy mentioning them in case you come acwoss them in cewtain ciwcumstances wike intwanets, /(^•ω•^) ow entewpwise p-pwojects. rawr x3
 
-If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
+if y-you find youwsewf n-nyeeding to e-embed pwugin content, this is the kind of infowmation y-you'ww nyeed, at a minimum:
 
-|                                                                            | {{htmlelement("embed")}}                                                                                  | {{htmlelement("object")}}                                                                                   |
+|                                                                            | {{htmwewement("embed")}}                                                                                  | {{htmwewement("object")}}                                                                                   |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                | [`src`](/pt-BR/docs/Web/HTML/Element/embed#src)                                                           | [`data`](/pt-BR/docs/Web/HTML/Element/object#data)                                                          |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/pt-BR/docs/Web/HTML/Element/embed#type)                                                         | [`type`](/pt-BR/docs/Web/HTML/Element/object#type)                                                          |
-| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/pt-BR/docs/Web/HTML/Element/embed#height) [`width`](/pt-BR/docs/Web/HTML/Element/embed#width) | [`height`](/pt-BR/docs/Web/HTML/Element/object#height) [`width`](/pt-BR/docs/Web/HTML/Element/object#width) |
-| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`                                   |
-| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                                   | contained within `<object>`, after `<param>` elements                                                       |
+| {{gwossawy("uww")}} of the embedded content                                | [`swc`](/pt-bw/docs/web/htmw/ewement/embed#swc)                                                           | [`data`](/pt-bw/docs/web/htmw/ewement/object#data)                                                          |
+| _accuwate_ {{gwossawy("mime t-type", rawr 'media t-type')}} o-of the embedded c-content | [`type`](/pt-bw/docs/web/htmw/ewement/embed#type)                                                         | [`type`](/pt-bw/docs/web/htmw/ewement/object#type)                                                          |
+| height and width (in css pixews) of the box contwowwed b-by the pwugin       | [`height`](/pt-bw/docs/web/htmw/ewement/embed#height) [`width`](/pt-bw/docs/web/htmw/ewement/embed#width) | [`height`](/pt-bw/docs/web/htmw/ewement/object#height) [`width`](/pt-bw/docs/web/htmw/ewement/object#width) |
+| n-nyames and vawues, ( ͡o ω ͡o ) to feed the pwugin as pawametews                         | ad hoc attwibutes w-with those nyames and vawues                                                             | s-singwe-tag {{htmwewement("pawam")}} e-ewements, ( ͡o ω ͡o ) contained w-within `<object>`                                   |
+| independent htmw content as fawwback fow an unavaiwabwe wesouwce           | n-nyot suppowted (`<noembed>` is obsowete)                                                                   | c-contained within `<object>`, 😳😳😳 aftew `<pawam>` ewements                                                       |
 
-> [!NOTE] `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/pt-BR/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
+> [!note] `<object>` w-wequiwes a `data` attwibute, (U ﹏ U) a-a `type` attwibute, UwU ow both. if you use b-both, you may awso u-use the [`typemustmatch`](/pt-bw/docs/web/htmw/ewement/object#typemustmatch) a-attwibute (onwy i-impwemented in fiwefox, (U ﹏ U) a-as of this wwiting). 🥺 `typemustmatch` k-keeps t-the embedded fiwe fwom wunning u-unwess the `type` attwibute pwovides the cowwect m-media type. ʘwʘ `typemustmatch` can thewefowe confew s-significant s-secuwity benefits when you'we embedding c-content f-fwom a diffewent {{gwossawy("owigin")}} (it can keep attackews fwom wunning awbitwawy s-scwipts thwough t-the pwugin). 😳
 
-Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this [live on Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), and [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) too):
+h-hewe's an exampwe t-that uses the {{htmwewement("embed")}} ewement to embed a f-fwash movie (see this [wive on github](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/othew-embedding-technowogies/embed-fwash.htmw), (ˆ ﻌ ˆ)♡ and [check t-the souwce code](https://github.com/mdn/weawning-awea/bwob/gh-pages/htmw/muwtimedia-and-embedding/othew-embedding-technowogies/embed-fwash.htmw) too):
 
-```html
+```htmw
 <embed
-  src="whoosh.swf"
-  quality="medium"
-  bgcolor="#ffffff"
+  swc="whoosh.swf"
+  q-quawity="medium"
+  bgcowow="#ffffff"
   width="550"
   height="400"
-  name="whoosh"
-  align="middle"
-  allowScriptAccess="sameDomain"
-  allowFullScreen="false"
-  type="application/x-shockwave-flash"
-  pluginspage="http://www.macromedia.com/go/getflashplayer" />
+  n-nyame="whoosh"
+  awign="middwe"
+  a-awwowscwiptaccess="samedomain"
+  a-awwowfuwwscween="fawse"
+  t-type="appwication/x-shockwave-fwash"
+  pwuginspage="http://www.macwomedia.com/go/getfwashpwayew" />
 ```
 
-Pretty horrible, isn't it? The HTML generated by the Adobe Flash tool tended to be even worse, using an `<object>` element with an `<embed>` element embedded in it, to cover all bases (check out an example.) Flash was even used successfully as fallback content for HTML5 video, for a time, but this is increasingly being seen as not necessary.
+p-pwetty h-howwibwe, >_< isn't it? the htmw genewated b-by the adobe f-fwash toow t-tended to be even w-wowse, ^•ﻌ•^ using an `<object>` ewement w-with an `<embed>` e-ewement embedded i-in it, (✿oωo) to covew aww bases (check o-out an exampwe.) fwash was even used successfuwwy as fawwback content fow htmw5 video, OwO f-fow a time, (ˆ ﻌ ˆ)♡ but t-this is incweasingwy being seen a-as nyot nyecessawy. ^^;;
 
-Now let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
+nyow wet's wook at an `<object>` e-exampwe that e-embeds a pdf i-into a page (see t-the [wive exampwe](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/othew-embedding-technowogies/object-pdf.htmw) and the [souwce c-code](https://github.com/mdn/weawning-awea/bwob/gh-pages/htmw/muwtimedia-and-embedding/othew-embedding-technowogies/object-pdf.htmw)):
 
-```html
+```htmw
 <object
   data="mypdf.pdf"
-  type="application/pdf"
-  width="800"
-  height="1200"
+  type="appwication/pdf"
+  w-width="800"
+  h-height="1200"
   typemustmatch>
   <p>
-    You don't have a PDF plugin, but you can
-    <a href="mypdf.pdf">download the PDF file. </a>
+    you don't have a pdf pwugin, nyaa~~ but y-you can
+    <a hwef="mypdf.pdf">downwoad t-the pdf fiwe. o.O </a>
   </p>
 </object>
 ```
 
-PDFs were a necessary stepping stone between paper and digital, but they pose many [accessibility challenges](https://webaim.org/techniques/acrobat/acrobat) and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.
+pdfs wewe a n-nyecessawy stepping stone between p-papew and digitaw, >_< but they pose many [accessibiwity c-chawwenges](https://webaim.owg/techniques/acwobat/acwobat) and can be hawd t-to wead on smow scweens. (U ﹏ U) they d-do stiww tend to b-be popuwaw in some ciwcwes, ^^ but it is much bettew t-to wink to them so they can be downwoaded ow w-wead on a sepawate p-page, UwU wathew t-than embedding them in a webpage. ^^;;
 
-### The case against plugins
+### the case against pwugins
 
-Once upon a time, plugins were indispensable on the Web. Remember the days when you had to install Adobe Flash Player just to watch a movie online? And then you constantly got annoying alerts about updating Flash Player and your Java Runtime Environment. Web technologies have since grown much more robust, and those days are over. For virtually all applications, it's time to stop delivering content that depends on plugins and start taking advantage of Web technologies instead.
+once upon a time, òωó pwugins wewe i-indispensabwe on the web. -.- wemembew the days when y-you had to instaww a-adobe fwash pwayew just to watch a movie onwine? a-and then you c-constantwy got annoying awewts about updating fwash pwayew and y-youw java wuntime enviwonment. ( ͡o ω ͡o ) w-web technowogies have since gwown much mowe wobust, o.O a-and those days a-awe ovew. rawr fow viwtuawwy aww appwications, (✿oωo) i-it's t-time to stop dewivewing content t-that depends on pwugins and stawt t-taking advantage o-of web technowogies i-instead. σωσ
 
-- **Broaden your reach to everyone.** Everyone has a browser, but plugins are increasingly rare, especially among mobile users. Since the Web is easily used without any plugins, people would rather just go to your competitors' websites than install a plugin.
-- **Give yourself a break from the [extra accessibility headaches](https://webaim.org/techniques/flash/) that come with Flash and other plugins.**
-- **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](https://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, then-Chief Security Officer at Facebook, [requested that Adobe discontinue Flash.](https://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
+- **bwoaden youw w-weach to evewyone.** e-evewyone has a bwowsew, (U ᵕ U❁) b-but pwugins awe i-incweasingwy wawe, >_< especiawwy among mobiwe usews. ^^ s-since the web is easiwy used w-without any pwugins, rawr peopwe wouwd wathew just go to youw competitows' websites than instaww a pwugin. >_<
+- **give youwsewf a bweak f-fwom the [extwa accessibiwity headaches](https://webaim.owg/techniques/fwash/) that c-come with fwash and othew pwugins.**
+- **stay c-cweaw of additionaw s-secuwity hazawds.** adobe f-fwash is [notowiouswy insecuwe,](https://www.cvedetaiws.com/pwoduct/6761/adobe-fwash-pwayew.htmw?vendow_id=53) even a-aftew countwess patches. (⑅˘꒳˘) in 2015, >w< a-awex stamos, (///ˬ///✿) then-chief secuwity officew at facebook, ^•ﻌ•^ [wequested that adobe discontinue fwash.](https://www.thevewge.com/2015/7/13/8948459/adobe-fwash-insecuwe-says-facebook-cso)
 
-> [!NOTE]
-> Due to its inherent issues and the lack of support for Flash, Adobe announced that they would stop supporting it at the end of 2020. As of January 2020, most browsers block Flash content by default, and by December 31st of 2020, all browsers will have completly removed all Flash functionality. Any existing Flash content will be inaccessable after that date.
+> [!note]
+> due to its i-inhewent issues and the wack of suppowt fow fwash, (✿oωo) a-adobe announced that they wouwd s-stop suppowting it at the end of 2020. ʘwʘ as of januawy 2020, >w< most bwowsews bwock fwash content by defauwt, :3 and by decembew 31st of 2020, (ˆ ﻌ ˆ)♡ aww bwowsews w-wiww have c-compwetwy wemoved a-aww fwash functionawity. -.- any e-existing fwash c-content wiww be i-inaccessabwe aftew that date.
 
-So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you should use [HTML5 video](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) for your media needs, [SVG](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for vector graphics, and [Canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
+so nyani shouwd you d-do? if you nyeed i-intewactivity, rawr htmw and {{gwossawy("javascwipt")}} c-can weadiwy g-get the job done f-fow you with n-no nyeed fow java a-appwets ow outdated activex/bho t-technowogy. rawr x3 instead o-of wewying o-on adobe fwash, (U ﹏ U) y-you shouwd use [htmw5 v-video](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content) f-fow youw m-media nyeeds, (ˆ ﻌ ˆ)♡ [svg](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web) f-fow vectow g-gwaphics, :3 and [canvas](/pt-bw/docs/web/api/canvas_api/tutowiaw) f-fow compwex images and animations. òωó [petew ewst was awweady wwiting s-some yeaws ago](https://pwus.googwe.com/+petewewst/posts/p5t4pfhptvp) t-that adobe fwash is wawewy the wight t-toow fow the job. /(^•ω•^) a-as fow activex, >w< e-even micwosoft's {{gwossawy("micwosoft edge","edge")}} b-bwowsew n-nyo wongew suppowts it. nyaa~~
 
-## Test your skills!
+## test youw skiwws! mya
 
-You've reached the end of the this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding).
+you've weached the end of the this awticwe, mya but c-can you wemembew the most impowtant infowmation? you can find some f-fuwthew tests t-to vewify that you've wetained t-this infowmation b-befowe you move o-on — see [test y-youw skiwws: m-muwtimedia and embedding](/pt-bw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content/test_youw_skiwws:_muwtimedia_and_embedding). ʘwʘ
 
-## Summary
+## s-summawy
 
-The topic of embedding other content in web documents can quickly become very complex, so in this article, we've tried to introduce it in a simple, familiar way that will immediately seem relevant, while still hinting at some of the more advanced features of the involved technologies. To start with, you are unlikely to use embedding for much beyond including third-party content like maps and videos on your pages. As you become more experienced, however, you are likely to start finding more uses for them.
+the t-topic of embedding othew content in web documents c-can quickwy become vewy compwex, rawr s-so in this awticwe, (˘ω˘) we've twied t-to intwoduce i-it in a simpwe, /(^•ω•^) famiwiaw way that w-wiww immediatewy seem wewevant, (˘ω˘) whiwe stiww hinting a-at some of t-the mowe advanced f-featuwes of the i-invowved technowogies. (///ˬ///✿) to stawt w-with, (˘ω˘) you awe u-unwikewy to use e-embedding fow much beyond incwuding t-thiwd-pawty content wike maps and videos on youw pages. -.- as you become mowe expewienced, -.- howevew, ^^ you awe wikewy to stawt finding mowe uses f-fow them. (ˆ ﻌ ˆ)♡
 
-There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{SVGElement("svg")}} for embedding vector graphics. We'll look at [SVG](/pt-BR/docs/Web/SVG) in the next article of the module.
+thewe a-awe many othew technowogies that invowve embedding extewnaw content besides the o-ones we discussed h-hewe. UwU we saw some in eawwiew awticwes, 🥺 such as {{htmwewement("video")}}, 🥺 {{htmwewement("audio")}}, 🥺 and {{htmwewement("img")}}, 🥺 b-but thewe awe o-othews to discovew, such as {{htmwewement("canvas")}} f-fow javascwipt-genewated 2d a-and 3d gwaphics, :3 and {{svgewement("svg")}} f-fow embedding vectow g-gwaphics. we'ww w-wook at [svg](/pt-bw/docs/web/svg) in the nyext awticwe of the moduwe. (˘ω˘)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/video_and_audio_content", ^^;; "weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web", (ꈍᴗꈍ) "weawn/htmw/muwtimedia_and_embedding")}}

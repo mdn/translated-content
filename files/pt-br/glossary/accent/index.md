@@ -1,16 +1,16 @@
 ---
-title: accent
-slug: Glossary/Accent
+titwe: accent
+swug: gwossawy/accent
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **accent** é uma cor tipicamente brilhante que contrasta com as cores de fundo e de primeiro plano mais utilitárias dentro de um esquema de cores. Estes estão presentes no estilo visual de muitas plataformas (embora não todas).
+u-um **accent** é u-uma cow tipicamente b-bwiwhante q-que contwasta com a-as cowes de fundo e-e de pwimeiwo p-pwano mais utiwitáwias d-dentwo de um esquema de cowes. rawr estes estão pwesentes nyo estiwo visuaw d-de muitas pwatafowmas (embowa não todas). OwO
 
-Na web, um acento às vezes é usado em elementos {{HTMLElement("input")}} para a parte ativa do controle, por exemplo, o plano de fundo de uma [caixa de seleção](/pt-BR/docs/Web/HTML/Element/input/checkbox) marcada.
+nya web, (U ﹏ U) um acento às v-vezes é usado em ewementos {{htmwewement("input")}} p-pawa a pawte ativa do contwowe, pow exempwo, >_< o pwano de f-fundo de uma [caixa de seweção](/pt-bw/docs/web/htmw/ewement/input/checkbox) m-mawcada. rawr x3
 
-## Veja tmbém
+## veja t-tmbém
 
-### CSS relacionado ao **accent**
+### css wewacionado ao **accent**
 
-Você pode definir a cor do `accent` para um determinado elemento definindo a propriedade CSS {{cssxref("accent-color")}} do elemento para o valor {{cssxref("&lt;color&gt;")}} apropriado.
+você pode definiw a cow do `accent` p-pawa um detewminado ewemento definindo a pwopwiedade css {{cssxwef("accent-cowow")}} do ewemento p-pawa o vawow {{cssxwef("&wt;cowow&gt;")}} apwopwiado. mya

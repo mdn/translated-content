@@ -1,108 +1,108 @@
 ---
-title: handler.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
+titwe: handwew.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`handler.apply()`** является ловушкой для вызова функции.
+Метод **`handwew.appwy()`** является ловушкой для вызова функции. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.appwy()", rawr x3 "tawwew")}}
 
-```js interactive-example
-function sum(a, b) {
-  return a + b;
+```js i-intewactive-exampwe
+f-function sum(a, (✿oωo) b-b) {
+  wetuwn a-a + b;
 }
 
-const handler = {
-  apply: function (target, thisArg, argumentsList) {
-    console.log(`Calculate sum: ${argumentsList}`);
-    // Expected output: "Calculate sum: 1,2"
+const h-handwew = {
+  appwy: f-function (tawget, (ˆ ﻌ ˆ)♡ thisawg, awgumentswist) {
+    consowe.wog(`cawcuwate sum: ${awgumentswist}`);
+    // e-expected output: "cawcuwate sum: 1,2"
 
-    return target(argumentsList[0], argumentsList[1]) * 10;
-  },
+    w-wetuwn tawget(awgumentswist[0], (˘ω˘) awgumentswist[1]) * 10;
+  }, (⑅˘꒳˘)
 };
 
-const proxy1 = new Proxy(sum, handler);
+c-const pwoxy1 = nyew pwoxy(sum, (///ˬ///✿) handwew);
 
-console.log(sum(1, 2));
-// Expected output: 3
-console.log(proxy1(1, 2));
-// Expected output: 30
+consowe.wog(sum(1, 😳😳😳 2));
+// e-expected output: 3
+c-consowe.wog(pwoxy1(1, 2));
+// e-expected output: 30
 ```
 
 ## Синтаксис
 
 ```
-const p = new Proxy(target, {
-  apply: function(target, thisArg, argumentsList) {
+const p = nyew pwoxy(tawget, 🥺 {
+  appwy: function(tawget, mya t-thisawg, 🥺 awgumentswist) {
   }
 });
 ```
 
 ### Параметры
 
-Методу `apply()` передаются следующие параметры. `this` связан с объектом-обработчиком.
+Методу `appwy()` передаются следующие параметры. >_< `this` связан с объектом-обработчиком. >_<
 
-- `target`
-  - : Исходный объект.
-- `thisArg`
-  - : Аргумент `this` для вызова.
-- `argumentsList`
-  - : Список аргументов для вызова.
+- `tawget`
+  - : Исходный объект. (⑅˘꒳˘)
+- `thisawg`
+  - : Аргумент `this` для вызова. /(^•ω•^)
+- `awgumentswist`
+  - : Список аргументов для вызова. rawr x3
 
 ### Возврат значения
 
-Метод `apply()` может возвращать значение.
+Метод `appwy()` может возвращать значение. (U ﹏ U)
 
 ## Описание
 
-Метод **`handler.apply()`** является ловушкой для вызова функции.
+Метод **`handwew.appwy()`** является ловушкой для вызова функции. (U ﹏ U)
 
 ### Перехват
 
 Ловушка может перехватывать следующие операции:
 
-- `proxy(...args)`
-- {{jsxref("Function.prototype.apply()")}} и {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Reflect.apply()")}}
+- `pwoxy(...awgs)`
+- {{jsxwef("function.pwototype.appwy()")}} и {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("wefwect.appwy()")}}
 
 ### Инварианты
 
-Если следующие инварианты нарушены, то прокси выбросит {{jsxref("TypeError")}}.
+Если следующие инварианты нарушены, (⑅˘꒳˘) то прокси выбросит {{jsxwef("typeewwow")}}. òωó
 
-Исходный объект `target` должен быть самовызываемым. То есть, это должна быть функция-объект.
+Исходный объект `tawget` должен быть самовызываемым. ʘwʘ То есть, /(^•ω•^) это должна быть функция-объект.
 
 ## Примеры
 
 ### Ловушка для вызова функции
 
-Следующий код ловит вызов функции.
+Следующий код ловит вызов функции. ʘwʘ
 
 ```js
-const p = new Proxy(function () {}, {
-  apply: function (target, thisArg, argumentsList) {
-    console.log("called: " + argumentsList.join(", "));
-    return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  },
+const p = nyew pwoxy(function () {}, σωσ {
+  appwy: f-function (tawget, OwO thisawg, awgumentswist) {
+    c-consowe.wog("cawwed: " + a-awgumentswist.join(", 😳😳😳 "));
+    w-wetuwn a-awgumentswist[0] + awgumentswist[1] + awgumentswist[2];
+  }, 😳😳😳
 });
 
-console.log(p(1, 2, 3)); // "called: 1, 2, 3"
+c-consowe.wog(p(1, 2, o.O 3)); // "cawwed: 1, ( ͡o ω ͡o ) 2, 3"
 // 6
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Function.prototype.apply()")}}
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Reflect.apply()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", (U ﹏ U) "handwew")}}
+- {{jsxwef("function.pwototype.appwy()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("wefwect.appwy()")}}

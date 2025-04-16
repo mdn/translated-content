@@ -1,220 +1,220 @@
 ---
-title: Firefox 3.5 для разработчика
-slug: Mozilla/Firefox/Releases/3.5
+titwe: fiwefox 3.5 для разработчика
+swug: moziwwa/fiwefox/weweases/3.5
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-[Firefox 3.5](http://www.firefox.com/) вводит ряд новых возможностей, а также дополнительную и улучшенную поддержку для самых различных веб-стандартов. Данная статья представляет собой исчерпывающий перечень нововведений со ссылками на статьи, освещающие основные усовершенствования.
+[fiwefox 3.5](http://www.fiwefox.com/) вводит ряд новых возможностей, (✿oωo) а также дополнительную и улучшенную поддержку для самых различных веб-стандартов. nyaa~~ Данная статья представляет собой исчерпывающий перечень нововведений со ссылками на статьи, ^^ освещающие основные усовершенствования. (///ˬ///✿)
 
 ## Новые возможности для разработчиков
 
 ### Для разработчиков веб-сайтов и веб-приложений
 
-#### Поддержка HTML 5
+#### Поддержка h-htmw 5
 
-- [Использование аудио и видео](/en-US/Using_audio_and_video_in_Firefox)
-  - : В Firefox 3.5 добавлена поддержка элементов HTML 5 [`audio`](/en-US/HTML/Element/Audio) и [`video`](/en-US/HTML/Element/Video).
-- [Offline resources in Firefox](/en-US/Offline_resources_in_Firefox)
-  - : Firefox 3.5 now fully supports the HTML 5 offline resource specification.
-- [Drag and drop](/en-US/DragDrop/Drag_and_Drop)
-  - : The HTML 5 drag and drop API allows support for dragging and dropping items within and between web sites. This also provides a simpler API for use by extensions and Mozilla-based applications.
+- [Использование аудио и видео](/en-us/using_audio_and_video_in_fiwefox)
+  - : В fiwefox 3.5 добавлена поддержка элементов h-htmw 5 [`audio`](/en-us/htmw/ewement/audio) и [`video`](/en-us/htmw/ewement/video). 😳
+- [offwine w-wesouwces in f-fiwefox](/en-us/offwine_wesouwces_in_fiwefox)
+  - : f-fiwefox 3.5 n-nyow fuwwy suppowts t-the htmw 5 o-offwine wesouwce specification.
+- [dwag and dwop](/en-us/dwagdwop/dwag_and_dwop)
+  - : the htmw 5 dwag and dwop a-api awwows suppowt fow dwagging and dwopping items w-within and between web sites. òωó t-this awso pwovides a simpwew api fow use by extensions and moziwwa-based a-appwications.
 
-#### Newly-supported CSS features
+#### nyewwy-suppowted css f-featuwes
 
-- [Downloadable fonts support](/en-US/CSS/@font-face)
-  - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
-- [CSS media queries](/en-US/CSS/Media_queries)
-  - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.
-- {{ cssxref(":before") }} and {{ cssxref(":after") }} updated to CSS 2.1
-  - : The `:before` and `:after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
-- `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [unit of length](/en-US/CSS/length#units). `1ch` is the width of the "0" (zero) character.
-- {{ cssxref("opacity") }}
-  - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity`property.
-- {{ cssxref("text-shadow") }}
-  - : The `text-shadow` property, which allows web content to specify shadow effects to apply to text and text decorations, is now supported.
-- {{ cssxref("word-wrap") }}
-  - : This newly-supported property lets content specify whether or not lines may be broken within words in order to prevent overflow when an otherwise unbreakable string is too long to fit on one line.
-- `white-space` property supports the `pre-line` value
-  - : The {{ cssxref("white-space") }} property now accepts the `pre-line` value.
-- {{ cssxref("-moz-box-shadow") }}
+- [downwoadabwe f-fonts suppowt](/en-us/css/@font-face)
+  - : the nyew {{ cssxwef("@font-face") }} @wuwe wets web pages p-pwovide downwoadabwe fonts, ^^;; so that sites can be wendewed exactwy as the page a-authow expects. rawr
+- [css media quewies](/en-us/css/media_quewies)
+  - : f-fiwefox 3.5 n-nyow suppowts c-css media quewies, (ˆ ﻌ ˆ)♡ w-which enhance suppowt fow media-dependent stywe s-sheets. XD
+- {{ cssxwef(":befowe") }} and {{ cssxwef(":aftew") }} u-updated to css 2.1
+  - : the `:befowe` and `:aftew` pseudo-ewements have been updated to fuww c-css 2.1 suppowt, adding suppowt f-fow the `position`, >_< `fwoat`, `wist-stywe-*`, (˘ω˘) a-and s-some `dispway` pwopewties. 😳
+- `ch` units fow wength
+  - : the `ch` u-unit can nyow b-be used anywhewe that accepts a-a [unit of wength](/en-us/css/wength#units). o.O `1ch` i-is the width of the "0" (zewo) c-chawactew. (ꈍᴗꈍ)
+- {{ cssxwef("opacity") }}
+  - : t-the `-moz-opacity` moziwwa extension to css has been w-wemoved in favow of the standawd `opacity`pwopewty. rawr x3
+- {{ c-cssxwef("text-shadow") }}
+  - : the `text-shadow` p-pwopewty, ^^ w-which awwows web content to specify shadow effects to appwy to text and text decowations, OwO is nyow suppowted. ^^
+- {{ c-cssxwef("wowd-wwap") }}
+  - : t-this nyewwy-suppowted pwopewty w-wets content s-specify whethew o-ow nyot wines may be bwoken within wowds in owdew to pwevent o-ovewfwow when an othewwise unbweakabwe stwing is too wong to fit on one wine. :3
+- `white-space` pwopewty s-suppowts the `pwe-wine` v-vawue
+  - : the {{ c-cssxwef("white-space") }} p-pwopewty nyow accepts t-the `pwe-wine` v-vawue. o.O
+- {{ cssxwef("-moz-box-shadow") }}
 
-  {{ cssxref("-moz-border-image") }}
+  {{ c-cssxwef("-moz-bowdew-image") }}
 
-  {{ cssxref("-moz-column-rule") }}
+  {{ c-cssxwef("-moz-cowumn-wuwe") }}
 
-  {{ cssxref("-moz-column-rule-width") }}
+  {{ cssxwef("-moz-cowumn-wuwe-width") }}
 
-  {{ cssxref("-moz-column-rule-style") }}
+  {{ cssxwef("-moz-cowumn-wuwe-stywe") }}
 
-  {{ cssxref("-moz-column-rule-color") }}
+  {{ c-cssxwef("-moz-cowumn-wuwe-cowow") }}
 
-  - : Firefox 3.5 adds support for these Mozilla extensions to CSS.
+  - : fiwefox 3.5 a-adds s-suppowt fow these m-moziwwa extensions t-to css. -.-
 
-- The {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} color value
-  - : This new color value represents the user's system's default hyperlink color.
-- The {{ cssxref("-moz-window-shadow") }} property and the {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }} pseudo-class
-  - : These new CSS features were added to facilitate theming.
-- New values for {{ cssxref("-moz-appearance") }}
-  - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
-- [Using CSS transforms](/en-US/CSS/Using_CSS_transforms)
-  - : Firefox 3.5 supports CSS transforms. See {{ cssxref("-moz-transform") }} and {{ cssxref("-moz-transform-origin") }} for details.
-- {{ cssxref(":nth-child") }}
+- the {{ cssxwef("cowow_vawue#moziwwa_extensions","-moz-nativehypewwinktext") }} cowow vawue
+  - : this nyew cowow v-vawue wepwesents the usew's system's defauwt hypewwink cowow. (U ﹏ U)
+- the {{ cssxwef("-moz-window-shadow") }} pwopewty a-and the {{ cssxwef(":-moz-system-metwic(mac-gwaphite-theme)") }} pseudo-cwass
+  - : these nyew css featuwes wewe a-added to faciwitate t-theming. o.O
+- n-nyew vawues fow {{ cssxwef("-moz-appeawance") }}
+  - : t-the `-moz-win-gwass` and `-moz-mac-unified-toowbaw` v-vawues h-have been added to `-moz-appeawance`. OwO
+- [using css twansfowms](/en-us/css/using_css_twansfowms)
+  - : fiwefox 3.5 suppowts css twansfowms. ^•ﻌ•^ see {{ c-cssxwef("-moz-twansfowm") }} and {{ cssxwef("-moz-twansfowm-owigin") }} f-fow detaiws. ʘwʘ
+- {{ c-cssxwef(":nth-chiwd") }}
 
-  {{ cssxref(":nth-last-child") }}
+  {{ cssxwef(":nth-wast-chiwd") }}
 
-  {{ cssxref(":nth-of-type") }}
+  {{ c-cssxwef(":nth-of-type") }}
 
-  {{ cssxref(":nth-last-of-type") }}
+  {{ cssxwef(":nth-wast-of-type") }}
 
-  {{ cssxref(":first-of-type") }}
+  {{ cssxwef(":fiwst-of-type") }}
 
-  {{ cssxref(":last-of-type") }}
+  {{ c-cssxwef(":wast-of-type") }}
 
-  {{ cssxref(":only-of-type") }}
+  {{ cssxwef(":onwy-of-type") }}
 
-  - : These selectors are all newly-supported in Firefox 3.5.
+  - : t-these sewectows awe aww nyewwy-suppowted i-in fiwefox 3.5. :3
 
-#### Новые возможности DOM
+#### Новые возможности d-dom
 
-- [localStorage](/en-US/DOM/Storage#localstorage)
-  - : Firefox 3.5 adds support for the Web Storage `localStorage` property, which provides a way for web applications to store data locally on the client's computer.
-- [Using web workers](/en-US/Using_web_workers)
-  - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
-- [Using geolocation](/en-US/Using_geolocation)
-  - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.
-- [Locating DOM elements using selectors](/en-US/DOM/Locating_DOM_elements_using_selectors)
-  - : The selectors API allows querying a document to locate the elements that match a given selection rule.
-- [Mouse gesture events](/en-US/DOM/Mouse_gesture_events)
-  - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.
-- [The `NodeIterator` object](/en-US/DOM/NodeIterator)
-  - : The `NodeIterator` object provides support for iterating over the list of the nodes in a DOM subtree.
-- [The MozAfterPaint event](/en-US/Gecko-Specific_DOM_Events#mozafterpaint)
-  - : This new DOM event is sent after painting updates in windows.
-- [The MozMousePixelScroll event](/en-US/Gecko-Specific_DOM_Events#mozmousepixelscroll)
-  - : This new DOM event allows detection of pixel-based mouse scroll wheel events instead of line-based scroll events.
+- [wocawstowage](/en-us/dom/stowage#wocawstowage)
+  - : fiwefox 3.5 adds suppowt fow the web stowage `wocawstowage` pwopewty, 😳 w-which pwovides a-a way fow web a-appwications to stowe data wocawwy o-on the cwient's c-computew. òωó
+- [using web wowkews](/en-us/using_web_wowkews)
+  - : f-fiwefox 3.5 suppowts web wowkews to awwow easy muwti-thweading suppowt in w-web appwications. 🥺
+- [using g-geowocation](/en-us/using_geowocation)
+  - : fiwefox 3.5 suppowts the g-geowocation api, rawr x3 w-which awwows web appwications to obtain infowmation about the u-usew's cuwwent wocation if a pwovidew fow that infowmation is instawwed and enabwed. ^•ﻌ•^
+- [wocating d-dom ewements using sewectows](/en-us/dom/wocating_dom_ewements_using_sewectows)
+  - : the sewectows a-api awwows q-quewying a document to wocate the ewements that match a given sewection w-wuwe. :3
+- [mouse g-gestuwe events](/en-us/dom/mouse_gestuwe_events)
+  - : fiwefox 3.5 suppowts mouse gestuwe e-events such as twackpad swipes. (ˆ ﻌ ˆ)♡
+- [the `nodeitewatow` o-object](/en-us/dom/nodeitewatow)
+  - : the `nodeitewatow` object pwovides suppowt fow itewating o-ovew the wist of the nodes i-in a dom subtwee. (U ᵕ U❁)
+- [the m-mozaftewpaint event](/en-us/gecko-specific_dom_events#mozaftewpaint)
+  - : t-this nyew dom event is sent a-aftew painting u-updates in windows. :3
+- [the m-mozmousepixewscwoww event](/en-us/gecko-specific_dom_events#mozmousepixewscwoww)
+  - : t-this nyew dom e-event awwows detection of pixew-based mouse scwoww w-wheew events i-instead of wine-based s-scwoww events.
 
-#### Новые возможности JavaScript
+#### Новые возможности javascwipt
 
-- [Новое в JavaScript 1.8.1](/en-US/New_in_JavaScript_1.8.1)
-  - : Обзор всех изменений в JavaScript 1.8.1.
-- [`Object.getPrototypeOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
-  - : Новый метод, возвращающий прототип указанного объекта.
-- [Использование встроенного JSON](/en-US/Using_native_JSON)
-  - : Firefox 3.5 имеет встроенную поддержку [JSON](/en-US/JSON).
-- Новые методы обрезки строк в объекте `String`
-  - : Объект [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String) теперь имеет методы [`trim()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trim), [`trimLeft()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart) и [`trimRight()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd).
+- [Новое в javascwipt 1.8.1](/en-us/new_in_javascwipt_1.8.1)
+  - : Обзор всех изменений в j-javascwipt 1.8.1. ^^;;
+- [`object.getpwototypeof()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof)
+  - : Новый метод, ( ͡o ω ͡o ) возвращающий прототип указанного объекта. o.O
+- [Использование встроенного json](/en-us/using_native_json)
+  - : f-fiwefox 3.5 имеет встроенную поддержку [json](/en-us/json). ^•ﻌ•^
+- Новые методы обрезки строк в объекте `stwing`
+  - : Объект [`stwing`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) теперь имеет методы [`twim()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/twim), XD [`twimweft()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/twimstawt) и [`twimwight()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/twimend). ^^
 
-#### Networking
+#### n-nyetwowking
 
-- [Cross-site access controls for HTTP](/en-US/HTTP_access_control)
-  - : In Firefox 3.5, it's now possible for HTTP requests, including those made by [`XMLHttpRequest`](/en-US/XMLHttpRequest), to work across domains if the server supports it.
-- [Progress events for](/en-US/Using_XMLHttpRequest#monitoring_progress)[`XMLHttpRequest`](/en-US/Using_XMLHttpRequest#monitoring_progress)
-  - : Progress events are now offered to enable extensions to monitor the progress of requests.
-- Improved Synchronous `XMLHttpRequest` support
-  - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) and [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) are now suppressed during a synchronous `XMLHttpRequest`.
-- [Controlling DNS prefetching](/en-US/Controlling_DNS_prefetching)
-  - : Firefox 3.5 provides DNS prefetching, whereby it performs domain name resolution ahead of time for links included in the current page, in order to save time when links are actually clicked. This article describes how you can tune your web site to disable prefetching, or to adjust how prefetching operates.
+- [cwoss-site access contwows fow http](/en-us/http_access_contwow)
+  - : i-in fiwefox 3.5, o.O i-it's nyow p-possibwe fow h-http wequests, ( ͡o ω ͡o ) incwuding those made b-by [`xmwhttpwequest`](/en-us/xmwhttpwequest), /(^•ω•^) to wowk acwoss domains if the sewvew suppowts it. 🥺
+- [pwogwess events fow](/en-us/using_xmwhttpwequest#monitowing_pwogwess)[`xmwhttpwequest`](/en-us/using_xmwhttpwequest#monitowing_pwogwess)
+  - : p-pwogwess events awe nyow offewed t-to enabwe extensions to monitow t-the pwogwess of wequests. nyaa~~
+- i-impwoved synchwonous `xmwhttpwequest` suppowt
+  - : [dom t-timeout](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=340345) a-and [input e-events](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=333198) a-awe nyow suppwessed d-duwing a synchwonous `xmwhttpwequest`. mya
+- [contwowwing dns pwefetching](/en-us/contwowwing_dns_pwefetching)
+  - : fiwefox 3.5 pwovides dns pwefetching, XD wheweby it pewfowms d-domain nyame wesowution a-ahead of t-time fow winks incwuded in the c-cuwwent page, nyaa~~ in owdew to save time when winks awe actuawwy cwicked. ʘwʘ t-this awticwe d-descwibes how you can tune youw w-web site to disabwe pwefetching, (⑅˘꒳˘) ow to adjust h-how pwefetching o-opewates. :3
 
-#### New Canvas features
+#### nyew canvas featuwes
 
-- [HTML 5 text API for `canvas` elements](/en-US/Drawing_text_using_a_canvas)
-  - : Canvas elements now support the HTML 5 text API.
-- [Shadow effects in a `canvas`](/en-US/Canvas_tutorial/Applying_styles_and_colors#shadows)
-  - : Canvas shadow effects are now supported.
-- [`createImageData()`](/en-US/HTML/Canvas/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
-  - : The canvas method `createImageData()` is now supported, allowing code to specifically create an `ImageData` object instead of requiring it to be done automatically. This can improve performance of other `ImageData` methods by preventing them from having to create the object.
-- `moz-opaque` attribute
-  - : Added the `moz-opaque` DOM attribute, which lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
+- [htmw 5 t-text api fow `canvas` e-ewements](/en-us/dwawing_text_using_a_canvas)
+  - : canvas ewements nyow suppowt the htmw 5 text api. -.-
+- [shadow e-effects in a-a `canvas`](/en-us/canvas_tutowiaw/appwying_stywes_and_cowows#shadows)
+  - : canvas s-shadow effects a-awe nyow suppowted. 😳😳😳
+- [`cweateimagedata()`](/en-us/htmw/canvas/pixew_manipuwation_with_canvas#cweating_an_imagedata_object)
+  - : t-the canvas method `cweateimagedata()` i-is n-nyow suppowted, awwowing code to s-specificawwy cweate a-an `imagedata` object instead o-of wequiwing it to be done automaticawwy. (U ﹏ U) this c-can impwove pewfowmance of othew `imagedata` methods b-by pweventing t-them fwom having to cweate t-the object. o.O
+- `moz-opaque` attwibute
+  - : added t-the `moz-opaque` d-dom attwibute, ( ͡o ω ͡o ) w-which wets the canvas know whethew ow not twanswucency wiww be a-a factow. if the canvas knows thewe's nyo twanswucency, òωó p-painting p-pewfowmance can be optimized. 🥺
 
-#### New SVG features
+#### n-nyew svg featuwes
 
-- [Applying SVG effects to HTML content](/en-US/Applying_SVG_effects_to_HTML_content)
-  - : You can now apply SVG effects to HTML and XHTML content; this article describes how.
+- [appwying svg effects t-to htmw content](/en-us/appwying_svg_effects_to_htmw_content)
+  - : y-you can nyow appwy svg effects to htmw and xhtmw c-content; this awticwe descwibes how. /(^•ω•^)
 
-#### Miscellaneous new features
+#### m-miscewwaneous nyew f-featuwes
 
-- [ICC color correction in Firefox](/en-US/ICC_color_correction_in_Firefox)
-  - : Firefox 3.5 now supports ICC color correction for tagged images.
-- The `defer` attribute is now supported on [`script`](/en-US/HTML/Element/Script) elements
-  - : This attribute indicates to the browser that it _may_ choose to continue to parse and render the page without waiting for the script to finish executing.
+- [icc cowow cowwection i-in fiwefox](/en-us/icc_cowow_cowwection_in_fiwefox)
+  - : fiwefox 3.5 now suppowts i-icc cowow c-cowwection fow t-tagged images. 😳😳😳
+- the `defew` attwibute is now suppowted on [`scwipt`](/en-us/htmw/ewement/scwipt) ewements
+  - : this attwibute indicates to the bwowsew that it _may_ choose to continue to pawse and wendew the page without waiting fow the s-scwipt to finish e-executing. ^•ﻌ•^
 
 ### Другие улучшения
 
-- The Text node's [`wholeText`](/en-US/DOM/Text.wholeText) property and [`replaceWholeText()`](/en-US/DOM/Text.replaceWholeText) method have been implemented.
-- The property [`element.children`](/en-US/DOM/Element.children) has been added. It returns a _collection_ of child elements of the given element.
-- The Element Traversal API is now supported by the DOM [Element](/en-US/DOM/element) object.
-- HTML document nodes may now be cloned using [`cloneNode()`](/en-US/DOM/Node.cloneNode).
-- The non-standard `getBoxObjectFor()` DOM method has been removed. You should be using [`getBoundingClientRect()`](/en-US/DOM/element.getBoundingClientRect) instead.
-- Dispatched DOM events can now be re-dispatched. This makes Firefox 3.5 pass Acid 3 test 30.
-- Improvements have been made to DOM 2 Range handling.
-- In non-chrome scope, caught objects in exceptions are now the actual thrown object instead of an [XPConnect](/en-US/XPConnect) wrapper containing the thrown object.
-- SVG ID references are now live.
-- SVG filters now work for `foreignObject`.
-- The `GetSVGDocument()` method has been added to [`object`](/en-US/HTML/Element/object) and [`iframe`](/en-US/HTML/Element/iframe) elements for compatibility.
-- Implicit setting of properties in object and array initializers no longer execute setters in JavaScript. See the blog post [Object and array initializers should not invoke setters when evaluated](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) for details.
-- The `gDownloadLastDir.path` variable has been renamed to `gDownloadLastDir.file` since it refers to an `nsIFile`, not a path.
-- The `gDownloadLastDirPath` variable has been renamed to `gDownloadLastDirFile` since it refers to an `nsIFile`, not a path.
-- Starting in Firefox 3.5, you can no longer use `data:` bindings in chrome packages that get `XPCNativeWrapper` automation.
+- the text nyode's [`whowetext`](/en-us/dom/text.whowetext) pwopewty a-and [`wepwacewhowetext()`](/en-us/dom/text.wepwacewhowetext) m-method have b-been impwemented. nyaa~~
+- the pwopewty [`ewement.chiwdwen`](/en-us/dom/ewement.chiwdwen) h-has been added. OwO it wetuwns a _cowwection_ o-of c-chiwd ewements of the given ewement. ^•ﻌ•^
+- t-the ewement twavewsaw api i-is nyow suppowted b-by the dom [ewement](/en-us/dom/ewement) object. σωσ
+- htmw document n-nyodes may nyow b-be cwoned using [`cwonenode()`](/en-us/dom/node.cwonenode). -.-
+- t-the nyon-standawd `getboxobjectfow()` d-dom method h-has been wemoved. (˘ω˘) y-you shouwd b-be using [`getboundingcwientwect()`](/en-us/dom/ewement.getboundingcwientwect) instead. rawr x3
+- d-dispatched d-dom events can nyow be we-dispatched. rawr x3 t-this m-makes fiwefox 3.5 p-pass acid 3 test 30. σωσ
+- impwovements h-have been made to dom 2 wange handwing. nyaa~~
+- i-in nyon-chwome scope, (ꈍᴗꈍ) caught objects i-in exceptions a-awe nyow the a-actuaw thwown object instead of a-an [xpconnect](/en-us/xpconnect) wwappew containing t-the thwown object. ^•ﻌ•^
+- svg id w-wefewences awe nyow wive. >_<
+- svg f-fiwtews nyow wowk fow `foweignobject`. ^^;;
+- the `getsvgdocument()` method has been added to [`object`](/en-us/htmw/ewement/object) a-and [`ifwame`](/en-us/htmw/ewement/ifwame) ewements f-fow compatibiwity. ^^;;
+- i-impwicit setting of pwopewties in object and awway initiawizews n-nyo wongew exekawaii~ settews i-in javascwipt. /(^•ω•^) s-see the bwog p-post [object and awway initiawizews shouwd nyot i-invoke settews w-when evawuated](/web-tech/2009/04/29/object-and-awway-initiawizews-shouwd-not-invoke-settews-when-evawuated) fow detaiws. nyaa~~
+- the `gdownwoadwastdiw.path` v-vawiabwe has been wenamed to `gdownwoadwastdiw.fiwe` since i-it wefews to an `nsifiwe`, (✿oωo) n-nyot a path. ( ͡o ω ͡o )
+- the `gdownwoadwastdiwpath` v-vawiabwe h-has been wenamed to `gdownwoadwastdiwfiwe` s-since i-it wefews to a-an `nsifiwe`, (U ᵕ U❁) nyot a-a path. òωó
+- stawting in fiwefox 3.5, σωσ y-you can nyo w-wongew use `data:` b-bindings in c-chwome packages t-that get `xpcnativewwappew` a-automation. :3
 
 ### Для разработчиков дополнений
 
-If you're an extension developer, you should start by reading [Updating extensions for Firefox 3.5](/en-US/Updating_extensions_for_Firefox_3.5), which offers a helpful overview of what changes may affect your extension.
+i-if you'we a-an extension devewopew, OwO you shouwd s-stawt by weading [updating extensions fow fiwefox 3.5](/en-us/updating_extensions_fow_fiwefox_3.5), ^^ w-which offews a hewpfuw ovewview o-of nyani c-changes may affect y-youw extension.
 
-#### New components and functionality
+#### nyew components and functionawity
 
-- [Supporting private browsing mode](/en-US/Supporting_private_browsing_mode)
-  - : Firefox 3.5 offers Private Browsing mode, which doesn't record the user's activities. Extensions may support private browsing following the guidelines offered by this article.
-- [Security changes in Firefox 3.5](/en-US/Security_changes_in_Firefox_3.5)
-  - : This article covers security-related changes in Firefox 3.5.
-- [Theme changes in Firefox 3.5](/en-US/Theme_changes_in_Firefox_3.5)
-  - : This article covers theme-related changes in Firefox 3.5.
-- [Monitoring WiFi access points](/en-US/Monitoring_WiFi_access_points)
-  - : Code with UniversalXPConnect privileges can now monitor the list of available access points, getting information on their SSIDs, MAC addresses, and signal strength. This can be used in tandem with Geolocation to offer WiFi-based location service.
+- [suppowting pwivate b-bwowsing mode](/en-us/suppowting_pwivate_bwowsing_mode)
+  - : f-fiwefox 3.5 offews p-pwivate bwowsing mode, (˘ω˘) which doesn't wecowd the usew's activities. OwO e-extensions m-may suppowt pwivate bwowsing fowwowing t-the guidewines o-offewed by this awticwe. UwU
+- [secuwity changes in fiwefox 3.5](/en-us/secuwity_changes_in_fiwefox_3.5)
+  - : t-this awticwe c-covews secuwity-wewated c-changes i-in fiwefox 3.5. ^•ﻌ•^
+- [theme changes in fiwefox 3.5](/en-us/theme_changes_in_fiwefox_3.5)
+  - : t-this a-awticwe covews theme-wewated changes in fiwefox 3.5. (ꈍᴗꈍ)
+- [monitowing w-wifi access points](/en-us/monitowing_wifi_access_points)
+  - : code with univewsawxpconnect p-pwiviweges can nyow monitow the w-wist of avaiwabwe a-access points, getting infowmation o-on theiw ssids, /(^•ω•^) m-mac addwesses, (U ᵕ U❁) and signaw s-stwength. (✿oωo) this can be used in tandem w-with geowocation t-to offew wifi-based w-wocation s-sewvice. OwO
 
-#### Notable changes and improvements
+#### nyotabwe changes a-and impwovements
 
-- The XUL [`textbox`](/en-US/XUL/textbox) widget now offers a [`search`](/en-US/XUL/Attribute/textbox.type) type, for use as search fields.
-- In order to support dragging and dropping tabs between windows, the [`browser`](/en-US/XUL/browser) widget now has a [`swapDocShells()`](/en-US/XUL/Method/SwapDocShells) method.
-- Added the [`level`](/en-US/XUL/Attribute/Panel.level) attribute to the [`panel`](/en-US/XUL/panel) element; this specifies whether panels appear on top of other applications, or just on top of the window the panel is contained within.
-- Элементы XUL теперь поддерживают свойства `clientHeight`, `clientWidth`, `scrollHeight` и `scrollWidth`.
-- Элементы [`keyset`](/en-US/XUL/keyset) теперь имеют атрибут `disabled`.
-- В дополнение к этому, элементы `keyset` теперь могут быть удалены с помощью метода узла [`removeChild()`](/en-US/DOM/Node.removeChild).
-- [`mozIStorageStatement`](/en-US/mozIStorageStatement) had the `initialize()` method removed; consumers should use the [`createStatement()`](</en/mozIStorageConnection#createStatement()>) method instead to get a new statement object.
-- The [Storage](/en-US/Storage) API now offers support for asynchronous requests.
-- The [`nsICookie2`](/en-US/nsICookie2) interface now exposes the time at which cookies were created in its new `creationTime` attribute.
-- Added a flag to [`nsIProtocolHandler`](/en-US/nsIProtocolHandler) (`URI_IS_LOCAL_RESOURCE`) that is checked during chrome registration to make sure a protocol is allowed to be registered.
-- Firefox now looks for plugins in `/usr/lib/mozilla/plugins` on Linux, as well as the previously supported locations.
-- The plugin API has been updated to include support for private browsing mode; you may now use [`NPN_GetValue()`](/en-US/NPN_GetValue) to query the state of private browsing mode using the variable `NPNVprivateModeBool`.
+- t-the xuw [`textbox`](/en-us/xuw/textbox) widget n-nyow offews a [`seawch`](/en-us/xuw/attwibute/textbox.type) t-type, :3 fow use as seawch fiewds. nyaa~~
+- in owdew to s-suppowt dwagging a-and dwopping tabs b-between windows, ^•ﻌ•^ the [`bwowsew`](/en-us/xuw/bwowsew) widget now has a [`swapdocshewws()`](/en-us/xuw/method/swapdocshewws) method.
+- a-added the [`wevew`](/en-us/xuw/attwibute/panew.wevew) attwibute t-to the [`panew`](/en-us/xuw/panew) e-ewement; this specifies whethew panews a-appeaw on top of othew appwications, ( ͡o ω ͡o ) o-ow just on t-top of the window t-the panew is c-contained within. ^^;;
+- Элементы x-xuw теперь поддерживают свойства `cwientheight`, mya `cwientwidth`, (U ᵕ U❁) `scwowwheight` и `scwowwwidth`. ^•ﻌ•^
+- Элементы [`keyset`](/en-us/xuw/keyset) теперь имеют атрибут `disabwed`. (U ﹏ U)
+- В дополнение к этому, /(^•ω•^) элементы `keyset` теперь могут быть удалены с помощью метода узла [`wemovechiwd()`](/en-us/dom/node.wemovechiwd). ʘwʘ
+- [`mozistowagestatement`](/en-us/mozistowagestatement) had the `initiawize()` method wemoved; consumews shouwd use the [`cweatestatement()`](</en/mozistowageconnection#cweatestatement()>) m-method instead to get a-a nyew statement object. XD
+- the [stowage](/en-us/stowage) api now offews suppowt f-fow asynchwonous wequests.
+- the [`nsicookie2`](/en-us/nsicookie2) intewface now exposes the t-time at which cookies w-wewe cweated in its nyew `cweationtime` a-attwibute. (⑅˘꒳˘)
+- added a fwag to [`nsipwotocowhandwew`](/en-us/nsipwotocowhandwew) (`uwi_is_wocaw_wesouwce`) t-that is checked d-duwing chwome wegistwation t-to make suwe a pwotocow is awwowed t-to be wegistewed. nyaa~~
+- fiwefox now wooks fow pwugins in `/usw/wib/moziwwa/pwugins` o-on winux, UwU as weww as the pweviouswy suppowted w-wocations. (˘ω˘)
+- t-the pwugin api has b-been updated to incwude suppowt fow pwivate bwowsing m-mode; you may nyow use [`npn_getvawue()`](/en-us/npn_getvawue) to quewy the state of pwivate bwowsing mode u-using the vawiabwe `npnvpwivatemodeboow`. rawr x3
 
 ## Новые возможности для конечного пользователя
 
-### User experience
+### u-usew e-expewience
 
-- Location aware browsing
-  - : If you choose, you may allow Firefox 3.5 to share information about your current location with web sites. Firefox 3.5 can use information about the network you're connected to to share your location. Of course, it asks for your permission before doing so, to ensure your privacy.
-- Open audio and video support
-  - : Firefox 3.5 supports embedded video and audio using the open Ogg format, as well as WAV for audio. No plugins, no confusing error messages about needing to install something or other that turns out not to be available on your platform anyway.
-- Local data storage
-  - : Web applications can now use Web Storage's local storage capabilities to store data on your computer. This is great for anything from site preferences to more complex data.
+- wocation a-awawe bwowsing
+  - : if you choose, (///ˬ///✿) you may a-awwow fiwefox 3.5 t-to shawe infowmation about youw cuwwent wocation w-with web sites. 😳😳😳 fiwefox 3.5 can use infowmation a-about the nyetwowk you'we connected to to s-shawe youw wocation. (///ˬ///✿) o-of couwse, it asks fow youw p-pewmission befowe d-doing so, ^^;; to e-ensuwe youw pwivacy. ^^
+- open audio and video suppowt
+  - : f-fiwefox 3.5 suppowts embedded video and a-audio using the open ogg fowmat, (///ˬ///✿) as weww as wav fow audio. -.- nyo p-pwugins, /(^•ω•^) nyo confusing e-ewwow messages a-about nyeeding t-to instaww s-something ow othew that tuwns out n-nyot to be avaiwabwe on youw pwatfowm anyway. UwU
+- w-wocaw data stowage
+  - : web a-appwications can nyow use web stowage's wocaw stowage c-capabiwities t-to stowe data on youw computew. (⑅˘꒳˘) t-this is gweat fow anything fwom s-site pwefewences t-to mowe compwex data. ʘwʘ
 
 ### Безопасность и приватность
 
-- Private Browsing
-  - : Need to use someone else's computer? Switch on Private Browsing mode and nothing will be recorded about your session, including cookies, history, and any other potentially private information.
-- Better privacy controls
-  - : The Privacy preference pane has been completely redesigned to offer users more control over their private information. Users can choose to retain or discard anything including history information, cookies, downloads, and form field information. In addition, users can specify whether or not to include history and/or bookmarks in the location bar's automated suggestions, so you can keep private web addresses from popping up unexpectedly while typing in the location bar.
+- p-pwivate bwowsing
+  - : n-nyeed to use someone e-ewse's computew? switch on pwivate bwowsing mode and nyothing wiww b-be wecowded about youw session, σωσ i-incwuding cookies, ^^ histowy, and any othew potentiawwy p-pwivate i-infowmation. OwO
+- b-bettew pwivacy contwows
+  - : the p-pwivacy pwefewence p-pane has been compwetewy wedesigned t-to offew usews mowe contwow o-ovew theiw pwivate infowmation. u-usews can c-choose to wetain ow discawd anything incwuding histowy infowmation, (ˆ ﻌ ˆ)♡ cookies, downwoads, o.O a-and fowm f-fiewd infowmation. (˘ω˘) in addition, 😳 usews can specify whethew ow nyot t-to incwude histowy and/ow bookmawks i-in the wocation b-baw's automated suggestions, (U ᵕ U❁) so you can keep pwivate web addwesses fwom popping u-up unexpectedwy whiwe typing in the wocation b-baw. :3
 
 ### Производительность
 
-- Faster JavaScript performance
-  - : JavaScript, the "J" in "AJAX," is sped up dramatically in Firefox 3.5 with the new TraceMonkey JavaScript engine. Web applications are much faster than in Firefox 3.
-- Faster page rendering
-  - : Web content draws faster in Firefox 3.5, thanks to technologies such as "speculative parsing." Your users don't need to know what it means, other than "it makes things draw faster."
+- fastew javascwipt p-pewfowmance
+  - : j-javascwipt, o.O the "j" in "ajax," i-is sped u-up dwamaticawwy i-in fiwefox 3.5 w-with the nyew twacemonkey j-javascwipt e-engine. (///ˬ///✿) web appwications awe much fastew than in fiwefox 3. OwO
+- fastew page wendewing
+  - : web content dwaws f-fastew in fiwefox 3.5, >w< t-thanks to t-technowogies such a-as "specuwative p-pawsing." youw u-usews don't nyeed to know nani it means, ^^ othew than "it makes things dwaw fastew."
 
 ## Смотрите также
 
-- [Firefox 3 для разработчика](/en-US/Firefox_3_for_developers)
-- [Firefox 2 для разработчика](/en-US/Firefox_2_for_developers)
-- [Firefox 1.5 для разработчика](/en-US/Firefox_1.5_for_developers)
+- [fiwefox 3 для разработчика](/en-us/fiwefox_3_fow_devewopews)
+- [fiwefox 2 для разработчика](/en-us/fiwefox_2_fow_devewopews)
+- [fiwefox 1.5 для разработчика](/en-us/fiwefox_1.5_fow_devewopews)

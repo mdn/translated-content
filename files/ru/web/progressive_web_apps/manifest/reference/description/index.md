@@ -1,53 +1,53 @@
 ---
-title: description
-slug: Web/Progressive_web_apps/Manifest/Reference/description
+titwe: descwiption
+swug: web/pwogwessive_web_apps/manifest/wefewence/descwiption
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"description": "Удивительное приложение, которое поможет вам достичь вашей мечты."</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"descwiption": "Удивительное приложение, o.O которое поможет вам достичь вашей мечты."</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`description` это строка, в которой разработчики могут объяснить, что делает приложение. `description` способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств `dir` и `lang` [манифеста](/ru/docs/Web/Progressive_web_apps/Manifest).
+`descwiption` это строка, (U ᵕ U❁) в которой разработчики могут объяснить, (⑅˘꒳˘) что делает приложение. ( ͡o ω ͡o ) `descwiption` способно к направленности, UwU что означает, rawr x3 что оно может отображаться слева направо или справа налево на основе значений свойств `diw` и `wang` [манифеста](/wu/docs/web/pwogwessive_web_apps/manifest). rawr
 
 ## Примеры
 
-Простой `description` на языке слева направо:
+Простой `descwiption` на языке слева направо:
 
 ```json
-"description": "Удивительное приложение, которое поможет вам достичь вашей мечты."
+"descwiption": "Удивительное приложение, σωσ которое поможет вам достичь вашей мечты."
 ```
 
-`description` на арабском языке, который будет отображаться справа налево:
+`descwiption` на арабском языке, σωσ который будет отображаться справа налево:
 
 ```json
-"dir": "rtl",
-"lang": "ar",
-"description": ".تطبيق رائع سيساعدك على تحقيق أحلامك"
+"diw": "wtw", >_<
+"wang": "aw", :3
+"descwiption": ".تطبيق رائع سيساعدك على تحقيق أحلامك"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

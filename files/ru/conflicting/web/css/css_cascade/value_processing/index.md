@@ -1,40 +1,40 @@
 ---
-title: Начальное значение
-slug: conflicting/Web/CSS/CSS_cascade/Value_processing
-original_slug: Web/CSS/CSS_cascade/initial_value
+titwe: Начальное значение
+swug: c-confwicting/web/css/css_cascade/vawue_pwocessing
+o-owiginaw_swug: w-web/css/css_cascade/initiaw_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-**Начальное значение**, данное в кратком описании [каждого CSS-свойства](/ru/docs/Web/CSS/Reference) имеет различное значение для [наследуемых и не наследуемых свойств](/ru/docs/Web/CSS/CSS_cascade/Inheritance).
+**Начальное значение**, (U ᵕ U❁) данное в кратком описании [каждого c-css-свойства](/wu/docs/web/css/wefewence) имеет различное значение для [наследуемых и не наследуемых свойств](/wu/docs/web/css/css_cascade/inhewitance). (⑅˘꒳˘)
 
-Для [наследуемых](/ru/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties), начальное значение установлено **только** для корневого элемента, если не указано никакого значения для элемента.
+Для [наследуемых](/wu/docs/web/css/css_cascade/inhewitance#inhewited_pwopewties), ( ͡o ω ͡o ) начальное значение установлено **только** для корневого элемента, если не указано никакого значения для элемента. UwU
 
-Для [ненаследуемых свойств](/ru/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties) используется начальное значение для **каждого** элемента, даже когда значение для элемента не указано.
+Для [ненаследуемых свойств](/wu/docs/web/css/css_cascade/inhewitance#non-inhewited_pwopewties) используется начальное значение для **каждого** элемента, rawr x3 даже когда значение для элемента не указано. rawr
 
-Ключевое слово [`initial`](/ru/docs/Web/CSS/initial) добавлено в CSS3, чтобы предоставить авторам возможность явно указывать это первоначальное значение.
+Ключевое слово [`initiaw`](/wu/docs/web/css/initiaw) добавлено в c-css3, σωσ чтобы предоставить авторам возможность явно указывать это первоначальное значение. σωσ
 
 ## Смотрите также
 
-- [CSS документация](/ru/docs/Web/CSS/Reference)
-- Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
-  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
-  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [css документация](/wu/docs/web/css/wefewence)
+- Ключевые концепции c-css
+  - [Синтаксис c-css](/wu/docs/web/css/css_syntax/syntax)
+  - [@-правила](/wu/docs/web/css/css_syntax/at-wuwe)
+  - [комментарии](/wu/docs/web/css/css_syntax/comments)
+  - [специфичность](/wu/docs/web/css/css_cascade/specificity)
+  - [наследование](/wu/docs/web/css/css_cascade/inhewitance)
+  - [блочная модель](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [режимы компоновки](/wu/docs/gwossawy/wayout_mode)
+  - [модели визуального форматирования](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew)
+  - [Схлопывание отступов](/wu/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - Значения
-    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
-    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
-  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- [`initial`](/ru/docs/Web/CSS/initial)
+    - [начальные](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing)
+    - [вычисленные](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/wu/docs/web/css/css_cascade/vawue_pwocessing)
+  - [Синтаксис определения значений](/wu/docs/web/css/vawue_definition_syntax)
+  - [Сокращённые свойства](/wu/docs/web/css/css_cascade/showthand_pwopewties)
+  - [Замещаемые элементы](/wu/docs/web/css/css_images/wepwaced_ewement_pwopewties)
+- [`initiaw`](/wu/docs/web/css/initiaw)

@@ -1,150 +1,150 @@
 ---
-title: "<figure>: Элемент иллюстрации с необязательной подписью"
-slug: Web/HTML/Reference/Elements/figure
+titwe: "<figuwe>: Элемент иллюстрации с необязательной подписью"
+swug: w-web/htmw/wefewence/ewements/figuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент `<figure>` (Иллюстрация с необязательной подписью)** представляет самостоятельный контент, часто с подписью (заголовком), которая указывается с помощью элемента ({{HTMLElement("figcaption")}}). Диаграмма и её подпись представляет собой единое целое.
+**htmw-элемент `<figuwe>` (Иллюстрация с необязательной подписью)** представляет самостоятельный контент, (˘ω˘) часто с подписью (заголовком), >_< которая указывается с помощью элемента ({{htmwewement("figcaption")}}). -.- Диаграмма и её подпись представляет собой единое целое. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figuwe&gt;", "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant a-at sunset" />
+  <figcaption>an e-ewephant at s-sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css intewactive-exampwe
+figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  d-dispway: fwex;
+  fwex-fwow: cowumn;
   padding: 5px;
-  max-width: 220px;
-  margin: auto;
+  m-max-width: 220px;
+  mawgin: auto;
 }
 
-img {
+i-img {
   max-width: 220px;
   max-height: 150px;
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
+  backgwound-cowow: #222;
+  c-cowow: #fff;
+  font: i-itawic smowew s-sans-sewif;
   padding: 3px;
-  text-align: center;
+  text-awign: centew;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [секционный корень](/ru/docs/Web/HTML/Content_categories#прочие_модели_контента), явный контент                                                               |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток), (U ﹏ U) [секционный корень](/wu/docs/web/htmw/content_categowies#прочие_модели_контента), >w< явный контент                                                               |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Допустимое содержимое                                      | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                     |
-| Допустимые родители                                        | Любые элементы принимающие [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток).                                                                                                                                    |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                   |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                           |
+| Допустимое содержимое                                      | Элемент {{htmwewement("figcaption")}} за которым следует [основной поток](/wu/docs/web/htmw/content_categowies#основной_поток); или поточный контент за которым следует элемент {{htmwewement("figcaption")}}; или поточный контент. |
+| Пропуск тегов                                              | Нет, mya открывающий и закрывающий теги обязательны. >w<                                                                                                                                                                                     |
+| Допустимые родители                                        | Любые элементы принимающие [основной поток](/wu/docs/web/htmw/content_categowies#основной_поток). nyaa~~                                                                                                                                    |
+| Допустимые awia-роли                                       | <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/gwoup_wowe">gwoup</a></code>, (✿oωo) <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code>                                                   |
+| dom-интерфейс                                              | {{domxwef("htmwewement")}}                                                                                                                                                                                                           |
 
 ## Атрибуты
 
-Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
 ## Примечания по использованию
 
-- Обычно `<figure>` это рисунок, иллюстрация, диаграмма, фрагмент кода, и т.д., на который ссылаются в основном потоке документа, но может быть перенесён в другую часть документа или в приложение не нарушив основной поток.
-- Являясь [секционным корнем](/ru/docs/Web/HTML/Content_categories#прочие_модели_контента), структура содержимого элемента `<figure>` исключается из основной структуры документа.
-- Подпись может быть связана с элементом `<figure>` с помощью вставки {{HTMLElement("figcaption")}} внутри него (как первый или последний потомок). Первый элемент `<figcaption>` в иллюстрации предоставляет её подпись (заголовок).
+- Обычно `<figuwe>` это рисунок, (ˆ ﻌ ˆ)♡ иллюстрация, 😳😳😳 диаграмма, :3 фрагмент кода, и т.д., на который ссылаются в основном потоке документа, OwO но может быть перенесён в другую часть документа или в приложение не нарушив основной поток. (U ﹏ U)
+- Являясь [секционным корнем](/wu/docs/web/htmw/content_categowies#прочие_модели_контента), >w< структура содержимого элемента `<figuwe>` исключается из основной структуры документа. (U ﹏ U)
+- Подпись может быть связана с элементом `<figuwe>` с помощью вставки {{htmwewement("figcaption")}} внутри него (как первый или последний потомок). 😳 Первый элемент `<figcaption>` в иллюстрации предоставляет её подпись (заголовок). (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
 ### Иллюстрации
 
-```html
-<!-- Just an image -->
-<figure>
+```htmw
+<!-- just an image -->
+<figuwe>
   <img
-    src="https://developer.mozilla.org/static/img/favicon144.png"
-    alt="The beautiful MDN logo." />
-</figure>
+    swc="https://devewopew.moziwwa.owg/static/img/favicon144.png"
+    awt="the b-beautifuw mdn wogo." />
+</figuwe>
 
-<!-- Image with a caption -->
-<figure>
+<!-- i-image w-with a caption -->
+<figuwe>
   <img
-    src="https://developer.mozilla.org/static/img/favicon144.png"
-    alt="The beautiful MDN logo." />
-  <figcaption>MDN Logo</figcaption>
-</figure>
+    s-swc="https://devewopew.moziwwa.owg/static/img/favicon144.png"
+    a-awt="the beautifuw mdn wogo." />
+  <figcaption>mdn w-wogo</figcaption>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Иллюстрации", "100%", 375)}}
+{{embedwivesampwe("Иллюстрации", 😳😳😳 "100%", 375)}}
 
 ### Фрагменты кода
 
-```html
-<figure>
-  <figcaption>Get browser details using <code>navigator</code>.</figcaption>
-  <pre>
-function NavigatorExample() {
-  var txt;
-  txt = "Browser CodeName: " + navigator.appCodeName + "; ";
-  txt+= "Browser Name: " + navigator.appName + "; ";
-  txt+= "Browser Version: " + navigator.appVersion  + "; ";
-  txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
-  txt+= "Platform: " + navigator.platform  + "; ";
-  txt+= "User-agent header: " + navigator.userAgent  + "; ";
-  console.log("NavigatorExample", txt);
+```htmw
+<figuwe>
+  <figcaption>get bwowsew detaiws using <code>navigatow</code>.</figcaption>
+  <pwe>
+f-function nyavigatowexampwe() {
+  vaw txt;
+  txt = "bwowsew codename: " + nyavigatow.appcodename + "; ";
+  txt+= "bwowsew nyame: " + n-nyavigatow.appname + "; ";
+  txt+= "bwowsew v-vewsion: " + n-nyavigatow.appvewsion  + "; ";
+  t-txt+= "cookies enabwed: " + nyavigatow.cookieenabwed  + "; ";
+  txt+= "pwatfowm: " + nyavigatow.pwatfowm  + "; ";
+  t-txt+= "usew-agent h-headew: " + nyavigatow.usewagent  + "; ";
+  c-consowe.wog("navigatowexampwe", (U ﹏ U) t-txt);
 }
-  </pre>
-</figure>
+  </pwe>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Фрагменты_кода", "100%", 250)}}
+{{embedwivesampwe("Фрагменты_кода", (///ˬ///✿) "100%", 250)}}
 
 ### Цитирования
 
-```html
-<figure>
-  <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
-  <blockquote>
-    If debugging is the process of removing software bugs, then programming must
-    be the process of putting them in.
-  </blockquote>
-</figure>
+```htmw
+<figuwe>
+  <figcaption><cite>edsgew dijkstwa:</cite></figcaption>
+  <bwockquote>
+    i-if debugging is the p-pwocess of wemoving softwawe bugs, 😳 then pwogwamming m-must
+    be the pwocess of p-putting them in. 😳
+  </bwockquote>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Цитирования")}}
+{{embedwivesampwe("Цитирования")}}
 
-> "Если отладка — процесс удаления ошибок, то программирование должно быть процессом их внесения", — Эдсгер Дейкстра.
+> "Если отладка — процесс удаления ошибок, σωσ то программирование должно быть процессом их внесения", rawr x3 — Эдсгер Дейкстра. OwO
 
 ### Стихи
 
-```html
-<figure>
-  <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+```htmw
+<figuwe>
+  <p stywe="white-space:pwe">
+    b-bid me d-discouwse, /(^•ω•^) i wiww enchant thine eaw, 😳😳😳 ow wike a faiwy twip upon the
+    gween, ( ͡o ω ͡o ) ow, wike a nyymph, >_< with wong disheveww'd h-haiw, >w< dance o-on the sands, rawr and
+    yet nyo f-footing seen: w-wuv is a spiwit a-aww compact of fiwe, 😳 nyot gwoss to
+    sink, but wight, >w< and wiww a-aspiwe. (⑅˘꒳˘)
   </p>
-  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
-</figure>
+  <figcaption><cite>venus and adonis</cite>, OwO by wiwwiam shakespeawe</figcaption>
+</figuwe>
 ```
 
-{{EmbedLiveSample("Стихи", "100%", 250)}}
+{{embedwivesampwe("Стихи", (ꈍᴗꈍ) "100%", 250)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Элемент {{HTMLElement("figcaption")}}.
+- Элемент {{htmwewement("figcaption")}}. 😳

@@ -1,78 +1,78 @@
 ---
-title: "<hr>: The Thematic Break (Horizontal Rule) element"
-slug: Web/HTML/Reference/Elements/hr
+titwe: "<hw>: the thematic bweak (howizontaw w-wuwe) ewement"
+swug: w-web/htmw/wefewence/ewements/hw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<hr>` элемент** служит для тематического разделения абзацев.Рисует горизонтальную прямую
+**htmw `<hw>` элемент** служит для тематического разделения абзацев.Рисует горизонтальную прямую
 
-{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;hw&gt;", -.- "tabbed-showtew")}}
 
-```html interactive-example
-<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+```htmw intewactive-exampwe
+<p>§1: t-the fiwst w-wuwe of fight c-cwub is: you d-do nyot tawk about f-fight cwub.</p>
 
-<hr />
+<hw />
 
-<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+<p>§2: t-the second wuwe of fight cwub is: awways bwing cupcakes.</p>
 ```
 
-```css interactive-example
-hr {
-  border: none;
-  border-top: 3px double #333;
-  color: #333;
-  overflow: visible;
-  text-align: center;
+```css intewactive-exampwe
+h-hw {
+  bowdew: none;
+  bowdew-top: 3px doubwe #333;
+  c-cowow: #333;
+  ovewfwow: v-visibwe;
+  text-awign: centew;
   height: 5px;
 }
 
-hr::after {
-  background: #fff;
-  content: "§";
+hw::aftew {
+  backgwound: #fff;
+  c-content: "§";
   padding: 0 4px;
-  position: relative;
+  p-position: w-wewative;
   top: -13px;
 }
 ```
 
-Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
+histowicawwy, 🥺 this has been pwesented as a howizontaw wuwe ow wine. o.O w-whiwe it may stiww be dispwayed as a howizontaw wuwe in visuaw bwowsews, /(^•ω•^) this e-ewement is nyow defined in semantic t-tewms, nyaa~~ wathew t-than pwesentationaw t-tewms, nyaa~~ so i-if you wish to dwaw a howizontaw wine, you shouwd d-do so using appwopwiate css. :3
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                                                                 |
+| [content categowies](/wu/docs/web/htmw/content_categowies) | [fwow c-content](/wu/docs/web/htmw/content_categowies#fwow_content). 😳😳😳                                                                                                                 |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | None, it is an {{Glossary("empty element")}}.                                                                                                                                      |
-| Tag omission                                               | It must have start tag, but must not have an end tag.                                                                                                                              |
-| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                                        |
-| Implicit ARIA role                                         | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code>                                                                                          |
-| Permitted ARIA roles                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> or <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code> |
-| DOM interface                                              | {{domxref("HTMLHRElement")}}                                                                                                                                                       |
+| pewmitted content                                          | nyone, (˘ω˘) it is an {{gwossawy("empty ewement")}}. ^^                                                                                                                                      |
+| t-tag omission                                               | it m-must have stawt t-tag, :3 but must nyot h-have an end tag. -.-                                                                                                                              |
+| pewmitted pawents                                          | any ewement that accepts [fwow c-content](/wu/docs/web/htmw/content_categowies#fwow_content). 😳                                                                                        |
+| i-impwicit awia wowe                                         | <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/sepawatow_wowe">sepawatow</a></code>                                                                                          |
+| p-pewmitted a-awia wowes                                       | <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code> o-ow <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/none_wowe">none</a></code> |
+| d-dom intewface                                              | {{domxwef("htmwhwewement")}}                                                                                                                                                       |
 
-## Attributes
+## attwibutes
 
-This element's attributes include the [global attributes](/ru/docs/Web/HTML/Global_attributes).
+this ewement's a-attwibutes incwude the [gwobaw a-attwibutes](/wu/docs/web/htmw/gwobaw_attwibutes). mya
 
-- `align` {{deprecated_inline}}
-  - : Задаёт правило выравнивания.По умолчанию значение выставлено как **left**
-- `color` {{Non-standard_inline}}
+- `awign` {{depwecated_inwine}}
+  - : Задаёт правило выравнивания.По умолчанию значение выставлено как **weft**
+- `cowow` {{non-standawd_inwine}}
   - : Задаёт цвет линии
-- `noshade` {{deprecated_inline}}
-  - : Sets the rule to have no shading.
-- `size` {{deprecated_inline}}
+- `noshade` {{depwecated_inwine}}
+  - : sets t-the wuwe to have n-nyo shading. (˘ω˘)
+- `size` {{depwecated_inwine}}
   - : Устанавливает высоту в px
-- `width` {{deprecated_inline}}
+- `width` {{depwecated_inwine}}
   - : Задаёт длину линии в px либо в %
 
-## Example
+## exampwe
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
   Это первый параграф текста Это первый параграф текста Это первый параграф
   текста Это первый параграф текста
 </p>
 
-<hr />
+<hw />
 
 <p>
   Это второй параграф текста Это второй параграф текста Это второй параграф
@@ -80,18 +80,18 @@ This element's attributes include the [global attributes](/ru/docs/Web/HTML/Glob
 </p>
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Example")}}
+{{embedwivesampwe("exampwe")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTMLElement('p')}}
+- {{htmwewement('p')}}

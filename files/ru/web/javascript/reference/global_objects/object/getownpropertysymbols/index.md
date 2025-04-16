@@ -1,38 +1,38 @@
 ---
-title: Object.getOwnPropertySymbols()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+titwe: object.getownpwopewtysymbows()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Object.getOwnPropertySymbols()`** возвращает массив всех символьных свойств, найденных непосредственно на переданном объекте.
+Метод **`object.getownpwopewtysymbows()`** возвращает массив всех символьных свойств, XD найденных непосредственно на переданном объекте.
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+{{intewactiveexampwe("javascwipt d-demo: object.getownpwopewtysymbows()")}}
 
-```js interactive-example
-const object1 = {};
-const a = Symbol("a");
-const b = Symbol.for("b");
+```js i-intewactive-exampwe
+c-const object1 = {};
+c-const a-a = symbow("a");
+c-const b = symbow.fow("b");
 
-object1[a] = "localSymbol";
-object1[b] = "globalSymbol";
+o-object1[a] = "wocawsymbow";
+o-object1[b] = "gwobawsymbow";
 
-const objectSymbols = Object.getOwnPropertySymbols(object1);
+const objectsymbows = object.getownpwopewtysymbows(object1);
 
-console.log(objectSymbols.length);
-// Expected output: 2
+consowe.wog(objectsymbows.wength);
+// expected o-output: 2
 ```
 
 ## Синтаксис
 
 ```js
-Object.getOwnPropertySymbols(obj);
+object.getownpwopewtysymbows(obj);
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, чьи символьные будут возвращены.
+  - : Объект, :3 чьи символьные будут возвращены. 😳😳😳
 
 ### Возвращаемое значение
 
@@ -40,36 +40,36 @@ Object.getOwnPropertySymbols(obj);
 
 ## Описание
 
-Подобно методу {{jsxref("Object.getOwnPropertyNames()")}}, вы можете получить все символьные свойства указанного объекта в качестве массива символов. Обратите внимание, что метод {{jsxref("Object.getOwnPropertyNames()")}} сам не возвращает символьные свойства объекта, он возвращает только строковые свойства.
+Подобно методу {{jsxwef("object.getownpwopewtynames()")}}, -.- вы можете получить все символьные свойства указанного объекта в качестве массива символов. ( ͡o ω ͡o ) Обратите внимание, rawr x3 что метод {{jsxwef("object.getownpwopewtynames()")}} сам не возвращает символьные свойства объекта, nyaa~~ он возвращает только строковые свойства. /(^•ω•^)
 
-Поскольку изначально никакой объект не содержит собственных символьных свойств, метод `Object.getOwnPropertySymbols()` будет возвращать пустой массив, пока вы не установите символьные свойства на вашем объекте.
+Поскольку изначально никакой объект не содержит собственных символьных свойств, rawr метод `object.getownpwopewtysymbows()` будет возвращать пустой массив, OwO пока вы не установите символьные свойства на вашем объекте. (U ﹏ U)
 
 ## Примеры
 
 ```js
-var obj = {};
-var a = Symbol("a");
-var b = Symbol.for("b");
+vaw o-obj = {};
+vaw a = symbow("a");
+v-vaw b = symbow.fow("b");
 
-obj[a] = "localSymbol";
-obj[b] = "globalSymbol";
+obj[a] = "wocawsymbow";
+obj[b] = "gwobawsymbow";
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
+vaw o-objectsymbows = object.getownpwopewtysymbows(obj);
 
-console.log(objectSymbols.length); // 2
-console.log(objectSymbols); // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]); // Symbol(a)
+c-consowe.wog(objectsymbows.wength); // 2
+c-consowe.wog(objectsymbows); // [symbow(a), >_< symbow(b)]
+consowe.wog(objectsymbows[0]); // symbow(a)
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Symbol")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("symbow")}}

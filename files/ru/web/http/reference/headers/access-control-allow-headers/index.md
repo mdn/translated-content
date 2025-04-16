@@ -1,66 +1,66 @@
 ---
-title: Access-Control-Allow-Headers
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
+titwe: access-contwow-awwow-headews
+swug: web/http/wefewence/headews/access-contwow-awwow-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок ответа **`Access-Control-Allow-Headers`** используется в ответ на {{glossary("preflight request")}}, чтобы указать, какие заголовки HTTP могут использоваться во время фактического запроса.
+Заголовок ответа **`access-contwow-awwow-headews`** используется в ответ на {{gwossawy("pwefwight w-wequest")}}, (ˆ ﻌ ˆ)♡ чтобы указать, (⑅˘꒳˘) какие заголовки h-http могут использоваться во время фактического запроса.
 
-The {{glossary("simple header", "simple headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (но только с MIME-типом, найденным в этом значении (исключая параметры), либо `application/x-www-form-urlencoded`, `multipart/form-data` или `text/plain`), всегда доступны и не должны быть перечислены в этом заголовке.
+t-the {{gwossawy("simpwe h-headew", (U ᵕ U❁) "simpwe h-headews")}}, -.- {{httpheadew("accept")}}, ^^;; {{httpheadew("accept-wanguage")}}, >_< {{httpheadew("content-wanguage")}}, mya {{httpheadew("content-type")}} (но только с m-mime-типом, mya найденным в этом значении (исключая параметры), 😳 либо `appwication/x-www-fowm-uwwencoded`, XD `muwtipawt/fowm-data` или `text/pwain`), :3 всегда доступны и не должны быть перечислены в этом заголовке. 😳😳😳
 
-Этот заголовок обязателен, если запрос содержит заголовок {{HTTPHeader("Access-Control-Request-Headers")}}.
+Этот заголовок обязателен, -.- если запрос содержит заголовок {{httpheadew("access-contwow-wequest-headews")}}. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Access-Control-Allow-Headers: <header-name>, <header-name>, ...
+access-contwow-awwow-headews: <headew-name>, rawr x3 <headew-name>, ...
 ```
 
 ## Директивы
 
-- \<header-name>
-  - : Список поддерживаемых заголовков разделённых запятыми.
+- \<headew-name>
+  - : Список поддерживаемых заголовков разделённых запятыми. nyaa~~
 
 ## Пример
 
 ```
-Access-Control-Allow-Headers: X-Custom-Header
+a-access-contwow-awwow-headews: x-custom-headew
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Примечания по совместимости
 
-- Подстановочное значение (\*), указанное в последней спецификации, ещё не реализовано в браузерах:
+- Подстановочное значение (\*), /(^•ω•^) указанное в последней спецификации, ещё не реализовано в браузерах:
 
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
-  - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
+  - chwomium: [issue 615313](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=615313)
+  - f-fiwefox: [fiwefox bug 1309358](https://bugziw.wa/1309358)
+  - s-sewvo: [issue 13283](https://github.com/sewvo/sewvo/issues/13283)
+  - webkit: [issue 165508](https://bugs.webkit.owg/show_bug.cgi?id=165508)
 
 ## Смотрите также
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Access-Control-Request-Headers")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{httpheadew("access-contwow-awwow-methods")}}
+- {{httpheadew("access-contwow-wequest-headews")}}

@@ -1,27 +1,27 @@
 ---
-title: 405 Method Not Allowed
-slug: Web/HTTP/Reference/Status/405
+titwe: 405 method nyot awwowed
+s-swug: web/http/wefewence/status/405
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код состояния протокола HTTP **`405 Method Not Allowed`**, указывает, что метод запроса известен серверу, но был отключён и не может быть использован. Два обязательных метода {{HTTPMethod("GET")}} и {{HTTPMethod("HEAD")}} никогда не должны быть отключены и не должны возвращать этот код ошибки.
+Код состояния протокола h-http **`405 m-method nyot a-awwowed`**, σωσ указывает, σωσ что метод запроса известен серверу, >_< но был отключён и не может быть использован. :3 Два обязательных метода {{httpmethod("get")}} и {{httpmethod("head")}} никогда не должны быть отключены и не должны возвращать этот код ошибки. (U ﹏ U)
 
-Сервер ОБЯЗАН сгенерировать поле заголовка **`Allow`** в ответе с кодом 405, которое содержит список текущих доступных методов ресурса.
+Сервер ОБЯЗАН сгенерировать поле заголовка **`awwow`** в ответе с кодом 405, -.- которое содержит список текущих доступных методов ресурса. (ˆ ﻌ ˆ)♡
 
 ## Статус
 
 ```
-405 Method Not Allowed
+405 method n-nyot awwowed
 ```
 
 ## Спецификации
 
 | Спецификация                                        | Титул                                                         |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "405 Method Not Allowed" , "6.5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", "405 m-method n-not awwowed" , (⑅˘꒳˘) "6.5.5")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
 ## Смотрите также
 
-- {{HTTPHeader("Allow")}}
-- [405 Method Not Allowed](https://www.exai.com/blog/http-405-error)
+- {{httpheadew("awwow")}}
+- [405 m-method nyot awwowed](https://www.exai.com/bwog/http-405-ewwow)

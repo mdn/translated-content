@@ -1,65 +1,65 @@
 ---
-title: DNT
-slug: Web/HTTP/Reference/Headers/DNT
+titwe: dnt
+swug: web/http/wefewence/headews/dnt
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-The **`DNT`** (**D**o **N**ot **T**rack - Не отслеживать) заголовок указывает разрешает ли пользователь отслеживать себя. Он позволяет пользователю указать предпочитают они приватность персонифицированному контенту, подготавливаемому с использованием отслеживания.
+t-the **`dnt`** (**d**o **n**ot **t**wack - Не отслеживать) заголовок указывает разрешает ли пользователь отслеживать себя. >_< Он позволяет пользователю указать предпочитают они приватность персонифицированному контенту, mya подготавливаемому с использованием отслеживания. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew n-nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-DNT: 0
-DNT: 1
+d-dnt: 0
+dnt: 1
 ```
 
 ## Директивы
 
 - 0
-  - : Пользователь разрешает отслеживание на целевом сайте.
+  - : Пользователь разрешает отслеживание на целевом сайте. 😳
 - 1
-  - : Пользователь предпочитает не отслеживаться на целевом сайте.
+  - : Пользователь предпочитает не отслеживаться на целевом сайте. XD
 
 ## Примеры
 
-### Чтение статуса Do Not Track из JavaScript
+### Чтение статуса do nyot twack из javascwipt
 
-DNT предпочтение пользователя может быть считано из JavaScript используя свойство {{domxref("Navigator.doNotTrack")}} :
+dnt предпочтение пользователя может быть считано из j-javascwipt используя свойство {{domxwef("navigatow.donottwack")}} :
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+nyavigatow.donottwack; // "0" ow "1"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Navigator.doNotTrack")}}
-- {{HTTPHeader("Tk")}} header
-- [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
-- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [donottrack.us](http://donottrack.us/)
-- DNT browser settings help:
+- {{domxwef("navigatow.donottwack")}}
+- {{httpheadew("tk")}} headew
+- [do n-nyot twack on wikipedia](https://en.wikipedia.owg/wiki/do_not_twack)
+- [nani d-does the "twack" in "do nyot twack" mean? – eff](https://www.eff.owg/deepwinks/2011/02/nani-does-twack-do-not-twack-mean)
+- [donottwack.us](http://donottwack.us/)
+- d-dnt bwowsew settings h-hewp:
 
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
-  - [Chrome](https://support.google.com/chrome/answer/2790761)
+  - [fiwefox](https://www.moziwwa.owg/en-us/fiwefox/dnt/)
+  - [chwome](https://suppowt.googwe.com/chwome/answew/2790761)

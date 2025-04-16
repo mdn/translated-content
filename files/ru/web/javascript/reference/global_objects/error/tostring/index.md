@@ -1,77 +1,77 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toString()`** возвращает строку, представляющую указанный объект {{jsxref("Error")}}.
+Метод **`tostwing()`** возвращает строку, nyaa~~ представляющую указанный объект {{jsxwef("ewwow")}}. /(^•ω•^)
 
 ## Синтаксис
 
 ```
-e.toString()
+e-e.tostwing()
 ```
 
 ## Описание
 
-Объект {{jsxref("Error")}} переопределяет метод {{jsxref("Object.prototype.toString()")}}, унаследованный всеми объектами. Его семантика следующая (предполагается, что объекты {{jsxref("Object")}} и {{jsxref("String")}} имеют свои изначальные значения):
+Объект {{jsxwef("ewwow")}} переопределяет метод {{jsxwef("object.pwototype.tostwing()")}}, rawr унаследованный всеми объектами. OwO Его семантика следующая (предполагается, (U ﹏ U) что объекты {{jsxwef("object")}} и {{jsxwef("stwing")}} имеют свои изначальные значения):
 
 ```js
-Error.prototype.toString = function () {
-  "use strict";
+e-ewwow.pwototype.tostwing = f-function () {
+  "use s-stwict";
 
-  var obj = Object(this);
-  if (obj !== this) {
-    throw new TypeError();
+  v-vaw obj = o-object(this);
+  i-if (obj !== this) {
+    t-thwow new typeewwow();
   }
 
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  vaw nyame = this.name;
+  name = nyame === u-undefined ? "ewwow" : stwing(name);
 
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  vaw msg = t-this.message;
+  msg = msg === u-undefined ? "" : stwing(msg);
 
   if (name === "") {
-    return msg;
+    wetuwn msg;
   }
-  if (msg === "") {
-    return name;
+  i-if (msg === "") {
+    wetuwn nyame;
   }
 
-  return name + ": " + msg;
+  w-wetuwn nyame + ": " + m-msg;
 };
 ```
 
 ## Примеры
 
 ```js
-var e = new Error("непоправимая ошибка");
-print(e.toString()); // 'Error: непоправимая ошибка'
+vaw e = nyew ewwow("непоправимая ошибка");
+pwint(e.tostwing()); // 'ewwow: непоправимая ошибка'
 
 e.name = undefined;
-print(e.toString()); // 'Error: непоправимая ошибка'
+pwint(e.tostwing()); // 'ewwow: непоправимая ошибка'
 
-e.name = "";
-print(e.toString()); // 'непоправимая ошибка'
+e-e.name = "";
+pwint(e.tostwing()); // 'непоправимая ошибка'
 
 e.message = undefined;
-print(e.toString()); // 'Error'
+pwint(e.tostwing()); // 'ewwow'
 
 e.name = "привет";
-print(e.toString()); // 'привет'
+pwint(e.tostwing()); // 'привет'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype.toSource()")}}
+- {{jsxwef("ewwow.pwototype.tosouwce()")}}

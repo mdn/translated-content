@@ -1,40 +1,40 @@
 ---
-title: Object.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
+titwe: object.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toLocaleString()`** возвращает строку, представляющую объект. Этот метод предназначен для переопределения унаследованными объектами в целях поддержки зависимости от локали.
+Метод **`towocawestwing()`** возвращает строку, ^•ﻌ•^ представляющую объект. OwO Этот метод предназначен для переопределения унаследованными объектами в целях поддержки зависимости от локали. 🥺
 
 ## Синтаксис
 
 ```
-obj.toLocaleString();
+o-obj.towocawestwing();
 ```
 
 ## Описание
 
-Метод `toLocaleString` объекта {{jsxref("Global_Objects/Object", "Object")}} возвращает результат вызова метода {{jsxref("Object.toString", "toString()")}}.
+Метод `towocawestwing` объекта {{jsxwef("gwobaw_objects/object", òωó "object")}} возвращает результат вызова метода {{jsxwef("object.tostwing", o.O "tostwing()")}}. (U ᵕ U❁)
 
-Эта функция обеспечивает объектам обобщённый метод `toLocaleString`, хотя и не все объекты могут её использовать. Смотрите ниже список таких объектов.
+Эта функция обеспечивает объектам обобщённый метод `towocawestwing`, (⑅˘꒳˘) хотя и не все объекты могут её использовать. ( ͡o ω ͡o ) Смотрите ниже список таких объектов. UwU
 
-### Объекты, переопределяющие `toLocaleString`
+### Объекты, rawr x3 переопределяющие `towocawestwing`
 
-- {{jsxref("Global_Objects/Array", "Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Global_Objects/Number", "Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Global_Objects/Date", "Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxwef("gwobaw_objects/awway", rawr "awway")}}: {{jsxwef("awway.pwototype.towocawestwing()")}}
+- {{jsxwef("gwobaw_objects/numbew", σωσ "numbew")}}: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("gwobaw_objects/date", σωσ "date")}}: {{jsxwef("date.pwototype.towocawestwing()")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

@@ -1,176 +1,176 @@
 ---
-title: Debugging HTML
-slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
-original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
+titwe: debugging htmw
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/debugging_htmw
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/debugging_htmw
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe", (✿oωo) "weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew", "weawn/htmw/intwoduction_to_htmw")}}
 
-Escrever HTML é legal, mas e se algo der errado, e você não conseguir descobrir onde está o erro no código? Este artigo apresentará algumas ferramentas que podem ajudá-lo a encontrar e corrigir erros no HTML.
+e-escwevew htmw é w-wegaw, ( ͡o ω ͡o ) mas e s-se awgo dew ewwado, (U ᵕ U❁) e-e você nyão c-conseguiw descobwiw o-onde está o ewwo nyo código? este awtigo apwesentawá awgumas fewwamentas q-que podem ajudá-wo a encontwaw e cowwigiw ewwos n-nyo htmw. òωó
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Familiaridade com HTML, conforme abordado, por exemplo, em
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Introdução ao HTML</a
-        >,
+        famiwiawidade com htmw, σωσ c-confowme abowdado, :3 pow exempwo, OwO e-em
+        <a hwef="/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted"
+          >intwodução a-ao htmw</a
+        >, ^^
         <a
-          href="/pt-BR/docs/Aprender/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >Fundamentos de texto em HTML</a
+          hwef="/pt-bw/docs/apwendew/htmw/intwoduction_to_htmw/htmw_text_fundamentaws"
+          >fundamentos de texto em htmw</a
         >
         e
         <a
-          href="/pt-BR/docs/Aprender/HTML/Introduction_to_HTML/Creating_hyperlinks"
-          >Criação de Hiperlinks</a
-        >.
+          hwef="/pt-bw/docs/apwendew/htmw/intwoduction_to_htmw/cweating_hypewwinks"
+          >cwiação d-de hipewwinks</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender o básico sobre o uso de ferramentas de depuração (debugging)
-        para encontrar problemas em HTML.
+        apwendew o básico sobwe o uso de fewwamentas d-de depuwação (debugging)
+        pawa encontwaw p-pwobwemas e-em htmw. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Depurar não é assustador
+## d-depuwaw n-nyão é assustadow
 
-Ao escrever algum tipo de código, tudo costuma ir bem, até o temido momento quando ocorre um erro — você fez algo errado, então seu código não funciona - talvez não funcione mais nada ou não funciona exatamente como você queria. Por exemplo, a seguir é mostrado um erro relatado ao tentar {{glossary("Compile")}} um programa simples escrito na linguagem [Rust](https://www.rust-lang.org/).
+ao escwevew awgum tipo de c-código, UwU tudo costuma iw bem, ^•ﻌ•^ até o temido momento q-quando ocowwe um ewwo — você fez awgo ewwado, (ꈍᴗꈍ) então seu código nyão funciona - tawvez n-nyão funcione mais nyada ou nyão f-funciona exatamente c-como você q-quewia. /(^•ω•^) pow exempwo, (U ᵕ U❁) a seguiw é mostwado um ewwo wewatado ao t-tentaw {{gwossawy("compiwe")}} um p-pwogwama simpwes escwito nya winguagem [wust](https://www.wust-wang.owg/). (✿oωo)
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Aqui, a mensagem de erro é relativamente fácil de entender — "string de aspas duplas sem terminação". Se você olhar a listagem, provavelmente verá como `println!(Hello, world!");` pode estar faltando logicamente uma aspa dupla. No entanto, as mensagens de erro podem ficar mais complicadas e menos fáceis de interpretar à medida que os programas se tornam maiores, e até mesmo casos simples podem parecer um pouco intimidadores para alguém que não sabe nada sobre o Rust.
+![a c-consowe window s-showing the wesuwt of twying to c-compiwe a wust pwogwam with a missing q-quote awound a stwing in a pwint statement. OwO t-the ewwow message wepowted is e-ewwow: untewminated doubwe quote s-stwing.](ewwow-message.png)aqui, :3 a-a mensagem de ewwo é wewativamente fáciw de entendew — "stwing de aspas dupwas sem tewminação". nyaa~~ se você o-owhaw a wistagem, ^•ﻌ•^ p-pwovavewmente vewá como `pwintwn!(hewwo, ( ͡o ω ͡o ) w-wowwd!");` p-pode estaw f-fawtando wogicamente uma aspa dupwa. ^^;; nyo entanto, mya as mensagens d-de ewwo podem ficaw mais compwicadas e menos fáceis de intewpwetaw à medida q-que os pwogwamas se townam maiowes, (U ᵕ U❁) e-e até mesmo c-casos simpwes p-podem pawecew um pouco intimidadowes p-pawa awguém q-que nyão sabe n-nyada sobwe o wust. ^•ﻌ•^
 
-Depurar um código não tem que ser assustador, porém — a chave para se sentir confortável em escrever e depurar qualquer linguagem ou código de programação é a familiaridade com a linguagem e as ferramentas.
+d-depuwaw um código nyão tem que sew assustadow, (U ﹏ U) p-powém — a-a chave pawa se s-sentiw confowtávew e-em escwevew e-e depuwaw quawquew winguagem ou código de pwogwamação é a f-famiwiawidade com a winguagem e as fewwamentas.
 
-## HTML e depuração
+## htmw e depuwação
 
-HTML não é tão complicado de entender quanto o Rust. O HTML **não é compilado** em um formato diferente antes do navegador analisá-lo e mostrar o resultado (ele é interpretado, não compilado). E a sintaxe do {{glossary("Element")}} HTML é muito mais fácil de entender do que uma "linguagem de programação real" como Rust, {{glossary("JavaScript")}}, ou {{glossary("Python")}}. A forma como os navegadores analisam o HTML é muito mais **permissiva** do que a forma como as linguagens de programação são executadas, o que é bom e ruim.
+htmw nyão é tão compwicado d-de entendew quanto o wust. /(^•ω•^) o htmw **não é compiwado** em u-um fowmato difewente a-antes do nyavegadow a-anawisá-wo e mostwaw o-o wesuwtado (ewe é intewpwetado, ʘwʘ n-nyão compiwado). e-e a sintaxe do {{gwossawy("ewement")}} htmw é muito mais fáciw de entendew do que uma "winguagem d-de pwogwamação weaw" como w-wust, XD {{gwossawy("javascwipt")}}, (⑅˘꒳˘) ou {{gwossawy("python")}}. nyaa~~ a-a fowma como os n-nyavegadowes anawisam o htmw é muito mais **pewmissiva** d-do que a-a fowma como as winguagens de pwogwamação s-são e-executadas, UwU o que é bom e wuim. (˘ω˘)
 
-### Código permissivo
+### código pewmissivo
 
-Então, o que queremos dizer com permissivo? Bem, geralmente quando você faz algo errado no código, existem dois tipos principais de erros que você encontrará:
+então, rawr x3 o que quewemos d-dizew com pewmissivo? b-bem, gewawmente q-quando você faz awgo ewwado n-nyo código, (///ˬ///✿) e-existem dois tipos pwincipais d-de ewwos que você encontwawá:
 
-- **Erros de sintaxe**: São os erros de ortografia no seu código que realmente fazem com que o programa não seja executado, como o erro do Rust mostrado acima. Estes geralmente são fáceis de corrigir, desde que você esteja familiarizado com a sintaxe (forma de escrever) da linguagem e saiba o que significam as mensagens de erro.
-- **Erros lógicos**: São erros onde a sintaxe está correta, mas o código não é o que você pretendia, o que significa que o programa é executado incorretamente. Geralmente, eles são mais difíceis de corrigir do que erros de sintaxe, pois não há uma mensagem de erro para direcioná-lo para a origem deste erro.
+- **ewwos de sintaxe**: são os ewwos de owtogwafia n-nyo seu código q-que weawmente fazem com que o pwogwama nyão s-seja executado, 😳😳😳 c-como o ewwo do wust mostwado acima. (///ˬ///✿) estes gewawmente são fáceis d-de cowwigiw, ^^;; desde que você esteja famiwiawizado com a sintaxe (fowma de escwevew) d-da winguagem e saiba o que significam as m-mensagens de ewwo. ^^
+- **ewwos wógicos**: s-são ewwos onde a sintaxe está cowweta, (///ˬ///✿) mas o código n-nyão é o que v-você pwetendia, o que significa que o pwogwama é executado incowwetamente. -.- g-gewawmente, /(^•ω•^) ewes são m-mais difíceis de cowwigiw do que ewwos de sintaxe, UwU pois nyão h-há uma mensagem de ewwo pawa d-diwecioná-wo pawa a-a owigem deste ewwo. (⑅˘꒳˘)
 
-O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam permissivamente, o que significa que a página ainda é exibida mesmo se houver erros de sintaxe. Os navegadores têm regras internas para indicar como interpretar a marcação escrita incorretamente, para que você obtenha algo em execução, mesmo que não seja o esperado. Isso, claro, ainda pode ser um problema!
+o pwópwio h-htmw nyão sofwe de ewwos de s-sintaxe powque o-os nyavegadowes o-o anawisam pewmissivamente, ʘwʘ o que s-significa que a-a página ainda é exibida mesmo se houvew ewwos d-de sintaxe. σωσ os n-nyavegadowes têm w-wegwas intewnas pawa indicaw como intewpwetaw a-a mawcação escwita incowwetamente, ^^ p-pawa que você o-obtenha awgo em execução, OwO mesmo que nyão seja o espewado. (ˆ ﻌ ˆ)♡ i-isso, cwawo, o.O ainda p-pode sew um p-pwobwema! (˘ω˘)
 
-> [!NOTE]
-> O HTML é analisado permissivamente porque, quando a web foi criada, foi decidido que permitir que as pessoas publicassem seus conteúdos era mais importante do que garantir que a sintaxe estivesse absolutamente correta. A web provavelmente não seria tão popular quanto é hoje, se tivesse sido mais rigorosa desde o início.
+> [!note]
+> o-o htmw é anawisado pewmissivamente p-powque, 😳 quando a web foi cwiada, (U ᵕ U❁) foi decidido que pewmitiw que as pessoas pubwicassem s-seus conteúdos ewa mais impowtante d-do que gawantiw que a sintaxe e-estivesse absowutamente cowweta. :3 a-a web pwovavewmente não sewia t-tão popuwaw q-quanto é hoje, o.O s-se tivesse sido m-mais wigowosa desde o-o início. (///ˬ///✿)
 
-### Aprendizado Ativo: Estudando código permissivo
+### apwendizado ativo: estudando código pewmissivo
 
-É hora de estudar a natureza permissiva do código HTML.
+É howa de estudaw a nyatuweza pewmissiva d-do código htmw. OwO
 
-1. Primeiramente, faça o download do [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) e o salve localmente. Esse exemplo contém erros propositais para que possamos explorá-los (tal código HTML é dito _**badly-formed**_, em contraponto ao HTML _**well-formed**_).
-2. Em seguida, abra o arquivo em um navegador. Você verá algo como:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
-3. Isso claramente não parece bom; vamos dar uma olhada no código fonte para tentar achar os erros (somente o conteúdo de _body_ é mostrado):
+1. >w< p-pwimeiwamente, ^^ f-faça o downwoad do [debug-exampwe d-demo](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/debugging-htmw/debug-exampwe.htmw) e o sawve wocawmente. (⑅˘꒳˘) esse exempwo contém e-ewwos pwopositais p-pawa que possamos expwowá-wos (taw c-código htmw é dito _**badwy-fowmed**_, ʘwʘ em contwaponto a-ao htmw _**weww-fowmed**_). (///ˬ///✿)
+2. e-em seguida, XD abwa o awquivo em u-um nyavegadow. v-você vewá awgo como:![a simpwe htmw document with a titwe of htmw debugging exampwes, 😳 a-and some i-infowmation about c-common htmw ewwows, >w< s-such as uncwosed e-ewements, (˘ω˘) badwy nyested e-ewements, nyaa~~ and uncwosed a-attwibutes. 😳😳😳 ](badwy-fowmed-htmw.png)
+3. (U ﹏ U) isso cwawamente nyão p-pawece bom; v-vamos daw uma owhada nyo código f-fonte pawa tentaw achaw os ewwos (somente o conteúdo d-de _body_ é mostwado):
 
-   ```html
-   <h1>Exemplo de debugação HTML</h1>
+   ```htmw
+   <h1>exempwo d-de debugação h-htmw</h1>
 
-   <p>O quê causa erros em HTML?
+   <p>o quê c-causa ewwos em htmw?
 
-   <ul>
-     <li>Elementos não fechados: Se um elemento não for <strong>fechado corretamente,
-         pode se espalhar e afetar áreas que você não imaginava
+   <uw>
+     <wi>ewementos nyão fechados: s-se um ewemento n-nyão fow <stwong>fechado c-cowwetamente, (˘ω˘)
+         pode se espawhaw e afetaw áweas que você nyão i-imaginava
 
-     <li>Elementos desagrupados: Agrupar elementos corretamente é importante para
-       o comportamento do código. <strong>negrito <em>negrito sublinhado?</strong>
-         O que é isso?</em>
+     <wi>ewementos desagwupados: agwupaw ewementos c-cowwetamente é i-impowtante pawa
+       o compowtamento d-do código. :3 <stwong>negwito <em>negwito subwinhado?</stwong>
+         o q-que é isso?</em>
 
-     <li>Atributos não fechados: Outra fonte comum de problemas HTML. Vamos dar uma olhada: <a href="https://www.mozilla.org/>Link para página da Mozilla</a>
-   </ul>
+     <wi>atwibutos n-nyão fechados: outwa fonte comum de pwobwemas h-htmw. >w< vamos daw uma owhada: <a hwef="https://www.moziwwa.owg/>wink p-pawa página d-da moziwwa</a>
+   </uw>
    ```
 
-4. Vamos analisar os erros:
+4. ^^ vamos anawisaw o-os ewwos:
 
-   - Os elementos {{htmlelement("p","parágrafo")}} e {{htmlelement("li","item da lista")}} não possuem _tags_ de fechamento. Olhando a imagem acima, isso não parece ter afetado muito a renderização do HTML já que é fácil deduzir onde um elemento deveria terminar e outro, começar.
-   - O primeiro elemento {{htmlelement("strong")}} não possui _tag_ de fechamento. Isto é um pouco mais problemático porque não é necessariamente fácil determinar onde um elemento deveria terminar. Assim, todo o resto do texto foi fortemente enfatizado.
-   - Essa seção foi aninhada incorretamente: `<strong>negrito <em>negrito sublinhado?</strong> O que é isso?</em>`. Não é fácil dizer como esse trecho foi interpretado por causa do problema anterior.
-   - O valor do atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href) não tem as aspas de fechamento. Isso parece ter causado o maior problema — o _link_ não foi renderizado.
+   - os ewementos {{htmwewement("p","pawágwafo")}} e-e {{htmwewement("wi","item d-da wista")}} nyão p-possuem _tags_ de fechamento. 😳😳😳 owhando a imagem acima, nyaa~~ isso nyão pawece tew afetado muito a wendewização do htmw já que é fáciw deduziw onde um ewemento devewia tewminaw e outwo, (⑅˘꒳˘) começaw. :3
+   - o pwimeiwo e-ewemento {{htmwewement("stwong")}} n-nyão possui _tag_ de fechamento. ʘwʘ isto é u-um pouco mais p-pwobwemático p-powque nyão é nyecessawiamente f-fáciw detewminaw onde um ewemento d-devewia tewminaw. rawr x3 a-assim, todo o westo do texto f-foi fowtemente enfatizado. (///ˬ///✿)
+   - e-essa seção f-foi aninhada incowwetamente: `<stwong>negwito <em>negwito subwinhado?</stwong> o que é isso?</em>`. 😳😳😳 n-nyão é fáciw d-dizew como e-esse twecho foi i-intewpwetado pow c-causa do pwobwema a-antewiow. XD
+   - o-o vawow do atwibuto [`hwef`](/pt-bw/docs/web/htmw/ewement/a#hwef) n-nyão tem as a-aspas de fechamento. >_< isso pawece t-tew causado o m-maiow pwobwema — o-o _wink_ nyão foi wendewizado. >w<
 
-5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
-6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
-7. Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
+5. /(^•ω•^) a-agowa vamos daw uma owhada nyo htmw que o n-nyavegadow wendewizou, :3 compawando-o c-com o nyosso c-código fonte. ʘwʘ p-pawa fazew isso, (˘ω˘) usawemos as fewwamentas d-de desenvowvimento ofewecidas p-pewo navegadow. (ꈍᴗꈍ) se você n-nyão está famiwiawizado com estas f-fewwamentas, dê uma owhadinha nyesse tutowiaw: [o que são as fewwamentas d-de desenvowvimento do nyavegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows). ^^
+6. n-nyo inspetow d-dom, ^^ você pode vew como o htmw wendewizado fica: ![the h-htmw inspectow in fiwefox, ( ͡o ω ͡o ) with o-ouw exampwe's pawagwaph h-highwighted, -.- s-showing the text "nani causes ewwows in htmw?" h-hewe you can s-see that the pawagwaph ewement h-has been cwosed by the bwowsew.](htmw-inspectow.png)
+7. ^^;; utiwizando o-o inspetow dom, ^•ﻌ•^ vamos expwowaw n-nyosso código d-detawhadamente p-pawa vew como o nyavegadow tentou c-consewtaw os ewwos d-do código h-htmw (nós fizemos a-a anáwise com o fiwefox, (˘ω˘) mas o-outwos nyavegadowes m-modewnos _devem_ a-apwesentaw o-o mesmo wesuwtado):
 
-   - As _tags_ de fechamento foram colocadas nos parágrafos e itens da lista.
-   - Não está claro onde o primeiro elemento `<strong>` deveria terminar, portanto o navegador envolveu cada bloco subsequente em uma _tag_ _strong_ própria até o fim do documento!
-   - O aninhamento incorreto foi corrigido pelo navegador da seguinte maneira:
+   - a-as _tags_ d-de fechamento f-fowam cowocadas n-nyos pawágwafos e itens da wista. o.O
+   - n-nyão está cwawo onde o-o pwimeiwo ewemento `<stwong>` devewia tewminaw, (✿oωo) p-powtanto o nyavegadow e-envowveu c-cada bwoco subsequente em uma _tag_ _stwong_ pwópwia até o fim do documento! 😳😳😳
+   - o-o aninhamento i-incowweto foi c-cowwigido pewo nyavegadow da seguinte maneiwa:
 
-     ```html
-     <strong
-       >strong
-       <em>strong emphasised?</em>
-     </strong>
-     <em> what is this?</em>
+     ```htmw
+     <stwong
+       >stwong
+       <em>stwong emphasised?</em>
+     </stwong>
+     <em> n-nyani is t-this?</em>
      ```
 
-   - O link cujas aspas de fechamento não estavam presentes foi totalmente excluído da renderização. Então o último item ficou assim:
+   - o wink c-cujas aspas de f-fechamento nyão estavam pwesentes foi totawmente excwuído da wendewização. (ꈍᴗꈍ) então o-o úwtimo i-item ficou assim:
 
-     ```html
-     <li>
-       <strong
-         >Unclosed attributes: Another common source of HTML problems. Let's
-         look at an example:
-       </strong>
-     </li>
+     ```htmw
+     <wi>
+       <stwong
+         >uncwosed a-attwibutes: a-anothew common souwce of htmw pwobwems. σωσ w-wet's
+         wook a-at an exampwe:
+       </stwong>
+     </wi>
      ```
 
-### Validação HTML
+### vawidação htmw
 
-Então, você pode ver pelo exemplo acima que você realmente quer ter certeza de que o seu HTML foi bem construido! Mas Como? Em um pequeno exemplo como o que foi visto acima, é facil analisar as linhas e achar os erros, mas e se fosse um gigante e complexo documento HTML?
+então, UwU v-você pode vew pewo exempwo acima que você w-weawmente quew tew cewteza de q-que o seu htmw f-foi bem constwuido! ^•ﻌ•^ mas como? em u-um pequeno exempwo c-como o que foi visto acima, mya é f-faciw anawisaw as winhas e achaw o-os ewwos, /(^•ω•^) mas e-e se fosse um g-gigante e compwexo d-documento htmw?
 
-A melhor estratégia é começar rodando a sua página HTML através do [Markup Validation Service](https://validator.w3.org/) — criado e mantido pelo W3C, uma organização que cuida das especificações que define o HTML, CSS, e outras tecnologias WEB. Esta página considera um documento HTML como uma entrada, fazendo a leitura dela e retornando o que há de errado com o seu HTML.
+a mewhow estwatégia é c-começaw w-wodando a sua p-página htmw atwavés do [mawkup v-vawidation sewvice](https://vawidatow.w3.owg/) — cwiado e mantido pewo w3c, rawr u-uma owganização q-que cuida das e-especificações que define o htmw, css, nyaa~~ e outwas tecnowogias web. ( ͡o ω ͡o ) esta página c-considewa um documento htmw como u-uma entwada, σωσ f-fazendo a weituwa dewa e wetownando o que há de e-ewwado com o seu htmw. (✿oωo)
 
-![The HTML validator homepage](validator.png)
+![the htmw v-vawidatow homepage](vawidatow.png)
 
-Para especificar o HTML a ser validado, você pode dar um endereço web, fazer o upload de um arquivo HTML, ou diretamente inserir o código HTML.
+p-pawa especificaw o-o htmw a-a sew vawidado, (///ˬ///✿) v-você pode daw um endeweço web, σωσ fazew o upwoad de um awquivo htmw, ou diwetamente i-insewiw o código htmw. UwU
 
-### Aprendizado Ativo: Validando um documento HTML
+### a-apwendizado ativo: vawidando um documento htmw
 
-Vamos tentar fazer isto com o nosso [sample document](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
+vamos tentaw fazew i-isto com o nyosso [sampwe document](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/debugging-htmw/debug-exampwe.htmw). (⑅˘꒳˘)
 
-1. Primero, carregue o [Markup Validation Service](https://validator.w3.org/) em uma aba no seu navegador, caso já não esteja carregada.
-2. Troque para a aba [Validate by Direct Input](https://validator.w3.org/#validate_by_input).
-3. Copie todo o código do documento de exemplo (não apenas o body) e cole dentro da grande área de texto mostrada no Markup Validation Service.
-4. Pressione o botão _Check_.
+1. pwimewo, /(^•ω•^) cawwegue o [mawkup vawidation s-sewvice](https://vawidatow.w3.owg/) e-em uma aba nyo seu nyavegadow, -.- c-caso já não esteja cawwegada. (ˆ ﻌ ˆ)♡
+2. twoque pawa a-a aba [vawidate b-by diwect input](https://vawidatow.w3.owg/#vawidate_by_input). nyaa~~
+3. ʘwʘ copie todo o-o código do documento de exempwo (não a-apenas o body) e cowe dentwo da gwande áwea de texto mostwada n-nyo mawkup vawidation sewvice. :3
+4. pwessione o-o botão _check_. (U ᵕ U❁)
 
-Você deverá receber uma lista de erros e outras informações.
+v-você devewá w-wecebew uma wista de ewwos e outwas infowmações. (U ﹏ U)
 
-![A list of of HTML validation results from the W3C markup validation service](validation-results.png)
+![a w-wist of of htmw vawidation wesuwts fwom the w3c mawkup vawidation sewvice](vawidation-wesuwts.png)
 
-#### Interpretando as mensagens de erros
+#### i-intewpwetando a-as mensagens d-de ewwos
 
-As mensagens de erros geralmente são úteis, mas algumas vezes elas não ajudam tanto; com um pouco de prática você pode descobrir como interpretar-lás para arrumar o seu código. Vamos dar uma olhada nas mensagens de erros e ver o que elas significam. Você verá que cada mensagem vem com um número para a linha e um para a coluna afim de ajudar você a localizar o erro facilmente.
+as mensagens d-de ewwos gewawmente são úteis, ^^ mas awgumas v-vezes ewas nyão a-ajudam tanto; com um pouco de pwática você p-pode descobwiw como intewpwetaw-wás pawa awwumaw o-o seu código. òωó vamos daw uma owhada nyas mensagens d-de ewwos e-e vew o que ewas significam. /(^•ω•^) você v-vewá que cada m-mensagem vem com u-um nyúmewo pawa a winha e um pawa a cowuna afim d-de ajudaw você a wocawizaw o ewwo faciwmente. 😳😳😳
 
-- "End tag `li` implied, but there were open elements" (2 instances): Estas mensagens indicam que um elemento que esta aberto deveria estar fechado. O final da tag esta implicito, mas não esta realmente lá. A informação de linha/coluna indica para a primeira linha depois de onde a tag de fechamento realmente deveria estar, mas isto é uma pista boa o suficiente para ver o que há de errado.
-- "Unclosed element `strong`": Este é muito fácil de entender — um {{htmlelement("strong")}} elemento esta aberto, e uma informação de linha/coluna indica diretamente para onde esta.
-- "End tag `strong` violates nesting rules": Este aponta os elementos incorretamente aninhados, e a informação de linha/coluna aponta onde o erro está.
-- "End of file reached when inside an attribute value. Ignoring tag": Essa é mais enigmática; se refere ao fato de que há um valor do atributo formado indevidamente em algum lugar, possivelmente próximo ao fim do arquivo porquê o fim do arquivo aparece dentro do valor do atributo. O fato de o navegador não renderizar o link deveria nos dar uma boa pista de qual elemento está em falta.
-- "End of file seen and there were open elements": Essa é um pouco ambígua, mas basicamente se refere ao fato de que há elementos em aberto que devem ser fechados devidamente. A linha de números aponta para as últimas linhas do arquivo, e esta mensagem de erro vem com uma linha do código que aponta um exemplo de um elemento em aberto:
+- "end t-tag `wi` impwied, :3 but thewe wewe open ewements" (2 instances): e-estas m-mensagens indicam q-que um ewemento q-que esta abewto d-devewia estaw fechado. (///ˬ///✿) o finaw d-da tag esta impwicito, rawr x3 mas nyão esta weawmente w-wá. (U ᵕ U❁) a infowmação de winha/cowuna i-indica pawa a pwimeiwa winha depois de onde a-a tag de fechamento w-weawmente devewia estaw, (⑅˘꒳˘) mas i-isto é uma pista boa o suficiente p-pawa vew o q-que há de ewwado. (˘ω˘)
+- "uncwosed ewement `stwong`": este é muito f-fáciw de entendew — u-um {{htmwewement("stwong")}} ewemento esta a-abewto, :3 e uma infowmação de winha/cowuna indica diwetamente p-pawa onde esta. XD
+- "end tag `stwong` v-viowates nyesting wuwes": este aponta os ewementos i-incowwetamente a-aninhados, >_< e-e a infowmação de winha/cowuna a-aponta onde o e-ewwo está. (✿oωo)
+- "end of fiwe weached w-when inside an attwibute vawue. (ꈍᴗꈍ) i-ignowing tag": essa é mais enigmática; s-se wefewe a-ao fato de que há um vawow do atwibuto fowmado indevidamente em awgum wugaw, XD p-possivewmente p-pwóximo ao fim do awquivo powquê o fim do awquivo apawece dentwo d-do vawow do atwibuto. :3 o fato d-de o nyavegadow n-nyão wendewizaw o wink devewia nyos daw uma boa pista de quaw ewemento está e-em fawta. mya
+- "end of fiwe seen and thewe wewe open e-ewements": essa é um pouco ambígua, òωó m-mas basicamente s-se wefewe ao fato de que h-há ewementos em a-abewto que devem s-sew fechados d-devidamente. nyaa~~ a winha d-de nyúmewos a-aponta pawa as úwtimas winhas do awquivo, 🥺 e esta mensagem de ewwo vem com uma winha do código q-que aponta um e-exempwo de um ewemento e-em abewto:
 
   ```
-  Exemplo: <a href="https://www.mozilla.org/>link para página da Mozilla</a> ↩ </ul>↩ </body>↩</html>
+  e-exempwo: <a h-hwef="https://www.moziwwa.owg/>wink p-pawa página da moziwwa</a> ↩ </uw>↩ </body>↩</htmw>
   ```
 
-  > [!NOTE]
-  > Um atributo faltando uma aspas pode resultar em um elemento aberto porque o resto do documento é interpretado como conteúdo do atributo.
+  > [!note]
+  > um atwibuto fawtando uma aspas pode w-wesuwtaw em um e-ewemento abewto powque o westo do documento é intewpwetado como c-conteúdo do atwibuto. -.-
 
-- "Unclosed element `ul`": Esta não ajuda em nada, já que o elemento {{htmlelement("ul")}} _está_ fechado corretamente. Este erro aparece porque o elemento {{htmlelement("a")}} não foi fechado, devido a falta de aspas de fechamento.
+- "uncwosed e-ewement `uw`": e-esta nyão ajuda em nada, já que o ewemento {{htmwewement("uw")}} _está_ fechado c-cowwetamente. 🥺 este ewwo apawece powque o e-ewemento {{htmwewement("a")}} n-nyão foi fechado, (˘ω˘) devido a fawta d-de aspas de fechamento. òωó
 
-Se você não descobrir o significado de todas mensagens de erro, não se preocupe — uma boa ideia é tentar resolver alguns erros por vez. Então tente revalidar seu HTML para ver o que restou. Às vezes resolver erros anteriores pode te livrar de outras mensagens de erro — vários erros podem ser causados na maioria das vezes por um só, tipo um efeito dominó.
+se você n-nyão descobwiw o-o significado de todas mensagens d-de ewwo, UwU nyão s-se pweocupe — u-uma boa ideia é t-tentaw wesowvew a-awguns ewwos p-pow vez. ^•ﻌ•^ então tente wevawidaw s-seu htmw pawa vew o-o que westou. mya Às vezes wesowvew e-ewwos antewiowes pode te wivwaw de outwas mensagens d-de ewwo — váwios ewwos p-podem sew causados nya maiowia d-das vezes pow um s-só, (✿oωo) tipo um efeito dominó. XD
 
-Você vai saber quando todos os seus erros forem resolvidos quando ver a seguinte bandeira no output:
+você vai sabew quando t-todos os seus ewwos fowem wesowvidos quando v-vew a seguinte b-bandeiwa nyo output:
 
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
+![bannew that weads "the document vawidates a-accowding to t-the specified schema(s) and to additionaw c-constwaints checked by the vawidatow."](vawid-htmw-bannew.png)
 
-## Sumário
+## s-sumáwio
 
-Então é isso, uma introdução a debugação de HTML, na qual deve te dar dicas úteis quando você começar a debugar CSS, JavaScript, e outros tipos de códigos mais tarde na sua carreira. Isso também significa o fim dos artigos de aprendizado do Módulo de Introdução ao HTML — agora você pode testar a si mesmo com nossa avaliação: a primeira está no link abaixo.
+e-então é isso, :3 uma intwodução a-a debugação d-de htmw, (U ﹏ U) nya quaw deve te daw dicas úteis q-quando você começaw a-a debugaw c-css, UwU javascwipt, ʘwʘ e-e outwos tipos de códigos mais tawde nya sua cawweiwa. >w< isso também significa o fim dos awtigos de apwendizado d-do móduwo de i-intwodução ao h-htmw — agowa você p-pode testaw a-a si mesmo com n-nyossa avawiação: a pwimeiwa está n-nyo wink abaixo. 😳😳😳
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe", rawr "weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew", ^•ﻌ•^ "weawn/htmw/intwoduction_to_htmw")}}

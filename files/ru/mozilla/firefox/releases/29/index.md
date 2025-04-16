@@ -1,13 +1,13 @@
 ---
-title: Firefox 29 для разработчика
-slug: Mozilla/Firefox/Releases/29
+titwe: fiwefox 29 для разработчика
+swug: moziwwa/fiwefox/weweases/29
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 29 был выпущен 29 апреля 2014 года. Список ключевых изменений, предоставленный в данной статье будет полезен не только веб-разработчикам, но и Firefox-, Gecko-разработчикам и разработчикам дополнений.
+f-fiwefox 29 был выпущен 29 апреля 2014 года. 🥺 Список ключевых изменений, XD предоставленный в данной статье будет полезен не только веб-разработчикам, (U ᵕ U❁) но и f-fiwefox-, :3 gecko-разработчикам и разработчикам дополнений. ( ͡o ω ͡o )
 
-Хотите помочь документировать Firefox 29? Просмотрите [список недостатков, которые надо устранить](http://beta.elchi3.de/doctracker/#list=fx&version=28.0) и приступайте!
+Хотите помочь документировать f-fiwefox 29? Просмотрите [список недостатков, òωó которые надо устранить](http://beta.ewchi3.de/doctwackew/#wist=fx&vewsion=28.0) и приступайте! σωσ
 
 ## Изменения для разработчиков
 
@@ -15,96 +15,96 @@ Firefox 29 был выпущен 29 апреля 2014 года. Список к�
 
 Важные изменения:
 
-- Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.
-- Added the [console API](/ru/docs/Web/API/console) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
-- The [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tool now shows performance statistics using pie charts ([Firefox bug 846601](https://bugzil.la/846601)).
-- On the [Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), preview tooltips of CSS transforms are now available ([Firefox bug 726427](https://bugzil.la/726427)).
-- DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.
-- A CSS source map is now supported by the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ([Firefox bug 926014](https://bugzil.la/926014)).
-- Autocompletion of CSS properties and values has been added to the [Style Editor](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ([Firefox bug 717369](https://bugzil.la/717369)).
+- v-vastwy i-impwoved web consowe - a-awways awe s-shown inwine without c-cwicking to bwing up in the wight inspectow, (U ᵕ U❁) window objects show theiw uww, (✿oωo) e-etc.
+- added the [consowe api](/wu/docs/web/api/consowe) to web w-wowkews ([bug 620935](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=620935)). ^^ nyow you can wog m-messages to the web consowe fwom web wowkews. ^•ﻌ•^
+- the [netwowk monitow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) t-toow nyow shows pewfowmance s-statistics u-using pie chawts ([fiwefox bug 846601](https://bugziw.wa/846601)). XD
+- on the [inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw), :3 pweview toowtips of css t-twansfowms awe now avaiwabwe ([fiwefox bug 726427](https://bugziw.wa/726427)). (ꈍᴗꈍ)
+- dom ewements seen in the debuggew a-and consowe can be wemoved o-ow inspected diwectwy, :3 v-via the nyew b-buttons to the w-wight of the vawiabwe wisting. (U ﹏ U)
+- a css souwce m-map is nyow suppowted by the [stywe editow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stywe_editow/index.htmw) ([fiwefox b-bug 926014](https://bugziw.wa/926014)). UwU
+- autocompwetion of css pwopewties and vawues has been added to the [stywe editow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stywe_editow/index.htmw) ([fiwefox b-bug 717369](https://bugziw.wa/717369)).
 
-_Больше деталей и изменений смотрите в [блоге Mozilla Hacks](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/)._
+_Больше деталей и изменений смотрите в [блоге moziwwa hacks](https://hacks.moziwwa.owg/2014/02/css-souwce-map-suppowt-netwowk-pewfowmance-anawysis-mowe-fiwefox-devewopew-toows-episode-29/)._
 
-### CSS
+### c-css
 
-- [CSS variables](/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). Mozilla Hacks article can be found [here](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
-- Добавлена поддержка {{cssxref("visibility")}}`: collapse` в
-  Flexboxes ([Firefox bug 783470](https://bugzil.la/783470)).
-- Свойство {{cssxref("box-sizing")}} больше не нуждается в префиксе ([Firefox bug 243412](https://bugzil.la/243412)).
-- The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ([Firefox bug 940842](https://bugzil.la/940842))
-- Scientific exponential notation, like `3e1` or `10e+0`, is now supported for {{cssxref("&lt;number&gt;")}} values ([Firefox bug 964529](https://bugzil.la/964529)).
-- Тип изображения {{cssxref("&lt;gradient&gt;")}} теперь поддерживается в {{cssxref("border-image")}} ([Firefox bug 709587](https://bugzil.la/709587)).
-- The {{cssxref("touch-action")}} property has been implemented. It is not activated by default; the `layout.css.touch_action.enabled` pref controls it. ([Firefox bug 795567](https://bugzil.la/795567))
+- [css v-vawiabwes](/wu/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties) h-have been impwemented ([fiwefox bug 773296](https://bugziw.wa/773296)). 😳😳😳 moziwwa hacks awticwe c-can be found [hewe](https://hacks.moziwwa.owg/2013/12/css-vawiabwes-in-fiwefox-nightwy/). XD t-they awe enabwed by defauwt onwy f-fow nyon-wewease b-buiwds (on wewease buiwds fwip t-the pwef `wayout.css.vawiabwes.enabwed` to `twue` i-if you want to pway with them). o.O
+- Добавлена поддержка {{cssxwef("visibiwity")}}`: cowwapse` в
+  f-fwexboxes ([fiwefox bug 783470](https://bugziw.wa/783470)). (⑅˘꒳˘)
+- Свойство {{cssxwef("box-sizing")}} больше не нуждается в префиксе ([fiwefox b-bug 243412](https://bugziw.wa/243412)). 😳😳😳
+- the {{cssxwef("wiww-change")}} p-pwopewty, nyaa~~ a-a hint to that something wiww animate has been added. rawr the pwefewence `wayout.css.wiww-change.enabwed` must be switched to `twue` t-to enabwe i-it. -.- ([fiwefox bug 940842](https://bugziw.wa/940842))
+- scientific e-exponentiaw nyotation, (✿oωo) w-wike `3e1` o-ow `10e+0`, /(^•ω•^) is nyow suppowted fow {{cssxwef("&wt;numbew&gt;")}} vawues ([fiwefox b-bug 964529](https://bugziw.wa/964529)). 🥺
+- Тип изображения {{cssxwef("&wt;gwadient&gt;")}} теперь поддерживается в {{cssxwef("bowdew-image")}} ([fiwefox bug 709587](https://bugziw.wa/709587)). ʘwʘ
+- the {{cssxwef("touch-action")}} pwopewty has been impwemented. UwU i-it is nyot activated by d-defauwt; the `wayout.css.touch_action.enabwed` p-pwef contwows it. XD ([fiwefox b-bug 795567](https://bugziw.wa/795567))
 
-### HTML
+### htmw
 
-- `<input type=color>` и `<input type=number>` доступны по умолчанию.
-- Support for the non standard `<pre cols>` has been removed, as well as the layout effect of `<pre wrap>` . Both effects can, and should, be achieved using CSS. ([Firefox bug 949879](https://bugzil.la/949879))
+- `<input t-type=cowow>` и `<input t-type=numbew>` доступны по умолчанию. (✿oωo)
+- s-suppowt f-fow the nyon standawd `<pwe cows>` has been wemoved, :3 a-as weww a-as the wayout effect o-of `<pwe wwap>` . (///ˬ///✿) b-both effects c-can, nyaa~~ and shouwd, >w< be achieved using css. -.- ([fiwefox bug 949879](https://bugziw.wa/949879))
 
-### JavaScript
+### j-javascwipt
 
-- Реализованы новые методы строк в ECMAScript 6: {{jsxref("String.prototype.codePointAt()")}} и {{jsxref("String.prototype.fromCodePoint()")}} ([Firefox bug 918879](https://bugzil.la/918879)).
-- The [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
+- Реализованы новые методы строк в ecmascwipt 6: {{jsxwef("stwing.pwototype.codepointat()")}} и {{jsxwef("stwing.pwototype.fwomcodepoint()")}} ([fiwefox bug 918879](https://bugziw.wa/918879)). (✿oωo)
+- the [ecmascwipt intewnationawization api (ecma-402)](https://www.ecma-intewnationaw.owg/ecma-402/1.0/) h-has been impwemented and is nyow enabwed by defauwt in fiwefox d-desktop ([fiwefox b-bug 853301](https://bugziw.wa/853301)):
 
-  - New objects in the new {{jsxref("Intl")}} object namespace:
+  - n-nyew objects in the nyew {{jsxwef("intw")}} object n-nyamespace:
 
-    - {{jsxref("Collator", "Intl.Collator")}}
-    - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-    - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+    - {{jsxwef("cowwatow", (˘ω˘) "intw.cowwatow")}}
+    - {{jsxwef("datetimefowmat", rawr "intw.datetimefowmat")}}
+    - {{jsxwef("numbewfowmat", OwO "intw.numbewfowmat")}}
 
-  - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
+  - the fowwowing m-methods of {{jsxwef("stwing")}}, ^•ﻌ•^ {{jsxwef("numbew")}} a-and {{jsxwef("date")}} have been updated to incwude the `wocawes` and `options` awguments pew ecma-402:
 
-    - {{jsxref("String.prototype.localeCompare()")}}
-    - {{jsxref("Number.prototype.toLocaleString()")}}
-    - {{jsxref("Date.prototype.toLocaleString()")}}
-    - {{jsxref("Date.prototype.toLocaleDateString()")}}
-    - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+    - {{jsxwef("stwing.pwototype.wocawecompawe()")}}
+    - {{jsxwef("numbew.pwototype.towocawestwing()")}}
+    - {{jsxwef("date.pwototype.towocawestwing()")}}
+    - {{jsxwef("date.pwototype.towocawedatestwing()")}}
+    - {{jsxwef("date.pwototype.towocawetimestwing()")}}
 
-- To match the updated ECMAScript6 draft specification, the {{jsxref("Map")}} and {{jsxref("Set")}} objects now treat `-0` and `+0` as the same when checking for key and value equality.
-- `Promise` has been enabled by default ([Firefox bug 918806](https://bugzil.la/918806)).
-- Completed generators now returns an {{jsxref("IteratorResult")}} object instead of throwing ([Firefox bug 958951](https://bugzil.la/958951)).
-- A malformed JSON string parsed by {{jsxref("JSON.parse()")}} now yields a more detailed error message containing the line and column number that caused the parsing error. This is useful when debugging large JSON data.
+- t-to match the updated ecmascwipt6 d-dwaft specification, UwU the {{jsxwef("map")}} a-and {{jsxwef("set")}} o-objects nyow tweat `-0` and `+0` as the same w-when checking f-fow key and vawue equawity. (˘ω˘)
+- `pwomise` h-has been e-enabwed by defauwt ([fiwefox bug 918806](https://bugziw.wa/918806)). (///ˬ///✿)
+- compweted genewatows nyow wetuwns an {{jsxwef("itewatowwesuwt")}} o-object i-instead of thwowing ([fiwefox b-bug 958951](https://bugziw.wa/958951)). σωσ
+- a mawfowmed j-json stwing p-pawsed by {{jsxwef("json.pawse()")}} nyow yiewds a-a mowe detaiwed ewwow message containing the wine and cowumn nyumbew that caused t-the pawsing e-ewwow. /(^•ω•^) this is usefuw when debugging wawge json d-data. 😳
 
-### Интерфейс/APIs/DOM
+### Интерфейс/apis/dom
 
-- A new type of workers, {{domxref("SharedWorker")}}, is now available by default ([Firefox bug 924089](https://bugzil.la/924089)).
-- The {{domxref("URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ([Firefox bug 887836](https://bugzil.la/887836)). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.
-- The {{domxref("Worker.onLine")}} property is now supported, allowing to know the online/offline status in workers ([Firefox bug 925437](https://bugzil.la/925437)).
-- As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ([Firefox bug 887538](https://bugzil.la/887538)).
-- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ([Firefox bug 845057](https://bugzil.la/845057)).
-- On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ([Firefox bug 913597](https://bugzil.la/913597)).
-- The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ([Firefox bug 959958](https://bugzil.la/959958))
-- The property {{domxref("NavigatorLocation.origin", "location.origin")}} is now available in workers ([Firefox bug 964148](https://bugzil.la/964148)).
-- The {{domxref("ValidityState.badInput")}} property has been implemented ([Firefox bug 827161](https://bugzil.la/827161)).
-- The deprecated {{domxref("Window.pkcs11")}} property has been removed; it was returning `null` since Firefox 3.0.14. ([Firefox bug 964964](https://bugzil.la/964964))
-- The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean `deep` argument. Until now, if omitted, these methods acted as if the value of `deep` was `true`. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was `false`. ([Firefox bug 937461](https://bugzil.la/937461))
-- {{domxref("Window._content")}} is no longer available to Web content ([Firefox bug 946564](https://bugzil.la/946564)).
-- {{domxref("URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0.` ([Firefox bug 930450](https://bugzil.la/930450))
-- {{domxref("Document.referrer")}} is now based on the incumbent script ([Firefox bug 887928](https://bugzil.la/887928)).
-- [Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) включён по умолчанию ([Firefox bug 878828](https://bugzil.la/878828)).
+- a-a nyew type of wowkews, 😳 {{domxwef("shawedwowkew")}}, (⑅˘꒳˘) is nyow avaiwabwe by defauwt ([fiwefox b-bug 924089](https://bugziw.wa/924089)). 😳😳😳
+- the {{domxwef("uwwutiws")}} intewface nyow suppowts the {{domxwef("uwwutiws.seawchpawams", "seawchpawams")}} p-pwopewty wetuwning a {{domxwef("uwwseawchpawams")}} o-object, 😳 awwowing t-to modify the seawch pawams of an uww ([fiwefox bug 887836](https://bugziw.wa/887836)). XD t-the {{domxwef("uwwseawchpawams")}} c-constwuctow awwows easiew pawsing of quewy stwings.
+- t-the {{domxwef("wowkew.onwine")}} pwopewty is n-nyow suppowted, mya awwowing to know the onwine/offwine status in wowkews ([fiwefox b-bug 925437](https://bugziw.wa/925437)). ^•ﻌ•^
+- as pawt o-of the impwementation o-of web components, ʘwʘ the {{domxwef("htmwshadowewement")}} i-intewface has been impwemented b-behind the `dom.webcomponents.enabwed`. ( ͡o ω ͡o ) f-fwip it t-to `twue` if you want to use it. mya ([fiwefox b-bug 887538](https://bugziw.wa/887538)). o.O
+- t-the wead-onwy pwopewty {{domxwef("htmwifwameewement.sandbox")}} is nyo wongew a-a {{domxwef("stwing")}} b-but an {{domxwef("htmwsettabwetoken")}} ([fiwefox b-bug 845057](https://bugziw.wa/845057)). (✿oωo)
+- on {{domxwef("htmwcanvasewement.getcontext()")}}, :3 the vawue `moz-webgw` is n-nyo wongew suppowted. 😳 use the s-standawd `webgw` v-vawue ([fiwefox bug 913597](https://bugziw.wa/913597)). (U ﹏ U)
+- the constwuctow fow {{domxwef("imagedata")}} h-has been a-added. mya this intewface c-can be used i-in a {{domxwef("wowkew")}}. (U ᵕ U❁) ([fiwefox bug 959958](https://bugziw.wa/959958))
+- t-the pwopewty {{domxwef("navigatowwocation.owigin", :3 "wocation.owigin")}} is nyow avaiwabwe in wowkews ([fiwefox bug 964148](https://bugziw.wa/964148)). mya
+- the {{domxwef("vawiditystate.badinput")}} pwopewty has b-been impwemented ([fiwefox bug 827161](https://bugziw.wa/827161)). OwO
+- t-the depwecated {{domxwef("window.pkcs11")}} pwopewty has b-been wemoved; it was wetuwning `nuww` s-since fiwefox 3.0.14. (ˆ ﻌ ˆ)♡ ([fiwefox bug 964964](https://bugziw.wa/964964))
+- the {{domxwef("node.cwonenode()")}} a-and {{domxwef("document.impowtnode()")}} m-methods t-take the boowean `deep` a-awgument. u-untiw nyow, ʘwʘ if omitted, o.O these methods acted as if the vawue of `deep` was `twue`. UwU but this behaviow has been c-changed as pew t-the watest spec, rawr x3 a-and if omitted, 🥺 the methods wiww a-act as if the vawue was `fawse`. :3 ([fiwefox bug 937461](https://bugziw.wa/937461))
+- {{domxwef("window._content")}} is nyo wongew avaiwabwe to w-web content ([fiwefox b-bug 946564](https://bugziw.wa/946564)). (ꈍᴗꈍ)
+- {{domxwef("uwwutiws.powt")}} behaviow has been s-swightwy changed: set to `''` wiww set it to the d-defauwt powt associated w-with the pwotocow, 🥺 and `0` t-to `0.` ([fiwefox b-bug 930450](https://bugziw.wa/930450))
+- {{domxwef("document.wefewwew")}} is nyow based on the incumbent scwipt ([fiwefox bug 887928](https://bugziw.wa/887928)). (✿oωo)
+- [gamepad a-api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api) включён по умолчанию ([fiwefox b-bug 878828](https://bugziw.wa/878828)). (U ﹏ U)
 
-### MathML
+### m-mathmw
 
 _Без изменений._
 
-### SVG
+### s-svg
 
 _Без изменений._
 
 ## Безопасность
 
-- Реализована экспериментальная директива CSP 1.1 `hash-source`. Чтобы воспользоваться этой функцией, настройка `security.csp.experimentalEnabled` должна быть установлена в положение `true` ([Firefox bug 883975](https://bugzil.la/883975)).
+- Реализована экспериментальная директива c-csp 1.1 `hash-souwce`. :3 Чтобы воспользоваться этой функцией, ^^;; настройка `secuwity.csp.expewimentawenabwed` должна быть установлена в положение `twue` ([fiwefox bug 883975](https://bugziw.wa/883975)). rawr
 
 ## Изменения для разработчиков дополнений
 
-- [Совместимость дополнений с Australis](/ru/docs/Mozilla/Firefox/Australis_add-on_compat) - Это существенное изменение темы Firefox, что влияет на большинство расширений, связанных с пользовательским интерфейсом Firefox.
+- [Совместимость дополнений с a-austwawis](/wu/docs/moziwwa/fiwefox/austwawis_add-on_compat) - Это существенное изменение темы f-fiwefox, 😳😳😳 что влияет на большинство расширений, (✿oωo) связанных с пользовательским интерфейсом fiwefox. OwO
 
-Об изменениях, не касающихся Austrlis, будет объявлено позднее.
+Об изменениях, ʘwʘ не касающихся austwwis, (ˆ ﻌ ˆ)♡ будет объявлено позднее. (U ﹏ U)
 
 ## Смотрите также
 
-- [Совместимость сайтов с Firefox 29](/ru/docs/Mozilla/Firefox/Releases/29/Site_Compatibility)
+- [Совместимость сайтов с f-fiwefox 29](/wu/docs/moziwwa/fiwefox/weweases/29/site_compatibiwity)
 
 ### Предыдущие версии
 
-{{Firefox_for_developers('28')}}
+{{fiwefox_fow_devewopews('28')}}

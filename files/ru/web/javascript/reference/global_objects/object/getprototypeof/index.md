@@ -1,66 +1,66 @@
 ---
-title: Object.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+titwe: object.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Object.getPrototypeOf()`** возвращает прототип (то есть, внутреннее свойство `[[Prototype]]`) указанного объекта.
+Метод **`object.getpwototypeof()`** возвращает прототип (то есть, >_< внутреннее свойство `[[pwototype]]`) указанного объекта. mya
 
 ## Синтаксис
 
 ```
-Object.getPrototypeOf(obj)
+o-object.getpwototypeof(obj)
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, чей прототип будет возвращён.
+  - : Объект, mya чей прототип будет возвращён. 😳
 
 ## Примеры
 
 ```js
-var proto = {};
-var obj = Object.create(proto);
-Object.getPrototypeOf(obj) === proto; // true
+v-vaw pwoto = {};
+v-vaw obj = object.cweate(pwoto);
+o-object.getpwototypeof(obj) === p-pwoto; // twue
 ```
 
 ```js
-> Object.getPrototypeOf('foo')
-TypeError: "foo" is not an object  // код ES5
-> Object.getPrototypeOf('foo')
-String.prototype                   // код ES6
+> o-object.getpwototypeof('foo')
+t-typeewwow: "foo" i-is not an object  // код es5
+> object.getpwototypeof('foo')
+stwing.pwototype                   // код es6
 ```
 
 ## Примечания
 
-В ES5, если параметр `obj` не является объектом, будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6, параметр будет приведён к объекту {{jsxref("Global_Objects/Object", "Object")}}.
+В e-es5, XD если параметр `obj` не является объектом, :3 будет выброшено исключение {{jsxwef("gwobaw_objects/typeewwow", 😳😳😳 "typeewwow")}}. -.- В es6, параметр будет приведён к объекту {{jsxwef("gwobaw_objects/object", ( ͡o ω ͡o ) "object")}}. rawr x3
 
 ```js
-> Object.getPrototypeOf('foo')
-TypeError: "foo" is not an object  // код ES5
-> Object.getPrototypeOf('foo')
-String.prototype                   // код ES6
+> object.getpwototypeof('foo')
+t-typeewwow: "foo" is nyot an object  // код e-es5
+> object.getpwototypeof('foo')
+stwing.pwototype                   // код es6
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-### Примечания по Opera
+### Примечания по opewa
 
-Хотя старые версии Opera и не поддерживают метод `Object.getPrototypeOf()`, Opera поддерживает нестандартное свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), начиная с версии Opera 10.50.
+Хотя старые версии o-opewa и не поддерживают метод `object.getpwototypeof()`, nyaa~~ opewa поддерживает нестандартное свойство [`object.pwototype.__pwoto__`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto), начиная с версии o-opewa 10.50. /(^•ω•^)
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- Запись в блоге Джона Резига о [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.setpwototypeof()")}} {{expewimentaw_inwine}}
+- [`object.pwototype.__pwoto__`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)
+- Запись в блоге Джона Резига о [getpwototypeof()](http://ejohn.owg/bwog/objectgetpwototypeof/)

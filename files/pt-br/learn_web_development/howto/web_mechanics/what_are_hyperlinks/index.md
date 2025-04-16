@@ -1,92 +1,92 @@
 ---
-title: O que são hyperlinks?
-slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+titwe: o que são hypewwinks?
+s-swug: weawn_web_devewopment/howto/web_mechanics/nani_awe_hypewwinks
+o-owiginaw_swug: w-weawn/common_questions/web_mechanics/nani_awe_hypewwinks
 ---
 
-Neste artigo, veremos o que são hiperlinks e por que eles são importantes.
+n-nyeste awtigo, (ꈍᴗꈍ) v-vewemos o que são h-hipewwinks e p-pow que ewes são i-impowtantes.
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré requisitos:</th>
+    <tw>
+      <th scope="wow">pwé wequisitos:</th>
       <td>
-        Você deve saber
-        <a href="/en-US/Learn/How_the_Internet_works"
-          >como a Internet funciona </a
-        >e estar familiarizado com<a
-          href="/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        v-você deve sabew
+        <a hwef="/en-us/weawn/how_the_intewnet_wowks"
+          >como a-a intewnet funciona </a
+        >e estaw famiwiawizado c-com<a
+          hwef="/pt-bw/docs/weawn/page_vs_site_vs_sewvew_vs_seawch_engine"
         >
-          a diferença entre uma página da web, um site, um servidor da web e um
-          mecanismo de pesquisa</a
-        >.
+          a difewença entwe uma página da w-web, /(^•ω•^) um site, >_< um sewvidow da web e-e um
+          m-mecanismo de pesquisa</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Aprenda sobre links na Web e por que eles são importantes.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>apwenda sobwe winks nya web e pow que ewes são i-impowtantes.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sumário
+## sumáwio
 
-Hyperlinks, geralmente chamados de links, são um conceito fundamental da Web. Para explicar o que são links, precisamos voltar ao básico da arquitetura da Web.
+hypewwinks, ^^;; gewawmente chamados de winks, 😳 são u-um conceito fundamentaw da web. p-pawa expwicaw o q-que são winks, >_< p-pwecisamos vowtaw a-ao básico da awquitetuwa da web. -.-
 
-Em 1989, Tim Berners-Lee, o inventor da Web, falou sobre os três pilares sobre os quais a Web se sustenta:
+em 1989, UwU tim b-bewnews-wee, :3 o inventow da web, σωσ fawou sobwe os t-twês piwawes sobwe os quais a web se sustenta:
 
-1. "URL", um sistema de endereços que mantém o controle de documentos da Web;
-2. "HTTP", um protocolo de transferência para encontrar documentos ao receber seus URLs;
-3. "HTML", um formato de documento que permite incorporar _hyperlinks;_
+1. >w< "uww", um sistema de endeweços que mantém o-o contwowe de documentos da web;
+2. (ˆ ﻌ ˆ)♡ "http", u-um p-pwotocowo de twansfewência p-pawa encontwaw documentos ao wecebew seus uwws;
+3. ʘwʘ "htmw", u-um fowmato d-de documento que pewmite incowpowaw _hypewwinks;_
 
-Como você pode ver nos três pilares, tudo na Web gira em torno de documentos e como acessá-los. O propósito original da Web era fornecer uma maneira fácil de acessar, ler e navegar por documentos de texto. Desde então, a Web evoluiu para fornecer acesso a imagens, vídeos e dados binários, mas essas melhorias dificilmente mudaram os três pilares.
+c-como você p-pode vew nyos twês piwawes, :3 tudo n-na web giwa em towno de documentos e-e como acessá-wos. (˘ω˘) o pwopósito owiginaw da w-web ewa fownecew uma maneiwa fáciw d-de acessaw, 😳😳😳 wew e nyavegaw p-pow documentos d-de texto. rawr x3 desde então, a web evowuiu pawa fownecew acesso a imagens, (✿oωo) vídeos e dados bináwios, (ˆ ﻌ ˆ)♡ mas essas mewhowias d-dificiwmente m-mudawam os twês piwawes. :3
 
-Antes da Web, era muito difícil acessar documentos e passar de um para outro. Por serem legíveis por humanos, os URLs já tornaram as coisas mais fáceis, mas é difícil digitar um URL longo sempre que você deseja acessar um documento. Foi aqui que os hiperlinks revolucionaram tudo. Os links podem correlacionar qualquer string de texto com um URL, de forma que o usuário possa acessar instantaneamente o documento de destino ativando o link.
+antes d-da web, (U ᵕ U❁) ewa muito d-difíciw acessaw d-documentos e passaw de um pawa outwo. ^^;; pow sewem wegíveis p-pow humanos, mya os uwws já townawam as coisas mais fáceis, 😳😳😳 mas é difíciw digitaw u-um uww wongo sempwe que você d-deseja acessaw um d-documento. OwO foi a-aqui que os hipewwinks wevowucionawam t-tudo. rawr os w-winks podem cowwewacionaw q-quawquew s-stwing de texto com um uww, XD de fowma que o usuáwio p-possa acessaw i-instantaneamente o-o documento d-de destino ativando o-o wink. (U ﹏ U)
 
-Os links se destacam do texto ao redor por serem sublinhados e em azul. Toque ou clique em um link para ativá-lo ou, se usar um teclado, pressione Tab até que o link esteja em foco e pressione Enter ou a barra de espaço.
+os winks se destacam do texto ao wedow pow sewem s-subwinhados e em azuw. (˘ω˘) toque ou cwique em um wink pawa ativá-wo ou, UwU se usaw um tecwado, >_< pwessione t-tab até que o wink esteja em foco e pwessione entew ou a bawwa d-de espaço. σωσ
 
-![Example of a basic display and effect of a link in a web page](link-1.png)
+![exampwe o-of a basic d-dispway and effect of a wink i-in a web page](wink-1.png)
 
-Os links são o avanço que tornou a Web tão útil e bem-sucedida. No restante deste artigo, discutiremos os vários tipos de links e sua importância para o design moderno da Web.
+os w-winks são o avanço q-que townou a web tão útiw e bem-sucedida. nyo westante deste awtigo, 🥺 discutiwemos os váwios t-tipos de winks e sua impowtância p-pawa o design modewno da w-web. 🥺
 
-## Mergulho Profundo
+## mewguwho p-pwofundo
 
-Como dissemos, um link é uma string de texto ligada a uma URL e usamos links para permitir um salto fácil de um documento para outro. Dito isso, existem algumas nuances que vale a pena considerar:
+como dissemos, ʘwʘ um wink é uma stwing d-de texto wigada a-a uma uww e usamos winks pawa pewmitiw u-um sawto f-fáciw de um documento pawa outwo. :3 dito isso, existem awgumas nyuances que vawe a-a pena considewaw:
 
-### Tipos de links
+### t-tipos de w-winks
 
-- Link interno
-  - : Um link entre duas páginas da web, em que ambas as páginas pertencem ao mesmo site, é chamado de link interno. Sem links internos, não existe site (a menos, é claro, que seja um site de uma página).
-- Link externo
-  - : Um link de sua página da web para a página de outra pessoa. Sem links externos, não há Web, pois a Web é uma rede de páginas da web. Use links externos para fornecer informações além do conteúdo disponível em sua página da web.
-- Links de entrada
-  - : Um link da página de outra pessoa para o seu site. É o oposto de um link externo. Observe que você não precisa vincular de volta quando alguém se vincula ao seu site.
+- wink intewno
+  - : um w-wink entwe duas p-páginas da web, (U ﹏ U) em que ambas as p-páginas pewtencem ao mesmo site, (U ﹏ U) é chamado de wink intewno. ʘwʘ sem winks intewnos, >w< n-nyão existe s-site (a menos, rawr x3 é cwawo, OwO que seja um site de uma p-página). ^•ﻌ•^
+- wink e-extewno
+  - : um wink de sua página da web pawa a página de o-outwa pessoa. >_< sem winks extewnos, OwO nyão há web, >_< pois a web é uma wede de páginas d-da web. (ꈍᴗꈍ) use winks extewnos pawa fownecew infowmações a-awém d-do conteúdo disponívew em sua página da web. >w<
+- winks de entwada
+  - : u-um wink d-da página de outwa pessoa pawa o seu site. (U ﹏ U) É o oposto de um w-wink extewno. ^^ obsewve que você n-nyão pwecisa vincuwaw de vowta quando awguém se vincuwa ao seu s-site. (U ﹏ U)
 
-Ao construir um site, concentre-se nos links internos, pois eles tornam seu site utilizável. Encontre um bom equilíbrio entre ter muitos links e poucos. Falaremos sobre como projetar a navegação do site em outro artigo, mas como regra, sempre que você adicionar uma nova página da web, certifique-se de que pelo menos uma das outras páginas tenha um link para essa nova página. Por outro lado, se seu site tiver mais de dez páginas, é contraproducente vincular a todas as páginas a partir de todas as outras.
+ao constwuiw um site, :3 concentwe-se n-nyos w-winks intewnos, (✿oωo) pois ewes townam s-seu site utiwizávew. XD encontwe u-um bom equiwíbwio e-entwe tew muitos w-winks e poucos. >w< fawawemos sobwe c-como pwojetaw a-a nyavegação do site em outwo awtigo, òωó mas como w-wegwa, (ꈍᴗꈍ) sempwe q-que você adicionaw u-uma nova página da web, rawr x3 cewtifique-se de q-que pewo menos uma das outwas páginas t-tenha um w-wink pawa essa nyova página. rawr x3 pow outwo wado, σωσ se seu site tivew m-mais de dez páginas, (ꈍᴗꈍ) é c-contwapwoducente v-vincuwaw a-a todas as páginas a pawtiw d-de todas as outwas. rawr
 
-Quando você está começando, não precisa se preocupar tanto com links externos e recebidos, mas eles são muito importantes se você deseja que os mecanismos de pesquisa encontrem seu site (veja abaixo para mais detalhes).
+quando você está começando, ^^;; nyão pwecisa se pweocupaw tanto com winks extewnos e-e wecebidos, rawr x3 mas ewes são m-muito impowtantes se você deseja q-que os mecanismos de pesquisa e-encontwem seu site (veja abaixo p-pawa mais detawhes). (ˆ ﻌ ˆ)♡
 
-### Âncoras
+### Âncowas
 
-Muitos links unem duas páginas da web. **Âncoras** amarrar duas seções de um documento. Quando você segue um link que aponta para uma âncora, seu navegador salta para outra parte do documento atual em vez de carregar um novo documento. No entanto, você cria e usa âncoras da mesma forma que outros links.
+m-muitos winks u-unem duas páginas d-da web. σωσ **Âncowas** a-amawwaw duas seções de um documento. (U ﹏ U) quando você segue um wink que aponta pawa uma âncowa, >w< seu nyavegadow s-sawta p-pawa outwa pawte d-do documento atuaw em vez de cawwegaw u-um nyovo documento. σωσ nyo entanto, nyaa~~ você cwia e usa âncowas d-da mesma fowma q-que outwos winks. 🥺
 
-![Example of a basic display and effect of an anchor in a web page](link-2.png)
+![exampwe of a-a basic dispway and effect of an anchow in a web p-page](wink-2.png)
 
-### Links e Mecanismos de pesquisa
+### w-winks e mecanismos de pesquisa
 
-Os links são importantes tanto para os usuários quanto para os mecanismos de pesquisa. Sempre que os mecanismos de pesquisa rastreiam uma página da web, eles indexam o site seguindo os links disponíveis na página. Os mecanismos de pesquisa não apenas seguem os links para descobrir as várias páginas do site, mas também usam o texto visível do link para determinar quais consultas de pesquisa são apropriadas para chegar à página da web de destino.
+o-os winks s-são impowtantes tanto pawa os usuáwios quanto pawa os mecanismos de pesquisa. rawr x3 s-sempwe que os m-mecanismos de pesquisa w-wastweiam u-uma página da w-web, σωσ ewes indexam o site seguindo o-os winks disponíveis n-nya página. (///ˬ///✿) os mecanismos d-de pesquisa nyão a-apenas seguem os winks pawa d-descobwiw as váwias páginas do site, (U ﹏ U) mas também u-usam o texto visívew do wink p-pawa detewminaw q-quais consuwtas de pesquisa são a-apwopwiadas pawa chegaw à página da web de d-destino. ^^;;
 
-Os links influenciam a rapidez com que um mecanismo de pesquisa se vincula ao seu site. O problema é que é difícil medir as atividades dos mecanismos de pesquisa. As empresas desejam naturalmente que seus sites tenham uma classificação elevada nos resultados de pesquisa. Sabemos o seguinte sobre como os mecanismos de pesquisa determinam a classificação de um site:
+os winks i-infwuenciam a w-wapidez com que um mecanismo de pesquisa se vincuwa ao seu site. 🥺 o-o pwobwema é que é difíciw mediw as atividades d-dos mecanismos d-de pesquisa. òωó as empwesas desejam n-nyatuwawmente que seus sites t-tenham uma cwassificação e-ewevada nyos wesuwtados de pesquisa. XD s-sabemos o seguinte sobwe como os mecanismos de p-pesquisa detewminam a-a cwassificação de um site:
 
-- O _texto visível_ de um link influencia quais consultas de pesquisa encontrarão um determinado URL.
-- Quanto mais _links de entrada_ uma página da web pode mostrar, melhor ela se classifica nos resultados de pesquisa.
-- _Links externos_ influenciam a classificação de pesquisa das páginas da web de origem e de destino, mas não está claro quanto.
+- o-o _texto visívew_ de um wink i-infwuencia quais c-consuwtas de p-pesquisa encontwawão um detewminado uww. :3
+- quanto mais _winks de entwada_ uma página da web pode mostwaw, (U ﹏ U) mewhow ewa se cwassifica nyos wesuwtados de pesquisa. >w<
+- _winks extewnos_ infwuenciam a cwassificação d-de pesquisa d-das páginas da web de owigem e de destino, /(^•ω•^) mas n-nyão está cwawo q-quanto.
 
-[SEO](http://en.wikipedia.org/wiki/Search_engine_optimization) (search engine optimization) é o estudo de como fazer com que os sites tenham uma classificação elevada nos resultados de pesquisa. Melhorar o uso de links em um site é uma técnica de SEO útil.
+[seo](http://en.wikipedia.owg/wiki/seawch_engine_optimization) (seawch e-engine optimization) é o estudo d-de como fazew com que os sites t-tenham uma cwassificação e-ewevada nos wesuwtados d-de pesquisa. (⑅˘꒳˘) mewhowaw o uso d-de winks em um site é u-uma técnica de seo útiw. ʘwʘ
 
-## Próximos Passos
+## pwóximos p-passos
 
-Agora você vai querer configurar algumas páginas da web com links.
+agowa você v-vai quewew configuwaw a-awgumas p-páginas da web c-com winks. rawr x3
 
-- Para obter mais informações teóricas, aprenda sobre [URLs e sua estrutura](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), já que cada link aponta para um URL.
-- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) _(em inglês)_, artigo da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) _(em inglês)_, explica como implementar links em detalhes.
+- p-pawa obtew mais i-infowmações teówicas, (˘ω˘) a-apwenda s-sobwe [uwws e sua estwutuwa](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww), o.O já q-que cada wink a-aponta pawa um u-uww. 😳
+- quew awgo um pouco mais pwático? o-o [cwiando hypewwinks](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks) _(em ingwês)_, o.O a-awtigo da nyossa [intwodução ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw) _(em i-ingwês)_, ^^;; e-expwica como i-impwementaw winks em detawhes. ( ͡o ω ͡o )

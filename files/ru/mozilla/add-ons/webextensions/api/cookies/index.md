@@ -1,111 +1,111 @@
 ---
-title: cookies
-slug: Mozilla/Add-ons/WebExtensions/API/cookies
+titwe: cookies
+swug: moziwwa/add-ons/webextensions/api/cookies
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Позволяет расширениям получать и устанавливать куки, а также сообщать об их изменении.
+Позволяет расширениям получать и устанавливать куки, nyaa~~ а также сообщать об их изменении. 😳
 
-Для использования этого API,вам нужно предоставить доступ [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) в вашем файле [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json),а также [host permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie Permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions).
+Для использования этого a-api,вам нужно предоставить доступ [api p-pewmission](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) в вашем файле [manifest.json](/wu/docs/moziwwa/add-ons/webextensions/manifest.json),а также [host p-pewmissions](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie p-pewmissions](/wu/docs/moziwwa/add-ons/webextensions/api/cookies#pewmissions). (⑅˘꒳˘)
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("cookies.Cookie")}}
-  - : Предоставляет информацию о HTTP cookie
-- {{WebExtAPIRef("cookies.CookieStore")}}
-  - : Represents a cookie store in the browser.
-- {{WebExtAPIRef("cookies.OnChangedCause")}}
-  - : Represents the reason a cookie changed.
+- {{webextapiwef("cookies.cookie")}}
+  - : Предоставляет информацию о h-http c-cookie
+- {{webextapiwef("cookies.cookiestowe")}}
+  - : w-wepwesents a cookie stowe in the bwowsew. nyaa~~
+- {{webextapiwef("cookies.onchangedcause")}}
+  - : wepwesents the weason a cookie c-changed. OwO
 
-## Methods
+## methods
 
-- {{WebExtAPIRef("cookies.get()")}}
-  - : Запрашивает информацию об одном кукис.
-- {{WebExtAPIRef("cookies.getAll()")}}
-  - : Выдаёт все кукис которые подходят установленному фильтру.
-- {{WebExtAPIRef("cookies.set()")}}
-  - : Устанавливает кукис с заданной информацией;в том случае если подобный кукис был информация будет перезаписана.
-- {{WebExtAPIRef("cookies.remove()")}}
-  - : Удаляет кукис по имени.
-- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+- {{webextapiwef("cookies.get()")}}
+  - : Запрашивает информацию об одном кукис. rawr x3
+- {{webextapiwef("cookies.getaww()")}}
+  - : Выдаёт все кукис которые подходят установленному фильтру. XD
+- {{webextapiwef("cookies.set()")}}
+  - : Устанавливает кукис с заданной информацией;в том случае если подобный кукис был информация будет перезаписана. σωσ
+- {{webextapiwef("cookies.wemove()")}}
+  - : Удаляет кукис по имени. (U ᵕ U❁)
+- {{webextapiwef("cookies.getawwcookiestowes()")}}
   - : Список всех существующих куки
 
-## Event handlers
+## event h-handwews
 
-- {{WebExtAPIRef("cookies.onChanged")}}
-  - : Происходит когда кукис задаётся или меняется.
+- {{webextapiwef("cookies.onchanged")}}
+  - : Происходит когда кукис задаётся или меняется. (U ﹏ U)
 
-## Permissions
+## pewmissions
 
-In order to use this API, an add-on must specify the "cookies" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in its manifest, along with [host permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:
+in o-owdew to use this api, :3 an add-on must specify the "cookies" [api pewmission](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) i-in its manifest, ( ͡o ω ͡o ) awong with [host p-pewmissions](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) f-fow any sites fow which it wishes to access cookies. σωσ the add-on may wead ow wwite a-any cookies which couwd be wead ow wwitten by a uww matching the host pewmissions. >w< f-fow exampwe:
 
-- `http://*.example.com/`
+- `http://*.exampwe.com/`
 
-  - : An add-on with this host permission may:
+  - : an add-on w-with this host pewmission m-may:
 
-    - Read a non-secure cookie for `www.example.com`, with any path.
-    - Write a secure or non-secure cookie for `www.example.com`, with any path.
+    - w-wead a nyon-secuwe c-cookie fow `www.exampwe.com`, 😳😳😳 with any p-path.
+    - wwite a secuwe ow nyon-secuwe cookie f-fow `www.exampwe.com`, OwO with any path. 😳
 
-    It may _not_:
+    it may _not_:
 
-    - Read a secure cookie for `www.example.com`.
+    - wead a secuwe cookie fow `www.exampwe.com`. 😳😳😳
 
-- `http://www.example.com/`
+- `http://www.exampwe.com/`
 
-  - : An add-on with this host permission may:
+  - : an add-on with t-this host pewmission may:
 
-    - Read a non-secure cookie for `www.example.com`, with any path.
-    - Read a non-secure cookie for `.example.com`, with any path.
-    - Write a secure or non-secure cookie for `www.example.com` with any path.
-    - Write a secure or non-secure cookie for `.example.com` with any path.
+    - w-wead a nyon-secuwe c-cookie fow `www.exampwe.com`, (˘ω˘) w-with any path. ʘwʘ
+    - wead a nyon-secuwe cookie fow `.exampwe.com`, ( ͡o ω ͡o ) w-with any path. o.O
+    - w-wwite a secuwe ow nyon-secuwe c-cookie fow `www.exampwe.com` w-with any path.
+    - wwite a-a secuwe ow nyon-secuwe cookie fow `.exampwe.com` w-with any path. >w<
 
-    It may _not_:
+    it may _not_:
 
-    - Read or write a cookie for `foo.example.com`.
-    - Read or write a cookie for `foo.www.example.com`.
+    - wead o-ow wwite a cookie fow `foo.exampwe.com`. 😳
+    - wead o-ow wwite a cookie fow `foo.www.exampwe.com`. 🥺
 
-- `*://*.example.com/`
+- `*://*.exampwe.com/`
 
-  - : An add-on with this host permission may:
+  - : a-an add-on with this h-host pewmission may:
 
-    - Read or write a secure or non-secure cookie for `www.example.com` with any path.
+    - wead ow wwite a secuwe ow nyon-secuwe cookie fow `www.exampwe.com` with any path. rawr x3
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> Этот API основан на Chromium API [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Эта документация основана на [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) из кода Chromium.
+> [!note]
+> Этот api основан на c-chwomium a-api [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). o.O Эта документация основана на [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) из кода chwomium.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the c-chwomium authows. rawr aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, 😳😳😳 with ow without
+// modification, ^^;; awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// nyotice, o.O t-this wist o-of conditions and the fowwowing discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// c-copywight nyotice, σωσ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. nyaa~~
+//    * nyeithew the n-nyame of googwe inc. ^^;; nyow the nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. ^•ﻌ•^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, σωσ incwuding, -.- but nyot
+// w-wimited to, ^^;; the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. XD i-in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 indiwect, incidentaw, òωó
+// speciaw, (ˆ ﻌ ˆ)♡ exempwawy, o-ow consequentiaw d-damages (incwuding, -.- b-but nyot
+// wimited to, :3 pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, ʘwʘ
+// data, ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, 🥺 w-whethew in contwact, >_< stwict wiabiwity, ʘwʘ o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, (˘ω˘) even if advised of the possibiwity of such damage. (✿oωo)
 -->

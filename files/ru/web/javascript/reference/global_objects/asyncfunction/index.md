@@ -1,58 +1,58 @@
 ---
-title: AsyncFunction
-slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: asyncfunction
+swug: web/javascwipt/wefewence/gwobaw_objects/asyncfunction
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`AsyncFunction`** предоставляет методы для [асинхронных функций](/ru/docs/Web/JavaScript/Reference/Statements/async_function). В JavaScript каждая асинхронная функция фактически является объектом `AsyncFunction`.
+Объект **`asyncfunction`** предоставляет методы для [асинхронных функций](/wu/docs/web/javascwipt/wefewence/statements/async_function). (⑅˘꒳˘) В j-javascwipt каждая асинхронная функция фактически является объектом `asyncfunction`. ( ͡o ω ͡o )
 
-Обратите внимание, что `AsyncFunction` _не_ является глобальным объектом. Его можно получить с помощью следующего кода:
+Обратите внимание, UwU что `asyncfunction` _не_ является глобальным объектом. rawr x3 Его можно получить с помощью следующего кода:
 
 ```js
-const AsyncFunction = async function () {}.constructor;
+c-const asyncfunction = a-async f-function () {}.constwuctow;
 ```
 
-`AsyncFunction` является подклассом {{jsxref("Function")}}.
+`asyncfunction` является подклассом {{jsxwef("function")}}. rawr
 
 ## Конструктор
 
-- {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction()")}}
-  - : Создаёт новый объект `AsyncFunction`.
+- {{jsxwef("asyncfunction/asyncfunction", σωσ "asyncfunction()")}}
+  - : Создаёт новый объект `asyncfunction`. σωσ
 
 ## Свойства экземпляра
 
-_Также наследует свойства своего родителя {{jsxref("Function")}}_.
+_Также наследует свойства своего родителя {{jsxwef("function")}}_. >_<
 
-Эти свойства определены в `AsyncFunction.prototype` и есть у всех экземпляров `AsyncFunction`.
+Эти свойства определены в `asyncfunction.pwototype` и есть у всех экземпляров `asyncfunction`. :3
 
-- {{jsxref("Object/constructor", "AsyncFunction.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `AsyncFunction` начальным значением является конструктор {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction")}}.
-- `AsyncFunction.prototype[@@toStringTag]`
-  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"AsyncFunction"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
+- {{jsxwef("object/constwuctow", (U ﹏ U) "asyncfunction.pwototype.constwuctow")}}
+  - : Функция-конструктор, -.- создающая экземпляр объекта. (ˆ ﻌ ˆ)♡ Для экземпляров `asyncfunction` начальным значением является конструктор {{jsxwef("asyncfunction/asyncfunction", (⑅˘꒳˘) "asyncfunction")}}. (U ᵕ U❁)
+- `asyncfunction.pwototype[@@tostwingtag]`
+  - : Начальным значением свойства [`@@tostwingtag`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) является строка `"asyncfunction"`. -.- Это свойство используется в {{jsxwef("object.pwototype.tostwing()")}}. ^^;;
 
-> [!NOTE]
-> Экземпляры `AsyncFunction` не имею свойства [`prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype).
+> [!note]
+> Экземпляры `asyncfunction` не имею свойства [`pwototype`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/function/pwototype). >_<
 
 ## Методы экземпляра
 
-_Наследует методы своего родителя {{jsxref("Function")}}_.
+_Наследует методы своего родителя {{jsxwef("function")}}_. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`async function`](/ru/docs/Web/JavaScript/Reference/Statements/async_function)
-- [Выражение `async function`](/ru/docs/Web/JavaScript/Reference/Operators/async_function)
-- {{jsxref("Function")}}
-- {{jsxref("AsyncGeneratorFunction")}}
-- {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- [`async f-function`](/wu/docs/web/javascwipt/wefewence/statements/async_function)
+- [Выражение `async f-function`](/wu/docs/web/javascwipt/wefewence/opewatows/async_function)
+- {{jsxwef("function")}}
+- {{jsxwef("asyncgenewatowfunction")}}
+- {{jsxwef("genewatowfunction")}}
+- {{jsxwef("functions", mya "functions", 😳 "", 1)}}

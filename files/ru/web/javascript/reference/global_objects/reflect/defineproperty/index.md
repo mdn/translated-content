@@ -1,86 +1,86 @@
 ---
-title: Reflect.defineProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+titwe: wefwect.definepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/definepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Статический метод **`Reflect.defineProperty()`** похож на {{jsxref("Object.defineProperty()")}}, но возвращает {{jsxref("Boolean")}}.
+Статический метод **`wefwect.definepwopewty()`** похож на {{jsxwef("object.definepwopewty()")}}, но возвращает {{jsxwef("boowean")}}. mya
 
-{{InteractiveExample("JavaScript Demo: Reflect.defineProperty()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.definepwopewty()")}}
 
-```js interactive-example
-const object1 = {};
+```js i-intewactive-exampwe
+c-const object1 = {};
 
-if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
-  console.log("property1 created!");
-  // Expected output: "property1 created!"
-} else {
-  console.log("problem creating property1");
+i-if (wefwect.definepwopewty(object1, mya "pwopewty1", { v-vawue: 42 })) {
+  c-consowe.wog("pwopewty1 c-cweated!");
+  // e-expected output: "pwopewty1 cweated!"
+} ewse {
+  consowe.wog("pwobwem cweating pwopewty1");
 }
 
-console.log(object1.property1);
-// Expected output: 42
+c-consowe.wog(object1.pwopewty1);
+// expected output: 42
 ```
 
 ## Синтаксис
 
 ```
-Reflect.defineProperty(target, propertyKey, attributes)
+wefwect.definepwopewty(tawget, 😳 p-pwopewtykey, XD attwibutes)
 ```
 
 ### Параметры
 
-- `target`
-  - : Объект, в котором определяется свойство.
-- `propertyKey`
-  - : Имя определяемого или изменяемого свойства.
-- `attributes`
-  - : Атрибуты для определяемого или изменяемого свойства.
+- `tawget`
+  - : Объект, :3 в котором определяется свойство. 😳😳😳
+- `pwopewtykey`
+  - : Имя определяемого или изменяемого свойства. -.-
+- `attwibutes`
+  - : Атрибуты для определяемого или изменяемого свойства. ( ͡o ω ͡o )
 
 ### Возвращаемое значение
 
-Возвращается значение {{jsxref("Boolean")}}, указывающее было ли свойство успешно определено.
+Возвращается значение {{jsxwef("boowean")}}, rawr x3 указывающее было ли свойство успешно определено. nyaa~~
 
 ### Исключения
 
-Исключение {{jsxref("TypeError")}}, если `target` не является {{jsxref("Object")}}.
+Исключение {{jsxwef("typeewwow")}}, /(^•ω•^) если `tawget` не является {{jsxwef("object")}}. rawr
 
 ## Описание
 
-Метод `Reflect.defineProperty` позволяет точно дополнить или изменить свойство объекта. Для более подробной информации смотрите на аналогичный метод - {{jsxref("Object.defineProperty")}}. `Object.defineProperty` возвращает объект или выбрасывает исключение {{jsxref("TypeError")}}, если свойство не было успешно определено. `Reflect.defineProperty`, в любом случае, просто возвращает {{jsxref("Boolean")}}, указывающее было ли свойство успешно определено.
+Метод `wefwect.definepwopewty` позволяет точно дополнить или изменить свойство объекта. OwO Для более подробной информации смотрите на аналогичный метод - {{jsxwef("object.definepwopewty")}}. (U ﹏ U) `object.definepwopewty` возвращает объект или выбрасывает исключение {{jsxwef("typeewwow")}}, >_< если свойство не было успешно определено. rawr x3 `wefwect.definepwopewty`, mya в любом случае, nyaa~~ просто возвращает {{jsxwef("boowean")}}, указывающее было ли свойство успешно определено. (⑅˘꒳˘)
 
 ## Примеры
 
-### Использования `Reflect.defineProperty()`
+### Использования `wefwect.definepwopewty()`
 
 ```js
-var obj = {};
-Reflect.defineProperty(obj, "x", { value: 7 }); // true
-obj.x; // 7
+v-vaw obj = {};
+wefwect.definepwopewty(obj, rawr x3 "x", (✿oωo) { vawue: 7 }); // twue
+o-obj.x; // 7
 ```
 
 ### Проверка успешно ли было определено свойство
 
-При использовании {{jsxref("Object.defineProperty")}}, который возвращал объект в случае успеха, либо выбрасывал исключение {{jsxref("TypeError")}}, вы должны были использовать конструкцию [`try...catch`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) для того, чтобы поймать ошибку, которая случилась при определении свойства. Потому что `Reflect.defineProperty` возвращает {{jsxref("Boolean")}} в любом случае, вы можете использовать конструкцию [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else):
+При использовании {{jsxwef("object.definepwopewty")}}, (ˆ ﻌ ˆ)♡ который возвращал объект в случае успеха, (˘ω˘) либо выбрасывал исключение {{jsxwef("typeewwow")}}, (⑅˘꒳˘) вы должны были использовать конструкцию [`twy...catch`](/wu/docs/web/javascwipt/wefewence/statements/twy...catch) для того, (///ˬ///✿) чтобы поймать ошибку, 😳😳😳 которая случилась при определении свойства. 🥺 Потому что `wefwect.definepwopewty` возвращает {{jsxwef("boowean")}} в любом случае, mya вы можете использовать конструкцию [`if...ewse`](/wu/docs/web/javascwipt/wefewence/statements/if...ewse):
 
 ```js
-if (Reflect.defineProperty(target, property, attributes)) {
+if (wefwect.definepwopewty(tawget, 🥺 p-pwopewty, >_< attwibutes)) {
   // успех
-} else {
+} e-ewse {
   // неудача
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.defineProperty()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.definepwopewty()")}}

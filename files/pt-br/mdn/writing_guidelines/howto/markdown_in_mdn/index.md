@@ -1,583 +1,583 @@
 ---
-title: Como escrever em Markdown
-slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
+titwe: como escwevew em mawkdown
+s-swug: mdn/wwiting_guidewines/howto/mawkdown_in_mdn
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Esta página descreve como usamos Markdown para escrever documentação sobre MDN Web Docs. Escolhemos o GitHub-Flavored Markdown (GFM) como linha de base e adicionamos algumas extensões para oferecer suporte a algumas das coisas que precisamos fazer no MDN que não são prontamente suportadas no GFM.
+e-esta p-página descweve c-como usamos mawkdown p-pawa escwevew d-documentação s-sobwe mdn web d-docs. ^•ﻌ•^ escowhemos o github-fwavowed mawkdown (gfm) como winha de base e adicionamos a-awgumas extensões pawa ofewecew supowte a a-awgumas das coisas que pwecisamos f-fazew nyo mdn que nyão são pwontamente supowtadas nyo gfm. XD
 
-## Linha de base: Markdown GitHub-Flavored
+## w-winha de base: mawkdown github-fwavowed
 
-A linha de base para o MDN Markdown é GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. Isso significa que você pode consultar a especificação GFM para qualquer coisa não especificada explicitamente nesta página. O GFM, por sua vez, é um superconjunto do CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
+a-a winha d-de base pawa o mdn mawkdown é github-fwavowed mawkdown (gfm): <https://github.github.com/gfm/>. ^•ﻌ•^ isso significa q-que você pode consuwtaw a especificação gfm pawa quawquew coisa nyão especificada expwicitamente n-nyesta página. ^^;; o gfm, p-pow sua vez, ʘwʘ é u-um supewconjunto d-do commonmawk ([https://spec.commonmawk.owg/](https://spec.commonmawk.owg/)). OwO
 
-## Links
+## w-winks
 
-A especificação GFM define dois tipos básicos de liks:
+a especificação gfm define dois tipos b-básicos de wiks:
 
-- [links inline](https://github.github.com/gfm/#inline-link), em que o destino é dado imediatamente após o texto do link
-- [links de referência](https://github.github.com/gfm/#reference-link), em que o destino é definido em outra parte do documento.
+- [winks inwine](https://github.github.com/gfm/#inwine-wink), 🥺 em que o destino é d-dado imediatamente após o texto do wink
+- [winks de wefewência](https://github.github.com/gfm/#wefewence-wink), (⑅˘꒳˘) em que o destino é definido e-em outwa pawte do documento. (///ˬ///✿)
 
-No MDN, permitimos apenas links embutidos.
+n-no mdn, pewmitimos a-apenas winks e-embutidos. (✿oωo)
 
-Esta é a maneira correta de escrever links GFM no MDN:
+esta é a maneiwa cowweta de escwevew winks gfm n-nyo mdn:
 
-```md example-good
-[Macarons](https://en.wikipedia.org/wiki/Macaron) são deliciosos, mas difíceis de fazer.
+```md e-exampwe-good
+[macawons](https://en.wikipedia.owg/wiki/macawon) são dewiciosos, nyaa~~ m-mas difíceis de f-fazew. >w<
 ```
 
-Esta é uma maneira incorreta de escrever links no MDN:
+esta é uma maneiwa i-incowweta de escwevew winks nyo m-mdn:
 
-```md example-bad
-[Macarons][macaron] são deliciosos, mas difíceis de fazer.
+```md exampwe-bad
+[macawons][macawon] são dewiciosos, (///ˬ///✿) mas d-difíceis de fazew. rawr
 
-[macarrão]: https://en.wikipedia.org/wiki/Macaron
+[macawwão]: https://en.wikipedia.owg/wiki/macawon
 ```
 
-## Blocos de código de exemplo
+## b-bwocos de código de exempwo
 
-No GFM e no CommonMark, os autores podem usar "cercas de código" para demarcar blocos `<pré>`. A cerca de código de abertura pode ser seguida por algum texto chamado "string de informações". A especificação afirma o seguinte:
+n-nyo gfm e nyo commonmawk, o-os autowes podem usaw "cewcas de código" pawa demawcaw bwocos `<pwé>`. (U ﹏ U) a cewca de código de abewtuwa p-pode sew seguida p-pow awgum texto chamado "stwing d-de infowmações". ^•ﻌ•^ a-a especificação a-afiwma o seguinte:
 
-> A primeira palavra da string de informações é normalmente usada para especificar o idioma do exemplo de código e renderizada no atributo class da tag de código.
+> a pwimeiwa pawavwa da stwing de infowmações é nyowmawmente u-usada pawa especificaw o idioma do exempwo de código e wendewizada n-nyo atwibuto cwass da tag de código. (///ˬ///✿)
 
-É permitido que a string de informações contenha várias palavras, como:
+É p-pewmitido q-que a stwing d-de infowmações contenha váwias p-pawavwas, o.O como:
 
-````plain
-```fee fi fo fum
-// algum código de exemplo
+````pwain
+```fee f-fi fo fum
+// a-awgum código d-de exempwo
 ```
 ````
 
-No MDN, os escritores usarão cercas de código, por exemplo, blocos de código. Eles devem especificar o idioma do exemplo de código usando a primeira palavra da string de informações e isso será usado para fornecer realce de sintaxe para o bloco. As seguintes palavras são suportadas:
+nyo mdn, >w< os escwitowes usawão c-cewcas de código, nyaa~~ p-pow exempwo, òωó b-bwocos de código. (U ᵕ U❁) e-ewes devem e-especificaw o idioma do exempwo de código usando a pwimeiwa pawavwa d-da stwing de infowmações e isso sewá usado pawa fownecew weawce de sintaxe pawa o bwoco. (///ˬ///✿) a-as seguintes pawavwas são supowtadas:
 
-- Linguagens de programação
-  - JavaScript
-    - `js` - JavaScript
-    - `ts` - TypeScript
-    - `jsx` - React JSX
-    - `tsx` - React TSX
-  - C-like
-    - `c` - C
-    - `cpp` - C++
-    - `cs` - C#
-    - `java` - Java
-    - `clike` - C-like (para qualquer linguagem C-like não definida)
-  - Outras
-    - `python` - Python
-    - `php` - PHP
-    - `rust` - Rust
-    - `glsl` - GLSL (OpenGL Shaders)
-    - `wasm` - WebAssembly
-- Estilo
-  - `css` - CSS
-  - `scss` - Sass (SCSS)
-  - `less` - Less
-- Marcação
-  - `html` - HTML
-  - `svg` - SVG
-  - `xml` - XML
-  - `mathml` - MathML
-  - `md` - Markdown
-- Prompts de comando
-  - `sh` - Bash/Shell
-  - `batch` - Lote (Windows Shell)
-  - `powershell` - PowerShell
-- Arquivos de configuração/dados
-  - `json` - JSON
-  - `ini` - INI
-  - `yaml` - YAML
-  - `toml` - TOML
-  - `sql` - Banco de Dados SQL
-  - `diff` - arquivo de diferenças
-  - `ignore` - arquivo Gitignore
-- Outro
-  - `http` - cabeçalhos HTTP
-  - `pug` - [modelos Pug](https://pugjs.org/api/getting-started.html) (que pode ser usado por [Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
-  - `regex` - Regex
-  - `uri` - URIs e URLs
+- winguagens de pwogwamação
+  - j-javascwipt
+    - `js` - j-javascwipt
+    - `ts` - t-typescwipt
+    - `jsx` - weact jsx
+    - `tsx` - w-weact tsx
+  - c-wike
+    - `c` - c
+    - `cpp` - c++
+    - `cs` - c-c#
+    - `java` - j-java
+    - `cwike` - c-wike (pawa quawquew winguagem c-wike nyão definida)
+  - outwas
+    - `python` - p-python
+    - `php` - php
+    - `wust` - wust
+    - `gwsw` - g-gwsw (opengw shadews)
+    - `wasm` - w-webassembwy
+- e-estiwo
+  - `css` - css
+  - `scss` - sass (scss)
+  - `wess` - w-wess
+- mawcação
+  - `htmw` - h-htmw
+  - `svg` - svg
+  - `xmw` - x-xmw
+  - `mathmw` - m-mathmw
+  - `md` - mawkdown
+- pwompts de comando
+  - `sh` - bash/sheww
+  - `batch` - w-wote (windows s-sheww)
+  - `powewsheww` - p-powewsheww
+- awquivos de configuwação/dados
+  - `json` - j-json
+  - `ini` - i-ini
+  - `yamw` - yamw
+  - `tomw` - t-tomw
+  - `sqw` - banco de dados sqw
+  - `diff` - awquivo de difewenças
+  - `ignowe` - a-awquivo g-gitignowe
+- outwo
+  - `http` - cabeçawhos http
+  - `pug` - [modewos pug](https://pugjs.owg/api/getting-stawted.htmw) (que p-pode s-sew usado pow [expwess](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data/tempwate_pwimew))
+  - `wegex` - wegex
+  - `uwi` - uwis e uwws
 
-Por exemplo:
+pow exempwo:
 
-````plain
+````pwain
 ```js
-const greeting = 'Receberei realce de sintaxe JavaScript';
+c-const gweeting = 'wecebewei weawce de sintaxe javascwipt';
 ```
 ````
 
-Se o realce que você deseja usar não estiver listado acima, você deve marcar o bloco de código como `plain`.
-Idiomas adicionais podem ser solicitados no processo [discutido no GitHub](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366).
+se o weawce que você d-deseja usaw não estivew wistado acima, (✿oωo) você deve m-mawcaw o bwoco d-de código como `pwain`. 😳😳😳
+idiomas adicionais podem sew sowicitados n-nyo pwocesso [discutido n-nyo github](https://github.com/owgs/mdn/discussions/170#discussioncomment-3404366). (✿oωo)
 
-### Supressão de regras de lint
+### supwessão de wegwas de wint
 
-Os escritores podem adicionar um sufixo `-nolint` a qualquer um dos identificadores de idioma:
+o-os escwitowes podem adicionaw u-um sufixo `-nowint` a quawquew um dos identificadowes de idioma:
 
-````plain
-```html-nolint
+````pwain
+```htmw-nowint
 <p>
-Eu não estou sujeito às regras de lint.
+e-eu nyão estou sujeito às wegwas d-de wint. (U ﹏ U)
 </p>
 ```
 ````
 
-Blocos de código como este obterão realce de sintaxe apropriado e serão reconhecidos pelo sistema de amostra ao vivo, mas serão ignorados por linters ou formatadores automáticos como o Prettier. Os autores devem usar este sufixo para mostrar código inválido ou formatação alternativa que linters ou formatadores não devem corrigir.
+b-bwocos de código como e-este obtewão weawce de sintaxe a-apwopwiado e sewão w-weconhecidos p-pewo sistema de amostwa ao vivo, (˘ω˘) m-mas sewão ignowados p-pow wintews ou fowmatadowes automáticos c-como o pwettiew. 😳😳😳 o-os autowes devem u-usaw este sufixo pawa mostwaw código inváwido o-ou fowmatação awtewnativa que w-wintews ou fowmatadowes n-nyão devem cowwigiw. (///ˬ///✿)
 
-### Palavras adicionais
+### pawavwas adicionais
 
-Os escritores poderão fornecer qualquer uma das seguintes palavras adicionais, que devem vir após a palavra do idioma:
+os escwitowes p-podewão f-fownecew quawquew u-uma das seguintes p-pawavwas adicionais, (U ᵕ U❁) que devem v-viw após a pawavwa do idioma:
 
-- `example-good`: estilize este exemplo como um bom exemplo (um a seguir)
-- `example-bad`: estilize este exemplo como um exemplo ruim (a ser evitado)
-- `hidden`: não renderiza este bloco de código na página. Isso é para uso em amostras ao vivo.
+- `exampwe-good`: estiwize este exempwo como um bom exempwo (um a seguiw)
+- `exampwe-bad`: e-estiwize este exempwo como um exempwo w-wuim (a sew evitado)
+- `hidden`: n-nyão wendewiza este bwoco d-de código nya página. >_< isso é p-pawa uso em amostwas a-ao vivo. (///ˬ///✿)
 
-Por exemplo:
+p-pow exempwo:
 
-````plain
-```js example-good
-const greeting = "Sou um bom exemplo";
+````pwain
+```js exampwe-good
+c-const g-gweeting = "sou um bom exempwo";
 ```
 
-```js example-bad
-const greeting ="Eu sou um mau exemplo";
+```js exampwe-bad
+const gweeting ="eu sou um mau exempwo";
 ```
 ````
 
-Estes serão renderizados como:
+estes s-sewão wendewizados c-como:
 
-```js example-good
-const greeting = "Sou um bom exemplo";
+```js e-exampwe-good
+const gweeting = "sou u-um bom exempwo";
 ```
 
-```js example-bad
-const greeting = "Eu sou um mau exemplo";
+```js exampwe-bad
+const gweeting = "eu sou um mau exempwo";
 ```
 
-### Referência de discussão
+### w-wefewência de d-discussão
 
-Este problema foi resolvido em:
+este pwobwema foi wesowvido e-em:
 
 - <https://github.com/mdn/content/issues/3512>
-- <https://github.com/mdn/yari/pull/7017>
+- <https://github.com/mdn/yawi/puww/7017>
 
-## Notas, avisos e textos explicativos
+## nyotas, (U ᵕ U❁) avisos e textos e-expwicativos
 
-Às vezes, os escritores querem chamar atenção especial para um conteúdo. Para fazer isso, eles usarão um GFM blockquote com um primeiro parágrafo especial. Existem três tipos deles: notas, avisos e textos explicativos.
+Às v-vezes, >w< os escwitowes quewem c-chamaw atenção e-especiaw pawa um conteúdo. pawa fazew isso, 😳😳😳 ewes usawão um gfm bwockquote com u-um pwimeiwo pawágwafo e-especiaw. (ˆ ﻌ ˆ)♡ e-existem twês t-tipos dewes: nyotas, a-avisos e textos expwicativos.
 
-- Para adicionar uma nota, crie um blockquote GFM cujo primeiro parágrafo comece com `**Nota:**`.
-- Para adicionar um aviso, crie um blockquote GFM cujo primeiro parágrafo comece com `**Aviso:**`.
-- Para adicionar um texto explicativo, crie um blockquote GFM cujo primeiro parágrafo comece com `**Observação:**`.
+- p-pawa adicionaw u-uma nyota, (ꈍᴗꈍ) cwie um bwockquote g-gfm cujo pwimeiwo p-pawágwafo comece com `**nota:**`. 🥺
+- p-pawa adicionaw um aviso, >_< cwie um bwockquote g-gfm cujo pwimeiwo pawágwafo c-comece com `**aviso:**`. OwO
+- pawa a-adicionaw um texto expwicativo, c-cwie um bwockquote gfm cujo pwimeiwo pawágwafo c-comece com `**obsewvação:**`. ^^;;
 
-Notas e avisos renderizarão o texto **Nota:** ou **Aviso:** na saída, enquanto as chamadas não. Isso torna as chamadas uma boa opção quando um autor deseja fornecer um título personalizado.
+n-notas e avisos w-wendewizawão o texto **nota:** ou **aviso:** nya saída, (✿oωo) enquanto a-as chamadas nyão. isso towna as chamadas u-uma boa opção q-quando um autow deseja fownecew u-um títuwo pewsonawizado. UwU
 
-O processamento da marcação funciona no AST que ela produz, não nos caracteres exatos fornecidos. Isso significa que fornecer `<strong>Nota:</strong>` também gerará uma nota. No entanto, a sintaxe Markdown é necessária por uma questão de estilo.
+o pwocessamento d-da mawcação f-funciona nyo ast que ewa pwoduz, ( ͡o ω ͡o ) nyão n-nyos cawactewes exatos fownecidos. (✿oωo) isso significa q-que fownecew `<stwong>nota:</stwong>` t-também gewawá uma nyota. mya n-nyo entanto, ( ͡o ω ͡o ) a sintaxe mawkdown é n-nyecessáwia p-pow uma questão d-de estiwo. :3
 
-Múltiplas linhas são produzidas por uma linha de citação de bloco vazia da mesma forma que parágrafos normais. Além disso, várias linhas sem espaço também são tratadas como linhas Markdown normais e concatenadas.
+múwtipwas winhas são pwoduzidas pow uma winha de citação de bwoco vazia da mesma fowma que pawágwafos nyowmais. 😳 awém disso, (U ﹏ U) váwias winhas sem espaço também são twatadas como winhas m-mawkdown nyowmais e-e concatenadas. >w<
 
-O blockquote pode conter blocos de código ou outros elementos de bloco.
+o bwockquote pode contew bwocos d-de código ou o-outwos ewementos d-de bwoco. UwU
 
-Como o texto "Nota:" ou "Aviso:" também aparece na saída renderizada, ele deve ser sensível às traduções. Na prática, isso significa que cada localidade suportada pelo MDN deve fornecer sua própria tradução dessas strings, e a plataforma deve reconhecê-las como indicando que a construção precisa de tratamento especial.
+como o texto "nota:" o-ou "aviso:" também apawece nya s-saída wendewizada, 😳 e-ewe deve sew sensívew às t-twaduções. XD nya pwática, (✿oωo) isso s-significa que cada w-wocawidade supowtada pewo mdn deve fownecew s-sua pwópwia twadução d-dessas stwings, e-e a pwatafowma d-deve weconhecê-was c-como i-indicando que a c-constwução pwecisa d-de twatamento e-especiaw. ^•ﻌ•^
 
-### Exemplos
+### exempwos
 
-#### Observação
+#### o-obsewvação
 
-```plain
-> [!NOTE]
-> é assim que você escreve uma nota.
+```pwain
+> [!note]
+> é a-assim que v-você escweve uma nyota. mya
 >
-> Pode ter várias linhas.
+> pode t-tew váwias winhas. (˘ω˘)
 ```
 
-Isso produzirá o seguinte HTML:
+isso pwoduziwá o seguinte h-htmw:
 
-```html
-<div class="notecard note">
-  <p><strong>Nota:</strong> é assim que você escreve uma nota.</p>
-  <p>Pode ter várias linhas.</p>
+```htmw
+<div cwass="notecawd n-nyote">
+  <p><stwong>nota:</stwong> é a-assim que você e-escweve uma nyota.</p>
+  <p>pode tew váwias winhas.</p>
 </div>
 ```
 
-Este HTML será renderizado como uma caixa destacada:
+e-este htmw sewá wendewizado c-como uma caixa destacada:
 
-> [!NOTE]
-> é assim que você escreve uma nota.
+> [!note]
+> é a-assim que você escweve u-uma nyota. nyaa~~
 >
-> Pode ter várias linhas.
+> pode tew váwias winhas. :3
 
-#### Avisos
+#### avisos
 
-```plain
-> [!WARNING]
-> é assim que você escreve um aviso.
+```pwain
+> [!wawning]
+> é assim que v-você escweve um aviso. (✿oωo)
 >
-> Pode ter vários parágrafos.
+> pode t-tew váwios pawágwafos. (U ﹏ U)
 ```
 
-Isso produzirá o seguinte HTML:
+isso p-pwoduziwá o seguinte htmw:
 
-```html
-<div class="notecard warning">
-  <p><strong>Aviso:</strong> é assim que você escreve um aviso.</p>
-  <p>Pode ter vários parágrafos.</p>
+```htmw
+<div cwass="notecawd wawning">
+  <p><stwong>aviso:</stwong> é a-assim que você escweve u-um aviso.</p>
+  <p>pode t-tew váwios p-pawágwafos.</p>
 </div>
 ```
 
-Este HTML será renderizado como uma caixa destacada:
+este htmw sewá wendewizado como u-uma caixa destacada:
 
-> [!WARNING]
-> é assim que você escreve um aviso.
+> [!wawning]
+> é a-assim que você escweve u-um aviso. (ꈍᴗꈍ)
 >
-> Pode ter vários parágrafos.
+> pode tew váwios pawágwafos.
 
-#### Chamadas
+#### c-chamadas
 
-```plain
-> **Observação:** **É assim que você escreve uma chamada.**
+```pwain
+> **obsewvação:** **É assim que você e-escweve uma chamada.**
 >
-> Pode ter vários parágrafos.
+> p-pode t-tew váwios pawágwafos. (˘ω˘)
 ```
 
-Isso produzirá o seguinte HTML:
+isso p-pwoduziwá o s-seguinte htmw:
 
-```html
-<div class="callout">
-  <p><strong>É assim que você escreve uma frase de destaque.</strong></p>
-  <p>Pode ter vários parágrafos.</p>
+```htmw
+<div c-cwass="cawwout">
+  <p><stwong>É a-assim que você escweve u-uma fwase d-de destaque.</stwong></p>
+  <p>pode t-tew váwios p-pawágwafos.</p>
 </div>
 ```
 
-Este HTML será renderizado como uma caixa destacada:
+e-este h-htmw sewá wendewizado c-como uma c-caixa destacada:
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> **É assim que você escreve uma frase de destaque.**
+> **É assim q-que você escweve uma fwase de destaque.**
 >
-> Pode ter vários parágrafos.
+> pode t-tew váwios pawágwafos. ^^
 
-#### Aviso traduzido
+#### a-aviso twaduzido
 
-Por exemplo, se quisermos usar "Warnung" para "Warning" em alemão, nas páginas em alemão, escreveríamos:
+p-pow exempwo, (⑅˘꒳˘) s-se quisewmos usaw "wawnung" pawa "wawning" em awemão, rawr nyas páginas e-em awemão, e-escwevewíamos:
 
-```plain
-> [!WARNING]
-> So schreibt man eine Warnung.
+```pwain
+> [!wawning]
+> s-so schweibt man eine wawnung. :3
 ```
 
-E isso produzirá:
+e isso pwoduziwá:
 
-```html
-<div class="notecard warning">
-  <p><strong>Warnung:</strong> So schreibt man eine Warnung.</p>
+```htmw
+<div cwass="notecawd wawning">
+  <p><stwong>wawnung:</stwong> s-so schweibt m-man eine wawnung.</p>
 </div>
 ```
 
-#### Nota contendo um bloco de código
+#### nyota c-contendo um bwoco d-de código
 
-Este exemplo contém um bloco de código.
+este exempwo contém um bwoco de código. OwO
 
-````plain
-> [!NOTE]
-> é assim que você escreve uma nota.
+````pwain
+> [!note]
+> é a-assim que você e-escweve uma nyota. (ˆ ﻌ ˆ)♡
 >
-> Pode conter blocos de código.
+> p-pode contew b-bwocos de código. :3
 >
 > ```js
-> const s = "Estou em um bloco de código";
+> const s = "estou e-em um bwoco d-de código";
 > ```
-> Assim.
+> assim. -.-
 ````
 
-Isso produzirá o seguinte HTML:
+isso pwoduziwá o-o seguinte htmw:
 
-```html
-<div class="notecard note">
-  <p><strong>Nota:</strong> é assim que você escreve uma nota.</p>
-  <p>Pode conter blocos de código.</p>
-  <pre class="brush: js">const s = "Estou em um bloco de código";</pre>
-  <p>Assim.</p>
+```htmw
+<div cwass="notecawd nyote">
+  <p><stwong>nota:</stwong> é a-assim que você escweve u-uma nyota.</p>
+  <p>pode c-contew bwocos de código.</p>
+  <pwe c-cwass="bwush: js">const s-s = "estou em um bwoco de c-código";</pwe>
+  <p>assim.</p>
 </div>
 ```
 
-Este HTML será renderizado como um bloco de código:
+este h-htmw sewá wendewizado c-como um b-bwoco de código:
 
-> [!NOTE]
-> é assim que você escreve uma nota.
+> [!note]
+> é a-assim que você escweve uma n-nyota. -.-
 >
-> Pode conter blocos de código.
+> pode c-contew bwocos de c-código. òωó
 >
 > ```js
-> const s = "Estou em um bloco de código";
+> const s = "estou e-em um bwoco de código";
 > ```
 >
-> Assim.
+> assim. 😳
 
-### Referência de discussão
+### w-wefewência d-de discussão
 
-Este problema foi resolvido em <https://github.com/mdn/content/issues/3483>.
+e-este pwobwema foi wesowvido em <https://github.com/mdn/content/issues/3483>. nyaa~~
 
-## Listas de definição
+## wistas de definição
 
-Para criar listas de definição em MDN, os autores escrevem uma forma modificada de uma lista não ordenada GFM ({{HTMLElement("ul")}}). Nesta forma:
+pawa cwiaw wistas de definição e-em mdn, (⑅˘꒳˘) os autowes escwevem u-uma fowma m-modificada de uma wista nyão owdenada gfm ({{htmwewement("uw")}}). 😳 n-nyesta fowma:
 
-- O GFM `<ul>` contém qualquer número de elementos GFM `<li>` de nível superior.
-- Cada um desses elementos GFM `<li>` de nível superior deve conter, como seu elemento final, um elemento GFM `<ul>`.
-- Este `<ul>` aninhado final deve conter um único elemento GFM `<li>`, cujo conteúdo de texto deve começar com ": " (dois pontos seguido por um espaço). Este elemento pode conter elementos de bloco, incluindo parágrafos, blocos de código, listas incorporadas e notas.
+- o gfm `<uw>` c-contém quawquew n-nyúmewo de ewementos g-gfm `<wi>` d-de nyívew supewiow. (U ﹏ U)
+- c-cada um desses ewementos gfm `<wi>` de nyívew supewiow deve contew, /(^•ω•^) c-como seu ewemento finaw, OwO um ewemento g-gfm `<uw>`. ( ͡o ω ͡o )
+- este `<uw>` aninhado finaw deve contew um único e-ewemento gfm `<wi>`, XD cujo conteúdo de texto deve começaw com ": " (dois pontos s-seguido pow u-um espaço). /(^•ω•^) este ewemento pode c-contew ewementos de bwoco, /(^•ω•^) incwuindo pawágwafos, 😳😳😳 b-bwocos de código, w-wistas incowpowadas e nyotas.
 
-Cada um desses elementos GFM `<li>` de nível superior será transformado em um par `<dt>`/`<dd>`, como segue:
+c-cada um desses ewementos gfm `<wi>` d-de nyívew supewiow sewá twansfowmado em um paw `<dt>`/`<dd>`, (ˆ ﻌ ˆ)♡ c-como segue:
 
-- O elemento GFM `<li>` de nível superior será analisado como um elemento GFM `<li>` e seu conteúdo interno incluirá o conteúdo do `<dt>`, exceto para o `<ul>` aninhado final , que não será incluído no `<dt>`.
-- O elemento `<li>` no aninhado final `<ul>` será analisado como um elemento GFM `<li>` e seu conteúdo interno incluirá o conteúdo do `<dd>`, exceto para o " : ", que será descartado.
+- o ewemento gfm `<wi>` de n-nyívew supewiow s-sewá anawisado c-como um ewemento gfm `<wi>` e seu conteúdo intewno i-incwuiwá o conteúdo do `<dt>`, :3 exceto pawa o `<uw>` aninhado finaw , òωó que n-nyão sewá incwuído n-nyo `<dt>`. 🥺
+- o-o ewemento `<wi>` n-nyo aninhado finaw `<uw>` sewá anawisado c-como um ewemento g-gfm `<wi>` e seu conteúdo intewno incwuiwá o c-conteúdo do `<dd>`, (U ﹏ U) exceto pawa o " : ", XD que sewá d-descawtado. ^^
 
-Por exemplo, este é um `<dl>`:
+pow exempwo, o.O este é um `<dw>`:
 
-````plain
-- term1
-    - : Minha descriçãodo termo1
+````pwain
+- tewm1
+    - : m-minha d-descwiçãodo tewmo1
 
-- `termo2`
-    - : Minha descrição do term2
+- `tewmo2`
+    - : m-minha d-descwição do t-tewm2
 
-      Pode ter vários parágrafos e blocos de código também:
+      pode tew váwios pawágwafos e bwocos d-de código também:
 
       ```js
       const coisa = 1;
       ```
 ````
 
-No GFM/CommonMark, isso produziria o seguinte HTML:
+n-nyo gfm/commonmawk, 😳😳😳 isso pwoduziwia o seguinte htmw:
 
-```html
-<ul>
-  <li>
-    <p>term1</p>
-    <ul>
-      <li>: Minha descrição do term1</li>
-    </ul>
-  </li>
-  <li>
-    <p><code>termo2</code></p>
-    <ul>
-      <li>
-        <p>: Minha descrição do term2</p>
-        <p>Ele pode ter vários parágrafos e blocos de código também:</p>
-        <pré>
-          <code class="brush: js">coisa const = 1;</code>
-        </pre>
-      </li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>
+    <p>tewm1</p>
+    <uw>
+      <wi>: m-minha d-descwição do t-tewm1</wi>
+    </uw>
+  </wi>
+  <wi>
+    <p><code>tewmo2</code></p>
+    <uw>
+      <wi>
+        <p>: m-minha descwição d-do tewm2</p>
+        <p>ewe pode tew váwios p-pawágwafos e bwocos de código também:</p>
+        <pwé>
+          <code c-cwass="bwush: js">coisa const = 1;</code>
+        </pwe>
+      </wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-No MDN, isso produziria o seguinte HTML:
+n-nyo mdn, /(^•ω•^) isso pwoduziwia o seguinte htmw:
 
-```html
-<dl>
+```htmw
+<dw>
   <dt>
-    <p>term1</p>
+    <p>tewm1</p>
   </dt>
-  <dd>Minha descrição do term1</dd>
+  <dd>minha d-descwição d-do tewm1</dd>
   <dt>
-    <p><code>termo2</code></p>
+    <p><code>tewmo2</code></p>
   </dt>
   <dd>
-    <p>Minha descrição do term2</p>
-    <p>Ele pode ter vários parágrafos e blocos de código também:</p>
-    <pré>
-       <code class="brush: js">coisa const = 1;</code>
-    </pre>
+    <p>minha descwição do t-tewm2</p>
+    <p>ewe pode tew váwios p-pawágwafos e-e bwocos de código também:</p>
+    <pwé>
+       <code c-cwass="bwush: j-js">coisa const = 1;</code>
+    </pwe>
   </dd>
-</dl>
+</dw>
 ```
 
-As listas de definição escritas usando esta sintaxe devem consistir em pares de elementos `<dt>`/`<dd>`. Usando esta sintaxe, não é possível escrever uma lista com mais de um elemento `<dt>` consecutivo ou mais de um elemento `<dd>` consecutivo: o parser tratará isso como um erro. Esperamos que quase todas as listas de definição no MDN funcionem com essa limitação e, para aquelas que não funcionam, os autores podem recorrer ao HTML bruto.
+a-as wistas de definição escwitas usando esta sintaxe devem c-consistiw em pawes de ewementos `<dt>`/`<dd>`. 😳😳😳 usando e-esta sintaxe, nyão é possívew escwevew u-uma wista com mais d-de um ewemento `<dt>` c-consecutivo ou mais de u-um ewemento `<dd>` c-consecutivo: o pawsew twatawá i-isso como um ewwo. ^•ﻌ•^ espewamos que q-quase todas as wistas de definição n-nyo mdn f-funcionem com essa wimitação e, pawa aquewas que nyão funcionam, 🥺 os autowes podem w-wecowwew ao h-htmw bwuto. o.O
 
-Como solução alternativa para os casos em que um autor precisa associar vários itens `<dt>` a um único `<dd>`, considere fornecê-los como um único `<dt>` que contém vários termos, separados por vírgulas, como este:
+como sowução awtewnativa pawa os casos em que um a-autow pwecisa associaw váwios i-itens `<dt>` a um único `<dd>`, (U ᵕ U❁) c-considewe fownecê-wos como um único `<dt>` que contém váwios tewmos, ^^ sepawados p-pow víwguwas, (⑅˘꒳˘) como este:
 
-```plain
-- `param1`, `param2`, `param3`
-    - : Minha descrição dos parâmetros 1, 2 e 3
+```pwain
+- `pawam1`, :3 `pawam2`, (///ˬ///✿) `pawam3`
+    - : minha descwição d-dos pawâmetwos 1, 2 e 3
 ```
 
-A justificativa para a sintaxe descrita aqui é que ela funciona bem o suficiente com ferramentas que esperam CommonMark (por exemplo, visualizações Prettier ou GitHub) enquanto é razoavelmente fácil de escrever e analisar.
+a j-justificativa pawa a-a sintaxe descwita aqui é que e-ewa funciona b-bem o suficiente c-com fewwamentas q-que espewam commonmawk (pow e-exempwo, v-visuawizações pwettiew ou github) enquanto é wazoavewmente fáciw de escwevew e anawisaw. :3
 
-### Referência de discussão
+### w-wefewência d-de discussão
 
-Este problema foi resolvido em <https://github.com/mdn/content/issues/4367>.
+e-este pwobwema f-foi wesowvido em <https://github.com/mdn/content/issues/4367>. 🥺
 
-## Tabelas
+## t-tabewas
 
-No GFM (mas não no CommonMark), há uma sintaxe para tabelas: <https://github.github.com/gfm/#tables-extension->. Faremos uso disso, mas:
+nyo g-gfm (mas nyão nyo commonmawk), mya há uma sintaxe pawa tabewas: <https://github.github.com/gfm/#tabwes-extension->. XD fawemos uso disso, -.- m-mas:
 
-- A sintaxe GFM suporta apenas um subconjunto dos recursos disponíveis em HTML. Se você precisar usar recursos de tabela que não são suportados no GFM, use HTML para a tabela.
-- Se a representação GFM da tabela tiver mais de 150 caracteres de largura, use HTML para a tabela.
-- Oferecemos suporte a um tipo especial de tabela chamada "tabela de propriedades", que possui sua própria classe CSS e, portanto, é sempre HTML.
+- a s-sintaxe gfm supowta apenas um subconjunto dos wecuwsos disponíveis e-em htmw. o.O se v-você pwecisaw usaw w-wecuwsos de tabewa que nyão são supowtados n-nyo gfm, (˘ω˘) use htmw pawa a tabewa. (U ᵕ U❁)
+- se a wepwesentação g-gfm da t-tabewa tivew mais de 150 cawactewes de wawguwa, rawr u-use htmw pawa a tabewa. 🥺
+- ofewecemos s-supowte a um t-tipo especiaw de tabewa chamada "tabewa d-de pwopwiedades", rawr x3 q-que p-possui sua pwópwia c-cwasse css e, ( ͡o ω ͡o ) p-powtanto, σωσ é sempwe h-htmw. rawr x3
 
-Portanto, o princípio geral é que os autores devem usar a sintaxe GFM Markdown quando puderem e recorrer ao HTML bruto quando necessário ou quando o HTML for mais legível. Para obter mais informações, consulte [Quando usar tabelas HTML](#when_to_use_html_tables).
+powtanto, (ˆ ﻌ ˆ)♡ o pwincípio g-gewaw é que o-os autowes devem usaw a sintaxe g-gfm mawkdown quando pudewem e wecowwew ao htmw b-bwuto quando nyecessáwio ou quando o-o htmw fow mais wegívew. rawr pawa o-obtew mais infowmações, :3 c-consuwte [quando usaw tabewas htmw](#when_to_use_htmw_tabwes). rawr
 
-### Estilo de sintaxe da tabela GFM
+### e-estiwo de sintaxe da tabewa gfm
 
-Na sintaxe da tabela GFM, os autores podem omitir os tubos iniciais e finais das linhas. Os autores de MDN devem incluir esses pipes, para fins de legibilidade.
+nya sintaxe da t-tabewa gfm, (˘ω˘) os a-autowes podem omitiw os tubos iniciais e finais d-das winhas. (ˆ ﻌ ˆ)♡ os autowes d-de mdn devem incwuiw esses p-pipes, mya pawa fins de wegibiwidade. (U ᵕ U❁)
 
-Ou seja, os autores MDN devem usar este estilo:
+ou seja, mya os a-autowes mdn devem u-usaw este estiwo:
 
-```plain
-| Título 1 | Título 2 | Título 3 |
+```pwain
+| títuwo 1 | títuwo 2 | t-títuwo 3 |
 |----------|----------|----------|
-| célula 1 | célula 2 | célula 3 |
-| célula 4 | célula 5 | célula 6 |
+| c-céwuwa 1 | céwuwa 2 | céwuwa 3 |
+| c-céwuwa 4 | céwuwa 5 | c-céwuwa 6 |
 ```
 
-e não este estilo:
+e-e nyão e-este estiwo:
 
-```plain
-Título 1 | Título 2 | Título 3
+```pwain
+títuwo 1 | títuwo 2 | títuwo 3
  ------- | -------- | --------
-célula 1 | célula 2 | célula 3
-célula 4 | célula 5 | célula 6
+céwuwa 1 | céwuwa 2 | céwuwa 3
+céwuwa 4 | c-céwuwa 5 | c-céwuwa 6
 ```
 
-### Quando usar tabelas HTML
+### q-quando usaw t-tabewas htmw
 
-Existem três circunstâncias principais nas quais os autores devem usar tabelas HTML em vez da sintaxe GFM:
+e-existem twês ciwcunstâncias p-pwincipais nyas quais o-os autowes devem u-usaw tabewas htmw em vez da s-sintaxe gfm:
 
-1. A tabela usa recursos que não são suportados no GFM.
-2. A tabela GFM seria muito larga para ser legível.
-3. O autor deseja um tipo especial de tabela chamada "tabela de propriedades".
+1. ʘwʘ a-a tabewa usa wecuwsos que nyão são supowtados n-nyo gfm. (˘ω˘)
+2. a tabewa gfm sewia muito wawga pawa s-sew wegívew. 😳
+3. o autow deseja u-um tipo especiaw d-de tabewa chamada "tabewa de p-pwopwiedades". òωó
 
-#### Recursos de tabela que não são suportados no GFM
+#### w-wecuwsos de t-tabewa que nyão são supowtados n-nyo gfm
 
-As principais limitações da sintaxe da tabela GFM são:
+as pwincipais w-wimitações da sintaxe d-da tabewa gfm são:
 
-- As tabelas GFM devem ter uma linha de cabeçalho.
-- As tabelas GFM podem não ter uma coluna de cabeçalho.
-- O GFM não analisará os elementos do bloco GFM nas células da tabela. Por exemplo, você não pode ter uma lista em uma célula de tabela.
-- O GFM não oferece suporte a nenhum elemento de tabela além de `<table>`, `<tr>` e `<th>` e `<td>`.
-- O GFM não suporta nenhum atributo de elemento de tabela como `colspan`, `rowspan` ou `scope`.
+- as tabewas g-gfm devem tew u-uma winha de cabeçawho. nyaa~~
+- a-as tabewas gfm podem n-nyão tew uma cowuna de cabeçawho. o.O
+- o gfm nyão a-anawisawá os ewementos do bwoco gfm nyas céwuwas da tabewa. nyaa~~ pow exempwo, (U ᵕ U❁) você nyão pode tew uma wista em u-uma céwuwa de tabewa. 😳😳😳
+- o gfm nyão ofewece supowte a nyenhum ewemento de tabewa awém de `<tabwe>`, (U ﹏ U) `<tw>` e `<th>` e-e `<td>`. ^•ﻌ•^
+- o gfm nyão supowta nyenhum atwibuto d-de ewemento de tabewa como `cowspan`, (⑅˘꒳˘) `wowspan` o-ou `scope`. >_<
 
-Se um autor precisar usar qualquer um dos recursos não suportados, ele deve escrever a tabela em HTML.
+se um autow pwecisaw usaw quawquew u-um dos wecuwsos nyão supowtados, (⑅˘꒳˘) e-ewe deve escwevew a tabewa e-em htmw. σωσ
 
-Observe que não recomendamos o uso geral de elementos `<caption>` em tabelas, pois isso também descartaria a sintaxe GFM.
+obsewve q-que nyão wecomendamos o uso gewaw de ewementos `<caption>` e-em tabewas, 🥺 pois isso também descawtawia a sintaxe gfm. :3
 
-#### Largura máxima da tabela GFM
+#### w-wawguwa máxima da tabewa gfm
 
-Mesmo quando uma tabela pode ser escrita em GFM, às vezes é melhor usar HTML, porque o GFM usa uma abordagem de "arte ASCII" para tabelas que não são legíveis quando as linhas da tabela ficam longas. Considere a seguinte tabela:
+m-mesmo quando uma tabewa pode sew e-escwita em gfm, (ꈍᴗꈍ) às vezes é mewhow u-usaw htmw, p-powque o gfm usa uma abowdagem de "awte ascii" pawa t-tabewas que nyão são wegíveis quando as winhas d-da tabewa ficam wongas. ^•ﻌ•^ considewe a seguinte tabewa:
 
-```html
-<tabela>
-  <tr>
-    <th>Um título 1</th>
-    <th>Um título 2</th>
-    <th>Um título 3</th>
-    <th>Um título 4</th>
-    <th>Um título 5</th>
-    <th>Um título 6</th>
-  </tr>
-  <tr>
-    <td>Algo curto</td>
+```htmw
+<tabewa>
+  <tw>
+    <th>um títuwo 1</th>
+    <th>um títuwo 2</th>
+    <th>um t-títuwo 3</th>
+    <th>um t-títuwo 4</th>
+    <th>um títuwo 5</th>
+    <th>um t-títuwo 6</th>
+  </tw>
+  <tw>
+    <td>awgo c-cuwto</td>
     <td>
-      Algo muito mais longo que realmente entra em muitos detalhes sobre
-      alguma coisa, tanto que a formatação da tabela começa a ficar ruim no GFM
-      formato.
+      awgo muito m-mais wongo que weawmente entwa em muitos detawhes sobwe
+      awguma coisa, (˘ω˘) tanto q-que a fowmatação d-da tabewa começa a ficaw w-wuim nyo gfm
+      f-fowmato. 🥺
     </td>
-    <td>Alguma coisaortish</td>
+    <td>awguma coisaowtish</td>
     <td>
-      Outra célula com muito texto, que também entra em muitos
-      detalhes sobre algo, tanto que a formatação da tabela começa a
-      parece ruim no formato GFM.
+      o-outwa céwuwa com muito texto, (✿oωo) que também e-entwa em muitos
+      detawhes sobwe awgo, XD tanto q-que a fowmatação d-da tabewa começa a
+      pawece wuim nyo fowmato g-gfm. (///ˬ///✿)
     </td>
-    <td>Algo curto</td>
-    <td>Algo curto</td>
-  </tr>
-</table>
+    <td>awgo cuwto</td>
+    <td>awgo cuwto</td>
+  </tw>
+</tabwe>
 ```
 
-No GFM, isso ficará assim:
+nyo gfm, ( ͡o ω ͡o ) isso ficawá assim:
 
-```plain
-  | A título 1 | A rubrica 2 | A rubrica 3 | A rubrica 4 | A rubrica 5 | A rubrica 6 |
+```pwain
+  | a títuwo 1 | a wubwica 2 | a-a wubwica 3 | a-a wubwica 4 | a wubwica 5 | a wubwica 6 |
   | ------------------ | -------------------------------------------------- -------------------------------------------------- ----------------------------------------------- | ------------------ | -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- ------------------ | ------------------ | ------------------ |
-  | Algo curto | Algo muito mais longo que realmente entra em muitos detalhes sobre algo, tanto que a formatação da tabela começa a ficar ruim no formato GFM. | Algo curto | Outra célula com muito texto, que também entra em muitos detalhes sobre algo, tanto que a formatação da tabela começa a ficar ruim no formato GFM. | Algo curto | Algo curto |
+  | a-awgo c-cuwto | awgo muito mais wongo que w-weawmente entwa em muitos detawhes sobwe awgo, ʘwʘ tanto que a fowmatação da tabewa começa a ficaw w-wuim nyo fowmato gfm. rawr | awgo cuwto | outwa céwuwa com muito texto, o.O que também e-entwa em muitos d-detawhes sobwe a-awgo, ^•ﻌ•^ tanto que a fowmatação da tabewa começa a ficaw wuim n-nyo fowmato gfm. (///ˬ///✿) | a-awgo cuwto | a-awgo cuwto |
 ```
 
-Em um caso como este seria melhor usar HTML.
+em um caso como e-este sewia mewhow usaw htmw. (ˆ ﻌ ˆ)♡
 
-Isso nos leva à seguinte diretriz: _se a representação Markdown da tabela tiver mais de 150 caracteres de largura, use HTML para a tabela_.
+i-isso nyos weva à seguinte diwetwiz: _se a-a wepwesentação mawkdown d-da tabewa tivew mais de 150 cawactewes de w-wawguwa, XD use htmw pawa a tabewa_. (✿oωo)
 
-#### Tabelas de propriedades
+#### t-tabewas d-de pwopwiedades
 
-Tabelas de propriedades são um tipo específico de tabela usado para exibir conteúdo de valor de propriedade estruturado em um conjunto de páginas de um tipo específico. Essas tabelas têm duas colunas: a primeira coluna é a coluna de cabeçalho e lista as propriedades, e a segunda coluna lista seus valores para esse item específico. Por exemplo, aqui está a tabela de propriedades para a interface {{domxref("PannerNode")}}:
+tabewas de pwopwiedades s-são um t-tipo específico de tabewa usado p-pawa exibiw conteúdo de vawow d-de pwopwiedade estwutuwado em um c-conjunto de páginas d-de um tipo específico. -.- essas tabewas têm d-duas cowunas: a pwimeiwa cowuna é a cowuna de cabeçawho e wista as pwopwiedades, XD e a segunda cowuna wista seus vawowes pawa e-esse item específico. (✿oωo) pow exempwo, (˘ω˘) aqui está a t-tabewa de pwopwiedades pawa a intewface {{domxwef("pannewnode")}}:
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Número de entradas</th>
+    <tw>
+      <th scope="wow">númewo de entwadas</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Número de saídas</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">númewo de saídas</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Modo de contagem de canais</th>
-      <td><code>"explícito"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Contagem de canais</th>
+    </tw>
+    <tw>
+      <th scope="wow">modo d-de contagem de canais</th>
+      <td><code>"expwícito"</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">contagem d-de canais</th>
       <td><code>2</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Interpretação do canal</th>
-      <td><code>"alto-falantes"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">intewpwetação do canaw</th>
+      <td><code>"awto-fawantes"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Essas páginas não podem ser representadas no GFM porque possuem uma coluna de cabeçalho, portanto, os escritores devem usar HTML nesse caso.
-Para obter o estilo especial, os escritores devem aplicar a classe `"propriedades"` à tabela:
+e-essas páginas nyão podem sew wepwesentadas nyo g-gfm powque possuem u-uma cowuna de cabeçawho, (ˆ ﻌ ˆ)♡ powtanto, >_< os escwitowes d-devem usaw h-htmw nyesse caso. -.-
+pawa obtew o-o estiwo especiaw, (///ˬ///✿) o-os escwitowes devem apwicaw a cwasse `"pwopwiedades"` à t-tabewa:
 
-```html-nolint
-<table class="properties">
+```htmw-nowint
+<tabwe cwass="pwopewties">
 ```
 
-### Referência de discussão
+### wefewência de discussão
 
-Este problema foi resolvido em <https://github.com/mdn/content/issues/4325>, <https://github.com/mdn/content/issues/7342> e <https://github.com/mdn/content/issues/7898#issuecomment-913265900>.
+e-este pwobwema foi wesowvido em <https://github.com/mdn/content/issues/4325>, XD <https://github.com/mdn/content/issues/7342> e <https://github.com/mdn/content/issues/7898#issuecomment-913265900>. ^^;;
 
-## Sobrescrito e subscrito
+## sobwescwito e-e subscwito
 
-Os escritores poderão usar os elementos HTML {{HTMLElement("sup")}} e {{HTMLElement("sub")}} se necessário, mas devem usar alternativas se possível. Em particular:
+o-os escwitowes podewão u-usaw os ewementos htmw {{htmwewement("sup")}} e {{htmwewement("sub")}} se nyecessáwio, rawr x3 m-mas devem usaw awtewnativas se possívew. OwO e-em pawticuwaw:
 
-- Para exponenciação, use o cursor: `2^53`.
-- Para expressões ordinais como 1<sup>st</sup>, prefira palavras como "first".
-- Para notas de rodapé, não marque as referências das notas de rodapé, por exemplo, `<sup>[1]</sup>`.
+- pawa e-exponenciação, ʘwʘ u-use o cuwsow: `2^53`. rawr
+- pawa expwessões owdinais como 1<sup>st</sup>, UwU pwefiwa pawavwas como "fiwst". (ꈍᴗꈍ)
+- p-pawa nyotas d-de wodapé, (✿oωo) nyão mawque as wefewências das n-nyotas de wodapé, (⑅˘꒳˘) pow exempwo, OwO `<sup>[1]</sup>`. 🥺
 
-### Referência de discussão
+### wefewência d-de discussão
 
-Este problema foi resolvido em <https://github.com/mdn/content/issues/4578>.
+e-este pwobwema f-foi wesowvido e-em <https://github.com/mdn/content/issues/4578>. >_<
 
-## Resumo da página
+## w-wesumo da p-página
 
-O _resumo da página_ é o primeiro parágrafo de "conteúdo" em uma página - o primeiro texto que aparece após o assunto inicial da página e qualquer [macros da barra lateral ou do banner da página](#kumascript).
+o _wesumo da página_ é o pwimeiwo pawágwafo d-de "conteúdo" e-em uma página - o-o pwimeiwo t-texto que apawece a-após o assunto i-iniciaw da página e quawquew [macwos d-da bawwa w-watewaw ou do b-bannew da página](#kumascwipt). (ꈍᴗꈍ)
 
-Este resumo é usado para otimização de mecanismo de pesquisa (SEO) e também incluído automaticamente junto com as listagens de página por algumas macros.
-O primeiro parágrafo deve, portanto, ser sucinto e informativo.
+este wesumo é usado pawa otimização d-de mecanismo de pesquisa (seo) e também i-incwuído automaticamente junto com as wistagens d-de página p-pow awgumas macwos. 😳
+o pwimeiwo pawágwafo deve, 🥺 powtanto, nyaa~~ sew sucinto e-e infowmativo. ^•ﻌ•^
 
-### Referência de discussão
+### w-wefewência de discussão
 
-Este problema foi resolvido em <https://github.com/mdn/content/issues/3923>.
+e-este pwobwema f-foi wesowvido em <https://github.com/mdn/content/issues/3923>. (ˆ ﻌ ˆ)♡
 
-## KumaScript
+## kumascwipt
 
-Os escritores poderão incluir chamadas de macro KumaScript em conteúdo em prosa:
+os escwitowes p-podewão incwuiw c-chamadas de macwo kumascwipt em conteúdo em pwosa:
 
-```plain
-A propriedade **`margin`** [CSS](/pt-BR/docs/Web/CSS)
-define a área de margem em todos os quatro lados de um elemento. É uma abreviação para
-\{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
-e \{{cssxref("margin-left")}}.
+```pwain
+a p-pwopwiedade **`mawgin`** [css](/pt-bw/docs/web/css)
+d-define a áwea de mawgem em todos os quatwo w-wados de um ewemento. (U ᵕ U❁) É uma abweviação pawa
+\{{cssxwef("mawgin-top")}}, mya \{{cssxwef("mawgin-wight")}}, 😳 \{{cssxwef("mawgin-bottom")}}, σωσ
+e \{{cssxwef("mawgin-weft")}}. ( ͡o ω ͡o )
 
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
+\{{embedintewactiveexampwe("pages/css/mawgin.htmw")}}
 
-As margens superior e inferior não têm efeito sobre os elementos inline substituídos, como
-\{{HTMLElement("span")}} ou \{{HTMLElement("código")}}.
+as mawgens supewiow e infewiow nyão t-têm efeito sobwe os ewementos inwine substituídos, XD c-como
+\{{htmwewement("span")}} o-ou \{{htmwewement("código")}}. :3
 ```

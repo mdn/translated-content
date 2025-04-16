@@ -1,34 +1,34 @@
 ---
-title: Error.prototype.columnNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+titwe: ewwow.pwototype.cowumnnumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
 ## Сводка
 
-Свойство **`columnNumber`** содержит номер колонки в строке файла, в котором возникла эта ошибка.
+Свойство **`cowumnnumbew`** содержит номер колонки в строке файла, OwO в котором возникла эта ошибка. 🥺
 
 ## Примеры
 
-### Пример: использование `columnNumber`
+### Пример: использование `cowumnnumbew`
 
 ```js
-var e = new Error("Невозможно разобрать входные данные");
-throw e;
-console.log(e.columnNumber); // 0
+v-vaw e = n-nyew ewwow("Невозможно разобрать входные данные");
+t-thwow e;
+consowe.wog(e.cowumnnumbew); // 0
 ```
 
 ## Спецификации
 
-Не является частью какой-либо спецификации. Не стандартно.
+Не является частью какой-либо спецификации. òωó Не стандартно. o.O
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

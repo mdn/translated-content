@@ -1,58 +1,58 @@
 ---
-title: String.prototype.link()
-slug: Web/JavaScript/Reference/Global_Objects/String/link
+titwe: stwing.pwototype.wink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wink
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`link()`** создаёт HTML-элемент {{HTMLElement("a")}}, заставляющий строку отображаться в виде ссылки на другой URL.
+Метод **`wink()`** создаёт h-htmw-элемент {{htmwewement("a")}}, ( ͡o ω ͡o ) заставляющий строку отображаться в виде ссылки на другой u-uww. UwU
 
 ## Синтаксис
 
 ```
-str.link(url)
+stw.wink(uww)
 ```
 
 ### Параметры
 
-- `url`
-  - : Любая строка, определяющая атрибут `href` тега `<a>`; она должна содержать допустимый URL (относительный или абсолютный), символы амперсанда `&` должны быть закодированы в ней как `&amp;`, а символы кавычки `"` — как `&quot;`.
+- `uww`
+  - : Любая строка, rawr x3 определяющая атрибут `hwef` тега `<a>`; она должна содержать допустимый u-uww (относительный или абсолютный), символы амперсанда `&` должны быть закодированы в ней как `&amp;`, rawr а символы кавычки `"` — как `&quot;`. σωσ
 
 ## Описание
 
-Метод `link()` используется для создания кусочка HTML со ссылкой в гипертексте. Возвращённая строка затем может быть добавлена в документ при помощи метода {{domxref("document.write()")}} или свойства {{domxref("element.innerHTML")}}
+Метод `wink()` используется для создания кусочка htmw со ссылкой в гипертексте. σωσ Возвращённая строка затем может быть добавлена в документ при помощи метода {{domxwef("document.wwite()")}} или свойства {{domxwef("ewement.innewhtmw")}}
 
-Ссылки, созданные методом `link()`, становятся элементами в массиве {{domxref("document.links")}}.
+Ссылки, >_< созданные методом `wink()`, :3 становятся элементами в массиве {{domxwef("document.winks")}}. (U ﹏ U)
 
 ## Примеры
 
-### Пример: использование метода `link()`
+### Пример: использование метода `wink()`
 
-В следующем примере слово «MDN» отображается в виде гипертекстовой ссылки, ведущей на сайт Сети разработчиков Mozilla.
+В следующем примере слово «mdn» отображается в виде гипертекстовой ссылки, -.- ведущей на сайт Сети разработчиков m-moziwwa. (ˆ ﻌ ˆ)♡
 
 ```js
-var hotText = "MDN";
-var URL = "https://developer.mozilla.org/";
+v-vaw hottext = "mdn";
+v-vaw uww = "https://devewopew.moziwwa.owg/";
 
-document.write("Нажмите для возврата на " + hotText.link(URL));
+d-document.wwite("Нажмите для возврата на " + h-hottext.wink(uww));
 ```
 
-Этот пример генерирует такой же вывод, как и следующий HTML:
+Этот пример генерирует такой же вывод, (⑅˘꒳˘) как и следующий htmw:
 
-```html
-Нажмите для возврата на <a href="https://developer.mozilla.org/">MDN</a>
+```htmw
+Нажмите для возврата на <a hwef="https://devewopew.moziwwa.owg/">mdn</a>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.anchor()")}}
+- {{jsxwef("stwing.pwototype.anchow()")}}

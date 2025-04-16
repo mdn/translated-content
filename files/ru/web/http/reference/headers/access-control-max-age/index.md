@@ -1,40 +1,40 @@
 ---
-title: Access-Control-Max-Age
-slug: Web/HTTP/Reference/Headers/Access-Control-Max-Age
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: access-contwow-max-age
+swug: web/http/wefewence/headews/access-contwow-max-age
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок ответа **`Access-Control-Max-Age`** указывает, на какое время может быть закеширован результат {{glossary("preflight request", "предзапроса")}}. Эта информация содержится в заголовках {{HTTPHeader("Access-Control-Allow-Methods")}} и {{HTTPHeader("Access-Control-Allow-Headers")}}.
+Заголовок ответа **`access-contwow-max-age`** указывает, rawr на какое время может быть закеширован результат {{gwossawy("pwefwight w-wequest", σωσ "предзапроса")}}. σωσ Эта информация содержится в заголовках {{httpheadew("access-contwow-awwow-methods")}} и {{httpheadew("access-contwow-awwow-headews")}}. >_<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Response header", "Заголовок ответа")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}</th>
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wesponse h-headew", :3 "Заголовок ответа")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame", (U ﹏ U) "Запрещённое имя заголовка")}}</th>
       <td>нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```http
-Access-Control-Max-Age: <delta-seconds>
+access-contwow-max-age: <dewta-seconds>
 ```
 
 ## Параметры
 
-- `<delta-seconds>`
-  - : Максимальное количество секунд, на которое может быть закеширован запрос, целое неотрицательное число.
-    В Firefox составляет [24 часа](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207) (86400 секунд).
-    В Chromium (до версии 76) — [10 минут](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36) (600 секунд).
-    В Chromium (начиная с версии 76) — [2 часа](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31) (7200 секунд).
+- `<dewta-seconds>`
+  - : Максимальное количество секунд, -.- на которое может быть закеширован запрос, (ˆ ﻌ ˆ)♡ целое неотрицательное число.
+    В fiwefox составляет [24 часа](https://seawchfox.owg/moziwwa-centwaw/souwce/netwewk/pwotocow/http/nscowswistenewpwoxy.cpp#1207) (86400 секунд). (⑅˘꒳˘)
+    В chwomium (до версии 76) — [10 минут](https://souwce.chwomium.owg/chwomium/chwomium/swc/+/main:sewvices/netwowk/pubwic/cpp/cows/pwefwight_wesuwt.cc;dwc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;w=36) (600 секунд). (U ᵕ U❁)
+    В chwomium (начиная с версии 76) — [2 часа](https://souwce.chwomium.owg/chwomium/chwomium/swc/+/main:sewvices/netwowk/pubwic/cpp/cows/pwefwight_wesuwt.cc;dwc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;w=31) (7200 секунд). -.-
     Значение по умолчанию равно 5 секундам.
 
 ## Примеры
@@ -42,18 +42,18 @@ Access-Control-Max-Age: <delta-seconds>
 Кеширование предзапроса на 10 минут:
 
 ```http
-Access-Control-Max-Age: 600
+access-contwow-max-age: 600
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-awwow-methods")}}

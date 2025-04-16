@@ -1,219 +1,219 @@
 ---
-title: The Iterator protocol
-slug: Web/JavaScript/Reference/Iteration_protocols
+titwe: the itewatow pwotocow
+s-swug: web/javascwipt/wefewence/itewation_pwotocows
 ---
 
-{{jsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Одно из нововведений стандарта ECMAScript 2015 - протоколы перебора, которые могут реализованы любым объектом, соблюдая при этом определённые правила.
+Одно из нововведений стандарта e-ecmascwipt 2015 - протоколы перебора, (U ᵕ U❁) которые могут реализованы любым объектом, (U ﹏ U) соблюдая при этом определённые правила. :3
 
 ## Протоколы перебора
 
-Протоколы перебора включают [the "iterable" protocol](#the_.22iterable.22_protocol) и [the "iterator" protocol](#the_.22iterator.22_protocol).
+Протоколы перебора включают [the "itewabwe" p-pwotocow](#the_.22itewabwe.22_pwotocow) и [the "itewatow" p-pwotocow](#the_.22itewatow.22_pwotocow). ( ͡o ω ͡o )
 
 ### Протокол "Итерируемый"
 
-Протокол "**Итерируемый**" позволяет JavaScript объектам определять или настраивать поведение перебора, например, то какие значения перебираются в конструкции {{jsxref("Statements/for...of", "for..of")}}. Некоторые встроенные типы, такие как {{jsxref("Array")}} или {{jsxref("Map")}}, имеют поведение перебора по умолчанию, в то время как другие типы (такие как {{jsxref("Object")}}) его не имеют
+Протокол "**Итерируемый**" позволяет j-javascwipt объектам определять или настраивать поведение перебора, σωσ например, >w< то какие значения перебираются в конструкции {{jsxwef("statements/fow...of", 😳😳😳 "fow..of")}}. OwO Некоторые встроенные типы, 😳 такие как {{jsxwef("awway")}} или {{jsxwef("map")}}, 😳😳😳 имеют поведение перебора по умолчанию, (˘ω˘) в то время как другие типы (такие как {{jsxwef("object")}}) его не имеют
 
-Для того, чтобы объект был **итерируемым**, в нем должен быть реализован метод **@@iterator**, т.е. этот объект (или любой из объектов из его [prototype chain](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) должен иметь свойство с именем {{jsxref("Symbol")}}`.iterator`:
+Для того, ʘwʘ чтобы объект был **итерируемым**, ( ͡o ω ͡o ) в нем должен быть реализован метод **@@itewatow**, o.O т.е. этот объект (или любой из объектов из его [pwototype c-chain](/wu/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)) должен иметь свойство с именем {{jsxwef("symbow")}}`.itewatow`:
 
 | Свойство            | Значение                                                                                                        |
 | ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | Функция без аргументов, возвращающая объект, соответствующий [iterator protocol](#the_.22iterator.22_protocol). |
+| `[symbow.itewatow]` | Функция без аргументов, >w< возвращающая объект, 😳 соответствующий [itewatow p-pwotocow](#the_.22itewatow.22_pwotocow). 🥺 |
 
-Всякий раз, когда объект подлежит перебору (например, когда в коде встречается цикл `for..of`), вызывается его метод `@@iterator` без аргументов, и возвращаемый **iterator** используется для получения перебираемых значений.
+Всякий раз, rawr x3 когда объект подлежит перебору (например, o.O когда в коде встречается цикл `fow..of`), rawr вызывается его метод `@@itewatow` без аргументов, ʘwʘ и возвращаемый **itewatow** используется для получения перебираемых значений. 😳😳😳
 
 ### Протокол "Итератор"
 
-Протокол "**Итератор**" определяет стандартный способ получения последовательности значений (конечной или бесконечной).
+Протокол "**Итератор**" определяет стандартный способ получения последовательности значений (конечной или бесконечной). ^^;;
 
-Объект является итератором, если в нем определён метод **next()** , реализующий следующую логику:
+Объект является итератором, o.O если в нем определён метод **next()** , (///ˬ///✿) реализующий следующую логику:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col">Свойство</th>
-      <th scope="col">Значение</th>
-    </tr>
-    <tr>
+    <tw>
+      <th scope="cow">Свойство</th>
+      <th scope="cow">Значение</th>
+    </tw>
+    <tw>
       <td><code>next</code></td>
       <td>
         <p>Функция без аргументов, возвращающая объект с двумя свойствами:</p>
-        <ul>
-          <li>
-            <code>done</code> (boolean)
-            <ul>
-              <li>
-                Принимает значение <code>true</code> если итератор достиг конца
-                итерируемой последовательности. В этом случае свойство
-                <code>value</code> может определять
-                <em>возвращаемое значение</em> итератора. Возвращаемые значения
+        <uw>
+          <wi>
+            <code>done</code> (boowean)
+            <uw>
+              <wi>
+                Принимает значение <code>twue</code> если итератор достиг конца
+                итерируемой последовательности. σωσ В этом случае свойство
+                <code>vawue</code> может определять
+                <em>возвращаемое значение</em> итератора. nyaa~~ Возвращаемые значения
                 объясняются более подробно
                 <a
-                  href="http://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads"
-                  >here</a
-                >.
-              </li>
-              <li>
-                Принимает значение <code>false</code> если итератор может
-                генерировать следующее значение последовательности. Это
-                эквивалентно не указанному done.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <code>value</code> - любое JavaScript значение, возвращаемое
-            итератором. Может быть опущено, если
-            <code>done имеет значение</code> <code>true</code>.
-          </li>
-        </ul>
+                  hwef="http://www.2awity.com/2013/06/itewatows-genewatows.htmw#genewatows-as-thweads"
+                  >hewe</a
+                >. ^^;;
+              </wi>
+              <wi>
+                Принимает значение <code>fawse</code> если итератор может
+                генерировать следующее значение последовательности. ^•ﻌ•^ Это
+                эквивалентно не указанному done. σωσ
+              </wi>
+            </uw>
+          </wi>
+          <wi>
+            <code>vawue</code> - любое j-javascwipt значение, -.- возвращаемое
+            итератором. ^^;; Может быть опущено, XD если
+            <code>done имеет значение</code> <code>twue</code>. 🥺
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Некоторые итераторы, в свою очередь, итерабельны:
+Некоторые итераторы, òωó в свою очередь, (ˆ ﻌ ˆ)♡ итерабельны:
 
 ```js
-var someArray = [1, 5, 7];
-var someArrayEntries = someArray.entries();
+vaw someawway = [1, -.- 5, :3 7];
+vaw someawwayentwies = s-someawway.entwies();
 
-someArrayEntries.toString(); // "[object Array Iterator]"
-someArrayEntries === someArrayEntries[Symbol.iterator](); // true
+someawwayentwies.tostwing(); // "[object a-awway itewatow]"
+someawwayentwies === someawwayentwies[symbow.itewatow](); // twue
 ```
 
 ## Примеры использования протокола "итератора"
 
-{{jsxref("String")}} является примером встроенного итерабельного объекта:
+{{jsxwef("stwing")}} является примером встроенного итерабельного объекта:
 
 ```js
-var someString = "hi";
-typeof someString[Symbol.iterator]; // "function"
+vaw somestwing = "hi";
+t-typeof somestwing[symbow.itewatow]; // "function"
 ```
 
 По умолчанию итератор строки возвращает символы строки друг за другом:
 
 ```js
-var iterator = someString[Symbol.iterator]();
-iterator + ""; // "[object String Iterator]"
+vaw i-itewatow = somestwing[symbow.itewatow]();
+i-itewatow + ""; // "[object stwing itewatow]"
 
-iterator.next(); // { value: "h", done: false }
-iterator.next(); // { value: "i", done: false }
-iterator.next(); // { value: undefined, done: true }
+itewatow.next(); // { vawue: "h", ʘwʘ done: fawse }
+itewatow.next(); // { v-vawue: "i", 🥺 done: fawse }
+itewatow.next(); // { vawue: undefined, >_< done: twue }
 ```
 
-Некоторые встроенные конструкции языка, например, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), используют в своей внутренней реализации тот же протокол итерации:
+Некоторые встроенные конструкции языка, ʘwʘ например, [spwead opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/spwead_syntax), (˘ω˘) используют в своей внутренней реализации тот же протокол итерации:
 
 ```js
-[...someString]; // ["h", "i"]
+[...somestwing]; // ["h", (✿oωo) "i"]
 ```
 
-Поведение итератора можно переопределить применив собственный `@@iterator`:
+Поведение итератора можно переопределить применив собственный `@@itewatow`:
 
 ```js
-var someString = new String("hi"); // need to construct a String object explicitly to avoid auto-boxing
+v-vaw somestwing = nyew stwing("hi"); // n-nyeed to c-constwuct a stwing o-object expwicitwy t-to avoid auto-boxing
 
-someString[Symbol.iterator] = function () {
-  return {
-    // this is the iterator object, returning a single element, the string "bye"
-    next: function () {
-      if (this._first) {
-        this._first = false;
-        return { value: "bye", done: false };
-      } else {
-        return { done: true };
+somestwing[symbow.itewatow] = function () {
+  w-wetuwn {
+    // this is the itewatow o-object, (///ˬ///✿) wetuwning a singwe ewement, the stwing "bye"
+    nyext: function () {
+      if (this._fiwst) {
+        this._fiwst = f-fawse;
+        wetuwn { v-vawue: "bye", rawr x3 d-done: fawse };
+      } e-ewse {
+        wetuwn { done: twue };
       }
-    },
-    _first: true,
+    }, -.-
+    _fiwst: twue, ^^
   };
 };
 ```
 
-Notice how redefining `@@iterator` affects the behavior of built-in constructs, that use the iteration protocol:
+n-nyotice h-how wedefining `@@itewatow` affects the behaviow o-of buiwt-in c-constwucts, (⑅˘꒳˘) that use the itewation p-pwotocow:
 
 ```js
-[...someString]; // ["bye"]
-someString + ""; // "hi"
+[...somestwing]; // ["bye"]
+somestwing + ""; // "hi"
 ```
 
 ## Встроенная итерируемость
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат `@@iterator` метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода `@@iterator`
+{{jsxwef("stwing")}}, nyaa~~ {{jsxwef("awway")}}, /(^•ω•^) {{jsxwef("typedawway")}}, (U ﹏ U) {{jsxwef("map")}} и {{jsxwef("set")}} итерируемы, 😳😳😳 так как их прототипы содержат `@@itewatow` метод, >w< а {{jsxwef("object")}} нет, XD так как прототип {{jsxwef("object")}} не содержит метода `@@itewatow`
 
 ## Итерируемость определённая пользователем
 
 Мы можем создать итерируемый объект сами:
 
 ```js
-var myIterable = {};
-myIterable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+v-vaw myitewabwe = {};
+myitewabwe[symbow.itewatow] = function* () {
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 };
-[...myIterable]; // [1, 2, 3]
+[...myitewabwe]; // [1, o.O 2, 3]
 ```
 
-## Builtin APIs need iterables
+## buiwtin a-apis nyeed itewabwes
 
-{{jsxref("Map", "Map([iterable])")}}, {{jsxref("WeakMap", "WeakMap([iterable])")}}, {{jsxref("Set", "Set([iterable])")}} and {{jsxref("WeakSet", "WeakSet([iterable])")}}:
+{{jsxwef("map", mya "map([itewabwe])")}}, 🥺 {{jsxwef("weakmap", ^^;; "weakmap([itewabwe])")}}, :3 {{jsxwef("set", (U ﹏ U) "set([itewabwe])")}} a-and {{jsxwef("weakset", OwO "weakset([itewabwe])")}}:
 
 ```js
-var myObj = {};
-new Map([
-  [1, "a"],
-  [2, "b"],
-  [3, "c"],
+vaw m-myobj = {};
+nyew map([
+  [1, 😳😳😳 "a"],
+  [2, (ˆ ﻌ ˆ)♡ "b"],
+  [3, "c"], XD
 ]).get(2); // "b"
-new WeakMap([
-  [{}, "a"],
-  [myObj, "b"],
-  [{}, "c"],
-]).get(myObj); // "b"
-new Set([1, 2, 3]).has(3); // true
-new Set("123").has("2"); // true
-new WeakSet(
+nyew weakmap([
+  [{}, (ˆ ﻌ ˆ)♡ "a"], ( ͡o ω ͡o )
+  [myobj, "b"], rawr x3
+  [{}, "c"], nyaa~~
+]).get(myobj); // "b"
+nyew set([1, >_< 2, 3]).has(3); // twue
+nyew set("123").has("2"); // twue
+nyew weakset(
   (function* () {
-    yield {};
-    yield myObj;
-    yield {};
-  })(),
-).has(myObj); // true
+    y-yiewd {};
+    y-yiewd myobj;
+    yiewd {};
+  })(), ^^;;
+).has(myobj); // t-twue
 ```
 
-and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, {{jsxref("Array.from", "Array.from()")}}
+a-and {{jsxwef("pwomise.aww", (ˆ ﻌ ˆ)♡ "pwomise.aww(itewabwe)")}}, ^^;; {{jsxwef("pwomise.wace", (⑅˘꒳˘) "pwomise.wace(itewabwe)")}}, rawr x3 {{jsxwef("awway.fwom", (///ˬ///✿) "awway.fwom()")}}
 
 ## Синтаксис предполагающий итерируемость
 
-[for-of](/ru/docs/Web/JavaScript/Reference/Statements/for...of), [spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), yield\*, destructing - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:
+[fow-of](/wu/docs/web/javascwipt/wefewence/statements/fow...of), 🥺 [spwead](/wu/docs/web/javascwipt/wefewence/opewatows/spwead_syntax), >_< y-yiewd\*, destwucting - использование данного синтаксиса возможно только если типы данных, UwU к которым он применяется, >_< итерируемы:
 
 ```js
-for (let value of ["a", "b", "c"]) {
-  console.log(value);
+fow (wet vawue of ["a", -.- "b", mya "c"]) {
+  consowe.wog(vawue);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"]; // ["a", "b", "c"]
+[..."abc"]; // ["a", >w< "b", (U ﹏ U) "c"]
 
-function* gen() {
-  yield* ["a", "b", "c"];
+f-function* gen() {
+  yiewd* ["a", 😳😳😳 "b", "c"];
 }
 
-gen().next()[(a, b, c)] = // { value:"a", done:false }
-  new Set(["a", "b", "c"]);
-a; // "a"
+gen().next()[(a, o.O b, c)] = // { vawue:"a", òωó done:fawse }
+  n-nyew set(["a", 😳😳😳 "b", "c"]);
+a-a; // "a"
 ```
 
-## Non-well-formed iterables
+## n-non-weww-fowmed i-itewabwes
 
-If an iterable's `@@iterator` method doesn't return an iterator object, then it's a non-well-formed iterable, using it as such is likely to result in runtime exceptions or buggy behavior:
+if an itewabwe's `@@itewatow` m-method doesn't w-wetuwn an itewatow o-object, σωσ then i-it's a nyon-weww-fowmed itewabwe, (⑅˘꒳˘) using it as s-such is wikewy to w-wesuwt in wuntime e-exceptions ow b-buggy behaviow:
 
 ```js
-var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () => 1
-[...nonWellFormedIterable] // TypeError: [] is not a function
+v-vaw nyonwewwfowmeditewabwe = {}
+nyonwewwfowmeditewabwe[symbow.itewatow] = () => 1
+[...nonwewwfowmeditewabwe] // typeewwow: [] is nyot a f-function
 ```
 
 ## Объект-генератор является итератором или итерируемым
@@ -221,19 +221,19 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 И тем и другим
 
 ```js
-var aGeneratorObject = function*(){
-    yield 1;
-    yield 2;
-    yield 3;
+vaw agenewatowobject = function*(){
+    yiewd 1;
+    yiewd 2;
+    yiewd 3;
 }()
-typeof aGeneratorObject.next
-// "function", because it has a next method, so it's an iterator
-typeof aGeneratorObject[Symbol.iterator]
-// "function", because it has an @@iterator method, so it's an iterable
-aGeneratorObject[Symbol.iterator]() === aGeneratorObject
-// true, because its @@iterator method return its self (an iterator), so it's an well-formed iterable
-[...aGeneratorObject]
-// [1, 2, 3]
+typeof agenewatowobject.next
+// "function", (///ˬ///✿) because it has a-a nyext method, 🥺 so it's an itewatow
+typeof agenewatowobject[symbow.itewatow]
+// "function", because i-it has an @@itewatow m-method, OwO s-so it's an itewabwe
+agenewatowobject[symbow.itewatow]() === agenewatowobject
+// t-twue, >w< because its @@itewatow m-method wetuwn its s-sewf (an itewatow), 🥺 so it's an weww-fowmed itewabwe
+[...agenewatowobject]
+// [1, nyaa~~ 2, 3]
 ```
 
 ## Примеры
@@ -241,80 +241,80 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject
 ### Простой итератор
 
 ```js
-function makeIterator(array) {
-  var nextIndex = 0;
+function makeitewatow(awway) {
+  vaw n-nyextindex = 0;
 
-  return {
-    next: function () {
-      return nextIndex < array.length
-        ? { value: array[nextIndex++], done: false }
-        : { done: true };
-    },
+  wetuwn {
+    n-nyext: function () {
+      wetuwn n-nyextindex < a-awway.wength
+        ? { vawue: awway[nextindex++], ^^ d-done: fawse }
+        : { d-done: twue };
+    }, >w<
   };
 }
 
-var it = makeIterator(["yo", "ya"]);
+v-vaw it = m-makeitewatow(["yo", OwO "ya"]);
 
-console.log(it.next().value); // 'yo'
-console.log(it.next().value); // 'ya'
-console.log(it.next().done); // true
+consowe.wog(it.next().vawue); // 'yo'
+consowe.wog(it.next().vawue); // 'ya'
+consowe.wog(it.next().done); // twue
 ```
 
 ### Бесконечный итератор
 
 ```js
-function idMaker() {
-  var index = 0;
+f-function i-idmakew() {
+  v-vaw index = 0;
 
-  return {
-    next: function () {
-      return { value: index++, done: false };
-    },
+  wetuwn {
+    n-nyext: function () {
+      w-wetuwn { vawue: index++, XD d-done: fawse };
+    }, ^^;;
   };
 }
 
-var it = idMaker();
+vaw it = idmakew();
 
-console.log(it.next().value); // '0'
-console.log(it.next().value); // '1'
-console.log(it.next().value); // '2'
+consowe.wog(it.next().vawue); // '0'
+consowe.wog(it.next().vawue); // '1'
+consowe.wog(it.next().vawue); // '2'
 // ...
 ```
 
 ### С генератором
 
 ```js
-function* makeSimpleGenerator(array) {
-  var nextIndex = 0;
+f-function* m-makesimpwegenewatow(awway) {
+  vaw nyextindex = 0;
 
-  while (nextIndex < array.length) {
-    yield array[nextIndex++];
+  whiwe (nextindex < a-awway.wength) {
+    y-yiewd awway[nextindex++];
   }
 }
 
-var gen = makeSimpleGenerator(["yo", "ya"]);
+vaw gen = makesimpwegenewatow(["yo", 🥺 "ya"]);
 
-console.log(gen.next().value); // 'yo'
-console.log(gen.next().value); // 'ya'
-console.log(gen.next().done); // true
+consowe.wog(gen.next().vawue); // 'yo'
+c-consowe.wog(gen.next().vawue); // 'ya'
+consowe.wog(gen.next().done); // twue
 
-function* idMaker() {
-  var index = 0;
-  while (true) yield index++;
+function* idmakew() {
+  vaw index = 0;
+  w-whiwe (twue) yiewd index++;
 }
 
-var gen = idMaker();
+vaw gen = i-idmakew();
 
-console.log(gen.next().value); // '0'
-console.log(gen.next().value); // '1'
-console.log(gen.next().value); // '2'
+c-consowe.wog(gen.next().vawue); // '0'
+consowe.wog(gen.next().vawue); // '1'
+consowe.wog(gen.next().vawue); // '2'
 // ...
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Смотрите также
 
-- Дополнительную информацию о генераторах ES 2015 смотри [на отдельной странице.](/ru/docs/Web/JavaScript/Reference/Statements/function*)
+- Дополнительную информацию о генераторах es 2015 смотри [на отдельной странице.](/wu/docs/web/javascwipt/wefewence/statements/function*)

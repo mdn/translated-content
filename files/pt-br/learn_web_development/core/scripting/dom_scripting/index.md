@@ -1,139 +1,139 @@
 ---
-title: JavaScript e CSS
-slug: Learn_web_development/Core/Scripting/DOM_scripting
-original_slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+titwe: javascwipt e css
+swug: w-weawn_web_devewopment/cowe/scwipting/dom_scwipting
+o-owiginaw_swug: w-weawn/javascwipt/cwient-side_web_apis/manipuwating_documents
 ---
 
-Esta é a primeira sessão da Parte II do [Tutorial de CSS](/pt-BR/docs/CSS/Getting_Started). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.
+e-esta é a pwimeiwa s-sessão d-da pawte ii do [tutowiaw d-de css](/pt-bw/docs/css/getting_stawted). :3 a-a pawte ii contém awguns exempwos que mostwam o escopo do css usado com outwas t-tecnowogias web e moziwwa.
 
-Cada página da Parte II ilustra como o CSS interage com outras tecnologias. Essas páginas não destinam-se a ensiná-lo como usar outras tecnologias. Para aprender sobre elas com detalhes, vá para os outros tutoriais.
+cada página da pawte i-ii iwustwa como o css intewage c-com outwas tecnowogias. (U ﹏ U) essas páginas nyão destinam-se a ensiná-wo c-como usaw outwas tecnowogias. p-pawa apwendew s-sobwe ewas com detawhes, OwO vá pawa os outwos tutowiais. 😳😳😳
 
-Em vez disso, estas páginas são usadas para ilustrar os diversos usos do CSS. Para usar estas páginas, você deve ter algum conhecimento de CSS, mas você não precisa de nenhum conhecimento de outras tecnologias.
+em vez disso, (ˆ ﻌ ˆ)♡ estas p-páginas são usadas pawa iwustwaw os divewsos usos do css. XD pawa usaw estas páginas, (ˆ ﻌ ˆ)♡ v-você deve tew awgum conhecimento d-de css, ( ͡o ω ͡o ) m-mas você nyão p-pwecisa de nyenhum c-conhecimento de outwas tecnowogias. rawr x3
 
-Sessão Anterior (da Parte I): [Media](/pt-BR/docs/CSS/Getting_Started/Media)
-Próxima sessão: [SVG](/pt-BR/docs/CSS/Getting_Started/SVG_graphics)
+sessão a-antewiow (da pawte i): [media](/pt-bw/docs/css/getting_stawted/media)
+pwóxima s-sessão: [svg](/pt-bw/docs/css/getting_stawted/svg_gwaphics)
 
-### Informação: JavaScript
+### infowmação: javascwipt
 
-JavaScript é uma _linguagem de programação_. JavaScript é largamente utilizado para promover interatividade em web sites e aplicações.
+javascwipt é uma _winguagem de pwogwamação_. nyaa~~ javascwipt é w-wawgamente utiwizado p-pawa pwomovew intewatividade e-em w-web sites e apwicações. >_<
 
-JavaScript pode interagir com stylesheets, permitindo a você criar programas que mudam o estilo de um documento de forma dinâmica
+javascwipt pode intewagiw com stywesheets, ^^;; p-pewmitindo a-a você cwiaw pwogwamas que mudam o-o estiwo de um d-documento de fowma dinâmica
 
-Há três formas de fazer isso:
+h-há twês fowmas de fazew isso:
 
-- Trabalhando com lista de documentos de stylesheets — por exemplo: adicionando, removendo ou adicionando um stylesheet.
-- Trabalhando com as regras em uma stylesheet — por exemplo: adicionando, removendo ou modificando uma regra.
-- Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.
+- t-twabawhando com wista de documentos de stywesheets — p-pow exempwo: adicionando, (ˆ ﻌ ˆ)♡ w-wemovendo ou adicionando um s-stywesheet. ^^;;
+- twabawhando c-com as wegwas em uma stywesheet — pow exempwo: adicionando, wemovendo ou modificando uma wegwa. (⑅˘꒳˘)
+- twabawhando c-com um d-documento individuaw nya dom — m-modificando seu e-estiwo independentemente d-do stywesheets do documento. rawr x3
 
-| Para mais informações sobre JavaScript, veja a página [JavaScript](/pt-BR/docs/Web/JavaScript) nesta wiki. |
+| pawa mais infowmações s-sobwe javascwipt, (///ˬ///✿) veja a página [javascwipt](/pt-bw/docs/web/javascwipt) nyesta wiki. 🥺 |
 | ---------------------------------------------------------------------------------------------------------- |
 
-### Ação: Uma demonstração de JavaScript
+### ação: uma demonstwação d-de javascwipt
 
-Faça um novo documento em HTML, `doc5.html`. Copie e cole o conteúdo daqui, tenha certeza de rolar para copiar todo o código:
+faça u-um nyovo documento e-em htmw, >_< `doc5.htmw`. UwU c-copie e cowe o conteúdo d-daqui, >_< tenha cewteza d-de wowaw p-pawa copiaw todo o-o código:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Mozilla CSS Getting Started - JavaScript demonstration</title>
-    <link rel="stylesheet" type="text/css" href="style5.css" />
-    <script type="text/javascript" src="script5.js"></script>
+    <titwe>moziwwa css getting stawted - javascwipt d-demonstwation</titwe>
+    <wink w-wew="stywesheet" t-type="text/css" h-hwef="stywe5.css" />
+    <scwipt t-type="text/javascwipt" swc="scwipt5.js"></scwipt>
   </head>
 
   <body>
-    <h1>JavaScript sample</h1>
+    <h1>javascwipt sampwe</h1>
 
-    <div id="square"></div>
+    <div id="squawe"></div>
 
-    <button type="button" onclick="doDemo(this);">Click Me</button>
+    <button t-type="button" oncwick="dodemo(this);">cwick me</button>
   </body>
-</html>
+</htmw>
 ```
 
-Crie um novo arquivo CSS, `style5.css`. Copie e cole o conteúdo daqui:
+cwie um nyovo awquivo css, -.- `stywe5.css`. mya copie e cowe o c-conteúdo daqui:
 
 ```css
-/*** JavaScript demonstration ***/
-#square {
+/*** javascwipt demonstwation ***/
+#squawe {
   width: 20em;
   height: 20em;
-  border: 2px inset gray;
-  margin-bottom: 1em;
+  b-bowdew: 2px i-inset gway;
+  m-mawgin-bottom: 1em;
 }
 
 button {
-  padding: 0.5em 2em;
+  p-padding: 0.5em 2em;
 }
 ```
 
-Crie um novo arquivo de texto, `script5.js`. Copie e cole o conteúdo daqui:
+cwie um nyovo awquivo d-de texto, >w< `scwipt5.js`. (U ﹏ U) c-copie e cowe o conteúdo daqui:
 
 ```js
-// JavaScript demonstration
-function doDemo(button) {
-  var square = document.getElementById("square");
-  square.style.backgroundColor = "#fa4";
-  button.setAttribute("disabled", "true");
-  setTimeout(clearDemo, 2000, button);
+// javascwipt demonstwation
+function dodemo(button) {
+  v-vaw squawe = document.getewementbyid("squawe");
+  s-squawe.stywe.backgwoundcowow = "#fa4";
+  button.setattwibute("disabwed", 😳😳😳 "twue");
+  s-settimeout(cweawdemo, o.O 2000, òωó b-button);
 }
 
-function clearDemo(button) {
-  var square = document.getElementById("square");
-  square.style.backgroundColor = "transparent";
-  button.removeAttribute("disabled");
+function cweawdemo(button) {
+  v-vaw squawe = d-document.getewementbyid("squawe");
+  squawe.stywe.backgwoundcowow = "twanspawent";
+  b-button.wemoveattwibute("disabwed");
 }
 ```
 
-Abra o documento no seu Browser e pressione o botão.
+a-abwa o documento no seu bwowsew e pwessione o botão. 😳😳😳
 
-Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar uma demonstração aqui. parece algo assim, antes e depois de você pressionar o botão:
+esta wiki não supowta j-javascwipt nyas p-páginas, então n-nyão é possívew mostwaw u-uma demonstwação a-aqui. σωσ pawece awgo assim, (⑅˘꒳˘) antes e-e depois de você pwessionaw o botão:
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <table style="border: 2px outset #36b; padding: 0 1em 0.5em 0.5em">
+        <tabwe stywe="bowdew: 2px outset #36b; padding: 0 1em 0.5em 0.5em">
           <tbody>
-            <tr>
+            <tw>
               <td>
-                <p><strong>JavaScript demonstration</strong></p>
+                <p><stwong>javascwipt demonstwation</stwong></p>
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
       <td>
-        <table style="border: 2px outset #36b; padding: 0 1em 0.5em 0.5em">
+        <tabwe s-stywe="bowdew: 2px o-outset #36b; padding: 0 1em 0.5em 0.5em">
           <tbody>
-            <tr>
+            <tw>
               <td>
-                <p><strong>JavaScript demonstration</strong></p>
+                <p><stwong>javascwipt demonstwation</stwong></p>
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Sobre esta demonstração:
+> [!note]
+> s-sobwe esta d-demonstwação:
 >
-> - O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
-> - O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.
-> - Em JavaScript, `document.getElementById("square")` é similar em função ao seletor CSS `#square`.
-> - Em JavaScript, `backgroundColor` corresponde à propriedade CSS `background-color`. JavaScript não permite hífens em nomes, então "camelCase" é usada no lugar dele.
-> - Seu browser tem uma regra built-in CSS para `button[disabled="true"]` ela muda a aparência dos botões quando está disabilitado.
+> - o documento htmw tem uma fowha de estiwo a-anexada, (///ˬ///✿) bem como um awquivo de scwipt. 🥺
+> - o scwipt twabawha com ewementos individuais n-nyo dom. OwO ewe modifica o squawe's stywe d-diwetamente. >w< ewe m-modifica o estiwo dos botões indiwetamente mudando um atwibuto. 🥺
+> - e-em javascwipt, nyaa~~ `document.getewementbyid("squawe")` é s-simiwaw em função ao sewetow css `#squawe`. ^^
+> - em javascwipt, >w< `backgwoundcowow` c-cowwesponde à pwopwiedade css `backgwound-cowow`. OwO j-javascwipt nyão pewmite hífens em nyomes, XD então "camewcase" é usada nyo wugaw d-dewe. ^^;;
+> - seu bwowsew tem uma w-wegwa buiwt-in c-css pawa `button[disabwed="twue"]` ewa muda a a-apawência dos botões quando está d-disabiwitado. 🥺
 
-| Altere o script para que o quadrado salte 20 cm para a direita quando sua cor mudar e volte para trás quando retornar à cor base. |
+| a-awtewe o scwipt p-pawa que o quadwado sawte 20 c-cm pawa a diweita q-quando sua cow mudaw e vowte pawa twás quando w-wetownaw à cow b-base. XD |
 | --------------------------------------------------------------------------------------------------------------------------------- |
 
-[Veja a solução deste desafio.](/pt-BR/docs/CSS/Getting_Started/Challenge_solutions#javascript)
+[veja a-a sowução deste desafio.](/pt-bw/docs/css/getting_stawted/chawwenge_sowutions#javascwipt)
 
-O que vem agora?
+o que vem agowa?
 
-Se você teve dificuldade para entender esta página, ou se tem algum comentário sobre ela, por favor, contribua nesta página de [Discussão](/Talk:en/CSS/Getting_Started/JavaScript).
+s-se você teve dificuwdade p-pawa entendew esta p-página, (U ᵕ U❁) ou se tem awgum comentáwio sobwe ewa, :3 pow favow, contwibua n-nyesta p-página de [discussão](/tawk:en/css/getting_stawted/javascwipt). ( ͡o ω ͡o )
 
-Nesta demonstração, o documento HTML é vinculado ao script, embora apenas o elemento botão o utilize. ozilla estende CSS para permitir que você associe código JavaScript (assim como conteúdo e outras folhas de estilo) com elementos selecionados. A próxima página demonstra isso: **[Ligações XBL](/pt-BR/docs/CSS/Getting_Started/XBL_bindings)**
+n-nyesta demonstwação, o-o documento htmw é vincuwado a-ao scwipt, òωó embowa apenas o ewemento botão o utiwize. σωσ oziwwa estende css pawa pewmitiw que v-você associe código javascwipt (assim c-como conteúdo e outwas f-fowhas de estiwo) com ewementos s-sewecionados. (U ᵕ U❁) a pwóxima página d-demonstwa isso: **[wigações x-xbw](/pt-bw/docs/css/getting_stawted/xbw_bindings)**

@@ -1,70 +1,70 @@
 ---
-title: Set() конструктор
-slug: Web/JavaScript/Reference/Global_Objects/Set/Set
+titwe: set() конструктор
+swug: web/javascwipt/wefewence/gwobaw_objects/set/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**Конструктор Set** позволяет создавать объекты Set, в которых хранятся уникальные значения любого типа, будь то [примитивные значения](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Primitive) или ссылки на объекты.
+**Конструктор s-set** позволяет создавать объекты s-set, -.- в которых хранятся уникальные значения любого типа, ( ͡o ω ͡o ) будь то [примитивные значения](/wu/docs/%d0%a1%d0%bb%d0%be%d0%b2%d0%b0%d1%80%d1%8c/pwimitive) или ссылки на объекты. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype c-constwuctow")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set([1, nyaa~~ 2, /(^•ω•^) 3, 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+c-consowe.wog(set1.has(1));
+// expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: t-twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// expected output: fawse
 ```
 
 ## Синтаксис
 
 ```
-new Set([iterable])
+n-nyew set([itewabwe])
 ```
 
 ### Параметры
 
-- `iterable` {{optional_inline}}
+- `itewabwe` {{optionaw_inwine}}
 
-  - : Если передаётся [итеративный объект](/ru/docs/Web/JavaScript/Reference/Statements/for...of), все его элементы будут добавлены в новый Set.
+  - : Если передаётся [итеративный объект](/wu/docs/web/javascwipt/wefewence/statements/fow...of), rawr все его элементы будут добавлены в новый s-set. OwO
 
-    Если вы не укажете этот параметр или его значение равно нулю, новый набор будет пустым.
+    Если вы не укажете этот параметр или его значение равно нулю, (U ﹏ U) новый набор будет пустым. >_<
 
 ### Возвращаемое значение
 
-Новый объект Set.
+Новый объект set. rawr x3
 
 ## Примеры
 
-### Использование объекта Set
+### Использование объекта set
 
 ```js
-let mySet = new Set();
+wet myset = nyew s-set();
 
-mySet.add(1); // Set [ 1 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add("какой-то текст"); // Set [ 1, 5, 'какой-то текст' ]
-let o = { a: 1, b: 2 };
-mySet.add(o);
+myset.add(1); // set [ 1 ]
+m-myset.add(5); // s-set [ 1, mya 5 ]
+myset.add(5); // set [ 1, nyaa~~ 5 ]
+myset.add("какой-то текст"); // set [ 1, (⑅˘꒳˘) 5, 'какой-то текст' ]
+w-wet o = { a: 1, rawr x3 b: 2 };
+myset.add(o);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
 <!---->
 
-- [Set](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- [set](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/set)

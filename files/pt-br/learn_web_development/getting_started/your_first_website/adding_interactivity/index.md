@@ -1,479 +1,479 @@
 ---
-title: Noções básicas de JavaScript
-slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
+titwe: nyoções básicas de j-javascwipt
+swug: w-weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity
+owiginaw_swug: w-weawn/getting_stawted_with_the_web/javascwipt_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/getting_stawted_with_the_web/css_basics", rawr x3 "weawn/getting_stawted_with_the_web/pubwishing_youw_website", "weawn/getting_stawted_with_the_web")}}
 
-JavaScript é uma linguagem de programação que adiciona interatividade ao seu site. Isso acontece em jogos, no comportamento das respostas quando botões são pressionados ou com entrada de dados em formulários; com estilo dinâmico; com animação, etc.
-Este artigo ajuda você a começar a usar o JavaScript e aumenta sua compreensão do que é possível.
+j-javascwipt é u-uma winguagem de p-pwogwamação q-que adiciona intewatividade a-ao seu site. (˘ω˘) isso acontece em jogos, òωó nyo compowtamento das wespostas q-quando botões são pwessionados ou com entwada d-de dados em fowmuwáwios; com estiwo d-dinâmico; com animação, ( ͡o ω ͡o ) etc.
+este awtigo ajuda você a c-começaw a usaw o javascwipt e aumenta s-sua compweensão d-do que é possívew. σωσ
 
-## O que é JavaScript?
+## o que é javascwipt?
 
-{{Glossary("JavaScript")}} é uma poderosa linguagem de programação que pode adicionar interatividade a um site.
-Foi inventado por Brendan Eich.
+{{gwossawy("javascwipt")}} é uma podewosa winguagem de pwogwamação q-que pode adicionaw intewatividade a um site. (U ﹏ U)
+foi inventado pow bwendan e-eich. rawr
 
-JavaScript é versátil e amigável para iniciantes.
-Com mais experiência, você poderá criar jogos, gráficos 2D e 3D animados, aplicativos abrangentes baseados em banco de dados e muito mais!
+javascwipt é vewsátiw e-e amigávew pawa i-iniciantes. -.-
+c-com mais expewiência, ( ͡o ω ͡o ) v-você podewá cwiaw jogos, >_< gwáficos 2d e 3d a-animados, o.O apwicativos abwangentes baseados em b-banco de dados e muito mais! σωσ
 
-O próprio JavaScript é relativamente compacto, mas muito flexível. Os desenvolvedores escreveram uma variedade de ferramentas sobre a linguagem JavaScript principal, desbloqueando uma grande quantidade de funcionalidades com o mínimo de esforço. Esses incluem:
+o pwópwio javascwipt é wewativamente compacto, -.- mas muito fwexívew. σωσ o-os desenvowvedowes escwevewam u-uma vawiedade d-de fewwamentas s-sobwe a winguagem javascwipt pwincipaw, :3 desbwoqueando uma gwande q-quantidade de f-funcionawidades com o mínimo de e-esfowço. ^^ esses i-incwuem:
 
-- Interfaces de programação de aplicativos de navegador ({{Glossary("API","APIs")}}) incorporadas a navegadores da Web, fornecendo funcionalidades como criação dinâmica de HTML e definição de estilos CSS; coletar e manipular um fluxo de vídeo da webcam de um usuário ou gerar gráficos 3D e amostras de áudio.
-- APIs de terceiros que permitem aos desenvolvedores incorporar funcionalidades em sites de outros provedores de conteúdo, como Twitter ou Facebook.
-- Estruturas e bibliotecas de terceiros que você pode aplicar ao HTML para acelerar o trabalho de construção de sites e aplicativos.
+- intewfaces de pwogwamação d-de apwicativos de nyavegadow ({{gwossawy("api","apis")}}) i-incowpowadas a navegadowes da web, òωó fownecendo f-funcionawidades como cwiação d-dinâmica de htmw e definição d-de estiwos css; c-cowetaw e manipuwaw um fwuxo de vídeo da webcam de um usuáwio ou gewaw gwáficos 3d e amostwas de áudio. (ˆ ﻌ ˆ)♡
+- apis d-de tewceiwos q-que pewmitem aos desenvowvedowes i-incowpowaw funcionawidades e-em sites d-de outwos pwovedowes de conteúdo, XD como twittew ou facebook. òωó
+- e-estwutuwas e bibwiotecas de tewceiwos que você pode apwicaw ao htmw pawa acewewaw o-o twabawho de constwução d-de sites e apwicativos. (ꈍᴗꈍ)
 
-Está fora do escopo deste artigo — como uma introdução leve ao JavaScript — apresentar os detalhes de como a linguagem JavaScript básica é diferente das ferramentas listadas acima. Você pode aprender mais na [área de aprendizado de JavaScript] do MDN (/pt-BR/docs/Learn/JavaScript), bem como em outras partes do MDN.
+e-está f-fowa do escopo deste awtigo — c-como uma intwodução w-weve ao javascwipt — a-apwesentaw o-os detawhes de como a winguagem javascwipt b-básica é difewente d-das fewwamentas w-wistadas a-acima. UwU você pode a-apwendew mais na [áwea de apwendizado de javascwipt] do mdn (/pt-bw/docs/weawn/javascwipt), >w< b-bem como em outwas pawtes do mdn. ʘwʘ
 
-A seção abaixo apresenta alguns aspectos da linguagem principal e também oferece uma oportunidade de jogar com alguns recursos da API do navegador. Divirta-se!
+a seção abaixo apwesenta awguns aspectos da winguagem pwincipaw e-e também ofewece uma opowtunidade de jogaw com awguns wecuwsos d-da api do n-nyavegadow. :3 diviwta-se!
 
-## Um exemplo "Olá, mundo!"
+## u-um exempwo "owá, ^•ﻌ•^ mundo!"
 
-JavaScript é uma das tecnologias da web modernas mais populares! À medida que suas habilidades em JavaScript aumentam, seus sites entrarão em uma nova dimensão de poder e criatividade.
+j-javascwipt é uma das tecnowogias d-da web m-modewnas mais popuwawes! (ˆ ﻌ ˆ)♡ À medida que suas habiwidades em javascwipt aumentam, 🥺 seus sites entwawão e-em uma nyova dimensão de podew e-e cwiatividade. OwO
 
-No entanto, familiarizar-se com JavaScript é mais desafiador do que familiarizar-se com HTML e CSS. Você pode ter que começar pequeno e progredir gradualmente. Para começar, vamos examinar como adicionar JavaScript à sua página para criar um exemplo _Hello world!_. (_Hello world!_ é [o padrão para exemplos de programação introdutória](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program).)
+nyo entanto, 🥺 f-famiwiawizaw-se c-com javascwipt é mais desafiadow do que famiwiawizaw-se c-com h-htmw e css. OwO você pode tew que começaw p-pequeno e-e pwogwediw gwaduawmente. (U ᵕ U❁) pawa começaw, ( ͡o ω ͡o ) vamos examinaw como adicionaw javascwipt à s-sua página p-pawa cwiaw um exempwo _hewwo w-wowwd!_. ^•ﻌ•^ (_hewwo wowwd!_ é [o padwão p-pawa exempwos d-de pwogwamação intwodutówia](https://en.wikipedia.owg/wiki/%22hewwo,_wowwd!%22_pwogwam).)
 
-> [!WARNING]
-> Se você não está acompanhando o restante do nosso curso, [faça o download deste código de exemplo](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) e use-o como ponto de partida.
+> [!wawning]
+> s-se você nyão está acompanhando o westante do nyosso cuwso, o.O [faça o downwoad d-deste código de e-exempwo](https://codewoad.github.com/mdn/beginnew-htmw-site-stywed/zip/wefs/heads/gh-pages) e use-o como ponto d-de pawtida. (⑅˘꒳˘)
 
-1. Vá para o seu site de teste e crie uma nova pasta chamada `scripts`. Dentro da pasta scripts, crie um novo documento de texto chamado `main.js` e salve-o.
-2. Em seu arquivo `index.html`, insira este código em uma nova linha, logo antes da tag de fechamento `</body>`:
+1. v-vá pawa o seu site de teste e cwie uma nyova pasta chamada `scwipts`. (ˆ ﻌ ˆ)♡ d-dentwo da pasta scwipts, :3 cwie um novo documento de texto chamado `main.js` e-e sawve-o. /(^•ω•^)
+2. em seu awquivo `index.htmw`, òωó insiwa e-este código e-em uma nova winha, :3 wogo antes da tag de fechamento `</body>`:
 
-   ```html
-   <script src="scripts/main.js"></script>
+   ```htmw
+   <scwipt swc="scwipts/main.js"></scwipt>
    ```
 
-3. Isso faz o mesmo trabalho que o elemento {{htmlelement("link")}} para CSS. Ele aplica o JavaScript à página, para que possa afetar o HTML (junto com o CSS e qualquer outra coisa na página).
-4. Adicione este código ao arquivo `main.js`:
+3. (˘ω˘) i-isso faz o mesmo t-twabawho que o ewemento {{htmwewement("wink")}} pawa css. 😳 ewe apwica o javascwipt à p-página, pawa que possa afetaw o-o htmw (junto com o css e quawquew outwa coisa nya página). σωσ
+4. a-adicione este código ao awquivo `main.js`:
 
    ```js
-   const myHeading = document.querySelector("h1");
-   myHeading.textContent = "Olá mundo!";
+   const m-myheading = d-document.quewysewectow("h1");
+   myheading.textcontent = "owá m-mundo!";
    ```
 
-5. Certifique-se de que os arquivos HTML e JavaScript foram salvos. Em seguida, carregue `index.html` em seu navegador. Você deve ver algo assim:
+5. UwU cewtifique-se d-de que os awquivos h-htmw e javascwipt f-fowam sawvos. -.- em seguida, 🥺 c-cawwegue `index.htmw` e-em seu nyavegadow. 😳😳😳 você deve vew awgo assim:
 
-![Título "hello world" acima de um logotipo do firefox](hello-world.png)
+![títuwo "hewwo w-wowwd" acima d-de um wogotipo d-do fiwefox](hewwo-wowwd.png)
 
-> [!NOTE]
-> A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que o navegador lê o código na ordem em que aparece no arquivo.
+> [!note]
+> a wazão pewa quaw a-as instwuções (acima) cowocam o-o ewemento {{htmwewement("scwipt")}} p-pewto da pawte infewiow do awquivo htmw é que o nyavegadow w-wê o código nya o-owdem em que a-apawece nyo awquivo. 🥺
 >
-> Se o JavaScript carregar primeiro e supostamente afetar o HTML que ainda não foi carregado, pode haver problemas. Colocar JavaScript perto da parte inferior de uma página HTML é uma maneira de acomodar essa dependência. Para saber mais sobre abordagens alternativas, consulte [Estratégias de carregamento de script](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies).
+> s-se o javascwipt cawwegaw p-pwimeiwo e supostamente afetaw o htmw que ainda nyão foi cawwegado, ^^ pode havew pwobwemas. ^^;; cowocaw j-javascwipt pewto da pawte infewiow d-de uma página htmw é uma m-maneiwa de acomodaw essa dependência. >w< p-pawa sabew mais sobwe a-abowdagens awtewnativas, σωσ c-consuwte [estwatégias d-de cawwegamento d-de scwipt](/pt-bw/docs/weawn/javascwipt/fiwst_steps/nani_is_javascwipt#scwipt_woading_stwategies). >w<
 
-### O que aconteceu?
+### o-o que aconteceu?
 
-O texto do cabeçalho mudou para _Hello world!_ usando JavaScript. Você fez isso usando uma função chamada {{domxref("Document.querySelector", "querySelector()")}} para obter uma referência ao seu título e armazená-lo em uma variável chamada `myHeading`. Isso é semelhante ao que fizemos usando seletores CSS. Quando você deseja fazer algo em um elemento, primeiro precisa selecioná-lo.
+o texto do cabeçawho mudou pawa _hewwo wowwd!_ usando javascwipt. (⑅˘꒳˘) você fez isso usando u-uma função c-chamada {{domxwef("document.quewysewectow", òωó "quewysewectow()")}} p-pawa obtew uma wefewência ao seu t-títuwo e awmazená-wo em uma vawiávew chamada `myheading`. (⑅˘꒳˘) isso é semewhante a-ao que fizemos u-usando sewetowes css. quando você d-deseja fazew awgo em um ewemento, (ꈍᴗꈍ) pwimeiwo p-pwecisa sewecioná-wo. rawr x3
 
-Em seguida, o código define o valor da propriedade {{domxref("Node.textContent", "textContent")}} da variável `myHeading` (que representa o conteúdo do cabeçalho) como _Hello world!_.
+e-em seguida, ( ͡o ω ͡o ) o código define o-o vawow da p-pwopwiedade {{domxwef("node.textcontent", UwU "textcontent")}} da vawiávew `myheading` (que wepwesenta o conteúdo do cabeçawho) como _hewwo w-wowwd!_. ^^
 
-> [!NOTE]
-> Ambos os recursos usados neste exercício são partes do [Modelo de Objeto de Document (DOM)](/pt-BR/docs/Web/API/Document_Object_Model), que tem a capacidade de manipular documentos.
+> [!note]
+> a-ambos os wecuwsos u-usados nyeste e-exewcício são p-pawtes do [modewo de objeto de d-document (dom)](/pt-bw/docs/web/api/document_object_modew), (˘ω˘) q-que tem a capacidade d-de manipuwaw documentos. (ˆ ﻌ ˆ)♡
 
-## Curso intensivo de fundamentos da linguagem
+## c-cuwso intensivo de f-fundamentos da winguagem
 
-Para entender melhor como o JavaScript funciona, vamos explicar alguns dos principais recursos da linguagem. Vale a pena notar que esses recursos são comuns a todas as linguagens de programação. Se você dominar esses fundamentos, terá uma vantagem inicial na codificação em outras linguagens também!
+pawa entendew mewhow c-como o javascwipt funciona, OwO vamos e-expwicaw awguns d-dos pwincipais wecuwsos da winguagem. 😳 v-vawe a pena nyotaw que esses wecuwsos são c-comuns a todas a-as winguagens d-de pwogwamação. UwU se você dominaw esses fundamentos, 🥺 tewá uma v-vantagem iniciaw nya codificação em outwas winguagens t-também! 😳😳😳
 
-> [!WARNING]
-> neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> [!wawning]
+> n-neste awtigo, ʘwʘ tente insewiw as w-winhas de código de exempwo em s-seu consowe javascwipt p-pawa vew o que acontece. pawa obtew mais d-detawhes sobwe consowes javascwipt, /(^•ω•^) consuwte [descubwa a-as fewwamentas d-de desenvowvedow do nyavegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows). :3
 
-### Variáveis
+### v-vawiáveis
 
-{{Glossary("Variable", "Variables")}} são contêineres que armazenam valores. Você começa declarando uma variável com a palavra-chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let), seguida do nome que você dá à variável:
-
-```js
-let myVariable;
-```
-
-Um ponto e vírgula no final de uma linha indica onde uma instrução termina. Só é necessário quando você precisa separar instruções em uma única linha. No entanto, algumas pessoas acreditam que é uma boa prática colocar ponto-e-vírgula no final de cada instrução. Existem outras regras para quando você deve e não deve usar ponto-e-vírgula. Para obter mais detalhes, consulte [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/).
-
-Você pode nomear uma variável para praticamente qualquer coisa, mas há algumas restrições. (Consulte [esta seção sobre regras de nomenclatura](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) Se não tiver certeza, você pode [verificar o nome da variável](https://mothereff.in/js-variables) para ver se é válido.
-
-JavaScript diferencia maiúsculas de minúsculas. Isso significa que `minhaVariável` não é o mesmo que `minhavariável`. Se você tiver problemas em seu código, verifique o caso!
-
-Depois de declarar uma variável, você pode atribuir um valor a ela:
+{{gwossawy("vawiabwe", :3 "vawiabwes")}} são contêinewes q-que awmazenam v-vawowes. mya você c-começa decwawando uma vawiávew com a pawavwa-chave [`wet`](/pt-bw/docs/web/javascwipt/wefewence/statements/wet), (///ˬ///✿) seguida do nyome que você dá à vawiávew:
 
 ```js
-myVariable = "Bob";
+wet myvawiabwe;
 ```
 
-Além disso, você pode fazer essas duas operações na mesma linha:
+um ponto e víwguwa nyo finaw de uma winha indica onde uma instwução tewmina. (⑅˘꒳˘) só é n-nyecessáwio q-quando você pwecisa sepawaw instwuções em uma única w-winha. :3 n-nyo entanto, /(^•ω•^) awgumas p-pessoas acweditam que é uma b-boa pwática cowocaw ponto-e-víwguwa n-nyo finaw d-de cada instwução. ^^;; existem o-outwas wegwas pawa quando você d-deve e não deve u-usaw ponto-e-víwguwa. (U ᵕ U❁) pawa obtew mais detawhes, (U ﹏ U) c-consuwte [youw g-guide to semicowons i-in javascwipt](https://www.codecademy.com/wesouwces/bwog/youw-guide-to-semicowons-in-javascwipt/). mya
+
+v-você pode n-nyomeaw uma v-vawiávew pawa pwaticamente q-quawquew c-coisa, mas h-há awgumas westwições. (consuwte [esta seção s-sobwe wegwas de n-nyomencwatuwa](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwes).) s-se nyão tivew cewteza, ^•ﻌ•^ você pode [vewificaw o n-nyome da vawiávew](https://motheweff.in/js-vawiabwes) pawa vew se é váwido. (U ﹏ U)
+
+j-javascwipt difewencia maiúscuwas d-de minúscuwas. :3 i-isso significa q-que `minhavawiávew` nyão é o-o mesmo que `minhavawiávew`. rawr x3 se v-você tivew pwobwemas em seu código, 😳😳😳 v-vewifique o caso! >w<
+
+depois d-de decwawaw uma vawiávew, òωó você pode atwibuiw um vawow a ewa:
 
 ```js
-let myVariable = "Bob";
+myvawiabwe = "bob";
 ```
 
-Você recupera o valor chamando o nome da variável:
+a-awém disso, 😳 você pode fazew essas d-duas opewações n-nya mesma winha:
 
 ```js
-myVariable;
+wet myvawiabwe = "bob";
 ```
 
-Depois de atribuir um valor a uma variável, você pode alterá-lo posteriormente no código:
+você w-wecupewa o vawow chamando o nyome d-da vawiávew:
 
 ```js
-let myVariable = "Bob";
-myVariable = "Steve";
+m-myvawiabwe;
 ```
 
-Observe que as variáveis podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
+d-depois de atwibuiw um vawow a uma vawiávew, (✿oωo) v-você pode a-awtewá-wo postewiowmente nyo código:
 
-<table class="standard-table">
+```js
+w-wet myvawiabwe = "bob";
+myvawiabwe = "steve";
+```
+
+o-obsewve que as vawiáveis podem c-contew vawowes q-que têm difewentes [tipos d-de dados](/pt-bw/docs/web/javascwipt/data_stwuctuwes):
+
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row">Variável</th>
-      <th scope="col">Explicação</th>
-      <th scope="col">Exemplo</th>
-    </tr>
+    <tw>
+      <th scope="wow">vawiávew</th>
+      <th s-scope="cow">expwicação</th>
+      <th s-scope="cow">exempwo</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">{{Glossary("String")}}</th>
+    <tw>
+      <th s-scope="wow">{{gwossawy("stwing")}}</th>
       <td>
-        Esta é uma sequência de texto conhecida como string. Para significar que o valor
-        for uma string, coloque-a entre aspas simples.
+        e-esta é uma sequência de texto c-conhecida como s-stwing. OwO pawa significaw q-que o vawow
+        f-fow u-uma stwing, (U ﹏ U) cowoque-a e-entwe aspas s-simpwes. (ꈍᴗꈍ)
       </td>
-      <td><code>let myVariable = 'Bob';</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Number")}}</th>
-      <td>Isto é um número. Os números não têm aspas.</td>
-      <td><code>deixe minhaVariável = 10;</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Boolean")}}</th>
+      <td><code>wet m-myvawiabwe = 'bob';</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("numbew")}}</th>
+      <td>isto é u-um nyúmewo. rawr os nyúmewos nyão t-têm aspas.</td>
+      <td><code>deixe minhavawiávew = 10;</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("boowean")}}</th>
       <td>
-        Este é um valor Verdadeiro/Falso. As palavras <code>true</code> e
-        <code>false</code> são palavras-chave especiais que não precisam de aspas.
+        e-este é um vawow v-vewdadeiwo/fawso. ^^ as pawavwas <code>twue</code> e
+        <code>fawse</code> são pawavwas-chave e-especiais q-que nyão pwecisam d-de aspas. rawr
       </td>
-      <td><code>let myVariable = true;</code></td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Array")}}</th>
+      <td><code>wet myvawiabwe = twue;</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("awway")}}</th>
       <td>
-        Esta é uma estrutura que permite armazenar vários valores em um único
-        referência.
-      </td>
-      <td>
-        <code>let myVariable = [1,'Bob','Steve',10];</code><br />Refere-se a cada
-        membro do array assim:<br /><code>myVariable[0]</code>,
-        <code>myVariable[1]</code>, etc.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Object")}}</th>
-      <td>
-        Isso pode ser qualquer coisa. Tudo em JavaScript é um objeto e pode ser
-        armazenados em uma variável. Tenha isso em mente enquanto aprende.
+        e-esta é uma estwutuwa q-que pewmite awmazenaw váwios v-vawowes em u-um único
+        wefewência. nyaa~~
       </td>
       <td>
-        <code>let myVariable = document.querySelector('h1');</code><br />Todos
-        os exemplos acima também.
+        <code>wet myvawiabwe = [1,'bob','steve',10];</code><bw />wefewe-se a cada
+        m-membwo do awway a-assim:<bw /><code>myvawiabwe[0]</code>, nyaa~~
+        <code>myvawiabwe[1]</code>, o.O e-etc. òωó
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("object")}}</th>
+      <td>
+        isso pode sew quawquew coisa. ^^;; t-tudo em javascwipt é u-um objeto e pode sew
+        awmazenados e-em uma vawiávew. rawr tenha isso em mente enquanto a-apwende. ^•ﻌ•^
+      </td>
+      <td>
+        <code>wet myvawiabwe = d-document.quewysewectow('h1');</code><bw />todos
+        o-os exempwos acima também. nyaa~~
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Então, por que precisamos de variáveis? As variáveis são necessárias para fazer qualquer coisa interessante na programação. Se os valores não pudessem ser alterados, você não poderia fazer nada dinâmico, como personalizar uma mensagem de saudação ou alterar uma imagem exibida em uma galeria de imagens.
+e-então, nyaa~~ pow que p-pwecisamos de vawiáveis? as vawiáveis s-são nyecessáwias pawa f-fazew quawquew coisa i-intewessante n-nya pwogwamação. 😳😳😳 s-se os vawowes nyão pudessem s-sew awtewados, 😳😳😳 v-você nyão podewia f-fazew nyada dinâmico, σωσ como p-pewsonawizaw uma mensagem de saudação ou awtewaw u-uma imagem exibida e-em uma gawewia d-de imagens. o.O
 
-### Comentários
+### comentáwios
 
-Comentários são trechos de texto que podem ser adicionados junto com o código. O navegador ignora o texto marcado como comentários. Você pode escrever comentários em JavaScript da mesma forma que em CSS:
+comentáwios são twechos de texto que podem s-sew adicionados junto com o código. σωσ o-o nyavegadow i-ignowa o texto mawcado como comentáwios. nyaa~~ você p-pode escwevew comentáwios em j-javascwipt da m-mesma fowma que e-em css:
 
 ```js
 /*
-Tudo no meio é um comentário.
+t-tudo nyo meio é u-um comentáwio. rawr x3
 */
 ```
 
-Se o seu comentário não contém quebras de linha, é uma opção colocá-lo atrás de duas barras como esta:
+se o seu comentáwio nyão contém quebwas de winha, (///ˬ///✿) é u-uma opção cowocá-wo atwás d-de duas bawwas como esta:
 
 ```js
-// Isso é um comentário
+// isso é um comentáwio
 ```
 
-### Operadores
+### o-opewadowes
 
-Um `{{Glossary("operator")}}` é um símbolo matemático que produz um resultado baseado em dois valores (ou variáveis). Na tabela a seguir, você pode ver alguns dos operadores mais simples, juntamente com alguns exemplos para experimentar no console JavaScript.
+um `{{gwossawy("opewatow")}}` é um símbowo matemático que pwoduz um wesuwtado b-baseado em dois v-vawowes (ou vawiáveis). o.O na tabewa a-a seguiw, òωó você pode vew awguns dos opewadowes m-mais simpwes, OwO j-juntamente com awguns exempwos p-pawa expewimentaw nyo consowe javascwipt. σωσ
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row">Operador</th>
-      <th scope="col">Explicação</th>
-      <th scope="col">Símbolo(s)</th>
-      <th scope="col">Exemplo</th>
-    </tr>
+    <tw>
+      <th scope="wow">opewadow</th>
+      <th scope="cow">expwicação</th>
+      <th scope="cow">símbowo(s)</th>
+      <th s-scope="cow">exempwo</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Adição</th>
-      <td>Adicione dois números ou combine duas strings.</td>
+    <tw>
+      <th scope="wow">adição</th>
+      <td>adicione dois nyúmewos o-ou combine duas s-stwings.</td>
       <td><code>+</code></td>
       <td>
-        <code>6 + 9;<br />'Olá ' + 'mundo!';</code>
+        <code>6 + 9;<bw />'owá ' + 'mundo!';</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Subtração, Multiplicação, Divisão</th>
-      <td>Eles fazem o que você espera que façam em matemática básica.</td>
-      <td><code>-</code>, <code>*</code>, <code>/</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">subtwação, nyaa~~ muwtipwicação, OwO divisão</th>
+      <td>ewes f-fazem o que você espewa que façam em matemática básica.</td>
+      <td><code>-</code>, ^^ <code>*</code>, (///ˬ///✿) <code>/</code></td>
       <td>
-        <code>9 - 3;<br />8 * 2; // multiplicar em JS é um asterisco<br />9 / 3;</code>
+        <code>9 - 3;<bw />8 * 2; // m-muwtipwicaw e-em js é u-um astewisco<bw />9 / 3;</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Atribuição</th>
-      <td>Como você já viu: isso atribui um valor a uma variável.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">atwibuição</th>
+      <td>como você já viu: isso atwibui u-um vawow a uma v-vawiávew.</td>
       <td><code>=</code></td>
-      <td><code>let myVariable = 'Bob';</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Igualdade estrita</th>
+      <td><code>wet myvawiabwe = 'bob';</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">iguawdade e-estwita</th>
       <td>
-        Isso executa um teste para ver se dois valores são iguais. Ele retorna um
-        Resultado <code>true</code>/<code>false</code> (booleano).
+        isso executa um teste pawa v-vew se dois vawowes são iguais. σωσ ewe wetowna um
+        w-wesuwtado <code>twue</code>/<code>fawse</code> (booweano). rawr x3
       </td>
       <td><code>===</code></td>
       <td>
-        <code>let myVariable = 3;<br />myVariable === 4;</code>
+        <code>wet m-myvawiabwe = 3;<bw />myvawiabwe === 4;</code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Não, não é igual</th>
+    </tw>
+    <tw>
+      <th scope="wow">não, (ˆ ﻌ ˆ)♡ n-nyão é i-iguaw</th>
       <td>
-        Isso retorna o valor logicamente oposto do que precede. Acontece
-        um <code>true</code> em um <code>false</code>, etc. Quando é usado
-        ao lado do operador de igualdade, o operador de negação testa se dois
-        os valores <em>não</em> são iguais.
+        i-isso wetowna o vawow wogicamente oposto d-do que pwecede. 🥺 acontece
+        um <code>twue</code> e-em um <code>fawse</code>, (⑅˘꒳˘) etc. 😳😳😳 quando é usado
+        ao wado do opewadow d-de iguawdade, /(^•ω•^) o-o opewadow d-de nyegação testa s-se dois
+        o-os vawowes <em>não</em> são i-iguais. >w<
       </td>
-      <td><code>!</code>, <code>!==</code></td>
+      <td><code>!</code>, ^•ﻌ•^ <code>!==</code></td>
       <td>
         <p>
-          Para "Not", a expressão básica é <code>true</code>, mas o
-          a comparação retorna <code>false</code> porque nós a negamos:
+          pawa "not", 😳😳😳 a expwessão b-básica é <code>twue</code>, :3 mas o-o
+          a compawação wetowna <code>fawse</code> powque nós a-a nyegamos:
         </p>
         <p>
-          <code>let myVariable = 3;<br />!(myVariable === 3);</code>
+          <code>wet m-myvawiabwe = 3;<bw />!(myvawiabwe === 3);</code>
         </p>
         <p>
-          "Não é igual" dá basicamente o mesmo resultado com diferentes
-          sintaxe. Aqui estamos testando "é <code>myVariable</code> NÃO igual a
-          3". Isso retorna <code> false</code> porque <code>myVariable</code> É
-          igual a 3:
+          "não é iguaw" d-dá basicamente o mesmo wesuwtado c-com difewentes
+          s-sintaxe. (ꈍᴗꈍ) aqui estamos t-testando "é <code>myvawiabwe</code> n-nyÃo iguaw a
+          3". ^•ﻌ•^ i-isso wetowna <code> fawse</code> powque <code>myvawiabwe</code> É
+          iguaw a 3:
         </p>
         <p>
-          <code>let myVariable = 3;<br />myVariable !== 3;</code>
+          <code>wet m-myvawiabwe = 3;<bw />myvawiabwe !== 3;</code>
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Existem muito mais operadores para explorar, mas isso é o suficiente por enquanto. Consulte [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators) para obter uma lista completa.
+existem m-muito mais opewadowes pawa expwowaw, >w< mas isso é o-o suficiente p-pow enquanto. ^^;; c-consuwte [expwessões e opewadowes](/pt-bw/docs/web/javascwipt/wefewence/opewatows) p-pawa obtew u-uma wista compweta. (✿oωo)
 
-> [!NOTE]
-> misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
+> [!note]
+> mistuwaw tipos d-de dados pode wevaw a awguns wesuwtados e-estwanhos ao weawizaw cáwcuwos. òωó t-tenha c-cuidado pawa se wefewiw às suas vawiáveis cowwetamente e obtew os wesuwtados espewados. ^^ p-pow exempwo, ^^ d-digite `'35' + '25'` em seu consowe. rawr pow que você nyão c-consegue o wesuwtado que espewava? c-como as aspas t-twansfowmam os nyúmewos em stwings, XD você acabou concatenando stwings em vez de a-adicionaw nyúmewos. rawr se você insewiw `35 + 25`, 😳 o-obtewá o totaw dos dois nyúmewos. 🥺
 
-### Condicionais
+### c-condicionais
 
-Condicionais são estruturas de código usadas para testar se uma expressão retorna verdadeira ou não. Uma forma muito comum de condicionais é a instrução `if...else`. Por exemplo:
+c-condicionais são estwutuwas d-de código u-usadas pawa testaw s-se uma expwessão w-wetowna vewdadeiwa o-ou nyão. (U ᵕ U❁) u-uma fowma muito comum de condicionais é a instwução `if...ewse`. 😳 pow exempwo:
 
 ```js
-let iceCream = "chocolate";
-if (iceCream === "chocolate") {
-  alert("Sim, eu amo sorvete de chocolate!");
-} else {
-  alert("Aaaah, mas chocolate é o meu favorito…");
+wet icecweam = "chocowate";
+i-if (icecweam === "chocowate") {
+  a-awewt("sim, 🥺 e-eu amo sowvete d-de chocowate!");
+} e-ewse {
+  a-awewt("aaaah, (///ˬ///✿) mas chocowate é o meu favowito…");
 }
 ```
 
-A expressão dentro do `if ()` é o teste. Isso usa o operador de igualdade estrita (conforme descrito acima) para comparar a variável `iceCream` com a string `chocolate` para ver se as duas são iguais. Se esta comparação retornar `true`, o primeiro bloco de código será executado. Se a comparação não for verdadeira, o segundo bloco de código — após a instrução `else` — será executado.
+a expwessão dentwo d-do `if ()` é o t-teste. mya isso usa o opewadow de iguawdade estwita (confowme descwito a-acima) pawa compawaw a-a vawiávew `icecweam` com a-a stwing `chocowate` pawa vew se as duas são i-iguais. (✿oωo) se esta compawação wetownaw `twue`, ^•ﻌ•^ o pwimeiwo bwoco d-de código sewá e-executado. o.O se a compawação nyão fow vewdadeiwa, o.O o-o segundo bwoco de código — a-após a instwução `ewse` — s-sewá executado. XD
 
-### Funções
+### funções
 
-{{Glossary("Function", "Functions")}} são uma forma de empacotar a funcionalidade que você deseja reutilizar. É possível definir um corpo de código como uma função que é executada quando você chama o nome da função em seu código. Esta é uma boa alternativa para escrever repetidamente o mesmo código. Você já viu alguns usos de funções. Por exemplo:
+{{gwossawy("function", ^•ﻌ•^ "functions")}} s-são uma f-fowma de empacotaw a-a funcionawidade q-que você d-deseja weutiwizaw. ʘwʘ É p-possívew definiw um cowpo d-de código como u-uma função que é executada quando v-você chama o nyome da função em seu código. (U ﹏ U) e-esta é uma boa awtewnativa p-pawa escwevew wepetidamente o m-mesmo código. 😳😳😳 você j-já viu awguns usos de funções. 🥺 pow exempwo:
 
 ```js
-let myVariable = document.querySelector("h1");
+w-wet myvawiabwe = document.quewysewectow("h1");
 ```
 
 ```js
-alert("olá!");
+awewt("owá!");
 ```
 
-Essas funções, `document.querySelector` e `alert`, são incorporadas ao navegador.
+e-essas f-funções, (///ˬ///✿) `document.quewysewectow` e `awewt`, (˘ω˘) são incowpowadas a-ao nyavegadow.
 
-Se você ver algo que se parece com um nome de variável, mas é seguido por parênteses— `()` —provavelmente é uma função. As funções geralmente usam {{Glossary("Argument", "arguments")}}: bits de dados de que precisam para realizar seu trabalho. Os argumentos ficam dentro dos parênteses, separados por vírgulas se houver mais de um argumento.
+s-se você vew awgo que se pawece c-com um nyome de vawiávew, mas é seguido pow pawênteses— `()` —pwovavewmente é u-uma função. :3 a-as funções gewawmente usam {{gwossawy("awgument", /(^•ω•^) "awguments")}}: b-bits de d-dados de que pwecisam pawa weawizaw seu twabawho. :3 o-os awgumentos f-ficam dentwo dos p-pawênteses, mya sepawados p-pow víwguwas se houvew mais de um awgumento. XD
 
-Por exemplo, a função `alert()` faz com que uma caixa pop-up apareça dentro da janela do navegador, mas precisamos dar a ela uma string como argumento para informar à função qual mensagem exibir.
+pow exempwo, (///ˬ///✿) a função `awewt()` faz com que uma caixa p-pop-up apaweça d-dentwo da janewa d-do nyavegadow, 🥺 m-mas pwecisamos daw a-a ewa uma stwing c-como awgumento pawa infowmaw à f-função quaw m-mensagem exibiw. o.O
 
-Você também pode definir suas próprias funções. No próximo exemplo, criamos uma função simples que recebe dois números como argumentos e os multiplica:
+você também p-pode definiw suas p-pwópwias funções. mya nyo pwóximo exempwo, rawr x3 cwiamos u-uma função simpwes que wecebe dois númewos c-como awgumentos e os muwtipwica:
 
 ```js
-function multiply(num1, num2) {
-  let result = num1 * num2;
-  return result;
+f-function m-muwtipwy(num1, 😳 nyum2) {
+  w-wet wesuwt = num1 * n-nyum2;
+  wetuwn w-wesuwt;
 }
 ```
 
-Tente executar isso no console; então teste com vários argumentos. Por exemplo:
+tente executaw i-isso nyo consowe; e-então teste com váwios awgumentos. 😳😳😳 p-pow exempwo:
 
 ```js
-multiply(4, 7);
-multiply(20, 20);
-multiply(0.5, 3);
+muwtipwy(4, >_< 7);
+m-muwtipwy(20, >w< 20);
+muwtipwy(0.5, rawr x3 3);
 ```
 
-> [!NOTE]
-> A instrução [`return`](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) diz ao navegador para retornar a variável `result` da função para que ela esteja disponível usar. Isso é necessário porque as variáveis definidas dentro das funções só estão disponíveis dentro dessas funções. Isso é chamado de variável {{Glossary("Scope", "scoping")}}. (Leia mais sobre [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope).)
+> [!note]
+> a-a instwução [`wetuwn`](/pt-bw/docs/web/javascwipt/wefewence/statements/wetuwn) d-diz ao nyavegadow pawa wetownaw a-a vawiávew `wesuwt` da função pawa que ewa e-esteja disponívew usaw. isso é nyecessáwio powque as vawiáveis definidas dentwo das funções só estão disponíveis d-dentwo dessas funções. XD isso é chamado de vawiávew {{gwossawy("scope", ^^ "scoping")}}. (✿oωo) (weia mais sobwe [escopo de vawiávew](/pt-bw/docs/web/javascwipt/guide/gwammaw_and_types#vawiabwe_scope).)
 
-### Eventos
+### eventos
 
-A interatividade real em um site requer manipuladores de eventos. Essas são estruturas de código que detectam atividades no navegador e executam o código em resposta. O exemplo mais óbvio é lidar com o [evento de click](/pt-BR/docs/Web/API/Element/click_event), que é acionado pelo navegador quando você clica em algo com o mouse. Para demonstrar isso, digite o seguinte em seu console e clique na página da Web atual:
+a intewatividade w-weaw em um site wequew manipuwadowes d-de eventos. >w< essas são estwutuwas d-de código que detectam atividades nyo nyavegadow e-e executam o código em wesposta. 😳😳😳 o-o exempwo mais óbvio é w-widaw com o [evento d-de cwick](/pt-bw/docs/web/api/ewement/cwick_event), que é acionado pewo nyavegadow q-quando você cwica em awgo com o mouse. (ꈍᴗꈍ) pawa demonstwaw i-isso, (✿oωo) digite o seguinte em seu c-consowe e cwique nya página da w-web atuaw:
 
 ```js
-document.querySelector("html").addEventListener("click", function () {
-  alert("Ai! Pare de me cutucar!");
+document.quewysewectow("htmw").addeventwistenew("cwick", (˘ω˘) f-function () {
+  a-awewt("ai! nyaa~~ pawe de me cutucaw!");
 });
 ```
 
-Existem várias maneiras de anexar um manipulador de eventos a um elemento.
-Aqui selecionamos o elemento {{htmlelement("html")}}. Em seguida, chamamos sua função [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener), passando o nome do evento para ouvir (`'click'`) e uma função para executar quando o evento acontecer.
+e-existem váwias maneiwas de anexaw um manipuwadow d-de eventos a um ewemento. ( ͡o ω ͡o )
+aqui sewecionamos o ewemento {{htmwewement("htmw")}}. 🥺 em seguida, (U ﹏ U) c-chamamos sua f-função [`addeventwistenew()`](/pt-bw/docs/web/api/eventtawget/addeventwistenew), ( ͡o ω ͡o ) passando o n-nyome do evento p-pawa ouviw (`'cwick'`) e uma função p-pawa executaw quando o evento acontecew. (///ˬ///✿)
 
-A função que acabamos de passar para `addEventListener()` aqui é chamada de _função anônima_, porque não tem um nome. Existe uma maneira alternativa de escrever funções anônimas, que chamamos de _função de seta_.
-Uma função de seta usa `() =>` em vez de `function ()`:
+a função que acabamos de passaw p-pawa `addeventwistenew()` a-aqui é chamada de _função a-anônima_, (///ˬ///✿) p-powque nyão tem um nyome. (✿oωo) existe u-uma maneiwa awtewnativa de escwevew funções a-anônimas, (U ᵕ U❁) que chamamos de _função de seta_. ʘwʘ
+u-uma função d-de seta usa `() =>` em vez de `function ()`:
 
 ```js
-document.querySelector("html").addEventListener("click", () => {
-  alert("Ai! Pare de me cutucar!");
+document.quewysewectow("htmw").addeventwistenew("cwick", ʘwʘ () => {
+  a-awewt("ai! XD pawe de me cutucaw!");
 });
 ```
 
-## Melhorando nosso site de exemplo
+## mewhowando nyosso site de exempwo
 
-Com esta revisão dos fundamentos do JavaScript concluída (acima), vamos adicionar alguns novos recursos ao nosso site de exemplo.
+com esta wevisão dos fundamentos do javascwipt concwuída (acima), (✿oωo) v-vamos a-adicionaw awguns nyovos wecuwsos a-ao nyosso site d-de exempwo. ^•ﻌ•^
 
-Antes de prosseguir, exclua o conteúdo atual do seu arquivo `main.js` — a parte que você adicionou anteriormente durante o "Hello world!" exemplo — e salve o arquivo vazio. Caso contrário, o código existente entrará em conflito com o novo código que você está prestes a adicionar.
+antes de pwosseguiw, ^•ﻌ•^ e-excwua o conteúdo atuaw do seu awquivo `main.js` — a pawte que você adicionou antewiowmente d-duwante o "hewwo wowwd!" exempwo — e sawve o awquivo vazio. caso contwáwio, >_< o-o código existente e-entwawá e-em confwito com o nyovo código que você está pwestes a adicionaw. mya
 
-### Adicionando um trocador de imagens
+### a-adicionando u-um twocadow d-de imagens
 
-Nesta seção, você aprenderá como usar os recursos JavaScript e DOM API para alternar a exibição de uma das duas imagens. Essa alteração ocorrerá quando o usuário clicar na imagem exibida.
+nyesta seção, σωσ você a-apwendewá como usaw os wecuwsos j-javascwipt e dom api pawa awtewnaw a-a exibição de uma das d-duas imagens. essa awtewação ocowwewá quando o-o usuáwio cwicaw nya imagem exibida. rawr
 
-1. Escolha uma imagem que deseja apresentar em seu site de exemplo. Idealmente, a imagem terá o mesmo tamanho da imagem que você adicionou anteriormente ou o mais próximo possível.
-2. Salve esta imagem em sua pasta `images`.
-3. Renomeie a imagem _firefox2.png_.
-4. Adicione o seguinte código JavaScript ao seu arquivo `main.js`.
+1. e-escowha u-uma imagem que deseja apwesentaw e-em seu site de e-exempwo. (✿oωo) ideawmente, :3 a imagem t-tewá o mesmo tamanho da imagem q-que você adicionou antewiowmente o-ou o mais pwóximo p-possívew. rawr x3
+2. sawve esta imagem em sua pasta `images`.
+3. ^^ wenomeie a-a imagem _fiwefox2.png_. ^^
+4. adicione o seguinte código javascwipt ao seu awquivo `main.js`. OwO
 
    ```js
-   const myImage = document.querySelector("img");
+   const myimage = document.quewysewectow("img");
 
-   myImage.onclick = () => {
-     const mySrc = myImage.getAttribute("src");
-     if (mySrc === "images/firefox-icon.png") {
-       myImage.setAttribute("src", "images/firefox2.png");
-     } else {
-       myImage.setAttribute("src", "images/firefox-icon.png");
+   myimage.oncwick = () => {
+     c-const myswc = myimage.getattwibute("swc");
+     if (myswc === "images/fiwefox-icon.png") {
+       m-myimage.setattwibute("swc", ʘwʘ "images/fiwefox2.png");
+     } ewse {
+       myimage.setattwibute("swc", /(^•ω•^) "images/fiwefox-icon.png");
      }
    };
    ```
 
-5. Salve todos os arquivos e carregue `index.html` no navegador. Agora, quando você clicar na imagem, ela deve mudar para a outra.
+5. ʘwʘ sawve t-todos os awquivos e cawwegue `index.htmw` nyo nyavegadow. (⑅˘꒳˘) agowa, UwU q-quando você cwicaw nya imagem, -.- ewa deve mudaw p-pawa a outwa. :3
 
-Isso é o que aconteceu. Você armazenou uma referência ao seu elemento {{htmlelement("img")}} na variável `myImage`. Em seguida, você tornou a propriedade do manipulador de eventos `onclick` desta variável igual a uma função sem nome (uma função "anônima"). Portanto, toda vez que esse elemento for clicado:
+isso é o que aconteceu. >_< você a-awmazenou uma wefewência ao seu ewemento {{htmwewement("img")}} n-nya vawiávew `myimage`. nyaa~~ em seguida, você townou a-a pwopwiedade d-do manipuwadow de eventos `oncwick` desta vawiávew i-iguaw a u-uma função sem nyome (uma função "anônima"). ( ͡o ω ͡o ) p-powtanto, o.O toda v-vez que esse ewemento fow cwicado:
 
-1. O código recupera o valor do atributo `src` da imagem.
-2. O código usa uma condicional para verificar se o valor `src` é igual ao caminho da imagem original:
+1. :3 o código w-wecupewa o vawow do atwibuto `swc` da imagem. (˘ω˘)
+2. o código usa u-uma condicionaw pawa vewificaw se o vawow `swc` é iguaw ao caminho d-da imagem owiginaw:
 
-   1. Se for, o código altera o valor `src` para o caminho da segunda imagem, forçando a outra imagem a ser carregada dentro do elemento {{htmlelement("img")}}.
-   2. Se não for (o que significa que já deve ter mudado), o valor `src` volta para o caminho da imagem original, para o estado original.
+   1. rawr x3 s-se fow, o código a-awtewa o vawow `swc` pawa o caminho da segunda imagem, (U ᵕ U❁) fowçando a-a outwa imagem a sew cawwegada d-dentwo do ewemento {{htmwewement("img")}}. 🥺
+   2. >_< se nyão fow (o q-que significa q-que já deve tew mudado), :3 o vawow `swc` vowta pawa o caminho da imagem owiginaw, :3 pawa o estado o-owiginaw. (ꈍᴗꈍ)
 
-### Adicionando uma mensagem de boas-vindas personalizada
+### adicionando u-uma mensagem de boas-vindas pewsonawizada
 
-Em seguida, vamos alterar o título da página para uma mensagem de boas-vindas personalizada quando o usuário visitar o site pela primeira vez. Esta mensagem de boas-vindas persistirá. Caso o usuário saia do site e retorne posteriormente, salvaremos a mensagem usando a [Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API). Também incluiremos uma opção para alterar o usuário e, portanto, a mensagem de boas-vindas.
+e-em seguida, σωσ vamos awtewaw o títuwo da página p-pawa uma mensagem d-de boas-vindas p-pewsonawizada q-quando o usuáwio v-visitaw o s-site pewa pwimeiwa vez. 😳 esta mensagem de boas-vindas p-pewsistiwá. mya c-caso o usuáwio s-saia do site e w-wetowne postewiowmente, (///ˬ///✿) s-sawvawemos a-a mensagem usando a [web stowage a-api](/pt-bw/docs/web/api/web_stowage_api). ^^ t-também incwuiwemos u-uma opção pawa awtewaw o usuáwio e, (✿oωo) powtanto, a-a mensagem de boas-vindas. ( ͡o ω ͡o )
 
-1. Em `index.html`, adicione a seguinte linha antes do elemento {{htmlelement("script")}}:
+1. em `index.htmw`, ^^;; a-adicione a seguinte winha antes do ewemento {{htmwewement("scwipt")}}:
 
-   ```html
-   <button>Alterar usuário</button>
+   ```htmw
+   <button>awtewaw u-usuáwio</button>
    ```
 
-2. Em `main.js`, coloque o seguinte código no final do arquivo, exatamente como está escrito. Isso leva referências ao novo botão e ao cabeçalho, armazenando cada uma das variáveis internas:
+2. :3 e-em `main.js`, 😳 cowoque o seguinte código nyo finaw do awquivo, XD e-exatamente c-como está escwito. (///ˬ///✿) isso weva w-wefewências ao n-nyovo botão e ao cabeçawho, o.O awmazenando cada uma das vawiáveis i-intewnas:
 
    ```js
-   let myButton = document.querySelector("button");
-   let myHeading = document.querySelector("h1");
+   w-wet mybutton = document.quewysewectow("button");
+   wet m-myheading = document.quewysewectow("h1");
    ```
 
-3. Adicione a seguinte função para definir a saudação personalizada. Isso não vai fazer nada ainda, mas thisso vai mudar em breve.
+3. o.O a-adicione a seguinte função pawa definiw a-a saudação pewsonawizada. XD isso nyão vai fazew nyada ainda, ^^;; mas thisso vai mudaw em bweve. 😳😳😳
 
    ```js
-   function setUserName() {
-     const myName = prompt("Por favor, digite o seu nome");
-     localStorage.setItem("name", myName);
-     myHeading.textContent = `Mozilla é legal, ${myName}`;
+   f-function setusewname() {
+     const myname = p-pwompt("pow f-favow, digite o-o seu nyome");
+     wocawstowage.setitem("name", (U ᵕ U❁) m-myname);
+     m-myheading.textcontent = `moziwwa é w-wegaw, /(^•ω•^) ${myname}`;
    }
    ```
 
-   A função `setUserName()` contém uma função [`prompt()`](/pt-BR/docs/Web/API/Window/prompt), que exibe uma caixa de diálogo, semelhante a `alert()`. Esta função `prompt()` faz mais do que `alert()`, solicitando ao usuário que insira dados e armazenando-os em uma variável após o usuário clicar em _OK._ Neste caso, estamos solicitando que o usuário insira um nome. Em seguida, o código chama uma API `localStorage`, que nos permite armazenar dados no navegador e recuperá-los posteriormente. Usamos a função `setItem()` do localStorage para criar e armazenar um item de dados chamado `'name'`, configurando seu valor para a variável `myName` que contém a entrada do usuário para o nome. Por fim, definimos o `textContent` do cabeçalho como uma string, mais o nome do usuário recém-armazenado.
+   a-a função `setusewname()` c-contém uma função [`pwompt()`](/pt-bw/docs/web/api/window/pwompt), 😳😳😳 que exibe uma caixa de diáwogo, rawr x3 s-semewhante a-a `awewt()`. ʘwʘ e-esta função `pwompt()` faz mais d-do que `awewt()`, UwU s-sowicitando a-ao usuáwio que insiwa dados e a-awmazenando-os em u-uma vawiávew a-após o usuáwio c-cwicaw em _ok._ n-nyeste caso, (⑅˘꒳˘) estamos sowicitando q-que o usuáwio insiwa um nyome. ^^ e-em seguida, 😳😳😳 o c-código chama uma api `wocawstowage`, òωó que nyos pewmite awmazenaw d-dados nyo nyavegadow e-e wecupewá-wos postewiowmente. ^^;; u-usamos a função `setitem()` d-do wocawstowage pawa cwiaw e awmazenaw um item d-de dados chamado `'name'`, (✿oωo) c-configuwando s-seu vawow p-pawa a vawiávew `myname` que c-contém a entwada d-do usuáwio pawa o nyome. rawr pow fim, definimos o-o `textcontent` do cabeçawho como uma stwing, XD mais o nyome do usuáwio wecém-awmazenado. 😳
 
-4. Adicione o seguinte bloco de condição. Poderíamos chamar isso de código de inicialização, pois ele estrutura o aplicativo quando ele é carregado pela primeira vez.
+4. a-adicione o seguinte b-bwoco de condição. (U ᵕ U❁) podewíamos chamaw isso de código de i-iniciawização, UwU p-pois ewe estwutuwa o apwicativo quando ewe é cawwegado p-pewa pwimeiwa vez. OwO
 
    ```js
-   if (!localStorage.getItem("name")) {
-     setUserName();
-   } else {
-     const storedName = localStorage.getItem("name");
-     myHeading.textContent = `Mozilla é legal, ${storedName}`;
+   i-if (!wocawstowage.getitem("name")) {
+     s-setusewname();
+   } e-ewse {
+     const stowedname = wocawstowage.getitem("name");
+     myheading.textcontent = `moziwwa é w-wegaw, 😳 ${stowedname}`;
    }
    ```
 
-   Esta primeira linha deste bloco utiliza o operador de negação (NOT lógico, representado pelo `!`) para verificar se os dados `nome` existem. Caso contrário, a função `setUserName()` é executada para criá-lo. Se existir (ou seja, o usuário definiu um nome de usuário durante uma visita anterior), recuperamos o nome armazenado usando `getItem()` e definimos o `textContent` do cabeçalho como uma string, mais o nome do usuário, conforme fez dentro de `setUserName()`.
+   esta pwimeiwa w-winha deste bwoco utiwiza o opewadow d-de nyegação (not wógico, (˘ω˘) wepwesentado p-pewo `!`) pawa vewificaw se os dados `nome` e-existem. òωó caso contwáwio, OwO a função `setusewname()` é e-executada pawa cwiá-wo. (✿oωo) se e-existiw (ou seja, (⑅˘꒳˘) o usuáwio definiu um nyome de usuáwio duwante uma visita antewiow), /(^•ω•^) wecupewamos o nyome awmazenado u-usando `getitem()` e-e definimos o-o `textcontent` d-do cabeçawho como uma stwing, 🥺 mais o nyome d-do usuáwio, -.- confowme fez dentwo de `setusewname()`. ( ͡o ω ͡o )
 
-5. Coloque este manipulador de evento `onclick` (abaixo) no botão. Quando clicado, `setUserName()` é executado. Isso permite que o usuário insira um nome diferente pressionando o botão.
+5. cowoque e-este manipuwadow d-de evento `oncwick` (abaixo) n-nyo botão. 😳😳😳 quando c-cwicado, (˘ω˘) `setusewname()` é executado. ^^ isso pewmite que o usuáwio insiwa um nyome difewente p-pwessionando o b-botão.
 
    ```js
-   myButton.onclick = () => {
-     setUserName();
+   mybutton.oncwick = () => {
+     setusewname();
    };
    ```
 
-### Um nome de usuário nulo?
+### um nyome de u-usuáwio nyuwo?
 
-Ao executar o exemplo e obter a caixa de diálogo que solicita que você insira seu nome de usuário, tente pressionar o botão _Cancelar_. Você deve terminar com um título que diz _Mozilla é legal, null_. Isso acontece porque, quando você cancela o prompt, o valor é definido como [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null). _Null_ é um valor especial em JavaScript que se refere à ausência de um valor.
+ao executaw o e-exempwo e obtew a-a caixa de diáwogo q-que sowicita que você insiwa seu nyome de usuáwio, σωσ tente pwessionaw o botão _cancewaw_. você deve tewminaw c-com um títuwo que diz _moziwwa é w-wegaw, 🥺 nyuww_. isso acontece powque, quando você cancewa o-o pwompt, 🥺 o vawow é definido como [`nuww`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/nuww). /(^•ω•^) _nuww_ é u-um vawow especiaw em javascwipt que s-se wefewe à ausência d-de um vawow. (⑅˘꒳˘)
 
-Além disso, tente clicar em _OK_ sem inserir um nome. Você deve terminar com um título que diga _Mozilla é legal,_ por razões bastante óbvias.
+a-awém disso, -.- t-tente cwicaw e-em _ok_ sem insewiw um nyome. você d-deve tewminaw c-com um títuwo que diga _moziwwa é w-wegaw,_ pow wazões bastante óbvias. 😳
 
-Para evitar esses problemas, você pode verificar se o usuário não digitou um nome em branco. Atualize sua função `setUserName()` para isto:
+pawa e-evitaw esses pwobwemas, 😳😳😳 você p-pode vewificaw se o-o usuáwio nyão digitou um nyome e-em bwanco. >w< atuawize s-sua função `setusewname()` pawa isto:
 
 ```js
-function setUserName() {
-  const myName = prompt("Por favor digite o seu nome.");
-  if (!myName) {
-    setUserName();
-  } else {
-    localStorage.setItem("name", myName);
-    myHeading.textContent = `Mozilla é legal, ${myName}`;
+function setusewname() {
+  c-const myname = p-pwompt("pow favow d-digite o seu n-nyome.");
+  if (!myname) {
+    setusewname();
+  } ewse {
+    wocawstowage.setitem("name", UwU myname);
+    myheading.textcontent = `moziwwa é w-wegaw, /(^•ω•^) ${myname}`;
   }
 }
 ```
 
-Em linguagem humana, isso significa: Se `myName` não tiver valor, execute `setUserName()` novamente desde o início. Se ele tiver um valor (se a declaração acima não for verdadeira), armazene o valor em `localStorage` e defina-o como o texto do título.
+em winguagem humana, 🥺 isso s-significa: se `myname` nyão tivew vawow, >_< exekawaii~ `setusewname()` n-nyovamente desde o início. rawr se ewe tivew um vawow (se a d-decwawação acima nyão fow vewdadeiwa), (ꈍᴗꈍ) a-awmazene o-o vawow em `wocawstowage` e-e defina-o como o texto d-do títuwo. -.-
 
-## Conclusão
+## c-concwusão
 
-Se você seguiu todas as instruções deste artigo, deve terminar com uma página parecida com a imagem abaixo. Você também pode [ver nossa versão](https://mdn.github.io/beginner-html-site-scripted/).
+se você seguiu t-todas as instwuções d-deste awtigo, ( ͡o ω ͡o ) d-deve tewminaw c-com uma página pawecida com a-a imagem abaixo. (⑅˘꒳˘) v-você também pode [vew n-nyossa vewsão](https://mdn.github.io/beginnew-htmw-site-scwipted/). mya
 
-![Aparência final da página HTML após a criação dos elementos: um cabeçalho, um grande logotipo centralizado, conteúdo e um botão](website-screen-scripted.png)
+![apawência f-finaw da página htmw após a cwiação dos ewementos: um cabeçawho, rawr x3 um gwande wogotipo c-centwawizado, (ꈍᴗꈍ) c-conteúdo e um botão](website-scween-scwipted.png)
 
-Se você ficar preso, pode comparar seu trabalho com nosso [código de exemplo finalizado no GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js) .
+s-se você ficaw pweso, pode compawaw seu t-twabawho com nyosso [código d-de e-exempwo finawizado n-no github](https://github.com/mdn/beginnew-htmw-site-scwipted/bwob/gh-pages/scwipts/main.js) . ʘwʘ
 
-Acabamos de arranhar a superfície do JavaScript. Se você gostou de jogar e deseja ir além, aproveite os recursos listados abaixo.
+acabamos de awwanhaw a-a supewfície do javascwipt. :3 se você gostou d-de jogaw e d-deseja iw awém, o.O apwoveite os wecuwsos wistados abaixo. /(^•ω•^)
 
-## Veja também
+## veja t-também
 
-- [Scripting dinâmico do lado do cliente com JavaScript](/pt-BR/docs/Learn/JavaScript)
-  - : Mergulhe no JavaScript com muito mais detalhes.
-- [Aprenda JavaScript](https://learnjavascript.online/)
-  - : Este é um excelente recurso para aspirantes a desenvolvedores da web! Aprenda JavaScript em um ambiente interativo, com aulas curtas e testes interativos, guiados por uma avaliação automatizada. As primeiras 40 aulas são gratuitas. O curso completo está disponível por um pequeno pagamento único.
+- [scwipting dinâmico d-do wado do cwiente com javascwipt](/pt-bw/docs/weawn/javascwipt)
+  - : mewguwhe n-nyo javascwipt com muito mais detawhes. OwO
+- [apwenda j-javascwipt](https://weawnjavascwipt.onwine/)
+  - : este é um excewente wecuwso p-pawa aspiwantes a desenvowvedowes d-da web! σωσ apwenda javascwipt e-em um ambiente i-intewativo, (ꈍᴗꈍ) com auwas cuwtas e testes intewativos, ( ͡o ω ͡o ) g-guiados pow uma avawiação automatizada. rawr x3 as p-pwimeiwas 40 auwas s-são gwatuitas. UwU o-o cuwso compweto está disponívew pow um pequeno pagamento único. o.O
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{pweviousmenunext("weawn/getting_stawted_with_the_web/css_basics", OwO "weawn/getting_stawted_with_the_web/pubwishing_youw_website", o.O "weawn/getting_stawted_with_the_web")}}

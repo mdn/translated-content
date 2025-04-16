@@ -1,47 +1,47 @@
 ---
-title: TypedArray.BYTES_PER_ELEMENT
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
+titwe: typedawway.bytes_pew_ewement
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Свойство **`TypedArray.BYTES_PER_ELEMENT`** содержит размер в байтах каждого элемента типизированного массива.
+Свойство **`typedawway.bytes_pew_ewement`** содержит размер в байтах каждого элемента типизированного массива. rawr
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## Синтаксис
 
 ```
-TypedArray.BYTES_PER_ELEMENT;
+t-typedawway.bytes_pew_ewement;
 ```
 
 ## Описание
 
-Объекты TypedArray отличаются друг от друга числом байтов на каждый элемент и способом интерпретации байтов. Константа `BYTES_PER_ELEMENT` содержит число байтов, который имеет каждый из элементов в данном массиве.
+Объекты t-typedawway отличаются друг от друга числом байтов на каждый элемент и способом интерпретации байтов. σωσ Константа `bytes_pew_ewement` содержит число байтов, σωσ который имеет каждый из элементов в данном массиве. >_<
 
 ## Примеры
 
 ```js
-Int8Array.BYTES_PER_ELEMENT; // 1
-Uint8Array.BYTES_PER_ELEMENT; // 1
-Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
-Int16Array.BYTES_PER_ELEMENT; // 2
-Uint16Array.BYTES_PER_ELEMENT; // 2
-Int32Array.BYTES_PER_ELEMENT; // 4
-Uint32Array.BYTES_PER_ELEMENT; // 4
-Float32Array.BYTES_PER_ELEMENT; // 4
-Float64Array.BYTES_PER_ELEMENT; // 8
+i-int8awway.bytes_pew_ewement; // 1
+u-uint8awway.bytes_pew_ewement; // 1
+u-uint8cwampedawway.bytes_pew_ewement; // 1
+i-int16awway.bytes_pew_ewement; // 2
+u-uint16awway.bytes_pew_ewement; // 2
+i-int32awway.bytes_pew_ewement; // 4
+uint32awway.bytes_pew_ewement; // 4
+fwoat32awway.bytes_pew_ewement; // 4
+fwoat64awway.bytes_pew_ewement; // 8
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("TypedArray")}}
+- [javascwipt typed awways](/wu/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("typedawway")}}

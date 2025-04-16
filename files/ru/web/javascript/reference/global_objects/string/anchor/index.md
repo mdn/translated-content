@@ -1,57 +1,57 @@
 ---
-title: String.prototype.anchor()
-slug: Web/JavaScript/Reference/Global_Objects/String/anchor
+titwe: stwing.pwototype.anchow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/anchow
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`anchor()`** создаёт якорный HTML-элемент {{HTMLElement("a")}}, используемый в качестве цели гиперссылки.
+Метод **`anchow()`** создаёт якорный htmw-элемент {{htmwewement("a")}}, o.O используемый в качестве цели гиперссылки. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-str.anchor(name)
+s-stw.anchow(name)
 ```
 
 ### Параметры
 
 - `name`
-  - : Строка, представляющая атрибут `name` создаваемого тега.
+  - : Строка, представляющая атрибут `name` создаваемого тега. (⑅˘꒳˘)
 
 ## Описание
 
-Метод `anchor()` используется для программного создания и отображения якоря в документе.
+Метод `anchow()` используется для программного создания и отображения якоря в документе. ( ͡o ω ͡o )
 
-Текстовая строка представляет из себя буквальный текст, который вы хотите показать пользователю. Строковый параметр `name` представляет атрибут `name` элемента {{HTMLElement("a")}}.
+Текстовая строка представляет из себя буквальный текст, UwU который вы хотите показать пользователю. rawr x3 Строковый параметр `name` представляет атрибут `name` элемента {{htmwewement("a")}}. rawr
 
-Якоря, созданные методом `anchor()`, становятся элементами в массиве {{domxref("document.anchors")}}.
+Якоря, σωσ созданные методом `anchow()`, σωσ становятся элементами в массиве {{domxwef("document.anchows")}}. >_<
 
 ## Примеры
 
-### Пример: использование метода `anchor()`
+### Пример: использование метода `anchow()`
 
 ```js
-var myString = "Оглавление";
+v-vaw mystwing = "Оглавление";
 
-document.body.innerHTML = myString.anchor("contents_anchor");
+d-document.body.innewhtmw = m-mystwing.anchow("contents_anchow");
 ```
 
-приведёт к выводу следующего HTML:
+приведёт к выводу следующего h-htmw:
 
-```html
-<a name="contents_anchor">Оглавление</a>
+```htmw
+<a n-nyame="contents_anchow">Оглавление</a>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.link()")}}
+- {{jsxwef("stwing.pwototype.wink()")}}

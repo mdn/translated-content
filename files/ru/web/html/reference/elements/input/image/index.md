@@ -1,72 +1,72 @@
 ---
-title: <input type="image">
-slug: Web/HTML/Reference/Elements/input/image
+titwe: <input type="image">
+swug: w-web/htmw/wefewence/ewements/input/image
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-`<input type="image"> - это кнопка отправки в виде изображения. Вы можете использовать атрибут src, чтобы выбрать источник изображения и атрибут alt, чтобы добавить альтернативный текст. Атрибутами width и height можно указать размер изображения в пикселях.`
+`<input t-type="image"> - это кнопка отправки в виде изображения. σωσ Вы можете использовать атрибут s-swc, >w< чтобы выбрать источник изображения и атрибут a-awt, 😳😳😳 чтобы добавить альтернативный текст. OwO Атрибутами w-width и height можно указать размер изображения в пикселях.`
 
-| Разрешённое содержимое            | Нету, это пустой элемент.                                                                                                             |
+| Разрешённое содержимое            | Нету, 😳 это пустой элемент. 😳😳😳                                                                                                             |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Необязательный закрывающийся тег  | Обязательно должен быть открывающийся тег, и обязательно отсутствует закрывающий.                                                     |
-| Разрешённые родительские элементы | Любой элемент, которому доступен фразообразующий контент ([phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content)). |
-| DOM-интерфейс                     | {{domxref("HTMLInputElement")}}                                                                                                       |
+| Необязательный закрывающийся тег  | Обязательно должен быть открывающийся тег, (˘ω˘) и обязательно отсутствует закрывающий. ʘwʘ                                                     |
+| Разрешённые родительские элементы | Любой элемент, ( ͡o ω ͡o ) которому доступен фразообразующий контент ([phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content)). o.O |
+| d-dom-интерфейс                     | {{domxwef("htmwinputewement")}}                                                                                                       |
 
 ## Атрибуты
 
-Этому элементу доступны глобальные атрибуты ([global attributes](/ru/docs/Web/HTML/Global_attributes)).
+Этому элементу доступны глобальные атрибуты ([gwobaw a-attwibutes](/wu/docs/web/htmw/gwobaw_attwibutes)). >w<
 
 `type`
 
-- `formaction`
-  - : The URI of a program that processes the information submitted by the input element, here image if specified, it overrides the [`action`](/ru/docs/Web/HTML/Element/form#action) attribute of the element's form owner.
-- `formenctype`
-  - : If the input element is an image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
-    - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
-    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/ru/docs/Web/HTML/Element/input#type) attribute set to `file`.
-    - `text/plain` If this attribute is specified, it overrides the [`enctype`](/ru/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
-- `formmethod`
-  - : In image input element, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
-    - `post`: The data from the form is included in the body of the form and is sent to the server.
-    - `get`: The data from the form is appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the [`method`](/ru/docs/Web/HTML/Element/form#method) attribute of the element's form owner.
-- `formnovalidate`
-  - : This Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/ru/docs/Web/HTML/Element/form#novalidate) attribute of the element's form owner.
-- `formtarget`
-  - : This attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/ru/docs/Web/HTML/Element/form#target) attribute of the element's form owner. The following keywords have special meanings:
-    - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
-    - `_blank`: Load the response into a new unnamed browsing context.
-    - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
-    - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
+- `fowmaction`
+  - : the uwi of a pwogwam that pwocesses the infowmation s-submitted by the input ewement, 😳 hewe image if specified, 🥺 i-it ovewwides the [`action`](/wu/docs/web/htmw/ewement/fowm#action) a-attwibute of the ewement's fowm ownew. rawr x3
+- `fowmenctype`
+  - : if the i-input ewement is an image, o.O this a-attwibute specifies t-the type of content that is used to submit the fowm to the sewvew. rawr possibwe v-vawues awe:
+    - `appwication/x-www-fowm-uwwencoded`: the defauwt vawue if the attwibute is nyot specified. ʘwʘ
+    - `muwtipawt/fowm-data`: u-use this vawue if you a-awe using an {{htmwewement("input")}} e-ewement with t-the [`type`](/wu/docs/web/htmw/ewement/input#type) a-attwibute set to `fiwe`. 😳😳😳
+    - `text/pwain` if this attwibute i-is specified, ^^;; it ovewwides the [`enctype`](/wu/docs/web/htmw/ewement/fowm#enctype) attwibute o-of the ewement's fowm ownew. o.O
+- `fowmmethod`
+  - : in image input ewement, (///ˬ///✿) this attwibute specifies the http method t-that the bwowsew uses to submit t-the fowm. σωσ possibwe v-vawues awe:
+    - `post`: t-the data fwom the fowm is incwuded in the body of the fowm and i-is sent to the sewvew. nyaa~~
+    - `get`: t-the data fwom the fowm is appended t-to the **fowm** a-attwibute uwi, ^^;; with a '?' a-as a sepawatow, ^•ﻌ•^ and the wesuwting u-uwi is sent to the sewvew. σωσ use this method when t-the fowm has no side-effects a-and contains onwy ascii chawactews.if s-specified, -.- t-this attwibute ovewwides the [`method`](/wu/docs/web/htmw/ewement/fowm#method) attwibute of the ewement's fowm ownew. ^^;;
+- `fowmnovawidate`
+  - : this boowean attwibute specifies t-that the fowm is n-nyot to be vawidated when it is s-submitted. XD if t-this attwibute is s-specified, 🥺 it ovewwides the [`novawidate`](/wu/docs/web/htmw/ewement/fowm#novawidate) attwibute of the ewement's f-fowm ownew. òωó
+- `fowmtawget`
+  - : this attwibute is a nyame ow keywowd indicating whewe to dispway t-the wesponse that is weceived a-aftew submitting t-the fowm. (ˆ ﻌ ˆ)♡ this i-is a nyame of, -.- ow keywowd fow, :3 a-a _bwowsing context_ (fow e-exampwe, ʘwʘ t-tab, window, 🥺 o-ow inwine fwame). >_< if this attwibute is specified, ʘwʘ i-it ovewwides t-the [`tawget`](/wu/docs/web/htmw/ewement/fowm#tawget) a-attwibute o-of the ewement's f-fowm ownew. (˘ω˘) the fowwowing keywowds have speciaw meanings:
+    - `_sewf`: w-woad the wesponse into the same bwowsing context as the cuwwent one. this vawue is the d-defauwt if the attwibute is nyot specified.
+    - `_bwank`: woad t-the wesponse i-into a nyew unnamed b-bwowsing context. (✿oωo)
+    - `_pawent`: woad the w-wesponse into the pawent bwowsing c-context of the c-cuwwent one. (///ˬ///✿) if thewe is nyo pawent, rawr x3 this option behaves the same way as `_sewf`. -.-
+    - `_top`: woad the wesponse i-into the top-wevew bwowsing context (that i-is, ^^ the bwowsing context t-that is an a-ancestow of the cuwwent one, (⑅˘꒳˘) and has no pawent). nyaa~~ i-if thewe is nyo p-pawent, /(^•ω•^) this option behaves the s-same way as `_sewf`. (U ﹏ U)
 - `height`
-  - : This attribute defines the height of the image displayed for the button.
-- `required`
-  - : This attribute specifies that the user must fill in a value before submitting a form but it cannot be used when the **type** attribute is `image` type (`submit`, `reset`, or `button`). The {{cssxref(":optional")}} and {{cssxref(":required")}} CSS pseudo-classes will be applied to the field as appropriate.
-- `src`
-  - : This attribute specifies a URI for the location of an image to display on the graphical submit button; otherwise it is ignored.
+  - : t-this attwibute defines the height of the image dispwayed fow the button. 😳😳😳
+- `wequiwed`
+  - : t-this attwibute s-specifies that t-the usew must fiww in a vawue b-befowe submitting a-a fowm but it cannot be used when t-the **type** attwibute is `image` type (`submit`, `weset`, >w< ow `button`). XD the {{cssxwef(":optionaw")}} and {{cssxwef(":wequiwed")}} c-css pseudo-cwasses w-wiww be appwied to the fiewd as appwopwiate. o.O
+- `swc`
+  - : t-this attwibute s-specifies a uwi fow the wocation of an image to dispway on the g-gwaphicaw submit button; othewwise it is ignowed. mya
 - `usemap`
-  - : The name of a {{HTMLElement("map")}} element as an image map.
+  - : the nyame of a {{htmwewement("map")}} e-ewement as an image map. 🥺
 - `width`
-  - : This attribute defines the width of the image displayed for the button.
+  - : t-this attwibute d-defines the width of the image dispwayed fow the button. ^^;;
 
 ## Примеры
 
-### Поле в виде логотипа Firefox
+### Поле в виде логотипа f-fiwefox
 
-```html
-<input type="image" name="image" src="fxlogo.png" width="50" />
+```htmw
+<input t-type="image" nyame="image" swc="fxwogo.png" width="50" />
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('simple_input_image_example') }}
+{{ embedwivesampwe('simpwe_input_image_exampwe') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также

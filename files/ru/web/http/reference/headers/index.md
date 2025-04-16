@@ -1,1353 +1,1353 @@
 ---
-title: Заголовки HTTP
-slug: Web/HTTP/Reference/Headers
+titwe: Заголовки http
+s-swug: web/http/wefewence/headews
 ---
 
-{{ HTTPSidebar }}
+{{ h-httpsidebaw }}
 
-**Заголовки HTTP** позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (`:`) непосредственно значение. [Пробелы](/ru/docs/Glossary/Whitespace) перед значением игнорируются.
+**Заголовки h-http** позволяют клиенту и серверу отправлять дополнительную информацию с h-http запросом или ответом. òωó В h-http-заголовке содержится не чувствительное к регистру название, ( ͡o ω ͡o ) а затем после (`:`) непосредственно значение. UwU [Пробелы](/wu/docs/gwossawy/whitespace) перед значением игнорируются. /(^•ω•^)
 
-Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в [RFC 6648](https://tools.ietf.org/html/rfc6648); другие перечислены в реестре [IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), исходное содержимое которого было определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA также поддерживает [реестр предлагаемых новых заголовков HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
+Пользовательские собственные заголовки исторически использовались с префиксом x-x, (ꈍᴗꈍ) но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, 😳 что нестандартные поля стали стандартом в [wfc 6648](https://toows.ietf.owg/htmw/wfc6648); другие перечислены в реестре [iana](https://www.iana.owg/assignments/message-headews/pewm-headews.htmw), mya исходное содержимое которого было определено в [wfc 4229](https://toows.ietf.owg/htmw/wfc4229). mya i-iana также поддерживает [реестр предлагаемых новых заголовков h-http](https://www.iana.owg/assignments/message-headews/message-headews.xhtmw). /(^•ω•^)
 
-HTTP-заголовки сопровождают обмен данными по протоколу HTTP. Они могут содержать описание данных и информацию, необходимую для взаимодействия между клиентом и сервером. Заголовки и их статусы перечислены в [реестре IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), который постоянно обновляется.
+http-заголовки сопровождают обмен данными по протоколу http. ^^;; Они могут содержать описание данных и информацию, 🥺 необходимую для взаимодействия между клиентом и сервером. ^^ Заголовки и их статусы перечислены в [реестре iana](https://www.iana.owg/assignments/message-headews/pewm-headews.htmw), ^•ﻌ•^ который постоянно обновляется. /(^•ω•^)
 
 Заголовки могут быть сгруппированы по следующим контекстам:
 
-- {{Glossary("General header", "Основные заголовки")}} применяется как к запросам, так и к ответам, но не имеет отношения к данным, передаваемым в теле.
-- {{Glossary("Заголовок запроса", "Заголовки запроса")}} содержит больше информации о ресурсе, который нужно получить, или о клиенте, запрашивающем ресурс.
-- {{Glossary("Response header", "Заголовки ответа")}} содержат дополнительную информацию об ответе, например его местонахождение, или о сервере, предоставившем его.
-- {{Glossary("Entity header", "Заголовки сущности")}} содержат информацию о теле ресурса, например его [длину содержимого](/ru/docs/Web/HTTP/Reference/Headers/Content-Length) или тип [MIME](/ru/docs/Web/SVG/Content_type).
+- {{gwossawy("genewaw headew", ^^ "Основные заголовки")}} применяется как к запросам, так и к ответам, 🥺 но не имеет отношения к данным, (U ᵕ U❁) передаваемым в теле. 😳😳😳
+- {{gwossawy("Заголовок запроса", nyaa~~ "Заголовки запроса")}} содержит больше информации о ресурсе, (˘ω˘) который нужно получить, >_< или о клиенте, XD запрашивающем ресурс. rawr x3
+- {{gwossawy("wesponse h-headew", ( ͡o ω ͡o ) "Заголовки ответа")}} содержат дополнительную информацию об ответе, :3 например его местонахождение, mya или о сервере, σωσ предоставившем его. (ꈍᴗꈍ)
+- {{gwossawy("entity headew", OwO "Заголовки сущности")}} содержат информацию о теле ресурса, o.O например его [длину содержимого](/wu/docs/web/http/wefewence/headews/content-wength) или тип [mime](/wu/docs/web/svg/content_type). 😳😳😳
 
-Заголовки также могут быть сгруппированы согласно тому, как [прокси (proxies)](/ru/docs/Glossary/Proxy_server) обрабатывают их:
+Заголовки также могут быть сгруппированы согласно тому, /(^•ω•^) как [прокси (pwoxies)](/wu/docs/gwossawy/pwoxy_sewvew) обрабатывают их:
 
-- {{ httpheader("Connection") }}
-- {{ httpheader("Keep-Alive") }}
-- {{ httpheader("Proxy-Authenticate") }}
-- {{ httpheader("Proxy-Authorization") }}
-- {{ httpheader("TE") }}
-- {{ httpheader("Trailer") }}
-- {{ httpheader("Transfer-Encoding") }}
-- {{ httpheader("Upgrade") }}.
+- {{ httpheadew("connection") }}
+- {{ h-httpheadew("keep-awive") }}
+- {{ httpheadew("pwoxy-authenticate") }}
+- {{ h-httpheadew("pwoxy-authowization") }}
+- {{ httpheadew("te") }}
+- {{ httpheadew("twaiwew") }}
+- {{ httpheadew("twansfew-encoding") }}
+- {{ h-httpheadew("upgwade") }}. OwO
 
 **Сквозные заголовки**
-Эти заголовки должны быть переданы конечному получателю сообщения: серверу для запроса или клиенту для ответа. Промежуточные прокси-серверы должны повторно передавать эти заголовки без изменений, а кеши должны их хранить.
+Эти заголовки должны быть переданы конечному получателю сообщения: серверу для запроса или клиенту для ответа. ^^ Промежуточные прокси-серверы должны повторно передавать эти заголовки без изменений, (///ˬ///✿) а кеши должны их хранить. (///ˬ///✿)
 
 **Хоп-хоп заголовки (Хоп-хоп заголовки)**
-Эти заголовки имеют смысл только для одного соединения транспортного уровня и не должны повторно передаваться прокси или кешироваться. Обратите внимание, что с помощью общего заголовка {{httpheader ("Connection")}} могут быть установлены только заголовки переходов.
+Эти заголовки имеют смысл только для одного соединения транспортного уровня и не должны повторно передаваться прокси или кешироваться. (///ˬ///✿) Обратите внимание, ʘwʘ что с помощью общего заголовка {{httpheadew ("connection")}} могут быть установлены только заголовки переходов. ^•ﻌ•^
 
 ## Аутентификация
 
-**{{HTTPHeader("WWW-Authenticate")}}**
-Определяет метод аутентификации, который должен использоваться для доступа к ресурсу.
-**{{HTTPHeader ( "Authorization")}}**
-Содержит учётные данные для аутентификации агента пользователя на сервере.
-**{{HTTPHeader ( "Proxy-Authenticate")}}**
-Определяет метод аутентификации, который должен использоваться для доступа к ресурсам на прокси-сервере.
-**{{HTTPHeader ( "Proxy-Authorization")}}**
-Содержит учётные данные для аутентификации агента пользователя с прокси-сервером.
+**{{httpheadew("www-authenticate")}}**
+Определяет метод аутентификации, OwO который должен использоваться для доступа к ресурсу. (U ﹏ U)
+**{{httpheadew ( "authowization")}}**
+Содержит учётные данные для аутентификации агента пользователя на сервере. (ˆ ﻌ ˆ)♡
+**{{httpheadew ( "pwoxy-authenticate")}}**
+Определяет метод аутентификации, (⑅˘꒳˘) который должен использоваться для доступа к ресурсам на прокси-сервере. (U ﹏ U)
+**{{httpheadew ( "pwoxy-authowization")}}**
+Содержит учётные данные для аутентификации агента пользователя с прокси-сервером. o.O
 
-Ниже перечислены основные HTTP заголовки с кратким описанием:
+Ниже перечислены основные http заголовки с кратким описанием:
 
-<table class="standard-table" style="width: 100%">
+<tabwe c-cwass="standawd-tabwe" s-stywe="width: 100%">
   <tbody>
-    <tr>
+    <tw>
       <th>Заголовок</th>
       <th>Описание</th>
       <th>Подробнее</th>
       <th>Стандарт</th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept.3a_header"
-            >Accept</a
+            hwef="/wu/docs/web/http/content_negotiation#the_accept.3a_headew"
+            titwe="https://devewopew.moziwwa.owg/en/http/content_negotiation#the_accept.3a_headew"
+            >accept</a
           ></code
         >
       </td>
-      <td>Список MIME типов, которые ожидает клиент.</td>
+      <td>Список mime типов, mya которые ожидает клиент.</td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
+          hwef="/wu/docs/web/http/content_negotiation"
+          t-titwe="wu/http/content nyegotiation"
+          >http content nyegotiation</a
         >
       </td>
-      <td>HTTP/1.1</td>
-    </tr>
-    <tr>
+      <td>http/1.1</td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-CH_header"
-            >Accept-CH</a
+            hwef="/wu/docs/web/http/content_negotiation#the_accept-ch_headew"
+            >accept-ch</a
           ></code
         >
-        <p>{{non-standard_inline}}</p>
+        <p>{{non-standawd_inwine}}</p>
       </td>
       <td>
-        Список конфигурационных данных, которые могут быть учтены сервером при
-        выборе соответствующего ответа клиенту.
+        Список конфигурационных данных, XD которые могут быть учтены сервером при
+        выборе соответствующего ответа клиенту. òωó
       </td>
       <td>
-        <a href="http://igrigorik.github.io/http-client-hints"
-          >HTTP Client Hints</a
+        <a h-hwef="http://igwigowik.github.io/http-cwient-hints"
+          >http cwient hints</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>Accept-Features</code></td>
+    </tw>
+    <tw>
+      <td><code>accept-featuwes</code></td>
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
+          h-hwef="/wu/docs/web/http/content_negotiation"
+          t-titwe="wu/http/content n-nyegotiation"
+          >http c-content nyegotiation</a
         >
       </td>
-      <td>RFC 2295, §8.2</td>
-    </tr>
-    <tr>
+      <td>wfc 2295, §8.2</td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Encoding.3a_header"
-            >Accept-Encoding</a
+            hwef="/wu/docs/web/http/content_negotiation#the_accept-encoding.3a_headew"
+            titwe="https://devewopew.moziwwa.owg/en/http/content_negotiation#the_accept-encoding.3a_headew"
+            >accept-encoding</a
           ></code
         >
       </td>
-      <td>Список форматов сжатия данных, которые поддерживает клиент.</td>
+      <td>Список форматов сжатия данных, (˘ω˘) которые поддерживает клиент.</td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
+          h-hwef="/wu/docs/web/http/content_negotiation"
+          titwe="wu/http/content nyegotiation"
+          >http c-content nyegotiation</a
         >
       </td>
-      <td>HTTP/1.1</td>
-    </tr>
-    <tr>
+      <td>http/1.1</td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Accept-Language.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Accept-Language.3a_header"
-            >Accept-Language</a
+            hwef="/wu/docs/web/http/content_negotiation#the_accept-wanguage.3a_headew"
+            titwe="https://devewopew.moziwwa.owg/en/http/content_negotiation#the_accept-wanguage.3a_headew"
+            >accept-wanguage</a
           ></code
         >
       </td>
       <td>Определяет языковые предпочтения клиента.</td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
+          hwef="/wu/docs/web/http/content_negotiation"
+          titwe="wu/http/content nyegotiation"
+          >http c-content nyegotiation</a
         >
       </td>
-      <td>HTTP/1.1</td>
-    </tr>
-    <tr>
+      <td>http/1.1</td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Заголовки/Accept-Ranges"
-            title="ru/Accept-Ranges"
-            >Accept-Ranges</a
+            hwef="/wu/docs/web/http/Заголовки/accept-wanges"
+            t-titwe="wu/accept-wanges"
+            >accept-wanges</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Credentials"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Credentials"
-            >Access-Control-Allow-Credentials</a
+            h-hwef="/wu/docs/http_access_contwow#access-contwow-awwow-cwedentiaws"
+            titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-awwow-cwedentiaws"
+            >access-contwow-awwow-cwedentiaws</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
+        <a h-hwef="/wu/docs/http_access_contwow" titwe="en/http access contwow"
+          >http access contwow</a
+        >
+        a-and
+        <a
+          h-hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side a-access contwow"
+          >sewvew s-side access contwow</a
+        >
+      </td>
+      <td>
+        <a c-cwass="extewnaw" hwef="http://www.w3.owg/tw/cows/"
+          >w3c c-cwoss-owigin wesouwce shawing</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a
+            h-hwef="/wu/docs/http_access_contwow#access-contwow-awwow-owigin"
+            titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-awwow-owigin"
+            >access-contwow-awwow-owigin</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td>
+        <a h-hwef="/wu/docs/http_access_contwow" titwe="en/http a-access c-contwow"
+          >http access contwow</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
+          hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side access contwow"
+          >sewvew side access c-contwow</a
         >
       </td>
       <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
+        <a c-cwass="extewnaw" hwef="http://www.w3.owg/tw/cows/"
+          >w3c c-cwoss-owigin w-wesouwce s-shawing</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Origin"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Origin"
-            >Access-Control-Allow-Origin</a
+            hwef="/wu/docs/http_access_contwow#access-contwow-awwow-methods"
+            titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-awwow-methods"
+            >access-contwow-awwow-methods</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
+        <a hwef="/wu/docs/http_access_contwow" titwe="en/http a-access contwow"
+          >http access contwow</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
+          h-hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side a-access contwow"
+          >sewvew s-side access c-contwow</a
         >
       </td>
       <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
+        <a cwass="extewnaw" h-hwef="http://www.w3.owg/tw/cows/"
+          >w3c c-cwoss-owigin w-wesouwce s-shawing</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Methods"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Methods"
-            >Access-Control-Allow-Methods</a
+            hwef="/wu/docs/http_access_contwow#access-contwow-awwow-headews"
+            titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-awwow-headews"
+            >access-contwow-awwow-headews</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
+        <a h-hwef="/wu/docs/http_access_contwow" t-titwe="en/http access c-contwow"
+          >http access c-contwow</a
+        >
+        a-and
+        <a
+          hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side access contwow"
+          >sewvew s-side access contwow</a
+        >
+      </td>
+      <td>
+        <a cwass="extewnaw" hwef="http://www.w3.owg/tw/cows/"
+          >w3c cwoss-owigin wesouwce s-shawing</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a
+            hwef="/wu/docs/http_access_contwow#access-contwow-max-age"
+            titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-max-age"
+            >access-contwow-max-age</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td>
+        <a hwef="/wu/docs/http_access_contwow" titwe="en/http a-access c-contwow"
+          >http a-access contwow</a
+        >
+        a-and
+        <a
+          hwef="/wu/docs/sewvew-side_access_contwow"
+          t-titwe="en/sewvew-side a-access contwow"
+          >sewvew side access contwow</a
+        >
+      </td>
+      <td>
+        <a cwass="extewnaw" hwef="http://www.w3.owg/tw/cows/"
+          >w3c cwoss-owigin w-wesouwce shawing</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a
+            h-hwef="/wu/docs/http_access_contwow#access-contwow-expose-headew"
+            titwe="en/http a-access contwow#access-contwow-expose-headew"
+            >access-contwow-expose-headews</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td>
+        <a hwef="/wu/docs/http_access_contwow" t-titwe="en/http access contwow"
+          >http access contwow</a
+        >
+        a-and
+        <a
+          hwef="/wu/docs/sewvew-side_access_contwow"
+          t-titwe="en/sewvew-side access c-contwow"
+          >sewvew s-side access contwow</a
+        >
+      </td>
+      <td>
+        <a cwass="extewnaw" hwef="http://www.w3.owg/tw/cows/"
+          >w3c cwoss-owigin wesouwce shawing</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a
+            h-hwef="/wu/docs/http_access_contwow#access-contwow-wequest-method"
+            t-titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-wequest-method"
+            >access-contwow-wequest-method</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td>
+        <a h-hwef="/wu/docs/http_access_contwow" titwe="en/http a-access contwow"
+          >http a-access contwow</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
+          h-hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side access contwow"
+          >sewvew side access contwow</a
         >
       </td>
       <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
+        <a c-cwass="extewnaw" h-hwef="http://www.w3.owg/tw/cows/"
+          >w3c cwoss-owigin wesouwce shawing</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Allow-Headers"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Headers"
-            >Access-Control-Allow-Headers</a
+            h-hwef="/wu/docs/http_access_contwow#access-contwow-wequest-headews"
+            t-titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#access-contwow-wequest-headews"
+            >access-contwow-wequest-headews</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
+        <a hwef="/wu/docs/http_access_contwow" titwe="en/http access c-contwow"
+          >http access contwow</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
+          hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side a-access contwow"
+          >sewvew side access contwow</a
         >
       </td>
       <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
+        <a c-cwass="extewnaw" h-hwef="http://www.w3.owg/tw/cows/"
+          >w3c cwoss-owigin wesouwce shawing</a
         >
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Max-Age"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Max-Age"
-            >Access-Control-Max-Age</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
-        >
-        and
-        <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
-        >
-      </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Expose-Header"
-            title="en/HTTP access control#Access-Control-Expose-Header"
-            >Access-Control-Expose-Headers</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
-        >
-        and
-        <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Request-Method"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Method"
-            >Access-Control-Request-Method</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
-        >
-        and
-        <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/HTTP_access_control#Access-Control-Request-Headers"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Headers"
-            >Access-Control-Request-Headers</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
-        >
-        and
-        <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
-        >
-      </td>
-      <td>
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Age" title="en/Age"
-            >Age</a
+          ><a h-hwef="/wu/docs/web/http/headews/age" t-titwe="en/age"
+            >age</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Allow" title="en/Allow"
-            >Allow</a
+          ><a hwef="/wu/docs/web/http/headews/awwow" titwe="en/awwow"
+            >awwow</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>Alternates</code></td>
+    </tw>
+    <tw>
+      <td><code>awtewnates</code></td>
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
+          hwef="/wu/docs/web/http/content_negotiation"
+          t-titwe="wu/http/content nyegotiation"
+          >http c-content nyegotiation</a
         >
       </td>
-      <td>RFC 2295, §8.3</td>
-    </tr>
-    <tr>
+      <td>wfc 2295, :3 §8.3</td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Authorization"
-            title="en/Authorization"
-            >Authorization</a
+            hwef="/wu/docs/web/http/headews/authowization"
+            titwe="en/authowization"
+            >authowization</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Cache-Control"
-            title="en/Cache-Control"
-            >Cache-Control</a
+            hwef="/wu/docs/web/http/headews/cache-contwow"
+            t-titwe="en/cache-contwow"
+            >cache-contwow</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        <a hwef="/wu/docs/http_caching_faq" t-titwe="en/http c-caching faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Заголовки/Connection"
-            title="ru/Connection"
-            >Connection</a
+            h-hwef="/wu/docs/web/http/Заголовки/connection"
+            titwe="wu/connection"
+            >connection</a
           ></code
         >
       </td>
       <td>
-        Определяет, остаётся ли сетевое соединение открытым после завершения
-        текущей транзакции (запроса).
+        Определяет, OwO остаётся ли сетевое соединение открытым после завершения
+        текущей транзакции (запроса). mya
       </td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Encoding"
-            title="en/Content-Encoding"
-            >Content-Encoding</a
+            h-hwef="/wu/docs/web/http/headews/content-encoding"
+            t-titwe="en/content-encoding"
+            >content-encoding</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Language"
-            title="en/Content-Language"
-            >Content-Language</a
+            h-hwef="/wu/docs/web/http/headews/content-wanguage"
+            titwe="en/content-wanguage"
+            >content-wanguage</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Length"
-            title="en/Content-Length"
-            >Content-Length</a
+            h-hwef="/wu/docs/web/http/headews/content-wength"
+            t-titwe="en/content-wength"
+            >content-wength</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Location"
-            title="en/Content-Location"
-            >Content-Location</a
+            hwef="/wu/docs/web/http/headews/content-wocation"
+            titwe="en/content-wocation"
+            >content-wocation</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Range"
-            title="en/Content-Range"
-            >Content-Range</a
+            h-hwef="/wu/docs/web/http/headews/content-wange"
+            t-titwe="en/content-wange"
+            >content-wange</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Security-Policy"
-            title="en/Content-Security-Policy"
-            >Content-Security-Policy</a
+            h-hwef="/wu/docs/web/http/headews/content-secuwity-powicy"
+            titwe="en/content-secuwity-powicy"
+            >content-secuwity-powicy</a
           ></code
         >
       </td>
       <td>
-        Реализует механизм защиты от угроз межсайтового выполнения скриптов.
+        Реализует механизм защиты от угроз межсайтового выполнения скриптов. (˘ω˘)
       </td>
-      <td><a href="/en/Security/CSP">CSP (Content Security Policy)</a></td>
+      <td><a hwef="/en/secuwity/csp">csp (content s-secuwity powicy)</a></td>
       <td>
-        <a href="http://www.w3.org/TR/CSP2/">W3C Content Security Policy</a>
+        <a hwef="http://www.w3.owg/tw/csp2/">w3c c-content s-secuwity powicy</a>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Content-Type"
-            title="en/Content-Type"
-            >Content-Type</a
+            hwef="/wu/docs/web/http/headews/content-type"
+            titwe="en/content-type"
+            >content-type</a
           ></code
         >
       </td>
-      <td>Позволяет клиенту определить MIME тип документа.</td>
+      <td>Позволяет клиенту определить mime тип документа.</td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Cookie" title="en/Cookie"
-            >Cookie</a
+          ><a h-hwef="/wu/docs/web/http/headews/cookie" t-titwe="en/cookie"
+            >cookie</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td>
-        <a class="external" href="http://www.ietf.org/rfc/rfc2109.txt"
-          >RFC 2109</a
+        <a c-cwass="extewnaw" h-hwef="http://www.ietf.owg/wfc/wfc2109.txt"
+          >wfc 2109</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>DNT</code></td>
+    </tw>
+    <tw>
+      <td><code>dnt</code></td>
       <td>
-        With a value of 1, indicates that the user explicitly opts out of any
-        form of online tracking.
+        with a vawue of 1, o.O i-indicates that the usew expwicitwy opts out of any
+        fowm of onwine twacking.
       </td>
       <td>
-        Supported by Firefox 4, Firefox 5 for mobile, IE9, and a few major
-        companies.
+        suppowted by f-fiwefox 4, (✿oωo) fiwefox 5 fow mobiwe, (ˆ ﻌ ˆ)♡ i-ie9, ^^;; and a few majow
+        c-companies. OwO
       </td>
-      <td><a href="https://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression (DNT)</a></td>
-    </tr>
-    <tr>
+      <td><a hwef="https://www.w3.owg/tw/twacking-dnt/">twacking p-pwefewence expwession (dnt)</a></td>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Date" title="en/Date"
-            >Date</a
+          ><a h-hwef="/wu/docs/web/http/headews/date" t-titwe="en/date"
+            >date</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/ETag" title="en/ETag"
-            >ETag</a
+          ><a h-hwef="/wu/docs/web/http/headews/etag" t-titwe="en/etag"
+            >etag</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        <a h-hwef="/wu/docs/http_caching_faq" titwe="en/http caching faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Expect" title="en/Expect"
-            >Expect</a
+          ><a hwef="/wu/docs/web/http/headews/expect" t-titwe="en/expect"
+            >expect</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Expires" title="en/Expires"
-            >Expires</a
+          ><a h-hwef="/wu/docs/web/http/headews/expiwes" t-titwe="en/expiwes"
+            >expiwes</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        <a hwef="/wu/docs/http_caching_faq" titwe="en/http c-caching faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/From" title="en/From"
-            >From</a
+          ><a h-hwef="/wu/docs/web/http/headews/fwom" t-titwe="en/fwom"
+            >fwom</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Host" title="en/Host"
-            >Host</a
+          ><a hwef="/wu/docs/web/http/headews/host" t-titwe="en/host"
+            >host</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/If-Match" title="en/If-Match"
-            >If-Match</a
+          ><a hwef="/wu/docs/web/http/headews/if-match" titwe="en/if-match"
+            >if-match</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Headers/If-Modified-Since"
-            title="en/If-Modified-Since"
-            >If-Modified-Since</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
-        >
-      </td>
-      <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/If-None-Match"
-            title="en/If-None-Match"
-            >If-None-Match</a
+            h-hwef="/wu/docs/web/http/headews/if-modified-since"
+            t-titwe="en/if-modified-since"
+            >if-modified-since</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        <a hwef="/wu/docs/http_caching_faq" t-titwe="en/http c-caching faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/ru/docs/Web/HTTP/Headers/If-Range" title="en/If-Range"
-            >If-Range</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/If-Unmodified-Since"
-            title="en/If-Unmodified-Since"
-            >If-Unmodified-Since</a
+            hwef="/wu/docs/web/http/headews/if-none-match"
+            titwe="en/if-none-match"
+            >if-none-match</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td>
+        <a hwef="/wu/docs/http_caching_faq" t-titwe="en/http c-caching f-faq"
+          >http c-caching f-faq</a
+        >
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a hwef="/wu/docs/web/http/headews/if-wange" t-titwe="en/if-wange"
+            >if-wange</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Last-Modified"
-            title="en/Last-Modified"
-            >Last-Modified</a
+            h-hwef="/wu/docs/web/http/headews/if-unmodified-since"
+            titwe="en/if-unmodified-since"
+            >if-unmodified-since</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a
+            hwef="/wu/docs/web/http/headews/wast-modified"
+            t-titwe="en/wast-modified"
+            >wast-modified</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        <a h-hwef="/wu/docs/http_caching_faq" titwe="en/http c-caching faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Link"
-            title="en/HTTP/Headers/Link"
-            >Link</a
+            h-hwef="/wu/docs/web/http/headews/wink"
+            titwe="en/http/headews/wink"
+            >wink</a
           ></code
         >
       </td>
       <td>
         Содержит ссылки на связанные ресурсы и определяет их отношение к
-        отправленному документу.
+        отправленному документу. 🥺
       </td>
       <td>
         <p>
-          For the <code>rel=prefetch</code> case, see
+          f-fow the <code>wew=pwefetch</code> c-case, mya see
           <a
-            href="/ru/docs/Link_prefetching_FAQ"
-            title="en/Link prefetching FAQ"
-            >Link Prefetching FAQ</a
+            hwef="/wu/docs/wink_pwefetching_faq"
+            t-titwe="en/wink pwefetching faq"
+            >wink p-pwefetching f-faq</a
           >
         </p>
       </td>
       <td>
         <p>
-          Introduced in
+          i-intwoduced in
           <a
-            class="external"
-            href="http://tools.ietf.org/html/rfc2068#section-19.6.2.4"
-            >HTTP 1.1's RFC 2068, section 19.6.2.4</a
-          >, it was removed in the final
+            cwass="extewnaw"
+            hwef="http://toows.ietf.owg/htmw/wfc2068#section-19.6.2.4"
+            >http 1.1's wfc 2068, 😳 s-section 19.6.2.4</a
+          >, òωó it was wemoved in the finaw
           <a
-            class="external"
-            href="http://www.w3.org/Protocols/rfc2616/rfc2616.html"
-            >HTTP 1.1 spec</a
-          >, then reintroduced, with some extensions, in
+            c-cwass="extewnaw"
+            h-hwef="http://www.w3.owg/pwotocows/wfc2616/wfc2616.htmw"
+            >http 1.1 spec</a
+          >, /(^•ω•^) t-then weintwoduced, -.- with s-some extensions, òωó i-in
           <a
-            class="external"
-            href="http://greenbytes.de/tech/webdav/rfc5988.html"
-            >RFC 5988</a
+            cwass="extewnaw"
+            hwef="http://gweenbytes.de/tech/webdav/wfc5988.htmw"
+            >wfc 5988</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Location" title="en/Location"
-            >Location</a
+          ><a h-hwef="/wu/docs/web/http/headews/wocation" titwe="en/wocation"
+            >wocation</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Max-Forwards"
-            title="en/Max-Forwards"
-            >Max-Forwards</a
+            hwef="/wu/docs/web/http/headews/max-fowwawds"
+            titwe="en/max-fowwawds"
+            >max-fowwawds</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>Negotiate</code></td>
+    </tw>
+    <tw>
+      <td><code>negotiate</code></td>
       <td></td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
+          hwef="/wu/docs/web/http/content_negotiation"
+          t-titwe="wu/http/content n-nyegotiation"
+          >http content n-nyegotiation</a
         >
       </td>
-      <td>RFC 2295, §8.4</td>
-    </tr>
-    <tr>
+      <td>wfc 2295, /(^•ω•^) §8.4</td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/HTTP_access_control#Origin"
-            title="https://developer.mozilla.org/En/HTTP_access_control#Origin"
-            >Origin</a
+            hwef="/wu/docs/http_access_contwow#owigin"
+            t-titwe="https://devewopew.moziwwa.owg/en/http_access_contwow#owigin"
+            >owigin</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        <a href="/ru/docs/HTTP_access_control" title="En/HTTP access control"
-          >HTTP Access Control</a
+        <a h-hwef="/wu/docs/http_access_contwow" t-titwe="en/http access contwow"
+          >http access contwow</a
         >
         and
         <a
-          href="/ru/docs/Server-Side_Access_Control"
-          title="En/Server-Side Access Control"
-          >Server Side Access Control</a
+          hwef="/wu/docs/sewvew-side_access_contwow"
+          titwe="en/sewvew-side access contwow"
+          >sewvew side access contwow</a
         >
       </td>
       <td>
-        More recently defined in the
-        <a href="https://fetch.spec.whatwg.org/#http-extensions">Fetch spec</a>
-        (see <a href="/ru/docs/Web/API/Fetch_API">Fetch API</a>.) Originally
-        defined in
-        <a class="external" href="http://www.w3.org/TR/cors/"
-          >W3C Cross-Origin Resource Sharing</a
+        mowe wecentwy defined in the
+        <a h-hwef="https://fetch.spec.naniwg.owg/#http-extensions">fetch spec</a>
+        (see <a h-hwef="/wu/docs/web/api/fetch_api">fetch api</a>.) owiginawwy
+        defined i-in
+        <a c-cwass="extewnaw" h-hwef="http://www.w3.owg/tw/cows/"
+          >w3c cwoss-owigin w-wesouwce shawing</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Pragma" title="en/Pragma"
-            >Pragma</a
+          ><a hwef="/wu/docs/web/http/headews/pwagma" t-titwe="en/pwagma"
+            >pwagma</a
           ></code
         >
       </td>
       <td></td>
       <td>
-        for the pragma: nocache value see
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        f-fow the pwagma: nyocache vawue s-see
+        <a hwef="/wu/docs/http_caching_faq" t-titwe="en/http c-caching faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Proxy-Authenticate"
-            title="en/Proxy-Authenticate"
-            >Proxy-Authenticate</a
+            h-hwef="/wu/docs/web/http/headews/pwoxy-authenticate"
+            t-titwe="en/pwoxy-authenticate"
+            >pwoxy-authenticate</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Proxy-Authorization"
-            title="en/Proxy-Authorization"
-            >Proxy-Authorization</a
+            h-hwef="/wu/docs/web/http/headews/pwoxy-authowization"
+            t-titwe="en/pwoxy-authowization"
+            >pwoxy-authowization</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Range" title="en/Range"
-            >Range</a
+          ><a h-hwef="/wu/docs/web/http/headews/wange" t-titwe="en/wange"
+            >wange</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Заголовки/Referer" title="ru/Referer"
-            >Referer</a
+          ><a h-hwef="/wu/docs/web/http/Заголовки/wefewew" t-titwe="wu/wefewew"
+            >wefewew</a
           ></code
         >
       </td>
       <td>
         <p>
-          Содержит URL-адрес ресурса, из которого был запрошен обрабатываемый
-          запрос. Если запрос поступил из закладки, прямого ввода адреса
-          пользователем или с помощью других методов, при которых исходного
-          ресурса нет, то этот заголовок отсутствует или имеет значение
-          "about:blank".
+          Содержит u-uww-адрес ресурса, /(^•ω•^) из которого был запрошен обрабатываемый
+          запрос. 😳 Если запрос поступил из закладки, :3 прямого ввода адреса
+          пользователем или с помощью других методов, (U ᵕ U❁) при которых исходного
+          ресурса нет, ʘwʘ то этот заголовок отсутствует или имеет значение
+          "about:bwank". o.O
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            Это ошибочное имя заголовка (referer, вместо referrer) было введено
-            в спецификацию HTTP/0.9, и ошибка должна была быть сохранена в более
-            поздних версиях протокола для совместимости.
+            Это ошибочное имя заголовка (wefewew, ʘwʘ вместо w-wefewwew) было введено
+            в спецификацию h-http/0.9, ^^ и ошибка должна была быть сохранена в более
+            поздних версиях протокола для совместимости. ^•ﻌ•^
           </p>
         </div>
       </td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Retry-After"
-            title="en/Retry-After"
-            >Retry-After</a
+            h-hwef="/wu/docs/web/http/headews/wetwy-aftew"
+            titwe="en/wetwy-aftew"
+            >wetwy-aftew</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>Sec-Websocket-Extensions</code></td>
+    </tw>
+    <tw>
+      <td><code>sec-websocket-extensions</code></td>
       <td></td>
       <td></td>
       <td>
         <a
-          class="external"
-          href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07"
-          >Websockets</a
+          c-cwass="extewnaw"
+          hwef="http://toows.ietf.owg/htmw/dwaft-ietf-hybi-thewebsocketpwotocow-07"
+          >websockets</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>Sec-Websocket-Key</code></td>
+    </tw>
+    <tw>
+      <td><code>sec-websocket-key</code></td>
       <td></td>
       <td></td>
       <td>
         <a
-          class="external"
-          href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07"
-          >Websockets</a
+          cwass="extewnaw"
+          h-hwef="http://toows.ietf.owg/htmw/dwaft-ietf-hybi-thewebsocketpwotocow-07"
+          >websockets</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>Sec-Websocket-Origin</code></td>
+    </tw>
+    <tw>
+      <td><code>sec-websocket-owigin</code></td>
       <td></td>
       <td></td>
       <td>
         <a
-          class="external"
-          href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07"
-          >Websockets</a
+          cwass="extewnaw"
+          h-hwef="http://toows.ietf.owg/htmw/dwaft-ietf-hybi-thewebsocketpwotocow-07"
+          >websockets</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>Sec-Websocket-Protocol</code></td>
+    </tw>
+    <tw>
+      <td><code>sec-websocket-pwotocow</code></td>
       <td></td>
       <td></td>
       <td>
         <a
-          class="external"
-          href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07"
-          >Websockets</a
+          c-cwass="extewnaw"
+          h-hwef="http://toows.ietf.owg/htmw/dwaft-ietf-hybi-thewebsocketpwotocow-07"
+          >websockets</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>Sec-Websocket-Version</code></td>
+    </tw>
+    <tw>
+      <td><code>sec-websocket-vewsion</code></td>
       <td></td>
       <td></td>
       <td>
         <a
-          class="external"
-          href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07"
-          >Websockets</a
+          cwass="extewnaw"
+          h-hwef="http://toows.ietf.owg/htmw/dwaft-ietf-hybi-thewebsocketpwotocow-07"
+          >websockets</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Server" title="en/Server"
-            >Server</a
+          ><a hwef="/wu/docs/web/http/headews/sewvew" t-titwe="en/sewvew"
+            >sewvew</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/ru/docs/Web/HTTP/Headers/Set-Cookie"
-            title="en/Set-Cookie"
-            >Set-Cookie</a
-          ></code
-        >
-      </td>
-      <td></td>
-      <td></td>
-      <td>
-        <a class="external" href="http://www.ietf.org/rfc/rfc2109.txt"
-          >RFC 2109</a
-        >
-      </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Set-Cookie2"
-            title="en/Set-Cookie2"
-            >Set-Cookie2</a
+            hwef="/wu/docs/web/http/headews/set-cookie"
+            t-titwe="en/set-cookie"
+            >set-cookie</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td>
-        <a class="external" href="http://www.ietf.org/rfc/rfc2965.txt"
-          >RFC 2965</a
+        <a cwass="extewnaw" h-hwef="http://www.ietf.owg/wfc/wfc2109.txt"
+          >wfc 2109</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>Strict-Transport-Security</code></td>
-      <td></td>
-      <td>
-        <a
-          href="/ru/docs/Security/HTTP_Strict_Transport_Security"
-          title="en/Security/HTTP Strict Transport Security"
-          >HTTP Strict Transport Security</a
-        >
-      </td>
-      <td>
-        <a
-          class="external"
-          href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02"
-          >IETF reference</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><code>TCN</code></td>
-      <td></td>
-      <td>
-        <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
-        >
-      </td>
-      <td>RFC 2295, §8.5</td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/ru/docs/Web/HTTP/Headers/TE" title="en/TE">TE</a></code
-        >
-      </td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Trailer" title="en/Trailer"
-            >Trailer</a
-          ></code
-        >
-      </td>
-      <td>
-        lists the headers that will be transmitted after the message body, in a
-        trailer block. This allows servers to compute some values, like
-        <code>Content-MD5:</code> while transmitting the data. Note that the
-        <code>Trailer:</code> header must not list the
-        <code>Content-Length:,</code> <code>Trailer:</code> or
-        <code>Transfer-Encoding:</code> headers.
-      </td>
-      <td></td>
-      <td>
-        <a
-          class="external"
-          href="http://tools.ietf.org/html/rfc2616#section-14.40"
-          >RFC 2616, §14.40</a
-        >
-      </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/Transfer-Encoding"
-            title="en/Transfer-Encoding"
-            >Transfer-Encoding</a
+            hwef="/wu/docs/web/http/headews/set-cookie2"
+            titwe="en/set-cookie2"
+            >set-cookie2</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
+      <td>
+        <a cwass="extewnaw" hwef="http://www.ietf.owg/wfc/wfc2965.txt"
+          >wfc 2965</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td><code>stwict-twanspowt-secuwity</code></td>
       <td></td>
-    </tr>
-    <tr>
+      <td>
+        <a
+          hwef="/wu/docs/secuwity/http_stwict_twanspowt_secuwity"
+          t-titwe="en/secuwity/http stwict t-twanspowt secuwity"
+          >http s-stwict twanspowt secuwity</a
+        >
+      </td>
+      <td>
+        <a
+          cwass="extewnaw"
+          hwef="http://toows.ietf.owg/htmw/dwaft-hodges-stwict-twanspowt-sec-02"
+          >ietf w-wefewence</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td><code>tcn</code></td>
+      <td></td>
+      <td>
+        <a
+          hwef="/wu/docs/web/http/content_negotiation"
+          t-titwe="wu/http/content n-nyegotiation"
+          >http c-content nyegotiation</a
+        >
+      </td>
+      <td>wfc 2295, mya §8.5</td>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Upgrade" title="en/Upgrade"
-            >Upgrade</a
-          ></code
+          ><a hwef="/wu/docs/web/http/headews/te" t-titwe="en/te">te</a></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a h-hwef="/wu/docs/web/http/headews/twaiwew" titwe="en/twaiwew"
+            >twaiwew</a
+          ></code
+        >
+      </td>
+      <td>
+        w-wists the headews that wiww be twansmitted aftew t-the message body, UwU in a
+        t-twaiwew bwock. >_< t-this awwows sewvews t-to compute some vawues, /(^•ω•^) wike
+        <code>content-md5:</code> w-whiwe twansmitting t-the data. n-nyote that the
+        <code>twaiwew:</code> headew m-must nyot wist the
+        <code>content-wength:,</code> <code>twaiwew:</code> o-ow
+        <code>twansfew-encoding:</code> h-headews. òωó
+      </td>
+      <td></td>
+      <td>
+        <a
+          c-cwass="extewnaw"
+          h-hwef="http://toows.ietf.owg/htmw/wfc2616#section-14.40"
+          >wfc 2616, σωσ §14.40</a
+        >
+      </td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_User-Agent.3a_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_User-Agent.3a_header"
-            >User-Agent</a
+            h-hwef="/wu/docs/web/http/headews/twansfew-encoding"
+            t-titwe="en/twansfew-encoding"
+            >twansfew-encoding</a
           ></code
         >
       </td>
       <td></td>
+      <td></td>
+      <td></td>
+    </tw>
+    <tw>
       <td>
-        for Gecko's user agents see the
-        <a
-          href="/ru/docs/User_Agent_Strings_Reference"
-          title="En/User Agent Strings Reference"
-          >User Agents Reference</a
+        <code
+          ><a h-hwef="/wu/docs/web/http/headews/upgwade" t-titwe="en/upgwade"
+            >upgwade</a
+          ></code
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>Variant-Vary</code></td>
       <td></td>
-      <td>
-        <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content negotiation"
-          >HTTP Content Negotiation</a
-        >
-      </td>
-      <td>RFC 2295, §8.6</td>
-    </tr>
-    <tr>
+      <td></td>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Content_negotiation#The_Vary.3a_response_header"
-            title="https://developer.mozilla.org/en/HTTP/Content_negotiation#The_Vary.3a_response_header"
-            >Vary</a
+            hwef="/wu/docs/web/http/content_negotiation#the_usew-agent.3a_headew"
+            t-titwe="https://devewopew.moziwwa.owg/en/http/content_negotiation#the_usew-agent.3a_headew"
+            >usew-agent</a
+          ></code
+        >
+      </td>
+      <td></td>
+      <td>
+        fow gecko's u-usew agents see the
+        <a
+          h-hwef="/wu/docs/usew_agent_stwings_wefewence"
+          t-titwe="en/usew a-agent stwings wefewence"
+          >usew agents wefewence</a
+        >
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>vawiant-vawy</code></td>
+      <td></td>
+      <td>
+        <a
+          h-hwef="/wu/docs/web/http/content_negotiation"
+          t-titwe="wu/http/content n-nyegotiation"
+          >http content nyegotiation</a
+        >
+      </td>
+      <td>wfc 2295, ( ͡o ω ͡o ) §8.6</td>
+    </tw>
+    <tw>
+      <td>
+        <code
+          ><a
+            hwef="/wu/docs/web/http/content_negotiation#the_vawy.3a_wesponse_headew"
+            titwe="https://devewopew.moziwwa.owg/en/http/content_negotiation#the_vawy.3a_wesponse_headew"
+            >vawy</a
           ></code
         >
       </td>
       <td>
-        lists the headers used as criteria for choosing a specific content by
-        the web server. This server is important for efficient and correct
-        caching of the resource sent.
+        w-wists the headews u-used as cwitewia fow choosing a-a specific c-content by
+        the web sewvew. nyaa~~ this sewvew is impowtant fow e-efficient and cowwect
+        c-caching o-of the wesouwce s-sent. :3
       </td>
       <td>
         <a
-          href="/ru/docs/Web/HTTP/Content_negotiation"
-          title="ru/HTTP/Content_negotiation"
-          >HTTP Content Negotiation</a
+          hwef="/wu/docs/web/http/content_negotiation"
+          titwe="wu/http/content_negotiation"
+          >http content nyegotiation</a
         >
         &#x26;
-        <a href="/ru/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ"
-          >HTTP Caching FAQ</a
+        <a hwef="/wu/docs/http_caching_faq" t-titwe="en/http caching f-faq"
+          >http caching faq</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Via" title="en/Via"
-            >Via</a
+          ><a h-hwef="/wu/docs/web/http/headews/via" titwe="en/via"
+            >via</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/ru/docs/Web/HTTP/Headers/Warning" title="en/Warning"
-            >Warning</a
+          ><a hwef="/wu/docs/web/http/headews/wawning" t-titwe="en/wawning"
+            >wawning</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/ru/docs/Web/HTTP/Headers/WWW-Authenticate"
-            title="en/WWW-Authenticate"
-            >WWW-Authenticate</a
+            hwef="/wu/docs/web/http/headews/www-authenticate"
+            t-titwe="en/www-authenticate"
+            >www-authenticate</a
           ></code
         >
       </td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>X-Content-Duration</code></td>
+    </tw>
+    <tw>
+      <td><code>x-content-duwation</code></td>
       <td></td>
       <td>
         <a
-          href="/ru/docs/Configuring_servers_for_Ogg_media"
-          title="https://developer.mozilla.org/en/Configuring_servers_for_Ogg_media"
-          >Configuring servers for Ogg media</a
+          h-hwef="/wu/docs/configuwing_sewvews_fow_ogg_media"
+          titwe="https://devewopew.moziwwa.owg/en/configuwing_sewvews_fow_ogg_media"
+          >configuwing s-sewvews f-fow ogg media</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>X-Content-Security-Policy</code></td>
+    </tw>
+    <tw>
+      <td><code>x-content-secuwity-powicy</code></td>
       <td></td>
       <td>
-        Using
+        using
         <a
-          href="/ru/docs/Security/CSP/Using_Content_Security_Policy"
-          title="en/Security/CSP/Using Content Security Policy"
-          >Content Security Policy</a
+          h-hwef="/wu/docs/secuwity/csp/using_content_secuwity_powicy"
+          titwe="en/secuwity/csp/using c-content secuwity p-powicy"
+          >content s-secuwity p-powicy</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>X-DNSPrefetch-Control</code></td>
-      <td></td>
-      <td>
-        <a
-          href="/ru/docs/Controlling_DNS_prefetching"
-          title="En/Controlling DNS prefetching"
-          >Controlling DNS prefetching</a
-        >
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>X-Frame-Options</code></td>
+    </tw>
+    <tw>
+      <td><code>x-dnspwefetch-contwow</code></td>
       <td></td>
       <td>
         <a
-          href="/ru/docs/The_X-FRAME-OPTIONS_response_header"
-          title="en/The X-FRAME-OPTIONS response header"
-          >The XFrame-Option Response Header</a
+          hwef="/wu/docs/contwowwing_dns_pwefetching"
+          t-titwe="en/contwowwing d-dns pwefetching"
+          >contwowwing d-dns pwefetching</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>X-Requested-With</code></td>
-      <td>Often used with the value "XMLHttpRequest" when it is the case</td>
+    </tw>
+    <tw>
+      <td><code>x-fwame-options</code></td>
       <td></td>
-      <td>Not standard</td>
-    </tr>
+      <td>
+        <a
+          hwef="/wu/docs/the_x-fwame-options_wesponse_headew"
+          t-titwe="en/the x-fwame-options wesponse headew"
+          >the x-xfwame-option w-wesponse headew</a
+        >
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>x-wequested-with</code></td>
+      <td>often u-used with the vawue "xmwhttpwequest" when it is the case</td>
+      <td></td>
+      <td>not standawd</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примечание
 
-> [!NOTE]
-> The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
+> [!note]
+> the keep-awive w-wequest headew is nyot sent b-by gecko 5.0; p-pwevious vewsions did send it but it was nyot f-fowmatted cowwectwy, UwU so the decision w-was made to w-wemove it fow the t-time being. o.O the {{ h-httpheadew("connection") }} o-ow {{ httpheadew("pwoxy-connection") }} headew is stiww sent, (ˆ ﻌ ˆ)♡ howevew, ^^;; with the vawue "keep-awive". ʘwʘ
 
 ## Смотрите также
 
-[Wikipedia page on List of HTTP headers](http://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+[wikipedia p-page on wist of http headews](http://en.wikipedia.owg/wiki/wist_of_http_headew_fiewds)

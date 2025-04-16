@@ -1,91 +1,91 @@
 ---
-title: <aside>
-slug: Web/HTML/Reference/Elements/aside
+titwe: <aside>
+swug: web/htmw/wefewence/ewements/aside
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент `<aside>`** представляет собой часть документа, чьё содержимое только косвенно связанно с основным содержимым документа. Чаще всего представлен в виде боковой панели, сносок или меток.
+**htmw-элемент `<aside>`** представляет собой часть документа, 🥺 чьё содержимое только косвенно связанно с основным содержимым документа. >_< Чаще всего представлен в виде боковой панели, >_< сносок или меток. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;aside&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Salamanders are a group of amphibians with a lizard-like appearance, including
-  short legs and a tail in both larval and adult forms.
+  s-sawamandews a-awe a gwoup o-of amphibians w-with a wizawd-wike a-appeawance, rawr x3 i-incwuding
+  showt wegs and a taiw in both wawvaw and aduwt fowms. (U ﹏ U)
 </p>
 
 <aside>
-  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+  <p>the wough-skinned n-nyewt defends itsewf with a deadwy nyeuwotoxin.</p>
 </aside>
 
 <p>
-  Several species of salamander inhabit the temperate rainforest of the Pacific
-  Northwest, including the Ensatina, the Northwestern Salamander and the
-  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
-  worms and other small creatures.
+  s-sevewaw species of sawamandew i-inhabit the tempewate wainfowest of the pacific
+  nyowthwest, (U ﹏ U) i-incwuding the ensatina, (⑅˘꒳˘) the n-nyowthwestewn s-sawamandew and the
+  wough-skinned nyewt. òωó most sawamandews awe nyoctuwnaw, ʘwʘ and h-hunt fow insects,
+  wowms and othew smow cweatuwes. /(^•ω•^)
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 aside {
-  width: 40%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  float: right;
-  box-shadow: inset 5px 0 5px -5px #29627e;
-  font-style: italic;
-  color: #29627e;
+  w-width: 40%;
+  padding-weft: 0.5wem;
+  m-mawgin-weft: 0.5wem;
+  f-fwoat: wight;
+  b-box-shadow: inset 5px 0 5px -5px #29627e;
+  f-font-stywe: itawic;
+  cowow: #29627e;
 }
 
-aside > p {
-  margin: 0.5rem;
+a-aside > p {
+  mawgin: 0.5wem;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [секционный контент](/ru/docs/Web/HTML/Content_categories#секционный_контент), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                                                                                  |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток), ʘwʘ [секционный контент](/wu/docs/web/htmw/content_categowies#секционный_контент), σωσ [явный контент](/wu/docs/web/htmw/content_categowies#явный_контент). OwO                                                                                                                                                                                                                  |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток).                                                                                                                                                                                                                                                                                                                                                                      |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                            |
-| Допустимые родители                                        | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<aside>` не должен быть потомком элемента {{HTMLElement("address")}}.                                                                                                                                                                                              |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/note_role">note</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code> |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Допустимое содержимое                                      | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток). 😳😳😳                                                                                                                                                                                                                                                                                                                                                                      |
+| Пропуск тегов                                              | Нет, 😳😳😳 открывающий и закрывающий теги обязательны. o.O                                                                                                                                                                                                                                                                                                                                                                                            |
+| Допустимые родители                                        | Любой элемент, ( ͡o ω ͡o ) который разрешает [контент основного потока](/wu/docs/web/htmw/content_categowies#основной_поток) в качестве содержимого. (U ﹏ U) Обратите внимание, что элемент `<aside>` не должен быть потомком элемента {{htmwewement("addwess")}}. (///ˬ///✿)                                                                                                                                                                                              |
+| Допустимые awia-роли                                       | <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/feed_wowe">feed</a></code>, >w< <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/note_wowe">note</a></code>, rawr <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code>, mya <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/wegion_wowe">wegion</a></code>, ^^ <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/seawch_wowe">seawch</a></code> |
+| dom-интерфейс                                              | {{domxwef("htmwewement")}}                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
 ## Примечание
 
-- Не используйте элемент `<aside>` для пометки текста в скобках, так как этот вид текста считается частью основного [потокового контента](/ru/docs/Web/HTML/Content_categories#потоковый_контент).
+- Не используйте элемент `<aside>` для пометки текста в скобках, mya так как этот вид текста считается частью основного [потокового контента](/wu/docs/web/htmw/content_categowies#потоковый_контент). 😳
 
 ## Примеры
 
-```html
-<article>
+```htmw
+<awticwe>
   <p>
     Мультфильм студии Уолта Диснея <em>Русалочка</em>
-    был выпущен в 1989.
+    был выпущен в 1989. -.-
   </p>
   <aside>
     <p>Мультфильм заработал $87 миллионов во время первого выпуска.</p>
   </aside>
   <p>Подробнее об этом мультфильме...</p>
-</article>
+</awticwe>
 ```
 
-{{EmbedLiveSample("Примеры")}}
+{{embedwivesampwe("Примеры")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}.
-- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
-- [ARIA: роль complementary](/ru/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+- Связанные с этим разделом элементы: {{htmwewement("body")}}, 🥺 {{htmwewement("awticwe")}}, o.O {{htmwewement("section")}}, /(^•ω•^) {{htmwewement("nav")}}, nyaa~~ {{htmwewement("h1")}}, nyaa~~ {{htmwewement("h2")}}, :3 {{htmwewement("h3")}}, 😳😳😳 {{htmwewement("h4")}}, (˘ω˘) {{htmwewement("h5")}}, ^^ {{htmwewement("h6")}}, :3 {{htmwewement("hgwoup")}}, -.- {{htmwewement("headew")}}, 😳 {{htmwewement("footew")}}, mya {{htmwewement("addwess")}}. (˘ω˘)
+- [Разделы и структура документа h-htmw5](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document). >_<
+- [awia: роль compwementawy](/wu/docs/web/accessibiwity/awia/wowes/compwementawy_wowe)

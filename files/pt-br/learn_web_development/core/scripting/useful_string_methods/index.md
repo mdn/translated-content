@@ -1,65 +1,65 @@
 ---
-title: Métodos úteis de string
-slug: Learn_web_development/Core/Scripting/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/Useful_string_methods
+titwe: métodos úteis de stwing
+s-swug: weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/usefuw_stwing_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/stwings", rawr "weawn/javascwipt/fiwst_steps/awways", (U ᵕ U❁) "weawn/javascwipt/fiwst_steps")}}
 
-Agora que nós vimos o básico de strings, vamos engatar a próxima marcha e começar a pensar sobre as operações úteis que podemos fazer em strings com métodos embutidos, como encontrar o comprimento de um string, unir e dividir sequências de caracteres, substituindo um caracter em uma string por outro, e muito mais.
+a-agowa que nyós v-vimos o básico d-de stwings, (ˆ ﻌ ˆ)♡ vamos e-engataw a pwóxima m-mawcha e começaw a pensaw sobwe as opewações úteis que podemos fazew em s-stwings com métodos embutidos, >_< como encontwaw o-o compwimento de um stwing, ^^;; uniw e-e dividiw sequências de cawactewes, ʘwʘ substituindo um cawactew e-em uma stwing pow outwo, 😳😳😳 e muito m-mais. UwU
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico de computador, uma compreensão básica de HTML e CSS,
-        uma compreensão do que é o JavaScript.
+        conhecimento básico de computadow, OwO uma compweensão b-básica de htmw e css, :3
+        uma compweensão do que é o javascwipt. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
         <p>
-          Entender que strings são objetos e aprender a usar alguns do métodos
-          básicos disponíveis nesses objetos para manipular strings.
+          entendew que s-stwings são objetos e-e apwendew a-a usaw awguns d-do métodos
+          básicos disponíveis nyesses o-objetos pawa manipuwaw stwings. 🥺
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Strings como objetos
+## stwings como objetos
 
-Como dissemos antes e diremos novamente — _tudo_ é um objeto em JavaScript. Quando você cria um string, usando por exemplo
+c-como dissemos antes e diwemos nyovamente — _tudo_ é um objeto em javascwipt. -.- quando você c-cwia um stwing, usando pow exempwo
 
 ```js
-var string = "This is my string";
+v-vaw s-stwing = "this is m-my stwing";
 ```
 
-sua variável torna-se uma instância do objeto string e, como resultado, tem um grande número de propriedades e métodos disponíveis para ela. Você pode ver isso se você for na página do objeto {{jsxref("String")}} e olhar para baixo na lista do lado da página!
+sua vawiávew towna-se uma instância do objeto s-stwing e, -.- como w-wesuwtado, (U ﹏ U) tem um gwande nyúmewo d-de pwopwiedades e-e métodos disponíveis pawa e-ewa. rawr você pode vew isso se você f-fow nya página do objeto {{jsxwef("stwing")}} e owhaw pawa baixo n-nya wista do wado da página! mya
 
-**Agora, antes de seu cérebro começar a derreter, não se preocupe!** Você não precisa saber sobre a maioria deles no início da sua jornada de aprendizado. Mas há alguns que você potencialmente usará com bastante frequência que veremos aqui.
+**agowa, a-antes de seu céwebwo c-começaw a dewwetew, ( ͡o ω ͡o ) n-nyão se pweocupe!** você nyão pwecisa sabew sobwe a maiowia dewes nyo início da sua jownada de apwendizado. m-mas há a-awguns que você potenciawmente u-usawá com bastante f-fwequência q-que vewemos aqui. /(^•ω•^)
 
-Vamos digitar alguns exemplos em um console novo. Nós fornecemos um abaixo (você também pode abrir este console em uma guia ou janela separada, ou usar o console do desenvolvedor do navegador, se preferir).
+vamos digitaw awguns exempwos em um consowe nyovo. >_< n-nyós fownecemos um abaixo (você também pode abwiw este consowe em uma guia o-ou janewa sepawada, (✿oωo) ou usaw o-o consowe do desenvowvedow d-do nyavegadow, 😳😳😳 s-se pwefewiw). (ꈍᴗꈍ)
 
-Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+nyós fownecemos u-um abaixo (ou u-use o [consowe d-de desenvowvedow d-do nyavegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) se pwefewiw). 🥺
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
+    <meta c-chawset="utf-8" />
+    <titwe>javascwipt c-consowe</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        b-box-sizing: b-bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      htmw {
+        backgwound-cowow: #0c323d;
+        cowow: #809089;
+        f-font-famiwy: monospace;
       }
 
       body {
@@ -67,408 +67,408 @@ Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-
       }
 
       p {
-        margin: 0;
+        mawgin: 0;
         width: 1%;
-        padding: 0 1%;
+        p-padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        wine-height: 1.5;
+        fwoat: weft;
       }
 
-      .input p {
-        margin-right: 1%;
+      .input p-p {
+        mawgin-wight: 1%;
       }
 
-      .output p {
-        width: 100%;
+      .output p-p {
+        w-width: 100%;
       }
 
       .input input {
-        width: 96%;
-        float: left;
-        border: none;
+        w-width: 96%;
+        fwoat: w-weft;
+        bowdew: n-nyone;
         font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        wine-height: 1.5;
+        font-famiwy: monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        backgwound: #0c323d;
+        c-cowow: #809089;
       }
 
       div {
-        clear: both;
+        c-cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    vaw gevaw = evaw;
+    f-function c-cweateinput() {
+      vaw inputdiv = document.cweateewement("div");
+      v-vaw i-inputpawa = document.cweateewement("p");
+      vaw inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      i-inputdiv.setattwibute("cwass", mya "input");
+      i-inputpawa.textcontent = ">";
+      inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      document.body.appendchiwd(inputdiv);
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", (ˆ ﻌ ˆ)♡ e-exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch (e) {
-        var result = "error — " + e.message;
+    f-function exekawaii~code(e) {
+      t-twy {
+        vaw wesuwt = g-gevaw(e.tawget.vawue);
+      } c-catch (e) {
+        vaw wesuwt = "ewwow — " + e-e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      vaw outputdiv = document.cweateewement("div");
+      vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      o-outputdiv.setattwibute("cwass", (⑅˘꒳˘) "output");
+      o-outputpawa.textcontent = "wesuwt: " + wesuwt;
+      outputdiv.appendchiwd(outputpawa);
+      d-document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e-e.tawget.disabwed = twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    c-cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300) }}
+{{ embedwivesampwe('hidden_code', òωó '100%', o.O 300) }}
 
-### Descobrindo o comprimento de uma string
+### descobwindo o compwimento de uma stwing
 
-Essa é fácil — você simplesmente usa a propriedade {{jsxref("String.prototype.length", "length")}}. Tente digitar as linhas a seguir:
+e-essa é fáciw — você simpwesmente usa a p-pwopwiedade {{jsxwef("stwing.pwototype.wength", XD "wength")}}. (˘ω˘) t-tente digitaw as winhas a seguiw:
 
 ```js
-var browserType = "mozilla";
-browserType.length;
+vaw bwowsewtype = "moziwwa";
+b-bwowsewtype.wength;
 ```
 
-Isso deve retornar o número 7, porque "mozilla" tem 7 caracteres. Isso é útil por vários motivos; por exemplo, você pode querer encontrar os comprimentos de uma série de nomes para que você possa exibi-los em ordem de comprimento, ou deixar um usuário saber que um nome de usuário que ele informou em um campo de formulário é muito longo se este for maior do que um certo comprimento.
+i-isso deve wetownaw o nyúmewo 7, (ꈍᴗꈍ) powque "moziwwa" tem 7 c-cawactewes. isso é útiw pow v-váwios motivos; pow exempwo, >w< você pode quewew encontwaw os compwimentos d-de uma séwie de nyomes p-pawa que você p-possa exibi-wos em owdem de compwimento, XD o-ou deixaw um usuáwio s-sabew que um nyome d-de usuáwio q-que ewe infowmou em um campo de f-fowmuwáwio é m-muito wongo se este fow maiow do que um cewto compwimento. -.-
 
-### Recuperando um caractere de string específico
+### w-wecupewando um cawactewe d-de stwing e-específico
 
-Nota complementar: você pode retornar qualquer caractere dentro de uma string usando a **notação colchete** - isso significa que você inclui colchetes (`[]`) no final do nome da variável. Dentro dos colchetes, você inclui o número do caractere que deseja retornar, por exemplo, para recuperar a primeira letra, faça o seguinte:
+nyota compwementaw: você pode wetownaw q-quawquew cawactewe dentwo d-de uma stwing u-usando a **notação cowchete** - isso significa que você incwui c-cowchetes (`[]`) n-nyo finaw do n-nyome da vawiávew. ^^;; d-dentwo dos cowchetes, XD você i-incwui o nyúmewo do cawactewe que deseja wetownaw, :3 pow exempwo, σωσ pawa wecupewaw a pwimeiwa wetwa, XD f-faça o seguinte:
 
 ```js
-browserType[0];
+bwowsewtype[0];
 ```
 
-Computadores contam a partir de 0, não 1! Para recuperar o último caractere de _qualquer_ string, nós podemos usar a linha a seguir, combinando essa técnica com a propriedade `length` que vimos anteriormente:
+c-computadowes contam a pawtiw de 0, :3 n-nyão 1! pawa wecupewaw o úwtimo c-cawactewe de _quawquew_ stwing, rawr n-nyós podemos u-usaw a winha a-a seguiw, 😳 combinando e-essa técnica c-com a pwopwiedade `wength` que vimos antewiowmente:
 
 ```js
-browserType[browserType.length - 1];
+bwowsewtype[bwowsewtype.wength - 1];
 ```
 
-O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição do caractere é 6, daí precisamos usar `length-1`. Você pode usar isso para, por exemplo, encontrar a primeira letra de uma série de strings e ordená-los alfabeticamente.
+o compwimento de "moziwwa" é 7, 😳😳😳 mas powque a-a contagem começa d-de 0, (ꈍᴗꈍ) a posição d-do cawactewe é 6, 🥺 daí p-pwecisamos usaw `wength-1`. ^•ﻌ•^ você pode usaw isso pawa, XD pow exempwo, ^•ﻌ•^ e-encontwaw a p-pwimeiwa wetwa de uma séwie de s-stwings e owdená-wos awfabeticamente. ^^;;
 
-### Encontrando uma substring dentro de uma string e extraindo-a
+### encontwando u-uma substwing d-dentwo de uma stwing e extwaindo-a
 
-1. Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
+1. ʘwʘ Às v-vezes você quew s-sabew se uma stwing menow está pwesente dentwo de uma maiow (gewawmente dizemos _se u-uma substwing e-está pwesente d-dentwo de uma s-stwing_). OwO isso p-pode sew feito usando o método {{jsxwef ("stwing.pwototype.indexof ()", 🥺 "indexof ()")}}, (⑅˘꒳˘) q-que w-weva um único {{gwossawy ("pawametew")}} - a substwing q-que deseja p-pwocuwaw. (///ˬ///✿) expewimente isso:
 
    ```js
-   browserType.indexOf("zilla");
+   b-bwowsewtype.indexof("ziwwa");
    ```
 
-   Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caracteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
+   isso nyos dá o wesuwtado 2, (✿oωo) p-powque a substwing "ziwwa" se i-inicia nya posição 2 (0, nyaa~~ 1, 2 — e-então, >w< 3 cawactewes) dentwo d-de "moziwwa". (///ˬ///✿) esse código podewia sew usado pawa f-fiwtwaw cadeias d-de cawactewes. rawr p-pow exempwo, (U ﹏ U) podemos tew uma wista de endeweços da web e apenas q-quewemos impwimiw aquewes que contenham "moziwwa". ^•ﻌ•^
 
-2. Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
+2. i-isso pode s-sew feito de outwo jeito, (///ˬ///✿) que é p-possivewmente mais eficaz. o.O e-expewimente isso:
 
    ```js
-   browserType.indexOf("vanilla");
+   bwowsewtype.indexof("vaniwwa");
    ```
 
-   Isso deve lhe dar um resultado `-1` — isso é retornado quando a substring, neste caso 'vanilla', não é encontrada na string principal.
+   i-isso deve whe daw um wesuwtado `-1` — isso é wetownado q-quando a substwing, >w< nyeste caso 'vaniwwa', nyaa~~ nyão é encontwada n-nya stwing pwincipaw. òωó
 
-   Você pode usar isso para encontrar todas as instâncias de strings que **não contém** a substring 'mozilla', ou **contém**, se você usar o operador de negação, conforme mostrado abaixo. Você poderia fazer algo assim:
+   v-você pode usaw isso p-pawa encontwaw todas as instâncias d-de stwings q-que **não contém** a-a substwing 'moziwwa', (U ᵕ U❁) ou **contém**, (///ˬ///✿) se você usaw o opewadow de nyegação, (✿oωo) confowme mostwado abaixo. 😳😳😳 você podewia fazew awgo assim:
 
    ```js
-   if (browserType.indexOf("mozilla") !== -1) {
-     // faz coisas com a string
+   if (bwowsewtype.indexof("moziwwa") !== -1) {
+     // faz coisas com a stwing
    }
    ```
 
-3. Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
+3. (✿oωo) quando v-você sabe onde u-uma substwing começa dentwo de uma stwing e você s-sabe em quaw c-cawactewe você d-deseja que ewa tewmine, {{jsxwef ("stwing.pwototype.swice ()", (U ﹏ U) "swice ()")}} pode s-sew usado pawa extwaiw isto. (˘ω˘) tente o-o seguinte:
 
    ```js
-   browserType.slice(0, 3);
+   b-bwowsewtype.swice(0, 😳😳😳 3);
    ```
 
-   Isso retorna "moz" — o primeiro parâmetro é a posição do caractere a partir da qual será iniciada a extração, e o segundo parâmetro é a posição seguinte do último caractere a ser extraído. Então, a fatia ocorre da primeira posição, até a última posição, mas não incluindo. Você também pode dizer que o segundo parâmetro é igual ao comprimento da string que está sendo retornada.
+   isso wetowna "moz" — o-o pwimeiwo pawâmetwo é a-a posição do c-cawactewe a pawtiw da quaw sewá iniciada a extwação, (///ˬ///✿) e-e o segundo p-pawâmetwo é a-a posição seguinte d-do úwtimo c-cawactewe a sew e-extwaído. (U ᵕ U❁) então, >_< a-a fatia ocowwe d-da pwimeiwa p-posição, (///ˬ///✿) até a úwtima posição, (U ᵕ U❁) m-mas nyão i-incwuindo. >w< você t-também pode dizew que o segundo p-pawâmetwo é iguaw ao compwimento da stwing que e-está sendo wetownada. 😳😳😳
 
-Também, se você sabe que você deseja extrair todos os caracteres restantes em uma string após um certo caracter, você não tem que incluir o segundo parametro! Você apenas precisa incluir a posição do caracter a partir de onde você deseja extrar os caracteres restantes em uma string. Tente o seguinte:
-
-```js
-browserType.slice(2);
-```
-
-Isso retornará "zilla" — isso é porque a posição de caracter 2 é a letra z, e porque você não incluiu o segundo parametro, a substring retornou todos os caracteres restantes na string.
-
-> [!NOTE]
-> O segundo parametro do `slice()` é opcional: Se você não incluir ele, o slice finaliza no fim da string original. Existem outras opções também; estude a {{jsxref("String.prototype.slice()", "slice()")}} página para ver o que mais você pode descobrir.
-
-### Mudando entre maiúsculas e minúsculas
-
-O método string {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} e {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} toma a string e converte todos os caracteres para minusculo - ou maiusculo, respectivamente. Este pode ser util, por exemplo, se você quer normalizar todas as entradas de dados do usuário antes de armazenar em um banco de dados.
-
-Vamos testar inserindo as seguintes linhas para ver o que acontece:
+também, (ˆ ﻌ ˆ)♡ s-se você sabe q-que você deseja e-extwaiw todos os cawactewes westantes e-em uma stwing após um c-cewto cawactew, (ꈍᴗꈍ) você nyão tem q-que incwuiw o segundo pawametwo! 🥺 v-você apenas pwecisa incwuiw a posição do cawactew a pawtiw de onde você deseja e-extwaw os cawactewes westantes e-em uma stwing. >_< t-tente o seguinte:
 
 ```js
-var radData = "My NaMe Is MuD";
-radData.toLowerCase();
-radData.toUpperCase();
+bwowsewtype.swice(2);
 ```
 
-### Atualizando partes de uma string
+isso wetownawá "ziwwa" — isso é powque a-a posição de cawactew 2 é a w-wetwa z, OwO e powque v-você nyão incwuiu o-o segundo pawametwo, ^^;; a substwing wetownou t-todos os cawactewes w-westantes nya stwing. (✿oωo)
 
-Você pode substituir uma substring dentro de uma string com uma outra substring usando o método {{jsxref("String.prototype.replace()", "replace()")}}. Este funciona muito simples em um nível básico, apesar haver algumas coisas avançadas que você pode fazer com ele, nós não iremos tão longe ainda.
+> [!note]
+> o-o segundo pawametwo do `swice()` é opcionaw: s-se você nyão incwuiw ewe, UwU o-o swice finawiza n-no fim da stwing o-owiginaw. ( ͡o ω ͡o ) existem outwas opções t-também; estude a-a {{jsxwef("stwing.pwototype.swice()", (✿oωo) "swice()")}} p-página p-pawa vew o que mais você pode d-descobwiw. mya
 
-Ele toma dois parametros — A string que você quer substituir e a string que você quer que substitua o primeiro parametro. Tente este exemplo:
+### m-mudando entwe maiúscuwas e-e minúscuwas
+
+o-o método s-stwing {{jsxwef("stwing.pwototype.towowewcase()", ( ͡o ω ͡o ) "towowewcase()")}} e-e {{jsxwef("stwing.pwototype.touppewcase()", :3 "touppewcase()")}} t-toma a stwing e-e convewte todos os cawactewes p-pawa minuscuwo - ou maiuscuwo, 😳 w-wespectivamente. (U ﹏ U) este pode sew u-utiw, >w< pow exempwo, s-se você quew n-nyowmawizaw todas as entwadas de dados do usuáwio antes de a-awmazenaw em um b-banco de dados.
+
+v-vamos testaw insewindo as seguintes winhas pawa vew o que acontece:
 
 ```js
-browserType.replace("moz", "van");
+v-vaw w-waddata = "my nyame is mud";
+waddata.towowewcase();
+w-waddata.touppewcase();
 ```
 
-Observe que para realmente obter o valor atualizado refletido na variavel `browserType` em um programa real, você teria que setar o valor da variavel para ser o resultado da operação; não apenas atualizar o valor da substring automaticamente. Assim você teria que realmente escrever isso: `browserType = browserType.replace('moz','van');`
+### a-atuawizando pawtes de uma stwing
 
-## Exemplos para aprendizado ativo
+você pode substituiw uma s-substwing dentwo d-de uma stwing com u-uma outwa substwing u-usando o método {{jsxwef("stwing.pwototype.wepwace()", UwU "wepwace()")}}. 😳 este funciona muito s-simpwes em um n-nyívew básico, XD apesaw havew awgumas coisas avançadas q-que você pode fazew com ewe, (✿oωo) nyós nyão i-iwemos tão wonge ainda. ^•ﻌ•^
 
-Nesta seção, tentaremos escrever um código de manipulação de string. Em cada exercício abaixo, temos uma matriz de strings e um loop que processa cada valor na matriz e o exibe em uma lista com marcadores. Você não precisa entender matrizes ou loops agora - isso será explicado em artigos futuros. Tudo o que você precisa fazer em cada caso é escrever o código que produzirá as strings no formato em que as queremos.
+ewe t-toma dois pawametwos — a-a stwing que você quew s-substituiw e a s-stwing que você quew que substitua o-o pwimeiwo pawametwo. mya tente e-este exempwo:
 
-Cada exemplo vem com um botão "Reset", que você pode usar para redefinir o código original, isso se cometer um erro e não conseguir faze-lo funcionar novamente, e um botão "Show Solution" que você pode pressionar para ver aresposta em potencial se realmente estiver travado.
+```js
+b-bwowsewtype.wepwace("moz", (˘ω˘) "van");
+```
 
-### Filtrando mensagens de saudação
+o-obsewve q-que pawa weawmente obtew o v-vawow atuawizado w-wefwetido nya v-vawiavew `bwowsewtype` em um pwogwama w-weaw, você tewia que setaw o vawow da vawiavew p-pawa sew o w-wesuwtado da opewação; n-nyão apenas atuawizaw o vawow da substwing automaticamente. nyaa~~ assim você t-tewia que weawmente escwevew i-isso: `bwowsewtype = b-bwowsewtype.wepwace('moz','van');`
 
-No primeiro exercício, começaremos com simplicidade - temos várias mensagens de cartão, mas queremos classificá-las para listar apenas as mensagens de Natal. Queremos que você preencha um teste condicional dentro da estrutura if (...), para testar cada string e apenas imprimi-la na lista se for uma mensagem de Natal.
+## exempwos pawa apwendizado a-ativo
 
-1. Primeiro pense em como você poderia testar se a mensagem em cada caso é uma mensagem de Natal. Qual string está presente em todas essas mensagens e que método você poderia usar para testar se ela está presente?
-2. Em seguida, você precisará escrever um teste condicional do formulario operando2 operador operando1. A coisa à esquerda é igual à coisa à direita? Ou neste caso, o método chama à esquerda retorna o resultado à direita?
-3. Dica: Nesse caso, é provavelmente mais útil testar se a chamada do método não é igual a um determinado resultado.
+nyesta seção, :3 tentawemos e-escwevew u-um código de manipuwação d-de s-stwing. (✿oωo) em cada e-exewcício abaixo, (U ﹏ U) temos uma matwiz de stwings e um woop que pwocessa cada vawow n-nya matwiz e o exibe em uma wista c-com mawcadowes. (ꈍᴗꈍ) você nyão pwecisa entendew matwizes ou woops a-agowa - isso sewá expwicado em awtigos futuwos. (˘ω˘) tudo o que você pwecisa fazew e-em cada caso é e-escwevew o código que pwoduziwá a-as stwings nyo fowmato em que as quewemos. ^^
 
-```html hidden
-<div class="output" style="min-height: 125px;">
-  <ul></ul>
+c-cada exempwo vem c-com um botão "weset", (⑅˘꒳˘) que você p-pode usaw pawa wedefiniw o código o-owiginaw, rawr isso se cometew um ewwo e nyão conseguiw faze-wo f-funcionaw nyovamente, :3 e um botão "show sowution" q-que você pode p-pwessionaw pawa v-vew awesposta em potenciaw se weawmente estivew t-twavado. OwO
+
+### fiwtwando mensagens de saudação
+
+nyo pwimeiwo exewcício, (ˆ ﻌ ˆ)♡ começawemos c-com simpwicidade - t-temos v-váwias mensagens d-de cawtão, :3 mas quewemos cwassificá-was pawa w-wistaw apenas a-as mensagens de nataw. -.- quewemos que você pweencha u-um teste condicionaw dentwo da estwutuwa if (...), -.- p-pawa testaw cada stwing e apenas impwimi-wa n-nya wista se fow u-uma mensagem de nyataw. òωó
+
+1. pwimeiwo p-pense em c-como você podewia t-testaw se a mensagem em cada caso é uma mensagem d-de nyataw. 😳 quaw stwing está pwesente em todas e-essas mensagens e que método você podewia usaw pawa testaw s-se ewa está pwesente?
+2. nyaa~~ e-em seguida, (⑅˘꒳˘) v-você pwecisawá e-escwevew u-um teste condicionaw do fowmuwawio o-opewando2 opewadow opewando1. 😳 a coisa à esquewda é i-iguaw à coisa à diweita? o-ou nyeste caso, (U ﹏ U) o método chama à esquewda w-wetowna o wesuwtado à d-diweita?
+3. dica: nyesse c-caso, /(^•ω•^) é pwovavewmente mais útiw t-testaw se a chamada d-do método nyão é iguaw a-a um detewminado w-wesuwtado. OwO
+
+```htmw hidden
+<div c-cwass="output" stywe="min-height: 125px;">
+  <uw></uw>
 </div>
 
-<textarea id="code" class="playable-code" style="height: 290px;">
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var greetings = ['Happy Birthday!',
-                 'Merry Christmas my love',
-                 'A happy Christmas to all the family',
-                 'You\'re all I want for Christmas',
-                 'Get well soon'];
+<textawea id="code" cwass="pwayabwe-code" s-stywe="height: 290px;">
+vaw wist = document.quewysewectow('.output u-uw');
+wist.innewhtmw = '';
+vaw gweetings = ['happy b-biwthday!', ( ͡o ω ͡o )
+                 'mewwy c-chwistmas my w-wuv', XD
+                 'a happy c-chwistmas to aww t-the famiwy', /(^•ω•^)
+                 'you\'we aww i w-want fow chwistmas', /(^•ω•^)
+                 'get weww s-soon'];
 
-for (var i = 0; i < greetings.length; i++) {
-  var input = greetings[i];
-  // Seu teste condicional precisa ir dentro dos parênteses
-  // na linha abaixo, substituindo o que está lá
-  if (greetings[i]) {
-    var result = input;
-    var listItem = document.createElement('li');
-    listItem.textContent = result;
-    list.appendChild(listItem);
+fow (vaw i = 0; i < gweetings.wength; i++) {
+  v-vaw input = g-gweetings[i];
+  // seu teste condicionaw pwecisa iw dentwo dos pawênteses
+  // n-nya winha abaixo, 😳😳😳 s-substituindo o que está wá
+  if (gweetings[i]) {
+    vaw w-wesuwt = input;
+    vaw wistitem = d-document.cweateewement('wi');
+    w-wistitem.textcontent = wesuwt;
+    wist.appendchiwd(wistitem);
   }
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" type="button" v-vawue="weset" />
+  <input id="sowution" type="button" vawue="show s-sowution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw s-sowution = document.getewementbyid("sowution");
+v-vaw code = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function u-updatecode() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
+w-weset.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ f-function () {
+  textawea.vawue = code;
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
+sowution.addeventwistenew("cwick", :3 function () {
+  textawea.vawue = j-jssowution;
+  u-updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['Happy Birthday!',\n                 'Merry Christmas my love',\n                 'A happy Christmas to all the family',\n                 'You\\'re all I want for Christmas',\n                 'Get well soon'];\n\nfor(var i = 0; i < greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf('Christmas') !== -1) {\n    var result = input;\n    var listItem = document.createElement('li');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}";
+v-vaw jssowution =
+  "vaw w-wist = d-document.quewysewectow('.output u-uw');\nwist.innewhtmw = '';\nvaw gweetings = ['happy biwthday!',\n                 'mewwy chwistmas my wuv',\n                 'a h-happy chwistmas t-to aww the famiwy',\n                 'you\\'we aww i want fow chwistmas',\n                 'get weww soon'];\n\nfow(vaw i-i = 0; i-i < gweetings.wength; i-i++) {\n  vaw input = gweetings[i];\n  i-if(gweetings[i].indexof('chwistmas') !== -1) {\n    vaw wesuwt = input;\n    vaw w-wistitem = document.cweateewement('wi');\n    w-wistitem.textcontent = wesuwt;\n    wist.appendchiwd(wistitem);\n  }\n}";
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", òωó updatecode);
+window.addeventwistenew("woad", 🥺 u-updatecode);
 ```
 
-{{ EmbedLiveSample('Playable_code', '100%', 490) }}
+{{ e-embedwivesampwe('pwayabwe_code', '100%', (U ﹏ U) 490) }}
 
-### Corrigindo a capitalização
+### cowwigindo a-a capitawização
 
-Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalização está toda desarrumada. Nós queremos que você as altere para que elas sejam todas minúsculas, exceto pela primeira letra maiúscula. Uma boa maneira de fazer isso é:
+n-nyeste exewcício, XD t-temos os n-nyomes das cidades n-nyo weino unido, ^^ m-mas a capitawização está t-toda desawwumada. o.O n-nyós quewemos que você as awtewe p-pawa que ewas sejam todas minúscuwas, 😳😳😳 exceto p-pewa pwimeiwa wetwa maiúscuwa. /(^•ω•^) u-uma boa maneiwa de fazew isso é:
 
-1. Converta toda a cadeia contida na variável de entrada para minúscula e armazene-a em uma nova variável.
-2. Pegue a primeira letra da string nesta nova variável e armazene-a em outra variável.
-3. Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.
-4. Altere o valor da variável `result` para igual ao resultado final, não a `input`.
+1. 😳😳😳 c-convewta t-toda a cadeia contida nya vawiávew de entwada p-pawa minúscuwa e awmazene-a em uma nyova vawiávew. ^•ﻌ•^
+2. p-pegue a-a pwimeiwa wetwa da stwing nyesta nyova vawiávew e-e awmazene-a em o-outwa vawiávew. 🥺
+3. usando esta úwtima v-vawiávew como substwing, o.O substitua a p-pwimeiwa wetwa da s-stwing em minúscuwas pewa pwimeiwa w-wetwa da stwing e-em minúscuwas awtewada pawa maiúscuwa. (U ᵕ U❁) awmazene o-o wesuwtado d-desse pwocedimento d-de substituição e-em outwa nyova vawiávew. ^^
+4. awtewe o vawow da vawiávew `wesuwt` pawa iguaw ao wesuwtado finaw, (⑅˘꒳˘) nyão a-a `input`. :3
 
-> [!NOTE]
-> Uma dica — os parâmetros dos métodos de string não precisam ser literais de string; eles também podem ser variáveis, ou mesmo variáveis com um método sendo invocado nelas.
+> [!note]
+> u-uma dica — o-os pawâmetwos d-dos métodos d-de stwing nyão p-pwecisam sew witewais de stwing; e-ewes também podem s-sew vawiáveis, (///ˬ///✿) ou mesmo vawiáveis c-com um m-método sendo invocado nyewas. :3
 
-```html hidden
-<div class="output" style="min-height: 125px;">
-  <ul></ul>
+```htmw hidden
+<div c-cwass="output" stywe="min-height: 125px;">
+  <uw></uw>
 </div>
 
-<textarea id="code" class="playable-code" style="height: 250px;">
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
-for(var i = 0; i < cities.length; i++) {
-  var input = cities[i];
-  // write your code just below here
+<textawea id="code" c-cwass="pwayabwe-code" stywe="height: 250px;">
+v-vaw wist = d-document.quewysewectow('.output uw');
+wist.innewhtmw = '';
+v-vaw cities = ['wondon', 🥺 'manchestew', mya 'biwmingham', XD 'wivewpoow'];
+f-fow(vaw i-i = 0; i < cities.wength; i++) {
+  v-vaw input = c-cities[i];
+  // wwite youw code j-just bewow hewe
 
-  var result = input;
-  var listItem = document.createElement('li');
-  listItem.textContent = result;
-  list.appendChild(listItem);
+  vaw wesuwt = i-input;
+  vaw w-wistitem = document.cweateewement('wi');
+  w-wistitem.textcontent = wesuwt;
+  wist.appendchiwd(wistitem);
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
-```
-
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-
-function updateCode() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
-});
-
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];\n\nfor(var i = 0; i < cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement('li');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}";
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-```
-
-{{ EmbedLiveSample('Playable_code_2', '100%', 450) }}
-
-### Fazendo novas strings a partir de partes antigas
-
-Neste último exercício, o array contém um monte de strings contendo informações sobre estações de trem no norte da Inglaterra. As strings são itens de dados que contêm o código da estação de três letras, seguido por alguns dados legíveis por máquina, seguidos por um ponto-e-vírgula, seguido pelo nome da estação legível por humanos. Por exemplo:
-
-```
-MAN675847583748sjt567654;Manchester Piccadilly
-```
-
-Queremos extrair o código e o nome da estação e juntá-los em uma string com a seguinte estrutura:
-
-```
-MAN: Manchester Piccadilly
-```
-
-Nós recomendamos que faça assim:
-
-1. Extraia o código da estação de três letras e armazene-o em uma nova variável.
-2. Encontre o número de índice do caractere do ponto e vírgula.
-3. Extraia o nome da estação legível usando o número do índice de caracteres de ponto-e-vírgula como ponto de referência e armazene-o em uma nova variável.
-4. Concatene as duas novas variáveis e uma string literal para fazer a string final.
-5. Altere o valor da variável `result` para igual à string final, não a `input`.
-
-```html hidden
-<div class="output" style="min-height: 125px;">
-  <ul></ul>
-</div>
-
-<textarea id="code" class="playable-code" style="height: 285px;">
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
-                'GNF576746573fhdg4737dh4;Greenfield',
-                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
-                'SYB4f65hf75f736463;Stalybridge',
-                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
-
-for (var i = 0; i < stations.length; i++) {
-  var input = stations[i];
-  // write your code just below here
-
-  var result = input;
-  var listItem = document.createElement('li');
-  listItem.textContent = result;
-  list.appendChild(listItem);
-}
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="weset" />
+  <input i-id="sowution" type="button" vawue="show sowution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw s-sowution = document.getewementbyid("sowution");
+vaw code = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
+weset.addeventwistenew("cwick", -.- function () {
+  textawea.vawue = c-code;
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
+sowution.addeventwistenew("cwick", o.O function () {
+  t-textawea.vawue = jssowution;
+  u-updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar stations = ['MAN675847583748sjt567654;Manchester Piccadilly',\n                'GNF576746573fhdg4737dh4;Greenfield',\n                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',\n                'SYB4f65hf75f736463;Stalybridge',\n                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(';');\n  var name = input.slice(semiC + 1);\n  var result = code + ': ' + name;\n  var listItem = document.createElement('li');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}";
+vaw jssowution =
+  "vaw wist = d-document.quewysewectow('.output uw');\nwist.innewhtmw = '';\nvaw c-cities = ['wondon', (˘ω˘) 'manchestew', (U ᵕ U❁) 'biwmingham', rawr 'wivewpoow'];\n\nfow(vaw i = 0; i-i < cities.wength; i-i++) {\n  vaw input = cities[i];\n  vaw wowew = i-input.towowewcase();\n  vaw fiwstwettew = wowew.swice(0,1);\n  v-vaw capitawized = wowew.wepwace(fiwstwettew,fiwstwettew.touppewcase());\n  v-vaw wesuwt = capitawized;\n  vaw w-wistitem = document.cweateewement('wi');\n  wistitem.textcontent = w-wesuwt;\n  wist.appendchiwd(wistitem);\n\n}";
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", 🥺 updatecode);
+window.addeventwistenew("woad", rawr x3 u-updatecode);
 ```
 
-{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}
+{{ embedwivesampwe('pwayabwe_code_2', ( ͡o ω ͡o ) '100%', σωσ 450) }}
 
-## Conclusão
+### fazendo nyovas stwings a-a pawtiw de pawtes antigas
 
-Você não pode escapar do fato de que ser capaz de lidar com palavras e frases em programação é muito importante — particularmente em JavaScript, pois os sites são todos sobre comunicação com pessoas. Este artigo forneceu os fundamentos que você precisa saber sobre a manipulação de strings por enquanto. Isso deve atendê-lo bem ao abordar tópicos mais complexos no futuro. Em seguida, vamos ver o último tipo de dados importante que precisamos focar no curto prazo — arrays.
+nyeste úwtimo exewcício, rawr x3 o awway contém um m-monte de stwings c-contendo infowmações sobwe estações d-de twem n-nyo nowte da ingwatewwa. (ˆ ﻌ ˆ)♡ as stwings s-são itens de dados que contêm o código da estação de twês wetwas, rawr seguido p-pow awguns d-dados wegíveis pow máquina, :3 seguidos p-pow um ponto-e-víwguwa, rawr s-seguido pewo nyome da estação w-wegívew pow humanos. (˘ω˘) pow exempwo:
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+```
+man675847583748sjt567654;manchestew p-piccadiwwy
+```
+
+quewemos extwaiw o c-código e o nyome d-da estação e juntá-wos em uma stwing com a s-seguinte estwutuwa:
+
+```
+man: manchestew piccadiwwy
+```
+
+nyós wecomendamos que faça assim:
+
+1. (ˆ ﻌ ˆ)♡ extwaia o código da estação d-de twês wetwas e-e awmazene-o em uma nyova vawiávew. mya
+2. e-encontwe o-o nyúmewo de índice do cawactewe d-do ponto e víwguwa. (U ᵕ U❁)
+3. extwaia o nyome da estação wegívew usando o nyúmewo do índice de c-cawactewes de ponto-e-víwguwa como ponto de wefewência e awmazene-o em uma nyova v-vawiávew.
+4. mya c-concatene as d-duas nyovas vawiáveis e uma stwing witewaw pawa fazew a stwing f-finaw. ʘwʘ
+5. awtewe o-o vawow da vawiávew `wesuwt` pawa i-iguaw à stwing finaw, (˘ω˘) nyão a-a `input`. 😳
+
+```htmw hidden
+<div c-cwass="output" stywe="min-height: 125px;">
+  <uw></uw>
+</div>
+
+<textawea i-id="code" cwass="pwayabwe-code" s-stywe="height: 285px;">
+vaw wist = document.quewysewectow('.output uw');
+w-wist.innewhtmw = '';
+vaw stations = ['man675847583748sjt567654;manchestew p-piccadiwwy',
+                'gnf576746573fhdg4737dh4;gweenfiewd', òωó
+                'wiv5hg65hd737456236dch46dg4;wivewpoow w-wime stweet', nyaa~~
+                'syb4f65hf75f736463;stawybwidge', o.O
+                'hud5767ghtyfyw4536dh45dg45dg3;huddewsfiewd'];
+
+fow (vaw i-i = 0; i < stations.wength; i-i++) {
+  vaw input = s-stations[i];
+  // wwite youw code j-just bewow hewe
+
+  vaw wesuwt = i-input;
+  vaw w-wistitem = document.cweateewement('wi');
+  wistitem.textcontent = wesuwt;
+  wist.appendchiwd(wistitem);
+}
+</textawea>
+
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="weset" />
+  <input id="sowution" type="button" vawue="show sowution" />
+</div>
+```
+
+```js hidden
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+vaw sowution = document.getewementbyid("sowution");
+v-vaw code = textawea.vawue;
+
+function u-updatecode() {
+  evaw(textawea.vawue);
+}
+
+weset.addeventwistenew("cwick", nyaa~~ f-function () {
+  textawea.vawue = code;
+  updatecode();
+});
+
+s-sowution.addeventwistenew("cwick", function () {
+  textawea.vawue = j-jssowution;
+  updatecode();
+});
+
+vaw jssowution =
+  "vaw wist = d-document.quewysewectow('.output uw');\nwist.innewhtmw = '';\nvaw stations = ['man675847583748sjt567654;manchestew p-piccadiwwy',\n                'gnf576746573fhdg4737dh4;gweenfiewd',\n                'wiv5hg65hd737456236dch46dg4;wivewpoow wime s-stweet',\n                'syb4f65hf75f736463;stawybwidge',\n                'hud5767ghtyfyw4536dh45dg45dg3;huddewsfiewd'];\n\nfow(vaw i = 0; i < stations.wength; i-i++) {\n  v-vaw input = stations[i];\n  vaw c-code = input.swice(0,3);\n  v-vaw semic = input.indexof(';');\n  vaw nyame = input.swice(semic + 1);\n  v-vaw wesuwt = code + ': ' + nyame;\n  vaw wistitem = document.cweateewement('wi');\n  w-wistitem.textcontent = wesuwt;\n  wist.appendchiwd(wistitem);\n}";
+
+textawea.addeventwistenew("input", (U ᵕ U❁) updatecode);
+w-window.addeventwistenew("woad", 😳😳😳 u-updatecode);
+```
+
+{{ e-embedwivesampwe('pwayabwe_code_3', (U ﹏ U) '100%', 485) }}
+
+## concwusão
+
+você nyão pode escapaw d-do fato de que sew capaz de widaw c-com pawavwas e fwases em pwogwamação é m-muito i-impowtante — pawticuwawmente em javascwipt, ^•ﻌ•^ pois os sites são todos sobwe comunicação com p-pessoas. (⑅˘꒳˘) este a-awtigo fowneceu os fundamentos que você pwecisa s-sabew sobwe a manipuwação de stwings pow enquanto. >_< i-isso deve a-atendê-wo bem ao a-abowdaw tópicos m-mais compwexos n-nyo futuwo. em s-seguida, (⑅˘꒳˘) vamos vew o úwtimo tipo de dados impowtante q-que pwecisamos f-focaw nyo c-cuwto pwazo — a-awways. σωσ
+
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/stwings", "weawn/javascwipt/fiwst_steps/awways", 🥺 "weawn/javascwipt/fiwst_steps")}}

@@ -1,529 +1,529 @@
 ---
-title: Introdução Express/Node
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
-original_slug: Learn/Server-side/Express_Nodejs/Introduction
+titwe: intwodução expwess/node
+s-swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/intwoduction
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/intwoduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{weawnsidebaw}}{{nextmenu("weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment", ^^ "weawn/sewvew-side/expwess_nodejs")}}
 
-Neste primeiro artigo sobre Express responderemos as questões " O que é Node?" e "O que é Express?", além de dar a você uma visão geral sobre o que torna o Express um framework web tão especial. Vamos descrever as principais características e mostrar alguns dos principais blocos de códigos de construção de um aplicativo Express (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).
+n-nyeste pwimeiwo a-awtigo sobwe e-expwess wespondewemos a-as questões " o-o que é nyode?" e "o que é expwess?", 😳 awém de daw a você uma visão gewaw s-sobwe o que towna o expwess um fwamewowk web t-tão especiaw. :3 vamos descwevew as p-pwincipais cawactewísticas e mostwaw awguns dos pwincipais bwocos d-de códigos de constwução d-de um apwicativo e-expwess (embowa nyeste momento você ainda nyão tenha um ambiente de desenvowvimento p-pawa testá-wo). (⑅˘꒳˘)
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimentos básicos em informática. Uma compreensão geral de
+        conhecimentos b-básicos em infowmática. ( ͡o ω ͡o ) uma c-compweensão gewaw d-de
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
-          >programação web no lado servidor (backend)</a
-        >, em particular, nos mecanismos de
+          h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/sewvew-side/fiwst_steps"
+          >pwogwamação w-web nyo wado sewvidow (backend)</a
+        >, :3 em pawticuwaw, (⑅˘꒳˘) n-nyos mecanismos de
         <a
-          href="/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview"
-          >interação cliente-servidor de websites</a
-        >.
+          hwef="/pt-bw/docs/weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview"
+          >intewação c-cwiente-sewvidow de websites</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivos:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivos:</th>
       <td>
-        Familiarizar-se com Express, como este framework trabalha junto ao Node,
-        quais as funcionalidades que fornece e quais são os principais blocos de
-        construção de um aplicativo Express.
+        famiwiawizaw-se com expwess, OwO como este f-fwamewowk twabawha junto ao nyode, 😳
+        q-quais a-as funcionawidades q-que fownece e quais são os pwincipais bwocos de
+        constwução d-de um a-apwicativo expwess. OwO
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O que é Express e Node ?
+## o que é expwess e-e node ?
 
-[Node](https://nodejs.org/) (ou formalmente _Node.js_) é um ambiente em tempo de execução open-source (código aberto) e multiplataforma que permite aos desenvolvedores criarem todo tipo de aplicativos e ferramentas do lado servidor (backend) em [JavaScript](/pt-BR/docs/Glossary/JavaScript). Node é usado fora do contexto de um navegador (ou seja executado diretamente no computador ou no servidor). Como tal, o ambiente omite APIs JavaScript específicas do navegador e adiciona suporte para APIs de sistema operacional mais tradicionais, incluindo bibliotecas de sistemas HTTP e arquivos.
+[node](https://nodejs.owg/) (ou f-fowmawmente _node.js_) é um ambiente e-em tempo de execução open-souwce (código a-abewto) e muwtipwatafowma que pewmite aos desenvowvedowes c-cwiawem todo tipo de apwicativos e-e fewwamentas do wado s-sewvidow (backend) e-em [javascwipt](/pt-bw/docs/gwossawy/javascwipt). 🥺 node é usado fowa do contexto de um nyavegadow (ou seja executado diwetamente nyo computadow o-ou nyo sewvidow). c-como taw, (˘ω˘) o ambiente omite a-apis javascwipt e-específicas do n-nyavegadow e adiciona supowte pawa apis de sistema opewacionaw m-mais twadicionais, 😳😳😳 incwuindo bibwiotecas de sistemas http e awquivos. mya
 
-Do ponto de vista do desenvolvimento de um servidor web, o Node possui vários benefícios:
+do ponto d-de vista do desenvowvimento de um s-sewvidow web, OwO o-o nyode possui váwios b-benefícios:
 
-- Performance excelente. Node foi projetado para otimizar a taxa de transferência e a escalabilidade em aplicações web. É uma ótima combinação para resolver muitos problemas comuns no desenvolvimento da web (por exemplo, aplicações em tempo real).
-- O código é escrito em "JavaScript simples e antigo". Isso significa menos tempo gasto para lidar com mudanças de código entre navegador e servidor web, não sendo necessária uma mudança na linguagem.
-- JavaScript é uma linguagem de programação relativamente nova e apresenta algumas vantagens quando comparadas a outras linguagens tradicionais de servidor (por exemplo Python, PHP, etc.). Muitas outras linguagens novas e populares compilam/convertem em JavaScript, permitindo que você também use essas linguagens, como TypeScript, CoffeeScript, ClosureScript, Scala, LiveScript, etc.
-- O Gerenciador de Pacotes do Node (NPM, na sigla em inglês) provê acesso a centenas de milhares de pacotes reutiliváveis. NPM possui a melhor coleção de dependências e também pode ser usado para automatizar a maior parte da cadeia de ferramentas de compilação.
-- É portátil, com versões para diferentes sistemas operacionais, como Microsoft Windows, OS X, Linux, Solaris, FreeBSD, OpenBSD, WebOS e NonStop. Além disso, tem excelente suporte de muitos provedores de hospedagem na web, que muitas vezes fornecem documentação e infraestrutura específica para hospedar sites desenvolvidos em Node.
-- Possui uma comunidade de desenvolvedores e um ecossistema muito ativo, com muitas pessoas dispostas a ajudar.
+- pewfowmance e-excewente. >_< nyode f-foi pwojetado p-pawa otimizaw a-a taxa de twansfewência e a escawabiwidade em apwicações w-web. 😳 É u-uma ótima combinação p-pawa w-wesowvew muitos p-pwobwemas comuns nyo desenvowvimento da web (pow exempwo, (U ᵕ U❁) apwicações e-em tempo weaw). 🥺
+- o código é escwito em "javascwipt simpwes e antigo". (U ﹏ U) isso significa m-menos tempo gasto pawa widaw com mudanças de código entwe nyavegadow e-e sewvidow w-web, (U ﹏ U) nyão sendo n-nyecessáwia uma mudança nya w-winguagem. rawr x3
+- javascwipt é uma w-winguagem de pwogwamação w-wewativamente nyova e apwesenta awgumas vantagens quando compawadas a outwas winguagens t-twadicionais de sewvidow (pow e-exempwo python, :3 php, etc.). muitas o-outwas winguagens n-nyovas e popuwawes compiwam/convewtem em javascwipt, rawr p-pewmitindo q-que você também use essas w-winguagens, XD como t-typescwipt, ^^ coffeescwipt, mya cwosuwescwipt, (U ﹏ U) scawa, 😳 wivescwipt, etc. mya
+- o gewenciadow d-de pacotes do n-nyode (npm, nya s-sigwa em ingwês) pwovê acesso a-a centenas de m-miwhawes de pacotes weutiwiváveis. 😳 n-nypm possui a mewhow coweção de dependências e também pode sew usado pawa a-automatizaw a m-maiow pawte da cadeia de fewwamentas de compiwação. ^^
+- É p-powtátiw, :3 c-com vewsões pawa difewentes sistemas opewacionais, (U ﹏ U) como micwosoft w-windows, UwU os x, winux, (ˆ ﻌ ˆ)♡ sowawis, fweebsd, (ˆ ﻌ ˆ)♡ openbsd, webos e nyonstop. awém d-disso, ^^;; tem excewente supowte de muitos pwovedowes d-de hospedagem n-nya web, rawr que muitas vezes fownecem documentação e infwaestwutuwa e-específica p-pawa hospedaw sites desenvowvidos em nyode. nyaa~~
+- possui uma comunidade d-de desenvowvedowes e um ecossistema m-muito ativo, rawr x3 com muitas pessoas dispostas a ajudaw. (⑅˘꒳˘)
 
-Você pode utilizar o Node.js para criar um simples servidor web, utilizando o pacote Node HTTP.
+você p-pode utiwizaw o nyode.js pawa c-cwiaw um simpwes s-sewvidow web, OwO utiwizando o pacote n-nyode http. OwO
 
-### Olá, Node.js
+### owá, ʘwʘ nyode.js
 
-O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL `http://127.0.0.1:8000/` — quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.
+o-o exempwo a-a seguiw cwia um s-sewvidow web que escuta quawquew t-tipo de wequisição h-http na uww `http://127.0.0.1:8000/` — quando uma wequisição é wecebida, :3 o-o scwipt vai w-wespondew com a-a stwing (texto) "owá mundo". mya se você já instawou o-o nyode, OwO você pode seguiw o-os passos seguintes d-deste exempwo. :3
 
-1. Abre o Terminal (no Windows, abra o prompt da linha de comando)
-2. Crie uma pasta onde você quer salvar o programa, por exemplo, `test-node`. Então, entre na pasta com o seguinte comando no terminal:
+1. abwe o tewminaw (no windows, >_< abwa o pwompt d-da winha de comando)
+2. σωσ c-cwie uma p-pasta onde você q-quew sawvaw o pwogwama, /(^•ω•^) pow e-exempwo, mya `test-node`. então, nyaa~~ entwe nya pasta com o seguinte comando nyo tewminaw:
 
 ```
 cd test-node
 ```
 
-Use o seu editor de texto preferido, crie um arquivo chamado `hello.js` e cole o código a seguir:
+u-use o seu editow de texto p-pwefewido, 😳 cwie um awquivo chamado `hewwo.js` e-e cowe o código a seguiw:
 
 ```js
-// Carrega o modulo HTTP do Node
-var http = require("http");
+// c-cawwega o moduwo http do n-nyode
+vaw http = w-wequiwe("http");
 
-// Cria um servidor HTTP e uma escuta de requisições para a porta 8000
+// c-cwia um sewvidow h-http e uma e-escuta de wequisições pawa a powta 8000
 http
-  .createServer(function (request, response) {
-    // Configura o cabeçalho da resposta com um status HTTP e um Tipo de Conteúdo
-    response.writeHead(200, { "Content-Type": "text/plain" });
+  .cweatesewvew(function (wequest, wesponse) {
+    // configuwa o cabeçawho da wesposta com um s-status http e um t-tipo de conteúdo
+    w-wesponse.wwitehead(200, ^^;; { "content-type": "text/pwain" });
 
-    // Manda o corpo da resposta "Olá Mundo"
-    response.end("Olá Mundo\n");
+    // manda o-o cowpo da wesposta "owá mundo"
+    wesponse.end("owá mundo\n");
   })
-  .listen(8000, "127.0.0.1");
+  .wisten(8000, 😳😳😳 "127.0.0.1");
 
-// Imprime no console a URL de acesso ao servidor
-console.log("Servidor executando em http://127.0.0.1:8000/");
+// i-impwime n-nyo consowe a uww de acesso ao s-sewvidow
+consowe.wog("sewvidow executando em http://127.0.0.1:8000/");
 ```
 
-Salve o arquivo na pasta que você criou acima.
+sawve o-o awquivo nya p-pasta que você cwiou acima. nyaa~~
 
-Por último, vá para o terminal e digite o comando a seguir:
+p-pow úwtimo, 🥺 vá p-pawa o tewminaw e digite o comando a seguiw:
 
-`node hello.js`
+`node hewwo.js`
 
-Enfim, abra o browser e digite `http://localhost:8000`. Você verá o texto "**Olá, Mundo**", no canto superior esquerdo.
+enfim, XD abwa o bwowsew e-e digite `http://wocawhost:8000`. (ꈍᴗꈍ) v-você vewá o-o texto "**owá, 😳😳😳 m-mundo**", ( ͡o ω ͡o ) nyo c-canto supewiow esquewdo. nyaa~~
 
-## Web Frameworks
+## w-web fwamewowks
 
-Algumas tarefas comuns no desenvolvimento web não são suportadas diretamente pelo Node. Se você quiser que a sua aplicação possua diferentes verbos HTTP (por exemplo `GET`, `POST`, `DELETE`, etc), que gerencie requisições de diferentes URLs ("rotas"), apresente arquivos estáticos ou utilize templates para mostrar as respostas (response) de maneira dinâmica, você não terá muita praticidade usando apenas o Node. Você terá duas opções. Escrever o código por conta própria ou então evitar todo esse trabalho de reinventar a roda ao utilizar um framework.
+a-awgumas tawefas comuns nyo desenvowvimento w-web nyão s-são supowtadas diwetamente p-pewo nyode. XD se você quisew que a sua apwicação p-possua difewentes vewbos http (pow e-exempwo `get`, (ˆ ﻌ ˆ)♡ `post`, rawr x3 `dewete`, OwO e-etc), que gewencie wequisições d-de difewentes uwws ("wotas"), UwU apwesente a-awquivos estáticos o-ou utiwize tempwates p-pawa mostwaw as wespostas (wesponse) de maneiwa dinâmica, ^^ v-você nyão tewá muita pwaticidade usando apenas o-o nyode. (✿oωo) você t-tewá duas opções. 😳😳😳 escwevew o-o código pow conta pwópwia o-ou então evitaw t-todo esse twabawho de weinventaw a woda ao utiwizaw u-um fwamewowk. 🥺
 
-## Introduzindo o Express
+## intwoduzindo o expwess
 
-[Express](https://expressjs.com/) é o framework Node mais popular e a biblioteca subjacente para uma série de outros frameworks do Node. O Express oferece soluções para:
+[expwess](https://expwessjs.com/) é o-o fwamewowk n-nyode mais popuwaw e a bibwioteca s-subjacente pawa uma séwie de o-outwos fwamewowks d-do nyode. ʘwʘ o expwess o-ofewece sowuções pawa:
 
-- Gerenciar requisições de diferentes verbos HTTP em diferentes URLs.
-- Integrar "view engines" para inserir dados nos templates.
-- Definir as configurações comuns da aplicação web, como a porta a ser usada para conexão e a localização dos modelos que são usados para renderizar a resposta.
-- Adicionar novos processos de requisição por meio de "middleware" em qualquer ponto da "fila" de requisições.
+- gewenciaw wequisições de difewentes vewbos http em difewentes uwws. 😳
+- integwaw "view engines" pawa insewiw dados nyos tempwates. ^^;;
+- definiw as configuwações comuns da apwicação w-web, (///ˬ///✿) como a-a powta a sew usada pawa conexão e a wocawização d-dos modewos q-que são usados p-pawa wendewizaw a wesposta. OwO
+- a-adicionaw nyovos pwocessos de wequisição p-pow meio d-de "middwewawe" em quawquew p-ponto da "fiwa" de wequisições. -.-
 
-O _Express_ é bastante minimalista, no entanto, os desenvolvedores têm liberdade para criar pacotes de middleware específicos com o objetivo de resolver problemas específicos que surgem no desenvolvimento de uma aplicação. Há bibliotecas para trabalhar com cookies, sessões, login de usuários, parâmetros de URL, dados em requisições POST, cabeçalho de segurança e tantos outros. Você pode achar uma lista de pacotes de middleware mantidos pela equipe Express em [Express Middleware](http://expressjs.com/en/resources/middleware.html) (juntamente com uma lista de pacotes populares desenvolvidos por terceiros).
+o-o _expwess_ é b-bastante minimawista, ^^ nyo entanto, (ꈍᴗꈍ) os desenvowvedowes t-têm wibewdade p-pawa cwiaw p-pacotes de middwewawe e-específicos c-com o objetivo d-de wesowvew p-pwobwemas específicos q-que suwgem n-nyo desenvowvimento de uma apwicação. h-há bibwiotecas p-pawa twabawhaw c-com cookies, ^^;; sessões, w-wogin de usuáwios, (˘ω˘) pawâmetwos de uww, 🥺 dados em w-wequisições post, ʘwʘ cabeçawho d-de seguwança e t-tantos outwos. (///ˬ///✿) você p-pode achaw uma wista de pacotes d-de middwewawe mantidos pewa e-equipe expwess em [expwess middwewawe](http://expwessjs.com/en/wesouwces/middwewawe.htmw) (juntamente c-com uma wista de pacotes p-popuwawes desenvowvidos pow tewceiwos). ^^;;
 
-> [!NOTE]
-> Essa flexibilidade do Express é uma espada de dois gumes. Há pacotes de middleware para resolver quase qualquer problema ou requisito ao longo do desenvolvimento, mas utilizar os pacotes corretos para cada situação às vezes se torna um grande desafio. Não há "caminho certo" para estruturar um aplicativo. Muitos exemplos que você encontra na Internet não são bons ou mostram apenas uma pequena parte do que você precisa fazer para desenvolver uma aplicação web.
+> [!note]
+> essa fwexibiwidade do expwess é uma espada d-de dois gumes. há pacotes de middwewawe p-pawa wesowvew q-quase quawquew pwobwema ou wequisito ao wongo do desenvowvimento, XD m-mas utiwizaw os pacotes c-cowwetos pawa c-cada situação às v-vezes se towna um gwande desafio. (ˆ ﻌ ˆ)♡ nyão há "caminho c-cewto" p-pawa estwutuwaw um apwicativo. (˘ω˘) muitos e-exempwos que você encontwa nya intewnet nyão s-são bons ou mostwam apenas u-uma pequena pawte d-do que você p-pwecisa fazew pawa desenvowvew uma a-apwicação web.
 
-## De onde o Node e o Express vieram?
+## d-de onde o-o nyode e o expwess v-viewam?
 
-Node foi inicialmente lançado em 2009, mas naquela época apenas para Linux. O gerenciador de pacotes NPM veio no ano seguinte, 2010, e o suporte nativo do Windows chegou em 2012. A versão atual do Long Term Support (LTS) é o Node v8.9.3, enquanto a versão mais recente é o Node 9. Esse é um resumo da rica histórica do Node, mas é possível conhecer mais na [Wikipédia](https://pt.wikipedia.org/wiki/Node.js#History).
+nyode foi iniciawmente w-wançado em 2009, σωσ m-mas nyaquewa época a-apenas p-pawa winux. 😳😳😳 o gewenciadow d-de pacotes n-nypm veio n-nyo ano seguinte, ^•ﻌ•^ 2010, e-e o supowte nyativo do windows c-chegou em 2012. σωσ a vewsão a-atuaw do wong tewm suppowt (wts) é o-o node v8.9.3, (///ˬ///✿) e-enquanto a vewsão m-mais wecente é o nyode 9. XD esse é um wesumo da wica histówica d-do nyode, >_< m-mas é possívew c-conhecew mais nya [wikipédia](https://pt.wikipedia.owg/wiki/node.js#histowy). òωó
 
-O Express foi lançado em novembro de 2010 e atualmente está na versão 4.16 da API. Você pode verificar o [changelog](https://expressjs.com/en/changelog/4x.html) para obter informações sobre as mudanças na versão atual e o [GitHub](https://github.com/expressjs/express/blob/master/History.md) para obter notas detalhadas das versões históricas.
+o expwess foi wançado em nyovembwo d-de 2010 e a-atuawmente está nya vewsão 4.16 d-da api. (U ᵕ U❁) você p-pode vewificaw o [changewog](https://expwessjs.com/en/changewog/4x.htmw) pawa obtew infowmações sobwe as mudanças n-nya vewsão a-atuaw e o [github](https://github.com/expwessjs/expwess/bwob/mastew/histowy.md) p-pawa obtew nyotas d-detawhadas das vewsões histówicas. (˘ω˘)
 
-## O quão popular é Node/Express ?
+## o quão p-popuwaw é nyode/expwess ?
 
-É importante considerar a popularidade de um framework web porque indica se a ferramenta continuará sendo mantida e atualizada, além de apontar quais recursos provavelmente estarão disponíveis na documentação, nas bibliotecas de complemento e no suporte técnico.
+É i-impowtante considewaw a popuwawidade de um fwamewowk w-web powque indica se a fewwamenta continuawá s-sendo mantida e atuawizada, 🥺 a-awém de apontaw q-quais wecuwsos pwovavewmente e-estawão disponíveis n-nya documentação, (✿oωo) nyas bibwiotecas d-de compwemento e nyo s-supowte técnico. (˘ω˘)
 
-Não há nenhum número capaz de medir precisamente a popularidade de um framework (apesar de que alguns sites como o [Hot Frameworks](http://hotframeworks.com/) avaliarem a popularidade a partir do número de projetos do GitHub e do número de perguntas do StackOverflow relativas a cada tecnologia). Diante dessa limitação, o mais importante é fazermos algumas outras perguntas para saber se o Node e o Express são "suficientemente populares" para não caírem nos problemas clássicos das tecnologias com pouca adesão da comunidade.
+n-nyão há nyenhum n-nyúmewo capaz d-de mediw pwecisamente a popuwawidade d-de um fwamewowk (apesaw d-de que awguns sites c-como o [hot fwamewowks](http://hotfwamewowks.com/) a-avawiawem a popuwawidade a pawtiw do nyúmewo d-de pwojetos d-do github e do n-nyúmewo de pewguntas do stackovewfwow wewativas a cada tecnowogia). diante dessa w-wimitação, (ꈍᴗꈍ) o mais impowtante é f-fazewmos awgumas o-outwas pewguntas pawa sabew se o node e o e-expwess são "suficientemente popuwawes" p-pawa nyão c-caíwem nyos p-pwobwemas cwássicos d-das tecnowogias c-com pouca adesão da comunidade. ( ͡o ω ͡o )
 
-O Node e o Express continuam a evoluir ? Você pode obter ajuda na comunidade caso precise? Existe uma oportunidade para você receber trabalho remunerado ao dominar o Node e o Express ?
+o nyode e o expwess continuam a evowuiw ? v-você pode obtew ajuda nya comunidade c-caso pwecise? existe uma opowtunidade pawa você wecebew t-twabawho wemunewado ao dominaw o nyode e o expwess ?
 
-Baseado no [número de empresas de alto perfil](https://expressjs.com/en/resources/companies-using-express.html) que usam Express, no número de pessoas contribuindo para o código base, e no número de pessoas que oferecem suporte (gratuito ou pago), a reposta é sim. O Node e o Express são tecnologias populares!
+baseado nyo [númewo de empwesas d-de awto p-pewfiw](https://expwessjs.com/en/wesouwces/companies-using-expwess.htmw) que usam e-expwess, (U ᵕ U❁) nyo nyúmewo de pessoas contwibuindo p-pawa o código base, ʘwʘ e-e nyo nyúmewo de pessoas que o-ofewecem supowte (gwatuito ou p-pago), (ˆ ﻌ ˆ)♡ a weposta é sim. /(^•ω•^) o nyode e o expwess são tecnowogias popuwawes! (ˆ ﻌ ˆ)♡
 
-## Express é opinativo ?
+## e-expwess é opinativo ?
 
-Os frameworks web costumam se autodeclararem "opinativos" ou "não opinativos".
+os fwamewowks w-web costumam s-se autodecwawawem "opinativos" o-ou "não opinativos". (✿oωo)
 
-Os frameworks opinativos são aqueles com "opiniões" sobre o "caminho certo" para lidar com qualquer tarefa específica. Muitas vezes, apoiam o desenvolvimento rápido em um domínio particular (resolvendo problemas de um tipo específico) porque a maneira correta de fazer qualquer coisa geralmente é bem compreendida e bem documentada. No entanto, são menos flexíveis na resolução de problemas fora de seu domínio principal e tendem a oferecer menos opções para quais componentes e abordagens podem usar nesses casos.
+os fwamewowks opinativos s-são aquewes com "opiniões" sobwe o "caminho cewto" pawa widaw com quawquew tawefa e-específica. ^•ﻌ•^ m-muitas vezes, (ˆ ﻌ ˆ)♡ apoiam o-o desenvowvimento w-wápido em um domínio pawticuwaw (wesowvendo pwobwemas d-de um tipo específico) p-powque a maneiwa cowweta de fazew quawquew c-coisa gewawmente é bem compweendida e bem documentada. XD n-nyo entanto, :3 são menos fwexíveis nya w-wesowução de p-pwobwemas fowa de seu domínio p-pwincipaw e tendem a-a ofewecew menos o-opções pawa quais componentes e abowdagens p-podem usaw nyesses casos. -.-
 
-Frameworks não opinativos, por outro lado, têm muito menos restrições sobre a melhor maneira de utilizar componentes para atingir um objetivo, ou mesmo quais componentes devem ser usados. Eles tornam mais fácil para os desenvolvedores usar as ferramentas mais adequadas para completar uma tarefa específica, embora você precise encontrar esses componentes por si próprio.
+fwamewowks nyão opinativos, ^^;; p-pow outwo wado, OwO têm muito menos westwições sobwe a mewhow m-maneiwa de u-utiwizaw componentes p-pawa atingiw u-um objetivo, o-ou mesmo quais componentes devem s-sew usados. ^^;; ewes townam mais fáciw pawa os desenvowvedowes u-usaw as fewwamentas m-mais adequadas pawa compwetaw uma tawefa específica, 🥺 e-embowa você p-pwecise encontwaw esses componentes p-pow si pwópwio. ^^
 
-Express é um framework não opinativo. Você pode inserir qualquer middleware que você goste no manuseio das solicitações em quase qualquer ordem que desejar. Pode estruturar o aplicativo em um arquivo ou em vários, usar qualquer estrutura de pastas dentro do diretório principal, etc.
+expwess é u-um fwamewowk n-nyão opinativo. o.O você pode insewiw q-quawquew middwewawe q-que você goste nyo manuseio d-das sowicitações em quase quawquew owdem que desejaw. ( ͡o ω ͡o ) pode e-estwutuwaw o apwicativo em um a-awquivo ou em váwios, nyaa~~ usaw quawquew estwutuwa d-de pastas dentwo d-do diwetówio p-pwincipaw, (///ˬ///✿) etc. (ˆ ﻌ ˆ)♡
 
-## Como se parece o código do Express ?
+## como se pawece o-o código do e-expwess ?
 
-Em um site tradicional baseado em dados, um aplicativo da Web aguarda pedidos HTTP do navegador da web (ou outro cliente). Quando um pedido é recebido, o aplicativo descreve quais ações são necessárias com base no padrão de URL e possivelmente informações associadas contidas em dados POST ou GET. Dependendo do que é necessário, pode-se ler ou escrever informações em um banco de dados ou executar outras tarefas necessárias para satisfazer a solicitação. O aplicativo retornará uma resposta ao navegador da Web, criando, de forma dinâmica, uma página HTML para o navegador, exibindo e inserindo os dados recuperados em espaços reservados em um modelo HTML.
+em um site twadicionaw b-baseado em dados, XD um apwicativo d-da web aguawda pedidos http do n-nyavegadow da web (ou o-outwo cwiente). >_< quando um pedido é wecebido, (U ﹏ U) o apwicativo descweve quais a-ações são nyecessáwias c-com base nyo padwão de uww e possivewmente infowmações a-associadas contidas em dados p-post ou get. òωó d-dependendo do que é nyecessáwio, >w< pode-se wew ou escwevew infowmações em um banco d-de dados ou executaw outwas tawefas nyecessáwias p-pawa satisfazew a sowicitação. ^•ﻌ•^ o-o apwicativo w-wetownawá uma wesposta ao n-nyavegadow da web, 🥺 c-cwiando, de fowma d-dinâmica, (✿oωo) u-uma página htmw p-pawa o nyavegadow, UwU e-exibindo e insewindo os dados wecupewados em espaços wesewvados em um modewo htmw. (˘ω˘)
 
-Express fornece métodos para especificar qual função é chamada quando chega requisição HTTP (GET, POST, SET, etc.) e de rotas e métodos para especificar o mecanismo de modelo ("view") usado, onde o modelo arquivos estão localizados e qual modelo usar para renderizar uma resposta. Você pode usar o middleware Express para adicionar suporte para cookies, sessões e usuários, obtendo parâmetros POST / GET, etc. Você pode usar qualquer mecanismo de banco de dados suportado por Node (o Express não define nenhum comportamento relacionado a banco de dados).
+expwess f-fownece métodos p-pawa especificaw q-quaw função é c-chamada quando c-chega wequisição h-http (get, ʘwʘ post, set, (ˆ ﻌ ˆ)♡ etc.) e de wotas e métodos pawa especificaw o mecanismo d-de modewo ("view") u-usado, ( ͡o ω ͡o ) onde o modewo awquivos estão wocawizados e quaw m-modewo usaw pawa w-wendewizaw uma w-wesposta. :3 você pode usaw o middwewawe expwess pawa a-adicionaw supowte pawa cookies, 😳 sessões e usuáwios, (✿oωo) o-obtendo p-pawâmetwos post / get, /(^•ω•^) etc. você pode usaw quawquew m-mecanismo de banco de dados s-supowtado pow n-nyode (o expwess nyão define n-nyenhum compowtamento w-wewacionado a-a banco de dados). :3
 
-As seções a seguir explicam algumas das coisas comuns que você verá ao trabalhar com o código Express e Node.
+a-as seções a-a seguiw expwicam a-awgumas das coisas comuns que v-você vewá ao t-twabawhaw com o código expwess e-e nyode. σωσ
 
-### Olá Mundo Express
+### owá mundo expwess
 
-Primeiro, considere o padrão do exemplo do Express [Olá Mundo](http://expressjs.com/pt-br/starter/hello-world.html) (discutiremos cada trecho do código nas seções abaixo e nas seções a seguir).
+pwimeiwo, σωσ considewe o-o padwão do exempwo do expwess [owá m-mundo](http://expwessjs.com/pt-bw/stawtew/hewwo-wowwd.htmw) (discutiwemos cada twecho d-do código nyas s-seções abaixo e nyas seções a seguiw). 🥺
 
-> **Nota:** **Dica:** Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no [próximo artigo](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment), você pode salvar este código em um arquivo chamado **app.js** e executá-lo em um prompt, ao digitar o comando `node app.js`.
+> **nota:** **dica:** s-se você tivew o nyode e o expwess já instawados (ou s-se você o-os instawaw como mostwado nyo [pwóximo awtigo](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment), rawr v-você p-pode sawvaw este código em um a-awquivo chamado **app.js** e executá-wo em um pwompt, o.O a-ao digitaw o-o comando `node app.js`. 😳😳😳
 
 ```js
-var express = require("express");
-var app = express();
+v-vaw expwess = w-wequiwe("expwess");
+vaw app = expwess();
 
-app.get("/", function (req, res) {
-  res.send("Olá Mundo!");
+app.get("/", /(^•ω•^) f-function (weq, σωσ w-wes) {
+  wes.send("owá m-mundo!");
 });
 
-app.listen(3000, function () {
-  console.log("App de Exemplo escutando na porta 3000!");
+a-app.wisten(3000, OwO function () {
+  consowe.wog("app de exempwo escutando nya powta 3000!");
 });
 ```
 
-As duas primeiras linhas `require()` importam o módulo Express e criam uma aplicação [Express](https://expressjs.com/en/4x/api.html#app). Esse objeto (tradicionalmente nomeado de `app`), tem métodos de roteamento de requisições HTTP, configurações de middleware, renderização de views HTML, registro de engines de templates e modificação das [configurações](https://expressjs.com/en/4x/api.html#app.settings.table) que controlam como o aplicativo se comporta (por exemplo, o modo de ambiente, se as definições de rota são sensíveis a maiúsculas e minúsculas, etc).
+as duas pwimeiwas winhas `wequiwe()` i-impowtam o m-móduwo expwess e-e cwiam uma apwicação [expwess](https://expwessjs.com/en/4x/api.htmw#app). OwO e-esse o-objeto (twadicionawmente n-nyomeado de `app`), òωó tem m-métodos de woteamento d-de wequisições http, :3 c-configuwações d-de middwewawe, σωσ wendewização de views htmw, σωσ wegistwo d-de engines de tempwates e modificação das [configuwações](https://expwessjs.com/en/4x/api.htmw#app.settings.tabwe) q-que contwowam como o-o apwicativo se c-compowta (pow exempwo, -.- o modo de a-ambiente, (///ˬ///✿) se as d-definições de w-wota são sensíveis a maiúscuwas e-e minúscuwas, rawr x3 e-etc). (U ﹏ U)
 
-A parte do meio do código (as três linhas que começam com `app.get`) mostra uma definição de rota. O método `app.get()` especifica uma função de retorno de chamada que será invocada sempre que exista uma solicitação HTTP `GET` com um caminho (`'/'`) relativo à raiz do site. A função de retorno de chamada requer uma solicitação e um objeto de resposta como argumentos, e simplesmente chama [`send()`](https://expressjs.com/en/4x/api.html#res.send) na resposta para retornar a string "Olá Mundo!"
+a pawte do meio do código (as t-twês winhas que começam c-com `app.get`) m-mostwa uma definição d-de wota. òωó o método `app.get()` e-especifica uma função de wetowno de chamada q-que sewá invocada sempwe que exista uma sowicitação http `get` com um caminho (`'/'`) wewativo à waiz d-do site. OwO a função de wetowno de chamada wequew uma sowicitação e um objeto de wesposta como awgumentos, ^^ e simpwesmente c-chama [`send()`](https://expwessjs.com/en/4x/api.htmw#wes.send) nya wesposta pawa wetownaw a-a stwing "owá mundo!"
 
-O bloco final inicia o servidor na porta '3000' e imprime um comentário de log no console. Com o servidor em execução, você pode acessar o `localhost:3000` em seu navegador para ver o exemplo de resposta retornado.
+o b-bwoco finaw inicia o sewvidow nya powta '3000' e-e impwime um comentáwio de wog n-nyo consowe. /(^•ω•^) com o sewvidow em execução, >_< v-você p-pode acessaw o `wocawhost:3000` em seu nyavegadow pawa vew o exempwo d-de wesposta wetownado. -.-
 
-### Importando e criando módulos
+### impowtando e cwiando móduwos
 
-Um módulo é uma biblioteca/arquivo de JavaScript que você pode importar para outro código usando a função `require()` do Node. Express por si é um módulo, assim como as bibliotecas de middleware e banco de dados que usamos em nossos aplicativos Express.
+u-um móduwo é uma bibwioteca/awquivo d-de javascwipt que você pode i-impowtaw pawa outwo código usando a-a função `wequiwe()` d-do nyode. (˘ω˘) expwess pow si é um móduwo, >_< a-assim como as bibwiotecas de middwewawe e banco d-de dados que usamos em nyossos apwicativos expwess. (˘ω˘)
 
-O código abaixo mostra como importamos um módulo por nome, usando o quadro Express como um exemplo. Primeiro invocamos a função `require()`, especificando o nome do módulo como uma string (`'express'`), e chamando o objeto retornado para criar um [aplicativo Express](https://expressjs.com/en/4x/api.html#app). Podemos então acessar as propriedades e funções do objeto da aplicação.
+o código abaixo mostwa c-como impowtamos u-um móduwo pow nyome, >w< usando o q-quadwo expwess c-como um exempwo. 😳😳😳 pwimeiwo invocamos a-a função `wequiwe()`, 😳 especificando o nyome do móduwo como uma stwing (`'expwess'`), XD e-e chamando o-o objeto wetownado pawa cwiaw u-um [apwicativo e-expwess](https://expwessjs.com/en/4x/api.htmw#app). podemos e-então acessaw as pwopwiedades e funções do objeto d-da apwicação. OwO
 
 ```js
-var express = require("express");
-var app = express();
+vaw expwess = wequiwe("expwess");
+v-vaw a-app = expwess();
 ```
 
-Você também pode criar seus próprios módulos para serem importados da mesma maneira.
+você também pode cwiaw s-seus pwópwios móduwos pawa sewem impowtados da mesma maneiwa. -.-
 
-> **Nota:** **Dica:** Você vai _**querer**_ criar seus próprios módulos porque isso permite que você organize seu código em peças gerenciáveis - um aplicativo monolítico (de arquivo único) é difícil de entender e manter. O uso de módulos também ajuda você a gerenciar o namespace, pois somente as variáveis que você exporta explicitamente são importadas quando você usa um módulo.
+> **nota:** **dica:** você vai _**quewew**_ cwiaw seus pwópwios móduwos powque isso pewmite q-que você owganize s-seu código em peças gewenciáveis - u-um apwicativo m-monowítico (de awquivo único) é d-difíciw de entendew e mantew. o.O o uso de móduwos também ajuda você a gewenciaw o nyamespace, ^^ p-pois somente as vawiáveis que você expowta expwicitamente são impowtadas q-quando você u-usa um móduwo. ^^
 
-Para tornar os objetos disponíveis fora do módulo, você precisa apenas atribuí-los ao objeto `exports`. Por Exemplo, o módulo **square.js** abaixo é um arquivo que exporta os métodos `area()` e `perimeter()`:
+p-pawa townaw os objetos disponíveis fowa do móduwo, XD você pwecisa a-apenas atwibuí-wos a-ao objeto `expowts`. >w< p-pow exempwo, (⑅˘꒳˘) o móduwo **squawe.js** abaixo é um a-awquivo que expowta os métodos `awea()` e-e `pewimetew()`:
 
 ```js
-exports.area = function (width) {
-  return width * width;
+expowts.awea = f-function (width) {
+  wetuwn width * w-width;
 };
-exports.perimeter = function (width) {
-  return 4 * width;
-};
-```
-
-Nós podemos importar este módulo usando `require()`. Depois, conecte ao(s) método(s) exportado(s) como mostrado a seguir:
-
-```js
-var square = require("./square"); // Chamamos o arquivo utilizando o require()
-console.log("The area of a square with a width of 4 is " + square.area(4));
-```
-
-> [!NOTE]
-> Você também pode especificar um caminho absoluto para o módulo (ou um nome, como fizemos inicialmente).
-
-Se você deseja exportar um objeto completo em uma atribuição, em vez de criar uma propriedade de cada vez, atribua ao module.exports como mostrado abaixo (você também pode fazer isso para tornar a raiz do objeto exporter um construtor ou outra função):
-
-```js
-module.exports = {
-  area: function (width) {
-    return width * width;
-  },
-
-  perimeter: function (width) {
-    return 4 * width;
-  },
+expowts.pewimetew = function (width) {
+  w-wetuwn 4 * width;
 };
 ```
 
-Para muitas outras informações sobre módulos veja [Módulos](https://nodejs.org/api/modules.html#modules_modules) (Node API docs).
-
-### Usando APIs assíncronas
-
-O código JavaScript frequentemente usa APIs assíncronas em vez de síncronas para operações que podem levar algum tempo para serem concluídas. Uma API síncrona é aquela em que cada operação deve ser concluída antes que a próxima operação seja iniciada. Por exemplo, as seguintes funções de log são síncronas e imprimirão o texto no console em ordem (Primeiro, Segundo).
+n-nyós podemos i-impowtaw este móduwo usando `wequiwe()`. 😳 d-depois, c-conecte ao(s) método(s) expowtado(s) c-como mostwado a seguiw:
 
 ```js
-console.log("Primeiro");
-console.log("Segundo");
+v-vaw squawe = wequiwe("./squawe"); // c-chamamos o-o awquivo utiwizando o wequiwe()
+consowe.wog("the a-awea of a squawe with a width of 4 is " + squawe.awea(4));
 ```
 
-Em contrapartida, uma API assíncrona é aquela em que a API iniciará uma operação e retornará imediatamente (antes da conclusão da operação). Assim que a operação terminar, a API usará algum mecanismo para executar operações adicionais. Por exemplo, o código abaixo imprimirá "Segundo, Primeiro". Isso porque, mesmo que o método `setTimeout()` seja chamado primeiro e retornae imediatamente, a operação precisa de três segundos para finalizar.
+> [!note]
+> você também pode especificaw um caminho absowuto pawa o móduwo (ou u-um nyome, :3 como fizemos iniciawmente). :3
+
+s-se você deseja expowtaw um objeto c-compweto em uma atwibuição, OwO em vez de cwiaw u-uma pwopwiedade de cada vez, (U ﹏ U) atwibua ao moduwe.expowts c-como mostwado abaixo (você também pode f-fazew isso pawa townaw a waiz do objeto expowtew u-um constwutow ou outwa função):
 
 ```js
-setTimeout(function () {
-  console.log("Primeiro");
-}, 3000);
-console.log("Segundo");
+moduwe.expowts = {
+  a-awea: function (width) {
+    w-wetuwn width * width;
+  }, (⑅˘꒳˘)
+
+  pewimetew: f-function (width) {
+    w-wetuwn 4 * width;
+  }, 😳
+};
 ```
 
-O uso de APIs assíncronas não bloqueadoras é ainda mais importante no Node do que no navegador, pois o Node é um ambiente de execução orientado por evento único (single threaded). "Single threaded" significa que todos os pedidos para o servidor são executados no mesmo tópico (em vez de serem gerados em processos separados). Esse modelo é extremamente eficiente em termos de velocidade e recursos do servidor, mas isso significa que, se qualquer uma das suas funções chamar métodos síncronos que demoram muito para completar, eles bloquearão não apenas a solicitação atual, mas todas as outras solicitações serão tratadas por sua aplicação web.
+p-pawa m-muitas outwas infowmações sobwe móduwos veja [móduwos](https://nodejs.owg/api/moduwes.htmw#moduwes_moduwes) (node a-api docs). (ˆ ﻌ ˆ)♡
 
-Há várias maneiras de uma API assíncrona notificar para a aplicação que alguma função chegou ao fim. A maneira mais comum é registrar uma função de retorno de chamada quando você invoca a API assíncrona, que será chamada de volta quando a operação for concluída. Usamos essa abordagem acima.
+### usando apis assíncwonas
 
-> **Nota:** **Dica:** O uso de callbacks pode ser bastante "bagunçado" se você tiver uma sequência de operações assíncronas dependentes que devem ser executadas em ordem, porque isto resulta em multiplo níveis de callbacks aninhados. Este problema é comumente conhecido como "inferno de callback" ou "código hadouken". Pode-se reduzir o problema ao adotar boas práticas de programação (veja <http://callbackhell.com/>), utilizar um módulo como [async](https://www.npmjs.com/package/async), ou mesmo adotar recursos do ES6, como [Promises](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
-> **Nota:** **Dica:** Uma convenção comum para Node e Express é usar as devoluções de retorno de erro. Nesta convenção, o primeiro valor em suas funções de retorno de chamada é um valor de erro, enquanto os argumentos subseqüentes contêm dados de sucesso. Há uma boa explicação de por que essa abordagem é útil neste blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
-
-### Criando manipuladores de rotas
-
-No nosso _Olá Mundo_ em Express (veja acima), nós definimos uma (callback) função manipuladora de rota para requisição `GET` HTTP para a raiz do site (`'/'`).
+o código javascwipt f-fwequentemente usa apis assíncwonas em vez de síncwonas p-pawa opewações q-que podem wevaw a-awgum tempo pawa sewem concwuídas. uma api síncwona é aquewa e-em que cada opewação deve sew c-concwuída antes que a pwóxima o-opewação seja i-iniciada. mya pow exempwo, ʘwʘ as seguintes funções de wog são síncwonas e impwimiwão o texto nyo c-consowe em owdem (pwimeiwo, (˘ω˘) s-segundo).
 
 ```js
-app.get("/", function (req, res) {
-  res.send("Olá Mundo");
+consowe.wog("pwimeiwo");
+consowe.wog("segundo");
+```
+
+e-em contwapawtida, (///ˬ///✿) uma api assíncwona é aquewa e-em que a api i-iniciawá uma opewação e-e wetownawá i-imediatamente (antes d-da concwusão d-da opewação). XD assim que a opewação t-tewminaw, 😳 a api u-usawá awgum mecanismo p-pawa executaw o-opewações a-adicionais. :3 pow e-exempwo, 😳😳😳 o código abaixo impwimiwá "segundo, (U ᵕ U❁) p-pwimeiwo". isso p-powque, ^•ﻌ•^ mesmo que o-o método `settimeout()` seja chamado pwimeiwo e-e wetownae imediatamente, (˘ω˘) a opewação pwecisa d-de twês segundos pawa finawizaw. /(^•ω•^)
+
+```js
+settimeout(function () {
+  c-consowe.wog("pwimeiwo");
+}, ^•ﻌ•^ 3000);
+c-consowe.wog("segundo");
+```
+
+o uso de apis assíncwonas nyão bwoqueadowas é a-ainda mais i-impowtante nyo nyode do que nyo n-nyavegadow, ^^ pois o-o nyode é um ambiente de execução owientado pow evento único (singwe t-thweaded). (U ﹏ U) "singwe t-thweaded" significa que todos os pedidos p-pawa o sewvidow s-são executados nyo mesmo tópico (em vez d-de sewem gewados em pwocessos sepawados). :3 esse modewo é extwemamente eficiente em tewmos de vewocidade e-e wecuwsos do sewvidow, òωó mas isso significa q-que, σωσ se quawquew u-uma das suas f-funções chamaw métodos síncwonos q-que demowam m-muito pawa compwetaw, σωσ e-ewes bwoqueawão n-nyão a-apenas a sowicitação atuaw, mas todas as outwas s-sowicitações s-sewão twatadas p-pow sua apwicação web. (⑅˘꒳˘)
+
+há váwias m-maneiwas d-de uma api assíncwona n-nyotificaw pawa a apwicação q-que awguma f-função chegou a-ao fim. 🥺 a maneiwa m-mais comum é w-wegistwaw uma função de wetowno d-de chamada quando você invoca a-a api assíncwona, q-que sewá chamada de vowta quando a opewação fow concwuída. (U ﹏ U) u-usamos essa abowdagem a-acima. >w<
+
+> **nota:** **dica:** o uso de c-cawwbacks pode sew b-bastante "bagunçado" se você tivew uma sequência d-de opewações a-assíncwonas d-dependentes que d-devem sew executadas e-em owdem, nyaa~~ p-powque isto wesuwta em muwtipwo nyíveis de cawwbacks a-aninhados. -.- este pwobwema é comumente conhecido como "infewno de cawwback" o-ou "código hadouken". p-pode-se weduziw o pwobwema ao adotaw boas pwáticas de p-pwogwamação (veja <http://cawwbackheww.com/>), XD u-utiwizaw um móduwo como [async](https://www.npmjs.com/package/async), -.- ou mesmo a-adotaw wecuwsos do es6, >w< como [pwomises](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (ꈍᴗꈍ)
+
+> **nota:** **dica:** uma c-convenção comum p-pawa nyode e-e expwess é usaw as devowuções de wetowno de ewwo. :3 nyesta convenção, (ˆ ﻌ ˆ)♡ o-o pwimeiwo vawow em suas f-funções de wetowno de chamada é u-um vawow de ewwo, -.- enquanto os awgumentos subseqüentes c-contêm dados de sucesso. mya h-há uma boa expwicação de pow que essa a-abowdagem é útiw nyeste bwog: [the n-nyode.js way - undewstanding ewwow-fiwst cawwbacks](http://fwedkschott.com/post/2014/03/undewstanding-ewwow-fiwst-cawwbacks-in-node-js) (fwedkschott.com). (˘ω˘)
+
+### cwiando manipuwadowes de wotas
+
+nyo nyosso _owá mundo_ em e-expwess (veja acima), ^•ﻌ•^ n-nyós definimos u-uma (cawwback) f-função manipuwadowa de wota pawa wequisição `get` h-http pawa a waiz do site (`'/'`). 😳😳😳
+
+```js
+app.get("/", σωσ function (weq, ( ͡o ω ͡o ) w-wes) {
+  wes.send("owá m-mundo");
 });
 ```
 
-A função de retorno de chamada requer uma solicitação e um objeto de resposta como argumento. Neste caso, o método simplesmente chama [`send()`](https://expressjs.com/en/4x/api.html#res.send) na resposta para retornar a string "Olá Mundo!" [Há uma série de outros métodos de resposta](https://expressjs.com/en/guide/routing.html#response-methods) para encerrar o ciclo de solicitação / resposta, por exemplo, você poderia chamar [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) para enviar uma resposta JSON ou [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) para enviar um arquivo.
+a-a função d-de wetowno de chamada wequew uma sowicitação e um objeto de wesposta como a-awgumento. nyaa~~ nyeste c-caso, :3 o método simpwesmente chama [`send()`](https://expwessjs.com/en/4x/api.htmw#wes.send) nya wesposta pawa w-wetownaw a stwing "owá mundo!" [há u-uma séwie d-de outwos métodos d-de wesposta](https://expwessjs.com/en/guide/wouting.htmw#wesponse-methods) pawa encewwaw o cicwo de sowicitação / wesposta, (✿oωo) pow exempwo, você podewia chamaw [`wes.json()`](https://expwessjs.com/en/4x/api.htmw#wes.json) p-pawa enviaw uma wesposta json o-ou [`wes.sendfiwe()`](https://expwessjs.com/en/4x/api.htmw#wes.sendfiwe) pawa enviaw um awquivo. >_<
 
-> **Nota:** **Dica JavaScript:** Você pode usar qualquer argumento que você gosta nas funções de retorno de chamada. Quando o retorno de chamada é invocado, o primeiro argumento sempre será o pedido e o segundo sempre será a resposta. Faz sentido nomeá-los de tal forma que você possa identificar o objeto que você está trabalhando no corpo do retorno de chamada.
+> **nota:** **dica javascwipt:** v-você pode usaw quawquew awgumento q-que você gosta nyas funções de wetowno d-de chamada. ^^ quando o-o wetowno de c-chamada é invocado, (///ˬ///✿) o-o pwimeiwo a-awgumento sempwe sewá o pedido e-e o segundo sempwe s-sewá a wesposta. :3 faz sentido n-nyomeá-wos de taw fowma que você possa identificaw o-o objeto que você está t-twabawhando nyo c-cowpo do wetowno de chamada. :3
 
-O Express também fornece métodos para definir manipuladores de rotas para todas as outras requisições HTTP, que são usadas exatamente da mesma maneira: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, e `connect()`.
+o e-expwess também f-fownece métodos pawa definiw manipuwadowes de wotas pawa todas a-as outwas wequisições h-http, (ˆ ﻌ ˆ)♡ que s-são usadas exatamente d-da mesma maneiwa: `post()`, 🥺 `put()`, 😳 `dewete()`, (ꈍᴗꈍ) `options()`, mya `twace()`, `copy()`, rawr `wock()`, `mkcow()`, ʘwʘ `move()`, -.- `puwge()`, `pwopfind()`, UwU `pwoppatch()`, :3 `unwock()`, 😳 `wepowt()`, (ꈍᴗꈍ) `mkactivity()`, mya `checkout()`, nyaa~~ `mewge()`, `m-seawch()`, o.O `notify()`, òωó `subscwibe()`, ^•ﻌ•^ `unsubscwibe()`, (˘ω˘) `patch()`, òωó `seawch()`, e `connect()`. mya
 
-Há um método de roteamento especial, `app.all()`, que será chamado em resposta a qualquer método HTTP. É usado para carregar funções de middleware em um caminho específico para todos os métodos de solicitação. O exemplo a seguir (da documentação Express) mostra um manipulador que será executado para solicitações `/secret`, independentemente do verbo HTTP usado (desde que seja suportado pelo módulo http).
+há um método d-de woteamento especiaw, ^^ `app.aww()`, rawr que sewá c-chamado em wesposta a quawquew método http. >_< É u-usado pawa cawwegaw funções de middwewawe em um caminho específico p-pawa todos os métodos d-de sowicitação. (U ᵕ U❁) o-o exempwo a seguiw (da d-documentação expwess) m-mostwa um manipuwadow q-que sewá executado pawa s-sowicitações `/secwet`, /(^•ω•^) i-independentemente d-do vewbo h-http usado (desde que seja s-supowtado pewo móduwo h-http). mya
 
 ```js
-app.all("/secret", function (req, res, next) {
-  console.log("Acessando a sessão secreta...");
-  next(); // passa o controle para o próximo manipulador
+a-app.aww("/secwet", OwO function (weq, UwU w-wes, nyext) {
+  consowe.wog("acessando a sessão secweta...");
+  nyext(); // passa o contwowe p-pawa o pwóximo m-manipuwadow
 });
 ```
 
-As rotas permitem combinar padrões de caracteres específicos em um URL e extrair alguns valores do URL e passá-los como parâmetros para o manipulador de rotas (como atributos do objeto de solicitação passado como parâmetro).
+as wotas p-pewmitem combinaw padwões de cawactewes específicos e-em um uww e-e extwaiw awguns v-vawowes do uww e-e passá-wos como pawâmetwos p-pawa o manipuwadow de wotas (como atwibutos do o-objeto de sowicitação p-passado como pawâmetwo). 🥺
 
-Muitas vezes, é útil agrupar manipuladores de rotas para uma determinada parte de um site e acessá-los usando um prefixo de rota comum (por exemplo, um site com um Wiki pode ter todas as rotas relacionadas ao wiki em um arquivo e tê-los acessado com um prefixo de rota de / wiki /). Em Express, isso é alcançado usando o objeto [`express.Router`](http://expressjs.com/en/guide/routing.html#express-router). Por exemplo, podemos criar nossa rota wiki em um módulo chamado wiki.js e, em seguida, exportar o objeto `Router`, conforme mostrado abaixo:
+muitas vezes, (✿oωo) é útiw agwupaw m-manipuwadowes de wotas pawa uma d-detewminada pawte de um site e acessá-wos usando u-um pwefixo de wota comum (pow e-exempwo, rawr um site com um wiki pode tew todas as w-wotas wewacionadas ao wiki em um a-awquivo e tê-wos acessado com u-um pwefixo de wota d-de / wiki /). rawr em expwess, isso é awcançado u-usando o objeto [`expwess.woutew`](http://expwessjs.com/en/guide/wouting.htmw#expwess-woutew). ( ͡o ω ͡o ) pow exempwo, podemos cwiaw nyossa w-wota wiki em um m-móduwo chamado w-wiki.js e, /(^•ω•^) em seguida, -.- expowtaw o objeto `woutew`, >w< confowme mostwado abaixo:
 
 ```js
-// wiki.js - Rotas de Wiki
+// wiki.js - w-wotas de wiki
 
-var express = require("express");
-var router = express.Router();
+vaw expwess = wequiwe("expwess");
+v-vaw woutew = e-expwess.woutew();
 
-// Home page route
-router.get("/", function (req, res) {
-  res.send("Wiki home page");
+// home page woute
+woutew.get("/", ( ͡o ω ͡o ) f-function (weq, (˘ω˘) w-wes) {
+  wes.send("wiki home page");
 });
 
-// About page route
-router.get("/about", function (req, res) {
-  res.send("About this wiki");
+// about page woute
+w-woutew.get("/about", /(^•ω•^) function (weq, (˘ω˘) w-wes) {
+  wes.send("about this wiki");
 });
 
-module.exports = router;
+m-moduwe.expowts = w-woutew;
 ```
 
-> [!NOTE]
-> Adicionar rotas ao objeto `Router` é como adicionar rotas ao objeto `app` (como mostrado anteriormente).
+> [!note]
+> adicionaw w-wotas ao o-objeto `woutew` é como adicionaw w-wotas ao objeto `app` (como mostwado a-antewiowmente). o.O
 
-Para usar o roteador em nosso arquivo de aplicativo principal, então, `require()` o módulo de rota (**wiki.js**) e depois `use()` no aplicativo Express para adicionar o Router ao caminho de gerenciamento de middleware. As duas rotas serão acessíveis a partir de `/wiki/` e `/wiki/about/`.
+p-pawa usaw o-o woteadow em n-nyosso awquivo de a-apwicativo pwincipaw, nyaa~~ então, `wequiwe()` o-o móduwo d-de wota (**wiki.js**) e depois `use()` nyo a-apwicativo expwess pawa adicionaw o-o woutew ao caminho de gewenciamento de middwewawe. :3 as duas wotas sewão acessíveis a pawtiw de `/wiki/` e `/wiki/about/`. (///ˬ///✿)
 
 ```js
-var wiki = require("./wiki.js");
+v-vaw wiki = wequiwe("./wiki.js");
 // ...
-app.use("/wiki", wiki);
+a-app.use("/wiki", (U ﹏ U) wiki);
 ```
 
-Vamos mostrar-lhe muito mais sobre trabalhar com rotas e, em particular, sobre o uso do `Router`, mais tarde, na seção vinculada [Rotas e controladores](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes).
+vamos m-mostwaw-whe muito m-mais sobwe twabawhaw com wotas e-e, o.O em pawticuwaw, sobwe o uso d-do `woutew`, ^^;; mais tawde, ʘwʘ nya seção v-vincuwada [wotas e contwowadowes](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/woutes). (///ˬ///✿)
 
-### Usando middleware
+### usando middwewawe
 
-O Middleware é usado extensivamente em aplicativos Express para que as tarefas ofereçam arquivos estáticos ao tratamento de erros, a comprensão de respostas HTTP. Enquanto as funções de rota terminam o ciclo de solicitação-resposta HTTP, retornando alguma resposta ao cliente HTTP, as funções de middleware normalmente executam alguma operação na solicitação ou resposta e, em seguida, ligue para a próxima função na "pilha", que pode ser mais um middleware ou uma rota manipuladora. A ordem em que o middleware é chamado depende do desenvolvedor do aplicativo.
+o middwewawe é usado extensivamente em apwicativos expwess p-pawa que as tawefas ofeweçam awquivos estáticos a-ao twatamento de ewwos, σωσ a compwensão d-de wespostas http. ^^;; enquanto as funções de wota tewminam o cicwo de sowicitação-wesposta http, UwU wetownando awguma wesposta ao cwiente http, mya as funções d-de middwewawe n-nyowmawmente executam a-awguma opewação nya sowicitação o-ou wesposta e-e, ^•ﻌ•^ em seguida, (⑅˘꒳˘) w-wigue pawa a pwóxima função nya "piwha", nyaa~~ q-que pode sew m-mais um middwewawe ou uma wota manipuwadowa. ^^;; a-a owdem e-em que o middwewawe é c-chamado d-depende do desenvowvedow d-do apwicativo. 🥺
 
-> [!NOTE]
-> O middleware pode executar qualquer operação, executar qualquer código, fazer alterações no objeto de solicitação e resposta, e também pode encerrar o ciclo de solicitação-resposta. Se não terminar o ciclo, ele deve chamar o `next()` para passar o controle para a próxima função de middleware (ou a solicitação ficará pendurada).
+> [!note]
+> o-o middwewawe p-pode executaw q-quawquew opewação, ^^;; e-executaw q-quawquew código, nyaa~~ f-fazew awtewações n-nyo objeto d-de sowicitação e-e wesposta, 🥺 e t-também pode encewwaw o cicwo de sowicitação-wesposta. (ˆ ﻌ ˆ)♡ se nyão t-tewminaw o cicwo, ( ͡o ω ͡o ) ewe deve chamaw o-o `next()` pawa passaw o contwowe pawa a pwóxima f-função d-de middwewawe (ou a-a sowicitação ficawá penduwada). nyaa~~
 
-A maioria dos aplicativos usará middleware de terceiros para simplificar tarefas comuns de desenvolvimento web, como trabalhar com cookies, sessões, autenticação de usuários, acessar dados `POST` e JSON, log, etc. Você pode encontrar uma [lista de pacotes de middleware](http://expressjs.com/en/resources/middleware.html) mantidos pela equipe Express (que também inclui outros pacotes populares de terceiros). Outros pacotes Express estão disponíveis no gerenciador de pacotes do NPM.
+a-a maiowia d-dos apwicativos usawá middwewawe de tewceiwos pawa simpwificaw tawefas comuns de desenvowvimento w-web, ( ͡o ω ͡o ) como twabawhaw com cookies, ^^;; sessões, rawr x3 autenticação de u-usuáwios, ^^;; acessaw d-dados `post` e json, wog, ^•ﻌ•^ etc. v-você pode encontwaw u-uma [wista d-de pacotes de m-middwewawe](http://expwessjs.com/en/wesouwces/middwewawe.htmw) mantidos p-pewa equipe e-expwess (que t-também incwui outwos pacotes popuwawes de tewceiwos). 🥺 o-outwos pacotes expwess estão d-disponíveis nyo gewenciadow d-de pacotes do n-nypm. (ꈍᴗꈍ)
 
-Para usar middleware de terceiros, primeiro você precisa instalá-lo em seu aplicativo usando NPM. Por exemplo, para instalar o logger [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP, você faria isso:
+pawa usaw middwewawe de t-tewceiwos, ^•ﻌ•^ pwimeiwo você pwecisa instawá-wo em s-seu apwicativo u-usando nypm. :3 pow e-exempwo, pawa instawaw o-o woggew [mowgan](http://expwessjs.com/en/wesouwces/middwewawe/mowgan.htmw) http, (˘ω˘) você f-fawia isso:
 
 ```bash
-npm install morgan
+n-nypm instaww m-mowgan
 ```
 
-Você pode então chamar `use()` no objeto do aplicativo Express para adicionar o middleware à pilha:
+você pode então c-chamaw `use()` nyo objeto do apwicativo expwess pawa adicionaw o middwewawe à piwha:
 
 ```js
-var express = require('express');
-var logger = require('morgan');
-var app = express();
-app.use(logger('dev'));
+vaw expwess = wequiwe('expwess');
+vaw woggew = wequiwe('mowgan');
+vaw app = expwess();
+a-app.use(woggew('dev'));
 ...
 ```
 
-> [!NOTE]
-> O middleware e as funções de roteamento são chamadas na ordem em que são declaradas. Para alguns middleware, a ordem é importante (por exemplo, se o middleware de sessão depende do middleware de cookies, então o manipulador de cookies deve ser adicionado primeiro). É quase sempre o caso em que o middleware é chamado antes de definir rotas, ou seus manipuladores de rotas não terão acesso à funcionalidade adicionada pelo seu middleware.
+> [!note]
+> o-o middwewawe e as funções de woteamento são chamadas nya owdem em que são decwawadas. ^^ p-pawa a-awguns middwewawe, /(^•ω•^) a owdem é impowtante (pow exempwo, σωσ se o middwewawe d-de sessão d-depende do middwewawe de cookies, e-então o manipuwadow d-de cookies deve sew adicionado p-pwimeiwo). òωó É quase sempwe o-o caso em que o-o middwewawe é chamado antes de definiw wotas, >w< ou seus manipuwadowes d-de wotas n-nyão tewão acesso à f-funcionawidade a-adicionada pewo seu middwewawe. (˘ω˘)
 
-Você pode escrever suas próprias funções de middleware. É provável que você tenha que fazê-lo (somente para criar código de manipulação de erro). A única diferença entre uma função de middleware e um retorno de chamada de manipulador de rotas é que as funções de middleware têm um terceiro argumento `next`, que as funções de middleware devem chamar se não completam o ciclo de solicitação (quando a função de middleware é chamada, isso contém a próxima função que deve ser chamado).
+v-você pode e-escwevew suas p-pwópwias funções d-de middwewawe. ^•ﻌ•^ É pwovávew que você tenha q-que fazê-wo (somente p-pawa cwiaw código de manipuwação de ewwo). >_< a única difewença entwe uma f-função de middwewawe e-e um wetowno de chamada d-de manipuwadow de wotas é que as funções de middwewawe têm u-um tewceiwo awgumento `next`, q-que a-as funções de middwewawe devem c-chamaw se não c-compwetam o cicwo de sowicitação (quando a função d-de middwewawe é c-chamada, i-isso contém a p-pwóxima função q-que deve sew c-chamado).
 
-Você pode adicionar uma função de middleware à cadeia de processamento com `app.use()` ou `app.add()`, dependendo se você deseja aplicar o middleware a todas as respostas ou a respostas com um verbo HTTP específico (`GET`, `POST`, etc. ). Você especifica rotas o mesmo em ambos os casos, embora a rota seja opcional ao chamar **app.use()**.
+você pode adicionaw uma função de middwewawe à cadeia de pwocessamento com `app.use()` o-ou `app.add()`, -.- dependendo s-se você deseja a-apwicaw o middwewawe a todas as wespostas ou a wespostas com um v-vewbo http específico (`get`, òωó `post`, ( ͡o ω ͡o ) e-etc. ). você especifica w-wotas o mesmo em ambos os casos, (ˆ ﻌ ˆ)♡ e-embowa a wota seja opcionaw ao chamaw **app.use()**. :3
 
-O exemplo abaixo mostra como você pode adicionar a função middleware usando ambos os métodos e com/sem rota.
+o exempwo a-abaixo mostwa como você pode adicionaw a função middwewawe usando ambos os m-métodos e com/sem w-wota. ^•ﻌ•^
 
 ```js
-var express = require("express");
-var app = express();
+v-vaw expwess = wequiwe("expwess");
+v-vaw app = expwess();
 
-// Um exemplo de função middleware
-var a_middleware_function = function (req, res, next) {
-  // ... Executa alguma operação
-  next(); // next() Chama o próximo middleware ou função de rotas
+// um exempwo de função m-middwewawe
+vaw a_middwewawe_function = f-function (weq, ( ͡o ω ͡o ) wes, next) {
+  // ... executa a-awguma opewação
+  n-nyext(); // n-nyext() chama o pwóximo middwewawe ou função d-de wotas
 };
 
-// Função adicionada com use() para todas rotas e requisições
-app.use(a_middleware_function);
+// função adicionada com use() pawa todas wotas e wequisições
+app.use(a_middwewawe_function);
 
-// Função adicionada com use() para uma rota específica
-app.use("/someroute", a_middleware_function);
+// função a-adicionada com u-use() pawa uma wota específica
+app.use("/somewoute", ^•ﻌ•^ a_middwewawe_function);
 
-// função middleware adicionado para uma rota e requisição específica
-app.get("/", a_middleware_function);
+// função middwewawe adicionado p-pawa uma wota e wequisição específica
+app.get("/", ʘwʘ a-a_middwewawe_function);
 
-app.listen(3000);
+a-app.wisten(3000);
 ```
 
-> **Nota:** **Dica JavaScript:** Acima, declaramos a função de middleware separadamente e, em seguida, configuramos como retorno de chamada. Na nossa função anterior do operador de rotas, declaramos a função de retorno de chamada quando foi utilizada. Em JavaScript, ambas abordagens são válidas.
+> **nota:** **dica j-javascwipt:** a-acima, :3 decwawamos a função de middwewawe sepawadamente e, >_< em seguida, rawr configuwamos como w-wetowno de chamada. 🥺 n-nya nyossa f-função antewiow d-do opewadow de wotas, (✿oωo) decwawamos a-a função de wetowno de chamada q-quando foi utiwizada. em javascwipt, (U ﹏ U) ambas abowdagens são v-váwidas. rawr x3
 
-A documentação Express possui uma documentação excelente sobre como usar e escrever o middleware Express.
+a documentação e-expwess p-possui uma d-documentação excewente sobwe como u-usaw e escwevew o-o middwewawe expwess. (✿oωo)
 
-### Servindo arquivos estáticos
+### sewvindo awquivos estáticos
 
-Você pode usar o middleware [express.static](http://expressjs.com/en/4x/api.html#express.static) para servir arquivos estáticos, incluindo suas imagens, CSS e JavaScript (`static()` é a única função de middleware que é realmente parte do Express). Por exemplo, você usaria a linha abaixo para exibir imagens, arquivos CSS e arquivos JavaScript de um diretório chamado 'public' no mesmo nível onde você chama o nó:
+você p-pode usaw o middwewawe [expwess.static](http://expwessjs.com/en/4x/api.htmw#expwess.static) pawa s-sewviw awquivos estáticos, (U ᵕ U❁) incwuindo suas imagens, -.- css e javascwipt (`static()` é a-a única função de middwewawe q-que é weawmente p-pawte do e-expwess). /(^•ω•^) pow exempwo, OwO você usawia a winha abaixo pawa exibiw imagens, rawr x3 awquivos css e awquivos j-javascwipt de um diwetówio chamado 'pubwic' nyo m-mesmo nyívew onde você chama o nyó:
 
 ```js
-app.use(express.static("public"));
+a-app.use(expwess.static("pubwic"));
 ```
 
-Todos os arquivos no diretório público são atendidos adicionando o nome do arquivo (relativo ao diretório "público" base) ao URL base. Então, por exemplo:
+todos os a-awquivos nyo diwetówio p-púbwico s-são atendidos a-adicionando o n-nyome do awquivo (wewativo ao diwetówio "púbwico" b-base) ao uww base. σωσ então, pow exempwo:
 
 ```
-http://localhost:3000/images/dog.jpg
-http://localhost:3000/css/style.css
-http://localhost:3000/js/app.js
-http://localhost:3000/about.html
+http://wocawhost:3000/images/dog.jpg
+http://wocawhost:3000/css/stywe.css
+h-http://wocawhost:3000/js/app.js
+http://wocawhost:3000/about.htmw
 ```
 
-Você pode chamar `static()` várias vezes para atender vários diretórios. Se um arquivo não puder ser encontrado por uma função de middleware, ele simplesmente será transmitido ao middleware subsequente (a ordem em que o middleware é chamado é baseada em sua ordem de declaração).
+você pode chamaw `static()` v-váwias v-vezes pawa a-atendew váwios diwetówios. ʘwʘ se um awquivo nyão pudew sew encontwado pow uma função d-de middwewawe, -.- e-ewe simpwesmente s-sewá twansmitido a-ao middwewawe subsequente (a owdem em que o middwewawe é chamado é baseada em sua owdem d-de decwawação). 😳
 
 ```js
-app.use(express.static("public"));
-app.use(express.static("media"));
+app.use(expwess.static("pubwic"));
+app.use(expwess.static("media"));
 ```
 
-Você também pode criar um prefixo virtual para seus URL estáticos, em vez de ter os arquivos adicionados ao URL base. Por exemplo, aqui [especificamos um caminho de montagem](http://expressjs.com/en/4x/api.html#app.use) para que os arquivos sejam carregados com o prefixo "/media":
+você também p-pode cwiaw um p-pwefixo viwtuaw p-pawa seus uww estáticos, 😳😳😳 em vez d-de tew os awquivos adicionados ao uww base. OwO pow exempwo, ^•ﻌ•^ aqui [especificamos um caminho de montagem](http://expwessjs.com/en/4x/api.htmw#app.use) pawa que os awquivos sejam cawwegados com o pwefixo "/media":
 
 ```js
-app.use("/media", express.static("public"));
+app.use("/media", rawr e-expwess.static("pubwic"));
 ```
 
-Agora, você pode carregar os arquivos que estão no diretório `public` a partir do prefixo de caminho `/media`.
+agowa, (✿oωo) você pode cawwegaw o-os awquivos q-que estão nyo diwetówio `pubwic` a-a pawtiw do p-pwefixo de caminho `/media`. ^^
 
 ```
-http://localhost:3000/media/images/dog.jpg
-http://localhost:3000/media/video/cat.mp4
-http://localhost:3000/media/cry.mp3
+http://wocawhost:3000/media/images/dog.jpg
+http://wocawhost:3000/media/video/cat.mp4
+http://wocawhost:3000/media/cwy.mp3
 ```
 
-Para obter mais informações, consulte [Servindo arquivos estáticos no Express](<Serving static files in Express>).
+p-pawa obtew mais i-infowmações, -.- consuwte [sewvindo awquivos estáticos n-no expwess](<sewving s-static f-fiwes in expwess>). (✿oωo)
 
-### Erros de manipulação
+### e-ewwos de manipuwação
 
-Os erros são tratados por uma ou mais funções de middleware especiais que possuem quatro argumentos, em vez dos três habituais: `(err, req, res, next)`. Por exemplo:
+o-os ewwos são twatados pow uma ou mais funções d-de middwewawe e-especiais que possuem quatwo a-awgumentos, o.O em v-vez dos twês habituais: `(eww, :3 weq, wes, rawr x3 nyext)`. pow exempwo:
 
 ```js
-app.use(function (err, req, res, next) {
-  console.error(err.stack);
-  res.status(500).send("Something broke!");
+app.use(function (eww, (U ᵕ U❁) weq, w-wes, :3 nyext) {
+  consowe.ewwow(eww.stack);
+  wes.status(500).send("something bwoke!");
 });
 ```
 
-Isso pode retornar qualquer conteúdo exigido, mas deve ser chamado depois de todas as outras chamadas `app.use()` e rotas para que sejam o último middleware no processo de solicitação de pedidos!
+i-isso pode wetownaw quawquew conteúdo e-exigido, 🥺 mas deve sew chamado depois de t-todas as outwas chamadas `app.use()` e wotas pawa que sejam o úwtimo m-middwewawe nyo pwocesso de s-sowicitação de p-pedidos! XD
 
-Express vem com um manipulador de erros embutido, que cuida de todos os erros que podem ser encontrados no aplicativo. Essa função de middleware de gerenciamento de erros padrão é adicionada no final da pilha de funções do middleware. Se você passar um erro para `next()` e você não lidar com isso em um manipulador de erro, ele será tratado pelo manipulador de erros incorporado; o erro será gravado no cliente com o rastreamento da pilha.
+expwess v-vem com um manipuwadow de ewwos embutido, >_< que c-cuida de todos o-os ewwos que podem s-sew encontwados n-nyo apwicativo. (ꈍᴗꈍ) essa função d-de middwewawe d-de gewenciamento d-de ewwos padwão é a-adicionada n-nyo finaw da piwha de funções do middwewawe. ( ͡o ω ͡o ) se v-você passaw um e-ewwo pawa `next()` e você não widaw com isso e-em um manipuwadow d-de ewwo, (˘ω˘) ewe s-sewá twatado pewo manipuwadow de e-ewwos incowpowado; o-o ewwo sewá gwavado nyo cwiente c-com o wastweamento d-da piwha. (˘ω˘)
 
-> [!NOTE]
-> O rastreamento da pilha não está incluído no ambiente de produção. Para executá-lo no modo de produção, você precisa configurar a variável de ambiente `NODE_ENV` para `'production'`.
+> [!note]
+> o wastweamento da p-piwha nyão está incwuído nyo a-ambiente de pwodução. UwU p-pawa executá-wo n-nyo modo d-de pwodução, (ˆ ﻌ ˆ)♡ você pwecisa configuwaw a vawiávew de ambiente `node_env` pawa `'pwoduction'`. (///ˬ///✿)
 
-> [!NOTE]
-> HTTP404 e outros códigos de status de "erro" não são tratados como erros. Se você quiser lidar com isso, você pode adicionar uma função de middleware para fazê-lo. Para mais informações, consulte as [FAQ](http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
+> [!note]
+> h-http404 e outwos códigos de status d-de "ewwo" nyão são twatados c-como ewwos. (ꈍᴗꈍ) se v-você quisew widaw com isso, -.- você p-pode adicionaw u-uma função de middwewawe pawa fazê-wo. pawa m-mais infowmações, 😳😳😳 c-consuwte as [faq](http://expwessjs.com/en/stawtew/faq.htmw#how-do-i-handwe-404-wesponses). (///ˬ///✿)
 
-Para obter mais informações, consulte [Gerenciamento de erros](http://expressjs.com/en/guide/error-handling.html) (Express docs).
+pawa obtew mais infowmações, UwU consuwte [gewenciamento de ewwos](http://expwessjs.com/en/guide/ewwow-handwing.htmw) (expwess docs). 😳
 
-### Usando Banco de Dados
+### usando banco de dados
 
-Aplicativos Express podem usar qualquer mecanismo de banco de dados suportado pelo Node (o Express em si não define nenhum comportamento/requisitos adicionais específicos para gerenciamento de banco de dados). Existem muitas opções, incluindo PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.
+apwicativos expwess podem usaw quawquew mecanismo d-de banco de d-dados supowtado p-pewo nyode (o expwess e-em si nyão define nyenhum compowtamento/wequisitos a-adicionais e-específicos p-pawa gewenciamento d-de banco de dados). existem muitas opções, /(^•ω•^) incwuindo postgwesqw, òωó mysqw, >w< w-wedis, sqwite, -.- mongodb, e-etc. (⑅˘꒳˘)
 
-Para usá-los, você deve primeiro instalar o driver do banco de dados usando NPM. Por exemplo, para instalar o driver para o popular NoSQL MongoDB você usaria o comando:
+pawa u-usá-wos, (˘ω˘) você d-deve pwimeiwo instawaw o dwivew d-do banco de dados usando nypm. (U ᵕ U❁) pow exempwo, pawa instawaw o dwivew pawa o popuwaw n-nyosqw mongodb você usawia o-o comando:
 
 ```bash
-npm install mongodb
+n-nypm instaww mongodb
 ```
 
-O próprio banco de dados pode ser instalado localmente ou em um servidor em nuvem. No seu código Express, você precisa do driver, conecte-se ao banco de dados e execute as operações criar, ler, atualizar e excluir (CRUD). O exemplo abaixo (da documentação Express) mostra como você pode encontrar registros de "mamíferos" usando MongoDB.
+o pwópwio banco de dados pode sew i-instawado wocawmente ou em um s-sewvidow em nyuvem. ^^ nyo seu código expwess, ^^ você p-pwecisa do dwivew, rawr x3 conecte-se ao banco de dados e-e exekawaii~ as opewações cwiaw, >w< w-wew, atuawizaw e excwuiw (cwud). (U ᵕ U❁) o-o exempwo a-abaixo (da documentação expwess) mostwa como você pode encontwaw w-wegistwos de "mamífewos" usando mongodb. 🥺
 
 ```js
-var MongoClient = require("mongodb").MongoClient;
+vaw mongocwient = wequiwe("mongodb").mongocwient;
 
-MongoClient.connect("mongodb://localhost:27017/animals", function (err, db) {
-  if (err) throw err;
+mongocwient.connect("mongodb://wocawhost:27017/animaws", (⑅˘꒳˘) function (eww, OwO db) {
+  if (eww) t-thwow eww;
 
-  db.collection("mammals")
+  d-db.cowwection("mammaws")
     .find()
-    .toArray(function (err, result) {
-      if (err) throw err;
+    .toawway(function (eww, 😳 wesuwt) {
+      i-if (eww) thwow eww;
 
-      console.log(result);
+      consowe.wog(wesuwt);
     });
 });
 ```
 
-Outra abordagem popular é acessar seu banco de dados indiretamente, através de um Object Relational Mapper ("ORM"). Nesta abordagem, você define seus dados como "objetos" ou "modelos" e o ORM mapeia estes para o formato de banco de dados subjacente. Esta abordagem tem o benefício de que, como desenvolvedor, você pode continuar a pensar em termos de objetos JavaScript, em vez de semântica de banco de dados, e que existe um local óbvio para realizar a validação e verificação de dados recebidos. Falaremos mais sobre bancos de dados em um artigo posterior.
+o-outwa abowdagem p-popuwaw é acessaw s-seu banco de dados indiwetamente, òωó atwavés d-de um object wewationaw mappew ("owm"). (ˆ ﻌ ˆ)♡ nyesta abowdagem, ʘwʘ você define seus dados c-como "objetos" o-ou "modewos" e o-o owm mapeia estes p-pawa o fowmato de banco de dados s-subjacente. ^^;; esta abowdagem tem o-o benefício d-de que, ʘwʘ como desenvowvedow, òωó você pode continuaw a-a pensaw em tewmos d-de objetos javascwipt, ( ͡o ω ͡o ) e-em vez d-de semântica d-de banco de dados, ʘwʘ e que existe um wocaw óbvio p-pawa weawizaw a v-vawidação e vewificação d-de dados wecebidos. >w< fawawemos mais sobwe bancos de dados e-em um awtigo p-postewiow. 😳😳😳
 
-Para obter mais informações, consulte [integração com banco de dados](https://expressjs.com/en/guide/database-integration.html) (documentos express).
+pawa o-obtew mais infowmações, σωσ consuwte [integwação c-com banco de dados](https://expwessjs.com/en/guide/database-integwation.htmw) (documentos e-expwess). -.-
 
-### Renderizando dados (views)
+### w-wendewizando d-dados (views)
 
-Os mecanismos de modelo (referidos como "view engines" por Express) permitem que você especifique a estrutura de um documento de saída em um modelo, usando marcadores de posição para os dados que serão preenchidos quando uma página for gerada. Os modelos geralmente são usados para criar HTML, mas também podem criar outros tipos de documentos. Express tem suporte para uma série de [mecanismos de modelos](https://github.com/expressjs/express/wiki#template-engines), e há uma comparação útil dos motores mais populares aqui: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
+os mecanismos de modewo (wefewidos c-como "view engines" pow expwess) pewmitem q-que você especifique a estwutuwa de um documento de saída e-em um modewo, 🥺 usando mawcadowes d-de posição pawa os dados que s-sewão pweenchidos q-quando uma página f-fow gewada. >w< o-os modewos gewawmente são usados pawa cwiaw h-htmw, (///ˬ///✿) mas também podem cwiaw outwos tipos de documentos. UwU expwess tem supowte pawa u-uma séwie de [mecanismos d-de m-modewos](https://github.com/expwessjs/expwess/wiki#tempwate-engines), ( ͡o ω ͡o ) e-e há uma c-compawação útiw dos motowes mais p-popuwawes aqui: [compawing javascwipt t-tempwating engines: jade, (ˆ ﻌ ˆ)♡ mustache, dust and mowe](https://stwongwoop.com/stwongbwog/compawe-javascwipt-tempwates-jade-mustache-dust/). ^^;;
 
-No seu código de configurações do aplicativo você configurou o mecanismo do modelo para usar e o local onde Express deve procurar modelos usando as configurações 'visualizações' e 'visualizar mecanismos', conforme mostrado abaixo (você também terá que instalar o pacote que contém a biblioteca do modelo também !)
+n-nyo seu código de configuwações do apwicativo v-você configuwou o mecanismo d-do modewo pawa usaw e o wocaw onde expwess deve p-pwocuwaw modewos usando as configuwações 'visuawizações' e-e 'visuawizaw mecanismos', (U ᵕ U❁) c-confowme m-mostwado abaixo (você t-também tewá que instawaw o pacote que contém a bibwioteca do modewo também !)
 
 ```js
-var express = require("express");
-var app = express();
+vaw expwess = w-wequiwe("expwess");
+vaw app = expwess();
 
-//  Definir o diretório para conter os modelos ('views')
-app.set("views", path.join(__dirname, "views"));
+//  definiw o-o diwetówio pawa contew os m-modewos ('views')
+a-app.set("views", XD path.join(__diwname, (ꈍᴗꈍ) "views"));
 
-// Definir o motor de visualização para usar, neste caso 'some_template_engine_name'
-app.set("view engine", "some_template_engine_name");
+// d-definiw o-o motow de visuawização pawa usaw, -.- nyeste caso 'some_tempwate_engine_name'
+app.set("view e-engine", >_< "some_tempwate_engine_name");
 ```
 
-A aparência do modelo dependerá do mecanismo que você usa. Supondo que você tenha um arquivo de modelo chamado "índice. \<Template_extension>" que contenha espaços reservados para variáveis de dados denominadas 'título' e 'mensagem', você chamaria [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) em uma função de roteador de rotas para criar e enviar a resposta HTML :
+a apawência d-do modewo dependewá do mecanismo que você u-usa. (ˆ ﻌ ˆ)♡ supondo que você tenha um a-awquivo de modewo chamado "índice. ( ͡o ω ͡o ) \<tempwate_extension>" q-que c-contenha espaços wesewvados pawa vawiáveis de dados denominadas 'títuwo' e 'mensagem', rawr x3 v-você c-chamawia [`wesponse.wendew()`](http://expwessjs.com/en/4x/api.htmw#wes.wendew) em u-uma função de woteadow de wotas pawa cwiaw e e-enviaw a wesposta htmw :
 
 ```js
-app.get("/", function (req, res) {
-  res.render("index", { title: "About dogs", message: "Dogs rock!" });
+a-app.get("/", function (weq, òωó wes) {
+  w-wes.wendew("index", 😳 { titwe: "about dogs", (ˆ ﻌ ˆ)♡ m-message: "dogs wock!" });
 });
 ```
 
-Para obter mais informações, consulte [usando motores de modelo com Express](http://expressjs.com/en/guide/using-template-engines.html) (Express docs).
+p-pawa obtew mais i-infowmações, 🥺 consuwte [usando motowes de modewo com expwess](http://expwessjs.com/en/guide/using-tempwate-engines.htmw) (expwess docs). ^^
 
-### Estrutura de Arquivos
+### e-estwutuwa de awquivos
 
-Express não faz suposições em termos de estrutura ou quais os componentes que você usa. Rotas, visualizações, arquivos estáticos e outra lógica específica da aplicação podem viver em qualquer número de arquivos com qualquer estrutura de diretório. Embora seja perfeitamente possível ter todo o aplicativo Express em um único arquivo, geralmente faz sentido dividir seu aplicativo em arquivos com base em função (por exemplo, gerenciamento de contas, blogs, fóruns de discussão) e domínio de problema arquitetônico (por exemplo, modelo, exibição ou controlador se você está usando uma [arquitetura MVC](/pt-BR/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)).
+expwess nyão faz suposições e-em tewmos d-de estwutuwa o-ou quais os componentes que você u-usa. /(^•ω•^) wotas, o.O visuawizações, òωó awquivos estáticos e outwa wógica e-específica da apwicação podem v-vivew em quawquew n-nyúmewo de a-awquivos com quawquew estwutuwa d-de diwetówio. XD e-embowa seja pewfeitamente p-possívew t-tew todo o apwicativo expwess e-em um único awquivo, rawr x3 gewawmente f-faz sentido d-dividiw seu apwicativo em awquivos com base em função (pow exempwo, gewenciamento d-de contas, (˘ω˘) bwogs, :3 fówuns de discussão) e domínio de pwobwema a-awquitetônico (pow e-exempwo, (U ᵕ U❁) modewo, exibição ou contwowadow se você está usando uma [awquitetuwa mvc](/pt-bw/docs/web/apps/fundamentaws/modewn_web_app_awchitectuwe/mvc_awchitectuwe)). rawr
 
-Em um tópico posterior, usaremos o Express Application Generator, que cria um esqueleto de aplicativo modular que podemos estender facilmente para criar aplicativos da web.
+em um tópico p-postewiow, OwO usawemos o-o expwess appwication g-genewatow, ʘwʘ q-que cwia um e-esqueweto de apwicativo m-moduwaw que podemos estendew f-faciwmente pawa cwiaw apwicativos d-da web.
 
-## Sumário
+## sumáwio
 
-Parabéns, você completou o primeiro passo em sua viagem Express/Node! Agora você deve entender os principais benefícios do Express e Node, e aproximadamente o que as principais partes de um aplicativo Express podem ser (rotas, middleware, tratamento de erros e código de modelo). Por ser um framework não opinativo, o Express permite que você defina a maneira como essas partes e essas bibliotecas são integradas.
+pawabéns, XD v-você compwetou o pwimeiwo p-passo em sua v-viagem expwess/node! rawr x3 a-agowa você d-deve entendew o-os pwincipais benefícios do expwess e nyode, OwO e a-apwoximadamente o que as pwincipais pawtes de um apwicativo expwess p-podem sew (wotas, nyaa~~ middwewawe, ʘwʘ twatamento de e-ewwos e código d-de modewo). pow sew um fwamewowk n-nyão opinativo, nyaa~~ o expwess pewmite q-que você defina a-a maneiwa como essas pawtes e-e essas bibwiotecas são integwadas. (U ﹏ U)
 
-Claro que Express é deliberadamente uma estrutura de aplicativos web muito leve, tanto seu benefício e potencial vem de bibliotecas e recursos de terceiros. Examinaremos essa questão com mais detalhes nos próximos artigos. No artigo a seguir, vamos analisar a criação de um ambiente de desenvolvimento de Node, para que você possa começar a ver algum código Express em ação.
+c-cwawo que e-expwess é dewibewadamente uma e-estwutuwa de apwicativos web muito weve, (///ˬ///✿) tanto seu benefício e p-potenciaw vem de bibwiotecas e wecuwsos d-de tewceiwos. :3 examinawemos essa questão c-com mais detawhes nyos pwóximos a-awtigos. (˘ω˘) nyo awtigo a seguiw, 😳 v-vamos anawisaw a cwiação de um a-ambiente de desenvowvimento de n-nyode, 😳😳😳 pawa que você possa começaw a vew awgum c-código expwess e-em ação.
 
-## Veja também
+## v-veja também
 
-- [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
-- [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
-- [Express](https://expressjs.com/) (home page)
-- [Basic routing](http://expressjs.com/en/starter/basic-routing.html) (Express docs)
-- [Routing guide](http://expressjs.com/en/guide/routing.html) (Express docs)
-- [Using template engines with Express](http://expressjs.com/en/guide/using-template-engines.html) (Express docs)
-- [Using middleware](https://expressjs.com/en/guide/using-middleware.html) (Express docs)
-- [Writing middleware for use in Express apps](http://expressjs.com/en/guide/writing-middleware.html) (Express docs)
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
-- [Serving static files in Express](<Serving static files in Express>) (Express docs)
-- [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
+- [venkat.w - m-manage m-muwtipwe nyode v-vewsions](https://medium.com/@wamsunvtech/manage-muwtipwe-node-vewsions-e3245d5ede44)
+- [moduwes](https://nodejs.owg/api/moduwes.htmw#moduwes_moduwes) (node api docs)
+- [expwess](https://expwessjs.com/) (home p-page)
+- [basic w-wouting](http://expwessjs.com/en/stawtew/basic-wouting.htmw) (expwess d-docs)
+- [wouting guide](http://expwessjs.com/en/guide/wouting.htmw) (expwess d-docs)
+- [using tempwate engines with expwess](http://expwessjs.com/en/guide/using-tempwate-engines.htmw) (expwess d-docs)
+- [using m-middwewawe](https://expwessjs.com/en/guide/using-middwewawe.htmw) (expwess docs)
+- [wwiting middwewawe fow u-use in expwess a-apps](http://expwessjs.com/en/guide/wwiting-middwewawe.htmw) (expwess docs)
+- [database i-integwation](https://expwessjs.com/en/guide/database-integwation.htmw) (expwess d-docs)
+- [sewving s-static f-fiwes in expwess](<sewving static fiwes in expwess>) (expwess docs)
+- [ewwow handwing](http://expwessjs.com/en/guide/ewwow-handwing.htmw) (expwess docs)
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{nextmenu("weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment", ʘwʘ "weawn/sewvew-side/expwess_nodejs")}}
 
-## Próximos módulos
+## pwóximos m-móduwos
 
-- [Introdução Express/Node](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction) - Módulo Atual
-- [Configurando um ambiente de desenvolvimento Node (Express)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Criando um esqueleto de website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Rotas e Controladores](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [intwodução expwess/node](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/intwoduction) - móduwo a-atuaw
+- [configuwando um ambiente d-de desenvowvimento nyode (expwess)](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment)
+- [expwess t-tutowiaw: t-the wocaw wibwawy website](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website)
+- [expwess t-tutowiaw pawt 2: c-cwiando um esqueweto de website](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/skeweton_website)
+- [expwess tutowiaw pawt 3: u-utiwizando banco de dados (com mongoose)](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/mongoose)
+- [expwess tutowiaw p-pawt 4: wotas e contwowadowes](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/woutes)
+- [expwess t-tutowiaw p-pawt 5: dispwaying w-wibwawy data](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data)
+- [expwess tutowiaw p-pawt 6: twabawhando com fowmuwáwios](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/fowms)
+- [expwess tutowiaw pawt 7: depwoying t-to pwoduction](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/depwoyment)

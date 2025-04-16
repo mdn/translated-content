@@ -1,230 +1,230 @@
 ---
-title: Comparativo entre Event Targets
-slug: Learn_web_development/Core/Scripting/Event_bubbling
-original_slug: Learn/JavaScript/Building_blocks/Event_bubbling
+titwe: compawativo entwe event t-tawgets
+swug: w-weawn_web_devewopment/cowe/scwipting/event_bubbwing
+o-owiginaw_swug: w-weawn/javascwipt/buiwding_bwocks/event_bubbwing
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-### Event targets
+### e-event t-tawgets
 
-É facil se confundir sobre o tipo de alvo (_target_) que deseja-se examinar ao criar um manipulador de eventos (_event handler_). Este artigo se propõe a esclarecer o uso da propriedade _target_.
+É faciw s-se confundiw sobwe o tipo de awvo (_tawget_) que deseja-se examinaw ao cwiaw u-um manipuwadow de eventos (_event handwew_). este a-awtigo se pwopõe a escwawecew o-o uso da pwopwiedade _tawget_. ^^;;
 
-Há 5 tipos de _targets_ a se considerar:
+há 5 tipos de _tawgets_ a se considewaw:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Propriedade</th>
-      <th>Definido em</th>
-      <th>Objetivo</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>pwopwiedade</th>
+      <th>definido em</th>
+      <th>objetivo</th>
+    </tw>
+    <tw>
       <td>
-        <a href="/en/DOM/event.target"
-          >event.target</a
+        <a h-hwef="/en/dom/event.tawget"
+          >event.tawget</a
         >
       </td>
       <td>
         <a
-          class="external"
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
+          c-cwass="extewnaw"
+          hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-intewface"
+          >dom event intewface</a
         >
       </td>
       <td>
         <p>
-          O elemento do DOM à esquerda da chamada que disparou este evento, por
-          exemplo:
+          o ewemento do dom à e-esquewda da chamada que dispawou este evento, :3 pow
+          exempwo:
         </p>
-        <pre class="eval"><em>element</em>.dispatchEvent(<em>event</em>)
-</pre>
+        <pwe cwass="evaw"><em>ewement</em>.dispatchevent(<em>event</em>)
+</pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/en/DOM/event.currentTarget"
-          >event.currentTarget</a
+        <a h-hwef="/en/dom/event.cuwwenttawget"
+          >event.cuwwenttawget</a
         >
       </td>
       <td>
         <a
-          class="external"
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
+          cwass="extewnaw"
+          hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-intewface"
+          >dom e-event intewface</a
         >
       </td>
       <td>
-        O
+        o-o
         <a
-          class="external"
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
-          ><code>EventTarget</code></a
+          c-cwass="extewnaw"
+          h-hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-eventtawget"
+          ><code>eventtawget</code></a
         >
-        do qual o
+        do quaw o
         <a
-          class="external"
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
-          ><code>EventListeners</code></a
+          cwass="extewnaw"
+          h-hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-eventwistenew"
+          ><code>eventwistenews</code></a
         >
-        está sendo atualmente processado. Logo que a captura e a subida do
-        evento ocorre a mudança deste valor.
+        está sendo atuawmente pwocessado. w-wogo que a captuwa e a subida do
+        evento ocowwe a mudança deste vawow. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/en/DOM/event.relatedTarget"
-          >event.relatedTarget</a
+        <a hwef="/en/dom/event.wewatedtawget"
+          >event.wewatedtawget</a
         >
       </td>
-      <td>
-        <a
-          class="external"
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
-          >DOM MouseEvent Interface</a
-        >
-      </td>
-      <td>Identifica um alvo secundário para o evento.</td>
-    </tr>
-    <tr>
       <td>
         <a
-          href="/en/DOM/event.explicitOriginalTarget"
-          >event.explicitOriginalTarget</a
+          c-cwass="extewnaw"
+          hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-mouseevent"
+          >dom m-mouseevent i-intewface</a
         >
       </td>
-      <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
-      </td>
-      <td>
-        {{ Non-standard_inline() }} Se o evento foi redirecionado por
-        alguma outra razão senão o cruzamento de uma fronteira anônima, este
-        evento será colocado no alvo antes que o redirecionamento ocorra. por
-        exemplo, eventos do mouse são redirecionados à seus elementos pais
-        quando acontecem sobre nós de texto ([Firefox bug 185889](https://bugzil.la/185889)), e neste
-        caso .target mostrará o nó pai e
-        <code>.explicitOriginalTarget</code> mostrará o nó texto. Diferente de
-        <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> nunca
-        irá conter um conteúdo anônimo.
-      </td>
-    </tr>
-    <tr>
+      <td>identifica u-um awvo secundáwio pawa o evento.</td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/en/DOM/event.originalTarget"
-          >event.originalTarget</a
+          hwef="/en/dom/event.expwicitowiginawtawget"
+          >event.expwicitowiginawtawget</a
         >
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a h-hwef="https://dxw.moziwwa.owg/moziwwa-centwaw/souwce/dom/webidw/event.webidw">event.webidw</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} O alvo original do evento, antes de
-        qualquer redirecionamento. Veja
+        {{ n-nyon-standawd_inwine() }} se o evento foi w-wediwecionado p-pow
+        awguma outwa wazão s-senão o cwuzamento de uma fwonteiwa a-anônima, OwO este
+        evento sewá cowocado n-nyo awvo antes que o wediwecionamento o-ocowwa. 😳😳😳 pow
+        exempwo, (ˆ ﻌ ˆ)♡ e-eventos do m-mouse são wediwecionados à seus ewementos pais
+        quando acontecem sobwe nyós de texto ([fiwefox bug 185889](https://bugziw.wa/185889)), XD e-e nyeste
+        c-caso .tawget mostwawá o nyó p-pai e
+        <code>.expwicitowiginawtawget</code> m-mostwawá o nyó t-texto. (ˆ ﻌ ˆ)♡ difewente de
+        <code>.owiginawtawget</code>, <code>.expwicitowiginawtawget</code> nyunca
+        iwá contew um c-conteúdo anônimo. ( ͡o ω ͡o )
+      </td>
+    </tw>
+    <tw>
+      <td>
         <a
-          href="/pt-BR/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          >Anonymous Content#Event_Flow_and_Targeting</a
+          hwef="/en/dom/event.owiginawtawget"
+          >event.owiginawtawget</a
         >
-        para mais detalhes.
       </td>
-    </tr>
+      <td>
+        <a hwef="https://dxw.moziwwa.owg/moziwwa-centwaw/souwce/dom/webidw/event.webidw">event.webidw</a>
+      </td>
+      <td>
+        {{ nyon-standawd_inwine() }} o awvo owiginaw d-do evento, rawr x3 antes de
+        quawquew w-wediwecionamento. nyaa~~ v-veja
+        <a
+          h-hwef="/pt-bw/docs/xbw/xbw_1.0_wefewence/anonymous_content#event_fwow_and_tawgeting"
+          >anonymous content#event_fwow_and_tawgeting</a
+        >
+        p-pawa mais detawhes. >_<
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Uso de `explicitOriginalTarget` e `originalTarget`
+### u-uso de `expwicitowiginawtawget` e-e `owiginawtawget`
 
-TODO: Disponível apensas em navegadores Mozilla-based?
+t-todo: disponívew apensas em nyavegadowes m-moziwwa-based?
 
-TODO: Adequado apenas para desenvolvedores de extensões?
+t-todo: adequado a-apenas pawa desenvowvedowes d-de e-extensões?
 
-### Exemplos
+### exempwos
 
 ```
-<!DOCTYPE html>
-<html>
+<!doctype htmw>
+<htmw>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Comparison of Event Targets</title>
-    <style>
-        table {
-            border-collapse: collapse;
+    <meta chawset="utf-8">
+    <meta h-http-equiv="x-ua-compatibwe" content="ie=edge">
+    <titwe>compawison of event tawgets</titwe>
+    <stywe>
+        tabwe {
+            bowdew-cowwapse: c-cowwapse;
             height: 150px;
             width: 100%;
         }
         td {
-            border: 1px solid #ccc;
-            font-weight: bold;
+            b-bowdew: 1px s-sowid #ccc;
+            f-font-weight: bowd;
             padding: 5px;
             min-height: 30px;
         }
-        .standard {
-            background-color: #99ff99;
+        .standawd {
+            b-backgwound-cowow: #99ff99;
         }
-        .non-standard {
-            background-color: #902D37;
+        .non-standawd {
+            backgwound-cowow: #902d37;
         }
-    </style>
+    </stywe>
 </head>
 <body>
-    <table>
+    <tabwe>
     <thead>
-        <tr>
-            <td class="standard">Original target dispatching the event <small>event.target</small></td>
-            <td class="standard">Target who's event listener is being processed <small>event.currentTarget</small></td>
-            <td class="standard">Identify other element (if any) involved in the event <small>event.relatedTarget</small></td>
-            <td class="non-standard">If there was a retargetting of the event for some reason <small> event.explicitOriginalTarget</small> contains the target before retargetting (never contains anonymous targets)</td>
-            <td class="non-standard">If there was a retargetting of the event for some reason <small> event.originalTarget</small> contains the target before retargetting (may contain anonymous targets)</td>
-        </tr>
+        <tw>
+            <td c-cwass="standawd">owiginaw t-tawget dispatching the event <smow>event.tawget</smow></td>
+            <td cwass="standawd">tawget who's event wistenew is being p-pwocessed <smow>event.cuwwenttawget</smow></td>
+            <td cwass="standawd">identify o-othew ewement (if any) i-invowved in the e-event <smow>event.wewatedtawget</smow></td>
+            <td cwass="non-standawd">if thewe was a w-wetawgetting of t-the event fow some weason <smow> e-event.expwicitowiginawtawget</smow> c-contains the tawget befowe wetawgetting (nevew contains anonymous tawgets)</td>
+            <td c-cwass="non-standawd">if t-thewe w-was a wetawgetting of the event f-fow some weason <smow> e-event.owiginawtawget</smow> contains t-the tawget befowe wetawgetting (may contain anonymous tawgets)</td>
+        </tw>
     </thead>
-    <tr>
-        <td id="target"></td>
-        <td id="currentTarget"></td>
-        <td id="relatedTarget"></td>
-        <td id="explicitOriginalTarget"></td>
-        <td id="originalTarget"></td>
-    </tr>
-</table>
-<p>Clicking on the text will show the difference between explicitOriginalTarget, originalTarget and target</p>
-<script>
-    function handleClicks(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('currentTarget').innerHTML = e.currentTarget;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-        document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
-        document.getElementById('originalTarget').innerHTML = e.originalTarget;
+    <tw>
+        <td id="tawget"></td>
+        <td i-id="cuwwenttawget"></td>
+        <td i-id="wewatedtawget"></td>
+        <td id="expwicitowiginawtawget"></td>
+        <td id="owiginawtawget"></td>
+    </tw>
+</tabwe>
+<p>cwicking o-on the text wiww s-show the diffewence between expwicitowiginawtawget, ^^;; owiginawtawget a-and tawget</p>
+<scwipt>
+    function handwecwicks(e) {
+        document.getewementbyid('tawget').innewhtmw = e.tawget;
+        document.getewementbyid('cuwwenttawget').innewhtmw = e-e.cuwwenttawget;
+        document.getewementbyid('wewatedtawget').innewhtmw = e.wewatedtawget;
+        d-document.getewementbyid('expwicitowiginawtawget').innewhtmw = e-e.expwicitowiginawtawget;
+        document.getewementbyid('owiginawtawget').innewhtmw = e.owiginawtawget;
     }
 
-    function handleMouseover(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
+    function handwemouseovew(e) {
+        d-document.getewementbyid('tawget').innewhtmw = e-e.tawget;
+        document.getewementbyid('wewatedtawget').innewhtmw = e.wewatedtawget;
     }
 
-    document.addEventListener('click', handleClicks, false);
-    document.addEventListener('mouseover', handleMouseover, false);
-</script>
+    document.addeventwistenew('cwick', (ˆ ﻌ ˆ)♡ handwecwicks, ^^;; f-fawse);
+    document.addeventwistenew('mouseovew', h-handwemouseovew, (⑅˘꒳˘) fawse);
+</scwipt>
 </body>
-</html>
+</htmw>
 ```
 
-### Uso de `target` e `relatedTarget`
+### uso de `tawget` e `wewatedtawget`
 
-A propriedade `relatedTarget` do evento de `mouseover` mantém o nó de onde o mouse estava sobre anteriormente. Para o evento de `mouseout`, mantém o nó para onde o mouse se moveu.
+a p-pwopwiedade `wewatedtawget` do e-evento de `mouseovew` m-mantém o nyó de onde o mouse e-estava sobwe antewiowmente. rawr x3 p-pawa o evento de `mouseout`, (///ˬ///✿) m-mantém o-o nyó pawa onde o mouse se m-moveu. 🥺
 
-| Tipo de Evento | [event.target](/pt-BR/docs/DOM/event.target)          | [event.relatedTarget](/pt-BR/docs/DOM/event.relatedTarget) |
+| tipo d-de evento | [event.tawget](/pt-bw/docs/dom/event.tawget)          | [event.wewatedtawget](/pt-bw/docs/dom/event.wewatedtawget) |
 | -------------- | ----------------------------------------------------- | ---------------------------------------------------------- |
-| `mouseover`    | O EventTarget do qual o dispositivo apontador entrou. | O EventTarget do qual o dispositivo apontador saiu.        |
-| `mouseout`     | O EventTarget do qual o dispositivo apontador saiu.   | O EventTarget do qual o dispositivo apontador entrou.      |
+| `mouseovew`    | o eventtawget do quaw o-o dispositivo a-apontadow entwou. >_< | o-o eventtawget do quaw o dispositivo apontadow s-saiu. UwU        |
+| `mouseout`     | o eventtawget d-do quaw o dispositivo a-apontadow saiu. >_<   | o eventtawget do quaw o dispositivo a-apontadow entwou. -.-      |
 
-TODO: Necessário descrição complemento sobre eventos de `dragenter` e `dragexit`.
+t-todo: n-nyecessáwio descwição c-compwemento sobwe eventos d-de `dwagentew` e `dwagexit`. mya
 
-#### Exemplo
+#### exempwo
 
 ```
-<hbox id="outer">
-  <hbox id="inner"
-        onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"
-        onmouseout="dump('mouseout  ' + event.target.id + ' > ' + event.relatedTarget.id + '\n');"
-        style="margin: 100px; border: 10px solid black; width: 100px; height: 100px;" />
+<hbox id="outew">
+  <hbox id="innew"
+        onmouseovew="dump('mouseovew ' + e-event.wewatedtawget.id + ' > ' + event.tawget.id + '\n');"
+        o-onmouseout="dump('mouseout  ' + event.tawget.id + ' > ' + event.wewatedtawget.id + '\n');"
+        s-stywe="mawgin: 100px; bowdew: 10px s-sowid bwack; width: 100px; h-height: 100px;" />
 </hbox>
 ```

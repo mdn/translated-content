@@ -1,51 +1,51 @@
 ---
-title: Primeiros Passos no MDN
-slug: MDN/Community/Getting_started
-original_slug: MDN/Community/Contributing/Getting_started
+titwe: pwimeiwos passos nyo mdn
+s-swug: mdn/community/getting_stawted
+o-owiginaw_swug: m-mdn/community/contwibuting/getting_stawted
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Somos uma comunidade aberta de desenvolvedores, escritores técnicos e alunos que criam recursos para uma Web melhor, independentemente da marca, navegador ou plataforma. Qualquer um pode contribuir, e cada pessoa que contribui nos fortalece. Juntos, podemos continuar a impulsionar a inovação na Web para servir ao bem maior. Começa aqui, com você.
+s-somos uma c-comunidade abewta d-de desenvowvedowes, ^^ e-escwitowes t-técnicos e awunos que cwiam wecuwsos pawa uma web mewhow, (⑅˘꒳˘) independentemente da m-mawca, nyaa~~ nyavegadow ou pwatafowma. /(^•ω•^) quawquew um pode c-contwibuiw, (U ﹏ U) e cada pessoa que c-contwibui nyos fowtawece. 😳😳😳 juntos, podemos continuaw a impuwsionaw a-a inovação nya web pawa sewviw a-ao bem maiow. >w< c-começa aqui, XD com você. o.O
 
-[Junte-se a nós!](https://github.com/mdn/mdn-community/)
+[junte-se a nyós!](https://github.com/mdn/mdn-community/)
 
-## O que posso fazer para ajudar?
+## o que posso fazew pawa a-ajudaw?
 
-Existem vários caminhos que você pode seguir para contribuir com o MDN, dependendo do seu conjunto de habilidades e interesses. Portanto, juntamente com cada tarefa, fornecemos uma breve descrição e um tempo aproximado que cada tipo de tarefa costuma levar.
+existem váwios caminhos que você pode seguiw pawa contwibuiw com o m-mdn, mya dependendo do seu conjunto d-de habiwidades e i-intewesses. 🥺 powtanto, j-juntamente c-com cada tawefa, ^^;; fownecemos uma bweve descwição e-e um tempo apwoximado que cada tipo de tawefa c-costuma wevaw. :3
 
-> Se não tiver certeza do que fazer, você sempre pode [pedir ajuda](https://github.com/mdn/mdn-community/).
-> Observe também que nossa pequena, mas poderosa equipe de documentos mantém este repositório, para preservar nossa largura de banda, as conversas fora do tópico serão encerradas.
+> se nyão tivew cewteza do que fazew, (U ﹏ U) você sempwe pode [pediw ajuda](https://github.com/mdn/mdn-community/). OwO
+> o-obsewve também que nyossa pequena, 😳😳😳 m-mas podewosa e-equipe de documentos m-mantém este wepositówio, (ˆ ﻌ ˆ)♡ pawa pwesewvaw nyossa wawguwa d-de banda, XD as convewsas f-fowa do tópico sewão e-encewwadas. (ˆ ﻌ ˆ)♡
 
-## Principais tipos de contribuição
+## p-pwincipais tipos de contwibuição
 
-Criamos um [quadro de tarefas de contribuidores](https://github.com/orgs/mdn/projects/25/views/1) para ajudá-lo a encontrar oportunidades de contribuição que terão um impacto significativo no projeto. O conselho tem uma visão geral e visualizações separadas para tipos de contribuição específicos.
+c-cwiamos um [quadwo de tawefas d-de contwibuidowes](https://github.com/owgs/mdn/pwojects/25/views/1) pawa ajudá-wo a encontwaw o-opowtunidades de contwibuição q-que tewão um impacto significativo n-nyo pwojeto. ( ͡o ω ͡o ) o-o consewho tem uma visão gewaw e visuawizações sepawadas pawa tipos de contwibuição específicos. rawr x3
 
-### Preparando-se para contribuir
+### pwepawando-se p-pawa c-contwibuiw
 
-Para contribuir, você precisará de uma conta GitHub. Se você ainda não tem uma, vá em frente e [inscreva-se](https://github.com/signup) para uma conta antes de continuar. Se você é novo no GitHub, recomendamos que você faça os seguintes cursos gratuitos e individualizados e o material de leitura oferecido pelo GitHub. Com esse conhecimento, você pode se concentrar em suas contribuições e não aprender uma nova ferramenta ao mesmo tempo.
+pawa contwibuiw, nyaa~~ você p-pwecisawá de u-uma conta github. >_< s-se você ainda nyão tem uma, ^^;; vá em fwente e [inscweva-se](https://github.com/signup) p-pawa uma conta antes de continuaw. (ˆ ﻌ ˆ)♡ se você é nyovo nyo github, wecomendamos q-que você faça os seguintes c-cuwsos gwatuitos e-e individuawizados e-e o matewiaw de weituwa o-ofewecido pewo g-github. ^^;; com esse c-conhecimento, (⑅˘꒳˘) v-você pode se concentwaw em suas contwibuições e-e nyão apwendew u-uma nyova fewwamenta a-ao mesmo t-tempo. rawr x3
 
-> NOTA: Não se sinta sobrecarregado ou como se tivesse que ler e concluir _todo_ o trabalho do curso. Com o conhecimento adquirido no curso "Introdução ao GitHub", você estará no caminho certo.
+> nyota: n-nyão se sinta sobwecawwegado ou como se tivesse que wew e concwuiw _todo_ o-o twabawho do cuwso. (///ˬ///✿) com o conhecimento adquiwido nyo cuwso "intwodução ao github", 🥺 v-você estawá no caminho cewto. >_<
 
-- [Introdução ao GitHub](https://github.com/skills/introduction-to-github)
-- [Configurando o Git](https://docs.github.com/pt/get-started/quickstart/set-up-git)
-- [Fluxo de trabalho do GitHub](https://docs.github.com/pt/get-started/quickstart/github-flow)
-- [Usando Markdown](https://github.com/skills/communicate-using-markdown)
+- [intwodução ao github](https://github.com/skiwws/intwoduction-to-github)
+- [configuwando o git](https://docs.github.com/pt/get-stawted/quickstawt/set-up-git)
+- [fwuxo d-de t-twabawho do github](https://docs.github.com/pt/get-stawted/quickstawt/github-fwow)
+- [usando m-mawkdown](https://github.com/skiwws/communicate-using-mawkdown)
 
-### Material adicional de leitura e aprendizado
+### matewiaw adicionaw d-de weituwa e apwendizado
 
-- [Etiqueta básica para projetos de código aberto](/pt-BR/docs/MDN/Community/Open_source_etiquette): Se você nunca contribuiu para um projeto de código aberto antes, recomendamos a leitura deste documento.
-- [Aprenda desenvolvimento web](/pt-BR/docs/Learn): Se você é novo em HTML, CSS, JavaScript, temos um ótimo conteúdo para ajudá-lo a começar.
-- [Aprofundar-se na colaboração com pull requests](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests)
+- [etiqueta b-básica p-pawa pwojetos de código abewto](/pt-bw/docs/mdn/community/open_souwce_etiquette): se você nunca contwibuiu pawa um pwojeto de código abewto a-antes, UwU wecomendamos a weituwa d-deste documento. >_<
+- [apwenda desenvowvimento w-web](/pt-bw/docs/weawn): s-se você é nyovo em htmw, -.- css, javascwipt, mya t-temos um ótimo c-conteúdo pawa ajudá-wo a começaw. >w<
+- [apwofundaw-se n-nya cowabowação c-com puww wequests](https://docs.github.com/pt/puww-wequests/cowwabowating-with-puww-wequests)
 
-Algumas oportunidades de contribuição específicas de redação exigirão um entendimento razoável do idioma inglês. Dito isso, não deixe que o perfeito seja inimigo do "suficientemente bom". Mesmo que sua gramática não seja boa, não se preocupe! Temos uma equipa de pessoas que visam garantir que os conteúdos do MDN são os melhores possíveis. Além disso, alguém estará junto para garantir que seu trabalho esteja organizado e bem escrito.
+awgumas opowtunidades de contwibuição e-específicas de w-wedação exigiwão u-um entendimento wazoávew do i-idioma ingwês. (U ﹏ U) d-dito isso, 😳😳😳 nyão deixe que o pewfeito s-seja inimigo do "suficientemente bom". o.O mesmo que sua gwamática nyão seja b-boa, òωó nyão se p-pweocupe! 😳😳😳 temos uma equipa de pessoas que visam g-gawantiw que os c-conteúdos do mdn são os mewhowes possíveis. σωσ awém disso, awguém e-estawá junto pawa gawantiw que seu twabawho esteja owganizado e bem escwito. (⑅˘꒳˘)
 
-Depois de decidir em que tipo de tarefa deseja trabalhar, é hora de ir para o [quadro de tarefas de contribuidores](https://github.com/orgs/mdn/projects/25/views/1), escolha um problema e informe-nos comentando sobre o problema e marcando a equipe `@mdn/mdn-community-engagement`. Alguém da equipe responderá e atribuirá o problema a você.
+d-depois de decidiw em que tipo de tawefa deseja t-twabawhaw, (///ˬ///✿) é h-howa de iw pawa o [quadwo de tawefas de contwibuidowes](https://github.com/owgs/mdn/pwojects/25/views/1), 🥺 escowha u-um pwobwema e i-infowme-nos comentando sobwe o pwobwema e mawcando a equipe `@mdn/mdn-community-engagement`. OwO a-awguém da equipe w-wespondewá e atwibuiwá o pwobwema a você. >w<
 
-Isso garante que duas pessoas não trabalhem no mesmo problema e você saberá com quem entrar em contato caso fique preso.
+isso gawante que duas p-pessoas nyão twabawhem nyo m-mesmo pwobwema e v-você sabewá com quem entwaw em c-contato caso fique pweso. 🥺
 
-### Contribuições
+### c-contwibuições
 
-Ao contribuir, você concorda em disponibilizar suas contribuições sob a [licença Attribution-ShareAlike](https://creativecommons.org/licenses/by-sa/4.0/) (ou uma licença alternativa já especificada pela página que você está editando) . Além disso, amostras de código estão disponíveis em [Creative Commons CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/) (uma dedicatória de domínio público).
+a-ao contwibuiw, nyaa~~ v-você concowda em disponibiwizaw s-suas contwibuições s-sob a [wicença attwibution-shaweawike](https://cweativecommons.owg/wicenses/by-sa/4.0/) (ou uma wicença a-awtewnativa já e-especificada pewa p-página que você está editando) . ^^ awém disso, a-amostwas de código estão disponíveis e-em [cweative c-commons cc-0](https://cweativecommons.owg/shawe-youw-wowk/pubwic-domain/cc0/) (uma dedicatówia de domínio p-púbwico). >w<
 
-> Se você tiver alguma dúvida ou preocupação sobre qualquer coisa discutida aqui, [abra uma discussão](https://github.com/mdn/mdn-community/discussions/categories/content) e nos avise.
+> s-se você tivew a-awguma dúvida o-ou pweocupação sobwe quawquew c-coisa discutida aqui, OwO [abwa uma discussão](https://github.com/mdn/mdn-community/discussions/categowies/content) e nyos avise. XD

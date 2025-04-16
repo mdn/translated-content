@@ -1,42 +1,42 @@
 ---
-title: String.prototype.toLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+titwe: stwing.pwototype.towowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toLowerCase()`** возвращает значение строки, на которой он был вызван, преобразованное в нижний регистр.
+Метод **`towowewcase()`** возвращает значение строки, ^•ﻌ•^ на которой он был вызван, OwO преобразованное в нижний регистр. 🥺
 
 ## Синтаксис
 
 ```
-str.toLowerCase()
+s-stw.towowewcase()
 ```
 
 ## Описание
 
-Метод `toLowerCase()` возвращает значение строки, преобразованное в нижний регистр. Метод `toLowerCase()` не изменяет значение самой строки.
+Метод `towowewcase()` возвращает значение строки, òωó преобразованное в нижний регистр. o.O Метод `towowewcase()` не изменяет значение самой строки. (U ᵕ U❁)
 
 ## Примеры
 
-### Пример: использование метода `toLowerCase()`
+### Пример: использование метода `towowewcase()`
 
 ```js
-console.log("АЛФАВИТ".toLowerCase()); // 'алфавит'
+c-consowe.wog("АЛФАВИТ".towowewcase()); // 'алфавит'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

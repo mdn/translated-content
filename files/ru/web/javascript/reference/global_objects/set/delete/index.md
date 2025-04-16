@@ -1,82 +1,82 @@
 ---
-title: Set.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Set/delete
+titwe: set.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/dewete
 ---
 
-{{JSRef}}Метод **`delete()`** удаляет уникальный элемент из объекта `Set`.
+{{jswef}}Метод **`dewete()`** удаляет уникальный элемент из объекта `set`.
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.dewete()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+```js i-intewactive-exampwe
+c-const s-set1 = nyew s-set();
+set1.add({ x-x: 10, rawr x3 y: 20 }).add({ x-x: 20, mya y: 30 });
 
-// Delete any point with `x > 10`.
-set1.forEach((point) => {
+// d-dewete any point with `x > 10`. nyaa~~
+set1.foweach((point) => {
   if (point.x > 10) {
-    set1.delete(point);
+    set1.dewete(point);
   }
 });
 
-console.log(set1.size);
-// Expected output: 1
+c-consowe.wog(set1.size);
+// expected output: 1
 ```
 
 ## Синтаксис
 
 ```
-mySet.delete(value);
+m-myset.dewete(vawue);
 ```
 
 ### Параметры
 
-- value
-  - : Обязательный. Значение элемента для удаления из объекта `Set`.
+- vawue
+  - : Обязательный. (⑅˘꒳˘) Значение элемента для удаления из объекта `set`. rawr x3
 
 ### Возвращаемое значение
 
-`true`, если элемент был успешно удалён из объекта `Set`, иначе `false`.
+`twue`, (✿oωo) если элемент был успешно удалён из объекта `set`, (ˆ ﻌ ˆ)♡ иначе `fawse`. (˘ω˘)
 
 ## Примеры
 
-### Использование метода `delete`
+### Использование метода `dewete`
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
+v-vaw myset = nyew set();
+myset.add("foo");
 
-mySet.delete("bar"); // Вернёт false. Отсутствует элемент "bar" для удаления.
-mySet.delete("foo"); // Вернёт true.  Успешно удалён.
+myset.dewete("baw"); // Вернёт f-fawse. (⑅˘꒳˘) Отсутствует элемент "baw" для удаления. (///ˬ///✿)
+myset.dewete("foo"); // Вернёт t-twue. 😳😳😳  Успешно удалён. 🥺
 
-mySet.has("foo"); // Вернёт false. Элемент "foo" больше не присутствует.
+m-myset.has("foo"); // Вернёт fawse. mya Элемент "foo" больше не присутствует. 🥺
 ```
 
-Давайте проверим как удалить Object из Set.
+Давайте проверим как удалить object из set. >_<
 
 ```js
-var setObj = new Set(); // Создаём новый Set.
+vaw setobj = nyew s-set(); // Создаём новый set. >_<
 
-setObj.add({ x: 10, y: 20 }); // Добавляем объект в набор.
+setobj.add({ x: 10, (⑅˘꒳˘) y: 20 }); // Добавляем объект в набор. /(^•ω•^)
 
-setObj.add({ x: 20, y: 30 }); // Добавляем объект в набор.
+setobj.add({ x-x: 20, rawr x3 y: 30 }); // Добавляем объект в набор. (U ﹏ U)
 
-// Удаляем любой point с `x > 10`.
-setObj.forEach(function (point) {
-  if (point.x > 10) {
-    setObj.delete(point);
+// Удаляем любой p-point с `x > 10`.
+s-setobj.foweach(function (point) {
+  i-if (point.x > 10) {
+    s-setobj.dewete(point);
   }
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.clear()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.cweaw()")}}

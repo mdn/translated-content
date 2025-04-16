@@ -1,79 +1,79 @@
 ---
-title: Utilizando data attributes
-slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
-original_slug: Learn/HTML/Howto/Use_data_attributes
+titwe: utiwizando data attwibutes
+s-swug: weawn_web_devewopment/howto/sowve_htmw_pwobwems/use_data_attwibutes
+owiginaw_swug: w-weawn/htmw/howto/use_data_attwibutes
 ---
 
-O [HTML5](/pt-BR/docs/Glossary/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element/classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
+o-o [htmw5](/pt-bw/docs/gwossawy/htmw5) f-foi c-cwiado pensando n-nya extensibiwidade d-dos dados q-que pwecisam sew associados a um detewminado ewemento mas nyão nyecessawiamente t-tem um significado definido. [atwibutos data-\*](/pt-bw/docs/web/htmw/gwobaw_attwibutes#dataset) n-nos pewmite awmazenaw infowmações e-extwas em ewementos htmw padwões e semânticos, :3 sem a nyecessidades d-de hacks como [cwasswist](/pt-bw/docs/web/api/ewement/cwasswist), ʘwʘ a-atwibutos f-fowa do padwão, 🥺 pwopwiedades extwas nyo dom ou o método depweciado [setusewdata](/pt-bw/docs/web/api/node.setusewdata). >_<
 
-## Sintaxe HTML
+## s-sintaxe htmw
 
-A sintaxe é simples. Qualquer atributo de qualquer elemento no qual o nome do atributo inicia com `data-` é um atributo data. Digamos que você possui um article e quer armazenar informações extras que não possuem nenhuma representação visual. Use atributos data para isso:
+a sintaxe é simpwes. ʘwʘ quawquew atwibuto de quawquew ewemento n-nyo quaw o nyome do atwibuto inicia c-com `data-` é u-um atwibuto data. (˘ω˘) d-digamos que v-você possui um awticwe e quew awmazenaw infowmações e-extwas que nyão possuem nyenhuma wepwesentação v-visuaw. (✿oωo) use atwibutos data pawa isso:
 
-```html
-<article
-  id="electriccars"
-  data-columns="3"
-  data-index-number="12314"
-  data-parent="cars">
+```htmw
+<awticwe
+  id="ewectwiccaws"
+  data-cowumns="3"
+  data-index-numbew="12314"
+  d-data-pawent="caws">
   ...
-</article>
+</awticwe>
 ```
 
-## Acesso no JavaScript
+## acesso nyo javascwipt
 
-Ler os valores destes atributos via [JavaScript](/pt-BR/docs/Web/JavaScript) é muito simples também. Você pode lê-los usando {{domxref("Element.getAttribute", "getAttribute()")}} com o nome html completo, mas a forma padrão provê uma alternativa mais simples: um {{domxref("DOMStringMap")}} pode ser lido através da propriedade {{domxref("HTMLElement.dataset", "dataset")}}.
+w-wew os v-vawowes destes a-atwibutos via [javascwipt](/pt-bw/docs/web/javascwipt) é muito simpwes também. (///ˬ///✿) você pode wê-wos u-usando {{domxwef("ewement.getattwibute", rawr x3 "getattwibute()")}} c-com o nyome htmw compweto, -.- mas a-a fowma padwão p-pwovê uma awtewnativa mais simpwes: u-um {{domxwef("domstwingmap")}} pode sew wido a-atwavés da pwopwiedade {{domxwef("htmwewement.dataset", ^^ "dataset")}}. (⑅˘꒳˘)
 
-Para obter o atributo data através do objeto `dataset`, acesse a propriedade utilizando a parte do nome do atributo após o prefixo `data-` (note que o hífen é convertido para camelCase).
+pawa obtew o atwibuto d-data atwavés do objeto `dataset`, nyaa~~ a-acesse a pwopwiedade utiwizando a-a pawte do nyome d-do atwibuto após o pwefixo `data-` (note que o hífen é convewtido pawa camewcase). /(^•ω•^)
 
 ```js
-var article = document.getElementById("electriccars");
+vaw awticwe = document.getewementbyid("ewectwiccaws");
 
-article.dataset.columns; // "3"
-article.dataset.indexNumber; // "12314"
-article.dataset.parent; // "cars"
+awticwe.dataset.cowumns; // "3"
+a-awticwe.dataset.indexnumbew; // "12314"
+a-awticwe.dataset.pawent; // "caws"
 ```
 
-Cada propriedade é uma String e pode ser lida e escrita. No exemplo acima a atribuição `article.dataset.columns = 5` iria alterar esse atributo para "5".
+cada pwopwiedade é u-uma s-stwing e pode sew w-wida e escwita. (U ﹏ U) nyo exempwo acima a atwibuição `awticwe.dataset.cowumns = 5` iwia awtewaw esse a-atwibuto pawa "5". 😳😳😳
 
-## Acesso no CSS
+## acesso nyo css
 
-Note que os atributos data são atributos em HTML puro, e você pode inclusive acessá-los via [CSS](/pt-BR/docs/Web/CSS). Por exemplo, para mostrar o elemento pai em um artigo, você pode usar [conteúdo gerado](/pt-BR/docs/Web/CSS/content) em CSS com a função {{cssxref("attr")}}:
+nyote que os atwibutos data são atwibutos e-em htmw puwo, >w< e você pode i-incwusive acessá-wos v-via [css](/pt-bw/docs/web/css). XD p-pow exempwo, pawa mostwaw o-o ewemento pai e-em um awtigo, o.O você p-pode usaw [conteúdo g-gewado](/pt-bw/docs/web/css/content) em css com a função {{cssxwef("attw")}}:
 
 ```css
-article::before {
-  content: attr(data-parent);
+a-awticwe::befowe {
+  c-content: attw(data-pawent);
 }
 ```
 
-Pode-se também usar os [seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) em CSS para alterar estilos de acordo com o atributo data:
+p-pode-se t-também usaw os [sewetowes d-de atwibutos](/pt-bw/docs/web/css/attwibute_sewectows) em css pawa awtewaw estiwos de acowdo com o atwibuto d-data:
 
 ```css
-article[data-columns="3"] {
+awticwe[data-cowumns="3"] {
   width: 400px;
 }
-article[data-columns="4"] {
+awticwe[data-cowumns="4"] {
   width: 600px;
 }
 ```
 
-Pode-se tudo isso em funcionamento neste [exemplo JSBin](https://jsbin.com/ujiday/2/edit).
+pode-se tudo i-isso em funcionamento nyeste [exempwo jsbin](https://jsbin.com/ujiday/2/edit). mya
 
-Atributos data também podem ser utilizados para conter informações que mudam constantemente, como a pontuação em um jogo. Usando seletores CSS e acesso com JavaScript permite que se construa efeitos excelentes sem ter que escrever suas próprias rotinas de display. Veja [esta tela](https://www.youtube.com/watch?v=On_WyUB1gOk) para um exemplo utilizando conteúdo gerado e transições CSS ([exemplo JSBin](https://jsbin.com/atawaz/3/edit)).
+atwibutos data t-também podem s-sew utiwizados pawa c-contew infowmações que mudam c-constantemente, 🥺 como a pontuação e-em um jogo. ^^;; u-usando sewetowes css e acesso com javascwipt pewmite que se constwua efeitos excewentes sem tew q-que escwevew suas pwópwias wotinas d-de dispway. :3 veja [esta tewa](https://www.youtube.com/watch?v=on_wyub1gok) p-pawa um exempwo u-utiwizando conteúdo gewado e twansições css ([exempwo j-jsbin](https://jsbin.com/atawaz/3/edit)). (U ﹏ U)
 
-Uma vez que valores data são strings, todos os valores devem estar entre aspas ou então a estilização não fará efeito.
+u-uma vez que vawowes data são s-stwings, OwO todos o-os vawowes devem estaw entwe aspas ou então a estiwização nyão fawá efeito.
 
-## Issues
+## i-issues
 
-Não armazene conteúdo que deve estar visível e acessível nos atributos data porque tecnologias assistivas podem não acessá-los. Além disso, motores de busca podem não indexar os valores dos atributos data.
+nyão a-awmazene conteúdo q-que deve estaw visívew e a-acessívew nyos a-atwibutos data powque tecnowogias a-assistivas podem nyão acessá-wos. 😳😳😳 awém disso, motowes de busca podem nyão i-indexaw os vawowes d-dos atwibutos data. (ˆ ﻌ ˆ)♡
 
-Os principais issues a serem considerados são com suporte e performance no Internet Explorer. O Internet Explorer 11+ provê suporte para o padrão, mas todas as versões anteriores [não suportam `dataset`](http://caniuse.com/#feat=dataset). Para suporte ao IE 10 e anteriores, deve-se acessar atributos data através de {{domxref("Element.getAttribute", "getAttribute()")}} . E ainda, a [performance de leitura dos atributos data](http://jsperf.com/data-dataset) é ruim, comparada com o armazenamento em um data warehouse JS. O uso de `dataset` é até pior que a leitura dos dados com `getAttribute()`.
+os pwincipais issues a s-sewem considewados s-são com supowte e pewfowmance nyo intewnet expwowew. XD o intewnet e-expwowew 11+ pwovê supowte pawa o padwão, (ˆ ﻌ ˆ)♡ mas todas as vewsões antewiowes [não s-supowtam `dataset`](http://caniuse.com/#feat=dataset). ( ͡o ω ͡o ) pawa supowte ao ie 10 e-e antewiowes, rawr x3 d-deve-se acessaw atwibutos data atwavés de {{domxwef("ewement.getattwibute", nyaa~~ "getattwibute()")}} . >_< e ainda, ^^;; a [pewfowmance d-de w-weituwa dos atwibutos data](http://jspewf.com/data-dataset) é wuim, (ˆ ﻌ ˆ)♡ compawada com o awmazenamento e-em um data wawehouse js. ^^;; o uso d-de `dataset` é até piow que a weituwa dos dados com `getattwibute()`. (⑅˘꒳˘)
 
-Apesar do que foi colocado, para metadados customizados associados a elementos, eles são uma ótima solução.
+a-apesaw do que foi cowocado, rawr x3 p-pawa metadados c-customizados associados a e-ewementos, (///ˬ///✿) ewes são uma ótima s-sowução. 🥺
 
-No Firefox 49.0.2 (e talvez em versões anteriores/posteriores), os atributos data que excederem 1022 caracteres não serão lidos pelo Javascript (EcmaScript 4).
+nyo f-fiwefox 49.0.2 (e t-tawvez em vewsões antewiowes/postewiowes), >_< o-os a-atwibutos data que excedewem 1022 cawactewes nyão s-sewão widos p-pewo javascwipt (ecmascwipt 4). UwU
 
-## Veja também
+## v-veja também
 
-- Este artigo é uma adaptação de [Usando atributos data em JavaScript e CSS no hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
-- [Como usar atributos data em HTML5](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- este awtigo é uma adaptação d-de [usando atwibutos data em j-javascwipt e css n-nyo hacks.moziwwa.owg](https://hacks.moziwwa.owg/2012/10/using-data-attwibutes-in-javascwipt-and-css/). >_<
+- [como usaw atwibutos data em htmw5](https://www.sitepoint.com/use-htmw5-data-attwibutes/) (sitepoint)

@@ -1,51 +1,51 @@
 ---
-title: Boolean.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Boolean", "Boolean")}}.
+Метод **`tostwing()`** возвращает строковое представление указанного объекта {{jsxwef("gwobaw_objects/boowean", o.O "boowean")}}. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-bool.toString()
+b-boow.tostwing()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (⑅˘꒳˘)
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/Boolean", "Boolean")}} переопределяет метод `toString` объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} метод `toString` возвращает строковое представление объекта.
+Объект {{jsxwef("gwobaw_objects/boowean", ( ͡o ω ͡o ) "boowean")}} переопределяет метод `tostwing` объекта {{jsxwef("gwobaw_objects/object", UwU "object")}}; он не наследует метод {{jsxwef("object.pwototype.tostwing()")}}. rawr x3 Для объектов {{jsxwef("gwobaw_objects/boowean", "boowean")}} метод `tostwing` возвращает строковое представление объекта. rawr
 
-JavaScript вызывает метод `toString` автоматически, когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} должен быть представлен в виде текста или когда объект {{jsxref("Global_Objects/Boolean", "Boolean")}} находится в контексте строковой конкатенации.
+j-javascwipt вызывает метод `tostwing` автоматически, σωσ когда объект {{jsxwef("gwobaw_objects/boowean", σωσ "boowean")}} должен быть представлен в виде текста или когда объект {{jsxwef("gwobaw_objects/boowean", >_< "boowean")}} находится в контексте строковой конкатенации. :3
 
-Для объектов и значений {{jsxref("Global_Objects/Boolean", "Boolean")}} встроенный метод `toString` возвращает строки «`true`» или «`false`» в зависимости от значения логического объекта.
+Для объектов и значений {{jsxwef("gwobaw_objects/boowean", (U ﹏ U) "boowean")}} встроенный метод `tostwing` возвращает строки «`twue`» или «`fawse`» в зависимости от значения логического объекта. -.-
 
 ## Примеры
 
-### Пример: использование `toString`
+### Пример: использование `tostwing`
 
-В следующем коде вызов `flag.toString()` вернёт строку `"true"`:
+В следующем коде вызов `fwag.tostwing()` вернёт строку `"twue"`:
 
 ```js
-var flag = new Boolean(true);
-var myVar = flag.toString();
+v-vaw fwag = n-nyew boowean(twue);
+v-vaw myvaw = f-fwag.tostwing();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

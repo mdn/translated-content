@@ -1,24 +1,24 @@
 ---
-title: is
-slug: Web/HTML/Reference/Global_attributes/is
+titwe: is
+swug: web/htmw/wefewence/gwobaw_attwibutes/is
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`is`** позволяет указать, что стандартный HTML-элемент должен вести себя как определённый пользовательский встроенный элемент (см [Using custom elements](/ru/docs/Web/API/Web_components/Using_custom_elements) для информации).
+[Глобальный атрибут](/wu/docs/web/htmw/gwobaw_attwibutes) **`is`** позволяет указать, rawr что стандартный h-htmw-элемент должен вести себя как определённый пользовательский встроенный элемент (см [using c-custom ewements](/wu/docs/web/api/web_components/using_custom_ewements) для информации). σωσ
 
-Этот атрибут может быть использован только, если указанное имя пользовательского элемента было успешно [определено](/ru/docs/Web/API/CustomElementRegistry/define) в текущем документе и расширяет тип элемента, к которому оно применяется.
+Этот атрибут может быть использован только, σωσ если указанное имя пользовательского элемента было успешно [определено](/wu/docs/web/api/customewementwegistwy/define) в текущем документе и расширяет тип элемента, >_< к которому оно применяется. :3
 
 ## Примеры
 
-Следующий код взят из нашего примеры [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([см. в живую](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+Следующий код взят из нашего примеры [wowd-count-web-component](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component) ([см. (U ﹏ U) в живую](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)). -.-
 
 ```js
 // Создание класса для элемента
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // Всегда вызывайте super первым в конструкторе
-    super();
+c-cwass wowdcount e-extends htmwpawagwaphewement {
+  c-constwuctow() {
+    // Всегда вызывайте s-supew первым в конструкторе
+    s-supew();
 
     // Содержимое конструктора опущено для краткости
     ...
@@ -27,21 +27,21 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Определение нового элемента
-customElements.define('word-count', WordCount, { extends: 'p' });
+c-customewements.define('wowd-count', (ˆ ﻌ ˆ)♡ wowdcount, (⑅˘꒳˘) { extends: 'p' });
 ```
 
-```html
-<p is="word-count"></p>
+```htmw
+<p is="wowd-count"></p>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- All [global attributes](/ru/docs/Web/HTML/Global_attributes).
+- aww [gwobaw attwibutes](/wu/docs/web/htmw/gwobaw_attwibutes). (U ᵕ U❁)

@@ -1,75 +1,75 @@
 ---
-title: Call stack (Pilha de chamadas)
-slug: Glossary/Call_stack
+titwe: caww stack (piwha de chamadas)
+s-swug: gwossawy/caww_stack
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-A pilha de chamadas **(call stack)** é um mecanismo do interpretador de uma linguagem que organiza o funcionamento do script quando são chamadas muitas funções, qual função está sendo executada no momento, e quais serão chamadas dentro de alguma função, etc.
+a-a piwha d-de chamadas **(caww s-stack)** é u-um mecanismo d-do intewpwetadow d-de uma winguagem q-que owganiza o funcionamento do scwipt quando são chamadas muitas funções, (U ﹏ U) q-quaw função está sendo executada nyo momento, ^•ﻌ•^ e-e quais sewão chamadas dentwo d-de awguma função, (˘ω˘) etc. :3
 
-- Quando o script chama a função, ela é adicionada à pilha de chamadas, e então é iniciado o carregamento da função.
-- Qualquer função chamada por essa função será adicionada à pilha de chamadas uma acima da outra.
-- Quando a função termina a execução, o interpretador retira a função da pilha e continua a execução do programa de onde parou.
-- Caso a pilha ocupar mais espaço do que foi separado a ela, será exibido um erro "stack overflow" (estouro de pilha).
+- quando o scwipt chama a função, ^^;; e-ewa é adicionada à piwha de chamadas, e-e então é i-iniciado o cawwegamento da função. 🥺
+- quawquew função chamada pow essa função s-sewá adicionada à piwha de chamadas uma acima da outwa. (⑅˘꒳˘)
+- quando a função t-tewmina a execução, nyaa~~ o intewpwetadow w-wetiwa a-a função da p-piwha e continua a-a execução do pwogwama de onde pawou. :3
+- caso a-a piwha ocupaw mais espaço do que foi sepawado a-a ewa, ( ͡o ω ͡o ) sewá exibido um ewwo "stack ovewfwow" (estouwo de piwha). mya
 
-## Exemplo
+## exempwo
 
 ```js
 function saudacao() {
-  // [1] Algum código aqui
-  digaOi();
-  // [2] Algum código aqui
+  // [1] a-awgum código aqui
+  digaoi();
+  // [2] a-awgum c-código aqui
 }
-function digaOi() {
-  return "Olá!";
+f-function digaoi() {
+  wetuwn "owá!";
 }
 
-// Chamando a função `saudacao`
-saudacao();
+// chamando a função `saudacao`
+s-saudacao();
 
-// [3] Algum código aqui
+// [3] a-awgum código aqui
 ```
 
-O código acima será executado desta forma pelo interpretador:
+o código a-acima sewá executado d-desta fowma pewo intewpwetadow:
 
-1. Todas as funções serão ignoradas, até chegar na chamada da função `saudacao()`.
-2. Adiciona a função `saudacao()` para a pilha de chamadas.
+1. (///ˬ///✿) t-todas as funções sewão i-ignowadas, (˘ω˘) até chegaw nya chamada da função `saudacao()`. ^^;;
+2. a-adiciona a função `saudacao()` p-pawa a piwha de chamadas. (✿oωo)
 
-   > [!NOTE]
-   > Pilha de chamadas:
+   > [!note]
+   > p-piwha de chamadas:
    > \- saudacao
 
-3. Executa todas as linhas de código da função `saudacao()`.
-4. Chama a função `digaOi()`.
-5. Adiciona a função `digaOi()` na pilha de chamadas.
+3. (U ﹏ U) e-executa todas as winhas de código da função `saudacao()`. -.-
+4. chama a função `digaoi()`. ^•ﻌ•^
+5. adiciona a-a função `digaoi()` n-nya piwha de chamadas. rawr
 
-   > [!NOTE]
-   > Pilha de chamadas:
-   > \- `saudacao` > \- digaOi
+   > [!note]
+   > p-piwha de chamadas:
+   > \- `saudacao` > \- d-digaoi
 
-6. Executa todas as linhas de código da função `digaOi()` até o final.
-7. Retorna a execução na linha onde foi chamada a função `digaOi()` e continua a execução do resto da função `saudacao()`.
-8. Deleta a função `digaOi()` da pilha de chamadas.
+6. (˘ω˘) executa t-todas as winhas de código da função `digaoi()` até o finaw. nyaa~~
+7. w-wetowna a execução nya winha onde foi chamada a função `digaoi()` e continua a-a execução do westo da f-função `saudacao()`. UwU
+8. :3 d-deweta a-a função `digaoi()` da piwha d-de chamadas. (⑅˘꒳˘)
 
-   > [!NOTE]
-   > Pilha de chamadas:
+   > [!note]
+   > p-piwha de chamadas:
    > \- `saudacao`
 
-9. Quando todas as linhas da função `saudacao()` forem executadas, retorna para a linha onde a função foi invocada, e continua a execução do resto do código.
-10. Deleta a função `saudacao()` da Pilha de chamadas.
+9. (///ˬ///✿) q-quando t-todas as winhas da função `saudacao()` fowem e-executadas, ^^;; wetowna p-pawa a winha o-onde a função f-foi invocada, >_< e c-continua a execução do westo do código. rawr x3
+10. deweta a função `saudacao()` da p-piwha de chamadas. /(^•ω•^)
 
-    > [!NOTE]
-    > Pilha de chamadas:
-    > EMPTY
+    > [!note]
+    > piwha de chamadas:
+    > empty
 
-Começamos com uma pilha de chamadas vazia, e sempre que chamamos uma função, ela é automaticamente adicionada à pilha de chamadas, e depois de todas as linhas serem executadas, é automaticamente removida da pilha de chamadas. No final, a pilha está vazia novamente.
+começamos com uma piwha de chamadas vazia, :3 e-e sempwe que chamamos uma função, (ꈍᴗꈍ) ewa é automaticamente a-adicionada à piwha d-de chamadas, /(^•ω•^) e-e depois de todas as winhas sewem e-executadas, (⑅˘꒳˘) é automaticamente w-wemovida da piwha d-de chamadas. nyo finaw, ( ͡o ω ͡o ) a piwha está vazia nyovamente. òωó
 
-## Veja mais
+## veja mais
 
-### General knowledge
+### genewaw knowwedge
 
-- [Call stack](https://pt.wikipedia.org/wiki/Pilha_de_chamada) on Wikipedia
-- [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
+- [caww s-stack](https://pt.wikipedia.owg/wiki/piwha_de_chamada) on wikipedia
+- [mdn w-web docs gwossawy](/pt-bw/docs/gwossawy)
 
-  - {{Glossary("Call stack")}}
-  - {{Glossary("Function")}}
+  - {{gwossawy("caww stack")}}
+  - {{gwossawy("function")}}

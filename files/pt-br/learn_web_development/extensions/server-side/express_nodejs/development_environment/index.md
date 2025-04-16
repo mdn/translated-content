@@ -1,394 +1,394 @@
 ---
-title: Configurando o Node como ambiente de desenvolvimento
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
-original_slug: Learn/Server-side/Express_Nodejs/development_environment
+titwe: configuwando o nyode como a-ambiente de d-desenvowvimento
+s-swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/devewopment_enviwonment
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/intwoduction", (U ᵕ U❁) "weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website", (ˆ ﻌ ˆ)♡ "weawn/sewvew-side/expwess_nodejs")}}
 
-Agora que você sabe para que serve o Express, nós vamos lhe mostrar como configurar e testar o ambiente Node/Express no Windows, Linux (Ubuntu) e macOS. Independentemente do sistema operacional que você prefere, este artigo deve lhe proporcionar o que você precisa para desenvolver aplicativos em Express.
+a-agowa que você s-sabe pawa que s-sewve o expwess, >_< nyós vamos whe mostwaw como configuwaw e testaw o ambiente n-nyode/expwess nyo windows, ^^;; winux (ubuntu) e macos. ʘwʘ i-independentemente do sistema o-opewacionaw que você pwefewe, 😳😳😳 este awtigo deve whe pwopowcionaw o-o que você pwecisa pawa desenvowvew a-apwicativos e-em expwess. UwU
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-Requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Saber como abrir um terminal/linha de comando. Saber como instalar
-        pacotes de software no sistema operacional do computador utilizado para
-        desenvolvimento
+        sabew c-como abwiw um tewminaw/winha de comando. OwO sabew como instawaw
+        pacotes de s-softwawe nyo sistema opewacionaw d-do computadow utiwizado p-pawa
+        d-desenvowvimento
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Configurar o ambiente de desenvolvimento para Express (X.XX) em seu
-        computador
+        c-configuwaw o ambiente de desenvowvimento p-pawa expwess (x.xx) em seu
+        computadow
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão geral do ambiente de desenvolvimento do Express
+## v-visão gewaw do ambiente de desenvowvimento do expwess
 
-_Node_ e _Express_ facilitam a configuração de seu computador para começar a desenvolver aplicações web. Esta seção fornece uma visão ampla de quais ferramentas serão necessárias, explica alguns métodos simples para instalar o Node (e Express) no Ubuntu, macOS e Windows e também mostra como você pode testar sua aplicação.
+_node_ e _expwess_ faciwitam a configuwação d-de seu computadow pawa começaw a-a desenvowvew a-apwicações w-web. :3 esta seção fownece uma visão ampwa de quais fewwamentas s-sewão nyecessáwias, -.- e-expwica awguns métodos s-simpwes pawa instawaw o-o nyode (e expwess) nyo ubuntu, 🥺 m-macos e windows e também m-mostwa como você pode testaw sua apwicação.
 
-### O que é o ambiente de desenvolvimento Express?
+### o-o que é o ambiente de desenvowvimento e-expwess?
 
-O ambiente de desenvolvimento _Express_ inclui uma instalação do _Nodejs,_ o pacote de gerenciamento _NPM_ e (opcionalmente) o _Gerador de Aplicações Express_ em seu computador local.
+o ambiente d-de desenvowvimento _expwess_ i-incwui uma instawação do _nodejs,_ o pacote de gewenciamento _npm_ e (opcionawmente) o _gewadow de apwicações e-expwess_ em seu c-computadow wocaw. -.-
 
-O _Node_ e o _NPM_ são instalados em conjunto por meio de um pacote binário preparado, instaladores, pacotes de gerenciamento de sistemas operacionais ou diretamente da fonte (como mostra a seção seguinte). O _Express_ é então instalado pelo NPM como uma dependência de sua aplicação web _Express_ individual (junto a outras bibliotecas como motores de modelo, drivers de banco de dados, autenticações middleware, middleware para arquivos estáticos, etc.)
+o _node_ e o _npm_ s-são instawados e-em conjunto p-pow meio de um pacote bináwio pwepawado, -.- instawadowes, (U ﹏ U) pacotes d-de gewenciamento de sistemas opewacionais ou diwetamente da fonte (como mostwa a-a seção seguinte). rawr o _expwess_ é e-então instawado p-pewo nypm c-como uma dependência de sua apwicação w-web _expwess_ i-individuaw (junto a-a outwas b-bibwiotecas como motowes de modewo, mya dwivews de b-banco de dados, ( ͡o ω ͡o ) a-autenticações m-middwewawe, /(^•ω•^) middwewawe p-pawa awquivos e-estáticos, etc.)
 
-NPM também pode ser utilizado para instalar (globalmente) o Express Application Generator, uma ferramenta que cria um "esqueleto" de um app Express, seguindo o padrão MVC. O gerador de app é opcional porque você não precisa dessa ferramenta para criar um app ou um construtor Express para ter a mesma arquitetura. Nós vamos usá-lo nesta seção porque nos permite iniciar uma aplicação de uma maneira mais rápida e promover uma estrutura modular.
+nypm também pode sew utiwizado pawa instawaw (gwobawmente) o-o expwess appwication genewatow, >_< uma fewwamenta que cwia um "esqueweto" de um app expwess, s-seguindo o padwão mvc. (✿oωo) o gewadow de app é opcionaw powque você n-nyão pwecisa d-dessa fewwamenta p-pawa cwiaw um app ou um constwutow e-expwess pawa tew a mesma awquitetuwa. 😳😳😳 n-nós vamos u-usá-wo nyesta seção powque nyos pewmite iniciaw uma apwicação de uma maneiwa mais wápida e-e pwomovew uma estwutuwa moduwaw. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Ao contrário de muitos outros framework que não oferecem um servidor web junto ao ambiente de desenvolvimento, o Node/Express cria e roda o seu próprio servidor web.
+> [!note]
+> a-ao contwáwio de muitos outwos f-fwamewowk que n-nyão ofewecem um sewvidow web junto ao ambiente d-de desenvowvimento, 🥺 o-o nyode/expwess cwia e woda o-o seu pwópwio s-sewvidow web. mya
 
-Há outras ferramentas periféricas que integram o ambiente de desenvolvimento, é o caso dos editores de textos (códigos), conhecidos como IDE, e versionadores de códigos, como o Git, que ajudam a gerenciar diferentes versões do código. Estamos partindo da ideia de que você já conhece essas ferramentas e as têm instaladas (em especial o editor de texto).
+há outwas fewwamentas pewiféwicas que integwam o ambiente de desenvowvimento, (ˆ ﻌ ˆ)♡ é o-o caso dos editowes d-de textos (códigos), (⑅˘꒳˘) c-conhecidos como ide, òωó e-e vewsionadowes d-de códigos, o.O como o git, XD que ajudam a-a gewenciaw difewentes vewsões do código. (˘ω˘) estamos pawtindo da ideia de que v-você já conhece e-essas fewwamentas e as têm instawadas (em especiaw o-o editow d-de texto). (ꈍᴗꈍ)
 
-### Quais sistemas operacionais têm suporte?
+### quais sistemas opewacionais têm supowte?
 
-_Node_ roda em Windows, macOS, diferentes versões do Linux, Docker, etc. Há uma lista de sistemas suportados que pode ser encontrada na página de [Downloads](https://nodejs.org/en/download/) do Nodejs. Quase todos os computadores pessoais têm o que é necessário para rodar o Node. O Express roda no ambiente Node e, consequentemente, roda em qualquer plataforma que roda o _Node_.
+_node_ w-woda em windows, >w< macos, difewentes vewsões do winux, XD dockew, -.- etc. há uma wista d-de sistemas supowtados que pode sew encontwada n-nya página de [downwoads](https://nodejs.owg/en/downwoad/) do n-nyodejs. ^^;; quase todos os computadowes pessoais têm o que é nyecessáwio p-pawa w-wodaw o nyode. XD o expwess woda nyo ambiente nyode e, :3 consequentemente, σωσ w-woda em quawquew pwatafowma q-que woda o _node_. XD
 
-Neste artigo, vamos abordar as instruções de configuração para Windows, macOS, e Ubuntu Linux.
+nyeste awtigo, :3 vamos abowdaw as instwuções d-de configuwação pawa windows, rawr m-macos, e ubuntu w-winux. 😳
 
-### Qual versão do Node/Express você deve usar?
+### quaw vewsão do nyode/expwess v-você deve usaw?
 
-Há várias [versões do Node](https://nodejs.org/en/blog/release/) - as mais recentes contém correção de bugs, suporte para EMCAScript (JavaScript) e melhorias nas APIs do Node.
+há v-váwias [vewsões d-do nyode](https://nodejs.owg/en/bwog/wewease/) - a-as mais wecentes contém cowweção d-de bugs, 😳😳😳 s-supowte pawa emcascwipt (javascwipt) e mewhowias n-nyas apis do n-nyode.
 
-De maneira geral, você deve usar a versão mais recente do LTS (long-term supported), pois é a mais estável do que a versão "current". Além disso, você deve usar a versão current apenas se precisar de alguma funcionalidade que não está presente na versão LTS.
+de maneiwa g-gewaw, (ꈍᴗꈍ) você deve usaw a vewsão mais wecente d-do wts (wong-tewm suppowted), 🥺 p-pois é a mais estávew d-do que a vewsão "cuwwent". ^•ﻌ•^ awém disso, XD você deve usaw a-a vewsão cuwwent a-apenas se pwecisaw d-de awguma f-funcionawidade que nyão está pwesente n-nya vewsão wts. ^•ﻌ•^
 
-Para o Express, você deve usar sempre a versão mais completa.
+pawa o expwess, ^^;; você deve usaw sempwe a vewsão mais compweta. ʘwʘ
 
-### Sobre o banco de dados e outras dependências?
+### sobwe o-o banco de dados e outwas dependências?
 
-Outras dependências, como database drivers, engine para templates, ferramentas para autenticação, etc, são parte da aplicação e são importadas para o ambiente a partir do NPM. Nós vamos falar sobre essa parte mais para frente.
+outwas d-dependências, OwO como database d-dwivews, 🥺 engine pawa tempwates, (⑅˘꒳˘) f-fewwamentas pawa autenticação, (///ˬ///✿) e-etc, são pawte d-da apwicação e-e são impowtadas p-pawa o ambiente a-a pawtiw do nypm. (✿oωo) nyós vamos fawaw sobwe essa pawte mais pawa fwente. nyaa~~
 
-## Instalando o Node
+## instawando o node
 
-Para utilizar o Express, você terá que instalar o Nodejs e o [NPM](https://docs.npmjs.com/) em seu sistema operacional. Nas seções a seguir, vamos explicar o jeito mais fácil de instalar a versão LTS do Nodejs no Ubuntu Linux 16.04, macOS e Windows 10.
+pawa utiwizaw o-o expwess, >w< você t-tewá que instawaw o-o nyodejs e o [npm](https://docs.npmjs.com/) e-em seu sistema opewacionaw. (///ˬ///✿) nas seções a seguiw, rawr vamos expwicaw o-o jeito mais f-fáciw de instawaw a vewsão wts d-do nyodejs nyo ubuntu winux 16.04, (U ﹏ U) macos e windows 10. ^•ﻌ•^
 
-> **Nota:** **Dica:** As seções abaixo mostram o jeito mais fácil de instalar o NPM nos Sistemas Operacionais. Se você utilizar outro sistema ou quer ver uma abordagem diferente para as plataformas atuais acesse [Instalando Node.js via NPM](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> **nota:** **dica:** a-as seções abaixo m-mostwam o jeito mais fáciw de i-instawaw o nypm n-nyos sistemas opewacionais. se você utiwizaw outwo sistema ou quew vew uma abowdagem d-difewente p-pawa as pwatafowmas a-atuais acesse [instawando n-nyode.js via nypm](https://nodejs.owg/en/downwoad/package-managew/) (nodejs.owg). (///ˬ///✿)
 
-### Windows e macOS
+### w-windows e macos
 
-Instalar o Node e o NPM no Windows ou no macOS é uma tarefa rápida e simples. Siga os seguintes passos:
+instawaw o-o nyode e o nypm n-nyo windows ou nyo macos é uma t-tawefa wápida e-e simpwes. siga os seguintes passos:
 
-1. Baixar o instalador:
+1. o.O b-baixaw o instawadow:
 
-   1. Vá para <https://nodejs.org/en/>
-   2. Selecione o botão de download da versão LTS, que é a recomendada para a maioria dos usuários.
+   1. >w< vá pawa <https://nodejs.owg/en/>
+   2. nyaa~~ s-sewecione o botão d-de downwoad da v-vewsão wts, òωó que é a wecomendada p-pawa a maiowia dos usuáwios. (U ᵕ U❁)
 
-2. Instale o Node ao clicar duas vezes no arquivo de download. Siga a instalação a partir das janelas que vão aparecer na sua tela.
+2. (///ˬ///✿) instawe o nyode a-ao cwicaw duas v-vezes no awquivo d-de downwoad. (✿oωo) siga a instawação a pawtiw das janewas que vão a-apawecew nya sua tewa.
 
-### Ubuntu 16.04
+### ubuntu 16.04
 
-O jeito mais fácil de instalar a versão LTS do Node é usar o NPM a partir do Ubuntu _binary distributions repository_. Isso pode ser feito de uma maneira muito simples. Rode os seguintes comandos no seu terminal.
+o jeito m-mais fáciw d-de instawaw a vewsão wts do nyode é u-usaw o nypm a pawtiw do ubuntu _binawy d-distwibutions w-wepositowy_. 😳😳😳 isso pode sew feito de u-uma maneiwa muito simpwes. (✿oωo) wode os seguintes comandos n-nyo seu tewminaw. (U ﹏ U)
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
+c-cuww -sw https://deb.nodesouwce.com/setup_8.x | sudo -e bash -
+s-sudo apt-get instaww -y nyodejs
 ```
 
-> **Aviso:** **Atenção:** Não faça a instalação direto do repositório normal do Ubuntu pois ele contém versões antigas do Node.
+> **aviso:** **atenção:** n-nyão faça a instawação d-diweto d-do wepositówio nyowmaw do ubuntu pois ewe contém vewsões antigas do nyode. (˘ω˘)
 
-### Testando a instalação do Nodejs e do NPM
+### testando a instawação do nodejs e do nypm
 
-O jeito mais fácil de testar se tudo correu bem na instalação é checar qual a versão do Node está rodando no computador. Para isso, vá ao terminal/command prompt e digite o seguinte comando para retornar a resposta com a versão mais recente.
+o jeito mais fáciw de testaw se tudo cowweu bem nya instawação é checaw quaw a-a vewsão do n-nyode está wodando nyo computadow. 😳😳😳 pawa isso, (///ˬ///✿) v-vá ao tewminaw/command p-pwompt e d-digite o seguinte comando pawa w-wetownaw a wesposta com a vewsão m-mais wecente. (U ᵕ U❁)
 
 ```bash
 >node -v
-v8.9.4
+v-v8.9.4
 ```
 
-O _NPM_ também deve ter sido instalado. Você pode checar da seguinte maneira:
+o _npm_ também deve t-tew sido instawado. >_< você pode c-checaw da seguinte m-maneiwa:
 
 ```bash
 >npm -v
 5.6.0
 ```
 
-Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro node". Vamos imprimir a tradicional frase "Hello World" no browser quando visitarmos uma determinada URL.
+uma maneiwa um pouco mais d-divewtida de t-testaw é cwiaw u-um sewvidow web e-em "puwo nyode". (///ˬ///✿) v-vamos impwimiw a-a twadicionaw fwase "hewwo w-wowwd" n-nyo bwowsew quando v-visitawmos uma detewminada u-uww. (U ᵕ U❁)
 
-1. Crie um arquivo chamado hellonode.js e cole dentro dele o código abaixo. Estamos usando apenas o Node, sem o Express, e com sintaxe do ES6.
+1. >w< cwie um a-awquivo chamado h-hewwonode.js e cowe dentwo dewe o-o código abaixo. 😳😳😳 estamos usando apenas o nyode, (ˆ ﻌ ˆ)♡ s-sem o expwess, (ꈍᴗꈍ) e com sintaxe d-do es6. 🥺
 
    ```js
-   //Chame o módulo HTTP
-   var http = require("http");
+   //chame o-o móduwo h-http
+   vaw http = wequiwe("http");
 
-   //Crie um servidor HTTP para ouvir as requisições na porta 8000
-   http
-     .createServer(function (request, response) {
-       // Configure o resposta HTTP header com o HTTP status e Content type
-       response.writeHead(200, { "Content-Type": "text/plain" });
+   //cwie u-um sewvidow http pawa ouviw a-as wequisições nya powta 8000
+   h-http
+     .cweatesewvew(function (wequest, >_< wesponse) {
+       // c-configuwe o wesposta http headew com o http status e content type
+       wesponse.wwitehead(200, OwO { "content-type": "text/pwain" });
 
-       // Envie a resposta do body "Hello World"
-       response.end("Hello World\n");
+       // e-envie a wesposta do body "hewwo w-wowwd"
+       w-wesponse.end("hewwo wowwd\n");
      })
-     .listen(8000);
+     .wisten(8000);
 
-   // Imprima URL para acessar o servidor
-   console.log("Server running at http://127.0.0.1:8000/");
+   // impwima uww pawa acessaw o s-sewvidow
+   consowe.wog("sewvew wunning at http://127.0.0.1:8000/");
    ```
 
-   O código importa o módulo "http" e o utiliza para criar um servidor (`createServer()`) que escuta as requisições HTTP na porta 8000. O script, então, imprime a mensagem no console. A função `createServer()` recebe como argumento uma função callback que é chamada quando recebe uma requisição HTTP - isso retorna uma resposta com um status 200 ("OK") do HTTP e o texto "Hello World".
+   o-o código impowta o-o móduwo "http" e-e o utiwiza pawa cwiaw um sewvidow (`cweatesewvew()`) que escuta a-as wequisições h-http nya powta 8000. ^^;; o scwipt, (✿oωo) e-então, impwime a mensagem nyo consowe. UwU a função `cweatesewvew()` w-wecebe como awgumento uma f-função cawwback q-que é chamada q-quando wecebe uma wequisição h-http - isso wetowna u-uma wesposta c-com um status 200 ("ok") d-do http e o texto "hewwo w-wowwd". ( ͡o ω ͡o )
 
-   > [!NOTE]
-   > Não se preocupe se você não entendeu exatamente o que esse código faz. Nós vamos explicar isso em mais detalhes quando iniciarmos a parte do Express.
+   > [!note]
+   > n-nyão se pweocupe s-se você nyão e-entendeu exatamente o-o que esse c-código faz. (✿oωo) nós v-vamos expwicaw i-isso em mais detawhes quando iniciawmos a-a pawte do expwess. mya
 
-2. Inicie o servidor e navegue pelo mesmo diretório que o seu arquivo hellonode.js no terminal. Depois chame o Node da seguinte forma:
+2. i-inicie o sewvidow e nyavegue pewo m-mesmo diwetówio q-que o seu awquivo h-hewwonode.js nyo tewminaw. ( ͡o ω ͡o ) depois chame o nyode da seguinte f-fowma:
 
    ```bash
-   >node hellonode.js
-   Server running at http://127.0.0.1:8000/
+   >node h-hewwonode.js
+   s-sewvew wunning at http://127.0.0.1:8000/
    ```
 
-3. Navegue até a URL (`http://127.0.0.1:8000/`). Se tudo estiver funcionando bem, o browser vai apresentar a frase "Hello World".
+3. :3 nyavegue até a-a uww (`http://127.0.0.1:8000/`). 😳 s-se tudo estivew funcionando bem, (U ﹏ U) o-o bwowsew vai a-apwesentaw a fwase "hewwo wowwd". >w<
 
-## Usando o NPM
+## usando o nypm
 
-Ao lado do próprio Node, o NPM é a ferramenta de trabalho mais importante nas aplicações Node. O NPM é usado para buscar qualquer pacote (biblioteca JavaScript) que uma aplicação precisa para ser desenvolvida, testada ou produzida, além de ser adotado para rodar testes ao longo de todo o processo de desenvolvimento.
+ao wado do p-pwópwio nyode, UwU o-o npm é a fewwamenta d-de twabawho m-mais impowtante nas apwicações nyode. 😳 o nypm é u-usado pawa b-buscaw quawquew pacote (bibwioteca javascwipt) que u-uma apwicação pwecisa pawa sew desenvowvida, XD t-testada ou pwoduzida, (✿oωo) awém de s-sew adotado pawa w-wodaw testes ao wongo de todo o-o pwocesso de desenvowvimento. ^•ﻌ•^
 
-> [!NOTE]
-> A partir da perspectiva do Node, Express é um pacote que precisa ser instalado utilizando o NPM e depois importado para o seu código.
+> [!note]
+> a-a pawtiw da pewspectiva d-do nyode, mya expwess é um pacote q-que pwecisa sew i-instawado utiwizando o-o nypm e d-depois impowtado pawa o seu código. (˘ω˘)
 
-Você pode usar o NPM separadamente para buscar cada pacote desejado. Em geral, nós gerenciamos as dependências com um arquivo chamado [package.json](https://docs.npmjs.com/files/package.json). Esse arquivo lista todas as dependências para um pacote JavaScript específico, incluindo o nome do pacote, a versão, descrição, arquivo de inicialização, produção de dependências, desenvolvimento de dependências, versões do Node que podem ser utilizadas. O **package.json** contém tudo que o NPM precisa para buscar e rodar a sua aplicação (se você está escrevendo uma biblioteca para ser reutilizável, você pode usar essa definição para fazer o upload do pacote para o repositório npm e deixá-lo acessível a qualquer usuário).
+v-você pode u-usaw o nypm sepawadamente p-pawa buscaw cada pacote d-desejado. nyaa~~ em gewaw, nós gewenciamos as dependências c-com um a-awquivo chamado [package.json](https://docs.npmjs.com/fiwes/package.json). :3 e-esse awquivo wista todas as dependências pawa um pacote javascwipt e-específico, (✿oωo) incwuindo o nyome do p-pacote, (U ﹏ U) a vewsão, (ꈍᴗꈍ) d-descwição, (˘ω˘) awquivo de iniciawização, ^^ pwodução d-de dependências, (⑅˘꒳˘) desenvowvimento d-de dependências, rawr v-vewsões d-do node que p-podem sew utiwizadas. :3 o-o **package.json** contém tudo que o nypm pwecisa pawa buscaw e wodaw a s-sua apwicação (se você está e-escwevendo uma bibwioteca pawa sew weutiwizávew, OwO você pode usaw e-essa definição pawa fazew o upwoad do pacote pawa o wepositówio nypm e deixá-wo a-acessívew a-a quawquew usuáwio). (ˆ ﻌ ˆ)♡
 
-### Adicionando dependências
+### adicionando d-dependências
 
-Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependências do projeto e importá-los/chamá-los para dentro da aplicação Node.
+os passos seguintes mostwam c-como baixaw p-pacotes via nypm, :3 sawvá-wos nyas d-dependências do pwojeto e impowtá-wos/chamá-wos p-pawa dentwo da apwicação nyode. -.-
 
-> [!NOTE]
-> Nesta seção mostraremos como buscar e instalar o pacote do Express. Depois, explicaremos como esse e outros pacotes já estão especificados para nós graças ao _Express Application Generator_. É muito importante entendermos como o NPM funciona e o que é criado com o generator.
+> [!note]
+> nyesta seção m-mostwawemos como buscaw e instawaw o pacote do e-expwess. -.- depois, òωó e-expwicawemos c-como esse e outwos pacotes já estão especificados p-pawa nyós gwaças ao _expwess appwication genewatow_. 😳 É muito impowtante entendewmos c-como o-o nypm funciona e-e o que é cwiado c-com o genewatow. nyaa~~
 
-1. Primeiro passo é criar um diretório para sua aplicação. No prompt, insira os comandos a seguir.
+1. pwimeiwo passo é cwiaw um d-diwetówio pawa s-sua apwicação. (⑅˘꒳˘) nyo pwompt, 😳 insiwa os comandos a-a seguiw. (U ﹏ U)
 
    ```bash
-   mkdir myapp
+   mkdiw myapp
    cd myapp
    ```
 
-2. Use o comando `npm init` para criar o arquivo **package.json** da sua aplicação. Esse comando registra para você uma série de informações, como o nome e a versão do seu aplicativo, além do nome do seu "entry point" (**index.js** por padrão). Por hora, vamos manter a configuração padrão.
+2. /(^•ω•^) u-use o comando `npm init` pawa cwiaw o-o awquivo **package.json** d-da sua apwicação. OwO e-esse comando wegistwa p-pawa você u-uma séwie de infowmações, ( ͡o ω ͡o ) como o nyome e a v-vewsão do seu apwicativo, XD awém do nyome do seu "entwy p-point" (**index.js** pow padwão). /(^•ω•^) pow howa, vamos mantew a-a configuwação p-padwão. /(^•ω•^)
 
    ```bash
-   npm init
+   n-nypm i-init
    ```
 
-   Se você acessar o arquivo **package.json** (`cat packge.json`), você verá toda a configuração padrão e, ao final, o tipo de licença que o app está utilizando.
+   s-se você acessaw o awquivo **package.json** (`cat p-packge.json`), 😳😳😳 você vewá toda a configuwação p-padwão e, (ˆ ﻌ ˆ)♡ ao finaw, o tipo de w-wicença que o app está utiwizando. :3
 
    ```json
    {
-     "name": "myapp",
-     "version": "1.0.0",
-     "description": "",
+     "name": "myapp", òωó
+     "vewsion": "1.0.0", 🥺
+     "descwiption": "", (U ﹏ U)
      "main": "index.js",
-     "scripts": {
-       "test": "echo \"Error: no test specified\" && exit 1"
-     },
-     "author": "",
-     "license": "ISC"
+     "scwipts": {
+       "test": "echo \"ewwow: nyo test s-specified\" && e-exit 1"
+     }, XD
+     "authow": "", ^^
+     "wicense": "isc"
    }
    ```
 
-3. Agora, instale o Express dentro do diretório **myapp**. O pacote será salvo automaticamente na lista de dependências do seu **package.json**.
+3. o.O agowa, i-instawe o expwess dentwo do diwetówio **myapp**. o-o pacote sewá s-sawvo automaticamente nya wista d-de dependências d-do seu **package.json**. 😳😳😳
 
    ```bash
-   npm install express
+   nypm instaww e-expwess
    ```
 
-   A lista de dependências do **package.json** agora mostra também a versão do Express que estamos usando. Está grifada no final do arquivo.
+   a wista de dependências do **package.json** a-agowa mostwa também a vewsão d-do expwess que estamos usando. /(^•ω•^) está gwifada n-nyo finaw do a-awquivo. 😳😳😳
 
    ```json
    {
      "name": "myapp",
-     "version": "1.0.0",
-     "description": "",
-     "main": "index.js",
-     "scripts": {
-       "test": "echo \"Error: no test specified\" && exit 1"
-     },
-     "author": "",
-     "license": "ISC",
+     "vewsion": "1.0.0", ^•ﻌ•^
+     "descwiption": "", 🥺
+     "main": "index.js", o.O
+     "scwipts": {
+       "test": "echo \"ewwow: n-nyo test specified\" && e-exit 1"
+     }, (U ᵕ U❁)
+     "authow": "", ^^
+     "wicense": "isc",
      "dependencies": {
-       "express": "^4.16.2"
+       "expwess": "^4.16.2"
      }
    }
    ```
 
-4. Para usar o Express, é preciso incluir a função `require()` no arquivo index.js dentro da sua aplicação. Crie esse arquivo agora mesmo na pasta raiz "**myapp**" e inclua o código a seguir.
+4. (⑅˘꒳˘) p-pawa usaw o expwess, :3 é pweciso i-incwuiw a função `wequiwe()` n-nyo awquivo index.js dentwo d-da sua apwicação. (///ˬ///✿) c-cwie esse awquivo agowa mesmo nya pasta waiz "**myapp**" e incwua o código a-a seguiw. :3
 
    ```js
-   var express = require("express");
-   var app = express();
+   v-vaw expwess = wequiwe("expwess");
+   vaw app = expwess();
 
-   app.get("/", function (req, res) {
-     res.send("Hello World!");
+   a-app.get("/", 🥺 function (weq, mya w-wes) {
+     wes.send("hewwo w-wowwd!");
    });
 
-   app.listen(8000, function () {
-     console.log("Example app listening on port 8000!");
+   app.wisten(8000, XD function () {
+     consowe.wog("exampwe app w-wistening on powt 8000!");
    });
    ```
 
-   O código mostra uma aplicação web bem simples cujo objetivo único é imprimir a mensagem "HelloWorld". Em linhas gerais, esse arquivo importa o módulo do express e o utiliza para criar um servidor (`app`) que escuta as requisições HTTP pela porta 8000 e imprime a mensagem no console, além de definir qual URL usada para testar o servidor. A função `app.get()` responde apenas às requisições HTTP feitas com o método GET, desde que especificadas com o path ('/'). Nesse caso, chamando a função para enviar a mensagem _Hello World_!
+   o código mostwa uma a-apwicação web bem simpwes cujo o-objetivo único é i-impwimiw a mensagem "hewwowowwd". -.- e-em winhas g-gewais, o.O esse awquivo i-impowta o m-móduwo do expwess e-e o utiwiza p-pawa cwiaw um sewvidow (`app`) que escuta as wequisições http pewa powta 8000 e impwime a mensagem nyo consowe, (˘ω˘) a-awém de definiw q-quaw uww usada p-pawa testaw o s-sewvidow. (U ᵕ U❁) a função `app.get()` w-wesponde apenas às w-wequisições http feitas com o método get, rawr desde que especificadas com o p-path ('/'). 🥺 nyesse c-caso, rawr x3 chamando a função pawa enviaw a mensagem _hewwo wowwd_! ( ͡o ω ͡o )
 
-5. Rode a linha de comando abaixo para iniciar o servidor.
+5. σωσ w-wode a winha d-de comando abaixo p-pawa iniciaw o sewvidow. rawr x3
 
    ```bash
    >node index.js
-   Example app listening on port 8000
+   e-exampwe app wistening on powt 8000
    ```
 
-6. Vá para a seguinte URL (`http://127.0.0.1:8000/`). Se tudo estiver funcionando corretamente, o browser vai mostrar a mensagem "Hello World!".
+6. (ˆ ﻌ ˆ)♡ vá p-pawa a seguinte u-uww (`http://127.0.0.1:8000/`). rawr se tudo estivew funcionando cowwetamente, :3 o-o bwowsew vai mostwaw a-a mensagem "hewwo w-wowwd!". rawr
 
-### Desenvolvendo dependências
+### desenvowvendo d-dependências
 
-Se você utilizar uma dependência apenas durante o desenvolvimento da aplicação, é recomendado que você a salve como uma "development dependency". Dessa forma, o pacote não será utilizado no ambiente de produção. Por exemplo: caso utilizar o pacote [eslint](http://eslint.org/) (JavaScript Linting), você faria a instalação via NPM da seguinte forma.
+se v-você utiwizaw u-uma dependência a-apenas duwante o-o desenvowvimento d-da apwicação, (˘ω˘) é wecomendado q-que você a sawve c-como uma "devewopment dependency". (ˆ ﻌ ˆ)♡ d-dessa fowma, mya o pacote nyão sewá utiwizado n-nyo ambiente de pwodução. (U ᵕ U❁) pow e-exempwo: caso utiwizaw o pacote [eswint](http://eswint.owg/) (javascwipt w-winting), mya v-você fawia a instawação via nypm da seguinte f-fowma. ʘwʘ
 
 ```bash
-npm install eslint --save-dev
+nypm instaww eswint --save-dev
 ```
 
-Assim, a eslint vai aparecer da seguinte forma na lista de dependências do **package.json**.
+a-assim, (˘ω˘) a-a eswint vai apawecew da seguinte fowma nya wista d-de dependências d-do **package.json**. 😳
 
 ```json
-  "devDependencies": {
-    "eslint": "^4.12.1"
+  "devdependencies": {
+    "eswint": "^4.12.1"
   }
 ```
 
-> [!NOTE]
-> "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" são ferramentas que nos ajudam a identificar e reportar que o código está sendo escrito dentro das melhores práticas.
+> [!note]
+> "[wintews](<https://en.wikipedia.owg/wiki/wint_(softwawe)>)" são fewwamentas q-que nyos ajudam a identificaw e wepowtaw que o-o código está s-sendo escwito dentwo das mewhowes p-pwáticas. òωó
 
-### Rodando tarefas
+### w-wodando tawefas
 
-Além de definir e buscar dependências, você também pode nomear scripts dentro do seu arquivo **package.json** e chamar o NPM para executá-lo a partir de um [run-script](https://docs.npmjs.com/cli/run-script) command. Essa abordagem é comum para automatizar testes e tarefas ao longo do desenvolvimento (por exemplo: minificar o JavaScript, reduzir imagens, LINT/análise de códigos, etc).
+awém de definiw e buscaw dependências, nyaa~~ v-você t-também pode n-nyomeaw scwipts d-dentwo do seu awquivo **package.json** e chamaw o nypm pawa executá-wo a pawtiw de um [wun-scwipt](https://docs.npmjs.com/cwi/wun-scwipt) command. o.O essa abowdagem é c-comum pawa a-automatizaw testes e-e tawefas ao w-wongo do desenvowvimento (pow exempwo: m-minificaw o-o javascwipt, weduziw imagens, nyaa~~ w-wint/anáwise de c-códigos, etc). (U ᵕ U❁)
 
-> [!NOTE]
-> Ferramentas de automação de tarefas como o [Gulp](http://gulpjs.com/) e o [Grunt](http://gruntjs.com/) também podem ser utilizados, além de outros pacotes externos.
+> [!note]
+> fewwamentas de automação d-de tawefas c-como o [guwp](http://guwpjs.com/) e o [gwunt](http://gwuntjs.com/) também p-podem sew utiwizados, awém de outwos pacotes extewnos. 😳😳😳
 
-Para definir o script que roda o _eslint_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
+p-pawa definiw o scwipt que w-woda o _eswint_, (U ﹏ U) c-citado nya seção acima, ^•ﻌ•^ nyós p-pwecisamos adicionaw o-o seguinte b-bwoco nyo nyosso **package.json** (impowtante: sua apwicação p-pwecisa tew como s-souwce está nya pasta /swc/js):
 
 ```json
-"scripts": {
+"scwipts": {
   ...
-  "lint": "eslint src/js"
+  "wint": "eswint s-swc/js"
   ...
 }
 ```
 
-Explicando um pouco mais: `eslint src/js` é o comando que colocamos no nosso terminal para rodar o `eslint` nos arquivos JavaScript situados no diretório `src/js` dentro do diretório do nosso app. Incluindo o comando, criamos o comando de atalho - `lint`.
+expwicando u-um pouco mais: `eswint s-swc/js` é o-o comando que cowocamos nyo n-nyosso tewminaw pawa wodaw o `eswint` nyos awquivos j-javascwipt situados nyo diwetówio `swc/js` dentwo do diwetówio do nyosso app. (⑅˘꒳˘) incwuindo o comando, cwiamos o comando de atawho - `wint`. >_<
 
 ```bash
-npm run-script lint
-# OR (using the alias)
-npm run lint
+n-nypm wun-scwipt wint
+# ow (using the awias)
+nypm wun wint
 ```
 
-O exemplo pode não parecer mais curto do que o comando original, mas com o que você aprendeu é possível incluir comandos bem maiores dentro do npm scripts, como as cadeias de múltiplos comandos. Você pode até escrever um único script npm para rodar todos os seus testes de uma só vez.
+o exempwo pode nyão pawecew mais cuwto d-do que o comando owiginaw, (⑅˘꒳˘) mas com o que você apwendeu é p-possívew incwuiw comandos b-bem maiowes dentwo do nypm scwipts, σωσ como as c-cadeias de múwtipwos comandos. 🥺 v-você pode até escwevew um único s-scwipt nypm p-pawa wodaw todos os seus testes de uma só vez. :3
 
-## Instalando o Express Application Generator
+## i-instawando o expwess appwication genewatow
 
-O [Express Application Generator](https://expressjs.com/en/starter/generator.html) é uma ferramenta que cria "esqueleto" para aplicações Express. A instalação é realizada via NPM como mostrada a seguir (o comando `-g` instala a pacote globalmente, ou seja, você pode acessá-lo de qualquer lugar do seu computador).
+o [expwess appwication g-genewatow](https://expwessjs.com/en/stawtew/genewatow.htmw) é uma fewwamenta q-que cwia "esqueweto" pawa a-apwicações expwess. (ꈍᴗꈍ) a instawação é w-weawizada v-via nypm como mostwada a seguiw (o comando `-g` i-instawa a pacote gwobawmente, ^•ﻌ•^ ou seja, você pode a-acessá-wo de quawquew wugaw do seu computadow). (˘ω˘)
 
 ```
-npm install express-generator -g
+nypm instaww expwess-genewatow -g
 ```
 
-Para criar um aplicativo Express chamado "helloworld" com as configurações padrões, vá até o local/pasta em que você deseja desenvolver o projeto e escreva a seguinte linha de comando:
+p-pawa cwiaw um apwicativo e-expwess chamado "hewwowowwd" c-com as configuwações p-padwões, 🥺 vá até o-o wocaw/pasta em que você deseja desenvowvew o pwojeto e escweva a seguinte winha d-de comando:
 
 ```bash
-express helloworld
+e-expwess hewwowowwd
 ```
 
-> [!NOTE]
-> Nota: Você também pode definir a biblioteca de template que pretende usar e muitas outras configurações. Use o comando `help` para ver todas as opções.
+> [!note]
+> n-nyota: v-você também pode definiw a b-bibwioteca de tempwate que pwetende usaw e muitas o-outwas configuwações. (✿oωo) use o comando `hewp` p-pawa vew todas as o-opções. XD
 >
 > ```bash
-> express --help
+> expwess --hewp
 > ```
 
-O NPM vai criar um novo aplicativo Express em uma subpasta na localização em que você está. O progresso será apresentado no console. Para finalizar, o processo, a ferramenta mostrará os comandos que você precisa seguir para instalar a dependência Node e iniciar o seu app.
+o nypm vai cwiaw u-um nyovo apwicativo expwess em uma subpasta nya wocawização em que você está. (///ˬ///✿) o pwogwesso sewá apwesentado nyo consowe. pawa f-finawizaw, ( ͡o ω ͡o ) o p-pwocesso, a fewwamenta mostwawá o-os comandos que v-você pwecisa seguiw pawa instawaw a-a dependência nyode e iniciaw o seu app. ʘwʘ
 
-> [!NOTE]
-> O novo app terá um arquivo package.json no diretório raiz. Você pode abrir esse arquivo para checar o que foi instalado, incluindo o Express e Jade (template library) .
+> [!note]
+> o novo app tewá um awquivo package.json n-nyo diwetówio waiz. rawr você pode abwiw esse awquivo pawa checaw o que foi instawado, o.O i-incwuindo o-o expwess e jade (tempwate w-wibwawy) . ^•ﻌ•^
 >
 > ```js
 > {
->   "name": "helloworld",
->   "version": "0.0.0",
->   "private": true,
->   "scripts": {
->     "start": "node ./bin/www"
->   },
+>   "name": "hewwowowwd", (///ˬ///✿)
+>   "vewsion": "0.0.0", (ˆ ﻌ ˆ)♡
+>   "pwivate": twue, XD
+>   "scwipts": {
+>     "stawt": "node ./bin/www"
+>   }, (✿oωo)
 >   "dependencies": {
->     "body-parser": "~1.18.2",
->     "cookie-parser": "~1.4.3",
->     "debug": "~2.6.9",
->     "express": "~4.15.5",
->     "jade": "~1.11.0",
->     "morgan": "~1.9.0",
->     "serve-favicon": "~2.4.5"
+>     "body-pawsew": "~1.18.2", -.-
+>     "cookie-pawsew": "~1.4.3",
+>     "debug": "~2.6.9", XD
+>     "expwess": "~4.15.5", (✿oωo)
+>     "jade": "~1.11.0", (˘ω˘)
+>     "mowgan": "~1.9.0", (ˆ ﻌ ˆ)♡
+>     "sewve-favicon": "~2.4.5"
 >   }
 > }
 > ```
 
-Instale todas as dependências para o app helloworld com o NPM, de acordo com os comandos abaixo:
+instawe todas as dependências p-pawa o app hewwowowwd c-com o n-nypm, de acowdo com os comandos a-abaixo:
 
 ```bash
-cd helloworld
-npm install
+cd hewwowowwd
+npm i-instaww
 ```
 
-Agora, rode o aplicativo (o comando muda um pouco entre Windows, Linux/macOS), como está no código a seguir:
+agowa, >_< wode o apwicativo (o c-comando muda um pouco e-entwe windows, -.- winux/macos), (///ˬ///✿) como está nyo código a-a seguiw:
 
 ```bash
-# Rode o helloworld no Windows
-SET DEBUG=helloworld:* & npm start
+# wode o-o hewwowowwd nyo w-windows
+set debug=hewwowowwd:* & nypm stawt
 
-# Rode helloworld no Linux/macOS
-DEBUG=helloworld:* npm start
+# w-wode hewwowowwd n-nyo winux/macos
+debug=hewwowowwd:* n-npm stawt
 ```
 
-O comando DEBUG gera um loggin bem útil, apresentando resultados, como abaixo:
+o comando debug g-gewa um woggin bem útiw, XD apwesentando w-wesuwtados, ^^;; c-como abaixo:
 
 ```bash
->SET DEBUG=helloworld:* & npm start
+>set debug=hewwowowwd:* & nypm stawt
 
-> helloworld@0.0.0 start D:\Github\expresstests\helloworld
-> node ./bin/www
+> h-hewwowowwd@0.0.0 stawt d:\github\expwesstests\hewwowowwd
+> nyode ./bin/www
 
-  helloworld:server Listening on port 3000 +0ms
+  hewwowowwd:sewvew wistening on powt 3000 +0ms
 ```
 
-Abre um browser e navegue para `http://127.0.0.1:3000/` e veja a página default apresentada pelo aplicativo.
+abwe um bwowsew e nyavegue pawa `http://127.0.0.1:3000/` e-e veja a página defauwt apwesentada p-pewo apwicativo. rawr x3
 
-![Express - Generated App Default Screen](express_default_screen.png)
+![expwess - genewated app defauwt s-scween](expwess_defauwt_scween.png)
 
-Vamos falar mais sobre o "gerador" quando chegarmos ao artigo referente à geração de esqueletos de uma aplicação.
+vamos fawaw mais sobwe o-o "gewadow" quando chegawmos ao awtigo wefewente à g-gewação de esquewetos de uma apwicação. OwO
 
-## Sumário
+## s-sumáwio
 
-Agora você tem o desenvolvimento do Node pronto para rodar no seu computador e que pode ser utilizado para criar aplicações web com o framework Express. Você também viu como o NPM é utilizado para importar o Express em sua aplicação e como criar um esqueleto a partir do Express Aplication Generator.
+agowa você tem o desenvowvimento d-do nyode pwonto pawa wodaw nyo seu computadow e-e que pode sew utiwizado p-pawa cwiaw apwicações web com o fwamewowk e-expwess. ʘwʘ você t-também viu como o nypm é utiwizado p-pawa impowtaw o-o expwess em sua apwicação e como cwiaw u-um esqueweto a pawtiw do expwess apwication genewatow. rawr
 
-No próximo artigo, nós vamos iniciar um tutorial para construir uma aplicação web completa utilizando esse ambiente junto com as ferramentas.
+no pwóximo a-awtigo, UwU nyós vamos iniciaw um tutowiaw pawa constwuiw uma a-apwicação web c-compweta utiwizando e-esse ambiente junto com as fewwamentas. (ꈍᴗꈍ)
 
-## Veja também
+## veja também
 
-- [Downloads](https://nodejs.org/en/download/) página (nodejs.org)
-- [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
-- [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
-- [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
+- [downwoads](https://nodejs.owg/en/downwoad/) página (nodejs.owg)
+- [instawwing n-nyode.js via package managew](https://nodejs.owg/en/downwoad/package-managew/) (nodejs.owg)
+- [instawwing e-expwess](http://expwessjs.com/en/stawtew/instawwing.htmw) (expwessjs.com)
+- [expwess appwication genewatow](https://expwessjs.com/en/stawtew/genewatow.htmw) (expwessjs.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/intwoduction", (✿oωo) "weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website", (⑅˘꒳˘) "weawn/sewvew-side/expwess_nodejs")}}
 
-## Outros módulos
+## o-outwos m-móduwos
 
-- [Express/Node introduction](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [expwess/node intwoduction](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/intwoduction)
+- [setting up a nyode (expwess) devewopment enviwonment](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/devewopment_enviwonment)
+- [expwess tutowiaw: t-the wocaw w-wibwawy website](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website)
+- [expwess tutowiaw pawt 2: cweating a-a skeweton website](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/skeweton_website)
+- [expwess tutowiaw pawt 3: using a database (with m-mongoose)](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/mongoose)
+- [expwess t-tutowiaw p-pawt 4: woutes and c-contwowwews](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/woutes)
+- [expwess t-tutowiaw pawt 5: d-dispwaying wibwawy data](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data)
+- [expwess tutowiaw pawt 6: w-wowking with f-fowms](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/fowms)
+- [expwess t-tutowiaw p-pawt 7: depwoying t-to pwoduction](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/depwoyment)

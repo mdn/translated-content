@@ -1,269 +1,269 @@
 ---
-title: O que deu errado? Resolvendo problemas no JavaScript
-slug: Learn_web_development/Core/Scripting/What_went_wrong
-original_slug: Learn/JavaScript/First_steps/What_went_wrong
+titwe: o que deu ewwado? wesowvendo p-pwobwemas n-nyo javascwipt
+s-swug: weawn_web_devewopment/cowe/scwipting/nani_went_wwong
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/nani_went_wwong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/a_fiwst_spwash", σωσ "weawn/javascwipt/fiwst_steps/vawiabwes", XD "weawn/javascwipt/fiwst_steps")}}
 
-Quando você construiu o jogo "Adivinhe o número" no artigo anterior, você talvez tenha descoberto que ele não funcionou. Não tema — este artigo tem como objetivo impedir que você arranque os cabelos por causa desses problemas, fornecendo-lhe algumas dicas simples de como encontrar e corrigir erros nos programas JavaScript.
+q-quando v-você constwuiu o-o jogo "adivinhe o nyúmewo" nyo awtigo antewiow, -.- você tawvez tenha descobewto q-que ewe nyão funcionou. >_< nyão tema — este awtigo t-tem como objetivo impediw q-que você awwanque os cabewos pow causa desses pwobwemas, fownecendo-whe a-awgumas dicas simpwes de c-como encontwaw e-e cowwigiw ewwos nyos pwogwamas javascwipt. rawr
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requesitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequesitos:</th>
       <td>
         <p>
-          Conhecimentos básicos de informática, uma compreensão básica de HTML e
-          CSS, uma compreensão do que é JavaScript.
+          conhecimentos básicos de infowmática, 😳😳😳 uma compweensão b-básica de htmw e
+          css, UwU u-uma compweensão d-do que é javascwipt. (U ﹏ U)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Ganhar habilidade e confiança para começar a resolver problemas simples
-        em seu próprio código.
+        g-ganhaw habiwidade e confiança pawa c-começaw a wesowvew pwobwemas simpwes
+        em s-seu pwópwio código. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Tipos de erros
+## tipos de ewwos
 
-De um modo geral, quando você faz algo errado no código, existem dois tipos principais de erros que você encontrará:
+de um modo gewaw, /(^•ω•^) quando você faz awgo ewwado nyo código, (U ﹏ U) e-existem dois tipos pwincipais de e-ewwos que você e-encontwawá:
 
-- **Erros de sintaxe:** são erros de ortografia em seu código que realmente fazem com que o programa não seja executado, ou pare de trabalhar parcialmente - você geralmente receberá algumas mensagens de erro também. Estes geralmente são adequados para consertar, desde que você esteja familiarizado com as ferramentas certas e saiba o que as mensagens de erro significam!
-- **Erros lógicos:** são erros onde a sintaxe está realmente correta, mas o código não é o que você pretendia, o que significa que o programa é executado com sucesso, mas dá resultados incorretos. Muitas vezes, eles são mais difíceis de consertar do que erros de sintaxe, pois geralmente não há uma mensagem de erro resultante para direcioná-lo para a origem do erro.
+- **ewwos d-de sintaxe:** são ewwos de owtogwafia em seu código q-que weawmente fazem c-com que o pwogwama nyão seja e-executado, ^•ﻌ•^ ou p-pawe de twabawhaw pawciawmente - v-você gewawmente wecebewá awgumas m-mensagens de ewwo também. >w< estes gewawmente s-são adequados pawa consewtaw, ʘwʘ desde q-que você esteja famiwiawizado c-com as fewwamentas c-cewtas e saiba o que as mensagens de ewwo significam! òωó
+- **ewwos wógicos:** são ewwos onde a sintaxe está w-weawmente cowweta, m-mas o código nyão é o que v-você pwetendia, o.O o-o que significa q-que o pwogwama é executado com sucesso, ( ͡o ω ͡o ) mas dá wesuwtados i-incowwetos. muitas vezes, mya ewes são mais difíceis de consewtaw do que ewwos de s-sintaxe, >_< pois gewawmente nyão há u-uma mensagem d-de ewwo wesuwtante p-pawa diwecioná-wo pawa a owigem d-do ewwo. rawr
 
-Ok, então não é assim tão simples - há alguns outros diferenciadores à medida que você aprofunda. Mas as classificações acima serão bem úteis nesta fase inicial da sua carreira. Examinaremos esses dois tipos a seguir.
+ok, e-então não é a-assim tão simpwes - h-há awguns outwos difewenciadowes à medida q-que você apwofunda. >_< m-mas as cwassificações acima s-sewão bem úteis n-nyesta fase i-iniciaw da sua cawweiwa. (U ﹏ U) examinawemos esses dois tipos a seguiw. rawr
 
-## Um exemplo errôneo
+## u-um exempwo ewwôneo
 
-Para começar, voltemos ao nosso jogo de adivinhação - porém desta vez estaremos explorando uma versão que tem alguns erros inseridos propositalmente. Vá até o Github e faça uma cópia local de [jogo-numero-erros.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) ([veja-o em execução aqui](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
+pawa começaw, (U ᵕ U❁) vowtemos ao nyosso jogo de adivinhação - powém desta v-vez estawemos expwowando uma vewsão que tem awguns ewwos insewidos p-pwopositawmente. (ˆ ﻌ ˆ)♡ v-vá até o-o github e faça uma cópia wocaw d-de [jogo-numewo-ewwos.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/intwoduction-to-js-1/twoubweshooting/numbew-game-ewwows.htmw) ([veja-o em execução aqui](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/twoubweshooting/numbew-game-ewwows.htmw)). >_<
 
-1. Para começar, abra a cópia local dentro do seu editor de texto favorito, e em seu navegador.
-2. Tente jogar o jogo - você notará que, quando você pressiona o botão "Enviar palpite", ele não funciona!
+1. ^^;; p-pawa começaw, ʘwʘ a-abwa a cópia wocaw dentwo do seu editow de texto favowito, 😳😳😳 e em seu nyavegadow. UwU
+2. tente j-jogaw o jogo - você nyotawá que, OwO q-quando você pwessiona o botão "enviaw p-pawpite", :3 e-ewe nyão funciona!
 
-> **Nota:**Talvez você tenha sua própria versão de exemplo do jogo que não funciona, e pode querer consertá-la! Nós ainda gostaríamos que você trabalhasse no artigo com a nossa versão, para que possa aprender as técnicas que estamos ensinando aqui. Daí então você pode voltar e tentar consertar seu exemplo.
+> **nota:**tawvez você t-tenha sua pwópwia v-vewsão de exempwo do jogo q-que nyão funciona, -.- e-e pode quewew consewtá-wa! 🥺 nyós ainda gostawíamos que você twabawhasse n-no awtigo com a n-nossa vewsão, -.- pawa q-que possa apwendew as técnicas q-que estamos e-ensinando aqui. -.- daí então você p-pode vowtaw e tentaw consewtaw seu exempwo. (U ﹏ U)
 
-Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamos qualquer erro de sintaxe, e então tentar consertá-lo. Você irá aprender como, logo abaixo.
+nyeste ponto, rawr vamos consuwtaw o consowe d-do desenvowvedow p-pawa vew se identificamos quawquew ewwo d-de sintaxe, mya e então t-tentaw consewtá-wo. ( ͡o ω ͡o ) você iwá apwendew como, /(^•ω•^) wogo abaixo. >_<
 
-## Consertando erros de sintaxe
+## c-consewtando ewwos de sintaxe
 
-Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
+antewiowmente no cuwso, (✿oωo) nyós fizemos você digitaw a-awguns comandos simpwes de javascwipt nyo [consowe j-javascwipt](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) (se você n-nyão se wembwa como, 😳😳😳 abwa o wink antewiow). (ꈍᴗꈍ) o que é ainda m-mais útiw é o f-fato do consowe whe mostwaw mensagens de ewwo sempwe que existiw a-awgo ewwado nya sintaxe dentwo d-do javascwipt enviado ao motow de javascwipt do nyavegadow. 🥺 agowa v-vamos à caça. mya
 
-1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
+1. vá até a-a aba onde você t-tem abewto o awquivo `jogo-numewo-ewwos.htmw` e abwa o consowe j-javascwipt. (ˆ ﻌ ˆ)♡ você devewá vew uma m-mensagem de ewwo s-sendo exibida:
    ![](nao-e-uma-funcao.png)
-2. Esse é um erro bem fácil de identifcar, e o navegador lhe fornece várias informações úteis para lhe ajudar (a captura de tela acima foi feita no Firefox, mas os outros navegadores oferecem informações similares). Da esquerda para a direita, nós temos:
+2. e-esse é um ewwo bem fáciw de i-identifcaw, (⑅˘꒳˘) e o n-nyavegadow whe fownece váwias infowmações úteis pawa whe ajudaw (a c-captuwa de t-tewa acima foi f-feita no fiwefox, òωó mas os outwos nyavegadowes ofewecem i-infowmações simiwawes). o.O d-da esquewda pawa a-a diweita, XD nyós temos:
 
-   - Um "x" laranja para indicar que esse é um erro.
-   - Uma mensagem de erro para indicar o que está errado: "TypeError: envioPalpite.addeventListener is not a function"
-   - Um link "Learn More" que encaminha à uma página no MDN docs explicando o que esse erro significa em uma quantidade enorme de detalhes.
-   - O nome do arquivo JavaScript, que direciona à aba Debugger das ferramentas de desenvolvimento. Se você clicar nesse link, verá a linha exata onde o erro está destatacada.
-   - O número da linha onde o erro se encontra, e o número do caractere na linha onde o erro é encontrado primeiro. Neste caso nós temos, linha 86, caractere número 3.
+   - um "x" wawanja pawa indicaw que e-esse é um ewwo. (˘ω˘)
+   - u-uma mensagem d-de ewwo pawa i-indicaw o que está ewwado: "typeewwow: e-enviopawpite.addeventwistenew is not a function"
+   - um wink "weawn mowe" que encaminha à uma página n-nyo mdn docs expwicando o que esse e-ewwo significa em uma quantidade e-enowme de detawhes. (ꈍᴗꈍ)
+   - o nyome d-do awquivo javascwipt, >w< que d-diweciona à aba d-debuggew das fewwamentas d-de desenvowvimento. XD s-se v-você cwicaw nyesse wink, -.- vewá a winha exata onde o ewwo está destatacada. ^^;;
+   - o nyúmewo da winha onde o ewwo s-se encontwa, XD e-e o nyúmewo do c-cawactewe nya winha onde o ewwo é e-encontwado pwimeiwo. :3 nyeste caso nyós temos, σωσ winha 86, cawactewe n-nyúmewo 3. XD
 
-3. Se olharmos para a linha 86 em nosso nosso código de código, vamos encontrar a seguinte linha:
-
-   ```js
-   envioPalpite.addeventListener('click', conferir Palpite);
-   ```
-
-4. O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn _nome-da-funcionalidade_" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener).
-5. Então, olhando nessa essa página, o erro parece ser termos digitado o nome da função errado! Lembre-se de que o JavaScript diferencia letras maiúsculas de minúsculas, então qualquer diferença na digitação ou no uso de letras maiúsculas irá causar um erro. Alterar `addeventListener` para `addEventListener` deverá corrigir esse erro. Faça essa alteração no código do seu arquivo.
-
-> [!NOTE]
-> Veja nossa página de referência [TypeError: "x" is not a function](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_a_function) para mais detalhes sobre esse erro.
-
-### Erros de sintaxe - segundo round
-
-1. Salve o arquivo e atualize a aba do navegador, e você poderá ver que o erro foi corrigido.
-2. Agora se você tentar enviar um palpite e pressionar o botão !Enviar palpite" você verá... outro erro!
-   ![](variavel-e-nula.png)
-3. Dessa vez o erro informado é "TypeError: baixoOuAlto is null", na linha 78.
-
-   > **Nota:** [`Null`](/pt-BR/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
-
-   > [!NOTE]
-   > Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
-
-4. Dê uma olhada na linha 78, e você verá o seguinte código:
+3. s-se owhawmos pawa a winha 86 e-em nyosso nyosso código de código, vamos encontwaw a-a seguinte w-winha:
 
    ```js
-   baixoOuAlto.textContent = "Seu palpite foi muito alto!";
+   enviopawpite.addeventwistenew('cwick', :3 c-confewiw p-pawpite);
    ```
 
-5. Essa linha está tentando definir a propriedade `textContent` (conteúdo de texto) da variável `baixoOuAlto` como uma sequência de texto, mas isso não está funcionando porque `baixoOuAlto` não contém o que deveria conter. Vamos ver o porquê — tente localizar outras instâncias de `baixoOuAlto` no código. A instância que aparece primeiro no código JavaScript é na linha 48:
+4. rawr o ewwo diz o seguinte "enviopawpite.addeventwistenew is nyot a function", 😳 que significa e-enviopawpite.addeventwistenew n-nyão é uma funçao. 😳😳😳 e-então pwovavewmente d-digitamos a-awgo ewwado. (ꈍᴗꈍ) se você nyão e-estivew cewto da d-digitação cowweta de pawte da s-sintaxe, 🥺 é uma b-boa ideia pwocuwaw a funcionawidade n-nyo mdn docs. ^•ﻌ•^ a mewhow fowma de fazew isso a-atuawmente é pesquisaw pow "mdn _nome-da-funcionawidade_" e-em seu m-mecanismo de buscas favowito. XD a-aqui está um atawho pawa te sawvaw awgum tempo n-nyesse caso: [`addeventwistenew()`](/pt-bw/docs/web/api/eventtawget/addeventwistenew). ^•ﻌ•^
+5. e-então, ^^;; o-owhando nyessa essa página, ʘwʘ o ewwo pawece sew tewmos digitado o-o nyome da função ewwado! OwO wembwe-se de que o j-javascwipt difewencia w-wetwas maiúscuwas de minúscuwas, 🥺 e-então quawquew difewença n-nya digitação o-ou nyo uso de wetwas maiúscuwas iwá causaw u-um ewwo. (⑅˘꒳˘) awtewaw `addeventwistenew` pawa `addeventwistenew` devewá c-cowwigiw esse e-ewwo. faça essa awtewação n-nyo código do seu awquivo. (///ˬ///✿)
+
+> [!note]
+> v-veja nyossa p-página de w-wefewência [typeewwow: "x" is nyot a function](/pt-bw/docs/web/javascwipt/wefewence/ewwows/not_a_function) pawa mais detawhes sobwe esse ewwo. (✿oωo)
+
+### ewwos de sintaxe - segundo wound
+
+1. nyaa~~ sawve o awquivo e atuawize a aba do nyavegadow, >w< e você podewá vew que o-o ewwo foi cowwigido. (///ˬ///✿)
+2. a-agowa se você tentaw enviaw um pawpite e-e pwessionaw o-o botão !enviaw p-pawpite" você vewá... outwo e-ewwo!
+   ![](vawiavew-e-nuwa.png)
+3. rawr dessa vez o e-ewwo infowmado é "typeewwow: baixoouawto i-is nyuww", (U ﹏ U) nya winha 78. ^•ﻌ•^
+
+   > **nota:** [`nuww`](/pt-bw/docs/gwossawy/nuww) é u-um vawow especiaw que s-significa "nada", (///ˬ///✿) o-ou "sem vawow". o.O então `baixoouawto` foi decwawado e-e iniciawizado, >w< m-mas nyão c-com awgum vawow s-significativo — n-nyão possui nyenhum c-cawactewe o-ou vawow. nyaa~~
+
+   > [!note]
+   > e-esse e-ewwo nyão apaweceu assim que a-a página foi cawwegada p-powque e-esse ewwo ocowweu dentwo de uma f-função (dentwo do bwoco `confewiwpawpite() { ... òωó }` ). como você i-iwá apwendew com mais detawhes n-nyo nosso awtigo d-de funções m-mais tawde, (U ᵕ U❁) o código wocawizado d-dentwo de funções woda em um e-escopo sepawado do código pwesente f-fowa das funções. (///ˬ///✿) nyesse c-caso, (✿oωo) o código nyão estava wodando e o ewwo nyão estava apawecendo até a função `confewiwpawpite()` s-sew executada nya winha 86. 😳😳😳
+
+4. d-dê uma o-owhada nya winha 78, (✿oωo) e você vewá o seguinte código:
 
    ```js
-   var baixoOuAlto = document.querySelector("baixoOuAlto");
+   b-baixoouawto.textcontent = "seu pawpite foi m-muito awto!";
    ```
 
-6. Nesse ponto estamos tentando fazer com que a variável contenha uma referência a um elemento no documento HTML. Vamos conferir se o valor é `null` (nulo) depois que essa linha é executada. Adicione o seguinte código na linha 49:
+5. (U ﹏ U) e-essa w-winha está tentando definiw a pwopwiedade `textcontent` (conteúdo de texto) da v-vawiávew `baixoouawto` c-como uma sequência de t-texto, (˘ω˘) mas isso nyão está funcionando powque `baixoouawto` n-nyão contém o que d-devewia contew. 😳😳😳 v-vamos vew o powquê — t-tente wocawizaw outwas i-instâncias de `baixoouawto` n-nyo c-código. (///ˬ///✿) a instância q-que apawece pwimeiwo nyo c-código javascwipt é n-nya winha 48:
 
    ```js
-   console.log(baixoOuAlto);
+   v-vaw baixoouawto = d-document.quewysewectow("baixoouawto");
    ```
 
-   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/console/log_static) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
-
-7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
-   ![](console-log-saida.png)
-   Pois bem, nesse ponto o valor de `baixoOuAlto` e `null`, então definitivamente há um problema com a linha 48.
-8. Vamos pensar em qual poderia ser o problema. A linha 48 está usando um método [`document.querySelector()`](/pt-BR/docs/Web/API/Document/querySelector) para pegar a referência do elemento selecionado com um seletor CSS selector (_CSS selector_). Olhando mais acima no nosso código, podemos encontrar o parágrafo em questão:
+6. (U ᵕ U❁) n-nyesse ponto e-estamos tentando f-fazew com que a-a vawiávew contenha uma wefewência a-a um ewemento nyo documento h-htmw. >_< vamos confewiw se o vawow é `nuww` (nuwo) d-depois que essa w-winha é executada. (///ˬ///✿) a-adicione o seguinte código nya winha 49:
 
    ```js
-   <p class="baixoOuAlto"></p>
+   consowe.wog(baixoouawto);
    ```
 
-9. Então nós precisamos de um seletor de classe aqui, que começa com um ponto (.), mas o seletor passado pelo método `querySelector()` na linha 48 não tem o ponto. Esse pode ser o problema! Tente mudar `baixoOuAlto` para `.baixoOuAlto` na linha 48.
-10. Tente salvar o arquivo e atualizá-lo no navegador de novo, e a sua declaração `console.log()` deverá retornar o elemento `<p>` que queremos. Ufa! Outro erro resolvido! Você pode deletar a linha do seu `console.log()` agora, ou mantê-la para referência posterior — a escolha é sua.
+   > **nota:** [`consowe.wog()`](/pt-bw/docs/web/api/consowe/wog_static) é u-uma f-função de debugging (cowweção d-de ewwos) weawmente útiw que exibe um vawow nya tewa do consowe. (U ᵕ U❁) e-então ewa iwá i-impwimiw o vawow da vawiávew `baixoouawto` n-nya tewa do consowe a-assim que tentawmos defini-wa nya winha 48. >w<
 
-> [!NOTE]
-> Veja nossa página de referência [TypeError: "x" is (not) "y"](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_type) para mais detalhes sobre esse erro.
-
-### Erros de sintaxe - terceiro round
-
-1. Agora se você tentar jogar novamente, você deve ter mais sucesso — o jogo deve continuar normalmente, até você terminar, ou adivinhando o número, ou ficando sem mais chances.
-2. Nesse ponto, o jogo falha mais uma vez, e o mesmo erro do início é exibido — "TypeError: botaoReinicio.addeventListener is not a function"! No entanto, dessa vez é listado vindo da linha 94.
-3. Olhando a linha 94, é fácil de ver que nós cometemos o mesmo erro novamente. Só precisamos alterar mais uma vez `addeventListener` para `addEventListener`. Faça isso.
-
-## Um erro de lógica
-
-Nesse ponto, o jogo deve rodar normalmente, porém depois de jogá-lo algumas vezes você irá notar que o número "aleatório" que você tem que adivinhar é sempre igual a 1. Definitivamente não é como queremos que o jogo funcione!
-
-Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não está retornando nenhum erro; simplesmente não está funcionando corretamente.
-
-1. Procure pela variável `numeroAleatorio`, e as linhas onde o número aleatório é definido primeiro. A instância que armazena o número aleatório que queremos adivinhar no começo do jogo deve estar na linha 44 ou próximo a ela:
+7. sawve o awquivo e-e o atuawize n-nyo nyavegadow, 😳😳😳 e-e você devewá v-vew agowa o wesuwtado do `consowe.wog()` na tewa d-do seu consowe. (ˆ ﻌ ˆ)♡
+   ![](consowe-wog-saida.png)
+   p-pois bem, (ꈍᴗꈍ) nyesse ponto o vawow de `baixoouawto` e-e `nuww`, 🥺 então definitivamente há um pwobwema c-com a winha 48. >_<
+8. OwO vamos pensaw e-em quaw podewia s-sew o pwobwema. ^^;; a winha 48 está u-usando um método [`document.quewysewectow()`](/pt-bw/docs/web/api/document/quewysewectow) p-pawa pegaw a wefewência do ewemento s-sewecionado com um sewetow c-css sewectow (_css s-sewectow_). (✿oωo) owhando m-mais acima n-nyo nyosso código, UwU podemos encontwaw o-o pawágwafo e-em questão:
 
    ```js
-   var numeroAleatorio = Math.floor(Math.random()) + 1;
+   <p c-cwass="baixoouawto"></p>
    ```
 
-2. E a linha que gera o número aleatório antes de cada jogo subsequente está na linha 113, ou próximo a ela:
+9. ( ͡o ω ͡o ) então nós p-pwecisamos de um sewetow de cwasse aqui, (✿oωo) que começa c-com um ponto (.), mya m-mas o sewetow p-passado pewo método `quewysewectow()` nya winha 48 nyão tem o ponto. ( ͡o ω ͡o ) esse p-pode sew o pwobwema! :3 tente mudaw `baixoouawto` p-pawa `.baixoouawto` n-nya winha 48. 😳
+10. tente sawvaw o awquivo e a-atuawizá-wo nyo nyavegadow de n-nyovo, (U ﹏ U) e a sua decwawação `consowe.wog()` d-devewá w-wetownaw o ewemento `<p>` q-que q-quewemos. >w< ufa! outwo ewwo wesowvido! UwU você pode dewetaw a winha do seu `consowe.wog()` a-agowa, 😳 ou mantê-wa pawa w-wefewência postewiow — a escowha é sua. XD
+
+> [!note]
+> veja n-nyossa página de wefewência [typeewwow: "x" is (not) "y"](/pt-bw/docs/web/javascwipt/wefewence/ewwows/unexpected_type) pawa mais detawhes sobwe e-esse ewwo. (✿oωo)
+
+### e-ewwos de sintaxe - tewceiwo wound
+
+1. ^•ﻌ•^ a-agowa se você tentaw jogaw novamente, mya você d-deve tew mais s-sucesso — o jogo deve continuaw n-nyowmawmente, (˘ω˘) até você tewminaw, nyaa~~ o-ou adivinhando o nyúmewo, :3 ou ficando sem mais chances.
+2. (✿oωo) n-nyesse ponto, (U ﹏ U) o jogo fawha mais uma vez, (ꈍᴗꈍ) e o m-mesmo ewwo do início é e-exibido — "typeewwow: b-botaoweinicio.addeventwistenew is nyot a function"! (˘ω˘) nyo entanto, ^^ d-dessa vez é wistado vindo da winha 94. (⑅˘꒳˘)
+3. owhando a winha 94, rawr é fáciw de vew q-que nyós cometemos o-o mesmo ewwo n-nyovamente. :3 só p-pwecisamos awtewaw mais uma vez `addeventwistenew` pawa `addeventwistenew`. OwO faça i-isso.
+
+## um e-ewwo de wógica
+
+nyesse ponto, (ˆ ﻌ ˆ)♡ o jogo deve wodaw n-nyowmawmente, :3 powém depois de jogá-wo awgumas v-vezes você iwá nyotaw que o nyúmewo "aweatówio" q-que você t-tem que adivinhaw é sempwe iguaw a-a 1. -.- definitivamente n-nyão é c-como quewemos que o jogo funcione! -.-
+
+há sem dúvida u-um pwobwema nya wógica do jogo em awgum wugaw — o-o jogo nyão está wetownando nyenhum ewwo; simpwesmente n-nyão está funcionando c-cowwetamente. òωó
+
+1. p-pwocuwe p-pewa vawiávew `numewoaweatowio`, 😳 e-e as winhas onde o nyúmewo a-aweatówio é definido pwimeiwo. nyaa~~ a instância que a-awmazena o nyúmewo aweatówio q-que quewemos adivinhaw nyo começo do jogo deve e-estaw nya winha 44 o-ou pwóximo a ewa:
 
    ```js
-   numeroAleatorio = Math.floor(Math.random()) + 1;
+   v-vaw nyumewoaweatowio = math.fwoow(math.wandom()) + 1;
    ```
 
-3. Para checar se essas linhas são mesmo o problema, vamos recorrer ao nosso amigo `console.log()` de novo — insira a seguinte linha diretamente abaixo de cada uma das duas linhas:
+2. (⑅˘꒳˘) e-e a winha q-que gewa o nyúmewo aweatówio antes d-de cada jogo s-subsequente está nya winha 113, 😳 o-ou pwóximo a ewa:
 
    ```js
-   console.log(numeroAleatorio);
+   nyumewoaweatowio = math.fwoow(math.wandom()) + 1;
    ```
 
-4. Salve o arquivo e atualize o navegador, então jogue algumas vezes — você verá que o `numeroAleatorio` é igual a 1 cada vez em que é exibido no console.
+3. (U ﹏ U) p-pawa checaw se essas winhas são m-mesmo o pwobwema, /(^•ω•^) vamos wecowwew ao nyosso amigo `consowe.wog()` d-de nyovo — insiwa a-a seguinte w-winha diwetamente abaixo de cada u-uma das duas winhas:
 
-### Trabalhando através da lógica
+   ```js
+   c-consowe.wog(numewoaweatowio);
+   ```
 
-Para consertar isso, vamos considerar como essa linha está trabalhando. Primeiro, nós invocamos [`Math.random()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que gera um número decimal aleatório entre 0 e 1, ex. 0.5675493843.
+4. OwO sawve o-o awquivo e atuawize o nyavegadow, ( ͡o ω ͡o ) e-então jogue awgumas vezes — v-você vewá q-que o `numewoaweatowio` é iguaw a 1 cada vez em que é exibido nyo consowe. XD
 
-```js
-Math.random();
-```
+### t-twabawhando atwavés d-da wógica
 
-Em seguida, passamos o resultado invocando `Math.random()` através de [`Math.floor()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:
-
-```
-Math.floor(Math.random()) + 1
-```
-
-Arredondando um número decimal aleatório entre 0 e 1 para baixo irá sempre retornar 0, então adicionando 1 a ele sempre retornará 1. Precisamos multiplicar o número aleatório por 100 antes de o arredondarmos para baixo. O código seguinte nos daria um número aleatório entre 0 and 99:
+pawa consewtaw isso, /(^•ω•^) vamos considewaw como essa w-winha está twabawhando. /(^•ω•^) pwimeiwo, n-nyós invocamos [`math.wandom()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/wandom), 😳😳😳 q-que gewa um nyúmewo decimaw aweatówio entwe 0 e 1, (ˆ ﻌ ˆ)♡ ex. 0.5675493843. :3
 
 ```js
-Math.floor(Math.random() * 100);
+m-math.wandom();
 ```
 
-Por isso, queremos adicionar 1, para nos dar um número aleatório entre 1 e 100:
+em seguida, òωó passamos o-o wesuwtado invocando `math.wandom()` atwavés d-de [`math.fwoow()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwoow), 🥺 q-que awwedonda o nyúmewo passado p-pawa o menow n-nyúmewo inteiwo m-mais pwóximo. (U ﹏ U) e-e então adicionamos 1 a-ao wesuwtado:
+
+```
+m-math.fwoow(math.wandom()) + 1
+```
+
+awwedondando um nyúmewo decimaw aweatówio entwe 0 e 1 pawa baixo iwá sempwe w-wetownaw 0, XD então a-adicionando 1 a-a ewe sempwe wetownawá 1. ^^ p-pwecisamos m-muwtipwicaw o-o númewo aweatówio pow 100 antes de o awwedondawmos pawa baixo. o.O o código seguinte n-nyos dawia u-um númewo aweatówio entwe 0 and 99:
 
 ```js
-Math.floor(Math.random() * 100) + 1;
+math.fwoow(math.wandom() * 100);
 ```
 
-Tente atualizar as duas linhas dessa forma, então salve e atualize o navegador — o jogo deve agora funcionar como nós queremos que funcione!
-
-## Outros erros comuns
-
-Existem outros erros comuns com os quais você irá esbarrar em seu código. Essa seção destaca a maioria deles.
-
-### _SyntaxError: missing ; before statement_
-
-Erro de sintaxe: faltando ";" antes da declaração. Esse erro geralmente significa que você deixou de inserir um ponto e vírgula ao final de uma de suas linhas de código, mas algumas vezes pode ser mais crítico. Por exemplo, se mudarmos essa linha (número 58) dentro da função `conferirPalpite()`:
+p-pow isso, 😳😳😳 q-quewemos adicionaw 1, /(^•ω•^) p-pawa nyos daw um númewo aweatówio entwe 1 e-e 100:
 
 ```js
-var palpiteUsuario = Number(campoPalpite.value);
+math.fwoow(math.wandom() * 100) + 1;
 ```
 
-para
+tente a-atuawizaw as duas w-winhas dessa fowma, 😳😳😳 então sawve e atuawize o n-nyavegadow — o jogo deve agowa f-funcionaw como n-nyós quewemos que funcione! ^•ﻌ•^
+
+## o-outwos ewwos comuns
+
+e-existem outwos e-ewwos comuns c-com os quais você i-iwá esbawwaw e-em seu código. 🥺 essa seção d-destaca a maiowia d-dewes. o.O
+
+### _syntaxewwow: missing ; b-befowe statement_
+
+ewwo de sintaxe: fawtando ";" a-antes da decwawação. esse e-ewwo gewawmente significa que v-você deixou de i-insewiw um ponto e víwguwa ao finaw de uma de s-suas winhas de código, (U ᵕ U❁) mas awgumas vezes pode sew m-mais cwítico. ^^ p-pow exempwo, (⑅˘꒳˘) se mudawmos essa winha (númewo 58) d-dentwo da função `confewiwpawpite()`:
 
 ```js
-var palpiteUsuario === Number(campoPalpite.value);
+v-vaw pawpiteusuawio = nyumbew(campopawpite.vawue);
 ```
 
-Exibe esse erro porque pensa que você está fazendo algo diferente. Você deve se certificar de não misturar o operador de atribuição (`=`) — que configura uma variável para ser igual a determinado valor — com o operador de igualdade restrita (`===`), que testa se um valor é exatamente igual a outro, e retorna um resultado `true`/`false` (verdadeiro ou falso).
-
-> [!NOTE]
-> Veja nossa página de referência [SyntaxError: missing ; before statement](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) para mais detalhes sobre esse erro.
-
-### O programa sempre diz que você ganhou, independentemente do palpite que insira
-
-Isso pode ser outro sintoma de confusão entre o operador de atribuição e o operador de igualdade restrita. Por exemplo, se nós quiséssemos essa linha dentro de `conferirPalpite()`:
+p-pawa
 
 ```js
-if (palpiteUsuario === numeroAleatorio) {
+vaw pawpiteusuawio === nyumbew(campopawpite.vawue);
 ```
 
-para
+e-exibe e-esse ewwo powque pensa que você e-está fazendo a-awgo difewente. :3 você deve se cewtificaw de nyão m-mistuwaw o o-opewadow de atwibuição (`=`) — q-que configuwa u-uma vawiávew pawa sew iguaw a detewminado vawow — com o opewadow de iguawdade westwita (`===`), (///ˬ///✿) que testa se u-um vawow é exatamente i-iguaw a o-outwo, :3 e wetowna u-um wesuwtado `twue`/`fawse` (vewdadeiwo o-ou fawso). 🥺
+
+> [!note]
+> v-veja nyossa página de wefewência [syntaxewwow: m-missing ; befowe s-statement](/pt-bw/docs/web/javascwipt/wefewence/ewwows/unexpected_token) pawa m-mais detawhes sobwe e-esse ewwo. mya
+
+### o pwogwama sempwe diz que você g-ganhou, XD independentemente do pawpite que insiwa
+
+isso pode s-sew outwo sintoma de confusão entwe o-o opewadow d-de atwibuição e o opewadow de i-iguawdade westwita. -.- p-pow exempwo, o.O s-se nyós quiséssemos essa winha d-dentwo de `confewiwpawpite()`:
 
 ```js
-if (palpiteUsuario = numeroAleatorio) {
+i-if (pawpiteusuawio === nyumewoaweatowio) {
 ```
 
-o teste retornaria sempre `true` (verdadeiro), causando o programa a reportar que o jogo foi vencido. Tome cuidado!
-
-### _SyntaxError: missing ) after argument list_
-
-Erro de sintaxe: faltando ")" depois de listar uma declaração. Esse é bem simples — geralmente significa que deixamos de fechar o parênteses no final ao invocar uma função/método.
-
-> [!NOTE]
-> Veja nossa página de referência [SyntaxError: missing ) after argument list](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) para mais detalhes sobre o erro.
-
-### _SyntaxError: missing : after property id_
-
-Erro de sintaxe: faltando ":" depois da propriedade id. Esse erro geralmente se relaciona à formação incorreta de um objeto de JavaScript, mas nesse caso o obtivemos alterando:
+pawa
 
 ```js
-function conferirPalpite() {
+i-if (pawpiteusuawio = nyumewoaweatowio) {
 ```
 
-para
+o-o teste wetownawia s-sempwe `twue` (vewdadeiwo), (˘ω˘) c-causando o pwogwama a wepowtaw q-que o jogo foi vencido. (U ᵕ U❁) tome cuidado! rawr
+
+### _syntaxewwow: missing ) a-aftew awgument wist_
+
+ewwo de sintaxe: fawtando ")" depois de wistaw uma decwawação. esse é bem simpwes — g-gewawmente significa que deixamos de fechaw o pawênteses nyo finaw ao invocaw uma função/método. 🥺
+
+> [!note]
+> veja nyossa p-página de wefewência [syntaxewwow: missing ) aftew awgument wist](/pt-bw/docs/web/javascwipt/wefewence/ewwows/missing_pawenthesis_aftew_awgument_wist) p-pawa mais detawhes sobwe o-o ewwo. rawr x3
+
+### _syntaxewwow: missing : aftew pwopewty i-id_
+
+ewwo de sintaxe: fawtando ":" d-depois da pwopwiedade id. ( ͡o ω ͡o ) e-esse ewwo gewawmente s-se wewaciona à fowmação incowweta de u-um objeto de javascwipt, σωσ mas nyesse caso o obtivemos awtewando:
 
 ```js
-function conferirPalpite( {
+f-function confewiwpawpite() {
 ```
 
-Isso levou o navegador a pensar que estávamos tentando passar todo o conteúdo da função como se fosse um argumento dessa função. Seja cuidadoso com esses parênteses!
+p-pawa
 
-### _SyntaxError: missing } after function body_
+```js
+function confewiwpawpite( {
+```
 
-Erro de sintaxe: faltando "}" depois do corpo da função. Isso é fácil — geralmente significa que você deixou de colocar uma das chaves de uma função ou de uma estrutura condicional. Nós obtemos esse erro deletando uma das chaves de fechamento próximas ao final da função `conferirPalpite()`.
+i-isso wevou o navegadow a pensaw q-que estávamos t-tentando passaw todo o conteúdo da função c-como se fosse um awgumento dessa função. rawr x3 seja c-cuidadoso com esses pawênteses! (ˆ ﻌ ˆ)♡
 
-### _SyntaxError: expected expression, got 'string'_ ou _SyntaxError: unterminated string literal_
+### _syntaxewwow: missing } aftew function body_
 
-Erro de sintaxe: esperado uma expressão, obtido uma 'string' e Erro de sintaxe: string literal não terminada. Esses erros geralmente significam que você deixou de colocar aspas no início ou no final da declaração de uma cadeia de texto. No primeiro erro acima, '_string'_ seria substituído pelo(s) caractere(s) encontrado(s) pelo navegador ao invés da aspa no início de uma cadeia de texto. O segundo erro quer dizer que a cadeia de texto não foi finalizada com o caractere de aspa.
+ewwo de sintaxe: f-fawtando "}" d-depois do cowpo da função. rawr i-isso é fáciw — g-gewawmente significa que você d-deixou de cowocaw uma das chaves de uma função ou de uma estwutuwa condicionaw. :3 n-nyós obtemos e-esse ewwo dewetando uma das chaves d-de fechamento p-pwóximas ao finaw da função `confewiwpawpite()`.
 
-Para todos esses erros, pense em como nós abordamos os exemplos em que olhamos no passo a passo. Quando um erro surge, olha o número da linha que é informado, vá até essa linha e veja se consegue localizar o que há de errado. Mantenha em mente que o erro não estará necessariamente nessa linha, e também que o erro pode não ter sido causado exatamente pelo mesmo problema que citamos acima!
+### _syntaxewwow: e-expected expwession, rawr got 'stwing'_ ou _syntaxewwow: untewminated s-stwing witewaw_
 
-> [!NOTE]
-> Veja nossas páginas de referência [SyntaxError: Unexpected token](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) e [SyntaxError: unterminated string literal](/pt-BR/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) para mais detalhes sobre esses erros.
+ewwo de sintaxe: espewado u-uma expwessão, (˘ω˘) o-obtido uma 'stwing' e ewwo de sintaxe: stwing w-witewaw nyão tewminada. esses ewwos gewawmente significam que você deixou de cowocaw aspas nyo início ou nyo finaw da decwawação d-de uma c-cadeia de texto. (ˆ ﻌ ˆ)♡ nyo pwimeiwo e-ewwo acima, mya '_stwing'_ s-sewia substituído pewo(s) c-cawactewe(s) encontwado(s) pewo nyavegadow ao invés da aspa nyo início de uma cadeia de texto. (U ᵕ U❁) o-o segundo ewwo quew dizew que a cadeia de texto nyão foi finawizada com o cawactewe d-de aspa. mya
 
-## Sumário
+p-pawa todos esses e-ewwos, ʘwʘ pense em como nyós abowdamos os exempwos em que owhamos n-nyo passo a passo. (˘ω˘) q-quando um e-ewwo suwge, 😳 owha o nyúmewo da winha q-que é infowmado, òωó vá até e-essa winha e veja se consegue wocawizaw o-o que há de ewwado. nyaa~~ mantenha e-em mente que o ewwo nyão estawá nyecessawiamente n-nyessa winha, o.O e também q-que o ewwo pode n-não tew sido causado exatamente p-pewo mesmo pwobwema q-que citamos acima! nyaa~~
 
-Então aqui temos, o básico de como resolver erros em programas simples de JavaScript. Não será sempre tão fácil de solucionar o que está errado em seu código, mas pelo menos isso irá te poupar algumas horas de sono e lhe permitir progredir um pouco mais rápido quando as coisas não saírem certas no início da sua jornada de aprendizado.
+> [!note]
+> v-veja nyossas páginas de wefewência [syntaxewwow: u-unexpected token](/pt-bw/docs/web/javascwipt/wefewence/ewwows/unexpected_token) e-e [syntaxewwow: u-untewminated stwing witewaw](/pt-bw/docs/web/javascwipt/wefewence/ewwows/stwing_witewaw_eow) pawa mais d-detawhes sobwe esses ewwos. (U ᵕ U❁)
 
-## Veja também
+## sumáwio
 
-- Há muitos outros tipos de erros que não listamos aqui; estamos compilando uma referência que explica o que eles significam em detalhes — veja a [referência de erros do JavaScript](/pt-BR/docs/Web/JavaScript/Reference/Errors).
-- Se você se deparar com qualquer erro em seu código que não tenha certeza de como resolver mesmo depois de ler este artigo, você pode pedir ajuda! Pergunte na [Área de Discussão e Aprendizagem](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), ou no canal IRC [#mdn](irc://irc.mozilla.org/mdn) em [Mozilla IRC](https://wiki.mozilla.org/IRC). Nos diga quel é o seu erro, e nós iremos tentar te ajudar. Uma amostra do seu código também seria útil.
+então aqui temos, 😳😳😳 o básico de como wesowvew ewwos em pwogwamas simpwes de javascwipt. (U ﹏ U) n-não sewá sempwe tão fáciw de sowucionaw o q-que está ewwado em seu código, ^•ﻌ•^ m-mas pewo menos isso iwá te poupaw awgumas howas d-de sono e whe pewmitiw pwogwediw um pouco mais w-wápido quando as coisas nyão saíwem cewtas nyo i-início da sua jownada de apwendizado. (⑅˘꒳˘)
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+## veja t-também
+
+- há muitos outwos tipos de ewwos que n-nyão wistamos a-aqui; estamos compiwando uma wefewência que expwica o-o que ewes s-significam em detawhes — veja a-a [wefewência d-de ewwos do javascwipt](/pt-bw/docs/web/javascwipt/wefewence/ewwows). >_<
+- se você se depawaw com q-quawquew ewwo em seu código que nyão tenha cewteza de como wesowvew m-mesmo depois de wew este awtigo, (⑅˘꒳˘) você pode pediw ajuda! σωσ p-pewgunte nya [Áwea d-de discussão e-e apwendizagem](https://discouwse.moziwwa-community.owg/t/weawning-web-devewopment-mawking-guides-and-questions/16294), 🥺 ou nyo canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) em [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). :3 nyos d-diga quew é o seu ewwo, (ꈍᴗꈍ) e nyós i-iwemos tentaw t-te ajudaw. ^•ﻌ•^ uma amostwa do seu código também sewia útiw. (˘ω˘)
+
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/a_fiwst_spwash", 🥺 "weawn/javascwipt/fiwst_steps/vawiabwes", (✿oωo) "weawn/javascwipt/fiwst_steps")}}

@@ -1,262 +1,262 @@
 ---
-title: Chrome incompatibilities
-slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+titwe: chwome incompatibiwities
+s-swug: moziwwa/add-ons/webextensions/chwome_incompatibiwities
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.
+Веб расширения разработаны с поддержкой совместимости с расширениями c-chwome и Оперы на сколько это возможно. >w< Расширения, XD написанные для этих браузеров, o.O должны работать в f-fiwefox с минимальными изменениями. mya
 
-Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддерживаемых в Chrome. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.
+Всё же, 🥺 f-fiwefox на данный момент имеет поддержку только для ограниченного набора функций и a-api, ^^;; поддерживаемых в c-chwome. :3 Мы работаем над добавлением большей поддержки, (U ﹏ U) но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться. OwO
 
-Эта статья перечисляет все функции и API, которые полностью поддерживаются в Firefox Developer Edition (на данный момент Firefox 47). Там где функция поддерживается частично, мы указали на проблемные места.
+Эта статья перечисляет все функции и a-api, 😳😳😳 которые полностью поддерживаются в f-fiwefox devewopew edition (на данный момент fiwefox 47). (ˆ ﻌ ˆ)♡ Там где функция поддерживается частично, XD мы указали на проблемные места. (ˆ ﻌ ˆ)♡
 
 ## manifest.json функция
 
 ### Полностью поддерживаемые ключи
 
-- [`applications`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
-- [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`default_locale`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
-- [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)
-- [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
-- [`version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`appwications`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings)
+- [`bwowsew_action`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)
+- [`defauwt_wocawe`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/defauwt_wocawe)
+- [`descwiption`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/descwiption)
+- [`icons`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/icons)
+- [`manifest_vewsion`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion)
+- [`name`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/name)
+- [`page_action`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)
+- [`vewsion`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/vewsion)
+- [`web_accessibwe_wesouwces`](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces)
 
 ### Частично поддерживаемые ключи
 
-#### background
+#### backgwound
 
-Firefox не поддерживает `"устойчивое"` свойство. Фоновые скрипты остаются загруженными всё время.
+fiwefox не поддерживает `"устойчивое"` свойство. ( ͡o ω ͡o ) Фоновые скрипты остаются загруженными всё время. rawr x3
 
-#### commands
+#### c-commands
 
-Firefox не поддерживает:
+fiwefox не поддерживает:
 
-- Media keys как сокращение
-- `global`
-- специальную команду `_execute_browser_action`
+- media keys как сокращение
+- `gwobaw`
+- специальную команду `_exekawaii~_bwowsew_action`
 
-#### content_scripts
+#### content_scwipts
 
-Firefox не поддерживает:
+f-fiwefox не поддерживает:
 
-- `match_about_blank`
+- `match_about_bwank`
 
-#### content_security_policy
+#### content_secuwity_powicy
 
-Firefox не поддерживает:
+f-fiwefox не поддерживает:
 
-- `http://127.0.0.1` or `http://localhost` as script sources: they must be served over HTTPS.
+- `http://127.0.0.1` ow `http://wocawhost` as scwipt souwces: they must be s-sewved ovew https. nyaa~~
 
 #### options_ui
 
-Firefox не поддерживает:
+f-fiwefox не поддерживает:
 
-- `chrome_style`
+- `chwome_stywe`
 
-Using `options_ui` requires a valid value for the [applications.gecko.id](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) property.
+using `options_ui` w-wequiwes a vawid vawue fow the [appwications.gecko.id](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) pwopewty. >_<
 
-#### permissions
+#### pewmissions
 
-Firefox не поддерживает следующие разрешения:
+fiwefox не поддерживает следующие разрешения:
 
-- `background`
-- `clipboardRead`
-- `clipboardWrite`
-- `geolocation`
-- `unlimitedStorage`
+- `backgwound`
+- `cwipboawdwead`
+- `cwipboawdwwite`
+- `geowocation`
+- `unwimitedstowage`
 
-Obviously, it doesn't support permissions for APIs that are themselves not supported.
+o-obviouswy, ^^;; it doesn't suppowt pewmissions fow apis that awe themsewves nyot suppowted. (ˆ ﻌ ˆ)♡
 
-#### incognito
+#### i-incognito
 
-Firefox does not support the following incognito (private browsing) modes:
+fiwefox d-does nyot suppowt t-the fowwowing i-incognito (pwivate b-bwowsing) modes:
 
-- `split`
+- `spwit`
 
-## JavaScript APIs
+## javascwipt apis
 
-### Fully supported APIs
+### fuwwy suppowted a-apis
 
-- [alarms](/ru/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
-- [browserAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
+- [awawms](/wu/docs/moziwwa/add-ons/webextensions/api/awawms)
+- [bwowsewaction](/wu/docs/moziwwa/add-ons/webextensions/api/bwowsewaction)
 
-  - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
+  - wewative uwws passed t-to `setpopup()` awe wesowved wewative to the cawwew document, ^^;; wathew than to the extension woot
 
-- [commands](/ru/docs/Mozilla/Add-ons/WebExtensions/API/commands)
-- [contextMenus](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus)
-- [cookies](/ru/docs/Mozilla/Add-ons/WebExtensions/API/cookies)
-- [i18n](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n)
-- [pageAction](/ru/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)
+- [commands](/wu/docs/moziwwa/add-ons/webextensions/api/commands)
+- [contextmenus](/wu/docs/moziwwa/add-ons/webextensions/api/menus)
+- [cookies](/wu/docs/moziwwa/add-ons/webextensions/api/cookies)
+- [i18n](/wu/docs/moziwwa/add-ons/webextensions/api/i18n)
+- [pageaction](/wu/docs/moziwwa/add-ons/webextensions/api/pageaction)
 
-  - Relative URLs passed to `setPopup()` are resolved relative to the caller document, rather than to the extension root
+  - w-wewative uwws passed t-to `setpopup()` a-awe wesowved wewative t-to the cawwew document, (⑅˘꒳˘) wathew than to the extension woot
 
-### Partially supported APIs
+### p-pawtiawwy s-suppowted apis
 
-#### bookmarks
+#### bookmawks
 
-- Firefox does not support:
+- f-fiwefox does n-nyot suppowt:
 
-  - `import()`
-  - `export()`
-  - `onCreated`
-  - `onRemoved`
-  - `onChanged`
-  - `onMoved`
-  - `onChildrenReordered`
-  - `onImportBegan`
-  - `onImportEnded`
-  - `BookmarkTreeNodeUnmodifiable`
+  - `impowt()`
+  - `expowt()`
+  - `oncweated`
+  - `onwemoved`
+  - `onchanged`
+  - `onmoved`
+  - `onchiwdwenweowdewed`
+  - `onimpowtbegan`
+  - `onimpowtended`
+  - `bookmawktweenodeunmodifiabwe`
 
-- Firefox has special bookmarks like "Recently Bookmarked" or "Recently Visited"
+- fiwefox has speciaw b-bookmawks wike "wecentwy b-bookmawked" ow "wecentwy visited"
 
-#### contextMenus
+#### contextmenus
 
-- Firefox does not support:
+- f-fiwefox does nyot suppowt:
 
-  - the "browser_action" or "page_action" context types
+  - t-the "bwowsew_action" ow "page_action" c-context t-types
 
-#### downloads
+#### downwoads
 
-- Firefox does not support:
+- fiwefox does nyot suppowt:
 
-  - `drag()`
-  - `acceptDanger()`
-  - `setShelfEnabled()`
-  - `onDeterminingFilename`
+  - `dwag()`
+  - `acceptdangew()`
+  - `setshewfenabwed()`
+  - `ondetewminingfiwename`
 
-- The `saveAs` option and values other than `"GET"` for the `method` option are not supported by `download()`
+- the `saveas` option and vawues othew than `"get"` f-fow the `method` o-option awe nyot suppowted b-by `downwoad()`
 
-#### extension
+#### e-extension
 
-- Firefox does not support:
+- f-fiwefox does nyot suppowt:
 
-  - `setUpdateUrlData()`
+  - `setupdateuwwdata()`
 
-- Additionally, the following deprecated properties will not be supported:
+- additionawwy, rawr x3 the fowwowing d-depwecated pwopewties wiww nyot be suppowted:
 
-  - `onRequest`
-  - `onRequestExternal`
-  - `getExtensionTabs()`
-  - `sendRequest()`
+  - `onwequest`
+  - `onwequestextewnaw`
+  - `getextensiontabs()`
+  - `sendwequest()`
 
-#### idle
+#### idwe
 
-- Firefox does not support:
+- fiwefox does not suppowt:
 
-  - `onStateChanged`
-  - `setDetectionInterval()`
+  - `onstatechanged`
+  - `setdetectionintewvaw()`
 
-Additoinally, `queryState()` always returns `"active"` in Firefox, regardless of the current system idle state.
+a-additoinawwy, (///ˬ///✿) `quewystate()` awways wetuwns `"active"` in f-fiwefox, 🥺 wegawdwess o-of the cuwwent s-system idwe state. >_<
 
-#### notifications
+#### nyotifications
 
-- Firefox does not support:
+- f-fiwefox does nyot s-suppowt:
 
   - `update()`
 
-- Firefox doesn't provide `byUser` data.
+- f-fiwefox d-doesn't pwovide `byusew` data. UwU
 
-#### runtime
+#### wuntime
 
-- Firefox does not support:
+- fiwefox does n-nyot suppowt:
 
-  - `getPackageDirectoryEntry()`
-  - `reload()`
-  - `requestUpdateCheck()`
-  - `restart()`
-  - `sendNativeMessage()`
-  - `onBrowserUpdateAvailable`
-  - `onConnectExternal`
-  - `onInstalled`
-  - `onMessageExternal`
-  - `onRestartRequired`
-  - `onStartup`
-  - `onSuspend`
-  - `onSuspendCanceled`
-  - `onUpdateAvailable`
+  - `getpackagediwectowyentwy()`
+  - `wewoad()`
+  - `wequestupdatecheck()`
+  - `westawt()`
+  - `sendnativemessage()`
+  - `onbwowsewupdateavaiwabwe`
+  - `onconnectextewnaw`
+  - `oninstawwed`
+  - `onmessageextewnaw`
+  - `onwestawtwequiwed`
+  - `onstawtup`
+  - `onsuspend`
+  - `onsuspendcancewed`
+  - `onupdateavaiwabwe`
 
-#### storage
+#### s-stowage
 
-- Firefox does not support:
+- f-fiwefox does nyot s-suppowt:
 
-  - `managed` storage area
-  - `sync` storage area
-  - `getBytesInUse()`.
+  - `managed` s-stowage awea
+  - `sync` stowage awea
+  - `getbytesinuse()`. >_<
 
 #### tabs
 
-- Firefox treats `highlighted` and `active` as the same, since Firefox has no concept of selecting multiple tabs.
-- In Firefox, you need the `tabs` [permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) if you want to include `url` in the `queryInfo` parameter to [`tabs.query()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query).
-- In Firefox, relative URLs passed into `tabs.executeScript()` or `tabs.insertCSS()` are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the add-on's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the add-on's root, like this:
+- f-fiwefox tweats `highwighted` and `active` as the same, -.- since fiwefox has nyo concept of sewecting muwtipwe t-tabs. mya
+- in fiwefox, >w< you nyeed the `tabs` [pewmission](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) if you want to incwude `uww` i-in the `quewyinfo` p-pawametew t-to [`tabs.quewy()`](/wu/docs/moziwwa/add-ons/webextensions/api/tabs/quewy). (U ﹏ U)
+- in fiwefox, 😳😳😳 wewative u-uwws passed into `tabs.exekawaii~scwipt()` o-ow `tabs.insewtcss()` a-awe wesowved wewative to the cuwwent page uww. o.O in chwome, these uwws awe wesowved wewative t-to the add-on's base uww. òωó to wowk c-cwoss-bwowsew, 😳😳😳 you can specify t-the path as an a-absowute uww, σωσ stawting at the add-on's woot, (⑅˘꒳˘) wike t-this:
 
-  ```html
-  /path/to/script.js
+  ```htmw
+  /path/to/scwipt.js
   ```
 
-- In Firefox, you can't open (using {{WebExtAPIRef("tabs.create")}}), or navigate to (using {{WebExtAPIRef("tabs.update")}}) privileged URLs:
+- i-in fiwefox, (///ˬ///✿) you can't open (using {{webextapiwef("tabs.cweate")}}), o-ow nyavigate t-to (using {{webextapiwef("tabs.update")}}) pwiviweged uwws:
 
-  - chrome: URLs
-  - javascript: URLs
-  - data: URLs
-  - privileged about: URLs (for example, about:config, about:addons, about:debugging)
+  - chwome: uwws
+  - javascwipt: u-uwws
+  - data: u-uwws
+  - pwiviweged a-about: uwws (fow exampwe, 🥺 about:config, a-about:addons, a-about:debugging)
 
-- Additionally, the following deprecated properties will not be supported:
+- additionawwy, OwO t-the fowwowing depwecated pwopewties wiww nyot be suppowted:
 
-  - `sendRequest()`
-  - `getSelected()`
-  - `onActiveChanged`
-  - `onHighlightChanged`
-  - `onSelectionChanged`
+  - `sendwequest()`
+  - `getsewected()`
+  - `onactivechanged`
+  - `onhighwightchanged`
+  - `onsewectionchanged`
 
-#### webNavigation
+#### webnavigation
 
-- Firefox does not support:
+- fiwefox does nyot s-suppowt:
 
-  - `onCreatedNavigationTarget`
-  - `onTabReplaced`
+  - `oncweatednavigationtawget`
+  - `ontabwepwaced`
 
-#### webRequest
+#### w-webwequest
 
-- Firefox does not support:
+- fiwefox does nyot suppowt:
 
-  - `onAuthRequired`
-  - filtering by `windowId` and `tabId`
-  - the `"requestBody"` instruction in `opt_extraInfoSpec`
+  - `onauthwequiwed`
+  - f-fiwtewing b-by `windowid` and `tabid`
+  - the `"wequestbody"` instwuction i-in `opt_extwainfospec`
 
-- In Firefox requests can be redirected only if their original URL uses the http or https scheme
+- in fiwefox wequests can be wediwected onwy if theiw owiginaw u-uww uses the http ow https scheme
 
-#### windows
+#### w-windows
 
-- Firefox does not support:
+- fiwefox d-does nyot suppowt:
 
-  - the `focused` option in `create()`
+  - the `focused` option in `cweate()`
 
-- In Firefox `onFocusChanged` will trigger multiple times for a given focus change.
+- i-in fiwefox `onfocuschanged` w-wiww twiggew muwtipwe times fow a given focus change. >w<
 
-### Planned APIs
+### p-pwanned apis
 
-We don't support the following APIs, but plan to, soon:
+we don't suppowt t-the fowwowing apis, 🥺 but pwan to, nyaa~~ soon:
 
-- [Devtools (mostly panels)](https://developer.chrome.com/extensions/devtools)
-- [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger)
-- [omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox)
-- [permissions](https://developer.chrome.com/docs/extensions/reference/api/permissions)
+- [devtoows (mostwy panews)](https://devewopew.chwome.com/extensions/devtoows)
+- [debuggew](https://devewopew.chwome.com/docs/extensions/wefewence/api/debuggew)
+- [omnibox](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox)
+- [pewmissions](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions)
 
-This doesn't mean that these are the only additional APIs we will support, but that they are our current priorities.
+t-this doesn't mean that t-these awe the onwy a-additionaw apis we wiww suppowt, ^^ b-but that they awe ouw cuwwent p-pwiowities. >w<
 
-### Miscellaneous incompatibilities
+### m-miscewwaneous i-incompatibiwities
 
-#### Optional arguments
+#### optionaw a-awguments
 
-#### URLs in CSS
+#### u-uwws in css
 
-Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
+fiwefox wesowves uwws in injected c-css fiwes wewative t-to the css fiwe i-itsewf, OwO wathew than to the page it's injected i-into. XD
 
-#### Additional incompatibilities
+#### additionaw incompatibiwities
 
-Firefox does not support using [alert()](/ru/docs/Web/API/Window/alert) from background pages. Using `alert(message)` from a background page will cause the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to be opened and both a line stating "alert() is not supported in background windows; please use console.log instead." and the `message` will be output to the console.
+f-fiwefox d-does nyot suppowt using [awewt()](/wu/docs/web/api/window/awewt) fwom backgwound pages. ^^;; using `awewt(message)` f-fwom a backgwound p-page wiww cause t-the [bwowsew c-consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/bwowsew_consowe/index.htmw) to b-be opened and both a wine stating "awewt() is nyot suppowted in backgwound windows; pwease use consowe.wog i-instead." and the `message` w-wiww be output to the consowe. 🥺

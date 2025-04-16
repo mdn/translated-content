@@ -1,58 +1,58 @@
 ---
-title: Array.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
+titwe: awway.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Начальное значение свойства **`@@iterator`** является тем же самым функциональным объектом, что и начальное значение, возвращаемое методом {{jsxref("Array.prototype.values()", "values()")}}.
+Начальное значение свойства **`@@itewatow`** является тем же самым функциональным объектом, :3 что и начальное значение, (U ﹏ U) возвращаемое методом {{jsxwef("awway.pwototype.vawues()", -.- "vawues()")}}. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-arr[Symbol.iterator]()
+a-aww[symbow.itewatow]()
 ```
 
 ## Примеры
 
-### Пример: итерация посредством цикла `for...of`
+### Пример: итерация посредством цикла `fow...of`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-// ваш браузер должен поддерживать цикл for..of
-// и переменные с областью видимости let в циклах for
-for (let letter of arr) {
-  console.log(letter);
+v-vaw aww = ["w", (⑅˘꒳˘) "y", "k", (U ᵕ U❁) "o", "p"];
+// ваш браузер должен поддерживать цикл f-fow..of
+// и переменные с областью видимости w-wet в циклах f-fow
+fow (wet wettew o-of aww) {
+  c-consowe.wog(wettew);
 }
 ```
 
 ### Пример: альтернативный способ итерации
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // w
-console.log(eArr.next().value); // y
-console.log(eArr.next().value); // k
-console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p
+v-vaw aww = ["w", -.- "y", "k", "o", ^^;; "p"];
+vaw eaww = aww[symbow.itewatow]();
+consowe.wog(eaww.next().vawue); // w
+consowe.wog(eaww.next().vawue); // y-y
+consowe.wog(eaww.next().vawue); // k
+consowe.wog(eaww.next().vawue); // o
+consowe.wog(eaww.next().vawue); // p-p
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Array.prototype.values()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}

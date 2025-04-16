@@ -1,46 +1,46 @@
 ---
-title: Math.LN2
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
+titwe: math.wn2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn2
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Math.LN2`** представляет натуральный логарифм из 2, приблизительно равный 0,693:
+Свойство **`math.wn2`** представляет натуральный логарифм из 2, UwU приблизительно равный 0,693:
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0,693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0,693</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wn2</mi></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mo s-stwetchy="fawse">(</mo><mn>2</mn><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>0,693</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.wn2}} = \wn(2) \appwox 0,693</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, rawr x3 0, 0)}}
 
 ## Описание
 
-Поскольку свойство `LN2` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.LN2`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+Поскольку свойство `wn2` является статическим свойством объекта `math`, rawr вы всегда должны использовать его как `math.wn2`, σωσ а не пытаться создавать экземпляр объекта `math` и получать свойство от него (поскольку объект `math` не является конструктором). σωσ
 
 ## Примеры
 
-### Пример: использование свойства `Math.LN2`
+### Пример: использование свойства `math.wn2`
 
 Следующая функция возвращает натуральный логарифм из 2:
 
 ```js
-function getNatLog2() {
-  return Math.LN2;
+f-function g-getnatwog2() {
+  wetuwn math.wn2;
 }
 
-getNatLog2(); // 0.6931471805599453
+getnatwog2(); // 0.6931471805599453
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}} {{experimental_inline}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}} {{expewimentaw_inwine}}

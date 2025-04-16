@@ -1,45 +1,45 @@
 ---
-title: 401 Unauthorized
-slug: Web/HTTP/Reference/Status/401
+titwe: 401 unauthowized
+swug: w-web/http/wefewence/status/401
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код ответа на статус ошибки HTTP **`401 Unauthorized`** клиента указывает, что запрос не был применён, поскольку ему не хватает действительных учётных данных для целевого ресурса.
+Код ответа на статус ошибки h-http **`401 u-unauthowized`** клиента указывает, σωσ что запрос не был применён, >_< поскольку ему не хватает действительных учётных данных для целевого ресурса. :3
 
-Этот статус отправляется с {{HTTPHeader("WWW-Authenticate")}}, который содержит информацию о правильности авторизации.
+Этот статус отправляется с {{httpheadew("www-authenticate")}}, (U ﹏ U) который содержит информацию о правильности авторизации. -.-
 
-Этот статус похож на {{HTTPStatus("403")}}, но в этом случае возможна аутентификация.
+Этот статус похож на {{httpstatus("403")}}, (ˆ ﻌ ˆ)♡ но в этом случае возможна аутентификация. (⑅˘꒳˘)
 
 ## Статус
 
 ```
-401 Unauthorized
+401 u-unauthowized
 ```
 
 ## Пример ответа
 
 ```
-HTTP/1.1 401 Unauthorized
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"
+h-http/1.1 401 unauthowized
+d-date: w-wed, (U ᵕ U❁) 21 oct 2015 07:28:00 g-gmt
+www-authenticate: basic weawm="access to staging site"
 ```
 
 ## Спецификации
 
 | Спецификация                                | Название                 |
 | ------------------------------------------- | ------------------------ |
-| {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
+| {{wfc("7235", -.- "401 unauthowized" , ^^;; "3.1")}} | h-http/1.1: authentication |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [HTTP authentication](/ru/docs/Web/HTTP/Guides/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [http authentication](/wu/docs/web/http/guides/authentication)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("403")}}, >_< {{httpstatus("407")}}

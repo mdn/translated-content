@@ -1,54 +1,54 @@
 ---
-title: WeakMap.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+titwe: weakmap.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`has()`** возвращает булевое значение, которое указывает на то существует элемент с таким ключом в объекте WeakMap или нет.
+Метод **`has()`** возвращает булевое значение, 😳 которое указывает на то существует элемент с таким ключом в объекте w-weakmap или нет. XD
 
 ## Синтаксис
 
 ```
-wm.has(key);
+w-wm.has(key);
 ```
 
 ### Параметры
 
-- key
-  - : Обязателен. Ключ элемента, существование которого необходимо проверить в объекте WeakMap.
+- k-key
+  - : Обязателен. :3 Ключ элемента, 😳😳😳 существование которого необходимо проверить в объекте w-weakmap. -.-
 
 ### Возвращаемое значение
 
-- Boolean
-  - : Возвращает `true` если элемент с указанным ключом существует в объекте WeakMap, если нет — false.
+- b-boowean
+  - : Возвращает `twue` если элемент с указанным ключом существует в объекте w-weakmap, ( ͡o ω ͡o ) если нет — f-fawse. rawr x3
 
 ## Примеры
 
 ### Использование метода `has`
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+v-vaw wm = nyew weakmap();
+wm.set(window, nyaa~~ "foo");
 
-wm.has(window); // возвращает true
-wm.has("baz"); // возвращает false
+wm.has(window); // возвращает twue
+wm.has("baz"); // возвращает fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-## Firefox-specific notes
+## f-fiwefox-specific nyotes
 
-- Prior to SpiderMonkey 38, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ([Firefox bug 1127827](https://bugzil.la/1127827)).
+- pwiow to spidewmonkey 38, /(^•ω•^) t-this method thwew a {{jsxwef("typeewwow")}} w-when the `key` pawametew was nyot an object. rawr this has been f-fixed in vewsion 38 and watew to w-wetuwn `fawse` a-as pew watest es6 standawd ([fiwefox bug 1127827](https://bugziw.wa/1127827)). OwO
 
 ## Смотрите также
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
-- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.set()")}}
+- {{jsxwef("weakmap.pwototype.get()")}}

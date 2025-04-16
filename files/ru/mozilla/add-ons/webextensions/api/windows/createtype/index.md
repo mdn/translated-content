@@ -1,58 +1,58 @@
 ---
-title: windows.CreateType
-slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
+titwe: windows.cweatetype
+swug: m-moziwwa/add-ons/webextensions/api/windows/cweatetype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Определение типа окна браузера для создания.
+Определение типа окна браузера для создания. 😳😳😳
 
 ## Тип
 
-Значение данного типа `strings`. Возможные значения:
+Значение данного типа `stwings`. :3 Возможные значения:
 
-- `"normal"`
+- `"nowmaw"`
 - `"popup"`
-- `"panel"`
-- `"detached_panel"`
+- `"panew"`
+- `"detached_panew"`
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> Этот API основан на Chromium API [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#type-CreateType). Эта документация основана на [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) из кода Chromium.
+> [!note]
+> Этот api основан на c-chwomium a-api [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows#type-cweatetype). OwO Эта документация основана на [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) из кода c-chwomium. (U ﹏ U)
 >
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
+> Информация о совместимости m-micwosoft edge предоставлена корпорацией m-micwosoft и включена здесь под лицензией c-cweative c-commons attwibution 3.0 united states wicense. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (U ﹏ U) aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, (ˆ ﻌ ˆ)♡ with ow without
+// modification, 😳😳😳 awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) t-this wist of conditions and the fowwowing discwaimew. (///ˬ///✿)
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, 😳 t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳
+//    * n-nyeithew the nyame of googwe inc. σωσ nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, OwO incwuding, b-but nyot
+// wimited to, /(^•ω•^) the i-impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. 😳😳😳 in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, >_< incidentaw,
+// speciaw, >w< exempwawy, rawr ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// wimited to, >w< pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (⑅˘꒳˘)
+// data, OwO ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, (ꈍᴗꈍ) whethew in contwact, stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such damage. mya
 -->

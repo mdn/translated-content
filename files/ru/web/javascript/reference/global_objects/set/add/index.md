@@ -1,67 +1,67 @@
 ---
-title: Set.prototype.add()
-slug: Web/JavaScript/Reference/Global_Objects/Set/add
+titwe: set.pwototype.add()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`add()`** добавляет новый элемент с заданным значением в конец объекта `Set`.
+Метод **`add()`** добавляет новый элемент с заданным значением в конец объекта `set`. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.add()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew s-set();
 
 set1.add(42);
-set1.add(42);
-set1.add(13);
+s-set1.add(42);
+s-set1.add(13);
 
-for (const item of set1) {
-  console.log(item);
-  // Expected output: 42
-  // Expected output: 13
+fow (const item of set1) {
+  consowe.wog(item);
+  // expected o-output: 42
+  // expected output: 13
 }
 ```
 
 ## Синтаксис
 
 ```
-mySet.add(value);
+myset.add(vawue);
 ```
 
 ### Параметры
 
-- value
-  - : Обязательное. Значение элемента, добавляемого в объект `Set`.
+- v-vawue
+  - : Обязательное. >_< Значение элемента, mya добавляемого в объект `set`. mya
 
 ### Возвращаемое значение
 
-Объект `Set`.
+Объект `set`. 😳
 
 ## Примеры
 
 ### Использование метода `add`
 
 ```js
-var mySet = new Set();
+vaw myset = nyew s-set();
 
-mySet.add(1);
-mySet.add(5).add("some text"); // можно делать цепочки
+myset.add(1);
+myset.add(5).add("some text"); // можно делать цепочки
 
-console.log(mySet);
-// Set [1, 5, "some text"]
+consowe.wog(myset);
+// s-set [1, XD 5, "some text"]
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
-- {{jsxref("Set.prototype.has()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}
+- {{jsxwef("set.pwototype.has()")}}

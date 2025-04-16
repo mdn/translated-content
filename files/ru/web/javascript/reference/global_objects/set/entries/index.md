@@ -1,64 +1,64 @@
 ---
-title: Set.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+titwe: set.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`entries()`** возвращает новый **[`Итератор`](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators)**, который содержит массив **`[значение, значение]`** для каждого элемента в объекте `Set` в порядке их добавления. Для объекта `Set` не существует ключа `key`, как в объекте `Map`. Тем не менее, чтобы API было схож с объектом `Map`, каждая _запись_ содержит значение как в _ключе,_ так и в _значении_, возвращая массив `[значение, значение]`.
+Метод **`entwies()`** возвращает новый **[`Итератор`](/wu/docs/web/javascwipt/guide/itewatows_and_genewatows)**, :3 который содержит массив **`[значение, 😳😳😳 значение]`** для каждого элемента в объекте `set` в порядке их добавления. -.- Для объекта `set` не существует ключа `key`, ( ͡o ω ͡o ) как в объекте `map`. rawr x3 Тем не менее, nyaa~~ чтобы a-api было схож с объектом `map`, /(^•ω•^) каждая _запись_ содержит значение как в _ключе,_ так и в _значении_, rawr возвращая массив `[значение, OwO значение]`. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-set.pwototype.entwies()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add(42);
-set1.add("forty two");
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set();
+s-set1.add(42);
+set1.add("fowty t-two");
 
-const iterator1 = set1.entries();
+const itewatow1 = set1.entwies();
 
-for (const entry of iterator1) {
-  console.log(entry);
-  // Expected output: Array [42, 42]
-  // Expected output: Array ["forty two", "forty two"]
+fow (const entwy of itewatow1) {
+  c-consowe.wog(entwy);
+  // expected output: awway [42, >_< 42]
+  // e-expected output: awway ["fowty t-two", rawr x3 "fowty two"]
 }
 ```
 
 ## Синтаксис
 
 ```
-mySet.entries()
+myset.entwies()
 ```
 
 ### Возвращаемое значение
 
-Новый `Итератор`, который содержит массив `[значение, значение]` для каждого элемента, полученного в `Set` в порядке их добавления.
+Новый `Итератор`, mya который содержит массив `[значение, nyaa~~ значение]` для каждого элемента, (⑅˘꒳˘) полученного в `set` в порядке их добавления.
 
 ## Примеры
 
-### Использование `entries()`
+### Использование `entwies()`
 
 ```js
-var mySet = new Set();
-mySet.add("foobar");
-mySet.add(1);
-mySet.add("baz");
+vaw myset = nyew s-set();
+myset.add("foobaw");
+myset.add(1);
+m-myset.add("baz");
 
-var setIter = mySet.entries();
+v-vaw setitew = myset.entwies();
 
-console.log(setIter.next().value); // ["foobar", "foobar"]
-console.log(setIter.next().value); // [1, 1]
-console.log(setIter.next().value); // ["baz", "baz"]
+consowe.wog(setitew.next().vawue); // ["foobaw", rawr x3 "foobaw"]
+consowe.wog(setitew.next().vawue); // [1, (✿oωo) 1]
+consowe.wog(setitew.next().vawue); // ["baz", "baz"]
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

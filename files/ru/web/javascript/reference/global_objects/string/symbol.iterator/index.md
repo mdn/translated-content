@@ -1,53 +1,53 @@
 ---
-title: String.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
+titwe: stwing.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`[@@iterator]()`** возвращает новый объект итератора `Iterator`, который проходит по кодовым точкам строкового значения, возвращая каждую кодовую точку в виде строкового значения.
+Метод **`[@@itewatow]()`** возвращает новый объект итератора `itewatow`, rawr x3 который проходит по кодовым точкам строкового значения, rawr возвращая каждую кодовую точку в виде строкового значения.
 
 ## Синтаксис
 
 ```
-string[Symbol.iterator]
+s-stwing[symbow.itewatow]
 ```
 
 ## Примеры
 
-### Пример: использование метода `[@@iterator]()`
+### Пример: использование метода `[@@itewatow]()`
 
 ```js
-var string = "A\uD835\uDC68";
+v-vaw s-stwing = "a\ud835\udc68";
 
-var strIter = string[Symbol.iterator]();
+v-vaw s-stwitew = stwing[symbow.itewatow]();
 
-console.log(strIter.next().value); // "A"
-console.log(strIter.next().value); // "\uD835\uDC68"
+c-consowe.wog(stwitew.next().vawue); // "a"
+c-consowe.wog(stwitew.next().vawue); // "\ud835\udc68"
 ```
 
-### Пример: использование метода `[@@iterator]()` вместе с циклом `for..of`
+### Пример: использование метода `[@@itewatow]()` вместе с циклом `fow..of`
 
 ```js
-var string = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
+v-vaw stwing = "a\ud835\udc68b\ud835\udc69c\ud835\udc6a";
 
-for (var v of string) {
-  console.log(v);
+fow (vaw v of stwing) {
+  consowe.wog(v);
 }
-// "A"
-// "\uD835\uDC68"
-// "B"
-// "\uD835\uDC69"
-// "C"
-// "\uD835\uDC6A"
+// "a"
+// "\ud835\udc68"
+// "b"
+// "\ud835\udc69"
+// "c"
+// "\ud835\udc6a"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

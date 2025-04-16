@@ -1,155 +1,155 @@
 ---
-title: <video>
-slug: Web/HTML/Reference/Elements/video
+titwe: <video>
+swug: web/htmw/wefewence/ewements/video
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Для встраивания видео контента в документ используйте **элемент HTML \<video>**. Видео элемент может содержать один или несколько источников видео. Чтобы указать источник видео, необходимо использовать атрибут **src** или элемент {{HTMLElement("source")}}; браузер сам определит наиболее подходящий источник.
+Для встраивания видео контента в документ используйте **элемент h-htmw \<video>**. ^^;; Видео элемент может содержать один или несколько источников видео. (ˆ ﻌ ˆ)♡ Чтобы указать источник видео, ^^;; необходимо использовать атрибут **swc** или элемент {{htmwewement("souwce")}}; браузер сам определит наиболее подходящий источник. (⑅˘꒳˘)
 
-Для просмотра списка поддерживаемых форматов, перейдите по ссылке [Поддерживаемые аудио и видео элементами форматы мультимедийных файлов](/ru/docs/Web/Media/Formats).
+Для просмотра списка поддерживаемых форматов, rawr x3 перейдите по ссылке [Поддерживаемые аудио и видео элементами форматы мультимедийных файлов](/wu/docs/web/media/fowmats). (///ˬ///✿)
 
 ## Контекст Использования
 
-- Допустимое содержимое. Если элемент имеет атрибут [`src`](#src): 0 или более элементов {{HTMLElement("track")}}, за которым следует прозрачный контент, который не содержит элементов мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}
-  Иначе: 0 или более элементов {{HTMLElement("source")}}, за которыми следует 0 или более элементов {{HTMLElement("track")}}, затем прозрачным содержимым, которое не содержит элементы мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}.
+- Допустимое содержимое. Если элемент имеет атрибут [`swc`](#swc): 0 или более элементов {{htmwewement("twack")}}, 🥺 за которым следует прозрачный контент, >_< который не содержит элементов мультимедиа: {{htmwewement("audio")}} или {{htmwewement("video")}}
+  Иначе: 0 или более элементов {{htmwewement("souwce")}}, UwU за которыми следует 0 или более элементов {{htmwewement("twack")}}, >_< затем прозрачным содержимым, -.- которое не содержит элементы мультимедиа: {{htmwewement("audio")}} или {{htmwewement("video")}}. mya
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), содержание фраз, встроенный контент. Если имеет атрибут [`controls`](#controls): становится интерактивным элементом с осязаемым содержанием. |
+| [content c-categowies](/wu/docs/web/htmw/content_categowies) | [fwow c-content](/wu/docs/web/htmw/content_categowies#fwow_content), >w< содержание фраз, (U ﹏ U) встроенный контент. 😳😳😳 Если имеет атрибут [`contwows`](#contwows): становится интерактивным элементом с осязаемым содержанием. o.O |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                |
-| Допустимые родительские элементы                           | Любой элемент, который принимает встроенный контент.                                                                                                                                                            |
-| DOM интерфейс                                              | {{domxref("HTMLVideoElement")}}                                                                                                                                                                                 |
+| t-tag o-omission                                               | Нет, òωó открывающий и закрывающий теги обязательны. 😳😳😳                                                                                                                                                                |
+| Допустимые родительские элементы                           | Любой элемент, σωσ который принимает встроенный контент. (⑅˘꒳˘)                                                                                                                                                            |
+| d-dom интерфейс                                              | {{domxwef("htmwvideoewement")}}                                                                                                                                                                                 |
 
 ## Атрибуты
 
-Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Как и все h-htmw-элементы, (///ˬ///✿) этот элемент поддерживает [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-- `autoplay`
-  - : Логический атрибут; если указан, то видео начнёт воспроизводится автоматически, как только это будет возможно сделать без остановки, чтобы закончить загрузку данных.
-- `autobuffer` {{Non-standard_inline}}
-  - : Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кеш мультимедиа.
-    > [!NOTE]
-    > Несмотря на то, что в ранних версиях HTML5 атрибут `autobuffer` присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут `preload`, вместо `autobuffer` с другим синтаксисом. [Firefox bug 548523](https://bugzil.la/548523)
-- `buffered`
-  - : Атрибут для определения временных диапазонов буферизованных носителей. Этот атрибут содержит объект {{domxref("TimeRanges")}}.
-- `controls`
-  - : Если этот атрибут присутствует, тогда браузер отобразит элементы управления, чтобы позволить пользователю управлять воспроизведением видео, регулировать громкость, осуществлять перемотку, а также ставить на паузу и возобновление воспроизведение.
-- `crossorigin`
-  - : This enumerated attribute indicates whether to use CORS to fetch the related image. [CORS-enabled resources](/ru/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+- `autopway`
+  - : Логический атрибут; если указан, OwO то видео начнёт воспроизводится автоматически, >w< как только это будет возможно сделать без остановки, чтобы закончить загрузку данных. 🥺
+- `autobuffew` {{non-standawd_inwine}}
+  - : Логический атрибут; если указано, nyaa~~ видео автоматически начнёт буферизацию, ^^ даже если оно не настроено на автоматический запуск. >w< Используйте этот атрибут только тогда, OwO когда очень вероятно, XD что пользователь будет смотреть видео. ^^;; Видео буферизуется до тех пор, 🥺 пока не заполнится кеш мультимедиа. XD
+    > [!note]
+    > Несмотря на то, (U ᵕ U❁) что в ранних версиях h-htmw5 атрибут `autobuffew` присутствовал, :3 в последующих выпусках он был удалён. ( ͡o ω ͡o ) Также он был удалён из gecko 2.0 и других браузеров, òωó а в некоторых никогда не реализовывался. σωσ Спецификация определяет новый перечислимый атрибут `pwewoad`, (U ᵕ U❁) вместо `autobuffew` с другим синтаксисом. (✿oωo) [fiwefox bug 548523](https://bugziw.wa/548523)
+- `buffewed`
+  - : Атрибут для определения временных диапазонов буферизованных носителей. ^^ Этот атрибут содержит объект {{domxwef("timewanges")}}. ^•ﻌ•^
+- `contwows`
+  - : Если этот атрибут присутствует, XD тогда браузер отобразит элементы управления, :3 чтобы позволить пользователю управлять воспроизведением видео, (ꈍᴗꈍ) регулировать громкость, осуществлять перемотку, :3 а также ставить на паузу и возобновление воспроизведение. (U ﹏ U)
+- `cwossowigin`
+  - : this enumewated attwibute i-indicates whethew to use cows to fetch the w-wewated image. UwU [cows-enabwed wesouwces](/wu/docs/web/htmw/cows_enabwed_image) c-can be weused in the {{htmwewement("canvas")}} ewement without being _tainted_. 😳😳😳 t-the awwowed vawues awe:
     - anonymous
-      - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
-    - use-credentials
-      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/ru/docs/Web/HTML/Attributes/crossorigin) for additional information.
+      - : s-sends a cwoss-owigin w-wequest without a cwedentiaw. XD in othew wowds, o.O it sends the `owigin:` http h-headew without a cookie, (⑅˘꒳˘) x.509 cewtificate, 😳😳😳 ow pewfowming http basic authentication. nyaa~~ i-if the sewvew does nyot give c-cwedentiaws t-to the owigin site (by n-nyot setting t-the `access-contwow-awwow-owigin:` http headew), rawr the image wiww b-be _tainted_, -.- and its usage westwicted. (✿oωo)
+    - u-use-cwedentiaws
+      - : sends a cwoss-owigin wequest with a cwedentiaw. /(^•ω•^) in othew wowds, 🥺 it sends t-the `owigin:` http headew with a-a cookie, ʘwʘ a c-cewtificate, UwU ow p-pewfowming http basic authentication. XD if the sewvew does nyot give c-cwedentiaws to t-the owigin site (thwough `access-contwow-awwow-cwedentiaws:` http headew), (✿oωo) the i-image wiww be _tainted_ a-and its usage westwicted.when n-nyot pwesent, :3 the wesouwce i-is fetched without a cows wequest (i.e. (///ˬ///✿) without s-sending the `owigin:` http headew), nyaa~~ p-pweventing its nyon-tainted u-used in {{htmwewement('canvas')}} e-ewements. >w< if invawid, -.- it is handwed as if the enumewated keywowd **anonymous** was used. (✿oωo) see [cows settings attwibutes](/wu/docs/web/htmw/attwibutes/cwossowigin) f-fow additionaw i-infowmation. (˘ω˘)
 - `height`
-  - : Высота области отображения видео в пикселях.
-- `loop`
-  - : Логический атрибут; если указан, то по окончанию проигрывания, видео автоматически начнёт воспроизведение с начала.
+  - : Высота области отображения видео в пикселях. rawr
+- `woop`
+  - : Логический атрибут; если указан, OwO то по окончанию проигрывания, ^•ﻌ•^ видео автоматически начнёт воспроизведение с начала. UwU
 - `muted`
-  - : Логический атрибут, который определяет значение по умолчания для аудио дорожки, содержащуюся в видео. Если атрибут указан, то аудио дорожка воспроизводиться не будет. Значение атрибута по умолчанию - "ложь", и это означает, что звук будет воспроизводиться, когда видео воспроизводится.
-- `played`
-  - : Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.
-- `preload`
+  - : Логический атрибут, (˘ω˘) который определяет значение по умолчания для аудио дорожки, (///ˬ///✿) содержащуюся в видео. σωσ Если атрибут указан, /(^•ω•^) то аудио дорожка воспроизводиться не будет. 😳 Значение атрибута по умолчанию - "ложь", 😳 и это означает, (⑅˘꒳˘) что звук будет воспроизводиться, 😳😳😳 когда видео воспроизводится. 😳
+- `pwayed`
+  - : Атрибут {{domxwef("timewanges")}}, XD указывающий все диапазоны воспроизводимого видео. mya
+- `pwewoad`
 
-  - : Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведёт к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:
-    - `none`: указывает, что видео не должно быть предварительно загружено.
-    - `metadata`: указывает, что предварительно загружаются метаданные видео (например, длина).
-    - `auto`: указывает, что весь видеофайл может быть загружен, даже если пользователь не должен его использовать.
-    - _пустая строка_: синоним значения `auto`.Если не задано, значение атрибута определяется браузером по умолчанию (то есть, каждый браузер имеет по умолчанию значение данного атрибута). Спецификация рекомендует использовать `metadata`.
-      > [!NOTE]
+  - : Этот перечислимый атрибут предназначен для того, ^•ﻌ•^ чтобы дать подсказку браузеру о том, ʘwʘ что, ( ͡o ω ͡o ) по мнению автора, mya приведёт к лучшему пользовательскому опыту. o.O Он может иметь одно из следующих значений:
+    - `none`: указывает, (✿oωo) что видео не должно быть предварительно загружено. :3
+    - `metadata`: указывает, 😳 что предварительно загружаются метаданные видео (например, (U ﹏ U) длина). mya
+    - `auto`: указывает, (U ᵕ U❁) что весь видеофайл может быть загружен, :3 даже если пользователь не должен его использовать. mya
+    - _пустая строка_: синоним значения `auto`.Если не задано, OwO значение атрибута определяется браузером по умолчанию (то есть, (ˆ ﻌ ˆ)♡ каждый браузер имеет по умолчанию значение данного атрибута). ʘwʘ Спецификация рекомендует использовать `metadata`.
+      > [!note]
       >
-      > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
-      > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
+      > - the `autopway` a-attwibute has p-pwecedence ovew `pwewoad`. o.O i-if `autopway` is specified, UwU the bwowsew wouwd obviouswy n-nyeed to stawt downwoading the video fow pwayback. rawr x3
+      > - the specification does nyot fowce t-the bwowsew to fowwow the vawue o-of this attwibute; i-it is a m-mewe hint. 🥺
 
-- `poster`
-  - : URL-адрес, указывающий на постера, которое будет использовано, пока загружается видео или пока пользователь не нажмёт на кнопку воспроизведения. Если этот атрибут не указан, ничего не отображается до тех пор, пока не будет доступен первый кадр; то первый кадр отображается как рамка постера.
-- `src`
-  - : The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.
+- `postew`
+  - : uww-адрес, :3 указывающий на постера, (ꈍᴗꈍ) которое будет использовано, 🥺 пока загружается видео или пока пользователь не нажмёт на кнопку воспроизведения. (✿oωo) Если этот атрибут не указан, (U ﹏ U) ничего не отображается до тех пор, :3 пока не будет доступен первый кадр; то первый кадр отображается как рамка постера. ^^;;
+- `swc`
+  - : t-the u-uww of the video t-to embed. rawr this i-is optionaw; you may instead use the {{htmwewement("souwce")}} e-ewement within the v-video bwock to s-specify the video t-to embed. 😳😳😳
 - `width`
-  - : Ширина области отображения видео в пикселях.
+  - : Ширина области отображения видео в пикселях. (✿oωo)
 
 ## События
 
-The `<video>` element can fire many different [events](/ru/docs/Web/Events#media).
+t-the `<video>` ewement can fiwe many diffewent [events](/wu/docs/web/events#media). OwO
 
 ## Примеры
 
-```html
-<!-- Simple video example -->
-<video src="videofile.ogg" autoplay poster="posterimage.jpg">
-  Sorry, your browser doesn't support embedded videos, but don't worry, you can
-  <a href="videofile.ogg">download it</a>
-  and watch it with your favorite video player!
+```htmw
+<!-- simpwe v-video exampwe -->
+<video swc="videofiwe.ogg" autopway postew="postewimage.jpg">
+  sowwy, ʘwʘ youw bwowsew doesn't suppowt e-embedded videos, (ˆ ﻌ ˆ)♡ but don't wowwy, (U ﹏ U) you can
+  <a hwef="videofiwe.ogg">downwoad i-it</a>
+  and w-watch it with youw f-favowite video pwayew! UwU
 </video>
 
-<!-- Video with subtitles -->
-<video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
+<!-- v-video with subtitwes -->
+<video s-swc="foo.ogg">
+  <twack k-kind="subtitwes" swc="foo.en.vtt" swcwang="en" wabew="engwish" />
+  <twack kind="subtitwes" swc="foo.sv.vtt" s-swcwang="sv" wabew="svenska" />
 </video>
 ```
 
-The first example plays a video, starting playback as soon as enough of the video has been received to allow playback without pausing to download more. Until the video starts playing, the image "posterimage.jpg" is displayed in its place.
+t-the fiwst exampwe pways a-a video, XD stawting p-pwayback as soon as enough of the video has b-been weceived t-to awwow pwayback without pausing t-to downwoad mowe. u-untiw the video stawts pwaying, ʘwʘ the image "postewimage.jpg" is dispwayed in its pwace. rawr x3
 
-The second example allows the user to choose between different subtitles.
+the s-second exampwe awwows t-the usew to c-choose between diffewent subtitwes. ^^;;
 
-## Multiple Sources Example
+## m-muwtipwe s-souwces exampwe
 
-```html
+```htmw
 <video
   width="480"
-  controls
-  poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
-  <source
-    src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4"
+  c-contwows
+  postew="https://awchive.owg/downwoad/webmvp8vowbis/webmvp8.gif">
+  <souwce
+    swc="https://awchive.owg/downwoad/webmvp8vowbis/webmvp8_512kb.mp4"
     type="video/mp4" />
-  <source
-    src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv"
+  <souwce
+    swc="https://awchive.owg/downwoad/webmvp8vowbis/webmvp8.ogv"
     type="video/ogg" />
-  <source
-    src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm"
-    type="video/webm" />
-  Your browser doesn't support HTML5 video tag.
+  <souwce
+    s-swc="https://awchive.owg/downwoad/webmvp8vowbis/webmvp8.webm"
+    t-type="video/webm" />
+  youw bwowsew doesn't suppowt htmw5 v-video tag.
 </video>
 ```
 
-You can try the preceding example on [HTML5 video demo example](http://dul.web.id/contoh-example/html/tag-element/html5-video.php) with live preview code editor.
+y-you can twy the pweceding exampwe on [htmw5 video d-demo exampwe](http://duw.web.id/contoh-exampwe/htmw/tag-ewement/htmw5-video.php) with wive pweview code editow. ʘwʘ
 
-## Server support
+## sewvew suppowt
 
-If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).
+if the mime t-type fow the video is not set cowwectwy on the sewvew, (U ﹏ U) t-the video m-may nyot show ow show a gway box containing an x (if javascwipt i-is enabwed). (˘ω˘)
 
-If you use Apache Web Server to serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. The most common video file type extensions are ".ogm", ".ogv", or ".ogg". To do this, edit the "mime.types" file in "/etc/apache" or use the "AddType" configuration directive in httpd.conf.
-
-```
-AddType video/ogg .ogm
-AddType video/ogg .ogv
-AddType video/ogg .ogg
-```
-
-If you serve your videos as WebM, you can fix this problem for the Apache Web Server by adding the extension used by your video files (".webm" is the most common one) to the MIME type "video/webm" via the "mime.types" file in "/etc/apache" or via the "AddType" configuration directive in httpd.conf.
+if y-you use apache web sewvew to sewve ogg theowa videos, (ꈍᴗꈍ) you can f-fix this pwobwem by adding the video f-fiwe type extensions to "video/ogg" mime type. /(^•ω•^) the most common v-video fiwe type extensions awe ".ogm", >_< ".ogv", σωσ o-ow ".ogg". ^^;; to d-do this, 😳 edit the "mime.types" fiwe in "/etc/apache" o-ow use the "addtype" configuwation d-diwective i-in httpd.conf.
 
 ```
-AddType video/webm .webm
+a-addtype video/ogg .ogm
+addtype v-video/ogg .ogv
+a-addtype video/ogg .ogg
 ```
 
-Your web host may provide an easy interface to MIME type configuration changes for new technologies until a global update naturally occurs.
+if you sewve youw videos as webm, >_< y-you can fix this p-pwobwem fow t-the apache web sewvew by adding the extension used b-by youw video fiwes (".webm" i-is the most common o-one) to the mime type "video/webm" via the "mime.types" fiwe i-in "/etc/apache" o-ow via the "addtype" c-configuwation d-diwective in httpd.conf. -.-
 
-## Интерфейс DOM
+```
+a-addtype video/webm .webm
+```
 
-Этот элемент реализует интерфейс [`HTMLVideoElement`](/ru/docs/Web/API/HTMLVideoElement).
+youw web host may pwovide an easy intewface to mime type configuwation changes fow n-nyew technowogies untiw a gwobaw u-update nyatuwawwy occuws. UwU
+
+## Интерфейс d-dom
+
+Этот элемент реализует интерфейс [`htmwvideoewement`](/wu/docs/web/api/htmwvideoewement). :3
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Media formats supported by the audio and video elements](/ru/docs/Web/Media/Formats)
-- {{htmlelement("audio")}}
-- [Using HTML5 audio and video](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [`nsIDOMHTMLMediaElement`](/ru/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
-- [TinyVid](http://tinyvid.tv/) - examples using ogg files in HTML5.
-- [The `video` element](https://www.whatwg.org/specs/web-apps/current-work/#video) (HTML5 specification)
-- [Configuring servers for Ogg media](/ru/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
-- [The state of HTML5 video](https://www.jwplayer.com/html5/)
+- [media fowmats s-suppowted by the audio and v-video ewements](/wu/docs/web/media/fowmats)
+- {{htmwewement("audio")}}
+- [using h-htmw5 audio and v-video](/wu/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_video_and_audio)
+- [manipuwating v-video using c-canvas](/wu/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+- [`nsidomhtmwmediaewement`](/wu/docs/xpcom_intewface_wefewence/nsidomhtmwmediaewement)
+- [tinyvid](http://tinyvid.tv/) - exampwes using ogg fiwes in htmw5.
+- [the `video` ewement](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#video) (htmw5 specification)
+- [configuwing sewvews fow ogg media](/wu/docs/web/media/fowmats/configuwing_sewvews_fow_ogg_media)
+- [the s-state of h-htmw5 video](https://www.jwpwayew.com/htmw5/)

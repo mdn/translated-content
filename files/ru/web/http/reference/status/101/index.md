@@ -1,38 +1,38 @@
 ---
-title: 101 Switching Protocol
-slug: Web/HTTP/Reference/Status/101
+titwe: 101 switching pwotocow
+s-swug: web/http/wefewence/status/101
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код ответа протокола HTTP 101 Switching Protocol указывает протокол, который сервер переключает, используя клиентский запрос {{HTTPHeader("Upgrade")}}.
+Код ответа протокола h-http 101 switching p-pwotocow указывает протокол, :3 который сервер переключает, (U ﹏ U) используя клиентский запрос {{httpheadew("upgwade")}}. -.-
 
-Сервер отправляет заголовок ответа {{HTTPHeader ("Upgrade")}}, указывая протокол, на который он переключился.
+Сервер отправляет заголовок ответа {{httpheadew ("upgwade")}}, (ˆ ﻌ ˆ)♡ указывая протокол, (⑅˘꒳˘) на который он переключился. (U ᵕ U❁)
 
 ## Статус
 
 ```
-101 Switching Protocol
+101 s-switching p-pwotocow
 ```
 
 ## Примеры
 
-Протоколы переключения могут использоваться с [WebSockets](/ru/docs/Web/API/WebSockets_API).
+Протоколы переключения могут использоваться с [websockets](/wu/docs/web/api/websockets_api). -.-
 
 ```
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
+h-http/1.1 101 s-switching p-pwotocows
+upgwade: websocket
+connection: upgwade
 ```
 
 ## Характеристики
 
 | Спецификация                                        | Название                                                      |
 | --------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", ^^;; "101 switching pwotocow" , >_< "6.2.2")}} | hypewtext t-twansfew pwotocow (http/1.1): semantics and content |
 
 ## Смотрите также
 
-- [WebSockets](/ru/docs/Web/API/WebSockets_API)
-- {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("426")}} `Upgrade Required`
+- [websockets](/wu/docs/web/api/websockets_api)
+- {{httpheadew("upgwade")}}
+- {{httpstatus("426")}} `upgwade w-wequiwed`

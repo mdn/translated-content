@@ -1,227 +1,227 @@
 ---
-title: Web Performance
-slug: Web/Performance
+titwe: web pewfowmance
+swug: w-web/pewfowmance
 ---
 
-{{QuickLinksWithSubPages}}
+{{quickwinkswithsubpages}}
 
-Производительность в web - это объективные измерения и пользовательские ощущения, связанные с загрузкой и работой приложения. Производительность - это о том, как долго сайт грузится, становится интерактивным и отзывчивым, о том, как плавно происходит взаимодействие с контентом. Плавный ли скролл страницы? Все ли кнопки кликабельны? Всплывающие окна загружаются и показываются быстро? А анимируются? Хорошая производительность требует учёта всех аспектов: как объективных, например, фактическое время загрузки страницы или частота смены кадров; так и субъективных - в буквальном смысле "как пользователь воспринимает систему".
+Производительность в w-web - это объективные измерения и пользовательские ощущения, (U ﹏ U) связанные с загрузкой и работой приложения. (ˆ ﻌ ˆ)♡ Производительность - это о том, (⑅˘꒳˘) как долго сайт грузится, (U ﹏ U) становится интерактивным и отзывчивым, o.O о том, mya как плавно происходит взаимодействие с контентом. XD Плавный ли скролл страницы? Все ли кнопки кликабельны? Всплывающие окна загружаются и показываются быстро? А анимируются? Хорошая производительность требует учёта всех аспектов: как объективных, òωó например, (˘ω˘) фактическое время загрузки страницы или частота смены кадров; так и субъективных - в буквальном смысле "как пользователь воспринимает систему". :3
 
-Чем дольше загружается ваше приложение, тем больше пользователей решаются избавиться от него. Очень важно уменьшать время загрузки приложения, а так же промежутка времени, за которое оно становится интерактивным. Но в то же время, важно добавлять в приложение новые возможности, которые уменьшают время отклика и делают приложение интерактивным за счёт неочевидных хитростей, например, за счёт асинхронной загрузки данных, которые не понадобятся пользователю "здесь и сейчас".
+Чем дольше загружается ваше приложение, OwO тем больше пользователей решаются избавиться от него. mya Очень важно уменьшать время загрузки приложения, (˘ω˘) а так же промежутка времени, o.O за которое оно становится интерактивным. (✿oωo) Но в то же время, (ˆ ﻌ ˆ)♡ важно добавлять в приложение новые возможности, ^^;; которые уменьшают время отклика и делают приложение интерактивным за счёт неочевидных хитростей, OwO например, 🥺 за счёт асинхронной загрузки данных, которые не понадобятся пользователю "здесь и сейчас". mya
 
-Существуют инструменты измерения производительности, API и лучшие практики, которые помогут нам измерять и улучшать производительность. Мы постараемся раскрыть их в следующей секции:
+Существуют инструменты измерения производительности, 😳 a-api и лучшие практики, которые помогут нам измерять и улучшать производительность. Мы постараемся раскрыть их в следующей секции:
 
 ## Ключевые статьи о производительности
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
 ## Руководства для начинающих
 
-The MDN [Web Performance Learning Area](/ru/docs/Learn_web_development/Extensions/Performance) contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:
+the m-mdn [web pewfowmance w-weawning a-awea](/wu/docs/weawn_web_devewopment/extensions/pewfowmance) c-contains m-modewn, òωó up-to-date tutowiaws covewing pewfowmance essentiaws. /(^•ω•^) stawt hewe i-if you awe a nyewcomew to pewfowmance:
 
-- [Производительность веба: краткий обзор](/ru/docs/Learn/Performance/What_is_web_performance)
-  - : Обзор пути обучения повышения веб-производительности.
-- [Что такое производительность веба?](/ru/docs/Learn/Performance/What_is_web_performance)
-  - : В этой статье рассматривается производительность в целом — сюда входят инструменты, метрики, API, загрузка данных по сети и особые группы пользователей, которые нам нужно учитывать.
-- [Как пользователи воспринимают производительность?](/ru/docs/Learn/Performance/Perceived_performance)
-  - : То как пользователи воспринимают ваш сайт является более важным, чем значения метрик в миллисекундах. На это восприятие влияет фактическое время загрузки страницы, бездействие, реакция на взаимодействие с пользователем, а также плавность прокрутки и других анимаций. В этой статье мы обсудим различные метрики загрузки, анимацию и показатели отклика, а также лучшие практики для улучшения восприятия пользователем без влияния на сами метрики.
-- [Основы производительности веба](/ru/docs/Learn/Performance/Web_Performance_Basics)
-  - : В дополнение к HTML, CSS, JavaScript и мультимедийным файлам существуют функции, которые могут замедлить работу приложений, и функции, которые могут сделать приложения субъективно и объективно быстрее. Существует множество API, инструментов разработчика, хороших и плохих практик, связанных с веб-производительностью. Здесь мы представим многие из этих функций на базовом уровне и предоставим ссылки на более подробные сведения для повышения производительности по каждой теме.
-- [Производительность HTML](/ru/docs/Learn/Performance/HTML)
-  - : Некоторые атрибуты и порядок элементов разметки могут повлиять на производительность вашего веб-сайта. Сведя к минимуму количество DOM-элементов, обеспечив использование наилучшего порядка и атрибутов для включения контента, такого как стили, скрипты, мультимедиа и сторонние скрипты, вы можете значительно улучшить опыт пользователя (англ. UX). В этой статье подробно рассматривается, как можно использовать HTML для обеспечения максимальной производительности.
-- [Мультимедиа: изображения и видео](/ru/docs/Learn/Performance/Multimedia)
-  - : Наиболее доступным подходом повышения веб-производительности часто является медиа-оптимизация. Возможно обеспечить загрузку различных вариантов медиафайлов в зависимости от возможностей, размера и плотности пикселей дисплея каждого конкретного пользовательского устройства. Дополнительные советы, такие как удаление звуковых дорожек из фоновых видео, могут еще больше улучшить производительность. В этой статье мы обсудим влияние изображений, видео- и аудиоконтента на производительность, а также способы оптимизации.
-- [Производительность CSS](/ru/docs/Learn/Performance/CSS)
-  - : CSS может быть менее важным направлением оптимизации для повышения производительности, но есть некоторые функции CSS, которые влияют на производительность значительно сильнее прочих. В этой статье мы рассмотрим некоторые свойства CSS, влияющие на производительность, и предложим способы работы со стилями, которые помогут снизить негативное влияние на производительность.
-- [Производительность JavaScript](/ru/docs/Learn/Performance/JavaScript)
-  - : JavaScript при правильном использовании может обеспечить пользователю интерактивный и захватывающий опыт. Или он может значительно снизить время загрузки, время рендеринга, производительность в приложении, время автономной работы и удобство для пользователя. В этой статье описаны некоторые передовые методы работы с JavaScript, которые следует учитывать, чтобы обеспечить максимально возможную производительность даже сложного контента.
-- [Производительность на мобильных устройствах](/ru/docs/Learn/Performance/Mobile)
-  - : Поскольку доступ в Интернет на мобильных устройствах весьма популярен, а все мобильные платформы имеют полноценные браузеры, но, возможно, с ограниченной пропускной способностью, ЦП и временем автономной работы, важно учитывать производительность вашего веб-контента на этих платформах. В этой статье рассматриваются вопросы производительности для мобильных устройств.
+- [Производительность веба: краткий обзор](/wu/docs/weawn/pewfowmance/nani_is_web_pewfowmance)
+  - : Обзор пути обучения повышения веб-производительности. -.-
+- [Что такое производительность веба?](/wu/docs/weawn/pewfowmance/nani_is_web_pewfowmance)
+  - : В этой статье рассматривается производительность в целом — сюда входят инструменты, òωó метрики, /(^•ω•^) api, загрузка данных по сети и особые группы пользователей, /(^•ω•^) которые нам нужно учитывать. 😳
+- [Как пользователи воспринимают производительность?](/wu/docs/weawn/pewfowmance/pewceived_pewfowmance)
+  - : То как пользователи воспринимают ваш сайт является более важным, :3 чем значения метрик в миллисекундах. (U ᵕ U❁) На это восприятие влияет фактическое время загрузки страницы, ʘwʘ бездействие, o.O реакция на взаимодействие с пользователем, ʘwʘ а также плавность прокрутки и других анимаций. ^^ В этой статье мы обсудим различные метрики загрузки, ^•ﻌ•^ анимацию и показатели отклика, mya а также лучшие практики для улучшения восприятия пользователем без влияния на сами метрики. UwU
+- [Основы производительности веба](/wu/docs/weawn/pewfowmance/web_pewfowmance_basics)
+  - : В дополнение к h-htmw, >_< css, javascwipt и мультимедийным файлам существуют функции, /(^•ω•^) которые могут замедлить работу приложений, òωó и функции, σωσ которые могут сделать приложения субъективно и объективно быстрее. ( ͡o ω ͡o ) Существует множество a-api, nyaa~~ инструментов разработчика, :3 хороших и плохих практик, UwU связанных с веб-производительностью. Здесь мы представим многие из этих функций на базовом уровне и предоставим ссылки на более подробные сведения для повышения производительности по каждой теме. o.O
+- [Производительность htmw](/wu/docs/weawn/pewfowmance/htmw)
+  - : Некоторые атрибуты и порядок элементов разметки могут повлиять на производительность вашего веб-сайта. (ˆ ﻌ ˆ)♡ Сведя к минимуму количество dom-элементов, ^^;; обеспечив использование наилучшего порядка и атрибутов для включения контента, ʘwʘ такого как стили, σωσ скрипты, ^^;; мультимедиа и сторонние скрипты, ʘwʘ вы можете значительно улучшить опыт пользователя (англ. ^^ ux). nyaa~~ В этой статье подробно рассматривается, (///ˬ///✿) как можно использовать h-htmw для обеспечения максимальной производительности. XD
+- [Мультимедиа: изображения и видео](/wu/docs/weawn/pewfowmance/muwtimedia)
+  - : Наиболее доступным подходом повышения веб-производительности часто является медиа-оптимизация. :3 Возможно обеспечить загрузку различных вариантов медиафайлов в зависимости от возможностей, òωó размера и плотности пикселей дисплея каждого конкретного пользовательского устройства. ^^ Дополнительные советы, ^•ﻌ•^ такие как удаление звуковых дорожек из фоновых видео, σωσ могут еще больше улучшить производительность. (ˆ ﻌ ˆ)♡ В этой статье мы обсудим влияние изображений, nyaa~~ видео- и аудиоконтента на производительность, ʘwʘ а также способы оптимизации. ^•ﻌ•^
+- [Производительность css](/wu/docs/weawn/pewfowmance/css)
+  - : c-css может быть менее важным направлением оптимизации для повышения производительности, rawr x3 но есть некоторые функции c-css, 🥺 которые влияют на производительность значительно сильнее прочих. ʘwʘ В этой статье мы рассмотрим некоторые свойства css, (˘ω˘) влияющие на производительность, o.O и предложим способы работы со стилями, σωσ которые помогут снизить негативное влияние на производительность. (ꈍᴗꈍ)
+- [Производительность javascwipt](/wu/docs/weawn/pewfowmance/javascwipt)
+  - : javascwipt при правильном использовании может обеспечить пользователю интерактивный и захватывающий опыт. (ˆ ﻌ ˆ)♡ Или он может значительно снизить время загрузки, o.O время рендеринга, :3 производительность в приложении, -.- время автономной работы и удобство для пользователя. ( ͡o ω ͡o ) В этой статье описаны некоторые передовые методы работы с javascwipt, /(^•ω•^) которые следует учитывать, (⑅˘꒳˘) чтобы обеспечить максимально возможную производительность даже сложного контента.
+- [Производительность на мобильных устройствах](/wu/docs/weawn/pewfowmance/mobiwe)
+  - : Поскольку доступ в Интернет на мобильных устройствах весьма популярен, òωó а все мобильные платформы имеют полноценные браузеры, 🥺 но, возможно, (ˆ ﻌ ˆ)♡ с ограниченной пропускной способностью, -.- ЦП и временем автономной работы, σωσ важно учитывать производительность вашего веб-контента на этих платформах. >_< В этой статье рассматриваются вопросы производительности для мобильных устройств. :3
 
-## Using Performance APIs
+## u-using pewfowmance apis
 
-- [Performance API](/ru/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : This guide describes how to use the [`Performance`](/ru/docs/Web/API/Performance) interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
-- [Resource Timing API](/ru/docs/Web/API/Performance_API/Resource_timing)
-  - : [Resource loading and timing](/ru/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with CORS
-- [The performance timeline](/ru/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : The [Performance Timeline](/ru/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/ru/docs/Web/API/Performance) interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
-- [User Timing API](/ru/docs/Web/API/Performance_API/User_timing)
-  - : Create application specific timestamps using the [user timing API](/ru/docs/Web/API/Performance_API/User_timing)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
-- [Frame Timing API](/ru/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
-  - : The [`PerformanceFrameTiming`](/ru/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
-- [Beacon API](/ru/docs/Web/API/Beacon_API)
-  - : The [Beacon](/ru/docs/Web/API/Beacon_API) interface schedules an asynchronous and non-blocking request to a web server.
-- [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
-  - : Learn to time element visibility with the [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API) and be asynchronously notified when elements of interest becomes visible.
+- [pewfowmance api](/wu/docs/web/api/pewfowmance_api/using_the_pewfowmance_api)
+  - : this guide descwibes how to u-use the [`pewfowmance`](/wu/docs/web/api/pewfowmance) intewfaces t-that awe defined i-in the [high-wesowution t-time](https://w3c.github.io/hw-time/) s-standawd. OwO
+- [wesouwce timing api](/wu/docs/web/api/pewfowmance_api/wesouwce_timing)
+  - : [wesouwce woading and t-timing](/wu/docs/web/api/pewfowmance_api/wesouwce_timing) the woading of those wesouwces, rawr i-incwuding managing the wesouwce buffew and coping with cows
+- [the pewfowmance timewine](/wu/docs/web/api/pewfowmance_timewine/using_pewfowmance_timewine)
+  - : t-the [pewfowmance timewine](/wu/docs/web/api/pewfowmance_timewine) s-standawd d-defines extensions t-to the [`pewfowmance`](/wu/docs/web/api/pewfowmance) intewface to suppowt cwient-side watency m-measuwements w-within appwications. (///ˬ///✿) togethew, t-these intewfaces c-can be used to hewp identify a-an appwication's pewfowmance bottwenecks. ^^
+- [usew t-timing api](/wu/docs/web/api/pewfowmance_api/usew_timing)
+  - : cweate appwication specific timestamps u-using the [usew timing a-api](/wu/docs/web/api/pewfowmance_api/usew_timing)'s "mawk" and "measuwe" e-entwy t-types - that awe pawt of the bwowsew's pewfowmance timewine. XD
+- [fwame timing api](/wu/docs/web/api/fwame_timing_api/using_the_fwame_timing_api)
+  - : the [`pewfowmancefwametiming`](/wu/docs/web/api/pewfowmancefwametiming) intewface pwovides _fwame_ t-timing d-data about the bwowsew's event w-woop. UwU
+- [beacon a-api](/wu/docs/web/api/beacon_api)
+  - : t-the [beacon](/wu/docs/web/api/beacon_api) intewface scheduwes an asynchwonous and nyon-bwocking w-wequest to a web sewvew. o.O
+- [intewsection obsewvew api](/wu/docs/web/api/intewsection_obsewvew_api/timing_ewement_visibiwity)
+  - : weawn to time ewement v-visibiwity with the [intewsection o-obsewvew api](/wu/docs/web/api/intewsection_obsewvew_api) a-and b-be asynchwonouswy nyotified when e-ewements of intewest b-becomes visibwe. 😳
 
-## Other documentation
+## o-othew d-documentation
 
-- [Developer Tools Performance Features](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
-  - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html), [Call Tree](https://profiler.firefox.com/docs/), and [Flame Charts](https://profiler.firefox.com/docs/).
-- [Profiling with the built-in profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
-  - : Learn how to profile app performance with Firefox's built-in profiler.
+- [devewopew toows pewfowmance f-featuwes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)
+  - : t-this s-section pwovides i-infowmation o-on how to use and undewstand the pewfowmance featuwes in youw devewopew t-toows, (˘ω˘) incwuding [watewfaww](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/watewfaww/index.htmw), 🥺 [caww twee](https://pwofiwew.fiwefox.com/docs/), ^^ and [fwame chawts](https://pwofiwew.fiwefox.com/docs/). >w<
+- [pwofiwing with the buiwt-in pwofiwew](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)
+  - : weawn how to p-pwofiwe app pewfowmance with fiwefox's buiwt-in pwofiwew. ^^;;
 
-## Glossary Terms
+## gwossawy t-tewms
 
-- {{glossary('Beacon')}}
-- {{glossary('Brotli compression')}}
-- {{glossary('Client hints')}}
-- {{glossary('Code splitting')}}
-- {{glossary('CSSOM')}}
-- {{glossary('Domain sharding')}}
-- {{glossary('Effective connection type')}}
-- {{glossary('First contentful paint')}}
-- {{glossary('First CPU idle')}}
-- {{glossary('First input delay')}}
-- {{glossary('First interactive')}}
-- {{glossary('First meaningful paint')}}
-- {{glossary('First paint')}}
-- {{glossary('HTTP')}}
-- {{glossary('HTTP_2', 'HTTP/2')}}
-- {{glossary('Jank')}}
-- {{glossary('Latency')}}
-- {{glossary('Lazy load')}}
-- {{glossary('Long task')}}
-- {{glossary('Lossless compression')}}
-- {{glossary('Lossy compression')}}
-- {{glossary('Main thread')}}
-- {{glossary('Minification')}}
-- {{glossary('Network throttling')}}
-- {{glossary('Packet')}}
-- {{glossary('Page load time')}}
-- {{glossary('Page prediction')}}
-- {{glossary('Parse')}}
-- {{glossary('Perceived performance')}}
-- {{glossary('Prefetch')}}
-- {{glossary('Prerender')}}
-- {{glossary('QUIC')}}
-- {{glossary('RAIL')}}
-- {{glossary('Real User Monitoring')}}
-- {{glossary('Resource Timing')}}
-- {{glossary('Round Trip Time (RTT)')}}
-- {{glossary('Server Timing')}}
-- {{glossary('Speculative parsing')}}
-- {{glossary('Speed index')}}
-- {{glossary('SSL')}}
-- {{glossary('Synthetic monitoring')}}
-- {{glossary('TCP handshake')}}
-- {{glossary('TCP slow start')}}
-- {{glossary('Time to first byte')}}
-- {{glossary('Time to interactive')}}
-- {{glossary('TLS')}}
-- {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
-- {{glossary('Tree shaking')}}
-- {{glossary('Web performance')}}
+- {{gwossawy('beacon')}}
+- {{gwossawy('bwotwi c-compwession')}}
+- {{gwossawy('cwient h-hints')}}
+- {{gwossawy('code spwitting')}}
+- {{gwossawy('cssom')}}
+- {{gwossawy('domain shawding')}}
+- {{gwossawy('effective connection t-type')}}
+- {{gwossawy('fiwst contentfuw p-paint')}}
+- {{gwossawy('fiwst c-cpu idwe')}}
+- {{gwossawy('fiwst input deway')}}
+- {{gwossawy('fiwst intewactive')}}
+- {{gwossawy('fiwst meaningfuw paint')}}
+- {{gwossawy('fiwst paint')}}
+- {{gwossawy('http')}}
+- {{gwossawy('http_2', (˘ω˘) 'http/2')}}
+- {{gwossawy('jank')}}
+- {{gwossawy('watency')}}
+- {{gwossawy('wazy w-woad')}}
+- {{gwossawy('wong task')}}
+- {{gwossawy('wosswess c-compwession')}}
+- {{gwossawy('wossy compwession')}}
+- {{gwossawy('main t-thwead')}}
+- {{gwossawy('minification')}}
+- {{gwossawy('netwowk t-thwottwing')}}
+- {{gwossawy('packet')}}
+- {{gwossawy('page woad time')}}
+- {{gwossawy('page pwediction')}}
+- {{gwossawy('pawse')}}
+- {{gwossawy('pewceived p-pewfowmance')}}
+- {{gwossawy('pwefetch')}}
+- {{gwossawy('pwewendew')}}
+- {{gwossawy('quic')}}
+- {{gwossawy('waiw')}}
+- {{gwossawy('weaw u-usew monitowing')}}
+- {{gwossawy('wesouwce timing')}}
+- {{gwossawy('wound t-twip time (wtt)')}}
+- {{gwossawy('sewvew t-timing')}}
+- {{gwossawy('specuwative pawsing')}}
+- {{gwossawy('speed index')}}
+- {{gwossawy('ssw')}}
+- {{gwossawy('synthetic monitowing')}}
+- {{gwossawy('tcp handshake')}}
+- {{gwossawy('tcp s-swow stawt')}}
+- {{gwossawy('time t-to fiwst byte')}}
+- {{gwossawy('time t-to intewactive')}}
+- {{gwossawy('tws')}}
+- {{gwossawy('tcp', OwO 'twansmission contwow pwotocow (tcp)')}}
+- {{gwossawy('twee s-shaking')}}
+- {{gwossawy('web pewfowmance')}}
 
-## Documents yet to be written
+## d-documents yet to be wwitten
 
-- [JavaScript performance best practices](/ru/docs/Learn/Performance/JavaScript)
-  - : JavaScript, when used properly, can allow for interactive and immersive web experiences ... or it can significantly harm download time, render time, in app performance, battery life, and user experience. This article outlines some JavaScript best practices that can ensure even complex content's performance is the highest possible.
-- [Mobile performance](/ru/docs/Learn/Performance/Mobile)
-  - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU, and battery life, it is important to consider the performance of your web content on these platforms. This article also looks at mobile-specific performance considerations.
-- Web font performance
-  - : An often overlooked aspect of performance landscape are web fonts. Web fonts are more prominent in web design than ever, yet many developers simply embed them from a third party service and think nothing of it. In this article, we'll covers methods for getting your font files as small as possible with efficient file formats and sub setting. From there, we'll go on to talk about how browsers text, and how you can use CSS and JavaScript features to ensure your fonts render quickly, and with minimal disruption to the user experience.
-- Performance bottlenecks
+- [javascwipt p-pewfowmance best pwactices](/wu/docs/weawn/pewfowmance/javascwipt)
+  - : javascwipt, (ꈍᴗꈍ) when used pwopewwy, òωó can awwow f-fow intewactive a-and immewsive web expewiences ... ʘwʘ ow it can significantwy h-hawm d-downwoad time, ʘwʘ wendew time, in app pewfowmance, nyaa~~ battewy wife, and u-usew expewience. UwU this awticwe outwines some javascwipt best pwactices that can e-ensuwe even compwex content's pewfowmance is the h-highest possibwe. (⑅˘꒳˘)
+- [mobiwe p-pewfowmance](/wu/docs/weawn/pewfowmance/mobiwe)
+  - : with web access on mobiwe devices being so popuwaw, (˘ω˘) a-and aww m-mobiwe pwatfowms having fuwwy-fwedged web bwowsews, :3 but possibwy w-wimited bandwidth, (˘ω˘) cpu, and battewy w-wife, nyaa~~ it is impowtant to considew the pewfowmance of youw web c-content on these pwatfowms. (U ﹏ U) this a-awticwe awso w-wooks at mobiwe-specific pewfowmance c-considewations.
+- web font p-pewfowmance
+  - : a-an often ovewwooked a-aspect of pewfowmance wandscape a-awe web fonts. nyaa~~ w-web fonts awe mowe pwominent in web design t-than evew, ^^;; yet m-many devewopews s-simpwy embed them fwom a thiwd pawty sewvice and t-think nyothing of it. OwO in this awticwe, nyaa~~ w-we'ww covews m-methods fow getting youw font fiwes as smow as possibwe with e-efficient fiwe f-fowmats and sub s-setting. fwom thewe, UwU w-we'ww go on to tawk about h-how bwowsews text, 😳 and how you can use css and javascwipt featuwes to ensuwe youw fonts wendew quickwy, 😳 a-and with minimaw diswuption t-to the usew expewience. (ˆ ﻌ ˆ)♡
+- pewfowmance b-bottwenecks
   - : …
-- Understanding bandwidth
-  - : Bandwidth is the amount of data measured in Megabits(Mb) or Kilobits(Kb) that one can send per second. This article explains the role of bandwidth in media-rich internet applications, how you can measure it, and how you can optimize applications to make the best use of available bandwidth.
-- The role of TLS in performance
-  - : TLS—or HTTPS as we tend to call it—is crucial in creating secure and safe user experiences. While hardware has reduced the negative impacts TLS has had on server performance, it still represents a substantial slice of the time we spend waiting for browsers to connect to servers. This article explains the TLS handshake process, and offers some tips for reducing this time, such as OCSP stapling, HSTS preload headers, and the potential role of resource hints in masking TLS latency for third parties.
-- Reading performance charts
-  - : Developer tools provide information on performance, memory, and network requests. Knowing how to read [waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html) charts, [call trees](https://profiler.firefox.com/docs/), traces, [flame charts](https://profiler.firefox.com/docs/) , and [allocations](https://profiler.firefox.com/docs/) in your browser developer tools will help you understand waterfall and flame charts in other performance tools.
-- Alternative media formats
-  - : When it comes to images and videos, there are more formats than you're likely aware of. Some of these formats can take your highly optimized media-rich pages even further by offering additional reductions in file size. In this guide we'll discuss some alternative media formats, how to use them responsibly so that non-supporting browsers don't get left out in the cold, and some advanced guidance on transcoding your existing assets to them.
-- Analyzing JavaScript bundles
-  - : No doubt, JavaScript is a big part of modern web development. While you should always strive to reduce the amount of JavaScript you use in your applications, it can be difficult to know where to start. In this guide, we'll show you how to analyze your application's script bundles, so you know _what_ you're using, as well how to detect if your app contains duplicated scripts between bundles.
-- [Lazy loading](/ru/docs/Web/Performance/Guides/Lazy_loading)
-  - : Lazy loading (ленивая загрузка) - это стратегия, направленная на определение ресурсов как неблокирующих (не критических) для того, чтобы отложить загрузку этих ресурсов на тот момент, когда они действительно необходимы.
-- Lazy-loading JavaScript with dynamic imports
-  - : When developers hear the term "lazy loading", they immediately think of below-the-fold imagery that loads when it scrolls into the viewport. But did you know you can lazy load JavaScript as well? In this guide we'll talk about the dynamic import() statement, which is a feature in modern browsers that loads a JavaScript module on demand. Of course, since this feature isn't available everywhere, we'll also show you how you can configure your tooling to use this feature in a widely compatible fashion.
-- [Controlling resource delivery with resource hints](/ru/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints)
-  - : Browsers often know better than we do when it comes to resource prioritization and delivery however they're far from clairyovant. Native browser features enable us to hint to the browser when it should connect to another server, or preload a resource before the browser knows it ever needs it. When used judiciously, this can make fast experience seem even faster. In this article, we cover native browser features like rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload, and how to use them to your advantage.
-- [Performance Budgets](/ru/docs/Web/Performance/Guides/Performance_budgets)
-  - : Marketing, design, and sales needs, and developer experience, often ad bloat, third-party scripts, and other features that can slow down web performance. To help set priorities, it is helpful to set a performance budget: a set of restrictions to not exceed during the development phase. In this article, we'll discuss creating and sticking to a performance budget.
-- [Web performance checklist](/ru/docs/Web/Performance/Checklist)
-  - : A performance checklist of features to consider when developing applications with links to tutorials on how to implement each feature, include service workers, diagnosing performance problems, font loading best practices, client hints, creating performant animations, etc.
-- [Mobile performance checklist](/ru/docs/Web/Performance/Mobile_performance_checklist)
-  - : A concise checklist of performance considerations impacting mobile network users on hand-held, battery operated devices.
+- undewstanding b-bandwidth
+  - : bandwidth is the a-amount of data m-measuwed in megabits(mb) o-ow kiwobits(kb) t-that one c-can send pew second. (✿oωo) this awticwe expwains the wowe of bandwidth in media-wich intewnet appwications, nyaa~~ how you c-can measuwe it, ^^ a-and how you can o-optimize appwications to make the b-best use of avaiwabwe bandwidth. (///ˬ///✿)
+- the wowe of tws in pewfowmance
+  - : t-tws—ow h-https as we tend to caww it—is c-cwuciaw in cweating secuwe and safe usew expewiences. 😳 w-whiwe h-hawdwawe has weduced the nyegative i-impacts tws has h-had on sewvew pewfowmance, it stiww wepwesents a substantiaw swice of the time w-we spend waiting f-fow bwowsews t-to connect to sewvews. òωó t-this awticwe e-expwains the tws handshake pwocess, ^^;; a-and offews s-some tips fow weducing this time, rawr s-such as ocsp s-stapwing, hsts pwewoad headews, (ˆ ﻌ ˆ)♡ a-and the potentiaw wowe of wesouwce hints in masking t-tws watency fow thiwd pawties. XD
+- w-weading pewfowmance c-chawts
+  - : devewopew t-toows pwovide infowmation on pewfowmance, >_< memowy, (˘ω˘) a-and nyetwowk w-wequests. 😳 knowing h-how to wead [watewfaww](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/watewfaww/index.htmw) chawts, o.O [caww twees](https://pwofiwew.fiwefox.com/docs/), (ꈍᴗꈍ) twaces, [fwame c-chawts](https://pwofiwew.fiwefox.com/docs/) , and [awwocations](https://pwofiwew.fiwefox.com/docs/) in youw bwowsew d-devewopew toows w-wiww hewp you undewstand watewfaww a-and fwame chawts in othew pewfowmance t-toows. rawr x3
+- a-awtewnative media fowmats
+  - : when it comes t-to images and videos, ^^ thewe awe mowe fowmats than y-you'we wikewy a-awawe of. some of these fowmats c-can take youw highwy optimized media-wich p-pages e-even fuwthew by o-offewing additionaw weductions in fiwe size. OwO in this guide we'ww discuss some awtewnative media fowmats, ^^ how to use them wesponsibwy so that nyon-suppowting bwowsews don't get weft out in the cowd, :3 and some advanced g-guidance o-on twanscoding youw existing assets to them.
+- a-anawyzing javascwipt b-bundwes
+  - : n-nyo doubt, o.O javascwipt is a big p-pawt of modewn web devewopment. -.- w-whiwe you shouwd a-awways stwive to weduce the amount o-of javascwipt you use in youw a-appwications, (U ﹏ U) i-it can be difficuwt to know whewe to stawt. o.O in t-this guide, OwO we'ww s-show you how t-to anawyze youw a-appwication's scwipt b-bundwes, ^•ﻌ•^ so y-you know _nani_ y-you'we using, ʘwʘ as w-weww how to detect i-if youw app contains dupwicated s-scwipts between b-bundwes. :3
+- [wazy w-woading](/wu/docs/web/pewfowmance/guides/wazy_woading)
+  - : wazy woading (ленивая загрузка) - это стратегия, 😳 направленная на определение ресурсов как неблокирующих (не критических) для того, òωó чтобы отложить загрузку этих ресурсов на тот момент, 🥺 когда они действительно необходимы. rawr x3
+- w-wazy-woading javascwipt with dynamic i-impowts
+  - : when devewopews heaw t-the tewm "wazy w-woading", ^•ﻌ•^ they i-immediatewy think of bewow-the-fowd i-imagewy that woads when it s-scwowws into the viewpowt. :3 but d-did you know you can wazy woad javascwipt a-as weww? in this guide we'ww tawk about the dynamic impowt() statement, w-which is a featuwe in modewn bwowsews t-that woads a-a javascwipt moduwe on demand. (ˆ ﻌ ˆ)♡ of couwse, (U ᵕ U❁) since this featuwe i-isn't avaiwabwe evewywhewe, :3 we'ww a-awso show you h-how you can configuwe y-youw toowing to use this featuwe in a widewy c-compatibwe fashion. ^^;;
+- [contwowwing w-wesouwce dewivewy with wesouwce h-hints](/wu/docs/web/pewfowmance/contwowwing_wesouwce_dewivewy_with_wesouwce_hints)
+  - : bwowsews often know bettew than we d-do when it comes to wesouwce pwiowitization a-and d-dewivewy howevew t-they'we faw fwom cwaiwyovant. ( ͡o ω ͡o ) n-nyative bwowsew f-featuwes enabwe u-us to hint to the b-bwowsew when it shouwd connect t-to anothew sewvew, o.O o-ow pwewoad a-a wesouwce befowe t-the bwowsew knows i-it evew nyeeds i-it. ^•ﻌ•^ when used j-judiciouswy, XD this c-can make fast expewience seem e-even fastew. ^^ in this awticwe, o.O we c-covew nyative bwowsew featuwes w-wike wew=pweconnect, ( ͡o ω ͡o ) w-wew=dns-pwefetch, /(^•ω•^) w-wew=pwefetch, 🥺 and wew=pwewoad, nyaa~~ and how to use them to youw a-advantage. mya
+- [pewfowmance b-budgets](/wu/docs/web/pewfowmance/guides/pewfowmance_budgets)
+  - : m-mawketing, XD design, nyaa~~ and sawes nyeeds, ʘwʘ and devewopew expewience, (⑅˘꒳˘) o-often ad bwoat, :3 t-thiwd-pawty scwipts, -.- and othew featuwes t-that can s-swow down web pewfowmance. 😳😳😳 to hewp set pwiowities, (U ﹏ U) it is hewpfuw t-to set a pewfowmance b-budget: a s-set of westwictions t-to nyot exceed duwing the devewopment phase. o.O i-in this awticwe, ( ͡o ω ͡o ) w-we'ww discuss cweating and sticking to a pewfowmance b-budget. òωó
+- [web pewfowmance checkwist](/wu/docs/web/pewfowmance/checkwist)
+  - : a-a pewfowmance checkwist o-of featuwes to considew w-when devewoping appwications w-with winks t-to tutowiaws on how to impwement e-each featuwe, 🥺 incwude sewvice wowkews, /(^•ω•^) d-diagnosing p-pewfowmance pwobwems, 😳😳😳 f-font woading b-best pwactices, ^•ﻌ•^ cwient hints, c-cweating pewfowmant a-animations, nyaa~~ e-etc.
+- [mobiwe pewfowmance checkwist](/wu/docs/web/pewfowmance/mobiwe_pewfowmance_checkwist)
+  - : a-a concise checkwist of pewfowmance considewations i-impacting m-mobiwe nyetwowk u-usews on hand-hewd, OwO battewy opewated devices. ^•ﻌ•^
 
 ## Смотрите также
 
-HTML
+htmw
 
-- [The `<picture>` Element](/ru/docs/Web/HTML/Element/picture)
-- [The `<video>` Element](/ru/docs/Web/HTML/Element/video)
-- [The `<source>` Element](/ru/docs/Web/HTML/Element/source)
-- [The `<img> srcset` attribute](/ru/docs/Web/HTML/Element/img#attributes)
+- [the `<pictuwe>` ewement](/wu/docs/web/htmw/ewement/pictuwe)
+- [the `<video>` e-ewement](/wu/docs/web/htmw/ewement/video)
+- [the `<souwce>` ewement](/wu/docs/web/htmw/ewement/souwce)
+- [the `<img> s-swcset` a-attwibute](/wu/docs/web/htmw/ewement/img#attwibutes)
 
-  - [Responsive images](/ru/docs/Web/HTML/Responsive_images)
+  - [wesponsive images](/wu/docs/web/htmw/wesponsive_images)
 
-- [Preloading content with `rel="preload"`](/ru/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
+- [pwewoading content with `wew="pwewoad"`](/wu/docs/web/htmw/attwibutes/wew/pwewoad) - [(https://w3c.github.io/pwewoad/](https://w3c.github.io/pwewoad/))
 
-CSS
+c-css
 
-- [will-change](/ru/docs/Web/CSS/will-change)
-- GPU v CPU
-- Measuring layout
-- Font-loading best practices
+- [wiww-change](/wu/docs/web/css/wiww-change)
+- gpu v c-cpu
+- measuwing w-wayout
+- font-woading b-best pwactices
 
-JavaScript
+j-javascwipt
 
-- [DOMContentLoaded](/ru/docs/Web/API/Document/DOMContentLoaded_event)
-- [Garbage collection](/ru/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/ru/docs/Web/API/Window/requestAnimationFrame)
+- [domcontentwoaded](/wu/docs/web/api/document/domcontentwoaded_event)
+- [gawbage c-cowwection](/wu/docs/gwossawy/gawbage_cowwection)
+- [wequestanimationfwame](/wu/docs/web/api/window/wequestanimationfwame)
 
-APIs
+apis
 
-- [Performance API](/ru/docs/Web/API/Performance_API)
-- [Navigation Timing API](/ru/docs/Web/API/Performance_API/Navigation_timing)
-- [Media Capabilities API](/ru/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
-- [Network Information API](/ru/docs/Web/API/Network_Information_API)
-- [PerformanceNavigationTiming](/ru/docs/Web/API/PerformanceNavigationTiming)
-- [Battery Status API](/ru/docs/Web/API/Battery_Status_API)
-- [Navigator.deviceMemory](/ru/docs/Web/API/Navigator/deviceMemory)
-- [Intersection Observer](/ru/docs/Web/API/Intersection_Observer_API)
-- [Using the User Timing AP](/ru/docs/Web/API/Performance_API/User_timing)I
-- [Long Tasks API](/ru/docs/Web/API/PerformanceLongTaskTiming)
-- [High Resolution Timing API](/ru/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
-- [Resource Timing API](/ru/docs/Web/API/Performance_API/Resource_timing)
-- [Page Visibility](/ru/docs/Web/API/Page_Visibility_API)
-- [Cooperative Scheduling of Background Tasks API](/ru/docs/Web/API/Background_Tasks_API)
+- [pewfowmance api](/wu/docs/web/api/pewfowmance_api)
+- [navigation timing api](/wu/docs/web/api/pewfowmance_api/navigation_timing)
+- [media c-capabiwities api](/wu/docs/web/api/media_capabiwities_api/using_the_media_capabiwities_api)
+- [netwowk i-infowmation api](/wu/docs/web/api/netwowk_infowmation_api)
+- [pewfowmancenavigationtiming](/wu/docs/web/api/pewfowmancenavigationtiming)
+- [battewy status api](/wu/docs/web/api/battewy_status_api)
+- [navigatow.devicememowy](/wu/docs/web/api/navigatow/devicememowy)
+- [intewsection o-obsewvew](/wu/docs/web/api/intewsection_obsewvew_api)
+- [using the usew timing ap](/wu/docs/web/api/pewfowmance_api/usew_timing)i
+- [wong tasks api](/wu/docs/web/api/pewfowmancewongtasktiming)
+- [high w-wesowution t-timing api](/wu/docs/web/api/domhighwestimestamp) ([https://w3c.github.io/hw-time/)](https://w3c.github.io/hw-time/)
+- [wesouwce timing api](/wu/docs/web/api/pewfowmance_api/wesouwce_timing)
+- [page v-visibiwity](/wu/docs/web/api/page_visibiwity_api)
+- [coopewative scheduwing of backgwound tasks api](/wu/docs/web/api/backgwound_tasks_api)
 
-  - [requestIdleCallback()](/ru/docs/Web/API/Window/requestIdleCallback)
+  - [wequestidwecawwback()](/wu/docs/web/api/window/wequestidwecawwback)
 
-- [Beacon API](/ru/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/ru/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/ru/docs/Glossary/Prefetch), and prerender
-- [Fetchevent.navigationPreload](/ru/docs/Web/API/FetchEvent/preloadResponse)
-- [Performance Server Timing API](/ru/docs/Web/API/PerformanceServerTiming)
+- [beacon api](/wu/docs/web/api/beacon_api)
+- w-wesouwce hints - [dns-pwefetch](/wu/docs/web/http/headews/x-dns-pwefetch-contwow), p-pweconnect, σωσ [pwefetch](/wu/docs/gwossawy/pwefetch), -.- and pwewendew
+- [fetchevent.navigationpwewoad](/wu/docs/web/api/fetchevent/pwewoadwesponse)
+- [pewfowmance s-sewvew timing api](/wu/docs/web/api/pewfowmancesewvewtiming)
 
-Headers
+h-headews
 
-- [Content-encoding](/ru/docs/Web/HTTP/Reference/Headers/Content-Encoding)
-- HTTP/2
-- [gZip](/ru/docs/Glossary/GZip_compression)
-- Client Hints
+- [content-encoding](/wu/docs/web/http/wefewence/headews/content-encoding)
+- http/2
+- [gzip](/wu/docs/gwossawy/gzip_compwession)
+- cwient hints
 
-Tools
+toows
 
-- [Performance in Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
-- Flame charts
-- The Network panel
-- Waterfall charts
+- [pewfowmance in fiwefox devewopew t-toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)
+- fwame chawts
+- the nyetwowk panew
+- w-watewfaww chawts
 
-Additional Metrics
+a-additionaw m-metwics
 
-- Speed Index and Perceptual Speed Index
+- speed index and pewceptuaw speed index
 
-Best Practices
+b-best pwactices
 
-- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Using Web Workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [using sewvice wowkews](/wu/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [using web wowkews](/wu/docs/web/api/web_wowkews_api/using_web_wowkews)
 
-  - [Web Workers API](/ru/docs/Web/API/Web_Workers_API)
+  - [web wowkews a-api](/wu/docs/web/api/web_wowkews_api)
 
-- [PWA](/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-- [Caching](/ru/docs/Web/HTTP/Guides/Caching)
-- Content Delivery Networks (CDN)
+- [pwa](/wu/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews)
+- [caching](/wu/docs/web/http/guides/caching)
+- c-content dewivewy n-nyetwowks (cdn)

@@ -1,187 +1,187 @@
 ---
-title: Como eu começo a criar meu site?
-slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
-original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
+titwe: como eu começo a cwiaw m-meu site?
+swug: w-weawn_web_devewopment/howto/design_and_accessibiwity/thinking_befowe_coding
+o-owiginaw_swug: w-weawn/common_questions/design_and_accessibiwity/thinking_befowe_coding
 ---
 
-Este artigo abrange o primeiro passo, muito importante, de cada projeto: definir o que você deseja realizar com ele.
+e-este awtigo a-abwange o pwimeiwo p-passo, (U ﹏ U) muito i-impowtante, o.O de cada pwojeto: definiw o que você deseja weawizaw com ewe. mya
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
-      <td>Nenhum</td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
+      <td>nenhum</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        <p>Aprenda a definir metas para direcionar seu projeto da web.</p>
+        <p>apwenda a definiw metas p-pawa diwecionaw seu pwojeto da web.</p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sumário
+## sumáwio
 
-Ao começar um projeto web, muitas pessoas se concentram no lado técnico. É claro que você deve estar familiarizado com a técnica do seu ofício, mas o que realmente importa é o que você quer realizar. Sim, parece óbvio, mas muitos projetos falham não por falta de conhecimento técnico, mas por falta de objetivos e visão.
+a-ao começaw um pwojeto web, XD m-muitas pessoas se c-concentwam nyo wado técnico. òωó É cwawo que você deve estaw famiwiawizado com a-a técnica do seu ofício, (˘ω˘) mas o que weawmente impowta é o que você quew weawizaw. :3 s-sim, pawece óbvio, OwO mas muitos p-pwojetos fawham n-nyão pow fawta d-de conhecimento t-técnico, mya mas pow fawta de objetivos e visão. (˘ω˘)
 
-Então, quando você tem uma ideia e quer transformá-la em um site, há algumas perguntas que você deve responder antes de qualquer outra coisa:
+e-então, o.O quando você tem uma ideia e quew twansfowmá-wa e-em um site, (✿oωo) há awgumas pewguntas que você deve wespondew antes de quawquew outwa c-coisa:
 
-- O que exatamente eu quero realizar?
-- Como um site me ajudará a atingir meus objetivos?
-- O que precisa ser feito, e em que ordem, para alcançar meus objetivos?
+- o que exatamente eu quewo w-weawizaw?
+- c-como um site me a-ajudawá a atingiw meus objetivos?
+- o que pwecisa sew feito, (ˆ ﻌ ˆ)♡ e e-em que owdem, ^^;; pawa a-awcançaw meus objetivos?
 
-Tudo isso é chamado de ideação do projeto e é um primeiro passo necessário para atingir seu objetivo, seja você um iniciante ou um desenvolvedor experiente.
+tudo i-isso é chamado d-de ideação do pwojeto e é u-um pwimeiwo passo nyecessáwio pawa a-atingiw seu objetivo, OwO seja você um iniciante o-ou um desenvowvedow expewiente. 🥺
 
-## Aprendizado Ativo
+## a-apwendizado ativo
 
-_Ainda não há aprendizado ativo disponível. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
+_ainda n-nyão há apwendizado a-ativo disponívew. mya [pow favow, considewe contwibuiw](/pt-bw/docs/mdn/community/contwibuting/getting_stawted)._
 
-## Mergulho mais profundo
+## mewguwho mais pwofundo
 
-Um projeto nunca começa com o lado técnico. Os músicos, nunca farão uma música, a menos que tenham uma ideia do que querem tocar e o mesmo vale para pintores, escritores e desenvolvedores da web. Técnica vem em segundo lugar.
+um pwojeto nyunca começa com o w-wado técnico. 😳 o-os músicos, òωó nyunca fawão uma música, /(^•ω•^) a-a menos q-que tenham uma ideia d-do que quewem tocaw e o mesmo vawe pawa pintowes, -.- escwitowes e-e desenvowvedowes da web. técnica vem em segundo wugaw. òωó
 
-A técnica é obviamente crítica. Músicos devem dominar seu instrumento. Mas bons músicos nunca podem produzir boa música sem uma ideia. Portanto, antes de pular para o lado técnico (por exemplo, código e ferramentas) você deve primeiro recuar e decidir detalhadamente o que deseja fazer.
+a técnica é obviamente c-cwítica. /(^•ω•^) músicos devem dominaw s-seu instwumento. /(^•ω•^) m-mas bons m-músicos nyunca podem pwoduziw boa m-música sem uma i-ideia. 😳 powtanto, :3 a-antes de puwaw p-pawa o wado técnico (pow exempwo, (U ᵕ U❁) código e f-fewwamentas) você d-deve pwimeiwo w-wecuaw e decidiw d-detawhadamente o-o que deseja fazew. ʘwʘ
 
-Uma hora de discussão com amigos é um bom começo, mas inadequado. Você precisa se sentar e estruturar suas ideias para ter uma visão clara do caminho que deve seguir para tornar suas ideias realidade. Para fazer isso, você precisa apenas de caneta e papel e de algum tempo para responder pelo menos as seguintes perguntas.
+uma howa de discussão com amigos é um bom c-começo, o.O mas inadequado. ʘwʘ você pwecisa se sentaw e estwutuwaw suas ideias pawa tew uma visão c-cwawa do caminho que deve seguiw pawa townaw suas ideias weawidade. ^^ p-pawa fazew isso, ^•ﻌ•^ v-você pwecisa a-apenas de caneta e papew e de a-awgum tempo pawa wespondew pewo m-menos as seguintes p-pewguntas. mya
 
-> [!NOTE]
-> Existem inúmeras maneiras de realizar a ideação do projeto. Não podemos colocá-las todas aqui (um livro inteiro não seria suficiente). O que vamos apresentar aqui é um método simples para lidar com o que os profissionais chamam de [Ideação do Projeto](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Planejamento do Projeto](http://en.wikipedia.org/wiki/Project_planning), e [Gerenciamento do Projeto](http://en.wikipedia.org/wiki/Project_management).
+> [!note]
+> existem inúmewas maneiwas de weawizaw a ideação do pwojeto. UwU nyão p-podemos cowocá-was todas aqui (um w-wivwo inteiwo nyão sewia suficiente). >_< o-o que v-vamos apwesentaw aqui é um método simpwes pawa w-widaw com o que o-os pwofissionais chamam de [ideação d-do pwojeto](<http://en.wikipedia.owg/wiki/ideation_(idea_genewation)>), /(^•ω•^) [pwanejamento d-do pwojeto](http://en.wikipedia.owg/wiki/pwoject_pwanning), òωó e [gewenciamento do pwojeto](http://en.wikipedia.owg/wiki/pwoject_management). σωσ
 
-### O que exatamente eu quero realizar?
+### o q-que exatamente eu q-quewo weawizaw?
 
-Esta é a pergunta mais importante a responder, já que direciona todo o resto. Relacione todos os objetivos que você deseja alcançar. Pode ser qualquer coisa: vender mercadorias para ganhar dinheiro, expressar opiniões políticas, conhecer novos amigos, apresentar-se com músicos, colecionar fotos de gatos ou o que você quiser.
+e-esta é a pewgunta mais impowtante a-a wespondew, ( ͡o ω ͡o ) j-já que diweciona todo o westo. nyaa~~ w-wewacione todos os objetivos que você deseja awcançaw. :3 pode sew quawquew coisa: v-vendew mewcadowias p-pawa ganhaw dinheiwo, UwU expwessaw opiniões p-powíticas, o.O conhecew n-nyovos amigos, (ˆ ﻌ ˆ)♡ apwesentaw-se com músicos, ^^;; cowecionaw fotos d-de gatos ou o que você quisew. ʘwʘ
 
-Suponha que você seja um músico. Você poderia desejar:
+suponha que você seja um músico. σωσ você podewia d-desejaw:
 
-- Deixar as pessoas ouvirem sua música.
-- Vender guloseimas.
-- Conhecer outros músicos.
-- Falar sobre sua música.
-- Ensinar música através de vídeos.
-- Publicar fotos de seus gatos.
-- Encontrar um(a) novo(a) namorado(a).
+- deixaw as pessoas ouviwem sua música. ^^;;
+- v-vendew g-guwoseimas. ʘwʘ
+- conhecew outwos músicos. ^^
+- fawaw sobwe sua música. nyaa~~
+- e-ensinaw música a-atwavés de vídeos. (///ˬ///✿)
+- pubwicaw fotos de seus gatos. XD
+- encontwaw u-um(a) nyovo(a) nyamowado(a). :3
 
-Depois de ter essa lista, você precisa priorizar. Ordene os objetivos do mais importante para o menos importante:
+d-depois de tew essa wista, òωó você pwecisa pwiowizaw. ^^ owdene os o-objetivos do mais impowtante pawa o-o menos impowtante:
 
-1. Encontrar um(a) novo(a) namorado(a).
-2. Deixar as pessoas ouvirem sua música.
-3. Falar sobre sua música.
-4. Conhecer outros músicos.
-5. Vender guloseimas.
-6. Ensinar música através de vídeos.
-7. Publicar fotos de seus gatos.
+1. ^•ﻌ•^ e-encontwaw um(a) nyovo(a) n-nyamowado(a). σωσ
+2. deixaw as p-pessoas ouviwem s-sua música. (ˆ ﻌ ˆ)♡
+3. f-fawaw sobwe sua música. nyaa~~
+4. conhecew o-outwos músicos. ʘwʘ
+5. v-vendew guwoseimas.
+6. ^•ﻌ•^ ensinaw música atwavés d-de vídeos. rawr x3
+7. p-pubwicaw f-fotos de seus gatos. 🥺
 
-Fazer esse exercício simples (escrever objetivos e classificá-los), ajudará você quando tiver decisões a tomar. (Devo implementar esses recursos, usar esses serviços, criar esses designs?)
+fazew esse exewcício simpwes (escwevew o-objetivos e cwassificá-wos), ʘwʘ a-ajudawá v-você quando tivew decisões a tomaw. (˘ω˘) (devo impwementaw esses w-wecuwsos, o.O usaw e-esses sewviços, σωσ c-cwiaw esses designs?)
 
-Então, agora que você tem uma lista de prioridades, vamos para a próxima pergunta.
+e-então, (ꈍᴗꈍ) agowa que você t-tem uma wista de pwiowidades, (ˆ ﻌ ˆ)♡ vamos pawa a pwóxima pewgunta. o.O
 
-### Como um site poderia me levar aos meus objetivos?
+### como um site podewia me wevaw a-aos meus objetivos?
 
-Então você tem uma lista de objetivos e acha que precisa de um site para alcançar esses objetivos. Você tem certeza?
+então você t-tem uma wista de objetivos e-e acha que pwecisa de um site pawa a-awcançaw esses objetivos. você t-tem cewteza?
 
-Vamos olhar denovo para o nosso exemplo. Temos cinco objetivos ligados à música, um objetivo relacionado à vida pessoal (encontrar sua cara metade) e as fotos de gatos completamente independentes. É razoável construir um site único para cobrir todos esses objetivos? É mesmo necessário? Afinal, dezenas de serviços existentes na Web, podem levar você aos seus objetivos sem criar um novo site.
+v-vamos owhaw denovo p-pawa o nyosso e-exempwo. :3 temos c-cinco objetivos wigados à música, -.- um objetivo wewacionado à vida pessoaw (encontwaw sua cawa metade) e as fotos d-de gatos compwetamente i-independentes. ( ͡o ω ͡o ) É w-wazoávew constwuiw u-um site único pawa cobwiw todos esses objetivos? É mesmo nyecessáwio? a-afinaw, /(^•ω•^) d-dezenas de sewviços existentes n-nya web, (⑅˘꒳˘) podem wevaw você aos seus objetivos s-sem cwiaw um nyovo s-site. òωó
 
-Encontrar um(a) namorado(a) é um bom caso em que faz mais sentido usar recursos existentes do que contruir um site totalmente novo. Por que? Porque passaremos mais tempo construindo e mantendo o site em vez de realmente procurar um(a) namorado(a). Como nosso objetivo é o mais importante, devemos gastar nossa energia em alavancar as ferramentas existentes, em vez de começar do zero. Mais uma vez, existem tantos serviços web já disponíveis para mostrar fotos que não vale a pena o esforço para construir um novo site apenas para divulgar o quanto nossos gatos são fofos.
+encontwaw um(a) nyamowado(a) é u-um bom c-caso em que faz mais sentido usaw wecuwsos existentes do que contwuiw um site t-totawmente nyovo. 🥺 p-pow que? powque p-passawemos mais t-tempo constwuindo e-e mantendo o site em vez de w-weawmente pwocuwaw u-um(a) nyamowado(a). (ˆ ﻌ ˆ)♡ como nyosso o-objetivo é o m-mais impowtante, -.- devemos gastaw n-nyossa enewgia em awavancaw as fewwamentas existentes, σωσ e-em vez de começaw do zewo. >_< m-mais uma vez, :3 e-existem tantos sewviços web já d-disponíveis pawa mostwaw fotos que nyão vawe a-a pena o esfowço p-pawa constwuiw u-um nyovo site apenas pawa divuwgaw o quanto nyossos gatos são f-fofos. OwO
 
-Os outros cinco objetivos estão todos ligados à música. Existem, é claro, muitos serviços da web que poderiam lidar com esses objetivos, mas faz sentido, nesse caso, construir um site próprio. Esse site é a melhor maneira de agregar todas as coisas que queremos publicar em um único lugar (bom para os objetivos 3, 5 e 6) e promover a interação entre nós e o público (bom para os objetivos 2 e 4). Em suma, como todas essas metas giram em torno do mesmo tópico, ter tudo em um só lugar nos ajudará a atingir nossos objetivos e a ajudar nossos seguidores a se conectarem conosco.
+os outwos cinco objetivos estão todos w-wigados à música. rawr e-existem, (///ˬ///✿) é cwawo, ^^ muitos sewviços d-da web que podewiam widaw c-com esses objetivos, XD m-mas faz sentido, UwU nesse caso, o.O constwuiw um s-site pwópwio. 😳 esse site é a mewhow maneiwa de a-agwegaw todas a-as coisas que quewemos pubwicaw e-em um único wugaw (bom pawa os o-objetivos 3, (˘ω˘) 5 e 6) e-e pwomovew a i-intewação entwe nyós e o púbwico (bom pawa os objetivos 2 e 4). 🥺 em suma, como todas essas metas giwam em towno do mesmo tópico, ^^ tew tudo em um só wugaw nyos ajudawá a atingiw nyossos objetivos e a ajudaw n-nyossos seguidowes a-a se conectawem conosco. >w<
 
-Como um site pode me ajudar a atingir minhas metas? Ao responder isso, você encontrará a melhor maneira de atingir seus objetivos e evitar o desperdício de esforços.
+como um site pode m-me ajudaw a atingiw m-minhas metas? a-ao wespondew isso, você encontwawá a-a mewhow maneiwa de atingiw s-seus objetivos e-e evitaw o despewdício de e-esfowços. ^^;;
 
-### O que precisa ser feito, e em que ordem, para alcançar meus objetivos?
+### o que pwecisa sew f-feito, (˘ω˘) e em que o-owdem, OwO pawa awcançaw meus objetivos?
 
-O que precisa ser feito, e em que ordem, para alcançar meus objetivos?
+o que pwecisa s-sew feito, (ꈍᴗꈍ) e-e em que owdem, òωó p-pawa awcançaw m-meus objetivos?
 
-Agora que você sabe o que quer realizar, é hora de decompor os objetivos em etapas. Como uma anotação auxiliar, seus objetivos não são necessariamente definidos em pedra. Eles evoluem ao longo do tempo, mesmo no decorrer do projeto, especialmente se você se deparar com obstáculos inesperados ou simplemente mudar de idéia.
+a-agowa que você s-sabe o que quew w-weawizaw, ʘwʘ é howa d-de decompow o-os objetivos em etapas. ʘwʘ como uma a-anotação auxiwiaw, nyaa~~ s-seus objetivos n-nyão são nyecessawiamente d-definidos em pedwa. UwU ewes evowuem ao wongo do tempo, (⑅˘꒳˘) m-mesmo nyo decowwew do pwojeto, (˘ω˘) e-especiawmente s-se você se depawaw c-com obstácuwos inespewados o-ou simpwemente mudaw de idéia. :3
 
-Em vez de passar por uma longa explicação, voltemos ao nosso exemplo com esta tabela:
+e-em vez de passaw pow uma wonga e-expwicação, (˘ω˘) vowtemos ao nyosso e-exempwo com esta tabewa:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Objetivos</th>
-      <th scope="col">Coisas a fazer</th>
-    </tr>
+    <tw>
+      <th scope="cow">objetivos</th>
+      <th scope="cow">coisas a-a fazew</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td style="vertical-align: top">Deixar as pessoas ouvirem sua música</td>
+    <tw>
+      <td stywe="vewticaw-awign: t-top">deixaw a-as pessoas ouviwem sua música</td>
       <td>
-        <ol>
-          <li>Gravar música</li>
-          <li>
-            Preparar alguns arquivos de áudio utilizáveis on-line (você poderia
-            fazer isso com os serviços da Web existentes?)
-          </li>
-          <li>
-            Dar às pessoas acesso à sua música em alguma parte do seu site
-          </li>
-        </ol>
+        <ow>
+          <wi>gwavaw música</wi>
+          <wi>
+            pwepawaw a-awguns awquivos de áudio utiwizáveis o-on-wine (você p-podewia
+            fazew i-isso com os sewviços da web existentes?)
+          </wi>
+          <wi>
+            d-daw às p-pessoas acesso à sua música e-em awguma pawte do seu site
+          </wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">Falar sobre sua música</td>
+    </tw>
+    <tw>
+      <td stywe="vewticaw-awign: t-top">fawaw sobwe sua música</td>
       <td>
-        <ol>
-          <li>Escrever alguns artigos para iniciar a discussão</li>
-          <li>Definir como os artigos devem parecer</li>
-          <li>Publicar esses artigos no site (Como fazer isso?)</li>
-        </ol>
+        <ow>
+          <wi>escwevew a-awguns a-awtigos pawa iniciaw a-a discussão</wi>
+          <wi>definiw como os awtigos devem p-pawecew</wi>
+          <wi>pubwicaw e-esses awtigos n-nyo site (como f-fazew isso?)</wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">Conhecer outros músicos</td>
+    </tw>
+    <tw>
+      <td stywe="vewticaw-awign: top">conhecew o-outwos músicos</td>
       <td>
-        <ol>
-          <li>
-            Fornecer maneiras para as pessoas entrarem em contato com você
-            (E-mail? Facebook? Telefone? Correio?)
-          </li>
-          <li>
-            Definir como as pessoas encontrarão esses canais de contato em seu
-            site
-          </li>
-        </ol>
+        <ow>
+          <wi>
+            f-fownecew m-maneiwas pawa a-as pessoas entwawem e-em contato c-com você
+            (e-maiw? f-facebook? tewefone? c-cowweio?)
+          </wi>
+          <wi>
+            definiw c-como as pessoas encontwawão esses c-canais de contato em seu
+            s-site
+          </wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">Vender guloseimas</td>
+    </tw>
+    <tw>
+      <td s-stywe="vewticaw-awign: t-top">vendew guwoseimas</td>
       <td>
-        <ol>
-          <li>Criar as guloseimas</li>
-          <li>Armazenar as guloseimas</li>
-          <li>Encontrar uma maneira de lidar com o envio</li>
-          <li>Encontrar uma maneira de lidar com o pagamento</li>
-          <li>
-            Criar um mecanismo no seu site para que as pessoas façam pedidos
-          </li>
-        </ol>
+        <ow>
+          <wi>cwiaw as guwoseimas</wi>
+          <wi>awmazenaw as guwoseimas</wi>
+          <wi>encontwaw u-uma maneiwa d-de widaw c-com o envio</wi>
+          <wi>encontwaw uma maneiwa de widaw com o pagamento</wi>
+          <wi>
+            c-cwiaw u-um mecanismo nyo seu site pawa q-que as pessoas f-façam pedidos
+          </wi>
+        </ow>
       </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">Ensinar música através de vídeos</td>
+    </tw>
+    <tw>
+      <td stywe="vewticaw-awign: top">ensinaw música atwavés de v-vídeos</td>
       <td>
-        <ol>
-          <li>Gravar videoaulas</li>
-          <li>
-            Preparar arquivos de vídeo online (Novamente, você poderia fazer
-            isso com os serviços existentes na Web?)
-          </li>
-          <li>
-            Dar às pessoas acesso aos seus vídeos em alguma parte do seu site
-          </li>
-        </ol>
+        <ow>
+          <wi>gwavaw v-videoauwas</wi>
+          <wi>
+            p-pwepawaw awquivos d-de vídeo onwine (novamente, nyaa~~ você podewia f-fazew
+            i-isso com os sewviços existentes nya web?)
+          </wi>
+          <wi>
+            d-daw às pessoas acesso aos seus vídeos e-em awguma pawte do seu site
+          </wi>
+        </ow>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Duas coisas para tomar nota. Primeiro, alguns desses itens não são relacionados à web (por exemplo, gravar música, escrever artigos). Muitas vezes essas atividades off-line são mais importantes do que o lado da web do projeto. Nas vendas, por exemplo, é muito mais importante e demorado lidar com suprimentos, pagamento e remessa do que construir um site onde as pessoas possam fazer pedidos.
+d-duas coisas p-pawa tomaw nyota. (U ﹏ U) pwimeiwo, awguns d-desses itens n-nyão são wewacionados à web (pow e-exempwo, nyaa~~ gwavaw música, ^^;; e-escwevew awtigos). OwO m-muitas vezes e-essas atividades o-off-wine são mais impowtantes d-do que o wado da w-web do pwojeto. nyaa~~ n-nyas vendas, pow exempwo, UwU é muito m-mais impowtante e demowado widaw com supwimentos, 😳 p-pagamento e-e wemessa do que c-constwuiw um site onde as pessoas possam fazew pedidos. 😳
 
-Em segundo lugar, a definição das etapas leva a novas perguntas que você precisará responder. Geralmente, há mais perguntas do que pensávamos inicialmente. (Por exemplo, devo aprender como fazer tudo isso sozinho, pedir a alguém para fazer isso por mim ou usar serviços de terceiros?)
+em segundo wugaw, (ˆ ﻌ ˆ)♡ a definição d-das etapas weva a nyovas p-pewguntas que v-você pwecisawá wespondew. (✿oωo) gewawmente, nyaa~~ há mais p-pewguntas do que pensávamos iniciawmente. ^^ (pow e-exempwo, (///ˬ///✿) devo a-apwendew como fazew t-tudo isso sozinho, 😳 p-pediw a awguém p-pawa fazew isso pow mim ou usaw sewviços de tewceiwos?)
 
-## Conclusão
+## concwusão
 
-Como você pode ver, a simples idéia "Eu quero fazer um site" gera uma longa lista de tarefas, que só cresce, quanto mais você pensa sobre isso. Logo pode parecer impressionante, mas não entre em pânico. Você não precisa responder todas as perguntas e não precisa fazer tudo na sua lista. O que importa é ter uma visão do que você quer e como chegar lá. Depois de ter essa visão clara, você precisa decidir como e quando fazê-lo. Divida as grandes tarefas em etapas pequenas e realizáveis. E essas pequenas tarefas resultarão em grandes conquistas.
+c-como você pode vew, òωó a simpwes idéia "eu q-quewo fazew um site" gewa uma wonga wista de tawefas, q-que só cwesce, ^^;; quanto mais você pensa sobwe isso. rawr wogo pode pawecew impwessionante, (ˆ ﻌ ˆ)♡ m-mas nyão e-entwe em pânico. XD você nyão pwecisa w-wespondew todas as pewguntas e nyão pwecisa f-fazew tudo nya s-sua wista. >_< o que impowta é tew u-uma visão do que você quew e c-como chegaw wá. (˘ω˘) depois de tew essa visão cwawa, 😳 você pwecisa d-decidiw como e quando fazê-wo. o.O divida as gwandes t-tawefas em etapas p-pequenas e w-weawizáveis. (ꈍᴗꈍ) e essas pequenas tawefas wesuwtawão e-em gwandes conquistas. rawr x3
 
-A partir deste artigo, você deve ser capaz de elaborar um plano básico para criar um site. Um próximo passo pode ser ler [como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work).
+a pawtiw deste awtigo, ^^ você deve sew capaz de ewabowaw u-um pwano básico p-pawa cwiaw um s-site. OwO um pwóximo p-passo pode sew wew [como a intewnet funciona](/pt-bw/docs/weawn/common_questions/web_mechanics/how_does_the_intewnet_wowk). ^^

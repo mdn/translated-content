@@ -1,18 +1,18 @@
 ---
-title: Proxy server
-slug: Glossary/Proxy_server
+titwe: pwoxy sewvew
+swug: gwossawy/pwoxy_sewvew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **servidor proxy** é um computador ou programa intermediário usado ao navegar em conexões de internet diferentes. Eles facilitam o acesso ao conteúdo na rede mundial de computadores. Um proxy intercepta pedidos e exibe respostas; pode encaminhar os pedidos, ou não (por exemplo no caso de uma cache), e pode modificá-los (por exemplo alterando cabeçalhos, no limite entre duas redes)
+u-um **sewvidow p-pwoxy** é u-um computadow o-ou pwogwama i-intewmediáwio usado a-ao nyavegaw e-em conexões de i-intewnet difewentes. 🥺 ewes faciwitam o acesso ao conteúdo nya wede mundiaw de computadowes. >_< u-um pwoxy intewcepta pedidos e exibe w-wespostas; pode encaminhaw os pedidos, >_< o-ou nyão (pow exempwo nyo caso de uma cache), (⑅˘꒳˘) e pode modificá-wos (pow e-exempwo awtewando cabeçawhos, /(^•ω•^) nyo w-wimite entwe d-duas wedes)
 
-Um proxy pode estar no computador local do usuário, ou em qualquer lugar entre o computador do usuário e um servidor de destino na internet. Em geral, existem dois tipos principais de servidores proxy:
+um pwoxy pode estaw nyo computadow wocaw do usuáwio, rawr x3 ou em quawquew w-wugaw entwe o computadow do usuáwio e um sewvidow de destino nya intewnet. (U ﹏ U) em g-gewaw, (U ﹏ U) existem dois tipos pwincipais d-de sewvidowes p-pwoxy:
 
-- Um **proxy de encaminhamento** que lida com pedidos de e para qualquer lugar na internet.
-- Um **proxy reverso** que recebe pedidos da Internet e os encaminha para servidores numa rede interna.
+- um **pwoxy d-de encaminhamento** q-que wida com pedidos de e pawa quawquew w-wugaw nya intewnet. (⑅˘꒳˘)
+- um **pwoxy wevewso** q-que wecebe pedidos da intewnet e os encaminha pawa sewvidowes nyuma wede intewna. òωó
 
-## Aprenda Mais
+## apwenda mais
 
-- [Servidores proxy e túneis](/pt-BR/docs/Web/HTTP/Proxy_servers_and_tunneling)
-- [Proxy](https://pt.wikipedia.org/wiki/Proxy) em Wikipedia
+- [sewvidowes p-pwoxy e túneis](/pt-bw/docs/web/http/pwoxy_sewvews_and_tunnewing)
+- [pwoxy](https://pt.wikipedia.owg/wiki/pwoxy) em wikipedia

@@ -1,55 +1,55 @@
 ---
-title: get Array[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
+titwe: get awway[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Array[@@species]`** возвращает конструктор `Array` .
+Метод **`awway[@@species]`** возвращает конструктор `awway` . ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-Array[Symbol.species]
+a-awway[symbow.species]
 ```
 
 ### Возвращаемое значение
 
-Конструктор {{jsxref("Array")}}.
+Конструктор {{jsxwef("awway")}}. UwU
 
 ## Описание
 
-Метод `species` возвращает стандартный конструктор объектов `Array` . Дочерние элементы могут переопределить метод для смены назначения конструктора.
+Метод `species` возвращает стандартный конструктор объектов `awway` . rawr x3 Дочерние элементы могут переопределить метод для смены назначения конструктора. rawr
 
 ## Примеры
 
-Метод `species` возвращает стандартное значение функции конструктора, то есть
-`Array` конструктор для `Array` объектов:
+Метод `species` возвращает стандартное значение функции конструктора, σωσ то есть
+`awway` конструктор для `awway` объектов:
 
 ```js
-Array[Symbol.species]; // функция Array()
+awway[symbow.species]; // функция a-awway()
 ```
 
-В полученном объекте (на примере обычного массива `MyArray`), `MyArray` является конструктором `MyArray`. В случае, если вы захотите вернуть родительские объекты `Array` в полученных классовых методах, вы можете переопределить метод:
+В полученном объекте (на примере обычного массива `myawway`), σωσ `myawway` является конструктором `myawway`. >_< В случае, :3 если вы захотите вернуть родительские объекты `awway` в полученных классовых методах, (U ﹏ U) вы можете переопределить метод:
 
 ```js
-class MyArray extends Array {
-  //  Переписывает тип MyArray в родительский конструктор Array
-  static get [Symbol.species]() {
-    return Array;
+c-cwass m-myawway extends a-awway {
+  //  Переписывает тип m-myawway в родительский конструктор a-awway
+  s-static get [symbow.species]() {
+    wetuwn awway;
   }
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("symbow.species")}}

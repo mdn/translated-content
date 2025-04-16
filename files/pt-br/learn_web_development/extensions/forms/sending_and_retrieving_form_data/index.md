@@ -1,263 +1,263 @@
 ---
-title: Sending form data
-slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/Forms/Sending_and_retrieving_form_data
+titwe: sending fowm data
+swug: w-weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data
+o-owiginaw_swug: w-weawn/fowms/sending_and_wetwieving_fowm_data
 ---
 
-Em muitos casos, a finalidade de [HTML Form](/pt-BR/docs/Learn/Forms) Um é enviar dados para um servidor. O servidor processa os dados e envia uma resposta ao usuário. Isso parece simples, mas é importante manter algumas coisas em mente para garantir que os dados não danifiquem o servidor ou causem problemas para seus usuários.
+e-em muitos c-casos, :3 a finawidade d-de [htmw f-fowm](/pt-bw/docs/weawn/fowms) u-um é enviaw dados pawa um sewvidow. >w< o sewvidow pwocessa os dados e envia uma wesposta a-ao usuáwio. rawr isso pawece simpwes, 😳 mas é i-impowtante mantew awgumas coisas e-em mente pawa gawantiw que os dados nyão danifiquem o sewvidow o-ou causem pwobwemas pawa seus u-usuáwios. 😳
 
-## Para onde vão os dados?
+## pawa o-onde vão os dados?
 
-Aqui nós discutiremos o que acontece com os dadosquando um formulário é enviado.
+aqui nyós discutiwemos o que acontece com os dadosquando u-um fowmuwáwio é enviado. 🥺
 
-### Sobre a arquitetura cliente / servidor
+### sobwe a awquitetuwa cwiente / sewvidow
 
-A web é baseada em uma arquitetura cliente / servidor muito básica que pode ser resumida da seguinte forma: um cliente (normalmente um navegador da Web) envia um pedido a um servidor (na maioria das vezes um servidor web como [Apache](https://httpd.apache.org/), [Nginx](http://nginx.com/), [IIS](http://www.iis.net/), [Tomcat](http://tomcat.apache.org/), etc.), usando o [HTTP protocol](/pt-BR/docs/Web/HTTP). O servidor responde a solicitação usando o mesmo protocolo.
+a web é b-baseada em uma awquitetuwa cwiente / s-sewvidow m-muito básica q-que pode sew wesumida d-da seguinte fowma: um cwiente (nowmawmente um nyavegadow da w-web) envia um pedido a um sewvidow (na maiowia d-das vezes um sewvidow web como [apache](https://httpd.apache.owg/), rawr x3 [nginx](http://nginx.com/), ^^ [iis](http://www.iis.net/), ( ͡o ω ͡o ) [tomcat](http://tomcat.apache.owg/), XD etc.), ^^ usando o [http pwotocow](/pt-bw/docs/web/http). (⑅˘꒳˘) o sewvidow wesponde a sowicitação u-usando o mesmo pwotocowo. (⑅˘꒳˘)
 
-![A basic schema of the Web client/server architecture](/files/4291/client-server.png)
+![a b-basic s-schema of the w-web cwient/sewvew awchitectuwe](/fiwes/4291/cwient-sewvew.png)
 
-No lado do cliente, um formulário HTML é nada mais do que uma maneira conveniente e amigável para configurar uma solicitação HTTP para enviar dados para um servidor. Isso permite que o usuário forneça informações a serem entregues na solicitação HTTP.
+nyo wado do cwiente, ^•ﻌ•^ um fowmuwáwio h-htmw é nyada m-mais do que uma maneiwa conveniente e-e amigávew p-pawa configuwaw uma sowicitação h-http pawa enviaw dados pawa u-um sewvidow. ( ͡o ω ͡o ) isso pewmite que o usuáwio fowneça i-infowmações a sewem entwegues n-nya sowicitação http. ( ͡o ω ͡o )
 
-### No lado do cliente: definindo como enviar os dados
+### nyo w-wado do cwiente: d-definindo como enviaw os dados
 
-O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:[`action`](/pt-BR/docs/Web/HTML/Element/form#action) e [`method`](/pt-BR/docs/Web/HTML/Element/form#method).
+o ewemento {{htmwewement("fowm")}} define como os dados sewão enviados. (✿oωo) todos os seus atwibutos s-são pwojetados p-pawa pewmitiw que você configuwe o-o pedido a-a sew enviado quando u-um usuáwio acessa um botão de envio. 😳😳😳 os dois atwibutos mais i-impowtantes são:[`action`](/pt-bw/docs/web/htmw/ewement/fowm#action) e [`method`](/pt-bw/docs/web/htmw/ewement/fowm#method). OwO
 
-#### o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action)
+#### o atwibuto [`action`](/pt-bw/docs/web/htmw/ewement/fowm#action)
 
-Este atributo define para onde os dados são enviados. Seu valor deve ser um URL válido. Se esse atributo não for fornecido, os dados serão enviados para o URL da página que contém o formulário.
+este atwibuto define pawa o-onde os dados são enviados. ^^ seu v-vawow deve sew u-um uww váwido. rawr x3 s-se esse atwibuto nyão fow fownecido, 🥺 o-os dados s-sewão enviados p-pawa o uww da página q-que contém o fowmuwáwio. (ˆ ﻌ ˆ)♡
 
-##### Exemplos
+##### exempwos
 
-Neste exemplo, os dados são enviados para `http://foo.com`:
+n-nyeste exempwo, ( ͡o ω ͡o ) o-os dados são e-enviados pawa `http://foo.com`:
 
-```html
-<form action="http://foo.com"></form>
+```htmw
+<fowm a-action="http://foo.com"></fowm>
 ```
 
-Aqui, os dados são enviados para o mesmo servidor que hospeda a página do formulário, mas para um URL diferente no servidor:
+a-aqui, >w< os dados são enviados pawa o mesmo sewvidow que hospeda a-a página do fowmuwáwio, /(^•ω•^) mas pawa um uww difewente no sewvidow:
 
-```html
-<form action="/somewhere_else"></form>
+```htmw
+<fowm action="/somewhewe_ewse"></fowm>
 ```
 
-Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}} faz com que os dados sejam enviados para a página que inclui o formulário:
+quando e-especificado sem atwibutos, 😳😳😳 como abaixo, (U ᵕ U❁) o atwibuto {{htmwewement("fowm")}} faz c-com que os dados s-sejam enviados p-pawa a página que incwui o fowmuwáwio:
 
-```html
-<form></form>
+```htmw
+<fowm></fowm>
 ```
 
-Muitas páginas mais antigas usam a seguinte notação para indicar que os dados devem ser enviados para a mesma página que contém o formulário; Isso era necessário porque até HTML5, o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) era obrigatório. Isso não é mais necessário.
+m-muitas páginas mais antigas u-usam a seguinte n-nyotação pawa indicaw que os dados devem sew enviados pawa a mesma página que contém o fowmuwáwio; i-isso ewa nyecessáwio p-powque até htmw5, (˘ω˘) o atwibuto [`action`](/pt-bw/docs/web/htmw/ewement/fowm#action) e-ewa obwigatówio. 😳 i-isso nyão é mais nyecessáwio. (ꈍᴗꈍ)
 
-```html
-<form action="#"></form>
+```htmw
+<fowm action="#"></fowm>
 ```
 
-> **Nota:** **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action), todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
+> **nota:** **nota: É p-possívew especificaw u-um uww que use o pwotocowo h-https (http s-seguwo). :3 quando você fizew isso, /(^•ω•^) os dados são cwiptogwafados junto com o westo d-da sowicitação, ^^;; m-mesmo se o f-fowmuwáwio em si é hospedado em u-uma página inseguwa a-acessada usando http. o.O pow o-outwo wado, 😳 se o fowmuwáwio estivew hospedado nya página seguwa, UwU mas você especificaw u-um uww h-http inseguwo com o atwibuto [`action`](/pt-bw/docs/web/htmw/ewement/fowm#action), >w< todos os navegadowes e-exibiwão u-um aviso de seguwança pawa o usuáwio cada vez que tente enviaw d-dados powque os dados nyão sewão cwiptogwafados.**
 
-#### o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method)
+#### o atwibuto [`method`](/pt-bw/docs/web/htmw/ewement/fowm#method)
 
-Este atributo define como os dados são enviados. o [HTTP protocol](/pt-BR/docs/Web/HTTP)
+este atwibuto define c-como os dados são enviados. o.O o [http pwotocow](/pt-bw/docs/web/http)
 
-Fornece várias maneiras de executar um pedido; Os dados de formulários HTML podem ser enviados através de pelo menos dois deles: o método GET eo método POST.
+f-fownece v-váwias maneiwas de executaw um pedido; os dados de fowmuwáwios h-htmw podem sew e-enviados atwavés de pewo menos dois dewes: o método get eo m-método post. (˘ω˘)
 
-Para entender a diferença entre esses dois métodos, vamos dar um passo atrás e examinar como funciona o HTTP. Cada vez que você deseja acessar um recurso na Web, o navegador envia uma solicitação para um URL. Uma solicitação HTTP consiste em duas partes: um cabeçalho que contém um conjunto de metadados globais sobre as capacidades do navegador e um corpo que pode conter informações necessárias ao servidor para processar a solicitação específica.
+pawa entendew a difewença e-entwe esses dois métodos, òωó vamos daw um passo atwás e e-examinaw como funciona o http. nyaa~~ c-cada vez que você d-deseja acessaw um wecuwso nya w-web, o nyavegadow envia uma sowicitação p-pawa u-um uww. ( ͡o ω ͡o ) uma sowicitação h-http consiste em duas p-pawtes: um cabeçawho q-que contém um conjunto de metadados gwobais s-sobwe as capacidades d-do nyavegadow e-e um cowpo que pode contew infowmações nyecessáwias a-ao sewvidow pawa pwocessaw a-a sowicitação e-específica. 😳😳😳
 
-##### O método GET
+##### o método get
 
-O método GET é o método usado pelo navegador para pedir ao servidor para enviar de volta um determinado recurso: "Hey servidor, eu quero obter este recurso." Nesse caso, o navegador envia um corpo vazio. Como o corpo está vazio, se um formulário é enviado usando esse método, os dados enviados para o servidor são anexados ao URL.
+o método get é o método u-usado pewo n-nyavegadow pawa p-pediw ao sewvidow p-pawa enviaw de vowta um detewminado w-wecuwso: "hey sewvidow, ^•ﻌ•^ eu quewo obtew este wecuwso." nyesse caso, (˘ω˘) o nyavegadow envia um c-cowpo vazio. (˘ω˘) como o cowpo está v-vazio, -.- se um fowmuwáwio é enviado u-usando esse método, ^•ﻌ•^ os dados e-enviados pawa o sewvidow são a-anexados ao uww. /(^•ω•^)
 
-###### Exemplo
+###### e-exempwo
 
-Considere o seguinte formulário:
+c-considewe o seguinte f-fowmuwáwio:
 
-```html
-<form action="http://foo.com" method="get">
-  <input name="say" value="Hi" />
-  <input name="to" value="Mom" />
-  <button>Envie meus cumprimentos</button>
-</form>
+```htmw
+<fowm a-action="http://foo.com" method="get">
+  <input nyame="say" vawue="hi" />
+  <input nyame="to" vawue="mom" />
+  <button>envie meus cumpwimentos</button>
+</fowm>
 ```
 
-Com o método GET, a solicitação HTTP tem esta aparência:
+com o método g-get, (///ˬ///✿) a sowicitação h-http tem e-esta apawência:
 
 ```
-GET /?say=Hi&to=Mom HTTP/1.1
-Host: foo.com
+get /?say=hi&to=mom h-http/1.1
+host: foo.com
 ```
 
-##### O método POST
+##### o método post
 
-O método POST é um pouco diferente. É o método que o navegador envia ao servidor para pedir uma resposta que leva em conta os dados fornecidos no corpo da solicitação HTTP: "Hey servidor, dê uma olhada nesses dados e envie-me de volta um resultado apropriado". Se um formulário é enviado usando esse método, os dados são anexados ao corpo do pedido HTTP.
+o método post é u-um pouco difewente. mya É o-o método que o nyavegadow e-envia ao sewvidow pawa pediw uma wesposta que w-weva em conta os d-dados fownecidos nyo cowpo da s-sowicitação http: "hey s-sewvidow, o.O dê uma owhada nyesses dados e envie-me de vowta um wesuwtado a-apwopwiado". ^•ﻌ•^ se u-um fowmuwáwio é e-enviado usando e-esse método, (U ᵕ U❁) o-os dados são anexados ao cowpo d-do pedido http. :3
 
-###### Exemplo
+###### e-exempwo
 
-Considere esta forma (a mesma acima):
+considewe esta f-fowma (a mesma acima):
 
-```html
-<form action="http://foo.com" method="post">
-  <input name="say" value="Hi" />
-  <input name="to" value="Mom" />
-  <button>Send my greetings</button>
-</form>
+```htmw
+<fowm a-action="http://foo.com" method="post">
+  <input n-nyame="say" vawue="hi" />
+  <input nyame="to" v-vawue="mom" />
+  <button>send my gweetings</button>
+</fowm>
 ```
 
-Quando enviado usando o método POST, o pedido HTTP se parece com isto:
+q-quando enviado u-usando o método post, (///ˬ///✿) o pedido h-http se pawece com isto:
 
 ```
-POST / HTTP/1.1
-Host: foo.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
+post / http/1.1
+h-host: foo.com
+c-content-type: appwication/x-www-fowm-uwwencoded
+c-content-wength: 13
 
-say=Hi&to=Mom
+say=hi&to=mom
 ```
 
-O cabeçalho Content-Length indica o tamanho do corpo eo cabeçalho Content-Type indica o tipo de recurso enviado para o servidor. Vamos discutir esses cabeçalhos em um pouco.
+o cabeçawho content-wength i-indica o tamanho do cowpo eo cabeçawho content-type i-indica o t-tipo de wecuwso enviado pawa o s-sewvidow. (///ˬ///✿) vamos discutiw esses cabeçawhos e-em um p-pouco. 🥺
 
-Obviamente, as solicitações HTTP nunca são exibidas para o usuário (se você quiser vê-las, você precisa usar ferramentas como o Firefox [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) ou o [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). A única coisa exibida para o usuário é o URL chamado. Assim, com uma solicitação GET, o usuário verá os dados em sua barra de URL, mas com uma solicitação POST, eles não. Isso pode ser muito importante por duas razões:
+obviamente, -.- as sowicitações http nunca s-são exibidas pawa o usuáwio (se você quisew v-vê-was, nyaa~~ você p-pwecisa usaw fewwamentas como o f-fiwefox [web consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) ou o [chwome d-devewopew toows](https://devewopews.googwe.com/chwome-devewopew-toows/)). (///ˬ///✿) a-a única c-coisa exibida pawa o usuáwio é o uww chamado. 🥺 assim, com uma sowicitação get, >w< o usuáwio vewá os dados em sua bawwa de uww, rawr x3 mas com uma sowicitação post, (⑅˘꒳˘) ewes nyão. isso pode sew muito impowtante p-pow duas wazões:
 
-1. Se você precisar enviar uma senha (ou qualquer parte sensível de dados), nunca use o método GET ou corre o risco de exibi-lo na barra de URL.
-2. Se você precisar enviar uma grande quantidade de dados, o método POST é preferido porque alguns navegadores limitam o tamanho dos URLs. Além disso, muitos servidores limitam o comprimento dos URLs que aceitam.
+1. σωσ s-se você pwecisaw enviaw uma senha (ou quawquew p-pawte sensívew d-de dados), XD n-nyunca use o método get ou cowwe o-o wisco de exibi-wo nya bawwa d-de uww. -.-
+2. se você p-pwecisaw enviaw uma gwande q-quantidade de dados, >_< o método post é p-pwefewido p-powque awguns navegadowes wimitam o tamanho dos u-uwws. rawr awém disso, 😳😳😳 m-muitos sewvidowes w-wimitam o c-compwimento dos u-uwws que aceitam.
 
-### No lado do servidor: recuperar os dados
+### n-nyo wado d-do sewvidow: wecupewaw o-os dados
 
-Seja qual for o método HTTP escolhido, o servidor recebe uma string que será analisada para obter os dados como uma lista de pares chave / valor. A maneira como você acessa essa lista depende da plataforma de desenvolvimento que você usa e de quaisquer frameworks específicos que você possa usar com ele. A tecnologia que você usa também determina como as chaves duplicadas são manipuladas; Freqüentemente, o valor recebido mais recentemente para uma determinada chave recebe prioridade.
+s-seja quaw fow o método http escowhido, UwU o-o sewvidow w-wecebe uma stwing q-que sewá anawisada pawa obtew o-os dados como uma wista de pawes chave / vawow. (U ﹏ U) a-a maneiwa como você acessa e-essa wista depende d-da pwatafowma d-de desenvowvimento que você usa e-e de quaisquew fwamewowks específicos q-que você possa usaw com e-ewe. (˘ω˘) a tecnowogia que você usa t-também detewmina como as chaves dupwicadas são manipuwadas; fweqüentemente, o-o vawow wecebido mais wecentemente p-pawa uma detewminada c-chave wecebe pwiowidade. /(^•ω•^)
 
-#### Exemplo: PHP Bruto
+#### exempwo: php bwuto
 
-O PHP oferece alguns objetos globais para acessar os dados. Supondo que você tenha usado o método POST, o exemplo a seguir apenas leva os dados e exibe-o para o usuário. Claro, o que você faz com os dados depende de você. Você pode exibi-lo, armazená-lo em um banco de dados, enviá-los por e-mail, ou processá-lo de alguma outra maneira.
+o php o-ofewece awguns objetos gwobais p-pawa acessaw os d-dados. (U ﹏ U) supondo q-que você tenha usado o método post, ^•ﻌ•^ o exempwo a-a seguiw apenas w-weva os dados e exibe-o pawa o u-usuáwio. >w< cwawo, ʘwʘ o que você faz com os dados depende d-de você. òωó você pode exibi-wo, o.O a-awmazená-wo e-em um banco de d-dados, ( ͡o ω ͡o ) enviá-wos pow e-maiw, mya ou p-pwocessá-wo de a-awguma outwa maneiwa. >_<
 
 ```php
 <?php
-  // The global $_POST variable allows you to access the data sent with the POST method
-  // To access the data sent with the GET method, you can use $_GET
-  $say = htmlspecialchars($_POST['say']);
-  $to  = htmlspecialchars($_POST['to']);
+  // t-the gwobaw $_post v-vawiabwe awwows you t-to access the data s-sent with the p-post method
+  // t-to access the d-data sent with t-the get method, rawr y-you can use $_get
+  $say = h-htmwspeciawchaws($_post['say']);
+  $to  = htmwspeciawchaws($_post['to']);
 
-  echo  $say, ' ', $to;
+  e-echo  $say, >_< ' ', $to;
 ```
 
-Este exemplo exibe uma página com os dados enviados. Em nosso exemplo de antes, a saída seria:
+este exempwo e-exibe uma página com os dados enviados. (U ﹏ U) e-em nyosso e-exempwo de antes, rawr a-a saída sewia:
 
 ```
-Oi Mãe
+oi mãe
 ```
 
-#### Example: Python Bruto
+#### exampwe: python bwuto
 
-This example uses Python to do the same thing--display the provided data on a web page. It uses the [CGI Python package](http://docs.python.org/3/library/cgi.html) to access the form data.
+t-this exampwe u-uses python to do t-the same thing--dispway the pwovided data on a web page. (U ᵕ U❁) it uses t-the [cgi python p-package](http://docs.python.owg/3/wibwawy/cgi.htmw) to access t-the fowm data. (ˆ ﻌ ˆ)♡
 
 ```python
-#!/usr/bin/env python
-import html
-import cgi
-import cgitb; cgitb.enable()     # for troubleshooting
+#!/usw/bin/env p-python
+impowt htmw
+impowt cgi
+impowt cgitb; cgitb.enabwe()     # f-fow twoubweshooting
 
-print("Content-Type: text/html") # HTTP header to say HTML is following
-print()                          # blank line, end of headers
+p-pwint("content-type: t-text/htmw") # h-http headew to say htmw is fowwowing
+pwint()                          # b-bwank w-wine, >_< end of headews
 
-form = cgi.FieldStorage()
-say  = html.escape(form["say"].value);
-to   = html.escape(form["to"].value);
+fowm = cgi.fiewdstowage()
+say  = htmw.escape(fowm["say"].vawue);
+t-to   = htmw.escape(fowm["to"].vawue);
 
-print(say, " ", to)
+pwint(say, ^^;; " ", to)
 ```
 
-O resultado é o mesmo que com o PHP:
+o wesuwtado é o mesmo que c-com o php:
 
 ```
-Oi Mãe
+oi mãe
 ```
 
-#### Outros idiomas e frameworks
+#### o-outwos idiomas e-e fwamewowks
 
-Há muitas outras tecnologias do lado do servidor que você pode usar para o tratamento de formulários, incluindo [Perl](/pt-BR/docs/Web), [Java](/pt-BR/docs/Web), [.Net](https://www.microsoft.com/net), [Ruby](/pt-BR/docs/Web), etc. Basta escolher o que você mais gosta. Dito isto, é importante notar que é muito incomum usar essas tecnologias diretamente porque isso pode ser complicado. É mais comum usar um dos muitos frameworks agradáveis que facilitam o manuseio de formulários, como:
+há muitas outwas t-tecnowogias d-do wado do sewvidow que você pode u-usaw pawa o twatamento de fowmuwáwios, ʘwʘ i-incwuindo [peww](/pt-bw/docs/web), 😳😳😳 [java](/pt-bw/docs/web), UwU [.net](https://www.micwosoft.com/net), OwO [wuby](/pt-bw/docs/web), :3 e-etc. -.- basta e-escowhew o que v-você mais gosta. 🥺 dito isto, -.- é i-impowtante nyotaw q-que é muito i-incomum usaw essas tecnowogias diwetamente p-powque isso pode sew compwicado. É mais c-comum usaw um d-dos muitos fwamewowks a-agwadáveis que faciwitam o manuseio de fowmuwáwios, -.- como:
 
-- [Symfony](http://symfony.com/) Para PHP
-- [Django](https://www.djangoproject.com/) Para Python
-- [Ruby On Rails](http://rubyonrails.org/) Para Ruby
-- [Grails](http://grails.org/) Para Java
-- etc.
+- [symfony](http://symfony.com/) pawa php
+- [django](https://www.djangopwoject.com/) p-pawa python
+- [wuby on w-waiws](http://wubyonwaiws.owg/) p-pawa wuby
+- [gwaiws](http://gwaiws.owg/) pawa java
+- etc. (U ﹏ U)
 
-Vale a pena notar que mesmo usando essas estruturas, trabalhar com formulários não é necessariamente fácil. Mas é muito melhor, e você vai economizar muito tempo.
+vawe a-a pena nyotaw que mesmo usando e-essas estwutuwas, rawr t-twabawhaw com f-fowmuwáwios nyão é n-nyecessawiamente f-fáciw. mya mas é muito mewhow, e você vai economizaw muito tempo. ( ͡o ω ͡o )
 
-## Um caso especial: enviar arquivos
+## um caso e-especiaw: enviaw awquivos
 
-Arquivos são um caso especial com formulários HTML. Eles são dados binários - ou considerados como tal - onde todos os outros dados são dados de texto. Porque HTTP é um protocolo de texto, há requisitos especiais para manipular dados binários.
+awquivos s-são um caso especiaw com fowmuwáwios htmw. /(^•ω•^) ewes são dados b-bináwios - ou considewados como taw - onde todos os outwos dados são dados d-de texto. powque h-http é um pwotocowo de texto, >_< h-há wequisitos especiais pawa manipuwaw dados b-bináwios. (✿oωo)
 
-### o [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) atributo
+### o-o [`enctype`](/pt-bw/docs/web/htmw/ewement/fowm#enctype) atwibuto
 
-Esse atributo permite especificar o valor do cabeçalho HTTP Content-Type. Este cabeçalho é muito importante porque informa ao servidor que tipo de dados está sendo enviado. Por padrão, seu valor é application / x-www-form-urlencoded. Em termos humanos, isso significa: "Este é o formulário de dados que foi codificado em forma de URL."
+e-esse atwibuto pewmite especificaw o-o vawow do cabeçawho http content-type. 😳😳😳 este cabeçawho é m-muito impowtante powque infowma ao sewvidow que t-tipo de dados está s-sendo enviado. (ꈍᴗꈍ) p-pow padwão, 🥺 seu vawow é appwication / x-www-fowm-uwwencoded. mya e-em tewmos humanos, isso significa: "este é o fowmuwáwio de dados que foi codificado em fowma d-de uww."
 
-Mas se você quiser enviar arquivos, você precisa fazer duas coisas:
+mas s-se você quisew e-enviaw awquivos, (ˆ ﻌ ˆ)♡ v-você pwecisa fazew duas coisas:
 
-- Colocou o [`method`](/pt-BR/docs/Web/HTML/Element/form#method) Atributo para POST porque o conteúdo do arquivo não pode ser colocado dentro de um parâmetro de URL usando um formulário.
-- Defina o valor de [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) Para multipart / form-data porque os dados serão divididos em várias partes, uma para cada arquivo mais uma para o texto do corpo do formulário que pode ser enviado com eles.
+- cowocou o [`method`](/pt-bw/docs/web/htmw/ewement/fowm#method) a-atwibuto pawa p-post powque o conteúdo do awquivo não pode sew c-cowocado dentwo de um pawâmetwo de uww usando u-um fowmuwáwio. (⑅˘꒳˘)
+- defina o vawow de [`enctype`](/pt-bw/docs/web/htmw/ewement/fowm#enctype) p-pawa m-muwtipawt / fowm-data powque os d-dados sewão divididos e-em váwias p-pawtes, uma pawa cada awquivo mais uma pawa o-o texto do cowpo do fowmuwáwio que pode sew enviado c-com ewes. òωó
 
-Por exemplo:
+pow exempwo:
 
-```html
-<form method="post" enctype="multipart/form-data">
-  <input type="file" name="myFile" />
-  <button>Send the file</button>
-</form>
+```htmw
+<fowm method="post" enctype="muwtipawt/fowm-data">
+  <input t-type="fiwe" nyame="myfiwe" />
+  <button>send the f-fiwe</button>
+</fowm>
 ```
 
-> **Nota:** **Nota: Alguns navegadores suportam**[`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
+> **nota:** **nota: a-awguns nyavegadowes s-supowtam**[`muwtipwe`](/pt-bw/docs/web/htmw/ewement/input#muwtipwe) a-atwibuto nyo {{htmwewement("input")}} e-ewemento pawa enviaw mais de um awquivo com apenas u-um ewemento de entwada. o.O como o-o sewvidow wida com esses awquivos weawmente depende d-da tecnowogia u-usada nyo sewvidow. XD como mencionado a-antewiowmente, (˘ω˘) usando um q-quadwo fawá sua v-vida muito mais fáciw. (ꈍᴗꈍ)
 
-> **Aviso:** **Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.**
+> **aviso:** **aviso: m-muitos sewvidowes s-são configuwados com um wimite d-de tamanho pawa awquivos e sowicitações http, >w< a fim de evitaw a-abusos. XD É impowtante vewificaw e-esse wimite com o administwadow do sewvidow antes d-de enviaw um a-awquivo.**
 
-## Preocupações com segurança
+## p-pweocupações com seguwança
 
-Cada vez que você envia dados para um servidor, você precisa considerar a segurança. Formulários HTML são um dos primeiros vetores de ataque contra servidores. Os problemas nunca vêm dos formulários HTML em si; Eles vêm de como o servidor manipula dados.
+cada v-vez que você e-envia dados pawa um sewvidow, -.- v-você pwecisa considewaw a seguwança. ^^;; f-fowmuwáwios htmw são um d-dos pwimeiwos vetowes d-de ataque contwa sewvidowes. XD os pwobwemas nyunca vêm dos fowmuwáwios htmw e-em si; ewes vêm d-de como o sewvidow manipuwa dados. :3
 
-### Falhas de segurança comuns
+### fawhas de seguwança c-comuns
 
-Dependendo do que você está fazendo, existem alguns problemas de segurança muito conhecidos:
+dependendo do que você e-está fazendo, σωσ e-existem awguns pwobwemas de seguwança muito conhecidos:
 
-#### XSS e CSRF
+#### xss e cswf
 
-Cross-Site Scripting (XSS) e Cross-Site Request Forgery (CSRF) são tipos comuns de ataques que ocorrem quando você exibe dados enviados por um usuário para o usuário ou para outro usuário.
+cwoss-site scwipting (xss) e-e cwoss-site wequest fowgewy (cswf) são tipos c-comuns de ataques que ocowwem q-quando você e-exibe dados enviados pow um usuáwio p-pawa o usuáwio o-ou pawa outwo u-usuáwio. XD
 
-O XSS permite que os invasores injetem scripts do lado do cliente em páginas da Web vistas por outros usuários. Uma vulnerabilidade de scripts entre sites pode ser usada por atacantes para ignorar controles de acesso, como o [same origin policy](/pt-BR/docs/Web/Security/Same-origin_policy). O efeito desses ataques pode variar de um pequeno incômodo a um risco de segurança significativo.
+o x-xss pewmite que o-os invasowes injetem s-scwipts do wado do cwiente em páginas da web vistas pow outwos usuáwios. :3 uma vuwnewabiwidade d-de scwipts entwe s-sites pode s-sew usada pow atacantes p-pawa ignowaw c-contwowes de a-acesso, rawr como o [same owigin powicy](/pt-bw/docs/web/secuwity/same-owigin_powicy). 😳 o efeito desses ataques pode vawiaw de um pequeno i-incômodo a-a um wisco de seguwança significativo. 😳😳😳
 
-CSRF são semelhantes aos ataques XSS, já que eles começam da mesma maneira - injetando script do lado do cliente em páginas da Web - mas seu destino é diferente. Os invasores do CSRF tentam aumentar os privilégios para aqueles de um usuário com privilégios mais altos (como um administrador do site) para executar uma ação que não deve ser capaz de fazer (por exemplo, enviar dados para um usuário não confiável).
+cswf são semewhantes aos a-ataques xss, (ꈍᴗꈍ) j-já que ewes começam d-da mesma maneiwa - injetando scwipt do wado d-do cwiente em páginas da web - mas seu destino é d-difewente. 🥺 o-os invasowes do cswf tentam aumentaw os pwiviwégios p-pawa aquewes de um usuáwio c-com pwiviwégios m-mais awtos (como um administwadow d-do site) pawa e-executaw uma ação q-que não deve s-sew capaz de f-fazew (pow exempwo, ^•ﻌ•^ e-enviaw dados pawa um usuáwio n-nyão confiávew). XD
 
-Os ataques XSS exploram a confiança que um usuário tem para um site, enquanto os ataques CSRF exploram a confiança que um site tem para seus usuários.
+o-os ataques xss expwowam a c-confiança que um usuáwio tem pawa um site, ^•ﻌ•^ enquanto o-os ataques cswf expwowam a-a confiança que um site tem pawa s-seus usuáwios. ^^;;
 
-To prevent these attacks, you should always check the data a user sends to your server and (if you need to display it) try not to display the HTML content as provided by the user. Intead, you should process the user-provided data so you don't display it verbatim. Almost all frameworks on the market today implement a minimal filter that removes the HTML {{HTMLElement("script")}}, {{HTMLElement("iframe")}} and {{HTMLElement("object")}} elements from data sent by any user. This helps to mitigate the risk, but doesn't necessarily eradicate it.
+t-to pwevent these attacks, ʘwʘ you shouwd awways check t-the data a usew sends to youw sewvew and (if y-you nyeed to dispway i-it) twy nyot to dispway the htmw content a-as pwovided by the u-usew. OwO intead, 🥺 you shouwd pwocess t-the usew-pwovided data so you don't dispway i-it vewbatim. (⑅˘꒳˘) awmost a-aww fwamewowks on the mawket t-today impwement a-a minimaw fiwtew that wemoves the htmw {{htmwewement("scwipt")}}, (///ˬ///✿) {{htmwewement("ifwame")}} a-and {{htmwewement("object")}} e-ewements f-fwom data sent b-by any usew. (✿oωo) this hewps to mitigate the wisk, nyaa~~ but doesn't necessawiwy ewadicate it. >w<
 
-#### SQL injection
+#### sqw injection
 
-SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request in the hope that the server will execute it (many times when the application server tries to store the data). This is actually [one of the main vector attacks against web sites](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project).
+sqw i-injection is a type o-of attack that t-twies to pewfowm a-actions on a d-database used by t-the tawget web site. (///ˬ///✿) this typicawwy i-invowves sending a-an sqw wequest in the hope t-that the sewvew w-wiww exekawaii~ it (many times when the appwication s-sewvew twies to stowe the data). rawr this is actuawwy [one o-of the main vectow a-attacks against w-web sites](https://www.owasp.owg/index.php/categowy:owasp_top_ten_pwoject). (U ﹏ U)
 
-The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using [`mysql_real_escape_string()`](http://www.php.net/manual/en/function.mysql-real-escape-string.php) on a PHP/MySQL infrastructure).
+the c-consequences can b-be tewwibwe, ^•ﻌ•^ wanging f-fwom data woss to access t-to a whowe infwastwuctuwe b-by using pwiviwege escawation. (///ˬ///✿) t-this is a vewy sewious t-thweat and you shouwd n-nyevew stowe d-data sent by a usew without pewfowming s-some sanitization (fow exampwe, o.O by using [`mysqw_weaw_escape_stwing()`](http://www.php.net/manuaw/en/function.mysqw-weaw-escape-stwing.php) on a php/mysqw i-infwastwuctuwe). >w<
 
-#### HTTP header injection and email injection
+#### http headew injection and emaiw injection
 
-These kinds of attacks can occur when your application builds HTTP headers or emails based on the data input by a user on a form. These won't directly damage your server or affect your users, but they are an open door to deeper problems such as session hijacking or phishing attacks.
+these kinds of attacks can occuw when youw a-appwication buiwds http headews ow emaiws based on the data input by a usew on a fowm. nyaa~~ these won't diwectwy damage y-youw sewvew ow affect youw usews, òωó but they a-awe an open doow to deepew pwobwems s-such as session hijacking ow phishing attacks. (U ᵕ U❁)
 
-These attacks are mostly silent, and can turn your server into a [zombie](<http://en.wikipedia.org/wiki/Zombie_(computer_science)>).
+t-these attacks awe mostwy siwent, (///ˬ///✿) a-and can tuwn youw sewvew into a-a [zombie](<http://en.wikipedia.owg/wiki/zombie_(computew_science)>). (✿oωo)
 
-### Be paranoid: Never trust your users
+### b-be pawanoid: nyevew twust youw usews
 
-So, how do you fight these threats? This is a topic far beyond this guide, but there are a few rules to keep in mind. The most important rule is: never ever trust your users, including yourself; even a trusted user could have been hijacked.
+s-so, how do you fight these thweats? this is a topic faw beyond t-this guide, 😳😳😳 but thewe awe a few w-wuwes to keep in mind. (✿oωo) the most i-impowtant wuwe is: nyevew evew t-twust youw usews, (U ﹏ U) i-incwuding youwsewf; even a twusted usew couwd h-have been hijacked. (˘ω˘)
 
-All data that comes to your server must be checked and sanitized. Always. No exception.
+aww data that comes to youw s-sewvew must be checked and sanitized. 😳😳😳 awways. (///ˬ///✿) nyo exception. (U ᵕ U❁)
 
-- Escape potentially dangerous characters. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this.
-- Limit the incoming amount of data to allow only what's necessary.
-- Sandbox uploaded files (store them on a different server and allow access to the file only through a different subdomain or even better through a fully different domain name).
+- escape potentiawwy d-dangewous c-chawactews. >_< the specific chawactews y-you shouwd be c-cautious with vawy depending on t-the context in which the data is used and the sewvew pwatfowm you empwoy, (///ˬ///✿) but a-aww sewvew-side w-wanguages have functions fow this. (U ᵕ U❁)
+- w-wimit the incoming a-amount of data to awwow o-onwy nyani's nyecessawy. >w<
+- sandbox upwoaded fiwes (stowe t-them on a diffewent sewvew and awwow access t-to the fiwe o-onwy thwough a diffewent subdomain ow even bettew t-thwough a fuwwy diffewent domain nyame). 😳😳😳
 
-You should avoid many/most problems if you follow these three rules, but it's always a good idea to get a security review performed by a competent third party. Don't assume that you've seen all the possible problems.
+you shouwd avoid many/most pwobwems if you fowwow these thwee wuwes, (ˆ ﻌ ˆ)♡ but it's awways a-a good idea to g-get a secuwity weview pewfowmed b-by a competent t-thiwd pawty. (ꈍᴗꈍ) don't assume that you've s-seen aww the possibwe pwobwems. 🥺
 
-## Conclusion
+## concwusion
 
-As you can see, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. Yes, as we'll see, it's possible to [perform client side data validation](/pt-BR/docs/Learn/Forms/Form_validation) but the server can't trust this validation because it has no way to truly know what really happens on the client side.
+as you can see, >_< sending fowm data is easy, OwO b-but secuwing an appwication can be twicky. ^^;; just wemembew that a fwont-end devewopew i-is nyot the o-one who shouwd d-define the secuwity modew of the data. (✿oωo) yes, as we'ww see, UwU it's possibwe t-to [pewfowm c-cwient side d-data vawidation](/pt-bw/docs/weawn/fowms/fowm_vawidation) but the s-sewvew can't twust this vawidation b-because it has nyo way to twuwy k-know nyani weawwy happens on t-the cwient side. ( ͡o ω ͡o )
 
-## See also
+## see awso
 
-If you want to learn more about securing a web application, you can dig into these resources:
+if you want to w-weawn mowe about secuwing a web a-appwication, (✿oωo) you c-can dig into these wesouwces:
 
-- [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
-- [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
+- [the o-open web a-appwication secuwity pwoject (owasp)](https://www.owasp.owg/index.php/main_page)
+- [chwis s-shifwett's bwog about p-php secuwity](http://shifwett.owg/)

@@ -1,120 +1,120 @@
 ---
-title: Intl.DateTimeFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: intw.datetimefowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat
+w-w10n:
+  souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`Intl.DateTimeFormat`** предоставляет возможности форматирования даты и времени в соответствии с языковыми правилами.
+Объект **`intw.datetimefowmat`** предоставляет возможности форматирования даты и времени в соответствии с языковыми правилами. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.datetimefowmat", OwO "tawwew")}}
 
-```js interactive-example
-const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
-// Results below assume UTC timezone - your results may vary
+```js i-intewactive-exampwe
+c-const d-date = nyew date(date.utc(2020, (ꈍᴗꈍ) 11, 😳 20, 3, 23, 16, 😳😳😳 738));
+// w-wesuwts bewow assume utc timezone - youw wesuwts may vawy
 
-// Specify default date formatting for language (locale)
-console.log(new Intl.DateTimeFormat("en-US").format(date));
-// Expected output: "12/20/2020"
+// specify d-defauwt date fowmatting fow wanguage (wocawe)
+c-consowe.wog(new intw.datetimefowmat("en-us").fowmat(date));
+// e-expected output: "12/20/2020"
 
-// Specify default date formatting for language with a fallback language (in this case Indonesian)
-console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
-// Expected output: "20/12/2020"
+// specify defauwt date fowmatting fow wanguage w-with a fawwback wanguage (in this c-case indonesian)
+c-consowe.wog(new intw.datetimefowmat(["ban", mya "id"]).fowmat(date));
+// expected output: "20/12/2020"
 
-// Specify date and time format using "style" options (i.e. full, long, medium, short)
-console.log(
-  new Intl.DateTimeFormat("en-GB", {
-    dateStyle: "full",
-    timeStyle: "long",
-    timeZone: "Australia/Sydney",
-  }).format(date),
+// specify d-date and time fowmat using "stywe" options (i.e. mya fuww, wong, medium, (⑅˘꒳˘) showt)
+consowe.wog(
+  n-nyew intw.datetimefowmat("en-gb", (U ﹏ U) {
+    d-datestywe: "fuww", mya
+    t-timestywe: "wong", ʘwʘ
+    t-timezone: "austwawia/sydney", (˘ω˘)
+  }).fowmat(date), (U ﹏ U)
 );
-// Expected output: "Sunday, 20 December 2020 at 14:23:16 GMT+11"
+// e-expected output: "sunday, ^•ﻌ•^ 20 decembew 2020 a-at 14:23:16 gmt+11"
 ```
 
 ## Конструктор
 
-- {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-  - : Создаёт новый объект `Intl.DateTimeFormat`.
+- {{jsxwef("intw/datetimefowmat/datetimefowmat", (˘ω˘) "intw.datetimefowmat()")}}
+  - : Создаёт новый объект `intw.datetimefowmat`. :3
 
 ## Статические методы
 
-- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
-  - : Возвращает массив, содержащий локали, которые поддерживаются без необходимости возврата к локали по умолчанию.
+- {{jsxwef("intw/datetimefowmat/suppowtedwocawesof", ^^;; "intw.datetimefowmat.suppowtedwocawesof()")}}
+  - : Возвращает массив, 🥺 содержащий локали, (⑅˘꒳˘) которые поддерживаются без необходимости возврата к локали по умолчанию. nyaa~~
 
 ## Свойства экземпляра
 
-Эти свойства определены в `Intl.DateTimeFormat.prototype` и есть у всех экземпляров `Intl.DateTimeFormat`.
+Эти свойства определены в `intw.datetimefowmat.pwototype` и есть у всех экземпляров `intw.datetimefowmat`. :3
 
-- {{jsxref("Object/constructor", "Intl.DateTimeFormat.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Intl.DateTimeFormat` начальным значением является конструктор {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat")}}.
-- `Intl.DateTimeFormat.prototype[@@toStringTag]`
-  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"Intl.DateTimeFormat"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
+- {{jsxwef("object/constwuctow", ( ͡o ω ͡o ) "intw.datetimefowmat.pwototype.constwuctow")}}
+  - : Функция-конструктор, mya создающая экземпляр объекта. (///ˬ///✿) Для экземпляров `intw.datetimefowmat` начальным значением является конструктор {{jsxwef("intw/datetimefowmat/datetimefowmat", (˘ω˘) "intw.datetimefowmat")}}. ^^;;
+- `intw.datetimefowmat.pwototype[@@tostwingtag]`
+  - : Начальным значением свойства [`@@tostwingtag`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) является строка `"intw.datetimefowmat"`. (✿oωo) Это свойство используется в {{jsxwef("object.pwototype.tostwing()")}}. (U ﹏ U)
 
 ## Методы экземпляра
 
-- {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-  - : Функция-геттер, которая форматирует дату в соответствии с локалью и настройками форматирования этого объекта `DateTimeFormat`.
-- {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : Этот метод принимает две [даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и форматирует диапазон дат наиболее кратким образом на основе локали и параметров, установленных при создании экземпляра `DateTimeFormat`.
-- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
-  - : Этот метод принимает две [даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и возвращает массив объектов, которые содержат специфичные для локали токены, представляющие каждую часть отформатированного диапазона дат.
-- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
-  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих части даты, которые могут быть использованы для пользовательского форматирования с учётом локали.
-- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-  - : Возвращает новый объект со свойствами, представляющими локаль и настройки форматирования, определённые во время инициализации объекта.
+- {{jsxwef("intw/datetimefowmat/fowmat", -.- "intw.datetimefowmat.pwototype.fowmat()")}}
+  - : Функция-геттер, ^•ﻌ•^ которая форматирует дату в соответствии с локалью и настройками форматирования этого объекта `datetimefowmat`. rawr
+- {{jsxwef("intw/datetimefowmat/fowmatwange", (˘ω˘) "intw.datetimefowmat.pwototype.fowmatwange()")}}
+  - : Этот метод принимает две [даты](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/date) и форматирует диапазон дат наиболее кратким образом на основе локали и параметров, nyaa~~ установленных при создании экземпляра `datetimefowmat`. UwU
+- {{jsxwef("intw/datetimefowmat/fowmatwangetopawts", :3 "intw.datetimefowmat.pwototype.fowmatwangetopawts()")}}
+  - : Этот метод принимает две [даты](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/date) и возвращает массив объектов, (⑅˘꒳˘) которые содержат специфичные для локали токены, (///ˬ///✿) представляющие каждую часть отформатированного диапазона дат. ^^;;
+- {{jsxwef("intw/datetimefowmat/fowmattopawts", >_< "intw.datetimefowmat.pwototype.fowmattopawts()")}}
+  - : Возвращает {{jsxwef("awway", rawr x3 "массив")}} объектов, /(^•ω•^) представляющих части даты, :3 которые могут быть использованы для пользовательского форматирования с учётом локали. (ꈍᴗꈍ)
+- {{jsxwef("intw/datetimefowmat/wesowvedoptions", /(^•ω•^) "intw.datetimefowmat.pwototype.wesowvedoptions()")}}
+  - : Возвращает новый объект со свойствами, (⑅˘꒳˘) представляющими локаль и настройки форматирования, ( ͡o ω ͡o ) определённые во время инициализации объекта. òωó
 
 ## Примеры
 
-### Использование `DateTimeFormat`
+### Использование `datetimefowmat`
 
-При использовании без указания локали `DateTimeFormat` использует локаль и настройки по умолчанию.
+При использовании без указания локали `datetimefowmat` использует локаль и настройки по умолчанию. (⑅˘꒳˘)
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const date = n-nyew date(date.utc(2012, XD 11, 20, -.- 3, 0, 0));
 
-// результат вызова без аргументов зависит от реализации,
+// результат вызова без аргументов зависит от реализации, :3
 // локали по умолчанию и часового пояса по умолчанию
-console.log(new Intl.DateTimeFormat().format(date));
-// "12/19/2012", если код запущен с локалью en-US и часовым поясом America/Los_Angeles
+consowe.wog(new intw.datetimefowmat().fowmat(date));
+// "12/19/2012", nyaa~~ если код запущен с локалью en-us и часовым поясом amewica/wos_angewes
 ```
 
-### Использование параметра `locales`
+### Использование параметра `wocawes`
 
-Этот пример показывает некоторые локализованные форматы даты и времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) используя параметр `locales`:
+Этот пример показывает некоторые локализованные форматы даты и времени. 😳 Для получения формата языка, (⑅˘꒳˘) используемого в пользовательском интерфейсе вашего приложения, nyaa~~ убедитесь, OwO что вы указали этот язык (и, возможно, rawr x3 несколько запасных языков) используя параметр `wocawes`:
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const d-date = nyew date(date.utc(2012, XD 11, 20, 3, 0, 0));
 
-// Форматирование ниже предполагает, что местный часовой пояс равен
-// America/Los_Angeles для локали США
+// Форматирование ниже предполагает, σωσ что местный часовой пояс равен
+// a-amewica/wos_angewes для локали США
 
 // В американском английском используется порядок месяц-день-год
-console.log(new Intl.DateTimeFormat("en-US").format(date));
+c-consowe.wog(new i-intw.datetimefowmat("en-us").fowmat(date));
 // "12/19/2012"
 
 // В британском английском используется порядок день-месяц-год
-console.log(new Intl.DateTimeFormat("en-GB").format(date));
+consowe.wog(new intw.datetimefowmat("en-gb").fowmat(date));
 // "20/12/2012"
 
 // В корейском используется порядок год-месяц-день
-console.log(new Intl.DateTimeFormat("ko-KR").format(date));
-// "2012. 12. 20."
+consowe.wog(new i-intw.datetimefowmat("ko-kw").fowmat(date));
+// "2012. (U ᵕ U❁) 12. 20."
 
 // В большинстве арабоязычных стран используют настоящие арабские цифры
-console.log(new Intl.DateTimeFormat("ar-EG").format(date));
+c-consowe.wog(new intw.datetimefowmat("aw-eg").fowmat(date));
 // "٢٠‏/١٢‏/٢٠١٢"
 
-// В Японии приложения могут захотеть использовать японский календарь,
+// В Японии приложения могут захотеть использовать японский календарь, (U ﹏ U)
 // в котором 2012 год является 24-м годом эры Хейсей
-console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
+c-consowe.wog(new i-intw.datetimefowmat("ja-jp-u-ca-japanese").fowmat(date));
 // "24/12/20"
 
-// Если запрашиваемый язык может не поддерживаться, например
-// балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
+// Если запрашиваемый язык может не поддерживаться, :3 например
+// балийский, ( ͡o ω ͡o ) откатываемся на запасной язык, σωσ в данном случае индонезийский
+consowe.wog(new i-intw.datetimefowmat(["ban", >w< "id"]).fowmat(date));
 // "20/12/2012"
 ```
 
@@ -123,93 +123,93 @@ console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
 Формат даты и времени может быть настроен с помощью параметра `options`:
 
 ```js
-const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+const date = n-nyew date(date.utc(2012, 😳😳😳 11, OwO 20, 3, 0, 0, 200));
 
 // Запрашиваем день недели вместе с длинным форматом даты
-let options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+wet options = {
+  weekday: "wong", 😳
+  y-yeaw: "numewic", 😳😳😳
+  month: "wong", (˘ω˘)
+  d-day: "numewic", ʘwʘ
 };
-console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
-// "Donnerstag, 20. Dezember 2012"
+consowe.wog(new i-intw.datetimefowmat("de-de", ( ͡o ω ͡o ) o-options).fowmat(date));
+// "donnewstag, o.O 20. dezembew 2012"
 
-// Приложение может захотеть использовать UTC и показать это
-options.timeZone = "UTC";
-options.timeZoneName = "short";
-console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// "Thursday, December 20, 2012, GMT"
+// Приложение может захотеть использовать utc и показать это
+options.timezone = "utc";
+options.timezonename = "showt";
+consowe.wog(new intw.datetimefowmat("en-us", o-options).fowmat(date));
+// "thuwsday, >w< d-decembew 20, 😳 2012, gmt"
 
 // Иногда требуется большая точность
-options = {
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  timeZone: "Australia/Sydney",
-  timeZoneName: "short",
+o-options = {
+  h-houw: "numewic", 🥺
+  m-minute: "numewic",
+  second: "numewic", rawr x3
+  timezone: "austwawia/sydney", o.O
+  timezonename: "showt", rawr
 };
-console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
-// "2:00:00 pm AEDT"
+consowe.wog(new intw.datetimefowmat("en-au", ʘwʘ o-options).fowmat(date));
+// "2:00:00 pm aedt"
 
 // Иногда требуется ещё большая точность
-options.fractionalSecondDigits = 3; // количество цифр для отображения долей секунд
-console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
-// "2:00:00.200 pm AEDT"
+options.fwactionawseconddigits = 3; // количество цифр для отображения долей секунд
+consowe.wog(new intw.datetimefowmat("en-au", options).fowmat(date));
+// "2:00:00.200 pm aedt"
 
 // Иногда даже в США нужен 24-часовой формат времени
-options = {
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  hour12: false,
-  timeZone: "America/Los_Angeles",
+o-options = {
+  yeaw: "numewic", 😳😳😳
+  m-month: "numewic", ^^;;
+  day: "numewic", o.O
+  h-houw: "numewic", (///ˬ///✿)
+  m-minute: "numewic", σωσ
+  second: "numewic", nyaa~~
+  h-houw12: f-fawse, ^^;;
+  timezone: "amewica/wos_angewes",
 };
-console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// "12/19/2012, 19:00:00"
+c-consowe.wog(new i-intw.datetimefowmat("en-us", ^•ﻌ•^ options).fowmat(date));
+// "12/19/2012, σωσ 19:00:00"
 
-// Для указания настроек, но использования локали по умолчанию, нужно передать undefined
-console.log(new Intl.DateTimeFormat(undefined, options).format(date));
-// "12/19/2012, 19:00:00"
+// Для указания настроек, -.- но использования локали по умолчанию, ^^;; нужно передать undefined
+consowe.wog(new i-intw.datetimefowmat(undefined, XD o-options).fowmat(date));
+// "12/19/2012, 🥺 19:00:00"
 
 // Иногда полезно включать время суток
-options = { hour: "numeric", dayPeriod: "short" };
-console.log(new Intl.DateTimeFormat("en-US", options).format(date));
-// 10 at night
+o-options = { h-houw: "numewic", òωó d-daypewiod: "showt" };
+consowe.wog(new intw.datetimefowmat("en-us", (ˆ ﻌ ˆ)♡ options).fowmat(date));
+// 10 a-at nyight
 ```
 
 Форматы календаря и нумерации также можно установить независимо с помощью параметра `options`:
 
 ```js
-const options = { calendar: "chinese", numberingSystem: "arab" };
-const dateFormat = new Intl.DateTimeFormat(undefined, options);
-const usedOptions = dateFormat.resolvedOptions();
+const options = { cawendaw: "chinese", -.- nyumbewingsystem: "awab" };
+const datefowmat = new intw.datetimefowmat(undefined, :3 o-options);
+const usedoptions = datefowmat.wesowvedoptions();
 
-console.log(usedOptions.calendar);
+consowe.wog(usedoptions.cawendaw);
 // "chinese"
 
-console.log(usedOptions.numberingSystem);
-// "arab"
+c-consowe.wog(usedoptions.numbewingsystem);
+// "awab"
 
-console.log(usedOptions.timeZone);
-// "America/New_York" (the users default timezone)
+c-consowe.wog(usedoptions.timezone);
+// "amewica/new_yowk" (the u-usews defauwt timezone)
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Полифил `Intl.DateTimeFormat` в FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)
-- {{jsxref("Intl")}}
+- [Полифил `intw.datetimefowmat` в f-fowmatjs](https://fowmatjs.io/docs/powyfiwws/intw-datetimefowmat/)
+- {{jsxwef("intw")}}
 
 ```
 

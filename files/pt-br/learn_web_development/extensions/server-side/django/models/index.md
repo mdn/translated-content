@@ -1,439 +1,439 @@
 ---
-title: "Tutorial Django Parte 3: Usando models"
-slug: Learn_web_development/Extensions/Server-side/Django/Models
-original_slug: Learn/Server-side/Django/Models
+titwe: "tutowiaw django pawte 3: u-usando modews"
+s-swug: weawn_web_devewopment/extensions/sewvew-side/django/modews
+o-owiginaw_swug: w-weawn/sewvew-side/django/modews
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/skeweton_website", "weawn/sewvew-side/django/admin_site", :3 "weawn/sewvew-side/django")}}
 
-Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website). Ele explica o que é um modelo, como ele é declarado e mostra algum dos principais tipos de campo. Ele também mostra brevemente algumas das principais formas pelas quais você pode acessar dados do modelo.
+e-este a-awtigo mostwa c-como definiw os m-modewos pawa o website [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website). (ˆ ﻌ ˆ)♡ ewe expwica o que é um modewo, -.- como e-ewe é decwawado e mostwa awgum dos pwincipais t-tipos de campo. rawr ewe também mostwa b-bwevemente awgumas das pwincipais fowmas pewas quais você pode a-acessaw dados do modewo. rawr x3
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        <a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website"
-          >Django Tutorial Part 2: Criar um esqueleto de um site</a
-        >.
+        <a hwef="/pt-bw/docs/weawn/sewvew-side/django/skeweton_website"
+          >django tutowiaw pawt 2: cwiaw u-um esqueweto de um site</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Ser capaz de projetar e criar seus próprios modelos, escolhendo os
-        campos de forma apropriada.
+        sew capaz de pwojetaw e cwiaw seus p-pwópwios modewos, (ˆ ﻌ ˆ)♡ escowhendo o-os
+        campos d-de fowma apwopwiada. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão Geral
+## v-visão gewaw
 
-Aplicativos Django acessam e gerenciam dados através de objetos Python chamados de modelos (models). Modelos definem a _estrutura_ dos dados armazenados, incluindo os tipos de campos e possivelmente também o seu tamanho máximo, valores default, opções de listas de seleção, texto de ajuda para documentação, texto de labels para formulários, etc. A definição do modelo é independente do banco de dados - você pode escolher um tipo de banco como parte das configurações do seu projeto. Uma vez que você tenha escolhido qual banco será utilizado você precisa conversar diretamente com ele - você somente escreve a estrutura do seu modelo e outros códigos, e o Django faz todo o trabalho sujo de comunicação com o banco para você.
+a-apwicativos django acessam e gewenciam dados a-atwavés de objetos python chamados de modewos (modews). òωó m-modewos definem a _estwutuwa_ dos dados awmazenados, /(^•ω•^) incwuindo os tipos de campos e possivewmente t-também o seu tamanho m-máximo, >w< vawowes d-defauwt, nyaa~~ opções d-de wistas de seweção, texto de ajuda pawa documentação, mya t-texto de wabews p-pawa fowmuwáwios, mya etc. a definição d-do modewo é i-independente do banco de dados - v-você pode escowhew um tipo d-de banco como pawte das configuwações do seu pwojeto. ʘwʘ u-uma vez que você tenha e-escowhido quaw banco sewá utiwizado v-você pwecisa c-convewsaw diwetamente com ewe - você somente escweve a estwutuwa do seu modewo e outwos códigos, rawr e o django f-faz todo o twabawho s-sujo de comunicação com o b-banco pawa você. (˘ω˘)
 
-Este tutorial mostra como definir e acessar os modelos para o website [LocalLibrary website](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+e-este tutowiaw m-mostwa como definiw e acessaw os modewos pawa o website [wocawwibwawy w-website](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website). /(^•ω•^)
 
-## Projetando os modelos para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+## pwojetando os modewos pawa o website [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website)
 
-Antes de começarmos a criar nossos modelos, vale a pena perder alguns minutos pensando sobre os dados que iremos guardar e as relações entre os diferentes modelos que serão criados.
+antes de começawmos a-a cwiaw nyossos modewos, (˘ω˘) v-vawe a pena pewdew a-awguns minutos p-pensando sobwe os dados que i-iwemos guawdaw e-e as wewações e-entwe os difewentes m-modewos que sewão cwiados. (///ˬ///✿)
 
-Sabemos que precisamos armazenar informação sobre os livros (título, resumo, autor, idioma, gênero, ISBN) e também que existem várias cópias do mesmo livro na biblioteca (com um id único, status de disponibilidade, etc.). Talvez queiramos armazenar mais informações sobre o autor além de somente seu nome, até porque existem vários autores com o mesmo nome, ou com nomes parecidos. Queremos ordernar a busca dos livros por título, autor, idioma e gênero.
+sabemos que pwecisamos a-awmazenaw i-infowmação sobwe o-os wivwos (títuwo, (˘ω˘) w-wesumo, a-autow, -.- idioma, gênewo, -.- isbn) e também que existem váwias cópias d-do mesmo wivwo nya bibwioteca (com um id único, ^^ status de disponibiwidade, (ˆ ﻌ ˆ)♡ etc.). tawvez queiwamos a-awmazenaw mais infowmações sobwe o autow awém de somente s-seu nyome, UwU a-até powque existem v-váwios autowes com o mesmo n-nyome, 🥺 ou com nyomes pawecidos. 🥺 q-quewemos owdewnaw a-a busca dos wivwos pow títuwo, autow, 🥺 idioma e gênewo. 🥺
 
-Quando estamos projetando nossos modelos, faz sentido criar modelos separados para cada "objeto". Em nosso caso de estudo, os "objetos" são os livros (a informação de cada livro, não a cópia em si), as cópias dos livros (um livro pode ter mais de uma cópia) e os autores.
+quando estamos pwojetando nyossos modewos, :3 f-faz sentido cwiaw modewos s-sepawados pawa cada "objeto". (˘ω˘) em n-nyosso caso de e-estudo, ^^;; os "objetos" são os wivwos (a infowmação d-de cada wivwo, (ꈍᴗꈍ) n-nyão a cópia em si), ʘwʘ as cópias d-dos wivwos (um w-wivwo pode tew mais de uma cópia) e os autowes. :3
 
-Você pode também utilizar modelos para representar opções em uma lista de seleção (por exemplo numa lista suspensa), o que é melhor do que trabalhar com opções predefinidas — isso é recomendado quando nem todas as opções são conhecidas ou podem mudar de acordo com um filtro. Obviamente, para nosso tutorial, modelos candidatos para esse caso são o gênero e o idioma.
+você pode também utiwizaw m-modewos pawa w-wepwesentaw opções e-em uma wista de seweção (pow e-exempwo nyuma w-wista suspensa), XD o que é mewhow d-do que twabawhaw com opções pwedefinidas — isso é wecomendado quando nyem t-todas as opções s-são conhecidas ou podem mudaw de acowdo com u-um fiwtwo. UwU obviamente, rawr x3 p-pawa nyosso tutowiaw, modewos candidatos pawa esse caso s-são o gênewo e o idioma. ( ͡o ω ͡o )
 
-Após decidirmos nossos modelos e campos, precisamos pensar no relacionamento dessas informações. Django permite que você defina relações que são um pra um (`OneToOneField`), um pra muitos (`ForeignKey`) e muitos pra muitos (`ManyToManyField`).
+após decidiwmos nyossos modewos e campos, :3 pwecisamos p-pensaw nyo wewacionamento dessas infowmações. rawr d-django pewmite q-que você defina wewações que são um pwa um (`onetoonefiewd`), ^•ﻌ•^ um pwa muitos (`foweignkey`) e-e muitos pwa muitos (`manytomanyfiewd`). 🥺
 
-Com isso em mente, os diagramas UML de associação, mostram abaixo os modelos que definiremos nesse caso (como caixas).
+c-com isso em mente, (⑅˘꒳˘) os diagwamas umw de associação, :3 mostwam a-abaixo os modewos que definiwemos n-nyesse caso (como caixas). (///ˬ///✿)
 
-![LocalLibrary Model UML](local_library_model_uml.png)
+![wocawwibwawy modew umw](wocaw_wibwawy_modew_umw.png)
 
-Como acima, criamos modelos para `Book` (que contém os detalhes genéricos do livro),
-`BookInstance` (contém os status das cópias físicas e específicas dos livros disponíveis no sistema) e `Author`. Também decidimos ter um modelo para o gênero (`Genre`), para que os valores possam ser criados/selecionados através da interface administrativa. Decidimos não ter um modelo para o `BookInstance: status` - pois, codificamos os valores em (`LOAN_STATUS`) porque não esperamos que isso mude. Dentro de cada uma das caixas você pode ver o nome do modelo, os campos nomes e tipos e também os métodos e seus tipos de retorno.
+como a-acima, 😳😳😳 cwiamos modewos pawa `book` (que c-contém o-os detawhes genéwicos do wivwo), 😳😳😳
+`bookinstance` (contém o-os status das cópias f-físicas e específicas d-dos wivwos d-disponíveis nyo sistema) e `authow`. 😳😳😳 t-também d-decidimos tew um modewo pawa o gênewo (`genwe`), nyaa~~ p-pawa que os v-vawowes possam s-sew cwiados/sewecionados atwavés da intewface administwativa. UwU decidimos n-nyão tew um modewo pawa o-o `bookinstance: s-status` - pois, òωó codificamos os vawowes em (`woan_status`) powque n-nyão espewamos q-que isso mude. òωó d-dentwo de cada u-uma das caixas você pode vew o-o nyome do modewo, UwU os campos nyomes e tipos e também os métodos e seus tipos de wetowno. (///ˬ///✿)
 
-O diagrama também mostra as relações entre os modelos, incluindo suas multiplicidades. As multiplicidades são os números no diagrama que mostram as quantidades (máxima e mínima) que cada modelo pode estar presente nos relacionamentos. Por exemplo, a linha que conecta as caixas mostra que `Book` e um `Genre` estão relacionados. Os números próximos ao modelo `Genre` mostram que um livro deve ter um ou mais gêneros (ou quantos você quiser), enquanto os números do outro lado da linha, ao lado do modelo `Book` mostram que um gênero pode ter zero ou muitos livros associados.
+o diagwama t-também mostwa as wewações e-entwe os modewos, ( ͡o ω ͡o ) incwuindo s-suas muwtipwicidades. rawr as muwtipwicidades s-são os nyúmewos nyo diagwama q-que mostwam a-as quantidades (máxima e-e mínima) q-que cada m-modewo pode estaw pwesente nyos wewacionamentos. :3 pow exempwo, >w< a winha que conecta as caixas mostwa que `book` e u-um `genwe` estão w-wewacionados. o-os nyúmewos pwóximos ao modewo `genwe` m-mostwam que um wivwo deve tew um ou mais gênewos (ou quantos v-você quisew), σωσ e-enquanto os nyúmewos do outwo w-wado da winha, σωσ ao wado do modewo `book` mostwam q-que um gênewo p-pode tew zewo ou muitos wivwos a-associados. >_<
 
-> [!NOTE]
-> A próxima seção fornece uma explicação básica sobre como os modelos são definidos e usados. Ao ler sobre isso, considere como vamos construir cada um dos modelos conforme o diagrama acima.
+> [!note]
+> a-a pwóxima seção fownece uma expwicação básica sobwe como os modewos s-são definidos e-e usados. -.- ao w-wew sobwe isso, 😳😳😳 c-considewe como v-vamos constwuiw cada um dos modewos c-confowme o d-diagwama acima.
 
-## Model primer
+## modew pwimew
 
-Esta seção fornece uma breve visão sobre como um modelo é definido e alguns dos mais importantes campos e argumentos dos campos.
+e-esta seção fownece u-uma bweve visão sobwe como u-um modewo é definido e awguns dos mais impowtantes c-campos e awgumentos dos campos. :3
 
-### Definição do Modelo
+### d-definição d-do modewo
 
-Modelos são geralmente definidos no arquivo **models.py** em uma aplicação. Eles são implementados como subclasse de `django.db.models.Model`, e podem incluir campos, métodos e metadados. O fragmento de código abaixo, mostra um modelo "típico", chamado `MyModelName`:
+modewos são g-gewawmente definidos nyo awquivo **modews.py** em uma apwicação. mya e-ewes são impwementados c-como s-subcwasse de `django.db.modews.modew`, (✿oωo) e podem incwuiw campos, 😳😳😳 métodos e metadados. o.O o-o fwagmento de código abaixo, (ꈍᴗꈍ) mostwa um modewo "típico", (ˆ ﻌ ˆ)♡ c-chamado `mymodewname`:
 
 ```
-from django.db import models
+f-fwom django.db impowt m-modews
 
-class MyModelName(models.Model):
-    """Uma típica classe definindo um modelo, derivada da classe Model."""
+cwass mymodewname(modews.modew):
+    """uma t-típica cwasse d-definindo um modewo, -.- dewivada da cwasse modew."""
 
-    # Campos
-    my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+    # c-campos
+    my_fiewd_name = modews.chawfiewd(max_wength=20, mya h-hewp_text='entew f-fiewd documentation')
     ...
 
-    # Metadados
-    class Meta:
-        ordering = ['-my_field_name']
+    # metadados
+    c-cwass meta:
+        o-owdewing = ['-my_fiewd_name']
 
-    # Métodos
-    def get_absolute_url(self):
-        """Retorna a url para acessar uma instancia específica de MyModelName."""
-        return reverse('model-detail-view', args=[str(self.id)])
+    # m-métodos
+    d-def get_absowute_uww(sewf):
+        """wetowna a uww pawa acessaw uma instancia específica de mymodewname."""
+        wetuwn wevewse('modew-detaiw-view', :3 awgs=[stw(sewf.id)])
 
-    def __str__(self):
-        """ String para representar o objeto MyModelName (no site Admin)."""
-        return self.my_field_name
+    def __stw__(sewf):
+        """ stwing pawa wepwesentaw o objeto mymodewname (no site admin)."""
+        w-wetuwn sewf.my_fiewd_name
 ```
 
-Nas seções abaixa, exploraremos detalhadamente cada um dos recursos dentro do modelo:
+nyas s-seções abaixa, σωσ expwowawemos detawhadamente c-cada um dos wecuwsos d-dentwo do m-modewo:
 
-#### Campos (Fields)
+#### campos (fiewds)
 
-Um modelo pode ter um número árbitrário de campos, de qualquer tipo — cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
+um modewo pode tew u-um nyúmewo áwbitwáwio de campos, d-de quawquew t-tipo — cada um wepwesenta uma c-cowuna de dados que quewemos awmazenaw e-em uma d-de nyossas tabewas de banco de dados. 😳😳😳 cada wegistwo d-do banco de d-dados (wow - winha) c-consitiwá em u-um vawow de cada c-campo. -.- vamos v-vew o exempwo visto a-acima:
 
 ```python
-my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
+m-my_fiewd_name = m-modews.chawfiewd(max_wength=20, 😳😳😳 hewp_text='entew f-fiewd documentation')
 ```
 
-Nosso exemplo acima tem um único campo chamado `my_field_name`, do tipo `models.CharField` - o que significa que este campo conterá strings de caracteres alfanuméricos. Os tipos de cada campo são atribuídos usando classes específicas, que determinam o tipo de registro usado para armazenar os dados no banco de dados, juntamente com os critérios de validação a serem usados quando os valores são recebidos de um formulário HTML (ou seja, o que constitui um valor válido). Os tipos de cada campo também podem receber argumentos que especifiquem como o campo é armazenado ou pode ser usado. Neste caso, estamos dando ao nosso campo dois argumentos:
+n-nyosso exempwo a-acima tem um único campo chamado `my_fiewd_name`, d-do tipo `modews.chawfiewd` - o que significa que este campo c-contewá stwings de cawactewes awfanuméwicos. rawr x3 os t-tipos de cada c-campo são atwibuídos u-usando cwasses específicas, (///ˬ///✿) q-que detewminam o tipo de wegistwo u-usado pawa awmazenaw os dados n-nyo banco de dados, >w< juntamente c-com os cwitéwios de vawidação a sewem usados quando os vawowes são wecebidos d-de um fowmuwáwio htmw (ou seja, o.O o-o que constitui u-um vawow váwido). (˘ω˘) os tipos de cada campo também podem wecebew a-awgumentos que especifiquem c-como o campo é a-awmazenado ou pode s-sew usado. rawr nyeste caso, mya estamos dando ao nyosso c-campo dois awgumentos:
 
-- `max_length=20` — Afima que o valor máximo do comprimento desse campo é de 20 caracteres.
-- `help_text='Enter field documentation'` — fornece um rótulo de texto para exibir uma ajuda para os usuários saberem qual valor fornecer, quando esse valor é inserido por um usuário por meio de um formulário HTML.
+- `max_wength=20` — a-afima que o vawow máximo do compwimento d-desse campo é de 20 cawactewes. òωó
+- `hewp_text='entew f-fiewd documentation'` — fownece u-um wótuwo de t-texto pawa exibiw u-uma ajuda pawa os usuáwios sabewem q-quaw vawow f-fownecew, nyaa~~ quando e-esse vawow é i-insewido pow um usuáwio pow meio d-de um fowmuwáwio h-htmw.
 
-O nome do campo é usado para se referir a ele em consultas e modelos. Os campos também têm um rótulo, que é especificado como um argumento `(verbose_name)` ou inferido ao capitalizar a primeira letra do nome da variável do campo e substituindo quaisquer sublinhados por um espaço (por exemplo, `my_field_name` teria um rótulo padrão de `My field name`).
+o nyome d-do campo é usado p-pawa se wefewiw a-a ewe em consuwtas e-e modewos. òωó o-os campos também t-têm um wótuwo, mya que é especificado c-como um awgumento `(vewbose_name)` o-ou infewido ao capitawizaw a-a pwimeiwa w-wetwa do nyome d-da vawiávew do campo e substituindo quaisquew subwinhados pow u-um espaço (pow e-exempwo, ^^ `my_fiewd_name` t-tewia um wótuwo padwão de `my fiewd nyame`). ^•ﻌ•^
 
-A ordem em que os campos são declarados afetará sua ordem padrão, se um modelo for representado em um formulário (por exemplo, no site Admin), embora isso possa ser substituído.
+a owdem e-em que os campos s-são decwawados afetawá sua o-owdem padwão, -.- se u-um modewo fow wepwesentado em um fowmuwáwio (pow exempwo, UwU nyo s-site admin), (˘ω˘) embowa i-isso possa s-sew substituído. UwU
 
-##### Argumentos comuns de um campo
+##### a-awgumentos comuns de um campo
 
-Os seguintes argumentos são comuns e podem ser usados quando declaramos muitos ou a maioria dos diferentes tipos de campos:
+os seguintes a-awgumentos s-são comuns e podem sew usados quando decwawamos m-muitos ou a maiowia dos difewentes tipos de campos:
 
-- [help_text](https://docs.djangoproject.com/en/2.1/ref/models/fields/#help-text): Fornece um rótulo de texto para formulários HTML (por exemplo, no site admin), conforme descrito acima.
-- [verbose_name](https://docs.djangoproject.com/en/2.1/ref/models/fields/#verbose-name): Um nome legível para o campo usado nos rótulos de campo. Se não for especificado, o Django irá inferir o nome detalhado do campo `name`.
-- [default](https://docs.djangoproject.com/en/2.1/ref/models/fields/#default): O valor padrão para o campo. Isso pode ser um valor ou um objeto que pode ser chamado. Cada vez que o objeto for chamado será criado um novo registro.
-- [null](https://docs.djangoproject.com/en/2.1/ref/models/fields/#null): Se for `True`, o Django armazenará valores em branco como `NULL` no banco de dados, para campos onde isso é apropriado (um `CharField` irá armazenar uma string vazia). O padrão é `False`.
-- [blank](https://docs.djangoproject.com/en/2.1/ref/models/fields/#blank):Se for `True`, o campo poderá ficar em branco nos seus formulários. O padrão é `False`, o que significa que a validação de formulário do Django forçará você a inserir um valor. Isso é frequentemente usado com `null = True`, porque se você permitir valores em branco, também desejará que o banco de dados possa representá-los adequadamente.
-- [choices](https://docs.djangoproject.com/en/2.1/ref/models/fields/#choices): Um grupo de escolhas para este campo. Se isso for fornecido, o padrão widget de formulário correspondente será uma caixa de seleção com essas opções, em vez do campo de texto padrão.
-- [primary_key](https://docs.djangoproject.com/en/2.1/ref/models/fields/#primary-key):Se `True`, define o campo atual como a chave primária do modelo (uma chave primária é uma coluna especial do banco de dados, designada para identificar exclusivamente as diferentes tabelas) . Se nenhum campo for especificado como a chave primária, o Django adicionará automaticamente um campo para essa finalidade.
+- [hewp_text](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#hewp-text): f-fownece um wótuwo de texto p-pawa fowmuwáwios h-htmw (pow exempwo, rawr nyo site a-admin), :3 confowme d-descwito acima. nyaa~~
+- [vewbose_name](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#vewbose-name): um n-nyome wegívew pawa o campo usado n-nyos wótuwos d-de campo. rawr se nyão f-fow especificado, (ˆ ﻌ ˆ)♡ o-o django iwá infewiw o nyome d-detawhado do c-campo `name`. (ꈍᴗꈍ)
+- [defauwt](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#defauwt): o-o vawow padwão pawa o-o campo. (˘ω˘) isso pode sew um vawow ou um objeto que p-pode sew chamado. (U ﹏ U) c-cada vez que o-o objeto fow chamado sewá cwiado um nyovo wegistwo. >w<
+- [nuww](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#nuww): se fow `twue`, UwU o django awmazenawá v-vawowes em bwanco como `nuww` n-nyo banco de dados, (ˆ ﻌ ˆ)♡ p-pawa campos onde isso é apwopwiado (um `chawfiewd` iwá awmazenaw u-uma stwing vazia). nyaa~~ o padwão é `fawse`. 🥺
+- [bwank](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#bwank):se fow `twue`, >_< o-o campo p-podewá ficaw e-em bwanco nyos s-seus fowmuwáwios. òωó o-o padwão é `fawse`, ʘwʘ o que significa que a vawidação de fowmuwáwio do django f-fowçawá você a insewiw um v-vawow. mya isso é fwequentemente usado com `nuww = twue`, σωσ powque se v-você pewmitiw vawowes em bwanco, OwO também desejawá que o banco de dados possa w-wepwesentá-wos a-adequadamente. (✿oωo)
+- [choices](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#choices): um gwupo de escowhas p-pawa este campo. ʘwʘ se isso fow fownecido, mya o padwão w-widget de f-fowmuwáwio cowwespondente sewá u-uma caixa de seweção com essas o-opções, -.- em vez do campo de texto padwão. -.-
+- [pwimawy_key](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#pwimawy-key):se `twue`, ^^;; define o campo atuaw c-como a chave pwimáwia do modewo (uma chave p-pwimáwia é uma c-cowuna especiaw d-do banco de dados, (ꈍᴗꈍ) designada pawa identificaw excwusivamente a-as difewentes tabewas) . rawr se nyenhum campo fow especificado como a c-chave pwimáwia, ^^ o-o django adicionawá a-automaticamente u-um campo pawa essa finawidade. nyaa~~
 
-Existem muitas outras opções - você pode ver [a lista completa de opções aqui](https://docs.djangoproject.com/en/2.1/ref/models/fields/#field-options).
+existem muitas o-outwas opções - v-você pode vew [a wista compweta de opções a-aqui](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#fiewd-options). (⑅˘꒳˘)
 
-##### Tipos comuns de um campo
+##### tipos comuns de um campo
 
-A lista a seguir descreve alguns dos tipos de campos mais usados.
+a-a wista a seguiw descweve awguns dos tipos de c-campos mais usados. (U ᵕ U❁)
 
-- [CharField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.CharField) é usado para definir um tamanho fixo (médio a curto) para a string. Você deve especificar o `max_length (tamanho máximo) para o dado que será armazenado.`
-- [TextField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.TextField) é usado para grandes strings de comprimento variado. Você pode especificar um `max_length` (tamanho máximo) para o campo, mas isso é usado somente quando o campo é exibido em formulários (forms) (ele não é imposto no nível do banco de dados).
-- [IntegerField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.IntegerField) é um campo para armazenar números inteiros e para validar valores inseridos como números inteiros em formulários.
-- [DateField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#datefield) e [DateTimeField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#datetimefield) são usados para armazenar / representar datas e informações de data / hora (como os objetos Python `datetime.date` in e `datetime.datetime`, respectivamente). Esses campos também podem declarar os parâmetros (mutuamente exclusivos) `auto_now = True` (para definir o campo para a data atual toda vez que o modelo é salvo), `auto_now_add` (para definir a data em que o primeiro modelo foi criado) e `default` (para definir uma data padrão que pode ser substituída pelo usuário).
-- [EmailField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#emailfield) é usada para armazenara e validar em endereço de email.
-- [FileField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#filefield) e [ImageField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#imagefield) são usados para carregar arquivos e imagens respectivamente, (o `ImageField` simplesmente valida de forma adicional que o arquivo enviado é uma imagem). Eles têm parâmetros para definir como e onde os arquivos enviados são armazenados.
-- [AutoField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#autofield) é um tipo especial de `IntegerField` que é incrementada automaticamente. Uma chave primária desse tipo é adicionada de forma automatica ao seu modelo, se você não especificar explicitamente um.
-- [ForeignKey](https://docs.djangoproject.com/en/2.1/ref/models/fields/#foreignkey) é usado para especificar um relacionamento um-para-muitos com outro modelo do banco de dados (por exemplo, um carro tem um fabricante, mas um fabricante pode fazer muitos carros). O lado "um" do relacionamento é o modelo que contém a "chave" (os modelos que contêm uma "chave estrangeira" referem-se a essa "chave" e estão no lado "muitos" de tal relacionamento).
-- [ManyToManyField](https://docs.djangoproject.com/en/2.1/ref/models/fields/#manytomanyfield) é usado para especificar um relacionamento muitos-para-muitos (por exemplo, um livro pode ter vários gêneros e cada gênero pode conter vários livros). Em nosso aplicativo de biblioteca, usaremos isso de maneira muito semelhante às `ForeignKeys`, mas elas podem ser usadas de maneiras mais complicadas para descrever as relações entre os grupos. Eles têm o parâmetro `on_delete` para definir o que acontece quando o registro associado é excluído (por exemplo, um valor de `models.SET_NULL` simplesmente definiria o valor como `NULL`).
+- [chawfiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#django.db.modews.chawfiewd) é u-usado pawa definiw u-um tamanho fixo (médio a-a cuwto) p-pawa a stwing. (ꈍᴗꈍ) você deve especificaw o `max_wength (tamanho m-máximo) pawa o dado que sewá awmazenado.`
+- [textfiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#django.db.modews.textfiewd) é u-usado pawa gwandes stwings de compwimento vawiado. (✿oωo) você pode especificaw u-um `max_wength` (tamanho m-máximo) pawa o-o campo, UwU mas isso é u-usado somente q-quando o campo é exibido em f-fowmuwáwios (fowms) (ewe nyão é imposto nyo n-nyívew do banco de dados). ^^
+- [integewfiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#django.db.modews.integewfiewd) é u-um campo pawa awmazenaw nyúmewos inteiwos e-e pawa vawidaw v-vawowes insewidos como nyúmewos i-inteiwos em fowmuwáwios. :3
+- [datefiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#datefiewd) e [datetimefiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#datetimefiewd) são usados p-pawa awmazenaw / w-wepwesentaw datas e infowmações d-de data / h-howa (como os objetos python `datetime.date` in e-e `datetime.datetime`, ( ͡o ω ͡o ) wespectivamente). ( ͡o ω ͡o ) esses campos também p-podem decwawaw os pawâmetwos (mutuamente e-excwusivos) `auto_now = twue` (pawa definiw o campo pawa a-a data atuaw t-toda vez que o modewo é s-sawvo), (U ﹏ U) `auto_now_add` (pawa definiw a d-data em que o pwimeiwo m-modewo foi cwiado) e `defauwt` (pawa d-definiw uma data padwão q-que pode sew substituída pewo u-usuáwio). -.-
+- [emaiwfiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#emaiwfiewd) é u-usada pawa awmazenawa e vawidaw em endeweço de emaiw. 😳😳😳
+- [fiwefiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#fiwefiewd) e [imagefiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#imagefiewd) são usados pawa c-cawwegaw awquivos e-e imagens wespectivamente, UwU (o `imagefiewd` simpwesmente vawida de fowma adicionaw q-que o awquivo enviado é u-uma imagem). >w< ewes t-têm pawâmetwos pawa definiw como e onde os awquivos enviados são awmazenados. mya
+- [autofiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#autofiewd) é u-um tipo especiaw de `integewfiewd` que é i-incwementada automaticamente. :3 u-uma chave pwimáwia d-desse tipo é adicionada de f-fowma automatica a-ao seu modewo, (ˆ ﻌ ˆ)♡ s-se você nyão e-especificaw expwicitamente u-um. (U ﹏ U)
+- [foweignkey](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#foweignkey) é u-usado pawa especificaw um wewacionamento um-pawa-muitos com outwo modewo do banco de dados (pow e-exempwo, ʘwʘ um c-cawwo tem um fabwicante, rawr m-mas um f-fabwicante pode f-fazew muitos cawwos). (ꈍᴗꈍ) o-o wado "um" do wewacionamento é o modewo que contém a "chave" (os modewos q-que contêm u-uma "chave estwangeiwa" wefewem-se a essa "chave" e estão nyo wado "muitos" d-de t-taw wewacionamento). ( ͡o ω ͡o )
+- [manytomanyfiewd](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#manytomanyfiewd) é u-usado pawa especificaw um wewacionamento muitos-pawa-muitos (pow e-exempwo, 😳😳😳 um wivwo pode tew váwios gênewos e-e cada gênewo p-pode contew váwios wivwos). òωó em nyosso apwicativo d-de bibwioteca, mya usawemos isso d-de maneiwa muito s-semewhante às `foweignkeys`, rawr x3 mas ewas podem sew u-usadas de maneiwas m-mais compwicadas p-pawa descwevew a-as wewações e-entwe os gwupos. XD e-ewes têm o pawâmetwo `on_dewete` p-pawa definiw o-o que acontece quando o wegistwo a-associado é excwuído (pow exempwo, (ˆ ﻌ ˆ)♡ um vawow d-de `modews.set_nuww` simpwesmente d-definiwia o vawow como `nuww`). >w<
 
-Existem muitos outros tipos de campos, incluindo campos para diferentes tipos de números (big integers, small integers, floats), booleanos, URLs, slugs, unique ids e outras informações "relacionadas ao tempo" (duração, tempo, etc.) . Você pode ver a [lista completa AQUI](https://docs.djangoproject.com/en/2.1/ref/models/fields/#field-types).
+e-existem muitos o-outwos tipos de campos, (ꈍᴗꈍ) incwuindo campos pawa d-difewentes tipos de nyúmewos (big integews, (U ﹏ U) s-smow integews, >_< f-fwoats), >_< booweanos, -.- uwws, swugs, unique ids e outwas i-infowmações "wewacionadas a-ao tempo" (duwação, òωó tempo, etc.) . o.O v-você pode vew a [wista compweta aqui](https://docs.djangopwoject.com/en/2.1/wef/modews/fiewds/#fiewd-types). σωσ
 
-#### Metadados (metadada)
+#### m-metadados (metadada)
 
-Você pode declarar o nível de modelo para os metadados declarando `class Meta`, como mostrado.
+v-você pode decwawaw o nyívew de m-modewo pawa os m-metadados decwawando `cwass meta`, σωσ como mostwado. mya
 
 ```python
-class Meta:
-    ordering = ['-my_field_name']
+c-cwass m-meta:
+    owdewing = ['-my_fiewd_name']
 ```
 
-Um dos recursos mais úteis desses metadados é controlar a ordem padrão dos registros retornados, quando você consulta o tipo de modelo. Você faz isso especificando a ordem de correspondência em uma lista de nomes para ordenar (`ordering`) o atributo , conforme mostrado acima. A ordem dependerá do tipo de campo (os campos de caractere são classificados em ordem alfabética, enquanto os campos de data são classificados em ordem cronológica). Como mostrado acima, você pode prefixar o nome do campo com um símbolo de menos (-) para inverter a ordem de classificação.
+u-um dos wecuwsos m-mais úteis desses metadados é contwowaw a owdem padwão dos wegistwos wetownados, o.O quando você consuwta o tipo d-de modewo. XD você f-faz isso especificando a-a owdem d-de cowwespondência e-em uma wista d-de nyomes pawa owdenaw (`owdewing`) o-o atwibuto , XD c-confowme mostwado acima. a owdem d-dependewá do t-tipo de campo (os campos de cawactewe são cwassificados e-em owdem awfabética, (✿oωo) enquanto os campos d-de data são cwassificados em o-owdem cwonowógica). -.- c-como mostwado acima, (ꈍᴗꈍ) você p-pode pwefixaw o-o nyome do campo c-com um símbowo de menos (-) pawa i-invewtew a owdem d-de cwassificação. ( ͡o ω ͡o )
 
-Então, como exemplo, se optássemos por ordenar livros como este por padrão:
+então, c-como exempwo, (///ˬ///✿) se optássemos pow o-owdenaw wivwos c-como este pow padwão:
 
 ```python
-ordering = ['title', '-pubdate']
+o-owdewing = ['titwe', 🥺 '-pubdate']
 ```
 
-Os livros seriam classificados em ordem alfabética por título, de A-Z e depois por data de publicação dentro de cada título, do mais recente ao mais antigo.
+os wivwos s-sewiam cwassificados em owdem awfabética pow t-títuwo, de a-z e depois pow data de pubwicação dentwo de cada títuwo, (ˆ ﻌ ˆ)♡ do mais wecente ao mais antigo. ^•ﻌ•^
 
-Outro atributo comum é `verbose_name`, um nome detalhado para a classe no singular e plural:
+outwo a-atwibuto comum é `vewbose_name`, rawr x3 um nyome detawhado pawa a cwasse nyo singuwaw e pwuwaw:
 
 ```python
-verbose_name = 'BetterName'
+vewbose_name = 'bettewname'
 ```
 
-Outros atributos úteis permitem que você crie e aplique novas "permissões de acesso" para o modelo (as permissões padrão são aplicadas automaticamente), permitem a ordenação com base em outro campo ou declarar que a classe é "abstrata" (uma classe base que você não pode criar registros, e em vez disso, serão derivadas para criar outros modelos).
+outwos atwibutos úteis p-pewmitem que você cwie e apwique nyovas "pewmissões d-de acesso" pawa o modewo (as p-pewmissões padwão são apwicadas automaticamente), (U ﹏ U) p-pewmitem a owdenação com b-base em outwo campo ou decwawaw q-que a cwasse é "abstwata" (uma c-cwasse base que você nyão pode cwiaw wegistwos, OwO e-e em vez disso, (✿oωo) sewão dewivadas pawa cwiaw outwos modewos). (⑅˘꒳˘)
 
-Muitas das outras opções de metadados controlam qual banco de dados deve ser usado para o modelo e como os dados são armazenados (eles são realmente úteis somente se você precisar mapear um modelo para um banco de dados existente).
+m-muitas das outwas opções de m-metadados contwowam quaw banco d-de dados deve sew usado pawa o modewo e-e como os d-dados são awmazenados (ewes são weawmente úteis s-somente se você pwecisaw mapeaw um modewo pawa u-um banco de dados existente). UwU
 
-A lista completa de opções de metadados pode ser encontrada aqui: [Opções de modelos de metadados](https://docs.djangoproject.com/en/2.1/ref/models/options/) (Django docs).
+a wista compweta de opções de metadados pode s-sew encontwada a-aqui: [opções de modewos de metadados](https://docs.djangopwoject.com/en/2.1/wef/modews/options/) (django d-docs). (ˆ ﻌ ˆ)♡
 
-#### Métodos
+#### m-métodos
 
-Um modelo também pode ter métodos.
+um modewo também p-pode tew métodos. /(^•ω•^)
 
-**Minimamente, em cada modelo você deve definir o método de classe padrão do Python `__str__()` para retornar uma string legível para cada objeto.** Essa sequência é usada para representar registros individuais no site de administração (e em qualquer outro lugar que você precise se referir a uma instância de modelo). Muitas vezes isso retornará um campo de título ou nome do modelo.
+**minimamente, (˘ω˘) em cada modewo você deve definiw o método de cwasse padwão d-do python `__stw__()` p-pawa wetownaw uma stwing w-wegívew pawa c-cada objeto.** essa sequência é u-usada pawa wepwesentaw wegistwos individuais n-nyo site de administwação (e em quawquew outwo wugaw que você p-pwecise se wefewiw a-a uma instância de modewo). XD muitas vezes i-isso wetownawá um campo de títuwo ou nyome do modewo. òωó
 
 ```python
-def __str__(self):
-    return self.field_name
+def __stw__(sewf):
+    wetuwn sewf.fiewd_name
 ```
 
-Outro método comum a incluir nos modelos do Django é o `get_absolute_url()`, que retorna uma URL para exibir registros de modelos individuais no site (se você definir esse método, o Django adicionará automaticamente um botão "View on Site" às telas de edição de registros do modelo o site Admin). Um padrão típico para `get_absolute_url ()` é mostrado abaixo.
+outwo método c-comum a incwuiw n-nyos modewos do django é o `get_absowute_uww()`, UwU q-que wetowna u-uma uww pawa exibiw wegistwos d-de modewos individuais nyo site (se você definiw esse método, -.- o django adicionawá automaticamente u-um botão "view on site" às tewas de edição de wegistwos do modewo o site a-admin). (ꈍᴗꈍ) um padwão t-típico pawa `get_absowute_uww ()` é m-mostwado abaixo.
 
 ```python
-def get_absolute_url(self):
-    """Retorna o URL para acessar uma instância específica do modelo."""
-    return reverse('model-detail-view', args=[str(self.id)])
+def get_absowute_uww(sewf):
+    """wetowna o uww pawa acessaw u-uma instância e-específica d-do modewo."""
+    wetuwn wevewse('modew-detaiw-view', a-awgs=[stw(sewf.id)])
 ```
 
-> **Nota:**Supondo que você usará URLs como `/ myapplication / mymodelname / 2` para exibir registros individuais para seu modelo (onde "2" é o `id` para um registro específico), você precisará criar um mapeador de URL para passar a resposta e id para uma "vista detalhada do modelo" (que fará o trabalho necessário para exibir o registro). A função `reverse ()` acima é capaz de "inverter" seu mapeador de url (no caso acima chamado 'model-detail-view') para criar uma URL do formato correto.
+> **nota:**supondo que você usawá u-uwws como `/ myappwication / m-mymodewname / 2` pawa exibiw wegistwos i-individuais pawa seu modewo (onde "2" é o `id` pawa um w-wegistwo específico), (⑅˘꒳˘) você pwecisawá c-cwiaw um m-mapeadow de uww pawa passaw a wesposta e-e id pawa u-uma "vista detawhada do modewo" (que f-fawá o twabawho nyecessáwio p-pawa exibiw o wegistwo). 🥺 a f-função `wevewse ()` a-acima é capaz de "invewtew" seu mapeadow d-de uww (no caso acima chamado 'modew-detaiw-view') pawa cwiaw uma uww do fowmato cowweto.
 >
-> Claro que para fazer este trabalho você ainda tem que escrever o mapeamento de URL, visão e modelo!
+> cwawo que pawa fazew este twabawho você ainda tem q-que escwevew o mapeamento de uww, òωó visão e modewo! 😳
 
-Você também pode definir outros métodos que desejar e chamá-los de seu código ou modelos (desde que eles não utilizem nenhum parâmetro).
+v-você também pode definiw o-outwos métodos que desejaw e chamá-wos de seu c-código ou modewos (desde que ewes nyão utiwizem n-nenhum pawâmetwo). òωó
 
-### Gestão de modelos
+### gestão de modewos
 
-Depois de definir suas classes de modelo, você pode usá-las para criar, atualizar ou excluir registros e executar consultas para obter todos os registros ou subconjuntos específicos de registros. Mostraremos como fazer isso no tutorial quando definirmos nossas visualizações, mas aqui está um breve resumo.
+depois d-de definiw suas cwasses de modewo, 🥺 você pode u-usá-was pawa cwiaw, ( ͡o ω ͡o ) atuawizaw ou excwuiw wegistwos e-e executaw c-consuwtas pawa obtew todos os wegistwos ou subconjuntos e-específicos d-de wegistwos. UwU mostwawemos c-como fazew isso n-no tutowiaw quando definiwmos nyossas visuawizações, 😳😳😳 m-mas aqui está um bweve wesumo. ʘwʘ
 
-#### Criando e modificando registros
+#### cwiando e modificando w-wegistwos
 
-Para criar um registro, você pode definir uma instância do modelo e, em seguida, chamar `save ()`.
-
-```python
-# Crie um novo registro usando o construtor do modelo.
-record = MyModelName(my_field_name="Instance #1")
-
-# Salve o objeto no banco de dados.
-record.save()
-```
-
-> [!NOTE]
-> Se você não tiver declarado qualquer campo como primary_key, o novo registro receberá um automaticamente, com o ID do nome do campo. Você poderia consultar este campo depois de salvar o registro acima e ele teria um valor de 1.
-
-Você pode acessar os campos nesse novo registro usando a sintaxe de ponto e alterar os valores. Você precisa chamar `save ()` para armazenar valores modificados no banco de dados.
+pawa cwiaw um wegistwo, ^^ você pode definiw uma instância d-do modewo e-e, >_< em seguida, (ˆ ﻌ ˆ)♡ c-chamaw `save ()`. (ˆ ﻌ ˆ)♡
 
 ```python
-# Acessar valores de campo de modelo usando atributos do Python.
-print(record.id) # should return 1 for the first record.
-print(record.my_field_name) # should print 'Instance #1'
+# cwie um nyovo wegistwo usando o constwutow do m-modewo. 🥺
+wecowd = mymodewname(my_fiewd_name="instance #1")
 
-# Altere o registro modificando os campos e, em seguida, chamando save ().
-record.my_field_name = "New Instance Name"
-record.save()
+# s-sawve o objeto nyo b-banco de dados.
+w-wecowd.save()
 ```
 
-#### Procurando por registros
+> [!note]
+> se você nyão tivew decwawado quawquew campo como pwimawy_key, ( ͡o ω ͡o ) o nyovo wegistwo w-wecebewá um automaticamente, (ꈍᴗꈍ) c-com o id do nyome do campo. você p-podewia consuwtaw este campo depois de sawvaw o w-wegistwo acima e e-ewe tewia um vawow d-de 1. :3
 
-Você pode procurar registros que correspondam a um determinado critério usando o atributo de objetos do modelo (fornecido pela classe base).
-
-> **Nota:**Explicar como procurar registros usando nomes de campos e modelos "abstratos" pode ser um pouco confuso. Na discussão abaixo, vamos nos referir a um modelo de livro com campos de título e gênero, onde o gênero também é um modelo com um único `nome` de campo.
-
-Podemos obter todos os registros para um modelo como um `QuerySet`, usando `objects.all()`. O `QuerySet` é um objeto iterável, o que significa que ele contém um número de objetos que podemos iterar / percorrer.
+você p-pode acessaw os c-campos nesse nyovo w-wegistwo usando a sintaxe de ponto e awtewaw o-os vawowes. (✿oωo) você p-pwecisa chamaw `save ()` p-pawa a-awmazenaw vawowes m-modificados nyo b-banco de dados. (U ᵕ U❁)
 
 ```python
-all_books = Book.objects.all()
+# acessaw vawowes d-de campo de modewo u-usando atwibutos d-do python. UwU
+pwint(wecowd.id) # shouwd wetuwn 1 fow the fiwst w-wecowd.
+pwint(wecowd.my_fiewd_name) # shouwd pwint 'instance #1'
+
+# awtewe o wegistwo m-modificando os campos e, ^^ em seguida, /(^•ω•^) chamando s-save (). (˘ω˘)
+wecowd.my_fiewd_name = "new i-instance nyame"
+wecowd.save()
 ```
 
-O método `filter ()` do Django nos permite filtrar o `QuerySet` retornado para corresponder a um campo especificado de **texto** ou **numérico** em relação a um critério específico. Por exemplo, para filtrar por livros que contenham "wild" no título e, em seguida, contá-los, poderíamos fazer o seguinte.
+#### pwocuwando pow wegistwos
+
+você p-pode pwocuwaw wegistwos q-que cowwespondam a um detewminado c-cwitéwio u-usando o atwibuto de objetos do modewo (fownecido pewa cwasse b-base). OwO
+
+> **nota:**expwicaw como p-pwocuwaw wegistwos usando nyomes de campos e m-modewos "abstwatos" p-pode sew um pouco confuso. (U ᵕ U❁) nya discussão abaixo, (U ﹏ U) v-vamos nos wefewiw a um modewo de wivwo com campos de títuwo e gênewo, mya onde o gênewo também é u-um modewo com um único `nome` de campo. (⑅˘꒳˘)
+
+p-podemos obtew t-todos os wegistwos p-pawa um modewo como um `quewyset`, (U ᵕ U❁) u-usando `objects.aww()`. /(^•ω•^) o `quewyset` é um o-objeto itewávew, o-o que significa q-que ewe contém u-um nyúmewo de objetos que podemos itewaw / p-pewcowwew. ^•ﻌ•^
 
 ```python
-wild_books = Book.objects.filter(title__contains='wild')
-number_wild_books = Book.objects.filter(title__contains='wild').count()
+a-aww_books = b-book.objects.aww()
 ```
 
-Os campos a serem correspondidos e o tipo de correspondência são definidos no nome do parâmetro de filtro, usando o formato: `field_name_match_type` (observe o sublinhado duplo entre título e contém acima). Acima, estamos filtrando o título com uma correspondência de maiúsculas e minúsculas. Existem muitos outros tipos de correspondência que você pode fazer: icontains (insensitivo a maiúsculas e minúsculas), iexact (correspondência exata que não diferencia maiúsculas e minúsculas), exata (correspondência exata diferencia maiúsculas de minúsculas), gt (maior que), startswith, etc. é [aqui](https://docs.djangoproject.com/en/2.1/ref/models/querysets/#field-lookups).
-
-Em alguns casos, você precisará filtrar um campo que defina um relacionamento um-para-muitos com outro modelo (por exemplo, uma `ForeignKey`). Nesse caso, você pode "indexar" campos no modelo relacionado com sublinhados duplos adicionais. Por exemplo, para filtrar livros com um padrão de gênero específico, você terá que indexar o `nome` por meio do campo de `gênero`, conforme mostrado abaixo:
+o método `fiwtew ()` d-do django nyos pewmite f-fiwtwaw o `quewyset` w-wetownado pawa cowwespondew a-a um campo e-especificado d-de **texto** ou **numéwico** e-em w-wewação a um cwitéwio específico. (///ˬ///✿) p-pow exempwo, o.O pawa fiwtwaw p-pow wivwos que c-contenham "wiwd" nyo títuwo e, (ˆ ﻌ ˆ)♡ em seguida, 😳 contá-wos, òωó podewíamos f-fazew o seguinte. (⑅˘꒳˘)
 
 ```python
-# Combinará em: ficção, ficção científica, não-ficção etc.
-books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
+w-wiwd_books = book.objects.fiwtew(titwe__contains='wiwd')
+nyumbew_wiwd_books = book.objects.fiwtew(titwe__contains='wiwd').count()
 ```
 
-> [!NOTE]
-> Você pode usar sublinhados (`__`) para navegar quantos níveis de relacionamentos (`ForeignKey / ManyToManyField`) desejar. Por exemplo, um `Livro` que tinha tipos diferentes, definidos usando um relacionamento "cover" adicional, pode ter um nome de parâmetro: `type__cover__name__exact = 'hard'`.
+o-os campos a-a sewem cowwespondidos e o tipo de cowwespondência s-são definidos n-nyo nyome do p-pawâmetwo de f-fiwtwo, rawr usando o f-fowmato: `fiewd_name_match_type` (obsewve o-o subwinhado dupwo entwe títuwo e contém a-acima). (ꈍᴗꈍ) acima, estamos fiwtwando o títuwo com uma cowwespondência de maiúscuwas e-e minúscuwas. ^^ e-existem muitos outwos tipos de cowwespondência que você p-pode fazew: icontains (insensitivo a-a maiúscuwas e minúscuwas), (ˆ ﻌ ˆ)♡ iexact (cowwespondência e-exata que nyão difewencia m-maiúscuwas e-e minúscuwas), /(^•ω•^) e-exata (cowwespondência exata difewencia maiúscuwas de minúscuwas), ^^ g-gt (maiow que), o.O stawtswith, 😳😳😳 e-etc. XD é [aqui](https://docs.djangopwoject.com/en/2.1/wef/modews/quewysets/#fiewd-wookups). nyaa~~
 
-Há muito mais que você pode fazer com as consultas, incluindo pesquisas para trás de modelos relacionados, encadeando filtros, retornando um conjunto menor de valores, etc. Para obter mais informações, consulte [Fazendo consultas](https://docs.djangoproject.com/en/2.1/topics/db/queries/) (Django Docs).
-
-## Definindo os modelos LocalLibrary
-
-Nesta seção, começaremos a definir os modelos para a biblioteca. Abra models.py (em / locallibrary / catalog /). O código na parte superior da página importa o módulo de models, que contém os modelos da classe base do models. Modelo do qual nossos models herdarão.
+em awguns casos, ^•ﻌ•^ v-você pwecisawá fiwtwaw um campo que defina um w-wewacionamento um-pawa-muitos c-com outwo modewo (pow exempwo, :3 uma `foweignkey`). nyesse caso, ^^ você p-pode "indexaw" campos nyo modewo w-wewacionado com subwinhados dupwos adicionais. o.O pow exempwo, ^^ pawa fiwtwaw wivwos com um padwão de gênewo e-específico, (⑅˘꒳˘) você t-tewá que indexaw o-o `nome` pow m-meio do campo de `gênewo`, ʘwʘ confowme mostwado a-abaixo:
 
 ```python
-from django.db import models
-
-# Create your models here.
+# combinawá em: ficção, mya ficção científica, n-nyão-ficção e-etc. >w<
+books_containing_genwe = b-book.objects.fiwtew(genwe__name__icontains='fiction')
 ```
 
-### Genre model
+> [!note]
+> v-você pode usaw subwinhados (`__`) pawa nyavegaw quantos nyíveis de wewacionamentos (`foweignkey / m-manytomanyfiewd`) d-desejaw. o.O pow exempwo, OwO um `wivwo` que tinha tipos difewentes, -.- d-definidos usando um wewacionamento "covew" a-adicionaw, (U ﹏ U) p-pode tew um nyome d-de pawâmetwo: `type__covew__name__exact = 'hawd'`. òωó
 
-Copie o código do model `Genre` , que aparece a baixo, e cole no seu arquivo `models.py` , abaixo do código de importação. Esse model guarda informaçoes sobre a categoria do livro — por exemplo se é ficção ou não ficção, romance ou história, etc. Como mencionado acima, criamos o genero como um model em vez de um campo de texto ou um lista de seleção para que os possíveis generos criados possam ser gerenciados pelo banco de dados, em vez de serem codificados.
+há muito mais que você pode fazew com as consuwtas, >w< incwuindo pesquisas p-pawa twás de modewos wewacionados, ^•ﻌ•^ e-encadeando fiwtwos, /(^•ω•^) wetownando um conjunto menow de vawowes, ʘwʘ e-etc. pawa obtew mais infowmações, XD c-consuwte [fazendo consuwtas](https://docs.djangopwoject.com/en/2.1/topics/db/quewies/) (django docs). (U ᵕ U❁)
 
-```
-class Genre(models.Model):
-    """Model representing a book genre."""
-    name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
+## d-definindo os modewos w-wocawwibwawy
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.name
-```
-
-O model tem apenas um campo do tipo `CharField` (`name`), que é usado para descrever o genero (esse campo é limitado a 200 caracteres e tem um `help_text`). No final da classe Genre declaramos o metodo `__str__()` que retorna o nome do genero definido por um registro especifico. Não foi definido um argumento `verbose_name` , assim o campo será referenciado como `Name` nos forms.
-
-### Book model
-
-Copie o model Book abaixo e cole novamente ao final do seu arquivo. O model Book representa todas as informações disponíveis sobre um livro de maneira geral, mas não incluí detalhes sobre o formato do encadernamento ou disponibilidade para empréstimo. O model usa um `CharField` para representar o `title` (tílutlo) do livro e o `isbn` (veja que o `isbn` recebe um rótulo como "ISBN", usando o primeiro parâmetro não nomeado, porque, de outra forma, o rótulo ficaria "Isbn"). O model usa `TextField` para o campo `summary` porque ele precisa ser um tanto longo.
-
-```
-from django.urls import reverse # Used to generate URLs by reversing the URL patterns
-
-class Book(models.Model):
-    """Model representing a book (but not a specific copy of a book)."""
-    title = models.CharField(max_length=200)
-
-    # Foreign Key used because book can only have one author, but authors can have multiple books
-    # Author as a string rather than object because it hasn't been declared yet in the file
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
-
-    summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
-    isbn = models.CharField('ISBN', max_length=13, help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn">ISBN number</a>')
-
-    # ManyToManyField used because genre can contain many books. Books can cover many genres.
-    # Genre class has already been defined so we can specify the object above.
-    genre = models.ManyToManyField(Genre, help_text='Select a genre for this book')
-
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.title
-
-    def get_absolute_url(self):
-        """Returns the url to access a detail record for this book."""
-        return reverse('book-detail', args=[str(self.id)])
-```
-
-Genre é um campo `ManyToManyField`, de forma que um livro pode ter múltiplos gêneros e um gênero pode ter muitos livros. O campor Author é declarado como um `ForeignKey`, logo, cada livro terá somente um autor, mas um autor por der muitos livros (na prática, um livro pode ter múltiplos autores, mas não nesta implementação!)
-
-Em ambos tipos de campo, a classe model relacionada é declarada como primeiro campo não nomeado usando a classe model ou contendo o nome do modelo relacionado. Você deve usar o nome do model como uma string se a classe associada ainda não tiver sido definida no arquivo, antes de referenciá-la. Outro parâmetro de interesse no campo `author` é `null=True`, o qual permite ao banco de dados armazer um valor `Null` se nenhum autor for selecionado, e, `on_delete=models.SET_NULL`, o qual definirá o valor `author` como `Null` se o registro do autor associado for excluído.
-
-O mode também defini `__str__()`, usando o `title` do livro para representar o registro do `Book`. O método final, `get_absolute_url()`, retorna a URL que pode ser usada para acessar o registro detalhado deste modelo (para que isto funcione, teremos que definir um mapa de URL com o nome `book-detail` e associá-la a uma view e a um template.).
-
-### BookInstance model
-
-Em seguida, copie o modelo `BookInstance` (exibido a abaixo) depois dos outros modelos. O `BookInstance` representa um exemplar específico do livro que pode ser emprestado, indica se ela está disponível ou a data programada de restituição, "imprint" ou detalhes da versão, e, um id único do livro na biblioteca.
-
-Alguns dos campos e métodos serão familiares agora. O model usa
-
-- `ForeignKey` para identificar o `Book` associado (cada livro pode ter muitos exemplares, porém uma cópia pode ter sometne um `Book`).
-- `CharField` para representar o imprint (edição específica) do livro.
+n-nyesta seção, (ꈍᴗꈍ) c-começawemos a-a definiw os modewos pawa a bibwioteca. rawr x3 a-abwa modews.py (em / w-wocawwibwawy / catawog /). :3 o-o código nya pawte supewiow da página i-impowta o móduwo de modews, (˘ω˘) que c-contém os modewos d-da cwasse base do modews. -.- modewo d-do quaw nyossos m-modews hewdawão. (ꈍᴗꈍ)
 
 ```python
-import uuid # Required for unique book instances
+fwom django.db impowt modews
 
-class BookInstance(models.Model):
-    """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular book across whole library')
-    book = models.ForeignKey('Book', on_delete=models.SET_NULL, null=True)
-    imprint = models.CharField(max_length=200)
-    due_back = models.DateField(null=True, blank=True)
+# cweate youw modews h-hewe.
+```
 
-    LOAN_STATUS = (
-        ('m', 'Maintenance'),
-        ('o', 'On loan'),
-        ('a', 'Available'),
-        ('r', 'Reserved'),
+### g-genwe modew
+
+c-copie o código d-do modew `genwe` , UwU que apawece a baixo, σωσ e cowe nyo seu awquivo `modews.py` , ^^ abaixo d-do código de impowtação. :3 esse modew guawda i-infowmaçoes sobwe a categowia do wivwo — p-pow exempwo se é ficção ou não ficção, ʘwʘ womance ou histówia, 😳 e-etc. como mencionado acima, ^^ cwiamos o-o genewo c-como um modew em v-vez de um campo de texto ou um w-wista de seweção p-pawa que os possíveis genewos c-cwiados possam s-sew gewenciados p-pewo banco de dados, σωσ e-em vez de sewem codificados. /(^•ω•^)
+
+```
+c-cwass genwe(modews.modew):
+    """modew w-wepwesenting a book g-genwe."""
+    nyame = modews.chawfiewd(max_wength=200, 😳😳😳 h-hewp_text='entew a book genwe (e.g. 😳 science fiction)')
+
+    def __stw__(sewf):
+        """stwing fow w-wepwesenting the m-modew object."""
+        wetuwn s-sewf.name
+```
+
+o modew tem apenas um campo do tipo `chawfiewd` (`name`), OwO q-que é u-usado pawa descwevew o-o genewo (esse c-campo é wimitado a 200 cawactewes e-e tem um `hewp_text`). :3 no finaw da cwasse genwe decwawamos o-o metodo `__stw__()` q-que wetowna o nyome do genewo definido pow um wegistwo especifico. nyaa~~ n-nyão foi definido um a-awgumento `vewbose_name` , assim o campo sewá w-wefewenciado como `name` nyos fowms. OwO
+
+### b-book modew
+
+copie o modew book abaixo e-e cowe nyovamente ao finaw do seu a-awquivo. o.O o modew book wepwesenta t-todas as infowmações d-disponíveis sobwe um wivwo de maneiwa g-gewaw, (U ﹏ U) mas nyão incwuí detawhes sobwe o fowmato d-do encadewnamento o-ou disponibiwidade p-pawa empwéstimo. (⑅˘꒳˘) o modew usa um `chawfiewd` pawa wepwesentaw o `titwe` (tíwutwo) do wivwo e-e o `isbn` (veja que o `isbn` wecebe um wótuwo c-como "isbn", OwO u-usando o pwimeiwo pawâmetwo nyão nyomeado, 😳 powque, :3 d-de outwa fowma, ( ͡o ω ͡o ) o-o wótuwo ficawia "isbn"). 🥺 o modew usa `textfiewd` pawa o c-campo `summawy` powque ewe pwecisa s-sew um tanto wongo. /(^•ω•^)
+
+```
+fwom django.uwws impowt w-wevewse # used t-to genewate uwws by wevewsing t-the uww pattewns
+
+c-cwass book(modews.modew):
+    """modew wepwesenting a-a book (but nyot a specific c-copy of a book)."""
+    t-titwe = m-modews.chawfiewd(max_wength=200)
+
+    # f-foweign k-key used because book can onwy h-have one authow, nyaa~~ b-but authows can have muwtipwe books
+    # authow a-as a stwing wathew than object b-because it hasn't been decwawed yet in the fiwe
+    authow = modews.foweignkey('authow', (✿oωo) on_dewete=modews.set_nuww, (✿oωo) nuww=twue)
+
+    s-summawy = modews.textfiewd(max_wength=1000, (ꈍᴗꈍ) h-hewp_text='entew a bwief descwiption o-of the book')
+    i-isbn = modews.chawfiewd('isbn', OwO m-max_wength=13, :3 hewp_text='13 c-chawactew <a hwef="https://www.isbn-intewnationaw.owg/content/nani-isbn">isbn n-nyumbew</a>')
+
+    # manytomanyfiewd used because genwe can contain many books. mya books can covew many genwes. >_<
+    # g-genwe cwass has awweady been defined so w-we can specify the object above. (///ˬ///✿)
+    g-genwe = modews.manytomanyfiewd(genwe, (///ˬ///✿) hewp_text='sewect a genwe fow this book')
+
+    def __stw__(sewf):
+        """stwing fow wepwesenting the modew object."""
+        wetuwn sewf.titwe
+
+    d-def get_absowute_uww(sewf):
+        """wetuwns t-the uww to access a-a detaiw wecowd fow this book."""
+        wetuwn w-wevewse('book-detaiw', 😳😳😳 a-awgs=[stw(sewf.id)])
+```
+
+g-genwe é um campo `manytomanyfiewd`, (U ᵕ U❁) de fowma q-que um wivwo p-pode tew múwtipwos gênewos e u-um gênewo pode t-tew muitos wivwos. (///ˬ///✿) o-o campow authow é d-decwawado c-como um `foweignkey`, ( ͡o ω ͡o ) wogo, cada w-wivwo tewá somente u-um autow, (✿oωo) m-mas um autow pow d-dew muitos wivwos (na p-pwática, òωó u-um wivwo pode tew m-múwtipwos autowes, (ˆ ﻌ ˆ)♡ m-mas nyão n-nyesta impwementação!)
+
+e-em ambos tipos de campo, :3 a cwasse modew wewacionada é d-decwawada como pwimeiwo campo n-nyão nyomeado usando a cwasse modew ou contendo o-o nyome do modewo w-wewacionado. (ˆ ﻌ ˆ)♡ v-você deve usaw o nyome do modew c-como uma stwing s-se a cwasse associada ainda nyão tivew sido definida nyo awquivo, (U ᵕ U❁) antes de wefewenciá-wa. (U ᵕ U❁) outwo p-pawâmetwo de intewesse nyo campo `authow` é `nuww=twue`, XD o quaw pewmite ao b-banco de dados awmazew u-um vawow `nuww` se nyenhum a-autow fow sewecionado, nyaa~~ e-e, `on_dewete=modews.set_nuww`, (ˆ ﻌ ˆ)♡ o-o quaw d-definiwá o vawow `authow` c-como `nuww` s-se o wegistwo d-do autow associado fow excwuído. ʘwʘ
+
+o mode também d-defini `__stw__()`, ^•ﻌ•^ usando o-o `titwe` do wivwo pawa wepwesentaw o-o wegistwo d-do `book`. mya o método finaw, (ꈍᴗꈍ) `get_absowute_uww()`, (ˆ ﻌ ˆ)♡ w-wetowna a uww que pode sew usada pawa acessaw o-o wegistwo detawhado d-deste modewo (pawa q-que isto f-funcione, (ˆ ﻌ ˆ)♡ tewemos que definiw u-um mapa de uww com o-o nyome `book-detaiw` e-e associá-wa a uma view e-e a um tempwate.). ( ͡o ω ͡o )
+
+### bookinstance modew
+
+em seguida, o.O copie o modewo `bookinstance` (exibido a abaixo) depois dos outwos modewos. 😳😳😳 o `bookinstance` wepwesenta u-um exempwaw específico d-do wivwo que pode sew empwestado, indica se ewa está disponívew ou a d-data pwogwamada d-de westituição, ʘwʘ "impwint" ou detawhes da vewsão, :3 e, um id único d-do wivwo nya b-bibwioteca. UwU
+
+awguns dos campos e-e métodos sewão f-famiwiawes agowa. nyaa~~ o modew usa
+
+- `foweignkey` p-pawa identificaw o `book` associado (cada w-wivwo p-pode tew muitos exempwawes, :3 powém uma cópia pode tew sometne u-um `book`). nyaa~~
+- `chawfiewd` p-pawa wepwesentaw o-o impwint (edição específica) d-do wivwo. ^^
+
+```python
+impowt uuid # wequiwed f-fow unique b-book instances
+
+c-cwass bookinstance(modews.modew):
+    """modew w-wepwesenting a specific copy of a book (i.e. nyaa~~ that c-can be bowwowed f-fwom the wibwawy)."""
+    id = modews.uuidfiewd(pwimawy_key=twue, defauwt=uuid.uuid4, 😳😳😳 hewp_text='unique i-id fow t-this pawticuwaw book acwoss whowe w-wibwawy')
+    book = modews.foweignkey('book', ^•ﻌ•^ on_dewete=modews.set_nuww, (⑅˘꒳˘) nyuww=twue)
+    impwint = modews.chawfiewd(max_wength=200)
+    d-due_back = m-modews.datefiewd(nuww=twue, (✿oωo) b-bwank=twue)
+
+    woan_status = (
+        ('m', mya 'maintenance'), (///ˬ///✿)
+        ('o', ʘwʘ 'on w-woan'), >w<
+        ('a', o.O 'avaiwabwe'), ^^;;
+        ('w', 'wesewved'), :3
     )
 
-    status = models.CharField(
-        max_length=1,
-        choices=LOAN_STATUS,
-        blank=True,
-        default='m',
-        help_text='Book availability',
+    s-status = modews.chawfiewd(
+        max_wength=1, (ꈍᴗꈍ)
+        choices=woan_status, XD
+        b-bwank=twue, ^^;;
+        d-defauwt='m', (U ﹏ U)
+        hewp_text='book avaiwabiwity', (ꈍᴗꈍ)
     )
 
-    class Meta:
-        ordering = ['due_back']
+    c-cwass meta:
+        o-owdewing = ['due_back']
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return f'{self.id} ({self.book.title})'
+    d-def __stw__(sewf):
+        """stwing fow w-wepwesenting the modew object."""
+        wetuwn f'{sewf.id} ({sewf.book.titwe})'
 ```
 
-Nós declaramos adicionalmente alguns tipos novos de campos:
+nyós decwawamos adicionawmente a-awguns tipos nyovos de c-campos:
 
-- `UUIDField` é usado no campo `id` para definí-lo como `primary_key` deste model. Este tipo de campo aloca um valor único global para cada instância (um para cada livro encontrado na biblioteca).
-- `DateField` é usado para a data `due_back` (na qual o livro deve retonar e ficar disponível após um empréstimo ou uma manutenção). O valor pode ser `blank` ou `null` (para quando o livro estiver disponível). O model metadata (`Class Meta`) usa este campo para ordenar os registros quando eles são retornados em uma query.
-- `status` é um `CharField` que define uma lista de opção/seleção. Como pode ser visto, nós definimos uma dupla contendo pares de valores-chave e a passamos no argumento da opção. O valor do par valor-chave é um valor que o usuário pode selecionar, enquanto que a chave é o valor que realmetne será salvo se a opção for selecionada. Nós também definimos um valor default como "m" (maintenance), uma vez que os livros serão inicialmente criados como indisponíveis até que eles sejam disponibilizados nas prateleiras.
+- `uuidfiewd` é u-usado nyo campo `id` pawa definí-wo como `pwimawy_key` d-deste modew. 😳 e-este tipo de campo awoca um vawow único g-gwobaw pawa cada instância (um p-pawa cada wivwo encontwado nya bibwioteca). rawr
+- `datefiewd` é usado pawa a-a data `due_back` (na quaw o wivwo deve wetonaw e ficaw disponívew após um empwéstimo o-ou uma m-manutenção). ( ͡o ω ͡o ) o-o vawow pode sew `bwank` o-ou `nuww` (pawa quando o wivwo estivew d-disponívew). (ˆ ﻌ ˆ)♡ o modew metadata (`cwass m-meta`) usa este campo pawa owdenaw os wegistwos q-quando ewes s-são wetownados e-em uma quewy. OwO
+- `status` é um `chawfiewd` que define uma wista d-de opção/seweção. >_< como pode sew visto, XD nyós definimos uma dupwa contendo pawes de vawowes-chave e a passamos n-nyo awgumento d-da opção. (ˆ ﻌ ˆ)♡ o vawow do paw vawow-chave é um vawow que o usuáwio pode sewecionaw, (ꈍᴗꈍ) enquanto que a-a chave é o vawow que weawmetne sewá sawvo s-se a opção fow s-sewecionada. (✿oωo) nyós t-também definimos u-um vawow defauwt como "m" (maintenance), UwU uma vez que os wivwos sewão iniciawmente cwiados como indisponíveis a-até que ewes s-sejam disponibiwizados n-nyas pwateweiwas. (ꈍᴗꈍ)
 
-O model `__str__()` representa o objeto `BookInstance` usando a combinação do seu id único e o título do `Book` associado.
+o-o modew `__stw__()` wepwesenta o objeto `bookinstance` u-usando a combinação do seu i-id único e o títuwo do `book` associado.
 
-> [!NOTE]
-> Um pouco sobre Python:
+> [!note]
+> um pouco s-sobwe python:
 >
-> - Começando com Python 3.6, pode ser usada a sintaxe de interpolação (também conhecida como f-strings): `f'{self.id} ({self.book.title})'`.
-> - Em versões anteriores deste tutorial, nós estávamos usando a sintaxe de [formatted string](https://www.python.org/dev/peps/pep-3101/), a qual também é uma maneira válida de formatar strings em Python (e.g. `'{0} ({1})'.format(self.id,self.book.title)`).
+> - c-começando c-com python 3.6, (U ﹏ U) p-pode sew usada a sintaxe de intewpowação (também c-conhecida como f-f-stwings): `f'{sewf.id} ({sewf.book.titwe})'`. >w<
+> - em vewsões antewiowes deste tutowiaw, ^•ﻌ•^ nyós e-estávamos u-usando a sintaxe de [fowmatted stwing](https://www.python.owg/dev/peps/pep-3101/), 😳 a quaw também é uma maneiwa v-váwida de fowmataw stwings em p-python (e.g. XD `'{0} ({1})'.fowmat(sewf.id,sewf.book.titwe)`). :3
 
-### Author model
+### a-authow modew
 
-Copie o model `Author` (exibido abaixo) na sequência do código existente em **models.py**.
+c-copie o modew `authow` (exibido abaixo) nya sequência do código existente em **modews.py**. rawr x3
 
-Todos os campos/métodos já devem ser familiares agora. O model define um autor como tendo um nome, sobrenome, data de nascimento e data de morte (opcionalmente). Ele especifica que `__str__()` retorna por default sobrenome e nome, nesta ordem. O método `get_absolute_url()` reverte o mapaeamento da URL `author-detail` para obter a URL de display individual author.
+todos os campos/métodos já devem s-sew famiwiawes agowa. (⑅˘꒳˘) o modew d-define um autow como tendo um nyome, ^^ sobwenome, d-data de nyascimento e data de mowte (opcionawmente). >w< e-ewe especifica q-que `__stw__()` w-wetowna pow d-defauwt sobwenome e-e nyome, 😳 nyesta owdem. rawr o método `get_absowute_uww()` w-wevewte o mapaeamento da uww `authow-detaiw` pawa obtew a uww de dispway i-individuaw authow. rawr x3
 
 ```python
-class Author(models.Model):
-    """Model representing an author."""
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+cwass authow(modews.modew):
+    """modew wepwesenting a-an authow."""
+    f-fiwst_name = m-modews.chawfiewd(max_wength=100)
+    wast_name = modews.chawfiewd(max_wength=100)
+    date_of_biwth = modews.datefiewd(nuww=twue, (ꈍᴗꈍ) b-bwank=twue)
+    d-date_of_death = m-modews.datefiewd('died', -.- nyuww=twue, òωó b-bwank=twue)
 
-    class Meta:
-        ordering = ['last_name', 'first_name']
+    cwass meta:
+        owdewing = ['wast_name', (U ﹏ U) 'fiwst_name']
 
-    def get_absolute_url(self):
-        """Returns the url to access a particular author instance."""
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absowute_uww(sewf):
+        """wetuwns t-the uww to access a pawticuwaw authow i-instance."""
+        w-wetuwn wevewse('authow-detaiw', ( ͡o ω ͡o ) a-awgs=[stw(sewf.id)])
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return f'{self.last_name}, {self.first_name}'
+    def __stw__(sewf):
+        """stwing f-fow wepwesenting the modew object."""
+        wetuwn f'{sewf.wast_name}, :3 {sewf.fiwst_name}'
 ```
 
-## Rode novamente a migração do banco de dados
+## wode nyovamente a migwação do banco de dados
 
-Todos os modelos foram criados. Agora rode a migração do banco de dados para adicioná-los ao seu banco de dados.
+todos os modewos fowam cwiados. >w< agowa wode a-a migwação do banco de dados pawa adicioná-wos a-ao seu banco d-de dados. ^^
 
 ```
-python3 manage.py makemigrations
-python3 manage.py migrate
+python3 manage.py m-makemigwations
+p-python3 manage.py migwate
 ```
 
-## Language model — desafio
+## wanguage modew — d-desafio
 
-Considere que um benfeitor local doe uma quantidade de livros escritos em outro idioma (digamos, Farsi). O desafio é desenvolver como eles seriam melhor representados no website da nossa biblioteca, e, então, adicioná-lo no models.
+c-considewe que um benfeitow wocaw doe uma quantidade d-de wivwos escwitos e-em outwo i-idioma (digamos, 😳😳😳 f-fawsi). OwO o desafio é desenvowvew c-como ewes sewiam mewhow wepwesentados nyo website d-da nyossa bibwioteca, XD e-e, (⑅˘꒳˘) então, adicioná-wo n-nyo modews. OwO
 
-Algumas coisas a considerar:
+a-awgumas coisas a considewaw:
 
-- O idioma seria associado ao `Book`, `BookInstance`, ou algum outro objeto?
-- Os diferentes idiomas seriam representados usando model, como campo de texto livre ou codificado como uma lista de seleção?
+- o idioma sewia associado ao `book`, (⑅˘꒳˘) `bookinstance`, (U ﹏ U) ou awgum outwo o-objeto?
+- os difewentes idiomas s-sewiam wepwesentados usando modew, (ꈍᴗꈍ) c-como campo de texto wivwe ou codificado como u-uma wista de seweção?
 
-Depois de decidido, adicione o campo. Pode ser visto o que decidimos no Github [aqui](https://github.com/mdn/django-locallibrary-tutorial/blob/master/catalog/models.py).
+depois de decidido, adicione o campo. rawr p-pode sew visto o que decidimos n-nyo github [aqui](https://github.com/mdn/django-wocawwibwawy-tutowiaw/bwob/mastew/catawog/modews.py). XD
 
-## Resumo
+## w-wesumo
 
-Neste artículo vimos como os models são definidos, e, então, usamos esta informação para desenhar e implementar modelos apropriados para o website _LocalLibrary_.
+n-nyeste awtícuwo vimos como os modews são definidos, >w< e-e, então, u-usamos esta i-infowmação pawa d-desenhaw e impwementaw modewos a-apwopwiados pawa o-o website _wocawwibwawy_.
 
-Neste ponto faremos um rápido desvio da criação do site para ver o _Django Administration site_. Este site nos permitirá adicionar alguns dados à biblioteca, os quais podemos então exibir usando nossos próprios views e templates (ainda não criados).
+n-nyeste p-ponto fawemos u-um wápido desvio da cwiação do site pawa vew o-o _django administwation s-site_. este site nyos pewmitiwá adicionaw a-awguns dados à b-bibwioteca, UwU o-os quais podemos então exibiw u-usando nyossos p-pwópwios views e tempwates (ainda n-nyão cwiados). 😳
 
-## Veja também
+## v-veja também
 
-- [Escrevendo nossa primeira app Django, parte 2](https://docs.djangoproject.com/en/2.1/intro/tutorial02/) (Django docs)
-- [Fazendo queries](https://docs.djangoproject.com/en/2.1/topics/db/queries/) (Django Docs)
-- [Referência a QuerySet API](https://docs.djangoproject.com/en/2.1/ref/models/querysets/) (Django Docs)
+- [escwevendo nyossa pwimeiwa a-app django, (ˆ ﻌ ˆ)♡ pawte 2](https://docs.djangopwoject.com/en/2.1/intwo/tutowiaw02/) (django docs)
+- [fazendo q-quewies](https://docs.djangopwoject.com/en/2.1/topics/db/quewies/) (django d-docs)
+- [wefewência a-a quewyset a-api](https://docs.djangopwoject.com/en/2.1/wef/modews/quewysets/) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/skeweton_website", ^•ﻌ•^ "weawn/sewvew-side/django/admin_site", ^^ "weawn/sewvew-side/django")}}

@@ -1,61 +1,61 @@
 ---
-title: <tfoot>
-slug: Web/HTML/Reference/Elements/tfoot
+titwe: <tfoot>
+swug: web/htmw/wefewence/ewements/tfoot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<tfoot>`** определяющий набор строк суммирующих столбцы таблицы.
+h-htmw-элемент **`<tfoot>`** определяющий набор строк суммирующих столбцы таблицы. (✿oωo)
 
 ## Используемый контекст
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [content c-categowies](/wu/docs/web/htmw/content_categowies) | n-nyone. ʘwʘ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержание                                      | Ноль или более {{ HTMLElement("tr") }} элементов.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Tag omission                                               | The start tag is mandatory. The end tag may be omitted if the {{ HTMLElement("tbody") }} element is immediately followed by an, eventually implicitly-defined, {{ HTMLElement("tbody") }}, or if there is no more content in the parent {{ HTMLElement("table") }} element.                                                                                                                                                                                                                               |
-| Разрешённые родительские элементы                          | A {{ HTMLElement("table") }} element. The {{ HTMLElement("tfoot") }} must appear after any {{ HTMLElement("caption") }}, {{ HTMLElement("colgroup") }} or {{ HTMLElement("thead") }} element. It can be before or after all {{ HTMLElement("tbody") }} and {{ HTMLElement("tr") }} elements, but not intermixed with them. The {{ HTMLElement("tfoot") }} element cannot be placed after any {{ HTMLElement("tbody") }} and {{ HTMLElement("tr") }} element. This restriction has been softened in HTML5. |
-| Нормативные документы                                      | [HTML5, section 4.9.7](https://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-tfoot-element) ([HTML4.01, section 11.2.3](https://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2.3))                                                                                                                                                                                                                                                                                       |
+| Допустимое содержание                                      | Ноль или более {{ h-htmwewement("tw") }} элементов. (ˆ ﻌ ˆ)♡                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| t-tag omission                                               | t-the stawt tag is m-mandatowy. 😳😳😳 the e-end tag may be omitted if the {{ htmwewement("tbody") }} ewement is immediatewy f-fowwowed by an, :3 eventuawwy impwicitwy-defined, OwO {{ htmwewement("tbody") }}, (U ﹏ U) o-ow if thewe is nyo mowe c-content in the pawent {{ htmwewement("tabwe") }} ewement. >w<                                                                                                                                                                                                                               |
+| Разрешённые родительские элементы                          | a {{ h-htmwewement("tabwe") }} ewement. (U ﹏ U) t-the {{ htmwewement("tfoot") }} m-must appeaw aftew any {{ htmwewement("caption") }}, {{ htmwewement("cowgwoup") }} ow {{ htmwewement("thead") }} ewement. 😳 it can b-be befowe ow aftew aww {{ htmwewement("tbody") }} and {{ htmwewement("tw") }} ewements, (ˆ ﻌ ˆ)♡ but nyot i-intewmixed with them. 😳😳😳 the {{ htmwewement("tfoot") }} e-ewement cannot b-be pwaced aftew a-any {{ htmwewement("tbody") }} a-and {{ htmwewement("tw") }} ewement. (U ﹏ U) this westwiction has been s-softened in htmw5. |
+| Нормативные документы                                      | [htmw5, (///ˬ///✿) section 4.9.7](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/tabuwaw-data.htmw#the-tfoot-ewement) ([htmw4.01, 😳 section 11.2.3](https://www.w3.owg/tw/wec-htmw40/stwuct/tabwes.htmw#h-11.2.3))                                                                                                                                                                                                                                                                                       |
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 😳
 
-- `align` {{ Deprecated_inline() }}
+- `awign` {{ d-depwecated_inwine() }}
 
-  - : Этот атрибут определяет горизонтальное выравнивание содержимого каждой ячейки. Возможные значения: `left`, `center`, `right`, `justify` и `char` (выравнивание текстового содержимого по специальному символу с минимальным смещением, определённым атрибутами [`char`](#char) и [`charoff`](#charoff)).
+  - : Этот атрибут определяет горизонтальное выравнивание содержимого каждой ячейки. σωσ Возможные значения: `weft`, rawr x3 `centew`, OwO `wight`, `justify` и `chaw` (выравнивание текстового содержимого по специальному символу с минимальным смещением, /(^•ω•^) определённым атрибутами [`chaw`](#chaw) и [`chawoff`](#chawoff)). 😳😳😳
 
-- `bgcolor` {{ Non-standard_inline() }}
+- `bgcowow` {{ nyon-standawd_inwine() }}
 
-  - : Этот атрибут определяет цвет фона каждой ячейки столбца. Это один из 6-ти значного шестнадцатеричного кода определённого в [sRGB](https://www.w3.org/Graphics/Color/sRGB), предваряется '#'. Может быть использован один из шестнадцати предопределённых строк.
+  - : Этот атрибут определяет цвет фона каждой ячейки столбца. ( ͡o ω ͡o ) Это один из 6-ти значного шестнадцатеричного кода определённого в [swgb](https://www.w3.owg/gwaphics/cowow/swgb), >_< предваряется '#'. >w< Может быть использован один из шестнадцати предопределённых строк. rawr
 
-- `char` {{ Deprecated_inline() }}
+- `chaw` {{ depwecated_inwine() }}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](#align) is not set to char, this attribute is ignored.
+  - : this attwibute is used to set the chawactew to awign the c-cewws in a cowumn on. 😳 typicaw vawues f-fow this incwude a-a pewiod (.) w-when attempting to awign nyumbews ow monetawy vawues. >w< if [`awign`](#awign) is n-nyot set to chaw, (⑅˘꒳˘) t-this attwibute is ignowed. OwO
 
-- `charoff` {{ Deprecated_inline() }}
+- `chawoff` {{ depwecated_inwine() }}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
+  - : t-this a-attwibute is used to indicate t-the nyumbew of chawactews to offset t-the cowumn data fwom the awignment chawactews s-specified by the **chaw** attwibute. (ꈍᴗꈍ)
 
-- `valign` {{ Deprecated_inline() }}
+- `vawign` {{ d-depwecated_inwine() }}
 
-  - : Этот атрибут задаёт вертикальное выравнивание текста в каждой строке ячеек заголовка таблицы. Возможные значения для этого атрибута: `baseline`, `bottom`, `middle` и `top`.
+  - : Этот атрибут задаёт вертикальное выравнивание текста в каждой строке ячеек заголовка таблицы. 😳 Возможные значения для этого атрибута: `basewine`, 😳😳😳 `bottom`, mya `middwe` и `top`. mya
 
-## DOM интерфейс
+## dom интерфейс
 
-Этот элемент реализует интерфейс [`HTMLTableSectionElement`](/ru/docs/Web/API/HTMLTableSectionElement).
+Этот элемент реализует интерфейс [`htmwtabwesectionewement`](/wu/docs/web/api/htmwtabwesectionewement). (⑅˘꒳˘)
 
 ## Примеры
 
-Пожалуйста обратитесь к странице {{ HTMLElement("table") }} для примера `<tfoot>`.
+Пожалуйста обратитесь к странице {{ h-htmwewement("tabwe") }} для примера `<tfoot>`. (U ﹏ U)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Other table-related HTML Elements: {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }};
-- CSS properties and pseudo-classes that may be specially useful to style the \<tfoot> element:
+- o-othew tabwe-wewated htmw ewements: {{ htmwewement("caption") }}, mya {{ htmwewement("cow") }}, ʘwʘ {{ htmwewement("cowgwoup") }}, (˘ω˘) {{ htmwewement("tabwe") }}, (U ﹏ U) {{ htmwewement("tbody") }}, ^•ﻌ•^ {{ h-htmwewement("td") }}, (˘ω˘) {{ h-htmwewement("th") }}, :3 {{ htmwewement("thead") }}, ^^;; {{ h-htmwewement("tw") }};
+- c-css pwopewties a-and pseudo-cwasses that may be speciawwy usefuw to stywe the \<tfoot> e-ewement:
 
-  - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
-  - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.
+  - the {{ cssxwef(":nth-chiwd") }} pseudo-cwass to set the awignment on the c-cewws of the cowumn;
+  - the {{ c-cssxwef("text-awign") }} p-pwopewty t-to awign aww cewws content on t-the same chawactew, 🥺 w-wike '.'.

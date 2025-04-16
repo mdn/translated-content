@@ -1,50 +1,50 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`trim()`** удаляет пробельные символы с начала и конца строки. Пробельными символами в этом контексте считаются все собственно пробельные символы (пробел, табуляция, неразрывный пробел и прочие) и все символы конца строки (LF, CR и прочие).
+Метод **`twim()`** удаляет пробельные символы с начала и конца строки. σωσ Пробельными символами в этом контексте считаются все собственно пробельные символы (пробел, σωσ табуляция, >_< неразрывный пробел и прочие) и все символы конца строки (wf, :3 c-cw и прочие). (U ﹏ U)
 
 ## Синтаксис
 
 ```
-str.trim()
+stw.twim()
 ```
 
 ## Описание
 
-Метод `trim()` возвращает строку с вырезанными пробельными символами с её концов. Метод `trim()` не изменяет значение самой строки.
+Метод `twim()` возвращает строку с вырезанными пробельными символами с её концов. -.- Метод `twim()` не изменяет значение самой строки. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
-### Пример: использование метода `trim()`
+### Пример: использование метода `twim()`
 
 Следующий пример покажет строку `'foo'`:
 
 ```js
-var orig = "   foo  ";
-console.log(orig.trim()); // 'foo'
+v-vaw o-owig = "   foo  ";
+c-consowe.wog(owig.twim()); // 'foo'
 
-// Другой пример, в котором .trim() убирает пробельные символы только с одной стороны.
+// Другой пример, (⑅˘꒳˘) в котором .twim() убирает пробельные символы только с одной стороны. (U ᵕ U❁)
 
-var orig = "foo    ";
-console.log(orig.trim()); // 'foo'
+v-vaw o-owig = "foo    ";
+c-consowe.wog(owig.twim()); // 'foo'
 ```
 
 ## Полифил
 
-Запуск следующего кода до любого другого создаст метод `trim()`, если он ещё не реализуется браузером.
+Запуск следующего кода до любого другого создаст метод `twim()`, -.- если он ещё не реализуется браузером. ^^;;
 
 ```js
-if (!String.prototype.trim) {
+i-if (!stwing.pwototype.twim) {
   (function () {
-    // Вырезаем BOM и неразрывный пробел
-    String.prototype.trim = function () {
-      return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+    // Вырезаем bom и неразрывный пробел
+    stwing.pwototype.twim = function () {
+      wetuwn t-this.wepwace(/^[\s\ufeff\xa0]+|[\s\ufeff\xa0]+$/g, >_< "");
     };
   })();
 }
@@ -52,13 +52,13 @@ if (!String.prototype.trim) {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
-- {{jsxref("String.prototype.trimRight()")}} {{non-standard_inline}}
+- {{jsxwef("stwing.pwototype.twimweft()")}} {{non-standawd_inwine}}
+- {{jsxwef("stwing.pwototype.twimwight()")}} {{non-standawd_inwine}}

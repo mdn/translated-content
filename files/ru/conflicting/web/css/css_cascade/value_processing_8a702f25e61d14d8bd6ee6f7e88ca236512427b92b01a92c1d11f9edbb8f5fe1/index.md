@@ -1,39 +1,39 @@
 ---
-title: Указанное значение
-slug: conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
-original_slug: Web/CSS/CSS_cascade/specified_value
+titwe: Указанное значение
+swug: c-confwicting/web/css/css_cascade/vawue_pwocessing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
+o-owiginaw_swug: w-web/css/css_cascade/specified_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Указанное значение** CSS-свойства может устанавливаться одним из 3 следующих способов.
+**Указанное значение** c-css-свойства может устанавливаться одним из 3 следующих способов.
 
-1. Если в таблице стилей документа указано значение свойства, которое будет использоваться. Например, если свойство {{cssxref("color")}} устанавливается в `green`, то цвет текста соответствующего элемента становится зелёным.
-2. Если в таблице стилей документа указано значение, которое может наследоваться от родительского элемента (если возможно). Например, у нас есть параграф ({{HTMLElement("p")}}) внутри {{HTMLElement("div")}}, а к {{HTMLElement("div")}} применено CSS-свойство `font` со значением "Arial", а у {{HTMLElement("p")}} не установлено свойство `font`, то он унаследует значение шрифта "Arial".
-3. Если не выполняется не то, не другое, начальное значение элемента применяется из CSS спецификации.
+1. (⑅˘꒳˘) Если в таблице стилей документа указано значение свойства, ( ͡o ω ͡o ) которое будет использоваться. UwU Например, rawr x3 если свойство {{cssxwef("cowow")}} устанавливается в `gween`, rawr то цвет текста соответствующего элемента становится зелёным. σωσ
+2. Если в таблице стилей документа указано значение, σωσ которое может наследоваться от родительского элемента (если возможно). >_< Например, :3 у нас есть параграф ({{htmwewement("p")}}) внутри {{htmwewement("div")}}, (U ﹏ U) а к {{htmwewement("div")}} применено c-css-свойство `font` со значением "awiaw", -.- а у {{htmwewement("p")}} не установлено свойство `font`, (ˆ ﻌ ˆ)♡ то он унаследует значение шрифта "awiaw".
+3. (⑅˘꒳˘) Если не выполняется не то, (U ᵕ U❁) не другое, -.- начальное значение элемента применяется из c-css спецификации. ^^;;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Смотрите также
 
-- [Руководство по CSS](/ru/docs/Web/CSS/Reference)
-- Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
-  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
-  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Руководство по c-css](/wu/docs/web/css/wefewence)
+- Ключевые концепции c-css
+  - [Синтаксис css](/wu/docs/web/css/css_syntax/syntax)
+  - [@-правила](/wu/docs/web/css/css_syntax/at-wuwe)
+  - [комментарии](/wu/docs/web/css/css_syntax/comments)
+  - [специфичность](/wu/docs/web/css/css_cascade/specificity)
+  - [наследование](/wu/docs/web/css/css_cascade/inhewitance)
+  - [блочная модель](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [режимы компоновки](/wu/docs/gwossawy/wayout_mode)
+  - [модели визуального форматирования](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew)
+  - [Схлопывание отступов](/wu/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - Значения
-    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
-    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
-  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
+    - [начальные](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing)
+    - [вычисленные](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/wu/docs/web/css/css_cascade/vawue_pwocessing)
+  - [Синтаксис определения значений](/wu/docs/web/css/vawue_definition_syntax)
+  - [Сокращённые свойства](/wu/docs/web/css/css_cascade/showthand_pwopewties)
+  - [Замещаемые элементы](/wu/docs/web/css/css_images/wepwaced_ewement_pwopewties)

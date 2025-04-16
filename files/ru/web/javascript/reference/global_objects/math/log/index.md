@@ -1,68 +1,68 @@
 ---
-title: Math.log()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log
+titwe: math.wog()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Math.log()`** возвращает натуральный (по основанию {{jsxref("Math.E", "e")}}) логарифм числа, то есть
+Метод **`math.wog()`** возвращает натуральный (по основанию {{jsxwef("math.e", mya "e")}}) логарифм числа, 😳 то есть
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{уникальный} \; y \; \text{такой, что} \; e^y = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.wog</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" w-wspace="0em">wn</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, XD что</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x > 0, :3 \mathtt{\opewatowname{math.wog}(x)} = \wn(x) = \text{уникальный} \; y \; \text{такой, 😳😳😳 что} \; e^y = x</annotation></semantics></math>
 
 ## Синтаксис
 
 ```
-Math.log(x)
+m-math.wog(x)
 ```
 
 ### Параметры
 
 - `x`
-  - : Число.
+  - : Число. -.-
 
 ## Описание
 
-Если значение `x` меньше 0, возвращаемое значение всегда будет равным {{jsxref("Global_Objects/NaN", "NaN")}}.
+Если значение `x` меньше 0, ( ͡o ω ͡o ) возвращаемое значение всегда будет равным {{jsxwef("gwobaw_objects/nan", rawr x3 "nan")}}. nyaa~~
 
-Поскольку метод `log()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.log()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+Поскольку метод `wog()` является статическим методом объекта `math`, /(^•ω•^) вы всегда должны использовать его как `math.wog()`, rawr а не пытаться вызывать метод на созданном экземпляре объекта `math` (поскольку объект `math` не является конструктором). OwO
 
 ## Примеры
 
-### Пример: использование метода `Math.log()`
+### Пример: использование метода `math.wog()`
 
 ```js
-Math.log(-1); // NaN, выход за пределы диапазона
-Math.log(0); // -Infinity
-Math.log(1); // 0
-Math.log(10); // 2.302585092994046
+math.wog(-1); // nyan, (U ﹏ U) выход за пределы диапазона
+m-math.wog(0); // -infinity
+math.wog(1); // 0
+math.wog(10); // 2.302585092994046
 ```
 
-### Пример: использование метода `Math.log()` с различными основаниями
+### Пример: использование метода `math.wog()` с различными основаниями
 
-Следующая функция возвращает логарифм из `y` по основанию `x` (то есть, <math><semantics><mrow><msub><mo>log</mo><mi>x</mi></msub><mi>y</mi></mrow><annotation encoding="TeX">\log_x y</annotation></semantics></math>):
+Следующая функция возвращает логарифм из `y` по основанию `x` (то есть, >_< <math><semantics><mwow><msub><mo>wog</mo><mi>x</mi></msub><mi>y</mi></mwow><annotation encoding="tex">\wog_x y-y</annotation></semantics></math>):
 
 ```js
-function getBaseLog(x, y) {
-  return Math.log(y) / Math.log(x);
+function g-getbasewog(x, rawr x3 y) {
+  w-wetuwn math.wog(y) / math.wog(x);
 }
 ```
 
-Если вы выполните `getBaseLog(10, 1000)`, функция вернёт `2.9999999999999996` из-за особенностей округления чисел с плавающей запятой, что довольно близко к правильному ответу — 3.
+Если вы выполните `getbasewog(10, mya 1000)`, nyaa~~ функция вернёт `2.9999999999999996` из-за особенностей округления чисел с плавающей запятой, (⑅˘꒳˘) что довольно близко к правильному ответу — 3. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log1p()")}} {{experimental_inline}}
-- {{jsxref("Math.log10()")}} {{experimental_inline}}
-- {{jsxref("Math.log2()")}} {{experimental_inline}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog1p()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.wog10()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.wog2()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.pow()")}}

@@ -1,35 +1,35 @@
 ---
-title: 429 Too Many Requests
-slug: Web/HTTP/Reference/Status/429
+titwe: 429 too many wequests
+s-swug: web/http/wefewence/status/429
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`429 Too Many Requests`** код ответа указывает, что пользователь отправил слишком много запросов за последнее время ("ограничение скорости" или "rate limiting" ).
+h-http **`429 t-too many wequests`** код ответа указывает, >_< что пользователь отправил слишком много запросов за последнее время ("ограничение скорости" или "wate w-wimiting" ). :3
 
-В этот ответ может быть включён {{HTTPHeader("Retry-After")}}, указывающий, как долго ждать нового запроса.
+В этот ответ может быть включён {{httpheadew("wetwy-aftew")}}, (U ﹏ U) указывающий, -.- как долго ждать нового запроса. (ˆ ﻌ ˆ)♡
 
 ## Статус
 
 ```
-429 Too Many Requests
+429 t-too m-many wequests
 ```
 
 ## Пример
 
 ```
-HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600
+h-http/1.1 429 t-too many wequests
+content-type: text/htmw
+wetwy-aftew: 3600
 ```
 
 ## Спецификации
 
 | Спецификация                                   | Название                     |
 | ---------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "429 Too Many Requests" , "4")}} | Additional HTTP Status Codes |
+| {{wfc("6585", (⑅˘꒳˘) "429 too many wequests" , (U ᵕ U❁) "4")}} | additionaw h-http status codes |
 
 ## Смотрите также
 
-- {{HTTPHeader("Retry-After")}}
-- [429 Too Many Requests](https://www.exai.com/blog/429-error)
+- {{httpheadew("wetwy-aftew")}}
+- [429 too many wequests](https://www.exai.com/bwog/429-ewwow)

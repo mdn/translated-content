@@ -1,137 +1,137 @@
 ---
-title: Прокси
-slug: Web/JavaScript/Reference/Global_Objects/Proxy
+titwe: Прокси
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект `Proxy` позволяет создать прокси для другого объекта, может перехватывать и переопределить основные операции для данного объекта.
+Объект `pwoxy` позволяет создать прокси для другого объекта, 🥺 может перехватывать и переопределить основные операции для данного объекта. (✿oωo)
 
 ## Введение
 
-Прокси используются программистами для объявления расширенной семантики JavaScript объектов. Стандартная семантика реализована в движке JavaScript, который обычно написан на низкоуровневом языке программирования, например C++. Прокси позволяют программисту определить поведение объекта при помощи JavaScript. Другими словами они являются **инструментом метапрограммирования**.
+Прокси используются программистами для объявления расширенной семантики j-javascwipt объектов. (U ﹏ U) Стандартная семантика реализована в движке j-javascwipt, который обычно написан на низкоуровневом языке программирования, :3 например c-c++. ^^;; Прокси позволяют программисту определить поведение объекта при помощи j-javascwipt. rawr Другими словами они являются **инструментом метапрограммирования**. 😳😳😳
 
-**Примечание**: реализация прокси в SpiderMonkey является прототипом, в котором прокси API и семантика не стабильны. Также, реализация в SpiderMonkey может не соответствовать последней версии спецификации. Она может быть изменена в любой момент и предоставляется исключительно как экспериментальная функция. **Не полагайтесь на неё в производственном коде.**
+**Примечание**: реализация прокси в s-spidewmonkey является прототипом, (✿oωo) в котором прокси a-api и семантика не стабильны. OwO Также, ʘwʘ реализация в s-spidewmonkey может не соответствовать последней версии спецификации. (ˆ ﻌ ˆ)♡ Она может быть изменена в любой момент и предоставляется исключительно как экспериментальная функция. (U ﹏ U) **Не полагайтесь на неё в производственном коде.**
 
-Эта страница описывает новый API (называемый «непосредственным проксированием»), который является частью Firefox 18. Для просмотра старого API (Firefox 17 и ниже) посетите страницу описания [старого прокси API](/ru/docs/JavaScript/Old_Proxy_API).
+Эта страница описывает новый a-api (называемый «непосредственным проксированием»), UwU который является частью fiwefox 18. XD Для просмотра старого api (fiwefox 17 и ниже) посетите страницу описания [старого прокси api](/wu/docs/javascwipt/owd_pwoxy_api). ʘwʘ
 
 ## Терминология
 
-- механизм полного перехвата (или "intercession API")
-  - : Технический термин для этой функции.
-- прокси (proxy)
-  - : Объект, оборачивающий исходный объект.
-- обработчик (handler)
-  - : Объект-заменитель, содержащий ловушки. Определяет, какие операции будут перехвачены, также переопределяет перехваченные операции.
-- ловушки (traps)
-  - : Методы, которые предоставляют доступ к свойствам. Это аналогично концепции ловушек в операционных системах.
-- цель (target)
-  - : Исходный объект, который виртуализируется прокси. Он часто используется в качестве источника данных в прокси. Для него проверяются инварианты относительно расширяемости и настраиваемости свойств.
+- механизм полного перехвата (или "intewcession api")
+  - : Технический термин для этой функции. rawr x3
+- прокси (pwoxy)
+  - : Объект, ^^;; оборачивающий исходный объект. ʘwʘ
+- обработчик (handwew)
+  - : Объект-заменитель, (U ﹏ U) содержащий ловушки. (˘ω˘) Определяет, (ꈍᴗꈍ) какие операции будут перехвачены, также переопределяет перехваченные операции. /(^•ω•^)
+- ловушки (twaps)
+  - : Методы, >_< которые предоставляют доступ к свойствам. Это аналогично концепции ловушек в операционных системах. σωσ
+- цель (tawget)
+  - : Исходный объект, ^^;; который виртуализируется прокси. 😳 Он часто используется в качестве источника данных в прокси. >_< Для него проверяются инварианты относительно расширяемости и настраиваемости свойств. -.-
 
 ## Прокси
 
-Прокси - это новые объекты; невозможно выполнить "проксирование" существующего объекта. Пример создания прокси:
+Прокси - это новые объекты; невозможно выполнить "проксирование" существующего объекта. UwU Пример создания прокси:
 
 ```js
-var p = new Proxy(target, handler);
+v-vaw p = nyew pwoxy(tawget, :3 handwew);
 ```
 
 Где:
 
-- `target` — исходный объект (может быть объектом любого типа, включая массив, функцию и даже другой прокси объект).
-- `handler` — объект-обработчик, методы (ловушки) которого определяют поведение прокси во время выполнения операции над ним.
+- `tawget` — исходный объект (может быть объектом любого типа, σωσ включая массив, >w< функцию и даже другой прокси объект). (ˆ ﻌ ˆ)♡
+- `handwew` — объект-обработчик, ʘwʘ методы (ловушки) которого определяют поведение прокси во время выполнения операции над ним. :3
 
 ## Обработчик
 
-Все ловушки опциональны. В случае, если ловушка не задана, то стандартным поведением будет перенаправление операции к объекту-цели.
+Все ловушки опциональны. (˘ω˘) В случае, 😳😳😳 если ловушка не задана, rawr x3 то стандартным поведением будет перенаправление операции к объекту-цели. (✿oωo)
 
-| JavaScript-код                                                                                                                                      | Метод обработчика                                                                    | Описание                                                                                                                                          |
+| j-javascwipt-код                                                                                                                                      | Метод обработчика                                                                    | Описание                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Object.getOwnPropertyDescriptor(proxy, name)`                                                                                                      | `getOwnPropertyDescriptor function(target, name) -> PropertyDescriptor \| undefined` | Должен возвращать верный объект-описание свойства или `undefined`, чтобы показать, что свойство с именем `name` существует в эмулируемом объекте. |
-| `Object.getOwnPropertyNames(proxy)` `Object.getOwnPropertySymbols(proxy)` `Object.keys(proxy)`                                                      | `ownKeys function(target) -> [string \| symbol]`                                     | Возвращает массив всех собственных (не унаследованных) имён свойств эмулируемого объекта.                                                         |
-| `Object.defineProperty(proxy,name,pd)`                                                                                                              | `defineProperty function(target, name, propertyDescriptor) -> any`                   | Задаёт новое свойство, атрибуты которого определяются предоставленным `propertyDescriptor`. Возвращаемое значение метода игнорируется.            |
-| `delete proxy.name`                                                                                                                                 | `deleteProperty function(target, name) -> boolean`                                   | Удаляет именованное свойство из прокси. Возвращает `true` в случае успешного удаления свойства `name`.                                            |
-| `Object.preventExtensions(proxy)`                                                                                                                   | `preventExtensions function(target) -> boolean`                                      | Делает объект нерасширяемым. Возвращает `true` при успешном выполнении.                                                                           |
-| `name in proxy`                                                                                                                                     | `has function(target, name) -> boolean`                                              |                                                                                                                                                   |
-| `proxy.name` (in the context of "getting the value") `receiver.name` (if `receiver` inherits from a proxy and does not override `name`)             | `get function(target, name, receiver) -> any`                                        | `receiver` — это прокси или объект, унаследованный от прокси.                                                                                     |
-| `proxy.name = val` (in the context of "setting the value") `receiver.name = val` (if `receiver` inherits from a proxy and does not override `name`) | `set function(target, name, val, receiver) -> boolean`                               | `receiver` — это прокси или объект, унаследованный от прокси.                                                                                     |
-| `proxy(...args) proxy.apply(thisValue, args) proxy.call(thisValue, ...args)`                                                                        | `apply function(target, thisValue, args) -> any`                                     | `target` должен быть функцией.                                                                                                                    |
-| `new proxy(...args)`                                                                                                                                | `construct function(target, args) -> object`                                         | `target` должен быть функцией.                                                                                                                    |
+| `object.getownpwopewtydescwiptow(pwoxy, (ˆ ﻌ ˆ)♡ nyame)`                                                                                                      | `getownpwopewtydescwiptow f-function(tawget, :3 nyame) -> pwopewtydescwiptow \| undefined` | Должен возвращать верный объект-описание свойства или `undefined`, (U ᵕ U❁) чтобы показать, ^^;; что свойство с именем `name` существует в эмулируемом объекте. mya |
+| `object.getownpwopewtynames(pwoxy)` `object.getownpwopewtysymbows(pwoxy)` `object.keys(pwoxy)`                                                      | `ownkeys function(tawget) -> [stwing \| s-symbow]`                                     | Возвращает массив всех собственных (не унаследованных) имён свойств эмулируемого объекта. 😳😳😳                                                         |
+| `object.definepwopewty(pwoxy,name,pd)`                                                                                                              | `definepwopewty function(tawget, OwO n-nyame, p-pwopewtydescwiptow) -> any`                   | Задаёт новое свойство, rawr атрибуты которого определяются предоставленным `pwopewtydescwiptow`. XD Возвращаемое значение метода игнорируется. (U ﹏ U)            |
+| `dewete pwoxy.name`                                                                                                                                 | `dewetepwopewty function(tawget, (˘ω˘) nyame) -> boowean`                                   | Удаляет именованное свойство из прокси. UwU Возвращает `twue` в случае успешного удаления свойства `name`. >_<                                            |
+| `object.pweventextensions(pwoxy)`                                                                                                                   | `pweventextensions f-function(tawget) -> boowean`                                      | Делает объект нерасширяемым. σωσ Возвращает `twue` при успешном выполнении. 🥺                                                                           |
+| `name in pwoxy`                                                                                                                                     | `has function(tawget, nyame) -> boowean`                                              |                                                                                                                                                   |
+| `pwoxy.name` (in t-the context of "getting t-the vawue") `weceivew.name` (if `weceivew` i-inhewits f-fwom a pwoxy a-and does nyot ovewwide `name`)             | `get function(tawget, 🥺 n-nyame, ʘwʘ weceivew) -> any`                                        | `weceivew` — это прокси или объект, :3 унаследованный от прокси. (U ﹏ U)                                                                                     |
+| `pwoxy.name = vaw` (in t-the context of "setting the vawue") `weceivew.name = vaw` (if `weceivew` inhewits fwom a pwoxy and does nyot ovewwide `name`) | `set f-function(tawget, (U ﹏ U) nyame, vaw, w-weceivew) -> boowean`                               | `weceivew` — это прокси или объект, унаследованный от прокси.                                                                                     |
+| `pwoxy(...awgs) p-pwoxy.appwy(thisvawue, ʘwʘ awgs) p-pwoxy.caww(thisvawue, >w< ...awgs)`                                                                        | `appwy function(tawget, rawr x3 thisvawue, OwO awgs) -> any`                                     | `tawget` должен быть функцией. ^•ﻌ•^                                                                                                                    |
+| `new p-pwoxy(...awgs)`                                                                                                                                | `constwuct f-function(tawget, >_< awgs) -> object`                                         | `tawget` должен быть функцией. OwO                                                                                                                    |
 
 ## Инварианты
 
-Несмотря на то, что прокси предоставляют много возможностей пользователям, некоторые операции не перехватываются для сохранения постоянства языка:
+Несмотря на то, >_< что прокси предоставляют много возможностей пользователям, (ꈍᴗꈍ) некоторые операции не перехватываются для сохранения постоянства языка:
 
-- Простой и строгий оператор равенства (`==`, `===`) не перехватывается. `p1 === p2` равны, только если `p1` и `p2` ссылаются на один и тот же прокси.
-- Текущая реализация `Object.getPrototypeOf(proxy)` всегда возвращает `Object.getPrototypeOf(target)`, потому что в ES2015 перехватчик getPrototypeOf пока не реализован.
-- `typeof proxy` всегда возвращает `typeof target`. В частности, `proxy` может быть использован как функция только если `target` является функцией.
-- `Array.isArray(proxy)` всегда возвращает `Array.isArray(target)`.
-- `Object.prototype.toString.call(proxy)` всегда возвращает `Object.prototype.toString.call(target)`, потому что в ES2015 перехватчик Symbol.toStringTag пока не реализован.
+- Простой и строгий оператор равенства (`==`, >w< `===`) не перехватывается. (U ﹏ U) `p1 === p2` равны, ^^ только если `p1` и `p2` ссылаются на один и тот же прокси. (U ﹏ U)
+- Текущая реализация `object.getpwototypeof(pwoxy)` всегда возвращает `object.getpwototypeof(tawget)`, потому что в es2015 перехватчик g-getpwototypeof пока не реализован. :3
+- `typeof p-pwoxy` всегда возвращает `typeof tawget`. В частности, (✿oωo) `pwoxy` может быть использован как функция только если `tawget` является функцией. XD
+- `awway.isawway(pwoxy)` всегда возвращает `awway.isawway(tawget)`. >w<
+- `object.pwototype.tostwing.caww(pwoxy)` всегда возвращает `object.pwototype.tostwing.caww(tawget)`, òωó потому что в e-es2015 перехватчик symbow.tostwingtag пока не реализован. (ꈍᴗꈍ)
 
 ## Примеры
 
 ### Простой пример
 
-Объект, возвращающий значение `37`, в случае отсутствия свойства с указанным именем:
+Объект, rawr x3 возвращающий значение `37`, rawr x3 в случае отсутствия свойства с указанным именем:
 
 ```js
-var handler = {
-  get: function (target, name) {
-    return name in target ? target[name] : 37;
-  },
+v-vaw handwew = {
+  get: function (tawget, σωσ name) {
+    w-wetuwn nyame in tawget ? tawget[name] : 37;
+  }, (ꈍᴗꈍ)
 };
 
-var p = new Proxy({}, handler);
+v-vaw p = nyew pwoxy({}, rawr h-handwew);
 p.a = 1;
-p.b = undefined;
+p-p.b = undefined;
 
-console.log(p.a, p.b); // 1, undefined
-console.log("c" in p, p.c); // false, 37
+consowe.wog(p.a, ^^;; p.b); // 1, rawr x3 undefined
+consowe.wog("c" in p, (ˆ ﻌ ˆ)♡ p.c); // fawse, σωσ 37
 ```
 
 ### Перенаправляющий прокси
 
-В данном примере мы используем JavaScript объект, к которому наш прокси направляет все запросы:
+В данном примере мы используем javascwipt объект, (U ﹏ U) к которому наш прокси направляет все запросы:
 
 ```js
-var target = {};
-var p = new Proxy(target, {});
+v-vaw tawget = {};
+v-vaw p = nyew pwoxy(tawget, >w< {});
 
-p.a = 37; // операция перенаправлена прокси
+p-p.a = 37; // операция перенаправлена прокси
 
-console.log(target.a); // 37. Операция была успешно перенаправлена
+c-consowe.wog(tawget.a); // 37. σωσ Операция была успешно перенаправлена
 ```
 
 ### Проверка
 
-При помощи `Proxy` вы можете легко проверять передаваемые объекту значения:
+При помощи `pwoxy` вы можете легко проверять передаваемые объекту значения:
 
 ```js
-let validator = {
-  set: function (obj, prop, value) {
-    if (prop === "age") {
-      if (!Number.isInteger(value)) {
-        throw new TypeError("The age is not an integer");
+w-wet vawidatow = {
+  set: function (obj, nyaa~~ pwop, 🥺 vawue) {
+    if (pwop === "age") {
+      i-if (!numbew.isintegew(vawue)) {
+        thwow nyew typeewwow("the age is nyot an integew");
       }
-      if (value > 200) {
-        throw new RangeError("The age seems invalid");
+      if (vawue > 200) {
+        t-thwow nyew wangeewwow("the a-age seems i-invawid");
       }
     }
 
     // Стандартное сохранение значения
-    obj[prop] = value;
+    o-obj[pwop] = vawue;
 
     // Обозначить успех
-    return true;
-  },
+    w-wetuwn twue;
+  }, rawr x3
 };
 
-let person = new Proxy({}, validator);
+w-wet pewson = n-nyew pwoxy({}, σωσ v-vawidatow);
 
-person.age = 100;
-console.log(person.age); // 100
-person.age = "young"; // Вызовет исключение
-person.age = 300; // Вызовет исключение
+pewson.age = 100;
+consowe.wog(pewson.age); // 100
+p-pewson.age = "young"; // Вызовет исключение
+p-pewson.age = 300; // Вызовет исключение
 ```
 
 ### Дополнение конструктора
@@ -139,294 +139,294 @@ person.age = 300; // Вызовет исключение
 Функция прокси может легко дополнить конструктор новым:
 
 ```js
-function extend(sup, base) {
-  var descriptor = Object.getOwnPropertyDescriptor(
-    base.prototype,
-    "constructor",
+f-function extend(sup, (///ˬ///✿) b-base) {
+  v-vaw descwiptow = object.getownpwopewtydescwiptow(
+    base.pwototype, (U ﹏ U)
+    "constwuctow", ^^;;
   );
 
-  const prototype = { ...base.prototype };
+  const pwototype = { ...base.pwototype };
 
-  base.prototype = Object.create(sup.prototype);
-  base.prototype = Object.assign(base.prototype, prototype);
+  b-base.pwototype = object.cweate(sup.pwototype);
+  base.pwototype = object.assign(base.pwototype, 🥺 pwototype);
 
-  var handler = {
-    construct: function (target, args) {
-      var obj = Object.create(base.prototype);
-      this.apply(target, obj, args);
-      return obj;
-    },
-    apply: function (target, that, args) {
-      sup.apply(that, args);
-      base.apply(that, args);
-    },
+  vaw handwew = {
+    constwuct: function (tawget, òωó a-awgs) {
+      vaw obj = object.cweate(base.pwototype);
+      this.appwy(tawget, o-obj, XD a-awgs);
+      w-wetuwn obj;
+    }, :3
+    appwy: function (tawget, (U ﹏ U) t-that, awgs) {
+      sup.appwy(that, >w< a-awgs);
+      b-base.appwy(that, awgs);
+    }, /(^•ω•^)
   };
-  var proxy = new Proxy(base, handler);
-  descriptor.value = proxy;
-  Object.defineProperty(base.prototype, "constructor", descriptor);
-  return proxy;
+  vaw pwoxy = nyew pwoxy(base, (⑅˘꒳˘) handwew);
+  descwiptow.vawue = p-pwoxy;
+  object.definepwopewty(base.pwototype, ʘwʘ "constwuctow", rawr x3 descwiptow);
+  w-wetuwn pwoxy;
 }
 
-var Person = function (name) {
-  this.name = name;
+vaw pewson = function (name) {
+  t-this.name = nyame;
 };
 
-var Boy = extend(Person, function (name, age) {
-  this.age = age;
+v-vaw boy = extend(pewson, (˘ω˘) function (name, o.O a-age) {
+  this.age = a-age;
 });
 
-Boy.prototype.sex = "M";
+boy.pwototype.sex = "m";
 
-var Peter = new Boy("Peter", 13);
-console.log(Peter.sex); // "M"
-console.log(Peter.name); // "Peter"
-console.log(Peter.age); // 13
+v-vaw petew = n-nyew boy("petew", 😳 13);
+consowe.wog(petew.sex); // "m"
+consowe.wog(petew.name); // "petew"
+consowe.wog(petew.age); // 13
 ```
 
-### Манипуляция DOM элементами
+### Манипуляция dom элементами
 
 Иногда возникает необходимость переключить атрибут или имя класса у двух разных элементов:
 
 ```js
-let view = new Proxy(
+w-wet view = n-new pwoxy(
   {
-    selected: null,
+    s-sewected: nyuww, o.O
   },
   {
-    set: function (obj, prop, newval) {
-      let oldval = obj[prop];
+    s-set: function (obj, ^^;; p-pwop, ( ͡o ω ͡o ) nyewvaw) {
+      wet owdvaw = obj[pwop];
 
-      if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+      i-if (pwop === "sewected") {
+        if (owdvaw) {
+          owdvaw.setattwibute("awia-sewected", ^^;; "fawse");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newvaw) {
+          nyewvaw.setattwibute("awia-sewected", ^^;; "twue");
         }
       }
 
       // Стандартное сохранение значения
-      obj[prop] = newval;
-    },
+      o-obj[pwop] = nyewvaw;
+    }, XD
   },
 );
 
-let i1 = (view.selected = document.getElementById("item-1"));
-console.log(i1.getAttribute("aria-selected")); // 'true'
+w-wet i1 = (view.sewected = document.getewementbyid("item-1"));
+consowe.wog(i1.getattwibute("awia-sewected")); // 'twue'
 
-let i2 = (view.selected = document.getElementById("item-2"));
-console.log(i1.getAttribute("aria-selected")); // 'false'
-console.log(i2.getAttribute("aria-selected")); // 'true'
+wet i-i2 = (view.sewected = d-document.getewementbyid("item-2"));
+consowe.wog(i1.getattwibute("awia-sewected")); // 'fawse'
+consowe.wog(i2.getattwibute("awia-sewected")); // 'twue'
 ```
 
 ### Изменение значений и дополнительные свойства
 
-Прокси объект `products` проверяет передаваемые значения и преобразует их в массив в случае необходимости. Объект также поддерживает дополнительное свойство `latestBrowser` на чтение и запись.
+Прокси объект `pwoducts` проверяет передаваемые значения и преобразует их в массив в случае необходимости. 🥺 Объект также поддерживает дополнительное свойство `watestbwowsew` на чтение и запись. (///ˬ///✿)
 
 ```js
-let products = new Proxy(
+wet pwoducts = n-nyew pwoxy(
   {
-    browsers: ["Internet Explorer", "Netscape"],
+    bwowsews: ["intewnet expwowew", (U ᵕ U❁) "netscape"], ^^;;
   },
   {
-    get: function (obj, prop) {
+    get: function (obj, ^^;; pwop) {
       // Дополнительное свойство
-      if (prop === "latestBrowser") {
-        return obj.browsers[obj.browsers.length - 1];
+      i-if (pwop === "watestbwowsew") {
+        wetuwn obj.bwowsews[obj.bwowsews.wength - 1];
       }
 
       // Стандартный возврат значения
-      return obj[prop];
-    },
-    set: function (obj, prop, value) {
+      wetuwn o-obj[pwop];
+    }, rawr
+    s-set: function (obj, (˘ω˘) pwop, vawue) {
       // Дополнительное свойство
-      if (prop === "latestBrowser") {
-        obj.browsers.push(value);
-        return;
+      if (pwop === "watestbwowsew") {
+        o-obj.bwowsews.push(vawue);
+        w-wetuwn;
       }
 
-      // Преобразование значения, если оно не массив
-      if (typeof value === "string") {
-        value = [value];
+      // Преобразование значения, 🥺 если оно не массив
+      if (typeof vawue === "stwing") {
+        vawue = [vawue];
       }
 
       // Стандартное сохранение значения
-      obj[prop] = value;
-    },
-  },
+      obj[pwop] = v-vawue;
+    }, nyaa~~
+  }, :3
 );
 
-console.log(products.browsers); // ['Internet Explorer', 'Netscape']
-products.browsers = "Firefox"; // передаётся как строка (по ошибке)
-console.log(products.browsers); // ['Firefox'] <- проблем нет, значение - массив
+consowe.wog(pwoducts.bwowsews); // ['intewnet e-expwowew', /(^•ω•^) 'netscape']
+pwoducts.bwowsews = "fiwefox"; // передаётся как строка (по ошибке)
+consowe.wog(pwoducts.bwowsews); // ['fiwefox'] <- проблем нет, ^•ﻌ•^ значение - массив
 
-products.latestBrowser = "Chrome";
-console.log(products.browsers); // ['Firefox', 'Chrome']
-console.log(products.latestBrowser); // 'Chrome'
+pwoducts.watestbwowsew = "chwome";
+c-consowe.wog(pwoducts.bwowsews); // ['fiwefox', UwU 'chwome']
+consowe.wog(pwoducts.watestbwowsew); // 'chwome'
 ```
 
 ### Поиск элемента массива по его свойству
 
-Данный прокси расширяет массив дополнительными возможностями. Как вы видите, вы можете гибко "задавать" свойства без использования [`Object.defineProperties`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Данный пример также может быть использован для поиска строки таблицы по её ячейке. В этом случае целью будет [`table.rows`](/ru/docs/Web/API/HTMLTableElement/rows).
+Данный прокси расширяет массив дополнительными возможностями. 😳😳😳 Как вы видите, OwO вы можете гибко "задавать" свойства без использования [`object.definepwopewties`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewties). ^•ﻌ•^ Данный пример также может быть использован для поиска строки таблицы по её ячейке. (ꈍᴗꈍ) В этом случае целью будет [`tabwe.wows`](/wu/docs/web/api/htmwtabweewement/wows). (⑅˘꒳˘)
 
 ```js
-let products = new Proxy(
+w-wet pwoducts = n-nyew pwoxy(
   [
-    { name: "Firefox", type: "browser" },
-    { name: "SeaMonkey", type: "browser" },
-    { name: "Thunderbird", type: "mailer" },
+    { name: "fiwefox", (⑅˘꒳˘) t-type: "bwowsew" }, (ˆ ﻌ ˆ)♡
+    { nyame: "seamonkey", /(^•ω•^) t-type: "bwowsew" }, òωó
+    { n-nyame: "thundewbiwd", (⑅˘꒳˘) t-type: "maiwew" }, (U ᵕ U❁)
   ],
   {
-    get: function (obj, prop) {
-      // Стандартное возвращение значения; prop обычно является числом
-      if (prop in obj) {
-        return obj[prop];
+    get: function (obj, >w< p-pwop) {
+      // Стандартное возвращение значения; p-pwop обычно является числом
+      if (pwop in obj) {
+        wetuwn o-obj[pwop];
       }
 
-      // Получение количества продуктов; псевдоним products.length
-      if (prop === "number") {
-        return obj.length;
+      // Получение количества продуктов; псевдоним p-pwoducts.wength
+      i-if (pwop === "numbew") {
+        wetuwn obj.wength;
       }
 
-      let result,
-        types = {};
+      wet wesuwt, σωσ
+        t-types = {};
 
-      for (let product of obj) {
-        if (product.name === prop) {
-          result = product;
+      fow (wet p-pwoduct of o-obj) {
+        if (pwoduct.name === pwop) {
+          wesuwt = p-pwoduct;
         }
-        if (types[product.type]) {
-          types[product.type].push(product);
-        } else {
-          types[product.type] = [product];
+        i-if (types[pwoduct.type]) {
+          t-types[pwoduct.type].push(pwoduct);
+        } e-ewse {
+          types[pwoduct.type] = [pwoduct];
         }
       }
 
       // Получение продукта по имени
-      if (result) {
-        return result;
+      if (wesuwt) {
+        w-wetuwn wesuwt;
       }
 
       // Получение продуктов по типу
-      if (prop in types) {
-        return types[prop];
+      if (pwop in types) {
+        wetuwn types[pwop];
       }
 
       // Получение типов продуктов
-      if (prop === "types") {
-        return Object.keys(types);
+      if (pwop === "types") {
+        w-wetuwn object.keys(types);
       }
 
-      return undefined;
-    },
+      wetuwn u-undefined;
+    }, -.-
   },
 );
 
-console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
-console.log(products["Chrome"]); // undefined
-console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types); // ['browser', 'mailer']
-console.log(products.number); // 3
+consowe.wog(pwoducts[0]); // { n-nyame: 'fiwefox', o.O type: 'bwowsew' }
+c-consowe.wog(pwoducts["fiwefox"]); // { nyame: 'fiwefox', ^^ t-type: 'bwowsew' }
+c-consowe.wog(pwoducts["chwome"]); // undefined
+c-consowe.wog(pwoducts.bwowsew); // [{ n-nyame: 'fiwefox', >_< t-type: 'bwowsew' }, >w< { nyame: 'seamonkey', >_< type: 'bwowsew' }]
+consowe.wog(pwoducts.types); // ['bwowsew', >w< 'maiwew']
+consowe.wog(pwoducts.numbew); // 3
 ```
 
 ### Пример использования всех перехватчиков
 
-В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать _не нативный_ объект, который частично приспособлен для этого - `docCookies,` созданном в разделе ["little framework" и опубликованном на странице `document.cookie`](/ru/docs/Web/API/Document/cookie#a_little_framework.3a_a_complete_cookies_reader.2fwriter_with_full_unicode_support).
+В данном примере, rawr использующем все виды перехватчиков, rawr x3 мы попытаемся проксировать _не нативный_ объект, ( ͡o ω ͡o ) который частично приспособлен для этого - `doccookies,` созданном в разделе ["wittwe fwamewowk" и опубликованном на странице `document.cookie`](/wu/docs/web/api/document/cookie#a_wittwe_fwamewowk.3a_a_compwete_cookies_weadew.2fwwitew_with_fuww_unicode_suppowt). (˘ω˘)
 
 ```js
 /*
-  var docCookies = ... получить объект "docCookies" можно здесь:
-  https://developer.mozilla.org/ru/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  vaw doccookies = ... получить объект "doccookies" можно здесь:
+  h-https://devewopew.moziwwa.owg/wu/docs/dom/document.cookie#a_wittwe_fwamewowk.3a_a_compwete_cookies_weadew.2fwwitew_with_fuww_unicode_suppowt
 */
 
-var docCookies = new Proxy(docCookies, {
-  get: function (oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
-  },
-  set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) {
-      return false;
+v-vaw doccookies = n-nyew pwoxy(doccookies, 😳 {
+  get: f-function (otawget, OwO skey) {
+    wetuwn otawget[skey] || otawget.getitem(skey) || u-undefined;
+  }, (˘ω˘)
+  s-set: function (otawget, òωó skey, v-vvawue) {
+    if (skey in otawget) {
+      wetuwn f-fawse;
     }
-    return oTarget.setItem(sKey, vValue);
+    w-wetuwn otawget.setitem(skey, ( ͡o ω ͡o ) vvawue);
   },
-  deleteProperty: function (oTarget, sKey) {
-    if (sKey in oTarget) {
-      return false;
+  d-dewetepwopewty: f-function (otawget, UwU skey) {
+    if (skey in otawget) {
+      wetuwn fawse;
     }
-    return oTarget.removeItem(sKey);
-  },
-  enumerate: function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  iterate: function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  ownKeys: function (oTarget, sKey) {
-    return oTarget.keys();
-  },
-  has: function (oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
-  },
-  hasOwn: function (oTarget, sKey) {
-    return oTarget.hasItem(sKey);
-  },
-  defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && "value" in oDesc) {
-      oTarget.setItem(sKey, oDesc.value);
+    wetuwn otawget.wemoveitem(skey);
+  }, /(^•ω•^)
+  enumewate: f-function (otawget, (ꈍᴗꈍ) s-skey) {
+    w-wetuwn o-otawget.keys();
+  }, 😳
+  i-itewate: function (otawget, mya s-skey) {
+    wetuwn o-otawget.keys();
+  }, mya
+  ownkeys: f-function (otawget, /(^•ω•^) s-skey) {
+    wetuwn otawget.keys();
+  }, ^^;;
+  h-has: function (otawget, 🥺 skey) {
+    wetuwn skey i-in otawget || otawget.hasitem(skey);
+  }, ^^
+  hasown: f-function (otawget, ^•ﻌ•^ s-skey) {
+    wetuwn otawget.hasitem(skey);
+  }, /(^•ω•^)
+  d-definepwopewty: function (otawget, ^^ skey, 🥺 o-odesc) {
+    i-if (odesc && "vawue" i-in odesc) {
+      otawget.setitem(skey, (U ᵕ U❁) odesc.vawue);
     }
-    return oTarget;
-  },
-  getPropertyNames: function (oTarget) {
-    return Object.getPropertyNames(oTarget).concat(oTarget.keys());
-  },
-  getOwnPropertyNames: function (oTarget) {
-    return Object.getOwnPropertyNames(oTarget).concat(oTarget.keys());
-  },
-  getPropertyDescriptor: function (oTarget, sKey) {
-    var vValue = oTarget[sKey] || oTarget.getItem(sKey);
-    return vValue
+    wetuwn otawget;
+  }, 😳😳😳
+  g-getpwopewtynames: function (otawget) {
+    wetuwn object.getpwopewtynames(otawget).concat(otawget.keys());
+  }, nyaa~~
+  getownpwopewtynames: function (otawget) {
+    w-wetuwn o-object.getownpwopewtynames(otawget).concat(otawget.keys());
+  }, (˘ω˘)
+  getpwopewtydescwiptow: f-function (otawget, >_< skey) {
+    vaw v-vvawue = otawget[skey] || o-otawget.getitem(skey);
+    wetuwn vvawue
       ? {
-          value: vValue,
-          writable: true,
-          enumerable: true,
-          configurable: false,
+          vawue: vvawue, XD
+          w-wwitabwe: twue, rawr x3
+          enumewabwe: twue, ( ͡o ω ͡o )
+          c-configuwabwe: f-fawse, :3
         }
       : undefined;
-  },
-  getOwnPropertyDescriptor: function (oTarget, sKey) {
-    var vValue = oTarget.getItem(sKey);
-    return vValue
+  }, mya
+  g-getownpwopewtydescwiptow: function (otawget, σωσ s-skey) {
+    v-vaw vvawue = o-otawget.getitem(skey);
+    wetuwn vvawue
       ? {
-          value: vValue,
-          writable: true,
-          enumerable: true,
-          configurable: false,
+          vawue: vvawue,
+          wwitabwe: twue, (ꈍᴗꈍ)
+          enumewabwe: twue, OwO
+          configuwabwe: fawse, o.O
         }
       : undefined;
-  },
-  fix: function (oTarget) {
-    return "not implemented yet!";
-  },
+  }, 😳😳😳
+  fix: function (otawget) {
+    wetuwn "not i-impwemented y-yet!";
+  }, /(^•ω•^)
 });
 
 /* Проверка cookies */
 
-alert((docCookies.my_cookie1 = "First value"));
-alert(docCookies.getItem("my_cookie1"));
+awewt((doccookies.my_cookie1 = "fiwst v-vawue"));
+a-awewt(doccookies.getitem("my_cookie1"));
 
-docCookies.setItem("my_cookie1", "Changed value");
-alert(docCookies.my_cookie1);
+d-doccookies.setitem("my_cookie1", OwO "changed vawue");
+awewt(doccookies.my_cookie1);
 ```
 
 ## Смотрите также
 
-- ["Proxies are awesome" презентация Brendan Eich на JSConf](http://jsconf.eu/2010/speaker/be_proxy_objects.html) ([слайды](https://www.slideshare.net/BrendanEich/metaprog-5303821))
-- [Страница предложения ECMAScript Harmony Proxy](http://wiki.ecmascript.org/doku.php?id=harmony:proxies) и [страница ECMAScript Harmony proxy semantics](http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics)
-- [Руководство по прокси](http://soft.vub.ac.be/~tvcutsem/proxies/)
-- [Старая страница Proxy API](/ru/docs/JavaScript/Old_Proxy_API)
-- [`Object.watch`](/ru/docs/JavaScript/Reference/Global_Objects/Object/watch) - не стандартная возможность, поддерживается только в движке Gecko.
+- ["pwoxies a-awe awesome" презентация b-bwendan eich на j-jsconf](http://jsconf.eu/2010/speakew/be_pwoxy_objects.htmw) ([слайды](https://www.swideshawe.net/bwendaneich/metapwog-5303821))
+- [Страница предложения ecmascwipt h-hawmony pwoxy](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:pwoxies) и [страница ecmascwipt h-hawmony p-pwoxy semantics](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:pwoxies_semantics)
+- [Руководство по прокси](http://soft.vub.ac.be/~tvcutsem/pwoxies/)
+- [Старая страница pwoxy api](/wu/docs/javascwipt/owd_pwoxy_api)
+- [`object.watch`](/wu/docs/javascwipt/wefewence/gwobaw_objects/object/watch) - не стандартная возможность, ^^ поддерживается только в движке g-gecko. (///ˬ///✿)
 
 ## Лицензионные примечания
 
-Некоторое содержимое (текст, примеры) данной страницы было скопировано или адаптировано со страниц [вики ECMAScript](http://wiki.ecmascript.org/doku.php), имеющей лицензию [CC 2.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/2.0/)
+Некоторое содержимое (текст, (///ˬ///✿) примеры) данной страницы было скопировано или адаптировано со страниц [вики e-ecmascwipt](http://wiki.ecmascwipt.owg/doku.php), (///ˬ///✿) имеющей лицензию [cc 2.0 b-by-nc-sa](https://cweativecommons.owg/wicenses/by-nc-sa/2.0/)

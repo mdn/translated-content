@@ -1,42 +1,42 @@
 ---
-title: String.prototype.toUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+titwe: stwing.pwototype.touppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/touppewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toUpperCase()`** возвращает значение строки, на которой он был вызван, преобразованное в верхний регистр.
+Метод **`touppewcase()`** возвращает значение строки, ^•ﻌ•^ на которой он был вызван, OwO преобразованное в верхний регистр. 🥺
 
 ## Синтаксис
 
 ```
-str.toUpperCase()
+s-stw.touppewcase()
 ```
 
 ## Описание
 
-Метод `toUpperCase()` возвращает значение строки, преобразованное в верхний регистр. Метод `toUpperCase()` не изменяет значение самой строки.
+Метод `touppewcase()` возвращает значение строки, òωó преобразованное в верхний регистр. o.O Метод `touppewcase()` не изменяет значение самой строки. (U ᵕ U❁)
 
 ## Примеры
 
-### Пример: использование метода `toUpperCase()`
+### Пример: использование метода `touppewcase()`
 
 ```js
-console.log("алфавит".toUpperCase()); // 'АЛФАВИТ'
+c-consowe.wog("алфавит".touppewcase()); // 'АЛФАВИТ'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}

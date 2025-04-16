@@ -1,350 +1,350 @@
 ---
-title: Приоритет операторов
-slug: Web/JavaScript/Reference/Operators/Operator_precedence
+titwe: Приоритет операторов
+swug: web/javascwipt/wefewence/opewatows/opewatow_pwecedence
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**Приоритет операторов** определяет порядок, в котором операторы выполняются. Операторы с более высоким приоритетом выполняются первыми.
+**Приоритет операторов** определяет порядок, ^^ в котором операторы выполняются. :3 Операторы с более высоким приоритетом выполняются первыми. -.-
 
-{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - o-opewatow pwecedence")}}
 
-```js interactive-example
-console.log(3 + 4 * 5); // 3 + 20
-// Expected output: 23
+```js i-intewactive-exampwe
+c-consowe.wog(3 + 4 * 5); // 3 + 20
+// e-expected o-output: 23
 
-console.log(4 * 3 ** 2); // 4 * 9
-// Expected output: 36
+consowe.wog(4 * 3 ** 2); // 4 * 9
+// e-expected output: 36
 
-let a;
-let b;
+wet a;
+wet b;
 
-console.log((a = b = 5));
-// Expected output: 5
+consowe.wog((a = b = 5));
+// expected output: 5
 ```
 
 ## Ассоциативность
 
-Ассоциативность определяет порядок, в котором обрабатываются операторы с одинаковым приоритетом. Например, рассмотрим выражение:
+Ассоциативность определяет порядок, 😳 в котором обрабатываются операторы с одинаковым приоритетом. mya Например, (˘ω˘) рассмотрим выражение:
 
 ```
-a OP b OP c
+a-a op b op c
 ```
 
-Левая ассоциативность (слева направо) означает, что оно обрабатывается как `(a OP b) OP c`, в то время как правая ассоциативность (справа налево) означает, что они интерпретируются как `a OP (b OP c)`. Операторы присваивания являются право-ассоциативными, так что вы можете написать:
+Левая ассоциативность (слева направо) означает, >_< что оно обрабатывается как `(a op b) op c`, -.- в то время как правая ассоциативность (справа налево) означает, 🥺 что они интерпретируются как `a op (b o-op c)`. (U ﹏ U) Операторы присваивания являются право-ассоциативными, >w< так что вы можете написать:
 
 ```js
-a = b = 5;
+a = b-b = 5;
 ```
 
-с ожидаемым результатом, что `a` и `b` будут равны 5. Это происходит, потому что оператор присваивания возвращает тот результат, который присваивает. Сначала `b` становится равным 5, затем `a` принимает значение `b`.
+с ожидаемым результатом, что `a` и `b` будут равны 5. mya Это происходит, >w< потому что оператор присваивания возвращает тот результат, nyaa~~ который присваивает. (✿oωo) Сначала `b` становится равным 5, ʘwʘ затем `a` принимает значение `b`. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
 ```js
 3 > 2 && 2 > 1;
-// вернёт true
+// вернёт twue
 
 3 > 2 > 1;
-// вернёт false, потому что 3 > 2 возвращает true, в свою очередь true > 1 вернёт false
+// вернёт fawse, 😳😳😳 потому что 3 > 2 возвращает twue, :3 в свою очередь t-twue > 1 вернёт fawse
 // Добавление скобок значительно повышает читаемость выражения: (3 > 2) > 1
 ```
 
 ## Таблица
 
-Операторы упорядочены с самого высокого (18) до самого низкого (1) приоритета.
+Операторы упорядочены с самого высокого (18) до самого низкого (1) приоритета. OwO
 
-Обратите внимание, что [spread-оператор (`...`)](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax) намеренно не включен в таблицу, потому что он вообще не является оператором и правильно говорить `spread-синтаксис`. Подробнее можно почитать в [ответе на Stack Overflow (en)](https://stackoverflow.com/a/44934830/15378287).
+Обратите внимание, (U ﹏ U) что [spwead-оператор (`...`)](/wu/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) намеренно не включен в таблицу, >w< потому что он вообще не является оператором и правильно говорить `spwead-синтаксис`. (U ﹏ U) Подробнее можно почитать в [ответе на stack ovewfwow (en)](https://stackovewfwow.com/a/44934830/15378287). 😳
 
-<table class="fullwidth-table">
+<tabwe c-cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th>Приоритет</th>
       <th>Тип оператора</th>
       <th>Ассоциативность</th>
       <th>Конкретные операторы</th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>18</td>
-      <td>{{jsxref("Operators/Grouping", "Группировка")}}</td>
+      <td>{{jsxwef("opewatows/gwouping", (ˆ ﻌ ˆ)♡ "Группировка")}}</td>
       <td>не определено</td>
       <td><code>( … )</code></td>
-    </tr>
-    <tr>
-      <td rowspan="5">17</td>
-      <td>{{jsxref("Operators/Property_Accessors", "Доступ к свойствам", "#Dot_notation")}}</td>
-      <td rowspan="2">слева направо</td>
-      <td><code>… . …</code></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Operators/Property_Accessors", "Доступ к свойствам с возможностью вычисления","#Bracket_notation")}}</td>
+    </tw>
+    <tw>
+      <td w-wowspan="5">17</td>
+      <td>{{jsxwef("opewatows/pwopewty_accessows", 😳😳😳 "Доступ к свойствам", (U ﹏ U) "#dot_notation")}}</td>
+      <td wowspan="2">слева направо</td>
+      <td><code>… . (///ˬ///✿) …</code></td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("opewatows/pwopewty_accessows", 😳 "Доступ к свойствам с возможностью вычисления","#bwacket_notation")}}</td>
       <td><code>… [ … ]</code></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Operators/new","new")}} (со списком аргументов)</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("opewatows/new","new")}} (со списком аргументов)</td>
       <td>не определено</td>
       <td><code>new … ( … )</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Guide/Functions">Вызов функции</a></td>
-      <td rowspan="2">слева направо</td>
-      <td><code>… ( <var>… </var>)</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Оператор опциональной последовательности (?.)</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/guide/functions">Вызов функции</a></td>
+      <td wowspan="2">слева направо</td>
+      <td><code>… ( <vaw>… </vaw>)</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining">Оператор опциональной последовательности (?.)</a></td>
       <td><code>?.</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>16</td>
-      <td>{{jsxref("Operators/new","new")}} (без списка аргументов)</td>
+      <td>{{jsxwef("opewatows/new","new")}} (без списка аргументов)</td>
       <td>справа налево</td>
       <td><code>new …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">15</td>
-      <td>{{jsxref("Operators/Arithmetic_Operators","Постфиксный инкремент","#Increment")}}</td>
-      <td rowspan="2">не определено</td>
+    </tw>
+    <tw>
+      <td w-wowspan="2">15</td>
+      <td>{{jsxwef("opewatows/awithmetic_opewatows","Постфиксный инкремент","#incwement")}}</td>
+      <td wowspan="2">не определено</td>
       <td><code>… ++</code></td>
-    </tr>
-    <tr>
-      <td>{{jsxref("Operators/Arithmetic_Operators","Постфиксный декремент","#Decrement")}}</td>
+    </tw>
+    <tw>
+      <td>{{jsxwef("opewatows/awithmetic_opewatows","Постфиксный декремент","#decwement")}}</td>
       <td><code>… --</code></td>
-    </tr>
-    <tr>
-      <td rowspan="10">14</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">Логическое отрицание (!)</a></td>
-      <td rowspan="10">справа налево</td>
-      <td><code>! …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT">Побитовое отрицание (~)</a></td>
+    </tw>
+    <tw>
+      <td wowspan="10">14</td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/wogicaw_opewatows#wogicaw_not">Логическое отрицание (!)</a></td>
+      <td wowspan="10">справа налево</td>
+      <td><code>! 😳 …</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_not">Побитовое отрицание (~)</a></td>
       <td><code>~ …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">Унарный плюс</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#unawy_pwus">Унарный плюс</a></td>
       <td><code>+ …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation">Унарный минус</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#unawy_negation">Унарный минус</a></td>
       <td><code>- …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">Префиксный инкремент</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#incwement">Префиксный инкремент</a></td>
       <td><code>++ …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement">Префиксный декремент</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#decwement">Префиксный декремент</a></td>
       <td><code>-- …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/typeof">typeof</a></td>
       <td><code>typeof …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/void">void</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/void">void</a></td>
       <td><code>void …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/delete">delete</a></td>
-      <td><code>delete …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/await">await</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/dewete">dewete</a></td>
+      <td><code>dewete …</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/await">await</a></td>
       <td><code>await …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>13</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Возведение в степень (**)</a></td>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#exponentiation">Возведение в степень (**)</a></td>
       <td>справа налево</td>
       <td><code>… ** …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="3">12</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication">Умножение (*)</a></td>
-      <td rowspan="3">слева направо</td>
+    </tw>
+    <tw>
+      <td wowspan="3">12</td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#muwtipwication">Умножение (*)</a></td>
+      <td w-wowspan="3">слева направо</td>
       <td><code>… * …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">Деление (/)</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#division">Деление (/)</a></td>
       <td><code>… / …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder">Остаток от деления (%)</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#wemaindew">Остаток от деления (%)</a></td>
       <td><code>… % …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">11</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">Сложение (+)</a></td>
-      <td rowspan="2">слева направо</td>
+    </tw>
+    <tw>
+      <td wowspan="2">11</td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#addition">Сложение (+)</a></td>
+      <td wowspan="2">слева направо</td>
       <td><code>… + …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction">Вычитание (-)</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/awithmetic_opewatows#subtwaction">Вычитание (-)</a></td>
       <td><code>… - …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="3">10</td>
-      <td><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовый сдвиг влево (&#x3C;&#x3C;)</a></td>
-      <td rowspan="3">слева направо</td>
-      <td><code>… &#x3C;&#x3C; …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовый сдвиг вправо (>>)</a>
+    </tw>
+    <tw>
+      <td wowspan="3">10</td>
+      <td><a h-hwef="https://devewopew.moziwwa.owg/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows">Побитовый сдвиг влево (&#x3c;&#x3c;)</a></td>
+      <td w-wowspan="3">слева направо</td>
+      <td><code>… &#x3c;&#x3c; …</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows">Побитовый сдвиг вправо (>>)</a>
       </td>
       <td><code>… >> …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Сдвиг вправо с заполнением нулей (>>>)</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows">Сдвиг вправо с заполнением нулей (>>>)</a></td>
       <td><code>… >>> …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="6">9</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator">Меньше (&#x3C;)</a></td>
-      <td rowspan="6">слева направо</td>
-      <td><code>… &#x3C; …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator">Меньше или равно (&#x3C;=)</a></td>
-      <td><code>… &#x3C;= …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator">Больше (>)</a></td>
+    </tw>
+    <tw>
+      <td wowspan="6">9</td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#wess_than_opewatow">Меньше (&#x3c;)</a></td>
+      <td w-wowspan="6">слева направо</td>
+      <td><code>… &#x3c; …</code></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#wess_than__ow_equaw_opewatow">Меньше или равно (&#x3c;=)</a></td>
+      <td><code>… &#x3c;= …</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#gweatew_than_opewatow">Больше (>)</a></td>
       <td><code>… > …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator">Больше или равно (>=)</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#gweatew_than_ow_equaw_opewatow">Больше или равно (>=)</a></td>
       <td><code>… >= …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/in">in</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/in">in</a></td>
       <td><code>… in …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/instanceof">instanceof</a></td>
       <td><code>… instanceof …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="4">8</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">Равенство (==)</a></td>
-      <td rowspan="4">слева направо</td>
+    </tw>
+    <tw>
+      <td w-wowspan="4">8</td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#equawity">Равенство (==)</a></td>
+      <td wowspan="4">слева направо</td>
       <td><code>… == …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality">Неравенство (!=)</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#inequawity">Неравенство (!=)</a></td>
       <td><code>… != …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">Строгое равенство (===)</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#identity">Строгое равенство (===)</a></td>
       <td><code>… === …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity">Строгое неравенство (!==)</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/compawison_opewatows#nonidentity">Строгое неравенство (!==)</a></td>
       <td><code>… !== …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>7</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND">Побитовое «И» (&#x26;)</a></td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_and">Побитовое «И» (&#x26;)</a></td>
       <td>слева направо</td>
       <td><code>… &#x26; …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>6</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">Побитовое исключающее «ИЛИ» (^)</a></td>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_xow">Побитовое исключающее «ИЛИ» (^)</a></td>
       <td>слева направо</td>
       <td><code>… ^ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>5</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR">Побитовое «ИЛИ» (|)</a></td>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/bitwise_opewatows#bitwise_ow">Побитовое «ИЛИ» (|)</a></td>
       <td>слева направо</td>
       <td><code>… | …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>4</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">Логическое «И» (&#x26;&#x26;)</a></td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/wogicaw_opewatows#wogicaw_and">Логическое «И» (&#x26;&#x26;)</a></td>
       <td>слева направо</td>
       <td><code>… &#x26;&#x26; …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">3</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">Логическое «ИЛИ» (||)</a></td>
-      <td rowspan="2">слева направо</td>
+    </tw>
+    <tw>
+      <td wowspan="2">3</td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/wogicaw_opewatows#wogicaw_ow">Логическое «ИЛИ» (||)</a></td>
+      <td wowspan="2">слева направо</td>
       <td><code>… || …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Оператор нулевого слияния (??)</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing_opewatow">Оператор нулевого слияния (??)</a></td>
       <td><code>… ?? …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="19">2</td>
-      <td rowspan="16"><a href="/ru/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Присваивание</a></td>
-      <td rowspan="16">справа налево</td>
+    </tw>
+    <tw>
+      <td wowspan="19">2</td>
+      <td w-wowspan="16"><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/assignment_opewatows">Присваивание</a></td>
+      <td wowspan="16">справа налево</td>
       <td><code>… = …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… += …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… -= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… **= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… *= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… /= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… %= …</code></td>
-    </tr>
-    <tr>
-      <td><code>… &#x3C;&#x3C;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><code>… &#x3c;&#x3c;= …</code></td>
+    </tw>
+    <tw>
       <td><code>… >>= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… >>>= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… &#x26;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ^= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… |= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… &#x26;&#x26;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ||= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ??= …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Условный (тернарный) оператор</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow">Условный (тернарный) оператор</a></td>
       <td>справа налево</td>
       <td><code>… ? … : …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/yield">yield</a></td>
-      <td rowspan="2">справа налево</td>
-      <td><code>yield …</code></td>
-    </tr>
-    <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/yield*">yield*</a></td>
-      <td><code>yield* …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><a h-hwef="/wu/docs/web/javascwipt/wefewence/opewatows/yiewd">yiewd</a></td>
+      <td w-wowspan="2">справа налево</td>
+      <td><code>yiewd …</code></td>
+    </tw>
+    <tw>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/yiewd*">yiewd*</a></td>
+      <td><code>yiewd* …</code></td>
+    </tw>
+    <tw>
       <td>1</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comma_Operator">Запятая / Последовательность</a></td>
+      <td><a hwef="/wu/docs/web/javascwipt/wefewence/opewatows/comma_opewatow">Запятая / Последовательность</a></td>
       <td>слева направо</td>
-      <td><code>… , …</code></td>
-    </tr>
+      <td><code>… , σωσ …</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

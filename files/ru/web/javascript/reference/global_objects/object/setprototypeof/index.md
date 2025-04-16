@@ -1,62 +1,62 @@
 ---
-title: Object.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+titwe: object.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> [!WARNING]
-> Изменение прототипа `[[Prototype]]` объекта является, по самой природе оптимизации доступа к свойствам в современных движках JavaScript, очень медленной операцией, это справедливо для **_любого_** браузера и движка JavaScript. Изменение прототипов очень тонко и обширно влияет на производительность, причём это влияние не ограничивается просто временем, проведённым внутри метода `Object.setPrototypeOf()`, оно может распространяться на **_любой_** код, который имеет доступ к **_любому_** объекту, чей прототип `[[Prototype]]` был изменён. Если вы заботитесь о производительности, вы никогда не должны изменять прототип `[[Prototype]]` объекта. Вместо этого создайте объект с нужным прототипом `[[Prototype]]`, с помощью метода {{jsxref("Object.create()")}}.
+> [!wawning]
+> Изменение прототипа `[[pwototype]]` объекта является, (ˆ ﻌ ˆ)♡ по самой природе оптимизации доступа к свойствам в современных движках j-javascwipt, 😳😳😳 очень медленной операцией, это справедливо для **_любого_** браузера и движка j-javascwipt. (U ﹏ U) Изменение прототипов очень тонко и обширно влияет на производительность, (///ˬ///✿) причём это влияние не ограничивается просто временем, 😳 проведённым внутри метода `object.setpwototypeof()`, 😳 оно может распространяться на **_любой_** код, который имеет доступ к **_любому_** объекту, σωσ чей прототип `[[pwototype]]` был изменён. rawr x3 Если вы заботитесь о производительности, OwO вы никогда не должны изменять прототип `[[pwototype]]` объекта. Вместо этого создайте объект с нужным прототипом `[[pwototype]]`, /(^•ω•^) с помощью метода {{jsxwef("object.cweate()")}}. 😳😳😳
 
 ## Сводка
 
-Метод **`Object.setPrototypeOf()`** устанавливает прототип (то есть, внутреннее свойство `[[Prototype]]`) указанного объекта в другой объект или {{jsxref("null")}}.
+Метод **`object.setpwototypeof()`** устанавливает прототип (то есть, ( ͡o ω ͡o ) внутреннее свойство `[[pwototype]]`) указанного объекта в другой объект или {{jsxwef("nuww")}}. >_<
 
 ## Синтаксис
 
 ```
-Object.setPrototypeOf(obj, prototype);
+o-object.setpwototypeof(obj, >w< p-pwototype);
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, которому устанавливается прототип.
-- `prototype`
-  - : Новый прототип объекта (объект или {{jsxref("null")}}).
+  - : Объект, rawr которому устанавливается прототип. 😳
+- `pwototype`
+  - : Новый прототип объекта (объект или {{jsxwef("nuww")}}). >w<
 
 ## Описание
 
-Выкидывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если объект, чей прототип `[[Prototype]]` является не расширяемым, согласно методу {{jsxref("Object.isExtensible()")}}. Не делает ничего, если параметр `prototype` не является объектом или значением {{jsxref("null")}} (то есть, является числом, строкой, логическим значением или {{jsxref("undefined")}}). В противном случае метод устанавливает прототип `[[Prototype]]` объекта `obj` в новое значение.
+Выкидывает исключение {{jsxwef("gwobaw_objects/typeewwow", (⑅˘꒳˘) "typeewwow")}}, OwO если объект, (ꈍᴗꈍ) чей прототип `[[pwototype]]` является не расширяемым, 😳 согласно методу {{jsxwef("object.isextensibwe()")}}. 😳😳😳 Не делает ничего, mya если параметр `pwototype` не является объектом или значением {{jsxwef("nuww")}} (то есть, mya является числом, (⑅˘꒳˘) строкой, (U ﹏ U) логическим значением или {{jsxwef("undefined")}}). mya В противном случае метод устанавливает прототип `[[pwototype]]` объекта `obj` в новое значение. ʘwʘ
 
 ## Примеры
 
 ```js
-var dict = Object.setPrototypeOf({}, null);
+v-vaw dict = o-object.setpwototypeof({}, (˘ω˘) n-nyuww);
 ```
 
 ## Полифил
 
-Используя старое свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), мы можем легко определить `Object.setPrototypeOf()`, если он ещё не доступен:
+Используя старое свойство [`object.pwototype.__pwoto__`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto), (U ﹏ U) мы можем легко определить `object.setpwototypeof()`, ^•ﻌ•^ если он ещё не доступен:
 
 ```js
-if (!Object.setPrototypeOf) {
-  Object.prototype.setPrototypeOf = function (obj, proto) {
-    if (obj.__proto__) {
-      obj.__proto__ = proto;
-      return obj;
-    } else {
-      // Если нужно будет определить прототип у Object.create(null) объекта
-      var Fn = function () {
-        for (var key in obj) {
+i-if (!object.setpwototypeof) {
+  object.pwototype.setpwototypeof = function (obj, (˘ω˘) pwoto) {
+    if (obj.__pwoto__) {
+      o-obj.__pwoto__ = pwoto;
+      wetuwn obj;
+    } e-ewse {
+      // Если нужно будет определить прототип у object.cweate(nuww) объекта
+      v-vaw fn = function () {
+        fow (vaw key in obj) {
           //Если в объект уже были определены некоторые свойства
-          Object.defineProperty(this, key, {
-            value: obj[key],
+          object.definepwopewty(this, :3 k-key, {
+            vawue: obj[key], ^^;;
           });
         }
       };
-      Fn.prototype = proto;
-      return new Fn();
+      f-fn.pwototype = p-pwoto;
+      wetuwn nyew fn();
     }
   };
 }
@@ -64,56 +64,56 @@ if (!Object.setPrototypeOf) {
 
 ## Добавление цепочки прототипов
 
-Сочетание метода `Object.getPrototypeOf()` и свойства [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) позволяет добавить целую цепочку прототипов к новому прототипу объекта:
+Сочетание метода `object.getpwototypeof()` и свойства [`object.pwototype.__pwoto__`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) позволяет добавить целую цепочку прототипов к новому прототипу объекта:
 
 ```js
 /**
- *** Object.appendChain(@object, @prototype)
+ *** object.appendchain(@object, 🥺 @pwototype)
  *
- * Присоединяет первый неродной прототип цепочки к новому прототипу.
- * Возвращает @object (если он был примитивным значением, оно будет преобразовано в объект).
+ * Присоединяет первый неродной прототип цепочки к новому прототипу. (⑅˘꒳˘)
+ * Возвращает @object (если он был примитивным значением, nyaa~~ оно будет преобразовано в объект). :3
  *
- *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
- *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
+ *** object.appendchain(@object [, ( ͡o ω ͡o ) "@awg_name_1", mya "@awg_name_2", "@awg_name_3", (///ˬ///✿) "..."], (˘ω˘) "@function_body")
+ *** o-object.appendchain(@object [, ^^;; "@awg_name_1, (✿oωo) @awg_name_2, (U ﹏ U) @awg_name_3, -.- ..."], "@function_body")
  *
- * Присоединяет первый не родной прототип цепочки к родному объекту Function.prototype, затем присоединяет
- * new Function(["@arg"(s)], "@function_body") к этой цепочке.
- * Возвращает функцию.
+ * Присоединяет первый не родной прототип цепочки к родному объекту function.pwototype, ^•ﻌ•^ затем присоединяет
+ * nyew function(["@awg"(s)], rawr "@function_body") к этой цепочке. (˘ω˘)
+ * Возвращает функцию. nyaa~~
  *
  **/
 
-Object.appendChain = function (oChain, oProto) {
-  if (arguments.length < 2) {
-    throw new TypeError("Object.appendChain - Not enough arguments");
+object.appendchain = f-function (ochain, UwU opwoto) {
+  i-if (awguments.wength < 2) {
+    t-thwow nyew t-typeewwow("object.appendchain - n-not enough awguments");
   }
-  if (typeof oProto === "number" || typeof oProto === "boolean") {
-    throw new TypeError(
-      "second argument to Object.appendChain must be an object or a string",
+  if (typeof opwoto === "numbew" || typeof opwoto === "boowean") {
+    t-thwow nyew typeewwow(
+      "second awgument t-to object.appendchain must be an object ow a stwing", :3
     );
   }
 
-  var oNewProto = oProto,
-    oReturn =
+  vaw onewpwoto = opwoto, (⑅˘꒳˘)
+    o-owetuwn =
       (o2nd =
-      oLast =
-        oChain instanceof this ? oChain : new oChain.constructor(oChain));
+      owast =
+        o-ochain instanceof t-this ? ochain : n-nyew ochain.constwuctow(ochain));
 
-  for (
-    var o1st = this.getPrototypeOf(o2nd);
-    o1st !== Object.prototype && o1st !== Function.prototype;
-    o1st = this.getPrototypeOf(o2nd)
+  fow (
+    vaw o1st = this.getpwototypeof(o2nd);
+    o1st !== o-object.pwototype && o-o1st !== function.pwototype;
+    o-o1st = t-this.getpwototypeof(o2nd)
   ) {
     o2nd = o1st;
   }
 
-  if (oProto.constructor === String) {
-    oNewProto = Function.prototype;
-    oReturn = Function.apply(null, Array.prototype.slice.call(arguments, 1));
-    this.setPrototypeOf(oReturn, oLast);
+  i-if (opwoto.constwuctow === stwing) {
+    o-onewpwoto = function.pwototype;
+    owetuwn = function.appwy(nuww, (///ˬ///✿) a-awway.pwototype.swice.caww(awguments, ^^;; 1));
+    this.setpwototypeof(owetuwn, >_< o-owast);
   }
 
-  this.setPrototypeOf(o2nd, oNewProto);
-  return oReturn;
+  this.setpwototypeof(o2nd, rawr x3 o-onewpwoto);
+  w-wetuwn owetuwn;
 };
 ```
 
@@ -122,74 +122,74 @@ Object.appendChain = function (oChain, oProto) {
 #### Первый пример: присоединение цепочки к прототипу
 
 ```js
-function Mammal() {
-  this.isMammal = "да";
+function mammaw() {
+  this.ismammaw = "да";
 }
 
-function MammalSpecies(sMammalSpecies) {
-  this.species = sMammalSpecies;
+function mammawspecies(smammawspecies) {
+  this.species = smammawspecies;
 }
 
-MammalSpecies.prototype = new Mammal();
-MammalSpecies.prototype.constructor = MammalSpecies;
+m-mammawspecies.pwototype = nyew m-mammaw();
+mammawspecies.pwototype.constwuctow = mammawspecies;
 
-var oCat = new MammalSpecies("Felis");
+v-vaw ocat = nyew m-mammawspecies("fewis");
 
-alert(oCat.isMammal); // 'да'
+a-awewt(ocat.ismammaw); // 'да'
 
-function Animal() {
-  this.breathing = "да";
+function animaw() {
+  this.bweathing = "да";
 }
 
-Object.appendChain(oCat, new Animal());
+o-object.appendchain(ocat, /(^•ω•^) nyew animaw());
 
-alert(oCat.breathing); // 'да'
+awewt(ocat.bweathing); // 'да'
 ```
 
 #### Второй пример: преобразование примитивного значения в экземпляр его конструктора и присоединение его цепочки к прототипу
 
 ```js
-function Symbol() {
-  this.isSymbol = "да";
+function symbow() {
+  t-this.issymbow = "да";
 }
 
-var nPrime = 17;
+vaw nypwime = 17;
 
-alert(typeof nPrime); // 'number'
+a-awewt(typeof nypwime); // 'numbew'
 
-var oPrime = Object.appendChain(nPrime, new Symbol());
+v-vaw opwime = o-object.appendchain(npwime, :3 nyew s-symbow());
 
-alert(oPrime); // '17'
-alert(oPrime.isSymbol); // 'да'
-alert(typeof oPrime); // 'object'
+awewt(opwime); // '17'
+a-awewt(opwime.issymbow); // 'да'
+a-awewt(typeof o-opwime); // 'object'
 ```
 
-#### Третий пример: присоединение цепочки к объекту `Function.prototype` и новой функции к этой цепочке
+#### Третий пример: присоединение цепочки к объекту `function.pwototype` и новой функции к этой цепочке
 
 ```js
-function Person(sName) {
-  this.identity = sName;
+function pewson(sname) {
+  this.identity = s-sname;
 }
 
-var george = Object.appendChain(
-  new Person("Георг"),
-  'alert("Привет, парни!!");',
+v-vaw geowge = o-object.appendchain(
+  n-nyew pewson("Георг"), (ꈍᴗꈍ)
+  'awewt("Привет, /(^•ω•^) парни!!");', (⑅˘꒳˘)
 );
 
-alert(george.identity); // 'Георг'
-george(); // 'Привет, парни!!'
+a-awewt(geowge.identity); // 'Георг'
+geowge(); // 'Привет, ( ͡o ω ͡o ) парни!!'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Object.getPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- {{jsxwef("object.pwototype.ispwototypeof()")}}
+- {{jsxwef("object.getpwototypeof()")}}
+- [`object.pwototype.__pwoto__`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)

@@ -1,82 +1,82 @@
 ---
-title: itemid
-slug: Web/HTML/Reference/Global_attributes/itemid
+titwe: itemid
+swug: web/htmw/wefewence/gwobaw_attwibutes/itemid
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`itemid`** предоставляет микроданные в форме уникального глобального идентификатора элемента. Атрибут `itemid` может быть указан только для элемента, который имеет оба атрибута [`itemscope`](/ru/docs/Web/HTML/Global_attributes#itemscope) и [`itemtype`](/ru/docs/Web/HTML/Global_attributes#itemtype). Также, `itemid` может быть указан только для элементов, обладающих атрибутом `itemscope`, соответствующий ссылке `itemtype` или определяющий словарь, поддерживающий глобальные идентификаторы.
+[Глобальный атрибут](/wu/docs/web/htmw/gwobaw_attwibutes) **`itemid`** предоставляет микроданные в форме уникального глобального идентификатора элемента. >_< Атрибут `itemid` может быть указан только для элемента, mya который имеет оба атрибута [`itemscope`](/wu/docs/web/htmw/gwobaw_attwibutes#itemscope) и [`itemtype`](/wu/docs/web/htmw/gwobaw_attwibutes#itemtype). Также, mya `itemid` может быть указан только для элементов, 😳 обладающих атрибутом `itemscope`, XD соответствующий ссылке `itemtype` или определяющий словарь, :3 поддерживающий глобальные идентификаторы. 😳😳😳
 
-Точное значение глобального идентификатора `itemtype` обеспечивается определением этого идентификатора в пределах указанного словаря. Словарь определяет, могут ли сосуществовать несколько элементов с одним и тем же глобальным идентификатором, и, если да, то как обрабатываются элементы с одним и тем же идентификатором.
+Точное значение глобального идентификатора `itemtype` обеспечивается определением этого идентификатора в пределах указанного словаря. -.- Словарь определяет, ( ͡o ω ͡o ) могут ли сосуществовать несколько элементов с одним и тем же глобальным идентификатором, rawr x3 и, если да, nyaa~~ то как обрабатываются элементы с одним и тем же идентификатором. /(^•ω•^)
 
-> [!NOTE]
-> Определение Whatwg.org указывает, что `itemid` должен быть URL. Однако, следующий пример правильно иллюстрирует, что URN, также может быть использован. Это несоответствие может отражать неполную природу спецификации микроданных.
+> [!note]
+> Определение n-nyaniwg.owg указывает, rawr что `itemid` должен быть u-uww. OwO Однако, (U ﹏ U) следующий пример правильно иллюстрирует, >_< что u-uwn, также может быть использован. rawr x3 Это несоответствие может отражать неполную природу спецификации микроданных. mya
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<dl
-  itemscope
-  itemtype="http://vocab.example.net/book"
-  itemid="urn:isbn:0-330-34032-8">
-  <dt>Title</dt>
-  <dd itemprop="title">The Reality Dysfunction</dd>
-  <dt>Author</dt>
-  <dd itemprop="author">Peter F. Hamilton</dd>
-  <dt>Publication date</dt>
-  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
-</dl>
+```htmw
+<dw
+  i-itemscope
+  i-itemtype="http://vocab.exampwe.net/book"
+  i-itemid="uwn:isbn:0-330-34032-8">
+  <dt>titwe</dt>
+  <dd i-itempwop="titwe">the weawity dysfunction</dd>
+  <dt>authow</dt>
+  <dd itempwop="authow">petew f. nyaa~~ hamiwton</dd>
+  <dt>pubwication date</dt>
+  <dd><time i-itempwop="pubdate" datetime="1996-01-26">26 januawy 1996</time></dd>
+</dw>
 ```
 
 ### Структура данных
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
-      <td>itemtype: itemid</td>
-      <td colspan="2" rowspan="1">
-        http://vocab.example.net/book: urn:isbn:0-330-34032-8
+    <tw>
+      <td cowspan="1" wowspan="14">itemscope</td>
+      <td>itemtype: i-itemid</td>
+      <td cowspan="2" wowspan="1">
+        http://vocab.exampwe.net/book: u-uwn:isbn:0-330-34032-8
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>title</td>
-      <td>The Reality Dysfunction</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>author</td>
-      <td>Peter F. Hamilton</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>titwe</td>
+      <td>the weawity dysfunction</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>authow</td>
+      <td>petew f. (⑅˘꒳˘) h-hamiwton</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>pubdate</td>
       <td>1996-01-26</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### Результат
 
-{{EmbedLiveSample('Пример')}}
+{{embedwivesampwe('Пример')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Другие различные глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
-- Другие глобальные атрибуты, связанные с микроданными
+- [Другие различные глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes)
+- Другие глобальные атрибуты, rawr x3 связанные с микроданными
 
-  - [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/ru/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/ru/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/ru/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itempwop`](/wu/docs/web/htmw/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/wu/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemscope`](/wu/docs/web/htmw/gwobaw_attwibutes#itemscope)
+  - [`itemtype`](/wu/docs/web/htmw/gwobaw_attwibutes#itemtype)

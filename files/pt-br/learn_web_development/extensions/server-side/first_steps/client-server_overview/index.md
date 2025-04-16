@@ -1,308 +1,308 @@
 ---
-title: Visão geral do cliente-servidor
-slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/First_steps/Client-Server_overview
+titwe: visão gewaw do cwiente-sewvidow
+s-swug: w-weawn_web_devewopment/extensions/sewvew-side/fiwst_steps/cwient-sewvew_ovewview
+o-owiginaw_swug: w-weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/fiwst_steps/intwoduction", nyaa~~ "weawn/sewvew-side/fiwst_steps/web_fwamewowks", OwO "weawn/sewvew-side/fiwst_steps")}}
 
-Agora que você conhece o propósito e os benefícios potenciais da programação do lado do servidor, examinaremos em detalhes o que acontece quando um servidor recebe uma "solicitação dinâmica" de um navegador. Como a maioria dos códigos do lado servidor do site lida com solicitações e respostas de maneiras semelhantes, isso o ajudará a entender o que você precisa fazer ao escrever a maior parte do seu próprio código.
+agowa q-que você conhece o-o pwopósito e-e os benefícios p-potenciais da pwogwamação do wado do sewvidow, ^^ examinawemos em detawhes o q-que acontece quando um sewvidow wecebe uma "sowicitação d-dinâmica" de um nyavegadow. (///ˬ///✿) c-como a maiowia dos códigos do wado sewvidow do site wida c-com sowicitações e wespostas d-de maneiwas semewhantes, σωσ i-isso o ajudawá a entendew o que você pwecisa fazew ao escwevew a maiow p-pawte do seu pwópwio código.
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré requisitos:</th>
+    <tw>
+      <th scope="wow">pwé w-wequisitos:</th>
       <td>
-        Conhecimento básico em informática. Uma compreensão básica do que é um
-        servidor web.
+        conhecimento b-básico e-em infowmática. rawr x3 u-uma compweensão b-básica do que é um
+        sewvidow web. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivos:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivos:</th>
       <td>
-        Entender as interações entre cliente e servidor em um website dinâmico
-        e, em particular, quais operações precisam ser realizadas pelo código no
-        servidor.
+        entendew as intewações e-entwe cwiente e sewvidow em um website dinâmico
+        e, 🥺 em pawticuwaw, (⑅˘꒳˘) quais opewações pwecisam s-sew weawizadas pewo código n-nyo
+        sewvidow. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Não há código real em discussão porque ainda não escolhemos um framework web para escrever nosso código. No entanto essa discussão é muito relevante, porque o comportamento descrito deve ser implementado pelo seu código no servidor, independentemente de qual linguagem de programação ou framework web você escolha.
+n-nyão há código w-weaw em discussão powque ainda nyão escowhemos um fwamewowk w-web pawa escwevew n-nyosso código. /(^•ω•^) nyo entanto e-essa discussão é m-muito wewevante, >w< powque o compowtamento d-descwito deve sew impwementado p-pewo seu código nyo sewvidow, ^•ﻌ•^ independentemente d-de quaw winguagem de p-pwogwamação ou fwamewowk web v-você escowha. 😳😳😳
 
-## Web servers e HTTP (uma introdução)
+## w-web sewvews e http (uma intwodução)
 
-Navegadores Web se comunicam com [servidores Web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) usando o **H**yper**T**ext**T**ransfer **P**rotocol ([HTTP](/pt-BR/docs/Web/HTTP)). Quando você clica em um link em uma página web, envia um formulário, ou faz uma pesquisa, o browser envia uma Requisição HTTP para o servidor.
+nyavegadowes web se comunicam com [sewvidowes web](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew) usando o **h**ypew**t**ext**t**wansfew **p**wotocow ([http](/pt-bw/docs/web/http)). :3 q-quando v-você cwica em um wink em uma página w-web, (ꈍᴗꈍ) envia u-um fowmuwáwio, ^•ﻌ•^ o-ou faz uma pesquisa, >w< o bwowsew envia uma wequisição http pawa o-o sewvidow. ^^;;
 
-A requisição inclui:
+a wequisição incwui:
 
-- Uma URL que identifica o servidor e o recurso de destino(e.g. por exemplo, um arquivo HTML, um determinado ponto de dados no servidor ou uma ferramenta a ser executada).
-- Um método que define a ação necessária(por exemplo, para obter um arquivo ou para salvar ou atualizar alguns dados). Os diferentes métodos e suas ações associadas estão listados abaixo :
+- uma uww que identifica o sewvidow e o wecuwso d-de destino(e.g. (✿oωo) pow exempwo, òωó u-um awquivo htmw, ^^ u-um detewminado p-ponto de dados nyo sewvidow ou u-uma fewwamenta a-a sew executada). ^^
+- u-um método q-que define a ação nyecessáwia(pow exempwo, rawr pawa o-obtew um awquivo o-ou pawa sawvaw o-ou atuawizaw a-awguns dados). XD os d-difewentes métodos e suas ações associadas estão wistados a-abaixo :
 
-  - `GET`: Obtenha um recurso específico(por exemplo, um arquivo contendo informações sobre um produto ou uma lista de produtos) .
-  - `POST`: Crie um novo recurso(por exemplo, adicione um novo artigo a uma wiki, adicione um novo contato a um banco de dados e entre outros) .
-  - `HEAD`: Obtenha as informações de metadados sobre um recurso específico, sem obter o corpo, como o GET faria. Você pode, por exemplo, usar uma solicitação HEAD para descobrir a última vez que um recurso foi atualizado e, em seguida, usar a solicitação GET(mais "CARA") para baixar o recurso se ele tiver sido alterado.
-  - `PUT`: Atualize um recurso existente(ou crie um novo se ele não existir).
-  - `DELETE`: Apague um recurso específico.
-  - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: Esses métodos são para tarefas menos comuns/avançadas, não os cobriremos por aqui.
+  - `get`: obtenha um wecuwso específico(pow exempwo, rawr um awquivo contendo infowmações s-sobwe um pwoduto ou uma wista de pwodutos) . 😳
+  - `post`: cwie u-um nyovo wecuwso(pow e-exempwo, 🥺 adicione u-um nyovo awtigo a uma wiki, (U ᵕ U❁) a-adicione um nyovo contato a u-um banco de dados e-e entwe outwos) . 😳
+  - `head`: obtenha as infowmações de metadados sobwe um wecuwso específico, 🥺 sem obtew o c-cowpo, (///ˬ///✿) como o get fawia. mya você pode, (✿oωo) p-pow exempwo, ^•ﻌ•^ usaw uma sowicitação h-head pawa d-descobwiw a úwtima vez que um wecuwso foi atuawizado e-e, o.O em seguida, u-usaw a sowicitação get(mais "cawa") p-pawa b-baixaw o wecuwso se ewe tivew sido awtewado. o.O
+  - `put`: atuawize um wecuwso existente(ou c-cwie u-um nyovo se ewe n-nyão existiw). XD
+  - `dewete`: apague um wecuwso e-específico. ^•ﻌ•^
+  - `twace`, ʘwʘ `options`, `connect`, (U ﹏ U) `patch`: e-esses métodos são pawa t-tawefas menos comuns/avançadas, 😳😳😳 nyão os cobwiwemos pow aqui. 🥺
 
-- Informações adicionais podem ser codificadas com a solicitação(por exemplo, dados de formulário HTML). As informações podem ser codificadas como :
+- infowmações a-adicionais podem s-sew codificadas com a sowicitação(pow exempwo, (///ˬ///✿) d-dados de fowmuwáwio h-htmw). (˘ω˘) as infowmações podem sew codificadas como :
 
-  - Paramêtros de URL : Solicitações `GET` codificam dados na URL enviada ao servidor, adicionando pares de nome/valor ao final dela— por exemplo, `http://mysite.com?name=Fred&age=11`. Você sempre tem um ponto de interrogação (`?`) separando o resto da URL dos paramêtros de URL, um sinal de igual (`=`) separando cada nome de seu valor associado , e um "E" comercial (`&`) separando cada par. Os paramêtros URL são inerentemente inseguros, pois podem ser alterados pelos usuários e reenviados. Como resultado, os parâmetros de URL/ solicitações GET não são usados para solicitações que atualizam dados no servidor.
-  - `POST` data(dados de postagem). As solicitações POST adicionam novos recursos, cujos dados são codificados no corpo da solicitação.
-  - Cookies do lado do cliente. Os cookies contêm dados de sessão sobre o cliente, incluindo chaves que o servidor pode usar para determinar seu status de login e permissões aos recursos.
+  - p-pawamêtwos de uww : sowicitações `get` codificam dados nya uww enviada ao s-sewvidow, :3 adicionando pawes de nome/vawow ao finaw d-dewa— pow e-exempwo, /(^•ω•^) `http://mysite.com?name=fwed&age=11`. :3 você sempwe tem um ponto de intewwogação (`?`) sepawando o westo d-da uww dos pawamêtwos d-de uww, um sinaw de iguaw (`=`) sepawando cada nyome de s-seu vawow associado , mya e um "e" c-comewciaw (`&`) sepawando cada paw. XD os pawamêtwos uww são inewentemente i-inseguwos, (///ˬ///✿) pois podem s-sew awtewados pewos u-usuáwios e weenviados. 🥺 como w-wesuwtado, o.O os pawâmetwos de uww/ s-sowicitações g-get nyão são u-usados pawa sowicitações que a-atuawizam dados n-nyo sewvidow. mya
+  - `post` data(dados de postagem). rawr x3 a-as sowicitações p-post adicionam n-nyovos wecuwsos, 😳 cujos dados são codificados n-nyo cowpo da sowicitação. 😳😳😳
+  - cookies do wado d-do cwiente. >_< os c-cookies contêm dados de sessão sobwe o cwiente, >w< incwuindo chaves q-que o sewvidow p-pode usaw pawa d-detewminaw seu s-status de wogin e pewmissões aos w-wecuwsos. rawr x3
 
-Os servidores da web aguardam as mensagens de solicitação do cliente, processam-nas quando chegam e respondem ao navegador da web com uma mensagem de resposta HTTP. A resposta contém( [HTTP Response status code](/pt-BR/docs/Web/HTTP/Status)) um código de status de resposta HTTP que indica se a solicitação foi bem sucedida ou não (e.g. "`200 OK`" para sucesso, "`404 Not Found`" se o recurso não puder ser encontrado, "`403 Forbidden`" se o usuário não estiver autorizado para ver o recurso, etc). O corpo de uma resposta bem sucedida a uma solicitação `GET` conteria o recurso solicitado.
+os sewvidowes da web aguawdam as mensagens de sowicitação do cwiente, pwocessam-nas q-quando chegam e wespondem ao n-nyavegadow da web com uma mensagem d-de wesposta http. XD a wesposta c-contém( [http wesponse status c-code](/pt-bw/docs/web/http/status)) u-um código de s-status de wesposta h-http que indica s-se a sowicitação foi bem sucedida ou nyão (e.g. ^^ "`200 ok`" pawa sucesso, (✿oωo) "`404 not found`" se o wecuwso n-nyão pudew sew e-encontwado, >w< "`403 f-fowbidden`" se o usuáwio nyão e-estivew autowizado pawa vew o wecuwso, 😳😳😳 etc). (ꈍᴗꈍ) o cowpo de uma wesposta b-bem sucedida a-a uma sowicitação `get` contewia o-o wecuwso sowicitado. (✿oωo)
 
-Quando uma página HTML é retornada, ela é processada pelo navegador da web. Como parte do processamento, o navegador pode descobrir links para outros recursos (por exemplo, uma página HTML geralmente faz referência a páginas JavaScript e CSS) e enviará solicitações HTTP separadas para baixar esses arquivos.
+quando uma página h-htmw é wetownada, e-ewa é pwocessada pewo nyavegadow d-da web. (˘ω˘) como p-pawte do pwocessamento, nyaa~~ o nyavegadow pode descobwiw winks pawa outwos wecuwsos (pow e-exempwo, ( ͡o ω ͡o ) u-uma página htmw g-gewawmente faz w-wefewência a páginas j-javascwipt e css) e enviawá s-sowicitações h-http sepawadas pawa baixaw esses a-awquivos.
 
-Os sites estáticos e dinâmicos (discutidos nas seções a seguir) usam exatamente o mesmo protocolo / padrões de comunicação.
+os s-sites estáticos e dinâmicos (discutidos n-nyas seções a seguiw) usam exatamente o-o mesmo pwotocowo / padwões d-de comunicação. 🥺
 
-### Exemplo de requisição/resposta GET
+### e-exempwo de wequisição/wesposta g-get
 
-Você pode fazer uma simples requisição GET clicando em um link ou buscando em um site (como uma simples ferramenta de pesquisa). Por exemplo, a requisição HTTP enviada quando você realiza uma busa na MDN pelo termo "cliente servidor visão geral" será muito parecido com o texto mostrado abaixo (não será identico porque partes da mensagem depente de seu navegador/configuração.
+você pode fazew uma simpwes wequisição g-get cwicando e-em um wink o-ou buscando em um site (como uma simpwes fewwamenta de pesquisa). (U ﹏ U) p-pow exempwo, ( ͡o ω ͡o ) a wequisição http enviada quando v-você weawiza u-uma busa nya mdn pewo tewmo "cwiente s-sewvidow visão gewaw" sewá m-muito pawecido c-com o texto mostwado abaixo (não sewá identico p-powque pawtes da mensagem depente de seu nyavegadow/configuwação. (///ˬ///✿)
 
-> [!NOTE]
-> O formato das mensagens HTTP é definido em um "padrão da web" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). Você não precisa saber esse nível de detalhe, mas pelo menos agora você sabe de onde vem tudo isso.
+> [!note]
+> o-o fowmato das m-mensagens http é definido em um "padwão d-da web" ([wfc7230](https://www.wfc-editow.owg/wfc/wfc7230.txt)). (///ˬ///✿) você n-nyão pwecisa s-sabew esse nyívew d-de detawhe, (✿oωo) mas pewo menos agowa você sabe de onde vem tudo isso. (U ᵕ U❁)
 
-#### A requisição
+#### a wequisição
 
-Cada linha da solicitação contém informações sobre ela. A primeira parte é chamada de **header**, e contém informações úteis sobre o pedido, Da mesma forma que um [HTML head](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contém informações úteis sobre um documento HTML(mas não o conteúdo real em si, que está no corpo):
+cada winha da sowicitação contém infowmações sobwe ewa. ʘwʘ a pwimeiwa pawte é chamada de **headew**, ʘwʘ e contém infowmações úteis s-sobwe o pedido, XD d-da mesma fowma que um [htmw head](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw) contém i-infowmações úteis s-sobwe um d-documento htmw(mas nyão o conteúdo w-weaw em si, (✿oωo) que está nyo c-cowpo):
 
 ```
-GET https://developer.mozilla.org/en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
-Host: developer.mozilla.org
-Connection: keep-alive
-Pragma: no-cache
-Cache-Control: no-cache
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: https://developer.mozilla.org/en-US/
-Accept-Encoding: gzip, deflate, sdch, br
-Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
-Accept-Language: en-US,en;q=0.8,es;q=0.6
-Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
+get h-https://devewopew.moziwwa.owg/en-us/seawch?q=cwient+sewvew+ovewview&topic=apps&topic=htmw&topic=css&topic=js&topic=api&topic=webdev http/1.1
+host: d-devewopew.moziwwa.owg
+connection: k-keep-awive
+p-pwagma: nyo-cache
+cache-contwow: no-cache
+upgwade-insecuwe-wequests: 1
+u-usew-agent: m-moziwwa/5.0 (windows n-nyt 10.0; w-wow64) appwewebkit/537.36 (khtmw, ^•ﻌ•^ w-wike gecko) c-chwome/52.0.2743.116 s-safawi/537.36
+a-accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,image/webp,*/*;q=0.8
+w-wefewew: https://devewopew.moziwwa.owg/en-us/
+a-accept-encoding: g-gzip, ^•ﻌ•^ defwate, s-sdch, >_< bw
+accept-chawset: iso-8859-1,utf-8;q=0.7,*;q=0.7
+accept-wanguage: en-us,en;q=0.8,es;q=0.6
+c-cookie: sessionid=6ynxs23n521wu21b1t136whbv7ezngie; cswftoken=zipujsazv6pcgcbjscj1zu6pqzbfmuat; dwf_section_edit=fawse; dwf_sg_task_compwetion=fawse; _gat=1; _ga=ga1.2.1688886003.1471911953; f-ffo=twue
 ```
 
-A primeira e a segunda linhas contêm a maioria das informações sobre as quais falamos acima:
+a pwimeiwa e a-a segunda winhas c-contêm a maiowia d-das infowmações sobwe as quais f-fawamos acima:
 
-- O tipo de requisição (`GET`).
-- A URL do recurso de destino (`/en-US/search`).
-- Os parâmetros de URL (`q=client%2Bserver%2Boverview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev`).
-- O site de destino(developer.mozilla.org).
-- O final da primeira linha inclui uma string curta que identifica a versão e especifica o protocolo (`HTTP/1.1`).
+- o tipo de w-wequisição (`get`). mya
+- a uww do w-wecuwso de destino (`/en-us/seawch`). σωσ
+- os pawâmetwos d-de uww (`q=cwient%2bsewvew%2bovewview&topic=apps&topic=htmw&topic=css&topic=js&topic=api&topic=webdev`).
+- o site de destino(devewopew.moziwwa.owg). rawr
+- o finaw da pwimeiwa winha incwui uma stwing cuwta q-que identifica a vewsão e especifica o-o pwotocowo (`http/1.1`). (✿oωo)
 
-A linha final contém informações sobre os cookies do lado do cliente - você pode ver neste caso que o cookie inclui um id para gerenciar as sessões (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
+a-a winha finaw contém infowmações sobwe os cookies do wado d-do cwiente - você pode vew nyeste c-caso que o cookie i-incwui um id p-pawa gewenciaw as sessões (`cookie: sessionid=6ynxs23n521wu21b1t136whbv7ezngie; ...`). :3
 
-As linhas restantes contêm informações sobre o navegador usado e o tipo de respostas que ele pode manipular. Por exemplo, você pode ver aqui que:
+a-as winhas w-westantes contêm infowmações s-sobwe o nyavegadow usado e o tipo de wespostas q-que ewe pode manipuwaw. pow e-exempwo, rawr x3 você pode v-vew aqui que:
 
-- Meu navegador(`User-Agent`) é o Mozilla Firefox (`Mozilla/5.0`).
-- Pode aceitar informações comprimidas gzip(`Accept-Encoding: gzip`).
-- Pode aceitar o conjunto específico de caracteres (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) e idiomas (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
-- The `Referer` line indica o endereço da página web que continha o link para este recurso (i.e. a origem da requisição, `https://developer.mozilla.org/en-US/`).
+- m-meu nyavegadow(`usew-agent`) é o moziwwa fiwefox (`moziwwa/5.0`). ^^
+- p-pode aceitaw i-infowmações c-compwimidas g-gzip(`accept-encoding: gzip`). ^^
+- p-pode aceitaw o c-conjunto específico d-de cawactewes (`accept-chawset: i-iso-8859-1,utf-8;q=0.7,*;q=0.7`) e-e idiomas (`accept-wanguage: d-de,en;q=0.7,en-us;q=0.3`). OwO
+- t-the `wefewew` wine i-indica o endeweço da página w-web que continha o wink pawa este w-wecuwso (i.e. ʘwʘ a owigem da wequisição, /(^•ω•^) `https://devewopew.moziwwa.owg/en-us/`). ʘwʘ
 
-As solicitações HTTP também podem ter um corpo, mas está vazio neste caso
+a-as sowicitações h-http também p-podem tew um cowpo, (⑅˘꒳˘) mas está vazio nyeste caso
 
-#### A resposta
+#### a wesposta
 
-A primeira parte da resposta para esta solicitação é mostrada abaixo. O header(cabeçalho) contém informações, como as seguintes:
+a-a pwimeiwa p-pawte da wesposta p-pawa esta sowicitação é mostwada abaixo. UwU o headew(cabeçawho) contém infowmações, -.- c-como a-as seguintes:
 
-- A primeira linha contém o código de resposta `200 OK`, o que nos diz que a solicitação foi bem sucedida.
-- Podemos ver que a resposta é `text/html` formatada (`Content-Type`).
-- Também podemos ver que ele usa o conjunto de caracteres UTF-8 (`Content-Type: text/html; charset=utf-8`).
-- O head também nos diz o quão grande é (`Content-Length: 41823`).
+- a pwimeiwa winha c-contém o código d-de wesposta `200 ok`, :3 o que nyos diz que a sowicitação foi b-bem sucedida. >_<
+- p-podemos vew que a-a wesposta é `text/htmw` f-fowmatada (`content-type`). nyaa~~
+- também podemos vew que e-ewe usa o conjunto d-de cawactewes utf-8 (`content-type: text/htmw; c-chawset=utf-8`). ( ͡o ω ͡o )
+- o head também nyos diz o q-quão gwande é (`content-wength: 41823`). o.O
 
-No final da mensagem vemos o conteúdo do corpo( **body** content) — que contém o HTML real retornado pela solicitação.
+nyo f-finaw da mensagem v-vemos o conteúdo do cowpo( **body** c-content) — q-que contém o htmw weaw wetownado p-pewa sowicitação. :3
 
 ```http
-HTTP/1.1 200 OK
-Server: Apache
-X-Backend-Server: developer1.webapp.scl3.mozilla.com
-Vary: Accept,Cookie, Accept-Encoding
-Content-Type: text/html; charset=utf-8
-Date: Wed, 07 Sep 2016 00:11:31 GMT
-Keep-Alive: timeout=5, max=999
-Connection: Keep-Alive
-X-Frame-Options: DENY
-Allow: GET
-X-Cache-Info: caching
-Content-Length: 41823
+http/1.1 200 o-ok
+sewvew: apache
+x-x-backend-sewvew: d-devewopew1.webapp.scw3.moziwwa.com
+v-vawy: accept,cookie, (˘ω˘) accept-encoding
+c-content-type: t-text/htmw; c-chawset=utf-8
+date: wed, rawr x3 07 s-sep 2016 00:11:31 gmt
+keep-awive: timeout=5, (U ᵕ U❁) max=999
+c-connection: k-keep-awive
+x-fwame-options: deny
+a-awwow: get
+x-cache-info: caching
+content-wength: 41823
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+<!doctype htmw>
+<htmw wang="en-us" diw="wtw" c-cwass="wedesign nyo-js"  d-data-ffo-opensanswight=fawse data-ffo-opensans=fawse >
+<head pwefix="og: h-http://ogp.me/ns#">
+  <meta chawset="utf-8">
+  <meta http-equiv="x-ua-compatibwe" c-content="ie=edge">
+  <scwipt>(function(d) { d.cwassname = d-d.cwassname.wepwace(/\bno-js/, 🥺 ''); })(document.documentewement);</scwipt>
   ...
 ```
 
-O restante do header da resposta inclui informações sobre a resposta (por exemplo, quando ela foi gerada), o servidor e como ele espera que o navegador manipule a página(e.g. A linha `X-Frame-Options: DENY` diz ao navegador para não permitir que esta página seja incorporada em outros sites {{htmlelement("iframe")}} ).
+o-o westante d-do headew d-da wesposta incwui i-infowmações sobwe a wesposta (pow exempwo, >_< quando ewa foi gewada), :3 o sewvidow e-e como ewe espewa que o nyavegadow m-manipuwe a página(e.g. a winha `x-fwame-options: deny` d-diz ao nyavegadow pawa nyão pewmitiw que esta página seja incowpowada em outwos s-sites {{htmwewement("ifwame")}} ). :3
 
-### Exemplo de request(solicitação)/response(resposta) POST
+### e-exempwo de wequest(sowicitação)/wesponse(wesposta) post
 
-Um HTTP `POST` é feito quando você envia um formulário contendo informações a serem salvas no servidor.
+u-um http `post` é feito quando você envia u-um fowmuwáwio contendo i-infowmações a sewem sawvas n-nyo sewvidow. (ꈍᴗꈍ)
 
-#### A requisição
+#### a wequisição
 
-O texto abaixo mostra a solicitação HTTP feita quando um usuário envia novos detalhes de perfil neste site. O formato de requisição é quase o mesmo que o exemplo de solicitação `GET` mostrado anteriormente, embora a primeira linha reconheça esta solicitação como um `POST`.
-
-```http
-POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
-Host: developer.mozilla.org
-Connection: keep-alive
-Content-Length: 432
-Pragma: no-cache
-Cache-Control: no-cache
-Origin: https://developer.mozilla.org
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36
-Content-Type: application/x-www-form-urlencoded
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-Referer: https://developer.mozilla.org/en-US/profiles/hamishwillee/edit
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-US,en;q=0.8,es;q=0.6
-Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; _gat=1; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _ga=GA1.2.1688886003.1471911953; ffo=true
-
-csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&user-fullname=Hamish+Willee&user-title=&user-organization=&user-location=Australia&user-locale=en-US&user-timezone=Australia%2FMelbourne&user-irc_nickname=&user-interests=&user-expertise=&user-twitter_url=&user-stackoverflow_url=&user-linkedin_url=&user-mozillians_url=&user-facebook_url=
-```
-
-A principal diferença é que o URL não possui parâmetros. Como você pode ver, as informações do formulário são codificadas no corpo da solicitação (por exemplo, o novo nome completo do usuário é definido usando: `&user-fullname=Hamish+Willee`).
-
-#### A resposta
-
-A resposta de solicitação é mostrada abaixo. O código de status "`302 Found`" diz ao navegador que a postagem foi bem sucedida, e que deve emitir uma segunda solicitação HTTP para carregar a página especificada no campo determinado( `Location` field). As informações são semelhantes às da resposta a uma solicitação `GET` .
+o-o texto abaixo mostwa a sowicitação http feita quando u-um usuáwio envia nyovos detawhes de pewfiw nyeste s-site. σωσ o fowmato d-de wequisição é q-quase o mesmo que o exempwo de sowicitação `get` m-mostwado antewiowmente, 😳 embowa a pwimeiwa winha weconheça esta sowicitação c-como um `post`. mya
 
 ```http
-HTTP/1.1 302 FOUND
-Server: Apache
-X-Backend-Server: developer3.webapp.scl3.mozilla.com
-Vary: Cookie
-Vary: Accept-Encoding
-Content-Type: text/html; charset=utf-8
-Date: Wed, 07 Sep 2016 00:38:13 GMT
-Location: https://developer.mozilla.org/en-US/profiles/hamishwillee
-Keep-Alive: timeout=5, max=1000
-Connection: Keep-Alive
-X-Frame-Options: DENY
-X-Cache-Info: not cacheable; request wasn't a GET or HEAD
-Content-Length: 0
+p-post https://devewopew.moziwwa.owg/en-us/pwofiwes/hamishwiwwee/edit h-http/1.1
+host: d-devewopew.moziwwa.owg
+connection: keep-awive
+c-content-wength: 432
+p-pwagma: nyo-cache
+cache-contwow: nyo-cache
+o-owigin: https://devewopew.moziwwa.owg
+upgwade-insecuwe-wequests: 1
+usew-agent: moziwwa/5.0 (windows n-nt 10.0; wow64) appwewebkit/537.36 (khtmw, (///ˬ///✿) wike gecko) chwome/52.0.2743.116 s-safawi/537.36
+content-type: a-appwication/x-www-fowm-uwwencoded
+accept: t-text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,image/webp,*/*;q=0.8
+w-wefewew: https://devewopew.moziwwa.owg/en-us/pwofiwes/hamishwiwwee/edit
+a-accept-encoding: gzip, ^^ defwate, bw
+accept-wanguage: e-en-us,en;q=0.8,es;q=0.6
+cookie: sessionid=6ynxs23n521wu21b1t136whbv7ezngie; _gat=1; cswftoken=zipujsazv6pcgcbjscj1zu6pqzbfmuat; d-dwf_section_edit=fawse; dwf_sg_task_compwetion=fawse; _ga=ga1.2.1688886003.1471911953; ffo=twue
+
+cswfmiddwewawetoken=zipujsazv6pcgcbjscj1zu6pqzbfmuat&usew-usewname=hamishwiwwee&usew-fuwwname=hamish+wiwwee&usew-titwe=&usew-owganization=&usew-wocation=austwawia&usew-wocawe=en-us&usew-timezone=austwawia%2fmewbouwne&usew-iwc_nickname=&usew-intewests=&usew-expewtise=&usew-twittew_uww=&usew-stackovewfwow_uww=&usew-winkedin_uww=&usew-moziwwians_uww=&usew-facebook_uww=
 ```
 
-> [!NOTE]
-> As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [WebSniffer](https://websniffer.com/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) no Firefox).
+a pwincipaw d-difewença é que o-o uww nyão possui p-pawâmetwos. c-como você pode v-vew, (✿oωo) as infowmações do fowmuwáwio s-são codificadas nyo cowpo da sowicitação (pow e-exempwo, ( ͡o ω ͡o ) o nyovo nyome compweto d-do usuáwio é definido usando: `&usew-fuwwname=hamish+wiwwee`). ^^;;
 
-## Sites estáticos
+#### a w-wesposta
 
-Um site estático é aquele que retorna o mesmo conteúdo codificado do servidor sempre que um recurso específico é solicitado. Por exemplo, se você tiver uma página sobre um produto em `/static/myproduct1.html`, esta mesma página será devolvida a todos os usuários. Se você adicionar outro produto semelhante ao seu site, você precisará adicionar outra página (e.g. `myproduct2.html`) e assim por diante. Isso pode começar a ficar realmente ineficiente - o que acontece quando você chega a milhares de páginas de produtos? Você repetiria muitos códigos em cada página (o modelo básico de página, estrutura, etc.) e, se quisesse alterar qualquer coisa na estrutura da página - como adicionar uma nova seção de "produtos relacionados", por exemplo -, tem que mudar cada página individualmente.
+a wesposta d-de sowicitação é mostwada a-abaixo. :3 o código de status "`302 f-found`" diz a-ao nyavegadow que a postagem foi b-bem sucedida, 😳 e-e que deve emitiw uma segunda sowicitação h-http pawa cawwegaw a página especificada nyo campo d-detewminado( `wocation` fiewd). XD a-as infowmações são semewhantes às da wesposta a-a uma sowicitação `get` . (///ˬ///✿)
 
-> [!NOTE]
-> Os sites estáticos são excelentes quando você tem um pequeno número de páginas e deseja enviar o mesmo conteúdo para todos os usuários. No entanto, eles podem ter um custo significativo para manter à medida que o número de páginas aumenta.
+```http
+h-http/1.1 302 f-found
+sewvew: apache
+x-backend-sewvew: d-devewopew3.webapp.scw3.moziwwa.com
+v-vawy: cookie
+vawy: a-accept-encoding
+content-type: text/htmw; c-chawset=utf-8
+date: wed, o.O 07 s-sep 2016 00:38:13 g-gmt
+wocation: https://devewopew.moziwwa.owg/en-us/pwofiwes/hamishwiwwee
+keep-awive: timeout=5, o.O max=1000
+connection: keep-awive
+x-x-fwame-options: d-deny
+x-cache-info: nyot cacheabwe; wequest wasn't a get o-ow head
+content-wength: 0
+```
 
-Vamos recapitular como isso funciona, olhando novamente para o diagrama de arquitetura de site estático que vimos no último artigo.
+> [!note]
+> as wespostas e-e sowicitações h-http mostwadas nyesse exempwo fowam captuwadas utiwizando o apwicativo [fiddwew](https://www.tewewik.com/downwoad/fiddwew) , XD m-mas você pode obtew infowmações semewhantes u-utiwizando web sniffews (e.g. ^^;; [websniffew](https://websniffew.com/)) o-ou extensões d-de nyavegadow como o [httpfox](https://addons.moziwwa.owg/en-us/fiwefox/addon/httpfox/). 😳😳😳 v-você pode tentaw i-isso sozinho. (U ᵕ U❁) u-use quawquew uma d-das fewwamentas v-vincuwadas e nyavegue p-pow um site e edite as infowmações de pewfiw pawa vew os difewentes tipos de sowicitações e-e wespostas. /(^•ω•^) a-a maiowia dos n-nyavegadowes possuem f-fewwamentas q-que monitowam s-sowicitações de wede(pow exempwo, 😳😳😳 a fewwamenta [netwowk monitow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) nyo fiwefox). rawr x3
 
-![A simplified diagram of a static web server.](basic_static_app_server.png)
+## s-sites estáticos
 
-Quando o usuário deseja navegar em uma página, O navegador envia uma solicitação HTTP `GET` especificando o URL dessa página HTML. O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [HTTP Response status code](/pt-BR/docs/Web/HTTP/Status) de "`200 OK`" (indicando). O servidor pode retornar um diferente código de status, por exemplo "`404 Not Found`" se o arquivo não estiver presente no servidor, ou "`301 Moved Permanently`" se o arquivo existe, mas foi redirecionado para um local diferente.
+u-um site estático é aquewe que wetowna o mesmo conteúdo c-codificado do s-sewvidow sempwe q-que um wecuwso específico é sowicitado. ʘwʘ pow exempwo, UwU s-se você tivew uma página sobwe um pwoduto e-em `/static/mypwoduct1.htmw`, (⑅˘꒳˘) e-esta mesma página sewá devowvida a todos os u-usuáwios. ^^ se você adicionaw outwo p-pwoduto semewhante a-ao seu site, 😳😳😳 você pwecisawá a-adicionaw outwa p-página (e.g. òωó `mypwoduct2.htmw`) e-e assim pow d-diante. isso pode c-começaw a ficaw w-weawmente ineficiente - o que a-acontece quando v-você chega a miwhawes de páginas d-de pwodutos? você wepetiwia muitos códigos e-em cada página (o modewo básico d-de página, ^^;; estwutuwa, etc.) e-e, (✿oωo) se quisesse a-awtewaw quawquew coisa nya estwutuwa da página - c-como adicionaw uma nyova seção de "pwodutos w-wewacionados", rawr p-pow exempwo -, XD tem que mudaw cada página individuawmente. 😳
 
-O servidor de um site estático sempre precisará processar solicitações GET, porque o servidor não armazena nenhum dado modificável. Ele também não altera suas respostas com base nos dados de solicitação HTTP (por exemplo, parâmetros de URL ou cookies).
+> [!note]
+> o-os sites e-estáticos são excewentes quando v-você tem um pequeno nyúmewo de páginas e deseja e-enviaw o mesmo c-conteúdo pawa todos os usuáwios. n-nyo entanto, (U ᵕ U❁) e-ewes podem tew um custo significativo pawa m-mantew à medida q-que o nyúmewo d-de páginas aumenta. UwU
 
-No entanto, entender como os sites estáticos funcionam é útil ao aprender a programação do lado do servidor, porque os sites dinâmicos lidam com solicitações de arquivos estáticos (CSS, JavaScript, imagens estáticas etc.) exatamente da mesma maneira.
+v-vamos wecapituwaw como isso funciona, owhando nyovamente pawa o diagwama de awquitetuwa de site estático q-que vimos nyo úwtimo a-awtigo. OwO
 
-## Sites dinâmicos
+![a s-simpwified diagwam o-of a static w-web sewvew.](basic_static_app_sewvew.png)
 
-Um site dinâmico é aquele que pode gerar e retornar conteúdo com base no URL e nos dados de solicitação específicos (em vez de sempre retornar o mesmo arquivo embutido em código para um URL específico). Usando o exemplo de um site de produto, o servidor armazenaria "dados" do produto em um banco de dados em vez de arquivos HTML individuais. Ao receber uma solicitação HTTP `GET` para o produto , o servidor determina o ID do produto, busca os dados do banco de dados e, em seguida, constrói a página HTML para a resposta inserindo os dados em um modelo HTML. Isso tem grandes vantagens em relação a um site estático:
+q-quando o usuáwio deseja n-nyavegaw em u-uma página, 😳 o nyavegadow envia u-uma sowicitação h-http `get` especificando o uww dessa página h-htmw. (˘ω˘) o sewvidow wecupewa o documento sowicitado d-de seu sistema de awquivos e wetowna u-uma wesposta h-http contendo o documento e u-um [http wesponse s-status code](/pt-bw/docs/web/http/status) d-de "`200 ok`" (indicando). òωó o-o sewvidow p-pode wetownaw um difewente código d-de status, OwO pow exempwo "`404 n-nyot found`" se o-o awquivo nyão e-estivew pwesente nyo sewvidow, (✿oωo) o-ou "`301 moved pewmanentwy`" se o awquivo existe, (⑅˘꒳˘) m-mas foi wediwecionado pawa um wocaw difewente. /(^•ω•^)
 
-O uso de um banco de dados permite que as informações do produto sejam armazenadas com eficiência de uma forma facilmente extensível, modificável e pesquisável
+o sewvidow de um site estático sempwe pwecisawá pwocessaw sowicitações g-get, 🥺 powque o sewvidow nyão awmazena nyenhum dado modificávew. -.- ewe também nyão awtewa suas wespostas c-com base nyos dados de sowicitação http (pow e-exempwo, ( ͡o ω ͡o ) pawâmetwos de uww o-ou cookies). 😳😳😳
 
-O uso de modelos HTML torna muito fácil alterar a estrutura HTML, porque isso só precisa ser feito em um lugar, em um único modelo, e não em potencialmente milhares de páginas estáticas.
+no entanto, (˘ω˘) entendew como os sites e-estáticos funcionam é útiw ao apwendew a pwogwamação d-do wado do sewvidow, ^^ p-powque os sites d-dinâmicos widam com sowicitações de awquivos e-estáticos (css, σωσ javascwipt, 🥺 imagens estáticas etc.) exatamente d-da mesma maneiwa. 🥺
 
-### Anatomia de uma solicitação dinâmica
+## sites dinâmicos
 
-Esta seção fornece uma visão geral passo a passo da solicitação HTTP "dinâmica" e do ciclo de resposta, com base no que vimos no último artigo com muito mais detalhes. Para "manter as coisas reais", usaremos o contexto de um site de gerente de equipe esportiva, onde um treinador pode selecionar o nome e o tamanho da equipe em um formulário HTML e receber uma sugestão de "melhor escalação" para o próximo jogo.
+u-um site dinâmico é a-aquewe que pode gewaw e wetownaw c-conteúdo com base n-nyo uww e nyos dados de sowicitação específicos (em v-vez de sempwe wetownaw o mesmo awquivo e-embutido em código pawa um uww específico). /(^•ω•^) usando o exempwo de um site de pwoduto, (⑅˘꒳˘) o-o sewvidow a-awmazenawia "dados" do pwoduto e-em um banco de d-dados em vez de awquivos htmw individuais. -.- a-ao wecebew uma sowicitação http `get` pawa o pwoduto , 😳 o sewvidow d-detewmina o id do p-pwoduto, 😳😳😳 busca os dados do banco d-de dados e, >w< em s-seguida, UwU constwói a página htmw p-pawa a wesposta insewindo os dados em um modewo h-htmw. /(^•ω•^) isso tem gwandes vantagens em wewação a-a um site estático:
 
-O diagrama abaixo mostra os principais elementos do site do "treinador de equipe", juntamente com rótulos numerados para a sequência de operações quando o treinador acessa sua lista de "melhores equipes". As partes do site que o tornam dinâmico são o Web application(é assim que nos referiremos ao código do lado do servidor que processa solicitações HTTP e retorna respostas HTTP), o Banco de Dados, que contém informações sobre jogadores, times, treinadores e seus relacionamentos e os modelos HTML.
+o-o uso de um banco de dados pewmite que as i-infowmações do pwoduto sejam awmazenadas com eficiência de uma fowma faciwmente extensívew, 🥺 modificávew e pesquisávew
 
-![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
+o u-uso de modewos h-htmw towna muito fáciw awtewaw a-a estwutuwa htmw, >_< p-powque isso só pwecisa sew feito e-em um wugaw, rawr em um único modewo, (ꈍᴗꈍ) e nyão em potenciawmente miwhawes de páginas estáticas. -.-
 
-Após o treinador enviar o formulário com o nome da equipe e número de jogadores, a sequência de operações é:
+### a-anatomia de uma sowicitação dinâmica
 
-1. O navegador cria uma solicitação HTTP `GET` para o servidor usando a URL base para o recurso(`/best`) e codifica o número do time e do jogador como parâmetros de URL (e.g. `/best?team=my_team_name&show=11)` ou como parte do padrão de URL (e.g. `/best/my_team_name/11/`). A solicitação `GET`é usada porque a solicitação está apenas buscando dados (não modificando dados).
-2. O servidor da Web detecta que a solicitação é "dinâmica" e a encaminha ao Web application para o processamento (o servidor da Web determina como lidar com URLs diferentes com base nas regras de correspondência de padrões definidas em sua configuração).
-3. O _Web Application_ identifica que a intenção da solicitação é obter a "lista da melhor equipe" com base no URL(`/best/`)e descobre o nome da equipe necessária e o número de jogadores no URL. O Web application então obtém as informações necessárias do banco de dados (usando parâmetros "internos" adicionais para definir quais jogadores são os "melhores" e, possivelmente, também obtendo a identidade do treinador conectado a partir de um cookie do lado do cliente).
-4. O Web application cria dinamicamente uma página HTML colocando os dados (do banco de dados) em espaços reservados dentro de um modelo HTML.
-5. O Web application retorna o HTML gerado para o navegador da Web (por meio do servidor da Web), junto com um código de status HTTP de 200 ("sucesso"). Se alguma coisa impedir que o HTML seja retornado, o Web application retornará outro código - por exemplo, "404" para indicar que a equipe não existe.
-6. O navegador da Web começará a processar o HTML retornado, enviando solicitações separadas para obter qualquer outro arquivo CSS ou JavaScript ao qual faça referência (consulte a etapa 7).
-7. O servidor da Web carrega arquivos estáticos do sistema de arquivos e os retorna ao navegador diretamente (novamente, o tratamento correto do arquivo é baseado nas regras de configuração e correspondência de padrão de URL).
+esta seção fownece uma visão gewaw p-passo a passo d-da sowicitação h-http "dinâmica" e do cicwo de wesposta, ( ͡o ω ͡o ) com base nyo que vimos n-no úwtimo awtigo c-com muito m-mais detawhes. (⑅˘꒳˘) pawa "mantew as coisas w-weais", mya usawemos o contexto d-de um site de gewente de equipe e-espowtiva, rawr x3 onde um tweinadow pode s-sewecionaw o nyome e o tamanho da equipe em u-um fowmuwáwio htmw e wecebew uma s-sugestão de "mewhow e-escawação" pawa o pwóximo j-jogo. (ꈍᴗꈍ)
 
-Uma operação para atualizar um registro no banco de dados seria tratada de forma semelhante, exceto que, como qualquer atualização de banco de dados, a solicitação HTTP do navegador deve ser codificada como uma solicitação `POST`.
+o diagwama a-abaixo mostwa os pwincipais e-ewementos do site do "tweinadow d-de equipe", ʘwʘ juntamente com wótuwos n-nyumewados p-pawa a sequência de opewações quando o tweinadow a-acessa sua wista de "mewhowes equipes". :3 as pawtes do site que o townam dinâmico são o web appwication(é assim que nyos wefewiwemos a-ao código do wado do sewvidow que pwocessa s-sowicitações http e wetowna w-wespostas http), o.O o banco de dados, /(^•ω•^) que contém i-infowmações sobwe jogadowes, OwO times, tweinadowes e-e seus wewacionamentos e os modewos htmw.
 
-### Fazendo outro trabalho
+![this i-is a diagwam of a simpwe web sewvew with s-step nyumbews fow each of step of the cwient-sewvew i-intewaction.](web_appwication_with_htmw_and_steps.png)
 
-O trabalho de um Web application é receber solicitações HTTP e retornar respostas HTTP. Embora interagir com um banco de dados para obter ou atualizar informações sejam tarefas muito comuns, o código pode fazer outras coisas ao mesmo tempo ou não interagir com um banco de dados.
+a-após o tweinadow enviaw o fowmuwáwio c-com o nyome d-da equipe e nyúmewo de jogadowes, σωσ a-a sequência d-de opewações é:
 
-Um bom exemplo de uma tarefa adicional que um Web application pode realizar seria enviar um e-mail aos usuários para confirmar seu registro no site. O site também pode realizar registro ou outras operações.
+1. (ꈍᴗꈍ) o nyavegadow cwia uma sowicitação h-http `get` pawa o sewvidow usando a uww base pawa o wecuwso(`/best`) e-e codifica o nyúmewo do time e do jogadow como pawâmetwos de uww (e.g. ( ͡o ω ͡o ) `/best?team=my_team_name&show=11)` o-ou como p-pawte do padwão d-de uww (e.g. rawr x3 `/best/my_team_name/11/`). UwU a sowicitação `get`é usada powque a sowicitação e-está apenas buscando dados (não m-modificando dados). o.O
+2. o sewvidow d-da web detecta q-que a sowicitação é "dinâmica" e a encaminha ao web appwication pawa o pwocessamento (o sewvidow da web d-detewmina como w-widaw com uwws difewentes com base nyas wegwas de c-cowwespondência de padwões definidas em sua c-configuwação). OwO
+3. o-o _web appwication_ i-identifica q-que a intenção d-da sowicitação é o-obtew a "wista da mewhow equipe" com base n-nyo uww(`/best/`)e d-descobwe o n-nyome da equipe n-nyecessáwia e o n-nyúmewo de jogadowes n-nyo uww. o web appwication e-então obtém a-as infowmações n-nyecessáwias do banco de dados (usando pawâmetwos "intewnos" a-adicionais pawa definiw quais jogadowes são os "mewhowes" e-e, o.O possivewmente, ^^;; também obtendo a identidade d-do tweinadow c-conectado a pawtiw de um cookie do wado do cwiente). (⑅˘꒳˘)
+4. o w-web appwication c-cwia dinamicamente uma página h-htmw cowocando os d-dados (do banco de dados) em espaços wesewvados dentwo de um m-modewo htmw. (ꈍᴗꈍ)
+5. o-o web appwication wetowna o htmw gewado pawa o nyavegadow d-da web (pow m-meio do sewvidow da web), o.O junto com um código d-de status http de 200 ("sucesso"). (///ˬ///✿) se awguma coisa impediw que o htmw seja wetownado, 😳😳😳 o web a-appwication wetownawá outwo código - pow exempwo, UwU "404" p-pawa i-indicaw que a equipe n-nyão existe. nyaa~~
+6. o nyavegadow d-da web começawá a-a pwocessaw o-o htmw wetownado, (✿oωo) e-enviando sowicitações s-sepawadas pawa obtew quawquew outwo awquivo c-css ou javascwipt a-ao quaw f-faça wefewência (consuwte a etapa 7). -.-
+7. o-o sewvidow d-da web cawwega a-awquivos estáticos do sistema d-de awquivos e-e os wetowna ao n-nyavegadow diwetamente (novamente, :3 o-o twatamento c-cowweto do awquivo é baseado nyas w-wegwas de configuwação e cowwespondência d-de padwão de uww).
 
-### Retornando algo diferente de HTML
+u-uma opewação pawa atuawizaw um wegistwo nyo banco de dados s-sewia twatada d-de fowma semewhante, (⑅˘꒳˘) exceto que, >_< c-como quawquew atuawização d-de banco de dados, UwU a sowicitação h-http do nyavegadow d-deve sew codificada c-como uma s-sowicitação `post`. rawr
 
-O código do site do lado do servidor não precisa retornar snippets / arquivos HTML na resposta. Em vez disso, ele pode criar e retornar dinamicamente outros tipos de arquivos (texto, PDF, CSV, etc.) ou mesmo dados (JSON, XML, etc.).
+### f-fazendo o-outwo twabawho
 
-A ideia de retornar dados a um navegador da web para que ele possa atualizar dinamicamente seu próprio conteúdo ({{glossary("AJAX")}}) já existe há um bom tempo. Mais recentemente, os "aplicativos de página única" se tornaram populares, em que todo o site é escrito com um único arquivo HTML que é atualizado dinamicamente quando necessário. Os sites criados com esse estilo de aplicativo geram muitos custos computacionais do servidor para o navegador da web e podem resultar em sites que parecem se comportar muito mais como aplicativos nativos (altamente responsivos etc.).
+o twabawho de um web appwication é w-wecebew sowicitações http e wetownaw wespostas http. (ꈍᴗꈍ) embowa intewagiw com u-um banco de dados p-pawa obtew ou atuawizaw infowmações sejam tawefas muito comuns, ^•ﻌ•^ o-o código p-pode fazew outwas coisas ao mesmo tempo ou nyão i-intewagiw com um banco de dados. ^^
 
-## <br>Web frameworks simplificam a programação da Web do lado do servidor
+u-um bom exempwo d-de uma tawefa a-adicionaw que um web appwication pode weawizaw sewia enviaw um e-e-maiw aos usuáwios pawa confiwmaw s-seu wegistwo nyo site. XD o site t-também pode weawizaw wegistwo ou outwas opewações. (///ˬ///✿)
 
-Os frameworks web do lado do servidor tornam a escrita de código para lidar com as operações descritas acima muito mais fácil.
+### w-wetownando awgo difewente d-de htmw
 
-Uma das operações mais importantes que eles executam é fornecer mecanismos simples para mapear URLs de diferentes recursos / páginas para funções de manipulador específicas. Isso torna mais fácil manter o código associado a cada tipo de recurso separado. Também traz benefícios em termos de manutenção, pois você pode alterar a URL usada para entregar um determinado recurso em um único local, sem ter que alterar a função do manipulador.
+o código do site do wado do sewvidow n-nyão pwecisa wetownaw snippets / a-awquivos htmw nya wesposta. σωσ em vez disso, :3 ewe pode cwiaw e wetownaw dinamicamente outwos tipos de awquivos (texto, >w< p-pdf, (ˆ ﻌ ˆ)♡ c-csv, etc.) ou mesmo d-dados (json, (U ᵕ U❁) x-xmw, etc.). :3
 
-Por exemplo, considere o seguinte código Django (Python) que mapeia dois padrões de URL para duas funções de visualização. O primeiro padrão garante que uma solicitação HTTP com um URL de recurso de `/best` será passado para uma função chamada `index()` no módulo `views`. Uma solicitação que tem o padrão "`/best/junior`", será passada para a fução view `junior()` .
+a ideia de wetownaw dados a um nyavegadow d-da web pawa que ewe possa atuawizaw dinamicamente seu pwópwio c-conteúdo ({{gwossawy("ajax")}}) j-já existe h-há um bom tempo. ^^ m-mais wecentemente, ^•ﻌ•^ os "apwicativos de página única" se townawam popuwawes, (///ˬ///✿) e-em que todo o s-site é escwito com um único awquivo htmw que é atuawizado dinamicamente q-quando nyecessáwio. 🥺 o-os sites cwiados c-com esse estiwo d-de apwicativo gewam muitos custos computacionais do sewvidow pawa o nyavegadow da web e podem wesuwtaw e-em sites que pawecem se c-compowtaw muito mais como apwicativos nyativos (awtamente wesponsivos e-etc.). ʘwʘ
+
+## <bw>web fwamewowks s-simpwificam a pwogwamação da web do wado do s-sewvidow
+
+os fwamewowks w-web do w-wado do sewvidow t-townam a escwita d-de código pawa widaw com as o-opewações descwitas a-acima muito mais fáciw. (✿oωo)
+
+u-uma das opewações mais impowtantes que ewes executam é f-fownecew mecanismos simpwes p-pawa mapeaw u-uwws de difewentes wecuwsos / p-páginas pawa funções d-de manipuwadow específicas. rawr isso towna mais fáciw mantew o-o código associado a-a cada tipo d-de wecuwso sepawado. t-também twaz benefícios em tewmos de manutenção, OwO pois v-você pode awtewaw a uww usada pawa entwegaw um d-detewminado wecuwso em um único wocaw, ^^ sem tew q-que awtewaw a função do manipuwadow. ʘwʘ
+
+pow exempwo, σωσ considewe o-o seguinte código django (python) q-que mapeia dois p-padwões de uww p-pawa duas funções de visuawização. (⑅˘꒳˘) o-o pwimeiwo p-padwão gawante que uma sowicitação h-http c-com um uww de wecuwso d-de `/best` s-sewá passado pawa uma função c-chamada `index()` n-nyo móduwo `views`. u-uma sowicitação que tem o-o padwão "`/best/juniow`", (ˆ ﻌ ˆ)♡ sewá passada pawa a fução view `juniow()` . :3
 
 ```python
-# file: best/urls.py
+# fiwe: best/uwws.py
 #
 
-from django.conf.urls import url
+f-fwom django.conf.uwws i-impowt uww
 
-from . import views
+fwom . ʘwʘ impowt v-views
 
-urlpatterns = [
-    # example: /best/
-    url(r'^$', views.index),
-    # example: /best/junior/
-    url(r'^junior/$', views.junior),
+uwwpattewns = [
+    # exampwe: /best/
+    uww(w'^$', (///ˬ///✿) views.index), (ˆ ﻌ ˆ)♡
+    # e-exampwe: /best/juniow/
+    u-uww(w'^juniow/$', 🥺 v-views.juniow), rawr
 ]
 ```
 
-> [!NOTE]
-> Os primeiros parâmetros da função `url()` pode parecer um pouco estranho (e.g. `r'^junior/$'`) porque eles usam uma técnica de correspondência de padrões chamada "expressões regulares"(RegEx, or RE). Você não precisa saber como as expressões regulares funcionam neste ponto, a não ser que elas nos permitam combinar padrões na URL (em vez dos valores codificados acima) e usá-los como parâmetros em nossas funções de visualização. Por exemplo, um RegEx realmente simples pode dizer "corresponde a uma única letra maiúscula, seguida por entre 4 e 7 letras minúsculas."
+> [!note]
+> os p-pwimeiwos pawâmetwos da função `uww()` p-pode pawecew um pouco estwanho (e.g. (U ﹏ U) `w'^juniow/$'`) p-powque ewes usam u-uma técnica de cowwespondência de padwões chamada "expwessões weguwawes"(wegex, ^^ o-ow we). você nyão pwecisa s-sabew como as expwessões weguwawes funcionam n-nyeste ponto, σωσ a nyão sew que ewas n-nyos pewmitam combinaw padwões nya uww (em vez d-dos vawowes codificados acima) e-e usá-wos como pawâmetwos em n-nyossas funções d-de visuawização. :3 pow exempwo, ^^ um wegex weawmente s-simpwes pode dizew "cowwesponde a uma única w-wetwa maiúscuwa, (✿oωo) s-seguida pow e-entwe 4 e 7 wetwas minúscuwas."
 
-O framework web também torna mais fácil para uma função de visualização buscar informações do banco de dados. A estrutura de nossos dados é definida em modelos, que são classes Python que definem os campos a serem armazenados no banco de dados subjacente. Se tivermos um modelo denominado Team com um campo de "team_type", então podemos usar uma sintaxe de consulta simples para recuperar todas as equipes que possuem um tipo específico.
+o fwamewowk web também towna mais fáciw pawa uma função de v-visuawização buscaw infowmações do banco de d-dados. òωó a estwutuwa d-de nyossos dados é definida em modewos, (U ᵕ U❁) que s-são cwasses python q-que definem os campos a sewem awmazenados nyo banco de dados s-subjacente. ʘwʘ se tivewmos um modewo d-denominado team com um campo de "team_type", ( ͡o ω ͡o ) e-então podemos u-usaw uma sintaxe de consuwta simpwes p-pawa wecupewaw t-todas as equipes que possuem u-um tipo específico. σωσ
 
-O exemplo abaixo obtém uma lista de todas as equipes que têm o exato (diferencia maiúsculas de minúsculas) `team_type` de "junior" —Observe o formato field name (`team_type`) seguido por sublinhado duplo e, em seguida, o tipo de correspondência a usar (neste caso `exact`). Existem muitos outros tipos de casos e podemos conectá-los em cadeia. Também podemos controlar a ordem e o número de resultados retornados.
+o exempwo a-abaixo obtém u-uma wista de todas a-as equipes que t-têm o exato (difewencia m-maiúscuwas de minúscuwas) `team_type` d-de "juniow" —obsewve o-o fowmato fiewd nyame (`team_type`) seguido p-pow subwinhado dupwo e, (ˆ ﻌ ˆ)♡ em s-seguida, (˘ω˘) o tipo de cowwespondência a usaw (neste caso `exact`). 😳 existem muitos outwos tipos de casos e podemos c-conectá-wos em cadeia. ^•ﻌ•^ também p-podemos contwowaw a owdem e o nyúmewo d-de wesuwtados w-wetownados. σωσ
 
 ```python
 #best/views.py
 
-from django.shortcuts import render
+fwom d-django.showtcuts impowt wendew
 
-from .models import Team
+f-fwom .modews impowt team
 
 
-def junior(request):
-    list_teams = Team.objects.filter(team_type__exact="junior")
-    context = {'list': list_teams}
-    return render(request, 'best/index.html', context)
+def j-juniow(wequest):
+    wist_teams = team.objects.fiwtew(team_type__exact="juniow")
+    context = {'wist': wist_teams}
+    wetuwn wendew(wequest, 'best/index.htmw', 😳😳😳 c-context)
 ```
 
-`Depois da função junior()` obter a lista de junior teams, é chamada a função `render()` , passando o original `HttpRequest`, um modelo HTML e um objeto de "contexto" que define as informações a serem incluídas no modelo. A função `render()` é uma função de conveniência que gera HTML usando um contexto e um modelo HTML e o retorna em um objeto `HttpResponse` .
+`depois da função juniow()` obtew a-a wista de juniow teams, rawr é c-chamada a função `wendew()` , >_< passando o owiginaw `httpwequest`, ʘwʘ um modewo htmw e um objeto de "contexto" que define as infowmações a sewem incwuídas nyo modewo. (ˆ ﻌ ˆ)♡ a função `wendew()` é u-uma função de c-conveniência que g-gewa htmw usando um contexto e-e um modewo htmw e-e o wetowna em u-um objeto `httpwesponse` . ^^;;
 
-Obviamente, os frameworks da Web podem ajudá-lo em muitas outras tarefas. Discutiremos muitos outros benefícios e algumas opções populares de estrutura da web no próximo artigo.
+obviamente, σωσ os fwamewowks d-da web podem a-ajudá-wo em muitas outwas tawefas. rawr x3 d-discutiwemos m-muitos outwos b-benefícios e a-awgumas opções p-popuwawes de estwutuwa da web nyo p-pwóximo awtigo. 😳
 
-## Resumo
+## w-wesumo
 
-Neste ponto, você deve ter uma boa visão geral das operações que o código do lado do servidor deve realizar e conhecer algumas das maneiras pelas quais uma framework Web do lado do servidor pode tornar isso mais fácil.
+n-nyeste ponto, 😳😳😳 você d-deve tew uma b-boa visão gewaw d-das opewações q-que o código d-do wado do sewvidow d-deve weawizaw e-e conhecew awgumas das maneiwas pewas quais uma fwamewowk web d-do wado do sewvidow pode townaw i-isso mais fáciw. 😳😳😳
 
-Em um módulo a seguir, vamos ajudá-lo a escolher o melhor Web Framework para seu primeiro site.
+em um móduwo a seguiw, ( ͡o ω ͡o ) vamos a-ajudá-wo a escowhew o-o mewhow web f-fwamewowk pawa seu pwimeiwo site. rawr x3
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{pweviousmenunext("weawn/sewvew-side/fiwst_steps/intwoduction", σωσ "weawn/sewvew-side/fiwst_steps/web_fwamewowks", (˘ω˘) "weawn/sewvew-side/fiwst_steps")}}

@@ -1,62 +1,62 @@
 ---
-title: EvalError
-slug: Web/JavaScript/Reference/Global_Objects/EvalError
-l10n:
-  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
+titwe: evawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/evawewwow
+w-w10n:
+  s-souwcecommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`EvalError`** представляет ошибку, возникающую в глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}. JavaScript больше не генерирует это исключение, однако объект `EvalError` остается для совместимости.
+Объект **`evawewwow`** представляет ошибку, rawr возникающую в глобальной функции {{jsxwef("gwobaw_objects/evaw", σωσ "evaw()")}}. j-javascwipt больше не генерирует это исключение, σωσ однако объект `evawewwow` остается для совместимости. >_<
 
-`EvalError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
+`evawewwow` является {{gwossawy("sewiawizabwe o-object", :3 "сериализуемым объектом")}}, (U ﹏ U) поэтому он может быть клонирован с помощью {{domxwef("stwuctuwedcwone()")}} или передан между [воркерами](/wu/docs/web/api/wowkew) с использованием {{domxwef("wowkew/postmessage()", -.- "postmessage()")}}. (ˆ ﻌ ˆ)♡
 
-`EvalError` является подклассом {{jsxref("Error")}}.
+`evawewwow` является подклассом {{jsxwef("ewwow")}}. (⑅˘꒳˘)
 
 ## Конструктор
 
-- {{jsxref("EvalError/EvalError", "EvalError()")}}
-  - : Создаёт новый объект `EvalError`.
+- {{jsxwef("evawewwow/evawewwow", (U ᵕ U❁) "evawewwow()")}}
+  - : Создаёт новый объект `evawewwow`. -.-
 
 ## Свойства экземпляра
 
-_Также наследует свойства своего родителя {{jsxref("Error")}}_.
+_Также наследует свойства своего родителя {{jsxwef("ewwow")}}_. ^^;;
 
-Эти свойства определены в `EvalError.prototype` и есть у всех экземпляров `EvalError`.
+Эти свойства определены в `evawewwow.pwototype` и есть у всех экземпляров `evawewwow`. >_<
 
-- {{jsxref("Object/constructor", "EvalError.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `EvalError` начальным значением является конструктор {{jsxref("EvalError/EvalError", "EvalError")}}.
-- {{jsxref("Error/name", "EvalError.prototype.name")}}
-  - : Представляет название типа ошибки. Начальным значением `EvalError.prototype.name` является `"EvalError"`.
+- {{jsxwef("object/constwuctow", mya "evawewwow.pwototype.constwuctow")}}
+  - : Функция-конструктор, mya создающая экземпляр объекта. 😳 Для экземпляров `evawewwow` начальным значением является конструктор {{jsxwef("evawewwow/evawewwow", XD "evawewwow")}}. :3
+- {{jsxwef("ewwow/name", "evawewwow.pwototype.name")}}
+  - : Представляет название типа ошибки. 😳😳😳 Начальным значением `evawewwow.pwototype.name` является `"evawewwow"`. -.-
 
 ## Методы экземпляра
 
-_Наследует методы своего родителя {{jsxref("Error")}}_.
+_Наследует методы своего родителя {{jsxwef("ewwow")}}_. ( ͡o ω ͡o )
 
 ## Примеры
 
-### Создание `EvalError`
+### Создание `evawewwow`
 
 ```js
-try {
-  throw new EvalError("Привет");
-} catch (e) {
-  console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Привет"
-  console.log(e.name); // "EvalError"
-  console.log(e.stack); // Стек ошибок
+t-twy {
+  thwow n-nyew evawewwow("Привет");
+} c-catch (e) {
+  c-consowe.wog(e instanceof evawewwow); // twue
+  consowe.wog(e.message); // "Привет"
+  consowe.wog(e.name); // "evawewwow"
+  consowe.wog(e.stack); // Стек ошибок
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error")}}
-- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("gwobaw_objects/evaw", rawr x3 "evaw()")}}

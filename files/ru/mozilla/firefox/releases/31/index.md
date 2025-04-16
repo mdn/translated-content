@@ -1,67 +1,67 @@
 ---
-title: Firefox 31 for developers
-slug: Mozilla/Firefox/Releases/31
+titwe: fiwefox 31 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/31
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Хотите помочь документировать Firefox 31? См. [список багов, требующих описания](http://beta.elchi3.de/doctracker/#list=fx&version=31.0), и беритесь за дело!
+Хотите помочь документировать f-fiwefox 31? См. 😳😳😳 [список багов, o.O требующих описания](http://beta.ewchi3.de/doctwackew/#wist=fx&vewsion=31.0), ( ͡o ω ͡o ) и беритесь за дело! (U ﹏ U)
 
-## Изменения для Web-разработчиков
+## Изменения для w-web-разработчиков
 
 ### Инструменты разработчика
 
 Важные моменты:
 
-- [«пипетка» для выбора цветов на web-страницах](https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html)
-- [полное отслеживание стека для консольных сообщений об ошибках](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#error_messages)
-- [редактируемое Box Model View](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#box_model_view)
-- [%c-форматирование для стилизации консольных сообщений](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#styling_messages)
-- [команда «copy as cURL» в Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy_as_curl)
-- [клавишные привязки Sublime Text в редакторе источника](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source_editor)
-- [возможность сделать логи Network Monitor персистентными](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network_request_list)
-- [JavaScript-предупреждения включены по умолчанию в Web-консоли](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#javascript_errors_and_warnings)
-- [Alt+клик раскрывает всех потомков узла](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#html_pane_2)
+- [«пипетка» для выбора цветов на w-web-страницах](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/eyedwoppew/index.htmw)
+- [полное отслеживание стека для консольных сообщений об ошибках](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#ewwow_messages)
+- [редактируемое b-box modew v-view](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#box_modew_view)
+- [%c-форматирование для стилизации консольных сообщений](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#stywing_messages)
+- [команда «copy a-as cuww» в n-nyetwowk monitow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw#copy_as_cuww)
+- [клавишные привязки subwime text в редакторе источника](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/keyboawd_showtcuts/index.htmw#souwce_editow)
+- [возможность сделать логи nyetwowk monitow персистентными](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw#netwowk_wequest_wist)
+- [javascwipt-предупреждения включены по умолчанию в w-web-консоли](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#javascwipt_ewwows_and_wawnings)
+- [awt+клик раскрывает всех потомков узла](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#htmw_pane_2)
 
-[Все баги инструментов разработчика, исправленные с Firefox 30 по Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-04-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-17&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox&list_id=10022921).
+[Все баги инструментов разработчика, (///ˬ///✿) исправленные с fiwefox 30 по fiwefox 31](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&cwassification=cwient%20softwawe&chfiewdto=2014-04-28&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-03-17&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20app%20managew&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pwofiwew&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20webgw%20shadew%20editow&pwoduct=fiwefox&wist_id=10022921).
 
-### CSS
+### c-css
 
-- Префикс «var-» у CSS-переменных изменён на «--» ([Firefox bug 985838](https://bugzil.la/985838)).
-- Исправлен нежелательный пробел для кратного 10 000 в корейских стилях счётчика ([Firefox bug 985186](https://bugzil.la/985186)).
-- Исправлены переходы CSS-прозрачности при псевдоклассе родителя :before и значении auto свойства overflow ([Firefox bug 990340](https://bugzil.la/990340)).
-- Псевдоэлемент ::-moz-math-stretchy удалён ([Firefox bug 1000879](https://bugzil.la/1000879)).
+- Префикс «vaw-» у css-переменных изменён на «--» ([fiwefox b-bug 985838](https://bugziw.wa/985838)). >w<
+- Исправлен нежелательный пробел для кратного 10 000 в корейских стилях счётчика ([fiwefox bug 985186](https://bugziw.wa/985186)). rawr
+- Исправлены переходы css-прозрачности при псевдоклассе родителя :befowe и значении auto свойства ovewfwow ([fiwefox b-bug 990340](https://bugziw.wa/990340)). mya
+- Псевдоэлемент ::-moz-math-stwetchy удалён ([fiwefox bug 1000879](https://bugziw.wa/1000879)). ^^
 
-### HTML
+### h-htmw
 
-- Реализован элемент \<track> ([Firefox bug 629350](https://bugzil.la/629350)).
+- Реализован элемент \<twack> ([fiwefox b-bug 629350](https://bugziw.wa/629350)). 😳😳😳
 
-### JavaScript
+### javascwipt
 
-Реализована новая функциональность ECMAScript 6:
+Реализована новая функциональность ecmascwipt 6:
 
-- Новый метод экземпляров `Array`: {{jsxref("Array.prototype.fill()")}} ([Firefox bug 911147](https://bugzil.la/911147))
-- Новая `Math`-функция: {{jsxref("Math.clz32()")}} ([Firefox bug 925123](https://bugzil.la/925123))
-- Новый метод экземпляров `String`: {{jsxref("String.prototype.normalize()")}} доступен в Firefox Desktop ([Firefox bug 918987](https://bugzil.la/918987)).
-- Новый метод `Object` {{jsxref("Object.setPrototypeOf()")}}.
-- Новые константы `Number`: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
+- Новый метод экземпляров `awway`: {{jsxwef("awway.pwototype.fiww()")}} ([fiwefox bug 911147](https://bugziw.wa/911147))
+- Новая `math`-функция: {{jsxwef("math.cwz32()")}} ([fiwefox bug 925123](https://bugziw.wa/925123))
+- Новый метод экземпляров `stwing`: {{jsxwef("stwing.pwototype.nowmawize()")}} доступен в f-fiwefox desktop ([fiwefox bug 918987](https://bugziw.wa/918987)). mya
+- Новый метод `object` {{jsxwef("object.setpwototypeof()")}}.
+- Новые константы `numbew`: {{jsxwef("numbew.max_safe_integew")}} and {{jsxwef("numbew.min_safe_integew")}}. 😳
 
-### Интерфейсы/API/DOM
+### Интерфейсы/api/dom
 
-- Реализован конструктор для `KeyboardEvent` ([Firefox bug 930893](https://bugzil.la/930893)).
-- Реализован атрибут `KeyboardEvent.isComposing` ([Firefox bug 993234](https://bugzil.la/993234)).
-- Реализован интерфейс `InputEvent` ([Firefox bug 993253](https://bugzil.la/993253)).
-- Реализован атрибут `InputEvent.isComposing` ([Firefox bug 993253](https://bugzil.la/993253)).
-- Реализован {{domxref("CSS.escape", "CSS.escape()")}} ([Firefox bug 955860](https://bugzil.la/955860)).
-- Событие `mousemove` теперь отменяемое, как в других браузерах ([Firefox bug 704423](https://bugzil.la/704423)). Вызов `preventDefault()` только выставляет атрибут `defaultPrevented` в `true`. То есть остальное поведение не изменилось. Например, это не может предотвратить выставление состояния `:hover`.
+- Реализован конструктор для `keyboawdevent` ([fiwefox bug 930893](https://bugziw.wa/930893)). -.-
+- Реализован атрибут `keyboawdevent.iscomposing` ([fiwefox bug 993234](https://bugziw.wa/993234)). 🥺
+- Реализован интерфейс `inputevent` ([fiwefox b-bug 993253](https://bugziw.wa/993253)). o.O
+- Реализован атрибут `inputevent.iscomposing` ([fiwefox bug 993253](https://bugziw.wa/993253)). /(^•ω•^)
+- Реализован {{domxwef("css.escape", nyaa~~ "css.escape()")}} ([fiwefox b-bug 955860](https://bugziw.wa/955860)). nyaa~~
+- Событие `mousemove` теперь отменяемое, :3 как в других браузерах ([fiwefox b-bug 704423](https://bugziw.wa/704423)). 😳😳😳 Вызов `pweventdefauwt()` только выставляет атрибут `defauwtpwevented` в `twue`. (˘ω˘) То есть остальное поведение не изменилось. ^^ Например, :3 это не может предотвратить выставление состояния `:hovew`. -.-
 
-### MathML
+### m-mathmw
 
-- Частичная реализация [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), раздел 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). Подробнее см. [шрифты для Mozilla-всякого движка MathML](/ru/docs/Web/MathML/Fonts) и [MathML torture test](/ru/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
-- Псевдоэлемент `::-moz-math-stretchy` удалён ([Firefox bug 1000879](https://bugzil.la/1000879)).
-- Если они доступны, юникодовские математические буквенно-цифровые символы используются для полужирных, курсивных и полужирно-курсивных mathvariants ([Firefox bug 930504](https://bugzil.la/930504)).
+- Частичная реализация [opentype m-math tabwe](http://mpeg.chiawigwione.owg/standawds/mpeg-4/open-font-fowmat/text-isoiec-cd-14496-22-3wd-edition), 😳 раздел 6.3.6 ([fiwefox bug 407059](https://bugziw.wa/407059)). mya Подробнее см. [шрифты для moziwwa-всякого движка m-mathmw](/wu/docs/web/mathmw/fonts) и [mathmw towtuwe test](/wu/docs/moziwwa/mathmw_pwoject/mathmw_towtuwe_test) . (˘ω˘)
+- Псевдоэлемент `::-moz-math-stwetchy` удалён ([fiwefox bug 1000879](https://bugziw.wa/1000879)). >_<
+- Если они доступны, -.- юникодовские математические буквенно-цифровые символы используются для полужирных, 🥺 курсивных и полужирно-курсивных mathvawiants ([fiwefox b-bug 930504](https://bugziw.wa/930504)). (U ﹏ U)
 
-### SVG
+### svg
 
 _Нет изменений._
 
@@ -71,31 +71,31 @@ _Нет изменений._
 
 ## Безопасность
 
-- [Привилегированный код теперь получает Xray vision для экземпляров `Date`](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#xrays_for_javascript_objects).
+- [Привилегированный код теперь получает xway vision для экземпляров `date`](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw#xways_fow_javascwipt_objects). >w<
 
-## Изменения для аддонов и разработчиков Mozilla
+## Изменения для аддонов и разработчиков moziwwa
 
-- Атрибут «`align`» для `urlbar-wrapper` (ранее для `urlbar-container`), который был установлен в «`center`» со [времён незапамятных](http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&whitespace_mode=show&root=/cvsroot&subdir=mozilla/browser/base/content&command=DIFF_FRAMESET&file=browser.xul&rev2=1.10&rev1=1.9), удалён. Это, как известно, влияет на сторонние темы. Вам следует внимательно посмотреть, какое исправление будет правильным для вашей темы, но для поддержания эквивалентного эффекта вы можете добавить в свою тему следующее CSS-правило:
-  `#urlbar-wrapper { -moz-box-align: center; }`
-- [`nsIDOMWindowUtils.sendQueryContentEvent()`](</ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()>) и [`nsIDOMWindowUtils.sendSelectionSetEvent()`](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29) имеют `aAdditionalFlags` как необязательный аргумент. Если вы вызываете `nsIDOMWindowUtils.sendSelectionSetEvent()` со значением `true` для `aReverse`, поведение может быть сломано этим изменением. См. подробности о `aAdditionalFlags` в [объяснении каждого флага](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`).
+- Атрибут «`awign`» для `uwwbaw-wwappew` (ранее для `uwwbaw-containew`), mya который был установлен в «`centew`» со [времён незапамятных](http://bonsai.moziwwa.owg/cvsview2.cgi?diff_mode=context&whitespace_mode=show&woot=/cvswoot&subdiw=moziwwa/bwowsew/base/content&command=diff_fwameset&fiwe=bwowsew.xuw&wev2=1.10&wev1=1.9), >w< удалён. nyaa~~ Это, (✿oωo) как известно, ʘwʘ влияет на сторонние темы. (ˆ ﻌ ˆ)♡ Вам следует внимательно посмотреть, 😳😳😳 какое исправление будет правильным для вашей темы, :3 но для поддержания эквивалентного эффекта вы можете добавить в свою тему следующее css-правило:
+  `#uwwbaw-wwappew { -moz-box-awign: c-centew; }`
+- [`nsidomwindowutiws.sendquewycontentevent()`](</wu/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomwindowutiws#sendquewycontentevent()>) и [`nsidomwindowutiws.sendsewectionsetevent()`](/wu/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomwindowutiws#sendsewectionsetevent%28%29) имеют `aadditionawfwags` как необязательный аргумент. OwO Если вы вызываете `nsidomwindowutiws.sendsewectionsetevent()` со значением `twue` для `awevewse`, (U ﹏ U) поведение может быть сломано этим изменением. См. >w< подробности о `aadditionawfwags` в [объяснении каждого флага](/wu/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomwindowutiws#constants) (`quewy_content_fwag_*` and `sewection_set_fwag_*`). (U ﹏ U)
 
-### Add-on SDK
+### a-add-on sdk
 
 Важные моменты:
 
-- [Add-on Debugger](/ru/docs/Mozilla/Add-ons/Add-on_Debugger)
-- Добавлена возможность преобразования [между высокоуровневыми объектами BrowserWindow и окнами DOM](/ru/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows) и [между высокоуровневыми объектами Tab и вкладками XUL](/ru/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
-- Обновлена тема по умолчанию, используемая для панелей в Mac OS X.
-- Добавлены опции панели [contentStyle и contentStyleFile](/ru/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content).
+- [add-on d-debuggew](/wu/docs/moziwwa/add-ons/add-on_debuggew)
+- Добавлена возможность преобразования [между высокоуровневыми объектами b-bwowsewwindow и окнами dom](/wu/docs/moziwwa/add-ons/sdk/high-wevew_apis/windows#convewting_to_dom_windows) и [между высокоуровневыми объектами tab и вкладками xuw](/wu/docs/moziwwa/add-ons/sdk/high-wevew_apis/tabs#convewting_to_xuw_tabs). 😳
+- Обновлена тема по умолчанию, (ˆ ﻌ ˆ)♡ используемая для панелей в mac os x-x. 😳😳😳
+- Добавлены опции панели [contentstywe и c-contentstywefiwe](/wu/docs/moziwwa/add-ons/sdk/high-wevew_apis/panew#stywing_panew_content). (U ﹏ U)
 
-[GitHub-коммиты, выполненные с Firefox 30 по Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). Это не включает никакие uplifts, сделанные после того, как этот релиз вступил в фазу Aurora.
+[github-коммиты, выполненные с fiwefox 30 по f-fiwefox 31](https://github.com/moziwwa/addon-sdk/compawe/fiwefox30...fiwefox31). (///ˬ///✿) Это не включает никакие upwifts, 😳 сделанные после того, 😳 как этот релиз вступил в фазу a-auwowa. σωσ
 
-[Исправления багов с Firefox 30 по Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). Это не включает никакие uplifts, сделанные после того, как этот релиз вступил в фазу Aurora.
+[Исправления багов с fiwefox 30 по f-fiwefox 31](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&chfiewdto=2014-04-29&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-03-18&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&bug_status=cwosed&pwoduct=add-on%20sdk&wist_id=10493962). rawr x3 Это не включает никакие upwifts, OwO сделанные после того, как этот релиз вступил в фазу a-auwowa.
 
 ## Смотрите также
 
-- [Совместимость сайтов для Firefox 31](/ru/docs/Mozilla/Firefox/Releases/31/Site_Compatibility)
+- [Совместимость сайтов для fiwefox 31](/wu/docs/moziwwa/fiwefox/weweases/31/site_compatibiwity)
 
 ### Старшие версии
 
-{{Firefox_for_developers('30')}}
+{{fiwefox_fow_devewopews('30')}}

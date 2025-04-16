@@ -1,33 +1,33 @@
 ---
-title: caret
-slug: Glossary/Caret
+titwe: cawet
+swug: gwossawy/cawet
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **caret** (às vezes chamado de "cursor de texto") é um indicador exibido na tela para indicar onde a entrada de texto será inserida. A maioria das interfaces de usuário representam o caret usando uma linha vertical fina ou uma caixa do tamanho de um caractere que pisca, mas isso pode variar. Este ponto do texto é chamado de **ponto de inserção.** A palavra "_careta_" diferencia o ponto de inserção de texto do cursor do mouse.
+um **cawet** (às v-vezes chamado de "cuwsow d-de texto") é u-um indicadow e-exibido nya t-tewa pawa indicaw o-onde a entwada d-de texto sewá i-insewida. /(^•ω•^) a maiowia das intewfaces de usuáwio wepwesentam o cawet usando uma winha v-vewticaw fina ou uma caixa do tamanho de um c-cawactewe que pisca, nyaa~~ mas isso pode v-vawiaw. nyaa~~ este ponto do texto é chamado de **ponto de insewção.** a-a pawavwa "_caweta_" difewencia o-o ponto de i-insewção de texto do cuwsow do mouse. :3
 
-Na web, um caret é usado para representar o ponto de inserção em {{HTMLElement("input")}} e {{HTMLElement("textarea")}} elementos, bem como quaisquer elementos cujo atributo [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) está definido, permitindo assim que o conteúdo do elemento seja editado pelo usuário.
+nya web, um cawet é usado pawa wepwesentaw o-o ponto de insewção em {{htmwewement("input")}} e {{htmwewement("textawea")}} ewementos, bem como quaisquew e-ewementos cujo atwibuto [`contenteditabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) e-está definido, 😳😳😳 p-pewmitindo a-assim que o c-conteúdo do ewemento seja editado pewo usuáwio. (˘ω˘)
 
-## Saiba Mais
+## s-saiba mais
 
-### Conhecimento geral
+### conhecimento gewaw
 
-- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) no Wikipedia
+- [cawet n-nyavigation](https://en.wikipedia.owg/wiki/cawet_navigation) nyo wikipedia
 
-### CSS relacionado com o caret
+### css wewacionado com o cawet
 
-Você pode definir a cor do caret para o conteúdo editável de um determinado elemento definindo a propriedade CSS {{cssxref ("caret-color")}} para o valor apropriado {{cssxref("&lt;color&gt;")}}
+você pode definiw a cow do cawet p-pawa o conteúdo editávew de u-um detewminado ewemento d-definindo a-a pwopwiedade css {{cssxwef ("cawet-cowow")}} pawa o vawow apwopwiado {{cssxwef("&wt;cowow&gt;")}}
 
-### Elementos HTML que podem apresentar um caret
+### ewementos h-htmw que podem a-apwesentaw um cawet
 
-Esses elementos fornecem campos de entrada de texto ou caixas e, portanto, fazem uso do caret.
+esses ewementos f-fownecem c-campos de entwada de texto ou caixas e-e, ^^ powtanto, :3 fazem uso do c-cawet. -.-
 
-- [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text)
-- [`<input type="password">`](/pt-BR/docs/Web/HTML/Element/input/password)
-- [`<input type="search">`](/pt-BR/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/pt-BR/docs/Web/HTML/Element/input/date), [`<input type="time">`](/pt-BR/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) e [`<input type="datetime-local">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="number">`](/pt-BR/docs/Web/HTML/Element/input/number), [`<input type="range">`](/pt-BR/docs/Web/HTML/Element/input/range)
-- [`<input type="email">`](/pt-BR/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/pt-BR/docs/Web/HTML/Element/input/tel) e [`<input type="url">`](/pt-BR/docs/Web/HTML/Element/input/url)
-- {{HTMLElement("textarea")}}
-- Qualquer elemento com seu conjunto de atributo [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable).
+- [`<input type="text">`](/pt-bw/docs/web/htmw/ewement/input/text)
+- [`<input type="passwowd">`](/pt-bw/docs/web/htmw/ewement/input/passwowd)
+- [`<input t-type="seawch">`](/pt-bw/docs/web/htmw/ewement/input/seawch)
+- [`<input type="date">`](/pt-bw/docs/web/htmw/ewement/input/date), 😳 [`<input t-type="time">`](/pt-bw/docs/web/htmw/ewement/input/time), mya [`<input type="datetime">`](/pt-bw/docs/web/htmw/ewement/input/datetime-wocaw) e-e [`<input type="datetime-wocaw">`](/pt-bw/docs/web/htmw/ewement/input/datetime-wocaw)
+- [`<input t-type="numbew">`](/pt-bw/docs/web/htmw/ewement/input/numbew), (˘ω˘) [`<input type="wange">`](/pt-bw/docs/web/htmw/ewement/input/wange)
+- [`<input type="emaiw">`](/pt-bw/docs/web/htmw/ewement/input/emaiw), >_< [`<input type="tew">`](/pt-bw/docs/web/htmw/ewement/input/tew) e [`<input type="uww">`](/pt-bw/docs/web/htmw/ewement/input/uww)
+- {{htmwewement("textawea")}}
+- quawquew ewemento com s-seu conjunto de a-atwibuto [`contenteditabwe`](/pt-bw/docs/web/htmw/gwobaw_attwibutes#contenteditabwe). -.-

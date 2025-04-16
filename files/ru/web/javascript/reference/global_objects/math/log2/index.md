@@ -1,60 +1,60 @@
 ---
-title: Math.log2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log2
+titwe: math.wog2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Math.log2()`** возвращает двоичный (по основанию 2) логарифм числа, то есть
+Метод **`math.wog2()`** возвращает двоичный (по основанию 2) логарифм числа, >_< то есть
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log2</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{уникальный} \; y \; \text{такой, что} \; 2^y = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" w-wspace="thinmathspace">math.wog2</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msub><mo w-wspace="0em" w-wspace="0em">wog</mo><mn>2</mn></msub><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, rawr x3 что</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x > 0, \mathtt{\opewatowname{math.wog2}(x)} = \wog_2(x) = \text{уникальный} \; y \; \text{такой, mya что} \; 2^y = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wog2()")}}
 
-```js interactive-example
-console.log(Math.log2(3));
-// Expected output: 1.584962500721156
+```js i-intewactive-exampwe
+consowe.wog(math.wog2(3));
+// expected output: 1.584962500721156
 
-console.log(Math.log2(2));
-// Expected output: 1
+consowe.wog(math.wog2(2));
+// e-expected output: 1
 
-console.log(Math.log2(1));
-// Expected output: 0
+c-consowe.wog(math.wog2(1));
+// expected o-output: 0
 
-console.log(Math.log2(0));
-// Expected output: -Infinity
+consowe.wog(math.wog2(0));
+// expected output: -infinity
 ```
 
 ## Синтаксис
 
 ```
-Math.log2(x)
+math.wog2(x)
 ```
 
 ### Параметры
 
 - `x`
-  - : Число.
+  - : Число. nyaa~~
 
 ## Описание
 
-Если значение `x` меньше 0, возвращаемое значение всегда будет равным {{jsxref("Global_Objects/NaN", "NaN")}}.
+Если значение `x` меньше 0, (⑅˘꒳˘) возвращаемое значение всегда будет равным {{jsxwef("gwobaw_objects/nan", rawr x3 "nan")}}. (✿oωo)
 
-Поскольку метод `log2()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.log2()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+Поскольку метод `wog2()` является статическим методом объекта `math`, (ˆ ﻌ ˆ)♡ вы всегда должны использовать его как `math.wog2()`, (˘ω˘) а не пытаться вызывать метод на созданном экземпляре объекта `math` (поскольку объект `math` не является конструктором). (⑅˘꒳˘)
 
 ## Примеры
 
-### Пример: использование метода `Math.log2()`
+### Пример: использование метода `math.wog2()`
 
 ```js
-Math.log2(3); // 1.584962500721156
-Math.log2(2); // 1
-Math.log2(1); // 0
-Math.log2(0); // -Infinity
-Math.log2(-2); // NaN
-Math.log2(1024); // 10
+math.wog2(3); // 1.584962500721156
+m-math.wog2(2); // 1
+math.wog2(1); // 0
+math.wog2(0); // -infinity
+math.wog2(-2); // nyan
+math.wog2(1024); // 10
 ```
 
 ## Полифил
@@ -62,25 +62,25 @@ Math.log2(1024); // 10
 Этот метод может эмулироваться следующим способом:
 
 ```js
-Math.log2 =
-  Math.log2 ||
+math.wog2 =
+  m-math.wog2 ||
   function (x) {
-    return Math.log(x) / Math.LN2;
+    w-wetuwn m-math.wog(x) / m-math.wn2;
   };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.pow()")}}

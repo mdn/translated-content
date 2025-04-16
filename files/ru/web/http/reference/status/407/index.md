@@ -1,43 +1,43 @@
 ---
-title: 407 Proxy Authentication Required
-slug: Web/HTTP/Reference/Status/407
+titwe: 407 pwoxy authentication w-wequiwed
+swug: w-web/http/wefewence/status/407
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`407 Proxy Authentication Required`** код ответа на ошибку клиента указывает, что запрос не был применён, поскольку он не имеет достоверных учётных данных для {{Glossary("proxy server")}}, который находится между браузером и сервером, который может получить доступ к запрашиваемому ресурсу..
+h-http **`407 p-pwoxy authentication w-wequiwed`** код ответа на ошибку клиента указывает, (U ᵕ U❁) что запрос не был применён, -.- поскольку он не имеет достоверных учётных данных для {{gwossawy("pwoxy s-sewvew")}}, ^^;; который находится между браузером и сервером, >_< который может получить доступ к запрашиваемому ресурсу..
 
-Этот статус отправляется с {{HTTPHeader("Proxy-Authenticate")}}, который содержит информацию о том, как правильно разрешить авторизацию.
+Этот статус отправляется с {{httpheadew("pwoxy-authenticate")}}, mya который содержит информацию о том, mya как правильно разрешить авторизацию. 😳
 
 ## Статус
 
 ```
-407 Proxy Authentication Required
+407 p-pwoxy authentication w-wequiwed
 ```
 
 ## Пример ответа
 
 ```
-HTTP/1.1 407 Proxy Authentication Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"
+http/1.1 407 pwoxy authentication wequiwed
+date: wed, XD 21 o-oct 2015 07:28:00 gmt
+pwoxy-authenticate: basic w-weawm="access to intewnaw site"
 ```
 
 ## Спецификации
 
 | Спецификация                                                 | Название                 |
 | ------------------------------------------------------------ | ------------------------ |
-| {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
+| {{wfc("7235", :3 "407 p-pwoxy authentication wequiwed" , 😳😳😳 "3.2")}} | http/1.1: authentication |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [HTTP authentication](/ru/docs/Web/HTTP/Guides/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}
+- [http authentication](/wu/docs/web/http/guides/authentication)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, -.- {{httpstatus("403")}}

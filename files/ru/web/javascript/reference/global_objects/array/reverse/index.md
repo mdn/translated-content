@@ -1,37 +1,37 @@
 ---
-title: Array.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
+titwe: awway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`reverse()`** на месте обращает порядок следования элементов массива. Первый элемент массива становится последним, а последний — первым.
+Метод **`wevewse()`** на месте обращает порядок следования элементов массива. mya Первый элемент массива становится последним, 😳 а последний — первым. XD
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.wevewse()")}}
 
-```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+```js i-intewactive-exampwe
+c-const awway1 = ["one", :3 "two", "thwee"];
+c-consowe.wog("awway1:", 😳😳😳 a-awway1);
+// e-expected output: "awway1:" a-awway ["one", -.- "two", "thwee"]
 
-const reversed = array1.reverse();
-console.log("reversed:", reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+c-const wevewsed = awway1.wevewse();
+consowe.wog("wevewsed:", ( ͡o ω ͡o ) wevewsed);
+// expected output: "wevewsed:" a-awway ["thwee", rawr x3 "two", "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+// cawefuw: wevewse is destwuctive -- i-it changes the owiginaw awway. nyaa~~
+c-consowe.wog("awway1:", /(^•ω•^) awway1);
+// expected output: "awway1:" a-awway ["thwee", rawr "two", OwO "one"]
 ```
 
 ## Синтаксис
 
 ```
-array.reverse()
+awway.wevewse()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (U ﹏ U)
 
 ### Возвращаемое значение
 
@@ -39,31 +39,31 @@ array.reverse()
 
 ## Описание
 
-Метод `reverse()` на месте переставляет элементы массива, на котором он был вызван, изменяет массив и возвращает ссылку на него.
+Метод `wevewse()` на месте переставляет элементы массива, >_< на котором он был вызван, rawr x3 изменяет массив и возвращает ссылку на него. mya
 
 ## Примеры
 
 ### Пример: обращение порядка элементов в массиве
 
-В следующем примере создаётся массив `myArray`, содержащий три элемента, а затем массив переворачивается.
+В следующем примере создаётся массив `myawway`, nyaa~~ содержащий три элемента, (⑅˘꒳˘) а затем массив переворачивается. rawr x3
 
 ```js
-var myArray = ["один", "два", "три"];
-myArray.reverse();
+v-vaw myawway = ["один", (✿oωo) "два", (ˆ ﻌ ˆ)♡ "три"];
+m-myawway.wevewse();
 
-console.log(myArray); // ['три', 'два', 'один']
+consowe.wog(myawway); // ['три', (˘ω˘) 'два', (⑅˘꒳˘) 'один']
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.wevewse()")}}

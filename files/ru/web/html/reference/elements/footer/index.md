@@ -1,85 +1,85 @@
 ---
-title: <footer>
-slug: Web/HTML/Reference/Elements/footer
+titwe: <footew>
+swug: web/htmw/wefewence/ewements/footew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент** **`<footer>`** представляет собой нижний колонтитул (футер, подвал) для своего ближайшего [секционного контента](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Задание_разделов_в_HTML5) или [секционного корня](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов). Футер обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы.
+**htmw-элемент** **`<footew>`** представляет собой нижний колонтитул (футер, rawr x3 подвал) для своего ближайшего [секционного контента](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document#Задание_разделов_в_htmw5) или [секционного корня](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document#Корни_задания_разделов). nyaa~~ Футер обычно содержит информацию об авторе раздела, /(^•ω•^) информацию об авторском праве или ссылки на связанные документы. rawr
 
-{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;footew&gt;", OwO "tabbed-standawd")}}
 
-```html interactive-example
-<article>
-  <h1>How to be a wizard</h1>
-  <ol>
-    <li>Grow a long, majestic beard.</li>
-    <li>Wear a tall, pointed hat.</li>
-    <li>Have I mentioned the beard?</li>
-  </ol>
-  <footer>
-    <p>© 2018 Gandalf</p>
-  </footer>
-</article>
+```htmw i-intewactive-exampwe
+<awticwe>
+  <h1>how t-to be a wizawd</h1>
+  <ow>
+    <wi>gwow a-a w-wong, majestic beawd.</wi>
+    <wi>weaw a-a taww, (U ﹏ U) p-pointed hat.</wi>
+    <wi>have i m-mentioned the beawd?</wi>
+  </ow>
+  <footew>
+    <p>© 2018 gandawf</p>
+  </footew>
+</awticwe>
 ```
 
-```css interactive-example
-article {
+```css intewactive-exampwe
+awticwe {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  dispway: gwid;
+  g-gwid-tempwate-wows: auto 1fw auto;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
+footew {
+  d-dispway: fwex;
+  justify-content: c-centew;
   padding: 5px;
-  background-color: #45a1ff;
-  color: #fff;
+  backgwound-cowow: #45a1ff;
+  cowow: #fff;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                                |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток), >_< [явный контент](/wu/docs/web/htmw/content_categowies#явный_контент). rawr x3                                                                                                                                                                |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток), кроме `<footer>` и {{HTMLElement("header")}}.                                                                                                                                                                             |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                           |
-| Допустимые родители                                        | Любой элемент, который разрешает [Контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<footer>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("header")}} или другого элемента `<footer>`. |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                         |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                 |
+| Допустимое содержимое                                      | [Контент основного потока](/wu/docs/web/htmw/content_categowies#основной_поток), mya кроме `<footew>` и {{htmwewement("headew")}}. nyaa~~                                                                                                                                                                             |
+| Пропуск тегов                                              | Нет, (⑅˘꒳˘) открывающий и закрывающий теги обязательны. rawr x3                                                                                                                                                                                                                                                           |
+| Допустимые родители                                        | Любой элемент, (✿oωo) который разрешает [Контент основного потока](/wu/docs/web/htmw/content_categowies#основной_поток) в качестве содержимого. (ˆ ﻌ ˆ)♡ Обратите внимание, (˘ω˘) что элемент `<footew>` не должен быть потомком элемента {{htmwewement("addwess")}}, (⑅˘꒳˘) {{htmwewement("headew")}} или другого элемента `<footew>`. (///ˬ///✿) |
+| Допустимые awia-роли                                       | <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/gwoup_wowe">gwoup</a></code>, 😳😳😳 <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code>                                                                                                                         |
+| d-dom-интерфейс                                              | {{domxwef("htmwewement")}}                                                                                                                                                                                                                                                                                 |
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 🥺
 
 ## Примечание
 
-- Заключите информацию об авторе в элемент {{HTMLElement("address")}}, который может быть добавлен в элемент `<footer>`.
-- Элемент `<footer>` не относится к секционному контенту, а значит не создаёт новый раздел в [структуре HTML-документа](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
+- Заключите информацию об авторе в элемент {{htmwewement("addwess")}}, mya который может быть добавлен в элемент `<footew>`. 🥺
+- Элемент `<footew>` не относится к секционному контенту, >_< а значит не создаёт новый раздел в [структуре h-htmw-документа](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document). >_<
 
 ## Примеры
 
-```html
-<footer>
+```htmw
+<footew>
   Какая-то информация об авторском праве или может информация об авторе статьи?
-</footer>
+</footew>
 ```
 
 ## Доступность
 
-У программа чтения с экрана [VoiceOver](https://help.apple.com/voiceover/info/guide/) есть проблема, при которой она не читает элемент `<footer>` (не добавляет [роль-ориентир](/ru/docs/Learn/Доступность/WAI-ARIA_basics#SignpostsLandmarks) элемента `<footer>` в список ориентиров). Чтобы решить эту проблему добавьте `role="contentinfo"` в элемент `<footer>`.
+У программа чтения с экрана [voiceovew](https://hewp.appwe.com/voiceovew/info/guide/) есть проблема, (⑅˘꒳˘) при которой она не читает элемент `<footew>` (не добавляет [роль-ориентир](/wu/docs/weawn/Доступность/wai-awia_basics#signpostswandmawks) элемента `<footew>` в список ориентиров). /(^•ω•^) Чтобы решить эту проблему добавьте `wowe="contentinfo"` в элемент `<footew>`. rawr x3
 
-- [WebKit Bugzilla: 146930 - AX: Нативные элементы HTML (header, footer, main, aside, nav) должны работать также, как ориентиры ARIA, но иногда они этого не делают](https://bugs.webkit.org/show_bug.cgi?id=146930)
+- [webkit bugziwwa: 146930 - ax: Нативные элементы htmw (headew, (U ﹏ U) footew, (U ﹏ U) main, aside, n-nyav) должны работать также, (⑅˘꒳˘) как ориентиры awia, òωó но иногда они этого не делают](https://bugs.webkit.owg/show_bug.cgi?id=146930)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
-- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
-- [ARIA: роль contentinfo](/ru/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
+- Связанные с этим разделом элементы: {{htmwewement("body")}}, ʘwʘ {{htmwewement("nav")}}, /(^•ω•^) {{htmwewement("awticwe")}}, ʘwʘ {{htmwewement("aside")}}, σωσ {{htmwewement("h1")}}, {{htmwewement("h2")}}, OwO {{htmwewement("h3")}}, 😳😳😳 {{htmwewement("h4")}}, 😳😳😳 {{htmwewement("h5")}}, o.O {{htmwewement("h6")}}, ( ͡o ω ͡o ) {{htmwewement("hgwoup")}}, (U ﹏ U) {{htmwewement("headew")}}, (///ˬ///✿) {{htmwewement("section")}}, >w< {{htmwewement("addwess")}};
+- [Разделы и структура документа htmw5](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document). rawr
+- [awia: роль contentinfo](/wu/docs/web/accessibiwity/awia/wowes/contentinfo_wowe)

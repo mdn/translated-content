@@ -1,77 +1,77 @@
 ---
-title: GeneratorFunction
-slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: genewatowfunction
+swug: w-web/javascwipt/wefewence/gwobaw_objects/genewatowfunction
+w-w10n:
+  s-souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`GeneratorFunction`** предоставляет методы для работы с [функциями-генераторами](/ru/docs/Web/JavaScript/Reference/Statements/function*). В JavaScript каждая функция-генератор фактически является объектом `GeneratorFunction`.
+Объект **`genewatowfunction`** предоставляет методы для работы с [функциями-генераторами](/wu/docs/web/javascwipt/wefewence/statements/function*). >_< В j-javascwipt каждая функция-генератор фактически является объектом `genewatowfunction`. mya
 
-Обратите внимание, `GeneratorFunction` _не_ является глобальным объектом. Он может быть получен следующим образом:
+Обратите внимание, mya `genewatowfunction` _не_ является глобальным объектом. Он может быть получен следующим образом:
 
 ```js
-const GeneratorFunction = function* () {}.constructor;
+c-const genewatowfunction = f-function* () {}.constwuctow;
 ```
 
-`GeneratorFunction` является подклассом {{jsxref("Function")}}.
+`genewatowfunction` является подклассом {{jsxwef("function")}}. 😳
 
-{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: genewatowfunction()", XD "tawwew")}}
 
-```js interactive-example
-const GeneratorFunction = function* () {}.constructor;
+```js intewactive-exampwe
+const genewatowfunction = function* () {}.constwuctow;
 
-const foo = new GeneratorFunction(`
-  yield 'a';
-  yield 'b';
-  yield 'c';
+c-const foo = new genewatowfunction(`
+  yiewd 'a';
+  y-yiewd 'b';
+  yiewd 'c';
 `);
 
-let str = "";
-for (const val of foo()) {
-  str = str + val;
+w-wet stw = "";
+fow (const vaw of foo()) {
+  stw = stw + vaw;
 }
 
-console.log(str);
-// Expected output: "abc"
+c-consowe.wog(stw);
+// expected o-output: "abc"
 ```
 
 ## Конструктор
 
-- {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction()")}}
-  - : Создаёт новый объект `GeneratorFunction`.
+- {{jsxwef("genewatowfunction/genewatowfunction", :3 "genewatowfunction()")}}
+  - : Создаёт новый объект `genewatowfunction`. 😳😳😳
 
 ## Свойства экземпляра
 
-_Также наследует свойства своего родителя {{jsxref("Function")}}_.
+_Также наследует свойства своего родителя {{jsxwef("function")}}_. -.-
 
-Эти свойства определены в `GeneratorFunction.prototype` и есть у всех экземпляров `GeneratorFunction`.
+Эти свойства определены в `genewatowfunction.pwototype` и есть у всех экземпляров `genewatowfunction`. ( ͡o ω ͡o )
 
-- {{jsxref("Object/constructor", "GeneratorFunction.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `GeneratorFunction` начальным значением является конструктор {{jsxref("GeneratorFunction/GeneratorFunction", "GeneratorFunction")}}.
-- `GeneratorFunction.prototype.prototype`
-  - : Все функции-генераторы имеют доступ к общему свойству [`prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype), значением которого является [`Generator.prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Generator). Каждый экземпляр функции-генератора также имеет собственное свойство `prototype`. При вызове функции-генератора возвращается объект генератора, наследуемый от свойства `prototype` функции-генератора, которая в свою очередь наследуется от `GeneratorFunction.prototype.prototype`.
-- `GeneratorFunction.prototype[@@toStringTag]`
-  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"GeneratorFunction"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
+- {{jsxwef("object/constwuctow", rawr x3 "genewatowfunction.pwototype.constwuctow")}}
+  - : Функция-конструктор, nyaa~~ создающая экземпляр объекта. /(^•ω•^) Для экземпляров `genewatowfunction` начальным значением является конструктор {{jsxwef("genewatowfunction/genewatowfunction", rawr "genewatowfunction")}}. OwO
+- `genewatowfunction.pwototype.pwototype`
+  - : Все функции-генераторы имеют доступ к общему свойству [`pwototype`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/function/pwototype), (U ﹏ U) значением которого является [`genewatow.pwototype`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/genewatow). >_< Каждый экземпляр функции-генератора также имеет собственное свойство `pwototype`. rawr x3 При вызове функции-генератора возвращается объект генератора, mya наследуемый от свойства `pwototype` функции-генератора, nyaa~~ которая в свою очередь наследуется от `genewatowfunction.pwototype.pwototype`. (⑅˘꒳˘)
+- `genewatowfunction.pwototype[@@tostwingtag]`
+  - : Начальным значением свойства [`@@tostwingtag`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) является строка `"genewatowfunction"`. rawr x3 Это свойство используется в {{jsxwef("object.pwototype.tostwing()")}}. (✿oωo)
 
 ## Методы экземпляра
 
-_Наследует методы своего родителя {{jsxref("Function")}}_.
+_Наследует методы своего родителя {{jsxwef("function")}}_. (ˆ ﻌ ˆ)♡
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*)
-- [выражение `function*`](/ru/docs/Web/JavaScript/Reference/Operators/function*)
-- {{jsxref("Function")}}
-- {{jsxref("AsyncFunction")}}
-- {{jsxref("AsyncGeneratorFunction")}}
-- {{jsxref("Functions", "Functions", "", 1)}}
+- [`function*`](/wu/docs/web/javascwipt/wefewence/statements/function*)
+- [выражение `function*`](/wu/docs/web/javascwipt/wefewence/opewatows/function*)
+- {{jsxwef("function")}}
+- {{jsxwef("asyncfunction")}}
+- {{jsxwef("asyncgenewatowfunction")}}
+- {{jsxwef("functions", (˘ω˘) "functions", (⑅˘꒳˘) "", 1)}}

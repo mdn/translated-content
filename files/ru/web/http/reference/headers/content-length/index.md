@@ -1,46 +1,46 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Reference/Headers/Content-Length
+titwe: content-wength
+swug: web/http/wefewence/headews/content-wength
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок **`Content-Length`** указывает размер отправленного получателю тела объекта в байтах.
+Заголовок **`content-wength`** указывает размер отправленного получателю тела объекта в байтах.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
       <td>
-        {{Glossary("Entity header", "Заголовок сущности")}}
+        {{gwossawy("entity h-headew", òωó "Заголовок сущности")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Можно не передавать</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Можно не передавать</th>
       <td>да</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Content-Length: <длина>
+c-content-wength: <длина>
 ```
 
 ## Директивы
 
 - <длина>
-  - : Байты.
+  - : Байты. o.O
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

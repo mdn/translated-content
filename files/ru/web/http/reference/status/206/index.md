@@ -1,72 +1,72 @@
 ---
-title: 206 Partial Content
-slug: Web/HTTP/Reference/Status/206
+titwe: 206 pawtiaw content
+swug: w-web/http/wefewence/status/206
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-"The HTTP **`206 Partial Content"`** код ответа на статус успешного указывает, что запрос преуспел, и тело содержит запрошенные диапазоны данных, как описано в {{HTTPHeader("Range")}} запроса
+"the h-http **`206 p-pawtiaw c-content"`** код ответа на статус успешного указывает, rawr x3 что запрос преуспел, (✿oωo) и тело содержит запрошенные диапазоны данных, (ˆ ﻌ ˆ)♡ как описано в {{httpheadew("wange")}} запроса
 
-Если существует только один диапазон, {{HTTPHeader("Content-Type")}} всего ответа задаётся типом документа, а также {{HTTPHeader("Content-Range")}}
+Если существует только один диапазон, (˘ω˘) {{httpheadew("content-type")}} всего ответа задаётся типом документа, (⑅˘꒳˘) а также {{httpheadew("content-wange")}}
 
-Если несколько диапазонов отправлены обратно, {{HTTPHeader("Content-Type")}} задано значение **multipart/byteranges**, и каждый фрагмент охватывает один диапазон, {{HTTPHeader("Content-Range")}} и {{HTTPHeader("Content-Type")}}, описывающий его.
+Если несколько диапазонов отправлены обратно, {{httpheadew("content-type")}} задано значение **muwtipawt/bytewanges**, (///ˬ///✿) и каждый фрагмент охватывает один диапазон, 😳😳😳 {{httpheadew("content-wange")}} и {{httpheadew("content-type")}}, 🥺 описывающий его. mya
 
 ## Статус
 
 ```
-206 Partial Content
+206 p-pawtiaw c-content
 ```
 
 ## Примеры
 
-Ответ, содержащий один диапазон:
+Ответ, 🥺 содержащий один диапазон:
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Range: bytes 21010-47021/47022
-Content-Length: 26012
-Content-Type: image/gif
+h-http/1.1 206 p-pawtiaw content
+date: wed, >_< 15 nyov 2015 06:25:24 gmt
+wast-modified: wed, >_< 15 nyov 2015 04:58:08 g-gmt
+content-wange: bytes 21010-47021/47022
+content-wength: 26012
+c-content-type: image/gif
 
-... 26012 bytes of partial image data ...
+... 26012 b-bytes of pawtiaw image data ...
 ```
 
-Ответ, содержащий несколько диапазонов:
+Ответ, (⑅˘꒳˘) содержащий несколько диапазонов:
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Length: 1741
-Content-Type: multipart/byteranges; boundary=String_separator
+http/1.1 206 pawtiaw content
+d-date: wed, /(^•ω•^) 15 nyov 2015 06:25:24 g-gmt
+wast-modified: w-wed, rawr x3 15 nov 2015 04:58:08 gmt
+content-wength: 1741
+content-type: muwtipawt/bytewanges; b-boundawy=stwing_sepawatow
 
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 234-639/8000
+--stwing_sepawatow
+content-type: appwication/pdf
+content-wange: bytes 234-639/8000
 
-...the first range...
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 4590-7999/8000
+...the fiwst wange...
+--stwing_sepawatow
+c-content-type: appwication/pdf
+c-content-wange: b-bytes 4590-7999/8000
 
-...the second range
---String_separator--
+...the s-second wange
+--stwing_sepawatow--
 ```
 
 ## Характеристики
 
 | Спецификация                                   | Название                                               |
 | ---------------------------------------------- | ------------------------------------------------------ |
-| {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+| {{wfc("7233", (U ﹏ U) "206 p-pawtiaw content" , (U ﹏ U) "4.1")}} | hypewtext t-twansfew pwotocow (http/1.1): wange wequests |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
-- {{HTTPHeader("Content-Range")}}
-- {{HTTPHeader("Content-Type")}}
+- {{httpheadew("if-wange")}}
+- {{httpheadew("wange")}}
+- {{httpheadew("content-wange")}}
+- {{httpheadew("content-type")}}

@@ -1,65 +1,65 @@
 ---
-title: Intl.getCanonicalLocales()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
+titwe: intw.getcanonicawwocawes()
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/getcanonicawwocawes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Intl.getCanonicalLocales()`** возвращает массив, содержащий канонические коды языков. Повторяющиеся значения будут отброшены и элементы будут проверены на соответствие структуры языковых тегов.
+Метод **`intw.getcanonicawwocawes()`** возвращает массив, mya содержащий канонические коды языков. Повторяющиеся значения будут отброшены и элементы будут проверены на соответствие структуры языковых тегов. 😳
 
-{{InteractiveExample("JavaScript Demo: Intl.GetCanonicalLocales")}}
+{{intewactiveexampwe("javascwipt d-demo: i-intw.getcanonicawwocawes")}}
 
-```js interactive-example
-console.log(Intl.getCanonicalLocales("EN-US"));
-// Expected output: Array ["en-US"]
+```js i-intewactive-exampwe
+c-consowe.wog(intw.getcanonicawwocawes("en-us"));
+// e-expected o-output: awway ["en-us"]
 
-console.log(Intl.getCanonicalLocales(["EN-US", "Fr"]));
-// Expected output: Array ["en-US", "fr"]
+consowe.wog(intw.getcanonicawwocawes(["en-us", XD "fw"]));
+// e-expected o-output: awway ["en-us", :3 "fw"]
 
-try {
-  Intl.getCanonicalLocales("EN_US");
-} catch (err) {
-  console.log(err.toString());
-  // Expected output (Firefox/Safari): RangeError: invalid language tag: "EN_US"
-  // Expected output (Chrome): RangeError: Incorrect locale information provided
+twy {
+  intw.getcanonicawwocawes("en_us");
+} catch (eww) {
+  consowe.wog(eww.tostwing());
+  // expected output (fiwefox/safawi): wangeewwow: invawid wanguage t-tag: "en_us"
+  // expected output (chwome): wangeewwow: i-incowwect wocawe infowmation p-pwovided
 }
 ```
 
 ## Синтаксис
 
 ```
-Intl.getCanonicalLocales(locales)
+intw.getcanonicawwocawes(wocawes)
 ```
 
 ### Параметры
 
-- `locales`
-  - : Список {{jsxref("String")}} значений, из которых нужно получить канонические коды языков.
+- `wocawes`
+  - : Список {{jsxwef("stwing")}} значений, 😳😳😳 из которых нужно получить канонические коды языков. -.-
 
 ### Возвращаемое значение
 
-Массив, содержащий канонические коды языков
+Массив, ( ͡o ω ͡o ) содержащий канонические коды языков
 
 ## Примеры
 
 ```js
-Intl.getCanonicalLocales("RU-RU"); // ["ru-RU"]
-Intl.getCanonicalLocales(["RU-RU", "Fr"]); // ["ru-RU", "fr"]
+intw.getcanonicawwocawes("wu-wu"); // ["wu-wu"]
+intw.getcanonicawwocawes(["wu-wu", rawr x3 "fw"]); // ["wu-wu", nyaa~~ "fw"]
 
-Intl.getCanonicalLocales("RU_RU");
-// RangeError:'EN_US' is not a structurally valid language tag
+i-intw.getcanonicawwocawes("wu_wu");
+// wangeewwow:'en_us' i-is nyot a-a stwuctuwawwy vawid wanguage tag
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
-- {{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}
+- {{jsxwef("numbewfowmat.suppowtedwocawesof", /(^•ω•^) "intw.numbewfowmat.suppowtedwocawesof()")}}
+- {{jsxwef("datetimefowmat.suppowtedwocawesof", rawr "intw.datetimefowmat.suppowtedwocawesof()")}}
+- {{jsxwef("cowwatow.suppowtedwocawesof", OwO "intw.cowwatow.suppowtedwocawesof()")}}

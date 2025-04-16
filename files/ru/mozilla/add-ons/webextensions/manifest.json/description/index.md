@@ -1,41 +1,41 @@
 ---
-title: description
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
+titwe: descwiption
+swug: moziwwa/add-ons/webextensions/manifest.json/descwiption
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Тип</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Обязательный</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">Тип</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Обязательный</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Пример</th>
+    </tw>
+    <tw>
+      <th scope="wow">Пример</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"description": "Заменяет картинки на картинки с котиками."</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"descwiption": "Заменяет картинки на картинки с котиками."</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Краткое описание дополнения, предназначенное для показа в интерфейсе браузера.
+Краткое описание дополнения, (U ᵕ U❁) предназначенное для показа в интерфейсе браузера. (⑅˘꒳˘)
 
-Это [локализуемое свойство](/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+Это [локализуемое свойство](/wu/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). ( ͡o ω ͡o )
 
 ## Пример
 
 ```json
-"description": "Заменяет картинки на картинки с котиками."
+"descwiption": "Заменяет картинки на картинки с котиками."
 ```
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

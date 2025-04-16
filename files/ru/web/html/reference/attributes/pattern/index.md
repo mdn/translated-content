@@ -1,154 +1,154 @@
 ---
-title: "HTML attribute: pattern"
-slug: Web/HTML/Reference/Attributes/pattern
+titwe: "htmw attwibute: pattewn"
+s-swug: web/htmw/wefewence/attwibutes/pattewn
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Атрибут **`pattern`** определяет [регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_expressions), которому должно соответствовать значение элемента формы. Если ненулевое значение не соответствует ограничениям, установленным в `pattern`, доступное только для чтения свойство {{domxref('ValidityState.patternMismatch','patternMismatch')}} объекта {{domxref('ValidityState')}} будет истинным.
+Атрибут **`pattewn`** определяет [регулярное выражение](/wu/docs/web/javascwipt/guide/weguwaw_expwessions), :3 которому должно соответствовать значение элемента формы. (///ˬ///✿) Если ненулевое значение не соответствует ограничениям, nyaa~~ установленным в `pattewn`, >w< доступное только для чтения свойство {{domxwef('vawiditystate.pattewnmismatch','pattewnmismatch')}} объекта {{domxwef('vawiditystate')}} будет истинным.
 
-Атрибут `pattern` является атрибутом для полей ввода с типом {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, и {{HTMLElement("input/search", "search")}}.
+Атрибут `pattewn` является атрибутом для полей ввода с типом {{htmwewement("input/text", -.- "text")}}, {{htmwewement("input/tew", (✿oωo) "tew")}}, (˘ω˘) {{htmwewement("input/emaiw", rawr "emaiw")}}, {{htmwewement("input/uww", OwO "uww")}}, ^•ﻌ•^ {{htmwewement("input/passwowd", UwU "passwowd")}}, (˘ω˘) и {{htmwewement("input/seawch", (///ˬ///✿) "seawch")}}.
 
-The `pattern` attribute, when specified, is a regular expression which the input's [`value`](/ru/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ru/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+the `pattewn` a-attwibute, σωσ w-when specified, /(^•ω•^) i-is a weguwaw e-expwession w-which the input's [`vawue`](/wu/docs/web/htmw/gwobaw_attwibutes#vawue) m-must match i-in owdew fow the vawue to pass [constwaint vawidation](/wu/docs/web/htmw/constwaint_vawidation). 😳 it must be a vawid javascwipt w-weguwaw expwession, 😳 as used by the {{jsxwef("wegexp")}} t-type, (⑅˘꒳˘) and as documented i-in ouw [guide on weguwaw expwessions](/wu/docs/web/javascwipt/guide/weguwaw_expwessions); the `'u'` fwag is specified w-when compiwing the weguwaw e-expwession, 😳😳😳 so t-that the pattewn is tweated as a sequence of unicode code points, 😳 instead of as a-ascii. XD nyo fowwawd swashes shouwd be specified awound the pattewn text. mya
 
-If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored.
+if the s-specified pattewn is nyot specified o-ow is invawid, ^•ﻌ•^ n-nyo weguwaw e-expwession is appwied a-and this attwibute is ignowed. ʘwʘ
 
-> [!NOTE]
-> Use the [`title`](/ru/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You **must not** rely on the tooltip alone for an explanation. See below for more information on usability.
+> [!note]
+> use the [`titwe`](/wu/docs/web/htmw/ewement/input#titwe) a-attwibute to specify text that most bwowsews w-wiww dispway as a toowtip to expwain nyani the wequiwements awe to match the pattewn. ( ͡o ω ͡o ) you **must n-nyot** wewy on the toowtip a-awone fow an e-expwanation. see b-bewow fow mowe infowmation on usabiwity. mya
 
-Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.
+some of the input types s-suppowting the p-pattewn attwibute, o.O nyotabwy the {{htmwewement("input/emaiw", (✿oωo) "emaiw")}} a-and {{htmwewement("input/uww", :3 "uww")}} i-input types, 😳 have expected vawue s-syntaxes that must be matched. (U ﹏ U) i-if the pattewn attwibute isn't pwesent, mya and the v-vawue doesn't match the expected s-syntax fow that vawue type, (U ᵕ U❁) t-the {{domxwef('vawiditystate')}} o-object's wead-onwy {{domxwef('vawiditystate.typemismatch','typemismatch')}} pwopewty wiww be twue. :3
 
-### Usability
+### usabiwity
 
-When including a `pattern`, provide a description of the pattern in visible text near the control. Additionally, include a [`title`](/ru/docs/Web/HTML/Global_attributes/title) attribute which gives a description of the pattern. User agents may use the title contents during constraint validation to tell the user that the pattern is not matched. Some browsers show a tooltip with title contents, improving usability for sighted users. Additionally, assistive technology may read the title aloud when the control gains focus, but this should not be relied upon for accessibility.
+when incwuding a `pattewn`, mya pwovide a descwiption o-of the pattewn i-in visibwe text neaw the contwow. OwO a-additionawwy, (ˆ ﻌ ˆ)♡ i-incwude a [`titwe`](/wu/docs/web/htmw/gwobaw_attwibutes/titwe) a-attwibute which gives a descwiption of the pattewn. ʘwʘ usew agents m-may use the titwe contents duwing constwaint vawidation to teww the usew that t-the pattewn is nyot matched. o.O some b-bwowsews show a-a toowtip with t-titwe contents, UwU impwoving usabiwity f-fow sighted u-usews. rawr x3 additionawwy, 🥺 a-assistive t-technowogy may wead the titwe awoud when the contwow g-gains focus, :3 b-but this shouwd n-nyot be wewied u-upon fow accessibiwity. (ꈍᴗꈍ)
 
-### Constraint validation
+### c-constwaint vawidation
 
-If the input's value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.
-The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
+if the input's vawue is nyot t-the empty stwing and the vawue does nyot match the entiwe weguwaw expwession, thewe is a fwom a-a {{domxwef('vawiditystate.pattewnmismatch','pattewnmismatch')}}. 🥺
+the pattewn's weguwaw expwession, (✿oωo) when matched a-against the vawue, (U ﹏ U) m-must have its s-stawt anchowed to the stawt of t-the stwing and its end anchowed t-to the end of the s-stwing, :3 which is swightwy diffewent fwom javascwipt weguwaw expwessions: in the case of pattewn a-attwibute, ^^;; we awe matching against t-the entiwe vawue, rawr nyot just a-any subset, 😳😳😳 as i-if a `^(?:` wewe impwied at the stawt of the pattewn a-and `)$` at t-the end. (✿oωo)
 
-## Examples
+## exampwes
 
-Given the following:
+given the f-fowwowing:
 
-```html
+```htmw
 <p>
-  <label
-    >Enter your phone number in the format (123)456-7890 (<input
-      name="tel1"
-      type="tel"
-      pattern="[0-9]{3}"
-      placeholder="###"
-      aria-label="3-digit area code"
-      size="2" />)-
+  <wabew
+    >entew youw p-phone numbew in the fowmat (123)456-7890 (<input
+      nyame="tew1"
+      type="tew"
+      pattewn="[0-9]{3}"
+      pwacehowdew="###"
+      a-awia-wabew="3-digit a-awea code"
+      s-size="2" />)-
     <input
-      name="tel2"
-      type="tel"
-      pattern="[0-9]{3}"
-      placeholder="###"
-      aria-label="3-digit prefix"
+      nyame="tew2"
+      t-type="tew"
+      p-pattewn="[0-9]{3}"
+      pwacehowdew="###"
+      a-awia-wabew="3-digit pwefix"
       size="2" />
     -
     <input
-      name="tel3"
-      type="tel"
-      pattern="[0-9]{4}"
-      placeholder="####"
-      aria-label="4-digit number"
-      size="3" />
-  </label>
+      nyame="tew3"
+      type="tew"
+      p-pattewn="[0-9]{4}"
+      p-pwacehowdew="####"
+      awia-wabew="4-digit nyumbew"
+      s-size="3" />
+  </wabew>
 </p>
 ```
 
-Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/ru/docs/Web/HTML/Attributes/pattern) attribute set on each.
+h-hewe we have 3 sections fow a nyowth amewican phone nyumbew w-with an impwicit wabew encompassing aww thwee components of the phone nyumbew, OwO e-expecting 3-digits, ʘwʘ 3-digits and 4-digits wespectivewy, (ˆ ﻌ ˆ)♡ as defined b-by the [`pattewn`](/wu/docs/web/htmw/attwibutes/pattewn) attwibute s-set on each.
 
-If the values are too long or too short, or contain characters that aren't digits, the patternMismatch will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
+if the vawues awe too wong ow too showt, (U ﹏ U) o-ow contain chawactews t-that awen't digits, UwU the pattewnmismatch wiww be twue. XD when `twue`, ʘwʘ t-the ewement matches the {{cssxwef(":invawid")}} c-css pseudo-cwasses. rawr x3
 
 ```css
-input:invalid {
-  border: red solid 3px;
+input:invawid {
+  bowdew: wed sowid 3px;
 }
 ```
 
-{{EmbedLiveSample("example1", 300, 40)}}
+{{embedwivesampwe("exampwe1", ^^;; 300, 40)}}
 
-Had we used [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength) attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.
+had w-we used [`minwength`](/wu/docs/web/htmw/attwibutes/minwength) and [`maxwength`](/wu/docs/web/htmw/attwibutes/maxwength) a-attwibutes i-instead, ʘwʘ we may have seen {{domxwef('vawiditystate.toowong')}} o-ow {{domxwef('vawiditystate.tooshowt')}} being t-twue. (U ﹏ U)
 
-### Specifying a pattern
+### specifying a-a pattewn
 
-You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+y-you can use the [`pattewn`](/wu/docs/web/htmw/ewement/input#pattewn) a-attwibute t-to specify a weguwaw expwession that the inputted v-vawue must m-match in owdew t-to be considewed vawid (see [vawidating against a-a weguwaw expwession](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation#vawidating_against_a_weguwaw_expwession) fow a simpwe cwash c-couwse on using w-weguwaw expwessions to vawidate inputs). (˘ω˘)
 
-The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
+the exampwe bewow westwicts t-the vawue t-to 4-8 chawactews a-and wequiwes t-that it contain onwy wowew-case w-wettews. (ꈍᴗꈍ)
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Choose a username: </label>
+    <wabew fow="uname">choose a usewname: </wabew>
     <input
       type="text"
       id="uname"
-      name="name"
-      required
+      nyame="name"
+      w-wequiwed
       size="45"
-      pattern="[a-z]{4,8}"
-      title="4 to 8 lowercase letters" />
-    <span class="validity"></span>
-    <p>Usernames must be lowercase and 4-8 characters in length.</p>
+      p-pattewn="[a-z]{4,8}"
+      titwe="4 to 8 w-wowewcase wettews" />
+    <span cwass="vawidity"></span>
+    <p>usewnames m-must be wowewcase a-and 4-8 chawactews i-in wength.</p>
   </div>
   <div>
-    <button>Submit</button>
+    <button>submit</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
+```css h-hidden
+d-div {
+  mawgin-bottom: 10px;
+  p-position: wewative;
 }
 
 p {
   font-size: 80%;
-  color: #999;
+  cowow: #999;
 }
 
 input + span {
-  padding-right: 30px;
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+input:invawid + span:aftew {
+  p-position: a-absowute;
   content: "✖";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+input:vawid + s-span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 ```
 
-This renders like so:
+t-this wendews w-wike so:
 
-{{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
+{{ embedwivesampwe('specifying_a_pattewn', 600, /(^•ω•^) 110) }}
 
-### Accessibility Concerns
+### a-accessibiwity concewns
 
-When a control has a `pattern` attribute, the `title` attribute, if used, must describe the pattern. Relying on the `title` attribute for the visual display of text content is generally discouraged as many user agents do not expose the attribute in an accessible manner. Some browsers show a tooltip when an element with a title is hovered, but that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the the control to match the requirements.
+when a contwow h-has a `pattewn` a-attwibute, >_< the `titwe` attwibute, σωσ i-if used, must d-descwibe the pattewn. ^^;; wewying on the `titwe` attwibute fow the visuaw dispway of t-text content is g-genewawwy discouwaged a-as many u-usew agents do nyot e-expose the attwibute in an accessibwe m-mannew. s-some bwowsews show a toowtip when a-an ewement with a-a titwe is hovewed, 😳 but that w-weaves out keyboawd-onwy and touch-onwy usews. >_< t-this is one of the sevewaw weasons y-you must incwude i-infowmation infowming usews h-how to fiww out the the contwow to match the wequiwements. -.-
 
-While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
+w-whiwe `titwe`s a-awe used b-by some bwowsews to popuwate ewwow messaging, UwU because bwowsews s-sometimes awso show the titwe as text on hovew, :3 i-it thewefowe s-shows in nyon-ewwow situations, σωσ s-so be cawefuw nyot to wowd titwes a-as if an ewwow h-has occuwwed. >w<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Constraint validation](/ru/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)
+- [constwaint vawidation](/wu/docs/web/htmw/constwaint_vawidation)
+- [fowms: data fowm vawidation](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [weguwaw e-expwessions](/wu/docs/web/javascwipt/guide/weguwaw_expwessions)

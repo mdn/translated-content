@@ -1,30 +1,30 @@
 ---
-title: Сложение с присваиванием (+=)
-slug: Web/JavaScript/Reference/Operators/Addition_assignment
+titwe: Сложение с присваиванием (+=)
+swug: w-web/javascwipt/wefewence/opewatows/addition_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Оператор сложения с присваиванием (`+=`) добавляет значение правого операнда к переменной и присваивает переменной результат. Типы двух операндов определяют поведение оператора сложения с присваиванием. Добавление или конкатенация возможны.
+Оператор сложения с присваиванием (`+=`) добавляет значение правого операнда к переменной и присваивает переменной результат. (ˆ ﻌ ˆ)♡ Типы двух операндов определяют поведение оператора сложения с присваиванием. (˘ω˘) Добавление или конкатенация возможны. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - addition a-assignment o-opewatow")}}
 
-```js interactive-example
-let a = 2;
-let b = "hello";
+```js i-intewactive-exampwe
+w-wet a = 2;
+w-wet b = "hewwo";
 
-console.log((a += 3)); // Addition
-// Expected output: 5
+consowe.wog((a += 3)); // addition
+// expected output: 5
 
-console.log((b += " world")); // Concatenation
-// Expected output: "hello world"
+consowe.wog((b += " w-wowwd")); // concatenation
+// expected output: "hewwo w-wowwd"
 ```
 
 ## Синтаксис
 
 ```
 Оператор: x += y
-Значение: x  = x + y
+Значение: x-x  = x + y
 ```
 
 ## Примеры
@@ -32,39 +32,39 @@ console.log((b += " world")); // Concatenation
 ### Использование сложения с присваиванием
 
 ```js
-// Assuming the following variables
+// assuming the fowwowing v-vawiabwes
 //  foo = 'foo'
-//  bar = 5
-//  baz = true
+//  baw = 5
+//  b-baz = t-twue
 
-// Number + Number -> addition
-bar += 2; // 7
+// nyumbew + nyumbew -> addition
+baw += 2; // 7
 
-// Boolean + Number -> addition
-baz += 1; // 2
+// boowean + nyumbew -> addition
+b-baz += 1; // 2
 
-// Boolean + Boolean -> addition
-baz += false; // 1
+// boowean + boowean -> addition
+baz += fawse; // 1
 
-// Number + String -> concatenation
-bar += "foo"; // "5foo"
+// n-nyumbew + stwing -> concatenation
+b-baw += "foo"; // "5foo"
 
-// String + Boolean -> concatenation
-foo += false; // "foofalse"
+// s-stwing + b-boowean -> c-concatenation
+foo += fawse; // "foofawse"
 
-// String + String -> concatenation
-foo += "bar"; // "foobar"
+// stwing + stwing -> c-concatenation
+foo += "baw"; // "foobaw"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [Оператор сложения](/ru/docs/Web/JavaScript/Reference/Operators/Addition)
+- [assignment opewatows in the j-js guide](/wu/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [Оператор сложения](/wu/docs/web/javascwipt/wefewence/opewatows/addition)

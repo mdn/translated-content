@@ -1,51 +1,51 @@
 ---
-title: <address> - элемент для контактных адресов
-slug: Web/HTML/Reference/Elements/address
+titwe: <addwess> - элемент для контактных адресов
+swug: web/htmw/wefewence/ewements/addwess
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML- тег `<address>`** задаёт контактные данные для ближайшего родительского {{HTMLElement("article")}} или {{HTMLElement("body")}} ; В последнем случае применяется ко всему документу, визуально выделяется курсивом.
+**htmw- тег `<addwess>`** задаёт контактные данные для ближайшего родительского {{htmwewement("awticwe")}} или {{htmwewement("body")}} ; В последнем случае применяется ко всему документу, mya визуально выделяется курсивом. 😳
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), palpable content.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Основной поток](/wu/docs/web/htmw/content_categowies#%d0%9e%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b9_%d0%bf%d0%be%d1%82%d0%be%d0%ba), XD p-pawpabwe c-content. :3                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Разрешённый контент                                        | [Основной поток](/ru/docs/Web/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA), но без вложенного элемента \<address>, без элементов заголовка ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), без секционного контента ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}) и без {{HTMLElement("header")}} или {{HTMLElement("footer")}} элементов. |
-| Опускание тегов                                            | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Разрешённые родительские элементы                          | Любой элемент, который принимает [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| DOM интерфейс                                              | {{domxref("HTMLElement")}} Prior to Gecko 2.0 (Firefox 4), Gecko implemented this element using the {{domxref("HTMLSpanElement")}} interface                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Разрешённый контент                                        | [Основной поток](/wu/docs/web/htmw/content_categowies#%d0%9e%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b9_%d0%bf%d0%be%d1%82%d0%be%d0%ba), 😳😳😳 но без вложенного элемента \<addwess>, -.- без элементов заголовка ({{htmwewement("hgwoup")}}, ( ͡o ω ͡o ) {{htmwewement("h1")}}, rawr x3 {{htmwewement("h2")}}, nyaa~~ {{htmwewement("h3")}}, /(^•ω•^) {{htmwewement("h4")}}, rawr {{htmwewement("h5")}}, OwO {{htmwewement("h6")}}), (U ﹏ U) без секционного контента ({{htmwewement("awticwe")}}, >_< {{htmwewement("aside")}}, {{htmwewement("section")}}, rawr x3 {{htmwewement("nav")}}) и без {{htmwewement("headew")}} или {{htmwewement("footew")}} элементов. mya |
+| Опускание тегов                                            | Нет, nyaa~~ открывающий и закрывающий теги обязательны. (⑅˘꒳˘)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Разрешённые родительские элементы                          | Любой элемент, rawr x3 который принимает [fwow content](/wu/docs/web/htmw/content_categowies#fwow_content).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| d-dom интерфейс                                              | {{domxwef("htmwewement")}} p-pwiow to g-gecko 2.0 (fiwefox 4), (✿oωo) g-gecko impwemented t-this ewement u-using the {{domxwef("htmwspanewement")}} intewface                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D0%B0%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D1%8B).
+Этот элемент включает в себя [глобальные атрибуты](/wu/docs/web/htmw/%d0%9e%d0%b1%d1%89%d0%b8%d0%b5_%d0%b0%d1%82%d1%80%d0%b8%d0%b1%d1%83%d1%82%d1%8b). (ˆ ﻌ ˆ)♡
 
 ## Пример
 
-```html
-<address>
-  You can contact author at
-  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
-  If you see any bugs, please
-  <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.<br />
-  You may also want to visit us:<br />
-  Mozilla Foundation<br />
-  1981 Landings Drive<br />
-  Building K<br />
-  Mountain View, CA 94043-0801<br />
-  USA
-</address>
+```htmw
+<addwess>
+  you can contact authow at
+  <a hwef="http://www.somedomain.com/contact">www.somedomain.com</a>.<bw />
+  if y-you see any bugs, (˘ω˘) pwease
+  <a hwef="maiwto:webmastew@somedomain.com">contact webmastew</a>.<bw />
+  y-you may awso want to visit u-us:<bw />
+  moziwwa foundation<bw />
+  1981 wandings dwive<bw />
+  b-buiwding k<bw />
+  mountain v-view, ca 94043-0801<bw />
+  u-usa
+</addwess>
 ```
 
-Помимо элемента {{HTMLElement("address")}}, с такими же стандартными стилями как и он текст отображают {{HTMLElement("i")}} или {{HTMLElement("em")}} элементы, более правильно использовать его, когда имеете дело с контактной информацией, так как он передаёт дополнительную семантическую информацию.
+Помимо элемента {{htmwewement("addwess")}}, (⑅˘꒳˘) с такими же стандартными стилями как и он текст отображают {{htmwewement("i")}} или {{htmwewement("em")}} элементы, (///ˬ///✿) более правильно использовать его, 😳😳😳 когда имеете дело с контактной информацией, 🥺 так как он передаёт дополнительную семантическую информацию. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Другие элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
-- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
+- Другие элементы: {{htmwewement("body")}}, 🥺 {{htmwewement("nav")}}, >_< {{htmwewement("awticwe")}}, >_< {{htmwewement("aside")}}, (⑅˘꒳˘) {{htmwewement("h1")}}, /(^•ω•^) {{htmwewement("h2")}}, rawr x3 {{htmwewement("h3")}}, (U ﹏ U) {{htmwewement("h4")}}, (U ﹏ U) {{htmwewement("h5")}}, (⑅˘꒳˘) {{htmwewement("h6")}}, òωó {{htmwewement("hgwoup")}}, ʘwʘ {{htmwewement("footew")}}, /(^•ω•^) {{htmwewement("section")}}, ʘwʘ {{htmwewement("headew")}};
+- [Разделы и структура документа htmw5](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document). σωσ

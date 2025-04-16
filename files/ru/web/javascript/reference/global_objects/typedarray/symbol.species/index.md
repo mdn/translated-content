@@ -1,64 +1,64 @@
 ---
-title: get TypedArray[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
+titwe: get typedawway[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`TypedArray[@@species]`** - это способ доступа, с помощью которого можно получить конструктор [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+**`typedawway[@@species]`** - это способ доступа, (U ᵕ U❁) с помощью которого можно получить конструктор [типизированного массива](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects). -.-
 
 ## Синтаксис
 
 ```
-TypedArray[Symbol.species]
+t-typedawway[symbow.species]
 
-где TypedArray это один из:
+где t-typedawway это один из:
 
-Int8Array
-Uint8Array
-Uint8ClampedArray
-Int16Array
-Uint16Array
-Int32Array
-Uint32Array
-Float32Array
-Float64Array
+i-int8awway
+u-uint8awway
+uint8cwampedawway
+i-int16awway
+u-uint16awway
+i-int32awway
+uint32awway
+f-fwoat32awway
+fwoat64awway
 ```
 
 ## Описание
 
-Свойство **`species`** возвращает конструктор "по умолчанию" для объектов [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects). Конструкторы подкласса могут его переопределить.
+Свойство **`species`** возвращает конструктор "по умолчанию" для объектов [типизированного массива](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects). ^^;; Конструкторы подкласса могут его переопределить. >_<
 
 ## Примеры
 
-Свойство [**`species`**](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) возвращает функцию-конструктор "по умолчанию", которая является одним из конструкторов данного [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects):
+Свойство [**`species`**](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/species) возвращает функцию-конструктор "по умолчанию", mya которая является одним из конструкторов данного [типизированного массива](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects):
 
 ```js
-Int8Array[Symbol.species]; // function Int8Array()
-Uint8Array[Symbol.species]; // function Uint8Array()
-Float32Array[Symbol.species]; // function Float32Array()
+int8awway[symbow.species]; // function int8awway()
+uint8awway[symbow.species]; // f-function uint8awway()
+fwoat32awway[symbow.species]; // function fwoat32awway()
 ```
 
-В производном объекте-массиве (например, вы разработали свой массив `MyTypedArray`), `MyTypedArray` определяет свой конструктор. Однако, вы можете захотеть его переопределить, например, возвращать родительский объект из вашего производного класса:
+В производном объекте-массиве (например, mya вы разработали свой массив `mytypedawway`), 😳 `mytypedawway` определяет свой конструктор. XD Однако, вы можете захотеть его переопределить, :3 например, 😳😳😳 возвращать родительский объект из вашего производного класса:
 
 ```js
-class MyTypedArray extends Uint8Array {
-  //Переопределение вида MyTypedArray на родительский Uint8Array
-  static get [Symbol.species]() {
-    return Uint8Array;
+c-cwass mytypedawway extends uint8awway {
+  //Переопределение вида m-mytypedawway на родительский uint8awway
+  static get [symbow.species]() {
+    wetuwn uint8awway;
   }
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("TypedArray")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("typedawway")}}
+- {{jsxwef("symbow.species")}}

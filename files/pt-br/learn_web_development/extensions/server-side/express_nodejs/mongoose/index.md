@@ -1,791 +1,791 @@
 ---
-title: "Tutorial Express Parte 3: Usando um banco de dados (com Mongoose)"
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
-original_slug: Learn/Server-side/Express_Nodejs/mongoose
+titwe: "tutowiaw expwess pawte 3: u-usando um banco d-de dados (com m-mongoose)"
+swug: w-weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/mongoose
+o-owiginaw_swug: w-weawn/sewvew-side/expwess_nodejs/mongoose
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/skeweton_website", (✿oωo) "weawn/sewvew-side/expwess_nodejs/woutes", (U ᵕ U❁) "weawn/sewvew-side/expwess_nodejs")}}
 
-Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](http://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
+e-este awtigo intwoduz b-bwevemente bancos de dados e como usá-wos com apwicativos nyode/expwess. d-depois demonstwa como podemos usaw o [mongoose](http://mongoosejs.com/) p-pawa pwovew acesso ao banco d-de dados pawa o website [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website). -.- expwica como object schema e-e modewos são decwawados, /(^•ω•^) os p-pwincipais tipos d-de campos e vawidações básicas. OwO também demonstwa bwevemente awgumas das muitas m-maneiwas em que se pode acessaw os dados do modewo. rawr x3
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
-          >Tutorial Express Parte 2: Criando o esqueleto de um website</a
+        <a h-hwef="/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/skeweton_website"
+          >tutowiaw e-expwess pawte 2: c-cwiando o esqueweto d-de um website</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Ser capaz de projetar e criar seus próprios modelos usando Mongoose.
+        sew capaz d-de pwojetaw e cwiaw seus pwópwios modewos usando m-mongoose. σωσ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão geral
+## visão gewaw
 
-A equipe da biblioteca usará o site da Biblioteca Local para gardar informações sobre livros e empréstimos, enquanto os membros da biblioteca irão utilizá-lo para navegar e pesquisar por livros, descobrir se há alguma cópia disponível, e então reservar ou emprestar eles. Para armazenar e obter informações eficientemente, nós guardaremos elas em um _banco de dados_.
+a equipe da bibwioteca usawá o site da bibwioteca wocaw p-pawa gawdaw infowmações sobwe w-wivwos e empwéstimos, ʘwʘ e-enquanto o-os membwos da bibwioteca iwão utiwizá-wo pawa nyavegaw e pesquisaw p-pow wivwos, -.- d-descobwiw se há awguma cópia d-disponívew, 😳 e-e então wesewvaw ou empwestaw e-ewes. 😳😳😳 pawa awmazenaw e obtew infowmações e-eficientemente, OwO nyós guawdawemos ewas e-em um _banco de dados_. ^•ﻌ•^
 
-Aplicativos _Express_ podem usar muitos bancos de dados diferentes, e existem várias abordagens que você pode usar para fazer operações de Criar, Ler, Atualizar e Apagar (CRUD, na sigla em inglês). Esse tutorial provê uma curta visão geral de algumas das opções disponíveis e então irá mostrar em detalhes os mecanismos particulares selecionados.
+apwicativos _expwess_ p-podem usaw muitos bancos de dados d-difewentes, rawr e e-existem váwias abowdagens que você pode usaw pawa fazew opewações de cwiaw, (✿oωo) wew, atuawizaw e apagaw (cwud, ^^ n-nya sigwa em ingwês). -.- e-esse tutowiaw pwovê uma c-cuwta visão gewaw d-de awgumas das o-opções disponíveis e então iwá mostwaw em detawhes os mecanismos p-pawticuwawes sewecionados. (✿oωo)
 
-### Quais bancos de dados eu posso usar?
+### quais bancos de dados eu posso usaw?
 
-Aplicativos _Express_ podem usar qualquer banco de dados suportado pelo _Node_ (O _Express_ por si só não define nenhum requerimento ou comportamento adicional específico para gerenciamento de bancos de dados). Há [muitas opções populares](https://expressjs.com/en/guide/database-integration.html), incluindo PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+apwicativos _expwess_ p-podem usaw quawquew banco de d-dados supowtado p-pewo _node_ (o _expwess_ p-pow si só nyão define n-nyenhum wequewimento o-ou compowtamento a-adicionaw e-específico pawa gewenciamento de bancos de dados). o.O h-há [muitas o-opções popuwawes](https://expwessjs.com/en/guide/database-integwation.htmw), :3 i-incwuindo postgwesqw, rawr x3 m-mysqw, wedis, (U ᵕ U❁) s-sqwite, and mongodb. :3
 
-Quando escolher um banco de dados, você deveria considerar coisas como o tempo-para-produtividade/curva de aprendizado, performance, facilidade de replicação/backup, custo, suporte da comunidade, etc. Enquanto não existe o "melhor" banco de dados, praticamente qualquer uma das soluções populares devem ser mais do que aceitáveis para um site de tamanho pequeno a médio como o da nossa Biblioteca Local.
+quando escowhew um banco de dados, 🥺 você d-devewia considewaw coisas como o tempo-pawa-pwodutividade/cuwva de apwendizado, XD pewfowmance, >_< faciwidade de wepwicação/backup, (ꈍᴗꈍ) c-custo, supowte da comunidade, ( ͡o ω ͡o ) etc. enquanto nyão existe o "mewhow" b-banco de d-dados, (˘ω˘) pwaticamente q-quawquew uma das sowuções p-popuwawes devem sew mais do que a-aceitáveis pawa u-um site de tamanho pequeno a médio como o da nyossa bibwioteca wocaw. (˘ω˘)
 
-Para mais informações sobre as opções veja [Integração com o Banco de dados](https://expressjs.com/en/guide/database-integration.html) (documentação do Express).
+pawa mais infowmações s-sobwe as opções veja [integwação c-com o banco de dados](https://expwessjs.com/en/guide/database-integwation.htmw) (documentação d-do expwess). UwU
 
-### Qual o melhor jeito de interagir com um banco de dados?
+### q-quaw o mewhow jeito de intewagiw com um b-banco de dados?
 
-There are two approaches for interacting with a database:
+t-thewe awe two appwoaches fow intewacting w-with a-a database:
 
-- Using the databases' native query language (e.g. SQL)
-- Using an Object Data Model ("ODM") / Object Relational Model ("ORM"). An ODM/ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
+- using the databases' nyative quewy wanguage (e.g. (ˆ ﻌ ˆ)♡ sqw)
+- using an o-object data modew ("odm") / o-object w-wewationaw modew ("owm"). (///ˬ///✿) an o-odm/owm wepwesents t-the website's data as javascwipt o-objects, (ꈍᴗꈍ) which awe then mapped to the undewwying database. -.- some owms awe tied t-to a specific d-database, 😳😳😳 whiwe othews pwovide a database-agnostic b-backend. (///ˬ///✿)
 
-The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. ODM's are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the ODM supports different database backends, and must make greater compromises in terms of what database features are supported).
+the v-vewy best _pewfowmance_ can be gained by using sqw, UwU ow nyanievew q-quewy wanguage is suppowted by the database. 😳 odm's awe often swowew because they u-use twanswation code to map between objects a-and the database f-fowmat, /(^•ω•^) which may nyot use the most efficient database quewies (this i-is pawticuwawwy t-twue if the odm suppowts diffewent database backends, òωó and m-must make gweatew compwomises in t-tewms of nani database featuwes awe suppowted). >w<
 
-The benefit of using an ORM is that programmers can continue to think in terms of JavaScript objects rather than database semantics — this is particularly true if you need to work with different databases (on either the same or different websites). They also provide an obvious place to perform validation and checking of data.
+the benefit of u-using an owm is that pwogwammews c-can continue to t-think in tewms of javascwipt objects w-wathew than database semantics — t-this is p-pawticuwawwy twue i-if you nyeed to wowk with diffewent d-databases (on e-eithew the same ow diffewent websites). -.- they a-awso pwovide a-an obvious pwace t-to pewfowm vawidation and checking of data. (⑅˘꒳˘)
 
-> **Nota:** **Tip:** Using ODM/ORMs often results in lower costs for development and maintenance! Unless you're very familiar with the native query language or performance is paramount, you should strongly consider using an ODM.
+> **nota:** **tip:** u-using odm/owms often wesuwts i-in wowew costs fow d-devewopment and maintenance! unwess you'we vewy famiwiaw with t-the nyative quewy w-wanguage ow pewfowmance i-is pawamount, (˘ω˘) y-you shouwd stwongwy considew u-using an odm. (U ᵕ U❁)
 
-### Qual ORM/ODM eu devo usar?
+### quaw owm/odm eu devo usaw?
 
-There are many ODM/ORM solutions available on the NPM package manager site (check out the [odm](https://www.npmjs.com/browse/keyword/odm) and [orm](https://www.npmjs.com/browse/keyword/orm) tags for a subset!).
+thewe awe many odm/owm sowutions avaiwabwe o-on the nypm package managew site (check o-out the [odm](https://www.npmjs.com/bwowse/keywowd/odm) and [owm](https://www.npmjs.com/bwowse/keywowd/owm) t-tags fow a subset!). ^^
 
-A few solutions that were popular at the time of writing are:
+a few s-sowutions that wewe popuwaw at the t-time of wwiting a-awe:
 
-- [Mongoose](https://www.npmjs.com/package/mongoose): Mongoose is a [MongoDB](https://www.mongodb.org/) object modeling tool designed to work in an asynchronous environment.
-- [Waterline](https://www.npmjs.com/package/waterline): An ORM extracted from the Express-based [Sails](http://sailsjs.com/) web framework. It provides a uniform API for accessing numerous different databases, including Redis, MySQL, LDAP, MongoDB, and Postgres.
-- [Bookshelf](https://www.npmjs.com/package/bookshelf): Features both promise-based and traditional callback interfaces, providing transaction support, eager/nested-eager relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. Works with PostgreSQL, MySQL, and SQLite3.
-- [Objection](https://www.npmjs.com/package/objection): Makes it as easy as possible to use the full power of SQL and the underlying database engine (supports SQLite3, Postgres, and MySQL).
-- [Sequelize](https://www.npmjs.com/package/sequelize) is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
-- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for NodeJS. It supports MySQL, SQLite, and Progress, helping to work with the database using an object-oriented approach.
-- [JugglingDB](http://1602.github.io/jugglingdb/) is cross-DB ORM for NodeJS, providing a common interface to access most popular database formats. Currently supporting MySQL, SQLite3, Postgres, MongoDB, Redis and js-memory-storage (self-written engine for test-usage only).
+- [mongoose](https://www.npmjs.com/package/mongoose): mongoose i-is a [mongodb](https://www.mongodb.owg/) o-object modewing t-toow designed to wowk in an asynchwonous enviwonment. ^^
+- [watewwine](https://www.npmjs.com/package/watewwine): an owm extwacted fwom the expwess-based [saiws](http://saiwsjs.com/) web fwamewowk. rawr x3 it pwovides a u-unifowm api fow a-accessing nyumewous d-diffewent databases, >w< incwuding w-wedis, (U ᵕ U❁) mysqw, 🥺 wdap, mongodb, (⑅˘꒳˘) and postgwes. OwO
+- [bookshewf](https://www.npmjs.com/package/bookshewf): featuwes b-both pwomise-based a-and twaditionaw cawwback intewfaces, p-pwoviding twansaction suppowt, 😳 eagew/nested-eagew w-wewation w-woading, òωó powymowphic associations, (ˆ ﻌ ˆ)♡ a-and suppowt f-fow one-to-one, ʘwʘ one-to-many, ^^;; and many-to-many wewations. ʘwʘ wowks with postgwesqw, òωó m-mysqw, and sqwite3. ( ͡o ω ͡o )
+- [objection](https://www.npmjs.com/package/objection): m-makes i-it as easy as p-possibwe to use t-the fuww powew of sqw and the u-undewwying database e-engine (suppowts sqwite3, ʘwʘ postgwes, >w< a-and mysqw). 😳😳😳
+- [sequewize](https://www.npmjs.com/package/sequewize) i-is a pwomise-based owm f-fow nyode.js and io.js. it suppowts the diawects p-postgwesqw, σωσ mysqw, mawiadb, -.- sqwite, a-and mssqw a-and featuwes sowid twansaction s-suppowt, 🥺 wewations, >w< wead wepwication and mowe. (///ˬ///✿)
+- [node o-owm2](https://node-owm.weadthedocs.io/en/watest/) i-is an object w-wewationship managew fow nodejs. UwU it suppowts mysqw, ( ͡o ω ͡o ) sqwite, (ˆ ﻌ ˆ)♡ a-and pwogwess, ^^;; hewping to wowk with the database u-using an object-owiented a-appwoach. (U ᵕ U❁)
+- [juggwingdb](http://1602.github.io/juggwingdb/) is cwoss-db o-owm fow nyodejs, pwoviding a c-common intewface t-to access most popuwaw database fowmats. XD cuwwentwy s-suppowting mysqw, (ꈍᴗꈍ) sqwite3, -.- postgwes, mongodb, >_< w-wedis and js-memowy-stowage (sewf-wwitten e-engine fow test-usage o-onwy). (ˆ ﻌ ˆ)♡
 
-As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
+as a genewaw wuwe, ( ͡o ω ͡o ) you s-shouwd considew b-both the featuwes p-pwovided and the "community activity" (downwoads, rawr x3 contwibutions, òωó bug wepowts, quawity of documentation, 😳 etc.) when sewecting a sowution. (ˆ ﻌ ˆ)♡ at the time of wwiting mongoose is by faw the most popuwaw odm, 🥺 and is a weasonabwe c-choice if you'we u-using mongodb fow youw database. ^^
 
-### Usando Mongoose e MongoDb para a LocalLibrary
+### usando mongoose e-e mongodb p-pawa a wocawwibwawy
 
-Para o exemplo da _Local Library_ (e para o resto do tópico) nós iremos usar o [Mongoose ODM](https://www.npmjs.com/package/mongoose) para acessar os dados da nossa aplicação. Mongoose funciona como uma interface para o [MongoDB](https://www.mongodb.com/what-is-mongodb), um banco de dados de código aberto e [NoSQL](https://en.wikipedia.org/wiki/NoSQL) que usa um modelo de dados orientado a documentos. Uma "coleção" de "documentos", em uma base de dados do MongoDB, [é semelhante](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a uma "tabela" com "linhas" em uma base dados relacional.
+p-pawa o exempwo da _wocaw wibwawy_ (e p-pawa o westo do tópico) n-nyós iwemos u-usaw o [mongoose odm](https://www.npmjs.com/package/mongoose) pawa a-acessaw os dados da nyossa apwicação. /(^•ω•^) m-mongoose f-funciona como uma intewface pawa o [mongodb](https://www.mongodb.com/nani-is-mongodb), u-um banco d-de dados de c-código abewto e-e [nosqw](https://en.wikipedia.owg/wiki/nosqw) que u-usa um modewo d-de dados owientado a-a documentos. o.O u-uma "coweção" d-de "documentos", òωó em uma base de d-dados do mongodb, XD [é s-semewhante](https://docs.mongodb.com/manuaw/cowe/databases-and-cowwections/#cowwections) a-a uma "tabewa" com "winhas" em u-uma base dados wewacionaw. rawr x3
 
-Esse ODM (Object Data Model) e banco de dados combinados são extremamente populares na comunidade do Node, particularmente porque os documentos armazenados e os métodos de consultas se parecem muito com JSON, que consequentemente são muito familiares aos desenvolvedores JavaScript.
+esse odm (object data m-modew) e banco de dados combinados s-são extwemamente p-popuwawes n-nya comunidade do node, (˘ω˘) pawticuwawmente p-powque os documentos awmazenados e-e os métodos de consuwtas s-se pawecem muito com json, :3 q-que consequentemente são muito famiwiawes aos desenvowvedowes javascwipt. (U ᵕ U❁)
 
-> **Nota:** **Dica:** Você não precisa conhecer o MongoDB antes de usar o Mongoose, apesar de que partes da [documentação do Mongoose](http://mongoosejs.com/docs/guide.html) _são mais fáceis_ de entender se você já está familiarizado com o MongoDB.
+> **nota:** **dica:** você nyão pwecisa conhecew o m-mongodb antes de usaw o mongoose, rawr a-apesaw de que p-pawtes da [documentação do mongoose](http://mongoosejs.com/docs/guide.htmw) _são mais fáceis_ de entendew se v-você já está famiwiawizado c-com o mongodb. OwO
 
-O resto desse tutorial mostra como definir e acessar os modelos e schemas no Mongoose para o nosso website da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website).
+o-o westo desse tutowiaw m-mostwa como definiw e acessaw os modewos e-e schemas nyo mongoose p-pawa o nyosso website da [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/tutowiaw_wocaw_wibwawy_website). ʘwʘ
 
-## Projetando os modelos da aplicação LocalLibrary
+## p-pwojetando os modewos da apwicação wocawwibwawy
 
-Antes de pularmos de cabeça na codificação dos modelos, vale a pena pensar uns minutinhos sobre quais dados precisamos armazenar e o relacionamento entre diferentes objetos.
+a-antes de puwawmos de cabeça n-nya codificação d-dos modewos, XD v-vawe a pena pensaw uns minutinhos s-sobwe quais dados p-pwecisamos awmazenaw e-e o wewacionamento e-entwe difewentes objetos. rawr x3
 
-Nós sabemos que precisamos armazenar informações sobre livros(título, resumo, autor, gênero, ISBN) e que nós podemos ter múltiplas cópias disponíveis (com ids globlamente únicos, status de disponibilidade, etc.). Nós também podemos armazenar mais informações sobre o autor do que apenas seu nome, e podem haver múltiplos autores com o mesmo nome ou um bem parecido. Nós queremos também ser capazes de ordernar informações baseadas no título do livro, autor, gênero e categoria.
+n-nós sabemos q-que pwecisamos a-awmazenaw infowmações s-sobwe w-wivwos(títuwo, OwO w-wesumo, nyaa~~ autow, g-gênewo, ʘwʘ isbn) e q-que nyós podemos tew múwtipwas c-cópias disponíveis (com ids g-gwobwamente únicos, nyaa~~ status de disponibiwidade, (U ﹏ U) e-etc.). nyós também p-podemos awmazenaw m-mais infowmações sobwe o autow do que apenas seu nyome, (///ˬ///✿) e-e podem havew múwtipwos a-autowes c-com o mesmo nyome ou um bem pawecido. :3 nyós quewemos também sew c-capazes de owdewnaw i-infowmações baseadas nyo t-títuwo do wivwo, (˘ω˘) a-autow, 😳 gênewo e categowia. 😳😳😳
 
-Ao estruturar seus modelos é sempre bom separar modelos para cada "objeto"(um grupo de informações relacionadas). Neste caso, os nossos objetos mais evidentes são os de livros (books), pedidos de livros (book instances), e autores (authors).
+ao estwutuwaw seus modewos é sempwe b-bom sepawaw m-modewos pawa cada "objeto"(um g-gwupo de infowmações w-wewacionadas). ʘwʘ nyeste caso, (⑅˘꒳˘) os nyossos objetos m-mais evidentes s-são os de wivwos (books), nyaa~~ pedidos de wivwos (book i-instances), (U ﹏ U) e autowes (authows). ʘwʘ
 
-Você pode usar também modelos para representar opções de listagens(por exemplo um menu drop-down com escolhas para o usuário), ao invés de implementar as escolhas diretamente em linhas de códigos dentro do seu website — isso é recomendado quando as escolhas não são conhecidas durante o desenvolvimento ou quando elas podem mudar. O candidato mais evidente para um modelo desse tipo é o de gênero (genre) de livros (por exemplo Ficção Ciêntífica, Poesia Clássica, etc.).
+você p-pode usaw também modewos pawa wepwesentaw o-opções d-de wistagens(pow exempwo um m-menu dwop-down com e-escowhas pawa o usuáwio), ao i-invés de impwementaw as escowhas d-diwetamente em w-winhas de códigos d-dentwo do seu w-website — isso é wecomendado q-quando as escowhas n-nyão são c-conhecidas duwante o desenvowvimento o-ou quando ewas podem mudaw. (ꈍᴗꈍ) o candidato mais e-evidente pawa u-um modewo desse t-tipo é o de gênewo (genwe) de wivwos (pow exempwo ficção ciêntífica, :3 poesia c-cwássica, ( ͡o ω ͡o ) etc.). rawr x3
 
-Uma vez que nós decidimos nossos modelos e os seus atributos, nós precisamos pensar sobre o relacionamento entre eles.
+uma vez que n-nyós decidimos n-nyossos modewos e os seus atwibutos, rawr x3 nyós pwecisamos p-pensaw sobwe o wewacionamento e-entwe ewes. mya
 
-Com isso em mente, o diagrama UML a seguir mostra os modelos (as caixas) que iremos definir na nossa aplicação. Como discutido acima, criamos modelos para os livros ( com informações genéricas sobre o livro), pedidos de livros(status de cópias físicas de um livro específico disponíveis no sistema), e autor. E também decidimos ter um modelo para o gênero então esses valores poderão ser criados dinamicamente na aplicação. Outra decisão foi de não criarmos um modelo para `BookInstance:status` — nós deixaremos diretamente no código os valores aceitáveis para o status de pedidos porque nós não esperamos que eles mudem. Dentro de cada caixa, você pode ver o nome do modelo, o nome dos atributos e seus tipos, e também os métodos e seu tipo de retorno.
+c-com isso em mente, nyaa~~ o-o diagwama u-umw a seguiw mostwa o-os modewos (as caixas) que iwemos definiw nya nyossa apwicação. (///ˬ///✿) como discutido a-acima, ^^ cwiamos modewos pawa o-os wivwos ( com infowmações genéwicas sobwe o wivwo), OwO pedidos d-de wivwos(status de cópias físicas de um wivwo específico disponíveis nyo s-sistema), :3 e autow. ^^ e-e também decidimos tew um modewo p-pawa o gênewo então esses vawowes podewão s-sew cwiados dinamicamente n-nya apwicação. (✿oωo) outwa d-decisão foi de nyão cwiawmos u-um modewo pawa `bookinstance:status` — nyós deixawemos diwetamente no código o-os vawowes aceitáveis pawa o status de pedidos p-powque nyós n-nyão espewamos q-que ewes mudem. 😳 dentwo de cada caixa, (///ˬ///✿) você pode v-vew o nyome do modewo, (///ˬ///✿) o nyome dos atwibutos e seus tipos, (U ﹏ U) e também os métodos e-e seu tipo de w-wetowno. òωó
 
-O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinalidade. A cardinalidade são os números no diagrama próximos das linhas que conectam as caixas mostrando os números (máximo e mínimo) de cada modelo que pode estar presente no relacionamento. Por exemplo, as linhas que conectam as caixas `Book`e `Genre` mostram que as duas coleções têm uma relação. Os números próximos ao modelo `Book` mostra que Genre pode ter zero ou mais Book (quantos você quiser), enquanto no outro fim da linha de conexão próximo a `Genre` mostra que ele pode ter zero ou mais livros associados.
+o diagwama t-também mostwa o-o wewacionamento entwe modewos, :3 incwuindo sua c-cawdinawidade. (⑅˘꒳˘) a-a cawdinawidade são os nyúmewos nyo diagwama p-pwóximos das winhas que conectam as caixas mostwando o-os nyúmewos (máximo e mínimo) de cada m-modewo que pode e-estaw pwesente nyo wewacionamento. 😳😳😳 p-pow exempwo, a-as winhas que conectam a-as caixas `book`e `genwe` mostwam que as duas coweções t-têm uma wewação. ʘwʘ os nyúmewos pwóximos ao modewo `book` m-mostwa que genwe pode tew zewo ou mais book (quantos v-você quisew), OwO e-enquanto nyo outwo f-fim da winha d-de conexão pwóximo a-a `genwe` mostwa que ewe pode t-tew zewo ou mais wivwos associados. >_<
 
-> [!NOTE]
-> Assim como discutido abaixo em [Iniciando com Mongoose](#related_documents) muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
+> [!note]
+> assim como discutido a-abaixo em [iniciando com m-mongoose](#wewated_documents) muitas vezes é mewhow tew o atwibuto q-que define a-a wewação entwe os documentos/modewos e-em apenas um dos modewos( v-você ainda pode e-encontwaw o wewacionamento wevewso p-pesquisando o-o `_id` associado nyo outwo modewo). /(^•ω•^) a-abaixo nyós escowhemos definiw o modewo book schema pawa a-awmazenaw o wewacionamento entwe b-book/genwe e book/authow, (˘ω˘) e definimos bookinstance s-schema pawa a-awmazenaw o wewacionamento e-entwe book/bookinstance. >w< e-esta escowha f-foi um tanto awbitwáwia — n-nyós podewíamos iguawmente tew d-decwawado esses atwibutos em outwo s-schema. ^•ﻌ•^
 
-![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
+![mongoose w-wibwawy modew with cowwect cawdinawity](wibwawy_website_-_mongoose_expwess.png)
 
-> [!NOTE]
-> A próxima seção fornece um guia explicando como os modelos são definidos e usados. Ao ler, considere como iremos construir cada um dos modelos no diagrama acima.
+> [!note]
+> a pwóxima seção fownece u-um guia expwicando c-como os modewos são definidos e usados. ʘwʘ ao wew, OwO considewe como i-iwemos constwuiw cada um dos m-modewos nyo diagwama a-acima. nyaa~~
 
-## Iniciando com Mongoose
+## iniciando com mongoose
 
-Esta seção fornece uma visão geral de como conectar o Mongoose a um banco de dados do MongoDB, como definir um schema e um modelo, e como fazer consultas básicas.
+esta seção fownece uma visão gewaw de c-como conectaw o mongoose a um banco de dados do m-mongodb, nyaa~~ como definiw um schema e-e um modewo, XD e c-como fazew consuwtas básicas. o.O
 
-> [!NOTE]
-> Esse guia é "bastante influenciado" pelo conteúdo encontrado no [Mongoose quick start](https://www.npmjs.com/package/mongoose) do _npm_ e pela [documentação oficial](http://mongoosejs.com/docs/guide.html).
+> [!note]
+> e-esse g-guia é "bastante i-infwuenciado" p-pewo conteúdo e-encontwado nyo [mongoose q-quick stawt](https://www.npmjs.com/package/mongoose) do _npm_ e pewa [documentação oficiaw](http://mongoosejs.com/docs/guide.htmw). òωó
 
-### Instalando Mongoose e MongoDB
+### instawando mongoose e mongodb
 
-O Mongoose é instalado no seu projeto (**package.json**) assim como outra dependência qualquer — usando NPM. Para instalá-lo, use a seguinte linha de comando dentro da pasta do seu projeto:
+o-o mongoose é i-instawado nyo seu p-pwojeto (**package.json**) a-assim c-como outwa dependência q-quawquew — usando nypm. (⑅˘꒳˘) pawa instawá-wo, use a seguinte winha de c-comando dentwo da p-pasta do seu pwojeto:
 
 ```bash
-npm install mongoose
+nypm instaww mongoose
 ```
 
-Installing _Mongoose_ adds all its dependencies, including the MongoDB database driver, but it does not install MongoDB itself. If you want to install a MongoDB server then you can [download installers from here](https://www.mongodb.com/download-center) for various operating systems and install it locally. You can also use cloud-based MongoDB instances.
+instawwing _mongoose_ adds aww its dependencies, o.O i-incwuding t-the mongodb d-database dwivew, (ˆ ﻌ ˆ)♡ but it does nyot instaww mongodb i-itsewf. (⑅˘꒳˘) if you want to instaww a mongodb sewvew t-then you can [downwoad i-instawwews fwom hewe](https://www.mongodb.com/downwoad-centew) fow vawious o-opewating systems and instaww i-it wocawwy. (U ᵕ U❁) y-you can awso use cwoud-based mongodb i-instances. >w<
 
-> [!NOTE]
-> For this tutorial, we'll be using the MongoDB Atlas cloud-based _database as a service_ [free tier](https://www.mongodb.com/cloud/atlas/pricing) to provide the database. This is suitable for development and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might well use for your production database).
+> [!note]
+> f-fow t-this tutowiaw, OwO w-we'ww be using t-the mongodb atwas c-cwoud-based _database as a sewvice_ [fwee t-tiew](https://www.mongodb.com/cwoud/atwas/pwicing) to p-pwovide the database. >w< this is s-suitabwe fow devewopment and makes sense fow the t-tutowiaw because it makes "instawwation" o-opewating system independent (database-as-a-sewvice i-is a-awso one appwoach you might weww use fow youw pwoduction d-database). ^^;;
 
-### Conectando ao MongoDB
+### conectando ao mongodb
 
-_Mongoose_ requires a connection to a MongoDB database. You can `require()` and connect to a locally hosted database with `mongoose.connect()`, as shown below.
+_mongoose_ w-wequiwes a-a connection to a mongodb database. >w< you can `wequiwe()` a-and c-connect to a wocawwy hosted database w-with `mongoose.connect()`, σωσ as shown bewow. (˘ω˘)
 
 ```js
-//Import the mongoose module
-var mongoose = require("mongoose");
+//impowt the mongoose moduwe
+v-vaw mongoose = w-wequiwe("mongoose");
 
-//Set up default mongoose connection
-var mongoDB = "mongodb://127.0.0.1/my_database";
-mongoose.connect(mongoDB, { useNewUrlParser: true });
+//set up defauwt mongoose c-connection
+vaw m-mongodb = "mongodb://127.0.0.1/my_database";
+mongoose.connect(mongodb, òωó { usenewuwwpawsew: t-twue });
 
-//Get the default connection
-var db = mongoose.connection;
+//get t-the d-defauwt connection
+v-vaw db = mongoose.connection;
 
-//Bind connection to error event (to get notification of connection errors)
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+//bind connection to ewwow event (to get notification of connection ewwows)
+db.on("ewwow", (ꈍᴗꈍ) consowe.ewwow.bind(consowe, (ꈍᴗꈍ) "mongodb c-connection ewwow:"));
 ```
 
-You can get the default `Connection` object with `mongoose.connection`. Once connected, the open event is fired on the `Connection` instance.
+y-you c-can get the defauwt `connection` o-object with `mongoose.connection`. òωó o-once connected, (U ᵕ U❁) t-the open event is fiwed on t-the `connection` i-instance.
 
-> **Nota:** **Tip:** If you need to create additional connections you can use `mongoose.createConnection()`. This takes the same form of database URI (with host, database, port, options etc.) as `connect()` and returns a `Connection` object).
+> **nota:** **tip:** if you nyeed to c-cweate additionaw c-connections you can use `mongoose.cweateconnection()`. /(^•ω•^) this t-takes the same fowm of database uwi (with host, :3 d-database, rawr powt, options etc.) as `connect()` a-and w-wetuwns a `connection` object). (ˆ ﻌ ˆ)♡
 
-### Definindo e criando modelos
+### d-definindo e-e cwiando modewos
 
-Models are _defined_ using the `Schema` interface. The Schema allows you to define the fields stored in each document along with their validation requirements and default values. In addition, you can define static and instance helper methods to make it easier to work with your data types, and also virtual properties that you can use like any other field, but which aren't actually stored in the database (we'll discuss a bit further below).
+m-modews awe _defined_ using the `schema` i-intewface. ^^;; t-the schema awwows you to define t-the fiewds stowed in each d-document awong with t-theiw vawidation w-wequiwements and defauwt vawues. (⑅˘꒳˘) i-in addition, rawr x3 you can define static and instance h-hewpew methods to make it easiew to wowk with youw data types, ʘwʘ and awso viwtuaw pwopewties that you can use w-wike any othew fiewd, but which awen't actuawwy stowed in the database (we'ww discuss a bit fuwthew bewow). (ꈍᴗꈍ)
 
-Schemas are then "compiled" into models using the `mongoose.model()` method. Once you have a model you can use it to find, create, update, and delete objects of the given type.
+schemas a-awe then "compiwed" into modews using the `mongoose.modew()` m-method. /(^•ω•^) once you have a modew y-you can use it to find, (✿oωo) cweate, update, ^^;; and dewete o-objects of the given type.
 
-> [!NOTE]
-> Each model maps to a _collection_ of _documents_ in the MongoDB database. The documents will contain the fields/schema types defined in the model `Schema`.
+> [!note]
+> e-each modew maps to a-a _cowwection_ of _documents_ i-in the mongodb database. (˘ω˘) the documents w-wiww contain the fiewds/schema types defined in the modew `schema`. 😳😳😳
 
-#### Defining schemas
+#### defining s-schemas
 
-The code fragment below shows how you might define a simple schema. First you `require()` mongoose, then use the Schema constructor to create a new schema instance, defining the various fields inside it in the constructor's object parameter.
+the code fwagment b-bewow shows how you might define a-a simpwe schema. ^^ fiwst you `wequiwe()` m-mongoose, /(^•ω•^) t-then use the schema constwuctow to cweate a n-nyew schema instance, >_< defining the vawious fiewds i-inside it in the constwuctow's object pawametew. (ꈍᴗꈍ)
 
 ```js
-//Require Mongoose
-var mongoose = require("mongoose");
+//wequiwe mongoose
+vaw mongoose = wequiwe("mongoose");
 
-//Define a schema
-var Schema = mongoose.Schema;
+//define a-a schema
+v-vaw schema = mongoose.schema;
 
-var SomeModelSchema = new Schema({
-  a_string: String,
-  a_date: Date,
+v-vaw somemodewschema = n-nyew schema({
+  a_stwing: s-stwing, (ꈍᴗꈍ)
+  a_date: date, mya
 });
 ```
 
-In the case above we just have two fields, a string and a date. In the next sections, we will show some of the other field types, validation, and other methods.
+in the case above we just have two fiewds, a-a stwing and a date. :3 i-in the nyext sections, we wiww s-show some of t-the othew fiewd types, vawidation, 😳😳😳 a-and othew methods. /(^•ω•^)
 
-#### Criando um modelo
+#### cwiando um modewo
 
-Models are created from schemas using the `mongoose.model()` method:
+m-modews awe cweated fwom schemas using the `mongoose.modew()` m-method:
 
 ```js
-// Define schema
-var Schema = mongoose.Schema;
+// define s-schema
+vaw schema = mongoose.schema;
 
-var SomeModelSchema = new Schema({
-  a_string: String,
-  a_date: Date,
+vaw s-somemodewschema = nyew schema({
+  a_stwing: stwing, -.-
+  a_date: date, UwU
 });
 
-// Compile model from schema
-var SomeModel = mongoose.model("SomeModel", SomeModelSchema);
+// compiwe modew fwom schema
+vaw somemodew = mongoose.modew("somemodew", (U ﹏ U) s-somemodewschema);
 ```
 
-The first argument is the singular name of the collection that will be created for your model (Mongoose will create the database collection for the above model _SomeModel_ above), and the second argument is the schema you want to use in creating the model.
+t-the fiwst awgument is the s-singuwaw nyame o-of the cowwection that wiww be c-cweated fow youw modew (mongoose wiww cweate the database cowwection fow the above modew _somemodew_ a-above), ^^ and the second awgument is the schema you want to use in cweating t-the modew. 😳
 
-> [!NOTE]
-> Once you've defined your model classes you can use them to create, update, or delete records, and run queries to get all records or particular subsets of records. We'll show you how to do this in the [Using models](#using_models) section, and when we create our views.
+> [!note]
+> o-once you've d-defined youw modew cwasses you can use them to cweate, (˘ω˘) update, /(^•ω•^) o-ow dewete wecowds, (˘ω˘) a-and wun quewies t-to get aww wecowds ow pawticuwaw s-subsets of wecowds. (✿oωo) we'ww s-show you how to do this in the [using m-modews](#using_modews) section, (U ﹏ U) a-and when we cweate ouw views. (U ﹏ U)
 
-#### Schema types (fields)
+#### schema t-types (fiewds)
 
-A schema can have an arbitrary number of fields — each one represents a field in the documents stored in _MongoDB_. An example schema showing many of the common field types and how they are declared is shown below.
+a schema can have a-an awbitwawy n-nyumbew of fiewds — each one w-wepwesents a fiewd i-in the documents stowed in _mongodb_. (ˆ ﻌ ˆ)♡ a-an exampwe schema showing m-many of the common fiewd types a-and how they awe d-decwawed is shown bewow.
 
 ```js
-var schema = new Schema({
-  name: String,
-  binary: Buffer,
-  living: Boolean,
-  updated: { type: Date, default: Date.now() },
-  age: { type: Number, min: 18, max: 65, required: true },
-  mixed: Schema.Types.Mixed,
-  _someId: Schema.Types.ObjectId,
-  array: [],
-  ofString: [String], // You can also have an array of each of the other types too.
-  nested: { stuff: { type: String, lowercase: true, trim: true } },
+vaw schema = n-nyew schema({
+  nyame: stwing, /(^•ω•^)
+  binawy: buffew, XD
+  wiving: boowean, (ˆ ﻌ ˆ)♡
+  updated: { type: date, XD defauwt: date.now() }, mya
+  age: { type: n-nyumbew, OwO min: 18, max: 65, XD wequiwed: twue }, ( ͡o ω ͡o )
+  m-mixed: schema.types.mixed, (ꈍᴗꈍ)
+  _someid: schema.types.objectid, mya
+  a-awway: [], 😳
+  ofstwing: [stwing], (ˆ ﻌ ˆ)♡ // you can awso have an awway o-of each of the othew types too. ^•ﻌ•^
+  nyested: { stuff: { t-type: stwing, 😳😳😳 wowewcase: twue, (///ˬ///✿) twim: twue } }, 🥺
 });
 ```
 
-Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self-explanatory. The exceptions are:
+m-most of the [schematypes](http://mongoosejs.com/docs/schematypes.htmw) (the descwiptows a-aftew "type:" ow aftew fiewd nyames) awe sewf-expwanatowy. ^^ t-the exceptions a-awe:
 
-- `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
-- [Mixed](http://mongoosejs.com/docs/schematypes.html#mixed): An arbitrary schema type.
-- \[]: An array of items. You can perform JavaScript array operations on these models (push, pop, unshift, etc.). The examples above show an array of objects without a specified type and an array of `String` objects, but you can have an array of any type of object.
+- `objectid`: wepwesents specific instances o-of a modew in t-the database. (ˆ ﻌ ˆ)♡ fow exampwe, mya a book m-might use this t-to wepwesent its authow object. OwO this wiww actuawwy c-contain the unique id (`_id`) fow the specified object. /(^•ω•^) we can u-use the `popuwate()` method to puww in the associated infowmation w-when nyeeded. /(^•ω•^)
+- [mixed](http://mongoosejs.com/docs/schematypes.htmw#mixed): a-an awbitwawy schema t-type. rawr
+- \[]: an awway of items. XD you can pewfowm javascwipt a-awway opewations on these modews (push, ʘwʘ p-pop, unshift, :3 etc.). the e-exampwes above s-show an awway of objects without a specified type and an awway of `stwing` objects, σωσ but you can h-have an awway of a-any type of object. /(^•ω•^)
 
-The code also shows both ways of declaring a field:
+the code awso shows both ways o-of decwawing a fiewd:
 
-- Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
-- Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
+- fiewd _name_ and _type_ a-as a key-vawue p-paiw (i.e. (ˆ ﻌ ˆ)♡ as d-done with fiewds `name`, (U ﹏ U) `binawy` a-and `wiving`). >_<
+- f-fiewd _name_ f-fowwowed by an object defining the `type`, >_< and a-any othew _options_ f-fow the fiewd. o.O o-options incwude t-things wike:
 
-  - default values.
-  - built-in validators (e.g. max/min values) and custom validation functions.
-  - Whether the field is required
-  - Whether `String` fields should automatically be set to lowercase, uppercase, or trimmed (e.g. `{ type: String, lowercase: true, trim: true }`)
+  - d-defauwt vawues. (ꈍᴗꈍ)
+  - b-buiwt-in vawidatows (e.g. /(^•ω•^) m-max/min vawues) a-and custom vawidation f-functions. OwO
+  - whethew the fiewd is wequiwed
+  - w-whethew `stwing` fiewds shouwd automaticawwy b-be set to wowewcase, σωσ uppewcase, XD ow twimmed (e.g. rawr x3 `{ t-type: s-stwing, (ˆ ﻌ ˆ)♡ wowewcase: twue, XD twim: twue }`)
 
-For more information about options see [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (Mongoose docs).
+fow mowe infowmation a-about options see [schematypes](http://mongoosejs.com/docs/schematypes.htmw) (mongoose d-docs).
 
-#### Validação
+#### vawidação
 
-Mongoose provides built-in and custom validators, and synchronous and asynchronous validators. It allows you to specify both the acceptable range or values and the error message for validation failure in all cases.
+m-mongoose pwovides b-buiwt-in and custom vawidatows, (˘ω˘) and synchwonous and asynchwonous v-vawidatows. mya i-it awwows you to specify both the acceptabwe wange o-ow vawues and t-the ewwow message fow vawidation faiwuwe in aww c-cases. ^^
 
-The built-in validators include:
+the buiwt-in vawidatows incwude:
 
-- All [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) have the built-in [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
-- [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) have [min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) and [max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max) validators.
-- [Strings](http://mongoosejs.com/docs/api.html#schema-string-js) have:
+- aww [schematypes](http://mongoosejs.com/docs/schematypes.htmw) have the buiwt-in [wequiwed](http://mongoosejs.com/docs/api.htmw#schematype_schematype-wequiwed) vawidatow. (U ᵕ U❁) t-this is used to specify whethew the fiewd m-must be suppwied i-in owdew to save a-a document. rawr x3
+- [numbews](http://mongoosejs.com/docs/api.htmw#schema-numbew-js) have [min](http://mongoosejs.com/docs/api.htmw#schema_numbew_schemanumbew-min) a-and [max](http://mongoosejs.com/docs/api.htmw#schema_numbew_schemanumbew-max) vawidatows. (ˆ ﻌ ˆ)♡
+- [stwings](http://mongoosejs.com/docs/api.htmw#schema-stwing-js) h-have:
 
-  - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): specifies the set of allowed values for the field.
-  - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): specifies a regular expression that the string must match.
-  - [maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) and [minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) for the string.
+  - [enum](http://mongoosejs.com/docs/api.htmw#schema_stwing_schemastwing-enum): s-specifies the s-set of awwowed v-vawues fow the fiewd. (U ﹏ U)
+  - [match](http://mongoosejs.com/docs/api.htmw#schema_stwing_schemastwing-match): specifies a-a weguwaw expwession t-that the s-stwing must match. mya
+  - [maxwength](http://mongoosejs.com/docs/api.htmw#schema_stwing_schemastwing-maxwength) and [minwength](http://mongoosejs.com/docs/api.htmw#schema_stwing_schemastwing-minwength) f-fow the s-stwing. OwO
 
-The example below (slightly modified from the Mongoose documents) shows how you can specify some of the validator types and error messages:
+the exampwe b-bewow (swightwy modified f-fwom the mongoose d-documents) shows h-how you can specify s-some of the v-vawidatow types and ewwow messages:
 
 ```js
-var breakfastSchema = new Schema({
-  eggs: {
-    type: Number,
-    min: [6, "Too few eggs"],
-    max: 12,
-    required: [true, "Why no eggs?"],
+v-vaw bweakfastschema = n-nyew schema({
+  e-eggs: {
+    type: nyumbew, (ꈍᴗꈍ)
+    min: [6, XD "too few eggs"], 🥺
+    m-max: 12, 😳😳😳
+    wequiwed: [twue, >w< "why n-nyo eggs?"], nyaa~~
   },
-  drink: {
-    type: String,
-    enum: ["Coffee", "Tea", "Water"],
-  },
+  dwink: {
+    t-type: stwing, :3
+    e-enum: ["coffee", UwU "tea", (✿oωo) "watew"],
+  }, OwO
 });
 ```
 
-For complete information on field validation see [Validation](http://mongoosejs.com/docs/validation.html) (Mongoose docs).
+fow compwete infowmation o-on fiewd vawidation s-see [vawidation](http://mongoosejs.com/docs/vawidation.htmw) (mongoose d-docs). ʘwʘ
 
-#### Propriedades virtuais
+#### p-pwopwiedades v-viwtuais
 
-Virtual properties are document properties that you can get and set but that do not get persisted to MongoDB. The getters are useful for formatting or combining fields, while setters are useful for de-composing a single value into multiple values for storage. The example in the documentation constructs (and deconstructs) a full name virtual property from a first and last name field, which is easier and cleaner than constructing a full name every time one is used in a template.
+viwtuaw p-pwopewties awe document pwopewties that you c-can get and set but that do nyot get pewsisted to mongodb. XD the gettews awe usefuw f-fow fowmatting o-ow combining fiewds, (ˆ ﻌ ˆ)♡ whiwe settews awe usefuw fow de-composing a-a singwe vawue i-into muwtipwe vawues fow stowage. the exampwe i-in the documentation constwucts (and d-deconstwucts) a-a fuww nyame v-viwtuaw pwopewty fwom a fiwst and wast nyame fiewd, σωσ which is easiew a-and cweanew than constwucting a-a fuww nyame evewy time one is u-used in a tempwate. rawr x3
 
-> [!NOTE]
-> We will use a virtual property in the library to define a unique URL for each model record using a path and the record's `_id` value.
+> [!note]
+> we wiww use a viwtuaw pwopewty i-in the wibwawy to define a unique u-uww fow each modew wecowd using a path and the w-wecowd's `_id` vawue. rawr
 
-For more information see [Virtuals](http://mongoosejs.com/docs/guide.html#virtuals) (Mongoose documentation).
+fow mowe i-infowmation see [viwtuaws](http://mongoosejs.com/docs/guide.htmw#viwtuaws) (mongoose documentation). 🥺
 
-#### Methods and query helpers
+#### methods and quewy hewpews
 
-A schema can also have [instance methods](http://mongoosejs.com/docs/guide.html#methods), [static methods](http://mongoosejs.com/docs/guide.html#statics), and [query helpers](http://mongoosejs.com/docs/guide.html#query-helpers). The instance and static methods are similar, but with the obvious difference that an instance method is associated with a particular record and has access to the current object. Query helpers allow you to extend mongoose's [chainable query builder API](http://mongoosejs.com/docs/queries.html) (for example, allowing you to add a query "byName" in addition to the `find()`, `findOne()` and `findById()` methods).
+a schema can awso have [instance methods](http://mongoosejs.com/docs/guide.htmw#methods), :3 [static m-methods](http://mongoosejs.com/docs/guide.htmw#statics), :3 a-and [quewy hewpews](http://mongoosejs.com/docs/guide.htmw#quewy-hewpews). >w< t-the i-instance and static methods awe simiwaw, :3 but with t-the obvious diffewence that an instance method is associated w-with a pawticuwaw w-wecowd and has a-access to the cuwwent o-object. 🥺 quewy hewpews awwow you to extend mongoose's [chainabwe quewy buiwdew a-api](http://mongoosejs.com/docs/quewies.htmw) (fow e-exampwe, ^^;; awwowing you to add a quewy "byname" in addition t-to the `find()`, rawr `findone()` and `findbyid()` methods). ^^
 
-### Usando modelos
+### usando m-modewos
 
-Once you've created a schema you can use it to create models. The model represents a collection of documents in the database that you can search, while the model's instances represent individual documents that you can save and retrieve.
+once y-you've cweated a-a schema you can use it to cweate modews. mya the modew wepwesents a cowwection of documents in the d-database that you can seawch, mya w-whiwe the modew's instances wepwesent individuaw documents that y-you can save and wetwieve. (U ﹏ U)
 
-We provide a brief overview below. For more information see: [Models](http://mongoosejs.com/docs/models.html) (Mongoose docs).
+we p-pwovide a bwief ovewview bewow. ( ͡o ω ͡o ) fow mowe infowmation s-see: [modews](http://mongoosejs.com/docs/modews.htmw) (mongoose d-docs). 🥺
 
-#### Criando e modificando documentos
+#### c-cwiando e modificando d-documentos
 
-To create a record you can define an instance of the model and then call `save()`. The examples below assume SomeModel is a model (with a single field "name") that we have created from our schema.
+t-to cweate a wecowd you can define a-an instance o-of the modew and then caww `save()`. σωσ t-the exampwes bewow assume somemodew is a m-modew (with a singwe fiewd "name") t-that we have c-cweated fwom ouw schema. (///ˬ///✿)
 
 ```js
-// Create an instance of model SomeModel
-var awesome_instance = new SomeModel({ name: "awesome" });
+// c-cweate an instance o-of modew somemodew
+vaw awesome_instance = new somemodew({ name: "awesome" });
 
-// Save the new model instance, passing a callback
-awesome_instance.save(function (err) {
-  if (err) return handleError(err);
-  // saved!
+// s-save the n-nyew modew instance, (⑅˘꒳˘) p-passing a c-cawwback
+awesome_instance.save(function (eww) {
+  if (eww) wetuwn handweewwow(eww);
+  // saved! OwO
 });
 ```
 
-Creation of records (along with updates, deletes, and queries) are asynchronous operations — you supply a callback that is called when the operation completes. The API uses the error-first argument convention, so the first argument for the callback will always be an error value (or null). If the API returns some result, this will be provided as the second argument.
+c-cweation of wecowds (awong with updates, ^^ d-dewetes, rawr and quewies) awe asynchwonous opewations — y-you suppwy a cawwback that is cawwed when the opewation c-compwetes. XD the api uses the ewwow-fiwst a-awgument c-convention, ( ͡o ω ͡o ) so t-the fiwst awgument fow the cawwback w-wiww awways b-be an ewwow vawue (ow nyuww). 😳😳😳 if t-the api wetuwns s-some wesuwt, (ˆ ﻌ ˆ)♡ this w-wiww be pwovided a-as the second awgument.
 
-You can also use `create()` to define the model instance at the same time as you save it. The callback will return an error for the first argument and the newly-created model instance for the second argument.
+you c-can awso use `cweate()` t-to define t-the modew instance at the same t-time as you save it. mya the cawwback wiww wetuwn an ewwow fow the fiwst awgument and the nyewwy-cweated m-modew instance f-fow the second awgument. ( ͡o ω ͡o )
 
 ```js
-SomeModel.create({ name: "also_awesome" }, function (err, awesome_instance) {
-  if (err) return handleError(err);
-  // saved!
+s-somemodew.cweate({ nyame: "awso_awesome" }, ^^ function (eww, OwO a-awesome_instance) {
+  i-if (eww) w-wetuwn handweewwow(eww);
+  // s-saved! 😳
 });
 ```
 
-Every model has an associated connection (this will be the default connection when you use `mongoose.model()`). You create a new connection and call `.model()` on it to create the documents on a different database.
+evewy m-modew has an associated connection (this wiww b-be the defauwt c-connection when you use `mongoose.modew()`). /(^•ω•^) you cweate a nyew c-connection and caww `.modew()` on it to cweate the d-documents on a diffewent database. >w<
 
-You can access the fields in this new record using the dot syntax, and change the values. You have to call `save()` or `update()` to store modified values back to the database.
+you can access t-the fiewds in this nyew wecowd u-using the dot syntax, >w< and change the vawues. (✿oωo) y-you have to caww `save()` ow `update()` t-to stowe modified vawues b-back to the database. (///ˬ///✿)
 
 ```js
-// Access model field values using dot notation
-console.log(awesome_instance.name); //should log 'also_awesome'
+// a-access modew fiewd vawues using dot nyotation
+c-consowe.wog(awesome_instance.name); //shouwd wog 'awso_awesome'
 
-// Change record by modifying the fields, then calling save().
-awesome_instance.name = "New cool name";
-awesome_instance.save(function (err) {
-  if (err) return handleError(err); // saved!
+// change wecowd b-by modifying t-the fiewds, (ꈍᴗꈍ) then c-cawwing save(). /(^•ω•^)
+awesome_instance.name = "new coow nyame";
+awesome_instance.save(function (eww) {
+  if (eww) wetuwn handweewwow(eww); // s-saved! (✿oωo)
 });
 ```
 
-#### Pesquisando por registros
+#### pesquisando pow wegistwos
 
-You can search for records using query methods, specifying the query conditions as a JSON document. The code fragment below shows how you might find all athletes in a database that play tennis, returning just the fields for athlete _name_ and _age_. Here we just specify one matching field (sport) but you can add more criteria, specify regular expression criteria, or remove the conditions altogether to return all athletes.
+y-you can s-seawch fow wecowds using quewy methods, nyaa~~ specifying t-the quewy conditions a-as a json document. (ꈍᴗꈍ) the code fwagment bewow shows how you m-might find aww athwetes in a d-database that pway tennis, o.O wetuwning just the fiewds f-fow athwete _name_ a-and _age_. ^^;; hewe we just s-specify one matching f-fiewd (spowt) but you can add m-mowe cwitewia, σωσ specify weguwaw e-expwession cwitewia, òωó o-ow wemove t-the conditions a-awtogethew to wetuwn a-aww athwetes. (ꈍᴗꈍ)
 
 ```js
-var Athlete = mongoose.model("Athlete", yourSchema);
+vaw athwete = m-mongoose.modew("athwete", ʘwʘ y-youwschema);
 
-// find all athletes who play tennis, selecting the 'name' and 'age' fields
-Athlete.find({ sport: "Tennis" }, "name age", function (err, athletes) {
-  if (err) return handleError(err);
-  // 'athletes' contains the list of athletes that match the criteria.
+// find aww athwetes who pway tennis, ^^;; s-sewecting the 'name' and 'age' f-fiewds
+athwete.find({ spowt: "tennis" }, "name age", mya function (eww, XD athwetes) {
+  if (eww) wetuwn handweewwow(eww);
+  // 'athwetes' contains t-the wist of athwetes that match t-the cwitewia. /(^•ω•^)
 });
 ```
 
-If you specify a callback, as shown above, the query will execute immediately. The callback will be invoked when the search completes.
+if you s-specify a cawwback, nyaa~~ a-as shown above, (U ᵕ U❁) the quewy wiww e-exekawaii~ immediatewy. òωó the cawwback w-wiww be invoked when the s-seawch compwetes. σωσ
 
-> [!NOTE]
-> All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
+> [!note]
+> aww cawwbacks in mongoose use the pattewn `cawwback(ewwow, ^^;; wesuwt)`. (˘ω˘) if an ewwow occuws executing t-the quewy, òωó the `ewwow` pawametew wiww contain a-an ewwow document and `wesuwt` wiww b-be nyuww. UwU if the quewy is successfuw, the `ewwow` pawametew wiww be nyuww, 😳😳😳 and the `wesuwt` wiww be popuwated with the wesuwts of the quewy. (⑅˘꒳˘)
 
-> [!NOTE]
-> It is important to remember that not finding any results is **not an error** for a search —but it may be a fail-case in the context of your application. If your application expects a search to find a value you can either check the result in the callback (`results==null`) or daisy chain the method [orFail()](https://mongoosejs.com/docs/api.html#query_Query-orFail) on the query.
+> [!note]
+> i-it i-is impowtant to w-wemembew that nyot finding any w-wesuwts is **not a-an ewwow** fow a-a seawch —but it may be a faiw-case in the context o-of youw appwication. nyaa~~ i-if youw appwication expects a-a seawch to f-find a vawue you c-can eithew check t-the wesuwt in t-the cawwback (`wesuwts==nuww`) ow daisy chain t-the method [owfaiw()](https://mongoosejs.com/docs/api.htmw#quewy_quewy-owfaiw) on t-the quewy. :3
 
-If you don't specify a callback then the API will return a variable of type [Query](http://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
+if y-you don't specify a-a cawwback then t-the api wiww w-wetuwn a vawiabwe o-of type [quewy](http://mongoosejs.com/docs/api.htmw#quewy-js). nyaa~~ y-you can use this q-quewy object to b-buiwd up youw quewy and then exekawaii~ it (with a cawwback) watew u-using the `exec()` method. :3
 
 ```js
-// find all athletes that play tennis
-var query = Athlete.find({ sport: "Tennis" });
+// f-find aww athwetes that pway tennis
+vaw q-quewy = athwete.find({ s-spowt: "tennis" });
 
-// selecting the 'name' and 'age' fields
-query.select("name age");
+// s-sewecting the 'name' and 'age' fiewds
+q-quewy.sewect("name a-age");
 
-// limit our results to 5 items
-query.limit(5);
+// wimit ouw wesuwts to 5 items
+quewy.wimit(5);
 
-// sort by age
-query.sort({ age: -1 });
+// sowt by age
+quewy.sowt({ age: -1 });
 
-// execute the query at a later time
-query.exec(function (err, athletes) {
-  if (err) return handleError(err);
-  // athletes contains an ordered list of 5 athletes who play Tennis
+// e-exekawaii~ the quewy at a watew time
+quewy.exec(function (eww, :3 a-athwetes) {
+  i-if (eww) wetuwn handweewwow(eww);
+  // a-athwetes contains a-an owdewed wist o-of 5 athwetes w-who pway tennis
 });
 ```
 
-Above we've defined the query conditions in the `find()` method. We can also do this using a `where()` function, and we can chain all the parts of our query together using the dot operator (.) rather than adding them separately. The code fragment below is the same as our query above, with an additional condition for the age.
+a-above w-we've defined the q-quewy conditions in the `find()` method. ^•ﻌ•^ we can a-awso do this using a `whewe()` f-function, o.O and we can chain aww t-the pawts of ouw q-quewy togethew using the dot opewatow (.) w-wathew than adding them sepawatewy. t-the code fwagment b-bewow is the same a-as ouw quewy a-above, with an additionaw condition f-fow the age. -.-
 
 ```js
-Athlete.find()
-  .where("sport")
-  .equals("Tennis")
-  .where("age")
+a-athwete.find()
+  .whewe("spowt")
+  .equaws("tennis")
+  .whewe("age")
   .gt(17)
-  .lt(50) //Additional where query
-  .limit(5)
-  .sort({ age: -1 })
-  .select("name age")
-  .exec(callback); // where callback is the name of our callback function.
+  .wt(50) //additionaw whewe q-quewy
+  .wimit(5)
+  .sowt({ age: -1 })
+  .sewect("name a-age")
+  .exec(cawwback); // whewe cawwback is the nyame of ouw cawwback function. 🥺
 ```
 
-The [find()](http://mongoosejs.com/docs/api.html#query_Query-find) method gets all matching records, but often you just want to get one match. The following methods query for a single record:
+the [find()](http://mongoosejs.com/docs/api.htmw#quewy_quewy-find) method gets aww matching wecowds, :3 but often y-you just want t-to get one match. /(^•ω•^) the fowwowing methods quewy fow a singwe wecowd:
 
-- [`findById()`](http://mongoosejs.com/docs/api.html#model_Model.findById): Finds the document with the specified `id` (every document has a unique `id`).
-- [`findOne()`](http://mongoosejs.com/docs/api.html#query_Query-findOne): Finds a single document that matches the specified criteria.
-- [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate): Finds a single document by `id` or criteria and either update or remove it. These are useful convenience functions for updating and removing records.
+- [`findbyid()`](http://mongoosejs.com/docs/api.htmw#modew_modew.findbyid): finds the document w-with the specified `id` (evewy d-document has a unique `id`). 😳😳😳
+- [`findone()`](http://mongoosejs.com/docs/api.htmw#quewy_quewy-findone): finds a singwe document t-that matches the s-specified cwitewia. (✿oωo)
+- [`findbyidandwemove()`](http://mongoosejs.com/docs/api.htmw#modew_modew.findbyidandwemove), [`findbyidandupdate()`](http://mongoosejs.com/docs/api.htmw#modew_modew.findbyidandupdate), nyaa~~ [`findoneandwemove()`](http://mongoosejs.com/docs/api.htmw#quewy_quewy-findoneandwemove), (˘ω˘) [`findoneandupdate()`](http://mongoosejs.com/docs/api.htmw#quewy_quewy-findoneandupdate): finds a singwe d-document by `id` o-ow cwitewia and eithew update o-ow wemove it. rawr x3 these awe usefuw c-convenience functions f-fow updating and wemoving wecowds.
 
-> [!NOTE]
-> There is also a [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
+> [!note]
+> thewe is a-awso a [`count()`](http://mongoosejs.com/docs/api.htmw#modew_modew.count) m-method t-that you can use t-to get the nyumbew of items that m-match conditions. 🥺 t-this is usefuw i-if you want t-to pewfowm a count without actuawwy fetching the w-wecowds. (ˆ ﻌ ˆ)♡
 
-There is a lot more you can do with queries. For more information see: [Queries](http://mongoosejs.com/docs/queries.html) (Mongoose docs).
+thewe i-is a wot mowe you can do with quewies. XD fow mowe infowmation see: [quewies](http://mongoosejs.com/docs/quewies.htmw) (mongoose docs).
 
-#### Working with related documents — population
+#### wowking w-with wewated d-documents — popuwation
 
-You can create references from one document/model instance to another using the `ObjectId` schema field, or from one document to many using an array of `ObjectIds`. The field stores the id of the related model. If you need the actual content of the associated document, you can use the [`populate()`](http://mongoosejs.com/docs/api.html#query_Query-populate) method in a query to replace the id with the actual data.
+you can c-cweate wefewences fwom one document/modew instance to anothew u-using the `objectid` s-schema fiewd, (˘ω˘) o-ow fwom one document to many u-using an awway o-of `objectids`. UwU the fiewd stowes the id of the wewated m-modew. (U ᵕ U❁) if y-you nyeed the actuaw c-content of t-the associated d-document, :3 you can u-use the [`popuwate()`](http://mongoosejs.com/docs/api.htmw#quewy_quewy-popuwate) method in a quewy to wepwace the id with the actuaw data. :3
 
-For example, the following schema defines authors and stories. Each author can have multiple stories, which we represent as an array of `ObjectId`. Each story can have a single author. The "ref" (highlighted in bold below) tells the schema which model can be assigned to this field.
+fow exampwe, ^•ﻌ•^ the fowwowing s-schema defines authows a-and stowies. 🥺 each a-authow can have muwtipwe stowies, which we wepwesent as an awway o-of `objectid`. e-each stowy can have a singwe authow. /(^•ω•^) t-the "wef" (highwighted in b-bowd bewow) tewws the schema which modew can be assigned to this f-fiewd. σωσ
 
 ```js
-var mongoose = require("mongoose"),
-  Schema = mongoose.Schema;
+vaw mongoose = wequiwe("mongoose"), >_<
+  schema = mongoose.schema;
 
-var authorSchema = Schema({
-  name: String,
-  stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
+vaw authowschema = schema({
+  nyame: s-stwing, (ꈍᴗꈍ)
+  s-stowies: [{ type: s-schema.types.objectid, (⑅˘꒳˘) w-wef: "stowy" }], >_<
 });
 
-var storySchema = Schema({
-  author: { type: Schema.Types.ObjectId, ref: "Author" },
-  title: String,
+vaw stowyschema = schema({
+  authow: { t-type: schema.types.objectid, (U ﹏ U) wef: "authow" }, ʘwʘ
+  t-titwe: stwing, rawr x3
 });
 
-var Story = mongoose.model("Story", storySchema);
-var Author = mongoose.model("Author", authorSchema);
+vaw stowy = mongoose.modew("stowy", s-stowyschema);
+v-vaw a-authow = mongoose.modew("authow", ^•ﻌ•^ authowschema);
 ```
 
-We can save our references to the related document by assigning the `_id` value. Below we create an author, then a story, and assign the author id to our stories author field.
+we can save o-ouw wefewences to the wewated document by assigning the `_id` vawue. (✿oωo) bewow we cweate an authow, (///ˬ///✿) then a stowy, (⑅˘꒳˘) a-and assign the authow i-id to ouw stowies authow fiewd. ( ͡o ω ͡o )
 
 ```js
-var bob = new Author({ name: "Bob Smith" });
+vaw bob = nyew authow({ nyame: "bob smith" });
 
-bob.save(function (err) {
-  if (err) return handleError(err);
+bob.save(function (eww) {
+  i-if (eww) wetuwn handweewwow(eww);
 
-  //Bob now exists, so lets create a story
-  var story = new Story({
-    title: "Bob goes sledding",
-    author: bob._id, // assign the _id from the our author Bob. This ID is created by default!
+  //bob nyow exists, XD s-so wets cweate a-a stowy
+  vaw stowy = n-nyew stowy({
+    t-titwe: "bob goes swedding", :3
+    authow: bob._id, // assign the _id fwom the ouw authow bob. (⑅˘꒳˘) t-this id is cweated b-by defauwt! 😳
   });
 
-  story.save(function (err) {
-    if (err) return handleError(err);
-    // Bob now has his story
+  s-stowy.save(function (eww) {
+    i-if (eww) wetuwn handweewwow(eww);
+    // b-bob nyow has his stowy
   });
 });
 ```
 
-Our story document now has an author referenced by the author document's ID. In order to get the author information in the story results we use `populate()`, as shown below.
+o-ouw stowy document nyow has an authow wefewenced by the a-authow document's i-id. in owdew t-to get the authow i-infowmation in the stowy wesuwts w-we use `popuwate()`, -.- a-as shown bewow. (U ﹏ U)
 
 ```js
-Story.findOne({ title: "Bob goes sledding" })
-  .populate("author") //This populates the author id with actual author information!
-  .exec(function (err, story) {
-    if (err) return handleError(err);
-    console.log("The author is %s", story.author.name);
-    // prints "The author is Bob Smith"
+stowy.findone({ titwe: "bob goes s-swedding" })
+  .popuwate("authow") //this p-popuwates the authow id with actuaw authow infowmation! (U ﹏ U)
+  .exec(function (eww, /(^•ω•^) s-stowy) {
+    if (eww) w-wetuwn handweewwow(eww);
+    c-consowe.wog("the a-authow is %s", >_< stowy.authow.name);
+    // pwints "the authow is bob smith"
   });
 ```
 
-> [!NOTE]
-> Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's `stories` array. How then can we get all stories by a particular author? One way would be to add our author to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.
+> [!note]
+> astute weadews wiww h-have nyoted that we added an a-authow to ouw stowy, (˘ω˘) but we didn't do anything t-to add ouw stowy to ouw authow's `stowies` a-awway. (U ᵕ U❁) h-how then can we g-get aww stowies b-by a pawticuwaw a-authow? one way wouwd be to add o-ouw authow to the stowies awway, rawr but this wouwd wesuwt in us having two pwaces w-whewe the infowmation wewating authows and stowies n-nyeeds to be m-maintained. (U ﹏ U)
 >
-> A better way is to get the `_id` of our _author_, then use `find()` to search for this in the author field across all stories.
+> a-a bettew way is to get the `_id` of ouw _authow_, ʘwʘ then use `find()` to seawch fow t-this in the authow f-fiewd acwoss a-aww stowies. (ꈍᴗꈍ)
 >
 > ```js
-> Story.find({ author: bob._id }).exec(function (err, stories) {
->   if (err) return handleError(err);
->   // returns all stories that have Bob's id as their author.
+> s-stowy.find({ authow: bob._id }).exec(function (eww, (U ᵕ U❁) stowies) {
+>   if (eww) wetuwn handweewwow(eww);
+>   // wetuwns a-aww stowies that have bob's id as theiw authow.
 > });
 > ```
 
-This is almost everything you need to know about working with related items _for this tutorial_. For more detailed information see [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs).
+t-this i-is awmost evewything y-you nyeed to know about wowking w-with wewated items _fow this tutowiaw_. :3 fow mowe detaiwed infowmation see [popuwation](http://mongoosejs.com/docs/popuwate.htmw) (mongoose docs). (ꈍᴗꈍ)
 
-### One schema/model per file
+### one schema/modew pew fiwe
 
-While you can create schemas and models using any file structure you like, we highly recommend defining each model schema in its own module (file), exporting the method to create the model. This is shown below:
+whiwe you can cweate schemas and modews u-using any fiwe stwuctuwe you wike, nyaa~~ we highwy wecommend d-defining e-each modew schema in its own moduwe (fiwe), ^•ﻌ•^ e-expowting t-the method to cweate the modew. σωσ this is shown b-bewow:
 
 ```js
-// File: ./models/somemodel.js
+// f-fiwe: ./modews/somemodew.js
 
-//Require Mongoose
-var mongoose = require("mongoose");
+//wequiwe mongoose
+vaw mongoose = w-wequiwe("mongoose");
 
-//Define a schema
-var Schema = mongoose.Schema;
+//define a-a schema
+vaw s-schema = mongoose.schema;
 
-var SomeModelSchema = new Schema({
-  a_string: String,
-  a_date: Date,
+v-vaw somemodewschema = n-nyew schema({
+  a_stwing: stwing, (˘ω˘)
+  a_date: date, ^•ﻌ•^
 });
 
-//Export function to create "SomeModel" model class
-module.exports = mongoose.model("SomeModel", SomeModelSchema);
+//expowt f-function to cweate "somemodew" m-modew cwass
+moduwe.expowts = mongoose.modew("somemodew", σωσ s-somemodewschema);
 ```
 
-You can then require and use the model immediately in other files. Below we show how you might use it to get all instances of the model.
+y-you can then wequiwe and use the modew immediatewy in othew fiwes. ^^;; bewow we show h-how you might use it to get aww i-instances of the modew. 😳
 
 ```js
-//Create a SomeModel model just by requiring the module
-var SomeModel = require("../models/somemodel");
+//cweate a-a somemodew modew just by wequiwing the m-moduwe
+vaw somemodew = wequiwe("../modews/somemodew");
 
-// Use the SomeModel object (model) to find all SomeModel records
-SomeModel.find(callback_function);
+// use the somemodew object (modew) t-to find aww somemodew w-wecowds
+somemodew.find(cawwback_function);
 ```
 
-## Configurando o banco de dados MongoDB
+## c-configuwando o-o banco de dados mongodb
 
-Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDb database that we can use to store our library data.
+nyow that we undewstand s-something o-of nyani mongoose c-can do and how w-we want to design ouw modews, /(^•ω•^) it's t-time to stawt w-wowk on the _wocawwibwawy_ w-website. ( ͡o ω ͡o ) t-the vewy fiwst t-thing we want to do is set up a mongodb database t-that we can u-use to stowe ouw wibwawy data. ^^
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) free cloud-hosted [sandbox](https://www.mongodb.com/cloud/atlas/pricing) database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [ObjectRocket](https://www.mongodb.com/cloud/atlas)).
+fow this tutowiaw, /(^•ω•^) w-we'we going t-to use the [mongodb a-atwas](https://www.mongodb.com/cwoud/atwas) fwee cwoud-hosted [sandbox](https://www.mongodb.com/cwoud/atwas/pwicing) d-database. ^^ t-this database tiew is nyot considewed s-suitabwe f-fow pwoduction websites because i-it has nyo wedundancy, 😳 but it i-is gweat fow devewopment a-and pwototyping. 😳 w-we'we u-using it hewe because it is fwee and easy to set up, òωó and because m-mongodb atwas is a popuwaw _database a-as a sewvice_ vendow that y-you might weasonabwy c-choose fow youw pwoduction d-database (othew p-popuwaw choices at the time of wwiting incwude [compose](https://www.compose.com/), nyaa~~ [scawegwid](https://scawegwid.io/pwicing.htmw) a-and [objectwocket](https://www.mongodb.com/cwoud/atwas)). (///ˬ///✿)
 
-> [!NOTE]
-> If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
+> [!note]
+> i-if you pwefew you can set up a mongodb database wocawwy by downwoading and instawwing the [appwopwiate binawies fow youw system](https://www.mongodb.com/downwoad-centew/community). mya the west of the instwuctions in t-this awticwe wouwd b-be simiwaw, ^•ﻌ•^ except f-fow the database u-uww you wouwd specify when connecting. XD
 
-You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
+you w-wiww fiwst nyeed t-to [cweate an a-account](https://www.mongodb.com/cwoud/atwas/wegistew) w-with mongodb atwas (this is fwee, (⑅˘꒳˘) and just wequiwes that you entew basic c-contact detaiws a-and acknowwedge t-theiw tewms of s-sewvice). -.-
 
-After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
+aftew wogging in, ^^ you'ww b-be taken to the [home](https://cwoud.mongodb.com/v2) scween:
 
-1. Click **Buid a Cluster** button in the Clusters Overview section.
-   ![Create a cluster on MongoDB Atlas.](mongodb_atlas_-_createcluster.jpg)
-2. This will open the _Create New Cluster_ screen.
-   ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
+1. rawr cwick **buid a cwustew** button i-in the cwustews ovewview section. o.O
+   ![cweate a-a cwustew on m-mongodb atwas.](mongodb_atwas_-_cweatecwustew.jpg)
+2. >w< this wiww open the _cweate nyew cwustew_ s-scween.
+   ![choose a cwoud pwovidew w-when using mongodb atwas.](mongodb_atwas_-_choosepwovidewwegion.jpg)
 
-   - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
-   - Select any region marked "FREE TIER AVAILABLE".
-   - Click the **Create Cluster** button (creation of the cluster will take some minutes).
+   - sewect any pwovidew f-fwom the _cwoud pwovidew & wegion_ section. σωσ d-diffewent pwovidews offew diffewent w-wegions. rawr
+   - sewect any wegion m-mawked "fwee t-tiew avaiwabwe". (U ﹏ U)
+   - cwick the **cweate cwustew** button (cweation o-of the cwustew wiww take some minutes). (˘ω˘)
 
-3. You will return to the _Cluster Overview_ screen.
-   ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
+3. you wiww wetuwn to the _cwustew ovewview_ scween. 😳
+   ![setup a c-cowwection on mongodb a-atwas.](mongodb_atwas_-_cweatecowwection.jpg)
 
-   - Click the **Collections** button.
+   - cwick t-the **cowwections** button. XD
 
-4. This will open the _Collections_ section.
-   ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
+4. t-this wiww open the _cowwections_ s-section. ʘwʘ
+   ![cweate a-a database on mongodb atwas.](mongodb_atwas_-_cweatedatabase.jpg)
 
-   - Click the **Create Database** button.
+   - cwick t-the **cweate database** button. /(^•ω•^)
 
-5. This will open the _Create Database_ screen.
-   ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
+5. this wiww open the _cweate database_ scween. UwU
+   ![detaiws d-duwing database c-cweation on mongodb a-atwas.](mongodb_atwas_-_databasedetaiws.jpg)
 
-   - Enter the name for the new database as `local_library`.
-   - Enter the name of the collection as Collection0.
-   - Click the **Create** button to create the database.
+   - e-entew the nyame fow the n-nyew database as `wocaw_wibwawy`. UwU
+   - entew the n-nyame of the cowwection a-as cowwection0. ^•ﻌ•^
+   - cwick the **cweate** button to cweate t-the database. (ꈍᴗꈍ)
 
-6. You will return to the Collection screen with your database created.
-   ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
+6. y-you wiww w-wetuwn to the cowwection s-scween w-with youw database cweated. ^^
+   ![database cweation c-confiwmation o-on mongodb atwas.](mongodb_atwas_-_databasecweated.jpg)
 
-   - Click the _Overview_ tab to return the cluster overview.
+   - c-cwick the _ovewview_ tab to wetuwn the cwustew ovewview. XD
 
-7. From the Cluster0 Overview screen click the **Connect** button.
-   ![Configure a connection when after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
-8. This will open the Connect to Cluster screen.
-   ![Setup a connection when using MongoDB Atlas.](mongodb_atlas_-_connectcluster.jpg)
+7. f-fwom t-the cwustew0 ovewview s-scween cwick the **connect** b-button. UwU
+   ![configuwe a connection w-when aftew s-setting up a cwustew i-in mongodb atwas.](mongodb_atwas_-_connectbutton.jpg)
+8. this wiww open the c-connect to cwustew scween.
+   ![setup a connection w-when using mongodb atwas.](mongodb_atwas_-_connectcwustew.jpg)
 
-   - Click the **Add a Different IP Address** button, enter `0.0.0.0/0` for the IP Address and click **Add IP Address** button.
+   - cwick the **add a diffewent i-ip addwess** button, ^^ entew `0.0.0.0/0` f-fow the ip addwess a-and cwick **add i-ip addwess** button. :3
 
-     > [!NOTE]
-     > It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
+     > [!note]
+     > i-it i-is a best pwactice to wimit the ip addwesses that c-can connect to youw database and othew wesouwces. (U ﹏ U) hewe we awwow a connection fwom a-anywhewe because w-we don't know w-whewe the wequest w-wiww come fwom a-aftew depwoyment. UwU
 
-   - Enter a username and password and click **Create MongoDB User** button.
+   - entew a-a usewname and p-passwowd and cwick **cweate mongodb usew** button. 🥺
 
-     > [!NOTE]
-     > Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
+     > [!note]
+     > avoid u-using speciaw chawactews in youw mongodb usew passwowd a-as mongoose may nyot pawse t-the connection stwing pwopewwy. (✿oωo)
 
-   - If you have completed the 2 previous steps, the button **Choose a connection method** will turn green.
-   - Click the **Choose a connection method** button.
+   - if you h-have compweted the 2 pwevious steps, 😳😳😳 t-the button **choose a connection m-method** wiww t-tuwn gween. (⑅˘꒳˘)
+   - c-cwick the **choose a connection method** button. mya
 
-9. This will access the _Choose a connection_ method tab.
-   ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
+9. this wiww access the _choose a connection_ method tab. OwO
+   ![choose a-a connection type when connecting with m-mongodb atwas.](mongodb_atwas_-_chooseaconnectionmethod.jpg)
 
-   - Click the **Connect Your Application** option.
+   - cwick the **connect y-youw a-appwication** option. /(^•ω•^)
 
-10. This will open the _Connect_ screen.
-    ![Choose the Short SRV connection when settinup a connection on MongoDB Atalas.](mongodb_atlas_-_connectforshortsrv.jpg)
+10. 😳😳😳 this w-wiww open the _connect_ s-scween. ^^;;
+    ![choose the showt swv connection when settinup a-a connection on mongodb atawas.](mongodb_atwas_-_connectfowshowtswv.jpg)
 
-    - Click the **Short SRV connection string** option to copy the connection string.
+    - c-cwick the **showt swv connection stwing** option t-to copy the connection stwing. ( ͡o ω ͡o )
 
-11. This will open the connection string URL.
-    ![Copy the Short SRV connection string when setting up a connection on MongoDB Atlas](mongodb_atlas_-_copyshortsrv.jpg)
+11. t-this wiww open the connection s-stwing uww. ^•ﻌ•^
+    ![copy t-the showt swv connection stwing when setting up a connection on mongodb a-atwas](mongodb_atwas_-_copyshowtswv.jpg)
 
-    - Choose **Copy** button to copy the string.
-    - Save this string somewhere safe.
-    - Update the password with your users password.
-    - Replace test with `local_library`.
+    - c-choose **copy** b-button to copy the stwing. OwO
+    - save this s-stwing somewhewe safe. rawr
+    - update t-the passwowd with youw usews p-passwowd.
+    - wepwace test with `wocaw_wibwawy`. nyaa~~
 
-You have now created the database, and have an URL (with username and password) that can be used to access it. This will look something like: `mongodb+srv://your_user_name:your_password@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true`
+you have nyow c-cweated the database, and have a-an uww (with u-usewname and passwowd) that can be used to access it. this wiww wook something wike: `mongodb+swv://youw_usew_name:youw_passwowd@cwustew0-mbdj7.mongodb.net/wocaw_wibwawy?wetwywwites=twue`
 
-## Instalando Mongoose
+## i-instawando mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+open a command pwompt and nyavigate t-to the d-diwectowy whewe y-you cweated youw [skeweton wocaw w-wibwawy website](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs/skeweton_website). 🥺 entew the fowwowing command to i-instaww mongoose (and its dependencies) a-and add i-it to youw **package.json** f-fiwe, OwO unwess you have a-awweady done s-so when weading t-the [mongoose pwimew](#instawwing_mongoose_and_mongodb) a-above. ^•ﻌ•^
 
 ```bash
-npm install mongoose
+nypm instaww m-mongoose
 ```
 
-## Conectando ao MongoDB
+## conectando a-ao mongodb
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `var app = express();`). Replace the database url string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e. using the information from _mongoDB Atlas_).
+open **/app.js** (in t-the woot of youw pwoject) and copy the fowwowing text bewow whewe you decwawe t-the _expwess appwication object_ (aftew the wine `vaw app = expwess();`). (ˆ ﻌ ˆ)♡ w-wepwace t-the database uww stwing ('_insewt_youw_database_uww_hewe_') with the wocation uww wepwesenting youw own database (i.e. /(^•ω•^) using the i-infowmation fwom _mongodb a-atwas_). ʘwʘ
 
 ```js
-//Set up mongoose connection
-var mongoose = require("mongoose");
-var mongoDB = "insert_your_database_url_here";
-mongoose.connect(mongoDB, { useNewUrlParser: true });
-var db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
+//set u-up mongoose connection
+v-vaw mongoose = w-wequiwe("mongoose");
+v-vaw mongodb = "insewt_youw_database_uww_hewe";
+m-mongoose.connect(mongodb, ʘwʘ { usenewuwwpawsew: t-twue });
+vaw db = mongoose.connection;
+d-db.on("ewwow", :3 consowe.ewwow.bind(consowe, ^^ "mongodb c-connection e-ewwow:"));
 ```
 
-As discussed [in the Mongoose primer above](#connecting_to_mongodb), this code creates the default connection to the database and binds to the error event (so that errors will be printed to the console).
+a-as discussed [in t-the mongoose pwimew a-above](#connecting_to_mongodb), :3 this code cweates the defauwt c-connection to the database and binds to the ewwow event (so that e-ewwows wiww be pwinted to the consowe). 🥺
 
-## Defining the LocalLibrary Schema
+## d-defining the wocawwibwawy s-schema
 
-We will define a separate module for each model, as [discussed above](#one_schemamodel_per_file). Start by creating a folder for our models in the project root (**/models**) and then create separate files for each of the models:
+we wiww define a-a sepawate moduwe fow each modew, :3 a-as [discussed a-above](#one_schemamodew_pew_fiwe). rawr stawt by cweating a-a fowdew fow ouw modews in t-the pwoject woot (**/modews**) a-and then cweate sepawate fiwes fow e-each of the modews:
 
 ```
-/express-locallibrary-tutorial  //the project root
-  /models
-    author.js
+/expwess-wocawwibwawy-tutowiaw  //the pwoject woot
+  /modews
+    authow.js
     book.js
-    bookinstance.js
-    genre.js
+    b-bookinstance.js
+    genwe.js
 ```
 
-### Author model
+### a-authow modew
 
-Copy the `Author` schema code shown below and paste it into your **./models/author.js** file. The scheme defines an author has having `String` SchemaTypes for the first and family names, that are required and have a maximum of 100 characters, and `Date` fields for the date of birth and death.
+copy the `authow` schema c-code shown bewow and paste it i-into youw **./modews/authow.js** fiwe. UwU the scheme d-defines an authow has having `stwing` s-schematypes fow the fiwst a-and famiwy nyames, ^•ﻌ•^ that awe wequiwed and have a-a maximum of 100 c-chawactews, (U ﹏ U) and `date` f-fiewds f-fow the date of b-biwth and death. (ˆ ﻌ ˆ)♡
 
 ```js
-var mongoose = require("mongoose");
+v-vaw mongoose = wequiwe("mongoose");
 
-var Schema = mongoose.Schema;
+v-vaw s-schema = mongoose.schema;
 
-var AuthorSchema = new Schema({
-  first_name: { type: String, required: true, max: 100 },
-  family_name: { type: String, required: true, max: 100 },
-  date_of_birth: { type: Date },
-  date_of_death: { type: Date },
+v-vaw authowschema = n-nyew schema({
+  fiwst_name: { type: stwing, wequiwed: t-twue, 😳 max: 100 },
+  f-famiwy_name: { type: stwing, >w< wequiwed: t-twue, 🥺 max: 100 },
+  d-date_of_biwth: { type: date },
+  d-date_of_death: { t-type: date }, 😳
 });
 
-// Virtual for author's full name
-AuthorSchema.virtual("name").get(function () {
-  return this.family_name + ", " + this.first_name;
+// v-viwtuaw f-fow authow's fuww nyame
+authowschema.viwtuaw("name").get(function () {
+  wetuwn this.famiwy_name + ", nyaa~~ " + this.fiwst_name;
 });
 
-// Virtual for author's lifespan
-AuthorSchema.virtual("lifespan").get(function () {
-  return (
-    this.date_of_death.getYear() - this.date_of_birth.getYear()
-  ).toString();
+// viwtuaw fow authow's wifespan
+authowschema.viwtuaw("wifespan").get(function () {
+  w-wetuwn (
+    this.date_of_death.getyeaw() - t-this.date_of_biwth.getyeaw()
+  ).tostwing();
 });
 
-// Virtual for author's URL
-AuthorSchema.virtual("url").get(function () {
-  return "/catalog/author/" + this._id;
+// viwtuaw f-fow authow's uww
+authowschema.viwtuaw("uww").get(function () {
+  w-wetuwn "/catawog/authow/" + t-this._id;
 });
 
-//Export model
-module.exports = mongoose.model("Author", AuthorSchema);
+//expowt modew
+moduwe.expowts = m-mongoose.modew("authow", (˘ω˘) a-authowschema);
 ```
 
-We've also declared a [virtual](#virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
+we've awso decwawed a-a [viwtuaw](#viwtuaw_pwopewties) fow the authowschema nyamed "uww" t-that wetuwns the absowute uww w-wequiwed to get a-a pawticuwaw instance o-of the modew — we'ww use t-the pwopewty in ouw tempwates whenevew we nyeed to get a wink t-to a pawticuwaw authow. mya
 
-> [!NOTE]
-> Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.
-> At this point, a link using this URL wouldn't work, because we haven't got any routes handling code for individual model instances. We'll set those up in a later article!
+> [!note]
+> decwawing ouw uwws as a viwtuaw in the schema is a good idea because then the uww fow an item o-onwy evew nyeeds t-to be changed in one pwace. òωó
+> a-at this point, (U ﹏ U) a-a wink using this uww wouwdn't wowk, (U ﹏ U) because we haven't got any w-woutes handwing c-code fow individuaw modew instances. >_< w-we'ww set t-those up in a watew a-awticwe!
 
-At the end of the module, we export the model.
+at t-the end of the moduwe, nyaa~~ we expowt the modew. 😳😳😳
 
-### Book model
+### b-book modew
 
-Copy the `Book` schema code shown below and paste it into your **./models/book.js** file. Most of this is similar to the author model — we've declared a schema with a number of string fields and a virtual for getting the URL of specific book records, and we've exported the model.
+copy the `book` schema code shown bewow and paste i-it into youw **./modews/book.js** fiwe. nyaa~~ most of this is simiwaw to the authow modew — we've decwawed a schema w-with a nyumbew of stwing fiewds and a viwtuaw fow getting the uww o-of specific book w-wecowds, -.- and w-we've expowted the modew. 😳😳😳
 
 ```js
-var mongoose = require("mongoose");
+vaw mongoose = w-wequiwe("mongoose");
 
-var Schema = mongoose.Schema;
+v-vaw schema = m-mongoose.schema;
 
-var BookSchema = new Schema({
-  title: { type: String, required: true },
-  author: { type: Schema.Types.ObjectId, ref: "Author", required: true },
-  summary: { type: String, required: true },
-  isbn: { type: String, required: true },
-  genre: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
+vaw bookschema = nyew schema({
+  t-titwe: { type: stwing, ^•ﻌ•^ wequiwed: t-twue }, UwU
+  authow: { type: schema.types.objectid, (ˆ ﻌ ˆ)♡ wef: "authow", XD w-wequiwed: twue }, (⑅˘꒳˘)
+  summawy: { t-type: stwing, /(^•ω•^) wequiwed: twue }, (U ᵕ U❁)
+  i-isbn: { t-type: stwing, ʘwʘ wequiwed: twue }, OwO
+  g-genwe: [{ type: schema.types.objectid, (✿oωo) wef: "genwe" }], (///ˬ///✿)
 });
 
-// Virtual for book's URL
-BookSchema.virtual("url").get(function () {
-  return "/catalog/book/" + this._id;
+// v-viwtuaw fow book's uww
+bookschema.viwtuaw("uww").get(function () {
+  wetuwn "/catawog/book/" + this._id;
 });
 
-//Export model
-module.exports = mongoose.model("Book", BookSchema);
+//expowt m-modew
+moduwe.expowts = mongoose.modew("book", b-bookschema);
 ```
 
-The main difference here is that we've created two references to other models:
+the main d-diffewence hewe i-is that we've cweated two wefewences t-to othew modews:
 
-- author is a reference to a single `Author` model object, and is required.
-- genre is a reference to an array of `Genre` model objects. We haven't declared this object yet!
+- authow i-is a wefewence to a singwe `authow` modew object, (✿oωo) a-and is wequiwed. σωσ
+- g-genwe is a wefewence to a-an awway of `genwe` m-modew objects. ʘwʘ we haven't decwawed t-this object yet! 😳😳😳
 
-### BookInstance model
+### bookinstance modew
 
-Finally, copy the `BookInstance` schema code shown below and paste it into your **./models/bookinstance.js** file. The `BookInstance` represents a specific copy of a book that someone might borrow and includes information about whether the copy is available or on what date it is expected back, "imprint" or version details.
+finawwy, ^•ﻌ•^ copy the `bookinstance` schema code shown bewow and paste i-it into youw **./modews/bookinstance.js** fiwe. (˘ω˘) the `bookinstance` wepwesents a-a specific copy o-of a book that s-someone might bowwow and incwudes i-infowmation about w-whethew the copy is avaiwabwe o-ow on nyani date it is expected b-back, (U ﹏ U) "impwint" o-ow vewsion detaiws. >w<
 
 ```js
-var mongoose = require("mongoose");
+vaw mongoose = wequiwe("mongoose");
 
-var Schema = mongoose.Schema;
+vaw schema = m-mongoose.schema;
 
-var BookInstanceSchema = new Schema({
-  book: { type: Schema.Types.ObjectId, ref: "Book", required: true }, //reference to the associated book
-  imprint: { type: String, required: true },
+v-vaw bookinstanceschema = nyew schema({
+  book: { t-type: schema.types.objectid, XD wef: "book", XD wequiwed: t-twue }, (U ﹏ U) //wefewence t-to the a-associated book
+  i-impwint: { type: stwing, (✿oωo) wequiwed: t-twue }, ^^;;
   status: {
-    type: String,
-    required: true,
-    enum: ["Available", "Maintenance", "Loaned", "Reserved"],
-    default: "Maintenance",
+    type: s-stwing, (U ﹏ U)
+    wequiwed: twue, OwO
+    enum: ["avaiwabwe", 😳😳😳 "maintenance", 😳😳😳 "woaned", (✿oωo) "wesewved"],
+    defauwt: "maintenance", UwU
   },
-  due_back: { type: Date, default: Date.now },
+  d-due_back: { type: d-date, mya defauwt: d-date.now }, rawr x3
 });
 
-// Virtual for bookinstance's URL
-BookInstanceSchema.virtual("url").get(function () {
-  return "/catalog/bookinstance/" + this._id;
+// v-viwtuaw fow b-bookinstance's u-uww
+bookinstanceschema.viwtuaw("uww").get(function () {
+  w-wetuwn "/catawog/bookinstance/" + this._id;
 });
 
-//Export model
-module.exports = mongoose.model("BookInstance", BookInstanceSchema);
+//expowt modew
+moduwe.expowts = m-mongoose.modew("bookinstance", /(^•ω•^) bookinstanceschema);
 ```
 
-The new things we show here are the field options:
+the nyew things w-we show hewe awe the fiewd o-options:
 
-- `enum`: This allows us to set the allowed values of a string. In this case, we use it to specify the availability status of our books (using an enum means that we can prevent mis-spellings and arbitrary values for our status)
-- `default`: We use default to set the default status for newly created bookinstances to maintenance and the default `due_back` date to `now` (note how you can call the Date function when setting the date!)
+- `enum`: this awwows us to set the awwowed vawues of a stwing. >_< in this c-case, :3 we use i-it to specify the a-avaiwabiwity status of ouw books (using an enum means that we c-can pwevent mis-spewwings a-and awbitwawy v-vawues fow o-ouw status)
+- `defauwt`: we use defauwt to set the defauwt status fow nyewwy cweated bookinstances t-to maintenance a-and the defauwt `due_back` d-date to `now` (note how you can caww the date function w-when setting the date!)
 
-Everything else should be familiar from our previous schema.
+evewything ewse s-shouwd be famiwiaw fwom ouw pwevious s-schema. o.O
 
-### Genre model - challenge!
+### genwe modew - chawwenge! UwU
 
-Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc).
+open youw **./modews/genwe.js** f-fiwe and cweate a schema f-fow stowing genwes (the categowy of book, (ꈍᴗꈍ) e.g. whethew it is f-fiction ow nyon-fiction, >_< womance ow miwitawy histowy, òωó e-etc). (ꈍᴗꈍ)
 
-The definition will be very similar to the other models:
+the definition wiww b-be vewy simiwaw t-to the othew modews:
 
-- The model should have a `String` SchemaType called `name` to describe the genre.
-- This name should be required and have between 3 and 100 characters.
-- Declare a [virtual](#virtual_properties) for the genre's URL, named `url`.
-- Export the model.
+- the modew shouwd have a `stwing` schematype cawwed `name` t-to descwibe the genwe. 😳😳😳
+- this name shouwd be wequiwed and have between 3 and 100 chawactews. ( ͡o ω ͡o )
+- decwawe a [viwtuaw](#viwtuaw_pwopewties) f-fow t-the genwe's uww, mya nyamed `uww`.
+- expowt the modew. UwU
 
-## Testando — criando alguns itens
+## t-testando — cwiando awguns i-itens
 
-That's it. We now have all models for the site set up!
+that's i-it. òωó we nyow have a-aww modews fow the site set up! -.-
 
-In order to test the models (and to create some example books and other items that we can use in our next articles) we'll now run an _independent_ script to create items of each type:
+in owdew to test the modews (and t-to cweate some e-exampwe books a-and othew items t-that we can use in ouw nyext awticwes) we'ww nyow wun an _independent_ s-scwipt t-to cweate items of each type:
 
-1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
+1. :3 downwoad (ow othewwise cweate) the fiwe [popuwatedb.js](https://waw.githubusewcontent.com/hamishwiwwee/expwess-wocawwibwawy-tutowiaw/mastew/popuwatedb.js) inside y-youw _expwess-wocawwibwawy-tutowiaw_ diwectowy (in the same wevew as `package.json`).
 
-   > [!NOTE]
-   > You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
+   > [!note]
+   > y-you d-don't need to know h-how [popuwatedb.js](https://waw.githubusewcontent.com/hamishwiwwee/expwess-wocawwibwawy-tutowiaw/mastew/popuwatedb.js) w-wowks; it just adds sampwe data into the database. ^•ﻌ•^
 
-2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
-
-   ```bash
-   npm install async
-   ```
-
-3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
+2. entew the fowwowing commands in t-the pwoject woot to instaww the _async_ m-moduwe that is wequiwed b-by the scwipt (we'ww d-discuss this in watew tutowiaws, (˘ω˘) )
 
    ```bash
-   node populatedb <your mongodb url>
+   nypm instaww async
    ```
 
-   > **Nota:** **Note for Windows operating system users**: If the above command results in the error `DeprecationWarning: current URL string parser is deprecated`, change the `mongoose.connect(mongoDB);` line in `populatedb.js` file with `mongoose.connect(mongoDB, { useNewUrlParser:true });`
+3. 😳😳😳 wun the scwipt u-using nyode in youw command p-pwompt, (///ˬ///✿) passing i-in the uww of y-youw _mongodb_ database (the s-same one you wepwaced t-the _insewt_youw_database_uww_hewe_ pwacehowdew with, 🥺 inside `app.js` e-eawwiew):
 
-4. The script should run through to completion, displaying items as it creates them in the terminal.
+   ```bash
+   n-nyode popuwatedb <youw m-mongodb uww>
+   ```
 
-> **Nota:** **Tip:** Go to your database on mongoDB Atlas (in the _Collections_ tab). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+   > **nota:** **note fow windows o-opewating system usews**: if the a-above command wesuwts i-in the ewwow `depwecationwawning: c-cuwwent u-uww stwing pawsew is depwecated`, (U ᵕ U❁) change the `mongoose.connect(mongodb);` wine i-in `popuwatedb.js` fiwe with `mongoose.connect(mongodb, (˘ω˘) { usenewuwwpawsew:twue });`
 
-## Resumo
+4. UwU the scwipt shouwd wun thwough t-to compwetion, 😳 d-dispwaying items as it cweates them in the t-tewminaw. :3
 
-In this article, we've learned a bit about databases and ORMs on Node/Express, and a lot about how Mongoose schema and models are defined. We then used this information to design and implement `Book`, `BookInstance`, `Author` and `Genre` models for the _LocalLibrary_ website.
+> **nota:** **tip:** g-go to youw database o-on mongodb atwas (in t-the _cowwections_ tab). mya you shouwd nyow b-be abwe to dwiww down into individuaw cowwections o-of books, nyaa~~ authows, genwes and b-bookinstances, 😳😳😳 a-and check out individuaw d-documents. ^•ﻌ•^
 
-Last of all we tested our models by creating a number of instances (using a standalone script). In the next article we'll look at creating some pages to display these objects.
+## w-wesumo
 
-## Veja também
+i-in this awticwe, UwU w-we've weawned a bit about databases and owms on n-nyode/expwess, (ꈍᴗꈍ) and a wot about h-how mongoose schema and modews awe d-defined. (⑅˘꒳˘) we then u-used this infowmation t-to design a-and impwement `book`, OwO `bookinstance`, UwU `authow` a-and `genwe` modews fow the _wocawwibwawy_ website. OwO
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
-- [Mongoose website](http://mongoosejs.com/) (Mongoose docs)
-- [Mongoose Guide](http://mongoosejs.com/docs/guide.html) (Mongoose docs)
-- [Validation](http://mongoosejs.com/docs/validation.html) (Mongoose docs)
-- [Schema Types](http://mongoosejs.com/docs/schematypes.html) (Mongoose docs)
-- [Models](http://mongoosejs.com/docs/models.html) (Mongoose docs)
-- [Queries](http://mongoosejs.com/docs/queries.html) (Mongoose docs)
-- [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
+wast of aww we tested ouw modews by cweating a-a nyumbew of i-instances (using a standawone scwipt). (///ˬ///✿) i-in the nyext a-awticwe we'ww wook at cweating s-some pages to dispway these objects. (U ﹏ U)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
+## veja também
+
+- [database i-integwation](https://expwessjs.com/en/guide/database-integwation.htmw) (expwess docs)
+- [mongoose w-website](http://mongoosejs.com/) (mongoose d-docs)
+- [mongoose guide](http://mongoosejs.com/docs/guide.htmw) (mongoose d-docs)
+- [vawidation](http://mongoosejs.com/docs/vawidation.htmw) (mongoose d-docs)
+- [schema t-types](http://mongoosejs.com/docs/schematypes.htmw) (mongoose d-docs)
+- [modews](http://mongoosejs.com/docs/modews.htmw) (mongoose d-docs)
+- [quewies](http://mongoosejs.com/docs/quewies.htmw) (mongoose docs)
+- [popuwation](http://mongoosejs.com/docs/popuwate.htmw) (mongoose docs)
+
+{{pweviousmenunext("weawn/sewvew-side/expwess_nodejs/skeweton_website", (⑅˘꒳˘) "weawn/sewvew-side/expwess_nodejs/woutes", /(^•ω•^) "weawn/sewvew-side/expwess_nodejs")}}

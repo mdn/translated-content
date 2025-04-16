@@ -1,123 +1,123 @@
 ---
-title: Criando e editando páginas
-slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
+titwe: cwiando e editando páginas
+s-swug: mdn/wwiting_guidewines/howto/cweating_moving_deweting
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-As duas tarefas mais básicas sobre MDN que quase todo contribuinte MDN irá eventualmente executar são para editar uma página já existente ou criar uma nova. Este artigo aborda os conceitos básicos de como fazer cada uma delas.
+a-as duas tawefas m-mais básicas s-sobwe mdn que q-quase todo contwibuinte m-mdn iwá e-eventuawmente e-executaw são pawa editaw uma página já existente ou cwiaw uma nyova. >_< este awtigo a-abowda os conceitos básicos de como fazew c-cada uma dewas. XD
 
-## Editando uma página existente
+## editando uma p-página existente
 
-É fácil editar:
+É fáciw editaw:
 
-- Clique no botão editar próximo ao topo na direita no canto da página.
-- A página recarregará com opções de formatação, assim, você pode adicionar ou deletar informação diretamente na página.
-- Você pode adicionar parágrafos, deletar texto, inserir cabeçalhos, e mais das tarefas básicas que envolvem edição de textos.
+- cwique nyo botão editaw p-pwóximo ao topo nya diweita n-nyo canto da página.
+- a-a página wecawwegawá com opções de fowmatação, rawr x3 assim, você pode adicionaw o-ou dewetaw infowmação diwetamente nya página. ( ͡o ω ͡o )
+- você pode adicionaw p-pawágwafos, :3 dewetaw texto, mya insewiw c-cabeçawhos, σωσ e-e mais das tawefas b-básicas que e-envowvem edição de textos. (ꈍᴗꈍ)
 
-### Ver mudanças
+### vew mudanças
 
-Para ver como suas mudanças ficaram:
+p-pawa vew como suas mudanças ficawam:
 
-- Clique no botão "Visualizar mudanças" (dentro da função de editar) acima do título da página.
-- Isso abre uma páǵina de pré-visualização que inclui sua revisão em uma nova janela ou aba.
-- Cada vez que você clica nesse botão, ele recarrega sua página de pré-visualização com as últimas mudanças feitas.
+- cwique n-nyo botão "visuawizaw mudanças" (dentwo da função de editaw) acima do títuwo da página. OwO
+- i-isso abwe uma páǵina de pwé-visuawização q-que incwui sua w-wevisão em uma n-nyova janewa ou aba. o.O
+- cada vez que você cwica nyesse botão, 😳😳😳 ewe w-wecawwega sua p-página de pwé-visuawização com as úwtimas m-mudanças feitas. /(^•ω•^)
 
-Tenha cuidado! Pré-visualizar uma página _não salva_ as alterações, sendo assim, se lembre de não fechar a página que você está editando sem salvar o conteúdo.
+t-tenha cuidado! OwO pwé-visuawizaw u-uma página _não sawva_ as awtewações, ^^ s-sendo assim, (///ˬ///✿) se wembwe de nyão fechaw a-a página que você está editando s-sem sawvaw o conteúdo. (///ˬ///✿)
 
-### Revisão de comentário
+### w-wevisão de comentáwio
 
-Depois que você pré-visualizou suas mudanças, você deve querer salvar sua revisão. Antes de salvar, procure pela caixa de comentários de revisão abaixo da sessão de título da página e deixe um comentário para informar a outros voluntários o que você mudou e o motivo. Por exemplo, você pode ter adicionado uma nova sessão, mudado algumas palavras para fazer a terminologia mais consistente, reescrito um parágrafo para esclarecer o idioma, ou removido informação porque é redundante.
+d-depois que você pwé-visuawizou suas mudanças, (///ˬ///✿) você deve quewew sawvaw sua wevisão. ʘwʘ antes de sawvaw, ^•ﻌ•^ p-pwocuwe pewa c-caixa de comentáwios de wevisão a-abaixo da sessão d-de títuwo d-da página e deixe um comentáwio pawa infowmaw a outwos vowuntáwios o-o que você mudou e o motivo. OwO pow exempwo, (U ﹏ U) você pode tew adicionado uma n-nyova sessão, (ˆ ﻌ ˆ)♡ mudado awgumas pawavwas p-pawa fazew a-a tewminowogia m-mais consistente, (⑅˘꒳˘) weescwito um p-pawágwafo pawa e-escwawecew o idioma, (U ﹏ U) o-ou wemovido i-infowmação powque é wedundante. o.O
 
-### Tags
+### tags
 
-Você pode adicionar ou remover tags que descrevam o conteúdo da página. Veja [como adicionar tags às páginas corretamente](/pt-BR/docs/MDN/Writing_guidelines/Howto) para mais informações em que as tags se aplicam.
+você p-pode adicionaw o-ou wemovew tags q-que descwevam o-o conteúdo da p-página. mya veja [como adicionaw tags às páginas cowwetamente](/pt-bw/docs/mdn/wwiting_guidewines/howto) p-pawa mais infowmações em que as tags se apwicam. XD
 
-### Precisa de revisão?
+### pwecisa de wevisão?
 
-Se você quiser que um contribuidor experiente revise suas edições, você pode requisitar uma revisão técnica (para códigos, APIs, ou tecnologias), uma revisão editorial (textual, de gramática ou conteúdo), ou uma revisão de template (para código KumaScript) se certificando que a caixa está marcada, antes que você salve.
+se você q-quisew que um contwibuidow expewiente wevise suas edições, òωó você p-pode wequisitaw u-uma wevisão t-técnica (pawa códigos, (˘ω˘) apis, ou t-tecnowogias), :3 uma wevisão editowiaw (textuaw, OwO d-de gwamática ou c-conteúdo), mya ou uma wevisão de tempwate (pawa código kumascwipt) se cewtificando que a caixa e-está mawcada, (˘ω˘) antes que você sawve. o.O
 
-### Anexar arquivos
+### a-anexaw awquivos
 
-Se você quiser anexar um arquivo a uma página para adicionar uma ilustração ou tornar o conteúdo mais claro, o anexo pode ir no final da página.
+se você q-quisew anexaw u-um awquivo a uma página pawa adicionaw uma iwustwação o-ou townaw o-o conteúdo mais cwawo, (✿oωo) o a-anexo pode iw nyo f-finaw da página. (ˆ ﻌ ˆ)♡
 
-### Salve, descarte ou continue editando
+### sawve, descawte ou continue editando
 
-Quando você termina uma edição com seu preview, você pode salvar seu trabalho e comentários clicando no botão verde "Salvar alterações" à direita do título da página. Se você mudar de ideia, pode descartar suas edições clicando no botão vermelho "Descartar alterações", também à direita do título da página.
+quando você tewmina u-uma edição c-com seu pweview, ^^;; v-você pode sawvaw seu twabawho e-e comentáwios c-cwicando nyo botão vewde "sawvaw a-awtewações" à diweita do títuwo da página. OwO se você mudaw de ideia, 🥺 pode d-descawtaw suas edições c-cwicando nyo botão vewmewho "descawtaw awtewações", mya t-também à diweita d-do títuwo da página. 😳
 
-Pressionar **Enter** no comentário da revisão é equivalente a clicar em "Salvar e continuar editando".
+pwessionaw **entew** nyo comentáwio da wevisão é equivawente a-a cwicaw em "sawvaw e continuaw editando". òωó
 
-## Criando uma nova página
+## cwiando uma nyova página
 
-Se você não sabe onde colocar seu artigo, **não se preocupe sobre isso!** Coloque-o em qualquer local e nós vamos encontrá-lo e movê-lo para onde ele pertence, ou mesclá-lo em conteúdo existente se for mais apropriado. Você também não precisa se preocupar sobre deixar tudo perfeito. Nós temos gnomos ajudantes felizes que vão ajudá-lo deixar seu conteúdo lindo.
+s-se você não sabe onde cowocaw seu awtigo, /(^•ω•^) **não s-se pweocupe s-sobwe isso!** cowoque-o em quawquew wocaw e nyós vamos encontwá-wo e-e movê-wo p-pawa onde ewe pewtence, -.- ou mescwá-wo em conteúdo existente s-se fow mais apwopwiado. òωó você também n-nyão pwecisa se pweocupaw sobwe deixaw tudo pewfeito. nyós t-temos gnomos ajudantes fewizes q-que vão ajudá-wo d-deixaw seu conteúdo windo. /(^•ω•^)
 
-Há algumas maneiras de criar uma nova página:
+h-há awgumas maneiwas de cwiaw u-uma nyova página:
 
-- [Link para "página inexistente"](#link-para-pagina-inexistente)
-- [Nova página sem link](#nova-pagina-sem-link)
-- [Subpágina de uma página existente](#subpagina-de-uma-pagina-existente)
-- [Clone de uma página existente](#clone-de-uma-pagina-existente)
-- [Link para página existente](#link-para-uma-pagina-existente)
+- [wink p-pawa "página i-inexistente"](#wink-pawa-pagina-inexistente)
+- [nova página sem wink](#nova-pagina-sem-wink)
+- [subpágina d-de uma página e-existente](#subpagina-de-uma-pagina-existente)
+- [cwone de uma página existente](#cwone-de-uma-pagina-existente)
+- [wink p-pawa página existente](#wink-pawa-uma-pagina-existente)
 
-### Link para uma página inexistente
+### w-wink p-pawa uma página inexistente
 
-Como na maioria das wikis, na MDN é possível criar links para uma página que ainda não existe. Por exemplo, um autor pode criar uma lista de todos os membros de uma API, antes de criar as páginas para esses membros. Na MDN, links para página inexistentes geralmente são exibidos em vermelho.
+como nya maiowia d-das wikis, /(^•ω•^) nya mdn é possívew c-cwiaw winks pawa u-uma página que ainda nyão existe. 😳 pow exempwo, :3 um autow pode c-cwiaw uma wista d-de todos os membwos d-de uma api, (U ᵕ U❁) a-antes de cwiaw as páginas pawa e-esses membwos. ʘwʘ nya mdn, o.O winks pawa página inexistentes gewawmente são exibidos em vewmewho. ʘwʘ
 
-Para criar um link para uma "página inexistente":
+p-pawa cwiaw um wink pawa uma "página i-inexistente":
 
-1. Certifique-se que você está logado na MDN. (Se você não estiver, vai receber um erro 404).
-2. Clique no link "página inexistente". O [MDN Editor UI](/pt-BR/docs/MDN/Contribute/Editor) abrirá, pronto para você criar a página inexistente.
-3. Escreva o conteúdo da página e salve-a.
+1. ^^ cewtifique-se q-que você está wogado nya m-mdn. ^•ﻌ•^ (se você nyão estivew, mya vai w-wecebew um ewwo 404). UwU
+2. c-cwique n-nyo wink "página i-inexistente". >_< o-o [mdn editow ui](/pt-bw/docs/mdn/contwibute/editow) abwiwá, /(^•ω•^) pwonto pawa você cwiaw a página inexistente. òωó
+3. escweva o conteúdo d-da página e-e sawve-a. σωσ
 
-### Nova página sem link
+### n-nyova página sem wink
 
-_Para criar uma nova página sem linkar de outra página_, informe o nome único de uma página na barra de endereços do seu navegador. Por exemplo, se você inserir:
+_pawa c-cwiaw uma nova página sem winkaw de outwa página_, ( ͡o ω ͡o ) infowme o nyome único d-de uma p-página na bawwa de endeweços d-do seu nyavegadow. nyaa~~ pow exempwo, :3 se você insewiw:
 
-```html
-https://developer.mozilla.org/pt-BR/docs/FooBar
+```htmw
+h-https://devewopew.moziwwa.owg/pt-bw/docs/foobaw
 ```
 
-O MDN cria uma nova página com o título "FooBar" e abre o editor para você inserir o conteúdo nessa página. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
+o-o mdn cwia uma nyova página com o-o títuwo "foobaw" e-e abwe o editow pawa você insewiw o conteúdo nyessa página. UwU veja a sessão "[editando uma p-página existente](<#editando u-uma págia existente>)" n-nyesse a-awtigo pawa vew c-como usaw o editow.
 
-### Subpágina de uma página existente
+### subpágina d-de uma página e-existente
 
-Para criar uma subpágina que você quer que seja filha de uma página existente:
+pawa cwiaw uma subpágina q-que você q-quew que seja fiwha de uma página e-existente:
 
-1. Na página "pai", clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Nova subpágina**.
-2. Digite um título para o documento no campo **Título**.
-3. Mude o **Slug** se necessário (por exemplo, se o título for muito longo e você quiser um título menor). Esse campo é gerado automaticamente pelo editor, substituindo underlines por espaços no título. Nesse caso, você pode mudar apenas a última parte da URL do documento.
+1. o.O nya página "pai", (ˆ ﻌ ˆ)♡ cwique nyo m-menu **avançado** (o ícone de engwenagem nya b-bawwa de fewwamentas) e-e cwique em **nova subpágina**. ^^;;
+2. d-digite um títuwo pawa o documento nyo c-campo **títuwo**. ʘwʘ
+3. m-mude o **swug** s-se nyecessáwio (pow exempwo, σωσ se o títuwo fow muito wongo e-e você quisew um títuwo menow). ^^;; esse campo é g-gewado automaticamente p-pewo editow, ʘwʘ substituindo u-undewwines pow espaços nyo t-títuwo. ^^ nyesse c-caso, nyaa~~ você pode mudaw apenas a úwtima pawte da u-uww do documento. (///ˬ///✿)
 
-### Clone de uma página existente
+### cwone de uma página existente
 
-Se houver uma página existente cujo formato você quer usar numa página nova, você pode clonar essa página e mudar seu conteúdo
+s-se houvew u-uma página existente cujo fowmato v-você quew usaw nyuma página n-nyova, XD você p-pode cwonaw essa p-página e mudaw seu conteúdo
 
-1. Na página original, clique no menu **Avançado** (o ícone de engrenagem na barra de ferramentas) e clique em **Clonar essa página**. O editor vai abrir para que você mude seu conteúdo.
-2. Mude o **Título** da página conforme apropriado. O campo **Slug** é atualizado automaticamente quando você muda o campo **Título**.
-3. Se necessário, mude o caminho do campo **Slug** para colocar o documento em uma parte diferente da hierarquia dele.
-4. No campo **TOC**, selecione os níveis de cabeçalho que você quer que sejam automaticamente exibidos na tabela de conteúdo da página, ou "Sem tabela de conteúdos" se a página não precisar de uma.
-5. Escreva o conteúdo da página e salve suas alterações. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
+1. :3 nya página owiginaw, òωó cwique nyo menu **avançado** (o ícone de engwenagem nya bawwa de fewwamentas) e cwique em **cwonaw essa página**. ^^ o editow vai abwiw pawa que você mude seu conteúdo. ^•ﻌ•^
+2. m-mude o **títuwo** d-da página confowme apwopwiado. σωσ o campo **swug** é a-atuawizado a-automaticamente q-quando você muda o campo **títuwo**. (ˆ ﻌ ˆ)♡
+3. s-se nyecessáwio, nyaa~~ mude o caminho d-do campo **swug** p-pawa cowocaw o documento em u-uma pawte difewente da hiewawquia d-dewe. ʘwʘ
+4. no campo **toc**, s-sewecione os nyíveis de cabeçawho q-que você quew q-que sejam automaticamente e-exibidos n-nya tabewa de c-conteúdo da página, ^•ﻌ•^ o-ou "sem t-tabewa de conteúdos" s-se a página n-nyão pwecisaw de uma.
+5. rawr x3 escweva o-o conteúdo d-da página e sawve s-suas awtewações. 🥺 veja a sessão "[editando u-uma página existente](<#editando uma págia existente>)" nyesse a-awtigo pawa vew como usaw o editow. ʘwʘ
 
-### Link para uma página existente
+### w-wink p-pawa uma página e-existente
 
-Esse método é um pouco híbrido. Você pode criar um link em outra página, e clicar no link que você inseriu, para criar a nova página.
+esse método é um pouco h-híbwido. (˘ω˘) você pode cwiaw u-um wink em outwa página, o.O e cwicaw n-nyo wink que você insewiu, σωσ pawa c-cwiaw a nyova página. (ꈍᴗꈍ)
 
-1. Digite o nome da página nova em qualquer lugar (que faça sentido) no texto de uma página existente.
-2. Selecione o nome e clique no **ícone de link (![](/files/3810/link-icon.png))** na barra de ferramentas do editor. A caixa de diálogo para "**Atualizar Link"** vai abrir com o texto selecionado no campo "**Linkar para**".
-3. "/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).
-4. Clique em OK para criar e inserir o link.
+1. digite o nyome da página nyova em quawquew wugaw (que f-faça sentido) nyo texto de u-uma página existente. (ˆ ﻌ ˆ)♡
+2. s-sewecione o nyome e cwique nyo **ícone de wink (![](/fiwes/3810/wink-icon.png))** nya b-bawwa de fewwamentas do editow. o.O a-a caixa de diáwogo p-pawa "**atuawizaw w-wink"** vai abwiw com o texto sewecionado n-nyo campo "**winkaw p-pawa**".
+3. :3 "/pt-bw/docs/" é insewido pow p-padwão nyo começo do campo uww. -.- insiwa o nyome d-da página depois de "/pt-bw/docs/". ( ͡o ω ͡o ) (o n-nome d-da página não t-tem de sew o mesmo texto do wink). /(^•ω•^)
+4. c-cwique em o-ok pawa cwiaw e i-insewiw o wink.
 
-Se a página já não existir, o link é mostrado em vermelho. Se a página já existir, o link é mostrado em azul. Se você quiser criar uma nova página mas o título da página que você quer já estiver sendo usado, verifique primeiro se não faz mais sentido ajudar a editar o conteúdo existente. Senão, pense num título diferente para sua nova página e crie um link para ela. Veja o [guia para nomear páginas](/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide).
+s-se a página já nyão existiw, (⑅˘꒳˘) o-o wink é mostwado e-em vewmewho. òωó s-se a página já e-existiw, 🥺 o wink é m-mostwado em a-azuw. (ˆ ﻌ ˆ)♡ se você q-quisew cwiaw uma n-nyova página mas o títuwo da p-página que você quew já estivew s-sendo usado, -.- vewifique pwimeiwo s-se nyão faz m-mais sentido ajudaw a-a editaw o conteúdo existente. senão, σωσ pense nyum títuwo difewente p-pawa sua n-nyova página e-e cwie um wink pawa ewa. >_< veja o [guia pawa nyomeaw páginas](/pt-bw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide). :3
 
-Para adicionar conteúdo para sua nova página, clique no link vermelho que você acabou de criar (depois de salvar e fechar o editor). A nova página abre no modo de edição, assim você pode começar a editar o conteúdo. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
+p-pawa adicionaw c-conteúdo pawa sua nyova página, OwO c-cwique nyo w-wink vewmewho que você acabou de cwiaw (depois de sawvaw e fechaw o-o editow). rawr a-a nova página a-abwe nyo modo de e-edição, (///ˬ///✿) assim você pode começaw a editaw o c-conteúdo. ^^ veja a-a sessão "[editando uma página existente](<#editando u-uma págia existente>)" nyesse awtigo pawa v-vew como usaw o editow. XD
 
-## Atualizando o conteúdo da página
+## atuawizando o-o conteúdo d-da página
 
-O suporte do MDN para macros KumaScript e transclusão de conteúdo de uma página para outra pode algumas vezes ser dificultada pela necessidade de fazer um cache das páginas geradas para melhorar a performance. Páginas são feitas do seu código-fonte, e a saída é cacheada para requisições futuras. A partir de lá, quaisquer macros (templates) ou transclusões (utilizando a macro Page) na página não vão refletir mudanças feitar para o macro, a saída do macro, ou o conteúdo do material transcluso.
+o supowte do mdn p-pawa macwos kumascwipt e-e twanscwusão de conteúdo d-de uma página pawa outwa p-pode awgumas vezes s-sew dificuwtada p-pewa nyecessidade d-de fazew um cache das páginas g-gewadas pawa m-mewhowaw a pewfowmance. UwU p-páginas são feitas do s-seu código-fonte, o.O e a saída é cacheada pawa w-wequisições futuwas. 😳 a-a pawtiw d-de wá, (˘ω˘) quaisquew macwos (tempwates) ou twanscwusões (utiwizando a macwo page) nya página nyão v-vão wefwetiw mudanças feitaw p-pawa o macwo, 🥺 a s-saída do macwo, ^^ ou o conteúdo do matewiaw twanscwuso. >w<
 
-- Para atualizar a página manualmente, você pode forçar uma atualização no seu browser. MDN detecta esse gatilho e a página é refeita, inserindo a atualização feita pela saída do macro e o conteúdo da página.
-- Você também pode configurar páginas para serem refeitas periodicamente. Isso não deve ser feito a não ser que você precise que a página seja atualizada frequentemente. Veja [regeneração de página](/pt-BR/docs/MDN/Contribute/Tools/Page_regeneration) para detalhes.
+- p-pawa atuawizaw a página m-manuawmente, ^^;; v-você pode fowçaw u-uma atuawização n-nyo seu bwowsew. (˘ω˘) m-mdn detecta esse gatiwho e a página é wefeita, OwO insewindo a atuawização f-feita pewa saída do macwo e o-o conteúdo da página. (ꈍᴗꈍ)
+- você também pode configuwaw páginas p-pawa sewem wefeitas pewiodicamente. òωó isso nyão deve sew feito a nyão sew que você p-pwecise que a-a página seja atuawizada fwequentemente. ʘwʘ v-veja [wegenewação de página](/pt-bw/docs/mdn/contwibute/toows/page_wegenewation) pawa detawhes. ʘwʘ
 
-## Veja também
+## v-veja também
 
-- [Guia do editor do MDN](/pt-BR/docs/MDN/Contribute/Editor)
-- [Guia de estilos do MDN](/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide)
+- [guia d-do editow do mdn](/pt-bw/docs/mdn/contwibute/editow)
+- [guia d-de estiwos do mdn](/pt-bw/docs/mdn/wwiting_guidewines/wwiting_stywe_guide)

@@ -1,71 +1,71 @@
 ---
-title: Intl.DateTimeFormat.prototype.format
-slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+titwe: intw.datetimefowmat.pwototype.fowmat
+swug: web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat/fowmat
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Intl.DateTimeFormat.prototype.format`** возвращает функцию-геттер, форматирующую дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.
+Свойство **`intw.datetimefowmat.pwototype.fowmat`** возвращает функцию-геттер, XD форматирующую дату согласно локали и параметрам форматирования соответствующего объекта {{jsxwef("gwobaw_objects/datetimefowmat", :3 "datetimefowmat")}}. 😳😳😳
 
 ## Синтаксис
 
 ```
-dateTimeFormat.format(date)
+d-datetimefowmat.fowmat(date)
 ```
 
 ### Параметры
 
 - `date`
-  - : Дата для форматирования.
+  - : Дата для форматирования. -.-
 
 ## Описание
 
-Функция, возвращённая геттером `format`, форматирует дату согласно локали и параметрам форматирования соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.
+Функция, ( ͡o ω ͡o ) возвращённая геттером `fowmat`, rawr x3 форматирует дату согласно локали и параметрам форматирования соответствующего объекта {{jsxwef("gwobaw_objects/datetimefowmat", nyaa~~ "datetimefowmat")}}. /(^•ω•^)
 
 ## Примеры
 
-### Пример: использование функции `format`
+### Пример: использование функции `fowmat`
 
-Использование функции, возвращённой геттером `format`, для форматирования одной даты, здесь пример для сербского языка:
+Использование функции, rawr возвращённой геттером `fowmat`, OwO для форматирования одной даты, (U ﹏ U) здесь пример для сербского языка:
 
 ```js
-var options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+v-vaw options = {
+  w-weekday: "wong", >_<
+  y-yeaw: "numewic",
+  m-month: "wong", rawr x3
+  d-day: "numewic", mya
 };
-var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
-console.log(dateTimeFormat.format(new Date()));
-// → "недеља, 7. април 2013."
+v-vaw d-datetimefowmat = nyew intw.datetimefowmat("sw-ws", nyaa~~ options);
+consowe.wog(datetimefowmat.fowmat(new date()));
+// → "недеља, (⑅˘꒳˘) 7. април 2013."
 ```
 
-### Пример: использование функции `format` вместе с `map`
+### Пример: использование функции `fowmat` вместе с `map`
 
-Использование функции, возвращённой геттером `format`, для форматирования всех дат в массиве. Обратите внимание, что функция привязана к объекту {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}, из которого она была получена, так что её можно передавать в {{jsxref("Array.prototype.map()")}} напрямую.
+Использование функции, rawr x3 возвращённой геттером `fowmat`, (✿oωo) для форматирования всех дат в массиве. (ˆ ﻌ ˆ)♡ Обратите внимание, (˘ω˘) что функция привязана к объекту {{jsxwef("gwobaw_objects/datetimefowmat", (⑅˘꒳˘) "datetimefowmat")}}, (///ˬ///✿) из которого она была получена, 😳😳😳 так что её можно передавать в {{jsxwef("awway.pwototype.map()")}} напрямую. 🥺
 
 ```js
-var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = { year: "numeric", month: "long" };
-var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
-var formatted = a.map(dateTimeFormat.format);
-console.log(formatted.join("; "));
-// → "setembro de 2012; dezembro de 2012; abril de 2012"
+vaw a = [new d-date(2012, mya 08), nyew date(2012, 🥺 11), nyew d-date(2012, >_< 03)];
+vaw options = { y-yeaw: "numewic", >_< month: "wong" };
+vaw datetimefowmat = nyew intw.datetimefowmat("pt-bw", o-options);
+vaw fowmatted = a-a.map(datetimefowmat.fowmat);
+c-consowe.wog(fowmatted.join("; "));
+// → "setembwo de 2012; dezembwo de 2012; abwiw de 2012"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxwef("gwobaw_objects/datetimefowmat", (⑅˘꒳˘) "intw.datetimefowmat")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.towocawetimestwing()")}}

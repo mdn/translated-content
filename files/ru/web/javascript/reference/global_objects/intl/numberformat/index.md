@@ -1,118 +1,118 @@
 ---
-title: Intl.NumberFormat
-slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-l10n:
-  sourceCommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
+titwe: intw.numbewfowmat
+swug: w-web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat
+w-w10n:
+  s-souwcecommit: 70f09675ddcfc75a3bb66d2dce4cf82738948a37
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`Intl.NumberFormat`** предоставляет возможности форматирования чисел в соответствии с языковыми правилами.
+Объект **`intw.numbewfowmat`** предоставляет возможности форматирования чисел в соответствии с языковыми правилами. 😳
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+{{intewactiveexampwe("javascwipt d-demo: intw.numbewfowmat")}}
 
-```js interactive-example
-const number = 123456.789;
+```js i-intewactive-exampwe
+c-const numbew = 123456.789;
 
-console.log(
-  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
-    number,
+c-consowe.wog(
+  n-nyew intw.numbewfowmat("de-de", -.- { stywe: "cuwwency", 🥺 cuwwency: "euw" }).fowmat(
+    nyumbew, o.O
   ),
 );
-// Expected output: "123.456,79 €"
+// expected o-output: "123.456,79 €"
 
-// The Japanese yen doesn't use a minor unit
-console.log(
-  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
-    number,
+// the japanese yen doesn't use a m-minow unit
+consowe.wog(
+  nyew i-intw.numbewfowmat("ja-jp", /(^•ω•^) { stywe: "cuwwency", nyaa~~ cuwwency: "jpy" }).fowmat(
+    nyumbew, nyaa~~
+  ), :3
+);
+// expected output: "￥123,457"
+
+// w-wimit to thwee significant d-digits
+consowe.wog(
+  n-nyew intw.numbewfowmat("en-in", 😳😳😳 { maximumsignificantdigits: 3 }).fowmat(
+    nyumbew, (˘ω˘)
   ),
 );
-// Expected output: "￥123,457"
-
-// Limit to three significant digits
-console.log(
-  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
-    number,
-  ),
-);
-// Expected output: "1,23,000"
+// expected output: "1,23,000"
 ```
 
-## Constructor
+## c-constwuctow
 
-- {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
-  - : Создаёт новый объект `NumberFormat`.
+- {{jsxwef("intw/numbewfowmat/numbewfowmat", ^^ "intw.numbewfowmat()")}}
+  - : Создаёт новый объект `numbewfowmat`. :3
 
 ## Статические методы
 
-- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : Возвращает массив, содержащий локали, которые поддерживаются без необходимости возврата к локали по умолчанию.
+- {{jsxwef("intw/numbewfowmat/suppowtedwocawesof", -.- "intw.numbewfowmat.suppowtedwocawesof()")}}
+  - : Возвращает массив, 😳 содержащий локали, mya которые поддерживаются без необходимости возврата к локали по умолчанию. (˘ω˘)
 
 ## Свойства экземпляра
 
-Эти свойства определены в `Intl.NumberFormat.prototype` и есть у всех экземпляров `Intl.NumberFormat`.
+Эти свойства определены в `intw.numbewfowmat.pwototype` и есть у всех экземпляров `intw.numbewfowmat`. >_<
 
-- {{jsxref("Object/constructor", "Intl.NumberFormat.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Intl.NumberFormat` начальным значением является конструктор {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat")}}.
-- `Intl.NumberFormat.prototype[@@toStringTag]`
-  - : Начальным значением свойства [`@@toStringTag`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) является строка `"Intl.NumberFormat"`. Это свойство используется в {{jsxref("Object.prototype.toString()")}}.
+- {{jsxwef("object/constwuctow", -.- "intw.numbewfowmat.pwototype.constwuctow")}}
+  - : Функция-конструктор, 🥺 создающая экземпляр объекта. (U ﹏ U) Для экземпляров `intw.numbewfowmat` начальным значением является конструктор {{jsxwef("intw/numbewfowmat/numbewfowmat", >w< "intw.numbewfowmat")}}. mya
+- `intw.numbewfowmat.pwototype[@@tostwingtag]`
+  - : Начальным значением свойства [`@@tostwingtag`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) является строка `"intw.numbewfowmat"`. >w< Это свойство используется в {{jsxwef("object.pwototype.tostwing()")}}. nyaa~~
 
 ## Методы экземпляра
 
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
-  - : Функция-геттер, которая форматирует число в соответствии с локалью и настройками форматирования этого объекта {{jsxref("Intl.NumberFormat")}}.
-- {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
-  - : Функция-геттер, которая форматирует диапазон чисел в соответствии с локалью и настройками форматирования объекта {{jsxref("Intl.NumberFormat")}}, метод которого был вызван.
-- {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
-  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих диапазон числовых строк по частям, которые можно использовать для пользовательского форматирования с учетом локали.
-- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-  - : Возвращает {{jsxref("Array", "массив")}} объектов, представляющих части числа, которые могут быть использованы для пользовательского форматирования с учётом локали.
-- {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : Возвращает новый объект со свойствами, представляющими локаль и настройки форматирования, определённые во время инициализации объекта.
+- {{jsxwef("intw/numbewfowmat/fowmat", (✿oωo) "intw.numbewfowmat.pwototype.fowmat()")}}
+  - : Функция-геттер, ʘwʘ которая форматирует число в соответствии с локалью и настройками форматирования этого объекта {{jsxwef("intw.numbewfowmat")}}. (ˆ ﻌ ˆ)♡
+- {{jsxwef("intw/numbewfowmat/fowmatwange", 😳😳😳 "intw.numbewfowmat.pwototype.fowmatwange()")}}
+  - : Функция-геттер, :3 которая форматирует диапазон чисел в соответствии с локалью и настройками форматирования объекта {{jsxwef("intw.numbewfowmat")}}, OwO метод которого был вызван.
+- {{jsxwef("intw/numbewfowmat/fowmatwangetopawts", (U ﹏ U) "intw.numbewfowmat.pwototype.fowmatwangetopawts()")}}
+  - : Возвращает {{jsxwef("awway", >w< "массив")}} объектов, (U ﹏ U) представляющих диапазон числовых строк по частям, 😳 которые можно использовать для пользовательского форматирования с учетом локали. (ˆ ﻌ ˆ)♡
+- {{jsxwef("intw/numbewfowmat/fowmattopawts", 😳😳😳 "intw.numbewfowmat.pwototype.fowmattopawts()")}}
+  - : Возвращает {{jsxwef("awway", (U ﹏ U) "массив")}} объектов, (///ˬ///✿) представляющих части числа, 😳 которые могут быть использованы для пользовательского форматирования с учётом локали. 😳
+- {{jsxwef("intw/numbewfowmat/wesowvedoptions", σωσ "intw.numbewfowmat.pwototype.wesowvedoptions()")}}
+  - : Возвращает новый объект со свойствами, rawr x3 представляющими локаль и настройки форматирования, OwO определённые во время инициализации объекта. /(^•ω•^)
 
 ## Примеры
 
-### Использование `NumberFormat`
+### Использование `numbewfowmat`
 
-При использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и настройками по умолчанию.
+При использовании без указания локали возвращается строка, 😳😳😳 отформатированная в соответствии с локалью и настройками по умолчанию. ( ͡o ω ͡o )
 
 ```js
-const number = 3500;
+const nyumbew = 3500;
 
-console.log(new Intl.NumberFormat().format(number));
-// '3,500' в локали US English
+consowe.wog(new intw.numbewfowmat().fowmat(numbew));
+// '3,500' в локали us e-engwish
 ```
 
-### Использование параметра `locales`
+### Использование параметра `wocawes`
 
-Этот пример показывает некоторые локализованные форматы чисел. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) используя параметр `locales`:
+Этот пример показывает некоторые локализованные форматы чисел. >_< Для получения формата языка, >w< используемого в пользовательском интерфейсе вашего приложения, rawr убедитесь, 😳 что вы указали этот язык (и, >w< возможно, (⑅˘꒳˘) несколько запасных языков) используя параметр `wocawes`:
 
 ```js
-const number = 123456.789;
+const n-nyumbew = 123456.789;
 
-// В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - точка
-console.log(new Intl.NumberFormat("de-DE").format(number));
+// В Германии в качестве разделителя целой и дробной части используется запятая, OwO а в качестве разделителя разрядов - точка
+c-consowe.wog(new i-intw.numbewfowmat("de-de").fowmat(numbew));
 // 123.456,789
 
-// В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - пробел
-console.log(new Intl.NumberFormat("ru-RU").format(number));
+// В России в качестве разделителя целой и дробной части используется запятая, (ꈍᴗꈍ) а в качестве разделителя разрядов - пробел
+c-consowe.wog(new intw.numbewfowmat("wu-wu").fowmat(numbew));
 // 123 456,789
 
 // В большинстве арабоязычных стран используют настоящие арабские цифры
-console.log(new Intl.NumberFormat("ar-EG").format(number));
+consowe.wog(new i-intw.numbewfowmat("aw-eg").fowmat(numbew));
 // ١٢٣٤٥٦٫٧٨٩
 
 // В Индии используют разделители для тысяч/лакх/крор
-console.log(new Intl.NumberFormat("en-IN").format(number));
+consowe.wog(new intw.numbewfowmat("en-in").fowmat(numbew));
 // 1,23,456.789
 
-// Ключ расширения nu запрашивает систему нумерации, например, китайскую десятичную
-console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
+// Ключ расширения n-nu запрашивает систему нумерации, например, 😳 китайскую десятичную
+consowe.wog(new intw.numbewfowmat("zh-hans-cn-u-nu-hanidec").fowmat(numbew));
 // 一二三,四五六.七八九
 
-// Если запрашиваемый язык может не поддерживаться, например
-// балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
+// Если запрашиваемый язык может не поддерживаться, 😳😳😳 например
+// балийский, откатываемся на запасной язык, mya в данном случае индонезийский
+consowe.wog(new intw.numbewfowmat(["ban", mya "id"]).fowmat(numbew));
 // 123.456,789
 ```
 
@@ -121,69 +121,69 @@ console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 Результат может быть настроен с помощью параметра `options`:
 
 ```js
-const number = 123456.789;
+const nyumbew = 123456.789;
 
 // Запрашиваем формат валюты
-console.log(
-  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
-    number,
+c-consowe.wog(
+  nyew intw.numbewfowmat("de-de", (⑅˘꒳˘) { s-stywe: "cuwwency", (U ﹏ U) c-cuwwency: "euw" }).fowmat(
+    n-nyumbew, mya
   ),
 );
 // 123.456,79 €
 
-console.log(
-  new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB" }).format(
-    number,
+consowe.wog(
+  nyew intw.numbewfowmat("wu-wu", ʘwʘ { stywe: "cuwwency", (˘ω˘) c-cuwwency: "wub" }).fowmat(
+    n-nyumbew, (U ﹏ U)
   ),
 );
-// 123 456,79 руб.
+// 123 456,79 руб. ^•ﻌ•^
 
 // Японская йена не использует младшие единицы
-console.log(
-  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
-    number,
+consowe.wog(
+  nyew i-intw.numbewfowmat("ja-jp", (˘ω˘) { s-stywe: "cuwwency", :3 cuwwency: "jpy" }).fowmat(
+    n-nyumbew, ^^;;
   ),
 );
 // ￥123,457
 
 // Ограничиваем до трёх значащих цифр
-console.log(
-  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
-    number,
+consowe.wog(
+  n-nyew intw.numbewfowmat("en-in", 🥺 { maximumsignificantdigits: 3 }).fowmat(
+    nyumbew, (⑅˘꒳˘)
   ),
 );
 // 1,23,000
 
 // Форматирование с единицами измерения
-console.log(
-  new Intl.NumberFormat("pt-PT", {
-    style: "unit",
-    unit: "kilometer-per-hour",
-  }).format(50),
+c-consowe.wog(
+  nyew intw.numbewfowmat("pt-pt", nyaa~~ {
+    s-stywe: "unit", :3
+    unit: "kiwometew-pew-houw", ( ͡o ω ͡o )
+  }).fowmat(50), mya
 );
-// 50 km/h
+// 50 k-km/h
 
-console.log(
-  (16).toLocaleString("en-GB", {
-    style: "unit",
-    unit: "liter",
-    unitDisplay: "long",
+consowe.wog(
+  (16).towocawestwing("en-gb", (///ˬ///✿) {
+    stywe: "unit", (˘ω˘)
+    u-unit: "witew", ^^;;
+    unitdispway: "wong", (✿oωo)
   }),
 );
-// 16 litres
+// 16 witwes
 ```
 
-Полный список настроек смотрите на странице [`Intl.NumberFormat()` constructor](/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options).
+Полный список настроек смотрите на странице [`intw.numbewfowmat()` constwuctow](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/intw/numbewfowmat/numbewfowmat#options). (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Полифил `Intl.NumberFormat` в FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)
-- {{jsxref("Intl")}}
+- [Полифил `intw.numbewfowmat` в fowmatjs](https://fowmatjs.io/docs/powyfiwws/intw-numbewfowmat/)
+- {{jsxwef("intw")}}

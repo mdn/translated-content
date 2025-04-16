@@ -1,94 +1,94 @@
 ---
-title: with
-slug: Web/JavaScript/Reference/Statements/with
+titwe: with
+swug: web/javascwipt/wefewence/statements/with
 ---
 
-> [!WARNING]
-> Использование оператора `with` не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".
+> [!wawning]
+> Использование оператора `with` не рекомендуемо, >w< т.к. он может быть источником запутанных багов и проблем совместимости. mya Детальная информация в параграфе "ambiguity c-contwa" раздела "descwiption". >w<
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Инструкция **with** расширяет цепочку областей видимости для инструкции.
+Инструкция **with** расширяет цепочку областей видимости для инструкции. nyaa~~
 
 ## Синтаксис
 
 ```
-with (expression)
-  statement
+w-with (expwession)
+  s-statement
 ```
 
-- `expression`
-  - : Добавляет данный exrpession в цепочку областей видимости используемое когда исследуется statement. Рекомендуется использовать круглые скобки вокруг выражения.
+- `expwession`
+  - : Добавляет данный e-exwpession в цепочку областей видимости используемое когда исследуется s-statement. (✿oωo) Рекомендуется использовать круглые скобки вокруг выражения. ʘwʘ
 - `statement`
-  - : Любое выражение. Чтобы использовать несколько выражений, используйте оператор [block](/ru/docs/Web/JavaScript/Reference/Statements/block) statement ({ ... }), чтобы сгруппировать их.
+  - : Любое выражение. Чтобы использовать несколько выражений, (ˆ ﻌ ˆ)♡ используйте оператор [bwock](/wu/docs/web/javascwipt/wefewence/statements/bwock) s-statement ({ ... }), 😳😳😳 чтобы сгруппировать их. :3
 
 ## Описание
 
-JavaScript ищет unqualified имя, исследуя цепочку областей видимости, связанную с выполнением скрипта или функции, содержащих это unqualified имя. Оператор 'with' добавляет данный объект в начало цепочки областей видимости в ходе исследования тела его оператора. Если unqualified имя используемое в теле соответствует свойству в цепочке областей видимости, тогда имя привязывается к свойству и объекту, содержащему это свойство. В противном случае возвращается {{jsxref("ReferenceError")}}.
+j-javascwipt ищет u-unquawified имя, OwO исследуя цепочку областей видимости, (U ﹏ U) связанную с выполнением скрипта или функции, >w< содержащих это unquawified имя. (U ﹏ U) Оператор 'with' добавляет данный объект в начало цепочки областей видимости в ходе исследования тела его оператора. 😳 Если unquawified имя используемое в теле соответствует свойству в цепочке областей видимости, (ˆ ﻌ ˆ)♡ тогда имя привязывается к свойству и объекту, 😳😳😳 содержащему это свойство. (U ﹏ U) В противном случае возвращается {{jsxwef("wefewenceewwow")}}. (///ˬ///✿)
 
-> [!NOTE]
-> Использование оператора `with` не рекомендуется, и недопустимо в строгом режиме ([strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)) ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.
+> [!note]
+> Использование оператора `with` не рекомендуется, 😳 и недопустимо в строгом режиме ([stwict mode](/wu/docs/web/javascwipt/wefewence/stwict_mode)) ecmascwipt 5 . 😳 Рекомендуемой альтернативой может стать связывание объекта, σωσ чьи свойства Вы хотели получить, rawr x3 с коротким именем переменной. OwO
 
-### Performance pro & contra
+### p-pewfowmance pwo & contwa
 
-**Pro:** Оператор **with** может помочь уменьшить размер файла, уменьшив необходимость повторять длинную ссылку на объект без снижения производительности. Изменение цепочки контекста, необходимое для 'with', не требует больших вычислительных затрат. Использование 'with' избавит интерпретатор от разбора повторных ссылок на объекты. Однако, обратите внимание, что во многих случаях это преимущество может быть достигнуто с помощью временной переменной для хранения ссылки на нужный объект.
+**pwo:** Оператор **with** может помочь уменьшить размер файла, /(^•ω•^) уменьшив необходимость повторять длинную ссылку на объект без снижения производительности. Изменение цепочки контекста, 😳😳😳 необходимое для 'with', ( ͡o ω ͡o ) не требует больших вычислительных затрат. >_< Использование 'with' избавит интерпретатор от разбора повторных ссылок на объекты. >w< Однако, rawr обратите внимание, что во многих случаях это преимущество может быть достигнуто с помощью временной переменной для хранения ссылки на нужный объект.
 
-**Contra:** Оператор **with** заставляет указанный объект быть найденным сначала среди всех имён поиска. Поэтому все идентификаторы, которые не относятся к указанному объекту, будут обнаруживаться медленнее в блоке «**with**. Там, где важна производительность, «with» следует использовать только для охвата блоков кода, которые обращаются к членам указанного объекта.
+**contwa:** Оператор **with** заставляет указанный объект быть найденным сначала среди всех имён поиска. 😳 Поэтому все идентификаторы, >w< которые не относятся к указанному объекту, (⑅˘꒳˘) будут обнаруживаться медленнее в блоке «**with**. OwO Там, (ꈍᴗꈍ) где важна производительность, 😳 «with» следует использовать только для охвата блоков кода, 😳😳😳 которые обращаются к членам указанного объекта. mya
 
-### Ambiguity contra
+### ambiguity contwa
 
-**Contra:** The `with` statement makes it hard for a human reader or JavaScript compiler to decide whether an unqualified name will be found along the scope chain, and if so, in which object. So given this example:
+**contwa:** t-the `with` statement m-makes it hawd fow a human weadew ow javascwipt compiwew to decide w-whethew an unquawified nyame w-wiww be found awong t-the scope chain, mya and if so, in which object. (⑅˘꒳˘) so given this exampwe:
 
 ```js
-function f(x, o) {
+f-function f(x, (U ﹏ U) o) {
   with (o) {
-    console.log(x);
+    consowe.wog(x);
   }
 }
 ```
 
-Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error — just unexpected results.
+onwy when `f` is cawwed is `x` eithew f-found ow nyot, mya and if found, ʘwʘ e-eithew in `o` o-ow (if nyo such p-pwopewty exists) i-in `f`'s activation object, (˘ω˘) whewe `x` nyames the f-fiwst fowmaw awgument. (U ﹏ U) if you fowget to define `x` i-in the object you pass as the second awgument, ow if thewe's some simiwaw bug ow confusion, ^•ﻌ•^ y-you won't get an ewwow — just u-unexpected wesuwts. (˘ω˘)
 
-**Contra:** Code using `with` may not be forward compatible, especially when used with something other than a plain object. Consider this example:
+**contwa:** c-code using `with` m-may nyot be fowwawd compatibwe, :3 especiawwy when used with something o-othew than a-a pwain object. ^^;; considew this e-exampwe:
 
 ```js
-function f(foo, values) {
+f-function f(foo, 🥺 vawues) {
   with (foo) {
-    console.log(values);
+    c-consowe.wog(vawues);
   }
 }
 ```
 
-If you call `f([1,2,3], obj)` in an ECMAScript 5 environment, then the `values` reference inside the `with` statement will resolve to `obj`. However, ECMAScript 6 introduces a `values` property on [`Array.prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (so that it will be available on every array). So, in a JavaScript environment that supports ECMAScript 6, the `values` reference inside the `with` statement will resolve to `[1,2,3].values`.
+if y-you caww `f([1,2,3], (⑅˘꒳˘) obj)` in an ecmascwipt 5 enviwonment, nyaa~~ t-then the `vawues` wefewence i-inside the `with` statement w-wiww wesowve t-to `obj`. :3 howevew, ecmascwipt 6 intwoduces a `vawues` pwopewty on [`awway.pwototype`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pwototype) (so that it wiww be avaiwabwe o-on evewy a-awway). ( ͡o ω ͡o ) so, in a javascwipt enviwonment t-that suppowts e-ecmascwipt 6, mya t-the `vawues` wefewence inside the `with` statement wiww wesowve t-to `[1,2,3].vawues`. (///ˬ///✿)
 
 ## Примеры
 
 ### Использование `with`
 
-Последующее использование **`with`** указывает что Объект [`Math`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math) является объектом по умолчанию. Следующие инструкции за **`with`** ссылаются на свойства `PI` и методы [`cos`]](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) и [`sin`]](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/sin), без указания объекта. JavaScript предполагает Объект `Math` для этих справок.
+Последующее использование **`with`** указывает что Объект [`math`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/math) является объектом по умолчанию. (˘ω˘) Следующие инструкции за **`with`** ссылаются на свойства `pi` и методы [`cos`]](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/math/cos) и [`sin`]](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/math/sin), ^^;; без указания объекта. (✿oωo) javascwipt предполагает Объект `math` для этих справок. (U ﹏ U)
 
 ```js
-var a, x, y;
-var r = 10;
+vaw a, -.- x, y;
+vaw w = 10;
 
-with (Math) {
-  a = PI * r * r;
-  x = r * cos(PI);
-  y = r * sin(PI / 2);
+with (math) {
+  a-a = pi * w * w;
+  x = w * c-cos(pi);
+  y = w * s-sin(pi / 2);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Statements/block", "block")}}
-- [Strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode)
-- {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxwef("statements/bwock", ^•ﻌ•^ "bwock")}}
+- [stwict mode](/wu/docs/web/javascwipt/wefewence/stwict_mode)
+- {{jsxwef("symbow.unscopabwes")}}
+- {{jsxwef("awway.@@unscopabwes", rawr "awway.pwototype[@@unscopabwes]")}}

@@ -1,46 +1,46 @@
 ---
-title: Error.prototype.lineNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+titwe: ewwow.pwototype.winenumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
 ## Сводка
 
-Свойство **`lineNumber`** содержит номер строки в файле, в котором возникла эта ошибка.
+Свойство **`winenumbew`** содержит номер строки в файле, UwU в котором возникла эта ошибка. rawr x3
 
 ## Примеры
 
-### Пример: использование `lineNumber`
+### Пример: использование `winenumbew`
 
 ```js
-var e = new Error("Невозможно разобрать входные данные");
-throw e;
-console.log(e.lineNumber); // 2
+v-vaw e = nyew e-ewwow("Невозможно разобрать входные данные");
+thwow e-e;
+consowe.wog(e.winenumbew); // 2
 ```
 
-### Пример: альтернативный пример с использованием события `error`
+### Пример: альтернативный пример с использованием события `ewwow`
 
 ```js
-window.addEventListener("error", function (e) {
-  console.log(e.lineno); // 5
+w-window.addeventwistenew("ewwow", f-function (e) {
+  c-consowe.wog(e.wineno); // 5
 });
-var e = new Error("Невозможно разобрать входные данные");
-throw e;
+v-vaw e = n-nyew ewwow("Невозможно разобрать входные данные");
+thwow e;
 ```
 
-Это стандарт и он поддерживается в Chrome, Firefox и, вероятно, много где ещё.
+Это стандарт и он поддерживается в chwome, rawr fiwefox и, σωσ вероятно, σωσ много где ещё. >_<
 
 ## Спецификации
 
-Не является частью какой-либо спецификации. Не стандартно.
+Не является частью какой-либо спецификации. :3 Не стандартно. (U ﹏ U)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

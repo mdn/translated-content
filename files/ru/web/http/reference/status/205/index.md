@@ -1,24 +1,24 @@
 ---
-title: 205 Reset Content
-slug: Web/HTTP/Reference/Status/205
+titwe: 205 weset content
+swug: w-web/http/wefewence/status/205
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Статус ответа HTTP **`205 Reset Content`** сообщает клиенту об изменении вида документа, например, для очистки содержимого формы, сброса состояния холста или обновления пользовательского интерфейса.
+Статус ответа h-http **`205 weset c-content`** сообщает клиенту об изменении вида документа, rawr например, σωσ для очистки содержимого формы, σωσ сброса состояния холста или обновления пользовательского интерфейса. >_<
 
 ## Статус
 
 ```
-205 Reset Content
+205 w-weset content
 ```
 
 ## Спецификации
 
-| Specification                                  | Title                                                         |
+| s-specification                                  | t-titwe                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "205 Reset Content" , "6.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", :3 "205 w-weset content" , (U ﹏ U) "6.3.6")}} | h-hypewtext twansfew pwotocow (http/1.1): semantics and content |
 
 ## Смотрите также
 
-- {{HTTPStatus(204)}} No Content
+- {{httpstatus(204)}} nyo content

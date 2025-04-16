@@ -1,95 +1,95 @@
 ---
-title: data-*
-slug: Web/HTML/Reference/Global_attributes/data-*
+titwe: data-*
+swug: web/htmw/wefewence/gwobaw_attwibutes/data-*
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-The **data-\*** Глобальные атрибуты образуют класс атрибутов, называемых пользовательскими атрибутами данных, которые позволяют обмениваться проприетарной информацией между HTML и его представлением DOM посредством сценариев.
+t-the **data-\*** Глобальные атрибуты образуют класс атрибутов, mya называемых пользовательскими атрибутами данных, ^^ которые позволяют обмениваться проприетарной информацией между h-htmw и его представлением d-dom посредством сценариев. 😳😳😳
 
-{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: d-data-*", mya "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Secret agents</h1>
+```htmw i-intewactive-exampwe
+<h1>secwet a-agents</h1>
 
-<ul>
-  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
-  <li data-id="97865">
-    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
-    "Goldeneye".
-  </li>
-  <li data-id="45732">
-    James Bond, 007: The main man; shaken but not stirred.
-  </li>
-</ul>
+<uw>
+  <wi d-data-id="10784">jason wawtews, 😳 003: found dead in "a view to a kiww".</wi>
+  <wi d-data-id="97865">
+    awex twevewyan, -.- 006: agent t-tuwned tewwowist weadew; james' n-nyemesis in
+    "gowdeneye". 🥺
+  </wi>
+  <wi data-id="45732">
+    james bond, o.O 007: the main man; s-shaken but nyot stiwwed. /(^•ω•^)
+  </wi>
+</uw>
 ```
 
-```css interactive-example
-h1 {
-  margin: 0;
+```css i-intewactive-exampwe
+h-h1 {
+  mawgin: 0;
 }
 
-ul {
-  margin: 10px 0 0;
+uw {
+  mawgin: 10px 0 0;
 }
 
-li {
-  position: relative;
-  width: 200px;
+wi {
+  position: wewative;
+  w-width: 200px;
   padding-bottom: 10px;
 }
 
-li:after {
-  content: "Data ID: " attr(data-id);
-  position: absolute;
+wi:aftew {
+  content: "data id: " attw(data-id);
+  p-position: absowute;
   top: -22px;
-  left: 10px;
-  background: black;
-  color: white;
+  w-weft: 10px;
+  b-backgwound: b-bwack;
+  cowow: w-white;
   padding: 2px;
-  border: 1px solid #eee;
-  opacity: 0;
-  transition: 0.5s opacity;
+  bowdew: 1px sowid #eee;
+  o-opacity: 0;
+  twansition: 0.5s opacity;
 }
 
-li:hover:after {
-  opacity: 1;
+wi:hovew:aftew {
+  o-opacity: 1;
 }
 ```
 
-Все такие пользовательские данные доступны через интерфейс {{domxref ("HTMLElement")}} элемента, для которого установлен атрибут. Свойство {{domxref ("HTMLElement.dataset")}} предоставляет к ним доступ.
-Символ \* может быть заменён любым именем, соответствующим производственному правилу имён xml, со следующими ограничениями:
+Все такие пользовательские данные доступны через интерфейс {{domxwef ("htmwewement")}} элемента, nyaa~~ для которого установлен атрибут. nyaa~~ Свойство {{domxwef ("htmwewement.dataset")}} предоставляет к ним доступ. :3
+Символ \* может быть заменён любым именем, 😳😳😳 соответствующим производственному правилу имён xmw, (˘ω˘) со следующими ограничениями:
 
-- имя не должно начинаться с xml, в любом случае для этих букв используется регистр;
-- имя не должно содержать точку с запятой (U + 003A);
-- имя не должно содержать заглавных букв.
+- имя не должно начинаться с xmw, ^^ в любом случае для этих букв используется регистр;
+- имя не должно содержать точку с запятой (u + 003a);
+- имя не должно содержать заглавных букв. :3
 
-Обратите внимание, что свойство {{domxref ("HTMLElement.dataset")}} является {{domxref ("DOMStringMap")}}, и имя настраиваемого атрибута данных data-test-value будет доступно через HTMLElement.dataset. testValue (или HTMLElement.dataset \["testValue"]), поскольку любая тире (U + 002D) заменяется заглавной буквой следующей буквы, преобразуя имя в camelcase.
+Обратите внимание, что свойство {{domxwef ("htmwewement.dataset")}} является {{domxwef ("domstwingmap")}}, -.- и имя настраиваемого атрибута данных data-test-vawue будет доступно через htmwewement.dataset. 😳 testvawue (или h-htmwewement.dataset \["testvawue"]), mya поскольку любая тире (u + 002d) заменяется заглавной буквой следующей буквы, (˘ω˘) преобразуя имя в camewcase. >_<
 
 ### Использование
 
-Добавляя атрибуты data- \*, даже обычные элементы HTML могут стать довольно сложными и мощными программными объектами. Например, «спрайт» космического корабля в игре может быть простым элементом {{HTMLElement ("img")}} с атрибутом класса и несколькими атрибутами data- \*:
+Добавляя атрибуты d-data- \*, -.- даже обычные элементы h-htmw могут стать довольно сложными и мощными программными объектами. 🥺 Например, (U ﹏ U) «спрайт» космического корабля в игре может быть простым элементом {{htmwewement ("img")}} с атрибутом класса и несколькими атрибутами d-data- \*:
 
-```html
-<img class="spaceship cruiserX3" src="shipX3.png"
-  data-ship-id="324" data-weapons="laserI laserII" data-shields="72%"
-  data-x="414354" data-y="85160" data-z="31940"
-  onclick="spaceships[this.dataset.shipId].blasted()">
+```htmw
+<img cwass="spaceship cwuisewx3" swc="shipx3.png"
+  d-data-ship-id="324" d-data-weapons="wasewi wasewii" data-shiewds="72%"
+  d-data-x="414354" d-data-y="85160" data-z="31940"
+  o-oncwick="spaceships[this.dataset.shipid].bwasted()">
 </img>
 ```
 
-Более подробное руководство по использованию атрибутов данных HTML см. В разделе [Using data attributes](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
+Более подробное руководство по использованию атрибутов данных htmw см. >w< В разделе [using d-data attwibutes](/wu/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems/use_data_attwibutes). mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- All [global attributes](/ru/docs/Web/HTML/Global_attributes).
-- The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.
-- [Using data attributes](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- aww [gwobaw attwibutes](/wu/docs/web/htmw/gwobaw_attwibutes). >w<
+- t-the {{domxwef("htmwewement.dataset")}} pwopewty that a-awwows to access and modify these v-vawues. nyaa~~
+- [using d-data attwibutes](/wu/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems/use_data_attwibutes)

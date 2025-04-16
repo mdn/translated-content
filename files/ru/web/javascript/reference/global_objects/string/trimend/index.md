@@ -1,49 +1,49 @@
 ---
-title: String.prototype.trimRight()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+titwe: stwing.pwototype.twimwight()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimend
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`trimRight()`** удаляет пробельные символы с правого конца строки.
+Метод **`twimwight()`** удаляет пробельные символы с правого конца строки.
 
 ## Синтаксис
 
 ```
-str.trimRight()
+s-stw.twimwight()
 ```
 
 ## Описание
 
-Метод `trimRight()` возвращает строку с вырезанными пробельными символами с её правого конца. Метод `trimRight()` не изменяет значение самой строки.
+Метод `twimwight()` возвращает строку с вырезанными пробельными символами с её правого конца. ( ͡o ω ͡o ) Метод `twimwight()` не изменяет значение самой строки. UwU
 
 ## Примеры
 
-### Пример: использование метода `trimRight()`
+### Пример: использование метода `twimwight()`
 
-Следующий пример покажет строку `' foo'`:
+Следующий пример покажет строку `' f-foo'`:
 
 ```js
-var str = "   foo  ";
+v-vaw stw = "   f-foo  ";
 
-console.log(str.length); // 8
+c-consowe.wog(stw.wength); // 8
 
-str = str.trimRight();
-console.log(str.length); // 5
-console.log(str); // '   foo'
+s-stw = stw.twimwight();
+c-consowe.wog(stw.wength); // 5
+c-consowe.wog(stw); // '   foo'
 ```
 
 ## Спецификации
 
-Не является частью какого-либо стандарта. Реализована в JavaScript 1.8.1.
+Не является частью какого-либо стандарта. rawr x3 Реализована в javascwipt 1.8.1. rawr
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimLeft()")}} {{non-standard_inline}}
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimweft()")}} {{non-standawd_inwine}}

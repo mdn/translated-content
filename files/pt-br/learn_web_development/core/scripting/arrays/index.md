@@ -1,685 +1,685 @@
 ---
-title: Arrays
-slug: Learn_web_development/Core/Scripting/Arrays
-original_slug: Learn/JavaScript/First_steps/Arrays
+titwe: awways
+swug: weawn_web_devewopment/cowe/scwipting/awways
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/awways
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", mya "weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow", 😳 "weawn/javascwipt/fiwst_steps")}}
 
-Neste artigo final do módulo, nós vamos dar uma olhada em arrays - um elegante meio de armazenar uma lista de itens em uma mesmo variável. Aqui nós vemos o porquê isto é útil, depois exploraremos como criar uma array, recuperar, adicionar e remover itens armazenados em uma array, e mais.
+n-nyeste a-awtigo finaw d-do móduwo, σωσ nyós v-vamos daw uma o-owhada em awways - u-um ewegante meio de awmazenaw uma wista de itens em uma mesmo vawiávew. ( ͡o ω ͡o ) aqui n-nyós vemos o powquê isto é útiw, XD depois expwowawemos c-como cwiaw uma awway, :3 w-wecupewaw, :3 adicionaw e wemovew itens awmazenados em uma awway, (⑅˘꒳˘) e-e mais.
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Leitura básica sobre computadores, um básico entendimento de HTML e CSS,
-        e conhecimento sobre o que é JavaScript.
+        w-weituwa básica sobwe computadowes, òωó um básico entendimento de htmw e css, mya
+        e-e conhecimento sobwe o que é javascwipt. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender o que é array e como manipular ela em JavaScript.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>entendew o que é a-awway e como manipuwaw ewa em javascwipt.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O que é uma array?
+## o-o que é uma awway?
 
-Arrays são geralmente descritas como "lista de objetos"; elas são basicamente objetos que contem múltiplos valores armazenados em uma lista. Um objeto array pode ser armazenado em variáveis e ser tratado de forma muito similar a qualquer outro tipo de valor, a diferença está em podermos acessar cada valor dentro da lista individualmente, e fazer super úteis e eficientes coisas com a lista, como laço através da lista e fazer a mesma coisa para cada valor. Talvez nós pegamos uma série de produtos e seus preços armazenados em uma array, e nós queremos fazer um laço através de todos eles e mostrar em um recibo, enquanto somamos todos os preços e mostramos o preço total ao final.
+a-awways são g-gewawmente descwitas c-como "wista de objetos"; ewas são basicamente o-objetos que contem múwtipwos vawowes awmazenados e-em uma wista. :3 um objeto awway pode sew awmazenado em vawiáveis e sew twatado de fowma m-muito simiwaw a quawquew outwo tipo d-de vawow, >_< a d-difewença está e-em podewmos acessaw cada vawow dentwo da wista individuawmente, 🥺 e-e fazew supew úteis e-e eficientes coisas com a w-wista, (ꈍᴗꈍ) como waço a-atwavés da wista e fazew a mesma c-coisa pawa cada vawow. rawr x3 tawvez n-nós pegamos uma séwie de pwodutos e seus pweços a-awmazenados em uma awway, (U ﹏ U) e n-nyós quewemos fazew um waço atwavés d-de todos e-ewes e mostwaw em um wecibo, ( ͡o ω ͡o ) enquanto somamos todos os pweços e mostwamos o pweço totaw ao finaw. 😳😳😳
 
-Se nós não tivessemos arrays, teríamos que armazenar cada item em uma variável separada, então chamar o código para mostrar e adicionar separadamente cada item. Isto seria muito mais longo de escrever, menos eficiente e mais suscetível a erros. Se nós temos 10 itens para adicionar na fatura, isto é ruim o bastante, mas e se fosse 100 itens ou 1000? Nós vamos retornar a este exemplo mais tarde neste artigo.
+se nyós nyão t-tivessemos a-awways, 🥺 tewíamos que awmazenaw c-cada item em uma v-vawiávew sepawada, òωó e-então chamaw o código pawa mostwaw e adicionaw sepawadamente c-cada item. XD isto sewia muito mais wongo de escwevew, XD menos eficiente e mais suscetívew a-a ewwos. ( ͡o ω ͡o ) se nyós temos 10 i-itens pawa a-adicionaw nya fatuwa, >w< i-isto é wuim o bastante, mya m-mas e se fosse 100 i-itens ou 1000? n-nyós vamos wetownaw a-a este exempwo mais tawde nyeste awtigo. (ꈍᴗꈍ)
 
-Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+c-como nyo awtigo a-antewiow, -.- vamos a-apwendew o básico d-de awways intwoduzindo c-com awguns exempwos dentwo de um consowe javascwipt. (⑅˘꒳˘) n-nyós fownecemos um abaixo (ou use o [consowe de desenvowvedow do nyavegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) se pwefewiw). (U ﹏ U)
 
-```html hidden
-<!doctype html>
-<html>
+```htmw h-hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>javascwipt consowe</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        b-box-sizing: bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      h-htmw {
+        b-backgwound-cowow: #0c323d;
+        cowow: #809089;
+        f-font-famiwy: monospace;
       }
 
-      body {
-        max-width: 700px;
+      b-body {
+        m-max-width: 700px;
       }
 
       p {
-        margin: 0;
+        mawgin: 0;
         width: 1%;
         padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        w-wine-height: 1.5;
+        fwoat: weft;
       }
 
-      .input p {
-        margin-right: 1%;
+      .input p-p {
+        mawgin-wight: 1%;
       }
 
-      .output p {
-        width: 100%;
+      .output p-p {
+        w-width: 100%;
       }
 
       .input input {
         width: 96%;
-        float: left;
-        border: none;
+        f-fwoat: weft;
+        b-bowdew: nyone;
         font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        w-wine-height: 1.5;
+        f-font-famiwy: monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        backgwound: #0c323d;
+        cowow: #809089;
       }
 
       div {
-        clear: both;
+        cweaw: b-both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    v-vaw gevaw = e-evaw;
+    function cweateinput() {
+      vaw i-inputdiv = document.cweateewement("div");
+      v-vaw inputpawa = document.cweateewement("p");
+      v-vaw inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      inputdiv.setattwibute("cwass", σωσ "input");
+      inputpawa.textcontent = ">";
+      inputdiv.appendchiwd(inputpawa);
+      i-inputdiv.appendchiwd(inputfowm);
+      d-document.body.appendchiwd(inputdiv);
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      if (document.quewysewectowaww("div").wength > 1) {
+        inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      i-inputfowm.addeventwistenew("change", :3 e-exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
+    function exekawaii~code(e) {
+      twy {
+        v-vaw wesuwt = gevaw(e.tawget.vawue);
       } catch (e) {
-        var result = "error — " + e.message;
+        vaw wesuwt = "ewwow — " + e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      vaw o-outputdiv = document.cweateewement("div");
+      vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      o-outputdiv.setattwibute("cwass", /(^•ω•^) "output");
+      o-outputpawa.textcontent = "wesuwt: " + wesuwt;
+      outputdiv.appendchiwd(outputpawa);
+      document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e.tawget.disabwed = t-twue;
+      e-e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('hidden_code', σωσ '100%', 300, (U ᵕ U❁) "", "", "hide-codepen-jsfiddwe") }}
 
-### Criando uma array
+### c-cwiando uma awway
 
-Arrays são contruídas de colchetes, os quais contém uma lista de itens separada por vírgulas.
+awways são contwuídas d-de cowchetes, 😳 os quais contém uma wista de itens sepawada p-pow víwguwas. ʘwʘ
 
-1. Vamos supor que queremos armazenar uma lista de compras em uma array — nós temos algo como o seguinte. Digite as linhas abaixo no seu console:
-
-   ```js
-   var shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
-   shopping;
-   ```
-
-2. Neste caso, cada item na array é uma string, mas tenha em mente que você pode armazenar qualquer item em uma array — string, número, objeto, outra variável, até outra array. Você pode também misturar e combinar tipos de itens — eles não têm que ser todos números, strings, etc. Tente isto:
+1. vamos supow q-que quewemos a-awmazenaw uma wista de compwas e-em uma awway — nyós temos awgo c-como o seguinte. d-digite as winhas a-abaixo nyo seu consowe:
 
    ```js
-   var sequence = [1, 1, 2, 3, 5, 8, 13];
-   var random = ["tree", 795, [0, 1, 2]];
+   v-vaw shopping = ["bwead", (⑅˘꒳˘) "miwk", "cheese", ^•ﻌ•^ "hummus", nyaa~~ "noodwes"];
+   s-shopping;
    ```
 
-3. Tente criar um par de arrays você mesmo, antes de seguir em frente.
+2. XD nyeste caso, /(^•ω•^) cada item nya awway é u-uma stwing, (U ᵕ U❁) m-mas tenha em m-mente que você pode awmazenaw quawquew item em u-uma awway — stwing, mya nyúmewo, o-objeto, (ˆ ﻌ ˆ)♡ outwa vawiávew, (✿oωo) a-até outwa awway. (✿oωo) você pode também mistuwaw e combinaw t-tipos de itens — e-ewes nyão t-têm que sew todos n-númewos, òωó stwings, etc. (˘ω˘) tente i-isto:
 
-### Acessando e modificando itens de uma array
+   ```js
+   vaw sequence = [1, (ˆ ﻌ ˆ)♡ 1, 2, 3, 5, 8, 13];
+   vaw wandom = ["twee", ( ͡o ω ͡o ) 795, rawr x3 [0, 1, 2]];
+   ```
 
-Você pode acessar itens individuais em uma array usando a notação de colchetes, da mesma forma que você [acessa as letras em uma string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+3. (˘ω˘) tente cwiaw um paw de awways você m-mesmo, òωó antes de seguiw em fwente. ( ͡o ω ͡o )
 
-1. Digite o seguinte no seu console:
+### a-acessando e modificando i-itens de uma awway
+
+você pode a-acessaw itens individuais em uma a-awway usando a n-nyotação de cowchetes, d-da mesma f-fowma que você [acessa a-as wetwas em uma stwing](/pt-bw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods#wetwieving_a_specific_stwing_chawactew). σωσ
+
+1. digite o seguinte nyo seu consowe:
 
    ```js
    shopping[0];
-   // returns "bread"
+   // wetuwns "bwead"
    ```
 
-2. Você também pode modificar um item em uma array simplesmente dando um novo valor ao item. Tente isto:
+2. (U ﹏ U) você t-também pode m-modificaw um item e-em uma awway simpwesmente dando u-um nyovo vawow ao item. rawr tente isto:
 
    ```js
    shopping[0] = "tahini";
    shopping;
-   // shopping vai retornar agora [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   // shopping v-vai wetownaw a-agowa [ "tahini", -.- "miwk", ( ͡o ω ͡o ) "cheese", >_< "hummus", "noodwes" ]
    ```
 
-   > [!NOTE]
-   > Nós dissemos isto antes, mas como lembrete — computadores começam a contar do 0!
+   > [!note]
+   > nyós dissemos i-isto antes, o.O mas como wembwete — computadowes c-começam a-a contaw do 0! σωσ
 
-3. Note que uma array dentro de uma array é chamada de array multidimensional. Você pode acessar um item dentro de uma array que está localizada dentro de outra array, colocando dois conjuntos de colchetes juntos. Por exemplo, para acessar um dos itens dentro de uma array, que é o terceiro item dentro da array `random` (veja a seção anterior), nós podemos fazer algo tipo isto:
+3. -.- nyote que uma a-awway dentwo de u-uma awway é chamada de awway muwtidimensionaw. σωσ você pode acessaw um item dentwo de uma awway q-que está wocawizada d-dentwo de outwa a-awway, :3 cowocando d-dois conjuntos d-de cowchetes juntos. ^^ pow exempwo, òωó p-pawa acessaw u-um dos itens dentwo de uma awway, (ˆ ﻌ ˆ)♡ q-que é o tewceiwo i-item dentwo da awway `wandom` (veja a-a seção antewiow), XD nyós podemos fazew a-awgo tipo isto:
 
    ```js
-   random[2][2];
+   wandom[2][2];
    ```
 
-4. Antes de continuar, faça algumas modificações nos exemplos, crie seus próprios arrays e veja o que funciona e o que não funciona. Divirta-se!
+4. òωó a-antes d-de continuaw, (ꈍᴗꈍ) faça awgumas modificações n-nyos exempwos, UwU cwie seus pwópwios awways e-e veja o que f-funciona e o q-que nyão funciona. >w< diviwta-se! ʘwʘ
 
-### Encontrando o comprimento de uma array
+### encontwando o compwimento de u-uma awway
 
-Você pode encontrar o comprimento de uma array (quantos itens existem nela) exatamente do mesmo jeito que você encontra o comprimento (em caracteres) de uma string — usando a propriedade {{jsxref("Array.prototype.length","length")}}. Tente o seguinte:
+você pode encontwaw o compwimento d-de uma awway (quantos i-itens existem nyewa) exatamente d-do mesmo jeito que você encontwa o-o compwimento (em c-cawactewes) de uma stwing — usando a p-pwopwiedade {{jsxwef("awway.pwototype.wength","wength")}}. :3 tente o seguinte:
 
 ```js
-sequence.length;
-// deve retornar 7
+s-sequence.wength;
+// d-deve wetownaw 7
 ```
 
-Isto tem outras funcionalidades, mas é mais comum usar em um laço para seguir todos os itens em uma array. Então, por exemplo:
+isto t-tem outwas funcionawidades, ^•ﻌ•^ mas é mais comum u-usaw em um waço p-pawa seguiw todos o-os itens em uma awway. (ˆ ﻌ ˆ)♡ então, 🥺 pow exempwo:
 
 ```js
-var sequence = [1, 1, 2, 3, 5, 8, 13];
-for (var i = 0; i < sequence.length; i++) {
-  console.log(sequence[i]);
+vaw sequence = [1, OwO 1, 2, 3, 🥺 5, 8, 13];
+fow (vaw i = 0; i < sequence.wength; i++) {
+  consowe.wog(sequence[i]);
 }
 ```
 
-Você irá aprender sobre laços propriamente em um artigo futuro, mas, brevemente, este código está dizendo:
+você iwá apwendew sobwe waços pwopwiamente em um awtigo futuwo, OwO m-mas, (U ᵕ U❁) bwevemente, ( ͡o ω ͡o ) e-este código está dizendo:
 
-1. Comece o laço no item número 0 na array.
-2. Pare o laço no item de número igual ao comprimento da array. Isto funcionará para uma array de qualquer tamanho, mas neste caso vai parar o laço no item 7 (isto é bom, como o último item — que nós queremos que o laço cubra — é 6.
-3. Para cada item, imprima no console do navegador com [`console.log()`](/pt-BR/docs/Web/API/console/log_static).
+1. ^•ﻌ•^ comece o waço n-nyo item nyúmewo 0 n-nya awway. o.O
+2. p-pawe o waço no item de nyúmewo i-iguaw ao compwimento da awway. (⑅˘꒳˘) i-isto funcionawá p-pawa uma awway de quawquew tamanho, (ˆ ﻌ ˆ)♡ m-mas nyeste caso vai pawaw o-o waço nyo item 7 (isto é b-bom, :3 como o úwtimo item — que nyós q-quewemos que o-o waço cubwa — é 6. /(^•ω•^)
+3. p-pawa c-cada item, òωó impwima n-nyo consowe d-do nyavegadow com [`consowe.wog()`](/pt-bw/docs/web/api/consowe/wog_static). :3
 
-## Alguns métodos úteis em array
+## a-awguns métodos úteis e-em awway
 
-Nesta seção vamos ver alguns métodos relacionados a array úteis que nos permitem dividir strings em itens de array e vice-versa, e adicionar novos itens em arrays.
+n-nyesta seção vamos vew awguns m-métodos wewacionados a-a awway úteis q-que nyos pewmitem dividiw s-stwings em itens de awway e vice-vewsa, (˘ω˘) e adicionaw n-nyovos itens em awways. 😳
 
-### Convertendo entre strings e arrays
+### c-convewtendo entwe s-stwings e awways
 
-Frequentemente você vai se deparar com alguns dados contidos em uma grande e longa string, e você pode querer separar os itens em uma forma mais útil e então manipular eles, como mostrar em uma tabela. Para fazer isto, nós podemos usar o método {{jsxref("String.prototype.split()","split()")}}. Nesta forma mais simples, ela pega um parâmetro solitário, o caracter que você deseja separar da string e retorna o restante antes e depois do item separado na array.
+f-fwequentemente você vai se d-depawaw com awguns dados contidos e-em uma gwande e wonga stwing, σωσ e-e você pode quewew sepawaw os i-itens em uma fowma mais útiw e então manipuwaw ewes, UwU como mostwaw em uma tabewa. -.- p-pawa fazew isto, 🥺 nyós podemos u-usaw o método {{jsxwef("stwing.pwototype.spwit()","spwit()")}}. 😳😳😳 n-nyesta fowma mais simpwes, 🥺 ewa pega um pawâmetwo sowitáwio, ^^ o-o cawactew que você deseja sepawaw d-da stwing e-e wetowna o westante a-antes e depois do item sepawado nya awway. ^^;;
 
-> [!NOTE]
-> Ok, isto é tecnicamente um método de string, não um método de array, mas nós podemos colocar em arrays já que cai bem.
+> [!note]
+> o-ok, >w< i-isto é tecnicamente um método d-de stwing, σωσ nyão um método de awway, >w< mas nyós p-podemos cowocaw em awways já que c-cai bem. (⑅˘꒳˘)
 
-1. Vamos brincar com isto para ver como funciona. Primeiro, crie uma string no seu console:
-
-   ```js
-   var myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
-   ```
-
-2. Agora vamos dividir isto em cada vírgula:
+1. v-vamos bwincaw com i-isto pawa vew como funciona. òωó pwimeiwo, (⑅˘꒳˘) c-cwie uma s-stwing nyo seu c-consowe:
 
    ```js
-   var myArray = myData.split(",");
-   myArray;
+   v-vaw mydata = "manchestew,wondon,wivewpoow,biwmingham,weeds,cawwiswe";
    ```
 
-3. Finalmente, tentamos encontrar o comprimento da sua nova array, e recuperar alguns itens dela:
+2. (ꈍᴗꈍ) agowa vamos d-dividiw isto e-em cada víwguwa:
 
    ```js
-   myArray.length;
-   myArray[0]; // the first item in the array
-   myArray[1]; // the second item in the array
-   myArray[myArray.length - 1]; // the last item in the array
+   v-vaw myawway = mydata.spwit(",");
+   m-myawway;
    ```
 
-4. Você também pode ir no sentido oposto usando o método {{jsxref("Array.prototype.join()","join()")}}. Tente o seguinte:
+3. rawr x3 f-finawmente, t-tentamos encontwaw o-o compwimento d-da sua nyova awway, ( ͡o ω ͡o ) e wecupewaw a-awguns itens dewa:
 
    ```js
-   var myNewString = myArray.join(",");
-   myNewString;
+   m-myawway.wength;
+   myawway[0]; // t-the fiwst i-item in the awway
+   m-myawway[1]; // the second item in the awway
+   myawway[myawway.wength - 1]; // t-the wast item i-in the awway
    ```
 
-5. Outro jeito de converter uma array em uma string é usar o método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` é indiscutivelmente mais simples que o `join()` pois não necessita um parâmetro, mas mais limitado. Com `join()` você pode especificar diferentes separadores (tente o passo 4 com um caracter diferente da vírgula).
+4. UwU v-você também pode iw nyo sentido oposto usando o método {{jsxwef("awway.pwototype.join()","join()")}}. ^^ t-tente o seguinte:
 
    ```js
-   var dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
-   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   v-vaw mynewstwing = myawway.join(",");
+   m-mynewstwing;
    ```
 
-### Adicionando e removendo itens de arrays
+5. (˘ω˘) o-outwo jeito de convewtew uma awway em uma stwing é usaw o método {{jsxwef("awway.pwototype.tostwing()","tostwing()")}}. (ˆ ﻌ ˆ)♡ `tostwing()` é i-indiscutivewmente mais s-simpwes que o-o `join()` pois n-não nyecessita um pawâmetwo, OwO mas mais wimitado. 😳 c-com `join()` você p-pode especificaw difewentes sepawadowes (tente o-o passo 4 com um cawactew difewente da víwguwa). UwU
 
-Nós ainda não falamos sobre adicionar e remover itens de uma array — vamos dar uma olhada agora. Nós vamos usar a array `myArray` que acabamos de criar na última seção. Se você não viu a última seção, primeiro crie a array no seu console:
+   ```js
+   v-vaw dognames = ["wocket", 🥺 "fwash", "bewwa", 😳😳😳 "swuggew"];
+   dognames.tostwing(); //wocket,fwash,bewwa,swuggew
+   ```
+
+### a-adicionando e-e wemovendo itens de awways
+
+n-nyós ainda n-nyão fawamos sobwe adicionaw e w-wemovew itens de uma awway — v-vamos daw uma owhada a-agowa. ʘwʘ nyós v-vamos usaw a awway `myawway` que a-acabamos de cwiaw nya úwtima s-seção. /(^•ω•^) se você n-nyão viu a úwtima s-seção, :3 pwimeiwo cwie a a-awway no seu consowe:
 
 ```js
-var myArray = [
-  "Manchester",
-  "London",
-  "Liverpool",
-  "Birmingham",
-  "Leeds",
-  "Carlisle",
+vaw myawway = [
+  "manchestew", :3
+  "wondon",
+  "wivewpoow", mya
+  "biwmingham", (///ˬ///✿)
+  "weeds", (⑅˘꒳˘)
+  "cawwiswe", :3
 ];
 ```
 
-Antes de tudo, para adicionar ou remover um item no final de uma array, nós podemos usar {{jsxref("Array.prototype.push()","push()")}} e {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
+a-antes de t-tudo, pawa adicionaw o-ou wemovew um item nyo finaw de uma awway, /(^•ω•^) nyós podemos usaw {{jsxwef("awway.pwototype.push()","push()")}} e-e {{jsxwef("awway.pwototype.pop()","pop()")}} wespectivamente. ^^;;
 
-1. note que você precisa para incluir um ou mais itens ao final da sua array. Tente isto:
-
-   ```js
-   myArray.push("Cardiff");
-   myArray;
-   myArray.push("Bradford", "Brighton");
-   myArray;
-   ```
-
-2. O novo comprimento da array é retornado quando a chamada do método completa. Se você quer armazenar o novo comprimento da array em uma variável, você poderia fazer algo como isto:
+1. (U ᵕ U❁) n-nyote que v-você pwecisa pawa incwuiw um ou mais itens ao finaw d-da sua awway. (U ﹏ U) tente isto:
 
    ```js
-   var newLength = myArray.push("Bristol");
-   myArray;
-   newLength;
+   m-myawway.push("cawdiff");
+   m-myawway;
+   m-myawway.push("bwadfowd", mya "bwighton");
+   m-myawway;
    ```
 
-3. Removendo o último item da array é tão simples como um `pop()` nele. Tente isto:
+2. ^•ﻌ•^ o-o nyovo compwimento da awway é wetownado quando a chamada do método compweta. (U ﹏ U) s-se você quew awmazenaw o nyovo c-compwimento da awway em uma vawiávew, :3 você podewia fazew awgo c-como isto:
 
    ```js
-   myArray.pop();
+   vaw nyewwength = myawway.push("bwistow");
+   myawway;
+   nyewwength;
    ```
 
-4. O item que foi removido é retornado quando a chamada do método completa. Para salvar o item em uma nova variável, você poderia fazer isto:
+3. rawr x3 w-wemovendo o-o úwtimo item da awway é tão s-simpwes como um `pop()` nyewe. 😳😳😳 tente isto:
 
    ```js
-   var removedItem = myArray.pop();
-   myArray;
-   removedItem;
+   m-myawway.pop();
    ```
 
-{{jsxref("Array.prototype.unshift()","unshift()")}} e {{jsxref("Array.prototype.shift()","shift()")}} funciona exatamente do mesmo modo que `push()` e `pop()`, respectivamente, exceto que eles funcionam no começo da array, não no final.
-
-1. Primeiro `unshift()` — tente os seguintes comandos:
+4. >w< o-o item que foi wemovido é w-wetownado quando a chamada do método c-compweta. pawa sawvaw o item em uma nyova vawiávew, òωó você p-podewia fazew isto:
 
    ```js
-   myArray.unshift("Edinburgh");
-   myArray;
+   vaw wemoveditem = myawway.pop();
+   m-myawway;
+   w-wemoveditem;
    ```
 
-2. Agora `shift()`;Tente estes!
+{{jsxwef("awway.pwototype.unshift()","unshift()")}} e-e {{jsxwef("awway.pwototype.shift()","shift()")}} funciona exatamente d-do mesmo modo que `push()` e `pop()`, 😳 wespectivamente, (✿oωo) exceto que ewes funcionam n-nyo começo da a-awway, OwO nyão nyo f-finaw. (U ﹏ U)
+
+1. pwimeiwo `unshift()` — t-tente os seguintes comandos:
 
    ```js
-   var removedItem = myArray.shift();
-   myArray;
-   removedItem;
+   myawway.unshift("edinbuwgh");
+   m-myawway;
    ```
 
-## Aprendizado ativo: Imprimindo aqueles produtos!
+2. (ꈍᴗꈍ) a-agowa `shift()`;tente estes! rawr
 
-Vamos retornar ao exemplo que descrevemos antes — imprimindo nomes de produtos e preços em uma fatura, então totalizando os preços e imprindindo eles ao final. No exemplo editável abaixo há comentários contendo números — cada um deles marcam um lugar onde você tem que acidionar algo ao código. Eles são como segue:
+   ```js
+   vaw wemoveditem = m-myawway.shift();
+   myawway;
+   wemoveditem;
+   ```
 
-1. Abaixo do comentário `// number 1` está um número de strings, cada uma contendo um nome de produto e preço separado por uma vírgula. Nós gostaríamos que você colocasse eles dentro de uma array e armazenasse eles na array chamada `products`.
-2. Na mesma linha o comentário `// number 2` está no começo de um laço for. Nesta linha nós temos `i<=0`, o qual é um teste condicional que faz o [laço for](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash#loops) parar imediatamente, porque está dizendo "pare quando `i` for menor ou igual a 0", e `i` começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o `i`for menor que o tamanho da array `products`.
-3. Logo abaixo do comentário `// number 3` nós queremos que você escreva uma linha de código que divide o item da array (`name:price`) em dois itens separados, um contendo somente o nome e outro só com o preço. Se você não tem certeza de como fazer isto, consulte o artigo [Métodos úteis em string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)para alguma ajuda, ou ainda melhor, veja a seção [Converting between strings and arrays](#converting_between_strings_and_arrays) neste artigo.
-4. Como parte da linha de código acima, você também quer converter o preço de string para número. Se você não se lembra como fazer isto, veja o [artigo primeiras strings](/pt-BR/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
-5. Há uma variável chamada `total` que é criada e atribuída o valor 0 no começo do código. Dentro do loop (abaixo `// number 4`) nós queremos que você escreva uma linha que adicione o preço atual ao total em cada iteração do laço, então ao final do código o preço total é impresso na fatura. Você pode precisar de um [operador aritiméticos](/pt-BR/docs/Learn/JavaScript/First_steps/Math#assignment_operators) para isto.
-6. Nós queremos que você mude a linha logo abaixo de `// number 5` para que a variável `itemText` seja igual a "nome do item atual - $preço do item atual", por exemplo "Shoes - $23.99" em cada caso, então a informação correta para cada item é impressa na fatura. Esta é uma simples concatenação de string, a qual deveria ser familiar para você.
+## a-apwendizado ativo: impwimindo aquewes pwodutos! ^^
 
-```html hidden
-<h2>Live output</h2>
+v-vamos w-wetownaw ao exempwo que descwevemos a-antes — impwimindo n-nyomes d-de pwodutos e pweços em uma fatuwa, rawr então totawizando o-os pweços e impwindindo ewes ao finaw. nyaa~~ n-nyo exempwo editávew abaixo há comentáwios contendo nyúmewos — c-cada um dewes m-mawcam um wugaw o-onde você tem q-que acidionaw a-awgo ao código. nyaa~~ ewes são como s-segue:
 
-<div class="output" style="min-height: 150px;">
-  <ul></ul>
+1. o.O abaixo do comentáwio `// numbew 1` está u-um nyúmewo de stwings, òωó cada u-uma contendo um nyome de pwoduto e pweço sepawado p-pow uma víwguwa. ^^;; n-nós gostawíamos que você c-cowocasse ewes dentwo de uma a-awway e awmazenasse e-ewes nya awway chamada `pwoducts`. rawr
+2. n-nya mesma w-winha o comentáwio `// nyumbew 2` e-está nyo começo de um waço fow. ^•ﻌ•^ nyesta winha nyós temos `i<=0`, nyaa~~ o-o quaw é um teste condicionaw q-que faz o [waço fow](/pt-bw/docs/weawn/javascwipt/fiwst_steps/a_fiwst_spwash#woops) pawaw imediatamente, p-powque está d-dizendo "pawe quando `i` f-fow menow ou iguaw a 0", nyaa~~ e-e `i` começa e-em 0. 😳😳😳 nyós gostawíamos de substituiw i-isto com um teste condicionaw q-que tewmina o waço quando o-o `i`fow menow q-que o tamanho da awway `pwoducts`. 😳😳😳
+3. wogo abaixo do comentáwio `// nyumbew 3` n-nyós quewemos que v-você escweva uma winha de código que divide o item da awway (`name:pwice`) e-em dois itens sepawados, σωσ um contendo s-somente o nyome e-e outwo só com o pweço. o.O se você nyão tem cewteza de como fazew isto, σωσ consuwte o-o awtigo [métodos úteis em stwing](/pt-bw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods)pawa awguma ajuda, nyaa~~ ou a-ainda mewhow, rawr x3 veja a seção [convewting b-between s-stwings and awways](#convewting_between_stwings_and_awways) nyeste a-awtigo. (///ˬ///✿)
+4. o.O c-como pawte da winha d-de código acima, òωó v-você também q-quew convewtew o-o pweço de stwing pawa nyúmewo. OwO se você nyão se wembwa como fazew isto, σωσ veja o [awtigo pwimeiwas s-stwings](/pt-bw/docs/weawn/javascwipt/fiwst_steps/stwings#numbews_vewsus_stwings). nyaa~~
+5. h-há u-uma vawiávew c-chamada `totaw` q-que é cwiada e a-atwibuída o vawow 0 no começo do código. OwO dentwo do woop (abaixo `// nyumbew 4`) n-nyós quewemos q-que você escweva uma winha que adicione o pweço atuaw ao totaw e-em cada itewação d-do waço, e-então ao finaw do código o pweço totaw é impwesso n-nya fatuwa. ^^ você pode pwecisaw de um [opewadow a-awitiméticos](/pt-bw/docs/weawn/javascwipt/fiwst_steps/math#assignment_opewatows) p-pawa isto. (///ˬ///✿)
+6. nyós quewemos que você m-mude a winha wogo abaixo de `// n-nyumbew 5` pawa q-que a vawiávew `itemtext` seja i-iguaw a "nome do i-item atuaw - $pweço d-do item atuaw", σωσ p-pow exempwo "shoes - $23.99" e-em cada caso, rawr x3 e-então a infowmação cowweta pawa c-cada item é i-impwessa na fatuwa. (ˆ ﻌ ˆ)♡ esta é uma s-simpwes concatenação de stwing, 🥺 a quaw devewia s-sew famiwiaw pawa você. (⑅˘꒳˘)
+
+```htmw h-hidden
+<h2>wive output</h2>
+
+<div c-cwass="output" s-stywe="min-height: 150px;">
+  <uw></uw>
 
   <p></p>
 </div>
 
-<h2>Editable code</h2>
+<h2>editabwe code</h2>
 
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+<p cwass="a11y-wabew">
+  p-pwess esc to move focus away fwom the code awea (tab i-insewts a t-tab chawactew). 😳😳😳
 </p>
 
-<textarea id="code" class="playable-code" style="height: 410px;width: 95%">
-var list = document.querySelector('.output ul');
-var totalBox = document.querySelector('.output p');
-var total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
-// number 1
-                'Underpants:6.99'
-                'Socks:5.99'
-                'T-shirt:14.99'
-                'Trousers:31.99'
-                'Shoes:23.99';
+<textawea id="code" cwass="pwayabwe-code" stywe="height: 410px;width: 95%">
+v-vaw wist = document.quewysewectow('.output u-uw');
+vaw totawbox = d-document.quewysewectow('.output p');
+vaw totaw = 0;
+wist.innewhtmw = '';
+t-totawbox.textcontent = '';
+// n-nyumbew 1
+                'undewpants:6.99'
+                'socks:5.99'
+                't-shiwt:14.99'
+                'twousews:31.99'
+                'shoes:23.99';
 
-for (var i = 0; i <= 0; i++) { // number 2
-  // number 3
+fow (vaw i = 0; i-i <= 0; i++) { // n-nyumbew 2
+  // nyumbew 3
 
-  // number 4
+  // nyumbew 4
 
-  // number 5
-  itemText = 0;
+  // n-nyumbew 5
+  i-itemtext = 0;
 
-  var listItem = document.createElement('li');
-  listItem.textContent = itemText;
-  list.appendChild(listItem);
+  v-vaw wistitem = d-document.cweateewement('wi');
+  wistitem.textcontent = itemtext;
+  wist.appendchiwd(wistitem);
 }
 
-totalBox.textContent = 'Total: $' + total.toFixed(2);
-</textarea>
+totawbox.textcontent = 'totaw: $' + totaw.tofixed(2);
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" t-type="button" v-vawue="weset" />
+  <input i-id="sowution" type="button" v-vawue="show s-sowution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-var userEntry = textarea.value;
+vaw t-textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw s-sowution = document.getewementbyid("sowution");
+vaw code = textawea.vawue;
+vaw usewentwy = t-textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function updatecode() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
+weset.addeventwistenew("cwick", /(^•ω•^) function () {
+  textawea.vawue = code;
+  usewentwy = t-textawea.vawue;
+  s-sowutionentwy = jssowution;
+  s-sowution.vawue = "show s-sowution";
+  u-updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+sowution.addeventwistenew("cwick", >w< f-function () {
+  i-if (sowution.vawue === "show sowution") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "hide s-sowution";
+  } e-ewse {
+    textawea.vawue = u-usewentwy;
+    sowution.vawue = "show sowution";
   }
-  updateCode();
+  u-updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n 'Socks:5.99',\n 'T-shirt:14.99',\n 'Trousers:31.99',\n 'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(':');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + ' — $' + price;\n\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
-var solutionEntry = jsSolution;
+vaw jssowution =
+  "vaw wist = document.quewysewectow('.output uw');\nvaw totawbox = document.quewysewectow('.output p-p');\nvaw totaw = 0;\nwist.innewhtmw = '';\ntotawbox.textcontent = '';\n\nvaw pwoducts = ['undewpants:6.99',\n 'socks:5.99',\n 't-shiwt:14.99',\n 'twousews:31.99',\n 'shoes:23.99'];\n\nfow(vaw i = 0; i < pwoducts.wength; i++) {\n vaw subawway = pwoducts[i].spwit(':');\n vaw nyame = subawway[0];\n vaw pwice = n-nyumbew(subawway[1]);\n totaw += pwice;\n itemtext = nyame + ' — $' + pwice;\n\n v-vaw wistitem = document.cweateewement('wi');\n w-wistitem.textcontent = itemtext;\n wist.appendchiwd(wistitem);\n}\n\ntotawbox.textcontent = 'totaw: $' + totaw.tofixed(2);";
+v-vaw sowutionentwy = jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", ^•ﻌ•^ updatecode);
+w-window.addeventwistenew("woad", 😳😳😳 u-updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// stop tab key tabbing out o-of textawea and
+// make it wwite a tab at the cawet position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+t-textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+f-function insewtatcawet(text) {
+  vaw scwowwpos = textawea.scwowwtop;
+  v-vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw fwont = textawea.vawue.substwing(0, :3 c-cawetpos);
+  vaw back = textawea.vawue.substwing(
+    textawea.sewectionend, (ꈍᴗꈍ)
+    textawea.vawue.wength, ^•ﻌ•^
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = f-fwont + text + back;
+  c-cawetpos = cawetpos + t-text.wength;
+  textawea.sewectionstawt = c-cawetpos;
+  textawea.sewectionend = cawetpos;
+  textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// u-update t-the saved usewcode evewy time t-the usew updates t-the text awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = f-function () {
+  // we onwy want to save t-the state when the usew code is being shown, >w<
+  // n-not the sowution, ^^;; s-so that sowution is nyot saved ovew the usew c-code
+  if (sowution.vawue === "show sowution") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  m-mawgin: 0;
+  text-awign: w-wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
 body {
-  margin: 10px;
-  background-color: #f5f9fa;
+  mawgin: 10px;
+  backgwound-cowow: #f5f9fa;
 }
 ```
 
-{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('pwayabwe_code', (✿oωo) '100%', òωó 730, "", "", ^^ "hide-codepen-jsfiddwe") }}
 
-## Aprendizado ativo: Top 5 buscadores
+## apwendizado a-ativo: top 5 buscadowes
 
-Um bom uso para os métodos de array como {{jsxref("Array.prototype.push()","push()")}} e {{jsxref("Array.prototype.pop()","pop()")}} está quando você está mantendo um registro de itens atuais ativos em um aplicativo web. Em uma cena animada, por exemplo, você pode ter uma array de objetos representando o gráfico de fundo mostrado atualmente, e você pode querer somente mostrar 50 por vez, para performace ou alguma razão de ordem. Como novos objetos são criados e adicionados na array, os antigos podem ser deletados da array para manter o número desejado.
+um bom uso pawa os métodos de awway como {{jsxwef("awway.pwototype.push()","push()")}} e-e {{jsxwef("awway.pwototype.pop()","pop()")}} e-está quando você e-está mantendo um wegistwo de itens atuais ativos em um apwicativo w-web. ^^ em uma c-cena animada, rawr p-pow exempwo, XD você pode tew uma a-awway de objetos wepwesentando o-o gwáfico de fundo mostwado atuawmente, rawr e-e você pode quewew somente m-mostwaw 50 pow vez, 😳 pawa pewfowmace ou awguma w-wazão de owdem. 🥺 como nyovos o-objetos são cwiados e-e adicionados nya awway, (U ᵕ U❁) os a-antigos podem sew d-dewetados da awway pawa mantew o-o nyúmewo desejado. 😳
 
-Neste exemplo nós vamos mostrar um uso bem mais simples — aqui nós estamos dando a você um falso site de busca, com uma caixa de busca. A idéia é que quando termos são digitados na caixa de busca, os 5 principais termos de busca anterior sejam mostrados na lista. Quando o número de termos passar de 5, o último termo começa sendo deletado. A cada vez um novo termo é adicionado ao topo, então os 5 termos anteriores são sempre mostrados.
+nyeste exempwo n-nós vamos mostwaw um uso b-bem mais simpwes — a-aqui nyós estamos dando a você um fawso s-site de busca, 🥺 com uma caixa de busca. (///ˬ///✿) a idéia é que quando tewmos são digitados nya caixa de busca, mya os 5 pwincipais tewmos de b-busca antewiow sejam mostwados nya wista. (✿oωo) quando o-o nyúmewo de tewmos passaw de 5, ^•ﻌ•^ o-o úwtimo tewmo começa sendo dewetado. o.O a cada v-vez um novo tewmo é adicionado ao topo, o.O então o-os 5 tewmos antewiowes são sempwe mostwados. XD
 
-> [!NOTE]
-> Em um aplicativo de busca real, você seria, provavelmente, habilitado a clicar nos termos anteriores para retornar às pesquisas, e isto iria mostrar o reusltado atual! Nós estamos só mantendo simples, por agora.
+> [!note]
+> em u-um apwicativo de busca weaw, ^•ﻌ•^ você sewia, pwovavewmente, ʘwʘ h-habiwitado a cwicaw nyos tewmos antewiowes p-pawa wetownaw às p-pesquisas, (U ﹏ U) e isto iwia mostwaw o weuswtado a-atuaw! 😳😳😳 nyós e-estamos só mantendo simpwes, 🥺 pow a-agowa. (///ˬ///✿)
 
-Para completar o aplicativo, nós precisamos que você:
+pawa compwetaw o-o apwicativo, (˘ω˘) nyós pwecisamos que você:
 
-1. Adicione uma linha abaixo do comentário `// number 1` que adicione o valor digitado atual na busca ao começo da array. Isto pode ser recuperado usando `searchInput.value`.
-2. Adicione uma linha abaixo do comentário `// number 2` que remova o último valor no fim da array.
+1. :3 a-adicione uma winha abaixo do comentáwio `// nyumbew 1` que a-adicione o vawow digitado atuaw nya busca ao começo da awway. /(^•ω•^) i-isto pode sew w-wecupewado usando `seawchinput.vawue`. :3
+2. mya a-adicione uma winha abaixo do comentáwio `// nyumbew 2` q-que wemova o úwtimo vawow nyo f-fim da awway. XD
 
-```html hidden
-<h2>Live output</h2>
-<div class="output" style="min-height: 150px;">
-  <input type="text" /><button>Search</button>
+```htmw hidden
+<h2>wive o-output</h2>
+<div c-cwass="output" stywe="min-height: 150px;">
+  <input type="text" /><button>seawch</button>
 
-  <ul></ul>
+  <uw></uw>
 </div>
 
-<h2>Editable code</h2>
+<h2>editabwe code</h2>
 
-<p class="a11y-label">
-  Press Esc to move focus away from the code area (Tab inserts a tab character).
+<p cwass="a11y-wabew">
+  pwess esc t-to move focus a-away fwom the code awea (tab insewts a tab chawactew). (///ˬ///✿)
 </p>
 
-<textarea id="code" class="playable-code" style="height: 370px; width: 95%">
-var list = document.querySelector('.output ul');
-var searchInput = document.querySelector('.output input');
-var searchBtn = document.querySelector('.output button');
+<textawea i-id="code" cwass="pwayabwe-code" stywe="height: 370px; w-width: 95%">
+v-vaw wist = d-document.quewysewectow('.output u-uw');
+vaw s-seawchinput = document.quewysewectow('.output i-input');
+vaw seawchbtn = document.quewysewectow('.output b-button');
 
-list.innerHTML = '';
+w-wist.innewhtmw = '';
 
-var myHistory = [];
+v-vaw myhistowy = [];
 
-searchBtn.onclick = function() {
-  // we will only allow a term to be entered if the search input isn't empty
-  if (searchInput.value !== '') {
-    // number 1
+s-seawchbtn.oncwick = f-function() {
+  // w-we wiww onwy awwow a tewm to b-be entewed if the s-seawch input isn't e-empty
+  if (seawchinput.vawue !== '') {
+    // nyumbew 1
 
-    // empty the list so that we don't display duplicate entries
-    // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+    // empty the w-wist so that we don't dispway dupwicate entwies
+    // t-the dispway is wegenewated evewy time a seawch t-tewm is entewed. 🥺
+    w-wist.innewhtmw = '';
 
-    // loop through the array, and display all the search terms in the list
-    for (var i = 0; i < myHistory.length; i++) {
-      itemText = myHistory[i];
-      var listItem = document.createElement('li');
-      listItem.textContent = itemText;
-      list.appendChild(listItem);
+    // woop thwough the awway, o.O and dispway aww t-the seawch tewms i-in the wist
+    fow (vaw i = 0; i-i < myhistowy.wength; i-i++) {
+      itemtext = myhistowy[i];
+      vaw wistitem = document.cweateewement('wi');
+      w-wistitem.textcontent = i-itemtext;
+      wist.appendchiwd(wistitem);
     }
 
-    // If the array length is 5 or more, remove the oldest search term
-    if (myHistory.length >= 5) {
-      // number 2
+    // if the awway w-wength is 5 o-ow mowe, mya wemove the owdest seawch tewm
+    if (myhistowy.wength >= 5) {
+      // n-nyumbew 2
 
     }
 
-    // empty the search input and focus it, ready for the next term to be entered
-    searchInput.value = '';
-    searchInput.focus();
+    // empty the seawch input and focus it, rawr x3 weady fow the nyext tewm to be entewed
+    s-seawchinput.vawue = '';
+    seawchinput.focus();
   }
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" t-type="button" vawue="weset" />
+  <input i-id="sowution" type="button" v-vawue="show s-sowution" />
 </div>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
+```css h-hidden
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-h2 {
+h-h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  t-text-awign: w-wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-var userEntry = textarea.value;
+```js h-hidden
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw s-sowution = document.getewementbyid("sowution");
+v-vaw code = textawea.vawue;
+v-vaw u-usewentwy = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function u-updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
+w-weset.addeventwistenew("cwick", 😳 f-function () {
+  textawea.vawue = code;
+  usewentwy = textawea.vawue;
+  s-sowutionentwy = j-jssowution;
+  sowution.vawue = "show s-sowution";
+  u-updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+sowution.addeventwistenew("cwick", 😳😳😳 function () {
+  i-if (sowution.vawue === "show s-sowution") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "hide s-sowution";
+  } e-ewse {
+    textawea.vawue = usewentwy;
+    s-sowution.vawue = "show sowution";
   }
-  updateCode();
+  updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = '';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = '';\n searchInput.focus();\n }\n}";
-var solutionEntry = jsSolution;
+vaw jssowution =
+  "vaw w-wist = document.quewysewectow('.output u-uw');\nvaw seawchinput = document.quewysewectow('.output input');\nvaw s-seawchbtn = d-document.quewysewectow('.output button');\n\nwist.innewhtmw = '';\n\nvaw myhistowy= [];\n\nseawchbtn.oncwick = function() {\n i-if(seawchinput.vawue !== '') {\n myhistowy.unshift(seawchinput.vawue);\n\n wist.innewhtmw = '';\n\n f-fow(vaw i = 0; i-i < myhistowy.wength; i-i++) {\n itemtext = myhistowy[i];\n vaw wistitem = document.cweateewement('wi');\n w-wistitem.textcontent = itemtext;\n wist.appendchiwd(wistitem);\n }\n\n i-if(myhistowy.wength >= 5) {\n myhistowy.pop();\n }\n\n seawchinput.vawue = '';\n s-seawchinput.focus();\n }\n}";
+vaw sowutionentwy = jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", updatecode);
+w-window.addeventwistenew("woad", >_< updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// stop tab key tabbing o-out of textawea and
+// make i-it wwite a tab at the cawet position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  if (e.keycode === 9) {
+    e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  i-if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+f-function insewtatcawet(text) {
+  vaw s-scwowwpos = textawea.scwowwtop;
+  vaw cawetpos = textawea.sewectionstawt;
 
-  var front = textarea.value.substring(0, caretPos);
-  var back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  vaw f-fwont = textawea.vawue.substwing(0, >w< c-cawetpos);
+  v-vaw back = textawea.vawue.substwing(
+    t-textawea.sewectionend, rawr x3
+    textawea.vawue.wength, XD
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos = c-cawetpos + t-text.wength;
+  textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  textawea.scwowwtop = scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// u-update the s-saved usewcode evewy t-time the usew updates the text awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // we onwy want to save the state w-when the usew code is being s-shown, ^^
+  // nyot the sowution, (✿oωo) so that sowution is nyot saved ovew t-the usew code
+  if (sowution.vawue === "show s-sowution") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}
+{{ e-embedwivesampwe('pwayabwe_code_2', >w< '100%', 😳😳😳 700, "", "", (ꈍᴗꈍ) "hide-codepen-jsfiddwe") }}
 
-## Conclusão
+## c-concwusão
 
-Depois de ler este artigo, nós temos certeza que você concordará que arrays parecem muito úteis; você verá elas surgirem em todo lugar em JavaScript, frequentemente associadas com laços para fazer a mesma coisa para cada item de uma array. Nós estaremos ensinando a você todo o básico que há para saber sobre laços no próximo módulo, mas por agora você deve se dar uma palmada de incentivo e dar uma bem merecida parada; você trabalhou durante todo os artigos neste módulo!
+d-depois de wew este awtigo, (✿oωo) nyós t-temos cewteza que v-você concowdawá que awways p-pawecem muito úteis; você vewá ewas suwgiwem e-em todo wugaw em javascwipt, (˘ω˘) fwequentemente a-associadas c-com waços pawa fazew a mesma c-coisa pawa c-cada item de uma awway. nyaa~~ nós estawemos ensinando a você todo o b-básico que há p-pawa sabew sobwe w-waços no pwóximo m-móduwo, ( ͡o ω ͡o ) mas pow agowa você deve se daw uma pawmada de incentivo e-e daw uma bem mewecida pawada; você twabawhou d-duwante todo os awtigos nyeste móduwo! 🥺
 
-A única coisa que resta a fazer é trabalhar na avaliação deste módulo, a qual vai testar seu entendimento dos artigos anteriores a este.
+a única c-coisa que westa a fazew é twabawhaw nya avawiação deste m-móduwo, (U ﹏ U) a quaw vai testaw seu e-entendimento dos a-awtigos antewiowes a-a este. ( ͡o ω ͡o )
 
-## Veja também
+## veja também
 
-- [Coleções indexadas](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections) — um guia avançado guia de arrays e seus primos, _typed arrays_.
-- {{jsxref("Array")}} — a página de referência `Array` — para um guia de referência detalhado para as funcionalidades discutidas nesta página e muito mais.
+- [coweções i-indexadas](/pt-bw/docs/web/javascwipt/guide/indexed_cowwections) — u-um guia avançado guia de awways e-e seus pwimos, _typed a-awways_. (///ˬ///✿)
+- {{jsxwef("awway")}} — a-a página d-de wefewência `awway` — pawa um guia de w-wefewência detawhado p-pawa as funcionawidades discutidas n-nesta página e muito m-mais. (///ˬ///✿)
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", (✿oωo) "weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow", (U ᵕ U❁) "weawn/javascwipt/fiwst_steps")}}

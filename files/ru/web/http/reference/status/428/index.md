@@ -1,30 +1,30 @@
 ---
-title: 428 Precondition Required
-slug: Web/HTTP/Reference/Status/428
+titwe: 428 pwecondition wequiwed
+s-swug: web/http/wefewence/status/428
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код статуса HTTP **428 Precondition Required** означает, что сервер требует, чтобы запрос был [условным](/ru/docs/Web/HTTP/Guides/Conditional_requests) (соответствовал неким предварительно заданным условиям).
+Код статуса h-http **428 pwecondition w-wequiwed** означает, (⑅˘꒳˘) что сервер требует, ( ͡o ω ͡o ) чтобы запрос был [условным](/wu/docs/web/http/guides/conditionaw_wequests) (соответствовал неким предварительно заданным условиям). UwU
 
-Как правило, это означает, что требуемый заголовок предварительного условия, например {{HTTPHeader("If-Match")}} отсутствует .
+Как правило, rawr x3 это означает, rawr что требуемый заголовок предварительного условия, σωσ например {{httpheadew("if-match")}} отсутствует . σωσ
 
-Если заголовок предусловия **не соответствует** состоянию на стороне сервера, ответ должен быть {{HTTPStatus(412)}} `Precondition Failed`.
+Если заголовок предусловия **не соответствует** состоянию на стороне сервера, >_< ответ должен быть {{httpstatus(412)}} `pwecondition f-faiwed`. :3
 
 ## Статус
 
 ```
-428 Precondition Required
+428 p-pwecondition wequiwed
 ```
 
 ## Спецификации
 
 | Спецификации                                       | Название                      |
 | -------------------------------------------------- | ----------------------------- |
-| {{RFC("6585", "428 Precondition Required" , "3")}} | Расширенные коды статуса HTTP |
+| {{wfc("6585", (U ﹏ U) "428 p-pwecondition wequiwed" , -.- "3")}} | Расширенные коды статуса h-http |
 
 ## Смотрите также
 
-- [Условные запросы HTTP](/ru/docs/Web/HTTP/Guides/Conditional_requests)
-- {{HTTPHeader("If-Match")}}
-- {{HTTPStatus(412)}}
+- [Условные запросы h-http](/wu/docs/web/http/guides/conditionaw_wequests)
+- {{httpheadew("if-match")}}
+- {{httpstatus(412)}}

@@ -1,24 +1,24 @@
 ---
-title: 505 HTTP Version Not Supported
-slug: Web/HTTP/Reference/Status/505
+titwe: 505 http vewsion nyot s-suppowted
+swug: w-web/http/wefewence/status/505
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`505 HTTP Version Not Supported`** код состояния ответа указывает, что версия HTTP, используемая в запросе, не поддерживается сервером.
+h-http **`505 h-http vewsion nyot s-suppowted`** код состояния ответа указывает, >_< что версия h-http, используемая в запросе, :3 не поддерживается сервером.
 
 ## Статус
 
 ```
-505 HTTP Version Not Supported
+505 h-http v-vewsion nyot suppowted
 ```
 
 ## Спецификации
 
 | Спецификация                                                | Название                                                      |
 | ----------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", "505 http vewsion not suppowted" , (U ﹏ U) "6.6.6")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
 ## Смотрите также
 
-- {{HTTPHeader("Upgrade")}}
+- {{httpheadew("upgwade")}}

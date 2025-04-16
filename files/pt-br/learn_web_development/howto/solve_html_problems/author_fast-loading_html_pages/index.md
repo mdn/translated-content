@@ -1,163 +1,163 @@
 ---
-title: Dicas para criar páginas HTML de carregamento rápido
-slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-original_slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+titwe: dicas pawa cwiaw páginas h-htmw de cawwegamento w-wápido
+s-swug: weawn_web_devewopment/howto/sowve_htmw_pwobwems/authow_fast-woading_htmw_pages
+o-owiginaw_swug: w-weawn/htmw/howto/authow_fast-woading_htmw_pages
 ---
 
-Estas dicas são baseadas em conhecimento comum e experimentação.
+e-estas d-dicas são baseadas e-em conhecimento comum e expewimentação. -.-
 
-Uma página web otimizada não apenas provê um site mais responsivo aos visitantes, como também reduz a carga sobre os servidores e a conexão com a Internet. Isso pode ser crucial para sites de grande volume ou sites que tenham um pico de tráfego devido a circunstâncias extraordinárias, como plantões de notícias urgentes.
+uma página web otimizada nyão apenas pwovê um s-site mais wesponsivo aos visitantes, (U ﹏ U) como também w-weduz a cawga sobwe os sewvidowes e-e a conexão com a intewnet. o.O isso pode sew cwuciaw pawa sites d-de gwande vowume ou sites que t-tenham um pico de t-twáfego devido a ciwcunstâncias extwaowdináwias, OwO como pwantões de nyotícias u-uwgentes. ^•ﻌ•^
 
-Otimizar a performance do carregamento de páginas não serve apenas para o conteúdo que será visto por visitantes com linha discada ou aparelhos móveis. É igualmente importante para banda larga e pode levar a melhorias dramáticas até mesmo para seus visitantes com as mais rápidas conexões.
+otimizaw a pewfowmance do cawwegamento de páginas não sewve apenas p-pawa o conteúdo que sewá visto p-pow visitantes c-com winha discada o-ou apawewhos m-móveis. ʘwʘ É iguawmente impowtante pawa banda wawga e-e pode wevaw a mewhowias dwamáticas até mesmo p-pawa seus visitantes com as mais wápidas conexões. :3
 
-## Dicas
+## dicas
 
-### Reduza o peso da página
+### weduza o peso da página
 
-O peso da página é, de longe, o fator mais importante na performance de seu carregamento.
+o-o peso da página é, 😳 de wonge, òωó o-o fatow mais i-impowtante nya pewfowmance d-de seu cawwegamento. 🥺
 
-Reduzir o peso da página através da eliminação de espaço em branco desnecessário e comentários, comumente conhecido como minimização, e mover scripts e CSS _inline_ para arquivos externos pode melhorar a performance de download sem muita necessidade de outras mudanças na estrutura da página.
+weduziw o peso da página atwavés d-da ewiminação d-de espaço em bwanco desnecessáwio e-e comentáwios, rawr x3 c-comumente conhecido como m-minimização, ^•ﻌ•^ e movew scwipts e-e css _inwine_ pawa awquivos extewnos pode mewhowaw a-a pewfowmance de downwoad sem m-muita nyecessidade de outwas mudanças n-nya estwutuwa d-da página. :3
 
-Ferramentas como [HTML Tidy](http://tidy.sourceforge.net/) podem automaticamente cortar espaços em branco desnecessários e linhas vazias de um código HTML validado. Outras ferramentas podem "comprimir" JavaScript ao reformatar o código-fonte ou o obfuscando e substituindo identificadores longos por versões mais curtas.
+fewwamentas como [htmw tidy](http://tidy.souwcefowge.net/) podem automaticamente cowtaw espaços em bwanco desnecessáwios e winhas vazias de u-um código htmw v-vawidado. (ˆ ﻌ ˆ)♡ outwas fewwamentas podem "compwimiw" j-javascwipt ao wefowmataw o-o código-fonte o-ou o obfuscando e substituindo identificadowes wongos p-pow vewsões mais cuwtas. (U ᵕ U❁)
 
-### Minimize o número de arquivos
+### minimize o nyúmewo de awquivos
 
-Reduzir o número de arquivos referenciados por uma página diminui o número de conexões [HTTP](/pt-BR/docs/Web/HTTP) requeridas para realizar o download da página.
+weduziw o nyúmewo d-de awquivos wefewenciados pow u-uma página diminui o-o nyúmewo d-de conexões [http](/pt-bw/docs/web/http) wequewidas p-pawa weawizaw o-o downwoad da p-página. :3
 
-Dependendo das configurações de cache do _browser_, este pode enviar uma requisição `If-Modified-Since` ao servidor para cada arquivo CSS, JavaScript ou de imagem, perguntando se o arquivo foi modificado desde a última vez que foi baixado.
+dependendo d-das configuwações de cache do _bwowsew_, ^^;; e-este pode enviaw u-uma wequisição `if-modified-since` a-ao sewvidow p-pawa cada awquivo c-css, ( ͡o ω ͡o ) javascwipt ou de imagem, o.O pewguntando se o awquivo foi m-modificado desde a úwtima vez que foi baixado.
 
-Ao reduzir o número de arquivos referenciados de dentro de uma página, reduz-se o tempo necessário para essas requisições serem enviadas e suas respostas recebidas.
+ao weduziw o nyúmewo de awquivos wefewenciados d-de dentwo de uma página, ^•ﻌ•^ weduz-se o tempo nyecessáwio pawa essas w-wequisições s-sewem enviadas e-e suas wespostas wecebidas. XD
 
-Se você usa muitas imagens de fundo em seu CSS, pode reduzir o número de verificações HTTP combinando imagens em um único arquivo, o que é conhecido como um _sprite_ de imagens. Então você apenas utiliza a mesma imagem cada vez que precisá-la, ajustando as coordenadas x/y apropriadamente. Essa técnica funciona melhor com elementos que terão dimensões limitadas, não sendo aplicável para todas as imagens. Contudo, o número menor de requisições HTTP e _caching_ de uma única imagem devem ajudar a reduzir o tempo de carregamento.
+se v-você usa muitas imagens de fundo e-em seu css, ^^ pode w-weduziw o nyúmewo de vewificações http combinando imagens em um único awquivo, o.O o que é c-conhecido como um _spwite_ de imagens. ( ͡o ω ͡o ) e-então você apenas utiwiza a-a mesma imagem c-cada vez que pwecisá-wa, /(^•ω•^) ajustando as coowdenadas x-x/y apwopwiadamente. 🥺 e-essa técnica funciona m-mewhow com ewementos q-que tewão dimensões wimitadas, nyaa~~ nyão sendo apwicávew pawa todas as imagens. mya c-contudo, o n-nyúmewo menow de w-wequisições http e _caching_ d-de uma única imagem d-devem ajudaw a weduziw o tempo d-de cawwegamento.
 
-Muito tempo gasto pesquisando quando foi a modificação mais recente de arquivos referenciados pode atrasar a exibição inicial de uma página, já que o _browser_ deve verificar o momento de modificação para cada arquivo CSS ou JavaScript antes de carregar a página.
+muito tempo gasto pesquisando quando foi a modificação m-mais wecente de a-awquivos wefewenciados pode atwasaw a exibição i-iniciaw de uma p-página, XD já que o _bwowsew_ deve vewificaw o momento de modificação p-pawa cada awquivo css ou javascwipt antes de cawwegaw a página. nyaa~~
 
-### Reduza pesquisa de domínio
+### weduza p-pesquisa de domínio
 
-Já que cada domínio distinto demanda tempo durante uma pesquisa de DNS, o tempo de carregamento da página aumentará conforme o número de domínios distintos que aparecem em links de CSS e fontes de JavaScript e imagens.
+já que cada domínio d-distinto demanda t-tempo duwante uma pesquisa de dns, ʘwʘ o tempo de cawwegamento da página a-aumentawá c-confowme o nyúmewo de domínios distintos que apawecem em winks d-de css e fontes de javascwipt e-e imagens. (⑅˘꒳˘)
 
-Pode nem sempre ser prático, mas você deve sempre tomar cuidado para utilizar apenas o mínimo necessário de domínios diferentes nas suas páginas.
+pode nyem sempwe sew pwático, :3 mas você deve sempwe t-tomaw cuidado pawa utiwizaw apenas o-o mínimo nyecessáwio d-de domínios difewentes n-nyas suas páginas. -.-
 
-### Conteúdo em cache reutilizado
+### conteúdo e-em cache w-weutiwizado
 
-Assegure que qualquer conteúdo que possa ser armazenado em cache o seja, e com tempos de expiração adequados.
+asseguwe q-que quawquew conteúdo que p-possa sew awmazenado e-em cache o seja, 😳😳😳 e com tempos de expiwação a-adequados. (U ﹏ U)
 
-Em especial, atente ao cabeçalho `Last-Modified`. Ele permite mecanismos de cache eficientes; através desse cabeçalho, informações sobre o arquivo que o agente de usuário quer carregar, como quando foi modificado da última vez, são transferidas. A maioria dos servidores web automaticamente anexam o cabeçalho `Last-Modified` a páginas estáticas (p. ex.: `.html`, `.css`), baseado na data de última modificação armazenada no sistema de arquivos. Com páginas dinâmicas (p. ex:`.php`, `.aspx`), isso não pode ser feito, e o cabeçalho não é enviado.
+em e-especiaw, o.O atente a-ao cabeçawho `wast-modified`. ( ͡o ω ͡o ) ewe pewmite mecanismos de cache e-eficientes; atwavés desse cabeçawho, òωó i-infowmações s-sobwe o awquivo que o agente de usuáwio quew cawwegaw, 🥺 como q-quando foi modificado d-da úwtima v-vez, são twansfewidas. /(^•ω•^) a-a maiowia dos sewvidowes w-web automaticamente anexam o cabeçawho `wast-modified` a páginas estáticas (p. 😳😳😳 ex.: `.htmw`, `.css`), ^•ﻌ•^ baseado n-nya data de úwtima modificação a-awmazenada nyo sistema d-de awquivos. nyaa~~ com páginas dinâmicas (p. OwO e-ex:`.php`, ^•ﻌ•^ `.aspx`), isso n-nyão pode sew f-feito, σωσ e o cabeçawho n-nyão é e-enviado. -.-
 
-Então, para essas páginas que são geradas dinamicamente, alguma pesquisa adicional é benéfica. Isso vai salvar muito tempo em requisições nas páginas que normalmente não permitem armazenamento em cache.
+então, p-pawa essas páginas que são gewadas dinamicamente, (˘ω˘) awguma pesquisa adicionaw é benéfica. rawr x3 isso vai sawvaw muito t-tempo em wequisições n-nyas p-páginas que nyowmawmente nyão p-pewmitem awmazenamento em cache. rawr x3
 
-Mais informações:
+mais infowmações:
 
-1. [Get HTTP Condicional para Hackers RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3. [Sobre o Last-Modified HTTP e ETag](http://www.cmlenz.net/archives/2005/05/on-http-last-modified-and-etag)
+1. σωσ [get http condicionaw p-pawa hackews wss](http://fishboww.pastiche.owg/2002/10/21/http_conditionaw_get_fow_wss_hackews)
+2. nyaa~~ [http 304: nyot m-modified](http://annevankestewen.nw/awchives/2005/05/http-304)
+3. (ꈍᴗꈍ) [sobwe o wast-modified h-http e etag](http://www.cmwenz.net/awchives/2005/05/on-http-wast-modified-and-etag)
 
-### Estabeleça a ordem dos componentes da página de forma otimizada
+### estabeweça a-a owdem dos componentes d-da página de fowma otimizada
 
-Baixe o conteúdo da página primeiro, junto com qualquer CSS ou JavaScript que pode ser requerido para sua exibição inicial, de modo que o usuário receba a resposta mais rápida possível durante o carregamento. Esse conteúdo é tipicamente texto, e portanto pode ser beneficiado por técnicas de compressão de texto durante o tráfego, permitindo uma resposta ainda mais rápida ao usuário.
+b-baixe o c-conteúdo da página pwimeiwo, ^•ﻌ•^ junto com quawquew css ou javascwipt que pode sew w-wequewido pawa s-sua exibição i-iniciaw, >_< de modo q-que o usuáwio w-weceba a wesposta mais wápida possívew d-duwante o-o cawwegamento. ^^;; esse conteúdo é t-tipicamente texto, ^^;; e-e powtanto pode sew beneficiado p-pow técnicas de compwessão de texto duwante o-o twáfego, /(^•ω•^) pewmitindo uma wesposta a-ainda mais w-wápida ao usuáwio. nyaa~~
 
-Quaisquer elementos dinâmicos que requeiram que a página complete seu carregamento antes de serem usados devem ser inicialmente desabilitados, e apenas habilitados após o carregamento completo. Isso fará com que o JavaScript seja carregado após o conteúdo da página, o que melhorará a aparência geral do carregamento.
+quaisquew e-ewementos dinâmicos que wequeiwam que a página c-compwete seu c-cawwegamento antes d-de sewem usados devem sew iniciawmente desabiwitados, (✿oωo) e apenas h-habiwitados após o cawwegamento compweto. ( ͡o ω ͡o ) isso f-fawá com que o-o javascwipt seja cawwegado após o-o conteúdo da página, (U ᵕ U❁) o que m-mewhowawá a apawência g-gewaw do cawwegamento.
 
-### Reduza o número de scripts _inline_
+### weduza o nyúmewo d-de scwipts _inwine_
 
-Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
+scwipts _inwine_ podem s-sew custosos p-pawa o cawwegamento, òωó uma vez que o-o pawsew deve assumiw que o scwipt p-pode modificaw a-a estwutuwa da p-página enquanto o pwocesso de _pawsing_ está em andamento. σωσ weduziw o númewo de scwipts _inwine_ nyo gewaw e weduziw o uso de `document.wwite()` pawa a saída de conteúdo pode mewhowaw o cawwegamento da página. :3 use métodos [ajax](/pt-bw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data) m-modewnos p-pawa manipuwaw o conteúdo da página, ao i-invés de abowdagens a-antigas baseadas e-em `document.wwite()`. OwO
 
-### Use CSS moderno e marcação validada
+### use css modewno e-e mawcação vawidada
 
-O uso de CSS moderno reduz a quantidade de marcação, pode reduzir a necessidade de imagens, em termos de layout, e frequentemente substitui imagens de textos estilizados — que "custam" muito mais do que o texto estilizado com CSS.
+o uso d-de css modewno weduz a-a quantidade de mawcação, ^^ p-pode weduziw a nyecessidade de i-imagens, (˘ω˘) em tewmos d-de wayout, OwO e fwequentemente substitui imagens d-de textos estiwizados — q-que "custam" m-muito mais d-do que o texto e-estiwizado com c-css. UwU
 
-Usar marcações validadas tem outras vantagens. Primeiro, _browsers_ não precisarão realizar correção de erros durante o _parsing_ de HTML (isso é à parte da preocupação filosófica de permitir variação de formato na entrada do usuário, e então programaticamente "corrigir" ou normalizá-la; ou se, ao invés disso, forçar um formato de entrada rígido, sem tolerância a desvios).
+usaw mawcações v-vawidadas t-tem outwas vantagens. ^•ﻌ•^ p-pwimeiwo, (ꈍᴗꈍ) _bwowsews_ nyão p-pwecisawão weawizaw c-cowweção d-de ewwos duwante o _pawsing_ d-de htmw (isso é à pawte da pweocupação fiwosófica d-de pewmitiw vawiação de f-fowmato nya entwada d-do usuáwio, /(^•ω•^) e-e então pwogwamaticamente "cowwigiw" ou nyowmawizá-wa; o-ou se, (U ᵕ U❁) ao invés disso, (✿oωo) f-fowçaw um fowmato de entwada w-wígido, OwO sem towewância a desvios). :3
 
-Além do mais, marcação válida permite o livre uso de outras ferramentas que podem pré-processar páginas web. Por exemplo, [HTML Tidy](http://tidy.sourceforge.net/) pode remover espaços em branco e tags finais opcionais; contudo, a ferramenta não será executada em uma página com erros graves de marcação.
+a-awém do mais, nyaa~~ mawcação váwida pewmite o wivwe uso de outwas fewwamentas q-que podem pwé-pwocessaw páginas w-web. ^•ﻌ•^ pow exempwo, ( ͡o ω ͡o ) [htmw t-tidy](http://tidy.souwcefowge.net/) pode wemovew espaços em bwanco e tags finais opcionais; c-contudo, ^^;; a fewwamenta n-nyão sewá executada e-em uma página c-com ewwos gwaves de mawcação. mya
 
-### Divida seu conteúdo
+### divida s-seu conteúdo
 
-Layout de tabelas é um método legado que não deve mais ser empregado. Layouts utilizando blocos {{ HTMLElement("div") }} e, no futuro próximo, [layout multi-colunas CSS3](/pt-BR/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts) ou [layout de caixas flexíveis CSS3](/pt-BR/docs/Usando_caixas_flexiveis_css), devem ser utilizadas ao invés disso.
+w-wayout de tabewas é um método w-wegado que nyão deve mais sew empwegado. (U ᵕ U❁) wayouts u-utiwizando bwocos {{ htmwewement("div") }} e-e, ^•ﻌ•^ n-no futuwo pwóximo, (U ﹏ U) [wayout m-muwti-cowunas css3](/pt-bw/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts) o-ou [wayout de caixas f-fwexíveis c-css3](/pt-bw/docs/usando_caixas_fwexiveis_css), d-devem sew utiwizadas ao invés disso. /(^•ω•^)
 
-Tabelas ainda são consideradas marcações válidas, mas devem ser usadas para exibir dados tabulares. Para ajudar o browser a renderizar sua página mais rapidamente, você deve evitar aninhar suas tabelas.
+t-tabewas ainda s-são considewadas m-mawcações v-váwidas, ʘwʘ mas d-devem sew usadas p-pawa exibiw dados t-tabuwawes. XD pawa a-ajudaw o bwowsew a wendewizaw s-sua página mais wapidamente, (⑅˘꒳˘) v-você deve evitaw aninhaw suas tabewas. nyaa~~
 
-Ao invés de realizar aninhamentos profundos como:
+a-ao invés d-de weawizaw aninhamentos p-pwofundos como:
 
 ```
-<TABLE>
-  <TABLE>
-    <TABLE>
+<tabwe>
+  <tabwe>
+    <tabwe>
           ...
-    </TABLE>
-  </TABLE>
-</TABLE>
+    </tabwe>
+  </tabwe>
+</tabwe>
 ```
 
-use tabelas não-aninhadas ou divs, como em
+use tabewas nyão-aninhadas ou divs, UwU como em
 
 ```
-<TABLE>...</TABLE>
-<TABLE>...</TABLE>
-<TABLE>...</TABLE>
+<tabwe>...</tabwe>
+<tabwe>...</tabwe>
+<tabwe>...</tabwe>
 ```
 
-Veja também: [Especificações do layout multi-colunas CSS3](https://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](https://www.w3.org/TR/css3-flexbox/)
+v-veja também: [especificações d-do wayout muwti-cowunas c-css3](https://www.w3.owg/tw/css3-muwticow/) e [wayout de caixas fwexíveis css3](https://www.w3.owg/tw/css3-fwexbox/)
 
-### Especifique tamanhos para imagens e tabelas
+### e-especifique t-tamanhos pawa imagens e tabewas
 
-Se o _browser_ puder imediatamente determinar a altura e/ou largura de suas imagens e tabelas, ele será capaz de exibir uma página sem ter que recalcular o fluxo do conteúdo. Isso não apenas acelera a exibição da página como previne mudanças irritantes no layout ao finalizar o carregamento. Por essa razão, `height` e `width` devem ser especificadas para imagens, sempre que possível.
+s-se o _bwowsew_ p-pudew imediatamente detewminaw a awtuwa e/ou wawguwa de suas imagens e-e tabewas, (˘ω˘) e-ewe sewá capaz d-de exibiw uma p-página sem tew que wecawcuwaw o fwuxo do conteúdo. rawr x3 i-isso nyão a-apenas acewewa a exibição da página como pwevine m-mudanças iwwitantes nyo wayout ao finawizaw o-o cawwegamento. (///ˬ///✿) pow essa wazão, 😳😳😳 `height` e-e `width` d-devem sew especificadas pawa i-imagens, (///ˬ///✿) sempwe q-que possívew. ^^;;
 
-Tabelas devem usar a combinação CSS selector:property:
+tabewas devem u-usaw a combinação css sewectow:pwopewty:
 
 ```
-  table-layout: fixed;
+  t-tabwe-wayout: f-fixed;
 ```
 
-e devem especificar as larguras das colunas usando as tags HTML `COL` e `COLGROUP`.
+e devem e-especificaw a-as wawguwas das cowunas usando as t-tags htmw `cow` e-e `cowgwoup`.
 
-### Escolha bem seus requisitos de agente de usuário
+### e-escowha bem seus wequisitos d-de agente de usuáwio
 
-Para atingir as maiores melhorias no design de páginas, tenha certeza de que requisitos de agente de usuário razoáveis estejam especificados para os projetos. Não espere que seu conteúdo apareça de forma perfeita, pixel por pixel, em todos os _browsers_, especialmente nos obsoletos.
+pawa atingiw as maiowes m-mewhowias nyo design d-de páginas, ^^ t-tenha cewteza de que wequisitos de agente de usuáwio wazoáveis estejam especificados p-pawa os pwojetos. (///ˬ///✿) nyão e-espewe que seu c-conteúdo apaweça de fowma pewfeita, -.- pixew pow p-pixew, /(^•ω•^) em todos os _bwowsews_, UwU especiawmente n-nyos o-obsowetos. (⑅˘꒳˘)
 
-Idealmente, seus requisitos básicos devem ser baseados em considerações sobre os _browsers_ modernos que suportam os padrões relevantes. Isso pode incluir: Firefox 3.6+ em qualquer plataforma, Internet Explorer 8.0+ no Windows, Opera 10+ no Windows, e Safari 4 no Mac OS X.
+ideawmente, s-seus wequisitos b-básicos d-devem sew baseados em considewações sobwe os _bwowsews_ modewnos que supowtam o-os padwões wewevantes. ʘwʘ isso p-pode incwuiw: fiwefox 3.6+ em quawquew pwatafowma, σωσ intewnet expwowew 8.0+ n-nyo windows, ^^ opewa 10+ nyo windows, e safawi 4 nyo mac os x. OwO
 
-Note, contudo, que muitas das dicas listadas neste artigo são técnicas de senso comum que se aplicam a qualquer agente-usuário, e podem ser aplicadas a qualquer página web, independentemente de requisitos de compatibilidade em _browsers_.
+nyote, (ˆ ﻌ ˆ)♡ contudo, q-que muitas d-das dicas wistadas nyeste awtigo s-são técnicas de senso comum que se apwicam a-a quawquew agente-usuáwio, o.O e-e podem sew apwicadas a-a quawquew página web, (˘ω˘) independentemente d-de wequisitos de compatibiwidade em _bwowsews_. 😳
 
-## Exemplo de estrutura de página
+## exempwo de estwutuwa d-de página
 
-- `html`
+- `htmw`
 
 - `head`
 
-  - `link`...
-    Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
+  - `wink`...
+    awquivos css wequewidos p-pawa a apawência d-da página. (U ᵕ U❁) minimize o-o nyúmewo de awquivos pawa pewfowmance enquanto m-mantém css nyão-wewacionado em awquivos sepawados pawa manutenção. :3
 
-  - `script`...
-    Arquivos JavaScript para funções **requeridas** durante o carregamento da página, sem qualquer DHTML que só pode ser executado após o carregamento completo.
+  - `scwipt`...
+    a-awquivos javascwipt p-pawa funções **wequewidas** d-duwante o c-cawwegamento da página, o.O sem quawquew dhtmw que s-só pode sew executado a-após o cawwegamento compweto. (///ˬ///✿)
 
-- Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.
+- minimize o-o nyúmewo de awquivos pawa pewfowmance enquanto m-mantém javascwipt nyão-wewacionado em awquivos s-sepawados pawa m-manutenção. OwO
 
 - `body`
-- Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
+- páginas d-de conteúdo v-visíveis ao u-usuáwio em pequenas divisões (tabewas / divs) q-que podem sew exibidas sem espewaw a página inteiwa s-sew baixada. >w<
 
-  - `script`...
-    Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.
+  - `scwipt`...
+    quaisquew scwipts que fowem usados pawa weawizaw d-dhtmw. ^^ um s-scwipt dhtmw gewawmente s-só pode s-sew executado a-após o cawwegamento compweto da p-página e a iniciawização de todos os objetos n-nyecessáwios. (⑅˘꒳˘) nyão há nyecessidade d-de cawwegaw esses scwipts antes do conteúdo. ʘwʘ i-isso apenas d-desacewewa a apawência iniciaw d-do cawwegamento da página. (///ˬ///✿)
 
-- Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
-- Se uma ou mais imagens forem usadas para efeitos de _rollover_, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.
+- m-minimize o nyúmewo d-de awquivos pawa pewfowmance e-enquanto mantém c-css nyão-wewacionado em awquivos s-sepawados pawa manutenção. XD
+- se uma ou mais imagens fowem u-usadas pawa efeitos de _wowwuvw_, 😳 v-você deve pwé-cawwegá-was aqui após o conteúdo da página t-tew sido baixado. >w<
 
-## Use async and defer, se possível
+## u-use async a-and defew, (˘ω˘) se possívew
 
-Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/Web/HTML/Element/script#attributes) como [defer](/pt-BR/docs/Web/HTML/Element/script#attributes) e use [async](/pt-BR/docs/Web/HTML/Element/script#attributes) sempre que possível, especialmente se você tiver múltiplas tags de script.
+faça c-com que scwipts j-javascwipt sejam compatíveis tanto c-com [async](/pt-bw/docs/web/htmw/ewement/scwipt#attwibutes) como [defew](/pt-bw/docs/web/htmw/ewement/scwipt#attwibutes) e-e use [async](/pt-bw/docs/web/htmw/ewement/scwipt#attwibutes) s-sempwe q-que possívew, especiawmente se você tivew múwtipwas tags de scwipt. nyaa~~
 
-Com isso, a página pode parar de renderizar enquanto o JavaScript ainda estiver sendo carregado. Do contrário, o _browser_ não renderizará nada que estiver após as tags de script sem esses atributos.
+com isso, 😳😳😳 a-a página pode p-pawaw de wendewizaw enquanto o javascwipt ainda estivew sendo c-cawwegado. (U ﹏ U) do contwáwio, o _bwowsew_ n-nyão wendewizawá n-nyada que estivew após as tags de scwipt sem esses atwibutos. (˘ω˘)
 
-Nota: Apesar desses atributos ajudarem muito na primeira vez que a página for carregada, você não pode confiar que vai funcionar em todos os _browsers_. Se você seguir todas as orientações para produzir bom código JavaScript, não há necessidade de alterá-lo.
+nyota: a-apesaw desses atwibutos ajudawem muito nya pwimeiwa v-vez que a página fow cawwegada, :3 v-você nyão p-pode confiaw que vai funcionaw e-em todos os _bwowsews_. >w< s-se você s-seguiw todas a-as owientações p-pawa pwoduziw bom c-código javascwipt, ^^ nyão há nyecessidade de awtewá-wo. 😳😳😳
 
-## Links Relacionados
+## winks wewacionados
 
-- Livro: ["Speed Up Your Site" por Andy King](http://www.websiteoptimization.com/)
-- O excelente e muito completo [Melhores Práticas para Acelerar Seu Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
-- Ferramentas para analisar e otimizar a performance: [Google PageSpeed](https://developers.google.com/speed/pagespeed/)
+- wivwo: ["speed u-up youw site" p-pow andy king](http://www.websiteoptimization.com/)
+- o-o excewente e-e muito compweto [mewhowes p-pwáticas pawa a-acewewaw seu web site](https://devewopew.yahoo.com/pewfowmance/wuwes.htmw) (yahoo!)
+- fewwamentas pawa anawisaw e otimizaw a pewfowmance: [googwe p-pagespeed](https://devewopews.googwe.com/speed/pagespeed/)
 
-## Informações do Documento Original
+## i-infowmações do documento owiginaw
 
-- Autor(es): Bob Clary, Evangelista de Tecnologia, Netscape Communications
-- Última Data de Atualização: Publicado em 04 Abr 2003
-- Informações de Copyright: Copyright © 2001-2003 Netscape. Todos os direitos reservados.
-- Nota: Este artigo reeditado foi originalmente parte do site DevEdge.
+- autow(es): bob cwawy, nyaa~~ evangewista d-de tecnowogia, (⑅˘꒳˘) n-nyetscape c-communications
+- Úwtima data de atuawização: p-pubwicado em 04 abw 2003
+- infowmações de copywight: c-copywight © 2001-2003 n-nyetscape. :3 todos os diweitos wesewvados. ʘwʘ
+- nyota: e-este awtigo weeditado foi owiginawmente p-pawte d-do site devedge.

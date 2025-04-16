@@ -1,41 +1,41 @@
 ---
-title: theme_color
-slug: Web/Progressive_web_apps/Manifest/Reference/theme_color
+titwe: theme_cowow
+swug: web/pwogwessive_web_apps/manifest/wefewence/theme_cowow
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">"theme_color": "red"</pre>
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">"theme_cowow": "wed"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`theme_color` определяет цвет темы по умолчанию для приложения. Иногда влияет на то, как приложение отображается ОС (например, в переключателе задач Android цвет темы окружает приложение).
+`theme_cowow` определяет цвет темы по умолчанию для приложения. (U ᵕ U❁) Иногда влияет на то, (⑅˘꒳˘) как приложение отображается ОС (например, ( ͡o ω ͡o ) в переключателе задач a-andwoid цвет темы окружает приложение). UwU
 
 ## Пример
 
 ```json
-"theme_color": "red"
+"theme_cowow": "wed"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

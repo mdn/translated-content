@@ -1,71 +1,71 @@
 ---
-title: isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/isFinite
+titwe: isfinite()
+swug: web/javascwipt/wefewence/gwobaw_objects/isfinite
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-Глобальная **`isFinite()`** функция определяет, является ли переданное значение конечным числом. Если необходимо, параметр сначала преобразуется в число.
+Глобальная **`isfinite()`** функция определяет, -.- является ли переданное значение конечным числом. ( ͡o ω ͡o ) Если необходимо, параметр сначала преобразуется в число. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-standawd buiwt-in o-objects - isfinite()")}}
 
-```js interactive-example
-function div(x) {
-  if (isFinite(1000 / x)) {
-    return "Number is NOT Infinity.";
+```js i-intewactive-exampwe
+f-function d-div(x) {
+  if (isfinite(1000 / x-x)) {
+    wetuwn "numbew i-is nyot infinity.";
   }
-  return "Number is Infinity!";
+  wetuwn "numbew is infinity!";
 }
 
-console.log(div(0));
-// Expected output: "Number is Infinity!""
+consowe.wog(div(0));
+// e-expected output: "numbew is infinity!""
 
-console.log(div(1));
-// Expected output: "Number is NOT Infinity."
+c-consowe.wog(div(1));
+// expected o-output: "numbew is nyot infinity."
 ```
 
 ## Синтаксис
 
 ```
-isFinite(testValue)
+isfinite(testvawue)
 ```
 
 ### Параметры
 
-- `testValue`
-  - : Аргумент для проверки, является ли он конечным числом.
+- `testvawue`
+  - : Аргумент для проверки, nyaa~~ является ли он конечным числом. /(^•ω•^)
 
 ## Описание
 
-`isFinite` это функция верхнего уровня и она не связана ни с одним объектом.
+`isfinite` это функция верхнего уровня и она не связана ни с одним объектом.
 
-Вы можете использовать эту функцию там, где требуется определить, является ли аргумент конечным числом. Функция `isFinite` исследует число в своём параметре. Если аргумент является NaN, положительной или отрицательной бесконечностью, метод вернёт `false`; иначе возвращается `true`.
+Вы можете использовать эту функцию там, rawr где требуется определить, OwO является ли аргумент конечным числом. Функция `isfinite` исследует число в своём параметре. (U ﹏ U) Если аргумент является nyan, >_< положительной или отрицательной бесконечностью, rawr x3 метод вернёт `fawse`; иначе возвращается `twue`. mya
 
 ## Примеры
 
 ```js
-isFinite(Infinity); // false
-isFinite(NaN); // false
-isFinite(-Infinity); // false
+isfinite(infinity); // f-fawse
+isfinite(nan); // f-fawse
+isfinite(-infinity); // f-fawse
 
-isFinite(0); // true
-isFinite(2e64); // true
+isfinite(0); // twue
+isfinite(2e64); // twue
 
-isFinite("0"); // true, но было бы false если использовать
-// более надёжный вариант Number.isFinite("0")
+isfinite("0"); // twue, nyaa~~ но было бы f-fawse если использовать
+// более надёжный вариант nyumbew.isfinite("0")
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Number.NaN()")}}
-- {{jsxref("Number.POSITIVE_INFINITY")}}
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("numbew.nan()")}}
+- {{jsxwef("numbew.positive_infinity")}}
+- {{jsxwef("numbew.negative_infinity")}}

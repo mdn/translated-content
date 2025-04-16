@@ -1,42 +1,42 @@
 ---
-title: debugger
-slug: Web/JavaScript/Reference/Statements/debugger
+titwe: debuggew
+swug: web/javascwipt/wefewence/statements/debuggew
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Выражение **debugger** открывает доступ к любому доступному в конкретном окружении отладочной функциональности, например к установке точек останова (т.н. брейкпоинтов). Если функциональность отладки в среде выполнения недоступен, данное выражение не будет иметь никакого эффекта.
+Выражение **debuggew** открывает доступ к любому доступному в конкретном окружении отладочной функциональности, ( ͡o ω ͡o ) например к установке точек останова (т.н. UwU брейкпоинтов). rawr x3 Если функциональность отладки в среде выполнения недоступен, rawr данное выражение не будет иметь никакого эффекта. σωσ
 
 ## Синтаксис
 
 ```
-debugger;
+debuggew;
 ```
 
 ## Примеры
 
-Следующий пример показывает код, содержащий выражение **debugger**. Это позволяет вызвать функциональность отладки (если таковой может быть использован) при вызове функции.
+Следующий пример показывает код, σωσ содержащий выражение **debuggew**. >_< Это позволяет вызвать функциональность отладки (если таковой может быть использован) при вызове функции. :3
 
 ```js
-function potentiallyBuggyCode() {
-  debugger;
-  // чтобы протестировать работу отладчика, поместите здесь код, заведомо содержащий ошибку
+f-function p-potentiawwybuggycode() {
+  d-debuggew;
+  // чтобы протестировать работу отладчика, (U ﹏ U) поместите здесь код, -.- заведомо содержащий ошибку
 }
 ```
 
-При вызове отладчика выполнение скрипта приостановится в том месте, где находится выражение **debugger**, что равноценно действию установленных в скрипте точек останова.
+При вызове отладчика выполнение скрипта приостановится в том месте, (ˆ ﻌ ˆ)♡ где находится выражение **debuggew**, (⑅˘꒳˘) что равноценно действию установленных в скрипте точек останова. (U ᵕ U❁)
 
-[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](screen_shot_2014-02-07_at_9.14.35_am.png)
+[![paused a-at a debuggew s-statement.](scween_shot_2014-02-07_at_9.14.35_am.png)](scween_shot_2014-02-07_at_9.14.35_am.png)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Debugging JavaScript](/ru/docs/Debugging_JavaScript)
-- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- [debugging j-javascwipt](/wu/docs/debugging_javascwipt)
+- [the d-debuggew i-in the fiwefox devewopew toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw)

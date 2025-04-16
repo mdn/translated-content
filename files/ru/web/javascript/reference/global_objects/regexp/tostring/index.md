@@ -1,50 +1,50 @@
 ---
-title: RegExp.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
+titwe: wegexp.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toString()`** возвращает строковое представление регулярного выражения.
+Метод **`tostwing()`** возвращает строковое представление регулярного выражения. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-regexObj.toString()
+w-wegexobj.tostwing()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (⑅˘꒳˘)
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/RegExp", "RegExp")}} переопределяет метод `toString()` объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/RegExp", "RegExp")}}, метод `toString()` возвращает строковое представление регулярного выражения.
+Объект {{jsxwef("gwobaw_objects/wegexp", ( ͡o ω ͡o ) "wegexp")}} переопределяет метод `tostwing()` объекта {{jsxwef("gwobaw_objects/object", UwU "object")}}; он не наследует метод {{jsxwef("object.pwototype.tostwing()")}}. rawr x3 Для объектов {{jsxwef("gwobaw_objects/wegexp", rawr "wegexp")}}, σωσ метод `tostwing()` возвращает строковое представление регулярного выражения. σωσ
 
 ## Примеры
 
-### Пример: использование метода `toString()`
+### Пример: использование метода `tostwing()`
 
-Следующий пример отображает строковое значение объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}:
+Следующий пример отображает строковое значение объекта {{jsxwef("gwobaw_objects/wegexp", "wegexp")}}:
 
 ```js
-var myExp = new RegExp("a+b+c");
-console.log(myExp.toString()); // отобразит '/a+b+c/'
+v-vaw myexp = nyew w-wegexp("a+b+c");
+c-consowe.wog(myexp.tostwing()); // отобразит '/a+b+c/'
 
-var foo = new RegExp("bar", "g");
-console.log(foo.toString()); // отобразит '/bar/g'
+v-vaw foo = nyew w-wegexp("baw", >_< "g");
+c-consowe.wog(foo.tostwing()); // отобразит '/baw/g'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

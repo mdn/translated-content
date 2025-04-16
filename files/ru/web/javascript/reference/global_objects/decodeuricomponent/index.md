@@ -1,81 +1,81 @@
 ---
-title: decodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+titwe: decodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-Метод **`decodeURIComponent()`** декодирует управляющие последовательности символов в компоненте Uniform Resource Identifier (URI), созданные с помощью метода {{jsxref("encodeURIComponent")}} или другой подобной процедуры.
+Метод **`decodeuwicomponent()`** декодирует управляющие последовательности символов в компоненте unifowm w-wesouwce i-identifiew (uwi), -.- созданные с помощью метода {{jsxwef("encodeuwicomponent")}} или другой подобной процедуры. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd buiwt-in o-objects - d-decodeuwicomponent()")}}
 
-```js interactive-example
-function containsEncodedComponents(x) {
-  // ie ?,=,&,/ etc
-  return decodeURI(x) !== decodeURIComponent(x);
+```js i-intewactive-exampwe
+f-function containsencodedcomponents(x) {
+  // i-ie ?,=,&,/ etc
+  wetuwn decodeuwi(x) !== decodeuwicomponent(x);
 }
 
-console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
-// Expected output: true
+consowe.wog(containsencodedcomponents("%3fx%3dtest")); // ?x=test
+// expected o-output: twue
 
-console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
-// Expected output: false
+consowe.wog(containsencodedcomponents("%d1%88%d0%b5%d0%bb%d0%bb%d1%8b")); // шеллы
+// expected o-output: fawse
 ```
 
 ## Синтаксис
 
 ```
-decodeURIComponent(encodedURI)
+decodeuwicomponent(encodeduwi)
 ```
 
 ### Параметры
 
-- `encodedURI`
-  - : Строка, содержащая закодированный компонент Uniform Resource Identifier.
+- `encodeduwi`
+  - : Строка, rawr x3 содержащая закодированный компонент u-unifowm wesouwce identifiew. nyaa~~
 
 ### Возвращаемое значение
 
-Новая строка, представляющая собой декодированную версию компонента Uniform Resource Identifier (URI), переданного в качестве параметра.
+Новая строка, /(^•ω•^) представляющая собой декодированную версию компонента unifowm wesouwce identifiew (uwi), rawr переданного в качестве параметра. OwO
 
 ### Исключения
 
-При неправильном использовании выдаёт исключение {{jsxref("URIError")}} ("неверный формат последовательности URI").
+При неправильном использовании выдаёт исключение {{jsxwef("uwiewwow")}} ("неверный формат последовательности u-uwi"). (U ﹏ U)
 
 ## Описание
 
-Заменяет каждую управляющую последовательность в закодированном компоненте URI соответствующим ей символом.
+Заменяет каждую управляющую последовательность в закодированном компоненте uwi соответствующим ей символом. >_<
 
 ## Примеры
 
-### Декодирование компонента кириллического URL
+### Декодирование компонента кириллического u-uww
 
 ```js
-decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
-// "JavaScript_шеллы"
+d-decodeuwicomponent("javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b");
+// "javascwipt_шеллы"
 ```
 
 ### Перехват ошибок
 
 ```js
-try {
-  var a = decodeURIComponent("%E0%A4%A");
+twy {
+  vaw a = decodeuwicomponent("%e0%a4%a");
 } catch (e) {
-  console.error(e);
+  consowe.ewwow(e);
 }
 
-// URIError: malformed URI sequence
+// u-uwiewwow: mawfowmed uwi sequence
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

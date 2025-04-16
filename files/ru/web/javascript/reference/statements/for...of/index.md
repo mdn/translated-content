@@ -1,308 +1,308 @@
 ---
-title: for...of
-slug: Web/JavaScript/Reference/Statements/for...of
+titwe: fow...of
+swug: web/javascwipt/wefewence/statements/fow...of
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
 ## Сводка
 
-Оператор `for...of` выполняет цикл обхода [итерируемых объектов](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) (включая {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, объект [аргументов](/ru/docs/Web/JavaScript/Reference/Functions/arguments) и подобных), вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта.
+Оператор `fow...of` выполняет цикл обхода [итерируемых объектов](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows) (включая {{jsxwef("awway")}}, 😳 {{jsxwef("map")}}, 😳 {{jsxwef("set")}}, σωσ объект [аргументов](/wu/docs/web/javascwipt/wefewence/functions/awguments) и подобных), rawr x3 вызывая на каждом шаге итерации операторы для каждого значения из различных свойств объекта. OwO
 
 ## Синтаксис
 
 ```
-for (variable of iterable) {
-  statement
+f-fow (vawiabwe o-of itewabwe) {
+  s-statement
 }
 ```
 
-- `variable`
-  - : На каждом шаге итерации `variable` присваивается значение нового свойства объекта _`iterable`_. Переменная _`variable`_ может быть также объявлена с помощью `const`, `let` или `var`.
-- `iterable`
-  - : Объект, перечисляемые свойства которого обходятся во время выполнения цикла.
+- `vawiabwe`
+  - : На каждом шаге итерации `vawiabwe` присваивается значение нового свойства объекта _`itewabwe`_. /(^•ω•^) Переменная _`vawiabwe`_ может быть также объявлена с помощью `const`, 😳😳😳 `wet` или `vaw`. ( ͡o ω ͡o )
+- `itewabwe`
+  - : Объект, >_< перечисляемые свойства которого обходятся во время выполнения цикла. >w<
 
 ## Примеры
 
-### Обход {{jsxref("Array")}}
+### Обход {{jsxwef("awway")}}
 
 ```
-let iterable = [10, 20, 30];
+w-wet itewabwe = [10, rawr 20, 30];
 
-for (let value of iterable) {
-  value += 1;
-  console.log(value);
+f-fow (wet vawue o-of itewabwe) {
+  v-vawue += 1;
+  c-consowe.wog(vawue);
 }
 // 11
 // 21
 // 31
 ```
 
-Можно также использовать [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) вместо [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let), если не нужно переназначать переменные внутри блока.
+Можно также использовать [`const`](/wu/docs/web/javascwipt/wefewence/statements/const) вместо [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet), 😳 если не нужно переназначать переменные внутри блока. >w<
 
 ```
-let iterable = [10, 20, 30];
+wet itewabwe = [10, (⑅˘꒳˘) 20, OwO 30];
 
-for (const value of iterable) {
-  console.log(value);
+fow (const vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 10
 // 20
 // 30
 ```
 
-### Обход {{jsxref("String")}}
+### Обход {{jsxwef("stwing")}}
 
 ```
-let iterable = 'boo';
+w-wet itewabwe = 'boo';
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // "b"
 // "o"
 // "o"
 ```
 
-### Обход {{jsxref("TypedArray")}}
+### Обход {{jsxwef("typedawway")}}
 
 ```
-let iterable = new Uint8Array([0x00, 0xff]);
+wet itewabwe = n-nyew uint8awway([0x00, 0xff]);
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
 // 0
 // 255
 ```
 
-### Обход {{jsxref("Map")}}
+### Обход {{jsxwef("map")}}
 
 ```
-let iterable = new Map([['a', 1], ['b', 2], ['c', 3]]);
+w-wet itewabwe = nyew map([['a', (ꈍᴗꈍ) 1], ['b', 😳 2], ['c', 3]]);
 
-for (let entry of iterable) {
-  console.log(entry);
+f-fow (wet e-entwy of itewabwe) {
+  consowe.wog(entwy);
 }
-// ['a', 1]
-// ['b', 2]
+// ['a', 😳😳😳 1]
+// ['b', mya 2]
 // ['c', 3]
 
-for (let [key, value] of iterable) {
-  console.log(value);
+fow (wet [key, vawue] of itewabwe) {
+  consowe.wog(vawue);
 }
 // 1
 // 2
 // 3
 ```
 
-### Обход {{jsxref("Set")}}
+### Обход {{jsxwef("set")}}
 
 ```
-let iterable = new Set([1, 1, 2, 2, 3, 3]);
+w-wet itewabwe = nyew set([1, mya 1, 2, 2, 3, (⑅˘꒳˘) 3]);
 
-for (let value of iterable) {
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 1
 // 2
 // 3
 ```
 
-### Обход объекта {{jsxref("arguments")}}
+### Обход объекта {{jsxwef("awguments")}}
 
 ```
 (function() {
-  for (let argument of arguments) {
-    console.log(argument);
+  fow (wet awgument o-of awguments) {
+    c-consowe.wog(awgument);
   }
-})(1, 2, 3);
+})(1, (U ﹏ U) 2, 3);
 
 // 1
 // 2
 // 3
 ```
 
-### Обход DOM коллекций
+### Обход d-dom коллекций
 
-Обход DOM коллекций наподобие {{domxref("NodeList")}}: следующий пример добавляет класс `read` параграфам, являющимся непосредственными потомками статей:
+Обход d-dom коллекций наподобие {{domxwef("nodewist")}}: следующий пример добавляет класс `wead` параграфам, mya являющимся непосредственными потомками статей:
 
 ```
-// Примечание: работает только на платформах, где
-// реализован NodeList.prototype[Symbol.iterator]
-let articleParagraphs = document.querySelectorAll('article > p');
+// Примечание: работает только на платформах, ʘwʘ где
+// реализован nyodewist.pwototype[symbow.itewatow]
+wet awticwepawagwaphs = d-document.quewysewectowaww('awticwe > p');
 
-for (let paragraph of articleParagraphs) {
-  paragraph.classList.add('read');
+fow (wet pawagwaph of awticwepawagwaphs) {
+  p-pawagwaph.cwasswist.add('wead');
 }
 ```
 
 ### Закрытие итераторов
 
-В циклах `for...of` аварийный выход осуществляется через `break`, `throw` или `return`. Во всех вариантах итератор завершается.
+В циклах `fow...of` аварийный выход осуществляется через `bweak`, (˘ω˘) `thwow` или `wetuwn`. (U ﹏ U) Во всех вариантах итератор завершается. ^•ﻌ•^
 
 ```
 function* foo(){
-  yield 1;
-  yield 2;
-  yield 3;
+  yiewd 1;
+  yiewd 2;
+  yiewd 3;
 };
 
-for (let o of foo()) {
-  console.log(o);
-  break; //  итератор закрывается, возврат
+fow (wet o of foo()) {
+  c-consowe.wog(o);
+  bweak; //  итератор закрывается, (˘ω˘) возврат
 }
 ```
 
 ### Обход генераторов
 
-Вы можете выполнять обход [генераторов](/ru/docs/Web/JavaScript/Reference/Statements/function*), вот пример:
+Вы можете выполнять обход [генераторов](/wu/docs/web/javascwipt/wefewence/statements/function*), :3 вот пример:
 
 ```js
-function* fibonacci() {
+f-function* f-fibonacci() {
   // функция-генератор
-  let [prev, curr] = [0, 1];
-  for (;;) {
-    [prev, curr] = [curr, prev + curr];
-    yield curr;
+  w-wet [pwev, ^^;; cuww] = [0, 🥺 1];
+  fow (;;) {
+    [pwev, (⑅˘꒳˘) cuww] = [cuww, nyaa~~ pwev + c-cuww];
+    y-yiewd cuww;
   }
 }
 
-for (let n of fibonacci()) {
+fow (wet ny of f-fibonacci()) {
   // ограничивает последовательность на 1000
-  if (n > 1000) break;
-  console.log(n);
+  i-if (n > 1000) bweak;
+  consowe.wog(n);
 }
 ```
 
 #### Не пытайтесь повторно использовать генератор
 
-Генераторы нельзя использовать дважды, даже если цикл `for...of` завершится аварийно, например, через оператор {{jsxref("Statements/break", "break")}} . При выходе из цикла генератор завершается, и любые попытки получить из него значение обречены.
+Генераторы нельзя использовать дважды, :3 даже если цикл `fow...of` завершится аварийно, ( ͡o ω ͡o ) например, mya через оператор {{jsxwef("statements/bweak", (///ˬ///✿) "bweak")}} . (˘ω˘) При выходе из цикла генератор завершается, ^^;; и любые попытки получить из него значение обречены. (✿oωo)
 
-```js example-bad
-var gen = (function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+```js e-exampwe-bad
+vaw gen = (function* () {
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 })();
-for (let o of gen) {
-  console.log(o);
-  break; // Завешение обхода
+fow (wet o-o of gen) {
+  consowe.wog(o);
+  b-bweak; // Завешение обхода
 }
 
-// Генератор нельзя повторно обойти, следующее не имеет смысла!
-for (let o of gen) {
-  console.log(o); // Не будет вызван
+// Генератор нельзя повторно обойти, (U ﹏ U) следующее не имеет смысла! -.-
+fow (wet o of g-gen) {
+  consowe.wog(o); // Не будет вызван
 }
 ```
 
 ### Обход итерируемых объектов
 
-Кроме того, можно сделать обход объекта, явно реализующего [iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterable):
+Кроме того, ^•ﻌ•^ можно сделать обход объекта, rawr явно реализующего [itewabwe](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows#itewabwe):
 
 ```
-var iterable = {
-  [Symbol.iterator]() {
-    return {
-      i: 0,
-      next() {
+v-vaw itewabwe = {
+  [symbow.itewatow]() {
+    wetuwn {
+      i: 0, (˘ω˘)
+      nyext() {
         if (this.i < 3) {
-          return { value: this.i++, done: false };
+          wetuwn { vawue: this.i++, nyaa~~ done: fawse };
         }
-        return { value: undefined, done: true };
+        wetuwn { vawue: u-undefined, UwU d-done: twue };
       }
     };
   }
 };
 
-for (var value of iterable) {
-  console.log(value);
+fow (vaw vawue o-of itewabwe) {
+  c-consowe.wog(vawue);
 }
 // 0
 // 1
 // 2
 ```
 
-### Различия между `for...of` и `for...in`
+### Различия между `fow...of` и `fow...in`
 
-Оба оператора, и `for...in` и `for...of` производят обход объектов . Разница в том, как они это делают.
+Оба оператора, :3 и `fow...in` и `fow...of` производят обход объектов . (⑅˘꒳˘) Разница в том, (///ˬ///✿) как они это делают. ^^;;
 
-Для {{jsxref("Statements/for...in", "for...in")}} обход [перечисляемых свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) объекта осуществляется в произвольном порядке.
+Для {{jsxwef("statements/fow...in", >_< "fow...in")}} обход [перечисляемых свойств](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties) объекта осуществляется в произвольном порядке. rawr x3
 
-Для `for...of` обход происходит в соответствии с тем, какой порядок определён в [итерируемом объекте](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
+Для `fow...of` обход происходит в соответствии с тем, /(^•ω•^) какой порядок определён в [итерируемом объекте](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows). :3
 
-Следующий пример показывает различия в работе циклов `for...of` и `for...in` при обходе {{jsxref("Array")}}.
+Следующий пример показывает различия в работе циклов `fow...of` и `fow...in` при обходе {{jsxwef("awway")}}. (ꈍᴗꈍ)
 
 ```
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+o-object.pwototype.objcustom = function() {};
+awway.pwototype.awwcustom = function() {};
 
-let iterable = [3, 5, 7];
-iterable.foo = 'hello';
+w-wet itewabwe = [3, /(^•ω•^) 5, 7];
+itewabwe.foo = 'hewwo';
 
-for (let i in iterable) {
-  console.log(i); // выведет 0, 1, 2, "foo", "arrCustom", "objCustom"
+fow (wet i in itewabwe) {
+  consowe.wog(i); // выведет 0, (⑅˘꒳˘) 1, 2, "foo", ( ͡o ω ͡o ) "awwcustom", "objcustom"
 }
 
-for (let i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // выведет 0, 1, 2, "foo"
+f-fow (wet i in itewabwe) {
+  i-if (itewabwe.hasownpwopewty(i)) {
+    c-consowe.wog(i); // выведет 0, òωó 1, 2, "foo"
   }
 }
 
-for (let i of iterable) {
-  console.log(i); // выведет 3, 5, 7
+f-fow (wet i of itewabwe) {
+  consowe.wog(i); // выведет 3, 5, (⑅˘꒳˘) 7
 }
 ```
 
 Разберёмся шаг за шагом в вышеописанном коде.
 
 ```
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+o-object.pwototype.objcustom = f-function() {};
+a-awway.pwototype.awwcustom = f-function() {};
 
-let iterable = [3, 5, 7];
-iterable.foo = 'hello';
+wet itewabwe = [3, XD 5, 7];
+itewabwe.foo = 'hewwo';
 ```
 
-Каждый объект унаследует метод `objCustom` и каждый массив {{jsxref("Array")}} унаследует метод `arrCustom` благодаря созданию их в {{jsxref("Object.prototype")}} и {{jsxref("Array.prototype")}}. Объект `iterable` унаследует методы `objCustom` и `arrCustom` из-за [наследования через прототип](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Каждый объект унаследует метод `objcustom` и каждый массив {{jsxwef("awway")}} унаследует метод `awwcustom` благодаря созданию их в {{jsxwef("object.pwototype")}} и {{jsxwef("awway.pwototype")}}. -.- Объект `itewabwe` унаследует методы `objcustom` и `awwcustom` из-за [наследования через прототип](/wu/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain). :3
 
 ```
-for (let i in iterable) {
-  console.log(i); // выведет 0, 1, 2, "foo", "arrCustom", "objCustom"
+f-fow (wet i-i in itewabwe) {
+  c-consowe.wog(i); // выведет 0, nyaa~~ 1, 2, "foo", "awwcustom", 😳 "objcustom"
 }
 ```
 
-Цикл выводит только [перечисляемые свойства](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) объекта `iterable`, в порядке их создания. Он не выводит **значения** `3`, `5`, `7` и `hello` поскольку они **не являются** перечисляемыми, фактически они вообще не являются свойствами, они являются **значениями**. Выводятся же **имена свойств и методов**, например `arrCustom` и `objCustom`. Если вы ещё не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .
+Цикл выводит только [перечисляемые свойства](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties) объекта `itewabwe`, (⑅˘꒳˘) в порядке их создания. nyaa~~ Он не выводит **значения** `3`, OwO `5`, `7` и `hewwo` поскольку они **не являются** перечисляемыми, rawr x3 фактически они вообще не являются свойствами, XD они являются **значениями**. σωσ Выводятся же **имена свойств и методов**, (U ᵕ U❁) например `awwcustom` и `objcustom`. (U ﹏ U) Если вы ещё не совсем поняли, :3 по каким свойствам осуществляется обход, ( ͡o ω ͡o ) вот дополнительное объяснение того, σωσ как работает {{jsxwef("statements/fow...in", >w< "awway i-itewation a-and fow...in", 😳😳😳 "#awway_itewation_and_fow...in")}} . OwO
 
 ```
-for (let i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // выведет 0, 1, 2, "foo"
+fow (wet i in itewabwe) {
+  if (itewabwe.hasownpwopewty(i)) {
+    consowe.wog(i); // выведет 0, 😳 1, 2, "foo"
   }
 }
 ```
 
-Цикл аналогичен предыдущему, но использует {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} для проверки того, собственное ли это свойство объекта или унаследованное. Выводятся только собственные свойства. Имена `0`, `1`, `2` и `foo` принадлежат только экземпляру объекта (**не унаследованы**). Методы `arrCustom` и `objCustom` не выводятся, поскольку они **унаследованы**.
+Цикл аналогичен предыдущему, 😳😳😳 но использует {{jsxwef("object.pwototype.hasownpwopewty()", (˘ω˘) "hasownpwopewty()")}} для проверки того, ʘwʘ собственное ли это свойство объекта или унаследованное. ( ͡o ω ͡o ) Выводятся только собственные свойства. o.O Имена `0`, >w< `1`, `2` и `foo` принадлежат только экземпляру объекта (**не унаследованы**). 😳 Методы `awwcustom` и `objcustom` не выводятся, 🥺 поскольку они **унаследованы**. rawr x3
 
 ```
-for (let i of iterable) {
-  console.log(i); // выведет 3, 5, 7
+f-fow (wet i of itewabwe) {
+  consowe.wog(i); // выведет 3, o.O 5, 7
 }
 ```
 
-Этот цикл обходит `iterable` и выводит те значения [итерируемого объекта](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#%D0%98%D1%82%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B), которые определены в способе его перебора, т.е. не свойства объекта, а значения массива `3`, `5`, `7` .
+Этот цикл обходит `itewabwe` и выводит те значения [итерируемого объекта](/wu/docs/web/javascwipt/guide/itewatows_and_genewatows#%d0%98%d1%82%d0%b5%d1%80%d0%b8%d1%80%d1%83%d0%b5%d0%bc%d1%8b%d0%b5_%d0%be%d0%b1%d1%8a%d0%b5%d0%ba%d1%82%d1%8b), rawr которые определены в способе его перебора, ʘwʘ т.е. не свойства объекта, 😳😳😳 а значения массива `3`, ^^;; `5`, `7` . o.O
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Object.entries()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("map.pwototype.foweach()")}}
+- {{jsxwef("object.entwies()")}}

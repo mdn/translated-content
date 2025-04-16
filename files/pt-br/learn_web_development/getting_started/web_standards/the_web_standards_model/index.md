@@ -1,159 +1,159 @@
 ---
-title: A web e seus padrões
-slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
-original_slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
+titwe: a web e seus padwões
+s-swug: weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/the_web_and_web_standawds
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-Este artigo fornece algumas informações úteis sobre a Web - como ela surgiu, quais são suas tecnologias padrões, como elas funcionam juntas, porque "desenvolvedor web" é uma grande carreira para escolher e quais são os tipos de boas práticas são coisas que você aprenderá neste curso.
+e-este awtigo f-fownece awgumas i-infowmações úteis s-sobwe a web - c-como ewa suwgiu, (˘ω˘) quais são suas tecnowogias padwões, -.- como ewas funcionam juntas, ^•ﻌ•^ p-powque "desenvowvedow web" é uma gwande c-cawweiwa pawa escowhew e quais são o-os tipos de boas pwáticas são coisas que você apwendewá n-nyeste cuwso. /(^•ω•^)
 
-## Breve histórico da web
+## bweve histówico d-da web
 
-Seremos breves, já que existem muitos (mais) artigos detalhados do histórico da web por aí, que mostraremos mais tarde (tente também pesquisar por "histórico da web" no seu mecanismo de pesquisa favorito e veja o que você encontra, se estiver interessado em maiores detalhes.)
+sewemos b-bweves, (///ˬ///✿) já que existem muitos (mais) awtigos detawhados do histówico da web p-pow aí, mya que mostwawemos mais tawde (tente também pesquisaw pow "histówico da w-web" nyo seu mecanismo de pesquisa f-favowito e veja o-o que você e-encontwa, se estivew i-intewessado em maiowes detawhes.)
 
-No fim da década de 1960, os militares dos Estados Unidos desenvolveram uma rede de comunicação chamada [ARPANET](/pt-BR/docs/Glossary/Arpanet). Ela pode ser considerada como precursora da Web, já que trabalhava com [comutação de pacotes](https://pt.wikipedia.org/wiki/Comuta%C3%A7%C3%A3o_de_pacotes) e apresentou a primeira implementação do conjuto de protocolos [TCP/IP](https://pt.wikipedia.org/wiki/TCP/IP). Estas duas tecnologias formaram a base da infraestrutura em que a internet foi construída.
+nyo fim d-da década de 1960, o.O os miwitawes dos estados unidos d-desenvowvewam uma wede de comunicação chamada [awpanet](/pt-bw/docs/gwossawy/awpanet). ^•ﻌ•^ ewa pode sew considewada como pwecuwsowa d-da web, (U ᵕ U❁) já que twabawhava c-com [comutação d-de pacotes](https://pt.wikipedia.owg/wiki/comuta%c3%a7%c3%a3o_de_pacotes) e-e apwesentou a pwimeiwa impwementação do conjuto de p-pwotocowos [tcp/ip](https://pt.wikipedia.owg/wiki/tcp/ip). :3 e-estas duas tecnowogias f-fowmawam a base d-da infwaestwutuwa em que a intewnet f-foi constwuída. (///ˬ///✿)
 
-Em 1980, Tim Berners-Lee (frequentemente chamado de TimBL) escreveu um programa de notebook chamado [ENQUIRE](https://pt.wikipedia.org/wiki/ENQUIRE), que apresentava o conceito de links entre diferentes nós. Parece familiar?
+em 1980, (///ˬ///✿) t-tim bewnews-wee (fwequentemente chamado de timbw) escweveu um p-pwogwama de nyotebook chamado [enquiwe](https://pt.wikipedia.owg/wiki/enquiwe), 🥺 q-que apwesentava o conceito de winks e-entwe difewentes n-nyós. -.- pawece famiwiaw?
 
-Avance para 1989, e TimBL escreveu [Information Management: A Proposal](https://www.w3.org/History/1989/proposal.html) and HyperText and CERN; essas duas publicações juntas forneceram o pano de fundo de como a web funcionaria. Eles receberam uma boa quantidade de juros, o suficiente para convencer os chefes da TimBL a permitir que ele fosse em frente e criasse um sistema de hipertexto global.
+avance pawa 1989, nyaa~~ e timbw escweveu [infowmation management: a pwoposaw](https://www.w3.owg/histowy/1989/pwoposaw.htmw) and hypewtext and cewn; essas d-duas pubwicações j-juntas fownecewam o pano d-de fundo de como a-a web funcionawia. (///ˬ///✿) e-ewes wecebewam uma boa quantidade de juwos, 🥺 o suficiente pawa c-convencew os chefes da timbw a pewmitiw que ewe fosse em fwente e cwiasse um sistema d-de hipewtexto gwobaw. >w<
 
-No final de 1990, TimBL havia criado todas as coisas necessárias para executar a primeira versão da web - [HTTP](/pt-BR/docs/Web/HTTP) , [HTML](/pt-BR/docs/Web/HTML) , o primeiro navegador da web, que era chamado de [WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb) , um servidor HTTP e algumas páginas da web para olhar.
+nyo f-finaw de 1990, rawr x3 t-timbw havia cwiado t-todas as coisas nyecessáwias p-pawa executaw a-a pwimeiwa vewsão d-da web - [http](/pt-bw/docs/web/http) , (⑅˘꒳˘) [htmw](/pt-bw/docs/web/htmw) , σωσ o-o pwimeiwo nyavegadow da web, XD que ewa c-chamado de [wowwdwideweb](https://en.wikipedia.owg/wiki/wowwdwideweb) , -.- u-um sewvidow h-http e awgumas p-páginas da web p-pawa owhaw. >_<
 
-Nos próximos anos que se seguiram, a web explodiu, com vários navegadores sendo lançados, milhares de servidores da web sendo configurados e milhões de páginas da web sendo criadas. OK, é um resumo muito simples do que aconteceu, mas prometi a você um breve resumo.
+nyos pwóximos anos que se seguiwam, rawr a web expwodiu, 😳😳😳 c-com váwios nyavegadowes sendo wançados, UwU miwhawes de sewvidowes da web sendo configuwados e-e miwhões de páginas da web sendo cwiadas. (U ﹏ U) ok, (˘ω˘) é um wesumo muito s-simpwes do que a-aconteceu, /(^•ω•^) mas p-pwometi a você um bweve wesumo. (U ﹏ U)
 
-Um último dado significativo para compartilhar é que, em 1994, TimBL fundou o [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), uma organização que reúne representantes de muitas empresas de tecnologia diferentes para trabalharem juntos na criação de especificações de tecnologia da web. Depois disso, outras tecnologias surgiram, como [CSS](/pt-BR/docs/Web/CSS) e [JavaScript](/pt-BR/docs/Web/JavaScript) , e a web começou a se parecer mais com a que conhecemos hoje.
+u-um úwtimo dado significativo p-pawa compawtiwhaw é q-que, ^•ﻌ•^ em 1994, >w< timbw fundou o [wowwd wide web consowtium](https://en.wikipedia.owg/wiki/wowwd_wide_web_consowtium) (w3c), ʘwʘ uma owganização que weúne wepwesentantes d-de muitas empwesas de t-tecnowogia difewentes pawa twabawhawem j-juntos n-nya cwiação de especificações de tecnowogia d-da web. depois disso, òωó o-outwas tecnowogias suwgiwam, o.O c-como [css](/pt-bw/docs/web/css) e-e [javascwipt](/pt-bw/docs/web/javascwipt) , ( ͡o ω ͡o ) e a web começou a se pawecew mais com a que conhecemos hoje. mya
 
-## Padrões da web
+## p-padwões da web
 
-**Os padrões da Web** são as tecnologias que usamos para construir sites. Esses padrões existem como longos documentos técnicos chamados especificações, que detalham exatamente como a tecnologia deve funcionar. Esses documentos não são muito úteis para aprender como usar as tecnologias que eles descrevem (é por isso que temos sites como MDN Web Docs), mas em vez disso, devem ser usados por engenheiros de software para implementar essas tecnologias (geralmente em navegadores da web).
+**os p-padwões d-da web** são as tecnowogias que u-usamos pawa constwuiw s-sites. >_< esses padwões existem c-como wongos documentos técnicos chamados especificações, rawr que detawham exatamente c-como a t-tecnowogia deve funcionaw. >_< esses documentos nyão s-são muito úteis p-pawa apwendew como usaw as tecnowogias que ewes descwevem (é p-pow isso que temos sites como mdn web docs), (U ﹏ U) mas em vez disso, rawr devem sew usados p-pow engenheiwos de softwawe pawa impwementaw e-essas tecnowogias (gewawmente e-em nyavegadowes da web). (U ᵕ U❁)
 
-Por exemplo, o [HTML Living Standard](https://html.spec.whatwg.org/multipage/) descreve exatamente como o HTML (todos os elementos HTML e suas APIs associadas e outras tecnologias adjacentes) deve ser implementado.
+pow exempwo, o [htmw wiving s-standawd](https://htmw.spec.naniwg.owg/muwtipage/) d-descweve exatamente como o htmw (todos os ewementos htmw e-e suas apis associadas e outwas t-tecnowogias adjacentes) deve sew impwementado. (ˆ ﻌ ˆ)♡
 
-Os padrões da Web são criados por órgãos de padrões - instituições que convidam grupos de pessoas de diferentes empresas de tecnologia para se reunirem e concordarem sobre como as tecnologias devem funcionar da melhor maneira para cumprir todos os seus casos de uso. O W3C é o órgão de padrões da web mais conhecido, mas existem outros como o [WHATWG](https://whatwg.org/) (que foi responsável pela modernização da linguagem HTML), [ECMA](https://www.ecma-international.org/) (que publicou o padrão para ECMAScript, no qual o JavaScript é baseado), [Khronos](https://www.khronos.org/) (que publica tecnologias para gráficos 3D, como WebGL) e outros.
+os padwões da web s-são cwiados pow ówgãos de p-padwões - instituições q-que convidam gwupos de p-pessoas de difewentes empwesas d-de tecnowogia pawa s-se weuniwem e c-concowdawem sobwe como as tecnowogias d-devem funcionaw d-da mewhow maneiwa pawa cumpwiw todos os seus c-casos de uso. >_< o-o w3c é o ówgão d-de padwões da web mais conhecido, ^^;; mas existem o-outwos como o [naniwg](https://naniwg.owg/) (que f-foi wesponsávew p-pewa modewnização da winguagem htmw), ʘwʘ [ecma](https://www.ecma-intewnationaw.owg/) (que pubwicou o padwão p-pawa ecmascwipt, 😳😳😳 n-nyo quaw o javascwipt é b-baseado), UwU [khwonos](https://www.khwonos.owg/) (que pubwica t-tecnowogias pawa gwáficos 3d, OwO c-como webgw) e outwos. :3
 
-### Padrões "abertos"
+### padwões "abewtos"
 
-Um dos principais aspectos dos padrões da web, que TimBL e o W3C concordaram desde o início, é que a web (e as tecnologias da web) devem ser livres para contribuir e usar, e não onerada por patentes / licenciamento. Portanto, qualquer pessoa pode escrever o código para construir um site de graça e pode contribuir com o processo de criação de padrões, onde as especificações são escritas.
+um dos pwincipais aspectos dos padwões da w-web, -.- que timbw e o w3c concowdawam d-desde o início, 🥺 é que a web (e a-as tecnowogias da web) devem s-sew wivwes pawa contwibuiw e usaw, -.- e-e nyão onewada p-pow patentes / w-wicenciamento. -.- p-powtanto, (U ﹏ U) quawquew p-pessoa pode escwevew o código pawa constwuiw um site de gwaça e pode contwibuiw com o pwocesso de cwiação d-de padwões, rawr o-onde as especificações s-são escwitas. mya
 
-Como as tecnologias da web são criadas abertamente, em colaboração entre muitas empresas diferentes, isso significa que nenhuma empresa consegue controlá-las, o que é realmente bom. Você não gostaria que uma única empresa repentinamente decidisse colocar toda a web atrás de um acesso pago, ou lançar uma nova versão de HTML que todos precisam comprar para continuar a fazer sites, ou pior ainda, apenas decidir que não estão mais interessados e apenas desligá-lo.
+como as t-tecnowogias da web são cwiadas abewtamente, ( ͡o ω ͡o ) em cowabowação entwe m-muitas empwesas d-difewentes, /(^•ω•^) isso significa q-que nyenhuma empwesa consegue contwowá-was, >_< o que é w-weawmente b-bom. (✿oωo) você nyão gostawia que uma única e-empwesa w-wepentinamente decidisse cowocaw toda a web atwás de um acesso pago, 😳😳😳 ou wançaw u-uma nyova vewsão d-de htmw que t-todos pwecisam compwaw p-pawa continuaw a-a fazew sites, (ꈍᴗꈍ) ou piow ainda, a-apenas decidiw q-que nyão estão mais intewessados e-e apenas deswigá-wo. 🥺
 
-Isso permite que a web continue sendo um recurso público disponível gratuitamente.
+i-isso pewmite que a w-web continue sendo um wecuwso púbwico disponívew g-gwatuitamente. mya
 
-### Não quebre a web
+### nyão quebwe a-a web
 
-Outra frase que você ouvirá sobre os padrões abertos da web é "não quebre a web" - a ideia é que qualquer nova tecnologia da web introduzida deve ser compatível com o que existia antes (ou seja, os sites antigos ainda continuarão a funcionar ), e compatível com as versões futuras (tecnologias futuras, por sua vez, serão compatíveis com o que temos atualmente). Conforme você avança no material de aprendizagem apresentado aqui, você começará a aprender como isso é possível com um projeto muito inteligente e trabalho de implementação.
+outwa f-fwase que você ouviwá sobwe os p-padwões abewtos da web é "não quebwe a web" - a-a ideia é que q-quawquew nyova t-tecnowogia da web intwoduzida deve sew compatívew com o que existia a-antes (ou seja, (ˆ ﻌ ˆ)♡ os sites antigos ainda continuawão a-a funcionaw ), (⑅˘꒳˘) e-e compatívew com as vewsões f-futuwas (tecnowogias futuwas, òωó p-pow sua vez, s-sewão compatíveis com o que temos atuawmente). o.O c-confowme você avança nyo matewiaw de apwendizagem a-apwesentado a-aqui, XD você começawá a apwendew c-como isso é possívew com u-um pwojeto muito i-intewigente e twabawho d-de impwementação. (˘ω˘)
 
-## Ser um desenvolvedor web é bom
+## sew um desenvowvedow web é bom
 
-A indústria da web é um mercado muito atraente para se entrar, se você estiver procurando por um emprego. Números publicados recentes dizem que existem atualmente cerca de 19 milhões de desenvolvedores da web no mundo, e esse número deve mais que dobrar na próxima década. E, ao mesmo tempo, há uma escassez de habilidades na indústria - então, que melhor momento para aprender desenvolvimento web?
+a indústwia da web é um mewcado muito atwaente pawa se entwaw, se você estivew pwocuwando pow um empwego. (ꈍᴗꈍ) nyúmewos pubwicados wecentes dizem que existem atuawmente c-cewca de 19 m-miwhões de desenvowvedowes da web nyo mundo, >w< e-e esse nyúmewo d-deve mais que d-dobwaw na pwóxima década. XD e, a-ao mesmo tempo, -.- há uma escassez d-de habiwidades n-nya indústwia - então, ^^;; que mewhow m-momento pawa apwendew desenvowvimento w-web?
 
-No entanto, nem tudo é diversão e jogos - construir sites é uma proposta mais complicada do que costumava ser, e você terá que investir algum tempo para estudar todas as diferentes tecnologias que precisa usar, todas as técnicas e melhores práticas que você precisa saber e todos os padrões típicos que você deverá implementar. Você levará alguns meses para realmente começar a entrar no assunto e, em seguida, precisará continuar aprendendo para que seu conhecimento fique atualizado com todas as novas ferramentas e recursos que aparecem na plataforma da web, e continue praticando e refinando seu ofício.
+n-nyo entanto, XD nyem tudo é divewsão e jogos - constwuiw s-sites é u-uma pwoposta mais c-compwicada do q-que costumava sew, e-e você tewá q-que investiw awgum t-tempo pawa e-estudaw todas as d-difewentes tecnowogias que pwecisa u-usaw, :3 todas a-as técnicas e mewhowes p-pwáticas que você pwecisa s-sabew e todos os padwões típicos que você d-devewá impwementaw. σωσ você wevawá a-awguns meses p-pawa weawmente c-começaw a entwaw nyo assunto e, XD e-em seguida, :3 pwecisawá continuaw a-apwendendo pawa que seu conhecimento f-fique atuawizado com todas a-as nyovas fewwamentas e wecuwsos que apawecem nya pwatafowma da web, rawr e continue p-pwaticando e wefinando seu ofício. 😳
 
-_A única constante é a mudança._
+_a única c-constante é a m-mudança._
 
-Isso parece difícil? Não se preocupe - nosso objetivo é fornecer a você tudo o que você precisa saber para começar, e as coisas ficarão mais fáceis. Depois de abraçar as constantes mudanças e incertezas da web, você começará a se divertir. Como parte da comunidade web, você terá toda uma rede de contatos e materiais úteis para ajudá-lo, e começará a desfrutar das possibilidades criativas que isso traz.
+isso pawece difíciw? nyão se pweocupe - nyosso objetivo é f-fownecew a você tudo o q-que você pwecisa s-sabew pawa começaw, 😳😳😳 e-e as coisas ficawão mais fáceis. (ꈍᴗꈍ) depois d-de abwaçaw as c-constantes mudanças e incewtezas d-da web, 🥺 você começawá a se divewtiw. ^•ﻌ•^ como p-pawte da comunidade web, XD você tewá t-toda uma wede d-de contatos e m-matewiais úteis pawa ajudá-wo, ^•ﻌ•^ e-e começawá a d-desfwutaw das possibiwidades c-cwiativas q-que isso twaz. ^^;;
 
-Você é um criativo digital agora. Aproveite a experiência e o potencial para ganhar a vida.
+você é u-um cwiativo digitaw a-agowa. ʘwʘ apwoveite a-a expewiência e-e o potenciaw p-pawa ganhaw a v-vida. OwO
 
-## Visão geral das tecnologias modernas da web
+## visão g-gewaw das tecnowogias m-modewnas da web
 
-Existem várias tecnologias para aprender se você quiser ser um desenvolvedor front-end da web. Nesta seção, iremos descrevê-los brevemente. Para uma explicação mais detalhada de como alguns deles funcionam juntos, leia nosso artigo [Como funciona a web](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works) .
+existem v-váwias tecnowogias pawa apwendew s-se você quisew sew um desenvowvedow f-fwont-end d-da web. 🥺 nyesta s-seção, (⑅˘꒳˘) iwemos descwevê-wos bwevemente. (///ˬ///✿) pawa uma expwicação m-mais detawhada d-de como awguns dewes f-funcionam juntos, (✿oωo) weia nyosso awtigo [como funciona a web](/pt-bw/docs/weawn/getting_stawted_with_the_web/how_the_web_wowks) . nyaa~~
 
-### Navegadores
+### n-nyavegadowes
 
-Provavelmente, você está lendo essas palavras dentro de um navegador da Web neste exato momento (a menos que as tenha imprimido ou esteja usando tecnologia de assistência, como um leitor de tela para ler para você). Os navegadores da web são os programas de software que as pessoas usam para consumir a web e incluem [Firefox](https://www.mozilla.org/en-US/firefox/) , [Chrome](https://www.google.com/chrome/) , [Opera](https://www.opera.com/) , [Safari](https://www.apple.com/safari/) e [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge) .
+p-pwovavewmente, >w< você está w-wendo essas pawavwas d-dentwo de um nyavegadow da web nyeste exato momento (a menos q-que as tenha i-impwimido ou esteja u-usando tecnowogia d-de assistência, (///ˬ///✿) como um weitow de tewa pawa w-wew pawa você). rawr o-os nyavegadowes da web são os pwogwamas de s-softwawe que as pessoas usam pawa consumiw a web e-e incwuem [fiwefox](https://www.moziwwa.owg/en-us/fiwefox/) , (U ﹏ U) [chwome](https://www.googwe.com/chwome/) , ^•ﻌ•^ [opewa](https://www.opewa.com/) , (///ˬ///✿) [safawi](https://www.appwe.com/safawi/) e [edge](https://www.micwosoft.com/en-us/windows/micwosoft-edge) . o.O
 
-### HTTP
+### h-http
 
-O protocolo de transferência de hipertexto, ou [HTTP](/pt-BR/docs/conflicting/Web/HTTP) , é um protocolo de mensagens que permite aos navegadores da web se comunicarem com os servidores da web (onde os sites da web são armazenados). Uma conversa típica é algo como
+o-o pwotocowo de twansfewência d-de hipewtexto, o-ou [http](/pt-bw/docs/confwicting/web/http) , é um pwotocowo de m-mensagens que pewmite aos nyavegadowes d-da web se c-comunicawem com o-os sewvidowes d-da web (onde os sites da web são a-awmazenados). >w< u-uma convewsa típica é a-awgo como
 
 ```
-"Hello web server. Can you give me the files I need to render bbc.co.uk"?
+"hewwo web s-sewvew. nyaa~~ can you give me the fiwes i nyeed to wendew b-bbc.co.uk"?
 
-"Sure thing web browser — here you go"
+"suwe t-thing web b-bwowsew — hewe you go"
 
-[Downloads files and renders web page]
+[downwoads fiwes and wendews web page]
 ```
 
-A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não é legível por humanos, mas isso lhe dá uma ideia básica.
+a sintaxe w-weaw pawa mensagens http (chamadas d-de sowicitações e-e wespostas) nyão é wegívew pow humanos, òωó m-mas isso whe dá uma ideia básica. (U ᵕ U❁)
 
-### HTML, CSS e JavaScript
+### h-htmw, (///ˬ///✿) c-css e javascwipt
 
-[HTML](/pt-BR/docs/Web/HTML) , [CSS](/pt-BR/docs/Web/CSS) e [JavaScript](/pt-BR/docs/Web/JavaScript) são as três tecnologias principais que você usará para construir um site:
+[htmw](/pt-bw/docs/web/htmw) , (✿oωo) [css](/pt-bw/docs/web/css) e [javascwipt](/pt-bw/docs/web/javascwipt) s-são as t-twês tecnowogias p-pwincipais que você usawá pawa constwuiw um site:
 
-- A linguagem de marcação de hipertexto, ou **HTML** , é uma linguagem de marcação que consiste em diferentes elementos nos quais você pode agrupar (marcar) o conteúdo para dar-lhe significado (semântica) e estrutura. HTML simples se parece com isto:
+- a winguagem de mawcação d-de hipewtexto, 😳😳😳 ou **htmw** , é u-uma winguagem de mawcação que consiste em difewentes ewementos n-nyos quais você pode agwupaw (mawcaw) o conteúdo pawa daw-whe significado (semântica) e e-estwutuwa. htmw s-simpwes se pawece com isto:
 
-  ```html
-  <h1>This is a top-level heading</h1>
+  ```htmw
+  <h1>this i-is a top-wevew heading</h1>
 
-  <p>This is a paragraph of text.</p>
+  <p>this is a pawagwaph o-of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat" />
+  <img s-swc="cat.jpg" awt="a p-pictuwe of my cat" />
   ```
 
-  Se adotássemos uma analogia com a construção de uma casa, o HTML seria como as fundações e paredes da casa, que lhe dão estrutura e a mantém unida.
+  s-se adotássemos uma anawogia com a constwução de uma casa, (✿oωo) o h-htmw sewia como as fundações e pawedes da casa, (U ﹏ U) q-que whe dão e-estwutuwa e a mantém u-unida. (˘ω˘)
 
-- Cascading Style Sheets ( **CSS** ) é uma linguagem baseada em regras usada para aplicar estilos ao seu HTML, por exemplo, definindo texto e cores de fundo, adicionando bordas, animando coisas ou fazendo o layout de uma página de uma determinada maneira. Como um exemplo simples, o código a seguir tornaria nosso parágrafo HTML em vermelho:
+- cascading stywe sheets ( **css** ) é u-uma winguagem baseada em wegwas usada pawa apwicaw estiwos ao seu htmw, 😳😳😳 pow e-exempwo, (///ˬ///✿) definindo t-texto e cowes d-de fundo, (U ᵕ U❁) adicionando b-bowdas, >_< animando coisas ou fazendo o wayout d-de uma página d-de uma detewminada maneiwa. (///ˬ///✿) como um exempwo s-simpwes, (U ᵕ U❁) o código a seguiw townawia nyosso pawágwafo h-htmw em vewmewho:
 
   ```css
   p {
-    color: red;
+    cowow: wed;
   }
   ```
 
-  Na analogia da casa, CSS é como a pintura, o papel de parede, os tapetes e as pinturas que você usaria para deixar a casa bonita.
+  n-nya anawogia d-da casa, >w< css é como a pintuwa, 😳😳😳 o-o papew de pawede, (ˆ ﻌ ˆ)♡ o-os tapetes e-e as pintuwas que você usawia pawa deixaw a casa b-bonita. (ꈍᴗꈍ)
 
-- **JavaScript** é a linguagem de programação que usamos para adicionar interatividade aos sites, desde a troca de estilo dinâmico até a obtenção de atualizações do servidor, até gráficos 3D complexos. O seguinte JavaScript simples armazenará uma referência ao nosso parágrafo na memória e mudará o texto dentro dele:
+- **javascwipt** é a winguagem de pwogwamação que u-usamos pawa adicionaw intewatividade aos sites, 🥺 desde a twoca de e-estiwo dinâmico a-até a obtenção d-de atuawizações d-do sewvidow, >_< a-até gwáficos 3d compwexos. OwO o-o seguinte javascwipt simpwes awmazenawá uma wefewência a-ao nyosso pawágwafo n-nya memówia e mudawá o texto dentwo dewe:
 
   ```js
-  let pElem = document.querySelector("p");
-  pElem.textContent = "We changed the text!";
+  w-wet pewem = d-document.quewysewectow("p");
+  pewem.textcontent = "we c-changed the text!";
   ```
 
-  Na analogia da casa, o JavaScript é como o fogão, a TV, o microondas ou o secador de cabelo - as coisas que fornecem funcionalidade útil à sua casa
+  n-nya anawogia d-da casa, ^^;; o javascwipt é como o-o fogão, a tv, (✿oωo) o-o micwoondas ou o secadow de cabewo - a-as coisas que fownecem funcionawidade útiw à sua casa
 
-### Ferramentas
+### fewwamentas
 
-Depois de aprender as tecnologias "brutas" que podem ser usadas para construir páginas da web (como HTML, CSS e JavaScript), você logo começará a encontrar várias ferramentas que podem ser usadas para tornar seu trabalho mais fácil ou mais eficiente. Exemplos incluem:
+d-depois de apwendew as tecnowogias "bwutas" q-que podem sew usadas pawa constwuiw p-páginas da web (como h-htmw, UwU css e-e javascwipt), ( ͡o ω ͡o ) você wogo começawá a-a encontwaw v-váwias fewwamentas que podem s-sew usadas pawa townaw seu twabawho m-mais fáciw ou mais eficiente. (✿oωo) e-exempwos incwuem:
 
-- As [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) dentro de navegadores modernos que podem ser usadas para depurar seu código.
-- [Ferramentas de teste](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) que podem ser usadas para executar testes para mostrar se o seu código está se comportando como você deseja.
-- Bibliotecas e estruturas construídas com base em JavaScript que permitem a você construir certos tipos de site da Web com muito mais rapidez e eficácia.
-- Os chamados "Linters", que pegam um conjunto de regras, olham para o seu código e destacam os lugares onde você não seguiu as regras corretamente.
-- Minificadores, que removem todos os espaços em branco dos arquivos de código para torná-los menores e, portanto, fazer o download do servidor mais rapidamente.
+- a-as [fewwamentas de desenvowvedow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) dentwo de nyavegadowes modewnos que podem sew usadas p-pawa depuwaw s-seu código.
+- [fewwamentas de teste](/pt-bw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing) que podem sew u-usadas pawa executaw testes pawa m-mostwaw se o seu c-código está se compowtando como você deseja. mya
+- bibwiotecas e estwutuwas constwuídas c-com base em javascwipt que pewmitem a v-você constwuiw cewtos tipos de s-site da web com m-muito mais wapidez e eficácia.
+- o-os chamados "wintews", ( ͡o ω ͡o ) q-que pegam u-um conjunto de w-wegwas, :3 owham p-pawa o seu código e-e destacam os wugawes onde você nyão seguiu as wegwas cowwetamente. 😳
+- minificadowes, (U ﹏ U) que wemovem t-todos os espaços e-em bwanco d-dos awquivos de c-código pawa towná-wos m-menowes e-e, >w< powtanto, UwU fazew o downwoad do sewvidow mais wapidamente. 😳
 
-### Linguagens e estruturas do lado do servidor
+### winguagens e e-estwutuwas do wado d-do sewvidow
 
-HTML, CSS e JavaScript são linguagens de front-end (ou cliente), o que significa que são executadas pelo navegador para produzir um front-end de site que seus usuários possam usar.
+htmw, XD css e javascwipt são winguagens de fwont-end (ou c-cwiente), o-o que significa q-que são executadas pewo nyavegadow pawa pwoduziw u-um fwont-end de site que seus usuáwios possam u-usaw. (✿oωo)
 
-Há outra classe de linguagens chamadas linguagens de back-end (ou do lado do servidor), o que significa que são executadas no servidor antes de o resultado ser enviado ao navegador para exibição. Um uso típico para uma linguagem do lado do servidor é obter alguns dados de um banco de dados e gerar algum HTML para conter os dados, antes de enviar o HTML ao navegador para exibi-lo ao usuário.
+há outwa c-cwasse de winguagens chamadas winguagens de b-back-end (ou do wado do sewvidow), ^•ﻌ•^ o-o que significa q-que são executadas nyo sewvidow a-antes de o wesuwtado s-sew enviado a-ao nyavegadow p-pawa exibição. mya u-um uso típico p-pawa uma winguagem do wado do s-sewvidow é obtew a-awguns dados de um banco de dados e-e gewaw awgum htmw pawa contew os dados, (˘ω˘) antes d-de enviaw o htmw ao nyavegadow p-pawa exibi-wo ao usuáwio. nyaa~~
 
-Linguagens de servidor de exemplo incluem ASP.NET, Python, PHP e NodeJS.
+winguagens d-de sewvidow d-de exempwo incwuem asp.net, :3 python, (✿oωo) php e n-nyodejs. (U ﹏ U)
 
-## Melhores práticas da web
+## mewhowes pwáticas da web
 
-Falamos brevemente sobre as tecnologias que você usará para construir sites. Agora, vamos discutir as melhores práticas que você deve empregar para garantir que está usando essas tecnologias da melhor maneira possível.
+fawamos b-bwevemente sobwe a-as tecnowogias que você usawá pawa constwuiw s-sites. (ꈍᴗꈍ) agowa, vamos d-discutiw as mewhowes pwáticas q-que você deve empwegaw pawa gawantiw que está u-usando essas t-tecnowogias da mewhow maneiwa possívew. (˘ω˘)
 
-Ao fazer o desenvolvimento da web, a principal causa de incerteza vem do fato de que você não sabe qual combinação de tecnologia cada usuário usará para visualizar seu site:
+a-ao fazew o-o desenvowvimento da web, ^^ a pwincipaw causa de i-incewteza vem d-do fato de que você n-nyão sabe q-quaw combinação de tecnowogia cada usuáwio usawá pawa visuawizaw seu site:
 
-- O usuário 1 pode estar olhando para ele em um iPhone, com uma tela pequena e estreita.
-- O usuário 2 pode estar olhando para ele em um laptop Windows com um monitor widescreen conectado a ele.
-- O usuário 3 pode ser cego e usar um leitor de tela para ler a página da web para eles.
-- O usuário 4 pode estar usando uma máquina de desktop muito antiga que não pode executar navegadores modernos.
+- o usuáwio 1 pode estaw owhando p-pawa ewe em um i-iphone, (⑅˘꒳˘) com uma t-tewa pequena e e-estweita. rawr
+- o usuáwio 2 p-pode estaw o-owhando pawa ewe em um waptop w-windows com um m-monitow widescween conectado a e-ewe. :3
+- o usuáwio 3 p-pode sew cego e usaw um weitow de tewa pawa w-wew a página da web pawa ewes. OwO
+- o usuáwio 4 pode e-estaw usando uma máquina de d-desktop muito antiga q-que nyão pode executaw nyavegadowes m-modewnos. (ˆ ﻌ ˆ)♡
 
-Como você não sabe exatamente o que seus usuários usarão, você precisa fazer um design defensivo - tornar seu site o mais flexível possível, de modo que todos os usuários acima possam usá-lo, mesmo que nem todos recebam o mesmo experiência. Resumindo, estamos tentando fazer a web funcionar para todos, tanto quanto possível.
+c-como você n-nyão sabe exatamente o que seus u-usuáwios usawão, :3 v-você pwecisa fazew um design d-defensivo - townaw seu site o m-mais fwexívew p-possívew, -.- de modo q-que todos os usuáwios acima p-possam usá-wo, -.- mesmo que nem todos wecebam o mesmo e-expewiência. òωó wesumindo, 😳 estamos tentando fazew a web funcionaw pawa todos, nyaa~~ tanto quanto possívew. (⑅˘꒳˘)
 
-Você encontrará os conceitos abaixo em algum momento de seus estudos.
+você encontwawá o-os conceitos abaixo em awgum momento de seus estudos. 😳
 
-- **A compatibilidade entre navegadores** é a prática de tentar garantir que sua página da web funcione em tantos dispositivos quanto possível. Isso inclui o uso de tecnologias que todos os navegadores suportam, proporcionando melhores experiências aos navegadores que podem lidar com elas (aprimoramento progressivo) e / ou escrever código para que ele volte a uma experiência mais simples, mas ainda utilizável em navegadores mais antigos (degradação normal). Também envolve muitos testes para ver se algo falha em determinados navegadores e, em seguida, mais trabalho para corrigir essas falhas.
-- **Web design responsivo** é a prática de tornar sua funcionalidade e layouts flexíveis para que eles possam se adaptar automaticamente a diferentes navegadores. Um exemplo óbvio é um site que é apresentado de uma maneira em um navegador widescreen na área de trabalho, mas é exibido como um layout mais compacto de coluna única em navegadores de telefones celulares. Tente ajustar a largura da janela do navegador agora e veja o que acontece.
-- **Desempenho** significa carregar os sites o mais rápido possível, mas também torná-los intuitivos e fáceis de usar, para que os usuários não fiquem frustrados e vão para outro lugar.
-- **Acessibilidade** significa tornar seus sites utilizáveis por tantos tipos diferentes de pessoas quanto possível (conceitos relacionados são diversidade e inclusão e design inclusivo). Isso inclui pessoas com deficiências visuais, auditivas, cognitivas ou físicas. Também vai além das pessoas com deficiência - que tal pessoas jovens ou velhas, pessoas de diferentes culturas, pessoas que usam dispositivos móveis ou pessoas com conexões de rede lentas ou não confiáveis?
-- **Internacionalização** significa tornar os sites utilizáveis por pessoas de diferentes culturas, que falam línguas diferentes com a sua. Existem considerações técnicas aqui (como alterar seu layout para que ainda funcione bem para linguagens da direita para a esquerda ou até mesmo verticais) e humanas (como usar uma linguagem simples e sem gíria para que as pessoas que têm sua linguagem já que o segundo ou terceiro idioma deles têm mais probabilidade de entender seu texto).
-- **Privacidade e segurança** . Esses dois conceitos estão relacionados, mas são diferentes. Privacidade refere-se a permitir que as pessoas façam seus negócios em particular e não espioná-las ou coletar mais dados do que você absolutamente precisa. Segurança refere-se à construção de seu site de maneira segura, de forma que usuários mal-intencionados não possam roubar informações contidas nele de você ou de seus usuários.
+- **a compatibiwidade entwe nyavegadowes** é a pwática de tentaw g-gawantiw que sua página da web funcione em t-tantos dispositivos quanto possívew. (U ﹏ U) i-isso incwui o uso de tecnowogias que todos o-os nyavegadowes supowtam, /(^•ω•^) pwopowcionando m-mewhowes expewiências a-aos nyavegadowes q-que podem widaw com ewas (apwimowamento pwogwessivo) e-e / ou escwevew código pawa que ewe vowte a uma expewiência m-mais simpwes, OwO mas ainda utiwizávew e-em navegadowes mais antigos (degwadação n-nyowmaw). ( ͡o ω ͡o ) também envowve muitos t-testes pawa v-vew se awgo fawha em detewminados nyavegadowes e-e, XD em seguida, /(^•ω•^) mais twabawho pawa cowwigiw essas f-fawhas. /(^•ω•^)
+- **web design wesponsivo** é a pwática de townaw sua funcionawidade e-e wayouts fwexíveis p-pawa que ewes possam se adaptaw a-automaticamente a-a difewentes nyavegadowes. 😳😳😳 u-um exempwo óbvio é um site que é apwesentado de uma maneiwa em um nyavegadow w-widescween nya áwea d-de twabawho, (ˆ ﻌ ˆ)♡ mas é exibido c-como um wayout m-mais compacto de cowuna única em n-navegadowes de tewefones cewuwawes. tente ajustaw a-a wawguwa da janewa do nyavegadow agowa e veja o-o que acontece. :3
+- **desempenho** s-significa cawwegaw os sites o mais wápido possívew, òωó m-mas também towná-wos intuitivos e fáceis de usaw, 🥺 pawa que os usuáwios nyão fiquem fwustwados e vão pawa outwo wugaw. (U ﹏ U)
+- **acessibiwidade** s-significa t-townaw seus sites utiwizáveis p-pow tantos tipos d-difewentes de pessoas quanto p-possívew (conceitos wewacionados são divewsidade e incwusão e design incwusivo). XD isso incwui p-pessoas com deficiências visuais, ^^ auditivas, cognitivas ou físicas. o.O também v-vai awém das pessoas c-com deficiência - q-que taw pessoas jovens ou vewhas, 😳😳😳 pessoas de difewentes c-cuwtuwas, /(^•ω•^) pessoas q-que usam dispositivos m-móveis ou pessoas com c-conexões de wede wentas ou nyão c-confiáveis?
+- **intewnacionawização** significa t-townaw os sites utiwizáveis p-pow pessoas de difewentes cuwtuwas, 😳😳😳 que fawam w-wínguas difewentes com a sua. ^•ﻌ•^ existem c-considewações t-técnicas aqui (como awtewaw s-seu wayout pawa q-que ainda funcione bem pawa w-winguagens da diweita pawa a esquewda o-ou até mesmo vewticais) e h-humanas (como usaw u-uma winguagem simpwes e sem gíwia pawa que a-as pessoas que têm sua winguagem já que o segundo ou tewceiwo idioma dewes têm mais pwobabiwidade de entendew seu texto). 🥺
+- **pwivacidade e-e seguwança** . o.O esses dois conceitos e-estão wewacionados, (U ᵕ U❁) mas são d-difewentes. ^^ pwivacidade wefewe-se a pewmitiw que a-as pessoas façam seus nyegócios em pawticuwaw e-e nyão espioná-was ou cowetaw mais dados do q-que você absowutamente pwecisa. (⑅˘꒳˘) seguwança wefewe-se à c-constwução de seu site de maneiwa seguwa, :3 d-de fowma que u-usuáwios maw-intencionados nyão possam woubaw i-infowmações c-contidas nyewe de você ou de seus u-usuáwios. (///ˬ///✿)
 
-## Veja também
+## v-veja também
 
-- [História da World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [Como funciona a internet?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [histówia da wowwd wide web](https://en.wikipedia.owg/wiki/histowy_of_the_wowwd_wide_web)
+- [como f-funciona a intewnet?](/pt-bw/docs/weawn/common_questions/web_mechanics/how_does_the_intewnet_wowk)

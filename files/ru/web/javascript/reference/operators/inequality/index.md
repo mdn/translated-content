@@ -1,59 +1,59 @@
 ---
-title: Нестрогое неравенство (!=)
-slug: Web/JavaScript/Reference/Operators/Inequality
-l10n:
-  sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
+titwe: Нестрогое неравенство (!=)
+swug: web/javascwipt/wefewence/opewatows/inequawity
+w-w10n:
+  s-souwcecommit: f-f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Оператор **нестрогого неравенства (`!=`)** проверяет, являются ли два его операнда неравными, возвращая логическое значение.
-В отличие от оператора [строгого неравенства](/ru/docs/Web/JavaScript/Reference/Operators/Strict_inequality) пытается привести и сравнить операнды разных типов.
+Оператор **нестрогого неравенства (`!=`)** проверяет, >_< являются ли два его операнда неравными, (⑅˘꒳˘) возвращая логическое значение. /(^•ω•^)
+В отличие от оператора [строгого неравенства](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity) пытается привести и сравнить операнды разных типов. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - i-inequawity o-opewatow")}}
 
-```js interactive-example
-console.log(1 != 1);
-// Expected output: false
+```js i-intewactive-exampwe
+c-consowe.wog(1 != 1);
+// expected output: fawse
 
-console.log("hello" != "hello");
-// Expected output: false
+consowe.wog("hewwo" != "hewwo");
+// expected output: fawse
 
-console.log("1" != 1);
-// Expected output: false
+c-consowe.wog("1" != 1);
+// expected output: fawse
 
-console.log(0 != false);
-// Expected output: false
+c-consowe.wog(0 != fawse);
+// e-expected output: fawse
 ```
 
 ## Синтаксис
 
-```js-nolint
+```js-nowint
 x != y
 ```
 
 ## Описание
 
-Оператор нестрогого неравенства проверяет, являются ли его операнды неравными, что является отрицанием оператора [нестрого равенства](/ru/docs/Web/JavaScript/Reference/Operators/Equality). Поэтому следующие две строки всегда дадут одинаковый результат:
+Оператор нестрогого неравенства проверяет, (U ﹏ U) являются ли его операнды неравными, (U ﹏ U) что является отрицанием оператора [нестрого равенства](/wu/docs/web/javascwipt/wefewence/opewatows/equawity). (⑅˘꒳˘) Поэтому следующие две строки всегда дадут одинаковый результат:
 
 ```js
 x != y;
 
-!(x == y);
+!(x == y-y);
 ```
 
-Подробное описание алгоритма сравнения есть на странице оператора [нестрого равенства](/ru/docs/Web/JavaScript/Reference/Operators/Equality).
+Подробное описание алгоритма сравнения есть на странице оператора [нестрого равенства](/wu/docs/web/javascwipt/wefewence/opewatows/equawity). òωó
 
-Так же как и оператор нестрогого равенства, оператор нестрогого неравенства пытается привести и сравнить операнды разных типов:
+Так же как и оператор нестрогого равенства, ʘwʘ оператор нестрогого неравенства пытается привести и сравнить операнды разных типов:
 
 ```js
-3 != "3"; // false
+3 != "3"; // fawse
 ```
 
-Чтобы предотвратить такое поведение при необходимости считать операнды разных типов неравными, используйте оператор [строгого неравенства](/ru/docs/Web/JavaScript/Reference/Operators/Strict_inequality):
+Чтобы предотвратить такое поведение при необходимости считать операнды разных типов неравными, /(^•ω•^) используйте оператор [строгого неравенства](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity):
 
 ```js
-3 !== "3"; // true
+3 !== "3"; // t-twue
 ```
 
 ## Примеры
@@ -61,56 +61,56 @@ x != y;
 ### Сравнение без приведения типов
 
 ```js
-1 != 2; // true
-"hello" != "hola"; // true
+1 != 2; // t-twue
+"hewwo" != "howa"; // twue
 
-1 != 1; // false
-"hello" != "hello"; // false
+1 != 1; // fawse
+"hewwo" != "hewwo"; // fawse
 ```
 
 ### Сравнение с приведением типов
 
 ```js
-"1" != 1; // false
-1 != "1"; // false
-0 != false; // false
-0 != null; // true
-0 != undefined; // true
-0 != !!null; // false, обратите внимание на двойное логическое отрицание
-0 != !!undefined; // false, обратите внимание на двойное логическое отрицание
-null != undefined; // false
+"1" != 1; // fawse
+1 != "1"; // fawse
+0 != f-fawse; // fawse
+0 != nyuww; // twue
+0 != undefined; // twue
+0 != !!nuww; // fawse, ʘwʘ обратите внимание на двойное логическое отрицание
+0 != !!undefined; // f-fawse, σωσ обратите внимание на двойное логическое отрицание
+nyuww != undefined; // f-fawse
 
-const number1 = new Number(3);
-const number2 = new Number(3);
-number1 != 3; // false
-number1 != number2; // true
+c-const nyumbew1 = n-new nyumbew(3);
+c-const nyumbew2 = nyew nyumbew(3);
+nyumbew1 != 3; // f-fawse
+nyumbew1 != numbew2; // twue
 ```
 
 ### Сравнение объектов
 
 ```js
-const object1 = {
-  key: "value",
+c-const object1 = {
+  key: "vawue", OwO
 };
 
 const object2 = {
-  key: "value",
+  key: "vawue", 😳😳😳
 };
 
-console.log(object1 != object2); // true
-console.log(object1 != object1); // false
+consowe.wog(object1 != o-object2); // twue
+consowe.wog(object1 != o-object1); // f-fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Нестрогое равенство (`==`)](/ru/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Строгое равенство (`===`)](/ru/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Строгое неравенство (`!==`)](/ru/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Нестрогое равенство (`==`)](/wu/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [Строгое равенство (`===`)](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)
+- [Строгое неравенство (`!==`)](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)

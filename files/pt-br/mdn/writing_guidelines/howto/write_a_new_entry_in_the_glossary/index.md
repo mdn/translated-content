@@ -1,79 +1,79 @@
 ---
-title: Como escrever uma entrada no glossário
-slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
+titwe: como escwevew uma entwada n-nyo gwossáwio
+s-swug: mdn/wwiting_guidewines/howto/wwite_a_new_entwy_in_the_gwossawy
 ---
 
-{{MDNSidebar}}
+{{mdnsidebaw}}
 
-Este artigo explica como adicionar e vincular entradas no [glossário MDN Web Docs](/pt-BR/docs/Glossary).
-Ele também fornece diretrizes sobre o layout e o conteúdo da entrada do glossário.
-O glossário fornece definições para todos os termos, jargões, abreviações e acrônimos que você encontrará ao ler o conteúdo do MDN sobre a Web e o desenvolvimento da Web.
+e-este a-awtigo expwica c-como adicionaw e-e vincuwaw entwadas n-nyo [gwossáwio m-mdn web docs](/pt-bw/docs/gwossawy). o.O
+ewe também fownece diwetwizes sobwe o wayout e o conteúdo d-da entwada do gwossáwio. òωó
+o gwossáwio fownece d-definições pawa todos os tewmos, 😳😳😳 j-jawgões, σωσ abweviações e acwônimos que você encontwawá a-ao wew o conteúdo do mdn sobwe a-a web e o desenvowvimento d-da web.
 
-É possível que o glossário nunca esteja completo porque a web está sempre mudando.
-Ao contribuir com novas entradas ou corrigir problemas, você pode nos ajudar a atualizar o glossário e preencher lacunas.
+É possívew que o gwossáwio nyunca esteja compweto powque a-a web está sempwe mudando. (⑅˘꒳˘)
+ao contwibuiw com nyovas entwadas ou cowwigiw pwobwemas, (///ˬ///✿) v-você pode nyos ajudaw a atuawizaw o-o gwossáwio e-e pweenchew w-wacunas. 🥺
 
-Contribuir para o glossário é uma maneira fácil de ajudar a tornar a Web mais compreensível para todos.
-Você não precisa de habilidades técnicas de alto nível.
-As entradas do glossário devem ser diretas e breves.
+contwibuiw p-pawa o gwossáwio é uma maneiwa fáciw de a-ajudaw a townaw a web mais compweensívew pawa t-todos. OwO
+você nyão pwecisa de habiwidades técnicas de awto nyívew. >w<
+as entwadas do gwossáwio d-devem sew diwetas e bweves. 🥺
 
-## Como escrever uma entrada
+## c-como escwevew uma e-entwada
 
-Primeiro, escolha o tópico para o qual você gostaria de escrever uma entrada no glossário.
-Se você estiver procurando tópicos que precisam de uma entrada de glossário, verifique a [lista de termos não documentados](/pt-BR/docs/Glossary#contribute_to_the_glossary) no final da [página inicial do glossário](/pt-BR/docs /Glossário).
+pwimeiwo, nyaa~~ e-escowha o tópico pawa o quaw você gostawia de escwevew uma e-entwada nyo gwossáwio.
+s-se você estivew pwocuwando t-tópicos que p-pwecisam de uma entwada de gwossáwio, ^^ v-vewifique a [wista de t-tewmos não documentados](/pt-bw/docs/gwossawy#contwibute_to_the_gwossawy) nyo finaw da [página i-iniciaw do gwossáwio](/pt-bw/docs /gwossáwio). >w<
 
-Se você tiver uma ideia para uma nova entrada de glossário, [crie uma nova página](https://github.com/mdn/content#adding-a-new-document) abaixo da [página inicial do glossário](https: //github.com/mdn/content/tree/main/files/en-us/glossary).
+se você tivew u-uma ideia pawa uma nyova entwada d-de gwossáwio, OwO [cwie u-uma nyova página](https://github.com/mdn/content#adding-a-new-document) abaixo da [página iniciaw do gwossáwio](https: //github.com/mdn/content/twee/main/fiwes/en-us/gwossawy). XD
 
-### Escreva um sumário
+### escweva um sumáwio
 
-O primeiro parágrafo de qualquer página do glossário é uma descrição simples e curta do termo.
-De preferência, não deve ter mais do que duas frases.
-Certifique-se de que qualquer pessoa que leia a descrição possa entender imediatamente o termo definido.
+o pwimeiwo pawágwafo de quawquew p-página d-do gwossáwio é uma descwição s-simpwes e cuwta d-do tewmo. ^^;;
+de pwefewência, 🥺 n-nyão deve tew mais do que duas fwases. XD
+cewtifique-se d-de que quawquew pessoa que weia a descwição possa entendew imediatamente o tewmo d-definido. (U ᵕ U❁)
 
-> [!CALLOUT]
-> Não copie e cole de outras definições ou conteúdo da Internet.
-> (E especialmente não a Wikipedia, já que sua gama de versões de licença é menor e incompatível com MDN.) Sua entrada de glossário deve ser conteúdo original.
+> [!cawwout]
+> nyão copie e cowe d-de outwas definições o-ou conteúdo d-da intewnet. :3
+> (e especiawmente n-nyão a wikipedia, ( ͡o ω ͡o ) j-já que s-sua gama de vewsões d-de wicença é menow e incompatívew com mdn.) s-sua entwada d-de gwossáwio deve s-sew conteúdo o-owiginaw. òωó
 
-#### Escrevendo uma boa entrada no glossário
+#### e-escwevendo uma boa entwada no gwossáwio
 
-Adicione alguns parágrafos extras, se necessário, mas é fácil acabar escrevendo um artigo inteiro.
-Escrever um artigo é bom, mas, por favor, não o crie no/para o glossário.
-Se você não tem certeza de onde colocar seu artigo, sinta-se à vontade para [entrar em contato para discuti-lo](/pt-BR/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+adicione awguns pawágwafos e-extwas, se nyecessáwio, σωσ mas é fáciw acabaw escwevendo um awtigo inteiwo. (U ᵕ U❁)
+escwevew um a-awtigo é bom, (✿oωo) mas, pow favow, ^^ nyão o cwie nyo/pawa o gwossáwio. ^•ﻌ•^
+s-se você nyão t-tem cewteza de o-onde cowocaw seu awtigo, XD sinta-se à v-vontade pawa [entwaw em contato p-pawa discuti-wo](/pt-bw/docs/mdn/community/contwibuting/getting_stawted#step_4_ask_fow_hewp).
 
-Existem algumas diretrizes simples a serem consideradas para escrever uma entrada de glossário melhor:
+e-existem awgumas diwetwizes simpwes a sewem considewadas pawa escwevew uma entwada de gwossáwio m-mewhow:
 
-- Quando você usa termos na descrição do glossário do termo ou quando você usa abreviação, você deve criar links apropriados.
-  Muitas vezes, isso envolve apenas a criação de links para outras páginas do glossário.
-- Use termos relacionados apropriados (com links) na entrada do glossário, se isso puder ser feito sem dificultar o entendimento do artigo.
-  Ter uma boa rede de links relacionados e úteis torna uma página – ou conjunto de páginas – muito mais fácil de usar.
-- Pense nos termos de pesquisa que você escolheria se quisesse encontrar esta página.
-  Tente usar todas as palavras que usaria para pesquisar o termo, mas sem tornar a entrada do glossário sem sentido, longa ou difícil de ler.
+- quando você usa t-tewmos nya descwição do gwossáwio d-do tewmo ou q-quando você usa abweviação, :3 você deve cwiaw w-winks apwopwiados. (ꈍᴗꈍ)
+  m-muitas vezes, :3 isso envowve a-apenas a cwiação d-de winks pawa outwas páginas do gwossáwio.
+- use tewmos wewacionados apwopwiados (com w-winks) n-nya entwada d-do gwossáwio, (U ﹏ U) se isso pudew sew f-feito sem dificuwtaw o-o entendimento do awtigo. UwU
+  t-tew uma boa wede de winks wewacionados e úteis towna uma página – ou conjunto d-de páginas – m-muito mais fáciw de usaw. 😳😳😳
+- pense nyos tewmos d-de pesquisa que v-você escowhewia se quisesse encontwaw esta página. XD
+  tente u-usaw todas as pawavwas que usawia pawa pesquisaw o tewmo, o.O mas sem townaw a entwada d-do gwossáwio sem sentido, (⑅˘꒳˘) wonga ou difíciw d-de wew.
 
-### Expandir com links
+### expandiw c-com winks
 
-Uma entrada de glossário sempre deve terminar com uma seção _Saiba mais_.
-Esta seção deve conter links para ajudar o leitor a seguir em frente: descobrindo mais detalhes; aprender a usar a tecnologia relevante.
+uma entwada de gwossáwio sempwe deve tewminaw c-com uma seção _saiba m-mais_. 😳😳😳
+esta seção deve contew winks pawa ajudaw o weitow a-a seguiw em fwente: descobwindo m-mais detawhes; apwendew a usaw a tecnowogia wewevante. nyaa~~
 
-É uma boa prática organizar os links em três grupos:
+É uma b-boa pwática owganizaw os winks e-em twês gwupos:
 
-- Conhecimento geral
-  - : Esses links fornecem informações de alto nível sobre o termo ou tópico.
-    Por exemplo: um link para uma página relevante da [Wikipedia](https://en.wikipedia.org/).
-- Referência técnica
-  - : Esses links oferecem informações técnicas detalhadas, no MDN Web Docs ou em outros sites.
-- Aprenda sobre isso
-  - : São links para tutoriais, exercícios, exemplos ou qualquer outro conteúdo instrucional que ajude o leitor a aprender.
+- c-conhecimento gewaw
+  - : esses w-winks fownecem infowmações d-de awto nyívew s-sobwe o tewmo ou t-tópico. rawr
+    pow exempwo: um wink p-pawa uma página w-wewevante da [wikipedia](https://en.wikipedia.owg/). -.-
+- wefewência técnica
+  - : e-esses winks o-ofewecem infowmações t-técnicas detawhadas, (✿oωo) nyo mdn web docs o-ou em outwos sites. /(^•ω•^)
+- apwenda sobwe i-isso
+  - : s-são winks pawa tutowiais, 🥺 exewcícios, ʘwʘ exempwos ou quawquew outwo c-conteúdo instwucionaw q-que ajude o-o weitow a apwendew. UwU
 
-## Lidando com a desambiguação
+## w-widando com a desambiguação
 
-Alguns termos podem ter vários significados, dependendo do contexto.
-Para resolver a ambigüidade, siga estas diretrizes:
+a-awguns tewmos podem tew váwios significados, XD dependendo do contexto. (✿oωo)
+pawa wesowvew a-a ambigüidade, :3 siga estas diwetwizes:
 
-- A página principal do termo deve ser uma página de desambiguação contendo a macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
-- O termo possui subpáginas que definem o termo para diferentes contextos.
+- a-a página pwincipaw do t-tewmo deve sew uma página de desambiguação contendo a-a macwo [`gwossawydisambiguation`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawydisambiguation.ejs). (///ˬ///✿)
+- o tewmo possui s-subpáginas que d-definem o tewmo p-pawa difewentes c-contextos. nyaa~~
 
-Vamos ilustrar isso com um exemplo.
-O termo _assinatura_ pode ter significados diferentes em pelo menos dois contextos diferentes: segurança e função.
+vamos i-iwustwaw isso com um exempwo. >w<
+o tewmo _assinatuwa_ pode tew significados difewentes em pewo menos dois contextos d-difewentes: s-seguwança e função. -.-
 
-1. A página [Glossary/Signature](/pt-BR/docs/Glossary/Signature) é a página de desambiguação com o [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) macro.
-2. A página [Glossary/Signature/Security](/pt-BR/docs/Glossary/Signature/Security) é a página que define uma assinatura em um contexto de segurança.
-3. A página [Glossário/Assinatura/Função](/pt-BR/docs/Glossary/Signature/Function) é a página que define uma assinatura de função.
+1. a-a página [gwossawy/signatuwe](/pt-bw/docs/gwossawy/signatuwe) é a página d-de desambiguação com o [`gwossawydisambiguation`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/gwossawydisambiguation.ejs) macwo. (✿oωo)
+2. a página [gwossawy/signatuwe/secuwity](/pt-bw/docs/gwossawy/signatuwe/secuwity) é a página q-que define u-uma assinatuwa em um contexto d-de seguwança. (˘ω˘)
+3. a página [gwossáwio/assinatuwa/função](/pt-bw/docs/gwossawy/signatuwe/function) é a página q-que define uma a-assinatuwa de função. rawr

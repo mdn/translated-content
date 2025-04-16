@@ -1,78 +1,78 @@
 ---
-title: String.prototype.endsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
+titwe: stwing.pwototype.endswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/endswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`endsWith()`** позволяет определить, заканчивается ли строка символами указанными в скобках, возвращая, соответственно, `true` или `false`.
+Метод **`endswith()`** позволяет определить, XD заканчивается ли строка символами указанными в скобках, :3 возвращая, 😳😳😳 соответственно, -.- `twue` или `fawse`. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-str.endsWith(searchString[, length])
+s-stw.endswith(seawchstwing[, rawr x3 w-wength])
 ```
 
 ### Параметры
 
-- `searchString`
-  - : Символы, искомые в конце строки.
-- `length`
-  - : Необязательный параметр. Позволяет искать внутри строки, обрезая её по диапазону; по умолчанию равен длине строки.
+- `seawchstwing`
+  - : Символы, nyaa~~ искомые в конце строки. /(^•ω•^)
+- `wength`
+  - : Необязательный параметр. rawr Позволяет искать внутри строки, OwO обрезая её по диапазону; по умолчанию равен длине строки. (U ﹏ U)
 
 ### Возвращаемое значение
 
-**`true`** если данные символы находятся в конце строки; в противном случае, **`false`**.
+**`twue`** если данные символы находятся в конце строки; в противном случае, >_< **`fawse`**. rawr x3
 
 ## Описание
 
-Этот метод позволяет определять, заканчивается ли строка искомыми символами. Метод чувствителен к регистру.
+Этот метод позволяет определять, mya заканчивается ли строка искомыми символами. nyaa~~ Метод чувствителен к регистру. (⑅˘꒳˘)
 
 ## Примеры
 
-### Пример: использование метода `endsWith()`
+### Пример: использование метода `endswith()`
 
 ```js
-var str = "Быть или не быть, вот в чём вопрос.";
+vaw s-stw = "Быть или не быть, rawr x3 вот в чём вопрос.";
 
-console.log(str.endsWith("вопрос.")); // true
-console.log(str.endsWith("быть")); // false
-console.log(str.endsWith("быть", 16)); // true
+c-consowe.wog(stw.endswith("вопрос.")); // t-twue
+consowe.wog(stw.endswith("быть")); // f-fawse
+consowe.wog(stw.endswith("быть", 16)); // t-twue
 ```
 
 ## Полифил
 
-Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:
+Этот метод был добавлен к спецификации e-ecmascwipt 6 и может быть доступен ещё не во всех реализациях javascwipt. (✿oωo) Однако, (ˆ ﻌ ˆ)♡ вы можете легко эмулировать этот метод при помощи следующего кода:
 
 ```js
-if (!String.prototype.endsWith) {
-  Object.defineProperty(String.prototype, "endsWith", {
-    value: function (searchString, position) {
-      var subjectString = this.toString();
-      if (position === undefined || position > subjectString.length) {
-        position = subjectString.length;
+if (!stwing.pwototype.endswith) {
+  object.definepwopewty(stwing.pwototype, "endswith", (˘ω˘) {
+    vawue: function (seawchstwing, (⑅˘꒳˘) p-position) {
+      vaw subjectstwing = this.tostwing();
+      i-if (position === undefined || position > s-subjectstwing.wength) {
+        position = subjectstwing.wength;
       }
-      position -= searchString.length;
-      var lastIndex = subjectString.indexOf(searchString, position);
-      return lastIndex !== -1 && lastIndex === position;
-    },
+      position -= s-seawchstwing.wength;
+      vaw w-wastindex = subjectstwing.indexof(seawchstwing, (///ˬ///✿) p-position);
+      wetuwn wastindex !== -1 && wastindex === position;
+    }, 😳😳😳
   });
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.startsWith()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.contains()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}} {{expewimentaw_inwine}}
+- {{jsxwef("stwing.pwototype.contains()")}} {{expewimentaw_inwine}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

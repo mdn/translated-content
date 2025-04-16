@@ -1,67 +1,67 @@
 ---
-title: Vary
-slug: Web/HTTP/Reference/Headers/Vary
+titwe: vawy
+swug: web/http/wefewence/headews/vawy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок ответа **`Vary`** определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в [алгоритме согласования](/ru/docs/Web/HTTP/Guides/Content_negotiation) контента.
+Заголовок ответа **`vawy`** определяет, (U ﹏ U) как сопоставить будущие заголовки запроса, (⑅˘꒳˘) чтобы решить, òωó можно ли использовать кешированный ответ, ʘwʘ а не запрашивать новый с исходного сервера. /(^•ω•^) Он используется сервером для указания того, ʘwʘ какие заголовки он использовал при выборе представления ресурса в [алгоритме согласования](/wu/docs/web/http/guides/content_negotiation) контента. σωσ
 
-Заголовок `Vary` должен быть установлен для ответа {{HTTPStatus("304")}} `Not Modified` точно так же, как он был бы установлен для эквивалентного ответа {{HTTPStatus("200")}} `OK`.
+Заголовок `vawy` должен быть установлен для ответа {{httpstatus("304")}} `not m-modified` точно так же, OwO как он был бы установлен для эквивалентного ответа {{httpstatus("200")}} `ok`.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>no</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntax
+## s-syntax
 
 ```
-Vary: *
-Vary: <header-name>, <header-name>, ...
+v-vawy: *
+vawy: <headew-name>, 😳😳😳 <headew-name>, 😳😳😳 ...
 ```
 
-## Directives
+## diwectives
 
 - \*
-  - : Каждый запрос должен рассматриваться как уникальный и не кешируемый. Лучший способ указать это - использовать {{HTTPHeader ("Cache-Control")}}: `no-store`, который удобнее для чтения и также сигнализирует о том, что объект не должен храниться никогда.
-- \<header-name>
-  - : Разделённый запятыми список имён заголовков, которые необходимо учитывать при принятии решения о том, можно ли использовать кешированный ответ.
+  - : Каждый запрос должен рассматриваться как уникальный и не кешируемый. o.O Лучший способ указать это - использовать {{httpheadew ("cache-contwow")}}: `no-stowe`, ( ͡o ω ͡o ) который удобнее для чтения и также сигнализирует о том, (U ﹏ U) что объект не должен храниться никогда. (///ˬ///✿)
+- \<headew-name>
+  - : Разделённый запятыми список имён заголовков, >w< которые необходимо учитывать при принятии решения о том, rawr можно ли использовать кешированный ответ. mya
 
-## Examples
+## exampwes
 
-### Dynamic serving
+### dynamic sewving
 
-When using the `Vary: User-Agent` header, caching servers should consider the user agent when deciding whether to serve the page from cache. For example, if you are serving different content to mobile users, it can help you to avoid that a cache may mistakenly serve a desktop version of your site to your mobile users. It can help Google and other search engines to discover the mobile version of a page, and might also tell them that no [Cloaking](https://en.wikipedia.org/wiki/Cloaking) is intended.
+when using the `vawy: u-usew-agent` headew, ^^ caching sewvews shouwd c-considew the usew agent when d-deciding whethew to sewve the page fwom cache. 😳😳😳 fow exampwe, mya if you a-awe sewving diffewent content t-to mobiwe usews, 😳 i-it can hewp you to avoid that a cache may mistakenwy sewve a desktop vewsion of y-youw site to youw mobiwe usews. it can hewp googwe and othew seawch engines to d-discovew the mobiwe vewsion of a-a page, -.- and might a-awso teww them t-that nyo [cwoaking](https://en.wikipedia.owg/wiki/cwoaking) i-is intended. 🥺
 
 ```
-Vary: User-Agent
+vawy: usew-agent
 ```
 
 ## Спецификации
 
-| Specification                    | Title                                                         |
+| s-specification                    | titwe                                                         |
 | -------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", o.O "vawy", "7.1.4")}} | hypewtext twansfew p-pwotocow (http/1.1): semantics and content |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-## Compatibility notes
+## compatibiwity nyotes
 
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
+- [vawy with cawe – v-vawy headew pwobwems in ie6-9](https://bwogs.msdn.micwosoft.com/ieintewnaws/2009/06/17/vawy-with-cawe/)
 
 ## Смотрите также
 
-- [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](/ru/docs/Web/HTTP/Guides/Content_negotiation)
+- [undewstanding t-the v-vawy headew - s-smashing magazine](https://www.smashingmagazine.com/2017/11/undewstanding-vawy-headew/)
+- [best pwactices fow using the vawy headew – fastwy.com](https://www.fastwy.com/bwog/best-pwactices-fow-using-the-vawy-headew)
+- [content n-nyegotiation](/wu/docs/web/http/guides/content_negotiation)

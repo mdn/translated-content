@@ -1,42 +1,42 @@
 ---
-title: Array.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Array/entries
+titwe: awway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`entries()`** возвращает новый объект итератора массива **`Array Iterator`**, содержащий пары ключ / значение для каждого индекса в массиве.
+Метод **`entwies()`** возвращает новый объект итератора массива **`awway i-itewatow`**, (U ᵕ U❁) содержащий пары ключ / значение для каждого индекса в массиве. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-arr.entries()
+aww.entwies()
 ```
 
 ## Описание
 
 ```js
-var arr = ["a", "b", "c"];
-var eArr = arr.entries();
+v-vaw a-aww = ["a", ( ͡o ω ͡o ) "b", "c"];
+v-vaw eaww = a-aww.entwies();
 
-console.log(eArr.next().value); // [0, 'a']
-console.log(eArr.next().value); // [1, 'b']
-console.log(eArr.next().value); // [2, 'c']
+c-consowe.wog(eaww.next().vawue); // [0, UwU 'a']
+consowe.wog(eaww.next().vawue); // [1, rawr x3 'b']
+c-consowe.wog(eaww.next().vawue); // [2, 'c']
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

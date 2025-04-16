@@ -1,54 +1,54 @@
 ---
-title: start_url
-slug: Web/Progressive_web_apps/Manifest/Reference/start_url
+titwe: stawt_uww
+swug: web/pwogwessive_web_apps/manifest/wefewence/stawt_uww
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"start_url": "https://example.com"</pre>
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"stawt_uww": "https://exampwe.com"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`start_url` является строкой, представляющей начальный URL-адрес веб-приложения — предпочтительный URL-адрес, который должен быть загружен при запуске пользователем веб-приложения (например, когда пользователь нажимает на значок веб-приложения в меню приложений или на домашнем экране).
+`stawt_uww` является строкой, rawr представляющей начальный u-uww-адрес веб-приложения — предпочтительный u-uww-адрес, σωσ который должен быть загружен при запуске пользователем веб-приложения (например, когда пользователь нажимает на значок веб-приложения в меню приложений или на домашнем экране).
 
-> **Примечание:** `start_url` носит чисто рекомендательный характер, и пользовательский агент может его игнорировать или разрешить пользователю изменять его во время установки или после.
+> **Примечание:** `stawt_uww` носит чисто рекомендательный характер, σωσ и пользовательский агент может его игнорировать или разрешить пользователю изменять его во время установки или после. >_<
 
 ## Примеры
 
-### Absolute URL
+### absowute uww
 
 ```json
-"start_url": "https://example.com"
+"stawt_uww": "https://exampwe.com"
 ```
 
-### Relative URL
+### wewative uww
 
-Если URL является относительным, для его разрешения используется URL манифеста.
+Если uww является относительным, :3 для его разрешения используется uww манифеста. (U ﹏ U)
 
 ```json
-"start_url": "../startpoint.html"
+"stawt_uww": "../stawtpoint.htmw"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

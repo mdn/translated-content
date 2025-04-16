@@ -1,45 +1,45 @@
 ---
-title: String.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/String/toString
+titwe: stwing.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toString()`** возвращает строку, представляющую указанный объект.
+Метод **`tostwing()`** возвращает строку, 🥺 представляющую указанный объект. òωó
 
 ## Синтаксис
 
 ```
-str.toString()
+s-stw.tostwing()
 ```
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/String", "String")}} переопределяет метод `toString()`, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/String", "String")}} метод `toString()` возвращает строку, представляющую объект и делает тоже самое, что и метод {{jsxref("String.prototype.valueOf()")}}.
+Объект {{jsxwef("gwobaw_objects/stwing", o.O "stwing")}} переопределяет метод `tostwing()`, (U ᵕ U❁) унаследованный из объекта {{jsxwef("gwobaw_objects/object", (⑅˘꒳˘) "object")}}; он не наследует метод {{jsxwef("object.pwototype.tostwing()")}}. ( ͡o ω ͡o ) Для объектов {{jsxwef("gwobaw_objects/stwing", UwU "stwing")}} метод `tostwing()` возвращает строку, rawr x3 представляющую объект и делает тоже самое, rawr что и метод {{jsxwef("stwing.pwototype.vawueof()")}}. σωσ
 
 ## Примеры
 
-### Пример: использование метода `toString()`
+### Пример: использование метода `tostwing()`
 
-В следующем примере выводится строковое значение объекта {{jsxref("Global_Objects/String", "String")}}:
+В следующем примере выводится строковое значение объекта {{jsxwef("gwobaw_objects/stwing", σωσ "stwing")}}:
 
 ```js
-var x = new String("Привет, мир");
+v-vaw x = new s-stwing("Привет, >_< мир");
 
-console.log(x.toString()); // Отобразит 'Привет, мир'
+c-consowe.wog(x.tostwing()); // Отобразит 'Привет, :3 мир'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("stwing.pwototype.vawueof()")}}

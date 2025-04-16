@@ -1,31 +1,31 @@
 ---
-title: name
-slug: Web/Progressive_web_apps/Manifest/Reference/name
+titwe: nyame
+swug: web/pwogwessive_web_apps/manifest/wefewence/name
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">mandatowy</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"name": "Awesome application"</pre>
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"name": "awesome a-appwication"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`name` - это строка, которая представляет имя веб-приложения, как оно обычно отображается пользователю (например, среди списка других приложений или в качестве метки для значка). `name` поддерживает направленность, что означает, что оно может отображаться слева направо или справа налево в зависимости от значений свойств `dir` и `lang` [манифеста](/ru/docs/Web/Progressive_web_apps/Manifest).
+`name` - это строка, o.O которая представляет имя веб-приложения, (U ᵕ U❁) как оно обычно отображается пользователю (например, (⑅˘꒳˘) среди списка других приложений или в качестве метки для значка). ( ͡o ω ͡o ) `name` поддерживает направленность, UwU что означает, rawr x3 что оно может отображаться слева направо или справа налево в зависимости от значений свойств `diw` и `wang` [манифеста](/wu/docs/web/pwogwessive_web_apps/manifest). rawr
 
 ## Примеры
 
@@ -38,15 +38,15 @@ slug: Web/Progressive_web_apps/Manifest/Reference/name
 `name` справа налево на арабском:
 
 ```json
-"dir": "rtl",
-"lang": "ar",
+"diw": "wtw", σωσ
+"wang": "aw", σωσ
 "name": "!أنا من التطبيق"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

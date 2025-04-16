@@ -1,31 +1,31 @@
 ---
-title: String.prototype.fontsize()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
+titwe: stwing.pwototype.fontsize()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontsize
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`fontsize()`** создаёт HTML-элемент {{HTMLElement("font")}}, заставляющий строку отображаться шрифтом указанного размера.
+Метод **`fontsize()`** создаёт h-htmw-элемент {{htmwewement("font")}}, (U ᵕ U❁) заставляющий строку отображаться шрифтом указанного размера. (⑅˘꒳˘)
 
-> [!NOTE]
-> Элемент `<font>` был удалён из [HTML5](/ru/docs/Glossary/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> [!note]
+> Элемент `<font>` был удалён из [htmw5](/wu/docs/gwossawy/htmw5) и больше не должен использоваться. ( ͡o ω ͡o ) Вместо него веб-разработчикам следует использовать свойства [css](/wu/docs/web/css). UwU
 
 ## Синтаксис
 
 ```
-str.fontsize(size)
+s-stw.fontsize(size)
 ```
 
 ### Параметры
 
 - `size`
-  - : Целое число от 1 до 7, либо строка с целым числом со знаком по модулю от 1 до 7.
+  - : Целое число от 1 до 7, rawr x3 либо строка с целым числом со знаком по модулю от 1 до 7. rawr
 
 ## Описание
 
-При задании размера в виде целого числа, вы устанавливаете размер шрифта строки `str` в один из 7 предопределённых размеров. При задании размера в виде строки, например, "-2", вы задаёте размер шрифта строки `str` относительно размера, установленного тегом {{HTMLElement("basefont")}}.
+При задании размера в виде целого числа, σωσ вы устанавливаете размер шрифта строки `stw` в один из 7 предопределённых размеров. σωσ При задании размера в виде строки, >_< например, :3 "-2", (U ﹏ U) вы задаёте размер шрифта строки `stw` относительно размера, -.- установленного тегом {{htmwewement("basefont")}}. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
@@ -34,28 +34,28 @@ str.fontsize(size)
 В следующем примере демонстрируется использование нескольких строковых методов для изменения размера строки:
 
 ```js
-var worldString = "Привет, мир";
+v-vaw w-wowwdstwing = "Привет, (⑅˘꒳˘) мир";
 
-console.log(worldString.small()); // <small>Привет, мир</small>
-console.log(worldString.big()); // <big>Привет, мир</big>
-console.log(worldString.fontsize(7)); // <fontsize=7>Привет, мир</fontsize>
+c-consowe.wog(wowwdstwing.smow()); // <smow>Привет, (U ᵕ U❁) мир</smow>
+consowe.wog(wowwdstwing.big()); // <big>Привет, -.- мир</big>
+c-consowe.wog(wowwdstwing.fontsize(7)); // <fontsize=7>Привет, ^^;; мир</fontsize>
 ```
 
-При помощи объекта {{domxref("HTMLElement.style", "element.style")}} вы можете получить значение атрибута `style` элемента и управлять им более обобщённым способом, например:
+При помощи объекта {{domxwef("htmwewement.stywe", >_< "ewement.stywe")}} вы можете получить значение атрибута `stywe` элемента и управлять им более обобщённым способом, mya например:
 
 ```js
-document.getElementById("yourElemId").style.fontSize = "0.7em";
+d-document.getewementbyid("youwewemid").stywe.fontsize = "0.7em";
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+- {{jsxwef("stwing.pwototype.big()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

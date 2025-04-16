@@ -1,38 +1,38 @@
 ---
-title: Error.prototype.fileName
-slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+titwe: ewwow.pwototype.fiwename
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
 ## Сводка
 
-Свойство **`fileName`** содержит путь к файлу, в котором возникла эта ошибка.
+Свойство **`fiwename`** содержит путь к файлу, òωó в котором возникла эта ошибка. o.O
 
 ## Описание
 
-Это нестандартное свойство содержит путь к файлу, в котором возникла эта ошибка. Если доступ к нему получен в контексте отладчика, например, Инструментов разработчика Firefox, вернётся строка «debugger eval code».
+Это нестандартное свойство содержит путь к файлу, (U ᵕ U❁) в котором возникла эта ошибка. (⑅˘꒳˘) Если доступ к нему получен в контексте отладчика, ( ͡o ω ͡o ) например, UwU Инструментов разработчика f-fiwefox, rawr x3 вернётся строка «debuggew e-evaw code». rawr
 
 ## Примеры
 
-### Пример: использование `fileName`
+### Пример: использование `fiwename`
 
 ```js
-var e = new Error("Невозможно разобрать входные данные");
-throw e;
-// e.fileName может выглядеть так "file:///C:/example.html"
+v-vaw e = nyew e-ewwow("Невозможно разобрать входные данные");
+t-thwow e;
+// e.fiwename может выглядеть так "fiwe:///c:/exampwe.htmw"
 ```
 
 ## Спецификации
 
-Не является частью какой-либо спецификации. Не стандартно.
+Не является частью какой-либо спецификации. σωσ Не стандартно. σωσ
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}

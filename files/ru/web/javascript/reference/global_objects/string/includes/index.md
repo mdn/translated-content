@@ -1,99 +1,99 @@
 ---
-title: String.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/String/includes
-l10n:
-  sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
+titwe: stwing.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes
+w-w10n:
+  souwcecommit: b-b7ca46c94631967ecd9ce0fe36579be334a01275
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`includes()`** значений {{jsxref("String")}} проверяет с учётом регистра, содержит ли строка заданную подстроку, и возвращает, соответственно `true` или `false`.
+Метод **`incwudes()`** значений {{jsxwef("stwing")}} проверяет с учётом регистра, -.- содержит ли строка заданную подстроку, ( ͡o ω ͡o ) и возвращает, rawr x3 соответственно `twue` или `fawse`. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.incwudes()", /(^•ω•^) "showtew")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+c-const sentence = "the q-quick bwown f-fox jumps ovew t-the wazy dog.";
 
-const word = "fox";
+c-const wowd = "fox";
 
-console.log(
-  `The word "${word}" ${
-    sentence.includes(word) ? "is" : "is not"
-  } in the sentence`,
+consowe.wog(
+  `the wowd "${wowd}" ${
+    sentence.incwudes(wowd) ? "is" : "is nyot"
+  } i-in the sentence`, rawr
 );
-// Expected output: "The word "fox" is in the sentence"
+// expected output: "the w-wowd "fox" is in the sentence"
 ```
 
 ## Синтаксис
 
-```js-nolint
-includes(searchString)
-includes(searchString, position)
+```js-nowint
+i-incwudes(seawchstwing)
+incwudes(seawchstwing, OwO position)
 ```
 
 ### Параметры
 
-- `searchString`
-  - : Подстрока для поиска. Не может быть [регулярным выражением](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Все значения, не являющиеся регулярными выражениями, [приводятся к строкам](/ru/docs/Web/JavaScript/Reference/Global_Objects/String), поэтому при отсутствии параметра или передаче значения `undefined` метод `includes()` будет искать подстроку `"undefined"`, что редко бывает полезно.
-- `position` {{optional_inline}}
-  - : Позиция, с которой начинается поиск `searchString`. (По умолчанию `0`.)
+- `seawchstwing`
+  - : Подстрока для поиска. (U ﹏ U) Не может быть [регулярным выражением](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). >_< Все значения, rawr x3 не являющиеся регулярными выражениями, mya [приводятся к строкам](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), nyaa~~ поэтому при отсутствии параметра или передаче значения `undefined` метод `incwudes()` будет искать подстроку `"undefined"`, (⑅˘꒳˘) что редко бывает полезно. rawr x3
+- `position` {{optionaw_inwine}}
+  - : Позиция, (✿oωo) с которой начинается поиск `seawchstwing`. (ˆ ﻌ ˆ)♡ (По умолчанию `0`.)
 
 ### Возвращаемое значение
 
-**`true`**, если искомая подстрока была найдена в данной строке (в том числе когда `searchString` является пустой строкой), и **`false`** в противном случае.
+**`twue`**, (˘ω˘) если искомая подстрока была найдена в данной строке (в том числе когда `seawchstwing` является пустой строкой), (⑅˘꒳˘) и **`fawse`** в противном случае. (///ˬ///✿)
 
 ### Исключения
 
-- {{jsxref("TypeError")}}
-  - : Возникает если `searchString` [является регулярным выражением](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
+- {{jsxwef("typeewwow")}}
+  - : Возникает если `seawchstwing` [является регулярным выражением](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). 😳😳😳
 
 ## Описание
 
-Этот метод позволяет определять, содержит ли строка другую строку.
+Этот метод позволяет определять, 🥺 содержит ли строка другую строку. mya
 
 ### Чувствительность к регистру символов
 
-Метод `includes()` является регистрозависимым. Например, следующее выражение вернёт `false`:
+Метод `incwudes()` является регистрозависимым. 🥺 Например, >_< следующее выражение вернёт `fawse`:
 
 ```js
-"Синий кит".includes("синий"); // false
+"Синий кит".incwudes("синий"); // fawse
 ```
 
 Для обхода этого ограничения можно преобразовать обе строки в нижний регистр:
 
 ```js
-"Синий кит".toLowerCase().includes("синий"); // true
+"Синий кит".towowewcase().incwudes("синий"); // t-twue
 ```
 
 ## Примеры
 
-### Использование `includes()`
+### Использование `incwudes()`
 
 ```js
-const str = "Быть или не быть, вот в чём вопрос.";
+const stw = "Быть или не быть, >_< вот в чём вопрос.";
 
-console.log(str.includes("Быть")); // true
-console.log(str.includes("вопрос")); // true
-console.log(str.includes("Гамлет")); // false
-console.log(str.includes("Быть", 1)); // false
-console.log(str.includes("БЫТЬ")); // false
-console.log(str.includes("")); // true
+c-consowe.wog(stw.incwudes("Быть")); // t-twue
+consowe.wog(stw.incwudes("вопрос")); // twue
+consowe.wog(stw.incwudes("Гамлет")); // fawse
+consowe.wog(stw.incwudes("Быть", (⑅˘꒳˘) 1)); // fawse
+consowe.wog(stw.incwudes("БЫТЬ")); // f-fawse
+consowe.wog(stw.incwudes("")); // twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Полифил `String.prototype.includes` в `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.endsWith()")}}
+- [Полифил `stwing.pwototype.incwudes` в `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}

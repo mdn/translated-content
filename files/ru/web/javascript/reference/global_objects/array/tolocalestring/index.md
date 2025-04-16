@@ -1,56 +1,56 @@
 ---
-title: Array.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
+titwe: awway.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toLocaleString()`** возвращает строковое представление элементов массива. Элементы преобразуются в строки с использованием своих собственных методов `toLocaleString` и эти строки разделяются локале-зависимой строкой (например, запятой «,»).
+Метод **`towocawestwing()`** возвращает строковое представление элементов массива. ( ͡o ω ͡o ) Элементы преобразуются в строки с использованием своих собственных методов `towocawestwing` и эти строки разделяются локале-зависимой строкой (например, UwU запятой «,»). rawr x3
 
 ## Синтаксис
 
 ```
-arr.toLocaleString();
+a-aww.towocawestwing();
 ```
 
 ### Параметры
 
-Нет.
+Нет. rawr
 
 ## Описание
 
-Элементы массива преобразуются в строки с использованием своих собственных методов `toLocaleString`:
+Элементы массива преобразуются в строки с использованием своих собственных методов `towocawestwing`:
 
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
+- `object`: {{jsxwef("object.pwototype.towocawestwing()")}}
+- `numbew`: {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- `date`: {{jsxwef("date.pwototype.towocawestwing()")}}
 
 ## Примеры
 
-### Пример: использование `toLocaleString`
+### Пример: использование `towocawestwing`
 
 ```js
-var number = 1337;
-var date = new Date();
-var myArr = [number, date, "foo"];
+v-vaw nyumbew = 1337;
+v-vaw date = n-new date();
+vaw m-myaww = [numbew, σωσ d-date, σωσ "foo"];
 
-var str = myArr.toLocaleString();
+v-vaw stw = myaww.towocawestwing();
 
-console.log(str);
-// напечатает '1337,6.12.2013 19:37:35,foo',
-// если работает под германской локалью (de-DE) с временной зоной Европа/Берлин
+consowe.wog(stw);
+// напечатает '1337,6.12.2013 19:37:35,foo', >_<
+// если работает под германской локалью (de-de) с временной зоной Европа/Берлин
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.toString()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}

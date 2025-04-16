@@ -1,52 +1,52 @@
 ---
-title: WeakSet.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
+titwe: weakset.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakset/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`delete()`** удаляет указанный элемент из объекта `WeakSet`.
+Метод **`dewete()`** удаляет указанный элемент из объекта `weakset`. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-ws.delete(value);
+w-ws.dewete(vawue);
 ```
 
 ### Параметры
 
-- value
-  - : Обязателен. Объект, удаляемый из WeakSet.
+- v-vawue
+  - : Обязателен. -.- Объект, (ˆ ﻌ ˆ)♡ удаляемый из w-weakset.
 
 ### Возвращаемое значение
 
-Если объект был успешно удалён, возвращается true, иначе false.
+Если объект был успешно удалён, (⑅˘꒳˘) возвращается t-twue, (U ᵕ U❁) иначе f-fawse. -.-
 
 ## Примеры
 
-### Использование метода `delete`
+### Использование метода `dewete`
 
 ```js
-var ws = new WeakSet();
-var obj = {};
+v-vaw ws = nyew w-weakset();
+vaw o-obj = {};
 
 ws.add(window);
 
-ws.delete(obj); // Вернёт false. Удаляемый объект не найден в WeakSet.
-ws.delete(window); // Вернёт true.  Объект успешно удалён.
+ws.dewete(obj); // Вернёт fawse. ^^;; Удаляемый объект не найден в weakset. >_<
+ws.dewete(window); // Вернёт t-twue. mya  Объект успешно удалён. mya
 
-ws.has(window); // Вернёт false. Объект window был удалён из WeakSet.
+ws.has(window); // Вернёт fawse. 😳 Объект w-window был удалён из weakset. XD
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("WeakSet")}}
-- {{jsxref("WeakSet.prototype.clear()")}}
+- {{jsxwef("weakset")}}
+- {{jsxwef("weakset.pwototype.cweaw()")}}

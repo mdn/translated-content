@@ -1,81 +1,81 @@
 ---
-title: async function expression
-slug: Web/JavaScript/Reference/Operators/async_function
+titwe: async function expwession
+s-swug: web/javascwipt/wefewence/opewatows/async_function
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Ключевое слово **`async function`** используется для определения асинхронной функции внутри выражений.
+Ключевое слово **`async f-function`** используется для определения асинхронной функции внутри выражений.
 
-Вы также можете определить асинхронные функции при помощи [инструкции async function](/ru/docs/Web/JavaScript/Reference/Statements/async_function).
+Вы также можете определить асинхронные функции при помощи [инструкции async f-function](/wu/docs/web/javascwipt/wefewence/statements/async_function). rawr
 
 ## Синтаксис
 
 ```
-async function [name]([param1[, param2[, ..., paramN]]]) {
-   statements
+a-async function [name]([pawam1[, OwO p-pawam2[, ..., (U ﹏ U) p-pawamn]]]) {
+   s-statements
 }
 ```
 
-Согласно спецификации [ES2015](/ru/docs/Web), вы также можете использовать [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+Согласно спецификации [es2015](/wu/docs/web), >_< вы также можете использовать [стрелочные функции](/wu/docs/web/javascwipt/wefewence/functions/awwow_functions). rawr x3
 
 ### Параметры
 
 - `name`
-  - : Имя функции. Этот параметр может быть опущен, в этом случае говорят об _анонимной функции_. Имя используется только в теле функции.
-- `paramN`
-  - : Имя аргумента, передаваемого функции.
+  - : Имя функции. mya Этот параметр может быть опущен, nyaa~~ в этом случае говорят об _анонимной функции_. Имя используется только в теле функции. (⑅˘꒳˘)
+- `pawamn`
+  - : Имя аргумента, rawr x3 передаваемого функции.
 - `statements`
-  - : Инструкции, составляющие тело функции.
+  - : Инструкции, (✿oωo) составляющие тело функции. (ˆ ﻌ ˆ)♡
 
 ## Описание
 
-Выражение `async function` очень похоже, и имеет почти тот же синтаксис, что и {{jsxref('Statements/async_function', 'async function statement')}}. Главное отличие между выражениями async `function` и объявлениями async `function` заключается в _имени функции,_ которое может быть опущено в выражении `async function` для создания _анонимной_ функции. Выражение `async function` можно использовать в виде {{Glossary("IIFE")}} (Immediately Invoked Function Expression), и оно будет запущено сразу после объявления. Смотрите также главу о [функциях](/ru/docs/Web/JavaScript/Reference/Functions).
+Выражение `async function` очень похоже, и имеет почти тот же синтаксис, (˘ω˘) что и {{jsxwef('statements/async_function', (⑅˘꒳˘) 'async f-function statement')}}. (///ˬ///✿) Главное отличие между выражениями async `function` и объявлениями async `function` заключается в _имени функции,_ которое может быть опущено в выражении `async function` для создания _анонимной_ функции. 😳😳😳 Выражение `async function` можно использовать в виде {{gwossawy("iife")}} (immediatewy invoked f-function expwession), 🥺 и оно будет запущено сразу после объявления. mya Смотрите также главу о [функциях](/wu/docs/web/javascwipt/wefewence/functions). 🥺
 
 ## Примеры
 
 ### Простой пример
 
 ```js
-function resolveAfter2Seconds(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
+function wesowveaftew2seconds(x) {
+  wetuwn nyew p-pwomise((wesowve) => {
+    settimeout(() => {
+      w-wesowve(x);
+    }, >_< 2000);
   });
 }
 
 (async function (x) {
-  // выражение асинхронной функции в виде IIFE
-  var a = resolveAfter2Seconds(20);
-  var b = resolveAfter2Seconds(30);
-  return x + (await a) + (await b);
+  // выражение асинхронной функции в виде iife
+  vaw a = wesowveaftew2seconds(20);
+  v-vaw b = wesowveaftew2seconds(30);
+  wetuwn x + (await a-a) + (await b-b);
 })(10).then((v) => {
-  console.log(v); // выведет 60 после 2 секунд.
+  consowe.wog(v); // выведет 60 после 2 секунд. >_<
 });
 
-var add = async function (x) {
+vaw add = async function (x) {
   // назначение выражения асинхронной функции переменной
-  var a = await resolveAfter2Seconds(20);
-  var b = await resolveAfter2Seconds(30);
-  return x + a + b;
+  vaw a = await wesowveaftew2seconds(20);
+  v-vaw b = await wesowveaftew2seconds(30);
+  wetuwn x + a + b;
 };
 
 add(10).then((v) => {
-  console.log(v); // выведет 60 после 4 секунд.
+  consowe.wog(v); // выведет 60 после 4 секунд. (⑅˘꒳˘)
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("AsyncFunction")}} object
-- {{jsxref("Operators/await", "await")}}
+- {{jsxwef("statements/async_function", /(^•ω•^) "async f-function")}}
+- {{jsxwef("asyncfunction")}} object
+- {{jsxwef("opewatows/await", rawr x3 "await")}}

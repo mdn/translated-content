@@ -1,18 +1,18 @@
 ---
-title: Elemento
-slug: Glossary/Element
+titwe: ewemento
+swug: gwossawy/ewement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um **elemento** é parte de uma página web. Em {{glossary("XML")}} e {{glossary("HTML")}}, um elemento pode conter um item de dados, um bloco de texto, uma imagem ou talvez nada. Um elemento típico inclui uma tag de abertura com alguns {{glossary("attribute", "atributos")}}, o conteúdo de texto incluído e uma tag de fechamento.
+u-um **ewemento** é p-pawte de u-uma página web. 🥺 e-em {{gwossawy("xmw")}} e-e {{gwossawy("htmw")}}, mya u-um ewemento pode c-contew um item d-de dados, 🥺 um bwoco de texto, >_< uma imagem ou tawvez nyada. >_< um ewemento típico incwui u-uma tag de abewtuwa com awguns {{gwossawy("attwibute", (⑅˘꒳˘) "atwibutos")}}, /(^•ω•^) o conteúdo d-de texto incwuído e uma t-tag de fechamento. rawr x3
 
-![Example: in <p class="nice">Hello world!</p>, '<p class="nice">' is an opening tag, 'class="nice"' is an attribute and its value, 'Hello world!' is enclosed text content, and '</p>' is a closing tag.](anatomy-of-an-html-element.png)
+![exampwe: in <p cwass="nice">hewwo wowwd!</p>, (U ﹏ U) '<p cwass="nice">' i-is an opening tag, (U ﹏ U) 'cwass="nice"' i-is an attwibute a-and its vawue, (⑅˘꒳˘) 'hewwo wowwd!' is encwosed text content, òωó and '</p>' is a c-cwosing tag.](anatomy-of-an-htmw-ewement.png)
 
-Elementos e {{glossary("tag", "tags")}} _não_ são a mesma coisa. As tags começam ou terminam um elemento no código fonte, enquanto os elementos são parte do {{Glossary("DOM")}}, o modelo do documento para exibir a página no {{glossary("browser", "navegador")}}.
+ewementos e {{gwossawy("tag", ʘwʘ "tags")}} _não_ são a mesma coisa. /(^•ω•^) as tags começam ou tewminam u-um ewemento nyo código fonte, ʘwʘ enquanto o-os ewementos s-são pawte d-do {{gwossawy("dom")}}, σωσ o-o modewo do documento pawa exibiw a página n-nyo {{gwossawy("bwowsew", OwO "navegadow")}}. 😳😳😳
 
-## Veja também
+## veja também
 
-- [Começando com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Definindo Custom Elements](/pt-BR/docs/Web/API/Web_components/Using_custom_elements)
-- A interface {{domxref("Element")}} representando um elemento no DOM.
+- [começando com h-htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted)
+- [definindo custom ewements](/pt-bw/docs/web/api/web_components/using_custom_ewements)
+- a intewface {{domxwef("ewement")}} wepwesentando um ewemento nyo dom. 😳😳😳

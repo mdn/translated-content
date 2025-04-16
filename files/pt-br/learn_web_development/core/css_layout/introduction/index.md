@@ -1,774 +1,774 @@
 ---
-title: Introdução ao leiaute com CSS
-slug: Learn_web_development/Core/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Introduction
+titwe: intwodução ao weiaute c-com css
+swug: w-weawn_web_devewopment/cowe/css_wayout/intwoduction
+o-owiginaw_swug: w-weawn/css/css_wayout/intwoduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{nextmenu("weawn/css/css_wayout/nowmaw_fwow", "weawn/css/css_wayout")}}
 
-This article will recap some of the CSS layout features we've already touched upon in previous modules — such as different {{cssxref("display")}} values — and introduce some of the concepts we'll be covering throughout this module.
+t-this awticwe w-wiww wecap some o-of the css wayout f-featuwes we've awweady touched upon in pwevious moduwes — such as diffewent {{cssxwef("dispway")}} v-vawues — and intwoduce some of the concepts w-we'ww be covewing thwoughout t-this moduwe. -.-
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
+    <tw>
+      <th scope="wow">pwewequisites:</th>
       <td>
-        The basics of HTML (study
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of How CSS works (study
-        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
-          >Introduction to CSS</a
+        t-the basics of htmw (study
+        <a h-hwef="/pt-bw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction t-to htmw</a
+        >), ^^ and an idea of how css wowks (study
+        <a hwef="/pt-bw/docs/weawn/css/intwoduction_to_css"
+          >intwoduction to css</a
         >.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objective:</th>
       <td>
-        To give you an overview of CSS page layout techniques. Each technique
-        can be learned in greater detail in subsequent tutorials.
+        t-to give you an ovewview of css page wayout techniques. (ˆ ﻌ ˆ)♡ each technique
+        c-can be weawned in gweatew detaiw i-in subsequent t-tutowiaws. UwU
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-CSS page layout techniques allow us to take elements contained in a web page and control where they are positioned relative to their default position in normal layout flow, the other elements around them, their parent container, or the main viewport/window. The page layout techniques we'll be covering in more detail in this module are
+c-css page w-wayout techniques awwow us to take ewements contained i-in a web page and contwow whewe they awe p-positioned wewative to theiw defauwt position in nyowmaw wayout fwow, 🥺 the othew ewements awound t-them, 🥺 theiw pawent containew, 🥺 ow t-the main viewpowt/window. 🥺 t-the p-page wayout techniques we'ww be covewing in mowe detaiw in this m-moduwe awe
 
-- Normal flow
-- The {{cssxref("display")}} property
-- Flexbox
-- Grid
-- Floats
-- Positioning
-- Table layout
-- Multiple-column layout
+- nyowmaw f-fwow
+- the {{cssxwef("dispway")}} pwopewty
+- f-fwexbox
+- gwid
+- f-fwoats
+- positioning
+- tabwe w-wayout
+- muwtipwe-cowumn wayout
 
-Each technique has its uses, advantages, and disadvantages, and no technique is designed to be used in isolation. By understanding what each method is designed for you will be in a good place to understand which is the best layout tool for each task.
+e-each technique has its uses, :3 advantages, (˘ω˘) and disadvantages, ^^;; a-and nyo technique i-is designed to be used in isowation. (ꈍᴗꈍ) b-by undewstanding n-nyani each method is designed fow you wiww be in a good pwace to undewstand which is the best wayout toow f-fow each task. ʘwʘ
 
-## Normal flow
+## n-nowmaw fwow
 
-Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout. Let's look at a quick HTML example:
+nyowmaw fwow is h-how the bwowsew w-ways out htmw pages b-by defauwt when you do nyothing to contwow page wayout. :3 wet's w-wook at a quick htmw exampwe:
 
-```html
-<p>I love my cat.</p>
+```htmw
+<p>i wuv my cat.</p>
 
-<ul>
-  <li>Buy cat food</li>
-  <li>Exercise</li>
-  <li>Cheer up friend</li>
-</ul>
+<uw>
+  <wi>buy cat f-food</wi>
+  <wi>exewcise</wi>
+  <wi>cheew up fwiend</wi>
+</uw>
 
-<p>The end!</p>
+<p>the e-end!</p>
 ```
 
-By default, the browser will display this code as follows:
+b-by defauwt, XD t-the bwowsew wiww dispway this c-code as fowwows:
 
-{{ EmbedLiveSample('Normal_flow', '100%', 200) }}
+{{ e-embedwivesampwe('nowmaw_fwow', UwU '100%', 200) }}
 
-Note here how the HTML is displayed in the exact order in which it appears in the source code, with elements stacked up on top of one another — the first paragraph, followed by the unordered list, followed by the second paragraph.
+n-nyote hewe h-how the htmw is dispwayed in the exact owdew in w-which it appeaws i-in the souwce c-code, with ewements s-stacked up on t-top of one anothew — the fiwst pawagwaph, rawr x3 fowwowed by the unowdewed w-wist, ( ͡o ω ͡o ) fowwowed by the second pawagwaph.
 
-The elements that appear one below the other are described as _block_ elements, in contrast to _inline_ elements, which appear one beside the other, like the individual words in a paragraph.
+the ewements that appeaw one bewow the othew awe d-descwibed as _bwock_ ewements, :3 in contwast to _inwine_ ewements, rawr w-which appeaw o-one beside the othew, ^•ﻌ•^ w-wike the individuaw wowds i-in a pawagwaph. 🥺
 
-> [!NOTE]
-> The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
+> [!note]
+> the d-diwection in which b-bwock ewement contents awe waid out is descwibed as the bwock diwection. (⑅˘꒳˘) the bwock diwection w-wuns vewticawwy in a wanguage such a-as engwish, :3 which has a howizontaw w-wwiting mode. (///ˬ///✿) i-it wouwd wun howizontawwy in any wanguage with a-a vewticaw wwiting m-mode, 😳😳😳 such as japanese. 😳😳😳 the c-cowwesponding i-inwine diwection is the diwection in which inwine contents (such as a sentence) w-wouwd wun. 😳😳😳
 
-When you use CSS to create a layout, you are moving the elements away from the normal flow, but for many of the elements on your page the normal flow will create exactly the layout you need. This is why starting with a well-structured HTML document is so important, as you can then work with the way things are laid out by default rather than fighting against it.
+when y-you use css to c-cweate a wayout, nyaa~~ you awe moving t-the ewements away f-fwom the nyowmaw fwow, UwU but fow m-many of the ewements on youw page the nyowmaw fwow wiww cweate exactwy the wayout y-you need. òωó this i-is why stawting with a weww-stwuctuwed htmw document i-is so impowtant, òωó a-as you can then wowk with the way things awe waid out by d-defauwt wathew than fighting against it. UwU
 
-The methods that can change how elements are laid out in CSS are as follows:
+the methods that can change how ewements a-awe waid out in css awe as fowwows:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow (see [Types of CSS boxes](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) for more information). We then have entire layout methods that are switched on via a value of `display`, for example [CSS Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox).
-- **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.
-- **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top left of the browser viewport.
-- **Table layout** — features designed for styling the parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- **Multi-column layout** — The [Multi-column layout](/pt-BR/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
+- **the {{cssxwef("dispway")}} p-pwopewty** — s-standawd vawues such as `bwock`, (///ˬ///✿) `inwine` ow `inwine-bwock` can change how e-ewements behave i-in nyowmaw fwow (see [types of css boxes](/pt-bw/docs/weawn/css/buiwding_bwocks/the_box_modew#types_of_css_boxes) fow mowe infowmation). ( ͡o ω ͡o ) we then h-have entiwe wayout methods that a-awe switched on via a vawue of `dispway`, fow exampwe [css gwid](/pt-bw/docs/weawn/css/css_wayout/gwids) a-and [fwexbox](/pt-bw/docs/weawn/css/css_wayout/fwexbox). rawr
+- **fwoats** — appwying a-a {{cssxwef("fwoat")}} v-vawue such as `weft` can c-cause bwock wevew ewements to wwap a-awongside one s-side of an ewement, :3 w-wike the way images sometimes h-have text fwoating a-awound them in magazine wayouts. >w<
+- **the {{cssxwef("position")}} pwopewty** — a-awwows you t-to pwecisewy contwow t-the pwacement of boxes inside othew boxes. σωσ `static` p-positioning is the defauwt i-in nyowmaw f-fwow, σωσ but you can cause ewements to be waid out diffewentwy using o-othew vawues, >_< f-fow exampwe awways f-fixed to the t-top weft of the bwowsew viewpowt. -.-
+- **tabwe w-wayout** — featuwes designed fow stywing the pawts of an htmw tabwe can be used on n-nyon-tabwe ewements using `dispway: t-tabwe` and associated pwopewties. 😳😳😳
+- **muwti-cowumn w-wayout** — the [muwti-cowumn w-wayout](/pt-bw/docs/web/css/css_muwticow_wayout) pwopewties c-can cause the c-content of a bwock t-to wayout in c-cowumns, :3 as you m-might see in a nyewspapew. mya
 
-## The display property
+## the dispway pwopewty
 
-The main methods of achieving page layout in CSS are all values of the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a value of `display`, used as the default way that elements they are set on behave. For example, the fact that paragraphs in English display one below the other is due to the fact that they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
+the main methods of achieving page wayout in css awe aww vawues o-of the `dispway` p-pwopewty. (✿oωo) t-this pwopewty awwows us to change t-the defauwt way something dispways. 😳😳😳 evewything in nyowmaw fwow h-has a vawue of `dispway`, o.O u-used as the defauwt w-way that ewements they awe set on behave. (ꈍᴗꈍ) fow exampwe, (ˆ ﻌ ˆ)♡ t-the fact t-that pawagwaphs in engwish dispway o-one bewow the o-othew is due to the fact that they awe stywed with `dispway: bwock`. -.- if you cweate a-a wink awound s-some text inside a-a pawagwaph, mya t-that wink wemains i-inwine with the west of the text, a-and doesn't b-bweak onto a new wine. :3 this is because t-the {{htmwewement("a")}} e-ewement is `dispway: inwine` by d-defauwt. σωσ
 
-You can change this default display behavior. For example, the {{htmlelement("li")}} element is `display: block` by default, meaning that list items display one below the other in our English document. If we change the display value to `inline` they now display next to each other, as words would do in a sentence. The fact that you can change the value of `display` for any element means that you can pick HTML elements for their semantic meaning, without being concerned about how they will look. The way they look is something that you can change.
+you can change this defauwt dispway behaviow. 😳😳😳 f-fow exampwe, -.- the {{htmwewement("wi")}} ewement i-is `dispway: b-bwock` by defauwt, 😳😳😳 meaning that w-wist items dispway one bewow the othew in ouw e-engwish document. rawr x3 i-if we change t-the dispway vawue to `inwine` they nyow dispway nyext to each othew, (///ˬ///✿) a-as wowds wouwd do in a sentence. >w< the fact t-that you can change t-the vawue of `dispway` fow any e-ewement means that you can pick h-htmw ewements f-fow theiw semantic meaning, o.O without being concewned a-about how they wiww wook. (˘ω˘) the way they wook i-is something that y-you can change. rawr
 
-In addition to being able to change the default presentation by turning an item from `block` to `inline` and vice versa, there are some bigger layout methods that start out as a value of `display`. However, when using these, you will generally need to invoke additional properties. The two values most important for our purposes when discussing layout are `display: flex` and `display: grid`.
+in addition t-to being abwe to change the defauwt p-pwesentation b-by tuwning an item f-fwom `bwock` to `inwine` and vice vewsa, mya thewe awe some biggew wayout methods that stawt out as a vawue of `dispway`. òωó howevew, nyaa~~ when using these, òωó you wiww genewawwy nyeed to invoke additionaw pwopewties. mya the t-two vawues most i-impowtant fow ouw puwposes when discussing wayout a-awe `dispway: f-fwex` and `dispway: g-gwid`. ^^
 
-## Flexbox
+## fwexbox
 
-Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
+fwexbox i-is the showt name fow the [fwexibwe b-box wayout](/pt-bw/docs/web/css/css_fwexibwe_box_wayout) m-moduwe, ^•ﻌ•^ designed to make it easy f-fow us to way things out in one d-dimension — eithew a-as a wow ow as a cowumn. -.- to use fwexbox, UwU you a-appwy `dispway: f-fwex` to the p-pawent ewement of t-the ewements you w-want to way out; a-aww its diwect c-chiwdwen then b-become fwex items. (˘ω˘) w-we can see this in a simpwe e-exampwe. UwU
 
-The HTML markup below gives us a containing element, with a class of `wrapper`, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.
+the htmw m-mawkup bewow g-gives us a containing ewement, rawr with a-a cwass of `wwappew`, :3 inside which awe thwee {{htmwewement("div")}} e-ewements. nyaa~~ by defauwt these w-wouwd dispway a-as bwock ewements, rawr b-bewow one anothew, (ˆ ﻌ ˆ)♡ in ouw engwish w-wanguage document. (ꈍᴗꈍ)
 
-However, if we add `display: flex` to the parent, the three items now arrange themselves into columns. This is due to them becoming _flex items_ and being affected by some initial values that flexbox sets on the flex container. They are displayed in a row, because the initial value of {{cssxref("flex-direction")}} set on their parent is `row`. They all appear to stretch to the height of the tallest item, because the initial value of the {{cssxref("align-items")}} property set on their parent is `stretch`. This means that the items stretch to the height of the flex container, which in this case is defined by the tallest item. The items all line up at the start of the container, leaving any extra space at the end of the row.
+howevew, i-if we add `dispway: fwex` to t-the pawent, (˘ω˘) the thwee items nyow a-awwange themsewves into cowumns. this is due to them becoming _fwex items_ and b-being affected by some initiaw vawues t-that fwexbox s-sets on the fwex containew. (U ﹏ U) they awe dispwayed in a wow, because t-the initiaw vawue of {{cssxwef("fwex-diwection")}} s-set on theiw p-pawent is `wow`. >w< t-they aww appeaw to stwetch to the height of t-the tawwest item, UwU b-because the initiaw vawue of t-the {{cssxwef("awign-items")}} pwopewty set on theiw pawent is `stwetch`. (ˆ ﻌ ˆ)♡ t-this means that the items s-stwetch to the h-height of the f-fwex containew, nyaa~~ which in this case i-is defined by t-the tawwest item. 🥺 t-the items aww w-wine up at the stawt of the containew, >_< w-weaving a-any extwa space a-at the end of the w-wow. òωó
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+.wwappew > d-div {
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, ʘwʘ 232, mya 220);
+  p-padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: flex;
+.wwappew {
+  dispway: fwex;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Flex_1', '300', '200') }}
+{{ e-embedwivesampwe('fwex_1', σωσ '300', '200') }}
 
-In addition to the above properties that can be applied to the flex container, there are properties that can be applied to the flex items. These properties, among other things, can change the way that the items flex, enabling them to expand and contract to fit into the available space.
+in addition to the above pwopewties t-that can be appwied t-to the fwex c-containew, OwO thewe awe pwopewties that can be appwied to the fwex i-items. (✿oωo) these pwopewties, ʘwʘ a-among othew things, mya can c-change the way t-that the items fwex, enabwing them to expand and contwact to fit i-into the avaiwabwe s-space. -.-
 
-As a simple example of this, we can add the {{cssxref("flex")}} property to all of our child items, with a value of `1`. This will cause all of the items to grow and fill the container, rather than leaving space at the end. If there is more space then the items will become wider; if there is less space they will become narrower. In addition, if you add another element to the markup the items will all become smaller to make space for it — they will adjust size to take up the same amount of space, whatever that is.
+as a-a simpwe exampwe o-of this, -.- we can add the {{cssxwef("fwex")}} pwopewty t-to aww of o-ouw chiwd items, ^^;; with a vawue of `1`. (ꈍᴗꈍ) this wiww c-cause aww of the items to gwow and fiww the containew, rawr w-wathew than weaving space a-at the end. ^^ if t-thewe is mowe space then the items w-wiww become widew; i-if thewe is wess space they w-wiww become nyawwowew. nyaa~~ in addition, (⑅˘꒳˘) i-if you add a-anothew ewement t-to the mawkup the i-items wiww aww become smowew t-to make space fow i-it — they wiww a-adjust size to take up the same a-amount of space, (U ᵕ U❁) nyanievew that is. (ꈍᴗꈍ)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+.wwappew > d-div {
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207, (✿oωo) 232, 220);
   padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: flex;
+.wwappew {
+  dispway: fwex;
 }
 
-.wrapper > div {
-  flex: 1;
+.wwappew > d-div {
+  fwex: 1;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Flex_2', '300', '200') }}
+{{ embedwivesampwe('fwex_2', UwU '300', '200') }}
 
-> [!NOTE]
-> This has been a very short introduction to what is possible in Flexbox, to find out more, see our [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) article.
+> [!note]
+> t-this has been a vewy showt i-intwoduction to n-nyani is possibwe i-in fwexbox, ^^ t-to find out mowe, :3 s-see ouw [fwexbox](/pt-bw/docs/weawn/css/css_wayout/fwexbox) awticwe. ( ͡o ω ͡o )
 
-## Grid Layout
+## gwid wayout
 
-While flexbox is designed for one-dimensional layout, Grid Layout is designed for two dimensions — lining things up in rows and columns.
+whiwe fwexbox is designed f-fow one-dimensionaw wayout, ( ͡o ω ͡o ) gwid w-wayout is designed fow two dimensions — wining things up in w-wows and cowumns. (U ﹏ U)
 
-Once again, you can switch on Grid Layout with a specific value of display — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we are also defining some row and column tracks on the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns each of `1fr` and two rows of `100px`. I don't need to put any rules on the child elements; they are automatically placed into the cells our grid has created.
+once again, -.- you can switch on gwid wayout with a specific vawue o-of dispway — `dispway: g-gwid`. 😳😳😳 the bewow exampwe u-uses simiwaw mawkup to the fwex exampwe, UwU with a-a containew a-and some chiwd ewements. >w< in addition t-to using `dispway: gwid`, mya we a-awe awso defining some wow and cowumn twacks on the pawent using t-the {{cssxwef("gwid-tempwate-wows")}} and {{cssxwef("gwid-tempwate-cowumns")}} pwopewties wespectivewy. :3 w-we've d-defined thwee cowumns e-each of `1fw` and two wows of `100px`. (ˆ ﻌ ˆ)♡ i d-don't nyeed to put any wuwes on the chiwd ewements; they awe automaticawwy pwaced i-into the cewws o-ouw gwid has cweated. (U ﹏ U)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
+.wwappew > div {
+  bowdew-wadius: 5px;
+  backgwound-cowow: w-wgb(207, ʘwʘ 232, rawr 220);
+  p-padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
-  grid-gap: 10px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  g-gwid-tempwate-wows: 100px 100px;
+  gwid-gap: 10px;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
-  <div class="box6">Six</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
+  <div c-cwass="box5">five</div>
+  <div c-cwass="box6">six</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_1', '300', '330') }}
+{{ embedwivesampwe('gwid_1', (ꈍᴗꈍ) '300', ( ͡o ω ͡o ) '330') }}
 
-Once you have a grid, you can explicitly place your items on it, rather than relying on the auto-placement behavior seen above. In the second example below we have defined the same grid, but this time with three child items. We've set the start and end line of each item using the {{cssxref("grid-column")}} and {{cssxref("grid-row")}} properties. This causes the items to span multiple tracks.
+o-once you have a-a gwid, 😳😳😳 you can e-expwicitwy pwace youw items on it, òωó wathew than w-wewying on the auto-pwacement behaviow seen above. mya i-in the second exampwe bewow we have defined the same gwid, rawr x3 but t-this time with t-thwee chiwd items. w-we've set the s-stawt and end w-wine of each item using the {{cssxwef("gwid-cowumn")}} a-and {{cssxwef("gwid-wow")}} pwopewties. XD this causes the items t-to span muwtipwe twacks. (ˆ ﻌ ˆ)♡
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper > div {
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+.wwappew > div {
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(207, >w< 232, (ꈍᴗꈍ) 220);
   padding: 1em;
 }
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
-  grid-gap: 10px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: 100px 100px;
+  g-gwid-gap: 10px;
 }
 
 .box1 {
-  grid-column: 2 / 4;
-  grid-row: 1;
+  gwid-cowumn: 2 / 4;
+  g-gwid-wow: 1;
 }
 
 .box2 {
-  grid-column: 1;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1;
+  gwid-wow: 1 / 3;
 }
 
 .box3 {
-  grid-row: 2;
-  grid-column: 3;
+  gwid-wow: 2;
+  g-gwid-cowumn: 3;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_2', '300', '330') }}
+{{ embedwivesampwe('gwid_2', '300', (U ﹏ U) '330') }}
 
-> [!NOTE]
-> These two examples are just a small part of the power of Grid layout; to find out more see our [Grid Layout](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) article.
+> [!note]
+> these two e-exampwes awe just a smow pawt of t-the powew of gwid wayout; to find out mowe see o-ouw [gwid wayout](/pt-bw/docs/weawn/css/css_wayout/gwids) a-awticwe. >_<
 
-The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.
+t-the west of this guide covews o-othew wayout methods, >_< w-which awe wess impowtant f-fow the main wayout stwuctuwes o-of youw page but can stiww hewp y-you achieve specific t-tasks. -.- by undewstanding the nyatuwe of each wayout task, òωó you wiww soon find t-that when you wook a-at a pawticuwaw component of youw design the type of wayout b-best suited to it wiww often be c-cweaw. o.O
 
-## Floats
+## fwoats
 
-Floating an element changes the behavior of that element and the block level elements that follow it in normal flow. The element is moved to the left or right and removed from normal flow, and the surrounding content floats around the floated item.
+f-fwoating an ewement changes the behaviow of that ewement and the bwock wevew e-ewements that fowwow it in nyowmaw fwow. σωσ the ewement i-is moved to the weft ow wight a-and wemoved fwom n-nyowmaw fwow, σωσ and the suwwounding c-content fwoats a-awound the f-fwoated item. mya
 
-The {{cssxref("float")}} property has four possible values:
+the {{cssxwef("fwoat")}} p-pwopewty h-has fouw possibwe v-vawues:
 
-- `left` — Floats the element to the left.
-- `right` — Floats the element to the right.
-- `none` — Specifies no floating at all. This is the default value.
-- `inherit` — Specifies that the value of the `float` property should be inherited from the element's parent element.
+- `weft` — fwoats the ewement to the weft. o.O
+- `wight` — fwoats the ewement to the w-wight. XD
+- `none` — s-specifies nyo f-fwoating at aww. XD t-this is the d-defauwt vawue. (✿oωo)
+- `inhewit` — specifies t-that the vawue of the `fwoat` pwopewty shouwd be inhewited fwom the ewement's p-pawent ewement. -.-
 
-In the example below we float a `<div>` left, and give it a {{cssxref("margin")}} on the right to push the text away from the element. This gives us the effect of text wrapped around that box, and is most of what you need to know about floats as used in modern web design.
+i-in the exampwe bewow we fwoat a `<div>` weft, (ꈍᴗꈍ) and give it a-a {{cssxwef("mawgin")}} o-on the w-wight to push the text away fwom the ewement. ( ͡o ω ͡o ) this g-gives us the effect of text wwapped awound that b-box, (///ˬ///✿) and is m-most of nyani you nyeed to know about fwoats as u-used in modewn web design. 🥺
 
-```css hidden
+```css h-hidden
 body {
-  width: 90%;
+  w-width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-p {
-  line-height: 2;
-  word-spacing: 0.1rem;
+p-p {
+  wine-height: 2;
+  w-wowd-spacing: 0.1wem;
 }
 
 .box {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
-  padding: 10px;
-  border-radius: 5px;
+  b-backgwound-cowow: w-wgb(207, (ˆ ﻌ ˆ)♡ 232, 220);
+  b-bowdew: 2px sowid wgb(79, ^•ﻌ•^ 185, rawr x3 227);
+  p-padding: 10px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-```html
-<h1>Simple float example</h1>
+```htmw
+<h1>simpwe fwoat exampwe</h1>
 
-<div class="box">Float</div>
+<div c-cwass="box">fwoat</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  wowem ipsum dowow sit amet, (U ﹏ U) c-consectetuw adipiscing ewit. OwO n-nyuwwa wuctus awiquam
+  dowow, (✿oωo) e-eu wacinia wowem p-pwacewat vuwputate. (⑅˘꒳˘) duis fewis owci, UwU puwvinaw id m-metus
+  ut, (ˆ ﻌ ˆ)♡ wutwum wuctus owci. /(^•ω•^) cwas powttitow i-impewdiet nyunc, (˘ω˘) a-at uwtwicies tewwus
+  waoweet sit amet. XD sed auctow c-cuwsus massa a-at powta. òωó integew wiguwa ipsum, UwU
+  t-twistique sit amet owci vew, -.- vivewwa egestas w-wiguwa. (ꈍᴗꈍ) cuwabituw v-vehicuwa tewwus
+  nyeque, (⑅˘꒳˘) ac o-ownawe ex mawesuada e-et. 🥺 in vitae convawwis wacus. òωó awiquam ewat
+  v-vowutpat. 😳 suspendisse a-ac impewdiet t-tuwpis. òωó aenean f-finibus sowwicitudin ewos
+  phawetwa congue. 🥺 duis ownawe egestas augue ut wuctus. ( ͡o ω ͡o ) pwoin bwandit quam nyec
+  wacus v-vawius commodo e-et a uwna. UwU ut i-id ownawe fewis, 😳😳😳 e-eget fewmentum s-sapien. ʘwʘ
 </p>
 ```
 
 ```css
 .box {
-  float: left;
+  f-fwoat: weft;
   width: 150px;
-  height: 150px;
-  margin-right: 30px;
+  h-height: 150px;
+  m-mawgin-wight: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Float_1', '100%', 600) }}
+{{ embedwivesampwe('fwoat_1', ^^ '100%', 600) }}
 
-> [!NOTE]
-> Floats are fully explained in our lesson on the [float and clear](/pt-BR/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> [!note]
+> f-fwoats a-awe fuwwy expwained in ouw wesson on the [fwoat a-and cweaw](/pt-bw/docs/weawn/css/css_wayout/fwoats) pwopewties. >_< pwiow to techniques s-such as fwexbox and gwid wayout f-fwoats wewe u-used as a method of cweating cowumn w-wayouts. you m-may stiww come a-acwoss these methods on the web; w-we wiww covew t-these in the wesson on [wegacy wayout m-methods](/pt-bw/docs/weawn/css/css_wayout/wegacy_wayout_methods). (ˆ ﻌ ˆ)♡
 
-## Positioning techniques
+## positioning t-techniques
 
-Positioning allows you to move an element from where it would be placed when in normal flow to another location. Positioning isn't a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.
+p-positioning a-awwows you to move an ewement fwom w-whewe it wouwd be pwaced when in nyowmaw fwow t-to anothew wocation. (ˆ ﻌ ˆ)♡ positioning isn't a method fow cweating youw main page wayouts, 🥺 it is mowe about managing a-and fine-tuning the position of specific items on the page. ( ͡o ω ͡o )
 
-There are however useful techniques for certain layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it is to move an item out of normal flow.
+thewe awe howevew usefuw techniques fow cewtain wayout p-pattewns that wewy on the {{cssxwef("position")}} pwopewty. (ꈍᴗꈍ) u-undewstanding positioning awso hewps i-in undewstanding nyowmaw fwow, :3 and nyani it i-is to move an item out of nyowmaw f-fwow. (✿oωo)
 
-There are five types of positioning you should know about:
+thewe awe five types of p-positioning you s-shouwd know about:
 
-- **Static positioning** is the default that every element gets — it just means "put the element into its normal position in the document layout flow — nothing special to see here".
-- **Relative positioning** allows you to modify an element's position on the page, moving it relative to its position in normal flow — including making it overlap other elements on the page.
-- **Absolute positioning** moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's `<html>` element (or its nearest positioned ancestor element). This is useful for creating complex layout effects such as tabbed boxes where different content panels sit on top of one another and are shown and hidden as desired, or information panels that sit off screen by default, but can be made to slide on screen using a control button.
-- **Fixed positioning** is very similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
-- **Sticky positioning** is a newer positioning method which makes an element act like `position: static` until it hits a defined offset from the viewport, at which point it acts like `position: fixed`.
+- **static positioning** is the defauwt that e-evewy ewement gets — it just means "put the ewement into its n-nyowmaw position in the document w-wayout fwow — nyothing speciaw t-to see hewe".
+- **wewative positioning** awwows y-you to modify a-an ewement's position on the page, (U ᵕ U❁) moving it wewative t-to its position in nyowmaw fwow — incwuding m-making it ovewwap othew ewements on the page. UwU
+- **absowute positioning** moves an ewement c-compwetewy out of t-the page's nyowmaw wayout fwow, ^^ w-wike it is sitting o-on its own sepawate wayew. /(^•ω•^) f-fwom thewe, (˘ω˘) you can fix it in a position wewative to the edges of the page's `<htmw>` e-ewement (ow i-its nyeawest positioned ancestow e-ewement). OwO this i-is usefuw fow cweating compwex w-wayout effects such as tabbed boxes whewe diffewent c-content panews sit on top of one anothew and a-awe shown and h-hidden as desiwed, (U ᵕ U❁) ow infowmation panews that sit o-off scween by defauwt, (U ﹏ U) but can be made to swide on scween using a contwow button. mya
+- **fixed positioning** is vewy simiwaw to absowute p-positioning, (⑅˘꒳˘) e-except that it fixes an ewement w-wewative to t-the bwowsew viewpowt, (U ᵕ U❁) nyot anothew e-ewement. /(^•ω•^) this is usefuw fow cweating effects such as a pewsistent nyavigation menu that awways s-stays in the same pwace on the scween as the west of the content scwowws. ^•ﻌ•^
+- **sticky p-positioning** i-is a nyewew p-positioning method which makes an ewement act wike `position: s-static` untiw it h-hits a defined o-offset fwom the viewpowt, (///ˬ///✿) at which p-point it acts wike `position: f-fixed`. o.O
 
-### Simple positioning example
+### simpwe positioning e-exampwe
 
-To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all feature the same HTML, which is as follows:
+to pwovide famiwiawity w-with these page wayout techniques, (ˆ ﻌ ˆ)♡ we'ww show you a-a coupwe of quick exampwes. 😳 ouw e-exampwes wiww a-aww featuwe the same htmw, òωó which i-is as fowwows:
 
-```html
-<h1>Positioning</h1>
+```htmw
+<h1>positioning</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">I am a basic block level element.</p>
-<p>I am a basic block level element.</p>
+<p>i a-am a basic bwock wevew ewement.</p>
+<p c-cwass="positioned">i am a basic bwock w-wevew ewement.</p>
+<p>i am a basic b-bwock wevew e-ewement.</p>
 ```
 
-This HTML will be styled by default using the following CSS:
+this htmw wiww be stywed by defauwt u-using the fowwowing css:
 
 ```css
 body {
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  backgwound-cowow: wgb(207, (⑅˘꒳˘) 232, 220);
+  bowdew: 2px sowid w-wgb(79, rawr 185, 227);
   padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  mawgin: 10px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-The rendered output is as follows:
+the wendewed o-output is as fowwows:
 
-{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}
+{{ embedwivesampwe('simpwe_positioning_exampwe', (ꈍᴗꈍ) '100%', 300) }}
 
-### Relative positioning
+### wewative positioning
 
-Relative positioning allows you to offset an item from the position in normal flow it would have by default. This means you could achieve a task such as moving an icon down a bit so it lines up with a text label. To do this, we could add the following rule to add relative positioning:
+w-wewative positioning awwows you to offset an i-item fwom the position in nyowmaw fwow it wouwd h-have by defauwt. ^^ this means you couwd achieve a-a task such as moving an icon down a bit so it wines u-up with a text w-wabew. (ˆ ﻌ ˆ)♡ to do this, we couwd add the fowwowing w-wuwe to add wewative p-positioning:
 
 ```css
 .positioned {
-  position: relative;
-  top: 30px;
-  left: 30px;
+  position: w-wewative;
+  t-top: 30px;
+  weft: 30px;
 }
 ```
 
-Here we give our middle paragraph a {{cssxref("position")}} value of `relative` — this doesn't do anything on its own, so we also add {{cssxref("top")}} and {{cssxref("left")}} properties. These serve to move the affected element down and to the right — this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which result in it moving right and down.
+hewe we give ouw middwe pawagwaph a-a {{cssxwef("position")}} vawue of `wewative` — this doesn't d-do anything on its own, /(^•ω•^) so we awso add {{cssxwef("top")}} and {{cssxwef("weft")}} p-pwopewties. ^^ t-these sewve to m-move the affected ewement down and to the wight — this might seem w-wike the opposite of nyani you w-wewe expecting, o.O but you nyeed t-to think of it a-as the ewement being pushed on its weft and top sides, 😳😳😳 which wesuwt in it moving wight and down. XD
 
-Adding this code will give the following result:
+a-adding this code w-wiww give the fowwowing wesuwt:
 
-```html hidden
-<h1>Relative positioning</h1>
+```htmw hidden
+<h1>wewative p-positioning</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">This is my relatively positioned element.</p>
-<p>I am a basic block level element.</p>
+<p>i am a basic bwock wevew ewement.</p>
+<p c-cwass="positioned">this i-is my wewativewy p-positioned e-ewement.</p>
+<p>i a-am a basic bwock w-wevew ewement.</p>
 ```
 
 ```css hidden
 body {
   width: 500px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+p-p {
+  backgwound-cowow: wgb(207, 232, nyaa~~ 220);
+  b-bowdew: 2px s-sowid wgb(79, ^•ﻌ•^ 185, 227);
+  p-padding: 10px;
+  m-mawgin: 10px;
+  bowdew-wadius: 5px;
 }
 ```
 
 ```css
 .positioned {
-  position: relative;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  top: 30px;
-  left: 30px;
+  position: w-wewative;
+  b-backgwound: w-wgba(255, :3 84, 104, 0.3);
+  bowdew: 2px sowid wgb(255, ^^ 84, o.O 104);
+  t-top: 30px;
+  weft: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Relative_1', '100%', 300) }}
+{{ embedwivesampwe('wewative_1', ^^ '100%', (⑅˘꒳˘) 300) }}
 
-### Absolute positioning
+### a-absowute positioning
 
-Absolute positioning is used to completely remove an element from normal flow, and place it using offsets from the edges of a containing block.
+absowute positioning i-is used to compwetewy w-wemove an ewement fwom nyowmaw fwow, ʘwʘ and pwace it using o-offsets fwom the e-edges of a containing bwock. mya
 
-Going back to our original non-positioned example, we could add the following CSS rule to implement absolute positioning:
+g-going back to ouw o-owiginaw nyon-positioned exampwe, >w< we couwd add the fowwowing c-css wuwe to impwement a-absowute positioning:
 
 ```css
 .positioned {
-  position: absolute;
+  position: absowute;
   top: 30px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
-Here we give our middle paragraph a {{cssxref("position")}} value of `absolute`, and the same {{cssxref("top")}} and {{cssxref("left")}} properties as before. Adding this code, however, will give the following result:
+h-hewe we give ouw middwe pawagwaph a {{cssxwef("position")}} v-vawue of `absowute`, o.O and the same {{cssxwef("top")}} and {{cssxwef("weft")}} pwopewties as befowe. OwO adding t-this code, -.- howevew, (U ﹏ U) wiww give the fowwowing wesuwt:
 
-```html hidden
-<h1>Absolute positioning</h1>
+```htmw h-hidden
+<h1>absowute p-positioning</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">This is my absolutely positioned element.</p>
-<p>I am a basic block level element.</p>
+<p>i a-am a basic bwock wevew ewement.</p>
+<p cwass="positioned">this i-is my absowutewy p-positioned e-ewement.</p>
+<p>i a-am a basic b-bwock wevew ewement.</p>
 ```
 
 ```css hidden
 body {
   width: 500px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+p-p {
+  backgwound-cowow: w-wgb(207, òωó 232, 220);
+  bowdew: 2px s-sowid wgb(79, >w< 185, 227);
+  p-padding: 10px;
+  m-mawgin: 10px;
+  bowdew-wadius: 5px;
 }
 ```
 
 ```css
 .positioned {
-  position: absolute;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  p-position: absowute;
+  b-backgwound: w-wgba(255, 84, ^•ﻌ•^ 104, 0.3);
+  b-bowdew: 2px s-sowid wgb(255, 84, /(^•ω•^) 104);
   top: 30px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Absolute_1', '100%', 300) }}
+{{ embedwivesampwe('absowute_1', ʘwʘ '100%', XD 300) }}
 
-This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The {{cssxref("top")}} and {{cssxref("left")}} properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the top and left of the page. It is possible to change the parent element that becomes this container and we will take a look at that in the lesson on [positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning).
+t-this is vewy d-diffewent! (U ᵕ U❁) the positioned ewement has nyow been compwetewy sepawated f-fwom the w-west of the page wayout and sits o-ovew the top of i-it. (ꈍᴗꈍ) the othew two pawagwaphs nyow sit togethew a-as if theiw positioned s-sibwing d-doesn't exist. rawr x3 the {{cssxwef("top")}} a-and {{cssxwef("weft")}} p-pwopewties h-have a diffewent effect on absowutewy positioned e-ewements than they do on wewativewy positioned ewements. :3 in this case t-the offsets have b-been cawcuwated fwom the top and weft of the page. (˘ω˘) it is possibwe t-to change the p-pawent ewement that becomes this containew and w-we wiww take a wook at that in the w-wesson on [positioning](/pt-bw/docs/weawn/css/css_wayout/positioning). -.-
 
-### Fixed positioning
+### fixed p-positioning
 
-Fixed positioning removes our element from document flow in the same way as absolute positioning. However, instead of the offsets being applied from the container, they are applied from the viewport. As the item remains fixed in relation to the viewport we can create effects such as a menu which remains fixed as the page scrolls beneath it.
+f-fixed positioning wemoves ouw ewement fwom document fwow in the s-same way as absowute positioning. (ꈍᴗꈍ) h-howevew, UwU instead of the offsets b-being appwied fwom the containew, they awe appwied f-fwom the viewpowt. σωσ as the i-item wemains fixed in wewation to the viewpowt w-we can cweate effects such as a m-menu which wemains fixed as the page scwowws beneath it. ^^
 
-For this example our HTML is three paragraphs of text, in order that we can cause the page to scroll, and a box to which we will give `position: fixed`.
+fow this exampwe ouw htmw is thwee pawagwaphs of text, :3 i-in owdew that we c-can cause the p-page to scwoww, ʘwʘ a-and a box to which we wiww give `position: fixed`. 😳
 
-```html
-<h1>Fixed positioning</h1>
+```htmw
+<h1>fixed p-positioning</h1>
 
-<div class="positioned">Fixed</div>
+<div cwass="positioned">fixed</div>
 
-<p>Paragraph 1.</p>
-<p>Paragraph 2.</p>
-<p>Paragraph 3.</p>
+<p>pawagwaph 1.</p>
+<p>pawagwaph 2.</p>
+<p>pawagwaph 3.</p>
 ```
 
-```html hidden
-<h1>Fixed positioning</h1>
+```htmw hidden
+<h1>fixed positioning</h1>
 
-<div class="positioned">Fixed</div>
+<div c-cwass="positioned">fixed</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  w-wowem ipsum d-dowow sit amet, ^^ c-consectetuw adipiscing ewit. σωσ nyuwwa wuctus awiquam
+  dowow, eu wacinia wowem pwacewat v-vuwputate. /(^•ω•^) d-duis fewis owci, 😳😳😳 puwvinaw id metus
+  ut, 😳 wutwum wuctus owci. OwO cwas p-powttitow impewdiet nyunc, :3 at u-uwtwicies tewwus
+  w-waoweet sit a-amet. nyaa~~ sed auctow cuwsus massa at powta. OwO integew wiguwa ipsum, o.O
+  twistique sit amet owci vew, (U ﹏ U) vivewwa e-egestas wiguwa. (⑅˘꒳˘) cuwabituw vehicuwa t-tewwus
+  nyeque, OwO ac ownawe ex mawesuada et. 😳 in vitae convawwis w-wacus. :3 awiquam ewat
+  vowutpat. ( ͡o ω ͡o ) s-suspendisse ac impewdiet tuwpis. aenean finibus s-sowwicitudin e-ewos
+  phawetwa c-congue. 🥺 duis o-ownawe egestas a-augue ut wuctus. /(^•ω•^) pwoin bwandit quam n-nyec
+  wacus v-vawius commodo et a uwna. nyaa~~ ut id o-ownawe fewis, (✿oωo) eget fewmentum sapien. (✿oωo)
 </p>
 
 <p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  nyam vuwputate d-diam nyec tempow bibendum. (ꈍᴗꈍ) donec w-wuctus augue eget m-mawesuada
+  uwtwices. OwO phasewwus t-tuwpis est, p-posuewe sit amet dapibus ut, :3 faciwisis sed
+  est. mya nyam id wisus q-quis ante sempew c-consectetuw eget a-awiquam wowem. >_< v-vivamus
+  twistique ewit dowow, (///ˬ///✿) sed pwetium metus suscipit vew. (///ˬ///✿) m-mauwis uwtwicies wectus
+  sed wobowtis finibus. 😳😳😳 v-vivamus eu uwna eget vewit cuwsus vivewwa quis
+  v-vestibuwum sem. (U ᵕ U❁) awiquam tincidunt eget puwus in intewdum. (///ˬ///✿) cum s-sociis nyatoque
+  penatibus et magnis d-dis pawtuwient m-montes, ( ͡o ω ͡o ) nyascetuw w-widicuwus mus. (✿oωo)
 </p>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  w-wowem ipsum dowow s-sit amet, òωó consectetuw adipiscing e-ewit. (ˆ ﻌ ˆ)♡ nuwwa w-wuctus awiquam
+  d-dowow, :3 eu wacinia w-wowem pwacewat vuwputate. (ˆ ﻌ ˆ)♡ duis f-fewis owci, (U ᵕ U❁) puwvinaw i-id metus
+  u-ut, (U ᵕ U❁) wutwum wuctus owci. XD cwas p-powttitow impewdiet nyunc, nyaa~~ at uwtwicies tewwus
+  waoweet sit amet. (ˆ ﻌ ˆ)♡ sed auctow cuwsus massa at powta. ʘwʘ i-integew wiguwa i-ipsum, ^•ﻌ•^
+  twistique sit amet o-owci vew, mya vivewwa egestas wiguwa. (ꈍᴗꈍ) cuwabituw vehicuwa t-tewwus
+  nyeque, (ˆ ﻌ ˆ)♡ a-ac ownawe e-ex mawesuada et. (ˆ ﻌ ˆ)♡ i-in vitae convawwis wacus. ( ͡o ω ͡o ) awiquam e-ewat
+  vowutpat. suspendisse ac impewdiet tuwpis. o.O a-aenean finibus s-sowwicitudin ewos
+  phawetwa congue. 😳😳😳 duis ownawe egestas augue u-ut wuctus. pwoin bwandit quam n-nyec
+  wacus vawius commodo et a uwna. ʘwʘ ut id ownawe f-fewis, :3 eget fewmentum sapien. UwU
+</p>
+```
+
+```css h-hidden
+body {
+  width: 500px;
+  mawgin: 0 auto;
+}
+
+.positioned {
+  b-backgwound: wgba(255, nyaa~~ 84, 104, 0.3);
+  b-bowdew: 2px sowid w-wgb(255, :3 84, 104);
+  p-padding: 10px;
+  mawgin: 10px;
+  bowdew-wadius: 5px;
+}
+```
+
+```css
+.positioned {
+  p-position: fixed;
+  top: 30px;
+  weft: 30px;
+}
+```
+
+{{ e-embedwivesampwe('fixed_1', nyaa~~ '100%', ^^ 200) }}
+
+### s-sticky p-positioning
+
+sticky positioning is the finaw positioning method that we have at ouw disposaw. nyaa~~ i-it mixes the defauwt static positioning with f-fixed positioning. 😳😳😳 w-when an item has `position: sticky` it wiww scwoww i-in nyowmaw f-fwow untiw it hits offsets fwom the viewpowt that we have defined. ^•ﻌ•^ a-at that point it becomes "stuck" a-as if it had `position: fixed` appwied. (⑅˘꒳˘)
+
+```htmw h-hidden
+<h1>sticky p-positioning</h1>
+
+<p>
+  wowem ipsum dowow s-sit amet, (✿oωo) consectetuw a-adipiscing ewit. mya nyuwwa w-wuctus awiquam
+  dowow, (///ˬ///✿) eu wacinia w-wowem pwacewat v-vuwputate. ʘwʘ duis f-fewis owci, >w< puwvinaw i-id metus
+  u-ut, wutwum wuctus owci. o.O cwas powttitow i-impewdiet n-nyunc, ^^;; at uwtwicies tewwus
+  waoweet sit amet. s-sed auctow cuwsus massa at powta. :3 i-integew wiguwa ipsum, (ꈍᴗꈍ)
+  twistique sit amet owci vew, XD vivewwa egestas wiguwa. ^^;; cuwabituw vehicuwa tewwus
+  nyeque, (U ﹏ U) a-ac ownawe ex mawesuada et. (ꈍᴗꈍ) i-in vitae convawwis wacus. awiquam e-ewat
+  vowutpat. 😳 s-suspendisse ac impewdiet tuwpis. rawr a-aenean finibus sowwicitudin e-ewos
+  phawetwa congue. ( ͡o ω ͡o ) duis ownawe e-egestas augue ut wuctus. (ˆ ﻌ ˆ)♡ pwoin bwandit quam nyec
+  wacus vawius commodo et a uwna. OwO ut id ownawe fewis, >_< eget f-fewmentum sapien. XD
+</p>
+
+<div cwass="positioned">sticky</div>
+
+<p>
+  nyam vuwputate d-diam nyec tempow bibendum. (ˆ ﻌ ˆ)♡ donec w-wuctus augue eget mawesuada
+  uwtwices. (ꈍᴗꈍ) phasewwus tuwpis est, (✿oωo) posuewe sit amet dapibus ut, UwU faciwisis sed
+  est. (ꈍᴗꈍ) nyam id wisus quis ante sempew c-consectetuw eget a-awiquam wowem. (U ﹏ U) v-vivamus
+  twistique ewit dowow, >w< s-sed pwetium metus s-suscipit vew. ^•ﻌ•^ m-mauwis uwtwicies wectus
+  sed wobowtis finibus. 😳 v-vivamus eu uwna e-eget vewit cuwsus vivewwa quis
+  v-vestibuwum sem. XD a-awiquam tincidunt e-eget puwus i-in intewdum. :3 cum s-sociis nyatoque
+  penatibus et m-magnis dis pawtuwient m-montes, rawr x3 nyascetuw w-widicuwus m-mus.
+</p>
+
+<p>
+  w-wowem ipsum d-dowow sit amet, (⑅˘꒳˘) c-consectetuw adipiscing e-ewit. ^^ nyuwwa w-wuctus awiquam
+  d-dowow, eu wacinia wowem pwacewat vuwputate. >w< duis fewis owci, 😳 p-puwvinaw id metus
+  ut, wutwum w-wuctus owci. rawr cwas powttitow impewdiet nyunc, rawr x3 at u-uwtwicies tewwus
+  w-waoweet sit a-amet. (ꈍᴗꈍ) sed auctow cuwsus massa at p-powta. -.- integew w-wiguwa ipsum,
+  twistique sit amet owci vew, òωó vivewwa egestas wiguwa. (U ﹏ U) cuwabituw vehicuwa tewwus
+  n-nyeque, ( ͡o ω ͡o ) ac ownawe ex mawesuada et. :3 in vitae convawwis wacus. >w< awiquam e-ewat
+  vowutpat. ^^ s-suspendisse ac impewdiet t-tuwpis. 😳😳😳 aenean finibus s-sowwicitudin e-ewos
+  phawetwa c-congue. OwO duis o-ownawe egestas a-augue ut wuctus. XD p-pwoin bwandit quam nyec
+  wacus vawius commodo e-et a uwna. (⑅˘꒳˘) ut id ownawe fewis, OwO eget f-fewmentum sapien.
 </p>
 ```
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto;
+  w-width: 500px;
+  m-mawgin: 0 auto;
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  b-backgwound: wgba(255, 84, (⑅˘꒳˘) 104, 0.3);
+  bowdew: 2px sowid w-wgb(255, (U ﹏ U) 84, (ꈍᴗꈍ) 104);
+  p-padding: 10px;
+  m-mawgin: 10px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
 ```css
 .positioned {
-  position: fixed;
+  position: s-sticky;
   top: 30px;
-  left: 30px;
+  w-weft: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Fixed_1', '100%', 200) }}
+{{ e-embedwivesampwe('sticky_1', rawr '100%', XD 200) }}
 
-### Sticky positioning
+> [!note]
+> to find m-mowe out about positioning, >w< see ouw [positioning](/pt-bw/docs/weawn/css/css_wayout/positioning) awticwe. UwU
 
-Sticky positioning is the final positioning method that we have at our disposal. It mixes the default static positioning with fixed positioning. When an item has `position: sticky` it will scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had `position: fixed` applied.
+## tabwe wayout
 
-```html hidden
-<h1>Sticky positioning</h1>
+htmw tabwes awe fine fow dispwaying tabuwaw data, but many yeaws ago — b-befowe even b-basic css was suppowted wewiabwy acwoss bwowsews — web devewopews used to awso u-use tabwes fow e-entiwe web page wayouts — putting theiw headews, 😳 footews, (ˆ ﻌ ˆ)♡ diffewent c-cowumns, ^•ﻌ•^ e-etc. ^^ in vawious tabwe wows and c-cowumns. 😳 this wowked a-at the time, :3 but it has many p-pwobwems — tabwe wayouts awe i-infwexibwe, (⑅˘꒳˘) vewy h-heavy on mawkup, ( ͡o ω ͡o ) difficuwt to debug, :3 and semanticawwy wwong (e.g., s-scween weadew u-usews have pwobwems n-nyavigating t-tabwe wayouts). (⑅˘꒳˘)
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-</p>
+the way that a-a tabwe wooks o-on a webpage when y-you use tabwe m-mawkup is due to a set of css pwopewties that define t-tabwe wayout. >w< t-these pwopewties can be used to way out ewements that awe not tabwes, OwO a use which i-is sometimes d-descwibed as "using css tabwes". 😳
 
-<div class="positioned">Sticky</div>
+t-the exampwe bewow shows one such use; using css tabwes fow wayout s-shouwd be c-considewed a wegacy m-method at this point, fow those s-situations whewe y-you have vewy owd bwowsews without suppowt f-fow fwexbox ow gwid. OwO
 
-<p>
-  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
-  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-</p>
+w-wet's wook a-at an exampwe. f-fiwst, 🥺 some simpwe m-mawkup that cweates a-an htmw fowm. (˘ω˘) each input ewement has a wabew, 😳😳😳 and we've awso incwuded a caption inside a p-pawagwaph. mya each wabew/input paiw i-is wwapped in a {{htmwewement("div")}}, OwO f-fow wayout puwposes. >_<
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
-</p>
-```
-
-```css hidden
-body {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-}
-```
-
-```css
-.positioned {
-  position: sticky;
-  top: 30px;
-  left: 30px;
-}
-```
-
-{{ EmbedLiveSample('Sticky_1', '100%', 200) }}
-
-> [!NOTE]
-> to find more out about positioning, see our [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) article.
-
-## Table layout
-
-HTML tables are fine for displaying tabular data, but many years ago — before even basic CSS was supported reliably across browsers — web developers used to also use tables for entire web page layouts — putting their headers, footers, different columns, etc. in various table rows and columns. This worked at the time, but it has many problems — table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
-
-The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These properties can be used to lay out elements that are not tables, a use which is sometimes described as "using CSS tables".
-
-The example below shows one such use; using CSS tables for layout should be considered a legacy method at this point, for those situations where you have very old browsers without support for Flexbox or Grid.
-
-Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}}, for layout purposes.
-
-```html
-<form>
-  <p>First of all, tell us your name and age.</p>
+```htmw
+<fowm>
+  <p>fiwst of aww, 😳 teww us youw nyame a-and age.</p>
   <div>
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" />
+    <wabew f-fow="fname">fiwst nyame:</wabew>
+    <input t-type="text" id="fname" />
   </div>
   <div>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" />
+    <wabew fow="wname">wast n-nyame:</wabew>
+    <input type="text" id="wname" />
   </div>
   <div>
-    <label for="age">Age:</label>
-    <input type="text" id="age" />
+    <wabew fow="age">age:</wabew>
+    <input type="text" i-id="age" />
   </div>
-</form>
+</fowm>
 ```
 
-Now, the CSS for our example. Most of the CSS is fairly ordinary, except for the uses of the {{cssxref("display")}} property. The {{htmlelement("form")}}, {{htmlelement("div")}}s, and {{htmlelement("label")}}s and {{htmlelement("input")}}s have been told to display like a table, table rows, and table cells respectively — basically, they'll act like HTML table markup, causing the labels and inputs to line up nicely by default. All we then have to do is add a bit of sizing, margin, etc. to make everything look a bit nicer and we're done.
+nyow, (U ᵕ U❁) the css fow ouw exampwe. 🥺 most of the css is faiwwy o-owdinawy, (U ﹏ U) except f-fow the uses of t-the {{cssxwef("dispway")}} p-pwopewty. (U ﹏ U) the {{htmwewement("fowm")}}, rawr x3 {{htmwewement("div")}}s, :3 and {{htmwewement("wabew")}}s a-and {{htmwewement("input")}}s have been t-towd to dispway wike a tabwe, rawr tabwe wows, and t-tabwe cewws wespectivewy — b-basicawwy, XD t-they'ww act wike htmw tabwe mawkup, ^^ causing t-the wabews and inputs to wine up nyicewy by defauwt. mya aww we then have to do is add a bit of sizing, (U ﹏ U) mawgin, e-etc. 😳 to make evewything w-wook a bit nyicew and we'we done. mya
 
-You'll notice that the caption paragraph has been given `display: table-caption;` — which makes it act like a table {{htmlelement("caption")}} — and `caption-side: bottom;` to tell the caption to sit on the bottom of the table for styling purposes, even though the markup is before the `<input>` elements in the source. This allows for a nice bit of flexibility.
+you'ww nyotice that the caption pawagwaph has been given `dispway: t-tabwe-caption;` — which makes it act wike a tabwe {{htmwewement("caption")}} — a-and `caption-side: b-bottom;` to t-teww the caption t-to sit on the bottom of the tabwe fow stywing puwposes, 😳 even though the mawkup is befowe the `<input>` e-ewements i-in the souwce. ^^ t-this awwows fow a-a nyice bit of fwexibiwity. :3
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: s-sans-sewif;
 }
 
-form {
-  display: table;
-  margin: 0 auto;
+fowm {
+  d-dispway: tabwe;
+  mawgin: 0 auto;
 }
 
-form div {
-  display: table-row;
+fowm div {
+  dispway: tabwe-wow;
 }
 
-form label,
-form input {
-  display: table-cell;
-  margin-bottom: 10px;
+f-fowm w-wabew, (U ﹏ U)
+fowm input {
+  d-dispway: tabwe-ceww;
+  m-mawgin-bottom: 10px;
 }
 
-form label {
-  width: 200px;
-  padding-right: 5%;
-  text-align: right;
+fowm wabew {
+  w-width: 200px;
+  p-padding-wight: 5%;
+  text-awign: wight;
 }
 
-form input {
+fowm input {
   width: 300px;
 }
 
-form p {
-  display: table-caption;
+fowm p-p {
+  dispway: t-tabwe-caption;
   caption-side: bottom;
   width: 300px;
-  color: #999;
-  font-style: italic;
+  cowow: #999;
+  f-font-stywe: itawic;
 }
 ```
 
-This gives us the following result:
+t-this gives u-us the fowwowing w-wesuwt:
 
-{{ EmbedLiveSample('Table_layout', '100%', '170') }}
+{{ embedwivesampwe('tabwe_wayout', UwU '100%', (ˆ ﻌ ˆ)♡ '170') }}
 
-You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
+you can awso see this exampwe wive at [css-tabwes-exampwe.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/box-modew-wecap/css-tabwes-exampwe.htmw) (see the [souwce code](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/box-modew-wecap/css-tabwes-exampwe.htmw) t-too.)
 
-## Multi-column layout
+## muwti-cowumn wayout
 
-The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don't want to force users to scroll up and down, arranging content into columns can be a useful technique.
+t-the muwti-cowumn wayout moduwe gives us a way t-to way out content in cowumns, (ˆ ﻌ ˆ)♡ simiwaw t-to how text f-fwows in a nyewspapew. w-whiwe w-weading up and down c-cowumns is wess usefuw in a w-web context as you don't want to fowce usews to scwoww up and down, ^^;; awwanging content i-into cowumns can be a usefuw technique. rawr
 
-To turn a block into a multicol container we use either the {{cssxref("column-count")}} property, which tells the browser how many columns we would like to have, or the {{cssxref("column-width")}} property, which tells the browser to fill the container with as many columns of at least that width.
+to t-tuwn a bwock into a-a muwticow containew w-we use eithew the {{cssxwef("cowumn-count")}} pwopewty, nyaa~~ which tewws the bwowsew how many c-cowumns we wouwd w-wike to have, rawr x3 o-ow the {{cssxwef("cowumn-width")}} p-pwopewty, (⑅˘꒳˘) which tewws the bwowsew to fiww the containew with as many cowumns of at weast that w-width. OwO
 
-In the below example we start with a block of HTML inside a containing `<div>` element with a class of `container`.
+in the bewow exampwe we stawt with a bwock o-of htmw inside a-a containing `<div>` e-ewement with a cwass of `containew`. OwO
 
-```html
-<div class="container">
-  <h1>Multi-column layout</h1>
+```htmw
+<div c-cwass="containew">
+  <h1>muwti-cowumn wayout</h1>
 
-  <p>Paragraph 1.</p>
-  <p>Paragraph 2.</p>
+  <p>pawagwaph 1.</p>
+  <p>pawagwaph 2.</p>
 </div>
 ```
 
-We are using a `column-width` of 200 pixels on that container, causing the browser to create as many 200-pixel columns as will fit in the container and then share the remaining space between the created columns.
+we awe using a `cowumn-width` of 200 pixews on that containew, ʘwʘ causing the bwowsew to cweate as many 200-pixew cowumns as w-wiww fit in the containew and then shawe the wemaining s-space between t-the cweated cowumns. :3
 
-```html hidden
-<div class="container">
-  <h1>Multi-column Layout</h1>
+```htmw h-hidden
+<div c-cwass="containew">
+  <h1>muwti-cowumn wayout</h1>
 
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
-    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
-    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
-    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
-    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
-    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
-    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
-    eget fermentum sapien.
+    wowem i-ipsum dowow sit a-amet, mya consectetuw adipiscing ewit. OwO nuwwa wuctus
+    a-awiquam dowow, :3 e-eu wacinia w-wowem pwacewat v-vuwputate. >_< duis fewis owci, σωσ
+    p-puwvinaw id metus ut, /(^•ω•^) wutwum wuctus owci. mya cwas powttitow i-impewdiet n-nyunc, nyaa~~ at
+    uwtwicies tewwus w-waoweet sit amet. 😳 s-sed auctow cuwsus massa at powta. ^^;; integew
+    wiguwa ipsum, 😳😳😳 twistique sit amet o-owci vew, nyaa~~ vivewwa egestas wiguwa. 🥺 c-cuwabituw
+    vehicuwa tewwus n-nyeque, XD ac ownawe ex mawesuada et. (ꈍᴗꈍ) in vitae convawwis w-wacus.
+    awiquam ewat vowutpat. 😳😳😳 suspendisse ac impewdiet t-tuwpis. ( ͡o ω ͡o ) aenean finibus
+    sowwicitudin e-ewos p-phawetwa congue. nyaa~~ d-duis ownawe egestas augue ut wuctus. XD
+    pwoin b-bwandit quam nyec w-wacus vawius c-commodo et a uwna. (ˆ ﻌ ˆ)♡ u-ut id ownawe fewis, rawr x3
+    eget f-fewmentum sapien. OwO
   </p>
 
   <p>
-    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    n-nyam vuwputate d-diam nyec tempow b-bibendum. UwU donec w-wuctus augue eget mawesuada
+    uwtwices. ^^ phasewwus t-tuwpis est, p-posuewe sit amet dapibus ut, (✿oωo) faciwisis sed
+    e-est. 😳😳😳 nyam id w-wisus quis ante s-sempew consectetuw eget awiquam w-wowem. 🥺 vivamus
+    t-twistique ewit dowow, ʘwʘ sed pwetium m-metus suscipit v-vew. 😳 mauwis uwtwicies
+    wectus s-sed wobowtis finibus. ^^;; vivamus e-eu uwna eget v-vewit cuwsus vivewwa q-quis
+    vestibuwum s-sem. (///ˬ///✿) awiquam tincidunt eget puwus in intewdum. OwO cum sociis n-nyatoque
+    penatibus et magnis d-dis pawtuwient montes, -.- nyascetuw w-widicuwus mus.
   </p>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 body {
   max-width: 800px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 ```
 
 ```css
-.container {
-  column-width: 200px;
+.containew {
+  cowumn-width: 200px;
 }
 ```
 
-{{ EmbedLiveSample('Multicol_1', '100%', 200) }}
+{{ e-embedwivesampwe('muwticow_1', ^^ '100%', (ꈍᴗꈍ) 200) }}
 
-## Summary
+## summawy
 
-This article has provided a brief summary of all the layout technologies you should know about. Read on for more information on each individual technology!
+this awticwe has pwovided a-a bwief summawy o-of aww the wayout technowogies you shouwd know about. ^^;; wead on fow mowe infowmation on each individuaw technowogy! (˘ω˘)
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{nextmenu("weawn/css/css_wayout/nowmaw_fwow", 🥺 "weawn/css/css_wayout")}}

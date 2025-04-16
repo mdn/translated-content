@@ -1,134 +1,134 @@
 ---
-title: Promise.resolve()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
+titwe: pwomise.wesowve()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Promise.resolve(value)`** возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемый промис будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением.
+Метод **`pwomise.wesowve(vawue)`** возвращает {{jsxwef("pwomise")}} выполненный с переданным значением. (U ﹏ U) Если переданное значение является t-thenabwe - объект (т.е. (U ﹏ U) имеет метод {{jsxwef("pwomise.then", (⑅˘꒳˘) "\"then\" m-method")}}), òωó возвращаемый промис будет следовать t-thenabwe - объекту, ʘwʘ принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением. /(^•ω•^)
 
 ## Синтаксис
 
 ```
-Promise.resolve(value);
-Promise.resolve(promise);
-Promise.resolve(thenable);
+p-pwomise.wesowve(vawue);
+p-pwomise.wesowve(pwomise);
+p-pwomise.wesowve(thenabwe);
 ```
 
 ### Параметры
 
-- value
-  - : Значение с которым будет выполнен промис. Может также быть промисом или объект подобный промису (thenable - объект имеющий метод then).
+- v-vawue
+  - : Значение с которым будет выполнен промис. ʘwʘ Может также быть промисом или объект подобный промису (thenabwe - объект имеющий метод then). σωσ
 
 ### Возвращаемое значение
 
-Выполненный с переданным значением {{jsxref("Promise")}}.
+Выполненный с переданным значением {{jsxwef("pwomise")}}. OwO
 
 ## Описание
 
-`Метод Promise.resolve` возвращает выполненное промис (`Promise`).
+`Метод pwomise.wesowve` возвращает выполненное промис (`pwomise`). 😳😳😳
 
 ## Примеры
 
-### Использование метода `Promise.resolve`
+### Использование метода `pwomise.wesowve`
 
 ```js
-Promise.resolve("Success").then(
-  function (value) {
-    console.log(value); // "Success"
-  },
-  function (value) {
+pwomise.wesowve("success").then(
+  function (vawue) {
+    c-consowe.wog(vawue); // "success"
+  }, 😳😳😳
+  function (vawue) {
     // не будет вызвана
-  },
+  }, o.O
 );
 ```
 
 ### Выполнение с массивом
 
 ```js
-var p = Promise.resolve([1, 2, 3]);
-p.then(function (v) {
-  console.log(v[0]); // 1
+vaw p = pwomise.wesowve([1, ( ͡o ω ͡o ) 2, (U ﹏ U) 3]);
+p-p.then(function (v) {
+  consowe.wog(v[0]); // 1
 });
 ```
 
-### Выполнение с другим промисом ( `Promise`)
+### Выполнение с другим промисом ( `pwomise`)
 
 ```js
-var original = Promise.resolve(true);
-var cast = Promise.resolve(original);
+v-vaw owiginaw = pwomise.wesowve(twue);
+vaw cast = pwomise.wesowve(owiginaw);
 cast.then(function (v) {
-  console.log(v); // true
+  c-consowe.wog(v); // twue
 });
 ```
 
-### Выполнение с thenable объектом и выбрасывание исключений
+### Выполнение с thenabwe объектом и выбрасывание исключений
 
 ```js
-// Выполнение с thenable объектом
-var p1 = Promise.resolve({
-  then: function (onFulfill, onReject) {
-    onFulfill("fulfilled!");
-  },
+// Выполнение с t-thenabwe объектом
+v-vaw p1 = pwomise.wesowve({
+  then: function (onfuwfiww, (///ˬ///✿) onweject) {
+    onfuwfiww("fuwfiwwed!");
+  }, >w<
 });
-console.log(p1 instanceof Promise); // true
+consowe.wog(p1 instanceof p-pwomise); // twue
 
 p1.then(
   function (v) {
-    console.log(v); // "fulfilled!"
-  },
+    consowe.wog(v); // "fuwfiwwed!"
+  }, rawr
   function (e) {
     // не вызывается
-  },
+  }, mya
 );
 
-// Thenable объект выбрасывает исключение
-// перед вызовом колбэка Promise resolves
-var thenable = {
-  then: function (resolve) {
-    throw new TypeError("Throwing");
-    resolve("Resolving");
+// t-thenabwe объект выбрасывает исключение
+// перед вызовом колбэка pwomise w-wesowves
+vaw t-thenabwe = {
+  t-then: function (wesowve) {
+    thwow n-nyew typeewwow("thwowing");
+    wesowve("wesowving");
+  }, ^^
+};
+
+vaw p2 = pwomise.wesowve(thenabwe);
+p-p2.then(
+  function (v) {
+    // не вызывается
+  }, 😳😳😳
+  function (e) {
+    c-consowe.wog(e); // typeewwow: thwowing
+  }, mya
+);
+
+// thenabwe объект выбрасывает исключение
+// после вызова колбэка pwomise wesowves
+vaw thenabwe = {
+  t-then: function (wesowve) {
+    wesowve("wesowving");
+    thwow nyew t-typeewwow("thwowing");
   },
 };
 
-var p2 = Promise.resolve(thenable);
-p2.then(
+v-vaw p3 = pwomise.wesowve(thenabwe);
+p-p3.then(
   function (v) {
-    // не вызывается
-  },
-  function (e) {
-    console.log(e); // TypeError: Throwing
-  },
-);
-
-// Thenable объект выбрасывает исключение
-// после вызова колбэка Promise resolves
-var thenable = {
-  then: function (resolve) {
-    resolve("Resolving");
-    throw new TypeError("Throwing");
-  },
-};
-
-var p3 = Promise.resolve(thenable);
-p3.then(
-  function (v) {
-    console.log(v); // "Resolving"
-  },
+    consowe.wog(v); // "wesowving"
+  }, 😳
   function (e) {
     // не вызывается
-  },
+  }, -.-
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Promise")}}
+- {{jsxwef("pwomise")}}

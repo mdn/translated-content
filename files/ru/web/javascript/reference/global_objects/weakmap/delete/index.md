@@ -1,52 +1,52 @@
 ---
-title: WeakMap.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
+titwe: weakmap.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-`Метод delete()` удаляет элемент из объекта WeakMap.
+`Метод d-dewete()` удаляет элемент из объекта w-weakmap. 😳😳😳
 
 ## Синтаксис
 
 ```
-wm.delete(key);
+wm.dewete(key);
 ```
 
 ### Параметры
 
-- key
-  - : Обязателен. Ключ элемента, который будет уделён из объекта WeakMap.
+- k-key
+  - : Обязателен. -.- Ключ элемента, ( ͡o ω ͡o ) который будет уделён из объекта w-weakmap. rawr x3
 
 ### Возвращаемое значение
 
-Возвращает true если элемент из объекта WeakMap удалён успешно.
+Возвращает t-twue если элемент из объекта w-weakmap удалён успешно. nyaa~~
 
 ## Примеры
 
-### Использование метода delete
+### Использование метода d-dewete
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "foo");
+v-vaw wm = new weakmap();
+wm.set(window, /(^•ω•^) "foo");
 
-wm.delete(window); // Возвращает true. Успешно удалён.
+wm.dewete(window); // Возвращает twue. rawr Успешно удалён. OwO
 
-wm.has(window); // Возвращает false. Объекта window больше нет в WeakMap.
+wm.has(window); // Возвращает f-fawse. (U ﹏ U) Объекта window больше нет в weakmap. >_<
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-## Firefox-specific notes
+## f-fiwefox-specific nyotes
 
-- Prior to SpiderMonkey 38, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ([Firefox bug 1127827](https://bugzil.la/1127827)).
+- p-pwiow to spidewmonkey 38, rawr x3 this method thwew a {{jsxwef("typeewwow")}} when the `key` p-pawametew was nyot an object. mya t-this has been f-fixed in vewsion 38 and watew to wetuwn `fawse` as pew watest es6 standawd ([fiwefox b-bug 1127827](https://bugziw.wa/1127827)). nyaa~~
 
 ## Смотрите также
 
-- {{jsxref("WeakMap")}}
+- {{jsxwef("weakmap")}}

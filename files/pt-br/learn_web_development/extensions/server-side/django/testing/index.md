@@ -1,952 +1,952 @@
 ---
-title: "Tutorial Django Parte 10: Testando uma aplicação web Django"
-slug: Learn_web_development/Extensions/Server-side/Django/Testing
-original_slug: Learn/Server-side/Django/Testing
+titwe: "tutowiaw django pawte 10: t-testando uma a-apwicação web d-django"
+swug: w-weawn_web_devewopment/extensions/sewvew-side/django/testing
+o-owiginaw_swug: w-weawn/sewvew-side/django/testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/fowms", (///ˬ///✿) "weawn/sewvew-side/django/depwoyment", (⑅˘꒳˘) "weawn/sewvew-side/django")}}
 
-À medida que websites crescem, eles se tornam mais difíceis de testar manualmente. Não apenas mais para testar, mas, as interações entre componentes tornam-se mais complexas, uma pequena mudança em uma área pode impactar outras áreas, portanto mais mudanças serão necessárias para garantir que tudo permaneça funcionando e erros não sejam introduzidos à medida que mais alterações forem feitas. Uma maneira de mitigar esses problemas é escrever testes automatizados, que podem ser executados facilmente e confiavelmente toda vez que você faz uma alteração. Este tutorial mostra como automatizar testes unitários do seu website utilizando o _framework_ de testes do Django.
+À medida q-que websites c-cwescem, OwO ewes se townam mais difíceis de testaw manuawmente. ^^ nyão apenas mais p-pawa testaw, rawr mas, as intewações entwe componentes t-townam-se mais compwexas, XD u-uma pequena mudança em uma áwea pode impactaw outwas áweas, ( ͡o ω ͡o ) p-powtanto mais mudanças sewão nyecessáwias p-pawa g-gawantiw que tudo pewmaneça funcionando e ewwos nyão sejam intwoduzidos à medida que mais awtewações f-fowem feitas. 😳😳😳 uma maneiwa de mitigaw esses pwobwemas é escwevew testes a-automatizados, (ˆ ﻌ ˆ)♡ que podem sew e-executados faciwmente e-e confiavewmente t-toda vez q-que você faz uma awtewação. mya este tutowiaw mostwa c-como automatizaw testes unitáwios do seu website u-utiwizando o _fwamewowk_ de testes do django. ( ͡o ω ͡o )
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Complete todos os tópicos de tutoriais anteriores, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
-          >Tutorial Django Parte 9: Trabalhando com formulários</a
-        >.
+        c-compwete todos os tópicos de tutowiais a-antewiowes, ^^ i-incwuindo
+        <a h-hwef="/pt-bw/docs/weawn/sewvew-side/django/fowms"
+          >tutowiaw django pawte 9: twabawhando com fowmuwáwios</a
+        >. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Entender como escrever testes unitários para websites baseados em
-        Django.
+        e-entendew como escwevew testes u-unitáwios pawa w-websites baseados em
+        django. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão Geral
+## v-visão gewaw
 
-A [Local Library](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) atualmente tem páginas para mostrar listas de todos livros e autores, visualização detalhada para itens `Book` e `Author`, uma página para renovar `BookInstance`s, e páginas para criar, atualizar e excluir itens `Author` (e também registros de `Book`, se você completou o desafio no [forms tutorial](/pt-BR/docs/Learn/Server-side/Django/Forms)). Mesmo com este site relativamente pequeno, navegar manualmente por cada página e verificar superficialmente se tudo funciona como esperado pode levar vários minutos. À medida que fizemos mudanças e aumentamos o site, o tempo necessário para verificar manualmente se tudo funciona "devidamente" só aumentará. Se continuássemos como estamos, eventuamente estaríamos gastando a maior parte do tempo testando, e muito pouco tempo aprimorando nosso código.
+a [wocaw wibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) a-atuawmente tem páginas pawa mostwaw wistas d-de todos wivwos e autowes, /(^•ω•^) visuawização d-detawhada pawa itens `book` e-e `authow`, >w< u-uma página pawa wenovaw `bookinstance`s, >w< e páginas pawa cwiaw, (✿oωo) atuawizaw e excwuiw itens `authow` (e também wegistwos de `book`, (///ˬ///✿) s-se você c-compwetou o desafio nyo [fowms t-tutowiaw](/pt-bw/docs/weawn/sewvew-side/django/fowms)). (ꈍᴗꈍ) m-mesmo c-com este site wewativamente pequeno, /(^•ω•^) nyavegaw manuawmente pow cada p-página e vewificaw supewficiawmente se tudo funciona como espewado pode wevaw v-váwios minutos. (✿oωo) À medida que f-fizemos mudanças e-e aumentamos o-o site, nyaa~~ o tempo nyecessáwio pawa v-vewificaw manuawmente s-se tudo f-funciona "devidamente" s-só aumentawá. (ꈍᴗꈍ) se continuássemos como estamos, o.O e-eventuamente e-estawíamos g-gastando a maiow p-pawte do tempo t-testando, ^^;; e muito pouco tempo apwimowando nyosso código. σωσ
 
-Testes automatizados podem realmente ajudar com este problema! Os benefícios óbvios são que eles podem ser executados muito mais rápido que testes manuais, podem testar com um nível mais baixo de detalhes, e testa exatamente a mesma funcionalidade (testadores humanos não são nem de longe tão confiáveis!). Por serem rápidos, testes automatizados podem ser executados mais regularmente, e se um teste falhar, eles apontam exatamente para onde o código não está funcionando como esperado .
+testes a-automatizados podem weawmente ajudaw com este pwobwema! òωó os benefícios óbvios são que ewes podem sew executados m-muito mais wápido que testes manuais, (ꈍᴗꈍ) podem testaw com um n-nyívew mais baixo d-de detawhes, ʘwʘ e-e testa exatamente a mesma funcionawidade (testadowes h-humanos nyão são nyem de w-wonge tão confiáveis!). ^^;; p-pow sewem wápidos, mya testes automatizados podem sew executados mais weguwawmente, XD e se u-um teste fawhaw, /(^•ω•^) ewes apontam exatamente p-pawa onde o código nyão e-está funcionando c-como espewado . nyaa~~
 
-Além disso, testes automatizados podem atuar como o primeiro "usuário" do mundo real do seu código, forçando você a ser rigoroso ao definir e documentar como seu website deve se comportar. Geralmente, eles são a base para seus exemplos de código e documentação. Por essas razões, alguns processos de desenvolvimento de código iniciam com definição e implementação de teste, o qual após o código é escrito para corresponder ao comportamento necessário (ex. [desenvolvimento guiado por testes](https://en.wikipedia.org/wiki/Test-driven_development) e [desenvolvimento guiado por comportamento](https://en.wikipedia.org/wiki/Behavior-driven_development)).
+awém disso, (U ᵕ U❁) testes automatizados p-podem atuaw c-como o pwimeiwo "usuáwio" do mundo weaw do s-seu código, òωó fowçando v-você a sew wigowoso ao definiw e documentaw como seu website deve se compowtaw. σωσ g-gewawmente, ^^;; e-ewes são a b-base pawa seus exempwos de código e-e documentação. (˘ω˘) p-pow essas wazões, òωó awguns p-pwocessos de desenvowvimento de código iniciam com definição e impwementação d-de teste, UwU o quaw a-após o código é escwito pawa cowwespondew a-ao compowtamento n-nyecessáwio (ex. 😳😳😳 [desenvowvimento guiado pow testes](https://en.wikipedia.owg/wiki/test-dwiven_devewopment) e [desenvowvimento guiado pow compowtamento](https://en.wikipedia.owg/wiki/behaviow-dwiven_devewopment)). (⑅˘꒳˘)
 
-Este tutorial mostra como escrever testes automatizados para Django, adicionando um número de testes para o website _LocalLibrary_.
+e-este tutowiaw mostwa como escwevew testes automatizados pawa django, nyaa~~ adicionando u-um nyúmewo de testes pawa o website _wocawwibwawy_. :3
 
-### Tipos de teste
+### t-tipos de teste
 
-Há inúmeros tipos, níveis, e classificações de testes e abordagens de testes. Os testes automatizados mais importantes são:
+h-há inúmewos tipos, nyaa~~ nyíveis, e cwassificações de testes e-e abowdagens de t-testes. :3 os testes automatizados mais impowtantes são:
 
-- Testes unitários
-  - : Verifica o comportamento funcional de componentes individuais, geralmente ao nível de classe e função.
-- Testes de regressão
-  - : Testes que reproduzem erros históricos. Cada teste é executado inicialmente para verificar se o erro foi corrigido, e então executado novamente para garantir que não foi reintroduzido após alterações posteriores no código.
-- Testes de integração
-  - : Verifica como agrupamentos de componentes funcionam quando utilizados juntos. Testes de integração estão cientes das interações necessárias entre componentes, mas não necessariamente das operações internas de cada componente. Eles podem abranger agrupamentos simples de componentes através de todo website.
+- testes u-unitáwios
+  - : vewifica o compowtamento f-funcionaw de componentes individuais, :3 gewawmente ao nyívew d-de cwasse e função. ^•ﻌ•^
+- testes d-de wegwessão
+  - : t-testes que wepwoduzem e-ewwos histówicos. o.O cada teste é e-executado iniciawmente p-pawa vewificaw s-se o ewwo foi cowwigido, e-e então executado n-nyovamente pawa gawantiw que nyão foi weintwoduzido a-após awtewações p-postewiowes n-nyo código. -.-
+- testes de integwação
+  - : v-vewifica como agwupamentos de c-componentes funcionam q-quando utiwizados juntos. 🥺 testes de integwação estão cientes d-das intewações n-nyecessáwias e-entwe componentes, :3 m-mas nyão necessawiamente d-das opewações intewnas de cada componente. /(^•ω•^) ewes podem abwangew agwupamentos simpwes de componentes a-atwavés de todo website. 😳😳😳
 
-> **Nota:**Outros tipos de testes comuns incluem caixa preta (black box), caixa branca (white box), manual, automatizado, canário (canary), fumaça (smoke), conformidade (conformance), aceitação (acceptance), funcional (functional), sistema (system), _performance_, carga (load) e testes de _stress_. Procure-os para mais informaçãos.
+> **nota:**outwos t-tipos de testes comuns incwuem c-caixa pweta (bwack box), (✿oωo) caixa b-bwanca (white box), nyaa~~ manuaw, (˘ω˘) automatizado, c-canáwio (canawy), rawr x3 f-fumaça (smoke), 🥺 c-confowmidade (confowmance), (ˆ ﻌ ˆ)♡ a-aceitação (acceptance), XD f-funcionaw (functionaw), (˘ω˘) sistema (system), UwU _pewfowmance_, (U ᵕ U❁) cawga (woad) e testes de _stwess_. :3 pwocuwe-os pawa mais infowmaçãos. :3
 
-### O que o Django fornece para testes?
+### o que o django fownece p-pawa testes?
 
-Testar um website é uma tarefa complexa, porque isto é composto de várias camadas de lógica – do tratamento de requisições no nível HTTP, consultas de modelos, validação e processamento de formulários, e renderização de _template_.
+t-testaw um website é u-uma tawefa compwexa, ^•ﻌ•^ powque i-isto é composto de váwias camadas de wógica – do twatamento d-de wequisições n-nyo nyívew http, 🥺 consuwtas d-de modewos, /(^•ω•^) vawidação e pwocessamento de fowmuwáwios, σωσ e-e wendewização d-de _tempwate_. >_<
 
-Django fornece um _framework_ de teste com uma baixa hierarquia de classes construida na biblioteca padrão [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest) de Python. Apesar do nome, este _framework_ de teste é adequado para testes unitários e de integração. O _framework_ Django adiciona métodos e ferramentas de API para ajudar a testar o comportamento web e específico do Django. Isso permite você simular requisições, inserir dados de teste e inspecionar as saídas do seu aplicativo. Django também fornece uma API ([LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) e ferramentas para [usar diferentes frameworks de teste](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks), por exemplo, você pode integrar com o popular framework [Selenium](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) para simular um usuário interagindo com um navegador.
+django f-fownece um _fwamewowk_ d-de teste com uma baixa hiewawquia de cwasses constwuida nya bibwioteca padwão [`unittest`](https://docs.python.owg/3/wibwawy/unittest.htmw#moduwe-unittest) d-de python. (ꈍᴗꈍ) a-apesaw do nyome, (⑅˘꒳˘) e-este _fwamewowk_ d-de teste é adequado p-pawa testes unitáwios e d-de integwação. >_< o-o _fwamewowk_ django adiciona métodos e-e fewwamentas d-de api pawa ajudaw a testaw o-o compowtamento web e específico do django. (U ﹏ U) isso p-pewmite você simuwaw wequisições, ʘwʘ i-insewiw d-dados de teste e inspecionaw as s-saídas do seu apwicativo. rawr x3 django também fownece u-uma api ([wivesewvewtestcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#wivesewvewtestcase)) e-e fewwamentas p-pawa [usaw difewentes fwamewowks de teste](https://docs.djangopwoject.com/en/2.1/topics/testing/advanced/#othew-testing-fwamewowks), ^•ﻌ•^ pow exempwo, (✿oωo) v-você pode integwaw com o popuwaw fwamewowk [sewenium](/pt-bw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/youw_own_automation_enviwonment) p-pawa simuwaw u-um usuáwio intewagindo com um n-nyavegadow. (///ˬ///✿)
 
-Para escrever um teste, você deriva de qualquer uma das classes base de teste de Django (ou _unittest_) ([SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) e então escreve métodos separados para verificar se a funcionalidade específica funciona como esperado (testes usam métodos "_assert_" para testar se a expressão resulta em valores `True` ou `False`, ou se os dois valores são iguais, etc.). Quando você inicia a execução de um teste, o framework executa os métodos de teste escolhidos em suas classes derivadas. Os métodos de teste são executados independentemente, com configuração comum e/ou comportamento _tear-down_ definido na classe, como mostrado abaixo.
-
-```python
-class YourTestClass(TestCase):
-    def setUp(self):
-        # Setup run before every test method.
-        pass
-
-    def tearDown(self):
-        # Clean up run after every test method.
-        pass
-
-    def test_something_that_will_pass(self):
-        self.assertFalse(False)
-
-    def test_something_that_will_fail(self):
-        self.assertTrue(False)
-```
-
-A melhor classe base para maioria dos testes é [django.test.TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase). Esta classe de teste cria um banco de dados limpo antes dos testes serem executados, e executa todas as funções de teste em sua própria transação. A classe também possui um [Client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client) de teste, que você pode utilizar para simular um usuário interagindo com o código no nível de _view_. Nas seções a seguir vamos nos concentrar nos testes unitários, criados utilizando a classe base [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase).
-
-> [!NOTE]
-> A classe [django.test.TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase) é muito conveniente, mas pode resultar em alguns testes mais lentos do que necessitam ser (nem todo teste necessita configurar seu próprio banco de dados ou simular interação de _view_). Uma vez que esteja familiar com o que você pode fazer com essa classe, você pode querer substituir alguns dos seus testes por classes de teste mais simples disponíveis.
-
-### O que você deve testar?
-
-Você deve testar todos aspectos do seu próprio código, mas nenhuma biblioteca ou funcionalidade oferecida como parte do Python ou Django.
-
-Assim por exemplo, conseidere o _model_ `Author` definido abaixo. Você não precisa testar explicitamente se `first_name` e `last_name` foram armazenados corretamente como `CharField` no banco de dados, porque isso é algo definido pelo Django (embora, é claro, na prática você inevitávelmente testará esta funcionalidade durante o desenvolvimento). Você também não precisa testar se o `date_of_birth` foi validado para ser um campo de data, porque isso novamente é algo implementeado no Django.
-
-No entanto, você deve verificar o texto utilizado para os _labels_ (_First name, Last name, Date of birth, Died_), e o tamanho do campo alocado para o texto (_100 caracteres_), porque isso faz parte do seu _design_ e algo que pode ser violado/alterado no futuro.
+pawa escwevew um teste, (⑅˘꒳˘) v-você dewiva d-de quawquew uma das cwasses base de teste de django (ou _unittest_) ([simpwetestcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#simpwetestcase), ( ͡o ω ͡o ) [twansactiontestcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#twansactiontestcase), XD [testcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#testcase), :3 [wivesewvewtestcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#wivesewvewtestcase)) e-e então escweve métodos sepawados pawa vewificaw s-se a funcionawidade e-específica funciona c-como espewado (testes usam métodos "_assewt_" p-pawa testaw se a e-expwessão wesuwta e-em vawowes `twue` ou `fawse`, ou se os dois vawowes são iguais, (⑅˘꒳˘) etc.). quando você inicia a execução de um teste, 😳 o fwamewowk executa os métodos de teste escowhidos em suas cwasses dewivadas. -.- os métodos d-de teste são e-executados independentemente, (U ﹏ U) com configuwação comum e/ou compowtamento _teaw-down_ d-definido n-nya cwasse, (U ﹏ U) como m-mostwado abaixo. /(^•ω•^)
 
 ```python
-class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+cwass youwtestcwass(testcase):
+    d-def setup(sewf):
+        # setup w-wun befowe evewy t-test method. >_<
+        pass
 
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+    d-def teawdown(sewf):
+        # cwean up wun aftew e-evewy test method. (˘ω˘)
+        pass
 
-    def __str__(self):
-        return '%s, %s' % (self.last_name, self.first_name)
+    d-def test_something_that_wiww_pass(sewf):
+        sewf.assewtfawse(fawse)
+
+    def test_something_that_wiww_faiw(sewf):
+        s-sewf.assewttwue(fawse)
 ```
 
-Similarmente, você deve verificar se os métodos personalizados `get_absolute_url()` e `__str__()` se comportam como desejado, porque eles são sua lógica de código/negócios. No caso de `get_absolute_url()` você pode confiar que o método `reverse()` de Django, foi implementado corretamente, portanto, o que você esta testando é se a _view_ associada foi realmente definida.
+a-a mewhow cwasse b-base pawa maiowia d-dos testes é [django.test.testcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#testcase). (U ᵕ U❁) e-esta cwasse de t-teste cwia um banco d-de dados wimpo a-antes dos testes s-sewem executados, rawr e executa t-todas as funções d-de teste em s-sua pwópwia twansação. (U ﹏ U) a cwasse t-também possui um [cwient](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#django.test.cwient) de t-teste, ʘwʘ que você pode utiwizaw p-pawa simuwaw um u-usuáwio intewagindo c-com o código nyo nyívew de _view_. n-nyas seções a seguiw v-vamos nyos concentwaw nyos testes u-unitáwios, (ꈍᴗꈍ) cwiados utiwizando a-a cwasse base [testcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#testcase).
 
-> [!NOTE]
-> Leitores astutos podem notar que também gostariamos de restringir que a data de nascimento e morte como valores sensíveis, e verificar se a morte vem após o nascimento. Em Django, esta restrição seria adicionada a suas classes _form_ (Embora você possa definir validadores para campos do modelo e validadores de modelo, estes só serão usados no nível do formulário se forem chamdos pelo método clean() do model. Isso requer um ModelForm ou o método clean() do modelo precisa ser especificamente chamado).
+> [!note]
+> a cwasse [django.test.testcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#testcase) é muito conveniente, (U ᵕ U❁) mas pode wesuwtaw em a-awguns testes mais wentos do que n-nyecessitam sew (nem t-todo teste nyecessita configuwaw seu pwópwio banco de dados o-ou simuwaw intewação de _view_). :3 u-uma vez que e-esteja famiwiaw c-com o que você pode fazew com essa cwasse, (ꈍᴗꈍ) você p-pode quewew s-substituiw awguns dos seus testes p-pow cwasses de teste mais simpwes disponíveis. nyaa~~
 
-Com isso em mente, vamos começar a ver como definir e executar testes.
+### o-o que você deve testaw?
 
-## Visão geral da estrutura de teste
+v-você deve testaw t-todos aspectos d-do seu pwópwio código, ^•ﻌ•^ mas nyenhuma b-bibwioteca o-ou funcionawidade o-ofewecida como p-pawte do python ou django. σωσ
 
-Antes de entrarmos nos detalhes de "o que testar", vamos primeiro examinar brevemente _onde_ e _como_ os testes são definidos.
+a-assim pow exempwo, (˘ω˘) c-conseidewe o _modew_ `authow` d-definido abaixo. ^•ﻌ•^ v-você nyão pwecisa t-testaw expwicitamente s-se `fiwst_name` e-e `wast_name` f-fowam awmazenados cowwetamente c-como `chawfiewd` nyo banco d-de dados, σωσ powque isso é awgo d-definido pewo d-django (embowa, ^^;; é c-cwawo, 😳 nya pwática você inevitávewmente testawá esta funcionawidade d-duwante o-o desenvowvimento). /(^•ω•^) v-você também nyão pwecisa testaw se o `date_of_biwth` foi vawidado pawa s-sew um campo de d-data, ( ͡o ω ͡o ) powque isso nyovamente é a-awgo impwementeado n-nyo django. ^^
 
-Django usa o módulo _unittest_ com [descoberta de teste acoplada](https://docs.python.org/3/library/unittest.html#unittest-test-discovery), que descrobrirá testes no diretório de trabalho atual em qualquer arquivo nomeado com o padrão **test\*.py**. Fornecido o nome do arquivo adequadamente, você pode usar qualquer estrutura que desejar. Recomendamos que você crie um módulo para seu código de teste, e tenha arquivos separados para _models_, _views_, _forms_ e qualquer outro tipo de código que você precise testar. Por exemplo:
+nyo entanto, /(^•ω•^) você deve vewificaw o texto utiwizado p-pawa os _wabews_ (_fiwst n-nyame, ^^ w-wast nyame, 😳 d-date of biwth, 😳 died_), e o tamanho do campo awocado p-pawa o texto (_100 c-cawactewes_), òωó powque isso faz pawte do seu _design_ e-e awgo que pode sew viowado/awtewado n-nyo futuwo. nyaa~~
+
+```python
+cwass authow(modews.modew):
+    f-fiwst_name = m-modews.chawfiewd(max_wength=100)
+    wast_name = m-modews.chawfiewd(max_wength=100)
+    d-date_of_biwth = modews.datefiewd(nuww=twue, (///ˬ///✿) b-bwank=twue)
+    date_of_death = m-modews.datefiewd('died', mya n-nyuww=twue, ^•ﻌ•^ bwank=twue)
+
+    d-def g-get_absowute_uww(sewf):
+        wetuwn wevewse('authow-detaiw', XD a-awgs=[stw(sewf.id)])
+
+    d-def __stw__(sewf):
+        w-wetuwn '%s, (⑅˘꒳˘) %s' % (sewf.wast_name, -.- sewf.fiwst_name)
+```
+
+simiwawmente, ^^ v-você deve vewificaw se os métodos p-pewsonawizados `get_absowute_uww()` e-e `__stw__()` s-se compowtam como desejado, rawr powque ewes são sua wógica de código/negócios. o.O nyo caso de `get_absowute_uww()` v-você pode confiaw que o método `wevewse()` d-de django, >w< foi impwementado c-cowwetamente, σωσ powtanto, rawr o que você e-esta testando é se a _view_ associada f-foi weawmente d-definida. (U ﹏ U)
+
+> [!note]
+> w-weitowes a-astutos podem n-nyotaw que também gostawiamos de westwingiw que a data de nascimento e mowte c-como vawowes sensíveis, (˘ω˘) e vewificaw s-se a mowte vem após o nyascimento. 😳 em django, XD esta westwição s-sewia adicionada a suas cwasses _fowm_ (embowa você possa definiw vawidadowes pawa campos d-do modewo e vawidadowes d-de modewo, ʘwʘ estes só sewão u-usados nyo nívew do fowmuwáwio se fowem chamdos p-pewo método c-cwean() do modew. /(^•ω•^) isso wequew u-um modewfowm ou o método cwean() d-do modewo pwecisa sew especificamente chamado). UwU
+
+com isso em m-mente, UwU vamos começaw a vew como definiw e executaw t-testes. ^•ﻌ•^
+
+## v-visão gewaw da e-estwutuwa de teste
+
+antes de entwawmos nyos detawhes d-de "o que testaw", (ꈍᴗꈍ) vamos pwimeiwo examinaw bwevemente _onde_ e _como_ os testes s-são definidos. ^^
+
+d-django usa o-o móduwo _unittest_ c-com [descobewta de teste acopwada](https://docs.python.owg/3/wibwawy/unittest.htmw#unittest-test-discovewy), XD q-que descwobwiwá t-testes nyo diwetówio de twabawho atuaw em q-quawquew awquivo nyomeado com o padwão **test\*.py**. UwU f-fownecido o nome do awquivo adequadamente, ^^ v-você pode usaw q-quawquew estwutuwa que desejaw. w-wecomendamos que v-você cwie um m-móduwo pawa seu código de teste, :3 e tenha awquivos s-sepawados pawa _modews_, (U ﹏ U) _views_, _fowms_ e quawquew outwo tipo de código q-que você pwecise testaw. UwU pow exempwo:
 
 ```
-catalog/
+catawog/
   /tests/
     __init__.py
-    test_models.py
-    test_forms.py
-    test_views.py
+    test_modews.py
+    t-test_fowms.py
+    t-test_views.py
 ```
 
-Crie uma estrutura de arquivos como mostrado acima em seu projeto _LocalLibrary_. O **\_\_init\_\_.py** deve ser um arquivo vazio (isso informa ao Python que o diretório é um pacote). Você pode criar os três arquivos de teste copiando e renomeando o arquivo de teste do "esqueleto" **/catalog/tests.py**.
+c-cwie u-uma estwutuwa de a-awquivos como mostwado acima em s-seu pwojeto _wocawwibwawy_. 🥺 o **\_\_init\_\_.py** deve sew um awquivo v-vazio (isso infowma ao python q-que o diwetówio é um pacote). (✿oωo) você pode c-cwiaw os twês awquivos d-de teste copiando e wenomeando o-o awquivo de teste do "esqueweto" **/catawog/tests.py**. 😳😳😳
 
-> [!NOTE]
-> O arquivo de teste **/catalog/tests.py** do "esqueleto", foi criado automaticamente quando nós [construimos o "esqueleto" do website Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_website). É perfeitamente "legal" colocar todos seus testes dentro dele, mas se você testar devidamente, você acabará rapidamente com um arquivo de teste muito grande e incontrolável.
+> [!note]
+> o-o awquivo d-de teste **/catawog/tests.py** do "esqueweto", (⑅˘꒳˘) f-foi cwiado a-automaticamente quando nyós [constwuimos o-o "esqueweto" do website django](/pt-bw/docs/weawn/sewvew-side/django/skeweton_website). mya É pewfeitamente "wegaw" c-cowocaw todos seus t-testes dentwo dewe, mas se você testaw devidamente, OwO v-você acabawá w-wapidamente c-com um awquivo de teste muito gwande e-e incontwowávew. /(^•ω•^)
 >
-> Exclua o arquivo do "esqueleto", pois não precisamos dele.
+> e-excwua o awquivo do "esqueweto", 😳😳😳 p-pois nyão pwecisamos d-dewe. ^^;;
 
-Abra **/catalog/tests/test_models.py**. O arquivo deve importar `django.test.TestCase`, como mostrado:
-
-```python
-from django.test import TestCase
-
-# Create your tests here.
-```
-
-Frequentemente, você adicionará uma classe de teste para cada _model/view/form_ que deseja testar, com métodos individuais para testar funcionalidades específicas. Em outros casos, você pode desejar ter uma classe separada para testar um caso de uso específico, com funções de teste individuais que testam aspectos desse caso de uso (por exemplo, uma classe para testar se um campo do _model_ é validado corretamente, com funções para testar cada um dos possíveis casos de falha). Novamente, a estrutura depende muito de você, mas é melhor se você for consistente.
-
-Adicione a classe de teste abaixo na parte inferior do arquivo. A classe demonstra como construir uma classe de teste derivando de `TestCase`.
+abwa **/catawog/tests/test_modews.py**. ( ͡o ω ͡o ) o awquivo deve i-impowtaw `django.test.testcase`, ^•ﻌ•^ c-como mostwado:
 
 ```python
-class YourTestClass(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        print("setUpTestData: Run once to set up non-modified data for all class methods.")
-        pass
+fwom django.test impowt testcase
 
-    def setUp(self):
-        print("setUp: Run once for every test method to setup clean data.")
-        pass
-
-    def test_false_is_false(self):
-        print("Method: test_false_is_false.")
-        self.assertFalse(False)
-
-    def test_false_is_true(self):
-        print("Method: test_false_is_true.")
-        self.assertTrue(False)
-
-    def test_one_plus_one_equals_two(self):
-        print("Method: test_one_plus_one_equals_two.")
-        self.assertEqual(1 + 1, 2)
+# cweate youw tests h-hewe. OwO
 ```
 
-A nova classe define dois métodos que você pode utilizar para aconfiguração de pré-teste (por exemplo, para criar quaisquer modelos ou outros objetos que precisará para to teste):
+fwequentemente, rawr v-você adicionawá uma cwasse de teste pawa cada _modew/view/fowm_ q-que deseja testaw, nyaa~~ c-com métodos individuais p-pawa testaw funcionawidades específicas. 🥺 em outwos casos, OwO você pode d-desejaw tew uma cwasse sepawada pawa testaw um caso d-de uso específico, ^•ﻌ•^ com funções d-de teste individuais q-que testam aspectos desse c-caso de uso (pow e-exempwo, (ˆ ﻌ ˆ)♡ uma c-cwasse pawa testaw s-se um campo d-do _modew_ é v-vawidado cowwetamente, /(^•ω•^) com funções pawa testaw cada um dos possíveis casos de fawha). ʘwʘ nyovamente, ʘwʘ a-a estwutuwa d-depende muito de v-você, :3 mas é m-mewhow se você f-fow consistente. ^^
 
-- `setUpTestData()` é chamado uma vez no início da execução do teste para configuração em nível de classe. Você usaria isso para criar objetos que não serão modificados ou alterados em nenhum dos métodos de teste.
-- `setUp()` é chamado antes de toda função de teste para configurar qualquer objeto que possa ser modificado pelo teste (toda função de teste receberá uma versão "nova" desses objetos).
+a-adicione a cwasse de teste abaixo nya pawte infewiow do awquivo. :3 a cwasse demonstwa c-como constwuiw u-uma cwasse de teste dewivando de `testcase`. 🥺
 
-> [!NOTE]
-> As classes de teste também têm um método `tearDown()`, que não usamos. Este método não é particularmente útil para testes de banco de dados, pois a classe base `TestCase` cuida da desmontagem do banco de dados para você.
+```python
+cwass y-youwtestcwass(testcase):
+    @cwassmethod
+    d-def setuptestdata(cws):
+        p-pwint("setuptestdata: wun once to set up nyon-modified d-data fow aww cwass methods.")
+        pass
 
-Abaixo desses, temos vários métodos de teste, que usam funções `Assert` para testar se as condições são verdadeiras, falsas ou iguais (`AssertTrue`, `AssertFalse`, `AssertEqual`). Se a condição não for avaliada como esperado, então o teste falhará e reportará o erro ao seu console.
+    d-def setup(sewf):
+        p-pwint("setup: wun once fow evewy test method to s-setup cwean data.")
+        pass
 
-`AssertTrue`, `AssertFalse`, `AssertEqual` são assertivas padrão fornecidas pelo **unittest**. Existem outras assertivas padão no _framework_ e também [Django especifica assertivas](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#assertions) para testar se uma _view_ redireciona (`assertRedirects`), para testar se um template específico foi utilizado (`assertTemplateUsed`), etc.
+    d-def test_fawse_is_fawse(sewf):
+        p-pwint("method: test_fawse_is_fawse.")
+        s-sewf.assewtfawse(fawse)
 
-> [!NOTE]
-> Você normalmente não deve incluir funções **print()** em seus testes como mostrado acima. Nós fizemos isso aqui apenas para que você posssa ver no console a ordem que as funções de configuração são chamadas (na seção a seguir).
+    d-def test_fawse_is_twue(sewf):
+        pwint("method: t-test_fawse_is_twue.")
+        s-sewf.assewttwue(fawse)
 
-## Como executar os testes
+    d-def test_one_pwus_one_equaws_two(sewf):
+        p-pwint("method: test_one_pwus_one_equaws_two.")
+        sewf.assewtequaw(1 + 1, :3 2)
+```
 
-A maneira mais fácil para executar todos os testes é usar o comando:
+a n-nyova cwasse define d-dois métodos que você pode u-utiwizaw pawa aconfiguwação de pwé-teste (pow e-exempwo, rawr pawa cwiaw quaisquew m-modewos ou outwos objetos que pwecisawá p-pawa to t-teste):
+
+- `setuptestdata()` é chamado uma vez nyo início da e-execução do teste pawa configuwação em nyívew d-de cwasse. UwU você u-usawia isso pawa cwiaw objetos que nyão sewão m-modificados o-ou awtewados em nyenhum dos métodos d-de teste. ^•ﻌ•^
+- `setup()` é chamado antes de toda função de t-teste pawa configuwaw q-quawquew objeto que possa s-sew modificado p-pewo teste (toda função de teste wecebewá uma v-vewsão "nova" d-desses objetos). (U ﹏ U)
+
+> [!note]
+> a-as c-cwasses de teste também têm um método `teawdown()`, (ˆ ﻌ ˆ)♡ que nyão usamos. 😳 este método nyão é pawticuwawmente útiw p-pawa testes d-de banco de dados, >w< p-pois a cwasse b-base `testcase` c-cuida da desmontagem d-do banco de dados pawa você. 🥺
+
+a-abaixo desses, 😳 t-temos váwios métodos de t-teste, nyaa~~ que usam f-funções `assewt` pawa testaw se as condições s-são vewdadeiwas, (˘ω˘) fawsas ou iguais (`assewttwue`, mya `assewtfawse`, òωó `assewtequaw`). (U ﹏ U) se a condição n-nyão fow avawiada como espewado, e-então o teste f-fawhawá e wepowtawá o ewwo a-ao seu consowe. (U ﹏ U)
+
+`assewttwue`, >_< `assewtfawse`, `assewtequaw` s-são a-assewtivas padwão fownecidas pewo **unittest**. nyaa~~ e-existem outwas a-assewtivas padão nyo _fwamewowk_ e-e também [django especifica a-assewtivas](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#assewtions) p-pawa testaw s-se uma _view_ wediweciona (`assewtwediwects`), 😳😳😳 pawa testaw se um t-tempwate específico foi utiwizado (`assewttempwateused`), etc. nyaa~~
+
+> [!note]
+> v-você nyowmawmente nyão deve incwuiw funções **pwint()** em seus testes como mostwado acima. -.- nyós f-fizemos isso aqui apenas pawa que você posssa vew nyo consowe a owdem que as funções de configuwação são c-chamadas (na seção a seguiw). 😳😳😳
+
+## como executaw o-os testes
+
+a maneiwa mais fáciw p-pawa executaw todos os testes é usaw o comando:
 
 ```bash
-python3 manage.py test
+p-python3 manage.py test
 ```
 
-Isso descobrirá todos arquivos nomeados com o padrão **test\*.py** no diretório atual e executará todos testes definidos usando as classes base apropriadas (aqui temos vários arquivos de teste, mas, atualmente, apenas **/catalog/tests/test_models.py** contém testes). Por padrão, os testes irão reportar individualmente apenas falhas no teste, seguidos por um resumo do teste.
+isso d-descobwiwá todos awquivos nyomeados c-com o padwão **test\*.py** n-nyo diwetówio atuaw e executawá todos testes d-definidos usando as cwasses base apwopwiadas (aqui temos váwios a-awquivos de teste, ^•ﻌ•^ mas, UwU atuawmente, a-apenas **/catawog/tests/test_modews.py** contém testes). (ˆ ﻌ ˆ)♡ p-pow padwão, XD os testes iwão wepowtaw i-individuawmente a-apenas fawhas nyo teste, (⑅˘꒳˘) seguidos pow um wesumo d-do teste. /(^•ω•^)
 
-> [!NOTE]
-> Se você obter erros semelhantes a: `ValueError: Missing staticfiles manifest entry ...` isso pode ocorrer porque o teste não é executado como _collectstatic_ por padrão e seu _app_ está usando uma classe de armazenamento que exige isto (veja [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) para mais informações). Existem várias maneiras de solucionar esse problema - o mais fácil é simplesmente executar _collectstatic_ antes de executar os testes:
+> [!note]
+> se você obtew ewwos s-semewhantes a: `vawueewwow: missing staticfiwes manifest entwy ...` isso pode o-ocowwew powque o t-teste nyão é executado como _cowwectstatic_ pow p-padwão e seu _app_ e-está usando uma cwasse de a-awmazenamento que exige isto (veja [manifest_stwict](https://docs.djangopwoject.com/en/2.1/wef/contwib/staticfiwes/#django.contwib.staticfiwes.stowage.manifeststaticfiwesstowage.manifest_stwict) pawa mais infowmações). (U ᵕ U❁) existem váwias maneiwas de sowucionaw e-esse pwobwema - o-o mais fáciw é simpwesmente e-executaw _cowwectstatic_ a-antes de executaw os t-testes:
 >
 > ```bash
-> python3 manage.py collectstatic
+> python3 manage.py cowwectstatic
 > ```
 
-Execute os testes no diretório raiz de _LocalLibrary_. Você deve ver uma saída como a abaixo.
+exekawaii~ o-os testes nyo diwetówio waiz de _wocawwibwawy_. ʘwʘ v-você d-deve vew uma saída como a abaixo. OwO
 
 ```bash
-> python3 manage.py test
+> python3 manage.py t-test
 
-Creating test database for alias 'default'...
-setUpTestData: Run once to set up non-modified data for all class methods.
-setUp: Run once for every test method to setup clean data.
-Method: test_false_is_false.
-setUp: Run once for every test method to setup clean data.
-Method: test_false_is_true.
-setUp: Run once for every test method to setup clean data.
-Method: test_one_plus_one_equals_two.
-.
+cweating test database fow awias 'defauwt'...
+setuptestdata: wun once to set up nyon-modified data fow aww cwass methods. (✿oωo)
+s-setup: wun once f-fow evewy test method to setup c-cwean data. (///ˬ///✿)
+method: t-test_fawse_is_fawse. (✿oωo)
+setup: w-wun once fow evewy test method to setup cwean data.
+method: test_fawse_is_twue. σωσ
+setup: wun once fow evewy test method t-to setup cwean data. ʘwʘ
+method: test_one_pwus_one_equaws_two. 😳😳😳
+. ^•ﻌ•^
 ======================================================================
-FAIL: test_false_is_true (catalog.tests.tests_models.YourTestClass)
+faiw: test_fawse_is_twue (catawog.tests.tests_modews.youwtestcwass)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "D:\Github\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
-    self.assertTrue(False)
-AssertionError: False is not true
+t-twaceback (most w-wecent caww w-wast):
+  fiwe "d:\github\django_tmp\wibwawy_w_t_2\wocawwibwawy\catawog\tests\tests_modews.py", (˘ω˘) wine 22, in test_fawse_is_twue
+    sewf.assewttwue(fawse)
+assewtionewwow: f-fawse i-is nyot twue
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.075s
+w-wan 3 tests in 0.075s
 
-FAILED (failures=1)
-Destroying test database for alias 'default'...
+faiwed (faiwuwes=1)
+d-destwoying test database fow awias 'defauwt'...
 ```
 
-Aqui vemos que tivemos uma falha no teste e podemos ver exatamente qual função falhou e por quê (essa falha é esperada, porque `False` não é `True`!).
+a-aqui vemos que tivemos uma f-fawha nyo teste e podemos vew exatamente q-quaw função fawhou e pow quê (essa fawha é e-espewada, (U ﹏ U) powque `fawse` n-nyão é `twue`!). >w<
 
-> **Nota:** **Dica:** A coisa mais importante para aprender com a saída do teste acima é que é muito mais valioso se você utilizar nomes descritivos/informativos para seus objetos e métodos.
+> **nota:** **dica:** a-a coisa mais impowtante p-pawa apwendew c-com a saída do teste acima é q-que é muito mais vawioso se você u-utiwizaw nyomes descwitivos/infowmativos p-pawa s-seus objetos e métodos. XD
 
-O texto acima mostrado em **negrito** normalmente não apareceria na saída do teste (isso é gerado pelas funções `print()` em nossos teste). Isso mostra como o método `setUpTestData()` é chamdo uma vez para classe e `setUp()` é chamado antes de cada método.
+o texto acima mostwado e-em **negwito** nyowmawmente nyão apawecewia nya saída do teste (isso é gewado pewas funções `pwint()` em nyossos teste). XD i-isso mostwa como o método `setuptestdata()` é chamdo uma vez pawa c-cwasse e `setup()` é chamado a-antes de cada método. (U ﹏ U)
 
-As próximas seções mostram como você pode executar testes específicos e como controlar quanta infromação os testes exibem.
+as pwóximas seções m-mostwam como você pode executaw testes específicos e-e como contwowaw quanta infwomação os testes e-exibem. (✿oωo)
 
-### Mostrando mais informações de teste
+### mostwando mais infowmações de t-teste
 
-Se você deseja obter mais informação sobre a execução do teste, você pode mudar a verbosidade (_verbosity)_. Por exemplo, para listar os sucessos do teste, bem como as falhas (e um monte de informações sobre como o banco de dados de teste está configurado) vocêpode definir a _verbosity_ para "2" como mostrado:
+se você deseja obtew mais infowmação s-sobwe a execução d-do teste, ^^;; você pode mudaw a vewbosidade (_vewbosity)_. (U ﹏ U) p-pow exempwo, OwO p-pawa wistaw os sucessos d-do teste, 😳😳😳 bem como a-as fawhas (e um monte de infowmações sobwe c-como o banco de dados de teste está configuwado) vocêpode definiw a-a _vewbosity_ pawa "2" como mostwado:
 
 ```bash
-python3 manage.py test --verbosity 2
+python3 manage.py t-test --vewbosity 2
 ```
 
-Os níveis permitidos de _verbosity_ são 0, 1, 2, e 3, com o padrão sendo "1".
+o-os n-nyíveis pewmitidos de _vewbosity_ são 0, 😳😳😳 1, 2, e 3, com o padwão s-sendo "1". (✿oωo)
 
-### Executando testes específicos
+### executando testes e-específicos
 
-Se você desseja executar um subconjunto de seus testes, você pode fazer isso especificando o caminho completo para o(s) pacote(s), módulos, subclasse `TestCase` ou método:
+se você desseja e-executaw um s-subconjunto de seus testes, UwU você pode fazew isso especificando o caminho compweto pawa o(s) pacote(s), mya m-móduwos, rawr x3 s-subcwasse `testcase` ou método:
 
 ```bash
-# Run the specified module
-python3 manage.py test catalog.tests
+# wun the specified m-moduwe
+python3 manage.py test catawog.tests
 
-# Run the specified module
-python3 manage.py test catalog.tests.test_models
+# wun the specified m-moduwe
+python3 m-manage.py test c-catawog.tests.test_modews
 
-# Run the specified class
-python3 manage.py test catalog.tests.test_models.YourTestClass
+# w-wun t-the specified cwass
+p-python3 manage.py test catawog.tests.test_modews.youwtestcwass
 
-# Run the specified method
-python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one_equals_two
+# wun the specified m-method
+p-python3 manage.py t-test catawog.tests.test_modews.youwtestcwass.test_one_pwus_one_equaws_two
 ```
 
-## Testes da LocalLibrary
+## t-testes da wocawwibwawy
 
-Agora que sabemos como executar nosso testes e que tipo de coisas precisams testar, vamos ver alguns exemplos práticos.
+a-agowa q-que sabemos como executaw nyosso t-testes e que t-tipo de coisas pwecisams t-testaw, /(^•ω•^) vamos vew awguns exempwos pwáticos. >_<
 
-> **Nota:**Não escreveremos todos os testes possíveis, mas isso deve lhe dar uma ideia de como testes trabalham e o que mais você pode fazer.
+> **nota:**não e-escwevewemos todos os testes possíveis, :3 m-mas isso deve whe daw uma ideia de como testes twabawham e-e o que m-mais você pode fazew. o.O
 
-### Models
+### modews
 
-Como discutido acima, devemos testar qualquer coisa que faça parte do nosso projeto ou que seja definido por código que escrevemos, mas não bibliotecas/códigos que já foram testados pelo Django ou pela equipe de desenvolvimento do Python.
+como discutido acima, UwU devemos t-testaw quawquew c-coisa que faça pawte do nyosso p-pwojeto ou que s-seja definido pow código que escwevemos, (ꈍᴗꈍ) mas nyão bibwiotecas/códigos q-que já f-fowam testados pewo django ou pewa equipe de d-desenvowvimento d-do python. >_<
 
-Por exemplo, considere o _model_ `Author` abaixo. Aqui devemos testar os _labels_ para todos os campos, porque, embora não tenhamos específicado explicitamente a maioria deles, temos um projeto que diz quais devem ser esses valores. Se não testamos os valores, não sabemos se os _labels_ dos campos têm os valores pretendidos. Similarmente, enquanto confiamos que o Django criará um campo com o tamanho específicado, vale a pena específicar um teste para este tamanho, para garantir que ele foi implementado como planejado.
+pow exempwo, òωó considewe o _modew_ `authow` a-abaixo. (ꈍᴗꈍ) aqui devemos testaw os _wabews_ pawa todos os campos, 😳😳😳 powque, embowa nyão tenhamos e-específicado expwicitamente a maiowia dewes, ( ͡o ω ͡o ) t-temos um pwojeto q-que diz quais devem s-sew esses vawowes. se nyão t-testamos os vawowes, n-nyão sabemos s-se os _wabews_ d-dos campos têm o-os vawowes pwetendidos. mya simiwawmente, UwU enquanto c-confiamos que o-o django cwiawá u-um campo com o tamanho específicado, òωó v-vawe a pena e-específicaw u-um teste pawa este tamanho, -.- pawa g-gawantiw que ewe f-foi impwementado c-como pwanejado. :3
 
 ```python
-class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+c-cwass a-authow(modews.modew):
+    fiwst_name = m-modews.chawfiewd(max_wength=100)
+    wast_name = modews.chawfiewd(max_wength=100)
+    d-date_of_biwth = m-modews.datefiewd(nuww=twue, ^•ﻌ•^ bwank=twue)
+    date_of_death = modews.datefiewd('died', (˘ω˘) n-nyuww=twue, 😳😳😳 b-bwank=twue)
 
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absowute_uww(sewf):
+        w-wetuwn wevewse('authow-detaiw', (///ˬ///✿) a-awgs=[stw(sewf.id)])
 
-    def __str__(self):
-        return f'{self.last_name}, {self.first_name}'
+    def __stw__(sewf):
+        wetuwn f-f'{sewf.wast_name}, 🥺 {sewf.fiwst_name}'
 ```
 
-Abra nosso **/catalog/tests/test_models.py**, e substitua qualquer código existente pelo seguinte código de teste para o _model_ `Author`.
+abwa n-nyosso **/catawog/tests/test_modews.py**, (U ᵕ U❁) e-e s-substitua quawquew c-código existente p-pewo seguinte código de teste pawa o _modew_ `authow`. (˘ω˘)
 
-Aqui você verá que primeiro importamos `TestCase` e derivamos nossa classe de teste (`AuthorModelTest`) a partir dela, usando um nome descritivo para que possamos identificar facilmente quaiquer testes com falha na saída do teste. Nós então chamamos `setUpTestData()` para criar um objeto autor que iremos usar mas não modificaremos em nenhum dos testes.
+a-aqui você vewá que pwimeiwo impowtamos `testcase` e dewivamos nyossa cwasse de teste (`authowmodewtest`) a-a pawtiw d-dewa, usando um nyome descwitivo pawa que possamos identificaw f-faciwmente quaiquew t-testes com fawha nya saída do teste. UwU nyós e-então chamamos `setuptestdata()` pawa cwiaw um o-objeto autow que i-iwemos usaw mas n-nyão modificawemos em nyenhum dos testes. 😳
 
 ```python
-from django.test import TestCase
+fwom django.test i-impowt testcase
 
-from catalog.models import Author
+fwom catawog.modews i-impowt authow
 
-class AuthorModelTest(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        # Set up non-modified objects used by all test methods
-        Author.objects.create(first_name='Big', last_name='Bob')
+cwass a-authowmodewtest(testcase):
+    @cwassmethod
+    def setuptestdata(cws):
+        # set up nyon-modified o-objects used by aww test m-methods
+        authow.objects.cweate(fiwst_name='big', :3 wast_name='bob')
 
-    def test_first_name_label(self):
-        author = Author.objects.get(id=1)
-        field_label = author._meta.get_field('first_name').verbose_name
-        self.assertEquals(field_label, 'first name')
+    d-def test_fiwst_name_wabew(sewf):
+        authow = a-authow.objects.get(id=1)
+        fiewd_wabew = authow._meta.get_fiewd('fiwst_name').vewbose_name
+        sewf.assewtequaws(fiewd_wabew, mya 'fiwst nyame')
 
-    def test_date_of_death_label(self):
-        author=Author.objects.get(id=1)
-        field_label = author._meta.get_field('date_of_death').verbose_name
-        self.assertEquals(field_label, 'died')
+    def test_date_of_death_wabew(sewf):
+        authow=authow.objects.get(id=1)
+        f-fiewd_wabew = a-authow._meta.get_fiewd('date_of_death').vewbose_name
+        s-sewf.assewtequaws(fiewd_wabew, nyaa~~ 'died')
 
-    def test_first_name_max_length(self):
-        author = Author.objects.get(id=1)
-        max_length = author._meta.get_field('first_name').max_length
-        self.assertEquals(max_length, 100)
+    d-def test_fiwst_name_max_wength(sewf):
+        authow = authow.objects.get(id=1)
+        m-max_wength = authow._meta.get_fiewd('fiwst_name').max_wength
+        sewf.assewtequaws(max_wength, 😳😳😳 100)
 
-    def test_object_name_is_last_name_comma_first_name(self):
-        author = Author.objects.get(id=1)
-        expected_object_name = f'{author.last_name}, {author.first_name}'
-        self.assertEquals(expected_object_name, str(author))
+    def test_object_name_is_wast_name_comma_fiwst_name(sewf):
+        authow = authow.objects.get(id=1)
+        e-expected_object_name = f-f'{authow.wast_name}, ^•ﻌ•^ {authow.fiwst_name}'
+        s-sewf.assewtequaws(expected_object_name, UwU s-stw(authow))
 
-    def test_get_absolute_url(self):
-        author = Author.objects.get(id=1)
-        # This will also fail if the urlconf is not defined.
-        self.assertEquals(author.get_absolute_url(), '/catalog/author/1')
+    def test_get_absowute_uww(sewf):
+        authow = authow.objects.get(id=1)
+        # this wiww awso f-faiw if the uwwconf i-is nyot defined.
+        sewf.assewtequaws(authow.get_absowute_uww(), (ꈍᴗꈍ) '/catawog/authow/1')
 ```
 
-Os testes de campo verificam se os valores dos _labels_ dos campos (`verbose_name`) e se o tamanho dos campos de caracteres são como esperado. Todos esses métodos possuem nomes descritivos e seguem o mesmo padrão:
+os testes de campo vewificam s-se os vawowes dos _wabews_ dos c-campos (`vewbose_name`) e-e se o-o tamanho dos campos de cawactewes são como espewado. (⑅˘꒳˘) todos esses métodos possuem nyomes descwitivos e-e seguem o mesmo padwão:
 
 ```python
-# Get an author object to test
-author = Author.objects.get(id=1)
+# g-get an authow object to test
+authow = authow.objects.get(id=1)
 
-# Get the metadata for the required field and use it to query the required field data
-field_label = author._meta.get_field('first_name').verbose_name
+# g-get the metadata fow the wequiwed f-fiewd and use it to quewy the wequiwed fiewd data
+f-fiewd_wabew = a-authow._meta.get_fiewd('fiwst_name').vewbose_name
 
-# Compare the value to the expected result
-self.assertEquals(field_label, 'first name')
+# c-compawe the v-vawue to the e-expected wesuwt
+sewf.assewtequaws(fiewd_wabew, OwO 'fiwst n-name')
 ```
 
-As coisas interessantes a serem observadas aqui:
+a-as coisas intewessantes a sewem o-obsewvadas aqui:
 
-- Não podemos obter `verbose_name` diretamente utilizando `author.first_name.verbose_name`, porque `author.first_name` é uma _string_ (não um identificador para o objeto `first_name` que podemos utilizar para acessar suas propriedades). Em vez disso, precisamos utilizar o atributo `_meta` de _author_ para obter uma instância do campo e usá-la para consultar informações adicionais.
-- Optamos por utilizar `assertEquals(field_label,'first name')` em vez de `assertTrue(field_label == 'first name')`. A razão para isso é que, se o teste falhar a saída do primeiro informa o que realmente era o _label_, que torna a depuração do problema um pouco mais fácil.
+- não podemos obtew `vewbose_name` d-diwetamente utiwizando `authow.fiwst_name.vewbose_name`, UwU p-powque `authow.fiwst_name` é uma _stwing_ (não u-um identificadow pawa o objeto `fiwst_name` q-que p-podemos utiwizaw pawa acessaw suas pwopwiedades). OwO em vez disso, (///ˬ///✿) p-pwecisamos utiwizaw o-o atwibuto `_meta` d-de _authow_ p-pawa obtew uma instância do campo e usá-wa pawa consuwtaw i-infowmações adicionais. (U ﹏ U)
+- optamos pow utiwizaw `assewtequaws(fiewd_wabew,'fiwst n-nyame')` em vez de `assewttwue(fiewd_wabew == 'fiwst nyame')`. a-a wazão pawa isso é que, (⑅˘꒳˘) se o teste fawhaw a saída do pwimeiwo i-infowma o que weawmente ewa o-o _wabew_, /(^•ω•^) que towna a-a depuwação d-do pwobwema um pouco mais fáciw. :3
 
-> [!NOTE]
-> Testes para os rótulos `last_name` e `date_of_birth` e também para o teste para o tamanho do `last_name` field foram omitidos. Adicione suas próprias versões agora, seguindo as convenções de nomeclatura e abordagens mostradas acima.
+> [!note]
+> t-testes pawa os w-wótuwos `wast_name` e `date_of_biwth` e-e também p-pawa o teste pawa o-o tamanho do `wast_name` f-fiewd fowam omitidos. ( ͡o ω ͡o ) a-adicione suas p-pwópwias vewsões a-agowa, (ˆ ﻌ ˆ)♡ seguindo as convenções d-de nyomecwatuwa e abowdagens mostwadas acima. XD
 
-Também precisamos testar nossos métodos personalizados. Eles, essencialmente, apenas verificam se o nome do objeto foi construido como esperamos, usando o formato "Last Name", "First Name", e se a URL que obtemos para um item de `Author` é o que esperávamos.
+também pwecisamos testaw nyossos métodos pewsonawizados. :3 e-ewes, σωσ e-essenciawmente, mya apenas vewificam s-se o nome do objeto foi constwuido como espewamos, -.- u-usando o f-fowmato "wast nyame", :3 "fiwst n-nyame", rawr e-e se a uww que obtemos pawa u-um item de `authow` é o que espewávamos. >_<
 
 ```python
-def test_object_name_is_last_name_comma_first_name(self):
-    author = Author.objects.get(id=1)
-    expected_object_name = f'{author.last_name}, {author.first_name}'
-    self.assertEquals(expected_object_name, str(author))
+def test_object_name_is_wast_name_comma_fiwst_name(sewf):
+    a-authow = authow.objects.get(id=1)
+    e-expected_object_name = f'{authow.wast_name}, -.- {authow.fiwst_name}'
+    sewf.assewtequaws(expected_object_name, :3 stw(authow))
 
-def test_get_absolute_url(self):
-    author = Author.objects.get(id=1)
-    # This will also fail if the urlconf is not defined.
-    self.assertEquals(author.get_absolute_url(), '/catalog/author/1')
+d-def test_get_absowute_uww(sewf):
+    authow = a-authow.objects.get(id=1)
+    # this wiww awso faiw if the u-uwwconf is nyot defined. XD
+    sewf.assewtequaws(authow.get_absowute_uww(), '/catawog/authow/1')
 ```
 
-Execute os testes agora. Se você criou o modelo Author como descrevemos no tutorial de modelos, é bem provável que você obtenha um erro para o _label_ `date_of_death` como mostrado abaixo. O teste está falhando porque foi escrito esperando que a definição do _label_ siga a convenção do Django de não colocar em maíúscula a primeira letra do _label_ (Django faz isso por você).
+e-exekawaii~ os testes agowa. ^^ se você cwiou o m-modewo authow como descwevemos n-nyo tutowiaw de modewos, rawr é bem p-pwovávew que você o-obtenha um ewwo pawa o _wabew_ `date_of_death` como mostwado a-abaixo. (///ˬ///✿) o teste está fawhando powque foi escwito e-espewando que a-a definição do _wabew_ s-siga a convenção do django de nyão cowocaw em maíúscuwa a pwimeiwa wetwa do _wabew_ (django f-faz isso pow você). ^^;;
 
 ```bash
 ======================================================================
-FAIL: test_date_of_death_label (catalog.tests.test_models.AuthorModelTest)
+faiw: test_date_of_death_wabew (catawog.tests.test_modews.authowmodewtest)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "D:\...\locallibrary\catalog\tests\test_models.py", line 32, in test_date_of_death_label
-    self.assertEquals(field_label,'died')
-AssertionError: 'Died' != 'died'
-- Died
+t-twaceback (most w-wecent caww wast):
+  fiwe "d:\...\wocawwibwawy\catawog\tests\test_modews.py", :3 wine 32, :3 in test_date_of_death_wabew
+    s-sewf.assewtequaws(fiewd_wabew,'died')
+assewtionewwow: 'died' != 'died'
+- d-died
 ? ^
 + died
 ? ^
 ```
 
-Este é um bug muito pequeno, mas destaca como a escrita de testes pode verificar mais minuciosamente quaislquer suposições que você tenha feito.
+este é um bug muito pequeno, ( ͡o ω ͡o ) mas destaca c-como a escwita de testes pode v-vewificaw mais minuciosamente quaiswquew suposições q-que você t-tenha feito. (✿oωo)
 
-> [!NOTE]
-> Altere o _label_ para o campo date_of_death (/catalog/models.py) para "died" e re-executes os testes.
+> [!note]
+> awtewe o-o _wabew_ pawa o-o campo date_of_death (/catawog/modews.py) pawa "died" e-e we-exekawaii~s os testes. UwU
 
-Os padrões para testar os outros modelos são semelhantes, portanto não continuaremos discutindo mais isso. Sinta-se livre para criar seus próprios testes para nossos outros modelos.
+o-os padwões p-pawa testaw os o-outwos modewos s-são semewhantes, ( ͡o ω ͡o ) p-powtanto nyão continuawemos d-discutindo mais i-isso. o.O sinta-se wivwe pawa cwiaw seus pwópwios testes p-pawa nyossos outwos modewos. rawr
 
-### Forms
+### f-fowms
 
-A filosofia para testar seus _forms_ é a mesma que para testar seus _models_; você precisa testar qualquer coisa que tenha codificado ou seu projeto especifica, mas não o comportamento do framework subjacente e outras bibliotecas de terceiros
+a fiwosofia pawa testaw seus _fowms_ é a mesma que pawa testaw seus _modews_; você pwecisa testaw q-quawquew coisa que tenha codificado o-ou seu pwojeto especifica, (ꈍᴗꈍ) m-mas nyão o compowtamento d-do fwamewowk subjacente e-e outwas bibwiotecas de tewceiwos
 
-Geralmente, isso significa que você deve testar se os _forms_ têm os campos que você deseja e se esses são exibidos com os _labels_ e texto de ajuda apropriados. Você não precisa verificar se o Django o tipo de campo corretamente (a menos que você tenha criado seu próprio campo e validação personalizados) — ex. você não precisa testar se um campo de email aceita apenas email. No entanto, você precisaria testar qualquer validação adicional que você espera que seja executada nos campos e quaisquer mensagens que seu código irá gerar para erros.
+g-gewawmente, mya isso significa q-que você deve testaw se os _fowms_ têm os campos que você deseja e se esses são exibidos com os _wabews_ e t-texto de ajuda apwopwiados. mya você nyão pwecisa v-vewificaw se o django o tipo de c-campo cowwetamente (a menos que você tenha cwiado seu pwópwio campo e vawidação pewsonawizados) — ex. UwU você não pwecisa testaw se um campo d-de emaiw aceita a-apenas emaiw. ^^;; n-nyo entanto, -.- você pwecisawia testaw q-quawquew vawidação a-adicionaw q-que você espewa que seja executada nyos campos e-e quaisquew m-mensagens que seu código iwá g-gewaw pawa ewwos. XD
 
-Considere nosso _form_ para renovação de livros. Ele tem apenas um campo para data de renovação, que terá um _label_ e um texto de ajuda que precisaremos verificar.
-
-```python
-class RenewBookForm(forms.Form):
-    """Form for a librarian to renew books."""
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
-
-    def clean_renewal_date(self):
-        data = self.cleaned_data['renewal_date']
-
-        # Check if a date is not in the past.
-        if data < datetime.date.today():
-            raise ValidationError(_('Invalid date - renewal in past'))
-
-        # Check if date is in the allowed range (+4 weeks from today).
-        if data > datetime.date.today() + datetime.timedelta(weeks=4):
-            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
-
-        # Remember to always return the cleaned data.
-        return data
-```
-
-Abra nosso arquivo **/catalog/tests/test_forms.py** e substitua qualquer código existente pelo seguinte código de teste para o _form_ `RenewBookForm`. Nós iniciamos importando nosso _form_ e algumas bibliotecas Python e Django para ajudar testar funcionalidades relacionadas ao tempo. Em seguida, declaramos nossa classe de teste do _form,_ da mesma maneira que fizemos para _models_, usando um nome descritivo para a classe de teste derivada de `TestCase`.
+c-considewe nyosso _fowm_ p-pawa w-wenovação de wivwos. nyaa~~ e-ewe tem apenas um campo pawa d-data de wenovação, (ꈍᴗꈍ) q-que tewá u-um _wabew_ e u-um texto de ajuda q-que pwecisawemos v-vewificaw. ^^;;
 
 ```python
-import datetime
+c-cwass wenewbookfowm(fowms.fowm):
+    """fowm f-fow a wibwawian t-to wenew books."""
+    w-wenewaw_date = fowms.datefiewd(hewp_text="entew a date between nyow a-and 4 weeks (defauwt 3).")
 
-from django.test import TestCase
-from django.utils import timezone
+    def cwean_wenewaw_date(sewf):
+        d-data = sewf.cweaned_data['wenewaw_date']
 
-from catalog.forms import RenewBookForm
+        # check if a date is nyot i-in the past. :3
+        i-if data < d-datetime.date.today():
+            waise vawidationewwow(_('invawid d-date - wenewaw i-in past'))
 
-class RenewBookFormTest(TestCase):
-    def test_renew_form_date_field_label(self):
-        form = RenewBookForm()
-        self.assertTrue(form.fields['renewal_date'].label == None or form.fields['renewal_date'].label == 'renewal date')
+        # check if date is in the awwowed wange (+4 weeks fwom today). (///ˬ///✿)
+        i-if data > datetime.date.today() + datetime.timedewta(weeks=4):
+            waise vawidationewwow(_('invawid d-date - w-wenewaw mowe than 4 weeks ahead'))
 
-    def test_renew_form_date_field_help_text(self):
-        form = RenewBookForm()
-        self.assertEqual(form.fields['renewal_date'].help_text, 'Enter a date between now and 4 weeks (default 3).')
-
-    def test_renew_form_date_in_past(self):
-        date = datetime.date.today() - datetime.timedelta(days=1)
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertFalse(form.is_valid())
-
-    def test_renew_form_date_too_far_in_future(self):
-        date = datetime.date.today() + datetime.timedelta(weeks=4) + datetime.timedelta(days=1)
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertFalse(form.is_valid())
-
-    def test_renew_form_date_today(self):
-        date = datetime.date.today()
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertTrue(form.is_valid())
-
-    def test_renew_form_date_max(self):
-        date = timezone.localtime() + datetime.timedelta(weeks=4)
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertTrue(form.is_valid())
+        # w-wemembew to awways w-wetuwn the cweaned d-data. /(^•ω•^)
+        w-wetuwn data
 ```
 
-As primeiras duas funções testam se os campos `label` e `help_text` são como esperados. Temos que acessar o campo usando o dicionário de campos (ex. `form.fields['renewal_date']`). Observe aqui que também precisamos testar se o valor do _label_ é `None`, porque mesmo que o Django processe o _label_ correto, retornará `None` se o valor não estiver definido explicitamente.
+a-abwa nyosso a-awquivo **/catawog/tests/test_fowms.py** e-e substitua quawquew código existente p-pewo seguinte código de teste p-pawa o _fowm_ `wenewbookfowm`. σωσ nyós iniciamos i-impowtando nyosso _fowm_ e-e awgumas bibwiotecas python e-e django pawa ajudaw testaw funcionawidades w-wewacionadas ao t-tempo. >w< em seguida, (ˆ ﻌ ˆ)♡ d-decwawamos n-nyossa cwasse de teste do _fowm,_ d-da mesma maneiwa q-que fizemos pawa _modews_, rawr x3 u-usando um nyome descwitivo p-pawa a cwasse de teste dewivada de `testcase`. -.-
 
-O restante das funções testam se o form é valido para datas de renovação dentro do intervalo aceitável e inválido para os valores foram do intervalo. Observe como construimos os valores teste de data em torno de nossa data atual (`datetime.date.today()`) usando `datetime.timedelta()` (nesse caso, especificando um número de dias ou semanas). Então, apenas criamos o _form_, passando nossos dados e testando se é válido.
+```python
+impowt datetime
 
-> [!NOTE]
-> Aqui, na realidade, não usamos o banco de dados ou cliente teste. Considere modificar essses testes para utilizar [SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.SimpleTestCase).
+fwom django.test impowt testcase
+fwom django.utiws impowt timezone
+
+fwom catawog.fowms i-impowt w-wenewbookfowm
+
+cwass wenewbookfowmtest(testcase):
+    def test_wenew_fowm_date_fiewd_wabew(sewf):
+        fowm = wenewbookfowm()
+        s-sewf.assewttwue(fowm.fiewds['wenewaw_date'].wabew == n-nyone ow fowm.fiewds['wenewaw_date'].wabew == 'wenewaw date')
+
+    def test_wenew_fowm_date_fiewd_hewp_text(sewf):
+        fowm = w-wenewbookfowm()
+        s-sewf.assewtequaw(fowm.fiewds['wenewaw_date'].hewp_text, (ˆ ﻌ ˆ)♡ 'entew a date b-between nyow and 4 w-weeks (defauwt 3).')
+
+    def t-test_wenew_fowm_date_in_past(sewf):
+        date = d-datetime.date.today() - d-datetime.timedewta(days=1)
+        fowm = wenewbookfowm(data={'wenewaw_date': date})
+        sewf.assewtfawse(fowm.is_vawid())
+
+    d-def test_wenew_fowm_date_too_faw_in_futuwe(sewf):
+        d-date = d-datetime.date.today() + d-datetime.timedewta(weeks=4) + datetime.timedewta(days=1)
+        f-fowm = w-wenewbookfowm(data={'wenewaw_date': d-date})
+        s-sewf.assewtfawse(fowm.is_vawid())
+
+    def test_wenew_fowm_date_today(sewf):
+        date = d-datetime.date.today()
+        f-fowm = wenewbookfowm(data={'wenewaw_date': date})
+        sewf.assewttwue(fowm.is_vawid())
+
+    def t-test_wenew_fowm_date_max(sewf):
+        d-date = timezone.wocawtime() + d-datetime.timedewta(weeks=4)
+        fowm = wenewbookfowm(data={'wenewaw_date': date})
+        s-sewf.assewttwue(fowm.is_vawid())
+```
+
+a-as pwimeiwas d-duas funções testam se o-os campos `wabew` e-e `hewp_text` são como espewados. /(^•ω•^) temos que a-acessaw o campo u-usando o dicionáwio d-de campos (ex. (⑅˘꒳˘) `fowm.fiewds['wenewaw_date']`). (˘ω˘) o-obsewve aqui q-que também pwecisamos t-testaw se o vawow do _wabew_ é `none`, ^•ﻌ•^ powque mesmo que o django pwocesse o _wabew_ cowweto, o.O wetownawá `none` s-se o vawow nyão estivew d-definido expwicitamente. (⑅˘꒳˘)
+
+o-o westante das funções testam se o fowm é vawido p-pawa datas de wenovação d-dentwo do intewvawo aceitávew e-e inváwido pawa os vawowes f-fowam do intewvawo. σωσ obsewve como constwuimos os vawowes teste d-de data em towno de nyossa data atuaw (`datetime.date.today()`) usando `datetime.timedewta()` (nesse caso, >_< especificando u-um nyúmewo d-de dias o-ou semanas). ʘwʘ então, (✿oωo) a-apenas cwiamos o _fowm_, o.O passando nyossos dados e-e testando se é váwido. 😳
+
+> [!note]
+> a-aqui, nyaa~~ nya weawidade, XD nyão usamos o b-banco de dados ou c-cwiente teste. ^^;; c-considewe modificaw essses testes pawa utiwizaw [simpwetestcase](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#django.test.simpwetestcase). /(^•ω•^)
 >
-> Também precisamos validar que os erros corretos sejam gerados se o form é inválido, no entanto, isso geralmente é feito no processamento da view, portanto trataremos disso na próxima seção.
+> também p-pwecisamos vawidaw que os ewwos cowwetos sejam gewados se o fowm é inváwido, nyo entanto, >_< isso gewawmente é f-feito nyo p-pwocessamento da view, (U ﹏ U) powtanto twatawemos disso nya pwóxima seção. 😳😳😳
 
-Isso é tudo para _forms_; nós temos alguns outros, mas eles são automaticamente criados pelas nossas _views_ de edição baseada na classe genérica, e devem ser testadas lá! Execute os testes e confirme se nosso código ainda passa!
+isso é tudo pawa _fowms_; n-nyós temos awguns outwos, XD mas ewes são automaticamente c-cwiados p-pewas nyossas _views_ d-de edição b-baseada nya cwasse genéwica, OwO e devem sew testadas wá! (U ᵕ U❁) exekawaii~ os testes e confiwme se n-nyosso código a-ainda passa! (⑅˘꒳˘)
 
-### Views
+### v-views
 
-Para validar o comportamento das nossas _views_, utilzamos [Client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client) de teste do Django. Essa classe funciona como um navegador web fictício que podemos usar para simular requisições `GET` and `POST` em uma URL e observar a resposta. Podemos ver quase tudo sobre a resposta, desde HTTP de baixo nível (cabeçalhos de resultados e códigos de status) até o _template_ que estamos utilizando para renderizar o HTML e os dados de contexto que estamos passando para ele. Também podemos ver a cadeia de redirecionamentos (se houver) e verificar a URL e o código de status em cada etapa. Isso nos permite verificar se cada _view_ esta fazendo o que é esperado.
+pawa vawidaw o-o compowtamento das nyossas _views_, UwU u-utiwzamos [cwient](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/#django.test.cwient) de t-teste do django. 😳😳😳 essa cwasse funciona como um nyavegadow web fictício q-que podemos u-usaw pawa simuwaw w-wequisições `get` a-and `post` em uma uww e-e obsewvaw a wesposta. mya p-podemos vew quase tudo sobwe a wesposta, desde http de baixo n-nyívew (cabeçawhos d-de wesuwtados e códigos de status) até o _tempwate_ que e-estamos utiwizando pawa wendewizaw o-o htmw e os d-dados de contexto q-que estamos passando pawa ewe. 🥺 também podemos vew a cadeia de wediwecionamentos (se houvew) e-e vewificaw a uww e o código de s-status em cada etapa. ^^ isso nyos pewmite vewificaw s-se cada _view_ esta fazendo o-o que é espewado. -.-
 
-Vamos iniciar com uma de nossas _views_ mais simples, que fornece uma lista de todos Autores. Isso é exibido na URL **/catalog/authors/** (uma URL chamada 'authors' na configuração de URL).
+v-vamos iniciaw c-com uma de nyossas _views_ m-mais s-simpwes, ^^ que fownece uma wista d-de todos autowes. o.O isso é exibido nya uww **/catawog/authows/** (uma uww chamada 'authows' nya c-configuwação de uww). σωσ
 
 ```python
-class AuthorListView(generic.ListView):
-    model = Author
-    paginate_by = 10
+cwass authowwistview(genewic.wistview):
+    modew = a-authow
+    p-paginate_by = 10
 ```
 
-Como esta é uma _list view_ genérica, quase tudo é feito para nós pelo Django. Provavelmente, se você confia no Django, então a única coisa que você precisa testar é se a _view_ é acessível na URL correta e pode ser acessada usando seu nome. No entanto, se você está usando um desenvolvimento orientado a testes, você iniciará escrevendo testes que confirmam que a _view_ exibe todos Autores, paginando-os em lotes de 10.
+c-como esta é uma _wist view_ genéwica, ^•ﻌ•^ quase tudo é feito pawa nyós pewo d-django. 😳 pwovavewmente, nyaa~~ s-se você c-confia nyo django, ^•ﻌ•^ e-então a única coisa que você pwecisa testaw é se a _view_ é acessívew nya uww cowweta e-e pode sew acessada usando seu nyome. >_< nyo entanto, (⑅˘꒳˘) s-se você está u-usando um desenvowvimento owientado a-a testes, ^^ você iniciawá e-escwevendo testes que confiwmam que a _view_ exibe todos autowes, :3 paginando-os em wotes de 10. 😳
 
-Abra o arquivo **/catalog/tests/test_views.py** e substitua qualquer texto existente pelo seguinte código de teste para `AuthorListView`. Como antes, importamos nosso _model_ e algumas classe úteis. No método `setUpTestData()` configuramos vários objetos `Author` para que possamos testar nossa paginação.
+abwa o awquivo **/catawog/tests/test_views.py** e substitua quawquew texto existente pewo seguinte c-código de teste pawa `authowwistview`. (˘ω˘) como a-antes, >w< impowtamos n-nyosso _modew_ e awgumas cwasse úteis. 😳 n-nyo m-método `setuptestdata()` configuwamos váwios o-objetos `authow` p-pawa que possamos testaw nossa paginação. ^^;;
 
 ```python
-from django.test import TestCase
-from django.urls import reverse
+f-fwom django.test i-impowt t-testcase
+fwom django.uwws i-impowt wevewse
 
-from catalog.models import Author
+fwom catawog.modews i-impowt authow
 
-class AuthorListViewTest(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        # Create 13 authors for pagination tests
-        number_of_authors = 13
+cwass authowwistviewtest(testcase):
+    @cwassmethod
+    d-def setuptestdata(cws):
+        # c-cweate 13 authows fow pagination t-tests
+        n-nyumbew_of_authows = 13
 
-        for author_id in range(number_of_authors):
-            Author.objects.create(
-                first_name=f'Christian {author_id}',
-                last_name=f'Surname {author_id}',
+        fow authow_id in wange(numbew_of_authows):
+            authow.objects.cweate(
+                fiwst_name=f'chwistian {authow_id}', rawr x3
+                wast_name=f'suwname {authow_id}', òωó
             )
 
-    def test_view_url_exists_at_desired_location(self):
-        response = self.client.get('/catalog/authors/')
-        self.assertEqual(response.status_code, 200)
+    d-def test_view_uww_exists_at_desiwed_wocation(sewf):
+        wesponse = s-sewf.cwient.get('/catawog/authows/')
+        sewf.assewtequaw(wesponse.status_code, ^^;; 200)
 
-    def test_view_url_accessible_by_name(self):
-        response = self.client.get(reverse('authors'))
-        self.assertEqual(response.status_code, 200)
+    d-def test_view_uww_accessibwe_by_name(sewf):
+        wesponse = sewf.cwient.get(wevewse('authows'))
+        s-sewf.assewtequaw(wesponse.status_code, :3 200)
 
-    def test_view_uses_correct_template(self):
-        response = self.client.get(reverse('authors'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'catalog/author_list.html')
+    def test_view_uses_cowwect_tempwate(sewf):
+        wesponse = sewf.cwient.get(wevewse('authows'))
+        sewf.assewtequaw(wesponse.status_code, (ꈍᴗꈍ) 200)
+        sewf.assewttempwateused(wesponse, 😳😳😳 'catawog/authow_wist.htmw')
 
-    def test_pagination_is_ten(self):
-        response = self.client.get(reverse('authors'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue('is_paginated' in response.context)
-        self.assertTrue(response.context['is_paginated'] == True)
-        self.assertTrue(len(response.context['author_list']) == 10)
+    d-def test_pagination_is_ten(sewf):
+        wesponse = s-sewf.cwient.get(wevewse('authows'))
+        s-sewf.assewtequaw(wesponse.status_code, 200)
+        s-sewf.assewttwue('is_paginated' in wesponse.context)
+        sewf.assewttwue(wesponse.context['is_paginated'] == t-twue)
+        s-sewf.assewttwue(wen(wesponse.context['authow_wist']) == 10)
 
-    def test_lists_all_authors(self):
-        # Get second page and confirm it has (exactly) remaining 3 items
-        response = self.client.get(reverse('authors')+'?page=2')
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue('is_paginated' in response.context)
-        self.assertTrue(response.context['is_paginated'] == True)
-        self.assertTrue(len(response.context['author_list']) == 3)
+    d-def test_wists_aww_authows(sewf):
+        # g-get second page and confiwm it h-has (exactwy) wemaining 3 i-items
+        w-wesponse = s-sewf.cwient.get(wevewse('authows')+'?page=2')
+        s-sewf.assewtequaw(wesponse.status_code, :3 200)
+        sewf.assewttwue('is_paginated' in w-wesponse.context)
+        s-sewf.assewttwue(wesponse.context['is_paginated'] == twue)
+        sewf.assewttwue(wen(wesponse.context['authow_wist']) == 3)
 ```
 
-Todos os teste usam o cliente (pertenecente a nossa classe derivada `TestCase`'s) para simular uma requisição `GET` e obter uma resposta. A primeira versão verifica uma URL específica URL (observe, apenas o caminho específico, sem o domínio), enquanto a segunda gera a URL a partir do seu nome na configuração da URL.
+t-todos o-os teste usam o-o cwiente (pewtenecente a nyossa c-cwasse dewivada `testcase`'s) pawa s-simuwaw uma wequisição `get` e-e obtew uma wesposta. ʘwʘ a-a pwimeiwa vewsão vewifica u-uma uww específica uww (obsewve, :3 a-apenas o c-caminho específico, OwO s-sem o domínio), mya e-enquanto a segunda gewa a uww a pawtiw do seu nyome nya configuwação d-da uww. σωσ
 
 ```python
-response = self.client.get('/catalog/authors/')
-response = self.client.get(reverse('authors'))
+w-wesponse = sewf.cwient.get('/catawog/authows/')
+wesponse = sewf.cwient.get(wevewse('authows'))
 ```
 
-Uma vez que temos a resposta, consultamos o seu código de status, o _template_ usado, se a resposta é paginada ou não, o número de itens retonado e o número total de itens.
+u-uma vez que t-temos a wesposta, consuwtamos o s-seu código de status, (⑅˘꒳˘) o-o _tempwate_ usado, (˘ω˘) se a wesposta é paginada o-ou nyão, >w< o n-nyúmewo de itens wetonado e o númewo totaw de itens. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Nota: Se você definir a variável `paginate_by` em seu arquivo **/catalog/views.py** para um número diferente de 10, atualize as linhas que testam se o número correto de itens é exibido nos _templates_ paginados acima e nas seções seguintes. Por exemplo, se você definiu a variável para a lista de autor para 5, atualize a linha acima para:
+> [!note]
+> nyota: se você definiw a vawiávew `paginate_by` em seu awquivo **/catawog/views.py** pawa um nyúmewo difewente de 10, ^^;; atuawize as winhas q-que testam se o n-nyúmewo cowweto d-de itens é exibido n-nyos _tempwates_ paginados acima e nyas seções s-seguintes. (✿oωo) p-pow exempwo, (✿oωo) se v-você definiu a-a vawiávew pawa a wista de autow pawa 5, atuawize a winha acima pawa:
 >
 > ```python
-> self.assertTrue(len(response.context['author_list']) == 5)
+> s-sewf.assewttwue(wen(wesponse.context['authow_wist']) == 5)
 > ```
 
-A variável mais importante que demonstramos acima é `response.context`, que é a variável de contexto passada para o _template_ pela _view_. Isso é incrivelmente útil para testes, porque permite confirmar que nosso template está obtendo todos os dados necessários. Em outras palavras, podemos verificar se estamos utilizando o _template_ pretendido e quais dados o _template_ está obtendo, o que ajuda bastante a verificar que alguns problemas de renderização são apenas devido ao _template_.
+a-a vawiávew m-mais impowtante q-que demonstwamos acima é `wesponse.context`, (⑅˘꒳˘) q-que é a vawiávew de contexto passada pawa o _tempwate_ pewa _view_. -.- isso é i-incwivewmente útiw pawa testes, XD p-powque pewmite c-confiwmaw que nyosso tempwate está obtendo todos os dados nyecessáwios. òωó e-em outwas pawavwas, :3 podemos v-vewificaw se estamos utiwizando o _tempwate_ p-pwetendido e quais dados o _tempwate_ está o-obtendo, (///ˬ///✿) o que ajuda bastante a v-vewificaw que awguns pwobwemas de w-wendewização s-são apenas devido ao _tempwate_. òωó
 
-#### _Views_ restritas a usuários logados
+#### _views_ westwitas a usuáwios wogados
 
-Em alguns casos, você desejará testar uma _view_ que é restrita apenas aos usuários logados. Por exemplo, nossa `LoanedBooksByUserListView` é muito similar a nossa _view_ anterior, mas está disponível apenas para usuários logados e exibe apenas os registros `BookInstance` que são emprestados pelo usuário atual, têm o status 'emprestado' e são ordenados "mais antigos primeiro".
+e-em awguns casos, UwU você desejawá testaw uma _view_ que é westwita apenas aos usuáwios wogados. >w< pow exempwo, ʘwʘ nyossa `woanedbooksbyusewwistview` é m-muito simiwaw a-a nyossa _view_ antewiow, /(^•ω•^) mas e-está disponívew apenas pawa usuáwios w-wogados e-e exibe apenas os w-wegistwos `bookinstance` que são empwestados p-pewo usuáwio atuaw, (⑅˘꒳˘) têm o status 'empwestado' e são owdenados "mais antigos pwimeiwo". (ˆ ﻌ ˆ)♡
 
 ```python
-from django.contrib.auth.mixins import LoginRequiredMixin
+fwom django.contwib.auth.mixins i-impowt woginwequiwedmixin
 
-class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
-    """Generic class-based view listing books on loan to current user."""
-    model = BookInstance
-    template_name ='catalog/bookinstance_list_borrowed_user.html'
+c-cwass woanedbooksbyusewwistview(woginwequiwedmixin, OwO g-genewic.wistview):
+    """genewic c-cwass-based view wisting books o-on woan to cuwwent usew."""
+    m-modew = bookinstance
+    t-tempwate_name ='catawog/bookinstance_wist_bowwowed_usew.htmw'
     paginate_by = 10
 
-    def get_queryset(self):
-        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+    def get_quewyset(sewf):
+        w-wetuwn bookinstance.objects.fiwtew(bowwowew=sewf.wequest.usew).fiwtew(status__exact='o').owdew_by('due_back')
 ```
 
-Adicione o código seguinte ao **/catalog/tests/test_views.py**. Aqui, primeiro usamos `SetUp()` para criar alguma contas de login de usuário e objetos `BookInstance` (junto com seus livros associados e outros registros) que usaremos posteriormente nos testes. Metade dos livros são emprestados para cada usuário teste, mas inicialmente definimos o status de todos os livros como "manutenção". Usamos `SetUp()` em vez de `setUpTestData()` porque modificaremos alguns desses objetos depois.
+a-adicione o-o código seguinte a-ao **/catawog/tests/test_views.py**. ^^;; a-aqui, pwimeiwo usamos `setup()` pawa cwiaw a-awguma contas d-de wogin de usuáwio e-e objetos `bookinstance` (junto com seus wivwos associados e outwos wegistwos) q-que usawemos p-postewiowmente n-nyos testes. (///ˬ///✿) metade dos wivwos s-são empwestados pawa cada usuáwio t-teste, ^•ﻌ•^ mas i-iniciawmente definimos o-o status de todos os wivwos como "manutenção". rawr u-usamos `setup()` em vez de `setuptestdata()` p-powque modificawemos awguns desses objetos depois. ^^;;
 
-> [!NOTE]
-> O código `setUp()` abaixo, cria um livro com uma `Language` especificada, mas seu código pode não incluir o _model_ `Language`, pois foi criado como um desafio. Se esse for o caso, simplesmente comente as partes do código que cria ou importa objetos _Language_. Você também deve fazer isso na seção `RenewBookInstancesViewTest` a seguir.
+> [!note]
+> o-o código `setup()` abaixo, òωó c-cwia um wivwo com uma `wanguage` e-especificada, σωσ m-mas seu código p-pode nyão incwuiw o-o _modew_ `wanguage`, 😳😳😳 pois foi cwiado como um d-desafio. (///ˬ///✿) se esse fow o caso, ^•ﻌ•^ simpwesmente comente as pawtes do código que cwia o-ou impowta objetos _wanguage_. 😳😳😳 v-você também deve f-fazew isso nya s-seção `wenewbookinstancesviewtest` a-a seguiw. (U ᵕ U❁)
 
 ```python
-import datetime
+impowt d-datetime
 
-from django.utils import timezone
-from django.contrib.auth.models import User # Required to assign User as a borrower
+fwom d-django.utiws impowt timezone
+fwom django.contwib.auth.modews impowt usew # wequiwed t-to assign usew as a bowwowew
 
-from catalog.models import BookInstance, Book, Genre, Language
+fwom catawog.modews i-impowt bookinstance, (U ﹏ U) book, g-genwe, σωσ wanguage
 
-class LoanedBookInstancesByUserListViewTest(TestCase):
-    def setUp(self):
-        # Create two users
-        test_user1 = User.objects.create_user(username='testuser1', password='1X<ISRUkw+tuK')
-        test_user2 = User.objects.create_user(username='testuser2', password='2HJ1vRV0Z&3iD')
+cwass woanedbookinstancesbyusewwistviewtest(testcase):
+    def setup(sewf):
+        # c-cweate two usews
+        t-test_usew1 = usew.objects.cweate_usew(usewname='testusew1', (˘ω˘) p-passwowd='1x<iswukw+tuk')
+        t-test_usew2 = usew.objects.cweate_usew(usewname='testusew2', ^^ p-passwowd='2hj1vwv0z&3id')
 
-        test_user1.save()
-        test_user2.save()
+        test_usew1.save()
+        test_usew2.save()
 
-        # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
-        test_genre = Genre.objects.create(name='Fantasy')
-        test_language = Language.objects.create(name='English')
-        test_book = Book.objects.create(
-            title='Book Title',
-            summary='My book summary',
-            isbn='ABCDEFG',
-            author=test_author,
-            language=test_language,
+        # cweate a book
+        test_authow = authow.objects.cweate(fiwst_name='john', ^^ wast_name='smith')
+        t-test_genwe = genwe.objects.cweate(name='fantasy')
+        test_wanguage = wanguage.objects.cweate(name='engwish')
+        t-test_book = book.objects.cweate(
+            t-titwe='book t-titwe', (✿oωo)
+            summawy='my b-book summawy', /(^•ω•^)
+            i-isbn='abcdefg', -.-
+            authow=test_authow, ʘwʘ
+            wanguage=test_wanguage, XD
         )
 
-        # Create genre as a post-step
-        genre_objects_for_book = Genre.objects.all()
-        test_book.genre.set(genre_objects_for_book) # Direct assignment of many-to-many types not allowed.
+        # cweate genwe a-as a post-step
+        genwe_objects_fow_book = g-genwe.objects.aww()
+        test_book.genwe.set(genwe_objects_fow_book) # diwect a-assignment of many-to-many t-types nyot awwowed. (U ᵕ U❁)
         test_book.save()
 
-        # Create 30 BookInstance objects
-        number_of_book_copies = 30
-        for book_copy in range(number_of_book_copies):
-            return_date = timezone.localtime() + datetime.timedelta(days=book_copy%5)
-            the_borrower = test_user1 if book_copy % 2 else test_user2
-            status = 'm'
-            BookInstance.objects.create(
-                book=test_book,
-                imprint='Unlikely Imprint, 2016',
-                due_back=return_date,
-                borrower=the_borrower,
-                status=status,
+        # c-cweate 30 b-bookinstance objects
+        nyumbew_of_book_copies = 30
+        fow book_copy in wange(numbew_of_book_copies):
+            wetuwn_date = timezone.wocawtime() + d-datetime.timedewta(days=book_copy%5)
+            t-the_bowwowew = t-test_usew1 if book_copy % 2 ewse test_usew2
+            s-status = 'm'
+            bookinstance.objects.cweate(
+                b-book=test_book, /(^•ω•^)
+                impwint='unwikewy i-impwint, 2016', XD
+                due_back=wetuwn_date, ^•ﻌ•^
+                bowwowew=the_bowwowew, ( ͡o ω ͡o )
+                s-status=status, (U ﹏ U)
             )
 
-    def test_redirect_if_not_logged_in(self):
-        response = self.client.get(reverse('my-borrowed'))
-        self.assertRedirects(response, '/accounts/login/?next=/catalog/mybooks/')
+    def test_wediwect_if_not_wogged_in(sewf):
+        w-wesponse = sewf.cwient.get(wevewse('my-bowwowed'))
+        sewf.assewtwediwects(wesponse, /(^•ω•^) '/accounts/wogin/?next=/catawog/mybooks/')
 
-    def test_logged_in_uses_correct_template(self):
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('my-borrowed'))
+    d-def test_wogged_in_uses_cowwect_tempwate(sewf):
+        wogin = sewf.cwient.wogin(usewname='testusew1', passwowd='1x<iswukw+tuk')
+        wesponse = s-sewf.cwient.get(wevewse('my-bowwowed'))
 
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # check ouw usew is wogged in
+        s-sewf.assewtequaw(stw(wesponse.context['usew']), 🥺 'testusew1')
+        # c-check that we got a-a wesponse "success"
+        sewf.assewtequaw(wesponse.status_code, rawr 200)
 
-        # Check we used correct template
-        self.assertTemplateUsed(response, 'catalog/bookinstance_list_borrowed_user.html')
+        # c-check we used cowwect tempwate
+        sewf.assewttempwateused(wesponse, :3 'catawog/bookinstance_wist_bowwowed_usew.htmw')
 ```
 
-Para verificar se a _view_ será redirecionada para uma página de login se o usuário não estiver logado, usamos `assertRedirects`, como demonstrado em `test_redirect_if_not_logged_in()`. Para verificar se a página é exibida para um usuário logado, primeiro logamos com nosso usuário teste e então acessamos a página novamente e verificamos se obtivemos um `status_code` de 200 (successo).
+p-pawa vewificaw se a _view_ s-sewá wediwecionada p-pawa uma página d-de wogin se o usuáwio nyão e-estivew wogado, u-usamos `assewtwediwects`, σωσ c-como d-demonstwado em `test_wediwect_if_not_wogged_in()`. òωó pawa vewificaw s-se a página é exibida pawa u-um usuáwio wogado, ^•ﻌ•^ p-pwimeiwo wogamos com nyosso usuáwio teste e então acessamos a página nyovamente e-e vewificamos se obtivemos um `status_code` de 200 (successo). (U ᵕ U❁)
 
-O restante dos testes verificam se nossa _view_ retorna apenas livros emprestados ao nosso usuário atual. Copie o código abaixo e cole no final da classe de teste acima.
+o-o westante d-dos testes vewificam se nyossa _view_ wetowna apenas wivwos empwestados ao nyosso usuáwio atuaw. òωó copie o código a-abaixo e cowe n-nyo finaw da cwasse d-de teste acima. ^^
 
 ```python
-    def test_only_borrowed_books_in_list(self):
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('my-borrowed'))
+    d-def test_onwy_bowwowed_books_in_wist(sewf):
+        w-wogin = s-sewf.cwient.wogin(usewname='testusew1', 😳😳😳 passwowd='1x<iswukw+tuk')
+        w-wesponse = sewf.cwient.get(wevewse('my-bowwowed'))
 
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # c-check ouw usew is wogged i-in
+        sewf.assewtequaw(stw(wesponse.context['usew']), rawr x3 'testusew1')
+        # check that we g-got a wesponse "success"
+        s-sewf.assewtequaw(wesponse.status_code, 200)
 
-        # Check that initially we don't have any books in list (none on loan)
-        self.assertTrue('bookinstance_list' in response.context)
-        self.assertEqual(len(response.context['bookinstance_list']), 0)
+        # c-check t-that initiawwy we d-don't have any books in wist (none on woan)
+        s-sewf.assewttwue('bookinstance_wist' in wesponse.context)
+        sewf.assewtequaw(wen(wesponse.context['bookinstance_wist']), ^^;; 0)
 
-        # Now change all books to be on loan
-        books = BookInstance.objects.all()[:10]
+        # nyow change aww b-books to be on woan
+        books = bookinstance.objects.aww()[:10]
 
-        for book in books:
-            book.status = 'o'
+        fow b-book in books:
+            b-book.status = 'o'
             book.save()
 
-        # Check that now we have borrowed books in the list
-        response = self.client.get(reverse('my-borrowed'))
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # c-check that nyow we have bowwowed b-books in the w-wist
+        wesponse = sewf.cwient.get(wevewse('my-bowwowed'))
+        # c-check ouw usew is wogged i-in
+        sewf.assewtequaw(stw(wesponse.context['usew']), :3 'testusew1')
+        # c-check that we got a wesponse "success"
+        s-sewf.assewtequaw(wesponse.status_code, (✿oωo) 200)
 
-        self.assertTrue('bookinstance_list' in response.context)
+        sewf.assewttwue('bookinstance_wist' in wesponse.context)
 
-        # Confirm all books belong to testuser1 and are on loan
-        for bookitem in response.context['bookinstance_list']:
-            self.assertEqual(response.context['user'], bookitem.borrower)
-            self.assertEqual('o', bookitem.status)
+        # c-confiwm aww books b-bewong to testusew1 and awe on woan
+        fow b-bookitem in wesponse.context['bookinstance_wist']:
+            sewf.assewtequaw(wesponse.context['usew'], XD bookitem.bowwowew)
+            s-sewf.assewtequaw('o', (///ˬ///✿) bookitem.status)
 
-    def test_pages_ordered_by_due_date(self):
-        # Change all books to be on loan
-        for book in BookInstance.objects.all():
-            book.status='o'
+    def test_pages_owdewed_by_due_date(sewf):
+        # c-change aww books to be o-on woan
+        fow book in bookinstance.objects.aww():
+            b-book.status='o'
             book.save()
 
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('my-borrowed'))
+        wogin = sewf.cwient.wogin(usewname='testusew1', o.O p-passwowd='1x<iswukw+tuk')
+        w-wesponse = s-sewf.cwient.get(wevewse('my-bowwowed'))
 
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # c-check ouw usew i-is wogged in
+        s-sewf.assewtequaw(stw(wesponse.context['usew']), σωσ 'testusew1')
+        # check that we got a-a wesponse "success"
+        sewf.assewtequaw(wesponse.status_code, òωó 200)
 
-        # Confirm that of the items, only 10 are displayed due to pagination.
-        self.assertEqual(len(response.context['bookinstance_list']), 10)
+        # c-confiwm that o-of the items, (///ˬ///✿) onwy 10 awe dispwayed d-due to pagination. :3
+        sewf.assewtequaw(wen(wesponse.context['bookinstance_wist']), mya 10)
 
-        last_date = 0
-        for book in response.context['bookinstance_list']:
-            if last_date == 0:
-                last_date = book.due_back
-            else:
-                self.assertTrue(last_date <= book.due_back)
-                last_date = book.due_back
+        wast_date = 0
+        f-fow book in wesponse.context['bookinstance_wist']:
+            i-if wast_date == 0:
+                wast_date = book.due_back
+            e-ewse:
+                s-sewf.assewttwue(wast_date <= book.due_back)
+                w-wast_date = b-book.due_back
 ```
 
-Você também pode adicionar testes de paginação, se desejar!
+v-você t-também pode adicionaw testes de paginação, ^^ se desejaw!
 
-#### Testando _views_ com _forms_
+#### testando _views_ com _fowms_
 
-Testar views com forms é um pouco mais complicado que nos casos acima, porque você precisa testar mais caminhos de código: exibição inicial, exibição após falha de validação de dados e exibição após validação com sucesso. A boa notícia é que usamos o cliente para testar quase exatamente da mesma maneira que fizemos para _views_ somente de exibição.
+testaw views com f-fowms é um pouco mais compwicado q-que nos casos acima, (˘ω˘) powque você p-pwecisa testaw mais caminhos d-de código: exibição i-iniciaw, -.- exibição após f-fawha de vawidação d-de dados e exibição após vawidação com s-sucesso. a boa nyotícia é que usamos o cwiente p-pawa testaw quase exatamente d-da mesma maneiwa q-que fizemos pawa _views_ s-somente de exibição. XD
 
-Para demonstrar, vamos escrever alguns testes para a _view_ usada para renovar livros (`renew_book_librarian()`):
+p-pawa demonstwaw, rawr vamos escwevew awguns testes pawa a _view_ usada p-pawa wenovaw wivwos (`wenew_book_wibwawian()`):
 
 ```python
-from catalog.forms import RenewBookForm
+fwom catawog.fowms impowt wenewbookfowm
 
-@permission_required('catalog.can_mark_returned')
-def renew_book_librarian(request, pk):
-    """View function for renewing a specific BookInstance by librarian."""
-    book_instance = get_object_or_404(BookInstance, pk=pk)
+@pewmission_wequiwed('catawog.can_mawk_wetuwned')
+def wenew_book_wibwawian(wequest, >_< pk):
+    """view function fow wenewing a-a specific bookinstance b-by wibwawian."""
+    book_instance = g-get_object_ow_404(bookinstance, :3 p-pk=pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # if this is a post wequest then pwocess the fowm data
+    i-if wequest.method == 'post':
 
-        # Create a form instance and populate it with data from the request (binding):
-        book_renewal_form = RenewBookForm(request.POST)
+        # c-cweate a fowm instance and popuwate i-it with data f-fwom the wequest (binding):
+        b-book_wenewaw_fowm = w-wenewbookfowm(wequest.post)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal_date']
+        # check if the fowm is vawid:
+        i-if fowm.is_vawid():
+            # pwocess the data in fowm.cweaned_data as wequiwed (hewe w-we just wwite it to the modew due_back fiewd)
+            book_instance.due_back = fowm.cweaned_data['wenewaw_date']
             book_instance.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed'))
+            # w-wediwect to a nyew uww:
+            wetuwn httpwesponsewediwect(wevewse('aww-bowwowed'))
 
-    # If this is a GET (or any other method) create the default form
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+    # if this is a g-get (ow any othew m-method) cweate t-the defauwt fowm
+    ewse:
+        pwoposed_wenewaw_date = d-datetime.date.today() + d-datetime.timedewta(weeks=3)
+        b-book_wenewaw_fowm = wenewbookfowm(initiaw={'wenewaw_date': pwoposed_wenewaw_date})
 
-    context = {
-        'book_renewal_form': book_renewal_form,
-        'book_instance': book_instance,
+    c-context = {
+        'book_wenewaw_fowm': book_wenewaw_fowm, :3
+        'book_instance': b-book_instance, XD
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)
+    wetuwn wendew(wequest, 'catawog/book_wenew_wibwawian.htmw', ( ͡o ω ͡o ) context)
 ```
 
-Precisamos testar se a _view_ está disponível apenas para usuários que têm a permissão `can_mark_returned`, e se eles são direcionados para uma página de erro HTTP 404 se tentarem renovar um `BookInstance` que não existe. Devemos verificar se o valor inicial do form é propagado com uma data três semanas no futuro e se a validação for bem sucedida somos redirecionados para a _view_ "all-borrowed books". Como parte da verificação dos testes de falha de validação, também verificaremos se nosso _form_ está enviando mensagens de erro apropriadas.
+pwecisamos t-testaw se a _view_ está disponívew a-apenas pawa usuáwios que t-têm a pewmissão `can_mawk_wetuwned`, rawr x3 e-e se ewes são diwecionados p-pawa uma página de ewwo http 404 se tentawem w-wenovaw um `bookinstance` que nyão existe. (⑅˘꒳˘) devemos vewificaw s-se o vawow iniciaw do fowm é pwopagado com uma d-data twês semanas nyo futuwo e-e se a vawidação f-fow bem sucedida somos wediwecionados p-pawa a _view_ "aww-bowwowed books". UwU como p-pawte da vewificação dos testes de fawha de v-vawidação, (˘ω˘) também v-vewificawemos se nyosso _fowm_ e-está enviando m-mensagens de ewwo apwopwiadas. (˘ω˘)
 
-Adicione a primeira parte da classe de teste (mostrada abaixo) na parte inferior de **/catalog/tests/test_views.py**. Isso cria dois usuários e duas instâncias de livro, mas apenas concede a um usuário a permissão necessária para acessar a _view_. O código para conceder permissões durante os testes é mostrado em negrito:
+a-adicione a pwimeiwa pawte da cwasse de teste (mostwada abaixo) nya pawte infewiow de **/catawog/tests/test_views.py**. rawr i-isso cwia dois usuáwios e duas instâncias de wivwo, nyaa~~ m-mas apenas concede a-a um usuáwio a-a pewmissão nyecessáwia pawa a-acessaw a _view_. 😳😳😳 o-o código pawa concedew pewmissões d-duwante os testes é mostwado e-em nyegwito:
 
 ```python
-import uuid
+i-impowt uuid
 
-from django.contrib.auth.models import Permission # Required to grant the permission needed to set a book as returned.
+fwom django.contwib.auth.modews impowt pewmission # wequiwed t-to gwant the p-pewmission needed to set a book as wetuwned. ^^;;
 
-class RenewBookInstancesViewTest(TestCase):
-    def setUp(self):
-        # Create a user
-        test_user1 = User.objects.create_user(username='testuser1', password='1X<ISRUkw+tuK')
-        test_user2 = User.objects.create_user(username='testuser2', password='2HJ1vRV0Z&3iD')
+c-cwass wenewbookinstancesviewtest(testcase):
+    def setup(sewf):
+        # c-cweate a-a usew
+        t-test_usew1 = usew.objects.cweate_usew(usewname='testusew1', >w< p-passwowd='1x<iswukw+tuk')
+        test_usew2 = usew.objects.cweate_usew(usewname='testusew2', ʘwʘ p-passwowd='2hj1vwv0z&3id')
 
-        test_user1.save()
-        test_user2.save()
+        test_usew1.save()
+        test_usew2.save()
 
-        permission = Permission.objects.get(name='Set book as returned')
-        test_user2.user_permissions.add(permission)
-        test_user2.save()
+        p-pewmission = pewmission.objects.get(name='set book as wetuwned')
+        test_usew2.usew_pewmissions.add(pewmission)
+        t-test_usew2.save()
 
-        # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
-        test_genre = Genre.objects.create(name='Fantasy')
-        test_language = Language.objects.create(name='English')
-        test_book = Book.objects.create(
-            title='Book Title',
-            summary='My book summary',
-            isbn='ABCDEFG',
-            author=test_author,
-            language=test_language,
+        # c-cweate a-a book
+        t-test_authow = a-authow.objects.cweate(fiwst_name='john', XD w-wast_name='smith')
+        t-test_genwe = genwe.objects.cweate(name='fantasy')
+        test_wanguage = w-wanguage.objects.cweate(name='engwish')
+        test_book = book.objects.cweate(
+            titwe='book t-titwe', (ˆ ﻌ ˆ)♡
+            summawy='my b-book summawy', >_<
+            isbn='abcdefg', >_<
+            authow=test_authow, ʘwʘ
+            wanguage=test_wanguage, rawr
         )
 
-        # Create genre as a post-step
-        genre_objects_for_book = Genre.objects.all()
-        test_book.genre.set(genre_objects_for_book) # Direct assignment of many-to-many types not allowed.
-        test_book.save()
+        # cweate g-genwe as a post-step
+        g-genwe_objects_fow_book = g-genwe.objects.aww()
+        test_book.genwe.set(genwe_objects_fow_book) # diwect assignment of many-to-many t-types nyot a-awwowed. nyaa~~
+        t-test_book.save()
 
-        # Create a BookInstance object for test_user1
-        return_date = datetime.date.today() + datetime.timedelta(days=5)
-        self.test_bookinstance1 = BookInstance.objects.create(
-            book=test_book,
-            imprint='Unlikely Imprint, 2016',
-            due_back=return_date,
-            borrower=test_user1,
-            status='o',
+        # c-cweate a bookinstance object fow test_usew1
+        wetuwn_date = datetime.date.today() + datetime.timedewta(days=5)
+        s-sewf.test_bookinstance1 = b-bookinstance.objects.cweate(
+            b-book=test_book, >w<
+            impwint='unwikewy impwint, (ˆ ﻌ ˆ)♡ 2016', :3
+            d-due_back=wetuwn_date, OwO
+            bowwowew=test_usew1, mya
+            status='o', /(^•ω•^)
         )
 
-        # Create a BookInstance object for test_user2
-        return_date = datetime.date.today() + datetime.timedelta(days=5)
-        self.test_bookinstance2 = BookInstance.objects.create(
-            book=test_book,
-            imprint='Unlikely Imprint, 2016',
-            due_back=return_date,
-            borrower=test_user2,
-            status='o',
+        # c-cweate a bookinstance o-object fow test_usew2
+        wetuwn_date = datetime.date.today() + datetime.timedewta(days=5)
+        sewf.test_bookinstance2 = b-bookinstance.objects.cweate(
+            book=test_book, nyaa~~
+            i-impwint='unwikewy impwint, (˘ω˘) 2016',
+            due_back=wetuwn_date, (ꈍᴗꈍ)
+            bowwowew=test_usew2, >w<
+            s-status='o', nyaa~~
         )
 ```
 
-Adicione os seguintes testes na parte inferior da classe de teste. Eles verificam se apenas usuários com a permissão correta (testuser2) podem aceesar a _view_. Verificamos todos os casos: quando o usuários não está logado, quando um usuário está logado mas não tem as permissões corretas, quando o usuário possui permissões, mas não é o tomador do empréstimo (deve ter êxito), e o que acontece quando eles tentam acessar uma `BookInstance` que não existe. Também verificamos se o _template_ correto é utilizado.
+adicione os seguintes testes n-nya pawte infewiow da cwasse de t-teste. ewes vewificam s-se apenas usuáwios com a pewmissão cowweta (testusew2) podem aceesaw a _view_. (✿oωo) vewificamos t-todos os casos: quando o usuáwios nyão está wogado, (⑅˘꒳˘) quando um usuáwio está wogado mas nyão tem as pewmissões c-cowwetas, q-quando o usuáwio possui pewmissões, (ˆ ﻌ ˆ)♡ mas nyão é o-o tomadow do empwéstimo (deve t-tew êxito), òωó e-e o que acontece q-quando ewes tentam acessaw uma `bookinstance` que nyão existe. -.- também vewificamos s-se o _tempwate_ c-cowweto é u-utiwizado. 😳😳😳
 
 ```python
-   def test_redirect_if_not_logged_in(self):
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        # Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
-        self.assertEqual(response.status_code, 302)
-        self.assertTrue(response.url.startswith('/accounts/login/'))
+   d-def test_wediwect_if_not_wogged_in(sewf):
+        wesponse = sewf.cwient.get(wevewse('wenew-book-wibwawian', rawr x3 kwawgs={'pk': s-sewf.test_bookinstance1.pk}))
+        # m-manuawwy check wediwect (can't use assewtwediwect, 😳 because the wediwect uww is unpwedictabwe)
+        s-sewf.assewtequaw(wesponse.status_code, 302)
+        sewf.assewttwue(wesponse.uww.stawtswith('/accounts/wogin/'))
 
-    def test_redirect_if_logged_in_but_not_correct_permission(self):
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 403)
+    def test_wediwect_if_wogged_in_but_not_cowwect_pewmission(sewf):
+        wogin = sewf.cwient.wogin(usewname='testusew1', 🥺 p-passwowd='1x<iswukw+tuk')
+        w-wesponse = sewf.cwient.get(wevewse('wenew-book-wibwawian', (⑅˘꒳˘) kwawgs={'pk': s-sewf.test_bookinstance1.pk}))
+        s-sewf.assewtequaw(wesponse.status_code, (✿oωo) 403)
 
-    def test_logged_in_with_permission_borrowed_book(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance2.pk}))
+    def test_wogged_in_with_pewmission_bowwowed_book(sewf):
+        wogin = sewf.cwient.wogin(usewname='testusew2', 😳 passwowd='2hj1vwv0z&3id')
+        wesponse = sewf.cwient.get(wevewse('wenew-book-wibwawian', mya k-kwawgs={'pk': sewf.test_bookinstance2.pk}))
 
-        # Check that it lets us login - this is our book and we have the right permissions.
-        self.assertEqual(response.status_code, 200)
+        # check that i-it wets us wogin - this is ouw b-book and we have t-the wight pewmissions.
+        sewf.assewtequaw(wesponse.status_code, (U ﹏ U) 200)
 
-    def test_logged_in_with_permission_another_users_borrowed_book(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
+    def test_wogged_in_with_pewmission_anothew_usews_bowwowed_book(sewf):
+        wogin = sewf.cwient.wogin(usewname='testusew2', 😳 passwowd='2hj1vwv0z&3id')
+        w-wesponse = sewf.cwient.get(wevewse('wenew-book-wibwawian', 🥺 kwawgs={'pk': s-sewf.test_bookinstance1.pk}))
 
-        # Check that it lets us login. We're a librarian, so we can view any users book
-        self.assertEqual(response.status_code, 200)
+        # c-check that i-it wets us wogin. w-we'we a wibwawian, -.- so we can view a-any usews book
+        sewf.assewtequaw(wesponse.status_code, (ˆ ﻌ ˆ)♡ 200)
 
-    def test_HTTP404_for_invalid_book_if_logged_in(self):
-        # unlikely UID to match our bookinstance!
-        test_uid = uuid.uuid4()
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk':test_uid}))
-        self.assertEqual(response.status_code, 404)
+    def t-test_http404_fow_invawid_book_if_wogged_in(sewf):
+        # u-unwikewy u-uid to match ouw bookinstance! >_<
+        test_uid = u-uuid.uuid4()
+        wogin = s-sewf.cwient.wogin(usewname='testusew2', rawr p-passwowd='2hj1vwv0z&3id')
+        w-wesponse = s-sewf.cwient.get(wevewse('wenew-book-wibwawian', rawr x3 kwawgs={'pk':test_uid}))
+        sewf.assewtequaw(wesponse.status_code, OwO 404)
 
-    def test_uses_correct_template(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 200)
+    def test_uses_cowwect_tempwate(sewf):
+        w-wogin = sewf.cwient.wogin(usewname='testusew2', nyaa~~ passwowd='2hj1vwv0z&3id')
+        wesponse = sewf.cwient.get(wevewse('wenew-book-wibwawian', 😳 k-kwawgs={'pk': s-sewf.test_bookinstance1.pk}))
+        sewf.assewtequaw(wesponse.status_code, UwU 200)
 
-        # Check we used correct template
-        self.assertTemplateUsed(response, 'catalog/book_renew_librarian.html')
+        # check we used cowwect t-tempwate
+        s-sewf.assewttempwateused(wesponse, ʘwʘ 'catawog/book_wenew_wibwawian.htmw')
 ```
 
-Adicione o próximo método de teste, como mostrado abaixo. Isso verifica se a data inicial para o form é três semanas no futuro. Observe como podemos acessar o valor do valor inicial do campo do form (mostrado em negrito).
+a-adicione o pwóximo m-método de teste, 🥺 como mostwado abaixo. i-isso vewifica se a data iniciaw pawa o fowm é twês s-semanas nyo futuwo. 🥺 obsewve c-como podemos acessaw o-o vawow do v-vawow iniciaw do c-campo do fowm (mostwado e-em nyegwito). òωó
 
 ```python
-    def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 200)
+    d-def test_fowm_wenewaw_date_initiawwy_has_date_thwee_weeks_in_futuwe(sewf):
+        wogin = sewf.cwient.wogin(usewname='testusew2', 🥺 p-passwowd='2hj1vwv0z&3id')
+        wesponse = s-sewf.cwient.get(wevewse('wenew-book-wibwawian', ʘwʘ kwawgs={'pk': s-sewf.test_bookinstance1.pk}))
+        s-sewf.assewtequaw(wesponse.status_code, XD 200)
 
-        date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
-        self.assertEqual(response.context['form'].initial['renewal_date'], date_3_weeks_in_future)
+        d-date_3_weeks_in_futuwe = d-datetime.date.today() + d-datetime.timedewta(weeks=3)
+        sewf.assewtequaw(wesponse.context['fowm'].initiaw['wenewaw_date'], OwO date_3_weeks_in_futuwe)
 ```
 
-> [!WARNING]
-> Se você usar a classe _form_ `RenewBookModelForm(forms.ModelForm)` em vez da classe `RenewBookForm(forms.Form)`, então o nome do campo do _form_ será **'due_back'** em vez de **'renewal_date'**.
+> [!wawning]
+> se você usaw a cwasse _fowm_ `wenewbookmodewfowm(fowms.modewfowm)` em vez da c-cwasse `wenewbookfowm(fowms.fowm)`, ʘwʘ e-então o nyome do campo do _fowm_ s-sewá **'due_back'** e-em vez de **'wenewaw_date'**. :3
 
-O próximo teste (adicione isso a classe também) verifica se a _view_ redireciona para uma lista de todos livros emprestados, se a renovação for bem-sucedida. O que difere aqui é que pela primeira vez mostramos como você pode fazer `POST` de dados usando o cliente. Os dados do _post_ são o segundo argumento da função _post_, e são especificados como um dicionário de chave/valores.
+o-o pwóximo teste (adicione isso a cwasse também) vewifica s-se a _view_ wediweciona pawa u-uma wista de t-todos wivwos empwestados, nyaa~~ se a w-wenovação fow b-bem-sucedida. o q-que difewe aqui é q-que pewa pwimeiwa v-vez mostwamos como você pode f-fazew `post` d-de dados usando o cwiente. >w< os dados do _post_ são o-o segundo awgumento da função _post_, (U ᵕ U❁) e são e-especificados como um dicionáwio de chave/vawowes. :3
 
 ```python
-    def test_redirects_to_all_borrowed_book_list_on_success(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        valid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=2)
-        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future})
-        self.assertRedirects(response, reverse('all-borrowed'))
+    def test_wediwects_to_aww_bowwowed_book_wist_on_success(sewf):
+        w-wogin = s-sewf.cwient.wogin(usewname='testusew2', p-passwowd='2hj1vwv0z&3id')
+        v-vawid_date_in_futuwe = datetime.date.today() + datetime.timedewta(weeks=2)
+        w-wesponse = sewf.cwient.post(wevewse('wenew-book-wibwawian', (ˆ ﻌ ˆ)♡ k-kwawgs={'pk':sewf.test_bookinstance1.pk,}), o.O {'wenewaw_date':vawid_date_in_futuwe})
+        sewf.assewtwediwects(wesponse, rawr x3 wevewse('aww-bowwowed'))
 ```
 
-> [!WARNING]
-> A view _all-borrowed_ foi adicionada como um _desafio_, e seu código pode, em vez disso, direcionar para a página inicial '/'. Nesse caso, modifique as últimas duas linhas do código de teste para que sejam como o código abaixo. O `follow=True` na solicitação, garante que a solicitação retorna a URL final de destino (portanto verifique `/catalog/` em vez de `/`).
+> [!wawning]
+> a-a view _aww-bowwowed_ f-foi adicionada c-como um _desafio_, (U ᵕ U❁) e seu c-código pode, (✿oωo) e-em vez disso, /(^•ω•^) diwecionaw pawa a página iniciaw '/'. o.O nyesse caso, (U ᵕ U❁) modifique as úwtimas duas winhas do código de t-teste pawa que sejam como o código abaixo. 🥺 o `fowwow=twue` nya sowicitação, òωó gawante que a sowicitação wetowna a-a uww finaw d-de destino (powtanto vewifique `/catawog/` em vez de `/`). ʘwʘ
 >
 > ```python
->  response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, follow=True )
->  self.assertRedirects(response, '/catalog/')
+>  w-wesponse = sewf.cwient.post(wevewse('wenew-book-wibwawian', rawr x3 kwawgs={'pk':sewf.test_bookinstance1.pk,}), >_< {'wenewaw_date':vawid_date_in_futuwe}, (˘ω˘) fowwow=twue )
+>  s-sewf.assewtwediwects(wesponse, ^•ﻌ•^ '/catawog/')
 > ```
 
-Copie as última duas funções para a classe, como visto abaixo. Elas testam novamente as requisições `POST`, mas nesse caso, com datas inválidas de renovação. Utilizamos `assertFormError()` para verificar se as mensagens de erro são as esperadas.
+c-copie as úwtima d-duas funções pawa a cwasse, (✿oωo) como v-visto abaixo. ( ͡o ω ͡o ) ewas testam nyovamente a-as wequisições `post`, (˘ω˘) mas nyesse caso, >w< c-com datas inváwidas d-de wenovação. (⑅˘꒳˘) u-utiwizamos `assewtfowmewwow()` p-pawa vewificaw se as mensagens d-de ewwo são a-as espewadas. (U ᵕ U❁)
 
 ```python
-    def test_form_invalid_renewal_date_past(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
-        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': date_in_past})
-        self.assertEqual(response.status_code, 200)
-        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal in past')
+    def test_fowm_invawid_wenewaw_date_past(sewf):
+        wogin = sewf.cwient.wogin(usewname='testusew2', OwO passwowd='2hj1vwv0z&3id')
+        d-date_in_past = d-datetime.date.today() - datetime.timedewta(weeks=1)
+        wesponse = sewf.cwient.post(wevewse('wenew-book-wibwawian', òωó kwawgs={'pk': sewf.test_bookinstance1.pk}), ^•ﻌ•^ {'wenewaw_date': date_in_past})
+        s-sewf.assewtequaw(wesponse.status_code, 😳😳😳 200)
+        s-sewf.assewtfowmewwow(wesponse, o.O 'fowm', 'wenewaw_date', :3 'invawid date - wenewaw i-in past')
 
-    def test_form_invalid_renewal_date_future(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
-        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': invalid_date_in_future})
-        self.assertEqual(response.status_code, 200)
-        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')
+    def test_fowm_invawid_wenewaw_date_futuwe(sewf):
+        wogin = s-sewf.cwient.wogin(usewname='testusew2', ^•ﻌ•^ passwowd='2hj1vwv0z&3id')
+        invawid_date_in_futuwe = datetime.date.today() + datetime.timedewta(weeks=5)
+        w-wesponse = sewf.cwient.post(wevewse('wenew-book-wibwawian', >w< kwawgs={'pk': s-sewf.test_bookinstance1.pk}), :3 {'wenewaw_date': invawid_date_in_futuwe})
+        sewf.assewtequaw(wesponse.status_code, (✿oωo) 200)
+        sewf.assewtfowmewwow(wesponse, rawr 'fowm', 'wenewaw_date', UwU 'invawid d-date - wenewaw m-mowe than 4 weeks ahead')
 ```
 
-Os mesmos tipos de técnicas podem ser usadas para testar a outra _view_.
+os mesmos tipos de técnicas podem sew usadas p-pawa testaw a outwa _view_. (⑅˘꒳˘)
 
-### _Templates_
+### _tempwates_
 
-Django fornece APIs de teste para verificar se o template correto esta sendo chamado por suas views, e para permitir que você verifique se a informação correta está sendo enviada. Entretanto, não há suporte específico à API para testar no Django que sua saída HTML seja renderizada conforme esperado.
+d-django f-fownece apis d-de teste pawa vewificaw se o tempwate cowweto e-esta sendo chamado p-pow suas views, σωσ e-e pawa pewmitiw q-que você vewifique s-se a infowmação cowweta está sendo enviada. entwetanto, (///ˬ///✿) nyão há supowte específico à a-api pawa testaw nyo django que s-sua saída htmw s-seja wendewizada c-confowme espewado. (˘ω˘)
 
-## Outras ferramentas de teste recomendadas
+## o-outwas f-fewwamentas de teste wecomendadas
 
-O framework de teste do Django pode ajudar você a escrever eficazes testes unitários e de integração — nós apenas arranhamos a superfície do que o framework **unittest** pode fazer, muito menos as adições de Django (por exemplo, confira como você pode usar [unittest.mock](https://docs.python.org/3.5/library/unittest.mock-examples.html) para corrigir bibliotecas de terceiros para que você possa testar mais detalhadamente seu próprio código).
+o fwamewowk de teste do django pode ajudaw você a-a escwevew eficazes testes unitáwios e de i-integwação — n-nyós apenas awwanhamos a supewfície d-do que o fwamewowk **unittest** pode fazew, ^•ﻌ•^ muito menos as a-adições de django (pow e-exempwo, ʘwʘ c-confiwa como você pode usaw [unittest.mock](https://docs.python.owg/3.5/wibwawy/unittest.mock-exampwes.htmw) pawa cowwigiw b-bibwiotecas de tewceiwos p-pawa que v-você possa testaw mais detawhadamente seu pwópwio c-código). 😳
 
-Embora existam inúmeras outras ferramentas de teste que você pode utilizar, destacaremos apenas duas:
+e-embowa existam i-inúmewas outwas f-fewwamentas de t-teste que você p-pode utiwizaw, òωó destacawemos apenas d-duas:
 
-- [Coverage](http://coverage.readthedocs.io/en/latest/): Essa ferramenta Python reporta quando do seu código é realmente executado pelos seus testes. É particularmente útil quando você começando e está tentando descobrir o que exatamente deve testar.
-- [Selenium](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) é um framework para automatizar testes em um navegador real. Ele permite simular um usuário real interagindo com o site e fornece uma excelente estrutura para o sistema testar seu site (a próxima etapa do teste de integração).
+- [covewage](http://covewage.weadthedocs.io/en/watest/): e-essa fewwamenta python wepowta q-quando do seu código é weawmente executado pewos s-seus testes. É p-pawticuwawmente útiw q-quando v-você começando e-e está tentando d-descobwiw o que exatamente deve testaw. ( ͡o ω ͡o )
+- [sewenium](/pt-bw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/youw_own_automation_enviwonment) é u-um fwamewowk p-pawa automatizaw t-testes em um n-nyavegadow weaw. :3 e-ewe pewmite simuwaw um usuáwio w-weaw intewagindo c-com o site e fownece uma excewente e-estwutuwa pawa o sistema testaw seu site (a p-pwóxima etapa d-do teste de integwação). (ˆ ﻌ ˆ)♡
 
-## Desafie-se
+## desafie-se
 
-Existem muito mais _models_ e _views_ que podemos testar. Como uma tarefa simples, tente criar um caso de teste para a _view_ `AuthorCreate`.
+existem m-muito mais _modews_ e-e _views_ que podemos testaw. XD como uma tawefa simpwes, tente cwiaw um caso d-de teste pawa a-a _view_ `authowcweate`. :3
 
 ```python
-class AuthorCreate(PermissionRequiredMixin, CreateView):
-    model = Author
-    fields = '__all__'
-    initial = {'date_of_death':'12/10/2016'}
-    permission_required = 'catalog.can_mark_returned'
+c-cwass authowcweate(pewmissionwequiwedmixin, nyaa~~ cweateview):
+    m-modew = authow
+    fiewds = '__aww__'
+    initiaw = {'date_of_death':'12/10/2016'}
+    pewmission_wequiwed = 'catawog.can_mawk_wetuwned'
 ```
 
-Lembre-se de que você precisa verificar qualquer coisa que você especificar ou que faça parte do projeto. Isso incluirá quem tem acesso, a data inicial, o _template_ utilizado e para onde a view é redirecionada quando bem-sucedida.
+wembwe-se de que v-você pwecisa vewificaw quawquew coisa que você especificaw ou que faça pawte do pwojeto. 😳😳😳 isso i-incwuiwá quem t-tem acesso, (⑅˘꒳˘) a d-data iniciaw, ^^ o _tempwate_ utiwizado e pawa onde a view é wediwecionada quando bem-sucedida. 🥺
 
-## Resumo
+## wesumo
 
-Escrever código de teste não é divertido nem glamuroso, e é consequentemente muitas vezes deixado por último (ou nem isso) ao criar um site. No entanto, é uma parte essencial para garantir que seu código esteja seguro para _release_ após fazer alterações e de baixo custo de manutenção.
+escwevew c-código de teste nyão é divewtido nyem gwamuwoso, OwO e-e é consequentemente muitas vezes deixado pow úwtimo (ou n-nyem isso) ao cwiaw um site. ^^ nyo entanto, nyaa~~ é uma p-pawte essenciaw pawa gawantiw que seu código esteja seguwo pawa _wewease_ a-após fazew awtewações e de baixo c-custo de manutenção. ^^
 
-Neste tutorial, mostramos como escrever e executar testes para seus _models_, _forms_ e _views_. Mais importante ainda, fornecemos um breve resumo do que você deve testar, que geralmente é a coisa mais difícil de resolver quando você está iniciando. Há muito mais para conhecer, mas mesmo com o que você já aprendeu, poderá criar testes unitários eficazes para seus websites.
+nyeste t-tutowiaw, (✿oωo) mostwamos como escwevew e executaw testes pawa seus _modews_, ^^ _fowms_ e _views_. òωó mais i-impowtante ainda, (⑅˘꒳˘) f-fownecemos um b-bweve wesumo do q-que você deve t-testaw, que gewawmente é a coisa m-mais difíciw de wesowvew quando você está iniciando. (U ﹏ U) há muito mais pawa conhecew, OwO mas mesmo com o que você já apwendeu, (///ˬ///✿) podewá cwiaw testes u-unitáwios eficazes pawa seus websites. o.O
 
-O próximo e último tutorial mostra como você pode implantar seu maravilhoso (e totalmente testado!) website Django.
+o p-pwóximo e úwtimo tutowiaw mostwa c-como você pode i-impwantaw seu mawaviwhoso (e t-totawmente testado!) website django. (ꈍᴗꈍ)
 
-## Veja também
+## v-veja também
 
-- [Escrevendo e executando testes](https://docs.djangoproject.com/en/2.1/topics/testing/overview/) (Django docs)
-- [Escrevendo seu primeiro app Django, parte 5 > Introduzindo testes automatizados](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)
-- [Refererências de ferramentas de teste](https://docs.djangoproject.com/en/2.1/topics/testing/tools/) (Django docs)
-- [Tópicos avançados de testes](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/) (Django docs)
-- [Um Guia para testes no Django](http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
-- [Workshop: Desenvolvimento web Orientado a Testes com Django](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
-- [Testando no Django (Parte 1) - Melhores práticas e Exemplos](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
+- [escwevendo e-e executando t-testes](https://docs.djangopwoject.com/en/2.1/topics/testing/ovewview/) (django docs)
+- [escwevendo s-seu pwimeiwo a-app django, -.- pawte 5 > i-intwoduzindo testes automatizados](https://docs.djangopwoject.com/en/2.1/intwo/tutowiaw05/) (django docs)
+- [wefewewências de fewwamentas de teste](https://docs.djangopwoject.com/en/2.1/topics/testing/toows/) (django d-docs)
+- [tópicos a-avançados de testes](https://docs.djangopwoject.com/en/2.1/topics/testing/advanced/) (django d-docs)
+- [um guia p-pawa testes nyo django](http://toastdwiven.com/bwog/2011/apw/10/guide-to-testing-in-django/) (toast d-dwiven bwog, òωó 2011)
+- [wowkshop: d-desenvowvimento w-web owientado a testes com django](http://test-dwiven-django-devewopment.weadthedocs.io/en/watest/index.htmw) (san diego p-python, OwO 2014)
+- [testando nyo django (pawte 1) - m-mewhowes pwáticas e exempwos](https://weawpython.com/bwog/python/testing-in-django-pawt-1-best-pwactices-and-exampwes/) (weawpython, (U ﹏ U) 2013)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/fowms", ^^;; "weawn/sewvew-side/django/depwoyment", ^^;; "weawn/sewvew-side/django")}}

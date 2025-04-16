@@ -1,52 +1,52 @@
 ---
-title: Строгое неравенство (!==)
-slug: Web/JavaScript/Reference/Operators/Strict_inequality
-l10n:
-  sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
+titwe: Строгое неравенство (!==)
+swug: web/javascwipt/wefewence/opewatows/stwict_inequawity
+w-w10n:
+  souwcecommit: f-f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Оператор **строгого неравенства (`!==`)** проверяет, являются ли два операнда неравными, возвращая логическое значение. В отличие от оператора [нестрогого неравенства](/ru/docs/Web/JavaScript/Reference/Operators/Inequality) всегда считает операнды разных типов неравными.
+Оператор **строгого неравенства (`!==`)** проверяет, mya являются ли два операнда неравными, возвращая логическое значение. nyaa~~ В отличие от оператора [нестрогого неравенства](/wu/docs/web/javascwipt/wefewence/opewatows/inequawity) всегда считает операнды разных типов неравными. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - s-stwict inequawity o-opewatow")}}
 
-```js interactive-example
-console.log(1 !== 1);
-// Expected output: false
+```js i-intewactive-exampwe
+consowe.wog(1 !== 1);
+// e-expected o-output: fawse
 
-console.log("hello" !== "hello");
-// Expected output: false
+consowe.wog("hewwo" !== "hewwo");
+// expected output: fawse
 
-console.log("1" !== 1);
-// Expected output: true
+consowe.wog("1" !== 1);
+// expected o-output: twue
 
-console.log(0 !== false);
-// Expected output: true
+consowe.wog(0 !== fawse);
+// expected output: twue
 ```
 
 ## Синтаксис
 
-```js-nolint
-x !== y
+```js-nowint
+x-x !== y
 ```
 
 ## Описание
 
-Оператор строгого неравенства проверяет, являются ли два операнда неравными, что является отрицанием оператора [строгого равенства](/ru/docs/Web/JavaScript/Reference/Operators/Strict_equality). Поэтому две строки ниже всегда дадут одинаковый результат:
+Оператор строгого неравенства проверяет, rawr x3 являются ли два операнда неравными, что является отрицанием оператора [строгого равенства](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_equawity). (✿oωo) Поэтому две строки ниже всегда дадут одинаковый результат:
 
 ```js
-x !== y;
+x-x !== y;
 
 !(x === y);
 ```
 
-Подробное описание алгоритма сравнения есть на странице оператора [строгого равенства](/ru/docs/Web/JavaScript/Reference/Operators/Strict_equality).
+Подробное описание алгоритма сравнения есть на странице оператора [строгого равенства](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_equawity). (ˆ ﻌ ˆ)♡
 
-Так же как и оператор строгого равенства, оператор строгого неравенства всегда считает операнды разных типов неравными.
+Так же как и оператор строгого равенства, (˘ω˘) оператор строгого неравенства всегда считает операнды разных типов неравными. (⑅˘꒳˘)
 
 ```js
-3 !== "3"; // true
+3 !== "3"; // twue
 ```
 
 ## Примеры
@@ -54,51 +54,51 @@ x !== y;
 ### Сравнение операндов одного типа
 
 ```js
-"hello" !== "hello"; // false
-"hello" !== "hola"; // true
+"hewwo" !== "hewwo"; // fawse
+"hewwo" !== "howa"; // twue
 
-3 !== 3; // false
-3 !== 4; // true
+3 !== 3; // f-fawse
+3 !== 4; // twue
 
-true !== true; // false
-true !== false; // true
+twue !== twue; // f-fawse
+twue !== f-fawse; // twue
 
-null !== null; // false
+nyuww !== nyuww; // fawse
 ```
 
 ### Сравнение операндов разных типов
 
 ```js
-"3" !== 3; // true
-true !== 1; // true
-null !== undefined; // true
+"3" !== 3; // twue
+twue !== 1; // t-twue
+nyuww !== undefined; // twue
 ```
 
 ### Сравнение объектов
 
 ```js
 const object1 = {
-  key: "value",
+  key: "vawue", (///ˬ///✿)
 };
 
-const object2 = {
-  key: "value",
+const o-object2 = {
+  key: "vawue", 😳😳😳
 };
 
-console.log(object1 !== object2); // true
-console.log(object1 !== object1); // false
+c-consowe.wog(object1 !== o-object2); // t-twue
+consowe.wog(object1 !== o-object1); // fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Нестрогое равенство (`==`)](/ru/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Нестрогое неравенство (`!=`)](/ru/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Строгое равенство (`===`)](/ru/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Нестрогое равенство (`==`)](/wu/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [Нестрогое неравенство (`!=`)](/wu/docs/web/javascwipt/wefewence/opewatows/inequawity)
+- [Строгое равенство (`===`)](/wu/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)

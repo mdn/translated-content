@@ -1,52 +1,52 @@
 ---
-title: <bdi>
-slug: Web/HTML/Reference/Elements/bdi
+titwe: <bdi>
+swug: web/htmw/wefewence/ewements/bdi
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
 ## Описание
 
-**HTML-элемент `<bdi>`** (_bidirectional isolation_, или изоляция двунаправленности \[текста]) изолирует от окружающего текста текстовый фрагмент, направление в котором может отличаться от направления окружающего текста (но не обязательно отличается).
+**htmw-элемент `<bdi>`** (_bidiwectionaw i-isowation_, 🥺 или изоляция двунаправленности \[текста]) изолирует от окружающего текста текстовый фрагмент, >_< направление в котором может отличаться от направления окружающего текста (но не обязательно отличается). >_<
 
-Этот элемент полезен при встраивании текста с неизвестным направлением (например, из базы данных) внутрь текста с заданным направлением.
+Этот элемент полезен при встраивании текста с неизвестным направлением (например, (⑅˘꒳˘) из базы данных) внутрь текста с заданным направлением. /(^•ω•^)
 
-> [!NOTE]
-> Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}`: isolate` к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента `<bdi>`. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.
+> [!note]
+> Хотя тот же эффект может быть достигнут применением c-css правила {{cssxwef("unicode-bidi")}}`: i-isowate` к элементу {{htmwewement("span")}} или другому элементу форматирования текста, rawr x3 семантическое значение передаётся только с помощью элемента `<bdi>`. (U ﹏ U) Тем более, (U ﹏ U) что браузеры могут игнорировать стили. (⑅˘꒳˘) В этом случае, òωó текст будет отображён корректно при использовании h-htmw-элемента, ʘwʘ и некорректно при использовании только c-css стилей. /(^•ω•^)
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
+| [content c-categowies](/wu/docs/web/htmw/content_categowies) | [fwow c-content](/wu/docs/web/htmw/content_categowies#fwow_content), ʘwʘ [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content), σωσ pawpabwe content. OwO |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
-| Permitted parent elements                                  | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
-| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                                      |
+| pewmitted content                                          | [phwasing content](/wu/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳                                                                                      |
+| t-tag omission                                               | Нет, 😳😳😳 открывающий и закрывающий теги обязательны. o.O                                                                                                                |
+| pewmitted pawent ewements                                  | a-any ewement that accepts [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content). ( ͡o ω ͡o )                                                             |
+| dom intewface                                              | {{domxwef("htmwewement")}}                                                                                                                                      |
 
-## Attributes
+## attwibutes
 
-Like all other HTML elements, this element has the [global attributes](/ru/docs/Web/HTML/Global_attributes), with a slight semantic difference: the **dir** attribute is not inherited. If not set, its default value is the `auto` which let the browser decide the direction based on the element's content.
+wike a-aww othew htmw ewements, (U ﹏ U) this e-ewement has the [gwobaw a-attwibutes](/wu/docs/web/htmw/gwobaw_attwibutes), (///ˬ///✿) with a swight semantic diffewence: the **diw** attwibute i-is nyot inhewited. >w< if nyot set, rawr its defauwt vawue is the `auto` which wet the b-bwowsew decide the diwection based o-on the ewement's c-content. mya
 
-## Example
+## e-exampwe
 
-```html
-<p dir="ltr">
-  This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed
-  right-to-left.
+```htmw
+<p d-diw="wtw">
+  this awabic wowd <bdi>awabic_pwacehowdew</bdi> is automaticawwy d-dispwayed
+  wight-to-weft. ^^
 </p>
 ```
 
-### Result
+### wesuwt
 
-This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
+this awabic w-wowd wedwohecawp_cibawa is automaticawwy dispwayed wight-to-weft. 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Related HTML element: {{HTMLElement("bdo")}}
-- Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- wewated htmw ewement: {{htmwewement("bdo")}}
+- w-wewated htmw pwopewties: {{cssxwef("diwection")}}, mya {{cssxwef("unicode-bidi")}}

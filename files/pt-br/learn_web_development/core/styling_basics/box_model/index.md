@@ -1,322 +1,322 @@
 ---
-title: The box model
-slug: Learn_web_development/Core/Styling_basics/Box_model
-original_slug: Learn/CSS/Building_blocks/The_box_model
+titwe: the box modew
+swug: weawn_web_devewopment/cowe/stywing_basics/box_modew
+o-owiginaw_swug: w-weawn/css/buiwding_bwocks/the_box_modew
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/combinatows", (✿oωo) "weawn/css/buiwding_bwocks/backgwounds_and_bowdews", (U ﹏ U) "weawn/css/buiwding_bwocks")}}
 
-Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para ser capaz de criar arranjos ( layouts ) com CSS, ou para alinhar itens com outros itens. Nesta lição, olharemos de modo apropiado para o modelo de caixas do CSS ( CSS Box Model ), de forma que você possa montar arranjos mais complexos com um melhor entendimento de como ele funciona e da terminologia relacionada.
+t-tudo em c-css tem um quadwo e-em towno de si, (ꈍᴗꈍ) e-e entendew estes q-quadwos é chave p-pawa sew capaz de cwiaw awwanjos ( wayouts ) com css, (˘ω˘) ou pawa awinhaw itens c-com outwos itens. ^^ nyesta wição, (⑅˘꒳˘) owhawemos de m-modo apwopiado pawa o modewo de c-caixas do css ( css box modew ), rawr de fowma que você possa montaw a-awwanjos mais compwexos com um m-mewhow entendimento d-de como ewe funciona e da tewminowogia wewacionada. :3
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Familiaridade básica em utilizar computadores, ambiente de trabalho
-        básico configurado conforme detalhado em<a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
-          >software básico instalado</a
-        >, conhecimento básico de como
+        f-famiwiawidade básica em utiwizaw computadowes, OwO ambiente de twabawho
+        b-básico configuwado confowme detawhado e-em<a
+          h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/apwendew/getting_stawted_with_the_web/instawando_pwogwamas_basicos"
+          >softwawe b-básico i-instawado</a
+        >, (ˆ ﻌ ˆ)♡ conhecimento básico d-de como
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
-          >criar e gerenciar arquivos</a
-        >, básico de HTML (
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
-          >Introdução ao HTML</a
-        >), e uma idéia de como o CSS funciona (ensinado em
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
+          hwef="https://devewopew.moziwwa.owg/pt-bw/docs/apwendew/getting_stawted_with_the_web/widando_com_awquivos"
+          >cwiaw e gewenciaw a-awquivos</a
+        >, :3 básico de htmw (
+        <a hwef="/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw"
+          >intwodução ao htmw</a
+        >), -.- e uma idéia de como o css funciona (ensinado e-em
+        <a hwef="/pt-bw/docs/weawn/css/fiwst_steps">css p-pwimeiwos p-passos</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Aprender sobre o Modelo de Caixa do CSS, o que faz o modelo de caixa e
-        como trocar para um modelo alternativo.
+        apwendew sobwe o modewo de caixa do css, -.- o q-que faz o modewo d-de caixa e
+        como twocaw p-pawa um modewo a-awtewnativo. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Caixas Block e Inline
+## caixas b-bwock e inwine
 
-No CSS, temos dois tipos, **caixas box** e **caixas inline**, O tipo de caixa influencia diretameente em como as mesmas irao interagir com o fluxo da pagina(page flow) e com as outras caixas da pagina:
+nyo css, 😳 temos d-dois tipos, nyaa~~ **caixas box** e **caixas inwine**, (⑅˘꒳˘) o-o tipo de caixa infwuencia diwetameente e-em como as mesmas iwao i-intewagiw com o f-fwuxo da pagina(page fwow) e com as outwas caixas da pagina:
 
-Se for uma caixa definida como block, ela tera os seguintes comportamentos:
+se fow uma caixa definida como bwock, 😳 ewa tewa os s-seguintes compowtamentos:
 
-- A caixa irá quebrar em uma nova linha.
-- A caixa irá se estender na direção horizontal (inline) para preeencher todo o espaço disponível no container. Na maioria dos casos isso significa que essa caixa será tão larga quanto seu recipiente.
-- As propriedades {{cssxref("width")}} e {{cssxref("height")}} serão respeitadas.
-- {{cssxref("padding")}}, {{cssxref("margin")}} e {{cssxref("border")}} farão com que outros elementos sejam empurrados para fora da caixa.
+- a-a caixa iwá quebwaw e-em uma nyova winha. (U ﹏ U)
+- a-a caixa i-iwá se estendew nya diweção howizontaw (inwine) pawa pweeenchew todo o espaço d-disponívew nyo containew. /(^•ω•^) nya maiowia dos casos isso significa que essa caixa s-sewá tão wawga quanto seu wecipiente. OwO
+- a-as pwopwiedades {{cssxwef("width")}} e-e {{cssxwef("height")}} s-sewão wespeitadas. ( ͡o ω ͡o )
+- {{cssxwef("padding")}}, XD {{cssxwef("mawgin")}} e {{cssxwef("bowdew")}} f-fawão com que o-outwos ewementos s-sejam empuwwados p-pawa fowa da caixa. /(^•ω•^)
 
-A menos que decidamos alterar o tipo de exibição para `inline`, alguns elementos como os cabeçalhos (ex: `<h1>`) e `<p>` são caixas do tipo `block` por padrão.
+a menos que decidamos a-awtewaw o tipo de e-exibição pawa `inwine`, /(^•ω•^) a-awguns e-ewementos como o-os cabeçawhos (ex: `<h1>`) e `<p>` são caixas do tipo `bwock` p-pow padwão. 😳😳😳
 
-Se a caixa for do tipo `inline`, ela seguira os segintes comportamentos:
+se a caixa fow do tipo `inwine`, (ˆ ﻌ ˆ)♡ ewa seguiwa os segintes compowtamentos:
 
-- Ela não quebrará em uma nova linha.
-- As propriedades {{cssxref("width")}} e {{cssxref("height")}} não serão aplicadas.
-- Padding vertical, margens e bordas serão aplicados, mas não farão com que outras caixas embutidades se afastem.
-- Padding horizontal, margens e bordas serão aplicadas e farão com que outras caixas embutidades se afastem da caixa.
+- ewa n-nyão quebwawá em uma nyova winha. :3
+- as pwopwiedades {{cssxwef("width")}} e {{cssxwef("height")}} n-nyão sewão a-apwicadas. òωó
+- padding v-vewticaw, 🥺 mawgens e bowdas s-sewão apwicados, (U ﹏ U) mas nyão fawão c-com que outwas c-caixas embutidades se afastem. XD
+- padding howizontaw, ^^ mawgens e bowdas sewão apwicadas e fawão c-com que outwas caixas embutidades s-se afastem da caixa. o.O
 
-O elemento `<a>` usado em links, `<span>`, `<em>` e `<strong>` são exemplos de elementos que sao `inline` por padrão.
+o ewemento `<a>` u-usado e-em winks, 😳😳😳 `<span>`, `<em>` e `<stwong>` são exempwos d-de ewementos q-que sao `inwine` pow padwão. /(^•ω•^)
 
-O tipo de caixa aplicada em um elemento é definida pela propriedade {{cssxref("display")}} como `block` ou `inline` e está relacionada ao valor **outer** do `display`.
+o-o tipo de caixa a-apwicada em um ewemento é definida pewa pwopwiedade {{cssxwef("dispway")}} como `bwock` ou `inwine` e está w-wewacionada ao vawow **outew** do `dispway`. 😳😳😳
 
-## Além disto: Tipos de exibição ( display ) internos e externos
+## a-awém disto: tipos d-de exibição ( dispway ) intewnos e-e extewnos
 
-Nesse ponto, é melhor também explicar os tipos de exibição interna ( **inner** ) e externa ( **outer** ). Como mencionado acima, as caixas em CSS têm um tipo de exibição externa, que detalha se a caixa é em bloco ou em linha.
+n-nyesse ponto, ^•ﻌ•^ é mewhow também e-expwicaw os tipos de exibição intewna ( **innew** ) e extewna ( **outew** ). 🥺 como mencionado a-acima, o.O as caixas e-em css têm um tipo de exibição extewna, (U ᵕ U❁) que d-detawha se a caixa é e-em bwoco ou em winha.
 
-Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)** ), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
+caixas possuem também um tipo de d-dispway _innew_, ^^ que detewmina como ewementos dentwo da caixa são posicionados. (⑅˘꒳˘) p-pow defauwt, :3 os ewementos dentwo de uma caixa s-são posicionados e-em um fwuxo nyowmaw ( **[nowmaw fwow](/pt-bw/docs/weawn/css/css_wayout/nowmaw_fwow)** ), (///ˬ///✿) significando que ewes s-se compowtam como q-quawquew outwo bwoco e ewementos inwine (como expwicado acima). :3
 
-Podemos, no entando, alterar o tipo de exibição (display) interna usando valores `display` como `flex`. Se definirmos `display: flex;` em um elemento, o tipo de exibição externo será `block`, mas o tipo de exibição interna será alterada para `flex`. Todos os filhos diretos desta caixa se tornarão itens flexíveis e serão dispostos de acordo com as regras estabelecidas na especificação [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), que você aprenderá mais tarde.
+p-podemos, nyo entando, 🥺 awtewaw o-o tipo de exibição (dispway) intewna usando vawowes `dispway` como `fwex`. mya se d-definiwmos `dispway: fwex;` em u-um ewemento, XD o t-tipo de exibição extewno sewá `bwock`, -.- m-mas o tipo de exibição i-intewna sewá a-awtewada pawa `fwex`. o.O t-todos os fiwhos diwetos desta c-caixa se townawão i-itens fwexíveis e sewão dispostos de acowdo c-com as wegwas e-estabewecidas n-nya especificação [fwexbox](/pt-bw/docs/weawn/css/css_wayout/fwexbox), (˘ω˘) que você apwendewá m-mais tawde. (U ᵕ U❁)
 
-> [!NOTE]
-> Para ler mais sobre valores de exibição (display) e como caixas funcionam nos layouts `block` e `inline`, dê uma olhada no guia MDN sobre [Block e Inline Layout](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+> [!note]
+> pawa wew m-mais sobwe vawowes d-de exibição (dispway) e como caixas funcionam nyos wayouts `bwock` e-e `inwine`, rawr d-dê uma owhada n-nyo guia mdn s-sobwe [bwock e inwine wayout](/pt-bw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow)
 
-Quando aprender sobre CSS Layout você encontrará `flex` e vários outros valores internos que suas caixas podem ter, como por exemplo [`grid`](/pt-BR/docs/Learn/CSS/CSS_layout/Grids).
+q-quando apwendew sobwe css wayout você encontwawá `fwex` e váwios outwos vawowes i-intewnos que suas caixas podem tew, c-como pow exempwo [`gwid`](/pt-bw/docs/weawn/css/css_wayout/gwids). 🥺
 
-O layout Block e inline, no entanto, é a forma padrão de como as coisas na web se comportam. Como dissemos acima, às vezes é chamado de _normal flow_, porque sem qualquer outra instrução, nossas caixas são dispostas como blocks ou inlines.
+o wayout b-bwock e inwine, rawr x3 nyo entanto, é a-a fowma padwão de como as coisas n-nya web se compowtam. ( ͡o ω ͡o ) c-como dissemos a-acima, σωσ às v-vezes é chamado d-de _nowmaw fwow_, rawr x3 powque sem quawquew outwa instwução, (ˆ ﻌ ˆ)♡ nyossas caixas são dispostas como bwocks ou inwines. rawr
 
-## Examples of different display types
+## e-exampwes of d-diffewent dispway t-types
 
-Let's move on and have a look at some examples. Below we have three different HTML elements, all of which have an outer display type of `block`. The first is a paragraph, which has a border added in CSS. The browser renders this as a block box, so the paragraph begins on a new line, and expands to the full width available to it.
+wet's move on and have a-a wook at some exampwes. :3 bewow we have thwee diffewent htmw ewements, rawr a-aww of which h-have an outew dispway type o-of `bwock`. (˘ω˘) the fiwst is a pawagwaph, which has a-a bowdew added in c-css. (ˆ ﻌ ˆ)♡ the bwowsew wendews this a-as a bwock box, s-so the pawagwaph begins on a nyew wine, mya and expands to the fuww width avaiwabwe t-to it. (U ᵕ U❁)
 
-The second is a list, which is laid out using `display: flex`. This establishes flex layout for the items inside the container, however, the list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.
+the second i-is a wist, mya which i-is waid out u-using `dispway: f-fwex`. ʘwʘ this estabwishes fwex wayout f-fow the items i-inside the containew, (˘ω˘) howevew, 😳 t-the wist itsewf i-is a bwock box and — wike the p-pawagwaph — expands to the fuww containew width a-and bweaks onto a nyew wine. òωó
 
-Below this, we have a block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of block, and we have set it to `display: block`.
+b-bewow this, nyaa~~ we h-have a bwock-wevew pawagwaph, o.O inside w-which awe two `<span>` ewements. nyaa~~ these ewements w-wouwd nyowmawwy b-be `inwine`, (U ᵕ U❁) h-howevew, one of the ewements has a cwass of bwock, 😳😳😳 and we have s-set it to `dispway: bwock`. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/bwock.htmw", ^•ﻌ•^ '100%', 1000)}}
 
-We can see how `inline` elements behave in this next example. The `<span>` elements in the first paragraph are inline by default and so do not force line breaks.
+we c-can see how `inwine` e-ewements behave in this nyext e-exampwe. (⑅˘꒳˘) the `<span>` ewements i-in the fiwst p-pawagwaph awe inwine by defauwt and so do nyot fowce w-wine bweaks. >_<
 
-We also have a `<ul>` element which is set to `display: inline-flex`, creating an inline box around some flex items.
+we awso have a `<uw>` ewement w-which is set to `dispway: i-inwine-fwex`, (⑅˘꒳˘) cweating a-an inwine box awound some fwex i-items. σωσ
 
-Finally, we have two paragraphs both set to `display: inline`. The inline flex container and paragraphs all run together on one line rather than breaking onto new lines as they would do if they were displaying as block-level elements.
+finawwy, w-we have two pawagwaphs b-both set to `dispway: inwine`. 🥺 the inwine fwex containew and pawagwaphs aww wun togethew on one wine wathew than bweaking onto nyew wines as they wouwd do if they wewe dispwaying as bwock-wevew ewements. :3
 
-**In the example, you can change `display: inline` to `display: block` or `display: inline-flex` to `display: flex` to toggle between these display modes.**
+**in t-the exampwe, (ꈍᴗꈍ) y-you can change `dispway: inwine` to `dispway: b-bwock` ow `dispway: i-inwine-fwex` t-to `dispway: fwex` to toggwe b-between these dispway modes.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine.htmw", ^•ﻌ•^ '100%', (˘ω˘) 1000)}}
 
-You will encounter things like flex layout later in these lessons; the key thing to remember for now is that changing the value of the `display` property can change whether the outer display type of a box is block or inline, which changes the way it displays alongside other elements in the layout.
+y-you wiww encountew t-things wike fwex wayout w-watew in these wessons; the key t-thing to wemembew f-fow nyow is that changing the vawue of the `dispway` p-pwopewty c-can change whethew t-the outew dispway t-type of a box i-is bwock ow inwine, 🥺 w-which changes t-the way it d-dispways awongside o-othew ewements in the wayout. (✿oωo)
 
-In the rest of the lesson, we will concentrate on the outer display type.
+i-in the west of t-the wesson, XD we w-wiww concentwate on the outew dispway t-type. (///ˬ///✿)
 
-## What is the CSS box model?
+## nyani is the css box modew?
 
-The full CSS box model applies to block boxes, inline boxes only use some of the behavior defined in the box model. The model defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on the page. To add some additional complexity, there is a standard and an alternate box model.
+the f-fuww css box modew appwies to bwock b-boxes, ( ͡o ω ͡o ) inwine b-boxes onwy use s-some of the behaviow defined in t-the box modew. ʘwʘ the modew defines h-how the diffewent pawts of a b-box — mawgin, rawr bowdew, o.O padding, a-and content — wowk togethew to cweate a box that you can see on the page. ^•ﻌ•^ to a-add some additionaw compwexity, t-thewe is a standawd a-and an awtewnate box modew. (///ˬ///✿)
 
-### Parts of a box
+### pawts of a box
 
-Making up a block box in CSS we have the:
+making up a b-bwock box in css we have the:
 
-- **Content box**: The area where your content is displayed, which can be sized using properties like {{cssxref("width")}} and {{cssxref("height")}}.
-- **Padding box**: The padding sits around the content as white space; its size can be controlled using {{cssxref("padding")}} and related properties.
-- **Border box**: The border box wraps the content and any padding. Its size and style can be controlled using {{cssxref("border")}} and related properties.
-- **Margin box**: The margin is the outermost layer, wrapping the content, padding and border as whitespace between this box and other elements. Its size can be controlled using {{cssxref("margin")}} and related properties.
+- **content b-box**: t-the awea whewe y-youw content is dispwayed, (ˆ ﻌ ˆ)♡ which can be sized u-using pwopewties w-wike {{cssxwef("width")}} and {{cssxwef("height")}}. XD
+- **padding b-box**: the padding sits awound the content as w-white space; its size can be contwowwed u-using {{cssxwef("padding")}} a-and wewated p-pwopewties. (✿oωo)
+- **bowdew box**: the b-bowdew box wwaps t-the content a-and any padding. -.- i-its size and stywe can be contwowwed u-using {{cssxwef("bowdew")}} a-and wewated pwopewties.
+- **mawgin b-box**: the m-mawgin is the outewmost w-wayew, XD wwapping t-the content, (✿oωo) p-padding and b-bowdew as whitespace between this b-box and othew ewements. (˘ω˘) its size c-can be contwowwed using {{cssxwef("mawgin")}} a-and wewated pwopewties. (ˆ ﻌ ˆ)♡
 
-The below diagram shows these layers:
+t-the bewow d-diagwam shows these wayews:
 
-![Diagram of the box model](box-model.png)
+![diagwam of the box modew](box-modew.png)
 
-### The standard CSS box model
+### t-the standawd css b-box modew
 
-In the standard box model, if you give a box a `width` and a `height` attribute, this defines the width and height of the _content box_. Any padding and border is then added to that width and height to get the total size taken up by the box. This is shown in the image below.
+in t-the standawd box modew, >_< if you give a box a `width` and a `height` a-attwibute, -.- this d-defines the width and height o-of the _content b-box_. (///ˬ///✿) any padding and bowdew is then added to that width and height t-to get the t-totaw size taken u-up by the box. t-this is shown in the image bewow. XD
 
-If we assume that the box has the following CSS defining `width`, `height`, `margin`, `border`, and `padding`:
+if we assume t-that the box has t-the fowwowing css defining `width`, ^^;; `height`, rawr x3 `mawgin`, `bowdew`, OwO and `padding`:
 
 ```css
 .box {
-  width: 350px;
+  w-width: 350px;
   height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
+  mawgin: 10px;
+  p-padding: 25px;
+  bowdew: 5px s-sowid bwack;
 }
 ```
 
-The space taken up by our box using the standard box model will actually be 410px (350 + 25 + 25 + 5 + 5), and the height 210px (150 + 25 + 25 + 5 + 5), as the padding and border are added to the width used for the content box.
+t-the space taken up by ouw box u-using the standawd b-box modew wiww actuawwy be 410px (350 + 25 + 25 + 5 + 5), ʘwʘ a-and the height 210px (150 + 25 + 25 + 5 + 5), rawr as t-the padding and b-bowdew awe added t-to the width used f-fow the content box. UwU
 
-![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
+![showing t-the size of t-the box when the s-standawd box modew is being used.](standawd-box-modew.png)
 
-> [!NOTE]
-> The margin is not counted towards the actual size of the box — sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border — it does not extend into the margin.
+> [!note]
+> t-the mawgin is nyot counted towawds the a-actuaw size of the b-box — suwe, (ꈍᴗꈍ) i-it affects the totaw space that the box wiww take up on the page, (✿oωo) but onwy the s-space outside the box. (⑅˘꒳˘) the box's a-awea stops at the b-bowdew — it does nyot extend into the mawgin. OwO
 
-### The alternative CSS box model
+### t-the awtewnative css box m-modew
 
-You might think it is rather inconvenient to have to add up the border and padding to get the real size of the box, and you would be right! For this reason, CSS had an alternative box model introduced some time after the standard box model. Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus the width for the padding and border. The same CSS as used above would give the below result (width = 350px, height = 150px).
+you might t-think it is wathew i-inconvenient t-to have to add u-up the bowdew and padding to get the weaw size of the box, 🥺 and you wouwd be wight! >_< f-fow this weason, (ꈍᴗꈍ) css had an awtewnative b-box modew intwoduced some time aftew the standawd box m-modew. 😳 using this modew, 🥺 any width is the width of the visibwe box on the page, nyaa~~ t-thewefowe the content a-awea width is that width m-minus the width fow the padding and bowdew. ^•ﻌ•^ the s-same css as used a-above wouwd give the bewow wesuwt (width = 350px, (ˆ ﻌ ˆ)♡ h-height = 150px). (U ᵕ U❁)
 
-![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
+![showing the size of the box w-when the awtewnate box modew is being used.](awtewnate-box-modew.png)
 
-By default, browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting `box-sizing: border-box` on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.
+by defauwt, mya b-bwowsews use the standawd box modew. 😳 if you w-want to tuwn on t-the awtewnative m-modew fow an ewement you do so by setting `box-sizing: b-bowdew-box` on it. σωσ by doing this you awe tewwing the bwowsew to take the b-bowdew box as t-the awea defined b-by any size you s-set. ( ͡o ω ͡o )
 
 ```css
 .box {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 ```
 
-If you want all of your elements to use the alternative box model, and this is a common choice among developers, set the `box-sizing` property on the `<html>` element, then set all other elements to inherit that value, as seen in the snippet below. If you want to understand the thinking behind this, see [the CSS Tricks article on box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+i-if you want a-aww of youw ewements to use the awtewnative box m-modew, XD and this is a common choice among devewopews, :3 s-set the `box-sizing` pwopewty on the `<htmw>` e-ewement, :3 then s-set aww othew ewements to inhewit t-that vawue, (⑅˘꒳˘) a-as seen in the s-snippet bewow. òωó if you want to undewstand the thinking b-behind this, mya see [the css twicks awticwe on b-box-sizing](https://css-twicks.com/inhewiting-box-sizing-pwobabwy-swightwy-bettew-best-pwactice/). 😳😳😳
 
 ```css
-html {
-  box-sizing: border-box;
+htmw {
+  box-sizing: bowdew-box;
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+*, :3
+*::befowe, >_<
+*::aftew {
+  b-box-sizing: i-inhewit;
 }
 ```
 
-> [!NOTE]
-> An interesting bit of history — Internet Explorer used to default to the alternative box model, with no mechanism available to switch.
+> [!note]
+> a-an intewesting b-bit of histowy — i-intewnet expwowew used to defauwt t-to the awtewnative box modew, 🥺 with nyo mechanism a-avaiwabwe to switch. (ꈍᴗꈍ)
 
-## Playing with box models
+## p-pwaying with box modews
 
-In the below example, you can see two boxes. Both have a class of `.box`, which gives them the same `width`, `height`, `margin`, `border`, and `padding`. The only difference is that the second box has been set to use the alternative box model.
+in the bewow exampwe, rawr x3 y-you can see two b-boxes. (U ﹏ U) both have a cwass of `.box`, w-which gives them the same `width`, ( ͡o ω ͡o ) `height`, `mawgin`, 😳😳😳 `bowdew`, 🥺 a-and `padding`. òωó t-the onwy diffewence is that t-the second box has b-been set to use the awtewnative b-box modew. XD
 
-**Can you change the size of the second box (by adding CSS to the `.alternate` class) to make it match the first box in width and height?**
+**can you change the size of the second box (by adding c-css to the `.awtewnate` cwass) t-to make it match the fiwst box in width and h-height?**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/box-modews.htmw", XD '100%', ( ͡o ω ͡o ) 1000)}}
 
-> [!NOTE]
-> You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> [!note]
+> y-you c-can find a sowution fow this task [hewe](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/sowutions.md#the-box-modew). >w<
 
-### Use browser DevTools to view the box model
+### u-use bwowsew devtoows t-to view the box modew
 
-Your [browser developer tools](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
+youw [bwowsew d-devewopew toows](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) c-can make undewstanding the box m-modew faw easiew. mya i-if you inspect an ewement in fiwefox's devtoows, (ꈍᴗꈍ) you can see the size of the e-ewement pwus its m-mawgin, -.- padding, (⑅˘꒳˘) and bowdew. inspecting an ewement in this way i-is a gweat way to find out if youw b-box is weawwy t-the size you think it is! (U ﹏ U)
 
-![Inspecting the box model of an element using Firefox DevTools](box-model-devtools.png)
+![inspecting the box modew of an ewement using fiwefox d-devtoows](box-modew-devtoows.png)
 
-## Margins, padding, and borders
+## mawgins, σωσ padding, :3 and bowdews
 
-You've already seen the {{cssxref("margin")}}, {{cssxref("padding")}}, and {{cssxref("border")}} properties at work in the example above. The properties used in that example are **shorthands** and allow us to set all four sides of the box at once. These shorthands also have equivalent longhand properties, which allow control over the different sides of the box individually.
+y-you've awweady seen the {{cssxwef("mawgin")}}, /(^•ω•^) {{cssxwef("padding")}}, σωσ and {{cssxwef("bowdew")}} p-pwopewties a-at wowk in the exampwe above. (U ᵕ U❁) t-the pwopewties u-used in that exampwe a-awe **showthands** a-and awwow u-us to set aww f-fouw sides of the box at once. 😳 these showthands awso have equivawent wonghand pwopewties, ʘwʘ which a-awwow contwow ovew t-the diffewent s-sides of the box i-individuawwy. (⑅˘꒳˘)
 
-Let's explore these properties in more detail.
+w-wet's expwowe t-these pwopewties in mowe detaiw. ^•ﻌ•^
 
-### Margin
+### mawgin
 
-The margin is an invisible space around your box. It pushes other elements away from the box. Margins can have positive or negative values. Setting a negative margin on one side of your box can cause it to overlap other things on the page. Whether you are using the standard or alternative box model, the margin is always added after the size of the visible box has been calculated.
+the mawgin is an invisibwe space awound y-youw box. nyaa~~ i-it pushes othew ewements away fwom the box. XD mawgins can have positive o-ow nyegative v-vawues. /(^•ω•^) setting a-a nyegative mawgin on one side of youw box can c-cause it to ovewwap othew things on the page. (U ᵕ U❁) w-whethew you awe u-using the standawd ow awtewnative box modew, mya the m-mawgin is awways added aftew the s-size of the visibwe b-box has been cawcuwated. (ˆ ﻌ ˆ)♡
 
-We can control all margins of an element at once using the {{cssxref("margin")}} property, or each side individually using the equivalent longhand properties:
+w-we can contwow aww m-mawgins of an e-ewement at once u-using the {{cssxwef("mawgin")}} p-pwopewty, (✿oωo) ow each s-side individuawwy using the equivawent w-wonghand p-pwopewties:
 
-- {{cssxref("margin-top")}}
-- {{cssxref("margin-right")}}
-- {{cssxref("margin-bottom")}}
-- {{cssxref("margin-left")}}
+- {{cssxwef("mawgin-top")}}
+- {{cssxwef("mawgin-wight")}}
+- {{cssxwef("mawgin-bottom")}}
+- {{cssxwef("mawgin-weft")}}
 
-**In the example below, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.**
+**in the e-exampwe bewow, (✿oωo) twy changing the mawgin vawues to s-see how the box is pushed awound d-due to the mawgin cweating ow w-wemoving space (if i-it is a nyegative mawgin) between this ewement a-and the containing ewement.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/mawgin.htmw", òωó '100%', (˘ω˘) 1000)}}
 
-#### Margin collapsing
+#### mawgin cowwapsing
 
-A key thing to understand about margins is the concept of margin collapsing. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, which is the size of the largest individual margin. If one or both margins are negative, the amount of negative value will subtract from the total.
+a-a key t-thing to undewstand about mawgins is the concept o-of mawgin cowwapsing. (ˆ ﻌ ˆ)♡ i-if you have two ewements w-whose mawgins touch, ( ͡o ω ͡o ) and both mawgins awe positive, rawr x3 t-those mawgins w-wiww combine to become one mawgin, (˘ω˘) w-which is the s-size of the wawgest individuaw mawgin. òωó if one o-ow both mawgins a-awe nyegative, ( ͡o ω ͡o ) the a-amount of nyegative v-vawue wiww subtwact fwom the totaw. σωσ
 
-In the example below, we have two paragraphs. The top paragraph has a `margin-bottom` of 50 pixels. The second paragraph has a `margin-top` of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.
+in the exampwe bewow, (U ﹏ U) we have two pawagwaphs. rawr the top pawagwaph has a-a `mawgin-bottom` o-of 50 pixews. -.- t-the second pawagwaph h-has a `mawgin-top` o-of 30 pixews. ( ͡o ω ͡o ) t-the mawgins have cowwapsed t-togethew so the a-actuaw mawgin between the boxes i-is 50 pixews and n-not the totaw of the two mawgins. >_<
 
-**You can test this by setting the `margin-top` of paragraph two to 0. The visible margin between the two paragraphs will not change — it retains the 50 pixels set in the `bottom-margin` of paragraph one. If you set it to -10px, you'll see that the overall margin becomes 40px — it subtracts from the 50px.**
+**you can test t-this by setting the `mawgin-top` of pawagwaph t-two to 0. o.O the visibwe mawgin between t-the two pawagwaphs w-wiww nyot change — it w-wetains the 50 p-pixews set in the `bottom-mawgin` o-of pawagwaph one. σωσ if you set i-it to -10px, -.- you'ww s-see that the ovewaww mawgin b-becomes 40px — it subtwacts fwom t-the 50px.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/mawgin-cowwapse.htmw", σωσ '100%', 1000)}}
 
-There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.
+t-thewe a-awe a nyumbew of wuwes that dictate w-when mawgins do and do nyot cowwapse. :3 fow fuwthew i-infowmation see the detaiwed page on [mastewing mawgin cowwapsing](/pt-bw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). ^^ the main thing to wemembew fow nyow is t-that mawgin cowwapsing is a thing that happens. òωó if you awe cweating space with mawgins and don't get the space you e-expect, (ˆ ﻌ ˆ)♡ this is pwobabwy nyani is happening. XD
 
-### Borders
+### b-bowdews
 
-The border is drawn between the margin and the padding of a box. If you are using the standard box model, the size of the border is added to the `width` and `height` of the box. If you are using the alternative box model then the size of the border makes the content box smaller as it takes up some of that available `width` and `height`.
+the bowdew is dwawn b-between the mawgin and the padding of a box. òωó if y-you awe using the standawd box m-modew, (ꈍᴗꈍ) the size of the bowdew is a-added to the `width` a-and `height` of the box. UwU if you awe using t-the awtewnative box modew then the size of the bowdew makes the c-content box smowew as it takes u-up some of that avaiwabwe `width` a-and `height`. >w<
 
-For styling borders, there are a large number of properties — there are four borders, and each border has a style, width and color that we might want to manipulate.
+fow stywing bowdews, ʘwʘ t-thewe awe a-a wawge nyumbew of pwopewties — thewe awe fouw b-bowdews, :3 and each bowdew has a stywe, ^•ﻌ•^ width and c-cowow that we might want to manipuwate. (ˆ ﻌ ˆ)♡
 
-You can set the width, style, or color of all four borders at once using the {{cssxref("border")}} property.
+you can set the width, 🥺 stywe, ow cowow o-of aww fouw bowdews a-at once using the {{cssxwef("bowdew")}} p-pwopewty. OwO
 
-To set the properties of each side individually, you can use:
+t-to set the pwopewties of e-each side individuawwy, 🥺 you can use:
 
-- {{cssxref("border-top")}}
-- {{cssxref("border-right")}}
-- {{cssxref("border-bottom")}}
-- {{cssxref("border-left")}}
+- {{cssxwef("bowdew-top")}}
+- {{cssxwef("bowdew-wight")}}
+- {{cssxwef("bowdew-bottom")}}
+- {{cssxwef("bowdew-weft")}}
 
-To set the width, style, or color of all sides, use the following:
+to set the width, s-stywe, OwO ow cowow o-of aww sides, (U ᵕ U❁) use the fowwowing:
 
-- {{cssxref("border-width")}}
-- {{cssxref("border-style")}}
-- {{cssxref("border-color")}}
+- {{cssxwef("bowdew-width")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-cowow")}}
 
-To set the width, style, or color of a single side, you can use one of the most granular longhand properties:
+t-to s-set the width, ( ͡o ω ͡o ) stywe, ow cowow of a-a singwe side, ^•ﻌ•^ you can use one of the most gwanuwaw w-wonghand pwopewties:
 
-- {{cssxref("border-top-width")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-right-width")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-left-width")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-color")}}
+- {{cssxwef("bowdew-top-width")}}
+- {{cssxwef("bowdew-top-stywe")}}
+- {{cssxwef("bowdew-top-cowow")}}
+- {{cssxwef("bowdew-wight-width")}}
+- {{cssxwef("bowdew-wight-stywe")}}
+- {{cssxwef("bowdew-wight-cowow")}}
+- {{cssxwef("bowdew-bottom-width")}}
+- {{cssxwef("bowdew-bottom-stywe")}}
+- {{cssxwef("bowdew-bottom-cowow")}}
+- {{cssxwef("bowdew-weft-width")}}
+- {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("bowdew-weft-cowow")}}
 
-**In the example below we have used various shorthands and longhands to create borders. Have a play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different styles of border you can choose from.**
+**in the exampwe bewow we h-have used vawious s-showthands and wonghands to cweate bowdews. o.O have a-a pway awound with the diffewent pwopewties to check that you undewstand how they wowk. (⑅˘꒳˘) the mdn pages fow the bowdew pwopewties g-give you infowmation a-about the diffewent stywes o-of bowdew you c-can choose fwom.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/bowdew.htmw", '100%', (ˆ ﻌ ˆ)♡ 1000)}}
 
-### Padding
+### padding
 
-The padding sits between the border and the content area. Unlike margins you cannot have negative amounts of padding, so the value must be 0 or a positive value. Any background applied to your element will display behind the padding, and it is typically used to push the content away from the border.
+t-the padding sits between the bowdew and the content awea. :3 unwike mawgins you cannot have nyegative a-amounts of padding, /(^•ω•^) so the vawue must be 0 ow a positive vawue. òωó any backgwound a-appwied to y-youw ewement wiww d-dispway behind the padding, :3 and it is typicawwy used to push t-the content away f-fwom the bowdew. (˘ω˘)
 
-We can control the padding on each side of an element individually using the {{cssxref("padding")}} property, or each side individually using the equivalent longhand properties:
+w-we can contwow the padding on e-each side of an ewement individuawwy u-using the {{cssxwef("padding")}} pwopewty, 😳 o-ow each side individuawwy using t-the equivawent wonghand pwopewties:
 
-- {{cssxref("padding-top")}}
-- {{cssxref("padding-right")}}
-- {{cssxref("padding-bottom")}}
-- {{cssxref("padding-left")}}
+- {{cssxwef("padding-top")}}
+- {{cssxwef("padding-wight")}}
+- {{cssxwef("padding-bottom")}}
+- {{cssxwef("padding-weft")}}
 
-**If you change the values for padding on the class `.box` in the example below you can see that this changes where the text begins in relation to the box.**
+**if you change t-the vawues fow padding on the cwass `.box` i-in the e-exampwe bewow you can see that t-this changes whewe t-the text begins in wewation t-to the box.**
 
-**You can also change the padding on the class `.container`, which will make space between the container and the box. Padding can be changed on any element, and will make space between its border and whatever is inside the element.**
+**you can awso change t-the padding on the cwass `.containew`, σωσ w-which w-wiww make space between the containew and the b-box. UwU padding can be changed on any ewement, -.- and wiww make space between its bowdew and nyanievew is inside the ewement.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/padding.htmw", 🥺 '100%', 800)}}
 
-## The box model and inline boxes
+## t-the box modew and inwine boxes
 
-All of the above applies fully to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
+aww of the above a-appwies fuwwy to bwock boxes. 😳😳😳 some o-of the pwopewties can appwy to inwine boxes t-too, 🥺 such as those cweated by a `<span>` ewement.
 
-In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.
+i-in the exampwe bewow, ^^ we have a `<span>` inside a-a pawagwaph and have appwied a `width`, ^^;; `height`, >w< `mawgin`, σωσ `bowdew`, a-and `padding` to it. >w< you can see that the w-width and height a-awe ignowed. (⑅˘꒳˘) the vewticaw mawgin, òωó padding, (⑅˘꒳˘) and b-bowdew awe wespected b-but they do nyot change t-the wewationship o-of othew content to ouw inwine box and so the padding a-and bowdew ovewwaps othew wowds in the pawagwaph. (ꈍᴗꈍ) howizontaw p-padding, rawr x3 mawgins, and bowdews awe wespected and wiww cause othew c-content to m-move away fwom the b-box. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-box-modew.htmw", UwU '100%', ^^ 800)}}
 
-## Using display: inline-block
+## using dispway: inwine-bwock
 
-There is a special value of `display`, which provides a middle ground between `inline` and `block`. This is useful for situations where you do not want an item to break onto a new line, but do want it to respect `width` and `height` and avoid the overlapping seen above.
+thewe is a speciaw v-vawue of `dispway`, (˘ω˘) which p-pwovides a middwe gwound between `inwine` a-and `bwock`. (ˆ ﻌ ˆ)♡ t-this is usefuw fow situations whewe you do nyot want an item to bweak onto a nyew wine, OwO but d-do want it to w-wespect `width` and `height` and avoid the ovewwapping s-seen above. 😳
 
-An element with `display: inline-block` does a subset of the block things we already know about:
+an ewement with `dispway: inwine-bwock` d-does a-a subset of the b-bwock things we a-awweady know about:
 
-- The `width` and `height` properties are respected.
-- `padding`, `margin`, and `border` will cause other elements to be pushed away from the box.
+- t-the `width` a-and `height` pwopewties awe wespected.
+- `padding`, UwU `mawgin`, 🥺 a-and `bowdew` w-wiww cause othew e-ewements to be p-pushed away fwom t-the box. 😳😳😳
 
-It does not, however, break onto a new line, and will only become larger than its content if you explicitly add `width` and `height` properties.
+it does n-nyot, ʘwʘ howevew, /(^•ω•^) bweak onto a nyew w-wine, :3 and wiww o-onwy become wawgew t-than its content if you expwicitwy add `width` a-and `height` pwopewties. :3
 
-**In this next example, we have added `display: inline-block` to our `<span>` element. Try changing this to `display: block` or removing the line completely to see the difference in display models.**
+**in this nyext exampwe, w-we have added `dispway: inwine-bwock` to o-ouw `<span>` ewement. mya t-twy changing this to `dispway: bwock` ow wemoving the wine c-compwetewy to s-see the diffewence in dispway modews.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-bwock.htmw", (///ˬ///✿) '100%', 800)}}
 
-Where this can be useful is when you want to give a link to a larger hit area by adding `padding`. `<a>` is an inline element like `<span>`; you can use `display: inline-block` to allow padding to be set on it, making it easier for a user to click the link.
+whewe t-this can be u-usefuw is when you want to give a wink to a wawgew hit awea by a-adding `padding`. (⑅˘꒳˘) `<a>` i-is an inwine ewement wike `<span>`; you c-can use `dispway: i-inwine-bwock` to awwow padding to be set on it, m-making it easiew fow a usew to cwick the wink. :3
 
-You see this fairly frequently in navigation bars. The navigation below is displayed in a row using flexbox and we have added padding to the `<a>` element as we want to be able to change the `background-color` when the `<a>` is hovered. The padding appears to overlap the border on the `<ul>` element. This is because the `<a>` is an inline element.
+you see this faiwwy fwequentwy in nyavigation b-baws. /(^•ω•^) the nyavigation bewow is dispwayed in a wow u-using fwexbox a-and we have added p-padding to the `<a>` ewement as w-we want to be a-abwe to change the `backgwound-cowow` w-when the `<a>` i-is hovewed. ^^;; t-the padding appeaws to ovewwap the bowdew on the `<uw>` e-ewement. (U ᵕ U❁) t-this is because t-the `<a>` is an inwine ewement. (U ﹏ U)
 
-**Add `display: inline-block` to the rule with the `.links-list a` selector, and you will see how it fixes this issue by causing the padding to be respected by other elements.**
+**add `dispway: i-inwine-bwock` t-to the wuwe with t-the `.winks-wist a` sewectow, mya a-and you wiww see h-how it fixes this i-issue by causing t-the padding t-to be wespected by othew ewements.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-bwock-nav.htmw", ^•ﻌ•^ '100%', 600)}}
 
-## Test your skills!
+## t-test youw skiwws! (U ﹏ U)
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Box Model](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks).
+we have covewed a-a wot in this a-awticwe, :3 but can you wemembew the most impowtant infowmation? y-you can find some f-fuwthew tests to vewify that y-you've wetained t-this infowmation befowe you move on — see [test y-youw skiwws: t-the box modew](/pt-bw/docs/weawn/css/buiwding_bwocks/sewectows/box_modew_tasks). rawr x3
 
-## Summary
+## s-summawy
 
-That's most of what you need to understand about the box model. You may want to return to this lesson in the future if you ever find yourself confused about how big boxes are in your layout.
+that's m-most of nyani y-you nyeed to u-undewstand about the box modew. 😳😳😳 you may want to w-wetuwn to this wesson in the futuwe if you evew find youwsewf confused about how b-big boxes awe in y-youw wayout. >w<
 
-In the next lesson, we will take a look at how [backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) can be used to make your plain boxes look more interesting.
+in the nyext wesson, òωó we wiww take a wook at how [backgwounds a-and b-bowdews](/pt-bw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews) can be used to make youw p-pwain boxes wook mowe intewesting. 😳
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/combinatows", (✿oωo) "weawn/css/buiwding_bwocks/backgwounds_and_bowdews", OwO "weawn/css/buiwding_bwocks")}}

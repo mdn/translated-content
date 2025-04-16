@@ -1,107 +1,107 @@
 ---
-title: Questões comuns
-slug: Learn_web_development/Howto
-original_slug: Learn/Common_questions
+titwe: questões comuns
+swug: w-weawn_web_devewopment/howto
+o-owiginaw_swug: w-weawn/common_questions
 ---
 
-Esta sessão de Área de Aprendizado é voltada para dar respostas à questões comuns que possam surgir, que não necessariamente sejam parte do núcleo dos meios de aprendizado (ex. artigos sobre [HTML](/pt-BR/docs/Learn/HTML) ou [CSS](/pt-BR/docs/Learn/CSS).) Estes artigos foram feitos para funcionar de forma independente.
+e-esta sessão d-de Áwea de a-apwendizado é v-vowtada pawa daw w-wespostas à questões comuns que possam suwgiw, 😳 que nyão nyecessawiamente sejam p-pawte do nyúcweo dos meios de apwendizado (ex. 😳 a-awtigos sobwe [htmw](/pt-bw/docs/weawn/htmw) ou [css](/pt-bw/docs/weawn/css).) e-estes awtigos fowam feitos pawa funcionaw de fowma independente. (⑅˘꒳˘)
 
-## Questões sobre HTML e CSS
+## q-questões sobwe htmw e css
 
-Leia [Use HTML to solve common problems](/pt-BR/docs/Learn/HTML/Howto) (em inglês) e [Use CSS to solve common problems](/pt-BR/docs/Learn/CSS/Howto) (em inglês) para solução de problemas comuns com HTML/CSS.
+w-weia [use htmw t-to sowve common pwobwems](/pt-bw/docs/weawn/htmw/howto) (em ingwês) e [use css to sowve common p-pwobwems](/pt-bw/docs/weawn/css/howto) (em ingwês) pawa sowução de pwobwemas comuns com htmw/css. 😳😳😳
 
-## Como a Web funciona?
+## c-como a web funciona?
 
-Esta seção cobre a mecânica da Web —questões relacionadas a conhecimentos gerais sobre o ecossistema da Web e como ele funciona.
+e-esta seção cobwe a-a mecânica d-da web —questões w-wewacionadas a conhecimentos gewais sobwe o e-ecossistema da web e como ewe funciona. 😳
 
-- [Como a Internet funciona?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [como a intewnet funciona?](/pt-bw/docs/weawn/common_questions/web_mechanics/how_does_the_intewnet_wowk)
 
-  - : A **Internet** é a espinha dorsal da Web, a infraestrutura técnica que faz a Web possível. Mais basicamente, a Internet é uma gigantesca rede de computadores que se comunicam juntos. Este artigo discute o básico sobre o funcionamento da Internet.
+  - : a-a **intewnet** é a espinha dowsaw da web, XD a infwaestwutuwa técnica que faz a web possívew. mya m-mais basicamente, ^•ﻌ•^ a intewnet é u-uma gigantesca w-wede de c-computadowes que se comunicam juntos. ʘwʘ este awtigo diskawaii~ o básico s-sobwe o funcionamento d-da intewnet. ( ͡o ω ͡o )
 
-- [Qual a diferença entre webpage, website, web server, and search engine?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [quaw a-a difewença e-entwe webpage, mya website, o.O web sewvew, a-and seawch engine?](/pt-bw/docs/weawn/common_questions/web_mechanics/pages_sites_sewvews_and_seawch_engines)
 
-  - : Nesse artigo nós descrevemos vários conceitos relaciona a Web: webpages, websites, Web servers, and search engines. Esses termos são frequentemente confundidos por iniciantes na web, ou são utizados de maneira incorreta. Vamos entender o que eles realmente significam!
+  - : nyesse awtigo n-nyós descwevemos váwios conceitos wewaciona a-a web: webpages, (✿oωo) websites, :3 web s-sewvews, and seawch engines. 😳 e-esses tewmos são f-fwequentemente confundidos pow iniciantes nya web, (U ﹏ U) ou são utizados de maneiwa incowweta. mya vamos entendew o que e-ewes weawmente s-significam! (U ᵕ U❁)
 
-- [O que é uma URL?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [o que é uma uww?](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)
 
-  - : Com {{Glossary("Hypertext")}} e {{Glossary("HTTP")}}, URL é um conceito-chave quando se trata da Internet. Ele é um mecanimos utilizado pelos {{Glossary("Navegador","navegadores")}} para recuperar qualquer recurso publicado na Web
+  - : c-com {{gwossawy("hypewtext")}} e-e {{gwossawy("http")}}, u-uww é um conceito-chave quando se twata da intewnet. :3 ewe é um m-mecanimos utiwizado pewos {{gwossawy("navegadow","navegadowes")}} pawa wecupewaw quawquew wecuwso pubwicado nya w-web
 
-- [O que é um domain name?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [o que é um domain nyame?](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_domain_name)
 
-  - : Domain names eles são uma parte essencial para a infraestrutura da internet. Eles deixam o endereço legivel por humanos para qualquer Web server disponivel na internet.
+  - : d-domain nyames e-ewes são uma pawte e-essenciaw pawa a infwaestwutuwa d-da intewnet. mya e-ewes deixam o endeweço w-wegivew p-pow humanos pawa quawquew web sewvew disponivew n-nya intewnet. OwO
 
-- [O que é um web server?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [o q-que é um web s-sewvew?](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew)
 
-  - : O termo "Web server" pode se referir ao hardware ou ao software que serve sites para clientes na Web — ou ambos deles trabalhando juntos. Nesse artigo nós veremos como Web servers funcionam, e porque eles são importantes.
+  - : o-o tewmo "web s-sewvew" pode se wefewiw ao hawdwawe ou ao softwawe que sewve s-sites pawa cwientes nya web — ou ambos dewes twabawhando juntos. (ˆ ﻌ ˆ)♡ nyesse awtigo nyós vewemos c-como web sewvews funcionam, ʘwʘ e powque ewes são impowtantes. o.O
 
-- [O que são hyperlinks?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
+- [o q-que são hypewwinks?](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_awe_hypewwinks)
 
-  - : Nesse artigo, nós veremos do que são hypelinks e porque eles importam.
+  - : n-nyesse awtigo, UwU n-nyós vewemos do que são h-hypewinks e powque ewes impowtam. rawr x3
 
-## Tools and setup
+## t-toows and s-setup
 
-Questions related to the tools/software you can use to build websites.
+questions wewated to the toows/softwawe you can use to buiwd websites. 🥺
 
-- [How much does it cost to do something on the Web?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- [how much does i-it cost to do something on the w-web?](/pt-bw/docs/weawn/common_questions/toows_and_setup/how_much_does_it_cost)
 
-  - : When you're launching a website, you may spend nothing or your costs may go through the roof. In this article we discuss how much everything costs and what you get for what you pay (or don't pay).
+  - : when you'we w-waunching a website, :3 y-you may spend nyothing ow youw costs may g-go thwough the w-woof. in this awticwe we discuss h-how much evewything c-costs and nani you get fow nyani you pay (ow don't pay). (ꈍᴗꈍ)
 
-- [What software do I need to build a website?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [nani softwawe d-do i nyeed to buiwd a-a website?](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_softwawe_do_i_need)
 
-  - : In this article we explain which software components you need when you're editing, uploading, or viewing a website.
+  - : i-in this awticwe we expwain which s-softwawe components y-you nyeed when you'we editing, 🥺 u-upwoading, (✿oωo) ow viewing a website. (U ﹏ U)
 
-- [What text editors are available?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)
+- [nani text editows awe avaiwabwe?](/pt-bw/docs/weawn/common_questions/toows_and_setup/avaiwabwe_text_editows)
 
-  - : In this article we highlight some things to think about when choosing and installing a text editor for web development.
+  - : in this awticwe w-we highwight some t-things to think about when choosing and instawwing a-a text editow f-fow web devewopment. :3
 
-- [How do I set up a basic working environment?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+- [how do i set up a basic wowking enviwonment?](/pt-bw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew)
 
-  - : When working on a web project, you'll want to test it locally before you show it to the world. Some types of code require a server to test, and in this article we'll show you how to set one up. We'll also cover how to put a scalable structure in place so that your files stay organized even when your project gets big.
+  - : when wowking o-on a web pwoject, ^^;; you'ww want to test it wocawwy befowe you show it to the wowwd. rawr s-some types of code wequiwe a sewvew to test, 😳😳😳 and i-in this awticwe w-we'ww show you how to set one up. (✿oωo) we'ww awso covew how to put a-a scawabwe stwuctuwe i-in pwace so that youw fiwes stay owganized even when youw p-pwoject gets big. OwO
 
-- [What are browser developer tools?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
+- [nani awe bwowsew d-devewopew toows?](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows)
 
-  - : Every browser features a set of devtools for debugging HTML, CSS, and other web code. This article explains how to use the basic functions of your browser's devtools.
+  - : evewy bwowsew featuwes a set o-of devtoows fow debugging htmw, ʘwʘ c-css, and othew w-web code. (ˆ ﻌ ˆ)♡ this awticwe expwains h-how to use the basic functions o-of youw bwowsew's d-devtoows. (U ﹏ U)
 
-- [How do you make sure your website works properly?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly)
+- [how d-do you make suwe youw website w-wowks pwopewwy?](/pt-bw/docs/weawn/common_questions/toows_and_setup/checking_that_youw_web_site_is_wowking_pwopewwy)
 
-  - : So you've published your website online — very good! But are you sure it works properly? This article provides some basic troubleshooting steps.
+  - : s-so you've pubwished youw website onwine — v-vewy good! UwU b-but awe you s-suwe it wowks pwopewwy? this awticwe pwovides some b-basic twoubweshooting steps. XD
 
-- [How do you upload files to a web server?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [how d-do you u-upwoad fiwes to a web sewvew?](/pt-bw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)
 
-  - : This article shows how to publish your site online with [FTP](/pt-BR/docs/Glossary/FTP) tools — one fo the most common ways to get a website online so others can access it from their computers.
+  - : this awticwe shows how to p-pubwish youw site o-onwine with [ftp](/pt-bw/docs/gwossawy/ftp) toows — o-one fo t-the most common ways to get a website o-onwine so othews can access it fwom theiw computews. ʘwʘ
 
-- [How do I use GitHub Pages?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)
+- [how do i use github pages?](/pt-bw/docs/weawn/common_questions/toows_and_setup/using_github_pages)
 
-  - : This article provides a basic guide to publishing content using GitHub's gh-pages feature.
+  - : t-this awticwe pwovides a b-basic guide to pubwishing content u-using github's gh-pages featuwe. rawr x3
 
-- [How do you host your website on Google App Engine?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
+- [how d-do you host youw website o-on googwe app e-engine?](/pt-bw/docs/weawn/common_questions/toows_and_setup/how_do_you_host_youw_website_on_googwe_app_engine)
 
-  - : Looking for a place to host your website? Here's a step-by-step guide to hosting your website on Google App Engine.
+  - : w-wooking f-fow a pwace to h-host youw website? hewe's a step-by-step guide to hosting youw website on googwe app engine. ^^;;
 
-- [What tools are available to debug and improve website performance?](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
+- [nani toows awe a-avaiwabwe to debug a-and impwove website p-pewfowmance?](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw)
 
-  - : This set of articles shows you how to use the Developer Tools in Firefox to debug and improve performance of your website, using the tools to check the memory usage, the JavaScript call tree, the amount of DOM nodes being rendered, and more.
+  - : this set o-of awticwes shows you how to use the devewopew toows in fiwefox t-to debug and i-impwove pewfowmance of youw website, ʘwʘ u-using the toows to check the memowy usage, (U ﹏ U) t-the javascwipt caww t-twee, (˘ω˘) the amount of dom nyodes b-being wendewed, (ꈍᴗꈍ) a-and mowe.
 
-## Design and accessibility
+## design and accessibiwity
 
-This section lists questions related to aesthetics, page structure, accessibility techniques, etc.
+this section wists questions wewated t-to aesthetics, /(^•ω•^) page s-stwuctuwe, >_< accessibiwity t-techniques, σωσ e-etc.
 
-- [How do I start to design my website?](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding)
+- [how d-do i stawt to design my website?](/pt-bw/docs/weawn/common_questions/design_and_accessibiwity/thinking_befowe_coding)
 
-  - : This article covers the all-important first step of every project: define what you want to accomplish with it.
+  - : t-this awticwe c-covews the aww-impowtant fiwst step o-of evewy pwoject: d-define nyani you want to accompwish w-with it. ^^;;
 
-- [What do common web layouts contain?](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)
+- [nani do common web wayouts c-contain?](/pt-bw/docs/weawn/common_questions/design_and_accessibiwity/common_web_wayouts)
 
-  - : When designing pages for your website, it's good to have an idea of the most common layouts. This article runs thorugh some typical web layouts, looking at the parts that make up each one.
+  - : when designing p-pages fow youw w-website, 😳 it's good to have an idea o-of the most common wayouts. >_< this awticwe wuns t-thowugh some typicaw w-web wayouts, -.- w-wooking at the pawts that make up each one. UwU
 
-- [What is accessibility?](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility)
+- [nani is accessibiwity?](/pt-bw/docs/weawn/common_questions/design_and_accessibiwity/nani_is_accessibiwity)
 
-  - : This article introduces the basic concepts behind web accessibility.
+  - : t-this awticwe intwoduces the basic concepts b-behind web accessibiwity. :3
 
-- [How can we design for all types of users?](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users)
+- [how c-can we design fow aww types of u-usews?](/pt-bw/docs/weawn/common_questions/design_and_accessibiwity/design_fow_aww_types_of_usews)
 
-  - : This article provides basic techniques to help you design websites for any kind of user — quick accessibility wins, and other such things.
+  - : this a-awticwe pwovides b-basic techniques to hewp you design websites fow a-any kind of usew — quick accessibiwity wins, σωσ a-and othew such t-things. >w<
 
-- [What HTML features promote accessibility?](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility)
+- [nani htmw featuwes p-pwomote accessibiwity?](/pt-bw/docs/weawn/common_questions/design_and_accessibiwity/htmw_featuwes_fow_accessibiwity)
 
-  - : This article describes specific features of HTML that can be used to make a web page more accessible to people with different disabilities.
+  - : this a-awticwe descwibes s-specific featuwes o-of htmw that can be used to make a web page mowe accessibwe to peopwe with diffewent disabiwities. (ˆ ﻌ ˆ)♡

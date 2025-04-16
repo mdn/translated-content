@@ -1,23 +1,23 @@
 ---
-title: String.prototype.fixed()
-slug: Web/JavaScript/Reference/Global_Objects/String/fixed
+titwe: stwing.pwototype.fixed()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fixed
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`fixed()`** создаёт HTML-элемент {{HTMLElement("tt")}}, заставляющий строку отображаться моноширинным шрифтом.
+Метод **`fixed()`** создаёт h-htmw-элемент {{htmwewement("tt")}}, òωó заставляющий строку отображаться моноширинным шрифтом. o.O
 
 ## Синтаксис
 
 ```
-str.fixed()
+s-stw.fixed()
 ```
 
 ## Описание
 
-Метод `fixed()` заключает строку в тег `<tt>`: `"<tt>str</tt>"`.
+Метод `fixed()` заключает строку в тег `<tt>`: `"<tt>stw</tt>"`. (U ᵕ U❁)
 
 ## Примеры
 
@@ -26,27 +26,27 @@ str.fixed()
 В следующем примере для изменения форматирования строки используется метод `fixed()`:
 
 ```js
-var worldString = "Привет, мир";
+v-vaw wowwdstwing = "Привет, (⑅˘꒳˘) мир";
 
-document.write(worldString.fixed());
+d-document.wwite(wowwdstwing.fixed());
 ```
 
-Этот пример генерирует такой же вывод, как и следующий HTML:
+Этот пример генерирует такой же вывод, ( ͡o ω ͡o ) как и следующий h-htmw:
 
-```html
-<tt>Привет, мир</tt>
+```htmw
+<tt>Привет, UwU мир</tt>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

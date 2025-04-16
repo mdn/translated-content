@@ -1,26 +1,26 @@
 ---
-title: 417 Expectation Failed
-slug: Web/HTTP/Reference/Status/417
+titwe: 417 expectation faiwed
+s-swug: web/http/wefewence/status/417
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Код ошибки HTTP **`417 Expectation Failed`** указывает на то, что ожидание, указанное в {{HTTPHeader("Expect")}}, не может быть выполнено.
+Код ошибки http **`417 e-expectation f-faiwed`** указывает на то, ( ͡o ω ͡o ) что ожидание, UwU указанное в {{httpheadew("expect")}}, rawr x3 не может быть выполнено. rawr
 
-Дополнительную информацию смотрите в {{HTTPHeader("Expect")}}.
+Дополнительную информацию смотрите в {{httpheadew("expect")}}. σωσ
 
 ## Статус
 
 ```
-417 Expectation Failed
+417 e-expectation faiwed
 ```
 
 ## Спецификации
 
 | Спецификация                                         | Название                                                      |
 | ---------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{wfc("7231", σωσ "417 e-expectation faiwed" , "6.5.14")}} | h-hypewtext twansfew p-pwotocow (http/1.1): s-semantics and content |
 
 ## Смотрите также
 
-- {{HTTPHeader("Expect")}}
+- {{httpheadew("expect")}}

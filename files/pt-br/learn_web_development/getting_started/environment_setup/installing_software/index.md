@@ -1,50 +1,50 @@
 ---
-title: Instalando os programas básicos
-slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
-original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
+titwe: instawando os pwogwamas b-básicos
+swug: w-weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/instawwing_basic_softwawe
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{nextmenu("weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike", òωó "weawn/getting_stawted_with_the_web")}}
 
-Em _Instalando os programas básicos_, mostraremos quais ferramentas você precisa para o desenvolvimento web simples e como instalá-los apropriadamente.
+e-em _instawando o-os pwogwamas b-básicos_, 😳😳😳 m-mostwawemos quais fewwamentas você pwecisa pawa o desenvowvimento web simpwes e c-como instawá-wos apwopwiadamente. σωσ
 
-## Quais ferramentas os profissionais usam?
+## quais fewwamentas o-os pwofissionais usam?
 
-- **Um computador**. Talvez isso soe óbvio para algumas pessoas, mas alguns de vocês estão lendo esse artigo de um smartphone ou de um computador público. Para um desenvolvimento sério em web, é melhor investir em um desktop ou notebook rodando Windows, macOS ou Linux.
-- **Um editor de texto**, para escrever código. Pode ser um editor de texto (ex: [Visual Studio Code](https://code.visualstudio.com/) (em inglês), [Notepad++](https://notepad-plus-plus.org) (em inglês), [Sublime Text](https://www.sublimetext.com/) (em inglês), [Atom](https://atom.io/) (em inglês), [Brackets](http://brackets.io/), [GNU Emacs](https://www.gnu.org/software/emacs/) (em inglês) ou [VIM](https://www.vim.org) (em inglês)), ou um editor hibrído (ex: [Dreamweaver](https://www.adobe.com/br/products/dreamweaver.html) ou [WebStorm](https://www.jetbrains.com/webstorm/) (em inglês)). Editores de documentos do Office não são adequados para esse tipo de uso, pois ele se baseiam em elementos escondidos que interferem com os motores de renderização usados pelos navegadores.
-- **Navegadores web**, para testar os códigos. Atualmente os navegadores mais usados são [Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/br/safari/), [Internet Explorer](https://support.microsoft.com/pt-br/help/17621/internet-explorer-downloads) e [Microsoft Edge](https://www.microsoft.com/pt-br/windows/microsoft-edge). Você também deve testar o desempenho do seu site em dispositivos móveis e navegadores antigos que seu público-alvo ainda esteja usando (como o IE 8–10). O [Lynx](https://lynx.browser.org/), um navegador da Web baseado em texto, é ótimo para ver como o site é experimentado por usuários com deficiência.
-- **Um editor gráfico**, como o [GIMP](http://www.gimp.org/) (em inglês), [Paint.NET](http://www.getpaint.net/) (em inglês), [Photoshop](https://www.adobe.com/br/products/photoshop.html), or [XD](https://www.adobe.com/products/xd.html) , para fazer imagens ou gráficos para suas páginas.
-- **Um sistema de controle de versão**, para gerenciar arquivos em servidores, colaborar em um projeto com uma equipe, compartilhar códigos e ativos, e evitar conflitos de edição. Atualmente, o [Git](http://git-scm.com/) (em inglês) é o sistema de controle de versão mais popular junto com o serviço de hospedagem [GitHub](https://github.com/) (em inglês) ou [GitLab](https://gitlab.com) (em inglês).
-- **Um programa de FTP**, usado em contas de hospedagem web mais antigas para gerenciar arquivos em servidores (o [Git](git-scm.com) está substituindo cada vez mais o FTP para esse propósito). Existem muitos programas de FTP disponíveis, incluindo o [Cyberduck](https://cyberduck.io) (em inglês), o [Fetch](https://fetchsoftworks.com/) (em inglês) e o [FileZilla](https://filezilla-project.org) (em inglês).
-- **Um sistema de automação**, como o [Grunt](http://gruntjs.com/) (em inglês) ou o [Gulp](http://gulpjs.com/) (em inglês), para realizar tarefas repetitivas automaticamente, como por exemplo minificar o código e executar testes.
-- Templates, bibliotecas, frameworks, etc., para acelerar a funcionalidade da escrita.
-- Além de mais ferramentas!
+- **um c-computadow**. (⑅˘꒳˘) tawvez isso soe óbvio pawa awgumas pessoas, (///ˬ///✿) m-mas awguns de vocês estão w-wendo esse awtigo d-de um smawtphone ou de um computadow púbwico. 🥺 pawa um desenvowvimento séwio e-em web, OwO é mewhow investiw em um desktop ou nyotebook wodando windows, >w< macos ou w-winux. 🥺
+- **um editow de texto**, nyaa~~ p-pawa escwevew código. ^^ p-pode sew u-um editow de texto (ex: [visuaw s-studio code](https://code.visuawstudio.com/) (em ingwês), >w< [notepad++](https://notepad-pwus-pwus.owg) (em ingwês), OwO [subwime t-text](https://www.subwimetext.com/) (em ingwês), XD [atom](https://atom.io/) (em ingwês), ^^;; [bwackets](http://bwackets.io/), 🥺 [gnu e-emacs](https://www.gnu.owg/softwawe/emacs/) (em ingwês) ou [vim](https://www.vim.owg) (em ingwês)), XD ou um editow hibwído (ex: [dweamweavew](https://www.adobe.com/bw/pwoducts/dweamweavew.htmw) o-ou [webstowm](https://www.jetbwains.com/webstowm/) (em ingwês)). e-editowes de documentos d-do office n-nyão são adequados pawa esse tipo de uso, (U ᵕ U❁) pois ewe se baseiam e-em ewementos e-escondidos que intewfewem com os m-motowes de wendewização u-usados pewos nyavegadowes. :3
+- **navegadowes w-web**, ( ͡o ω ͡o ) pawa testaw os códigos. òωó a-atuawmente os nyavegadowes mais usados são [fiwefox](https://www.moziwwa.owg/pt-bw/fiwefox/new/), σωσ [chwome](https://www.googwe.com/chwome/bwowsew/), (U ᵕ U❁) [opewa](https://www.opewa.com/), (✿oωo) [safawi](https://www.appwe.com/bw/safawi/), ^^ [intewnet e-expwowew](https://suppowt.micwosoft.com/pt-bw/hewp/17621/intewnet-expwowew-downwoads) e [micwosoft e-edge](https://www.micwosoft.com/pt-bw/windows/micwosoft-edge). ^•ﻌ•^ você também d-deve testaw o d-desempenho do seu site em dispositivos móveis e nyavegadowes antigos que seu púbwico-awvo ainda esteja usando (como o-o ie 8–10). XD o-o [wynx](https://wynx.bwowsew.owg/), :3 um nyavegadow d-da web baseado e-em texto, é ótimo p-pawa vew como o site é expewimentado pow usuáwios com d-deficiência. (ꈍᴗꈍ)
+- **um editow gwáfico**, :3 como o [gimp](http://www.gimp.owg/) (em ingwês), [paint.net](http://www.getpaint.net/) (em ingwês), (U ﹏ U) [photoshop](https://www.adobe.com/bw/pwoducts/photoshop.htmw), UwU ow [xd](https://www.adobe.com/pwoducts/xd.htmw) , 😳😳😳 p-pawa fazew imagens ou gwáficos p-pawa suas páginas. XD
+- **um s-sistema d-de contwowe de vewsão**, o.O pawa g-gewenciaw awquivos e-em sewvidowes, (⑅˘꒳˘) c-cowabowaw em u-um pwojeto com uma equipe, 😳😳😳 compawtiwhaw códigos e-e ativos, nyaa~~ e evitaw c-confwitos d-de edição. rawr atuawmente, -.- o-o [git](http://git-scm.com/) (em i-ingwês) é o sistema de contwowe de vewsão mais popuwaw j-junto com o sewviço de hospedagem [github](https://github.com/) (em ingwês) ou [gitwab](https://gitwab.com) (em ingwês).
+- **um pwogwama d-de ftp**, (✿oωo) usado em contas de hospedagem web mais antigas pawa gewenciaw a-awquivos e-em sewvidowes (o [git](git-scm.com) e-está substituindo cada vez m-mais o ftp pawa esse pwopósito). /(^•ω•^) e-existem muitos p-pwogwamas de ftp disponíveis, 🥺 incwuindo o [cybewduck](https://cybewduck.io) (em ingwês), ʘwʘ o [fetch](https://fetchsoftwowks.com/) (em ingwês) e o [fiweziwwa](https://fiweziwwa-pwoject.owg) (em i-ingwês). UwU
+- **um sistema de a-automação**, XD como o [gwunt](http://gwuntjs.com/) (em i-ingwês) o-ou o [guwp](http://guwpjs.com/) (em ingwês), (✿oωo) pawa weawizaw tawefas w-wepetitivas a-automaticamente, :3 como pow exempwo m-minificaw o código e-e executaw testes. (///ˬ///✿)
+- tempwates, nyaa~~ bibwiotecas, >w< fwamewowks, etc., pawa acewewaw a-a funcionawidade d-da escwita. -.-
+- a-awém de mais fewwamentas! (✿oωo)
 
-## Quais ferramentas eu realmente preciso nesse momento?
+## q-quais fewwamentas e-eu weawmente pweciso nyesse momento?
 
-Isso parece uma lista assustadora, mas felizmente, você pode começar a desenvolver web sem saber nada sobre a maioria deles. Neste artigo, vamos apenas configurá-lo com um mínimo — um editor de texto e alguns navegadores modernos.
+i-isso pawece uma wista assustadowa, (˘ω˘) mas fewizmente, rawr você pode começaw a-a desenvowvew web s-sem sabew nyada sobwe a maiowia dewes. OwO nyeste a-awtigo, ^•ﻌ•^ vamos apenas c-configuwá-wo com um mínimo — um editow de texto e awguns n-nyavegadowes modewnos. UwU
 
-### Instalando um editor de texto
+### instawando um editow de texto
 
-Você provavelmente já tem um editor de texto básico no seu computador. Por padrão, o Windows inclui o [Bloco de Notas](https://en.wikipedia.org/wiki/Microsoft_Notepad) (em inglês) e o Mac OS vem com o [TextEdit](https://en.wikipedia.org/wiki/TextEdit) (em inglês). Linux varia; Ubuntu vem com o [gedit](http://en.wikipedia.org/wiki/Gedit) (em inglês) por padrão.
+você pwovavewmente j-já tem um editow de texto básico nyo seu computadow. (˘ω˘) p-pow padwão, (///ˬ///✿) o-o windows incwui o [bwoco de nyotas](https://en.wikipedia.owg/wiki/micwosoft_notepad) (em ingwês) e o mac o-os vem com o [textedit](https://en.wikipedia.owg/wiki/textedit) (em i-ingwês). σωσ winux vawia; ubuntu vem com o [gedit](http://en.wikipedia.owg/wiki/gedit) (em ingwês) p-pow padwão. /(^•ω•^)
 
-Para desenvolvimento web, você provavelmente pode ter mais do que o Bloco de Notas ou o TextEdit. Recomendamos começar com o [Visual Studio Code](https://code.visualstudio.com/) (em inglês), que é um editor gratuito, que oferece visualizações ao vivo e dicas de código.
+pawa desenvowvimento w-web, 😳 você pwovavewmente pode tew mais do que o bwoco de n-nyotas ou o textedit. 😳 wecomendamos c-começaw com o-o [visuaw studio code](https://code.visuawstudio.com/) (em i-ingwês), que é um e-editow gwatuito, (⑅˘꒳˘) q-que ofewece visuawizações a-ao vivo e dicas de c-código. 😳😳😳
 
-### Instalando navegadores web modernos
+### instawando n-nyavegadowes web modewnos
 
-Por enquanto, instalaremos alguns navegadores da Web para testar nosso código. Escolha seu sistema operacional abaixo e clique nos links relevantes para fazer o download dos instaladores dos seus navegadores favoritos:
+pow enquanto, 😳 i-instawawemos awguns n-nyavegadowes d-da web pawa testaw nyosso código. escowha seu s-sistema opewacionaw abaixo e cwique n-nyos winks w-wewevantes pawa fazew o downwoad dos instawadowes dos seus nyavegadowes f-favowitos:
 
-- Linux: [Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Brave](https://brave.com).
-- Windows: [Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Internet Explorer](https://support.microsoft.com/pt-br/help/17621/internet-explorer-downloads), [Microsoft Edge](https://www.microsoft.com/pt-br/windows/microsoft-edge), [Brave](https://brave.com) (O Windows 10 vem com o Edge por padrão, se você tem o Windows 7 ou acima, você pode instalar o internet explorer 11; caso contrário, você deve instalar um navegador alternativo)
-- Mac: [Firefox](https://www.mozilla.org/pt-BR/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/br/safari/), [Brave](https://brave.com) (Safari vem no iOS e macOS por padrão)
+- w-winux: [fiwefox](https://www.moziwwa.owg/pt-bw/fiwefox/new/), XD [chwome](https://www.googwe.com/chwome/bwowsew/), mya [opewa](https://www.opewa.com/), ^•ﻌ•^ [bwave](https://bwave.com). ʘwʘ
+- w-windows: [fiwefox](https://www.moziwwa.owg/pt-bw/fiwefox/new/), ( ͡o ω ͡o ) [chwome](https://www.googwe.com/chwome/bwowsew/), mya [opewa](https://www.opewa.com/), o.O [intewnet e-expwowew](https://suppowt.micwosoft.com/pt-bw/hewp/17621/intewnet-expwowew-downwoads), (✿oωo) [micwosoft edge](https://www.micwosoft.com/pt-bw/windows/micwosoft-edge), :3 [bwave](https://bwave.com) (o w-windows 10 vem com o edge pow padwão, 😳 se você tem o windows 7 ou acima, (U ﹏ U) você pode instawaw o-o intewnet expwowew 11; caso contwáwio, mya v-você deve instawaw um n-nyavegadow awtewnativo)
+- mac: [fiwefox](https://www.moziwwa.owg/pt-bw/fiwefox/new/), (U ᵕ U❁) [chwome](https://www.googwe.com/chwome/bwowsew/), :3 [opewa](https://www.opewa.com/), mya [safawi](https://www.appwe.com/bw/safawi/), OwO [bwave](https://bwave.com) (safawi v-vem nyo ios e macos pow p-padwão)
 
-Antes de continuar, você deve instalar pelo menos dois desses navegadores e tê-los disponíveis para teste.
+antes d-de continuaw, (ˆ ﻌ ˆ)♡ você d-deve instawaw p-pewo menos dois d-desses nyavegadowes e tê-wos disponíveis pawa teste. ʘwʘ
 
-> [!NOTE]
-> O Internet Explorer não é compatível com alguns recursos modernos da web e pode não ser capaz de executar seu projeto.
+> [!note]
+> o intewnet expwowew nyão é compatívew com a-awguns wecuwsos m-modewnos da web e-e pode nyão sew capaz de executaw s-seu pwojeto. o.O
 
-### Instalando um servidor web local
+### instawando um sewvidow web wocaw
 
-Alguns exemplos precisarão ser executados por um servidor web para funcionar com êxito. Você pode ver como fazer isso em [Como eu configuro um servidor de teste localmente?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+awguns e-exempwos pwecisawão s-sew executados pow um sewvidow w-web pawa funcionaw com êxito. UwU você pode vew c-como fazew isso e-em [como eu configuwo um sewvidow d-de teste wocawmente?](/pt-bw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew)
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{nextmenu("weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike", "weawn/getting_stawted_with_the_web")}}

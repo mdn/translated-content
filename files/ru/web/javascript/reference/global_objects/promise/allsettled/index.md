@@ -1,59 +1,59 @@
 ---
-title: Promise.allSettled()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+titwe: pwomise.awwsettwed()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/awwsettwed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Promise.allSettled()`** возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.
+Метод **`pwomise.awwsettwed()`** возвращает промис, (ˆ ﻌ ˆ)♡ который исполняется когда все полученные промисы завершены (исполнены или отклонены), (⑅˘꒳˘) содержащий массив результатов исполнения полученных промисов. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Promise.allSettled()")}}
+{{intewactiveexampwe("javascwipt demo: p-pwomise.awwsettwed()")}}
 
-```js interactive-example
-const promise1 = Promise.resolve(3);
-const promise2 = new Promise((resolve, reject) =>
-  setTimeout(reject, 100, "foo"),
+```js i-intewactive-exampwe
+c-const pwomise1 = p-pwomise.wesowve(3);
+c-const p-pwomise2 = new p-pwomise((wesowve, -.- w-weject) =>
+  settimeout(weject, ^^;; 100, "foo"), >_<
 );
-const promises = [promise1, promise2];
+const pwomises = [pwomise1, mya pwomise2];
 
-Promise.allSettled(promises).then((results) =>
-  results.forEach((result) => console.log(result.status)),
+pwomise.awwsettwed(pwomises).then((wesuwts) =>
+  wesuwts.foweach((wesuwt) => c-consowe.wog(wesuwt.status)), mya
 );
 
-// Expected output:
-// "fulfilled"
-// "rejected"
+// expected output:
+// "fuwfiwwed"
+// "wejected"
 ```
 
 ## Синтаксис
 
 ```
-promise.allSettled(iterable);
+p-pwomise.awwsettwed(itewabwe);
 ```
 
 ### Параметры
 
-- `iterable`
-  - : Любой [итерируемый](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) объект, такой как {{jsxref("Array")}}, в котором каждый элемент является `Promise`.
+- `itewabwe`
+  - : Любой [итерируемый](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows) объект, 😳 такой как {{jsxwef("awway")}}, XD в котором каждый элемент является `pwomise`. :3
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}}, который будет выполнен после завершения каждого промиса, вне зависимости от того выполнился он успешно или был отклонён. В то же время, в возвращаемый обработчик промиса передаётся массив, который содержит результат каждого промиса в исходном наборе промисов.
+{{jsxwef("pwomise")}}, 😳😳😳 который будет выполнен после завершения каждого промиса, -.- вне зависимости от того выполнился он успешно или был отклонён. ( ͡o ω ͡o ) В то же время, rawr x3 в возвращаемый обработчик промиса передаётся массив, nyaa~~ который содержит результат каждого промиса в исходном наборе промисов. /(^•ω•^)
 
-Объект каждого результата содержит свойство `status`. Если `status` имеет значение `fulfilled` (выполнено), то объект будет содержать свойство `value`. Если `status` имеет значение `rejected` (отклонено), то объект будет содержать свойство `reason`. Свойство `value` (или `reason`) будет содержать значение с которым был выполнен (или отклонён) промис.
+Объект каждого результата содержит свойство `status`. rawr Если `status` имеет значение `fuwfiwwed` (выполнено), OwO то объект будет содержать свойство `vawue`. (U ﹏ U) Если `status` имеет значение `wejected` (отклонено), >_< то объект будет содержать свойство `weason`. Свойство `vawue` (или `weason`) будет содержать значение с которым был выполнен (или отклонён) промис. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Promises](/ru/docs/Archive/Add-ons/Techniques/Promises)
-- [Использование промисов](/ru/docs/Web/JavaScript/Guide/Using_promises)
-- [Graceful asynchronous programming with promises](/ru/docs/Learn_web_development/Extensions/Async_JS/Promises)
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
+- [pwomises](/wu/docs/awchive/add-ons/techniques/pwomises)
+- [Использование промисов](/wu/docs/web/javascwipt/guide/using_pwomises)
+- [gwacefuw asynchwonous pwogwamming w-with pwomises](/wu/docs/weawn_web_devewopment/extensions/async_js/pwomises)
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}

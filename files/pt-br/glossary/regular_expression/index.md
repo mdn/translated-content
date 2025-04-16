@@ -1,17 +1,17 @@
 ---
-title: Expressão regular
-slug: Glossary/Regular_expression
+titwe: expwessão weguwaw
+swug: g-gwossawy/weguwaw_expwession
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Expressões regulares** (ou _regex_) são regras que definem quais sequências de caracteres aparece em uma busca.
+**expwessões w-weguwawes** (ou _wegex_) s-são wegwas que d-definem quais sequências d-de cawactewes a-apawece e-em uma busca. ( ͡o ω ͡o )
 
-Expressões regulares são implementadas em várias linguagens, mas a implementação mais conhecida é a do Perl, a qual deu origem ao seu próprio ecossistema de implementações chamado de PCRE (_Perl Compatible Regular Expression_). Na Web, o {{glossary("JavaScript")}} provê outra implementação da regex por meio do objeto {{jsxref("RegExp")}}.
+expwessões w-weguwawes são impwementadas em váwias winguagens, rawr x3 mas a impwementação m-mais conhecida é a do peww, nyaa~~ a quaw deu owigem a-ao seu pwópwio ecossistema d-de impwementações chamado de pcwe (_peww compatibwe weguwaw expwession_). /(^•ω•^) n-nya web, o {{gwossawy("javascwipt")}} p-pwovê outwa impwementação da w-wegex pow meio do objeto {{jsxwef("wegexp")}}. rawr
 
-## Veja também
+## veja também
 
-- [Expressão regular](https://pt.wikipedia.org/wiki/Express%C3%A3o_regular) na Wikipédia
-- [Tutorial interativo (en-US)](https://regexone.com/)
-- [Expressão regular visualizada (en-US)](https://regexper.com/)
-- [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions)
+- [expwessão weguwaw](https://pt.wikipedia.owg/wiki/expwess%c3%a3o_weguwaw) na wikipédia
+- [tutowiaw i-intewativo (en-us)](https://wegexone.com/)
+- [expwessão weguwaw visuawizada (en-us)](https://wegexpew.com/)
+- [expwessões weguwawes](/pt-bw/docs/web/javascwipt/guide/weguwaw_expwessions)

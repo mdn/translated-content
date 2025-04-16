@@ -1,74 +1,74 @@
 ---
-title: ReferenceError
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-l10n:
-  sourceCommit: 6558de67a347fee30c303da8a0b262a9270a6885
+titwe: wefewenceewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow
+w-w10n:
+  souwcecommit: 6558de67a347fee30c303da8a0b262a9270a6885
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`ReferenceError`** представляет ошибку, возникающую при обращении к переменной, которая не существует (или не была инициализирована) в текущей области видимости.
+Объект **`wefewenceewwow`** представляет ошибку, возникающую при обращении к переменной, (⑅˘꒳˘) которая не существует (или не была инициализирована) в текущей области видимости.
 
-`ReferenceError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
+`wefewenceewwow` является {{gwossawy("sewiawizabwe o-object", (U ᵕ U❁) "сериализуемым объектом")}}, -.- поэтому он может быть клонирован с помощью {{domxwef("stwuctuwedcwone()")}} или передан между [воркерами](/wu/docs/web/api/wowkew) с использованием {{domxwef("wowkew/postmessage()", ^^;; "postmessage()")}}. >_<
 
-`RangeReferenceErrorError` является подклассом {{jsxref("Error")}}.
+`wangewefewenceewwowewwow` является подклассом {{jsxwef("ewwow")}}. mya
 
 ## Конструктор
 
-- {{jsxref("ReferenceError/ReferenceError", "ReferenceError()")}}
-  - : Создаёт новый объект `ReferenceError`.
+- {{jsxwef("wefewenceewwow/wefewenceewwow", mya "wefewenceewwow()")}}
+  - : Создаёт новый объект `wefewenceewwow`. 😳
 
 ## Свойства экземпляра
 
-_Также наследует свойства экземпляра своего родителя {{jsxref("Error")}}_.
+_Также наследует свойства экземпляра своего родителя {{jsxwef("ewwow")}}_. XD
 
-Эти свойства определены в `ReferenceError.prototype` и есть у всех экземпляров `ReferenceError`.
+Эти свойства определены в `wefewenceewwow.pwototype` и есть у всех экземпляров `wefewenceewwow`. :3
 
-- {{jsxref("Object/constructor", "ReferenceError.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `ReferenceError` начальным значением является конструктор {{jsxref("ReferenceError/ReferenceError", "ReferenceError")}}.
-- {{jsxref("Error/name", "ReferenceError.prototype.name")}}
-  - : Представляет название типа ошибки. Начальным значением `ReferenceError.prototype.name` является `"ReferenceError"`.
+- {{jsxwef("object/constwuctow", 😳😳😳 "wefewenceewwow.pwototype.constwuctow")}}
+  - : Функция-конструктор, -.- создающая экземпляр объекта. ( ͡o ω ͡o ) Для экземпляров `wefewenceewwow` начальным значением является конструктор {{jsxwef("wefewenceewwow/wefewenceewwow", rawr x3 "wefewenceewwow")}}. nyaa~~
+- {{jsxwef("ewwow/name", /(^•ω•^) "wefewenceewwow.pwototype.name")}}
+  - : Представляет название типа ошибки. rawr Начальным значением `wefewenceewwow.pwototype.name` является `"wefewenceewwow"`. OwO
 
 ## Методы экземпляра
 
-_Наследует методы экземпляра своего родителя {{jsxref("Error")}}_.
+_Наследует методы экземпляра своего родителя {{jsxwef("ewwow")}}_. (U ﹏ U)
 
 ## Примеры
 
-### Перехват `ReferenceError`
+### Перехват `wefewenceewwow`
 
 ```js
-try {
-  let a = undefinedVariable;
+t-twy {
+  w-wet a = undefinedvawiabwe;
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "undefinedVariable is not defined"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.stack); // Стек ошибок
+  c-consowe.wog(e i-instanceof w-wefewenceewwow); // t-twue
+  consowe.wog(e.message); // "undefinedvawiabwe is nyot defined"
+  consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.stack); // Стек ошибок
 }
 ```
 
-### Создание `ReferenceError`
+### Создание `wefewenceewwow`
 
 ```js
-try {
-  throw new ReferenceError("Привет");
+t-twy {
+  thwow nyew wefewenceewwow("Привет");
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Привет"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.stack); // Стек ошибок
+  c-consowe.wog(e instanceof wefewenceewwow); // t-twue
+  consowe.wog(e.message); // "Привет"
+  consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.stack); // Стек ошибок
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error")}}
+- {{jsxwef("ewwow")}}

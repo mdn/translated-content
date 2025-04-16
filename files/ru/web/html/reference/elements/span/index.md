@@ -1,89 +1,89 @@
 ---
-title: <span>
-slug: Web/HTML/Reference/Elements/span
+titwe: <span>
+swug: web/htmw/wefewence/ewements/span
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<span>`** является основным строковым контейнером для фразового контента, который, по существу, ничего не представляет. Он может использоваться для группировки элементов в целях стилизации (использование атрибутов [`class`](/ru/docs/Web/HTML/Global_attributes#class) или [`id`](/ru/docs/Web/HTML/Global_attributes#id)) или потому, что они имеет общие значения атрибутов, например [`lang`](/ru/docs/Web/HTML/Global_attributes#lang). Он должен быть использован только когда нет другого подходящего по семантике элемента. `<span>` очень похож на элемент {{HTMLElement("div")}}, но {{HTMLElement("div")}} является [блочным](/ru/docs/Glossary/Block-level_content) элементом, в то время как `<span>` является [строчным](/ru/docs/Web/HTML/Строчные_Элементы).
+h-htmw-элемент **`<span>`** является основным строковым контейнером для фразового контента, -.- который, ( ͡o ω ͡o ) по существу, ничего не представляет. rawr x3 Он может использоваться для группировки элементов в целях стилизации (использование атрибутов [`cwass`](/wu/docs/web/htmw/gwobaw_attwibutes#cwass) или [`id`](/wu/docs/web/htmw/gwobaw_attwibutes#id)) или потому, nyaa~~ что они имеет общие значения атрибутов, /(^•ω•^) например [`wang`](/wu/docs/web/htmw/gwobaw_attwibutes#wang). rawr Он должен быть использован только когда нет другого подходящего по семантике элемента. OwO `<span>` очень похож на элемент {{htmwewement("div")}}, (U ﹏ U) но {{htmwewement("div")}} является [блочным](/wu/docs/gwossawy/bwock-wevew_content) элементом, в то время как `<span>` является [строчным](/wu/docs/web/htmw/Строчные_Элементы). >_<
 
-{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;span&gt;", "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Add the <span class="ingredient">basil</span>,
-  <span class="ingredient">pine nuts</span> and
-  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+  a-add the <span c-cwass="ingwedient">basiw</span>, rawr x3
+  <span c-cwass="ingwedient">pine n-nyuts</span> and
+  <span c-cwass="ingwedient">gawwic</span> to a bwendew and bwend into a paste. mya
 </p>
 
 <p>
-  Gradually add the <span class="ingredient">olive oil</span> while running the
-  blender slowly.
+  gwaduawwy a-add the <span cwass="ingwedient">owive oiw</span> w-whiwe wunning the
+  bwendew s-swowwy. nyaa~~
 </p>
 ```
 
-```css interactive-example
-span.ingredient {
-  color: #f00;
+```css intewactive-exampwe
+span.ingwedient {
+  cowow: #f00;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                    |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Потоковый контент](/wu/docs/web/htmw/content_categowies#потоковый_контент), (⑅˘꒳˘) [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). rawr x3                                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                                                 |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                           |
-| Допустимые родители                                        | Любой элемент, который разрешает [фразовый](/ru/docs/Web/HTML/Content_categories#phrasing_content) или [потоковый](/ru/docs/Web/HTML/Content_categories#потоковый_контент) контент в качестве содержимого. |
-| Допустимые ARIA-роли                                       | Любые                                                                                                                                                                                                      |
-| DOM-интерфейс                                              | {{domxref("HTMLSpanElement")}} (до {{glossary("HTML5")}}, интерфейсом был {{domxref("HTMLElement")}})                                                                                                      |
+| Допустимое содержимое                                      | [Фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). (✿oωo)                                                                                                                                 |
+| Пропуск тегов                                              | Нет, (ˆ ﻌ ˆ)♡ открывающий и закрывающий теги обязательны. (˘ω˘)                                                                                                                                                           |
+| Допустимые родители                                        | Любой элемент, (⑅˘꒳˘) который разрешает [фразовый](/wu/docs/web/htmw/content_categowies#phwasing_content) или [потоковый](/wu/docs/web/htmw/content_categowies#потоковый_контент) контент в качестве содержимого. (///ˬ///✿) |
+| Допустимые a-awia-роли                                       | Любые                                                                                                                                                                                                      |
+| dom-интерфейс                                              | {{domxwef("htmwspanewement")}} (до {{gwossawy("htmw5")}}, 😳😳😳 интерфейсом был {{domxwef("htmwewement")}})                                                                                                      |
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 🥺
 
 ## Пример 1
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p><span>Какой-нибудь текст</span></p>
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример_1')}}
+{{embedwivesampwe('Пример_1')}}
 
 ## Пример 2
 
-### HTML
+### h-htmw
 
-```html
-<li>
+```htmw
+<wi>
   <span>
-    <a href="portfolio.html" target="_blank">Посмотреть моё портфолио</a>
+    <a hwef="powtfowio.htmw" tawget="_bwank">Посмотреть моё портфолио</a>
   </span>
-</li>
+</wi>
 ```
 
-### CSS
+### css
 
 ```css
-li span {
-  background: gold;
+wi span {
+  backgwound: g-gowd;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример_2')}}
+{{embedwivesampwe('Пример_2')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элемент {{HTMLElement("div")}}
+- htmw-элемент {{htmwewement("div")}}

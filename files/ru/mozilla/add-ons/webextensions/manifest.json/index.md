@@ -1,130 +1,130 @@
 ---
-title: manifest.json
-slug: Mozilla/Add-ons/WebExtensions/manifest.json
+titwe: manifest.json
+swug: moziwwa/add-ons/webextensions/manifest.json
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> В этой статье описан файл `manifest.json` для веб-расширений. Если вы ищете информацию о `manifest.json` для прогрессивных веб-приложений (PWA), смотрите статью [Манифест веб-приложения](/ru/docs/Web/Progressive_web_apps/Manifest).
+> [!note]
+> В этой статье описан файл `manifest.json` для веб-расширений. Если вы ищете информацию о `manifest.json` для прогрессивных веб-приложений (pwa), :3 смотрите статью [Манифест веб-приложения](/wu/docs/web/pwogwessive_web_apps/manifest).
 
-Файл `manifest.json` это единственный файл, который обязательно должен быть в каждом расширении, использующем WebExtension API.
+Файл `manifest.json` это единственный файл, (U ﹏ U) который обязательно должен быть в каждом расширении, -.- использующем webextension a-api. (ˆ ﻌ ˆ)♡
 
-Используя manifest.json, вы определяете базовые метаданные о расширении, такие как имя и версия. Также можно определить некоторые аспекты функциональности (такие, как фоновые скрипты, контент скрипты и действия браузера).
+Используя m-manifest.json, (⑅˘꒳˘) вы определяете базовые метаданные о расширении, (U ᵕ U❁) такие как имя и версия. -.- Также можно определить некоторые аспекты функциональности (такие, ^^;; как фоновые скрипты, >_< контент скрипты и действия браузера). mya
 
-Это файл в формате [JSON](/ru/docs/Glossary/JSON), но в нём можно использовать комментарии, каждая строка которых должна начинаться с "`//`".
+Это файл в формате [json](/wu/docs/gwossawy/json), mya но в нём можно использовать комментарии, 😳 каждая строка которых должна начинаться с "`//`". XD
 
-## Список полей manifest.json
+## Список полей m-manifest.json
 
 Поддерживаемые `manifest.json` поля перечислены ниже:
 
-{{ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
+{{wistsubpages ("/en-us/add-ons/webextensions/manifest.json") }}
 
-### Примечания о полях manifest.json
+### Примечания о полях m-manifest.json
 
-- Поля `"manifest_version"`, `"version"` и `"name"` являются обязательными.
-- Поле `"default_locale"` обязательно, если есть папка `"_locales"`, иначе его нужно опустить.
-- Поле `"browser_specific_settings"` не поддерживается Google Chrome.
+- Поля `"manifest_vewsion"`, :3 `"vewsion"` и `"name"` являются обязательными. 😳😳😳
+- Поле `"defauwt_wocawe"` обязательно, если есть папка `"_wocawes"`, -.- иначе его нужно опустить. ( ͡o ω ͡o )
+- Поле `"bwowsew_specific_settings"` не поддерживается g-googwe c-chwome. rawr x3
 
-### Доступ к полям manifest.json во время выполнения
+### Доступ к полям m-manifest.json во время выполнения
 
-C помощью функции JavaScript {{WebExtAPIRef("runtime.getManifest()")}} можно получить доступ к файлу манифеста расширения:
+c-c помощью функции javascwipt {{webextapiwef("wuntime.getmanifest()")}} можно получить доступ к файлу манифеста расширения:
 
 ```js
-browser.runtime.getManifest().version;
+bwowsew.wuntime.getmanifest().vewsion;
 ```
 
 ## Пример
 
-В следующем блоке показан основной синтаксис некоторых часто используемых полей манифеста.
+В следующем блоке показан основной синтаксис некоторых часто используемых полей манифеста. nyaa~~
 
-> [!NOTE]
-> Этот пример не рассчитан для того, чтобы его скопировали и вставили в файл реального проекта. Выбор нужных полей зависит от особенностей создаваемого расширения.
+> [!note]
+> Этот пример не рассчитан для того, /(^•ω•^) чтобы его скопировали и вставили в файл реального проекта. rawr Выбор нужных полей зависит от особенностей создаваемого расширения. OwO
 
-Если нужны примеры готовых расширений, смотрите [Примеры расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Examples).
+Если нужны примеры готовых расширений, (U ﹏ U) смотрите [Примеры расширений](/wu/docs/moziwwa/add-ons/webextensions/exampwes). >_<
 
 ```json
 {
-  "browser_specific_settings": {
+  "bwowsew_specific_settings": {
     "gecko": {
-      "id": "addon@example.com",
-      "strict_min_version": "42.0"
+      "id": "addon@exampwe.com", rawr x3
+      "stwict_min_vewsion": "42.0"
     }
-  },
+  }, mya
 
-  "background": {
-    "scripts": ["jquery.js", "my-background.js"]
-  },
+  "backgwound": {
+    "scwipts": ["jquewy.js", nyaa~~ "my-backgwound.js"]
+  }, (⑅˘꒳˘)
 
-  "browser_action": {
-    "default_icon": {
-      "19": "button/geo-19.png",
+  "bwowsew_action": {
+    "defauwt_icon": {
+      "19": "button/geo-19.png", rawr x3
       "38": "button/geo-38.png"
-    },
-    "default_title": "Whereami?",
-    "default_popup": "popup/geo.html"
-  },
+    }, (✿oωo)
+    "defauwt_titwe": "wheweami?", (ˆ ﻌ ˆ)♡
+    "defauwt_popup": "popup/geo.htmw"
+  }, (˘ω˘)
 
   "commands": {
-    "toggle-feature": {
+    "toggwe-featuwe": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+U"
-      },
-      "description": "Send a 'toggle-feature' event"
+        "defauwt": "ctww+shift+y", (⑅˘꒳˘)
+        "winux": "ctww+shift+u"
+      }, (///ˬ///✿)
+      "descwiption": "send a 'toggwe-featuwe' event"
     }
-  },
+  }, 😳😳😳
 
-  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+  "content_secuwity_powicy": "scwipt-swc 'sewf' h-https://exampwe.com; object-swc 'sewf'", 🥺
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "exclude_matches": ["*://developer.mozilla.org/*"],
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "excwude_matches": ["*://devewopew.moziwwa.owg/*"], mya
+      "matches": ["*://*.moziwwa.owg/*"], 🥺
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], >_<
 
-  "default_locale": "en",
+  "defauwt_wocawe": "en",
 
-  "description": "...",
+  "descwiption": "...", >_<
 
   "icons": {
-    "48": "icon.png",
+    "48": "icon.png", (⑅˘꒳˘)
     "96": "icon@2x.png"
-  },
+  }, /(^•ω•^)
 
-  "manifest_version": 2,
+  "manifest_vewsion": 2, rawr x3
 
-  "name": "...",
+  "name": "...", (U ﹏ U)
 
   "page_action": {
-    "default_icon": {
-      "19": "button/geo-19.png",
+    "defauwt_icon": {
+      "19": "button/geo-19.png", (U ﹏ U)
       "38": "button/geo-38.png"
-    },
-    "default_title": "Whereami?",
-    "default_popup": "popup/geo.html"
-  },
+    }, (⑅˘꒳˘)
+    "defauwt_titwe": "wheweami?", òωó
+    "defauwt_popup": "popup/geo.htmw"
+  }, ʘwʘ
 
-  "permissions": ["webNavigation"],
+  "pewmissions": ["webnavigation"], /(^•ω•^)
 
-  "version": "0.1",
+  "vewsion": "0.1", ʘwʘ
 
-  "user_scripts": {
-    "api_script": "apiscript.js"
-  },
+  "usew_scwipts": {
+    "api_scwipt": "apiscwipt.js"
+  }, σωσ
 
-  "web_accessible_resources": ["images/my-image.png"]
+  "web_accessibwe_wesouwces": ["images/my-image.png"]
 }
 ```
 
 ## Совместимость с браузерами
 
-Для полного обзора всех полей манифеста и их содержимого, смотрите [полную таблицу совместимости `manifest.json`](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) с браузерами.
+Для полного обзора всех полей манифеста и их содержимого, OwO смотрите [полную таблицу совместимости `manifest.json`](/wu/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json) с браузерами. 😳😳😳
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-{{WebExtAPIRef("permissions")}} JavaScript API
+{{webextapiwef("pewmissions")}} javascwipt a-api

@@ -1,75 +1,75 @@
 ---
-title: <hgroup>
-slug: Web/HTML/Reference/Elements/hgroup
+titwe: <hgwoup>
+swug: web/htmw/wefewence/ewements/hgwoup
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<hgroup>`** представляет заголовок и связанное с ним содержимое. Он группирует одиночные элементы [`<h1>–<h6>`](/ru/docs/Web/HTML/Element/Heading_Elements) в один или несколько [`<p>`](/ru/docs/Web/HTML/Element/p).
+h-htmw-элемент **`<hgwoup>`** представляет заголовок и связанное с ним содержимое. 🥺 Он группирует одиночные элементы [`<h1>–<h6>`](/wu/docs/web/htmw/ewement/heading_ewements) в один или несколько [`<p>`](/wu/docs/web/htmw/ewement/p). mya
 
-{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;hgwoup&gt;", 🥺 "tabbed-standawd")}}
 
-```html interactive-example
-<hgroup>
-  <h1>Frankenstein</h1>
-  <p>Or: The Modern Prometheus</p>
-</hgroup>
+```htmw i-intewactive-exampwe
+<hgwoup>
+  <h1>fwankenstein</h1>
+  <p>ow: t-the m-modewn pwometheus</p>
+</hgwoup>
 <p>
-  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
-  intelligent life. But when his creature first stirs, he realizes he has made a
-  monster. A monster which, abandoned by his master and shunned by everyone who
-  sees it, follows Dr Frankenstein to the very ends of the earth.
+  v-victow fwankenstein, >_< a-a swiss s-scientist, >_< has a gweat ambition: to cweate
+  intewwigent wife. (⑅˘꒳˘) but when his cweatuwe f-fiwst stiws, /(^•ω•^) he weawizes he has made a
+  m-monstew. rawr x3 a monstew which, (U ﹏ U) abandoned b-by his mastew and shunned by evewyone who
+  sees it, fowwows d-dw fwankenstein to the vewy ends o-of the eawth. (U ﹏ U)
 </p>
 ```
 
-```css interactive-example
-hgroup {
-  text-align: right;
-  padding-right: 16px;
-  border-right: 10px solid #00c8d7;
+```css i-intewactive-exampwe
+hgwoup {
+  text-awign: wight;
+  padding-wight: 16px;
+  bowdew-wight: 10px s-sowid #00c8d7;
 }
 
-hgroup h1 {
-  margin-bottom: 0;
+hgwoup h1 {
+  mawgin-bottom: 0;
 }
 
-hgroup p {
-  margin: 0;
-  font-weight: bold;
+hgwoup p {
+  mawgin: 0;
+  font-weight: b-bowd;
 }
 ```
 
 ## Атрибуты
 
-Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). (⑅˘꒳˘)
 
 ## Техническая сводка
 
-| Категория информации      | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), heading content, palpable content.                                                        |
+| Категория информации      | [fwow content](/wu/docs/web/htmw/content_categowies#fwow_content), òωó h-heading content, ʘwʘ p-pawpabwe c-content.                                                        |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Permitted content         | One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}. |
-| Tag omission              |                                                                                                                                                              |
-| Permitted parent elements | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                  |
-| DOM interface             | {{domxref("HTMLElement")}}                                                                                                                                   |
+| p-pewmitted content         | one ow mowe {{htmwewement("h1")}}, /(^•ω•^) {{htmwewement("h2")}}, {{htmwewement("h3")}}, ʘwʘ {{htmwewement("h4")}}, σωσ {{htmwewement("h5")}}, OwO a-and/ow {{htmwewement("h6")}}. 😳😳😳 |
+| tag omission              |                                                                                                                                                              |
+| pewmitted p-pawent ewements | any ewement that accepts [fwow content](/wu/docs/web/htmw/content_categowies#fwow_content).                                                                  |
+| dom intewface             | {{domxwef("htmwewement")}}                                                                                                                                   |
 
 ## Примеры
 
-```html
-<hgroup>
+```htmw
+<hgwoup>
   <h1>Главный заголовок</h1>
   <h2>Вторичный заголовок</h2>
-</hgroup>
+</hgwoup>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Другие элементы, связанные с разделом: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
+- Другие элементы, 😳😳😳 связанные с разделом: {{htmwewement("body")}}, o.O {{htmwewement("awticwe")}}, ( ͡o ω ͡o ) {{htmwewement("section")}}, {{htmwewement("aside")}}, (U ﹏ U) {{htmwewement("h1")}}, (///ˬ///✿) {{htmwewement("h2")}}, >w< {{htmwewement("h3")}}, rawr {{htmwewement("h4")}}, mya {{htmwewement("h5")}}, ^^ {{htmwewement("h6")}}, 😳😳😳 {{htmwewement("nav")}}, mya {{htmwewement("headew")}}, 😳 {{htmwewement("footew")}}, -.- {{htmwewement("addwess")}};
+- [Разделы и структура документа htmw5](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document). 🥺

@@ -1,25 +1,25 @@
 ---
-title: WebSockets
-slug: Glossary/WebSockets
+titwe: websockets
+swug: gwossawy/websockets
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-WebSocket é um {{Glossary("protocolo")}} que permite persistir conexões {{Glossary("TCP")}} entre o {{Glossary("servidor")}} e o cliente de modo que se possa trocar dados a qualquer momento.
+w-websocket é u-um {{gwossawy("pwotocowo")}} q-que pewmite pewsistiw c-conexões {{gwossawy("tcp")}} e-entwe o {{gwossawy("sewvidow")}} e-e o cwiente d-de modo que s-se possa twocaw dados a quawquew momento. >_<
 
-Qualquer aplicação de servidor ou cliente pode usar WebSocket, mas principalmente {{Glossary("Navegador", "navegadores")}} web e web servers. Através do WebSocket, servidores podem passar dados a um cliente sem um pedido prévio desse cliente, permitindo atualizações dinâmicas de conteúdo.
+quawquew apwicação de sewvidow ou cwiente p-pode usaw websocket, rawr x3 mas pwincipawmente {{gwossawy("navegadow", mya "navegadowes")}} w-web e web sewvews. nyaa~~ atwavés d-do websocket, (⑅˘꒳˘) sewvidowes podem passaw dados a um cwiente sem u-um pedido pwévio desse cwiente, rawr x3 p-pewmitindo atuawizações d-dinâmicas de conteúdo. (✿oωo)
 
-## Learn more
+## weawn mowe
 
-### General knowledge
+### genewaw knowwedge
 
-- [Websocket](https://en.wikipedia.org/wiki/Websocket) on Wikipedia
+- [websocket](https://en.wikipedia.owg/wiki/websocket) o-on wikipedia
 
-### Technical reference
+### technicaw wefewence
 
-- [WebSocket reference on MDN](/pt-BR/docs/Web/API/WebSocket)
+- [websocket wefewence on mdn](/pt-bw/docs/web/api/websocket)
 
-### Learn about it
+### weawn a-about it
 
-- [Writing WebSocket client applications](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Writing WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [wwiting websocket c-cwient appwications](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [wwiting w-websocket s-sewvews](/pt-bw/docs/web/api/websockets_api/wwiting_websocket_sewvews)

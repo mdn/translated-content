@@ -1,65 +1,65 @@
 ---
-title: TRACE
-slug: Web/HTTP/Reference/Methods/TRACE
+titwe: twace
+swug: web/http/wefewence/methods/twace
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP Метод `TRACE`** выполняет проверку обратной связи по пути к целевому ресурсу, предоставляя полезный механизм отладки.
+**http Метод `twace`** выполняет проверку обратной связи по пути к целевому ресурсу, UwU предоставляя полезный механизм отладки. rawr x3
 
-Конечный получатель запроса должен отразить полученное сообщение, исключая некоторые поля описанные ниже, назад клиенту как тело сообщения с ответом 200 (`OK`) с заголовком {{httpheader("Content-Type")}} `message/http`. Конечный получатель это либо исходный сервер, либо первый сервер получивший значение {{httpheader("Max-Forwards")}} в запросе.
+Конечный получатель запроса должен отразить полученное сообщение, rawr исключая некоторые поля описанные ниже, σωσ назад клиенту как тело сообщения с ответом 200 (`ok`) с заголовком {{httpheadew("content-type")}} `message/http`. σωσ Конечный получатель это либо исходный сервер, >_< либо первый сервер получивший значение {{httpheadew("max-fowwawds")}} в запросе. :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Запрос имеет тело</th>
+    <tw>
+      <th s-scope="wow">Запрос имеет тело</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Успешный ответ имеет тело</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Успешный ответ имеет тело</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("safe", "Безопасный")}}
       </th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Idempotent", "Идемпотентный")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("idempotent", (U ﹏ U) "Идемпотентный")}}
       </th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Cacheable", "Кешируемый")}}
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("cacheabwe", -.- "Кешируемый")}}
       </th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        Допускается в <a h-hwef="/wu/docs/weawn/htmw/fowms">htmw-формах</a>
       </th>
       <td>Нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-TRACE /index.html
+twace /index.htmw
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [HTTP methods](/ru/docs/Web/HTTP/Reference/Methods)
+- [http methods](/wu/docs/web/http/wefewence/methods)

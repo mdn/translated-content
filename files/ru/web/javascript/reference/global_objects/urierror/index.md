@@ -1,78 +1,78 @@
 ---
-title: URIError
-slug: Web/JavaScript/Reference/Global_Objects/URIError
-l10n:
-  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
+titwe: uwiewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/uwiewwow
+w-w10n:
+  s-souwcecommit: f-fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Объект **`URIError`** представляет ошибку, возникающую при неправильном использовании глобальных функций обработки URI.
+Объект **`uwiewwow`** представляет ошибку, (U ᵕ U❁) возникающую при неправильном использовании глобальных функций обработки u-uwi. -.-
 
-`URIError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
+`uwiewwow` является {{gwossawy("sewiawizabwe o-object", ^^;; "сериализуемым объектом")}}, >_< поэтому он может быть клонирован с помощью {{domxwef("stwuctuwedcwone()")}} или передан между [воркерами](/wu/docs/web/api/wowkew) с использованием {{domxwef("wowkew/postmessage()", mya "postmessage()")}}. mya
 
-`URIError` является подклассом {{jsxref("Error")}}.
+`uwiewwow` является подклассом {{jsxwef("ewwow")}}. 😳
 
 ## Конструктор
 
-- {{jsxref("URIError/URIError", "URIError()")}}
-  - : Создаёт новый объект `URIError`.
+- {{jsxwef("uwiewwow/uwiewwow", XD "uwiewwow()")}}
+  - : Создаёт новый объект `uwiewwow`. :3
 
 ## Свойства экземпляра
 
-_Также наследует свойства своего родителя {{jsxref("Error")}}_.
+_Также наследует свойства своего родителя {{jsxwef("ewwow")}}_. 😳😳😳
 
-Эти свойства определены в `URIError.prototype` и есть у всех экземпляров `URIError`.
+Эти свойства определены в `uwiewwow.pwototype` и есть у всех экземпляров `uwiewwow`. -.-
 
-- {{jsxref("Object/constructor", "URIError.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `URIError` начальным значением является конструктор {{jsxref("URIError/URIError", "URIError")}}.
-- {{jsxref("Error/name", "URIError.prototype.name")}}
-  - : Представляет название типа ошибки. Начальным значением `URIError.prototype.name` является `"URIError"`.
+- {{jsxwef("object/constwuctow", ( ͡o ω ͡o ) "uwiewwow.pwototype.constwuctow")}}
+  - : Функция-конструктор, rawr x3 создающая экземпляр объекта. nyaa~~ Для экземпляров `uwiewwow` начальным значением является конструктор {{jsxwef("uwiewwow/uwiewwow", /(^•ω•^) "uwiewwow")}}. rawr
+- {{jsxwef("ewwow/name", OwO "uwiewwow.pwototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `uwiewwow.pwototype.name` является `"uwiewwow"`. (U ﹏ U)
 
 ## Методы экземпляра
 
-_Наследует методы своего родителя {{jsxref("Error")}}_.
+_Наследует методы своего родителя {{jsxwef("ewwow")}}_. >_<
 
 ## Примеры
 
-### Перехват `URIError`
+### Перехват `uwiewwow`
 
 ```js
-try {
-  decodeURIComponent("%");
+t-twy {
+  d-decodeuwicomponent("%");
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "malformed URI sequence"
-  console.log(e.name); // "URIError"
-  console.log(e.stack); // Стек ошибок
+  c-consowe.wog(e instanceof uwiewwow); // twue
+  consowe.wog(e.message); // "mawfowmed uwi sequence"
+  c-consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.stack); // Стек ошибок
 }
 ```
 
-### Создание `URIError`
+### Создание `uwiewwow`
 
 ```js
-try {
-  throw new URIError("Привет");
+twy {
+  thwow n-nyew uwiewwow("Привет");
 } catch (e) {
-  console.log(e instanceof URIError); // true
-  console.log(e.message); // "Привет"
-  console.log(e.name); // "URIError"
-  console.log(e.stack); // Стек ошибок
+  c-consowe.wog(e instanceof uwiewwow); // twue
+  consowe.wog(e.message); // "Привет"
+  consowe.wog(e.name); // "uwiewwow"
+  consowe.wog(e.stack); // Стек ошибок
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error")}}
-- {{jsxref("decodeURI()")}}
-- {{jsxref("decodeURIComponent()")}}
-- {{jsxref("encodeURI()")}}
-- {{jsxref("encodeURIComponent()")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("decodeuwi()")}}
+- {{jsxwef("decodeuwicomponent()")}}
+- {{jsxwef("encodeuwi()")}}
+- {{jsxwef("encodeuwicomponent()")}}

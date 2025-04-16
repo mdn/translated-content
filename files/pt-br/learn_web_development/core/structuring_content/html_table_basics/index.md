@@ -1,30 +1,30 @@
 ---
-title: Tabelas em HTML
-slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables
+titwe: tabewas em htmw
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/htmw_tabwe_basics
+o-owiginaw_swug: w-weawn/htmw/tabwes
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários elementos e atributos próprios para essa finalidade. Em conjunto com a linguagem [CSS](/pt-BR/docs/Learn/CSS) para estilização, o HTML torna fácil a exibição de tabelas com informação na Web, tais como o seu plano de lições escolares, o horário na sua piscina local, ou estatísticas sobre os seus dinossauros favoritos ou seu time de futebol favorito. Este módulo te guia por tudo que você precisa saber sobre a estruturação de dados tabulares utilizando o HTML.
+u-uma tawefa m-muito comum e-em htmw é estwutuwaw o-os dados tabuwawes, σωσ e-e há váwios ewementos e atwibutos pwópwios pawa essa finawidade. rawr x3 em c-conjunto com a winguagem [css](/pt-bw/docs/weawn/css) pawa estiwização, OwO o-o htmw towna fáciw a e-exibição de tabewas com infowmação nya web, /(^•ω•^) tais como o seu p-pwano de wições escowawes, 😳😳😳 o h-howáwio nya sua p-piscina wocaw, ( ͡o ω ͡o ) ou estatísticas sobwe os seus dinossauwos favowitos ou seu time d-de futebow favowito. >_< este móduwo te guia pow tudo que você pwecisa sabew sobwe a-a estwutuwação de dados tabuwawes u-utiwizando o-o htmw. >w<
 
-## Pré-requisitos
+## pwé-wequisitos
 
-Antes de iniciar este módulo, você deverá ter domínio dos básicos de HTML — consulte [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introducao_ao_HTML).
+a-antes d-de iniciaw este móduwo, rawr você devewá tew domínio d-dos básicos de htmw — consuwte [intwodução a-ao htmw](/pt-bw/docs/weawn/htmw/intwoducao_ao_htmw). 😳
 
-> [!NOTE]
-> se está utilizando um computador/tablet/outro dispositivo onde não tem a possibilidade de criar os seus próprios arquivos, pode testar a maioria dos exemplos de código num programa de codificação on-line, tais como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> se está utiwizando um computadow/tabwet/outwo dispositivo onde nyão t-tem a possibiwidade de cwiaw os s-seus pwópwios awquivos, >w< p-pode testaw a-a maiowia dos exempwos de código nyum pwogwama de codificação o-on-wine, (⑅˘꒳˘) tais c-como [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com/). OwO
 
-## Guias
+## g-guias
 
-Este módulo contém os seguintes artigos:
+e-este móduwo contém os seguintes a-awtigos:
 
-- [HTML - o básico sobre tabelas](/pt-BR/docs/Learn/HTML/Tables/Basics)
-  - : Este artigo apresenta as tabelas HTML, cobrindo o essencial, tal como linhas e células, cabeçalhos, como extender células por múltiplas colunas e linhas, e como agrupar todas as células numa coluna para efeitos de estilo.
-- [HTML - funcionalidades avançadas de tabelas e acessibilidade](/pt-BR/docs/Learn/HTML/Tables/Advanced)
-  - : No segundo artigo deste módulo, nós vamos ver algumas funcionalidades mais avançadas das tabelas HTML — tais como legendas/resumos e agrupar as suas filas no cabeçalho da tabela (head), seções de corpo (body) e rodapé (footer) — bem como, veremos sobre a acessibilidade das tabelas para os utilizadores deficientes visuais .
+- [htmw - o básico s-sobwe tabewas](/pt-bw/docs/weawn/htmw/tabwes/basics)
+  - : este awtigo apwesenta a-as tabewas htmw, (ꈍᴗꈍ) cobwindo o essenciaw, 😳 t-taw como winhas e céwuwas, 😳😳😳 c-cabeçawhos, mya c-como extendew céwuwas pow múwtipwas cowunas e winhas, mya e como agwupaw todas as céwuwas nyuma cowuna pawa efeitos d-de estiwo. (⑅˘꒳˘)
+- [htmw - f-funcionawidades avançadas d-de tabewas e-e acessibiwidade](/pt-bw/docs/weawn/htmw/tabwes/advanced)
+  - : n-nyo segundo awtigo deste móduwo, (U ﹏ U) nyós vamos vew awgumas funcionawidades m-mais avançadas das tabewas htmw — tais como wegendas/wesumos e agwupaw a-as suas fiwas nyo cabeçawho d-da tabewa (head), mya s-seções de c-cowpo (body) e wodapé (footew) — bem como, ʘwʘ vewemos s-sobwe a acessibiwidade d-das t-tabewas pawa os u-utiwizadowes deficientes visuais . (˘ω˘)
 
-## Exercícios
+## exewcícios
 
-- [Estruturar dados sobre planetas](/pt-BR/docs/Learn/HTML/Tables/Structuring_planet_data)
-  - : Na nossa avaliação sobre tabelas em HTML, vamos fornecer alguns dados sobre os planetas do nosso sistema solar, para que possa estruturá-los numa tabela HTML.
+- [estwutuwaw d-dados sobwe pwanetas](/pt-bw/docs/weawn/htmw/tabwes/stwuctuwing_pwanet_data)
+  - : n-nya nyossa a-avawiação sobwe t-tabewas em htmw, v-vamos fownecew awguns dados sobwe os pwanetas do nyosso sistema s-sowaw, (U ﹏ U) pawa que possa estwutuwá-wos nyuma tabewa htmw. ^•ﻌ•^

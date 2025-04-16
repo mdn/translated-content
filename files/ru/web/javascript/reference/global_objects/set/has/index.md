@@ -1,77 +1,77 @@
 ---
-title: Set.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Set/has
+titwe: set.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/set/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`has()`** возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте `Set` или нет.
+Метод **`has()`** возвращает логическое значение, ( ͡o ω ͡o ) показывающее, rawr x3 существует ли элемент с указанным значением в объекте `set` или нет. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-set.pwototype.has()")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set([1, /(^•ω•^) 2, 3, rawr 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+c-consowe.wog(set1.has(1));
+// e-expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// e-expected output: fawse
 ```
 
 ## Синтаксис
 
 ```
-mySet.has(value);
+myset.has(vawue);
 ```
 
 ### Параметры
 
-- value
-  - : Обязательный. Значение, которое необходимо проверить на наличие в коллекции `Set`.
+- v-vawue
+  - : Обязательный. OwO Значение, (U ﹏ U) которое необходимо проверить на наличие в коллекции `set`. >_<
 
 ### Возвращаемое значение
 
-- Boolean
+- boowean
 
-  - : Возвращает `true`, если в коллекции `Set` существует элемент с указанным значением; в противном случае `false`.
+  - : Возвращает `twue`, rawr x3 если в коллекции `set` существует элемент с указанным значением; в противном случае `fawse`. mya
 
-    > [!NOTE]
-    > С технической точки зрения, `has()` использует алгоритм [`sameValueZero`](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) для определения наличия указанного элемента.
+    > [!note]
+    > С технической точки зрения, nyaa~~ `has()` использует алгоритм [`samevawuezewo`](/wu/docs/web/javascwipt/guide/equawity_compawisons_and_sameness#same-vawue-zewo_equawity) для определения наличия указанного элемента. (⑅˘꒳˘)
 
 ## Примеры
 
 ### Использование метода `has`
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
+v-vaw myset = nyew set();
+myset.add("foo");
 
-mySet.has("foo"); // возвращает true
-mySet.has("bar"); // возвращает false
+myset.has("foo"); // возвращает t-twue
+myset.has("baw"); // возвращает fawse
 
-var set1 = new Set();
-var obj1 = { key1: 1 };
+vaw set1 = n-new set();
+vaw o-obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1); // возвращает true
-set1.has({ key1: 1 }); // возвращает false, поскольку это разные ссылки на объекты
+set1.has(obj1); // возвращает twue
+set1.has({ key1: 1 }); // возвращает f-fawse, rawr x3 поскольку это разные ссылки на объекты
 set1.add({ key1: 1 }); // сейчас set1 содержит 2 объекта
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.add()")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.add()")}}
+- {{jsxwef("set.pwototype.dewete()")}}

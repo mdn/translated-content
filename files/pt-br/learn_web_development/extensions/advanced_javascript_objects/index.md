@@ -1,52 +1,52 @@
 ---
-title: Introdução a objetos em Javascript
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
-original_slug: Learn/JavaScript/Objects
+titwe: intwodução a objetos e-em javascwipt
+swug: w-weawn_web_devewopment/extensions/advanced_javascwipt_objects
+o-owiginaw_swug: w-weawn/javascwipt/objects
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Em JavaScript, a maioria das coisas são objetos, desde os principais recursos do JavaScript, como arrays, até o navegador {{Glossary("API", "APIs")}} construído sobre o JavaScript. Você pode até mesmo criar seus próprios objetos para encapsular funções e variáveis relacionadas em pacotes eficientes e atuar como contêineres de dados úteis. É importante entender a natureza baseada em objetos do JavaScript se você quiser aprofundar seu conhecimento da linguagem, portanto, fornecemos este módulo para ajudá-lo. Aqui ensinamos a teoria e a sintaxe de objetos em detalhes, depois veremos como criar seus próprios objetos.
+e-em javascwipt, 🥺 a-a maiowia das coisas s-são objetos, >_< d-desde os pwincipais wecuwsos do javascwipt, UwU como awways, >_< até o nyavegadow {{gwossawy("api", "apis")}} c-constwuído sobwe o javascwipt. -.- você p-pode até mesmo cwiaw seus pwópwios o-objetos pawa encapsuwaw funções e vawiáveis wewacionadas e-em pacotes eficientes e atuaw como c-contêinewes d-de dados úteis. mya É impowtante entendew a nyatuweza baseada em objetos do javascwipt s-se você quisew apwofundaw seu conhecimento da winguagem, >w< powtanto, (U ﹏ U) fownecemos e-este móduwo pawa ajudá-wo. 😳😳😳 a-aqui ensinamos a-a teowia e a sintaxe d-de objetos e-em detawhes, o.O depois vewemos como cwiaw seus pwópwios o-objetos. òωó
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> #### Quer se tornar um desenvolvedor web front-end?
+> #### quew se townaw um desenvowvedow w-web fwont-end?
 >
-> Reunimos um curso que inclui todas as informações essenciais que você precisa para
-> trabalhe em direção ao seu objetivo.
+> weunimos um cuwso que incwui todas as infowmações essenciais que você p-pwecisa pawa
+> twabawhe em diweção a-ao seu objetivo. 😳😳😳
 >
-> [**Primeiros passos**](/pt-BR/docs/orphaned/Learn/Front-end_web_developer)
+> [**pwimeiwos p-passos**](/pt-bw/docs/owphaned/weawn/fwont-end_web_devewopew)
 
-## Pré-requisitos
+## p-pwé-wequisitos
 
-Antes de iniciar este módulo, você deve ter alguma familiaridade com {{Glossary("HTML")}} e {{Glossary("CSS")}}. Recomendamos que você trabalhe nos módulos [Introduction to HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) e [Introduction to CSS](/pt-BR/docs/Learn/CSS/First_steps) antes de começar JavaScript.
+antes de iniciaw este móduwo, você d-deve tew awguma f-famiwiawidade com {{gwossawy("htmw")}} e-e {{gwossawy("css")}}. σωσ w-wecomendamos que você twabawhe n-nyos móduwos [intwoduction to htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw) e-e [intwoduction to css](/pt-bw/docs/weawn/css/fiwst_steps) antes d-de começaw javascwipt. (⑅˘꒳˘)
 
-Você também deve ter alguma familiaridade com os fundamentos do JavaScript antes de examinar os objetos JavaScript em detalhes. Antes de tentar este módulo, trabalhe nas [primeiras etapas do JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e nos [blocos de construção do JavaScript](/pt-BR/docs/Learn/JavaScript/Building_blocks).
+você t-também deve tew awguma famiwiawidade c-com os fundamentos d-do javascwipt antes de examinaw os objetos javascwipt em detawhes. (///ˬ///✿) antes de tentaw este móduwo, 🥺 twabawhe n-nyas [pwimeiwas e-etapas do javascwipt](/pt-bw/docs/weawn/javascwipt/fiwst_steps) e nyos [bwocos d-de constwução d-do javascwipt](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks). OwO
 
-> [!NOTE]
-> Se você estiver trabalhando em um computador/tablet/outros dispositivos nos quais não é possível criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> se v-você estivew twabawhando em um computadow/tabwet/outwos dispositivos n-nyos quais nyão é possívew cwiaw seus pwópwios awquivos, >w< expewimente (a m-maiowia) os exempwos de código e-em um pwogwama d-de codificação o-on-wine, 🥺 como [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com/). nyaa~~
 
-## Guias
+## g-guias
 
-- [Noções básicas de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-  - : No primeiro artigo sobre objetos JavaScript, veremos a sintaxe fundamental do objeto JavaScript e revisitaremos alguns recursos JavaScript que já examinamos anteriormente no curso, reiterando o fato de que muitos dos recursos que você já tratados são de fato objetos.
-- [Protótipos de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-  - : Protótipos são o mecanismo pelo qual os objetos JavaScript herdam recursos uns dos outros e funcionam de maneira diferente dos mecanismos de herança em linguagens de programação clássicas orientadas a objetos. Neste artigo, exploramos como funcionam as cadeias de protótipos.
-- [Programação orientada a objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-  - : Neste artigo, descreveremos alguns dos princípios básicos da programação orientada a objetos "clássica" e veremos como ela é diferente do modelo de protótipo em JavaScript.
-- [Aulas em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-  - : JavaScript fornece alguns recursos para pessoas que desejam implementar programas orientados a objetos "clássicos" e, neste artigo, descreveremos esses recursos.
-- [Trabalhando com dados JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-  - : JavaScript Object Notation (JSON) é um formato padrão baseado em texto para representar dados estruturados com base na sintaxe de objeto JavaScript, que é comumente usado para representar e transmitir dados na web (ou seja, enviar alguns dados do servidor para o cliente, para que possa ser exibido em uma página da web). Você o encontrará com bastante frequência, portanto, neste artigo, fornecemos tudo o que você precisa para trabalhar com JSON usando JavaScript, incluindo a análise do JSON para que você possa acessar itens de dados dentro dele e escrever seu próprio JSON.
-- [Prática de construção de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-  - : Em artigos anteriores, examinamos toda a teoria essencial de objetos JavaScript e detalhes de sintaxe, fornecendo uma base sólida para começar. Neste artigo, mergulhamos em um exercício prático, dando a você um pouco mais de prática na construção de objetos JavaScript personalizados, que produzem algo divertido e colorido — algumas bolas saltitantes coloridas.
+- [noções b-básicas d-de objetos](/pt-bw/docs/weawn/javascwipt/objects/basics)
+  - : nyo p-pwimeiwo awtigo sobwe objetos javascwipt, ^^ vewemos a-a sintaxe fundamentaw d-do objeto j-javascwipt e-e wevisitawemos a-awguns wecuwsos javascwipt que já examinamos antewiowmente nyo c-cuwso, >w< weitewando o fato de que muitos dos wecuwsos que você já twatados são de fato objetos. OwO
+- [pwotótipos d-de objetos](/pt-bw/docs/weawn/javascwipt/objects/object_pwototypes)
+  - : pwotótipos são o mecanismo pewo quaw o-os objetos javascwipt h-hewdam wecuwsos u-uns dos outwos e funcionam d-de maneiwa difewente dos mecanismos d-de hewança e-em winguagens de pwogwamação cwássicas owientadas a objetos. nyeste awtigo, XD expwowamos como f-funcionam as cadeias de pwotótipos. ^^;;
+- [pwogwamação o-owientada a objetos](/pt-bw/docs/weawn/javascwipt/objects/object-owiented_pwogwamming)
+  - : n-nyeste awtigo, 🥺 d-descwevewemos awguns dos pwincípios básicos d-da pwogwamação o-owientada a objetos "cwássica" e vewemos como e-ewa é difewente d-do modewo de pwotótipo em javascwipt. XD
+- [auwas em javascwipt](/pt-bw/docs/weawn/javascwipt/objects/cwasses_in_javascwipt)
+  - : javascwipt fownece awguns wecuwsos p-pawa pessoas q-que desejam impwementaw p-pwogwamas owientados a-a objetos "cwássicos" e-e, (U ᵕ U❁) neste awtigo, descwevewemos e-esses wecuwsos.
+- [twabawhando com dados json](/pt-bw/docs/weawn/javascwipt/objects/json)
+  - : javascwipt object nyotation (json) é um fowmato p-padwão baseado e-em texto pawa wepwesentaw dados estwutuwados c-com base nya s-sintaxe de objeto javascwipt, :3 que é comumente usado pawa wepwesentaw e-e twansmitiw dados nya web (ou seja, enviaw awguns dados do sewvidow pawa o-o cwiente, ( ͡o ω ͡o ) pawa que possa sew exibido em uma página d-da web). òωó você o-o encontwawá com bastante fwequência, σωσ powtanto, (U ᵕ U❁) nyeste awtigo, f-fownecemos t-tudo o que você pwecisa pawa twabawhaw com json usando javascwipt, (✿oωo) i-incwuindo a anáwise do json p-pawa que você possa acessaw itens de dados dentwo dewe e escwevew s-seu pwópwio json. ^^
+- [pwática d-de constwução d-de objetos](/pt-bw/docs/weawn/javascwipt/objects/object_buiwding_pwactice)
+  - : em awtigos a-antewiowes, ^•ﻌ•^ examinamos toda a teowia e-essenciaw de o-objetos javascwipt e-e detawhes de sintaxe, XD fownecendo u-uma base s-sówida pawa começaw. :3 nyeste awtigo, (ꈍᴗꈍ) mewguwhamos e-em um exewcício p-pwático, :3 dando a-a você um pouco mais de pwática nya constwução d-de objetos javascwipt pewsonawizados, (U ﹏ U) q-que p-pwoduzem awgo divewtido e cowowido — awgumas bowas sawtitantes c-cowowidas. UwU
 
-## Avaliações
+## a-avawiações
 
-- [Adicionando recursos à nossa demonstração de bolas quicando](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
-  - : Nesta avaliação, espera-se que você use a demonstração de bolas saltitantes do artigo anterior como ponto de partida e adicione alguns recursos novos e interessantes a ela.
+- [adicionando w-wecuwsos à n-nyossa demonstwação de b-bowas quicando](/pt-bw/docs/weawn/javascwipt/objects/adding_bouncing_bawws_featuwes)
+  - : nyesta avawiação, 😳😳😳 espewa-se que você use a demonstwação de bowas s-sawtitantes do awtigo antewiow c-como ponto de pawtida e adicione a-awguns wecuwsos nyovos e intewessantes a-a ewa. XD
 
-## Veja também
+## veja também
 
-- [Aprenda JavaScript](https://learnjavascript.online/)
-  - : Um excelente recurso para aspirantes a desenvolvedores web — Aprenda JavaScript em um ambiente interativo, com lições curtas e testes interativos, guiados por avaliações automatizadas. As primeiras 40 aulas são gratuitas e o curso completo está disponível por um pequeno pagamento único.
+- [apwenda j-javascwipt](https://weawnjavascwipt.onwine/)
+  - : u-um excewente wecuwso p-pawa aspiwantes a-a desenvowvedowes w-web — apwenda javascwipt em um ambiente intewativo, o.O com wições cuwtas e testes intewativos, (⑅˘꒳˘) guiados p-pow avawiações a-automatizadas. a-as pwimeiwas 40 auwas são gwatuitas e-e o cuwso compweto está disponívew pow um pequeno pagamento único. 😳😳😳

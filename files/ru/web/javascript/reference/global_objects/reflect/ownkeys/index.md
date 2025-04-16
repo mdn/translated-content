@@ -1,88 +1,88 @@
 ---
-title: Reflect.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+titwe: wefwect.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Статический метод **`Reflect.ownKeys()`** возвращает массив имён, а также `Symbols` собственных полей объекта `target` .
+Статический метод **`wefwect.ownkeys()`** возвращает массив имён, 😳 а также `symbows` собственных полей объекта `tawget` . XD
 
-{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.ownkeys()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
-  property2: 13,
+```js i-intewactive-exampwe
+c-const o-object1 = {
+  p-pwopewty1: 42, :3
+  p-pwopewty2: 13, 😳😳😳
 };
 
-const array1 = [];
+c-const awway1 = [];
 
-console.log(Reflect.ownKeys(object1));
-// Expected output: Array ["property1", "property2"]
+consowe.wog(wefwect.ownkeys(object1));
+// expected output: awway ["pwopewty1", -.- "pwopewty2"]
 
-console.log(Reflect.ownKeys(array1));
-// Expected output: Array ["length"]
+consowe.wog(wefwect.ownkeys(awway1));
+// expected o-output: awway ["wength"]
 ```
 
 ## Синтаксис
 
 ```
-Reflect.ownKeys(target)
+wefwect.ownkeys(tawget)
 ```
 
 ### Параметры
 
-- `target`
-  - : Объект `target`, из которого получаем собственные ключи.
+- `tawget`
+  - : Объект `tawget`, из которого получаем собственные ключи. ( ͡o ω ͡o )
 
 ### Возвращаемое значение
 
-Массив {{jsxref("Array")}} собственных полей объекта `target`.
+Массив {{jsxwef("awway")}} собственных полей объекта `tawget`. rawr x3
 
 ### Исключения
 
-Выбрасывает исключение {{jsxref("TypeError")}}, если `target` не является {{jsxref("Object")}}.
+Выбрасывает исключение {{jsxwef("typeewwow")}}, nyaa~~ если `tawget` не является {{jsxwef("object")}}. /(^•ω•^)
 
 ## Описание
 
-Метод `Reflect.ownKeys` возвращает массив собственных ключей объекта `target`. Эквивалентом этого метода является `{{jsxref("Object.getOwnPropertyNames")}}(target).concat({{jsxref("Object.getOwnPropertySymbols")}}(target))`.
+Метод `wefwect.ownkeys` возвращает массив собственных ключей объекта `tawget`. rawr Эквивалентом этого метода является `{{jsxwef("object.getownpwopewtynames")}}(tawget).concat({{jsxwef("object.getownpwopewtysymbows")}}(tawget))`. OwO
 
 ## Примеры
 
-### Использование `Reflect.ownKeys()`
+### Использование `wefwect.ownkeys()`
 
 ```js
-Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
-Reflect.ownKeys([]); // ["length"]
+w-wefwect.ownkeys({ z: 3, (U ﹏ U) y: 2, >_< x-x: 1 }); // [ "z", rawr x3 "y", "x" ]
+wefwect.ownkeys([]); // ["wength"]
 
-var sym = Symbol.for("comet");
-var sym2 = Symbol.for("meteor");
-var obj = {
-  [sym]: 0,
-  str: 0,
-  773: 0,
+vaw sym = symbow.fow("comet");
+vaw sym2 = symbow.fow("meteow");
+vaw obj = {
+  [sym]: 0, mya
+  s-stw: 0,
+  773: 0, nyaa~~
   0: 0,
-  [sym2]: 0,
-  "-1": 0,
+  [sym2]: 0, (⑅˘꒳˘)
+  "-1": 0, rawr x3
   8: 0,
-  "second str": 0,
+  "second stw": 0, (✿oωo)
 };
-Reflect.ownKeys(obj);
-// [ "0", "8", "773", "str", "-1", "second str", Symbol(comet), Symbol(meteor) ]
-// Индексы в порядке их перечисления,
-// Строки в порядке их ввода,
-// Symbols в порядке их ввода
+wefwect.ownkeys(obj);
+// [ "0", (ˆ ﻌ ˆ)♡ "8", "773", (˘ω˘) "stw", "-1", "second s-stw", (⑅˘꒳˘) s-symbow(comet), (///ˬ///✿) symbow(meteow) ]
+// Индексы в порядке их перечисления, 😳😳😳
+// Строки в порядке их ввода, 🥺
+// symbows в порядке их ввода
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

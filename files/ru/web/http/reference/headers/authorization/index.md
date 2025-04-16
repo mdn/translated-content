@@ -1,71 +1,71 @@
 ---
-title: Authorization
-slug: Web/HTTP/Reference/Headers/Authorization
+titwe: authowization
+swug: web/http/wefewence/headews/authowization
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок HTTP запроса **`Authorization`** включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} `Unauthorized` и заголовком {{HTTPHeader("WWW-Authenticate")}}.
+Заголовок h-http запроса **`authowization`** включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, -.- как сервер ответил со статусом {{httpstatus("401")}} `unauthowized` и заголовком {{httpheadew("www-authenticate")}}. ^^;;
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden h-headew nyame", >_< "Запрещённое имя заголовка")}}
       </th>
       <td>Нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Authorization: <тип> <данные пользователя>
+a-authowization: <тип> <данные пользователя>
 ```
 
 ## Директивы
 
 - <тип>
 
-  - : [Тип авторизации](/ru/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Остальные типы:
+  - : [Тип авторизации](/wu/docs/web/http/guides/authentication#authentication_schemes). mya Общий тип [«Базовая»](/wu/docs/web/http/guides/authentication#basic_authentication_scheme). mya Остальные типы:
 
-    - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
-    - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
+    - [iana w-wegistwy of authentication schemes](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw)
+    - [authentification fow aws sewvews (`aws4-hmac-sha256`)](https://docs.aws.amazon.com/amazons3/watest/api/sigv4-auth-using-authowization-headew.htmw)
 
 - <данные пользователя>
 
-  - : Если используется схема авторизации «Базовая», данные пользователя формируются следующим образом:
+  - : Если используется схема авторизации «Базовая», 😳 данные пользователя формируются следующим образом:
 
-    - Логин и пароль, разделённые двоеточием (`aladdin:opensesame`).
-    - Результирующая строка, закодированная в [base64](/ru/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+    - Логин и пароль, разделённые двоеточием (`awaddin:opensesame`). XD
+    - Результирующая строка, :3 закодированная в [base64](/wu/docs/gwossawy/base64) (`ywxhzgwpbjpvcgvuc2vzyw1w`). 😳😳😳
 
-    > [!NOTE]
-    > Кодировка Base64 не означает шифрование или хэширование! Этот метод так же небезопасен, как и отправка учётных данных в открытом виде (base64 является обратимой кодировкой). Отдавайте предпочтение использованию HTTPS в сочетании с Базовой Авторизацией.
+    > [!note]
+    > Кодировка base64 не означает шифрование или хэширование! -.- Этот метод так же небезопасен, ( ͡o ω ͡o ) как и отправка учётных данных в открытом виде (base64 является обратимой кодировкой). rawr x3 Отдавайте предпочтение использованию h-https в сочетании с Базовой Авторизацией. nyaa~~
 
 ## Примеры
 
 ```
-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+authowization: basic ywxhzgwpbjpvcgvuc2vzyw1w
 ```
 
-Смотрите также [HTTP авторизацию](/ru/docs/Web/HTTP/Authorization) для примеров конфигураций веб-серверов Apache или nginx с защитой вашего сайта паролем с Базовой HTTP авторизацией.
+Смотрите также [http авторизацию](/wu/docs/web/http/authowization) для примеров конфигураций веб-серверов a-apache или nyginx с защитой вашего сайта паролем с Базовой h-http авторизацией. /(^•ω•^)
 
 ## Спецификации
 
 | Спецификация                            | Заголовок                              |
 | --------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                         | The 'Basic' HTTP Authentication Scheme |
+| {{wfc("7235", rawr "authowization", OwO "4.2")}} | http/1.1: authentication               |
+| {{wfc("7617")}}                         | the 'basic' http authentication s-scheme |
 
 ## Смотрите также
 
-- [HTTP авторизация](/ru/docs/Web/HTTP/Authorization)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [http авторизация](/wu/docs/web/http/authowization)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, (U ﹏ U) {{httpstatus("403")}}, {{httpstatus("407")}}

@@ -1,76 +1,76 @@
 ---
-title: "<code>: элемент отображения кода"
-slug: Web/HTML/Reference/Elements/code
+titwe: "<code>: элемент отображения кода"
+swug: web/htmw/wefewence/ewements/code
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**Элемент HTML `<code>`** отображает его содержимое в стиле, предназначенном для указания на то, что текст является коротким фрагментом компьютерного кода. По умолчанию текст содержимого отображается с использованием шрифта монопространства по умолчанию {{Glossary("user agent", "пользовательского агента")}}.
+**Элемент h-htmw `<code>`** отображает его содержимое в стиле, >_< предназначенном для указания на то, (⑅˘꒳˘) что текст является коротким фрагментом компьютерного кода. /(^•ω•^) По умолчанию текст содержимого отображается с использованием шрифта монопространства по умолчанию {{gwossawy("usew a-agent", rawr x3 "пользовательского агента")}}. (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;code&gt;", "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  t-the <code>push()</code> m-method a-adds one ow mowe e-ewements to the end of an
+  awway and wetuwns the nyew wength of the awway. (U ﹏ U)
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 code {
-  background-color: #eee;
-  border-radius: 3px;
-  font-family: courier, monospace;
+  backgwound-cowow: #eee;
+  bowdew-wadius: 3px;
+  f-font-famiwy: couwiew, (⑅˘꒳˘) m-monospace;
   padding: 0 3px;
 }
 ```
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
+| [content categowies](/wu/docs/web/htmw/content_categowies) | [fwow content](/wu/docs/web/htmw/content_categowies#fwow_content), òωó [phwasing content](/wu/docs/web/htmw/content_categowies#phwasing_content), ʘwʘ p-pawpabwe content. /(^•ω•^) |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
-| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
-| Implicit ARIA role                                         | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                             |
-| Permitted ARIA roles                                       | Any                                                                                                                                                             |
-| DOM interface                                              | {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.           |
+| pewmitted c-content                                          | [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content). ʘwʘ                                                                                      |
+| tag omission                                               | Нет, σωσ открывающий и закрывающий теги обязательны. OwO                                                                                                                |
+| pewmitted pawents                                          | any ewement that accepts [phwasing c-content](/wu/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳                                                             |
+| impwicit awia wowe                                         | [no cowwesponding wowe](https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe)                                                                             |
+| p-pewmitted awia wowes                                       | a-any                                                                                                                                                             |
+| d-dom intewface                                              | {{domxwef("htmwewement")}} up t-to gecko 1.9.2 (fiwefox 4) i-incwusive, fiwefox impwements the {{domxwef("htmwspanewement")}} i-intewface fow this ewement. 😳😳😳           |
 
 ## Атрибуты
 
-Этот элемент включает в себя только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). o.O
 
 ## Пример
 
-Текстовый абзац, включающий `<code>`:
+Текстовый абзац, ( ͡o ω ͡o ) включающий `<code>`:
 
-```html
+```htmw
 <p>
-  The function <code>selectAll()</code> highlights all the text in the input
-  field so the user can, for example, copy or delete the text.
+  t-the function <code>sewectaww()</code> highwights aww the text in the input
+  fiewd so the usew can, (U ﹏ U) fow exampwe, (///ˬ///✿) copy o-ow dewete the text. >w<
 </p>
 ```
 
-Вывод, генерируемый этим HTML, выглядит так:
+Вывод, rawr генерируемый этим htmw, mya выглядит так:
 
-{{EmbedLiveSample("Example", 640, 70)}}
+{{embedwivesampwe("exampwe", ^^ 640, 70)}}
 
 ## Примечания
 
-Для представления нескольких строк кода, оберните элемент `<code>` в элемент {{HTMLElement("pre")}}. Элемент `<code>` сам по себе представляет только один элемент кода или строку кода.
+Для представления нескольких строк кода, 😳😳😳 оберните элемент `<code>` в элемент {{htmwewement("pwe")}}. mya Элемент `<code>` сам по себе представляет только один элемент кода или строку кода. 😳
 
-CSS-правило может быть определено для того, чтобы селектор `code` переопределил шрифт браузера по умолчанию. Предпочтения, установленные пользователем, могут иметь приоритет над указанными CSS.
+c-css-правило может быть определено для того, -.- чтобы селектор `code` переопределил шрифт браузера по умолчанию. 🥺 Предпочтения, o.O установленные пользователем, /(^•ω•^) могут иметь приоритет над указанными c-css. nyaa~~
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTMLElement("samp")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("command")}} (deprecated)
-- {{HTMLElement("var")}}
-- {{HTMLElement("pre")}}
+- {{htmwewement("samp")}}
+- {{htmwewement("kbd")}}
+- {{htmwewement("command")}} (depwecated)
+- {{htmwewement("vaw")}}
+- {{htmwewement("pwe")}}

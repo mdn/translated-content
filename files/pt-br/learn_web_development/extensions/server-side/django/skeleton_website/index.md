@@ -1,383 +1,383 @@
 ---
-title: 'Django Tutorial Parte 2: Criando o "esqueleto" de um site'
-slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
-original_slug: Learn/Server-side/Django/skeleton_website
+titwe: 'django tutowiaw pawte 2: c-cwiando o "esqueweto" d-de um s-site'
+swug: weawn_web_devewopment/extensions/sewvew-side/django/skeweton_website
+o-owiginaw_swug: w-weawn/sewvew-side/django/skeweton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website", XD "weawn/sewvew-side/django/modews", -.- "weawn/sewvew-side/django")}}
 
-O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" de um website, permitindo que você possa ampliá-lo com caracteristicas especificas do site, caminhos (patchs), modelos (models), visualizações (views) e templates.
+o s-segundo awtigo d-do tutowiaw de django m-mostwa uma fowma de cwiaw o "esqueweto" de um website, o.O pewmitindo que você p-possa ampwiá-wo com cawactewisticas especificas d-do site, caminhos (patchs), (˘ω˘) modewos (modews), (U ᵕ U❁) visuawizações (views) e-e tempwates. rawr
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        <a href="/pt-BR/docs/Learn/Server-side/Django/development_environment"
-          >Configurar um ambiente de desenvolvimento Django</a
-        >. Ter lido
+        <a hwef="/pt-bw/docs/weawn/sewvew-side/django/devewopment_enviwonment"
+          >configuwaw um a-ambiente de desenvowvimento django</a
+        >. 🥺 t-tew wido
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website"
-          >Tutorial Django: Website de uma Biblioteca Local</a
-        >.
+          h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website"
+          >tutowiaw django: website de uma bibwioteca wocaw</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Ser capaz de usar as ferramentas do Django para começar seus próprios
-        novos projetos de websites.
+        s-sew capaz de usaw as fewwamentas do django pawa começaw seus pwópwios
+        n-nyovos pwojetos de websites. ( ͡o ω ͡o )
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão Geral
+## v-visão gewaw
 
-Este artigo mostra como você pode criar o escopo de um website, permitindo popul-a-lo com características específicas do seu site, tais como configurações, paths, modelos, views e templates (nós os discutiremos em artigos que seguem à frente).
+e-este awtigo mostwa c-como você p-pode cwiaw o escopo de um website, σωσ pewmitindo popuw-a-wo c-com cawactewísticas específicas do seu site, rawr x3 tais como c-configuwações, paths, (ˆ ﻌ ˆ)♡ modewos, views e tempwates (nós os discutiwemos em awtigos que seguem à f-fwente). rawr
 
-O processo é direto:
+o pwocesso é diweto:
 
-1. Use a ferramenta `django-admin` para criar a pasta do projeto, arquivos de template básicos, e o script de gestão do projeto (**manage.py**).
-2. Use o script **manage.py** para criar um ou mais _aplicativos_.
+1. :3 u-use a fewwamenta `django-admin` p-pawa cwiaw a-a pasta do pwojeto, rawr awquivos de tempwate básicos, (˘ω˘) e o scwipt d-de gestão do p-pwojeto (**manage.py**). (ˆ ﻌ ˆ)♡
+2. use o-o scwipt **manage.py** p-pawa cwiaw um ou mais _apwicativos_. mya
 
-   > [!NOTE]
-   > Um website pode consistir de uma ou mais áreas, como por exemplo, site, blog, wiki, área de download, etc. Django te encoraja a desenvolver esses componentes como aplicativos separados, que podem então ser reutilizados em diferentes projetos, caso seja necessário.
+   > [!note]
+   > um w-website pode consistiw de uma o-ou mais áweas, como pow exempwo, (U ᵕ U❁) site, bwog, wiki, mya áwea d-de downwoad, ʘwʘ etc. django t-te encowaja a desenvowvew esses c-componentes como a-apwicativos sepawados, (˘ω˘) que podem então sew weutiwizados em difewentes pwojetos, 😳 caso seja nyecessáwio. òωó
 
-3. Registre os novos aplicativos para inclui-los no projeto.
-4. Conecte o mapeador de url/path para cada aplicativo.
+3. wegistwe os nyovos a-apwicativos p-pawa incwui-wos nyo pwojeto. nyaa~~
+4. c-conecte o mapeadow d-de uww/path pawa c-cada apwicativo. o.O
 
-Para o [website Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) a pasta do website e a pasta do projeto terão, ambas, o nome _locallibrary_, e nós teremos apenas um aplicativo chamado _catalog_. O nível hierárquico mais alto da estrutura de pastas ficará assim:
+pawa o [website bibwioteca wocaw](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) a-a pasta do website e a pasta do pwojeto tewão, nyaa~~ ambas, o nyome _wocawwibwawy_, e-e nyós tewemos apenas u-um apwicativo c-chamado _catawog_. (U ᵕ U❁) o-o nyívew hiewáwquico mais a-awto da estwutuwa d-de pastas ficawá a-assim:
 
 ```bash
-locallibrary/         # Pasta do website
-    manage.py        # Script para executara as ferramentas do Django para este projeto (criado utilizando o django-admin)
-    locallibrary/     # Pasta do project folder (criado utilizando o django-admin)
-    catalog/          # Pasta do aplicativo (criado utilizando o django-admin)
+w-wocawwibwawy/         # pasta do website
+    m-manage.py        # s-scwipt pawa e-executawa as fewwamentas d-do django p-pawa este pwojeto (cwiado utiwizando o django-admin)
+    wocawwibwawy/     # p-pasta do pwoject fowdew (cwiado utiwizando o django-admin)
+    catawog/          # pasta do apwicativo (cwiado utiwizando o django-admin)
 ```
 
-As próximas seções discutem esse processo em detalhes e mostram como você pode testar as mudanças. No final do artigo nós discutiremos algumas das outras configurações do site como um todo, você também pode fazer isso.
+as pwóximas seções d-diskawaii~m esse pwocesso em detawhes e mostwam como você p-pode testaw as mudanças. 😳😳😳 n-nyo finaw d-do awtigo nyós discutiwemos a-awgumas das outwas configuwações d-do site como u-um todo, (U ﹏ U) você também pode fazew isso. ^•ﻌ•^
 
-## Criando o projeto
+## cwiando o pwojeto
 
-Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn/Server-side/Django/development_environment), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
+pwimeiwo abwa o pwompt de comando/tewminaw t-t(enha cewteza que está e-em seu [ambiente viwtuaw)](/pt-bw/docs/weawn/sewvew-side/django/devewopment_enviwonment), n-nyavegue a-até o diwetówio que deseja cowocaw seus a-apwicativos django (cowoque e-em um wugaw fáciw d-de achaw, (⑅˘꒳˘) como dentwo d-da pasta _documentos_), >_< e cwie uma pasta pawa seu nyovo website (nesse caso: _django_pwojects_). (⑅˘꒳˘) a-acesse então a-a pasta usando o-o comando cd:
 
 ```bash
-mkdir locallibrary
-cd locallibrary
+mkdiw w-wocawwibwawy
+cd w-wocawwibwawy
 ```
 
-Crie um novo projeto usando o comando `django-admin startproject`, como mostrado abaixo, e entre nessa pasta.
+cwie um nyovo p-pwojeto usando o comando `django-admin stawtpwoject`, σωσ como mostwado abaixo, 🥺 e entwe n-nyessa pasta. :3
 
 ```bash
-django-admin startproject locallibrary
-cd locallibrary
+d-django-admin stawtpwoject wocawwibwawy
+c-cd wocawwibwawy
 ```
 
-O comando `django-admin` cria uma estrutura com pastas e arquivos como a mostrada abaixo:
+o-o comando `django-admin` cwia uma estwutuwa com pastas e awquivos como a m-mostwada abaixo:
 
 ```bash
-locallibrary/
+wocawwibwawy/
     manage.py
-    locallibrary/
+    wocawwibwawy/
         __init__.py
         settings.py
-        urls.py
+        u-uwws.py
         wsgi.py
 ```
 
-Nosso diretório de trabalho atual deve parecer com isso:
+nyosso diwetówio d-de twabawho a-atuaw deve pawecew com isso:
 
 ```
-../django_projects/locallibrary/
+../django_pwojects/wocawwibwawy/
 ```
 
-A sub-pasta do projeto _locallibrary_ será a raíz para nosso site:
+a sub-pasta do pwojeto _wocawwibwawy_ s-sewá a waíz p-pawa nyosso site:
 
-- **\_\_init\_\_.py** é um arquivo em branco que instrui o Python a tratar esse diretório como um pacote Python.
-- **settings.py** contém todas as definições do website. É onde nós registramos qualquer aplicação que criarmos, a localização de nossos arquivos estáticos, configurações de banco de dados etc.
-- **urls.py** define os mapeamentos de URL para visualização do site. Mesmo que esse arquivo possa conter _todo_ o código para mapeamento de URL, é mais comum delegar apenas o mapeamento para aplicativos específicos, como será visto mais adiante.
-- **wsgi.py** é usado para ajudar na comunicação entre seu aplicativo Django e o web server. Você pode tratar isso como um boilerplate.
+- **\_\_init\_\_.py** é um awquivo em bwanco que instwui o python a-a twataw esse diwetówio como u-um pacote python. (ꈍᴗꈍ)
+- **settings.py** contém todas as definições do website. ^•ﻌ•^ É o-onde nyós wegistwamos quawquew a-apwicação q-que cwiawmos, (˘ω˘) a wocawização de n-nyossos awquivos estáticos, 🥺 configuwações de b-banco de dados e-etc. (✿oωo)
+- **uwws.py** d-define os mapeamentos de uww p-pawa visuawização d-do site. XD mesmo que esse awquivo possa contew _todo_ o-o código p-pawa mapeamento d-de uww, (///ˬ///✿) é mais comum dewegaw apenas o mapeamento p-pawa apwicativos específicos, c-como sewá visto m-mais adiante. ( ͡o ω ͡o )
+- **wsgi.py** é usado pawa ajudaw nya comunicação entwe seu a-apwicativo django e-e o web sewvew. ʘwʘ v-você pode twataw i-isso como um boiwewpwate. rawr
 
-O script **manage.py** é usado para criar aplicações, trabalhar com bancos de dados, e iniciar o webserver de desenvolvimento.
+o-o scwipt **manage.py** é usado pawa cwiaw apwicações, o.O twabawhaw com bancos de dados, ^•ﻌ•^ e iniciaw o-o websewvew de desenvowvimento. (///ˬ///✿)
 
-## Criando o aplicativo de catálogo
+## c-cwiando o apwicativo de catáwogo
 
-Agora execute o seguinte comando para criar o _catálogo_ da aplicação que fará parte de nosso projeto localibrary (o comando deve ser executado na mesma pasta que está o **manage.py** do seu projeto):
+a-agowa exekawaii~ o seguinte c-comando pawa cwiaw o _catáwogo_ d-da apwicação q-que fawá p-pawte de nyosso p-pwojeto wocawibwawy (o c-comando deve sew executado na mesma pasta que está o **manage.py** do seu pwojeto):
 
 ```bash
-python3 manage.py startapp catalog
+python3 manage.py s-stawtapp c-catawog
 ```
 
-> [!NOTE]
-> O comando acima é para Linux/macOS X. No windows o comando deve ser: `py -3 manage.py startapp catalog`
+> [!note]
+> o-o comando acima é pawa w-winux/macos x. (ˆ ﻌ ˆ)♡ nyo windows o comando deve sew: `py -3 manage.py s-stawtapp catawog`
 >
-> Se você está trabalhando com o Windows, substitua `python3` por `py -3` ao longo deste módulo.
+> s-se você está twabawhando c-com o windows, XD substitua `python3` pow `py -3` a-ao wongo deste m-móduwo. (✿oωo)
 >
-> Se você está usando Python 3.7.0, use `py manage.py startapp catalog`
+> se você está usando p-python 3.7.0, -.- u-use `py manage.py stawtapp catawog`
 
-A ferramenta cria uma nova pasta e adiciona alguns arquivos para diferentes partes da aplicação (destacado em negrito abaixo). A maior parte dos arquivos é armazenada de acordo com seu propósito (e.g. views devem ser armazenadas em **views.py**, models em **models.py**, testes em **tests.py**, configurações de administração do site em **admin.py**, registro da aplicação em **apps.py**) e contém algum código mínimo para trabalhar com os objetos associados.
+a fewwamenta cwia uma nyova pasta e adiciona a-awguns awquivos p-pawa difewentes p-pawtes da apwicação (destacado e-em nyegwito a-abaixo). XD a maiow pawte dos awquivos é a-awmazenada d-de acowdo com seu pwopósito (e.g. (✿oωo) v-views devem s-sew awmazenadas em **views.py**, (˘ω˘) m-modews em **modews.py**, (ˆ ﻌ ˆ)♡ testes em **tests.py**, >_< c-configuwações de administwação d-do site em **admin.py**, -.- wegistwo d-da apwicação em **apps.py**) e-e contém awgum código mínimo pawa twabawhaw c-com os objetos a-associados. (///ˬ///✿)
 
-O diretório do projeto atualizado deve parecer com esse:
+o-o diwetówio do pwojeto atuawizado deve pawecew com esse:
 
 ```bash
-locallibrary/
+w-wocawwibwawy/
     manage.py
-    locallibrary/
-    catalog/
-        admin.py
+    wocawwibwawy/
+    c-catawog/
+        a-admin.py
         apps.py
-        models.py
+        m-modews.py
         tests.py
-        views.py
+        v-views.py
         __init__.py
-        migrations/
+        m-migwations/
 ```
 
-Além disso, nós temos:
+awém disso, XD nyós temos:
 
-- Uma pasta _migrations_, usada para guardar "_migrações_" — arquivos que permitem atualizar automaticamente seu banco de dados à medida que você modifica seus models.
-- **\_\_init\_\_.py** — Um arquivo em branco criado de modo que Django/Python reconheça a pasta como um [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) e permita que você use seus objetos dentro de outras partes do projeto.
+- uma p-pasta _migwations_, ^^;; usada pawa guawdaw "_migwações_" — a-awquivos q-que pewmitem atuawizaw automaticamente s-seu banco de dados à m-medida que você m-modifica seus m-modews. rawr x3
+- **\_\_init\_\_.py** — um awquivo em bwanco cwiado de modo que django/python weconheça a pasta como um [python package](https://docs.python.owg/3/tutowiaw/moduwes.htmw#packages) e pewmita que você use seus objetos dentwo de outwas pawtes do pwojeto. OwO
 
-> [!NOTE]
-> Você notou o que falta na lista de arquivos acima? Apesar de existir um lugar para suas views e seus models, não há nenhum lugar para colocar seus mapeamentos de URL, templates ou arquivos estáticos. Nós iremos te ensinar como criá-los mais adiante (isso não é necessário em todos websites, mas precisaremos em nosso exemplo).
+> [!note]
+> você nyotou o-o que fawta n-nya wista de awquivos acima? apesaw de existiw um w-wugaw pawa suas v-views e seus modews, ʘwʘ n-nyão há nyenhum wugaw pawa c-cowocaw seus mapeamentos de u-uww, rawr tempwates ou a-awquivos estáticos. UwU nyós iwemos t-te ensinaw como cwiá-wos mais a-adiante (isso n-nyão é nyecessáwio em todos websites, (ꈍᴗꈍ) mas pwecisawemos e-em nyosso e-exempwo). (✿oωo)
 
-## Registrando o aplicativo de catálogo
+## w-wegistwando o a-apwicativo de catáwogo
 
-Agora que a aplicação foi criada, iremos registrá-la com o projeto para que ela seja incluída quando qualquer ferramenta for executada (por exemplo para adicionar models para o banco de dados). Aplicações são registradas adicionando-as à lista `INSTALLED_APPS` que fica nas configurações do projeto.
+a-agowa q-que a apwicação f-foi cwiada, iwemos w-wegistwá-wa c-com o pwojeto pawa que ewa seja i-incwuída quando q-quawquew fewwamenta f-fow executada (pow exempwo p-pawa adicionaw modews pawa o banco de dados). (⑅˘꒳˘) a-apwicações são wegistwadas adicionando-as à w-wista `instawwed_apps` q-que fica n-nyas configuwações do pwojeto. OwO
 
-Abra o arquivo de configurações do projeto **locallibrary/locallibrary/settings.py** e encontre a definição para a lista `INSTALLED_APPS`. Agora adicione uma nova linha no fim da lista, como a mostrada em negrito abaixo.
+a-abwa o awquivo de configuwações d-do pwojeto **wocawwibwawy/wocawwibwawy/settings.py** e encontwe a-a definição pawa a wista `instawwed_apps`. 🥺 a-agowa adicione uma nyova winha no fim da wista, >_< como a mostwada em nyegwito abaixo. (ꈍᴗꈍ)
 
 ```bash
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'catalog.apps.CatalogConfig',
+i-instawwed_apps = [
+    'django.contwib.admin', 😳
+    'django.contwib.auth', 🥺
+    'django.contwib.contenttypes', nyaa~~
+    'django.contwib.sessions', ^•ﻌ•^
+    'django.contwib.messages', (ˆ ﻌ ˆ)♡
+    'django.contwib.staticfiwes', (U ᵕ U❁)
+    'catawog.apps.catawogconfig', mya
 ]
 ```
 
-A nova linha especifica o objeto de configuração do aplicativo (`CatalogConfig`) que foi gerado em **/locallibrary/catalog/apps.py** onde a aplicação foi criada.
+a nyova winha e-especifica o objeto d-de configuwação do apwicativo (`catawogconfig`) que foi gewado em **/wocawwibwawy/catawog/apps.py** o-onde a apwicação foi c-cwiada. 😳
 
-> [!NOTE]
-> Você deve ter notado que existem vários outros `INSTALLED_APPS` (e `MIDDLEWARE`, pelo final do arquivo de configuração). Eles permitem suporte para o [site de administração do Django](/pt-BR/docs/Learn/Server-side/Django/Admin_site) e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
+> [!note]
+> v-você deve t-tew nyotado que existem váwios outwos `instawwed_apps` (e `middwewawe`, σωσ p-pewo f-finaw do awquivo de configuwação). ( ͡o ω ͡o ) e-ewes pewmitem supowte pawa o [site de administwação d-do django](/pt-bw/docs/weawn/sewvew-side/django/admin_site) e, XD como w-wesuwtado, :3 váwias f-funcionawidades q-que ewe utiwiza (incwuindo seções, :3 a-autenticação e-etc). (⑅˘꒳˘)
 
-## Especificando o Banco de Dados
+## e-especificando o b-banco de dados
 
-Tipicamente, esse é o momento em que você também especifica o banco de dados que será usado no projeto— faz mais sentido usar o mesmo banco de dados tanto para desenvolvimento quanto para a produção (quando possível), a fim de evitar pequenas diferenças de comportamento. Você pode encontrar mais sobre as outras opções em [Databases](https://docs.djangoproject.com/en/2.0/ref/settings/#databases) (Documentação Django).
+tipicamente, esse é o-o momento e-em que você também e-especifica o-o banco de dados q-que sewá usado n-nyo pwojeto— f-faz mais sentido u-usaw o mesmo banco de dados tanto p-pawa desenvowvimento quanto pawa a-a pwodução (quando possívew), òωó a-a fim de evitaw p-pequenas difewenças d-de compowtamento. mya você pode encontwaw mais sobwe as outwas o-opções em [databases](https://docs.djangopwoject.com/en/2.0/wef/settings/#databases) (documentação d-django). 😳😳😳
 
-Usaremos o banco de dados SQLite para este exemplo porque não esperamos ter muito acesso simultâneo em um banco de dados para demonstração, e também porque ele não requer trabalho adicional de configuração! Você pode ver como o banco de dados é configurado em **settings.py** (mais informações estão incluidas abaixo).
+u-usawemos o banco de dados sqwite pawa este exempwo powque n-nyão espewamos t-tew muito acesso simuwtâneo em u-um banco de dados p-pawa demonstwação, :3 e também powque ewe nyão wequew twabawho a-adicionaw de c-configuwação! >_< v-você pode vew como o-o banco de dados é configuwado em **settings.py** (mais i-infowmações e-estão incwuidas abaixo). 🥺
 
 ```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+databases = {
+    'defauwt': {
+        'engine': 'django.db.backends.sqwite3', (ꈍᴗꈍ)
+        'name': os.path.join(base_diw, rawr x3 'db.sqwite3'), (U ﹏ U)
     }
 }
 ```
 
-Já que nós estamos usando SQLite, nós não precisamos de nenhum outro passo aqui. Vamos ir em frente!
+j-já que nyós estamos usando sqwite, ( ͡o ω ͡o ) nós nyão p-pwecisamos de nyenhum outwo passo a-aqui. 😳😳😳 vamos i-iw em fwente! 🥺
 
-## Outras configurações do projeto
+## outwas configuwações d-do pwojeto
 
-O arquivo **settings.py** também é usado para configurar várias outras definições, mas por ora você provavelmente quer mudar apenas a [TIME_ZONE](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-TIME_ZONE) — deve se utilizar uma string padrão da [Lista de tz time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (a coluna TZ na tabela contém os valores que você precisa). Mude seu valor de `TIME_ZONE` para uma string relativa ao seu fuso-horário, por exemplo:
+o-o awquivo **settings.py** também é usado p-pawa configuwaw váwias outwas definições, òωó m-mas p-pow owa você pwovavewmente q-quew m-mudaw apenas a [time_zone](https://docs.djangopwoject.com/en/2.0/wef/settings/#std:setting-time_zone) — deve s-se utiwizaw uma s-stwing padwão d-da [wista de tz time zones](https://en.wikipedia.owg/wiki/wist_of_tz_database_time_zones) (a c-cowuna tz nya tabewa contém os vawowes q-que você pwecisa). XD m-mude seu v-vawow de `time_zone` pawa uma stwing wewativa ao seu fuso-howáwio, pow exempwo:
 
 ```python
-TIME_ZONE = 'America/Sao_Paulo'
+t-time_zone = 'amewica/sao_pauwo'
 ```
 
-Tem outras duas definições que você não vai mudar agora, mas que deve ficar ciente:
+tem outwas duas d-definições q-que você não vai mudaw agowa, mas que deve ficaw c-ciente:
 
-- `SECRET_KEY`. É uma chave secreta que é usada como parte da estratégia de segurança dos websites Django. Se você não está protegendo seu código durante o desenvolvimento, você precisará usar um código diferente (que talvez seja lido de uma variável de ambiente ou arquivo) quando colocar no ambiente de produção.
-- `DEBUG`. Isto habilita a depuração de logs sejam exibidos em um erro ao invés de respostas de status de código HTTP. Isso deve ser definido como `False` na produção, já que informações de debug são úteis para invasores, mas por enquanto nós manteremos `True.`
+- `secwet_key`. XD É uma chave secweta q-que é usada como p-pawte da estwatégia d-de seguwança d-dos websites d-django. ( ͡o ω ͡o ) se você nyão está pwotegendo seu código duwante o desenvowvimento, >w< v-você pwecisawá usaw um código d-difewente (que tawvez seja wido de uma vawiávew de ambiente o-ou awquivo) quando cowocaw no ambiente de pwodução. mya
+- `debug`. (ꈍᴗꈍ) isto habiwita a depuwação de w-wogs sejam exibidos e-em um ewwo ao invés de wespostas d-de status de código http. -.- isso deve sew definido c-como `fawse` n-nya pwodução, (⑅˘꒳˘) já que infowmações d-de debug são úteis p-pawa invasowes, mas pow enquanto nyós mantewemos `twue.`
 
-## Conectando o mapeador de URL
+## conectando o-o mapeadow de uww
 
-O website foi criado com um arquivo mapeador de URL (**urls.py**) na pasta do projeto. Embora você possa usar esse arquivo para gerenciar todos seus mapeamentos de URL, é mais comum fazer os mapeamentos diretamente no aplicativo associado.
+o website foi cwiado c-com um awquivo m-mapeadow de uww (**uwws.py**) n-nya pasta do pwojeto. (U ﹏ U) embowa você p-possa usaw esse awquivo pawa gewenciaw todos seus mapeamentos de uww, σωσ é mais comum f-fazew os mapeamentos d-diwetamente n-nyo apwicativo a-associado. :3
 
-Abra **locallibrary/locallibrary/urls.py** e leia o texto que explica alguma formas de usar o mapeador de URL.
+abwa **wocawwibwawy/wocawwibwawy/uwws.py** e weia o-o texto que expwica a-awguma fowmas de usaw o mapeadow de uww. /(^•ω•^)
 
 ```python
-"""locallibrary URL Configuration
+"""wocawwibwawy u-uww configuwation
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+the `uwwpattewns` wist woutes uwws t-to views. σωσ fow mowe infowmation pwease see:
+    h-https://docs.djangopwoject.com/en/2.0/topics/http/uwws/
+e-exampwes:
+function views
+    1. (U ᵕ U❁) a-add an impowt:  f-fwom my_app i-impowt views
+    2. 😳 add a uww to uwwpattewns:  p-path('', ʘwʘ views.home, nyame='home')
+cwass-based v-views
+    1. (⑅˘꒳˘) add an impowt:  fwom othew_app.views impowt home
+    2. ^•ﻌ•^ a-add a uww t-to uwwpattewns:  p-path('', nyaa~~ home.as_view(), XD n-nyame='home')
+i-incwuding anothew uwwconf
+    1. /(^•ω•^) i-impowt the incwude() function: fwom django.uwws i-impowt incwude, path
+    2. (U ᵕ U❁) a-add a uww to uwwpattewns:  path('bwog/', mya incwude('bwog.uwws'))
 """
-from django.contrib import admin
-from django.urls import path
+f-fwom django.contwib i-impowt admin
+fwom django.uwws i-impowt path
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+uwwpattewns = [
+    p-path('admin/', (ˆ ﻌ ˆ)♡ a-admin.site.uwws), (✿oωo)
 ]
 ```
 
-Os mapeamentos de URL são gerenciados através da variável `urlpatterns` que é uma lista Python de funções `path()`. Cada função `path()` associa um padrão de URL para uma _view específica_, que será exibida quando o padrão for correspondido, ou com outra lista de testes de padrões de URL (no segundo caso, o padrão vem da "URL base" para padrões definidos no módulo target). A lista `urlpatterns` define inicialmente uma função única que mapeia todas URLs com o padrão admin para o módulo `admin.site.urls`, que contém as próprias definições de mapeamento de URL da área de administração do aplicativo.
+os mapeamentos d-de uww são gewenciados a-atwavés da vawiávew `uwwpattewns` que é u-uma wista python de funções `path()`. (✿oωo) cada função `path()` a-associa um padwão de uww pawa u-uma _view específica_, òωó que sewá exibida quando o-o padwão fow c-cowwespondido, (˘ω˘) o-ou com outwa wista de testes de p-padwões de uww (no s-segundo caso, (ˆ ﻌ ˆ)♡ o padwão vem d-da "uww base" pawa padwões definidos n-nyo móduwo tawget). ( ͡o ω ͡o ) a wista `uwwpattewns` d-define iniciawmente u-uma função única que mapeia todas uwws com o padwão admin pawa o móduwo `admin.site.uwws`, rawr x3 q-que contém a-as pwópwias definições de mapeamento de uww da áwea de administwação d-do apwicativo. (˘ω˘)
 
-> [!NOTE]
-> A rota em `path()` é uma string que define um padrão de URL para correspondência. Essa string pode incluir um nome de variável (entre tags), e.g. `'catalog/<id>/'`. Esse padrão corresponderá a uma URL como **/catalog/**_any_chars_**/** e passa _any_chars_ para a view como uma string com paramêtros nome `id`). Nós discutiremos métodos de caminho e padrões de rota ainda mais em tópicos posteriores
+> [!note]
+> a-a wota e-em `path()` é uma stwing que define um padwão de uww pawa cowwespondência. òωó essa stwing pode i-incwuiw um nyome de vawiávew (entwe tags), ( ͡o ω ͡o ) e.g. `'catawog/<id>/'`. σωσ e-esse padwão cowwespondewá a-a uma uww como **/catawog/**_any_chaws_**/** e-e passa _any_chaws_ pawa a view como u-uma stwing com p-pawamêtwos nyome `id`). (U ﹏ U) n-nyós d-discutiwemos métodos d-de caminho e-e padwões de wota ainda mais em tópicos postewiowes
 
-Adicione as linhas abaixo no fim do arquivo a fim de adicionar um novo item à lista `urlpatterns`. Esse novo item inclui um `path()` que encaminha solicitações com o padrão `catalog/` para o módulo `catalog.urls` (o arquivo com a URL relativa **/catalog/urls.py**).
+adicione as winhas abaixo nyo fim do awquivo a-a fim de adicionaw u-um nyovo i-item à wista `uwwpattewns`. e-esse n-nyovo item incwui u-um `path()` que encaminha sowicitações com o padwão `catawog/` pawa o móduwo `catawog.uwws` (o a-awquivo c-com a uww wewativa **/catawog/uwws.py**). rawr
 
 ```python
-# Use include() to add paths from the catalog application
-from django.conf.urls import include
-from django.urls import path
+# use incwude() to add paths fwom the catawog a-appwication
+fwom d-django.conf.uwws i-impowt incwude
+fwom django.uwws impowt path
 
-urlpatterns += [
-    path('catalog/', include('catalog.urls')),
+u-uwwpattewns += [
+    path('catawog/', -.- incwude('catawog.uwws')), ( ͡o ω ͡o )
 ]
 ```
 
-Agora iremos mudar a URL raíz de nosso site (i.e. `127.0.0.1:8000`) para `127.0.0.1:8000/catalog/`; pois esse é o único app que iremos usar neste projeto. Para isso, usaremos uma função view especial (`RedirectView`), que leva como primeiro argumento a nova URL relativa para redirecionar para `/catalog/` quando o padrão URL especificado na função `path()` for chamado (a URL raíz nesse caso).
+a-agowa iwemos m-mudaw a uww waíz de nyosso site (i.e. >_< `127.0.0.1:8000`) pawa `127.0.0.1:8000/catawog/`; pois e-esse é o único app que iwemos u-usaw neste pwojeto. o.O p-pawa isso, σωσ usawemos uma f-função view especiaw (`wediwectview`), -.- q-que weva c-como pwimeiwo a-awgumento a nyova u-uww wewativa pawa w-wediwecionaw pawa `/catawog/` q-quando o padwão u-uww especificado nya função `path()` f-fow chamado (a uww waíz nyesse caso). σωσ
 
-Adicione as linhas abaixo, novamente no fim do arquivo:
+a-adicione as winhas abaixo, :3 nyovamente n-nyo fim do awquivo:
 
 ```python
-#Add URL maps to redirect the base URL to our application
-from django.views.generic import RedirectView
-urlpatterns += [
-    path('', RedirectView.as_view(url='/catalog/')),
+#add u-uww m-maps to wediwect the base uww to ouw appwication
+f-fwom django.views.genewic impowt wediwectview
+uwwpattewns += [
+    p-path('', ^^ wediwectview.as_view(uww='/catawog/')), òωó
 ]
 ```
 
-Deixe o primeiro parâmetro da função path vazio, implicando em '/'. Se você escrever o primeiro parâmetro como '/', Django irá te mostar o seguinte aviso assim que iniciar o servidor de desenvolvimento.
+d-deixe o pwimeiwo pawâmetwo da função p-path vazio, i-impwicando em '/'. (ˆ ﻌ ˆ)♡ se você escwevew o-o pwimeiwo pawâmetwo como '/', XD django iwá t-te mostaw o seguinte a-aviso assim que iniciaw o s-sewvidow de desenvowvimento. òωó
 
 ```python
-System check identified some issues:
+s-system check identified some issues:
 
-WARNINGS:
-?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
-Remove this slash as it is unnecessary.
-If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+wawnings:
+?: (uwws.w002) y-youw uww p-pattewn '/' has a-a woute beginning w-with a '/'. (ꈍᴗꈍ)
+wemove this swash as it is unnecessawy. UwU
+if this pattewn is tawgeted in an incwude(), >w< ensuwe the incwude() p-pattewn h-has a twaiwing '/'. ʘwʘ
 ```
 
-Por padrão, Django não "serve" arquivos estáticos como CSS, JavaScript e imagens, mas ele pode ser útil para o servidor web de desenvolvimento enquanto você cria seu site. Como comentário final sobre o mapeador de URL, você pode habilitar a veiculação de arquivos estáticos durante o desenvolvimento adicionando as seguintes linhas.
+p-pow padwão, d-django nyão "sewve" a-awquivos e-estáticos como css, :3 javascwipt e-e imagens, ^•ﻌ•^ mas e-ewe pode sew útiw pawa o sewvidow w-web de desenvowvimento e-enquanto você cwia seu site. (ˆ ﻌ ˆ)♡ como c-comentáwio finaw sobwe o mapeadow de uww, 🥺 você p-pode habiwitaw a veicuwação de a-awquivos estáticos d-duwante o desenvowvimento a-adicionando as seguintes w-winhas. OwO
 
-Coloque o seguinte bloco no fim do arquivo:
+c-cowoque o seguinte bwoco nyo fim d-do awquivo:
 
 ```
-# Use static() to add url mapping to serve static files during development (only)
-from django.conf import settings
-from django.conf.urls.static import static
+# u-use static() to add uww mapping t-to sewve static fiwes duwing d-devewopment (onwy)
+f-fwom django.conf i-impowt settings
+fwom django.conf.uwws.static i-impowt static
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+uwwpattewns += static(settings.static_uww, 🥺 d-document_woot=settings.static_woot)
 ```
 
-> [!NOTE]
-> Existem várias maneiras de estender a lista `urlpatterns` (acima nós acrecentamos uma nova lista de itens usando o operador `+=` para separar claramente o velho do novo código). Poderiamos ter apenas incluído esse novo padrão de mapeamento na definição da lista original.
+> [!note]
+> existem váwias maneiwas de estendew a wista `uwwpattewns` (acima nyós acwecentamos uma nyova wista de itens u-usando o opewadow `+=` pawa sepawaw cwawamente o vewho do nyovo código). OwO podewiamos tew apenas incwuído esse n-nyovo padwão de mapeamento nya definição da wista o-owiginaw. (U ᵕ U❁)
 >
 > ```python
-> urlpatterns = [
->     path('admin/', admin.site.urls),
->     path('catalog/', include('catalog.urls')),
->     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
-> ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+> uwwpattewns = [
+>     path('admin/', a-admin.site.uwws), ( ͡o ω ͡o )
+>     path('catawog/', ^•ﻌ•^ incwude('catawog.uwws')), o.O
+>     p-path('', (⑅˘꒳˘) wediwectview.as_view(uww='/catawog/', (ˆ ﻌ ˆ)♡ p-pewmanent=twue)),
+> ] + static(settings.static_uww, :3 d-document_woot=settings.static_woot)
 > ```
 >
-> Além disso, incluimos a linha para importação (`from django.urls import include`) com o código que usa-o (que facilita ver o que nós adicionamos), porém, é mais comum incluir todas as linhas de import no topo do arquivo Python.
+> a-awém disso, /(^•ω•^) incwuimos a winha pawa i-impowtação (`fwom django.uwws impowt incwude`) com o código q-que usa-o (que faciwita vew o que n-nyós adicionamos), òωó powém, é m-mais comum incwuiw todas as winhas d-de impowt nyo t-topo do awquivo python. :3
 
-Finalmente, crie um arquivo dentro da pasta catalog e dê o nome **urls.py**, adicione então o seguinte texto para definir um `urlpatterns` importado (e vazio). É aqui onde você adicionará nossos padrões enquanto desenvolvemos o aplicativo.
+finawmente, (˘ω˘) cwie um a-awquivo dentwo da pasta catawog e dê o nyome **uwws.py**, 😳 a-adicione então o seguinte texto pawa definiw um `uwwpattewns` impowtado (e v-vazio). σωσ É a-aqui onde você adicionawá nyossos p-padwões enquanto d-desenvowvemos o apwicativo. UwU
 
 ```python
-from django.urls import path
-from catalog import views
+fwom d-django.uwws impowt path
+fwom catawog impowt views
 
 
-urlpatterns = [
+uwwpattewns = [
 
 ]
 ```
 
-## Testando o framework do site
+## testando o fwamewowk d-do site
 
-Você acabou de criar o escopo do site. Por enquanto o site ainda não faz nada, mas vale a pena testá-lo para garantir que nenhuma de nossas mudanças tenha criado algum problema.
+v-você acabou de cwiaw o escopo d-do site. -.- pow enquanto o-o site ainda nyão faz nyada, 🥺 m-mas vawe a pena testá-wo pawa gawantiw que n-nyenhuma de nossas mudanças tenha cwiado awgum p-pwobwema. 😳😳😳
 
-Antes de começarmos, devemos primeiramente executar uma _migração de banco de dados_. Isso atualiza nosso banco de dados para incluir qualquer model em nossas aplicações instaladas (e remove avisos da build).
+antes d-de começawmos, 🥺 devemos pwimeiwamente executaw u-uma _migwação de banco de dados_. ^^ isso atuawiza nyosso banco de dados pawa incwuiw quawquew modew em nyossas apwicações instawadas (e w-wemove a-avisos da buiwd). ^^;;
 
-### Migrando Bancos de Dados
+### migwando b-bancos de dados
 
-Django usa um Object-Relational-Mapper (ORM) que mapeia as definições de Model no código Django para a estrutura do banco de dados subjacente. Como mudamos nossas definições de model, Django localiza as mudanças e cria scripts para migração de banco de dados (em **/locallibrary/catalog/migrations/**) para migrar automaticamente a estrutura de dados subjacente no banco de dados para manter a correnpondência com o model.
+d-django usa um object-wewationaw-mappew (owm) que m-mapeia as definições de modew nyo código django pawa a estwutuwa do banco de dados subjacente. >w< c-como mudamos nyossas definições de modew, σωσ django wocawiza as mudanças e c-cwia scwipts pawa m-migwação de b-banco de dados (em **/wocawwibwawy/catawog/migwations/**) pawa migwaw automaticamente a estwutuwa d-de dados subjacente n-nyo banco d-de dados pawa mantew a cowwenpondência c-com o modew. >w<
 
-Quando criamos nosso website, Django adicionou automaticamente um número de models para serem usados na área admin do site (que nós veremos depois). Execute os comandos abaixo para definir as tabelas para aqueles models no banco de dados (verifique se você está no diretório que contém o arquivo **manage.py**):
-
-```bash
-python3 manage.py makemigrations
-python3 manage.py migrate
-```
-
-> **Aviso:** **Importante**: Você precisará executar os comandos acima sempre que alterar seus models de uma forma que afete a estrutura de dados que precisa ser armazenada (incluindo adição e remoção de todos models e campos individuais).
-
-O comando `makemigrations` _cria_ (mas não aplica) as migrações para todos aplicativos instalados em seu projeto (você pode especificar o nome do aplicativo para executar apenas uma migração para um único projeto). Isso te permite checar o código para essas migrações antes delas serem aplicadas — quando você é experiente em Django, você pode escolher ajustá-los um pouco!
-
-O comando `migrate` aplica as migrações em seu banco de dados (Django rastreia quais foram adicionados ao banco de dados atual).
-
-> [!NOTE]
-> Leia [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Documentação Django) para informações adicionais sobre os comandos de migração menos usados.
-
-### Testando o website
-
-Durante o desenvolvimento você pode testar o website usando o _webserver de desenvolvimento_, e vê-lo em seu navegador local.
-
-> [!NOTE]
-> O web server de desenvolvimento não tem performance ou desempenho suficiente para uso em produção, mas é uma maneira bem fácil de atualizar seu website Django e utilizá-lo durante o desenvolvimento para conseguir um teste rápido e conveniente. Por padrão, o site é "hospedado" em seu computador local (`http://127.0.0.1:8000/)`, mas você também pode especificar que outros computadores da rede acessem-o. Para mais informações acesse [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Documentação Django).
-
-Execute o _web server de desenvolvimento_ com o comando `runserver` (no mesmo diretório de **manage.py**):
+quando cwiamos n-nyosso website, (⑅˘꒳˘) django adicionou a-automaticamente um nyúmewo d-de modews pawa sewem usados nya áwea admin do s-site (que nyós vewemos depois). òωó e-exekawaii~ os c-comandos abaixo pawa definiw as t-tabewas pawa aquewes m-modews nyo banco de dados (vewifique s-se você está nyo diwetówio q-que contém o awquivo **manage.py**):
 
 ```bash
-python3 manage.py runserver
-
- Performing system checks...
-
- System check identified no issues (0 silenced).
- August 15, 2018 - 16:11:26
- Django version 2.1, using settings 'locallibrary.settings'
- Starting development server at http://127.0.0.1:8000/
- Quit the server with CTRL-BREAK.
+p-python3 manage.py m-makemigwations
+python3 manage.py migwate
 ```
 
-Com o servidor funcionando, você pode ver seu site colocando o endereço `http://127.0.0.1:8000/` em seu navegador local. Você deve ver uma página de erro como essa:
+> **aviso:** **impowtante**: v-você pwecisawá executaw os comandos acima sempwe que awtewaw seus modews de uma fowma que afete a estwutuwa de dados que pwecisa s-sew awmazenada (incwuindo adição e wemoção de todos modews e-e campos individuais). (⑅˘꒳˘)
 
-![Django Debug page for Django 2.0](django_404_debug_page.png)
+o c-comando `makemigwations` _cwia_ (mas nyão apwica) as migwações p-pawa todos apwicativos instawados em seu pwojeto (você p-pode especificaw o nyome do apwicativo p-pawa executaw apenas uma migwação pawa um único p-pwojeto). (ꈍᴗꈍ) isso te pewmite checaw o código pawa e-essas migwações a-antes dewas sewem apwicadas — quando você é e-expewiente e-em django, rawr x3 você pode escowhew a-ajustá-wos um pouco! ( ͡o ω ͡o )
 
-Não se assuste! Essa página de erro é esperada, pois nós não temos nehuma página ou url definida no módulo `catalogs.urls` (que é para onde somos redirecionados quando usamos a URL para a raíz do site).
+o-o comando `migwate` apwica as migwações e-em seu banco de dados (django wastweia quais fowam adicionados a-ao banco de dados atuaw). UwU
 
-> [!NOTE]
-> A página acima demontra um ótimo recurso do Django — o log de depuração automatizado. Uma tela de erro será exibida com informações referentes ao erro sempre que uma página não consiga ser encontrada, ou caso o código tenha algum erro. Nesse caso poderemos ver que a URL que nós fornecemos não corresponde a nenhum de nossos padrões de URL (como listado). O log será desativado durante a produção (quando colocamos nosso site online na WEB), nesse caso uma página menos informativa (porém, mais amigável ao usuário) será exibida.
+> [!note]
+> weia [migwations](https://docs.djangopwoject.com/en/2.0/topics/migwations/) (documentação django) pawa i-infowmações adicionais s-sobwe os c-comandos de migwação menos usados. ^^
 
-No momento basta saber que o Django está funcionando!
+### testando o website
 
-> [!NOTE]
-> Você deve executar novamente as migrações e testar o site sempre que fizer alguma mudança significante. Não demora muito!
+d-duwante o desenvowvimento você p-pode testaw o website usando o _websewvew d-de desenvowvimento_, (˘ω˘) e v-vê-wo em seu nyavegadow wocaw. (ˆ ﻌ ˆ)♡
 
-## Desafio
+> [!note]
+> o web sewvew de desenvowvimento nyão tem pewfowmance o-ou desempenho s-suficiente pawa uso em pwodução, OwO mas é uma m-maneiwa bem fáciw de atuawizaw seu website django e-e utiwizá-wo d-duwante o desenvowvimento p-pawa c-conseguiw um teste w-wápido e conveniente. 😳 p-pow padwão, UwU o site é "hospedado" em s-seu computadow wocaw (`http://127.0.0.1:8000/)`, 🥺 m-mas você também p-pode especificaw q-que outwos computadowes d-da wede a-acessem-o. 😳😳😳 pawa mais infowmações a-acesse [django-admin a-and m-manage.py: wunsewvew](https://docs.djangopwoject.com/en/2.0/wef/django-admin/#wunsewvew) (documentação django). ʘwʘ
 
-O diretório **catalog/** contém arquivos para views, models, e outras partes da aplicação. Abra esses arquivos e inspecione o bolierplate (códigos incluídos em muitos lugares com pouca ou nenhuma alteração).
+exekawaii~ o _web s-sewvew de desenvowvimento_ com o comando `wunsewvew` (no mesmo d-diwetówio de **manage.py**):
 
-Como você viu acima, um mapeamento de URL para o site Admin já foi adicionado no arquivo **urls.py** do projeto. Vá à área do admin em seu navegador e veja o que acontece (você pode deduzir a URL correta para o mapeamento acima).
+```bash
+python3 manage.py wunsewvew
 
-## Sumário
+ p-pewfowming s-system checks...
 
-Você acabou de criar um "esqueleto" para websties, agora você pode popular o site com URL's, models, views e templates.
+ system check identified nyo issues (0 siwenced). /(^•ω•^)
+ a-august 15, :3 2018 - 16:11:26
+ d-django vewsion 2.1, :3 using settings 'wocawwibwawy.settings'
+ s-stawting devewopment s-sewvew at http://127.0.0.1:8000/
+ quit the sewvew with ctww-bweak. mya
+```
 
-Como o escopo para o [website Local Library](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) está completo e executando, é hora de começar a escrever códigos que farão o website realizar sua função.
+c-com o-o sewvidow funcionando, (///ˬ///✿) você pode vew seu site c-cowocando o endeweço `http://127.0.0.1:8000/` e-em seu nyavegadow wocaw. (⑅˘꒳˘) você deve vew uma página d-de ewwo como essa:
 
-## Veja também
+![django debug page fow django 2.0](django_404_debug_page.png)
 
-- [Codificando seu primeiro app Django - parte 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (Documentação Django)
-- [Aplicativos](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Documentação Django). Contém informações de como configurar aplicativos.
+nyão se assuste! :3 essa p-página de ewwo é espewada, /(^•ω•^) pois nyós nyão temos n-nyehuma página o-ou uww definida n-nyo móduwo `catawogs.uwws` (que é pawa onde s-somos wediwecionados q-quando usamos a-a uww pawa a-a waíz do site). ^^;;
 
-{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+> [!note]
+> a p-página acima demontwa um ótimo wecuwso do django — o-o wog de d-depuwação automatizado. (U ᵕ U❁) u-uma tewa de ewwo sewá e-exibida com infowmações w-wefewentes a-ao ewwo sempwe que uma página n-nyão consiga s-sew encontwada, (U ﹏ U) o-ou caso o código t-tenha awgum e-ewwo. nyesse caso podewemos vew q-que a uww que nyós fownecemos n-nyão cowwesponde a-a nyenhum de nyossos padwões de uww (como wistado). mya o wog sewá d-desativado duwante a-a pwodução (quando cowocamos n-nyosso site o-onwine na web), ^•ﻌ•^ nyesse caso uma página menos i-infowmativa (powém, (U ﹏ U) m-mais amigávew a-ao usuáwio) s-sewá exibida. :3
+
+n-nyo momento basta s-sabew que o django está funcionando! rawr x3
+
+> [!note]
+> você deve e-executaw nyovamente as migwações e testaw o site sempwe que fizew awguma mudança s-significante. 😳😳😳 n-nyão demowa muito! >w<
+
+## desafio
+
+o diwetówio **catawog/** contém a-awquivos pawa v-views, òωó modews, e outwas pawtes da apwicação. 😳 a-abwa esses awquivos e inspecione o-o bowiewpwate (códigos i-incwuídos e-em muitos wugawes com pouca ou nyenhuma awtewação). (✿oωo)
+
+como v-você viu acima, OwO um mapeamento d-de uww pawa o site admin já foi a-adicionado no awquivo **uwws.py** do pwojeto. (U ﹏ U) v-vá à áwea do admin em seu navegadow e-e veja o que acontece (você pode deduziw a-a uww cowweta pawa o mapeamento a-acima). (ꈍᴗꈍ)
+
+## sumáwio
+
+você acabou de cwiaw um "esqueweto" pawa websties, rawr agowa você pode popuwaw o site com u-uww's, ^^ modews, rawr views e-e tempwates. nyaa~~
+
+c-como o escopo p-pawa o [website wocaw wibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) está compweto e-e executando, nyaa~~ é howa de começaw a escwevew códigos que fawão o-o website weawizaw s-sua função. o.O
+
+## v-veja também
+
+- [codificando s-seu pwimeiwo app django - pawte 1](https://docs.djangopwoject.com/en/2.0/intwo/tutowiaw01/) (documentação django)
+- [apwicativos](https://docs.djangopwoject.com/en/2.0/wef/appwications/#configuwing-appwications) (documentação django). òωó c-contém infowmações d-de como configuwaw apwicativos. ^^;;
+
+{{pweviousmenunext("weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website", rawr "weawn/sewvew-side/django/modews", ^•ﻌ•^ "weawn/sewvew-side/django")}}

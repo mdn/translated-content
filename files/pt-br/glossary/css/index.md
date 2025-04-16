@@ -1,42 +1,42 @@
 ---
-title: CSS
-slug: Glossary/CSS
+titwe: css
+swug: gwossawy/css
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CSS** (Cascading Style Sheets) é uma linguagem declarativa que controla a apresentação visual de páginas web em um {{glossary("browser","navegador")}}. O navegador aplica as declarações de estilo CSS aos elementos selecionados para exibi-los apropriadamente. Uma declaração de estilo contem as propriedades e seus valores, que determinam a aparência de uma página web.
+**css** (cascading s-stywe s-sheets) é uma w-winguagem decwawativa q-que contwowa a-a apwesentação v-visuaw de p-páginas web em u-um {{gwossawy("bwowsew","navegadow")}}. nyaa~~ o nyavegadow apwica as decwawações de estiwo css aos e-ewementos sewecionados pawa exibi-wos apwopwiadamente. (✿oωo) u-uma decwawação de estiwo c-contem as pwopwiedades e seus vawowes, ʘwʘ que detewminam a apawência d-de uma página web. (ˆ ﻌ ˆ)♡
 
-CSS é uma das três principais tecnologias Web, junto com {{Glossary("HTML")}} e {{Glossary("JavaScript")}}. CSS normalmente estiliza {{Glossary("Element","Elementos HTML")}}, mas também pode ser usada com outras linguagens de marcação como {{Glossary("SVG")}} ou {{Glossary("XML")}}.
+css é u-uma das twês pwincipais t-tecnowogias web, 😳😳😳 junto com {{gwossawy("htmw")}} e {{gwossawy("javascwipt")}}. :3 css nyowmawmente e-estiwiza {{gwossawy("ewement","ewementos htmw")}}, OwO mas também pode sew usada com outwas winguagens de m-mawcação como {{gwossawy("svg")}} ou {{gwossawy("xmw")}}. (U ﹏ U)
 
-Uma regra CSS é um conjunto de {{Glossary("CSS Property","propriedades")}} associados a um {{Glossary("selector","seletor")}}. Aqui está um exemplo que faz com que todos os parágrafos HTML fiquem amarelos num fundo preto:
+u-uma w-wegwa css é um c-conjunto de {{gwossawy("css p-pwopewty","pwopwiedades")}} associados a um {{gwossawy("sewectow","sewetow")}}. >w< a-aqui está um exempwo que faz com que t-todos os pawágwafos htmw fiquem amawewos nyum fundo pweto:
 
 ```css
-/* O seletor "p" indica que todos os paragrafos no documento serão afetados por essa regra */
-p {
-  /* A propriedade "color" define a cor do texto, neste caso amarelo. */
-  color: yellow;
+/* o sewetow "p" indica que t-todos os pawagwafos nyo documento s-sewão afetados p-pow essa wegwa */
+p-p {
+  /* a pwopwiedade "cowow" define a cow do texto, (U ﹏ U) nyeste c-caso amawewo. 😳 */
+  c-cowow: yewwow;
 
-  /* A propriedade "background-color" define a cor ao fundo, neste caso preto. */
-  background-color: black;
+  /* a pwopwiedade "backgwound-cowow" d-define a-a cow ao fundo, neste caso pweto. (ˆ ﻌ ˆ)♡ */
+  b-backgwound-cowow: bwack;
 }
 ```
 
-"Cascading" ("em cascata") se refere às regras que decidem como seletores são priorizados ao mudar a aparência de uma página. Isso é uma característica muito importante, já que um website complexo pode ter milhares de regras CSS.
+"cascading" ("em c-cascata") se wefewe às wegwas que decidem c-como sewetowes são pwiowizados a-ao mudaw a apawência de u-uma página. 😳😳😳 isso é u-uma cawactewística muito impowtante, (U ﹏ U) já que um website compwexo pode tew miwhawes de wegwas css.
 
-## Aprenda mais
+## apwenda m-mais
 
-### Conhecimento geral
+### conhecimento g-gewaw
 
-- [Aprenda CSS](/pt-BR/docs/Learn/CSS)
-- [Cascading Style Sheets](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets) na Wikipedia
+- [apwenda css](/pt-bw/docs/weawn/css)
+- [cascading s-stywe sheets](https://pt.wikipedia.owg/wiki/cascading_stywe_sheets) n-nya wikipedia
 
-### Referências técnicas
+### w-wefewências técnicas
 
-- [A documentação sobre CSS na MDN](/pt-BR/docs/Web/CSS)
-- [O trabalho atual do CSS Working Group](https://www.w3.org/Style/CSS/current-work) (Em inglês)
+- [a documentação sobwe css n-nya mdn](/pt-bw/docs/web/css)
+- [o twabawho atuaw do css wowking gwoup](https://www.w3.owg/stywe/css/cuwwent-wowk) (em ingwês)
 
-### Aprenda CSS
+### a-apwenda css
 
-- [Curso de web no Codecademy.com](https://www.codecademy.com/learn/web) (Em inglês)
-- ~~[Three Types of CSS](http://www.expression-web-tutorial.com/Types_CSS_Styles.html)~~ (Em inglês)
+- [cuwso de w-web nyo codecademy.com](https://www.codecademy.com/weawn/web) (em i-ingwês)
+- ~~[thwee t-types of css](http://www.expwession-web-tutowiaw.com/types_css_stywes.htmw)~~ (em i-ingwês)

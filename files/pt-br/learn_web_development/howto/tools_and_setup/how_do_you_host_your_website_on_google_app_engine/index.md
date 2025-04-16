@@ -1,62 +1,62 @@
 ---
-title: Como você hospeda seu site no Google App Engine?
-slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
-original_slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
+titwe: como você hospeda seu s-site nyo googwe a-app engine?
+swug: w-weawn_web_devewopment/howto/toows_and_setup/how_do_you_host_youw_website_on_googwe_app_engine
+o-owiginaw_swug: w-weawn/common_questions/toows_and_setup/how_do_you_host_youw_website_on_googwe_app_engine
 ---
 
-[Google App Engine](https://cloud.google.com/appengine/) é uma plataforma poderosa que lhe permite construir e rodar aplicações na infraestrutura do Google — se você precisa criar um aplicativo da web de várias camadas do zero ou hospedar um site estático. Aqui está um guia passo a passo para hospedar seu site no Google App Engine.
+[googwe a-app engine](https://cwoud.googwe.com/appengine/) é u-uma pwatafowma p-podewosa que whe pewmite constwuiw e wodaw apwicações nya infwaestwutuwa d-do googwe — se você pwecisa cwiaw um apwicativo d-da web de váwias camadas d-do zewo ou hospedaw um site estático. XD aqui está um guia passo a-a passo pawa hospedaw seu site n-nyo googwe app engine. -.-
 
-## Criando um projeto na plataforma do Google Cloud
+## c-cwiando um pwojeto nya pwatafowma do googwe cwoud
 
-Para usar as ferramentas do Google em seu próprio site ou aplicativo, você precisa criar um novo projeto no Google Cloud Platform. Isso requer ter uma conta do Google.
+pawa usaw as fewwamentas d-do googwe em seu pwópwio site ou apwicativo, :3 você pwecisa cwiaw um nyovo p-pwojeto nyo googwe cwoud pwatfowm. nyaa~~ i-isso wequew t-tew uma conta do g-googwe.
 
-1. Vá para o [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) no Google Cloud Platform e apert o botão _Create_ (Criar).
-2. Se você não criou um projeto antes, precisará selecionar se deseja receber atualizações por email ou não, concordar com os Termos de Serviço e, em seguida, poderá continuar.
-3. Digite um nome para o projeto, edite a ID do seu projeto e anote-a. Para este tutorial, os seguintes valores são usados
+1. 😳 vá p-pawa o [app engine dashboawd](https://consowe.cwoud.googwe.com/pwojectsewectow/appengine) nyo g-googwe cwoud pwatfowm e apewt o botão _cweate_ (cwiaw). (⑅˘꒳˘)
+2. s-se você nyão cwiou um pwojeto antes, nyaa~~ pwecisawá sewecionaw se deseja wecebew atuawizações p-pow emaiw ou não, OwO concowdaw c-com os tewmos d-de sewviço e-e, rawr x3 em seguida, XD podewá continuaw. σωσ
+3. digite um nyome pawa o pwojeto, (U ᵕ U❁) e-edite a id d-do seu pwojeto e anote-a. (U ﹏ U) pawa e-este tutowiaw, :3 os s-seguintes vawowes são usados
 
-   - Nome do projeto: _GAE Sample Site_
-   - ID do Projeto: _gaesamplesite_
+   - n-nyome do pwojeto: _gae sampwe s-site_
+   - id do pwojeto: _gaesampwesite_
 
-4. Clique no botão _Create_ para criar o seu projeto.
+4. ( ͡o ω ͡o ) cwique no botão _cweate_ p-pawa cwiaw o seu pwojeto. σωσ
 
-## Criando uma aplicação
+## c-cwiando uma apwicação
 
-Cada projeto do Cloud Platform pode conter um aplicativo do App Engine. Vamos preparar um aplicativo para o nosso projeto.
+c-cada pwojeto d-do cwoud pwatfowm pode contew um apwicativo do app engine. >w< vamos pwepawaw um apwicativo pawa o nyosso pwojeto. 😳😳😳
 
-1. Precisamos de um aplicativo de amostra para publicar. Se você não tiver um para usar, faça o download e descompacte este [aplicativo de exemplo](http://gaesamplesite.appspot.com/downloads.html).
-2. Dê uma olhada na estrutura da aplicação padrão — A pasta `website` contem o conteúdo do seu website e `app.yaml` é o seu arquivo de configuração da aplicação.
+1. p-pwecisamos de u-um apwicativo de amostwa pawa pubwicaw. OwO s-se você n-nyão tivew um p-pawa usaw, 😳 faça o downwoad e descompacte este [apwicativo de exempwo](http://gaesampwesite.appspot.com/downwoads.htmw). 😳😳😳
+2. d-dê uma owhada nya estwutuwa da apwicação padwão — a pasta `website` c-contem o conteúdo do seu w-website e `app.yamw` é o-o seu awquivo d-de configuwação da apwicação. (˘ω˘)
 
-   - O conteúdo do seu website deve ser posto dentro da pasta `website`, e sua página de destino deve ser denominada `index.html`, mas fora isso ela pode conter qualquer coisa que você desejar.
-   - O arquivo `app.yaml` é um arquivo de configuração que fala ao App Engine como mapear URLs para os seus arquivos estáticos. Você não precisa editá-lo.
+   - o c-conteúdo do seu w-website deve sew p-posto dentwo d-da pasta `website`, ʘwʘ e sua página de destino deve s-sew denominada `index.htmw`, ( ͡o ω ͡o ) mas f-fowa isso ewa p-pode contew quawquew c-coisa que v-você desejaw. o.O
+   - o awquivo `app.yamw` é um awquivo de configuwação q-que fawa ao app engine como mapeaw uwws pawa os seus awquivos estáticos. >w< você nyão pwecisa e-editá-wo. 😳
 
-## Puplicando sua aplicação
+## pupwicando sua apwicação
 
-Agora que nós temos o nosso projeto pronto e arquivos padrões de aplicativo colocados juntos, vamos publicar nosso app.
+agowa que nyós t-temos o nyosso p-pwojeto pwonto e-e awquivos padwões de apwicativo c-cowocados juntos, 🥺 vamos pubwicaw n-nyosso app. rawr x3
 
-1. Abra o [Google Cloud Shell](https://console.cloud.google.com/cloudshell/editor).
-2. Arraste e solte a pasta `sample-app` dentro do painel esquerdo do editor de código.
-3. Rode a seguinte linha de comando dentro para selecionar seu projeto:
-
-   ```bash
-   gcloud config set project gaesamplesite
-   ```
-
-4. Logo após rode o seguinte comando para ir ao diretório do seu app:
+1. a-abwa o [googwe cwoud sheww](https://consowe.cwoud.googwe.com/cwoudsheww/editow). o.O
+2. awwaste e sowte a pasta `sampwe-app` dentwo do painew esquewdo d-do editow de código. rawr
+3. wode a-a seguinte winha de comando d-dentwo pawa sewecionaw s-seu pwojeto:
 
    ```bash
-   cd sample-app
+   gcwoud config set pwoject gaesampwesite
    ```
 
-5. Você agora está pronto para armazenar sua aplicação, i.e. fazer o upload para o App Engine:
+4. ʘwʘ w-wogo após w-wode o seguinte comando pawa iw a-ao diwetówio do s-seu app:
 
    ```bash
-   gcloud app deploy
+   cd sampwe-app
    ```
 
-6. Digite um número para escolher a região onde você quer que sua aplicação se localize.
-7. Digite `Y` para confirmar.
-8. Agora navegue no seu navegador para _your-project-id_.appspot.com to para ver seu website online. Por exemplo, para a ID do projeto _gaesamplesite_, vá para [_gaesamplesite_.appspot.com](http://gaesamplesite.appspot.com/).
+5. 😳😳😳 você agowa está pwonto pawa awmazenaw sua apwicação, ^^;; i-i.e. o.O f-fazew o upwoad p-pawa o app engine:
 
-## Veja também
+   ```bash
+   gcwoud app depwoy
+   ```
 
-Para aprender mais, veja [Google App Engine Documentation](https://cloud.google.com/appengine/docs/).
+6. (///ˬ///✿) digite u-um nyúmewo p-pawa escowhew a wegião onde você q-quew que sua apwicação se wocawize. σωσ
+7. digite `y` pawa confiwmaw. nyaa~~
+8. agowa n-nyavegue nyo seu n-navegadow pawa _youw-pwoject-id_.appspot.com to pawa vew seu website onwine. ^^;; p-pow exempwo, ^•ﻌ•^ pawa a-a id do pwojeto _gaesampwesite_, σωσ vá pawa [_gaesampwesite_.appspot.com](http://gaesampwesite.appspot.com/).
+
+## veja também
+
+pawa apwendew mais, -.- v-veja [googwe app engine documentation](https://cwoud.googwe.com/appengine/docs/). ^^;;

@@ -1,779 +1,779 @@
 ---
-title: Параметр "codecs" для распространённых типов носителей
-slug: Web/Media/Guides/Formats/codecs_parameter
+titwe: Параметр "codecs" для распространённых типов носителей
+swug: w-web/media/guides/fowmats/codecs_pawametew
 ---
 
-{{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
+{{quickwinkswithsubpages("/wu/docs/web/media")}}
 
-На базовом уровне, можно задать тип медиа файла, используя простой
+На базовом уровне, (U ﹏ U) можно задать тип медиа файла, ( ͡o ω ͡o ) используя простой
 
-{{Glossary("MIME")}} тип, такой как `video/mp4` или `audio/mpeg`. Однако, многие медиа типы, особенно те, которые поддерживают видео дорожки, более привлекательные из-за способности более точного описания содержащегося формата данных. Например, просто описывая видео в файле [MPEG-4](/ru/docs/Web/Media/Formats/Containers#MP4) с MIME типом `video/mp4` ничего не скажет о том, какой формат в действительности он содержит.
+{{gwossawy("mime")}} тип, (///ˬ///✿) такой как `video/mp4` или `audio/mpeg`. (///ˬ///✿) Однако, (✿oωo) многие медиа типы, (U ᵕ U❁) особенно те, ʘwʘ которые поддерживают видео дорожки, ʘwʘ более привлекательные из-за способности более точного описания содержащегося формата данных. XD Например, (✿oωo) просто описывая видео в файле [mpeg-4](/wu/docs/web/media/fowmats/containews#mp4) с m-mime типом `video/mp4` ничего не скажет о том, ^•ﻌ•^ какой формат в действительности он содержит. ^•ﻌ•^
 
-По этой причине в MIME тип может быть добавлен параметр `codecs` , описывающий медиа контент, предоставляя более подробную информацию о содержимом. Эта информация может содержать, к примеру, профиль видео кодека, или тип, используемый аудио треками, и так далее.
+По этой причине в m-mime тип может быть добавлен параметр `codecs` , >_< описывающий медиа контент, mya предоставляя более подробную информацию о содержимом. σωσ Эта информация может содержать, rawr к примеру, (✿oωo) профиль видео кодека, :3 или тип, rawr x3 используемый аудио треками, ^^ и так далее. ^^
 
-В этом руководстве кратко рассматривается синтаксис параметра `codecs` мультимедийного типа и его использование со строкой, описывающей MIME тип, для предоставления подробных сведений о содержимом аудио- или видеоматериалов, помимо простого указания типа
+В этом руководстве кратко рассматривается синтаксис параметра `codecs` мультимедийного типа и его использование со строкой, OwO описывающей m-mime тип, ʘwʘ для предоставления подробных сведений о содержимом аудио- или видеоматериалов, /(^•ω•^) помимо простого указания типа
 
 ## Общий синтаксис
 
-Основной медиатип определяется установкой строкового значения (`audio`, `video`, и т.д.), после которого идёт символ слеша (`/`), затем указывается формат контейнера, который будет содержать информацию:
+Основной медиатип определяется установкой строкового значения (`audio`, ʘwʘ `video`, (⑅˘꒳˘) и т.д.), UwU после которого идёт символ слеша (`/`), -.- затем указывается формат контейнера, :3 который будет содержать информацию:
 
 - `audio/mpeg`
-  - : Аудио файл, использующий тип файла [MPEG](/ru/docs/Web/Media/Formats/Containers#MPEG) , к примеру, MP3.
+  - : Аудио файл, >_< использующий тип файла [mpeg](/wu/docs/web/media/fowmats/containews#mpeg) , nyaa~~ к примеру, ( ͡o ω ͡o ) m-mp3. o.O
 - `video/ogg`
-  - : Видео файл, использующий тип файла [Ogg](/ru/docs/Web/Media/Formats/Containers#Ogg).
+  - : Видео файл, :3 использующий тип файла [ogg](/wu/docs/web/media/fowmats/containews#ogg). (˘ω˘)
 - `video/mp4`
-  - : Видео файл, использующий тип файла [MPEG-4](/ru/docs/Web/Media/Formats/Containers#MP4).
+  - : Видео файл, rawr x3 использующий тип файла [mpeg-4](/wu/docs/web/media/fowmats/containews#mp4). (U ᵕ U❁)
 - `video/quicktime`
-  - : Видео файл, Apple формата [QuickTime](/ru/docs/Web/Media/Formats/Containers#QuickTime). Как уже отмечалось, этот формат обычно используется в Сети, поскольку требует использования плагинов.
+  - : Видео файл, a-appwe формата [quicktime](/wu/docs/web/media/fowmats/containews#quicktime). 🥺 Как уже отмечалось, >_< этот формат обычно используется в Сети, :3 поскольку требует использования плагинов. :3
 
-Однако эти MIME являются не прозрачными. Все эти типы поддерживают несколько кодеков, и эти кодеки могут содержать несколько профилей, уровней , и других факторов конфигурирования. По этой причине указывается строковый параметр медиа типа `codecs`.
+Однако эти m-mime являются не прозрачными. (ꈍᴗꈍ) Все эти типы поддерживают несколько кодеков, σωσ и эти кодеки могут содержать несколько профилей, 😳 уровней , mya и других факторов конфигурирования. (///ˬ///✿) По этой причине указывается строковый параметр медиа типа `codecs`. ^^
 
-Для его добавления, перед ним ставиться точка с запятой (`;`) , за которой следует строка `codecs=` , в значении указывается формат содержимого файла. Некоторые типы носителей позволяют указывать только имена используемых кодеков, в то время как другие позволяют также указывать различные ограничения для этих кодеков. Вы можете указать несколько кодеков, разделяя их запятыми.
+Для его добавления, (✿oωo) перед ним ставиться точка с запятой (`;`) , ( ͡o ω ͡o ) за которой следует строка `codecs=` , ^^;; в значении указывается формат содержимого файла. :3 Некоторые типы носителей позволяют указывать только имена используемых кодеков, 😳 в то время как другие позволяют также указывать различные ограничения для этих кодеков. Вы можете указать несколько кодеков, XD разделяя их запятыми. (///ˬ///✿)
 
-- `audio/ogg; codecs=vorbis`
-  - : Файл [Ogg](/ru/docs/Web/Media/Formats/Containers#Ogg) содержит [Vorbis](/ru/docs/Web/Media/Formats/Audio_codecs#Vorbis) аудио трек.
-- `video/webm; codecs="vp8, vorbis"`
-  - : Файл [WebM](/ru/docs/Web/Media/Formats/Containers#WebM) , содержащий [VP8](/ru/docs/Web/Media/Formats/Video_codecs#VP8) видео и/или [Vorbis](/ru/docs/Web/Media/Formats/Audio_codecs#Vorbis) аудио.
+- `audio/ogg; c-codecs=vowbis`
+  - : Файл [ogg](/wu/docs/web/media/fowmats/containews#ogg) содержит [vowbis](/wu/docs/web/media/fowmats/audio_codecs#vowbis) аудио трек. o.O
+- `video/webm; codecs="vp8, o.O vowbis"`
+  - : Файл [webm](/wu/docs/web/media/fowmats/containews#webm) , XD содержащий [vp8](/wu/docs/web/media/fowmats/video_codecs#vp8) видео и/или [vowbis](/wu/docs/web/media/fowmats/audio_codecs#vowbis) аудио. ^^;;
 - `video/mp4; codecs="avc1.4d002a"`
-  - : Файл [MPEG-4](/ru/docs/Web/Media/Formats/Containers#MP4) , содержащий [AVC](</ru/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>) (H.264) видео, Основной профиль, Уровень 4.2.
+  - : Файл [mpeg-4](/wu/docs/web/media/fowmats/containews#mp4) , 😳😳😳 содержащий [avc](</wu/docs/web/media/fowmats/video_codecs#avc_(h.264)>) (h.264) видео, (U ᵕ U❁) Основной профиль, /(^•ω•^) Уровень 4.2. 😳😳😳
 
-Как и в случае с любым параметром MIME типа , `codecs` должен заменяться на `codecs*` (обратите внимание на символ звёздочки, `*`) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} для кодирования списка параметров, можно использовать {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} для декодирования предварительно закодированного списка параметров.
+Как и в случае с любым параметром mime типа , rawr x3 `codecs` должен заменяться на `codecs*` (обратите внимание на символ звёздочки, ʘwʘ `*`) , UwU если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, (⑅˘꒳˘) кодировка байтов в шестнадцатеричные значения и т.д.), ^^ входящие в {{wfc(2231, 😳😳😳 "mime p-pawametew vawue and encoded wowd extensions", 4)}}. òωó Можно использовать функции j-javascwipt {{jsxwef("gwobaw_objects/encodeuwi", ^^;; "encodeuwi()")}} для кодирования списка параметров, (✿oωo) можно использовать {{jsxwef("gwobaw_objects/decodeuwi", rawr "decodeuwi()")}} для декодирования предварительно закодированного списка параметров. XD
 
-> [!NOTE]
-> Когда используется параметр `codecs`, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.
+> [!note]
+> Когда используется параметр `codecs`, 😳 указанный список кодеков должен включать каждый кодек, (U ᵕ U❁) используемый для содержимого файла Список также может содержать кодеки, которых нет в файле. UwU
 
 ## Свойства кодеков для контейнеров
 
 Контейнеры ниже поддерживают расширенные свойства кодеков в своих параметрах `codecs` :
 
-- [3GP](#iso-bmff)
-- [AV1](#av1)
-- [ISO BMFF](#iso-bmff)
-- [MPEG-4](#iso-bmff)
-- [QuickTime](#iso-bmff)
-- [WebM](#webm)
+- [3gp](#iso-bmff)
+- [av1](#av1)
+- [iso bmff](#iso-bmff)
+- [mpeg-4](#iso-bmff)
+- [quicktime](#iso-bmff)
+- [webm](#webm)
 
-Несколько ссылок выше входят в одину и то же секцию, потому, что все медиатипы основаны на файловом формате ISO Base Media File Format (ISO BMFF), поэтому они используют тот же синтаксис.
+Несколько ссылок выше входят в одину и то же секцию, OwO потому, 😳 что все медиатипы основаны на файловом формате i-iso base media fiwe fowmat (iso bmff), (˘ω˘) поэтому они используют тот же синтаксис. òωó
 
-### AV1
+### av1
 
-Синтаксис параметра `codecs` для AV1 определяется спецификацией [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff), секция 5: [Строки параметра codecs](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
+Синтаксис параметра `codecs` для a-av1 определяется спецификацией [av1 codec i-iso media fiwe f-fowmat binding](https://aomediacodec.github.io/av1-isobmff), OwO секция 5: [Строки параметра codecs](https://aomediacodec.github.io/av1-isobmff/#codecspawam). (✿oωo)
 
 ```
-av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
+av01.p.wwt.dd[.m[.ccc[.cp[.tc[.mc[.f]]]]]]
 ```
 
-Компоненты строковых параметров кодеков описываются более подробно в таблице ниже. Каждый компонент имеет фиксированное количество символов, и если значение меньше этой длины, оно должно быть дополнено начальными нулями.
+Компоненты строковых параметров кодеков описываются более подробно в таблице ниже. (⑅˘꒳˘) Каждый компонент имеет фиксированное количество символов, /(^•ω•^) и если значение меньше этой длины, 🥺 оно должно быть дополнено начальными нулями. -.-
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    AV1 компоненты строковых параметров кодека
+    av1 компоненты строковых параметров кодека
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Компонент</th>
-      <th scope="col">Описание</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">Компонент</th>
+      <th scope="cow">Описание</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>P</code></td>
+    <tw>
+      <td><code>p</code></td>
       <td>
         <p>Однознаковый номер профиля:</p>
-        <table class="standard-table">
+        <tabwe cwass="standawd-tabwe">
           <caption>
-            AV1 номера профилей
+            av1 номера профилей
           </caption>
           <thead>
-            <tr>
-              <th scope="col">Номер профиля</th>
-              <th scope="col">Описание</th>
-            </tr>
+            <tw>
+              <th scope="cow">Номер профиля</th>
+              <th s-scope="cow">Описание</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>0</td>
               <td>
-                "Основной" профиль; поддерживает YUV 4:2:0 или одноцветный поток
-                битов с глубиной 8 или 10 бит на компонент.
+                "Основной" профиль; поддерживает yuv 4:2:0 или одноцветный поток
+                битов с глубиной 8 или 10 бит на компонент. ( ͡o ω ͡o )
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td>1</td>
               <td>
-                "Высокий" профиль добавляет поддержку выбора цветности 4:4:4.
+                "Высокий" профиль добавляет поддержку выбора цветности 4:4:4. 😳😳😳
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td>2</td>
               <td>
                 "Профессиональный" профиль добавляет поддержку выбора цветности
-                4:2:2 и 12 бит на один цвет компонента.
+                4:2:2 и 12 бит на один цвет компонента. (˘ω˘)
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr>
-      <td><code>LL</code></td>
+    </tw>
+    <tw>
+      <td><code>ww</code></td>
       <td>
-        Двухзначный номер уровня, который преобразуется в формат X.Y, где <code>X = 2 + (LL >> 2)</code>,
-        и <code>Y = LL &#x26; 3</code>. Подробнее
-        <a href="https://aomediacodec.github.io/av1-spec/#levels">Дополнение A, секция 3</a>
-        в спецификации AV1 .
+        Двухзначный номер уровня, ^^ который преобразуется в формат x.y, σωσ где <code>x = 2 + (ww >> 2)</code>, 🥺
+        и <code>y = w-ww &#x26; 3</code>. 🥺 Подробнее
+        <a h-hwef="https://aomediacodec.github.io/av1-spec/#wevews">Дополнение a-a, /(^•ω•^) секция 3</a>
+        в спецификации a-av1 . (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>T</code></td>
+    </tw>
+    <tw>
+      <td><code>t</code></td>
       <td>
-        The one-character tier indicator. For the Main tier (<code>seq_tier</code>
-        equals 0), this character is the letter <code>M</code>. For the High
-        tier (<code>seq_tier</code> is 1), this character is the letter
-        <code>H</code>. The High tier is only available for level 4.0 and up.
+        the one-chawactew tiew i-indicatow. -.- fow the main tiew (<code>seq_tiew</code>
+        equaws 0), 😳 this chawactew i-is the wettew <code>m</code>. 😳😳😳 fow the high
+        tiew (<code>seq_tiew</code> is 1), >w< this chawactew is t-the wettew
+        <code>h</code>. UwU the high tiew i-is onwy avaiwabwe f-fow wevew 4.0 a-and up. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <td><code>DD</code></td>
+    </tw>
+    <tw>
+      <td><code>dd</code></td>
       <td>
-        The two-digit component bit depth. This value must be one of 8, 10, or
-        12; which values are valid varies depending on the profile and other
-        properties.
+        the two-digit component bit depth. 🥺 this v-vawue must be o-one of 8, >_< 10, ow
+        12; which v-vawues awe vawid v-vawies depending on the pwofiwe a-and othew
+        pwopewties. rawr
       </td>
-    </tr>
-    <tr>
-      <td><code>M</code></td>
+    </tw>
+    <tw>
+      <td><code>m</code></td>
       <td>
-        The one-digit monochrome flag; if this is 0, the video includes the U
-        and V planes in addition to the Y plane. Otherwise, the video data is
-        entirely in the Y plane and is therefore monochromatic. See
-        <a href="/ru/docs/Web/Media/Formats/Video_concepts#yuv">YUV</a>
-        for details on how the YUV color system works. The default value is 0
-        (not monochrome).
+        t-the one-digit monochwome fwag; if this is 0, t-the video incwudes the u
+        a-and v pwanes in addition to the y-y pwane. othewwise, (ꈍᴗꈍ) t-the video data is
+        entiwewy in the y pwane and is thewefowe monochwomatic. -.- see
+        <a hwef="/wu/docs/web/media/fowmats/video_concepts#yuv">yuv</a>
+        f-fow detaiws o-on how the yuv cowow system w-wowks. ( ͡o ω ͡o ) the defauwt v-vawue is 0
+        (not m-monochwome). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>CCC</code></td>
+    </tw>
+    <tw>
+      <td><code>ccc</code></td>
       <td>
         <p>
-          <code>CCC</code> indicates the chroma subsampling as three digits. The
-          first digit is <code>subsampling_x</code>, the second is
-          <code>subsampling_y</code>. If both of those are 1, the third is the
-          value of <code>chroma_sample_position</code>; otherwise, the third
-          digit is always 0. This, combined with the <code>M</code> component,
-          can be used to construct the chroma subsampling format:
+          <code>ccc</code> indicates the chwoma subsampwing as t-thwee digits. mya the
+          fiwst digit is <code>subsampwing_x</code>, rawr x3 the second is
+          <code>subsampwing_y</code>. (ꈍᴗꈍ) i-if both of those awe 1, ʘwʘ t-the thiwd is t-the
+          vawue o-of <code>chwoma_sampwe_position</code>; othewwise, :3 t-the thiwd
+          d-digit i-is awways 0. this, o.O c-combined with the <code>m</code> component, /(^•ω•^)
+          c-can be u-used to constwuct t-the chwoma subsampwing f-fowmat:
         </p>
-        <table class="standard-table">
+        <tabwe c-cwass="standawd-tabwe">
           <caption>
-            Determining the chroma subsampling format
+            detewmining the chwoma subsampwing fowmat
           </caption>
           <thead>
-            <tr>
-              <th scope="col">subsampling_x</th>
-              <th scope="col">subsampling_y</th>
-              <th scope="col">Monochrome flag</th>
-              <th scope="col">Chroma subsampling format</th>
-            </tr>
+            <tw>
+              <th s-scope="cow">subsampwing_x</th>
+              <th scope="cow">subsampwing_y</th>
+              <th scope="cow">monochwome fwag</th>
+              <th scope="cow">chwoma subsampwing fowmat</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>0</td>
               <td>0</td>
               <td>0</td>
-              <td>YUV 4:4:4</td>
-            </tr>
-            <tr>
+              <td>yuv 4:4:4</td>
+            </tw>
+            <tw>
               <td>1</td>
               <td>0</td>
               <td>0</td>
-              <td>YUV 4:2:2</td>
-            </tr>
-            <tr>
+              <td>yuv 4:2:2</td>
+            </tw>
+            <tw>
               <td>1</td>
               <td>1</td>
               <td>0</td>
-              <td>YUV 4:2:0</td>
-            </tr>
-            <tr>
+              <td>yuv 4:2:0</td>
+            </tw>
+            <tw>
               <td>1</td>
               <td>1</td>
               <td>1</td>
-              <td>YUV 4:0:0 (Monochrome)</td>
-            </tr>
+              <td>yuv 4:0:0 (monochwome)</td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
         <p>
-          The third digit in <code>CCC</code> indicates the chroma sample
-          position, with a value of 0 indicating that the position is unknown
-          and must be separately provided during decoding; a value of 1
-          indicating that the sample position is horizontally colocated with the
-          (0, 0) luma sample; and a value of 2 indicating that the sample
-          position is colocated with (0, 0) luma.
+          the thiwd digit i-in <code>ccc</code> indicates the chwoma sampwe
+          position, OwO w-with a vawue o-of 0 indicating t-that the position is unknown
+          a-and must be sepawatewy p-pwovided duwing d-decoding; a vawue of 1
+          indicating that the sampwe position is howizontawwy cowocated w-with the
+          (0, σωσ 0) wuma s-sampwe; and a vawue of 2 indicating t-that the sampwe
+          position i-is cowocated with (0, (ꈍᴗꈍ) 0) wuma.
         </p>
-        <p>The default value is <code>110</code> (4:2:0 chroma subsampling).</p>
+        <p>the d-defauwt vawue i-is <code>110</code> (4:2:0 chwoma s-subsampwing).</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>cp</code></td>
       <td>
-        The two-digit <code>color_primaries</code> value indicates the color
-        system used by the media. For example, BT.2020/BT.2100 color, as used
-        for HDR video, is <code>09</code>. The information for this—and for each
-        of the remaining components—is found in the
-        <a href="https://aomediacodec.github.io/av1-spec/#color-config-semantics">Color config semantics section</a>
-        of the AV1 specification. The default value is <code>01</code> (ITU-R
-        BT.709).
+        t-the two-digit <code>cowow_pwimawies</code> vawue indicates the cowow
+        system used by the media. ( ͡o ω ͡o ) fow e-exampwe, rawr x3 bt.2020/bt.2100 c-cowow, UwU a-as used
+        fow hdw video, o.O i-is <code>09</code>. OwO t-the infowmation fow this—and f-fow each
+        of the wemaining components—is found in the
+        <a hwef="https://aomediacodec.github.io/av1-spec/#cowow-config-semantics">cowow c-config s-semantics section</a>
+        of the av1 specification. o.O the defauwt v-vawue is <code>01</code> (itu-w
+        b-bt.709). ^^;;
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>tc</code></td>
       <td>
-        The two-digit <code>transfer_characteristics</code> value. This value
-        defines the function used to map the gamma (delightfully called the
-        "opto-electrical transfer function" in technical parlance) from the
-        source to the display. For example, 10-bit BT.2020 is <code>14</code>.
-        The default value is <code>01</code> (ITU-R BT.709).
+        the two-digit <code>twansfew_chawactewistics</code> vawue. (⑅˘꒳˘) this vawue
+        d-defines the function used to map the gamma (dewightfuwwy cawwed the
+        "opto-ewectwicaw t-twansfew function" in technicaw pawwance) fwom t-the
+        souwce t-to the dispway. (ꈍᴗꈍ) fow exampwe, o.O 10-bit bt.2020 is <code>14</code>. (///ˬ///✿)
+        t-the d-defauwt vawue is <code>01</code> (itu-w bt.709). 😳😳😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>mc</code></td>
       <td>
-        The two-digit <code>matrix_coefficients</code> constant selects the
-        matrix coefficients used to convert the red, blue, and green channels
-        into luma and chroma signals. For example, the standard coefficients
-        used for BT.709 are indicated using the value <code>01</code>. The
-        default value is <code>01</code> (ITU-R BT.709).
+        the two-digit <code>matwix_coefficients</code> constant sewects t-the
+        matwix coefficients u-used to convewt the wed, UwU bwue, nyaa~~ and gween channews
+        into w-wuma and chwoma signaws. (✿oωo) fow exampwe, -.- t-the standawd c-coefficients
+        used fow b-bt.709 awe indicated using the v-vawue <code>01</code>. :3 t-the
+        d-defauwt vawue is <code>01</code> (itu-w b-bt.709). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <td><code>F</code></td>
+    </tw>
+    <tw>
+      <td><code>f</code></td>
       <td>
-        A one-digit flag indicating whether the color should be allowed to use
-        the full range of possible values (<code>1</code>), or should be
-        constrained to those values considered legal for the specified color
-        configuration (that is, the
-        <strong>studio swing representation</strong>). The default is 0 (use the
-        studio swing representation).
+        a-a one-digit fwag indicating whethew the cowow s-shouwd be awwowed t-to use
+        t-the fuww wange of possibwe vawues (<code>1</code>), >_< ow shouwd b-be
+        constwained to those v-vawues considewed w-wegaw fow the specified cowow
+        configuwation (that is, UwU t-the
+        <stwong>studio s-swing w-wepwesentation</stwong>). rawr t-the defauwt is 0 (use t-the
+        studio swing wepwesentation). (ꈍᴗꈍ)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-All fields from `M` (monochrome flag) onward are optional; you may stop including fields at any point (but can't arbitrarily leave out fields). The default values are included in the table above. Some example AV1 codec strings:
+aww fiewds fwom `m` (monochwome fwag) onwawd awe optionaw; y-you may stop incwuding fiewds a-at any point (but can't awbitwawiwy w-weave out fiewds). ^•ﻌ•^ the defauwt v-vawues awe incwuded in the tabwe a-above. some e-exampwe av1 codec s-stwings:
 
-- `av01.2.15M.10.0.100.09.16.09.0`
-  - : AV1 Professional Profile, level 5.3, Main tier, 10 bits per color component, 4:2:2 chroma subsampling using ITU-R BT.2100 color primaries, transfer characteristics, and YCbCr color matrix. The studio swing representation is indicated.
-- `av01.0.15M.10`
-  - : AV1 Main Profile, level 5.3, Main tier, 10 bits per color component. The remaining properties are taken from the defaults: 4:2:0 chroma subsampling, BT.709 color primaries, transfer characteristics, and matrix coefficients. Studio swing representation.
+- `av01.2.15m.10.0.100.09.16.09.0`
+  - : a-av1 pwofessionaw p-pwofiwe, ^^ wevew 5.3, XD main tiew, (///ˬ///✿) 10 bits pew cowow component, σωσ 4:2:2 chwoma subsampwing using itu-w bt.2100 c-cowow pwimawies, :3 t-twansfew chawactewistics, >w< a-and ycbcw cowow matwix. (ˆ ﻌ ˆ)♡ t-the studio swing wepwesentation is indicated. (U ᵕ U❁)
+- `av01.0.15m.10`
+  - : av1 main p-pwofiwe, :3 wevew 5.3, m-main tiew, ^^ 10 bits pew cowow c-component. ^•ﻌ•^ the wemaining pwopewties awe taken f-fwom the defauwts: 4:2:0 c-chwoma subsampwing, (///ˬ///✿) bt.709 c-cowow pwimawies, 🥺 t-twansfew chawactewistics, ʘwʘ and matwix coefficients. (✿oωo) studio swing wepwesentation. rawr
 
-### ISO Base Media File Format: MP4, QuickTime, and 3GP
+### iso base m-media fiwe fowmat: m-mp4, OwO quicktime, a-and 3gp
 
-All media types based upon the [ISO Base Media File Format](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D0%B4%D1%83%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F_%D0%BF%D0%BE_%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8) (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/ru/docs/Web/Media/Formats/Containers#MP4) (and, in fact, the [QuickTime](/ru/docs/Web/Media/Formats/Containers#QuickTime) file format upon which MPEG-4 is based) as well as [3GP](/ru/docs/Web/Media/Formats/Containers#3GP). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
+a-aww media types b-based upon the [iso base media fiwe f-fowmat](https://wu.wikipedia.owg/wiki/%d0%9c%d0%b5%d0%b6%d0%b4%d1%83%d0%bd%d0%b0%d1%80%d0%be%d0%b4%d0%bd%d0%b0%d1%8f_%d0%be%d1%80%d0%b3%d0%b0%d0%bd%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d1%8f_%d0%bf%d0%be_%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82%d0%b8%d0%b7%d0%b0%d1%86%d0%b8%d0%b8) (iso b-bmff) shawe the same syntax f-fow the `codecs` p-pawametew. these media types incwude [mpeg-4](/wu/docs/web/media/fowmats/containews#mp4) (and, ^^ i-in fact, the [quicktime](/wu/docs/web/media/fowmats/containews#quicktime) fiwe fowmat upon which m-mpeg-4 is based) as weww as [3gp](/wu/docs/web/media/fowmats/containews#3gp). ʘwʘ both v-video and audio t-twacks can be descwibed using t-the `codecs` pawametew with the fowwowing mime t-types:
 
-| MIME type         | Description                                                                                                        |
+| mime t-type         | descwiption                                                                                                        |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `audio/3gpp`      | 3GP audio ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `video/3gpp`      | 3GP video ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
-| `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
-| `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
-| `video/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
-| `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                       |
+| `audio/3gpp`      | 3gp a-audio ({{wfc(3839, "mime type wegistwations fow 3wd genewation pawtnewship p-pwoject (3gp) muwtimedia fiwes")}}) |
+| `video/3gpp`      | 3gp video ({{wfc(3839, σωσ "mime t-type w-wegistwations fow 3wd genewation p-pawtnewship pwoject (3gp) muwtimedia f-fiwes")}}) |
+| `audio/3gp2`      | 3gp2 a-audio ({{wfc(4393, (⑅˘꒳˘) "mime type wegistwations fow 3gpp2 m-muwtimedia fiwes")}})                                   |
+| `video/3gp2`      | 3gp2 video ({{wfc(4393, "mime t-type wegistwations f-fow 3gpp2 muwtimedia fiwes")}})                                   |
+| `audio/mp4`       | m-mp4 audio ({{wfc(4337, "mime type w-wegistwation f-fow mpeg-4")}})                                                     |
+| `video/mp4`       | m-mp4 audio ({{wfc(4337, (ˆ ﻌ ˆ)♡ "mime type wegistwation fow mpeg-4")}})                                                     |
+| `appwication/mp4` | nyon-audiovisuaw media encapsuwated in mpeg-4                                                                       |
 
-Each codec described by the `codecs` parameter can be specified either as simply the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
+each codec descwibed by the `codecs` pawametew can be specified eithew as simpwy the c-containew's nyame (`3gp`, :3 `mp4`, ʘwʘ `quicktime`, (///ˬ///✿) e-etc.) ow as the containew nyame pwus additionaw p-pawametews to specify t-the codec a-and its configuwation. each entwy i-in the codec wist may contain s-some nyumbew of c-components, (ˆ ﻌ ˆ)♡ sepawated by pewiods (`.`). 🥺
 
-The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](</ru/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>).
+t-the syntax fow the vawue o-of `codecs` vawies b-by codec; howevew, rawr it awways stawts with the c-codec's fouw-chawactew i-identifiew, (U ﹏ U) a-a pewiod sepawatow (`.`), ^^ f-fowwowed by the o-object type indication (oti) v-vawue f-fow the specific d-data fowmat. σωσ f-fow most codecs, :3 the oti is a two-digit h-hexadecimaw n-nyumbew; howevew, ^^ i-it's six hexadecimaw digits f-fow [avc (h.264)](</wu/docs/web/media/fowmats/video_codecs#avc_(h.264)>). (✿oωo)
 
-Thus, the syntaxes for each of the supported codecs look like this:
+thus, òωó the syntaxes f-fow each of the suppowted codecs w-wook wike this:
 
-- `cccc[.pp]*` (Generic ISO BMFF)
-  - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
-- `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
-- `mp4v.oo[.V]` (MPEG-4 video)
-  - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
-- `avc1.oo[.PPCCLL]` (AVC video)
+- `cccc[.pp]*` (genewic i-iso bmff)
+  - : w-whewe `cccc` is the fouw-chawactew i-id fow the codec and `pp` i-is whewe zewo ow mowe two-chawactew e-encoded pwopewty vawues g-go. (U ᵕ U❁)
+- `mp4a.oo[.a]` (mpeg-4 audio)
+  - : whewe `oo` is the object type indication vawue descwibing t-the contents of the media m-mowe pwecisewy a-and `a` is the one-digit _audio_ oti. ʘwʘ the possibwe vawues fow the oti can be found o-on the mp4 wegistwation authowity w-web site's [object t-types page](https://mp4wa.owg/#/object_types). ( ͡o ω ͡o ) f-fow exampwe, opus audio in an mp4 fiwe is `mp4a.ad`. σωσ f-fow f-fuwthew detaiws, (ˆ ﻌ ˆ)♡ see [mpeg-4 audio](#mpeg-4_audio). (˘ω˘)
+- `mp4v.oo[.v]` (mpeg-4 v-video)
+  - : hewe, 😳 `oo` is again the o-oti descwibing the contents mowe p-pwecisewy, ^•ﻌ•^ whiwe `v` i-is the one-digit _video_ o-oti. σωσ
+- `avc1.oo[.ppccww]` (avc video)
 
-  - : `oo` is the OTI describing the contents, while `PPCCLL` is six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
+  - : `oo` is the oti descwibing t-the contents, 😳😳😳 w-whiwe `ppccww` i-is six hexadecimaw d-digits specifying the pwofiwe n-nyumbew (`pp`), rawr c-constwaint s-set fwags (`cc`), >_< a-and wevew (`ww`). ʘwʘ s-see [avc pwofiwes](#avc_pwofiwes) f-fow the possibwe v-vawues of `pp`. (ˆ ﻌ ˆ)♡
 
-    The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
+    t-the constwaint set f-fwags byte is compwised of one-bit b-boowean fwags, ^^;; with the most s-significant bit b-being wefewwed to a-as fwag 0 (ow `constwaint_set0_fwag`, σωσ in some wesouwces), rawr x3 and each successive b-bit being nyumbewed o-one highew. c-cuwwentwy, 😳 onwy fwags 0 thwough 2 awe used; the othew five bits _must_ b-be zewo. 😳😳😳 t-the meanings of the fwags vawy depending o-on the p-pwofiwe being used. 😳😳😳
 
-    The level is a fixed-point number, so a value of `14` (decimal 20) means level 2.0 while a value of `3D` (decimal 61) means level 6.1. Generally speaking, the higher the level number, the more bandwidth the stream will use and the higher the maximum video dimensions are supported.
+    the wevew is a fixed-point nyumbew, ( ͡o ω ͡o ) so a-a vawue of `14` (decimaw 20) m-means w-wevew 2.0 whiwe a-a vawue of `3d` (decimaw 61) means wevew 6.1. rawr x3 genewawwy speaking, σωσ t-the highew t-the wevew nyumbew, (˘ω˘) the mowe bandwidth the stweam w-wiww use and the highew the maximum video dimensions a-awe suppowted. >w<
 
-#### AVC profiles
+#### avc pwofiwes
 
-The following are the AVC profiles and their profile numbers for use in the `codecs` parameter, as well as the value to specify for the constraints component, `CC`.
+t-the fowwowing a-awe the avc pwofiwes and t-theiw pwofiwe nyumbews f-fow use in the `codecs` pawametew, UwU a-as weww as the vawue to s-specify fow the c-constwaints component, XD `cc`.
 
-| Profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Number (Hex) | Constraints byte |
+| p-pwofiwe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | n-nyumbew (hex) | constwaints b-byte |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------- |
-| **Constrained Baseline Profile (CBP)** CBP is primarily a solution for scenarios in which resources are constrained, or resource use needs to be controlled to minimize the odds of the media performing poorly.                                                                                                                                                                                                                                                                                                  | `42`         | `40`             |
-| **Baseline Profile (BP)** Similar to CBP but with more data loss protections and recovery capabilities. This is not as widely used as it was before CBP was introduced. All CBP streams are considered to also be BP streams.                                                                                                                                                                                                                                                                                     | `42`         | `00`             |
-| **Extended Profile (XP)** Designed for streaming video over the network, with high compression capability and further improvements to data robustness and stream switching.                                                                                                                                                                                                                                                                                                                                       | `58`         | `00`             |
-| **Main Profile (MP)** The profile used for standard-definition digital television being broadcast in MPEG-4 format. _Not_ used for high-definition television broadcasts. This profile's importance has faded since the introduction of the High Profile—which was added for HDTV use—in 2004.                                                                                                                                                                                                                    | `4D`         | `00`             |
-| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for Blu-Ray video.                                                                                                                                                                                                                                                                                                                                               | `64`         | `00`             |
-| **Progressive High Profile (PHiP)** Essentially High Profile without support for field coding.                                                                                                                                                                                                                                                                                                                                                                                                                    | `64`         | `08`             |
-| **Constrained High Profile** PHiP, but without support for bi-predictive slices ("B-slices").                                                                                                                                                                                                                                                                                                                                                                                                                     | `64`         | `0C`             |
-| **High 10 Profile (Hi10P)** High Profile, but with support for up to 10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                                 | `6E`         | `00`             |
-| **High 4:2:2 Profile (Hi422P)** Expands upon Hi10P by adding support for 4:2:2 chroma subsampling along with up to10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                    | `7A`         | `00`             |
-| **High 4:4:4 Predictive Profile (Hi444PP)** In addition to the capabilities included in Hi422P, Hi444PP adds support for 4:4:4 chroma subsampling (in which no color information is discarded). Also includes support for up to 14 bits per color sample and efficient lossless region coding. The option to encode each frame as three separate color planes (that is, each color's data is stored as if it were a single monochrome frame).                                                                     | `F4`         | `00`             |
-| **High 10 Intra Profile** High 10 constrained to all-intra-frame use. Primarily used for professional apps.                                                                                                                                                                                                                                                                                                                                                                                                       | `6E`         | `10`             |
-| **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                          | `7A`         | `10`             |
-| **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                         | `F4`         | `10`             |
-| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                        | `44`         | `00`             |
-| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the SVC Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
-| **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                           | `53`         | `04`             |
-| **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                 | `56`         | `00`             |
-| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communticions.                                                                                                                                                                                                                                                                                                                                                                                          | `56`         | `04`             |
-| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                    | `56`         | `20`             |
-| **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                | `80`         | `00`             |
-| **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                             | `76`         | `00`             |
-| **Multiview Depth High Profile** Based on the High Profile, to which the main substream must adhere. The remaining substreams must match the Stereo High Profile.                                                                                                                                                                                                                                                                                                                                                 | `8A`         | `00`             |
+| **constwained b-basewine pwofiwe (cbp)** c-cbp is pwimawiwy a sowution f-fow scenawios in which wesouwces awe constwained, (U ﹏ U) o-ow wesouwce u-use nyeeds to b-be contwowwed to minimize the odds of the media pewfowming poowwy. (U ᵕ U❁)                                                                                                                                                                                                                                                                                                  | `42`         | `40`             |
+| **basewine pwofiwe (bp)** s-simiwaw to cbp but with mowe d-data woss pwotections a-and wecovewy capabiwities. (ˆ ﻌ ˆ)♡ this is nyot a-as widewy used as it was befowe c-cbp was intwoduced. òωó a-aww cbp stweams a-awe considewed t-to awso be bp s-stweams. ^•ﻌ•^                                                                                                                                                                                                                                                                                     | `42`         | `00`             |
+| **extended pwofiwe (xp)** designed fow stweaming video ovew the nyetwowk, (///ˬ///✿) with h-high compwession capabiwity a-and fuwthew impwovements to data wobustness and stweam switching. -.-                                                                                                                                                                                                                                                                                                                                       | `58`         | `00`             |
+| **main p-pwofiwe (mp)** the pwofiwe used fow standawd-definition digitaw tewevision b-being bwoadcast i-in mpeg-4 fowmat. >w< _not_ used fow h-high-definition tewevision bwoadcasts. this pwofiwe's i-impowtance h-has faded since the intwoduction o-of the high pwofiwe—which was added fow hdtv u-use—in 2004. òωó                                                                                                                                                                                                                    | `4d`         | `00`             |
+| **high pwofiwe (hip)** cuwwentwy, σωσ hip is the pwimawy pwofiwe u-used fow bwoadcast and disc-based hd video; i-it's used both f-fow hd tv bwoadcasts a-and fow bwu-way video. mya                                                                                                                                                                                                                                                                                                                                               | `64`         | `00`             |
+| **pwogwessive high pwofiwe (phip)** e-essentiawwy high pwofiwe without suppowt fow fiewd coding. òωó                                                                                                                                                                                                                                                                                                                                                                                                                    | `64`         | `08`             |
+| **constwained high pwofiwe** p-phip, 🥺 but w-without suppowt f-fow bi-pwedictive s-swices ("b-swices"). (U ﹏ U)                                                                                                                                                                                                                                                                                                                                                                                                                     | `64`         | `0c`             |
+| **high 10 pwofiwe (hi10p)** high p-pwofiwe, but w-with suppowt fow up to 10 bits pew cowow component. (ꈍᴗꈍ)                                                                                                                                                                                                                                                                                                                                                                                                                 | `6e`         | `00`             |
+| **high 4:2:2 p-pwofiwe (hi422p)** expands upon hi10p by a-adding suppowt fow 4:2:2 chwoma subsampwing awong w-with up to10 bits p-pew cowow component. (˘ω˘)                                                                                                                                                                                                                                                                                                                                                                    | `7a`         | `00`             |
+| **high 4:4:4 pwedictive pwofiwe (hi444pp)** i-in a-addition to the c-capabiwities incwuded in hi422p, (✿oωo) hi444pp adds suppowt f-fow 4:4:4 chwoma subsampwing (in which nyo c-cowow infowmation is discawded). -.- awso incwudes suppowt fow up t-to 14 bits pew cowow s-sampwe and e-efficient wosswess w-wegion coding. (ˆ ﻌ ˆ)♡ t-the option to encode each fwame a-as thwee sepawate cowow pwanes (that is, (✿oωo) each c-cowow's data is stowed as if it w-wewe a singwe monochwome fwame). ʘwʘ                                                                     | `f4`         | `00`             |
+| **high 10 intwa pwofiwe** h-high 10 constwained t-to aww-intwa-fwame use. (///ˬ///✿) p-pwimawiwy used fow pwofessionaw a-apps. rawr                                                                                                                                                                                                                                                                                                                                                                                                       | `6e`         | `10`             |
+| **high 4:2:2 i-intwa pwofiwe** the hi422 pwofiwe w-with aww-intwa-fwame u-use. 🥺                                                                                                                                                                                                                                                                                                                                                                                                                                          | `7a`         | `10`             |
+| **high 4:4:4 intwa pwofiwe** t-the high 4:4:4 pwofiwe constwained to use onwy intwa fwames. mya                                                                                                                                                                                                                                                                                                                                                                                                                         | `f4`         | `10`             |
+| **cavwc 4:4:4 i-intwa pwofiwe** the high 4:4:4 p-pwofiwe constwained to aww-intwa use, mya and to using o-onwy cavwc entwopy c-coding. mya                                                                                                                                                                                                                                                                                                                                                                                        | `44`         | `00`             |
+| **scawabwe b-basewine pwofiwe** intended f-fow use with video c-confewencing as weww as suwveiwwance a-and mobiwe uses, (⑅˘꒳˘) the svc b-basewine pwofiwe is based on a-avc's constwained b-basewine pwofiwe. (✿oωo) the base wayew within the stweam is pwovided at a high quawity w-wevew, 😳 with some n-nyumbew of secondawy substweams that offew awtewnative fowms o-of the same video fow use in vawious c-constwained e-enviwonments. OwO these may incwude any combination of weduced wesowution, (˘ω˘) weduced f-fwame wate, (✿oωo) ow incweased compwession wevews. /(^•ω•^) | `53`         | `00`             |
+| **scawabwe constwained b-basewine pwofiwe** pwimawiwy u-used fow w-weaw-time communication appwications. rawr x3 n-nyot yet s-suppowted by webwtc, rawr b-but an extension t-to the webwtc a-api [to awwow s-svc](https://github.com/w3c/webwtc-svc) is in devewopment. ( ͡o ω ͡o )                                                                                                                                                                                                                                                                           | `53`         | `04`             |
+| **scawabwe high pwofiwe** meant mostwy fow use in bwoadcast a-and stweaming a-appwications. ( ͡o ω ͡o ) t-the base (ow h-highest quawity) w-wayew must confowm t-to the avc high pwofiwe. 😳😳😳                                                                                                                                                                                                                                                                                                                                                 | `56`         | `00`             |
+| **scawabwe constwained high pwofiwe** a subset of the scawabwe h-high pwofiwe d-designed mainwy fow weaw-time communticions. (U ﹏ U)                                                                                                                                                                                                                                                                                                                                                                                          | `56`         | `04`             |
+| **scawabwe high intwa pwofiwe** pwimawiwy u-usefuw onwy f-fow pwoduction a-appwications, UwU this pwofiwe suppowts onwy aww-intwa u-usage.                                                                                                                                                                                                                                                                                                                                                                                    | `56`         | `20`             |
+| **steweo high pwofiwe** the s-steweo high pwofiwe p-pwovides steweoscopic video using two wendewings o-of the scene (weft eye and w-wight eye). (U ﹏ U) othewwise, 🥺 p-pwovides the same featuwes a-as the high pwofiwe. ʘwʘ                                                                                                                                                                                                                                                                                                                | `80`         | `00`             |
+| **muwtiview h-high pwofiwe** s-suppowts t-two ow mowe views u-using both tempowaw a-and mvc intew-view pwediction. _does n-nyot s-suppowt_ fiewd pictuwes ow macwobwock-adaptive f-fwame-fiewd coding. 😳                                                                                                                                                                                                                                                                                                                             | `76`         | `00`             |
+| **muwtiview depth high pwofiwe** based on t-the high pwofiwe, (ˆ ﻌ ˆ)♡ to which the main s-substweam must adhewe. >_< the wemaining s-substweams m-must match the steweo high pwofiwe.                                                                                                                                                                                                                                                                                                                                                 | `8a`         | `00`             |
 
-#### MPEG-4 audio
+#### mpeg-4 audio
 
-When the value of an entry in the `codecs` list begins with `mp4a`, the syntax of the value should be:
+w-when the vawue of an entwy in the `codecs` wist b-begins with `mp4a`, t-the syntax of the vawue shouwd be:
 
 ```
-mp4a.oo[.A]
+mp4a.oo[.a]
 ```
 
-Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](https://mp4ra.org/), which maintains a [list of the possible OTI values](https://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
+h-hewe, ^•ﻌ•^ `oo` i-is the two-digit hexadecimaw o-object type indication which specifies the c-codec cwass being u-used fow the media. (✿oωo) the otis awe a-assigned by the [mp4 w-wegistwation authowity](https://mp4wa.owg/), OwO which maintains a-a [wist of t-the possibwe oti v-vawues](https://mp4wa.owg/#/object_types). (ˆ ﻌ ˆ)♡ a-a speciaw vawue is `40`; this indicates that the media is mpeg-4 audio (iso/iec 14496 pawt 3). ^^;; in owdew to be mowe specific s-stiww, nyaa~~ a t-thiwd component—the a-audio object t-type—is added f-fow oti `40` t-to nyawwow the type down to a specific s-subtype o-of mpeg-4. o.O
 
-The Audio Object Type is specified as a one or two digit _decimal_ value (unlike most other values in the `codecs` parameter, which use hexadecimal). For example, MPEG-4's AAC-LC has an audio object type number of `2`, so the full `codecs` value representing AAC-LC is `mp4a.40.2`.
+the audio object type i-is specified as a-a one ow two digit _decimaw_ vawue (unwike most othew vawues in t-the `codecs` pawametew, >_< which use hexadecimaw). (U ﹏ U) f-fow exampwe, ^^ mpeg-4's aac-wc has a-an audio object t-type nyumbew of `2`, UwU so the fuww `codecs` v-vawue w-wepwesenting a-aac-wc is `mp4a.40.2`. ^^;;
 
-Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full `codecs` value `mp4a.40.17`. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as `mp4a.40.02`.
+thus, òωó ew a-aac wc, -.- whose audio o-object type is 17, ( ͡o ω ͡o ) can be wepwesented u-using the fuww `codecs` v-vawue `mp4a.40.17`. o.O s-singwe digit v-vawues can be given eithew as o-one digit (which is the best choice, rawr since it w-wiww be the most bwoadwy compatibwe) ow with a weading zewo padding it to two digits, (✿oωo) such as `mp4a.40.02`. σωσ
 
-> [!NOTE]
-> The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
+> [!note]
+> the specification o-owiginawwy mandated that the audio object type nyumbew in the thiwd component be onwy one decimaw digit. (U ᵕ U❁) h-howevew, >_< amendments to the specification ovew t-time extended the wange of these v-vawues weww beyond one decimaw digit, ^^ so nyow t-the thiwd pawametew may be eithew o-one ow two digits. rawr padding vawues b-bewow 10 with a-a weading `0` is optionaw. >_< owdew impwementations o-of mpeg-4 codecs may nyot suppowt two-digit vawues, howevew, (⑅˘꒳˘) s-so using a singwe digit when possibwe w-wiww maximize compatibiwity.
 
-The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object ypes provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
+t-the audio object types awe d-defined in iso/iec 14496-3 s-subpawt 1, >w< section 1.5.1. (///ˬ///✿) the tabwe bewow p-pwovides a basic wist of the audio object types a-and in the case of the mowe common object ypes pwovides a wist of the pwofiwes s-suppowting it, ^•ﻌ•^ b-but you shouwd wefew to the specification f-fow d-detaiws if you nyeed to know mowe a-about the innew wowkings of any given mpeg-4 audio type. (✿oωo)
 
-| ID          | Audio Object Type                                                             | Profile support                                   |
+| id          | audio o-object type                                                             | p-pwofiwe suppowt                                   |
 | ----------- | ----------------------------------------------------------------------------- | ------------------------------------------------- |
-| `0`         | NULL                                                                          |                                                   |
-| `1`         | AAC Main                                                                      | Main                                              |
-| `2`         | AAC LC (Low Complexity)                                                       | Main, Scalable, HQ, LD v2, AAC, HE-AAC, HE-AAC v2 |
-| `3`         | AAC SSR (Scalable Sampling Rate)                                              | Main                                              |
-| `4`         | AAC LTP (Long Term Prediction)                                                | Main, Scalable, HQ                                |
-| `5`         | SBR (Spectral Band Replication)                                               | HE-AAC, HE-AAC v2                                 |
-| `6`         | AAC Scalable                                                                  | Main, Scalable, HQ                                |
-| `7`         | TwinVQ (Coding for ultra-low bit rates)                                       | Main, Scalable                                    |
-| `8`         | CELP (Code-Excited Linear Prediction)                                         | Main, Scalable, Speech, HQ, LD                    |
-| `9`         | HVXC (Harmonic Vector Excitation Coding)                                      | Main, Scalable, Speech, LD                        |
-| `10` – `11` | _Reserved_                                                                    |                                                   |
-| `12`        | TTSI (Text to Speech Interface)                                               | Main, Scalable, Speech, Synthetic, LD             |
-| `13`        | Main Synthetic                                                                | Main, Synthetic                                   |
-| `14`        | Wavetable Synthesis                                                           |                                                   |
-| `15`        | General MIDI                                                                  |                                                   |
-| `16`        | Algorithmic Synthesis and Audio Effects                                       |                                                   |
-| `17`        | ER AAC LC (Error Resilient AAC Low-Complexity)                                | HQ, Mobile Internetworking                        |
-| `18`        | _Reserved_                                                                    |                                                   |
-| `19`        | ER AAC LTP (Error Resilient AAC Long Term Prediction)                         | HQ                                                |
-| `20`        | ER AAC Scalable (Error Resilient AAC Scalable)                                | Mobile Internetworking                            |
-| `21`        | ER TwinVQ (Error Resilient TwinVQ)                                            | Mobile Internetworking                            |
-| `22`        | ER BSAC (Error Reslient Bit-Sliced Arithmetic Coding)                         | Mobile Internetworking                            |
-| `23`        | ER AAC LD (Error Resilient AAC Low-Delay; used for two-way communication)     | LD, Mobile Internetworking                        |
-| `24`        | ER CELP (Error Resilient Code-Excited Linear Prediction)                      | HQ, LD                                            |
-| `25`        | ER HVXC (Error Resilient Harmonic Vector Excitation Coding)                   | LD                                                |
-| `26`        | ER HILN (Error Resilient Harmonic and Individual Line plus Noise)             |                                                   |
-| `27`        | ER Parametric (Error Resilient Parametric)                                    |                                                   |
-| `28`        | SSC (Sinusoidal Coding)                                                       |                                                   |
-| `29`        | PS (Parametric Stereo)                                                        | HE-AAC v2                                         |
-| `30`        | MPEG Surround                                                                 |                                                   |
-| `31`        | _Escape_                                                                      |                                                   |
-| `32`        | MPEG-1 Layer-1                                                                |                                                   |
-| `33`        | MPEG-1 Layer-2 (MP2)                                                          |                                                   |
-| `34`        | MPEG-1 Layer-3 (MP3)                                                          |                                                   |
-| `35`        | DST (Direct Stream Transfer)                                                  |                                                   |
-| `36`        | ALS (Audio Lossless)                                                          |                                                   |
-| `37`        | SLS (Scalable Lossless)                                                       |                                                   |
-| `38`        | SLS Non-core (Scalable Lossless Non-core)                                     |                                                   |
-| `39`        | ER AAC ELD (Error Resilient AAC Enhanced Low Delay)                           |                                                   |
-| `40`        | SMR Simple (Symbolic Music Representation Simple)                             |                                                   |
-| `41`        | SMR Main (Symbolic Music Representation Main)                                 |                                                   |
-| `42`        | _Reserved_                                                                    |                                                   |
-| `43`        | SAOC (Spatial Audio Object Coding)[\[1\]](#audio-object-types-foot-1)         |                                                   |
-| `44`        | LD MPEG Surround (Low Delay MPEG Surround)[\[1\]](#audio-object-types-foot-1) |                                                   |
-| `45` and up | _Reserved_                                                                    |                                                   |
+| `0`         | n-nyuww                                                                          |                                                   |
+| `1`         | a-aac main                                                                      | main                                              |
+| `2`         | a-aac wc (wow compwexity)                                                       | main, ʘwʘ s-scawabwe, >w< hq, wd v2, :3 aac, he-aac, (ˆ ﻌ ˆ)♡ he-aac v2 |
+| `3`         | a-aac ssw (scawabwe s-sampwing wate)                                              | main                                              |
+| `4`         | aac wtp (wong t-tewm pwediction)                                                | main, -.- scawabwe, rawr hq                                |
+| `5`         | sbw (spectwaw band wepwication)                                               | he-aac, rawr x3 he-aac v2                                 |
+| `6`         | aac s-scawabwe                                                                  | m-main, (U ﹏ U) scawabwe, (ˆ ﻌ ˆ)♡ hq                                |
+| `7`         | t-twinvq (coding f-fow uwtwa-wow bit wates)                                       | m-main, :3 scawabwe                                    |
+| `8`         | cewp (code-excited wineaw pwediction)                                         | main, òωó scawabwe, /(^•ω•^) speech, hq, w-wd                    |
+| `9`         | hvxc (hawmonic vectow excitation coding)                                      | main, >w< s-scawabwe, nyaa~~ speech, mya w-wd                        |
+| `10` – `11` | _wesewved_                                                                    |                                                   |
+| `12`        | t-ttsi (text to speech intewface)                                               | main, mya scawabwe, ʘwʘ speech, synthetic, rawr w-wd             |
+| `13`        | m-main synthetic                                                                | m-main, (˘ω˘) synthetic                                   |
+| `14`        | wavetabwe s-synthesis                                                           |                                                   |
+| `15`        | genewaw midi                                                                  |                                                   |
+| `16`        | a-awgowithmic synthesis and audio e-effects                                       |                                                   |
+| `17`        | ew aac wc (ewwow w-wesiwient aac wow-compwexity)                                | hq, /(^•ω•^) mobiwe i-intewnetwowking                        |
+| `18`        | _wesewved_                                                                    |                                                   |
+| `19`        | ew aac wtp (ewwow w-wesiwient aac w-wong tewm pwediction)                         | hq                                                |
+| `20`        | e-ew aac scawabwe (ewwow w-wesiwient aac scawabwe)                                | m-mobiwe intewnetwowking                            |
+| `21`        | ew twinvq (ewwow w-wesiwient twinvq)                                            | m-mobiwe intewnetwowking                            |
+| `22`        | e-ew bsac (ewwow weswient bit-swiced awithmetic c-coding)                         | mobiwe intewnetwowking                            |
+| `23`        | ew aac wd (ewwow wesiwient aac wow-deway; used fow two-way communication)     | wd, (˘ω˘) mobiwe intewnetwowking                        |
+| `24`        | e-ew cewp (ewwow wesiwient code-excited wineaw p-pwediction)                      | hq, (///ˬ///✿) wd                                            |
+| `25`        | e-ew hvxc (ewwow wesiwient hawmonic vectow e-excitation coding)                   | wd                                                |
+| `26`        | ew hiwn (ewwow w-wesiwient hawmonic and individuaw wine p-pwus nyoise)             |                                                   |
+| `27`        | ew pawametwic (ewwow wesiwient p-pawametwic)                                    |                                                   |
+| `28`        | ssc (sinusoidaw coding)                                                       |                                                   |
+| `29`        | p-ps (pawametwic s-steweo)                                                        | he-aac v2                                         |
+| `30`        | m-mpeg s-suwwound                                                                 |                                                   |
+| `31`        | _escape_                                                                      |                                                   |
+| `32`        | mpeg-1 wayew-1                                                                |                                                   |
+| `33`        | m-mpeg-1 w-wayew-2 (mp2)                                                          |                                                   |
+| `34`        | mpeg-1 wayew-3 (mp3)                                                          |                                                   |
+| `35`        | d-dst (diwect stweam twansfew)                                                  |                                                   |
+| `36`        | aws (audio wosswess)                                                          |                                                   |
+| `37`        | s-sws (scawabwe wosswess)                                                       |                                                   |
+| `38`        | sws nyon-cowe (scawabwe w-wosswess nyon-cowe)                                     |                                                   |
+| `39`        | e-ew aac ewd (ewwow w-wesiwient aac enhanced wow deway)                           |                                                   |
+| `40`        | smw simpwe (symbowic m-music wepwesentation s-simpwe)                             |                                                   |
+| `41`        | smw main (symbowic m-music w-wepwesentation main)                                 |                                                   |
+| `42`        | _wesewved_                                                                    |                                                   |
+| `43`        | saoc (spatiaw audio object coding)[\[1\]](#audio-object-types-foot-1)         |                                                   |
+| `44`        | wd mpeg suwwound (wow deway m-mpeg suwwound)[\[1\]](#audio-object-types-foot-1) |                                                   |
+| `45` a-and up | _wesewved_                                                                    |                                                   |
 
-\[1] SAOC and LD MPEG Surround are defined in [ISO/IEC 14496-3:2009/Amd.2:2010(E)](https://www.iso.org/standard/54838.html).
+\[1] saoc and wd mpeg suwwound awe d-defined in [iso/iec 14496-3:2009/amd.2:2010(e)](https://www.iso.owg/standawd/54838.htmw). (˘ω˘)
 
-### WebM
+### webm
 
-The basic form for a WebM `codecs` parameter is to simply list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:
+the basic fowm fow a webm `codecs` p-pawametew i-is to simpwy w-wist one ow mowe o-of the fouw webm c-codecs by nyame, -.- s-sepawated by commas. -.- the tabwe bewow shows s-some exampwes:
 
-| MIME type                        | Description                                               |
+| m-mime type                        | d-descwiption                                               |
 | -------------------------------- | --------------------------------------------------------- |
-| `video/webm;codecs="vp8"`        | A WebM video with VP8 video in it; no audio is specified. |
-| `video/webm;codecs="vp9"`        | A WebM video with VP9 video in it.                        |
-| `audio/webm;codecs="vorbis"`     | Vorbis audio in a WebM container.                         |
-| `audio/webm;codecs="opus"`       | Opus audio in a WebM container.                           |
-| `video/webm;codecs="vp8,vorbis"` | A WebM container with VP8 video and Vorbis audio.         |
-| `video/webm;codecs="vp9,opus"`   | A WebM container with VP9 video and Opus audio.           |
+| `video/webm;codecs="vp8"`        | a-a webm video w-with vp8 video i-in it; nyo audio is specified. ^^ |
+| `video/webm;codecs="vp9"`        | a-a webm v-video with vp9 video i-in it. (ˆ ﻌ ˆ)♡                        |
+| `audio/webm;codecs="vowbis"`     | vowbis audio in a webm c-containew. UwU                         |
+| `audio/webm;codecs="opus"`       | opus audio in a webm c-containew. 🥺                           |
+| `video/webm;codecs="vp8,vowbis"` | a webm containew with v-vp8 video and v-vowbis audio. 🥺         |
+| `video/webm;codecs="vp9,opus"`   | a webm containew with vp9 video and o-opus audio. 🥺           |
 
-The strings `vp8.0` and `vp9.0` also work, but are not recommended.
+t-the stwings `vp8.0` and `vp9.0` a-awso wowk, 🥺 b-but awe not wecommended. :3
 
-#### ISO Base Media File Format syntax
+#### iso base media fiwe fowmat syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+a-as pawt of a-a move towawd a standawdized and powewfuw fowmat f-fow the `codecs` p-pawametew, (˘ω˘) webm is moving towawd descwibing _video_ c-content using a syntax based on that defined by the [iso base media fiwe fowmat](#iso-bmff). ^^;; t-this syntax is defined in [vp codec iso media f-fiwe fowmat binding](https://www.webmpwoject.owg/vp9/mp4), (ꈍᴗꈍ) i-in t-the section [codecs pawametew stwing](https://www.webmpwoject.owg/vp9/mp4/#codecs-pawametew-stwing). ʘwʘ t-the audio c-codec continues t-to be indicated a-as eithew `vowbis` o-ow `opus`.
 
-In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
+in this fowmat, :3 the `codecs` pawametew's v-vawue begins w-with a fouw-chawactew c-code identifying the c-codec being used i-in the containew, XD w-which is then fowwowed by a sewies o-of pewiod (`.`) s-sepawated t-two-digit vawues. UwU
 
 ```
-cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
+c-cccc.pp.ww.dd.cc[.cp[.tc[.mc[.ff]]]]
 ```
 
-The first five components are required; everything from `cp` (color primaries) onward is optional; you can stop including components at any point from then onward. Each of these components is described in the following table. Following the table are some examples.
+t-the fiwst five components awe wequiwed; e-evewything fwom `cp` (cowow p-pwimawies) o-onwawd is optionaw; you can stop incwuding components at any point f-fwom then onwawd. rawr x3 e-each of these components is d-descwibed in the f-fowwowing tabwe. ( ͡o ω ͡o ) fowwowing the tabwe awe some e-exampwes. :3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    WebM codecs parameter components
+    w-webm codecs p-pawametew c-components
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Component</th>
-      <th scope="col">Details</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">component</th>
+      <th scope="cow">detaiws</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>cccc</code></td>
       <td>
         <p>
-          A four-character code indicating which indicates which of the possible
-          codecs is being described. Potential values are:
+          a fouw-chawactew c-code indicating which indicates which of the possibwe
+          codecs i-is being descwibed. rawr p-potentiaw vawues awe:
         </p>
-        <table class="standard-table">
+        <tabwe cwass="standawd-tabwe">
           <caption>
-            Four-character codes for WebM-supported codecs
+            fouw-chawactew c-codes fow webm-suppowted c-codecs
           </caption>
           <thead>
-            <tr>
-              <th scope="col">Four-character code</th>
-              <th scope="col">Codec</th>
-            </tr>
+            <tw>
+              <th scope="cow">fouw-chawactew code</th>
+              <th s-scope="cow">codec</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td><code>vp08</code></td>
-              <td>VP8</td>
-            </tr>
-            <tr>
+              <td>vp8</td>
+            </tw>
+            <tw>
               <td><code>vp09</code></td>
-              <td>VP9</td>
-            </tr>
-            <tr>
+              <td>vp9</td>
+            </tw>
+            <tw>
               <td><code>vp10</code></td>
-              <td>VP10</td>
-            </tr>
+              <td>vp10</td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr>
-      <td><code>PP</code></td>
+    </tw>
+    <tw>
+      <td><code>pp</code></td>
       <td>
         <p>
-          The two-digit profile number, padded with leading zeroes if necessary
-          to be exactly two digits.
+          the two-digit p-pwofiwe n-nyumbew, ^•ﻌ•^ padded w-with weading zewoes if nyecessawy
+          to be exactwy two digits. 🥺
         </p>
-        <table class="standard-table">
+        <tabwe c-cwass="standawd-tabwe">
           <caption>
-            WebM profile numbers
+            webm pwofiwe n-nyumbews
           </caption>
           <thead>
-            <tr>
-              <th scope="col">Profile</th>
-              <th scope="col">Description</th>
-            </tr>
+            <tw>
+              <th scope="cow">pwofiwe</th>
+              <th s-scope="cow">descwiption</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td><code>00</code></td>
               <td>
-                Only 4:2:0 (chroma subsampled both horizontally and vertically).
-                Allows only 8 bits per color component.
+                onwy 4:2:0 (chwoma subsampwed b-both howizontawwy and vewticawwy). (⑅˘꒳˘)
+                a-awwows onwy 8 bits pew cowow component. :3
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>01</code></td>
               <td>
-                All chroma subsampling formats are allowed. Allows only 8 bits
-                per color component.
+                a-aww chwoma subsampwing f-fowmats awe awwowed. (///ˬ///✿) awwows onwy 8 bits
+                pew cowow component. 😳😳😳
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>02</code></td>
               <td>
-                Only 4:2:0 (chroma subsampled both horizontally and vertically).
-                Supports 8, 10, or 12 bits per color sample component.
+                onwy 4:2:0 (chwoma subsampwed b-both howizontawwy a-and vewticawwy). 😳😳😳
+                s-suppowts 8, 😳😳😳 10, o-ow 12 bits pew cowow sampwe component. nyaa~~
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>03</code></td>
               <td>
-                All chroma subsampling formats are allowed. Supports 8, 10, or
-                12 bits per color sample component.
+                a-aww chwoma subsampwing fowmats awe awwowed. UwU suppowts 8, 10, òωó o-ow
+                12 b-bits p-pew cowow sampwe c-component. òωó
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr>
-      <td><code>LL</code></td>
+    </tw>
+    <tw>
+      <td><code>ww</code></td>
       <td>
-        The two-digit level number. The level number is a fixed-point notation,
-        where the first digit is the ones digit, and the second digit represents
-        tenths. For example, level 3 is <code>30</code> and level 6.1 is
-        <code>61</code>.
+        the two-digit wevew nyumbew. UwU the wevew numbew is a fixed-point n-nyotation, (///ˬ///✿)
+        w-whewe the fiwst digit is the ones digit, ( ͡o ω ͡o ) and the second d-digit wepwesents
+        tenths. rawr f-fow exampwe, :3 w-wevew 3 is <code>30</code> a-and wevew 6.1 is
+        <code>61</code>. >w<
       </td>
-    </tr>
-    <tr>
-      <td><code>DD</code></td>
+    </tw>
+    <tw>
+      <td><code>dd</code></td>
       <td>
-        The bit depth of the luma and color component values; permitted values
-        are 8, 10, and 12.
+        the bit depth of the wuma and cowow component vawues; pewmitted v-vawues
+        awe 8, 10, σωσ a-and 12.
       </td>
-    </tr>
-    <tr>
-      <td><code>CC</code></td>
+    </tw>
+    <tw>
+      <td><code>cc</code></td>
       <td>
         <p>
-          A two-digit value indicating which chroma subsampling format to use.
-          The following table lists permitted values; see
-          <a href="/ru/docs/Web/Media/Formats/Video_concepts#chroma_subsampling">Chroma subsampling</a>
-          for additional information about this topic and others.
+          a two-digit vawue indicating which chwoma s-subsampwing fowmat to use. σωσ
+          t-the fowwowing tabwe wists pewmitted vawues; s-see
+          <a h-hwef="/wu/docs/web/media/fowmats/video_concepts#chwoma_subsampwing">chwoma s-subsampwing</a>
+          f-fow additionaw i-infowmation about this t-topic and othews. >_<
         </p>
-        <table class="standard-table">
+        <tabwe c-cwass="standawd-tabwe">
           <caption>
-            WebM chroma subsampling identifiers
+            webm chwoma s-subsampwing identifiews
           </caption>
           <thead>
-            <tr>
-              <th scope="col">Value</th>
-              <th scope="col">Chroma subsampling format</th>
-            </tr>
+            <tw>
+              <th scope="cow">vawue</th>
+              <th scope="cow">chwoma s-subsampwing fowmat</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td><code>00</code></td>
               <td>
-                4:2:0 with the chroma samples sited interstitially between the
-                pixels
+                4:2:0 with the chwoma s-sampwes sited intewstitiawwy b-between the
+                p-pixews
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>01</code></td>
               <td>
-                4:2:0 chroma subsampling with the samples colocated with luma
-                (0, 0)
+                4:2:0 c-chwoma subsampwing with the sampwes cowocated with wuma
+                (0, -.- 0)
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>02</code></td>
               <td>
-                4:2:2 chroma subsampling (4 out of each 4 horizontal pixels'
-                luminance are used)
+                4:2:2 c-chwoma s-subsampwing (4 o-out of each 4 h-howizontaw pixews'
+                wuminance awe used)
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>03</code></td>
               <td>
-                4:4:4 chroma subsampling (every pixel's luminance and
-                chrominance are both retained)
+                4:4:4 chwoma subsampwing (evewy p-pixew's wuminance and
+                chwominance awe both w-wetained)
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>04</code></td>
-              <td><em>Reserved</em></td>
-            </tr>
+              <td><em>wesewved</em></td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>cp</code></td>
       <td>
         <p>
-          A two-digit integer specifying which of the color primaries from
-          Section 8.1 of the
-          <a href="https://www.itu.int/rec/T-REC-H.273/en">ISO/IEC 23001-8:2016</a>
-          standard. This component, and every component after it, is optional.
+          a two-digit integew specifying w-which of the cowow pwimawies fwom
+          section 8.1 o-of the
+          <a hwef="https://www.itu.int/wec/t-wec-h.273/en">iso/iec 23001-8:2016</a>
+          s-standawd. 😳😳😳 t-this component, :3 a-and evewy component aftew it, mya is o-optionaw. (✿oωo)
         </p>
-        <p>The possible values of the color primaries component are:</p>
-        <table class="standard-table">
+        <p>the p-possibwe vawues of the cowow p-pwimawies component a-awe:</p>
+        <tabwe c-cwass="standawd-tabwe">
           <caption>
-            ISO/IEC Color primary identifiers
+            i-iso/iec cowow pwimawy identifiews
           </caption>
           <thead>
-            <tr>
-              <th scope="col">Value</th>
-              <th scope="col">Details</th>
-            </tr>
+            <tw>
+              <th s-scope="cow">vawue</th>
+              <th s-scope="cow">detaiws</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td><code>00</code></td>
-              <td><em>Reserved for future use by ITU or ISO/IEC</em></td>
-            </tr>
-            <tr>
+              <td><em>wesewved f-fow futuwe use by itu ow iso/iec</em></td>
+            </tw>
+            <tw>
               <td><code>01</code></td>
               <td>
-                BT.709, sRGB, sYCC. BT.709 is the standard for high definition
-                (HD) television; sRGB is the most common color space used for
-                computer displays. Broadcast BT.709 uses 8-bit color depth with
-                the legal range being from 16 (black) to 235 (white).
+                b-bt.709, swgb, 😳😳😳 sycc. bt.709 is the standawd fow high definition
+                (hd) tewevision; swgb i-is the most common c-cowow space used fow
+                c-computew dispways. o.O bwoadcast bt.709 uses 8-bit c-cowow depth w-with
+                t-the wegaw w-wange being fwom 16 (bwack) to 235 (white). (ꈍᴗꈍ)
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>02</code></td>
               <td>
-                Image characteristics are unknown, or are to be determined by
-                the application
+                image chawactewistics a-awe unknown, (ˆ ﻌ ˆ)♡ ow awe to be detewmined by
+                t-the a-appwication
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>03</code></td>
-              <td><em>Reserved for future use by ITU or ISO/IEC</em></td>
-            </tr>
-            <tr>
+              <td><em>wesewved fow futuwe use by itu ow iso/iec</em></td>
+            </tw>
+            <tw>
               <td><code>04</code></td>
               <td>
-                BT.470 System M, NTSC (standard definition television in the
-                United States)
+                b-bt.470 system m, -.- nytsc (standawd d-definition tewevision in the
+                united states)
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>05</code></td>
               <td>
-                BT.470 System B, G; BT.601; BT.1358 625; BT.1700 625 PAL and 625
-                SECAM
+                b-bt.470 system b, mya g; bt.601; bt.1358 625; b-bt.1700 625 paw and 625
+                secam
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>06</code></td>
               <td>
-                BT.601 525; BT.1358 525 or 625; BT.1700 NTSC; SMPTE 170M.
-                <em>Functionally identical to <code>7</code>.</em>
+                b-bt.601 525; bt.1358 525 o-ow 625; bt.1700 nytsc; smpte 170m.
+                <em>functionawwy i-identicaw to <code>7</code>.</em>
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>70</code></td>
               <td>
-                {{Glossary("SMPTE")}} 240M (historical).
-                <em>Functionally identical to <code>6</code>.</em>
+                {{gwossawy("smpte")}} 240m (histowicaw). :3
+                <em>functionawwy i-identicaw to <code>6</code>.</em>
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>08</code></td>
-              <td>Generic film</td>
-            </tr>
-            <tr>
+              <td>genewic fiwm</td>
+            </tw>
+            <tw>
               <td><code>09</code></td>
               <td>
-                BT.2020; BT.2100. Used for ultra-high definition (4K) High
-                Dynamic Range (HDR) video, these have a very wide color gamut
-                and support 10-bit and 12-bit color component depths.
+                bt.2020; bt.2100. σωσ u-used fow uwtwa-high definition (4k) high
+                d-dynamic w-wange (hdw) v-video, 😳😳😳 these have a vewy wide cowow gamut
+                and suppowt 10-bit and 12-bit cowow c-component depths. -.-
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>10</code></td>
               <td>
-                SMPTE ST 428 (D-Cinema Distribution Master: Image
-                characteristics). Defines the uncompressed image characteristics
-                for DCDM.
+                smpte st 428 (d-cinema distwibution m-mastew: image
+                c-chawactewistics). 😳😳😳 defines the uncompwessed i-image chawactewistics
+                f-fow dcdm. rawr x3
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>11</code></td>
               <td>
-                SMPTE RP 431 (D-Cinema Quality: Reference projector and
-                environment). Describes the reference projector and environment
-                conditions that provide a consistent film presentation
-                experience.
+                smpte wp 431 (d-cinema quawity: wefewence pwojectow a-and
+                enviwonment). (///ˬ///✿) d-descwibes the wefewence pwojectow and enviwonment
+                c-conditions t-that pwovide a consistent fiwm p-pwesentation
+                e-expewience. >w<
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>12</code></td>
               <td>
-                SMPTE EG 432 (Digital Source Processing: Color Processing for
-                D-Cinema). Engineering guideline making color signal decoding
-                recommendations for digital movies.
+                smpte e-eg 432 (digitaw souwce pwocessing: c-cowow pwocessing f-fow
+                d-d-cinema). o.O e-engineewing g-guidewine making cowow signaw d-decoding
+                w-wecommendations fow digitaw movies. (˘ω˘)
               </td>
-            </tr>
-            <tr>
+            </tw>
+            <tw>
               <td><code>13</code> – <code>21</code></td>
-              <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
-            </tr>
-            <tr>
+              <td><em>wesewved f-fow futuwe use by i-itu-t ow iso/iec</em></td>
+            </tw>
+            <tw>
               <td><code>22</code></td>
-              <td>EBU Tech 3213-E</td>
-            </tr>
-            <tr>
+              <td>ebu tech 3213-e</td>
+            </tw>
+            <tw>
               <td><code>23</code> – <code>255</code></td>
-              <td><em>Reserved for future use by ITU-T or ISO/IEC</em></td>
-            </tr>
+              <td><em>wesewved fow futuwe use by itu-t ow iso/iec</em></td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>tc</code></td>
       <td>
-        A two-digit integer indicating the
-        <code>transferCharacteristics</code> for the video. This value is from
-        Section 8.2 of
-        <a href="https://www.itu.int/rec/T-REC-H.273/en">ISO/IEC 23001-8:2016</a
-        >, and indicates the transfer characteristics to be used when adapting
-        the decoded color to the render target.
+        a two-digit integew i-indicating the
+        <code>twansfewchawactewistics</code> fow t-the video. rawr this vawue is fwom
+        s-section 8.2 o-of
+        <a hwef="https://www.itu.int/wec/t-wec-h.273/en">iso/iec 23001-8:2016</a
+        >, mya a-and indicates the twansfew chawactewistics t-to be used when adapting
+        the d-decoded cowow to the wendew tawget. òωó
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>mc</code></td>
       <td>
-        The two-digit value for the <code>matrixCoefficients</code> property.
-        This value comes from the table in Section 8.3 of the
-        <a href="https://www.itu.int/rec/T-REC-H.273/en"
-          >ISO/IEC 23001-8:2016</a
+        the two-digit vawue fow the <code>matwixcoefficients</code> pwopewty. nyaa~~
+        this vawue c-comes fwom the tabwe in section 8.3 of the
+        <a h-hwef="https://www.itu.int/wec/t-wec-h.273/en"
+          >iso/iec 23001-8:2016</a
         >
-        specification. This value indicates which set of coefficients to use
-        when mapping from the native red, blue, and green primaries to the luma
-        and chroma signals. These coefficients are in turn used with the
-        equations found in that same section.
+        specification. òωó t-this vawue indicates which set of coefficients to use
+        when mapping fwom the nyative wed, bwue, mya and gween pwimawies to the wuma
+        a-and chwoma s-signaws. ^^ these c-coefficients awe in tuwn used w-with the
+        e-equations found i-in that same section. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <td><code>FF</code></td>
+    </tw>
+    <tw>
+      <td><code>ff</code></td>
       <td>
-        Indicates whether to restrict the black level and color range of each
-        color component to the legal range. For 8 bit color samples, the legal
-        range is 16-235. A value of <code>00</code> indicates that these
-        limitations should be enforced, while a value of <code>01</code> allows
-        the full range of possible values for each component, even if the
-        resulting color is out of bounds for the color system.
+        indicates whethew to westwict t-the bwack w-wevew and cowow wange of each
+        c-cowow component t-to the wegaw w-wange. -.- fow 8 b-bit cowow sampwes, UwU t-the wegaw
+        wange is 16-235. (˘ω˘) a-a vawue of <code>00</code> i-indicates that t-these
+        wimitations s-shouwd b-be enfowced, UwU whiwe a-a vawue of <code>01</code> awwows
+        t-the f-fuww wange of p-possibwe vawues f-fow each component, rawr even if the
+        wesuwting cowow is out of b-bounds fow the cowow system. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### WebM media type examples
+#### webm m-media type exampwes
 
-- `video/webm;codecs="vp08.00.41.08,vorbis"`
-  - : VP8 video, profile 0 level 4.1, using 8-bit YUV with 4:2:0 chroma subsampling, using BT.709 color primaries, transfer function, and matrix coefficients, with the luminance and chroma values encoded within the legal ("studio") range. The video is Vorbis.
+- `video/webm;codecs="vp08.00.41.08,vowbis"`
+  - : vp8 video, nyaa~~ pwofiwe 0 w-wevew 4.1, rawr using 8-bit y-yuv with 4:2:0 c-chwoma subsampwing, (ˆ ﻌ ˆ)♡ using b-bt.709 cowow pwimawies, (ꈍᴗꈍ) t-twansfew function, (˘ω˘) and matwix coefficients, (U ﹏ U) with the wuminance and chwoma vawues encoded w-within the wegaw ("studio") wange. >w< the video is vowbis. UwU
 - `video/webm;codecs="vp09.02.10.10.01.09.16.09.01,opus"`
-  - : VP9 video, profile 2 level 1.0, with 10-bit YUV content using 4:2:0 chroma subsampling, BT.2020 primaries, ST 2084 EOTF (HDR SMPTE), BT.2020 non-constant luminance color matrix, and full-range chroma and luma encoding. The audio is in Opus format.
+  - : v-vp9 video, (ˆ ﻌ ˆ)♡ p-pwofiwe 2 wevew 1.0, nyaa~~ with 10-bit y-yuv content u-using 4:2:0 chwoma s-subsampwing, b-bt.2020 pwimawies, 🥺 s-st 2084 eotf (hdw s-smpte), >_< bt.2020 n-nyon-constant wuminance cowow matwix, òωó and f-fuww-wange chwoma and wuma encoding. ʘwʘ t-the audio is in opus fowmat. mya
 
-## Using the codecs parameter
+## u-using the c-codecs pawametew
 
-You can use the `codecs` parameter in a few situations. Firstly, you can use it with the {{HTMLElement("source")}} element when creating an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, in order to establish a group of options for the browser to choose from when selecting the format of the media to present to the user in the element.
+you can use the `codecs` p-pawametew in a few situations. σωσ fiwstwy, OwO y-you can use i-it with the {{htmwewement("souwce")}} e-ewement when c-cweating an {{htmwewement("audio")}} ow {{htmwewement("video")}} e-ewement, (✿oωo) in o-owdew to estabwish a-a gwoup of options fow the bwowsew t-to choose fwom when sewecting the fowmat of the media to pwesent to the usew in the ewement. ʘwʘ
 
-You can also use the codecs parameter when specifying a MIME media type to the {{domxref("MediaSource.isTypeSupported()")}} method; this method returns a Boolean which indicates whether or not the media is likely to work on the current device.
+you can awso use the codecs pawametew when specifying a-a mime m-media type to the {{domxwef("mediasouwce.istypesuppowted()")}} method; this method wetuwns a boowean which indicates whethew ow n-nyot the media i-is wikewy to wowk on the cuwwent device. mya
 
 ## Смотрите также
 
-- [Web media technologies](/ru/docs/Web/Media)
-- [Guide to media types and formats on the web](/ru/docs/Web/Media/Formats)
-- [Guide to audio codecs used on the web](/ru/docs/Web/Media/Formats/Audio_codecs)
-- [Guide to video codecs used on the web](/ru/docs/Web/Media/Formats/Video_codecs)
-- [Codecs used by WebRTC](/ru/docs/Web/Media/Guides/Formats/WebRTC_codecs)
+- [web media technowogies](/wu/docs/web/media)
+- [guide t-to media types a-and fowmats on the web](/wu/docs/web/media/fowmats)
+- [guide t-to a-audio codecs used on the web](/wu/docs/web/media/fowmats/audio_codecs)
+- [guide t-to video codecs used on the web](/wu/docs/web/media/fowmats/video_codecs)
+- [codecs u-used by webwtc](/wu/docs/web/media/guides/fowmats/webwtc_codecs)

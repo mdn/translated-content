@@ -1,175 +1,175 @@
 ---
-title: "Tutorial Django Parte 7: Sessões"
-slug: Learn_web_development/Extensions/Server-side/Django/Sessions
-original_slug: Learn/Server-side/Django/Sessions
+titwe: "tutowiaw django pawte 7: s-sessões"
+swug: w-weawn_web_devewopment/extensions/sewvew-side/django/sessions
+o-owiginaw_swug: w-weawn/sewvew-side/django/sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/genewic_views", >_< "weawn/sewvew-side/django/authentication_and_sessions", XD "weawn/sewvew-side/django")}}esse t-tutowiaw e-estende nosso s-site [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website), rawr x3 adicionando u-um contadow de visitas baseado em sessões à página iniciaw. ( ͡o ω ͡o ) esse é u-um exempwo wewativamente simpwes, :3 mas capaz de m-mostwaw como você pode usaw a e-estwutuwa de sessão do fwamewowk pawa pwovidenciaw um compowtamento p-pewsistente pawa usuáwios a-anônimos em seu p-pwópwio site. mya
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Completar todos os tópicos anteriores do tutorial, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Generic_views"
-          >Django Tutorial Part 6: Generic list and detail views</a
+        compwetaw t-todos os tópicos antewiowes do tutowiaw, σωσ incwuindo
+        <a hwef="/pt-bw/docs/weawn/sewvew-side/django/genewic_views"
+          >django t-tutowiaw pawt 6: genewic wist and d-detaiw views</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender como as sessões são usadas.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>entendew c-como as sessões s-são usadas.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão Geral
+## visão gewaw
 
-O site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) que criamos nos tutoriais anteriores permite que os usuarios busquem por livros e autores no catálogo. Enquanto o conteúdo é dinamicamente gerado a partir da base de dados, todos os usuários terão acessos às mesmas páginas e às mesmas informações quando acessarem o site.
+o site [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) q-que cwiamos nyos tutowiais antewiowes pewmite q-que os usuawios busquem pow wivwos e autowes nyo catáwogo. (ꈍᴗꈍ) enquanto o conteúdo é dinamicamente g-gewado a pawtiw da base de dados, OwO t-todos os usuáwios t-tewão acessos às m-mesmas páginas e às mesmas infowmações quando acessawem o-o site. o.O
 
-Em uma biblioteca "real", você pode querer fornecer uma experiência personalizada para cada usuário, com base no uso anterior do site, nas preferências, etc. Por exemplo, você pode ocultar mensagens de aviso que o usuário reconheceu anteriormente na próxima visita deles ao site ou armazenar e respeitar suas preferências (por exemplo, o número de resultados de pesquisa que eles querem exibir em cada página).
+em u-uma bibwioteca "weaw", 😳😳😳 você pode q-quewew fownecew u-uma expewiência pewsonawizada p-pawa cada usuáwio, /(^•ω•^) com base n-nyo uso antewiow do site, OwO nyas pwefewências, ^^ etc. (///ˬ///✿) p-pow exempwo, (///ˬ///✿) você pode ocuwtaw m-mensagens de aviso que o usuáwio w-weconheceu a-antewiowmente nya pwóxima visita dewes ao site ou awmazenaw e wespeitaw suas pwefewências (pow exempwo, (///ˬ///✿) o nyúmewo de wesuwtados d-de pesquisa que e-ewes quewem exibiw em cada página). ʘwʘ
 
-A estrutura da sessão permite implementar esse tipo de comportamento, permitindo que você armazene e recupere dados arbitrários baseados em cada visitante do site.
+a-a estwutuwa d-da sessão p-pewmite impwementaw esse tipo de compowtamento, ^•ﻌ•^ pewmitindo que você a-awmazene e wecupewe dados awbitwáwios baseados em cada visitante do site. OwO
 
-## O que são sessões?
+## o-o que são sessões?
 
-Toda a comunicação entre os navegadores web e os servidores é feita via protocolo HTTP, qual é _stateless_ (sem estados). O fato do protocolo ser stateless significa que as mensagens entre o cliente e o servidor são completamente independentes uma da outra — não há uma noção de "sequência" ou comportamento diferente baseado nas mensagens anteriores. Como resultado, se você quiser ter um site que monitore os relacionamentos contínuos com um cliente, é necessário implementá-lo por conta própria.
+toda a c-comunicação entwe o-os nyavegadowes w-web e os sewvidowes é feita v-via pwotocowo h-http, (U ﹏ U) quaw é _statewess_ (sem estados). (ˆ ﻌ ˆ)♡ o-o fato d-do pwotocowo sew statewess significa que as mensagens e-entwe o cwiente e-e o sewvidow s-são compwetamente i-independentes u-uma da outwa — nyão há uma nyoção de "sequência" ou compowtamento d-difewente baseado nyas mensagens antewiowes. (⑅˘꒳˘) como wesuwtado, (U ﹏ U) se você quisew tew um s-site que monitowe os wewacionamentos contínuos com um cwiente, o.O é n-nyecessáwio i-impwementá-wo p-pow conta pwópwia. mya
 
-Sessões são o mecanismo usado pelo Django (e muitos outros na Internet) para monitorar o "estado" entre o site e um navegador web em particular. Sessões permitem que você armazene dados arbitrários por navegador web, e têm esse dado disponível no site sempre que o navegador conectar. Dados de itens individuais associados com a sessão são referenciados por uma "chave", que é usada para armazenar e recuperar os dados.
+sessões são o-o mecanismo usado pewo django (e m-muitos outwos n-nya intewnet) pawa monitowaw o "estado" entwe o site e um nyavegadow web em pawticuwaw. XD sessões p-pewmitem que você awmazene dados a-awbitwáwios pow nyavegadow w-web, òωó e têm esse d-dado disponívew nyo site sempwe que o nyavegadow c-conectaw. (˘ω˘) dados d-de itens individuais associados c-com a sessão s-são wefewenciados pow uma "chave", :3 que é usada pawa awmazenaw e wecupewaw os d-dados. OwO
 
-O Django usa um cookie contendo um _identificador_ especial de sessão para identificar cada navegador e associar com o site. Os dados da sessão atual são armazenados na base de dados do site por padrão (é mais seguro do que armazenar os dados em cookie, onde é mais vulnerável aos usuários perigosos). Você pode configurar o Django para armazenar os dados da sessão em outros lugares (cache, arquivos, cookies "seguros"), mas o local padrão é uma opção boa e relativamente "segura".
+o django u-usa um cookie c-contendo um _identificadow_ especiaw d-de sessão p-pawa identificaw cada nyavegadow e-e associaw com o site. mya os dados da sessão atuaw são awmazenados nya base de dados d-do site pow p-padwão (é mais seguwo do que awmazenaw os dados e-em cookie, (˘ω˘) onde é m-mais vuwnewávew aos usuáwios pewigosos). o.O você pode configuwaw o-o django pawa awmazenaw os dados da sessão em outwos wugawes (cache, (✿oωo) awquivos, c-cookies "seguwos"), (ˆ ﻌ ˆ)♡ mas o wocaw padwão é u-uma opção boa e-e wewativamente "seguwa". ^^;;
 
-## Habilitando as Sessões
+## habiwitando as sessões
 
-As sessões foram ativadas automaticamente quando [criamos o esqueleto do site](/pt-BR/docs/Learn/Server-side/Django/skeleton_website) (no tutorial 2).
+as sessões fowam ativadas a-automaticamente q-quando [cwiamos o esqueweto do site](/pt-bw/docs/weawn/sewvew-side/django/skeweton_website) (no tutowiaw 2). OwO
 
-A configuração e feita nas seções `INSTALLED_APPS` e `MIDDLEWARE` do arquivo (**locallibrary/locallibrary/settings.py**), exibidas a seguir:
+a-a configuwação e feita nyas s-seções `instawwed_apps` e `middwewawe` do awquivo (**wocawwibwawy/wocawwibwawy/settings.py**), 🥺 exibidas a seguiw:
 
 ```python
-INSTALLED_APPS = [
+instawwed_apps = [
     ...
-    'django.contrib.sessions',
+    'django.contwib.sessions', mya
     ....
 
-MIDDLEWARE = [
+m-middwewawe = [
     ...
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contwib.sessions.middwewawe.sessionmiddwewawe', 😳
     ....
 ```
 
-## Usando Sessões
+## usando sessões
 
-Você pode acessar o atributo `session` na view a partir do parâmetro `request` (um `HttpRequest` passado como primeiro argumento na view). Esse atributo de sessão representa a conexão atual específica com um usuário (ou, para ser mais preciso, a conexão com o navegador atual, conforme identificado pelo id da sessão no cookie do navegador para este site).
+v-você pode a-acessaw o atwibuto `session` nya view a pawtiw d-do pawâmetwo `wequest` (um `httpwequest` passado c-como pwimeiwo a-awgumento nya v-view). òωó esse atwibuto de sessão w-wepwesenta a conexão a-atuaw específica com um usuáwio (ou, /(^•ω•^) pawa s-sew mais pweciso, -.- a-a conexão com o-o nyavegadow atuaw, òωó confowme identificado pewo i-id da sessão nyo cookie do nyavegadow p-pawa este s-site). /(^•ω•^)
 
-O atributo `session` é como um objeto dicionário que você pode ler e escrever quantas vezes você quiser na sua view, modificando-o como desejar. Você pode fazer todas as operações normais de um dicionário, incluindo limpar todos os dados, testar se uma chave está presente, iterar (loop) em torno dos dados, etc. Na maior parte do tempo, você usará apenas a API padrão "dictionary" para obter e setar valores.
+o atwibuto `session` é como um objeto dicionáwio que você pode wew e-e escwevew quantas v-vezes você q-quisew na sua view, /(^•ω•^) m-modificando-o como desejaw. 😳 v-você pode fazew todas as opewações nyowmais de um dicionáwio, :3 incwuindo wimpaw todos os dados, (U ᵕ U❁) t-testaw se uma chave está pwesente, ʘwʘ i-itewaw (woop) em towno dos d-dados, o.O etc. nya maiow pawte do t-tempo, ʘwʘ você usawá apenas a api p-padwão "dictionawy" p-pawa obtew e-e setaw vawowes. ^^
 
-O fragmento de código abaixo mostra como você pode obter, setar e deletar qualquer dado com com a chave "`my_car`", associada com a sessão atual (navegador).
+o-o fwagmento d-de código abaixo mostwa como você pode obtew, ^•ﻌ•^ setaw e dewetaw quawquew dado com com a chave "`my_caw`", mya associada c-com a sessão a-atuaw (navegadow). UwU
 
-> [!NOTE]
-> Uma das coisas boas sobre o Django é que você não precisa pensar sobre os mecanismos que vinculam a sessão atual à requisição em sua view. Se nós usarmos os fragmentos abaixo em nossa view, saberemos que as informações sobre `my_car` estão associadas apenas com o navegador que enviou a requisição atual.
+> [!note]
+> u-uma das coisas boas sobwe o django é q-que você nyão pwecisa pensaw sobwe os mecanismos que vincuwam a-a sessão a-atuaw à wequisição em sua view. >_< s-se nyós usawmos os fwagmentos abaixo em nyossa v-view, /(^•ω•^) sabewemos q-que as infowmações sobwe `my_caw` e-estão a-associadas apenas com o nyavegadow que enviou a wequisição atuaw. òωó
 
 ```python
-# Pega um valor de sessão baseado na sua chave (ex.:'my_car'), disparando um KeyError se a chave não for encontrada.
-my_car = request.session['my_car']
+# pega um vawow de s-sessão baseado n-nya sua chave (ex.:'my_caw'), σωσ d-dispawando um keyewwow s-se a chave n-nyão fow encontwada. ( ͡o ω ͡o )
+my_caw = w-wequest.session['my_caw']
 
-# Pega o valor da sessão, seta o valor padrão ('mini') se a chave não estiver presente.
-my_car = request.session.get('my_car', 'mini')
+# p-pega o vawow da sessão, nyaa~~ s-seta o vawow p-padwão ('mini') se a chave n-nyão estivew pwesente. :3
+my_caw = wequest.session.get('my_caw', UwU 'mini')
 
-# Seta o valor da sessão
-request.session['my_car'] = 'mini'
+# s-seta o vawow da sessão
+w-wequest.session['my_caw'] = 'mini'
 
-# Deleta o valor da sessão
-del request.session['my_car']
+# d-deweta o vawow da sessão
+d-dew wequest.session['my_caw']
 ```
 
-A API também oferece um número de outros métodos que são muito usados para gerenciar os cookies da sessão associada. Por exemplo, há métodos para testar se cookies são suportados no navegador do cliente, para setar e checar a data de validade do cookie, e para limpar sessões expiradas do armazenamento de dados. Você pode encontrar sobre a API completa em [How to use sessions](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) (documentação do Django).
+a api também ofewece um nyúmewo d-de outwos m-métodos que são m-muito usados pawa gewenciaw os cookies da sessão associada. o.O p-pow exempwo, (ˆ ﻌ ˆ)♡ há métodos pawa testaw se cookies s-são supowtados n-no nyavegadow do cwiente, ^^;; pawa s-setaw e checaw a data de vawidade d-do cookie, ʘwʘ e pawa w-wimpaw sessões expiwadas do awmazenamento de d-dados. σωσ você pode encontwaw sobwe a api compweta e-em [how to use s-sessions](https://docs.djangopwoject.com/en/2.1/topics/http/sessions/) (documentação do django). ^^;;
 
-## Salvando os dados da sessão
+## s-sawvando os dados da sessão
 
-Por padrão, o Django só salva na base de dados da sessão e envia o cookie da sessão para o cliente quando a sessão é _modificada_ (atribuída) ou _deletada_. Se você está atualizando alguns dados utilizando sua chave de sessão, como mostrado na seção anterior, então você não precisa se preocupar com isso! Por exemplo:
+p-pow padwão, ʘwʘ o-o django só s-sawva nya base de dados da sessão e envia o cookie da sessão pawa o cwiente quando a sessão é _modificada_ (atwibuída) ou _dewetada_. ^^ se você está atuawizando awguns dados utiwizando sua chave de sessão, nyaa~~ como mostwado n-na seção antewiow, (///ˬ///✿) e-então você nyão pwecisa se pweocupaw c-com isso! XD pow exempwo:
 
 ```python
-# Isso é detectado como uma atualização na session, então os dados de session são salvos.
-request.session['my_car'] = 'mini'
+# i-isso é detectado c-como uma atuawização nya s-session, :3 então os dados de session s-são sawvos. òωó
+w-wequest.session['my_caw'] = 'mini'
 ```
 
-Se você está atualizando algumas informações _dentro_ dos dados da sessão, então o Django não reconhecerá que você fez uma alteração nos dados da sessão e não salvará os dados (por exemplo, se você alterasse os dados de "`wheels`" dentro dos dados do seu "`my_car`", como mostrado abaixo). Nesse caso você precisará marcar explicitamente a sessão como tendo sido modificada.
+se você e-está atuawizando awgumas infowmações _dentwo_ d-dos dados da s-sessão, ^^ então o django nyão weconhecewá que v-você fez uma awtewação n-nyos d-dados da sessão e-e nyão sawvawá o-os dados (pow e-exempwo, ^•ﻌ•^ se você a-awtewasse os dados d-de "`wheews`" d-dentwo dos dados do seu "`my_caw`", σωσ c-como mostwado a-abaixo). (ˆ ﻌ ˆ)♡ nyesse c-caso você pwecisawá mawcaw e-expwicitamente a sessão como tendo sido modificada. nyaa~~
 
 ```python
-# Objeto session não modificado diretamente, apenas o dado de dentro da session. Mudanças na session não salvas!
-request.session['my_car']['wheels'] = 'alloy'
+# o-objeto session nyão modificado d-diwetamente, ʘwʘ a-apenas o dado de d-dentwo da session. ^•ﻌ•^ mudanças nya s-session não sawvas!
+wequest.session['my_caw']['wheews'] = 'awwoy'
 
-# Marcar a session como modificada para que force a atualização dos dados/cookie para que sejam salvos.
-request.session.modified = True
+# m-mawcaw a session como modificada p-pawa que fowce a atuawização d-dos dados/cookie pawa que sejam sawvos. rawr x3
+wequest.session.modified = twue
 ```
 
-> [!NOTE]
-> Você pode mudar o comportamento do site para atualizar a base de dados/enviar cookie em qualquer requisição adicionando `SESSION_SAVE_EVERY_REQUEST = True` nas configurações (**locallibrary/locallibrary/settings.py**) do seu projeto.
+> [!note]
+> v-você pode mudaw o compowtamento d-do site pawa a-atuawizaw a base de dados/enviaw cookie em quawquew wequisição a-adicionando `session_save_evewy_wequest = twue` n-nyas configuwações (**wocawwibwawy/wocawwibwawy/settings.py**) d-do seu pwojeto. 🥺
 
-## Exemplo simples - obtendo a contagem de visitas
+## e-exempwo simpwes - obtendo a contagem de visitas
 
-Como um exemplo simples do mundo real, atualizaremos nossa biblioteca para informar ao usuário atual quantas vezes ele visitou o site _LocalLibrary_.
+c-como um exempwo s-simpwes do mundo weaw, ʘwʘ atuawizawemos n-nossa bibwioteca pawa infowmaw ao usuáwio a-atuaw quantas vezes ewe visitou o-o site _wocawwibwawy_. (˘ω˘)
 
-Abra **/locallibrary/catalog/views.py**, e faça as alterações mostradas em negrito abaixo.
+abwa **/wocawwibwawy/catawog/views.py**, o.O e-e faça a-as awtewações mostwadas em nyegwito a-abaixo. σωσ
 
 ```python
-def index(request):
+d-def index(wequest):
     ...
 
-    num_authors = Author.objects.count()  # The 'all()' is implied by default.
+    n-nyum_authows = a-authow.objects.count()  # the 'aww()' is i-impwied by defauwt. (ꈍᴗꈍ)
 
-    # Number of visits to this view, as counted in the session variable.
-    num_visits = request.session.get('num_visits', 0)
-    num_visits += 1
-    request.session['num_visits'] = num_visits
+    # n-nyumbew o-of visits to t-this view, (ˆ ﻌ ˆ)♡ as c-counted in the session v-vawiabwe. o.O
+    n-nyum_visits = w-wequest.session.get('num_visits', :3 0)
+    nyum_visits += 1
+    w-wequest.session['num_visits'] = num_visits
 
-    context = {
-        'num_books': num_books,
-        'num_instances': num_instances,
-        'num_instances_available': num_instances_available,
-        'num_authors': num_authors,
-        'num_visits': num_visits,
+    c-context = {
+        'num_books': nyum_books, -.-
+        'num_instances': n-nyum_instances, ( ͡o ω ͡o )
+        'num_instances_avaiwabwe': n-nyum_instances_avaiwabwe, /(^•ω•^)
+        'num_authows': n-nyum_authows, (⑅˘꒳˘)
+        'num_visits': nyum_visits, òωó
     }
 
-    # Render the HTML template index.html with the data in the context variable.
-    return render(request, 'index.html', context=context)
+    # wendew the htmw tempwate index.htmw with t-the data in the c-context vawiabwe. 🥺
+    w-wetuwn wendew(wequest, (ˆ ﻌ ˆ)♡ 'index.htmw', context=context)
 ```
 
-Aqui primeiro obtemos o valor da _session key_ `'num_visits'`, setando o valor para 0 se não tiver sido definido anteriormente. Cada vez que uma requisição é recebida, nós então incrementamos o valor e armazenamos novamente na sessão (para a próxima vez que o usuário visitar a página). A variável `num_visits` é então passada para o _template_ na nossa variável _context_.
+aqui pwimeiwo obtemos o vawow d-da _session key_ `'num_visits'`, -.- s-setando o vawow pawa 0 se nyão t-tivew sido definido a-antewiowmente. σωσ cada vez que uma wequisição é wecebida, >_< n-nyós então incwementamos o-o vawow e-e awmazenamos n-nyovamente nya sessão (pawa a pwóxima vez que o-o usuáwio visitaw a-a página). :3 a vawiávew `num_visits` é então p-passada pawa o _tempwate_ nya nyossa vawiávew _context_. OwO
 
-> [!NOTE]
-> Também podemos testar se os cookies são suportados no navegador (veja [Como usar sessões](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) para exemplos) ou projetar nossa UI (interface do usuário) para que não se importe se os _cookies_ são ou não suportados.
+> [!note]
+> t-também podemos testaw s-se os cookies são s-supowtados nyo nyavegadow (veja [como u-usaw sessões](https://docs.djangopwoject.com/en/2.1/topics/http/sessions/) p-pawa exempwos) ou pwojetaw n-nyossa ui (intewface do usuáwio) p-pawa que nyão s-se impowte se o-os _cookies_ são o-ou nyão supowtados. rawr
 
-Adicione a linha vista na parte inferior do bloco a seguir ao seu _template_ HTML principal (**/locallibrary/catalog/templates/index.html**) na parte inferior da sessão _"Dynamic content"_, para exibir a variável _context_:
+adicione a-a winha vista nya p-pawte infewiow d-do bwoco a seguiw ao seu _tempwate_ h-htmw pwincipaw (**/wocawwibwawy/catawog/tempwates/index.htmw**) nya pawte infewiow da sessão _"dynamic c-content"_, (///ˬ///✿) p-pawa exibiw a-a vawiávew _context_:
 
 ```django
-<h2>Dynamic content</h2>
+<h2>dynamic content</h2>
 
-<p>The library has the following record counts:</p>
-<ul>
-  <li><strong>Books:</strong> \{{ num_books }}</li>
-  <li><strong>Copies:</strong> \{{ num_instances }}</li>
-  <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-  <li><strong>Authors:</strong> \{{ num_authors }}</li>
-</ul>
+<p>the wibwawy has the fowwowing wecowd counts:</p>
+<uw>
+  <wi><stwong>books:</stwong> \{{ n-nyum_books }}</wi>
+  <wi><stwong>copies:</stwong> \{{ nyum_instances }}</wi>
+  <wi><stwong>copies a-avaiwabwe:</stwong> \{{ n-nyum_instances_avaiwabwe }}</wi>
+  <wi><stwong>authows:</stwong> \{{ nyum_authows }}</wi>
+</uw>
 
 <p>
-  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
-  else %} times{% endif %}.
+  you h-have visited this page \{{ nyum_visits }}{% i-if n-nyum_visits == 1 %} t-time{%
+  ewse %} t-times{% endif %}. ^^
 </p>
 ```
 
-Salve suas alterações e reinicie o servidor de teste. Sempre que você atualiza a página, o número deve ser atualizado.
+s-sawve suas awtewações e weinicie o sewvidow de teste. XD sempwe que você atuawiza a-a página, UwU o nyúmewo deve sew a-atuawizado. o.O
 
-## Resumo
+## wesumo
 
-Agora você sabe como é fácil utilizar sessões para melhorar sua interação com usuários anônimos.
+agowa você sabe como é fáciw utiwizaw s-sessões pawa mewhowaw sua intewação com usuáwios anônimos. 😳
 
-Em nosso próximo artigo nós iremos explicar a estrutura de autenticação e autorização (permissão), e mostrar como oferecer suporte a contas de usuário.
+em nyosso pwóximo a-awtigo nyós i-iwemos expwicaw a estwutuwa d-de autenticação e autowização (pewmissão), (˘ω˘) e mostwaw como ofewecew s-supowte a-a contas de usuáwio. 🥺
 
-## Veja também
+## veja também
 
-- [Como usar sessões](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) (Django docs)
+- [como u-usaw sessões](https://docs.djangopwoject.com/en/2.1/topics/http/sessions/) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/genewic_views", ^^ "weawn/sewvew-side/django/authentication", >w< "weawn/sewvew-side/django")}}

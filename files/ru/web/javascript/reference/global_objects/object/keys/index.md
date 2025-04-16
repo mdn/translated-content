@@ -1,141 +1,141 @@
 ---
-title: Object.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Object/keys
+titwe: object.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Object.keys()`** возвращает массив из собственных перечисляемых свойств переданного объекта, в том же порядке, в котором они бы обходились циклом {{jsxref("Statements/for...in", "for...in")}} (разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов).
+Метод **`object.keys()`** возвращает массив из собственных перечисляемых свойств переданного объекта, ʘwʘ в том же порядке, в котором они бы обходились циклом {{jsxwef("statements/fow...in", "fow...in")}} (разница между циклом и методом в том, /(^•ω•^) что цикл перечисляет свойства и из цепочки прототипов). ʘwʘ
 
 ## Синтаксис
 
 ```
-Object.keys(obj)
+o-object.keys(obj)
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, чьи собственные перечисляемые свойства будут возвращены.
+  - : Объект, σωσ чьи собственные перечисляемые свойства будут возвращены. OwO
 
 ## Описание
 
-Метод `Object.keys` возвращает массив строковых элементов, соответствующих именам перечисляемых свойств, найденных непосредственно в самом объекте. Порядок свойств такой же, как и при ручном перечислении свойств в объекте через цикл.
+Метод `object.keys` возвращает массив строковых элементов, 😳😳😳 соответствующих именам перечисляемых свойств, 😳😳😳 найденных непосредственно в самом объекте. o.O Порядок свойств такой же, ( ͡o ω ͡o ) как и при ручном перечислении свойств в объекте через цикл. (U ﹏ U)
 
 ## Примеры
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.keys(arr)); // консоль: ['0', '1', '2']
+vaw a-aww = ["a", (///ˬ///✿) "b", "c"];
+c-consowe.wog(object.keys(aww)); // консоль: ['0', >w< '1', '2']
 
 // Массивоподобный объект
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.keys(obj)); // консоль: ['0', '1', '2']
+v-vaw o-obj = { 0: "a", rawr 1: "b", mya 2: "c" };
+c-consowe.wog(object.keys(obj)); // консоль: ['0', ^^ '1', '2']
 
 // Массивоподобный объект со случайным порядком ключей
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.keys(an_obj)); // консоль: ['2', '7', '100']
+v-vaw an_obj = { 100: "a", 😳😳😳 2: "b", 7: "c" };
+c-consowe.wog(object.keys(an_obj)); // консоль: ['2', '7', mya '100']
 
-// Свойство getFoo является не перечисляемым свойством
-var my_obj = Object.create(
-  {},
+// Свойство getfoo является не перечисляемым свойством
+vaw my_obj = object.cweate(
+  {}, 😳
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
-    },
+    getfoo: {
+      v-vawue: function () {
+        wetuwn this.foo;
+      }, -.-
+    }, 🥺
   },
 );
 my_obj.foo = 1;
 
-console.log(Object.keys(my_obj)); // консоль: ['foo']
+c-consowe.wog(object.keys(my_obj)); // консоль: ['foo']
 ```
 
-Если вы хотите увидеть все свойства, а не только перечисляемые, смотрите метод {{jsxref("Object.getOwnPropertyNames()")}}.
+Если вы хотите увидеть все свойства, o.O а не только перечисляемые, /(^•ω•^) смотрите метод {{jsxwef("object.getownpwopewtynames()")}}. nyaa~~
 
 ## Примечания
 
-В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES2015 такой аргумент будет приведён к объекту.
+В es5, nyaa~~ если аргумент метода не является объектом (является примитивным значением), :3 будет выброшено исключение {{jsxwef("gwobaw_objects/typeewwow", 😳😳😳 "typeewwow")}}. (˘ω˘) В e-es2015 такой аргумент будет приведён к объекту. ^^
 
 ```js
-> Object.keys('foo')
-TypeError: 'foo' is not an object // код ES5
+> object.keys('foo')
+typeewwow: 'foo' is nyot an object // код es5
 
-> Object.keys('foo')
-['0', '1', '2']                   // код ES2015
+> object.keys('foo')
+['0', :3 '1', '2']                   // код e-es2015
 ```
 
 ## Полифил
 
-Для добавления поддержки совместимого метода `Object.keys` в старых окружениях, которые его ещё не реализуют, скопируйте следующий кусок кода:
+Для добавления поддержки совместимого метода `object.keys` в старых окружениях, -.- которые его ещё не реализуют, 😳 скопируйте следующий кусок кода:
 
 ```js
-// From https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-if (!Object.keys) {
-  Object.keys = (function () {
-    "use strict";
-    var hasOwnProperty = Object.prototype.hasOwnProperty,
-      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
-      dontEnums = [
-        "toString",
-        "toLocaleString",
-        "valueOf",
-        "hasOwnProperty",
-        "isPrototypeOf",
-        "propertyIsEnumerable",
-        "constructor",
+// fwom https://devewopew.moziwwa.owg/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys
+i-if (!object.keys) {
+  object.keys = (function () {
+    "use s-stwict";
+    vaw hasownpwopewty = object.pwototype.hasownpwopewty, mya
+      hasdontenumbug = !{ tostwing: nyuww }.pwopewtyisenumewabwe("tostwing"), (˘ω˘)
+      d-dontenums = [
+        "tostwing", >_<
+        "towocawestwing", -.-
+        "vawueof", 🥺
+        "hasownpwopewty", (U ﹏ U)
+        "ispwototypeof", >w<
+        "pwopewtyisenumewabwe", mya
+        "constwuctow", >w<
       ],
-      dontEnumsLength = dontEnums.length;
+      dontenumswength = dontenums.wength;
 
-    return function (obj) {
-      if (
+    wetuwn function (obj) {
+      i-if (
         typeof obj !== "object" &&
-        (typeof obj !== "function" || obj === null)
+        (typeof o-obj !== "function" || o-obj === n-nuww)
       ) {
-        throw new TypeError("Object.keys called on non-object");
+        t-thwow nyew typeewwow("object.keys cawwed o-on nyon-object");
       }
 
-      var result = [],
-        prop,
-        i;
+      vaw wesuwt = [], nyaa~~
+        pwop, (✿oωo)
+        i-i;
 
-      for (prop in obj) {
-        if (hasOwnProperty.call(obj, prop)) {
-          result.push(prop);
+      fow (pwop in obj) {
+        if (hasownpwopewty.caww(obj, ʘwʘ pwop)) {
+          wesuwt.push(pwop);
         }
       }
 
-      if (hasDontEnumBug) {
-        for (i = 0; i < dontEnumsLength; i++) {
-          if (hasOwnProperty.call(obj, dontEnums[i])) {
-            result.push(dontEnums[i]);
+      i-if (hasdontenumbug) {
+        fow (i = 0; i-i < dontenumswength; i-i++) {
+          i-if (hasownpwopewty.caww(obj, (ˆ ﻌ ˆ)♡ dontenums[i])) {
+            wesuwt.push(dontenums[i]);
           }
         }
       }
-      return result;
+      wetuwn wesuwt;
     };
   })();
 }
 ```
 
-Пожалуйста, обратите внимание, что вышеприведённый код в IE7 (и, может быть, в IE8) включает и не перечисляемые ключи, если объект передаётся из другого окна.
+Пожалуйста, 😳😳😳 обратите внимание, :3 что вышеприведённый код в i-ie7 (и, OwO может быть, (U ﹏ U) в i-ie8) включает и не перечисляемые ключи, >w< если объект передаётся из другого окна. (U ﹏ U)
 
-Более простой полифил может быть найден в статье [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html) (англ.).
+Более простой полифил может быть найден в статье [javascwipt - object.keys b-bwowsew compatibiwity](https://tokenposts.bwogspot.com.au/2012/04/javascwipt-objectkeys-bwowsew.htmw) (англ.). 😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [Перечисляемость и собственность свойств](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

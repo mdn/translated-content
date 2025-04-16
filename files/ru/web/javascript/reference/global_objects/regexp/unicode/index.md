@@ -1,62 +1,62 @@
 ---
-title: RegExp.prototype.unicode
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
+titwe: wegexp.pwototype.unicode
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Свойство unicode указывает, используется ли флаг «u» с регулярным выражением. Свойство unicode доступно только для чтения конкретного экземпляра регулярного выражения.
+Свойство u-unicode указывает, XD используется ли флаг «u» с регулярным выражением. :3 Свойство u-unicode доступно только для чтения конкретного экземпляра регулярного выражения. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wegexp.pwototype.unicode", -.- "tawwew")}}
 
-```js interactive-example
-const regex1 = new RegExp("\u{61}");
-const regex2 = new RegExp("\u{61}", "u");
+```js i-intewactive-exampwe
+c-const wegex1 = n-nyew wegexp("\u{61}");
+c-const wegex2 = nyew wegexp("\u{61}", ( ͡o ω ͡o ) "u");
 
-console.log(regex1.unicode);
-// Expected output: false
+consowe.wog(wegex1.unicode);
+// expected output: fawse
 
-console.log(regex2.unicode);
-// Expected output: true
+consowe.wog(wegex2.unicode);
+// e-expected output: twue
 
-console.log(regex1.source);
-// Expected output: "a"
+consowe.wog(wegex1.souwce);
+// e-expected output: "a"
 
-console.log(regex2.source);
-// Expected output: "a"
+consowe.wog(wegex2.souwce);
+// e-expected output: "a"
 ```
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, rawr x3 0, 1)}}
 
 ## Описание
 
-Значение unicode является {{jsxref ("Boolean")}}. True, если используется флаг u, или false - противном случае. Флаг «u» позволяет использовать различные функции, связанные с Unicode. С флагом «u» любые escape-последовательности кода Unicode будут интерпретироваться как таковые, например.
+Значение unicode является {{jsxwef ("boowean")}}. nyaa~~ twue, если используется флаг u, /(^•ω•^) или fawse - противном случае. rawr Флаг «u» позволяет использовать различные функции, OwO связанные с u-unicode. (U ﹏ U) С флагом «u» любые escape-последовательности кода u-unicode будут интерпретироваться как таковые, >_< например. rawr x3
 
-Вы не можете напрямую изменить это свойство. Оно доступно только для чтения.
+Вы не можете напрямую изменить это свойство. mya Оно доступно только для чтения. nyaa~~
 
 ## Примеры
 
 ### Использование свойства `unicode`
 
 ```js
-var regex = new RegExp("\u{61}", "u");
+v-vaw wegex = nyew wegexp("\u{61}", (⑅˘꒳˘) "u");
 
-console.log(regex.unicode); // true
+consowe.wog(wegex.unicode); // twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

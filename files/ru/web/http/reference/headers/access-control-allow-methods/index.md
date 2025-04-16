@@ -1,61 +1,61 @@
 ---
-title: Access-Control-Allow-Methods
-slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
+titwe: access-contwow-awwow-methods
+swug: web/http/wefewence/headews/access-contwow-awwow-methods
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Access-Control-Allow-Methods`** это заголовок ответа, который определяет метод или методы доступа к ресурсам {{glossary("preflight request")}}.
+**`access-contwow-awwow-methods`** это заголовок ответа, σωσ который определяет метод или методы доступа к ресурсам {{gwossawy("pwefwight w-wequest")}}. >_<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Access-Control-Allow-Methods: <method>, <method>, ...
+a-access-contwow-awwow-methods: <method>, :3 <method>, (U ﹏ U) ...
 ```
 
 ## Директивы
 
 - \<method>
-  - : Разделённый запятыми список доступных [методов HTTP запросов](/ru/docs/Web/HTTP/Reference/Methods).
+  - : Разделённый запятыми список доступных [методов h-http запросов](/wu/docs/web/http/wefewence/methods). -.-
 
 ## Примеры
 
 ```
-Access-Control-Allow-Methods: POST, GET, OPTIONS
+a-access-contwow-awwow-methods: post, (ˆ ﻌ ˆ)♡ get, (⑅˘꒳˘) options
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Замечания по совместимости
 
-- Подстановочное значение (\*), которое упоминается в последней спецификации ещё не реализовано в браузерах:
+- Подстановочное значение (\*), (U ᵕ U❁) которое упоминается в последней спецификации ещё не реализовано в браузерах:
 
-  - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
-  - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
+  - chwomium: [issue 615313](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=615313)
+  - fiwefox: [fiwefox b-bug 1309358](https://bugziw.wa/1309358)
+  - sewvo: [issue 13283](https://github.com/sewvo/sewvo/issues/13283)
 
 ## Смотрите также
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{HTTPHeader("Access-Control-Allow-Headers")}}
-- {{HTTPHeader("Access-Control-Request-Method")}}
+- {{httpheadew("access-contwow-awwow-owigin")}}
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{httpheadew("access-contwow-awwow-headews")}}
+- {{httpheadew("access-contwow-wequest-method")}}

@@ -1,549 +1,549 @@
 ---
-title: "Tutorial Django Parte 6: Lista genérica e detail views"
-slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
-original_slug: Learn/Server-side/Django/Generic_views
+titwe: "tutowiaw django pawte 6: w-wista genéwica e-e detaiw views"
+s-swug: weawn_web_devewopment/extensions/sewvew-side/django/genewic_views
+o-owiginaw_swug: w-weawn/sewvew-side/django/genewic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/home_page", òωó "weawn/sewvew-side/django/sessions", ʘwʘ "weawn/sewvew-side/django")}}
 
-Este tutorial estende nosso website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), adicionando páginas de lista e detalhes para livros e autores. Aqui, aprenderemos sobre visualizações genéricas baseadas em classe e mostraremos como elas podem reduzir a quantidade de código que você precisa escrever para casos de uso comuns. Também abordaremos o tratamento de URLs em mais detalhes, mostrando como executar a correspondência básica de padrões.
+e-este tutowiaw e-estende nyosso w-website [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website), mya adicionando páginas de wista e detawhes pawa wivwos e-e autowes. aqui, σωσ apwendewemos sobwe visuawizações g-genéwicas baseadas em cwasse e-e mostwawemos como ewas podem weduziw a quantidade de código q-que você pwecisa escwevew pawa c-casos de uso c-comuns. OwO também abowdawemos o twatamento de uwws em mais detawhes, (✿oωo) mostwando como e-executaw a cowwespondência básica de padwões. ʘwʘ
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Conclua todos os tópicos do tutorial anterior, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Home_page"
-          >Django Tutorial Part 5: Creating our home page</a
-        >.
+        concwua todos os t-tópicos do tutowiaw a-antewiow, mya incwuindo
+        <a h-hwef="/pt-bw/docs/weawn/sewvew-side/django/home_page"
+          >django t-tutowiaw pawt 5: cweating ouw home page</a
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Para entender onde e como usar modos de exibição genéricos baseados em
-        classe e como extrair padrões de URLs e passar as informações para modos
-        de exibição.
+        pawa entendew onde e como u-usaw modos de exibição genéwicos baseados em
+        cwasse e como extwaiw padwões de uwws e-e passaw as infowmações pawa m-modos
+        de e-exibição.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Visão global
+## v-visão gwobaw
 
-Neste tutorial, vamos concluir a primeira versão do website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) adicionando páginas de lista e detalhes de livros e autores (ou, para ser mais preciso, mostraremos como implementar as páginas do livro e você mesmo irá criar as páginas dos autores!)
+nyeste tutowiaw, vamos concwuiw a pwimeiwa v-vewsão do w-website [wocawwibwawy](/pt-bw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) adicionando p-páginas d-de wista e detawhes de wivwos e-e autowes (ou, -.- pawa sew mais pweciso, ^^;; m-mostwawemos como impwementaw as páginas do w-wivwo e você mesmo iwá cwiaw a-as páginas dos autowes!)
 
-O processo é semelhante à criação da página index, que mostramos no tutorial anterior. Ainda precisamos criar mapas de URL, views e templates. A principal diferença é que, para as páginas de detalhes, teremos o desafio adicional de extrair informações de padrões no URL e passá-las para a visualização. Para essas páginas, demonstraremos um tipo de exibição completamente diferente: lista genérica baseada em classe e exibições detalhadas. Isso pode reduzir significativamente a quantidade de código de visualização necessária, facilitando a gravação e a manutenção.
+o pwocesso é s-semewhante à c-cwiação da página index, (ꈍᴗꈍ) que mostwamos nyo tutowiaw antewiow. rawr ainda pwecisamos cwiaw mapas de uww, ^^ views e-e tempwates. nyaa~~ a-a pwincipaw difewença é que, (⑅˘꒳˘) p-pawa as páginas d-de detawhes, (U ᵕ U❁) tewemos o-o desafio adicionaw de extwaiw infowmações de padwões nyo u-uww e passá-was pawa a visuawização. (ꈍᴗꈍ) pawa essas páginas, (✿oωo) demonstwawemos um t-tipo de exibição compwetamente d-difewente: wista g-genéwica baseada e-em cwasse e exibições detawhadas. UwU i-isso pode w-weduziw significativamente a q-quantidade de código d-de visuawização nyecessáwia, ^^ faciwitando a-a gwavação e-e a manutenção. :3
 
-A parte final do tutorial demonstrará como paginar seus dados ao usar visualizações de lista genéricas baseadas em classe.
+a-a pawte finaw d-do tutowiaw demonstwawá c-como paginaw seus dados ao usaw visuawizações de wista g-genéwicas baseadas em cwasse. ( ͡o ω ͡o )
 
-## Book list page
+## book wist page
 
-A página da lista de livros exibirá uma lista de todos os registros de livros disponíveis na página, acessados usando o URL: `catalog/books/`. A página exibirá um título e um autor para cada registro, com o título sendo um hiperlink para a página de detalhes do livro associada. A página terá a mesma estrutura e navegação que todas as outras páginas do site e, portanto, podemos estender o modelo base (**base_generic.html**) que criamos no tutorial anterior.
+a página da wista de wivwos exibiwá uma w-wista de todos os wegistwos de wivwos disponíveis nya página, ( ͡o ω ͡o ) a-acessados usando o-o uww: `catawog/books/`. a-a página exibiwá um t-títuwo e um autow pawa cada wegistwo, (U ﹏ U) c-com o títuwo s-sendo um hipewwink pawa a página de detawhes do wivwo associada. -.- a página tewá a mesma estwutuwa e-e nyavegação que todas a-as outwas páginas do site e, 😳😳😳 p-powtanto, podemos e-estendew o modewo base (**base_genewic.htmw**) que cwiamos nyo t-tutowiaw antewiow. UwU
 
-### URL mapping
+### u-uww mapping
 
-Abra **/catalog/urls.py** e copie na linha mostrada em negrito abaixo. Quanto à página index, a função `path()` define um padrão para corresponder ao URL (**'books/'**), a função view que será chamado se o URL corresponder (`views.BookListView.as_view()`), e um nome para esse mapeamento específico.
+abwa **/catawog/uwws.py** e-e copie nya winha m-mostwada em nyegwito abaixo. >w< quanto à página index, mya a função `path()` define u-um padwão pawa c-cowwespondew a-ao uww (**'books/'**), :3 a função v-view que sewá c-chamado se o uww cowwespondew (`views.bookwistview.as_view()`), (ˆ ﻌ ˆ)♡ e-e um nyome pawa esse mapeamento específico. (U ﹏ U)
 
 ```python
-urlpatterns = [
-    path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'),
+uwwpattewns = [
+    path('', v-views.index, ʘwʘ n-nyame='index'), rawr
+    path('books/', (ꈍᴗꈍ) views.bookwistview.as_view(), ( ͡o ω ͡o ) n-nyame='books'), 😳😳😳
 ]
 ```
 
-Conforme discutido no tutorial anterior, o URL já deve ter correspondencia `/catalog`, então a visualização será realmente chamada para o URL: `/catalog/books/`.
+c-confowme discutido nyo tutowiaw antewiow, òωó o uww já deve t-tew cowwespondencia `/catawog`, mya então a visuawização sewá weawmente chamada pawa o uww: `/catawog/books/`. rawr x3
 
-A função view tem um formato diferente do que antes - é porque essa view será realmente implementada como uma classe. Herdaremos de uma função view genérica existente que já faz a maior parte do que queremos que essa função view faça, em vez de escrever a nossa a partir do zero.
+a-a função view tem um fowmato difewente do q-que antes - é powque e-essa view sewá weawmente impwementada como uma cwasse. XD hewdawemos d-de uma f-função view genéwica existente que já faz a maiow pawte do que q-quewemos que essa função view f-faça, (ˆ ﻌ ˆ)♡ em vez de escwevew a nyossa a pawtiw do zewo. >w<
 
-Para as class-based views do Django, acessamos uma função de visualização apropriada chamando o método de classe `as_view()`. Isso faz todo o trabalho de criar uma instância da classe e garantir que os métodos do manipulador certo sejam chamados para solicitações HTTP recebidas.
+pawa as c-cwass-based views do django, (ꈍᴗꈍ) acessamos u-uma função d-de visuawização apwopwiada c-chamando o método de cwasse `as_view()`. (U ﹏ U) i-isso f-faz todo o twabawho d-de cwiaw uma instância da c-cwasse e gawantiw q-que os métodos do manipuwadow cewto sejam chamados p-pawa sowicitações h-http wecebidas. >_<
 
-### View (class-based)
+### view (cwass-based)
 
-Poderíamos escrever com facilidade a view da lista de livros como uma função regular (assim como a view index anterior), que consultaria todos os livros no banco de dados e depois chamaria `render()` para passar a lista para um modelo especificado. No entanto, usaremos uma view de lista genérica class-based (`ListView`) — uma classe que herda de uma view existente. Como a view genérica já implementa a maioria das funcionalidades necessárias e segue as práticas recomendadas do Django, poderemos criar uma exibição de lista mais robusta com menos código, menos repetições e, finalmente, menos manutenção.
+p-podewíamos escwevew com faciwidade a view da w-wista de wivwos como uma função w-weguwaw (assim c-como a view index antewiow), >_< que consuwtawia todos os wivwos nyo b-banco de dados e-e depois chamawia `wendew()` pawa p-passaw a wista p-pawa um modewo especificado. -.- n-nyo entanto, òωó usawemos uma view de wista genéwica cwass-based (`wistview`) — uma cwasse que hewda de uma view e-existente. o.O como a view genéwica j-já impwementa a maiowia das funcionawidades n-nyecessáwias e segue a-as pwáticas wecomendadas do d-django, σωσ podewemos c-cwiaw uma exibição d-de wista m-mais wobusta com m-menos código, σωσ menos wepetições e, mya finawmente, menos manutenção. o.O
 
-Abra **catalog/views.py**, e copie o seguinte código na parte inferior do arquivo:
-
-```python
-from django.views import generic
-
-class BookListView(generic.ListView):
-    model = Book
-```
-
-É isso aí! A view genérica consultará o banco de dados para obter todos os registros para o modelo especificado (`Book`) em seguida, renderize um template localizado em **/locallibrary/catalog/templates/catalog/book_list.html** (que criaremos abaixo). Dentro do template, você pode acessar a lista de livros com a variável de template denominada `object_list` OU `book_list` (i.e. genericamente "`the_model_name_list`").
-
-> [!NOTE]
-> Esse caminho estranho para a localização do template não é um erro de impressão - as visualizações genéricas procuram modelos em `/application_name/the_model_name_list.html` (`catalog/book_list.html` nesse caso) dentro do aplicativo `/application_name/templates/` diretório (`/catalog/templates/)`.
-
-Você pode adicionar atributos para alterar o comportamento padrão acima. Por exemplo, você pode especificar outro arquivo do template se precisar ter várias visualizações que usem esse mesmo modelo ou se desejar usar um nome de variável de template diferente se `book_list` não é intuitivo para o seu caso de uso de template específico. Possivelmente, a variação mais útil é alterar/filtrar o subconjunto de resultados retornados - portanto, em vez de listar todos os livros, você pode listar os cinco principais livros que foram lidos por outros usuários.
+abwa **catawog/views.py**, XD e copie o seguinte código nya p-pawte infewiow d-do awquivo:
 
 ```python
-class BookListView(generic.ListView):
-    model = Book
-    context_object_name = 'my_book_list'   # your own name for the list as a template variable
-    queryset = Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
-    template_name = 'books/my_arbitrary_template_name_list.html'  # Specify your own template name/location
+f-fwom django.views impowt g-genewic
+
+cwass bookwistview(genewic.wistview):
+    modew = book
 ```
 
-#### Substituindo métodos em class-based views
+É isso aí! XD a-a view genéwica c-consuwtawá o banco de dados p-pawa obtew todos os wegistwos pawa o modewo especificado (`book`) e-em seguida, (✿oωo) wendewize u-um tempwate wocawizado e-em **/wocawwibwawy/catawog/tempwates/catawog/book_wist.htmw** (que c-cwiawemos abaixo). -.- dentwo do tempwate, (ꈍᴗꈍ) você pode acessaw a wista de wivwos com a-a vawiávew de t-tempwate denominada `object_wist` o-ou `book_wist` (i.e. ( ͡o ω ͡o ) g-genewicamente "`the_modew_name_wist`"). (///ˬ///✿)
 
-Embora não precisemos fazer isso aqui, você também pode substituir alguns dos métodos da classe.
+> [!note]
+> e-esse caminho estwanho p-pawa a wocawização d-do tempwate nyão é um e-ewwo de impwessão - a-as visuawizações genéwicas p-pwocuwam modewos em `/appwication_name/the_modew_name_wist.htmw` (`catawog/book_wist.htmw` nyesse caso) dentwo d-do apwicativo `/appwication_name/tempwates/` diwetówio (`/catawog/tempwates/)`. 🥺
 
-Por exemplo, podemos substituir o método `get_queryset()` para alterar a lista de registros retornados. Isso é mais flexível do que apenas definir o atributo `queryset` como fizemos no fragmento de código anterior (embora não haja nenhum benefício real neste caso):
+v-você pode a-adicionaw atwibutos pawa awtewaw o-o compowtamento padwão acima. (ˆ ﻌ ˆ)♡ pow exempwo, ^•ﻌ•^ você p-pode especificaw o-outwo awquivo d-do tempwate se pwecisaw tew váwias visuawizações que usem esse m-mesmo modewo ou se desejaw usaw um nyome de v-vawiávew de tempwate d-difewente se `book_wist` nyão é i-intuitivo pawa o seu caso d-de uso de tempwate e-específico. rawr x3 possivewmente, (U ﹏ U) a vawiação mais útiw é a-awtewaw/fiwtwaw o subconjunto de wesuwtados w-wetownados - p-powtanto, OwO em vez de wistaw t-todos os wivwos, (✿oωo) você pode wistaw o-os cinco pwincipais w-wivwos que f-fowam widos pow outwos usuáwios. (⑅˘꒳˘)
 
 ```python
-class BookListView(generic.ListView):
-    model = Book
-
-    def get_queryset(self):
-        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+cwass bookwistview(genewic.wistview):
+    modew = book
+    context_object_name = 'my_book_wist'   # youw own nyame fow the wist as a tempwate vawiabwe
+    quewyset = book.objects.fiwtew(titwe__icontains='waw')[:5] # get 5 books containing the titwe waw
+    t-tempwate_name = 'books/my_awbitwawy_tempwate_name_wist.htmw'  # s-specify youw own tempwate nyame/wocation
 ```
 
-Também podemos substituir `get_context_data()` para passar variáveis de contexto adicionais para o template (por exemplo, a lista de livros é passada por padrão). O fragmento abaixo mostra como adicionar uma variável chamada "`some_data`" para o contexto (estaria disponível como uma variável de template).
+#### substituindo m-métodos em cwass-based v-views
+
+embowa n-nyão pwecisemos fazew isso a-aqui, UwU você também pode substituiw a-awguns dos m-métodos da cwasse. (ˆ ﻌ ˆ)♡
+
+pow exempwo, /(^•ω•^) p-podemos substituiw o método `get_quewyset()` p-pawa awtewaw a w-wista de wegistwos wetownados. (˘ω˘) isso é mais fwexívew d-do que apenas d-definiw o atwibuto `quewyset` c-como fizemos nyo f-fwagmento de c-código antewiow (embowa n-nyão haja n-nyenhum benefício w-weaw neste c-caso):
 
 ```python
-class BookListView(generic.ListView):
-    model = Book
+cwass bookwistview(genewic.wistview):
+    m-modew = b-book
 
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get the context
-        context = super(BookListView, self).get_context_data(**kwargs)
-        # Create any data and add it to the context
-        context['some_data'] = 'This is just some data'
-        return context
+    d-def get_quewyset(sewf):
+        wetuwn book.objects.fiwtew(titwe__icontains='waw')[:5] # g-get 5 books containing the titwe waw
 ```
 
-Ao fazer isso, é importante seguir o padrão usado acima:
+t-também podemos substituiw `get_context_data()` p-pawa passaw vawiáveis d-de contexto a-adicionais pawa o tempwate (pow e-exempwo, XD a wista de wivwos é p-passada pow padwão). òωó o fwagmento a-abaixo mostwa como adicionaw u-uma vawiávew chamada "`some_data`" pawa o contexto (estawia disponívew como uma vawiávew de t-tempwate). UwU
 
-- Primeiro obtenha o contexto existente da nossa superclasse.
-- Em seguida, adicione as novas informações de contexto.
-- Em seguida, retorne o novo contexto (atualizado).
+```python
+cwass bookwistview(genewic.wistview):
+    m-modew = book
 
-> [!NOTE]
-> Confira [Built-in class-based generic views](https://docs.djangoproject.com/pt-br/2.1/topics/class-based-views/generic-display/) (Django docs) para muitos mais exemplos do que você pode fazer.
+    d-def get_context_data(sewf, -.- **kwawgs):
+        # caww the base impwementation fiwst to get the c-context
+        context = supew(bookwistview, (ꈍᴗꈍ) s-sewf).get_context_data(**kwawgs)
+        # c-cweate a-any data and add it to the context
+        context['some_data'] = 'this i-is just s-some data'
+        wetuwn context
+```
 
-### Criando o template List View
+a-ao fazew isso, (⑅˘꒳˘) é impowtante seguiw o padwão u-usado acima:
 
-Crie o arquivo HTML **/locallibrary/catalog/templates/catalog/book_list.html** e copie o texto abaixo. Como discutido acima, este é o arquivo de template padrão esperado pela list view genérica da class-based view (para um modelo chamado `Book` em um aplicativo chamado `catalog`).
+- pwimeiwo o-obtenha o contexto e-existente da n-nyossa supewcwasse. 🥺
+- em seguida, òωó a-adicione as nyovas i-infowmações d-de contexto.
+- e-em seguida, wetowne o nyovo contexto (atuawizado). 😳
 
-Os templates para visualizações genéricas são como qualquer outro template (_embora_, é claro, o contexto/informações passadas para o template possam ser diferentes). Assim como em nosso template _index_, estendemos nosso template base na primeira linha e substituímos o bloco denominado `content`.
+> [!note]
+> c-confiwa [buiwt-in c-cwass-based g-genewic views](https://docs.djangopwoject.com/pt-bw/2.1/topics/cwass-based-views/genewic-dispway/) (django d-docs) p-pawa muitos mais e-exempwos do que v-você pode fazew. òωó
+
+### c-cwiando o tempwate wist v-view
+
+cwie o awquivo htmw **/wocawwibwawy/catawog/tempwates/catawog/book_wist.htmw** e-e copie o texto abaixo. 🥺 como d-discutido acima, ( ͡o ω ͡o ) e-este é o awquivo d-de tempwate padwão espewado pewa wist view genéwica da cwass-based v-view (pawa u-um modewo c-chamado `book` em um apwicativo chamado `catawog`). UwU
+
+os tempwates p-pawa visuawizações g-genéwicas são como quawquew o-outwo tempwate (_embowa_, 😳😳😳 é c-cwawo, ʘwʘ o contexto/infowmações passadas pawa o tempwate possam sew difewentes). ^^ a-assim como em n-nyosso tempwate _index_, >_< e-estendemos n-nyosso tempwate base nya pwimeiwa winha e substituímos o-o bwoco d-denominado `content`. (ˆ ﻌ ˆ)♡
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
-  <h1>Book List</h1>
-  {% if book_list %}
-  <ul>
-    {% for book in book_list %}
-      <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>There are no books in the library.</p>
-  {% endif %}
-{% endblock %}
+{% bwock c-content %}
+  <h1>book wist</h1>
+  {% if book_wist %}
+  <uw>
+    {% f-fow book in book_wist %}
+      <wi>
+        <a h-hwef="\{{ book.get_absowute_uww }}">\{{ b-book.titwe }}</a> (\{{book.authow}})
+      </wi>
+    {% endfow %}
+  </uw>
+  {% e-ewse %}
+    <p>thewe a-awe nyo books in the wibwawy.</p>
+  {% e-endif %}
+{% endbwock %}
 ```
 
-A view passa o contexto (lista de livros), por padrão, um `object_list` e `book_list` aliases; qualquer um funcionará.
+a-a view passa o-o contexto (wista d-de wivwos), (ˆ ﻌ ˆ)♡ pow p-padwão, 🥺 um `object_wist` e `book_wist` a-awiases; q-quawquew um f-funcionawá. ( ͡o ω ͡o )
 
-#### Execução conditional
+#### execução conditionaw
 
-Nós usamos o [`if`](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), `else`, e `endif` template tags para verificar se o `book_list` foi definido e não está vazio. E se `book_list` está vazio, então a cláusula `else` exibe o texto explicando que não há livros para listar. E se `book_list` não estiver vazio, percorreremos a lista de livros.
+n-nyós usamos o [`if`](https://docs.djangopwoject.com/en/2.1/wef/tempwates/buiwtins/#if), (ꈍᴗꈍ) `ewse`, e `endif` t-tempwate tags p-pawa vewificaw s-se o `book_wist` foi definido e nyão está vazio. e se `book_wist` está vazio, :3 e-então a cwáusuwa `ewse` exibe o-o texto expwicando q-que nyão há wivwos pawa wistaw. (✿oωo) e se `book_wist` n-nyão estivew vazio, (U ᵕ U❁) pewcowwewemos a-a wista d-de wivwos. UwU
 
 ```django
-{% if book_list %}
-  <!-- code here to list the books -->
-{% else %}
-  <p>There are no books in the library.</p>
+{% i-if b-book_wist %}
+  <!-- c-code hewe to wist the books -->
+{% ewse %}
+  <p>thewe awe nyo books in the w-wibwawy.</p>
 {% endif %}
 ```
 
-A condição acima verifica apenas um caso, mas você pode testar em condições adicionais usando a template tag `elif` (e.g. `{% elif var2 %}`). Para obter mais informações sobre operadores condicionais, consulte: [if](https://docs.djangoproject.com/pt-br/2.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/pt-br/2.1/ref/templates/builtins/#ifequal-and-ifnotequal), e [ifchanged](https://docs.djangoproject.com/pt-br/2.1/ref/templates/builtins/#ifchanged) em [Built-in template tags and filters](https://docs.djangoproject.com/pt-br/2.1/ref/templates/builtins) (Django Docs).
+a c-condição acima vewifica apenas um caso, ^^ mas você pode testaw e-em condições adicionais usando a tempwate tag `ewif` (e.g. /(^•ω•^) `{% ewif vaw2 %}`). (˘ω˘) pawa obtew mais i-infowmações sobwe o-opewadowes condicionais, OwO consuwte: [if](https://docs.djangopwoject.com/pt-bw/2.1/wef/tempwates/buiwtins/#if), (U ᵕ U❁) [ifequaw/ifnotequaw](https://docs.djangopwoject.com/pt-bw/2.1/wef/tempwates/buiwtins/#ifequaw-and-ifnotequaw), (U ﹏ U) e-e [ifchanged](https://docs.djangopwoject.com/pt-bw/2.1/wef/tempwates/buiwtins/#ifchanged) em [buiwt-in tempwate t-tags and fiwtews](https://docs.djangopwoject.com/pt-bw/2.1/wef/tempwates/buiwtins) (django d-docs).
 
-#### For loops
+#### fow woops
 
-O template usa as template tags [for](https://docs.djangoproject.com/pt-br/2.1/ref/templates/builtins/#for) e `endfor` para percorrer a lista de livros, como mostrado abaixo. Cada iteração preenche a variável de template `book` com informações para o item da lista atual.
+o-o tempwate usa as tempwate t-tags [fow](https://docs.djangopwoject.com/pt-bw/2.1/wef/tempwates/buiwtins/#fow) e `endfow` pawa pewcowwew a wista de wivwos, mya como m-mostwado abaixo. (⑅˘꒳˘) cada itewação pweenche a vawiávew d-de tempwate `book` c-com i-infowmações pawa o item da wista atuaw. (U ᵕ U❁)
 
 ```django
-{% for book in book_list %}
-  <li><!-- code here get information from each book item --></li>
-{% endfor %}
+{% f-fow book in book_wist %}
+  <wi><!-- code hewe get infowmation fwom each b-book item --></wi>
+{% e-endfow %}
 ```
 
-Embora não seja usado aqui, dentro do loop, o Django também criará outras variáveis que você pode usar para rastrear a iteração. Por exemplo, você pode testar a variável `forloop.last` para executar o processamento condicional na última vez em que o loop é executado.
+e-embowa nyão s-seja usado aqui, /(^•ω•^) dentwo do woop, ^•ﻌ•^ o django também c-cwiawá outwas v-vawiáveis que você pode usaw pawa wastweaw a-a itewação. (///ˬ///✿) pow exempwo, o.O você pode testaw a vawiávew `fowwoop.wast` p-pawa executaw o pwocessamento condicionaw n-nya úwtima vez e-em que o woop é executado. (ˆ ﻌ ˆ)♡
 
-#### Acessando variáveis
+#### a-acessando vawiáveis
 
-O código dentro do loop cria um item de lista para cada livro que mostra o título (como um link para a exibição de detalhes ainda a ser criada) e o autor.
+o-o código d-dentwo do woop cwia um item de wista pawa cada w-wivwo que mostwa o títuwo (como um wink pawa a-a exibição de detawhes ainda a sew cwiada) e o autow. 😳
 
-```html
-<a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+```htmw
+<a h-hwef="\{{ book.get_absowute_uww }}">\{{ b-book.titwe }}</a> (\{{book.authow}})
 ```
 
-Acessamos os _campos_ do registro de livro associado usando a "notação de ponto" (e.g. `book.title` e `book.author`), onde o texto após o item `book` é o nome do campo (conforme definido no modelo).
+a-acessamos o-os _campos_ do w-wegistwo de wivwo associado usando a-a "notação de ponto" (e.g. òωó `book.titwe` e `book.authow`), (⑅˘꒳˘) onde o-o texto após o item `book` é o-o nyome do campo (confowme definido nyo modewo). rawr
 
-Também podemos chamar _funções_ no modelo de dentro do nosso template - nesse caso, chamamos `Book.get_absolute_url()` para obter um URL que você pode usar para exibir o registro de detalhe associado. Isso funciona desde que a função não tenha argumentos (não há como passar argumentos!)
+t-também podemos c-chamaw _funções_ nyo modewo d-de dentwo do nyosso tempwate - n-nyesse caso, (ꈍᴗꈍ) chamamos `book.get_absowute_uww()` p-pawa obtew um uww que você pode u-usaw pawa exibiw o-o wegistwo de detawhe associado. ^^ i-isso funciona desde que a função nyão tenha awgumentos (não h-há como passaw awgumentos!)
 
-> [!NOTE]
-> Temos que ter um pouco de cuidado com os "efeitos colaterais" ao chamar funções em templates. Aqui apenas exibimos um URL, mas uma função pode fazer praticamente qualquer coisa - não queremos excluir nosso banco de dados (por exemplo) apenas renderizando nosso template!
+> [!note]
+> temos q-que tew um pouco de cuidado com os "efeitos c-cowatewais" ao c-chamaw funções e-em tempwates. (ˆ ﻌ ˆ)♡ aqui apenas exibimos u-um uww, mas u-uma função pode fazew pwaticamente q-quawquew coisa - nyão quewemos e-excwuiw nyosso banco de dados (pow e-exempwo) a-apenas wendewizando nyosso tempwate! /(^•ω•^)
 
-#### Atualize o template base
+#### atuawize o tempwate base
 
-Abra o template base (**/locallibrary/catalog/templates/_base_generic.html_**) e insira **{% url 'books' %}** no link da URL para **All books**,como mostrado abaixo. Isso habilitará o link em todas as páginas (podemos colocá-lo em prática agora que criamos o mapeador de URL "books").
+abwa o tempwate b-base (**/wocawwibwawy/catawog/tempwates/_base_genewic.htmw_**) e-e insiwa **{% uww 'books' %}** nyo wink da uww pawa **aww books**,como m-mostwado abaixo. ^^ isso h-habiwitawá o w-wink em todas as páginas (podemos cowocá-wo em pwática agowa que cwiamos o mapeadow d-de uww "books"). o.O
 
 ```python
-<li><a href="{% url 'index' %}">Home</a></li>
-<li><a href="{% url 'books' %}">All books</a></li>
-<li><a href="">All authors</a></li>
+<wi><a hwef="{% uww 'index' %}">home</a></wi>
+<wi><a h-hwef="{% uww 'books' %}">aww b-books</a></wi>
+<wi><a h-hwef="">aww authows</a></wi>
 ```
 
-### Com o que se parece?
+### c-com o que se pawece?
 
-Ainda não será possível criar a lista de livros, porque ainda falta uma dependência - o mapa de URL para as páginas de detalhes do livro, necessário para criar hiperlinks para livros individuais. Mostraremos as visualizações de lista e de detalhes após a próxima seção.
+a-ainda nyão s-sewá possívew c-cwiaw a wista d-de wivwos, 😳😳😳 powque a-ainda fawta uma dependência - o mapa de uww pawa as páginas de detawhes do wivwo, XD nyecessáwio p-pawa cwiaw hipewwinks p-pawa wivwos i-individuais. nyaa~~ m-mostwawemos as v-visuawizações d-de wista e de detawhes após a pwóxima seção. ^•ﻌ•^
 
-## Pagina Book detail
+## pagina book detaiw
 
-A página book detail exibirá informações sobre um livro específico, acessado usando o URL `catalog/book/<id>` (onde `<id>` é a chave primária do livro). Além dos campos no model `Book` (author, summary, ISBN, language, e genre), também listaremos os detalhes das cópias disponíveis (`BookInstances`) incluindo o status, data prevista de retorno, impressão e ID. Isso permitirá que nossos leitores não apenas saibam sobre o livro, mas também confirmem se/quando ele está disponível.
+a página b-book detaiw e-exibiwá infowmações sobwe um wivwo específico, acessado usando o-o uww `catawog/book/<id>` (onde `<id>` é a-a c-chave pwimáwia do wivwo). :3 awém dos campos nyo m-modew `book` (authow, ^^ summawy, o.O isbn, wanguage, ^^ e g-genwe), também w-wistawemos os detawhes das cópias disponíveis (`bookinstances`) i-incwuindo o status, (⑅˘꒳˘) data pwevista d-de wetowno, ʘwʘ i-impwessão e id. isso pewmitiwá q-que nyossos weitowes n-nyão apenas s-saibam sobwe o-o wivwo, mas também c-confiwmem s-se/quando ewe está disponívew. mya
 
-### URL mapping
+### u-uww mapping
 
-Abra **/catalog/urls.py** e adicione a URL '**book-detail**' mostrado em negrito abaixo. Esta função `path()` define um padrão, exibição de detalhes genérica associada à classe associada e um nome.
+a-abwa **/catawog/uwws.py** e adicione a-a uww '**book-detaiw**' mostwado em nyegwito abaixo. >w< esta f-função `path()` define um padwão, o.O e-exibição de detawhes genéwica a-associada à c-cwasse associada e um nyome. OwO
 
 ```python
-urlpatterns = [
-    path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'),
-    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
+uwwpattewns = [
+    p-path('', -.- views.index, (U ﹏ U) nyame='index'), òωó
+    path('books/', >w< v-views.bookwistview.as_view(), ^•ﻌ•^ n-nyame='books'), /(^•ω•^)
+    path('book/<int:pk>', views.bookdetaiwview.as_view(), n-nyame='book-detaiw'), ʘwʘ
 ]
 ```
 
-Para o path _book-detail_ o padrão de URL usa uma sintaxe especial para capturar o ID específico do livro que queremos ver. A sintaxe é muito simples: colchetes angulares definem a parte da URL a ser capturada, incluindo o nome da variável que a view pode usar para acessar os dados capturados. Por exemplo, **\<something>** , capturará o padrão marcado e passará o valor para a visualização como uma variável "alguma coisa". Opcionalmente, você pode preceder o nome da variável com um [converter specification](https://docs.djangoproject.com/pt-br/2.1/topics/http/urls/#path-converters) que define o tipo de dados (int, str, slug, uuid, path).
+pawa o-o path _book-detaiw_ o padwão d-de uww usa uma sintaxe especiaw pawa captuwaw o-o id específico d-do wivwo que quewemos vew. XD a sintaxe é m-muito s-simpwes: cowchetes anguwawes definem a pawte da u-uww a sew captuwada, (U ᵕ U❁) i-incwuindo o n-nyome da vawiávew q-que a view pode usaw pawa acessaw os dados captuwados. (ꈍᴗꈍ) pow exempwo, rawr x3 **\<something>** , :3 captuwawá o padwão mawcado e passawá o-o vawow pawa a-a visuawização c-como uma vawiávew "awguma c-coisa". o-opcionawmente, (˘ω˘) v-você pode pwecedew o nyome da v-vawiávew com u-um [convewtew specification](https://docs.djangopwoject.com/pt-bw/2.1/topics/http/uwws/#path-convewtews) que define o-o tipo de dados (int, s-stw, -.- swug, uuid, (ꈍᴗꈍ) path).
 
-Neste caso, usamos `'<int:pk>'` para capturar o ID do livro, que deve ser uma sequência especialmente formatada e passá-la para a view como um parâmetro chamado `pk` (abreviatura de primary key). Esta é a id que está sendo usado para armazenar o livro exclusivamente no banco de dados, conforme definido no Book Model.
+nyeste caso, UwU u-usamos `'<int:pk>'` pawa captuwaw o id do wivwo, σωσ q-que deve sew uma sequência especiawmente f-fowmatada e-e passá-wa pawa a view como u-um pawâmetwo c-chamado `pk` (abweviatuwa d-de pwimawy key). ^^ esta é a-a id que está s-sendo usado pawa awmazenaw o wivwo e-excwusivamente nyo banco de d-dados, :3 confowme d-definido nyo book m-modew. ʘwʘ
 
-> [!NOTE]
-> Como discutido anteriormente, nosso URL correspondente é realmente `catalog/book/<digits>` (porque estamos no aplicativo de **catalog**, `/catalog/` é assumido).
+> [!note]
+> como discutido a-antewiowmente, 😳 nyosso uww cowwespondente é w-weawmente `catawog/book/<digits>` (powque estamos no apwicativo de **catawog**, ^^ `/catawog/` é assumido). σωσ
 
-> **Aviso:** **Importante**: A view de detalhes genérica class-based _espera_ receber um parâmetro chamado **pk**. Se você estiver escrevendo sua própria função view, poderá usar o nome de qualquer parâmetro que desejar, ou mesmo transmitir as informações em um argumento sem nome.
+> **aviso:** **impowtante**: a view de detawhes genéwica c-cwass-based _espewa_ wecebew um pawâmetwo chamado **pk**. /(^•ω•^) se você estivew escwevendo sua pwópwia função v-view, 😳😳😳 podewá usaw o nyome de quawquew pawâmetwo q-que desejaw, 😳 ou mesmo twansmitiw a-as infowmações em um awgumento sem nyome. OwO
 
-#### Correspondência avançada de caminhos/iniciador de expressão regular
+#### c-cowwespondência avançada d-de caminhos/iniciadow de expwessão w-weguwaw
 
-> [!NOTE]
-> Você não precisará desta seção para concluir o tutorial! Nós fornecemos isso porque conhecer essa opção provavelmente será útil no seu futuro centrado no Django.
+> [!note]
+> v-você nyão pwecisawá desta seção p-pawa concwuiw o tutowiaw! :3 nyós fownecemos isso powque conhecew e-essa opção pwovavewmente sewá útiw n-nyo seu futuwo centwado n-nyo django. nyaa~~
 
-The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.re_path) method.
+the pattewn matching p-pwovided by `path()` i-is simpwe and usefuw fow the (vewy common) c-cases whewe you just want to captuwe _any_ stwing o-ow integew. OwO if you nyeed mowe wefined fiwtewing (fow exampwe, o.O to fiwtew onwy s-stwings that have a-a cewtain nyumbew of chawactews) t-then you can u-use the [we_path()](https://docs.djangopwoject.com/en/2.1/wef/uwws/#django.uwws.we_path) method. (U ﹏ U)
 
-This method is used just like `path()` except that it allows you to specify a pattern using a [Regular expression](https://docs.python.org/3/library/re.html). For example, the previous path could have been written as shown below:
+t-this method is used just wike `path()` except that it awwows you to specify a-a pattewn using a-a [weguwaw expwession](https://docs.python.owg/3/wibwawy/we.htmw). (⑅˘꒳˘) fow exampwe, OwO t-the pwevious path c-couwd have been wwitten as shown b-bewow:
 
 ```python
-re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
+we_path(w'^book/(?p<pk>\d+)$', 😳 views.bookdetaiwview.as_view(), :3 n-nyame='book-detaiw'), ( ͡o ω ͡o )
 ```
 
-_Regular expressions_ are an incredibly powerful pattern mapping tool. They are, frankly, quite unintuitive and scary for beginners. Below is a very short primer!
+_weguwaw expwessions_ awe an incwedibwy p-powewfuw p-pattewn mapping toow. 🥺 they awe, fwankwy, /(^•ω•^) quite unintuitive a-and scawy fow beginnews. nyaa~~ bewow is a vewy showt pwimew! (✿oωo)
 
-The first thing to know is that regular expressions should usually be declared using the raw string literal syntax (i.e. they are enclosed as shown: **r'\<your regular expression text goes here>'**).
+the fiwst thing to know is that weguwaw expwessions shouwd usuawwy b-be decwawed u-using the waw stwing witewaw syntax (i.e. (✿oωo) t-they a-awe encwosed as shown: **w'\<youw w-weguwaw expwession text goes hewe>'**). (ꈍᴗꈍ)
 
-The main parts of the syntax you will need to know for declaring the pattern matches are:
+the main pawts of the syntax you wiww nyeed to know f-fow decwawing the pattewn matches awe:
 
-| Symbol          | Meaning                                                                                                                                                                                                                                                 |
+| symbow          | meaning                                                                                                                                                                                                                                                 |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ^               | Match the beginning of the text                                                                                                                                                                                                                         |
-| $               | Match the end of the text                                                                                                                                                                                                                               |
-| \d              | Match a digit (0, 1, 2, ... 9)                                                                                                                                                                                                                          |
-| \w              | Match a word character, e.g. any upper- or lower-case character in the alphabet, digit or the underscore character (\_)                                                                                                                                 |
-| +               | Match one or more of the preceding character. For example, to match one or more digits you would use `\d+`. To match one or more "a" characters, you could use `a+`                                                                                     |
-| \*              | Match zero or more of the preceding character. For example, to match nothing or a word you could use `\w*`                                                                                                                                              |
-| ( )             | Capture the part of the pattern inside the brackets. Any captured values will be passed to the view as unnamed parameters (if multiple patterns are captured, the associated parameters will be supplied in the order that the captures were declared). |
-| (?P<_name_>...) | Capture the pattern (indicated by ...) as a named variable (in this case "name"). The captured values are passed to the view with the name specified. Your view must therefore declare an argument with the same name!                                  |
-| \[ ]            | Match against one character in the set. For example, \[abc] will match on 'a' or 'b' or 'c'. \[-\w] will match on the '-' character or any word character.                                                                                              |
+| ^               | match the b-beginning of the t-text                                                                                                                                                                                                                         |
+| $               | m-match the end of the text                                                                                                                                                                                                                               |
+| \d              | match a digit (0, OwO 1, 2, ... 9)                                                                                                                                                                                                                          |
+| \w              | match a wowd chawactew, :3 e-e.g. mya any u-uppew- ow wowew-case c-chawactew in the awphabet, >_< d-digit ow the undewscowe chawactew (\_)                                                                                                                                 |
+| +               | m-match one ow mowe of the pweceding c-chawactew. (///ˬ///✿) fow exampwe, (///ˬ///✿) to match o-one ow mowe digits you wouwd use `\d+`. 😳😳😳 to match o-one ow mowe "a" chawactews, (U ᵕ U❁) y-you couwd use `a+`                                                                                     |
+| \*              | m-match zewo ow mowe o-of the pweceding c-chawactew. (///ˬ///✿) fow exampwe, ( ͡o ω ͡o ) to match n-nyothing ow a wowd you couwd u-use `\w*`                                                                                                                                              |
+| ( )             | captuwe t-the pawt of t-the pattewn inside the bwackets. (✿oωo) any captuwed vawues w-wiww be passed to the view as unnamed pawametews (if muwtipwe pattewns awe captuwed, òωó the associated pawametews wiww be suppwied i-in the owdew that the captuwes wewe decwawed). (ˆ ﻌ ˆ)♡ |
+| (?p<_name_>...) | c-captuwe the pattewn (indicated b-by ...) as a nyamed vawiabwe (in this c-case "name"). :3 the captuwed vawues awe passed to t-the view with the nyame specified. (ˆ ﻌ ˆ)♡ youw view must t-thewefowe decwawe an awgument with the same nyame! (U ᵕ U❁)                                  |
+| \[ ]            | m-match against one chawactew in the set. (U ᵕ U❁) f-fow exampwe, XD \[abc] w-wiww match on 'a' ow 'b' ow 'c'. nyaa~~ \[-\w] w-wiww match on the '-' c-chawactew ow any wowd chawactew. (ˆ ﻌ ˆ)♡                                                                                              |
 
-Most other characters can be taken literally!
+m-most othew c-chawactews can be taken witewawwy! ʘwʘ
 
-Let's consider a few real examples of patterns:
+wet's considew a-a few weaw exampwes of pattewns:
 
-| Pattern                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| pattewn                          | descwiption                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **r'^book/(?P\<pk>\d+)$'**       | This is the RE used in our URL mapper. It matches a string that has `book/` at the start of the line (**^book/**), then has one or more digits (`\d+`), and then ends (with no non-digit characters before the end of line marker).It also captures all the digits **(?P\<pk>\d+)** and passes them to the view in a parameter named 'pk'. **The captured values are always passed as a string!**For example, this would match `book/1234` , and send a variable `pk='1234'` to the view.                                                              |
-| **r'^book/(\d+)$'**              | This matches the same URLs as the preceding case. The captured information would be sent as an unnamed argument to the view.                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **r'^book/(?P\<stub>\[-\w]+)$'** | This matches a string that has `book/` at the start of the line (**^book/**), then has one or more characters that are _either_ a '-' or a word character (**\[-\w]+**), and then ends. It also captures this set of characters and passes them to the view in a parameter named 'stub'.This is a fairly typical pattern for a "stub". Stubs are URL-friendly word-based primary keys for data. You might use a stub if you wanted your book URL to be more informative. For example `/catalog/book/the-secret-garden` rather than `/catalog/book/33`. |
+| **w'^book/(?p\<pk>\d+)$'**       | t-this is the we used in ouw uww mappew. ^•ﻌ•^ it matches a stwing t-that has `book/` a-at the stawt o-of the wine (**^book/**), mya then has one ow mowe digits (`\d+`), (ꈍᴗꈍ) a-and then ends (with nyo nyon-digit c-chawactews befowe the end of w-wine mawkew).it a-awso captuwes aww the digits **(?p\<pk>\d+)** and passes them to the view in a pawametew nyamed 'pk'. (ˆ ﻌ ˆ)♡ **the c-captuwed v-vawues awe awways passed as a stwing!**fow e-exampwe, (ˆ ﻌ ˆ)♡ this wouwd match `book/1234` , and send a-a vawiabwe `pk='1234'` t-to the view. ( ͡o ω ͡o )                                                              |
+| **w'^book/(\d+)$'**              | t-this matches t-the same uwws a-as the pweceding c-case. o.O the captuwed infowmation wouwd be sent a-as an unnamed a-awgument to the v-view.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **w'^book/(?p\<stub>\[-\w]+)$'** | t-this matches a-a stwing that h-has `book/` at the stawt of the w-wine (**^book/**), 😳😳😳 t-then has one o-ow mowe chawactews that awe _eithew_ a '-' ow a-a wowd chawactew (**\[-\w]+**), ʘwʘ and then ends. :3 it awso captuwes t-this set of chawactews and passes them to the view i-in a pawametew n-nyamed 'stub'.this is a faiwwy typicaw pattewn fow a "stub". UwU stubs a-awe uww-fwiendwy w-wowd-based pwimawy keys fow d-data. nyaa~~ you might u-use a stub if you wanted youw book uww to be mowe infowmative. :3 f-fow exampwe `/catawog/book/the-secwet-gawden` wathew t-than `/catawog/book/33`. nyaa~~ |
 
-You can capture multiple patterns in the one match, and hence encode lots of different information in a URL.
+you can captuwe muwtipwe pattewns i-in the one match, ^^ a-and hence encode wots of diffewent infowmation i-in a uww. nyaa~~
 
-> [!NOTE]
-> Como desafio, considere como você pode codificar um URL para listar todos os livros lançados em um determinado ano, mês, dia e o RE que poderia ser usado para correspondê-lo.
+> [!note]
+> como desafio, 😳😳😳 considewe como você pode codificaw um uww pawa wistaw t-todos os wivwos wançados em um detewminado ano, ^•ﻌ•^ m-mês, dia e o w-we que podewia sew u-usado pawa cowwespondê-wo. (⑅˘꒳˘)
 
-#### Passando opções adicionais em seus mapas de URL
+#### passando opções a-adicionais e-em seus mapas d-de uww
 
-Um recurso que não usamos aqui, mas que você pode achar valioso, é que você pode declarar e passar [opções adicionais](https://docs.djangoproject.com/pt-br/2.1/topics/http/urls/#views-extra-options) para a view. As opções são declaradas como um dicionário que você passa como o terceiro argumento sem nome para a função `path()`. Essa abordagem pode ser útil se você desejar usar a mesma visualização para vários recursos e transmitir dados para configurar seu comportamento em cada caso (abaixo, fornecemos um modelo diferente em cada caso).
-
-```python
-path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl'),
-path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
-```
-
-> [!NOTE]
-> As opções extras e os padrões capturados nomeados são passados para a view como argumentos _nomeados_. Se você usar o **mesmo nome** para um padrão capturado e uma opção extra, somente o valor do padrão capturado será enviado para a visualização (o valor especificado na opção adicional será descartado).
-
-### View (class-based)
-
-Abra **catalog/views.py**, e copie o seguinte código na parte inferior do arquivo:
+um wecuwso q-que nyão usamos a-aqui, (✿oωo) mas que você pode achaw vawioso, mya é que v-você pode decwawaw e-e passaw [opções a-adicionais](https://docs.djangopwoject.com/pt-bw/2.1/topics/http/uwws/#views-extwa-options) pawa a view. (///ˬ///✿) a-as opções são d-decwawadas como u-um dicionáwio que você passa c-como o tewceiwo a-awgumento sem n-nyome pawa a função `path()`. ʘwʘ e-essa abowdagem p-pode sew útiw se você desejaw u-usaw a mesma visuawização pawa v-váwios wecuwsos e-e twansmitiw dados pawa configuwaw seu compowtamento em cada caso (abaixo, >w< f-fownecemos u-um modewo difewente em cada c-caso). o.O
 
 ```python
-class BookDetailView(generic.DetailView):
-    model = Book
+p-path('uww/', ^^;; views.my_weused_view, :3 {'my_tempwate_name': 'some_path'}, (ꈍᴗꈍ) nyame='auww'), XD
+p-path('anothewuww/', ^^;; views.my_weused_view, (U ﹏ U) {'my_tempwate_name': 'anothew_path'}, (ꈍᴗꈍ) n-nyame='anothewuww'), 😳
 ```
 
-É isso aí! Tudo o que você precisa fazer agora é criar um modelo chamado **/locallibrary/catalog/templates/catalog/book_detail.html**, e a visualização passará as informações do banco de dados para o registro `Book` extraído pelo mapeador de URL. Dentro do modelo, você pode acessar a lista de livros com a variável de modelo denominada `object` ou `book` (i.e. genericamente "`the_model_name`").
+> [!note]
+> a-as opções extwas e-e os padwões c-captuwados nyomeados s-são passados pawa a view como awgumentos _nomeados_. rawr s-se você usaw o **mesmo nyome** pawa um padwão captuwado e uma opção e-extwa, ( ͡o ω ͡o ) somente o-o vawow do padwão captuwado sewá enviado pawa a visuawização (o v-vawow especificado n-nya opção adicionaw sewá descawtado).
 
-Se necessário, você pode alterar o template usado e o nome do objeto de contexto usado para referenciar o livro no template. Você também pode substituir métodos para, por exemplo, adicionar informações adicionais ao contexto.
+### v-view (cwass-based)
 
-#### O que acontece se o registro não existir?
-
-Se um registro solicitado não existir, a view de detalhes genérica class-based levantará uma exceção `Http404` para você automaticamente — em produção, isso exibirá automaticamente uma página apropriada de "resource not found", que você pode personalizar se desejar.
-
-Apenas para lhe dar uma idéia de como isso funciona, o fragmento de código abaixo demonstra como você implementaria a exibição baseada em classe como uma função se você não estivesse usando a view de detalhe genérica class-based.
+abwa **catawog/views.py**, (ˆ ﻌ ˆ)♡ e-e copie o-o seguinte código n-nya pawte infewiow do awquivo:
 
 ```python
-def book_detail_view(request, primary_key):
-    try:
-        book = Book.objects.get(pk=primary_key)
-    except Book.DoesNotExist:
-        raise Http404('Book does not exist')
-
-    return render(request, 'catalog/book_detail.html', context={'book': book})
+cwass bookdetaiwview(genewic.detaiwview):
+    m-modew = book
 ```
 
-A view tenta primeiro obter o registro de livro específico do modelo. Se isso falhar, a view deve gerar uma exceção `Http404` para indicar que o livro "não foi encontrado". A etapa final é, como sempre, chamar `render()` com o nome do template e os dados do livro no parâmetro `context` (como um dicionário).
+É i-isso aí! OwO tudo o que você pwecisa f-fazew agowa é cwiaw um modewo chamado **/wocawwibwawy/catawog/tempwates/catawog/book_detaiw.htmw**, >_< e-e a visuawização passawá a-as infowmações do banco de dados pawa o wegistwo `book` e-extwaído pewo mapeadow d-de uww. dentwo do modewo, XD você pode acessaw a wista de wivwos com a vawiávew de modewo denominada `object` ou `book` (i.e. (ˆ ﻌ ˆ)♡ g-genewicamente "`the_modew_name`"). (ꈍᴗꈍ)
 
-Como alternativa, podemos usar a função `get_object_or_404()` como um atalho para levantar uma exceção `Http404` se o registro não for encontrado.
+s-se nyecessáwio, (✿oωo) v-você pode a-awtewaw o tempwate usado e o nyome do objeto d-de contexto usado pawa wefewenciaw o wivwo nyo tempwate. UwU você também p-pode substituiw m-métodos p-pawa, (ꈍᴗꈍ) pow exempwo, (U ﹏ U) a-adicionaw infowmações adicionais ao contexto. >w<
+
+#### o que acontece se o wegistwo n-nyão existiw?
+
+s-se um wegistwo sowicitado nyão existiw, ^•ﻌ•^ a view de detawhes g-genéwica cwass-based wevantawá u-uma exceção `http404` p-pawa v-você automaticamente — em pwodução, 😳 isso exibiwá automaticamente uma página apwopwiada de "wesouwce n-nyot found", XD que você p-pode pewsonawizaw se desejaw. :3
+
+apenas pawa whe daw uma idéia d-de como isso funciona, rawr x3 o fwagmento d-de código abaixo demonstwa como você impwementawia a-a exibição b-baseada em c-cwasse como uma f-função se você n-nyão estivesse usando a view d-de detawhe genéwica c-cwass-based. (⑅˘꒳˘)
 
 ```python
-from django.shortcuts import get_object_or_404
+def b-book_detaiw_view(wequest, ^^ pwimawy_key):
+    twy:
+        b-book = book.objects.get(pk=pwimawy_key)
+    e-except book.doesnotexist:
+        w-waise http404('book does n-nyot exist')
 
-def book_detail_view(request, primary_key):
-    book = get_object_or_404(Book, pk=primary_key)
-    return render(request, 'catalog/book_detail.html', context={'book': book})
+    w-wetuwn wendew(wequest, >w< 'catawog/book_detaiw.htmw', 😳 context={'book': book})
 ```
 
-### Criando o template Detail View
+a view tenta p-pwimeiwo obtew o w-wegistwo de wivwo e-específico do m-modewo. rawr se isso fawhaw, rawr x3 a view deve gewaw uma exceção `http404` p-pawa indicaw que o wivwo "não foi encontwado". a-a etapa finaw é, (ꈍᴗꈍ) como sempwe, -.- chamaw `wendew()` c-com o nyome do tempwate e os dados do wivwo nyo pawâmetwo `context` (como u-um dicionáwio). òωó
 
-Crie o arquivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html** e forneça o conteúdo abaixo. Conforme discutido acima, este é o nome do arquivo de template padrão esperado pela view de _detalhes_ genérica class-based (para um modelo chamado `Book` no aplicativo chamado `catalog`).
+como awtewnativa, (U ﹏ U) p-podemos usaw a-a função `get_object_ow_404()` c-como um atawho pawa wevantaw uma e-exceção `http404` s-se o wegistwo nyão fow encontwado. ( ͡o ω ͡o )
+
+```python
+f-fwom django.showtcuts i-impowt g-get_object_ow_404
+
+d-def book_detaiw_view(wequest, :3 pwimawy_key):
+    b-book = get_object_ow_404(book, >w< p-pk=pwimawy_key)
+    w-wetuwn wendew(wequest, ^^ 'catawog/book_detaiw.htmw', 😳😳😳 c-context={'book': book})
+```
+
+### cwiando o tempwate detaiw view
+
+cwie o awquivo htmw **/wocawwibwawy/catawog/tempwates/catawog/book_detaiw.htmw** e-e f-fowneça o conteúdo abaixo. OwO confowme d-discutido acima, XD este é o nyome do awquivo d-de tempwate padwão e-espewado pewa v-view de _detawhes_ g-genéwica cwass-based (pawa u-um modewo chamado `book` nyo apwicativo chamado `catawog`). (⑅˘꒳˘)
 
 ```django
-{% extends "base_generic.html" %}
+{% e-extends "base_genewic.htmw" %}
 
-{% block content %}
-  <h1>Title: \{{ book.title }}</h1>
+{% b-bwock content %}
+  <h1>titwe: \{{ book.titwe }}</h1>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Summary:</strong> \{{ book.summary }}</p>
-  <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
-  <p><strong>Language:</strong> \{{ book.language }}</p>
-  <p><strong>Genre:</strong> {% for genre in book.genre.all %} \{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><stwong>authow:</stwong> <a hwef="">\{{ book.authow }}</a></p> <!-- authow d-detaiw wink nyot yet defined -->
+  <p><stwong>summawy:</stwong> \{{ b-book.summawy }}</p>
+  <p><stwong>isbn:</stwong> \{{ book.isbn }}</p>
+  <p><stwong>wanguage:</stwong> \{{ book.wanguage }}</p>
+  <p><stwong>genwe:</stwong> {% f-fow genwe in book.genwe.aww %} \{{ g-genwe }}{% if nyot fowwoop.wast %}, OwO {% endif %}{% endfow %}</p>
 
-  <div style="margin-left:20px;margin-top:20px">
-    <h4>Copies</h4>
+  <div s-stywe="mawgin-weft:20px;mawgin-top:20px">
+    <h4>copies</h4>
 
-    {% for copy in book.bookinstance_set.all %}
-      <hr>
-      <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">\{{ copy.get_status_display }}</p>
-      {% if copy.status != 'a' %}
-        <p><strong>Due to be returned:</strong> \{{copy.due_back}}</p>
-      {% endif %}
-      <p><strong>Imprint:</strong> \{{copy.imprint}}</p>
-      <p class="text-muted"><strong>Id:</strong> \{{copy.id}}</p>
-    {% endfor %}
+    {% fow copy i-in book.bookinstance_set.aww %}
+      <hw>
+      <p cwass="{% i-if copy.status == 'a' %}text-success{% e-ewif copy.status == 'm' %}text-dangew{% ewse %}text-wawning{% endif %}">\{{ copy.get_status_dispway }}</p>
+      {% i-if copy.status != 'a' %}
+        <p><stwong>due to be wetuwned:</stwong> \{{copy.due_back}}</p>
+      {% e-endif %}
+      <p><stwong>impwint:</stwong> \{{copy.impwint}}</p>
+      <p cwass="text-muted"><stwong>id:</stwong> \{{copy.id}}</p>
+    {% endfow %}
   </div>
-{% endblock %}
+{% e-endbwock %}
 ```
 
-> [!NOTE]
-> O link do autor no template acima tem um URL vazio porque ainda não criamos uma página de detalhes do autor. Uma vez que isso exista, você deve atualizar o URL assim:
+> [!note]
+> o-o wink do autow nyo tempwate acima tem um uww vazio powque ainda nyão cwiamos uma página de d-detawhes do autow. (⑅˘꒳˘) uma vez que isso exista, (U ﹏ U) você d-deve atuawizaw o-o uww assim:
 >
 > ```django
-> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> <a hwef="{% uww 'authow-detaiw' book.authow.pk %}">\{{ b-book.authow }}</a>
 > ```
 
-Embora um pouco maior, quase tudo neste template foi descrito anteriormente:
+embowa u-um pouco maiow, (ꈍᴗꈍ) quase tudo nyeste tempwate foi descwito antewiowmente:
 
-- Estendemos nosso modelo básico e substituímos o bloco "content".
-- Usamos o processamento condicional para determinar se deve ou não exibir conteúdo específico.
-- Usamos `for` loops para percorrer as listas de objetos.
-- Acessamos os campos de contexto usando a notação de ponto (porque usamos a exibição genérica detalhada, o contexto é chamado `book`; também poderíamos usar "`object`")
+- e-estendemos nyosso modewo básico e-e substituímos o bwoco "content". rawr
+- usamos o pwocessamento c-condicionaw p-pawa detewminaw se deve o-ou nyão exibiw c-conteúdo específico. XD
+- usamos `fow` w-woops pawa pewcowwew as wistas d-de objetos. >w<
+- a-acessamos os c-campos de contexto u-usando a nyotação d-de ponto (powque usamos a-a exibição genéwica d-detawhada, o contexto é chamado `book`; t-também podewíamos usaw "`object`")
 
-A única coisa interessante que não vimos antes é a função `book.bookinstance_set.all()`. Este método é "automagicamente" construído pelo Django para retornar o conjunto de registros `BookInstance` associados com um `Book` em particular.
+a-a única coisa intewessante que nyão vimos antes é a função `book.bookinstance_set.aww()`. UwU este método é "automagicamente" constwuído pewo django pawa w-wetownaw o conjunto de wegistwos `bookinstance` a-associados com um `book` em p-pawticuwaw. 😳
 
 ```django
-{% for copy in book.bookinstance_set.all %}
-  <!-- code to iterate across each copy/instance of a book -->
-{% endfor %}
+{% f-fow copy in book.bookinstance_set.aww %}
+  <!-- c-code to itewate acwoss e-each copy/instance of a book -->
+{% e-endfow %}
 ```
 
-Este método é necessário porque você declara um campo `ForeignKey` (um-para-muitos) somente no lado "um" do relacionamento. Como você não faz nada para declarar o relacionamento nos outros modelos ("muitos"), ele não possui nenhum campo para obter o conjunto de registros associados. Para superar esse problema, o Django constrói uma função "pesquisa reversa" chamada de forma apropriada, que você pode usar. O nome da função é construído com letras minúsculas no nome do modelo em que o `ForeignKey` foi declarado, seguido por `_set` (i.e. então a função criada em `Book` é `bookinstance_set()`).
+este método é necessáwio powque você decwawa um campo `foweignkey` (um-pawa-muitos) somente no wado "um" d-do wewacionamento. (ˆ ﻌ ˆ)♡ como você nyão faz nyada pawa d-decwawaw o wewacionamento nyos o-outwos modewos ("muitos"), ^•ﻌ•^ ewe nyão possui nyenhum campo pawa obtew o conjunto de wegistwos associados. ^^ pawa supewaw esse pwobwema, 😳 o django c-constwói uma função "pesquisa w-wevewsa" chamada d-de fowma apwopwiada, :3 que você p-pode usaw. (⑅˘꒳˘) o nyome d-da função é c-constwuído com wetwas minúscuwas nyo nome d-do modewo em que o-o `foweignkey` foi decwawado, ( ͡o ω ͡o ) seguido p-pow `_set` (i.e. e-então a f-função cwiada e-em `book` é `bookinstance_set()`). :3
 
-> [!NOTE]
-> Aqui usamos `all()` para obter todos os registros (o padrão). Enquanto você pode usar o método `filter()` para obter um subconjunto de registros no código, não é possível fazer isso diretamente nos modelos, porque não é possível especificar argumentos para funções.
+> [!note]
+> a-aqui usamos `aww()` pawa obtew t-todos os wegistwos (o p-padwão). (⑅˘꒳˘) e-enquanto você p-pode usaw o método `fiwtew()` pawa o-obtew um subconjunto d-de wegistwos n-nyo código, >w< n-nyão é possívew f-fazew isso d-diwetamente nos modewos, OwO powque nyão é possívew especificaw a-awgumentos pawa funções. 😳
 >
-> Observe também que, se você não definir um pedido (na sua class-based view ou modelo), também verá erros do servidor de desenvolvimento como este:
+> obsewve t-também que, OwO se você nyão definiw um pedido (na s-sua cwass-based v-view ou m-modewo), 🥺 também vewá ewwos do s-sewvidow de desenvowvimento c-como este:
 >
 > ```
-> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
-> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->   allow_empty_first_page=allow_empty_first_page, **kwargs)
+> [29/may/2017 18:37:53] "get /catawog/books/?page=1 http/1.1" 200 1637
+> /foo/wocaw_wibwawy/venv/wib/python3.5/site-packages/django/views/genewic/wist.py:99: unowdewedobjectwistwawning: pagination may yiewd inconsistent wesuwts w-with an unowdewed object_wist: <quewyset [<authow: owtiz, (˘ω˘) david>, <authow: h. 😳😳😳 mcwaven, wiwwiam>, mya <authow: weigh, OwO m-mewinda>]>
+>   a-awwow_empty_fiwst_page=awwow_empty_fiwst_page, >_< **kwawgs)
 > ```
 >
-> Isso acontece porque o [objeto paginator](https://docs.djangoproject.com/pt-br/2.1/topics/pagination/#paginator-objects) espera ver algum ORDER BY sendo executado no seu banco de dados subjacente. Sem ele, não é possível garantir que os registros que estão sendo retornados estejam na ordem certa!
+> isso acontece p-powque o [objeto p-paginatow](https://docs.djangopwoject.com/pt-bw/2.1/topics/pagination/#paginatow-objects) e-espewa vew awgum o-owdew by sendo e-executado nyo seu b-banco de dados s-subjacente. 😳 sem ewe, nyão é possívew gawantiw q-que os wegistwos que estão sendo w-wetownados estejam nya owdem c-cewta! (U ᵕ U❁)
 >
-> Este tutorial não atingiu a **Paginação** (ainda, mas em breve), mas como você não pode usar `sort_by()` e passar um parâmetro (o mesmo com `filter()` descrito acima), você terá que escolher entre três opções:
+> este t-tutowiaw nyão atingiu a **paginação** (ainda, 🥺 m-mas em bweve), (U ﹏ U) mas como você nyão pode usaw `sowt_by()` e-e passaw u-um pawâmetwo (o m-mesmo com `fiwtew()` d-descwito acima), (U ﹏ U) você t-tewá que escowhew e-entwe twês o-opções:
 >
-> 1. Adicione um `ordering` dentro de uma declaração `class Meta` no seu model.
-> 2. Adicione um atributo `queryset` na sua class-based view, especificando um `order_by()`.
-> 3. Adicione um método `get_queryset` à sua class-based view personalisada e também especifique o `order_by()`.
+> 1. rawr x3 adicione um `owdewing` d-dentwo de uma decwawação `cwass meta` nyo seu modew. :3
+> 2. adicione um atwibuto `quewyset` nya sua cwass-based view, especificando um `owdew_by()`. rawr
+> 3. XD a-adicione um m-método `get_quewyset` à sua cwass-based view pewsonawisada e também especifique o-o `owdew_by()`. ^^
 >
-> Se você decidir ir com uma `class Meta` no model `Author` (provavelmente não tão flexível quanto personalizar o class-based view, mas fácil o suficiente), você terminará com algo assim:
+> s-se você decidiw iw com uma `cwass meta` nyo modew `authow` (pwovavewmente n-nyão tão fwexívew q-quanto pewsonawizaw o cwass-based v-view, mya mas f-fáciw o suficiente), (U ﹏ U) você tewminawá c-com awgo assim:
 >
 > ```python
-> class Author(models.Model):
->     first_name = models.CharField(max_length=100)
->     last_name = models.CharField(max_length=100)
->     date_of_birth = models.DateField(null=True, blank=True)
->     date_of_death = models.DateField('Died', null=True, blank=True)
+> c-cwass a-authow(modews.modew):
+>     fiwst_name = modews.chawfiewd(max_wength=100)
+>     wast_name = modews.chawfiewd(max_wength=100)
+>     d-date_of_biwth = m-modews.datefiewd(nuww=twue, 😳 bwank=twue)
+>     d-date_of_death = m-modews.datefiewd('died', mya nyuww=twue, 😳 b-bwank=twue)
 >
->     def get_absolute_url(self):
->         return reverse('author-detail', args=[str(self.id)])
+>     d-def get_absowute_uww(sewf):
+>         w-wetuwn wevewse('authow-detaiw', ^^ a-awgs=[stw(sewf.id)])
 >
->     def __str__(self):
->         return f'{self.last_name}, {self.first_name}'
+>     def __stw__(sewf):
+>         wetuwn f-f'{sewf.wast_name}, :3 {sewf.fiwst_name}'
 >
->     class Meta:
->         ordering = ['last_name']
+>     c-cwass meta:
+>         owdewing = ['wast_name']
 > ```
 >
-> Obviamente, o campo não precisa ser `last_name`: poderia ser qualquer outro.
+> obviamente, (U ﹏ U) o campo nyão pwecisa sew `wast_name`: p-podewia s-sew quawquew outwo. UwU
 >
-> E por último, mas não menos importante, você deve classificar por um atributo/coluna que realmente tenha um índice (exclusivo ou não) em seu banco de dados para evitar problemas de desempenho. Obviamente, isso não será necessário aqui (e provavelmente estamos nos adiantando muito) com tão poucos livros (e usuários!), Mas é algo a ser lembrado em projetos futuros.
+> e pow úwtimo, (ˆ ﻌ ˆ)♡ m-mas nyão menos impowtante, (ˆ ﻌ ˆ)♡ você deve cwassificaw pow u-um atwibuto/cowuna q-que weawmente t-tenha um índice (excwusivo ou nyão) em seu b-banco de dados pawa e-evitaw pwobwemas de desempenho. ^^;; obviamente, rawr i-isso nyão sewá n-nyecessáwio aqui (e p-pwovavewmente e-estamos nyos a-adiantando muito) c-com tão poucos wivwos (e usuáwios!), mas é awgo a sew wembwado em pwojetos futuwos.
 
-## Com o que se parece agora?
+## com o-o que se pawece agowa?
 
-Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador `http://127.0.0.1:8000/`.
+nyesse p-ponto, nyaa~~ devewíamos t-tew cwiado tudo o nyecessáwio pawa exibiw a wista de wivwos e-e as páginas de d-detawhes do wivwo. rawr x3 exekawaii~ o-o sewvidow (`python3 manage.py wunsewvew`) e-e abwa nyo seu nyavegadow `http://127.0.0.1:8000/`. (⑅˘꒳˘)
 
-> [!WARNING]
-> Não clique em nenhum autor ou link de detalhes do autor ainda - você os criará no desafio!
+> [!wawning]
+> nyão cwique em nyenhum autow ou w-wink de detawhes do autow ainda - você os cwiawá nyo desafio! OwO
 
-Clique no link **All books** para exibir a lista de livros.
+cwique nyo wink **aww b-books** pawa e-exibiw a wista d-de wivwos. OwO
 
-![Book List Page](book_list_page_no_pagination.png)
+![book w-wist page](book_wist_page_no_pagination.png)
 
-Em seguida, clique no link de um dos seus livros. Se tudo estiver configurado corretamente, você deverá ver algo como a seguinte captura de tela.
+em seguida, ʘwʘ cwique no wink de u-um dos seus wivwos. :3 se tudo estivew c-configuwado cowwetamente, mya você devewá vew a-awgo como a seguinte c-captuwa de t-tewa.
 
-![Book Detail Page](book_detail_page_no_pagination.png)
+![book detaiw page](book_detaiw_page_no_pagination.png)
 
-## Paginação
+## paginação
 
-Se você tiver apenas alguns registros, nossa página da lista de livros ficará bem. No entanto, à medida que você entra nas dezenas ou centenas de registros, a página levará progressivamente mais tempo para carregar (e terá muito conteúdo para navegar com sensatez). A solução para esse problema é adicionar paginação às exibições de lista, reduzindo o número de itens exibidos em cada página.
+s-se você tivew apenas awguns wegistwos, OwO nyossa página da wista de wivwos ficawá bem. :3 nyo entanto, à medida q-que você entwa n-nyas dezenas ou centenas de wegistwos, >_< a página wevawá pwogwessivamente mais tempo pawa cawwegaw (e t-tewá muito conteúdo pawa nyavegaw com sensatez). σωσ a-a sowução p-pawa esse pwobwema é a-adicionaw p-paginação às exibições de wista, /(^•ω•^) weduzindo o nyúmewo de itens exibidos em cada página. mya
 
-O Django possui excelente suporte embutido para paginação. Melhor ainda, isso é incorporado às exibições de lista genéricas baseadas em classes, para que você não precise fazer muito para habilitá-lo!
+o-o django possui e-excewente supowte e-embutido pawa p-paginação. nyaa~~ mewhow ainda, isso é i-incowpowado às exibições d-de wista genéwicas baseadas em cwasses, pawa que você nyão p-pwecise fazew muito p-pawa habiwitá-wo!
 
-### Views
+### v-views
 
-Abra **catalog/views.py**, e adicionea linha `paginate_by` mostrado em negrito abaixo.
+a-abwa **catawog/views.py**, 😳 e adicionea winha `paginate_by` mostwado e-em nyegwito a-abaixo. ^^;;
 
 ```python
-class BookListView(generic.ListView):
-    model = Book
+cwass bookwistview(genewic.wistview):
+    modew = book
     paginate_by = 10
 ```
 
-Com essa adição, assim que você tiver mais de 10 registros, a visualização começará a paginar os dados que envia para o modelo. As diferentes páginas são acessadas usando os parâmetros GET - para acessar a página 2, você usaria o URL: `/catalog/books/?page=2`.
+c-com essa a-adição, 😳😳😳 assim que você tivew mais de 10 wegistwos, nyaa~~ a visuawização c-começawá a paginaw os d-dados que envia p-pawa o modewo. 🥺 as d-difewentes páginas são acessadas usando os pawâmetwos get - pawa acessaw a página 2, XD você u-usawia o uww: `/catawog/books/?page=2`. (ꈍᴗꈍ)
 
-### Templates
+### tempwates
 
-Agora que os dados estão paginados, precisamos adicionar suporte ao modelo para rolar pelo conjunto de resultados. Como podemos fazer isso em todas as visualizações de lista, faremos isso de uma maneira que possa ser adicionada ao modelo base.
+a-agowa que os dados estão paginados, 😳😳😳 pwecisamos a-adicionaw supowte ao modewo p-pawa wowaw p-pewo conjunto de w-wesuwtados. ( ͡o ω ͡o ) como p-podemos fazew i-isso em todas as visuawizações d-de wista, nyaa~~ fawemos isso de uma maneiwa que possa sew adicionada ao modewo base. XD
 
-Abra **/locallibrary/catalog/templates/_base_generic.html_** e copie no seguinte bloco de paginação, abaixo do nosso bloco de conteúdo (destacado abaixo em negrito). O código primeiro verifica se a paginação está ativada na página atual. Nesse caso, adiciona os links seguintes e anteriores, conforme apropriado (e o número da página atual).
+a-abwa **/wocawwibwawy/catawog/tempwates/_base_genewic.htmw_** e copie nyo seguinte b-bwoco de paginação, (ˆ ﻌ ˆ)♡ a-abaixo d-do nyosso bwoco de conteúdo (destacado abaixo em nyegwito). rawr x3 o código pwimeiwo v-vewifica se a paginação e-está a-ativada nya página a-atuaw. OwO nyesse caso, UwU adiciona os winks seguintes e antewiowes, confowme apwopwiado (e o nyúmewo d-da página atuaw). ^^
 
 ```django
-{% block content %}{% endblock %}
+{% bwock content %}{% endbwock %}
 
-{% block pagination %}
-  {% if is_paginated %}
-    <div class="pagination">
-      <span class="page-links">
-        {% if page_obj.has_previous %}
-          <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+{% b-bwock pagination %}
+  {% i-if is_paginated %}
+    <div c-cwass="pagination">
+      <span cwass="page-winks">
+        {% i-if page_obj.has_pwevious %}
+          <a hwef="\{{ wequest.path }}?page=\{{ page_obj.pwevious_page_numbew }}">pwevious</a>
         {% endif %}
-        <span class="page-current">
-          Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
+        <span cwass="page-cuwwent">
+          page \{{ page_obj.numbew }} of \{{ page_obj.paginatow.num_pages }}. (✿oωo)
         </span>
         {% if page_obj.has_next %}
-          <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+          <a hwef="\{{ w-wequest.path }}?page=\{{ page_obj.next_page_numbew }}">next</a>
         {% endif %}
       </span>
     </div>
-  {% endif %}
-{% endblock %}
+  {% e-endif %}
+{% e-endbwock %}
 ```
 
-O `page_obj` é um objeto de [Paginator](https://docs.djangoproject.com/pt-br/2.1/topics/pagination/#paginator-objects) que existirá se a paginação estiver sendo usada na página atual. Permite obter todas as informações sobre a página atual, as páginas anteriores, quantas páginas existem, etc.
+o `page_obj` é u-um objeto d-de [paginatow](https://docs.djangopwoject.com/pt-bw/2.1/topics/pagination/#paginatow-objects) que existiwá se a p-paginação estivew s-sendo usada nya página atuaw. 😳😳😳 pewmite obtew t-todas as infowmações s-sobwe a p-página atuaw, 🥺 a-as páginas antewiowes, ʘwʘ quantas p-páginas existem, 😳 etc.
 
-Usamos `\{{ request.path }}` para obter o URL da página atual para criar os links de paginação. Isso é útil porque é independente do objeto que estamos paginando.
+usamos `\{{ wequest.path }}` p-pawa obtew o-o uww da página atuaw pawa cwiaw o-os winks de paginação. ^^;; i-isso é útiw powque é independente do objeto que estamos paginando. (///ˬ///✿)
 
-É isso aí!
+É i-isso aí! OwO
 
-### Com o que se parece agora?
+### com o que se p-pawece agowa?
 
-A captura de tela abaixo mostra a aparência da paginação - se você não inseriu mais de 10 títulos no banco de dados, pode testá-lo com mais facilidade, abaixando o número especificado na linha `paginate_by` no seu arquivo **catalog/views.py**. Para obter o resultado abaixo, alteramos para `paginate_by = 2`.
+a captuwa de tewa a-abaixo mostwa a apawência da paginação - se v-você nyão insewiu mais de 10 títuwos nyo banco de dados, -.- pode t-testá-wo com mais faciwidade, ^^ a-abaixando o nyúmewo e-especificado n-nya winha `paginate_by` nyo seu awquivo **catawog/views.py**. (ꈍᴗꈍ) p-pawa obtew o wesuwtado a-abaixo, ^^;; a-awtewamos pawa `paginate_by = 2`.
 
-Os links de paginação são exibidos na parte inferior, com os links seguinte/anterior, dependendo da página em que você está.
+o-os winks de paginação são e-exibidos nya pawte i-infewiow, (˘ω˘) com o-os winks seguinte/antewiow, 🥺 d-dependendo d-da página em que você está. ʘwʘ
 
-![Book List Page - paginated](book_list_paginated.png)
+![book wist p-page - paginated](book_wist_paginated.png)
 
-## Challenge yourself
+## c-chawwenge youwsewf
 
-The challenge in this article is to create the author detail and list views required to complete the project. These should be made available at the following URLs:
+the chawwenge in this awticwe i-is to cweate t-the authow detaiw a-and wist views wequiwed to compwete t-the pwoject. (///ˬ///✿) t-these shouwd be made avaiwabwe a-at the fowwowing u-uwws:
 
-- `catalog/authors/` — The list of all authors.
-- `catalog/author/<id>` — The detail view for the specific author with a primary key field named `<id>`
+- `catawog/authows/` — the wist of a-aww authows. ^^;;
+- `catawog/authow/<id>` — the detaiw v-view fow the s-specific authow w-with a pwimawy k-key fiewd named `<id>`
 
-The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behaviour.
+the code wequiwed fow the uww mappews and t-the views shouwd be viwtuawwy i-identicaw to the `book` wist and d-detaiw views we c-cweated above. XD the tempwates wiww b-be diffewent b-but wiww shawe simiwaw behaviouw. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
+> [!note]
 >
-> - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#update_the_base_template) as we did when we updated the **All books** link.
-> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
+> - once you've c-cweated the uww m-mappew fow the authow wist page you wiww awso nyeed to update the **aww authows** wink in the base tempwate. (˘ω˘) fowwow the [same pwocess](#update_the_base_tempwate) as we did when we updated the **aww books** wink. σωσ
+> - o-once you've c-cweated the u-uww mappew fow the a-authow detaiw page, 😳😳😳 you shouwd awso update the [book d-detaiw view t-tempwate](#cweating_the_detaiw_view_tempwate) (**/wocawwibwawy/catawog/tempwates/catawog/book_detaiw.htmw**) s-so that the authow w-wink points to youw nyew authow detaiw page (wathew than being an empty uww). ^•ﻌ•^ t-the wine wiww c-change to add the t-tempwate tag shown i-in bowd bewow. σωσ
 >
 >   ```django
 >   <p>
->     <strong>Author:</strong>
->     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>     <stwong>authow:</stwong>
+>     <a hwef="{% uww 'authow-detaiw' b-book.authow.pk %}">\{{ book.authow }}</a>
 >   </p>
 >   ```
 
-When you are finished, your pages should look something like the screenshots below.
+when you awe finished, (///ˬ///✿) youw pages shouwd w-wook something wike the scweenshots b-bewow. XD
 
-![Author List Page](author_list_page_no_pagination.png)
+![authow w-wist page](authow_wist_page_no_pagination.png)
 
-![Author Detail Page](author_detail_page_no_pagination.png)
+![authow detaiw page](authow_detaiw_page_no_pagination.png)
 
-## Summary
+## summawy
 
-Congratulations, our basic library functionality is now complete!
+c-congwatuwations, >_< ouw basic wibwawy f-functionawity is nyow compwete! òωó
 
-In this article, we've learned how to use the generic class-based list and detail views and used them to create pages to view our books and authors. Along the way we've learned about pattern matching with regular expressions, and how you can pass data from URLs to your views. We've also learned a few more tricks for using templates. Last of all we've shown how to paginate list views so that our lists are manageable even when we have many records.
+in this a-awticwe, (U ᵕ U❁) we've weawned how to use the genewic cwass-based w-wist and detaiw views a-and used them to cweate pages to v-view ouw books a-and authows. (˘ω˘) awong the way we've weawned about pattewn matching w-with weguwaw expwessions, and how you can pass data fwom uwws to youw views. 🥺 we've awso weawned a few mowe twicks f-fow using tempwates. (✿oωo) w-wast of aww we've shown how t-to paginate wist views so that o-ouw wists awe m-manageabwe even w-when we have many wecowds. (˘ω˘)
 
-In our next articles, we'll extend this library to support user accounts, and thereby demonstrate user authentication, permissons, sessions, and forms.
+in ouw nyext awticwes, (ꈍᴗꈍ) w-we'ww extend this wibwawy to suppowt usew accounts, ( ͡o ω ͡o ) and theweby demonstwate usew a-authentication, (U ᵕ U❁) p-pewmissons, ʘwʘ s-sessions, (ˆ ﻌ ˆ)♡ and fowms.
 
-## See also
+## s-see awso
 
-- [Built-in class-based generic views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/) (Django docs)
-- [Generic display views](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-display/) (Django docs)
-- [Introduction to class-based views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/) (Django docs)
-- [Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins) (Django docs).
-- [Pagination](https://docs.djangoproject.com/en/2.1/topics/pagination/) (Django docs)
+- [buiwt-in cwass-based genewic v-views](https://docs.djangopwoject.com/en/2.1/topics/cwass-based-views/genewic-dispway/) (django docs)
+- [genewic d-dispway views](https://docs.djangopwoject.com/en/2.1/wef/cwass-based-views/genewic-dispway/) (django d-docs)
+- [intwoduction to cwass-based views](https://docs.djangopwoject.com/en/2.1/topics/cwass-based-views/intwo/) (django docs)
+- [buiwt-in t-tempwate tags a-and fiwtews](https://docs.djangopwoject.com/en/2.1/wef/tempwates/buiwtins) (django d-docs). /(^•ω•^)
+- [pagination](https://docs.djangopwoject.com/en/2.1/topics/pagination/) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/home_page", (ˆ ﻌ ˆ)♡ "weawn/sewvew-side/django/sessions", (✿oωo) "weawn/sewvew-side/django")}}

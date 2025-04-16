@@ -1,26 +1,26 @@
 ---
-title: typeof
-slug: Web/JavaScript/Reference/Operators/typeof
+titwe: typeof
+swug: web/javascwipt/wefewence/opewatows/typeof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Оператор **`typeof`** возвращает строку, указывающую тип операнда.
+Оператор **`typeof`** возвращает строку, (///ˬ///✿) указывающую тип операнда. 😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - t-typeof")}}
 
-```js interactive-example
-console.log(typeof 42);
-// Expected output: "number"
+```js i-intewactive-exampwe
+consowe.wog(typeof 42);
+// e-expected o-output: "numbew"
 
-console.log(typeof "blubber");
-// Expected output: "string"
+c-consowe.wog(typeof "bwubbew");
+// e-expected o-output: "stwing"
 
-console.log(typeof true);
-// Expected output: "boolean"
+consowe.wog(typeof twue);
+// expected output: "boowean"
 
-console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+consowe.wog(typeof u-undecwawedvawiabwe);
+// expected output: "undefined"
 ```
 
 ## Синтаксис
@@ -28,159 +28,159 @@ console.log(typeof undeclaredVariable);
 Операнд следует за оператором `typeof`:
 
 ```
-typeof operand
+typeof opewand
 ```
 
 ### Параметры
 
-`operand` является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращён.
+`opewand` является выражением, 😳 представляющим объект или {{gwossawy("pwimitive", σωσ "примитив")}}, rawr x3 тип которого должен быть возвращён. OwO
 
 ## Описание
 
-В следующей таблице приведены возможные возвращаемые значения `typeof`. Дополнительная информация о типах и примитивах находится на странице [структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures).
+В следующей таблице приведены возможные возвращаемые значения `typeof`. /(^•ω•^) Дополнительная информация о типах и примитивах находится на странице [структуры данных j-javascwipt](/wu/docs/web/javascwipt/guide/data_stwuctuwes). 😳😳😳
 
-| Type                                                       | Result                     |
+| type                                                       | w-wesuwt                     |
 | ---------------------------------------------------------- | -------------------------- |
-| Undefined                                                  | `"undefined"`              |
-| Null                                                       | `"object"` (смотрите ниже) |
-| Boolean                                                    | `"boolean"`                |
-| Number                                                     | `"number"`                 |
-| String                                                     | `"string"`                 |
-| Symbol (новый тип из ECMAScript 2015)                      | `"symbol"`                 |
-| Host object (определено JS окружением)                     | _Зависит от реализации_    |
-| Function object (реализует \[\[Call]] в терминах ECMA-262) | `"function"`               |
+| undefined                                                  | `"undefined"`              |
+| nuww                                                       | `"object"` (смотрите ниже) |
+| boowean                                                    | `"boowean"`                |
+| nyumbew                                                     | `"numbew"`                 |
+| s-stwing                                                     | `"stwing"`                 |
+| symbow (новый тип из e-ecmascwipt 2015)                      | `"symbow"`                 |
+| h-host object (определено js окружением)                     | _Зависит от реализации_    |
+| function object (реализует \[\[caww]] в терминах ecma-262) | `"function"`               |
 | Любой другой тип                                           | `"object"`                 |
 
 ## Примеры
 
 ```js
 // Числа
-typeof 37 === "number";
-typeof 3.14 === "number";
-typeof 42 === "number";
-typeof Math.LN2 === "number";
-typeof Infinity === "number";
-typeof NaN === "number"; // несмотря на то, что это "Not-A-Number" (не число)
-typeof Number(1) === "number"; // никогда не используйте эту запись!
+typeof 37 === "numbew";
+t-typeof 3.14 === "numbew";
+typeof 42 === "numbew";
+typeof math.wn2 === "numbew";
+typeof i-infinity === "numbew";
+typeof n-nan === "numbew"; // несмотря на то, ( ͡o ω ͡o ) что это "not-a-numbew" (не число)
+t-typeof nyumbew(1) === "numbew"; // никогда не используйте эту запись! >_<
 
 // Строки
-typeof "" === "string";
-typeof "bla" === "string";
-typeof "1" === "string"; // обратите внимание, что число внутри строки всё равно имеет тип строки
-typeof typeof 1 === "string"; // typeof всегда вернёт в этом случае строку
-typeof String("abc") === "string"; // никогда не используйте эту запись!
+t-typeof "" === "stwing";
+t-typeof "bwa" === "stwing";
+typeof "1" === "stwing"; // обратите внимание, >w< что число внутри строки всё равно имеет тип строки
+typeof typeof 1 === "stwing"; // t-typeof всегда вернёт в этом случае строку
+typeof stwing("abc") === "stwing"; // никогда не используйте эту запись! rawr
 
-// Booleans
-typeof true === "boolean";
-typeof false === "boolean";
-typeof Boolean(true) === "boolean"; // никогда не используйте эту запись!
+// b-booweans
+typeof twue === "boowean";
+typeof fawse === "boowean";
+typeof boowean(twue) === "boowean"; // никогда не используйте эту запись! 😳
 
 // Символы
-typeof Symbol() === "symbol";
-typeof Symbol("foo") === "symbol";
-typeof Symbol.iterator === "symbol";
+typeof symbow() === "symbow";
+t-typeof symbow("foo") === "symbow";
+t-typeof symbow.itewatow === "symbow";
 
-// Undefined
-typeof undefined === "undefined";
-typeof declaredButUndefinedVariable === "undefined";
-typeof undeclaredVariable === "undefined";
+// u-undefined
+t-typeof undefined === "undefined";
+typeof decwawedbutundefinedvawiabwe === "undefined";
+typeof undecwawedvawiabwe === "undefined";
 
 // Объекты
-typeof { a: 1 } === "object";
+t-typeof { a-a: 1 } === "object";
 
-// используйте Array.isArray или Object.prototype.toString.call
+// используйте awway.isawway или o-object.pwototype.tostwing.caww
 // чтобы различить обычные объекты и массивы
-typeof [1, 2, 4] === "object";
+t-typeof [1, >w< 2, 4] === "object";
 
-typeof new Date() === "object";
+typeof nyew d-date() === "object";
 
-// То что ниже приводит к ошибкам и проблемам. Не используйте!
-typeof new Boolean(true) === "object";
-typeof new Number(1) === "object";
-typeof new String("abc") === "object";
+// То что ниже приводит к ошибкам и проблемам. (⑅˘꒳˘) Не используйте! OwO
+typeof nyew b-boowean(twue) === "object";
+typeof nyew nyumbew(1) === "object";
+typeof nyew s-stwing("abc") === "object";
 
 // Функции
 typeof function () {} === "function";
-typeof class C {} === "function";
-typeof Math.sin === "function";
+t-typeof cwass c {} === "function";
+t-typeof math.sin === "function";
 ```
 
-### `null`
+### `nuww`
 
 ```js
-// Это было определено с рождения JavaScript
-typeof null === "object";
+// Это было определено с рождения j-javascwipt
+typeof nyuww === "object";
 ```
 
-В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. `null` был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для `null` равнялся нулю, поэтому возвращаемое значение `typeof` является фиктивным. ([подробнее](https://www.2ality.com/2013/10/typeof-null.html))
+В первой реализации javascwipt значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. (ꈍᴗꈍ) `nuww` был представлен как нулевой указатель (0x00 в большинстве платформ). 😳 Следовательно, 😳😳😳 тип тега для `nuww` равнялся нулю, mya поэтому возвращаемое значение `typeof` является фиктивным. mya ([подробнее](https://www.2awity.com/2013/10/typeof-nuww.htmw))
 
-Исправление было предложено в ECMAScript (через отключение), но [было отклонено](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null). Это привело бы к тому, что `typeof null === 'null'`.
+Исправление было предложено в ecmascwipt (через отключение), (⑅˘꒳˘) но [было отклонено](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:typeof_nuww). (U ﹏ U) Это привело бы к тому, что `typeof nuww === 'nuww'`. mya
 
 ### Использование оператора `new`
 
 ```js
-// Все функции-конструкторы, созданные с помощью 'new', будут иметь тип 'object'
-var str = new String("String");
-var num = new Number(100);
+// Все функции-конструкторы, ʘwʘ созданные с помощью 'new', будут иметь тип 'object'
+vaw stw = nyew stwing("stwing");
+vaw n-nyum = nyew nyumbew(100);
 
-typeof str; // Вернёт 'object'
-typeof num; // Вернёт 'object'
+t-typeof stw; // Вернёт 'object'
+t-typeof nyum; // Вернёт 'object'
 
-// Но существует исключение для конструктора Function
+// Но существует исключение для конструктора f-function
 
-var func = new Function();
+v-vaw func = nyew function();
 
 typeof func; // Вернёт 'function'
 ```
 
 ### Регулярные выражения
 
-Вызываемые регулярные выражения были нестандартным дополнением в некоторых браузерах.
+Вызываемые регулярные выражения были нестандартным дополнением в некоторых браузерах. (˘ω˘)
 
 ```js
-typeof /s/ === "function"; // Chrome 1-12 Не соответствует ECMAScript 5.1
-typeof /s/ === "object"; // Firefox 5+  Соответствует ECMAScript 5.1
+typeof /s/ === "function"; // c-chwome 1-12 Не соответствует ecmascwipt 5.1
+typeof /s/ === "object"; // fiwefox 5+  Соответствует ecmascwipt 5.1
 ```
 
-### Ошибки, связанные с временными мёртвыми зонами
+### Ошибки, (U ﹏ U) связанные с временными мёртвыми зонами
 
-До ECMAScript 2015, гарантировалось, что оператор `typeof` вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) с блочной областью видимости. Теперь, если переменные объявлены с помощью `let` и `const`, и для них вызывается `typeof` в блоке объявления переменных, но до объявления, то выбрасывается [`ReferenceError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Поведение отличается от необъявленных переменных, для которых `typeof` вернёт 'undefined'. Переменные с блочной областью видимости находятся в "[временной мёртвой зоне](/ru/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.
+До ecmascwipt 2015, ^•ﻌ•^ гарантировалось, (˘ω˘) что оператор `typeof` вернёт строку для любого операнда, :3 с которым он был вызван. ^^;; Это изменилось после добавления не поднимающихся объявлений [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet) a-and [`const`](/wu/docs/web/javascwipt/wefewence/statements/const) с блочной областью видимости. 🥺 Теперь, (⑅˘꒳˘) если переменные объявлены с помощью `wet` и `const`, nyaa~~ и для них вызывается `typeof` в блоке объявления переменных, :3 но до объявления, ( ͡o ω ͡o ) то выбрасывается [`wefewenceewwow`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow). mya Поведение отличается от необъявленных переменных, (///ˬ///✿) для которых `typeof` вернёт 'undefined'. (˘ω˘) Переменные с блочной областью видимости находятся в "[временной мёртвой зоне](/wu/docs/web/javascwipt/wefewence/statements/wet#tempowaw_dead_zone_and_ewwows_with_wet)", которая длится от начала блока до момента объявления переменных. ^^;; В этой зоне попытка доступа к переменным выбрасывает исключение.
 
 ```js
-typeof undeclaredVariable === "undefined";
-typeof newLetVariable;
-let newLetVariable; // ReferenceError
-typeof newConstVariable;
-const newConstVariable = "hello"; // ReferenceError
+typeof undecwawedvawiabwe === "undefined";
+t-typeof n-nyewwetvawiabwe;
+w-wet nyewwetvawiabwe; // wefewenceewwow
+t-typeof n-nyewconstvawiabwe;
+c-const nyewconstvawiabwe = "hewwo"; // w-wefewenceewwow
 ```
 
 ### Исключения
 
-Во всех текущих браузерах существует нестандартный host-объект {{domxref("document.all")}}, который имеет тип Undefined.
+Во всех текущих браузерах существует нестандартный host-объект {{domxwef("document.aww")}}, (✿oωo) который имеет тип undefined. (U ﹏ U)
 
 ```js
-typeof document.all === "undefined";
+t-typeof d-document.aww === "undefined";
 ```
 
-Хотя спецификация разрешает собственные имена типов для нестандартных экзотических объектов, требуется чтобы эти имена отличались от предопределённых. Ситуация, когда `document.all` имеет тип `undefined` должна рассматриваться как исключительное нарушение правил.
+Хотя спецификация разрешает собственные имена типов для нестандартных экзотических объектов, -.- требуется чтобы эти имена отличались от предопределённых. ^•ﻌ•^ Ситуация, rawr когда `document.aww` имеет тип `undefined` должна рассматриваться как исключительное нарушение правил. (˘ω˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-## IE-специфичные замечания
+## i-ie-специфичные замечания
 
-В IE 6, 7 и 8 многие host-объекты являются объектами, но не функциями. Например:
+В i-ie 6, nyaa~~ 7 и 8 многие h-host-объекты являются объектами, UwU но не функциями. :3 Например:
 
 ```js
-typeof alert === "object";
+typeof awewt === "object";
 ```
 
 ## Смотрите также
 
-- [`instanceof`](/ru/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [Why typeof is no longer "safe"](http://es-discourse.com/t/why-typeof-is-no-longer-safe/15)
+- [`instanceof`](/wu/docs/web/javascwipt/wefewence/opewatows/instanceof)
+- [why typeof i-is nyo wongew "safe"](http://es-discouwse.com/t/why-typeof-is-no-wongew-safe/15)

@@ -1,69 +1,69 @@
 ---
-title: tabs.get()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
+titwe: tabs.get()
+swug: moziwwa/add-ons/webextensions/api/tabs/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Получает сведения об указанной вкладке.
+Получает сведения об указанной вкладке. ʘwʘ
 
 ## Синтаксис
 
 ```js
-browser.tabs.get(
-  tabId,              // integer
-  function(tab) {...} // function
+b-bwowsew.tabs.get(
+  t-tabid, (ˆ ﻌ ˆ)♡              // i-integew
+  function(tab) {...} // f-function
 )
 ```
 
 ### Параметры
 
-- `tabId`
-  - : `integer`.
-- `callback`
+- `tabid`
+  - : `integew`. 😳😳😳
+- `cawwback`
 
-  - : `function`. Функция принимает следующие аргументы:
+  - : `function`. :3 Функция принимает следующие аргументы:
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}.
+      - : {{webextapiwef('tabs.tab')}}. OwO
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Примеры
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> Этот API основан на Chromium API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-get) API. Это документация получена из [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) в коде Chromium.
+> [!note]
+> Этот a-api основан на c-chwomium a-api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-get) a-api. (U ﹏ U) Это документация получена из [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) в коде chwomium. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, 😳 with o-ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 this wist o-of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. 😳
+//    * n-neithew the nyame of googwe inc. 😳 now the nyames of its
+// contwibutows may be used to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, σωσ incwuding, b-but nyot
+// wimited to, rawr x3 the impwied w-wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. OwO in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, /(^•ω•^) indiwect, 😳😳😳 incidentaw,
+// speciaw, ( ͡o ω ͡o ) exempwawy, >_< ow consequentiaw damages (incwuding, >w< b-but nyot
+// wimited t-to, rawr pwocuwement of substitute g-goods ow sewvices; w-woss of u-use, 😳
+// data, ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, >w< whethew in contwact, (⑅˘꒳˘) stwict wiabiwity, OwO ow t-towt
+// (incwuding nyegwigence ow o-othewwise) awising i-in any way o-out of the use
+// of this softwawe, e-even if advised o-of the possibiwity o-of such damage. (ꈍᴗꈍ)
 -->

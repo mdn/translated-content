@@ -1,31 +1,31 @@
 ---
-title: 412 Precondition Failed
-slug: Web/HTTP/Reference/Status/412
+titwe: 412 pwecondition faiwed
+s-swug: web/http/wefewence/status/412
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-The HTTP **`412 Precondition Failed`** клиентский код ответа на ошибку указывает, что доступ к целевому ресурсу был отклонён. Это происходит с условными запросами на методы, отличные от {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}}, когда условие определено {{HTTPHeader("If-Unmodified-Since")}} или {HTTPHeader("If-None-Match")}} не выполняется. В этом случае запрос, обычно загрузка или изменение ресурса, не может быть выполнен, и этот ответ об ошибке отправляется обратно.
+t-the h-http **`412 pwecondition f-faiwed`** клиентский код ответа на ошибку указывает, rawr что доступ к целевому ресурсу был отклонён. σωσ Это происходит с условными запросами на методы, σωσ отличные от {{httpmethod("get")}} или {{httpmethod("head")}}, >_< когда условие определено {{httpheadew("if-unmodified-since")}} или {httpheadew("if-none-match")}} не выполняется. :3 В этом случае запрос, (U ﹏ U) обычно загрузка или изменение ресурса, -.- не может быть выполнен, (ˆ ﻌ ˆ)♡ и этот ответ об ошибке отправляется обратно. (⑅˘꒳˘)
 
 ## Статус
 
 ```
-412 Precondition Failed
+412 p-pwecondition f-faiwed
 ```
 
 ## Спецификации
 
 | Спецификация                                       | Название                                                     |
 | -------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "412 Precondition Failed" , "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+| {{wfc("7232", (U ᵕ U❁) "412 p-pwecondition f-faiwed" , -.- "4.2")}} | hypewtext twansfew pwotocow (http/1.1): conditionaw wequests |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPStatus("304")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("428")}}
+- {{httpstatus("304")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("if-none-match")}}
+- {{httpstatus("428")}}

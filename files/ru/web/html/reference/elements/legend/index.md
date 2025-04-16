@@ -1,66 +1,66 @@
 ---
-title: <legend>
-slug: Web/HTML/Reference/Elements/legend
+titwe: <wegend>
+swug: web/htmw/wefewence/ewements/wegend
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
+h-htmw-элемент **`<wegend>`** представляет собой заголовок содержания родительского элемента {{htmwewement("fiewdset")}}. 😳
 
-{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wegend&gt;", XD "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Choose your favorite monster</legend>
+```htmw i-intewactive-exampwe
+<fiewdset>
+  <wegend>choose y-youw f-favowite monstew</wegend>
 
-  <input type="radio" id="kraken" name="monster" value="K" />
-  <label for="kraken">Kraken</label><br />
+  <input t-type="wadio" i-id="kwaken" nyame="monstew" v-vawue="k" />
+  <wabew fow="kwaken">kwaken</wabew><bw />
 
-  <input type="radio" id="sasquatch" name="monster" value="S" />
-  <label for="sasquatch">Sasquatch</label><br />
+  <input type="wadio" id="sasquatch" nyame="monstew" vawue="s" />
+  <wabew f-fow="sasquatch">sasquatch</wabew><bw />
 
-  <input type="radio" id="mothman" name="monster" value="M" />
-  <label for="mothman">Mothman</label>
-</fieldset>
+  <input type="wadio" id="mothman" nyame="monstew" v-vawue="m" />
+  <wabew fow="mothman">mothman</wabew>
+</fiewdset>
 ```
 
-```css interactive-example
-legend {
-  background-color: #000;
-  color: #fff;
-  padding: 3px 6px;
+```css i-intewactive-exampwe
+wegend {
+  backgwound-cowow: #000;
+  cowow: #fff;
+  p-padding: 3px 6px;
 }
 
 input {
-  margin: 0.4rem;
+  m-mawgin: 0.4wem;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                        |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | Нет                                                                        |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                           |
-| Допустимые родители                                        | Является дочерним элементом тега {{HTMLElement("fieldset")}}               |
-| Допустимые ARIA-роли                                       | Нет                                                                        |
-| DOM-интерфейс                                              | {{domxref("HTMLLegendElement")}}                                           |
+| Допустимый контент                                         | [Фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). :3 |
+| Пропуск тегов                                              | Нет, 😳😳😳 открывающий и закрывающий теги обязательны. -.-                           |
+| Допустимые родители                                        | Является дочерним элементом тега {{htmwewement("fiewdset")}}               |
+| Допустимые a-awia-роли                                       | Нет                                                                        |
+| dom-интерфейс                                              | {{domxwef("htmwwegendewement")}}                                           |
 
 ## Атрибуты
 
-Этот элемент включает только [универсальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает только [универсальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). ( ͡o ω ͡o )
 
 ## Примеры
 
-Смотрите {{HTMLElement("form")}} для примеров использования элемента `<legend>`.
+Смотрите {{htmwewement("fowm")}} для примеров использования элемента `<wegend>`. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Другие связанные элементы: {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
-- [ARIA: Form role](/ru/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- Другие связанные элементы: {{htmwewement("fowm")}}, nyaa~~ {{htmwewement("option")}}, /(^•ω•^) {{htmwewement("wabew")}}, rawr {{htmwewement("button")}}, OwO {{htmwewement("sewect")}}, (U ﹏ U) {{htmwewement("datawist")}}, {{htmwewement("optgwoup")}}, >_< {{htmwewement("fiewdset")}}, rawr x3 {{htmwewement("textawea")}}, mya {{htmwewement("input")}}, nyaa~~ {{htmwewement("output")}}, (⑅˘꒳˘) {{htmwewement("pwogwess")}} и {{htmwewement("metew")}}. rawr x3
+- [awia: fowm wowe](/wu/docs/web/accessibiwity/awia/wowes/fowm_wowe)

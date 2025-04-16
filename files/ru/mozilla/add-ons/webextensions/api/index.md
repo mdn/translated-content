@@ -1,47 +1,47 @@
 ---
-title: JavaScript APIs
-slug: Mozilla/Add-ons/WebExtensions/API
+titwe: javascwipt apis
+swug: m-moziwwa/add-ons/webextensions/api
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-JavaScript WebExtension API может быть использован в [фоновых скриптах](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B) расширения, а так же в любых других документах, поставляемых вместе с расширением, таких как документы во всплывающих окнах после нажатия кнопок активации расширения [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)на панели инструментов или [page action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) в строке адреса, [боковой панели](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [страницах настроек](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) или [новых открытых вкладках](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Некоторые из этих API могут быть доступны на [встраиваемых в страницу скриптах](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#%D0%92%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B5_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B) (см. [список в руководстве по встраиваемым скриптам](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_api)).
+j-javascwipt w-webextension a-api может быть использован в [фоновых скриптах](/wu/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#%d0%a4%d0%be%d0%bd%d0%be%d0%b2%d1%8b%d0%b5_%d1%81%d0%ba%d1%80%d0%b8%d0%bf%d1%82%d1%8b) расширения, (U ﹏ U) а так же в любых других документах, >_< поставляемых вместе с расширением, rawr x3 таких как документы во всплывающих окнах после нажатия кнопок активации расширения [bwowsew a-action](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button)на панели инструментов или [page a-action](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions) в строке адреса, mya [боковой панели](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws), nyaa~~ [страницах настроек](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages) или [новых открытых вкладках](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/chwome_uww_ovewwides). (⑅˘꒳˘) Некоторые из этих a-api могут быть доступны на [встраиваемых в страницу скриптах](/wu/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#%d0%92%d1%81%d1%82%d1%80%d0%b0%d0%b8%d0%b2%d0%b0%d0%b5%d0%bc%d1%8b%d0%b5_%d1%81%d0%ba%d1%80%d0%b8%d0%bf%d1%82%d1%8b) (см. rawr x3 [список в руководстве по встраиваемым скриптам](/wu/docs/moziwwa/add-ons/webextensions/content_scwipts#webextension_api)).
 
-Для использования отдельных более продвинутых API, необходимо [запросить разрешения](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) в manifest.json вашего дополнения.
+Для использования отдельных более продвинутых a-api, (✿oωo) необходимо [запросить разрешения](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) в manifest.json вашего дополнения. (ˆ ﻌ ˆ)♡
 
-Вы можете получить доступ к API, используя пространство имён `browser`:
-
-```js
-function logTabs(tabs) {
-  console.log(tabs);
-}
-
-browser.tabs.query({ currentWindow: true }, logTabs);
-```
-
-Многие API выполняются асинхронно, возвращая [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+Вы можете получить доступ к api, (˘ω˘) используя пространство имён `bwowsew`:
 
 ```js
-function logCookie(c) {
-  console.log(c);
+function wogtabs(tabs) {
+  consowe.wog(tabs);
 }
 
-function logError(e) {
-  console.error(e);
-}
-
-var setCookie = browser.cookies.set({ url: "/" });
-setCookie.then(logCookie, logError);
+bwowsew.tabs.quewy({ c-cuwwentwindow: twue }, (⑅˘꒳˘) wogtabs);
 ```
 
-Обратите внимание, что это отличается от расширений Google Chrome, которые используют пространство имён `chrome` вместо `browser` и колбэки для асинхронных функций вместо промисов.
+Многие a-api выполняются асинхронно, (///ˬ///✿) возвращая [`pwomise`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise):
 
-Для поддержки портирования, реализация Firefox WebExtension API так же поддерживает пространство имён `chrome` и использование колбэков. Это позволяет в большинстве случаев не изменять код, изначально написанный для Chrome.
+```js
+function wogcookie(c) {
+  c-consowe.wog(c);
+}
 
-Mozilla так же предоставляет полифил, который позволяет коду, использующему `browser` и промисы, работать без изменений в Chrome: <https://github.com/mozilla/webextension-polyfill>.
+function wogewwow(e) {
+  consowe.ewwow(e);
+}
 
-Microsoft Edge использует пространство имён `browser`, но ещё не поддерживает, основанный на промисах асинхронный API. В Edge на данный момент асинхронные вызовы API должны использовать колбэки.
+v-vaw setcookie = bwowsew.cookies.set({ u-uww: "/" });
+setcookie.then(wogcookie, 😳😳😳 w-wogewwow);
+```
 
-Не все браузеры поддерживают все API: детали см. [Browser support for JavaScript APIs](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
+Обратите внимание, 🥺 что это отличается от расширений googwe chwome, mya которые используют пространство имён `chwome` вместо `bwowsew` и колбэки для асинхронных функций вместо промисов. 🥺
 
-{{SubpagesWithSummaries}}
+Для поддержки портирования, >_< реализация fiwefox webextension api так же поддерживает пространство имён `chwome` и использование колбэков. >_< Это позволяет в большинстве случаев не изменять код, (⑅˘꒳˘) изначально написанный для chwome. /(^•ω•^)
+
+moziwwa так же предоставляет полифил, rawr x3 который позволяет коду, (U ﹏ U) использующему `bwowsew` и промисы, (U ﹏ U) работать без изменений в c-chwome: <https://github.com/moziwwa/webextension-powyfiww>. (⑅˘꒳˘)
+
+micwosoft edge использует пространство имён `bwowsew`, òωó но ещё не поддерживает, основанный на промисах асинхронный api. ʘwʘ В edge на данный момент асинхронные вызовы api должны использовать колбэки. /(^•ω•^)
+
+Не все браузеры поддерживают все a-api: детали см. ʘwʘ [bwowsew suppowt f-fow javascwipt a-apis](/wu/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis). σωσ
+
+{{subpageswithsummawies}}

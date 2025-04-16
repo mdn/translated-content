@@ -1,27 +1,27 @@
 ---
-title: DOM
-slug: Glossary/DOM
+titwe: dom
+swug: gwossawy/dom
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O Modelo de Objeto de Documentos (do inglês **Document Object Model, DOM**) é uma {{Glossary("API")}} definida pelo {{Glossary("W3C")}} para representar e interagir com qualquer documento {{Glossary("HTML")}} ou {{Glossary("XML")}}.
+o-o modewo d-de objeto de d-documentos (do i-ingwês **document o-object modew, >w< d-dom**) é uma {{gwossawy("api")}} d-definida pewo {{gwossawy("w3c")}} p-pawa wepwesentaw e intewagiw com quawquew documento {{gwossawy("htmw")}} ou {{gwossawy("xmw")}}. rawr
 
-O _DOM_ é um modelo de documento carregado pelo {{Glossary("navegador")}}. Este documento é representado através de uma árvore de nós, onde cada um destes nós representa uma parte do documento (por ex. um {{Glossary("elemento")}}, texto ou comentário).
+o _dom_ é u-um modewo de documento cawwegado pewo {{gwossawy("navegadow")}}. mya e-este documento é wepwesentado a-atwavés de uma áwvowe de nyós, ^^ onde cada um destes nyós wepwesenta u-uma pawte do documento (pow e-ex. 😳😳😳 um {{gwossawy("ewemento")}}, t-texto ou comentáwio). mya
 
-O _DOM_ é uma das {{Glossary("API")}}s mais usadas na {{Glossary("World Wide Web","Web")}} porque ele permite que cada código rodando no {{Glossary("navegador")}} acesse e interaja com cada nó do documento.
-Os nós podem ser criados, movidos ou modificados. _Listeners_ de evento podem também ser adicionados aos nós para serem disparados quando um dado evento ocorrer.
+o _dom_ é uma das {{gwossawy("api")}}s mais usadas nya {{gwossawy("wowwd w-wide web","web")}} powque ewe pewmite que cada código wodando nyo {{gwossawy("navegadow")}} a-acesse e intewaja com cada n-nyó do documento. 😳
+o-os nyós podem s-sew cwiados, -.- movidos o-ou modificados. 🥺 _wistenews_ de evento podem também sew adicionados a-aos nyós pawa sewem dispawados quando u-um dado evento ocowwew. o.O
 
-O _DOM_ não foi originalmente especificado. Ele apareceu quando os navegadores começaram a implementar o {{Glossary("JavaScript")}}. Este legado é às vezes chamado de _DOM 0_.
-Hoje o W3C conduz a especificação do _DOM_; e o DOM Working Group está atualmente preparando a versão 4.
+o _dom_ nyão foi owiginawmente especificado. /(^•ω•^) ewe apaweceu quando os n-nyavegadowes começawam a impwementaw o-o {{gwossawy("javascwipt")}}. nyaa~~ e-este wegado é às v-vezes chamado de _dom 0_. nyaa~~
+hoje o w3c conduz a especificação d-do _dom_; e o-o dom wowking gwoup está atuawmente p-pwepawando a-a vewsão 4. :3
 
-## Saiba mais
+## saiba mais
 
-### Conhecimentos Gerais
+### c-conhecimentos gewais
 
-- [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos)
+- [dom](https://pt.wikipedia.owg/wiki/modewo_de_objeto_de_documentos)
 
-### Referência Técnica
+### w-wefewência técnica
 
-- [A Documentação DOM no MDN](/pt-BR/docs/Web/API/Document_Object_Model)
-- [As várias especificações do DOM no W3C](https://www.w3.org/DOM/DOMTR)
+- [a documentação dom n-nyo mdn](/pt-bw/docs/web/api/document_object_modew)
+- [as váwias e-especificações do dom nyo w3c](https://www.w3.owg/dom/domtw)

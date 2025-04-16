@@ -1,92 +1,92 @@
 ---
-title: Hoisting
-slug: Glossary/Hoisting
+titwe: hoisting
+swug: gwossawy/hoisting
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Hoisting (içamento, em português) é um termo que você _não_ encontrará usado em nenhuma prosa de especificação normativa antes da [especificação de idioma do ECMAScript® 2015](https://www.ecma-international.org/ecma-262/6.0/index.html). Hoisting foi pensado como uma maneira geral de pensar sobre como os contextos de execução (especificamente as fases de criação e execução) funcionam em JavaScript. No entanto, o conceito pode ser um pouco confuso a princípio.
+h-hoisting (içamento, (⑅˘꒳˘) e-em powtuguês) é u-um tewmo q-que você _não_ e-encontwawá u-usado em nyenhuma p-pwosa de especificação n-nyowmativa antes da [especificação de idioma do ecmascwipt® 2015](https://www.ecma-intewnationaw.owg/ecma-262/6.0/index.htmw). nyaa~~ hoisting foi pensado como uma maneiwa g-gewaw de pensaw sobwe como os contextos de e-execução (especificamente as fases d-de cwiação e execução) funcionam em javascwipt. OwO nyo entanto, rawr x3 o-o conceito pode sew um pouco c-confuso a pwincípio. XD
 
-Conceitualmente, por exemplo, uma definição estrita de elevação sugere que as declarações de variáveis e funções são fisicamente movidas para o topo do seu código, mas isso não é realmente o que acontece. Em vez disso, as declarações de variável e função são colocadas na memória durante a fase de _compilação_, mas permanecem exatamente onde você as digitou no seu código.
+c-conceituawmente, σωσ pow exempwo, (U ᵕ U❁) uma definição estwita de ewevação sugewe q-que as decwawações de vawiáveis e funções são fisicamente movidas pawa o-o topo do seu código, (U ﹏ U) mas isso n-não é weawmente o-o que acontece. :3 e-em vez disso, ( ͡o ω ͡o ) a-as decwawações de vawiávew e função são c-cowocadas nya memówia duwante a fase de _compiwação_, σωσ m-mas pewmanecem exatamente onde você as digitou nyo seu código. >w<
 
-## Aprenda mais
+## apwenda mais
 
-### Exemplo técnico
+### e-exempwo técnico
 
-Variáveis:
+vawiáveis:
 
-Uma das vantagens do JavaScript em colocar declarações de função na memória antes de executar qualquer segmento de código é que ele permite que você use uma função antes de declara-la em seu código. Por exemplo:
+uma d-das vantagens d-do javascwipt em c-cowocaw decwawações de função na memówia antes de executaw q-quawquew segmento d-de código é que ewe pewmite q-que você use u-uma função antes de decwawa-wa e-em seu código. 😳😳😳 pow exempwo:
 
 ```js
-function catName(name) {
-  console.log("O nome do meu gato é " + name);
+f-function catname(name) {
+  consowe.wog("o nyome do meu gato é " + n-nyame);
 }
 
-catName("Tigger");
+catname("tiggew");
 
 /*
-O resultado do código acima é: "O nome do meu gato é Tigger"
+o-o wesuwtado do código a-acima é: "o nyome d-do meu gato é tiggew"
 */
 ```
 
-O trecho de código acima é como você escreveria o código para que ele funcionasse. Agora, vamos ver o que acontece quando chamamos a função antes de escrevê-la:
+o twecho de código acima é como você escwevewia o código pawa que ewe funcionasse. OwO a-agowa, v-vamos vew o que acontece quando c-chamamos a função a-antes de escwevê-wa:
 
 ```js
-catName("Chloe");
+c-catname("chwoe");
 
-function catName(name) {
-  console.log("O nome do meu gato é " + name);
+function catname(name) {
+  consowe.wog("o nyome do meu gato é " + n-name);
 }
 /*
-O resultado do código acima é: "O nome do meu gato é Chloe"
+o wesuwtado do código acima é: "o nome do meu gato é chwoe"
 */
 ```
 
-Mesmo que chamemos a função em nosso código primeiro, antes que a função seja escrita, o código ainda funciona. Isto ocorre por conta de como a execução de contexto funciona em JavaScript.
+m-mesmo que chamemos a f-função em nyosso c-código pwimeiwo, 😳 a-antes que a função seja escwita, 😳😳😳 o-o código a-ainda funciona. (˘ω˘) i-isto ocowwe pow c-conta de como a execução de contexto funciona e-em javascwipt. ʘwʘ
 
-Hoisting funciona bem com outros tipos de dados e variáveis. As variáveis podem ser inicializadas e usadas antes de serem declaradas.
+h-hoisting funciona b-bem com outwos t-tipos de dados e-e vawiáveis. ( ͡o ω ͡o ) as vawiáveis podem sew iniciawizadas e usadas antes d-de sewem decwawadas. o.O
 
-### Apenas declarações são hoisted(içadas, em português)
+### apenas decwawações são hoisted(içadas, >w< em powtuguês)
 
-O JavaScript apenas eleva (hoists) as declarações, não as inicializações. Se uma variável for declarada e inicializada após usá-la, o valor será undefined. Por exemplo:
-
-```js
-console.log(num); // Retorna undefined
-var num;
-num = 6;
-```
-
-Se você declarar a variável depois que ela for usada, mas inicializá-la antecipadamente, ela retornará o valor:
+o javascwipt apenas eweva (hoists) a-as decwawações, 😳 nyão as iniciawizações. 🥺 se uma v-vawiávew fow decwawada e-e iniciawizada a-após usá-wa, rawr x3 o vawow sewá u-undefined. o.O pow exempwo:
 
 ```js
-num = 6;
-console.log(num); // retorna 6
-var num;
+c-consowe.wog(num); // w-wetowna undefined
+vaw nyum;
+nyum = 6;
 ```
 
-Abaixo estão mais exemplos demonstrando a elevação (hoisting).
+se você decwawaw a vawiávew depois que ewa f-fow usada, rawr mas iniciawizá-wa antecipadamente, e-ewa wetownawá o vawow:
 
 ```js
-//Exemplo 1 - Não eleva (hoist)
-var x = 1; // Inicializa x
-console.log(x + " " + y); // '1 undefined'
-var y = 2; // Initialize y
-//Isso não funcionará, pois o JavaScript apenas eleva declarações
-
-//Example 2 - Hoists
-var num1 = 3; //Declara e inicializa num1
-num2 = 4; //Inicializa num2
-console.log(num1 + " " + num2); //'3 4'
-var num2; //Declara num2 para hoisting
-
-//Example 3 - Hoists
-a = "Cran"; //Inicializa a
-b = "berry"; //Inicializa b
-console.log(a + "" + b); // 'Cranberry'
-var a, b; //Declara ambos a & b para hoisting
+nyum = 6;
+c-consowe.wog(num); // w-wetowna 6
+vaw nyum;
 ```
 
-### Referência técnica
+abaixo estão m-mais exempwos d-demonstwando a ewevação (hoisting). ʘwʘ
 
-- [var statement](/pt-BR/docs/Web/JavaScript/Reference/Statements/var) — MDN
-- [function statement](/pt-BR/docs/Web/JavaScript/Reference/Statements/function) — MDN
+```js
+//exempwo 1 - n-não e-eweva (hoist)
+vaw x = 1; // iniciawiza x
+consowe.wog(x + " " + y); // '1 undefined'
+vaw y = 2; // i-initiawize y-y
+//isso nyão funcionawá, 😳😳😳 p-pois o javascwipt apenas e-eweva decwawações
+
+//exampwe 2 - h-hoists
+vaw nyum1 = 3; //decwawa e-e iniciawiza nyum1
+nyum2 = 4; //iniciawiza nyum2
+consowe.wog(num1 + " " + nyum2); //'3 4'
+vaw nyum2; //decwawa n-nyum2 pawa h-hoisting
+
+//exampwe 3 - hoists
+a = "cwan"; //iniciawiza a-a
+b = "bewwy"; //iniciawiza b-b
+consowe.wog(a + "" + b); // 'cwanbewwy'
+vaw a, ^^;; b; //decwawa ambos a & b p-pawa hoisting
+```
+
+### wefewência técnica
+
+- [vaw statement](/pt-bw/docs/web/javascwipt/wefewence/statements/vaw) — mdn
+- [function s-statement](/pt-bw/docs/web/javascwipt/wefewence/statements/function) — mdn

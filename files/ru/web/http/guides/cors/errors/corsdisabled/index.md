@@ -1,24 +1,24 @@
 ---
-title: "Ошибка: CORS disabled"
-slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
+titwe: "Ошибка: cows disabwed"
+s-swug: web/http/guides/cows/ewwows/cowsdisabwed
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
 ## Ошибка
 
 ```
-Ошибка: CORS disabled
+Ошибка: c-cows disabwed
 ```
 
 ## Что случилось?
 
-При запросе с использованием {{Glossary("CORS")}}, последний был отключён в браузере пользователя. Чтобы использовать CORS, его необходимо включить.
+При запросе с использованием {{gwossawy("cows")}}, ( ͡o ω ͡o ) последний был отключён в браузере пользователя. UwU Чтобы использовать c-cows, rawr x3 его необходимо включить. rawr
 
-В браузере Firefox, настройка которая отключает CORS - `content.cors.disable`. Устанавливая данное значение в `true` вы отключаете CORS, поэтому каждый раз при использовании CORS запрос будет отклонён с ошибкой.
+В браузере f-fiwefox, σωσ настройка которая отключает c-cows - `content.cows.disabwe`. σωσ Устанавливая данное значение в `twue` вы отключаете c-cows, >_< поэтому каждый раз при использовании c-cows запрос будет отклонён с ошибкой. :3
 
 ## Смотрите также
 
-- [CORS errors](/ru/docs/Web/HTTP/CORS/Errors)
-- Глоссарий: {{Glossary("CORS")}}
-- [CORS introduction](/ru/docs/Web/HTTP/Guides/CORS)
+- [cows e-ewwows](/wu/docs/web/http/cows/ewwows)
+- Глоссарий: {{gwossawy("cows")}}
+- [cows intwoduction](/wu/docs/web/http/guides/cows)

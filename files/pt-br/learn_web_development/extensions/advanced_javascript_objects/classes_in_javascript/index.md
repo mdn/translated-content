@@ -1,448 +1,448 @@
 ---
-title: Herança em JavaScript
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
+titwe: hewança em javascwipt
+s-swug: weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt
+o-owiginaw_swug: w-weawn/javascwipt/objects/cwasses_in_javascwipt
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/object_pwototypes", >w< "weawn/javascwipt/objects/json", ʘwʘ "weawn/javascwipt/objects")}}
 
-Com a maior parte dos detalhes principais do OOJS agora explicados, este artigo mostra como criar classes de objetos "child" (construtores) que herdam recursos de suas classes "parent". Além disso, apresentamos alguns conselhos sobre quando e onde você pode usar o OOJS e veja como as classes são tratadas na sintaxe moderna do ECMAScript.
+c-com a-a maiow pawte d-dos detawhes pwincipais d-do oojs a-agowa expwicados, :3 este awtigo mostwa como cwiaw cwasses de objetos "chiwd" (constwutowes) que hewdam w-wecuwsos de suas cwasses "pawent". ^•ﻌ•^ awém disso, (ˆ ﻌ ˆ)♡ a-apwesentamos awguns consewhos s-sobwe quando e onde você pode usaw o oojs e veja como as cwasses s-são twatadas nya sintaxe modewna d-do ecmascwipt.
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico de computação, conhecimento básico de HTML e CSS,
-        familiaridade com com o básico de Javascript (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
-        e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
-          >Construindo blocos</a
-        >) e OOJS básico (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
-          >Introdução a objetos</a
-        >).
+        conhecimento básico de computação, 🥺 conhecimento b-básico de htmw e css, OwO
+        famiwiawidade com com o básico de javascwipt (veja
+        <a h-hwef="/pt-bw/docs/weawn/javascwipt/fiwst_steps">pwimeiwos passos</a>
+        e-e
+        <a hwef="/pt-bw/docs/weawn/javascwipt/buiwding_bwocks"
+          >constwuindo b-bwocos</a
+        >) e-e oojs b-básico (veja
+        <a hwef="/pt-bw/docs/weawn/javascwipt/object-owiented/intwoduction"
+          >intwodução a objetos</a
+        >). 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Entender como é possível implementar a herança em Javascript.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
+      <td>entendew como é possívew impwementaw a-a hewança em javascwipt.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Herança Prototipada
+## hewança pwototipada
 
-Até agora vimos alguma herança em ação — vimos como funcionam as cadeias de protótipos e como os membros são herdados subindo em uma cadeia. Mas principalmente isso envolveu funções internas do navegador. Como criamos um objeto em JavaScript que herda de outro objeto?
+até agowa vimos awguma hewança em ação — v-vimos como funcionam as c-cadeias de pwotótipos e-e como o-os membwos são hewdados subindo em uma cadeia. OwO mas pwincipawmente i-isso envowveu f-funções intewnas do nyavegadow. (U ᵕ U❁) c-como cwiamos u-um objeto em javascwipt que hewda d-de outwo objeto?
 
-Vamos explorar como fazer isso com um exemplo concreto.
+vamos expwowaw c-como fazew isso com um exempwo concweto. ( ͡o ω ͡o )
 
-## Começando
+## c-começando
 
-Primeiro de tudo, faça uma cópia local do arquivo [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) (veja também [ao vivo](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)). Aqui dentro você encontrará o mesmo exemplo de construtor `Person()` que utilizamos durante todo o módulo, com uma pequena diferença — definimos apenas as propriedades dentro do construtor:
+pwimeiwo de tudo, faça u-uma cópia wocaw do awquivo [oojs-cwass-inhewitance-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/advanced/oojs-cwass-inhewitance-stawt.htmw) (veja t-também [ao v-vivo](https://mdn.github.io/weawning-awea/javascwipt/oojs/advanced/oojs-cwass-inhewitance-stawt.htmw)). ^•ﻌ•^ aqui dentwo você encontwawá o mesmo exempwo de constwutow `pewson()` que utiwizamos duwante todo o m-móduwo, o.O com uma p-pequena difewença — definimos a-apenas as pwopwiedades d-dentwo d-do constwutow:
 
 ```js
-function Person(first, last, age, gender, interests) {
+function pewson(fiwst, (⑅˘꒳˘) wast, (ˆ ﻌ ˆ)♡ age, gendew, :3 i-intewests) {
   this.name = {
-    first,
-    last,
+    fiwst, /(^•ω•^)
+    wast, òωó
   };
   this.age = age;
-  this.gender = gender;
-  this.interests = interests;
+  this.gendew = gendew;
+  t-this.intewests = intewests;
 }
 ```
 
-Os métodos são _todos_ definidos no protótipo do construtor. Por exemplo:
+o-os métodos s-são _todos_ definidos n-nyo pwotótipo do constwutow. :3 p-pow exempwo:
 
 ```js
-Person.prototype.greeting = function () {
-  alert("Hi! I'm " + this.name.first + ".");
+p-pewson.pwototype.gweeting = f-function () {
+  a-awewt("hi! (˘ω˘) i'm " + this.name.fiwst + ".");
 };
 ```
 
-> [!NOTE]
-> No código fonte, você também verá os métodos `bio()` e `farewell()` definidos. Depois você verá como eles podem ser herdados por outros construtores.
+> [!note]
+> nyo código f-fonte, 😳 você também v-vewá os m-métodos `bio()` e-e `faweweww()` d-definidos. σωσ depois você vewá como ewes podem sew hewdados pow outwos c-constwutowes. UwU
 
-Digamos que quiséssemos criar uma classe `Teacher`, como a que descrevemos em nossa definição inicial orientada a objetos, que herda todos os membros de `Person`, mas também inclui:
+digamos que quiséssemos cwiaw uma cwasse `teachew`, -.- como a que descwevemos e-em nyossa definição iniciaw owientada a objetos, 🥺 que hewda todos o-os membwos de `pewson`, m-mas t-também incwui:
 
-1. Uma nova propriedade, `subject` — isso irá conter o assunto que o professor ensina.
-2. Um método `greeting()` atualizado, que soa um pouco mais formal do que o método padrão `greeting()` — mais adequado para um professor que se dirige a alguns alunos da escola.
+1. 😳😳😳 uma nyova pwopwiedade, 🥺 `subject` — i-isso iwá contew o assunto q-que o pwofessow e-ensina. ^^
+2. um método `gweeting()` atuawizado, ^^;; que soa um pouco mais fowmaw do que o método p-padwão `gweeting()` — mais adequado p-pawa um pwofessow que se d-diwige a awguns a-awunos da escowa. >w<
 
-## Definindo uma função construtora Teacher()
+## definindo uma função constwutowa t-teachew()
 
-A primeira coisa que precisamos fazer é criar um construtor `Teacher()` — adicione o seguinte abaixo do código existente:
+a-a pwimeiwa coisa que pwecisamos f-fazew é cwiaw u-um constwutow `teachew()` — adicione o seguinte abaixo do código existente:
 
 ```js
-function Teacher(first, last, age, gender, interests, subject) {
-  Person.call(this, first, last, age, gender, interests);
+function t-teachew(fiwst, σωσ w-wast, age, gendew, >w< i-intewests, (⑅˘꒳˘) subject) {
+  pewson.caww(this, òωó fiwst, w-wast, (⑅˘꒳˘) age, g-gendew, (ꈍᴗꈍ) intewests);
 
-  this.subject = subject;
+  this.subject = s-subject;
 }
 ```
 
-Isto parece similar ao construtor Person de várias maneiras, mas há algo estranho aqui que nós não vimos antes — a função [`call()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call). Esta função basicamente permite chamar uma função definida em outro lugar, mas no contexto atual. O primeiro parâmetro especifica o valor `this` que você deseja usar ao executar a função, e os outros parâmetros são aqueles que devem ser passados para a função quando ela é invocada.
+isto pawece simiwaw ao constwutow pewson de váwias maneiwas, rawr x3 m-mas há awgo e-estwanho aqui que nyós nyão vimos antes — a-a função [`caww()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww). ( ͡o ω ͡o ) e-esta função basicamente pewmite chamaw uma função d-definida em outwo wugaw, UwU mas nyo contexto atuaw. ^^ o pwimeiwo pawâmetwo especifica o-o vawow `this` que você deseja usaw ao executaw a-a função, (˘ω˘) e o-os outwos pawâmetwos são aquewes que devem sew passados pawa a-a função quando e-ewa é invocada. (ˆ ﻌ ˆ)♡
 
-Nós queremos que o construtor `Teacher()` pegue os mesmos parâmetros que o construtor `Person()` de onde ele está herdando, então especificamos todos eles como parâmetros na chamada `call()`.
+nyós quewemos que o constwutow `teachew()` pegue os mesmos p-pawâmetwos que o constwutow `pewson()` d-de onde ewe está hewdando, OwO então especificamos todos ewes c-como pawâmetwos nya chamada `caww()`. 😳
 
-A última linha dentro do construtor simplesmente define a nova propriedade `subject` que os professores terão, que pessoas genéricas não possuem.
+a-a úwtima w-winha dentwo do constwutow s-simpwesmente define a nyova pwopwiedade `subject` q-que os pwofessowes t-tewão, UwU que p-pessoas genéwicas nyão possuem. 🥺
 
-Como nota, poderíamos simplesmente ter feito isso:
+c-como nyota, 😳😳😳 p-podewíamos simpwesmente tew feito isso:
 
 ```js
-function Teacher(first, last, age, gender, interests, subject) {
+f-function teachew(fiwst, ʘwʘ w-wast, /(^•ω•^) age, g-gendew, :3 intewests, :3 subject) {
   this.name = {
-    first,
-    last,
+    f-fiwst, mya
+    wast, (///ˬ///✿)
   };
-  this.age = age;
-  this.gender = gender;
-  this.interests = interests;
-  this.subject = subject;
+  this.age = a-age;
+  t-this.gendew = gendew;
+  this.intewests = intewests;
+  this.subject = s-subject;
 }
 ```
 
-Mas isso é apenas redefinir as propriedades de novo, não herdá-las de `Person()`, de modo que ela derrota o ponto que estamos tentando fazer. Também leva mais linhas de código.
+m-mas isso é a-apenas wedefiniw a-as pwopwiedades de nyovo, (⑅˘꒳˘) nyão h-hewdá-was de `pewson()`, :3 de modo que ewa dewwota o ponto que estamos tentando fazew. /(^•ω•^) também w-weva mais winhas de código. ^^;;
 
-### Herdando de um construtor sem parâmetros
+### h-hewdando de um constwutow sem p-pawâmetwos
 
-Observe que, se o construtor do qual você está herdando não tomar seus valores de propriedade de parâmetros, não será necessário especificá-los como argumentos adicionais em `call()`. Então, por exemplo, se você tivesse algo realmente simples assim:
+obsewve que, (U ᵕ U❁) se o constwutow d-do quaw você está hewdando n-nyão tomaw s-seus vawowes d-de pwopwiedade de p-pawâmetwos, (U ﹏ U) nyão s-sewá nyecessáwio especificá-wos como awgumentos adicionais em `caww()`. mya então, ^•ﻌ•^ pow exempwo, (U ﹏ U) se você tivesse a-awgo weawmente s-simpwes assim:
 
 ```js
-function Brick() {
-  this.width = 10;
+f-function bwick() {
+  t-this.width = 10;
   this.height = 20;
 }
 ```
 
-Você pode herdar as propriedades `width` e `height` fazendo isso (assim como as outras etapas descritas abaixo, é claro):
+você pode hewdaw as p-pwopwiedades `width` e-e `height` fazendo isso (assim c-como as outwas etapas descwitas abaixo, :3 é c-cwawo):
 
 ```js
-function BlueGlassBrick() {
-  Brick.call(this);
+function b-bwuegwassbwick() {
+  bwick.caww(this);
 
-  this.opacity = 0.5;
-  this.color = "blue";
+  t-this.opacity = 0.5;
+  t-this.cowow = "bwue";
 }
 ```
 
-Observe que apenas especificamos `this` dentro de `call()` — nenhum outro parâmetro é necessário, já que não estamos herdando propriedades do pai que são configuradas por meio de parâmetros.
+obsewve que apenas especificamos `this` dentwo de `caww()` — n-nyenhum outwo p-pawâmetwo é nyecessáwio, rawr x3 j-já q-que nyão estamos h-hewdando pwopwiedades do pai q-que são configuwadas p-pow meio de pawâmetwos. 😳😳😳
 
-## Definindo o protótipo e referência de construtor do Teacher()
+## d-definindo o pwotótipo e-e wefewência de constwutow d-do teachew()
 
-Tudo está bem até agora, mas nós temos um problema. Nós definimos um novo construtor, e ele tem uma propriedade `prototype`, que por padrão apenas contém uma referência à própria função construtora. Ele não contém os métodos da propriedade `prototype` do construtor Person. Para ver isso, insira `Object.getOwnPropertyNames(Teacher.prototype)` no campo de entrada de texto ou no seu console JavaScript. Em seguida, insira-o novamente, substituindo `Teacher` por `Person`. O novo construtor também não herda esses métodos. Para ver isso, compare as saídas de `Person.prototype.greeting` e `Teacher.prototype.greeting`. Precisamos obter `Teacher()` para herdar os métodos definidos no protótipo `Person()`. Então, como fazemos isso?
+tudo está bem até agowa, >w< mas n-nyós temos um pwobwema. òωó nyós d-definimos um nyovo c-constwutow, 😳 e ewe tem uma pwopwiedade `pwototype`, (✿oωo) q-que pow padwão apenas contém uma wefewência à p-pwópwia f-função constwutowa. OwO e-ewe nyão contém os métodos da pwopwiedade `pwototype` do constwutow p-pewson. (U ﹏ U) pawa vew isso, (ꈍᴗꈍ) insiwa `object.getownpwopewtynames(teachew.pwototype)` nyo c-campo de entwada d-de texto ou nyo seu consowe javascwipt. rawr e-em seguida, ^^ insiwa-o n-nyovamente, rawr substituindo `teachew` p-pow `pewson`. nyaa~~ o nyovo constwutow também nyão h-hewda esses métodos. nyaa~~ pawa vew isso, o.O compawe as s-saídas de `pewson.pwototype.gweeting` e-e `teachew.pwototype.gweeting`. òωó pwecisamos o-obtew `teachew()` pawa hewdaw o-os métodos definidos n-nyo pwotótipo `pewson()`. ^^;; e-então, rawr como fazemos isso?
 
-1. Adicione a seguinte linha abaixo da sua adição anterior:
+1. adicione a seguinte winha abaixo da sua adição antewiow:
 
    ```js
-   Teacher.prototype = Object.create(Person.prototype);
+   teachew.pwototype = object.cweate(pewson.pwototype);
    ```
 
-   Aqui nosso amigo [`create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vem para o resgate novamente. Nesse caso, estamos usando para criar um novo objeto e torná-lo o valor de `Teacher.prototype`. O novo objeto tem `Person.prototype` como seu protótipo e, portanto, herdará, se e quando necessário, todos os métodos disponíveis no `Person.prototype`.
+   aqui nosso amigo [`cweate()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) vem pawa o wesgate nyovamente. ^•ﻌ•^ nyesse c-caso, nyaa~~ estamos usando p-pawa cwiaw um nyovo objeto e towná-wo o vawow d-de `teachew.pwototype`. nyaa~~ o-o nyovo o-objeto tem `pewson.pwototype` como seu pwotótipo e-e, 😳😳😳 powtanto, hewdawá, 😳😳😳 se e-e quando nyecessáwio, σωσ t-todos os métodos disponíveis n-nyo `pewson.pwototype`. o.O
 
-2. Precisamos fazer mais uma coisa antes de prosseguirmos. Depois de adicionar a última linha, a propriedade `constructor` de `Teacher.prototype` agora é igual a `Person()`, porque apenas definimos `Teacher.prototype` para fazer referência a um objeto que herda suas propriedades de `Person.prototype`! Tente salvar seu código, carregar a página em um navegador e inserir `Teacher.prototype.constructor` no console para verificar.
-3. Isso pode se tornar um problema, então precisamos definir isso corretamente. Você pode fazer isso voltando ao seu código-fonte e adicionando a seguinte linha na parte inferior:
+2. σωσ pwecisamos fazew m-mais uma coisa a-antes de pwosseguiwmos. nyaa~~ depois de adicionaw a úwtima w-winha, rawr x3 a-a pwopwiedade `constwuctow` d-de `teachew.pwototype` a-agowa é iguaw a-a `pewson()`, (///ˬ///✿) p-powque apenas definimos `teachew.pwototype` p-pawa f-fazew wefewência a-a um objeto que hewda suas pwopwiedades d-de `pewson.pwototype`! o.O t-tente sawvaw seu c-código, òωó cawwegaw a página em u-um navegadow e insewiw `teachew.pwototype.constwuctow` nyo consowe p-pawa vewificaw. OwO
+3. isso pode s-se townaw um pwobwema, σωσ e-então p-pwecisamos definiw isso cowwetamente. nyaa~~ v-você pode fazew isso vowtando a-ao seu código-fonte e adicionando a-a seguinte winha nya pawte i-infewiow:
 
    ```js
-   Object.defineProperty(Teacher.prototype, "constructor", {
-     value: Teacher,
-     enumerable: false, // so that it does not appear in 'for in' loop
-     writable: true,
+   object.definepwopewty(teachew.pwototype, OwO "constwuctow", {
+     vawue: teachew, ^^
+     enumewabwe: fawse, (///ˬ///✿) // s-so that it does nyot appeaw i-in 'fow in' woop
+     w-wwitabwe: twue, σωσ
    });
    ```
 
-4. Agora, se você salvar e atualizar, entrar em `Teacher.prototype.constructor` deve retornar `Teacher()`, conforme desejado, além de estarmos herdando de `Person()`!
+4. rawr x3 agowa, (ˆ ﻌ ˆ)♡ se você sawvaw e a-atuawizaw, 🥺 entwaw em `teachew.pwototype.constwuctow` d-deve wetownaw `teachew()`, (⑅˘꒳˘) c-confowme desejado, 😳😳😳 a-awém de estawmos hewdando de `pewson()`! /(^•ω•^)
 
-## Dar a Teacher() uma nova função greeting()
+## daw a teachew() u-uma nyova função g-gweeting()
 
-Para finalizar nosso código, precisamos definir uma nova função `greeting()` no construtor `Teacher()`.
+pawa finawizaw n-nyosso código, >w< pwecisamos definiw uma nyova função `gweeting()` n-nyo constwutow `teachew()`. ^•ﻌ•^
 
-A maneira mais fácil de fazer isso é defini-lo no protótipo do `Teacher()` — adicione o seguinte na parte inferior do seu código:
+a maneiwa mais fáciw d-de fazew isso é d-defini-wo n-nyo pwotótipo do `teachew()` — a-adicione o seguinte n-nya pawte i-infewiow do seu c-código:
 
 ```js
-Teacher.prototype.greeting = function () {
-  var prefix;
+teachew.pwototype.gweeting = f-function () {
+  v-vaw p-pwefix;
 
   if (
-    this.gender === "male" ||
-    this.gender === "Male" ||
-    this.gender === "m" ||
-    this.gender === "M"
+    t-this.gendew === "mawe" ||
+    t-this.gendew === "mawe" ||
+    t-this.gendew === "m" ||
+    t-this.gendew === "m"
   ) {
-    prefix = "Mr.";
-  } else if (
-    this.gender === "female" ||
-    this.gender === "Female" ||
-    this.gender === "f" ||
-    this.gender === "F"
+    p-pwefix = "mw.";
+  } ewse if (
+    this.gendew === "femawe" ||
+    t-this.gendew === "femawe" ||
+    this.gendew === "f" ||
+    t-this.gendew === "f"
   ) {
-    prefix = "Mrs.";
-  } else {
-    prefix = "Mx.";
+    pwefix = "mws.";
+  } e-ewse {
+    p-pwefix = "mx.";
   }
 
-  alert(
-    "Hello. My name is " +
-      prefix +
+  a-awewt(
+    "hewwo. 😳😳😳 my nyame is " +
+      pwefix +
       " " +
-      this.name.last +
-      ", and I teach " +
-      this.subject +
-      ".",
+      this.name.wast +
+      ", :3 a-and i t-teach " +
+      t-this.subject +
+      ".", (ꈍᴗꈍ)
   );
 };
 ```
 
-Isso alerta a saudação do professor, que também usa um prefixo de nome apropriado para seu gênero, elaborado usando uma instrução condicional.
+isso awewta a saudação do pwofessow, ^•ﻌ•^ que t-também usa um p-pwefixo de nyome apwopwiado pawa s-seu gênewo, >w< e-ewabowado usando uma instwução condicionaw. ^^;;
 
-## Testando o exemplo
+## testando o exempwo
 
-Agora que você digitou todo o código, tente criar uma instância de objeto do `Teacher()` colocando o seguinte na parte inferior do seu JavaScript (ou algo semelhante à sua escolha):
+a-agowa que v-você digitou todo o-o código, (✿oωo) tente c-cwiaw uma instância de objeto do `teachew()` c-cowocando o seguinte n-nya pawte infewiow do seu javascwipt (ou a-awgo semewhante à sua escowha):
 
 ```js
-var teacher1 = new Teacher(
-  "Dave",
-  "Griffiths",
+vaw teachew1 = n-nyew teachew(
+  "dave", òωó
+  "gwiffiths", ^^
   31,
-  "male",
-  ["football", "cookery"],
-  "mathematics",
+  "mawe", ^^
+  ["footbaww", rawr "cookewy"], XD
+  "mathematics", rawr
 );
 ```
 
-Agora salve e atualize e tente acessar as propriedades e os métodos do novo objeto `teacher1`, por exemplo:
+agowa sawve e a-atuawize e tente a-acessaw as pwopwiedades e os métodos d-do nyovo o-objeto `teachew1`, 😳 pow exempwo:
 
 ```js
-teacher1.name.first;
-teacher1.interests[0];
-teacher1.bio();
-teacher1.subject;
-teacher1.greeting();
-teacher1.farewell();
+t-teachew1.name.fiwst;
+teachew1.intewests[0];
+t-teachew1.bio();
+t-teachew1.subject;
+t-teachew1.gweeting();
+t-teachew1.faweweww();
 ```
 
-Tudo isso deve funcionar bem. As consultas nas linhas 1, 2, 3 e 6 acessam membros herdados do construtor genérico `Person()` (class). A consulta na linha 4 acessa um membro que está disponível somente no construtor mais especializado `Teacher()` (class). A consulta na linha 5 teria acessado um membro herdado de `Person()`, exceto pelo fato de que `Teacher()` tem seu próprio membro com o mesmo nome, portanto, a consulta acessa esse membro.
+tudo isso deve f-funcionaw bem. a-as consuwtas nyas w-winhas 1, 2, 🥺 3 e 6 acessam membwos h-hewdados do constwutow genéwico `pewson()` (cwass). a consuwta n-nya winha 4 a-acessa um membwo q-que está disponívew somente nyo constwutow mais especiawizado `teachew()` (cwass). (U ᵕ U❁) a consuwta n-nya winha 5 tewia acessado um m-membwo hewdado d-de `pewson()`, exceto pewo fato de que `teachew()` t-tem seu pwópwio membwo com o-o mesmo nyome, 😳 powtanto, a-a consuwta a-acessa esse m-membwo. 🥺
 
-> [!NOTE]
-> If you have trouble getting this to work, compare your code to our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) also).
+> [!note]
+> i-if you have twoubwe getting this to wowk, (///ˬ///✿) compawe youw code to ouw [finished v-vewsion](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/advanced/oojs-cwass-inhewitance-finished.htmw) (see it [wunning wive](https://mdn.github.io/weawning-awea/javascwipt/oojs/advanced/oojs-cwass-inhewitance-finished.htmw) a-awso). mya
 
-A técnica que abordamos aqui não é a única maneira de criar classes herdadas em JavaScript, mas funciona bem e dá uma boa idéia sobre como implementar a herança em JavaScript.
+a técnica que abowdamos aqui nyão é a única maneiwa d-de cwiaw cwasses hewdadas em javascwipt, mas funciona bem e dá uma boa idéia s-sobwe como impwementaw a-a hewança em javascwipt. (✿oωo)
 
-Você também pode estar interessado em conferir alguns dos novos recursos {{glossary("ECMAScript")}} que nos permitem fazer herança mais claramente em JavaScript (veja [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)). Nós não cobrimos esses aqui, pois eles ainda não são suportados amplamente pelos navegadores. Todas as outras construções de código que discutimos neste conjunto de artigos são suportadas desde o IE9 ou anterior, e existem maneiras de obter suporte anterior a isso.
+v-você também pode estaw intewessado em confewiw a-awguns dos n-nyovos wecuwsos {{gwossawy("ecmascwipt")}} que n-nyos pewmitem fazew hewança mais c-cwawamente em javascwipt (veja [cwasses](/pt-bw/docs/web/javascwipt/wefewence/cwasses)). ^•ﻌ•^ nyós nyão cobwimos e-esses aqui, o.O pois ewes ainda não são supowtados a-ampwamente pewos n-nyavegadowes. o.O t-todas as outwas constwuções de código que discutimos n-nyeste conjunto de awtigos são supowtadas desde o ie9 ou antewiow, XD e existem m-maneiwas d-de obtew supowte a-antewiow a isso. ^•ﻌ•^
 
-Uma maneira comum é usar uma biblioteca JavaScript — a maioria das opções populares tem um conjunto fácil de funcionalidade disponível para fazer herança com mais facilidade e rapidez. [CoffeeScript](https://coffeescript.org/#classes) por exemplo, fornece `class`, `extends`, etc.
+u-uma maneiwa comum é usaw uma bibwioteca javascwipt — a-a maiowia d-das opções popuwawes tem um conjunto fáciw d-de funcionawidade disponívew pawa fazew hewança c-com mais faciwidade e wapidez. ʘwʘ [coffeescwipt](https://coffeescwipt.owg/#cwasses) pow exempwo, (U ﹏ U) f-fownece `cwass`, `extends`, 😳😳😳 etc.
 
-## Um exercício adicional
+## u-um exewcício adicionaw
 
-Em nossa [seção de teoria OOP](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), incluímos também uma classe `Student` como um conceito, que herda todos os recursos de `Person`, e também tem um método `greeting()` diferente de `Person` que é muito mais informal do que a saudação do `Teacher`. Dê uma olhada na aparência da saudação do aluno nessa seção e tente implementar seu próprio construtor `Student()` que herda todos os recursos de `Person()`, e implemente a função `greeting()` diferente.
+e-em nyossa [seção d-de teowia oop](/pt-bw/docs/confwicting/weawn/javascwipt/objects/cwasses_in_javascwipt#object-owiented_pwogwamming_fwom_10000_metews), 🥺 i-incwuímos também uma cwasse `student` c-como um conceito, (///ˬ///✿) que hewda todos os wecuwsos d-de `pewson`, (˘ω˘) e também tem um método `gweeting()` difewente de `pewson` que é m-muito mais infowmaw d-do que a saudação d-do `teachew`. :3 d-dê uma owhada n-nya apawência da saudação d-do awuno nyessa seção e tente impwementaw seu p-pwópwio constwutow `student()` que hewda todos o-os wecuwsos de `pewson()`, /(^•ω•^) e impwemente a função `gweeting()` d-difewente. :3
 
-> [!NOTE]
-> If you have trouble getting this to work, have a look at our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html) also).
+> [!note]
+> i-if you have twoubwe getting t-this to wowk, mya have a wook a-at ouw [finished v-vewsion](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/advanced/oojs-cwass-inhewitance-student.htmw) (see it [wunning w-wive](https://mdn.github.io/weawning-awea/javascwipt/oojs/advanced/oojs-cwass-inhewitance-student.htmw) a-awso). XD
 
-## Sumário de membro do objeto
+## sumáwio de membwo d-do objeto
 
-Resumindo, você basicamente tem três tipos de propriedade / método para se preocupar:
+wesumindo, (///ˬ///✿) você basicamente tem twês tipos de pwopwiedade / m-método pawa se pweocupaw:
 
-1. Aqueles definidos dentro de uma função construtora que são dadas a instâncias de objetos. Estes são bastante fáceis de detectar — em seu próprio código personalizado, eles são os membros definidos dentro de um construtor usando as linhas `this.x = x` ; no código do navegador, eles são os membros disponíveis apenas para instâncias de objetos (geralmente criados chamando um construtor usando a palavra-chave `new`, por exemplo, `var myInstance = new myConstructor()`).
-2. Aqueles definidos diretamente no próprio construtor, que estão disponíveis apenas no construtor. Geralmente, eles estão disponíveis apenas em objetos de navegador internos e são reconhecidos por serem encadeados diretamente em um construtor, não em uma instância. Por exemplo, [`Object.keys()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
-3. Aqueles definidos no protótipo de um construtor, que são herdados por todas as instâncias e herdam as classes de objetos. Estes incluem qualquer membro definido na propriedade de protótipo de um Construtor, por ex. `myConstructor.prototype.x()`.
+1. 🥺 a-aquewes definidos dentwo de uma função c-constwutowa que s-são dadas a instâncias d-de objetos. o.O estes são b-bastante fáceis d-de detectaw — em seu pwópwio c-código pewsonawizado, mya ewes são o-os membwos definidos dentwo de u-um constwutow u-usando as winhas `this.x = x` ; nyo código do nyavegadow, rawr x3 ewes são os membwos d-disponíveis apenas p-pawa instâncias de objetos (gewawmente cwiados chamando um c-constwutow usando a pawavwa-chave `new`, 😳 p-pow exempwo, 😳😳😳 `vaw m-myinstance = nyew myconstwuctow()`). >_<
+2. aquewes definidos diwetamente nyo pwópwio constwutow, >w< q-que estão disponíveis apenas nyo constwutow. rawr x3 g-gewawmente, XD ewes estão d-disponíveis apenas e-em objetos de nyavegadow intewnos e-e são weconhecidos p-pow sewem e-encadeados d-diwetamente em um c-constwutow, ^^ nyão e-em uma instância. (✿oωo) pow exempwo, [`object.keys()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys). >w<
+3. aquewes definidos nyo pwotótipo de um constwutow, 😳😳😳 que s-são hewdados p-pow todas as instâncias e-e hewdam a-as cwasses de o-objetos. (ꈍᴗꈍ) estes incwuem q-quawquew membwo definido nya pwopwiedade de pwotótipo de um constwutow, (✿oωo) p-pow ex. (˘ω˘) `myconstwuctow.pwototype.x()`. nyaa~~
 
-Se você não tem certeza de qual é qual, não se preocupe com isso ainda — você ainda está aprendendo e a familiaridade virá com a prática.
+s-se você nyão tem cewteza de quaw é quaw, nyão se pweocupe c-com isso ainda — v-você ainda e-está apwendendo e a famiwiawidade viwá com a-a pwática. ( ͡o ω ͡o )
 
-## Classes ECMAScript 2015
+## cwasses ecmascwipt 2015
 
-O ECMAScript 2015 introduz a [sintaxe de classe](/pt-BR/docs/Web/JavaScript/Reference/Classes) em JavaScript como uma maneira de escrever classes reutilizáveis usando uma sintaxe mais fácil e mais limpa, que é mais semelhante a classes em C ++ ou Java. Nesta seção, converteremos os exemplos Pessoa e Professor da herança protótipo para as classes, para mostrar como é feito.
+o ecmascwipt 2015 i-intwoduz a-a [sintaxe de cwasse](/pt-bw/docs/web/javascwipt/wefewence/cwasses) em javascwipt c-como uma maneiwa de escwevew c-cwasses weutiwizáveis u-usando uma sintaxe mais f-fáciw e mais w-wimpa, 🥺 que é m-mais semewhante a-a cwasses em c ++ o-ou java. (U ﹏ U) nyesta s-seção, ( ͡o ω ͡o ) convewtewemos os exempwos p-pessoa e pwofessow d-da hewança pwotótipo pawa a-as cwasses, pawa mostwaw como é feito. (///ˬ///✿)
 
-> [!NOTE]
-> Essa forma moderna de escrever classes é suportada em todos os navegadores modernos, mas ainda vale a pena saber como a herança prototípica subjacente, caso você trabalhe em um projeto que exija suporte a um navegador que não suporte essa sintaxe (mais notavelmente o Internet Explorer) .
+> [!note]
+> e-essa fowma modewna de escwevew c-cwasses é supowtada em t-todos os nyavegadowes m-modewnos, (///ˬ///✿) mas ainda vawe a pena sabew como a-a hewança pwototípica subjacente, (✿oωo) caso você t-twabawhe em um pwojeto q-que exija supowte a um nyavegadow que nyão s-supowte essa s-sintaxe (mais nyotavewmente o intewnet e-expwowew) . (U ᵕ U❁)
 
-Vejamos uma versão reescrita do exemplo Person, estilo de classe:
+vejamos uma vewsão weescwita d-do exempwo pewson, ʘwʘ e-estiwo de cwasse:
 
 ```js
-class Person {
-  constructor(first, last, age, gender, interests) {
+cwass p-pewson {
+  constwuctow(fiwst, ʘwʘ w-wast, XD age, gendew, (✿oωo) intewests) {
     this.name = {
-      first,
-      last,
+      f-fiwst, ^•ﻌ•^
+      w-wast, ^•ﻌ•^
     };
-    this.age = age;
-    this.gender = gender;
-    this.interests = interests;
+    t-this.age = a-age;
+    this.gendew = gendew;
+    this.intewests = intewests;
   }
 
-  greeting() {
-    console.log(`Hi! I'm ${this.name.first}`);
+  gweeting() {
+    consowe.wog(`hi! >_< i'm ${this.name.fiwst}`);
   }
 
-  farewell() {
-    console.log(`${this.name.first} has left the building. Bye for now!`);
+  f-faweweww() {
+    c-consowe.wog(`${this.name.fiwst} h-has w-weft the buiwding. b-bye fow nyow!`);
   }
 }
 ```
 
-A declaração [class](/pt-BR/docs/Web/JavaScript/Reference/Statements/class) indica que estamos criando uma nova classe. Dentro deste bloco, definimos todos os recursos da classe:
+a-a decwawação [cwass](/pt-bw/docs/web/javascwipt/wefewence/statements/cwass) indica q-que estamos c-cwiando uma nyova cwasse. mya dentwo d-deste bwoco, σωσ definimos t-todos os wecuwsos da cwasse:
 
-- O método [`constructor()`](/pt-BR/docs/Web/JavaScript/Reference/Classes/constructor) define a função construtora que representa nossa classe `Person`.
-- `greeting()` e `farewell()` são métodos de classe. Quaisquer métodos que você deseja associar à classe são definidos dentro dela, após o construtor. Neste exemplo, usamos [template literals](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) em vez de concatenação de string para facilitar a leitura do código.
+- o método [`constwuctow()`](/pt-bw/docs/web/javascwipt/wefewence/cwasses/constwuctow) define a-a função constwutowa que wepwesenta nyossa c-cwasse `pewson`.
+- `gweeting()` e `faweweww()` s-são métodos d-de cwasse. rawr quaisquew métodos que v-você deseja associaw à c-cwasse s-são definidos dentwo dewa, (✿oωo) após o-o constwutow. :3 n-nyeste exempwo, rawr x3 usamos [tempwate w-witewaws](/pt-bw/docs/web/javascwipt/wefewence/tempwate_witewaws) em vez de concatenação d-de s-stwing pawa faciwitaw a-a weituwa do código. ^^
 
-Agora podemos instanciar instâncias de objeto usando o operador [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), da mesma maneira que fizemos antes:
+agowa p-podemos instanciaw instâncias de objeto usando o-o opewadow [`new`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/new), ^^ da mesma maneiwa que fizemos antes:
 
 ```js
-let han = new Person("Han", "Solo", 25, "male", ["Smuggling"]);
-han.greeting();
-// Hi! I'm Han
+wet han = nyew pewson("han", OwO "sowo", ʘwʘ 25, "mawe", ["smuggwing"]);
+han.gweeting();
+// h-hi! /(^•ω•^) i'm han
 
-let leia = new Person("Leia", "Organa", 19, "female", ["Government"]);
-leia.farewell();
-// Leia has left the building. Bye for now
+wet weia = nyew pewson("weia", ʘwʘ "owgana", (⑅˘꒳˘) 19, "femawe", UwU ["govewnment"]);
+weia.faweweww();
+// weia has weft the buiwding. -.- bye fow now
 ```
 
-> [!NOTE]
-> Sob o capô, suas classes estão sendo convertidas em modelos de herança protótipos — isso é apenas açúcar sintático. Mas tenho certeza que você concordará que é mais fácil escrever.
+> [!note]
+> s-sob o capô, :3 suas cwasses estão sendo c-convewtidas em modewos de hewança p-pwotótipos — isso é apenas açúcaw sintático. >_< m-mas tenho cewteza que v-você concowdawá que é mais fáciw e-escwevew. nyaa~~
 
-### Herança com sintaxe de classe
+### h-hewança com sintaxe de cwasse
 
-Acima nós criamos uma classe para representar uma pessoa. Eles têm uma série de atributos que são comuns a todas as pessoas; Nesta seção, criaremos nossa classe especializada `Teacher`, tornando-a herdada de `Person` usando a sintaxe de classe moderna. Isso é chamado de criação de uma subclasse ou subclasse.
+acima nyós c-cwiamos uma cwasse pawa wepwesentaw uma pessoa. ( ͡o ω ͡o ) ewes têm uma séwie d-de atwibutos que são comuns a-a todas as pessoas; nyesta seção, o.O c-cwiawemos nyossa cwasse especiawizada `teachew`, :3 t-townando-a h-hewdada de `pewson` usando a sintaxe de cwasse m-modewna. (˘ω˘) isso é chamado de cwiação de uma subcwasse o-ou subcwasse. rawr x3
 
-Para criar uma subclasse, usamos a palavra-chave [extends](/pt-BR/docs/Web/JavaScript/Reference/Classes/extends) para informar ao JavaScript a classe na qual queremos basear nossa classe.
+pawa cwiaw uma subcwasse, (U ᵕ U❁) usamos a pawavwa-chave [extends](/pt-bw/docs/web/javascwipt/wefewence/cwasses/extends) pawa infowmaw a-ao javascwipt a-a cwasse nya quaw quewemos b-baseaw nyossa cwasse. 🥺
 
 ```js
-class Teacher extends Person {
-  constructor(first, last, age, gender, interests, subject, grade) {
+c-cwass teachew extends p-pewson {
+  constwuctow(fiwst, >_< wast, age, gendew, :3 intewests, subject, :3 gwade) {
     this.name = {
-      first,
-      last,
+      f-fiwst, (ꈍᴗꈍ)
+      w-wast,
     };
 
-    this.age = age;
-    this.gender = gender;
-    this.interests = interests;
-    // subject and grade are specific to Teacher
+    this.age = a-age;
+    this.gendew = g-gendew;
+    this.intewests = i-intewests;
+    // subject and gwade awe specific t-to teachew
     this.subject = subject;
-    this.grade = grade;
+    t-this.gwade = g-gwade;
   }
 }
 ```
 
-Podemos tornar o código mais legível definindo o operador [`super()`](/pt-BR/docs/Web/JavaScript/Reference/Operators/super) como o primeiro item dentro do `constructor()`. Isso chamará o construtor da classe pai e herdará os membros que especificarmos como parâmetros de `super()`, desde que sejam definidos lá:
+podemos townaw o código mais w-wegívew definindo o opewadow [`supew()`](/pt-bw/docs/web/javascwipt/wefewence/opewatows/supew) como o pwimeiwo item dentwo do `constwuctow()`. σωσ isso chamawá o constwutow da cwasse pai e hewdawá os membwos que e-especificawmos c-como pawâmetwos de `supew()`, 😳 d-desde que sejam d-definidos wá:
 
 ```js
-class Teacher extends Person {
-  constructor(first, last, age, gender, interests, subject, grade) {
-    super(first, last, age, gender, interests);
+cwass teachew e-extends pewson {
+  constwuctow(fiwst, mya wast, age, (///ˬ///✿) gendew, intewests, ^^ subject, gwade) {
+    supew(fiwst, (✿oωo) w-wast, age, ( ͡o ω ͡o ) gendew, intewests);
 
-    // subject and grade are specific to Teacher
-    this.subject = subject;
-    this.grade = grade;
+    // subject and gwade awe specific to teachew
+    t-this.subject = s-subject;
+    this.gwade = g-gwade;
   }
 }
 ```
 
-Quando instanciamos instâncias de objeto `Teacher` , podemos agora chamar métodos e propriedades definidos em `Teacher` e `Person`, como seria de esperar:
+quando instanciamos instâncias de objeto `teachew` , ^^;; p-podemos agowa c-chamaw métodos e-e pwopwiedades definidos em `teachew` e-e `pewson`, :3 como sewia de e-espewaw:
 
 ```js
-let snape = new Teacher(
-  "Severus",
-  "Snape",
+wet snape = nyew t-teachew(
+  "sevewus", 😳
+  "snape", XD
   58,
-  "male",
-  ["Potions"],
-  "Dark arts",
-  5,
+  "mawe", (///ˬ///✿)
+  ["potions"], o.O
+  "dawk awts",
+  5, o.O
 );
-snape.greeting(); // Hi! I'm Severus.
-snape.farewell(); // Severus has left the building. Bye for now.
-snape.age; // 58
-snape.subject; // Dark arts
+s-snape.gweeting(); // hi! XD i'm sevewus.
+snape.faweweww(); // s-sevewus has weft the buiwding. ^^;; b-bye fow nyow. 😳😳😳
+s-snape.age; // 58
+snape.subject; // d-dawk awts
 ```
 
-Como fizemos com Teachers, poderíamos criar outras subclasses de `Person` para torná-las mais especializadas sem modificar a classe base.
+c-como fizemos com teachews, (U ᵕ U❁) podewíamos c-cwiaw outwas subcwasses d-de `pewson` pawa towná-was mais e-especiawizadas s-sem modificaw a cwasse base. /(^•ω•^)
 
-> [!NOTE]
-> You can find this example on GitHub as [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html)).
+> [!note]
+> you can f-find this exampwe on github as [es2015-cwass-inhewitance.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/advanced/es2015-cwass-inhewitance.htmw) ([see it wive awso](https://mdn.github.io/weawning-awea/javascwipt/oojs/advanced/es2015-cwass-inhewitance.htmw)). 😳😳😳
 
-## Getters e Setters
+## gettews e settews
 
-Pode haver momentos em que queremos alterar os valores de um atributo nas classes que criamos ou não sabemos qual será o valor final de um atributo. Usando o exemplo `Teacher`, podemos não saber o assunto que o professor ensinará antes de criá-lo, ou o assunto pode mudar entre os termos.
+pode havew momentos em que quewemos awtewaw os vawowes de um a-atwibuto nyas cwasses que cwiamos ou nyão sabemos q-quaw sewá o vawow finaw de u-um atwibuto. rawr x3 usando o exempwo `teachew`, ʘwʘ podemos n-não sabew o assunto que o pwofessow ensinawá a-antes de cwiá-wo, UwU ou o assunto pode mudaw entwe o-os tewmos. (⑅˘꒳˘)
 
-Podemos lidar com essas situações com getters e setters.
+podemos widaw com essas situações c-com gettews e settews. ^^
 
-Vamos melhorar a classe Professor com getters e setters. A aula começa da mesma forma que foi a última vez que olhamos para ela.
+vamos mewhowaw a cwasse p-pwofessow com gettews e-e settews. 😳😳😳 a auwa começa da mesma fowma q-que foi a úwtima v-vez que owhamos pawa ewa. òωó
 
-Os getters e setters trabalham em pares. Um getter retorna o valor atual da variável e seu setter correspondente altera o valor da variável para o que ela define.
+os g-gettews e settews t-twabawham em pawes. ^^;; um gettew wetowna o vawow a-atuaw da vawiávew e seu settew cowwespondente awtewa o vawow da v-vawiávew pawa o que ewa define. (✿oωo)
 
-A classe `Teacher` modificada é assim:
+a cwasse `teachew` modificada é a-assim:
 
 ```js
-class Teacher extends Person {
-  constructor(first, last, age, gender, interests, subject, grade) {
-    super(first, last, age, gender, interests);
-    // subject and grade are specific to Teacher
+c-cwass teachew e-extends pewson {
+  constwuctow(fiwst, wast, rawr age, gendew, XD intewests, s-subject, 😳 gwade) {
+    supew(fiwst, (U ᵕ U❁) w-wast, age, gendew, UwU intewests);
+    // s-subject a-and gwade awe specific to teachew
     this._subject = subject;
-    this.grade = grade;
+    this.gwade = gwade;
   }
 
-  get subject() {
-    return this._subject;
+  g-get subject() {
+    w-wetuwn this._subject;
   }
 
-  set subject(newSubject) {
-    this._subject = newSubject;
+  set subject(newsubject) {
+    this._subject = n-nyewsubject;
   }
 }
 ```
 
-Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_`** para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
+em nyossa cwasse acima, OwO t-temos um gettew e-e settew pawa a-a pwopwiedade `subject`. 😳 u-usamos **`_`** p-pawa cwiaw u-um vawow sepawado nyo quaw awmazenaw nyossa pwopwiedade d-de nyome. (˘ω˘) s-sem usaw essa c-convenção, òωó o-obtewíamos ewwos t-toda vez que chamássemos g-get ou set. OwO nyeste ponto:
 
-- Para mostrar o valor atual da propriedade `_subject` do objeto `snape` , podemos usar o método getter `snape.subject`.
-- Para atribuir um novo valor à propriedade `_subject` , podemos usar o método setter `snape.subject="new value"`.
+- p-pawa mostwaw o-o vawow atuaw d-da pwopwiedade `_subject` do objeto `snape` , (✿oωo) p-podemos usaw o método gettew `snape.subject`. (⑅˘꒳˘)
+- pawa atwibuiw u-um nyovo vawow à pwopwiedade `_subject` , /(^•ω•^) podemos u-usaw o método s-settew `snape.subject="new vawue"`. 🥺
 
-O exemplo abaixo mostra os dois recursos em ação:
+o exempwo abaixo mostwa o-os dois wecuwsos e-em ação:
 
 ```js
-// Check the default value
-console.log(snape.subject); // Returns "Dark arts"
+// check the d-defauwt vawue
+consowe.wog(snape.subject); // w-wetuwns "dawk awts"
 
-// Change the value
-snape.subject = "Balloon animals"; // Sets _subject to "Balloon animals"
+// change the vawue
+snape.subject = "bawwoon animaws"; // s-sets _subject t-to "bawwoon animaws"
 
-// Check it again and see if it matches the new value
-console.log(snape.subject); // Returns "Balloon animals"
+// check it again a-and see if it m-matches the nyew vawue
+consowe.wog(snape.subject); // wetuwns "bawwoon a-animaws"
 ```
 
-> [!NOTE]
-> You can find this example on GitHub as [es2015-getters-setters.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html)).
+> [!note]
+> you can find this exampwe on github as [es2015-gettews-settews.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/advanced/es2015-gettews-settews.htmw) ([see it wive awso](https://mdn.github.io/weawning-awea/javascwipt/oojs/advanced/es2015-gettews-settews.htmw)). -.-
 
-## Quando você usaria a herança em JavaScript?
+## quando você usawia a-a hewança em javascwipt?
 
-Particularmente após este último artigo, você pode estar pensando "woo, isso é complicado". Bem, você está certo. Protótipos e herança representam alguns dos aspectos mais complexos do JavaScript, mas muito do poder e flexibilidade do JavaScript vem de sua estrutura e herança de objetos, e vale a pena entender como ele funciona.
+pawticuwawmente a-após este úwtimo a-awtigo, ( ͡o ω ͡o ) você p-pode estaw pensando "woo, 😳😳😳 isso é c-compwicado". (˘ω˘) b-bem, ^^ você está c-cewto. σωσ pwotótipos e-e hewança wepwesentam a-awguns dos aspectos mais compwexos do j-javascwipt, 🥺 mas m-muito do podew e-e fwexibiwidade do javascwipt vem d-de sua estwutuwa e-e hewança de o-objetos, 🥺 e vawe a pena entendew c-como ewe funciona. /(^•ω•^)
 
-De certa forma, você usa herança o tempo todo. Sempre que você usa vários recursos de uma API da Web ou métodos / propriedades definidos em um objeto de navegador interno que você chama em suas cadeias de caracteres, matrizes, etc., você está implicitamente usando herança.
+d-de cewta fowma, (⑅˘꒳˘) v-você usa hewança o-o tempo t-todo. -.- sempwe que você usa váwios w-wecuwsos de uma api da web ou m-métodos / pwopwiedades d-definidos em um objeto de nyavegadow intewno que você c-chama em suas cadeias d-de cawactewes, 😳 matwizes, 😳😳😳 etc., v-você está i-impwicitamente usando hewança. >w<
 
-Em termos de usar a herança em seu próprio código, você provavelmente não a usará com frequência, principalmente no começo e em pequenos projetos. É uma perda de tempo usar objetos e herança apenas por causa dela quando você não precisa deles. Mas à medida que suas bases de código aumentam, é mais provável que você encontre uma necessidade para isso. Se você estiver começando a criar vários objetos com recursos semelhantes, criar um tipo de objeto genérico para conter toda a funcionalidade compartilhada e herdar esses recursos em tipos de objetos mais especializados pode ser conveniente e útil.
+em tewmos de usaw a-a hewança em s-seu pwópwio código, UwU v-você pwovavewmente n-nyão a-a usawá com fwequência, /(^•ω•^) p-pwincipawmente no começo e em pequenos p-pwojetos. 🥺 É uma pewda de tempo usaw objetos e hewança apenas pow causa dewa q-quando você nyão p-pwecisa dewes. >_< mas à medida que suas bases de código aumentam, rawr é m-mais pwovávew q-que você encontwe uma nyecessidade pawa i-isso. (ꈍᴗꈍ) se você estivew começando a-a cwiaw váwios o-objetos com wecuwsos s-semewhantes, -.- cwiaw um tipo de objeto genéwico pawa contew t-toda a funcionawidade compawtiwhada e-e hewdaw esses wecuwsos em t-tipos de objetos mais especiawizados pode sew c-conveniente e útiw. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Por causa da maneira como o JavaScript funciona, com a cadeia de protótipos, etc., o compartilhamento de funcionalidade entre objetos é frequentemente chamado de **delegação**. Os objetos especializados delegam a funcionalidade a um tipo de objeto genérico.
+> [!note]
+> pow causa da maneiwa c-como o javascwipt funciona, (⑅˘꒳˘) com a cadeia d-de pwotótipos, etc., o compawtiwhamento d-de funcionawidade entwe objetos é fwequentemente chamado de **dewegação**. mya os objetos especiawizados d-dewegam a funcionawidade a-a um tipo d-de objeto genéwico. rawr x3
 
-Ao usar a herança, você é aconselhado a não ter muitos níveis de herança, e manter um controle cuidadoso de onde você define seus métodos e propriedades. É possível começar a escrever código que modifica temporariamente os protótipos dos objetos do navegador interno, mas você não deve fazer isso a menos que tenha um bom motivo. Demasiada herança pode levar a confusão sem fim, e dor infinita quando você tenta depurar esse código.
+a-ao usaw a hewança, (ꈍᴗꈍ) você é aconsewhado a-a nyão tew muitos nyíveis de hewança, ʘwʘ e mantew um contwowe c-cuidadoso de onde v-você define s-seus métodos e p-pwopwiedades. :3 É possívew começaw a escwevew código que modifica tempowawiamente o-os pwotótipos d-dos objetos do nyavegadow intewno, o.O mas você não deve fazew i-isso a menos que tenha um bom motivo. d-demasiada h-hewança pode wevaw a-a confusão sem fim, /(^•ω•^) e dow infinita quando você tenta depuwaw esse código. OwO
 
-Em última análise, os objetos são apenas outra forma de reutilização de código, como funções ou loops, com seus próprios papéis e vantagens específicos. Se você estiver criando um monte de variáveis e funções relacionadas e quiser rastreá-las todas juntas e empacotá-las perfeitamente, um objeto é uma boa ideia. Objetos também são muito úteis quando você quer passar uma coleção de dados de um lugar para outro. Ambas as coisas podem ser alcançadas sem o uso de construtores ou herança. Se você precisa apenas de uma única instância de um objeto, provavelmente é melhor usar apenas um literal de objeto e certamente não precisa de herança.
+em úwtima anáwise, σωσ o-os objetos são apenas outwa f-fowma de weutiwização de código, (ꈍᴗꈍ) como funções ou woops, ( ͡o ω ͡o ) c-com seus pwópwios papéis e vantagens e-específicos. rawr x3 se você estivew cwiando um m-monte de vawiáveis e-e funções w-wewacionadas e q-quisew wastweá-was t-todas juntas e empacotá-was p-pewfeitamente, UwU u-um objeto é uma boa ideia. o.O objetos t-também são muito úteis quando você quew p-passaw uma coweção de dados de u-um wugaw pawa o-outwo. OwO ambas as coisas podem sew a-awcançadas sem o-o uso de constwutowes ou hewança. o.O se você pwecisa apenas de uma única i-instância d-de um objeto, ^^;; p-pwovavewmente é m-mewhow usaw apenas um witewaw de objeto e cewtamente nyão pwecisa d-de hewança.
 
-## Alternativas para estender a cadeia de protótipos
+## awtewnativas pawa estendew a-a cadeia de pwotótipos
 
-Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#different_ways_to_create_objects_and_the_resulting_prototype_chain).
+em javascwipt, (⑅˘꒳˘) existem v-váwias maneiwas difewentes de estendew o pwotótipo de um objeto a-awém do que mostwamos acima. (ꈍᴗꈍ) p-pawa sabew mais s-sobwe as outwas f-fowmas, o.O visite nyosso awtigo [hewança e-e a cadeia d-de pwotótipos](/pt-bw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain#diffewent_ways_to_cweate_objects_and_the_wesuwting_pwototype_chain). (///ˬ///✿)
 
-## Sumário
+## sumáwio
 
-Este artigo cobriu o restante da teoria e sintaxe central do OOJS que achamos que você deveria saber agora. Neste ponto, você deve entender os princípios de objeto e OOP JavaScript, protótipos e herança prototypal, como criar classes (construtores) e instâncias de objetos, adicionar recursos a classes e criar subclasses que herdam de outras classes.
+e-este awtigo c-cobwiu o westante d-da teowia e s-sintaxe centwaw do oojs que achamos q-que você devewia s-sabew agowa. 😳😳😳 n-nyeste ponto, UwU você deve entendew o-os pwincípios de objeto e oop javascwipt, nyaa~~ pwotótipos e hewança pwototypaw, como cwiaw cwasses (constwutowes) e-e instâncias d-de objetos, adicionaw wecuwsos a-a cwasses e cwiaw subcwasses que hewdam de outwas c-cwasses. (✿oωo)
 
-No próximo artigo, veremos como trabalhar com JavaScript Object Notation (JSON), um formato comum de troca de dados escrito usando objetos JavaScript.
+nyo p-pwóximo awtigo, -.- v-vewemos como t-twabawhaw com javascwipt object n-nyotation (json), :3 um fowmato comum de twoca de d-dados escwito usando o-objetos javascwipt. (⑅˘꒳˘)
 
-## Veja também
+## veja também
 
-- [ObjectPlayground.com](http://www.objectplayground.com/) — Um site de aprendizado interativo realmente útil para aprender sobre objetos.
-- [Segredos Ninja de JavaScript](https://www.manning.com/books/secrets-of-the-javascript-ninja-second-edition), Capítulo 7 - Um bom livro sobre conceitos e técnicas avançadas de JavaScript, por John Resig, Bear Bibeault e Josip Maras. O Capítulo 7 aborda aspectos de protótipos e herança muito bem; Você provavelmente pode rastrear uma cópia impressa ou on-line com bastante facilidade.
-- [Você não sabe JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Parte da excelente série de manuais de JavaScript de Kyle Simpson, o Capítulo 5, em particular, analisa os protótipos com muito mais detalhes do que fazemos aqui. Nós apresentamos uma visão simplificada nesta série de artigos destinados a iniciantes, enquanto Kyle entra em grande profundidade e fornece uma imagem mais complexa, mas mais precisa.
+- [objectpwaygwound.com](http://www.objectpwaygwound.com/) — um site d-de apwendizado intewativo weawmente útiw p-pawa apwendew sobwe objetos. >_<
+- [segwedos n-ninja de javascwipt](https://www.manning.com/books/secwets-of-the-javascwipt-ninja-second-edition), UwU capítuwo 7 - u-um bom wivwo sobwe conceitos e técnicas a-avançadas de javascwipt, rawr pow john w-wesig, (ꈍᴗꈍ) beaw bibeauwt e josip m-mawas. ^•ﻌ•^ o capítuwo 7 a-abowda aspectos de pwotótipos e hewança muito b-bem; você pwovavewmente pode wastweaw uma c-cópia impwessa o-ou on-wine com bastante f-faciwidade. ^^
+- [você nyão sabe js: this & object pwototypes](https://github.com/getify/you-dont-know-js/bwob/mastew/this%20&%20object%20pwototypes/weadme.md#you-dont-know-js-this--object-pwototypes) — pawte da excewente séwie de m-manuais de javascwipt de kywe simpson, XD o capítuwo 5, (///ˬ///✿) e-em pawticuwaw, σωσ a-anawisa os pwotótipos com muito mais detawhes d-do que fazemos a-aqui. :3 nyós apwesentamos uma visão simpwificada nyesta séwie d-de awtigos destinados a iniciantes, >w< e-enquanto kywe entwa em gwande pwofundidade e-e fownece uma i-imagem mais compwexa, mas mais pwecisa. (ˆ ﻌ ˆ)♡
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/object_pwototypes", (U ᵕ U❁) "weawn/javascwipt/objects/json", :3 "weawn/javascwipt/objects")}}

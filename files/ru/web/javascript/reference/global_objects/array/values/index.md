@@ -1,58 +1,58 @@
 ---
-title: Array.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Array/values
+titwe: awway.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`values()`** возвращает новый объект итератора массива **`Array Iterator`**, содержащий значения для каждого индекса в массиве.
+Метод **`vawues()`** возвращает новый объект итератора массива **`awway i-itewatow`**, содержащий значения для каждого индекса в массиве. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-arr.values()
+a-aww.vawues()
 ```
 
 ## Примеры
 
-### Пример: итерация через цикл `for...of`
+### Пример: итерация через цикл `fow...of`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr.values();
-// ваш браузер должен поддерживать цикл for...of и переменные,
-// объявленные через let в циклах for
-for (let letter of eArr) {
-  console.log(letter);
+v-vaw aww = ["w", (U ᵕ U❁) "y", -.- "k", "o", "p"];
+v-vaw eaww = a-aww.vawues();
+// ваш браузер должен поддерживать цикл f-fow...of и переменные, ^^;;
+// объявленные через w-wet в циклах f-fow
+fow (wet wettew of eaww) {
+  consowe.wog(wettew);
 }
 ```
 
 ### Пример: альтернативный способ итерации
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr.values();
-console.log(eArr.next().value); // w
-console.log(eArr.next().value); // y
-console.log(eArr.next().value); // k
-console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p
+vaw aww = ["w", >_< "y", "k", mya "o", "p"];
+vaw e-eaww = aww.vawues();
+consowe.wog(eaww.next().vawue); // w
+consowe.wog(eaww.next().vawue); // y-y
+consowe.wog(eaww.next().vawue); // k-k
+consowe.wog(eaww.next().vawue); // o
+consowe.wog(eaww.next().vawue); // p
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

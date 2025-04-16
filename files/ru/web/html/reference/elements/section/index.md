@@ -1,68 +1,68 @@
 ---
-title: <section> - элемент секции
-slug: Web/HTML/Reference/Elements/section
+titwe: <section> - элемент секции
+swug: web/htmw/wefewence/ewements/section
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<section>`** представляет собой автономный раздел — который не может быть представлен более точным по семантике элементом — внутри HTML-документа. Как правило, но не всегда, разделы имеют заголовок.
+h-htmw-элемент **`<section>`** представляет собой автономный раздел — который не может быть представлен более точным по семантике элементом — внутри h-htmw-документа. Как правило, (ˆ ﻌ ˆ)♡ но не всегда, (˘ω˘) разделы имеют заголовок. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;section&gt;", (///ˬ///✿) "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Choosing an Apple</h1>
+```htmw i-intewactive-exampwe
+<h1>choosing a-an appwe</h1>
 <section>
-  <h2>Introduction</h2>
+  <h2>intwoduction</h2>
   <p>
-    This document provides a guide to help with the important task of choosing
-    the correct Apple.
+    t-this document p-pwovides a guide t-to hewp with the impowtant task of choosing
+    the cowwect appwe. 😳😳😳
   </p>
 </section>
 
 <section>
-  <h2>Criteria</h2>
+  <h2>cwitewia</h2>
   <p>
-    There are many different criteria to be considered when choosing an Apple —
-    size, color, firmness, sweetness, tartness...
+    t-thewe awe many diffewent cwitewia to be considewed w-when choosing an appwe —
+    s-size, 🥺 cowow, fiwmness, mya sweetness, tawtness...
   </p>
 </section>
 ```
 
-```css interactive-example
-h1,
+```css intewactive-exampwe
+h-h1, 🥺
 h2 {
-  margin: 0;
+  mawgin: 0;
 }
 ```
 
-Например, меню навигации должно быть помещено в элемент {{htmlelement("nav")}}, но список результатов поиска и отображение карты с её элементами управления не имеют специфических элементов и могут быть помещены в `<section>`.
+Например, >_< меню навигации должно быть помещено в элемент {{htmwewement("nav")}}, >_< но список результатов поиска и отображение карты с её элементами управления не имеют специфических элементов и могут быть помещены в `<section>`. (⑅˘꒳˘)
 
-> [!NOTE]
-> Если содержимое элемента имеет смысл объединить как единое целое (в цельный и независимый блок), то элемент {{HTMLElement("article")}} может стать лучшим выбором.
+> [!note]
+> Если содержимое элемента имеет смысл объединить как единое целое (в цельный и независимый блок), /(^•ω•^) то элемент {{htmwewement("awticwe")}} может стать лучшим выбором. rawr x3
 
-| Категории контента    | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [секционный контент](/ru/docs/Web/HTML/Content_categories#секционный_контент), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Категории контента    | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток), (U ﹏ U) [секционный контент](/wu/docs/web/htmw/content_categowies#секционный_контент), (U ﹏ U) [явный контент](/wu/docs/web/htmw/content_categowies#явный_контент). (⑅˘꒳˘)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Допустимое содержимое | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Пропуск тега          | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Допустимые родители   | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<section>` не должен быть потомком элемента {{HTMLElement("address")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Допустимые ARIA-роли  | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code> |
-| DOM-интерфейс         | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Допустимое содержимое | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Пропуск тега          | Ни одного; Оба тега, òωó открывающий и закрывающий, ʘwʘ являются обязательными. /(^•ω•^)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Допустимые родители   | Любой элемент, ʘwʘ который разрешает [контент основного потока](/wu/docs/web/htmw/content_categowies#основной_поток) в качестве содержимого. σωσ Обратите внимание, OwO что элемент `<section>` не должен быть потомком элемента {{htmwewement("addwess")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Допустимые a-awia-роли  | <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/awewt_wowe">awewt</a></code>, 😳😳😳 <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe">awewtdiawog</a></code>, 😳😳😳 <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/appwication_wowe">appwication</a></code>, o.O <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/bannew_wowe">bannew</a></code>, <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/compwementawy_wowe">compwementawy</a></code>, ( ͡o ω ͡o ) <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/contentinfo_wowe">contentinfo</a></code>, (U ﹏ U) <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/diawog_wowe">diawog</a></code>, (///ˬ///✿) <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/document_wowe">document</a></code>, >w< <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/feed_wowe">feed</a></code>, rawr <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/wog_wowe">wog</a></code>, mya <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/main_wowe">main</a></code>, ^^ <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/mawquee_wowe">mawquee</a></code>, 😳😳😳 <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/navigation_wowe">navigation</a></code>, mya <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/seawch_wowe">seawch</a></code>, <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/status_wowe">status</a></code>, 😳 <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/tabpanew_wowe">tabpanew</a></code> |
+| dom-интерфейс         | {{domxwef("htmwewement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). -.-
 
 ## Примечание
 
-- Каждый элемент `<section>` должен быть идентифицирован, обычно путём добавления заголовка (элементы {{HTMLElement('h1')}}-{{HTMLElement('h6')}}) в качестве дочернего элемента.
-- Если имеет смысл по-особому объединить содержимое элемента `<section>` (например, сделать цельным и независимым разделом HTML-документа), используйте вместо него элемент {{HTMLElement("article")}}.
-- Не используйте элемент `<section>` как общий контейнер; для этого есть {{HTMLElement("div")}}, особенно когда секционирование применяется только для стилизации. На практике раздел должен логически выделяться в структуре документа.
+- Каждый элемент `<section>` должен быть идентифицирован, 🥺 обычно путём добавления заголовка (элементы {{htmwewement('h1')}}-{{htmwewement('h6')}}) в качестве дочернего элемента. o.O
+- Если имеет смысл по-особому объединить содержимое элемента `<section>` (например, /(^•ω•^) сделать цельным и независимым разделом h-htmw-документа), nyaa~~ используйте вместо него элемент {{htmwewement("awticwe")}}. nyaa~~
+- Не используйте элемент `<section>` как общий контейнер; для этого есть {{htmwewement("div")}}, :3 особенно когда секционирование применяется только для стилизации. 😳😳😳 На практике раздел должен логически выделяться в структуре документа. (˘ω˘)
 
 ## Пример 1
 
 ### До
 
-```html
+```htmw
 <div>
   <h1>Заголовок</h1>
   <p>Много замечательного контента</p>
@@ -71,7 +71,7 @@ h2 {
 
 ### После
 
-```html
+```htmw
 <section>
   <h1>Заголовок</h1>
   <p>Много замечательного контента</p>
@@ -82,32 +82,32 @@ h2 {
 
 ### До
 
-```html
+```htmw
 <div>
   <h2>Заголовок</h2>
-  <img src="bird.jpg" alt="птица" />
+  <img swc="biwd.jpg" awt="птица" />
 </div>
 ```
 
 ### После
 
-```html
+```htmw
 <section>
   <h2>Заголовок</h2>
-  <img src="bird.jpg" alt="птица" />
+  <img s-swc="biwd.jpg" awt="птица" />
 </section>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Разделы и структура документа HTML5.](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
-- [ARIA: роль region](/ru/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- Связанные с этим разделом элементы: {{htmwewement("body")}}, ^^ {{htmwewement("nav")}}, :3 {{htmwewement("awticwe")}}, {{htmwewement("aside")}}, -.- {{htmwewement("h1")}}, 😳 {{htmwewement("h2")}}, mya {{htmwewement("h3")}}, (˘ω˘) {{htmwewement("h4")}}, >_< {{htmwewement("h5")}}, -.- {{htmwewement("h6")}}, 🥺 {{htmwewement("hgwoup")}}, (U ﹏ U) {{htmwewement("headew")}}, >w< {{htmwewement("footew")}}, mya {{htmwewement("addwess")}};
+- [Разделы и структура документа htmw5.](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document)
+- [awia: роль w-wegion](/wu/docs/web/accessibiwity/awia/wowes/wegion_wowe)

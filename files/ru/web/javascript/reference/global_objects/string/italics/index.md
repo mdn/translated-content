@@ -1,58 +1,58 @@
 ---
-title: String.prototype.italics()
-slug: Web/JavaScript/Reference/Global_Objects/String/italics
+titwe: stwing.pwototype.itawics()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/itawics
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`italics()`** создаёт HTML-элемент {{HTMLElement("i")}}, заставляющий строку отображаться курсивом.
+Метод **`itawics()`** создаёт h-htmw-элемент {{htmwewement("i")}}, (⑅˘꒳˘) заставляющий строку отображаться курсивом.
 
 ## Синтаксис
 
 ```
-str.italics()
+s-stw.itawics()
 ```
 
 ## Описание
 
-Метод `italics()` заключает строку в тег `<i>`: `"<i>str</i>"`.
+Метод `itawics()` заключает строку в тег `<i>`: `"<i>stw</i>"`. ( ͡o ω ͡o )
 
 ## Примеры
 
-### Пример: использование метода `italics()`
+### Пример: использование метода `itawics()`
 
 В следующем примере демонстрируется использование нескольких строковых методов для изменения форматирования строки:
 
 ```js
-var worldString = "Привет, мир";
+v-vaw wowwdstwing = "Привет, UwU мир";
 
-document.write(worldString.blink());
-document.write(worldString.bold());
-document.write(worldString.italics());
-document.write(worldString.strike());
+d-document.wwite(wowwdstwing.bwink());
+d-document.wwite(wowwdstwing.bowd());
+d-document.wwite(wowwdstwing.itawics());
+d-document.wwite(wowwdstwing.stwike());
 ```
 
-Этот пример генерирует такой же вывод, как и следующий HTML:
+Этот пример генерирует такой же вывод, rawr x3 как и следующий h-htmw:
 
-```html
-<blink>Привет, мир</blink>
-<b>Привет, мир</b>
-<i>Привет, мир</i>
-<strike>Привет, мир</strike>
+```htmw
+<bwink>Привет, rawr мир</bwink>
+<b>Привет, σωσ мир</b>
+<i>Привет, σωσ мир</i>
+<stwike>Привет, >_< мир</stwike>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

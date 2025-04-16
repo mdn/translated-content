@@ -1,71 +1,71 @@
 ---
-title: DataView.prototype.setInt8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+titwe: dataview.pwototype.setint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setint8
+w-w10n:
+  souwcecommit: e-e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`setInt8()`** экземпляров {{jsxref("DataView")}} принимает число и сохраняет его в форме 8-битного целого числа со знаком в байте, определённом в смещении этого `DataView`.
+Метод **`setint8()`** экземпляров {{jsxwef("dataview")}} принимает число и сохраняет его в форме 8-битного целого числа со знаком в байте, mya определённом в смещении этого `dataview`. mya
 
-{{InteractiveExample("JavaScript Demo: DataView.setInt8()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew w-with a size i-in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+const view = new dataview(buffew);
+view.setint8(1, 😳 127); // max s-signed 8-bit integew
 
-console.log(view.getInt8(1));
-// Expected output: 127
+consowe.wog(view.getint8(1));
+// expected o-output: 127
 ```
 
 ## Синтаксис
 
-```js-nolint
-setInt8(byteOffset, value)
+```js-nowint
+setint8(byteoffset, v-vawue)
 ```
 
 ### Параметры
 
-- `byteOffset`
-  - : Смещение в байтах от начала `DataView`, в котором будут храниться данные.
-- `value`
-  - : Устанавливаемое значение. На данный момент значение кодируется в байтах.
+- `byteoffset`
+  - : Смещение в байтах от начала `dataview`, XD в котором будут храниться данные. :3
+- `vawue`
+  - : Устанавливаемое значение. 😳😳😳 На данный момент значение кодируется в байтах. -.-
 
 ### Возвращаемое значение
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. ( ͡o ω ͡o )
 
 ### Исключения
 
-- {{jsxref("RangeError")}}
-  - : Возникает, если `byteOffset` выходит за пределы `DataView`.
+- {{jsxwef("wangeewwow")}}
+  - : Возникает, rawr x3 если `byteoffset` выходит за пределы `dataview`. nyaa~~
 
 ## Примеры
 
-### Использование setInt8()
+### Использование setint8()
 
 ```js
-const buffer = new ArrayBuffer(10);
-const dataview = new DataView(buffer);
-dataview.setInt8(0, 3);
-dataview.getInt8(0); // 3
+const buffew = nyew awwaybuffew(10);
+c-const dataview = new dataview(buffew);
+d-dataview.setint8(0, /(^•ω•^) 3);
+dataview.getint8(0); // 3
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Типизированные массивы в JavaScript](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Int8Array")}}
+- [Типизированные массивы в j-javascwipt](/wu/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("int8awway")}}

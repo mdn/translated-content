@@ -1,82 +1,82 @@
 ---
-title: Расширения браузера
-slug: Mozilla/Add-ons/WebExtensions
+titwe: Расширения браузера
+swug: moziwwa/add-ons/webextensions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-[WebExtension API](/ru/docs/Mozilla/Add-ons/WebExtensions) — кросс-браузерная система разработки дополнений браузера.
-В значительной степени эта система совместима с [Chrome Extensions API](https://developer.chrome.com/docs/extensions), которая поддерживается в Google Chrome и Opera. Расширения, написанные для этих браузеров, в большинстве случаев будут работать с Firefox или [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/) [лишь с минимальными изменениями](/ru/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome). Эти API также полностью совместимы с [мультипоточным Firefox](/ru/docs/Mozilla/Firefox/Multiprocess_Firefox).
+[webextension a-api](/wu/docs/moziwwa/add-ons/webextensions) — кросс-браузерная система разработки дополнений браузера. OwO
+В значительной степени эта система совместима с [chwome e-extensions a-api](https://devewopew.chwome.com/docs/extensions), (U ﹏ U) которая поддерживается в g-googwe chwome и o-opewa. >_< Расширения, rawr x3 написанные для этих браузеров, mya в большинстве случаев будут работать с f-fiwefox или [micwosoft e-edge](https://devewopew.micwosoft.com/en-us/micwosoft-edge/pwatfowm/documentation/extensions/) [лишь с минимальными изменениями](/wu/docs/moziwwa/add-ons/webextensions/powting_fwom_googwe_chwome). nyaa~~ Эти a-api также полностью совместимы с [мультипоточным fiwefox](/wu/docs/moziwwa/fiwefox/muwtipwocess_fiwefox). (⑅˘꒳˘)
 
 ### Приступая к работе
 
-- [Что такое расширения?](/ru/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
-- [Ваше первое расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
-- [Ваше второе расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
-- [Внутреннее устройство расширения](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [Примеры расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [Что такое расширения?](/wu/docs/moziwwa/add-ons/webextensions/nani_awe_webextensions)
+- [Ваше первое расширение](/wu/docs/moziwwa/add-ons/webextensions/youw_fiwst_webextension)
+- [Ваше второе расширение](/wu/docs/moziwwa/add-ons/webextensions/youw_second_webextension)
+- [Внутреннее устройство расширения](/wu/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension)
+- [Примеры расширений](/wu/docs/moziwwa/add-ons/webextensions/exampwes)
 
-### How to
+### how to
 
-- [Перехват HTTP-запросов](/ru/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests)
-- [Изменить веб-страницу](/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page)
-- [Добавить кнопку на панель инструментов](/ru/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Реализация страницы настроек](/ru/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [Работа с буфером обмена](/ru/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
+- [Перехват http-запросов](/wu/docs/moziwwa/add-ons/webextensions/intewcept_http_wequests)
+- [Изменить веб-страницу](/wu/docs/moziwwa/add-ons/webextensions/modify_a_web_page)
+- [Добавить кнопку на панель инструментов](/wu/docs/moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw)
+- [Реализация страницы настроек](/wu/docs/moziwwa/add-ons/webextensions/impwement_a_settings_page)
+- [Работа с буфером обмена](/wu/docs/moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd)
 - Работа с вкладками браузера
 - Доступ и изменение закладок
 - Доступ и изменение куки (cookies)
 
 ### Интерфейс пользователя
 
-- [Введение](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface)
-- [Кнопка на панели инструментов](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)
-- [Кнопка в адресной строке](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- [Всплывающие окна](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
-- [Контекстное меню](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
-- [Боковые панели](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
-- [Страница настройки дополнения](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_page)
-- [Дополнительные web-страницы](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)
-- [Уведомления](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
-- [Угадывание адреса по мере ввода](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
-- [Панели инструмента разработчика](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
+- [Введение](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface)
+- [Кнопка на панели инструментов](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button)
+- [Кнопка в адресной строке](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions)
+- [Всплывающие окна](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/popups)
+- [Контекстное меню](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/context_menu_items)
+- [Боковые панели](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws)
+- [Страница настройки дополнения](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/options_page)
+- [Дополнительные w-web-страницы](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages)
+- [Уведомления](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/notifications)
+- [Угадывание адреса по мере ввода](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/omnibox)
+- [Панели инструмента разработчика](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface/devtoows_panews)
 
 ### Основные понятия
 
-- [Обзор JavaScript API](/ru/docs/Mozilla/Add-ons/WebExtensions/API)
-- [Компоненты пользовательского интерфейса](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface)
-- [Скрипты Content scripts](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [Match patterns (шаблоны совпадения)](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
-- [Internationalization](/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
-- [Content Security Policy (политика безопасного контента)](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Native messaging (нативный обмен сообщениями)](/ru/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
+- [Обзор javascwipt api](/wu/docs/moziwwa/add-ons/webextensions/api)
+- [Компоненты пользовательского интерфейса](/wu/docs/moziwwa/add-ons/webextensions/usew_intewface)
+- [Скрипты c-content scwipts](/wu/docs/moziwwa/add-ons/webextensions/content_scwipts)
+- [match pattewns (шаблоны совпадения)](/wu/docs/moziwwa/add-ons/webextensions/match_pattewns)
+- [intewnationawization](/wu/docs/moziwwa/add-ons/webextensions/intewnationawization)
+- [content s-secuwity powicy (политика безопасного контента)](/wu/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy)
+- [native messaging (нативный обмен сообщениями)](/wu/docs/moziwwa/add-ons/webextensions/native_messaging)
 
 ### Адаптация
 
-- [Портирование расширения из Google Chrome](/ru/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome)
-- [Портирование старых дополнений Firefox](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/)
-- [Сравнение с Add-on SDK](https://extensionworkshop.com/documentation/develop/comparison-with-the-add-on-sdk/)
-- [Сравнение с XUL/XPCOM-расширениями](https://extensionworkshop.com/documentation/develop/comparison-with-xul-xpcom-extensions/)
-- [Несовместимость с Chrome](/ru/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+- [Портирование расширения из googwe chwome](/wu/docs/moziwwa/add-ons/webextensions/powting_fwom_googwe_chwome)
+- [Портирование старых дополнений f-fiwefox](https://extensionwowkshop.com/documentation/devewop/powting-a-wegacy-fiwefox-extension/)
+- [Сравнение с add-on sdk](https://extensionwowkshop.com/documentation/devewop/compawison-with-the-add-on-sdk/)
+- [Сравнение с x-xuw/xpcom-расширениями](https://extensionwowkshop.com/documentation/devewop/compawison-with-xuw-xpcom-extensions/)
+- [Несовместимость с c-chwome](/wu/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities)
 
-### Рабочий процесс (workflow) Firefox
+### Рабочий процесс (wowkfwow) fiwefox
 
-- [Установка](/ru/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
-- [Отладка](/ru/docs/Mozilla/Add-ons/WebExtensions/Debugging)
-- [Начало работы с инструментом Web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
-- [Справочник команд Web-ext](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/)
-- [Расширения и Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)
-- [Публикация вашего расширения](https://extensionworkshop.com/documentation/publish/package-your-extension/)
+- [Установка](/wu/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox)
+- [Отладка](/wu/docs/moziwwa/add-ons/webextensions/debugging)
+- [Начало работы с инструментом web-ext](https://extensionwowkshop.com/documentation/devewop/getting-stawted-with-web-ext/)
+- [Справочник команд web-ext](https://extensionwowkshop.com/documentation/devewop/web-ext-command-wefewence/)
+- [Расширения и add-on id](https://extensionwowkshop.com/documentation/devewop/extensions-and-the-add-on-id/)
+- [Публикация вашего расширения](https://extensionwowkshop.com/documentation/pubwish/package-youw-extension/)
 
 ### Справочники
 
-- [Обзор JavaScript API](/ru/docs/Mozilla/Add-ons/WebExtensions/API)
-- [Таблицы совместимости браузера для JavaScript APIs](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [Обзор j-javascwipt api](/wu/docs/moziwwa/add-ons/webextensions/api)
+- [Таблицы совместимости браузера для javascwipt apis](/wu/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)
 
-#### JavaScript APIs
+#### javascwipt a-apis
 
-{{ ListSubpages ("/ru/Add-ons/WebExtensions/API") }}
+{{ wistsubpages ("/wu/add-ons/webextensions/api") }}
 
-#### Manifest keys
+#### manifest keys
 
-{{ ListSubpages ("/ru/Add-ons/WebExtensions/manifest.json") }}
+{{ w-wistsubpages ("/wu/add-ons/webextensions/manifest.json") }}

@@ -1,112 +1,112 @@
 ---
-title: downloads
-slug: Mozilla/Add-ons/WebExtensions/API/downloads
+titwe: downwoads
+swug: moziwwa/add-ons/webextensions/api/downwoads
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Позволяет расширениям взаимодействовать с менеджером загрузки браузера. Этот модуль API можно использовать для загрузки, отмены, приостановки, возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере.
+Позволяет расширениям взаимодействовать с менеджером загрузки браузера. rawr x3 Этот модуль a-api можно использовать для загрузки, -.- отмены, ^^ приостановки, (⑅˘꒳˘) возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере. nyaa~~
 
-Для использования этого API вам необходимо указать "downloads" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) в вашем [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) файле.
+Для использования этого a-api вам необходимо указать "downwoads" [api p-pewmission](/wu/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) в вашем [manifest.json](/wu/docs/moziwwa/add-ons/webextensions/manifest.json) файле. /(^•ω•^)
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
-  - : Определяет действия в случае, если имя загружаемого файла конфликтует с именем существующего файла.
-- {{WebExtAPIRef("downloads.InterruptReason")}}
-  - : Defines a set of possible reasons why a download was interrupted.
-- {{WebExtAPIRef("downloads.DangerType")}}
-  - : Defines a set of common warnings of possible dangers associated with downloadable files.
-- {{WebExtAPIRef("downloads.State")}}
-  - : Defines different states that a current download can be in.
-- {{WebExtAPIRef("downloads.DownloadItem")}}
-  - : Represents a downloaded file.
-- {{WebExtAPIRef("downloads.StringDelta")}}
-  - : Represents the difference between two strings.
-- {{WebExtAPIRef("downloads.DoubleDelta")}}
-  - : Represents the difference between two doubles.
-- {{WebExtAPIRef("downloads.BooleanDelta")}}
-  - : Represents the difference between two booleans.
-- {{WebExtAPIRef("downloads.DownloadTime")}}
-  - : Represents the time a download took to complete.
-- {{WebExtAPIRef("downloads.DownloadQuery")}}
-  - : Defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
+- {{webextapiwef("downwoads.fiwenameconfwictaction")}}
+  - : Определяет действия в случае, (U ﹏ U) если имя загружаемого файла конфликтует с именем существующего файла. 😳😳😳
+- {{webextapiwef("downwoads.intewwuptweason")}}
+  - : d-defines a s-set of possibwe w-weasons why a downwoad w-was intewwupted. >w<
+- {{webextapiwef("downwoads.dangewtype")}}
+  - : defines a set of common wawnings of possibwe dangews associated w-with downwoadabwe fiwes. XD
+- {{webextapiwef("downwoads.state")}}
+  - : defines d-diffewent states that a cuwwent d-downwoad can be in.
+- {{webextapiwef("downwoads.downwoaditem")}}
+  - : wepwesents a downwoaded f-fiwe. o.O
+- {{webextapiwef("downwoads.stwingdewta")}}
+  - : wepwesents t-the diffewence b-between two stwings. mya
+- {{webextapiwef("downwoads.doubwedewta")}}
+  - : wepwesents the diffewence between t-two doubwes. 🥺
+- {{webextapiwef("downwoads.booweandewta")}}
+  - : wepwesents the diffewence between two booweans. ^^;;
+- {{webextapiwef("downwoads.downwoadtime")}}
+  - : wepwesents the t-time a downwoad took to compwete. :3
+- {{webextapiwef("downwoads.downwoadquewy")}}
+  - : d-defines a-a set of pawametews t-that can be u-used to seawch the downwoads managew fow a specific s-set of downwoads.
 
-## Functions
+## functions
 
-- {{WebExtAPIRef("downloads.download()")}}
-  - : Downloads a file, given its URL and other optional preferences.
-- {{WebExtAPIRef("downloads.search()")}}
-  - : Queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
-- {{WebExtAPIRef("downloads.pause()")}}
-  - : Pauses a download.
-- {{WebExtAPIRef("downloads.resume()")}}
-  - : Resumes a paused download.
-- {{WebExtAPIRef("downloads.cancel()")}}
-  - : Cancels a download.
-- {{WebExtAPIRef("downloads.getFileIcon()")}}
-  - : Retrieves an icon for the specified download.
-- {{WebExtAPIRef("downloads.open()")}}
-  - : Opens the downloaded file with its associated application.
-- {{WebExtAPIRef("downloads.show()")}}
-  - : Opens the platform's file manager application to show the downloaded file in its containing folder.
-- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
-  - : Opens the platform's file manager application to show the default downloads folder.
-- {{WebExtAPIRef("downloads.erase()")}}
-  - : Erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.
-- {{WebExtAPIRef("downloads.removeFile()")}}
-  - : Removes a downloaded file from disk, but not from the browser's download history.
-- {{WebExtAPIRef("downloads.acceptDanger()")}}
-  - : Prompts the user to accept or cancel a dangerous download.
-- {{WebExtAPIRef("downloads.drag()")}}
-  - : Initiates dragging the downloaded file to another application.
-- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
-  - : Enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.
+- {{webextapiwef("downwoads.downwoad()")}}
+  - : downwoads a-a fiwe, (U ﹏ U) given its uww and othew optionaw pwefewences. OwO
+- {{webextapiwef("downwoads.seawch()")}}
+  - : quewies the {{webextapiwef("downwoads.downwoaditem", 😳😳😳 "downwoaditems")}} avaiwabwe in the bwowsew's d-downwoads managew, (ˆ ﻌ ˆ)♡ and wetuwns t-those that m-match the specified s-seawch cwitewia. XD
+- {{webextapiwef("downwoads.pause()")}}
+  - : pauses a downwoad. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("downwoads.wesume()")}}
+  - : wesumes a paused downwoad. ( ͡o ω ͡o )
+- {{webextapiwef("downwoads.cancew()")}}
+  - : c-cancews a downwoad. rawr x3
+- {{webextapiwef("downwoads.getfiweicon()")}}
+  - : w-wetwieves an icon fow the s-specified downwoad. nyaa~~
+- {{webextapiwef("downwoads.open()")}}
+  - : o-opens the downwoaded fiwe with i-its associated appwication. >_<
+- {{webextapiwef("downwoads.show()")}}
+  - : o-opens the pwatfowm's fiwe managew appwication t-to show the downwoaded f-fiwe in its containing fowdew. ^^;;
+- {{webextapiwef("downwoads.showdefauwtfowdew()")}}
+  - : o-opens t-the pwatfowm's fiwe managew appwication to show the defauwt downwoads fowdew. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("downwoads.ewase()")}}
+  - : ewases matching {{webextapiwef("downwoads.downwoaditem", ^^;; "downwoaditems")}} f-fwom the b-bwowsew's downwoad histowy, (⑅˘꒳˘) without d-deweting the d-downwoaded fiwes f-fwom disk.
+- {{webextapiwef("downwoads.wemovefiwe()")}}
+  - : wemoves a downwoaded fiwe fwom disk, rawr x3 but nyot fwom t-the bwowsew's downwoad histowy. (///ˬ///✿)
+- {{webextapiwef("downwoads.acceptdangew()")}}
+  - : pwompts the usew to accept ow cancew a d-dangewous downwoad. 🥺
+- {{webextapiwef("downwoads.dwag()")}}
+  - : initiates dwagging t-the downwoaded f-fiwe to anothew a-appwication. >_<
+- {{webextapiwef("downwoads.setshewfenabwed()")}}
+  - : enabwes o-ow disabwes the g-gway shewf at the b-bottom of evewy w-window associated with the cuwwent bwowsew pwofiwe. UwU t-the shewf w-wiww be disabwed a-as wong as at weast o-one extension h-has disabwed it. >_<
 
-## Events
+## events
 
-- {{WebExtAPIRef("downloads.onCreated")}}
-  - : Fires with the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} object when a download begins.
-- {{WebExtAPIRef("downloads.onErased")}}
-  - : Fires with the `downloadId` when a download is erased from history.
-- {{WebExtAPIRef("downloads.onChanged")}}
-  - : When any of a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}'s properties except `bytesReceived` changes, this event fires with the `downloadId` and an object containing the properties that changed.
+- {{webextapiwef("downwoads.oncweated")}}
+  - : fiwes with the {{webextapiwef("downwoads.downwoaditem", -.- "downwoaditem")}} object w-when a downwoad begins. mya
+- {{webextapiwef("downwoads.onewased")}}
+  - : fiwes with the `downwoadid` when a downwoad is ewased fwom h-histowy. >w<
+- {{webextapiwef("downwoads.onchanged")}}
+  - : when any of a {{webextapiwef("downwoads.downwoaditem", (U ﹏ U) "downwoaditem")}}'s pwopewties e-except `bytesweceived` c-changes, 😳😳😳 t-this event fiwes with the `downwoadid` a-and an object containing t-the pwopewties t-that changed. o.O
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> Этот API основан на Chromium API [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> [!note]
+> Этот api основан на chwomium api [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). òωó
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 😳😳😳 aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and b-binawy fowms, (⑅˘꒳˘) with ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, 🥺 t-this wist o-of conditions and t-the fowwowing discwaimew. OwO
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, >w< this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. 🥺
+//    * n-neithew the nyame of googwe inc. nyaa~~ now the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. ^^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, >w< incwuding, OwO but nyot
+// wimited to, XD the i-impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. in n-nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, ^^;; i-indiwect, 🥺 incidentaw, XD
+// speciaw, e-exempwawy, (U ᵕ U❁) ow c-consequentiaw d-damages (incwuding, :3 but nyot
+// w-wimited to, ( ͡o ω ͡o ) pwocuwement o-of substitute goods ow sewvices; woss of u-use, òωó
+// data, σωσ ow p-pwofits; ow business i-intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (U ᵕ U❁) whethew in c-contwact, (✿oωo) stwict w-wiabiwity, ^^ ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way o-out of the use
+// o-of this softwawe, ^•ﻌ•^ e-even if advised of the possibiwity o-of such damage. XD
 -->

@@ -1,89 +1,89 @@
 ---
-title: "Avaliação: solucionando problemas de acessibilidade"
-slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-original_slug: Learn/Accessibility/Accessibility_troubleshooting
+titwe: "avawiação: sowucionando p-pwobwemas de a-acessibiwidade"
+s-swug: weawn_web_devewopment/cowe/accessibiwity/accessibiwity_twoubweshooting
+owiginaw_swug: w-weawn/accessibiwity/accessibiwity_twoubweshooting
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/accessibiwity/mobiwe", :3 "weawn/accessibiwity")}}
 
-Na avaliação deste módulo, apresentamos a você um site simples com vários problemas de acessibilidade que você precisa diagnosticar e corrigir.
+n-nya a-avawiação deste m-móduwo, ( ͡o ω ͡o ) apwesentamos a-a você um site simpwes com váwios pwobwemas de acessibiwidade que você p-pwecisa diagnosticaw e cowwigiw. òωó
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Conhecimento básico de informática, entendimento básico de HTML, CSS e
-        Javascript, uma compreesão dos
-        <a href="/pt-BR/docs/Learn/Accessibility"
-          >artigos anteriores deste curso</a
-        >.
+        conhecimento b-básico de infowmática, σωσ entendimento básico de htmw, (U ᵕ U❁) c-css e
+        javascwipt, (✿oωo) uma c-compweesão dos
+        <a h-hwef="/pt-bw/docs/weawn/accessibiwity"
+          >awtigos antewiowes deste cuwso</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Testar conhecimentos básicos e fundamentais para a acessibilidade.
+        testaw conhecimentos b-básicos e fundamentais pawa a acessibiwidade. ^•ﻌ•^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ponto de partida
+## ponto de pawtida
 
-Para começar esta avaliação, você deve pegar [o arquivo ZIP que contém os arquivos que compõem o exemplo](https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true). Descompacte o conteúdo em um novo diretório em algum lugar de seu computador.
+pawa começaw e-esta avawiação, XD você deve p-pegaw [o awquivo z-zip que contém o-os awquivos que c-compõem o exempwo](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/assessment-stawt/assessment-fiwes.zip?waw=twue). :3 descompacte o conteúdo em u-um nyovo diwetówio em awgum wugaw de seu computadow. (ꈍᴗꈍ)
 
-O site de avaliação final, deve ser parecido com esse:
+o-o site de avawiação finaw, :3 deve sew pawecido com esse:
 
 ![](assessment-site-finished.png)
 
-Você verá algumas diferenças e/ou problemas com a exibição do estado inicial do site da avaliação - isso se deve principalmente as diferenças na marcação de código, o que, por sua vez, causa alguns problemas de estilo, pois o CSS não está aplicado corretamente. Não se preocupe - você irá corrigir esses problemas nas próximas seções!
+você vewá awgumas difewenças e-e/ou pwobwemas com a exibição d-do estado iniciaw d-do site da a-avawiação - isso se deve pwincipawmente as difewenças nya mawcação d-de código, (U ﹏ U) o-o que, UwU pow sua vez, 😳😳😳 causa a-awguns pwobwemas d-de estiwo, XD pois o css nyão está a-apwicado cowwetamente. o.O nyão s-se pweocupe - você iwá cowwigiw esses pwobwemas n-nyas pwóximas seções! (⑅˘꒳˘)
 
-## Resumo do projeto
+## wesumo d-do pwojeto
 
-Para este projeto, você é apresentado a um site fictício exibindo um artigo sobre ursos. Da forma como ele está, possui vários problemas de acessibilidade - a sua tarefa é explorar o site existente e corrigí-los da melhor forma possível, respondendo as seguintes perguntas.
+pawa este pwojeto, 😳😳😳 v-você é apwesentado a-a um site fictício exibindo um awtigo sobwe uwsos. nyaa~~ da fowma como ewe está, rawr possui váwios pwobwemas d-de acessibiwidade - a-a sua tawefa é expwowaw o site e-existente e c-cowwigí-wos da m-mewhow fowma possívew, -.- wespondendo as seguintes pewguntas. (✿oωo)
 
-### Cor
+### c-cow
 
-O texto é difícil de ler devido ao esquema de cores atual. Você pode fazer um teste do contraste de cor atual (texto/plano de fundo), relatar os resultados do teste e corrigí-lo alterando as cores atribuídas?
+o texto é difíciw de wew devido ao esquema de cowes atuaw. /(^•ω•^) você pode fazew u-um teste do contwaste de cow a-atuaw (texto/pwano d-de fundo), 🥺 wewataw o-os wesuwtados do teste e c-cowwigí-wo awtewando a-as cowes atwibuídas?
 
-### HTML semântico
+### h-htmw semântico
 
-1. O conteúdo ainda não é muito acessível - relate o que acontece quando você tenta navegar utilizando um leitor de telas.
-2. Você consegue atualizar o texto do artigo para facilitar a navegação de usuários de leitores de telas?
-3. A parte do menu de navegação do site (agrupada em `<div class="nav"></div>`) poderia estar mais acessível se estivesse dentro de um elemento semântico de HTML5 mais adequado. Qual elemento deve ser utilizado? Atualize-o.
+1. ʘwʘ o-o conteúdo ainda nyão é muito acessívew - w-wewate o que a-acontece quando v-você tenta nyavegaw u-utiwizando u-um weitow de tewas. UwU
+2. você consegue atuawizaw o texto do awtigo p-pawa faciwitaw a nyavegação de usuáwios de weitowes de tewas?
+3. XD a pawte do menu de nyavegação d-do site (agwupada em `<div cwass="nav"></div>`) podewia estaw m-mais acessívew s-se estivesse d-dentwo de um ewemento semântico d-de htmw5 mais adequado. (✿oωo) quaw ewemento d-deve sew u-utiwizado? atuawize-o. :3
 
-> [!NOTE]
-> Você precisará atualizar os seletores de CSS que estilizam as respectivas tags para seus equivalentes aos cabeçalhos semânticos. Depois de adicionar elementos de parágrafo, você perceberá que a estilização parecerá bem melhor.
+> [!note]
+> você pwecisawá atuawizaw os sewetowes de css que estiwizam as wespectivas t-tags pawa seus equivawentes aos c-cabeçawhos semânticos. (///ˬ///✿) depois d-de adicionaw ewementos d-de pawágwafo, nyaa~~ você pewcebewá que a estiwização p-pawecewá b-bem mewhow. >w<
 
-### As imagens
+### as imagens
 
-As imagens estão atualmente inacessíveis para os usuários do leitor de tela. Você pode consertar isso?
+a-as imagens estão a-atuawmente inacessíveis pawa os usuáwios do weitow de tewa. -.- você pode consewtaw i-isso?
 
-### O "player" de áudio
+### o-o "pwayew" de áudio
 
-1. Foi utilizada o elemento `<audio>` para exibir o "player", porém ele não é acessível para pessoas com deficiência auditiva (surdos) - você consegue adicionar algum tipo de alternativa acessível para esses usuários?
-2. O elemento `<audio>` para utilizar o "player" não é acessível para aqueles que usam navegadores mais antigos que não suportam HTML5. Como você pode fazer com que esses usuários consigam ter acesso ao áudio?
+1. (✿oωo) f-foi utiwizada o ewemento `<audio>` pawa e-exibiw o "pwayew", (˘ω˘) p-powém ewe nyão é acessívew p-pawa pessoas com deficiência auditiva (suwdos) - você consegue adicionaw a-awgum tipo de awtewnativa a-acessívew pawa esses usuáwios?
+2. rawr o e-ewemento `<audio>` p-pawa utiwizaw o "pwayew" nyão é acessívew pawa aquewes que u-usam nyavegadowes mais antigos que nyão supowtam htmw5. OwO como você pode fazew c-com que esses usuáwios consigam tew acesso ao áudio?
 
-### Os formulários
+### o-os f-fowmuwáwios
 
-1. O elemento `<input>` no formulário de pesquisa no topo poderia ter um rótulo, mas não queremos adicionar um rótulo de texto visível que possa prejudicar o design e não seja realmente necessário para os usuários com visão. Como você pode adicionar um rótulo acessível apenas aos leitores de tela?
-2. Os dois elementos `<input>` no formulário de comentários possui rótulos de texto visíveis, mas não estão associados corretamente entre eles. Como você poderia fazer isso? Note que você precisará atualizar algumas regras de CSS também.
+1. ^•ﻌ•^ o ewemento `<input>` nyo fowmuwáwio de pesquisa n-nyo topo podewia t-tew um wótuwo, UwU mas nyão quewemos adicionaw um wótuwo de texto v-visívew que possa pwejudicaw o-o design e nyão seja weawmente nyecessáwio pawa os usuáwios c-com visão. (˘ω˘) como você pode adicionaw u-um wótuwo a-acessívew apenas aos weitowes d-de tewa?
+2. (///ˬ///✿) os dois ewementos `<input>` n-nyo fowmuwáwio d-de comentáwios p-possui wótuwos de texto v-visíveis, σωσ mas n-nyão estão associados cowwetamente entwe ewes. /(^•ω•^) c-como você podewia f-fazew isso? n-nyote que você pwecisawá atuawizaw awgumas wegwas d-de css também. 😳
 
-### Os controles de comentários "exibir/ocultar"
+### os contwowes d-de comentáwios "exibiw/ocuwtaw"
 
-O botão de controle "exibir/ocultar" não está acessível por teclado. Você pode torná-lo acessível, tanto em termos de deixá-lo "focável" através da utilização da tecla tab, como ativá-lo usando a tecla enter?
+o-o botão de contwowe "exibiw/ocuwtaw" nyão está acessívew pow tecwado. 😳 v-você pode towná-wo a-acessívew, (⑅˘꒳˘) t-tanto em tewmos d-de deixá-wo "focávew" atwavés d-da utiwização da tecwa tab, 😳😳😳 como ativá-wo usando a tecwa entew?
 
-### A tabela
+### a tabewa
 
-A tabela de dados não está muito acessível no momento - é difícil para os usuários de leitores de tela associarem linhas e colunas de dados juntas, e a tabela também não possui nenhum tipo de resumo para deixar claro o que mostra. Você pode adicionar alguns recursos ao seu HTML para corrigir esse problema?
+a tabewa d-de dados nyão está muito acessívew n-nyo momento - é difíciw p-pawa os usuáwios de weitowes de t-tewa associawem winhas e cowunas d-de dados juntas, 😳 e-e a tabewa também n-nyão possui n-nyenhum tipo d-de wesumo pawa deixaw cwawo o que mostwa. XD você pode adicionaw awguns wecuwsos ao seu htmw pawa cowwigiw esse pwobwema?
 
-### Outras considerações?
+### o-outwas c-considewações?
 
-Você pode citar mais duas ideias de melhorias que poderiam tornar o site mais acessível?
+v-você pode citaw mais duas i-ideias de mewhowias que podewiam townaw o site mais acessívew?
 
-## Avaliação
+## a-avawiação
 
-Se você está fazendo esta avaliação como parte de um curso, você deverá entregar o seu trabalho para um professor para que possa corrigí-lo. Se você é auto-didata, então você pode obter o guia com a marcação correta perguntando no [tópico de discussão para este exercício](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhh-F4r0i3lAG4IX8kI3Nk9lrJQa0A), ou no canal de IRC [#mdn](irc://irc.mozilla.org/mdn) no [IRC do Mozilla](https://wiki.mozilla.org/IRC&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhgC5oFTH3iLqIFiwi9njruuEgsWHA). Experimente tentar fazer o exercício primeiro - você não ganhará nada trapaceando!
+s-se você está fazendo esta avawiação c-como pawte de um cuwso, mya você devewá e-entwegaw o seu twabawho p-pawa um pwofessow pawa que p-possa cowwigí-wo. ^•ﻌ•^ s-se você é auto-didata, ʘwʘ então você pode obtew o guia com a mawcação cowweta p-pewguntando n-nyo [tópico d-de discussão pawa e-este exewcício](https://discouwse.moziwwa.owg/t/accessibiwity-twoubweshooting-assessment/24691&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=awkjwhh-f4w0i3wag4ix8ki3nk9wwjqa0a), ( ͡o ω ͡o ) o-ou nyo canaw de iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) n-nyo [iwc d-do moziwwa](https://wiki.moziwwa.owg/iwc&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=awkjwhgc5ofth3iwqifiwi9njwuuegswha). mya expewimente tentaw f-fazew o exewcício p-pwimeiwo - você nyão ganhawá n-nyada twapaceando! o.O
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{pweviousmenu("weawn/accessibiwity/mobiwe", (✿oωo) "weawn/accessibiwity")}}

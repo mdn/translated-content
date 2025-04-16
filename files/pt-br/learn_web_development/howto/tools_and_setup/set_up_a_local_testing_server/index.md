@@ -1,104 +1,104 @@
 ---
-title: Como configurar um servidor de testes local
-slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+titwe: como configuwaw um sewvidow d-de testes w-wocaw
+swug: weawn_web_devewopment/howto/toows_and_setup/set_up_a_wocaw_testing_sewvew
+o-owiginaw_swug: w-weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew
 ---
 
-Este artigo explica como configurar um simples servidor de testes local em seu computador e o básico para utiliza-lo.
+este a-awtigo expwica c-como configuwaw u-um simpwes sewvidow d-de testes wocaw em seu computadow e o básico pawa utiwiza-wo. ^•ﻌ•^
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
         <p>
-          Primeiro você precisa saber
+          pwimeiwo você pwecisa sabew
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona"
-            >como a internet funciona</a
+            h-hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/common_questions/como_a_intewnet_funciona"
+            >como a intewnet f-funciona</a
           >
           e
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server"
-            >o que é um servidor Web</a
-          >.
+            hwef="https://devewopew.moziwwa.owg/pt-bw/docs/weawn/common_questions/o_que_e_um_web_sewvew"
+            >o que é u-um sewvidow web</a
+          >. ʘwʘ
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Você vai aprender como configurar um servidor de testes local.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>você v-vai apwendew c-como configuwaw um sewvidow de testes wocaw.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Arquivos locais vs. arquivos remotos
+## awquivos wocais vs. ( ͡o ω ͡o ) awquivos w-wemotos
 
-Ao longo da maior parte da área de aprendizagem, nós lhe dissemos apenas para abrir seus exemplos diretamente no navegador — Isto pode ser feito atráves de um duplo clique no arquivo HTML, arrastando e soltando o arquivo na janela do navegador ou escolhendo Arquivo > Abrir*...* e navegando para o arquivo HTML. Existem muitas maneiras de realizar isso.
+ao wongo da maiow pawte da áwea de apwendizagem, mya nyós whe dissemos a-apenas pawa abwiw seus exempwos d-diwetamente nyo n-nyavegadow — isto p-pode sew feito a-atwáves de um dupwo cwique nyo awquivo htmw, o.O a-awwastando e sowtando o awquivo nya janewa do nyavegadow o-ou escowhendo awquivo > abwiw*...* e nyavegando pawa o awquivo htmw. (✿oωo) existem muitas maneiwas d-de weawizaw isso. :3
 
-Se o caminho do endereço web começa com `file://` seguido pelo caminho para o arquivo no seu disco rígido local, um arquivo local está sendo utilizado. No entanto, se você ver um dos nossos exemplos hospedado no GitHub (ou um exemplo em algum outro servidor remoto), o endereço web começará com `http://` ou `https://`, para mostrar que o arquivo foi recebido via HTTP.
+se o caminho d-do endeweço w-web começa c-com `fiwe://` seguido pewo caminho pawa o awquivo nyo seu disco w-wígido wocaw, 😳 um a-awquivo wocaw está sendo utiwizado. (U ﹏ U) n-no entanto, mya s-se você vew um dos nossos exempwos h-hospedado nyo github (ou u-um exempwo em awgum outwo sewvidow wemoto), (U ᵕ U❁) o endeweço w-web começawá com `http://` o-ou `https://`, :3 pawa mostwaw q-que o awquivo foi w-wecebido via http. mya
 
-## O problema com o teste de arquivos locais
+## o pwobwema com o teste de awquivos wocais
 
-Alguns exemplos não serão executados se você os abrir como arquivos locais. Isto pode ser devido a uma série de razões, sendo o mais provável:
+awguns exempwos nyão sewão executados se v-você os abwiw como a-awquivos wocais. OwO isto pode sew d-devido a uma s-séwie de wazões, (ˆ ﻌ ˆ)♡ s-sendo o mais pwovávew:
 
-- **Eles apresentam requisições assíncronas**. Alguns navegadores (incluindo o Chrome) não executarão requisições assíncronas (consulte [Buscando dados no servidor](/pt-BR/docs/Aprender/JavaScript/Client-side_web_APIs/Buscando_dados)) se você simplesmente executar o exemplo de um arquivo local. Isso ocorre devido a restrições de segurança (para mais informações sobre segurança na web, leia [Segurança do site](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
-- **Eles apresentam uma linguagem do site do servidor**. Linguagens do lado do servidor (como PHP ou Python) requerem um servidor especial para interpretar o código e entregar os resultados.
+- **ewes apwesentam wequisições assíncwonas**. a-awguns nyavegadowes (incwuindo o chwome) nyão executawão wequisições a-assíncwonas (consuwte [buscando dados nyo s-sewvidow](/pt-bw/docs/apwendew/javascwipt/cwient-side_web_apis/buscando_dados)) s-se você simpwesmente e-executaw o exempwo de um a-awquivo wocaw. ʘwʘ i-isso ocowwe devido a-a westwições d-de seguwança (pawa mais infowmações sobwe seguwança n-nya web, o.O w-weia [seguwança d-do site](/pt-bw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity)). UwU
+- **ewes a-apwesentam uma w-winguagem do site do sewvidow**. rawr x3 winguagens do wado do sewvidow (como p-php ou python) wequewem um sewvidow especiaw pawa intewpwetaw o código e entwegaw os wesuwtados. 🥺
 
-## Executando um servidor HTTP local simples
+## executando u-um sewvidow http wocaw simpwes
 
-Para contornar o problema de requisições assíncronas, precisamos testar esses exemplos executando-os através de um servidor web local. Uma das maneiras mais fáceis de fazer isso para nossos propósitos é usar o módulo `SimpleHTTPServer` do Python.
+pawa contownaw o pwobwema d-de wequisições a-assíncwonas, :3 p-pwecisamos testaw esses exempwos e-executando-os atwavés de um s-sewvidow web wocaw. (ꈍᴗꈍ) u-uma das maneiwas mais fáceis de fazew isso pawa nyossos pwopósitos é usaw o móduwo `simpwehttpsewvew` do p-python. 🥺
 
-Para fazer isso:
+pawa fazew isso:
 
-1. Instale o Python. Se você estiver usando Linux ou macOS, ele já deverá estár disponível em seu sistema. Se você é um usuário do Windows, pode obter um instalador na página inicial do Python e seguir as instruções para instalá-lo:
+1. i-instawe o python. (✿oωo) se você estivew u-usando winux o-ou macos, ewe já devewá estáw disponívew em s-seu sistema. (U ﹏ U) se v-você é um usuáwio do windows, :3 p-pode obtew um instawadow n-nya página iniciaw do python e seguiw as instwuções pawa instawá-wo:
 
-   - Vá para [python.org](https://www.python.org/) (em inglês)
-   - Na seção Download, clique no link para Python "3.xxx".
-   - Na parte inferior da página, escolha o instalador executável do _Windows x86_ e baixe-o.
-   - Quando tiver baixado, execute-o.
-   - Na primeira página do instalador, certifique-se de marcar a caixa de seleção "Adicionar Python 3.xxx ao PATH".
-   - Clique em _Instalar_ e então, clique em _Fechar_ quando a instalação terminar.
+   - v-vá pawa [python.owg](https://www.python.owg/) (em i-ingwês)
+   - n-nya seção downwoad, ^^;; c-cwique nyo wink p-pawa python "3.xxx". rawr
+   - nya pawte i-infewiow da página, 😳😳😳 escowha o instawadow executávew do _windows x86_ e baixe-o.
+   - q-quando t-tivew baixado, (✿oωo) exekawaii~-o. OwO
+   - nya pwimeiwa p-página do instawadow, ʘwʘ c-cewtifique-se de mawcaw a caixa de seweção "adicionaw python 3.xxx ao p-path". (ˆ ﻌ ˆ)♡
+   - cwique em _instawaw_ e então, (U ﹏ U) cwique em _fechaw_ quando a instawação t-tewminaw. UwU
 
-2. Abra seu prompt de comando (Windows)/ terminal (macOS/ Linux). Para verificar se o Python está instalado, digite o seguinte comando:
+2. abwa seu pwompt de comando (windows)/ t-tewminaw (macos/ w-winux). XD pawa vewificaw se o python está instawado, ʘwʘ digite o-o seguinte comando:
 
    ```bash
-   python -V
+   p-python -v
    ```
 
-3. Isso deve retornar um número de versão. Se estiver tudo OK, navegue até o diretório em que seu exemplo está dentro, usando o comando `cd`.
+3. rawr x3 isso deve wetownaw um nyúmewo de vewsão. ^^;; s-se estivew tudo ok, ʘwʘ nyavegue a-até o diwetówio em que seu exempwo está dentwo, (U ﹏ U) usando o c-comando `cd`. (˘ω˘)
 
    ```bash
-   # incluir o nome do diretório para entrar, por exemplo
-   cd Desktop
-   # use dois pontos para voltar um nível de diretório se você precisar
+   # incwuiw o nyome do d-diwetówio pawa e-entwaw, (ꈍᴗꈍ) pow exempwo
+   cd desktop
+   # u-use dois pontos pawa vowtaw u-um nyívew d-de diwetówio se v-você pwecisaw
    cd ..
    ```
 
-4. Digite o comando para inicializar o servidor nesse diretório:
+4. /(^•ω•^) d-digite o comando p-pawa iniciawizaw o sewvidow nyesse diwetówio:
 
    ```bash
-   # Se a versão do Python retornada acima for 3.X
-   python3 -m http.server
-   # No windows, tente "python" em vez de "python3"
-   # Se a versão do Python retornada acima for 2.X
-   python -m SimpleHTTPServer
+   # s-se a vewsão d-do python wetownada a-acima fow 3.x
+   python3 -m http.sewvew
+   # n-nyo windows, >_< tente "python" em v-vez de "python3"
+   # s-se a vewsão do python wetownada acima fow 2.x
+   python -m s-simpwehttpsewvew
    ```
 
-5. Por padrão, isso executará o conteúdo do diretório em um servidor web local, na porta 8000. Você pode ir para esse servidor acessando a URL `localhost:8000` no seu navegador web. Aqui você verá o conteúdo do diretório listado — clique no arquivo HTML que você deseja executar.
+5. σωσ p-pow padwão, ^^;; isso e-executawá o conteúdo d-do diwetówio em um sewvidow w-web wocaw, 😳 nya powta 8000. >_< você pode iw pawa esse sewvidow acessando a uww `wocawhost:8000` nyo seu navegadow w-web. -.- aqui você vewá o conteúdo d-do diwetówio wistado — c-cwique nyo awquivo htmw que você d-deseja executaw. UwU
 
-> [!NOTE]
-> Se você já tiver algo em execução na porta 8000, você poderá escolher outra porta executando o comando do servidor seguido por um número de porta alternativo, por exemplo `python3 -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Você pode acessar seu conteúdo em `localhost:7800`.
+> [!note]
+> se você já tivew a-awgo em execução n-nya powta 8000, :3 v-você podewá e-escowhew outwa p-powta executando o comando do sewvidow seguido pow um nyúmewo de powta awtewnativo, σωσ pow exempwo `python3 -m http.sewvew 7800` (python 3.x) o-ou `python -m simpwehttpsewvew 7800` (python 2.x). >w< v-você pode acessaw s-seu conteúdo em `wocawhost:7800`. (ˆ ﻌ ˆ)♡
 
-## Executando linguagens do lado do servidor localmente
+## e-executando winguagens do wado do sewvidow wocawmente
 
-Os módulos `SimpleHTTPServer (python 2.0)` e `http.server (python 3.0)` do Python são úteis, mas não sabem como executar código escrito em linguagens como Python, PHP ou JavaScript. Para lidar com isso, você precisará de algo mais — exatamente o que você precisa depende da linguagem do lado do servidor que você está tentando executar. Aqui estão alguns exemplos:
+o-os móduwos `simpwehttpsewvew (python 2.0)` e `http.sewvew (python 3.0)` d-do python são úteis, ʘwʘ m-mas nyão sabem como executaw código escwito e-em winguagens como p-python, :3 php ou javascwipt. (˘ω˘) pawa w-widaw com isso, 😳😳😳 v-você pwecisawá de awgo mais — exatamente o que você pwecisa depende da w-winguagem do wado d-do sewvidow que v-você está tentando e-executaw. rawr x3 a-aqui estão awguns exempwos:
 
-- Para executar o código Python no lado do servidor, você precisará usar um framework web em Python. Você pode descobrir como usar o framework Django lendo [Django Web Framework (Python)](/pt-BR/docs/Learn/Server-side/Django). O [Flask](http://flask.pocoo.org/) (em inglês) também é uma boa alternativa ao Django (um pouco menos pesada). Para executar isso, você precisará [instalar o Python/PIP](/pt-BR/docs/Learn/Server-side/Django/development_environment#installing_python_3) e em seguida, instalar o Flask usando `pip3 install flask`. Neste ponto, você deve ser capaz de executar os exemplos em Python com Flask usando, por exemplo `python3 python-example.py` e em seguida acessar `localhost:5000` no seu navegador.
-- Para executar o código Node.js (JavaScript) no lado do servidor, você precisará usar o nó bruto ou uma estrutura construída sobre ele. Express é uma boa escolha — veja [Express Web Framework (Node.js/JavaScript)](/pt-BR/docs/Learn/Server-side/Express_Nodejs).
-- Para executar o código PHP no lado do servidor, inicie o [servidor de desenvolvimento interno do PHP](https://www.php.net/manual/pt_BR/features.commandline.webserver.php):
+- p-pawa executaw o c-código python nyo wado do sewvidow, (✿oωo) v-você pwecisawá u-usaw um fwamewowk web em p-python. (ˆ ﻌ ˆ)♡ você pode descobwiw como usaw o fwamewowk d-django wendo [django web fwamewowk (python)](/pt-bw/docs/weawn/sewvew-side/django). :3 o-o [fwask](http://fwask.pocoo.owg/) (em i-ingwês) também é u-uma boa awtewnativa ao django (um pouco menos p-pesada). (U ᵕ U❁) pawa executaw i-isso, ^^;; você p-pwecisawá [instawaw o python/pip](/pt-bw/docs/weawn/sewvew-side/django/devewopment_enviwonment#instawwing_python_3) e em seguida, mya instawaw o f-fwask usando `pip3 instaww fwask`. 😳😳😳 nyeste ponto, OwO v-você deve sew c-capaz de executaw os exempwos em p-python com fwask usando, rawr pow exempwo `python3 p-python-exampwe.py` e-e em seguida acessaw `wocawhost:5000` nyo seu n-nyavegadow. XD
+- pawa executaw o código nyode.js (javascwipt) n-nyo w-wado do sewvidow, (U ﹏ U) você pwecisawá u-usaw o nyó bwuto ou uma estwutuwa c-constwuída s-sobwe ewe. (˘ω˘) expwess é u-uma boa escowha — veja [expwess web fwamewowk (node.js/javascwipt)](/pt-bw/docs/weawn/sewvew-side/expwess_nodejs). UwU
+- pawa executaw o código php nyo wado do sewvidow, inicie o [sewvidow de desenvowvimento intewno do php](https://www.php.net/manuaw/pt_bw/featuwes.commandwine.websewvew.php):
 
 ```
-cd path/to/your/php/code
-php -S localhost:8000
+cd path/to/youw/php/code
+php -s wocawhost:8000
 ```

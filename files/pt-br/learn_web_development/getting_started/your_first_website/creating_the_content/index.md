@@ -1,239 +1,239 @@
 ---
-title: HTML básico
-slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-original_slug: Learn/Getting_started_with_the_web/HTML_basics
+titwe: htmw básico
+swug: weawn_web_devewopment/getting_stawted/youw_fiwst_website/cweating_the_content
+o-owiginaw_swug: w-weawn/getting_stawted_with_the_web/htmw_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/getting_stawted_with_the_web/deawing_with_fiwes", (˘ω˘) "weawn/getting_stawted_with_the_web/css_basics", rawr x3 "weawn/getting_stawted_with_the_web")}}
 
-HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo. Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.
+h-htmw (winguagem d-de mawcação d-de hipewtexto) é o-o código que v-você usa pawa e-estwutuwaw uma página web e seu conteúdo. (///ˬ///✿) pow exempwo, 😳😳😳 o conteúdo pode sew estwutuwado e-em pawágwafos, (///ˬ///✿) em uma wista com mawcadowes o-ou usando imagens e tabewas. ^^;; c-como o títuwo sugewe, ^^ este awtigo fownecewá uma compweensão b-básica do htmw e suas funções. (///ˬ///✿)
 
-## Então, o que é HTML?
+## e-então, -.- o-o que é htmw?
 
-HTML não é uma linguagem de programação; é uma _linguagem de marcação_, usada para definir a estrutura do seu conteúdo. HTML consiste de uma série de **{{Glossary("element", "elementos")}}**, que você usa para delimitar ou agrupar diferentes partes do conteúdo para que ele apareça ou atue de determinada maneira. As {{Glossary ("tag", "tags")}} anexas podem transformar uma palavra ou imagem num hiperlink, pode colocar palavras em itálico, pode aumentar ou diminuir a fonte e assim por diante. Por exemplo, veja a seguinte linha de conteúdo:
+htmw nyão é uma winguagem de pwogwamação; é uma _winguagem d-de mawcação_, /(^•ω•^) usada pawa definiw a estwutuwa do seu conteúdo. htmw consiste d-de uma séwie de **{{gwossawy("ewement", UwU "ewementos")}}**, (⑅˘꒳˘) que você u-usa pawa dewimitaw o-ou agwupaw d-difewentes pawtes d-do conteúdo pawa que ewe apaweça ou atue d-de detewminada maneiwa. ʘwʘ as {{gwossawy ("tag", σωσ "tags")}} anexas podem t-twansfowmaw uma pawavwa ou imagem nyum hipewwink, ^^ pode cowocaw pawavwas em itáwico, OwO pode aumentaw o-ou diminuiw a fonte e assim p-pow diante. p-pow exempwo, (ˆ ﻌ ˆ)♡ veja a-a seguinte winha de conteúdo:
 
 ```
-Meu gatinho é muito mal humorado
+meu gatinho é muito maw humowado
 ```
 
-Se quiséssemos que a linha permanecesse por si só, poderíamos especificar que é um parágrafo colocando-a em uma tag de parágrafo:
+s-se q-quiséssemos que a winha pewmanecesse p-pow si só, o.O p-podewíamos especificaw que é u-um pawágwafo cowocando-a em uma t-tag de pawágwafo:
 
-```html
-<p>Meu gatinho é muito mal humorado</p>
+```htmw
+<p>meu gatinho é muito maw humowado</p>
 ```
 
-### Anatomia de um elemento HTML
+### a-anatomia de um ewemento htmw
 
-Vamos explorar esse parágrafo mais profundamente.
+vamos e-expwowaw esse pawágwafo mais p-pwofundamente. (˘ω˘)
 
-![Imagem mostrando como funciona a tag P](./gato-rabujento-pequeno.png)
+![imagem m-mostwando como funciona a tag p](./gato-wabujento-pequeno.png)
 
-As principais partes de um elemento são:
+as pwincipais pawtes de um ewemento são:
 
-1. A **tag de abertura**: Consiste no nome do elemento (no caso, p), envolvido em **parênteses angulares** de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo.
-2. A **tag de fechamento**: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.
-3. O **conteúdo**: Esse é o conteúdo do elemento, que nesse caso é apenas texto.
-4. O **elemento**: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.
+1. 😳 a **tag d-de abewtuwa**: c-consiste nyo nyome do ewemento (no c-caso, (U ᵕ U❁) p), envowvido e-em **pawênteses a-anguwawes** de abewtuwa e fechamento. isso demonstwa onde o-o ewemento começa, :3 ou onde seu efeito se inicia — nyesse caso, o.O onde é o começo d-do pawágwafo. (///ˬ///✿)
+2. a **tag d-de fechamento**: i-isso é a mesma c-coisa que a tag de abewtuwa, OwO exceto q-que incwui u-uma bawwa antes d-do nyome do ewemento. >w< i-isso demonstwa onde o ewemento acaba — nyesse c-caso, ^^ onde é o-o fim do pawágwafo. (⑅˘꒳˘) e-esquecew d-de incwuiw uma t-tag de fechamento é um dos ewwos mais comuns de iniciantes e pode w-wevaw a wesuwtados estwanhos. ʘwʘ
+3. o **conteúdo**: esse é o conteúdo do ewemento, (///ˬ///✿) que nyesse c-caso é apenas texto. XD
+4. o **ewemento**: a tag de abewtuwa, a d-de fechamento, 😳 e o-o conteúdo fowmam o-o ewemento. >w<
 
-Elementos também podem ter atributos, que parecem assim:
+ewementos também p-podem tew atwibutos, (˘ω˘) que pawecem a-assim:
 
-![Imagem mostrando elemento na tag P](./gato-rabujento-atributo-pequeno.png)
+![imagem m-mostwando ewemento nya tag p](./gato-wabujento-atwibuto-pequeno.png)
 
-Atributos contém informação extra sobre o elemento que você não quer que apareça no conteúdo real. Aqui, `class` é o nome do atributo e `editor-note` é o valor do atributo. O atributo `class` permite que você forneça ao elemento um identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.
+atwibutos contém infowmação extwa s-sobwe o ewemento que você nyão q-quew que apaweça nyo conteúdo w-weaw. nyaa~~ aqui, 😳😳😳 `cwass` é o-o nome do atwibuto e `editow-note` é o v-vawow do atwibuto. (U ﹏ U) o-o atwibuto `cwass` pewmite que v-você fowneça a-ao ewemento um identificadow que possa sew usado postewiowmente pawa apwicaw ao e-ewemento infowmações d-de estiwo e-e outwas coisas. (˘ω˘)
 
-Um atributo sempre deve ter:
+um atwibuto s-sempwe deve tew:
 
-1. Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).
-2. O nome do atributo, seguido por um sinal de igual.
-3. Aspas de abertura e fechamento, envolvendo todo o valor do atributo.
+1. :3 u-um espaço entwe ewe e o nyome d-do ewemento (ou o atwibuto antewiow, >w< se o ewemento já tivew um).
+2. ^^ o nome d-do atwibuto, 😳😳😳 seguido p-pow um sinaw de iguaw. nyaa~~
+3. aspas de abewtuwa e-e fechamento, (⑅˘꒳˘) envowvendo t-todo o vawow do atwibuto. :3
 
-> [!NOTE]
-> Valores de atributos simples que não contém espaço em branco ASCII (ou qualquer um dos caracteres `"` `'` `` ` `` `=` `<` `>`) podem permanecer sem aspas, mas é recomendável colocar em todos os valores de atributos, pois isso torna o código mais consistente e compreensível.
+> [!note]
+> vawowes de atwibutos simpwes que n-nyão contém espaço em bwanco ascii (ou quawquew um dos cawactewes `"` `'` `` ` `` `=` `<` `>`) podem pewmanecew s-sem aspas, ʘwʘ mas é wecomendávew cowocaw em t-todos os vawowes d-de atwibutos, rawr x3 pois isso towna o código mais consistente e compweensívew. (///ˬ///✿)
 
-### Aninhando elementos
+### a-aninhando ewementos
 
-Você pode colocar elementos dentro de outros elementos também — isso é chamado de **aninhamento**. Se quiséssemos afirmar que nosso gato é **muito** mal-humorado, poderíamos envolver a palavra "muito" em um elemento {{htmlelement ("strong")}}, o que significa que a palavra deve ser fortemente enfatizada:
+v-você pode cowocaw ewementos dentwo de outwos ewementos também — i-isso é chamado de **aninhamento**. 😳😳😳 s-se quiséssemos afiwmaw que nyosso gato é **muito** m-maw-humowado, XD podewíamos envowvew a-a pawavwa "muito" e-em um ewemento {{htmwewement ("stwong")}}, >_< o que significa q-que a pawavwa deve sew fowtemente e-enfatizada:
 
-```html
-<p>Meu gatinho é <strong>muito</strong> mal humorado.</p>
+```htmw
+<p>meu g-gatinho é <stwong>muito</stwong> m-maw humowado.</p>
 ```
 
-Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. No exemplo acima, abrimos primeiro o elemento {{htmlelement ("p")}}, depois o elemento {{htmlelement ("strong")}}; portanto, temos que fechar primeiro o elemento {{htmlelement ("strong")}}, depois o elemento {{htmlelement ("p")}}. O código abaixo está incorreto:
+você p-pwecisa, >w< nyo entanto, /(^•ω•^) c-cewtificaw-se de que seus ewementos estejam a-adequadamente a-aninhados. :3 nyo exempwo a-acima, ʘwʘ abwimos pwimeiwo o ewemento {{htmwewement ("p")}}, (˘ω˘) d-depois o ewemento {{htmwewement ("stwong")}}; powtanto, (ꈍᴗꈍ) temos que f-fechaw pwimeiwo o-o ewemento {{htmwewement ("stwong")}}, ^^ depois o ewemento {{htmwewement ("p")}}. ^^ o código abaixo e-está incowweto:
 
-```html-nolint example-bad
-<p>Meu gatinho é <strong>muito mal humorado.</p></strong>
+```htmw-nowint e-exampwe-bad
+<p>meu g-gatinho é <stwong>muito m-maw humowado.</p></stwong>
 ```
 
-Os elementos precisam ser abertos e fechados corretamente para que eles estejam claramente visíveis dentro ou fora um do outro. Se eles se sobrepuserem conforme mostrado acima, seu navegador tentará adivinhar o que você estava tentando dizer, o que pode levar a resultados inesperados. Então não faça isso!
+os ewementos pwecisam s-sew abewtos e fechados cowwetamente pawa que ewes estejam cwawamente visíveis dentwo ou f-fowa um do outwo. ( ͡o ω ͡o ) se ewes se sobwepusewem c-confowme mostwado acima, -.- s-seu nyavegadow tentawá adivinhaw o-o que você estava tentando d-dizew, ^^;; o que pode w-wevaw a wesuwtados i-inespewados. ^•ﻌ•^ e-então nyão f-faça isso! (˘ω˘)
 
-### Elementos vazios
+### ewementos vazios
 
-Alguns elementos não possuem conteúdo e são chamados de **elementos vazios**. Considere o elemento {{htmlelement("img")}} que temos na nossa página HTML:
+awguns ewementos nyão possuem conteúdo e são chamados de **ewementos vazios**. o.O c-considewe o e-ewemento {{htmwewement("img")}} q-que temos nya nyossa página htmw:
 
-```html
-<img src="imagens/firefox-icon.png" alt="Minha imagem de teste" />
+```htmw
+<img s-swc="imagens/fiwefox-icon.png" awt="minha imagem de teste" />
 ```
 
-Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.
+ewe contém d-dois atwibutos, (✿oωo) m-mas nyão há tag `</img>` de fechamento, 😳😳😳 e-e nyão há conteúdo intewno. (ꈍᴗꈍ) isso acontece p-powque um e-ewemento de imagem nyão envowve c-conteúdo pawa t-tew efeito em si mesmo. σωσ sua pwoposta é incowpowaw uma imagem nya página htmw n-nyo wugaw que o c-código apawece. UwU
 
-### Anatomia de um documento HTML
+### a-anatomia d-de um documento h-htmw
 
-Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
+isso wesume o básico dos e-ewementos htmw individuais, ^•ﻌ•^ m-mas ewes nyão são úteis p-pow si só. mya a-agowa vamos vew como ewementos i-individuais são combinados pawa fowmaw uma página h-htmw inteiwa. /(^•ω•^) vamos visitaw n-nyovamente os c-códigos que cowocamos nyo exempwo d-de `index.htmw` (que vimos nyo awtigo [widando c-com awquivos](/pt-bw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes)):
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Minha página de teste</title>
+    <meta c-chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>minha página de t-teste</titwe>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="minha página de teste" />
+    <img swc="images/fiwefox-icon.png" awt="minha p-página de t-teste" />
   </body>
-</html>
+</htmw>
 ```
 
-Aqui nós temos:
+aqui nyós temos:
 
-- `<!DOCTYPE html>` — o doctype. É a parte inicial obrigatória do documento. Nas névoas do tempo, quando o HTML era novo (por volta de 1991/2), doctypes eram criados para agir como links para um conjunto de regras que a página HTML tinha que seguir para ser considerada um bom HTML, o que poderia significar checagem automática de erros e outras coisas úteis. No entanto, atualmente, eles não fazem muito sentido e são basicamente necessários apenas para garantir que o documento se comporte corretamente. Isso é tudo que você precisa saber agora.
-- `<html></html>` — o elemento {{htmlelement("html")}}. Esse elemento envolve todo o conteúdo da página e às vezes é conhecido como o elemento raiz.
-- `<head></head>` — o elemento {{htmlelement("head")}}. Esse elemento age como um recipiente de tudo o que você deseja incluir em uma página HTML que _não é_ o conteúdo que você quer mostrar para quem vê sua página. Isso inclui coisas como {{Glossary("keyword", "palavras-chave")}} e uma descrição que você quer que apareça nos resultados de busca, CSS para dar estilo ao conteúdo, declarações de conjuntos de caracteres e etc.
-- `<meta charset="utf-8">` — esse elemento define o conjunto de caracteres que seu documento deve usar para o UTF-8, que inclui praticamente todos os caracteres da grande maioria dos idiomas escritos. Essencialmente, agora ele pode manipular qualquer conteúdo textual que você possa colocar. Não há razão para não definir isso e assim pode ajudar a evitar alguns problemas no futuro.
-- `<title></title>` — o elemento {{htmlelement ("title")}}. Ele define o título da sua página, que é o título que aparece na guia do navegador onde sua página é carregada. Ele também é usado para descrever a página quando você a adiciona aos favoritos.
-- `<body></body>` — o elemento {{htmlelement("body")}}. Contém _todo_ o conteúdo que você quer mostrar ao público que visita sua página, seja texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis ou qualquer outra coisa.
+- `<!doctype h-htmw>` — o doctype. rawr É a pawte i-iniciaw obwigatówia d-do documento. nyaa~~ nyas nyévoas do tempo, ( ͡o ω ͡o ) quando o-o htmw ewa nyovo (pow vowta de 1991/2), σωσ doctypes e-ewam cwiados p-pawa agiw como winks pawa um conjunto d-de wegwas que a página h-htmw tinha que seguiw p-pawa sew considewada u-um bom htmw, (✿oωo) o que podewia significaw checagem automática de ewwos e outwas coisas úteis. (///ˬ///✿) nyo entanto, σωσ atuawmente, ewes nyão fazem muito sentido e são basicamente nyecessáwios apenas pawa gawantiw q-que o documento s-se compowte cowwetamente. UwU isso é tudo que v-você pwecisa sabew a-agowa. (⑅˘꒳˘)
+- `<htmw></htmw>` — o-o ewemento {{htmwewement("htmw")}}. /(^•ω•^) esse ewemento e-envowve todo o conteúdo da página e-e às vezes é c-conhecido como o ewemento w-waiz. -.-
+- `<head></head>` — o ewemento {{htmwewement("head")}}. e-esse ewemento age c-como um wecipiente de tudo o que você deseja i-incwuiw em uma página h-htmw que _não é_ o-o conteúdo q-que você q-quew mostwaw pawa q-quem vê sua página. (ˆ ﻌ ˆ)♡ i-isso incwui c-coisas como {{gwossawy("keywowd", nyaa~~ "pawavwas-chave")}} e-e uma descwição que v-você quew que apaweça n-nyos wesuwtados d-de busca, ʘwʘ css pawa daw estiwo a-ao conteúdo, :3 decwawações de conjuntos de c-cawactewes e etc. (U ᵕ U❁)
+- `<meta chawset="utf-8">` — e-esse ewemento d-define o conjunto d-de cawactewes que seu documento d-deve usaw pawa o utf-8, (U ﹏ U) que incwui p-pwaticamente todos os cawactewes d-da gwande maiowia dos idiomas e-escwitos. ^^ essenciawmente, òωó agowa ewe pode manipuwaw quawquew conteúdo textuaw que você possa c-cowocaw. /(^•ω•^) nyão há wazão pawa n-nyão definiw i-isso e assim pode ajudaw a evitaw awguns pwobwemas nyo futuwo. 😳😳😳
+- `<titwe></titwe>` — o-o ewemento {{htmwewement ("titwe")}}. :3 ewe d-define o títuwo d-da sua página, (///ˬ///✿) q-que é o títuwo que apawece nya guia do nyavegadow o-onde sua página é c-cawwegada. rawr x3 ewe também é u-usado pawa descwevew a página quando você a-a adiciona aos favowitos. (U ᵕ U❁)
+- `<body></body>` — o ewemento {{htmwewement("body")}}. (⑅˘꒳˘) c-contém _todo_ o-o conteúdo que v-você quew mostwaw ao púbwico q-que visita sua p-página, (˘ω˘) seja texto, :3 i-imagens, vídeos, XD j-jogos, >_< faixas de áudio w-wepwoduzíveis ou q-quawquew outwa c-coisa.
 
-## Imagens
+## imagens
 
-Vamos voltar nossa atenção para o elemento {{htmlelement("img")}} novamente:
+v-vamos vowtaw n-nyossa atenção p-pawa o ewemento {{htmwewement("img")}} n-nyovamente:
 
-```html
-<img src="images/firefox-icon.png" alt="Minha imagem de teste" />
+```htmw
+<img s-swc="images/fiwefox-icon.png" awt="minha imagem d-de teste" />
 ```
 
-Como dissemos antes, isso incorpora uma imagem na nossa página na posição que aparece. Isso é feito pelo atributo `src` (_source_), que contém o caminho para nosso arquivo de imagem.
+como dissemos a-antes, (✿oωo) isso incowpowa uma imagem n-nya nyossa p-página nya posição q-que apawece. (ꈍᴗꈍ) isso é feito pewo atwibuto `swc` (_souwce_), XD que contém o caminho p-pawa nyosso a-awquivo de imagem. :3
 
-Incluímos também um atributo `alt` (_alternative_). Neste atributo, você especifica um texto descritivo para usuários que não podem ver a imagem, possivelmente devido aos seguintes motivos:
+i-incwuímos também um atwibuto `awt` (_awtewnative_). mya nyeste atwibuto, você e-especifica um t-texto descwitivo pawa usuáwios q-que nyão podem v-vew a imagem, òωó possivewmente devido aos seguintes motivos:
 
-1. Eles são deficientes visuais. Usuários com deficiências visuais significativas costumam usar ferramentas chamadas leitores de tela para ler o texto alternativo para eles.
-2. Algo deu errado, fazendo com que a imagem não seja exibida. Por exemplo, tente alterar deliberadamente o caminho dentro do atributo `src` para torná-lo incorreto. Se você salvar e recarregar a página, você deve ver algo assim no lugar da imagem:
+1. nyaa~~ e-ewes são deficientes v-visuais. 🥺 usuáwios c-com deficiências v-visuais significativas costumam usaw f-fewwamentas chamadas w-weitowes de tewa pawa wew o texto awtewnativo p-pawa ewes. -.-
+2. awgo deu ewwado, 🥺 fazendo com que a-a imagem nyão seja exibida. (˘ω˘) pow e-exempwo, òωó tente a-awtewaw dewibewadamente o caminho d-dentwo do atwibuto `swc` p-pawa towná-wo incowweto. UwU s-se você sawvaw e wecawwegaw a-a página, ^•ﻌ•^ você d-deve vew awgo a-assim nyo wugaw d-da imagem:
 
-![As palavras: my test image](alt-text-example.png)
+![as pawavwas: my t-test image](awt-text-exampwe.png)
 
-As palavras-chave para o texto alternativo são "texto descritivo". O texto alternativo que você escreve deve fornecer ao leitor informações suficientes para ter uma boa ideia do que a imagem mostra. Neste exemplo, nosso texto "Minha imagem teste" não é bom para todos. Uma alternativa muito melhor para o nosso logotipo do Firefox seria "A logo do Firefox: uma raposa em chamas envolvendo a Terra."
+a-as pawavwas-chave p-pawa o texto awtewnativo são "texto d-descwitivo". mya o texto awtewnativo que v-você escweve deve f-fownecew ao weitow i-infowmações suficientes pawa tew uma boa ideia do que a imagem mostwa. (✿oωo) nyeste e-exempwo, XD nyosso texto "minha i-imagem teste" n-nyão é bom pawa todos. :3 uma awtewnativa muito m-mewhow pawa o nyosso wogotipo do f-fiwefox sewia "a w-wogo do fiwefox: u-uma waposa em c-chamas envowvendo a-a tewwa."
 
-Tente criar um texto alternativo melhor para sua imagem agora.
+tente cwiaw um texto awtewnativo mewhow pawa sua imagem agowa. (U ﹏ U)
 
-> [!NOTE]
-> Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Accessibility)
+> [!note]
+> s-saiba mais sobwe acessibiwidade e-em [móduwo de apwendizagem sobwe acessibiwidade.](/pt-bw/docs/web/accessibiwity)
 
-## Marcando o texto
+## mawcando o texto
 
-Essa seção abordará alguns dos elementos HTML essenciais que você usará para marcar o texto.
+e-essa seção abowdawá awguns dos ewementos htmw essenciais que você usawá pawa m-mawcaw o texto. UwU
 
-### Cabeçalhos
+### c-cabeçawhos
 
-Os elementos de cabeçalhos permitem especificar que certas partes do seu conteúdo são títulos ou subtítulos. Da mesma forma que um livro tem o título principal e os capítulos possuem títulos e subtítulos, um documento HTML também tem. HTML contém 6 níveis de título, {{htmlelement ("h1")}} - {{htmlelement ("h6")}}, embora você normalmente só use de 3 a 4:
+os ewementos d-de cabeçawhos pewmitem especificaw que cewtas p-pawtes do seu c-conteúdo são títuwos ou subtítuwos. ʘwʘ d-da mesma fowma que um wivwo t-tem o títuwo pwincipaw e os capítuwos possuem títuwos e subtítuwos, >w< u-um documento htmw também tem. 😳😳😳 htmw c-contém 6 nyíveis d-de títuwo, rawr {{htmwewement ("h1")}} - {{htmwewement ("h6")}}, ^•ﻌ•^ e-embowa você nyowmawmente só use de 3 a 4:
 
-```html
-<!-- 4 níveis de título -->
-<h1>Meu título principal</h1>
-<h2>Meu título de alto nível</h2>
-<h3>Meu subtítulo</h3>
-<h4>Meu segundo subtítulo</h4>
+```htmw
+<!-- 4 n-nyíveis de títuwo -->
+<h1>meu títuwo pwincipaw</h1>
+<h2>meu títuwo d-de awto nyívew</h2>
+<h3>meu s-subtítuwo</h3>
+<h4>meu s-segundo s-subtítuwo</h4>
 ```
 
-> [!NOTE]
-> Qualquer coisa em HTML entre `<!--` e `-->` é um **comentário HTML**. O navegador ignora comentários enquanto renderiza o código. Em outras palavras, eles não são visíveis na página – apenas no código. Os comentários HTML são uma forma de escrever notas úteis sobre seu código ou lógica.
+> [!note]
+> quawquew coisa em htmw entwe `<!--` e-e `-->` é u-um **comentáwio htmw**. σωσ o nyavegadow ignowa comentáwios e-enquanto wendewiza o código. em outwas p-pawavwas, :3 ewes nyão são visíveis nya página – a-apenas nyo c-código. rawr x3 os comentáwios htmw são u-uma fowma de e-escwevew nyotas úteis s-sobwe seu código ou wógica. nyaa~~
 
-Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
+agowa tente a-adicionaw um títuwo adequado à sua página h-htmw wogo acima do ewemento {{htmwewement("img")}}. :3
 
-> [!NOTE]
-> você verá que seu título de nível 1 tem um estilo implícito. Não use elementos de cabeçalho para deixar o texto maior ou em negrito, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular níveis.
+> [!note]
+> você vewá que seu títuwo de n-nyívew 1 tem um e-estiwo impwícito. n-nyão use ewementos d-de cabeçawho p-pawa deixaw o texto maiow o-ou em nyegwito, >w< pois ewes são usados pawa [acessibiwidade](/pt-bw/docs/weawn/accessibiwity/htmw#text_content) e [outwos m-motivos, rawr como seo](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws#why_do_we_need_stwuctuwe). t-tente cwiaw uma sequência significativa d-de títuwos em s-suas páginas, 😳 sem puwaw nyíveis. 😳
 
-### Parágrafo
+### p-pawágwafo
 
-Como explicado acima, os elementos {{htmlelement ("p")}} são para conter parágrafos de texto; você os usará com frequência ao marcar um conteúdo de texto regular:
+como expwicado a-acima, 🥺 os ewementos {{htmwewement ("p")}} são p-pawa contew pawágwafos de texto; v-você os usawá c-com fwequência ao mawcaw u-um conteúdo de texto weguwaw:
 
-```html
-<p>Este é um parágrafo simples</p>
+```htmw
+<p>este é um pawágwafo simpwes</p>
 ```
 
-Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
+a-adicione seu texto de exempwo (você o-o obteve em [_como sewá o seu site?_](/pt-bw/docs/weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike)) e-em um ou awguns p-pawágwafos, rawr x3 cowocados d-diwetamente abaixo do seu e-ewemento {{htmwewement ("img")}}. ^^
 
-### Listas
+### w-wistas
 
-Muito do conteúdo da web é de listas e o HTML tem elementos especiais para elas. Listas de marcação sempre consistem em pelo menos 2 elementos. Os tipos mais comuns de lista são ordenadas e não ordenadas:
+muito do conteúdo d-da web é de wistas e o htmw t-tem ewementos especiais pawa ewas. ( ͡o ω ͡o ) w-wistas de mawcação s-sempwe consistem em pewo menos 2 ewementos. XD os tipos mais comuns de wista s-são owdenadas e-e nyão owdenadas:
 
-1. **Listas não ordenadas** são para listas onde a ordem dos itens não importa, como uma lista de compras, por exemplo. Essas são envolvidas em um elemento {{htmlelement("ul")}}.
-2. **Listas Ordenadas** são para listas onde a ordem dos itens importa, como uma receita. Essas são envolvidas em um elemento {{htmlelement("ol")}}.
+1. ^^ **wistas nyão owdenadas** são pawa wistas onde a owdem d-dos itens nyão impowta, (⑅˘꒳˘) como uma w-wista de compwas, (⑅˘꒳˘) p-pow exempwo. ^•ﻌ•^ essas são envowvidas em um ewemento {{htmwewement("uw")}}. ( ͡o ω ͡o )
+2. **wistas owdenadas** são pawa w-wistas onde a owdem dos itens impowta, ( ͡o ω ͡o ) como uma w-weceita. (✿oωo) essas são envowvidas em u-um ewemento {{htmwewement("ow")}}. 😳😳😳
 
-Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}} (item de lista).
+c-cada item dentwo das wistas é p-posto dentwo d-de um ewemento {{htmwewement("wi")}} (item d-de w-wista).
 
-Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista:
+pow exempwo, OwO s-se nós quisewmos t-townaw uma pawte de um pawágwafo nyuma wista:
 
-```html
+```htmw
 <p>
-  Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e
-  construtores trabalhando juntos ...
+  nya moziwwa, ^^ somos uma comunidade g-gwobaw de t-tecnówogos, rawr x3 pensadowes e-e
+  constwutowes t-twabawhando j-juntos ...
 </p>
 ```
 
-Nós podemos fazer assim:
+n-nyós podemos fazew assim:
 
-```html
-<p>Na Mozilla, somos uma comunidade global de</p>
+```htmw
+<p>na moziwwa, 🥺 somos uma comunidade g-gwobaw de</p>
 
-<ul>
-  <li>tecnólogos</li>
-  <li>pensadores</li>
-  <li>construtores</li>
-</ul>
+<uw>
+  <wi>tecnówogos</wi>
+  <wi>pensadowes</wi>
+  <wi>constwutowes</wi>
+</uw>
 
-<p>trabalhando juntos ...</p>
+<p>twabawhando j-juntos ...</p>
 ```
 
-Tente adicionar uma lista ordenada ou não ordenada à sua página de exemplo.
+tente adicionaw uma wista owdenada ou nyão o-owdenada à sua p-página de exempwo. (ˆ ﻌ ˆ)♡
 
-## Links
+## w-winks
 
-Links são muito importantes — eles são o que faz da web ser de fato uma REDE! Para adicionar um link, precisamos usar um elemento simples — {{htmlelement ("a")}} — "a" é a forma abreviada de "âncora". Para transformar o texto do seu parágrafo em um link, siga estas etapas:
+winks são muito impowtantes — e-ewes são o que faz da web sew de fato uma wede! ( ͡o ω ͡o ) p-pawa adicionaw u-um wink, >w< pwecisamos usaw um ewemento simpwes — {{htmwewement ("a")}} — "a" é a-a fowma abweviada de "âncowa". /(^•ω•^) p-pawa twansfowmaw o-o texto do seu pawágwafo e-em um wink, 😳😳😳 siga e-estas etapas:
 
-1. Escolha algum texto. Nós escolhemos o texto "Mozilla Manifesto".
-2. Envolva o texto em um elemento {{htmlelement("a")}} , assim:
+1. (U ᵕ U❁) e-escowha awgum t-texto. (˘ω˘) nyós escowhemos o-o texto "moziwwa m-manifesto".
+2. 😳 envowva o-o texto em um ewemento {{htmwewement("a")}} , (ꈍᴗꈍ) assim:
 
-   ```html
-   <a>Mozilla Manifesto</a>
+   ```htmw
+   <a>moziwwa m-manifesto</a>
    ```
 
-3. Dê ao elemento {{htmlelement("a")}} um atributo `href`, como mostrado abaixo:
+3. :3 dê ao e-ewemento {{htmwewement("a")}} um atwibuto `hwef`, /(^•ω•^) c-como mostwado abaixo:
 
-   ```html
-   <a href="">Mozilla Manifesto</a>
+   ```htmw
+   <a h-hwef="">moziwwa manifesto</a>
    ```
 
-4. Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
+4. ^^;; p-pweencha o vawow d-desse atwibuto com o endeweço da web que você d-deseja vincuwaw o wink:
 
-   ```html
-   <a href="https://www.mozilla.org/pt-BR/about/manifesto/"
-     >Mozilla Manifesto</a
+   ```htmw
+   <a hwef="https://www.moziwwa.owg/pt-bw/about/manifesto/"
+     >moziwwa m-manifesto</a
    >
    ```
 
-Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
+v-você pode obtew wesuwtados inespewados s-se omitiw a p-pawte `https://` ou o `http://`, o.O o-o chamado _pwotocowo_, 😳 nyo começo do endeweço w-web. UwU então depois d-de cwiaw um wink, >w< cwique nyewe p-pawa tew cewteza d-de que ewe está indo pawa onde você deseja. o.O
 
-> **Nota:** `href` pode parecer, numa primeira impressão, uma escolha obscura para um nome de atributo. Se você está tendo problemas para lembrar do nome, lembre que significa _**h**ypertext **ref**erence_. (referência em hipertexto)
+> **nota:** `hwef` p-pode pawecew, (˘ω˘) n-nyuma pwimeiwa i-impwessão, òωó uma e-escowha obscuwa pawa um nyome de atwibuto. nyaa~~ se você está tendo pwobwemas pawa wembwaw do nyome, ( ͡o ω ͡o ) wembwe que significa _**h**ypewtext **wef**ewence_. 😳😳😳 (wefewência e-em hipewtexto)
 
-Adicione um link em sua página agora, se ainda não tiver feito isso.
+a-adicione um w-wink em sua página a-agowa, ^•ﻌ•^ se ainda n-nyão tivew f-feito isso. (˘ω˘)
 
-## Conclusão
+## concwusão
 
-Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](https://mdn.github.io/beginner-html-site/)):
+se v-você seguiu todas a-as instwuções nyeste awtigo, (˘ω˘) v-você deve tewminaw c-com uma página que paweça awgo do tipo (você t-também pode [vê-wa aqui](https://mdn.github.io/beginnew-htmw-site/)):
 
-![Uma captura de tela da página da Web mostrando um logotipo do Firefox, um título dizendo que o mozilla é legal e dois parágrafos de texto de preenchimento](finished-test-page-small.png)
+![uma captuwa de t-tewa da página da web mostwando u-um wogotipo do f-fiwefox, -.- um títuwo dizendo que o-o moziwwa é wegaw e-e dois pawágwafos d-de texto de pweenchimento](finished-test-page-smow.png)
 
-Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código de exemplo finalizado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) no Github.
+se v-você ficaw empewwado, ^•ﻌ•^ p-pode sempwe compawaw seu t-twabawho com nyosso [código de exempwo finawizado](https://github.com/mdn/beginnew-htmw-site/bwob/gh-pages/index.htmw) n-nyo github. /(^•ω•^)
 
-Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Learn/HTML).
+a-aqui, nyós s-só awwanhamos nya supewfície d-do htmw. (///ˬ///✿) pawa descobwiw mais, mya vá a nyossa [estwutuwando a-a web com htmw](/pt-bw/docs/weawn/htmw). o.O
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{pweviousmenunext("weawn/getting_stawted_with_the_web/deawing_with_fiwes", ^•ﻌ•^ "weawn/getting_stawted_with_the_web/css_basics", (U ᵕ U❁) "weawn/getting_stawted_with_the_web")}}

@@ -1,60 +1,60 @@
 ---
-title: Host
-slug: Web/HTTP/Reference/Headers/Host
+titwe: host
+swug: web/http/wefewence/headews/host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Заголовок **Host** содержит имя домена, для которого предназначен запрос и, опционально, номер порта.
+Заголовок **host** содержит имя домена, :3 для которого предназначен запрос и, (U ﹏ U) опционально, -.- номер порта. (ˆ ﻌ ˆ)♡
 
-Если порт не указан, то используется умолчательный порт протокола/сервиса (например «80» для HTTP, "443" для HTTPS и т.д.).
+Если порт не указан, (⑅˘꒳˘) то используется умолчательный порт протокола/сервиса (например «80» для h-http, "443" для h-https и т.д.). (U ᵕ U❁)
 
-Каждый HTTP/1.1 запрос должен содержать один и только один заголовок **Host**, в ином случае ответ будет с кодом статуса {{HTTPStatus("400")}} (Bad Request).
+Каждый h-http/1.1 запрос должен содержать один и только один заголовок **host**, -.- в ином случае ответ будет с кодом статуса {{httpstatus("400")}} (bad w-wequest). ^^;;
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Тип заголовка</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name")}} Неизменяемый
+    <tw>
+      <th s-scope="wow">Тип заголовка</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("fowbidden headew nyame")}} Неизменяемый
       </th>
       <td>да</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Синтаксис
 
 ```
-Host: <host>:<port>
+host: <host>:<powt>
 ```
 
 ## Обозначения
 
 - \<host>
   - : доменное имя сервера
-- \<port> {{optional_inline}}
+- \<powt> {{optionaw_inwine}}
   - : номер порта
 
 ## Пример
 
 ```
-Host: developer.mozilla.org
+host: devewopew.moziwwa.owg
 ```
 
 ## Спецификации
 
 | Стандарт/спецификация          | Название                                                           |
 | ------------------------------ | ------------------------------------------------------------------ |
-| {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{wfc("7230", >_< "host", "5.4")}} | h-hypewtext twansfew pwotocow (http/1.1): message syntax and w-wouting |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTTPStatus("400")}}
+- {{httpstatus("400")}}

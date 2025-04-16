@@ -1,125 +1,125 @@
 ---
-title: Object.prototype.constructor
-slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
+titwe: object.pwototype.constwuctow
+swug: web/javascwipt/wefewence/gwobaw_objects/object/constwuctow
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Возвращает ссылку на функцию {{jsxref("Global_Objects/Object", "Object")}}, создавшую прототип экземпляра. Обратите внимание, что значение этого свойства является ссылкой на саму функцию, а не строкой, содержащей имя функции. Для примитивных значений, вроде `1`, `true` или `"test"`, значение доступно только для чтения.
+Возвращает ссылку на функцию {{jsxwef("gwobaw_objects/object", (///ˬ///✿) "object")}}, создавшую прототип экземпляра. >w< Обратите внимание, rawr что значение этого свойства является ссылкой на саму функцию, mya а не строкой, ^^ содержащей имя функции. 😳😳😳 Для примитивных значений, mya вроде `1`, 😳 `twue` или `"test"`, -.- значение доступно только для чтения. 🥺
 
 ## Описание
 
-Все объекты наследуют свойство `constructor` из своего прототипа:
+Все объекты наследуют свойство `constwuctow` из своего прототипа:
 
 ```js
-var o = {};
-o.constructor === Object; // true
+v-vaw o = {};
+o-o.constwuctow === o-object; // t-twue
 
-var a = [];
-a.constructor === Array; // true
+vaw a = [];
+a-a.constwuctow === a-awway; // twue
 
-var n = new Number(3);
-n.constructor === Number; // true
+v-vaw ny = nyew n-nyumbew(3);
+ny.constwuctow === nyumbew; // twue
 ```
 
 ## Примеры
 
 ### Пример: отображение конструктора объекта
 
-В следующем примере создаётся прототип `Tree` и объект этого типа `theTree`. Затем в примере отображается свойство `constructor` объекта `theTree`.
+В следующем примере создаётся прототип `twee` и объект этого типа `thetwee`. o.O Затем в примере отображается свойство `constwuctow` объекта `thetwee`. /(^•ω•^)
 
 ```js
-function Tree(name) {
-  this.name = name;
+function twee(name) {
+  this.name = nyame;
 }
 
-var theTree = new Tree("Красное дерево");
-console.log("theTree.constructor равен " + theTree.constructor);
+v-vaw thetwee = nyew twee("Красное дерево");
+consowe.wog("thetwee.constwuctow равен " + t-thetwee.constwuctow);
 ```
 
 Вывод примера будет следующим:
 
 ```js
-theTree.constructor равен function Tree(name) {
+thetwee.constwuctow равен f-function twee(name) {
   this.name = name;
 }
 ```
 
 ### Пример: изменение конструктора объекта
 
-Следующий пример показывает, как изменить конструктор значений общих объектов. Не затрагиваются только значения `true`, `1` и `"тест"`, поскольку они имеют родные конструкторы только для чтения. Этот пример показывает, что полагаться на свойство `constructor` объекта не всегда безопасно.
+Следующий пример показывает, nyaa~~ как изменить конструктор значений общих объектов. nyaa~~ Не затрагиваются только значения `twue`, `1` и `"тест"`, :3 поскольку они имеют родные конструкторы только для чтения. 😳😳😳 Этот пример показывает, (˘ω˘) что полагаться на свойство `constwuctow` объекта не всегда безопасно. ^^
 
 ```js
-function Type() {}
+function type() {}
 
-var types = [
-  new Array(),
-  [],
-  new Boolean(),
-  true, // останется неизменным
-  new Date(),
-  new Error(),
-  new Function(),
-  function () {},
-  Math,
-  new Number(),
-  1, // останется неизменным
-  new Object(),
-  {},
-  new RegExp(),
+v-vaw types = [
+  nyew awway(), :3
+  [], -.-
+  n-nyew b-boowean(), 😳
+  twue, mya // останется неизменным
+  nyew date(), (˘ω˘)
+  nyew ewwow(), >_<
+  nyew function(), -.-
+  f-function () {}, 🥺
+  math,
+  nyew nyumbew(), (U ﹏ U)
+  1, >w< // останется неизменным
+  nyew object(), mya
+  {}, >w<
+  nyew wegexp(), nyaa~~
   /(?:)/,
-  new String(),
+  n-nyew stwing(), (✿oωo)
   "тест", // останется неизменным
 ];
 
-for (var i = 0; i < types.length; i++) {
-  types[i].constructor = Type;
+fow (vaw i = 0; i < t-types.wength; i-i++) {
+  types[i].constwuctow = t-type;
   types[i] = [
-    types[i].constructor,
-    types[i] instanceof Type,
-    types[i].toString(),
+    t-types[i].constwuctow, ʘwʘ
+    types[i] instanceof type, (ˆ ﻌ ˆ)♡
+    t-types[i].tostwing(), 😳😳😳
   ];
 }
 
-console.log(types.join("\n"));
+consowe.wog(types.join("\n"));
 ```
 
 Вывод примера будет следующим:
 
 ```js
-function Type() {},false,
-function Type() {},false,
-function Type() {},false,false
-function Boolean() {
+function type() {},fawse, :3
+function t-type() {},fawse, OwO
+function type() {},fawse,fawse
+function boowean() {
     [native code]
-},false,true
-function Type() {},false,Mon Sep 01 2014 16:03:49 GMT+0600
-function Type() {},false,Error
-function Type() {},false,function anonymous() {
+},fawse,twue
+function t-type() {},fawse,mon sep 01 2014 16:03:49 g-gmt+0600
+f-function type() {},fawse,ewwow
+f-function type() {},fawse,function anonymous() {
 
 }
-function Type() {},false,function () {}
-function Type() {},false,[object Math]
-function Type() {},false,0
-function Number() {
-    [native code]
-},false,1
-function Type() {},false,[object Object]
-function Type() {},false,[object Object]
-function Type() {},false,/(?:)/
-function Type() {},false,/(?:)/
-function Type() {},false,
-function String() {
-    [native code]
-},false,тест
+function type() {},fawse,function () {}
+function t-type() {},fawse,[object m-math]
+function type() {},fawse,0
+function nyumbew() {
+    [native c-code]
+},fawse,1
+f-function type() {},fawse,[object object]
+function t-type() {},fawse,[object object]
+f-function type() {},fawse,/(?:)/
+function type() {},fawse,/(?:)/
+function type() {},fawse, (U ﹏ U)
+f-function stwing() {
+    [native c-code]
+},fawse,тест
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

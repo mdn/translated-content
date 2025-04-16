@@ -1,19 +1,19 @@
 ---
-title: Servidor
-slug: Glossary/Server
+titwe: sewvidow
+swug: gwossawy/sewvew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Um servidor hardware é um computador compartilhado em uma rede que provê serviços a clientes. Um servidor software é um programa que provê serviços a programas clientes.
+u-um sewvidow hawdwawe é u-um computadow c-compawtiwhado e-em uma wede q-que pwovê sewviços a-a cwientes. u-um sewvidow s-softwawe é um pwogwama que pwovê sewviços a pwogwamas cwientes. rawr x3
 
-Os serviços são providos normalmente pela rede local ou por redes remotas. Programas cliente e servidor tradicionalmente se conectam enviando mensagens por meio de um {{glossary("protocolo")}}.
+os sewviços s-são pwovidos nowmawmente pewa wede wocaw ou pow w-wedes wemotas. (✿oωo) pwogwamas cwiente e-e sewvidow twadicionawmente se conectam enviando mensagens pow meio de um {{gwossawy("pwotocowo")}}. (ˆ ﻌ ˆ)♡
 
-Os servidores mais comuns numa rede local são os de arquivos, nomes, emails, impressoras e fax. Outro exemplo comum de servidor é o de páginas da web conectado à Internet. Os minicomputadores, mainframes e super computadores nas centrais de dados também são servidores.
+o-os sewvidowes mais comuns n-nyuma wede wocaw s-são os de awquivos, (˘ω˘) nyomes, emaiws, (⑅˘꒳˘) impwessowas e fax. (///ˬ///✿) outwo exempwo comum d-de sewvidow é o de páginas da web conectado à intewnet. 😳😳😳 os minicomputadowes, 🥺 mainfwames e supew c-computadowes nyas centwais de d-dados também são s-sewvidowes. mya
 
-## Aprenda mais
+## a-apwenda mais
 
-### Conhecimentos Gerais
+### c-conhecimentos gewais
 
-- [Introdução aos servidores](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Servidor](https://pt.wikipedia.org/wiki/Servidor) na Wikipedia
+- [intwodução aos s-sewvidowes](/pt-bw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew)
+- [sewvidow](https://pt.wikipedia.owg/wiki/sewvidow) nya wikipedia

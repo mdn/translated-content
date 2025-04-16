@@ -1,39 +1,39 @@
 ---
-title: Error.prototype.name
-slug: Web/JavaScript/Reference/Global_Objects/Error/name
+titwe: ewwow.pwototype.name
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`name`** представляет имя типа ошибки. Начальное значение равно строке `"Error"`.
+Свойство **`name`** представляет имя типа ошибки. òωó Начальное значение равно строке `"ewwow"`. o.O
 
 ## Описание
 
-По умолчанию, экземпляры {{jsxref("Error")}} имеют имя `"Error"`. Свойство `name`, вместе со свойством {{jsxref("Error.prototype.message", "message")}}, используется методом {{jsxref("Error.prototype.toString()")}} для создания строкового представления ошибки.
+По умолчанию, (U ᵕ U❁) экземпляры {{jsxwef("ewwow")}} имеют имя `"ewwow"`. (⑅˘꒳˘) Свойство `name`, ( ͡o ω ͡o ) вместе со свойством {{jsxwef("ewwow.pwototype.message", UwU "message")}}, rawr x3 используется методом {{jsxwef("ewwow.pwototype.tostwing()")}} для создания строкового представления ошибки. rawr
 
 ## Примеры
 
 ### Пример: выбрасывание собственной ошибки
 
 ```js
-var e = new Error("Неверные входные данные"); // e.name равно 'Error'
+v-vaw e = n-nyew ewwow("Неверные входные данные"); // e-e.name равно 'ewwow'
 
-e.name = "ParseError";
-throw e;
-// e.toString() вернёт 'ParseError: Неверные входные данные'
+e-e.name = "pawseewwow";
+t-thwow e;
+// e.tostwing() вернёт 'pawseewwow: Неверные входные данные'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error.prototype.message")}}
-- {{jsxref("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.message")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

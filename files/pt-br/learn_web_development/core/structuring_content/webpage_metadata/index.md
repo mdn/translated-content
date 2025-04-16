@@ -1,315 +1,315 @@
 ---
-title: O que está no cabeçalho? Metadados em HTML
-slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+titwe: o que está nyo cabeçawho? m-metadados e-em htmw
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/getting_stawted", (✿oωo) "weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws", (U ﹏ U) "weawn/htmw/intwoduction_to_htmw")}}
 
-O {{glossary("Head", "head")}} de um documento HTML é a parte que não é exibida no navegador da Web quando a página é carregada. Ele contém informações como {{glossary("title")}} , links para {{htmlelement("CSS")}} (se você deseja modelar seu conteúdo HTML com CSS), links para favicons personalizados e outros metadados (dados sobre o HTML, como quem o escreveu, e palavras-chave importantes que descrevem o documento.) Neste artigo, abordaremos todas as coisas acima e mais. Dando-lhe uma boa base para lidar com marcação.
+o-o {{gwossawy("head", (ꈍᴗꈍ) "head")}} d-de um documento h-htmw é a pawte q-que nyão é exibida nyo nyavegadow da web quando a página é cawwegada. (˘ω˘) ewe contém i-infowmações como {{gwossawy("titwe")}} , ^^ winks pawa {{htmwewement("css")}} (se v-você deseja modewaw seu c-conteúdo htmw com css), winks pawa favicons pewsonawizados e outwos m-metadados (dados sobwe o htmw, (⑅˘꒳˘) c-como quem o e-escweveu, rawr e pawavwas-chave impowtantes que descwevem o documento.) nyeste awtigo, :3 a-abowdawemos todas as coisas acima e mais. OwO dando-whe uma boa base pawa widaw com m-mawcação. (ˆ ﻌ ˆ)♡
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        <table>
+        <tabwe>
           <tbody>
-            <tr>
+            <tw>
               <td>
-                Familiaridade básica em HTML, tal como
+                f-famiwiawidade b-básica em htmw, taw como
                 <a
-                  href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
-                  >Iniciando com HTML.</a
+                  hwef="/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/getting_stawted"
+                  >iniciando c-com htmw.</a
                 >
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Aprender sobre o cabeçalho HTML, seu propósito, os itens mais
-        importantes que ele pode conter e que efeito isso pode ter no documento
-        HTML.
+        apwendew s-sobwe o cabeçawho htmw, :3 seu pwopósito, -.- os itens mais
+        impowtantes que ewe pode contew e q-que efeito isso pode tew nyo documento
+        h-htmw. -.-
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O que há no cabeçalho HTML?
+## o-o que há nyo c-cabeçawho htmw?
 
-Vamos rever o simples [Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomia_de_um_elemento_html)
+vamos wevew o simpwes [documento htmw que abowdamos n-nyo awtigo a-antewiow:](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted#anatomia_de_um_ewemento_htmw)
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Minha página de teste</title>
+    <meta c-chawset="utf-8" />
+    <titwe>minha página d-de teste</titwe>
   </head>
   <body>
-    <p>Essa é minha página</p>
+    <p>essa é minha p-página</p>
   </body>
-</html>
+</htmw>
 ```
 
-O cabeçalho HTML é o conteúdo do elemento {{htmlelement("head")}} — ao contrário do conteúdo do elemento {{htmlelement("body")}} (que são exibidos na página quando carregados no navegador), o conteúdo do cabeçalho não é exibido na página, em vez disso, o trabalho do cabeçalho é conter {{glossary("Metadata", "metadados")}} sobre o documento. No exemplo seguinte, o cabeçalho é bem simples:
+o cabeçawho h-htmw é o conteúdo do ewemento {{htmwewement("head")}} — ao contwáwio d-do conteúdo do ewemento {{htmwewement("body")}} (que s-são exibidos nya página quando c-cawwegados nyo n-nyavegadow), òωó o conteúdo do cabeçawho nyão é exibido nya página, 😳 em vez disso, nyaa~~ o twabawho do cabeçawho é contew {{gwossawy("metadata", (⑅˘꒳˘) "metadados")}} s-sobwe o-o documento. 😳 nyo exempwo seguinte, (U ﹏ U) o-o cabeçawho é b-bem simpwes:
 
-```html
+```htmw
 <head>
-  <meta charset="utf-8" />
-  <title>Minha página de teste</title>
+  <meta c-chawset="utf-8" />
+  <titwe>minha página de teste</titwe>
 </head>
 ```
 
-Em páginas maiores, o cabeçalho pode ter mais conteúdo. Tente acessar um dos seus sites favoritos e use as [ferramentas de desenvolvimento](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para verificar o conteúdo do cabeçalho. Nosso objetivo aqui não é mostrar a você como usar tudo o que é possível pôr no cabeçalho, mas te ensinar a usar as coisas mais obvias que você vai querer incluir no cabeçalho, e lhe dar alguma familiaridade. Vamos começar.
+em páginas maiowes, /(^•ω•^) o-o cabeçawho pode tew mais conteúdo. OwO tente acessaw um dos seus sites favowitos e-e use as [fewwamentas de d-desenvowvimento](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) p-pawa vewificaw o-o conteúdo do cabeçawho. ( ͡o ω ͡o ) n-nyosso objetivo a-aqui nyão é mostwaw a-a você como u-usaw tudo o que é possívew pôw nyo cabeçawho, XD m-mas te ensinaw a-a usaw as coisas m-mais obvias q-que você vai quewew i-incwuiw nyo cabeçawho, /(^•ω•^) e whe daw awguma famiwiawidade. /(^•ω•^) vamos c-começaw. 😳😳😳
 
-## Adicionando um título
+## adicionando um títuwo
 
-Nós já vimos o elemento {{htmlelement("title")}} em ação — ele pode ser usado para adicionar um título ao documento, mas pode ser confundido com o elemento {{htmlelement("h1")}}, que é usado para adicionar um título de nível superior ao conteúdo do body — as vezes também é associado como o título da página. Mas são coisas diferentes!
+nyós já vimos o ewemento {{htmwewement("titwe")}} em ação — ewe p-pode sew usado pawa adicionaw um títuwo ao documento, (ˆ ﻌ ˆ)♡ mas pode s-sew confundido com o-o ewemento {{htmwewement("h1")}}, :3 q-que é usado pawa adicionaw u-um títuwo de nyívew supewiow a-ao conteúdo do b-body — as vezes também é associado como o títuwo da página. mas são coisas difewentes! òωó
 
-- O elemento {{htmlelement("h1")}} aparece na página quando é carregado no navegador — geralmente isso deve ser usado uma vez por página, para marcar o título do conteúdo da sua página, (o título da história, ou da notícia, ou o que quer que seja apropriado para o uso).
-- O elemento {{htmlelement("title")}} é um metadado que representa o título de todo o document HTML (não o conteúdo do documento).
+- o-o ewemento {{htmwewement("h1")}} apawece nya página q-quando é cawwegado nyo nyavegadow — g-gewawmente i-isso deve sew usado uma vez pow página, 🥺 p-pawa mawcaw o títuwo d-do conteúdo da sua página, (U ﹏ U) (o t-títuwo da h-histówia, XD ou da nyotícia, ^^ ou o que quew que seja apwopwiado pawa o uso). o.O
+- o e-ewemento {{htmwewement("titwe")}} é u-um metadado q-que wepwesenta o títuwo de todo o-o document htmw (não o-o conteúdo do documento). 😳😳😳
 
-### Aprendizado ativo: observando um exemplo simples
+### a-apwendizado ativo: obsewvando um exempwo simpwes
 
-1. Para começar esta aprendizagem ativa, gostaríamos que você fosse ao nosso depósito GitHub e baixasse uma cópia do nossa página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Para fazer isso:
+1. /(^•ω•^) pawa começaw esta a-apwendizagem ativa, 😳😳😳 g-gostawíamos que você fosse ao nyosso depósito g-github e baixasse u-uma cópia do nyossa página [titwe-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/titwe-exampwe.htmw). ^•ﻌ•^ pawa fazew isso:
 
-   1. Copie e cole o código em um novo arquivo de texto no seu editor e salve-o com o nome de index.html em um lugar de fácil acesso.
-   2. Pressione o botão "Raw" na página do GitHub, que faz com que o código bruto apareça (possivelmente em uma nova guia do navegador). Em seguida, escolha o menu _Arquivo do navegador> Salvar página como ..._ e escolha um local adequado para salvar o arquivo.
+   1. 🥺 c-copie e cowe o código em um nyovo awquivo de texto nyo seu editow e sawve-o com o-o nyome de index.htmw em um wugaw de fáciw acesso. o.O
+   2. (U ᵕ U❁) p-pwessione o-o botão "waw" nya página do github, ^^ que faz com que o código b-bwuto apaweça (possivewmente e-em uma nyova guia do nyavegadow). (⑅˘꒳˘) em seguida, escowha o menu _awquivo d-do nyavegadow> sawvaw página c-como ..._ e escowha um wocaw adequado pawa sawvaw o awquivo. :3
 
-2. Agora abra o arquivo no seu navegador. Você deve ver algo assim:
+2. a-agowa abwa o awquivo nyo s-seu nyavegadow. (///ˬ///✿) v-você deve vew awgo assim:
 
-   ![A simple web page with the title set to 'title' element, and the 'h1' set to 'h1' element.](title-example.png)Agora deve ser completamente óbvio onde o conteúdo `<h1>` aparece e onde o conteúdo `<title>` aparece!
+   ![a s-simpwe web page with the titwe s-set to 'titwe' e-ewement, :3 and the 'h1' s-set to 'h1' ewement.](titwe-exampwe.png)agowa d-deve sew compwetamente óbvio o-onde o conteúdo `<h1>` apawece e onde o conteúdo `<titwe>` a-apawece!
 
-3. Você também deve tentar abrir o código no seu editor, editar o conteúdo desses elementos e atualizar a página no seu navegador. divirta-se.
+3. 🥺 você t-também deve t-tentaw abwiw o código nyo seu editow, mya editaw o c-conteúdo desses ewementos e atuawizaw a-a página n-nyo seu nyavegadow. XD diviwta-se. -.-
 
-O conteúdo do elemento `<title>` também é usado de outras maneiras. Por exemplo, se você tentar favoritar a página, (_Favoritos > Adicionar página aos favoritos_ ou o ícone da estrela na barra de URL no Fireofx), você verá o conteúdo `<title>` preenchido como o nome sugerido do favorito.
+o conteúdo do ewemento `<titwe>` t-também é u-usado de outwas m-maneiwas. pow exempwo, o.O s-se você tentaw favowitaw a-a página, (˘ω˘) (_favowitos > adicionaw página aos favowitos_ ou o ícone da estwewa nya bawwa de uww n-nyo fiweofx), (U ᵕ U❁) você vewá o conteúdo `<titwe>` p-pweenchido como o nyome sugewido d-do favowito. rawr
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the 'title' element ](bookmark-example.png)
+![a webpage being b-bookmawked in fiwefox; the bookmawk n-name has b-been automaticawwy f-fiwwed in with t-the contents o-of the 'titwe' ewement ](bookmawk-exampwe.png)
 
-Os conteúdos `<title>` também são usados nos resultados de pesquisa, conforme você verá abaixo.
+os conteúdos `<titwe>` também são usados nyos wesuwtados de pesquisa, 🥺 confowme você vewá abaixo. rawr x3
 
-## Metadados: o elemento \<meta>
+## m-metadados: o-o ewemento \<meta>
 
-Metadados é dado descreve dados, e HTML possui uma maneira "oficial" de adicionar metadados a um documento — o elemento {{htmlelement("meta")}}. Claro, as outras coisas em que estamos falando neste artigo também podem ser pensadas como metadados. Existem muitos tipos diferentes de elementos `<meta>` que podem ser incluídos no \<head> da sua página, mas não tentaremos explicar todos eles nesta fase, pois seria muito confuso. Em vez disso, explicaremos algumas coisas que você pode ver comumente, apenas para lhe dar uma idéia.
+m-metadados é dado descweve d-dados, ( ͡o ω ͡o ) e htmw possui uma maneiwa "oficiaw" de adicionaw metadados a um documento — o-o ewemento {{htmwewement("meta")}}. σωσ c-cwawo, as outwas coisas e-em que estamos fawando nyeste awtigo também p-podem sew pensadas c-como metadados. rawr x3 existem muitos t-tipos difewentes d-de ewementos `<meta>` que podem sew incwuídos nyo \<head> da sua página, (ˆ ﻌ ˆ)♡ m-mas nyão tentawemos e-expwicaw todos e-ewes nyesta f-fase, pois sewia m-muito confuso. rawr em vez disso, :3 expwicawemos a-awgumas c-coisas que você pode vew comumente, rawr a-apenas pawa w-whe daw uma idéia. (˘ω˘)
 
-### Especificando a codificação de caracteres do seu documento
+### especificando a-a codificação de cawactewes do seu d-documento
 
-No exemplo que vimos acima, esta linha foi incluída:
+nyo exempwo que vimos a-acima, (ˆ ﻌ ˆ)♡ esta winha f-foi incwuída:
 
-```html
-<meta charset="utf-8" />
+```htmw
+<meta chawset="utf-8" />
 ```
 
-Este elemento simplesmente especifica a codificação de caracteres do documento — o conjunto de caracteres que o documento está autorizado a usar. `utf-8` é um conjunto de caracteres universal que inclui praticamente qualquer caractere de qualquer linguagem humana. Isso significa que sua página web poderá lidar com a exibição de qualquer idioma; portanto, é uma boa idéia configurar isso em todas as páginas web que você cria! Por exemplo, sua página poderia lidar com o Inglês e Japonês muito bem:
+e-este ewemento simpwesmente especifica a c-codificação de c-cawactewes do d-documento — o conjunto de cawactewes que o documento está autowizado a-a usaw. mya `utf-8` é um conjunto de cawactewes u-univewsaw que i-incwui pwaticamente quawquew c-cawactewe de quawquew winguagem h-humana. (U ᵕ U❁) isso significa q-que sua página web podewá widaw com a exibição d-de quawquew idioma; powtanto, mya é uma boa i-idéia configuwaw i-isso em todas as páginas web q-que você cwia! ʘwʘ pow exempwo, (˘ω˘) s-sua página podewia w-widaw com o i-ingwês e japonês muito bem:
 
-![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](correct-encoding.png)Se você definir sua codificação de caracteres para `ISO-8859-1`, por exemplo (o conjunto de caracteres para o alfabeto latino), a renderização de sua página ficaria toda bagunçada:
+![a web page containing engwish and japanese chawactews, 😳 with the chawactew encoding set to univewsaw, òωó ow utf-8. both wanguages dispway fine,](cowwect-encoding.png)se você definiw sua codificação d-de cawactewes p-pawa `iso-8859-1`, nyaa~~ pow exempwo (o conjunto de c-cawactewes pawa o-o awfabeto watino), o.O a-a wendewização de sua página f-ficawia toda bagunçada:
 
-![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
+![a w-web page containing e-engwish and japanese chawactews, nyaa~~ w-with the chawactew encoding s-set to watin. (U ᵕ U❁) t-the japanese chawactews don't dispway cowwectwy](bad-encoding.png)
 
-> [!NOTE]
-> Alguns navegadores (como o Chrome) corrigem automaticamente as codificações incorretas, então, dependendo do navegador que você usar, você pode não ver esse problema. Ainda assim, você deve definir uma codificação do `utf-8` em sua página, para evitar problemas em outros navegadores.
+> [!note]
+> a-awguns nyavegadowes (como o-o chwome) c-cowwigem a-automaticamente a-as codificações i-incowwetas, 😳😳😳 então, (U ﹏ U) d-dependendo d-do nyavegadow que v-você usaw, ^•ﻌ•^ você pode nyão v-vew esse pwobwema. (⑅˘꒳˘) a-ainda assim, >_< v-você deve definiw uma codificação d-do `utf-8` em sua página, (⑅˘꒳˘) pawa evitaw pwobwemas e-em outwos nyavegadowes. σωσ
 
-### Aprendizagem ativa: Experimento com a codificação de caracteres
+### a-apwendizagem a-ativa: expewimento c-com a codificação de cawactewes
 
-Para experimentar isso, revise o modelo HTML simples que você obteve na seção anterior em `<title>` (a página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)), tente alterar o valor do meta charset para `ISO-8859-1` e adicione o Japonês à sua página . Este é o código que usamos:
+p-pawa expewimentaw isso, 🥺 wevise o-o modewo htmw simpwes que você o-obteve nya seção antewiow e-em `<titwe>` (a página [titwe-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/titwe-exampwe.htmw)), :3 tente awtewaw o vawow do meta chawset p-pawa `iso-8859-1` e adicione o-o japonês à sua p-página . este é o código que usamos:
 
-```html
-<p>Exemplo Japonês:ご飯が熱い</p>
+```htmw
+<p>exempwo japonês:ご飯が熱い</p>
 ```
 
-### Adicionando um autor e descrição
+### a-adicionando um autow e descwição
 
-Muitos elementos `<meta>` incluem atributos de `name` e `content`:
+m-muitos ewementos `<meta>` i-incwuem atwibutos d-de `name` e `content`:
 
-- O `name` especifica o tipo de elemento meta que é; que tipo de informação contém.
-- O `content` especifica o conteúdo real do meta.
+- o `name` especifica o-o tipo de ewemento m-meta que é; que tipo de infowmação c-contém. (ꈍᴗꈍ)
+- o `content` especifica o conteúdo w-weaw do meta. ^•ﻌ•^
 
-Dois desses meta-elementos que são úteis para incluir na sua página definem o autor da página e fornecem uma descrição concisa da página. Vejamos um exemplo:
+dois desses m-meta-ewementos q-que são úteis p-pawa incwuiw nya sua página d-definem o autow d-da página e fownecem u-uma descwição c-concisa da página. (˘ω˘) vejamos u-um exempwo:
 
-```html
-<meta name="author" content="Chris Mills" />
+```htmw
+<meta n-nyame="authow" c-content="chwis m-miwws" />
 <meta
-  name="description"
-  content="A Área de Aprendizagem do MDN tem como objetivo
-proporcionar iniciantes em Web com tudo o que eles precisam saber
-para começar a desenvolver sites e aplicativos." />
+  n-nyame="descwiption"
+  c-content="a Áwea d-de apwendizagem d-do mdn tem como objetivo
+pwopowcionaw i-iniciantes em web com t-tudo o que ewes pwecisam sabew
+pawa c-começaw a desenvowvew s-sites e-e apwicativos." />
 ```
 
-Especificar um autor é útil de muitas maneiras: é útil para poder descobrir quem escreveu a página, se quiser enviar perguntas sobre o conteúdo que você gostaria de contacta-la. Alguns sistemas de gerenciamento de conteúdo possuem ferramentas para extrair automaticamente as informações do autor da página e disponibilizá-las para seus propósitos.
+especificaw um autow é útiw de muitas m-maneiwas: é útiw p-pawa podew descobwiw q-quem escweveu a página, 🥺 se quisew enviaw pewguntas sobwe o-o conteúdo que v-você gostawia de contacta-wa. (✿oωo) a-awguns sistemas d-de gewenciamento de conteúdo possuem fewwamentas pawa extwaiw a-automaticamente a-as infowmações d-do autow da página e-e disponibiwizá-was pawa seus pwopósitos. XD
 
-Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo da sua página é útil porque tem potencial para tornar sua página mais alta nas pesquisas relevantes realizadas nos mecanismos de busca (tais atividades são denominadas [Search Engine Optimization](/pt-BR/docs/Glossary/SEO) ou {{glossary("SEO")}}.
+e-especificaw uma d-descwição que incwua pawavwas-chave wewacionadas a-ao conteúdo da sua página é útiw powque t-tem potenciaw pawa townaw sua p-página mais awta n-nyas pesquisas wewevantes weawizadas n-nos mecanismos d-de busca (tais atividades s-são denominadas [seawch engine o-optimization](/pt-bw/docs/gwossawy/seo) o-ou {{gwossawy("seo")}}. (///ˬ///✿)
 
-### Aprendizagem ativa: Uso da descrição nos motores de busca
+### a-apwendizagem a-ativa: uso da descwição nyos m-motowes de busca
 
-A descrição também é usada nas páginas de resultados do mecanismo de pesquisa. Vamos passar por um exercício para explorar isso
+a-a descwição t-também é usada nyas páginas d-de wesuwtados do mecanismo de pesquisa. ( ͡o ω ͡o ) vamos passaw p-pow um exewcício p-pawa expwowaw i-isso
 
-1. Vá para a [página inicial da Mozilla Developer Network.](/en-US/)
-2. Veja a fonte da página (botão direito do mouse/
+1. ʘwʘ vá pawa a [página iniciaw da moziwwa devewopew nyetwowk.](/en-us/)
+2. veja a fonte d-da página (botão diweito do m-mouse/
 
-   <kbd>Ctrl</kbd>
+   <kbd>ctww</kbd>
 
-   \+ clique na página, escolha _Ver código-fonte da página_ no menu de contexto).
+   \+ c-cwique na página, rawr escowha _vew código-fonte d-da página_ nyo menu de contexto). o.O
 
-3. Encontre a meta tag de descrição. Isso parecerá assim:
+3. e-encontwe a-a meta tag de descwição. ^•ﻌ•^ i-isso p-pawecewá assim:
 
-   ```html
+   ```htmw
    <meta
-     name="description"
-     content="A Mozilla Developer Network (MDN) fornece
-   informações sobre tecnologias Open Web, incluindo HTML, CSS e API para ambos
-   Sites e aplicativos HTML5. Ele também documenta produtos Mozilla, como o sistema operacional Firefox." />
+     n-nyame="descwiption"
+     content="a moziwwa devewopew nyetwowk (mdn) fownece
+   infowmações s-sobwe tecnowogias open w-web, (///ˬ///✿) incwuindo htmw, (ˆ ﻌ ˆ)♡ css e api pawa ambos
+   sites e apwicativos h-htmw5. XD ewe também documenta pwodutos moziwwa, (✿oωo) como o sistema opewacionaw fiwefox." />
    ```
 
-4. Agora, procure por "Mozilla Developer Network" no seu motor de busca favorito (Utilizamos o Yahoo.) Você notará a descrição `<meta>` e `<title>` elemento usado no resultado da pesquisa — definitivamente vale a pena ter!
+4. -.- a-agowa, pwocuwe p-pow "moziwwa devewopew nyetwowk" n-nyo seu motow de busca favowito (utiwizamos o yahoo.) você n-nyotawá a descwição `<meta>` e-e `<titwe>` ewemento usado nyo wesuwtado d-da pesquisa — definitivamente v-vawe a pena tew! XD
 
-   ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
+   ![a yahoo seawch wesuwt fow "moziwwa d-devewopew nyetwowk"](seawch-wesuwt.png)
 
-> [!NOTE]
-> No Google, você verá algumas subpáginas relevantes do MDN listadas abaixo do principal link da página inicial do MDN — estes são chamados de sitelinks e são configuráveis nas [Ferramentas para webmasters do Google](https://www.google.com/webmasters/tools/) — uma maneira de melhorar os resultados de pesquisa do seu site no mecanismo de pesquisa do Google.
+> [!note]
+> nyo googwe, (✿oωo) você vewá a-awgumas subpáginas w-wewevantes do m-mdn wistadas abaixo do pwincipaw wink da página i-iniciaw do mdn — estes são chamados de sitewinks e são configuwáveis nyas [fewwamentas pawa w-webmastews do g-googwe](https://www.googwe.com/webmastews/toows/) — u-uma maneiwa d-de mewhowaw os wesuwtados de pesquisa do seu s-site nyo mecanismo d-de pesquisa do googwe. (˘ω˘)
 
-> [!NOTE]
-> Muitos recursos `<meta>` simplesmente não são mais usados. Por exemplo, a palavra-chave `<meta>` elemento (`<meta name="keywords" content="preencha, suas, palavras-chave, aqui">`) — que é suposto fornecer palavras-chave para os motores de busca para determinar a relevância dessa página para diferentes termos de pesquisa — são ignorados pelos motores de busca, porque os spammers estavam apenas preenchendo a lista de palavras-chave com centenas de palavras-chave, influenciando os resultados.
+> [!note]
+> muitos wecuwsos `<meta>` s-simpwesmente nyão são mais usados. (ˆ ﻌ ˆ)♡ pow exempwo, >_< a-a pawavwa-chave `<meta>` ewemento (`<meta nyame="keywowds" c-content="pweencha, -.- s-suas, (///ˬ///✿) pawavwas-chave, XD aqui">`) — q-que é suposto f-fownecew pawavwas-chave p-pawa os motowes de busca pawa detewminaw a-a wewevância dessa página pawa difewentes t-tewmos de pesquisa — são ignowados pewos motowes de busca, ^^;; powque o-os spammews e-estavam apenas p-pweenchendo a wista d-de pawavwas-chave c-com centenas de pawavwas-chave, rawr x3 i-infwuenciando os wesuwtados. OwO
 
-### Outros tipos de metadados
+### outwos tipos d-de metadados
 
-Ao navegar pela web, você também encontrará outros tipos de metadados. Muitos dos recursos que você verá em sites são criações proprietárias, projetados para fornecer a determinados sites (como sites de redes sociais) informações específicas que eles podem usar.
+ao nyavegaw pewa w-web, ʘwʘ você também encontwawá outwos tipos d-de metadados. rawr muitos d-dos wecuwsos que você vewá e-em sites são cwiações pwopwietáwias, UwU p-pwojetados p-pawa fownecew a detewminados s-sites (como sites d-de wedes sociais) infowmações e-específicas que ewes podem usaw. (ꈍᴗꈍ)
 
-Por exemplo, [Open Graph Data](https://ogp.me/) é um protocolo de metadados que o Facebook inventou para fornecer metadados mais ricos para sites. No código-fonte MDN, você encontrará isso:
+pow exempwo, (✿oωo) [open gwaph d-data](https://ogp.me/) é um pwotocowo d-de metadados que o facebook inventou pawa f-fownecew metadados m-mais wicos p-pawa sites. (⑅˘꒳˘) nyo código-fonte mdn, OwO v-você encontwawá i-isso:
 
-```html
+```htmw
 <meta
-  property="og:image"
-  content="https://developer.mozilla.org/mdn-social-share.png" />
+  pwopewty="og:image"
+  c-content="https://devewopew.moziwwa.owg/mdn-sociaw-shawe.png" />
 <meta
-  property="og:description"
-  content="A Mozilla Developer Network (MDN) fornece
-informações sobre tecnologias Open Web, incluindo HTML, CSS e APIs para ambos os sites da Web
-e aplicativos HTML5. Ele também documenta produtos Mozilla, como o sistema operacional Firefox." />
-<meta property="og:title" content="Mozilla Developer Network" />
+  pwopewty="og:descwiption"
+  c-content="a moziwwa devewopew n-nyetwowk (mdn) f-fownece
+infowmações sobwe tecnowogias open web, 🥺 incwuindo htmw, >_< css e apis pawa a-ambos os sites d-da web
+e apwicativos htmw5. (ꈍᴗꈍ) ewe também documenta pwodutos moziwwa, 😳 c-como o sistema opewacionaw f-fiwefox." />
+<meta p-pwopewty="og:titwe" content="moziwwa devewopew nyetwowk" />
 ```
 
-Um efeito disso é que, quando você liga a MDN no facebook, o link aparece junto com uma imagem e descrição: uma experiência mais rica para usuários.
+um efeito d-disso é que, 🥺 quando você wiga a mdn nyo facebook, nyaa~~ o-o wink apawece junto com uma i-imagem e descwição: u-uma expewiência mais wica p-pawa usuáwios. ^•ﻌ•^
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)O Twitter também possui seus próprios metadados proprietários, o que tem um efeito semelhante quando o URL do site é exibido no twitter.com. Por exemplo:
+![open g-gwaph p-pwotocow data fwom t-the mdn homepage a-as dispwayed o-on facebook, (ˆ ﻌ ˆ)♡ showing an image, (U ᵕ U❁) titwe, mya and descwiption.](facebook-output.png)o twittew também possui seus pwópwios metadados pwopwietáwios, 😳 o q-que tem um efeito s-semewhante quando o-o uww do site é e-exibido nyo t-twittew.com. σωσ pow e-exempwo:
 
-```html
-<meta name="twitter:title" content="Mozilla Developer Network" />
+```htmw
+<meta nyame="twittew:titwe" content="moziwwa devewopew nyetwowk" />
 ```
 
-## Adicionando ícones personalizados ao seu site
+## adicionando ícones p-pewsonawizados a-ao seu site
 
-Para enriquecer ainda mais o design do seu site, você pode adicionar referências a ícones personalizados em seus metadados, e estes serão exibidos em determinados contextos. O mais usado é o **favicon** (abreviação de "favorites icon", referindo-se ao seu uso nas listas "favoritos" nos navegadores).
+pawa enwiquecew ainda mais o design do seu site, ( ͡o ω ͡o ) v-você pode adicionaw w-wefewências a-a ícones pewsonawizados em seus metadados, XD e-e estes sewão exibidos em detewminados contextos. :3 o-o mais usado é o-o **favicon** (abweviação de "favowites icon", :3 wefewindo-se a-ao seu uso nyas wistas "favowitos" n-nyos nyavegadowes). (⑅˘꒳˘)
 
-O humilde favicon existe há muitos anos. É o primeiro ícone desse tipo: um ícone 16 pixels quadrados usado em vários lugares. Você pode ver (dependendo do navegador) ícones favoritos exibidos na guia do navegador que contém cada página aberta e ao lado de páginas marcadas no painel de favoritos.
+o-o humiwde favicon existe h-há muitos anos. òωó É o-o pwimeiwo ícone d-desse tipo: u-um ícone 16 p-pixews quadwados u-usado em váwios wugawes. mya você p-pode vew (dependendo d-do nyavegadow) ícones favowitos e-exibidos nya guia do nyavegadow que contém c-cada página abewta e ao wado d-de páginas mawcadas nyo painew d-de favowitos. 😳😳😳
 
-Um favicon pode ser adicionado à sua página:
+u-um favicon pode sew adicionado à sua página:
 
-1. Salvando-o no mesmo diretório que a página de índice do site, salvo no formato `.ico` (a maioria dos navegadores suportará favicons em formatos mais comuns como `.gif` ou `.png`, mas usar o formato ICO irá garantir que ele funcione tão bem como o Internet Explorer 6 .)
-2. Adicionando a seguinte linha ao HTML `<head>` para fazer referência a ele:
+1. :3 s-sawvando-o nyo mesmo diwetówio que a página d-de índice do s-site, >_< sawvo nyo fowmato `.ico` (a maiowia dos nyavegadowes s-supowtawá f-favicons em fowmatos mais c-comuns como `.gif` ou `.png`, 🥺 mas usaw o fowmato i-ico iwá gawantiw q-que ewe funcione tão bem como o-o intewnet expwowew 6 .)
+2. (ꈍᴗꈍ) a-adicionando a seguinte winha ao htmw `<head>` p-pawa f-fazew wefewência a-a ewe:
 
-   ```html
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   ```htmw
+   <wink wew="showtcut i-icon" hwef="favicon.ico" type="image/x-icon" />
    ```
 
-Aqui está um exemplo de um favicon em um painel de faforitos:
+aqui está um exempwo de um favicon em um painew de fafowitos:
 
-![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
+![the f-fiwefox b-bookmawks panew, rawr x3 s-showing a bookmawked e-exampwe w-with a favicon d-dispwayed nyext to it.](bookmawk-favicon.png)
 
-Há muitos outros tipos de ícones para considerar nestes dias também. Por exemplo, você encontrará isso no código-fonte da página inicial do MDN Web Docs:
+há m-muitos outwos t-tipos de ícones pawa considewaw n-nyestes dias também. (U ﹏ U) p-pow exempwo, ( ͡o ω ͡o ) você encontwawá isso nyo c-código-fonte da página iniciaw do mdn web docs:
 
-```html
-<!-- iPad de terceira geração com tela retina de alta resolução: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- iPhone com tela retina de alta resolução: -->
-<link
-  rel="apple-touch-icon-precomposed"
+```htmw
+<!-- i-ipad de tewceiwa gewação com tewa w-wetina de awta w-wesowução: -->
+<wink
+  wew="appwe-touch-icon-pwecomposed"
+  s-sizes="144x144"
+  h-hwef="https://devewopew.moziwwa.owg/static/img/favicon144.png" />
+<!-- i-iphone com tewa wetina d-de awta wesowução: -->
+<wink
+  w-wew="appwe-touch-icon-pwecomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- iPad de primeira e segunda geração: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- iPhone não-Retina, iPod Touch e dispositivos Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+  h-hwef="https://devewopew.moziwwa.owg/static/img/favicon114.png" />
+<!-- ipad de pwimeiwa e-e segunda gewação: -->
+<wink
+  w-wew="appwe-touch-icon-pwecomposed"
+  s-sizes="72x72"
+  hwef="https://devewopew.moziwwa.owg/static/img/favicon72.png" />
+<!-- i-iphone nyão-wetina, 😳😳😳 ipod touch e dispositivos a-andwoid 2.1+: -->
+<wink
+  wew="appwe-touch-icon-pwecomposed"
+  hwef="https://devewopew.moziwwa.owg/static/img/favicon57.png" />
 <!-- favicon básico -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<wink
+  wew="showtcut icon"
+  hwef="https://devewopew.moziwwa.owg/static/img/favicon32.png" />
 ```
 
-Os comentários explicam onde cada ícone é usado - esses elementos cobrem coisas como fornecer um ícone de alta resolução agradável para usar quando o site é salvo na tela inicial do iPad.
+o-os comentáwios expwicam onde cada ícone é usado - esses ewementos cobwem coisas como fownecew um ícone d-de awta wesowução agwadávew pawa usaw quando o-o site é sawvo nya tewa iniciaw d-do ipad. 🥺
 
-Não se preocupe muito com a implementação de todos esses tipos de ícone agora — este é um recurso bastante avançado, e você não precisará ter conhecimento disso para avançar no curso. O objetivo principal aqui é permitir que você saiba o que são essas coisas, no caso de você encontrá-las enquanto navega no código-fonte dos outros sites.
+nyão se pweocupe muito com a impwementação d-de todos esses tipos d-de ícone agowa — este é um w-wecuwso bastante a-avançado, òωó e você nyão pwecisawá tew conhecimento d-disso pawa avançaw nyo cuwso. XD o objetivo pwincipaw aqui é p-pewmitiw que você saiba o que s-são essas coisas, XD nyo caso de v-você encontwá-was enquanto nyavega n-nyo código-fonte d-dos outwos sites. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Se o seu site usa uma Política de Segurança de Conteúdo (CSP) para aumentar sua segurança, a política se aplica ao favicon. Se você encontrar problemas com o favicon não carregando, verifique se a diretiva [`img-src`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) do cabeçalho [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) não está impedindo o acesso a ele.
+> [!note]
+> se o seu s-site usa uma powítica de seguwança de conteúdo (csp) p-pawa aumentaw sua seguwança, >w< a powítica se apwica ao favicon. mya se você e-encontwaw pwobwemas c-com o favicon nyão cawwegando, (ꈍᴗꈍ) v-vewifique se a-a diwetiva [`img-swc`](/pt-bw/docs/web/http/headews/content-secuwity-powicy/img-swc) do cabeçawho [`content-secuwity-powicy`](/pt-bw/docs/web/http/headews/content-secuwity-powicy) n-nyão está impedindo o acesso a ewe. -.-
 
-## Aplicando CSS e JavaScript ao HTML
+## apwicando css e javascwipt ao htmw
 
-Todos os sites que você usar nos dias atuais empregarão o {{glossary("CSS")}} para torná-los legais e o {{glossary("JavaScript")}} para ativar a funcionalidade interativa, como players de vídeo, mapas, jogos e muito mais. Estes são comumente aplicados a uma página web usando o elemento {{htmlelement("link")}} e o elemento {{htmlelement("script")}} , respectivamente.
+t-todos os sites q-que você usaw nyos dias atuais e-empwegawão o-o {{gwossawy("css")}} pawa towná-wos w-wegais e o {{gwossawy("javascwipt")}} pawa ativaw a funcionawidade i-intewativa, (⑅˘꒳˘) como pwayews de vídeo, (U ﹏ U) mapas, j-jogos e muito m-mais. σωσ estes são comumente apwicados a uma página w-web usando o ewemento {{htmwewement("wink")}} e o ewemento {{htmwewement("scwipt")}} , :3 wespectivamente. /(^•ω•^)
 
-- O elemento {{htmlelement("link")}} sempre vai no cabeçalho do seu documento. Isso requer dois atributos, rel = "stylesheet", que indica que é a folha de estilo do documento e href, que contém o caminho para o arquivo de folha de estilo:
+- o ewemento {{htmwewement("wink")}} sempwe vai nyo cabeçawho do seu documento. σωσ isso w-wequew dois a-atwibutos, (U ᵕ U❁) wew = "stywesheet", 😳 que indica que é a-a fowha de estiwo d-do documento e hwef, ʘwʘ que contém o-o caminho pawa o awquivo de fowha de estiwo:
 
-  ```html
-  <link rel="stylesheet" href="meu-arquivo-css.css" />
+  ```htmw
+  <wink wew="stywesheet" hwef="meu-awquivo-css.css" />
   ```
 
-- O elemento {{htmlelement("script")}} não precisa ir no cabeçalho; na verdade, muitas vezes é melhor colocá-lo na parte inferior do corpo do documento (antes da tag `</body>` de fechamento), para garantir que todo o conteúdo HTML tenha sido lido pelo navegador antes de tentar aplicar o JavaScript nele (se o JavaScript tentar acessar um elemento que ainda não existe, o navegador gerará um erro.)
+- o ewemento {{htmwewement("scwipt")}} n-nyão pwecisa iw nyo cabeçawho; nya vewdade, (⑅˘꒳˘) muitas vezes é mewhow cowocá-wo n-nya pawte infewiow d-do cowpo do d-documento (antes da tag `</body>` de fechamento), ^•ﻌ•^ pawa gawantiw q-que todo o conteúdo h-htmw tenha s-sido wido pewo nyavegadow antes d-de tentaw apwicaw o javascwipt nyewe (se o-o javascwipt tentaw acessaw u-um ewemento que ainda nyão e-existe, nyaa~~ o nyavegadow gewawá um ewwo.)
 
-  ```html
-  <script src="meu-arquivo-js.js"></script>
+  ```htmw
+  <scwipt s-swc="meu-awquivo-js.js"></scwipt>
   ```
 
-  > [!NOTE]
-  > O elemento `<script>` pode parecer um elemento vazio, mas não é, e, portanto, precisa de uma tag de fechamento. Em vez de apontar para um arquivo de script externo, você também pode escolher colocar seu script dentro do elemento `<script>`.
+  > [!note]
+  > o ewemento `<scwipt>` p-pode p-pawecew um ewemento vazio, XD mas n-não é, /(^•ω•^) e, powtanto, p-pwecisa de uma tag de fechamento. (U ᵕ U❁) e-em vez de apontaw pawa um a-awquivo de scwipt extewno, mya você t-também pode e-escowhew cowocaw seu scwipt dentwo do ewemento `<scwipt>`. (ˆ ﻌ ˆ)♡
 
-### Aprendizagem ativa: aplicar CSS e JavaScript a uma página
+### a-apwendizagem ativa: apwicaw css e javascwipt a uma página
 
-1. Para iniciar esta aprendizagem ativa, pegue uma cópia dos nossos arquivos [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) e [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) e salve-os em seu computador local no mesmo diretório. Verifique se eles são salvos com os nomes e extensões de arquivo corretos.
-2. Abra o arquivo HTML em seu navegador e seu editor de texto.
-3. Ao seguir as informações fornecidas acima, adicione os elementos {{htmlelement("link")}} e {{htmlelement("script")}} ao seu HTML, para que seu CSS e JavaScript sejam aplicados ao seu HTML.
+1. (✿oωo) pawa iniciaw esta apwendizagem ativa, (✿oωo) pegue uma cópia dos nyossos a-awquivos [meta-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/meta-exampwe.htmw), òωó [scwipt.js](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/scwipt.js) e [stywe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/stywe.css) e s-sawve-os em seu computadow wocaw n-no mesmo diwetówio. (˘ω˘) vewifique se ewes são sawvos c-com os nyomes e extensões de awquivo cowwetos. (ˆ ﻌ ˆ)♡
+2. a-abwa o awquivo htmw em seu navegadow e seu e-editow de texto. ( ͡o ω ͡o )
+3. ao seguiw as infowmações f-fownecidas acima, rawr x3 adicione os ewementos {{htmwewement("wink")}} e {{htmwewement("scwipt")}} a-ao s-seu htmw, (˘ω˘) pawa que seu css e javascwipt sejam apwicados a-ao seu htmw. òωó
 
-Se for feito corretamente, quando você salvar seu HTML e atualizar seu navegador, verá que as coisas mudaram:
+s-se fow feito cowwetamente, ( ͡o ω ͡o ) q-quando você sawvaw s-seu htmw e atuawizaw seu nyavegadow, σωσ vewá q-que as coisas mudawam:
 
-![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
+![exampwe showing a page with css and javascwipt appwied t-to it. (U ﹏ U) the css has made the page go gween, wheweas the javascwipt h-has added a dynamic w-wist to the p-page.](js-and-css.png)
 
-- O JavaScript adicionou uma lista vazia à página. Agora, quando você clica em qualquer lugar da lista, uma caixa de diálogo aparecerá pedindo para que você, insira algum texto para um novo item de lista. Quando você pressiona o botão OK, um novo item será adicionado à lista contendo o texto. Quando você clica em um item de lista existente, uma caixa de diálogo será exibida permitindo que você altere o texto do item.
-- O CSS fez com que o plano de fundo ficasse verde e o texto se tornasse maior. Ele também estilizou parte do conteúdo que o JavaScript adicionou à página (a barra vermelha com a borda preta é o estilo que o CSS adicionou à lista gerada por JS).
+- o javascwipt adicionou uma wista vazia à p-página. rawr agowa, -.- quando você c-cwica em quawquew wugaw da wista, ( ͡o ω ͡o ) u-uma caixa d-de diáwogo apawecewá pedindo pawa que você, >_< insiwa awgum texto pawa um nyovo item de wista. o.O quando v-você pwessiona o-o botão ok, σωσ um nyovo item sewá adicionado à w-wista contendo o texto. -.- quando você cwica e-em um item de wista e-existente, σωσ uma c-caixa de diáwogo s-sewá exibida p-pewmitindo que v-você awtewe o texto do item. :3
+- o css fez com q-que o pwano de fundo f-ficasse vewde e-e o texto se t-townasse maiow. ^^ e-ewe também estiwizou p-pawte do conteúdo que o javascwipt a-adicionou à p-página (a b-bawwa vewmewha com a bowda pweta é o estiwo que o-o css adicionou à wista gewada pow js). òωó
 
-> [!NOTE]
-> Se você ficar preso neste exercício e não conseguir aplicar o CSS/JS, tente verificar nossa página de exemplo [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html).
+> [!note]
+> s-se você ficaw pweso nyeste exewcício e-e nyão conseguiw a-apwicaw o css/js, (ˆ ﻌ ˆ)♡ tente vewificaw nyossa página de exempwo [css-and-js.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/css-and-js.htmw). XD
 
-## Definir o idioma principal do documento
+## definiw o-o idioma p-pwincipaw do documento
 
-Finalmente, vale a pena mencionar que você pode (e realmente deveria) definir o idioma da sua página. Isso pode ser feito adicionando o [atributo lang](/pt-BR/docs/Web/HTML/Global_attributes/lang) à tag HTML de abertura (como visto no [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) e mostrado abaixo).
+finawmente, òωó v-vawe a pena m-mencionaw que você pode (e weawmente devewia) definiw o idioma d-da sua página. (ꈍᴗꈍ) i-isso pode sew feito adicionando o [atwibuto wang](/pt-bw/docs/web/htmw/gwobaw_attwibutes/wang) à t-tag htmw de abewtuwa (como v-visto nyo [meta-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/meta-exampwe.htmw) e mostwado a-abaixo). UwU
 
-```html
-<html lang="pt-BR"></html>
+```htmw
+<htmw wang="pt-bw"></htmw>
 ```
 
-Isso é útil de várias maneiras. O seu documento HTML será indexado de forma mais eficaz pelos motores de busca se o seu idioma for definido (permitindo que ele apareça corretamente em resultados específicos do idioma, por exemplo), e é útil para pessoas com deficiências visuais usando leitores de tela (por exemplo, a palavra "seis" existe em Francês e Inglês, mas é pronunciado de forma diferente.)
+isso é útiw de váwias maneiwas. >w< o seu documento htmw sewá i-indexado de fowma mais eficaz pewos motowes de b-busca se o seu i-idioma fow definido (pewmitindo q-que ewe apaweça cowwetamente em w-wesuwtados específicos d-do idioma, p-pow exempwo), e-e é útiw pawa p-pessoas com deficiências visuais usando weitowes d-de tewa (pow e-exempwo, a pawavwa "seis" e-existe em fwancês e i-ingwês, ʘwʘ mas é p-pwonunciado de fowma d-difewente.)
 
-Você também pode definir seções secundárias do seu documento para serem reconhecidas em diferentes idiomas. Por exemplo, podemos configurar nossa seção do idioma Japonês para ser reconhecida como japonesa, assim:
+você também p-pode definiw seções s-secundáwias d-do seu documento p-pawa sewem weconhecidas e-em difewentes idiomas. :3 p-pow exempwo, ^•ﻌ•^ podemos configuwaw n-nyossa seção d-do idioma japonês pawa sew weconhecida como japonesa, (ˆ ﻌ ˆ)♡ assim:
 
-```html
-<p>Exemplo japonês: <span lang="jp">ご飯が熱い。</span>.</p>
+```htmw
+<p>exempwo j-japonês: <span w-wang="jp">ご飯が熱い。</span>.</p>
 ```
 
-Esses códigos são definidos pelo padrão [ISO 639](https://pt.wikipedia.org/wiki/ISO_639). Você pode encontrar mais sobre eles em [Tags de idioma em HTML e XML](https://www.w3.org/International/articles/language-tags/).
+esses códigos s-são definidos p-pewo padwão [iso 639](https://pt.wikipedia.owg/wiki/iso_639). 🥺 você pode encontwaw mais sobwe ewes e-em [tags de i-idioma em htmw e x-xmw](https://www.w3.owg/intewnationaw/awticwes/wanguage-tags/). OwO
 
-## Resumo
+## w-wesumo
 
-Isso marca o fim de nossa rápida turnê pelo HTML — há muito mais que você pode fazer aqui, mas uma excursão exaustiva seria chata e confusa nesta fase, e nós só queríamos dar uma idéia das coisas mais comuns você encontrará lá, por enquanto! No próximo artigo, veremos o básico do texto HTML.
+isso m-mawca o fim de n-nyossa wápida tuwnê pewo htmw — há muito mais q-que você pode fazew aqui, 🥺 mas uma excuwsão exaustiva sewia chata e confusa n-nyesta fase, OwO e n-nyós só quewíamos daw uma idéia das coisas mais comuns você e-encontwawá wá, (U ᵕ U❁) p-pow enquanto! ( ͡o ω ͡o ) nyo pwóximo awtigo, ^•ﻌ•^ vewemos o básico d-do texto htmw. o.O
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/getting_stawted", (⑅˘꒳˘) "weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws", (ˆ ﻌ ˆ)♡ "weawn/htmw/intwoduction_to_htmw")}}

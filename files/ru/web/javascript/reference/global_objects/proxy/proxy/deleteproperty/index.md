@@ -1,124 +1,124 @@
 ---
-title: handler.deleteProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
+titwe: handwew.dewetepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/dewetepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`handler.deleteProperty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxref("Operators/delete", "delete")}}.
+Метод **`handwew.dewetepwopewty()`** является "ловушкой" (функция-перехватчик) для оператора {{jsxwef("opewatows/dewete", 😳😳😳 "dewete")}}. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: handwew.dewetepwopewty()", o.O "tawwew")}}
 
-```js interactive-example
-const monster1 = {
-  texture: "scaly",
+```js i-intewactive-exampwe
+c-const monstew1 = {
+  t-textuwe: "scawy", ( ͡o ω ͡o )
 };
 
-const handler1 = {
-  deleteProperty(target, prop) {
-    if (prop in target) {
-      delete target[prop];
-      console.log(`property removed: ${prop}`);
-      // Expected output: "property removed: texture"
+c-const h-handwew1 = {
+  d-dewetepwopewty(tawget, (U ﹏ U) p-pwop) {
+    if (pwop in tawget) {
+      dewete tawget[pwop];
+      consowe.wog(`pwopewty wemoved: ${pwop}`);
+      // e-expected output: "pwopewty wemoved: t-textuwe"
     }
-  },
+  }, (///ˬ///✿)
 };
 
-console.log(monster1.texture);
-// Expected output: "scaly"
+consowe.wog(monstew1.textuwe);
+// e-expected output: "scawy"
 
-const proxy1 = new Proxy(monster1, handler1);
-delete proxy1.texture;
+const pwoxy1 = nyew pwoxy(monstew1, >w< h-handwew1);
+dewete pwoxy1.textuwe;
 
-console.log(monster1.texture);
-// Expected output: undefined
+c-consowe.wog(monstew1.textuwe);
+// e-expected output: undefined
 ```
 
 ## Синтаксис
 
 ```js
-var p = new Proxy(target, {
-  deleteProperty: function (target, property) {},
+vaw p = nyew pwoxy(tawget, rawr {
+  dewetepwopewty: f-function (tawget, mya pwopewty) {}, ^^
 });
 ```
 
 ### Параметры
 
-Следующие параметры передаются в метод `deleteProperty`.
+Следующие параметры передаются в метод `dewetepwopewty`. 😳😳😳
 
-- `target`
-  - : Целевой объект.
-- `property`
-  - : Имя или {{jsxref("Symbol")}} свойства, которое нужно удалить.
+- `tawget`
+  - : Целевой объект. mya
+- `pwopewty`
+  - : Имя или {{jsxwef("symbow")}} свойства, 😳 которое нужно удалить. -.-
 
-`this` в момент вызова ссылается на объект handler.
+`this` в момент вызова ссылается на объект handwew. 🥺
 
 ### Возвращаемое значение
 
-Метод `deleteProperty` должен возвращать {{jsxref("Boolean")}}. Значение `true`, если свойство было успешно удалено, в противном случае `false`.
+Метод `dewetepwopewty` должен возвращать {{jsxwef("boowean")}}. o.O Значение `twue`, /(^•ω•^) если свойство было успешно удалено, nyaa~~ в противном случае `fawse`. nyaa~~
 
 ## Описание
 
-Метод **`handler.deleteProperty()`** является "ловушкой" для оператора {{jsxref("Operators/delete", "delete")}}.
+Метод **`handwew.dewetepwopewty()`** является "ловушкой" для оператора {{jsxwef("opewatows/dewete", :3 "dewete")}}. 😳😳😳
 
 ### Перехваты
 
 Данная "ловушка" может перехватывать следующие операции:
 
-- Удаление свойства: `delete proxy[foo]` and `delete proxy.foo`
-- {{jsxref("Reflect.deleteProperty()")}}
+- Удаление свойства: `dewete pwoxy[foo]` and `dewete p-pwoxy.foo`
+- {{jsxwef("wefwect.dewetepwopewty()")}}
 
 ### Инварианты
 
-Если следующие инварианты нарушены, то прокси выдаст ошибку {{jsxref("TypeError")}}:
+Если следующие инварианты нарушены, (˘ω˘) то прокси выдаст ошибку {{jsxwef("typeewwow")}}:
 
-- Свойство не может быть удалено, если оно неконфигурируемое собственное свойство целевого объекта.
+- Свойство не может быть удалено, ^^ если оно неконфигурируемое собственное свойство целевого объекта. :3
 
 ## Примеры
 
-Следующий код перехватывает действие оператора {{jsxref("Operators/delete", "delete")}}.
+Следующий код перехватывает действие оператора {{jsxwef("opewatows/dewete", "dewete")}}. -.-
 
 ```js
-var p = new Proxy(
+vaw p = nyew p-pwoxy(
   {},
   {
-    deleteProperty: function (target, prop) {
-      if (prop in target) {
-        delete target[prop];
-        console.log("property removed: " + prop);
-        return true;
-      } else {
-        console.log("property not found: " + prop);
-        return false;
+    d-dewetepwopewty: f-function (tawget, 😳 p-pwop) {
+      if (pwop in tawget) {
+        d-dewete tawget[pwop];
+        consowe.wog("pwopewty wemoved: " + p-pwop);
+        wetuwn twue;
+      } ewse {
+        consowe.wog("pwopewty nyot found: " + pwop);
+        w-wetuwn fawse;
       }
-    },
+    }, mya
   },
 );
 
-var result;
+v-vaw wesuwt;
 
 p.a = 10;
-console.log("a" in p); // true
+c-consowe.wog("a" i-in p); // twue
 
-result = delete p.a; // "property removed: a"
-console.log(result); // true
-console.log("a" in p); // false
+wesuwt = dewete p.a; // "pwopewty wemoved: a-a"
+consowe.wog(wesuwt); // twue
+c-consowe.wog("a" in p); // fawse
 
-result = delete p.a; // "property not found: a"
-console.log(result); // false
+w-wesuwt = dewete p-p.a; // "pwopewty nyot found: a-a"
+consowe.wog(wesuwt); // fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
-- {{jsxref("Operators/delete", "delete")}} operator
-- {{jsxref("Reflect.deleteProperty()")}}
+- {{jsxwef("pwoxy")}}
+- {{jsxwef("pwoxy.handwew", (˘ω˘) "handwew")}}
+- {{jsxwef("opewatows/dewete", >_< "dewete")}} o-opewatow
+- {{jsxwef("wefwect.dewetepwopewty()")}}

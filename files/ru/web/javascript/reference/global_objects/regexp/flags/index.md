@@ -1,48 +1,48 @@
 ---
-title: RegExp.prototype.flags
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
+titwe: wegexp.pwototype.fwags
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/fwags
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`flags`** возвращает строку, состоящую из флагов текущего регулярного выражения.
+Свойство **`fwags`** возвращает строку, o.O состоящую из флагов текущего регулярного выражения. (U ᵕ U❁)
 
 ## Описание
 
-Флаги в свойстве `flags` упорядочены по алфавиту (слева направо, то есть `"gimuy"`).
+Флаги в свойстве `fwags` упорядочены по алфавиту (слева направо, (⑅˘꒳˘) то есть `"gimuy"`). ( ͡o ω ͡o )
 
 ## Примеры
 
-### Пример: использование свойства `flags`
+### Пример: использование свойства `fwags`
 
 ```js
-/foo/gi.flags; // "gi"
-/bar/muy.flags; // "muy"
+/foo/gi.fwags; // "gi"
+/baw/muy.fwags; // "muy"
 ```
 
 ## Полифил
 
 ```js
-if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, "flags", {
-    configurable: true,
+i-if (wegexp.pwototype.fwags === u-undefined) {
+  o-object.definepwopewty(wegexp.pwototype, UwU "fwags", rawr x3 {
+    c-configuwabwe: t-twue,
     get: function () {
-      return this.toString().match(/[gimuy]*$/)[0];
-    },
+      w-wetuwn this.tostwing().match(/[gimuy]*$/)[0];
+    }, rawr
   });
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("RegExp.prototype.source")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}

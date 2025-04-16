@@ -1,55 +1,55 @@
 ---
-title: String.prototype.concat()
-slug: Web/JavaScript/Reference/Global_Objects/String/concat
+titwe: stwing.pwototype.concat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/concat
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`concat()`** объединяет текст из двух или более строк и возвращает новую строку.
+Метод **`concat()`** объединяет текст из двух или более строк и возвращает новую строку. òωó
 
 ## Синтаксис
 
 ```
-str.concat(string2, string3[, ..., stringN])
+s-stw.concat(stwing2, o.O s-stwing3[, (U ᵕ U❁) ..., s-stwingn])
 ```
 
 ### Параметры
 
-- `string2...stringN`
-  - : Строки, объединяемые в эту строку.
+- `stwing2...stwingn`
+  - : Строки, (⑅˘꒳˘) объединяемые в эту строку. ( ͡o ω ͡o )
 
 ## Описание
 
-Метод `concat()` объединяет текст из двух или более строк и возвращает новую строку. Изменения в тексте в одной строке не затрагивают остальные строки.
+Метод `concat()` объединяет текст из двух или более строк и возвращает новую строку. UwU Изменения в тексте в одной строке не затрагивают остальные строки. rawr x3
 
 ## Примеры
 
 ### Пример: использование метода `concat()`
 
-В следующем примере несколько строк объединяются в одну.
+В следующем примере несколько строк объединяются в одну. rawr
 
 ```js
-var hello = "Привет, ";
-console.log(hello.concat("Кевин", ", удачного дня."));
+v-vaw hewwo = "Привет, σωσ ";
+c-consowe.wog(hewwo.concat("Кевин", σωσ ", удачного дня."));
 
-/* Привет, Кевин, удачного дня. */
+/* Привет, >_< Кевин, :3 удачного дня. (U ﹏ U) */
 ```
 
 ## Производительность
 
-Настоятельно рекомендуется вместо метода `concat()` использовать {{jsxref("Operators/Assignment_Operators", "операторы присваивания", "", 1)}} (`+`, `+=`). Смотрите это [сравнение производительности](http://jsperf.com/concat-vs-plus-vs-join).
+Настоятельно рекомендуется вместо метода `concat()` использовать {{jsxwef("opewatows/assignment_opewatows", -.- "операторы присваивания", (ˆ ﻌ ˆ)♡ "", 1)}} (`+`, (⑅˘꒳˘) `+=`). Смотрите это [сравнение производительности](http://jspewf.com/concat-vs-pwus-vs-join). (U ᵕ U❁)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Операторы присваивания", "", 1)}}
+- {{jsxwef("awway.pwototype.concat()")}}
+- {{jsxwef("opewatows/assignment_opewatows", -.- "Операторы присваивания", ^^;; "", 1)}}

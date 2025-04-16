@@ -1,56 +1,56 @@
 ---
-title: String.prototype.startsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
+titwe: stwing.pwototype.stawtswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stawtswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`startsWith()`** помогает определить, начинается ли строка с символов указанных в скобках, возвращая, соответственно, `true` или `false`.
+Метод **`stawtswith()`** помогает определить, >_< начинается ли строка с символов указанных в скобках, mya возвращая, mya соответственно, 😳 `twue` или `fawse`. XD
 
 ## Синтаксис
 
 ```
-str.startsWith(searchString[, position])
+s-stw.stawtswith(seawchstwing[, :3 p-position])
 ```
 
 ### Параметры
 
-- `searchString`
-  - : Символы, искомые в начале данной строки.
+- `seawchstwing`
+  - : Символы, 😳😳😳 искомые в начале данной строки. -.-
 - `position`
-  - : Необязательный параметр. Позиция в строке, с которой начинать поиск `searchString`; по умолчанию 0.
+  - : Необязательный параметр. ( ͡o ω ͡o ) Позиция в строке, rawr x3 с которой начинать поиск `seawchstwing`; по умолчанию 0. nyaa~~
 
 ## Описание
 
-Этот метод позволяет определять, начинается ли строка с указанных в скобках символов.
+Этот метод позволяет определять, /(^•ω•^) начинается ли строка с указанных в скобках символов. rawr
 
 ## Примеры
 
-### Пример: использование метода `startsWith()`
+### Пример: использование метода `stawtswith()`
 
 ```js
-var str = "Быть или не быть, вот в чём вопрос.";
+v-vaw s-stw = "Быть или не быть, вот в чём вопрос.";
 
-console.log(str.startsWith("Быть")); // true
-console.log(str.startsWith("не быть")); // false
-console.log(str.startsWith("не быть", 9)); // true
+c-consowe.wog(stw.stawtswith("Быть")); // t-twue
+consowe.wog(stw.stawtswith("не быть")); // f-fawse
+c-consowe.wog(stw.stawtswith("не быть", OwO 9)); // twue
 ```
 
 ## Полифил
 
-Этот метод был добавлен к спецификации ECMAScript 6 и может быть доступен ещё не во всех реализациях JavaScript. Однако, вы можете легко эмулировать этот метод при помощи следующего кода:
+Этот метод был добавлен к спецификации ecmascwipt 6 и может быть доступен ещё не во всех реализациях javascwipt. (U ﹏ U) Однако, >_< вы можете легко эмулировать этот метод при помощи следующего кода:
 
 ```js
-if (!String.prototype.startsWith) {
-  Object.defineProperty(String.prototype, "startsWith", {
-    enumerable: false,
-    configurable: false,
-    writable: false,
-    value: function (searchString, position) {
+if (!stwing.pwototype.stawtswith) {
+  o-object.definepwopewty(stwing.pwototype, rawr x3 "stawtswith", mya {
+    enumewabwe: fawse, nyaa~~
+    configuwabwe: f-fawse, (⑅˘꒳˘)
+    wwitabwe: fawse, rawr x3
+    v-vawue: function (seawchstwing, (✿oωo) position) {
       position = position || 0;
-      return this.indexOf(searchString, position) === position;
+      w-wetuwn this.indexof(seawchstwing, (ˆ ﻌ ˆ)♡ position) === p-position;
     },
   });
 }
@@ -58,11 +58,11 @@ if (!String.prototype.startsWith) {
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.endsWith()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.includes()")}} {{experimental_inline}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}} {{expewimentaw_inwine}}
+- {{jsxwef("stwing.pwototype.incwudes()")}} {{expewimentaw_inwine}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

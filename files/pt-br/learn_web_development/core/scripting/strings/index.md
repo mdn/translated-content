@@ -1,309 +1,309 @@
 ---
-title: Trabalhando com texto — strings em JavaScript
-slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
+titwe: twabawhando com texto — s-stwings em javascwipt
+s-swug: w-weawn_web_devewopment/cowe/scwipting/stwings
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/stwings
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/math", >_< "weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", /(^•ω•^) "weawn/javascwipt/fiwst_steps")}}
 
-Agora vamos dar atenção às strings - isto é como é chamado em programação qualquer parte de texto. Neste artigo nós veremos tudo que você realmente deve saber sobre strings quando está aprendendo JavaScript. Como criar, fazer citações e como juntar strings.
+a-agowa vamos d-daw atenção às s-stwings - isto é como é chamado em pwogwamação quawquew pawte de texto. òωó n-nyeste awtigo nyós vewemos tudo que você weawmente d-deve sabew sobwe stwings quando e-está apwendendo javascwipt. σωσ como cwiaw, ( ͡o ω ͡o ) fazew citações e-e como juntaw stwings. nyaa~~
 
-<table class="learn-box standard-table">
+<tabwe cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwé-wequisitos:</th>
       <td>
-        Computação básica, um entendimento básico de HTML e CSS, e sobre o que é
-        JavaScript.
+        c-computação básica, :3 um entendimento básico de htmw e css, UwU e sobwe o que é
+        j-javascwipt. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
-      <td>Ganhar familiaridade com o básico de strings em JavaScript.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
+      <td>ganhaw famiwiawidade com o básico de stwings e-em javascwipt.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O poder das palavras
+## o podew das p-pawavwas
 
-Palavras são muito importante para humanos - elas são uma grande parte de como nos comunicamos. Desde que a Web é largamente baseada em texto, projetada para permitir humanos a comunicar e compartilhar infomação, isto é útil para nós termos controle sobre como apresentar isso. {{glossary("HTML")}} fornece estrutura e significado para nosso texto, {{glossary("CSS")}} nos permite estilizar precisamente ele, e JavaScript contem um número de funcionalidades para manipular strings, criar mensagens de boas-vindas customizadas, mostrando rótulos quando preciso, sorteando termos de acordo como desejado e muito mais.
+pawavwas s-são muito i-impowtante pawa h-humanos - ewas são uma gwande pawte de como nyos c-comunicamos. (ˆ ﻌ ˆ)♡ desde que a web é wawgamente baseada e-em texto, ^^;; pwojetada pawa pewmitiw humanos a comunicaw e compawtiwhaw infomação, ʘwʘ isto é útiw p-pawa nyós tewmos contwowe s-sobwe como apwesentaw i-isso. σωσ {{gwossawy("htmw")}} f-fownece estwutuwa e significado pawa nyosso texto, ^^;; {{gwossawy("css")}} nyos pewmite e-estiwizaw p-pwecisamente ewe, ʘwʘ e javascwipt contem u-um nyúmewo d-de funcionawidades pawa manipuwaw s-stwings, ^^ cwiaw mensagens de b-boas-vindas customizadas, nyaa~~ mostwando wótuwos quando p-pweciso, (///ˬ///✿) sowteando tewmos de a-acowdo como desejado e muito mais. XD
 
-Muitos dos programas que temos visto até agora no curso está envolvido em alguma parte com manipulação de string.
+m-muitos dos p-pwogwamas que temos visto até agowa nyo cuwso está envowvido em awguma pawte com manipuwação de stwing. :3
 
-## Strings — O básico
+## s-stwings — o básico
 
-Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+e-em um pwimeiwo wewance, òωó stwings s-são twatadas d-de fowma pawecida c-como nyúmewos, ^^ mas quando vamos mais a fundo, ^•ﻌ•^ você começa a-a vew awgumas difewenças impowtantes. σωσ vamos começaw a entwaw em winhas básicas n-nyo consowe pawa nyos famiwiawizaw. n-nós fownecemos u-um abaixo (ou u-use o [consowe de desenvowvedow d-do nyavegadow](/pt-bw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) s-se pwefewiw). (ˆ ﻌ ˆ)♡
 
-```html hidden
-<!doctype html>
-<html>
+```htmw h-hidden
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>javascwipt consowe</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        b-box-sizing: b-bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      h-htmw {
+        b-backgwound-cowow: #0c323d;
+        c-cowow: #809089;
+        font-famiwy: monospace;
       }
 
       body {
-        max-width: 700px;
+        m-max-width: 700px;
       }
 
       p {
-        margin: 0;
+        mawgin: 0;
         width: 1%;
         padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        wine-height: 1.5;
+        fwoat: w-weft;
       }
 
       .input p {
-        margin-right: 1%;
+        mawgin-wight: 1%;
       }
 
       .output p {
         width: 100%;
       }
 
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
+      .input i-input {
+        w-width: 96%;
+        f-fwoat: weft;
+        bowdew: n-nyone;
         font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        wine-height: 1.5;
+        f-font-famiwy: m-monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        backgwound: #0c323d;
+        cowow: #809089;
       }
 
       div {
-        clear: both;
+        cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    v-vaw gevaw = evaw;
+    function c-cweateinput() {
+      vaw inputdiv = d-document.cweateewement("div");
+      v-vaw inputpawa = document.cweateewement("p");
+      vaw inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      i-inputdiv.setattwibute("cwass", nyaa~~ "input");
+      i-inputpawa.textcontent = ">";
+      inputdiv.appendchiwd(inputpawa);
+      i-inputdiv.appendchiwd(inputfowm);
+      d-document.body.appendchiwd(inputdiv);
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      if (document.quewysewectowaww("div").wength > 1) {
+        inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", ʘwʘ exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
+    f-function exekawaii~code(e) {
+      t-twy {
+        v-vaw wesuwt = gevaw(e.tawget.vawue);
       } catch (e) {
-        var result = "error — " + e.message;
+        v-vaw wesuwt = "ewwow — " + e-e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      vaw outputdiv = d-document.cweateewement("div");
+      vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      outputdiv.setattwibute("cwass", ^•ﻌ•^ "output");
+      outputpawa.textcontent = "wesuwt: " + w-wesuwt;
+      o-outputdiv.appendchiwd(outputpawa);
+      document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e.tawget.disabwed = t-twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    c-cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('hidden_code', rawr x3 '100%', 300, 🥺 "", "", "hide-codepen-jsfiddwe") }}
 
-### Criando uma string
+### cwiando uma stwing
 
-1. Para começar, digite as linhas seguintes:
-
-   ```js
-   var string = "The revolution will not be televised.";
-   string;
-   ```
-
-   Como fizemos com números, nós declaramos uma variável, inicializando-a com um valor string, e então retornamos o valor. A única diferença aqui é que quando escrevemos uma string, você precisa colocá-la entre aspas.
-
-2. Se você não fez isso, ou esqueceu uma das aspas, você recebeu um erro. Experimente digitar as linhas seguintes:
-
-   ```js example-bad
-   var badString = This is a test;
-   var badString = 'This is a test;
-   var badString = This is a test';
-   ```
-
-   Estas linhas não funcionam porque todo texto sem aspas são interpretados como um nome de variável, propriedade do nome, palavra reservada ou algo assim. Se o navegador não puder encontrar, então um erro é apresentado (ex.: "faltando; declaração anterior"). Se o navegador puder ver onde a string começa, mas não conseguir encontrar o fim, como indicado com as segundas aspas, é retornado um erro (com "string não terminada"). Se seu programa retorna tais erros, então volte e verifique todas suas strings para ter certeza que não faltam aspas.
-
-3. O seguinte funcionará se você definiu previamente a variável `string` - tente isto agora:
+1. ʘwʘ p-pawa começaw, (˘ω˘) digite as winhas seguintes:
 
    ```js
-   var badString = string;
-   badString;
+   vaw stwing = "the wevowution w-wiww nyot be tewevised.";
+   stwing;
    ```
 
-   `badString` é agora definido para ter o mesmo valor de `string`.
+   c-como fizemos c-com nyúmewos, o.O nyós decwawamos uma vawiávew, σωσ iniciawizando-a c-com um vawow stwing, (ꈍᴗꈍ) e-e então wetownamos o vawow. (ˆ ﻌ ˆ)♡ a única difewença aqui é que q-quando escwevemos uma stwing, o.O v-você pwecisa cowocá-wa entwe aspas. :3
 
-### Aspas simples x aspas duplas
+2. se você nyão fez isso, -.- o-ou esqueceu uma das aspas, ( ͡o ω ͡o ) você w-wecebeu um e-ewwo. /(^•ω•^) expewimente digitaw as winhas s-seguintes:
 
-1. Em JavaScript, você pode escolher aspas simples ou duplas para envolver suas strings. Ambas linhas abaixo funcionará bem:
+   ```js exampwe-bad
+   v-vaw badstwing = t-this is a-a test;
+   vaw badstwing = 'this is a test;
+   vaw b-badstwing = this i-is a test';
+   ```
+
+   estas winhas nyão funcionam p-powque todo t-texto sem aspas s-são intewpwetados como um nyome de vawiávew, (⑅˘꒳˘) p-pwopwiedade do nome, òωó pawavwa w-wesewvada ou awgo a-assim. 🥺 se o nyavegadow nyão pudew encontwaw, então um ewwo é a-apwesentado (ex.: "fawtando; decwawação a-antewiow"). (ˆ ﻌ ˆ)♡ s-se o nyavegadow p-pudew vew onde a stwing c-começa, -.- mas nyão conseguiw encontwaw o fim, σωσ como indicado com as segundas aspas, >_< é wetownado u-um ewwo (com "stwing nyão tewminada"). :3 s-se seu pwogwama wetowna t-tais ewwos, OwO então vowte e vewifique t-todas suas stwings pawa tew c-cewteza que nyão f-fawtam aspas. rawr
+
+3. o-o seguinte f-funcionawá se você d-definiu pweviamente a vawiávew `stwing` - tente isto agowa:
 
    ```js
-   var sgl = "Single quotes.";
-   var dbl = "Double quotes";
-   sgl;
-   dbl;
+   vaw badstwing = stwing;
+   badstwing;
    ```
 
-2. Há poucas diferenças entre as duas, e qual você usar é de preferência pessoal. Você deve escolher uma e permanecer nela, entretanto; diferentes aspas no código pode ser confuso, especialmente se você usa diferentes aspas na mesma string! O seguinte retornará erro:
+   `badstwing` é agowa definido pawa tew o mesmo vawow d-de `stwing`.
 
-   ```js example-bad
-   var badQuotes = 'What on earth?";
-   ```
+### a-aspas simpwes x-x aspas dupwas
 
-3. O navegador interpretará como a string não tivesse fechada, porque o outro tipo de aspas pode aparecer dentro da sua string. Por exemplo, ambos exemplos abaixo são okay:
+1. (///ˬ///✿) em javascwipt, ^^ v-você pode escowhew aspas simpwes ou dupwas pawa envowvew s-suas stwings. XD ambas w-winhas abaixo funcionawá bem:
 
    ```js
-   var sglDbl = 'Would you eat a "fish supper"?';
-   var dblSgl = "I'm feeling blue.";
-   sglDbl;
-   dblSgl;
+   v-vaw sgw = "singwe quotes.";
+   vaw dbw = "doubwe q-quotes";
+   sgw;
+   d-dbw;
    ```
 
-4. Entretanto, você não pode incluir o mesmo tipo de aspas dentro da sua string, se você usa para conter seu texto. O seguinte será um erro, como é confuso para o navegador onde a string termina:
+2. UwU há poucas d-difewenças entwe a-as duas, o.O e quaw você usaw é de pwefewência pessoaw. 😳 você deve escowhew uma e-e pewmanecew nyewa, (˘ω˘) e-entwetanto; d-difewentes aspas n-nyo código pode s-sew confuso, 🥺 especiawmente se v-você usa difewentes a-aspas nya mesma stwing! ^^ o s-seguinte wetownawá e-ewwo:
 
-   ```js example-bad
-   var bigmouth = 'I've got no right to take my place...';
+   ```js exampwe-bad
+   v-vaw badquotes = 'nani on eawth?";
    ```
 
-   Isto nos leva muito bem ao nosso próximo assunto.
+3. >w< o nyavegadow intewpwetawá c-como a stwing nyão t-tivesse fechada, ^^;; p-powque o outwo tipo de aspas pode a-apawecew dentwo da sua stwing. pow exempwo, (˘ω˘) ambos e-exempwos abaixo s-são okay:
 
-### Caracteres de escape na string
+   ```js
+   v-vaw sgwdbw = 'wouwd you eat a "fish suppew"?';
+   vaw d-dbwsgw = "i'm feewing bwue.";
+   sgwdbw;
+   dbwsgw;
+   ```
 
-Para corrigir o problema anterior, nós precisamos escapar o problema da aspa. Caracteres de escape significa que nós fazemos algo para ter certeza que eles são reconhecidos como texto, não parte do código. Em JavaScript, nós fazemos isso colocando uma barra invertida logo antes do caracter.Tente isso:
+4. OwO e-entwetanto, (ꈍᴗꈍ) você n-nyão pode incwuiw o mesmo tipo d-de aspas dentwo da sua stwing, òωó s-se você usa p-pawa contew seu texto. ʘwʘ o seguinte sewá um ewwo, ʘwʘ c-como é confuso pawa o nyavegadow onde a stwing t-tewmina:
+
+   ```js e-exampwe-bad
+   vaw bigmouth = 'i've g-got nyo wight to take my p-pwace...';
+   ```
+
+   i-isto nyos w-weva muito bem ao nyosso pwóximo assunto. nyaa~~
+
+### cawactewes de escape nya stwing
+
+pawa cowwigiw o pwobwema antewiow, UwU nyós pwecisamos escapaw o pwobwema da aspa. cawactewes de escape significa que nyós fazemos a-awgo pawa tew c-cewteza que ewes são weconhecidos como texto, (⑅˘꒳˘) n-nyão pawte do código. (˘ω˘) e-em javascwipt, :3 n-nyós fazemos isso cowocando u-uma bawwa invewtida wogo antes d-do cawactew.tente i-isso:
 
 ```js
-var bigmouth = "I've got no right to take my place...";
+vaw bigmouth = "i've g-got nyo wight to take my p-pwace...";
 bigmouth;
 ```
 
-Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"`, e há alguns códigos especiais também. Veja [Notação de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) para mais detalhes.
+i-isto funciona bem. (˘ω˘) você pode escapaw o-outwos cawactewes d-do mesmo jeito, nyaa~~ e-ex.: `\"`, (U ﹏ U) e há a-awguns códigos e-especiais também. nyaa~~ v-veja [notação d-de escape](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#escape_notation) p-pawa m-mais detawhes. ^^;;
 
-## Concatenando strings
+## concatenando s-stwings
 
-1. Concatenar é uma palavra chique da programação que significa "colocar junto". Para colocar strings juntas em JavaScript, usamos o operador (+), o mesmo usamos para adicionar números, mas neste contexto é algo diferente. Vamos tentar este exemplo no console.
+1. OwO concatenaw é u-uma p-pawavwa chique da pwogwamação q-que significa "cowocaw junto". nyaa~~ pawa cowocaw stwings j-juntas em javascwipt, UwU usamos o-o opewadow (+), 😳 o-o mesmo usamos p-pawa adicionaw nyúmewos, mas nyeste c-contexto é awgo difewente. 😳 v-vamos tentaw este exempwo nyo consowe. (ˆ ﻌ ˆ)♡
 
    ```js
-   var one = "Hello, ";
-   var two = "how are you?";
-   var joined = one + two;
+   v-vaw one = "hewwo, (✿oωo) ";
+   vaw t-two = "how awe you?";
+   vaw joined = one + two;
    joined;
    ```
 
-   O resultado disso é uma variável chamada `joined`, que contém o valor "Hello, how are you?".
+   o wesuwtado d-disso é uma vawiávew chamada `joined`, nyaa~~ q-que c-contém o vawow "hewwo, ^^ how awe you?". (///ˬ///✿)
 
-2. No último exemplo, nós somente juntamos duas strings, mas você pode fazer quantas quiser, contanto que inclua um `+` entre cada uma.Experimente isso:
-
-   ```js
-   var multiple = one + one + one + one + two;
-   multiple;
-   ```
-
-3. Você pore usar um mix de variáveis e strings reais. Tente isso:
+2. nyo úwtimo exempwo, 😳 n-nyós somente juntamos duas stwings, òωó m-mas você p-pode fazew quantas q-quisew, ^^;; contanto que incwua um `+` entwe cada u-uma.expewimente i-isso:
 
    ```js
-   var response = one + "I am fine — " + two;
-   response;
+   vaw muwtipwe = o-one + one + one + one + two;
+   muwtipwe;
    ```
 
-> [!NOTE]
-> Quando você coloca uma string atual no seu código dentro de aspas simples ou duplas, é chamada uma **string literal**.
+3. rawr v-você powe usaw um mix de v-vawiáveis e stwings w-weais. (ˆ ﻌ ˆ)♡ tente i-isso:
 
-### Concatenação em contexto
+   ```js
+   vaw wesponse = o-one + "i am f-fine — " + two;
+   w-wesponse;
+   ```
 
-Vamos dar uma olhada na concatenação em ação — aqui está um exemplo do curso anterior:
+> [!note]
+> q-quando você cowoca uma stwing a-atuaw nyo seu c-código dentwo d-de aspas simpwes o-ou dupwas, XD é c-chamada uma **stwing w-witewaw**. >_<
 
-```html
-<button>Pressione-me</button>
+### c-concatenação e-em contexto
+
+vamos daw uma owhada n-nya concatenação em ação — a-aqui está um exempwo do c-cuwso antewiow:
+
+```htmw
+<button>pwessione-me</button>
 ```
 
 ```js
-var button = document.querySelector("button");
+v-vaw button = document.quewysewectow("button");
 
-button.onclick = function () {
-  var nome = prompt("Qual é o seu nome?");
-  alert("Olá " + nome + ", prazer em conhecê-lo!");
+b-button.oncwick = function () {
+  vaw nyome = pwompt("quaw é o seu nyome?");
+  a-awewt("owá " + n-nome + ", (˘ω˘) pwazew e-em conhecê-wo!");
 };
 ```
 
-{{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ embedwivesampwe('concatenation_in_context', 😳 '100%', o.O 50, "", "", (ꈍᴗꈍ) "hide-codepen-jsfiddwe") }}
 
-Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")}} na linha 4, a qual pergunta ao usuário para responder uma questão via uma caixa de diálogo, então armazena o texto em uma variável — neste caso `nome`. Nós então usamos uma função {{domxref("Window.alert()", "Window.alert()")}} na linha 5 para mostrar outra caixa de diálogo contendo nossa string montada de duas strings literais e a variável `name`,via concatenação.
+aqui estamos usando u-uma função {{domxwef("window.pwompt()", rawr x3 "window.pwompt()")}} n-nya winha 4, ^^ a quaw pewgunta ao u-usuáwio pawa wespondew u-uma questão via uma caixa de diáwogo, OwO então awmazena o-o texto em uma vawiávew — n-nyeste c-caso `nome`. ^^ n-nyós então usamos uma função {{domxwef("window.awewt()", "window.awewt()")}} nya winha 5 pawa m-mostwaw outwa c-caixa de diáwogo contendo nyossa stwing montada d-de duas stwings witewais e a vawiávew `name`,via concatenação. :3
 
-### Números x strings
+### n-nyúmewos x stwings
 
-1. Então o que acontece quando tentamos adicionar (ou concatenar) uma string e um número? Vamos tentar isso no console:
-
-   ```js
-   "Front " + 242;
-   ```
-
-   Você pode esperar um erro disto, mas funciona correto. Tentando representar uma string como um número, realmente não faz sentido. Mas representando um número como string, faz. Então o navegador espertamente converte o número em string e concatena as duas.
-
-2. Você pode fazer isto até com dois números — você pode forçar um número a ser string colocando ele entre aspas. Experimente o seguinte (nós estamos usando o operador `typeof` para checar o que a variável é, se um número ou string):
+1. o.O e-então o que acontece q-quando tentamos adicionaw (ou c-concatenaw) u-uma stwing e um nyúmewo? vamos t-tentaw isso nyo consowe:
 
    ```js
-   var myDate = "19" + "67";
-   typeof myDate;
+   "fwont " + 242;
    ```
 
-3. Se você tem uma variável numérica que precisa converter em string, mas não mudar completamente, ou uma string e quer converter em número, você pode usar a construção seguinte:
+   v-você pode espewaw u-um ewwo disto, -.- m-mas funciona c-cowweto. (U ﹏ U) tentando wepwesentaw uma s-stwing como um n-nyúmewo, o.O weawmente n-nyão faz sentido. OwO mas wepwesentando u-um nyúmewo como stwing, ^•ﻌ•^ faz. então o-o nyavegadow espewtamente c-convewte o-o nyúmewo em stwing e concatena as duas. ʘwʘ
 
-   - O objeto {{jsxref("Number")}} converterá qualquer coisa passada em um número, se for possível. Tente o seguinte:
+2. você pode fazew isto até com d-dois nyúmewos — você pode fowçaw u-um nyúmewo a-a sew stwing cowocando ewe entwe aspas. :3 expewimente o-o seguinte (nós estamos usando o-o opewadow `typeof` p-pawa checaw o-o que a vawiávew é, 😳 s-se um n-nyúmewo ou stwing):
+
+   ```js
+   vaw mydate = "19" + "67";
+   typeof mydate;
+   ```
+
+3. òωó se você tem uma vawiávew n-nyuméwica que pwecisa convewtew e-em stwing, 🥺 mas nyão mudaw compwetamente, rawr x3 ou uma stwing e q-quew convewtew em númewo, ^•ﻌ•^ você pode usaw a constwução seguinte:
+
+   - o objeto {{jsxwef("numbew")}} c-convewtewá q-quawquew coisa passada em um n-nyúmewo, :3 se fow possívew. (ˆ ﻌ ˆ)♡ tente o seguinte:
 
      ```js
-     var myString = "123";
-     var myNum = Number(myString);
-     typeof myNum;
+     v-vaw mystwing = "123";
+     v-vaw mynum = nyumbew(mystwing);
+     t-typeof mynum;
      ```
 
-   - Por outro lado, todo número tem um método chamado [`toString()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) que converterá para a string equivalente. Tente isto:
+   - pow o-outwo wado, (U ᵕ U❁) todo nyúmewo tem um método chamado [`tostwing()`](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tostwing) que convewtewá p-pawa a stwing equivawente. :3 tente isto:
 
      ```js
-     var myNum = 123;
-     var myString = myNum.toString();
-     typeof myString;
+     v-vaw m-mynum = 123;
+     v-vaw mystwing = mynum.tostwing();
+     typeof m-mystwing;
      ```
 
-   Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do `Number()` para poder manipular.Nós fizemos exatamente isto no nosso [Number Guessing Game, in line 59](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L59).
+   estas constwuções podem sew bem úteis em awgumas situações. ^^;; p-pow exempwo, ( ͡o ω ͡o ) s-se o usuáwio c-cowocaw um nyúmewo e-em um campo de texto, isso sewá uma stwing. o.O e-entwetanto, ^•ﻌ•^ s-se você quisew adicionaw este nyúmewo a awgo, XD v-você pwecisa que seja um nyúmewo, ^^ então você p-pode passaw isto atwavés do `numbew()` pawa podew m-manipuwaw.nós f-fizemos exatamente isto nyo n-nyosso [numbew guessing g-game, in w-wine 59](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/fiwst-spwash/numbew-guessing-game.htmw#w59). o.O
 
-## Conclusão
+## concwusão
 
-Então isto é o basico sobre strings em JavaScript. No próximo artigo nós iremos continuar daqui, vendo alguns métodos de construção de strings disponíveis em JavaScript e como nós podemos usá-los para manipular nossa string da forma como quisermos.
+então isto é o-o basico sobwe stwings em javascwipt. ( ͡o ω ͡o ) nyo p-pwóximo awtigo nyós iwemos continuaw daqui, /(^•ω•^) vendo awguns métodos d-de constwução d-de stwings d-disponíveis em j-javascwipt e como n-nyós podemos usá-wos pawa manipuwaw n-nyossa stwing da fowma como quisewmos. 🥺
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/math", nyaa~~ "weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", mya "weawn/javascwipt/fiwst_steps")}}

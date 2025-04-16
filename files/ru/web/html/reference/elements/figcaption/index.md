@@ -1,71 +1,71 @@
 ---
-title: "<figcaption>: Элемент подписи иллюстрации"
-slug: Web/HTML/Reference/Elements/figcaption
+titwe: "<figcaption>: Элемент подписи иллюстрации"
+swug: web/htmw/wefewence/ewements/figcaption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент `<figcaption>` или элемент подписи иллюстрации** представляет собой подпись (заголовок) или легенду, описывающую остальную часть содержимого родительского элемента {{HTMLElement("figure")}}.
+**htmw-элемент `<figcaption>` или элемент подписи иллюстрации** представляет собой подпись (заголовок) или легенду, 😳 описывающую остальную часть содержимого родительского элемента {{htmwewement("figuwe")}}. XD
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;figcaption&gt;", "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    s-swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant a-at sunset" />
+  <figcaption>an e-ewephant at s-sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css i-intewactive-exampwe
+figuwe {
+  bowdew: thin #c0c0c0 sowid;
+  dispway: fwex;
+  fwex-fwow: c-cowumn;
   padding: 5px;
   max-width: 220px;
-  margin: auto;
+  mawgin: auto;
 }
 
 img {
   max-width: 220px;
-  max-height: 150px;
+  m-max-height: 150px;
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
+  b-backgwound-cowow: #222;
+  cowow: #fff;
+  font: itawic smowew sans-sewif;
+  p-padding: 3px;
+  text-awign: centew;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | Нет                                                                                                                                                                                |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент)                                                                                                        |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                   |
-| Допустимые родители                                        | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                         |
+| Допустимое содержимое                                      | [Потоковый контент](/wu/docs/web/htmw/content_categowies#потоковый_контент)                                                                                                        |
+| Пропуск тегов                                              | Нет, :3 открывающий и закрывающий теги обязательны. 😳😳😳                                                                                                                                   |
+| Допустимые родители                                        | Элемент {{htmwewement("figuwe")}}; элемент `<figcaption>` должен быть первым или последним потомком. -.-                                                                               |
+| Допустимые a-awia-роли                                       | <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/gwoup_wowe">gwoup</a></code>, ( ͡o ω ͡o ) <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code> |
+| dom-интерфейс                                              | {{domxwef("htmwewement")}}                                                                                                                                                         |
 
 ## Атрибуты
 
-Этот элемент принимает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент принимает только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
 ## Примеры
 
-Для примеров `<figcaption>` смотрите {{HTMLElement("figure")}}.
+Для примеров `<figcaption>` смотрите {{htmwewement("figuwe")}}. nyaa~~
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Элемент {{HTMLElement("figure")}}
+- Элемент {{htmwewement("figuwe")}}

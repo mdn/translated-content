@@ -1,73 +1,73 @@
 ---
-title: Object.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
+titwe: object.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/isextensibwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Object.isExtensible()`** определяет, является ли объект расширяемым (то есть, можно ли к нему добавлять новые свойства).
+Метод **`object.isextensibwe()`** определяет, является ли объект расширяемым (то есть, -.- можно ли к нему добавлять новые свойства). ^^;;
 
 ## Синтаксис
 
 ```
-Object.isExtensible(obj)
+o-object.isextensibwe(obj)
 ```
 
 ### Параметры
 
 - `obj`
-  - : Проверяемый объект.
+  - : Проверяемый объект. >_<
 
 ## Описание
 
-Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, поддерживающих свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) их можно изменять. Объект может быть помечен, как не изменяемый с помощью методов {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} или {{jsxref("Object.freeze()")}}.
+Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, mya поддерживающих свойство [`object.pwototype.__pwoto__`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto)) их можно изменять. Объект может быть помечен, mya как не изменяемый с помощью методов {{jsxwef("object.pweventextensions()")}}, 😳 {{jsxwef("object.seaw()")}} или {{jsxwef("object.fweeze()")}}. XD
 
 ## Примеры
 
 ```js
-// Новые объекты являются расширяемыми.
-var empty = {};
-assert(Object.isExtensible(empty) === true);
+// Новые объекты являются расширяемыми. :3
+vaw e-empty = {};
+assewt(object.isextensibwe(empty) === t-twue);
 
-// ...но это может быть изменено.
-Object.preventExtensions(empty);
-assert(Object.isExtensible(empty) === false);
+// ...но это может быть изменено. 😳😳😳
+o-object.pweventextensions(empty);
+a-assewt(object.isextensibwe(empty) === f-fawse);
 
-// Запечатанные объекты по определению не расширяемы.
-var sealed = Object.seal({});
-assert(Object.isExtensible(sealed) === false);
+// Запечатанные объекты по определению не расширяемы. -.-
+v-vaw seawed = o-object.seaw({});
+assewt(object.isextensibwe(seawed) === fawse);
 
-// Замороженные объекты также по определению не расширяемы.
-var frozen = Object.freeze({});
-assert(Object.isExtensible(frozen) === false);
+// Замороженные объекты также по определению не расширяемы. ( ͡o ω ͡o )
+vaw fwozen = object.fweeze({});
+assewt(object.isextensibwe(fwozen) === f-fawse);
 ```
 
 ## Примечания
 
-В ES5, если аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет рассматриваться, как простой не расширяемый объект и метод просто вернёт `false`.
+В es5, rawr x3 если аргумент метода не является объектом (является примитивным значением), nyaa~~ будет выброшено исключение {{jsxwef("gwobaw_objects/typeewwow", /(^•ω•^) "typeewwow")}}. rawr В es6 такой аргумент будет рассматриваться, OwO как простой не расширяемый объект и метод просто вернёт `fawse`. (U ﹏ U)
 
 ```js
-> Object.isExtensible(1)
-TypeError: 1 is not an object // код ES5
+> o-object.isextensibwe(1)
+typeewwow: 1 i-is nyot an object // код es5
 
-> Object.isExtensible(1)
-false                         // код ES6
+> object.isextensibwe(1)
+fawse                         // код e-es6
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.preventExtensions()")}}
-- {{jsxref("Object.seal()")}}
-- {{jsxref("Object.isSealed()")}}
-- {{jsxref("Object.freeze()")}}
-- {{jsxref("Object.isFrozen()")}}
+- {{jsxwef("object.pweventextensions()")}}
+- {{jsxwef("object.seaw()")}}
+- {{jsxwef("object.isseawed()")}}
+- {{jsxwef("object.fweeze()")}}
+- {{jsxwef("object.isfwozen()")}}

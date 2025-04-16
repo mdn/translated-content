@@ -1,46 +1,46 @@
 ---
-title: Primeiros passos com JavaScript
-slug: Learn_web_development/Core/Scripting
-original_slug: Learn/JavaScript/First_steps
+titwe: pwimeiwos passos com javascwipt
+s-swug: w-weawn_web_devewopment/cowe/scwipting
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Em nosso primeiro módulo de JavaScript, vamos responder algumas questões fundamentais como "o que é JavaScript?", "com o que se parece?", e "o que ele pode fazer?", antes de levá-lo a sua primeira experiência em escrever JavaScript. Depois disso, vamos discutir em detalhes algumas peças chaves, como variáveis, cadeias de caracteres (_strings_), números (_numbers_) e matrizes (_arrays_).
+e-em nyosso p-pwimeiwo móduwo d-de javascwipt, v-vamos wespondew awgumas questões fundamentais como "o que é javascwipt?", >_< "com o-o que se pawece?", ^^;; e "o que ewe pode fazew?", (ˆ ﻌ ˆ)♡ a-antes de wevá-wo a sua pwimeiwa e-expewiência em escwevew javascwipt. ^^;; depois disso, (⑅˘꒳˘) vamos discutiw e-em detawhes awgumas peças chaves, rawr x3 c-como vawiáveis, (///ˬ///✿) c-cadeias de cawactewes (_stwings_), 🥺 nyúmewos (_numbews_) e matwizes (_awways_). >_<
 
-## Pré-requisitos
+## pwé-wequisitos
 
-Antes de iniciar esse módulo, você não precisa de nenhum conhecimento prévio de JavaScript, mas você deve ter alguma familiaridade com HTML e CSS. Te recomendamos a estudar os seguintes módulos antes de começar com o JavaScript:
+a-antes de iniciaw esse móduwo, UwU você nyão pwecisa de nyenhum conhecimento p-pwévio de javascwipt, >_< mas v-você deve tew a-awguma famiwiawidade c-com htmw e-e css. -.- te wecomendamos a estudaw os seguintes móduwos a-antes de começaw com o javascwipt:
 
-- [Iniciando com a Web](/pt-BR/docs/Learn/Getting_started_with_the_web) (o que inclui uma [introdução rápida ao JavaScript](/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics))
-- [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
-- [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)
+- [iniciando com a web](/pt-bw/docs/weawn/getting_stawted_with_the_web) (o q-que incwui uma [intwodução wápida ao javascwipt](/pt-bw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics))
+- [intwodução ao htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw)
+- [intwodução ao css](/pt-bw/docs/weawn/css/fiwst_steps)
 
-> [!NOTE]
-> Se você está trabalhando em um computador/tablet/outro dispositivo onde você não pode criar os seus próprio arquivos, você pode experimentar (em sua maioria) os códigos de exemplo em um programa de codificação online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> s-se você está twabawhando e-em um computadow/tabwet/outwo d-dispositivo o-onde você nyão pode cwiaw os seus pwópwio awquivos, mya você pode e-expewimentaw (em s-sua maiowia) os códigos de e-exempwo em um pwogwama d-de codificação onwine como [jsbin](https://jsbin.com/) o-ou [gwitch](https://gwitch.com/).
 
-## Guias
+## guias
 
-- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-  - : Bem vindo ao curso para iniciantes em JavaScript do MDN! No primeiro artigo nós visualizaremos o JavaScript de uma perspectiva de alto nível, respondendo a questões como "o que é?" e "o que ele pode fazer?", permitindo-lhe entender confortavelmente o objetivo do JavaScript.
-- [Um primeiro mergulho no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-  - : Agora que você tem uma noção teórica do JavaScript e o que você pode fazer com ele, nós vamos lhe dar um curso intensivo sobre as funcionalidades básicas do JavaScript através de um tutorial completamente prático. Aqui você ira construir, passo a passo, um jogo simples de "Advinhe o número".
-- [O que deu errado? Solucionando problemas em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-  - : Quando você construiu o jogo "Adivinhe o número" no artigo anterior, talvez tenha notado que ele não funcionou. Nunca tema — este artigo visa preservá-lo de ter que arrancar seus cabelos devido a esses problemas por prover-lhe alguns exemplos simples de como consertar erros em programas JavaScript.
-- [Armazenando a informação necessária — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
-  - : Após ler os últimos artigos, você agora deve saber o que é o JavaScript, o que ele pode fazer para você, como usa-lo junto a com outras tecnologias web, e como sua funcionalidade principal se parece de um alto nível. Nesse artigo nós vamos ver o que é realmente básico, vendo como trabalhar com os mais básicos blocos de construção do JavaScript — Variáveis.
-- [Matemática básica com JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
-  - : Nesse ponto do curso nós iremos discutir matemática no JavaScript — como nós combinamos operadores e outras funcionalidades para manipular números para fazer nosso comando.
-- [Manuseando textos — cadeia de caracteres (strings) em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-  - : Em seguida nós colocaremos nossa atenção em strings — isso é como pedaços de texto são chamados na programação. Nesse artigos nós vamos ver todas as coisas comuns que você realmente deve saber sobre strings quando estiver aprendendo JavaScript, como criar strings, manusear aspas nas strings, e juntando elas.
-- [Métodos úteis sobre cadeias de caracteres (strings)](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-  - : Agora nós vemos o mais básico sobre strings, vamos começar a pensar sobre quais operações úteis nós podemos fazer com elas com os metótos internos, como por exemplos encontrar o tamanho do texto em uma strings, juntar e separar strings, substrituir um caractere de uma string e mais.
-- [Matrizes](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-  - : No artigo final desse módulo, nós iremos ver matrizes (arrays) — um jeito fácil de armazenar lista de dados em apenas um nome de variável. Aqui nós veremos o por quê disso ser útil, então exploraremos como criar uma matriz, retornar seus dados, adicionar e remover itens armazenas em um array, e mais além disso.
+- [o q-que é javascwipt?](/pt-bw/docs/weawn/javascwipt/fiwst_steps/nani_is_javascwipt)
+  - : bem vindo ao cuwso pawa i-iniciantes em javascwipt do mdn! >w< n-nyo pwimeiwo awtigo nyós visuawizawemos o-o javascwipt d-de uma pewspectiva de awto nyívew, (U ﹏ U) wespondendo a questões como "o que é?" e "o que ewe pode fazew?", 😳😳😳 p-pewmitindo-whe entendew c-confowtavewmente o objetivo d-do javascwipt. o.O
+- [um p-pwimeiwo m-mewguwho nyo javascwipt](/pt-bw/docs/weawn/javascwipt/fiwst_steps/a_fiwst_spwash)
+  - : agowa que você tem uma nyoção teówica d-do javascwipt e o que você pode fazew com ewe, òωó nyós vamos whe daw um cuwso i-intensivo sobwe as funcionawidades b-básicas do j-javascwipt atwavés d-de um tutowiaw compwetamente p-pwático. 😳😳😳 aqui v-você iwa constwuiw, σωσ p-passo a passo, (⑅˘꒳˘) u-um jogo simpwes de "advinhe o nyúmewo". (///ˬ///✿)
+- [o q-que deu ewwado? s-sowucionando pwobwemas e-em javascwipt](/pt-bw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong)
+  - : q-quando você c-constwuiu o jogo "adivinhe o nyúmewo" no awtigo antewiow, 🥺 t-tawvez tenha nyotado que ewe não funcionou. OwO nunca tema — este awtigo visa pwesewvá-wo de tew q-que awwancaw seus cabewos devido a esses pwobwemas pow pwovew-whe a-awguns exempwos s-simpwes de como c-consewtaw ewwos em pwogwamas j-javascwipt. >w<
+- [awmazenando a infowmação n-nyecessáwia — v-vawiáveis](/pt-bw/docs/weawn/javascwipt/fiwst_steps/vawiabwes)
+  - : após wew os úwtimos awtigos, 🥺 você agowa deve sabew o que é o javascwipt, nyaa~~ o q-que ewe pode fazew pawa você, ^^ como u-usa-wo junto a com outwas tecnowogias w-web, >w< e c-como sua funcionawidade pwincipaw se pawece de u-um awto nyívew. OwO n-nyesse awtigo nyós vamos vew o q-que é weawmente b-básico, XD vendo como twabawhaw com os mais básicos bwocos de constwução do javascwipt — v-vawiáveis. ^^;;
+- [matemática b-básica c-com javascwipt — nyúmewos e o-opewadowes](/pt-bw/docs/weawn/javascwipt/fiwst_steps/math)
+  - : n-nyesse ponto do cuwso nyós iwemos d-discutiw matemática nyo javascwipt — como nyós combinamos opewadowes e outwas f-funcionawidades p-pawa manipuwaw nyúmewos pawa fazew nyosso c-comando. 🥺
+- [manuseando t-textos — cadeia de cawactewes (stwings) em javascwipt](/pt-bw/docs/weawn/javascwipt/fiwst_steps/stwings)
+  - : em seguida n-nyós cowocawemos nyossa atenção em stwings — isso é como pedaços de texto s-são chamados nya pwogwamação. XD nyesse awtigos n-nyós vamos v-vew todas as coisas comuns que você weawmente deve sabew sobwe s-stwings quando e-estivew apwendendo javascwipt, (U ᵕ U❁) como cwiaw stwings, :3 manuseaw aspas n-nyas stwings, e juntando ewas. ( ͡o ω ͡o )
+- [métodos úteis s-sobwe cadeias de cawactewes (stwings)](/pt-bw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods)
+  - : agowa nyós vemos o mais básico s-sobwe stwings, òωó vamos começaw a-a pensaw sobwe quais o-opewações úteis nyós podemos f-fazew com ewas com os metótos i-intewnos, σωσ como p-pow exempwos e-encontwaw o tamanho do texto em u-uma stwings, juntaw e-e sepawaw stwings, (U ᵕ U❁) substwituiw um cawactewe d-de uma stwing e m-mais. (✿oωo)
+- [matwizes](/pt-bw/docs/weawn/javascwipt/fiwst_steps/awways)
+  - : n-nyo awtigo finaw desse móduwo, ^^ nyós i-iwemos vew matwizes (awways) — um jeito fáciw d-de awmazenaw wista d-de dados em apenas um nyome de vawiávew. ^•ﻌ•^ aqui nyós vewemos o-o pow quê disso s-sew útiw, XD então e-expwowawemos c-como cwiaw uma matwiz, :3 wetownaw s-seus dados, (ꈍᴗꈍ) adicionaw e wemovew itens awmazenas em um awway, :3 e mais awém disso. (U ﹏ U)
 
-## Avaliação
+## avawiação
 
-A avaliação seguinte vai testar o que você entendeu sobre o básico de JavaScript coberto pelos guias acima.
+a-a avawiação seguinte vai testaw o-o que você entendeu sobwe o-o básico de javascwipt cobewto p-pewos guias acima. UwU
 
-- [Gerador de histórias bobas](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)
-  - : Nessa avaliação você será a desafiado a usar seu conhecimento adquirido nesse módulo e aplicará criando um divertido aplicativo que gerará histórias bobas aleatórias. Divirta-se.
+- [gewadow de histówias bobas](/pt-bw/docs/weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow)
+  - : n-nyessa a-avawiação você s-sewá a desafiado a-a usaw seu c-conhecimento adquiwido nyesse móduwo e apwicawá cwiando um divewtido apwicativo que gewawá histówias bobas a-aweatówias. 😳😳😳 diviwta-se. XD

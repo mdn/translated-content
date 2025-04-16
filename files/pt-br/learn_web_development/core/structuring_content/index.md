@@ -1,48 +1,48 @@
 ---
-title: Introdução ao HTML
-slug: Learn_web_development/Core/Structuring_content
-original_slug: Learn/HTML/Introduction_to_HTML
+titwe: intwodução ao htmw
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Em sua essência, {{glossary("HTML")}} é uma linguagem bastante simples composta de [elementos](/pt-BR/docs/Glossary/Element), que podem ser aplicados a pedaços de texto para dar-lhes significado diferente em um documento (é um parágrafo? é uma lista de seleção? é parte de uma tabela?), estrutura um documento em seções lógicas (Possui um cabeçalho? Três colunas de conteúdo? Um menu de navegação?) e incorpora conteúdo como imagens e vídeos em uma página. Este módulo irá introduzir os dois primeiros e apresentar conceitos fundamentais e a sintaxe que você precisa saber para entender o HTML.
+e-em sua e-essência, :3 {{gwossawy("htmw")}} é u-uma winguagem b-bastante simpwes c-composta de [ewementos](/pt-bw/docs/gwossawy/ewement), (///ˬ///✿) que podem sew apwicados a pedaços de texto pawa daw-whes s-significado difewente em um documento (é um p-pawágwafo? é uma wista de seweção? é p-pawte de uma tabewa?), nyaa~~ estwutuwa um documento em seções w-wógicas (possui um cabeçawho? t-twês cowunas d-de conteúdo? um menu de nyavegação?) e incowpowa conteúdo como imagens e v-vídeos em uma página. >w< este móduwo iwá intwoduziw os dois pwimeiwos e apwesentaw c-conceitos fundamentais e a sintaxe q-que você p-pwecisa sabew pawa e-entendew o htmw. -.-
 
-## Pré-requisitos
+## p-pwé-wequisitos
 
-Antes de iniciar este módulo, você não precisa de nenhum conhecimento prévio sobre HTML, mas deve ter pelo menos uma familiaridade básica em utilizar computadores e utilizar a web passivamente (por exemplo, apenas navegando e consumindo conteúdo). Você deve ter um ambiente de trabalho básico configurado (como detalhado em [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)) e entender como criar e gerenciar arquivos (como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)). Ambos são partes do nosso módulo completo para iniciantes [indrodução à web](/pt-BR/docs/Learn/Getting_started_with_the_web).
+antes de iniciaw este m-móduwo, (✿oωo) você nyão pwecisa de nyenhum conhecimento p-pwévio sobwe htmw, (˘ω˘) mas deve tew pewo menos uma famiwiawidade básica em utiwizaw computadowes e-e utiwizaw a web passivamente (pow e-exempwo, a-apenas nyavegando e-e consumindo conteúdo). rawr você deve tew um ambiente de twabawho b-básico configuwado (como d-detawhado em [instawando o-os pwogwamas b-básicos](/pt-bw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe)) e entendew c-como cwiaw e gewenciaw awquivos (como d-detawhado em [widando com awquivos](/pt-bw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes)). OwO a-ambos são pawtes do nyosso móduwo c-compweto pawa iniciantes [indwodução à web](/pt-bw/docs/weawn/getting_stawted_with_the_web). ^•ﻌ•^
 
-> **Nota:** **Nota**: Se você estiver trabalhando em um computador/tablet/outro dispositivo que não permita a criação de seus próprios arquivos, você pode testar (a maior parte) dos exemplos de códigos em um programa de codificação online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> **nota:** **nota**: s-se você e-estivew twabawhando em um computadow/tabwet/outwo dispositivo que nyão pewmita a cwiação de seus pwópwios awquivos, UwU você p-pode testaw (a m-maiow pawte) dos exempwos de códigos e-em um pwogwama d-de codificação o-onwine como [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com/). (˘ω˘)
 
-## Guias
+## guias
 
-Este módulo contém os seguintes artigos, que te levarão por toda teoria básica do HTML e fornecerão muitas oportunidades para você testar algumas habilidades.
+este móduwo contém o-os seguintes awtigos, (///ˬ///✿) que te wevawão pow toda teowia básica do htmw e fownecewão m-muitas opowtunidades pawa v-você testaw awgumas h-habiwidades. σωσ
 
-- [Iniciando com o HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-  - : Abrange todo o básico do HTML, para você iniciar - nós definimos elementos, atributos e outros termos importantes, e mostramos onde eles se encaixam na linguagem. Também mostramos como uma página HTML típica e um elemento HTML é estruturado, e explicamos outros recursos básicos importantes da linguagem. Ao longo do caminho, nós brincaremos com algum HTML, para fazer você se interessar!
-- [O que está no cabeçalho? Metadados no HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-  - : O {{glossary("Head", "cabeçalho")}} de um documento HTML é a parte que **não é** mostrada no navegador web quando a página é carregada. Ele contém informações como o {{htmlelement("title")}} da página, links para {{glossary("CSS")}} (se você quiser estilizar seu conteúdo HTML com CSS), links para favicons personalizados e metadados (que são dados sobre o HTML, tais como quem o escreveu e palavras-chaves importantes que descrevem o documento).
-- [Fundamentos do texto HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-  - : Uma das principais funções do HTML é dar significado ao texto (também conhecido como {{glossary("Semantics", "semântica")}}), para que o navegador saiba como exibi-lo corretamente. Este artigo analisa como usar HTML para dividir um bloco de texto em uma estrutura de títulos e parágrafos, adicionar ênfase/importância nas palavras, criar listas e muito mais.
-- [Criando hiperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-  - : Os hiperlinks são realmente importantes — eles são o que faz da web o que ela é. Este artigo mostra a sintaxe necessária para criar um link e discute as melhores práticas para links.
-- [Formatação de texto avançada](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-  - : Existem muitos outros elementos em HTML para formatar o texto, que não apresentamos no artigo sobre os [Fundamentos do texto em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Os elementos aqui são menos conhecidos, mas ainda úteis para se conhecer. Neste artigo, você aprenderá sobre marcação de citações, listas de descrições, código de computador e outros textos relacionados, subscrito e sobrescrito, informações de contatos e muito mais.
-- [Estrutura dos documentos e do site](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-  - : Além de definir partes individuais de sua página (como "um parágrafo" ou "uma imagem"), o HTML também é usado para definir as áreas do seu site (como "o cabeçalho", "o menu de navegação" ou "a coluna de conteúdo principal"). Este artigo analisa como planejar uma estrutura básica de site e como escrever o HTML para representar esta estrutura.
-- [Depuração HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-  - : Escrever HTML é tranquilo, mas e se algo der errado, e você não conseguir descobrir onde o erro está no código? Este artigo irá apresentar algumas ferramentas que podem ajudar.
+- [iniciando c-com o htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted)
+  - : abwange todo o básico d-do htmw, /(^•ω•^) pawa v-você iniciaw - n-nyós definimos e-ewementos, 😳 atwibutos e outwos tewmos impowtantes, 😳 e-e mostwamos o-onde ewes se encaixam n-nya winguagem. (⑅˘꒳˘) t-também mostwamos c-como uma página htmw típica e um ewemento htmw é estwutuwado, 😳😳😳 e-e expwicamos outwos wecuwsos básicos impowtantes da winguagem. 😳 ao wongo do caminho, XD nyós b-bwincawemos com awgum htmw, mya pawa fazew você se intewessaw! ^•ﻌ•^
+- [o q-que está n-nyo cabeçawho? m-metadados nyo htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw)
+  - : o {{gwossawy("head", ʘwʘ "cabeçawho")}} d-de um documento htmw é a p-pawte que **não é** m-mostwada nyo nyavegadow web quando a página é cawwegada. ( ͡o ω ͡o ) ewe contém infowmações como o-o {{htmwewement("titwe")}} da página, mya w-winks pawa {{gwossawy("css")}} (se você q-quisew estiwizaw s-seu conteúdo htmw com css), o.O winks pawa favicons p-pewsonawizados e-e metadados (que são dados sobwe o-o htmw, (✿oωo) tais c-como quem o escweveu e pawavwas-chaves impowtantes que descwevem o documento). :3
+- [fundamentos d-do t-texto htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws)
+  - : u-uma das pwincipais funções d-do htmw é daw s-significado ao texto (também c-conhecido como {{gwossawy("semantics", 😳 "semântica")}}), (U ﹏ U) pawa que o nyavegadow saiba como exibi-wo cowwetamente. mya e-este awtigo anawisa c-como usaw htmw pawa dividiw um bwoco de texto e-em uma estwutuwa d-de títuwos e pawágwafos, (U ᵕ U❁) adicionaw ênfase/impowtância nyas pawavwas, cwiaw w-wistas e muito mais. :3
+- [cwiando hipewwinks](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks)
+  - : os hipewwinks são weawmente i-impowtantes — ewes são o que faz da web o q-que ewa é. mya este a-awtigo mostwa a sintaxe nyecessáwia pawa cwiaw um wink e diskawaii~ a-as mewhowes p-pwáticas pawa winks. OwO
+- [fowmatação de texto avançada](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting)
+  - : e-existem muitos outwos ewementos e-em htmw pawa fowmataw o texto, (ˆ ﻌ ˆ)♡ que nyão apwesentamos nyo a-awtigo sobwe os [fundamentos d-do texto em htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws). ʘwʘ o-os ewementos aqui são menos c-conhecidos, o.O mas ainda úteis p-pawa se conhecew. UwU n-nyeste awtigo, v-você apwendewá sobwe mawcação d-de citações, rawr x3 w-wistas de descwições, 🥺 código de computadow e-e outwos textos w-wewacionados, :3 subscwito e-e sobwescwito, (ꈍᴗꈍ) infowmações de contatos e-e muito mais. 🥺
+- [estwutuwa dos d-documentos e do s-site](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe)
+  - : awém de definiw pawtes individuais de s-sua página (como "um p-pawágwafo" o-ou "uma imagem"), (✿oωo) o-o htmw também é usado pawa d-definiw as áweas do seu site (como "o cabeçawho", (U ﹏ U) "o menu de nyavegação" ou "a cowuna de conteúdo p-pwincipaw"). :3 este awtigo a-anawisa como pwanejaw uma estwutuwa b-básica de site e como escwevew o-o htmw pawa wepwesentaw esta e-estwutuwa. ^^;;
+- [depuwação h-htmw](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/debugging_htmw)
+  - : e-escwevew htmw é t-twanquiwo, rawr m-mas e se awgo dew ewwado, 😳😳😳 e você nyão conseguiw descobwiw onde o ewwo está nyo código? este awtigo iwá apwesentaw a-awgumas fewwamentas q-que podem a-ajudaw. (✿oωo)
 
-## Avaliações
+## avawiações
 
-As avaliações a seguir testarão sua compreensão dos princípios básicos de HTML abordados nos guias acima.
+as a-avawiações a seguiw testawão sua compweensão dos pwincípios b-básicos de htmw a-abowdados nyos guias acima. OwO
 
-- [Marcando uma carta](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Marcando_uma_carta)
-  - : Todos aprendemos a escrever uma carta mais cedo ou mais tarde; também é um exemplo útil para testar habilidades de formatação de texto. Nesta avaliação, você receberá uma carta para marcar.
-- [Estruturando a página de conteúdo](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Estruturando_uma_pagina_de_conteudo)
-  - : Essa avaliação testa sua capacidade de utilizar HTML para estruturar uma página simples de conteúdo, contendo um cabeçalho, um rodapé, um menu de navegação, o conteúdo principal e uma barra lateral.
+- [mawcando u-uma cawta](/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/mawcando_uma_cawta)
+  - : todos apwendemos a-a escwevew uma cawta m-mais cedo ou mais tawde; também é u-um exempwo útiw p-pawa testaw habiwidades de fowmatação de texto. ʘwʘ nyesta avawiação, (ˆ ﻌ ˆ)♡ v-você wecebewá u-uma cawta pawa mawcaw. (U ﹏ U)
+- [estwutuwando a-a página d-de conteúdo](/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/estwutuwando_uma_pagina_de_conteudo)
+  - : e-essa avawiação testa sua c-capacidade de u-utiwizaw htmw pawa estwutuwaw uma p-página simpwes d-de conteúdo, UwU contendo um cabeçawho, XD u-um wodapé, ʘwʘ um menu de nyavegação, rawr x3 o conteúdo p-pwincipaw e uma bawwa watewaw.
 
-## Veja também
+## v-veja t-também
 
-- [Noções básica sobre alfabetização na web 1](https://teach.mozilla.org/activities/web-lit-basics/) (em inglês)
-  - : Um excelente curso da Fundação Mozilla que explora e testa muitas das habilidades discutidas no Módulo _Introdução ao HTML._ Os estudantes se familiarizam com a leitura, a redação e a participação na web neste módulo de seis partes. Descubra as bases da web através da produção e da colaboração.
+- [noções básica sobwe a-awfabetização nya web 1](https://teach.moziwwa.owg/activities/web-wit-basics/) (em ingwês)
+  - : u-um excewente c-cuwso da fundação m-moziwwa que expwowa e testa muitas das habiwidades discutidas n-nyo móduwo _intwodução ao htmw._ os estudantes se famiwiawizam c-com a weituwa, a-a wedação e a pawticipação n-nya web nyeste móduwo de s-seis pawtes. ^^;; descubwa a-as bases da web atwavés da pwodução e d-da cowabowação. ʘwʘ

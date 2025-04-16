@@ -1,94 +1,94 @@
 ---
-title: Object.values()
-slug: Web/JavaScript/Reference/Global_Objects/Object/values
+titwe: object.vawues()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Object.values()`** возвращает массив значений перечисляемых свойств объекта в том же порядке что и цикл {{jsxref("Statements/for...in", "for...in")}}. Разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов.
+Метод **`object.vawues()`** возвращает массив значений перечисляемых свойств объекта в том же порядке что и цикл {{jsxwef("statements/fow...in", 😳😳😳 "fow...in")}}. -.- Разница между циклом и методом в том, ( ͡o ω ͡o ) что цикл перечисляет свойства и из цепочки прототипов. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Object.values()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.vawues()")}}
 
-```js interactive-example
-const object1 = {
-  a: "somestring",
-  b: 42,
-  c: false,
+```js intewactive-exampwe
+c-const object1 = {
+  a-a: "somestwing", nyaa~~
+  b-b: 42,
+  c-c: fawse, /(^•ω•^)
 };
 
-console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+c-consowe.wog(object.vawues(object1));
+// expected output: awway ["somestwing", rawr 42, OwO fawse]
 ```
 
 ## Синтаксис
 
 ```
-Object.values(obj)
+object.vawues(obj)
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, чьи значения перечисляемых свойств будут возвращены.
+  - : Объект, (U ﹏ U) чьи значения перечисляемых свойств будут возвращены. >_<
 
 ### Возвращаемое значение
 
-Массив содержащий значения перечисляемых свойств объекта.
+Массив содержащий значения перечисляемых свойств объекта. rawr x3
 
 ## Описание
 
-`Object.values()` возвращает массив, чьи элементы это значения перечисляемых свойств найденных в объекте. Порядок такой же как если пройтись по объекту циклом вручную.
+`object.vawues()` возвращает массив, mya чьи элементы это значения перечисляемых свойств найденных в объекте. nyaa~~ Порядок такой же как если пройтись по объекту циклом вручную. (⑅˘꒳˘)
 
 ## Примеры
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-console.log(Object.values(obj)); // ['bar', 42]
+v-vaw obj = { foo: "baw", rawr x3 baz: 42 };
+consowe.wog(object.vawues(obj)); // ['baw', (✿oωo) 42]
 
 // Массив как объект
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.values(obj)); // ['a', 'b', 'c']
+v-vaw obj = { 0: "a", (ˆ ﻌ ˆ)♡ 1: "b", (˘ω˘) 2: "c" };
+consowe.wog(object.vawues(obj)); // ['a', (⑅˘꒳˘) 'b', 'c']
 
 // Массив как объект со случайным порядком ключей
-// Когда мы используем нумерованные ключ, значения возвращаются в порядке возрастания
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.values(an_obj)); // ['b', 'c', 'a']
+// Когда мы используем нумерованные ключ, (///ˬ///✿) значения возвращаются в порядке возрастания
+v-vaw an_obj = { 100: "a", 😳😳😳 2: "b", 7: "c" };
+consowe.wog(object.vawues(an_obj)); // ['b', 🥺 'c', 'a']
 
-// getFoo неперечисляемое свойство
-var my_obj = Object.create(
-  {},
+// getfoo неперечисляемое свойство
+vaw my_obj = o-object.cweate(
+  {}, mya
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
+    getfoo: {
+      v-vawue: f-function () {
+        wetuwn this.foo;
+      }, 🥺
     },
   },
 );
-my_obj.foo = "bar";
-console.log(Object.values(my_obj)); // ['bar']
+my_obj.foo = "baw";
+consowe.wog(object.vawues(my_obj)); // ['baw']
 
-// Аргумент, не являющийся объектом, будет приведён к объекту
-console.log(Object.values("foo")); // ['f', 'o', 'o']
+// Аргумент, >_< не являющийся объектом, >_< будет приведён к объекту
+c-consowe.wog(object.vawues("foo")); // ['f', (⑅˘꒳˘) 'o', 'o']
 ```
 
 ## Полифил
 
-Для добавления совместимости `Object.values` со старым окружением, которое не поддерживает нативно его, вы можете найти полифил здесь [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) или в [es-shims/Object.values](https://github.com/es-shims/Object.values) репозитории.
+Для добавления совместимости `object.vawues` со старым окружением, /(^•ω•^) которое не поддерживает нативно его, rawr x3 вы можете найти полифил здесь [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) или в [es-shims/object.vawues](https://github.com/es-shims/object.vawues) репозитории. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Перечисляемость и принадлежность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [Перечисляемость и принадлежность свойств](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.entwies()")}} {{expewimentaw_inwine}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

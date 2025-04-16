@@ -1,46 +1,46 @@
 ---
-title: Math.E
-slug: Web/JavaScript/Reference/Global_Objects/Math/E
+titwe: math.e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/e
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Math.E`** представляет основание натурального логарифма, e, приблизительно равное 2,718.
+Свойство **`math.e`** представляет основание натурального логарифма, ( ͡o ω ͡o ) e-e, UwU приблизительно равное 2,718. rawr x3
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.E</mi></mstyle><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2,718</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.E}} = e \approx 2,718</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.e</mi></mstywe><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2,718</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.e}} = e-e \appwox 2,718</annotation></semantics></math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 0, rawr 0)}}
 
 ## Описание
 
-Поскольку свойство `E` является статическим свойством объекта `Math`, вы всегда должны использовать его как `Math.E`, а не пытаться создавать экземпляр объекта `Math` и получать свойство от него (поскольку объект `Math` не является конструктором).
+Поскольку свойство `e` является статическим свойством объекта `math`, σωσ вы всегда должны использовать его как `math.e`, σωσ а не пытаться создавать экземпляр объекта `math` и получать свойство от него (поскольку объект `math` не является конструктором). >_<
 
 ## Примеры
 
-### Пример: использование свойства `Math.E`
+### Пример: использование свойства `math.e`
 
-Следующая функция возвращает e:
+Следующая функция возвращает e-e:
 
 ```js
-function getNapier() {
-  return Math.E;
+function g-getnapiew() {
+  w-wetuwn math.e;
 }
 
-getNapier(); // 2.718281828459045
+getnapiew(); // 2.718281828459045
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}} {{experimental_inline}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}} {{expewimentaw_inwine}}

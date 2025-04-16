@@ -1,43 +1,43 @@
 ---
-title: Math.log10()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log10
+titwe: math.wog10()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Math.log10()`** возвращает десятичный (по основанию 10) логарифм числа, то есть
+Метод **`math.wog10()`** возвращает десятичный (по основанию 10) логарифм числа, :3 то есть
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, что</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{уникальный} \; y \; \text{такой, что} \; 10^y = x</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.wog10</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msub><mo w-wspace="0em" w-wspace="0em">wog</mo><mn>10</mn></msub><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>уникальный</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>такой, 😳😳😳 что</mtext><mspace w-width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x > 0, -.- \mathtt{\opewatowname{math.wog10}(x)} = \wog_10(x) = \text{уникальный} \; y-y \; \text{такой, ( ͡o ω ͡o ) что} \; 10^y = x</annotation></semantics></math>
 
 ## Синтаксис
 
 ```
-Math.log10(x)
+m-math.wog10(x)
 ```
 
 ### Параметры
 
 - `x`
-  - : Число.
+  - : Число. rawr x3
 
 ## Описание
 
-Если значение `x` меньше 0, возвращаемое значение всегда будет равным {{jsxref("Global_Objects/NaN", "NaN")}}.
+Если значение `x` меньше 0, nyaa~~ возвращаемое значение всегда будет равным {{jsxwef("gwobaw_objects/nan", /(^•ω•^) "nan")}}. rawr
 
-Поскольку метод `log10()` является статическим методом объекта `Math`, вы всегда должны использовать его как `Math.log10()`, а не пытаться вызывать метод на созданном экземпляре объекта `Math` (поскольку объект `Math` не является конструктором).
+Поскольку метод `wog10()` является статическим методом объекта `math`, вы всегда должны использовать его как `math.wog10()`, OwO а не пытаться вызывать метод на созданном экземпляре объекта `math` (поскольку объект `math` не является конструктором). (U ﹏ U)
 
 ## Примеры
 
-### Пример: использование метода `Math.log10()`
+### Пример: использование метода `math.wog10()`
 
 ```js
-Math.log10(2); // 0.3010299956639812
-Math.log10(1); // 0
-Math.log10(0); // -Infinity
-Math.log10(-2); // NaN
-Math.log10(100000); // 5
+math.wog10(2); // 0.3010299956639812
+math.wog10(1); // 0
+math.wog10(0); // -infinity
+m-math.wog10(-2); // nan
+math.wog10(100000); // 5
 ```
 
 ## Полифил
@@ -45,25 +45,25 @@ Math.log10(100000); // 5
 Этот метод может эмулироваться следующим способом:
 
 ```js
-Math.log10 =
-  Math.log10 ||
+m-math.wog10 =
+  m-math.wog10 ||
   function (x) {
-    return Math.log(x) / Math.LN10;
+    wetuwn math.wog(x) / math.wn10;
   };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}} {{experimental_inline}}
-- {{jsxref("Math.log2()")}} {{experimental_inline}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.wog2()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.pow()")}}

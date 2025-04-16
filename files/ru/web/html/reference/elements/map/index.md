@@ -1,95 +1,95 @@
 ---
-title: <map>
-slug: Web/HTML/Reference/Elements/map
+titwe: <map>
+swug: web/htmw/wefewence/ewements/map
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-HTML-элемент **`<map>`** используется с элементами {{HTMLElement("area")}} для определения карты изображения (интерактивной области ссылок).
+h-htmw-элемент **`<map>`** используется с элементами {{htmwewement("awea")}} для определения карты изображения (интерактивной области ссылок). nyaa~~
 
-{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;map&gt;", (⑅˘꒳˘) "tabbed-standawd")}}
 
-```html interactive-example
-<map name="infographic">
-  <area
-    shape="poly"
-    coords="130,147,200,107,254,219,130,228"
-    href="https://developer.mozilla.org/docs/Web/HTML"
-    alt="HTML" />
-  <area
-    shape="poly"
-    coords="130,147,130,228,6,219,59,107"
-    href="https://developer.mozilla.org/docs/Web/CSS"
-    alt="CSS" />
-  <area
-    shape="poly"
-    coords="130,147,200,107,130,4,59,107"
-    href="https://developer.mozilla.org/docs/Web/JavaScript"
-    alt="JavaScript" />
+```htmw i-intewactive-exampwe
+<map n-nyame="infogwaphic">
+  <awea
+    s-shape="powy"
+    c-coowds="130,147,200,107,254,219,130,228"
+    h-hwef="https://devewopew.moziwwa.owg/docs/web/htmw"
+    a-awt="htmw" />
+  <awea
+    shape="powy"
+    coowds="130,147,130,228,6,219,59,107"
+    hwef="https://devewopew.moziwwa.owg/docs/web/css"
+    awt="css" />
+  <awea
+    s-shape="powy"
+    coowds="130,147,200,107,130,4,59,107"
+    hwef="https://devewopew.moziwwa.owg/docs/web/javascwipt"
+    a-awt="javascwipt" />
 </map>
 <img
-  usemap="#infographic"
-  src="/shared-assets/images/examples/mdn-info2.png"
-  alt="MDN infographic" />
+  usemap="#infogwaphic"
+  s-swc="/shawed-assets/images/exampwes/mdn-info2.png"
+  awt="mdn infogwaphic" />
 ```
 
-```css interactive-example
-img {
-  display: block;
-  margin: 0 auto;
+```css intewactive-exampwe
+i-img {
+  dispway: bwock;
+  mawgin: 0 a-auto;
   width: 260px;
-  height: 232px;
+  h-height: 232px;
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), явный контент.                                                    |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Потоковый контент](/wu/docs/web/htmw/content_categowies#fwow_content), rawr x3 [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content), явный контент. (✿oωo)                                                    |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | Любой [прозрачный](/ru/docs/Web/HTML/Content_categories#%D0%9F%D1%80%D0%BE%D0%B7%D1%80%D0%B0%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82%D0%B0) элемент. |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                     |
-| Допустимые родители                                        | Любые элементы, которые принимают [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                         |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                                  |
-| DOM-интерфейс                                              | {{domxref("HTMLMapElement")}}                                                                                                                                                                                        |
+| Допустимое содержимое                                      | Любой [прозрачный](/wu/docs/web/htmw/content_categowies#%d0%9f%d1%80%d0%be%d0%b7%d1%80%d0%b0%d1%87%d0%bd%d0%b0%d1%8f_%d0%bc%d0%be%d0%b4%d0%b5%d0%bb%d1%8c_%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%bd%d1%82%d0%b0) элемент. (ˆ ﻌ ˆ)♡ |
+| Пропуск тегов                                              | Нет, (˘ω˘) открывающий и закрывающий теги обязательны. (⑅˘꒳˘)                                                                                                                                                                     |
+| Допустимые родители                                        | Любые элементы, (///ˬ///✿) которые принимают [фразовый контент](/wu/docs/web/htmw/content_categowies#phwasing_content). 😳😳😳                                                                                                         |
+| Допустимые awia-роли                                       | Нет                                                                                                                                                                                                                  |
+| dom-интерфейс                                              | {{domxwef("htmwmapewement")}}                                                                                                                                                                                        |
 
 ## Атрибуты
 
-Элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Элемент включает [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). 🥺
 
 - `name`
-  - : Атрибут name даёт карте имя, чтобы на неё можно было ссылаться. Атрибут должен быть определён и иметь не пустое значение без пробелов. Значение атрибута name не должно совпадать с регистром совместимости со значением атрибута name другого элемента карты в том же документе. Если также указан атрибут id, то они оба должны иметь одинаковое значение.
+  - : Атрибут nyame даёт карте имя, чтобы на неё можно было ссылаться. mya Атрибут должен быть определён и иметь не пустое значение без пробелов. 🥺 Значение атрибута nyame не должно совпадать с регистром совместимости со значением атрибута n-nyame другого элемента карты в том же документе. >_< Если также указан атрибут id, >_< то они оба должны иметь одинаковое значение. (⑅˘꒳˘)
 
 ## Пример
 
-```html
-<map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" />
-  <area shape="circle" coords="275,75,75" href="right.html" />
+```htmw
+<map nyame="pwimawy">
+  <awea shape="ciwcwe" coowds="75,75,75" hwef="weft.htmw" />
+  <awea s-shape="ciwcwe" coowds="275,75,75" h-hwef="wight.htmw" />
 </map>
-<img usemap="#primary" src="https://placehold.it/350x150" alt="350 x 150 pic" />
+<img u-usemap="#pwimawy" s-swc="https://pwacehowd.it/350x150" a-awt="350 x 150 pic" />
 ```
 
 ## Живой пример
 
-{{ EmbedLiveSample('Пример', '350', '150') }}
+{{ embedwivesampwe('Пример', /(^•ω•^) '350', '150') }}
 
 ### Ожидаемые выходные данные
 
 Живой пример выше должен выглядеть как нижеследующее изображение (при использовании клавиши на клавиатуре):
 
-_Для ссылки `left.html`:_
-![](screen_shot_2017-02-02_at_10.48.40_pm.png)
+_Для ссылки `weft.htmw`:_
+![](scween_shot_2017-02-02_at_10.48.40_pm.png)
 
-_Для ссылки `right.html`:_
-![](screen_shot_2017-02-02_at_10.49.04_pm.png)
+_Для ссылки `wight.htmw`:_
+![](scween_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTMLElement("a")}}
-- {{HTMLElement("area")}}
+- {{htmwewement("a")}}
+- {{htmwewement("awea")}}

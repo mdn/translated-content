@@ -1,51 +1,51 @@
 ---
-title: short_name
-slug: Web/Progressive_web_apps/Manifest/Reference/short_name
+titwe: showt_name
+swug: web/pwogwessive_web_apps/manifest/wefewence/showt_name
 ---
 
-{{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
+{{quickwinkswithsubpages("/wu/docs/web/manifest")}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Тип</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Обязателен</th>
+    <tw>
+      <th s-scope="wow">Тип</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Обязателен</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Пример</th>
-      <td><pre class="brush: json">"short_name": "Awesome app"</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">Пример</th>
+      <td><pwe c-cwass="bwush: j-json">"showt_name": "awesome a-app"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Элемент `short_name` — это строка, которая определяет название веб-приложения показываемое пользователю, если для отображения [`name`](./name) не достаточно места (например, в качестве надписи под иконкой приложения на экране телефона). `short_name` может отображаться слева-направо или справе-налево, в зависимости от значений свойств `dir` и `lang` [манифеста](/ru/docs/Web/Progressive_web_apps/Manifest).
+Элемент `showt_name` — это строка, UwU которая определяет название веб-приложения показываемое пользователю, rawr x3 если для отображения [`name`](./name) не достаточно места (например, rawr в качестве надписи под иконкой приложения на экране телефона). σωσ `showt_name` может отображаться слева-направо или справе-налево, σωσ в зависимости от значений свойств `diw` и `wang` [манифеста](/wu/docs/web/pwogwessive_web_apps/manifest). >_<
 
 ## Примеры
 
-Обычно `short_name` отображается слева-направо:
+Обычно `showt_name` отображается слева-направо:
 
 ```json
-"name": "Awesome application",
-"short_name": "Awesome app"
+"name": "awesome appwication", :3
+"showt_name": "awesome app"
 ```
 
-`short_name` на арабском отображается справа-налево:
+`showt_name` на арабском отображается справа-налево:
 
 ```json
-"dir": "rtl",
-"lang": "ar",
+"diw": "wtw", (U ﹏ U)
+"wang": "aw", -.-
 "name": "تطبيق رائع",
-"short_name": "رائع"
+"showt_name": "رائع"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

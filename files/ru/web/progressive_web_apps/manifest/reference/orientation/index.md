@@ -1,61 +1,61 @@
 ---
-title: orientation
-slug: Web/Progressive_web_apps/Manifest/Reference/orientation
+titwe: owientation
+swug: web/pwogwessive_web_apps/manifest/wefewence/owientation
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"orientation": "portrait-primary"</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"owientation": "powtwait-pwimawy"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`orientation` определяет ориентацию по умолчанию для всех верхних уровней {{Glossary("Browsing context", "контекстов браузера")}} приложения.
+`owientation` определяет ориентацию по умолчанию для всех верхних уровней {{gwossawy("bwowsing c-context", (⑅˘꒳˘) "контекстов браузера")}} приложения. ( ͡o ω ͡o )
 
-> **Примечание:** `orientation` и/или его конкретные значения могут не поддерживаться пользовательским агентом в различных режимах отображения, поскольку их поддержка не имеет смысла для конкретного контекста.
+> **Примечание:** `owientation` и/или его конкретные значения могут не поддерживаться пользовательским агентом в различных режимах отображения, UwU поскольку их поддержка не имеет смысла для конкретного контекста. rawr x3
 
-> [!NOTE]
-> Ориентация может быть изменена во время выполнения с помощью [Screen Orientation API](/ru/docs/Web/API/Screen_Orientation_API).
+> [!note]
+> Ориентация может быть изменена во время выполнения с помощью [scween o-owientation api](/wu/docs/web/api/scween_owientation_api). rawr
 
 ## Значения
 
-`orientation` может иметь одно из следующих значений:
+`owientation` может иметь одно из следующих значений:
 
 - `any`
-- `natural`
-- `landscape`
-- `landscape-primary`
-- `landscape-secondary`
-- `portrait`
-- `portrait-primary`
-- `portrait-secondary`
+- `natuwaw`
+- `wandscape`
+- `wandscape-pwimawy`
+- `wandscape-secondawy`
+- `powtwait`
+- `powtwait-pwimawy`
+- `powtwait-secondawy`
 
 ## Пример
 
 ```json
-"orientation": "portrait-primary"
+"owientation": "powtwait-pwimawy"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

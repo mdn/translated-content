@@ -1,77 +1,77 @@
 ---
-title: Object.prototype.__defineGetter__()
-slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
+titwe: object.pwototype.__definegettew__()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__
 ---
 
-{{JSRef}} {{non-standard_header}} {{deprecated_header}}
+{{jswef}} {{non-standawd_headew}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`__defineGetter__()`** привязывает свойство объекта к функции, вызываемой каждый раз при поиске этого свойства.
+Метод **`__definegettew__()`** привязывает свойство объекта к функции, (⑅˘꒳˘) вызываемой каждый раз при поиске этого свойства. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-obj.__defineGetter__(prop, func)
+o-obj.__definegettew__(pwop, -.- f-func)
 ```
 
 ### Параметры
 
-- `prop`
-  - : Строка, содержащая имя свойства, привязываемого к заданной функции.
+- `pwop`
+  - : Строка, ^^;; содержащая имя свойства, >_< привязываемого к заданной функции. mya
 - `func`
-  - : Функция, привязываемая к поиску указанного свойства.
+  - : Функция, mya привязываемая к поиску указанного свойства. 😳
 
 ## Описание
 
-Метод `__defineGetter__()` позволяет определить {{jsxref("Operators/get", "геттер", "", 1)}} на уже существующем объекте.
+Метод `__definegettew__()` позволяет определить {{jsxwef("opewatows/get", "геттер", "", XD 1)}} на уже существующем объекте. :3
 
 ## Примеры
 
 ```js
 // Нестандартный и устаревший способ
 
-const o = {};
-o.__defineGetter__("gimmeFive", function () {
-  return 5;
+c-const o = {};
+o-o.__definegettew__("gimmefive", 😳😳😳 f-function () {
+  w-wetuwn 5;
 });
-console.log(o.gimmeFive); // 5
+c-consowe.wog(o.gimmefive); // 5
 
-// Способы, совместимые со стандартом
+// Способы, -.- совместимые со стандартом
 
 // Использование оператора get
 const o = {
-  get gimmeFive() {
-    return 5;
-  },
+  get gimmefive() {
+    wetuwn 5;
+  }, ( ͡o ω ͡o )
 };
-console.log(o.gimmeFive); // 5
+consowe.wog(o.gimmefive); // 5
 
-// Использование Object.defineProperty()
+// Использование o-object.definepwopewty()
 const o = {};
-Object.defineProperty(o, "gimmeFive", {
-  get: function () {
-    return 5;
-  },
+object.definepwopewty(o, rawr x3 "gimmefive", {
+  g-get: function () {
+    wetuwn 5;
+  }, nyaa~~
 });
-console.log(o.gimmeFive); // 5
+c-consowe.wog(o.gimmefive); // 5
 ```
 
 ## Спецификации
 
-Не является частью какой-либо спецификации.
+Не является частью какой-либо спецификации. /(^•ω•^)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- оператор {{jsxref("Operators/get", "get")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__lookupGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [Руководство по JS: определение геттеров и сеттеров](/ru/docs/Web/JavaScript/Guide/Working_with_objects#.d0.9e.d0.bf.d1.80.d0.b5.d0.b4.d0.b5.d0.bb.d0.b5.d0.bd.d0.b8.d0.b5_.d0.b3.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2_.d0.b8_.d1.81.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2)
-- [\[Запись в блоге\] Устаревание \_\_defineGetter\_\_ и \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (англ.)
-- [Firefox bug 647423](https://bugzil.la/647423)
+- [`object.pwototype.__definesettew__()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- оператор {{jsxwef("opewatows/get", rawr "get")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__wookupgettew__()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupgettew__)
+- [`object.pwototype.__wookupsettew__()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/__wookupsettew__)
+- [Руководство по js: определение геттеров и сеттеров](/wu/docs/web/javascwipt/guide/wowking_with_objects#.d0.9e.d0.bf.d1.80.d0.b5.d0.b4.d0.b5.d0.bb.d0.b5.d0.bd.d0.b8.d0.b5_.d0.b3.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2_.d0.b8_.d1.81.d0.b5.d1.82.d1.82.d0.b5.d1.80.d0.be.d0.b2)
+- [\[Запись в блоге\] Устаревание \_\_definegettew\_\_ и \_\_definesettew\_\_](http://wheweswawden.com/2010/04/16/mowe-spidewmonkey-changes-ancient-esotewic-vewy-wawewy-used-syntax-fow-cweating-gettews-and-settews-is-being-wemoved/) (англ.)
+- [fiwefox bug 647423](https://bugziw.wa/647423)

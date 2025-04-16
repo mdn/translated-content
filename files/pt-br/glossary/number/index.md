@@ -1,21 +1,21 @@
 ---
-title: Number
-slug: Glossary/Number
+titwe: nyumbew
+swug: gwossawy/numbew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-No {{Glossary("JavaScript")}}, **Number** é um tipo de dado numérico no [double-precision 64-bit floating point format (IEEE 754)](http://en.wikipedia.org/wiki/Double_precision_floating-point_format). Em outras linguagens de programação diferentes tipos numéricos podem existir, por exemplo: Integers (Inteiros), Floats (Pontos Flutuantes), Doubles (Dobros), ou Bignums.
+n-nyo {{gwossawy("javascwipt")}}, mya **numbew** é u-um tipo de dado n-nyuméwico nyo [doubwe-pwecision 64-bit f-fwoating p-point fowmat (ieee 754)](http://en.wikipedia.owg/wiki/doubwe_pwecision_fwoating-point_fowmat). 😳 e-em outwas winguagens d-de pwogwamação d-difewentes tipos nyuméwicos podem existiw, XD pow exempwo: integews (inteiwos), :3 fwoats (pontos f-fwutuantes), 😳😳😳 doubwes (dobwos), -.- ou bignums.
 
-## Leia mais
+## w-weia mais
 
-### Conhecimento Geral
+### conhecimento gewaw
 
-- [Inteiro\_(ciência_da_computação)](<https://pt.wikipedia.org/wiki/Inteiro_(ciência_da_computação)>) no Wikipédia
-- [Bignum](https://pt.wikipedia.org/wiki/Bignum) no Wikipédia
-- [Ponto_flutuante](https://pt.wikipedia.org/wiki/Ponto_flutuante) no Wikipédia
+- [inteiwo\_(ciência_da_computação)](<https://pt.wikipedia.owg/wiki/inteiwo_(ciência_da_computação)>) n-nyo wikipédia
+- [bignum](https://pt.wikipedia.owg/wiki/bignum) nyo wikipédia
+- [ponto_fwutuante](https://pt.wikipedia.owg/wiki/ponto_fwutuante) nyo wikipédia
 
-### Technical reference
+### technicaw w-wefewence
 
-- The JavaScript data structure: [Number](/pt-BR/docs/Web/JavaScript/Data_structures#number_type)
-- The JavaScript global object {{jsxref("Number")}}
+- the javascwipt data s-stwuctuwe: [numbew](/pt-bw/docs/web/javascwipt/data_stwuctuwes#numbew_type)
+- t-the javascwipt gwobaw object {{jsxwef("numbew")}}

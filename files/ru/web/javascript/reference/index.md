@@ -1,340 +1,340 @@
 ---
-title: Справочник по JavaScript
-slug: Web/JavaScript/Reference
-l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+titwe: Справочник по javascwipt
+swug: w-web/javascwipt/wefewence
+w-w10n:
+  s-souwcecommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-Этот раздел MDN служит хранилищем фактов о языке JavaScript. Весь язык подробно описан здесь. При написании кода JavaScript вы будете часто ссылаться на эти страницы (отсюда и название "Справочник по JavaScript").
+Этот раздел m-mdn служит хранилищем фактов о языке j-javascwipt. XD Весь язык подробно описан здесь. :3 При написании кода j-javascwipt вы будете часто ссылаться на эти страницы (отсюда и название "Справочник по j-javascwipt"). 😳😳😳
 
-Язык JavaScript предназначен для использования в какой-либо более крупной среде, будь то браузер, серверные скрипты или что-то подобное. По большей части, этот справочник пытается быть независимым от среды и не ориентирован на среду веб-браузера.
+Язык j-javascwipt предназначен для использования в какой-либо более крупной среде, -.- будь то браузер, ( ͡o ω ͡o ) серверные скрипты или что-то подобное. rawr x3 По большей части, nyaa~~ этот справочник пытается быть независимым от среды и не ориентирован на среду веб-браузера. /(^•ω•^)
 
-Если вы новичок в JavaScript, начните с [этого](/ru/docs/Web/JavaScript/Guide) раздела. Как только вы твердо усвоите основы, вы можете использовать текущий справочник, чтобы получить более подробную информацию об отдельных объектах и языковых конструкциях.
+Если вы новичок в javascwipt, rawr начните с [этого](/wu/docs/web/javascwipt/guide) раздела. OwO Как только вы твердо усвоите основы, (U ﹏ U) вы можете использовать текущий справочник, >_< чтобы получить более подробную информацию об отдельных объектах и языковых конструкциях. rawr x3
 
 ## Встроенные модули
 
-Эта глава описывает все [стандартные встроенные объекты JavaScript](/ru/docs/Web/JavaScript/Reference/Global_Objects) вместе с их методами и свойствами.
+Эта глава описывает все [стандартные встроенные объекты javascwipt](/wu/docs/web/javascwipt/wefewence/gwobaw_objects) вместе с их методами и свойствами. mya
 
 ### Значения свойств
 
-- {{JSxRef("globalThis")}}
-- {{JSxRef("Infinity")}}
-- {{JSxRef("NaN")}}
-- {{JSxRef("undefined")}}
+- {{jsxwef("gwobawthis")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("undefined")}}
 
 ### Свойства функции
 
-- {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
-- {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+- {{jsxwef("gwobaw_objects/evaw", nyaa~~ "evaw()")}}
+- {{jsxwef("gwobaw_objects/isfinite", (⑅˘꒳˘) "isfinite()")}}
+- {{jsxwef("gwobaw_objects/isnan", rawr x3 "isnan()")}}
+- {{jsxwef("gwobaw_objects/pawsefwoat", (✿oωo) "pawsefwoat()")}}
+- {{jsxwef("gwobaw_objects/pawseint", (ˆ ﻌ ˆ)♡ "pawseint()")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", (˘ω˘) "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", (⑅˘꒳˘) "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", (///ˬ///✿) "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", 😳😳😳 "encodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/escape", 🥺 "escape()")}} {{depwecated_inwine}}
+- {{jsxwef("gwobaw_objects/unescape", mya "unescape()")}} {{depwecated_inwine}}
 
 ### Фундаментальные объекты
 
-- {{JSxRef("Object")}}
-- {{JSxRef("Function")}}
-- {{JSxRef("Boolean")}}
-- {{JSxRef("Symbol")}}
+- {{jsxwef("object")}}
+- {{jsxwef("function")}}
+- {{jsxwef("boowean")}}
+- {{jsxwef("symbow")}}
 
 ### Объекты ошибок
 
-- {{JSxRef("Error")}}
-- {{JSxRef("AggregateError")}}
-- {{JSxRef("EvalError")}}
-- {{JSxRef("RangeError")}}
-- {{JSxRef("ReferenceError")}}
-- {{JSxRef("SyntaxError")}}
-- {{JSxRef("TypeError")}}
-- {{JSxRef("URIError")}}
-- {{JSxRef("InternalError")}} {{Non-Standard_Inline}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("aggwegateewwow")}}
+- {{jsxwef("evawewwow")}}
+- {{jsxwef("wangeewwow")}}
+- {{jsxwef("wefewenceewwow")}}
+- {{jsxwef("syntaxewwow")}}
+- {{jsxwef("typeewwow")}}
+- {{jsxwef("uwiewwow")}}
+- {{jsxwef("intewnawewwow")}} {{non-standawd_inwine}}
 
 ### Числа и даты
 
-- {{JSxRef("Number")}}
-- {{JSxRef("BigInt")}}
-- {{JSxRef("Math")}}
-- {{JSxRef("Date")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("math")}}
+- {{jsxwef("date")}}
 
 ### Обработка текста
 
-- {{JSxRef("String")}}
-- {{JSxRef("RegExp")}}
+- {{jsxwef("stwing")}}
+- {{jsxwef("wegexp")}}
 
 ### Индексированные коллекции
 
-- {{JSxRef("Array")}}
-- {{JSxRef("Int8Array")}}
-- {{JSxRef("Uint8Array")}}
-- {{JSxRef("Uint8ClampedArray")}}
-- {{JSxRef("Int16Array")}}
-- {{JSxRef("Uint16Array")}}
-- {{JSxRef("Int32Array")}}
-- {{JSxRef("Uint32Array")}}
-- {{JSxRef("BigInt64Array")}}
-- {{JSxRef("BigUint64Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("int8awway")}}
+- {{jsxwef("uint8awway")}}
+- {{jsxwef("uint8cwampedawway")}}
+- {{jsxwef("int16awway")}}
+- {{jsxwef("uint16awway")}}
+- {{jsxwef("int32awway")}}
+- {{jsxwef("uint32awway")}}
+- {{jsxwef("bigint64awway")}}
+- {{jsxwef("biguint64awway")}}
+- {{jsxwef("fwoat32awway")}}
+- {{jsxwef("fwoat64awway")}}
 
 ### Коллекции с ключами
 
-- {{JSxRef("Map")}}
-- {{JSxRef("Set")}}
-- {{JSxRef("WeakMap")}}
-- {{JSxRef("WeakSet")}}
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}
 
 ### Структурированные данных
 
-- {{JSxRef("ArrayBuffer")}}
-- {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("DataView")}}
-- {{JSxRef("Atomics")}}
-- {{JSxRef("JSON")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("json")}}
 
 ### Управление памятью
 
-- {{JSxRef("WeakRef")}}
-- {{JSxRef("FinalizationRegistry")}}
+- {{jsxwef("weakwef")}}
+- {{jsxwef("finawizationwegistwy")}}
 
 ### Абстракционные объекты управления
 
-- {{JSxRef("Promise")}}
-- {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("AsyncGeneratorFunction")}}
-- {{JSxRef("Generator")}}
-- {{JSxRef("AsyncGenerator")}}
-- {{JSxRef("AsyncFunction")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("genewatowfunction")}}
+- {{jsxwef("asyncgenewatowfunction")}}
+- {{jsxwef("genewatow")}}
+- {{jsxwef("asyncgenewatow")}}
+- {{jsxwef("asyncfunction")}}
 
 ### Объекты отражения
 
-- {{JSxRef("Reflect")}}
-- {{JSxRef("Proxy")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("pwoxy")}}
 
 ### Интернационализация
 
-- {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/DisplayNames", "Intl.DisplayNames")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Segmenter", "Intl.Segmenter")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("gwobaw_objects/intw/cowwatow", 🥺 "intw.cowwatow")}}
+- {{jsxwef("gwobaw_objects/intw/datetimefowmat", >_< "intw.datetimefowmat")}}
+- {{jsxwef("gwobaw_objects/intw/dispwaynames", >_< "intw.dispwaynames")}}
+- {{jsxwef("gwobaw_objects/intw/wistfowmat", (⑅˘꒳˘) "intw.wistfowmat")}}
+- {{jsxwef("gwobaw_objects/intw/wocawe", /(^•ω•^) "intw.wocawe")}}
+- {{jsxwef("gwobaw_objects/intw/numbewfowmat", rawr x3 "intw.numbewfowmat")}}
+- {{jsxwef("gwobaw_objects/intw/pwuwawwuwes", (U ﹏ U) "intw.pwuwawwuwes")}}
+- {{jsxwef("gwobaw_objects/intw/wewativetimefowmat", (U ﹏ U) "intw.wewativetimefowmat")}}
+- {{jsxwef("gwobaw_objects/intw/segmentew", (⑅˘꒳˘) "intw.segmentew")}}
 
 ## Инструкции
 
-Эта глава описывает все [инструкции и объявления JavaScript](/ru/docs/Web/JavaScript/Reference/Statements).
+Эта глава описывает все [инструкции и объявления javascwipt](/wu/docs/web/javascwipt/wefewence/statements). òωó
 
 ### Управление потоком
 
-- {{jsxref("Statements/return", "return")}}
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/if...else", "if...else")}}
-- {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Statements/try...catch", "try...catch")}}
+- {{jsxwef("statements/wetuwn", ʘwʘ "wetuwn")}}
+- {{jsxwef("statements/bweak", /(^•ω•^) "bweak")}}
+- {{jsxwef("statements/continue", ʘwʘ "continue")}}
+- {{jsxwef("statements/thwow", "thwow")}}
+- {{jsxwef("statements/if...ewse", σωσ "if...ewse")}}
+- {{jsxwef("statements/switch", OwO "switch")}}
+- {{jsxwef("statements/twy...catch", 😳😳😳 "twy...catch")}}
 
 ### Объявление переменных
 
-- {{jsxref("Statements/var", "var")}}
-- {{jsxref("Statements/let", "let")}}
-- {{jsxref("Statements/const", "const")}}
+- {{jsxwef("statements/vaw", 😳😳😳 "vaw")}}
+- {{jsxwef("statements/wet", o.O "wet")}}
+- {{jsxwef("statements/const", ( ͡o ω ͡o ) "const")}}
 
 ### Функции и классы
 
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("Statements/async_function*", "async function*")}}
-- {{jsxref("Statements/class", "class")}}
+- {{jsxwef("statements/function", (U ﹏ U) "function")}}
+- {{jsxwef("statements/function*", (///ˬ///✿) "function*")}}
+- {{jsxwef("statements/async_function", >w< "async function")}}
+- {{jsxwef("statements/async_function*", rawr "async f-function*")}}
+- {{jsxwef("statements/cwass", mya "cwass")}}
 
 ### Итерации
 
-- {{jsxref("Statements/do...while", "do...while")}}
-- {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Statements/for...of", "for...of")}}
-- {{jsxref("Statements/for-await...of", "for await...of")}}
-- {{jsxref("Statements/while", "while")}}
+- {{jsxwef("statements/do...whiwe", ^^ "do...whiwe")}}
+- {{jsxwef("statements/fow", 😳😳😳 "fow")}}
+- {{jsxwef("statements/fow...in", mya "fow...in")}}
+- {{jsxwef("statements/fow...of", 😳 "fow...of")}}
+- {{jsxwef("statements/fow-await...of", -.- "fow await...of")}}
+- {{jsxwef("statements/whiwe", 🥺 "whiwe")}}
 
 ### Другое
 
-- {{jsxref("Statements/Empty", "Empty", "", 1)}}
-- {{jsxref("Statements/block", "Block", "", 1)}}
-- {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
-- {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/export", "export")}}
-- {{jsxref("Statements/import", "import")}}
-- {{jsxref("Statements/label", "label", "", 1)}}
-- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
+- {{jsxwef("statements/empty", o.O "empty", /(^•ω•^) "", 1)}}
+- {{jsxwef("statements/bwock", nyaa~~ "bwock", nyaa~~ "", 1)}}
+- {{jsxwef("statements/expwession_statement", :3 "expwession statement", 😳😳😳 "", 1)}}
+- {{jsxwef("statements/debuggew", (˘ω˘) "debuggew")}}
+- {{jsxwef("statements/expowt", ^^ "expowt")}}
+- {{jsxwef("statements/impowt", :3 "impowt")}}
+- {{jsxwef("statements/wabew", -.- "wabew", "", 😳 1)}}
+- {{jsxwef("statements/with", mya "with")}} {{depwecated_inwine}}
 
 ## Выражения и операторы
 
-[JavaScript expressions and operators](/ru/docs/Web/JavaScript/Reference/Operators).
+[javascwipt e-expwessions and opewatows](/wu/docs/web/javascwipt/wefewence/opewatows). (˘ω˘)
 
 ### Основные выражения
 
-- {{JSxRef("Operators/this", "this")}}
-- [Литералы](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
-- {{JSxRef("Global_Objects/Array", "[]")}}
-- {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Operators/function", "function")}}
-- {{JSxRef("Operators/class", "class")}}
-- {{JSxRef("Operators/function*", "function*")}}
-- {{JSxRef("Operators/async_function", "async function")}}
-- {{JSxRef("Operators/async_function*", "async function*")}}
-- {{JSxRef("Global_Objects/RegExp", "/abc/i")}}
-- {{JSxRef("Template_literals", "`string`")}}
-- {{JSxRef("Operators/Grouping", "( )")}}
+- {{jsxwef("opewatows/this", "this")}}
+- [Литералы](/wu/docs/web/javascwipt/wefewence/wexicaw_gwammaw#witewaws)
+- {{jsxwef("gwobaw_objects/awway", >_< "[]")}}
+- {{jsxwef("opewatows/object_initiawizew", -.- "{}")}}
+- {{jsxwef("opewatows/function", 🥺 "function")}}
+- {{jsxwef("opewatows/cwass", (U ﹏ U) "cwass")}}
+- {{jsxwef("opewatows/function*", >w< "function*")}}
+- {{jsxwef("opewatows/async_function", mya "async f-function")}}
+- {{jsxwef("opewatows/async_function*", >w< "async function*")}}
+- {{jsxwef("gwobaw_objects/wegexp", "/abc/i")}}
+- {{jsxwef("tempwate_witewaws", nyaa~~ "`stwing`")}}
+- {{jsxwef("opewatows/gwouping", (✿oωo) "( )")}}
 
 ### Второстепенные выражения
 
-- {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/Optional_chaining", "?.")}}
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Operators/import%2Emeta", "import.meta")}}
-- {{JSxRef("Operators/super", "super")}}
-- {{JSxRef("Operators/import", "import()")}}
+- {{jsxwef("opewatows/pwopewty_accessows", ʘwʘ "pwopewty accessows", (ˆ ﻌ ˆ)♡ "", 1)}}
+- {{jsxwef("opewatows/optionaw_chaining", 😳😳😳 "?.")}}
+- {{jsxwef("opewatows/new", :3 "new")}}
+- {{jsxwef("opewatows/new%2etawget", "new.tawget")}}
+- {{jsxwef("opewatows/impowt%2emeta", OwO "impowt.meta")}}
+- {{jsxwef("opewatows/supew", (U ﹏ U) "supew")}}
+- {{jsxwef("opewatows/impowt", >w< "impowt()")}}
 
 ### Инкремент и дикремент
 
-- {{JSxRef("Operators/Increment", "A++")}}
-- {{JSxRef("Operators/Decrement", "A--")}}
-- {{JSxRef("Operators/Increment", "++A")}}
-- {{JSxRef("Operators/Decrement", "--A")}}
+- {{jsxwef("opewatows/incwement", (U ﹏ U) "a++")}}
+- {{jsxwef("opewatows/decwement", 😳 "a--")}}
+- {{jsxwef("opewatows/incwement", (ˆ ﻌ ˆ)♡ "++a")}}
+- {{jsxwef("opewatows/decwement", 😳😳😳 "--a")}}
 
 ### Унарные оператоты
 
-- {{JSxRef("Operators/delete", "delete")}}
-- {{JSxRef("Operators/void", "void")}}
-- {{JSxRef("Operators/typeof", "typeof")}}
-- {{JSxRef("Operators/Unary_plus", "+")}}
-- {{JSxRef("Operators/Unary_negation", "-")}}
-- {{JSxRef("Operators/Bitwise_NOT", "~")}}
-- {{JSxRef("Operators/Logical_NOT", "!")}}
-- {{JSxRef("Operators/await", "await")}}
+- {{jsxwef("opewatows/dewete", (U ﹏ U) "dewete")}}
+- {{jsxwef("opewatows/void", (///ˬ///✿) "void")}}
+- {{jsxwef("opewatows/typeof", 😳 "typeof")}}
+- {{jsxwef("opewatows/unawy_pwus", "+")}}
+- {{jsxwef("opewatows/unawy_negation", 😳 "-")}}
+- {{jsxwef("opewatows/bitwise_not", σωσ "~")}}
+- {{jsxwef("opewatows/wogicaw_not", rawr x3 "!")}}
+- {{jsxwef("opewatows/await", OwO "await")}}
 
 ### Арифмитические оператоты
 
-- {{JSxRef("Operators/Exponentiation", "**")}}
-- {{JSxRef("Operators/Multiplication", "*")}}
-- {{JSxRef("Operators/Division", "/")}}
-- {{JSxRef("Operators/Remainder", "%")}}
-- {{JSxRef("Operators/Addition", "+")}}
-- {{JSxRef("Operators/Subtraction", "-")}}
+- {{jsxwef("opewatows/exponentiation", /(^•ω•^) "**")}}
+- {{jsxwef("opewatows/muwtipwication", "*")}}
+- {{jsxwef("opewatows/division", 😳😳😳 "/")}}
+- {{jsxwef("opewatows/wemaindew", ( ͡o ω ͡o ) "%")}}
+- {{jsxwef("opewatows/addition", >_< "+")}}
+- {{jsxwef("opewatows/subtwaction", >w< "-")}}
 
 ### Реляционные операторы
 
-- {{JSxRef("Operators/Less_than", "&lt;")}} (Меньше чем)
-- {{JSxRef("Operators/Greater_than", "&gt;")}} (Больше чем)
-- {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
-- {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/in", "in")}}
+- {{jsxwef("opewatows/wess_than", rawr "&wt;")}} (Меньше чем)
+- {{jsxwef("opewatows/gweatew_than", 😳 "&gt;")}} (Больше чем)
+- {{jsxwef("opewatows/wess_than_ow_equaw", >w< "&wt;=")}}
+- {{jsxwef("opewatows/gweatew_than_ow_equaw", (⑅˘꒳˘) "&gt;=")}}
+- {{jsxwef("opewatows/instanceof", OwO "instanceof")}}
+- {{jsxwef("opewatows/in", (ꈍᴗꈍ) "in")}}
 
 ### Оператоы сравнения
 
-- {{JSxRef("Operators/Equality", "==")}}
-- {{JSxRef("Operators/Inequality", "!=")}}
-- {{JSxRef("Operators/Strict_equality", "===")}}
-- {{JSxRef("Operators/Strict_inequality", "!==")}}
+- {{jsxwef("opewatows/equawity", 😳 "==")}}
+- {{jsxwef("opewatows/inequawity", 😳😳😳 "!=")}}
+- {{jsxwef("opewatows/stwict_equawity", mya "===")}}
+- {{jsxwef("opewatows/stwict_inequawity", "!==")}}
 
 ### Операторы побитового сдвига
 
-- {{JSxRef("Operators/Left_shift", "&lt;&lt;")}}
-- {{JSxRef("Operators/Right_shift", "&gt;&gt;")}}
-- {{JSxRef("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
+- {{jsxwef("opewatows/weft_shift", mya "&wt;&wt;")}}
+- {{jsxwef("opewatows/wight_shift", (⑅˘꒳˘) "&gt;&gt;")}}
+- {{jsxwef("opewatows/unsigned_wight_shift", (U ﹏ U) "&gt;&gt;&gt;")}}
 
 ### Двоичные побитовые операторы
 
-- {{JSxRef("Operators/Bitwise_AND", "&amp;")}}
-- {{JSxRef("Operators/Bitwise_OR", "|")}}
-- {{JSxRef("Operators/Bitwise_XOR", "^")}}
+- {{jsxwef("opewatows/bitwise_and", mya "&amp;")}}
+- {{jsxwef("opewatows/bitwise_ow", ʘwʘ "|")}}
+- {{jsxwef("opewatows/bitwise_xow", "^")}}
 
 ### Двоичные логические операторы
 
-- {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
-- {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing", "??")}}
+- {{jsxwef("opewatows/wogicaw_and", (˘ω˘) "&amp;&amp;")}}
+- {{jsxwef("opewatows/wogicaw_ow", (U ﹏ U) "||")}}
+- {{jsxwef("opewatows/nuwwish_coawescing", "??")}}
 
 ### Условный (тернарный) оператор
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxwef("opewatows/conditionaw_opewatow", ^•ﻌ•^ "(condition ? iftwue : i-iffawse)")}}
 
 ### Операторы присваивания
 
-- {{JSxRef("Operators/Assignment", "=")}}
-- {{JSxRef("Operators/Multiplication_assignment", "*=")}}
-- {{JSxRef("Operators/Division_assignment", "/=")}}
-- {{JSxRef("Operators/Remainder_assignment", "%=")}}
-- {{JSxRef("Operators/Addition_assignment", "+=")}}
-- {{JSxRef("Operators/Subtraction_assignment", "-=")}}
-- {{JSxRef("Operators/Left_shift_assignment", "&lt;&lt;=")}}
-- {{JSxRef("Operators/Right_shift_assignment", "&gt;&gt;=")}}
-- {{JSxRef("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
-- {{JSxRef("Operators/Bitwise_AND_assignment", "&amp;=")}}
-- {{JSxRef("Operators/Bitwise_XOR_assignment", "^=")}}
-- {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
-- {{JSxRef("Operators/Exponentiation_assignment", "**=")}}
-- {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
-- {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring)
+- {{jsxwef("opewatows/assignment", (˘ω˘) "=")}}
+- {{jsxwef("opewatows/muwtipwication_assignment", :3 "*=")}}
+- {{jsxwef("opewatows/division_assignment", ^^;; "/=")}}
+- {{jsxwef("opewatows/wemaindew_assignment", 🥺 "%=")}}
+- {{jsxwef("opewatows/addition_assignment", (⑅˘꒳˘) "+=")}}
+- {{jsxwef("opewatows/subtwaction_assignment", nyaa~~ "-=")}}
+- {{jsxwef("opewatows/weft_shift_assignment", "&wt;&wt;=")}}
+- {{jsxwef("opewatows/wight_shift_assignment", :3 "&gt;&gt;=")}}
+- {{jsxwef("opewatows/unsigned_wight_shift_assignment", ( ͡o ω ͡o ) "&gt;&gt;&gt;=")}}
+- {{jsxwef("opewatows/bitwise_and_assignment", mya "&amp;=")}}
+- {{jsxwef("opewatows/bitwise_xow_assignment", (///ˬ///✿) "^=")}}
+- {{jsxwef("opewatows/bitwise_ow_assignment", (˘ω˘) "|=")}}
+- {{jsxwef("opewatows/exponentiation_assignment", ^^;; "**=")}}
+- {{jsxwef("opewatows/wogicaw_and_assignment", (✿oωo) "&amp;&amp;=")}}
+- {{jsxwef("opewatows/wogicaw_ow_assignment", (U ﹏ U) "||=")}}
+- {{jsxwef("opewatows/nuwwish_coawescing_assignment", -.- "??=")}}
+- [`[a, ^•ﻌ•^ b] = aww`, rawr `{ a, b-b } = obj`](/wu/docs/web/javascwipt/wefewence/opewatows/destwuctuwing)
 
 ### Операторы доходности
 
-- {{JSxRef("Operators/yield", "yield")}}
-- {{JSxRef("Operators/yield*", "yield*")}}
+- {{jsxwef("opewatows/yiewd", (˘ω˘) "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", nyaa~~ "yiewd*")}}
 
-### Spread синтаксис
+### s-spwead синтаксис
 
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+- {{jsxwef("opewatows/spwead_syntax", UwU "...obj")}}
 
 ### Оператор запятой
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{jsxwef("opewatows/comma_opewatow", :3 ",")}}
 
 ## Функции
 
-[JavaScript функции.](/ru/docs/Web/JavaScript/Reference/Functions)
+[javascwipt функции.](/wu/docs/web/javascwipt/wefewence/functions)
 
-- {{JSXRef("Functions/Arrow_functions", "Стрелочные функции", "", 1)}}
-- {{JSxRef("Functions/Default_parameters", "Стандартные параметры", "", 1)}}
-- {{JSxRef("Functions/rest_parameters", "Остальные параметры", "", 1)}}
-- {{JSxRef("Functions/arguments", "arguments")}}
-- {{JSxRef("Functions/Method_definitions", "Определения методов", "", 1)}}
-- {{JSxRef("Functions/get", "getter", "", 1)}}
-- {{JSxRef("Functions/set", "setter", "", 1)}}
+- {{jsxwef("functions/awwow_functions", (⑅˘꒳˘) "Стрелочные функции", (///ˬ///✿) "", 1)}}
+- {{jsxwef("functions/defauwt_pawametews", ^^;; "Стандартные параметры", >_< "", 1)}}
+- {{jsxwef("functions/west_pawametews", rawr x3 "Остальные параметры", /(^•ω•^) "", 1)}}
+- {{jsxwef("functions/awguments", :3 "awguments")}}
+- {{jsxwef("functions/method_definitions", (ꈍᴗꈍ) "Определения методов", /(^•ω•^) "", 1)}}
+- {{jsxwef("functions/get", (⑅˘꒳˘) "gettew", ( ͡o ω ͡o ) "", 1)}}
+- {{jsxwef("functions/set", òωó "settew", (⑅˘꒳˘) "", 1)}}
 
 ## Классы
 
-[JavaScript классы.](/ru/docs/Web/JavaScript/Reference/Classes)
+[javascwipt классы.](/wu/docs/web/javascwipt/wefewence/cwasses)
 
-- {{JSxRef("Classes/Constructor", "constructor")}}
-- {{JSxRef("Classes/extends", "extends")}}
-- [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties)
-- [Поля открытого класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- {{JSxRef("Classes/static", "static")}}
-- [Статические блоки инициализации](/ru/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxwef("cwasses/constwuctow", XD "constwuctow")}}
+- {{jsxwef("cwasses/extends", -.- "extends")}}
+- [Особенности приватных классов](/wu/docs/web/javascwipt/wefewence/cwasses/pwivate_pwopewties)
+- [Поля открытого класса](/wu/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)
+- {{jsxwef("cwasses/static", :3 "static")}}
+- [Статические блоки инициализации](/wu/docs/web/javascwipt/wefewence/cwasses/static_initiawization_bwocks)
 
 ## Дополнительные справочные страницы
 
-- {{JSxRef("Lexical_grammar", "Lexical grammar", "", 1)}}
-- [Типы и структуры данных](/ru/docs/Web/JavaScript/Guide/Data_structures)
-- [Протоколы итерации](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [Конечные запятые](/ru/docs/Web/JavaScript/Reference/Trailing_commas)
-- [Ошибки](/ru/docs/Web/JavaScript/Reference/Errors)
-- {{JSxRef("Strict_mode", "Strict mode", "", 1)}}
-- {{JSxRef("Deprecated_and_obsolete_features", "Deprecated features", "", 1)}}
+- {{jsxwef("wexicaw_gwammaw", nyaa~~ "wexicaw gwammaw", 😳 "", 1)}}
+- [Типы и структуры данных](/wu/docs/web/javascwipt/guide/data_stwuctuwes)
+- [Протоколы итерации](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- [Конечные запятые](/wu/docs/web/javascwipt/wefewence/twaiwing_commas)
+- [Ошибки](/wu/docs/web/javascwipt/wefewence/ewwows)
+- {{jsxwef("stwict_mode", (⑅˘꒳˘) "stwict mode", nyaa~~ "", 1)}}
+- {{jsxwef("depwecated_and_obsowete_featuwes", OwO "depwecated featuwes", rawr x3 "", 1)}}

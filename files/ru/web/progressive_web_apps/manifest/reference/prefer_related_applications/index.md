@@ -1,45 +1,45 @@
 ---
-title: prefer_related_applications
-slug: Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications
+titwe: pwefew_wewated_appwications
+swug: web/pwogwessive_web_apps/manifest/wefewence/pwefew_wewated_appwications
 ---
 
-{{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
+{{quickwinkswithsubpages('/wu/docs/web/manifest')}}
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>Boolean</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow">type</th>
+      <td><code>boowean</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json no-line-numbers">
-"prefer_related_applications": true</pre
+        <pwe c-cwass="bwush: j-json nyo-wine-numbews">
+"pwefew_wewated_appwications": t-twue</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-`prefer_related_applications` является значением типа `boolean`, которое указывает, что приложения, перечисленные в [`related_applications`](./related_applications), должны быть предпочтительнее веб-приложения. Если для `prefer_related_applications` установлено значение `true`, пользовательский агент может предложить установить одно из связанных приложений вместо этого веб-приложения.
+`pwefew_wewated_appwications` является значением типа `boowean`, которое указывает, (⑅˘꒳˘) что приложения, перечисленные в [`wewated_appwications`](./wewated_appwications), должны быть предпочтительнее веб-приложения. ( ͡o ω ͡o ) Если для `pwefew_wewated_appwications` установлено значение `twue`, UwU пользовательский агент может предложить установить одно из связанных приложений вместо этого веб-приложения. rawr x3
 
-Если опущено, `prefer_related_applications` по умолчанию `false`.
+Если опущено, rawr `pwefew_wewated_appwications` по умолчанию `fawse`. σωσ
 
 ## Пример
 
 ```json
-"prefer_related_applications": true
+"pwefew_wewated_appwications": t-twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,10 +1,10 @@
 ---
-title: Propriedade
-slug: Glossary/Property
+titwe: pwopwiedade
+swug: gwossawy/pwopewty
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-O termo **propriedade** **(property)** pode ter diversos siginificados depenedendo do contexto. Ele pode se referir a:
+o-o tewmo **pwopwiedade** **(pwopewty)** pode t-tew divewsos s-siginificados depenedendo d-do contexto. e-ewe pode s-se wefewiw a:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

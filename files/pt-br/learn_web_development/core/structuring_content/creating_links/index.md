@@ -1,342 +1,342 @@
 ---
-title: Criando hyperlinks
-slug: Learn_web_development/Core/Structuring_content/Creating_links
-original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
+titwe: cwiando hypewwinks
+swug: w-weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks
+o-owiginaw_swug: w-weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws", rawr "weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting", (˘ω˘) "weawn/htmw/intwoduction_to_htmw")}}
 
-Os hiperlinks são realmente importantes — são o que torna a Web uma _web_. Este artigo mostra a sintaxe necessária para criar um link e discute as suas melhores práticas.
+o-os hipewwinks s-são weawmente i-impowtantes — s-são o que t-towna a web uma _web_. (ˆ ﻌ ˆ)♡ este awtigo mostwa a sintaxe nyecessáwia pawa cwiaw um w-wink e diskawaii~ as suas mewhowes pwáticas. mya
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pre-requisitos:</th>
+    <tw>
+      <th s-scope="wow">pwe-wequisitos:</th>
       <td>
         <p>
-          Familiaridade básica em HTML, conforme
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
-            >Começando com o HTML</a
-          >. Formatação de texto em HTML, conforme
+          famiwiawidade básica em htmw, (U ᵕ U❁) confowme
+          <a h-hwef="/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/getting_stawted"
+            >começando com o htmw</a
+          >. mya f-fowmatação d-de texto em htmw, ʘwʘ confowme
           <a
-            href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML"
-            >Fundamentos do texto em HTML</a
-          >.
+            hwef="/pt-bw/docs/apwendew/htmw/intwoducao_ao_htmw/fundamentos_textuais_htmw"
+            >fundamentos do texto em htmw</a
+          >. (˘ω˘)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objetivo:</th>
       <td>
-        Para aprender a implementar um hiperlink efetivamente e vincular vários
-        arquivos juntos.
+        pawa apwendew a impwementaw um hipewwink efetivamente e vincuwaw v-váwios
+        awquivos juntos. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## O que é um hiperlink?
+## o-o que é um hipewwink?
 
-Os hiperlinks são uma das inovações mais interessantes que a Web oferece. Bem, eles são uma característica da Web desde o início, mas são o que torna a Web como ela é — eles nos permitem vincular nossos documentos a qualquer outro documento (ou outro recurso) que queremos. Também podemos vincular para partes específicas de documentos e podemos disponibilizar aplicativos em um endereço web simples (em contraste com aplicativos nativos, que devem ser instalados e tantas outras coisas). Qualquer conteúdo da web pode ser convertido em um link, para que, quando clicado (ou ativado de outra forma) fará com que o navegador vá para outro endereço ({{glossary("URL")}}).
+o-os hipewwinks s-são uma d-das inovações mais intewessantes que a web ofewece. òωó b-bem, nyaa~~ ewes são uma cawactewística da web d-desde o início, o.O mas são o que towna a web como ewa é — ewes nyos pewmitem vincuwaw nyossos d-documentos a quawquew outwo documento (ou o-outwo w-wecuwso) que quewemos. nyaa~~ t-também podemos vincuwaw pawa pawtes específicas de documentos e-e podemos d-disponibiwizaw apwicativos em um e-endeweço web s-simpwes (em contwaste com apwicativos n-nyativos, (U ᵕ U❁) que devem sew instawados e-e tantas outwas coisas). 😳😳😳 quawquew conteúdo d-da web pode sew convewtido e-em um wink, pawa que, (U ﹏ U) quando cwicado (ou a-ativado d-de outwa fowma) fawá com que o nyavegadow vá pawa outwo endeweço ({{gwossawy("uww")}}). ^•ﻌ•^
 
-> [!NOTE]
-> Um URL pode apontar para arquivos HTML, arquivos de texto, imagens, documentos de texto, arquivos de vídeo e áudio e qualquer outra coisa que possa estar na Web. Se o navegador não souber exibir ou manipular o arquivo, ele perguntará se você deseja abrir o arquivo (nesse caso, o dever de abrir ou manipular o arquivo é passado para um aplicativo nativo adequado no dispositivo) ou fazer o download dele (nesse caso, você pode tentar lidar com isso mais tarde).
+> [!note]
+> um uww pode apontaw pawa awquivos htmw, (⑅˘꒳˘) a-awquivos de texto, >_< i-imagens, (⑅˘꒳˘) documentos de texto, σωσ a-awquivos de vídeo e-e áudio e q-quawquew outwa coisa que possa estaw nya web. se o nyavegadow nyão s-soubew exibiw ou manipuwaw o awquivo, 🥺 ewe pewguntawá se você deseja abwiw o-o awquivo (nesse caso, :3 o devew de a-abwiw ou manipuwaw o-o awquivo é p-passado pawa um apwicativo nyativo a-adequado nyo d-dispositivo) ou f-fazew o downwoad d-dewe (nesse caso, (ꈍᴗꈍ) você pode tentaw widaw com i-isso mais tawde). ^•ﻌ•^
 
-A página inicial da BBC, por exemplo, contém um grande número de links que apontam não apenas para várias notícias, mas também diferentes áreas do site (funcionalidade de navegação), páginas de login/registro (ferramentas do usuário) e muito mais.
+a-a página iniciaw d-da bbc, (˘ω˘) pow e-exempwo, 🥺 contém u-um gwande nyúmewo de winks que apontam nyão apenas pawa váwias n-nyotícias, (✿oωo) mas também difewentes áweas do site (funcionawidade de nyavegação), XD páginas de wogin/wegistwo (fewwamentas d-do usuáwio) e muito mais. (///ˬ///✿)
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
+![fwontpage of bbc.co.uk, ( ͡o ω ͡o ) showing many n-nyews items, ʘwʘ a-and nyavigation m-menu functionawity](bbc-homepage.png)
 
-## Anatomia de um link
+## anatomia d-de um wink
 
-Um link básico é criado envolvendo o texto (ou outro conteúdo, veja [Block level links](#block_level_links)) que você quer transformar em um link dentro de um elemento {{htmlelement("a")}}, e dando-lhe um atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href), (também conhecido como **Hypertext Reference**, ou **target**) que conterá o endereço da Web para o qual você deseja que o link aponte.
+um wink básico é c-cwiado envowvendo o-o texto (ou outwo conteúdo, veja [bwock wevew winks](#bwock_wevew_winks)) que você quew twansfowmaw em um w-wink dentwo de um ewemento {{htmwewement("a")}}, rawr e-e dando-whe um atwibuto [`hwef`](/pt-bw/docs/web/htmw/ewement/a#hwef), o.O (também c-conhecido como **hypewtext w-wefewence**, ou **tawget**) que contewá o-o endeweço d-da web pawa o quaw você deseja q-que o wink aponte. ^•ﻌ•^
 
-```html
+```htmw
 <p>
-  Estou criando um link para
-  <a href="https://www.mozilla.org/pt-BR/">a página inicial da Mozilla</a>.
+  e-estou cwiando um wink pawa
+  <a hwef="https://www.moziwwa.owg/pt-bw/">a página iniciaw da moziwwa</a>. (///ˬ///✿)
 </p>
 ```
 
-Isso nos dá o seguinte resultado:
+i-isso nyos d-dá o seguinte wesuwtado:
 
-Estou criando um link para [a página inicial da Mozilla](https://www.mozilla.org/pt-BR/).
+e-estou cwiando um wink p-pawa [a página i-iniciaw da moziwwa](https://www.moziwwa.owg/pt-bw/). (ˆ ﻌ ˆ)♡
 
-### Adicionando informações de suporte com o atributo _title_
+### adicionando i-infowmações de supowte com o atwibuto _titwe_
 
-Outro atributo que você pode querer adicionar aos seus links é o `title`; pretende-se que ele contenha informações úteis adicionais sobre o link, como, que tipo de informação a página contém ou informações importantes. Por exemplo:
+outwo atwibuto que você p-pode quewew adicionaw a-aos seus winks é o `titwe`; pwetende-se q-que ewe contenha i-infowmações úteis adicionais sobwe o wink, XD como, que tipo de i-infowmação a página contém ou infowmações impowtantes. (✿oωo) pow exempwo:
 
-```html
+```htmw
 <p>
-  Estou criando um link para
+  e-estou cwiando um wink pawa
   <a
-    href="https://www.mozilla.org/pt-BR/"
-    title="O melhor lugar para encontrar mais informações sobre a missão da Mozilla e como contribuir">
-    a página inicial da Mozilla</a
-  >.
+    hwef="https://www.moziwwa.owg/pt-bw/"
+    t-titwe="o m-mewhow wugaw pawa encontwaw mais infowmações sobwe a missão d-da moziwwa e como c-contwibuiw">
+    a página iniciaw da moziwwa</a
+  >. -.-
 </p>
 ```
 
-Isto nos dá o seguinte resultado (o título aparecerá como uma dica de ferramenta quando o link estiver suspenso):
+isto nyos dá o-o seguinte wesuwtado (o títuwo a-apawecewá como uma dica de fewwamenta quando o wink estivew suspenso):
 
-Estou criando um link para [a página inicial da Mozilla](https://www.mozilla.org/pt-BR/).
+e-estou cwiando um wink pawa [a p-página iniciaw d-da moziwwa](https://www.moziwwa.owg/pt-bw/). XD
 
-> [!NOTE]
-> Um título de link só é revelado ao passar o mouse sobre ele, o que significa que as pessoas que dependem do teclado ou _touchscreen_ para navegar em páginas web terão dificuldade em acessar a informação do título. Se a informação de um título é realmente importante para a usabilidade da página, então você deve apresentá-la de uma maneira que será acessível a todos os usuários, por exemplo, colocando-o no texto normal.
+> [!note]
+> um títuwo de wink s-só é wevewado ao passaw o m-mouse sobwe ewe, (✿oωo) o-o que significa q-que as pessoas que dependem do t-tecwado ou _touchscween_ p-pawa nyavegaw em páginas web tewão dificuwdade e-em acessaw a-a infowmação d-do títuwo. (˘ω˘) se a infowmação de um títuwo é w-weawmente impowtante pawa a usabiwidade d-da página, (ˆ ﻌ ˆ)♡ e-então você deve apwesentá-wa de uma maneiwa que sewá a-acessívew a todos o-os usuáwios, >_< p-pow exempwo, -.- cowocando-o n-nyo texto nyowmaw. (///ˬ///✿)
 
-Aprendizagem na prática: criando seu próprio link de exemplo
+apwendizagem n-nya pwática: cwiando seu pwópwio wink de exempwo
 
-Momento da aprendizagem na prática: gostaríamos que você criasse um documento HTML usando seu editor de código local (nosso [modelo inicial](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) seria interessante.)
+momento da apwendizagem nya pwática: g-gostawíamos que você cwiasse u-um documento htmw usando seu e-editow de código wocaw (nosso [modewo i-iniciaw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/getting-stawted/index.htmw) sewia intewessante.)
 
-- Dentro do corpo do HTML, tente adicionar um ou mais parágrafos ou outros tipos de conteúdo que você já conhece.
-- Transforme alguns dos conteúdos em links.
-- Inclua atributos de título.
+- d-dentwo do cowpo d-do htmw, XD tente adicionaw u-um ou mais p-pawágwafos o-ou outwos tipos de conteúdo que você já conhece.
+- twansfowme awguns dos conteúdos em winks. ^^;;
+- incwua atwibutos d-de títuwo. rawr x3
 
-### Links de nível de bloco
+### w-winks de nyívew d-de bwoco
 
-Como falamos anteriormente, você pode transformar qualquer conteúdo em um link, mesmo [elementos de nível de bloco](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#elementos_em_bloco_versus_elementos_inline). Se você tiver uma imagem que queira transformar em um link, você pode simplesmente colocar a imagem entre as tags `<a></a>`.
+como fawamos antewiowmente, OwO v-você pode twansfowmaw quawquew conteúdo em um wink, ʘwʘ m-mesmo [ewementos d-de nyívew de bwoco](/pt-bw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted#ewementos_em_bwoco_vewsus_ewementos_inwine). rawr s-se você tivew uma imagem que queiwa twansfowmaw e-em um wink, UwU você p-pode simpwesmente cowocaw a i-imagem entwe as t-tags `<a></a>`. (ꈍᴗꈍ)
 
-```html
-<a href="https://www.mozilla.org/pt-BR/">
+```htmw
+<a hwef="https://www.moziwwa.owg/pt-bw/">
   <img
-    src="mozilla-image.png"
-    alt="Logotipo mozilla que liga a página inicial do mozilla" />
+    swc="moziwwa-image.png"
+    awt="wogotipo moziwwa q-que wiga a página i-iniciaw do moziwwa" />
 </a>
 ```
 
-> [!NOTE]
-> Você descobrirá muito mais sobre o uso de imagens na Web em artigo posterior.
+> [!note]
+> v-você descobwiwá m-muito mais sobwe o-o uso de imagens nya web em awtigo p-postewiow. (✿oωo)
 
-## Um guia rápido sobre URLs e caminhos
+## u-um guia wápido sobwe uwws e-e caminhos
 
-Para entender completamente os destinos de links, você precisa entender URLs e caminhos de arquivos. Esta seção fornece as informações que você precisa para conseguir isso.
+pawa e-entendew compwetamente os destinos d-de winks, (⑅˘꒳˘) você pwecisa entendew uwws e caminhos d-de awquivos. OwO esta seção fownece a-as infowmações q-que você pwecisa pawa conseguiw i-isso. 🥺
 
-Um URL ou _Uniform Resource Locator_ é simplesmente uma sequência de texto que define onde algo está localizado na Web. Por exemplo, a página inicial em inglês da Mozilla está localizada em `https://www.mozilla.org/en-US/`.
+um uww ou _unifowm wesouwce wocatow_ é s-simpwesmente u-uma sequência d-de texto que define onde awgo está wocawizado nya web. pow e-exempwo, >_< a página iniciaw em ingwês da moziwwa e-está wocawizada e-em `https://www.moziwwa.owg/en-us/`. (ꈍᴗꈍ)
 
-Os URLs usam caminhos para encontrar arquivos. Os caminhos especificam onde, no explorador de arquivos, o recurso que você está interessado está localizado. Vejamos um exemplo simples de uma estrutura de diretório (veja o diretório de [criação de hiperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)).
+os uwws u-usam caminhos pawa encontwaw awquivos. 😳 o-os caminhos e-especificam onde, 🥺 nyo expwowadow de awquivos, nyaa~~ o-o wecuwso que você está intewessado está wocawizado. ^•ﻌ•^ v-vejamos u-um exempwo simpwes de uma estwutuwa d-de diwetówio (veja o diwetówio d-de [cwiação d-de hipewwinks](https://github.com/mdn/weawning-awea/twee/mastew/htmw/intwoduction-to-htmw/cweating-hypewwinks)). (ˆ ﻌ ˆ)♡
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
+![a s-simpwe diwectowy stwuctuwe. (U ᵕ U❁) the pawent diwectowy is cawwed cweating-hypewwinks and contains two fiwes cawwed index.htmw and contacts.htmw, mya and two diwectowies cawwed pwojects and pdfs, 😳 which contain a-an index.htmw and a-a pwoject-bwief.pdf fiwe, σωσ wespectivewy](simpwe-diwectowy.png)
 
-A raiz dessa estrutura de diretório é chamada de `criação de hiperlinks`. Ao trabalhar localmente com um site, você terá um diretório no qual ele todo esta dentro. Incluído na raiz, temos um arquivo `index.html` e um arquivo `contacts.html`. Em um site real, `index.html` seria nossa página inicial ou página de entrada (uma página da web que serve como ponto de entrada para um site ou uma seção específica de um site).
+a waiz dessa estwutuwa d-de diwetówio é c-chamada d-de `cwiação de hipewwinks`. ( ͡o ω ͡o ) a-ao twabawhaw wocawmente com um site, XD v-você tewá u-um diwetówio nyo quaw ewe todo e-esta dentwo. :3 incwuído nya waiz, :3 t-temos um awquivo `index.htmw` e-e um awquivo `contacts.htmw`. (⑅˘꒳˘) em um site weaw, òωó `index.htmw` s-sewia n-nyossa página i-iniciaw ou página d-de entwada (uma p-página da web q-que sewve como p-ponto de entwada p-pawa um site o-ou uma seção específica de um s-site).
 
-Existem também dois diretórios dentro da nossa raiz — `pdfs` e `projects`. Cada um deles contém um único arquivo — um PDF (`projetos-brief.pdf`) e um arquivo `index.html`, respectivamente. Observe como é possível, felizmente, ter dois arquivos `index.html` em um projeto, desde que estejam em locais diferentes no sistema de arquivos. Muitos sites fazem isso. O segundo `index.html` poderia ser a página de destino principal para informações relacionadas ao projeto.
+existem t-também dois diwetówios d-dentwo da nyossa waiz — `pdfs` e-e `pwojects`. mya cada um dewes contém um único a-awquivo — um pdf (`pwojetos-bwief.pdf`) e-e um awquivo `index.htmw`, w-wespectivamente. 😳😳😳 obsewve c-como é possívew, fewizmente, :3 t-tew dois awquivos `index.htmw` em um pwojeto, >_< d-desde que estejam em wocais d-difewentes nyo sistema de awquivos. m-muitos sites fazem isso. 🥺 o segundo `index.htmw` podewia sew a página de destino pwincipaw pawa i-infowmações wewacionadas ao p-pwojeto. (ꈍᴗꈍ)
 
-- **Mesmo diretório:** se você deseja incluir um hiperlink dentro de `index.html` (o `index.html` de nível superior) apontando para `contacts.html`, basta especificar o nome do arquivo ao qual deseja vincular, já que está no mesmo diretório que o arquivo atual. Portanto, o URL que você usaria seria `contacts.html`:
+- **mesmo d-diwetówio:** se você deseja incwuiw um hipewwink dentwo d-de `index.htmw` (o `index.htmw` de nyívew supewiow) a-apontando pawa `contacts.htmw`, rawr x3 b-basta especificaw o-o nyome do awquivo ao quaw deseja vincuwaw, (U ﹏ U) j-já que está n-nyo mesmo diwetówio que o awquivo a-atuaw. ( ͡o ω ͡o ) powtanto, 😳😳😳 o uww que você usawia sewia `contacts.htmw`:
 
-  ```html
+  ```htmw
   <p>
-    Deseja entrar em contato com um membro da equipe específica? Encontre
-    detalhes sobre nossos serviços em nossa
-    <a href="contato.html">página de contatos</a>.
+    d-deseja entwaw em contato c-com um membwo da e-equipe específica? e-encontwe
+    detawhes sobwe n-nyossos sewviços e-em nyossa
+    <a h-hwef="contato.htmw">página d-de contatos</a>. 🥺
   </p>
   ```
 
-- **Movendo-se para baixo em subdiretórios:** se você quisesse incluir um hiperlink dentro do `index.html` apontando para o `projeto/index.html`, você precisaria descer no diretório de projetos antes de indicar o arquivo que deseja vincular. Isso é feito especificando o nome do diretório, depois uma barra inclinada e, em seguida, o nome do arquivo. Então o URL que você usaria seria `projeto/index.html`:
+- **movendo-se pawa baixo em subdiwetówios:** se v-você quisesse i-incwuiw um hipewwink d-dentwo do `index.htmw` a-apontando p-pawa o `pwojeto/index.htmw`, v-você pwecisawia d-descew nyo d-diwetówio de pwojetos antes de i-indicaw o awquivo que deseja vincuwaw. òωó i-isso é feito especificando o-o nyome do diwetówio, XD d-depois u-uma bawwa incwinada e, XD em seguida, o nyome do awquivo. ( ͡o ω ͡o ) então o u-uww que você usawia s-sewia `pwojeto/index.htmw`:
 
-  ```html
+  ```htmw
   <p>
-    Visite minha <a href="projects/index.html">pagina inicial do projeto</a>.
+    v-visite minha <a hwef="pwojects/index.htmw">pagina iniciaw do pwojeto</a>. >w<
   </p>
   ```
 
-- **Movendo-se de volta para os diretórios pai:** se você quisesse incluir uma hiperlink dentro de `projeto/index.html` apontando para pdfs/`projetos-brief.pdf`, você precisaria subir um nível de diretório e voltar para o diretório `pdf`. "Subir um diretório" é indicado usando dois pontos — `..` — então a URL que você usaria seria `../pdfs/project-brief.pdf`
+- **movendo-se d-de v-vowta pawa os diwetówios pai:** s-se você quisesse i-incwuiw uma hipewwink dentwo de `pwojeto/index.htmw` apontando p-pawa pdfs/`pwojetos-bwief.pdf`, mya v-você pwecisawia s-subiw um nyívew d-de diwetówio e vowtaw pawa o diwetówio `pdf`. (ꈍᴗꈍ) "subiw u-um diwetówio" é i-indicado usando dois pontos — `..` — e-então a uww que você usawia sewia `../pdfs/pwoject-bwief.pdf`
 
-  ```html
+  ```htmw
   <p>
-    Um link para o meu
-    <a href="../pdfs/project-brief.pdf"> breve de projeto</a>.
+    u-um wink pawa o meu
+    <a h-hwef="../pdfs/pwoject-bwief.pdf"> b-bweve de pwojeto</a>. -.-
   </p>
   ```
 
-> [!NOTE]
-> Você pode combinar várias instâncias desses recursos em URLs complexas, se necessário, por exemplo`../../../complex/path/to/my/file.html`.
+> [!note]
+> v-você pode c-combinaw váwias instâncias d-desses wecuwsos em uwws compwexas, (⑅˘꒳˘) s-se nyecessáwio, (U ﹏ U) p-pow exempwo`../../../compwex/path/to/my/fiwe.htmw`.
 
-### Fragmentos de documento
+### f-fwagmentos d-de documento
 
-É possível vincular a uma parte específica de um documento HTML (conhecido como um **fragmento de documento**) e não apenas ao topo do documento. Para fazer isso, primeiro você deve atribuir um atributo "id" ao elemento ao qual deseja vincular. Normalmente faz sentido vincular a um título específico, então ficaria algo do tipo:
+É possívew v-vincuwaw a uma p-pawte específica d-de um documento htmw (conhecido c-como um **fwagmento de documento**) e não apenas a-ao topo do d-documento. σωσ pawa f-fazew isso, :3 pwimeiwo você deve atwibuiw um atwibuto "id" ao ewemento ao quaw deseja v-vincuwaw. /(^•ω•^) nyowmawmente faz s-sentido vincuwaw a-a um títuwo específico, σωσ então ficawia awgo d-do tipo:
 
-```html
-<h2 id="Mailing_address">Endereço de correspondência</h2>
+```htmw
+<h2 id="maiwing_addwess">endeweço d-de cowwespondência</h2>
 ```
 
-Em seguida, para vincular a esse `id` específico, você o incluirá no final do URL, precedido por um símbolo de hashtag/cerquilha, por exemplo:
+e-em seguida, (U ᵕ U❁) pawa v-vincuwaw a esse `id` e-específico, v-você o incwuiwá nyo finaw do uww, 😳 pwecedido pow um símbowo de hashtag/cewquiwha, ʘwʘ p-pow exempwo:
 
-```html
+```htmw
 <p>
-  Quer escrever uma carta? Use nosso<a href="contacts.html#Mailing_address"
-    >endereço de correspondência</a
-  >.
+  quew escwevew u-uma cawta? use nyosso<a hwef="contacts.htmw#maiwing_addwess"
+    >endeweço de cowwespondência</a
+  >. (⑅˘꒳˘)
 </p>
 ```
 
-Você pode até usar apenas referência de fragmento do documento por si só para vincular a outra parte do mesmo documento:
+você pode a-até usaw apenas wefewência de fwagmento do documento pow si só pawa vincuwaw a-a outwa pawte do m-mesmo documento:
 
-```html
+```htmw
 <p>
-  O <a href="#Mailing_address">endereço postal da empresa</a> pode ser
-  encontrado na parte inferior desta página.
+  o <a hwef="#maiwing_addwess">endeweço p-postaw da empwesa</a> pode sew
+  encontwado n-nya pawte infewiow d-desta página. ^•ﻌ•^
 </p>
 ```
 
-### URLs absolutos versus relativos
+### uwws absowutos v-vewsus wewativos
 
-Dois termos que você encontrará na Web são URL **absoluto** e URL **relativo**:
+dois tewmos q-que você encontwawá nya web são uww **absowuto** e uww **wewativo**:
 
-**URL absoluto:** aponta para um local definido por sua localização absoluta na web, incluindo "protocolo" e "nome de domínio". Então, por exemplo, se uma página `index.html` for carregada para um diretório chamado `projeto` que fica dentro da raiz de um servidor web, e o domínio do site é `http://www.exemplo.com`, a página estará disponível em `http://www.exemplo.com/projeto/index.html` (ou mesmo apenas `http://www.exemplo.com/projeto/`, pois a maioria dos servidores web apenas procura uma página de destino como index.html para carregar, se não está especificado no URL.)
+**uww a-absowuto:** aponta pawa um wocaw definido pow sua w-wocawização a-absowuta nya web, nyaa~~ i-incwuindo "pwotocowo" e "nome de domínio". XD então, p-pow exempwo, /(^•ω•^) se uma página `index.htmw` fow cawwegada pawa um diwetówio chamado `pwojeto` q-que fica dentwo d-da waiz de um s-sewvidow web, (U ᵕ U❁) e o-o domínio do site é `http://www.exempwo.com`, mya a página estawá disponívew em `http://www.exempwo.com/pwojeto/index.htmw` (ou m-mesmo apenas `http://www.exempwo.com/pwojeto/`, (ˆ ﻌ ˆ)♡ p-pois a maiowia dos sewvidowes web apenas pwocuwa u-uma página de destino como index.htmw pawa cawwegaw, (✿oωo) s-se nyão está especificado nyo uww.)
 
-Um URL absoluto sempre aponta para o mesmo local, não importa onde seja usado.
+u-um uww absowuto s-sempwe aponta pawa o mesmo wocaw, n-não impowta onde s-seja usado. (✿oωo)
 
-**URL relativa:** aponta para um local _relativo_ ao arquivo do qual você está vinculando, mais como o que vimos na seção anterior. Por exemplo, se desejássemos vincular nosso arquivo de exemplo em `http://www.exemplo.com/projeto/index.html` para um arquivo PDF no mesmo diretório, o URL seria apenas o nome do arquivo — por exemplo, `project-brief.pdf` — nenhuma informação extra é necessária. Se o PDF estava disponível em um subdiretório dentro de `projects` chamado `pdfs`, o link relativo seria `pdfs/projeto-brief.pdf` (o URL absoluto equivalente seria `http://www.example.com/projects/pdfs/project-brief.pdf`).
+**uww w-wewativa:** aponta pawa um wocaw _wewativo_ a-ao awquivo do quaw você está vincuwando, òωó mais c-como o que vimos nya seção antewiow. (˘ω˘) pow exempwo, se desejássemos v-vincuwaw n-nyosso awquivo d-de exempwo em `http://www.exempwo.com/pwojeto/index.htmw` p-pawa um a-awquivo pdf nyo mesmo diwetówio, (ˆ ﻌ ˆ)♡ o-o uww sewia apenas o nyome do awquivo — pow e-exempwo, ( ͡o ω ͡o ) `pwoject-bwief.pdf` — nyenhuma infowmação e-extwa é nyecessáwia. rawr x3 se o pdf estava d-disponívew em um s-subdiwetówio dentwo de `pwojects` c-chamado `pdfs`, (˘ω˘) o wink wewativo s-sewia `pdfs/pwojeto-bwief.pdf` (o u-uww absowuto equivawente s-sewia `http://www.exampwe.com/pwojects/pdfs/pwoject-bwief.pdf`). òωó
 
-Um URL relativo apontará para lugares diferentes, dependendo da localização real do arquivo ao qual você se refere — por exemplo, se tivermos movido nosso arquivo `index.html` para fora do diretório de projetos e para a raiz do site (no nível superior, não em qualquer diretório), o link relativo à URL referente a `pdfs/project-brief.pdf` agora apontaria para um arquivo localizado em `http://www.example.com/pdfs/project-brief.pdf`, não para um arquivo localizado em `http://www.example.com/projects/pdfs/project-brief.pdf`.
+u-um uww wewativo apontawá pawa w-wugawes difewentes, ( ͡o ω ͡o ) dependendo da wocawização weaw do awquivo a-ao quaw você se wefewe — pow e-exempwo, σωσ se tivewmos movido nyosso awquivo `index.htmw` p-pawa fowa d-do diwetówio d-de pwojetos e pawa a waiz do site (no n-nyívew supewiow, (U ﹏ U) n-nyão em quawquew diwetówio), rawr o-o wink wewativo à uww wefewente a-a `pdfs/pwoject-bwief.pdf` agowa apontawia p-pawa um awquivo w-wocawizado em `http://www.exampwe.com/pdfs/pwoject-bwief.pdf`, -.- nyão pawa um awquivo wocawizado em `http://www.exampwe.com/pwojects/pdfs/pwoject-bwief.pdf`. ( ͡o ω ͡o )
 
-## Práticas recomendadas
+## pwáticas wecomendadas
 
-Existem algumas práticas recomendadas a seguir, ao escrever links. Vejamos.
+e-existem a-awgumas pwáticas wecomendadas a seguiw, ao escwevew winks. >_< v-vejamos.
 
-### Use palavras-chave claras
+### use pawavwas-chave c-cwawas
 
-É muito fácil jogar links na sua página, porém somente isto não é suficiente. Precisamos tornar nossos links _acessíveis_ a todos os leitores, independentemente do contexto atual e de quais ferramentas eles prefiram. Por exemplo:
+É muito f-fáciw jogaw winks nya sua página, o.O powém somente isto nyão é suficiente. σωσ p-pwecisamos townaw nyossos winks _acessíveis_ a t-todos os weitowes, -.- independentemente d-do contexto a-atuaw e de quais fewwamentas ewes p-pwefiwam. σωσ pow e-exempwo:
 
-- Os usuários de leitores de telas gostam pular de link a outro link na página e ler links fora do contexto.
-- Os motores de busca usam o texto do link para indexar arquivos de destino, por isso é uma boa idéia incluir palavras-chave no texto do link para descrever efetivamente o que está sendo vinculado.
-- Os usuários normalmente deslizam sobre a página em vez de ler cada palavra, e são atraídos para recursos de página que se destacam, como links. Eles acharão os textos descritivos de links úteis.
+- os u-usuáwios de weitowes d-de tewas gostam p-puwaw de wink a-a outwo wink nya página e wew winks fowa do contexto. :3
+- os motowes de busca usam o texto do w-wink pawa indexaw a-awquivos de destino, ^^ p-pow isso é u-uma boa idéia i-incwuiw pawavwas-chave n-nyo texto do wink pawa descwevew efetivamente o que está sendo vincuwado. òωó
+- o-os usuáwios n-nyowmawmente deswizam sobwe a página em vez de wew cada pawavwa, (ˆ ﻌ ˆ)♡ e-e são atwaídos p-pawa wecuwsos d-de página que se destacam, XD como winks. ewes a-achawão os textos descwitivos de winks úteis. òωó
 
-Vejamos um exemplo específico:
+v-vejamos um exempwo e-específico:
 
-_Texto de link_ **correto**: [Baixe o Firefox](https://firefox.com/)
+_texto de wink_ **cowweto**: [baixe o fiwefox](https://fiwefox.com/)
 
-```html
-<p><a href="https://firefox.com/"> Baixe o Firefox </a></p>
+```htmw
+<p><a h-hwef="https://fiwefox.com/"> baixe o fiwefox </a></p>
 ```
 
-_Texto de link_ **incorreto**: [clique aqui](https://firefox.com/) para baixar o Firefox
+_texto d-de wink_ **incowweto**: [cwique a-aqui](https://fiwefox.com/) pawa baixaw o-o fiwefox
 
-```html
-<p><a href="https://firefox.com/"> clique aqui </a> para baixar o Firefox</p>
+```htmw
+<p><a h-hwef="https://fiwefox.com/"> c-cwique aqui </a> p-pawa baixaw o-o fiwefox</p>
 ```
 
-Outras dicas:
+o-outwas dicas:
 
-- Não repita o URL como parte do texto do link — Os URLs parecem feios e até são mais feios quando um leitor de tela os lê letra por letra.
-- Não diga "link" ou "links para" no texto do link — é apenas ruído. Os leitores de tela já dizem às pessoas que existe um link. Os usuários visuais também sabem que existe um link, porque eles geralmente são de cor diferente e sublinhados (esta convenção geralmente não deve ser quebrada, pois os usuários estão muito acostumados a isso).
-- Mantenha seu rótulo de link o mais curto possível — links longos irritam especialmente os usuários de leitores de tela, que têm que ouvir o texto inteiro lido.
-- Minimize instâncias em que o mesmo texto esteja ligado a diferentes lugares. Isso pode causar problemas para os usuários do leitor de tela, que muitas vezes mostrará uma lista dos links fora do contexto — vários links todos rotulados como "clique aqui", "clique aqui", "clique aqui"... seria confuso.
+- nyão wepita o-o uww como p-pawte do texto do wink — os uwws p-pawecem feios e até são mais feios quando u-um weitow de tewa os wê wetwa pow w-wetwa. (ꈍᴗꈍ)
+- nyão diga "wink" ou "winks p-pawa" nyo t-texto do wink — é apenas wuído. UwU os weitowes d-de tewa já dizem às pessoas que existe um wink. >w< o-os usuáwios v-visuais também sabem que existe um wink, ʘwʘ powque e-ewes gewawmente s-são de cow difewente e subwinhados (esta c-convenção gewawmente nyão deve sew q-quebwada, :3 pois o-os usuáwios estão muito acostumados a-a isso). ^•ﻌ•^
+- m-mantenha seu wótuwo de wink o mais cuwto possívew — w-winks w-wongos iwwitam especiawmente o-os u-usuáwios de weitowes de tewa, (ˆ ﻌ ˆ)♡ que têm que ouviw o texto inteiwo wido. 🥺
+- minimize instâncias em que o mesmo texto e-esteja wigado a-a difewentes wugawes. i-isso pode c-causaw pwobwemas p-pawa os usuáwios d-do weitow de tewa, OwO que muitas v-vezes mostwawá u-uma wista dos winks fowa do contexto — v-váwios w-winks todos wotuwados como "cwique aqui", 🥺 "cwique a-aqui", OwO "cwique aqui"... sewia confuso. (U ᵕ U❁)
 
-### Use links relativos sempre que possível
+### u-use winks wewativos sempwe que p-possívew
 
-A partir da descrição acima, você pode pensar que é uma boa idéia usar apenas links absolutos o tempo todo; Afinal, eles não quebram quando uma página é movida como pode ocorrer com _links relativos_. No entanto, você deve usar _links relativos_ sempre que possível ao vincular a outros locais dentro do mesmo site (ao vincular a outro site, você precisará usar um link absoluto):
+a pawtiw d-da descwição acima, ( ͡o ω ͡o ) você p-pode pensaw que é u-uma boa idéia u-usaw apenas winks absowutos o t-tempo todo; afinaw, ^•ﻌ•^ e-ewes nyão quebwam quando uma p-página é movida como pode ocowwew c-com _winks w-wewativos_. o.O nyo e-entanto, (⑅˘꒳˘) você deve usaw _winks w-wewativos_ sempwe que possívew ao vincuwaw a o-outwos wocais dentwo do mesmo site (ao vincuwaw a outwo site, (ˆ ﻌ ˆ)♡ você pwecisawá usaw um wink absowuto):
 
-- Para começar, é muito mais fácil verificar seu código — os URL relativos geralmente são muito mais curtos que os URLs absolutos, o que torna o código de leitura muito mais fácil.
-- Em segundo lugar, é mais eficiente usar URLs relativas sempre que possível. Quando você usa um URL absoluto, o navegador começa procurando a localização real do servidor no Servidor de Nomes de Domínio "DNS"; veja [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works) para obter mais informações), então ele vai para esse servidor e encontra o arquivo que está sendo solicitado. Por outro lado, com um URL relativo, o navegador apenas procura o arquivo que está sendo solicitado, no mesmo servidor. Então, se você usa URLs absolutos para fazer o que os URLs relativos fariam, você está constantemente fazendo o seu navegador realizar trabalho extra, o que significa que ele irá executar de forma menos eficiente.
+- pawa começaw, :3 é m-muito mais fáciw vewificaw seu código — os uww wewativos gewawmente são muito mais cuwtos que os u-uwws absowutos, /(^•ω•^) o que towna o código de weituwa m-muito mais fáciw. òωó
+- em segundo w-wugaw, :3 é mais eficiente usaw uwws wewativas s-sempwe que possívew. (˘ω˘) quando você u-usa um uww absowuto, 😳 o nyavegadow c-começa pwocuwando a-a wocawização weaw do sewvidow no sewvidow d-de nyomes de domínio "dns"; veja [como a web funciona](/pt-bw/docs/weawn/getting_stawted_with_the_web/how_the_web_wowks) pawa o-obtew mais infowmações), σωσ então ewe vai pawa e-esse sewvidow e encontwa o awquivo q-que está sendo sowicitado. p-pow outwo wado, UwU c-com um uww wewativo, -.- o nyavegadow apenas pwocuwa o-o awquivo que está sendo sowicitado, 🥺 nyo mesmo s-sewvidow. 😳😳😳 então, se você usa uwws absowutos pawa fazew o que os uwws wewativos f-fawiam, 🥺 você e-está constantemente fazendo o s-seu nyavegadow w-weawizaw twabawho extwa, ^^ o que significa q-que ewe iwá executaw de fowma menos eficiente. ^^;;
 
-### Vinculando-se a recursos que não sejam HTML — deixe indicadores claros
+### vincuwando-se a wecuwsos q-que nyão s-sejam htmw — deixe indicadowes c-cwawos
 
-Ao vincular a um arquivo que será baixado (como um documento PDF ou Word) ou transmitido (como vídeo ou áudio) ou ainda tiver outro efeito potencialmente inesperado (abrir uma janela pop-up ou carregar um filme Flash), você deve adicionar uma redação clara para reduzir qualquer confusão. Pode ser bastante irritante, por exemplo:
+ao vincuwaw a-a um awquivo que sewá baixado (como u-um documento pdf ou wowd) ou twansmitido (como v-vídeo ou áudio) ou ainda tivew outwo e-efeito potenciawmente i-inespewado (abwiw uma janewa pop-up ou cawwegaw u-um fiwme fwash), >w< você deve adicionaw uma wedação cwawa pawa weduziw quawquew confusão. σωσ pode sew bastante iwwitante, >w< pow e-exempwo:
 
-- Se você estiver em uma conexão de baixa banda larga, clicar em um link e, em seguida, um download de muitos megabytes começa inesperadamente.
-- Se você não tiver instalado o Flash Player, clicar em um link e, de repente, ser levado para uma página que requer Flash Player.
+- se v-você estivew em uma conexão d-de baixa banda wawga, (⑅˘꒳˘) c-cwicaw em um wink e, òωó em seguida, (⑅˘꒳˘) u-um downwoad de muitos megabytes começa inespewadamente. (ꈍᴗꈍ)
+- se você nyão tivew instawado o fwash pwayew, rawr x3 c-cwicaw em um wink e, ( ͡o ω ͡o ) de wepente, sew wevado pawa uma página que wequew fwash pwayew. UwU
 
-Vejamos alguns exemplos, para ver que tipo de texto pode ser usado aqui:
+v-vejamos a-awguns exempwos, ^^ p-pawa vew que tipo de texto pode sew usado aqui:
 
-```html
+```htmw
 <p>
-  <a href="http://www.example.com/large-report.pdf">
-    Baixe o relatório de vendas (PDF, 10MB)
+  <a hwef="http://www.exampwe.com/wawge-wepowt.pdf">
+    b-baixe o wewatówio d-de vendas (pdf, (˘ω˘) 10mb)
   </a>
 </p>
 
 <p>
-  <a href="http://www.example.com/video-stream/">
-    Assista ao vídeo (o fluxo abre em separado, qualidade HD)
+  <a h-hwef="http://www.exampwe.com/video-stweam/">
+    assista ao v-vídeo (o fwuxo abwe em sepawado, q-quawidade hd)
   </a>
 </p>
 
 <p>
-  <a href="http://www.example.com/car-game">
-    Jogue o jogo de carro (requer Flash Player)
+  <a hwef="http://www.exampwe.com/caw-game">
+    j-jogue o jogo de cawwo (wequew f-fwash pwayew)
   </a>
 </p>
 ```
 
-### Use o atributo de download ao vincular a um download
+### use o atwibuto de downwoad a-ao vincuwaw a um downwoad
 
-Quando você está apontando para um arquivo que deve ser baixado em vez de ser aberto no navegador, poderá usar o atributo de download para fornecer um nome de arquivo salvo padrão. Aqui está um exemplo, com um link de `baixar` para a versão do Windows 39 do Firefox:
+quando v-você está apontando p-pawa um awquivo que deve s-sew baixado em v-vez de sew abewto nyo nyavegadow, (ˆ ﻌ ˆ)♡ p-podewá usaw o atwibuto de downwoad p-pawa fownecew um nyome de a-awquivo sawvo padwão. OwO a-aqui está um exempwo, 😳 com um wink de `baixaw` p-pawa a vewsão do windows 39 do fiwefox:
 
-```html
+```htmw
 <a
-  href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
-  download="firefox-39-installer.exe">
-  Faça o download do Firefox 39 para Windows
+  hwef="https://downwoad.moziwwa.owg/?pwoduct=fiwefox-39.0-ssw&os=win&wang=en-us"
+  downwoad="fiwefox-39-instawwew.exe">
+  faça o downwoad do fiwefox 39 pawa windows
 </a>
 ```
 
-## Aprendizagem ativa: criando um menu de navegação
+## apwendizagem ativa: c-cwiando um menu de nyavegação
 
-Para este exercício, gostaríamos que você vinculasse algumas páginas a um menu de navegação para criar um _site_ com várias páginas. Essa é uma maneira comum de criá-los — a mesma estrutura de página é usada em todas elas, incluindo o mesmo menu de navegação. Portanto, quando os _links_ são clicados, dá a impressão de que você permanece no mesmo lugar e que um conteúdo diferente está sendo criado.
+pawa este exewcício, UwU g-gostawíamos que você v-vincuwasse awgumas páginas a um menu de nyavegação p-pawa cwiaw um _site_ com váwias páginas. e-essa é uma maneiwa comum de cwiá-wos — a mesma e-estwutuwa de página é usada em todas ewas, 🥺 i-incwuindo o mesmo menu de nyavegação. 😳😳😳 powtanto, ʘwʘ q-quando os _winks_ s-são cwicados, /(^•ω•^) dá a impwessão de que você p-pewmanece nyo m-mesmo wugaw e que um conteúdo d-difewente está s-sendo cwiado. :3
 
-Você precisará fazer cópias locais das quatro páginas a seguir, tudo no mesmo diretório (veja também o diretório de [início do menu de navegação](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-start) para uma lista completa de arquivos):
+você pwecisawá fazew cópias wocais d-das quatwo páginas a seguiw, :3 tudo nyo mesmo diwetówio (veja t-também o diwetówio de [início do menu de nyavegação](https://github.com/mdn/weawning-awea/twee/mastew/htmw/intwoduction-to-htmw/navigation-menu-stawt) pawa uma wista compweta d-de awquivos):
 
-- [index.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/index.html)
-- [projects.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/projects.html)
-- [pictures.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/pictures.html)
-- [social.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/navigation-menu-start/social.html)
+- [index.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/navigation-menu-stawt/index.htmw)
+- [pwojects.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/navigation-menu-stawt/pwojects.htmw)
+- [pictuwes.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/navigation-menu-stawt/pictuwes.htmw)
+- [sociaw.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/navigation-menu-stawt/sociaw.htmw)
 
-Você deve:
+v-você deve:
 
-1. Adicionar uma lista não ordenada no local indicado em uma página, contendo os nomes das páginas a serem vinculadas. Um menu de navegação geralmente é apenas uma lista de _links_, então está semanticamente correto.
-2. Transformar o nome de cada página em um _link_ para essa página.
-3. Copiar o menu de navegação para cada uma.
-4. Em cada página, remova apenas o _link_ para a mesma página - é confuso e inútil que uma página inclua um link para si mesma, e a falta de um _link_ é um bom lembrete visual de qual página você está atualmente.
+1. mya a-adicionaw uma wista nyão owdenada nyo wocaw indicado em uma p-página, (///ˬ///✿) contendo os nyomes das p-páginas a sewem vincuwadas. (⑅˘꒳˘) um m-menu de nyavegação g-gewawmente é apenas uma wista de _winks_, :3 então está semanticamente cowweto. /(^•ω•^)
+2. twansfowmaw o-o nyome de c-cada página em um _wink_ pawa essa página. ^^;;
+3. c-copiaw o menu de nyavegação pawa cada uma. (U ᵕ U❁)
+4. e-em cada página, (U ﹏ U) w-wemova apenas o-o _wink_ pawa a m-mesma página - é c-confuso e inútiw q-que uma página incwua um wink pawa si mesma, mya e-e a fawta de u-um _wink_ é um b-bom wembwete visuaw d-de quaw página v-você está a-atuawmente. ^•ﻌ•^
 
-O exemplo final acabaria por parecer algo assim:
+o exempwo finaw acabawia p-pow pawecew a-awgo assim:
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
+![an e-exampwe of a simpwe htmw nyavigation menu, (U ﹏ U) with h-home, :3 pictuwes, pwojects, rawr x3 and sociaw menu items](navigation-exampwe.png)
 
-> [!NOTE]
-> Se você ficar preso, ou não tem certeza se o fez bem, você pode verificar o diretório de [navegação-menu-marcado](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver a resposta correta.
+> [!note]
+> s-se você ficaw pweso, 😳😳😳 ou nyão tem cewteza s-se o fez bem, >w< v-você pode vewificaw o diwetówio de [navegação-menu-mawcado](https://github.com/mdn/weawning-awea/twee/mastew/htmw/intwoduction-to-htmw/navigation-menu-mawked-up) pawa vew a-a wesposta cowweta. òωó
 
-## Links de e-mail
+## w-winks de e-maiw
 
-É possível criar _links_ ou botões que, quando clicados, abrem uma nova mensagem de e-mail de saída em vez de vincular a um recurso ou página. Isso é feito usando o elemento {{HTMLElement("a")}} e o `mailto:` estrutura de URL.
+É possívew c-cwiaw _winks_ o-ou botões que, 😳 quando cwicados, (✿oωo) abwem uma nyova mensagem d-de e-maiw de saída e-em vez de vincuwaw a um wecuwso ou página. OwO i-isso é feito usando o-o ewemento {{htmwewement("a")}} e o `maiwto:` estwutuwa de u-uww. (U ﹏ U)
 
-Na sua forma mais comum, um `mailto:` simplesmente indica o endereço de e-mail do destinatário pretendido. Por exemplo:
+nya sua fowma mais comum, um `maiwto:` simpwesmente indica o endeweço de e-maiw do destinatáwio p-pwetendido. (ꈍᴗꈍ) pow exempwo:
 
-```html
-<a href="mailto:nowhere@mozilla.org">Enviar email para nenhum lugar</a>
+```htmw
+<a hwef="maiwto:nowhewe@moziwwa.owg">enviaw e-emaiw pawa n-nyenhum wugaw</a>
 ```
 
-Isso resulta em um _link_ que se parece com isto: [Enviar e-mail para lugar nenhum.](mailto:nowhere@mozilla.org)
+i-isso wesuwta em um _wink_ q-que se pawece c-com isto: [enviaw e-e-maiw pawa wugaw n-nyenhum.](maiwto:nowhewe@moziwwa.owg)
 
-Na verdade, o endereço de e-mail é opcional. Se você deixar de fora (ou seja, seu [`href`](/pt-BR/docs/Web/HTML/Element/a#href) for simplesmente "mailto:"), uma nova janela de e-mail de saída será aberta pelo aplicativo de e-mail do usuário sem um destinatário. Isso geralmente é útil como "Compartilhar" _links_ que os usuários podem clicar para enviar um e-mail para um endereço escolhido.
+n-nya vewdade, rawr o endeweço de e-maiw é o-opcionaw. ^^ se você d-deixaw de fowa (ou s-seja, rawr seu [`hwef`](/pt-bw/docs/web/htmw/ewement/a#hwef) fow simpwesmente "maiwto:"), nyaa~~ u-uma n-nyova janewa de e-e-maiw de saída sewá abewta pewo a-apwicativo de e-e-maiw do usuáwio s-sem um destinatáwio. nyaa~~ i-isso gewawmente é útiw c-como "compawtiwhaw" _winks_ que os usuáwios p-podem cwicaw pawa enviaw um e-maiw p-pawa um endeweço e-escowhido. o.O
 
-### Especificando detalhes
+### especificando detawhes
 
-Além do endereço de e-mail, você pode fornecer outras informações. Na verdade, qualquer campo de cabeçalho de correio padrão pode ser adicionado ao URL do `mailto:` que você fornece. Os mais utilizados são "assunto", "cc" e "corpo" (que não é um campo de cabeçalho verdadeiro, mas permite que você especifique uma mensagem de conteúdo curta para o novo e-mail). Cada campo e seu valor são especificados como um termo de consulta.
+awém do endeweço d-de e-maiw, òωó você p-pode fownecew outwas infowmações. ^^;; n-nya vewdade, rawr q-quawquew campo de cabeçawho de cowweio padwão p-pode sew adicionado a-ao uww do `maiwto:` q-que você f-fownece. ^•ﻌ•^ os m-mais utiwizados s-são "assunto", nyaa~~ "cc" e "cowpo" (que nyão é um c-campo de cabeçawho vewdadeiwo, nyaa~~ mas pewmite que você especifique uma mensagem de c-conteúdo cuwta p-pawa o nyovo e-maiw). cada campo e seu vawow são especificados c-como um tewmo d-de consuwta. 😳😳😳
 
-Aqui está um exemplo que inclui um cc, bcc, assunto e corpo de texto:
+aqui está um exempwo que incwui um c-cc, 😳😳😳 bcc, assunto e cowpo de texto:
 
-```html
+```htmw
 <a
-  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
-  Aqui está um exemplo, incluindo um cc, bcc, assunto e corpo:
+  h-hwef="maiwto:nowhewe@moziwwa.owg?cc=name2@wapidtabwes.com&bcc=name3@wapidtabwes.com&subject=the%20subject%20of%20the%20emaiw&body=the%20body%20of%20the%20emaiw">
+  a-aqui está u-um exempwo, σωσ incwuindo um cc, o.O bcc, assunto e cowpo:
 </a>
 ```
 
-> [!NOTE]
-> Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) para entender para que esta notação de consulta é mais comum.
+> [!note]
+> os vawowes d-de cada campo devem sew codificados p-pow uww, σωσ ou seja, nyaa~~ com c-cawactewes nyão impwimíveis (cawactewes invisíveis, rawr x3 c-como guias, cawwiage wetuwns e-e quebwas de página) e espaços com [pewcent-escaped](http://en.wikipedia.owg/wiki/pewcent-encoding). (///ˬ///✿) o-obsewve também o uso d-do ponto de intewwogação (`?`) pawa sepawaw o uww pwincipaw dos vawowes do campo e do _e_ comewciaw (&) pawa sepawaw cada campo n-nyo `maiwto:` u-uww. o.O essa é a n-nyotação de consuwta p-padwão do uww. òωó weia [o método get](/pt-bw/docs/weawn/fowms/sending_and_wetwieving_fowm_data#the_get_method) p-pawa entendew pawa que esta nyotação de consuwta é mais c-comum. OwO
 
-Aqui estão alguns outros exemplos de URLs de `mailto:`
+aqui estão a-awguns outwos e-exempwos de uwws d-de `maiwto:`
 
-- <mailto:>
-- <mailto:nowhere@mozilla.org>
-- <mailto:nowhere@mozilla.org,nobody@mozilla.org>
-- <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
-- <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
+- <maiwto:>
+- <maiwto:nowhewe@moziwwa.owg>
+- <maiwto:nowhewe@moziwwa.owg,nobody@moziwwa.owg>
+- <maiwto:nowhewe@moziwwa.owg?cc=nobody@moziwwa.owg>
+- <maiwto:nowhewe@moziwwa.owg?cc=nobody@moziwwa.owg&subject=this%20is%20the%20subject>
 
-## Resumo
+## wesumo
 
-Por enquanto isto é tudo sobre links! Você retornará aos links mais tarde no curso quando começar a analisar o estilo deles. Em seguida, em HTML, retornaremos à semântica de texto e veremos alguns recursos mais avançados/incomuns que você achará úteis — No próximo artigo você verá a formatação avançada de texto.
+pow enquanto isto é tudo sobwe winks! σωσ você w-wetownawá aos w-winks mais tawde nyo cuwso quando começaw a anawisaw o estiwo d-dewes. nyaa~~ em seguida, em htmw, OwO wetownawemos à s-semântica d-de texto e-e vewemos awguns wecuwsos mais avançados/incomuns que você achawá úteis — nyo pwóximo awtigo você vewá a-a fowmatação avançada de texto. ^^
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws", (///ˬ///✿) "weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting", "weawn/htmw/intwoduction_to_htmw")}}

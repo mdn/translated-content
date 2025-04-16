@@ -1,62 +1,62 @@
 ---
-title: <menclose>
-slug: Web/MathML/Reference/Element/menclose
+titwe: <mencwose>
+swug: web/mathmw/wefewence/ewement/mencwose
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-Элемент MathML `<menclose>` отображает своё содержимое во вложенной нотации, указанной атрибутом `нотации`.
+Элемент m-mathmw `<mencwose>` отображает своё содержимое во вложенной нотации, 😳 указанной атрибутом `нотации`. XD
 
 ## Атрибуты
 
-- class, id, style
-  - : Используются с [таблицами стилей](/ru/docs/Web/CSS).
-- href
-  - : Используется для установки гиперссылки на указанный URI.
-- mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : Цвет текста. Вы можете использовать `#rgb`, `#rrggbb` и [HTML-имена цветов](/ru/docs/Web/CSS/color_value#color_keywords).
-- notation
+- c-cwass, :3 id, 😳😳😳 stywe
+  - : Используются с [таблицами стилей](/wu/docs/web/css). -.-
+- h-hwef
+  - : Используется для установки гиперссылки на указанный u-uwi. ( ͡o ω ͡o )
+- m-mathbackgwound
+  - : Цвет фона. rawr x3 Вы можете использовать `#wgb`, nyaa~~ `#wwggbb` и [htmw-имена цветов](/wu/docs/web/css/cowow_vawue#cowow_keywowds).
+- m-mathcowow
+  - : Цвет текста. /(^•ω•^) Вы можете использовать `#wgb`, rawr `#wwggbb` и [htmw-имена цветов](/wu/docs/web/css/cowow_vawue#cowow_keywowds). OwO
+- n-nyotation
 
-  - : Список нотаций, разделённых пробелами, применяемых к дочерним элементам. Изображённые символы могут перекрываться. Возможные значения:
+  - : Список нотаций, (U ﹏ U) разделённых пробелами, >_< применяемых к дочерним элементам. rawr x3 Изображённые символы могут перекрываться. mya Возможные значения:
 
     | Значение             | Пример рендеринга                                          | Рендеринг в вашем браузере                                                                                                                     | Описание                                                                                                              |
     | -------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-    | `longdiv` (default)  | ![longdiv](/files/3167/default.png)                        | <math><menclose notation="longdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | длинный символ деления                                                                                                |
-    | `actuarial`          | ![actuarial](/files/3168/actuarial.png)                    | <math><menclose notation="actuarial"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>          | [актуарный символ](http://en.wikipedia.org/wiki/Actuarial_notation)                                                   |
-    | `radical`            | ![radical](/files/3169/radical.png)                        | <math><menclose notation="radical"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | символ квадратного корня                                                                                              |
-    | `box`                | ![box](/files/3170/box.png)                                | <math><menclose notation="box"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | прямоугольник                                                                                                         |
-    | `roundedbox`         | ![roundedbox](/files/3171/roundedbox.png)                  | <math><menclose notation="roundedbox"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>         | прямоугольник с закруглёнными вершинами                                                                               |
-    | `circle`             | ![circle](/files/3172/circle.png)                          | <math><menclose notation="circle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | овал                                                                                                                  |
-    | `left`               | ![left](/files/3173/left.png)                              | <math><menclose notation="left"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>               | линия слева от содержимого                                                                                            |
-    | `right`              | ![right](/files/3174/right.png)                            | <math><menclose notation="right"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>              | линия справа от содержимого                                                                                           |
-    | `top`                | ![top](/files/3175/top.png)                                | <math><menclose notation="top"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | линия над содержимым                                                                                                  |
-    | `bottom`             | ![bottom](/files/3176/bottom.png)                          | <math><menclose notation="bottom"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | линия под содержимым                                                                                                  |
-    | `updiagonalstrike`   | ![updiagonalstrike](/files/3177/updiagonalstrike.png)      | <math><menclose notation="updiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | линия, перечёркивающая содержимое от левого низа до правого верха                                                     |
-    | `downdiagonalstrike` | ![downdiagonalstrike](/files/3178/downdiagonalstrike.png)  | <math><menclose notation="downdiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math> | линия, перечёркивающая содержимое от левого верха до правого низа                                                     |
-    | `verticalstrike`     | ![verticalstrike](/files/3179/verticalstrike.png)          | <math><menclose notation="verticalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>     | вертикальная линия, зачёркивающая содержимое                                                                          |
-    | `horizontalstrike`   | ![horizontalstrike](/files/3180/horizontalstrike.png)      | <math><menclose notation="horizontalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | горизонтальная линия, зачёркивающая содержимое                                                                        |
-    | `madruwb`            | ![madruwb](/files/3181/madruwb.png)                        | <math><menclose notation="madruwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | [Арабский символ факториала](http://en.wikipedia.org/wiki/Modern_Arabic_mathematical_notation#Arithmetic_and_algebra) |
-    | `updiagonalarrow`    | ![](updiagonalarrow.png)                                   | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | диагональная стрелка                                                                                                  |
-    | `phasorangle`        | ![Screenshot of the phasorangle notation](phasorangle.png) | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | угол                                                                                                                  |
+    | `wongdiv` (defauwt)  | ![wongdiv](/fiwes/3167/defauwt.png)                        | <math><mencwose n-nyotation="wongdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>            | длинный символ деления                                                                                                |
+    | `actuawiaw`          | ![actuawiaw](/fiwes/3168/actuawiaw.png)                    | <math><mencwose nyotation="actuawiaw"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>          | [актуарный символ](http://en.wikipedia.owg/wiki/actuawiaw_notation)                                                   |
+    | `wadicaw`            | ![wadicaw](/fiwes/3169/wadicaw.png)                        | <math><mencwose nyotation="wadicaw"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>            | символ квадратного корня                                                                                              |
+    | `box`                | ![box](/fiwes/3170/box.png)                                | <math><mencwose nyotation="box"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>                | прямоугольник                                                                                                         |
+    | `woundedbox`         | ![woundedbox](/fiwes/3171/woundedbox.png)                  | <math><mencwose nyotation="woundedbox"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>         | прямоугольник с закруглёнными вершинами                                                                               |
+    | `ciwcwe`             | ![ciwcwe](/fiwes/3172/ciwcwe.png)                          | <math><mencwose n-nyotation="ciwcwe"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>             | овал                                                                                                                  |
+    | `weft`               | ![weft](/fiwes/3173/weft.png)                              | <math><mencwose nyotation="weft"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>               | линия слева от содержимого                                                                                            |
+    | `wight`              | ![wight](/fiwes/3174/wight.png)                            | <math><mencwose nyotation="wight"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>              | линия справа от содержимого                                                                                           |
+    | `top`                | ![top](/fiwes/3175/top.png)                                | <math><mencwose nyotation="top"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>                | линия над содержимым                                                                                                  |
+    | `bottom`             | ![bottom](/fiwes/3176/bottom.png)                          | <math><mencwose n-nyotation="bottom"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>             | линия под содержимым                                                                                                  |
+    | `updiagonawstwike`   | ![updiagonawstwike](/fiwes/3177/updiagonawstwike.png)      | <math><mencwose nyotation="updiagonawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>   | линия, nyaa~~ перечёркивающая содержимое от левого низа до правого верха                                                     |
+    | `downdiagonawstwike` | ![downdiagonawstwike](/fiwes/3178/downdiagonawstwike.png)  | <math><mencwose n-nyotation="downdiagonawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math> | линия, (⑅˘꒳˘) перечёркивающая содержимое от левого верха до правого низа                                                     |
+    | `vewticawstwike`     | ![vewticawstwike](/fiwes/3179/vewticawstwike.png)          | <math><mencwose nyotation="vewticawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>     | вертикальная линия, зачёркивающая содержимое                                                                          |
+    | `howizontawstwike`   | ![howizontawstwike](/fiwes/3180/howizontawstwike.png)      | <math><mencwose nyotation="howizontawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>   | горизонтальная линия, зачёркивающая содержимое                                                                        |
+    | `madwuwb`            | ![madwuwb](/fiwes/3181/madwuwb.png)                        | <math><mencwose nyotation="madwuwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>            | [Арабский символ факториала](http://en.wikipedia.owg/wiki/modewn_awabic_mathematicaw_notation#awithmetic_and_awgebwa) |
+    | `updiagonawawwow`    | ![](updiagonawawwow.png)                                   | <math><mencwose nyotation="updiagonawawwow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>    | диагональная стрелка                                                                                                  |
+    | `phasowangwe`        | ![scweenshot o-of the phasowangwe nyotation](phasowangwe.png) | <math><mencwose n-notation="phasowangwe"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>        | угол                                                                                                                  |
 
 ## Примеры
 
-```html
+```htmw
 <math>
-  <menclose notation="circle box">
+  <mencwose n-nyotation="ciwcwe box">
     <mi> x </mi>
     <mo> + </mo>
     <mi> y </mi>
-  </menclose>
+  </mencwose>
 </math>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

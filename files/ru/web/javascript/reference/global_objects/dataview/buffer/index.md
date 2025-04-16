@@ -1,51 +1,51 @@
 ---
-title: DataView.prototype.buffer
-slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
-l10n:
-  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
+titwe: dataview.pwototype.buffew
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/buffew
+w-w10n:
+  souwcecommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Свойство **`buffer`** экземпляров {{jsxref("DataView")}} возвращает значение {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}}, на которое ссылается `DataView` при создании.
+Свойство **`buffew`** экземпляров {{jsxwef("dataview")}} возвращает значение {{jsxwef("awwaybuffew")}} или {{jsxwef("shawedawwaybuffew")}}, (U ᵕ U❁) на которое ссылается `dataview` при создании. -.-
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.buffew")}}
 
-```js interactive-example
-// Create an ArrayBuffer
-const buffer = new ArrayBuffer(123);
+```js i-intewactive-exampwe
+// c-cweate a-an awwaybuffew
+c-const buffew = new a-awwaybuffew(123);
 
-// Create a view
-const view = new DataView(buffer);
+// c-cweate a view
+const view = nyew dataview(buffew);
 
-console.log(view.buffer.byteLength);
-// Expected output: 123
+consowe.wog(view.buffew.bytewength);
+// expected output: 123
 ```
 
 ## Описание
 
-`buffer` — это свойство, функция доступа которого равна `undefined`, то есть это свойство доступно только для чтения. Значение устанавливается при создании `DataView` и не может быть изменено.
+`buffew` — это свойство, ^^;; функция доступа которого равна `undefined`, то есть это свойство доступно только для чтения. >_< Значение устанавливается при создании `dataview` и не может быть изменено. mya
 
 ## Примеры
 
-### Использование свойства buffer
+### Использование свойства b-buffew
 
 ```js
-const buffer = new ArrayBuffer(8);
-const dataview = new DataView(buffer);
-dataview.buffer; // ArrayBuffer { byteLength: 8 }
+const buffew = nyew a-awwaybuffew(8);
+const dataview = n-new dataview(buffew);
+dataview.buffew; // awwaybuffew { bytewength: 8 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}

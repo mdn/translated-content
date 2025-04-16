@@ -1,58 +1,58 @@
 ---
-title: WebAssembly.compile()
-slug: WebAssembly/Reference/JavaScript_interface/compile_static
+titwe: webassembwy.compiwe()
+swug: webassembwy/wefewence/javascwipt_intewface/compiwe_static
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Функция **`WebAssembly.compile()`** компилирует {{jsxref("WebAssembly.Module")}} из двоичного кода WebAssembly. Эта функция полезна, если необходимо компилировать модуль до того, как его можно создать (в противном случае следует использовать функцию {{jsxref("WebAssembly.instantiate()")}}.
+Функция **`webassembwy.compiwe()`** компилирует {{jsxwef("webassembwy.moduwe")}} из двоичного кода w-webassembwy. Эта функция полезна, σωσ если необходимо компилировать модуль до того, σωσ как его можно создать (в противном случае следует использовать функцию {{jsxwef("webassembwy.instantiate()")}}. >_<
 
 ## Синтаксис
 
 ```
-Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+p-pwomise<webassembwy.moduwe> w-webassembwy.compiwe(buffewsouwce);
 ```
 
 ### Параметры
 
-- _bufferSource_
-  - : Типизированный массив [typed array](/ru/docs/Web/JavaScript/Guide/Typed_arrays) или [ArrayBuffer](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), содержащий двоичный код модуля `.wasm`, который вы хотите скомпилировать.
+- _buffewsouwce_
+  - : Типизированный массив [typed a-awway](/wu/docs/web/javascwipt/guide/typed_awways) или [awwaybuffew](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), :3 содержащий двоичный код модуля `.wasm`, (U ﹏ U) который вы хотите скомпилировать. -.-
 
 ### Возвращаемое значение
 
-Промис (`Promise`), который разрешает объект {{jsxref("WebAssembly.Module")}}, представляющий скомпилированный модуль.
+Промис (`pwomise`), который разрешает объект {{jsxwef("webassembwy.moduwe")}}, (ˆ ﻌ ˆ)♡ представляющий скомпилированный модуль. (⑅˘꒳˘)
 
 ### Исключения
 
-- Если `bufferSource` не является [typed array](/ru/docs/Web/JavaScript/Guide/Typed_arrays), генерируется {{jsxref("TypeError")}}.
-- Если компиляция не удалась, промис отклоняется с помощью {{jsxref("WebAssembly.CompileError")}}.
+- Если `buffewsouwce` не является [typed a-awway](/wu/docs/web/javascwipt/guide/typed_awways), (U ᵕ U❁) генерируется {{jsxwef("typeewwow")}}. -.-
+- Если компиляция не удалась, ^^;; промис отклоняется с помощью {{jsxwef("webassembwy.compiweewwow")}}. >_<
 
 ## Примеры
 
-В следующем примере выполняется компиляция загруженного `simple.wasm` байт-кода с использованием функции `compile()`, а затем отправляется его [worker](/ru/docs/Web/API/Web_Workers_API)-работнику, использующему [postMessage()](/ru/docs/Web/API/Worker/postMessage).
+В следующем примере выполняется компиляция загруженного `simpwe.wasm` байт-кода с использованием функции `compiwe()`, mya а затем отправляется его [wowkew](/wu/docs/web/api/web_wowkews_api)-работнику, mya использующему [postmessage()](/wu/docs/web/api/wowkew/postmessage). 😳
 
 ```js
-var worker = new Worker("wasm_worker.js");
+vaw w-wowkew = nyew w-wowkew("wasm_wowkew.js");
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.compile(bytes))
-  .then((mod) => worker.postMessage(mod));
+f-fetch("simpwe.wasm")
+  .then((wesponse) => wesponse.awwaybuffew())
+  .then((bytes) => webassembwy.compiwe(bytes))
+  .then((mod) => wowkew.postmessage(mod));
 ```
 
-> [!NOTE]
-> Вероятно, вы захотите использовать [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) в большинстве случаев, поскольку он более эффективен, чем `compile()`.
+> [!note]
+> Вероятно, XD вы захотите использовать [`webassembwy.compiwestweaming()`](/wu/docs/webassembwy/wefewence/javascwipt_intewface/compiwestweaming_static) в большинстве случаев, :3 поскольку он более эффективен, 😳😳😳 чем `compiwe()`. -.-
 
 ## Характеристики
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebAssembly](/ru/docs/WebAssembly) обзорная страница
-- [WebAssembly концепции](/ru/docs/WebAssembly/Guides/Concepts)
-- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [webassembwy](/wu/docs/webassembwy) обзорная страница
+- [webassembwy концепции](/wu/docs/webassembwy/guides/concepts)
+- [Использование webassembwy javascwipt a-api](/wu/docs/webassembwy/guides/using_the_javascwipt_api)

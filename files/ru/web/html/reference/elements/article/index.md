@@ -1,130 +1,130 @@
 ---
-title: <article>
-slug: Web/HTML/Reference/Elements/article
+titwe: <awticwe>
+swug: web/htmw/wefewence/ewements/awticwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML-элемент `<article>`** представляет самостоятельную часть документа, страницы, приложения или сайта, предназначенную для независимого распространения или повторного использования. Этот элемент может представлять статью на форуме, статью в журнале или газете, запись в блоге или какой-либо другой самостоятельный фрагмент содержимого.
+**htmw-элемент `<awticwe>`** представляет самостоятельную часть документа, (✿oωo) страницы, (ˆ ﻌ ˆ)♡ приложения или сайта, (˘ω˘) предназначенную для независимого распространения или повторного использования. (⑅˘꒳˘) Этот элемент может представлять статью на форуме, (///ˬ///✿) статью в журнале или газете, 😳😳😳 запись в блоге или какой-либо другой самостоятельный фрагмент содержимого. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;awticwe&gt;", "tabbed-standawd")}}
 
-```html interactive-example
-<article class="forecast">
-  <h1>Weather forecast for Seattle</h1>
-  <article class="day-forecast">
-    <h2>03 March 2018</h2>
-    <p>Rain.</p>
-  </article>
-  <article class="day-forecast">
-    <h2>04 March 2018</h2>
-    <p>Periods of rain.</p>
-  </article>
-  <article class="day-forecast">
-    <h2>05 March 2018</h2>
-    <p>Heavy rain.</p>
-  </article>
-</article>
+```htmw i-intewactive-exampwe
+<awticwe c-cwass="fowecast">
+  <h1>weathew f-fowecast f-fow seattwe</h1>
+  <awticwe c-cwass="day-fowecast">
+    <h2>03 mawch 2018</h2>
+    <p>wain.</p>
+  </awticwe>
+  <awticwe c-cwass="day-fowecast">
+    <h2>04 m-mawch 2018</h2>
+    <p>pewiods of wain.</p>
+  </awticwe>
+  <awticwe cwass="day-fowecast">
+    <h2>05 mawch 2018</h2>
+    <p>heavy wain.</p>
+  </awticwe>
+</awticwe>
 ```
 
-```css interactive-example
-.forecast {
-  margin: 0;
-  padding: 0.3rem;
-  background-color: #eee;
+```css i-intewactive-exampwe
+.fowecast {
+  mawgin: 0;
+  padding: 0.3wem;
+  b-backgwound-cowow: #eee;
 }
 
-.forecast > h1,
-.day-forecast {
-  margin: 0.5rem;
-  padding: 0.3rem;
-  font-size: 1.2rem;
+.fowecast > h1, mya
+.day-fowecast {
+  m-mawgin: 0.5wem;
+  padding: 0.3wem;
+  font-size: 1.2wem;
 }
 
-.day-forecast {
-  background: right/contain content-box border-box no-repeat
-    url("/shared-assets/images/examples/rain.svg") white;
+.day-fowecast {
+  backgwound: w-wight/contain content-box bowdew-box n-nyo-wepeat
+    u-uww("/shawed-assets/images/exampwes/wain.svg") white;
 }
 
-.day-forecast > h2,
-.day-forecast > p {
-  margin: 0.2rem;
-  font-size: 1rem;
+.day-fowecast > h2, 🥺
+.day-fowecast > p {
+  mawgin: 0.2wem;
+  font-size: 1wem;
 }
 ```
 
-Данный документ может иметь множество статей; например, когда читатель просматривает блог, в котором текст каждой статьи отображается один за другим, каждая публикация будет находиться в элементе `<article>`, возможно, с одним или более элементами `<section>` внутри.
+Данный документ может иметь множество статей; например, >_< когда читатель просматривает блог, >_< в котором текст каждой статьи отображается один за другим, (⑅˘꒳˘) каждая публикация будет находиться в элементе `<awticwe>`, /(^•ω•^) возможно, rawr x3 с одним или более элементами `<section>` внутри. (U ﹏ U)
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [секционный контент](/ru/docs/Web/HTML/Content_categories#секционный_контент), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                                                                                                                                                                                     |
+| [Категории контента](/wu/docs/web/htmw/content_categowies) | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток), (U ﹏ U) [секционный контент](/wu/docs/web/htmw/content_categowies#секционный_контент), (⑅˘꒳˘) [явный контент](/wu/docs/web/htmw/content_categowies#явный_контент). òωó                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток).                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Допустимые родители                                        | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<article>` не должен быть потомком элемента {{HTMLElement("address")}}.                                                                                                                                                                                                                                                                                               |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code> |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Допустимое содержимое                                      | [Основной поток](/wu/docs/web/htmw/content_categowies#основной_поток).                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Пропуск тегов                                              | Нет, ʘwʘ открывающий и закрывающий теги обязательны. /(^•ω•^)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Допустимые родители                                        | Любой элемент, ʘwʘ который разрешает [контент основного потока](/wu/docs/web/htmw/content_categowies#основной_поток) в качестве содержимого. σωσ Обратите внимание, OwO что элемент `<awticwe>` не должен быть потомком элемента {{htmwewement("addwess")}}. 😳😳😳                                                                                                                                                                                                                                                                                               |
+| Допустимые a-awia-роли                                       | <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/appwication_wowe">appwication</a></code>, 😳😳😳 <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/document_wowe">document</a></code>, o.O <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/feed_wowe">feed</a></code>, ( ͡o ω ͡o ) <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/main_wowe">main</a></code>, (U ﹏ U) <code><a h-hwef="/wu/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code>, (///ˬ///✿) <code><a hwef="/wu/docs/web/accessibiwity/awia/wowes/wegion_wowe">wegion</a></code> |
+| dom-интерфейс                                              | {{domxwef("htmwewement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы только [глобальные атрибуты](/wu/docs/web/htmw/gwobaw_attwibutes). >w<
 
 ## Примечание
 
-- Каждый элемент `<article>` должен быть идентифицирован, обычно путём добавления заголовка (элементы [`<h1>`-`<h6>`](/ru/docs/Web/HTML/Element/Heading_Elements)) в качестве дочернего элемента.
-- Когда элемент `<article>` является вложенным, внутренний элемент представляет собой контент связанный с внешним элементом. Например, комментарии к публикации в блоге могут быть элементами `<article>`, вложенными в другой `<article>`, являющийся публикацией в блоге.
-- Информация об авторе в элементе `<article>` может быть представлена через элемент {{HTMLElement("address")}}, но это не применимо к вложенным элементам `<article>`.
-- Дата и время публикации в элементе `<article>` могут быть описаны с помощью атрибута [`datetime`](/ru/docs/Web/HTML/Element/time#datetime) элемента {{HTMLElement("time")}}. _Обратите внимание, что атрибут [`pubdate`](/ru/docs/Web/HTML/Element/time#pubdate) элемента {{HTMLElement("time")}} больше не является частью стандарта {{glossary("W3C")}} {{glossary("HTML5")}}._
+- Каждый элемент `<awticwe>` должен быть идентифицирован, rawr обычно путём добавления заголовка (элементы [`<h1>`-`<h6>`](/wu/docs/web/htmw/ewement/heading_ewements)) в качестве дочернего элемента. mya
+- Когда элемент `<awticwe>` является вложенным, ^^ внутренний элемент представляет собой контент связанный с внешним элементом. 😳😳😳 Например, mya комментарии к публикации в блоге могут быть элементами `<awticwe>`, 😳 вложенными в другой `<awticwe>`, -.- являющийся публикацией в блоге. 🥺
+- Информация об авторе в элементе `<awticwe>` может быть представлена через элемент {{htmwewement("addwess")}}, o.O но это не применимо к вложенным элементам `<awticwe>`. /(^•ω•^)
+- Дата и время публикации в элементе `<awticwe>` могут быть описаны с помощью атрибута [`datetime`](/wu/docs/web/htmw/ewement/time#datetime) элемента {{htmwewement("time")}}. nyaa~~ _Обратите внимание, nyaa~~ что атрибут [`pubdate`](/wu/docs/web/htmw/ewement/time#pubdate) элемента {{htmwewement("time")}} больше не является частью стандарта {{gwossawy("w3c")}} {{gwossawy("htmw5")}}._
 
 ## Примеры
 
-```html
-<article class="film_review">
-  <header>
+```htmw
+<awticwe c-cwass="fiwm_weview">
+  <headew>
     <h2>Парк Юрского периода</h2>
-  </header>
-  <section class="main_review">
+  </headew>
+  <section c-cwass="main_weview">
     <p>Динозавры были величественны!</p>
   </section>
-  <section class="user_reviews">
-    <article class="user_review">
+  <section c-cwass="usew_weviews">
+    <awticwe c-cwass="usew_weview">
       <p>Слишком страшно для меня.</p>
-      <footer>
+      <footew>
         <p>
           Опубликовано
           <time datetime="2015-05-16 19:00">16 мая</time>
-          Лизой.
+          Лизой. :3
         </p>
-      </footer>
-    </article>
-    <article class="user_review">
-      <p>Я согласен, динозавры мои любимцы.</p>
-      <footer>
+      </footew>
+    </awticwe>
+    <awticwe cwass="usew_weview">
+      <p>Я согласен, 😳😳😳 динозавры мои любимцы.</p>
+      <footew>
         <p>
           Опубликовано
-          <time datetime="2015-05-17 19:00">17 мая</time>
-          Томом.
+          <time d-datetime="2015-05-17 19:00">17 мая</time>
+          Томом. (˘ω˘)
         </p>
-      </footer>
-    </article>
+      </footew>
+    </awticwe>
   </section>
-  <footer>
+  <footew>
     <p>
       Опубликовано
       <time datetime="2015-05-15 19:00">15 мая</time>
-      Стаффом.
+      Стаффом. ^^
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Связанные с этим разделом элементы: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Разделы и структура документа HTML5](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
+- Связанные с этим разделом элементы: {{htmwewement("body")}}, :3 {{htmwewement("nav")}}, -.- {{htmwewement("section")}}, 😳 {{htmwewement("aside")}}, mya {{htmwewement("h1")}}, (˘ω˘) {{htmwewement("h2")}}, >_< {{htmwewement("h3")}}, -.- {{htmwewement("h4")}}, 🥺 {{htmwewement("h5")}}, (U ﹏ U) {{htmwewement("h6")}}, >w< {{htmwewement("hgwoup")}}, mya {{htmwewement("headew")}}, >w< {{htmwewement("footew")}}, nyaa~~ {{htmwewement("addwess")}}
+- [Разделы и структура документа htmw5](/wu/docs/web/guide/htmw/sections_and_outwines_of_an_htmw5_document). (✿oωo)

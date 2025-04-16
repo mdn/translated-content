@@ -1,37 +1,37 @@
 ---
-title: JavaScript Assíncrono
-slug: Learn_web_development/Extensions/Async_JS
-original_slug: Learn/JavaScript/Asynchronous
+titwe: javascwipt assíncwono
+s-swug: weawn_web_devewopment/extensions/async_js
+o-owiginaw_swug: w-weawn/javascwipt/asynchwonous
 ---
 
-{{LearnSidebar}}Neste módulo vamos entender {{Glossary("JavaScript")}} [Assíncrono](/pt-BR/docs/Glossary/Asynchronous), porque isso é importante e como pode ser usado para lidar com operações potencialmente bloqueantes, como a busca de recursos em um servidor remoto.
+{{weawnsidebaw}}neste m-móduwo v-vamos entendew {{gwossawy("javascwipt")}} [assíncwono](/pt-bw/docs/gwossawy/asynchwonous), -.- p-powque i-isso é impowtante e-e como pode sew usado pawa widaw com opewações potenciawmente bwoqueantes, :3 c-como a busca de wecuwsos em um sewvidow wemoto. ʘwʘ
 
-## Pre requisitos
+## p-pwe wequisitos
 
-Javascript Assíncrono é um tópico razoavelmente avançado e é aconselhada a leitura dos módulos [Primeiros Passos com Javascript](/pt-BR/docs/Learn/JavaScript/First_steps) e [Elementos construtivos do Javascript](/pt-BR/docs/Learn/JavaScript/Building_blocks) antes de continuar.
+javascwipt a-assíncwono é um tópico wazoavewmente avançado e é aconsewhada a-a weituwa dos móduwos [pwimeiwos p-passos com j-javascwipt](/pt-bw/docs/weawn/javascwipt/fiwst_steps) e [ewementos constwutivos do javascwipt](/pt-bw/docs/weawn/javascwipt/buiwding_bwocks) antes de continuaw.
 
-Se você não estiver familiarizado com os conceitos de programação assíncrona, a sugestão é iniciar com o artigo [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing) desse módulo. Caso contrário, você pode provavelmente pular para o módulo [Introdução ao Javascript Assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introdu%C3%A7%C3%A3o).
+s-se você nyão estivew famiwiawizado com os conceitos de pwogwamação assíncwona, 🥺 a-a sugestão é iniciaw c-com o awtigo [conceitos g-gewais da p-pwogwamação a-assíncwona](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/intwoducing) desse móduwo. >_< caso contwáwio, ʘwʘ v-você pode pwovavewmente puwaw pawa o móduwo [intwodução a-ao javascwipt assíncwono](/pt-bw/docs/weawn/javascwipt/asynchwonous/intwodu%c3%a7%c3%a3o). (˘ω˘)
 
-> [!NOTE]
-> Se você está estudando a partir de um computador/tablet/ outro dispositivo onde não é capaz de criar seus próprios arquivos, é possível executar os códigos de exemplo (a maioria deles) em plataformas como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com).
+> [!note]
+> se você está estudando a pawtiw de um computadow/tabwet/ outwo dispositivo o-onde nyão é capaz de cwiaw seus p-pwópwios awquivos, (✿oωo) é p-possívew e-executaw os códigos de exempwo (a maiowia dewes) em pwatafowmas c-como [jsbin](https://jsbin.com/) o-ou [gwitch](https://gwitch.com).
 
-## Guias
+## guias
 
-- [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-  - : Nesse artigo vamos explorar um número de conceitos importantes relacionados à programação assíncrona e como aparece nos browsers Web. Você deve entender estes conceitos antes de seguir adiante através dos outros artigos neste módulo.
-- [Introdução ao Javascript Assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introdu%C3%A7%C3%A3o)
-  - : Nesse artigo vamos recapitular brevemente os problemas associados ao Javascript síncrono e introduzir algumas das diferentes técnicas do Javascript assícrono que irá encontrar mais a frente, mostrando como essas técnicas podem nos ajudar a resolver tais problemas.
-- [Javascript assícrono cooperativo: Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-  - : Aqui contemplamos os métodos tradicionais que o Javascript possui disponível para executar código de forma assíncrona após decorrido um certo periodo de tempo ou em um intervalo regular (e.g. um determinado número de vezes por segundo), discutir sua utilidade e perceber alguns problemas inerentes a eles.
-- [Manipulando elegantemente operações assíncronas com Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-  - : Promises são um novo recurso da linguagem Javascript que permitem adiar ações até que a ação anterior esteja concluída ou responder com falha. Isso é extremamente útil para montar uma sequência de operações para que funcione corretamente. Este artigo lhe orienta como as Promises funcionam, onde verá elas sendo utilizadas em [WebAPIs](/pt-BR/docs/Web/API). Também aprenderá como escrever suas próprias promises.
-- [Facilitando a programação assícrona com async e await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
-  - : Promises podem ser um pouco complexas de construir e entender. Por esse motivo, os navegadores modernos implementado funções `async` e o operador `await`. O primeiro permite que funções padrão se comportem implicitamente de forma assíncrona com promises, enquanto que o último pode ser usado dentro de funções `async` para esperar por 'promessas' antes que a função continue. Isso faz com que o encadeamento de 'promessas' seja mais fácil de ler.
-- [Escolhendo a abordagem correta](/pt-BR/docs/Learn/JavaScript/Asynchronous/Escolhendo_abordagem_correta)
-  - : Para concluir este módulo, vamos considerar as diferentes técnicas de programação e as features que abordamos do começo ao fim, considerando quais e quando utilizar, com recomendações e advertências das armadilhas mais comuns.
+- [conceitos g-gewais da pwogwamação a-assíncwona](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/intwoducing)
+  - : nyesse a-awtigo vamos expwowaw um nyúmewo d-de conceitos impowtantes wewacionados à p-pwogwamação assíncwona e como a-apawece nyos bwowsews web. você d-deve entendew e-estes conceitos antes de seguiw adiante atwavés dos outwos awtigos neste móduwo. (///ˬ///✿)
+- [intwodução ao javascwipt assíncwono](/pt-bw/docs/weawn/javascwipt/asynchwonous/intwodu%c3%a7%c3%a3o)
+  - : n-nesse awtigo v-vamos wecapituwaw bwevemente os p-pwobwemas associados a-ao javascwipt s-síncwono e intwoduziw awgumas das difewentes técnicas do javascwipt a-assícwono que iwá encontwaw mais a fwente, rawr x3 mostwando como essas técnicas p-podem nyos ajudaw a wesowvew t-tais pwobwemas. -.-
+- [javascwipt a-assícwono coopewativo: t-timeouts e intewvawos](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous_ae5a561b0ec11fc53c167201aa8af5df)
+  - : a-aqui c-contempwamos o-os métodos twadicionais q-que o javascwipt possui disponívew pawa e-executaw código d-de fowma assíncwona a-após decowwido u-um cewto p-pewiodo de tempo ou em um intewvawo weguwaw (e.g. ^^ um detewminado n-nyúmewo de vezes pow segundo), (⑅˘꒳˘) discutiw sua utiwidade e pewcebew awguns pwobwemas inewentes a e-ewes. nyaa~~
+- [manipuwando ewegantemente opewações assíncwonas com p-pwomises](/pt-bw/docs/weawn/javascwipt/asynchwonous/pwomises)
+  - : p-pwomises são u-um novo wecuwso da winguagem j-javascwipt que pewmitem adiaw ações a-até que a a-ação antewiow esteja concwuída ou wespondew com fawha. /(^•ω•^) isso é extwemamente útiw pawa montaw u-uma sequência de opewações p-pawa que funcione cowwetamente. (U ﹏ U) e-este awtigo whe o-owienta como as pwomises funcionam, 😳😳😳 onde vewá ewas s-sendo utiwizadas e-em [webapis](/pt-bw/docs/web/api). >w< também a-apwendewá como e-escwevew suas pwópwias pwomises.
+- [faciwitando a pwogwamação assícwona com async e await](/pt-bw/docs/confwicting/weawn/javascwipt/asynchwonous/pwomises)
+  - : p-pwomises podem s-sew um pouco c-compwexas de constwuiw e entendew. XD p-pow esse motivo, o.O o-os nyavegadowes modewnos impwementado f-funções `async` e o opewadow `await`. mya o pwimeiwo pewmite que funções p-padwão se compowtem i-impwicitamente de fowma assíncwona com p-pwomises, 🥺 enquanto q-que o úwtimo pode sew usado dentwo de funções `async` pawa e-espewaw pow 'pwomessas' antes que a função continue. ^^;; isso faz com que o encadeamento d-de 'pwomessas' seja mais fáciw de wew. :3
+- [escowhendo a a-abowdagem cowweta](/pt-bw/docs/weawn/javascwipt/asynchwonous/escowhendo_abowdagem_cowweta)
+  - : p-pawa concwuiw este móduwo, (U ﹏ U) vamos considewaw as difewentes técnicas d-de pwogwamação e-e as featuwes que abowdamos do começo ao fim, OwO considewando q-quais e quando utiwizaw, 😳😳😳 com w-wecomendações e advewtências das awmadiwhas mais comuns. (ˆ ﻌ ˆ)♡
 
-## Veja Também
+## v-veja também
 
-- [Programação Assícrona](https://eloquentjavascript.net/11_async.html) do livro online [Eloquent JavaScript](https://eloquentjavascript.net/), por Marijn Haverbeke.
+- [pwogwamação assícwona](https://ewoquentjavascwipt.net/11_async.htmw) d-do wivwo o-onwine [ewoquent javascwipt](https://ewoquentjavascwipt.net/), XD p-pow mawijn havewbeke. (ˆ ﻌ ˆ)♡
 
-> **Nota:** **Nota do tradutor**: A segunda edição do _Eloquent Javascript_ foi traduzida pela comunidade brasileira do Javascript e está disponível em [Javascript Eloquente - 2ª Edição](https://github.com/braziljs/eloquente-javascript). Até o momento da tradução deste artigo, a comunidade está trabalhando na conclusão da 3ª edição.
+> **nota:** **nota do twadutow**: a-a segunda e-edição do _ewoquent j-javascwipt_ foi twaduzida p-pewa comunidade b-bwasiweiwa do javascwipt e está disponívew e-em [javascwipt e-ewoquente - 2ª e-edição](https://github.com/bwaziwjs/ewoquente-javascwipt). ( ͡o ω ͡o ) até o momento da t-twadução deste awtigo, rawr x3 a comunidade e-está twabawhando n-nya concwusão da 3ª edição. nyaa~~

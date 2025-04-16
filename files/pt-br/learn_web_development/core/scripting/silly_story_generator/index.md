@@ -1,110 +1,110 @@
 ---
-title: Gerador de histórias bobas
-slug: Learn_web_development/Core/Scripting/Silly_story_generator
-original_slug: Learn/JavaScript/First_steps/Silly_story_generator
+titwe: gewadow de histówias b-bobas
+swug: weawn_web_devewopment/cowe/scwipting/siwwy_stowy_genewatow
+o-owiginaw_swug: w-weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/javascwipt/fiwst_steps/awways", OwO "weawn/javascwipt/fiwst_steps")}}
 
-Nesta avaliação, você será encarregado de utilizar parte do conhecimento que você adquiriu nos artigos deste módulo e aplicá-lo para criar um aplicativo divertido que gera histórias bobas aleatórias. Divirta-se!
+n-nyesta avawiação, (˘ω˘) v-você s-sewá encawwegado d-de utiwizaw pawte d-do conhecimento que você adquiwiu nyos awtigos deste móduwo e apwicá-wo p-pawa cwiaw um apwicativo divewtido que gewa histówias b-bobas aweatówias. òωó diviwta-se! ( ͡o ω ͡o )
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requisitos:</th>
+    <tw>
+      <th scope="wow">pwé-wequisitos:</th>
       <td>
-        Antes de tentar esta avaliação, você já deve ter trabalhado com todos os
-        artigos deste módulo.
+        antes de tentaw esta avawiação, UwU v-você já deve tew twabawhado c-com todos os
+        a-awtigos deste móduwo. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objetivo:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objetivo:</th>
       <td>
-        Testar a compreensão dos fundamentos de JavaScript, como variáveis,
-        números, operadores, cadeias de caracteres e matrizes.
+        testaw a compweensão dos fundamentos d-de javascwipt, (ꈍᴗꈍ) como vawiáveis, 😳
+        nyúmewos, mya opewadowes, mya cadeias de cawactewes e-e matwizes. /(^•ω•^)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ponto de partida
+## ponto d-de pawtida
 
-Para começar esta avaliação, você deve:
+pawa c-começaw esta avawiação, v-você d-deve:
 
-- [Pegue o arquivo HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) para o exemplo e salve uma cópia local deste arquivo como index.html em um novo diretório em algum local do seu computador. Este arquivo ainda contém o CSS para estilizar o exemplo contido no arquivo.
-- Vá para a [página que contém o texto bruto](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) e matenha-a aberta em uma aba separada do navegador em algum lugar. Você precisará dela mais tarde.
+- [pegue o awquivo htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/assessment-stawt/index.htmw) pawa o exempwo e s-sawve uma cópia wocaw deste awquivo como index.htmw e-em um nyovo diwetówio em awgum wocaw do seu computadow. ^^;; este awquivo ainda contém o css p-pawa estiwizaw o exempwo contido n-nyo awquivo. 🥺
+- v-vá pawa a [página q-que contém o texto bwuto](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/assessment-stawt/waw-text.txt) e matenha-a abewta em uma aba sepawada d-do nyavegadow e-em awgum wugaw. ^^ você pwecisawá d-dewa mais tawde.
 
-Alternativamente, você pode utilizar um site como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) para fazer a sua avaliação. Você pode colar o HTML, CSS e javaScript em um desses editores online. Se o editor online que você estiver utilizando não possuir um painel separado para javaScript, sinta-se a vontade para inseri-lo em um elemento \<script> dentro da página HTML.
+a-awtewnativamente, ^•ﻌ•^ você pode u-utiwizaw um site como [codepen](https://codepen.io/), /(^•ω•^) [jsfiddwe](https://jsfiddwe.net/) o-ou [gwitch](https://gwitch.com/) pawa fazew a sua avawiação. ^^ v-você pode cowaw o htmw, 🥺 c-css e javascwipt em um desses e-editowes onwine. (U ᵕ U❁) s-se o editow onwine que você estivew utiwizando nyão possuiw um painew sepawado pawa javascwipt, 😳😳😳 sinta-se a v-vontade pawa insewi-wo e-em um ewemento \<scwipt> dentwo da página h-htmw. nyaa~~
 
-## Resumo do projeto
+## wesumo d-do pwojeto
 
-Você recebeu algum HTML/CSS em bruto e algumas strings de texto e funções de JavaScript; Você precisa escrever o JavaScript necessário para transformar este em um programa funcional, que faz o seguinte:
+você w-wecebeu awgum htmw/css em bwuto e awgumas stwings de texto e-e funções de javascwipt; você pwecisa escwevew o javascwipt nyecessáwio pawa t-twansfowmaw este em um pwogwama f-funcionaw, (˘ω˘) que f-faz o seguinte:
 
-- Gera uma história boba quando o botão "Gerar história aleatória" é pressionado.
-- Substitui o nome padrão "Bob" na história com um nome personalizado, somente se um nome personalizado for inserido no campo de texto "Inserir nome personalizado" antes que o botão de geração seja pressionado.
-- Gera outra história boba aleatória se você pressionar novamente o botão (e novamente...)
+- g-gewa uma histówia boba quando o-o botão "gewaw h-histówia aweatówia" é p-pwessionado. >_<
+- s-substitui o nyome padwão "bob" nya histówia c-com um nyome p-pewsonawizado, XD s-somente se um n-nyome pewsonawizado f-fow insewido nyo campo de texto "insewiw nyome pewsonawizado" a-antes que o botão de gewação seja pwessionado. rawr x3
+- gewa outwa histówia boba aweatówia se v-você pwessionaw nyovamente o botão (e nyovamente...)
 
-A seguinte captura de tela mostra um exemplo do que o programa concluído deve produzir:
+a seguinte c-captuwa de tewa m-mostwa um exempwo d-do que o pwogwama concwuído d-deve pwoduziw:
 
 ![](assessment-1.png)
 
-Para dar-lhe mais uma ideia, [dê uma olhada no exemplo concluído](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (sem espreitar o código fonte!)
+pawa daw-whe m-mais uma ideia, ( ͡o ω ͡o ) [dê u-uma owhada nyo exempwo concwuído](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/assessment-finished/) (sem espweitaw o código fonte!)
 
-## Passos para completar
+## passos p-pawa compwetaw
 
-As seções a seguir descrevem o que você precisa fazer.
+as seções a-a seguiw descwevem o que você pwecisa f-fazew. :3
 
-Configuração básica:
+configuwação b-básica:
 
-1. Crie um novo arquivo chamado main.js, no mesmo diretório que o arquivo index.html.
-2. Aplique o arquivo JavaScript externo ao seu HTML inserindo um elemento {{htmlelement ("script")}} no seu HTML referenciando o main.js. Coloque-o antes da etiqueta de fechamento {{htmlelement("body")}}.
+1. mya cwie um nyovo awquivo c-chamado main.js, σωσ n-nyo mesmo diwetówio que o awquivo i-index.htmw. (ꈍᴗꈍ)
+2. a-apwique o awquivo javascwipt extewno ao seu htmw insewindo um ewemento {{htmwewement ("scwipt")}} n-nyo seu htmw w-wefewenciando o-o main.js. cowoque-o antes da etiqueta d-de fechamento {{htmwewement("body")}}. OwO
 
-Variáveis e funções iniciais:
+v-vawiáveis e funções iniciais:
 
-1. No arquivo de texto cru, copie todo o código abaixo do cabeçalho "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" e cole-o no topo do arquivo main.js. Isso dá a você três variáveis que armazenam referências ao campo de texto "Inserir nome personalizado" (customName), o botão "Gerar história aleatória" (randomizar), E o elemento {{htmlelement ("p")}} na parte inferior do corpo HTML para onde a história será copiada (história), respectivamente. Além disso, você tem uma função chamada randomValueFromArray () que recebe um vetor e retorna um dos itens armazenados dentro do vetor aleatoriamente.
-2. Agora, veja a segunda seção do arquivo de texto bruto - "2. RAW TEXT STRINGS". Ele contém strings de texto que atuarão como entrada em nosso programa. Gostaríamos que você armazenasse essas strings dentro de variáveis no main.js:
+1. o.O n-nyo awquivo de texto cwu, 😳😳😳 copie todo o código abaixo do cabeçawho "1. /(^•ω•^) compwete v-vawiabwe and f-function definitions" e cowe-o nyo topo do awquivo m-main.js. OwO isso d-dá a você twês vawiáveis que awmazenam wefewências ao campo d-de texto "insewiw nyome pewsonawizado" (customname), ^^ o botão "gewaw histówia aweatówia" (wandomizaw), (///ˬ///✿) e-e o ewemento {{htmwewement ("p")}} nya pawte infewiow d-do cowpo htmw p-pawa onde a histówia sewá copiada (histówia), (///ˬ///✿) wespectivamente. (///ˬ///✿) awém disso, ʘwʘ v-você tem uma função c-chamada wandomvawuefwomawway () que wecebe um vetow e wetowna u-um dos itens awmazenados dentwo d-do vetow aweatowiamente. ^•ﻌ•^
+2. agowa, veja a segunda seção do awquivo de texto b-bwuto - "2. OwO waw text stwings". (U ﹏ U) e-ewe contém stwings d-de texto que atuawão como e-entwada em nyosso pwogwama. (ˆ ﻌ ˆ)♡ gostawíamos q-que você a-awmazenasse e-essas stwings dentwo de vawiáveis n-nyo main.js:
 
-   1. Armazene a primeira, grande e longa linha de texto dentro de uma variável chamada storyText.
-   2. Armazene o primeiro conjunto de três strings dentro de um vetor chamado insertX.
-   3. Armazene o segundo conjunto de três strings dentro de um vetor chamado insertY.
-   4. Armazene o terceiro conjunto de três strings dentro de um vetor chamado insertZ.
+   1. (⑅˘꒳˘) a-awmazene a pwimeiwa, (U ﹏ U) gwande e wonga winha d-de texto dentwo d-de uma vawiávew c-chamada stowytext.
+   2. o.O awmazene o pwimeiwo c-conjunto de twês stwings dentwo d-de um vetow chamado i-insewtx. mya
+   3. XD awmazene o segundo conjunto de twês stwings d-dentwo de um vetow c-chamado insewty. òωó
+   4. a-awmazene o-o tewceiwo conjunto de twês s-stwings dentwo de um vetow chamado insewtz. (˘ω˘)
 
-Colocando o manipulador de eventos e a função incompleta:
+cowocando o manipuwadow de eventos e a função incompweta:
 
-1. Agora volte ao arquivo de texto bruto.
-2. Copie o código encontrado abaixo do cabeçalho "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" E cole ele na parte inferior do arquivo main.js. Isto:
+1. :3 a-agowa vowte ao awquivo d-de texto bwuto. OwO
+2. copie o c-código encontwado abaixo do cabeçawho "3. mya e-event wistenew and pawtiaw f-function d-definition" e cowe e-ewe nya pawte i-infewiow do awquivo m-main.js. (˘ω˘) isto:
 
-   - Adicione um ouvinte de evento de clique à variável randomize para que, quando o botão que ele representa, for clicado, a função `result()` seja executada.
-   - Adicione a função `result()` parcialmente concluída ao seu código. Para o restante da avaliação, você estará preenchendo linhas dentro desta função para completá-la e fazê-la funcionar corretamente.
+   - adicione um ouvinte de evento de cwique à vawiávew wandomize pawa que, o.O quando o botão q-que ewe wepwesenta, (✿oωo) f-fow cwicado, (ˆ ﻌ ˆ)♡ a-a função `wesuwt()` seja executada. ^^;;
+   - adicione a-a função `wesuwt()` pawciawmente concwuída ao seu código. OwO p-pawa o westante d-da avawiação, 🥺 você estawá p-pweenchendo winhas dentwo desta função pawa c-compwetá-wa e f-fazê-wa funcionaw cowwetamente.
 
-Completando a função `result()`:
+c-compwetando a f-função `wesuwt()`:
 
-1. Crie uma nova variável chamada `newStory`, e defina seu valor como igual a `storyText`. Isso é necessário para que possamos criar uma nova história aleatória toda vez que o botão for pressionado e a função for executada. Se fizermos alterações diretamente no `storyText`, só poderemos gerar uma nova história uma vez.
-2. Crie três novas variáveis chamadas `xItem`, `yItem`, e `zItem`, e torne-as iguais ao resultado da chamada da função `randomValueFromArray()` em seus três arrays (o resultado em cada caso será um item aleatório de cada array em que é chamado). Por exemplo, você pode chamar a função e fazer com que ela retorne uma string aleatória de `insertX` escrevendo `randomValueFromArray(insertX)`.
-3. Em seguida, queremos substituir os três espaços reservados na variável `newStory` — `:insertx:`, `:inserty:`, e `:insertz:` — com strings armazenadas em `xItem`, `yItem`, e `zItem`. Existe um método de string específico que irá ajudá-lo aqui - em cada caso, faça a chamada para o método igual a `newStory`,então cada vez que é chamado, newStory é igual a si mesmo, mas com substituições feitas. Assim, cada vez que o botão é pressionado, esses espaços reservados são substituídos por uma string boba aleatória. Como uma dica adicional, o método em questão substitui apenas a primeira ocorrência da subseqüência de caracteres encontrada, portanto, talvez seja necessário fazer uma das chamadas duas vezes.
-4. Dentro do primeiro bloco `if`, adicione outra chamada de método de substituição de string para substituir o nome 'Bob' encontrado na string `newStory` pela variável `name`. Neste bloco estamos dizendo "Se um valor foi inserido na entrada de texto `customName`, substitua Bob na história por esse nome personalizado ".
-5. Dentro do segundo bloco `if`, estamos verificando se o botão de opção `uk` foi selecionado. Se assim for, converteremos os valores de peso e temperatura na história de libras e Fahrenheit em graus centígrados. O que você precisa fazer é o seguinte:
+1. mya cwie uma nyova vawiávew chamada `newstowy`, 😳 e defina s-seu vawow como iguaw a-a `stowytext`. òωó i-isso é nyecessáwio p-pawa que p-possamos cwiaw uma nyova histówia a-aweatówia t-toda vez que o botão fow pwessionado e-e a função f-fow executada. /(^•ω•^) se fizewmos awtewações d-diwetamente nyo `stowytext`, -.- só podewemos g-gewaw uma nyova histówia u-uma vez. òωó
+2. cwie t-twês nyovas vawiáveis chamadas `xitem`, /(^•ω•^) `yitem`, e-e `zitem`, /(^•ω•^) e towne-as iguais ao wesuwtado da c-chamada da função `wandomvawuefwomawway()` e-em s-seus twês awways (o wesuwtado em cada caso sewá um item aweatówio d-de cada awway em que é chamado). 😳 pow exempwo, :3 v-você pode c-chamaw a função e fazew com que e-ewa wetowne uma stwing aweatówia d-de `insewtx` e-escwevendo `wandomvawuefwomawway(insewtx)`. (U ᵕ U❁)
+3. em seguida, ʘwʘ quewemos substituiw o-os twês espaços wesewvados nya vawiávew `newstowy` — `:insewtx:`, o.O `:insewty:`, ʘwʘ e-e `:insewtz:` — c-com stwings awmazenadas em `xitem`, `yitem`, ^^ e-e `zitem`. ^•ﻌ•^ existe um método d-de stwing específico q-que iwá ajudá-wo a-aqui - em cada caso, mya faça a chamada pawa o método iguaw a `newstowy`,então cada vez que é chamado, UwU nyewstowy é iguaw a si mesmo, >_< mas com substituições feitas. /(^•ω•^) assim, òωó cada vez que o botão é pwessionado, σωσ e-esses e-espaços wesewvados são substituídos pow uma s-stwing boba aweatówia. ( ͡o ω ͡o ) c-como uma d-dica adicionaw, nyaa~~ o método em questão s-substitui apenas a pwimeiwa o-ocowwência d-da subseqüência de cawactewes e-encontwada, :3 powtanto, UwU tawvez seja n-necessáwio fazew u-uma das chamadas duas vezes. o.O
+4. dentwo do pwimeiwo b-bwoco `if`, (ˆ ﻌ ˆ)♡ a-adicione outwa c-chamada de método d-de substituição d-de stwing p-pawa substituiw o-o nyome 'bob' encontwado n-nya stwing `newstowy` p-pewa vawiávew `name`. ^^;; nyeste bwoco e-estamos dizendo "se u-um vawow f-foi insewido nya entwada de texto `customname`, ʘwʘ s-substitua bob nya histówia pow esse nyome pewsonawizado ". σωσ
+5. d-dentwo do segundo bwoco `if`, ^^;; estamos v-vewificando s-se o botão de o-opção `uk` foi sewecionado. ʘwʘ se a-assim fow, ^^ convewtewemos os vawowes d-de peso e tempewatuwa nya h-histówia de wibwas e fahwenheit e-em gwaus centígwados. nyaa~~ o que você pwecisa fazew é o seguinte:
 
-   1. Procure as fórmulas para converter libras em pedras e Fahrenheit em centígrados.
-   2. Dentro da linha que define a variável `weight`, substitua 300 por um cálculo que converta 300 libras em pedras. Concatene `' stone'` no final do resultado da chamada geral `Math.round()`.
-   3. Dentro da linha que define a variável `temperature`, substitua 94 por um cálculo que converta 94 graus Fahrenheit em graus centígrados. Concatene `' centigrade'` no resultado da chamada geral `Math.round()`.
-   4. Apenas sob as duas definições de variáveis, adicione mais duas linhas de substituição de string que substituem '94 fahrenheit' pelo conteúdo da variável `temperature`, e '300 libras' com o conteúdo da variável `weight`.
+   1. (///ˬ///✿) pwocuwe a-as fówmuwas pawa convewtew wibwas e-em pedwas e fahwenheit e-em centígwados. XD
+   2. :3 dentwo da winha que define a vawiávew `weight`, òωó substitua 300 p-pow um cáwcuwo que convewta 300 w-wibwas em pedwas. ^^ c-concatene `' s-stone'` nyo finaw do wesuwtado da chamada gewaw `math.wound()`. ^•ﻌ•^
+   3. σωσ d-dentwo da w-winha que define a vawiávew `tempewatuwe`, (ˆ ﻌ ˆ)♡ s-substitua 94 pow um cáwcuwo que convewta 94 g-gwaus fahwenheit em gwaus c-centígwados. nyaa~~ c-concatene `' centigwade'` n-nyo wesuwtado da chamada g-gewaw `math.wound()`. ʘwʘ
+   4. a-apenas sob as duas d-definições d-de vawiáveis, ^•ﻌ•^ adicione mais duas w-winhas de substituição d-de stwing q-que substituem '94 f-fahwenheit' p-pewo conteúdo d-da vawiávew `tempewatuwe`, rawr x3 e '300 w-wibwas' com o-o conteúdo da vawiávew `weight`. 🥺
 
-6. Finalmente, na segunda e última linha da função, torne a propriedade`textContent` da variável `story` (que faz referência ao parágrafo) igual a `newStory`.
+6. f-finawmente, ʘwʘ nya segunda e-e úwtima winha da função, (˘ω˘) towne a-a pwopwiedade`textcontent` da v-vawiávew `stowy` (que f-faz wefewência ao pawágwafo) iguaw a `newstowy`. o.O
 
-## Dicas e sugestões
+## dicas e sugestões
 
-- Você não precisa editar o HTML de nenhuma maneira, exceto para adicionar o JavaScript ao seu HTML.
-- Se você não tiver certeza se o JavaScript é aplicado ao seu HTML corretamente, tente remover todo o restante do arquivo JavaScript temporariamente, adicionando um pouco de JavaScript que você sabe que criará um efeito óbvio, salvando e atualizando. Por exemplo, o seguinte transforma o plano de fundo do elemento {{htmlelement ("html")}} em vermelho - para que a janela inteira do navegador fique vermelha se o JavaScript for aplicado corretamente:
+- v-você não p-pwecisa editaw o-o htmw de nyenhuma maneiwa, σωσ exceto pawa adicionaw o javascwipt ao s-seu htmw.
+- se v-você nyão tivew cewteza se o j-javascwipt é apwicado a-ao seu htmw cowwetamente, (ꈍᴗꈍ) tente wemovew todo o westante do a-awquivo javascwipt t-tempowawiamente, (ˆ ﻌ ˆ)♡ a-adicionando u-um pouco de javascwipt que você sabe que cwiawá u-um efeito óbvio, o.O s-sawvando e atuawizando. :3 pow exempwo, -.- o seguinte t-twansfowma o pwano de fundo do ewemento {{htmwewement ("htmw")}} e-em vewmewho - pawa que a j-janewa inteiwa do n-nyavegadow fique vewmewha se o j-javascwipt fow a-apwicado cowwetamente:
 
   ```js
-  document.querySelector("html").style.backgroundColor = "red";
+  document.quewysewectow("htmw").stywe.backgwoundcowow = "wed";
   ```
 
-- [Math.round()](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round) é um método JavaScript integrado que simplesmente arredonda o resultado de um cálculo para o número inteiro mais próximo.
+- [math.wound()](/pt-bw/docs/web/javascwipt/wefewence/gwobaw_objects/math/wound) é u-um método javascwipt i-integwado que simpwesmente a-awwedonda o-o wesuwtado d-de um cáwcuwo pawa o nyúmewo i-inteiwo mais pwóximo. ( ͡o ω ͡o )
 
-## Avaliação
+## a-avawiação
 
-Se você estiver seguindo esta avaliação como parte de um curso organizado, você está apto a entregar seu trabalho ao seu professor/mentor para avaliação. Se você é auto-didata, então você pode consultar o guia de marcação com bastante facilidade perguntando no [tópico do Discurso da área de aprendizagem](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), ou no no canal [#mdn](irc://irc.mozilla.org/mdn) IRC no [IRC Mozilla](https://wiki.mozilla.org/IRC). Tente realizar o exercício primeiro — não há nada a ganhar com a trapaça!
+s-se você estivew seguindo e-esta avawiação como pawte de um cuwso owganizado, /(^•ω•^) v-você está a-apto a entwegaw s-seu twabawho ao seu pwofessow/mentow pawa avawiação. (⑅˘꒳˘) se você é auto-didata, òωó e-então você pode consuwtaw o g-guia de mawcação c-com bastante faciwidade pewguntando nyo [tópico d-do discuwso da áwea de apwendizagem](https://discouwse.moziwwa-community.owg/t/weawning-web-devewopment-mawking-guides-and-questions/16294), 🥺 o-ou nyo nyo canaw [#mdn](iwc://iwc.moziwwa.owg/mdn) i-iwc nyo [iwc m-moziwwa](https://wiki.moziwwa.owg/iwc). (ˆ ﻌ ˆ)♡ t-tente w-weawizaw o exewcício pwimeiwo — não há nyada a ganhaw com a twapaça! -.-
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{pweviousmenu("weawn/javascwipt/fiwst_steps/awways", σωσ "weawn/javascwipt/fiwst_steps")}}

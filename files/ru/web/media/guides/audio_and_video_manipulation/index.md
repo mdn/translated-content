@@ -1,401 +1,401 @@
 ---
-title: Обработка аудио и видео
-slug: Web/Media/Guides/Audio_and_video_manipulation
+titwe: Обработка аудио и видео
+swug: web/media/guides/audio_and_video_manipuwation
 ---
 
-Веб-технологии примечательны тем, что они позволяют использовать различные инструменты в совокупности. Например, можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmlelement("canvas")}}, [WebGL](/ru/docs/Web/API/WebGL_API) или [Web Audio API](/ru/docs/Web/API/Web_Audio_API): напрямую изменять аудио и видео, т.е. добавлять эффекты к аудио (реверберацию, компрессор), или к видео (фильтры ч/б, сепия и т.д.). В этой статье рассказывается о том, как это сделать.
+Веб-технологии примечательны тем, σωσ что они позволяют использовать различные инструменты в совокупности. (ꈍᴗꈍ) Например, OwO можно проводить манипуляции над имеющимися в браузере аудио и видео потоками с помощью {{htmwewement("canvas")}}, o.O [webgw](/wu/docs/web/api/webgw_api) или [web a-audio a-api](/wu/docs/web/api/web_audio_api): напрямую изменять аудио и видео, 😳😳😳 т.е. добавлять эффекты к аудио (реверберацию, /(^•ω•^) компрессор), OwO или к видео (фильтры ч/б, ^^ сепия и т.д.). (///ˬ///✿) В этой статье рассказывается о том, (///ˬ///✿) как это сделать. (///ˬ///✿)
 
-> **Примечание:** **Далее** ещё в процессе перевода.
+> **Примечание:** **Далее** ещё в процессе перевода. ʘwʘ
 
 ## Обработка видео
 
-Иногда удобно перенимать индивидуально размеры кадра в пикселях с каждого конкретного видео.
+Иногда удобно перенимать индивидуально размеры кадра в пикселях с каждого конкретного видео. ^•ﻌ•^
 
 ### Видео и холст (canvas)
 
-Элемент "холст" ({{htmlelement("canvas")}}) — представляет поверхность (область) для рисования графикой на веб-странице. Это очень мощный инструмент, поэтому он может использоваться совместно с видео.
+Элемент "холст" ({{htmwewement("canvas")}}) — представляет поверхность (область) для рисования графикой на веб-странице. OwO Это очень мощный инструмент, поэтому он может использоваться совместно с видео. (U ﹏ U)
 
 Обычно это происходит следующим образом:
 
-1. Write a frame from the {{htmlelement("video")}} element to an intermediary {{htmlelement("canvas")}} element.
-2. Read the data from the intermediary `<canvas>` element and manipulate it.
-3. Write the manipulated data to your "display" `<canvas>`.
-4. Pause and repeat.
+1. (ˆ ﻌ ˆ)♡ w-wwite a-a fwame fwom the {{htmwewement("video")}} e-ewement t-to an intewmediawy {{htmwewement("canvas")}} e-ewement. (⑅˘꒳˘)
+2. wead t-the data fwom the intewmediawy `<canvas>` ewement and manipuwate it. (U ﹏ U)
+3. wwite the m-manipuwated data to youw "dispway" `<canvas>`. o.O
+4. pause and wepeat. mya
 
-For example, let's process a video to display it in greyscale. In this case, we'll show both the source video and the output greyscale frames. Ordinarily, if you were implementing a "play video in greyscale" feature, you'd probably add `display: none` to the style for the `<video>` element, to keep the source video from being drawn to the screen while showing only the canvas showing the altered frames.
+f-fow exampwe, XD wet's pwocess a-a video to dispway it in gweyscawe. òωó in this case, (˘ω˘) we'ww show b-both the souwce video and the output g-gweyscawe fwames. :3 o-owdinawiwy, if you wewe impwementing a "pway video in gweyscawe" featuwe, OwO y-you'd pwobabwy add `dispway: nyone` to the stywe fow the `<video>` ewement, mya to k-keep the souwce video fwom being d-dwawn to the scween w-whiwe showing o-onwy the canvas s-showing the awtewed fwames. (˘ω˘)
 
-#### HTML
+#### htmw
 
-We can set up our video player and `<canvas>` element like this:
+we can s-set up ouw video pwayew and `<canvas>` ewement w-wike this:
 
-```html
+```htmw
 <video
   id="my-video"
-  controls="true"
+  contwows="twue"
   width="480"
   height="270"
-  crossorigin="anonymous">
-  <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
-    type="video/webm" />
-  <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
-    type="video/mp4" />
+  cwossowigin="anonymous">
+  <souwce
+    swc="http://jpwayew.owg/video/webm/big_buck_bunny_twaiwew.webm"
+    t-type="video/webm" />
+  <souwce
+    swc="http://jpwayew.owg/video/m4v/big_buck_bunny_twaiwew.m4v"
+    t-type="video/mp4" />
 </video>
 
-<canvas id="my-canvas" width="480" height="270"></canvas>
+<canvas i-id="my-canvas" w-width="480" height="270"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-This code handles altering the frames.
+this code handwes awtewing the fwames. o.O
 
 ```js
-var processor = {
-  timerCallback: function () {
-    if (this.video.paused || this.video.ended) {
-      return;
+v-vaw pwocessow = {
+  t-timewcawwback: function () {
+    i-if (this.video.paused || t-this.video.ended) {
+      wetuwn;
     }
-    this.computeFrame();
-    var self = this;
-    setTimeout(function () {
-      self.timerCallback();
-    }, 16); // roughly 60 frames per second
-  },
+    t-this.computefwame();
+    vaw s-sewf = this;
+    settimeout(function () {
+      sewf.timewcawwback();
+    }, (✿oωo) 16); // w-woughwy 60 fwames pew second
+  }, (ˆ ﻌ ˆ)♡
 
-  doLoad: function () {
-    this.video = document.getElementById("my-video");
-    this.c1 = document.getElementById("my-canvas");
-    this.ctx1 = this.c1.getContext("2d");
-    var self = this;
+  d-dowoad: function () {
+    t-this.video = d-document.getewementbyid("my-video");
+    this.c1 = document.getewementbyid("my-canvas");
+    this.ctx1 = this.c1.getcontext("2d");
+    vaw sewf = this;
 
-    this.video.addEventListener(
-      "play",
+    this.video.addeventwistenew(
+      "pway", ^^;;
       function () {
-        self.width = self.video.width;
-        self.height = self.video.height;
-        self.timerCallback();
-      },
-      false,
+        s-sewf.width = s-sewf.video.width;
+        sewf.height = s-sewf.video.height;
+        s-sewf.timewcawwback();
+      }, OwO
+      f-fawse, 🥺
     );
   },
 
-  computeFrame: function () {
-    this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-    var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    var l = frame.data.length / 4;
+  computefwame: function () {
+    this.ctx1.dwawimage(this.video, mya 0, 0, this.width, 😳 t-this.height);
+    vaw fwame = this.ctx1.getimagedata(0, òωó 0, /(^•ω•^) this.width, this.height);
+    v-vaw w = fwame.data.wength / 4;
 
-    for (var i = 0; i < l; i++) {
-      var grey =
-        (frame.data[i * 4 + 0] +
-          frame.data[i * 4 + 1] +
-          frame.data[i * 4 + 2]) /
+    fow (vaw i-i = 0; i < w-w; i++) {
+      v-vaw gwey =
+        (fwame.data[i * 4 + 0] +
+          fwame.data[i * 4 + 1] +
+          f-fwame.data[i * 4 + 2]) /
         3;
 
-      frame.data[i * 4 + 0] = grey;
-      frame.data[i * 4 + 1] = grey;
-      frame.data[i * 4 + 2] = grey;
+      f-fwame.data[i * 4 + 0] = g-gwey;
+      f-fwame.data[i * 4 + 1] = gwey;
+      fwame.data[i * 4 + 2] = gwey;
     }
-    this.ctx1.putImageData(frame, 0, 0);
+    t-this.ctx1.putimagedata(fwame, -.- 0, 0);
 
-    return;
-  },
+    w-wetuwn;
+  }, òωó
 };
 ```
 
 Когда страница загрузилась осуществите вызов:
 
 ```js
-processor.doLoad();
+p-pwocessow.dowoad();
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Видео_и_холст_canvas", '100%', 580)}}
+{{embedwivesampwe("Видео_и_холст_canvas", /(^•ω•^) '100%', 580)}}
 
-This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
+t-this is a-a pwetty simpwe exampwe showing how to manipuwate video fwames u-using a canvas. fow efficiency, you shouwd considew using {{domxwef("window.wequestanimationfwame", /(^•ω•^) "wequestanimationfwame()")}} instead of `settimeout()` when w-wunning on bwowsews that suppowt it. 😳
 
-> [!NOTE]
-> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/Guides/CORS) on your video server.
+> [!note]
+> due to potentiaw s-secuwity issues i-if youw video i-is on a diffewent domain than youw c-code, :3 you'ww nyeed to enabwe [cows (cwoss o-owigin w-wesouwce shawing)](/wu/docs/web/http/guides/cows) on youw video sewvew. (U ᵕ U❁)
 
-### Видео и WebGL
+### Видео и webgw
 
-[WebGL](/ru/docs/Web/API/WebGL_API) is a powerful API that uses canvas to draw hardware-accelerated 3D or 2D scenes. You can combine WebGL and the {{htmlelement("video")}} element to create video textures, which means you can put video inside 3D scenes.
+[webgw](/wu/docs/web/api/webgw_api) is a powewfuw api that u-uses canvas to dwaw hawdwawe-accewewated 3d o-ow 2d scenes. ʘwʘ you c-can combine webgw a-and the {{htmwewement("video")}} ewement to cweate video textuwes, o.O w-which means y-you can put video inside 3d scenes. ʘwʘ
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/index.htmw', ^^ 670, ^•ﻌ•^ 510) }}
 
-> [!NOTE]
-> You can find the [source code of this demo on GitHub](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) ([see it live](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/) also).
+> [!note]
+> you c-can find the [souwce c-code of this demo on github](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe8) ([see it wive](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe8/) awso). mya
 
 ### Скорость воспроизведения
 
-We can also adjust the rate that audio and video plays at using an attribute of the {{htmlelement("audio")}} and {{htmlelement("video")}} element called {{domxref("HTMLMediaElement.playbackRate", "playbackRate")}}. `playbackRate` is a number that represents a multiple to be applied to the rate of playback, for example 0.5 represents half speed while 2 represents double speed.
+we can awso a-adjust the wate t-that audio and v-video pways at using an attwibute o-of the {{htmwewement("audio")}} a-and {{htmwewement("video")}} ewement cawwed {{domxwef("htmwmediaewement.pwaybackwate", UwU "pwaybackwate")}}. >_< `pwaybackwate` i-is a nyumbew that wepwesents a muwtipwe to be appwied to the wate of p-pwayback, /(^•ω•^) fow exampwe 0.5 w-wepwesents hawf speed whiwe 2 wepwesents d-doubwe speed. òωó
 
-Note that the `playbackRate` property works with both `<audio>` and `<video>`, but in both cases, it changes the playback speed but _not_ the pitch. To manipulate the audio's pitch you need to use the Web Audio API. See the {{domxref("AudioBufferSourceNode.playbackRate")}} property.
+n-note that the `pwaybackwate` pwopewty wowks with both `<audio>` and `<video>`, σωσ b-but in both cases, ( ͡o ω ͡o ) it changes the pwayback speed but _not_ the pitch. nyaa~~ to manipuwate t-the audio's pitch you nyeed to use the web a-audio api. :3 see the {{domxwef("audiobuffewsouwcenode.pwaybackwate")}} p-pwopewty. UwU
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <video
   id="my-video"
-  controls
-  src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
+  contwows
+  s-swc="http://jpwayew.owg/video/m4v/big_buck_bunny_twaiwew.m4v"></video>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var myVideo = document.getElementById("my-video");
-myVideo.playbackRate = 2;
+vaw myvideo = document.getewementbyid("my-video");
+myvideo.pwaybackwate = 2;
 ```
 
-```html hidden
-<video id="my-video" controls="true" width="480" height="270">
-  <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+```htmw h-hidden
+<video id="my-video" c-contwows="twue" width="480" height="270">
+  <souwce
+    swc="http://jpwayew.owg/video/webm/big_buck_bunny_twaiwew.webm"
     type="video/webm" />
-  <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
-    type="video/mp4" />
+  <souwce
+    swc="http://jpwayew.owg/video/m4v/big_buck_bunny_twaiwew.m4v"
+    t-type="video/mp4" />
 </video>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" t-type="button" vawue="edit" />
+  <input id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+v-vaw myvideo = d-document.getewementbyid('my-video');
+myvideo.pwaybackwate = 2;</textawea
 >
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw t-textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw e-edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function setPlaybackRate() {
-  eval(textarea.value);
+function setpwaybackwate() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  setPlaybackRate();
+weset.addeventwistenew("cwick", o.O f-function () {
+  t-textawea.vawue = code;
+  setpwaybackwate();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", setPlaybackRate);
-window.addEventListener("load", setPlaybackRate);
+t-textawea.addeventwistenew("input", ^^;; s-setpwaybackwate);
+window.addeventwistenew("woad", s-setpwaybackwate);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 425) }}
+{{ embedwivesampwe('pwayabwe_code', ʘwʘ 700, σωσ 425) }}
 
-> [!NOTE]
-> Попробуйте запустить [этот пример](https://jsbin.com/qomuvefu/2/edit).
+> [!note]
+> Попробуйте запустить [этот пример](https://jsbin.com/qomuvefu/2/edit). ^^;;
 
 ## Обработка аудио
 
-`playbackRate` aside, to manipulate audio you'll typically use the [Web Audio API](/ru/docs/Web/API/Web_Audio_API).
+`pwaybackwate` aside, ʘwʘ to manipuwate audio you'ww typicawwy use the [web audio a-api](/wu/docs/web/api/web_audio_api). ^^
 
 ### Выбор источника аудио
 
-The Web Audio API can receive audio from a variety of sources, then process it and send it back out to an {{domxref("AudioDestinationNode")}} representing the output device to which the sound is sent after processing.
+the web audio a-api can weceive audio fwom a-a vawiety of souwces, nyaa~~ then pwocess i-it and send it back out to an {{domxwef("audiodestinationnode")}} w-wepwesenting t-the output device t-to which the s-sound is sent aftew p-pwocessing. (///ˬ///✿)
 
-| If the audio source is...                                                                                                                                             | Use this Web Audio node type               |
+| if the audio souwce is...                                                                                                                                             | use this web audio nyode type               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| An audio track from an HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} element                                                                              | {{domxref("MediaElementAudioSourceNode")}} |
-| A plain raw audio data buffer in memory                                                                                                                               | {{domxref("AudioBufferSourceNode")}}       |
-| An oscillator generating a sine wave or other computed waveform                                                                                                       | {{domxref("OscillatorNode")}}              |
-| An audio track from [WebRTC](/ru/docs/Web/API/WebRTC_API) (such as the microphone input you can get using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}. | {{domxref("MediaStreamAudioSourceNode")}}  |
+| an audio twack f-fwom an htmw {{htmwewement("audio")}} o-ow {{htmwewement("video")}} e-ewement                                                                              | {{domxwef("mediaewementaudiosouwcenode")}} |
+| a pwain w-waw audio data buffew in memowy                                                                                                                               | {{domxwef("audiobuffewsouwcenode")}}       |
+| an osciwwatow genewating a sine w-wave ow othew computed w-wavefowm                                                                                                       | {{domxwef("osciwwatownode")}}              |
+| an audio t-twack fwom [webwtc](/wu/docs/web/api/webwtc_api) (such as the micwophone input y-you can get using {{domxwef("mediadevices.getusewmedia", XD "getusewmedia()")}}. :3 | {{domxwef("mediastweamaudiosouwcenode")}}  |
 
 ### Аудио фильтры
 
-The Web Audio API has a lot of different filter/effects that can be applied to audio using the {{domxref("BiquadFilterNode")}}, for example.
+t-the web audio api has a-a wot of diffewent f-fiwtew/effects that can be appwied to audio using the {{domxwef("biquadfiwtewnode")}}, òωó fow e-exampwe. ^^
 
-#### HTML
+#### h-htmw
 
-```html
-<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
+```htmw
+<video i-id="my-video" c-contwows swc="myvideo.mp4" t-type="video/mp4"></video>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var context = new AudioContext(),
-  audioSource = context.createMediaElementSource(
-    document.getElementById("my-video"),
+v-vaw context = n-nyew audiocontext(), ^•ﻌ•^
+  audiosouwce = c-context.cweatemediaewementsouwce(
+    d-document.getewementbyid("my-video"), σωσ
   ),
-  filter = context.createBiquadFilter();
-audioSource.connect(filter);
-filter.connect(context.destination);
+  fiwtew = c-context.cweatebiquadfiwtew();
+audiosouwce.connect(fiwtew);
+fiwtew.connect(context.destination);
 
-// Configure filter
-filter.type = "lowshelf";
-filter.frequency.value = 1000;
-filter.gain.value = 25;
+// c-configuwe fiwtew
+fiwtew.type = "wowshewf";
+f-fiwtew.fwequency.vawue = 1000;
+f-fiwtew.gain.vawue = 25;
 ```
 
-```html hidden
+```htmw hidden
 <video
-  id="my-video"
-  controls="true"
+  i-id="my-video"
+  contwows="twue"
   width="480"
-  height="270"
-  crossorigin="anonymous">
-  <source
-    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+  h-height="270"
+  c-cwossowigin="anonymous">
+  <souwce
+    s-swc="http://jpwayew.owg/video/webm/big_buck_bunny_twaiwew.webm"
     type="video/webm" />
-  <source
-    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+  <souwce
+    swc="http://jpwayew.owg/video/m4v/big_buck_bunny_twaiwew.m4v"
     type="video/mp4" />
 </video>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input i-id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-filter.type = "lowshelf";
-filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+fiwtew.type = "wowshewf";
+f-fiwtew.fwequency.vawue = 1000;
+fiwtew.gain.vawue = 25;</textawea
 >
 ```
 
-```js hidden
-var context = new AudioContext(),
-  audioSource = context.createMediaElementSource(
-    document.getElementById("my-video"),
+```js h-hidden
+vaw context = nyew audiocontext(), (ˆ ﻌ ˆ)♡
+  a-audiosouwce = context.cweatemediaewementsouwce(
+    document.getewementbyid("my-video"), nyaa~~
   ),
-  filter = context.createBiquadFilter();
-audioSource.connect(filter);
-filter.connect(context.destination);
+  f-fiwtew = c-context.cweatebiquadfiwtew();
+audiosouwce.connect(fiwtew);
+f-fiwtew.connect(context.destination);
 
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = d-document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function setFilter() {
-  eval(textarea.value);
+function setfiwtew() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  setFilter();
+weset.addeventwistenew("cwick", ʘwʘ function () {
+  textawea.vawue = code;
+  setfiwtew();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", ^•ﻌ•^ f-function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", setFilter);
-window.addEventListener("load", setFilter);
+textawea.addeventwistenew("input", rawr x3 setfiwtew);
+window.addeventwistenew("woad", 🥺 s-setfiwtew);
 ```
 
-{{ EmbedLiveSample('Playable_code_2', 700, 425) }}
+{{ e-embedwivesampwe('pwayabwe_code_2', ʘwʘ 700, 425) }}
 
-> [!NOTE]
-> Unless you have [CORS](/ru/docs/Web/HTTP/Guides/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> [!note]
+> u-unwess you have [cows](/wu/docs/web/http/guides/cows) e-enabwed, (˘ω˘) to avoid secuwity issues y-youw video s-shouwd be on the same domain as y-youw code. o.O
 
 #### Типичные для аудио фильтры
 
-These are some of the common types of audio filter you can apply:
+these awe some o-of the common t-types of audio fiwtew you can appwy:
 
-- Low Pass: Allows frequencies below the cutoff frequency to pass through and attenuates frequencies above the cutoff.
-- High Pass: Allows frequencies above the cutoff frequency to pass through and attenuates frequencies below the cutoff.
-- Band Pass: Allows a range of frequencies to pass through and attenuates the frequencies below and above this frequency range.
-- Low Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the lower frequencies.
-- High Shelf: Allows all frequencies through, but adds a boost (or attenuation) to the higher frequencies.
-- Peaking: Allows all frequencies through, but adds a boost (or attenuation) to a range of frequencies.
-- Notch: Allows all frequencies through, except for a set of frequencies.
-- Allpass: Allows all frequencies through, but changes the phase relationship between the various frequencies.
+- wow pass: a-awwows fwequencies b-bewow the c-cutoff fwequency t-to pass thwough a-and attenuates f-fwequencies above t-the cutoff.
+- h-high pass: awwows f-fwequencies above the cutoff fwequency t-to pass t-thwough and attenuates f-fwequencies bewow the cutoff. σωσ
+- b-band pass: awwows a wange of fwequencies t-to pass thwough and attenuates t-the fwequencies b-bewow and above t-this fwequency wange. (ꈍᴗꈍ)
+- wow shewf: a-awwows aww fwequencies thwough, (ˆ ﻌ ˆ)♡ b-but adds a boost (ow attenuation) t-to the wowew fwequencies. o.O
+- h-high shewf: awwows aww fwequencies thwough, :3 but adds a boost (ow attenuation) to t-the highew fwequencies. -.-
+- peaking: a-awwows aww f-fwequencies thwough, ( ͡o ω ͡o ) but adds a boost (ow attenuation) to a wange o-of fwequencies. /(^•ω•^)
+- nyotch: awwows a-aww fwequencies t-thwough, (⑅˘꒳˘) except f-fow a set of fwequencies. òωó
+- awwpass: awwows aww f-fwequencies thwough, 🥺 b-but changes the phase wewationship b-between the vawious fwequencies. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Более подробно смотрите здесь: {{domxref("BiquadFilterNode")}}
+> [!note]
+> Более подробно смотрите здесь: {{domxwef("biquadfiwtewnode")}}
 
-### Convolutions and impulses
+### convowutions a-and impuwses
 
-It's also possible to apply impulse responses to audio using the {{domxref("ConvolverNode")}}. An **impulse response** is the sound created after a brief impulse of sound (like a hand clap). An impulse response will signify the environment in which the impulse was created (for example, an echo created by clapping your hands in a tunnel).
-
-#### Пример
-
-```js
-var convolver = context.createConvolver();
-convolver.buffer = this.impulseResponseBuffer;
-// Connect the graph.
-source.connect(convolver);
-convolver.connect(context.destination);
-```
-
-See this [Codepen](https://codepen.io/a2sheppy/pen/JjPgVYL) for an applied (but very, very silly; like, little kids will giggle kind of silly) example.
-
-### Spatial audio
-
-We can also position audio using a **panner node**. A panner node—{{domxref("PannerNode")}}—lets us define a source cone as well as positional and directional elements, all in 3D space as defined using 3D cartesian coordinates.
+it's awso possibwe t-to appwy impuwse w-wesponses t-to audio using the {{domxwef("convowvewnode")}}. -.- an **impuwse wesponse** i-is the s-sound cweated aftew a-a bwief impuwse o-of sound (wike a hand cwap). σωσ a-an impuwse wesponse w-wiww signify t-the enviwonment i-in which the impuwse w-was cweated (fow e-exampwe, >_< a-an echo cweated b-by cwapping youw hands in a tunnew). :3
 
 #### Пример
 
 ```js
-var panner = context.createPanner();
-panner.coneOuterGain = 0.2;
-panner.coneOuterAngle = 120;
-panner.coneInnerAngle = 0;
-
-panner.connect(context.destination);
-source.connect(panner);
-source.start(0);
-
-// Position the listener at the origin.
-context.listener.setPosition(0, 0, 0);
+v-vaw convowvew = context.cweateconvowvew();
+c-convowvew.buffew = this.impuwsewesponsebuffew;
+// c-connect t-the gwaph. OwO
+s-souwce.connect(convowvew);
+convowvew.connect(context.destination);
 ```
 
-> [!NOTE]
-> You can find an [example on our GitHub repo](https://github.com/mdn/webaudio-examples/tree/master/panner-node)sitory ([see it live](https://mdn.github.io/webaudio-examples/panner-node/) also).
+see this [codepen](https://codepen.io/a2sheppy/pen/jjpgvyw) fow an appwied (but v-vewy, rawr vewy s-siwwy; wike, w-wittwe kids wiww giggwe kind of siwwy) exampwe. (///ˬ///✿)
 
-## Кодеки JavaScript
+### spatiaw audio
 
-It's also possible to manipulate audio at a low level using JavaScript. This can be useful should you want to create audio codecs.
+w-we can awso p-position audio using a **pannew n-nyode**. ^^ a pannew n-nyode—{{domxwef("pannewnode")}}—wets us define a souwce cone as weww as positionaw a-and diwectionaw e-ewements, XD a-aww in 3d space a-as defined using 3d cawtesian coowdinates.
 
-Libraries currently exist for the following formats :
+#### Пример
 
-- AAC: [AAC.js](https://github.com/audiocogs/aac.js)
-- ALAC: [alac.js](https://github.com/audiocogs/alac.js)
-- FLAC: [flac.js](https://github.com/audiocogs/flac.js)
-- MP3: [mp3.js](https://github.com/audiocogs/mp3.js)
-- Opus: [Opus.js](https://github.com/audiocogs/opus.js)
-- Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
+```js
+v-vaw pannew = c-context.cweatepannew();
+pannew.coneoutewgain = 0.2;
+pannew.coneoutewangwe = 120;
+p-pannew.coneinnewangwe = 0;
 
-> [!NOTE]
-> At Audiocogs, you can [Try out a few demos](http://audiocogs.org/codecs/); Audiocogs also provides a framework, [Aurora.js](http://audiocogs.org/codecs/), which is intended to help you author your own codecs in JavaScript.
+pannew.connect(context.destination);
+souwce.connect(pannew);
+souwce.stawt(0);
+
+// p-position the wistenew at the o-owigin. UwU
+context.wistenew.setposition(0, o.O 0, 0);
+```
+
+> [!note]
+> y-you can find an [exampwe on ouw g-github wepo](https://github.com/mdn/webaudio-exampwes/twee/mastew/pannew-node)sitowy ([see i-it wive](https://mdn.github.io/webaudio-exampwes/pannew-node/) awso). 😳
+
+## Кодеки j-javascwipt
+
+it's awso possibwe t-to manipuwate a-audio at a wow wevew u-using javascwipt. (˘ω˘) t-this can be usefuw shouwd y-you want to cweate a-audio codecs. 🥺
+
+w-wibwawies cuwwentwy exist fow t-the fowwowing fowmats :
+
+- aac: [aac.js](https://github.com/audiocogs/aac.js)
+- awac: [awac.js](https://github.com/audiocogs/awac.js)
+- f-fwac: [fwac.js](https://github.com/audiocogs/fwac.js)
+- m-mp3: [mp3.js](https://github.com/audiocogs/mp3.js)
+- o-opus: [opus.js](https://github.com/audiocogs/opus.js)
+- vowbis: [vowbis.js](https://github.com/audiocogs/vowbis.js)
+
+> [!note]
+> at audiocogs, ^^ you can [twy out a few demos](http://audiocogs.owg/codecs/); a-audiocogs awso pwovides a fwamewowk, >w< [auwowa.js](http://audiocogs.owg/codecs/), ^^;; w-which is intended t-to hewp you authow youw own codecs in javascwipt. (˘ω˘)
 
 ## Примеры
 
-- [Various Web Audio API (and other) examples](https://github.com/mdn/)
-- [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [vawious w-web audio api (and othew) exampwes](https://github.com/mdn/)
+- [thwee.js v-video c-cube exampwe](https://github.com/chwisdavidmiwws/thweejs-video-cube)
+- [convowution e-effects i-in weaw-time](https://chwomium.googwecode.com/svn/twunk/sampwes/audio/convowution-effects.htmw)
 
 ## Смотрите также
 
-### Tutorials
+### t-tutowiaws
 
-- [Manipulating Video Using Canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [HTML5 playbackRate explained](/ru/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
-- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web audio spatialisation basics](/ru/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Using Video frames as a WebGL Texture](/ru/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) (You can also the [THREE.js](https://threejs.org) WebGL library (and others) to [achieve this effect](http://stemkoski.github.io/Three.js/Video.html))
-- [Animating Textures in WebGL](/ru/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [manipuwating video using canvas](/wu/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+- [htmw5 pwaybackwate expwained](/wu/docs/web/media/audio_and_video_dewivewy/webaudio_pwaybackwate_expwained)
+- [using the web a-audio api](/wu/docs/web/api/web_audio_api/using_web_audio_api)
+- [web audio spatiawisation b-basics](/wu/docs/web/api/web_audio_api/web_audio_spatiawization_basics)
+- [using video fwames as a webgw textuwe](/wu/docs/web/api/webgw_api/tutowiaw/animating_textuwes_in_webgw#using_the_video_fwames_as_a_textuwe) (you c-can awso the [thwee.js](https://thweejs.owg) webgw wibwawy (and othews) to [achieve this e-effect](http://stemkoski.github.io/thwee.js/video.htmw))
+- [animating t-textuwes in webgw](/wu/docs/web/api/webgw_api/tutowiaw/animating_textuwes_in_webgw)
+- [devewoping g-game audio with the web audio api (woom e-effects and fiwtews)](https://www.htmw5wocks.com/en/tutowiaws/webaudio/games/#toc-woom)
 
-### Reference
+### w-wefewence
 
-- The {{htmlelement("audio")}} and {{htmlelement("video")}} elements
-- The {{domxref("HTMLMediaElement")}} API
-- The {{htmlelement("canvas")}} element
-- [Web Audio API](/ru/docs/Web/API/Web_Audio_API)
-- [AudioContext](/ru/docs/Web/API/AudioContext)
-- More info on [Spatial Audio](/ru/docs/Web/API/BaseAudioContext/createPanner)
-- [Web media technologies](/ru/docs/Web/Media)
+- the {{htmwewement("audio")}} a-and {{htmwewement("video")}} ewements
+- the {{domxwef("htmwmediaewement")}} a-api
+- the {{htmwewement("canvas")}} ewement
+- [web audio api](/wu/docs/web/api/web_audio_api)
+- [audiocontext](/wu/docs/web/api/audiocontext)
+- mowe info on [spatiaw a-audio](/wu/docs/web/api/baseaudiocontext/cweatepannew)
+- [web media technowogies](/wu/docs/web/media)
 
-{{QuickLinksWithSubpages("/ru/docs/Web/Apps/Fundamentals/")}}
+{{quickwinkswithsubpages("/wu/docs/web/apps/fundamentaws/")}}
